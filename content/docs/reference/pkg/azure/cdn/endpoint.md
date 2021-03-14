@@ -13,11 +13,17 @@ meta_desc: "Documentation for the azure.cdn.Endpoint resource with examples, inp
 A CDN Endpoint is the entity within a CDN Profile containing configuration information regarding caching behaviours and origins. The CDN Endpoint is exposed using the URL format <endpointname>.azureedge.net.
 
 {{% examples %}}
+
 ## Example Usage
 
 {{< chooser language "typescript,python,go,csharp" / >}}
 
-{{% example csharp %}}
+
+
+
+
+{{< example csharp >}}
+
 ```csharp
 using Pulumi;
 using Azure = Pulumi.Azure;
@@ -55,9 +61,12 @@ class MyStack : Stack
 }
 ```
 
-{{% /example %}}
 
-{{% example go %}}
+{{< /example >}}
+
+
+{{< example go >}}
+
 ```go
 package main
 
@@ -102,9 +111,12 @@ func main() {
 }
 ```
 
-{{% /example %}}
 
-{{% example python %}}
+{{< /example >}}
+
+
+{{< example python >}}
+
 ```python
 import pulumi
 import pulumi_azure as azure
@@ -124,9 +136,12 @@ example_endpoint = azure.cdn.Endpoint("exampleEndpoint",
     )])
 ```
 
-{{% /example %}}
 
-{{% example typescript %}}
+{{< /example >}}
+
+
+{{< example typescript >}}
+
 
 ```typescript
 import * as pulumi from "@pulumi/pulumi";
@@ -149,9 +164,16 @@ const exampleEndpoint = new azure.cdn.Endpoint("exampleEndpoint", {
 });
 ```
 
-{{% /example %}}
+
+{{< /example >}}
+
+
+
+
 
 {{% /examples %}}
+
+
 
 
 ## Create a Endpoint Resource {#create}
@@ -176,9 +198,7 @@ const exampleEndpoint = new azure.cdn.Endpoint("exampleEndpoint", {
 
 {{% choosable language nodejs %}}
 
-<dl class="resources-properties">
-  
-    <dt
+<dl class="resources-properties"><dt
         class="property-required" title="Required">
         <span>name</span>
         <span class="property-indicator"></span>
@@ -186,9 +206,7 @@ const exampleEndpoint = new azure.cdn.Endpoint("exampleEndpoint", {
     </dt>
     <dd>
       The unique name of the resource.
-    </dd>
-  
-    <dt
+    </dd><dt
         class="property-required" title="Required">
         <span>args</span>
         <span class="property-indicator"></span>
@@ -196,9 +214,7 @@ const exampleEndpoint = new azure.cdn.Endpoint("exampleEndpoint", {
     </dt>
     <dd>
       The arguments to resource properties.
-    </dd>
-  
-    <dt
+    </dd><dt
         class="property-optional" title="Optional">
         <span>opts</span>
         <span class="property-indicator"></span>
@@ -206,10 +222,7 @@ const exampleEndpoint = new azure.cdn.Endpoint("exampleEndpoint", {
     </dt>
     <dd>
       Bag of options to control resource&#39;s behavior.
-    </dd>
-  
-
-</dl>
+    </dd></dl>
 
 {{% /choosable %}}
 
@@ -235,9 +248,7 @@ const exampleEndpoint = new azure.cdn.Endpoint("exampleEndpoint", {
 
 {{% choosable language go %}}
 
-<dl class="resources-properties">
-  
-    <dt
+<dl class="resources-properties"><dt
         class="property-optional" title="Optional">
         <span>ctx</span>
         <span class="property-indicator"></span>
@@ -245,9 +256,7 @@ const exampleEndpoint = new azure.cdn.Endpoint("exampleEndpoint", {
     </dt>
     <dd>
       Context object for the current deployment.
-    </dd>
-  
-    <dt
+    </dd><dt
         class="property-required" title="Required">
         <span>name</span>
         <span class="property-indicator"></span>
@@ -255,9 +264,7 @@ const exampleEndpoint = new azure.cdn.Endpoint("exampleEndpoint", {
     </dt>
     <dd>
       The unique name of the resource.
-    </dd>
-  
-    <dt
+    </dd><dt
         class="property-required" title="Required">
         <span>args</span>
         <span class="property-indicator"></span>
@@ -265,9 +272,7 @@ const exampleEndpoint = new azure.cdn.Endpoint("exampleEndpoint", {
     </dt>
     <dd>
       The arguments to resource properties.
-    </dd>
-  
-    <dt
+    </dd><dt
         class="property-optional" title="Optional">
         <span>opts</span>
         <span class="property-indicator"></span>
@@ -275,18 +280,13 @@ const exampleEndpoint = new azure.cdn.Endpoint("exampleEndpoint", {
     </dt>
     <dd>
       Bag of options to control resource&#39;s behavior.
-    </dd>
-  
-
-</dl>
+    </dd></dl>
 
 {{% /choosable %}}
 
 {{% choosable language csharp %}}
 
-<dl class="resources-properties">
-  
-    <dt
+<dl class="resources-properties"><dt
         class="property-required" title="Required">
         <span>name</span>
         <span class="property-indicator"></span>
@@ -294,9 +294,7 @@ const exampleEndpoint = new azure.cdn.Endpoint("exampleEndpoint", {
     </dt>
     <dd>
       The unique name of the resource.
-    </dd>
-  
-    <dt
+    </dd><dt
         class="property-required" title="Required">
         <span>args</span>
         <span class="property-indicator"></span>
@@ -304,9 +302,7 @@ const exampleEndpoint = new azure.cdn.Endpoint("exampleEndpoint", {
     </dt>
     <dd>
       The arguments to resource properties.
-    </dd>
-  
-    <dt
+    </dd><dt
         class="property-optional" title="Optional">
         <span>opts</span>
         <span class="property-indicator"></span>
@@ -314,10 +310,7 @@ const exampleEndpoint = new azure.cdn.Endpoint("exampleEndpoint", {
     </dt>
     <dd>
       Bag of options to control resource&#39;s behavior.
-    </dd>
-  
-
-</dl>
+    </dd></dl>
 
 {{% /choosable %}}
 
@@ -332,9 +325,7 @@ The Endpoint resource accepts the following [input]({{< relref "/docs/intro/conc
 
 
 {{% choosable language csharp %}}
-<dl class="resources-properties">
-
-    <dt class="property-required"
+<dl class="resources-properties"><dt class="property-required"
             title="Required">
         <span id="origins_csharp">
 <a href="#origins_csharp" style="color: inherit; text-decoration: inherit;">Origins</a>
@@ -343,8 +334,7 @@ The Endpoint resource accepts the following [input]({{< relref "/docs/intro/conc
         <span class="property-type"><a href="#endpointorigin">List&lt;Endpoint<wbr>Origin<wbr>Args&gt;</a></span>
     </dt>
     <dd>{{% md %}}The set of origins of the CDN endpoint. When multiple origins exist, the first origin will be used as primary and rest will be used as failover options. Each `origin` block supports fields documented below.
-{{% /md %}}</dd>
-    <dt class="property-required"
+{{% /md %}}</dd><dt class="property-required"
             title="Required">
         <span id="profilename_csharp">
 <a href="#profilename_csharp" style="color: inherit; text-decoration: inherit;">Profile<wbr>Name</a>
@@ -353,8 +343,7 @@ The Endpoint resource accepts the following [input]({{< relref "/docs/intro/conc
         <span class="property-type">string</span>
     </dt>
     <dd>{{% md %}}The CDN Profile to which to attach the CDN Endpoint.
-{{% /md %}}</dd>
-    <dt class="property-required"
+{{% /md %}}</dd><dt class="property-required"
             title="Required">
         <span id="resourcegroupname_csharp">
 <a href="#resourcegroupname_csharp" style="color: inherit; text-decoration: inherit;">Resource<wbr>Group<wbr>Name</a>
@@ -363,8 +352,7 @@ The Endpoint resource accepts the following [input]({{< relref "/docs/intro/conc
         <span class="property-type">string</span>
     </dt>
     <dd>{{% md %}}The name of the resource group in which to create the CDN Endpoint.
-{{% /md %}}</dd>
-    <dt class="property-optional"
+{{% /md %}}</dd><dt class="property-optional"
             title="Optional">
         <span id="contenttypestocompresses_csharp">
 <a href="#contenttypestocompresses_csharp" style="color: inherit; text-decoration: inherit;">Content<wbr>Types<wbr>To<wbr>Compresses</a>
@@ -373,8 +361,7 @@ The Endpoint resource accepts the following [input]({{< relref "/docs/intro/conc
         <span class="property-type">List&lt;string&gt;</span>
     </dt>
     <dd>{{% md %}}An array of strings that indicates a content types on which compression will be applied. The value for the elements should be MIME types.
-{{% /md %}}</dd>
-    <dt class="property-optional"
+{{% /md %}}</dd><dt class="property-optional"
             title="Optional">
         <span id="deliveryrules_csharp">
 <a href="#deliveryrules_csharp" style="color: inherit; text-decoration: inherit;">Delivery<wbr>Rules</a>
@@ -383,8 +370,7 @@ The Endpoint resource accepts the following [input]({{< relref "/docs/intro/conc
         <span class="property-type"><a href="#endpointdeliveryrule">List&lt;Endpoint<wbr>Delivery<wbr>Rule<wbr>Args&gt;</a></span>
     </dt>
     <dd>{{% md %}}Rules for the rules engine. An endpoint can contain up until 4 of those rules that consist of conditions and actions. A `delivery_rule` blocks as defined below.
-{{% /md %}}</dd>
-    <dt class="property-optional"
+{{% /md %}}</dd><dt class="property-optional"
             title="Optional">
         <span id="geofilters_csharp">
 <a href="#geofilters_csharp" style="color: inherit; text-decoration: inherit;">Geo<wbr>Filters</a>
@@ -393,8 +379,7 @@ The Endpoint resource accepts the following [input]({{< relref "/docs/intro/conc
         <span class="property-type"><a href="#endpointgeofilter">List&lt;Endpoint<wbr>Geo<wbr>Filter<wbr>Args&gt;</a></span>
     </dt>
     <dd>{{% md %}}A set of Geo Filters for this CDN Endpoint. Each `geo_filter` block supports fields documented below.
-{{% /md %}}</dd>
-    <dt class="property-optional"
+{{% /md %}}</dd><dt class="property-optional"
             title="Optional">
         <span id="globaldeliveryrule_csharp">
 <a href="#globaldeliveryrule_csharp" style="color: inherit; text-decoration: inherit;">Global<wbr>Delivery<wbr>Rule</a>
@@ -403,8 +388,7 @@ The Endpoint resource accepts the following [input]({{< relref "/docs/intro/conc
         <span class="property-type"><a href="#endpointglobaldeliveryrule">Endpoint<wbr>Global<wbr>Delivery<wbr>Rule<wbr>Args</a></span>
     </dt>
     <dd>{{% md %}}Actions that are valid for all resources regardless of any conditions. A `global_delivery_rule` block as defined below.
-{{% /md %}}</dd>
-    <dt class="property-optional"
+{{% /md %}}</dd><dt class="property-optional"
             title="Optional">
         <span id="iscompressionenabled_csharp">
 <a href="#iscompressionenabled_csharp" style="color: inherit; text-decoration: inherit;">Is<wbr>Compression<wbr>Enabled</a>
@@ -413,8 +397,7 @@ The Endpoint resource accepts the following [input]({{< relref "/docs/intro/conc
         <span class="property-type">bool</span>
     </dt>
     <dd>{{% md %}}Indicates whether compression is to be enabled.
-{{% /md %}}</dd>
-    <dt class="property-optional"
+{{% /md %}}</dd><dt class="property-optional"
             title="Optional">
         <span id="ishttpallowed_csharp">
 <a href="#ishttpallowed_csharp" style="color: inherit; text-decoration: inherit;">Is<wbr>Http<wbr>Allowed</a>
@@ -423,8 +406,7 @@ The Endpoint resource accepts the following [input]({{< relref "/docs/intro/conc
         <span class="property-type">bool</span>
     </dt>
     <dd>{{% md %}}Defaults to `true`.
-{{% /md %}}</dd>
-    <dt class="property-optional"
+{{% /md %}}</dd><dt class="property-optional"
             title="Optional">
         <span id="ishttpsallowed_csharp">
 <a href="#ishttpsallowed_csharp" style="color: inherit; text-decoration: inherit;">Is<wbr>Https<wbr>Allowed</a>
@@ -433,8 +415,7 @@ The Endpoint resource accepts the following [input]({{< relref "/docs/intro/conc
         <span class="property-type">bool</span>
     </dt>
     <dd>{{% md %}}Defaults to `true`.
-{{% /md %}}</dd>
-    <dt class="property-optional"
+{{% /md %}}</dd><dt class="property-optional"
             title="Optional">
         <span id="location_csharp">
 <a href="#location_csharp" style="color: inherit; text-decoration: inherit;">Location</a>
@@ -443,8 +424,7 @@ The Endpoint resource accepts the following [input]({{< relref "/docs/intro/conc
         <span class="property-type">string</span>
     </dt>
     <dd>{{% md %}}Specifies the supported Azure location where the resource exists. Changing this forces a new resource to be created.
-{{% /md %}}</dd>
-    <dt class="property-optional"
+{{% /md %}}</dd><dt class="property-optional"
             title="Optional">
         <span id="name_csharp">
 <a href="#name_csharp" style="color: inherit; text-decoration: inherit;">Name</a>
@@ -453,8 +433,7 @@ The Endpoint resource accepts the following [input]({{< relref "/docs/intro/conc
         <span class="property-type">string</span>
     </dt>
     <dd>{{% md %}}The name of the origin. This is an arbitrary value. However, this value needs to be unique under the endpoint. Changing this forces a new resource to be created.
-{{% /md %}}</dd>
-    <dt class="property-optional"
+{{% /md %}}</dd><dt class="property-optional"
             title="Optional">
         <span id="optimizationtype_csharp">
 <a href="#optimizationtype_csharp" style="color: inherit; text-decoration: inherit;">Optimization<wbr>Type</a>
@@ -463,8 +442,7 @@ The Endpoint resource accepts the following [input]({{< relref "/docs/intro/conc
         <span class="property-type">string</span>
     </dt>
     <dd>{{% md %}}What types of optimization should this CDN Endpoint optimize for? Possible values include `DynamicSiteAcceleration`, `GeneralMediaStreaming`, `GeneralWebDelivery`, `LargeFileDownload` and `VideoOnDemandMediaStreaming`.
-{{% /md %}}</dd>
-    <dt class="property-optional"
+{{% /md %}}</dd><dt class="property-optional"
             title="Optional">
         <span id="originhostheader_csharp">
 <a href="#originhostheader_csharp" style="color: inherit; text-decoration: inherit;">Origin<wbr>Host<wbr>Header</a>
@@ -473,8 +451,7 @@ The Endpoint resource accepts the following [input]({{< relref "/docs/intro/conc
         <span class="property-type">string</span>
     </dt>
     <dd>{{% md %}}The host header CDN provider will send along with content requests to origins. Defaults to the host name of the origin.
-{{% /md %}}</dd>
-    <dt class="property-optional"
+{{% /md %}}</dd><dt class="property-optional"
             title="Optional">
         <span id="originpath_csharp">
 <a href="#originpath_csharp" style="color: inherit; text-decoration: inherit;">Origin<wbr>Path</a>
@@ -483,8 +460,7 @@ The Endpoint resource accepts the following [input]({{< relref "/docs/intro/conc
         <span class="property-type">string</span>
     </dt>
     <dd>{{% md %}}The path used at for origin requests.
-{{% /md %}}</dd>
-    <dt class="property-optional"
+{{% /md %}}</dd><dt class="property-optional"
             title="Optional">
         <span id="probepath_csharp">
 <a href="#probepath_csharp" style="color: inherit; text-decoration: inherit;">Probe<wbr>Path</a>
@@ -493,8 +469,7 @@ The Endpoint resource accepts the following [input]({{< relref "/docs/intro/conc
         <span class="property-type">string</span>
     </dt>
     <dd>{{% md %}}the path to a file hosted on the origin which helps accelerate delivery of the dynamic content and calculate the most optimal routes for the CDN. This is relative to the `origin_path`.
-{{% /md %}}</dd>
-    <dt class="property-optional"
+{{% /md %}}</dd><dt class="property-optional"
             title="Optional">
         <span id="querystringcachingbehaviour_csharp">
 <a href="#querystringcachingbehaviour_csharp" style="color: inherit; text-decoration: inherit;">Querystring<wbr>Caching<wbr>Behaviour</a>
@@ -503,8 +478,7 @@ The Endpoint resource accepts the following [input]({{< relref "/docs/intro/conc
         <span class="property-type">string</span>
     </dt>
     <dd>{{% md %}}Sets query string caching behavior. Allowed values are `IgnoreQueryString`, `BypassCaching` and `UseQueryString`. `NotSet` value can be used for `Premium Verizon` CDN profile. Defaults to `IgnoreQueryString`.
-{{% /md %}}</dd>
-    <dt class="property-optional"
+{{% /md %}}</dd><dt class="property-optional"
             title="Optional">
         <span id="tags_csharp">
 <a href="#tags_csharp" style="color: inherit; text-decoration: inherit;">Tags</a>
@@ -513,14 +487,11 @@ The Endpoint resource accepts the following [input]({{< relref "/docs/intro/conc
         <span class="property-type">Dictionary&lt;string, string&gt;</span>
     </dt>
     <dd>{{% md %}}A mapping of tags to assign to the resource.
-{{% /md %}}</dd>
-</dl>
+{{% /md %}}</dd></dl>
 {{% /choosable %}}
 
 {{% choosable language go %}}
-<dl class="resources-properties">
-
-    <dt class="property-required"
+<dl class="resources-properties"><dt class="property-required"
             title="Required">
         <span id="origins_go">
 <a href="#origins_go" style="color: inherit; text-decoration: inherit;">Origins</a>
@@ -529,8 +500,7 @@ The Endpoint resource accepts the following [input]({{< relref "/docs/intro/conc
         <span class="property-type"><a href="#endpointorigin">[]Endpoint<wbr>Origin</a></span>
     </dt>
     <dd>{{% md %}}The set of origins of the CDN endpoint. When multiple origins exist, the first origin will be used as primary and rest will be used as failover options. Each `origin` block supports fields documented below.
-{{% /md %}}</dd>
-    <dt class="property-required"
+{{% /md %}}</dd><dt class="property-required"
             title="Required">
         <span id="profilename_go">
 <a href="#profilename_go" style="color: inherit; text-decoration: inherit;">Profile<wbr>Name</a>
@@ -539,8 +509,7 @@ The Endpoint resource accepts the following [input]({{< relref "/docs/intro/conc
         <span class="property-type">string</span>
     </dt>
     <dd>{{% md %}}The CDN Profile to which to attach the CDN Endpoint.
-{{% /md %}}</dd>
-    <dt class="property-required"
+{{% /md %}}</dd><dt class="property-required"
             title="Required">
         <span id="resourcegroupname_go">
 <a href="#resourcegroupname_go" style="color: inherit; text-decoration: inherit;">Resource<wbr>Group<wbr>Name</a>
@@ -549,8 +518,7 @@ The Endpoint resource accepts the following [input]({{< relref "/docs/intro/conc
         <span class="property-type">string</span>
     </dt>
     <dd>{{% md %}}The name of the resource group in which to create the CDN Endpoint.
-{{% /md %}}</dd>
-    <dt class="property-optional"
+{{% /md %}}</dd><dt class="property-optional"
             title="Optional">
         <span id="contenttypestocompresses_go">
 <a href="#contenttypestocompresses_go" style="color: inherit; text-decoration: inherit;">Content<wbr>Types<wbr>To<wbr>Compresses</a>
@@ -559,8 +527,7 @@ The Endpoint resource accepts the following [input]({{< relref "/docs/intro/conc
         <span class="property-type">[]string</span>
     </dt>
     <dd>{{% md %}}An array of strings that indicates a content types on which compression will be applied. The value for the elements should be MIME types.
-{{% /md %}}</dd>
-    <dt class="property-optional"
+{{% /md %}}</dd><dt class="property-optional"
             title="Optional">
         <span id="deliveryrules_go">
 <a href="#deliveryrules_go" style="color: inherit; text-decoration: inherit;">Delivery<wbr>Rules</a>
@@ -569,8 +536,7 @@ The Endpoint resource accepts the following [input]({{< relref "/docs/intro/conc
         <span class="property-type"><a href="#endpointdeliveryrule">[]Endpoint<wbr>Delivery<wbr>Rule</a></span>
     </dt>
     <dd>{{% md %}}Rules for the rules engine. An endpoint can contain up until 4 of those rules that consist of conditions and actions. A `delivery_rule` blocks as defined below.
-{{% /md %}}</dd>
-    <dt class="property-optional"
+{{% /md %}}</dd><dt class="property-optional"
             title="Optional">
         <span id="geofilters_go">
 <a href="#geofilters_go" style="color: inherit; text-decoration: inherit;">Geo<wbr>Filters</a>
@@ -579,8 +545,7 @@ The Endpoint resource accepts the following [input]({{< relref "/docs/intro/conc
         <span class="property-type"><a href="#endpointgeofilter">[]Endpoint<wbr>Geo<wbr>Filter</a></span>
     </dt>
     <dd>{{% md %}}A set of Geo Filters for this CDN Endpoint. Each `geo_filter` block supports fields documented below.
-{{% /md %}}</dd>
-    <dt class="property-optional"
+{{% /md %}}</dd><dt class="property-optional"
             title="Optional">
         <span id="globaldeliveryrule_go">
 <a href="#globaldeliveryrule_go" style="color: inherit; text-decoration: inherit;">Global<wbr>Delivery<wbr>Rule</a>
@@ -589,8 +554,7 @@ The Endpoint resource accepts the following [input]({{< relref "/docs/intro/conc
         <span class="property-type"><a href="#endpointglobaldeliveryrule">Endpoint<wbr>Global<wbr>Delivery<wbr>Rule</a></span>
     </dt>
     <dd>{{% md %}}Actions that are valid for all resources regardless of any conditions. A `global_delivery_rule` block as defined below.
-{{% /md %}}</dd>
-    <dt class="property-optional"
+{{% /md %}}</dd><dt class="property-optional"
             title="Optional">
         <span id="iscompressionenabled_go">
 <a href="#iscompressionenabled_go" style="color: inherit; text-decoration: inherit;">Is<wbr>Compression<wbr>Enabled</a>
@@ -599,8 +563,7 @@ The Endpoint resource accepts the following [input]({{< relref "/docs/intro/conc
         <span class="property-type">bool</span>
     </dt>
     <dd>{{% md %}}Indicates whether compression is to be enabled.
-{{% /md %}}</dd>
-    <dt class="property-optional"
+{{% /md %}}</dd><dt class="property-optional"
             title="Optional">
         <span id="ishttpallowed_go">
 <a href="#ishttpallowed_go" style="color: inherit; text-decoration: inherit;">Is<wbr>Http<wbr>Allowed</a>
@@ -609,8 +572,7 @@ The Endpoint resource accepts the following [input]({{< relref "/docs/intro/conc
         <span class="property-type">bool</span>
     </dt>
     <dd>{{% md %}}Defaults to `true`.
-{{% /md %}}</dd>
-    <dt class="property-optional"
+{{% /md %}}</dd><dt class="property-optional"
             title="Optional">
         <span id="ishttpsallowed_go">
 <a href="#ishttpsallowed_go" style="color: inherit; text-decoration: inherit;">Is<wbr>Https<wbr>Allowed</a>
@@ -619,8 +581,7 @@ The Endpoint resource accepts the following [input]({{< relref "/docs/intro/conc
         <span class="property-type">bool</span>
     </dt>
     <dd>{{% md %}}Defaults to `true`.
-{{% /md %}}</dd>
-    <dt class="property-optional"
+{{% /md %}}</dd><dt class="property-optional"
             title="Optional">
         <span id="location_go">
 <a href="#location_go" style="color: inherit; text-decoration: inherit;">Location</a>
@@ -629,8 +590,7 @@ The Endpoint resource accepts the following [input]({{< relref "/docs/intro/conc
         <span class="property-type">string</span>
     </dt>
     <dd>{{% md %}}Specifies the supported Azure location where the resource exists. Changing this forces a new resource to be created.
-{{% /md %}}</dd>
-    <dt class="property-optional"
+{{% /md %}}</dd><dt class="property-optional"
             title="Optional">
         <span id="name_go">
 <a href="#name_go" style="color: inherit; text-decoration: inherit;">Name</a>
@@ -639,8 +599,7 @@ The Endpoint resource accepts the following [input]({{< relref "/docs/intro/conc
         <span class="property-type">string</span>
     </dt>
     <dd>{{% md %}}The name of the origin. This is an arbitrary value. However, this value needs to be unique under the endpoint. Changing this forces a new resource to be created.
-{{% /md %}}</dd>
-    <dt class="property-optional"
+{{% /md %}}</dd><dt class="property-optional"
             title="Optional">
         <span id="optimizationtype_go">
 <a href="#optimizationtype_go" style="color: inherit; text-decoration: inherit;">Optimization<wbr>Type</a>
@@ -649,8 +608,7 @@ The Endpoint resource accepts the following [input]({{< relref "/docs/intro/conc
         <span class="property-type">string</span>
     </dt>
     <dd>{{% md %}}What types of optimization should this CDN Endpoint optimize for? Possible values include `DynamicSiteAcceleration`, `GeneralMediaStreaming`, `GeneralWebDelivery`, `LargeFileDownload` and `VideoOnDemandMediaStreaming`.
-{{% /md %}}</dd>
-    <dt class="property-optional"
+{{% /md %}}</dd><dt class="property-optional"
             title="Optional">
         <span id="originhostheader_go">
 <a href="#originhostheader_go" style="color: inherit; text-decoration: inherit;">Origin<wbr>Host<wbr>Header</a>
@@ -659,8 +617,7 @@ The Endpoint resource accepts the following [input]({{< relref "/docs/intro/conc
         <span class="property-type">string</span>
     </dt>
     <dd>{{% md %}}The host header CDN provider will send along with content requests to origins. Defaults to the host name of the origin.
-{{% /md %}}</dd>
-    <dt class="property-optional"
+{{% /md %}}</dd><dt class="property-optional"
             title="Optional">
         <span id="originpath_go">
 <a href="#originpath_go" style="color: inherit; text-decoration: inherit;">Origin<wbr>Path</a>
@@ -669,8 +626,7 @@ The Endpoint resource accepts the following [input]({{< relref "/docs/intro/conc
         <span class="property-type">string</span>
     </dt>
     <dd>{{% md %}}The path used at for origin requests.
-{{% /md %}}</dd>
-    <dt class="property-optional"
+{{% /md %}}</dd><dt class="property-optional"
             title="Optional">
         <span id="probepath_go">
 <a href="#probepath_go" style="color: inherit; text-decoration: inherit;">Probe<wbr>Path</a>
@@ -679,8 +635,7 @@ The Endpoint resource accepts the following [input]({{< relref "/docs/intro/conc
         <span class="property-type">string</span>
     </dt>
     <dd>{{% md %}}the path to a file hosted on the origin which helps accelerate delivery of the dynamic content and calculate the most optimal routes for the CDN. This is relative to the `origin_path`.
-{{% /md %}}</dd>
-    <dt class="property-optional"
+{{% /md %}}</dd><dt class="property-optional"
             title="Optional">
         <span id="querystringcachingbehaviour_go">
 <a href="#querystringcachingbehaviour_go" style="color: inherit; text-decoration: inherit;">Querystring<wbr>Caching<wbr>Behaviour</a>
@@ -689,8 +644,7 @@ The Endpoint resource accepts the following [input]({{< relref "/docs/intro/conc
         <span class="property-type">string</span>
     </dt>
     <dd>{{% md %}}Sets query string caching behavior. Allowed values are `IgnoreQueryString`, `BypassCaching` and `UseQueryString`. `NotSet` value can be used for `Premium Verizon` CDN profile. Defaults to `IgnoreQueryString`.
-{{% /md %}}</dd>
-    <dt class="property-optional"
+{{% /md %}}</dd><dt class="property-optional"
             title="Optional">
         <span id="tags_go">
 <a href="#tags_go" style="color: inherit; text-decoration: inherit;">Tags</a>
@@ -699,14 +653,11 @@ The Endpoint resource accepts the following [input]({{< relref "/docs/intro/conc
         <span class="property-type">map[string]string</span>
     </dt>
     <dd>{{% md %}}A mapping of tags to assign to the resource.
-{{% /md %}}</dd>
-</dl>
+{{% /md %}}</dd></dl>
 {{% /choosable %}}
 
 {{% choosable language nodejs %}}
-<dl class="resources-properties">
-
-    <dt class="property-required"
+<dl class="resources-properties"><dt class="property-required"
             title="Required">
         <span id="origins_nodejs">
 <a href="#origins_nodejs" style="color: inherit; text-decoration: inherit;">origins</a>
@@ -715,8 +666,7 @@ The Endpoint resource accepts the following [input]({{< relref "/docs/intro/conc
         <span class="property-type"><a href="#endpointorigin">Endpoint<wbr>Origin[]</a></span>
     </dt>
     <dd>{{% md %}}The set of origins of the CDN endpoint. When multiple origins exist, the first origin will be used as primary and rest will be used as failover options. Each `origin` block supports fields documented below.
-{{% /md %}}</dd>
-    <dt class="property-required"
+{{% /md %}}</dd><dt class="property-required"
             title="Required">
         <span id="profilename_nodejs">
 <a href="#profilename_nodejs" style="color: inherit; text-decoration: inherit;">profile<wbr>Name</a>
@@ -725,8 +675,7 @@ The Endpoint resource accepts the following [input]({{< relref "/docs/intro/conc
         <span class="property-type">string</span>
     </dt>
     <dd>{{% md %}}The CDN Profile to which to attach the CDN Endpoint.
-{{% /md %}}</dd>
-    <dt class="property-required"
+{{% /md %}}</dd><dt class="property-required"
             title="Required">
         <span id="resourcegroupname_nodejs">
 <a href="#resourcegroupname_nodejs" style="color: inherit; text-decoration: inherit;">resource<wbr>Group<wbr>Name</a>
@@ -735,8 +684,7 @@ The Endpoint resource accepts the following [input]({{< relref "/docs/intro/conc
         <span class="property-type">string</span>
     </dt>
     <dd>{{% md %}}The name of the resource group in which to create the CDN Endpoint.
-{{% /md %}}</dd>
-    <dt class="property-optional"
+{{% /md %}}</dd><dt class="property-optional"
             title="Optional">
         <span id="contenttypestocompresses_nodejs">
 <a href="#contenttypestocompresses_nodejs" style="color: inherit; text-decoration: inherit;">content<wbr>Types<wbr>To<wbr>Compresses</a>
@@ -745,8 +693,7 @@ The Endpoint resource accepts the following [input]({{< relref "/docs/intro/conc
         <span class="property-type">string[]</span>
     </dt>
     <dd>{{% md %}}An array of strings that indicates a content types on which compression will be applied. The value for the elements should be MIME types.
-{{% /md %}}</dd>
-    <dt class="property-optional"
+{{% /md %}}</dd><dt class="property-optional"
             title="Optional">
         <span id="deliveryrules_nodejs">
 <a href="#deliveryrules_nodejs" style="color: inherit; text-decoration: inherit;">delivery<wbr>Rules</a>
@@ -755,8 +702,7 @@ The Endpoint resource accepts the following [input]({{< relref "/docs/intro/conc
         <span class="property-type"><a href="#endpointdeliveryrule">Endpoint<wbr>Delivery<wbr>Rule[]</a></span>
     </dt>
     <dd>{{% md %}}Rules for the rules engine. An endpoint can contain up until 4 of those rules that consist of conditions and actions. A `delivery_rule` blocks as defined below.
-{{% /md %}}</dd>
-    <dt class="property-optional"
+{{% /md %}}</dd><dt class="property-optional"
             title="Optional">
         <span id="geofilters_nodejs">
 <a href="#geofilters_nodejs" style="color: inherit; text-decoration: inherit;">geo<wbr>Filters</a>
@@ -765,8 +711,7 @@ The Endpoint resource accepts the following [input]({{< relref "/docs/intro/conc
         <span class="property-type"><a href="#endpointgeofilter">Endpoint<wbr>Geo<wbr>Filter[]</a></span>
     </dt>
     <dd>{{% md %}}A set of Geo Filters for this CDN Endpoint. Each `geo_filter` block supports fields documented below.
-{{% /md %}}</dd>
-    <dt class="property-optional"
+{{% /md %}}</dd><dt class="property-optional"
             title="Optional">
         <span id="globaldeliveryrule_nodejs">
 <a href="#globaldeliveryrule_nodejs" style="color: inherit; text-decoration: inherit;">global<wbr>Delivery<wbr>Rule</a>
@@ -775,8 +720,7 @@ The Endpoint resource accepts the following [input]({{< relref "/docs/intro/conc
         <span class="property-type"><a href="#endpointglobaldeliveryrule">Endpoint<wbr>Global<wbr>Delivery<wbr>Rule</a></span>
     </dt>
     <dd>{{% md %}}Actions that are valid for all resources regardless of any conditions. A `global_delivery_rule` block as defined below.
-{{% /md %}}</dd>
-    <dt class="property-optional"
+{{% /md %}}</dd><dt class="property-optional"
             title="Optional">
         <span id="iscompressionenabled_nodejs">
 <a href="#iscompressionenabled_nodejs" style="color: inherit; text-decoration: inherit;">is<wbr>Compression<wbr>Enabled</a>
@@ -785,8 +729,7 @@ The Endpoint resource accepts the following [input]({{< relref "/docs/intro/conc
         <span class="property-type">boolean</span>
     </dt>
     <dd>{{% md %}}Indicates whether compression is to be enabled.
-{{% /md %}}</dd>
-    <dt class="property-optional"
+{{% /md %}}</dd><dt class="property-optional"
             title="Optional">
         <span id="ishttpallowed_nodejs">
 <a href="#ishttpallowed_nodejs" style="color: inherit; text-decoration: inherit;">is<wbr>Http<wbr>Allowed</a>
@@ -795,8 +738,7 @@ The Endpoint resource accepts the following [input]({{< relref "/docs/intro/conc
         <span class="property-type">boolean</span>
     </dt>
     <dd>{{% md %}}Defaults to `true`.
-{{% /md %}}</dd>
-    <dt class="property-optional"
+{{% /md %}}</dd><dt class="property-optional"
             title="Optional">
         <span id="ishttpsallowed_nodejs">
 <a href="#ishttpsallowed_nodejs" style="color: inherit; text-decoration: inherit;">is<wbr>Https<wbr>Allowed</a>
@@ -805,8 +747,7 @@ The Endpoint resource accepts the following [input]({{< relref "/docs/intro/conc
         <span class="property-type">boolean</span>
     </dt>
     <dd>{{% md %}}Defaults to `true`.
-{{% /md %}}</dd>
-    <dt class="property-optional"
+{{% /md %}}</dd><dt class="property-optional"
             title="Optional">
         <span id="location_nodejs">
 <a href="#location_nodejs" style="color: inherit; text-decoration: inherit;">location</a>
@@ -815,8 +756,7 @@ The Endpoint resource accepts the following [input]({{< relref "/docs/intro/conc
         <span class="property-type">string</span>
     </dt>
     <dd>{{% md %}}Specifies the supported Azure location where the resource exists. Changing this forces a new resource to be created.
-{{% /md %}}</dd>
-    <dt class="property-optional"
+{{% /md %}}</dd><dt class="property-optional"
             title="Optional">
         <span id="name_nodejs">
 <a href="#name_nodejs" style="color: inherit; text-decoration: inherit;">name</a>
@@ -825,8 +765,7 @@ The Endpoint resource accepts the following [input]({{< relref "/docs/intro/conc
         <span class="property-type">string</span>
     </dt>
     <dd>{{% md %}}The name of the origin. This is an arbitrary value. However, this value needs to be unique under the endpoint. Changing this forces a new resource to be created.
-{{% /md %}}</dd>
-    <dt class="property-optional"
+{{% /md %}}</dd><dt class="property-optional"
             title="Optional">
         <span id="optimizationtype_nodejs">
 <a href="#optimizationtype_nodejs" style="color: inherit; text-decoration: inherit;">optimization<wbr>Type</a>
@@ -835,8 +774,7 @@ The Endpoint resource accepts the following [input]({{< relref "/docs/intro/conc
         <span class="property-type">string</span>
     </dt>
     <dd>{{% md %}}What types of optimization should this CDN Endpoint optimize for? Possible values include `DynamicSiteAcceleration`, `GeneralMediaStreaming`, `GeneralWebDelivery`, `LargeFileDownload` and `VideoOnDemandMediaStreaming`.
-{{% /md %}}</dd>
-    <dt class="property-optional"
+{{% /md %}}</dd><dt class="property-optional"
             title="Optional">
         <span id="originhostheader_nodejs">
 <a href="#originhostheader_nodejs" style="color: inherit; text-decoration: inherit;">origin<wbr>Host<wbr>Header</a>
@@ -845,8 +783,7 @@ The Endpoint resource accepts the following [input]({{< relref "/docs/intro/conc
         <span class="property-type">string</span>
     </dt>
     <dd>{{% md %}}The host header CDN provider will send along with content requests to origins. Defaults to the host name of the origin.
-{{% /md %}}</dd>
-    <dt class="property-optional"
+{{% /md %}}</dd><dt class="property-optional"
             title="Optional">
         <span id="originpath_nodejs">
 <a href="#originpath_nodejs" style="color: inherit; text-decoration: inherit;">origin<wbr>Path</a>
@@ -855,8 +792,7 @@ The Endpoint resource accepts the following [input]({{< relref "/docs/intro/conc
         <span class="property-type">string</span>
     </dt>
     <dd>{{% md %}}The path used at for origin requests.
-{{% /md %}}</dd>
-    <dt class="property-optional"
+{{% /md %}}</dd><dt class="property-optional"
             title="Optional">
         <span id="probepath_nodejs">
 <a href="#probepath_nodejs" style="color: inherit; text-decoration: inherit;">probe<wbr>Path</a>
@@ -865,8 +801,7 @@ The Endpoint resource accepts the following [input]({{< relref "/docs/intro/conc
         <span class="property-type">string</span>
     </dt>
     <dd>{{% md %}}the path to a file hosted on the origin which helps accelerate delivery of the dynamic content and calculate the most optimal routes for the CDN. This is relative to the `origin_path`.
-{{% /md %}}</dd>
-    <dt class="property-optional"
+{{% /md %}}</dd><dt class="property-optional"
             title="Optional">
         <span id="querystringcachingbehaviour_nodejs">
 <a href="#querystringcachingbehaviour_nodejs" style="color: inherit; text-decoration: inherit;">querystring<wbr>Caching<wbr>Behaviour</a>
@@ -875,8 +810,7 @@ The Endpoint resource accepts the following [input]({{< relref "/docs/intro/conc
         <span class="property-type">string</span>
     </dt>
     <dd>{{% md %}}Sets query string caching behavior. Allowed values are `IgnoreQueryString`, `BypassCaching` and `UseQueryString`. `NotSet` value can be used for `Premium Verizon` CDN profile. Defaults to `IgnoreQueryString`.
-{{% /md %}}</dd>
-    <dt class="property-optional"
+{{% /md %}}</dd><dt class="property-optional"
             title="Optional">
         <span id="tags_nodejs">
 <a href="#tags_nodejs" style="color: inherit; text-decoration: inherit;">tags</a>
@@ -885,14 +819,11 @@ The Endpoint resource accepts the following [input]({{< relref "/docs/intro/conc
         <span class="property-type">{[key: string]: string}</span>
     </dt>
     <dd>{{% md %}}A mapping of tags to assign to the resource.
-{{% /md %}}</dd>
-</dl>
+{{% /md %}}</dd></dl>
 {{% /choosable %}}
 
 {{% choosable language python %}}
-<dl class="resources-properties">
-
-    <dt class="property-required"
+<dl class="resources-properties"><dt class="property-required"
             title="Required">
         <span id="origins_python">
 <a href="#origins_python" style="color: inherit; text-decoration: inherit;">origins</a>
@@ -901,8 +832,7 @@ The Endpoint resource accepts the following [input]({{< relref "/docs/intro/conc
         <span class="property-type"><a href="#endpointorigin">Sequence[Endpoint<wbr>Origin<wbr>Args]</a></span>
     </dt>
     <dd>{{% md %}}The set of origins of the CDN endpoint. When multiple origins exist, the first origin will be used as primary and rest will be used as failover options. Each `origin` block supports fields documented below.
-{{% /md %}}</dd>
-    <dt class="property-required"
+{{% /md %}}</dd><dt class="property-required"
             title="Required">
         <span id="profile_name_python">
 <a href="#profile_name_python" style="color: inherit; text-decoration: inherit;">profile_<wbr>name</a>
@@ -911,8 +841,7 @@ The Endpoint resource accepts the following [input]({{< relref "/docs/intro/conc
         <span class="property-type">str</span>
     </dt>
     <dd>{{% md %}}The CDN Profile to which to attach the CDN Endpoint.
-{{% /md %}}</dd>
-    <dt class="property-required"
+{{% /md %}}</dd><dt class="property-required"
             title="Required">
         <span id="resource_group_name_python">
 <a href="#resource_group_name_python" style="color: inherit; text-decoration: inherit;">resource_<wbr>group_<wbr>name</a>
@@ -921,8 +850,7 @@ The Endpoint resource accepts the following [input]({{< relref "/docs/intro/conc
         <span class="property-type">str</span>
     </dt>
     <dd>{{% md %}}The name of the resource group in which to create the CDN Endpoint.
-{{% /md %}}</dd>
-    <dt class="property-optional"
+{{% /md %}}</dd><dt class="property-optional"
             title="Optional">
         <span id="content_types_to_compresses_python">
 <a href="#content_types_to_compresses_python" style="color: inherit; text-decoration: inherit;">content_<wbr>types_<wbr>to_<wbr>compresses</a>
@@ -931,8 +859,7 @@ The Endpoint resource accepts the following [input]({{< relref "/docs/intro/conc
         <span class="property-type">Sequence[str]</span>
     </dt>
     <dd>{{% md %}}An array of strings that indicates a content types on which compression will be applied. The value for the elements should be MIME types.
-{{% /md %}}</dd>
-    <dt class="property-optional"
+{{% /md %}}</dd><dt class="property-optional"
             title="Optional">
         <span id="delivery_rules_python">
 <a href="#delivery_rules_python" style="color: inherit; text-decoration: inherit;">delivery_<wbr>rules</a>
@@ -941,8 +868,7 @@ The Endpoint resource accepts the following [input]({{< relref "/docs/intro/conc
         <span class="property-type"><a href="#endpointdeliveryrule">Sequence[Endpoint<wbr>Delivery<wbr>Rule<wbr>Args]</a></span>
     </dt>
     <dd>{{% md %}}Rules for the rules engine. An endpoint can contain up until 4 of those rules that consist of conditions and actions. A `delivery_rule` blocks as defined below.
-{{% /md %}}</dd>
-    <dt class="property-optional"
+{{% /md %}}</dd><dt class="property-optional"
             title="Optional">
         <span id="geo_filters_python">
 <a href="#geo_filters_python" style="color: inherit; text-decoration: inherit;">geo_<wbr>filters</a>
@@ -951,8 +877,7 @@ The Endpoint resource accepts the following [input]({{< relref "/docs/intro/conc
         <span class="property-type"><a href="#endpointgeofilter">Sequence[Endpoint<wbr>Geo<wbr>Filter<wbr>Args]</a></span>
     </dt>
     <dd>{{% md %}}A set of Geo Filters for this CDN Endpoint. Each `geo_filter` block supports fields documented below.
-{{% /md %}}</dd>
-    <dt class="property-optional"
+{{% /md %}}</dd><dt class="property-optional"
             title="Optional">
         <span id="global_delivery_rule_python">
 <a href="#global_delivery_rule_python" style="color: inherit; text-decoration: inherit;">global_<wbr>delivery_<wbr>rule</a>
@@ -961,8 +886,7 @@ The Endpoint resource accepts the following [input]({{< relref "/docs/intro/conc
         <span class="property-type"><a href="#endpointglobaldeliveryrule">Endpoint<wbr>Global<wbr>Delivery<wbr>Rule<wbr>Args</a></span>
     </dt>
     <dd>{{% md %}}Actions that are valid for all resources regardless of any conditions. A `global_delivery_rule` block as defined below.
-{{% /md %}}</dd>
-    <dt class="property-optional"
+{{% /md %}}</dd><dt class="property-optional"
             title="Optional">
         <span id="is_compression_enabled_python">
 <a href="#is_compression_enabled_python" style="color: inherit; text-decoration: inherit;">is_<wbr>compression_<wbr>enabled</a>
@@ -971,8 +895,7 @@ The Endpoint resource accepts the following [input]({{< relref "/docs/intro/conc
         <span class="property-type">bool</span>
     </dt>
     <dd>{{% md %}}Indicates whether compression is to be enabled.
-{{% /md %}}</dd>
-    <dt class="property-optional"
+{{% /md %}}</dd><dt class="property-optional"
             title="Optional">
         <span id="is_http_allowed_python">
 <a href="#is_http_allowed_python" style="color: inherit; text-decoration: inherit;">is_<wbr>http_<wbr>allowed</a>
@@ -981,8 +904,7 @@ The Endpoint resource accepts the following [input]({{< relref "/docs/intro/conc
         <span class="property-type">bool</span>
     </dt>
     <dd>{{% md %}}Defaults to `true`.
-{{% /md %}}</dd>
-    <dt class="property-optional"
+{{% /md %}}</dd><dt class="property-optional"
             title="Optional">
         <span id="is_https_allowed_python">
 <a href="#is_https_allowed_python" style="color: inherit; text-decoration: inherit;">is_<wbr>https_<wbr>allowed</a>
@@ -991,8 +913,7 @@ The Endpoint resource accepts the following [input]({{< relref "/docs/intro/conc
         <span class="property-type">bool</span>
     </dt>
     <dd>{{% md %}}Defaults to `true`.
-{{% /md %}}</dd>
-    <dt class="property-optional"
+{{% /md %}}</dd><dt class="property-optional"
             title="Optional">
         <span id="location_python">
 <a href="#location_python" style="color: inherit; text-decoration: inherit;">location</a>
@@ -1001,8 +922,7 @@ The Endpoint resource accepts the following [input]({{< relref "/docs/intro/conc
         <span class="property-type">str</span>
     </dt>
     <dd>{{% md %}}Specifies the supported Azure location where the resource exists. Changing this forces a new resource to be created.
-{{% /md %}}</dd>
-    <dt class="property-optional"
+{{% /md %}}</dd><dt class="property-optional"
             title="Optional">
         <span id="name_python">
 <a href="#name_python" style="color: inherit; text-decoration: inherit;">name</a>
@@ -1011,8 +931,7 @@ The Endpoint resource accepts the following [input]({{< relref "/docs/intro/conc
         <span class="property-type">str</span>
     </dt>
     <dd>{{% md %}}The name of the origin. This is an arbitrary value. However, this value needs to be unique under the endpoint. Changing this forces a new resource to be created.
-{{% /md %}}</dd>
-    <dt class="property-optional"
+{{% /md %}}</dd><dt class="property-optional"
             title="Optional">
         <span id="optimization_type_python">
 <a href="#optimization_type_python" style="color: inherit; text-decoration: inherit;">optimization_<wbr>type</a>
@@ -1021,8 +940,7 @@ The Endpoint resource accepts the following [input]({{< relref "/docs/intro/conc
         <span class="property-type">str</span>
     </dt>
     <dd>{{% md %}}What types of optimization should this CDN Endpoint optimize for? Possible values include `DynamicSiteAcceleration`, `GeneralMediaStreaming`, `GeneralWebDelivery`, `LargeFileDownload` and `VideoOnDemandMediaStreaming`.
-{{% /md %}}</dd>
-    <dt class="property-optional"
+{{% /md %}}</dd><dt class="property-optional"
             title="Optional">
         <span id="origin_host_header_python">
 <a href="#origin_host_header_python" style="color: inherit; text-decoration: inherit;">origin_<wbr>host_<wbr>header</a>
@@ -1031,8 +949,7 @@ The Endpoint resource accepts the following [input]({{< relref "/docs/intro/conc
         <span class="property-type">str</span>
     </dt>
     <dd>{{% md %}}The host header CDN provider will send along with content requests to origins. Defaults to the host name of the origin.
-{{% /md %}}</dd>
-    <dt class="property-optional"
+{{% /md %}}</dd><dt class="property-optional"
             title="Optional">
         <span id="origin_path_python">
 <a href="#origin_path_python" style="color: inherit; text-decoration: inherit;">origin_<wbr>path</a>
@@ -1041,8 +958,7 @@ The Endpoint resource accepts the following [input]({{< relref "/docs/intro/conc
         <span class="property-type">str</span>
     </dt>
     <dd>{{% md %}}The path used at for origin requests.
-{{% /md %}}</dd>
-    <dt class="property-optional"
+{{% /md %}}</dd><dt class="property-optional"
             title="Optional">
         <span id="probe_path_python">
 <a href="#probe_path_python" style="color: inherit; text-decoration: inherit;">probe_<wbr>path</a>
@@ -1051,8 +967,7 @@ The Endpoint resource accepts the following [input]({{< relref "/docs/intro/conc
         <span class="property-type">str</span>
     </dt>
     <dd>{{% md %}}the path to a file hosted on the origin which helps accelerate delivery of the dynamic content and calculate the most optimal routes for the CDN. This is relative to the `origin_path`.
-{{% /md %}}</dd>
-    <dt class="property-optional"
+{{% /md %}}</dd><dt class="property-optional"
             title="Optional">
         <span id="querystring_caching_behaviour_python">
 <a href="#querystring_caching_behaviour_python" style="color: inherit; text-decoration: inherit;">querystring_<wbr>caching_<wbr>behaviour</a>
@@ -1061,8 +976,7 @@ The Endpoint resource accepts the following [input]({{< relref "/docs/intro/conc
         <span class="property-type">str</span>
     </dt>
     <dd>{{% md %}}Sets query string caching behavior. Allowed values are `IgnoreQueryString`, `BypassCaching` and `UseQueryString`. `NotSet` value can be used for `Premium Verizon` CDN profile. Defaults to `IgnoreQueryString`.
-{{% /md %}}</dd>
-    <dt class="property-optional"
+{{% /md %}}</dd><dt class="property-optional"
             title="Optional">
         <span id="tags_python">
 <a href="#tags_python" style="color: inherit; text-decoration: inherit;">tags</a>
@@ -1071,8 +985,7 @@ The Endpoint resource accepts the following [input]({{< relref "/docs/intro/conc
         <span class="property-type">Mapping[str, str]</span>
     </dt>
     <dd>{{% md %}}A mapping of tags to assign to the resource.
-{{% /md %}}</dd>
-</dl>
+{{% /md %}}</dd></dl>
 {{% /choosable %}}
 
 
@@ -1083,9 +996,7 @@ All [input](#inputs) properties are implicitly available as output properties. A
 
 
 {{% choosable language csharp %}}
-<dl class="resources-properties">
-
-    <dt class="property-"
+<dl class="resources-properties"><dt class="property-"
             title="">
         <span id="hostname_csharp">
 <a href="#hostname_csharp" style="color: inherit; text-decoration: inherit;">Host<wbr>Name</a>
@@ -1094,8 +1005,7 @@ All [input](#inputs) properties are implicitly available as output properties. A
         <span class="property-type">string</span>
     </dt>
     <dd>{{% md %}}A string that determines the hostname/IP address of the origin server. This string can be a domain name, Storage Account endpoint, Web App endpoint, IPv4 address or IPv6 address. Changing this forces a new resource to be created.
-{{% /md %}}</dd>
-    <dt class="property-"
+{{% /md %}}</dd><dt class="property-"
             title="">
         <span id="id_csharp">
 <a href="#id_csharp" style="color: inherit; text-decoration: inherit;">Id</a>
@@ -1103,14 +1013,11 @@ All [input](#inputs) properties are implicitly available as output properties. A
         <span class="property-indicator"></span>
         <span class="property-type">string</span>
     </dt>
-    <dd>{{% md %}}The provider-assigned unique ID for this managed resource.{{% /md %}}</dd>
-</dl>
+    <dd>{{% md %}}The provider-assigned unique ID for this managed resource.{{% /md %}}</dd></dl>
 {{% /choosable %}}
 
 {{% choosable language go %}}
-<dl class="resources-properties">
-
-    <dt class="property-"
+<dl class="resources-properties"><dt class="property-"
             title="">
         <span id="hostname_go">
 <a href="#hostname_go" style="color: inherit; text-decoration: inherit;">Host<wbr>Name</a>
@@ -1119,8 +1026,7 @@ All [input](#inputs) properties are implicitly available as output properties. A
         <span class="property-type">string</span>
     </dt>
     <dd>{{% md %}}A string that determines the hostname/IP address of the origin server. This string can be a domain name, Storage Account endpoint, Web App endpoint, IPv4 address or IPv6 address. Changing this forces a new resource to be created.
-{{% /md %}}</dd>
-    <dt class="property-"
+{{% /md %}}</dd><dt class="property-"
             title="">
         <span id="id_go">
 <a href="#id_go" style="color: inherit; text-decoration: inherit;">Id</a>
@@ -1128,14 +1034,11 @@ All [input](#inputs) properties are implicitly available as output properties. A
         <span class="property-indicator"></span>
         <span class="property-type">string</span>
     </dt>
-    <dd>{{% md %}}The provider-assigned unique ID for this managed resource.{{% /md %}}</dd>
-</dl>
+    <dd>{{% md %}}The provider-assigned unique ID for this managed resource.{{% /md %}}</dd></dl>
 {{% /choosable %}}
 
 {{% choosable language nodejs %}}
-<dl class="resources-properties">
-
-    <dt class="property-"
+<dl class="resources-properties"><dt class="property-"
             title="">
         <span id="hostname_nodejs">
 <a href="#hostname_nodejs" style="color: inherit; text-decoration: inherit;">host<wbr>Name</a>
@@ -1144,8 +1047,7 @@ All [input](#inputs) properties are implicitly available as output properties. A
         <span class="property-type">string</span>
     </dt>
     <dd>{{% md %}}A string that determines the hostname/IP address of the origin server. This string can be a domain name, Storage Account endpoint, Web App endpoint, IPv4 address or IPv6 address. Changing this forces a new resource to be created.
-{{% /md %}}</dd>
-    <dt class="property-"
+{{% /md %}}</dd><dt class="property-"
             title="">
         <span id="id_nodejs">
 <a href="#id_nodejs" style="color: inherit; text-decoration: inherit;">id</a>
@@ -1153,14 +1055,11 @@ All [input](#inputs) properties are implicitly available as output properties. A
         <span class="property-indicator"></span>
         <span class="property-type">string</span>
     </dt>
-    <dd>{{% md %}}The provider-assigned unique ID for this managed resource.{{% /md %}}</dd>
-</dl>
+    <dd>{{% md %}}The provider-assigned unique ID for this managed resource.{{% /md %}}</dd></dl>
 {{% /choosable %}}
 
 {{% choosable language python %}}
-<dl class="resources-properties">
-
-    <dt class="property-"
+<dl class="resources-properties"><dt class="property-"
             title="">
         <span id="host_name_python">
 <a href="#host_name_python" style="color: inherit; text-decoration: inherit;">host_<wbr>name</a>
@@ -1169,8 +1068,7 @@ All [input](#inputs) properties are implicitly available as output properties. A
         <span class="property-type">str</span>
     </dt>
     <dd>{{% md %}}A string that determines the hostname/IP address of the origin server. This string can be a domain name, Storage Account endpoint, Web App endpoint, IPv4 address or IPv6 address. Changing this forces a new resource to be created.
-{{% /md %}}</dd>
-    <dt class="property-"
+{{% /md %}}</dd><dt class="property-"
             title="">
         <span id="id_python">
 <a href="#id_python" style="color: inherit; text-decoration: inherit;">id</a>
@@ -1178,8 +1076,7 @@ All [input](#inputs) properties are implicitly available as output properties. A
         <span class="property-indicator"></span>
         <span class="property-type">str</span>
     </dt>
-    <dd>{{% md %}}The provider-assigned unique ID for this managed resource.{{% /md %}}</dd>
-</dl>
+    <dd>{{% md %}}The provider-assigned unique ID for this managed resource.{{% /md %}}</dd></dl>
 {{% /choosable %}}
 
 
@@ -1306,9 +1203,7 @@ The following state arguments are supported:
 
 
 {{% choosable language csharp %}}
-<dl class="resources-properties">
-
-    <dt class="property-optional"
+<dl class="resources-properties"><dt class="property-optional"
             title="Optional">
         <span id="state_contenttypestocompresses_csharp">
 <a href="#state_contenttypestocompresses_csharp" style="color: inherit; text-decoration: inherit;">Content<wbr>Types<wbr>To<wbr>Compresses</a>
@@ -1317,8 +1212,7 @@ The following state arguments are supported:
         <span class="property-type">List&lt;string&gt;</span>
     </dt>
     <dd>{{% md %}}An array of strings that indicates a content types on which compression will be applied. The value for the elements should be MIME types.
-{{% /md %}}</dd>
-    <dt class="property-optional"
+{{% /md %}}</dd><dt class="property-optional"
             title="Optional">
         <span id="state_deliveryrules_csharp">
 <a href="#state_deliveryrules_csharp" style="color: inherit; text-decoration: inherit;">Delivery<wbr>Rules</a>
@@ -1327,8 +1221,7 @@ The following state arguments are supported:
         <span class="property-type"><a href="#endpointdeliveryrule">List&lt;Endpoint<wbr>Delivery<wbr>Rule<wbr>Args&gt;</a></span>
     </dt>
     <dd>{{% md %}}Rules for the rules engine. An endpoint can contain up until 4 of those rules that consist of conditions and actions. A `delivery_rule` blocks as defined below.
-{{% /md %}}</dd>
-    <dt class="property-optional"
+{{% /md %}}</dd><dt class="property-optional"
             title="Optional">
         <span id="state_geofilters_csharp">
 <a href="#state_geofilters_csharp" style="color: inherit; text-decoration: inherit;">Geo<wbr>Filters</a>
@@ -1337,8 +1230,7 @@ The following state arguments are supported:
         <span class="property-type"><a href="#endpointgeofilter">List&lt;Endpoint<wbr>Geo<wbr>Filter<wbr>Args&gt;</a></span>
     </dt>
     <dd>{{% md %}}A set of Geo Filters for this CDN Endpoint. Each `geo_filter` block supports fields documented below.
-{{% /md %}}</dd>
-    <dt class="property-optional"
+{{% /md %}}</dd><dt class="property-optional"
             title="Optional">
         <span id="state_globaldeliveryrule_csharp">
 <a href="#state_globaldeliveryrule_csharp" style="color: inherit; text-decoration: inherit;">Global<wbr>Delivery<wbr>Rule</a>
@@ -1347,8 +1239,7 @@ The following state arguments are supported:
         <span class="property-type"><a href="#endpointglobaldeliveryrule">Endpoint<wbr>Global<wbr>Delivery<wbr>Rule<wbr>Args</a></span>
     </dt>
     <dd>{{% md %}}Actions that are valid for all resources regardless of any conditions. A `global_delivery_rule` block as defined below.
-{{% /md %}}</dd>
-    <dt class="property-optional"
+{{% /md %}}</dd><dt class="property-optional"
             title="Optional">
         <span id="state_hostname_csharp">
 <a href="#state_hostname_csharp" style="color: inherit; text-decoration: inherit;">Host<wbr>Name</a>
@@ -1357,8 +1248,7 @@ The following state arguments are supported:
         <span class="property-type">string</span>
     </dt>
     <dd>{{% md %}}A string that determines the hostname/IP address of the origin server. This string can be a domain name, Storage Account endpoint, Web App endpoint, IPv4 address or IPv6 address. Changing this forces a new resource to be created.
-{{% /md %}}</dd>
-    <dt class="property-optional"
+{{% /md %}}</dd><dt class="property-optional"
             title="Optional">
         <span id="state_iscompressionenabled_csharp">
 <a href="#state_iscompressionenabled_csharp" style="color: inherit; text-decoration: inherit;">Is<wbr>Compression<wbr>Enabled</a>
@@ -1367,8 +1257,7 @@ The following state arguments are supported:
         <span class="property-type">bool</span>
     </dt>
     <dd>{{% md %}}Indicates whether compression is to be enabled.
-{{% /md %}}</dd>
-    <dt class="property-optional"
+{{% /md %}}</dd><dt class="property-optional"
             title="Optional">
         <span id="state_ishttpallowed_csharp">
 <a href="#state_ishttpallowed_csharp" style="color: inherit; text-decoration: inherit;">Is<wbr>Http<wbr>Allowed</a>
@@ -1377,8 +1266,7 @@ The following state arguments are supported:
         <span class="property-type">bool</span>
     </dt>
     <dd>{{% md %}}Defaults to `true`.
-{{% /md %}}</dd>
-    <dt class="property-optional"
+{{% /md %}}</dd><dt class="property-optional"
             title="Optional">
         <span id="state_ishttpsallowed_csharp">
 <a href="#state_ishttpsallowed_csharp" style="color: inherit; text-decoration: inherit;">Is<wbr>Https<wbr>Allowed</a>
@@ -1387,8 +1275,7 @@ The following state arguments are supported:
         <span class="property-type">bool</span>
     </dt>
     <dd>{{% md %}}Defaults to `true`.
-{{% /md %}}</dd>
-    <dt class="property-optional"
+{{% /md %}}</dd><dt class="property-optional"
             title="Optional">
         <span id="state_location_csharp">
 <a href="#state_location_csharp" style="color: inherit; text-decoration: inherit;">Location</a>
@@ -1397,8 +1284,7 @@ The following state arguments are supported:
         <span class="property-type">string</span>
     </dt>
     <dd>{{% md %}}Specifies the supported Azure location where the resource exists. Changing this forces a new resource to be created.
-{{% /md %}}</dd>
-    <dt class="property-optional"
+{{% /md %}}</dd><dt class="property-optional"
             title="Optional">
         <span id="state_name_csharp">
 <a href="#state_name_csharp" style="color: inherit; text-decoration: inherit;">Name</a>
@@ -1407,8 +1293,7 @@ The following state arguments are supported:
         <span class="property-type">string</span>
     </dt>
     <dd>{{% md %}}The name of the origin. This is an arbitrary value. However, this value needs to be unique under the endpoint. Changing this forces a new resource to be created.
-{{% /md %}}</dd>
-    <dt class="property-optional"
+{{% /md %}}</dd><dt class="property-optional"
             title="Optional">
         <span id="state_optimizationtype_csharp">
 <a href="#state_optimizationtype_csharp" style="color: inherit; text-decoration: inherit;">Optimization<wbr>Type</a>
@@ -1417,8 +1302,7 @@ The following state arguments are supported:
         <span class="property-type">string</span>
     </dt>
     <dd>{{% md %}}What types of optimization should this CDN Endpoint optimize for? Possible values include `DynamicSiteAcceleration`, `GeneralMediaStreaming`, `GeneralWebDelivery`, `LargeFileDownload` and `VideoOnDemandMediaStreaming`.
-{{% /md %}}</dd>
-    <dt class="property-optional"
+{{% /md %}}</dd><dt class="property-optional"
             title="Optional">
         <span id="state_originhostheader_csharp">
 <a href="#state_originhostheader_csharp" style="color: inherit; text-decoration: inherit;">Origin<wbr>Host<wbr>Header</a>
@@ -1427,8 +1311,7 @@ The following state arguments are supported:
         <span class="property-type">string</span>
     </dt>
     <dd>{{% md %}}The host header CDN provider will send along with content requests to origins. Defaults to the host name of the origin.
-{{% /md %}}</dd>
-    <dt class="property-optional"
+{{% /md %}}</dd><dt class="property-optional"
             title="Optional">
         <span id="state_originpath_csharp">
 <a href="#state_originpath_csharp" style="color: inherit; text-decoration: inherit;">Origin<wbr>Path</a>
@@ -1437,8 +1320,7 @@ The following state arguments are supported:
         <span class="property-type">string</span>
     </dt>
     <dd>{{% md %}}The path used at for origin requests.
-{{% /md %}}</dd>
-    <dt class="property-optional"
+{{% /md %}}</dd><dt class="property-optional"
             title="Optional">
         <span id="state_origins_csharp">
 <a href="#state_origins_csharp" style="color: inherit; text-decoration: inherit;">Origins</a>
@@ -1447,8 +1329,7 @@ The following state arguments are supported:
         <span class="property-type"><a href="#endpointorigin">List&lt;Endpoint<wbr>Origin<wbr>Args&gt;</a></span>
     </dt>
     <dd>{{% md %}}The set of origins of the CDN endpoint. When multiple origins exist, the first origin will be used as primary and rest will be used as failover options. Each `origin` block supports fields documented below.
-{{% /md %}}</dd>
-    <dt class="property-optional"
+{{% /md %}}</dd><dt class="property-optional"
             title="Optional">
         <span id="state_probepath_csharp">
 <a href="#state_probepath_csharp" style="color: inherit; text-decoration: inherit;">Probe<wbr>Path</a>
@@ -1457,8 +1338,7 @@ The following state arguments are supported:
         <span class="property-type">string</span>
     </dt>
     <dd>{{% md %}}the path to a file hosted on the origin which helps accelerate delivery of the dynamic content and calculate the most optimal routes for the CDN. This is relative to the `origin_path`.
-{{% /md %}}</dd>
-    <dt class="property-optional"
+{{% /md %}}</dd><dt class="property-optional"
             title="Optional">
         <span id="state_profilename_csharp">
 <a href="#state_profilename_csharp" style="color: inherit; text-decoration: inherit;">Profile<wbr>Name</a>
@@ -1467,8 +1347,7 @@ The following state arguments are supported:
         <span class="property-type">string</span>
     </dt>
     <dd>{{% md %}}The CDN Profile to which to attach the CDN Endpoint.
-{{% /md %}}</dd>
-    <dt class="property-optional"
+{{% /md %}}</dd><dt class="property-optional"
             title="Optional">
         <span id="state_querystringcachingbehaviour_csharp">
 <a href="#state_querystringcachingbehaviour_csharp" style="color: inherit; text-decoration: inherit;">Querystring<wbr>Caching<wbr>Behaviour</a>
@@ -1477,8 +1356,7 @@ The following state arguments are supported:
         <span class="property-type">string</span>
     </dt>
     <dd>{{% md %}}Sets query string caching behavior. Allowed values are `IgnoreQueryString`, `BypassCaching` and `UseQueryString`. `NotSet` value can be used for `Premium Verizon` CDN profile. Defaults to `IgnoreQueryString`.
-{{% /md %}}</dd>
-    <dt class="property-optional"
+{{% /md %}}</dd><dt class="property-optional"
             title="Optional">
         <span id="state_resourcegroupname_csharp">
 <a href="#state_resourcegroupname_csharp" style="color: inherit; text-decoration: inherit;">Resource<wbr>Group<wbr>Name</a>
@@ -1487,8 +1365,7 @@ The following state arguments are supported:
         <span class="property-type">string</span>
     </dt>
     <dd>{{% md %}}The name of the resource group in which to create the CDN Endpoint.
-{{% /md %}}</dd>
-    <dt class="property-optional"
+{{% /md %}}</dd><dt class="property-optional"
             title="Optional">
         <span id="state_tags_csharp">
 <a href="#state_tags_csharp" style="color: inherit; text-decoration: inherit;">Tags</a>
@@ -1497,14 +1374,11 @@ The following state arguments are supported:
         <span class="property-type">Dictionary&lt;string, string&gt;</span>
     </dt>
     <dd>{{% md %}}A mapping of tags to assign to the resource.
-{{% /md %}}</dd>
-</dl>
+{{% /md %}}</dd></dl>
 {{% /choosable %}}
 
 {{% choosable language go %}}
-<dl class="resources-properties">
-
-    <dt class="property-optional"
+<dl class="resources-properties"><dt class="property-optional"
             title="Optional">
         <span id="state_contenttypestocompresses_go">
 <a href="#state_contenttypestocompresses_go" style="color: inherit; text-decoration: inherit;">Content<wbr>Types<wbr>To<wbr>Compresses</a>
@@ -1513,8 +1387,7 @@ The following state arguments are supported:
         <span class="property-type">[]string</span>
     </dt>
     <dd>{{% md %}}An array of strings that indicates a content types on which compression will be applied. The value for the elements should be MIME types.
-{{% /md %}}</dd>
-    <dt class="property-optional"
+{{% /md %}}</dd><dt class="property-optional"
             title="Optional">
         <span id="state_deliveryrules_go">
 <a href="#state_deliveryrules_go" style="color: inherit; text-decoration: inherit;">Delivery<wbr>Rules</a>
@@ -1523,8 +1396,7 @@ The following state arguments are supported:
         <span class="property-type"><a href="#endpointdeliveryrule">[]Endpoint<wbr>Delivery<wbr>Rule</a></span>
     </dt>
     <dd>{{% md %}}Rules for the rules engine. An endpoint can contain up until 4 of those rules that consist of conditions and actions. A `delivery_rule` blocks as defined below.
-{{% /md %}}</dd>
-    <dt class="property-optional"
+{{% /md %}}</dd><dt class="property-optional"
             title="Optional">
         <span id="state_geofilters_go">
 <a href="#state_geofilters_go" style="color: inherit; text-decoration: inherit;">Geo<wbr>Filters</a>
@@ -1533,8 +1405,7 @@ The following state arguments are supported:
         <span class="property-type"><a href="#endpointgeofilter">[]Endpoint<wbr>Geo<wbr>Filter</a></span>
     </dt>
     <dd>{{% md %}}A set of Geo Filters for this CDN Endpoint. Each `geo_filter` block supports fields documented below.
-{{% /md %}}</dd>
-    <dt class="property-optional"
+{{% /md %}}</dd><dt class="property-optional"
             title="Optional">
         <span id="state_globaldeliveryrule_go">
 <a href="#state_globaldeliveryrule_go" style="color: inherit; text-decoration: inherit;">Global<wbr>Delivery<wbr>Rule</a>
@@ -1543,8 +1414,7 @@ The following state arguments are supported:
         <span class="property-type"><a href="#endpointglobaldeliveryrule">Endpoint<wbr>Global<wbr>Delivery<wbr>Rule</a></span>
     </dt>
     <dd>{{% md %}}Actions that are valid for all resources regardless of any conditions. A `global_delivery_rule` block as defined below.
-{{% /md %}}</dd>
-    <dt class="property-optional"
+{{% /md %}}</dd><dt class="property-optional"
             title="Optional">
         <span id="state_hostname_go">
 <a href="#state_hostname_go" style="color: inherit; text-decoration: inherit;">Host<wbr>Name</a>
@@ -1553,8 +1423,7 @@ The following state arguments are supported:
         <span class="property-type">string</span>
     </dt>
     <dd>{{% md %}}A string that determines the hostname/IP address of the origin server. This string can be a domain name, Storage Account endpoint, Web App endpoint, IPv4 address or IPv6 address. Changing this forces a new resource to be created.
-{{% /md %}}</dd>
-    <dt class="property-optional"
+{{% /md %}}</dd><dt class="property-optional"
             title="Optional">
         <span id="state_iscompressionenabled_go">
 <a href="#state_iscompressionenabled_go" style="color: inherit; text-decoration: inherit;">Is<wbr>Compression<wbr>Enabled</a>
@@ -1563,8 +1432,7 @@ The following state arguments are supported:
         <span class="property-type">bool</span>
     </dt>
     <dd>{{% md %}}Indicates whether compression is to be enabled.
-{{% /md %}}</dd>
-    <dt class="property-optional"
+{{% /md %}}</dd><dt class="property-optional"
             title="Optional">
         <span id="state_ishttpallowed_go">
 <a href="#state_ishttpallowed_go" style="color: inherit; text-decoration: inherit;">Is<wbr>Http<wbr>Allowed</a>
@@ -1573,8 +1441,7 @@ The following state arguments are supported:
         <span class="property-type">bool</span>
     </dt>
     <dd>{{% md %}}Defaults to `true`.
-{{% /md %}}</dd>
-    <dt class="property-optional"
+{{% /md %}}</dd><dt class="property-optional"
             title="Optional">
         <span id="state_ishttpsallowed_go">
 <a href="#state_ishttpsallowed_go" style="color: inherit; text-decoration: inherit;">Is<wbr>Https<wbr>Allowed</a>
@@ -1583,8 +1450,7 @@ The following state arguments are supported:
         <span class="property-type">bool</span>
     </dt>
     <dd>{{% md %}}Defaults to `true`.
-{{% /md %}}</dd>
-    <dt class="property-optional"
+{{% /md %}}</dd><dt class="property-optional"
             title="Optional">
         <span id="state_location_go">
 <a href="#state_location_go" style="color: inherit; text-decoration: inherit;">Location</a>
@@ -1593,8 +1459,7 @@ The following state arguments are supported:
         <span class="property-type">string</span>
     </dt>
     <dd>{{% md %}}Specifies the supported Azure location where the resource exists. Changing this forces a new resource to be created.
-{{% /md %}}</dd>
-    <dt class="property-optional"
+{{% /md %}}</dd><dt class="property-optional"
             title="Optional">
         <span id="state_name_go">
 <a href="#state_name_go" style="color: inherit; text-decoration: inherit;">Name</a>
@@ -1603,8 +1468,7 @@ The following state arguments are supported:
         <span class="property-type">string</span>
     </dt>
     <dd>{{% md %}}The name of the origin. This is an arbitrary value. However, this value needs to be unique under the endpoint. Changing this forces a new resource to be created.
-{{% /md %}}</dd>
-    <dt class="property-optional"
+{{% /md %}}</dd><dt class="property-optional"
             title="Optional">
         <span id="state_optimizationtype_go">
 <a href="#state_optimizationtype_go" style="color: inherit; text-decoration: inherit;">Optimization<wbr>Type</a>
@@ -1613,8 +1477,7 @@ The following state arguments are supported:
         <span class="property-type">string</span>
     </dt>
     <dd>{{% md %}}What types of optimization should this CDN Endpoint optimize for? Possible values include `DynamicSiteAcceleration`, `GeneralMediaStreaming`, `GeneralWebDelivery`, `LargeFileDownload` and `VideoOnDemandMediaStreaming`.
-{{% /md %}}</dd>
-    <dt class="property-optional"
+{{% /md %}}</dd><dt class="property-optional"
             title="Optional">
         <span id="state_originhostheader_go">
 <a href="#state_originhostheader_go" style="color: inherit; text-decoration: inherit;">Origin<wbr>Host<wbr>Header</a>
@@ -1623,8 +1486,7 @@ The following state arguments are supported:
         <span class="property-type">string</span>
     </dt>
     <dd>{{% md %}}The host header CDN provider will send along with content requests to origins. Defaults to the host name of the origin.
-{{% /md %}}</dd>
-    <dt class="property-optional"
+{{% /md %}}</dd><dt class="property-optional"
             title="Optional">
         <span id="state_originpath_go">
 <a href="#state_originpath_go" style="color: inherit; text-decoration: inherit;">Origin<wbr>Path</a>
@@ -1633,8 +1495,7 @@ The following state arguments are supported:
         <span class="property-type">string</span>
     </dt>
     <dd>{{% md %}}The path used at for origin requests.
-{{% /md %}}</dd>
-    <dt class="property-optional"
+{{% /md %}}</dd><dt class="property-optional"
             title="Optional">
         <span id="state_origins_go">
 <a href="#state_origins_go" style="color: inherit; text-decoration: inherit;">Origins</a>
@@ -1643,8 +1504,7 @@ The following state arguments are supported:
         <span class="property-type"><a href="#endpointorigin">[]Endpoint<wbr>Origin</a></span>
     </dt>
     <dd>{{% md %}}The set of origins of the CDN endpoint. When multiple origins exist, the first origin will be used as primary and rest will be used as failover options. Each `origin` block supports fields documented below.
-{{% /md %}}</dd>
-    <dt class="property-optional"
+{{% /md %}}</dd><dt class="property-optional"
             title="Optional">
         <span id="state_probepath_go">
 <a href="#state_probepath_go" style="color: inherit; text-decoration: inherit;">Probe<wbr>Path</a>
@@ -1653,8 +1513,7 @@ The following state arguments are supported:
         <span class="property-type">string</span>
     </dt>
     <dd>{{% md %}}the path to a file hosted on the origin which helps accelerate delivery of the dynamic content and calculate the most optimal routes for the CDN. This is relative to the `origin_path`.
-{{% /md %}}</dd>
-    <dt class="property-optional"
+{{% /md %}}</dd><dt class="property-optional"
             title="Optional">
         <span id="state_profilename_go">
 <a href="#state_profilename_go" style="color: inherit; text-decoration: inherit;">Profile<wbr>Name</a>
@@ -1663,8 +1522,7 @@ The following state arguments are supported:
         <span class="property-type">string</span>
     </dt>
     <dd>{{% md %}}The CDN Profile to which to attach the CDN Endpoint.
-{{% /md %}}</dd>
-    <dt class="property-optional"
+{{% /md %}}</dd><dt class="property-optional"
             title="Optional">
         <span id="state_querystringcachingbehaviour_go">
 <a href="#state_querystringcachingbehaviour_go" style="color: inherit; text-decoration: inherit;">Querystring<wbr>Caching<wbr>Behaviour</a>
@@ -1673,8 +1531,7 @@ The following state arguments are supported:
         <span class="property-type">string</span>
     </dt>
     <dd>{{% md %}}Sets query string caching behavior. Allowed values are `IgnoreQueryString`, `BypassCaching` and `UseQueryString`. `NotSet` value can be used for `Premium Verizon` CDN profile. Defaults to `IgnoreQueryString`.
-{{% /md %}}</dd>
-    <dt class="property-optional"
+{{% /md %}}</dd><dt class="property-optional"
             title="Optional">
         <span id="state_resourcegroupname_go">
 <a href="#state_resourcegroupname_go" style="color: inherit; text-decoration: inherit;">Resource<wbr>Group<wbr>Name</a>
@@ -1683,8 +1540,7 @@ The following state arguments are supported:
         <span class="property-type">string</span>
     </dt>
     <dd>{{% md %}}The name of the resource group in which to create the CDN Endpoint.
-{{% /md %}}</dd>
-    <dt class="property-optional"
+{{% /md %}}</dd><dt class="property-optional"
             title="Optional">
         <span id="state_tags_go">
 <a href="#state_tags_go" style="color: inherit; text-decoration: inherit;">Tags</a>
@@ -1693,14 +1549,11 @@ The following state arguments are supported:
         <span class="property-type">map[string]string</span>
     </dt>
     <dd>{{% md %}}A mapping of tags to assign to the resource.
-{{% /md %}}</dd>
-</dl>
+{{% /md %}}</dd></dl>
 {{% /choosable %}}
 
 {{% choosable language nodejs %}}
-<dl class="resources-properties">
-
-    <dt class="property-optional"
+<dl class="resources-properties"><dt class="property-optional"
             title="Optional">
         <span id="state_contenttypestocompresses_nodejs">
 <a href="#state_contenttypestocompresses_nodejs" style="color: inherit; text-decoration: inherit;">content<wbr>Types<wbr>To<wbr>Compresses</a>
@@ -1709,8 +1562,7 @@ The following state arguments are supported:
         <span class="property-type">string[]</span>
     </dt>
     <dd>{{% md %}}An array of strings that indicates a content types on which compression will be applied. The value for the elements should be MIME types.
-{{% /md %}}</dd>
-    <dt class="property-optional"
+{{% /md %}}</dd><dt class="property-optional"
             title="Optional">
         <span id="state_deliveryrules_nodejs">
 <a href="#state_deliveryrules_nodejs" style="color: inherit; text-decoration: inherit;">delivery<wbr>Rules</a>
@@ -1719,8 +1571,7 @@ The following state arguments are supported:
         <span class="property-type"><a href="#endpointdeliveryrule">Endpoint<wbr>Delivery<wbr>Rule[]</a></span>
     </dt>
     <dd>{{% md %}}Rules for the rules engine. An endpoint can contain up until 4 of those rules that consist of conditions and actions. A `delivery_rule` blocks as defined below.
-{{% /md %}}</dd>
-    <dt class="property-optional"
+{{% /md %}}</dd><dt class="property-optional"
             title="Optional">
         <span id="state_geofilters_nodejs">
 <a href="#state_geofilters_nodejs" style="color: inherit; text-decoration: inherit;">geo<wbr>Filters</a>
@@ -1729,8 +1580,7 @@ The following state arguments are supported:
         <span class="property-type"><a href="#endpointgeofilter">Endpoint<wbr>Geo<wbr>Filter[]</a></span>
     </dt>
     <dd>{{% md %}}A set of Geo Filters for this CDN Endpoint. Each `geo_filter` block supports fields documented below.
-{{% /md %}}</dd>
-    <dt class="property-optional"
+{{% /md %}}</dd><dt class="property-optional"
             title="Optional">
         <span id="state_globaldeliveryrule_nodejs">
 <a href="#state_globaldeliveryrule_nodejs" style="color: inherit; text-decoration: inherit;">global<wbr>Delivery<wbr>Rule</a>
@@ -1739,8 +1589,7 @@ The following state arguments are supported:
         <span class="property-type"><a href="#endpointglobaldeliveryrule">Endpoint<wbr>Global<wbr>Delivery<wbr>Rule</a></span>
     </dt>
     <dd>{{% md %}}Actions that are valid for all resources regardless of any conditions. A `global_delivery_rule` block as defined below.
-{{% /md %}}</dd>
-    <dt class="property-optional"
+{{% /md %}}</dd><dt class="property-optional"
             title="Optional">
         <span id="state_hostname_nodejs">
 <a href="#state_hostname_nodejs" style="color: inherit; text-decoration: inherit;">host<wbr>Name</a>
@@ -1749,8 +1598,7 @@ The following state arguments are supported:
         <span class="property-type">string</span>
     </dt>
     <dd>{{% md %}}A string that determines the hostname/IP address of the origin server. This string can be a domain name, Storage Account endpoint, Web App endpoint, IPv4 address or IPv6 address. Changing this forces a new resource to be created.
-{{% /md %}}</dd>
-    <dt class="property-optional"
+{{% /md %}}</dd><dt class="property-optional"
             title="Optional">
         <span id="state_iscompressionenabled_nodejs">
 <a href="#state_iscompressionenabled_nodejs" style="color: inherit; text-decoration: inherit;">is<wbr>Compression<wbr>Enabled</a>
@@ -1759,8 +1607,7 @@ The following state arguments are supported:
         <span class="property-type">boolean</span>
     </dt>
     <dd>{{% md %}}Indicates whether compression is to be enabled.
-{{% /md %}}</dd>
-    <dt class="property-optional"
+{{% /md %}}</dd><dt class="property-optional"
             title="Optional">
         <span id="state_ishttpallowed_nodejs">
 <a href="#state_ishttpallowed_nodejs" style="color: inherit; text-decoration: inherit;">is<wbr>Http<wbr>Allowed</a>
@@ -1769,8 +1616,7 @@ The following state arguments are supported:
         <span class="property-type">boolean</span>
     </dt>
     <dd>{{% md %}}Defaults to `true`.
-{{% /md %}}</dd>
-    <dt class="property-optional"
+{{% /md %}}</dd><dt class="property-optional"
             title="Optional">
         <span id="state_ishttpsallowed_nodejs">
 <a href="#state_ishttpsallowed_nodejs" style="color: inherit; text-decoration: inherit;">is<wbr>Https<wbr>Allowed</a>
@@ -1779,8 +1625,7 @@ The following state arguments are supported:
         <span class="property-type">boolean</span>
     </dt>
     <dd>{{% md %}}Defaults to `true`.
-{{% /md %}}</dd>
-    <dt class="property-optional"
+{{% /md %}}</dd><dt class="property-optional"
             title="Optional">
         <span id="state_location_nodejs">
 <a href="#state_location_nodejs" style="color: inherit; text-decoration: inherit;">location</a>
@@ -1789,8 +1634,7 @@ The following state arguments are supported:
         <span class="property-type">string</span>
     </dt>
     <dd>{{% md %}}Specifies the supported Azure location where the resource exists. Changing this forces a new resource to be created.
-{{% /md %}}</dd>
-    <dt class="property-optional"
+{{% /md %}}</dd><dt class="property-optional"
             title="Optional">
         <span id="state_name_nodejs">
 <a href="#state_name_nodejs" style="color: inherit; text-decoration: inherit;">name</a>
@@ -1799,8 +1643,7 @@ The following state arguments are supported:
         <span class="property-type">string</span>
     </dt>
     <dd>{{% md %}}The name of the origin. This is an arbitrary value. However, this value needs to be unique under the endpoint. Changing this forces a new resource to be created.
-{{% /md %}}</dd>
-    <dt class="property-optional"
+{{% /md %}}</dd><dt class="property-optional"
             title="Optional">
         <span id="state_optimizationtype_nodejs">
 <a href="#state_optimizationtype_nodejs" style="color: inherit; text-decoration: inherit;">optimization<wbr>Type</a>
@@ -1809,8 +1652,7 @@ The following state arguments are supported:
         <span class="property-type">string</span>
     </dt>
     <dd>{{% md %}}What types of optimization should this CDN Endpoint optimize for? Possible values include `DynamicSiteAcceleration`, `GeneralMediaStreaming`, `GeneralWebDelivery`, `LargeFileDownload` and `VideoOnDemandMediaStreaming`.
-{{% /md %}}</dd>
-    <dt class="property-optional"
+{{% /md %}}</dd><dt class="property-optional"
             title="Optional">
         <span id="state_originhostheader_nodejs">
 <a href="#state_originhostheader_nodejs" style="color: inherit; text-decoration: inherit;">origin<wbr>Host<wbr>Header</a>
@@ -1819,8 +1661,7 @@ The following state arguments are supported:
         <span class="property-type">string</span>
     </dt>
     <dd>{{% md %}}The host header CDN provider will send along with content requests to origins. Defaults to the host name of the origin.
-{{% /md %}}</dd>
-    <dt class="property-optional"
+{{% /md %}}</dd><dt class="property-optional"
             title="Optional">
         <span id="state_originpath_nodejs">
 <a href="#state_originpath_nodejs" style="color: inherit; text-decoration: inherit;">origin<wbr>Path</a>
@@ -1829,8 +1670,7 @@ The following state arguments are supported:
         <span class="property-type">string</span>
     </dt>
     <dd>{{% md %}}The path used at for origin requests.
-{{% /md %}}</dd>
-    <dt class="property-optional"
+{{% /md %}}</dd><dt class="property-optional"
             title="Optional">
         <span id="state_origins_nodejs">
 <a href="#state_origins_nodejs" style="color: inherit; text-decoration: inherit;">origins</a>
@@ -1839,8 +1679,7 @@ The following state arguments are supported:
         <span class="property-type"><a href="#endpointorigin">Endpoint<wbr>Origin[]</a></span>
     </dt>
     <dd>{{% md %}}The set of origins of the CDN endpoint. When multiple origins exist, the first origin will be used as primary and rest will be used as failover options. Each `origin` block supports fields documented below.
-{{% /md %}}</dd>
-    <dt class="property-optional"
+{{% /md %}}</dd><dt class="property-optional"
             title="Optional">
         <span id="state_probepath_nodejs">
 <a href="#state_probepath_nodejs" style="color: inherit; text-decoration: inherit;">probe<wbr>Path</a>
@@ -1849,8 +1688,7 @@ The following state arguments are supported:
         <span class="property-type">string</span>
     </dt>
     <dd>{{% md %}}the path to a file hosted on the origin which helps accelerate delivery of the dynamic content and calculate the most optimal routes for the CDN. This is relative to the `origin_path`.
-{{% /md %}}</dd>
-    <dt class="property-optional"
+{{% /md %}}</dd><dt class="property-optional"
             title="Optional">
         <span id="state_profilename_nodejs">
 <a href="#state_profilename_nodejs" style="color: inherit; text-decoration: inherit;">profile<wbr>Name</a>
@@ -1859,8 +1697,7 @@ The following state arguments are supported:
         <span class="property-type">string</span>
     </dt>
     <dd>{{% md %}}The CDN Profile to which to attach the CDN Endpoint.
-{{% /md %}}</dd>
-    <dt class="property-optional"
+{{% /md %}}</dd><dt class="property-optional"
             title="Optional">
         <span id="state_querystringcachingbehaviour_nodejs">
 <a href="#state_querystringcachingbehaviour_nodejs" style="color: inherit; text-decoration: inherit;">querystring<wbr>Caching<wbr>Behaviour</a>
@@ -1869,8 +1706,7 @@ The following state arguments are supported:
         <span class="property-type">string</span>
     </dt>
     <dd>{{% md %}}Sets query string caching behavior. Allowed values are `IgnoreQueryString`, `BypassCaching` and `UseQueryString`. `NotSet` value can be used for `Premium Verizon` CDN profile. Defaults to `IgnoreQueryString`.
-{{% /md %}}</dd>
-    <dt class="property-optional"
+{{% /md %}}</dd><dt class="property-optional"
             title="Optional">
         <span id="state_resourcegroupname_nodejs">
 <a href="#state_resourcegroupname_nodejs" style="color: inherit; text-decoration: inherit;">resource<wbr>Group<wbr>Name</a>
@@ -1879,8 +1715,7 @@ The following state arguments are supported:
         <span class="property-type">string</span>
     </dt>
     <dd>{{% md %}}The name of the resource group in which to create the CDN Endpoint.
-{{% /md %}}</dd>
-    <dt class="property-optional"
+{{% /md %}}</dd><dt class="property-optional"
             title="Optional">
         <span id="state_tags_nodejs">
 <a href="#state_tags_nodejs" style="color: inherit; text-decoration: inherit;">tags</a>
@@ -1889,14 +1724,11 @@ The following state arguments are supported:
         <span class="property-type">{[key: string]: string}</span>
     </dt>
     <dd>{{% md %}}A mapping of tags to assign to the resource.
-{{% /md %}}</dd>
-</dl>
+{{% /md %}}</dd></dl>
 {{% /choosable %}}
 
 {{% choosable language python %}}
-<dl class="resources-properties">
-
-    <dt class="property-optional"
+<dl class="resources-properties"><dt class="property-optional"
             title="Optional">
         <span id="state_content_types_to_compresses_python">
 <a href="#state_content_types_to_compresses_python" style="color: inherit; text-decoration: inherit;">content_<wbr>types_<wbr>to_<wbr>compresses</a>
@@ -1905,8 +1737,7 @@ The following state arguments are supported:
         <span class="property-type">Sequence[str]</span>
     </dt>
     <dd>{{% md %}}An array of strings that indicates a content types on which compression will be applied. The value for the elements should be MIME types.
-{{% /md %}}</dd>
-    <dt class="property-optional"
+{{% /md %}}</dd><dt class="property-optional"
             title="Optional">
         <span id="state_delivery_rules_python">
 <a href="#state_delivery_rules_python" style="color: inherit; text-decoration: inherit;">delivery_<wbr>rules</a>
@@ -1915,8 +1746,7 @@ The following state arguments are supported:
         <span class="property-type"><a href="#endpointdeliveryrule">Sequence[Endpoint<wbr>Delivery<wbr>Rule<wbr>Args]</a></span>
     </dt>
     <dd>{{% md %}}Rules for the rules engine. An endpoint can contain up until 4 of those rules that consist of conditions and actions. A `delivery_rule` blocks as defined below.
-{{% /md %}}</dd>
-    <dt class="property-optional"
+{{% /md %}}</dd><dt class="property-optional"
             title="Optional">
         <span id="state_geo_filters_python">
 <a href="#state_geo_filters_python" style="color: inherit; text-decoration: inherit;">geo_<wbr>filters</a>
@@ -1925,8 +1755,7 @@ The following state arguments are supported:
         <span class="property-type"><a href="#endpointgeofilter">Sequence[Endpoint<wbr>Geo<wbr>Filter<wbr>Args]</a></span>
     </dt>
     <dd>{{% md %}}A set of Geo Filters for this CDN Endpoint. Each `geo_filter` block supports fields documented below.
-{{% /md %}}</dd>
-    <dt class="property-optional"
+{{% /md %}}</dd><dt class="property-optional"
             title="Optional">
         <span id="state_global_delivery_rule_python">
 <a href="#state_global_delivery_rule_python" style="color: inherit; text-decoration: inherit;">global_<wbr>delivery_<wbr>rule</a>
@@ -1935,8 +1764,7 @@ The following state arguments are supported:
         <span class="property-type"><a href="#endpointglobaldeliveryrule">Endpoint<wbr>Global<wbr>Delivery<wbr>Rule<wbr>Args</a></span>
     </dt>
     <dd>{{% md %}}Actions that are valid for all resources regardless of any conditions. A `global_delivery_rule` block as defined below.
-{{% /md %}}</dd>
-    <dt class="property-optional"
+{{% /md %}}</dd><dt class="property-optional"
             title="Optional">
         <span id="state_host_name_python">
 <a href="#state_host_name_python" style="color: inherit; text-decoration: inherit;">host_<wbr>name</a>
@@ -1945,8 +1773,7 @@ The following state arguments are supported:
         <span class="property-type">str</span>
     </dt>
     <dd>{{% md %}}A string that determines the hostname/IP address of the origin server. This string can be a domain name, Storage Account endpoint, Web App endpoint, IPv4 address or IPv6 address. Changing this forces a new resource to be created.
-{{% /md %}}</dd>
-    <dt class="property-optional"
+{{% /md %}}</dd><dt class="property-optional"
             title="Optional">
         <span id="state_is_compression_enabled_python">
 <a href="#state_is_compression_enabled_python" style="color: inherit; text-decoration: inherit;">is_<wbr>compression_<wbr>enabled</a>
@@ -1955,8 +1782,7 @@ The following state arguments are supported:
         <span class="property-type">bool</span>
     </dt>
     <dd>{{% md %}}Indicates whether compression is to be enabled.
-{{% /md %}}</dd>
-    <dt class="property-optional"
+{{% /md %}}</dd><dt class="property-optional"
             title="Optional">
         <span id="state_is_http_allowed_python">
 <a href="#state_is_http_allowed_python" style="color: inherit; text-decoration: inherit;">is_<wbr>http_<wbr>allowed</a>
@@ -1965,8 +1791,7 @@ The following state arguments are supported:
         <span class="property-type">bool</span>
     </dt>
     <dd>{{% md %}}Defaults to `true`.
-{{% /md %}}</dd>
-    <dt class="property-optional"
+{{% /md %}}</dd><dt class="property-optional"
             title="Optional">
         <span id="state_is_https_allowed_python">
 <a href="#state_is_https_allowed_python" style="color: inherit; text-decoration: inherit;">is_<wbr>https_<wbr>allowed</a>
@@ -1975,8 +1800,7 @@ The following state arguments are supported:
         <span class="property-type">bool</span>
     </dt>
     <dd>{{% md %}}Defaults to `true`.
-{{% /md %}}</dd>
-    <dt class="property-optional"
+{{% /md %}}</dd><dt class="property-optional"
             title="Optional">
         <span id="state_location_python">
 <a href="#state_location_python" style="color: inherit; text-decoration: inherit;">location</a>
@@ -1985,8 +1809,7 @@ The following state arguments are supported:
         <span class="property-type">str</span>
     </dt>
     <dd>{{% md %}}Specifies the supported Azure location where the resource exists. Changing this forces a new resource to be created.
-{{% /md %}}</dd>
-    <dt class="property-optional"
+{{% /md %}}</dd><dt class="property-optional"
             title="Optional">
         <span id="state_name_python">
 <a href="#state_name_python" style="color: inherit; text-decoration: inherit;">name</a>
@@ -1995,8 +1818,7 @@ The following state arguments are supported:
         <span class="property-type">str</span>
     </dt>
     <dd>{{% md %}}The name of the origin. This is an arbitrary value. However, this value needs to be unique under the endpoint. Changing this forces a new resource to be created.
-{{% /md %}}</dd>
-    <dt class="property-optional"
+{{% /md %}}</dd><dt class="property-optional"
             title="Optional">
         <span id="state_optimization_type_python">
 <a href="#state_optimization_type_python" style="color: inherit; text-decoration: inherit;">optimization_<wbr>type</a>
@@ -2005,8 +1827,7 @@ The following state arguments are supported:
         <span class="property-type">str</span>
     </dt>
     <dd>{{% md %}}What types of optimization should this CDN Endpoint optimize for? Possible values include `DynamicSiteAcceleration`, `GeneralMediaStreaming`, `GeneralWebDelivery`, `LargeFileDownload` and `VideoOnDemandMediaStreaming`.
-{{% /md %}}</dd>
-    <dt class="property-optional"
+{{% /md %}}</dd><dt class="property-optional"
             title="Optional">
         <span id="state_origin_host_header_python">
 <a href="#state_origin_host_header_python" style="color: inherit; text-decoration: inherit;">origin_<wbr>host_<wbr>header</a>
@@ -2015,8 +1836,7 @@ The following state arguments are supported:
         <span class="property-type">str</span>
     </dt>
     <dd>{{% md %}}The host header CDN provider will send along with content requests to origins. Defaults to the host name of the origin.
-{{% /md %}}</dd>
-    <dt class="property-optional"
+{{% /md %}}</dd><dt class="property-optional"
             title="Optional">
         <span id="state_origin_path_python">
 <a href="#state_origin_path_python" style="color: inherit; text-decoration: inherit;">origin_<wbr>path</a>
@@ -2025,8 +1845,7 @@ The following state arguments are supported:
         <span class="property-type">str</span>
     </dt>
     <dd>{{% md %}}The path used at for origin requests.
-{{% /md %}}</dd>
-    <dt class="property-optional"
+{{% /md %}}</dd><dt class="property-optional"
             title="Optional">
         <span id="state_origins_python">
 <a href="#state_origins_python" style="color: inherit; text-decoration: inherit;">origins</a>
@@ -2035,8 +1854,7 @@ The following state arguments are supported:
         <span class="property-type"><a href="#endpointorigin">Sequence[Endpoint<wbr>Origin<wbr>Args]</a></span>
     </dt>
     <dd>{{% md %}}The set of origins of the CDN endpoint. When multiple origins exist, the first origin will be used as primary and rest will be used as failover options. Each `origin` block supports fields documented below.
-{{% /md %}}</dd>
-    <dt class="property-optional"
+{{% /md %}}</dd><dt class="property-optional"
             title="Optional">
         <span id="state_probe_path_python">
 <a href="#state_probe_path_python" style="color: inherit; text-decoration: inherit;">probe_<wbr>path</a>
@@ -2045,8 +1863,7 @@ The following state arguments are supported:
         <span class="property-type">str</span>
     </dt>
     <dd>{{% md %}}the path to a file hosted on the origin which helps accelerate delivery of the dynamic content and calculate the most optimal routes for the CDN. This is relative to the `origin_path`.
-{{% /md %}}</dd>
-    <dt class="property-optional"
+{{% /md %}}</dd><dt class="property-optional"
             title="Optional">
         <span id="state_profile_name_python">
 <a href="#state_profile_name_python" style="color: inherit; text-decoration: inherit;">profile_<wbr>name</a>
@@ -2055,8 +1872,7 @@ The following state arguments are supported:
         <span class="property-type">str</span>
     </dt>
     <dd>{{% md %}}The CDN Profile to which to attach the CDN Endpoint.
-{{% /md %}}</dd>
-    <dt class="property-optional"
+{{% /md %}}</dd><dt class="property-optional"
             title="Optional">
         <span id="state_querystring_caching_behaviour_python">
 <a href="#state_querystring_caching_behaviour_python" style="color: inherit; text-decoration: inherit;">querystring_<wbr>caching_<wbr>behaviour</a>
@@ -2065,8 +1881,7 @@ The following state arguments are supported:
         <span class="property-type">str</span>
     </dt>
     <dd>{{% md %}}Sets query string caching behavior. Allowed values are `IgnoreQueryString`, `BypassCaching` and `UseQueryString`. `NotSet` value can be used for `Premium Verizon` CDN profile. Defaults to `IgnoreQueryString`.
-{{% /md %}}</dd>
-    <dt class="property-optional"
+{{% /md %}}</dd><dt class="property-optional"
             title="Optional">
         <span id="state_resource_group_name_python">
 <a href="#state_resource_group_name_python" style="color: inherit; text-decoration: inherit;">resource_<wbr>group_<wbr>name</a>
@@ -2075,8 +1890,7 @@ The following state arguments are supported:
         <span class="property-type">str</span>
     </dt>
     <dd>{{% md %}}The name of the resource group in which to create the CDN Endpoint.
-{{% /md %}}</dd>
-    <dt class="property-optional"
+{{% /md %}}</dd><dt class="property-optional"
             title="Optional">
         <span id="state_tags_python">
 <a href="#state_tags_python" style="color: inherit; text-decoration: inherit;">tags</a>
@@ -2085,8 +1899,7 @@ The following state arguments are supported:
         <span class="property-type">Mapping[str, str]</span>
     </dt>
     <dd>{{% md %}}A mapping of tags to assign to the resource.
-{{% /md %}}</dd>
-</dl>
+{{% /md %}}</dd></dl>
 {{% /choosable %}}
 
 
@@ -2101,9 +1914,7 @@ The following state arguments are supported:
 <h4 id="endpointdeliveryrule">Endpoint<wbr>Delivery<wbr>Rule</h4>
 
 {{% choosable language csharp %}}
-<dl class="resources-properties">
-
-    <dt class="property-required"
+<dl class="resources-properties"><dt class="property-required"
             title="Required">
         <span id="name_csharp">
 <a href="#name_csharp" style="color: inherit; text-decoration: inherit;">Name</a>
@@ -2112,8 +1923,7 @@ The following state arguments are supported:
         <span class="property-type">string</span>
     </dt>
     <dd>{{% md %}}The Name which should be used for this Delivery Rule.
-{{% /md %}}</dd>
-    <dt class="property-required"
+{{% /md %}}</dd><dt class="property-required"
             title="Required">
         <span id="order_csharp">
 <a href="#order_csharp" style="color: inherit; text-decoration: inherit;">Order</a>
@@ -2122,8 +1932,7 @@ The following state arguments are supported:
         <span class="property-type">int</span>
     </dt>
     <dd>{{% md %}}The order used for this rule, which must be larger than 1.
-{{% /md %}}</dd>
-    <dt class="property-optional"
+{{% /md %}}</dd><dt class="property-optional"
             title="Optional">
         <span id="cacheexpirationaction_csharp">
 <a href="#cacheexpirationaction_csharp" style="color: inherit; text-decoration: inherit;">Cache<wbr>Expiration<wbr>Action</a>
@@ -2132,8 +1941,7 @@ The following state arguments are supported:
         <span class="property-type"><a href="#endpointdeliveryrulecacheexpirationaction">Endpoint<wbr>Delivery<wbr>Rule<wbr>Cache<wbr>Expiration<wbr>Action<wbr>Args</a></span>
     </dt>
     <dd>{{% md %}}A `cache_expiration_action` block as defined above.
-{{% /md %}}</dd>
-    <dt class="property-optional"
+{{% /md %}}</dd><dt class="property-optional"
             title="Optional">
         <span id="cachekeyquerystringaction_csharp">
 <a href="#cachekeyquerystringaction_csharp" style="color: inherit; text-decoration: inherit;">Cache<wbr>Key<wbr>Query<wbr>String<wbr>Action</a>
@@ -2142,8 +1950,7 @@ The following state arguments are supported:
         <span class="property-type"><a href="#endpointdeliveryrulecachekeyquerystringaction">Endpoint<wbr>Delivery<wbr>Rule<wbr>Cache<wbr>Key<wbr>Query<wbr>String<wbr>Action<wbr>Args</a></span>
     </dt>
     <dd>{{% md %}}A `cache_key_query_string_action` block as defined above.
-{{% /md %}}</dd>
-    <dt class="property-optional"
+{{% /md %}}</dd><dt class="property-optional"
             title="Optional">
         <span id="cookiesconditions_csharp">
 <a href="#cookiesconditions_csharp" style="color: inherit; text-decoration: inherit;">Cookies<wbr>Conditions</a>
@@ -2152,8 +1959,7 @@ The following state arguments are supported:
         <span class="property-type"><a href="#endpointdeliveryrulecookiescondition">List&lt;Endpoint<wbr>Delivery<wbr>Rule<wbr>Cookies<wbr>Condition<wbr>Args&gt;</a></span>
     </dt>
     <dd>{{% md %}}A `cookies_condition` block as defined above.
-{{% /md %}}</dd>
-    <dt class="property-optional"
+{{% /md %}}</dd><dt class="property-optional"
             title="Optional">
         <span id="devicecondition_csharp">
 <a href="#devicecondition_csharp" style="color: inherit; text-decoration: inherit;">Device<wbr>Condition</a>
@@ -2162,8 +1968,7 @@ The following state arguments are supported:
         <span class="property-type"><a href="#endpointdeliveryruledevicecondition">Endpoint<wbr>Delivery<wbr>Rule<wbr>Device<wbr>Condition<wbr>Args</a></span>
     </dt>
     <dd>{{% md %}}A `device_condition` block as defined below.
-{{% /md %}}</dd>
-    <dt class="property-optional"
+{{% /md %}}</dd><dt class="property-optional"
             title="Optional">
         <span id="httpversionconditions_csharp">
 <a href="#httpversionconditions_csharp" style="color: inherit; text-decoration: inherit;">Http<wbr>Version<wbr>Conditions</a>
@@ -2172,8 +1977,7 @@ The following state arguments are supported:
         <span class="property-type"><a href="#endpointdeliveryrulehttpversioncondition">List&lt;Endpoint<wbr>Delivery<wbr>Rule<wbr>Http<wbr>Version<wbr>Condition<wbr>Args&gt;</a></span>
     </dt>
     <dd>{{% md %}}A `http_version_condition` block as defined below.
-{{% /md %}}</dd>
-    <dt class="property-optional"
+{{% /md %}}</dd><dt class="property-optional"
             title="Optional">
         <span id="modifyrequestheaderactions_csharp">
 <a href="#modifyrequestheaderactions_csharp" style="color: inherit; text-decoration: inherit;">Modify<wbr>Request<wbr>Header<wbr>Actions</a>
@@ -2182,8 +1986,7 @@ The following state arguments are supported:
         <span class="property-type"><a href="#endpointdeliveryrulemodifyrequestheaderaction">List&lt;Endpoint<wbr>Delivery<wbr>Rule<wbr>Modify<wbr>Request<wbr>Header<wbr>Action<wbr>Args&gt;</a></span>
     </dt>
     <dd>{{% md %}}A `modify_request_header_action` block as defined below.
-{{% /md %}}</dd>
-    <dt class="property-optional"
+{{% /md %}}</dd><dt class="property-optional"
             title="Optional">
         <span id="modifyresponseheaderactions_csharp">
 <a href="#modifyresponseheaderactions_csharp" style="color: inherit; text-decoration: inherit;">Modify<wbr>Response<wbr>Header<wbr>Actions</a>
@@ -2192,8 +1995,7 @@ The following state arguments are supported:
         <span class="property-type"><a href="#endpointdeliveryrulemodifyresponseheaderaction">List&lt;Endpoint<wbr>Delivery<wbr>Rule<wbr>Modify<wbr>Response<wbr>Header<wbr>Action<wbr>Args&gt;</a></span>
     </dt>
     <dd>{{% md %}}A `modify_response_header_action` block as defined below.
-{{% /md %}}</dd>
-    <dt class="property-optional"
+{{% /md %}}</dd><dt class="property-optional"
             title="Optional">
         <span id="postargconditions_csharp">
 <a href="#postargconditions_csharp" style="color: inherit; text-decoration: inherit;">Post<wbr>Arg<wbr>Conditions</a>
@@ -2202,8 +2004,7 @@ The following state arguments are supported:
         <span class="property-type"><a href="#endpointdeliveryrulepostargcondition">List&lt;Endpoint<wbr>Delivery<wbr>Rule<wbr>Post<wbr>Arg<wbr>Condition<wbr>Args&gt;</a></span>
     </dt>
     <dd>{{% md %}}A `post_arg_condition` block as defined below.
-{{% /md %}}</dd>
-    <dt class="property-optional"
+{{% /md %}}</dd><dt class="property-optional"
             title="Optional">
         <span id="querystringconditions_csharp">
 <a href="#querystringconditions_csharp" style="color: inherit; text-decoration: inherit;">Query<wbr>String<wbr>Conditions</a>
@@ -2212,8 +2013,7 @@ The following state arguments are supported:
         <span class="property-type"><a href="#endpointdeliveryrulequerystringcondition">List&lt;Endpoint<wbr>Delivery<wbr>Rule<wbr>Query<wbr>String<wbr>Condition<wbr>Args&gt;</a></span>
     </dt>
     <dd>{{% md %}}A `query_string_condition` block as defined below.
-{{% /md %}}</dd>
-    <dt class="property-optional"
+{{% /md %}}</dd><dt class="property-optional"
             title="Optional">
         <span id="remoteaddressconditions_csharp">
 <a href="#remoteaddressconditions_csharp" style="color: inherit; text-decoration: inherit;">Remote<wbr>Address<wbr>Conditions</a>
@@ -2222,8 +2022,7 @@ The following state arguments are supported:
         <span class="property-type"><a href="#endpointdeliveryruleremoteaddresscondition">List&lt;Endpoint<wbr>Delivery<wbr>Rule<wbr>Remote<wbr>Address<wbr>Condition<wbr>Args&gt;</a></span>
     </dt>
     <dd>{{% md %}}A `remote_address_condition` block as defined below.
-{{% /md %}}</dd>
-    <dt class="property-optional"
+{{% /md %}}</dd><dt class="property-optional"
             title="Optional">
         <span id="requestbodyconditions_csharp">
 <a href="#requestbodyconditions_csharp" style="color: inherit; text-decoration: inherit;">Request<wbr>Body<wbr>Conditions</a>
@@ -2232,8 +2031,7 @@ The following state arguments are supported:
         <span class="property-type"><a href="#endpointdeliveryrulerequestbodycondition">List&lt;Endpoint<wbr>Delivery<wbr>Rule<wbr>Request<wbr>Body<wbr>Condition<wbr>Args&gt;</a></span>
     </dt>
     <dd>{{% md %}}A `request_body_condition` block as defined below.
-{{% /md %}}</dd>
-    <dt class="property-optional"
+{{% /md %}}</dd><dt class="property-optional"
             title="Optional">
         <span id="requestheaderconditions_csharp">
 <a href="#requestheaderconditions_csharp" style="color: inherit; text-decoration: inherit;">Request<wbr>Header<wbr>Conditions</a>
@@ -2242,8 +2040,7 @@ The following state arguments are supported:
         <span class="property-type"><a href="#endpointdeliveryrulerequestheadercondition">List&lt;Endpoint<wbr>Delivery<wbr>Rule<wbr>Request<wbr>Header<wbr>Condition<wbr>Args&gt;</a></span>
     </dt>
     <dd>{{% md %}}A `request_header_condition` block as defined below.
-{{% /md %}}</dd>
-    <dt class="property-optional"
+{{% /md %}}</dd><dt class="property-optional"
             title="Optional">
         <span id="requestmethodcondition_csharp">
 <a href="#requestmethodcondition_csharp" style="color: inherit; text-decoration: inherit;">Request<wbr>Method<wbr>Condition</a>
@@ -2252,8 +2049,7 @@ The following state arguments are supported:
         <span class="property-type"><a href="#endpointdeliveryrulerequestmethodcondition">Endpoint<wbr>Delivery<wbr>Rule<wbr>Request<wbr>Method<wbr>Condition<wbr>Args</a></span>
     </dt>
     <dd>{{% md %}}A `request_method_condition` block as defined below.
-{{% /md %}}</dd>
-    <dt class="property-optional"
+{{% /md %}}</dd><dt class="property-optional"
             title="Optional">
         <span id="requestschemecondition_csharp">
 <a href="#requestschemecondition_csharp" style="color: inherit; text-decoration: inherit;">Request<wbr>Scheme<wbr>Condition</a>
@@ -2262,8 +2058,7 @@ The following state arguments are supported:
         <span class="property-type"><a href="#endpointdeliveryrulerequestschemecondition">Endpoint<wbr>Delivery<wbr>Rule<wbr>Request<wbr>Scheme<wbr>Condition<wbr>Args</a></span>
     </dt>
     <dd>{{% md %}}A `request_scheme_condition` block as defined below.
-{{% /md %}}</dd>
-    <dt class="property-optional"
+{{% /md %}}</dd><dt class="property-optional"
             title="Optional">
         <span id="requesturiconditions_csharp">
 <a href="#requesturiconditions_csharp" style="color: inherit; text-decoration: inherit;">Request<wbr>Uri<wbr>Conditions</a>
@@ -2272,8 +2067,7 @@ The following state arguments are supported:
         <span class="property-type"><a href="#endpointdeliveryrulerequesturicondition">List&lt;Endpoint<wbr>Delivery<wbr>Rule<wbr>Request<wbr>Uri<wbr>Condition<wbr>Args&gt;</a></span>
     </dt>
     <dd>{{% md %}}A `request_uri_condition` block as defined below.
-{{% /md %}}</dd>
-    <dt class="property-optional"
+{{% /md %}}</dd><dt class="property-optional"
             title="Optional">
         <span id="urlfileextensionconditions_csharp">
 <a href="#urlfileextensionconditions_csharp" style="color: inherit; text-decoration: inherit;">Url<wbr>File<wbr>Extension<wbr>Conditions</a>
@@ -2282,8 +2076,7 @@ The following state arguments are supported:
         <span class="property-type"><a href="#endpointdeliveryruleurlfileextensioncondition">List&lt;Endpoint<wbr>Delivery<wbr>Rule<wbr>Url<wbr>File<wbr>Extension<wbr>Condition<wbr>Args&gt;</a></span>
     </dt>
     <dd>{{% md %}}A `url_file_extension_condition` block as defined below.
-{{% /md %}}</dd>
-    <dt class="property-optional"
+{{% /md %}}</dd><dt class="property-optional"
             title="Optional">
         <span id="urlfilenameconditions_csharp">
 <a href="#urlfilenameconditions_csharp" style="color: inherit; text-decoration: inherit;">Url<wbr>File<wbr>Name<wbr>Conditions</a>
@@ -2292,8 +2085,7 @@ The following state arguments are supported:
         <span class="property-type"><a href="#endpointdeliveryruleurlfilenamecondition">List&lt;Endpoint<wbr>Delivery<wbr>Rule<wbr>Url<wbr>File<wbr>Name<wbr>Condition<wbr>Args&gt;</a></span>
     </dt>
     <dd>{{% md %}}A `url_file_name_condition` block as defined below.
-{{% /md %}}</dd>
-    <dt class="property-optional"
+{{% /md %}}</dd><dt class="property-optional"
             title="Optional">
         <span id="urlpathconditions_csharp">
 <a href="#urlpathconditions_csharp" style="color: inherit; text-decoration: inherit;">Url<wbr>Path<wbr>Conditions</a>
@@ -2302,8 +2094,7 @@ The following state arguments are supported:
         <span class="property-type"><a href="#endpointdeliveryruleurlpathcondition">List&lt;Endpoint<wbr>Delivery<wbr>Rule<wbr>Url<wbr>Path<wbr>Condition<wbr>Args&gt;</a></span>
     </dt>
     <dd>{{% md %}}A `url_path_condition` block as defined below.
-{{% /md %}}</dd>
-    <dt class="property-optional"
+{{% /md %}}</dd><dt class="property-optional"
             title="Optional">
         <span id="urlredirectaction_csharp">
 <a href="#urlredirectaction_csharp" style="color: inherit; text-decoration: inherit;">Url<wbr>Redirect<wbr>Action</a>
@@ -2312,8 +2103,7 @@ The following state arguments are supported:
         <span class="property-type"><a href="#endpointdeliveryruleurlredirectaction">Endpoint<wbr>Delivery<wbr>Rule<wbr>Url<wbr>Redirect<wbr>Action<wbr>Args</a></span>
     </dt>
     <dd>{{% md %}}A `url_redirect_action` block as defined below.
-{{% /md %}}</dd>
-    <dt class="property-optional"
+{{% /md %}}</dd><dt class="property-optional"
             title="Optional">
         <span id="urlrewriteaction_csharp">
 <a href="#urlrewriteaction_csharp" style="color: inherit; text-decoration: inherit;">Url<wbr>Rewrite<wbr>Action</a>
@@ -2322,14 +2112,11 @@ The following state arguments are supported:
         <span class="property-type"><a href="#endpointdeliveryruleurlrewriteaction">Endpoint<wbr>Delivery<wbr>Rule<wbr>Url<wbr>Rewrite<wbr>Action<wbr>Args</a></span>
     </dt>
     <dd>{{% md %}}A `url_rewrite_action` block as defined below.
-{{% /md %}}</dd>
-</dl>
+{{% /md %}}</dd></dl>
 {{% /choosable %}}
 
 {{% choosable language go %}}
-<dl class="resources-properties">
-
-    <dt class="property-required"
+<dl class="resources-properties"><dt class="property-required"
             title="Required">
         <span id="name_go">
 <a href="#name_go" style="color: inherit; text-decoration: inherit;">Name</a>
@@ -2338,8 +2125,7 @@ The following state arguments are supported:
         <span class="property-type">string</span>
     </dt>
     <dd>{{% md %}}The Name which should be used for this Delivery Rule.
-{{% /md %}}</dd>
-    <dt class="property-required"
+{{% /md %}}</dd><dt class="property-required"
             title="Required">
         <span id="order_go">
 <a href="#order_go" style="color: inherit; text-decoration: inherit;">Order</a>
@@ -2348,8 +2134,7 @@ The following state arguments are supported:
         <span class="property-type">int</span>
     </dt>
     <dd>{{% md %}}The order used for this rule, which must be larger than 1.
-{{% /md %}}</dd>
-    <dt class="property-optional"
+{{% /md %}}</dd><dt class="property-optional"
             title="Optional">
         <span id="cacheexpirationaction_go">
 <a href="#cacheexpirationaction_go" style="color: inherit; text-decoration: inherit;">Cache<wbr>Expiration<wbr>Action</a>
@@ -2358,8 +2143,7 @@ The following state arguments are supported:
         <span class="property-type"><a href="#endpointdeliveryrulecacheexpirationaction">Endpoint<wbr>Delivery<wbr>Rule<wbr>Cache<wbr>Expiration<wbr>Action</a></span>
     </dt>
     <dd>{{% md %}}A `cache_expiration_action` block as defined above.
-{{% /md %}}</dd>
-    <dt class="property-optional"
+{{% /md %}}</dd><dt class="property-optional"
             title="Optional">
         <span id="cachekeyquerystringaction_go">
 <a href="#cachekeyquerystringaction_go" style="color: inherit; text-decoration: inherit;">Cache<wbr>Key<wbr>Query<wbr>String<wbr>Action</a>
@@ -2368,8 +2152,7 @@ The following state arguments are supported:
         <span class="property-type"><a href="#endpointdeliveryrulecachekeyquerystringaction">Endpoint<wbr>Delivery<wbr>Rule<wbr>Cache<wbr>Key<wbr>Query<wbr>String<wbr>Action</a></span>
     </dt>
     <dd>{{% md %}}A `cache_key_query_string_action` block as defined above.
-{{% /md %}}</dd>
-    <dt class="property-optional"
+{{% /md %}}</dd><dt class="property-optional"
             title="Optional">
         <span id="cookiesconditions_go">
 <a href="#cookiesconditions_go" style="color: inherit; text-decoration: inherit;">Cookies<wbr>Conditions</a>
@@ -2378,8 +2161,7 @@ The following state arguments are supported:
         <span class="property-type"><a href="#endpointdeliveryrulecookiescondition">[]Endpoint<wbr>Delivery<wbr>Rule<wbr>Cookies<wbr>Condition</a></span>
     </dt>
     <dd>{{% md %}}A `cookies_condition` block as defined above.
-{{% /md %}}</dd>
-    <dt class="property-optional"
+{{% /md %}}</dd><dt class="property-optional"
             title="Optional">
         <span id="devicecondition_go">
 <a href="#devicecondition_go" style="color: inherit; text-decoration: inherit;">Device<wbr>Condition</a>
@@ -2388,8 +2170,7 @@ The following state arguments are supported:
         <span class="property-type"><a href="#endpointdeliveryruledevicecondition">Endpoint<wbr>Delivery<wbr>Rule<wbr>Device<wbr>Condition</a></span>
     </dt>
     <dd>{{% md %}}A `device_condition` block as defined below.
-{{% /md %}}</dd>
-    <dt class="property-optional"
+{{% /md %}}</dd><dt class="property-optional"
             title="Optional">
         <span id="httpversionconditions_go">
 <a href="#httpversionconditions_go" style="color: inherit; text-decoration: inherit;">Http<wbr>Version<wbr>Conditions</a>
@@ -2398,8 +2179,7 @@ The following state arguments are supported:
         <span class="property-type"><a href="#endpointdeliveryrulehttpversioncondition">[]Endpoint<wbr>Delivery<wbr>Rule<wbr>Http<wbr>Version<wbr>Condition</a></span>
     </dt>
     <dd>{{% md %}}A `http_version_condition` block as defined below.
-{{% /md %}}</dd>
-    <dt class="property-optional"
+{{% /md %}}</dd><dt class="property-optional"
             title="Optional">
         <span id="modifyrequestheaderactions_go">
 <a href="#modifyrequestheaderactions_go" style="color: inherit; text-decoration: inherit;">Modify<wbr>Request<wbr>Header<wbr>Actions</a>
@@ -2408,8 +2188,7 @@ The following state arguments are supported:
         <span class="property-type"><a href="#endpointdeliveryrulemodifyrequestheaderaction">[]Endpoint<wbr>Delivery<wbr>Rule<wbr>Modify<wbr>Request<wbr>Header<wbr>Action</a></span>
     </dt>
     <dd>{{% md %}}A `modify_request_header_action` block as defined below.
-{{% /md %}}</dd>
-    <dt class="property-optional"
+{{% /md %}}</dd><dt class="property-optional"
             title="Optional">
         <span id="modifyresponseheaderactions_go">
 <a href="#modifyresponseheaderactions_go" style="color: inherit; text-decoration: inherit;">Modify<wbr>Response<wbr>Header<wbr>Actions</a>
@@ -2418,8 +2197,7 @@ The following state arguments are supported:
         <span class="property-type"><a href="#endpointdeliveryrulemodifyresponseheaderaction">[]Endpoint<wbr>Delivery<wbr>Rule<wbr>Modify<wbr>Response<wbr>Header<wbr>Action</a></span>
     </dt>
     <dd>{{% md %}}A `modify_response_header_action` block as defined below.
-{{% /md %}}</dd>
-    <dt class="property-optional"
+{{% /md %}}</dd><dt class="property-optional"
             title="Optional">
         <span id="postargconditions_go">
 <a href="#postargconditions_go" style="color: inherit; text-decoration: inherit;">Post<wbr>Arg<wbr>Conditions</a>
@@ -2428,8 +2206,7 @@ The following state arguments are supported:
         <span class="property-type"><a href="#endpointdeliveryrulepostargcondition">[]Endpoint<wbr>Delivery<wbr>Rule<wbr>Post<wbr>Arg<wbr>Condition</a></span>
     </dt>
     <dd>{{% md %}}A `post_arg_condition` block as defined below.
-{{% /md %}}</dd>
-    <dt class="property-optional"
+{{% /md %}}</dd><dt class="property-optional"
             title="Optional">
         <span id="querystringconditions_go">
 <a href="#querystringconditions_go" style="color: inherit; text-decoration: inherit;">Query<wbr>String<wbr>Conditions</a>
@@ -2438,8 +2215,7 @@ The following state arguments are supported:
         <span class="property-type"><a href="#endpointdeliveryrulequerystringcondition">[]Endpoint<wbr>Delivery<wbr>Rule<wbr>Query<wbr>String<wbr>Condition</a></span>
     </dt>
     <dd>{{% md %}}A `query_string_condition` block as defined below.
-{{% /md %}}</dd>
-    <dt class="property-optional"
+{{% /md %}}</dd><dt class="property-optional"
             title="Optional">
         <span id="remoteaddressconditions_go">
 <a href="#remoteaddressconditions_go" style="color: inherit; text-decoration: inherit;">Remote<wbr>Address<wbr>Conditions</a>
@@ -2448,8 +2224,7 @@ The following state arguments are supported:
         <span class="property-type"><a href="#endpointdeliveryruleremoteaddresscondition">[]Endpoint<wbr>Delivery<wbr>Rule<wbr>Remote<wbr>Address<wbr>Condition</a></span>
     </dt>
     <dd>{{% md %}}A `remote_address_condition` block as defined below.
-{{% /md %}}</dd>
-    <dt class="property-optional"
+{{% /md %}}</dd><dt class="property-optional"
             title="Optional">
         <span id="requestbodyconditions_go">
 <a href="#requestbodyconditions_go" style="color: inherit; text-decoration: inherit;">Request<wbr>Body<wbr>Conditions</a>
@@ -2458,8 +2233,7 @@ The following state arguments are supported:
         <span class="property-type"><a href="#endpointdeliveryrulerequestbodycondition">[]Endpoint<wbr>Delivery<wbr>Rule<wbr>Request<wbr>Body<wbr>Condition</a></span>
     </dt>
     <dd>{{% md %}}A `request_body_condition` block as defined below.
-{{% /md %}}</dd>
-    <dt class="property-optional"
+{{% /md %}}</dd><dt class="property-optional"
             title="Optional">
         <span id="requestheaderconditions_go">
 <a href="#requestheaderconditions_go" style="color: inherit; text-decoration: inherit;">Request<wbr>Header<wbr>Conditions</a>
@@ -2468,8 +2242,7 @@ The following state arguments are supported:
         <span class="property-type"><a href="#endpointdeliveryrulerequestheadercondition">[]Endpoint<wbr>Delivery<wbr>Rule<wbr>Request<wbr>Header<wbr>Condition</a></span>
     </dt>
     <dd>{{% md %}}A `request_header_condition` block as defined below.
-{{% /md %}}</dd>
-    <dt class="property-optional"
+{{% /md %}}</dd><dt class="property-optional"
             title="Optional">
         <span id="requestmethodcondition_go">
 <a href="#requestmethodcondition_go" style="color: inherit; text-decoration: inherit;">Request<wbr>Method<wbr>Condition</a>
@@ -2478,8 +2251,7 @@ The following state arguments are supported:
         <span class="property-type"><a href="#endpointdeliveryrulerequestmethodcondition">Endpoint<wbr>Delivery<wbr>Rule<wbr>Request<wbr>Method<wbr>Condition</a></span>
     </dt>
     <dd>{{% md %}}A `request_method_condition` block as defined below.
-{{% /md %}}</dd>
-    <dt class="property-optional"
+{{% /md %}}</dd><dt class="property-optional"
             title="Optional">
         <span id="requestschemecondition_go">
 <a href="#requestschemecondition_go" style="color: inherit; text-decoration: inherit;">Request<wbr>Scheme<wbr>Condition</a>
@@ -2488,8 +2260,7 @@ The following state arguments are supported:
         <span class="property-type"><a href="#endpointdeliveryrulerequestschemecondition">Endpoint<wbr>Delivery<wbr>Rule<wbr>Request<wbr>Scheme<wbr>Condition</a></span>
     </dt>
     <dd>{{% md %}}A `request_scheme_condition` block as defined below.
-{{% /md %}}</dd>
-    <dt class="property-optional"
+{{% /md %}}</dd><dt class="property-optional"
             title="Optional">
         <span id="requesturiconditions_go">
 <a href="#requesturiconditions_go" style="color: inherit; text-decoration: inherit;">Request<wbr>Uri<wbr>Conditions</a>
@@ -2498,8 +2269,7 @@ The following state arguments are supported:
         <span class="property-type"><a href="#endpointdeliveryrulerequesturicondition">[]Endpoint<wbr>Delivery<wbr>Rule<wbr>Request<wbr>Uri<wbr>Condition</a></span>
     </dt>
     <dd>{{% md %}}A `request_uri_condition` block as defined below.
-{{% /md %}}</dd>
-    <dt class="property-optional"
+{{% /md %}}</dd><dt class="property-optional"
             title="Optional">
         <span id="urlfileextensionconditions_go">
 <a href="#urlfileextensionconditions_go" style="color: inherit; text-decoration: inherit;">Url<wbr>File<wbr>Extension<wbr>Conditions</a>
@@ -2508,8 +2278,7 @@ The following state arguments are supported:
         <span class="property-type"><a href="#endpointdeliveryruleurlfileextensioncondition">[]Endpoint<wbr>Delivery<wbr>Rule<wbr>Url<wbr>File<wbr>Extension<wbr>Condition</a></span>
     </dt>
     <dd>{{% md %}}A `url_file_extension_condition` block as defined below.
-{{% /md %}}</dd>
-    <dt class="property-optional"
+{{% /md %}}</dd><dt class="property-optional"
             title="Optional">
         <span id="urlfilenameconditions_go">
 <a href="#urlfilenameconditions_go" style="color: inherit; text-decoration: inherit;">Url<wbr>File<wbr>Name<wbr>Conditions</a>
@@ -2518,8 +2287,7 @@ The following state arguments are supported:
         <span class="property-type"><a href="#endpointdeliveryruleurlfilenamecondition">[]Endpoint<wbr>Delivery<wbr>Rule<wbr>Url<wbr>File<wbr>Name<wbr>Condition</a></span>
     </dt>
     <dd>{{% md %}}A `url_file_name_condition` block as defined below.
-{{% /md %}}</dd>
-    <dt class="property-optional"
+{{% /md %}}</dd><dt class="property-optional"
             title="Optional">
         <span id="urlpathconditions_go">
 <a href="#urlpathconditions_go" style="color: inherit; text-decoration: inherit;">Url<wbr>Path<wbr>Conditions</a>
@@ -2528,8 +2296,7 @@ The following state arguments are supported:
         <span class="property-type"><a href="#endpointdeliveryruleurlpathcondition">[]Endpoint<wbr>Delivery<wbr>Rule<wbr>Url<wbr>Path<wbr>Condition</a></span>
     </dt>
     <dd>{{% md %}}A `url_path_condition` block as defined below.
-{{% /md %}}</dd>
-    <dt class="property-optional"
+{{% /md %}}</dd><dt class="property-optional"
             title="Optional">
         <span id="urlredirectaction_go">
 <a href="#urlredirectaction_go" style="color: inherit; text-decoration: inherit;">Url<wbr>Redirect<wbr>Action</a>
@@ -2538,8 +2305,7 @@ The following state arguments are supported:
         <span class="property-type"><a href="#endpointdeliveryruleurlredirectaction">Endpoint<wbr>Delivery<wbr>Rule<wbr>Url<wbr>Redirect<wbr>Action</a></span>
     </dt>
     <dd>{{% md %}}A `url_redirect_action` block as defined below.
-{{% /md %}}</dd>
-    <dt class="property-optional"
+{{% /md %}}</dd><dt class="property-optional"
             title="Optional">
         <span id="urlrewriteaction_go">
 <a href="#urlrewriteaction_go" style="color: inherit; text-decoration: inherit;">Url<wbr>Rewrite<wbr>Action</a>
@@ -2548,14 +2314,11 @@ The following state arguments are supported:
         <span class="property-type"><a href="#endpointdeliveryruleurlrewriteaction">Endpoint<wbr>Delivery<wbr>Rule<wbr>Url<wbr>Rewrite<wbr>Action</a></span>
     </dt>
     <dd>{{% md %}}A `url_rewrite_action` block as defined below.
-{{% /md %}}</dd>
-</dl>
+{{% /md %}}</dd></dl>
 {{% /choosable %}}
 
 {{% choosable language nodejs %}}
-<dl class="resources-properties">
-
-    <dt class="property-required"
+<dl class="resources-properties"><dt class="property-required"
             title="Required">
         <span id="name_nodejs">
 <a href="#name_nodejs" style="color: inherit; text-decoration: inherit;">name</a>
@@ -2564,8 +2327,7 @@ The following state arguments are supported:
         <span class="property-type">string</span>
     </dt>
     <dd>{{% md %}}The Name which should be used for this Delivery Rule.
-{{% /md %}}</dd>
-    <dt class="property-required"
+{{% /md %}}</dd><dt class="property-required"
             title="Required">
         <span id="order_nodejs">
 <a href="#order_nodejs" style="color: inherit; text-decoration: inherit;">order</a>
@@ -2574,8 +2336,7 @@ The following state arguments are supported:
         <span class="property-type">number</span>
     </dt>
     <dd>{{% md %}}The order used for this rule, which must be larger than 1.
-{{% /md %}}</dd>
-    <dt class="property-optional"
+{{% /md %}}</dd><dt class="property-optional"
             title="Optional">
         <span id="cacheexpirationaction_nodejs">
 <a href="#cacheexpirationaction_nodejs" style="color: inherit; text-decoration: inherit;">cache<wbr>Expiration<wbr>Action</a>
@@ -2584,8 +2345,7 @@ The following state arguments are supported:
         <span class="property-type"><a href="#endpointdeliveryrulecacheexpirationaction">Endpoint<wbr>Delivery<wbr>Rule<wbr>Cache<wbr>Expiration<wbr>Action</a></span>
     </dt>
     <dd>{{% md %}}A `cache_expiration_action` block as defined above.
-{{% /md %}}</dd>
-    <dt class="property-optional"
+{{% /md %}}</dd><dt class="property-optional"
             title="Optional">
         <span id="cachekeyquerystringaction_nodejs">
 <a href="#cachekeyquerystringaction_nodejs" style="color: inherit; text-decoration: inherit;">cache<wbr>Key<wbr>Query<wbr>String<wbr>Action</a>
@@ -2594,8 +2354,7 @@ The following state arguments are supported:
         <span class="property-type"><a href="#endpointdeliveryrulecachekeyquerystringaction">Endpoint<wbr>Delivery<wbr>Rule<wbr>Cache<wbr>Key<wbr>Query<wbr>String<wbr>Action</a></span>
     </dt>
     <dd>{{% md %}}A `cache_key_query_string_action` block as defined above.
-{{% /md %}}</dd>
-    <dt class="property-optional"
+{{% /md %}}</dd><dt class="property-optional"
             title="Optional">
         <span id="cookiesconditions_nodejs">
 <a href="#cookiesconditions_nodejs" style="color: inherit; text-decoration: inherit;">cookies<wbr>Conditions</a>
@@ -2604,8 +2363,7 @@ The following state arguments are supported:
         <span class="property-type"><a href="#endpointdeliveryrulecookiescondition">Endpoint<wbr>Delivery<wbr>Rule<wbr>Cookies<wbr>Condition[]</a></span>
     </dt>
     <dd>{{% md %}}A `cookies_condition` block as defined above.
-{{% /md %}}</dd>
-    <dt class="property-optional"
+{{% /md %}}</dd><dt class="property-optional"
             title="Optional">
         <span id="devicecondition_nodejs">
 <a href="#devicecondition_nodejs" style="color: inherit; text-decoration: inherit;">device<wbr>Condition</a>
@@ -2614,8 +2372,7 @@ The following state arguments are supported:
         <span class="property-type"><a href="#endpointdeliveryruledevicecondition">Endpoint<wbr>Delivery<wbr>Rule<wbr>Device<wbr>Condition</a></span>
     </dt>
     <dd>{{% md %}}A `device_condition` block as defined below.
-{{% /md %}}</dd>
-    <dt class="property-optional"
+{{% /md %}}</dd><dt class="property-optional"
             title="Optional">
         <span id="httpversionconditions_nodejs">
 <a href="#httpversionconditions_nodejs" style="color: inherit; text-decoration: inherit;">http<wbr>Version<wbr>Conditions</a>
@@ -2624,8 +2381,7 @@ The following state arguments are supported:
         <span class="property-type"><a href="#endpointdeliveryrulehttpversioncondition">Endpoint<wbr>Delivery<wbr>Rule<wbr>Http<wbr>Version<wbr>Condition[]</a></span>
     </dt>
     <dd>{{% md %}}A `http_version_condition` block as defined below.
-{{% /md %}}</dd>
-    <dt class="property-optional"
+{{% /md %}}</dd><dt class="property-optional"
             title="Optional">
         <span id="modifyrequestheaderactions_nodejs">
 <a href="#modifyrequestheaderactions_nodejs" style="color: inherit; text-decoration: inherit;">modify<wbr>Request<wbr>Header<wbr>Actions</a>
@@ -2634,8 +2390,7 @@ The following state arguments are supported:
         <span class="property-type"><a href="#endpointdeliveryrulemodifyrequestheaderaction">Endpoint<wbr>Delivery<wbr>Rule<wbr>Modify<wbr>Request<wbr>Header<wbr>Action[]</a></span>
     </dt>
     <dd>{{% md %}}A `modify_request_header_action` block as defined below.
-{{% /md %}}</dd>
-    <dt class="property-optional"
+{{% /md %}}</dd><dt class="property-optional"
             title="Optional">
         <span id="modifyresponseheaderactions_nodejs">
 <a href="#modifyresponseheaderactions_nodejs" style="color: inherit; text-decoration: inherit;">modify<wbr>Response<wbr>Header<wbr>Actions</a>
@@ -2644,8 +2399,7 @@ The following state arguments are supported:
         <span class="property-type"><a href="#endpointdeliveryrulemodifyresponseheaderaction">Endpoint<wbr>Delivery<wbr>Rule<wbr>Modify<wbr>Response<wbr>Header<wbr>Action[]</a></span>
     </dt>
     <dd>{{% md %}}A `modify_response_header_action` block as defined below.
-{{% /md %}}</dd>
-    <dt class="property-optional"
+{{% /md %}}</dd><dt class="property-optional"
             title="Optional">
         <span id="postargconditions_nodejs">
 <a href="#postargconditions_nodejs" style="color: inherit; text-decoration: inherit;">post<wbr>Arg<wbr>Conditions</a>
@@ -2654,8 +2408,7 @@ The following state arguments are supported:
         <span class="property-type"><a href="#endpointdeliveryrulepostargcondition">Endpoint<wbr>Delivery<wbr>Rule<wbr>Post<wbr>Arg<wbr>Condition[]</a></span>
     </dt>
     <dd>{{% md %}}A `post_arg_condition` block as defined below.
-{{% /md %}}</dd>
-    <dt class="property-optional"
+{{% /md %}}</dd><dt class="property-optional"
             title="Optional">
         <span id="querystringconditions_nodejs">
 <a href="#querystringconditions_nodejs" style="color: inherit; text-decoration: inherit;">query<wbr>String<wbr>Conditions</a>
@@ -2664,8 +2417,7 @@ The following state arguments are supported:
         <span class="property-type"><a href="#endpointdeliveryrulequerystringcondition">Endpoint<wbr>Delivery<wbr>Rule<wbr>Query<wbr>String<wbr>Condition[]</a></span>
     </dt>
     <dd>{{% md %}}A `query_string_condition` block as defined below.
-{{% /md %}}</dd>
-    <dt class="property-optional"
+{{% /md %}}</dd><dt class="property-optional"
             title="Optional">
         <span id="remoteaddressconditions_nodejs">
 <a href="#remoteaddressconditions_nodejs" style="color: inherit; text-decoration: inherit;">remote<wbr>Address<wbr>Conditions</a>
@@ -2674,8 +2426,7 @@ The following state arguments are supported:
         <span class="property-type"><a href="#endpointdeliveryruleremoteaddresscondition">Endpoint<wbr>Delivery<wbr>Rule<wbr>Remote<wbr>Address<wbr>Condition[]</a></span>
     </dt>
     <dd>{{% md %}}A `remote_address_condition` block as defined below.
-{{% /md %}}</dd>
-    <dt class="property-optional"
+{{% /md %}}</dd><dt class="property-optional"
             title="Optional">
         <span id="requestbodyconditions_nodejs">
 <a href="#requestbodyconditions_nodejs" style="color: inherit; text-decoration: inherit;">request<wbr>Body<wbr>Conditions</a>
@@ -2684,8 +2435,7 @@ The following state arguments are supported:
         <span class="property-type"><a href="#endpointdeliveryrulerequestbodycondition">Endpoint<wbr>Delivery<wbr>Rule<wbr>Request<wbr>Body<wbr>Condition[]</a></span>
     </dt>
     <dd>{{% md %}}A `request_body_condition` block as defined below.
-{{% /md %}}</dd>
-    <dt class="property-optional"
+{{% /md %}}</dd><dt class="property-optional"
             title="Optional">
         <span id="requestheaderconditions_nodejs">
 <a href="#requestheaderconditions_nodejs" style="color: inherit; text-decoration: inherit;">request<wbr>Header<wbr>Conditions</a>
@@ -2694,8 +2444,7 @@ The following state arguments are supported:
         <span class="property-type"><a href="#endpointdeliveryrulerequestheadercondition">Endpoint<wbr>Delivery<wbr>Rule<wbr>Request<wbr>Header<wbr>Condition[]</a></span>
     </dt>
     <dd>{{% md %}}A `request_header_condition` block as defined below.
-{{% /md %}}</dd>
-    <dt class="property-optional"
+{{% /md %}}</dd><dt class="property-optional"
             title="Optional">
         <span id="requestmethodcondition_nodejs">
 <a href="#requestmethodcondition_nodejs" style="color: inherit; text-decoration: inherit;">request<wbr>Method<wbr>Condition</a>
@@ -2704,8 +2453,7 @@ The following state arguments are supported:
         <span class="property-type"><a href="#endpointdeliveryrulerequestmethodcondition">Endpoint<wbr>Delivery<wbr>Rule<wbr>Request<wbr>Method<wbr>Condition</a></span>
     </dt>
     <dd>{{% md %}}A `request_method_condition` block as defined below.
-{{% /md %}}</dd>
-    <dt class="property-optional"
+{{% /md %}}</dd><dt class="property-optional"
             title="Optional">
         <span id="requestschemecondition_nodejs">
 <a href="#requestschemecondition_nodejs" style="color: inherit; text-decoration: inherit;">request<wbr>Scheme<wbr>Condition</a>
@@ -2714,8 +2462,7 @@ The following state arguments are supported:
         <span class="property-type"><a href="#endpointdeliveryrulerequestschemecondition">Endpoint<wbr>Delivery<wbr>Rule<wbr>Request<wbr>Scheme<wbr>Condition</a></span>
     </dt>
     <dd>{{% md %}}A `request_scheme_condition` block as defined below.
-{{% /md %}}</dd>
-    <dt class="property-optional"
+{{% /md %}}</dd><dt class="property-optional"
             title="Optional">
         <span id="requesturiconditions_nodejs">
 <a href="#requesturiconditions_nodejs" style="color: inherit; text-decoration: inherit;">request<wbr>Uri<wbr>Conditions</a>
@@ -2724,8 +2471,7 @@ The following state arguments are supported:
         <span class="property-type"><a href="#endpointdeliveryrulerequesturicondition">Endpoint<wbr>Delivery<wbr>Rule<wbr>Request<wbr>Uri<wbr>Condition[]</a></span>
     </dt>
     <dd>{{% md %}}A `request_uri_condition` block as defined below.
-{{% /md %}}</dd>
-    <dt class="property-optional"
+{{% /md %}}</dd><dt class="property-optional"
             title="Optional">
         <span id="urlfileextensionconditions_nodejs">
 <a href="#urlfileextensionconditions_nodejs" style="color: inherit; text-decoration: inherit;">url<wbr>File<wbr>Extension<wbr>Conditions</a>
@@ -2734,8 +2480,7 @@ The following state arguments are supported:
         <span class="property-type"><a href="#endpointdeliveryruleurlfileextensioncondition">Endpoint<wbr>Delivery<wbr>Rule<wbr>Url<wbr>File<wbr>Extension<wbr>Condition[]</a></span>
     </dt>
     <dd>{{% md %}}A `url_file_extension_condition` block as defined below.
-{{% /md %}}</dd>
-    <dt class="property-optional"
+{{% /md %}}</dd><dt class="property-optional"
             title="Optional">
         <span id="urlfilenameconditions_nodejs">
 <a href="#urlfilenameconditions_nodejs" style="color: inherit; text-decoration: inherit;">url<wbr>File<wbr>Name<wbr>Conditions</a>
@@ -2744,8 +2489,7 @@ The following state arguments are supported:
         <span class="property-type"><a href="#endpointdeliveryruleurlfilenamecondition">Endpoint<wbr>Delivery<wbr>Rule<wbr>Url<wbr>File<wbr>Name<wbr>Condition[]</a></span>
     </dt>
     <dd>{{% md %}}A `url_file_name_condition` block as defined below.
-{{% /md %}}</dd>
-    <dt class="property-optional"
+{{% /md %}}</dd><dt class="property-optional"
             title="Optional">
         <span id="urlpathconditions_nodejs">
 <a href="#urlpathconditions_nodejs" style="color: inherit; text-decoration: inherit;">url<wbr>Path<wbr>Conditions</a>
@@ -2754,8 +2498,7 @@ The following state arguments are supported:
         <span class="property-type"><a href="#endpointdeliveryruleurlpathcondition">Endpoint<wbr>Delivery<wbr>Rule<wbr>Url<wbr>Path<wbr>Condition[]</a></span>
     </dt>
     <dd>{{% md %}}A `url_path_condition` block as defined below.
-{{% /md %}}</dd>
-    <dt class="property-optional"
+{{% /md %}}</dd><dt class="property-optional"
             title="Optional">
         <span id="urlredirectaction_nodejs">
 <a href="#urlredirectaction_nodejs" style="color: inherit; text-decoration: inherit;">url<wbr>Redirect<wbr>Action</a>
@@ -2764,8 +2507,7 @@ The following state arguments are supported:
         <span class="property-type"><a href="#endpointdeliveryruleurlredirectaction">Endpoint<wbr>Delivery<wbr>Rule<wbr>Url<wbr>Redirect<wbr>Action</a></span>
     </dt>
     <dd>{{% md %}}A `url_redirect_action` block as defined below.
-{{% /md %}}</dd>
-    <dt class="property-optional"
+{{% /md %}}</dd><dt class="property-optional"
             title="Optional">
         <span id="urlrewriteaction_nodejs">
 <a href="#urlrewriteaction_nodejs" style="color: inherit; text-decoration: inherit;">url<wbr>Rewrite<wbr>Action</a>
@@ -2774,14 +2516,11 @@ The following state arguments are supported:
         <span class="property-type"><a href="#endpointdeliveryruleurlrewriteaction">Endpoint<wbr>Delivery<wbr>Rule<wbr>Url<wbr>Rewrite<wbr>Action</a></span>
     </dt>
     <dd>{{% md %}}A `url_rewrite_action` block as defined below.
-{{% /md %}}</dd>
-</dl>
+{{% /md %}}</dd></dl>
 {{% /choosable %}}
 
 {{% choosable language python %}}
-<dl class="resources-properties">
-
-    <dt class="property-required"
+<dl class="resources-properties"><dt class="property-required"
             title="Required">
         <span id="name_python">
 <a href="#name_python" style="color: inherit; text-decoration: inherit;">name</a>
@@ -2790,8 +2529,7 @@ The following state arguments are supported:
         <span class="property-type">str</span>
     </dt>
     <dd>{{% md %}}The Name which should be used for this Delivery Rule.
-{{% /md %}}</dd>
-    <dt class="property-required"
+{{% /md %}}</dd><dt class="property-required"
             title="Required">
         <span id="order_python">
 <a href="#order_python" style="color: inherit; text-decoration: inherit;">order</a>
@@ -2800,8 +2538,7 @@ The following state arguments are supported:
         <span class="property-type">int</span>
     </dt>
     <dd>{{% md %}}The order used for this rule, which must be larger than 1.
-{{% /md %}}</dd>
-    <dt class="property-optional"
+{{% /md %}}</dd><dt class="property-optional"
             title="Optional">
         <span id="cache_expiration_action_python">
 <a href="#cache_expiration_action_python" style="color: inherit; text-decoration: inherit;">cache_<wbr>expiration_<wbr>action</a>
@@ -2810,8 +2547,7 @@ The following state arguments are supported:
         <span class="property-type"><a href="#endpointdeliveryrulecacheexpirationaction">Endpoint<wbr>Delivery<wbr>Rule<wbr>Cache<wbr>Expiration<wbr>Action<wbr>Args</a></span>
     </dt>
     <dd>{{% md %}}A `cache_expiration_action` block as defined above.
-{{% /md %}}</dd>
-    <dt class="property-optional"
+{{% /md %}}</dd><dt class="property-optional"
             title="Optional">
         <span id="cache_key_query_string_action_python">
 <a href="#cache_key_query_string_action_python" style="color: inherit; text-decoration: inherit;">cache_<wbr>key_<wbr>query_<wbr>string_<wbr>action</a>
@@ -2820,8 +2556,7 @@ The following state arguments are supported:
         <span class="property-type"><a href="#endpointdeliveryrulecachekeyquerystringaction">Endpoint<wbr>Delivery<wbr>Rule<wbr>Cache<wbr>Key<wbr>Query<wbr>String<wbr>Action<wbr>Args</a></span>
     </dt>
     <dd>{{% md %}}A `cache_key_query_string_action` block as defined above.
-{{% /md %}}</dd>
-    <dt class="property-optional"
+{{% /md %}}</dd><dt class="property-optional"
             title="Optional">
         <span id="cookies_conditions_python">
 <a href="#cookies_conditions_python" style="color: inherit; text-decoration: inherit;">cookies_<wbr>conditions</a>
@@ -2830,8 +2565,7 @@ The following state arguments are supported:
         <span class="property-type"><a href="#endpointdeliveryrulecookiescondition">Sequence[Endpoint<wbr>Delivery<wbr>Rule<wbr>Cookies<wbr>Condition<wbr>Args]</a></span>
     </dt>
     <dd>{{% md %}}A `cookies_condition` block as defined above.
-{{% /md %}}</dd>
-    <dt class="property-optional"
+{{% /md %}}</dd><dt class="property-optional"
             title="Optional">
         <span id="device_condition_python">
 <a href="#device_condition_python" style="color: inherit; text-decoration: inherit;">device_<wbr>condition</a>
@@ -2840,8 +2574,7 @@ The following state arguments are supported:
         <span class="property-type"><a href="#endpointdeliveryruledevicecondition">Endpoint<wbr>Delivery<wbr>Rule<wbr>Device<wbr>Condition<wbr>Args</a></span>
     </dt>
     <dd>{{% md %}}A `device_condition` block as defined below.
-{{% /md %}}</dd>
-    <dt class="property-optional"
+{{% /md %}}</dd><dt class="property-optional"
             title="Optional">
         <span id="http_version_conditions_python">
 <a href="#http_version_conditions_python" style="color: inherit; text-decoration: inherit;">http_<wbr>version_<wbr>conditions</a>
@@ -2850,8 +2583,7 @@ The following state arguments are supported:
         <span class="property-type"><a href="#endpointdeliveryrulehttpversioncondition">Sequence[Endpoint<wbr>Delivery<wbr>Rule<wbr>Http<wbr>Version<wbr>Condition<wbr>Args]</a></span>
     </dt>
     <dd>{{% md %}}A `http_version_condition` block as defined below.
-{{% /md %}}</dd>
-    <dt class="property-optional"
+{{% /md %}}</dd><dt class="property-optional"
             title="Optional">
         <span id="modify_request_header_actions_python">
 <a href="#modify_request_header_actions_python" style="color: inherit; text-decoration: inherit;">modify_<wbr>request_<wbr>header_<wbr>actions</a>
@@ -2860,8 +2592,7 @@ The following state arguments are supported:
         <span class="property-type"><a href="#endpointdeliveryrulemodifyrequestheaderaction">Sequence[Endpoint<wbr>Delivery<wbr>Rule<wbr>Modify<wbr>Request<wbr>Header<wbr>Action<wbr>Args]</a></span>
     </dt>
     <dd>{{% md %}}A `modify_request_header_action` block as defined below.
-{{% /md %}}</dd>
-    <dt class="property-optional"
+{{% /md %}}</dd><dt class="property-optional"
             title="Optional">
         <span id="modify_response_header_actions_python">
 <a href="#modify_response_header_actions_python" style="color: inherit; text-decoration: inherit;">modify_<wbr>response_<wbr>header_<wbr>actions</a>
@@ -2870,8 +2601,7 @@ The following state arguments are supported:
         <span class="property-type"><a href="#endpointdeliveryrulemodifyresponseheaderaction">Sequence[Endpoint<wbr>Delivery<wbr>Rule<wbr>Modify<wbr>Response<wbr>Header<wbr>Action<wbr>Args]</a></span>
     </dt>
     <dd>{{% md %}}A `modify_response_header_action` block as defined below.
-{{% /md %}}</dd>
-    <dt class="property-optional"
+{{% /md %}}</dd><dt class="property-optional"
             title="Optional">
         <span id="post_arg_conditions_python">
 <a href="#post_arg_conditions_python" style="color: inherit; text-decoration: inherit;">post_<wbr>arg_<wbr>conditions</a>
@@ -2880,8 +2610,7 @@ The following state arguments are supported:
         <span class="property-type"><a href="#endpointdeliveryrulepostargcondition">Sequence[Endpoint<wbr>Delivery<wbr>Rule<wbr>Post<wbr>Arg<wbr>Condition<wbr>Args]</a></span>
     </dt>
     <dd>{{% md %}}A `post_arg_condition` block as defined below.
-{{% /md %}}</dd>
-    <dt class="property-optional"
+{{% /md %}}</dd><dt class="property-optional"
             title="Optional">
         <span id="query_string_conditions_python">
 <a href="#query_string_conditions_python" style="color: inherit; text-decoration: inherit;">query_<wbr>string_<wbr>conditions</a>
@@ -2890,8 +2619,7 @@ The following state arguments are supported:
         <span class="property-type"><a href="#endpointdeliveryrulequerystringcondition">Sequence[Endpoint<wbr>Delivery<wbr>Rule<wbr>Query<wbr>String<wbr>Condition<wbr>Args]</a></span>
     </dt>
     <dd>{{% md %}}A `query_string_condition` block as defined below.
-{{% /md %}}</dd>
-    <dt class="property-optional"
+{{% /md %}}</dd><dt class="property-optional"
             title="Optional">
         <span id="remote_address_conditions_python">
 <a href="#remote_address_conditions_python" style="color: inherit; text-decoration: inherit;">remote_<wbr>address_<wbr>conditions</a>
@@ -2900,8 +2628,7 @@ The following state arguments are supported:
         <span class="property-type"><a href="#endpointdeliveryruleremoteaddresscondition">Sequence[Endpoint<wbr>Delivery<wbr>Rule<wbr>Remote<wbr>Address<wbr>Condition<wbr>Args]</a></span>
     </dt>
     <dd>{{% md %}}A `remote_address_condition` block as defined below.
-{{% /md %}}</dd>
-    <dt class="property-optional"
+{{% /md %}}</dd><dt class="property-optional"
             title="Optional">
         <span id="request_body_conditions_python">
 <a href="#request_body_conditions_python" style="color: inherit; text-decoration: inherit;">request_<wbr>body_<wbr>conditions</a>
@@ -2910,8 +2637,7 @@ The following state arguments are supported:
         <span class="property-type"><a href="#endpointdeliveryrulerequestbodycondition">Sequence[Endpoint<wbr>Delivery<wbr>Rule<wbr>Request<wbr>Body<wbr>Condition<wbr>Args]</a></span>
     </dt>
     <dd>{{% md %}}A `request_body_condition` block as defined below.
-{{% /md %}}</dd>
-    <dt class="property-optional"
+{{% /md %}}</dd><dt class="property-optional"
             title="Optional">
         <span id="request_header_conditions_python">
 <a href="#request_header_conditions_python" style="color: inherit; text-decoration: inherit;">request_<wbr>header_<wbr>conditions</a>
@@ -2920,8 +2646,7 @@ The following state arguments are supported:
         <span class="property-type"><a href="#endpointdeliveryrulerequestheadercondition">Sequence[Endpoint<wbr>Delivery<wbr>Rule<wbr>Request<wbr>Header<wbr>Condition<wbr>Args]</a></span>
     </dt>
     <dd>{{% md %}}A `request_header_condition` block as defined below.
-{{% /md %}}</dd>
-    <dt class="property-optional"
+{{% /md %}}</dd><dt class="property-optional"
             title="Optional">
         <span id="request_method_condition_python">
 <a href="#request_method_condition_python" style="color: inherit; text-decoration: inherit;">request_<wbr>method_<wbr>condition</a>
@@ -2930,8 +2655,7 @@ The following state arguments are supported:
         <span class="property-type"><a href="#endpointdeliveryrulerequestmethodcondition">Endpoint<wbr>Delivery<wbr>Rule<wbr>Request<wbr>Method<wbr>Condition<wbr>Args</a></span>
     </dt>
     <dd>{{% md %}}A `request_method_condition` block as defined below.
-{{% /md %}}</dd>
-    <dt class="property-optional"
+{{% /md %}}</dd><dt class="property-optional"
             title="Optional">
         <span id="request_scheme_condition_python">
 <a href="#request_scheme_condition_python" style="color: inherit; text-decoration: inherit;">request_<wbr>scheme_<wbr>condition</a>
@@ -2940,8 +2664,7 @@ The following state arguments are supported:
         <span class="property-type"><a href="#endpointdeliveryrulerequestschemecondition">Endpoint<wbr>Delivery<wbr>Rule<wbr>Request<wbr>Scheme<wbr>Condition<wbr>Args</a></span>
     </dt>
     <dd>{{% md %}}A `request_scheme_condition` block as defined below.
-{{% /md %}}</dd>
-    <dt class="property-optional"
+{{% /md %}}</dd><dt class="property-optional"
             title="Optional">
         <span id="request_uri_conditions_python">
 <a href="#request_uri_conditions_python" style="color: inherit; text-decoration: inherit;">request_<wbr>uri_<wbr>conditions</a>
@@ -2950,8 +2673,7 @@ The following state arguments are supported:
         <span class="property-type"><a href="#endpointdeliveryrulerequesturicondition">Sequence[Endpoint<wbr>Delivery<wbr>Rule<wbr>Request<wbr>Uri<wbr>Condition<wbr>Args]</a></span>
     </dt>
     <dd>{{% md %}}A `request_uri_condition` block as defined below.
-{{% /md %}}</dd>
-    <dt class="property-optional"
+{{% /md %}}</dd><dt class="property-optional"
             title="Optional">
         <span id="url_file_extension_conditions_python">
 <a href="#url_file_extension_conditions_python" style="color: inherit; text-decoration: inherit;">url_<wbr>file_<wbr>extension_<wbr>conditions</a>
@@ -2960,8 +2682,7 @@ The following state arguments are supported:
         <span class="property-type"><a href="#endpointdeliveryruleurlfileextensioncondition">Sequence[Endpoint<wbr>Delivery<wbr>Rule<wbr>Url<wbr>File<wbr>Extension<wbr>Condition<wbr>Args]</a></span>
     </dt>
     <dd>{{% md %}}A `url_file_extension_condition` block as defined below.
-{{% /md %}}</dd>
-    <dt class="property-optional"
+{{% /md %}}</dd><dt class="property-optional"
             title="Optional">
         <span id="url_file_name_conditions_python">
 <a href="#url_file_name_conditions_python" style="color: inherit; text-decoration: inherit;">url_<wbr>file_<wbr>name_<wbr>conditions</a>
@@ -2970,8 +2691,7 @@ The following state arguments are supported:
         <span class="property-type"><a href="#endpointdeliveryruleurlfilenamecondition">Sequence[Endpoint<wbr>Delivery<wbr>Rule<wbr>Url<wbr>File<wbr>Name<wbr>Condition<wbr>Args]</a></span>
     </dt>
     <dd>{{% md %}}A `url_file_name_condition` block as defined below.
-{{% /md %}}</dd>
-    <dt class="property-optional"
+{{% /md %}}</dd><dt class="property-optional"
             title="Optional">
         <span id="url_path_conditions_python">
 <a href="#url_path_conditions_python" style="color: inherit; text-decoration: inherit;">url_<wbr>path_<wbr>conditions</a>
@@ -2980,8 +2700,7 @@ The following state arguments are supported:
         <span class="property-type"><a href="#endpointdeliveryruleurlpathcondition">Sequence[Endpoint<wbr>Delivery<wbr>Rule<wbr>Url<wbr>Path<wbr>Condition<wbr>Args]</a></span>
     </dt>
     <dd>{{% md %}}A `url_path_condition` block as defined below.
-{{% /md %}}</dd>
-    <dt class="property-optional"
+{{% /md %}}</dd><dt class="property-optional"
             title="Optional">
         <span id="url_redirect_action_python">
 <a href="#url_redirect_action_python" style="color: inherit; text-decoration: inherit;">url_<wbr>redirect_<wbr>action</a>
@@ -2990,8 +2709,7 @@ The following state arguments are supported:
         <span class="property-type"><a href="#endpointdeliveryruleurlredirectaction">Endpoint<wbr>Delivery<wbr>Rule<wbr>Url<wbr>Redirect<wbr>Action<wbr>Args</a></span>
     </dt>
     <dd>{{% md %}}A `url_redirect_action` block as defined below.
-{{% /md %}}</dd>
-    <dt class="property-optional"
+{{% /md %}}</dd><dt class="property-optional"
             title="Optional">
         <span id="url_rewrite_action_python">
 <a href="#url_rewrite_action_python" style="color: inherit; text-decoration: inherit;">url_<wbr>rewrite_<wbr>action</a>
@@ -3000,16 +2718,13 @@ The following state arguments are supported:
         <span class="property-type"><a href="#endpointdeliveryruleurlrewriteaction">Endpoint<wbr>Delivery<wbr>Rule<wbr>Url<wbr>Rewrite<wbr>Action<wbr>Args</a></span>
     </dt>
     <dd>{{% md %}}A `url_rewrite_action` block as defined below.
-{{% /md %}}</dd>
-</dl>
+{{% /md %}}</dd></dl>
 {{% /choosable %}}
 
 <h4 id="endpointdeliveryrulecacheexpirationaction">Endpoint<wbr>Delivery<wbr>Rule<wbr>Cache<wbr>Expiration<wbr>Action</h4>
 
 {{% choosable language csharp %}}
-<dl class="resources-properties">
-
-    <dt class="property-required"
+<dl class="resources-properties"><dt class="property-required"
             title="Required">
         <span id="behavior_csharp">
 <a href="#behavior_csharp" style="color: inherit; text-decoration: inherit;">Behavior</a>
@@ -3018,8 +2733,7 @@ The following state arguments are supported:
         <span class="property-type">string</span>
     </dt>
     <dd>{{% md %}}The behavior of the cache. Valid values are `BypassCache`, `Override` and `SetIfMissing`.
-{{% /md %}}</dd>
-    <dt class="property-optional"
+{{% /md %}}</dd><dt class="property-optional"
             title="Optional">
         <span id="duration_csharp">
 <a href="#duration_csharp" style="color: inherit; text-decoration: inherit;">Duration</a>
@@ -3028,14 +2742,11 @@ The following state arguments are supported:
         <span class="property-type">string</span>
     </dt>
     <dd>{{% md %}}Duration of the cache. Only allowed when `behavior` is set to `Override` or `SetIfMissing`. Format: `[d.]hh:mm:ss`
-{{% /md %}}</dd>
-</dl>
+{{% /md %}}</dd></dl>
 {{% /choosable %}}
 
 {{% choosable language go %}}
-<dl class="resources-properties">
-
-    <dt class="property-required"
+<dl class="resources-properties"><dt class="property-required"
             title="Required">
         <span id="behavior_go">
 <a href="#behavior_go" style="color: inherit; text-decoration: inherit;">Behavior</a>
@@ -3044,8 +2755,7 @@ The following state arguments are supported:
         <span class="property-type">string</span>
     </dt>
     <dd>{{% md %}}The behavior of the cache. Valid values are `BypassCache`, `Override` and `SetIfMissing`.
-{{% /md %}}</dd>
-    <dt class="property-optional"
+{{% /md %}}</dd><dt class="property-optional"
             title="Optional">
         <span id="duration_go">
 <a href="#duration_go" style="color: inherit; text-decoration: inherit;">Duration</a>
@@ -3054,14 +2764,11 @@ The following state arguments are supported:
         <span class="property-type">string</span>
     </dt>
     <dd>{{% md %}}Duration of the cache. Only allowed when `behavior` is set to `Override` or `SetIfMissing`. Format: `[d.]hh:mm:ss`
-{{% /md %}}</dd>
-</dl>
+{{% /md %}}</dd></dl>
 {{% /choosable %}}
 
 {{% choosable language nodejs %}}
-<dl class="resources-properties">
-
-    <dt class="property-required"
+<dl class="resources-properties"><dt class="property-required"
             title="Required">
         <span id="behavior_nodejs">
 <a href="#behavior_nodejs" style="color: inherit; text-decoration: inherit;">behavior</a>
@@ -3070,8 +2777,7 @@ The following state arguments are supported:
         <span class="property-type">string</span>
     </dt>
     <dd>{{% md %}}The behavior of the cache. Valid values are `BypassCache`, `Override` and `SetIfMissing`.
-{{% /md %}}</dd>
-    <dt class="property-optional"
+{{% /md %}}</dd><dt class="property-optional"
             title="Optional">
         <span id="duration_nodejs">
 <a href="#duration_nodejs" style="color: inherit; text-decoration: inherit;">duration</a>
@@ -3080,14 +2786,11 @@ The following state arguments are supported:
         <span class="property-type">string</span>
     </dt>
     <dd>{{% md %}}Duration of the cache. Only allowed when `behavior` is set to `Override` or `SetIfMissing`. Format: `[d.]hh:mm:ss`
-{{% /md %}}</dd>
-</dl>
+{{% /md %}}</dd></dl>
 {{% /choosable %}}
 
 {{% choosable language python %}}
-<dl class="resources-properties">
-
-    <dt class="property-required"
+<dl class="resources-properties"><dt class="property-required"
             title="Required">
         <span id="behavior_python">
 <a href="#behavior_python" style="color: inherit; text-decoration: inherit;">behavior</a>
@@ -3096,8 +2799,7 @@ The following state arguments are supported:
         <span class="property-type">str</span>
     </dt>
     <dd>{{% md %}}The behavior of the cache. Valid values are `BypassCache`, `Override` and `SetIfMissing`.
-{{% /md %}}</dd>
-    <dt class="property-optional"
+{{% /md %}}</dd><dt class="property-optional"
             title="Optional">
         <span id="duration_python">
 <a href="#duration_python" style="color: inherit; text-decoration: inherit;">duration</a>
@@ -3106,16 +2808,13 @@ The following state arguments are supported:
         <span class="property-type">str</span>
     </dt>
     <dd>{{% md %}}Duration of the cache. Only allowed when `behavior` is set to `Override` or `SetIfMissing`. Format: `[d.]hh:mm:ss`
-{{% /md %}}</dd>
-</dl>
+{{% /md %}}</dd></dl>
 {{% /choosable %}}
 
 <h4 id="endpointdeliveryrulecachekeyquerystringaction">Endpoint<wbr>Delivery<wbr>Rule<wbr>Cache<wbr>Key<wbr>Query<wbr>String<wbr>Action</h4>
 
 {{% choosable language csharp %}}
-<dl class="resources-properties">
-
-    <dt class="property-required"
+<dl class="resources-properties"><dt class="property-required"
             title="Required">
         <span id="behavior_csharp">
 <a href="#behavior_csharp" style="color: inherit; text-decoration: inherit;">Behavior</a>
@@ -3124,8 +2823,7 @@ The following state arguments are supported:
         <span class="property-type">string</span>
     </dt>
     <dd>{{% md %}}The behavior of the cache key for query strings. Valid values are `Exclude`, `ExcludeAll`, `Include` and `IncludeAll`.
-{{% /md %}}</dd>
-    <dt class="property-optional"
+{{% /md %}}</dd><dt class="property-optional"
             title="Optional">
         <span id="parameters_csharp">
 <a href="#parameters_csharp" style="color: inherit; text-decoration: inherit;">Parameters</a>
@@ -3134,14 +2832,11 @@ The following state arguments are supported:
         <span class="property-type">string</span>
     </dt>
     <dd>{{% md %}}Comma separated list of parameter values.
-{{% /md %}}</dd>
-</dl>
+{{% /md %}}</dd></dl>
 {{% /choosable %}}
 
 {{% choosable language go %}}
-<dl class="resources-properties">
-
-    <dt class="property-required"
+<dl class="resources-properties"><dt class="property-required"
             title="Required">
         <span id="behavior_go">
 <a href="#behavior_go" style="color: inherit; text-decoration: inherit;">Behavior</a>
@@ -3150,8 +2845,7 @@ The following state arguments are supported:
         <span class="property-type">string</span>
     </dt>
     <dd>{{% md %}}The behavior of the cache key for query strings. Valid values are `Exclude`, `ExcludeAll`, `Include` and `IncludeAll`.
-{{% /md %}}</dd>
-    <dt class="property-optional"
+{{% /md %}}</dd><dt class="property-optional"
             title="Optional">
         <span id="parameters_go">
 <a href="#parameters_go" style="color: inherit; text-decoration: inherit;">Parameters</a>
@@ -3160,14 +2854,11 @@ The following state arguments are supported:
         <span class="property-type">string</span>
     </dt>
     <dd>{{% md %}}Comma separated list of parameter values.
-{{% /md %}}</dd>
-</dl>
+{{% /md %}}</dd></dl>
 {{% /choosable %}}
 
 {{% choosable language nodejs %}}
-<dl class="resources-properties">
-
-    <dt class="property-required"
+<dl class="resources-properties"><dt class="property-required"
             title="Required">
         <span id="behavior_nodejs">
 <a href="#behavior_nodejs" style="color: inherit; text-decoration: inherit;">behavior</a>
@@ -3176,8 +2867,7 @@ The following state arguments are supported:
         <span class="property-type">string</span>
     </dt>
     <dd>{{% md %}}The behavior of the cache key for query strings. Valid values are `Exclude`, `ExcludeAll`, `Include` and `IncludeAll`.
-{{% /md %}}</dd>
-    <dt class="property-optional"
+{{% /md %}}</dd><dt class="property-optional"
             title="Optional">
         <span id="parameters_nodejs">
 <a href="#parameters_nodejs" style="color: inherit; text-decoration: inherit;">parameters</a>
@@ -3186,14 +2876,11 @@ The following state arguments are supported:
         <span class="property-type">string</span>
     </dt>
     <dd>{{% md %}}Comma separated list of parameter values.
-{{% /md %}}</dd>
-</dl>
+{{% /md %}}</dd></dl>
 {{% /choosable %}}
 
 {{% choosable language python %}}
-<dl class="resources-properties">
-
-    <dt class="property-required"
+<dl class="resources-properties"><dt class="property-required"
             title="Required">
         <span id="behavior_python">
 <a href="#behavior_python" style="color: inherit; text-decoration: inherit;">behavior</a>
@@ -3202,8 +2889,7 @@ The following state arguments are supported:
         <span class="property-type">str</span>
     </dt>
     <dd>{{% md %}}The behavior of the cache key for query strings. Valid values are `Exclude`, `ExcludeAll`, `Include` and `IncludeAll`.
-{{% /md %}}</dd>
-    <dt class="property-optional"
+{{% /md %}}</dd><dt class="property-optional"
             title="Optional">
         <span id="parameters_python">
 <a href="#parameters_python" style="color: inherit; text-decoration: inherit;">parameters</a>
@@ -3212,16 +2898,13 @@ The following state arguments are supported:
         <span class="property-type">str</span>
     </dt>
     <dd>{{% md %}}Comma separated list of parameter values.
-{{% /md %}}</dd>
-</dl>
+{{% /md %}}</dd></dl>
 {{% /choosable %}}
 
 <h4 id="endpointdeliveryrulecookiescondition">Endpoint<wbr>Delivery<wbr>Rule<wbr>Cookies<wbr>Condition</h4>
 
 {{% choosable language csharp %}}
-<dl class="resources-properties">
-
-    <dt class="property-required"
+<dl class="resources-properties"><dt class="property-required"
             title="Required">
         <span id="operator_csharp">
 <a href="#operator_csharp" style="color: inherit; text-decoration: inherit;">Operator</a>
@@ -3230,8 +2913,7 @@ The following state arguments are supported:
         <span class="property-type">string</span>
     </dt>
     <dd>{{% md %}}Valid values are `Any`, `BeginsWith`, `Contains`, `EndsWith`, `Equal`, `GreaterThan`, `GreaterThanOrEqual`, `LessThan` and `LessThanOrEqual`.
-{{% /md %}}</dd>
-    <dt class="property-required"
+{{% /md %}}</dd><dt class="property-required"
             title="Required">
         <span id="selector_csharp">
 <a href="#selector_csharp" style="color: inherit; text-decoration: inherit;">Selector</a>
@@ -3240,8 +2922,7 @@ The following state arguments are supported:
         <span class="property-type">string</span>
     </dt>
     <dd>{{% md %}}Name of the cookie.
-{{% /md %}}</dd>
-    <dt class="property-optional"
+{{% /md %}}</dd><dt class="property-optional"
             title="Optional">
         <span id="matchvalues_csharp">
 <a href="#matchvalues_csharp" style="color: inherit; text-decoration: inherit;">Match<wbr>Values</a>
@@ -3250,8 +2931,7 @@ The following state arguments are supported:
         <span class="property-type">List&lt;string&gt;</span>
     </dt>
     <dd>{{% md %}}List of values for the cookie. This is required if `operator` is not `Any`.
-{{% /md %}}</dd>
-    <dt class="property-optional"
+{{% /md %}}</dd><dt class="property-optional"
             title="Optional">
         <span id="negatecondition_csharp">
 <a href="#negatecondition_csharp" style="color: inherit; text-decoration: inherit;">Negate<wbr>Condition</a>
@@ -3260,8 +2940,7 @@ The following state arguments are supported:
         <span class="property-type">bool</span>
     </dt>
     <dd>{{% md %}}Defaults to `false`.
-{{% /md %}}</dd>
-    <dt class="property-optional"
+{{% /md %}}</dd><dt class="property-optional"
             title="Optional">
         <span id="transforms_csharp">
 <a href="#transforms_csharp" style="color: inherit; text-decoration: inherit;">Transforms</a>
@@ -3270,14 +2949,11 @@ The following state arguments are supported:
         <span class="property-type">List&lt;string&gt;</span>
     </dt>
     <dd>{{% md %}}Valid values are `Lowercase` and `Uppercase`.
-{{% /md %}}</dd>
-</dl>
+{{% /md %}}</dd></dl>
 {{% /choosable %}}
 
 {{% choosable language go %}}
-<dl class="resources-properties">
-
-    <dt class="property-required"
+<dl class="resources-properties"><dt class="property-required"
             title="Required">
         <span id="operator_go">
 <a href="#operator_go" style="color: inherit; text-decoration: inherit;">Operator</a>
@@ -3286,8 +2962,7 @@ The following state arguments are supported:
         <span class="property-type">string</span>
     </dt>
     <dd>{{% md %}}Valid values are `Any`, `BeginsWith`, `Contains`, `EndsWith`, `Equal`, `GreaterThan`, `GreaterThanOrEqual`, `LessThan` and `LessThanOrEqual`.
-{{% /md %}}</dd>
-    <dt class="property-required"
+{{% /md %}}</dd><dt class="property-required"
             title="Required">
         <span id="selector_go">
 <a href="#selector_go" style="color: inherit; text-decoration: inherit;">Selector</a>
@@ -3296,8 +2971,7 @@ The following state arguments are supported:
         <span class="property-type">string</span>
     </dt>
     <dd>{{% md %}}Name of the cookie.
-{{% /md %}}</dd>
-    <dt class="property-optional"
+{{% /md %}}</dd><dt class="property-optional"
             title="Optional">
         <span id="matchvalues_go">
 <a href="#matchvalues_go" style="color: inherit; text-decoration: inherit;">Match<wbr>Values</a>
@@ -3306,8 +2980,7 @@ The following state arguments are supported:
         <span class="property-type">[]string</span>
     </dt>
     <dd>{{% md %}}List of values for the cookie. This is required if `operator` is not `Any`.
-{{% /md %}}</dd>
-    <dt class="property-optional"
+{{% /md %}}</dd><dt class="property-optional"
             title="Optional">
         <span id="negatecondition_go">
 <a href="#negatecondition_go" style="color: inherit; text-decoration: inherit;">Negate<wbr>Condition</a>
@@ -3316,8 +2989,7 @@ The following state arguments are supported:
         <span class="property-type">bool</span>
     </dt>
     <dd>{{% md %}}Defaults to `false`.
-{{% /md %}}</dd>
-    <dt class="property-optional"
+{{% /md %}}</dd><dt class="property-optional"
             title="Optional">
         <span id="transforms_go">
 <a href="#transforms_go" style="color: inherit; text-decoration: inherit;">Transforms</a>
@@ -3326,14 +2998,11 @@ The following state arguments are supported:
         <span class="property-type">[]string</span>
     </dt>
     <dd>{{% md %}}Valid values are `Lowercase` and `Uppercase`.
-{{% /md %}}</dd>
-</dl>
+{{% /md %}}</dd></dl>
 {{% /choosable %}}
 
 {{% choosable language nodejs %}}
-<dl class="resources-properties">
-
-    <dt class="property-required"
+<dl class="resources-properties"><dt class="property-required"
             title="Required">
         <span id="operator_nodejs">
 <a href="#operator_nodejs" style="color: inherit; text-decoration: inherit;">operator</a>
@@ -3342,8 +3011,7 @@ The following state arguments are supported:
         <span class="property-type">string</span>
     </dt>
     <dd>{{% md %}}Valid values are `Any`, `BeginsWith`, `Contains`, `EndsWith`, `Equal`, `GreaterThan`, `GreaterThanOrEqual`, `LessThan` and `LessThanOrEqual`.
-{{% /md %}}</dd>
-    <dt class="property-required"
+{{% /md %}}</dd><dt class="property-required"
             title="Required">
         <span id="selector_nodejs">
 <a href="#selector_nodejs" style="color: inherit; text-decoration: inherit;">selector</a>
@@ -3352,8 +3020,7 @@ The following state arguments are supported:
         <span class="property-type">string</span>
     </dt>
     <dd>{{% md %}}Name of the cookie.
-{{% /md %}}</dd>
-    <dt class="property-optional"
+{{% /md %}}</dd><dt class="property-optional"
             title="Optional">
         <span id="matchvalues_nodejs">
 <a href="#matchvalues_nodejs" style="color: inherit; text-decoration: inherit;">match<wbr>Values</a>
@@ -3362,8 +3029,7 @@ The following state arguments are supported:
         <span class="property-type">string[]</span>
     </dt>
     <dd>{{% md %}}List of values for the cookie. This is required if `operator` is not `Any`.
-{{% /md %}}</dd>
-    <dt class="property-optional"
+{{% /md %}}</dd><dt class="property-optional"
             title="Optional">
         <span id="negatecondition_nodejs">
 <a href="#negatecondition_nodejs" style="color: inherit; text-decoration: inherit;">negate<wbr>Condition</a>
@@ -3372,8 +3038,7 @@ The following state arguments are supported:
         <span class="property-type">boolean</span>
     </dt>
     <dd>{{% md %}}Defaults to `false`.
-{{% /md %}}</dd>
-    <dt class="property-optional"
+{{% /md %}}</dd><dt class="property-optional"
             title="Optional">
         <span id="transforms_nodejs">
 <a href="#transforms_nodejs" style="color: inherit; text-decoration: inherit;">transforms</a>
@@ -3382,14 +3047,11 @@ The following state arguments are supported:
         <span class="property-type">string[]</span>
     </dt>
     <dd>{{% md %}}Valid values are `Lowercase` and `Uppercase`.
-{{% /md %}}</dd>
-</dl>
+{{% /md %}}</dd></dl>
 {{% /choosable %}}
 
 {{% choosable language python %}}
-<dl class="resources-properties">
-
-    <dt class="property-required"
+<dl class="resources-properties"><dt class="property-required"
             title="Required">
         <span id="operator_python">
 <a href="#operator_python" style="color: inherit; text-decoration: inherit;">operator</a>
@@ -3398,8 +3060,7 @@ The following state arguments are supported:
         <span class="property-type">str</span>
     </dt>
     <dd>{{% md %}}Valid values are `Any`, `BeginsWith`, `Contains`, `EndsWith`, `Equal`, `GreaterThan`, `GreaterThanOrEqual`, `LessThan` and `LessThanOrEqual`.
-{{% /md %}}</dd>
-    <dt class="property-required"
+{{% /md %}}</dd><dt class="property-required"
             title="Required">
         <span id="selector_python">
 <a href="#selector_python" style="color: inherit; text-decoration: inherit;">selector</a>
@@ -3408,8 +3069,7 @@ The following state arguments are supported:
         <span class="property-type">str</span>
     </dt>
     <dd>{{% md %}}Name of the cookie.
-{{% /md %}}</dd>
-    <dt class="property-optional"
+{{% /md %}}</dd><dt class="property-optional"
             title="Optional">
         <span id="match_values_python">
 <a href="#match_values_python" style="color: inherit; text-decoration: inherit;">match_<wbr>values</a>
@@ -3418,8 +3078,7 @@ The following state arguments are supported:
         <span class="property-type">Sequence[str]</span>
     </dt>
     <dd>{{% md %}}List of values for the cookie. This is required if `operator` is not `Any`.
-{{% /md %}}</dd>
-    <dt class="property-optional"
+{{% /md %}}</dd><dt class="property-optional"
             title="Optional">
         <span id="negate_condition_python">
 <a href="#negate_condition_python" style="color: inherit; text-decoration: inherit;">negate_<wbr>condition</a>
@@ -3428,8 +3087,7 @@ The following state arguments are supported:
         <span class="property-type">bool</span>
     </dt>
     <dd>{{% md %}}Defaults to `false`.
-{{% /md %}}</dd>
-    <dt class="property-optional"
+{{% /md %}}</dd><dt class="property-optional"
             title="Optional">
         <span id="transforms_python">
 <a href="#transforms_python" style="color: inherit; text-decoration: inherit;">transforms</a>
@@ -3438,16 +3096,13 @@ The following state arguments are supported:
         <span class="property-type">Sequence[str]</span>
     </dt>
     <dd>{{% md %}}Valid values are `Lowercase` and `Uppercase`.
-{{% /md %}}</dd>
-</dl>
+{{% /md %}}</dd></dl>
 {{% /choosable %}}
 
 <h4 id="endpointdeliveryruledevicecondition">Endpoint<wbr>Delivery<wbr>Rule<wbr>Device<wbr>Condition</h4>
 
 {{% choosable language csharp %}}
-<dl class="resources-properties">
-
-    <dt class="property-required"
+<dl class="resources-properties"><dt class="property-required"
             title="Required">
         <span id="matchvalues_csharp">
 <a href="#matchvalues_csharp" style="color: inherit; text-decoration: inherit;">Match<wbr>Values</a>
@@ -3456,8 +3111,7 @@ The following state arguments are supported:
         <span class="property-type">List&lt;string&gt;</span>
     </dt>
     <dd>{{% md %}}Valid values are `Desktop` and `Mobile`.
-{{% /md %}}</dd>
-    <dt class="property-optional"
+{{% /md %}}</dd><dt class="property-optional"
             title="Optional">
         <span id="negatecondition_csharp">
 <a href="#negatecondition_csharp" style="color: inherit; text-decoration: inherit;">Negate<wbr>Condition</a>
@@ -3466,8 +3120,7 @@ The following state arguments are supported:
         <span class="property-type">bool</span>
     </dt>
     <dd>{{% md %}}Defaults to `false`.
-{{% /md %}}</dd>
-    <dt class="property-optional"
+{{% /md %}}</dd><dt class="property-optional"
             title="Optional">
         <span id="operator_csharp">
 <a href="#operator_csharp" style="color: inherit; text-decoration: inherit;">Operator</a>
@@ -3476,14 +3129,11 @@ The following state arguments are supported:
         <span class="property-type">string</span>
     </dt>
     <dd>{{% md %}}Valid values are `Equal`.
-{{% /md %}}</dd>
-</dl>
+{{% /md %}}</dd></dl>
 {{% /choosable %}}
 
 {{% choosable language go %}}
-<dl class="resources-properties">
-
-    <dt class="property-required"
+<dl class="resources-properties"><dt class="property-required"
             title="Required">
         <span id="matchvalues_go">
 <a href="#matchvalues_go" style="color: inherit; text-decoration: inherit;">Match<wbr>Values</a>
@@ -3492,8 +3142,7 @@ The following state arguments are supported:
         <span class="property-type">[]string</span>
     </dt>
     <dd>{{% md %}}Valid values are `Desktop` and `Mobile`.
-{{% /md %}}</dd>
-    <dt class="property-optional"
+{{% /md %}}</dd><dt class="property-optional"
             title="Optional">
         <span id="negatecondition_go">
 <a href="#negatecondition_go" style="color: inherit; text-decoration: inherit;">Negate<wbr>Condition</a>
@@ -3502,8 +3151,7 @@ The following state arguments are supported:
         <span class="property-type">bool</span>
     </dt>
     <dd>{{% md %}}Defaults to `false`.
-{{% /md %}}</dd>
-    <dt class="property-optional"
+{{% /md %}}</dd><dt class="property-optional"
             title="Optional">
         <span id="operator_go">
 <a href="#operator_go" style="color: inherit; text-decoration: inherit;">Operator</a>
@@ -3512,14 +3160,11 @@ The following state arguments are supported:
         <span class="property-type">string</span>
     </dt>
     <dd>{{% md %}}Valid values are `Equal`.
-{{% /md %}}</dd>
-</dl>
+{{% /md %}}</dd></dl>
 {{% /choosable %}}
 
 {{% choosable language nodejs %}}
-<dl class="resources-properties">
-
-    <dt class="property-required"
+<dl class="resources-properties"><dt class="property-required"
             title="Required">
         <span id="matchvalues_nodejs">
 <a href="#matchvalues_nodejs" style="color: inherit; text-decoration: inherit;">match<wbr>Values</a>
@@ -3528,8 +3173,7 @@ The following state arguments are supported:
         <span class="property-type">string[]</span>
     </dt>
     <dd>{{% md %}}Valid values are `Desktop` and `Mobile`.
-{{% /md %}}</dd>
-    <dt class="property-optional"
+{{% /md %}}</dd><dt class="property-optional"
             title="Optional">
         <span id="negatecondition_nodejs">
 <a href="#negatecondition_nodejs" style="color: inherit; text-decoration: inherit;">negate<wbr>Condition</a>
@@ -3538,8 +3182,7 @@ The following state arguments are supported:
         <span class="property-type">boolean</span>
     </dt>
     <dd>{{% md %}}Defaults to `false`.
-{{% /md %}}</dd>
-    <dt class="property-optional"
+{{% /md %}}</dd><dt class="property-optional"
             title="Optional">
         <span id="operator_nodejs">
 <a href="#operator_nodejs" style="color: inherit; text-decoration: inherit;">operator</a>
@@ -3548,14 +3191,11 @@ The following state arguments are supported:
         <span class="property-type">string</span>
     </dt>
     <dd>{{% md %}}Valid values are `Equal`.
-{{% /md %}}</dd>
-</dl>
+{{% /md %}}</dd></dl>
 {{% /choosable %}}
 
 {{% choosable language python %}}
-<dl class="resources-properties">
-
-    <dt class="property-required"
+<dl class="resources-properties"><dt class="property-required"
             title="Required">
         <span id="match_values_python">
 <a href="#match_values_python" style="color: inherit; text-decoration: inherit;">match_<wbr>values</a>
@@ -3564,8 +3204,7 @@ The following state arguments are supported:
         <span class="property-type">Sequence[str]</span>
     </dt>
     <dd>{{% md %}}Valid values are `Desktop` and `Mobile`.
-{{% /md %}}</dd>
-    <dt class="property-optional"
+{{% /md %}}</dd><dt class="property-optional"
             title="Optional">
         <span id="negate_condition_python">
 <a href="#negate_condition_python" style="color: inherit; text-decoration: inherit;">negate_<wbr>condition</a>
@@ -3574,8 +3213,7 @@ The following state arguments are supported:
         <span class="property-type">bool</span>
     </dt>
     <dd>{{% md %}}Defaults to `false`.
-{{% /md %}}</dd>
-    <dt class="property-optional"
+{{% /md %}}</dd><dt class="property-optional"
             title="Optional">
         <span id="operator_python">
 <a href="#operator_python" style="color: inherit; text-decoration: inherit;">operator</a>
@@ -3584,16 +3222,13 @@ The following state arguments are supported:
         <span class="property-type">str</span>
     </dt>
     <dd>{{% md %}}Valid values are `Equal`.
-{{% /md %}}</dd>
-</dl>
+{{% /md %}}</dd></dl>
 {{% /choosable %}}
 
 <h4 id="endpointdeliveryrulehttpversioncondition">Endpoint<wbr>Delivery<wbr>Rule<wbr>Http<wbr>Version<wbr>Condition</h4>
 
 {{% choosable language csharp %}}
-<dl class="resources-properties">
-
-    <dt class="property-required"
+<dl class="resources-properties"><dt class="property-required"
             title="Required">
         <span id="matchvalues_csharp">
 <a href="#matchvalues_csharp" style="color: inherit; text-decoration: inherit;">Match<wbr>Values</a>
@@ -3602,8 +3237,7 @@ The following state arguments are supported:
         <span class="property-type">List&lt;string&gt;</span>
     </dt>
     <dd>{{% md %}}Valid values are `0.9`, `1.0`, `1.1` and `2.0`.
-{{% /md %}}</dd>
-    <dt class="property-optional"
+{{% /md %}}</dd><dt class="property-optional"
             title="Optional">
         <span id="negatecondition_csharp">
 <a href="#negatecondition_csharp" style="color: inherit; text-decoration: inherit;">Negate<wbr>Condition</a>
@@ -3612,8 +3246,7 @@ The following state arguments are supported:
         <span class="property-type">bool</span>
     </dt>
     <dd>{{% md %}}Defaults to `false`.
-{{% /md %}}</dd>
-    <dt class="property-optional"
+{{% /md %}}</dd><dt class="property-optional"
             title="Optional">
         <span id="operator_csharp">
 <a href="#operator_csharp" style="color: inherit; text-decoration: inherit;">Operator</a>
@@ -3622,14 +3255,11 @@ The following state arguments are supported:
         <span class="property-type">string</span>
     </dt>
     <dd>{{% md %}}Valid values are `Equal`.
-{{% /md %}}</dd>
-</dl>
+{{% /md %}}</dd></dl>
 {{% /choosable %}}
 
 {{% choosable language go %}}
-<dl class="resources-properties">
-
-    <dt class="property-required"
+<dl class="resources-properties"><dt class="property-required"
             title="Required">
         <span id="matchvalues_go">
 <a href="#matchvalues_go" style="color: inherit; text-decoration: inherit;">Match<wbr>Values</a>
@@ -3638,8 +3268,7 @@ The following state arguments are supported:
         <span class="property-type">[]string</span>
     </dt>
     <dd>{{% md %}}Valid values are `0.9`, `1.0`, `1.1` and `2.0`.
-{{% /md %}}</dd>
-    <dt class="property-optional"
+{{% /md %}}</dd><dt class="property-optional"
             title="Optional">
         <span id="negatecondition_go">
 <a href="#negatecondition_go" style="color: inherit; text-decoration: inherit;">Negate<wbr>Condition</a>
@@ -3648,8 +3277,7 @@ The following state arguments are supported:
         <span class="property-type">bool</span>
     </dt>
     <dd>{{% md %}}Defaults to `false`.
-{{% /md %}}</dd>
-    <dt class="property-optional"
+{{% /md %}}</dd><dt class="property-optional"
             title="Optional">
         <span id="operator_go">
 <a href="#operator_go" style="color: inherit; text-decoration: inherit;">Operator</a>
@@ -3658,14 +3286,11 @@ The following state arguments are supported:
         <span class="property-type">string</span>
     </dt>
     <dd>{{% md %}}Valid values are `Equal`.
-{{% /md %}}</dd>
-</dl>
+{{% /md %}}</dd></dl>
 {{% /choosable %}}
 
 {{% choosable language nodejs %}}
-<dl class="resources-properties">
-
-    <dt class="property-required"
+<dl class="resources-properties"><dt class="property-required"
             title="Required">
         <span id="matchvalues_nodejs">
 <a href="#matchvalues_nodejs" style="color: inherit; text-decoration: inherit;">match<wbr>Values</a>
@@ -3674,8 +3299,7 @@ The following state arguments are supported:
         <span class="property-type">string[]</span>
     </dt>
     <dd>{{% md %}}Valid values are `0.9`, `1.0`, `1.1` and `2.0`.
-{{% /md %}}</dd>
-    <dt class="property-optional"
+{{% /md %}}</dd><dt class="property-optional"
             title="Optional">
         <span id="negatecondition_nodejs">
 <a href="#negatecondition_nodejs" style="color: inherit; text-decoration: inherit;">negate<wbr>Condition</a>
@@ -3684,8 +3308,7 @@ The following state arguments are supported:
         <span class="property-type">boolean</span>
     </dt>
     <dd>{{% md %}}Defaults to `false`.
-{{% /md %}}</dd>
-    <dt class="property-optional"
+{{% /md %}}</dd><dt class="property-optional"
             title="Optional">
         <span id="operator_nodejs">
 <a href="#operator_nodejs" style="color: inherit; text-decoration: inherit;">operator</a>
@@ -3694,14 +3317,11 @@ The following state arguments are supported:
         <span class="property-type">string</span>
     </dt>
     <dd>{{% md %}}Valid values are `Equal`.
-{{% /md %}}</dd>
-</dl>
+{{% /md %}}</dd></dl>
 {{% /choosable %}}
 
 {{% choosable language python %}}
-<dl class="resources-properties">
-
-    <dt class="property-required"
+<dl class="resources-properties"><dt class="property-required"
             title="Required">
         <span id="match_values_python">
 <a href="#match_values_python" style="color: inherit; text-decoration: inherit;">match_<wbr>values</a>
@@ -3710,8 +3330,7 @@ The following state arguments are supported:
         <span class="property-type">Sequence[str]</span>
     </dt>
     <dd>{{% md %}}Valid values are `0.9`, `1.0`, `1.1` and `2.0`.
-{{% /md %}}</dd>
-    <dt class="property-optional"
+{{% /md %}}</dd><dt class="property-optional"
             title="Optional">
         <span id="negate_condition_python">
 <a href="#negate_condition_python" style="color: inherit; text-decoration: inherit;">negate_<wbr>condition</a>
@@ -3720,8 +3339,7 @@ The following state arguments are supported:
         <span class="property-type">bool</span>
     </dt>
     <dd>{{% md %}}Defaults to `false`.
-{{% /md %}}</dd>
-    <dt class="property-optional"
+{{% /md %}}</dd><dt class="property-optional"
             title="Optional">
         <span id="operator_python">
 <a href="#operator_python" style="color: inherit; text-decoration: inherit;">operator</a>
@@ -3730,16 +3348,13 @@ The following state arguments are supported:
         <span class="property-type">str</span>
     </dt>
     <dd>{{% md %}}Valid values are `Equal`.
-{{% /md %}}</dd>
-</dl>
+{{% /md %}}</dd></dl>
 {{% /choosable %}}
 
 <h4 id="endpointdeliveryrulemodifyrequestheaderaction">Endpoint<wbr>Delivery<wbr>Rule<wbr>Modify<wbr>Request<wbr>Header<wbr>Action</h4>
 
 {{% choosable language csharp %}}
-<dl class="resources-properties">
-
-    <dt class="property-required"
+<dl class="resources-properties"><dt class="property-required"
             title="Required">
         <span id="action_csharp">
 <a href="#action_csharp" style="color: inherit; text-decoration: inherit;">Action</a>
@@ -3748,8 +3363,7 @@ The following state arguments are supported:
         <span class="property-type">string</span>
     </dt>
     <dd>{{% md %}}Action to be executed on a header value. Valid values are `Append`, `Delete` and `Overwrite`.
-{{% /md %}}</dd>
-    <dt class="property-required"
+{{% /md %}}</dd><dt class="property-required"
             title="Required">
         <span id="name_csharp">
 <a href="#name_csharp" style="color: inherit; text-decoration: inherit;">Name</a>
@@ -3758,8 +3372,7 @@ The following state arguments are supported:
         <span class="property-type">string</span>
     </dt>
     <dd>{{% md %}}The header name.
-{{% /md %}}</dd>
-    <dt class="property-optional"
+{{% /md %}}</dd><dt class="property-optional"
             title="Optional">
         <span id="value_csharp">
 <a href="#value_csharp" style="color: inherit; text-decoration: inherit;">Value</a>
@@ -3768,14 +3381,11 @@ The following state arguments are supported:
         <span class="property-type">string</span>
     </dt>
     <dd>{{% md %}}The value of the header. Only needed when `action` is set to `Append` or `overwrite`.
-{{% /md %}}</dd>
-</dl>
+{{% /md %}}</dd></dl>
 {{% /choosable %}}
 
 {{% choosable language go %}}
-<dl class="resources-properties">
-
-    <dt class="property-required"
+<dl class="resources-properties"><dt class="property-required"
             title="Required">
         <span id="action_go">
 <a href="#action_go" style="color: inherit; text-decoration: inherit;">Action</a>
@@ -3784,8 +3394,7 @@ The following state arguments are supported:
         <span class="property-type">string</span>
     </dt>
     <dd>{{% md %}}Action to be executed on a header value. Valid values are `Append`, `Delete` and `Overwrite`.
-{{% /md %}}</dd>
-    <dt class="property-required"
+{{% /md %}}</dd><dt class="property-required"
             title="Required">
         <span id="name_go">
 <a href="#name_go" style="color: inherit; text-decoration: inherit;">Name</a>
@@ -3794,8 +3403,7 @@ The following state arguments are supported:
         <span class="property-type">string</span>
     </dt>
     <dd>{{% md %}}The header name.
-{{% /md %}}</dd>
-    <dt class="property-optional"
+{{% /md %}}</dd><dt class="property-optional"
             title="Optional">
         <span id="value_go">
 <a href="#value_go" style="color: inherit; text-decoration: inherit;">Value</a>
@@ -3804,14 +3412,11 @@ The following state arguments are supported:
         <span class="property-type">string</span>
     </dt>
     <dd>{{% md %}}The value of the header. Only needed when `action` is set to `Append` or `overwrite`.
-{{% /md %}}</dd>
-</dl>
+{{% /md %}}</dd></dl>
 {{% /choosable %}}
 
 {{% choosable language nodejs %}}
-<dl class="resources-properties">
-
-    <dt class="property-required"
+<dl class="resources-properties"><dt class="property-required"
             title="Required">
         <span id="action_nodejs">
 <a href="#action_nodejs" style="color: inherit; text-decoration: inherit;">action</a>
@@ -3820,8 +3425,7 @@ The following state arguments are supported:
         <span class="property-type">string</span>
     </dt>
     <dd>{{% md %}}Action to be executed on a header value. Valid values are `Append`, `Delete` and `Overwrite`.
-{{% /md %}}</dd>
-    <dt class="property-required"
+{{% /md %}}</dd><dt class="property-required"
             title="Required">
         <span id="name_nodejs">
 <a href="#name_nodejs" style="color: inherit; text-decoration: inherit;">name</a>
@@ -3830,8 +3434,7 @@ The following state arguments are supported:
         <span class="property-type">string</span>
     </dt>
     <dd>{{% md %}}The header name.
-{{% /md %}}</dd>
-    <dt class="property-optional"
+{{% /md %}}</dd><dt class="property-optional"
             title="Optional">
         <span id="value_nodejs">
 <a href="#value_nodejs" style="color: inherit; text-decoration: inherit;">value</a>
@@ -3840,14 +3443,11 @@ The following state arguments are supported:
         <span class="property-type">string</span>
     </dt>
     <dd>{{% md %}}The value of the header. Only needed when `action` is set to `Append` or `overwrite`.
-{{% /md %}}</dd>
-</dl>
+{{% /md %}}</dd></dl>
 {{% /choosable %}}
 
 {{% choosable language python %}}
-<dl class="resources-properties">
-
-    <dt class="property-required"
+<dl class="resources-properties"><dt class="property-required"
             title="Required">
         <span id="action_python">
 <a href="#action_python" style="color: inherit; text-decoration: inherit;">action</a>
@@ -3856,8 +3456,7 @@ The following state arguments are supported:
         <span class="property-type">str</span>
     </dt>
     <dd>{{% md %}}Action to be executed on a header value. Valid values are `Append`, `Delete` and `Overwrite`.
-{{% /md %}}</dd>
-    <dt class="property-required"
+{{% /md %}}</dd><dt class="property-required"
             title="Required">
         <span id="name_python">
 <a href="#name_python" style="color: inherit; text-decoration: inherit;">name</a>
@@ -3866,8 +3465,7 @@ The following state arguments are supported:
         <span class="property-type">str</span>
     </dt>
     <dd>{{% md %}}The header name.
-{{% /md %}}</dd>
-    <dt class="property-optional"
+{{% /md %}}</dd><dt class="property-optional"
             title="Optional">
         <span id="value_python">
 <a href="#value_python" style="color: inherit; text-decoration: inherit;">value</a>
@@ -3876,16 +3474,13 @@ The following state arguments are supported:
         <span class="property-type">str</span>
     </dt>
     <dd>{{% md %}}The value of the header. Only needed when `action` is set to `Append` or `overwrite`.
-{{% /md %}}</dd>
-</dl>
+{{% /md %}}</dd></dl>
 {{% /choosable %}}
 
 <h4 id="endpointdeliveryrulemodifyresponseheaderaction">Endpoint<wbr>Delivery<wbr>Rule<wbr>Modify<wbr>Response<wbr>Header<wbr>Action</h4>
 
 {{% choosable language csharp %}}
-<dl class="resources-properties">
-
-    <dt class="property-required"
+<dl class="resources-properties"><dt class="property-required"
             title="Required">
         <span id="action_csharp">
 <a href="#action_csharp" style="color: inherit; text-decoration: inherit;">Action</a>
@@ -3894,8 +3489,7 @@ The following state arguments are supported:
         <span class="property-type">string</span>
     </dt>
     <dd>{{% md %}}Action to be executed on a header value. Valid values are `Append`, `Delete` and `Overwrite`.
-{{% /md %}}</dd>
-    <dt class="property-required"
+{{% /md %}}</dd><dt class="property-required"
             title="Required">
         <span id="name_csharp">
 <a href="#name_csharp" style="color: inherit; text-decoration: inherit;">Name</a>
@@ -3904,8 +3498,7 @@ The following state arguments are supported:
         <span class="property-type">string</span>
     </dt>
     <dd>{{% md %}}The header name.
-{{% /md %}}</dd>
-    <dt class="property-optional"
+{{% /md %}}</dd><dt class="property-optional"
             title="Optional">
         <span id="value_csharp">
 <a href="#value_csharp" style="color: inherit; text-decoration: inherit;">Value</a>
@@ -3914,14 +3507,11 @@ The following state arguments are supported:
         <span class="property-type">string</span>
     </dt>
     <dd>{{% md %}}The value of the header. Only needed when `action` is set to `Append` or `overwrite`.
-{{% /md %}}</dd>
-</dl>
+{{% /md %}}</dd></dl>
 {{% /choosable %}}
 
 {{% choosable language go %}}
-<dl class="resources-properties">
-
-    <dt class="property-required"
+<dl class="resources-properties"><dt class="property-required"
             title="Required">
         <span id="action_go">
 <a href="#action_go" style="color: inherit; text-decoration: inherit;">Action</a>
@@ -3930,8 +3520,7 @@ The following state arguments are supported:
         <span class="property-type">string</span>
     </dt>
     <dd>{{% md %}}Action to be executed on a header value. Valid values are `Append`, `Delete` and `Overwrite`.
-{{% /md %}}</dd>
-    <dt class="property-required"
+{{% /md %}}</dd><dt class="property-required"
             title="Required">
         <span id="name_go">
 <a href="#name_go" style="color: inherit; text-decoration: inherit;">Name</a>
@@ -3940,8 +3529,7 @@ The following state arguments are supported:
         <span class="property-type">string</span>
     </dt>
     <dd>{{% md %}}The header name.
-{{% /md %}}</dd>
-    <dt class="property-optional"
+{{% /md %}}</dd><dt class="property-optional"
             title="Optional">
         <span id="value_go">
 <a href="#value_go" style="color: inherit; text-decoration: inherit;">Value</a>
@@ -3950,14 +3538,11 @@ The following state arguments are supported:
         <span class="property-type">string</span>
     </dt>
     <dd>{{% md %}}The value of the header. Only needed when `action` is set to `Append` or `overwrite`.
-{{% /md %}}</dd>
-</dl>
+{{% /md %}}</dd></dl>
 {{% /choosable %}}
 
 {{% choosable language nodejs %}}
-<dl class="resources-properties">
-
-    <dt class="property-required"
+<dl class="resources-properties"><dt class="property-required"
             title="Required">
         <span id="action_nodejs">
 <a href="#action_nodejs" style="color: inherit; text-decoration: inherit;">action</a>
@@ -3966,8 +3551,7 @@ The following state arguments are supported:
         <span class="property-type">string</span>
     </dt>
     <dd>{{% md %}}Action to be executed on a header value. Valid values are `Append`, `Delete` and `Overwrite`.
-{{% /md %}}</dd>
-    <dt class="property-required"
+{{% /md %}}</dd><dt class="property-required"
             title="Required">
         <span id="name_nodejs">
 <a href="#name_nodejs" style="color: inherit; text-decoration: inherit;">name</a>
@@ -3976,8 +3560,7 @@ The following state arguments are supported:
         <span class="property-type">string</span>
     </dt>
     <dd>{{% md %}}The header name.
-{{% /md %}}</dd>
-    <dt class="property-optional"
+{{% /md %}}</dd><dt class="property-optional"
             title="Optional">
         <span id="value_nodejs">
 <a href="#value_nodejs" style="color: inherit; text-decoration: inherit;">value</a>
@@ -3986,14 +3569,11 @@ The following state arguments are supported:
         <span class="property-type">string</span>
     </dt>
     <dd>{{% md %}}The value of the header. Only needed when `action` is set to `Append` or `overwrite`.
-{{% /md %}}</dd>
-</dl>
+{{% /md %}}</dd></dl>
 {{% /choosable %}}
 
 {{% choosable language python %}}
-<dl class="resources-properties">
-
-    <dt class="property-required"
+<dl class="resources-properties"><dt class="property-required"
             title="Required">
         <span id="action_python">
 <a href="#action_python" style="color: inherit; text-decoration: inherit;">action</a>
@@ -4002,8 +3582,7 @@ The following state arguments are supported:
         <span class="property-type">str</span>
     </dt>
     <dd>{{% md %}}Action to be executed on a header value. Valid values are `Append`, `Delete` and `Overwrite`.
-{{% /md %}}</dd>
-    <dt class="property-required"
+{{% /md %}}</dd><dt class="property-required"
             title="Required">
         <span id="name_python">
 <a href="#name_python" style="color: inherit; text-decoration: inherit;">name</a>
@@ -4012,8 +3591,7 @@ The following state arguments are supported:
         <span class="property-type">str</span>
     </dt>
     <dd>{{% md %}}The header name.
-{{% /md %}}</dd>
-    <dt class="property-optional"
+{{% /md %}}</dd><dt class="property-optional"
             title="Optional">
         <span id="value_python">
 <a href="#value_python" style="color: inherit; text-decoration: inherit;">value</a>
@@ -4022,16 +3600,13 @@ The following state arguments are supported:
         <span class="property-type">str</span>
     </dt>
     <dd>{{% md %}}The value of the header. Only needed when `action` is set to `Append` or `overwrite`.
-{{% /md %}}</dd>
-</dl>
+{{% /md %}}</dd></dl>
 {{% /choosable %}}
 
 <h4 id="endpointdeliveryrulepostargcondition">Endpoint<wbr>Delivery<wbr>Rule<wbr>Post<wbr>Arg<wbr>Condition</h4>
 
 {{% choosable language csharp %}}
-<dl class="resources-properties">
-
-    <dt class="property-required"
+<dl class="resources-properties"><dt class="property-required"
             title="Required">
         <span id="operator_csharp">
 <a href="#operator_csharp" style="color: inherit; text-decoration: inherit;">Operator</a>
@@ -4040,8 +3615,7 @@ The following state arguments are supported:
         <span class="property-type">string</span>
     </dt>
     <dd>{{% md %}}Valid values are `Any`, `BeginsWith`, `Contains`, `EndsWith`, `Equal`, `GreaterThan`, `GreaterThanOrEqual`, `LessThan` and `LessThanOrEqual`.
-{{% /md %}}</dd>
-    <dt class="property-required"
+{{% /md %}}</dd><dt class="property-required"
             title="Required">
         <span id="selector_csharp">
 <a href="#selector_csharp" style="color: inherit; text-decoration: inherit;">Selector</a>
@@ -4050,8 +3624,7 @@ The following state arguments are supported:
         <span class="property-type">string</span>
     </dt>
     <dd>{{% md %}}Name of the post arg.
-{{% /md %}}</dd>
-    <dt class="property-optional"
+{{% /md %}}</dd><dt class="property-optional"
             title="Optional">
         <span id="matchvalues_csharp">
 <a href="#matchvalues_csharp" style="color: inherit; text-decoration: inherit;">Match<wbr>Values</a>
@@ -4060,8 +3633,7 @@ The following state arguments are supported:
         <span class="property-type">List&lt;string&gt;</span>
     </dt>
     <dd>{{% md %}}List of string values. This is required if `operator` is not `Any`.
-{{% /md %}}</dd>
-    <dt class="property-optional"
+{{% /md %}}</dd><dt class="property-optional"
             title="Optional">
         <span id="negatecondition_csharp">
 <a href="#negatecondition_csharp" style="color: inherit; text-decoration: inherit;">Negate<wbr>Condition</a>
@@ -4070,8 +3642,7 @@ The following state arguments are supported:
         <span class="property-type">bool</span>
     </dt>
     <dd>{{% md %}}Defaults to `false`.
-{{% /md %}}</dd>
-    <dt class="property-optional"
+{{% /md %}}</dd><dt class="property-optional"
             title="Optional">
         <span id="transforms_csharp">
 <a href="#transforms_csharp" style="color: inherit; text-decoration: inherit;">Transforms</a>
@@ -4080,14 +3651,11 @@ The following state arguments are supported:
         <span class="property-type">List&lt;string&gt;</span>
     </dt>
     <dd>{{% md %}}Valid values are `Lowercase` and `Uppercase`.
-{{% /md %}}</dd>
-</dl>
+{{% /md %}}</dd></dl>
 {{% /choosable %}}
 
 {{% choosable language go %}}
-<dl class="resources-properties">
-
-    <dt class="property-required"
+<dl class="resources-properties"><dt class="property-required"
             title="Required">
         <span id="operator_go">
 <a href="#operator_go" style="color: inherit; text-decoration: inherit;">Operator</a>
@@ -4096,8 +3664,7 @@ The following state arguments are supported:
         <span class="property-type">string</span>
     </dt>
     <dd>{{% md %}}Valid values are `Any`, `BeginsWith`, `Contains`, `EndsWith`, `Equal`, `GreaterThan`, `GreaterThanOrEqual`, `LessThan` and `LessThanOrEqual`.
-{{% /md %}}</dd>
-    <dt class="property-required"
+{{% /md %}}</dd><dt class="property-required"
             title="Required">
         <span id="selector_go">
 <a href="#selector_go" style="color: inherit; text-decoration: inherit;">Selector</a>
@@ -4106,8 +3673,7 @@ The following state arguments are supported:
         <span class="property-type">string</span>
     </dt>
     <dd>{{% md %}}Name of the post arg.
-{{% /md %}}</dd>
-    <dt class="property-optional"
+{{% /md %}}</dd><dt class="property-optional"
             title="Optional">
         <span id="matchvalues_go">
 <a href="#matchvalues_go" style="color: inherit; text-decoration: inherit;">Match<wbr>Values</a>
@@ -4116,8 +3682,7 @@ The following state arguments are supported:
         <span class="property-type">[]string</span>
     </dt>
     <dd>{{% md %}}List of string values. This is required if `operator` is not `Any`.
-{{% /md %}}</dd>
-    <dt class="property-optional"
+{{% /md %}}</dd><dt class="property-optional"
             title="Optional">
         <span id="negatecondition_go">
 <a href="#negatecondition_go" style="color: inherit; text-decoration: inherit;">Negate<wbr>Condition</a>
@@ -4126,8 +3691,7 @@ The following state arguments are supported:
         <span class="property-type">bool</span>
     </dt>
     <dd>{{% md %}}Defaults to `false`.
-{{% /md %}}</dd>
-    <dt class="property-optional"
+{{% /md %}}</dd><dt class="property-optional"
             title="Optional">
         <span id="transforms_go">
 <a href="#transforms_go" style="color: inherit; text-decoration: inherit;">Transforms</a>
@@ -4136,14 +3700,11 @@ The following state arguments are supported:
         <span class="property-type">[]string</span>
     </dt>
     <dd>{{% md %}}Valid values are `Lowercase` and `Uppercase`.
-{{% /md %}}</dd>
-</dl>
+{{% /md %}}</dd></dl>
 {{% /choosable %}}
 
 {{% choosable language nodejs %}}
-<dl class="resources-properties">
-
-    <dt class="property-required"
+<dl class="resources-properties"><dt class="property-required"
             title="Required">
         <span id="operator_nodejs">
 <a href="#operator_nodejs" style="color: inherit; text-decoration: inherit;">operator</a>
@@ -4152,8 +3713,7 @@ The following state arguments are supported:
         <span class="property-type">string</span>
     </dt>
     <dd>{{% md %}}Valid values are `Any`, `BeginsWith`, `Contains`, `EndsWith`, `Equal`, `GreaterThan`, `GreaterThanOrEqual`, `LessThan` and `LessThanOrEqual`.
-{{% /md %}}</dd>
-    <dt class="property-required"
+{{% /md %}}</dd><dt class="property-required"
             title="Required">
         <span id="selector_nodejs">
 <a href="#selector_nodejs" style="color: inherit; text-decoration: inherit;">selector</a>
@@ -4162,8 +3722,7 @@ The following state arguments are supported:
         <span class="property-type">string</span>
     </dt>
     <dd>{{% md %}}Name of the post arg.
-{{% /md %}}</dd>
-    <dt class="property-optional"
+{{% /md %}}</dd><dt class="property-optional"
             title="Optional">
         <span id="matchvalues_nodejs">
 <a href="#matchvalues_nodejs" style="color: inherit; text-decoration: inherit;">match<wbr>Values</a>
@@ -4172,8 +3731,7 @@ The following state arguments are supported:
         <span class="property-type">string[]</span>
     </dt>
     <dd>{{% md %}}List of string values. This is required if `operator` is not `Any`.
-{{% /md %}}</dd>
-    <dt class="property-optional"
+{{% /md %}}</dd><dt class="property-optional"
             title="Optional">
         <span id="negatecondition_nodejs">
 <a href="#negatecondition_nodejs" style="color: inherit; text-decoration: inherit;">negate<wbr>Condition</a>
@@ -4182,8 +3740,7 @@ The following state arguments are supported:
         <span class="property-type">boolean</span>
     </dt>
     <dd>{{% md %}}Defaults to `false`.
-{{% /md %}}</dd>
-    <dt class="property-optional"
+{{% /md %}}</dd><dt class="property-optional"
             title="Optional">
         <span id="transforms_nodejs">
 <a href="#transforms_nodejs" style="color: inherit; text-decoration: inherit;">transforms</a>
@@ -4192,14 +3749,11 @@ The following state arguments are supported:
         <span class="property-type">string[]</span>
     </dt>
     <dd>{{% md %}}Valid values are `Lowercase` and `Uppercase`.
-{{% /md %}}</dd>
-</dl>
+{{% /md %}}</dd></dl>
 {{% /choosable %}}
 
 {{% choosable language python %}}
-<dl class="resources-properties">
-
-    <dt class="property-required"
+<dl class="resources-properties"><dt class="property-required"
             title="Required">
         <span id="operator_python">
 <a href="#operator_python" style="color: inherit; text-decoration: inherit;">operator</a>
@@ -4208,8 +3762,7 @@ The following state arguments are supported:
         <span class="property-type">str</span>
     </dt>
     <dd>{{% md %}}Valid values are `Any`, `BeginsWith`, `Contains`, `EndsWith`, `Equal`, `GreaterThan`, `GreaterThanOrEqual`, `LessThan` and `LessThanOrEqual`.
-{{% /md %}}</dd>
-    <dt class="property-required"
+{{% /md %}}</dd><dt class="property-required"
             title="Required">
         <span id="selector_python">
 <a href="#selector_python" style="color: inherit; text-decoration: inherit;">selector</a>
@@ -4218,8 +3771,7 @@ The following state arguments are supported:
         <span class="property-type">str</span>
     </dt>
     <dd>{{% md %}}Name of the post arg.
-{{% /md %}}</dd>
-    <dt class="property-optional"
+{{% /md %}}</dd><dt class="property-optional"
             title="Optional">
         <span id="match_values_python">
 <a href="#match_values_python" style="color: inherit; text-decoration: inherit;">match_<wbr>values</a>
@@ -4228,8 +3780,7 @@ The following state arguments are supported:
         <span class="property-type">Sequence[str]</span>
     </dt>
     <dd>{{% md %}}List of string values. This is required if `operator` is not `Any`.
-{{% /md %}}</dd>
-    <dt class="property-optional"
+{{% /md %}}</dd><dt class="property-optional"
             title="Optional">
         <span id="negate_condition_python">
 <a href="#negate_condition_python" style="color: inherit; text-decoration: inherit;">negate_<wbr>condition</a>
@@ -4238,8 +3789,7 @@ The following state arguments are supported:
         <span class="property-type">bool</span>
     </dt>
     <dd>{{% md %}}Defaults to `false`.
-{{% /md %}}</dd>
-    <dt class="property-optional"
+{{% /md %}}</dd><dt class="property-optional"
             title="Optional">
         <span id="transforms_python">
 <a href="#transforms_python" style="color: inherit; text-decoration: inherit;">transforms</a>
@@ -4248,16 +3798,13 @@ The following state arguments are supported:
         <span class="property-type">Sequence[str]</span>
     </dt>
     <dd>{{% md %}}Valid values are `Lowercase` and `Uppercase`.
-{{% /md %}}</dd>
-</dl>
+{{% /md %}}</dd></dl>
 {{% /choosable %}}
 
 <h4 id="endpointdeliveryrulequerystringcondition">Endpoint<wbr>Delivery<wbr>Rule<wbr>Query<wbr>String<wbr>Condition</h4>
 
 {{% choosable language csharp %}}
-<dl class="resources-properties">
-
-    <dt class="property-required"
+<dl class="resources-properties"><dt class="property-required"
             title="Required">
         <span id="operator_csharp">
 <a href="#operator_csharp" style="color: inherit; text-decoration: inherit;">Operator</a>
@@ -4266,8 +3813,7 @@ The following state arguments are supported:
         <span class="property-type">string</span>
     </dt>
     <dd>{{% md %}}Valid values are `Any`, `BeginsWith`, `Contains`, `EndsWith`, `Equal`, `GreaterThan`, `GreaterThanOrEqual`, `LessThan` and `LessThanOrEqual`.
-{{% /md %}}</dd>
-    <dt class="property-optional"
+{{% /md %}}</dd><dt class="property-optional"
             title="Optional">
         <span id="matchvalues_csharp">
 <a href="#matchvalues_csharp" style="color: inherit; text-decoration: inherit;">Match<wbr>Values</a>
@@ -4276,8 +3822,7 @@ The following state arguments are supported:
         <span class="property-type">List&lt;string&gt;</span>
     </dt>
     <dd>{{% md %}}List of string values. This is required if `operator` is not `Any`.
-{{% /md %}}</dd>
-    <dt class="property-optional"
+{{% /md %}}</dd><dt class="property-optional"
             title="Optional">
         <span id="negatecondition_csharp">
 <a href="#negatecondition_csharp" style="color: inherit; text-decoration: inherit;">Negate<wbr>Condition</a>
@@ -4286,8 +3831,7 @@ The following state arguments are supported:
         <span class="property-type">bool</span>
     </dt>
     <dd>{{% md %}}Defaults to `false`.
-{{% /md %}}</dd>
-    <dt class="property-optional"
+{{% /md %}}</dd><dt class="property-optional"
             title="Optional">
         <span id="transforms_csharp">
 <a href="#transforms_csharp" style="color: inherit; text-decoration: inherit;">Transforms</a>
@@ -4296,14 +3840,11 @@ The following state arguments are supported:
         <span class="property-type">List&lt;string&gt;</span>
     </dt>
     <dd>{{% md %}}Valid values are `Lowercase` and `Uppercase`.
-{{% /md %}}</dd>
-</dl>
+{{% /md %}}</dd></dl>
 {{% /choosable %}}
 
 {{% choosable language go %}}
-<dl class="resources-properties">
-
-    <dt class="property-required"
+<dl class="resources-properties"><dt class="property-required"
             title="Required">
         <span id="operator_go">
 <a href="#operator_go" style="color: inherit; text-decoration: inherit;">Operator</a>
@@ -4312,8 +3853,7 @@ The following state arguments are supported:
         <span class="property-type">string</span>
     </dt>
     <dd>{{% md %}}Valid values are `Any`, `BeginsWith`, `Contains`, `EndsWith`, `Equal`, `GreaterThan`, `GreaterThanOrEqual`, `LessThan` and `LessThanOrEqual`.
-{{% /md %}}</dd>
-    <dt class="property-optional"
+{{% /md %}}</dd><dt class="property-optional"
             title="Optional">
         <span id="matchvalues_go">
 <a href="#matchvalues_go" style="color: inherit; text-decoration: inherit;">Match<wbr>Values</a>
@@ -4322,8 +3862,7 @@ The following state arguments are supported:
         <span class="property-type">[]string</span>
     </dt>
     <dd>{{% md %}}List of string values. This is required if `operator` is not `Any`.
-{{% /md %}}</dd>
-    <dt class="property-optional"
+{{% /md %}}</dd><dt class="property-optional"
             title="Optional">
         <span id="negatecondition_go">
 <a href="#negatecondition_go" style="color: inherit; text-decoration: inherit;">Negate<wbr>Condition</a>
@@ -4332,8 +3871,7 @@ The following state arguments are supported:
         <span class="property-type">bool</span>
     </dt>
     <dd>{{% md %}}Defaults to `false`.
-{{% /md %}}</dd>
-    <dt class="property-optional"
+{{% /md %}}</dd><dt class="property-optional"
             title="Optional">
         <span id="transforms_go">
 <a href="#transforms_go" style="color: inherit; text-decoration: inherit;">Transforms</a>
@@ -4342,14 +3880,11 @@ The following state arguments are supported:
         <span class="property-type">[]string</span>
     </dt>
     <dd>{{% md %}}Valid values are `Lowercase` and `Uppercase`.
-{{% /md %}}</dd>
-</dl>
+{{% /md %}}</dd></dl>
 {{% /choosable %}}
 
 {{% choosable language nodejs %}}
-<dl class="resources-properties">
-
-    <dt class="property-required"
+<dl class="resources-properties"><dt class="property-required"
             title="Required">
         <span id="operator_nodejs">
 <a href="#operator_nodejs" style="color: inherit; text-decoration: inherit;">operator</a>
@@ -4358,8 +3893,7 @@ The following state arguments are supported:
         <span class="property-type">string</span>
     </dt>
     <dd>{{% md %}}Valid values are `Any`, `BeginsWith`, `Contains`, `EndsWith`, `Equal`, `GreaterThan`, `GreaterThanOrEqual`, `LessThan` and `LessThanOrEqual`.
-{{% /md %}}</dd>
-    <dt class="property-optional"
+{{% /md %}}</dd><dt class="property-optional"
             title="Optional">
         <span id="matchvalues_nodejs">
 <a href="#matchvalues_nodejs" style="color: inherit; text-decoration: inherit;">match<wbr>Values</a>
@@ -4368,8 +3902,7 @@ The following state arguments are supported:
         <span class="property-type">string[]</span>
     </dt>
     <dd>{{% md %}}List of string values. This is required if `operator` is not `Any`.
-{{% /md %}}</dd>
-    <dt class="property-optional"
+{{% /md %}}</dd><dt class="property-optional"
             title="Optional">
         <span id="negatecondition_nodejs">
 <a href="#negatecondition_nodejs" style="color: inherit; text-decoration: inherit;">negate<wbr>Condition</a>
@@ -4378,8 +3911,7 @@ The following state arguments are supported:
         <span class="property-type">boolean</span>
     </dt>
     <dd>{{% md %}}Defaults to `false`.
-{{% /md %}}</dd>
-    <dt class="property-optional"
+{{% /md %}}</dd><dt class="property-optional"
             title="Optional">
         <span id="transforms_nodejs">
 <a href="#transforms_nodejs" style="color: inherit; text-decoration: inherit;">transforms</a>
@@ -4388,14 +3920,11 @@ The following state arguments are supported:
         <span class="property-type">string[]</span>
     </dt>
     <dd>{{% md %}}Valid values are `Lowercase` and `Uppercase`.
-{{% /md %}}</dd>
-</dl>
+{{% /md %}}</dd></dl>
 {{% /choosable %}}
 
 {{% choosable language python %}}
-<dl class="resources-properties">
-
-    <dt class="property-required"
+<dl class="resources-properties"><dt class="property-required"
             title="Required">
         <span id="operator_python">
 <a href="#operator_python" style="color: inherit; text-decoration: inherit;">operator</a>
@@ -4404,8 +3933,7 @@ The following state arguments are supported:
         <span class="property-type">str</span>
     </dt>
     <dd>{{% md %}}Valid values are `Any`, `BeginsWith`, `Contains`, `EndsWith`, `Equal`, `GreaterThan`, `GreaterThanOrEqual`, `LessThan` and `LessThanOrEqual`.
-{{% /md %}}</dd>
-    <dt class="property-optional"
+{{% /md %}}</dd><dt class="property-optional"
             title="Optional">
         <span id="match_values_python">
 <a href="#match_values_python" style="color: inherit; text-decoration: inherit;">match_<wbr>values</a>
@@ -4414,8 +3942,7 @@ The following state arguments are supported:
         <span class="property-type">Sequence[str]</span>
     </dt>
     <dd>{{% md %}}List of string values. This is required if `operator` is not `Any`.
-{{% /md %}}</dd>
-    <dt class="property-optional"
+{{% /md %}}</dd><dt class="property-optional"
             title="Optional">
         <span id="negate_condition_python">
 <a href="#negate_condition_python" style="color: inherit; text-decoration: inherit;">negate_<wbr>condition</a>
@@ -4424,8 +3951,7 @@ The following state arguments are supported:
         <span class="property-type">bool</span>
     </dt>
     <dd>{{% md %}}Defaults to `false`.
-{{% /md %}}</dd>
-    <dt class="property-optional"
+{{% /md %}}</dd><dt class="property-optional"
             title="Optional">
         <span id="transforms_python">
 <a href="#transforms_python" style="color: inherit; text-decoration: inherit;">transforms</a>
@@ -4434,16 +3960,13 @@ The following state arguments are supported:
         <span class="property-type">Sequence[str]</span>
     </dt>
     <dd>{{% md %}}Valid values are `Lowercase` and `Uppercase`.
-{{% /md %}}</dd>
-</dl>
+{{% /md %}}</dd></dl>
 {{% /choosable %}}
 
 <h4 id="endpointdeliveryruleremoteaddresscondition">Endpoint<wbr>Delivery<wbr>Rule<wbr>Remote<wbr>Address<wbr>Condition</h4>
 
 {{% choosable language csharp %}}
-<dl class="resources-properties">
-
-    <dt class="property-required"
+<dl class="resources-properties"><dt class="property-required"
             title="Required">
         <span id="operator_csharp">
 <a href="#operator_csharp" style="color: inherit; text-decoration: inherit;">Operator</a>
@@ -4452,8 +3975,7 @@ The following state arguments are supported:
         <span class="property-type">string</span>
     </dt>
     <dd>{{% md %}}Valid values are `Any`, `GeoMatch` and `IPMatch`.
-{{% /md %}}</dd>
-    <dt class="property-optional"
+{{% /md %}}</dd><dt class="property-optional"
             title="Optional">
         <span id="matchvalues_csharp">
 <a href="#matchvalues_csharp" style="color: inherit; text-decoration: inherit;">Match<wbr>Values</a>
@@ -4462,8 +3984,7 @@ The following state arguments are supported:
         <span class="property-type">List&lt;string&gt;</span>
     </dt>
     <dd>{{% md %}}List of string values. For `GeoMatch` `operator` this should be a list of country codes (e.g. `US` or `DE`). List of IP address if `operator` equals to `IPMatch`. This is required if `operator` is not `Any`.
-{{% /md %}}</dd>
-    <dt class="property-optional"
+{{% /md %}}</dd><dt class="property-optional"
             title="Optional">
         <span id="negatecondition_csharp">
 <a href="#negatecondition_csharp" style="color: inherit; text-decoration: inherit;">Negate<wbr>Condition</a>
@@ -4472,14 +3993,11 @@ The following state arguments are supported:
         <span class="property-type">bool</span>
     </dt>
     <dd>{{% md %}}Defaults to `false`.
-{{% /md %}}</dd>
-</dl>
+{{% /md %}}</dd></dl>
 {{% /choosable %}}
 
 {{% choosable language go %}}
-<dl class="resources-properties">
-
-    <dt class="property-required"
+<dl class="resources-properties"><dt class="property-required"
             title="Required">
         <span id="operator_go">
 <a href="#operator_go" style="color: inherit; text-decoration: inherit;">Operator</a>
@@ -4488,8 +4006,7 @@ The following state arguments are supported:
         <span class="property-type">string</span>
     </dt>
     <dd>{{% md %}}Valid values are `Any`, `GeoMatch` and `IPMatch`.
-{{% /md %}}</dd>
-    <dt class="property-optional"
+{{% /md %}}</dd><dt class="property-optional"
             title="Optional">
         <span id="matchvalues_go">
 <a href="#matchvalues_go" style="color: inherit; text-decoration: inherit;">Match<wbr>Values</a>
@@ -4498,8 +4015,7 @@ The following state arguments are supported:
         <span class="property-type">[]string</span>
     </dt>
     <dd>{{% md %}}List of string values. For `GeoMatch` `operator` this should be a list of country codes (e.g. `US` or `DE`). List of IP address if `operator` equals to `IPMatch`. This is required if `operator` is not `Any`.
-{{% /md %}}</dd>
-    <dt class="property-optional"
+{{% /md %}}</dd><dt class="property-optional"
             title="Optional">
         <span id="negatecondition_go">
 <a href="#negatecondition_go" style="color: inherit; text-decoration: inherit;">Negate<wbr>Condition</a>
@@ -4508,14 +4024,11 @@ The following state arguments are supported:
         <span class="property-type">bool</span>
     </dt>
     <dd>{{% md %}}Defaults to `false`.
-{{% /md %}}</dd>
-</dl>
+{{% /md %}}</dd></dl>
 {{% /choosable %}}
 
 {{% choosable language nodejs %}}
-<dl class="resources-properties">
-
-    <dt class="property-required"
+<dl class="resources-properties"><dt class="property-required"
             title="Required">
         <span id="operator_nodejs">
 <a href="#operator_nodejs" style="color: inherit; text-decoration: inherit;">operator</a>
@@ -4524,8 +4037,7 @@ The following state arguments are supported:
         <span class="property-type">string</span>
     </dt>
     <dd>{{% md %}}Valid values are `Any`, `GeoMatch` and `IPMatch`.
-{{% /md %}}</dd>
-    <dt class="property-optional"
+{{% /md %}}</dd><dt class="property-optional"
             title="Optional">
         <span id="matchvalues_nodejs">
 <a href="#matchvalues_nodejs" style="color: inherit; text-decoration: inherit;">match<wbr>Values</a>
@@ -4534,8 +4046,7 @@ The following state arguments are supported:
         <span class="property-type">string[]</span>
     </dt>
     <dd>{{% md %}}List of string values. For `GeoMatch` `operator` this should be a list of country codes (e.g. `US` or `DE`). List of IP address if `operator` equals to `IPMatch`. This is required if `operator` is not `Any`.
-{{% /md %}}</dd>
-    <dt class="property-optional"
+{{% /md %}}</dd><dt class="property-optional"
             title="Optional">
         <span id="negatecondition_nodejs">
 <a href="#negatecondition_nodejs" style="color: inherit; text-decoration: inherit;">negate<wbr>Condition</a>
@@ -4544,14 +4055,11 @@ The following state arguments are supported:
         <span class="property-type">boolean</span>
     </dt>
     <dd>{{% md %}}Defaults to `false`.
-{{% /md %}}</dd>
-</dl>
+{{% /md %}}</dd></dl>
 {{% /choosable %}}
 
 {{% choosable language python %}}
-<dl class="resources-properties">
-
-    <dt class="property-required"
+<dl class="resources-properties"><dt class="property-required"
             title="Required">
         <span id="operator_python">
 <a href="#operator_python" style="color: inherit; text-decoration: inherit;">operator</a>
@@ -4560,8 +4068,7 @@ The following state arguments are supported:
         <span class="property-type">str</span>
     </dt>
     <dd>{{% md %}}Valid values are `Any`, `GeoMatch` and `IPMatch`.
-{{% /md %}}</dd>
-    <dt class="property-optional"
+{{% /md %}}</dd><dt class="property-optional"
             title="Optional">
         <span id="match_values_python">
 <a href="#match_values_python" style="color: inherit; text-decoration: inherit;">match_<wbr>values</a>
@@ -4570,8 +4077,7 @@ The following state arguments are supported:
         <span class="property-type">Sequence[str]</span>
     </dt>
     <dd>{{% md %}}List of string values. For `GeoMatch` `operator` this should be a list of country codes (e.g. `US` or `DE`). List of IP address if `operator` equals to `IPMatch`. This is required if `operator` is not `Any`.
-{{% /md %}}</dd>
-    <dt class="property-optional"
+{{% /md %}}</dd><dt class="property-optional"
             title="Optional">
         <span id="negate_condition_python">
 <a href="#negate_condition_python" style="color: inherit; text-decoration: inherit;">negate_<wbr>condition</a>
@@ -4580,16 +4086,13 @@ The following state arguments are supported:
         <span class="property-type">bool</span>
     </dt>
     <dd>{{% md %}}Defaults to `false`.
-{{% /md %}}</dd>
-</dl>
+{{% /md %}}</dd></dl>
 {{% /choosable %}}
 
 <h4 id="endpointdeliveryrulerequestbodycondition">Endpoint<wbr>Delivery<wbr>Rule<wbr>Request<wbr>Body<wbr>Condition</h4>
 
 {{% choosable language csharp %}}
-<dl class="resources-properties">
-
-    <dt class="property-required"
+<dl class="resources-properties"><dt class="property-required"
             title="Required">
         <span id="operator_csharp">
 <a href="#operator_csharp" style="color: inherit; text-decoration: inherit;">Operator</a>
@@ -4598,8 +4101,7 @@ The following state arguments are supported:
         <span class="property-type">string</span>
     </dt>
     <dd>{{% md %}}Valid values are `Any`, `BeginsWith`, `Contains`, `EndsWith`, `Equal`, `GreaterThan`, `GreaterThanOrEqual`, `LessThan` and `LessThanOrEqual`.
-{{% /md %}}</dd>
-    <dt class="property-optional"
+{{% /md %}}</dd><dt class="property-optional"
             title="Optional">
         <span id="matchvalues_csharp">
 <a href="#matchvalues_csharp" style="color: inherit; text-decoration: inherit;">Match<wbr>Values</a>
@@ -4608,8 +4110,7 @@ The following state arguments are supported:
         <span class="property-type">List&lt;string&gt;</span>
     </dt>
     <dd>{{% md %}}List of string values. This is required if `operator` is not `Any`.
-{{% /md %}}</dd>
-    <dt class="property-optional"
+{{% /md %}}</dd><dt class="property-optional"
             title="Optional">
         <span id="negatecondition_csharp">
 <a href="#negatecondition_csharp" style="color: inherit; text-decoration: inherit;">Negate<wbr>Condition</a>
@@ -4618,8 +4119,7 @@ The following state arguments are supported:
         <span class="property-type">bool</span>
     </dt>
     <dd>{{% md %}}Defaults to `false`.
-{{% /md %}}</dd>
-    <dt class="property-optional"
+{{% /md %}}</dd><dt class="property-optional"
             title="Optional">
         <span id="transforms_csharp">
 <a href="#transforms_csharp" style="color: inherit; text-decoration: inherit;">Transforms</a>
@@ -4628,14 +4128,11 @@ The following state arguments are supported:
         <span class="property-type">List&lt;string&gt;</span>
     </dt>
     <dd>{{% md %}}Valid values are `Lowercase` and `Uppercase`.
-{{% /md %}}</dd>
-</dl>
+{{% /md %}}</dd></dl>
 {{% /choosable %}}
 
 {{% choosable language go %}}
-<dl class="resources-properties">
-
-    <dt class="property-required"
+<dl class="resources-properties"><dt class="property-required"
             title="Required">
         <span id="operator_go">
 <a href="#operator_go" style="color: inherit; text-decoration: inherit;">Operator</a>
@@ -4644,8 +4141,7 @@ The following state arguments are supported:
         <span class="property-type">string</span>
     </dt>
     <dd>{{% md %}}Valid values are `Any`, `BeginsWith`, `Contains`, `EndsWith`, `Equal`, `GreaterThan`, `GreaterThanOrEqual`, `LessThan` and `LessThanOrEqual`.
-{{% /md %}}</dd>
-    <dt class="property-optional"
+{{% /md %}}</dd><dt class="property-optional"
             title="Optional">
         <span id="matchvalues_go">
 <a href="#matchvalues_go" style="color: inherit; text-decoration: inherit;">Match<wbr>Values</a>
@@ -4654,8 +4150,7 @@ The following state arguments are supported:
         <span class="property-type">[]string</span>
     </dt>
     <dd>{{% md %}}List of string values. This is required if `operator` is not `Any`.
-{{% /md %}}</dd>
-    <dt class="property-optional"
+{{% /md %}}</dd><dt class="property-optional"
             title="Optional">
         <span id="negatecondition_go">
 <a href="#negatecondition_go" style="color: inherit; text-decoration: inherit;">Negate<wbr>Condition</a>
@@ -4664,8 +4159,7 @@ The following state arguments are supported:
         <span class="property-type">bool</span>
     </dt>
     <dd>{{% md %}}Defaults to `false`.
-{{% /md %}}</dd>
-    <dt class="property-optional"
+{{% /md %}}</dd><dt class="property-optional"
             title="Optional">
         <span id="transforms_go">
 <a href="#transforms_go" style="color: inherit; text-decoration: inherit;">Transforms</a>
@@ -4674,14 +4168,11 @@ The following state arguments are supported:
         <span class="property-type">[]string</span>
     </dt>
     <dd>{{% md %}}Valid values are `Lowercase` and `Uppercase`.
-{{% /md %}}</dd>
-</dl>
+{{% /md %}}</dd></dl>
 {{% /choosable %}}
 
 {{% choosable language nodejs %}}
-<dl class="resources-properties">
-
-    <dt class="property-required"
+<dl class="resources-properties"><dt class="property-required"
             title="Required">
         <span id="operator_nodejs">
 <a href="#operator_nodejs" style="color: inherit; text-decoration: inherit;">operator</a>
@@ -4690,8 +4181,7 @@ The following state arguments are supported:
         <span class="property-type">string</span>
     </dt>
     <dd>{{% md %}}Valid values are `Any`, `BeginsWith`, `Contains`, `EndsWith`, `Equal`, `GreaterThan`, `GreaterThanOrEqual`, `LessThan` and `LessThanOrEqual`.
-{{% /md %}}</dd>
-    <dt class="property-optional"
+{{% /md %}}</dd><dt class="property-optional"
             title="Optional">
         <span id="matchvalues_nodejs">
 <a href="#matchvalues_nodejs" style="color: inherit; text-decoration: inherit;">match<wbr>Values</a>
@@ -4700,8 +4190,7 @@ The following state arguments are supported:
         <span class="property-type">string[]</span>
     </dt>
     <dd>{{% md %}}List of string values. This is required if `operator` is not `Any`.
-{{% /md %}}</dd>
-    <dt class="property-optional"
+{{% /md %}}</dd><dt class="property-optional"
             title="Optional">
         <span id="negatecondition_nodejs">
 <a href="#negatecondition_nodejs" style="color: inherit; text-decoration: inherit;">negate<wbr>Condition</a>
@@ -4710,8 +4199,7 @@ The following state arguments are supported:
         <span class="property-type">boolean</span>
     </dt>
     <dd>{{% md %}}Defaults to `false`.
-{{% /md %}}</dd>
-    <dt class="property-optional"
+{{% /md %}}</dd><dt class="property-optional"
             title="Optional">
         <span id="transforms_nodejs">
 <a href="#transforms_nodejs" style="color: inherit; text-decoration: inherit;">transforms</a>
@@ -4720,14 +4208,11 @@ The following state arguments are supported:
         <span class="property-type">string[]</span>
     </dt>
     <dd>{{% md %}}Valid values are `Lowercase` and `Uppercase`.
-{{% /md %}}</dd>
-</dl>
+{{% /md %}}</dd></dl>
 {{% /choosable %}}
 
 {{% choosable language python %}}
-<dl class="resources-properties">
-
-    <dt class="property-required"
+<dl class="resources-properties"><dt class="property-required"
             title="Required">
         <span id="operator_python">
 <a href="#operator_python" style="color: inherit; text-decoration: inherit;">operator</a>
@@ -4736,8 +4221,7 @@ The following state arguments are supported:
         <span class="property-type">str</span>
     </dt>
     <dd>{{% md %}}Valid values are `Any`, `BeginsWith`, `Contains`, `EndsWith`, `Equal`, `GreaterThan`, `GreaterThanOrEqual`, `LessThan` and `LessThanOrEqual`.
-{{% /md %}}</dd>
-    <dt class="property-optional"
+{{% /md %}}</dd><dt class="property-optional"
             title="Optional">
         <span id="match_values_python">
 <a href="#match_values_python" style="color: inherit; text-decoration: inherit;">match_<wbr>values</a>
@@ -4746,8 +4230,7 @@ The following state arguments are supported:
         <span class="property-type">Sequence[str]</span>
     </dt>
     <dd>{{% md %}}List of string values. This is required if `operator` is not `Any`.
-{{% /md %}}</dd>
-    <dt class="property-optional"
+{{% /md %}}</dd><dt class="property-optional"
             title="Optional">
         <span id="negate_condition_python">
 <a href="#negate_condition_python" style="color: inherit; text-decoration: inherit;">negate_<wbr>condition</a>
@@ -4756,8 +4239,7 @@ The following state arguments are supported:
         <span class="property-type">bool</span>
     </dt>
     <dd>{{% md %}}Defaults to `false`.
-{{% /md %}}</dd>
-    <dt class="property-optional"
+{{% /md %}}</dd><dt class="property-optional"
             title="Optional">
         <span id="transforms_python">
 <a href="#transforms_python" style="color: inherit; text-decoration: inherit;">transforms</a>
@@ -4766,16 +4248,13 @@ The following state arguments are supported:
         <span class="property-type">Sequence[str]</span>
     </dt>
     <dd>{{% md %}}Valid values are `Lowercase` and `Uppercase`.
-{{% /md %}}</dd>
-</dl>
+{{% /md %}}</dd></dl>
 {{% /choosable %}}
 
 <h4 id="endpointdeliveryrulerequestheadercondition">Endpoint<wbr>Delivery<wbr>Rule<wbr>Request<wbr>Header<wbr>Condition</h4>
 
 {{% choosable language csharp %}}
-<dl class="resources-properties">
-
-    <dt class="property-required"
+<dl class="resources-properties"><dt class="property-required"
             title="Required">
         <span id="operator_csharp">
 <a href="#operator_csharp" style="color: inherit; text-decoration: inherit;">Operator</a>
@@ -4784,8 +4263,7 @@ The following state arguments are supported:
         <span class="property-type">string</span>
     </dt>
     <dd>{{% md %}}Valid values are `Any`, `BeginsWith`, `Contains`, `EndsWith`, `Equal`, `GreaterThan`, `GreaterThanOrEqual`, `LessThan` and `LessThanOrEqual`.
-{{% /md %}}</dd>
-    <dt class="property-required"
+{{% /md %}}</dd><dt class="property-required"
             title="Required">
         <span id="selector_csharp">
 <a href="#selector_csharp" style="color: inherit; text-decoration: inherit;">Selector</a>
@@ -4794,8 +4272,7 @@ The following state arguments are supported:
         <span class="property-type">string</span>
     </dt>
     <dd>{{% md %}}Header name.
-{{% /md %}}</dd>
-    <dt class="property-optional"
+{{% /md %}}</dd><dt class="property-optional"
             title="Optional">
         <span id="matchvalues_csharp">
 <a href="#matchvalues_csharp" style="color: inherit; text-decoration: inherit;">Match<wbr>Values</a>
@@ -4804,8 +4281,7 @@ The following state arguments are supported:
         <span class="property-type">List&lt;string&gt;</span>
     </dt>
     <dd>{{% md %}}List of header values. This is required if `operator` is not `Any`.
-{{% /md %}}</dd>
-    <dt class="property-optional"
+{{% /md %}}</dd><dt class="property-optional"
             title="Optional">
         <span id="negatecondition_csharp">
 <a href="#negatecondition_csharp" style="color: inherit; text-decoration: inherit;">Negate<wbr>Condition</a>
@@ -4814,8 +4290,7 @@ The following state arguments are supported:
         <span class="property-type">bool</span>
     </dt>
     <dd>{{% md %}}Defaults to `false`.
-{{% /md %}}</dd>
-    <dt class="property-optional"
+{{% /md %}}</dd><dt class="property-optional"
             title="Optional">
         <span id="transforms_csharp">
 <a href="#transforms_csharp" style="color: inherit; text-decoration: inherit;">Transforms</a>
@@ -4824,14 +4299,11 @@ The following state arguments are supported:
         <span class="property-type">List&lt;string&gt;</span>
     </dt>
     <dd>{{% md %}}Valid values are `Lowercase` and `Uppercase`.
-{{% /md %}}</dd>
-</dl>
+{{% /md %}}</dd></dl>
 {{% /choosable %}}
 
 {{% choosable language go %}}
-<dl class="resources-properties">
-
-    <dt class="property-required"
+<dl class="resources-properties"><dt class="property-required"
             title="Required">
         <span id="operator_go">
 <a href="#operator_go" style="color: inherit; text-decoration: inherit;">Operator</a>
@@ -4840,8 +4312,7 @@ The following state arguments are supported:
         <span class="property-type">string</span>
     </dt>
     <dd>{{% md %}}Valid values are `Any`, `BeginsWith`, `Contains`, `EndsWith`, `Equal`, `GreaterThan`, `GreaterThanOrEqual`, `LessThan` and `LessThanOrEqual`.
-{{% /md %}}</dd>
-    <dt class="property-required"
+{{% /md %}}</dd><dt class="property-required"
             title="Required">
         <span id="selector_go">
 <a href="#selector_go" style="color: inherit; text-decoration: inherit;">Selector</a>
@@ -4850,8 +4321,7 @@ The following state arguments are supported:
         <span class="property-type">string</span>
     </dt>
     <dd>{{% md %}}Header name.
-{{% /md %}}</dd>
-    <dt class="property-optional"
+{{% /md %}}</dd><dt class="property-optional"
             title="Optional">
         <span id="matchvalues_go">
 <a href="#matchvalues_go" style="color: inherit; text-decoration: inherit;">Match<wbr>Values</a>
@@ -4860,8 +4330,7 @@ The following state arguments are supported:
         <span class="property-type">[]string</span>
     </dt>
     <dd>{{% md %}}List of header values. This is required if `operator` is not `Any`.
-{{% /md %}}</dd>
-    <dt class="property-optional"
+{{% /md %}}</dd><dt class="property-optional"
             title="Optional">
         <span id="negatecondition_go">
 <a href="#negatecondition_go" style="color: inherit; text-decoration: inherit;">Negate<wbr>Condition</a>
@@ -4870,8 +4339,7 @@ The following state arguments are supported:
         <span class="property-type">bool</span>
     </dt>
     <dd>{{% md %}}Defaults to `false`.
-{{% /md %}}</dd>
-    <dt class="property-optional"
+{{% /md %}}</dd><dt class="property-optional"
             title="Optional">
         <span id="transforms_go">
 <a href="#transforms_go" style="color: inherit; text-decoration: inherit;">Transforms</a>
@@ -4880,14 +4348,11 @@ The following state arguments are supported:
         <span class="property-type">[]string</span>
     </dt>
     <dd>{{% md %}}Valid values are `Lowercase` and `Uppercase`.
-{{% /md %}}</dd>
-</dl>
+{{% /md %}}</dd></dl>
 {{% /choosable %}}
 
 {{% choosable language nodejs %}}
-<dl class="resources-properties">
-
-    <dt class="property-required"
+<dl class="resources-properties"><dt class="property-required"
             title="Required">
         <span id="operator_nodejs">
 <a href="#operator_nodejs" style="color: inherit; text-decoration: inherit;">operator</a>
@@ -4896,8 +4361,7 @@ The following state arguments are supported:
         <span class="property-type">string</span>
     </dt>
     <dd>{{% md %}}Valid values are `Any`, `BeginsWith`, `Contains`, `EndsWith`, `Equal`, `GreaterThan`, `GreaterThanOrEqual`, `LessThan` and `LessThanOrEqual`.
-{{% /md %}}</dd>
-    <dt class="property-required"
+{{% /md %}}</dd><dt class="property-required"
             title="Required">
         <span id="selector_nodejs">
 <a href="#selector_nodejs" style="color: inherit; text-decoration: inherit;">selector</a>
@@ -4906,8 +4370,7 @@ The following state arguments are supported:
         <span class="property-type">string</span>
     </dt>
     <dd>{{% md %}}Header name.
-{{% /md %}}</dd>
-    <dt class="property-optional"
+{{% /md %}}</dd><dt class="property-optional"
             title="Optional">
         <span id="matchvalues_nodejs">
 <a href="#matchvalues_nodejs" style="color: inherit; text-decoration: inherit;">match<wbr>Values</a>
@@ -4916,8 +4379,7 @@ The following state arguments are supported:
         <span class="property-type">string[]</span>
     </dt>
     <dd>{{% md %}}List of header values. This is required if `operator` is not `Any`.
-{{% /md %}}</dd>
-    <dt class="property-optional"
+{{% /md %}}</dd><dt class="property-optional"
             title="Optional">
         <span id="negatecondition_nodejs">
 <a href="#negatecondition_nodejs" style="color: inherit; text-decoration: inherit;">negate<wbr>Condition</a>
@@ -4926,8 +4388,7 @@ The following state arguments are supported:
         <span class="property-type">boolean</span>
     </dt>
     <dd>{{% md %}}Defaults to `false`.
-{{% /md %}}</dd>
-    <dt class="property-optional"
+{{% /md %}}</dd><dt class="property-optional"
             title="Optional">
         <span id="transforms_nodejs">
 <a href="#transforms_nodejs" style="color: inherit; text-decoration: inherit;">transforms</a>
@@ -4936,14 +4397,11 @@ The following state arguments are supported:
         <span class="property-type">string[]</span>
     </dt>
     <dd>{{% md %}}Valid values are `Lowercase` and `Uppercase`.
-{{% /md %}}</dd>
-</dl>
+{{% /md %}}</dd></dl>
 {{% /choosable %}}
 
 {{% choosable language python %}}
-<dl class="resources-properties">
-
-    <dt class="property-required"
+<dl class="resources-properties"><dt class="property-required"
             title="Required">
         <span id="operator_python">
 <a href="#operator_python" style="color: inherit; text-decoration: inherit;">operator</a>
@@ -4952,8 +4410,7 @@ The following state arguments are supported:
         <span class="property-type">str</span>
     </dt>
     <dd>{{% md %}}Valid values are `Any`, `BeginsWith`, `Contains`, `EndsWith`, `Equal`, `GreaterThan`, `GreaterThanOrEqual`, `LessThan` and `LessThanOrEqual`.
-{{% /md %}}</dd>
-    <dt class="property-required"
+{{% /md %}}</dd><dt class="property-required"
             title="Required">
         <span id="selector_python">
 <a href="#selector_python" style="color: inherit; text-decoration: inherit;">selector</a>
@@ -4962,8 +4419,7 @@ The following state arguments are supported:
         <span class="property-type">str</span>
     </dt>
     <dd>{{% md %}}Header name.
-{{% /md %}}</dd>
-    <dt class="property-optional"
+{{% /md %}}</dd><dt class="property-optional"
             title="Optional">
         <span id="match_values_python">
 <a href="#match_values_python" style="color: inherit; text-decoration: inherit;">match_<wbr>values</a>
@@ -4972,8 +4428,7 @@ The following state arguments are supported:
         <span class="property-type">Sequence[str]</span>
     </dt>
     <dd>{{% md %}}List of header values. This is required if `operator` is not `Any`.
-{{% /md %}}</dd>
-    <dt class="property-optional"
+{{% /md %}}</dd><dt class="property-optional"
             title="Optional">
         <span id="negate_condition_python">
 <a href="#negate_condition_python" style="color: inherit; text-decoration: inherit;">negate_<wbr>condition</a>
@@ -4982,8 +4437,7 @@ The following state arguments are supported:
         <span class="property-type">bool</span>
     </dt>
     <dd>{{% md %}}Defaults to `false`.
-{{% /md %}}</dd>
-    <dt class="property-optional"
+{{% /md %}}</dd><dt class="property-optional"
             title="Optional">
         <span id="transforms_python">
 <a href="#transforms_python" style="color: inherit; text-decoration: inherit;">transforms</a>
@@ -4992,16 +4446,13 @@ The following state arguments are supported:
         <span class="property-type">Sequence[str]</span>
     </dt>
     <dd>{{% md %}}Valid values are `Lowercase` and `Uppercase`.
-{{% /md %}}</dd>
-</dl>
+{{% /md %}}</dd></dl>
 {{% /choosable %}}
 
 <h4 id="endpointdeliveryrulerequestmethodcondition">Endpoint<wbr>Delivery<wbr>Rule<wbr>Request<wbr>Method<wbr>Condition</h4>
 
 {{% choosable language csharp %}}
-<dl class="resources-properties">
-
-    <dt class="property-required"
+<dl class="resources-properties"><dt class="property-required"
             title="Required">
         <span id="matchvalues_csharp">
 <a href="#matchvalues_csharp" style="color: inherit; text-decoration: inherit;">Match<wbr>Values</a>
@@ -5010,8 +4461,7 @@ The following state arguments are supported:
         <span class="property-type">List&lt;string&gt;</span>
     </dt>
     <dd>{{% md %}}Valid values are `DELETE`, `GET`, `HEAD`, `OPTIONS`, `POST` and `PUT`.
-{{% /md %}}</dd>
-    <dt class="property-optional"
+{{% /md %}}</dd><dt class="property-optional"
             title="Optional">
         <span id="negatecondition_csharp">
 <a href="#negatecondition_csharp" style="color: inherit; text-decoration: inherit;">Negate<wbr>Condition</a>
@@ -5020,8 +4470,7 @@ The following state arguments are supported:
         <span class="property-type">bool</span>
     </dt>
     <dd>{{% md %}}Defaults to `false`.
-{{% /md %}}</dd>
-    <dt class="property-optional"
+{{% /md %}}</dd><dt class="property-optional"
             title="Optional">
         <span id="operator_csharp">
 <a href="#operator_csharp" style="color: inherit; text-decoration: inherit;">Operator</a>
@@ -5030,14 +4479,11 @@ The following state arguments are supported:
         <span class="property-type">string</span>
     </dt>
     <dd>{{% md %}}Valid values are `Equal`.
-{{% /md %}}</dd>
-</dl>
+{{% /md %}}</dd></dl>
 {{% /choosable %}}
 
 {{% choosable language go %}}
-<dl class="resources-properties">
-
-    <dt class="property-required"
+<dl class="resources-properties"><dt class="property-required"
             title="Required">
         <span id="matchvalues_go">
 <a href="#matchvalues_go" style="color: inherit; text-decoration: inherit;">Match<wbr>Values</a>
@@ -5046,8 +4492,7 @@ The following state arguments are supported:
         <span class="property-type">[]string</span>
     </dt>
     <dd>{{% md %}}Valid values are `DELETE`, `GET`, `HEAD`, `OPTIONS`, `POST` and `PUT`.
-{{% /md %}}</dd>
-    <dt class="property-optional"
+{{% /md %}}</dd><dt class="property-optional"
             title="Optional">
         <span id="negatecondition_go">
 <a href="#negatecondition_go" style="color: inherit; text-decoration: inherit;">Negate<wbr>Condition</a>
@@ -5056,8 +4501,7 @@ The following state arguments are supported:
         <span class="property-type">bool</span>
     </dt>
     <dd>{{% md %}}Defaults to `false`.
-{{% /md %}}</dd>
-    <dt class="property-optional"
+{{% /md %}}</dd><dt class="property-optional"
             title="Optional">
         <span id="operator_go">
 <a href="#operator_go" style="color: inherit; text-decoration: inherit;">Operator</a>
@@ -5066,14 +4510,11 @@ The following state arguments are supported:
         <span class="property-type">string</span>
     </dt>
     <dd>{{% md %}}Valid values are `Equal`.
-{{% /md %}}</dd>
-</dl>
+{{% /md %}}</dd></dl>
 {{% /choosable %}}
 
 {{% choosable language nodejs %}}
-<dl class="resources-properties">
-
-    <dt class="property-required"
+<dl class="resources-properties"><dt class="property-required"
             title="Required">
         <span id="matchvalues_nodejs">
 <a href="#matchvalues_nodejs" style="color: inherit; text-decoration: inherit;">match<wbr>Values</a>
@@ -5082,8 +4523,7 @@ The following state arguments are supported:
         <span class="property-type">string[]</span>
     </dt>
     <dd>{{% md %}}Valid values are `DELETE`, `GET`, `HEAD`, `OPTIONS`, `POST` and `PUT`.
-{{% /md %}}</dd>
-    <dt class="property-optional"
+{{% /md %}}</dd><dt class="property-optional"
             title="Optional">
         <span id="negatecondition_nodejs">
 <a href="#negatecondition_nodejs" style="color: inherit; text-decoration: inherit;">negate<wbr>Condition</a>
@@ -5092,8 +4532,7 @@ The following state arguments are supported:
         <span class="property-type">boolean</span>
     </dt>
     <dd>{{% md %}}Defaults to `false`.
-{{% /md %}}</dd>
-    <dt class="property-optional"
+{{% /md %}}</dd><dt class="property-optional"
             title="Optional">
         <span id="operator_nodejs">
 <a href="#operator_nodejs" style="color: inherit; text-decoration: inherit;">operator</a>
@@ -5102,14 +4541,11 @@ The following state arguments are supported:
         <span class="property-type">string</span>
     </dt>
     <dd>{{% md %}}Valid values are `Equal`.
-{{% /md %}}</dd>
-</dl>
+{{% /md %}}</dd></dl>
 {{% /choosable %}}
 
 {{% choosable language python %}}
-<dl class="resources-properties">
-
-    <dt class="property-required"
+<dl class="resources-properties"><dt class="property-required"
             title="Required">
         <span id="match_values_python">
 <a href="#match_values_python" style="color: inherit; text-decoration: inherit;">match_<wbr>values</a>
@@ -5118,8 +4554,7 @@ The following state arguments are supported:
         <span class="property-type">Sequence[str]</span>
     </dt>
     <dd>{{% md %}}Valid values are `DELETE`, `GET`, `HEAD`, `OPTIONS`, `POST` and `PUT`.
-{{% /md %}}</dd>
-    <dt class="property-optional"
+{{% /md %}}</dd><dt class="property-optional"
             title="Optional">
         <span id="negate_condition_python">
 <a href="#negate_condition_python" style="color: inherit; text-decoration: inherit;">negate_<wbr>condition</a>
@@ -5128,8 +4563,7 @@ The following state arguments are supported:
         <span class="property-type">bool</span>
     </dt>
     <dd>{{% md %}}Defaults to `false`.
-{{% /md %}}</dd>
-    <dt class="property-optional"
+{{% /md %}}</dd><dt class="property-optional"
             title="Optional">
         <span id="operator_python">
 <a href="#operator_python" style="color: inherit; text-decoration: inherit;">operator</a>
@@ -5138,16 +4572,13 @@ The following state arguments are supported:
         <span class="property-type">str</span>
     </dt>
     <dd>{{% md %}}Valid values are `Equal`.
-{{% /md %}}</dd>
-</dl>
+{{% /md %}}</dd></dl>
 {{% /choosable %}}
 
 <h4 id="endpointdeliveryrulerequestschemecondition">Endpoint<wbr>Delivery<wbr>Rule<wbr>Request<wbr>Scheme<wbr>Condition</h4>
 
 {{% choosable language csharp %}}
-<dl class="resources-properties">
-
-    <dt class="property-required"
+<dl class="resources-properties"><dt class="property-required"
             title="Required">
         <span id="matchvalues_csharp">
 <a href="#matchvalues_csharp" style="color: inherit; text-decoration: inherit;">Match<wbr>Values</a>
@@ -5156,8 +4587,7 @@ The following state arguments are supported:
         <span class="property-type">List&lt;string&gt;</span>
     </dt>
     <dd>{{% md %}}Valid values are `HTTP` and `HTTPS`.
-{{% /md %}}</dd>
-    <dt class="property-optional"
+{{% /md %}}</dd><dt class="property-optional"
             title="Optional">
         <span id="negatecondition_csharp">
 <a href="#negatecondition_csharp" style="color: inherit; text-decoration: inherit;">Negate<wbr>Condition</a>
@@ -5166,8 +4596,7 @@ The following state arguments are supported:
         <span class="property-type">bool</span>
     </dt>
     <dd>{{% md %}}Defaults to `false`.
-{{% /md %}}</dd>
-    <dt class="property-optional"
+{{% /md %}}</dd><dt class="property-optional"
             title="Optional">
         <span id="operator_csharp">
 <a href="#operator_csharp" style="color: inherit; text-decoration: inherit;">Operator</a>
@@ -5176,14 +4605,11 @@ The following state arguments are supported:
         <span class="property-type">string</span>
     </dt>
     <dd>{{% md %}}Valid values are `Equal`.
-{{% /md %}}</dd>
-</dl>
+{{% /md %}}</dd></dl>
 {{% /choosable %}}
 
 {{% choosable language go %}}
-<dl class="resources-properties">
-
-    <dt class="property-required"
+<dl class="resources-properties"><dt class="property-required"
             title="Required">
         <span id="matchvalues_go">
 <a href="#matchvalues_go" style="color: inherit; text-decoration: inherit;">Match<wbr>Values</a>
@@ -5192,8 +4618,7 @@ The following state arguments are supported:
         <span class="property-type">[]string</span>
     </dt>
     <dd>{{% md %}}Valid values are `HTTP` and `HTTPS`.
-{{% /md %}}</dd>
-    <dt class="property-optional"
+{{% /md %}}</dd><dt class="property-optional"
             title="Optional">
         <span id="negatecondition_go">
 <a href="#negatecondition_go" style="color: inherit; text-decoration: inherit;">Negate<wbr>Condition</a>
@@ -5202,8 +4627,7 @@ The following state arguments are supported:
         <span class="property-type">bool</span>
     </dt>
     <dd>{{% md %}}Defaults to `false`.
-{{% /md %}}</dd>
-    <dt class="property-optional"
+{{% /md %}}</dd><dt class="property-optional"
             title="Optional">
         <span id="operator_go">
 <a href="#operator_go" style="color: inherit; text-decoration: inherit;">Operator</a>
@@ -5212,14 +4636,11 @@ The following state arguments are supported:
         <span class="property-type">string</span>
     </dt>
     <dd>{{% md %}}Valid values are `Equal`.
-{{% /md %}}</dd>
-</dl>
+{{% /md %}}</dd></dl>
 {{% /choosable %}}
 
 {{% choosable language nodejs %}}
-<dl class="resources-properties">
-
-    <dt class="property-required"
+<dl class="resources-properties"><dt class="property-required"
             title="Required">
         <span id="matchvalues_nodejs">
 <a href="#matchvalues_nodejs" style="color: inherit; text-decoration: inherit;">match<wbr>Values</a>
@@ -5228,8 +4649,7 @@ The following state arguments are supported:
         <span class="property-type">string[]</span>
     </dt>
     <dd>{{% md %}}Valid values are `HTTP` and `HTTPS`.
-{{% /md %}}</dd>
-    <dt class="property-optional"
+{{% /md %}}</dd><dt class="property-optional"
             title="Optional">
         <span id="negatecondition_nodejs">
 <a href="#negatecondition_nodejs" style="color: inherit; text-decoration: inherit;">negate<wbr>Condition</a>
@@ -5238,8 +4658,7 @@ The following state arguments are supported:
         <span class="property-type">boolean</span>
     </dt>
     <dd>{{% md %}}Defaults to `false`.
-{{% /md %}}</dd>
-    <dt class="property-optional"
+{{% /md %}}</dd><dt class="property-optional"
             title="Optional">
         <span id="operator_nodejs">
 <a href="#operator_nodejs" style="color: inherit; text-decoration: inherit;">operator</a>
@@ -5248,14 +4667,11 @@ The following state arguments are supported:
         <span class="property-type">string</span>
     </dt>
     <dd>{{% md %}}Valid values are `Equal`.
-{{% /md %}}</dd>
-</dl>
+{{% /md %}}</dd></dl>
 {{% /choosable %}}
 
 {{% choosable language python %}}
-<dl class="resources-properties">
-
-    <dt class="property-required"
+<dl class="resources-properties"><dt class="property-required"
             title="Required">
         <span id="match_values_python">
 <a href="#match_values_python" style="color: inherit; text-decoration: inherit;">match_<wbr>values</a>
@@ -5264,8 +4680,7 @@ The following state arguments are supported:
         <span class="property-type">Sequence[str]</span>
     </dt>
     <dd>{{% md %}}Valid values are `HTTP` and `HTTPS`.
-{{% /md %}}</dd>
-    <dt class="property-optional"
+{{% /md %}}</dd><dt class="property-optional"
             title="Optional">
         <span id="negate_condition_python">
 <a href="#negate_condition_python" style="color: inherit; text-decoration: inherit;">negate_<wbr>condition</a>
@@ -5274,8 +4689,7 @@ The following state arguments are supported:
         <span class="property-type">bool</span>
     </dt>
     <dd>{{% md %}}Defaults to `false`.
-{{% /md %}}</dd>
-    <dt class="property-optional"
+{{% /md %}}</dd><dt class="property-optional"
             title="Optional">
         <span id="operator_python">
 <a href="#operator_python" style="color: inherit; text-decoration: inherit;">operator</a>
@@ -5284,16 +4698,13 @@ The following state arguments are supported:
         <span class="property-type">str</span>
     </dt>
     <dd>{{% md %}}Valid values are `Equal`.
-{{% /md %}}</dd>
-</dl>
+{{% /md %}}</dd></dl>
 {{% /choosable %}}
 
 <h4 id="endpointdeliveryrulerequesturicondition">Endpoint<wbr>Delivery<wbr>Rule<wbr>Request<wbr>Uri<wbr>Condition</h4>
 
 {{% choosable language csharp %}}
-<dl class="resources-properties">
-
-    <dt class="property-required"
+<dl class="resources-properties"><dt class="property-required"
             title="Required">
         <span id="operator_csharp">
 <a href="#operator_csharp" style="color: inherit; text-decoration: inherit;">Operator</a>
@@ -5302,8 +4713,7 @@ The following state arguments are supported:
         <span class="property-type">string</span>
     </dt>
     <dd>{{% md %}}Valid values are `Any`, `BeginsWith`, `Contains`, `EndsWith`, `Equal`, `GreaterThan`, `GreaterThanOrEqual`, `LessThan` and `LessThanOrEqual`.
-{{% /md %}}</dd>
-    <dt class="property-optional"
+{{% /md %}}</dd><dt class="property-optional"
             title="Optional">
         <span id="matchvalues_csharp">
 <a href="#matchvalues_csharp" style="color: inherit; text-decoration: inherit;">Match<wbr>Values</a>
@@ -5312,8 +4722,7 @@ The following state arguments are supported:
         <span class="property-type">List&lt;string&gt;</span>
     </dt>
     <dd>{{% md %}}List of string values. This is required if `operator` is not `Any`.
-{{% /md %}}</dd>
-    <dt class="property-optional"
+{{% /md %}}</dd><dt class="property-optional"
             title="Optional">
         <span id="negatecondition_csharp">
 <a href="#negatecondition_csharp" style="color: inherit; text-decoration: inherit;">Negate<wbr>Condition</a>
@@ -5322,8 +4731,7 @@ The following state arguments are supported:
         <span class="property-type">bool</span>
     </dt>
     <dd>{{% md %}}Defaults to `false`.
-{{% /md %}}</dd>
-    <dt class="property-optional"
+{{% /md %}}</dd><dt class="property-optional"
             title="Optional">
         <span id="transforms_csharp">
 <a href="#transforms_csharp" style="color: inherit; text-decoration: inherit;">Transforms</a>
@@ -5332,14 +4740,11 @@ The following state arguments are supported:
         <span class="property-type">List&lt;string&gt;</span>
     </dt>
     <dd>{{% md %}}Valid values are `Lowercase` and `Uppercase`.
-{{% /md %}}</dd>
-</dl>
+{{% /md %}}</dd></dl>
 {{% /choosable %}}
 
 {{% choosable language go %}}
-<dl class="resources-properties">
-
-    <dt class="property-required"
+<dl class="resources-properties"><dt class="property-required"
             title="Required">
         <span id="operator_go">
 <a href="#operator_go" style="color: inherit; text-decoration: inherit;">Operator</a>
@@ -5348,8 +4753,7 @@ The following state arguments are supported:
         <span class="property-type">string</span>
     </dt>
     <dd>{{% md %}}Valid values are `Any`, `BeginsWith`, `Contains`, `EndsWith`, `Equal`, `GreaterThan`, `GreaterThanOrEqual`, `LessThan` and `LessThanOrEqual`.
-{{% /md %}}</dd>
-    <dt class="property-optional"
+{{% /md %}}</dd><dt class="property-optional"
             title="Optional">
         <span id="matchvalues_go">
 <a href="#matchvalues_go" style="color: inherit; text-decoration: inherit;">Match<wbr>Values</a>
@@ -5358,8 +4762,7 @@ The following state arguments are supported:
         <span class="property-type">[]string</span>
     </dt>
     <dd>{{% md %}}List of string values. This is required if `operator` is not `Any`.
-{{% /md %}}</dd>
-    <dt class="property-optional"
+{{% /md %}}</dd><dt class="property-optional"
             title="Optional">
         <span id="negatecondition_go">
 <a href="#negatecondition_go" style="color: inherit; text-decoration: inherit;">Negate<wbr>Condition</a>
@@ -5368,8 +4771,7 @@ The following state arguments are supported:
         <span class="property-type">bool</span>
     </dt>
     <dd>{{% md %}}Defaults to `false`.
-{{% /md %}}</dd>
-    <dt class="property-optional"
+{{% /md %}}</dd><dt class="property-optional"
             title="Optional">
         <span id="transforms_go">
 <a href="#transforms_go" style="color: inherit; text-decoration: inherit;">Transforms</a>
@@ -5378,14 +4780,11 @@ The following state arguments are supported:
         <span class="property-type">[]string</span>
     </dt>
     <dd>{{% md %}}Valid values are `Lowercase` and `Uppercase`.
-{{% /md %}}</dd>
-</dl>
+{{% /md %}}</dd></dl>
 {{% /choosable %}}
 
 {{% choosable language nodejs %}}
-<dl class="resources-properties">
-
-    <dt class="property-required"
+<dl class="resources-properties"><dt class="property-required"
             title="Required">
         <span id="operator_nodejs">
 <a href="#operator_nodejs" style="color: inherit; text-decoration: inherit;">operator</a>
@@ -5394,8 +4793,7 @@ The following state arguments are supported:
         <span class="property-type">string</span>
     </dt>
     <dd>{{% md %}}Valid values are `Any`, `BeginsWith`, `Contains`, `EndsWith`, `Equal`, `GreaterThan`, `GreaterThanOrEqual`, `LessThan` and `LessThanOrEqual`.
-{{% /md %}}</dd>
-    <dt class="property-optional"
+{{% /md %}}</dd><dt class="property-optional"
             title="Optional">
         <span id="matchvalues_nodejs">
 <a href="#matchvalues_nodejs" style="color: inherit; text-decoration: inherit;">match<wbr>Values</a>
@@ -5404,8 +4802,7 @@ The following state arguments are supported:
         <span class="property-type">string[]</span>
     </dt>
     <dd>{{% md %}}List of string values. This is required if `operator` is not `Any`.
-{{% /md %}}</dd>
-    <dt class="property-optional"
+{{% /md %}}</dd><dt class="property-optional"
             title="Optional">
         <span id="negatecondition_nodejs">
 <a href="#negatecondition_nodejs" style="color: inherit; text-decoration: inherit;">negate<wbr>Condition</a>
@@ -5414,8 +4811,7 @@ The following state arguments are supported:
         <span class="property-type">boolean</span>
     </dt>
     <dd>{{% md %}}Defaults to `false`.
-{{% /md %}}</dd>
-    <dt class="property-optional"
+{{% /md %}}</dd><dt class="property-optional"
             title="Optional">
         <span id="transforms_nodejs">
 <a href="#transforms_nodejs" style="color: inherit; text-decoration: inherit;">transforms</a>
@@ -5424,14 +4820,11 @@ The following state arguments are supported:
         <span class="property-type">string[]</span>
     </dt>
     <dd>{{% md %}}Valid values are `Lowercase` and `Uppercase`.
-{{% /md %}}</dd>
-</dl>
+{{% /md %}}</dd></dl>
 {{% /choosable %}}
 
 {{% choosable language python %}}
-<dl class="resources-properties">
-
-    <dt class="property-required"
+<dl class="resources-properties"><dt class="property-required"
             title="Required">
         <span id="operator_python">
 <a href="#operator_python" style="color: inherit; text-decoration: inherit;">operator</a>
@@ -5440,8 +4833,7 @@ The following state arguments are supported:
         <span class="property-type">str</span>
     </dt>
     <dd>{{% md %}}Valid values are `Any`, `BeginsWith`, `Contains`, `EndsWith`, `Equal`, `GreaterThan`, `GreaterThanOrEqual`, `LessThan` and `LessThanOrEqual`.
-{{% /md %}}</dd>
-    <dt class="property-optional"
+{{% /md %}}</dd><dt class="property-optional"
             title="Optional">
         <span id="match_values_python">
 <a href="#match_values_python" style="color: inherit; text-decoration: inherit;">match_<wbr>values</a>
@@ -5450,8 +4842,7 @@ The following state arguments are supported:
         <span class="property-type">Sequence[str]</span>
     </dt>
     <dd>{{% md %}}List of string values. This is required if `operator` is not `Any`.
-{{% /md %}}</dd>
-    <dt class="property-optional"
+{{% /md %}}</dd><dt class="property-optional"
             title="Optional">
         <span id="negate_condition_python">
 <a href="#negate_condition_python" style="color: inherit; text-decoration: inherit;">negate_<wbr>condition</a>
@@ -5460,8 +4851,7 @@ The following state arguments are supported:
         <span class="property-type">bool</span>
     </dt>
     <dd>{{% md %}}Defaults to `false`.
-{{% /md %}}</dd>
-    <dt class="property-optional"
+{{% /md %}}</dd><dt class="property-optional"
             title="Optional">
         <span id="transforms_python">
 <a href="#transforms_python" style="color: inherit; text-decoration: inherit;">transforms</a>
@@ -5470,16 +4860,13 @@ The following state arguments are supported:
         <span class="property-type">Sequence[str]</span>
     </dt>
     <dd>{{% md %}}Valid values are `Lowercase` and `Uppercase`.
-{{% /md %}}</dd>
-</dl>
+{{% /md %}}</dd></dl>
 {{% /choosable %}}
 
 <h4 id="endpointdeliveryruleurlfileextensioncondition">Endpoint<wbr>Delivery<wbr>Rule<wbr>Url<wbr>File<wbr>Extension<wbr>Condition</h4>
 
 {{% choosable language csharp %}}
-<dl class="resources-properties">
-
-    <dt class="property-required"
+<dl class="resources-properties"><dt class="property-required"
             title="Required">
         <span id="operator_csharp">
 <a href="#operator_csharp" style="color: inherit; text-decoration: inherit;">Operator</a>
@@ -5488,8 +4875,7 @@ The following state arguments are supported:
         <span class="property-type">string</span>
     </dt>
     <dd>{{% md %}}Valid values are `Any`, `BeginsWith`, `Contains`, `EndsWith`, `Equal`, `GreaterThan`, `GreaterThanOrEqual`, `LessThan` and `LessThanOrEqual`.
-{{% /md %}}</dd>
-    <dt class="property-optional"
+{{% /md %}}</dd><dt class="property-optional"
             title="Optional">
         <span id="matchvalues_csharp">
 <a href="#matchvalues_csharp" style="color: inherit; text-decoration: inherit;">Match<wbr>Values</a>
@@ -5498,8 +4884,7 @@ The following state arguments are supported:
         <span class="property-type">List&lt;string&gt;</span>
     </dt>
     <dd>{{% md %}}List of string values. This is required if `operator` is not `Any`.
-{{% /md %}}</dd>
-    <dt class="property-optional"
+{{% /md %}}</dd><dt class="property-optional"
             title="Optional">
         <span id="negatecondition_csharp">
 <a href="#negatecondition_csharp" style="color: inherit; text-decoration: inherit;">Negate<wbr>Condition</a>
@@ -5508,8 +4893,7 @@ The following state arguments are supported:
         <span class="property-type">bool</span>
     </dt>
     <dd>{{% md %}}Defaults to `false`.
-{{% /md %}}</dd>
-    <dt class="property-optional"
+{{% /md %}}</dd><dt class="property-optional"
             title="Optional">
         <span id="transforms_csharp">
 <a href="#transforms_csharp" style="color: inherit; text-decoration: inherit;">Transforms</a>
@@ -5518,14 +4902,11 @@ The following state arguments are supported:
         <span class="property-type">List&lt;string&gt;</span>
     </dt>
     <dd>{{% md %}}Valid values are `Lowercase` and `Uppercase`.
-{{% /md %}}</dd>
-</dl>
+{{% /md %}}</dd></dl>
 {{% /choosable %}}
 
 {{% choosable language go %}}
-<dl class="resources-properties">
-
-    <dt class="property-required"
+<dl class="resources-properties"><dt class="property-required"
             title="Required">
         <span id="operator_go">
 <a href="#operator_go" style="color: inherit; text-decoration: inherit;">Operator</a>
@@ -5534,8 +4915,7 @@ The following state arguments are supported:
         <span class="property-type">string</span>
     </dt>
     <dd>{{% md %}}Valid values are `Any`, `BeginsWith`, `Contains`, `EndsWith`, `Equal`, `GreaterThan`, `GreaterThanOrEqual`, `LessThan` and `LessThanOrEqual`.
-{{% /md %}}</dd>
-    <dt class="property-optional"
+{{% /md %}}</dd><dt class="property-optional"
             title="Optional">
         <span id="matchvalues_go">
 <a href="#matchvalues_go" style="color: inherit; text-decoration: inherit;">Match<wbr>Values</a>
@@ -5544,8 +4924,7 @@ The following state arguments are supported:
         <span class="property-type">[]string</span>
     </dt>
     <dd>{{% md %}}List of string values. This is required if `operator` is not `Any`.
-{{% /md %}}</dd>
-    <dt class="property-optional"
+{{% /md %}}</dd><dt class="property-optional"
             title="Optional">
         <span id="negatecondition_go">
 <a href="#negatecondition_go" style="color: inherit; text-decoration: inherit;">Negate<wbr>Condition</a>
@@ -5554,8 +4933,7 @@ The following state arguments are supported:
         <span class="property-type">bool</span>
     </dt>
     <dd>{{% md %}}Defaults to `false`.
-{{% /md %}}</dd>
-    <dt class="property-optional"
+{{% /md %}}</dd><dt class="property-optional"
             title="Optional">
         <span id="transforms_go">
 <a href="#transforms_go" style="color: inherit; text-decoration: inherit;">Transforms</a>
@@ -5564,14 +4942,11 @@ The following state arguments are supported:
         <span class="property-type">[]string</span>
     </dt>
     <dd>{{% md %}}Valid values are `Lowercase` and `Uppercase`.
-{{% /md %}}</dd>
-</dl>
+{{% /md %}}</dd></dl>
 {{% /choosable %}}
 
 {{% choosable language nodejs %}}
-<dl class="resources-properties">
-
-    <dt class="property-required"
+<dl class="resources-properties"><dt class="property-required"
             title="Required">
         <span id="operator_nodejs">
 <a href="#operator_nodejs" style="color: inherit; text-decoration: inherit;">operator</a>
@@ -5580,8 +4955,7 @@ The following state arguments are supported:
         <span class="property-type">string</span>
     </dt>
     <dd>{{% md %}}Valid values are `Any`, `BeginsWith`, `Contains`, `EndsWith`, `Equal`, `GreaterThan`, `GreaterThanOrEqual`, `LessThan` and `LessThanOrEqual`.
-{{% /md %}}</dd>
-    <dt class="property-optional"
+{{% /md %}}</dd><dt class="property-optional"
             title="Optional">
         <span id="matchvalues_nodejs">
 <a href="#matchvalues_nodejs" style="color: inherit; text-decoration: inherit;">match<wbr>Values</a>
@@ -5590,8 +4964,7 @@ The following state arguments are supported:
         <span class="property-type">string[]</span>
     </dt>
     <dd>{{% md %}}List of string values. This is required if `operator` is not `Any`.
-{{% /md %}}</dd>
-    <dt class="property-optional"
+{{% /md %}}</dd><dt class="property-optional"
             title="Optional">
         <span id="negatecondition_nodejs">
 <a href="#negatecondition_nodejs" style="color: inherit; text-decoration: inherit;">negate<wbr>Condition</a>
@@ -5600,8 +4973,7 @@ The following state arguments are supported:
         <span class="property-type">boolean</span>
     </dt>
     <dd>{{% md %}}Defaults to `false`.
-{{% /md %}}</dd>
-    <dt class="property-optional"
+{{% /md %}}</dd><dt class="property-optional"
             title="Optional">
         <span id="transforms_nodejs">
 <a href="#transforms_nodejs" style="color: inherit; text-decoration: inherit;">transforms</a>
@@ -5610,14 +4982,11 @@ The following state arguments are supported:
         <span class="property-type">string[]</span>
     </dt>
     <dd>{{% md %}}Valid values are `Lowercase` and `Uppercase`.
-{{% /md %}}</dd>
-</dl>
+{{% /md %}}</dd></dl>
 {{% /choosable %}}
 
 {{% choosable language python %}}
-<dl class="resources-properties">
-
-    <dt class="property-required"
+<dl class="resources-properties"><dt class="property-required"
             title="Required">
         <span id="operator_python">
 <a href="#operator_python" style="color: inherit; text-decoration: inherit;">operator</a>
@@ -5626,8 +4995,7 @@ The following state arguments are supported:
         <span class="property-type">str</span>
     </dt>
     <dd>{{% md %}}Valid values are `Any`, `BeginsWith`, `Contains`, `EndsWith`, `Equal`, `GreaterThan`, `GreaterThanOrEqual`, `LessThan` and `LessThanOrEqual`.
-{{% /md %}}</dd>
-    <dt class="property-optional"
+{{% /md %}}</dd><dt class="property-optional"
             title="Optional">
         <span id="match_values_python">
 <a href="#match_values_python" style="color: inherit; text-decoration: inherit;">match_<wbr>values</a>
@@ -5636,8 +5004,7 @@ The following state arguments are supported:
         <span class="property-type">Sequence[str]</span>
     </dt>
     <dd>{{% md %}}List of string values. This is required if `operator` is not `Any`.
-{{% /md %}}</dd>
-    <dt class="property-optional"
+{{% /md %}}</dd><dt class="property-optional"
             title="Optional">
         <span id="negate_condition_python">
 <a href="#negate_condition_python" style="color: inherit; text-decoration: inherit;">negate_<wbr>condition</a>
@@ -5646,8 +5013,7 @@ The following state arguments are supported:
         <span class="property-type">bool</span>
     </dt>
     <dd>{{% md %}}Defaults to `false`.
-{{% /md %}}</dd>
-    <dt class="property-optional"
+{{% /md %}}</dd><dt class="property-optional"
             title="Optional">
         <span id="transforms_python">
 <a href="#transforms_python" style="color: inherit; text-decoration: inherit;">transforms</a>
@@ -5656,16 +5022,13 @@ The following state arguments are supported:
         <span class="property-type">Sequence[str]</span>
     </dt>
     <dd>{{% md %}}Valid values are `Lowercase` and `Uppercase`.
-{{% /md %}}</dd>
-</dl>
+{{% /md %}}</dd></dl>
 {{% /choosable %}}
 
 <h4 id="endpointdeliveryruleurlfilenamecondition">Endpoint<wbr>Delivery<wbr>Rule<wbr>Url<wbr>File<wbr>Name<wbr>Condition</h4>
 
 {{% choosable language csharp %}}
-<dl class="resources-properties">
-
-    <dt class="property-required"
+<dl class="resources-properties"><dt class="property-required"
             title="Required">
         <span id="operator_csharp">
 <a href="#operator_csharp" style="color: inherit; text-decoration: inherit;">Operator</a>
@@ -5674,8 +5037,7 @@ The following state arguments are supported:
         <span class="property-type">string</span>
     </dt>
     <dd>{{% md %}}Valid values are `Any`, `BeginsWith`, `Contains`, `EndsWith`, `Equal`, `GreaterThan`, `GreaterThanOrEqual`, `LessThan` and `LessThanOrEqual`.
-{{% /md %}}</dd>
-    <dt class="property-optional"
+{{% /md %}}</dd><dt class="property-optional"
             title="Optional">
         <span id="matchvalues_csharp">
 <a href="#matchvalues_csharp" style="color: inherit; text-decoration: inherit;">Match<wbr>Values</a>
@@ -5684,8 +5046,7 @@ The following state arguments are supported:
         <span class="property-type">List&lt;string&gt;</span>
     </dt>
     <dd>{{% md %}}List of string values. This is required if `operator` is not `Any`.
-{{% /md %}}</dd>
-    <dt class="property-optional"
+{{% /md %}}</dd><dt class="property-optional"
             title="Optional">
         <span id="negatecondition_csharp">
 <a href="#negatecondition_csharp" style="color: inherit; text-decoration: inherit;">Negate<wbr>Condition</a>
@@ -5694,8 +5055,7 @@ The following state arguments are supported:
         <span class="property-type">bool</span>
     </dt>
     <dd>{{% md %}}Defaults to `false`.
-{{% /md %}}</dd>
-    <dt class="property-optional"
+{{% /md %}}</dd><dt class="property-optional"
             title="Optional">
         <span id="transforms_csharp">
 <a href="#transforms_csharp" style="color: inherit; text-decoration: inherit;">Transforms</a>
@@ -5704,14 +5064,11 @@ The following state arguments are supported:
         <span class="property-type">List&lt;string&gt;</span>
     </dt>
     <dd>{{% md %}}Valid values are `Lowercase` and `Uppercase`.
-{{% /md %}}</dd>
-</dl>
+{{% /md %}}</dd></dl>
 {{% /choosable %}}
 
 {{% choosable language go %}}
-<dl class="resources-properties">
-
-    <dt class="property-required"
+<dl class="resources-properties"><dt class="property-required"
             title="Required">
         <span id="operator_go">
 <a href="#operator_go" style="color: inherit; text-decoration: inherit;">Operator</a>
@@ -5720,8 +5077,7 @@ The following state arguments are supported:
         <span class="property-type">string</span>
     </dt>
     <dd>{{% md %}}Valid values are `Any`, `BeginsWith`, `Contains`, `EndsWith`, `Equal`, `GreaterThan`, `GreaterThanOrEqual`, `LessThan` and `LessThanOrEqual`.
-{{% /md %}}</dd>
-    <dt class="property-optional"
+{{% /md %}}</dd><dt class="property-optional"
             title="Optional">
         <span id="matchvalues_go">
 <a href="#matchvalues_go" style="color: inherit; text-decoration: inherit;">Match<wbr>Values</a>
@@ -5730,8 +5086,7 @@ The following state arguments are supported:
         <span class="property-type">[]string</span>
     </dt>
     <dd>{{% md %}}List of string values. This is required if `operator` is not `Any`.
-{{% /md %}}</dd>
-    <dt class="property-optional"
+{{% /md %}}</dd><dt class="property-optional"
             title="Optional">
         <span id="negatecondition_go">
 <a href="#negatecondition_go" style="color: inherit; text-decoration: inherit;">Negate<wbr>Condition</a>
@@ -5740,8 +5095,7 @@ The following state arguments are supported:
         <span class="property-type">bool</span>
     </dt>
     <dd>{{% md %}}Defaults to `false`.
-{{% /md %}}</dd>
-    <dt class="property-optional"
+{{% /md %}}</dd><dt class="property-optional"
             title="Optional">
         <span id="transforms_go">
 <a href="#transforms_go" style="color: inherit; text-decoration: inherit;">Transforms</a>
@@ -5750,14 +5104,11 @@ The following state arguments are supported:
         <span class="property-type">[]string</span>
     </dt>
     <dd>{{% md %}}Valid values are `Lowercase` and `Uppercase`.
-{{% /md %}}</dd>
-</dl>
+{{% /md %}}</dd></dl>
 {{% /choosable %}}
 
 {{% choosable language nodejs %}}
-<dl class="resources-properties">
-
-    <dt class="property-required"
+<dl class="resources-properties"><dt class="property-required"
             title="Required">
         <span id="operator_nodejs">
 <a href="#operator_nodejs" style="color: inherit; text-decoration: inherit;">operator</a>
@@ -5766,8 +5117,7 @@ The following state arguments are supported:
         <span class="property-type">string</span>
     </dt>
     <dd>{{% md %}}Valid values are `Any`, `BeginsWith`, `Contains`, `EndsWith`, `Equal`, `GreaterThan`, `GreaterThanOrEqual`, `LessThan` and `LessThanOrEqual`.
-{{% /md %}}</dd>
-    <dt class="property-optional"
+{{% /md %}}</dd><dt class="property-optional"
             title="Optional">
         <span id="matchvalues_nodejs">
 <a href="#matchvalues_nodejs" style="color: inherit; text-decoration: inherit;">match<wbr>Values</a>
@@ -5776,8 +5126,7 @@ The following state arguments are supported:
         <span class="property-type">string[]</span>
     </dt>
     <dd>{{% md %}}List of string values. This is required if `operator` is not `Any`.
-{{% /md %}}</dd>
-    <dt class="property-optional"
+{{% /md %}}</dd><dt class="property-optional"
             title="Optional">
         <span id="negatecondition_nodejs">
 <a href="#negatecondition_nodejs" style="color: inherit; text-decoration: inherit;">negate<wbr>Condition</a>
@@ -5786,8 +5135,7 @@ The following state arguments are supported:
         <span class="property-type">boolean</span>
     </dt>
     <dd>{{% md %}}Defaults to `false`.
-{{% /md %}}</dd>
-    <dt class="property-optional"
+{{% /md %}}</dd><dt class="property-optional"
             title="Optional">
         <span id="transforms_nodejs">
 <a href="#transforms_nodejs" style="color: inherit; text-decoration: inherit;">transforms</a>
@@ -5796,14 +5144,11 @@ The following state arguments are supported:
         <span class="property-type">string[]</span>
     </dt>
     <dd>{{% md %}}Valid values are `Lowercase` and `Uppercase`.
-{{% /md %}}</dd>
-</dl>
+{{% /md %}}</dd></dl>
 {{% /choosable %}}
 
 {{% choosable language python %}}
-<dl class="resources-properties">
-
-    <dt class="property-required"
+<dl class="resources-properties"><dt class="property-required"
             title="Required">
         <span id="operator_python">
 <a href="#operator_python" style="color: inherit; text-decoration: inherit;">operator</a>
@@ -5812,8 +5157,7 @@ The following state arguments are supported:
         <span class="property-type">str</span>
     </dt>
     <dd>{{% md %}}Valid values are `Any`, `BeginsWith`, `Contains`, `EndsWith`, `Equal`, `GreaterThan`, `GreaterThanOrEqual`, `LessThan` and `LessThanOrEqual`.
-{{% /md %}}</dd>
-    <dt class="property-optional"
+{{% /md %}}</dd><dt class="property-optional"
             title="Optional">
         <span id="match_values_python">
 <a href="#match_values_python" style="color: inherit; text-decoration: inherit;">match_<wbr>values</a>
@@ -5822,8 +5166,7 @@ The following state arguments are supported:
         <span class="property-type">Sequence[str]</span>
     </dt>
     <dd>{{% md %}}List of string values. This is required if `operator` is not `Any`.
-{{% /md %}}</dd>
-    <dt class="property-optional"
+{{% /md %}}</dd><dt class="property-optional"
             title="Optional">
         <span id="negate_condition_python">
 <a href="#negate_condition_python" style="color: inherit; text-decoration: inherit;">negate_<wbr>condition</a>
@@ -5832,8 +5175,7 @@ The following state arguments are supported:
         <span class="property-type">bool</span>
     </dt>
     <dd>{{% md %}}Defaults to `false`.
-{{% /md %}}</dd>
-    <dt class="property-optional"
+{{% /md %}}</dd><dt class="property-optional"
             title="Optional">
         <span id="transforms_python">
 <a href="#transforms_python" style="color: inherit; text-decoration: inherit;">transforms</a>
@@ -5842,16 +5184,13 @@ The following state arguments are supported:
         <span class="property-type">Sequence[str]</span>
     </dt>
     <dd>{{% md %}}Valid values are `Lowercase` and `Uppercase`.
-{{% /md %}}</dd>
-</dl>
+{{% /md %}}</dd></dl>
 {{% /choosable %}}
 
 <h4 id="endpointdeliveryruleurlpathcondition">Endpoint<wbr>Delivery<wbr>Rule<wbr>Url<wbr>Path<wbr>Condition</h4>
 
 {{% choosable language csharp %}}
-<dl class="resources-properties">
-
-    <dt class="property-required"
+<dl class="resources-properties"><dt class="property-required"
             title="Required">
         <span id="operator_csharp">
 <a href="#operator_csharp" style="color: inherit; text-decoration: inherit;">Operator</a>
@@ -5860,8 +5199,7 @@ The following state arguments are supported:
         <span class="property-type">string</span>
     </dt>
     <dd>{{% md %}}Valid values are `Any`, `BeginsWith`, `Contains`, `EndsWith`, `Equal`, `GreaterThan`, `GreaterThanOrEqual`, `LessThan` and `LessThanOrEqual`.
-{{% /md %}}</dd>
-    <dt class="property-optional"
+{{% /md %}}</dd><dt class="property-optional"
             title="Optional">
         <span id="matchvalues_csharp">
 <a href="#matchvalues_csharp" style="color: inherit; text-decoration: inherit;">Match<wbr>Values</a>
@@ -5870,8 +5208,7 @@ The following state arguments are supported:
         <span class="property-type">List&lt;string&gt;</span>
     </dt>
     <dd>{{% md %}}List of string values. This is required if `operator` is not `Any`.
-{{% /md %}}</dd>
-    <dt class="property-optional"
+{{% /md %}}</dd><dt class="property-optional"
             title="Optional">
         <span id="negatecondition_csharp">
 <a href="#negatecondition_csharp" style="color: inherit; text-decoration: inherit;">Negate<wbr>Condition</a>
@@ -5880,8 +5217,7 @@ The following state arguments are supported:
         <span class="property-type">bool</span>
     </dt>
     <dd>{{% md %}}Defaults to `false`.
-{{% /md %}}</dd>
-    <dt class="property-optional"
+{{% /md %}}</dd><dt class="property-optional"
             title="Optional">
         <span id="transforms_csharp">
 <a href="#transforms_csharp" style="color: inherit; text-decoration: inherit;">Transforms</a>
@@ -5890,14 +5226,11 @@ The following state arguments are supported:
         <span class="property-type">List&lt;string&gt;</span>
     </dt>
     <dd>{{% md %}}Valid values are `Lowercase` and `Uppercase`.
-{{% /md %}}</dd>
-</dl>
+{{% /md %}}</dd></dl>
 {{% /choosable %}}
 
 {{% choosable language go %}}
-<dl class="resources-properties">
-
-    <dt class="property-required"
+<dl class="resources-properties"><dt class="property-required"
             title="Required">
         <span id="operator_go">
 <a href="#operator_go" style="color: inherit; text-decoration: inherit;">Operator</a>
@@ -5906,8 +5239,7 @@ The following state arguments are supported:
         <span class="property-type">string</span>
     </dt>
     <dd>{{% md %}}Valid values are `Any`, `BeginsWith`, `Contains`, `EndsWith`, `Equal`, `GreaterThan`, `GreaterThanOrEqual`, `LessThan` and `LessThanOrEqual`.
-{{% /md %}}</dd>
-    <dt class="property-optional"
+{{% /md %}}</dd><dt class="property-optional"
             title="Optional">
         <span id="matchvalues_go">
 <a href="#matchvalues_go" style="color: inherit; text-decoration: inherit;">Match<wbr>Values</a>
@@ -5916,8 +5248,7 @@ The following state arguments are supported:
         <span class="property-type">[]string</span>
     </dt>
     <dd>{{% md %}}List of string values. This is required if `operator` is not `Any`.
-{{% /md %}}</dd>
-    <dt class="property-optional"
+{{% /md %}}</dd><dt class="property-optional"
             title="Optional">
         <span id="negatecondition_go">
 <a href="#negatecondition_go" style="color: inherit; text-decoration: inherit;">Negate<wbr>Condition</a>
@@ -5926,8 +5257,7 @@ The following state arguments are supported:
         <span class="property-type">bool</span>
     </dt>
     <dd>{{% md %}}Defaults to `false`.
-{{% /md %}}</dd>
-    <dt class="property-optional"
+{{% /md %}}</dd><dt class="property-optional"
             title="Optional">
         <span id="transforms_go">
 <a href="#transforms_go" style="color: inherit; text-decoration: inherit;">Transforms</a>
@@ -5936,14 +5266,11 @@ The following state arguments are supported:
         <span class="property-type">[]string</span>
     </dt>
     <dd>{{% md %}}Valid values are `Lowercase` and `Uppercase`.
-{{% /md %}}</dd>
-</dl>
+{{% /md %}}</dd></dl>
 {{% /choosable %}}
 
 {{% choosable language nodejs %}}
-<dl class="resources-properties">
-
-    <dt class="property-required"
+<dl class="resources-properties"><dt class="property-required"
             title="Required">
         <span id="operator_nodejs">
 <a href="#operator_nodejs" style="color: inherit; text-decoration: inherit;">operator</a>
@@ -5952,8 +5279,7 @@ The following state arguments are supported:
         <span class="property-type">string</span>
     </dt>
     <dd>{{% md %}}Valid values are `Any`, `BeginsWith`, `Contains`, `EndsWith`, `Equal`, `GreaterThan`, `GreaterThanOrEqual`, `LessThan` and `LessThanOrEqual`.
-{{% /md %}}</dd>
-    <dt class="property-optional"
+{{% /md %}}</dd><dt class="property-optional"
             title="Optional">
         <span id="matchvalues_nodejs">
 <a href="#matchvalues_nodejs" style="color: inherit; text-decoration: inherit;">match<wbr>Values</a>
@@ -5962,8 +5288,7 @@ The following state arguments are supported:
         <span class="property-type">string[]</span>
     </dt>
     <dd>{{% md %}}List of string values. This is required if `operator` is not `Any`.
-{{% /md %}}</dd>
-    <dt class="property-optional"
+{{% /md %}}</dd><dt class="property-optional"
             title="Optional">
         <span id="negatecondition_nodejs">
 <a href="#negatecondition_nodejs" style="color: inherit; text-decoration: inherit;">negate<wbr>Condition</a>
@@ -5972,8 +5297,7 @@ The following state arguments are supported:
         <span class="property-type">boolean</span>
     </dt>
     <dd>{{% md %}}Defaults to `false`.
-{{% /md %}}</dd>
-    <dt class="property-optional"
+{{% /md %}}</dd><dt class="property-optional"
             title="Optional">
         <span id="transforms_nodejs">
 <a href="#transforms_nodejs" style="color: inherit; text-decoration: inherit;">transforms</a>
@@ -5982,14 +5306,11 @@ The following state arguments are supported:
         <span class="property-type">string[]</span>
     </dt>
     <dd>{{% md %}}Valid values are `Lowercase` and `Uppercase`.
-{{% /md %}}</dd>
-</dl>
+{{% /md %}}</dd></dl>
 {{% /choosable %}}
 
 {{% choosable language python %}}
-<dl class="resources-properties">
-
-    <dt class="property-required"
+<dl class="resources-properties"><dt class="property-required"
             title="Required">
         <span id="operator_python">
 <a href="#operator_python" style="color: inherit; text-decoration: inherit;">operator</a>
@@ -5998,8 +5319,7 @@ The following state arguments are supported:
         <span class="property-type">str</span>
     </dt>
     <dd>{{% md %}}Valid values are `Any`, `BeginsWith`, `Contains`, `EndsWith`, `Equal`, `GreaterThan`, `GreaterThanOrEqual`, `LessThan` and `LessThanOrEqual`.
-{{% /md %}}</dd>
-    <dt class="property-optional"
+{{% /md %}}</dd><dt class="property-optional"
             title="Optional">
         <span id="match_values_python">
 <a href="#match_values_python" style="color: inherit; text-decoration: inherit;">match_<wbr>values</a>
@@ -6008,8 +5328,7 @@ The following state arguments are supported:
         <span class="property-type">Sequence[str]</span>
     </dt>
     <dd>{{% md %}}List of string values. This is required if `operator` is not `Any`.
-{{% /md %}}</dd>
-    <dt class="property-optional"
+{{% /md %}}</dd><dt class="property-optional"
             title="Optional">
         <span id="negate_condition_python">
 <a href="#negate_condition_python" style="color: inherit; text-decoration: inherit;">negate_<wbr>condition</a>
@@ -6018,8 +5337,7 @@ The following state arguments are supported:
         <span class="property-type">bool</span>
     </dt>
     <dd>{{% md %}}Defaults to `false`.
-{{% /md %}}</dd>
-    <dt class="property-optional"
+{{% /md %}}</dd><dt class="property-optional"
             title="Optional">
         <span id="transforms_python">
 <a href="#transforms_python" style="color: inherit; text-decoration: inherit;">transforms</a>
@@ -6028,16 +5346,13 @@ The following state arguments are supported:
         <span class="property-type">Sequence[str]</span>
     </dt>
     <dd>{{% md %}}Valid values are `Lowercase` and `Uppercase`.
-{{% /md %}}</dd>
-</dl>
+{{% /md %}}</dd></dl>
 {{% /choosable %}}
 
 <h4 id="endpointdeliveryruleurlredirectaction">Endpoint<wbr>Delivery<wbr>Rule<wbr>Url<wbr>Redirect<wbr>Action</h4>
 
 {{% choosable language csharp %}}
-<dl class="resources-properties">
-
-    <dt class="property-required"
+<dl class="resources-properties"><dt class="property-required"
             title="Required">
         <span id="redirecttype_csharp">
 <a href="#redirecttype_csharp" style="color: inherit; text-decoration: inherit;">Redirect<wbr>Type</a>
@@ -6046,8 +5361,7 @@ The following state arguments are supported:
         <span class="property-type">string</span>
     </dt>
     <dd>{{% md %}}Type of the redirect. Valid values are `Found`, `Moved`, `PermanentRedirect` and `TemporaryRedirect`.
-{{% /md %}}</dd>
-    <dt class="property-optional"
+{{% /md %}}</dd><dt class="property-optional"
             title="Optional">
         <span id="fragment_csharp">
 <a href="#fragment_csharp" style="color: inherit; text-decoration: inherit;">Fragment</a>
@@ -6056,8 +5370,7 @@ The following state arguments are supported:
         <span class="property-type">string</span>
     </dt>
     <dd>{{% md %}}Specifies the fragment part of the URL. This value must not start with a `#`.
-{{% /md %}}</dd>
-    <dt class="property-optional"
+{{% /md %}}</dd><dt class="property-optional"
             title="Optional">
         <span id="hostname_csharp">
 <a href="#hostname_csharp" style="color: inherit; text-decoration: inherit;">Hostname</a>
@@ -6066,8 +5379,7 @@ The following state arguments are supported:
         <span class="property-type">string</span>
     </dt>
     <dd>{{% md %}}Specifies the hostname part of the URL.
-{{% /md %}}</dd>
-    <dt class="property-optional"
+{{% /md %}}</dd><dt class="property-optional"
             title="Optional">
         <span id="path_csharp">
 <a href="#path_csharp" style="color: inherit; text-decoration: inherit;">Path</a>
@@ -6076,8 +5388,7 @@ The following state arguments are supported:
         <span class="property-type">string</span>
     </dt>
     <dd>{{% md %}}Specifies the path part of the URL. This value must begin with a `/`.
-{{% /md %}}</dd>
-    <dt class="property-optional"
+{{% /md %}}</dd><dt class="property-optional"
             title="Optional">
         <span id="protocol_csharp">
 <a href="#protocol_csharp" style="color: inherit; text-decoration: inherit;">Protocol</a>
@@ -6086,8 +5397,7 @@ The following state arguments are supported:
         <span class="property-type">string</span>
     </dt>
     <dd>{{% md %}}Specifies the protocol part of the URL. Valid values are `Http` and `Https`.
-{{% /md %}}</dd>
-    <dt class="property-optional"
+{{% /md %}}</dd><dt class="property-optional"
             title="Optional">
         <span id="querystring_csharp">
 <a href="#querystring_csharp" style="color: inherit; text-decoration: inherit;">Query<wbr>String</a>
@@ -6096,14 +5406,11 @@ The following state arguments are supported:
         <span class="property-type">string</span>
     </dt>
     <dd>{{% md %}}Specifies the query string part of the URL. This value must not start with a `?` or `&` and must be in `<key>=<value>` format separated by `&`.
-{{% /md %}}</dd>
-</dl>
+{{% /md %}}</dd></dl>
 {{% /choosable %}}
 
 {{% choosable language go %}}
-<dl class="resources-properties">
-
-    <dt class="property-required"
+<dl class="resources-properties"><dt class="property-required"
             title="Required">
         <span id="redirecttype_go">
 <a href="#redirecttype_go" style="color: inherit; text-decoration: inherit;">Redirect<wbr>Type</a>
@@ -6112,8 +5419,7 @@ The following state arguments are supported:
         <span class="property-type">string</span>
     </dt>
     <dd>{{% md %}}Type of the redirect. Valid values are `Found`, `Moved`, `PermanentRedirect` and `TemporaryRedirect`.
-{{% /md %}}</dd>
-    <dt class="property-optional"
+{{% /md %}}</dd><dt class="property-optional"
             title="Optional">
         <span id="fragment_go">
 <a href="#fragment_go" style="color: inherit; text-decoration: inherit;">Fragment</a>
@@ -6122,8 +5428,7 @@ The following state arguments are supported:
         <span class="property-type">string</span>
     </dt>
     <dd>{{% md %}}Specifies the fragment part of the URL. This value must not start with a `#`.
-{{% /md %}}</dd>
-    <dt class="property-optional"
+{{% /md %}}</dd><dt class="property-optional"
             title="Optional">
         <span id="hostname_go">
 <a href="#hostname_go" style="color: inherit; text-decoration: inherit;">Hostname</a>
@@ -6132,8 +5437,7 @@ The following state arguments are supported:
         <span class="property-type">string</span>
     </dt>
     <dd>{{% md %}}Specifies the hostname part of the URL.
-{{% /md %}}</dd>
-    <dt class="property-optional"
+{{% /md %}}</dd><dt class="property-optional"
             title="Optional">
         <span id="path_go">
 <a href="#path_go" style="color: inherit; text-decoration: inherit;">Path</a>
@@ -6142,8 +5446,7 @@ The following state arguments are supported:
         <span class="property-type">string</span>
     </dt>
     <dd>{{% md %}}Specifies the path part of the URL. This value must begin with a `/`.
-{{% /md %}}</dd>
-    <dt class="property-optional"
+{{% /md %}}</dd><dt class="property-optional"
             title="Optional">
         <span id="protocol_go">
 <a href="#protocol_go" style="color: inherit; text-decoration: inherit;">Protocol</a>
@@ -6152,8 +5455,7 @@ The following state arguments are supported:
         <span class="property-type">string</span>
     </dt>
     <dd>{{% md %}}Specifies the protocol part of the URL. Valid values are `Http` and `Https`.
-{{% /md %}}</dd>
-    <dt class="property-optional"
+{{% /md %}}</dd><dt class="property-optional"
             title="Optional">
         <span id="querystring_go">
 <a href="#querystring_go" style="color: inherit; text-decoration: inherit;">Query<wbr>String</a>
@@ -6162,14 +5464,11 @@ The following state arguments are supported:
         <span class="property-type">string</span>
     </dt>
     <dd>{{% md %}}Specifies the query string part of the URL. This value must not start with a `?` or `&` and must be in `<key>=<value>` format separated by `&`.
-{{% /md %}}</dd>
-</dl>
+{{% /md %}}</dd></dl>
 {{% /choosable %}}
 
 {{% choosable language nodejs %}}
-<dl class="resources-properties">
-
-    <dt class="property-required"
+<dl class="resources-properties"><dt class="property-required"
             title="Required">
         <span id="redirecttype_nodejs">
 <a href="#redirecttype_nodejs" style="color: inherit; text-decoration: inherit;">redirect<wbr>Type</a>
@@ -6178,8 +5477,7 @@ The following state arguments are supported:
         <span class="property-type">string</span>
     </dt>
     <dd>{{% md %}}Type of the redirect. Valid values are `Found`, `Moved`, `PermanentRedirect` and `TemporaryRedirect`.
-{{% /md %}}</dd>
-    <dt class="property-optional"
+{{% /md %}}</dd><dt class="property-optional"
             title="Optional">
         <span id="fragment_nodejs">
 <a href="#fragment_nodejs" style="color: inherit; text-decoration: inherit;">fragment</a>
@@ -6188,8 +5486,7 @@ The following state arguments are supported:
         <span class="property-type">string</span>
     </dt>
     <dd>{{% md %}}Specifies the fragment part of the URL. This value must not start with a `#`.
-{{% /md %}}</dd>
-    <dt class="property-optional"
+{{% /md %}}</dd><dt class="property-optional"
             title="Optional">
         <span id="hostname_nodejs">
 <a href="#hostname_nodejs" style="color: inherit; text-decoration: inherit;">hostname</a>
@@ -6198,8 +5495,7 @@ The following state arguments are supported:
         <span class="property-type">string</span>
     </dt>
     <dd>{{% md %}}Specifies the hostname part of the URL.
-{{% /md %}}</dd>
-    <dt class="property-optional"
+{{% /md %}}</dd><dt class="property-optional"
             title="Optional">
         <span id="path_nodejs">
 <a href="#path_nodejs" style="color: inherit; text-decoration: inherit;">path</a>
@@ -6208,8 +5504,7 @@ The following state arguments are supported:
         <span class="property-type">string</span>
     </dt>
     <dd>{{% md %}}Specifies the path part of the URL. This value must begin with a `/`.
-{{% /md %}}</dd>
-    <dt class="property-optional"
+{{% /md %}}</dd><dt class="property-optional"
             title="Optional">
         <span id="protocol_nodejs">
 <a href="#protocol_nodejs" style="color: inherit; text-decoration: inherit;">protocol</a>
@@ -6218,8 +5513,7 @@ The following state arguments are supported:
         <span class="property-type">string</span>
     </dt>
     <dd>{{% md %}}Specifies the protocol part of the URL. Valid values are `Http` and `Https`.
-{{% /md %}}</dd>
-    <dt class="property-optional"
+{{% /md %}}</dd><dt class="property-optional"
             title="Optional">
         <span id="querystring_nodejs">
 <a href="#querystring_nodejs" style="color: inherit; text-decoration: inherit;">query<wbr>String</a>
@@ -6228,14 +5522,11 @@ The following state arguments are supported:
         <span class="property-type">string</span>
     </dt>
     <dd>{{% md %}}Specifies the query string part of the URL. This value must not start with a `?` or `&` and must be in `<key>=<value>` format separated by `&`.
-{{% /md %}}</dd>
-</dl>
+{{% /md %}}</dd></dl>
 {{% /choosable %}}
 
 {{% choosable language python %}}
-<dl class="resources-properties">
-
-    <dt class="property-required"
+<dl class="resources-properties"><dt class="property-required"
             title="Required">
         <span id="redirect_type_python">
 <a href="#redirect_type_python" style="color: inherit; text-decoration: inherit;">redirect_<wbr>type</a>
@@ -6244,8 +5535,7 @@ The following state arguments are supported:
         <span class="property-type">str</span>
     </dt>
     <dd>{{% md %}}Type of the redirect. Valid values are `Found`, `Moved`, `PermanentRedirect` and `TemporaryRedirect`.
-{{% /md %}}</dd>
-    <dt class="property-optional"
+{{% /md %}}</dd><dt class="property-optional"
             title="Optional">
         <span id="fragment_python">
 <a href="#fragment_python" style="color: inherit; text-decoration: inherit;">fragment</a>
@@ -6254,8 +5544,7 @@ The following state arguments are supported:
         <span class="property-type">str</span>
     </dt>
     <dd>{{% md %}}Specifies the fragment part of the URL. This value must not start with a `#`.
-{{% /md %}}</dd>
-    <dt class="property-optional"
+{{% /md %}}</dd><dt class="property-optional"
             title="Optional">
         <span id="hostname_python">
 <a href="#hostname_python" style="color: inherit; text-decoration: inherit;">hostname</a>
@@ -6264,8 +5553,7 @@ The following state arguments are supported:
         <span class="property-type">str</span>
     </dt>
     <dd>{{% md %}}Specifies the hostname part of the URL.
-{{% /md %}}</dd>
-    <dt class="property-optional"
+{{% /md %}}</dd><dt class="property-optional"
             title="Optional">
         <span id="path_python">
 <a href="#path_python" style="color: inherit; text-decoration: inherit;">path</a>
@@ -6274,8 +5562,7 @@ The following state arguments are supported:
         <span class="property-type">str</span>
     </dt>
     <dd>{{% md %}}Specifies the path part of the URL. This value must begin with a `/`.
-{{% /md %}}</dd>
-    <dt class="property-optional"
+{{% /md %}}</dd><dt class="property-optional"
             title="Optional">
         <span id="protocol_python">
 <a href="#protocol_python" style="color: inherit; text-decoration: inherit;">protocol</a>
@@ -6284,8 +5571,7 @@ The following state arguments are supported:
         <span class="property-type">str</span>
     </dt>
     <dd>{{% md %}}Specifies the protocol part of the URL. Valid values are `Http` and `Https`.
-{{% /md %}}</dd>
-    <dt class="property-optional"
+{{% /md %}}</dd><dt class="property-optional"
             title="Optional">
         <span id="query_string_python">
 <a href="#query_string_python" style="color: inherit; text-decoration: inherit;">query_<wbr>string</a>
@@ -6294,16 +5580,13 @@ The following state arguments are supported:
         <span class="property-type">str</span>
     </dt>
     <dd>{{% md %}}Specifies the query string part of the URL. This value must not start with a `?` or `&` and must be in `<key>=<value>` format separated by `&`.
-{{% /md %}}</dd>
-</dl>
+{{% /md %}}</dd></dl>
 {{% /choosable %}}
 
 <h4 id="endpointdeliveryruleurlrewriteaction">Endpoint<wbr>Delivery<wbr>Rule<wbr>Url<wbr>Rewrite<wbr>Action</h4>
 
 {{% choosable language csharp %}}
-<dl class="resources-properties">
-
-    <dt class="property-required"
+<dl class="resources-properties"><dt class="property-required"
             title="Required">
         <span id="destination_csharp">
 <a href="#destination_csharp" style="color: inherit; text-decoration: inherit;">Destination</a>
@@ -6312,8 +5595,7 @@ The following state arguments are supported:
         <span class="property-type">string</span>
     </dt>
     <dd>{{% md %}}This value must start with a `/` and can't be longer than 260 characters.
-{{% /md %}}</dd>
-    <dt class="property-required"
+{{% /md %}}</dd><dt class="property-required"
             title="Required">
         <span id="sourcepattern_csharp">
 <a href="#sourcepattern_csharp" style="color: inherit; text-decoration: inherit;">Source<wbr>Pattern</a>
@@ -6322,8 +5604,7 @@ The following state arguments are supported:
         <span class="property-type">string</span>
     </dt>
     <dd>{{% md %}}This value must start with a `/` and can't be longer than 260 characters.
-{{% /md %}}</dd>
-    <dt class="property-optional"
+{{% /md %}}</dd><dt class="property-optional"
             title="Optional">
         <span id="preserveunmatchedpath_csharp">
 <a href="#preserveunmatchedpath_csharp" style="color: inherit; text-decoration: inherit;">Preserve<wbr>Unmatched<wbr>Path</a>
@@ -6332,14 +5613,11 @@ The following state arguments are supported:
         <span class="property-type">bool</span>
     </dt>
     <dd>{{% md %}}Defaults to `true`.
-{{% /md %}}</dd>
-</dl>
+{{% /md %}}</dd></dl>
 {{% /choosable %}}
 
 {{% choosable language go %}}
-<dl class="resources-properties">
-
-    <dt class="property-required"
+<dl class="resources-properties"><dt class="property-required"
             title="Required">
         <span id="destination_go">
 <a href="#destination_go" style="color: inherit; text-decoration: inherit;">Destination</a>
@@ -6348,8 +5626,7 @@ The following state arguments are supported:
         <span class="property-type">string</span>
     </dt>
     <dd>{{% md %}}This value must start with a `/` and can't be longer than 260 characters.
-{{% /md %}}</dd>
-    <dt class="property-required"
+{{% /md %}}</dd><dt class="property-required"
             title="Required">
         <span id="sourcepattern_go">
 <a href="#sourcepattern_go" style="color: inherit; text-decoration: inherit;">Source<wbr>Pattern</a>
@@ -6358,8 +5635,7 @@ The following state arguments are supported:
         <span class="property-type">string</span>
     </dt>
     <dd>{{% md %}}This value must start with a `/` and can't be longer than 260 characters.
-{{% /md %}}</dd>
-    <dt class="property-optional"
+{{% /md %}}</dd><dt class="property-optional"
             title="Optional">
         <span id="preserveunmatchedpath_go">
 <a href="#preserveunmatchedpath_go" style="color: inherit; text-decoration: inherit;">Preserve<wbr>Unmatched<wbr>Path</a>
@@ -6368,14 +5644,11 @@ The following state arguments are supported:
         <span class="property-type">bool</span>
     </dt>
     <dd>{{% md %}}Defaults to `true`.
-{{% /md %}}</dd>
-</dl>
+{{% /md %}}</dd></dl>
 {{% /choosable %}}
 
 {{% choosable language nodejs %}}
-<dl class="resources-properties">
-
-    <dt class="property-required"
+<dl class="resources-properties"><dt class="property-required"
             title="Required">
         <span id="destination_nodejs">
 <a href="#destination_nodejs" style="color: inherit; text-decoration: inherit;">destination</a>
@@ -6384,8 +5657,7 @@ The following state arguments are supported:
         <span class="property-type">string</span>
     </dt>
     <dd>{{% md %}}This value must start with a `/` and can't be longer than 260 characters.
-{{% /md %}}</dd>
-    <dt class="property-required"
+{{% /md %}}</dd><dt class="property-required"
             title="Required">
         <span id="sourcepattern_nodejs">
 <a href="#sourcepattern_nodejs" style="color: inherit; text-decoration: inherit;">source<wbr>Pattern</a>
@@ -6394,8 +5666,7 @@ The following state arguments are supported:
         <span class="property-type">string</span>
     </dt>
     <dd>{{% md %}}This value must start with a `/` and can't be longer than 260 characters.
-{{% /md %}}</dd>
-    <dt class="property-optional"
+{{% /md %}}</dd><dt class="property-optional"
             title="Optional">
         <span id="preserveunmatchedpath_nodejs">
 <a href="#preserveunmatchedpath_nodejs" style="color: inherit; text-decoration: inherit;">preserve<wbr>Unmatched<wbr>Path</a>
@@ -6404,14 +5675,11 @@ The following state arguments are supported:
         <span class="property-type">boolean</span>
     </dt>
     <dd>{{% md %}}Defaults to `true`.
-{{% /md %}}</dd>
-</dl>
+{{% /md %}}</dd></dl>
 {{% /choosable %}}
 
 {{% choosable language python %}}
-<dl class="resources-properties">
-
-    <dt class="property-required"
+<dl class="resources-properties"><dt class="property-required"
             title="Required">
         <span id="destination_python">
 <a href="#destination_python" style="color: inherit; text-decoration: inherit;">destination</a>
@@ -6420,8 +5688,7 @@ The following state arguments are supported:
         <span class="property-type">str</span>
     </dt>
     <dd>{{% md %}}This value must start with a `/` and can't be longer than 260 characters.
-{{% /md %}}</dd>
-    <dt class="property-required"
+{{% /md %}}</dd><dt class="property-required"
             title="Required">
         <span id="source_pattern_python">
 <a href="#source_pattern_python" style="color: inherit; text-decoration: inherit;">source_<wbr>pattern</a>
@@ -6430,8 +5697,7 @@ The following state arguments are supported:
         <span class="property-type">str</span>
     </dt>
     <dd>{{% md %}}This value must start with a `/` and can't be longer than 260 characters.
-{{% /md %}}</dd>
-    <dt class="property-optional"
+{{% /md %}}</dd><dt class="property-optional"
             title="Optional">
         <span id="preserve_unmatched_path_python">
 <a href="#preserve_unmatched_path_python" style="color: inherit; text-decoration: inherit;">preserve_<wbr>unmatched_<wbr>path</a>
@@ -6440,16 +5706,13 @@ The following state arguments are supported:
         <span class="property-type">bool</span>
     </dt>
     <dd>{{% md %}}Defaults to `true`.
-{{% /md %}}</dd>
-</dl>
+{{% /md %}}</dd></dl>
 {{% /choosable %}}
 
 <h4 id="endpointgeofilter">Endpoint<wbr>Geo<wbr>Filter</h4>
 
 {{% choosable language csharp %}}
-<dl class="resources-properties">
-
-    <dt class="property-required"
+<dl class="resources-properties"><dt class="property-required"
             title="Required">
         <span id="action_csharp">
 <a href="#action_csharp" style="color: inherit; text-decoration: inherit;">Action</a>
@@ -6458,8 +5721,7 @@ The following state arguments are supported:
         <span class="property-type">string</span>
     </dt>
     <dd>{{% md %}}The Action of the Geo Filter. Possible values include `Allow` and `Block`.
-{{% /md %}}</dd>
-    <dt class="property-required"
+{{% /md %}}</dd><dt class="property-required"
             title="Required">
         <span id="countrycodes_csharp">
 <a href="#countrycodes_csharp" style="color: inherit; text-decoration: inherit;">Country<wbr>Codes</a>
@@ -6468,8 +5730,7 @@ The following state arguments are supported:
         <span class="property-type">List&lt;string&gt;</span>
     </dt>
     <dd>{{% md %}}A List of two letter country codes (e.g. `US`, `GB`) to be associated with this Geo Filter.
-{{% /md %}}</dd>
-    <dt class="property-required"
+{{% /md %}}</dd><dt class="property-required"
             title="Required">
         <span id="relativepath_csharp">
 <a href="#relativepath_csharp" style="color: inherit; text-decoration: inherit;">Relative<wbr>Path</a>
@@ -6478,14 +5739,11 @@ The following state arguments are supported:
         <span class="property-type">string</span>
     </dt>
     <dd>{{% md %}}The relative path applicable to geo filter.
-{{% /md %}}</dd>
-</dl>
+{{% /md %}}</dd></dl>
 {{% /choosable %}}
 
 {{% choosable language go %}}
-<dl class="resources-properties">
-
-    <dt class="property-required"
+<dl class="resources-properties"><dt class="property-required"
             title="Required">
         <span id="action_go">
 <a href="#action_go" style="color: inherit; text-decoration: inherit;">Action</a>
@@ -6494,8 +5752,7 @@ The following state arguments are supported:
         <span class="property-type">string</span>
     </dt>
     <dd>{{% md %}}The Action of the Geo Filter. Possible values include `Allow` and `Block`.
-{{% /md %}}</dd>
-    <dt class="property-required"
+{{% /md %}}</dd><dt class="property-required"
             title="Required">
         <span id="countrycodes_go">
 <a href="#countrycodes_go" style="color: inherit; text-decoration: inherit;">Country<wbr>Codes</a>
@@ -6504,8 +5761,7 @@ The following state arguments are supported:
         <span class="property-type">[]string</span>
     </dt>
     <dd>{{% md %}}A List of two letter country codes (e.g. `US`, `GB`) to be associated with this Geo Filter.
-{{% /md %}}</dd>
-    <dt class="property-required"
+{{% /md %}}</dd><dt class="property-required"
             title="Required">
         <span id="relativepath_go">
 <a href="#relativepath_go" style="color: inherit; text-decoration: inherit;">Relative<wbr>Path</a>
@@ -6514,14 +5770,11 @@ The following state arguments are supported:
         <span class="property-type">string</span>
     </dt>
     <dd>{{% md %}}The relative path applicable to geo filter.
-{{% /md %}}</dd>
-</dl>
+{{% /md %}}</dd></dl>
 {{% /choosable %}}
 
 {{% choosable language nodejs %}}
-<dl class="resources-properties">
-
-    <dt class="property-required"
+<dl class="resources-properties"><dt class="property-required"
             title="Required">
         <span id="action_nodejs">
 <a href="#action_nodejs" style="color: inherit; text-decoration: inherit;">action</a>
@@ -6530,8 +5783,7 @@ The following state arguments are supported:
         <span class="property-type">string</span>
     </dt>
     <dd>{{% md %}}The Action of the Geo Filter. Possible values include `Allow` and `Block`.
-{{% /md %}}</dd>
-    <dt class="property-required"
+{{% /md %}}</dd><dt class="property-required"
             title="Required">
         <span id="countrycodes_nodejs">
 <a href="#countrycodes_nodejs" style="color: inherit; text-decoration: inherit;">country<wbr>Codes</a>
@@ -6540,8 +5792,7 @@ The following state arguments are supported:
         <span class="property-type">string[]</span>
     </dt>
     <dd>{{% md %}}A List of two letter country codes (e.g. `US`, `GB`) to be associated with this Geo Filter.
-{{% /md %}}</dd>
-    <dt class="property-required"
+{{% /md %}}</dd><dt class="property-required"
             title="Required">
         <span id="relativepath_nodejs">
 <a href="#relativepath_nodejs" style="color: inherit; text-decoration: inherit;">relative<wbr>Path</a>
@@ -6550,14 +5801,11 @@ The following state arguments are supported:
         <span class="property-type">string</span>
     </dt>
     <dd>{{% md %}}The relative path applicable to geo filter.
-{{% /md %}}</dd>
-</dl>
+{{% /md %}}</dd></dl>
 {{% /choosable %}}
 
 {{% choosable language python %}}
-<dl class="resources-properties">
-
-    <dt class="property-required"
+<dl class="resources-properties"><dt class="property-required"
             title="Required">
         <span id="action_python">
 <a href="#action_python" style="color: inherit; text-decoration: inherit;">action</a>
@@ -6566,8 +5814,7 @@ The following state arguments are supported:
         <span class="property-type">str</span>
     </dt>
     <dd>{{% md %}}The Action of the Geo Filter. Possible values include `Allow` and `Block`.
-{{% /md %}}</dd>
-    <dt class="property-required"
+{{% /md %}}</dd><dt class="property-required"
             title="Required">
         <span id="country_codes_python">
 <a href="#country_codes_python" style="color: inherit; text-decoration: inherit;">country_<wbr>codes</a>
@@ -6576,8 +5823,7 @@ The following state arguments are supported:
         <span class="property-type">Sequence[str]</span>
     </dt>
     <dd>{{% md %}}A List of two letter country codes (e.g. `US`, `GB`) to be associated with this Geo Filter.
-{{% /md %}}</dd>
-    <dt class="property-required"
+{{% /md %}}</dd><dt class="property-required"
             title="Required">
         <span id="relative_path_python">
 <a href="#relative_path_python" style="color: inherit; text-decoration: inherit;">relative_<wbr>path</a>
@@ -6586,16 +5832,13 @@ The following state arguments are supported:
         <span class="property-type">str</span>
     </dt>
     <dd>{{% md %}}The relative path applicable to geo filter.
-{{% /md %}}</dd>
-</dl>
+{{% /md %}}</dd></dl>
 {{% /choosable %}}
 
 <h4 id="endpointglobaldeliveryrule">Endpoint<wbr>Global<wbr>Delivery<wbr>Rule</h4>
 
 {{% choosable language csharp %}}
-<dl class="resources-properties">
-
-    <dt class="property-optional"
+<dl class="resources-properties"><dt class="property-optional"
             title="Optional">
         <span id="cacheexpirationaction_csharp">
 <a href="#cacheexpirationaction_csharp" style="color: inherit; text-decoration: inherit;">Cache<wbr>Expiration<wbr>Action</a>
@@ -6604,8 +5847,7 @@ The following state arguments are supported:
         <span class="property-type"><a href="#endpointglobaldeliveryrulecacheexpirationaction">Endpoint<wbr>Global<wbr>Delivery<wbr>Rule<wbr>Cache<wbr>Expiration<wbr>Action<wbr>Args</a></span>
     </dt>
     <dd>{{% md %}}A `cache_expiration_action` block as defined above.
-{{% /md %}}</dd>
-    <dt class="property-optional"
+{{% /md %}}</dd><dt class="property-optional"
             title="Optional">
         <span id="cachekeyquerystringaction_csharp">
 <a href="#cachekeyquerystringaction_csharp" style="color: inherit; text-decoration: inherit;">Cache<wbr>Key<wbr>Query<wbr>String<wbr>Action</a>
@@ -6614,8 +5856,7 @@ The following state arguments are supported:
         <span class="property-type"><a href="#endpointglobaldeliveryrulecachekeyquerystringaction">Endpoint<wbr>Global<wbr>Delivery<wbr>Rule<wbr>Cache<wbr>Key<wbr>Query<wbr>String<wbr>Action<wbr>Args</a></span>
     </dt>
     <dd>{{% md %}}A `cache_key_query_string_action` block as defined above.
-{{% /md %}}</dd>
-    <dt class="property-optional"
+{{% /md %}}</dd><dt class="property-optional"
             title="Optional">
         <span id="modifyrequestheaderactions_csharp">
 <a href="#modifyrequestheaderactions_csharp" style="color: inherit; text-decoration: inherit;">Modify<wbr>Request<wbr>Header<wbr>Actions</a>
@@ -6624,8 +5865,7 @@ The following state arguments are supported:
         <span class="property-type"><a href="#endpointglobaldeliveryrulemodifyrequestheaderaction">List&lt;Endpoint<wbr>Global<wbr>Delivery<wbr>Rule<wbr>Modify<wbr>Request<wbr>Header<wbr>Action<wbr>Args&gt;</a></span>
     </dt>
     <dd>{{% md %}}A `modify_request_header_action` block as defined below.
-{{% /md %}}</dd>
-    <dt class="property-optional"
+{{% /md %}}</dd><dt class="property-optional"
             title="Optional">
         <span id="modifyresponseheaderactions_csharp">
 <a href="#modifyresponseheaderactions_csharp" style="color: inherit; text-decoration: inherit;">Modify<wbr>Response<wbr>Header<wbr>Actions</a>
@@ -6634,8 +5874,7 @@ The following state arguments are supported:
         <span class="property-type"><a href="#endpointglobaldeliveryrulemodifyresponseheaderaction">List&lt;Endpoint<wbr>Global<wbr>Delivery<wbr>Rule<wbr>Modify<wbr>Response<wbr>Header<wbr>Action<wbr>Args&gt;</a></span>
     </dt>
     <dd>{{% md %}}A `modify_response_header_action` block as defined below.
-{{% /md %}}</dd>
-    <dt class="property-optional"
+{{% /md %}}</dd><dt class="property-optional"
             title="Optional">
         <span id="urlredirectaction_csharp">
 <a href="#urlredirectaction_csharp" style="color: inherit; text-decoration: inherit;">Url<wbr>Redirect<wbr>Action</a>
@@ -6644,8 +5883,7 @@ The following state arguments are supported:
         <span class="property-type"><a href="#endpointglobaldeliveryruleurlredirectaction">Endpoint<wbr>Global<wbr>Delivery<wbr>Rule<wbr>Url<wbr>Redirect<wbr>Action<wbr>Args</a></span>
     </dt>
     <dd>{{% md %}}A `url_redirect_action` block as defined below.
-{{% /md %}}</dd>
-    <dt class="property-optional"
+{{% /md %}}</dd><dt class="property-optional"
             title="Optional">
         <span id="urlrewriteaction_csharp">
 <a href="#urlrewriteaction_csharp" style="color: inherit; text-decoration: inherit;">Url<wbr>Rewrite<wbr>Action</a>
@@ -6654,14 +5892,11 @@ The following state arguments are supported:
         <span class="property-type"><a href="#endpointglobaldeliveryruleurlrewriteaction">Endpoint<wbr>Global<wbr>Delivery<wbr>Rule<wbr>Url<wbr>Rewrite<wbr>Action<wbr>Args</a></span>
     </dt>
     <dd>{{% md %}}A `url_rewrite_action` block as defined below.
-{{% /md %}}</dd>
-</dl>
+{{% /md %}}</dd></dl>
 {{% /choosable %}}
 
 {{% choosable language go %}}
-<dl class="resources-properties">
-
-    <dt class="property-optional"
+<dl class="resources-properties"><dt class="property-optional"
             title="Optional">
         <span id="cacheexpirationaction_go">
 <a href="#cacheexpirationaction_go" style="color: inherit; text-decoration: inherit;">Cache<wbr>Expiration<wbr>Action</a>
@@ -6670,8 +5905,7 @@ The following state arguments are supported:
         <span class="property-type"><a href="#endpointglobaldeliveryrulecacheexpirationaction">Endpoint<wbr>Global<wbr>Delivery<wbr>Rule<wbr>Cache<wbr>Expiration<wbr>Action</a></span>
     </dt>
     <dd>{{% md %}}A `cache_expiration_action` block as defined above.
-{{% /md %}}</dd>
-    <dt class="property-optional"
+{{% /md %}}</dd><dt class="property-optional"
             title="Optional">
         <span id="cachekeyquerystringaction_go">
 <a href="#cachekeyquerystringaction_go" style="color: inherit; text-decoration: inherit;">Cache<wbr>Key<wbr>Query<wbr>String<wbr>Action</a>
@@ -6680,8 +5914,7 @@ The following state arguments are supported:
         <span class="property-type"><a href="#endpointglobaldeliveryrulecachekeyquerystringaction">Endpoint<wbr>Global<wbr>Delivery<wbr>Rule<wbr>Cache<wbr>Key<wbr>Query<wbr>String<wbr>Action</a></span>
     </dt>
     <dd>{{% md %}}A `cache_key_query_string_action` block as defined above.
-{{% /md %}}</dd>
-    <dt class="property-optional"
+{{% /md %}}</dd><dt class="property-optional"
             title="Optional">
         <span id="modifyrequestheaderactions_go">
 <a href="#modifyrequestheaderactions_go" style="color: inherit; text-decoration: inherit;">Modify<wbr>Request<wbr>Header<wbr>Actions</a>
@@ -6690,8 +5923,7 @@ The following state arguments are supported:
         <span class="property-type"><a href="#endpointglobaldeliveryrulemodifyrequestheaderaction">[]Endpoint<wbr>Global<wbr>Delivery<wbr>Rule<wbr>Modify<wbr>Request<wbr>Header<wbr>Action</a></span>
     </dt>
     <dd>{{% md %}}A `modify_request_header_action` block as defined below.
-{{% /md %}}</dd>
-    <dt class="property-optional"
+{{% /md %}}</dd><dt class="property-optional"
             title="Optional">
         <span id="modifyresponseheaderactions_go">
 <a href="#modifyresponseheaderactions_go" style="color: inherit; text-decoration: inherit;">Modify<wbr>Response<wbr>Header<wbr>Actions</a>
@@ -6700,8 +5932,7 @@ The following state arguments are supported:
         <span class="property-type"><a href="#endpointglobaldeliveryrulemodifyresponseheaderaction">[]Endpoint<wbr>Global<wbr>Delivery<wbr>Rule<wbr>Modify<wbr>Response<wbr>Header<wbr>Action</a></span>
     </dt>
     <dd>{{% md %}}A `modify_response_header_action` block as defined below.
-{{% /md %}}</dd>
-    <dt class="property-optional"
+{{% /md %}}</dd><dt class="property-optional"
             title="Optional">
         <span id="urlredirectaction_go">
 <a href="#urlredirectaction_go" style="color: inherit; text-decoration: inherit;">Url<wbr>Redirect<wbr>Action</a>
@@ -6710,8 +5941,7 @@ The following state arguments are supported:
         <span class="property-type"><a href="#endpointglobaldeliveryruleurlredirectaction">Endpoint<wbr>Global<wbr>Delivery<wbr>Rule<wbr>Url<wbr>Redirect<wbr>Action</a></span>
     </dt>
     <dd>{{% md %}}A `url_redirect_action` block as defined below.
-{{% /md %}}</dd>
-    <dt class="property-optional"
+{{% /md %}}</dd><dt class="property-optional"
             title="Optional">
         <span id="urlrewriteaction_go">
 <a href="#urlrewriteaction_go" style="color: inherit; text-decoration: inherit;">Url<wbr>Rewrite<wbr>Action</a>
@@ -6720,14 +5950,11 @@ The following state arguments are supported:
         <span class="property-type"><a href="#endpointglobaldeliveryruleurlrewriteaction">Endpoint<wbr>Global<wbr>Delivery<wbr>Rule<wbr>Url<wbr>Rewrite<wbr>Action</a></span>
     </dt>
     <dd>{{% md %}}A `url_rewrite_action` block as defined below.
-{{% /md %}}</dd>
-</dl>
+{{% /md %}}</dd></dl>
 {{% /choosable %}}
 
 {{% choosable language nodejs %}}
-<dl class="resources-properties">
-
-    <dt class="property-optional"
+<dl class="resources-properties"><dt class="property-optional"
             title="Optional">
         <span id="cacheexpirationaction_nodejs">
 <a href="#cacheexpirationaction_nodejs" style="color: inherit; text-decoration: inherit;">cache<wbr>Expiration<wbr>Action</a>
@@ -6736,8 +5963,7 @@ The following state arguments are supported:
         <span class="property-type"><a href="#endpointglobaldeliveryrulecacheexpirationaction">Endpoint<wbr>Global<wbr>Delivery<wbr>Rule<wbr>Cache<wbr>Expiration<wbr>Action</a></span>
     </dt>
     <dd>{{% md %}}A `cache_expiration_action` block as defined above.
-{{% /md %}}</dd>
-    <dt class="property-optional"
+{{% /md %}}</dd><dt class="property-optional"
             title="Optional">
         <span id="cachekeyquerystringaction_nodejs">
 <a href="#cachekeyquerystringaction_nodejs" style="color: inherit; text-decoration: inherit;">cache<wbr>Key<wbr>Query<wbr>String<wbr>Action</a>
@@ -6746,8 +5972,7 @@ The following state arguments are supported:
         <span class="property-type"><a href="#endpointglobaldeliveryrulecachekeyquerystringaction">Endpoint<wbr>Global<wbr>Delivery<wbr>Rule<wbr>Cache<wbr>Key<wbr>Query<wbr>String<wbr>Action</a></span>
     </dt>
     <dd>{{% md %}}A `cache_key_query_string_action` block as defined above.
-{{% /md %}}</dd>
-    <dt class="property-optional"
+{{% /md %}}</dd><dt class="property-optional"
             title="Optional">
         <span id="modifyrequestheaderactions_nodejs">
 <a href="#modifyrequestheaderactions_nodejs" style="color: inherit; text-decoration: inherit;">modify<wbr>Request<wbr>Header<wbr>Actions</a>
@@ -6756,8 +5981,7 @@ The following state arguments are supported:
         <span class="property-type"><a href="#endpointglobaldeliveryrulemodifyrequestheaderaction">Endpoint<wbr>Global<wbr>Delivery<wbr>Rule<wbr>Modify<wbr>Request<wbr>Header<wbr>Action[]</a></span>
     </dt>
     <dd>{{% md %}}A `modify_request_header_action` block as defined below.
-{{% /md %}}</dd>
-    <dt class="property-optional"
+{{% /md %}}</dd><dt class="property-optional"
             title="Optional">
         <span id="modifyresponseheaderactions_nodejs">
 <a href="#modifyresponseheaderactions_nodejs" style="color: inherit; text-decoration: inherit;">modify<wbr>Response<wbr>Header<wbr>Actions</a>
@@ -6766,8 +5990,7 @@ The following state arguments are supported:
         <span class="property-type"><a href="#endpointglobaldeliveryrulemodifyresponseheaderaction">Endpoint<wbr>Global<wbr>Delivery<wbr>Rule<wbr>Modify<wbr>Response<wbr>Header<wbr>Action[]</a></span>
     </dt>
     <dd>{{% md %}}A `modify_response_header_action` block as defined below.
-{{% /md %}}</dd>
-    <dt class="property-optional"
+{{% /md %}}</dd><dt class="property-optional"
             title="Optional">
         <span id="urlredirectaction_nodejs">
 <a href="#urlredirectaction_nodejs" style="color: inherit; text-decoration: inherit;">url<wbr>Redirect<wbr>Action</a>
@@ -6776,8 +5999,7 @@ The following state arguments are supported:
         <span class="property-type"><a href="#endpointglobaldeliveryruleurlredirectaction">Endpoint<wbr>Global<wbr>Delivery<wbr>Rule<wbr>Url<wbr>Redirect<wbr>Action</a></span>
     </dt>
     <dd>{{% md %}}A `url_redirect_action` block as defined below.
-{{% /md %}}</dd>
-    <dt class="property-optional"
+{{% /md %}}</dd><dt class="property-optional"
             title="Optional">
         <span id="urlrewriteaction_nodejs">
 <a href="#urlrewriteaction_nodejs" style="color: inherit; text-decoration: inherit;">url<wbr>Rewrite<wbr>Action</a>
@@ -6786,14 +6008,11 @@ The following state arguments are supported:
         <span class="property-type"><a href="#endpointglobaldeliveryruleurlrewriteaction">Endpoint<wbr>Global<wbr>Delivery<wbr>Rule<wbr>Url<wbr>Rewrite<wbr>Action</a></span>
     </dt>
     <dd>{{% md %}}A `url_rewrite_action` block as defined below.
-{{% /md %}}</dd>
-</dl>
+{{% /md %}}</dd></dl>
 {{% /choosable %}}
 
 {{% choosable language python %}}
-<dl class="resources-properties">
-
-    <dt class="property-optional"
+<dl class="resources-properties"><dt class="property-optional"
             title="Optional">
         <span id="cache_expiration_action_python">
 <a href="#cache_expiration_action_python" style="color: inherit; text-decoration: inherit;">cache_<wbr>expiration_<wbr>action</a>
@@ -6802,8 +6021,7 @@ The following state arguments are supported:
         <span class="property-type"><a href="#endpointglobaldeliveryrulecacheexpirationaction">Endpoint<wbr>Global<wbr>Delivery<wbr>Rule<wbr>Cache<wbr>Expiration<wbr>Action<wbr>Args</a></span>
     </dt>
     <dd>{{% md %}}A `cache_expiration_action` block as defined above.
-{{% /md %}}</dd>
-    <dt class="property-optional"
+{{% /md %}}</dd><dt class="property-optional"
             title="Optional">
         <span id="cache_key_query_string_action_python">
 <a href="#cache_key_query_string_action_python" style="color: inherit; text-decoration: inherit;">cache_<wbr>key_<wbr>query_<wbr>string_<wbr>action</a>
@@ -6812,8 +6030,7 @@ The following state arguments are supported:
         <span class="property-type"><a href="#endpointglobaldeliveryrulecachekeyquerystringaction">Endpoint<wbr>Global<wbr>Delivery<wbr>Rule<wbr>Cache<wbr>Key<wbr>Query<wbr>String<wbr>Action<wbr>Args</a></span>
     </dt>
     <dd>{{% md %}}A `cache_key_query_string_action` block as defined above.
-{{% /md %}}</dd>
-    <dt class="property-optional"
+{{% /md %}}</dd><dt class="property-optional"
             title="Optional">
         <span id="modify_request_header_actions_python">
 <a href="#modify_request_header_actions_python" style="color: inherit; text-decoration: inherit;">modify_<wbr>request_<wbr>header_<wbr>actions</a>
@@ -6822,8 +6039,7 @@ The following state arguments are supported:
         <span class="property-type"><a href="#endpointglobaldeliveryrulemodifyrequestheaderaction">Sequence[Endpoint<wbr>Global<wbr>Delivery<wbr>Rule<wbr>Modify<wbr>Request<wbr>Header<wbr>Action<wbr>Args]</a></span>
     </dt>
     <dd>{{% md %}}A `modify_request_header_action` block as defined below.
-{{% /md %}}</dd>
-    <dt class="property-optional"
+{{% /md %}}</dd><dt class="property-optional"
             title="Optional">
         <span id="modify_response_header_actions_python">
 <a href="#modify_response_header_actions_python" style="color: inherit; text-decoration: inherit;">modify_<wbr>response_<wbr>header_<wbr>actions</a>
@@ -6832,8 +6048,7 @@ The following state arguments are supported:
         <span class="property-type"><a href="#endpointglobaldeliveryrulemodifyresponseheaderaction">Sequence[Endpoint<wbr>Global<wbr>Delivery<wbr>Rule<wbr>Modify<wbr>Response<wbr>Header<wbr>Action<wbr>Args]</a></span>
     </dt>
     <dd>{{% md %}}A `modify_response_header_action` block as defined below.
-{{% /md %}}</dd>
-    <dt class="property-optional"
+{{% /md %}}</dd><dt class="property-optional"
             title="Optional">
         <span id="url_redirect_action_python">
 <a href="#url_redirect_action_python" style="color: inherit; text-decoration: inherit;">url_<wbr>redirect_<wbr>action</a>
@@ -6842,8 +6057,7 @@ The following state arguments are supported:
         <span class="property-type"><a href="#endpointglobaldeliveryruleurlredirectaction">Endpoint<wbr>Global<wbr>Delivery<wbr>Rule<wbr>Url<wbr>Redirect<wbr>Action<wbr>Args</a></span>
     </dt>
     <dd>{{% md %}}A `url_redirect_action` block as defined below.
-{{% /md %}}</dd>
-    <dt class="property-optional"
+{{% /md %}}</dd><dt class="property-optional"
             title="Optional">
         <span id="url_rewrite_action_python">
 <a href="#url_rewrite_action_python" style="color: inherit; text-decoration: inherit;">url_<wbr>rewrite_<wbr>action</a>
@@ -6852,16 +6066,13 @@ The following state arguments are supported:
         <span class="property-type"><a href="#endpointglobaldeliveryruleurlrewriteaction">Endpoint<wbr>Global<wbr>Delivery<wbr>Rule<wbr>Url<wbr>Rewrite<wbr>Action<wbr>Args</a></span>
     </dt>
     <dd>{{% md %}}A `url_rewrite_action` block as defined below.
-{{% /md %}}</dd>
-</dl>
+{{% /md %}}</dd></dl>
 {{% /choosable %}}
 
 <h4 id="endpointglobaldeliveryrulecacheexpirationaction">Endpoint<wbr>Global<wbr>Delivery<wbr>Rule<wbr>Cache<wbr>Expiration<wbr>Action</h4>
 
 {{% choosable language csharp %}}
-<dl class="resources-properties">
-
-    <dt class="property-required"
+<dl class="resources-properties"><dt class="property-required"
             title="Required">
         <span id="behavior_csharp">
 <a href="#behavior_csharp" style="color: inherit; text-decoration: inherit;">Behavior</a>
@@ -6870,8 +6081,7 @@ The following state arguments are supported:
         <span class="property-type">string</span>
     </dt>
     <dd>{{% md %}}The behavior of the cache. Valid values are `BypassCache`, `Override` and `SetIfMissing`.
-{{% /md %}}</dd>
-    <dt class="property-optional"
+{{% /md %}}</dd><dt class="property-optional"
             title="Optional">
         <span id="duration_csharp">
 <a href="#duration_csharp" style="color: inherit; text-decoration: inherit;">Duration</a>
@@ -6880,14 +6090,11 @@ The following state arguments are supported:
         <span class="property-type">string</span>
     </dt>
     <dd>{{% md %}}Duration of the cache. Only allowed when `behavior` is set to `Override` or `SetIfMissing`. Format: `[d.]hh:mm:ss`
-{{% /md %}}</dd>
-</dl>
+{{% /md %}}</dd></dl>
 {{% /choosable %}}
 
 {{% choosable language go %}}
-<dl class="resources-properties">
-
-    <dt class="property-required"
+<dl class="resources-properties"><dt class="property-required"
             title="Required">
         <span id="behavior_go">
 <a href="#behavior_go" style="color: inherit; text-decoration: inherit;">Behavior</a>
@@ -6896,8 +6103,7 @@ The following state arguments are supported:
         <span class="property-type">string</span>
     </dt>
     <dd>{{% md %}}The behavior of the cache. Valid values are `BypassCache`, `Override` and `SetIfMissing`.
-{{% /md %}}</dd>
-    <dt class="property-optional"
+{{% /md %}}</dd><dt class="property-optional"
             title="Optional">
         <span id="duration_go">
 <a href="#duration_go" style="color: inherit; text-decoration: inherit;">Duration</a>
@@ -6906,14 +6112,11 @@ The following state arguments are supported:
         <span class="property-type">string</span>
     </dt>
     <dd>{{% md %}}Duration of the cache. Only allowed when `behavior` is set to `Override` or `SetIfMissing`. Format: `[d.]hh:mm:ss`
-{{% /md %}}</dd>
-</dl>
+{{% /md %}}</dd></dl>
 {{% /choosable %}}
 
 {{% choosable language nodejs %}}
-<dl class="resources-properties">
-
-    <dt class="property-required"
+<dl class="resources-properties"><dt class="property-required"
             title="Required">
         <span id="behavior_nodejs">
 <a href="#behavior_nodejs" style="color: inherit; text-decoration: inherit;">behavior</a>
@@ -6922,8 +6125,7 @@ The following state arguments are supported:
         <span class="property-type">string</span>
     </dt>
     <dd>{{% md %}}The behavior of the cache. Valid values are `BypassCache`, `Override` and `SetIfMissing`.
-{{% /md %}}</dd>
-    <dt class="property-optional"
+{{% /md %}}</dd><dt class="property-optional"
             title="Optional">
         <span id="duration_nodejs">
 <a href="#duration_nodejs" style="color: inherit; text-decoration: inherit;">duration</a>
@@ -6932,14 +6134,11 @@ The following state arguments are supported:
         <span class="property-type">string</span>
     </dt>
     <dd>{{% md %}}Duration of the cache. Only allowed when `behavior` is set to `Override` or `SetIfMissing`. Format: `[d.]hh:mm:ss`
-{{% /md %}}</dd>
-</dl>
+{{% /md %}}</dd></dl>
 {{% /choosable %}}
 
 {{% choosable language python %}}
-<dl class="resources-properties">
-
-    <dt class="property-required"
+<dl class="resources-properties"><dt class="property-required"
             title="Required">
         <span id="behavior_python">
 <a href="#behavior_python" style="color: inherit; text-decoration: inherit;">behavior</a>
@@ -6948,8 +6147,7 @@ The following state arguments are supported:
         <span class="property-type">str</span>
     </dt>
     <dd>{{% md %}}The behavior of the cache. Valid values are `BypassCache`, `Override` and `SetIfMissing`.
-{{% /md %}}</dd>
-    <dt class="property-optional"
+{{% /md %}}</dd><dt class="property-optional"
             title="Optional">
         <span id="duration_python">
 <a href="#duration_python" style="color: inherit; text-decoration: inherit;">duration</a>
@@ -6958,16 +6156,13 @@ The following state arguments are supported:
         <span class="property-type">str</span>
     </dt>
     <dd>{{% md %}}Duration of the cache. Only allowed when `behavior` is set to `Override` or `SetIfMissing`. Format: `[d.]hh:mm:ss`
-{{% /md %}}</dd>
-</dl>
+{{% /md %}}</dd></dl>
 {{% /choosable %}}
 
 <h4 id="endpointglobaldeliveryrulecachekeyquerystringaction">Endpoint<wbr>Global<wbr>Delivery<wbr>Rule<wbr>Cache<wbr>Key<wbr>Query<wbr>String<wbr>Action</h4>
 
 {{% choosable language csharp %}}
-<dl class="resources-properties">
-
-    <dt class="property-required"
+<dl class="resources-properties"><dt class="property-required"
             title="Required">
         <span id="behavior_csharp">
 <a href="#behavior_csharp" style="color: inherit; text-decoration: inherit;">Behavior</a>
@@ -6976,8 +6171,7 @@ The following state arguments are supported:
         <span class="property-type">string</span>
     </dt>
     <dd>{{% md %}}The behavior of the cache key for query strings. Valid values are `Exclude`, `ExcludeAll`, `Include` and `IncludeAll`.
-{{% /md %}}</dd>
-    <dt class="property-optional"
+{{% /md %}}</dd><dt class="property-optional"
             title="Optional">
         <span id="parameters_csharp">
 <a href="#parameters_csharp" style="color: inherit; text-decoration: inherit;">Parameters</a>
@@ -6986,14 +6180,11 @@ The following state arguments are supported:
         <span class="property-type">string</span>
     </dt>
     <dd>{{% md %}}Comma separated list of parameter values.
-{{% /md %}}</dd>
-</dl>
+{{% /md %}}</dd></dl>
 {{% /choosable %}}
 
 {{% choosable language go %}}
-<dl class="resources-properties">
-
-    <dt class="property-required"
+<dl class="resources-properties"><dt class="property-required"
             title="Required">
         <span id="behavior_go">
 <a href="#behavior_go" style="color: inherit; text-decoration: inherit;">Behavior</a>
@@ -7002,8 +6193,7 @@ The following state arguments are supported:
         <span class="property-type">string</span>
     </dt>
     <dd>{{% md %}}The behavior of the cache key for query strings. Valid values are `Exclude`, `ExcludeAll`, `Include` and `IncludeAll`.
-{{% /md %}}</dd>
-    <dt class="property-optional"
+{{% /md %}}</dd><dt class="property-optional"
             title="Optional">
         <span id="parameters_go">
 <a href="#parameters_go" style="color: inherit; text-decoration: inherit;">Parameters</a>
@@ -7012,14 +6202,11 @@ The following state arguments are supported:
         <span class="property-type">string</span>
     </dt>
     <dd>{{% md %}}Comma separated list of parameter values.
-{{% /md %}}</dd>
-</dl>
+{{% /md %}}</dd></dl>
 {{% /choosable %}}
 
 {{% choosable language nodejs %}}
-<dl class="resources-properties">
-
-    <dt class="property-required"
+<dl class="resources-properties"><dt class="property-required"
             title="Required">
         <span id="behavior_nodejs">
 <a href="#behavior_nodejs" style="color: inherit; text-decoration: inherit;">behavior</a>
@@ -7028,8 +6215,7 @@ The following state arguments are supported:
         <span class="property-type">string</span>
     </dt>
     <dd>{{% md %}}The behavior of the cache key for query strings. Valid values are `Exclude`, `ExcludeAll`, `Include` and `IncludeAll`.
-{{% /md %}}</dd>
-    <dt class="property-optional"
+{{% /md %}}</dd><dt class="property-optional"
             title="Optional">
         <span id="parameters_nodejs">
 <a href="#parameters_nodejs" style="color: inherit; text-decoration: inherit;">parameters</a>
@@ -7038,14 +6224,11 @@ The following state arguments are supported:
         <span class="property-type">string</span>
     </dt>
     <dd>{{% md %}}Comma separated list of parameter values.
-{{% /md %}}</dd>
-</dl>
+{{% /md %}}</dd></dl>
 {{% /choosable %}}
 
 {{% choosable language python %}}
-<dl class="resources-properties">
-
-    <dt class="property-required"
+<dl class="resources-properties"><dt class="property-required"
             title="Required">
         <span id="behavior_python">
 <a href="#behavior_python" style="color: inherit; text-decoration: inherit;">behavior</a>
@@ -7054,8 +6237,7 @@ The following state arguments are supported:
         <span class="property-type">str</span>
     </dt>
     <dd>{{% md %}}The behavior of the cache key for query strings. Valid values are `Exclude`, `ExcludeAll`, `Include` and `IncludeAll`.
-{{% /md %}}</dd>
-    <dt class="property-optional"
+{{% /md %}}</dd><dt class="property-optional"
             title="Optional">
         <span id="parameters_python">
 <a href="#parameters_python" style="color: inherit; text-decoration: inherit;">parameters</a>
@@ -7064,16 +6246,13 @@ The following state arguments are supported:
         <span class="property-type">str</span>
     </dt>
     <dd>{{% md %}}Comma separated list of parameter values.
-{{% /md %}}</dd>
-</dl>
+{{% /md %}}</dd></dl>
 {{% /choosable %}}
 
 <h4 id="endpointglobaldeliveryrulemodifyrequestheaderaction">Endpoint<wbr>Global<wbr>Delivery<wbr>Rule<wbr>Modify<wbr>Request<wbr>Header<wbr>Action</h4>
 
 {{% choosable language csharp %}}
-<dl class="resources-properties">
-
-    <dt class="property-required"
+<dl class="resources-properties"><dt class="property-required"
             title="Required">
         <span id="action_csharp">
 <a href="#action_csharp" style="color: inherit; text-decoration: inherit;">Action</a>
@@ -7082,8 +6261,7 @@ The following state arguments are supported:
         <span class="property-type">string</span>
     </dt>
     <dd>{{% md %}}Action to be executed on a header value. Valid values are `Append`, `Delete` and `Overwrite`.
-{{% /md %}}</dd>
-    <dt class="property-required"
+{{% /md %}}</dd><dt class="property-required"
             title="Required">
         <span id="name_csharp">
 <a href="#name_csharp" style="color: inherit; text-decoration: inherit;">Name</a>
@@ -7092,8 +6270,7 @@ The following state arguments are supported:
         <span class="property-type">string</span>
     </dt>
     <dd>{{% md %}}The header name.
-{{% /md %}}</dd>
-    <dt class="property-optional"
+{{% /md %}}</dd><dt class="property-optional"
             title="Optional">
         <span id="value_csharp">
 <a href="#value_csharp" style="color: inherit; text-decoration: inherit;">Value</a>
@@ -7102,14 +6279,11 @@ The following state arguments are supported:
         <span class="property-type">string</span>
     </dt>
     <dd>{{% md %}}The value of the header. Only needed when `action` is set to `Append` or `overwrite`.
-{{% /md %}}</dd>
-</dl>
+{{% /md %}}</dd></dl>
 {{% /choosable %}}
 
 {{% choosable language go %}}
-<dl class="resources-properties">
-
-    <dt class="property-required"
+<dl class="resources-properties"><dt class="property-required"
             title="Required">
         <span id="action_go">
 <a href="#action_go" style="color: inherit; text-decoration: inherit;">Action</a>
@@ -7118,8 +6292,7 @@ The following state arguments are supported:
         <span class="property-type">string</span>
     </dt>
     <dd>{{% md %}}Action to be executed on a header value. Valid values are `Append`, `Delete` and `Overwrite`.
-{{% /md %}}</dd>
-    <dt class="property-required"
+{{% /md %}}</dd><dt class="property-required"
             title="Required">
         <span id="name_go">
 <a href="#name_go" style="color: inherit; text-decoration: inherit;">Name</a>
@@ -7128,8 +6301,7 @@ The following state arguments are supported:
         <span class="property-type">string</span>
     </dt>
     <dd>{{% md %}}The header name.
-{{% /md %}}</dd>
-    <dt class="property-optional"
+{{% /md %}}</dd><dt class="property-optional"
             title="Optional">
         <span id="value_go">
 <a href="#value_go" style="color: inherit; text-decoration: inherit;">Value</a>
@@ -7138,14 +6310,11 @@ The following state arguments are supported:
         <span class="property-type">string</span>
     </dt>
     <dd>{{% md %}}The value of the header. Only needed when `action` is set to `Append` or `overwrite`.
-{{% /md %}}</dd>
-</dl>
+{{% /md %}}</dd></dl>
 {{% /choosable %}}
 
 {{% choosable language nodejs %}}
-<dl class="resources-properties">
-
-    <dt class="property-required"
+<dl class="resources-properties"><dt class="property-required"
             title="Required">
         <span id="action_nodejs">
 <a href="#action_nodejs" style="color: inherit; text-decoration: inherit;">action</a>
@@ -7154,8 +6323,7 @@ The following state arguments are supported:
         <span class="property-type">string</span>
     </dt>
     <dd>{{% md %}}Action to be executed on a header value. Valid values are `Append`, `Delete` and `Overwrite`.
-{{% /md %}}</dd>
-    <dt class="property-required"
+{{% /md %}}</dd><dt class="property-required"
             title="Required">
         <span id="name_nodejs">
 <a href="#name_nodejs" style="color: inherit; text-decoration: inherit;">name</a>
@@ -7164,8 +6332,7 @@ The following state arguments are supported:
         <span class="property-type">string</span>
     </dt>
     <dd>{{% md %}}The header name.
-{{% /md %}}</dd>
-    <dt class="property-optional"
+{{% /md %}}</dd><dt class="property-optional"
             title="Optional">
         <span id="value_nodejs">
 <a href="#value_nodejs" style="color: inherit; text-decoration: inherit;">value</a>
@@ -7174,14 +6341,11 @@ The following state arguments are supported:
         <span class="property-type">string</span>
     </dt>
     <dd>{{% md %}}The value of the header. Only needed when `action` is set to `Append` or `overwrite`.
-{{% /md %}}</dd>
-</dl>
+{{% /md %}}</dd></dl>
 {{% /choosable %}}
 
 {{% choosable language python %}}
-<dl class="resources-properties">
-
-    <dt class="property-required"
+<dl class="resources-properties"><dt class="property-required"
             title="Required">
         <span id="action_python">
 <a href="#action_python" style="color: inherit; text-decoration: inherit;">action</a>
@@ -7190,8 +6354,7 @@ The following state arguments are supported:
         <span class="property-type">str</span>
     </dt>
     <dd>{{% md %}}Action to be executed on a header value. Valid values are `Append`, `Delete` and `Overwrite`.
-{{% /md %}}</dd>
-    <dt class="property-required"
+{{% /md %}}</dd><dt class="property-required"
             title="Required">
         <span id="name_python">
 <a href="#name_python" style="color: inherit; text-decoration: inherit;">name</a>
@@ -7200,8 +6363,7 @@ The following state arguments are supported:
         <span class="property-type">str</span>
     </dt>
     <dd>{{% md %}}The header name.
-{{% /md %}}</dd>
-    <dt class="property-optional"
+{{% /md %}}</dd><dt class="property-optional"
             title="Optional">
         <span id="value_python">
 <a href="#value_python" style="color: inherit; text-decoration: inherit;">value</a>
@@ -7210,16 +6372,13 @@ The following state arguments are supported:
         <span class="property-type">str</span>
     </dt>
     <dd>{{% md %}}The value of the header. Only needed when `action` is set to `Append` or `overwrite`.
-{{% /md %}}</dd>
-</dl>
+{{% /md %}}</dd></dl>
 {{% /choosable %}}
 
 <h4 id="endpointglobaldeliveryrulemodifyresponseheaderaction">Endpoint<wbr>Global<wbr>Delivery<wbr>Rule<wbr>Modify<wbr>Response<wbr>Header<wbr>Action</h4>
 
 {{% choosable language csharp %}}
-<dl class="resources-properties">
-
-    <dt class="property-required"
+<dl class="resources-properties"><dt class="property-required"
             title="Required">
         <span id="action_csharp">
 <a href="#action_csharp" style="color: inherit; text-decoration: inherit;">Action</a>
@@ -7228,8 +6387,7 @@ The following state arguments are supported:
         <span class="property-type">string</span>
     </dt>
     <dd>{{% md %}}Action to be executed on a header value. Valid values are `Append`, `Delete` and `Overwrite`.
-{{% /md %}}</dd>
-    <dt class="property-required"
+{{% /md %}}</dd><dt class="property-required"
             title="Required">
         <span id="name_csharp">
 <a href="#name_csharp" style="color: inherit; text-decoration: inherit;">Name</a>
@@ -7238,8 +6396,7 @@ The following state arguments are supported:
         <span class="property-type">string</span>
     </dt>
     <dd>{{% md %}}The header name.
-{{% /md %}}</dd>
-    <dt class="property-optional"
+{{% /md %}}</dd><dt class="property-optional"
             title="Optional">
         <span id="value_csharp">
 <a href="#value_csharp" style="color: inherit; text-decoration: inherit;">Value</a>
@@ -7248,14 +6405,11 @@ The following state arguments are supported:
         <span class="property-type">string</span>
     </dt>
     <dd>{{% md %}}The value of the header. Only needed when `action` is set to `Append` or `overwrite`.
-{{% /md %}}</dd>
-</dl>
+{{% /md %}}</dd></dl>
 {{% /choosable %}}
 
 {{% choosable language go %}}
-<dl class="resources-properties">
-
-    <dt class="property-required"
+<dl class="resources-properties"><dt class="property-required"
             title="Required">
         <span id="action_go">
 <a href="#action_go" style="color: inherit; text-decoration: inherit;">Action</a>
@@ -7264,8 +6418,7 @@ The following state arguments are supported:
         <span class="property-type">string</span>
     </dt>
     <dd>{{% md %}}Action to be executed on a header value. Valid values are `Append`, `Delete` and `Overwrite`.
-{{% /md %}}</dd>
-    <dt class="property-required"
+{{% /md %}}</dd><dt class="property-required"
             title="Required">
         <span id="name_go">
 <a href="#name_go" style="color: inherit; text-decoration: inherit;">Name</a>
@@ -7274,8 +6427,7 @@ The following state arguments are supported:
         <span class="property-type">string</span>
     </dt>
     <dd>{{% md %}}The header name.
-{{% /md %}}</dd>
-    <dt class="property-optional"
+{{% /md %}}</dd><dt class="property-optional"
             title="Optional">
         <span id="value_go">
 <a href="#value_go" style="color: inherit; text-decoration: inherit;">Value</a>
@@ -7284,14 +6436,11 @@ The following state arguments are supported:
         <span class="property-type">string</span>
     </dt>
     <dd>{{% md %}}The value of the header. Only needed when `action` is set to `Append` or `overwrite`.
-{{% /md %}}</dd>
-</dl>
+{{% /md %}}</dd></dl>
 {{% /choosable %}}
 
 {{% choosable language nodejs %}}
-<dl class="resources-properties">
-
-    <dt class="property-required"
+<dl class="resources-properties"><dt class="property-required"
             title="Required">
         <span id="action_nodejs">
 <a href="#action_nodejs" style="color: inherit; text-decoration: inherit;">action</a>
@@ -7300,8 +6449,7 @@ The following state arguments are supported:
         <span class="property-type">string</span>
     </dt>
     <dd>{{% md %}}Action to be executed on a header value. Valid values are `Append`, `Delete` and `Overwrite`.
-{{% /md %}}</dd>
-    <dt class="property-required"
+{{% /md %}}</dd><dt class="property-required"
             title="Required">
         <span id="name_nodejs">
 <a href="#name_nodejs" style="color: inherit; text-decoration: inherit;">name</a>
@@ -7310,8 +6458,7 @@ The following state arguments are supported:
         <span class="property-type">string</span>
     </dt>
     <dd>{{% md %}}The header name.
-{{% /md %}}</dd>
-    <dt class="property-optional"
+{{% /md %}}</dd><dt class="property-optional"
             title="Optional">
         <span id="value_nodejs">
 <a href="#value_nodejs" style="color: inherit; text-decoration: inherit;">value</a>
@@ -7320,14 +6467,11 @@ The following state arguments are supported:
         <span class="property-type">string</span>
     </dt>
     <dd>{{% md %}}The value of the header. Only needed when `action` is set to `Append` or `overwrite`.
-{{% /md %}}</dd>
-</dl>
+{{% /md %}}</dd></dl>
 {{% /choosable %}}
 
 {{% choosable language python %}}
-<dl class="resources-properties">
-
-    <dt class="property-required"
+<dl class="resources-properties"><dt class="property-required"
             title="Required">
         <span id="action_python">
 <a href="#action_python" style="color: inherit; text-decoration: inherit;">action</a>
@@ -7336,8 +6480,7 @@ The following state arguments are supported:
         <span class="property-type">str</span>
     </dt>
     <dd>{{% md %}}Action to be executed on a header value. Valid values are `Append`, `Delete` and `Overwrite`.
-{{% /md %}}</dd>
-    <dt class="property-required"
+{{% /md %}}</dd><dt class="property-required"
             title="Required">
         <span id="name_python">
 <a href="#name_python" style="color: inherit; text-decoration: inherit;">name</a>
@@ -7346,8 +6489,7 @@ The following state arguments are supported:
         <span class="property-type">str</span>
     </dt>
     <dd>{{% md %}}The header name.
-{{% /md %}}</dd>
-    <dt class="property-optional"
+{{% /md %}}</dd><dt class="property-optional"
             title="Optional">
         <span id="value_python">
 <a href="#value_python" style="color: inherit; text-decoration: inherit;">value</a>
@@ -7356,16 +6498,13 @@ The following state arguments are supported:
         <span class="property-type">str</span>
     </dt>
     <dd>{{% md %}}The value of the header. Only needed when `action` is set to `Append` or `overwrite`.
-{{% /md %}}</dd>
-</dl>
+{{% /md %}}</dd></dl>
 {{% /choosable %}}
 
 <h4 id="endpointglobaldeliveryruleurlredirectaction">Endpoint<wbr>Global<wbr>Delivery<wbr>Rule<wbr>Url<wbr>Redirect<wbr>Action</h4>
 
 {{% choosable language csharp %}}
-<dl class="resources-properties">
-
-    <dt class="property-required"
+<dl class="resources-properties"><dt class="property-required"
             title="Required">
         <span id="redirecttype_csharp">
 <a href="#redirecttype_csharp" style="color: inherit; text-decoration: inherit;">Redirect<wbr>Type</a>
@@ -7374,8 +6513,7 @@ The following state arguments are supported:
         <span class="property-type">string</span>
     </dt>
     <dd>{{% md %}}Type of the redirect. Valid values are `Found`, `Moved`, `PermanentRedirect` and `TemporaryRedirect`.
-{{% /md %}}</dd>
-    <dt class="property-optional"
+{{% /md %}}</dd><dt class="property-optional"
             title="Optional">
         <span id="fragment_csharp">
 <a href="#fragment_csharp" style="color: inherit; text-decoration: inherit;">Fragment</a>
@@ -7384,8 +6522,7 @@ The following state arguments are supported:
         <span class="property-type">string</span>
     </dt>
     <dd>{{% md %}}Specifies the fragment part of the URL. This value must not start with a `#`.
-{{% /md %}}</dd>
-    <dt class="property-optional"
+{{% /md %}}</dd><dt class="property-optional"
             title="Optional">
         <span id="hostname_csharp">
 <a href="#hostname_csharp" style="color: inherit; text-decoration: inherit;">Hostname</a>
@@ -7394,8 +6531,7 @@ The following state arguments are supported:
         <span class="property-type">string</span>
     </dt>
     <dd>{{% md %}}Specifies the hostname part of the URL.
-{{% /md %}}</dd>
-    <dt class="property-optional"
+{{% /md %}}</dd><dt class="property-optional"
             title="Optional">
         <span id="path_csharp">
 <a href="#path_csharp" style="color: inherit; text-decoration: inherit;">Path</a>
@@ -7404,8 +6540,7 @@ The following state arguments are supported:
         <span class="property-type">string</span>
     </dt>
     <dd>{{% md %}}Specifies the path part of the URL. This value must begin with a `/`.
-{{% /md %}}</dd>
-    <dt class="property-optional"
+{{% /md %}}</dd><dt class="property-optional"
             title="Optional">
         <span id="protocol_csharp">
 <a href="#protocol_csharp" style="color: inherit; text-decoration: inherit;">Protocol</a>
@@ -7414,8 +6549,7 @@ The following state arguments are supported:
         <span class="property-type">string</span>
     </dt>
     <dd>{{% md %}}Specifies the protocol part of the URL. Valid values are `Http` and `Https`.
-{{% /md %}}</dd>
-    <dt class="property-optional"
+{{% /md %}}</dd><dt class="property-optional"
             title="Optional">
         <span id="querystring_csharp">
 <a href="#querystring_csharp" style="color: inherit; text-decoration: inherit;">Query<wbr>String</a>
@@ -7424,14 +6558,11 @@ The following state arguments are supported:
         <span class="property-type">string</span>
     </dt>
     <dd>{{% md %}}Specifies the query string part of the URL. This value must not start with a `?` or `&` and must be in `<key>=<value>` format separated by `&`.
-{{% /md %}}</dd>
-</dl>
+{{% /md %}}</dd></dl>
 {{% /choosable %}}
 
 {{% choosable language go %}}
-<dl class="resources-properties">
-
-    <dt class="property-required"
+<dl class="resources-properties"><dt class="property-required"
             title="Required">
         <span id="redirecttype_go">
 <a href="#redirecttype_go" style="color: inherit; text-decoration: inherit;">Redirect<wbr>Type</a>
@@ -7440,8 +6571,7 @@ The following state arguments are supported:
         <span class="property-type">string</span>
     </dt>
     <dd>{{% md %}}Type of the redirect. Valid values are `Found`, `Moved`, `PermanentRedirect` and `TemporaryRedirect`.
-{{% /md %}}</dd>
-    <dt class="property-optional"
+{{% /md %}}</dd><dt class="property-optional"
             title="Optional">
         <span id="fragment_go">
 <a href="#fragment_go" style="color: inherit; text-decoration: inherit;">Fragment</a>
@@ -7450,8 +6580,7 @@ The following state arguments are supported:
         <span class="property-type">string</span>
     </dt>
     <dd>{{% md %}}Specifies the fragment part of the URL. This value must not start with a `#`.
-{{% /md %}}</dd>
-    <dt class="property-optional"
+{{% /md %}}</dd><dt class="property-optional"
             title="Optional">
         <span id="hostname_go">
 <a href="#hostname_go" style="color: inherit; text-decoration: inherit;">Hostname</a>
@@ -7460,8 +6589,7 @@ The following state arguments are supported:
         <span class="property-type">string</span>
     </dt>
     <dd>{{% md %}}Specifies the hostname part of the URL.
-{{% /md %}}</dd>
-    <dt class="property-optional"
+{{% /md %}}</dd><dt class="property-optional"
             title="Optional">
         <span id="path_go">
 <a href="#path_go" style="color: inherit; text-decoration: inherit;">Path</a>
@@ -7470,8 +6598,7 @@ The following state arguments are supported:
         <span class="property-type">string</span>
     </dt>
     <dd>{{% md %}}Specifies the path part of the URL. This value must begin with a `/`.
-{{% /md %}}</dd>
-    <dt class="property-optional"
+{{% /md %}}</dd><dt class="property-optional"
             title="Optional">
         <span id="protocol_go">
 <a href="#protocol_go" style="color: inherit; text-decoration: inherit;">Protocol</a>
@@ -7480,8 +6607,7 @@ The following state arguments are supported:
         <span class="property-type">string</span>
     </dt>
     <dd>{{% md %}}Specifies the protocol part of the URL. Valid values are `Http` and `Https`.
-{{% /md %}}</dd>
-    <dt class="property-optional"
+{{% /md %}}</dd><dt class="property-optional"
             title="Optional">
         <span id="querystring_go">
 <a href="#querystring_go" style="color: inherit; text-decoration: inherit;">Query<wbr>String</a>
@@ -7490,14 +6616,11 @@ The following state arguments are supported:
         <span class="property-type">string</span>
     </dt>
     <dd>{{% md %}}Specifies the query string part of the URL. This value must not start with a `?` or `&` and must be in `<key>=<value>` format separated by `&`.
-{{% /md %}}</dd>
-</dl>
+{{% /md %}}</dd></dl>
 {{% /choosable %}}
 
 {{% choosable language nodejs %}}
-<dl class="resources-properties">
-
-    <dt class="property-required"
+<dl class="resources-properties"><dt class="property-required"
             title="Required">
         <span id="redirecttype_nodejs">
 <a href="#redirecttype_nodejs" style="color: inherit; text-decoration: inherit;">redirect<wbr>Type</a>
@@ -7506,8 +6629,7 @@ The following state arguments are supported:
         <span class="property-type">string</span>
     </dt>
     <dd>{{% md %}}Type of the redirect. Valid values are `Found`, `Moved`, `PermanentRedirect` and `TemporaryRedirect`.
-{{% /md %}}</dd>
-    <dt class="property-optional"
+{{% /md %}}</dd><dt class="property-optional"
             title="Optional">
         <span id="fragment_nodejs">
 <a href="#fragment_nodejs" style="color: inherit; text-decoration: inherit;">fragment</a>
@@ -7516,8 +6638,7 @@ The following state arguments are supported:
         <span class="property-type">string</span>
     </dt>
     <dd>{{% md %}}Specifies the fragment part of the URL. This value must not start with a `#`.
-{{% /md %}}</dd>
-    <dt class="property-optional"
+{{% /md %}}</dd><dt class="property-optional"
             title="Optional">
         <span id="hostname_nodejs">
 <a href="#hostname_nodejs" style="color: inherit; text-decoration: inherit;">hostname</a>
@@ -7526,8 +6647,7 @@ The following state arguments are supported:
         <span class="property-type">string</span>
     </dt>
     <dd>{{% md %}}Specifies the hostname part of the URL.
-{{% /md %}}</dd>
-    <dt class="property-optional"
+{{% /md %}}</dd><dt class="property-optional"
             title="Optional">
         <span id="path_nodejs">
 <a href="#path_nodejs" style="color: inherit; text-decoration: inherit;">path</a>
@@ -7536,8 +6656,7 @@ The following state arguments are supported:
         <span class="property-type">string</span>
     </dt>
     <dd>{{% md %}}Specifies the path part of the URL. This value must begin with a `/`.
-{{% /md %}}</dd>
-    <dt class="property-optional"
+{{% /md %}}</dd><dt class="property-optional"
             title="Optional">
         <span id="protocol_nodejs">
 <a href="#protocol_nodejs" style="color: inherit; text-decoration: inherit;">protocol</a>
@@ -7546,8 +6665,7 @@ The following state arguments are supported:
         <span class="property-type">string</span>
     </dt>
     <dd>{{% md %}}Specifies the protocol part of the URL. Valid values are `Http` and `Https`.
-{{% /md %}}</dd>
-    <dt class="property-optional"
+{{% /md %}}</dd><dt class="property-optional"
             title="Optional">
         <span id="querystring_nodejs">
 <a href="#querystring_nodejs" style="color: inherit; text-decoration: inherit;">query<wbr>String</a>
@@ -7556,14 +6674,11 @@ The following state arguments are supported:
         <span class="property-type">string</span>
     </dt>
     <dd>{{% md %}}Specifies the query string part of the URL. This value must not start with a `?` or `&` and must be in `<key>=<value>` format separated by `&`.
-{{% /md %}}</dd>
-</dl>
+{{% /md %}}</dd></dl>
 {{% /choosable %}}
 
 {{% choosable language python %}}
-<dl class="resources-properties">
-
-    <dt class="property-required"
+<dl class="resources-properties"><dt class="property-required"
             title="Required">
         <span id="redirect_type_python">
 <a href="#redirect_type_python" style="color: inherit; text-decoration: inherit;">redirect_<wbr>type</a>
@@ -7572,8 +6687,7 @@ The following state arguments are supported:
         <span class="property-type">str</span>
     </dt>
     <dd>{{% md %}}Type of the redirect. Valid values are `Found`, `Moved`, `PermanentRedirect` and `TemporaryRedirect`.
-{{% /md %}}</dd>
-    <dt class="property-optional"
+{{% /md %}}</dd><dt class="property-optional"
             title="Optional">
         <span id="fragment_python">
 <a href="#fragment_python" style="color: inherit; text-decoration: inherit;">fragment</a>
@@ -7582,8 +6696,7 @@ The following state arguments are supported:
         <span class="property-type">str</span>
     </dt>
     <dd>{{% md %}}Specifies the fragment part of the URL. This value must not start with a `#`.
-{{% /md %}}</dd>
-    <dt class="property-optional"
+{{% /md %}}</dd><dt class="property-optional"
             title="Optional">
         <span id="hostname_python">
 <a href="#hostname_python" style="color: inherit; text-decoration: inherit;">hostname</a>
@@ -7592,8 +6705,7 @@ The following state arguments are supported:
         <span class="property-type">str</span>
     </dt>
     <dd>{{% md %}}Specifies the hostname part of the URL.
-{{% /md %}}</dd>
-    <dt class="property-optional"
+{{% /md %}}</dd><dt class="property-optional"
             title="Optional">
         <span id="path_python">
 <a href="#path_python" style="color: inherit; text-decoration: inherit;">path</a>
@@ -7602,8 +6714,7 @@ The following state arguments are supported:
         <span class="property-type">str</span>
     </dt>
     <dd>{{% md %}}Specifies the path part of the URL. This value must begin with a `/`.
-{{% /md %}}</dd>
-    <dt class="property-optional"
+{{% /md %}}</dd><dt class="property-optional"
             title="Optional">
         <span id="protocol_python">
 <a href="#protocol_python" style="color: inherit; text-decoration: inherit;">protocol</a>
@@ -7612,8 +6723,7 @@ The following state arguments are supported:
         <span class="property-type">str</span>
     </dt>
     <dd>{{% md %}}Specifies the protocol part of the URL. Valid values are `Http` and `Https`.
-{{% /md %}}</dd>
-    <dt class="property-optional"
+{{% /md %}}</dd><dt class="property-optional"
             title="Optional">
         <span id="query_string_python">
 <a href="#query_string_python" style="color: inherit; text-decoration: inherit;">query_<wbr>string</a>
@@ -7622,16 +6732,13 @@ The following state arguments are supported:
         <span class="property-type">str</span>
     </dt>
     <dd>{{% md %}}Specifies the query string part of the URL. This value must not start with a `?` or `&` and must be in `<key>=<value>` format separated by `&`.
-{{% /md %}}</dd>
-</dl>
+{{% /md %}}</dd></dl>
 {{% /choosable %}}
 
 <h4 id="endpointglobaldeliveryruleurlrewriteaction">Endpoint<wbr>Global<wbr>Delivery<wbr>Rule<wbr>Url<wbr>Rewrite<wbr>Action</h4>
 
 {{% choosable language csharp %}}
-<dl class="resources-properties">
-
-    <dt class="property-required"
+<dl class="resources-properties"><dt class="property-required"
             title="Required">
         <span id="destination_csharp">
 <a href="#destination_csharp" style="color: inherit; text-decoration: inherit;">Destination</a>
@@ -7640,8 +6747,7 @@ The following state arguments are supported:
         <span class="property-type">string</span>
     </dt>
     <dd>{{% md %}}This value must start with a `/` and can't be longer than 260 characters.
-{{% /md %}}</dd>
-    <dt class="property-required"
+{{% /md %}}</dd><dt class="property-required"
             title="Required">
         <span id="sourcepattern_csharp">
 <a href="#sourcepattern_csharp" style="color: inherit; text-decoration: inherit;">Source<wbr>Pattern</a>
@@ -7650,8 +6756,7 @@ The following state arguments are supported:
         <span class="property-type">string</span>
     </dt>
     <dd>{{% md %}}This value must start with a `/` and can't be longer than 260 characters.
-{{% /md %}}</dd>
-    <dt class="property-optional"
+{{% /md %}}</dd><dt class="property-optional"
             title="Optional">
         <span id="preserveunmatchedpath_csharp">
 <a href="#preserveunmatchedpath_csharp" style="color: inherit; text-decoration: inherit;">Preserve<wbr>Unmatched<wbr>Path</a>
@@ -7660,14 +6765,11 @@ The following state arguments are supported:
         <span class="property-type">bool</span>
     </dt>
     <dd>{{% md %}}Defaults to `true`.
-{{% /md %}}</dd>
-</dl>
+{{% /md %}}</dd></dl>
 {{% /choosable %}}
 
 {{% choosable language go %}}
-<dl class="resources-properties">
-
-    <dt class="property-required"
+<dl class="resources-properties"><dt class="property-required"
             title="Required">
         <span id="destination_go">
 <a href="#destination_go" style="color: inherit; text-decoration: inherit;">Destination</a>
@@ -7676,8 +6778,7 @@ The following state arguments are supported:
         <span class="property-type">string</span>
     </dt>
     <dd>{{% md %}}This value must start with a `/` and can't be longer than 260 characters.
-{{% /md %}}</dd>
-    <dt class="property-required"
+{{% /md %}}</dd><dt class="property-required"
             title="Required">
         <span id="sourcepattern_go">
 <a href="#sourcepattern_go" style="color: inherit; text-decoration: inherit;">Source<wbr>Pattern</a>
@@ -7686,8 +6787,7 @@ The following state arguments are supported:
         <span class="property-type">string</span>
     </dt>
     <dd>{{% md %}}This value must start with a `/` and can't be longer than 260 characters.
-{{% /md %}}</dd>
-    <dt class="property-optional"
+{{% /md %}}</dd><dt class="property-optional"
             title="Optional">
         <span id="preserveunmatchedpath_go">
 <a href="#preserveunmatchedpath_go" style="color: inherit; text-decoration: inherit;">Preserve<wbr>Unmatched<wbr>Path</a>
@@ -7696,14 +6796,11 @@ The following state arguments are supported:
         <span class="property-type">bool</span>
     </dt>
     <dd>{{% md %}}Defaults to `true`.
-{{% /md %}}</dd>
-</dl>
+{{% /md %}}</dd></dl>
 {{% /choosable %}}
 
 {{% choosable language nodejs %}}
-<dl class="resources-properties">
-
-    <dt class="property-required"
+<dl class="resources-properties"><dt class="property-required"
             title="Required">
         <span id="destination_nodejs">
 <a href="#destination_nodejs" style="color: inherit; text-decoration: inherit;">destination</a>
@@ -7712,8 +6809,7 @@ The following state arguments are supported:
         <span class="property-type">string</span>
     </dt>
     <dd>{{% md %}}This value must start with a `/` and can't be longer than 260 characters.
-{{% /md %}}</dd>
-    <dt class="property-required"
+{{% /md %}}</dd><dt class="property-required"
             title="Required">
         <span id="sourcepattern_nodejs">
 <a href="#sourcepattern_nodejs" style="color: inherit; text-decoration: inherit;">source<wbr>Pattern</a>
@@ -7722,8 +6818,7 @@ The following state arguments are supported:
         <span class="property-type">string</span>
     </dt>
     <dd>{{% md %}}This value must start with a `/` and can't be longer than 260 characters.
-{{% /md %}}</dd>
-    <dt class="property-optional"
+{{% /md %}}</dd><dt class="property-optional"
             title="Optional">
         <span id="preserveunmatchedpath_nodejs">
 <a href="#preserveunmatchedpath_nodejs" style="color: inherit; text-decoration: inherit;">preserve<wbr>Unmatched<wbr>Path</a>
@@ -7732,14 +6827,11 @@ The following state arguments are supported:
         <span class="property-type">boolean</span>
     </dt>
     <dd>{{% md %}}Defaults to `true`.
-{{% /md %}}</dd>
-</dl>
+{{% /md %}}</dd></dl>
 {{% /choosable %}}
 
 {{% choosable language python %}}
-<dl class="resources-properties">
-
-    <dt class="property-required"
+<dl class="resources-properties"><dt class="property-required"
             title="Required">
         <span id="destination_python">
 <a href="#destination_python" style="color: inherit; text-decoration: inherit;">destination</a>
@@ -7748,8 +6840,7 @@ The following state arguments are supported:
         <span class="property-type">str</span>
     </dt>
     <dd>{{% md %}}This value must start with a `/` and can't be longer than 260 characters.
-{{% /md %}}</dd>
-    <dt class="property-required"
+{{% /md %}}</dd><dt class="property-required"
             title="Required">
         <span id="source_pattern_python">
 <a href="#source_pattern_python" style="color: inherit; text-decoration: inherit;">source_<wbr>pattern</a>
@@ -7758,8 +6849,7 @@ The following state arguments are supported:
         <span class="property-type">str</span>
     </dt>
     <dd>{{% md %}}This value must start with a `/` and can't be longer than 260 characters.
-{{% /md %}}</dd>
-    <dt class="property-optional"
+{{% /md %}}</dd><dt class="property-optional"
             title="Optional">
         <span id="preserve_unmatched_path_python">
 <a href="#preserve_unmatched_path_python" style="color: inherit; text-decoration: inherit;">preserve_<wbr>unmatched_<wbr>path</a>
@@ -7768,16 +6858,13 @@ The following state arguments are supported:
         <span class="property-type">bool</span>
     </dt>
     <dd>{{% md %}}Defaults to `true`.
-{{% /md %}}</dd>
-</dl>
+{{% /md %}}</dd></dl>
 {{% /choosable %}}
 
 <h4 id="endpointorigin">Endpoint<wbr>Origin</h4>
 
 {{% choosable language csharp %}}
-<dl class="resources-properties">
-
-    <dt class="property-required"
+<dl class="resources-properties"><dt class="property-required"
             title="Required">
         <span id="hostname_csharp">
 <a href="#hostname_csharp" style="color: inherit; text-decoration: inherit;">Host<wbr>Name</a>
@@ -7786,8 +6873,7 @@ The following state arguments are supported:
         <span class="property-type">string</span>
     </dt>
     <dd>{{% md %}}A string that determines the hostname/IP address of the origin server. This string can be a domain name, Storage Account endpoint, Web App endpoint, IPv4 address or IPv6 address. Changing this forces a new resource to be created.
-{{% /md %}}</dd>
-    <dt class="property-required"
+{{% /md %}}</dd><dt class="property-required"
             title="Required">
         <span id="name_csharp">
 <a href="#name_csharp" style="color: inherit; text-decoration: inherit;">Name</a>
@@ -7796,8 +6882,7 @@ The following state arguments are supported:
         <span class="property-type">string</span>
     </dt>
     <dd>{{% md %}}The name of the origin. This is an arbitrary value. However, this value needs to be unique under the endpoint. Changing this forces a new resource to be created.
-{{% /md %}}</dd>
-    <dt class="property-optional"
+{{% /md %}}</dd><dt class="property-optional"
             title="Optional">
         <span id="httpport_csharp">
 <a href="#httpport_csharp" style="color: inherit; text-decoration: inherit;">Http<wbr>Port</a>
@@ -7806,8 +6891,7 @@ The following state arguments are supported:
         <span class="property-type">int</span>
     </dt>
     <dd>{{% md %}}The HTTP port of the origin. Defaults to `80`. Changing this forces a new resource to be created.
-{{% /md %}}</dd>
-    <dt class="property-optional"
+{{% /md %}}</dd><dt class="property-optional"
             title="Optional">
         <span id="httpsport_csharp">
 <a href="#httpsport_csharp" style="color: inherit; text-decoration: inherit;">Https<wbr>Port</a>
@@ -7816,14 +6900,11 @@ The following state arguments are supported:
         <span class="property-type">int</span>
     </dt>
     <dd>{{% md %}}The HTTPS port of the origin. Defaults to `443`. Changing this forces a new resource to be created.
-{{% /md %}}</dd>
-</dl>
+{{% /md %}}</dd></dl>
 {{% /choosable %}}
 
 {{% choosable language go %}}
-<dl class="resources-properties">
-
-    <dt class="property-required"
+<dl class="resources-properties"><dt class="property-required"
             title="Required">
         <span id="hostname_go">
 <a href="#hostname_go" style="color: inherit; text-decoration: inherit;">Host<wbr>Name</a>
@@ -7832,8 +6913,7 @@ The following state arguments are supported:
         <span class="property-type">string</span>
     </dt>
     <dd>{{% md %}}A string that determines the hostname/IP address of the origin server. This string can be a domain name, Storage Account endpoint, Web App endpoint, IPv4 address or IPv6 address. Changing this forces a new resource to be created.
-{{% /md %}}</dd>
-    <dt class="property-required"
+{{% /md %}}</dd><dt class="property-required"
             title="Required">
         <span id="name_go">
 <a href="#name_go" style="color: inherit; text-decoration: inherit;">Name</a>
@@ -7842,8 +6922,7 @@ The following state arguments are supported:
         <span class="property-type">string</span>
     </dt>
     <dd>{{% md %}}The name of the origin. This is an arbitrary value. However, this value needs to be unique under the endpoint. Changing this forces a new resource to be created.
-{{% /md %}}</dd>
-    <dt class="property-optional"
+{{% /md %}}</dd><dt class="property-optional"
             title="Optional">
         <span id="httpport_go">
 <a href="#httpport_go" style="color: inherit; text-decoration: inherit;">Http<wbr>Port</a>
@@ -7852,8 +6931,7 @@ The following state arguments are supported:
         <span class="property-type">int</span>
     </dt>
     <dd>{{% md %}}The HTTP port of the origin. Defaults to `80`. Changing this forces a new resource to be created.
-{{% /md %}}</dd>
-    <dt class="property-optional"
+{{% /md %}}</dd><dt class="property-optional"
             title="Optional">
         <span id="httpsport_go">
 <a href="#httpsport_go" style="color: inherit; text-decoration: inherit;">Https<wbr>Port</a>
@@ -7862,14 +6940,11 @@ The following state arguments are supported:
         <span class="property-type">int</span>
     </dt>
     <dd>{{% md %}}The HTTPS port of the origin. Defaults to `443`. Changing this forces a new resource to be created.
-{{% /md %}}</dd>
-</dl>
+{{% /md %}}</dd></dl>
 {{% /choosable %}}
 
 {{% choosable language nodejs %}}
-<dl class="resources-properties">
-
-    <dt class="property-required"
+<dl class="resources-properties"><dt class="property-required"
             title="Required">
         <span id="hostname_nodejs">
 <a href="#hostname_nodejs" style="color: inherit; text-decoration: inherit;">host<wbr>Name</a>
@@ -7878,8 +6953,7 @@ The following state arguments are supported:
         <span class="property-type">string</span>
     </dt>
     <dd>{{% md %}}A string that determines the hostname/IP address of the origin server. This string can be a domain name, Storage Account endpoint, Web App endpoint, IPv4 address or IPv6 address. Changing this forces a new resource to be created.
-{{% /md %}}</dd>
-    <dt class="property-required"
+{{% /md %}}</dd><dt class="property-required"
             title="Required">
         <span id="name_nodejs">
 <a href="#name_nodejs" style="color: inherit; text-decoration: inherit;">name</a>
@@ -7888,8 +6962,7 @@ The following state arguments are supported:
         <span class="property-type">string</span>
     </dt>
     <dd>{{% md %}}The name of the origin. This is an arbitrary value. However, this value needs to be unique under the endpoint. Changing this forces a new resource to be created.
-{{% /md %}}</dd>
-    <dt class="property-optional"
+{{% /md %}}</dd><dt class="property-optional"
             title="Optional">
         <span id="httpport_nodejs">
 <a href="#httpport_nodejs" style="color: inherit; text-decoration: inherit;">http<wbr>Port</a>
@@ -7898,8 +6971,7 @@ The following state arguments are supported:
         <span class="property-type">number</span>
     </dt>
     <dd>{{% md %}}The HTTP port of the origin. Defaults to `80`. Changing this forces a new resource to be created.
-{{% /md %}}</dd>
-    <dt class="property-optional"
+{{% /md %}}</dd><dt class="property-optional"
             title="Optional">
         <span id="httpsport_nodejs">
 <a href="#httpsport_nodejs" style="color: inherit; text-decoration: inherit;">https<wbr>Port</a>
@@ -7908,14 +6980,11 @@ The following state arguments are supported:
         <span class="property-type">number</span>
     </dt>
     <dd>{{% md %}}The HTTPS port of the origin. Defaults to `443`. Changing this forces a new resource to be created.
-{{% /md %}}</dd>
-</dl>
+{{% /md %}}</dd></dl>
 {{% /choosable %}}
 
 {{% choosable language python %}}
-<dl class="resources-properties">
-
-    <dt class="property-required"
+<dl class="resources-properties"><dt class="property-required"
             title="Required">
         <span id="host_name_python">
 <a href="#host_name_python" style="color: inherit; text-decoration: inherit;">host_<wbr>name</a>
@@ -7924,8 +6993,7 @@ The following state arguments are supported:
         <span class="property-type">str</span>
     </dt>
     <dd>{{% md %}}A string that determines the hostname/IP address of the origin server. This string can be a domain name, Storage Account endpoint, Web App endpoint, IPv4 address or IPv6 address. Changing this forces a new resource to be created.
-{{% /md %}}</dd>
-    <dt class="property-required"
+{{% /md %}}</dd><dt class="property-required"
             title="Required">
         <span id="name_python">
 <a href="#name_python" style="color: inherit; text-decoration: inherit;">name</a>
@@ -7934,8 +7002,7 @@ The following state arguments are supported:
         <span class="property-type">str</span>
     </dt>
     <dd>{{% md %}}The name of the origin. This is an arbitrary value. However, this value needs to be unique under the endpoint. Changing this forces a new resource to be created.
-{{% /md %}}</dd>
-    <dt class="property-optional"
+{{% /md %}}</dd><dt class="property-optional"
             title="Optional">
         <span id="http_port_python">
 <a href="#http_port_python" style="color: inherit; text-decoration: inherit;">http_<wbr>port</a>
@@ -7944,8 +7011,7 @@ The following state arguments are supported:
         <span class="property-type">int</span>
     </dt>
     <dd>{{% md %}}The HTTP port of the origin. Defaults to `80`. Changing this forces a new resource to be created.
-{{% /md %}}</dd>
-    <dt class="property-optional"
+{{% /md %}}</dd><dt class="property-optional"
             title="Optional">
         <span id="https_port_python">
 <a href="#https_port_python" style="color: inherit; text-decoration: inherit;">https_<wbr>port</a>
@@ -7954,8 +7020,7 @@ The following state arguments are supported:
         <span class="property-type">int</span>
     </dt>
     <dd>{{% md %}}The HTTPS port of the origin. Defaults to `443`. Changing this forces a new resource to be created.
-{{% /md %}}</dd>
-</dl>
+{{% /md %}}</dd></dl>
 {{% /choosable %}}
 ## Import
 
@@ -7976,6 +7041,6 @@ CDN Endpoints can be imported using the `resource id`, e.g.
 	<dt>License</dt>
 	<dd>Apache-2.0</dd>
 	<dt>Notes</dt>
-	<dd>This Pulumi package is based on the [`azurerm` Terraform Provider](https://github.com/terraform-providers/terraform-provider-azurerm).</dd>
+	<dd>{{% md %}}This Pulumi package is based on the [`azurerm` Terraform Provider](https://github.com/terraform-providers/terraform-provider-azurerm).{{% /md %}}</dd>
 </dl>
 

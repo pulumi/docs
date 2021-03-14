@@ -396,11 +396,17 @@ func main() {
 The `member` block is deprecated in favor of the `openstack.loadbalancer.MemberV1` resource.
 
 {{% examples %}}
+
 ## Example Usage
 
 {{< chooser language "typescript,python,go,csharp" / >}}
 
-{{% example csharp %}}
+
+
+
+
+{{< example csharp >}}
+
 ```csharp
 using Pulumi;
 using OpenStack = Pulumi.OpenStack;
@@ -425,9 +431,12 @@ class MyStack : Stack
 }
 ```
 
-{{% /example %}}
 
-{{% example go %}}
+{{< /example >}}
+
+
+{{< example go >}}
+
 ```go
 package main
 
@@ -455,9 +464,12 @@ func main() {
 }
 ```
 
-{{% /example %}}
 
-{{% example python %}}
+{{< /example >}}
+
+
+{{< example python >}}
+
 ```python
 import pulumi
 import pulumi_openstack as openstack
@@ -470,9 +482,12 @@ pool1 = openstack.loadbalancer.PoolV1("pool1",
     subnet_id="12345")
 ```
 
-{{% /example %}}
 
-{{% example typescript %}}
+{{< /example >}}
+
+
+{{< example typescript >}}
+
 
 ```typescript
 import * as pulumi from "@pulumi/pulumi";
@@ -487,9 +502,16 @@ const pool1 = new openstack.loadbalancer.PoolV1("pool_1", {
 });
 ```
 
-{{% /example %}}
+
+{{< /example >}}
+
+
+
+
 
 {{% /examples %}}
+
+
 
 
 ## Create a PoolV1 Resource {#create}
@@ -514,9 +536,7 @@ const pool1 = new openstack.loadbalancer.PoolV1("pool_1", {
 
 {{% choosable language nodejs %}}
 
-<dl class="resources-properties">
-  
-    <dt
+<dl class="resources-properties"><dt
         class="property-required" title="Required">
         <span>name</span>
         <span class="property-indicator"></span>
@@ -524,9 +544,7 @@ const pool1 = new openstack.loadbalancer.PoolV1("pool_1", {
     </dt>
     <dd>
       The unique name of the resource.
-    </dd>
-  
-    <dt
+    </dd><dt
         class="property-required" title="Required">
         <span>args</span>
         <span class="property-indicator"></span>
@@ -534,9 +552,7 @@ const pool1 = new openstack.loadbalancer.PoolV1("pool_1", {
     </dt>
     <dd>
       The arguments to resource properties.
-    </dd>
-  
-    <dt
+    </dd><dt
         class="property-optional" title="Optional">
         <span>opts</span>
         <span class="property-indicator"></span>
@@ -544,10 +560,7 @@ const pool1 = new openstack.loadbalancer.PoolV1("pool_1", {
     </dt>
     <dd>
       Bag of options to control resource&#39;s behavior.
-    </dd>
-  
-
-</dl>
+    </dd></dl>
 
 {{% /choosable %}}
 
@@ -573,9 +586,7 @@ const pool1 = new openstack.loadbalancer.PoolV1("pool_1", {
 
 {{% choosable language go %}}
 
-<dl class="resources-properties">
-  
-    <dt
+<dl class="resources-properties"><dt
         class="property-optional" title="Optional">
         <span>ctx</span>
         <span class="property-indicator"></span>
@@ -583,9 +594,7 @@ const pool1 = new openstack.loadbalancer.PoolV1("pool_1", {
     </dt>
     <dd>
       Context object for the current deployment.
-    </dd>
-  
-    <dt
+    </dd><dt
         class="property-required" title="Required">
         <span>name</span>
         <span class="property-indicator"></span>
@@ -593,9 +602,7 @@ const pool1 = new openstack.loadbalancer.PoolV1("pool_1", {
     </dt>
     <dd>
       The unique name of the resource.
-    </dd>
-  
-    <dt
+    </dd><dt
         class="property-required" title="Required">
         <span>args</span>
         <span class="property-indicator"></span>
@@ -603,9 +610,7 @@ const pool1 = new openstack.loadbalancer.PoolV1("pool_1", {
     </dt>
     <dd>
       The arguments to resource properties.
-    </dd>
-  
-    <dt
+    </dd><dt
         class="property-optional" title="Optional">
         <span>opts</span>
         <span class="property-indicator"></span>
@@ -613,18 +618,13 @@ const pool1 = new openstack.loadbalancer.PoolV1("pool_1", {
     </dt>
     <dd>
       Bag of options to control resource&#39;s behavior.
-    </dd>
-  
-
-</dl>
+    </dd></dl>
 
 {{% /choosable %}}
 
 {{% choosable language csharp %}}
 
-<dl class="resources-properties">
-  
-    <dt
+<dl class="resources-properties"><dt
         class="property-required" title="Required">
         <span>name</span>
         <span class="property-indicator"></span>
@@ -632,9 +632,7 @@ const pool1 = new openstack.loadbalancer.PoolV1("pool_1", {
     </dt>
     <dd>
       The unique name of the resource.
-    </dd>
-  
-    <dt
+    </dd><dt
         class="property-required" title="Required">
         <span>args</span>
         <span class="property-indicator"></span>
@@ -642,9 +640,7 @@ const pool1 = new openstack.loadbalancer.PoolV1("pool_1", {
     </dt>
     <dd>
       The arguments to resource properties.
-    </dd>
-  
-    <dt
+    </dd><dt
         class="property-optional" title="Optional">
         <span>opts</span>
         <span class="property-indicator"></span>
@@ -652,10 +648,7 @@ const pool1 = new openstack.loadbalancer.PoolV1("pool_1", {
     </dt>
     <dd>
       Bag of options to control resource&#39;s behavior.
-    </dd>
-  
-
-</dl>
+    </dd></dl>
 
 {{% /choosable %}}
 
@@ -670,9 +663,7 @@ The PoolV1 resource accepts the following [input]({{< relref "/docs/intro/concep
 
 
 {{% choosable language csharp %}}
-<dl class="resources-properties">
-
-    <dt class="property-required"
+<dl class="resources-properties"><dt class="property-required"
             title="Required">
         <span id="lbmethod_csharp">
 <a href="#lbmethod_csharp" style="color: inherit; text-decoration: inherit;">Lb<wbr>Method</a>
@@ -683,8 +674,7 @@ The PoolV1 resource accepts the following [input]({{< relref "/docs/intro/concep
     <dd>{{% md %}}The algorithm used to distribute load between the
 members of the pool. The current specification supports 'ROUND_ROBIN' and
 'LEAST_CONNECTIONS' as valid values for this attribute.
-{{% /md %}}</dd>
-    <dt class="property-required"
+{{% /md %}}</dd><dt class="property-required"
             title="Required">
         <span id="protocol_csharp">
 <a href="#protocol_csharp" style="color: inherit; text-decoration: inherit;">Protocol</a>
@@ -694,8 +684,7 @@ members of the pool. The current specification supports 'ROUND_ROBIN' and
     </dt>
     <dd>{{% md %}}The protocol used by the pool members, you can use
 either 'TCP, 'HTTP', or 'HTTPS'. Changing this creates a new pool.
-{{% /md %}}</dd>
-    <dt class="property-required"
+{{% /md %}}</dd><dt class="property-required"
             title="Required">
         <span id="subnetid_csharp">
 <a href="#subnetid_csharp" style="color: inherit; text-decoration: inherit;">Subnet<wbr>Id</a>
@@ -706,8 +695,7 @@ either 'TCP, 'HTTP', or 'HTTPS'. Changing this creates a new pool.
     <dd>{{% md %}}The network on which the members of the pool will be
 located. Only members that are on this network can be added to the pool.
 Changing this creates a new pool.
-{{% /md %}}</dd>
-    <dt class="property-optional"
+{{% /md %}}</dd><dt class="property-optional"
             title="Optional">
         <span id="lbprovider_csharp">
 <a href="#lbprovider_csharp" style="color: inherit; text-decoration: inherit;">Lb<wbr>Provider</a>
@@ -717,8 +705,7 @@ Changing this creates a new pool.
     </dt>
     <dd>{{% md %}}The backend load balancing provider. For example:
 `haproxy`, `F5`, etc.
-{{% /md %}}</dd>
-    <dt class="property-optional"
+{{% /md %}}</dd><dt class="property-optional"
             title="Optional">
         <span id="monitorids_csharp">
 <a href="#monitorids_csharp" style="color: inherit; text-decoration: inherit;">Monitor<wbr>Ids</a>
@@ -728,8 +715,7 @@ Changing this creates a new pool.
     </dt>
     <dd>{{% md %}}A list of IDs of monitors to associate with the
 pool.
-{{% /md %}}</dd>
-    <dt class="property-optional"
+{{% /md %}}</dd><dt class="property-optional"
             title="Optional">
         <span id="name_csharp">
 <a href="#name_csharp" style="color: inherit; text-decoration: inherit;">Name</a>
@@ -739,8 +725,7 @@ pool.
     </dt>
     <dd>{{% md %}}The name of the pool. Changing this updates the name of
 the existing pool.
-{{% /md %}}</dd>
-    <dt class="property-optional"
+{{% /md %}}</dd><dt class="property-optional"
             title="Optional">
         <span id="region_csharp">
 <a href="#region_csharp" style="color: inherit; text-decoration: inherit;">Region</a>
@@ -752,8 +737,7 @@ the existing pool.
 A Networking client is needed to create an LB pool. If omitted, the
 `region` argument of the provider is used. Changing this creates a new
 LB pool.
-{{% /md %}}</dd>
-    <dt class="property-optional"
+{{% /md %}}</dd><dt class="property-optional"
             title="Optional">
         <span id="tenantid_csharp">
 <a href="#tenantid_csharp" style="color: inherit; text-decoration: inherit;">Tenant<wbr>Id</a>
@@ -763,14 +747,11 @@ LB pool.
     </dt>
     <dd>{{% md %}}The owner of the member. Required if admin wants to
 create a pool member for another tenant. Changing this creates a new member.
-{{% /md %}}</dd>
-</dl>
+{{% /md %}}</dd></dl>
 {{% /choosable %}}
 
 {{% choosable language go %}}
-<dl class="resources-properties">
-
-    <dt class="property-required"
+<dl class="resources-properties"><dt class="property-required"
             title="Required">
         <span id="lbmethod_go">
 <a href="#lbmethod_go" style="color: inherit; text-decoration: inherit;">Lb<wbr>Method</a>
@@ -781,8 +762,7 @@ create a pool member for another tenant. Changing this creates a new member.
     <dd>{{% md %}}The algorithm used to distribute load between the
 members of the pool. The current specification supports 'ROUND_ROBIN' and
 'LEAST_CONNECTIONS' as valid values for this attribute.
-{{% /md %}}</dd>
-    <dt class="property-required"
+{{% /md %}}</dd><dt class="property-required"
             title="Required">
         <span id="protocol_go">
 <a href="#protocol_go" style="color: inherit; text-decoration: inherit;">Protocol</a>
@@ -792,8 +772,7 @@ members of the pool. The current specification supports 'ROUND_ROBIN' and
     </dt>
     <dd>{{% md %}}The protocol used by the pool members, you can use
 either 'TCP, 'HTTP', or 'HTTPS'. Changing this creates a new pool.
-{{% /md %}}</dd>
-    <dt class="property-required"
+{{% /md %}}</dd><dt class="property-required"
             title="Required">
         <span id="subnetid_go">
 <a href="#subnetid_go" style="color: inherit; text-decoration: inherit;">Subnet<wbr>Id</a>
@@ -804,8 +783,7 @@ either 'TCP, 'HTTP', or 'HTTPS'. Changing this creates a new pool.
     <dd>{{% md %}}The network on which the members of the pool will be
 located. Only members that are on this network can be added to the pool.
 Changing this creates a new pool.
-{{% /md %}}</dd>
-    <dt class="property-optional"
+{{% /md %}}</dd><dt class="property-optional"
             title="Optional">
         <span id="lbprovider_go">
 <a href="#lbprovider_go" style="color: inherit; text-decoration: inherit;">Lb<wbr>Provider</a>
@@ -815,8 +793,7 @@ Changing this creates a new pool.
     </dt>
     <dd>{{% md %}}The backend load balancing provider. For example:
 `haproxy`, `F5`, etc.
-{{% /md %}}</dd>
-    <dt class="property-optional"
+{{% /md %}}</dd><dt class="property-optional"
             title="Optional">
         <span id="monitorids_go">
 <a href="#monitorids_go" style="color: inherit; text-decoration: inherit;">Monitor<wbr>Ids</a>
@@ -826,8 +803,7 @@ Changing this creates a new pool.
     </dt>
     <dd>{{% md %}}A list of IDs of monitors to associate with the
 pool.
-{{% /md %}}</dd>
-    <dt class="property-optional"
+{{% /md %}}</dd><dt class="property-optional"
             title="Optional">
         <span id="name_go">
 <a href="#name_go" style="color: inherit; text-decoration: inherit;">Name</a>
@@ -837,8 +813,7 @@ pool.
     </dt>
     <dd>{{% md %}}The name of the pool. Changing this updates the name of
 the existing pool.
-{{% /md %}}</dd>
-    <dt class="property-optional"
+{{% /md %}}</dd><dt class="property-optional"
             title="Optional">
         <span id="region_go">
 <a href="#region_go" style="color: inherit; text-decoration: inherit;">Region</a>
@@ -850,8 +825,7 @@ the existing pool.
 A Networking client is needed to create an LB pool. If omitted, the
 `region` argument of the provider is used. Changing this creates a new
 LB pool.
-{{% /md %}}</dd>
-    <dt class="property-optional"
+{{% /md %}}</dd><dt class="property-optional"
             title="Optional">
         <span id="tenantid_go">
 <a href="#tenantid_go" style="color: inherit; text-decoration: inherit;">Tenant<wbr>Id</a>
@@ -861,14 +835,11 @@ LB pool.
     </dt>
     <dd>{{% md %}}The owner of the member. Required if admin wants to
 create a pool member for another tenant. Changing this creates a new member.
-{{% /md %}}</dd>
-</dl>
+{{% /md %}}</dd></dl>
 {{% /choosable %}}
 
 {{% choosable language nodejs %}}
-<dl class="resources-properties">
-
-    <dt class="property-required"
+<dl class="resources-properties"><dt class="property-required"
             title="Required">
         <span id="lbmethod_nodejs">
 <a href="#lbmethod_nodejs" style="color: inherit; text-decoration: inherit;">lb<wbr>Method</a>
@@ -879,8 +850,7 @@ create a pool member for another tenant. Changing this creates a new member.
     <dd>{{% md %}}The algorithm used to distribute load between the
 members of the pool. The current specification supports 'ROUND_ROBIN' and
 'LEAST_CONNECTIONS' as valid values for this attribute.
-{{% /md %}}</dd>
-    <dt class="property-required"
+{{% /md %}}</dd><dt class="property-required"
             title="Required">
         <span id="protocol_nodejs">
 <a href="#protocol_nodejs" style="color: inherit; text-decoration: inherit;">protocol</a>
@@ -890,8 +860,7 @@ members of the pool. The current specification supports 'ROUND_ROBIN' and
     </dt>
     <dd>{{% md %}}The protocol used by the pool members, you can use
 either 'TCP, 'HTTP', or 'HTTPS'. Changing this creates a new pool.
-{{% /md %}}</dd>
-    <dt class="property-required"
+{{% /md %}}</dd><dt class="property-required"
             title="Required">
         <span id="subnetid_nodejs">
 <a href="#subnetid_nodejs" style="color: inherit; text-decoration: inherit;">subnet<wbr>Id</a>
@@ -902,8 +871,7 @@ either 'TCP, 'HTTP', or 'HTTPS'. Changing this creates a new pool.
     <dd>{{% md %}}The network on which the members of the pool will be
 located. Only members that are on this network can be added to the pool.
 Changing this creates a new pool.
-{{% /md %}}</dd>
-    <dt class="property-optional"
+{{% /md %}}</dd><dt class="property-optional"
             title="Optional">
         <span id="lbprovider_nodejs">
 <a href="#lbprovider_nodejs" style="color: inherit; text-decoration: inherit;">lb<wbr>Provider</a>
@@ -913,8 +881,7 @@ Changing this creates a new pool.
     </dt>
     <dd>{{% md %}}The backend load balancing provider. For example:
 `haproxy`, `F5`, etc.
-{{% /md %}}</dd>
-    <dt class="property-optional"
+{{% /md %}}</dd><dt class="property-optional"
             title="Optional">
         <span id="monitorids_nodejs">
 <a href="#monitorids_nodejs" style="color: inherit; text-decoration: inherit;">monitor<wbr>Ids</a>
@@ -924,8 +891,7 @@ Changing this creates a new pool.
     </dt>
     <dd>{{% md %}}A list of IDs of monitors to associate with the
 pool.
-{{% /md %}}</dd>
-    <dt class="property-optional"
+{{% /md %}}</dd><dt class="property-optional"
             title="Optional">
         <span id="name_nodejs">
 <a href="#name_nodejs" style="color: inherit; text-decoration: inherit;">name</a>
@@ -935,8 +901,7 @@ pool.
     </dt>
     <dd>{{% md %}}The name of the pool. Changing this updates the name of
 the existing pool.
-{{% /md %}}</dd>
-    <dt class="property-optional"
+{{% /md %}}</dd><dt class="property-optional"
             title="Optional">
         <span id="region_nodejs">
 <a href="#region_nodejs" style="color: inherit; text-decoration: inherit;">region</a>
@@ -948,8 +913,7 @@ the existing pool.
 A Networking client is needed to create an LB pool. If omitted, the
 `region` argument of the provider is used. Changing this creates a new
 LB pool.
-{{% /md %}}</dd>
-    <dt class="property-optional"
+{{% /md %}}</dd><dt class="property-optional"
             title="Optional">
         <span id="tenantid_nodejs">
 <a href="#tenantid_nodejs" style="color: inherit; text-decoration: inherit;">tenant<wbr>Id</a>
@@ -959,14 +923,11 @@ LB pool.
     </dt>
     <dd>{{% md %}}The owner of the member. Required if admin wants to
 create a pool member for another tenant. Changing this creates a new member.
-{{% /md %}}</dd>
-</dl>
+{{% /md %}}</dd></dl>
 {{% /choosable %}}
 
 {{% choosable language python %}}
-<dl class="resources-properties">
-
-    <dt class="property-required"
+<dl class="resources-properties"><dt class="property-required"
             title="Required">
         <span id="lb_method_python">
 <a href="#lb_method_python" style="color: inherit; text-decoration: inherit;">lb_<wbr>method</a>
@@ -977,8 +938,7 @@ create a pool member for another tenant. Changing this creates a new member.
     <dd>{{% md %}}The algorithm used to distribute load between the
 members of the pool. The current specification supports 'ROUND_ROBIN' and
 'LEAST_CONNECTIONS' as valid values for this attribute.
-{{% /md %}}</dd>
-    <dt class="property-required"
+{{% /md %}}</dd><dt class="property-required"
             title="Required">
         <span id="protocol_python">
 <a href="#protocol_python" style="color: inherit; text-decoration: inherit;">protocol</a>
@@ -988,8 +948,7 @@ members of the pool. The current specification supports 'ROUND_ROBIN' and
     </dt>
     <dd>{{% md %}}The protocol used by the pool members, you can use
 either 'TCP, 'HTTP', or 'HTTPS'. Changing this creates a new pool.
-{{% /md %}}</dd>
-    <dt class="property-required"
+{{% /md %}}</dd><dt class="property-required"
             title="Required">
         <span id="subnet_id_python">
 <a href="#subnet_id_python" style="color: inherit; text-decoration: inherit;">subnet_<wbr>id</a>
@@ -1000,8 +959,7 @@ either 'TCP, 'HTTP', or 'HTTPS'. Changing this creates a new pool.
     <dd>{{% md %}}The network on which the members of the pool will be
 located. Only members that are on this network can be added to the pool.
 Changing this creates a new pool.
-{{% /md %}}</dd>
-    <dt class="property-optional"
+{{% /md %}}</dd><dt class="property-optional"
             title="Optional">
         <span id="lb_provider_python">
 <a href="#lb_provider_python" style="color: inherit; text-decoration: inherit;">lb_<wbr>provider</a>
@@ -1011,8 +969,7 @@ Changing this creates a new pool.
     </dt>
     <dd>{{% md %}}The backend load balancing provider. For example:
 `haproxy`, `F5`, etc.
-{{% /md %}}</dd>
-    <dt class="property-optional"
+{{% /md %}}</dd><dt class="property-optional"
             title="Optional">
         <span id="monitor_ids_python">
 <a href="#monitor_ids_python" style="color: inherit; text-decoration: inherit;">monitor_<wbr>ids</a>
@@ -1022,8 +979,7 @@ Changing this creates a new pool.
     </dt>
     <dd>{{% md %}}A list of IDs of monitors to associate with the
 pool.
-{{% /md %}}</dd>
-    <dt class="property-optional"
+{{% /md %}}</dd><dt class="property-optional"
             title="Optional">
         <span id="name_python">
 <a href="#name_python" style="color: inherit; text-decoration: inherit;">name</a>
@@ -1033,8 +989,7 @@ pool.
     </dt>
     <dd>{{% md %}}The name of the pool. Changing this updates the name of
 the existing pool.
-{{% /md %}}</dd>
-    <dt class="property-optional"
+{{% /md %}}</dd><dt class="property-optional"
             title="Optional">
         <span id="region_python">
 <a href="#region_python" style="color: inherit; text-decoration: inherit;">region</a>
@@ -1046,8 +1001,7 @@ the existing pool.
 A Networking client is needed to create an LB pool. If omitted, the
 `region` argument of the provider is used. Changing this creates a new
 LB pool.
-{{% /md %}}</dd>
-    <dt class="property-optional"
+{{% /md %}}</dd><dt class="property-optional"
             title="Optional">
         <span id="tenant_id_python">
 <a href="#tenant_id_python" style="color: inherit; text-decoration: inherit;">tenant_<wbr>id</a>
@@ -1057,8 +1011,7 @@ LB pool.
     </dt>
     <dd>{{% md %}}The owner of the member. Required if admin wants to
 create a pool member for another tenant. Changing this creates a new member.
-{{% /md %}}</dd>
-</dl>
+{{% /md %}}</dd></dl>
 {{% /choosable %}}
 
 
@@ -1069,9 +1022,7 @@ All [input](#inputs) properties are implicitly available as output properties. A
 
 
 {{% choosable language csharp %}}
-<dl class="resources-properties">
-
-    <dt class="property-"
+<dl class="resources-properties"><dt class="property-"
             title="">
         <span id="id_csharp">
 <a href="#id_csharp" style="color: inherit; text-decoration: inherit;">Id</a>
@@ -1079,14 +1030,11 @@ All [input](#inputs) properties are implicitly available as output properties. A
         <span class="property-indicator"></span>
         <span class="property-type">string</span>
     </dt>
-    <dd>{{% md %}}The provider-assigned unique ID for this managed resource.{{% /md %}}</dd>
-</dl>
+    <dd>{{% md %}}The provider-assigned unique ID for this managed resource.{{% /md %}}</dd></dl>
 {{% /choosable %}}
 
 {{% choosable language go %}}
-<dl class="resources-properties">
-
-    <dt class="property-"
+<dl class="resources-properties"><dt class="property-"
             title="">
         <span id="id_go">
 <a href="#id_go" style="color: inherit; text-decoration: inherit;">Id</a>
@@ -1094,14 +1042,11 @@ All [input](#inputs) properties are implicitly available as output properties. A
         <span class="property-indicator"></span>
         <span class="property-type">string</span>
     </dt>
-    <dd>{{% md %}}The provider-assigned unique ID for this managed resource.{{% /md %}}</dd>
-</dl>
+    <dd>{{% md %}}The provider-assigned unique ID for this managed resource.{{% /md %}}</dd></dl>
 {{% /choosable %}}
 
 {{% choosable language nodejs %}}
-<dl class="resources-properties">
-
-    <dt class="property-"
+<dl class="resources-properties"><dt class="property-"
             title="">
         <span id="id_nodejs">
 <a href="#id_nodejs" style="color: inherit; text-decoration: inherit;">id</a>
@@ -1109,14 +1054,11 @@ All [input](#inputs) properties are implicitly available as output properties. A
         <span class="property-indicator"></span>
         <span class="property-type">string</span>
     </dt>
-    <dd>{{% md %}}The provider-assigned unique ID for this managed resource.{{% /md %}}</dd>
-</dl>
+    <dd>{{% md %}}The provider-assigned unique ID for this managed resource.{{% /md %}}</dd></dl>
 {{% /choosable %}}
 
 {{% choosable language python %}}
-<dl class="resources-properties">
-
-    <dt class="property-"
+<dl class="resources-properties"><dt class="property-"
             title="">
         <span id="id_python">
 <a href="#id_python" style="color: inherit; text-decoration: inherit;">id</a>
@@ -1124,8 +1066,7 @@ All [input](#inputs) properties are implicitly available as output properties. A
         <span class="property-indicator"></span>
         <span class="property-type">str</span>
     </dt>
-    <dd>{{% md %}}The provider-assigned unique ID for this managed resource.{{% /md %}}</dd>
-</dl>
+    <dd>{{% md %}}The provider-assigned unique ID for this managed resource.{{% /md %}}</dd></dl>
 {{% /choosable %}}
 
 
@@ -1252,9 +1193,7 @@ The following state arguments are supported:
 
 
 {{% choosable language csharp %}}
-<dl class="resources-properties">
-
-    <dt class="property-optional"
+<dl class="resources-properties"><dt class="property-optional"
             title="Optional">
         <span id="state_lbmethod_csharp">
 <a href="#state_lbmethod_csharp" style="color: inherit; text-decoration: inherit;">Lb<wbr>Method</a>
@@ -1265,8 +1204,7 @@ The following state arguments are supported:
     <dd>{{% md %}}The algorithm used to distribute load between the
 members of the pool. The current specification supports 'ROUND_ROBIN' and
 'LEAST_CONNECTIONS' as valid values for this attribute.
-{{% /md %}}</dd>
-    <dt class="property-optional"
+{{% /md %}}</dd><dt class="property-optional"
             title="Optional">
         <span id="state_lbprovider_csharp">
 <a href="#state_lbprovider_csharp" style="color: inherit; text-decoration: inherit;">Lb<wbr>Provider</a>
@@ -1276,8 +1214,7 @@ members of the pool. The current specification supports 'ROUND_ROBIN' and
     </dt>
     <dd>{{% md %}}The backend load balancing provider. For example:
 `haproxy`, `F5`, etc.
-{{% /md %}}</dd>
-    <dt class="property-optional"
+{{% /md %}}</dd><dt class="property-optional"
             title="Optional">
         <span id="state_monitorids_csharp">
 <a href="#state_monitorids_csharp" style="color: inherit; text-decoration: inherit;">Monitor<wbr>Ids</a>
@@ -1287,8 +1224,7 @@ members of the pool. The current specification supports 'ROUND_ROBIN' and
     </dt>
     <dd>{{% md %}}A list of IDs of monitors to associate with the
 pool.
-{{% /md %}}</dd>
-    <dt class="property-optional"
+{{% /md %}}</dd><dt class="property-optional"
             title="Optional">
         <span id="state_name_csharp">
 <a href="#state_name_csharp" style="color: inherit; text-decoration: inherit;">Name</a>
@@ -1298,8 +1234,7 @@ pool.
     </dt>
     <dd>{{% md %}}The name of the pool. Changing this updates the name of
 the existing pool.
-{{% /md %}}</dd>
-    <dt class="property-optional"
+{{% /md %}}</dd><dt class="property-optional"
             title="Optional">
         <span id="state_protocol_csharp">
 <a href="#state_protocol_csharp" style="color: inherit; text-decoration: inherit;">Protocol</a>
@@ -1309,8 +1244,7 @@ the existing pool.
     </dt>
     <dd>{{% md %}}The protocol used by the pool members, you can use
 either 'TCP, 'HTTP', or 'HTTPS'. Changing this creates a new pool.
-{{% /md %}}</dd>
-    <dt class="property-optional"
+{{% /md %}}</dd><dt class="property-optional"
             title="Optional">
         <span id="state_region_csharp">
 <a href="#state_region_csharp" style="color: inherit; text-decoration: inherit;">Region</a>
@@ -1322,8 +1256,7 @@ either 'TCP, 'HTTP', or 'HTTPS'. Changing this creates a new pool.
 A Networking client is needed to create an LB pool. If omitted, the
 `region` argument of the provider is used. Changing this creates a new
 LB pool.
-{{% /md %}}</dd>
-    <dt class="property-optional"
+{{% /md %}}</dd><dt class="property-optional"
             title="Optional">
         <span id="state_subnetid_csharp">
 <a href="#state_subnetid_csharp" style="color: inherit; text-decoration: inherit;">Subnet<wbr>Id</a>
@@ -1334,8 +1267,7 @@ LB pool.
     <dd>{{% md %}}The network on which the members of the pool will be
 located. Only members that are on this network can be added to the pool.
 Changing this creates a new pool.
-{{% /md %}}</dd>
-    <dt class="property-optional"
+{{% /md %}}</dd><dt class="property-optional"
             title="Optional">
         <span id="state_tenantid_csharp">
 <a href="#state_tenantid_csharp" style="color: inherit; text-decoration: inherit;">Tenant<wbr>Id</a>
@@ -1345,14 +1277,11 @@ Changing this creates a new pool.
     </dt>
     <dd>{{% md %}}The owner of the member. Required if admin wants to
 create a pool member for another tenant. Changing this creates a new member.
-{{% /md %}}</dd>
-</dl>
+{{% /md %}}</dd></dl>
 {{% /choosable %}}
 
 {{% choosable language go %}}
-<dl class="resources-properties">
-
-    <dt class="property-optional"
+<dl class="resources-properties"><dt class="property-optional"
             title="Optional">
         <span id="state_lbmethod_go">
 <a href="#state_lbmethod_go" style="color: inherit; text-decoration: inherit;">Lb<wbr>Method</a>
@@ -1363,8 +1292,7 @@ create a pool member for another tenant. Changing this creates a new member.
     <dd>{{% md %}}The algorithm used to distribute load between the
 members of the pool. The current specification supports 'ROUND_ROBIN' and
 'LEAST_CONNECTIONS' as valid values for this attribute.
-{{% /md %}}</dd>
-    <dt class="property-optional"
+{{% /md %}}</dd><dt class="property-optional"
             title="Optional">
         <span id="state_lbprovider_go">
 <a href="#state_lbprovider_go" style="color: inherit; text-decoration: inherit;">Lb<wbr>Provider</a>
@@ -1374,8 +1302,7 @@ members of the pool. The current specification supports 'ROUND_ROBIN' and
     </dt>
     <dd>{{% md %}}The backend load balancing provider. For example:
 `haproxy`, `F5`, etc.
-{{% /md %}}</dd>
-    <dt class="property-optional"
+{{% /md %}}</dd><dt class="property-optional"
             title="Optional">
         <span id="state_monitorids_go">
 <a href="#state_monitorids_go" style="color: inherit; text-decoration: inherit;">Monitor<wbr>Ids</a>
@@ -1385,8 +1312,7 @@ members of the pool. The current specification supports 'ROUND_ROBIN' and
     </dt>
     <dd>{{% md %}}A list of IDs of monitors to associate with the
 pool.
-{{% /md %}}</dd>
-    <dt class="property-optional"
+{{% /md %}}</dd><dt class="property-optional"
             title="Optional">
         <span id="state_name_go">
 <a href="#state_name_go" style="color: inherit; text-decoration: inherit;">Name</a>
@@ -1396,8 +1322,7 @@ pool.
     </dt>
     <dd>{{% md %}}The name of the pool. Changing this updates the name of
 the existing pool.
-{{% /md %}}</dd>
-    <dt class="property-optional"
+{{% /md %}}</dd><dt class="property-optional"
             title="Optional">
         <span id="state_protocol_go">
 <a href="#state_protocol_go" style="color: inherit; text-decoration: inherit;">Protocol</a>
@@ -1407,8 +1332,7 @@ the existing pool.
     </dt>
     <dd>{{% md %}}The protocol used by the pool members, you can use
 either 'TCP, 'HTTP', or 'HTTPS'. Changing this creates a new pool.
-{{% /md %}}</dd>
-    <dt class="property-optional"
+{{% /md %}}</dd><dt class="property-optional"
             title="Optional">
         <span id="state_region_go">
 <a href="#state_region_go" style="color: inherit; text-decoration: inherit;">Region</a>
@@ -1420,8 +1344,7 @@ either 'TCP, 'HTTP', or 'HTTPS'. Changing this creates a new pool.
 A Networking client is needed to create an LB pool. If omitted, the
 `region` argument of the provider is used. Changing this creates a new
 LB pool.
-{{% /md %}}</dd>
-    <dt class="property-optional"
+{{% /md %}}</dd><dt class="property-optional"
             title="Optional">
         <span id="state_subnetid_go">
 <a href="#state_subnetid_go" style="color: inherit; text-decoration: inherit;">Subnet<wbr>Id</a>
@@ -1432,8 +1355,7 @@ LB pool.
     <dd>{{% md %}}The network on which the members of the pool will be
 located. Only members that are on this network can be added to the pool.
 Changing this creates a new pool.
-{{% /md %}}</dd>
-    <dt class="property-optional"
+{{% /md %}}</dd><dt class="property-optional"
             title="Optional">
         <span id="state_tenantid_go">
 <a href="#state_tenantid_go" style="color: inherit; text-decoration: inherit;">Tenant<wbr>Id</a>
@@ -1443,14 +1365,11 @@ Changing this creates a new pool.
     </dt>
     <dd>{{% md %}}The owner of the member. Required if admin wants to
 create a pool member for another tenant. Changing this creates a new member.
-{{% /md %}}</dd>
-</dl>
+{{% /md %}}</dd></dl>
 {{% /choosable %}}
 
 {{% choosable language nodejs %}}
-<dl class="resources-properties">
-
-    <dt class="property-optional"
+<dl class="resources-properties"><dt class="property-optional"
             title="Optional">
         <span id="state_lbmethod_nodejs">
 <a href="#state_lbmethod_nodejs" style="color: inherit; text-decoration: inherit;">lb<wbr>Method</a>
@@ -1461,8 +1380,7 @@ create a pool member for another tenant. Changing this creates a new member.
     <dd>{{% md %}}The algorithm used to distribute load between the
 members of the pool. The current specification supports 'ROUND_ROBIN' and
 'LEAST_CONNECTIONS' as valid values for this attribute.
-{{% /md %}}</dd>
-    <dt class="property-optional"
+{{% /md %}}</dd><dt class="property-optional"
             title="Optional">
         <span id="state_lbprovider_nodejs">
 <a href="#state_lbprovider_nodejs" style="color: inherit; text-decoration: inherit;">lb<wbr>Provider</a>
@@ -1472,8 +1390,7 @@ members of the pool. The current specification supports 'ROUND_ROBIN' and
     </dt>
     <dd>{{% md %}}The backend load balancing provider. For example:
 `haproxy`, `F5`, etc.
-{{% /md %}}</dd>
-    <dt class="property-optional"
+{{% /md %}}</dd><dt class="property-optional"
             title="Optional">
         <span id="state_monitorids_nodejs">
 <a href="#state_monitorids_nodejs" style="color: inherit; text-decoration: inherit;">monitor<wbr>Ids</a>
@@ -1483,8 +1400,7 @@ members of the pool. The current specification supports 'ROUND_ROBIN' and
     </dt>
     <dd>{{% md %}}A list of IDs of monitors to associate with the
 pool.
-{{% /md %}}</dd>
-    <dt class="property-optional"
+{{% /md %}}</dd><dt class="property-optional"
             title="Optional">
         <span id="state_name_nodejs">
 <a href="#state_name_nodejs" style="color: inherit; text-decoration: inherit;">name</a>
@@ -1494,8 +1410,7 @@ pool.
     </dt>
     <dd>{{% md %}}The name of the pool. Changing this updates the name of
 the existing pool.
-{{% /md %}}</dd>
-    <dt class="property-optional"
+{{% /md %}}</dd><dt class="property-optional"
             title="Optional">
         <span id="state_protocol_nodejs">
 <a href="#state_protocol_nodejs" style="color: inherit; text-decoration: inherit;">protocol</a>
@@ -1505,8 +1420,7 @@ the existing pool.
     </dt>
     <dd>{{% md %}}The protocol used by the pool members, you can use
 either 'TCP, 'HTTP', or 'HTTPS'. Changing this creates a new pool.
-{{% /md %}}</dd>
-    <dt class="property-optional"
+{{% /md %}}</dd><dt class="property-optional"
             title="Optional">
         <span id="state_region_nodejs">
 <a href="#state_region_nodejs" style="color: inherit; text-decoration: inherit;">region</a>
@@ -1518,8 +1432,7 @@ either 'TCP, 'HTTP', or 'HTTPS'. Changing this creates a new pool.
 A Networking client is needed to create an LB pool. If omitted, the
 `region` argument of the provider is used. Changing this creates a new
 LB pool.
-{{% /md %}}</dd>
-    <dt class="property-optional"
+{{% /md %}}</dd><dt class="property-optional"
             title="Optional">
         <span id="state_subnetid_nodejs">
 <a href="#state_subnetid_nodejs" style="color: inherit; text-decoration: inherit;">subnet<wbr>Id</a>
@@ -1530,8 +1443,7 @@ LB pool.
     <dd>{{% md %}}The network on which the members of the pool will be
 located. Only members that are on this network can be added to the pool.
 Changing this creates a new pool.
-{{% /md %}}</dd>
-    <dt class="property-optional"
+{{% /md %}}</dd><dt class="property-optional"
             title="Optional">
         <span id="state_tenantid_nodejs">
 <a href="#state_tenantid_nodejs" style="color: inherit; text-decoration: inherit;">tenant<wbr>Id</a>
@@ -1541,14 +1453,11 @@ Changing this creates a new pool.
     </dt>
     <dd>{{% md %}}The owner of the member. Required if admin wants to
 create a pool member for another tenant. Changing this creates a new member.
-{{% /md %}}</dd>
-</dl>
+{{% /md %}}</dd></dl>
 {{% /choosable %}}
 
 {{% choosable language python %}}
-<dl class="resources-properties">
-
-    <dt class="property-optional"
+<dl class="resources-properties"><dt class="property-optional"
             title="Optional">
         <span id="state_lb_method_python">
 <a href="#state_lb_method_python" style="color: inherit; text-decoration: inherit;">lb_<wbr>method</a>
@@ -1559,8 +1468,7 @@ create a pool member for another tenant. Changing this creates a new member.
     <dd>{{% md %}}The algorithm used to distribute load between the
 members of the pool. The current specification supports 'ROUND_ROBIN' and
 'LEAST_CONNECTIONS' as valid values for this attribute.
-{{% /md %}}</dd>
-    <dt class="property-optional"
+{{% /md %}}</dd><dt class="property-optional"
             title="Optional">
         <span id="state_lb_provider_python">
 <a href="#state_lb_provider_python" style="color: inherit; text-decoration: inherit;">lb_<wbr>provider</a>
@@ -1570,8 +1478,7 @@ members of the pool. The current specification supports 'ROUND_ROBIN' and
     </dt>
     <dd>{{% md %}}The backend load balancing provider. For example:
 `haproxy`, `F5`, etc.
-{{% /md %}}</dd>
-    <dt class="property-optional"
+{{% /md %}}</dd><dt class="property-optional"
             title="Optional">
         <span id="state_monitor_ids_python">
 <a href="#state_monitor_ids_python" style="color: inherit; text-decoration: inherit;">monitor_<wbr>ids</a>
@@ -1581,8 +1488,7 @@ members of the pool. The current specification supports 'ROUND_ROBIN' and
     </dt>
     <dd>{{% md %}}A list of IDs of monitors to associate with the
 pool.
-{{% /md %}}</dd>
-    <dt class="property-optional"
+{{% /md %}}</dd><dt class="property-optional"
             title="Optional">
         <span id="state_name_python">
 <a href="#state_name_python" style="color: inherit; text-decoration: inherit;">name</a>
@@ -1592,8 +1498,7 @@ pool.
     </dt>
     <dd>{{% md %}}The name of the pool. Changing this updates the name of
 the existing pool.
-{{% /md %}}</dd>
-    <dt class="property-optional"
+{{% /md %}}</dd><dt class="property-optional"
             title="Optional">
         <span id="state_protocol_python">
 <a href="#state_protocol_python" style="color: inherit; text-decoration: inherit;">protocol</a>
@@ -1603,8 +1508,7 @@ the existing pool.
     </dt>
     <dd>{{% md %}}The protocol used by the pool members, you can use
 either 'TCP, 'HTTP', or 'HTTPS'. Changing this creates a new pool.
-{{% /md %}}</dd>
-    <dt class="property-optional"
+{{% /md %}}</dd><dt class="property-optional"
             title="Optional">
         <span id="state_region_python">
 <a href="#state_region_python" style="color: inherit; text-decoration: inherit;">region</a>
@@ -1616,8 +1520,7 @@ either 'TCP, 'HTTP', or 'HTTPS'. Changing this creates a new pool.
 A Networking client is needed to create an LB pool. If omitted, the
 `region` argument of the provider is used. Changing this creates a new
 LB pool.
-{{% /md %}}</dd>
-    <dt class="property-optional"
+{{% /md %}}</dd><dt class="property-optional"
             title="Optional">
         <span id="state_subnet_id_python">
 <a href="#state_subnet_id_python" style="color: inherit; text-decoration: inherit;">subnet_<wbr>id</a>
@@ -1628,8 +1531,7 @@ LB pool.
     <dd>{{% md %}}The network on which the members of the pool will be
 located. Only members that are on this network can be added to the pool.
 Changing this creates a new pool.
-{{% /md %}}</dd>
-    <dt class="property-optional"
+{{% /md %}}</dd><dt class="property-optional"
             title="Optional">
         <span id="state_tenant_id_python">
 <a href="#state_tenant_id_python" style="color: inherit; text-decoration: inherit;">tenant_<wbr>id</a>
@@ -1639,8 +1541,7 @@ Changing this creates a new pool.
     </dt>
     <dd>{{% md %}}The owner of the member. Required if admin wants to
 create a pool member for another tenant. Changing this creates a new member.
-{{% /md %}}</dd>
-</dl>
+{{% /md %}}</dd></dl>
 {{% /choosable %}}
 
 
@@ -1666,6 +1567,6 @@ Load Balancer Pools can be imported using the `id`, e.g.
 	<dt>License</dt>
 	<dd>Apache-2.0</dd>
 	<dt>Notes</dt>
-	<dd>This Pulumi package is based on the [`openstack` Terraform Provider](https://github.com/terraform-provider-openstack/terraform-provider-openstack).</dd>
+	<dd>{{% md %}}This Pulumi package is based on the [`openstack` Terraform Provider](https://github.com/terraform-provider-openstack/terraform-provider-openstack).{{% /md %}}</dd>
 </dl>
 

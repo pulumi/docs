@@ -51,9 +51,7 @@ The following arguments are supported:
 
 
 {{% choosable language csharp %}}
-<dl class="resources-properties">
-
-    <dt class="property-required"
+<dl class="resources-properties"><dt class="property-required"
             title="Required">
         <span id="privatecloudname_csharp">
 <a href="#privatecloudname_csharp" style="color: inherit; text-decoration: inherit;">Private<wbr>Cloud<wbr>Name</a>
@@ -61,8 +59,7 @@ The following arguments are supported:
         <span class="property-indicator"></span>
         <span class="property-type">string</span>
     </dt>
-    <dd>{{% md %}}Name of the private cloud{{% /md %}}</dd>
-    <dt class="property-required"
+    <dd>{{% md %}}Name of the private cloud{{% /md %}}</dd><dt class="property-required"
             title="Required">
         <span id="resourcegroupname_csharp">
 <a href="#resourcegroupname_csharp" style="color: inherit; text-decoration: inherit;">Resource<wbr>Group<wbr>Name</a>
@@ -70,14 +67,11 @@ The following arguments are supported:
         <span class="property-indicator"></span>
         <span class="property-type">string</span>
     </dt>
-    <dd>{{% md %}}The name of the resource group. The name is case insensitive.{{% /md %}}</dd>
-</dl>
+    <dd>{{% md %}}The name of the resource group. The name is case insensitive.{{% /md %}}</dd></dl>
 {{% /choosable %}}
 
 {{% choosable language go %}}
-<dl class="resources-properties">
-
-    <dt class="property-required"
+<dl class="resources-properties"><dt class="property-required"
             title="Required">
         <span id="privatecloudname_go">
 <a href="#privatecloudname_go" style="color: inherit; text-decoration: inherit;">Private<wbr>Cloud<wbr>Name</a>
@@ -85,8 +79,7 @@ The following arguments are supported:
         <span class="property-indicator"></span>
         <span class="property-type">string</span>
     </dt>
-    <dd>{{% md %}}Name of the private cloud{{% /md %}}</dd>
-    <dt class="property-required"
+    <dd>{{% md %}}Name of the private cloud{{% /md %}}</dd><dt class="property-required"
             title="Required">
         <span id="resourcegroupname_go">
 <a href="#resourcegroupname_go" style="color: inherit; text-decoration: inherit;">Resource<wbr>Group<wbr>Name</a>
@@ -94,14 +87,11 @@ The following arguments are supported:
         <span class="property-indicator"></span>
         <span class="property-type">string</span>
     </dt>
-    <dd>{{% md %}}The name of the resource group. The name is case insensitive.{{% /md %}}</dd>
-</dl>
+    <dd>{{% md %}}The name of the resource group. The name is case insensitive.{{% /md %}}</dd></dl>
 {{% /choosable %}}
 
 {{% choosable language nodejs %}}
-<dl class="resources-properties">
-
-    <dt class="property-required"
+<dl class="resources-properties"><dt class="property-required"
             title="Required">
         <span id="privatecloudname_nodejs">
 <a href="#privatecloudname_nodejs" style="color: inherit; text-decoration: inherit;">private<wbr>Cloud<wbr>Name</a>
@@ -109,8 +99,7 @@ The following arguments are supported:
         <span class="property-indicator"></span>
         <span class="property-type">string</span>
     </dt>
-    <dd>{{% md %}}Name of the private cloud{{% /md %}}</dd>
-    <dt class="property-required"
+    <dd>{{% md %}}Name of the private cloud{{% /md %}}</dd><dt class="property-required"
             title="Required">
         <span id="resourcegroupname_nodejs">
 <a href="#resourcegroupname_nodejs" style="color: inherit; text-decoration: inherit;">resource<wbr>Group<wbr>Name</a>
@@ -118,14 +107,11 @@ The following arguments are supported:
         <span class="property-indicator"></span>
         <span class="property-type">string</span>
     </dt>
-    <dd>{{% md %}}The name of the resource group. The name is case insensitive.{{% /md %}}</dd>
-</dl>
+    <dd>{{% md %}}The name of the resource group. The name is case insensitive.{{% /md %}}</dd></dl>
 {{% /choosable %}}
 
 {{% choosable language python %}}
-<dl class="resources-properties">
-
-    <dt class="property-required"
+<dl class="resources-properties"><dt class="property-required"
             title="Required">
         <span id="private_cloud_name_python">
 <a href="#private_cloud_name_python" style="color: inherit; text-decoration: inherit;">private_<wbr>cloud_<wbr>name</a>
@@ -133,8 +119,7 @@ The following arguments are supported:
         <span class="property-indicator"></span>
         <span class="property-type">str</span>
     </dt>
-    <dd>{{% md %}}Name of the private cloud{{% /md %}}</dd>
-    <dt class="property-required"
+    <dd>{{% md %}}Name of the private cloud{{% /md %}}</dd><dt class="property-required"
             title="Required">
         <span id="resource_group_name_python">
 <a href="#resource_group_name_python" style="color: inherit; text-decoration: inherit;">resource_<wbr>group_<wbr>name</a>
@@ -142,8 +127,7 @@ The following arguments are supported:
         <span class="property-indicator"></span>
         <span class="property-type">str</span>
     </dt>
-    <dd>{{% md %}}The name of the resource group. The name is case insensitive.{{% /md %}}</dd>
-</dl>
+    <dd>{{% md %}}The name of the resource group. The name is case insensitive.{{% /md %}}</dd></dl>
 {{% /choosable %}}
 
 
@@ -156,9 +140,7 @@ The following output properties are available:
 
 
 {{% choosable language csharp %}}
-<dl class="resources-properties">
-
-    <dt class="property-"
+<dl class="resources-properties"><dt class="property-"
             title="">
         <span id="nsxtpassword_csharp">
 <a href="#nsxtpassword_csharp" style="color: inherit; text-decoration: inherit;">Nsxt<wbr>Password</a>
@@ -166,8 +148,7 @@ The following output properties are available:
         <span class="property-indicator"></span>
         <span class="property-type">string</span>
     </dt>
-    <dd>{{% md %}}NSX-T Manager password{{% /md %}}</dd>
-    <dt class="property-"
+    <dd>{{% md %}}NSX-T Manager password{{% /md %}}</dd><dt class="property-"
             title="">
         <span id="nsxtusername_csharp">
 <a href="#nsxtusername_csharp" style="color: inherit; text-decoration: inherit;">Nsxt<wbr>Username</a>
@@ -175,8 +156,7 @@ The following output properties are available:
         <span class="property-indicator"></span>
         <span class="property-type">string</span>
     </dt>
-    <dd>{{% md %}}NSX-T Manager username{{% /md %}}</dd>
-    <dt class="property-"
+    <dd>{{% md %}}NSX-T Manager username{{% /md %}}</dd><dt class="property-"
             title="">
         <span id="vcenterpassword_csharp">
 <a href="#vcenterpassword_csharp" style="color: inherit; text-decoration: inherit;">Vcenter<wbr>Password</a>
@@ -184,8 +164,7 @@ The following output properties are available:
         <span class="property-indicator"></span>
         <span class="property-type">string</span>
     </dt>
-    <dd>{{% md %}}vCenter admin password{{% /md %}}</dd>
-    <dt class="property-"
+    <dd>{{% md %}}vCenter admin password{{% /md %}}</dd><dt class="property-"
             title="">
         <span id="vcenterusername_csharp">
 <a href="#vcenterusername_csharp" style="color: inherit; text-decoration: inherit;">Vcenter<wbr>Username</a>
@@ -193,14 +172,11 @@ The following output properties are available:
         <span class="property-indicator"></span>
         <span class="property-type">string</span>
     </dt>
-    <dd>{{% md %}}vCenter admin username{{% /md %}}</dd>
-</dl>
+    <dd>{{% md %}}vCenter admin username{{% /md %}}</dd></dl>
 {{% /choosable %}}
 
 {{% choosable language go %}}
-<dl class="resources-properties">
-
-    <dt class="property-"
+<dl class="resources-properties"><dt class="property-"
             title="">
         <span id="nsxtpassword_go">
 <a href="#nsxtpassword_go" style="color: inherit; text-decoration: inherit;">Nsxt<wbr>Password</a>
@@ -208,8 +184,7 @@ The following output properties are available:
         <span class="property-indicator"></span>
         <span class="property-type">string</span>
     </dt>
-    <dd>{{% md %}}NSX-T Manager password{{% /md %}}</dd>
-    <dt class="property-"
+    <dd>{{% md %}}NSX-T Manager password{{% /md %}}</dd><dt class="property-"
             title="">
         <span id="nsxtusername_go">
 <a href="#nsxtusername_go" style="color: inherit; text-decoration: inherit;">Nsxt<wbr>Username</a>
@@ -217,8 +192,7 @@ The following output properties are available:
         <span class="property-indicator"></span>
         <span class="property-type">string</span>
     </dt>
-    <dd>{{% md %}}NSX-T Manager username{{% /md %}}</dd>
-    <dt class="property-"
+    <dd>{{% md %}}NSX-T Manager username{{% /md %}}</dd><dt class="property-"
             title="">
         <span id="vcenterpassword_go">
 <a href="#vcenterpassword_go" style="color: inherit; text-decoration: inherit;">Vcenter<wbr>Password</a>
@@ -226,8 +200,7 @@ The following output properties are available:
         <span class="property-indicator"></span>
         <span class="property-type">string</span>
     </dt>
-    <dd>{{% md %}}vCenter admin password{{% /md %}}</dd>
-    <dt class="property-"
+    <dd>{{% md %}}vCenter admin password{{% /md %}}</dd><dt class="property-"
             title="">
         <span id="vcenterusername_go">
 <a href="#vcenterusername_go" style="color: inherit; text-decoration: inherit;">Vcenter<wbr>Username</a>
@@ -235,14 +208,11 @@ The following output properties are available:
         <span class="property-indicator"></span>
         <span class="property-type">string</span>
     </dt>
-    <dd>{{% md %}}vCenter admin username{{% /md %}}</dd>
-</dl>
+    <dd>{{% md %}}vCenter admin username{{% /md %}}</dd></dl>
 {{% /choosable %}}
 
 {{% choosable language nodejs %}}
-<dl class="resources-properties">
-
-    <dt class="property-"
+<dl class="resources-properties"><dt class="property-"
             title="">
         <span id="nsxtpassword_nodejs">
 <a href="#nsxtpassword_nodejs" style="color: inherit; text-decoration: inherit;">nsxt<wbr>Password</a>
@@ -250,8 +220,7 @@ The following output properties are available:
         <span class="property-indicator"></span>
         <span class="property-type">string</span>
     </dt>
-    <dd>{{% md %}}NSX-T Manager password{{% /md %}}</dd>
-    <dt class="property-"
+    <dd>{{% md %}}NSX-T Manager password{{% /md %}}</dd><dt class="property-"
             title="">
         <span id="nsxtusername_nodejs">
 <a href="#nsxtusername_nodejs" style="color: inherit; text-decoration: inherit;">nsxt<wbr>Username</a>
@@ -259,8 +228,7 @@ The following output properties are available:
         <span class="property-indicator"></span>
         <span class="property-type">string</span>
     </dt>
-    <dd>{{% md %}}NSX-T Manager username{{% /md %}}</dd>
-    <dt class="property-"
+    <dd>{{% md %}}NSX-T Manager username{{% /md %}}</dd><dt class="property-"
             title="">
         <span id="vcenterpassword_nodejs">
 <a href="#vcenterpassword_nodejs" style="color: inherit; text-decoration: inherit;">vcenter<wbr>Password</a>
@@ -268,8 +236,7 @@ The following output properties are available:
         <span class="property-indicator"></span>
         <span class="property-type">string</span>
     </dt>
-    <dd>{{% md %}}vCenter admin password{{% /md %}}</dd>
-    <dt class="property-"
+    <dd>{{% md %}}vCenter admin password{{% /md %}}</dd><dt class="property-"
             title="">
         <span id="vcenterusername_nodejs">
 <a href="#vcenterusername_nodejs" style="color: inherit; text-decoration: inherit;">vcenter<wbr>Username</a>
@@ -277,14 +244,11 @@ The following output properties are available:
         <span class="property-indicator"></span>
         <span class="property-type">string</span>
     </dt>
-    <dd>{{% md %}}vCenter admin username{{% /md %}}</dd>
-</dl>
+    <dd>{{% md %}}vCenter admin username{{% /md %}}</dd></dl>
 {{% /choosable %}}
 
 {{% choosable language python %}}
-<dl class="resources-properties">
-
-    <dt class="property-"
+<dl class="resources-properties"><dt class="property-"
             title="">
         <span id="nsxt_password_python">
 <a href="#nsxt_password_python" style="color: inherit; text-decoration: inherit;">nsxt_<wbr>password</a>
@@ -292,8 +256,7 @@ The following output properties are available:
         <span class="property-indicator"></span>
         <span class="property-type">str</span>
     </dt>
-    <dd>{{% md %}}NSX-T Manager password{{% /md %}}</dd>
-    <dt class="property-"
+    <dd>{{% md %}}NSX-T Manager password{{% /md %}}</dd><dt class="property-"
             title="">
         <span id="nsxt_username_python">
 <a href="#nsxt_username_python" style="color: inherit; text-decoration: inherit;">nsxt_<wbr>username</a>
@@ -301,8 +264,7 @@ The following output properties are available:
         <span class="property-indicator"></span>
         <span class="property-type">str</span>
     </dt>
-    <dd>{{% md %}}NSX-T Manager username{{% /md %}}</dd>
-    <dt class="property-"
+    <dd>{{% md %}}NSX-T Manager username{{% /md %}}</dd><dt class="property-"
             title="">
         <span id="vcenter_password_python">
 <a href="#vcenter_password_python" style="color: inherit; text-decoration: inherit;">vcenter_<wbr>password</a>
@@ -310,8 +272,7 @@ The following output properties are available:
         <span class="property-indicator"></span>
         <span class="property-type">str</span>
     </dt>
-    <dd>{{% md %}}vCenter admin password{{% /md %}}</dd>
-    <dt class="property-"
+    <dd>{{% md %}}vCenter admin password{{% /md %}}</dd><dt class="property-"
             title="">
         <span id="vcenter_username_python">
 <a href="#vcenter_username_python" style="color: inherit; text-decoration: inherit;">vcenter_<wbr>username</a>
@@ -319,8 +280,7 @@ The following output properties are available:
         <span class="property-indicator"></span>
         <span class="property-type">str</span>
     </dt>
-    <dd>{{% md %}}vCenter admin username{{% /md %}}</dd>
-</dl>
+    <dd>{{% md %}}vCenter admin username{{% /md %}}</dd></dl>
 {{% /choosable %}}
 
 

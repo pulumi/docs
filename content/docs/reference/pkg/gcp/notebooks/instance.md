@@ -23,11 +23,17 @@ To get more information about Instance, see:
     * [Official Documentation](https://cloud.google.com/ai-platform-notebooks)
 
 {{% examples %}}
+
 ## Example Usage
 
 {{< chooser language "typescript,python,go,csharp" / >}}
+
+
 ### Notebook Instance Basic
-{{% example csharp %}}
+
+
+{{< example csharp >}}
+
 ```csharp
 using Pulumi;
 using Gcp = Pulumi.Gcp;
@@ -51,9 +57,12 @@ class MyStack : Stack
 }
 ```
 
-{{% /example %}}
 
-{{% example go %}}
+{{< /example >}}
+
+
+{{< example go >}}
+
 ```go
 package main
 
@@ -80,9 +89,12 @@ func main() {
 }
 ```
 
-{{% /example %}}
 
-{{% example python %}}
+{{< /example >}}
+
+
+{{< example python >}}
+
 ```python
 import pulumi
 import pulumi_gcp as gcp
@@ -96,9 +108,12 @@ instance = gcp.notebooks.Instance("instance",
     ))
 ```
 
-{{% /example %}}
 
-{{% example typescript %}}
+{{< /example >}}
+
+
+{{< example typescript >}}
+
 
 ```typescript
 import * as pulumi from "@pulumi/pulumi";
@@ -114,10 +129,17 @@ const instance = new gcp.notebooks.Instance("instance", {
 });
 ```
 
-{{% /example %}}
+
+{{< /example >}}
+
+
+
 
 ### Notebook Instance Basic Container
-{{% example csharp %}}
+
+
+{{< example csharp >}}
+
 ```csharp
 using Pulumi;
 using Gcp = Pulumi.Gcp;
@@ -145,9 +167,12 @@ class MyStack : Stack
 }
 ```
 
-{{% /example %}}
 
-{{% example go %}}
+{{< /example >}}
+
+
+{{< example go >}}
+
 ```go
 package main
 
@@ -177,9 +202,12 @@ func main() {
 }
 ```
 
-{{% /example %}}
 
-{{% example python %}}
+{{< /example >}}
+
+
+{{< example python >}}
+
 ```python
 import pulumi
 import pulumi_gcp as gcp
@@ -196,9 +224,12 @@ instance = gcp.notebooks.Instance("instance",
     })
 ```
 
-{{% /example %}}
 
-{{% example typescript %}}
+{{< /example >}}
+
+
+{{< example typescript >}}
+
 
 ```typescript
 import * as pulumi from "@pulumi/pulumi";
@@ -217,10 +248,17 @@ const instance = new gcp.notebooks.Instance("instance", {
 });
 ```
 
-{{% /example %}}
+
+{{< /example >}}
+
+
+
 
 ### Notebook Instance Basic Gpu
-{{% example csharp %}}
+
+
+{{< example csharp >}}
+
 ```csharp
 using Pulumi;
 using Gcp = Pulumi.Gcp;
@@ -250,9 +288,12 @@ class MyStack : Stack
 }
 ```
 
-{{% /example %}}
 
-{{% example go %}}
+{{< /example >}}
+
+
+{{< example go >}}
+
 ```go
 package main
 
@@ -284,9 +325,12 @@ func main() {
 }
 ```
 
-{{% /example %}}
 
-{{% example python %}}
+{{< /example >}}
+
+
+{{< example python >}}
+
 ```python
 import pulumi
 import pulumi_gcp as gcp
@@ -305,9 +349,12 @@ instance = gcp.notebooks.Instance("instance",
     ))
 ```
 
-{{% /example %}}
 
-{{% example typescript %}}
+{{< /example >}}
+
+
+{{< example typescript >}}
+
 
 ```typescript
 import * as pulumi from "@pulumi/pulumi";
@@ -328,10 +375,17 @@ const instance = new gcp.notebooks.Instance("instance", {
 });
 ```
 
-{{% /example %}}
+
+{{< /example >}}
+
+
+
 
 ### Notebook Instance Full
-{{% example csharp %}}
+
+
+{{< example csharp >}}
+
 ```csharp
 using Pulumi;
 using Gcp = Pulumi.Gcp;
@@ -380,9 +434,12 @@ class MyStack : Stack
 }
 ```
 
-{{% /example %}}
 
-{{% example go %}}
+{{< /example >}}
+
+
+{{< example go >}}
+
 ```go
 package main
 
@@ -439,9 +496,12 @@ func main() {
 }
 ```
 
-{{% /example %}}
 
-{{% example python %}}
+{{< /example >}}
+
+
+{{< example python >}}
+
 ```python
 import pulumi
 import pulumi_gcp as gcp
@@ -470,9 +530,12 @@ instance = gcp.notebooks.Instance("instance",
     })
 ```
 
-{{% /example %}}
 
-{{% example typescript %}}
+{{< /example >}}
+
+
+{{< example typescript >}}
+
 
 ```typescript
 import * as pulumi from "@pulumi/pulumi";
@@ -507,9 +570,16 @@ const instance = new gcp.notebooks.Instance("instance", {
 });
 ```
 
-{{% /example %}}
+
+{{< /example >}}
+
+
+
+
 
 {{% /examples %}}
+
+
 
 
 ## Create a Instance Resource {#create}
@@ -534,9 +604,7 @@ const instance = new gcp.notebooks.Instance("instance", {
 
 {{% choosable language nodejs %}}
 
-<dl class="resources-properties">
-  
-    <dt
+<dl class="resources-properties"><dt
         class="property-required" title="Required">
         <span>name</span>
         <span class="property-indicator"></span>
@@ -544,9 +612,7 @@ const instance = new gcp.notebooks.Instance("instance", {
     </dt>
     <dd>
       The unique name of the resource.
-    </dd>
-  
-    <dt
+    </dd><dt
         class="property-required" title="Required">
         <span>args</span>
         <span class="property-indicator"></span>
@@ -554,9 +620,7 @@ const instance = new gcp.notebooks.Instance("instance", {
     </dt>
     <dd>
       The arguments to resource properties.
-    </dd>
-  
-    <dt
+    </dd><dt
         class="property-optional" title="Optional">
         <span>opts</span>
         <span class="property-indicator"></span>
@@ -564,10 +628,7 @@ const instance = new gcp.notebooks.Instance("instance", {
     </dt>
     <dd>
       Bag of options to control resource&#39;s behavior.
-    </dd>
-  
-
-</dl>
+    </dd></dl>
 
 {{% /choosable %}}
 
@@ -593,9 +654,7 @@ const instance = new gcp.notebooks.Instance("instance", {
 
 {{% choosable language go %}}
 
-<dl class="resources-properties">
-  
-    <dt
+<dl class="resources-properties"><dt
         class="property-optional" title="Optional">
         <span>ctx</span>
         <span class="property-indicator"></span>
@@ -603,9 +662,7 @@ const instance = new gcp.notebooks.Instance("instance", {
     </dt>
     <dd>
       Context object for the current deployment.
-    </dd>
-  
-    <dt
+    </dd><dt
         class="property-required" title="Required">
         <span>name</span>
         <span class="property-indicator"></span>
@@ -613,9 +670,7 @@ const instance = new gcp.notebooks.Instance("instance", {
     </dt>
     <dd>
       The unique name of the resource.
-    </dd>
-  
-    <dt
+    </dd><dt
         class="property-required" title="Required">
         <span>args</span>
         <span class="property-indicator"></span>
@@ -623,9 +678,7 @@ const instance = new gcp.notebooks.Instance("instance", {
     </dt>
     <dd>
       The arguments to resource properties.
-    </dd>
-  
-    <dt
+    </dd><dt
         class="property-optional" title="Optional">
         <span>opts</span>
         <span class="property-indicator"></span>
@@ -633,18 +686,13 @@ const instance = new gcp.notebooks.Instance("instance", {
     </dt>
     <dd>
       Bag of options to control resource&#39;s behavior.
-    </dd>
-  
-
-</dl>
+    </dd></dl>
 
 {{% /choosable %}}
 
 {{% choosable language csharp %}}
 
-<dl class="resources-properties">
-  
-    <dt
+<dl class="resources-properties"><dt
         class="property-required" title="Required">
         <span>name</span>
         <span class="property-indicator"></span>
@@ -652,9 +700,7 @@ const instance = new gcp.notebooks.Instance("instance", {
     </dt>
     <dd>
       The unique name of the resource.
-    </dd>
-  
-    <dt
+    </dd><dt
         class="property-required" title="Required">
         <span>args</span>
         <span class="property-indicator"></span>
@@ -662,9 +708,7 @@ const instance = new gcp.notebooks.Instance("instance", {
     </dt>
     <dd>
       The arguments to resource properties.
-    </dd>
-  
-    <dt
+    </dd><dt
         class="property-optional" title="Optional">
         <span>opts</span>
         <span class="property-indicator"></span>
@@ -672,10 +716,7 @@ const instance = new gcp.notebooks.Instance("instance", {
     </dt>
     <dd>
       Bag of options to control resource&#39;s behavior.
-    </dd>
-  
-
-</dl>
+    </dd></dl>
 
 {{% /choosable %}}
 
@@ -690,9 +731,7 @@ The Instance resource accepts the following [input]({{< relref "/docs/intro/conc
 
 
 {{% choosable language csharp %}}
-<dl class="resources-properties">
-
-    <dt class="property-required"
+<dl class="resources-properties"><dt class="property-required"
             title="Required">
         <span id="location_csharp">
 <a href="#location_csharp" style="color: inherit; text-decoration: inherit;">Location</a>
@@ -701,8 +740,7 @@ The Instance resource accepts the following [input]({{< relref "/docs/intro/conc
         <span class="property-type">string</span>
     </dt>
     <dd>{{% md %}}A reference to the zone where the machine resides.
-{{% /md %}}</dd>
-    <dt class="property-required"
+{{% /md %}}</dd><dt class="property-required"
             title="Required">
         <span id="machinetype_csharp">
 <a href="#machinetype_csharp" style="color: inherit; text-decoration: inherit;">Machine<wbr>Type</a>
@@ -711,8 +749,7 @@ The Instance resource accepts the following [input]({{< relref "/docs/intro/conc
         <span class="property-type">string</span>
     </dt>
     <dd>{{% md %}}A reference to a machine type which defines VM kind.
-{{% /md %}}</dd>
-    <dt class="property-optional"
+{{% /md %}}</dd><dt class="property-optional"
             title="Optional">
         <span id="acceleratorconfig_csharp">
 <a href="#acceleratorconfig_csharp" style="color: inherit; text-decoration: inherit;">Accelerator<wbr>Config</a>
@@ -724,8 +761,7 @@ The Instance resource accepts the following [input]({{< relref "/docs/intro/conc
 make sure that your configuration has enough vCPUs and memory to support the
 machineType you have selected.
 Structure is documented below.
-{{% /md %}}</dd>
-    <dt class="property-optional"
+{{% /md %}}</dd><dt class="property-optional"
             title="Optional">
         <span id="bootdisksizegb_csharp">
 <a href="#bootdisksizegb_csharp" style="color: inherit; text-decoration: inherit;">Boot<wbr>Disk<wbr>Size<wbr>Gb</a>
@@ -736,8 +772,7 @@ Structure is documented below.
     <dd>{{% md %}}The size of the boot disk in GB attached to this instance,
 up to a maximum of 64000 GB (64 TB). The minimum recommended value is 100 GB.
 If not specified, this defaults to 100.
-{{% /md %}}</dd>
-    <dt class="property-optional"
+{{% /md %}}</dd><dt class="property-optional"
             title="Optional">
         <span id="bootdisktype_csharp">
 <a href="#bootdisktype_csharp" style="color: inherit; text-decoration: inherit;">Boot<wbr>Disk<wbr>Type</a>
@@ -747,8 +782,7 @@ If not specified, this defaults to 100.
     </dt>
     <dd>{{% md %}}Possible disk types for notebook instances.
 Possible values are `DISK_TYPE_UNSPECIFIED`, `PD_STANDARD`, `PD_SSD`, and `PD_BALANCED`.
-{{% /md %}}</dd>
-    <dt class="property-optional"
+{{% /md %}}</dd><dt class="property-optional"
             title="Optional">
         <span id="containerimage_csharp">
 <a href="#containerimage_csharp" style="color: inherit; text-decoration: inherit;">Container<wbr>Image</a>
@@ -758,8 +792,7 @@ Possible values are `DISK_TYPE_UNSPECIFIED`, `PD_STANDARD`, `PD_SSD`, and `PD_BA
     </dt>
     <dd>{{% md %}}Use a container image to start the notebook instance.
 Structure is documented below.
-{{% /md %}}</dd>
-    <dt class="property-optional"
+{{% /md %}}</dd><dt class="property-optional"
             title="Optional">
         <span id="createtime_csharp">
 <a href="#createtime_csharp" style="color: inherit; text-decoration: inherit;">Create<wbr>Time</a>
@@ -768,8 +801,7 @@ Structure is documented below.
         <span class="property-type">string</span>
     </dt>
     <dd>{{% md %}}Instance creation time
-{{% /md %}}</dd>
-    <dt class="property-optional"
+{{% /md %}}</dd><dt class="property-optional"
             title="Optional">
         <span id="customgpudriverpath_csharp">
 <a href="#customgpudriverpath_csharp" style="color: inherit; text-decoration: inherit;">Custom<wbr>Gpu<wbr>Driver<wbr>Path</a>
@@ -779,8 +811,7 @@ Structure is documented below.
     </dt>
     <dd>{{% md %}}Specify a custom Cloud Storage path where the GPU driver is stored.
 If not specified, we'll automatically choose from official GPU drivers.
-{{% /md %}}</dd>
-    <dt class="property-optional"
+{{% /md %}}</dd><dt class="property-optional"
             title="Optional">
         <span id="datadisksizegb_csharp">
 <a href="#datadisksizegb_csharp" style="color: inherit; text-decoration: inherit;">Data<wbr>Disk<wbr>Size<wbr>Gb</a>
@@ -792,8 +823,7 @@ If not specified, we'll automatically choose from official GPU drivers.
 up to a maximum of 64000 GB (64 TB).
 You can choose the size of the data disk based on how big your notebooks and data are.
 If not specified, this defaults to 100.
-{{% /md %}}</dd>
-    <dt class="property-optional"
+{{% /md %}}</dd><dt class="property-optional"
             title="Optional">
         <span id="datadisktype_csharp">
 <a href="#datadisktype_csharp" style="color: inherit; text-decoration: inherit;">Data<wbr>Disk<wbr>Type</a>
@@ -803,8 +833,7 @@ If not specified, this defaults to 100.
     </dt>
     <dd>{{% md %}}Possible disk types for notebook instances.
 Possible values are `DISK_TYPE_UNSPECIFIED`, `PD_STANDARD`, `PD_SSD`, and `PD_BALANCED`.
-{{% /md %}}</dd>
-    <dt class="property-optional"
+{{% /md %}}</dd><dt class="property-optional"
             title="Optional">
         <span id="diskencryption_csharp">
 <a href="#diskencryption_csharp" style="color: inherit; text-decoration: inherit;">Disk<wbr>Encryption</a>
@@ -814,8 +843,7 @@ Possible values are `DISK_TYPE_UNSPECIFIED`, `PD_STANDARD`, `PD_SSD`, and `PD_BA
     </dt>
     <dd>{{% md %}}Disk encryption method used on the boot and data disks, defaults to GMEK.
 Possible values are `DISK_ENCRYPTION_UNSPECIFIED`, `GMEK`, and `CMEK`.
-{{% /md %}}</dd>
-    <dt class="property-optional"
+{{% /md %}}</dd><dt class="property-optional"
             title="Optional">
         <span id="installgpudriver_csharp">
 <a href="#installgpudriver_csharp" style="color: inherit; text-decoration: inherit;">Install<wbr>Gpu<wbr>Driver</a>
@@ -826,8 +854,7 @@ Possible values are `DISK_ENCRYPTION_UNSPECIFIED`, `GMEK`, and `CMEK`.
     <dd>{{% md %}}Whether the end user authorizes Google Cloud to install GPU driver
 on this instance. If this field is empty or set to false, the GPU driver
 won't be installed. Only applicable to instances with GPUs.
-{{% /md %}}</dd>
-    <dt class="property-optional"
+{{% /md %}}</dd><dt class="property-optional"
             title="Optional">
         <span id="instanceowners_csharp">
 <a href="#instanceowners_csharp" style="color: inherit; text-decoration: inherit;">Instance<wbr>Owners</a>
@@ -840,8 +867,7 @@ Format: alias@example.com.
 Currently supports one owner only.
 If not specified, all of the service account users of
 your VM instance's service account can use the instance.
-{{% /md %}}</dd>
-    <dt class="property-optional"
+{{% /md %}}</dd><dt class="property-optional"
             title="Optional">
         <span id="kmskey_csharp">
 <a href="#kmskey_csharp" style="color: inherit; text-decoration: inherit;">Kms<wbr>Key</a>
@@ -851,8 +877,7 @@ your VM instance's service account can use the instance.
     </dt>
     <dd>{{% md %}}The KMS key used to encrypt the disks, only applicable if diskEncryption is CMEK.
 Format: projects/{project_id}/locations/{location}/keyRings/{key_ring_id}/cryptoKeys/{key_id}
-{{% /md %}}</dd>
-    <dt class="property-optional"
+{{% /md %}}</dd><dt class="property-optional"
             title="Optional">
         <span id="labels_csharp">
 <a href="#labels_csharp" style="color: inherit; text-decoration: inherit;">Labels</a>
@@ -862,8 +887,7 @@ Format: projects/{project_id}/locations/{location}/keyRings/{key_ring_id}/crypto
     </dt>
     <dd>{{% md %}}Labels to apply to this instance. These can be later modified by the setLabels method.
 An object containing a list of "key": value pairs. Example: { "name": "wrench", "mass": "1.3kg", "count": "3" }.
-{{% /md %}}</dd>
-    <dt class="property-optional"
+{{% /md %}}</dd><dt class="property-optional"
             title="Optional">
         <span id="metadata_csharp">
 <a href="#metadata_csharp" style="color: inherit; text-decoration: inherit;">Metadata</a>
@@ -873,8 +897,7 @@ An object containing a list of "key": value pairs. Example: { "name": "wrench", 
     </dt>
     <dd>{{% md %}}Custom metadata to apply to this instance.
 An object containing a list of "key": value pairs. Example: { "name": "wrench", "mass": "1.3kg", "count": "3" }.
-{{% /md %}}</dd>
-    <dt class="property-optional"
+{{% /md %}}</dd><dt class="property-optional"
             title="Optional">
         <span id="name_csharp">
 <a href="#name_csharp" style="color: inherit; text-decoration: inherit;">Name</a>
@@ -883,8 +906,7 @@ An object containing a list of "key": value pairs. Example: { "name": "wrench", 
         <span class="property-type">string</span>
     </dt>
     <dd>{{% md %}}The name specified for the Notebook instance.
-{{% /md %}}</dd>
-    <dt class="property-optional"
+{{% /md %}}</dd><dt class="property-optional"
             title="Optional">
         <span id="network_csharp">
 <a href="#network_csharp" style="color: inherit; text-decoration: inherit;">Network</a>
@@ -894,8 +916,7 @@ An object containing a list of "key": value pairs. Example: { "name": "wrench", 
     </dt>
     <dd>{{% md %}}The name of the VPC that this instance is in.
 Format: projects/{project_id}/global/networks/{network_id}
-{{% /md %}}</dd>
-    <dt class="property-optional"
+{{% /md %}}</dd><dt class="property-optional"
             title="Optional">
         <span id="noproxyaccess_csharp">
 <a href="#noproxyaccess_csharp" style="color: inherit; text-decoration: inherit;">No<wbr>Proxy<wbr>Access</a>
@@ -904,8 +925,7 @@ Format: projects/{project_id}/global/networks/{network_id}
         <span class="property-type">bool</span>
     </dt>
     <dd>{{% md %}}The notebook instance will not register with the proxy..
-{{% /md %}}</dd>
-    <dt class="property-optional"
+{{% /md %}}</dd><dt class="property-optional"
             title="Optional">
         <span id="nopublicip_csharp">
 <a href="#nopublicip_csharp" style="color: inherit; text-decoration: inherit;">No<wbr>Public<wbr>Ip</a>
@@ -914,8 +934,7 @@ Format: projects/{project_id}/global/networks/{network_id}
         <span class="property-type">bool</span>
     </dt>
     <dd>{{% md %}}No public IP will be assigned to this instance.
-{{% /md %}}</dd>
-    <dt class="property-optional"
+{{% /md %}}</dd><dt class="property-optional"
             title="Optional">
         <span id="noremovedatadisk_csharp">
 <a href="#noremovedatadisk_csharp" style="color: inherit; text-decoration: inherit;">No<wbr>Remove<wbr>Data<wbr>Disk</a>
@@ -924,8 +943,7 @@ Format: projects/{project_id}/global/networks/{network_id}
         <span class="property-type">bool</span>
     </dt>
     <dd>{{% md %}}If true, the data disk will not be auto deleted when deleting the instance.
-{{% /md %}}</dd>
-    <dt class="property-optional"
+{{% /md %}}</dd><dt class="property-optional"
             title="Optional">
         <span id="poststartupscript_csharp">
 <a href="#poststartupscript_csharp" style="color: inherit; text-decoration: inherit;">Post<wbr>Startup<wbr>Script</a>
@@ -936,8 +954,7 @@ Format: projects/{project_id}/global/networks/{network_id}
     <dd>{{% md %}}Path to a Bash script that automatically runs after a
 notebook instance fully boots up. The path must be a URL
 or Cloud Storage path (gs://path-to-file/file-name).
-{{% /md %}}</dd>
-    <dt class="property-optional"
+{{% /md %}}</dd><dt class="property-optional"
             title="Optional">
         <span id="project_csharp">
 <a href="#project_csharp" style="color: inherit; text-decoration: inherit;">Project</a>
@@ -947,8 +964,7 @@ or Cloud Storage path (gs://path-to-file/file-name).
     </dt>
     <dd>{{% md %}}The name of the Google Cloud project that this VM image belongs to.
 Format: projects/{project_id}
-{{% /md %}}</dd>
-    <dt class="property-optional"
+{{% /md %}}</dd><dt class="property-optional"
             title="Optional">
         <span id="serviceaccount_csharp">
 <a href="#serviceaccount_csharp" style="color: inherit; text-decoration: inherit;">Service<wbr>Account</a>
@@ -961,8 +977,7 @@ Google Cloud services. You can use any service account within
 the same project, but you must have the service account user
 permission to use the instance. If not specified,
 the Compute Engine default service account is used.
-{{% /md %}}</dd>
-    <dt class="property-optional"
+{{% /md %}}</dd><dt class="property-optional"
             title="Optional">
         <span id="serviceaccountscopes_csharp">
 <a href="#serviceaccountscopes_csharp" style="color: inherit; text-decoration: inherit;">Service<wbr>Account<wbr>Scopes</a>
@@ -974,8 +989,7 @@ the Compute Engine default service account is used.
 If not specified, the following scopes are defined:
 - https://www.googleapis.com/auth/cloud-platform
 - https://www.googleapis.com/auth/userinfo.email
-{{% /md %}}</dd>
-    <dt class="property-optional"
+{{% /md %}}</dd><dt class="property-optional"
             title="Optional">
         <span id="shieldedinstanceconfig_csharp">
 <a href="#shieldedinstanceconfig_csharp" style="color: inherit; text-decoration: inherit;">Shielded<wbr>Instance<wbr>Config</a>
@@ -986,8 +1000,7 @@ If not specified, the following scopes are defined:
     <dd>{{% md %}}A set of Shielded Instance options. Check [Images using supported Shielded VM features]
 Not all combinations are valid
 Structure is documented below.
-{{% /md %}}</dd>
-    <dt class="property-optional"
+{{% /md %}}</dd><dt class="property-optional"
             title="Optional">
         <span id="subnet_csharp">
 <a href="#subnet_csharp" style="color: inherit; text-decoration: inherit;">Subnet</a>
@@ -997,8 +1010,7 @@ Structure is documented below.
     </dt>
     <dd>{{% md %}}The name of the subnet that this instance is in.
 Format: projects/{project_id}/regions/{region}/subnetworks/{subnetwork_id}
-{{% /md %}}</dd>
-    <dt class="property-optional"
+{{% /md %}}</dd><dt class="property-optional"
             title="Optional">
         <span id="tags_csharp">
 <a href="#tags_csharp" style="color: inherit; text-decoration: inherit;">Tags</a>
@@ -1007,8 +1019,7 @@ Format: projects/{project_id}/regions/{region}/subnetworks/{subnetwork_id}
         <span class="property-type">List&lt;string&gt;</span>
     </dt>
     <dd>{{% md %}}The Compute Engine tags to add to runtime.
-{{% /md %}}</dd>
-    <dt class="property-optional"
+{{% /md %}}</dd><dt class="property-optional"
             title="Optional">
         <span id="updatetime_csharp">
 <a href="#updatetime_csharp" style="color: inherit; text-decoration: inherit;">Update<wbr>Time</a>
@@ -1017,8 +1028,7 @@ Format: projects/{project_id}/regions/{region}/subnetworks/{subnetwork_id}
         <span class="property-type">string</span>
     </dt>
     <dd>{{% md %}}Instance update time.
-{{% /md %}}</dd>
-    <dt class="property-optional"
+{{% /md %}}</dd><dt class="property-optional"
             title="Optional">
         <span id="vmimage_csharp">
 <a href="#vmimage_csharp" style="color: inherit; text-decoration: inherit;">Vm<wbr>Image</a>
@@ -1028,14 +1038,11 @@ Format: projects/{project_id}/regions/{region}/subnetworks/{subnetwork_id}
     </dt>
     <dd>{{% md %}}Use a Compute Engine VM image to start the notebook instance.
 Structure is documented below.
-{{% /md %}}</dd>
-</dl>
+{{% /md %}}</dd></dl>
 {{% /choosable %}}
 
 {{% choosable language go %}}
-<dl class="resources-properties">
-
-    <dt class="property-required"
+<dl class="resources-properties"><dt class="property-required"
             title="Required">
         <span id="location_go">
 <a href="#location_go" style="color: inherit; text-decoration: inherit;">Location</a>
@@ -1044,8 +1051,7 @@ Structure is documented below.
         <span class="property-type">string</span>
     </dt>
     <dd>{{% md %}}A reference to the zone where the machine resides.
-{{% /md %}}</dd>
-    <dt class="property-required"
+{{% /md %}}</dd><dt class="property-required"
             title="Required">
         <span id="machinetype_go">
 <a href="#machinetype_go" style="color: inherit; text-decoration: inherit;">Machine<wbr>Type</a>
@@ -1054,8 +1060,7 @@ Structure is documented below.
         <span class="property-type">string</span>
     </dt>
     <dd>{{% md %}}A reference to a machine type which defines VM kind.
-{{% /md %}}</dd>
-    <dt class="property-optional"
+{{% /md %}}</dd><dt class="property-optional"
             title="Optional">
         <span id="acceleratorconfig_go">
 <a href="#acceleratorconfig_go" style="color: inherit; text-decoration: inherit;">Accelerator<wbr>Config</a>
@@ -1067,8 +1072,7 @@ Structure is documented below.
 make sure that your configuration has enough vCPUs and memory to support the
 machineType you have selected.
 Structure is documented below.
-{{% /md %}}</dd>
-    <dt class="property-optional"
+{{% /md %}}</dd><dt class="property-optional"
             title="Optional">
         <span id="bootdisksizegb_go">
 <a href="#bootdisksizegb_go" style="color: inherit; text-decoration: inherit;">Boot<wbr>Disk<wbr>Size<wbr>Gb</a>
@@ -1079,8 +1083,7 @@ Structure is documented below.
     <dd>{{% md %}}The size of the boot disk in GB attached to this instance,
 up to a maximum of 64000 GB (64 TB). The minimum recommended value is 100 GB.
 If not specified, this defaults to 100.
-{{% /md %}}</dd>
-    <dt class="property-optional"
+{{% /md %}}</dd><dt class="property-optional"
             title="Optional">
         <span id="bootdisktype_go">
 <a href="#bootdisktype_go" style="color: inherit; text-decoration: inherit;">Boot<wbr>Disk<wbr>Type</a>
@@ -1090,8 +1093,7 @@ If not specified, this defaults to 100.
     </dt>
     <dd>{{% md %}}Possible disk types for notebook instances.
 Possible values are `DISK_TYPE_UNSPECIFIED`, `PD_STANDARD`, `PD_SSD`, and `PD_BALANCED`.
-{{% /md %}}</dd>
-    <dt class="property-optional"
+{{% /md %}}</dd><dt class="property-optional"
             title="Optional">
         <span id="containerimage_go">
 <a href="#containerimage_go" style="color: inherit; text-decoration: inherit;">Container<wbr>Image</a>
@@ -1101,8 +1103,7 @@ Possible values are `DISK_TYPE_UNSPECIFIED`, `PD_STANDARD`, `PD_SSD`, and `PD_BA
     </dt>
     <dd>{{% md %}}Use a container image to start the notebook instance.
 Structure is documented below.
-{{% /md %}}</dd>
-    <dt class="property-optional"
+{{% /md %}}</dd><dt class="property-optional"
             title="Optional">
         <span id="createtime_go">
 <a href="#createtime_go" style="color: inherit; text-decoration: inherit;">Create<wbr>Time</a>
@@ -1111,8 +1112,7 @@ Structure is documented below.
         <span class="property-type">string</span>
     </dt>
     <dd>{{% md %}}Instance creation time
-{{% /md %}}</dd>
-    <dt class="property-optional"
+{{% /md %}}</dd><dt class="property-optional"
             title="Optional">
         <span id="customgpudriverpath_go">
 <a href="#customgpudriverpath_go" style="color: inherit; text-decoration: inherit;">Custom<wbr>Gpu<wbr>Driver<wbr>Path</a>
@@ -1122,8 +1122,7 @@ Structure is documented below.
     </dt>
     <dd>{{% md %}}Specify a custom Cloud Storage path where the GPU driver is stored.
 If not specified, we'll automatically choose from official GPU drivers.
-{{% /md %}}</dd>
-    <dt class="property-optional"
+{{% /md %}}</dd><dt class="property-optional"
             title="Optional">
         <span id="datadisksizegb_go">
 <a href="#datadisksizegb_go" style="color: inherit; text-decoration: inherit;">Data<wbr>Disk<wbr>Size<wbr>Gb</a>
@@ -1135,8 +1134,7 @@ If not specified, we'll automatically choose from official GPU drivers.
 up to a maximum of 64000 GB (64 TB).
 You can choose the size of the data disk based on how big your notebooks and data are.
 If not specified, this defaults to 100.
-{{% /md %}}</dd>
-    <dt class="property-optional"
+{{% /md %}}</dd><dt class="property-optional"
             title="Optional">
         <span id="datadisktype_go">
 <a href="#datadisktype_go" style="color: inherit; text-decoration: inherit;">Data<wbr>Disk<wbr>Type</a>
@@ -1146,8 +1144,7 @@ If not specified, this defaults to 100.
     </dt>
     <dd>{{% md %}}Possible disk types for notebook instances.
 Possible values are `DISK_TYPE_UNSPECIFIED`, `PD_STANDARD`, `PD_SSD`, and `PD_BALANCED`.
-{{% /md %}}</dd>
-    <dt class="property-optional"
+{{% /md %}}</dd><dt class="property-optional"
             title="Optional">
         <span id="diskencryption_go">
 <a href="#diskencryption_go" style="color: inherit; text-decoration: inherit;">Disk<wbr>Encryption</a>
@@ -1157,8 +1154,7 @@ Possible values are `DISK_TYPE_UNSPECIFIED`, `PD_STANDARD`, `PD_SSD`, and `PD_BA
     </dt>
     <dd>{{% md %}}Disk encryption method used on the boot and data disks, defaults to GMEK.
 Possible values are `DISK_ENCRYPTION_UNSPECIFIED`, `GMEK`, and `CMEK`.
-{{% /md %}}</dd>
-    <dt class="property-optional"
+{{% /md %}}</dd><dt class="property-optional"
             title="Optional">
         <span id="installgpudriver_go">
 <a href="#installgpudriver_go" style="color: inherit; text-decoration: inherit;">Install<wbr>Gpu<wbr>Driver</a>
@@ -1169,8 +1165,7 @@ Possible values are `DISK_ENCRYPTION_UNSPECIFIED`, `GMEK`, and `CMEK`.
     <dd>{{% md %}}Whether the end user authorizes Google Cloud to install GPU driver
 on this instance. If this field is empty or set to false, the GPU driver
 won't be installed. Only applicable to instances with GPUs.
-{{% /md %}}</dd>
-    <dt class="property-optional"
+{{% /md %}}</dd><dt class="property-optional"
             title="Optional">
         <span id="instanceowners_go">
 <a href="#instanceowners_go" style="color: inherit; text-decoration: inherit;">Instance<wbr>Owners</a>
@@ -1183,8 +1178,7 @@ Format: alias@example.com.
 Currently supports one owner only.
 If not specified, all of the service account users of
 your VM instance's service account can use the instance.
-{{% /md %}}</dd>
-    <dt class="property-optional"
+{{% /md %}}</dd><dt class="property-optional"
             title="Optional">
         <span id="kmskey_go">
 <a href="#kmskey_go" style="color: inherit; text-decoration: inherit;">Kms<wbr>Key</a>
@@ -1194,8 +1188,7 @@ your VM instance's service account can use the instance.
     </dt>
     <dd>{{% md %}}The KMS key used to encrypt the disks, only applicable if diskEncryption is CMEK.
 Format: projects/{project_id}/locations/{location}/keyRings/{key_ring_id}/cryptoKeys/{key_id}
-{{% /md %}}</dd>
-    <dt class="property-optional"
+{{% /md %}}</dd><dt class="property-optional"
             title="Optional">
         <span id="labels_go">
 <a href="#labels_go" style="color: inherit; text-decoration: inherit;">Labels</a>
@@ -1205,8 +1198,7 @@ Format: projects/{project_id}/locations/{location}/keyRings/{key_ring_id}/crypto
     </dt>
     <dd>{{% md %}}Labels to apply to this instance. These can be later modified by the setLabels method.
 An object containing a list of "key": value pairs. Example: { "name": "wrench", "mass": "1.3kg", "count": "3" }.
-{{% /md %}}</dd>
-    <dt class="property-optional"
+{{% /md %}}</dd><dt class="property-optional"
             title="Optional">
         <span id="metadata_go">
 <a href="#metadata_go" style="color: inherit; text-decoration: inherit;">Metadata</a>
@@ -1216,8 +1208,7 @@ An object containing a list of "key": value pairs. Example: { "name": "wrench", 
     </dt>
     <dd>{{% md %}}Custom metadata to apply to this instance.
 An object containing a list of "key": value pairs. Example: { "name": "wrench", "mass": "1.3kg", "count": "3" }.
-{{% /md %}}</dd>
-    <dt class="property-optional"
+{{% /md %}}</dd><dt class="property-optional"
             title="Optional">
         <span id="name_go">
 <a href="#name_go" style="color: inherit; text-decoration: inherit;">Name</a>
@@ -1226,8 +1217,7 @@ An object containing a list of "key": value pairs. Example: { "name": "wrench", 
         <span class="property-type">string</span>
     </dt>
     <dd>{{% md %}}The name specified for the Notebook instance.
-{{% /md %}}</dd>
-    <dt class="property-optional"
+{{% /md %}}</dd><dt class="property-optional"
             title="Optional">
         <span id="network_go">
 <a href="#network_go" style="color: inherit; text-decoration: inherit;">Network</a>
@@ -1237,8 +1227,7 @@ An object containing a list of "key": value pairs. Example: { "name": "wrench", 
     </dt>
     <dd>{{% md %}}The name of the VPC that this instance is in.
 Format: projects/{project_id}/global/networks/{network_id}
-{{% /md %}}</dd>
-    <dt class="property-optional"
+{{% /md %}}</dd><dt class="property-optional"
             title="Optional">
         <span id="noproxyaccess_go">
 <a href="#noproxyaccess_go" style="color: inherit; text-decoration: inherit;">No<wbr>Proxy<wbr>Access</a>
@@ -1247,8 +1236,7 @@ Format: projects/{project_id}/global/networks/{network_id}
         <span class="property-type">bool</span>
     </dt>
     <dd>{{% md %}}The notebook instance will not register with the proxy..
-{{% /md %}}</dd>
-    <dt class="property-optional"
+{{% /md %}}</dd><dt class="property-optional"
             title="Optional">
         <span id="nopublicip_go">
 <a href="#nopublicip_go" style="color: inherit; text-decoration: inherit;">No<wbr>Public<wbr>Ip</a>
@@ -1257,8 +1245,7 @@ Format: projects/{project_id}/global/networks/{network_id}
         <span class="property-type">bool</span>
     </dt>
     <dd>{{% md %}}No public IP will be assigned to this instance.
-{{% /md %}}</dd>
-    <dt class="property-optional"
+{{% /md %}}</dd><dt class="property-optional"
             title="Optional">
         <span id="noremovedatadisk_go">
 <a href="#noremovedatadisk_go" style="color: inherit; text-decoration: inherit;">No<wbr>Remove<wbr>Data<wbr>Disk</a>
@@ -1267,8 +1254,7 @@ Format: projects/{project_id}/global/networks/{network_id}
         <span class="property-type">bool</span>
     </dt>
     <dd>{{% md %}}If true, the data disk will not be auto deleted when deleting the instance.
-{{% /md %}}</dd>
-    <dt class="property-optional"
+{{% /md %}}</dd><dt class="property-optional"
             title="Optional">
         <span id="poststartupscript_go">
 <a href="#poststartupscript_go" style="color: inherit; text-decoration: inherit;">Post<wbr>Startup<wbr>Script</a>
@@ -1279,8 +1265,7 @@ Format: projects/{project_id}/global/networks/{network_id}
     <dd>{{% md %}}Path to a Bash script that automatically runs after a
 notebook instance fully boots up. The path must be a URL
 or Cloud Storage path (gs://path-to-file/file-name).
-{{% /md %}}</dd>
-    <dt class="property-optional"
+{{% /md %}}</dd><dt class="property-optional"
             title="Optional">
         <span id="project_go">
 <a href="#project_go" style="color: inherit; text-decoration: inherit;">Project</a>
@@ -1290,8 +1275,7 @@ or Cloud Storage path (gs://path-to-file/file-name).
     </dt>
     <dd>{{% md %}}The name of the Google Cloud project that this VM image belongs to.
 Format: projects/{project_id}
-{{% /md %}}</dd>
-    <dt class="property-optional"
+{{% /md %}}</dd><dt class="property-optional"
             title="Optional">
         <span id="serviceaccount_go">
 <a href="#serviceaccount_go" style="color: inherit; text-decoration: inherit;">Service<wbr>Account</a>
@@ -1304,8 +1288,7 @@ Google Cloud services. You can use any service account within
 the same project, but you must have the service account user
 permission to use the instance. If not specified,
 the Compute Engine default service account is used.
-{{% /md %}}</dd>
-    <dt class="property-optional"
+{{% /md %}}</dd><dt class="property-optional"
             title="Optional">
         <span id="serviceaccountscopes_go">
 <a href="#serviceaccountscopes_go" style="color: inherit; text-decoration: inherit;">Service<wbr>Account<wbr>Scopes</a>
@@ -1317,8 +1300,7 @@ the Compute Engine default service account is used.
 If not specified, the following scopes are defined:
 - https://www.googleapis.com/auth/cloud-platform
 - https://www.googleapis.com/auth/userinfo.email
-{{% /md %}}</dd>
-    <dt class="property-optional"
+{{% /md %}}</dd><dt class="property-optional"
             title="Optional">
         <span id="shieldedinstanceconfig_go">
 <a href="#shieldedinstanceconfig_go" style="color: inherit; text-decoration: inherit;">Shielded<wbr>Instance<wbr>Config</a>
@@ -1329,8 +1311,7 @@ If not specified, the following scopes are defined:
     <dd>{{% md %}}A set of Shielded Instance options. Check [Images using supported Shielded VM features]
 Not all combinations are valid
 Structure is documented below.
-{{% /md %}}</dd>
-    <dt class="property-optional"
+{{% /md %}}</dd><dt class="property-optional"
             title="Optional">
         <span id="subnet_go">
 <a href="#subnet_go" style="color: inherit; text-decoration: inherit;">Subnet</a>
@@ -1340,8 +1321,7 @@ Structure is documented below.
     </dt>
     <dd>{{% md %}}The name of the subnet that this instance is in.
 Format: projects/{project_id}/regions/{region}/subnetworks/{subnetwork_id}
-{{% /md %}}</dd>
-    <dt class="property-optional"
+{{% /md %}}</dd><dt class="property-optional"
             title="Optional">
         <span id="tags_go">
 <a href="#tags_go" style="color: inherit; text-decoration: inherit;">Tags</a>
@@ -1350,8 +1330,7 @@ Format: projects/{project_id}/regions/{region}/subnetworks/{subnetwork_id}
         <span class="property-type">[]string</span>
     </dt>
     <dd>{{% md %}}The Compute Engine tags to add to runtime.
-{{% /md %}}</dd>
-    <dt class="property-optional"
+{{% /md %}}</dd><dt class="property-optional"
             title="Optional">
         <span id="updatetime_go">
 <a href="#updatetime_go" style="color: inherit; text-decoration: inherit;">Update<wbr>Time</a>
@@ -1360,8 +1339,7 @@ Format: projects/{project_id}/regions/{region}/subnetworks/{subnetwork_id}
         <span class="property-type">string</span>
     </dt>
     <dd>{{% md %}}Instance update time.
-{{% /md %}}</dd>
-    <dt class="property-optional"
+{{% /md %}}</dd><dt class="property-optional"
             title="Optional">
         <span id="vmimage_go">
 <a href="#vmimage_go" style="color: inherit; text-decoration: inherit;">Vm<wbr>Image</a>
@@ -1371,14 +1349,11 @@ Format: projects/{project_id}/regions/{region}/subnetworks/{subnetwork_id}
     </dt>
     <dd>{{% md %}}Use a Compute Engine VM image to start the notebook instance.
 Structure is documented below.
-{{% /md %}}</dd>
-</dl>
+{{% /md %}}</dd></dl>
 {{% /choosable %}}
 
 {{% choosable language nodejs %}}
-<dl class="resources-properties">
-
-    <dt class="property-required"
+<dl class="resources-properties"><dt class="property-required"
             title="Required">
         <span id="location_nodejs">
 <a href="#location_nodejs" style="color: inherit; text-decoration: inherit;">location</a>
@@ -1387,8 +1362,7 @@ Structure is documented below.
         <span class="property-type">string</span>
     </dt>
     <dd>{{% md %}}A reference to the zone where the machine resides.
-{{% /md %}}</dd>
-    <dt class="property-required"
+{{% /md %}}</dd><dt class="property-required"
             title="Required">
         <span id="machinetype_nodejs">
 <a href="#machinetype_nodejs" style="color: inherit; text-decoration: inherit;">machine<wbr>Type</a>
@@ -1397,8 +1371,7 @@ Structure is documented below.
         <span class="property-type">string</span>
     </dt>
     <dd>{{% md %}}A reference to a machine type which defines VM kind.
-{{% /md %}}</dd>
-    <dt class="property-optional"
+{{% /md %}}</dd><dt class="property-optional"
             title="Optional">
         <span id="acceleratorconfig_nodejs">
 <a href="#acceleratorconfig_nodejs" style="color: inherit; text-decoration: inherit;">accelerator<wbr>Config</a>
@@ -1410,8 +1383,7 @@ Structure is documented below.
 make sure that your configuration has enough vCPUs and memory to support the
 machineType you have selected.
 Structure is documented below.
-{{% /md %}}</dd>
-    <dt class="property-optional"
+{{% /md %}}</dd><dt class="property-optional"
             title="Optional">
         <span id="bootdisksizegb_nodejs">
 <a href="#bootdisksizegb_nodejs" style="color: inherit; text-decoration: inherit;">boot<wbr>Disk<wbr>Size<wbr>Gb</a>
@@ -1422,8 +1394,7 @@ Structure is documented below.
     <dd>{{% md %}}The size of the boot disk in GB attached to this instance,
 up to a maximum of 64000 GB (64 TB). The minimum recommended value is 100 GB.
 If not specified, this defaults to 100.
-{{% /md %}}</dd>
-    <dt class="property-optional"
+{{% /md %}}</dd><dt class="property-optional"
             title="Optional">
         <span id="bootdisktype_nodejs">
 <a href="#bootdisktype_nodejs" style="color: inherit; text-decoration: inherit;">boot<wbr>Disk<wbr>Type</a>
@@ -1433,8 +1404,7 @@ If not specified, this defaults to 100.
     </dt>
     <dd>{{% md %}}Possible disk types for notebook instances.
 Possible values are `DISK_TYPE_UNSPECIFIED`, `PD_STANDARD`, `PD_SSD`, and `PD_BALANCED`.
-{{% /md %}}</dd>
-    <dt class="property-optional"
+{{% /md %}}</dd><dt class="property-optional"
             title="Optional">
         <span id="containerimage_nodejs">
 <a href="#containerimage_nodejs" style="color: inherit; text-decoration: inherit;">container<wbr>Image</a>
@@ -1444,8 +1414,7 @@ Possible values are `DISK_TYPE_UNSPECIFIED`, `PD_STANDARD`, `PD_SSD`, and `PD_BA
     </dt>
     <dd>{{% md %}}Use a container image to start the notebook instance.
 Structure is documented below.
-{{% /md %}}</dd>
-    <dt class="property-optional"
+{{% /md %}}</dd><dt class="property-optional"
             title="Optional">
         <span id="createtime_nodejs">
 <a href="#createtime_nodejs" style="color: inherit; text-decoration: inherit;">create<wbr>Time</a>
@@ -1454,8 +1423,7 @@ Structure is documented below.
         <span class="property-type">string</span>
     </dt>
     <dd>{{% md %}}Instance creation time
-{{% /md %}}</dd>
-    <dt class="property-optional"
+{{% /md %}}</dd><dt class="property-optional"
             title="Optional">
         <span id="customgpudriverpath_nodejs">
 <a href="#customgpudriverpath_nodejs" style="color: inherit; text-decoration: inherit;">custom<wbr>Gpu<wbr>Driver<wbr>Path</a>
@@ -1465,8 +1433,7 @@ Structure is documented below.
     </dt>
     <dd>{{% md %}}Specify a custom Cloud Storage path where the GPU driver is stored.
 If not specified, we'll automatically choose from official GPU drivers.
-{{% /md %}}</dd>
-    <dt class="property-optional"
+{{% /md %}}</dd><dt class="property-optional"
             title="Optional">
         <span id="datadisksizegb_nodejs">
 <a href="#datadisksizegb_nodejs" style="color: inherit; text-decoration: inherit;">data<wbr>Disk<wbr>Size<wbr>Gb</a>
@@ -1478,8 +1445,7 @@ If not specified, we'll automatically choose from official GPU drivers.
 up to a maximum of 64000 GB (64 TB).
 You can choose the size of the data disk based on how big your notebooks and data are.
 If not specified, this defaults to 100.
-{{% /md %}}</dd>
-    <dt class="property-optional"
+{{% /md %}}</dd><dt class="property-optional"
             title="Optional">
         <span id="datadisktype_nodejs">
 <a href="#datadisktype_nodejs" style="color: inherit; text-decoration: inherit;">data<wbr>Disk<wbr>Type</a>
@@ -1489,8 +1455,7 @@ If not specified, this defaults to 100.
     </dt>
     <dd>{{% md %}}Possible disk types for notebook instances.
 Possible values are `DISK_TYPE_UNSPECIFIED`, `PD_STANDARD`, `PD_SSD`, and `PD_BALANCED`.
-{{% /md %}}</dd>
-    <dt class="property-optional"
+{{% /md %}}</dd><dt class="property-optional"
             title="Optional">
         <span id="diskencryption_nodejs">
 <a href="#diskencryption_nodejs" style="color: inherit; text-decoration: inherit;">disk<wbr>Encryption</a>
@@ -1500,8 +1465,7 @@ Possible values are `DISK_TYPE_UNSPECIFIED`, `PD_STANDARD`, `PD_SSD`, and `PD_BA
     </dt>
     <dd>{{% md %}}Disk encryption method used on the boot and data disks, defaults to GMEK.
 Possible values are `DISK_ENCRYPTION_UNSPECIFIED`, `GMEK`, and `CMEK`.
-{{% /md %}}</dd>
-    <dt class="property-optional"
+{{% /md %}}</dd><dt class="property-optional"
             title="Optional">
         <span id="installgpudriver_nodejs">
 <a href="#installgpudriver_nodejs" style="color: inherit; text-decoration: inherit;">install<wbr>Gpu<wbr>Driver</a>
@@ -1512,8 +1476,7 @@ Possible values are `DISK_ENCRYPTION_UNSPECIFIED`, `GMEK`, and `CMEK`.
     <dd>{{% md %}}Whether the end user authorizes Google Cloud to install GPU driver
 on this instance. If this field is empty or set to false, the GPU driver
 won't be installed. Only applicable to instances with GPUs.
-{{% /md %}}</dd>
-    <dt class="property-optional"
+{{% /md %}}</dd><dt class="property-optional"
             title="Optional">
         <span id="instanceowners_nodejs">
 <a href="#instanceowners_nodejs" style="color: inherit; text-decoration: inherit;">instance<wbr>Owners</a>
@@ -1526,8 +1489,7 @@ Format: alias@example.com.
 Currently supports one owner only.
 If not specified, all of the service account users of
 your VM instance's service account can use the instance.
-{{% /md %}}</dd>
-    <dt class="property-optional"
+{{% /md %}}</dd><dt class="property-optional"
             title="Optional">
         <span id="kmskey_nodejs">
 <a href="#kmskey_nodejs" style="color: inherit; text-decoration: inherit;">kms<wbr>Key</a>
@@ -1537,8 +1499,7 @@ your VM instance's service account can use the instance.
     </dt>
     <dd>{{% md %}}The KMS key used to encrypt the disks, only applicable if diskEncryption is CMEK.
 Format: projects/{project_id}/locations/{location}/keyRings/{key_ring_id}/cryptoKeys/{key_id}
-{{% /md %}}</dd>
-    <dt class="property-optional"
+{{% /md %}}</dd><dt class="property-optional"
             title="Optional">
         <span id="labels_nodejs">
 <a href="#labels_nodejs" style="color: inherit; text-decoration: inherit;">labels</a>
@@ -1548,8 +1509,7 @@ Format: projects/{project_id}/locations/{location}/keyRings/{key_ring_id}/crypto
     </dt>
     <dd>{{% md %}}Labels to apply to this instance. These can be later modified by the setLabels method.
 An object containing a list of "key": value pairs. Example: { "name": "wrench", "mass": "1.3kg", "count": "3" }.
-{{% /md %}}</dd>
-    <dt class="property-optional"
+{{% /md %}}</dd><dt class="property-optional"
             title="Optional">
         <span id="metadata_nodejs">
 <a href="#metadata_nodejs" style="color: inherit; text-decoration: inherit;">metadata</a>
@@ -1559,8 +1519,7 @@ An object containing a list of "key": value pairs. Example: { "name": "wrench", 
     </dt>
     <dd>{{% md %}}Custom metadata to apply to this instance.
 An object containing a list of "key": value pairs. Example: { "name": "wrench", "mass": "1.3kg", "count": "3" }.
-{{% /md %}}</dd>
-    <dt class="property-optional"
+{{% /md %}}</dd><dt class="property-optional"
             title="Optional">
         <span id="name_nodejs">
 <a href="#name_nodejs" style="color: inherit; text-decoration: inherit;">name</a>
@@ -1569,8 +1528,7 @@ An object containing a list of "key": value pairs. Example: { "name": "wrench", 
         <span class="property-type">string</span>
     </dt>
     <dd>{{% md %}}The name specified for the Notebook instance.
-{{% /md %}}</dd>
-    <dt class="property-optional"
+{{% /md %}}</dd><dt class="property-optional"
             title="Optional">
         <span id="network_nodejs">
 <a href="#network_nodejs" style="color: inherit; text-decoration: inherit;">network</a>
@@ -1580,8 +1538,7 @@ An object containing a list of "key": value pairs. Example: { "name": "wrench", 
     </dt>
     <dd>{{% md %}}The name of the VPC that this instance is in.
 Format: projects/{project_id}/global/networks/{network_id}
-{{% /md %}}</dd>
-    <dt class="property-optional"
+{{% /md %}}</dd><dt class="property-optional"
             title="Optional">
         <span id="noproxyaccess_nodejs">
 <a href="#noproxyaccess_nodejs" style="color: inherit; text-decoration: inherit;">no<wbr>Proxy<wbr>Access</a>
@@ -1590,8 +1547,7 @@ Format: projects/{project_id}/global/networks/{network_id}
         <span class="property-type">boolean</span>
     </dt>
     <dd>{{% md %}}The notebook instance will not register with the proxy..
-{{% /md %}}</dd>
-    <dt class="property-optional"
+{{% /md %}}</dd><dt class="property-optional"
             title="Optional">
         <span id="nopublicip_nodejs">
 <a href="#nopublicip_nodejs" style="color: inherit; text-decoration: inherit;">no<wbr>Public<wbr>Ip</a>
@@ -1600,8 +1556,7 @@ Format: projects/{project_id}/global/networks/{network_id}
         <span class="property-type">boolean</span>
     </dt>
     <dd>{{% md %}}No public IP will be assigned to this instance.
-{{% /md %}}</dd>
-    <dt class="property-optional"
+{{% /md %}}</dd><dt class="property-optional"
             title="Optional">
         <span id="noremovedatadisk_nodejs">
 <a href="#noremovedatadisk_nodejs" style="color: inherit; text-decoration: inherit;">no<wbr>Remove<wbr>Data<wbr>Disk</a>
@@ -1610,8 +1565,7 @@ Format: projects/{project_id}/global/networks/{network_id}
         <span class="property-type">boolean</span>
     </dt>
     <dd>{{% md %}}If true, the data disk will not be auto deleted when deleting the instance.
-{{% /md %}}</dd>
-    <dt class="property-optional"
+{{% /md %}}</dd><dt class="property-optional"
             title="Optional">
         <span id="poststartupscript_nodejs">
 <a href="#poststartupscript_nodejs" style="color: inherit; text-decoration: inherit;">post<wbr>Startup<wbr>Script</a>
@@ -1622,8 +1576,7 @@ Format: projects/{project_id}/global/networks/{network_id}
     <dd>{{% md %}}Path to a Bash script that automatically runs after a
 notebook instance fully boots up. The path must be a URL
 or Cloud Storage path (gs://path-to-file/file-name).
-{{% /md %}}</dd>
-    <dt class="property-optional"
+{{% /md %}}</dd><dt class="property-optional"
             title="Optional">
         <span id="project_nodejs">
 <a href="#project_nodejs" style="color: inherit; text-decoration: inherit;">project</a>
@@ -1633,8 +1586,7 @@ or Cloud Storage path (gs://path-to-file/file-name).
     </dt>
     <dd>{{% md %}}The name of the Google Cloud project that this VM image belongs to.
 Format: projects/{project_id}
-{{% /md %}}</dd>
-    <dt class="property-optional"
+{{% /md %}}</dd><dt class="property-optional"
             title="Optional">
         <span id="serviceaccount_nodejs">
 <a href="#serviceaccount_nodejs" style="color: inherit; text-decoration: inherit;">service<wbr>Account</a>
@@ -1647,8 +1599,7 @@ Google Cloud services. You can use any service account within
 the same project, but you must have the service account user
 permission to use the instance. If not specified,
 the Compute Engine default service account is used.
-{{% /md %}}</dd>
-    <dt class="property-optional"
+{{% /md %}}</dd><dt class="property-optional"
             title="Optional">
         <span id="serviceaccountscopes_nodejs">
 <a href="#serviceaccountscopes_nodejs" style="color: inherit; text-decoration: inherit;">service<wbr>Account<wbr>Scopes</a>
@@ -1660,8 +1611,7 @@ the Compute Engine default service account is used.
 If not specified, the following scopes are defined:
 - https://www.googleapis.com/auth/cloud-platform
 - https://www.googleapis.com/auth/userinfo.email
-{{% /md %}}</dd>
-    <dt class="property-optional"
+{{% /md %}}</dd><dt class="property-optional"
             title="Optional">
         <span id="shieldedinstanceconfig_nodejs">
 <a href="#shieldedinstanceconfig_nodejs" style="color: inherit; text-decoration: inherit;">shielded<wbr>Instance<wbr>Config</a>
@@ -1672,8 +1622,7 @@ If not specified, the following scopes are defined:
     <dd>{{% md %}}A set of Shielded Instance options. Check [Images using supported Shielded VM features]
 Not all combinations are valid
 Structure is documented below.
-{{% /md %}}</dd>
-    <dt class="property-optional"
+{{% /md %}}</dd><dt class="property-optional"
             title="Optional">
         <span id="subnet_nodejs">
 <a href="#subnet_nodejs" style="color: inherit; text-decoration: inherit;">subnet</a>
@@ -1683,8 +1632,7 @@ Structure is documented below.
     </dt>
     <dd>{{% md %}}The name of the subnet that this instance is in.
 Format: projects/{project_id}/regions/{region}/subnetworks/{subnetwork_id}
-{{% /md %}}</dd>
-    <dt class="property-optional"
+{{% /md %}}</dd><dt class="property-optional"
             title="Optional">
         <span id="tags_nodejs">
 <a href="#tags_nodejs" style="color: inherit; text-decoration: inherit;">tags</a>
@@ -1693,8 +1641,7 @@ Format: projects/{project_id}/regions/{region}/subnetworks/{subnetwork_id}
         <span class="property-type">string[]</span>
     </dt>
     <dd>{{% md %}}The Compute Engine tags to add to runtime.
-{{% /md %}}</dd>
-    <dt class="property-optional"
+{{% /md %}}</dd><dt class="property-optional"
             title="Optional">
         <span id="updatetime_nodejs">
 <a href="#updatetime_nodejs" style="color: inherit; text-decoration: inherit;">update<wbr>Time</a>
@@ -1703,8 +1650,7 @@ Format: projects/{project_id}/regions/{region}/subnetworks/{subnetwork_id}
         <span class="property-type">string</span>
     </dt>
     <dd>{{% md %}}Instance update time.
-{{% /md %}}</dd>
-    <dt class="property-optional"
+{{% /md %}}</dd><dt class="property-optional"
             title="Optional">
         <span id="vmimage_nodejs">
 <a href="#vmimage_nodejs" style="color: inherit; text-decoration: inherit;">vm<wbr>Image</a>
@@ -1714,14 +1660,11 @@ Format: projects/{project_id}/regions/{region}/subnetworks/{subnetwork_id}
     </dt>
     <dd>{{% md %}}Use a Compute Engine VM image to start the notebook instance.
 Structure is documented below.
-{{% /md %}}</dd>
-</dl>
+{{% /md %}}</dd></dl>
 {{% /choosable %}}
 
 {{% choosable language python %}}
-<dl class="resources-properties">
-
-    <dt class="property-required"
+<dl class="resources-properties"><dt class="property-required"
             title="Required">
         <span id="location_python">
 <a href="#location_python" style="color: inherit; text-decoration: inherit;">location</a>
@@ -1730,8 +1673,7 @@ Structure is documented below.
         <span class="property-type">str</span>
     </dt>
     <dd>{{% md %}}A reference to the zone where the machine resides.
-{{% /md %}}</dd>
-    <dt class="property-required"
+{{% /md %}}</dd><dt class="property-required"
             title="Required">
         <span id="machine_type_python">
 <a href="#machine_type_python" style="color: inherit; text-decoration: inherit;">machine_<wbr>type</a>
@@ -1740,8 +1682,7 @@ Structure is documented below.
         <span class="property-type">str</span>
     </dt>
     <dd>{{% md %}}A reference to a machine type which defines VM kind.
-{{% /md %}}</dd>
-    <dt class="property-optional"
+{{% /md %}}</dd><dt class="property-optional"
             title="Optional">
         <span id="accelerator_config_python">
 <a href="#accelerator_config_python" style="color: inherit; text-decoration: inherit;">accelerator_<wbr>config</a>
@@ -1753,8 +1694,7 @@ Structure is documented below.
 make sure that your configuration has enough vCPUs and memory to support the
 machineType you have selected.
 Structure is documented below.
-{{% /md %}}</dd>
-    <dt class="property-optional"
+{{% /md %}}</dd><dt class="property-optional"
             title="Optional">
         <span id="boot_disk_size_gb_python">
 <a href="#boot_disk_size_gb_python" style="color: inherit; text-decoration: inherit;">boot_<wbr>disk_<wbr>size_<wbr>gb</a>
@@ -1765,8 +1705,7 @@ Structure is documented below.
     <dd>{{% md %}}The size of the boot disk in GB attached to this instance,
 up to a maximum of 64000 GB (64 TB). The minimum recommended value is 100 GB.
 If not specified, this defaults to 100.
-{{% /md %}}</dd>
-    <dt class="property-optional"
+{{% /md %}}</dd><dt class="property-optional"
             title="Optional">
         <span id="boot_disk_type_python">
 <a href="#boot_disk_type_python" style="color: inherit; text-decoration: inherit;">boot_<wbr>disk_<wbr>type</a>
@@ -1776,8 +1715,7 @@ If not specified, this defaults to 100.
     </dt>
     <dd>{{% md %}}Possible disk types for notebook instances.
 Possible values are `DISK_TYPE_UNSPECIFIED`, `PD_STANDARD`, `PD_SSD`, and `PD_BALANCED`.
-{{% /md %}}</dd>
-    <dt class="property-optional"
+{{% /md %}}</dd><dt class="property-optional"
             title="Optional">
         <span id="container_image_python">
 <a href="#container_image_python" style="color: inherit; text-decoration: inherit;">container_<wbr>image</a>
@@ -1787,8 +1725,7 @@ Possible values are `DISK_TYPE_UNSPECIFIED`, `PD_STANDARD`, `PD_SSD`, and `PD_BA
     </dt>
     <dd>{{% md %}}Use a container image to start the notebook instance.
 Structure is documented below.
-{{% /md %}}</dd>
-    <dt class="property-optional"
+{{% /md %}}</dd><dt class="property-optional"
             title="Optional">
         <span id="create_time_python">
 <a href="#create_time_python" style="color: inherit; text-decoration: inherit;">create_<wbr>time</a>
@@ -1797,8 +1734,7 @@ Structure is documented below.
         <span class="property-type">str</span>
     </dt>
     <dd>{{% md %}}Instance creation time
-{{% /md %}}</dd>
-    <dt class="property-optional"
+{{% /md %}}</dd><dt class="property-optional"
             title="Optional">
         <span id="custom_gpu_driver_path_python">
 <a href="#custom_gpu_driver_path_python" style="color: inherit; text-decoration: inherit;">custom_<wbr>gpu_<wbr>driver_<wbr>path</a>
@@ -1808,8 +1744,7 @@ Structure is documented below.
     </dt>
     <dd>{{% md %}}Specify a custom Cloud Storage path where the GPU driver is stored.
 If not specified, we'll automatically choose from official GPU drivers.
-{{% /md %}}</dd>
-    <dt class="property-optional"
+{{% /md %}}</dd><dt class="property-optional"
             title="Optional">
         <span id="data_disk_size_gb_python">
 <a href="#data_disk_size_gb_python" style="color: inherit; text-decoration: inherit;">data_<wbr>disk_<wbr>size_<wbr>gb</a>
@@ -1821,8 +1756,7 @@ If not specified, we'll automatically choose from official GPU drivers.
 up to a maximum of 64000 GB (64 TB).
 You can choose the size of the data disk based on how big your notebooks and data are.
 If not specified, this defaults to 100.
-{{% /md %}}</dd>
-    <dt class="property-optional"
+{{% /md %}}</dd><dt class="property-optional"
             title="Optional">
         <span id="data_disk_type_python">
 <a href="#data_disk_type_python" style="color: inherit; text-decoration: inherit;">data_<wbr>disk_<wbr>type</a>
@@ -1832,8 +1766,7 @@ If not specified, this defaults to 100.
     </dt>
     <dd>{{% md %}}Possible disk types for notebook instances.
 Possible values are `DISK_TYPE_UNSPECIFIED`, `PD_STANDARD`, `PD_SSD`, and `PD_BALANCED`.
-{{% /md %}}</dd>
-    <dt class="property-optional"
+{{% /md %}}</dd><dt class="property-optional"
             title="Optional">
         <span id="disk_encryption_python">
 <a href="#disk_encryption_python" style="color: inherit; text-decoration: inherit;">disk_<wbr>encryption</a>
@@ -1843,8 +1776,7 @@ Possible values are `DISK_TYPE_UNSPECIFIED`, `PD_STANDARD`, `PD_SSD`, and `PD_BA
     </dt>
     <dd>{{% md %}}Disk encryption method used on the boot and data disks, defaults to GMEK.
 Possible values are `DISK_ENCRYPTION_UNSPECIFIED`, `GMEK`, and `CMEK`.
-{{% /md %}}</dd>
-    <dt class="property-optional"
+{{% /md %}}</dd><dt class="property-optional"
             title="Optional">
         <span id="install_gpu_driver_python">
 <a href="#install_gpu_driver_python" style="color: inherit; text-decoration: inherit;">install_<wbr>gpu_<wbr>driver</a>
@@ -1855,8 +1787,7 @@ Possible values are `DISK_ENCRYPTION_UNSPECIFIED`, `GMEK`, and `CMEK`.
     <dd>{{% md %}}Whether the end user authorizes Google Cloud to install GPU driver
 on this instance. If this field is empty or set to false, the GPU driver
 won't be installed. Only applicable to instances with GPUs.
-{{% /md %}}</dd>
-    <dt class="property-optional"
+{{% /md %}}</dd><dt class="property-optional"
             title="Optional">
         <span id="instance_owners_python">
 <a href="#instance_owners_python" style="color: inherit; text-decoration: inherit;">instance_<wbr>owners</a>
@@ -1869,8 +1800,7 @@ Format: alias@example.com.
 Currently supports one owner only.
 If not specified, all of the service account users of
 your VM instance's service account can use the instance.
-{{% /md %}}</dd>
-    <dt class="property-optional"
+{{% /md %}}</dd><dt class="property-optional"
             title="Optional">
         <span id="kms_key_python">
 <a href="#kms_key_python" style="color: inherit; text-decoration: inherit;">kms_<wbr>key</a>
@@ -1880,8 +1810,7 @@ your VM instance's service account can use the instance.
     </dt>
     <dd>{{% md %}}The KMS key used to encrypt the disks, only applicable if diskEncryption is CMEK.
 Format: projects/{project_id}/locations/{location}/keyRings/{key_ring_id}/cryptoKeys/{key_id}
-{{% /md %}}</dd>
-    <dt class="property-optional"
+{{% /md %}}</dd><dt class="property-optional"
             title="Optional">
         <span id="labels_python">
 <a href="#labels_python" style="color: inherit; text-decoration: inherit;">labels</a>
@@ -1891,8 +1820,7 @@ Format: projects/{project_id}/locations/{location}/keyRings/{key_ring_id}/crypto
     </dt>
     <dd>{{% md %}}Labels to apply to this instance. These can be later modified by the setLabels method.
 An object containing a list of "key": value pairs. Example: { "name": "wrench", "mass": "1.3kg", "count": "3" }.
-{{% /md %}}</dd>
-    <dt class="property-optional"
+{{% /md %}}</dd><dt class="property-optional"
             title="Optional">
         <span id="metadata_python">
 <a href="#metadata_python" style="color: inherit; text-decoration: inherit;">metadata</a>
@@ -1902,8 +1830,7 @@ An object containing a list of "key": value pairs. Example: { "name": "wrench", 
     </dt>
     <dd>{{% md %}}Custom metadata to apply to this instance.
 An object containing a list of "key": value pairs. Example: { "name": "wrench", "mass": "1.3kg", "count": "3" }.
-{{% /md %}}</dd>
-    <dt class="property-optional"
+{{% /md %}}</dd><dt class="property-optional"
             title="Optional">
         <span id="name_python">
 <a href="#name_python" style="color: inherit; text-decoration: inherit;">name</a>
@@ -1912,8 +1839,7 @@ An object containing a list of "key": value pairs. Example: { "name": "wrench", 
         <span class="property-type">str</span>
     </dt>
     <dd>{{% md %}}The name specified for the Notebook instance.
-{{% /md %}}</dd>
-    <dt class="property-optional"
+{{% /md %}}</dd><dt class="property-optional"
             title="Optional">
         <span id="network_python">
 <a href="#network_python" style="color: inherit; text-decoration: inherit;">network</a>
@@ -1923,8 +1849,7 @@ An object containing a list of "key": value pairs. Example: { "name": "wrench", 
     </dt>
     <dd>{{% md %}}The name of the VPC that this instance is in.
 Format: projects/{project_id}/global/networks/{network_id}
-{{% /md %}}</dd>
-    <dt class="property-optional"
+{{% /md %}}</dd><dt class="property-optional"
             title="Optional">
         <span id="no_proxy_access_python">
 <a href="#no_proxy_access_python" style="color: inherit; text-decoration: inherit;">no_<wbr>proxy_<wbr>access</a>
@@ -1933,8 +1858,7 @@ Format: projects/{project_id}/global/networks/{network_id}
         <span class="property-type">bool</span>
     </dt>
     <dd>{{% md %}}The notebook instance will not register with the proxy..
-{{% /md %}}</dd>
-    <dt class="property-optional"
+{{% /md %}}</dd><dt class="property-optional"
             title="Optional">
         <span id="no_public_ip_python">
 <a href="#no_public_ip_python" style="color: inherit; text-decoration: inherit;">no_<wbr>public_<wbr>ip</a>
@@ -1943,8 +1867,7 @@ Format: projects/{project_id}/global/networks/{network_id}
         <span class="property-type">bool</span>
     </dt>
     <dd>{{% md %}}No public IP will be assigned to this instance.
-{{% /md %}}</dd>
-    <dt class="property-optional"
+{{% /md %}}</dd><dt class="property-optional"
             title="Optional">
         <span id="no_remove_data_disk_python">
 <a href="#no_remove_data_disk_python" style="color: inherit; text-decoration: inherit;">no_<wbr>remove_<wbr>data_<wbr>disk</a>
@@ -1953,8 +1876,7 @@ Format: projects/{project_id}/global/networks/{network_id}
         <span class="property-type">bool</span>
     </dt>
     <dd>{{% md %}}If true, the data disk will not be auto deleted when deleting the instance.
-{{% /md %}}</dd>
-    <dt class="property-optional"
+{{% /md %}}</dd><dt class="property-optional"
             title="Optional">
         <span id="post_startup_script_python">
 <a href="#post_startup_script_python" style="color: inherit; text-decoration: inherit;">post_<wbr>startup_<wbr>script</a>
@@ -1965,8 +1887,7 @@ Format: projects/{project_id}/global/networks/{network_id}
     <dd>{{% md %}}Path to a Bash script that automatically runs after a
 notebook instance fully boots up. The path must be a URL
 or Cloud Storage path (gs://path-to-file/file-name).
-{{% /md %}}</dd>
-    <dt class="property-optional"
+{{% /md %}}</dd><dt class="property-optional"
             title="Optional">
         <span id="project_python">
 <a href="#project_python" style="color: inherit; text-decoration: inherit;">project</a>
@@ -1976,8 +1897,7 @@ or Cloud Storage path (gs://path-to-file/file-name).
     </dt>
     <dd>{{% md %}}The name of the Google Cloud project that this VM image belongs to.
 Format: projects/{project_id}
-{{% /md %}}</dd>
-    <dt class="property-optional"
+{{% /md %}}</dd><dt class="property-optional"
             title="Optional">
         <span id="service_account_python">
 <a href="#service_account_python" style="color: inherit; text-decoration: inherit;">service_<wbr>account</a>
@@ -1990,8 +1910,7 @@ Google Cloud services. You can use any service account within
 the same project, but you must have the service account user
 permission to use the instance. If not specified,
 the Compute Engine default service account is used.
-{{% /md %}}</dd>
-    <dt class="property-optional"
+{{% /md %}}</dd><dt class="property-optional"
             title="Optional">
         <span id="service_account_scopes_python">
 <a href="#service_account_scopes_python" style="color: inherit; text-decoration: inherit;">service_<wbr>account_<wbr>scopes</a>
@@ -2003,8 +1922,7 @@ the Compute Engine default service account is used.
 If not specified, the following scopes are defined:
 - https://www.googleapis.com/auth/cloud-platform
 - https://www.googleapis.com/auth/userinfo.email
-{{% /md %}}</dd>
-    <dt class="property-optional"
+{{% /md %}}</dd><dt class="property-optional"
             title="Optional">
         <span id="shielded_instance_config_python">
 <a href="#shielded_instance_config_python" style="color: inherit; text-decoration: inherit;">shielded_<wbr>instance_<wbr>config</a>
@@ -2015,8 +1933,7 @@ If not specified, the following scopes are defined:
     <dd>{{% md %}}A set of Shielded Instance options. Check [Images using supported Shielded VM features]
 Not all combinations are valid
 Structure is documented below.
-{{% /md %}}</dd>
-    <dt class="property-optional"
+{{% /md %}}</dd><dt class="property-optional"
             title="Optional">
         <span id="subnet_python">
 <a href="#subnet_python" style="color: inherit; text-decoration: inherit;">subnet</a>
@@ -2026,8 +1943,7 @@ Structure is documented below.
     </dt>
     <dd>{{% md %}}The name of the subnet that this instance is in.
 Format: projects/{project_id}/regions/{region}/subnetworks/{subnetwork_id}
-{{% /md %}}</dd>
-    <dt class="property-optional"
+{{% /md %}}</dd><dt class="property-optional"
             title="Optional">
         <span id="tags_python">
 <a href="#tags_python" style="color: inherit; text-decoration: inherit;">tags</a>
@@ -2036,8 +1952,7 @@ Format: projects/{project_id}/regions/{region}/subnetworks/{subnetwork_id}
         <span class="property-type">Sequence[str]</span>
     </dt>
     <dd>{{% md %}}The Compute Engine tags to add to runtime.
-{{% /md %}}</dd>
-    <dt class="property-optional"
+{{% /md %}}</dd><dt class="property-optional"
             title="Optional">
         <span id="update_time_python">
 <a href="#update_time_python" style="color: inherit; text-decoration: inherit;">update_<wbr>time</a>
@@ -2046,8 +1961,7 @@ Format: projects/{project_id}/regions/{region}/subnetworks/{subnetwork_id}
         <span class="property-type">str</span>
     </dt>
     <dd>{{% md %}}Instance update time.
-{{% /md %}}</dd>
-    <dt class="property-optional"
+{{% /md %}}</dd><dt class="property-optional"
             title="Optional">
         <span id="vm_image_python">
 <a href="#vm_image_python" style="color: inherit; text-decoration: inherit;">vm_<wbr>image</a>
@@ -2057,8 +1971,7 @@ Format: projects/{project_id}/regions/{region}/subnetworks/{subnetwork_id}
     </dt>
     <dd>{{% md %}}Use a Compute Engine VM image to start the notebook instance.
 Structure is documented below.
-{{% /md %}}</dd>
-</dl>
+{{% /md %}}</dd></dl>
 {{% /choosable %}}
 
 
@@ -2069,9 +1982,7 @@ All [input](#inputs) properties are implicitly available as output properties. A
 
 
 {{% choosable language csharp %}}
-<dl class="resources-properties">
-
-    <dt class="property-"
+<dl class="resources-properties"><dt class="property-"
             title="">
         <span id="id_csharp">
 <a href="#id_csharp" style="color: inherit; text-decoration: inherit;">Id</a>
@@ -2079,8 +1990,7 @@ All [input](#inputs) properties are implicitly available as output properties. A
         <span class="property-indicator"></span>
         <span class="property-type">string</span>
     </dt>
-    <dd>{{% md %}}The provider-assigned unique ID for this managed resource.{{% /md %}}</dd>
-    <dt class="property-"
+    <dd>{{% md %}}The provider-assigned unique ID for this managed resource.{{% /md %}}</dd><dt class="property-"
             title="">
         <span id="proxyuri_csharp">
 <a href="#proxyuri_csharp" style="color: inherit; text-decoration: inherit;">Proxy<wbr>Uri</a>
@@ -2089,8 +1999,7 @@ All [input](#inputs) properties are implicitly available as output properties. A
         <span class="property-type">string</span>
     </dt>
     <dd>{{% md %}}The proxy endpoint that is used to access the Jupyter notebook.
-{{% /md %}}</dd>
-    <dt class="property-"
+{{% /md %}}</dd><dt class="property-"
             title="">
         <span id="state_csharp">
 <a href="#state_csharp" style="color: inherit; text-decoration: inherit;">State</a>
@@ -2099,14 +2008,11 @@ All [input](#inputs) properties are implicitly available as output properties. A
         <span class="property-type">string</span>
     </dt>
     <dd>{{% md %}}The state of this instance.
-{{% /md %}}</dd>
-</dl>
+{{% /md %}}</dd></dl>
 {{% /choosable %}}
 
 {{% choosable language go %}}
-<dl class="resources-properties">
-
-    <dt class="property-"
+<dl class="resources-properties"><dt class="property-"
             title="">
         <span id="id_go">
 <a href="#id_go" style="color: inherit; text-decoration: inherit;">Id</a>
@@ -2114,8 +2020,7 @@ All [input](#inputs) properties are implicitly available as output properties. A
         <span class="property-indicator"></span>
         <span class="property-type">string</span>
     </dt>
-    <dd>{{% md %}}The provider-assigned unique ID for this managed resource.{{% /md %}}</dd>
-    <dt class="property-"
+    <dd>{{% md %}}The provider-assigned unique ID for this managed resource.{{% /md %}}</dd><dt class="property-"
             title="">
         <span id="proxyuri_go">
 <a href="#proxyuri_go" style="color: inherit; text-decoration: inherit;">Proxy<wbr>Uri</a>
@@ -2124,8 +2029,7 @@ All [input](#inputs) properties are implicitly available as output properties. A
         <span class="property-type">string</span>
     </dt>
     <dd>{{% md %}}The proxy endpoint that is used to access the Jupyter notebook.
-{{% /md %}}</dd>
-    <dt class="property-"
+{{% /md %}}</dd><dt class="property-"
             title="">
         <span id="state_go">
 <a href="#state_go" style="color: inherit; text-decoration: inherit;">State</a>
@@ -2134,14 +2038,11 @@ All [input](#inputs) properties are implicitly available as output properties. A
         <span class="property-type">string</span>
     </dt>
     <dd>{{% md %}}The state of this instance.
-{{% /md %}}</dd>
-</dl>
+{{% /md %}}</dd></dl>
 {{% /choosable %}}
 
 {{% choosable language nodejs %}}
-<dl class="resources-properties">
-
-    <dt class="property-"
+<dl class="resources-properties"><dt class="property-"
             title="">
         <span id="id_nodejs">
 <a href="#id_nodejs" style="color: inherit; text-decoration: inherit;">id</a>
@@ -2149,8 +2050,7 @@ All [input](#inputs) properties are implicitly available as output properties. A
         <span class="property-indicator"></span>
         <span class="property-type">string</span>
     </dt>
-    <dd>{{% md %}}The provider-assigned unique ID for this managed resource.{{% /md %}}</dd>
-    <dt class="property-"
+    <dd>{{% md %}}The provider-assigned unique ID for this managed resource.{{% /md %}}</dd><dt class="property-"
             title="">
         <span id="proxyuri_nodejs">
 <a href="#proxyuri_nodejs" style="color: inherit; text-decoration: inherit;">proxy<wbr>Uri</a>
@@ -2159,8 +2059,7 @@ All [input](#inputs) properties are implicitly available as output properties. A
         <span class="property-type">string</span>
     </dt>
     <dd>{{% md %}}The proxy endpoint that is used to access the Jupyter notebook.
-{{% /md %}}</dd>
-    <dt class="property-"
+{{% /md %}}</dd><dt class="property-"
             title="">
         <span id="state_nodejs">
 <a href="#state_nodejs" style="color: inherit; text-decoration: inherit;">state</a>
@@ -2169,14 +2068,11 @@ All [input](#inputs) properties are implicitly available as output properties. A
         <span class="property-type">string</span>
     </dt>
     <dd>{{% md %}}The state of this instance.
-{{% /md %}}</dd>
-</dl>
+{{% /md %}}</dd></dl>
 {{% /choosable %}}
 
 {{% choosable language python %}}
-<dl class="resources-properties">
-
-    <dt class="property-"
+<dl class="resources-properties"><dt class="property-"
             title="">
         <span id="id_python">
 <a href="#id_python" style="color: inherit; text-decoration: inherit;">id</a>
@@ -2184,8 +2080,7 @@ All [input](#inputs) properties are implicitly available as output properties. A
         <span class="property-indicator"></span>
         <span class="property-type">str</span>
     </dt>
-    <dd>{{% md %}}The provider-assigned unique ID for this managed resource.{{% /md %}}</dd>
-    <dt class="property-"
+    <dd>{{% md %}}The provider-assigned unique ID for this managed resource.{{% /md %}}</dd><dt class="property-"
             title="">
         <span id="proxy_uri_python">
 <a href="#proxy_uri_python" style="color: inherit; text-decoration: inherit;">proxy_<wbr>uri</a>
@@ -2194,8 +2089,7 @@ All [input](#inputs) properties are implicitly available as output properties. A
         <span class="property-type">str</span>
     </dt>
     <dd>{{% md %}}The proxy endpoint that is used to access the Jupyter notebook.
-{{% /md %}}</dd>
-    <dt class="property-"
+{{% /md %}}</dd><dt class="property-"
             title="">
         <span id="state_python">
 <a href="#state_python" style="color: inherit; text-decoration: inherit;">state</a>
@@ -2204,8 +2098,7 @@ All [input](#inputs) properties are implicitly available as output properties. A
         <span class="property-type">str</span>
     </dt>
     <dd>{{% md %}}The state of this instance.
-{{% /md %}}</dd>
-</dl>
+{{% /md %}}</dd></dl>
 {{% /choosable %}}
 
 
@@ -2332,9 +2225,7 @@ The following state arguments are supported:
 
 
 {{% choosable language csharp %}}
-<dl class="resources-properties">
-
-    <dt class="property-optional"
+<dl class="resources-properties"><dt class="property-optional"
             title="Optional">
         <span id="state_acceleratorconfig_csharp">
 <a href="#state_acceleratorconfig_csharp" style="color: inherit; text-decoration: inherit;">Accelerator<wbr>Config</a>
@@ -2346,8 +2237,7 @@ The following state arguments are supported:
 make sure that your configuration has enough vCPUs and memory to support the
 machineType you have selected.
 Structure is documented below.
-{{% /md %}}</dd>
-    <dt class="property-optional"
+{{% /md %}}</dd><dt class="property-optional"
             title="Optional">
         <span id="state_bootdisksizegb_csharp">
 <a href="#state_bootdisksizegb_csharp" style="color: inherit; text-decoration: inherit;">Boot<wbr>Disk<wbr>Size<wbr>Gb</a>
@@ -2358,8 +2248,7 @@ Structure is documented below.
     <dd>{{% md %}}The size of the boot disk in GB attached to this instance,
 up to a maximum of 64000 GB (64 TB). The minimum recommended value is 100 GB.
 If not specified, this defaults to 100.
-{{% /md %}}</dd>
-    <dt class="property-optional"
+{{% /md %}}</dd><dt class="property-optional"
             title="Optional">
         <span id="state_bootdisktype_csharp">
 <a href="#state_bootdisktype_csharp" style="color: inherit; text-decoration: inherit;">Boot<wbr>Disk<wbr>Type</a>
@@ -2369,8 +2258,7 @@ If not specified, this defaults to 100.
     </dt>
     <dd>{{% md %}}Possible disk types for notebook instances.
 Possible values are `DISK_TYPE_UNSPECIFIED`, `PD_STANDARD`, `PD_SSD`, and `PD_BALANCED`.
-{{% /md %}}</dd>
-    <dt class="property-optional"
+{{% /md %}}</dd><dt class="property-optional"
             title="Optional">
         <span id="state_containerimage_csharp">
 <a href="#state_containerimage_csharp" style="color: inherit; text-decoration: inherit;">Container<wbr>Image</a>
@@ -2380,8 +2268,7 @@ Possible values are `DISK_TYPE_UNSPECIFIED`, `PD_STANDARD`, `PD_SSD`, and `PD_BA
     </dt>
     <dd>{{% md %}}Use a container image to start the notebook instance.
 Structure is documented below.
-{{% /md %}}</dd>
-    <dt class="property-optional"
+{{% /md %}}</dd><dt class="property-optional"
             title="Optional">
         <span id="state_createtime_csharp">
 <a href="#state_createtime_csharp" style="color: inherit; text-decoration: inherit;">Create<wbr>Time</a>
@@ -2390,8 +2277,7 @@ Structure is documented below.
         <span class="property-type">string</span>
     </dt>
     <dd>{{% md %}}Instance creation time
-{{% /md %}}</dd>
-    <dt class="property-optional"
+{{% /md %}}</dd><dt class="property-optional"
             title="Optional">
         <span id="state_customgpudriverpath_csharp">
 <a href="#state_customgpudriverpath_csharp" style="color: inherit; text-decoration: inherit;">Custom<wbr>Gpu<wbr>Driver<wbr>Path</a>
@@ -2401,8 +2287,7 @@ Structure is documented below.
     </dt>
     <dd>{{% md %}}Specify a custom Cloud Storage path where the GPU driver is stored.
 If not specified, we'll automatically choose from official GPU drivers.
-{{% /md %}}</dd>
-    <dt class="property-optional"
+{{% /md %}}</dd><dt class="property-optional"
             title="Optional">
         <span id="state_datadisksizegb_csharp">
 <a href="#state_datadisksizegb_csharp" style="color: inherit; text-decoration: inherit;">Data<wbr>Disk<wbr>Size<wbr>Gb</a>
@@ -2414,8 +2299,7 @@ If not specified, we'll automatically choose from official GPU drivers.
 up to a maximum of 64000 GB (64 TB).
 You can choose the size of the data disk based on how big your notebooks and data are.
 If not specified, this defaults to 100.
-{{% /md %}}</dd>
-    <dt class="property-optional"
+{{% /md %}}</dd><dt class="property-optional"
             title="Optional">
         <span id="state_datadisktype_csharp">
 <a href="#state_datadisktype_csharp" style="color: inherit; text-decoration: inherit;">Data<wbr>Disk<wbr>Type</a>
@@ -2425,8 +2309,7 @@ If not specified, this defaults to 100.
     </dt>
     <dd>{{% md %}}Possible disk types for notebook instances.
 Possible values are `DISK_TYPE_UNSPECIFIED`, `PD_STANDARD`, `PD_SSD`, and `PD_BALANCED`.
-{{% /md %}}</dd>
-    <dt class="property-optional"
+{{% /md %}}</dd><dt class="property-optional"
             title="Optional">
         <span id="state_diskencryption_csharp">
 <a href="#state_diskencryption_csharp" style="color: inherit; text-decoration: inherit;">Disk<wbr>Encryption</a>
@@ -2436,8 +2319,7 @@ Possible values are `DISK_TYPE_UNSPECIFIED`, `PD_STANDARD`, `PD_SSD`, and `PD_BA
     </dt>
     <dd>{{% md %}}Disk encryption method used on the boot and data disks, defaults to GMEK.
 Possible values are `DISK_ENCRYPTION_UNSPECIFIED`, `GMEK`, and `CMEK`.
-{{% /md %}}</dd>
-    <dt class="property-optional"
+{{% /md %}}</dd><dt class="property-optional"
             title="Optional">
         <span id="state_installgpudriver_csharp">
 <a href="#state_installgpudriver_csharp" style="color: inherit; text-decoration: inherit;">Install<wbr>Gpu<wbr>Driver</a>
@@ -2448,8 +2330,7 @@ Possible values are `DISK_ENCRYPTION_UNSPECIFIED`, `GMEK`, and `CMEK`.
     <dd>{{% md %}}Whether the end user authorizes Google Cloud to install GPU driver
 on this instance. If this field is empty or set to false, the GPU driver
 won't be installed. Only applicable to instances with GPUs.
-{{% /md %}}</dd>
-    <dt class="property-optional"
+{{% /md %}}</dd><dt class="property-optional"
             title="Optional">
         <span id="state_instanceowners_csharp">
 <a href="#state_instanceowners_csharp" style="color: inherit; text-decoration: inherit;">Instance<wbr>Owners</a>
@@ -2462,8 +2343,7 @@ Format: alias@example.com.
 Currently supports one owner only.
 If not specified, all of the service account users of
 your VM instance's service account can use the instance.
-{{% /md %}}</dd>
-    <dt class="property-optional"
+{{% /md %}}</dd><dt class="property-optional"
             title="Optional">
         <span id="state_kmskey_csharp">
 <a href="#state_kmskey_csharp" style="color: inherit; text-decoration: inherit;">Kms<wbr>Key</a>
@@ -2473,8 +2353,7 @@ your VM instance's service account can use the instance.
     </dt>
     <dd>{{% md %}}The KMS key used to encrypt the disks, only applicable if diskEncryption is CMEK.
 Format: projects/{project_id}/locations/{location}/keyRings/{key_ring_id}/cryptoKeys/{key_id}
-{{% /md %}}</dd>
-    <dt class="property-optional"
+{{% /md %}}</dd><dt class="property-optional"
             title="Optional">
         <span id="state_labels_csharp">
 <a href="#state_labels_csharp" style="color: inherit; text-decoration: inherit;">Labels</a>
@@ -2484,8 +2363,7 @@ Format: projects/{project_id}/locations/{location}/keyRings/{key_ring_id}/crypto
     </dt>
     <dd>{{% md %}}Labels to apply to this instance. These can be later modified by the setLabels method.
 An object containing a list of "key": value pairs. Example: { "name": "wrench", "mass": "1.3kg", "count": "3" }.
-{{% /md %}}</dd>
-    <dt class="property-optional"
+{{% /md %}}</dd><dt class="property-optional"
             title="Optional">
         <span id="state_location_csharp">
 <a href="#state_location_csharp" style="color: inherit; text-decoration: inherit;">Location</a>
@@ -2494,8 +2372,7 @@ An object containing a list of "key": value pairs. Example: { "name": "wrench", 
         <span class="property-type">string</span>
     </dt>
     <dd>{{% md %}}A reference to the zone where the machine resides.
-{{% /md %}}</dd>
-    <dt class="property-optional"
+{{% /md %}}</dd><dt class="property-optional"
             title="Optional">
         <span id="state_machinetype_csharp">
 <a href="#state_machinetype_csharp" style="color: inherit; text-decoration: inherit;">Machine<wbr>Type</a>
@@ -2504,8 +2381,7 @@ An object containing a list of "key": value pairs. Example: { "name": "wrench", 
         <span class="property-type">string</span>
     </dt>
     <dd>{{% md %}}A reference to a machine type which defines VM kind.
-{{% /md %}}</dd>
-    <dt class="property-optional"
+{{% /md %}}</dd><dt class="property-optional"
             title="Optional">
         <span id="state_metadata_csharp">
 <a href="#state_metadata_csharp" style="color: inherit; text-decoration: inherit;">Metadata</a>
@@ -2515,8 +2391,7 @@ An object containing a list of "key": value pairs. Example: { "name": "wrench", 
     </dt>
     <dd>{{% md %}}Custom metadata to apply to this instance.
 An object containing a list of "key": value pairs. Example: { "name": "wrench", "mass": "1.3kg", "count": "3" }.
-{{% /md %}}</dd>
-    <dt class="property-optional"
+{{% /md %}}</dd><dt class="property-optional"
             title="Optional">
         <span id="state_name_csharp">
 <a href="#state_name_csharp" style="color: inherit; text-decoration: inherit;">Name</a>
@@ -2525,8 +2400,7 @@ An object containing a list of "key": value pairs. Example: { "name": "wrench", 
         <span class="property-type">string</span>
     </dt>
     <dd>{{% md %}}The name specified for the Notebook instance.
-{{% /md %}}</dd>
-    <dt class="property-optional"
+{{% /md %}}</dd><dt class="property-optional"
             title="Optional">
         <span id="state_network_csharp">
 <a href="#state_network_csharp" style="color: inherit; text-decoration: inherit;">Network</a>
@@ -2536,8 +2410,7 @@ An object containing a list of "key": value pairs. Example: { "name": "wrench", 
     </dt>
     <dd>{{% md %}}The name of the VPC that this instance is in.
 Format: projects/{project_id}/global/networks/{network_id}
-{{% /md %}}</dd>
-    <dt class="property-optional"
+{{% /md %}}</dd><dt class="property-optional"
             title="Optional">
         <span id="state_noproxyaccess_csharp">
 <a href="#state_noproxyaccess_csharp" style="color: inherit; text-decoration: inherit;">No<wbr>Proxy<wbr>Access</a>
@@ -2546,8 +2419,7 @@ Format: projects/{project_id}/global/networks/{network_id}
         <span class="property-type">bool</span>
     </dt>
     <dd>{{% md %}}The notebook instance will not register with the proxy..
-{{% /md %}}</dd>
-    <dt class="property-optional"
+{{% /md %}}</dd><dt class="property-optional"
             title="Optional">
         <span id="state_nopublicip_csharp">
 <a href="#state_nopublicip_csharp" style="color: inherit; text-decoration: inherit;">No<wbr>Public<wbr>Ip</a>
@@ -2556,8 +2428,7 @@ Format: projects/{project_id}/global/networks/{network_id}
         <span class="property-type">bool</span>
     </dt>
     <dd>{{% md %}}No public IP will be assigned to this instance.
-{{% /md %}}</dd>
-    <dt class="property-optional"
+{{% /md %}}</dd><dt class="property-optional"
             title="Optional">
         <span id="state_noremovedatadisk_csharp">
 <a href="#state_noremovedatadisk_csharp" style="color: inherit; text-decoration: inherit;">No<wbr>Remove<wbr>Data<wbr>Disk</a>
@@ -2566,8 +2437,7 @@ Format: projects/{project_id}/global/networks/{network_id}
         <span class="property-type">bool</span>
     </dt>
     <dd>{{% md %}}If true, the data disk will not be auto deleted when deleting the instance.
-{{% /md %}}</dd>
-    <dt class="property-optional"
+{{% /md %}}</dd><dt class="property-optional"
             title="Optional">
         <span id="state_poststartupscript_csharp">
 <a href="#state_poststartupscript_csharp" style="color: inherit; text-decoration: inherit;">Post<wbr>Startup<wbr>Script</a>
@@ -2578,8 +2448,7 @@ Format: projects/{project_id}/global/networks/{network_id}
     <dd>{{% md %}}Path to a Bash script that automatically runs after a
 notebook instance fully boots up. The path must be a URL
 or Cloud Storage path (gs://path-to-file/file-name).
-{{% /md %}}</dd>
-    <dt class="property-optional"
+{{% /md %}}</dd><dt class="property-optional"
             title="Optional">
         <span id="state_project_csharp">
 <a href="#state_project_csharp" style="color: inherit; text-decoration: inherit;">Project</a>
@@ -2589,8 +2458,7 @@ or Cloud Storage path (gs://path-to-file/file-name).
     </dt>
     <dd>{{% md %}}The name of the Google Cloud project that this VM image belongs to.
 Format: projects/{project_id}
-{{% /md %}}</dd>
-    <dt class="property-optional"
+{{% /md %}}</dd><dt class="property-optional"
             title="Optional">
         <span id="state_proxyuri_csharp">
 <a href="#state_proxyuri_csharp" style="color: inherit; text-decoration: inherit;">Proxy<wbr>Uri</a>
@@ -2599,8 +2467,7 @@ Format: projects/{project_id}
         <span class="property-type">string</span>
     </dt>
     <dd>{{% md %}}The proxy endpoint that is used to access the Jupyter notebook.
-{{% /md %}}</dd>
-    <dt class="property-optional"
+{{% /md %}}</dd><dt class="property-optional"
             title="Optional">
         <span id="state_serviceaccount_csharp">
 <a href="#state_serviceaccount_csharp" style="color: inherit; text-decoration: inherit;">Service<wbr>Account</a>
@@ -2613,8 +2480,7 @@ Google Cloud services. You can use any service account within
 the same project, but you must have the service account user
 permission to use the instance. If not specified,
 the Compute Engine default service account is used.
-{{% /md %}}</dd>
-    <dt class="property-optional"
+{{% /md %}}</dd><dt class="property-optional"
             title="Optional">
         <span id="state_serviceaccountscopes_csharp">
 <a href="#state_serviceaccountscopes_csharp" style="color: inherit; text-decoration: inherit;">Service<wbr>Account<wbr>Scopes</a>
@@ -2626,8 +2492,7 @@ the Compute Engine default service account is used.
 If not specified, the following scopes are defined:
 - https://www.googleapis.com/auth/cloud-platform
 - https://www.googleapis.com/auth/userinfo.email
-{{% /md %}}</dd>
-    <dt class="property-optional"
+{{% /md %}}</dd><dt class="property-optional"
             title="Optional">
         <span id="state_shieldedinstanceconfig_csharp">
 <a href="#state_shieldedinstanceconfig_csharp" style="color: inherit; text-decoration: inherit;">Shielded<wbr>Instance<wbr>Config</a>
@@ -2638,8 +2503,7 @@ If not specified, the following scopes are defined:
     <dd>{{% md %}}A set of Shielded Instance options. Check [Images using supported Shielded VM features]
 Not all combinations are valid
 Structure is documented below.
-{{% /md %}}</dd>
-    <dt class="property-optional"
+{{% /md %}}</dd><dt class="property-optional"
             title="Optional">
         <span id="state_state_csharp">
 <a href="#state_state_csharp" style="color: inherit; text-decoration: inherit;">State</a>
@@ -2648,8 +2512,7 @@ Structure is documented below.
         <span class="property-type">string</span>
     </dt>
     <dd>{{% md %}}The state of this instance.
-{{% /md %}}</dd>
-    <dt class="property-optional"
+{{% /md %}}</dd><dt class="property-optional"
             title="Optional">
         <span id="state_subnet_csharp">
 <a href="#state_subnet_csharp" style="color: inherit; text-decoration: inherit;">Subnet</a>
@@ -2659,8 +2522,7 @@ Structure is documented below.
     </dt>
     <dd>{{% md %}}The name of the subnet that this instance is in.
 Format: projects/{project_id}/regions/{region}/subnetworks/{subnetwork_id}
-{{% /md %}}</dd>
-    <dt class="property-optional"
+{{% /md %}}</dd><dt class="property-optional"
             title="Optional">
         <span id="state_tags_csharp">
 <a href="#state_tags_csharp" style="color: inherit; text-decoration: inherit;">Tags</a>
@@ -2669,8 +2531,7 @@ Format: projects/{project_id}/regions/{region}/subnetworks/{subnetwork_id}
         <span class="property-type">List&lt;string&gt;</span>
     </dt>
     <dd>{{% md %}}The Compute Engine tags to add to runtime.
-{{% /md %}}</dd>
-    <dt class="property-optional"
+{{% /md %}}</dd><dt class="property-optional"
             title="Optional">
         <span id="state_updatetime_csharp">
 <a href="#state_updatetime_csharp" style="color: inherit; text-decoration: inherit;">Update<wbr>Time</a>
@@ -2679,8 +2540,7 @@ Format: projects/{project_id}/regions/{region}/subnetworks/{subnetwork_id}
         <span class="property-type">string</span>
     </dt>
     <dd>{{% md %}}Instance update time.
-{{% /md %}}</dd>
-    <dt class="property-optional"
+{{% /md %}}</dd><dt class="property-optional"
             title="Optional">
         <span id="state_vmimage_csharp">
 <a href="#state_vmimage_csharp" style="color: inherit; text-decoration: inherit;">Vm<wbr>Image</a>
@@ -2690,14 +2550,11 @@ Format: projects/{project_id}/regions/{region}/subnetworks/{subnetwork_id}
     </dt>
     <dd>{{% md %}}Use a Compute Engine VM image to start the notebook instance.
 Structure is documented below.
-{{% /md %}}</dd>
-</dl>
+{{% /md %}}</dd></dl>
 {{% /choosable %}}
 
 {{% choosable language go %}}
-<dl class="resources-properties">
-
-    <dt class="property-optional"
+<dl class="resources-properties"><dt class="property-optional"
             title="Optional">
         <span id="state_acceleratorconfig_go">
 <a href="#state_acceleratorconfig_go" style="color: inherit; text-decoration: inherit;">Accelerator<wbr>Config</a>
@@ -2709,8 +2566,7 @@ Structure is documented below.
 make sure that your configuration has enough vCPUs and memory to support the
 machineType you have selected.
 Structure is documented below.
-{{% /md %}}</dd>
-    <dt class="property-optional"
+{{% /md %}}</dd><dt class="property-optional"
             title="Optional">
         <span id="state_bootdisksizegb_go">
 <a href="#state_bootdisksizegb_go" style="color: inherit; text-decoration: inherit;">Boot<wbr>Disk<wbr>Size<wbr>Gb</a>
@@ -2721,8 +2577,7 @@ Structure is documented below.
     <dd>{{% md %}}The size of the boot disk in GB attached to this instance,
 up to a maximum of 64000 GB (64 TB). The minimum recommended value is 100 GB.
 If not specified, this defaults to 100.
-{{% /md %}}</dd>
-    <dt class="property-optional"
+{{% /md %}}</dd><dt class="property-optional"
             title="Optional">
         <span id="state_bootdisktype_go">
 <a href="#state_bootdisktype_go" style="color: inherit; text-decoration: inherit;">Boot<wbr>Disk<wbr>Type</a>
@@ -2732,8 +2587,7 @@ If not specified, this defaults to 100.
     </dt>
     <dd>{{% md %}}Possible disk types for notebook instances.
 Possible values are `DISK_TYPE_UNSPECIFIED`, `PD_STANDARD`, `PD_SSD`, and `PD_BALANCED`.
-{{% /md %}}</dd>
-    <dt class="property-optional"
+{{% /md %}}</dd><dt class="property-optional"
             title="Optional">
         <span id="state_containerimage_go">
 <a href="#state_containerimage_go" style="color: inherit; text-decoration: inherit;">Container<wbr>Image</a>
@@ -2743,8 +2597,7 @@ Possible values are `DISK_TYPE_UNSPECIFIED`, `PD_STANDARD`, `PD_SSD`, and `PD_BA
     </dt>
     <dd>{{% md %}}Use a container image to start the notebook instance.
 Structure is documented below.
-{{% /md %}}</dd>
-    <dt class="property-optional"
+{{% /md %}}</dd><dt class="property-optional"
             title="Optional">
         <span id="state_createtime_go">
 <a href="#state_createtime_go" style="color: inherit; text-decoration: inherit;">Create<wbr>Time</a>
@@ -2753,8 +2606,7 @@ Structure is documented below.
         <span class="property-type">string</span>
     </dt>
     <dd>{{% md %}}Instance creation time
-{{% /md %}}</dd>
-    <dt class="property-optional"
+{{% /md %}}</dd><dt class="property-optional"
             title="Optional">
         <span id="state_customgpudriverpath_go">
 <a href="#state_customgpudriverpath_go" style="color: inherit; text-decoration: inherit;">Custom<wbr>Gpu<wbr>Driver<wbr>Path</a>
@@ -2764,8 +2616,7 @@ Structure is documented below.
     </dt>
     <dd>{{% md %}}Specify a custom Cloud Storage path where the GPU driver is stored.
 If not specified, we'll automatically choose from official GPU drivers.
-{{% /md %}}</dd>
-    <dt class="property-optional"
+{{% /md %}}</dd><dt class="property-optional"
             title="Optional">
         <span id="state_datadisksizegb_go">
 <a href="#state_datadisksizegb_go" style="color: inherit; text-decoration: inherit;">Data<wbr>Disk<wbr>Size<wbr>Gb</a>
@@ -2777,8 +2628,7 @@ If not specified, we'll automatically choose from official GPU drivers.
 up to a maximum of 64000 GB (64 TB).
 You can choose the size of the data disk based on how big your notebooks and data are.
 If not specified, this defaults to 100.
-{{% /md %}}</dd>
-    <dt class="property-optional"
+{{% /md %}}</dd><dt class="property-optional"
             title="Optional">
         <span id="state_datadisktype_go">
 <a href="#state_datadisktype_go" style="color: inherit; text-decoration: inherit;">Data<wbr>Disk<wbr>Type</a>
@@ -2788,8 +2638,7 @@ If not specified, this defaults to 100.
     </dt>
     <dd>{{% md %}}Possible disk types for notebook instances.
 Possible values are `DISK_TYPE_UNSPECIFIED`, `PD_STANDARD`, `PD_SSD`, and `PD_BALANCED`.
-{{% /md %}}</dd>
-    <dt class="property-optional"
+{{% /md %}}</dd><dt class="property-optional"
             title="Optional">
         <span id="state_diskencryption_go">
 <a href="#state_diskencryption_go" style="color: inherit; text-decoration: inherit;">Disk<wbr>Encryption</a>
@@ -2799,8 +2648,7 @@ Possible values are `DISK_TYPE_UNSPECIFIED`, `PD_STANDARD`, `PD_SSD`, and `PD_BA
     </dt>
     <dd>{{% md %}}Disk encryption method used on the boot and data disks, defaults to GMEK.
 Possible values are `DISK_ENCRYPTION_UNSPECIFIED`, `GMEK`, and `CMEK`.
-{{% /md %}}</dd>
-    <dt class="property-optional"
+{{% /md %}}</dd><dt class="property-optional"
             title="Optional">
         <span id="state_installgpudriver_go">
 <a href="#state_installgpudriver_go" style="color: inherit; text-decoration: inherit;">Install<wbr>Gpu<wbr>Driver</a>
@@ -2811,8 +2659,7 @@ Possible values are `DISK_ENCRYPTION_UNSPECIFIED`, `GMEK`, and `CMEK`.
     <dd>{{% md %}}Whether the end user authorizes Google Cloud to install GPU driver
 on this instance. If this field is empty or set to false, the GPU driver
 won't be installed. Only applicable to instances with GPUs.
-{{% /md %}}</dd>
-    <dt class="property-optional"
+{{% /md %}}</dd><dt class="property-optional"
             title="Optional">
         <span id="state_instanceowners_go">
 <a href="#state_instanceowners_go" style="color: inherit; text-decoration: inherit;">Instance<wbr>Owners</a>
@@ -2825,8 +2672,7 @@ Format: alias@example.com.
 Currently supports one owner only.
 If not specified, all of the service account users of
 your VM instance's service account can use the instance.
-{{% /md %}}</dd>
-    <dt class="property-optional"
+{{% /md %}}</dd><dt class="property-optional"
             title="Optional">
         <span id="state_kmskey_go">
 <a href="#state_kmskey_go" style="color: inherit; text-decoration: inherit;">Kms<wbr>Key</a>
@@ -2836,8 +2682,7 @@ your VM instance's service account can use the instance.
     </dt>
     <dd>{{% md %}}The KMS key used to encrypt the disks, only applicable if diskEncryption is CMEK.
 Format: projects/{project_id}/locations/{location}/keyRings/{key_ring_id}/cryptoKeys/{key_id}
-{{% /md %}}</dd>
-    <dt class="property-optional"
+{{% /md %}}</dd><dt class="property-optional"
             title="Optional">
         <span id="state_labels_go">
 <a href="#state_labels_go" style="color: inherit; text-decoration: inherit;">Labels</a>
@@ -2847,8 +2692,7 @@ Format: projects/{project_id}/locations/{location}/keyRings/{key_ring_id}/crypto
     </dt>
     <dd>{{% md %}}Labels to apply to this instance. These can be later modified by the setLabels method.
 An object containing a list of "key": value pairs. Example: { "name": "wrench", "mass": "1.3kg", "count": "3" }.
-{{% /md %}}</dd>
-    <dt class="property-optional"
+{{% /md %}}</dd><dt class="property-optional"
             title="Optional">
         <span id="state_location_go">
 <a href="#state_location_go" style="color: inherit; text-decoration: inherit;">Location</a>
@@ -2857,8 +2701,7 @@ An object containing a list of "key": value pairs. Example: { "name": "wrench", 
         <span class="property-type">string</span>
     </dt>
     <dd>{{% md %}}A reference to the zone where the machine resides.
-{{% /md %}}</dd>
-    <dt class="property-optional"
+{{% /md %}}</dd><dt class="property-optional"
             title="Optional">
         <span id="state_machinetype_go">
 <a href="#state_machinetype_go" style="color: inherit; text-decoration: inherit;">Machine<wbr>Type</a>
@@ -2867,8 +2710,7 @@ An object containing a list of "key": value pairs. Example: { "name": "wrench", 
         <span class="property-type">string</span>
     </dt>
     <dd>{{% md %}}A reference to a machine type which defines VM kind.
-{{% /md %}}</dd>
-    <dt class="property-optional"
+{{% /md %}}</dd><dt class="property-optional"
             title="Optional">
         <span id="state_metadata_go">
 <a href="#state_metadata_go" style="color: inherit; text-decoration: inherit;">Metadata</a>
@@ -2878,8 +2720,7 @@ An object containing a list of "key": value pairs. Example: { "name": "wrench", 
     </dt>
     <dd>{{% md %}}Custom metadata to apply to this instance.
 An object containing a list of "key": value pairs. Example: { "name": "wrench", "mass": "1.3kg", "count": "3" }.
-{{% /md %}}</dd>
-    <dt class="property-optional"
+{{% /md %}}</dd><dt class="property-optional"
             title="Optional">
         <span id="state_name_go">
 <a href="#state_name_go" style="color: inherit; text-decoration: inherit;">Name</a>
@@ -2888,8 +2729,7 @@ An object containing a list of "key": value pairs. Example: { "name": "wrench", 
         <span class="property-type">string</span>
     </dt>
     <dd>{{% md %}}The name specified for the Notebook instance.
-{{% /md %}}</dd>
-    <dt class="property-optional"
+{{% /md %}}</dd><dt class="property-optional"
             title="Optional">
         <span id="state_network_go">
 <a href="#state_network_go" style="color: inherit; text-decoration: inherit;">Network</a>
@@ -2899,8 +2739,7 @@ An object containing a list of "key": value pairs. Example: { "name": "wrench", 
     </dt>
     <dd>{{% md %}}The name of the VPC that this instance is in.
 Format: projects/{project_id}/global/networks/{network_id}
-{{% /md %}}</dd>
-    <dt class="property-optional"
+{{% /md %}}</dd><dt class="property-optional"
             title="Optional">
         <span id="state_noproxyaccess_go">
 <a href="#state_noproxyaccess_go" style="color: inherit; text-decoration: inherit;">No<wbr>Proxy<wbr>Access</a>
@@ -2909,8 +2748,7 @@ Format: projects/{project_id}/global/networks/{network_id}
         <span class="property-type">bool</span>
     </dt>
     <dd>{{% md %}}The notebook instance will not register with the proxy..
-{{% /md %}}</dd>
-    <dt class="property-optional"
+{{% /md %}}</dd><dt class="property-optional"
             title="Optional">
         <span id="state_nopublicip_go">
 <a href="#state_nopublicip_go" style="color: inherit; text-decoration: inherit;">No<wbr>Public<wbr>Ip</a>
@@ -2919,8 +2757,7 @@ Format: projects/{project_id}/global/networks/{network_id}
         <span class="property-type">bool</span>
     </dt>
     <dd>{{% md %}}No public IP will be assigned to this instance.
-{{% /md %}}</dd>
-    <dt class="property-optional"
+{{% /md %}}</dd><dt class="property-optional"
             title="Optional">
         <span id="state_noremovedatadisk_go">
 <a href="#state_noremovedatadisk_go" style="color: inherit; text-decoration: inherit;">No<wbr>Remove<wbr>Data<wbr>Disk</a>
@@ -2929,8 +2766,7 @@ Format: projects/{project_id}/global/networks/{network_id}
         <span class="property-type">bool</span>
     </dt>
     <dd>{{% md %}}If true, the data disk will not be auto deleted when deleting the instance.
-{{% /md %}}</dd>
-    <dt class="property-optional"
+{{% /md %}}</dd><dt class="property-optional"
             title="Optional">
         <span id="state_poststartupscript_go">
 <a href="#state_poststartupscript_go" style="color: inherit; text-decoration: inherit;">Post<wbr>Startup<wbr>Script</a>
@@ -2941,8 +2777,7 @@ Format: projects/{project_id}/global/networks/{network_id}
     <dd>{{% md %}}Path to a Bash script that automatically runs after a
 notebook instance fully boots up. The path must be a URL
 or Cloud Storage path (gs://path-to-file/file-name).
-{{% /md %}}</dd>
-    <dt class="property-optional"
+{{% /md %}}</dd><dt class="property-optional"
             title="Optional">
         <span id="state_project_go">
 <a href="#state_project_go" style="color: inherit; text-decoration: inherit;">Project</a>
@@ -2952,8 +2787,7 @@ or Cloud Storage path (gs://path-to-file/file-name).
     </dt>
     <dd>{{% md %}}The name of the Google Cloud project that this VM image belongs to.
 Format: projects/{project_id}
-{{% /md %}}</dd>
-    <dt class="property-optional"
+{{% /md %}}</dd><dt class="property-optional"
             title="Optional">
         <span id="state_proxyuri_go">
 <a href="#state_proxyuri_go" style="color: inherit; text-decoration: inherit;">Proxy<wbr>Uri</a>
@@ -2962,8 +2796,7 @@ Format: projects/{project_id}
         <span class="property-type">string</span>
     </dt>
     <dd>{{% md %}}The proxy endpoint that is used to access the Jupyter notebook.
-{{% /md %}}</dd>
-    <dt class="property-optional"
+{{% /md %}}</dd><dt class="property-optional"
             title="Optional">
         <span id="state_serviceaccount_go">
 <a href="#state_serviceaccount_go" style="color: inherit; text-decoration: inherit;">Service<wbr>Account</a>
@@ -2976,8 +2809,7 @@ Google Cloud services. You can use any service account within
 the same project, but you must have the service account user
 permission to use the instance. If not specified,
 the Compute Engine default service account is used.
-{{% /md %}}</dd>
-    <dt class="property-optional"
+{{% /md %}}</dd><dt class="property-optional"
             title="Optional">
         <span id="state_serviceaccountscopes_go">
 <a href="#state_serviceaccountscopes_go" style="color: inherit; text-decoration: inherit;">Service<wbr>Account<wbr>Scopes</a>
@@ -2989,8 +2821,7 @@ the Compute Engine default service account is used.
 If not specified, the following scopes are defined:
 - https://www.googleapis.com/auth/cloud-platform
 - https://www.googleapis.com/auth/userinfo.email
-{{% /md %}}</dd>
-    <dt class="property-optional"
+{{% /md %}}</dd><dt class="property-optional"
             title="Optional">
         <span id="state_shieldedinstanceconfig_go">
 <a href="#state_shieldedinstanceconfig_go" style="color: inherit; text-decoration: inherit;">Shielded<wbr>Instance<wbr>Config</a>
@@ -3001,8 +2832,7 @@ If not specified, the following scopes are defined:
     <dd>{{% md %}}A set of Shielded Instance options. Check [Images using supported Shielded VM features]
 Not all combinations are valid
 Structure is documented below.
-{{% /md %}}</dd>
-    <dt class="property-optional"
+{{% /md %}}</dd><dt class="property-optional"
             title="Optional">
         <span id="state_state_go">
 <a href="#state_state_go" style="color: inherit; text-decoration: inherit;">State</a>
@@ -3011,8 +2841,7 @@ Structure is documented below.
         <span class="property-type">string</span>
     </dt>
     <dd>{{% md %}}The state of this instance.
-{{% /md %}}</dd>
-    <dt class="property-optional"
+{{% /md %}}</dd><dt class="property-optional"
             title="Optional">
         <span id="state_subnet_go">
 <a href="#state_subnet_go" style="color: inherit; text-decoration: inherit;">Subnet</a>
@@ -3022,8 +2851,7 @@ Structure is documented below.
     </dt>
     <dd>{{% md %}}The name of the subnet that this instance is in.
 Format: projects/{project_id}/regions/{region}/subnetworks/{subnetwork_id}
-{{% /md %}}</dd>
-    <dt class="property-optional"
+{{% /md %}}</dd><dt class="property-optional"
             title="Optional">
         <span id="state_tags_go">
 <a href="#state_tags_go" style="color: inherit; text-decoration: inherit;">Tags</a>
@@ -3032,8 +2860,7 @@ Format: projects/{project_id}/regions/{region}/subnetworks/{subnetwork_id}
         <span class="property-type">[]string</span>
     </dt>
     <dd>{{% md %}}The Compute Engine tags to add to runtime.
-{{% /md %}}</dd>
-    <dt class="property-optional"
+{{% /md %}}</dd><dt class="property-optional"
             title="Optional">
         <span id="state_updatetime_go">
 <a href="#state_updatetime_go" style="color: inherit; text-decoration: inherit;">Update<wbr>Time</a>
@@ -3042,8 +2869,7 @@ Format: projects/{project_id}/regions/{region}/subnetworks/{subnetwork_id}
         <span class="property-type">string</span>
     </dt>
     <dd>{{% md %}}Instance update time.
-{{% /md %}}</dd>
-    <dt class="property-optional"
+{{% /md %}}</dd><dt class="property-optional"
             title="Optional">
         <span id="state_vmimage_go">
 <a href="#state_vmimage_go" style="color: inherit; text-decoration: inherit;">Vm<wbr>Image</a>
@@ -3053,14 +2879,11 @@ Format: projects/{project_id}/regions/{region}/subnetworks/{subnetwork_id}
     </dt>
     <dd>{{% md %}}Use a Compute Engine VM image to start the notebook instance.
 Structure is documented below.
-{{% /md %}}</dd>
-</dl>
+{{% /md %}}</dd></dl>
 {{% /choosable %}}
 
 {{% choosable language nodejs %}}
-<dl class="resources-properties">
-
-    <dt class="property-optional"
+<dl class="resources-properties"><dt class="property-optional"
             title="Optional">
         <span id="state_acceleratorconfig_nodejs">
 <a href="#state_acceleratorconfig_nodejs" style="color: inherit; text-decoration: inherit;">accelerator<wbr>Config</a>
@@ -3072,8 +2895,7 @@ Structure is documented below.
 make sure that your configuration has enough vCPUs and memory to support the
 machineType you have selected.
 Structure is documented below.
-{{% /md %}}</dd>
-    <dt class="property-optional"
+{{% /md %}}</dd><dt class="property-optional"
             title="Optional">
         <span id="state_bootdisksizegb_nodejs">
 <a href="#state_bootdisksizegb_nodejs" style="color: inherit; text-decoration: inherit;">boot<wbr>Disk<wbr>Size<wbr>Gb</a>
@@ -3084,8 +2906,7 @@ Structure is documented below.
     <dd>{{% md %}}The size of the boot disk in GB attached to this instance,
 up to a maximum of 64000 GB (64 TB). The minimum recommended value is 100 GB.
 If not specified, this defaults to 100.
-{{% /md %}}</dd>
-    <dt class="property-optional"
+{{% /md %}}</dd><dt class="property-optional"
             title="Optional">
         <span id="state_bootdisktype_nodejs">
 <a href="#state_bootdisktype_nodejs" style="color: inherit; text-decoration: inherit;">boot<wbr>Disk<wbr>Type</a>
@@ -3095,8 +2916,7 @@ If not specified, this defaults to 100.
     </dt>
     <dd>{{% md %}}Possible disk types for notebook instances.
 Possible values are `DISK_TYPE_UNSPECIFIED`, `PD_STANDARD`, `PD_SSD`, and `PD_BALANCED`.
-{{% /md %}}</dd>
-    <dt class="property-optional"
+{{% /md %}}</dd><dt class="property-optional"
             title="Optional">
         <span id="state_containerimage_nodejs">
 <a href="#state_containerimage_nodejs" style="color: inherit; text-decoration: inherit;">container<wbr>Image</a>
@@ -3106,8 +2926,7 @@ Possible values are `DISK_TYPE_UNSPECIFIED`, `PD_STANDARD`, `PD_SSD`, and `PD_BA
     </dt>
     <dd>{{% md %}}Use a container image to start the notebook instance.
 Structure is documented below.
-{{% /md %}}</dd>
-    <dt class="property-optional"
+{{% /md %}}</dd><dt class="property-optional"
             title="Optional">
         <span id="state_createtime_nodejs">
 <a href="#state_createtime_nodejs" style="color: inherit; text-decoration: inherit;">create<wbr>Time</a>
@@ -3116,8 +2935,7 @@ Structure is documented below.
         <span class="property-type">string</span>
     </dt>
     <dd>{{% md %}}Instance creation time
-{{% /md %}}</dd>
-    <dt class="property-optional"
+{{% /md %}}</dd><dt class="property-optional"
             title="Optional">
         <span id="state_customgpudriverpath_nodejs">
 <a href="#state_customgpudriverpath_nodejs" style="color: inherit; text-decoration: inherit;">custom<wbr>Gpu<wbr>Driver<wbr>Path</a>
@@ -3127,8 +2945,7 @@ Structure is documented below.
     </dt>
     <dd>{{% md %}}Specify a custom Cloud Storage path where the GPU driver is stored.
 If not specified, we'll automatically choose from official GPU drivers.
-{{% /md %}}</dd>
-    <dt class="property-optional"
+{{% /md %}}</dd><dt class="property-optional"
             title="Optional">
         <span id="state_datadisksizegb_nodejs">
 <a href="#state_datadisksizegb_nodejs" style="color: inherit; text-decoration: inherit;">data<wbr>Disk<wbr>Size<wbr>Gb</a>
@@ -3140,8 +2957,7 @@ If not specified, we'll automatically choose from official GPU drivers.
 up to a maximum of 64000 GB (64 TB).
 You can choose the size of the data disk based on how big your notebooks and data are.
 If not specified, this defaults to 100.
-{{% /md %}}</dd>
-    <dt class="property-optional"
+{{% /md %}}</dd><dt class="property-optional"
             title="Optional">
         <span id="state_datadisktype_nodejs">
 <a href="#state_datadisktype_nodejs" style="color: inherit; text-decoration: inherit;">data<wbr>Disk<wbr>Type</a>
@@ -3151,8 +2967,7 @@ If not specified, this defaults to 100.
     </dt>
     <dd>{{% md %}}Possible disk types for notebook instances.
 Possible values are `DISK_TYPE_UNSPECIFIED`, `PD_STANDARD`, `PD_SSD`, and `PD_BALANCED`.
-{{% /md %}}</dd>
-    <dt class="property-optional"
+{{% /md %}}</dd><dt class="property-optional"
             title="Optional">
         <span id="state_diskencryption_nodejs">
 <a href="#state_diskencryption_nodejs" style="color: inherit; text-decoration: inherit;">disk<wbr>Encryption</a>
@@ -3162,8 +2977,7 @@ Possible values are `DISK_TYPE_UNSPECIFIED`, `PD_STANDARD`, `PD_SSD`, and `PD_BA
     </dt>
     <dd>{{% md %}}Disk encryption method used on the boot and data disks, defaults to GMEK.
 Possible values are `DISK_ENCRYPTION_UNSPECIFIED`, `GMEK`, and `CMEK`.
-{{% /md %}}</dd>
-    <dt class="property-optional"
+{{% /md %}}</dd><dt class="property-optional"
             title="Optional">
         <span id="state_installgpudriver_nodejs">
 <a href="#state_installgpudriver_nodejs" style="color: inherit; text-decoration: inherit;">install<wbr>Gpu<wbr>Driver</a>
@@ -3174,8 +2988,7 @@ Possible values are `DISK_ENCRYPTION_UNSPECIFIED`, `GMEK`, and `CMEK`.
     <dd>{{% md %}}Whether the end user authorizes Google Cloud to install GPU driver
 on this instance. If this field is empty or set to false, the GPU driver
 won't be installed. Only applicable to instances with GPUs.
-{{% /md %}}</dd>
-    <dt class="property-optional"
+{{% /md %}}</dd><dt class="property-optional"
             title="Optional">
         <span id="state_instanceowners_nodejs">
 <a href="#state_instanceowners_nodejs" style="color: inherit; text-decoration: inherit;">instance<wbr>Owners</a>
@@ -3188,8 +3001,7 @@ Format: alias@example.com.
 Currently supports one owner only.
 If not specified, all of the service account users of
 your VM instance's service account can use the instance.
-{{% /md %}}</dd>
-    <dt class="property-optional"
+{{% /md %}}</dd><dt class="property-optional"
             title="Optional">
         <span id="state_kmskey_nodejs">
 <a href="#state_kmskey_nodejs" style="color: inherit; text-decoration: inherit;">kms<wbr>Key</a>
@@ -3199,8 +3011,7 @@ your VM instance's service account can use the instance.
     </dt>
     <dd>{{% md %}}The KMS key used to encrypt the disks, only applicable if diskEncryption is CMEK.
 Format: projects/{project_id}/locations/{location}/keyRings/{key_ring_id}/cryptoKeys/{key_id}
-{{% /md %}}</dd>
-    <dt class="property-optional"
+{{% /md %}}</dd><dt class="property-optional"
             title="Optional">
         <span id="state_labels_nodejs">
 <a href="#state_labels_nodejs" style="color: inherit; text-decoration: inherit;">labels</a>
@@ -3210,8 +3021,7 @@ Format: projects/{project_id}/locations/{location}/keyRings/{key_ring_id}/crypto
     </dt>
     <dd>{{% md %}}Labels to apply to this instance. These can be later modified by the setLabels method.
 An object containing a list of "key": value pairs. Example: { "name": "wrench", "mass": "1.3kg", "count": "3" }.
-{{% /md %}}</dd>
-    <dt class="property-optional"
+{{% /md %}}</dd><dt class="property-optional"
             title="Optional">
         <span id="state_location_nodejs">
 <a href="#state_location_nodejs" style="color: inherit; text-decoration: inherit;">location</a>
@@ -3220,8 +3030,7 @@ An object containing a list of "key": value pairs. Example: { "name": "wrench", 
         <span class="property-type">string</span>
     </dt>
     <dd>{{% md %}}A reference to the zone where the machine resides.
-{{% /md %}}</dd>
-    <dt class="property-optional"
+{{% /md %}}</dd><dt class="property-optional"
             title="Optional">
         <span id="state_machinetype_nodejs">
 <a href="#state_machinetype_nodejs" style="color: inherit; text-decoration: inherit;">machine<wbr>Type</a>
@@ -3230,8 +3039,7 @@ An object containing a list of "key": value pairs. Example: { "name": "wrench", 
         <span class="property-type">string</span>
     </dt>
     <dd>{{% md %}}A reference to a machine type which defines VM kind.
-{{% /md %}}</dd>
-    <dt class="property-optional"
+{{% /md %}}</dd><dt class="property-optional"
             title="Optional">
         <span id="state_metadata_nodejs">
 <a href="#state_metadata_nodejs" style="color: inherit; text-decoration: inherit;">metadata</a>
@@ -3241,8 +3049,7 @@ An object containing a list of "key": value pairs. Example: { "name": "wrench", 
     </dt>
     <dd>{{% md %}}Custom metadata to apply to this instance.
 An object containing a list of "key": value pairs. Example: { "name": "wrench", "mass": "1.3kg", "count": "3" }.
-{{% /md %}}</dd>
-    <dt class="property-optional"
+{{% /md %}}</dd><dt class="property-optional"
             title="Optional">
         <span id="state_name_nodejs">
 <a href="#state_name_nodejs" style="color: inherit; text-decoration: inherit;">name</a>
@@ -3251,8 +3058,7 @@ An object containing a list of "key": value pairs. Example: { "name": "wrench", 
         <span class="property-type">string</span>
     </dt>
     <dd>{{% md %}}The name specified for the Notebook instance.
-{{% /md %}}</dd>
-    <dt class="property-optional"
+{{% /md %}}</dd><dt class="property-optional"
             title="Optional">
         <span id="state_network_nodejs">
 <a href="#state_network_nodejs" style="color: inherit; text-decoration: inherit;">network</a>
@@ -3262,8 +3068,7 @@ An object containing a list of "key": value pairs. Example: { "name": "wrench", 
     </dt>
     <dd>{{% md %}}The name of the VPC that this instance is in.
 Format: projects/{project_id}/global/networks/{network_id}
-{{% /md %}}</dd>
-    <dt class="property-optional"
+{{% /md %}}</dd><dt class="property-optional"
             title="Optional">
         <span id="state_noproxyaccess_nodejs">
 <a href="#state_noproxyaccess_nodejs" style="color: inherit; text-decoration: inherit;">no<wbr>Proxy<wbr>Access</a>
@@ -3272,8 +3077,7 @@ Format: projects/{project_id}/global/networks/{network_id}
         <span class="property-type">boolean</span>
     </dt>
     <dd>{{% md %}}The notebook instance will not register with the proxy..
-{{% /md %}}</dd>
-    <dt class="property-optional"
+{{% /md %}}</dd><dt class="property-optional"
             title="Optional">
         <span id="state_nopublicip_nodejs">
 <a href="#state_nopublicip_nodejs" style="color: inherit; text-decoration: inherit;">no<wbr>Public<wbr>Ip</a>
@@ -3282,8 +3086,7 @@ Format: projects/{project_id}/global/networks/{network_id}
         <span class="property-type">boolean</span>
     </dt>
     <dd>{{% md %}}No public IP will be assigned to this instance.
-{{% /md %}}</dd>
-    <dt class="property-optional"
+{{% /md %}}</dd><dt class="property-optional"
             title="Optional">
         <span id="state_noremovedatadisk_nodejs">
 <a href="#state_noremovedatadisk_nodejs" style="color: inherit; text-decoration: inherit;">no<wbr>Remove<wbr>Data<wbr>Disk</a>
@@ -3292,8 +3095,7 @@ Format: projects/{project_id}/global/networks/{network_id}
         <span class="property-type">boolean</span>
     </dt>
     <dd>{{% md %}}If true, the data disk will not be auto deleted when deleting the instance.
-{{% /md %}}</dd>
-    <dt class="property-optional"
+{{% /md %}}</dd><dt class="property-optional"
             title="Optional">
         <span id="state_poststartupscript_nodejs">
 <a href="#state_poststartupscript_nodejs" style="color: inherit; text-decoration: inherit;">post<wbr>Startup<wbr>Script</a>
@@ -3304,8 +3106,7 @@ Format: projects/{project_id}/global/networks/{network_id}
     <dd>{{% md %}}Path to a Bash script that automatically runs after a
 notebook instance fully boots up. The path must be a URL
 or Cloud Storage path (gs://path-to-file/file-name).
-{{% /md %}}</dd>
-    <dt class="property-optional"
+{{% /md %}}</dd><dt class="property-optional"
             title="Optional">
         <span id="state_project_nodejs">
 <a href="#state_project_nodejs" style="color: inherit; text-decoration: inherit;">project</a>
@@ -3315,8 +3116,7 @@ or Cloud Storage path (gs://path-to-file/file-name).
     </dt>
     <dd>{{% md %}}The name of the Google Cloud project that this VM image belongs to.
 Format: projects/{project_id}
-{{% /md %}}</dd>
-    <dt class="property-optional"
+{{% /md %}}</dd><dt class="property-optional"
             title="Optional">
         <span id="state_proxyuri_nodejs">
 <a href="#state_proxyuri_nodejs" style="color: inherit; text-decoration: inherit;">proxy<wbr>Uri</a>
@@ -3325,8 +3125,7 @@ Format: projects/{project_id}
         <span class="property-type">string</span>
     </dt>
     <dd>{{% md %}}The proxy endpoint that is used to access the Jupyter notebook.
-{{% /md %}}</dd>
-    <dt class="property-optional"
+{{% /md %}}</dd><dt class="property-optional"
             title="Optional">
         <span id="state_serviceaccount_nodejs">
 <a href="#state_serviceaccount_nodejs" style="color: inherit; text-decoration: inherit;">service<wbr>Account</a>
@@ -3339,8 +3138,7 @@ Google Cloud services. You can use any service account within
 the same project, but you must have the service account user
 permission to use the instance. If not specified,
 the Compute Engine default service account is used.
-{{% /md %}}</dd>
-    <dt class="property-optional"
+{{% /md %}}</dd><dt class="property-optional"
             title="Optional">
         <span id="state_serviceaccountscopes_nodejs">
 <a href="#state_serviceaccountscopes_nodejs" style="color: inherit; text-decoration: inherit;">service<wbr>Account<wbr>Scopes</a>
@@ -3352,8 +3150,7 @@ the Compute Engine default service account is used.
 If not specified, the following scopes are defined:
 - https://www.googleapis.com/auth/cloud-platform
 - https://www.googleapis.com/auth/userinfo.email
-{{% /md %}}</dd>
-    <dt class="property-optional"
+{{% /md %}}</dd><dt class="property-optional"
             title="Optional">
         <span id="state_shieldedinstanceconfig_nodejs">
 <a href="#state_shieldedinstanceconfig_nodejs" style="color: inherit; text-decoration: inherit;">shielded<wbr>Instance<wbr>Config</a>
@@ -3364,8 +3161,7 @@ If not specified, the following scopes are defined:
     <dd>{{% md %}}A set of Shielded Instance options. Check [Images using supported Shielded VM features]
 Not all combinations are valid
 Structure is documented below.
-{{% /md %}}</dd>
-    <dt class="property-optional"
+{{% /md %}}</dd><dt class="property-optional"
             title="Optional">
         <span id="state_state_nodejs">
 <a href="#state_state_nodejs" style="color: inherit; text-decoration: inherit;">state</a>
@@ -3374,8 +3170,7 @@ Structure is documented below.
         <span class="property-type">string</span>
     </dt>
     <dd>{{% md %}}The state of this instance.
-{{% /md %}}</dd>
-    <dt class="property-optional"
+{{% /md %}}</dd><dt class="property-optional"
             title="Optional">
         <span id="state_subnet_nodejs">
 <a href="#state_subnet_nodejs" style="color: inherit; text-decoration: inherit;">subnet</a>
@@ -3385,8 +3180,7 @@ Structure is documented below.
     </dt>
     <dd>{{% md %}}The name of the subnet that this instance is in.
 Format: projects/{project_id}/regions/{region}/subnetworks/{subnetwork_id}
-{{% /md %}}</dd>
-    <dt class="property-optional"
+{{% /md %}}</dd><dt class="property-optional"
             title="Optional">
         <span id="state_tags_nodejs">
 <a href="#state_tags_nodejs" style="color: inherit; text-decoration: inherit;">tags</a>
@@ -3395,8 +3189,7 @@ Format: projects/{project_id}/regions/{region}/subnetworks/{subnetwork_id}
         <span class="property-type">string[]</span>
     </dt>
     <dd>{{% md %}}The Compute Engine tags to add to runtime.
-{{% /md %}}</dd>
-    <dt class="property-optional"
+{{% /md %}}</dd><dt class="property-optional"
             title="Optional">
         <span id="state_updatetime_nodejs">
 <a href="#state_updatetime_nodejs" style="color: inherit; text-decoration: inherit;">update<wbr>Time</a>
@@ -3405,8 +3198,7 @@ Format: projects/{project_id}/regions/{region}/subnetworks/{subnetwork_id}
         <span class="property-type">string</span>
     </dt>
     <dd>{{% md %}}Instance update time.
-{{% /md %}}</dd>
-    <dt class="property-optional"
+{{% /md %}}</dd><dt class="property-optional"
             title="Optional">
         <span id="state_vmimage_nodejs">
 <a href="#state_vmimage_nodejs" style="color: inherit; text-decoration: inherit;">vm<wbr>Image</a>
@@ -3416,14 +3208,11 @@ Format: projects/{project_id}/regions/{region}/subnetworks/{subnetwork_id}
     </dt>
     <dd>{{% md %}}Use a Compute Engine VM image to start the notebook instance.
 Structure is documented below.
-{{% /md %}}</dd>
-</dl>
+{{% /md %}}</dd></dl>
 {{% /choosable %}}
 
 {{% choosable language python %}}
-<dl class="resources-properties">
-
-    <dt class="property-optional"
+<dl class="resources-properties"><dt class="property-optional"
             title="Optional">
         <span id="state_accelerator_config_python">
 <a href="#state_accelerator_config_python" style="color: inherit; text-decoration: inherit;">accelerator_<wbr>config</a>
@@ -3435,8 +3224,7 @@ Structure is documented below.
 make sure that your configuration has enough vCPUs and memory to support the
 machineType you have selected.
 Structure is documented below.
-{{% /md %}}</dd>
-    <dt class="property-optional"
+{{% /md %}}</dd><dt class="property-optional"
             title="Optional">
         <span id="state_boot_disk_size_gb_python">
 <a href="#state_boot_disk_size_gb_python" style="color: inherit; text-decoration: inherit;">boot_<wbr>disk_<wbr>size_<wbr>gb</a>
@@ -3447,8 +3235,7 @@ Structure is documented below.
     <dd>{{% md %}}The size of the boot disk in GB attached to this instance,
 up to a maximum of 64000 GB (64 TB). The minimum recommended value is 100 GB.
 If not specified, this defaults to 100.
-{{% /md %}}</dd>
-    <dt class="property-optional"
+{{% /md %}}</dd><dt class="property-optional"
             title="Optional">
         <span id="state_boot_disk_type_python">
 <a href="#state_boot_disk_type_python" style="color: inherit; text-decoration: inherit;">boot_<wbr>disk_<wbr>type</a>
@@ -3458,8 +3245,7 @@ If not specified, this defaults to 100.
     </dt>
     <dd>{{% md %}}Possible disk types for notebook instances.
 Possible values are `DISK_TYPE_UNSPECIFIED`, `PD_STANDARD`, `PD_SSD`, and `PD_BALANCED`.
-{{% /md %}}</dd>
-    <dt class="property-optional"
+{{% /md %}}</dd><dt class="property-optional"
             title="Optional">
         <span id="state_container_image_python">
 <a href="#state_container_image_python" style="color: inherit; text-decoration: inherit;">container_<wbr>image</a>
@@ -3469,8 +3255,7 @@ Possible values are `DISK_TYPE_UNSPECIFIED`, `PD_STANDARD`, `PD_SSD`, and `PD_BA
     </dt>
     <dd>{{% md %}}Use a container image to start the notebook instance.
 Structure is documented below.
-{{% /md %}}</dd>
-    <dt class="property-optional"
+{{% /md %}}</dd><dt class="property-optional"
             title="Optional">
         <span id="state_create_time_python">
 <a href="#state_create_time_python" style="color: inherit; text-decoration: inherit;">create_<wbr>time</a>
@@ -3479,8 +3264,7 @@ Structure is documented below.
         <span class="property-type">str</span>
     </dt>
     <dd>{{% md %}}Instance creation time
-{{% /md %}}</dd>
-    <dt class="property-optional"
+{{% /md %}}</dd><dt class="property-optional"
             title="Optional">
         <span id="state_custom_gpu_driver_path_python">
 <a href="#state_custom_gpu_driver_path_python" style="color: inherit; text-decoration: inherit;">custom_<wbr>gpu_<wbr>driver_<wbr>path</a>
@@ -3490,8 +3274,7 @@ Structure is documented below.
     </dt>
     <dd>{{% md %}}Specify a custom Cloud Storage path where the GPU driver is stored.
 If not specified, we'll automatically choose from official GPU drivers.
-{{% /md %}}</dd>
-    <dt class="property-optional"
+{{% /md %}}</dd><dt class="property-optional"
             title="Optional">
         <span id="state_data_disk_size_gb_python">
 <a href="#state_data_disk_size_gb_python" style="color: inherit; text-decoration: inherit;">data_<wbr>disk_<wbr>size_<wbr>gb</a>
@@ -3503,8 +3286,7 @@ If not specified, we'll automatically choose from official GPU drivers.
 up to a maximum of 64000 GB (64 TB).
 You can choose the size of the data disk based on how big your notebooks and data are.
 If not specified, this defaults to 100.
-{{% /md %}}</dd>
-    <dt class="property-optional"
+{{% /md %}}</dd><dt class="property-optional"
             title="Optional">
         <span id="state_data_disk_type_python">
 <a href="#state_data_disk_type_python" style="color: inherit; text-decoration: inherit;">data_<wbr>disk_<wbr>type</a>
@@ -3514,8 +3296,7 @@ If not specified, this defaults to 100.
     </dt>
     <dd>{{% md %}}Possible disk types for notebook instances.
 Possible values are `DISK_TYPE_UNSPECIFIED`, `PD_STANDARD`, `PD_SSD`, and `PD_BALANCED`.
-{{% /md %}}</dd>
-    <dt class="property-optional"
+{{% /md %}}</dd><dt class="property-optional"
             title="Optional">
         <span id="state_disk_encryption_python">
 <a href="#state_disk_encryption_python" style="color: inherit; text-decoration: inherit;">disk_<wbr>encryption</a>
@@ -3525,8 +3306,7 @@ Possible values are `DISK_TYPE_UNSPECIFIED`, `PD_STANDARD`, `PD_SSD`, and `PD_BA
     </dt>
     <dd>{{% md %}}Disk encryption method used on the boot and data disks, defaults to GMEK.
 Possible values are `DISK_ENCRYPTION_UNSPECIFIED`, `GMEK`, and `CMEK`.
-{{% /md %}}</dd>
-    <dt class="property-optional"
+{{% /md %}}</dd><dt class="property-optional"
             title="Optional">
         <span id="state_install_gpu_driver_python">
 <a href="#state_install_gpu_driver_python" style="color: inherit; text-decoration: inherit;">install_<wbr>gpu_<wbr>driver</a>
@@ -3537,8 +3317,7 @@ Possible values are `DISK_ENCRYPTION_UNSPECIFIED`, `GMEK`, and `CMEK`.
     <dd>{{% md %}}Whether the end user authorizes Google Cloud to install GPU driver
 on this instance. If this field is empty or set to false, the GPU driver
 won't be installed. Only applicable to instances with GPUs.
-{{% /md %}}</dd>
-    <dt class="property-optional"
+{{% /md %}}</dd><dt class="property-optional"
             title="Optional">
         <span id="state_instance_owners_python">
 <a href="#state_instance_owners_python" style="color: inherit; text-decoration: inherit;">instance_<wbr>owners</a>
@@ -3551,8 +3330,7 @@ Format: alias@example.com.
 Currently supports one owner only.
 If not specified, all of the service account users of
 your VM instance's service account can use the instance.
-{{% /md %}}</dd>
-    <dt class="property-optional"
+{{% /md %}}</dd><dt class="property-optional"
             title="Optional">
         <span id="state_kms_key_python">
 <a href="#state_kms_key_python" style="color: inherit; text-decoration: inherit;">kms_<wbr>key</a>
@@ -3562,8 +3340,7 @@ your VM instance's service account can use the instance.
     </dt>
     <dd>{{% md %}}The KMS key used to encrypt the disks, only applicable if diskEncryption is CMEK.
 Format: projects/{project_id}/locations/{location}/keyRings/{key_ring_id}/cryptoKeys/{key_id}
-{{% /md %}}</dd>
-    <dt class="property-optional"
+{{% /md %}}</dd><dt class="property-optional"
             title="Optional">
         <span id="state_labels_python">
 <a href="#state_labels_python" style="color: inherit; text-decoration: inherit;">labels</a>
@@ -3573,8 +3350,7 @@ Format: projects/{project_id}/locations/{location}/keyRings/{key_ring_id}/crypto
     </dt>
     <dd>{{% md %}}Labels to apply to this instance. These can be later modified by the setLabels method.
 An object containing a list of "key": value pairs. Example: { "name": "wrench", "mass": "1.3kg", "count": "3" }.
-{{% /md %}}</dd>
-    <dt class="property-optional"
+{{% /md %}}</dd><dt class="property-optional"
             title="Optional">
         <span id="state_location_python">
 <a href="#state_location_python" style="color: inherit; text-decoration: inherit;">location</a>
@@ -3583,8 +3359,7 @@ An object containing a list of "key": value pairs. Example: { "name": "wrench", 
         <span class="property-type">str</span>
     </dt>
     <dd>{{% md %}}A reference to the zone where the machine resides.
-{{% /md %}}</dd>
-    <dt class="property-optional"
+{{% /md %}}</dd><dt class="property-optional"
             title="Optional">
         <span id="state_machine_type_python">
 <a href="#state_machine_type_python" style="color: inherit; text-decoration: inherit;">machine_<wbr>type</a>
@@ -3593,8 +3368,7 @@ An object containing a list of "key": value pairs. Example: { "name": "wrench", 
         <span class="property-type">str</span>
     </dt>
     <dd>{{% md %}}A reference to a machine type which defines VM kind.
-{{% /md %}}</dd>
-    <dt class="property-optional"
+{{% /md %}}</dd><dt class="property-optional"
             title="Optional">
         <span id="state_metadata_python">
 <a href="#state_metadata_python" style="color: inherit; text-decoration: inherit;">metadata</a>
@@ -3604,8 +3378,7 @@ An object containing a list of "key": value pairs. Example: { "name": "wrench", 
     </dt>
     <dd>{{% md %}}Custom metadata to apply to this instance.
 An object containing a list of "key": value pairs. Example: { "name": "wrench", "mass": "1.3kg", "count": "3" }.
-{{% /md %}}</dd>
-    <dt class="property-optional"
+{{% /md %}}</dd><dt class="property-optional"
             title="Optional">
         <span id="state_name_python">
 <a href="#state_name_python" style="color: inherit; text-decoration: inherit;">name</a>
@@ -3614,8 +3387,7 @@ An object containing a list of "key": value pairs. Example: { "name": "wrench", 
         <span class="property-type">str</span>
     </dt>
     <dd>{{% md %}}The name specified for the Notebook instance.
-{{% /md %}}</dd>
-    <dt class="property-optional"
+{{% /md %}}</dd><dt class="property-optional"
             title="Optional">
         <span id="state_network_python">
 <a href="#state_network_python" style="color: inherit; text-decoration: inherit;">network</a>
@@ -3625,8 +3397,7 @@ An object containing a list of "key": value pairs. Example: { "name": "wrench", 
     </dt>
     <dd>{{% md %}}The name of the VPC that this instance is in.
 Format: projects/{project_id}/global/networks/{network_id}
-{{% /md %}}</dd>
-    <dt class="property-optional"
+{{% /md %}}</dd><dt class="property-optional"
             title="Optional">
         <span id="state_no_proxy_access_python">
 <a href="#state_no_proxy_access_python" style="color: inherit; text-decoration: inherit;">no_<wbr>proxy_<wbr>access</a>
@@ -3635,8 +3406,7 @@ Format: projects/{project_id}/global/networks/{network_id}
         <span class="property-type">bool</span>
     </dt>
     <dd>{{% md %}}The notebook instance will not register with the proxy..
-{{% /md %}}</dd>
-    <dt class="property-optional"
+{{% /md %}}</dd><dt class="property-optional"
             title="Optional">
         <span id="state_no_public_ip_python">
 <a href="#state_no_public_ip_python" style="color: inherit; text-decoration: inherit;">no_<wbr>public_<wbr>ip</a>
@@ -3645,8 +3415,7 @@ Format: projects/{project_id}/global/networks/{network_id}
         <span class="property-type">bool</span>
     </dt>
     <dd>{{% md %}}No public IP will be assigned to this instance.
-{{% /md %}}</dd>
-    <dt class="property-optional"
+{{% /md %}}</dd><dt class="property-optional"
             title="Optional">
         <span id="state_no_remove_data_disk_python">
 <a href="#state_no_remove_data_disk_python" style="color: inherit; text-decoration: inherit;">no_<wbr>remove_<wbr>data_<wbr>disk</a>
@@ -3655,8 +3424,7 @@ Format: projects/{project_id}/global/networks/{network_id}
         <span class="property-type">bool</span>
     </dt>
     <dd>{{% md %}}If true, the data disk will not be auto deleted when deleting the instance.
-{{% /md %}}</dd>
-    <dt class="property-optional"
+{{% /md %}}</dd><dt class="property-optional"
             title="Optional">
         <span id="state_post_startup_script_python">
 <a href="#state_post_startup_script_python" style="color: inherit; text-decoration: inherit;">post_<wbr>startup_<wbr>script</a>
@@ -3667,8 +3435,7 @@ Format: projects/{project_id}/global/networks/{network_id}
     <dd>{{% md %}}Path to a Bash script that automatically runs after a
 notebook instance fully boots up. The path must be a URL
 or Cloud Storage path (gs://path-to-file/file-name).
-{{% /md %}}</dd>
-    <dt class="property-optional"
+{{% /md %}}</dd><dt class="property-optional"
             title="Optional">
         <span id="state_project_python">
 <a href="#state_project_python" style="color: inherit; text-decoration: inherit;">project</a>
@@ -3678,8 +3445,7 @@ or Cloud Storage path (gs://path-to-file/file-name).
     </dt>
     <dd>{{% md %}}The name of the Google Cloud project that this VM image belongs to.
 Format: projects/{project_id}
-{{% /md %}}</dd>
-    <dt class="property-optional"
+{{% /md %}}</dd><dt class="property-optional"
             title="Optional">
         <span id="state_proxy_uri_python">
 <a href="#state_proxy_uri_python" style="color: inherit; text-decoration: inherit;">proxy_<wbr>uri</a>
@@ -3688,8 +3454,7 @@ Format: projects/{project_id}
         <span class="property-type">str</span>
     </dt>
     <dd>{{% md %}}The proxy endpoint that is used to access the Jupyter notebook.
-{{% /md %}}</dd>
-    <dt class="property-optional"
+{{% /md %}}</dd><dt class="property-optional"
             title="Optional">
         <span id="state_service_account_python">
 <a href="#state_service_account_python" style="color: inherit; text-decoration: inherit;">service_<wbr>account</a>
@@ -3702,8 +3467,7 @@ Google Cloud services. You can use any service account within
 the same project, but you must have the service account user
 permission to use the instance. If not specified,
 the Compute Engine default service account is used.
-{{% /md %}}</dd>
-    <dt class="property-optional"
+{{% /md %}}</dd><dt class="property-optional"
             title="Optional">
         <span id="state_service_account_scopes_python">
 <a href="#state_service_account_scopes_python" style="color: inherit; text-decoration: inherit;">service_<wbr>account_<wbr>scopes</a>
@@ -3715,8 +3479,7 @@ the Compute Engine default service account is used.
 If not specified, the following scopes are defined:
 - https://www.googleapis.com/auth/cloud-platform
 - https://www.googleapis.com/auth/userinfo.email
-{{% /md %}}</dd>
-    <dt class="property-optional"
+{{% /md %}}</dd><dt class="property-optional"
             title="Optional">
         <span id="state_shielded_instance_config_python">
 <a href="#state_shielded_instance_config_python" style="color: inherit; text-decoration: inherit;">shielded_<wbr>instance_<wbr>config</a>
@@ -3727,8 +3490,7 @@ If not specified, the following scopes are defined:
     <dd>{{% md %}}A set of Shielded Instance options. Check [Images using supported Shielded VM features]
 Not all combinations are valid
 Structure is documented below.
-{{% /md %}}</dd>
-    <dt class="property-optional"
+{{% /md %}}</dd><dt class="property-optional"
             title="Optional">
         <span id="state_state_python">
 <a href="#state_state_python" style="color: inherit; text-decoration: inherit;">state</a>
@@ -3737,8 +3499,7 @@ Structure is documented below.
         <span class="property-type">str</span>
     </dt>
     <dd>{{% md %}}The state of this instance.
-{{% /md %}}</dd>
-    <dt class="property-optional"
+{{% /md %}}</dd><dt class="property-optional"
             title="Optional">
         <span id="state_subnet_python">
 <a href="#state_subnet_python" style="color: inherit; text-decoration: inherit;">subnet</a>
@@ -3748,8 +3509,7 @@ Structure is documented below.
     </dt>
     <dd>{{% md %}}The name of the subnet that this instance is in.
 Format: projects/{project_id}/regions/{region}/subnetworks/{subnetwork_id}
-{{% /md %}}</dd>
-    <dt class="property-optional"
+{{% /md %}}</dd><dt class="property-optional"
             title="Optional">
         <span id="state_tags_python">
 <a href="#state_tags_python" style="color: inherit; text-decoration: inherit;">tags</a>
@@ -3758,8 +3518,7 @@ Format: projects/{project_id}/regions/{region}/subnetworks/{subnetwork_id}
         <span class="property-type">Sequence[str]</span>
     </dt>
     <dd>{{% md %}}The Compute Engine tags to add to runtime.
-{{% /md %}}</dd>
-    <dt class="property-optional"
+{{% /md %}}</dd><dt class="property-optional"
             title="Optional">
         <span id="state_update_time_python">
 <a href="#state_update_time_python" style="color: inherit; text-decoration: inherit;">update_<wbr>time</a>
@@ -3768,8 +3527,7 @@ Format: projects/{project_id}/regions/{region}/subnetworks/{subnetwork_id}
         <span class="property-type">str</span>
     </dt>
     <dd>{{% md %}}Instance update time.
-{{% /md %}}</dd>
-    <dt class="property-optional"
+{{% /md %}}</dd><dt class="property-optional"
             title="Optional">
         <span id="state_vm_image_python">
 <a href="#state_vm_image_python" style="color: inherit; text-decoration: inherit;">vm_<wbr>image</a>
@@ -3779,8 +3537,7 @@ Format: projects/{project_id}/regions/{region}/subnetworks/{subnetwork_id}
     </dt>
     <dd>{{% md %}}Use a Compute Engine VM image to start the notebook instance.
 Structure is documented below.
-{{% /md %}}</dd>
-</dl>
+{{% /md %}}</dd></dl>
 {{% /choosable %}}
 
 
@@ -3795,9 +3552,7 @@ Structure is documented below.
 <h4 id="instanceacceleratorconfig">Instance<wbr>Accelerator<wbr>Config</h4>
 
 {{% choosable language csharp %}}
-<dl class="resources-properties">
-
-    <dt class="property-required"
+<dl class="resources-properties"><dt class="property-required"
             title="Required">
         <span id="corecount_csharp">
 <a href="#corecount_csharp" style="color: inherit; text-decoration: inherit;">Core<wbr>Count</a>
@@ -3806,8 +3561,7 @@ Structure is documented below.
         <span class="property-type">int</span>
     </dt>
     <dd>{{% md %}}Count of cores of this accelerator.
-{{% /md %}}</dd>
-    <dt class="property-required"
+{{% /md %}}</dd><dt class="property-required"
             title="Required">
         <span id="type_csharp">
 <a href="#type_csharp" style="color: inherit; text-decoration: inherit;">Type</a>
@@ -3817,14 +3571,11 @@ Structure is documented below.
     </dt>
     <dd>{{% md %}}Type of this accelerator.
 Possible values are `ACCELERATOR_TYPE_UNSPECIFIED`, `NVIDIA_TESLA_K80`, `NVIDIA_TESLA_P100`, `NVIDIA_TESLA_V100`, `NVIDIA_TESLA_P4`, `NVIDIA_TESLA_T4`, `NVIDIA_TESLA_T4_VWS`, `NVIDIA_TESLA_P100_VWS`, `NVIDIA_TESLA_P4_VWS`, `NVIDIA_TESLA_A100`, `TPU_V2`, and `TPU_V3`.
-{{% /md %}}</dd>
-</dl>
+{{% /md %}}</dd></dl>
 {{% /choosable %}}
 
 {{% choosable language go %}}
-<dl class="resources-properties">
-
-    <dt class="property-required"
+<dl class="resources-properties"><dt class="property-required"
             title="Required">
         <span id="corecount_go">
 <a href="#corecount_go" style="color: inherit; text-decoration: inherit;">Core<wbr>Count</a>
@@ -3833,8 +3584,7 @@ Possible values are `ACCELERATOR_TYPE_UNSPECIFIED`, `NVIDIA_TESLA_K80`, `NVIDIA_
         <span class="property-type">int</span>
     </dt>
     <dd>{{% md %}}Count of cores of this accelerator.
-{{% /md %}}</dd>
-    <dt class="property-required"
+{{% /md %}}</dd><dt class="property-required"
             title="Required">
         <span id="type_go">
 <a href="#type_go" style="color: inherit; text-decoration: inherit;">Type</a>
@@ -3844,14 +3594,11 @@ Possible values are `ACCELERATOR_TYPE_UNSPECIFIED`, `NVIDIA_TESLA_K80`, `NVIDIA_
     </dt>
     <dd>{{% md %}}Type of this accelerator.
 Possible values are `ACCELERATOR_TYPE_UNSPECIFIED`, `NVIDIA_TESLA_K80`, `NVIDIA_TESLA_P100`, `NVIDIA_TESLA_V100`, `NVIDIA_TESLA_P4`, `NVIDIA_TESLA_T4`, `NVIDIA_TESLA_T4_VWS`, `NVIDIA_TESLA_P100_VWS`, `NVIDIA_TESLA_P4_VWS`, `NVIDIA_TESLA_A100`, `TPU_V2`, and `TPU_V3`.
-{{% /md %}}</dd>
-</dl>
+{{% /md %}}</dd></dl>
 {{% /choosable %}}
 
 {{% choosable language nodejs %}}
-<dl class="resources-properties">
-
-    <dt class="property-required"
+<dl class="resources-properties"><dt class="property-required"
             title="Required">
         <span id="corecount_nodejs">
 <a href="#corecount_nodejs" style="color: inherit; text-decoration: inherit;">core<wbr>Count</a>
@@ -3860,8 +3607,7 @@ Possible values are `ACCELERATOR_TYPE_UNSPECIFIED`, `NVIDIA_TESLA_K80`, `NVIDIA_
         <span class="property-type">number</span>
     </dt>
     <dd>{{% md %}}Count of cores of this accelerator.
-{{% /md %}}</dd>
-    <dt class="property-required"
+{{% /md %}}</dd><dt class="property-required"
             title="Required">
         <span id="type_nodejs">
 <a href="#type_nodejs" style="color: inherit; text-decoration: inherit;">type</a>
@@ -3871,14 +3617,11 @@ Possible values are `ACCELERATOR_TYPE_UNSPECIFIED`, `NVIDIA_TESLA_K80`, `NVIDIA_
     </dt>
     <dd>{{% md %}}Type of this accelerator.
 Possible values are `ACCELERATOR_TYPE_UNSPECIFIED`, `NVIDIA_TESLA_K80`, `NVIDIA_TESLA_P100`, `NVIDIA_TESLA_V100`, `NVIDIA_TESLA_P4`, `NVIDIA_TESLA_T4`, `NVIDIA_TESLA_T4_VWS`, `NVIDIA_TESLA_P100_VWS`, `NVIDIA_TESLA_P4_VWS`, `NVIDIA_TESLA_A100`, `TPU_V2`, and `TPU_V3`.
-{{% /md %}}</dd>
-</dl>
+{{% /md %}}</dd></dl>
 {{% /choosable %}}
 
 {{% choosable language python %}}
-<dl class="resources-properties">
-
-    <dt class="property-required"
+<dl class="resources-properties"><dt class="property-required"
             title="Required">
         <span id="core_count_python">
 <a href="#core_count_python" style="color: inherit; text-decoration: inherit;">core_<wbr>count</a>
@@ -3887,8 +3630,7 @@ Possible values are `ACCELERATOR_TYPE_UNSPECIFIED`, `NVIDIA_TESLA_K80`, `NVIDIA_
         <span class="property-type">int</span>
     </dt>
     <dd>{{% md %}}Count of cores of this accelerator.
-{{% /md %}}</dd>
-    <dt class="property-required"
+{{% /md %}}</dd><dt class="property-required"
             title="Required">
         <span id="type_python">
 <a href="#type_python" style="color: inherit; text-decoration: inherit;">type</a>
@@ -3898,16 +3640,13 @@ Possible values are `ACCELERATOR_TYPE_UNSPECIFIED`, `NVIDIA_TESLA_K80`, `NVIDIA_
     </dt>
     <dd>{{% md %}}Type of this accelerator.
 Possible values are `ACCELERATOR_TYPE_UNSPECIFIED`, `NVIDIA_TESLA_K80`, `NVIDIA_TESLA_P100`, `NVIDIA_TESLA_V100`, `NVIDIA_TESLA_P4`, `NVIDIA_TESLA_T4`, `NVIDIA_TESLA_T4_VWS`, `NVIDIA_TESLA_P100_VWS`, `NVIDIA_TESLA_P4_VWS`, `NVIDIA_TESLA_A100`, `TPU_V2`, and `TPU_V3`.
-{{% /md %}}</dd>
-</dl>
+{{% /md %}}</dd></dl>
 {{% /choosable %}}
 
 <h4 id="instancecontainerimage">Instance<wbr>Container<wbr>Image</h4>
 
 {{% choosable language csharp %}}
-<dl class="resources-properties">
-
-    <dt class="property-required"
+<dl class="resources-properties"><dt class="property-required"
             title="Required">
         <span id="repository_csharp">
 <a href="#repository_csharp" style="color: inherit; text-decoration: inherit;">Repository</a>
@@ -3917,8 +3656,7 @@ Possible values are `ACCELERATOR_TYPE_UNSPECIFIED`, `NVIDIA_TESLA_K80`, `NVIDIA_
     </dt>
     <dd>{{% md %}}The path to the container image repository.
 For example: gcr.io/{project_id}/{imageName}
-{{% /md %}}</dd>
-    <dt class="property-optional"
+{{% /md %}}</dd><dt class="property-optional"
             title="Optional">
         <span id="tag_csharp">
 <a href="#tag_csharp" style="color: inherit; text-decoration: inherit;">Tag</a>
@@ -3927,14 +3665,11 @@ For example: gcr.io/{project_id}/{imageName}
         <span class="property-type">string</span>
     </dt>
     <dd>{{% md %}}The tag of the container image. If not specified, this defaults to the latest tag.
-{{% /md %}}</dd>
-</dl>
+{{% /md %}}</dd></dl>
 {{% /choosable %}}
 
 {{% choosable language go %}}
-<dl class="resources-properties">
-
-    <dt class="property-required"
+<dl class="resources-properties"><dt class="property-required"
             title="Required">
         <span id="repository_go">
 <a href="#repository_go" style="color: inherit; text-decoration: inherit;">Repository</a>
@@ -3944,8 +3679,7 @@ For example: gcr.io/{project_id}/{imageName}
     </dt>
     <dd>{{% md %}}The path to the container image repository.
 For example: gcr.io/{project_id}/{imageName}
-{{% /md %}}</dd>
-    <dt class="property-optional"
+{{% /md %}}</dd><dt class="property-optional"
             title="Optional">
         <span id="tag_go">
 <a href="#tag_go" style="color: inherit; text-decoration: inherit;">Tag</a>
@@ -3954,14 +3688,11 @@ For example: gcr.io/{project_id}/{imageName}
         <span class="property-type">string</span>
     </dt>
     <dd>{{% md %}}The tag of the container image. If not specified, this defaults to the latest tag.
-{{% /md %}}</dd>
-</dl>
+{{% /md %}}</dd></dl>
 {{% /choosable %}}
 
 {{% choosable language nodejs %}}
-<dl class="resources-properties">
-
-    <dt class="property-required"
+<dl class="resources-properties"><dt class="property-required"
             title="Required">
         <span id="repository_nodejs">
 <a href="#repository_nodejs" style="color: inherit; text-decoration: inherit;">repository</a>
@@ -3971,8 +3702,7 @@ For example: gcr.io/{project_id}/{imageName}
     </dt>
     <dd>{{% md %}}The path to the container image repository.
 For example: gcr.io/{project_id}/{imageName}
-{{% /md %}}</dd>
-    <dt class="property-optional"
+{{% /md %}}</dd><dt class="property-optional"
             title="Optional">
         <span id="tag_nodejs">
 <a href="#tag_nodejs" style="color: inherit; text-decoration: inherit;">tag</a>
@@ -3981,14 +3711,11 @@ For example: gcr.io/{project_id}/{imageName}
         <span class="property-type">string</span>
     </dt>
     <dd>{{% md %}}The tag of the container image. If not specified, this defaults to the latest tag.
-{{% /md %}}</dd>
-</dl>
+{{% /md %}}</dd></dl>
 {{% /choosable %}}
 
 {{% choosable language python %}}
-<dl class="resources-properties">
-
-    <dt class="property-required"
+<dl class="resources-properties"><dt class="property-required"
             title="Required">
         <span id="repository_python">
 <a href="#repository_python" style="color: inherit; text-decoration: inherit;">repository</a>
@@ -3998,8 +3725,7 @@ For example: gcr.io/{project_id}/{imageName}
     </dt>
     <dd>{{% md %}}The path to the container image repository.
 For example: gcr.io/{project_id}/{imageName}
-{{% /md %}}</dd>
-    <dt class="property-optional"
+{{% /md %}}</dd><dt class="property-optional"
             title="Optional">
         <span id="tag_python">
 <a href="#tag_python" style="color: inherit; text-decoration: inherit;">tag</a>
@@ -4008,16 +3734,13 @@ For example: gcr.io/{project_id}/{imageName}
         <span class="property-type">str</span>
     </dt>
     <dd>{{% md %}}The tag of the container image. If not specified, this defaults to the latest tag.
-{{% /md %}}</dd>
-</dl>
+{{% /md %}}</dd></dl>
 {{% /choosable %}}
 
 <h4 id="instanceshieldedinstanceconfig">Instance<wbr>Shielded<wbr>Instance<wbr>Config</h4>
 
 {{% choosable language csharp %}}
-<dl class="resources-properties">
-
-    <dt class="property-optional"
+<dl class="resources-properties"><dt class="property-optional"
             title="Optional">
         <span id="enableintegritymonitoring_csharp">
 <a href="#enableintegritymonitoring_csharp" style="color: inherit; text-decoration: inherit;">Enable<wbr>Integrity<wbr>Monitoring</a>
@@ -4029,8 +3752,7 @@ For example: gcr.io/{project_id}/{imageName}
 boot integrity of the instance. The attestation is performed against the integrity policy baseline.
 This baseline is initially derived from the implicitly trusted boot image when the instance is created.
 Enabled by default.
-{{% /md %}}</dd>
-    <dt class="property-optional"
+{{% /md %}}</dd><dt class="property-optional"
             title="Optional">
         <span id="enablesecureboot_csharp">
 <a href="#enablesecureboot_csharp" style="color: inherit; text-decoration: inherit;">Enable<wbr>Secure<wbr>Boot</a>
@@ -4042,8 +3764,7 @@ Enabled by default.
 authentic software by verifying the digital signature of all boot components, and halting the boot process
 if signature verification fails.
 Disabled by default.
-{{% /md %}}</dd>
-    <dt class="property-optional"
+{{% /md %}}</dd><dt class="property-optional"
             title="Optional">
         <span id="enablevtpm_csharp">
 <a href="#enablevtpm_csharp" style="color: inherit; text-decoration: inherit;">Enable<wbr>Vtpm</a>
@@ -4053,14 +3774,11 @@ Disabled by default.
     </dt>
     <dd>{{% md %}}Defines whether the instance has the vTPM enabled.
 Enabled by default.
-{{% /md %}}</dd>
-</dl>
+{{% /md %}}</dd></dl>
 {{% /choosable %}}
 
 {{% choosable language go %}}
-<dl class="resources-properties">
-
-    <dt class="property-optional"
+<dl class="resources-properties"><dt class="property-optional"
             title="Optional">
         <span id="enableintegritymonitoring_go">
 <a href="#enableintegritymonitoring_go" style="color: inherit; text-decoration: inherit;">Enable<wbr>Integrity<wbr>Monitoring</a>
@@ -4072,8 +3790,7 @@ Enabled by default.
 boot integrity of the instance. The attestation is performed against the integrity policy baseline.
 This baseline is initially derived from the implicitly trusted boot image when the instance is created.
 Enabled by default.
-{{% /md %}}</dd>
-    <dt class="property-optional"
+{{% /md %}}</dd><dt class="property-optional"
             title="Optional">
         <span id="enablesecureboot_go">
 <a href="#enablesecureboot_go" style="color: inherit; text-decoration: inherit;">Enable<wbr>Secure<wbr>Boot</a>
@@ -4085,8 +3802,7 @@ Enabled by default.
 authentic software by verifying the digital signature of all boot components, and halting the boot process
 if signature verification fails.
 Disabled by default.
-{{% /md %}}</dd>
-    <dt class="property-optional"
+{{% /md %}}</dd><dt class="property-optional"
             title="Optional">
         <span id="enablevtpm_go">
 <a href="#enablevtpm_go" style="color: inherit; text-decoration: inherit;">Enable<wbr>Vtpm</a>
@@ -4096,14 +3812,11 @@ Disabled by default.
     </dt>
     <dd>{{% md %}}Defines whether the instance has the vTPM enabled.
 Enabled by default.
-{{% /md %}}</dd>
-</dl>
+{{% /md %}}</dd></dl>
 {{% /choosable %}}
 
 {{% choosable language nodejs %}}
-<dl class="resources-properties">
-
-    <dt class="property-optional"
+<dl class="resources-properties"><dt class="property-optional"
             title="Optional">
         <span id="enableintegritymonitoring_nodejs">
 <a href="#enableintegritymonitoring_nodejs" style="color: inherit; text-decoration: inherit;">enable<wbr>Integrity<wbr>Monitoring</a>
@@ -4115,8 +3828,7 @@ Enabled by default.
 boot integrity of the instance. The attestation is performed against the integrity policy baseline.
 This baseline is initially derived from the implicitly trusted boot image when the instance is created.
 Enabled by default.
-{{% /md %}}</dd>
-    <dt class="property-optional"
+{{% /md %}}</dd><dt class="property-optional"
             title="Optional">
         <span id="enablesecureboot_nodejs">
 <a href="#enablesecureboot_nodejs" style="color: inherit; text-decoration: inherit;">enable<wbr>Secure<wbr>Boot</a>
@@ -4128,8 +3840,7 @@ Enabled by default.
 authentic software by verifying the digital signature of all boot components, and halting the boot process
 if signature verification fails.
 Disabled by default.
-{{% /md %}}</dd>
-    <dt class="property-optional"
+{{% /md %}}</dd><dt class="property-optional"
             title="Optional">
         <span id="enablevtpm_nodejs">
 <a href="#enablevtpm_nodejs" style="color: inherit; text-decoration: inherit;">enable<wbr>Vtpm</a>
@@ -4139,14 +3850,11 @@ Disabled by default.
     </dt>
     <dd>{{% md %}}Defines whether the instance has the vTPM enabled.
 Enabled by default.
-{{% /md %}}</dd>
-</dl>
+{{% /md %}}</dd></dl>
 {{% /choosable %}}
 
 {{% choosable language python %}}
-<dl class="resources-properties">
-
-    <dt class="property-optional"
+<dl class="resources-properties"><dt class="property-optional"
             title="Optional">
         <span id="enable_integrity_monitoring_python">
 <a href="#enable_integrity_monitoring_python" style="color: inherit; text-decoration: inherit;">enable_<wbr>integrity_<wbr>monitoring</a>
@@ -4158,8 +3866,7 @@ Enabled by default.
 boot integrity of the instance. The attestation is performed against the integrity policy baseline.
 This baseline is initially derived from the implicitly trusted boot image when the instance is created.
 Enabled by default.
-{{% /md %}}</dd>
-    <dt class="property-optional"
+{{% /md %}}</dd><dt class="property-optional"
             title="Optional">
         <span id="enable_secure_boot_python">
 <a href="#enable_secure_boot_python" style="color: inherit; text-decoration: inherit;">enable_<wbr>secure_<wbr>boot</a>
@@ -4171,8 +3878,7 @@ Enabled by default.
 authentic software by verifying the digital signature of all boot components, and halting the boot process
 if signature verification fails.
 Disabled by default.
-{{% /md %}}</dd>
-    <dt class="property-optional"
+{{% /md %}}</dd><dt class="property-optional"
             title="Optional">
         <span id="enable_vtpm_python">
 <a href="#enable_vtpm_python" style="color: inherit; text-decoration: inherit;">enable_<wbr>vtpm</a>
@@ -4182,16 +3888,13 @@ Disabled by default.
     </dt>
     <dd>{{% md %}}Defines whether the instance has the vTPM enabled.
 Enabled by default.
-{{% /md %}}</dd>
-</dl>
+{{% /md %}}</dd></dl>
 {{% /choosable %}}
 
 <h4 id="instancevmimage">Instance<wbr>Vm<wbr>Image</h4>
 
 {{% choosable language csharp %}}
-<dl class="resources-properties">
-
-    <dt class="property-required"
+<dl class="resources-properties"><dt class="property-required"
             title="Required">
         <span id="project_csharp">
 <a href="#project_csharp" style="color: inherit; text-decoration: inherit;">Project</a>
@@ -4201,8 +3904,7 @@ Enabled by default.
     </dt>
     <dd>{{% md %}}The name of the Google Cloud project that this VM image belongs to.
 Format: projects/{project_id}
-{{% /md %}}</dd>
-    <dt class="property-optional"
+{{% /md %}}</dd><dt class="property-optional"
             title="Optional">
         <span id="imagefamily_csharp">
 <a href="#imagefamily_csharp" style="color: inherit; text-decoration: inherit;">Image<wbr>Family</a>
@@ -4211,8 +3913,7 @@ Format: projects/{project_id}
         <span class="property-type">string</span>
     </dt>
     <dd>{{% md %}}Use this VM image family to find the image; the newest image in this family will be used.
-{{% /md %}}</dd>
-    <dt class="property-optional"
+{{% /md %}}</dd><dt class="property-optional"
             title="Optional">
         <span id="imagename_csharp">
 <a href="#imagename_csharp" style="color: inherit; text-decoration: inherit;">Image<wbr>Name</a>
@@ -4221,14 +3922,11 @@ Format: projects/{project_id}
         <span class="property-type">string</span>
     </dt>
     <dd>{{% md %}}Use VM image name to find the image.
-{{% /md %}}</dd>
-</dl>
+{{% /md %}}</dd></dl>
 {{% /choosable %}}
 
 {{% choosable language go %}}
-<dl class="resources-properties">
-
-    <dt class="property-required"
+<dl class="resources-properties"><dt class="property-required"
             title="Required">
         <span id="project_go">
 <a href="#project_go" style="color: inherit; text-decoration: inherit;">Project</a>
@@ -4238,8 +3936,7 @@ Format: projects/{project_id}
     </dt>
     <dd>{{% md %}}The name of the Google Cloud project that this VM image belongs to.
 Format: projects/{project_id}
-{{% /md %}}</dd>
-    <dt class="property-optional"
+{{% /md %}}</dd><dt class="property-optional"
             title="Optional">
         <span id="imagefamily_go">
 <a href="#imagefamily_go" style="color: inherit; text-decoration: inherit;">Image<wbr>Family</a>
@@ -4248,8 +3945,7 @@ Format: projects/{project_id}
         <span class="property-type">string</span>
     </dt>
     <dd>{{% md %}}Use this VM image family to find the image; the newest image in this family will be used.
-{{% /md %}}</dd>
-    <dt class="property-optional"
+{{% /md %}}</dd><dt class="property-optional"
             title="Optional">
         <span id="imagename_go">
 <a href="#imagename_go" style="color: inherit; text-decoration: inherit;">Image<wbr>Name</a>
@@ -4258,14 +3954,11 @@ Format: projects/{project_id}
         <span class="property-type">string</span>
     </dt>
     <dd>{{% md %}}Use VM image name to find the image.
-{{% /md %}}</dd>
-</dl>
+{{% /md %}}</dd></dl>
 {{% /choosable %}}
 
 {{% choosable language nodejs %}}
-<dl class="resources-properties">
-
-    <dt class="property-required"
+<dl class="resources-properties"><dt class="property-required"
             title="Required">
         <span id="project_nodejs">
 <a href="#project_nodejs" style="color: inherit; text-decoration: inherit;">project</a>
@@ -4275,8 +3968,7 @@ Format: projects/{project_id}
     </dt>
     <dd>{{% md %}}The name of the Google Cloud project that this VM image belongs to.
 Format: projects/{project_id}
-{{% /md %}}</dd>
-    <dt class="property-optional"
+{{% /md %}}</dd><dt class="property-optional"
             title="Optional">
         <span id="imagefamily_nodejs">
 <a href="#imagefamily_nodejs" style="color: inherit; text-decoration: inherit;">image<wbr>Family</a>
@@ -4285,8 +3977,7 @@ Format: projects/{project_id}
         <span class="property-type">string</span>
     </dt>
     <dd>{{% md %}}Use this VM image family to find the image; the newest image in this family will be used.
-{{% /md %}}</dd>
-    <dt class="property-optional"
+{{% /md %}}</dd><dt class="property-optional"
             title="Optional">
         <span id="imagename_nodejs">
 <a href="#imagename_nodejs" style="color: inherit; text-decoration: inherit;">image<wbr>Name</a>
@@ -4295,14 +3986,11 @@ Format: projects/{project_id}
         <span class="property-type">string</span>
     </dt>
     <dd>{{% md %}}Use VM image name to find the image.
-{{% /md %}}</dd>
-</dl>
+{{% /md %}}</dd></dl>
 {{% /choosable %}}
 
 {{% choosable language python %}}
-<dl class="resources-properties">
-
-    <dt class="property-required"
+<dl class="resources-properties"><dt class="property-required"
             title="Required">
         <span id="project_python">
 <a href="#project_python" style="color: inherit; text-decoration: inherit;">project</a>
@@ -4312,8 +4000,7 @@ Format: projects/{project_id}
     </dt>
     <dd>{{% md %}}The name of the Google Cloud project that this VM image belongs to.
 Format: projects/{project_id}
-{{% /md %}}</dd>
-    <dt class="property-optional"
+{{% /md %}}</dd><dt class="property-optional"
             title="Optional">
         <span id="image_family_python">
 <a href="#image_family_python" style="color: inherit; text-decoration: inherit;">image_<wbr>family</a>
@@ -4322,8 +4009,7 @@ Format: projects/{project_id}
         <span class="property-type">str</span>
     </dt>
     <dd>{{% md %}}Use this VM image family to find the image; the newest image in this family will be used.
-{{% /md %}}</dd>
-    <dt class="property-optional"
+{{% /md %}}</dd><dt class="property-optional"
             title="Optional">
         <span id="image_name_python">
 <a href="#image_name_python" style="color: inherit; text-decoration: inherit;">image_<wbr>name</a>
@@ -4332,8 +4018,7 @@ Format: projects/{project_id}
         <span class="property-type">str</span>
     </dt>
     <dd>{{% md %}}Use VM image name to find the image.
-{{% /md %}}</dd>
-</dl>
+{{% /md %}}</dd></dl>
 {{% /choosable %}}
 ## Import
 
@@ -4362,6 +4047,6 @@ Instance can be imported using any of these accepted formats
 	<dt>License</dt>
 	<dd>Apache-2.0</dd>
 	<dt>Notes</dt>
-	<dd>This Pulumi package is based on the [`google-beta` Terraform Provider](https://github.com/hashicorp/terraform-provider-google-beta).</dd>
+	<dd>{{% md %}}This Pulumi package is based on the [`google-beta` Terraform Provider](https://github.com/hashicorp/terraform-provider-google-beta).{{% /md %}}</dd>
 </dl>
 

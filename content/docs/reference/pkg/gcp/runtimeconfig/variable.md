@@ -39,9 +39,7 @@ or the
 
 {{% choosable language nodejs %}}
 
-<dl class="resources-properties">
-  
-    <dt
+<dl class="resources-properties"><dt
         class="property-required" title="Required">
         <span>name</span>
         <span class="property-indicator"></span>
@@ -49,9 +47,7 @@ or the
     </dt>
     <dd>
       The unique name of the resource.
-    </dd>
-  
-    <dt
+    </dd><dt
         class="property-required" title="Required">
         <span>args</span>
         <span class="property-indicator"></span>
@@ -59,9 +55,7 @@ or the
     </dt>
     <dd>
       The arguments to resource properties.
-    </dd>
-  
-    <dt
+    </dd><dt
         class="property-optional" title="Optional">
         <span>opts</span>
         <span class="property-indicator"></span>
@@ -69,10 +63,7 @@ or the
     </dt>
     <dd>
       Bag of options to control resource&#39;s behavior.
-    </dd>
-  
-
-</dl>
+    </dd></dl>
 
 {{% /choosable %}}
 
@@ -98,9 +89,7 @@ or the
 
 {{% choosable language go %}}
 
-<dl class="resources-properties">
-  
-    <dt
+<dl class="resources-properties"><dt
         class="property-optional" title="Optional">
         <span>ctx</span>
         <span class="property-indicator"></span>
@@ -108,9 +97,7 @@ or the
     </dt>
     <dd>
       Context object for the current deployment.
-    </dd>
-  
-    <dt
+    </dd><dt
         class="property-required" title="Required">
         <span>name</span>
         <span class="property-indicator"></span>
@@ -118,9 +105,7 @@ or the
     </dt>
     <dd>
       The unique name of the resource.
-    </dd>
-  
-    <dt
+    </dd><dt
         class="property-required" title="Required">
         <span>args</span>
         <span class="property-indicator"></span>
@@ -128,9 +113,7 @@ or the
     </dt>
     <dd>
       The arguments to resource properties.
-    </dd>
-  
-    <dt
+    </dd><dt
         class="property-optional" title="Optional">
         <span>opts</span>
         <span class="property-indicator"></span>
@@ -138,18 +121,13 @@ or the
     </dt>
     <dd>
       Bag of options to control resource&#39;s behavior.
-    </dd>
-  
-
-</dl>
+    </dd></dl>
 
 {{% /choosable %}}
 
 {{% choosable language csharp %}}
 
-<dl class="resources-properties">
-  
-    <dt
+<dl class="resources-properties"><dt
         class="property-required" title="Required">
         <span>name</span>
         <span class="property-indicator"></span>
@@ -157,9 +135,7 @@ or the
     </dt>
     <dd>
       The unique name of the resource.
-    </dd>
-  
-    <dt
+    </dd><dt
         class="property-required" title="Required">
         <span>args</span>
         <span class="property-indicator"></span>
@@ -167,9 +143,7 @@ or the
     </dt>
     <dd>
       The arguments to resource properties.
-    </dd>
-  
-    <dt
+    </dd><dt
         class="property-optional" title="Optional">
         <span>opts</span>
         <span class="property-indicator"></span>
@@ -177,10 +151,7 @@ or the
     </dt>
     <dd>
       Bag of options to control resource&#39;s behavior.
-    </dd>
-  
-
-</dl>
+    </dd></dl>
 
 {{% /choosable %}}
 
@@ -195,9 +166,7 @@ The Variable resource accepts the following [input]({{< relref "/docs/intro/conc
 
 
 {{% choosable language csharp %}}
-<dl class="resources-properties">
-
-    <dt class="property-required"
+<dl class="resources-properties"><dt class="property-required"
             title="Required">
         <span id="parent_csharp">
 <a href="#parent_csharp" style="color: inherit; text-decoration: inherit;">Parent</a>
@@ -207,8 +176,7 @@ The Variable resource accepts the following [input]({{< relref "/docs/intro/conc
     </dt>
     <dd>{{% md %}}The name of the RuntimeConfig resource containing this
 variable.
-{{% /md %}}</dd>
-    <dt class="property-optional"
+{{% /md %}}</dd><dt class="property-optional"
             title="Optional">
         <span id="name_csharp">
 <a href="#name_csharp" style="color: inherit; text-decoration: inherit;">Name</a>
@@ -218,8 +186,7 @@ variable.
     </dt>
     <dd>{{% md %}}The name of the variable to manage. Note that variable
 names can be hierarchical using slashes (e.g. "prod-variables/hostname").
-{{% /md %}}</dd>
-    <dt class="property-optional"
+{{% /md %}}</dd><dt class="property-optional"
             title="Optional">
         <span id="project_csharp">
 <a href="#project_csharp" style="color: inherit; text-decoration: inherit;">Project</a>
@@ -229,8 +196,7 @@ names can be hierarchical using slashes (e.g. "prod-variables/hostname").
     </dt>
     <dd>{{% md %}}The ID of the project in which the resource belongs. If it
 is not provided, the provider project is used.
-{{% /md %}}</dd>
-    <dt class="property-optional"
+{{% /md %}}</dd><dt class="property-optional"
             title="Optional">
         <span id="text_csharp">
 <a href="#text_csharp" style="color: inherit; text-decoration: inherit;">Text</a>
@@ -242,8 +208,7 @@ is not provided, the provider project is used.
 Exactly one of `text` or `variable` must be specified. If `text` is specified,
 it must be a valid UTF-8 string and less than 4096 bytes in length. If `value`
 is specified, it must be base64 encoded and less than 4096 bytes in length.
-{{% /md %}}</dd>
-    <dt class="property-optional"
+{{% /md %}}</dd><dt class="property-optional"
             title="Optional">
         <span id="value_csharp">
 <a href="#value_csharp" style="color: inherit; text-decoration: inherit;">Value</a>
@@ -251,14 +216,11 @@ is specified, it must be base64 encoded and less than 4096 bytes in length.
         <span class="property-indicator"></span>
         <span class="property-type">string</span>
     </dt>
-    <dd>{{% md %}}{{% /md %}}</dd>
-</dl>
+    <dd>{{% md %}}{{% /md %}}</dd></dl>
 {{% /choosable %}}
 
 {{% choosable language go %}}
-<dl class="resources-properties">
-
-    <dt class="property-required"
+<dl class="resources-properties"><dt class="property-required"
             title="Required">
         <span id="parent_go">
 <a href="#parent_go" style="color: inherit; text-decoration: inherit;">Parent</a>
@@ -268,8 +230,7 @@ is specified, it must be base64 encoded and less than 4096 bytes in length.
     </dt>
     <dd>{{% md %}}The name of the RuntimeConfig resource containing this
 variable.
-{{% /md %}}</dd>
-    <dt class="property-optional"
+{{% /md %}}</dd><dt class="property-optional"
             title="Optional">
         <span id="name_go">
 <a href="#name_go" style="color: inherit; text-decoration: inherit;">Name</a>
@@ -279,8 +240,7 @@ variable.
     </dt>
     <dd>{{% md %}}The name of the variable to manage. Note that variable
 names can be hierarchical using slashes (e.g. "prod-variables/hostname").
-{{% /md %}}</dd>
-    <dt class="property-optional"
+{{% /md %}}</dd><dt class="property-optional"
             title="Optional">
         <span id="project_go">
 <a href="#project_go" style="color: inherit; text-decoration: inherit;">Project</a>
@@ -290,8 +250,7 @@ names can be hierarchical using slashes (e.g. "prod-variables/hostname").
     </dt>
     <dd>{{% md %}}The ID of the project in which the resource belongs. If it
 is not provided, the provider project is used.
-{{% /md %}}</dd>
-    <dt class="property-optional"
+{{% /md %}}</dd><dt class="property-optional"
             title="Optional">
         <span id="text_go">
 <a href="#text_go" style="color: inherit; text-decoration: inherit;">Text</a>
@@ -303,8 +262,7 @@ is not provided, the provider project is used.
 Exactly one of `text` or `variable` must be specified. If `text` is specified,
 it must be a valid UTF-8 string and less than 4096 bytes in length. If `value`
 is specified, it must be base64 encoded and less than 4096 bytes in length.
-{{% /md %}}</dd>
-    <dt class="property-optional"
+{{% /md %}}</dd><dt class="property-optional"
             title="Optional">
         <span id="value_go">
 <a href="#value_go" style="color: inherit; text-decoration: inherit;">Value</a>
@@ -312,14 +270,11 @@ is specified, it must be base64 encoded and less than 4096 bytes in length.
         <span class="property-indicator"></span>
         <span class="property-type">string</span>
     </dt>
-    <dd>{{% md %}}{{% /md %}}</dd>
-</dl>
+    <dd>{{% md %}}{{% /md %}}</dd></dl>
 {{% /choosable %}}
 
 {{% choosable language nodejs %}}
-<dl class="resources-properties">
-
-    <dt class="property-required"
+<dl class="resources-properties"><dt class="property-required"
             title="Required">
         <span id="parent_nodejs">
 <a href="#parent_nodejs" style="color: inherit; text-decoration: inherit;">parent</a>
@@ -329,8 +284,7 @@ is specified, it must be base64 encoded and less than 4096 bytes in length.
     </dt>
     <dd>{{% md %}}The name of the RuntimeConfig resource containing this
 variable.
-{{% /md %}}</dd>
-    <dt class="property-optional"
+{{% /md %}}</dd><dt class="property-optional"
             title="Optional">
         <span id="name_nodejs">
 <a href="#name_nodejs" style="color: inherit; text-decoration: inherit;">name</a>
@@ -340,8 +294,7 @@ variable.
     </dt>
     <dd>{{% md %}}The name of the variable to manage. Note that variable
 names can be hierarchical using slashes (e.g. "prod-variables/hostname").
-{{% /md %}}</dd>
-    <dt class="property-optional"
+{{% /md %}}</dd><dt class="property-optional"
             title="Optional">
         <span id="project_nodejs">
 <a href="#project_nodejs" style="color: inherit; text-decoration: inherit;">project</a>
@@ -351,8 +304,7 @@ names can be hierarchical using slashes (e.g. "prod-variables/hostname").
     </dt>
     <dd>{{% md %}}The ID of the project in which the resource belongs. If it
 is not provided, the provider project is used.
-{{% /md %}}</dd>
-    <dt class="property-optional"
+{{% /md %}}</dd><dt class="property-optional"
             title="Optional">
         <span id="text_nodejs">
 <a href="#text_nodejs" style="color: inherit; text-decoration: inherit;">text</a>
@@ -364,8 +316,7 @@ is not provided, the provider project is used.
 Exactly one of `text` or `variable` must be specified. If `text` is specified,
 it must be a valid UTF-8 string and less than 4096 bytes in length. If `value`
 is specified, it must be base64 encoded and less than 4096 bytes in length.
-{{% /md %}}</dd>
-    <dt class="property-optional"
+{{% /md %}}</dd><dt class="property-optional"
             title="Optional">
         <span id="value_nodejs">
 <a href="#value_nodejs" style="color: inherit; text-decoration: inherit;">value</a>
@@ -373,14 +324,11 @@ is specified, it must be base64 encoded and less than 4096 bytes in length.
         <span class="property-indicator"></span>
         <span class="property-type">string</span>
     </dt>
-    <dd>{{% md %}}{{% /md %}}</dd>
-</dl>
+    <dd>{{% md %}}{{% /md %}}</dd></dl>
 {{% /choosable %}}
 
 {{% choosable language python %}}
-<dl class="resources-properties">
-
-    <dt class="property-required"
+<dl class="resources-properties"><dt class="property-required"
             title="Required">
         <span id="parent_python">
 <a href="#parent_python" style="color: inherit; text-decoration: inherit;">parent</a>
@@ -390,8 +338,7 @@ is specified, it must be base64 encoded and less than 4096 bytes in length.
     </dt>
     <dd>{{% md %}}The name of the RuntimeConfig resource containing this
 variable.
-{{% /md %}}</dd>
-    <dt class="property-optional"
+{{% /md %}}</dd><dt class="property-optional"
             title="Optional">
         <span id="name_python">
 <a href="#name_python" style="color: inherit; text-decoration: inherit;">name</a>
@@ -401,8 +348,7 @@ variable.
     </dt>
     <dd>{{% md %}}The name of the variable to manage. Note that variable
 names can be hierarchical using slashes (e.g. "prod-variables/hostname").
-{{% /md %}}</dd>
-    <dt class="property-optional"
+{{% /md %}}</dd><dt class="property-optional"
             title="Optional">
         <span id="project_python">
 <a href="#project_python" style="color: inherit; text-decoration: inherit;">project</a>
@@ -412,8 +358,7 @@ names can be hierarchical using slashes (e.g. "prod-variables/hostname").
     </dt>
     <dd>{{% md %}}The ID of the project in which the resource belongs. If it
 is not provided, the provider project is used.
-{{% /md %}}</dd>
-    <dt class="property-optional"
+{{% /md %}}</dd><dt class="property-optional"
             title="Optional">
         <span id="text_python">
 <a href="#text_python" style="color: inherit; text-decoration: inherit;">text</a>
@@ -425,8 +370,7 @@ is not provided, the provider project is used.
 Exactly one of `text` or `variable` must be specified. If `text` is specified,
 it must be a valid UTF-8 string and less than 4096 bytes in length. If `value`
 is specified, it must be base64 encoded and less than 4096 bytes in length.
-{{% /md %}}</dd>
-    <dt class="property-optional"
+{{% /md %}}</dd><dt class="property-optional"
             title="Optional">
         <span id="value_python">
 <a href="#value_python" style="color: inherit; text-decoration: inherit;">value</a>
@@ -434,8 +378,7 @@ is specified, it must be base64 encoded and less than 4096 bytes in length.
         <span class="property-indicator"></span>
         <span class="property-type">str</span>
     </dt>
-    <dd>{{% md %}}{{% /md %}}</dd>
-</dl>
+    <dd>{{% md %}}{{% /md %}}</dd></dl>
 {{% /choosable %}}
 
 
@@ -446,9 +389,7 @@ All [input](#inputs) properties are implicitly available as output properties. A
 
 
 {{% choosable language csharp %}}
-<dl class="resources-properties">
-
-    <dt class="property-"
+<dl class="resources-properties"><dt class="property-"
             title="">
         <span id="id_csharp">
 <a href="#id_csharp" style="color: inherit; text-decoration: inherit;">Id</a>
@@ -456,8 +397,7 @@ All [input](#inputs) properties are implicitly available as output properties. A
         <span class="property-indicator"></span>
         <span class="property-type">string</span>
     </dt>
-    <dd>{{% md %}}The provider-assigned unique ID for this managed resource.{{% /md %}}</dd>
-    <dt class="property-"
+    <dd>{{% md %}}The provider-assigned unique ID for this managed resource.{{% /md %}}</dd><dt class="property-"
             title="">
         <span id="updatetime_csharp">
 <a href="#updatetime_csharp" style="color: inherit; text-decoration: inherit;">Update<wbr>Time</a>
@@ -468,14 +408,11 @@ All [input](#inputs) properties are implicitly available as output properties. A
     <dd>{{% md %}}(Computed) The timestamp in RFC3339 UTC "Zulu" format,
 accurate to nanoseconds, representing when the variable was last updated.
 Example: "2016-10-09T12:33:37.578138407Z".
-{{% /md %}}</dd>
-</dl>
+{{% /md %}}</dd></dl>
 {{% /choosable %}}
 
 {{% choosable language go %}}
-<dl class="resources-properties">
-
-    <dt class="property-"
+<dl class="resources-properties"><dt class="property-"
             title="">
         <span id="id_go">
 <a href="#id_go" style="color: inherit; text-decoration: inherit;">Id</a>
@@ -483,8 +420,7 @@ Example: "2016-10-09T12:33:37.578138407Z".
         <span class="property-indicator"></span>
         <span class="property-type">string</span>
     </dt>
-    <dd>{{% md %}}The provider-assigned unique ID for this managed resource.{{% /md %}}</dd>
-    <dt class="property-"
+    <dd>{{% md %}}The provider-assigned unique ID for this managed resource.{{% /md %}}</dd><dt class="property-"
             title="">
         <span id="updatetime_go">
 <a href="#updatetime_go" style="color: inherit; text-decoration: inherit;">Update<wbr>Time</a>
@@ -495,14 +431,11 @@ Example: "2016-10-09T12:33:37.578138407Z".
     <dd>{{% md %}}(Computed) The timestamp in RFC3339 UTC "Zulu" format,
 accurate to nanoseconds, representing when the variable was last updated.
 Example: "2016-10-09T12:33:37.578138407Z".
-{{% /md %}}</dd>
-</dl>
+{{% /md %}}</dd></dl>
 {{% /choosable %}}
 
 {{% choosable language nodejs %}}
-<dl class="resources-properties">
-
-    <dt class="property-"
+<dl class="resources-properties"><dt class="property-"
             title="">
         <span id="id_nodejs">
 <a href="#id_nodejs" style="color: inherit; text-decoration: inherit;">id</a>
@@ -510,8 +443,7 @@ Example: "2016-10-09T12:33:37.578138407Z".
         <span class="property-indicator"></span>
         <span class="property-type">string</span>
     </dt>
-    <dd>{{% md %}}The provider-assigned unique ID for this managed resource.{{% /md %}}</dd>
-    <dt class="property-"
+    <dd>{{% md %}}The provider-assigned unique ID for this managed resource.{{% /md %}}</dd><dt class="property-"
             title="">
         <span id="updatetime_nodejs">
 <a href="#updatetime_nodejs" style="color: inherit; text-decoration: inherit;">update<wbr>Time</a>
@@ -522,14 +454,11 @@ Example: "2016-10-09T12:33:37.578138407Z".
     <dd>{{% md %}}(Computed) The timestamp in RFC3339 UTC "Zulu" format,
 accurate to nanoseconds, representing when the variable was last updated.
 Example: "2016-10-09T12:33:37.578138407Z".
-{{% /md %}}</dd>
-</dl>
+{{% /md %}}</dd></dl>
 {{% /choosable %}}
 
 {{% choosable language python %}}
-<dl class="resources-properties">
-
-    <dt class="property-"
+<dl class="resources-properties"><dt class="property-"
             title="">
         <span id="id_python">
 <a href="#id_python" style="color: inherit; text-decoration: inherit;">id</a>
@@ -537,8 +466,7 @@ Example: "2016-10-09T12:33:37.578138407Z".
         <span class="property-indicator"></span>
         <span class="property-type">str</span>
     </dt>
-    <dd>{{% md %}}The provider-assigned unique ID for this managed resource.{{% /md %}}</dd>
-    <dt class="property-"
+    <dd>{{% md %}}The provider-assigned unique ID for this managed resource.{{% /md %}}</dd><dt class="property-"
             title="">
         <span id="update_time_python">
 <a href="#update_time_python" style="color: inherit; text-decoration: inherit;">update_<wbr>time</a>
@@ -549,8 +477,7 @@ Example: "2016-10-09T12:33:37.578138407Z".
     <dd>{{% md %}}(Computed) The timestamp in RFC3339 UTC "Zulu" format,
 accurate to nanoseconds, representing when the variable was last updated.
 Example: "2016-10-09T12:33:37.578138407Z".
-{{% /md %}}</dd>
-</dl>
+{{% /md %}}</dd></dl>
 {{% /choosable %}}
 
 
@@ -677,9 +604,7 @@ The following state arguments are supported:
 
 
 {{% choosable language csharp %}}
-<dl class="resources-properties">
-
-    <dt class="property-optional"
+<dl class="resources-properties"><dt class="property-optional"
             title="Optional">
         <span id="state_name_csharp">
 <a href="#state_name_csharp" style="color: inherit; text-decoration: inherit;">Name</a>
@@ -689,8 +614,7 @@ The following state arguments are supported:
     </dt>
     <dd>{{% md %}}The name of the variable to manage. Note that variable
 names can be hierarchical using slashes (e.g. "prod-variables/hostname").
-{{% /md %}}</dd>
-    <dt class="property-optional"
+{{% /md %}}</dd><dt class="property-optional"
             title="Optional">
         <span id="state_parent_csharp">
 <a href="#state_parent_csharp" style="color: inherit; text-decoration: inherit;">Parent</a>
@@ -700,8 +624,7 @@ names can be hierarchical using slashes (e.g. "prod-variables/hostname").
     </dt>
     <dd>{{% md %}}The name of the RuntimeConfig resource containing this
 variable.
-{{% /md %}}</dd>
-    <dt class="property-optional"
+{{% /md %}}</dd><dt class="property-optional"
             title="Optional">
         <span id="state_project_csharp">
 <a href="#state_project_csharp" style="color: inherit; text-decoration: inherit;">Project</a>
@@ -711,8 +634,7 @@ variable.
     </dt>
     <dd>{{% md %}}The ID of the project in which the resource belongs. If it
 is not provided, the provider project is used.
-{{% /md %}}</dd>
-    <dt class="property-optional"
+{{% /md %}}</dd><dt class="property-optional"
             title="Optional">
         <span id="state_text_csharp">
 <a href="#state_text_csharp" style="color: inherit; text-decoration: inherit;">Text</a>
@@ -724,8 +646,7 @@ is not provided, the provider project is used.
 Exactly one of `text` or `variable` must be specified. If `text` is specified,
 it must be a valid UTF-8 string and less than 4096 bytes in length. If `value`
 is specified, it must be base64 encoded and less than 4096 bytes in length.
-{{% /md %}}</dd>
-    <dt class="property-optional"
+{{% /md %}}</dd><dt class="property-optional"
             title="Optional">
         <span id="state_updatetime_csharp">
 <a href="#state_updatetime_csharp" style="color: inherit; text-decoration: inherit;">Update<wbr>Time</a>
@@ -736,8 +657,7 @@ is specified, it must be base64 encoded and less than 4096 bytes in length.
     <dd>{{% md %}}(Computed) The timestamp in RFC3339 UTC "Zulu" format,
 accurate to nanoseconds, representing when the variable was last updated.
 Example: "2016-10-09T12:33:37.578138407Z".
-{{% /md %}}</dd>
-    <dt class="property-optional"
+{{% /md %}}</dd><dt class="property-optional"
             title="Optional">
         <span id="state_value_csharp">
 <a href="#state_value_csharp" style="color: inherit; text-decoration: inherit;">Value</a>
@@ -745,14 +665,11 @@ Example: "2016-10-09T12:33:37.578138407Z".
         <span class="property-indicator"></span>
         <span class="property-type">string</span>
     </dt>
-    <dd>{{% md %}}{{% /md %}}</dd>
-</dl>
+    <dd>{{% md %}}{{% /md %}}</dd></dl>
 {{% /choosable %}}
 
 {{% choosable language go %}}
-<dl class="resources-properties">
-
-    <dt class="property-optional"
+<dl class="resources-properties"><dt class="property-optional"
             title="Optional">
         <span id="state_name_go">
 <a href="#state_name_go" style="color: inherit; text-decoration: inherit;">Name</a>
@@ -762,8 +679,7 @@ Example: "2016-10-09T12:33:37.578138407Z".
     </dt>
     <dd>{{% md %}}The name of the variable to manage. Note that variable
 names can be hierarchical using slashes (e.g. "prod-variables/hostname").
-{{% /md %}}</dd>
-    <dt class="property-optional"
+{{% /md %}}</dd><dt class="property-optional"
             title="Optional">
         <span id="state_parent_go">
 <a href="#state_parent_go" style="color: inherit; text-decoration: inherit;">Parent</a>
@@ -773,8 +689,7 @@ names can be hierarchical using slashes (e.g. "prod-variables/hostname").
     </dt>
     <dd>{{% md %}}The name of the RuntimeConfig resource containing this
 variable.
-{{% /md %}}</dd>
-    <dt class="property-optional"
+{{% /md %}}</dd><dt class="property-optional"
             title="Optional">
         <span id="state_project_go">
 <a href="#state_project_go" style="color: inherit; text-decoration: inherit;">Project</a>
@@ -784,8 +699,7 @@ variable.
     </dt>
     <dd>{{% md %}}The ID of the project in which the resource belongs. If it
 is not provided, the provider project is used.
-{{% /md %}}</dd>
-    <dt class="property-optional"
+{{% /md %}}</dd><dt class="property-optional"
             title="Optional">
         <span id="state_text_go">
 <a href="#state_text_go" style="color: inherit; text-decoration: inherit;">Text</a>
@@ -797,8 +711,7 @@ is not provided, the provider project is used.
 Exactly one of `text` or `variable` must be specified. If `text` is specified,
 it must be a valid UTF-8 string and less than 4096 bytes in length. If `value`
 is specified, it must be base64 encoded and less than 4096 bytes in length.
-{{% /md %}}</dd>
-    <dt class="property-optional"
+{{% /md %}}</dd><dt class="property-optional"
             title="Optional">
         <span id="state_updatetime_go">
 <a href="#state_updatetime_go" style="color: inherit; text-decoration: inherit;">Update<wbr>Time</a>
@@ -809,8 +722,7 @@ is specified, it must be base64 encoded and less than 4096 bytes in length.
     <dd>{{% md %}}(Computed) The timestamp in RFC3339 UTC "Zulu" format,
 accurate to nanoseconds, representing when the variable was last updated.
 Example: "2016-10-09T12:33:37.578138407Z".
-{{% /md %}}</dd>
-    <dt class="property-optional"
+{{% /md %}}</dd><dt class="property-optional"
             title="Optional">
         <span id="state_value_go">
 <a href="#state_value_go" style="color: inherit; text-decoration: inherit;">Value</a>
@@ -818,14 +730,11 @@ Example: "2016-10-09T12:33:37.578138407Z".
         <span class="property-indicator"></span>
         <span class="property-type">string</span>
     </dt>
-    <dd>{{% md %}}{{% /md %}}</dd>
-</dl>
+    <dd>{{% md %}}{{% /md %}}</dd></dl>
 {{% /choosable %}}
 
 {{% choosable language nodejs %}}
-<dl class="resources-properties">
-
-    <dt class="property-optional"
+<dl class="resources-properties"><dt class="property-optional"
             title="Optional">
         <span id="state_name_nodejs">
 <a href="#state_name_nodejs" style="color: inherit; text-decoration: inherit;">name</a>
@@ -835,8 +744,7 @@ Example: "2016-10-09T12:33:37.578138407Z".
     </dt>
     <dd>{{% md %}}The name of the variable to manage. Note that variable
 names can be hierarchical using slashes (e.g. "prod-variables/hostname").
-{{% /md %}}</dd>
-    <dt class="property-optional"
+{{% /md %}}</dd><dt class="property-optional"
             title="Optional">
         <span id="state_parent_nodejs">
 <a href="#state_parent_nodejs" style="color: inherit; text-decoration: inherit;">parent</a>
@@ -846,8 +754,7 @@ names can be hierarchical using slashes (e.g. "prod-variables/hostname").
     </dt>
     <dd>{{% md %}}The name of the RuntimeConfig resource containing this
 variable.
-{{% /md %}}</dd>
-    <dt class="property-optional"
+{{% /md %}}</dd><dt class="property-optional"
             title="Optional">
         <span id="state_project_nodejs">
 <a href="#state_project_nodejs" style="color: inherit; text-decoration: inherit;">project</a>
@@ -857,8 +764,7 @@ variable.
     </dt>
     <dd>{{% md %}}The ID of the project in which the resource belongs. If it
 is not provided, the provider project is used.
-{{% /md %}}</dd>
-    <dt class="property-optional"
+{{% /md %}}</dd><dt class="property-optional"
             title="Optional">
         <span id="state_text_nodejs">
 <a href="#state_text_nodejs" style="color: inherit; text-decoration: inherit;">text</a>
@@ -870,8 +776,7 @@ is not provided, the provider project is used.
 Exactly one of `text` or `variable` must be specified. If `text` is specified,
 it must be a valid UTF-8 string and less than 4096 bytes in length. If `value`
 is specified, it must be base64 encoded and less than 4096 bytes in length.
-{{% /md %}}</dd>
-    <dt class="property-optional"
+{{% /md %}}</dd><dt class="property-optional"
             title="Optional">
         <span id="state_updatetime_nodejs">
 <a href="#state_updatetime_nodejs" style="color: inherit; text-decoration: inherit;">update<wbr>Time</a>
@@ -882,8 +787,7 @@ is specified, it must be base64 encoded and less than 4096 bytes in length.
     <dd>{{% md %}}(Computed) The timestamp in RFC3339 UTC "Zulu" format,
 accurate to nanoseconds, representing when the variable was last updated.
 Example: "2016-10-09T12:33:37.578138407Z".
-{{% /md %}}</dd>
-    <dt class="property-optional"
+{{% /md %}}</dd><dt class="property-optional"
             title="Optional">
         <span id="state_value_nodejs">
 <a href="#state_value_nodejs" style="color: inherit; text-decoration: inherit;">value</a>
@@ -891,14 +795,11 @@ Example: "2016-10-09T12:33:37.578138407Z".
         <span class="property-indicator"></span>
         <span class="property-type">string</span>
     </dt>
-    <dd>{{% md %}}{{% /md %}}</dd>
-</dl>
+    <dd>{{% md %}}{{% /md %}}</dd></dl>
 {{% /choosable %}}
 
 {{% choosable language python %}}
-<dl class="resources-properties">
-
-    <dt class="property-optional"
+<dl class="resources-properties"><dt class="property-optional"
             title="Optional">
         <span id="state_name_python">
 <a href="#state_name_python" style="color: inherit; text-decoration: inherit;">name</a>
@@ -908,8 +809,7 @@ Example: "2016-10-09T12:33:37.578138407Z".
     </dt>
     <dd>{{% md %}}The name of the variable to manage. Note that variable
 names can be hierarchical using slashes (e.g. "prod-variables/hostname").
-{{% /md %}}</dd>
-    <dt class="property-optional"
+{{% /md %}}</dd><dt class="property-optional"
             title="Optional">
         <span id="state_parent_python">
 <a href="#state_parent_python" style="color: inherit; text-decoration: inherit;">parent</a>
@@ -919,8 +819,7 @@ names can be hierarchical using slashes (e.g. "prod-variables/hostname").
     </dt>
     <dd>{{% md %}}The name of the RuntimeConfig resource containing this
 variable.
-{{% /md %}}</dd>
-    <dt class="property-optional"
+{{% /md %}}</dd><dt class="property-optional"
             title="Optional">
         <span id="state_project_python">
 <a href="#state_project_python" style="color: inherit; text-decoration: inherit;">project</a>
@@ -930,8 +829,7 @@ variable.
     </dt>
     <dd>{{% md %}}The ID of the project in which the resource belongs. If it
 is not provided, the provider project is used.
-{{% /md %}}</dd>
-    <dt class="property-optional"
+{{% /md %}}</dd><dt class="property-optional"
             title="Optional">
         <span id="state_text_python">
 <a href="#state_text_python" style="color: inherit; text-decoration: inherit;">text</a>
@@ -943,8 +841,7 @@ is not provided, the provider project is used.
 Exactly one of `text` or `variable` must be specified. If `text` is specified,
 it must be a valid UTF-8 string and less than 4096 bytes in length. If `value`
 is specified, it must be base64 encoded and less than 4096 bytes in length.
-{{% /md %}}</dd>
-    <dt class="property-optional"
+{{% /md %}}</dd><dt class="property-optional"
             title="Optional">
         <span id="state_update_time_python">
 <a href="#state_update_time_python" style="color: inherit; text-decoration: inherit;">update_<wbr>time</a>
@@ -955,8 +852,7 @@ is specified, it must be base64 encoded and less than 4096 bytes in length.
     <dd>{{% md %}}(Computed) The timestamp in RFC3339 UTC "Zulu" format,
 accurate to nanoseconds, representing when the variable was last updated.
 Example: "2016-10-09T12:33:37.578138407Z".
-{{% /md %}}</dd>
-    <dt class="property-optional"
+{{% /md %}}</dd><dt class="property-optional"
             title="Optional">
         <span id="state_value_python">
 <a href="#state_value_python" style="color: inherit; text-decoration: inherit;">value</a>
@@ -964,8 +860,7 @@ Example: "2016-10-09T12:33:37.578138407Z".
         <span class="property-indicator"></span>
         <span class="property-type">str</span>
     </dt>
-    <dd>{{% md %}}{{% /md %}}</dd>
-</dl>
+    <dd>{{% md %}}{{% /md %}}</dd></dl>
 {{% /choosable %}}
 
 
@@ -997,6 +892,6 @@ Runtime Config Variables can be imported using the `name` or full variable name,
 	<dt>License</dt>
 	<dd>Apache-2.0</dd>
 	<dt>Notes</dt>
-	<dd>This Pulumi package is based on the [`google-beta` Terraform Provider](https://github.com/hashicorp/terraform-provider-google-beta).</dd>
+	<dd>{{% md %}}This Pulumi package is based on the [`google-beta` Terraform Provider](https://github.com/hashicorp/terraform-provider-google-beta).{{% /md %}}</dd>
 </dl>
 

@@ -51,9 +51,7 @@ The following arguments are supported:
 
 
 {{% choosable language csharp %}}
-<dl class="resources-properties">
-
-    <dt class="property-required"
+<dl class="resources-properties"><dt class="property-required"
             title="Required">
         <span id="resourcegroupname_csharp">
 <a href="#resourcegroupname_csharp" style="color: inherit; text-decoration: inherit;">Resource<wbr>Group<wbr>Name</a>
@@ -61,8 +59,7 @@ The following arguments are supported:
         <span class="property-indicator"></span>
         <span class="property-type">string</span>
     </dt>
-    <dd>{{% md %}}The name of the resource group. The name is case insensitive.{{% /md %}}</dd>
-    <dt class="property-required"
+    <dd>{{% md %}}The name of the resource group. The name is case insensitive.{{% /md %}}</dd><dt class="property-required"
             title="Required">
         <span id="resourcename_csharp">
 <a href="#resourcename_csharp" style="color: inherit; text-decoration: inherit;">Resource<wbr>Name</a>
@@ -70,14 +67,11 @@ The following arguments are supported:
         <span class="property-indicator"></span>
         <span class="property-type">string</span>
     </dt>
-    <dd>{{% md %}}The name of the Application Insights component resource.{{% /md %}}</dd>
-</dl>
+    <dd>{{% md %}}The name of the Application Insights component resource.{{% /md %}}</dd></dl>
 {{% /choosable %}}
 
 {{% choosable language go %}}
-<dl class="resources-properties">
-
-    <dt class="property-required"
+<dl class="resources-properties"><dt class="property-required"
             title="Required">
         <span id="resourcegroupname_go">
 <a href="#resourcegroupname_go" style="color: inherit; text-decoration: inherit;">Resource<wbr>Group<wbr>Name</a>
@@ -85,8 +79,7 @@ The following arguments are supported:
         <span class="property-indicator"></span>
         <span class="property-type">string</span>
     </dt>
-    <dd>{{% md %}}The name of the resource group. The name is case insensitive.{{% /md %}}</dd>
-    <dt class="property-required"
+    <dd>{{% md %}}The name of the resource group. The name is case insensitive.{{% /md %}}</dd><dt class="property-required"
             title="Required">
         <span id="resourcename_go">
 <a href="#resourcename_go" style="color: inherit; text-decoration: inherit;">Resource<wbr>Name</a>
@@ -94,14 +87,11 @@ The following arguments are supported:
         <span class="property-indicator"></span>
         <span class="property-type">string</span>
     </dt>
-    <dd>{{% md %}}The name of the Application Insights component resource.{{% /md %}}</dd>
-</dl>
+    <dd>{{% md %}}The name of the Application Insights component resource.{{% /md %}}</dd></dl>
 {{% /choosable %}}
 
 {{% choosable language nodejs %}}
-<dl class="resources-properties">
-
-    <dt class="property-required"
+<dl class="resources-properties"><dt class="property-required"
             title="Required">
         <span id="resourcegroupname_nodejs">
 <a href="#resourcegroupname_nodejs" style="color: inherit; text-decoration: inherit;">resource<wbr>Group<wbr>Name</a>
@@ -109,8 +99,7 @@ The following arguments are supported:
         <span class="property-indicator"></span>
         <span class="property-type">string</span>
     </dt>
-    <dd>{{% md %}}The name of the resource group. The name is case insensitive.{{% /md %}}</dd>
-    <dt class="property-required"
+    <dd>{{% md %}}The name of the resource group. The name is case insensitive.{{% /md %}}</dd><dt class="property-required"
             title="Required">
         <span id="resourcename_nodejs">
 <a href="#resourcename_nodejs" style="color: inherit; text-decoration: inherit;">resource<wbr>Name</a>
@@ -118,14 +107,11 @@ The following arguments are supported:
         <span class="property-indicator"></span>
         <span class="property-type">string</span>
     </dt>
-    <dd>{{% md %}}The name of the Application Insights component resource.{{% /md %}}</dd>
-</dl>
+    <dd>{{% md %}}The name of the Application Insights component resource.{{% /md %}}</dd></dl>
 {{% /choosable %}}
 
 {{% choosable language python %}}
-<dl class="resources-properties">
-
-    <dt class="property-required"
+<dl class="resources-properties"><dt class="property-required"
             title="Required">
         <span id="resource_group_name_python">
 <a href="#resource_group_name_python" style="color: inherit; text-decoration: inherit;">resource_<wbr>group_<wbr>name</a>
@@ -133,8 +119,7 @@ The following arguments are supported:
         <span class="property-indicator"></span>
         <span class="property-type">str</span>
     </dt>
-    <dd>{{% md %}}The name of the resource group. The name is case insensitive.{{% /md %}}</dd>
-    <dt class="property-required"
+    <dd>{{% md %}}The name of the resource group. The name is case insensitive.{{% /md %}}</dd><dt class="property-required"
             title="Required">
         <span id="resource_name_python">
 <a href="#resource_name_python" style="color: inherit; text-decoration: inherit;">resource_<wbr>name</a>
@@ -142,8 +127,7 @@ The following arguments are supported:
         <span class="property-indicator"></span>
         <span class="property-type">str</span>
     </dt>
-    <dd>{{% md %}}The name of the Application Insights component resource.{{% /md %}}</dd>
-</dl>
+    <dd>{{% md %}}The name of the Application Insights component resource.{{% /md %}}</dd></dl>
 {{% /choosable %}}
 
 
@@ -156,9 +140,7 @@ The following output properties are available:
 
 
 {{% choosable language csharp %}}
-<dl class="resources-properties">
-
-    <dt class="property-"
+<dl class="resources-properties"><dt class="property-"
             title="">
         <span id="appid_csharp">
 <a href="#appid_csharp" style="color: inherit; text-decoration: inherit;">App<wbr>Id</a>
@@ -166,8 +148,7 @@ The following output properties are available:
         <span class="property-indicator"></span>
         <span class="property-type">string</span>
     </dt>
-    <dd>{{% md %}}Application Insights Unique ID for your Application.{{% /md %}}</dd>
-    <dt class="property-"
+    <dd>{{% md %}}Application Insights Unique ID for your Application.{{% /md %}}</dd><dt class="property-"
             title="">
         <span id="applicationid_csharp">
 <a href="#applicationid_csharp" style="color: inherit; text-decoration: inherit;">Application<wbr>Id</a>
@@ -175,8 +156,7 @@ The following output properties are available:
         <span class="property-indicator"></span>
         <span class="property-type">string</span>
     </dt>
-    <dd>{{% md %}}The unique ID of your application. This field mirrors the 'Name' field and cannot be changed.{{% /md %}}</dd>
-    <dt class="property-"
+    <dd>{{% md %}}The unique ID of your application. This field mirrors the 'Name' field and cannot be changed.{{% /md %}}</dd><dt class="property-"
             title="">
         <span id="applicationtype_csharp">
 <a href="#applicationtype_csharp" style="color: inherit; text-decoration: inherit;">Application<wbr>Type</a>
@@ -184,8 +164,7 @@ The following output properties are available:
         <span class="property-indicator"></span>
         <span class="property-type">string</span>
     </dt>
-    <dd>{{% md %}}Type of application being monitored.{{% /md %}}</dd>
-    <dt class="property-"
+    <dd>{{% md %}}Type of application being monitored.{{% /md %}}</dd><dt class="property-"
             title="">
         <span id="connectionstring_csharp">
 <a href="#connectionstring_csharp" style="color: inherit; text-decoration: inherit;">Connection<wbr>String</a>
@@ -193,8 +172,7 @@ The following output properties are available:
         <span class="property-indicator"></span>
         <span class="property-type">string</span>
     </dt>
-    <dd>{{% md %}}Application Insights component connection string.{{% /md %}}</dd>
-    <dt class="property-"
+    <dd>{{% md %}}Application Insights component connection string.{{% /md %}}</dd><dt class="property-"
             title="">
         <span id="creationdate_csharp">
 <a href="#creationdate_csharp" style="color: inherit; text-decoration: inherit;">Creation<wbr>Date</a>
@@ -202,8 +180,7 @@ The following output properties are available:
         <span class="property-indicator"></span>
         <span class="property-type">string</span>
     </dt>
-    <dd>{{% md %}}Creation Date for the Application Insights component, in ISO 8601 format.{{% /md %}}</dd>
-    <dt class="property-"
+    <dd>{{% md %}}Creation Date for the Application Insights component, in ISO 8601 format.{{% /md %}}</dd><dt class="property-"
             title="">
         <span id="hockeyapptoken_csharp">
 <a href="#hockeyapptoken_csharp" style="color: inherit; text-decoration: inherit;">Hockey<wbr>App<wbr>Token</a>
@@ -211,8 +188,7 @@ The following output properties are available:
         <span class="property-indicator"></span>
         <span class="property-type">string</span>
     </dt>
-    <dd>{{% md %}}Token used to authenticate communications with between Application Insights and HockeyApp.{{% /md %}}</dd>
-    <dt class="property-"
+    <dd>{{% md %}}Token used to authenticate communications with between Application Insights and HockeyApp.{{% /md %}}</dd><dt class="property-"
             title="">
         <span id="id_csharp">
 <a href="#id_csharp" style="color: inherit; text-decoration: inherit;">Id</a>
@@ -220,8 +196,7 @@ The following output properties are available:
         <span class="property-indicator"></span>
         <span class="property-type">string</span>
     </dt>
-    <dd>{{% md %}}Azure resource Id{{% /md %}}</dd>
-    <dt class="property-"
+    <dd>{{% md %}}Azure resource Id{{% /md %}}</dd><dt class="property-"
             title="">
         <span id="instrumentationkey_csharp">
 <a href="#instrumentationkey_csharp" style="color: inherit; text-decoration: inherit;">Instrumentation<wbr>Key</a>
@@ -229,8 +204,7 @@ The following output properties are available:
         <span class="property-indicator"></span>
         <span class="property-type">string</span>
     </dt>
-    <dd>{{% md %}}Application Insights Instrumentation key. A read-only value that applications can use to identify the destination for all telemetry sent to Azure Application Insights. This value will be supplied upon construction of each new Application Insights component.{{% /md %}}</dd>
-    <dt class="property-"
+    <dd>{{% md %}}Application Insights Instrumentation key. A read-only value that applications can use to identify the destination for all telemetry sent to Azure Application Insights. This value will be supplied upon construction of each new Application Insights component.{{% /md %}}</dd><dt class="property-"
             title="">
         <span id="kind_csharp">
 <a href="#kind_csharp" style="color: inherit; text-decoration: inherit;">Kind</a>
@@ -238,8 +212,7 @@ The following output properties are available:
         <span class="property-indicator"></span>
         <span class="property-type">string</span>
     </dt>
-    <dd>{{% md %}}The kind of application that this component refers to, used to customize UI. This value is a freeform string, values should typically be one of the following: web, ios, other, store, java, phone.{{% /md %}}</dd>
-    <dt class="property-"
+    <dd>{{% md %}}The kind of application that this component refers to, used to customize UI. This value is a freeform string, values should typically be one of the following: web, ios, other, store, java, phone.{{% /md %}}</dd><dt class="property-"
             title="">
         <span id="location_csharp">
 <a href="#location_csharp" style="color: inherit; text-decoration: inherit;">Location</a>
@@ -247,8 +220,7 @@ The following output properties are available:
         <span class="property-indicator"></span>
         <span class="property-type">string</span>
     </dt>
-    <dd>{{% md %}}Resource location{{% /md %}}</dd>
-    <dt class="property-"
+    <dd>{{% md %}}Resource location{{% /md %}}</dd><dt class="property-"
             title="">
         <span id="name_csharp">
 <a href="#name_csharp" style="color: inherit; text-decoration: inherit;">Name</a>
@@ -256,8 +228,7 @@ The following output properties are available:
         <span class="property-indicator"></span>
         <span class="property-type">string</span>
     </dt>
-    <dd>{{% md %}}Azure resource name{{% /md %}}</dd>
-    <dt class="property-"
+    <dd>{{% md %}}Azure resource name{{% /md %}}</dd><dt class="property-"
             title="">
         <span id="privatelinkscopedresources_csharp">
 <a href="#privatelinkscopedresources_csharp" style="color: inherit; text-decoration: inherit;">Private<wbr>Link<wbr>Scoped<wbr>Resources</a>
@@ -265,8 +236,7 @@ The following output properties are available:
         <span class="property-indicator"></span>
         <span class="property-type"><a href="#privatelinkscopedresourceresponse">List&lt;Pulumi.<wbr>Azure<wbr>Native.<wbr>Insights.<wbr>Outputs.<wbr>Private<wbr>Link<wbr>Scoped<wbr>Resource<wbr>Response&gt;</a></span>
     </dt>
-    <dd>{{% md %}}List of linked private link scope resources.{{% /md %}}</dd>
-    <dt class="property-"
+    <dd>{{% md %}}List of linked private link scope resources.{{% /md %}}</dd><dt class="property-"
             title="">
         <span id="provisioningstate_csharp">
 <a href="#provisioningstate_csharp" style="color: inherit; text-decoration: inherit;">Provisioning<wbr>State</a>
@@ -274,8 +244,7 @@ The following output properties are available:
         <span class="property-indicator"></span>
         <span class="property-type">string</span>
     </dt>
-    <dd>{{% md %}}Current state of this component: whether or not is has been provisioned within the resource group it is defined. Users cannot change this value but are able to read from it. Values will include Succeeded, Deploying, Canceled, and Failed.{{% /md %}}</dd>
-    <dt class="property-"
+    <dd>{{% md %}}Current state of this component: whether or not is has been provisioned within the resource group it is defined. Users cannot change this value but are able to read from it. Values will include Succeeded, Deploying, Canceled, and Failed.{{% /md %}}</dd><dt class="property-"
             title="">
         <span id="tenantid_csharp">
 <a href="#tenantid_csharp" style="color: inherit; text-decoration: inherit;">Tenant<wbr>Id</a>
@@ -283,8 +252,7 @@ The following output properties are available:
         <span class="property-indicator"></span>
         <span class="property-type">string</span>
     </dt>
-    <dd>{{% md %}}Azure Tenant Id.{{% /md %}}</dd>
-    <dt class="property-"
+    <dd>{{% md %}}Azure Tenant Id.{{% /md %}}</dd><dt class="property-"
             title="">
         <span id="type_csharp">
 <a href="#type_csharp" style="color: inherit; text-decoration: inherit;">Type</a>
@@ -292,8 +260,7 @@ The following output properties are available:
         <span class="property-indicator"></span>
         <span class="property-type">string</span>
     </dt>
-    <dd>{{% md %}}Azure resource type{{% /md %}}</dd>
-    <dt class="property-"
+    <dd>{{% md %}}Azure resource type{{% /md %}}</dd><dt class="property-"
             title="">
         <span id="disableipmasking_csharp">
 <a href="#disableipmasking_csharp" style="color: inherit; text-decoration: inherit;">Disable<wbr>Ip<wbr>Masking</a>
@@ -301,8 +268,7 @@ The following output properties are available:
         <span class="property-indicator"></span>
         <span class="property-type">bool</span>
     </dt>
-    <dd>{{% md %}}Disable IP masking.{{% /md %}}</dd>
-    <dt class="property-"
+    <dd>{{% md %}}Disable IP masking.{{% /md %}}</dd><dt class="property-"
             title="">
         <span id="flowtype_csharp">
 <a href="#flowtype_csharp" style="color: inherit; text-decoration: inherit;">Flow<wbr>Type</a>
@@ -310,8 +276,7 @@ The following output properties are available:
         <span class="property-indicator"></span>
         <span class="property-type">string</span>
     </dt>
-    <dd>{{% md %}}Used by the Application Insights system to determine what kind of flow this component was created by. This is to be set to 'Bluefield' when creating/updating a component via the REST API.{{% /md %}}</dd>
-    <dt class="property-"
+    <dd>{{% md %}}Used by the Application Insights system to determine what kind of flow this component was created by. This is to be set to 'Bluefield' when creating/updating a component via the REST API.{{% /md %}}</dd><dt class="property-"
             title="">
         <span id="hockeyappid_csharp">
 <a href="#hockeyappid_csharp" style="color: inherit; text-decoration: inherit;">Hockey<wbr>App<wbr>Id</a>
@@ -319,8 +284,7 @@ The following output properties are available:
         <span class="property-indicator"></span>
         <span class="property-type">string</span>
     </dt>
-    <dd>{{% md %}}The unique application ID created when a new application is added to HockeyApp, used for communications with HockeyApp.{{% /md %}}</dd>
-    <dt class="property-"
+    <dd>{{% md %}}The unique application ID created when a new application is added to HockeyApp, used for communications with HockeyApp.{{% /md %}}</dd><dt class="property-"
             title="">
         <span id="immediatepurgedataon30days_csharp">
 <a href="#immediatepurgedataon30days_csharp" style="color: inherit; text-decoration: inherit;">Immediate<wbr>Purge<wbr>Data<wbr>On30Days</a>
@@ -328,8 +292,7 @@ The following output properties are available:
         <span class="property-indicator"></span>
         <span class="property-type">bool</span>
     </dt>
-    <dd>{{% md %}}Purge data immediately after 30 days.{{% /md %}}</dd>
-    <dt class="property-"
+    <dd>{{% md %}}Purge data immediately after 30 days.{{% /md %}}</dd><dt class="property-"
             title="">
         <span id="ingestionmode_csharp">
 <a href="#ingestionmode_csharp" style="color: inherit; text-decoration: inherit;">Ingestion<wbr>Mode</a>
@@ -337,8 +300,7 @@ The following output properties are available:
         <span class="property-indicator"></span>
         <span class="property-type">string</span>
     </dt>
-    <dd>{{% md %}}Indicates the flow of the ingestion.{{% /md %}}</dd>
-    <dt class="property-"
+    <dd>{{% md %}}Indicates the flow of the ingestion.{{% /md %}}</dd><dt class="property-"
             title="">
         <span id="requestsource_csharp">
 <a href="#requestsource_csharp" style="color: inherit; text-decoration: inherit;">Request<wbr>Source</a>
@@ -346,8 +308,7 @@ The following output properties are available:
         <span class="property-indicator"></span>
         <span class="property-type">string</span>
     </dt>
-    <dd>{{% md %}}Describes what tool created this Application Insights component. Customers using this API should set this to the default 'rest'.{{% /md %}}</dd>
-    <dt class="property-"
+    <dd>{{% md %}}Describes what tool created this Application Insights component. Customers using this API should set this to the default 'rest'.{{% /md %}}</dd><dt class="property-"
             title="">
         <span id="retentionindays_csharp">
 <a href="#retentionindays_csharp" style="color: inherit; text-decoration: inherit;">Retention<wbr>In<wbr>Days</a>
@@ -355,8 +316,7 @@ The following output properties are available:
         <span class="property-indicator"></span>
         <span class="property-type">int</span>
     </dt>
-    <dd>{{% md %}}Retention period in days.{{% /md %}}</dd>
-    <dt class="property-"
+    <dd>{{% md %}}Retention period in days.{{% /md %}}</dd><dt class="property-"
             title="">
         <span id="samplingpercentage_csharp">
 <a href="#samplingpercentage_csharp" style="color: inherit; text-decoration: inherit;">Sampling<wbr>Percentage</a>
@@ -364,8 +324,7 @@ The following output properties are available:
         <span class="property-indicator"></span>
         <span class="property-type">double</span>
     </dt>
-    <dd>{{% md %}}Percentage of the data produced by the application being monitored that is being sampled for Application Insights telemetry.{{% /md %}}</dd>
-    <dt class="property-"
+    <dd>{{% md %}}Percentage of the data produced by the application being monitored that is being sampled for Application Insights telemetry.{{% /md %}}</dd><dt class="property-"
             title="">
         <span id="tags_csharp">
 <a href="#tags_csharp" style="color: inherit; text-decoration: inherit;">Tags</a>
@@ -373,14 +332,11 @@ The following output properties are available:
         <span class="property-indicator"></span>
         <span class="property-type">Dictionary&lt;string, string&gt;</span>
     </dt>
-    <dd>{{% md %}}Resource tags{{% /md %}}</dd>
-</dl>
+    <dd>{{% md %}}Resource tags{{% /md %}}</dd></dl>
 {{% /choosable %}}
 
 {{% choosable language go %}}
-<dl class="resources-properties">
-
-    <dt class="property-"
+<dl class="resources-properties"><dt class="property-"
             title="">
         <span id="appid_go">
 <a href="#appid_go" style="color: inherit; text-decoration: inherit;">App<wbr>Id</a>
@@ -388,8 +344,7 @@ The following output properties are available:
         <span class="property-indicator"></span>
         <span class="property-type">string</span>
     </dt>
-    <dd>{{% md %}}Application Insights Unique ID for your Application.{{% /md %}}</dd>
-    <dt class="property-"
+    <dd>{{% md %}}Application Insights Unique ID for your Application.{{% /md %}}</dd><dt class="property-"
             title="">
         <span id="applicationid_go">
 <a href="#applicationid_go" style="color: inherit; text-decoration: inherit;">Application<wbr>Id</a>
@@ -397,8 +352,7 @@ The following output properties are available:
         <span class="property-indicator"></span>
         <span class="property-type">string</span>
     </dt>
-    <dd>{{% md %}}The unique ID of your application. This field mirrors the 'Name' field and cannot be changed.{{% /md %}}</dd>
-    <dt class="property-"
+    <dd>{{% md %}}The unique ID of your application. This field mirrors the 'Name' field and cannot be changed.{{% /md %}}</dd><dt class="property-"
             title="">
         <span id="applicationtype_go">
 <a href="#applicationtype_go" style="color: inherit; text-decoration: inherit;">Application<wbr>Type</a>
@@ -406,8 +360,7 @@ The following output properties are available:
         <span class="property-indicator"></span>
         <span class="property-type">string</span>
     </dt>
-    <dd>{{% md %}}Type of application being monitored.{{% /md %}}</dd>
-    <dt class="property-"
+    <dd>{{% md %}}Type of application being monitored.{{% /md %}}</dd><dt class="property-"
             title="">
         <span id="connectionstring_go">
 <a href="#connectionstring_go" style="color: inherit; text-decoration: inherit;">Connection<wbr>String</a>
@@ -415,8 +368,7 @@ The following output properties are available:
         <span class="property-indicator"></span>
         <span class="property-type">string</span>
     </dt>
-    <dd>{{% md %}}Application Insights component connection string.{{% /md %}}</dd>
-    <dt class="property-"
+    <dd>{{% md %}}Application Insights component connection string.{{% /md %}}</dd><dt class="property-"
             title="">
         <span id="creationdate_go">
 <a href="#creationdate_go" style="color: inherit; text-decoration: inherit;">Creation<wbr>Date</a>
@@ -424,8 +376,7 @@ The following output properties are available:
         <span class="property-indicator"></span>
         <span class="property-type">string</span>
     </dt>
-    <dd>{{% md %}}Creation Date for the Application Insights component, in ISO 8601 format.{{% /md %}}</dd>
-    <dt class="property-"
+    <dd>{{% md %}}Creation Date for the Application Insights component, in ISO 8601 format.{{% /md %}}</dd><dt class="property-"
             title="">
         <span id="hockeyapptoken_go">
 <a href="#hockeyapptoken_go" style="color: inherit; text-decoration: inherit;">Hockey<wbr>App<wbr>Token</a>
@@ -433,8 +384,7 @@ The following output properties are available:
         <span class="property-indicator"></span>
         <span class="property-type">string</span>
     </dt>
-    <dd>{{% md %}}Token used to authenticate communications with between Application Insights and HockeyApp.{{% /md %}}</dd>
-    <dt class="property-"
+    <dd>{{% md %}}Token used to authenticate communications with between Application Insights and HockeyApp.{{% /md %}}</dd><dt class="property-"
             title="">
         <span id="id_go">
 <a href="#id_go" style="color: inherit; text-decoration: inherit;">Id</a>
@@ -442,8 +392,7 @@ The following output properties are available:
         <span class="property-indicator"></span>
         <span class="property-type">string</span>
     </dt>
-    <dd>{{% md %}}Azure resource Id{{% /md %}}</dd>
-    <dt class="property-"
+    <dd>{{% md %}}Azure resource Id{{% /md %}}</dd><dt class="property-"
             title="">
         <span id="instrumentationkey_go">
 <a href="#instrumentationkey_go" style="color: inherit; text-decoration: inherit;">Instrumentation<wbr>Key</a>
@@ -451,8 +400,7 @@ The following output properties are available:
         <span class="property-indicator"></span>
         <span class="property-type">string</span>
     </dt>
-    <dd>{{% md %}}Application Insights Instrumentation key. A read-only value that applications can use to identify the destination for all telemetry sent to Azure Application Insights. This value will be supplied upon construction of each new Application Insights component.{{% /md %}}</dd>
-    <dt class="property-"
+    <dd>{{% md %}}Application Insights Instrumentation key. A read-only value that applications can use to identify the destination for all telemetry sent to Azure Application Insights. This value will be supplied upon construction of each new Application Insights component.{{% /md %}}</dd><dt class="property-"
             title="">
         <span id="kind_go">
 <a href="#kind_go" style="color: inherit; text-decoration: inherit;">Kind</a>
@@ -460,8 +408,7 @@ The following output properties are available:
         <span class="property-indicator"></span>
         <span class="property-type">string</span>
     </dt>
-    <dd>{{% md %}}The kind of application that this component refers to, used to customize UI. This value is a freeform string, values should typically be one of the following: web, ios, other, store, java, phone.{{% /md %}}</dd>
-    <dt class="property-"
+    <dd>{{% md %}}The kind of application that this component refers to, used to customize UI. This value is a freeform string, values should typically be one of the following: web, ios, other, store, java, phone.{{% /md %}}</dd><dt class="property-"
             title="">
         <span id="location_go">
 <a href="#location_go" style="color: inherit; text-decoration: inherit;">Location</a>
@@ -469,8 +416,7 @@ The following output properties are available:
         <span class="property-indicator"></span>
         <span class="property-type">string</span>
     </dt>
-    <dd>{{% md %}}Resource location{{% /md %}}</dd>
-    <dt class="property-"
+    <dd>{{% md %}}Resource location{{% /md %}}</dd><dt class="property-"
             title="">
         <span id="name_go">
 <a href="#name_go" style="color: inherit; text-decoration: inherit;">Name</a>
@@ -478,8 +424,7 @@ The following output properties are available:
         <span class="property-indicator"></span>
         <span class="property-type">string</span>
     </dt>
-    <dd>{{% md %}}Azure resource name{{% /md %}}</dd>
-    <dt class="property-"
+    <dd>{{% md %}}Azure resource name{{% /md %}}</dd><dt class="property-"
             title="">
         <span id="privatelinkscopedresources_go">
 <a href="#privatelinkscopedresources_go" style="color: inherit; text-decoration: inherit;">Private<wbr>Link<wbr>Scoped<wbr>Resources</a>
@@ -487,8 +432,7 @@ The following output properties are available:
         <span class="property-indicator"></span>
         <span class="property-type"><a href="#privatelinkscopedresourceresponse">[]Private<wbr>Link<wbr>Scoped<wbr>Resource<wbr>Response</a></span>
     </dt>
-    <dd>{{% md %}}List of linked private link scope resources.{{% /md %}}</dd>
-    <dt class="property-"
+    <dd>{{% md %}}List of linked private link scope resources.{{% /md %}}</dd><dt class="property-"
             title="">
         <span id="provisioningstate_go">
 <a href="#provisioningstate_go" style="color: inherit; text-decoration: inherit;">Provisioning<wbr>State</a>
@@ -496,8 +440,7 @@ The following output properties are available:
         <span class="property-indicator"></span>
         <span class="property-type">string</span>
     </dt>
-    <dd>{{% md %}}Current state of this component: whether or not is has been provisioned within the resource group it is defined. Users cannot change this value but are able to read from it. Values will include Succeeded, Deploying, Canceled, and Failed.{{% /md %}}</dd>
-    <dt class="property-"
+    <dd>{{% md %}}Current state of this component: whether or not is has been provisioned within the resource group it is defined. Users cannot change this value but are able to read from it. Values will include Succeeded, Deploying, Canceled, and Failed.{{% /md %}}</dd><dt class="property-"
             title="">
         <span id="tenantid_go">
 <a href="#tenantid_go" style="color: inherit; text-decoration: inherit;">Tenant<wbr>Id</a>
@@ -505,8 +448,7 @@ The following output properties are available:
         <span class="property-indicator"></span>
         <span class="property-type">string</span>
     </dt>
-    <dd>{{% md %}}Azure Tenant Id.{{% /md %}}</dd>
-    <dt class="property-"
+    <dd>{{% md %}}Azure Tenant Id.{{% /md %}}</dd><dt class="property-"
             title="">
         <span id="type_go">
 <a href="#type_go" style="color: inherit; text-decoration: inherit;">Type</a>
@@ -514,8 +456,7 @@ The following output properties are available:
         <span class="property-indicator"></span>
         <span class="property-type">string</span>
     </dt>
-    <dd>{{% md %}}Azure resource type{{% /md %}}</dd>
-    <dt class="property-"
+    <dd>{{% md %}}Azure resource type{{% /md %}}</dd><dt class="property-"
             title="">
         <span id="disableipmasking_go">
 <a href="#disableipmasking_go" style="color: inherit; text-decoration: inherit;">Disable<wbr>Ip<wbr>Masking</a>
@@ -523,8 +464,7 @@ The following output properties are available:
         <span class="property-indicator"></span>
         <span class="property-type">bool</span>
     </dt>
-    <dd>{{% md %}}Disable IP masking.{{% /md %}}</dd>
-    <dt class="property-"
+    <dd>{{% md %}}Disable IP masking.{{% /md %}}</dd><dt class="property-"
             title="">
         <span id="flowtype_go">
 <a href="#flowtype_go" style="color: inherit; text-decoration: inherit;">Flow<wbr>Type</a>
@@ -532,8 +472,7 @@ The following output properties are available:
         <span class="property-indicator"></span>
         <span class="property-type">string</span>
     </dt>
-    <dd>{{% md %}}Used by the Application Insights system to determine what kind of flow this component was created by. This is to be set to 'Bluefield' when creating/updating a component via the REST API.{{% /md %}}</dd>
-    <dt class="property-"
+    <dd>{{% md %}}Used by the Application Insights system to determine what kind of flow this component was created by. This is to be set to 'Bluefield' when creating/updating a component via the REST API.{{% /md %}}</dd><dt class="property-"
             title="">
         <span id="hockeyappid_go">
 <a href="#hockeyappid_go" style="color: inherit; text-decoration: inherit;">Hockey<wbr>App<wbr>Id</a>
@@ -541,8 +480,7 @@ The following output properties are available:
         <span class="property-indicator"></span>
         <span class="property-type">string</span>
     </dt>
-    <dd>{{% md %}}The unique application ID created when a new application is added to HockeyApp, used for communications with HockeyApp.{{% /md %}}</dd>
-    <dt class="property-"
+    <dd>{{% md %}}The unique application ID created when a new application is added to HockeyApp, used for communications with HockeyApp.{{% /md %}}</dd><dt class="property-"
             title="">
         <span id="immediatepurgedataon30days_go">
 <a href="#immediatepurgedataon30days_go" style="color: inherit; text-decoration: inherit;">Immediate<wbr>Purge<wbr>Data<wbr>On30Days</a>
@@ -550,8 +488,7 @@ The following output properties are available:
         <span class="property-indicator"></span>
         <span class="property-type">bool</span>
     </dt>
-    <dd>{{% md %}}Purge data immediately after 30 days.{{% /md %}}</dd>
-    <dt class="property-"
+    <dd>{{% md %}}Purge data immediately after 30 days.{{% /md %}}</dd><dt class="property-"
             title="">
         <span id="ingestionmode_go">
 <a href="#ingestionmode_go" style="color: inherit; text-decoration: inherit;">Ingestion<wbr>Mode</a>
@@ -559,8 +496,7 @@ The following output properties are available:
         <span class="property-indicator"></span>
         <span class="property-type">string</span>
     </dt>
-    <dd>{{% md %}}Indicates the flow of the ingestion.{{% /md %}}</dd>
-    <dt class="property-"
+    <dd>{{% md %}}Indicates the flow of the ingestion.{{% /md %}}</dd><dt class="property-"
             title="">
         <span id="requestsource_go">
 <a href="#requestsource_go" style="color: inherit; text-decoration: inherit;">Request<wbr>Source</a>
@@ -568,8 +504,7 @@ The following output properties are available:
         <span class="property-indicator"></span>
         <span class="property-type">string</span>
     </dt>
-    <dd>{{% md %}}Describes what tool created this Application Insights component. Customers using this API should set this to the default 'rest'.{{% /md %}}</dd>
-    <dt class="property-"
+    <dd>{{% md %}}Describes what tool created this Application Insights component. Customers using this API should set this to the default 'rest'.{{% /md %}}</dd><dt class="property-"
             title="">
         <span id="retentionindays_go">
 <a href="#retentionindays_go" style="color: inherit; text-decoration: inherit;">Retention<wbr>In<wbr>Days</a>
@@ -577,8 +512,7 @@ The following output properties are available:
         <span class="property-indicator"></span>
         <span class="property-type">int</span>
     </dt>
-    <dd>{{% md %}}Retention period in days.{{% /md %}}</dd>
-    <dt class="property-"
+    <dd>{{% md %}}Retention period in days.{{% /md %}}</dd><dt class="property-"
             title="">
         <span id="samplingpercentage_go">
 <a href="#samplingpercentage_go" style="color: inherit; text-decoration: inherit;">Sampling<wbr>Percentage</a>
@@ -586,8 +520,7 @@ The following output properties are available:
         <span class="property-indicator"></span>
         <span class="property-type">float64</span>
     </dt>
-    <dd>{{% md %}}Percentage of the data produced by the application being monitored that is being sampled for Application Insights telemetry.{{% /md %}}</dd>
-    <dt class="property-"
+    <dd>{{% md %}}Percentage of the data produced by the application being monitored that is being sampled for Application Insights telemetry.{{% /md %}}</dd><dt class="property-"
             title="">
         <span id="tags_go">
 <a href="#tags_go" style="color: inherit; text-decoration: inherit;">Tags</a>
@@ -595,14 +528,11 @@ The following output properties are available:
         <span class="property-indicator"></span>
         <span class="property-type">map[string]string</span>
     </dt>
-    <dd>{{% md %}}Resource tags{{% /md %}}</dd>
-</dl>
+    <dd>{{% md %}}Resource tags{{% /md %}}</dd></dl>
 {{% /choosable %}}
 
 {{% choosable language nodejs %}}
-<dl class="resources-properties">
-
-    <dt class="property-"
+<dl class="resources-properties"><dt class="property-"
             title="">
         <span id="appid_nodejs">
 <a href="#appid_nodejs" style="color: inherit; text-decoration: inherit;">app<wbr>Id</a>
@@ -610,8 +540,7 @@ The following output properties are available:
         <span class="property-indicator"></span>
         <span class="property-type">string</span>
     </dt>
-    <dd>{{% md %}}Application Insights Unique ID for your Application.{{% /md %}}</dd>
-    <dt class="property-"
+    <dd>{{% md %}}Application Insights Unique ID for your Application.{{% /md %}}</dd><dt class="property-"
             title="">
         <span id="applicationid_nodejs">
 <a href="#applicationid_nodejs" style="color: inherit; text-decoration: inherit;">application<wbr>Id</a>
@@ -619,8 +548,7 @@ The following output properties are available:
         <span class="property-indicator"></span>
         <span class="property-type">string</span>
     </dt>
-    <dd>{{% md %}}The unique ID of your application. This field mirrors the 'Name' field and cannot be changed.{{% /md %}}</dd>
-    <dt class="property-"
+    <dd>{{% md %}}The unique ID of your application. This field mirrors the 'Name' field and cannot be changed.{{% /md %}}</dd><dt class="property-"
             title="">
         <span id="applicationtype_nodejs">
 <a href="#applicationtype_nodejs" style="color: inherit; text-decoration: inherit;">application<wbr>Type</a>
@@ -628,8 +556,7 @@ The following output properties are available:
         <span class="property-indicator"></span>
         <span class="property-type">string</span>
     </dt>
-    <dd>{{% md %}}Type of application being monitored.{{% /md %}}</dd>
-    <dt class="property-"
+    <dd>{{% md %}}Type of application being monitored.{{% /md %}}</dd><dt class="property-"
             title="">
         <span id="connectionstring_nodejs">
 <a href="#connectionstring_nodejs" style="color: inherit; text-decoration: inherit;">connection<wbr>String</a>
@@ -637,8 +564,7 @@ The following output properties are available:
         <span class="property-indicator"></span>
         <span class="property-type">string</span>
     </dt>
-    <dd>{{% md %}}Application Insights component connection string.{{% /md %}}</dd>
-    <dt class="property-"
+    <dd>{{% md %}}Application Insights component connection string.{{% /md %}}</dd><dt class="property-"
             title="">
         <span id="creationdate_nodejs">
 <a href="#creationdate_nodejs" style="color: inherit; text-decoration: inherit;">creation<wbr>Date</a>
@@ -646,8 +572,7 @@ The following output properties are available:
         <span class="property-indicator"></span>
         <span class="property-type">string</span>
     </dt>
-    <dd>{{% md %}}Creation Date for the Application Insights component, in ISO 8601 format.{{% /md %}}</dd>
-    <dt class="property-"
+    <dd>{{% md %}}Creation Date for the Application Insights component, in ISO 8601 format.{{% /md %}}</dd><dt class="property-"
             title="">
         <span id="hockeyapptoken_nodejs">
 <a href="#hockeyapptoken_nodejs" style="color: inherit; text-decoration: inherit;">hockey<wbr>App<wbr>Token</a>
@@ -655,8 +580,7 @@ The following output properties are available:
         <span class="property-indicator"></span>
         <span class="property-type">string</span>
     </dt>
-    <dd>{{% md %}}Token used to authenticate communications with between Application Insights and HockeyApp.{{% /md %}}</dd>
-    <dt class="property-"
+    <dd>{{% md %}}Token used to authenticate communications with between Application Insights and HockeyApp.{{% /md %}}</dd><dt class="property-"
             title="">
         <span id="id_nodejs">
 <a href="#id_nodejs" style="color: inherit; text-decoration: inherit;">id</a>
@@ -664,8 +588,7 @@ The following output properties are available:
         <span class="property-indicator"></span>
         <span class="property-type">string</span>
     </dt>
-    <dd>{{% md %}}Azure resource Id{{% /md %}}</dd>
-    <dt class="property-"
+    <dd>{{% md %}}Azure resource Id{{% /md %}}</dd><dt class="property-"
             title="">
         <span id="instrumentationkey_nodejs">
 <a href="#instrumentationkey_nodejs" style="color: inherit; text-decoration: inherit;">instrumentation<wbr>Key</a>
@@ -673,8 +596,7 @@ The following output properties are available:
         <span class="property-indicator"></span>
         <span class="property-type">string</span>
     </dt>
-    <dd>{{% md %}}Application Insights Instrumentation key. A read-only value that applications can use to identify the destination for all telemetry sent to Azure Application Insights. This value will be supplied upon construction of each new Application Insights component.{{% /md %}}</dd>
-    <dt class="property-"
+    <dd>{{% md %}}Application Insights Instrumentation key. A read-only value that applications can use to identify the destination for all telemetry sent to Azure Application Insights. This value will be supplied upon construction of each new Application Insights component.{{% /md %}}</dd><dt class="property-"
             title="">
         <span id="kind_nodejs">
 <a href="#kind_nodejs" style="color: inherit; text-decoration: inherit;">kind</a>
@@ -682,8 +604,7 @@ The following output properties are available:
         <span class="property-indicator"></span>
         <span class="property-type">string</span>
     </dt>
-    <dd>{{% md %}}The kind of application that this component refers to, used to customize UI. This value is a freeform string, values should typically be one of the following: web, ios, other, store, java, phone.{{% /md %}}</dd>
-    <dt class="property-"
+    <dd>{{% md %}}The kind of application that this component refers to, used to customize UI. This value is a freeform string, values should typically be one of the following: web, ios, other, store, java, phone.{{% /md %}}</dd><dt class="property-"
             title="">
         <span id="location_nodejs">
 <a href="#location_nodejs" style="color: inherit; text-decoration: inherit;">location</a>
@@ -691,8 +612,7 @@ The following output properties are available:
         <span class="property-indicator"></span>
         <span class="property-type">string</span>
     </dt>
-    <dd>{{% md %}}Resource location{{% /md %}}</dd>
-    <dt class="property-"
+    <dd>{{% md %}}Resource location{{% /md %}}</dd><dt class="property-"
             title="">
         <span id="name_nodejs">
 <a href="#name_nodejs" style="color: inherit; text-decoration: inherit;">name</a>
@@ -700,8 +620,7 @@ The following output properties are available:
         <span class="property-indicator"></span>
         <span class="property-type">string</span>
     </dt>
-    <dd>{{% md %}}Azure resource name{{% /md %}}</dd>
-    <dt class="property-"
+    <dd>{{% md %}}Azure resource name{{% /md %}}</dd><dt class="property-"
             title="">
         <span id="privatelinkscopedresources_nodejs">
 <a href="#privatelinkscopedresources_nodejs" style="color: inherit; text-decoration: inherit;">private<wbr>Link<wbr>Scoped<wbr>Resources</a>
@@ -709,8 +628,7 @@ The following output properties are available:
         <span class="property-indicator"></span>
         <span class="property-type"><a href="#privatelinkscopedresourceresponse">Private<wbr>Link<wbr>Scoped<wbr>Resource<wbr>Response[]</a></span>
     </dt>
-    <dd>{{% md %}}List of linked private link scope resources.{{% /md %}}</dd>
-    <dt class="property-"
+    <dd>{{% md %}}List of linked private link scope resources.{{% /md %}}</dd><dt class="property-"
             title="">
         <span id="provisioningstate_nodejs">
 <a href="#provisioningstate_nodejs" style="color: inherit; text-decoration: inherit;">provisioning<wbr>State</a>
@@ -718,8 +636,7 @@ The following output properties are available:
         <span class="property-indicator"></span>
         <span class="property-type">string</span>
     </dt>
-    <dd>{{% md %}}Current state of this component: whether or not is has been provisioned within the resource group it is defined. Users cannot change this value but are able to read from it. Values will include Succeeded, Deploying, Canceled, and Failed.{{% /md %}}</dd>
-    <dt class="property-"
+    <dd>{{% md %}}Current state of this component: whether or not is has been provisioned within the resource group it is defined. Users cannot change this value but are able to read from it. Values will include Succeeded, Deploying, Canceled, and Failed.{{% /md %}}</dd><dt class="property-"
             title="">
         <span id="tenantid_nodejs">
 <a href="#tenantid_nodejs" style="color: inherit; text-decoration: inherit;">tenant<wbr>Id</a>
@@ -727,8 +644,7 @@ The following output properties are available:
         <span class="property-indicator"></span>
         <span class="property-type">string</span>
     </dt>
-    <dd>{{% md %}}Azure Tenant Id.{{% /md %}}</dd>
-    <dt class="property-"
+    <dd>{{% md %}}Azure Tenant Id.{{% /md %}}</dd><dt class="property-"
             title="">
         <span id="type_nodejs">
 <a href="#type_nodejs" style="color: inherit; text-decoration: inherit;">type</a>
@@ -736,8 +652,7 @@ The following output properties are available:
         <span class="property-indicator"></span>
         <span class="property-type">string</span>
     </dt>
-    <dd>{{% md %}}Azure resource type{{% /md %}}</dd>
-    <dt class="property-"
+    <dd>{{% md %}}Azure resource type{{% /md %}}</dd><dt class="property-"
             title="">
         <span id="disableipmasking_nodejs">
 <a href="#disableipmasking_nodejs" style="color: inherit; text-decoration: inherit;">disable<wbr>Ip<wbr>Masking</a>
@@ -745,8 +660,7 @@ The following output properties are available:
         <span class="property-indicator"></span>
         <span class="property-type">boolean</span>
     </dt>
-    <dd>{{% md %}}Disable IP masking.{{% /md %}}</dd>
-    <dt class="property-"
+    <dd>{{% md %}}Disable IP masking.{{% /md %}}</dd><dt class="property-"
             title="">
         <span id="flowtype_nodejs">
 <a href="#flowtype_nodejs" style="color: inherit; text-decoration: inherit;">flow<wbr>Type</a>
@@ -754,8 +668,7 @@ The following output properties are available:
         <span class="property-indicator"></span>
         <span class="property-type">string</span>
     </dt>
-    <dd>{{% md %}}Used by the Application Insights system to determine what kind of flow this component was created by. This is to be set to 'Bluefield' when creating/updating a component via the REST API.{{% /md %}}</dd>
-    <dt class="property-"
+    <dd>{{% md %}}Used by the Application Insights system to determine what kind of flow this component was created by. This is to be set to 'Bluefield' when creating/updating a component via the REST API.{{% /md %}}</dd><dt class="property-"
             title="">
         <span id="hockeyappid_nodejs">
 <a href="#hockeyappid_nodejs" style="color: inherit; text-decoration: inherit;">hockey<wbr>App<wbr>Id</a>
@@ -763,8 +676,7 @@ The following output properties are available:
         <span class="property-indicator"></span>
         <span class="property-type">string</span>
     </dt>
-    <dd>{{% md %}}The unique application ID created when a new application is added to HockeyApp, used for communications with HockeyApp.{{% /md %}}</dd>
-    <dt class="property-"
+    <dd>{{% md %}}The unique application ID created when a new application is added to HockeyApp, used for communications with HockeyApp.{{% /md %}}</dd><dt class="property-"
             title="">
         <span id="immediatepurgedataon30days_nodejs">
 <a href="#immediatepurgedataon30days_nodejs" style="color: inherit; text-decoration: inherit;">immediate<wbr>Purge<wbr>Data<wbr>On30Days</a>
@@ -772,8 +684,7 @@ The following output properties are available:
         <span class="property-indicator"></span>
         <span class="property-type">boolean</span>
     </dt>
-    <dd>{{% md %}}Purge data immediately after 30 days.{{% /md %}}</dd>
-    <dt class="property-"
+    <dd>{{% md %}}Purge data immediately after 30 days.{{% /md %}}</dd><dt class="property-"
             title="">
         <span id="ingestionmode_nodejs">
 <a href="#ingestionmode_nodejs" style="color: inherit; text-decoration: inherit;">ingestion<wbr>Mode</a>
@@ -781,8 +692,7 @@ The following output properties are available:
         <span class="property-indicator"></span>
         <span class="property-type">string</span>
     </dt>
-    <dd>{{% md %}}Indicates the flow of the ingestion.{{% /md %}}</dd>
-    <dt class="property-"
+    <dd>{{% md %}}Indicates the flow of the ingestion.{{% /md %}}</dd><dt class="property-"
             title="">
         <span id="requestsource_nodejs">
 <a href="#requestsource_nodejs" style="color: inherit; text-decoration: inherit;">request<wbr>Source</a>
@@ -790,8 +700,7 @@ The following output properties are available:
         <span class="property-indicator"></span>
         <span class="property-type">string</span>
     </dt>
-    <dd>{{% md %}}Describes what tool created this Application Insights component. Customers using this API should set this to the default 'rest'.{{% /md %}}</dd>
-    <dt class="property-"
+    <dd>{{% md %}}Describes what tool created this Application Insights component. Customers using this API should set this to the default 'rest'.{{% /md %}}</dd><dt class="property-"
             title="">
         <span id="retentionindays_nodejs">
 <a href="#retentionindays_nodejs" style="color: inherit; text-decoration: inherit;">retention<wbr>In<wbr>Days</a>
@@ -799,8 +708,7 @@ The following output properties are available:
         <span class="property-indicator"></span>
         <span class="property-type">number</span>
     </dt>
-    <dd>{{% md %}}Retention period in days.{{% /md %}}</dd>
-    <dt class="property-"
+    <dd>{{% md %}}Retention period in days.{{% /md %}}</dd><dt class="property-"
             title="">
         <span id="samplingpercentage_nodejs">
 <a href="#samplingpercentage_nodejs" style="color: inherit; text-decoration: inherit;">sampling<wbr>Percentage</a>
@@ -808,8 +716,7 @@ The following output properties are available:
         <span class="property-indicator"></span>
         <span class="property-type">number</span>
     </dt>
-    <dd>{{% md %}}Percentage of the data produced by the application being monitored that is being sampled for Application Insights telemetry.{{% /md %}}</dd>
-    <dt class="property-"
+    <dd>{{% md %}}Percentage of the data produced by the application being monitored that is being sampled for Application Insights telemetry.{{% /md %}}</dd><dt class="property-"
             title="">
         <span id="tags_nodejs">
 <a href="#tags_nodejs" style="color: inherit; text-decoration: inherit;">tags</a>
@@ -817,14 +724,11 @@ The following output properties are available:
         <span class="property-indicator"></span>
         <span class="property-type">{[key: string]: string}</span>
     </dt>
-    <dd>{{% md %}}Resource tags{{% /md %}}</dd>
-</dl>
+    <dd>{{% md %}}Resource tags{{% /md %}}</dd></dl>
 {{% /choosable %}}
 
 {{% choosable language python %}}
-<dl class="resources-properties">
-
-    <dt class="property-"
+<dl class="resources-properties"><dt class="property-"
             title="">
         <span id="app_id_python">
 <a href="#app_id_python" style="color: inherit; text-decoration: inherit;">app_<wbr>id</a>
@@ -832,8 +736,7 @@ The following output properties are available:
         <span class="property-indicator"></span>
         <span class="property-type">str</span>
     </dt>
-    <dd>{{% md %}}Application Insights Unique ID for your Application.{{% /md %}}</dd>
-    <dt class="property-"
+    <dd>{{% md %}}Application Insights Unique ID for your Application.{{% /md %}}</dd><dt class="property-"
             title="">
         <span id="application_id_python">
 <a href="#application_id_python" style="color: inherit; text-decoration: inherit;">application_<wbr>id</a>
@@ -841,8 +744,7 @@ The following output properties are available:
         <span class="property-indicator"></span>
         <span class="property-type">str</span>
     </dt>
-    <dd>{{% md %}}The unique ID of your application. This field mirrors the 'Name' field and cannot be changed.{{% /md %}}</dd>
-    <dt class="property-"
+    <dd>{{% md %}}The unique ID of your application. This field mirrors the 'Name' field and cannot be changed.{{% /md %}}</dd><dt class="property-"
             title="">
         <span id="application_type_python">
 <a href="#application_type_python" style="color: inherit; text-decoration: inherit;">application_<wbr>type</a>
@@ -850,8 +752,7 @@ The following output properties are available:
         <span class="property-indicator"></span>
         <span class="property-type">str</span>
     </dt>
-    <dd>{{% md %}}Type of application being monitored.{{% /md %}}</dd>
-    <dt class="property-"
+    <dd>{{% md %}}Type of application being monitored.{{% /md %}}</dd><dt class="property-"
             title="">
         <span id="connection_string_python">
 <a href="#connection_string_python" style="color: inherit; text-decoration: inherit;">connection_<wbr>string</a>
@@ -859,8 +760,7 @@ The following output properties are available:
         <span class="property-indicator"></span>
         <span class="property-type">str</span>
     </dt>
-    <dd>{{% md %}}Application Insights component connection string.{{% /md %}}</dd>
-    <dt class="property-"
+    <dd>{{% md %}}Application Insights component connection string.{{% /md %}}</dd><dt class="property-"
             title="">
         <span id="creation_date_python">
 <a href="#creation_date_python" style="color: inherit; text-decoration: inherit;">creation_<wbr>date</a>
@@ -868,8 +768,7 @@ The following output properties are available:
         <span class="property-indicator"></span>
         <span class="property-type">str</span>
     </dt>
-    <dd>{{% md %}}Creation Date for the Application Insights component, in ISO 8601 format.{{% /md %}}</dd>
-    <dt class="property-"
+    <dd>{{% md %}}Creation Date for the Application Insights component, in ISO 8601 format.{{% /md %}}</dd><dt class="property-"
             title="">
         <span id="hockey_app_token_python">
 <a href="#hockey_app_token_python" style="color: inherit; text-decoration: inherit;">hockey_<wbr>app_<wbr>token</a>
@@ -877,8 +776,7 @@ The following output properties are available:
         <span class="property-indicator"></span>
         <span class="property-type">str</span>
     </dt>
-    <dd>{{% md %}}Token used to authenticate communications with between Application Insights and HockeyApp.{{% /md %}}</dd>
-    <dt class="property-"
+    <dd>{{% md %}}Token used to authenticate communications with between Application Insights and HockeyApp.{{% /md %}}</dd><dt class="property-"
             title="">
         <span id="id_python">
 <a href="#id_python" style="color: inherit; text-decoration: inherit;">id</a>
@@ -886,8 +784,7 @@ The following output properties are available:
         <span class="property-indicator"></span>
         <span class="property-type">str</span>
     </dt>
-    <dd>{{% md %}}Azure resource Id{{% /md %}}</dd>
-    <dt class="property-"
+    <dd>{{% md %}}Azure resource Id{{% /md %}}</dd><dt class="property-"
             title="">
         <span id="instrumentation_key_python">
 <a href="#instrumentation_key_python" style="color: inherit; text-decoration: inherit;">instrumentation_<wbr>key</a>
@@ -895,8 +792,7 @@ The following output properties are available:
         <span class="property-indicator"></span>
         <span class="property-type">str</span>
     </dt>
-    <dd>{{% md %}}Application Insights Instrumentation key. A read-only value that applications can use to identify the destination for all telemetry sent to Azure Application Insights. This value will be supplied upon construction of each new Application Insights component.{{% /md %}}</dd>
-    <dt class="property-"
+    <dd>{{% md %}}Application Insights Instrumentation key. A read-only value that applications can use to identify the destination for all telemetry sent to Azure Application Insights. This value will be supplied upon construction of each new Application Insights component.{{% /md %}}</dd><dt class="property-"
             title="">
         <span id="kind_python">
 <a href="#kind_python" style="color: inherit; text-decoration: inherit;">kind</a>
@@ -904,8 +800,7 @@ The following output properties are available:
         <span class="property-indicator"></span>
         <span class="property-type">str</span>
     </dt>
-    <dd>{{% md %}}The kind of application that this component refers to, used to customize UI. This value is a freeform string, values should typically be one of the following: web, ios, other, store, java, phone.{{% /md %}}</dd>
-    <dt class="property-"
+    <dd>{{% md %}}The kind of application that this component refers to, used to customize UI. This value is a freeform string, values should typically be one of the following: web, ios, other, store, java, phone.{{% /md %}}</dd><dt class="property-"
             title="">
         <span id="location_python">
 <a href="#location_python" style="color: inherit; text-decoration: inherit;">location</a>
@@ -913,8 +808,7 @@ The following output properties are available:
         <span class="property-indicator"></span>
         <span class="property-type">str</span>
     </dt>
-    <dd>{{% md %}}Resource location{{% /md %}}</dd>
-    <dt class="property-"
+    <dd>{{% md %}}Resource location{{% /md %}}</dd><dt class="property-"
             title="">
         <span id="name_python">
 <a href="#name_python" style="color: inherit; text-decoration: inherit;">name</a>
@@ -922,8 +816,7 @@ The following output properties are available:
         <span class="property-indicator"></span>
         <span class="property-type">str</span>
     </dt>
-    <dd>{{% md %}}Azure resource name{{% /md %}}</dd>
-    <dt class="property-"
+    <dd>{{% md %}}Azure resource name{{% /md %}}</dd><dt class="property-"
             title="">
         <span id="private_link_scoped_resources_python">
 <a href="#private_link_scoped_resources_python" style="color: inherit; text-decoration: inherit;">private_<wbr>link_<wbr>scoped_<wbr>resources</a>
@@ -931,8 +824,7 @@ The following output properties are available:
         <span class="property-indicator"></span>
         <span class="property-type"><a href="#privatelinkscopedresourceresponse">Sequence[Private<wbr>Link<wbr>Scoped<wbr>Resource<wbr>Response]</a></span>
     </dt>
-    <dd>{{% md %}}List of linked private link scope resources.{{% /md %}}</dd>
-    <dt class="property-"
+    <dd>{{% md %}}List of linked private link scope resources.{{% /md %}}</dd><dt class="property-"
             title="">
         <span id="provisioning_state_python">
 <a href="#provisioning_state_python" style="color: inherit; text-decoration: inherit;">provisioning_<wbr>state</a>
@@ -940,8 +832,7 @@ The following output properties are available:
         <span class="property-indicator"></span>
         <span class="property-type">str</span>
     </dt>
-    <dd>{{% md %}}Current state of this component: whether or not is has been provisioned within the resource group it is defined. Users cannot change this value but are able to read from it. Values will include Succeeded, Deploying, Canceled, and Failed.{{% /md %}}</dd>
-    <dt class="property-"
+    <dd>{{% md %}}Current state of this component: whether or not is has been provisioned within the resource group it is defined. Users cannot change this value but are able to read from it. Values will include Succeeded, Deploying, Canceled, and Failed.{{% /md %}}</dd><dt class="property-"
             title="">
         <span id="tenant_id_python">
 <a href="#tenant_id_python" style="color: inherit; text-decoration: inherit;">tenant_<wbr>id</a>
@@ -949,8 +840,7 @@ The following output properties are available:
         <span class="property-indicator"></span>
         <span class="property-type">str</span>
     </dt>
-    <dd>{{% md %}}Azure Tenant Id.{{% /md %}}</dd>
-    <dt class="property-"
+    <dd>{{% md %}}Azure Tenant Id.{{% /md %}}</dd><dt class="property-"
             title="">
         <span id="type_python">
 <a href="#type_python" style="color: inherit; text-decoration: inherit;">type</a>
@@ -958,8 +848,7 @@ The following output properties are available:
         <span class="property-indicator"></span>
         <span class="property-type">str</span>
     </dt>
-    <dd>{{% md %}}Azure resource type{{% /md %}}</dd>
-    <dt class="property-"
+    <dd>{{% md %}}Azure resource type{{% /md %}}</dd><dt class="property-"
             title="">
         <span id="disable_ip_masking_python">
 <a href="#disable_ip_masking_python" style="color: inherit; text-decoration: inherit;">disable_<wbr>ip_<wbr>masking</a>
@@ -967,8 +856,7 @@ The following output properties are available:
         <span class="property-indicator"></span>
         <span class="property-type">bool</span>
     </dt>
-    <dd>{{% md %}}Disable IP masking.{{% /md %}}</dd>
-    <dt class="property-"
+    <dd>{{% md %}}Disable IP masking.{{% /md %}}</dd><dt class="property-"
             title="">
         <span id="flow_type_python">
 <a href="#flow_type_python" style="color: inherit; text-decoration: inherit;">flow_<wbr>type</a>
@@ -976,8 +864,7 @@ The following output properties are available:
         <span class="property-indicator"></span>
         <span class="property-type">str</span>
     </dt>
-    <dd>{{% md %}}Used by the Application Insights system to determine what kind of flow this component was created by. This is to be set to 'Bluefield' when creating/updating a component via the REST API.{{% /md %}}</dd>
-    <dt class="property-"
+    <dd>{{% md %}}Used by the Application Insights system to determine what kind of flow this component was created by. This is to be set to 'Bluefield' when creating/updating a component via the REST API.{{% /md %}}</dd><dt class="property-"
             title="">
         <span id="hockey_app_id_python">
 <a href="#hockey_app_id_python" style="color: inherit; text-decoration: inherit;">hockey_<wbr>app_<wbr>id</a>
@@ -985,8 +872,7 @@ The following output properties are available:
         <span class="property-indicator"></span>
         <span class="property-type">str</span>
     </dt>
-    <dd>{{% md %}}The unique application ID created when a new application is added to HockeyApp, used for communications with HockeyApp.{{% /md %}}</dd>
-    <dt class="property-"
+    <dd>{{% md %}}The unique application ID created when a new application is added to HockeyApp, used for communications with HockeyApp.{{% /md %}}</dd><dt class="property-"
             title="">
         <span id="immediate_purge_data_on30_days_python">
 <a href="#immediate_purge_data_on30_days_python" style="color: inherit; text-decoration: inherit;">immediate_<wbr>purge_<wbr>data_<wbr>on30_<wbr>days</a>
@@ -994,8 +880,7 @@ The following output properties are available:
         <span class="property-indicator"></span>
         <span class="property-type">bool</span>
     </dt>
-    <dd>{{% md %}}Purge data immediately after 30 days.{{% /md %}}</dd>
-    <dt class="property-"
+    <dd>{{% md %}}Purge data immediately after 30 days.{{% /md %}}</dd><dt class="property-"
             title="">
         <span id="ingestion_mode_python">
 <a href="#ingestion_mode_python" style="color: inherit; text-decoration: inherit;">ingestion_<wbr>mode</a>
@@ -1003,8 +888,7 @@ The following output properties are available:
         <span class="property-indicator"></span>
         <span class="property-type">str</span>
     </dt>
-    <dd>{{% md %}}Indicates the flow of the ingestion.{{% /md %}}</dd>
-    <dt class="property-"
+    <dd>{{% md %}}Indicates the flow of the ingestion.{{% /md %}}</dd><dt class="property-"
             title="">
         <span id="request_source_python">
 <a href="#request_source_python" style="color: inherit; text-decoration: inherit;">request_<wbr>source</a>
@@ -1012,8 +896,7 @@ The following output properties are available:
         <span class="property-indicator"></span>
         <span class="property-type">str</span>
     </dt>
-    <dd>{{% md %}}Describes what tool created this Application Insights component. Customers using this API should set this to the default 'rest'.{{% /md %}}</dd>
-    <dt class="property-"
+    <dd>{{% md %}}Describes what tool created this Application Insights component. Customers using this API should set this to the default 'rest'.{{% /md %}}</dd><dt class="property-"
             title="">
         <span id="retention_in_days_python">
 <a href="#retention_in_days_python" style="color: inherit; text-decoration: inherit;">retention_<wbr>in_<wbr>days</a>
@@ -1021,8 +904,7 @@ The following output properties are available:
         <span class="property-indicator"></span>
         <span class="property-type">int</span>
     </dt>
-    <dd>{{% md %}}Retention period in days.{{% /md %}}</dd>
-    <dt class="property-"
+    <dd>{{% md %}}Retention period in days.{{% /md %}}</dd><dt class="property-"
             title="">
         <span id="sampling_percentage_python">
 <a href="#sampling_percentage_python" style="color: inherit; text-decoration: inherit;">sampling_<wbr>percentage</a>
@@ -1030,8 +912,7 @@ The following output properties are available:
         <span class="property-indicator"></span>
         <span class="property-type">float</span>
     </dt>
-    <dd>{{% md %}}Percentage of the data produced by the application being monitored that is being sampled for Application Insights telemetry.{{% /md %}}</dd>
-    <dt class="property-"
+    <dd>{{% md %}}Percentage of the data produced by the application being monitored that is being sampled for Application Insights telemetry.{{% /md %}}</dd><dt class="property-"
             title="">
         <span id="tags_python">
 <a href="#tags_python" style="color: inherit; text-decoration: inherit;">tags</a>
@@ -1039,8 +920,7 @@ The following output properties are available:
         <span class="property-indicator"></span>
         <span class="property-type">Mapping[str, str]</span>
     </dt>
-    <dd>{{% md %}}Resource tags{{% /md %}}</dd>
-</dl>
+    <dd>{{% md %}}Resource tags{{% /md %}}</dd></dl>
 {{% /choosable %}}
 
 
@@ -1054,9 +934,7 @@ The following output properties are available:
 
 
 {{% choosable language csharp %}}
-<dl class="resources-properties">
-
-    <dt class="property-optional"
+<dl class="resources-properties"><dt class="property-optional"
             title="Optional">
         <span id="resourceid_csharp">
 <a href="#resourceid_csharp" style="color: inherit; text-decoration: inherit;">Resource<wbr>Id</a>
@@ -1064,8 +942,7 @@ The following output properties are available:
         <span class="property-indicator"></span>
         <span class="property-type">string</span>
     </dt>
-    <dd>{{% md %}}The full resource Id of the private link scope resource.{{% /md %}}</dd>
-    <dt class="property-optional"
+    <dd>{{% md %}}The full resource Id of the private link scope resource.{{% /md %}}</dd><dt class="property-optional"
             title="Optional">
         <span id="scopeid_csharp">
 <a href="#scopeid_csharp" style="color: inherit; text-decoration: inherit;">Scope<wbr>Id</a>
@@ -1073,14 +950,11 @@ The following output properties are available:
         <span class="property-indicator"></span>
         <span class="property-type">string</span>
     </dt>
-    <dd>{{% md %}}The private link scope unique Identifier.{{% /md %}}</dd>
-</dl>
+    <dd>{{% md %}}The private link scope unique Identifier.{{% /md %}}</dd></dl>
 {{% /choosable %}}
 
 {{% choosable language go %}}
-<dl class="resources-properties">
-
-    <dt class="property-optional"
+<dl class="resources-properties"><dt class="property-optional"
             title="Optional">
         <span id="resourceid_go">
 <a href="#resourceid_go" style="color: inherit; text-decoration: inherit;">Resource<wbr>Id</a>
@@ -1088,8 +962,7 @@ The following output properties are available:
         <span class="property-indicator"></span>
         <span class="property-type">string</span>
     </dt>
-    <dd>{{% md %}}The full resource Id of the private link scope resource.{{% /md %}}</dd>
-    <dt class="property-optional"
+    <dd>{{% md %}}The full resource Id of the private link scope resource.{{% /md %}}</dd><dt class="property-optional"
             title="Optional">
         <span id="scopeid_go">
 <a href="#scopeid_go" style="color: inherit; text-decoration: inherit;">Scope<wbr>Id</a>
@@ -1097,14 +970,11 @@ The following output properties are available:
         <span class="property-indicator"></span>
         <span class="property-type">string</span>
     </dt>
-    <dd>{{% md %}}The private link scope unique Identifier.{{% /md %}}</dd>
-</dl>
+    <dd>{{% md %}}The private link scope unique Identifier.{{% /md %}}</dd></dl>
 {{% /choosable %}}
 
 {{% choosable language nodejs %}}
-<dl class="resources-properties">
-
-    <dt class="property-optional"
+<dl class="resources-properties"><dt class="property-optional"
             title="Optional">
         <span id="resourceid_nodejs">
 <a href="#resourceid_nodejs" style="color: inherit; text-decoration: inherit;">resource<wbr>Id</a>
@@ -1112,8 +982,7 @@ The following output properties are available:
         <span class="property-indicator"></span>
         <span class="property-type">string</span>
     </dt>
-    <dd>{{% md %}}The full resource Id of the private link scope resource.{{% /md %}}</dd>
-    <dt class="property-optional"
+    <dd>{{% md %}}The full resource Id of the private link scope resource.{{% /md %}}</dd><dt class="property-optional"
             title="Optional">
         <span id="scopeid_nodejs">
 <a href="#scopeid_nodejs" style="color: inherit; text-decoration: inherit;">scope<wbr>Id</a>
@@ -1121,14 +990,11 @@ The following output properties are available:
         <span class="property-indicator"></span>
         <span class="property-type">string</span>
     </dt>
-    <dd>{{% md %}}The private link scope unique Identifier.{{% /md %}}</dd>
-</dl>
+    <dd>{{% md %}}The private link scope unique Identifier.{{% /md %}}</dd></dl>
 {{% /choosable %}}
 
 {{% choosable language python %}}
-<dl class="resources-properties">
-
-    <dt class="property-optional"
+<dl class="resources-properties"><dt class="property-optional"
             title="Optional">
         <span id="resource_id_python">
 <a href="#resource_id_python" style="color: inherit; text-decoration: inherit;">resource_<wbr>id</a>
@@ -1136,8 +1002,7 @@ The following output properties are available:
         <span class="property-indicator"></span>
         <span class="property-type">str</span>
     </dt>
-    <dd>{{% md %}}The full resource Id of the private link scope resource.{{% /md %}}</dd>
-    <dt class="property-optional"
+    <dd>{{% md %}}The full resource Id of the private link scope resource.{{% /md %}}</dd><dt class="property-optional"
             title="Optional">
         <span id="scope_id_python">
 <a href="#scope_id_python" style="color: inherit; text-decoration: inherit;">scope_<wbr>id</a>
@@ -1145,8 +1010,7 @@ The following output properties are available:
         <span class="property-indicator"></span>
         <span class="property-type">str</span>
     </dt>
-    <dd>{{% md %}}The private link scope unique Identifier.{{% /md %}}</dd>
-</dl>
+    <dd>{{% md %}}The private link scope unique Identifier.{{% /md %}}</dd></dl>
 {{% /choosable %}}
 
 

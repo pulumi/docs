@@ -51,9 +51,7 @@ The following arguments are supported:
 
 
 {{% choosable language csharp %}}
-<dl class="resources-properties">
-
-    <dt class="property-required"
+<dl class="resources-properties"><dt class="property-required"
             title="Required">
         <span id="managername_csharp">
 <a href="#managername_csharp" style="color: inherit; text-decoration: inherit;">Manager<wbr>Name</a>
@@ -61,8 +59,7 @@ The following arguments are supported:
         <span class="property-indicator"></span>
         <span class="property-type">string</span>
     </dt>
-    <dd>{{% md %}}The manager name{{% /md %}}</dd>
-    <dt class="property-required"
+    <dd>{{% md %}}The manager name{{% /md %}}</dd><dt class="property-required"
             title="Required">
         <span id="resourcegroupname_csharp">
 <a href="#resourcegroupname_csharp" style="color: inherit; text-decoration: inherit;">Resource<wbr>Group<wbr>Name</a>
@@ -70,8 +67,7 @@ The following arguments are supported:
         <span class="property-indicator"></span>
         <span class="property-type">string</span>
     </dt>
-    <dd>{{% md %}}The resource group name{{% /md %}}</dd>
-    <dt class="property-required"
+    <dd>{{% md %}}The resource group name{{% /md %}}</dd><dt class="property-required"
             title="Required">
         <span id="sourcedevicename_csharp">
 <a href="#sourcedevicename_csharp" style="color: inherit; text-decoration: inherit;">Source<wbr>Device<wbr>Name</a>
@@ -79,8 +75,7 @@ The following arguments are supported:
         <span class="property-indicator"></span>
         <span class="property-type">string</span>
     </dt>
-    <dd>{{% md %}}The source device name on which failover is performed.{{% /md %}}</dd>
-    <dt class="property-optional"
+    <dd>{{% md %}}The source device name on which failover is performed.{{% /md %}}</dd><dt class="property-optional"
             title="Optional">
         <span id="volumecontainers_csharp">
 <a href="#volumecontainers_csharp" style="color: inherit; text-decoration: inherit;">Volume<wbr>Containers</a>
@@ -88,14 +83,11 @@ The following arguments are supported:
         <span class="property-indicator"></span>
         <span class="property-type">List&lt;string&gt;</span>
     </dt>
-    <dd>{{% md %}}The list of path IDs of the volume containers that needs to be failed-over, for which we want to fetch the eligible targets.{{% /md %}}</dd>
-</dl>
+    <dd>{{% md %}}The list of path IDs of the volume containers that needs to be failed-over, for which we want to fetch the eligible targets.{{% /md %}}</dd></dl>
 {{% /choosable %}}
 
 {{% choosable language go %}}
-<dl class="resources-properties">
-
-    <dt class="property-required"
+<dl class="resources-properties"><dt class="property-required"
             title="Required">
         <span id="managername_go">
 <a href="#managername_go" style="color: inherit; text-decoration: inherit;">Manager<wbr>Name</a>
@@ -103,8 +95,7 @@ The following arguments are supported:
         <span class="property-indicator"></span>
         <span class="property-type">string</span>
     </dt>
-    <dd>{{% md %}}The manager name{{% /md %}}</dd>
-    <dt class="property-required"
+    <dd>{{% md %}}The manager name{{% /md %}}</dd><dt class="property-required"
             title="Required">
         <span id="resourcegroupname_go">
 <a href="#resourcegroupname_go" style="color: inherit; text-decoration: inherit;">Resource<wbr>Group<wbr>Name</a>
@@ -112,8 +103,7 @@ The following arguments are supported:
         <span class="property-indicator"></span>
         <span class="property-type">string</span>
     </dt>
-    <dd>{{% md %}}The resource group name{{% /md %}}</dd>
-    <dt class="property-required"
+    <dd>{{% md %}}The resource group name{{% /md %}}</dd><dt class="property-required"
             title="Required">
         <span id="sourcedevicename_go">
 <a href="#sourcedevicename_go" style="color: inherit; text-decoration: inherit;">Source<wbr>Device<wbr>Name</a>
@@ -121,8 +111,7 @@ The following arguments are supported:
         <span class="property-indicator"></span>
         <span class="property-type">string</span>
     </dt>
-    <dd>{{% md %}}The source device name on which failover is performed.{{% /md %}}</dd>
-    <dt class="property-optional"
+    <dd>{{% md %}}The source device name on which failover is performed.{{% /md %}}</dd><dt class="property-optional"
             title="Optional">
         <span id="volumecontainers_go">
 <a href="#volumecontainers_go" style="color: inherit; text-decoration: inherit;">Volume<wbr>Containers</a>
@@ -130,14 +119,11 @@ The following arguments are supported:
         <span class="property-indicator"></span>
         <span class="property-type">[]string</span>
     </dt>
-    <dd>{{% md %}}The list of path IDs of the volume containers that needs to be failed-over, for which we want to fetch the eligible targets.{{% /md %}}</dd>
-</dl>
+    <dd>{{% md %}}The list of path IDs of the volume containers that needs to be failed-over, for which we want to fetch the eligible targets.{{% /md %}}</dd></dl>
 {{% /choosable %}}
 
 {{% choosable language nodejs %}}
-<dl class="resources-properties">
-
-    <dt class="property-required"
+<dl class="resources-properties"><dt class="property-required"
             title="Required">
         <span id="managername_nodejs">
 <a href="#managername_nodejs" style="color: inherit; text-decoration: inherit;">manager<wbr>Name</a>
@@ -145,8 +131,7 @@ The following arguments are supported:
         <span class="property-indicator"></span>
         <span class="property-type">string</span>
     </dt>
-    <dd>{{% md %}}The manager name{{% /md %}}</dd>
-    <dt class="property-required"
+    <dd>{{% md %}}The manager name{{% /md %}}</dd><dt class="property-required"
             title="Required">
         <span id="resourcegroupname_nodejs">
 <a href="#resourcegroupname_nodejs" style="color: inherit; text-decoration: inherit;">resource<wbr>Group<wbr>Name</a>
@@ -154,8 +139,7 @@ The following arguments are supported:
         <span class="property-indicator"></span>
         <span class="property-type">string</span>
     </dt>
-    <dd>{{% md %}}The resource group name{{% /md %}}</dd>
-    <dt class="property-required"
+    <dd>{{% md %}}The resource group name{{% /md %}}</dd><dt class="property-required"
             title="Required">
         <span id="sourcedevicename_nodejs">
 <a href="#sourcedevicename_nodejs" style="color: inherit; text-decoration: inherit;">source<wbr>Device<wbr>Name</a>
@@ -163,8 +147,7 @@ The following arguments are supported:
         <span class="property-indicator"></span>
         <span class="property-type">string</span>
     </dt>
-    <dd>{{% md %}}The source device name on which failover is performed.{{% /md %}}</dd>
-    <dt class="property-optional"
+    <dd>{{% md %}}The source device name on which failover is performed.{{% /md %}}</dd><dt class="property-optional"
             title="Optional">
         <span id="volumecontainers_nodejs">
 <a href="#volumecontainers_nodejs" style="color: inherit; text-decoration: inherit;">volume<wbr>Containers</a>
@@ -172,14 +155,11 @@ The following arguments are supported:
         <span class="property-indicator"></span>
         <span class="property-type">string[]</span>
     </dt>
-    <dd>{{% md %}}The list of path IDs of the volume containers that needs to be failed-over, for which we want to fetch the eligible targets.{{% /md %}}</dd>
-</dl>
+    <dd>{{% md %}}The list of path IDs of the volume containers that needs to be failed-over, for which we want to fetch the eligible targets.{{% /md %}}</dd></dl>
 {{% /choosable %}}
 
 {{% choosable language python %}}
-<dl class="resources-properties">
-
-    <dt class="property-required"
+<dl class="resources-properties"><dt class="property-required"
             title="Required">
         <span id="manager_name_python">
 <a href="#manager_name_python" style="color: inherit; text-decoration: inherit;">manager_<wbr>name</a>
@@ -187,8 +167,7 @@ The following arguments are supported:
         <span class="property-indicator"></span>
         <span class="property-type">str</span>
     </dt>
-    <dd>{{% md %}}The manager name{{% /md %}}</dd>
-    <dt class="property-required"
+    <dd>{{% md %}}The manager name{{% /md %}}</dd><dt class="property-required"
             title="Required">
         <span id="resource_group_name_python">
 <a href="#resource_group_name_python" style="color: inherit; text-decoration: inherit;">resource_<wbr>group_<wbr>name</a>
@@ -196,8 +175,7 @@ The following arguments are supported:
         <span class="property-indicator"></span>
         <span class="property-type">str</span>
     </dt>
-    <dd>{{% md %}}The resource group name{{% /md %}}</dd>
-    <dt class="property-required"
+    <dd>{{% md %}}The resource group name{{% /md %}}</dd><dt class="property-required"
             title="Required">
         <span id="source_device_name_python">
 <a href="#source_device_name_python" style="color: inherit; text-decoration: inherit;">source_<wbr>device_<wbr>name</a>
@@ -205,8 +183,7 @@ The following arguments are supported:
         <span class="property-indicator"></span>
         <span class="property-type">str</span>
     </dt>
-    <dd>{{% md %}}The source device name on which failover is performed.{{% /md %}}</dd>
-    <dt class="property-optional"
+    <dd>{{% md %}}The source device name on which failover is performed.{{% /md %}}</dd><dt class="property-optional"
             title="Optional">
         <span id="volume_containers_python">
 <a href="#volume_containers_python" style="color: inherit; text-decoration: inherit;">volume_<wbr>containers</a>
@@ -214,8 +191,7 @@ The following arguments are supported:
         <span class="property-indicator"></span>
         <span class="property-type">Sequence[str]</span>
     </dt>
-    <dd>{{% md %}}The list of path IDs of the volume containers that needs to be failed-over, for which we want to fetch the eligible targets.{{% /md %}}</dd>
-</dl>
+    <dd>{{% md %}}The list of path IDs of the volume containers that needs to be failed-over, for which we want to fetch the eligible targets.{{% /md %}}</dd></dl>
 {{% /choosable %}}
 
 
@@ -228,9 +204,7 @@ The following output properties are available:
 
 
 {{% choosable language csharp %}}
-<dl class="resources-properties">
-
-    <dt class="property-"
+<dl class="resources-properties"><dt class="property-"
             title="">
         <span id="value_csharp">
 <a href="#value_csharp" style="color: inherit; text-decoration: inherit;">Value</a>
@@ -238,14 +212,11 @@ The following output properties are available:
         <span class="property-indicator"></span>
         <span class="property-type"><a href="#failovertargetresponse">List&lt;Pulumi.<wbr>Azure<wbr>Native.<wbr>Stor<wbr>Simple.<wbr>Outputs.<wbr>Failover<wbr>Target<wbr>Response&gt;</a></span>
     </dt>
-    <dd>{{% md %}}The list of all the failover targets.{{% /md %}}</dd>
-</dl>
+    <dd>{{% md %}}The list of all the failover targets.{{% /md %}}</dd></dl>
 {{% /choosable %}}
 
 {{% choosable language go %}}
-<dl class="resources-properties">
-
-    <dt class="property-"
+<dl class="resources-properties"><dt class="property-"
             title="">
         <span id="value_go">
 <a href="#value_go" style="color: inherit; text-decoration: inherit;">Value</a>
@@ -253,14 +224,11 @@ The following output properties are available:
         <span class="property-indicator"></span>
         <span class="property-type"><a href="#failovertargetresponse">[]Failover<wbr>Target<wbr>Response</a></span>
     </dt>
-    <dd>{{% md %}}The list of all the failover targets.{{% /md %}}</dd>
-</dl>
+    <dd>{{% md %}}The list of all the failover targets.{{% /md %}}</dd></dl>
 {{% /choosable %}}
 
 {{% choosable language nodejs %}}
-<dl class="resources-properties">
-
-    <dt class="property-"
+<dl class="resources-properties"><dt class="property-"
             title="">
         <span id="value_nodejs">
 <a href="#value_nodejs" style="color: inherit; text-decoration: inherit;">value</a>
@@ -268,14 +236,11 @@ The following output properties are available:
         <span class="property-indicator"></span>
         <span class="property-type"><a href="#failovertargetresponse">Failover<wbr>Target<wbr>Response[]</a></span>
     </dt>
-    <dd>{{% md %}}The list of all the failover targets.{{% /md %}}</dd>
-</dl>
+    <dd>{{% md %}}The list of all the failover targets.{{% /md %}}</dd></dl>
 {{% /choosable %}}
 
 {{% choosable language python %}}
-<dl class="resources-properties">
-
-    <dt class="property-"
+<dl class="resources-properties"><dt class="property-"
             title="">
         <span id="value_python">
 <a href="#value_python" style="color: inherit; text-decoration: inherit;">value</a>
@@ -283,8 +248,7 @@ The following output properties are available:
         <span class="property-indicator"></span>
         <span class="property-type"><a href="#failovertargetresponse">Sequence[Failover<wbr>Target<wbr>Response]</a></span>
     </dt>
-    <dd>{{% md %}}The list of all the failover targets.{{% /md %}}</dd>
-</dl>
+    <dd>{{% md %}}The list of all the failover targets.{{% /md %}}</dd></dl>
 {{% /choosable %}}
 
 
@@ -298,9 +262,7 @@ The following output properties are available:
 
 
 {{% choosable language csharp %}}
-<dl class="resources-properties">
-
-    <dt class="property-optional"
+<dl class="resources-properties"><dt class="property-optional"
             title="Optional">
         <span id="availablelocalstorageinbytes_csharp">
 <a href="#availablelocalstorageinbytes_csharp" style="color: inherit; text-decoration: inherit;">Available<wbr>Local<wbr>Storage<wbr>In<wbr>Bytes</a>
@@ -308,8 +270,7 @@ The following output properties are available:
         <span class="property-indicator"></span>
         <span class="property-type">double</span>
     </dt>
-    <dd>{{% md %}}The amount of free local storage available on the device in bytes.{{% /md %}}</dd>
-    <dt class="property-optional"
+    <dd>{{% md %}}The amount of free local storage available on the device in bytes.{{% /md %}}</dd><dt class="property-optional"
             title="Optional">
         <span id="availabletieredstorageinbytes_csharp">
 <a href="#availabletieredstorageinbytes_csharp" style="color: inherit; text-decoration: inherit;">Available<wbr>Tiered<wbr>Storage<wbr>In<wbr>Bytes</a>
@@ -317,8 +278,7 @@ The following output properties are available:
         <span class="property-indicator"></span>
         <span class="property-type">double</span>
     </dt>
-    <dd>{{% md %}}The amount of free tiered storage available for the device in bytes.{{% /md %}}</dd>
-    <dt class="property-optional"
+    <dd>{{% md %}}The amount of free tiered storage available for the device in bytes.{{% /md %}}</dd><dt class="property-optional"
             title="Optional">
         <span id="datacontainerscount_csharp">
 <a href="#datacontainerscount_csharp" style="color: inherit; text-decoration: inherit;">Data<wbr>Containers<wbr>Count</a>
@@ -326,8 +286,7 @@ The following output properties are available:
         <span class="property-indicator"></span>
         <span class="property-type">int</span>
     </dt>
-    <dd>{{% md %}}The count of data containers on the device.{{% /md %}}</dd>
-    <dt class="property-optional"
+    <dd>{{% md %}}The count of data containers on the device.{{% /md %}}</dd><dt class="property-optional"
             title="Optional">
         <span id="deviceid_csharp">
 <a href="#deviceid_csharp" style="color: inherit; text-decoration: inherit;">Device<wbr>Id</a>
@@ -335,8 +294,7 @@ The following output properties are available:
         <span class="property-indicator"></span>
         <span class="property-type">string</span>
     </dt>
-    <dd>{{% md %}}The path ID of the device.{{% /md %}}</dd>
-    <dt class="property-optional"
+    <dd>{{% md %}}The path ID of the device.{{% /md %}}</dd><dt class="property-optional"
             title="Optional">
         <span id="devicelocation_csharp">
 <a href="#devicelocation_csharp" style="color: inherit; text-decoration: inherit;">Device<wbr>Location</a>
@@ -344,8 +302,7 @@ The following output properties are available:
         <span class="property-indicator"></span>
         <span class="property-type">string</span>
     </dt>
-    <dd>{{% md %}}The geo location (applicable only for cloud appliances) of the device.{{% /md %}}</dd>
-    <dt class="property-optional"
+    <dd>{{% md %}}The geo location (applicable only for cloud appliances) of the device.{{% /md %}}</dd><dt class="property-optional"
             title="Optional">
         <span id="devicesoftwareversion_csharp">
 <a href="#devicesoftwareversion_csharp" style="color: inherit; text-decoration: inherit;">Device<wbr>Software<wbr>Version</a>
@@ -353,8 +310,7 @@ The following output properties are available:
         <span class="property-indicator"></span>
         <span class="property-type">string</span>
     </dt>
-    <dd>{{% md %}}The software version of the device.{{% /md %}}</dd>
-    <dt class="property-optional"
+    <dd>{{% md %}}The software version of the device.{{% /md %}}</dd><dt class="property-optional"
             title="Optional">
         <span id="devicestatus_csharp">
 <a href="#devicestatus_csharp" style="color: inherit; text-decoration: inherit;">Device<wbr>Status</a>
@@ -362,8 +318,7 @@ The following output properties are available:
         <span class="property-indicator"></span>
         <span class="property-type">string</span>
     </dt>
-    <dd>{{% md %}}The status of the device.{{% /md %}}</dd>
-    <dt class="property-optional"
+    <dd>{{% md %}}The status of the device.{{% /md %}}</dd><dt class="property-optional"
             title="Optional">
         <span id="eligibilityresult_csharp">
 <a href="#eligibilityresult_csharp" style="color: inherit; text-decoration: inherit;">Eligibility<wbr>Result</a>
@@ -371,8 +326,7 @@ The following output properties are available:
         <span class="property-indicator"></span>
         <span class="property-type"><a href="#targeteligibilityresultresponse">Pulumi.<wbr>Azure<wbr>Native.<wbr>Stor<wbr>Simple.<wbr>Inputs.<wbr>Target<wbr>Eligibility<wbr>Result<wbr>Response<wbr>Args</a></span>
     </dt>
-    <dd>{{% md %}}The eligibility result of the device, as a failover target device.{{% /md %}}</dd>
-    <dt class="property-optional"
+    <dd>{{% md %}}The eligibility result of the device, as a failover target device.{{% /md %}}</dd><dt class="property-optional"
             title="Optional">
         <span id="friendlydevicesoftwareversion_csharp">
 <a href="#friendlydevicesoftwareversion_csharp" style="color: inherit; text-decoration: inherit;">Friendly<wbr>Device<wbr>Software<wbr>Version</a>
@@ -380,8 +334,7 @@ The following output properties are available:
         <span class="property-indicator"></span>
         <span class="property-type">string</span>
     </dt>
-    <dd>{{% md %}}The friendly name for the current version of software on the device.{{% /md %}}</dd>
-    <dt class="property-optional"
+    <dd>{{% md %}}The friendly name for the current version of software on the device.{{% /md %}}</dd><dt class="property-optional"
             title="Optional">
         <span id="modeldescription_csharp">
 <a href="#modeldescription_csharp" style="color: inherit; text-decoration: inherit;">Model<wbr>Description</a>
@@ -389,8 +342,7 @@ The following output properties are available:
         <span class="property-indicator"></span>
         <span class="property-type">string</span>
     </dt>
-    <dd>{{% md %}}The model number of the device.{{% /md %}}</dd>
-    <dt class="property-optional"
+    <dd>{{% md %}}The model number of the device.{{% /md %}}</dd><dt class="property-optional"
             title="Optional">
         <span id="volumescount_csharp">
 <a href="#volumescount_csharp" style="color: inherit; text-decoration: inherit;">Volumes<wbr>Count</a>
@@ -398,14 +350,11 @@ The following output properties are available:
         <span class="property-indicator"></span>
         <span class="property-type">int</span>
     </dt>
-    <dd>{{% md %}}The count of volumes on the device.{{% /md %}}</dd>
-</dl>
+    <dd>{{% md %}}The count of volumes on the device.{{% /md %}}</dd></dl>
 {{% /choosable %}}
 
 {{% choosable language go %}}
-<dl class="resources-properties">
-
-    <dt class="property-optional"
+<dl class="resources-properties"><dt class="property-optional"
             title="Optional">
         <span id="availablelocalstorageinbytes_go">
 <a href="#availablelocalstorageinbytes_go" style="color: inherit; text-decoration: inherit;">Available<wbr>Local<wbr>Storage<wbr>In<wbr>Bytes</a>
@@ -413,8 +362,7 @@ The following output properties are available:
         <span class="property-indicator"></span>
         <span class="property-type">float64</span>
     </dt>
-    <dd>{{% md %}}The amount of free local storage available on the device in bytes.{{% /md %}}</dd>
-    <dt class="property-optional"
+    <dd>{{% md %}}The amount of free local storage available on the device in bytes.{{% /md %}}</dd><dt class="property-optional"
             title="Optional">
         <span id="availabletieredstorageinbytes_go">
 <a href="#availabletieredstorageinbytes_go" style="color: inherit; text-decoration: inherit;">Available<wbr>Tiered<wbr>Storage<wbr>In<wbr>Bytes</a>
@@ -422,8 +370,7 @@ The following output properties are available:
         <span class="property-indicator"></span>
         <span class="property-type">float64</span>
     </dt>
-    <dd>{{% md %}}The amount of free tiered storage available for the device in bytes.{{% /md %}}</dd>
-    <dt class="property-optional"
+    <dd>{{% md %}}The amount of free tiered storage available for the device in bytes.{{% /md %}}</dd><dt class="property-optional"
             title="Optional">
         <span id="datacontainerscount_go">
 <a href="#datacontainerscount_go" style="color: inherit; text-decoration: inherit;">Data<wbr>Containers<wbr>Count</a>
@@ -431,8 +378,7 @@ The following output properties are available:
         <span class="property-indicator"></span>
         <span class="property-type">int</span>
     </dt>
-    <dd>{{% md %}}The count of data containers on the device.{{% /md %}}</dd>
-    <dt class="property-optional"
+    <dd>{{% md %}}The count of data containers on the device.{{% /md %}}</dd><dt class="property-optional"
             title="Optional">
         <span id="deviceid_go">
 <a href="#deviceid_go" style="color: inherit; text-decoration: inherit;">Device<wbr>Id</a>
@@ -440,8 +386,7 @@ The following output properties are available:
         <span class="property-indicator"></span>
         <span class="property-type">string</span>
     </dt>
-    <dd>{{% md %}}The path ID of the device.{{% /md %}}</dd>
-    <dt class="property-optional"
+    <dd>{{% md %}}The path ID of the device.{{% /md %}}</dd><dt class="property-optional"
             title="Optional">
         <span id="devicelocation_go">
 <a href="#devicelocation_go" style="color: inherit; text-decoration: inherit;">Device<wbr>Location</a>
@@ -449,8 +394,7 @@ The following output properties are available:
         <span class="property-indicator"></span>
         <span class="property-type">string</span>
     </dt>
-    <dd>{{% md %}}The geo location (applicable only for cloud appliances) of the device.{{% /md %}}</dd>
-    <dt class="property-optional"
+    <dd>{{% md %}}The geo location (applicable only for cloud appliances) of the device.{{% /md %}}</dd><dt class="property-optional"
             title="Optional">
         <span id="devicesoftwareversion_go">
 <a href="#devicesoftwareversion_go" style="color: inherit; text-decoration: inherit;">Device<wbr>Software<wbr>Version</a>
@@ -458,8 +402,7 @@ The following output properties are available:
         <span class="property-indicator"></span>
         <span class="property-type">string</span>
     </dt>
-    <dd>{{% md %}}The software version of the device.{{% /md %}}</dd>
-    <dt class="property-optional"
+    <dd>{{% md %}}The software version of the device.{{% /md %}}</dd><dt class="property-optional"
             title="Optional">
         <span id="devicestatus_go">
 <a href="#devicestatus_go" style="color: inherit; text-decoration: inherit;">Device<wbr>Status</a>
@@ -467,8 +410,7 @@ The following output properties are available:
         <span class="property-indicator"></span>
         <span class="property-type">string</span>
     </dt>
-    <dd>{{% md %}}The status of the device.{{% /md %}}</dd>
-    <dt class="property-optional"
+    <dd>{{% md %}}The status of the device.{{% /md %}}</dd><dt class="property-optional"
             title="Optional">
         <span id="eligibilityresult_go">
 <a href="#eligibilityresult_go" style="color: inherit; text-decoration: inherit;">Eligibility<wbr>Result</a>
@@ -476,8 +418,7 @@ The following output properties are available:
         <span class="property-indicator"></span>
         <span class="property-type"><a href="#targeteligibilityresultresponse">Target<wbr>Eligibility<wbr>Result<wbr>Response</a></span>
     </dt>
-    <dd>{{% md %}}The eligibility result of the device, as a failover target device.{{% /md %}}</dd>
-    <dt class="property-optional"
+    <dd>{{% md %}}The eligibility result of the device, as a failover target device.{{% /md %}}</dd><dt class="property-optional"
             title="Optional">
         <span id="friendlydevicesoftwareversion_go">
 <a href="#friendlydevicesoftwareversion_go" style="color: inherit; text-decoration: inherit;">Friendly<wbr>Device<wbr>Software<wbr>Version</a>
@@ -485,8 +426,7 @@ The following output properties are available:
         <span class="property-indicator"></span>
         <span class="property-type">string</span>
     </dt>
-    <dd>{{% md %}}The friendly name for the current version of software on the device.{{% /md %}}</dd>
-    <dt class="property-optional"
+    <dd>{{% md %}}The friendly name for the current version of software on the device.{{% /md %}}</dd><dt class="property-optional"
             title="Optional">
         <span id="modeldescription_go">
 <a href="#modeldescription_go" style="color: inherit; text-decoration: inherit;">Model<wbr>Description</a>
@@ -494,8 +434,7 @@ The following output properties are available:
         <span class="property-indicator"></span>
         <span class="property-type">string</span>
     </dt>
-    <dd>{{% md %}}The model number of the device.{{% /md %}}</dd>
-    <dt class="property-optional"
+    <dd>{{% md %}}The model number of the device.{{% /md %}}</dd><dt class="property-optional"
             title="Optional">
         <span id="volumescount_go">
 <a href="#volumescount_go" style="color: inherit; text-decoration: inherit;">Volumes<wbr>Count</a>
@@ -503,14 +442,11 @@ The following output properties are available:
         <span class="property-indicator"></span>
         <span class="property-type">int</span>
     </dt>
-    <dd>{{% md %}}The count of volumes on the device.{{% /md %}}</dd>
-</dl>
+    <dd>{{% md %}}The count of volumes on the device.{{% /md %}}</dd></dl>
 {{% /choosable %}}
 
 {{% choosable language nodejs %}}
-<dl class="resources-properties">
-
-    <dt class="property-optional"
+<dl class="resources-properties"><dt class="property-optional"
             title="Optional">
         <span id="availablelocalstorageinbytes_nodejs">
 <a href="#availablelocalstorageinbytes_nodejs" style="color: inherit; text-decoration: inherit;">available<wbr>Local<wbr>Storage<wbr>In<wbr>Bytes</a>
@@ -518,8 +454,7 @@ The following output properties are available:
         <span class="property-indicator"></span>
         <span class="property-type">number</span>
     </dt>
-    <dd>{{% md %}}The amount of free local storage available on the device in bytes.{{% /md %}}</dd>
-    <dt class="property-optional"
+    <dd>{{% md %}}The amount of free local storage available on the device in bytes.{{% /md %}}</dd><dt class="property-optional"
             title="Optional">
         <span id="availabletieredstorageinbytes_nodejs">
 <a href="#availabletieredstorageinbytes_nodejs" style="color: inherit; text-decoration: inherit;">available<wbr>Tiered<wbr>Storage<wbr>In<wbr>Bytes</a>
@@ -527,8 +462,7 @@ The following output properties are available:
         <span class="property-indicator"></span>
         <span class="property-type">number</span>
     </dt>
-    <dd>{{% md %}}The amount of free tiered storage available for the device in bytes.{{% /md %}}</dd>
-    <dt class="property-optional"
+    <dd>{{% md %}}The amount of free tiered storage available for the device in bytes.{{% /md %}}</dd><dt class="property-optional"
             title="Optional">
         <span id="datacontainerscount_nodejs">
 <a href="#datacontainerscount_nodejs" style="color: inherit; text-decoration: inherit;">data<wbr>Containers<wbr>Count</a>
@@ -536,8 +470,7 @@ The following output properties are available:
         <span class="property-indicator"></span>
         <span class="property-type">number</span>
     </dt>
-    <dd>{{% md %}}The count of data containers on the device.{{% /md %}}</dd>
-    <dt class="property-optional"
+    <dd>{{% md %}}The count of data containers on the device.{{% /md %}}</dd><dt class="property-optional"
             title="Optional">
         <span id="deviceid_nodejs">
 <a href="#deviceid_nodejs" style="color: inherit; text-decoration: inherit;">device<wbr>Id</a>
@@ -545,8 +478,7 @@ The following output properties are available:
         <span class="property-indicator"></span>
         <span class="property-type">string</span>
     </dt>
-    <dd>{{% md %}}The path ID of the device.{{% /md %}}</dd>
-    <dt class="property-optional"
+    <dd>{{% md %}}The path ID of the device.{{% /md %}}</dd><dt class="property-optional"
             title="Optional">
         <span id="devicelocation_nodejs">
 <a href="#devicelocation_nodejs" style="color: inherit; text-decoration: inherit;">device<wbr>Location</a>
@@ -554,8 +486,7 @@ The following output properties are available:
         <span class="property-indicator"></span>
         <span class="property-type">string</span>
     </dt>
-    <dd>{{% md %}}The geo location (applicable only for cloud appliances) of the device.{{% /md %}}</dd>
-    <dt class="property-optional"
+    <dd>{{% md %}}The geo location (applicable only for cloud appliances) of the device.{{% /md %}}</dd><dt class="property-optional"
             title="Optional">
         <span id="devicesoftwareversion_nodejs">
 <a href="#devicesoftwareversion_nodejs" style="color: inherit; text-decoration: inherit;">device<wbr>Software<wbr>Version</a>
@@ -563,8 +494,7 @@ The following output properties are available:
         <span class="property-indicator"></span>
         <span class="property-type">string</span>
     </dt>
-    <dd>{{% md %}}The software version of the device.{{% /md %}}</dd>
-    <dt class="property-optional"
+    <dd>{{% md %}}The software version of the device.{{% /md %}}</dd><dt class="property-optional"
             title="Optional">
         <span id="devicestatus_nodejs">
 <a href="#devicestatus_nodejs" style="color: inherit; text-decoration: inherit;">device<wbr>Status</a>
@@ -572,8 +502,7 @@ The following output properties are available:
         <span class="property-indicator"></span>
         <span class="property-type">string</span>
     </dt>
-    <dd>{{% md %}}The status of the device.{{% /md %}}</dd>
-    <dt class="property-optional"
+    <dd>{{% md %}}The status of the device.{{% /md %}}</dd><dt class="property-optional"
             title="Optional">
         <span id="eligibilityresult_nodejs">
 <a href="#eligibilityresult_nodejs" style="color: inherit; text-decoration: inherit;">eligibility<wbr>Result</a>
@@ -581,8 +510,7 @@ The following output properties are available:
         <span class="property-indicator"></span>
         <span class="property-type"><a href="#targeteligibilityresultresponse">Target<wbr>Eligibility<wbr>Result<wbr>Response</a></span>
     </dt>
-    <dd>{{% md %}}The eligibility result of the device, as a failover target device.{{% /md %}}</dd>
-    <dt class="property-optional"
+    <dd>{{% md %}}The eligibility result of the device, as a failover target device.{{% /md %}}</dd><dt class="property-optional"
             title="Optional">
         <span id="friendlydevicesoftwareversion_nodejs">
 <a href="#friendlydevicesoftwareversion_nodejs" style="color: inherit; text-decoration: inherit;">friendly<wbr>Device<wbr>Software<wbr>Version</a>
@@ -590,8 +518,7 @@ The following output properties are available:
         <span class="property-indicator"></span>
         <span class="property-type">string</span>
     </dt>
-    <dd>{{% md %}}The friendly name for the current version of software on the device.{{% /md %}}</dd>
-    <dt class="property-optional"
+    <dd>{{% md %}}The friendly name for the current version of software on the device.{{% /md %}}</dd><dt class="property-optional"
             title="Optional">
         <span id="modeldescription_nodejs">
 <a href="#modeldescription_nodejs" style="color: inherit; text-decoration: inherit;">model<wbr>Description</a>
@@ -599,8 +526,7 @@ The following output properties are available:
         <span class="property-indicator"></span>
         <span class="property-type">string</span>
     </dt>
-    <dd>{{% md %}}The model number of the device.{{% /md %}}</dd>
-    <dt class="property-optional"
+    <dd>{{% md %}}The model number of the device.{{% /md %}}</dd><dt class="property-optional"
             title="Optional">
         <span id="volumescount_nodejs">
 <a href="#volumescount_nodejs" style="color: inherit; text-decoration: inherit;">volumes<wbr>Count</a>
@@ -608,14 +534,11 @@ The following output properties are available:
         <span class="property-indicator"></span>
         <span class="property-type">number</span>
     </dt>
-    <dd>{{% md %}}The count of volumes on the device.{{% /md %}}</dd>
-</dl>
+    <dd>{{% md %}}The count of volumes on the device.{{% /md %}}</dd></dl>
 {{% /choosable %}}
 
 {{% choosable language python %}}
-<dl class="resources-properties">
-
-    <dt class="property-optional"
+<dl class="resources-properties"><dt class="property-optional"
             title="Optional">
         <span id="available_local_storage_in_bytes_python">
 <a href="#available_local_storage_in_bytes_python" style="color: inherit; text-decoration: inherit;">available_<wbr>local_<wbr>storage_<wbr>in_<wbr>bytes</a>
@@ -623,8 +546,7 @@ The following output properties are available:
         <span class="property-indicator"></span>
         <span class="property-type">float</span>
     </dt>
-    <dd>{{% md %}}The amount of free local storage available on the device in bytes.{{% /md %}}</dd>
-    <dt class="property-optional"
+    <dd>{{% md %}}The amount of free local storage available on the device in bytes.{{% /md %}}</dd><dt class="property-optional"
             title="Optional">
         <span id="available_tiered_storage_in_bytes_python">
 <a href="#available_tiered_storage_in_bytes_python" style="color: inherit; text-decoration: inherit;">available_<wbr>tiered_<wbr>storage_<wbr>in_<wbr>bytes</a>
@@ -632,8 +554,7 @@ The following output properties are available:
         <span class="property-indicator"></span>
         <span class="property-type">float</span>
     </dt>
-    <dd>{{% md %}}The amount of free tiered storage available for the device in bytes.{{% /md %}}</dd>
-    <dt class="property-optional"
+    <dd>{{% md %}}The amount of free tiered storage available for the device in bytes.{{% /md %}}</dd><dt class="property-optional"
             title="Optional">
         <span id="data_containers_count_python">
 <a href="#data_containers_count_python" style="color: inherit; text-decoration: inherit;">data_<wbr>containers_<wbr>count</a>
@@ -641,8 +562,7 @@ The following output properties are available:
         <span class="property-indicator"></span>
         <span class="property-type">int</span>
     </dt>
-    <dd>{{% md %}}The count of data containers on the device.{{% /md %}}</dd>
-    <dt class="property-optional"
+    <dd>{{% md %}}The count of data containers on the device.{{% /md %}}</dd><dt class="property-optional"
             title="Optional">
         <span id="device_id_python">
 <a href="#device_id_python" style="color: inherit; text-decoration: inherit;">device_<wbr>id</a>
@@ -650,8 +570,7 @@ The following output properties are available:
         <span class="property-indicator"></span>
         <span class="property-type">str</span>
     </dt>
-    <dd>{{% md %}}The path ID of the device.{{% /md %}}</dd>
-    <dt class="property-optional"
+    <dd>{{% md %}}The path ID of the device.{{% /md %}}</dd><dt class="property-optional"
             title="Optional">
         <span id="device_location_python">
 <a href="#device_location_python" style="color: inherit; text-decoration: inherit;">device_<wbr>location</a>
@@ -659,8 +578,7 @@ The following output properties are available:
         <span class="property-indicator"></span>
         <span class="property-type">str</span>
     </dt>
-    <dd>{{% md %}}The geo location (applicable only for cloud appliances) of the device.{{% /md %}}</dd>
-    <dt class="property-optional"
+    <dd>{{% md %}}The geo location (applicable only for cloud appliances) of the device.{{% /md %}}</dd><dt class="property-optional"
             title="Optional">
         <span id="device_software_version_python">
 <a href="#device_software_version_python" style="color: inherit; text-decoration: inherit;">device_<wbr>software_<wbr>version</a>
@@ -668,8 +586,7 @@ The following output properties are available:
         <span class="property-indicator"></span>
         <span class="property-type">str</span>
     </dt>
-    <dd>{{% md %}}The software version of the device.{{% /md %}}</dd>
-    <dt class="property-optional"
+    <dd>{{% md %}}The software version of the device.{{% /md %}}</dd><dt class="property-optional"
             title="Optional">
         <span id="device_status_python">
 <a href="#device_status_python" style="color: inherit; text-decoration: inherit;">device_<wbr>status</a>
@@ -677,8 +594,7 @@ The following output properties are available:
         <span class="property-indicator"></span>
         <span class="property-type">str</span>
     </dt>
-    <dd>{{% md %}}The status of the device.{{% /md %}}</dd>
-    <dt class="property-optional"
+    <dd>{{% md %}}The status of the device.{{% /md %}}</dd><dt class="property-optional"
             title="Optional">
         <span id="eligibility_result_python">
 <a href="#eligibility_result_python" style="color: inherit; text-decoration: inherit;">eligibility_<wbr>result</a>
@@ -686,8 +602,7 @@ The following output properties are available:
         <span class="property-indicator"></span>
         <span class="property-type"><a href="#targeteligibilityresultresponse">Target<wbr>Eligibility<wbr>Result<wbr>Response<wbr>Args</a></span>
     </dt>
-    <dd>{{% md %}}The eligibility result of the device, as a failover target device.{{% /md %}}</dd>
-    <dt class="property-optional"
+    <dd>{{% md %}}The eligibility result of the device, as a failover target device.{{% /md %}}</dd><dt class="property-optional"
             title="Optional">
         <span id="friendly_device_software_version_python">
 <a href="#friendly_device_software_version_python" style="color: inherit; text-decoration: inherit;">friendly_<wbr>device_<wbr>software_<wbr>version</a>
@@ -695,8 +610,7 @@ The following output properties are available:
         <span class="property-indicator"></span>
         <span class="property-type">str</span>
     </dt>
-    <dd>{{% md %}}The friendly name for the current version of software on the device.{{% /md %}}</dd>
-    <dt class="property-optional"
+    <dd>{{% md %}}The friendly name for the current version of software on the device.{{% /md %}}</dd><dt class="property-optional"
             title="Optional">
         <span id="model_description_python">
 <a href="#model_description_python" style="color: inherit; text-decoration: inherit;">model_<wbr>description</a>
@@ -704,8 +618,7 @@ The following output properties are available:
         <span class="property-indicator"></span>
         <span class="property-type">str</span>
     </dt>
-    <dd>{{% md %}}The model number of the device.{{% /md %}}</dd>
-    <dt class="property-optional"
+    <dd>{{% md %}}The model number of the device.{{% /md %}}</dd><dt class="property-optional"
             title="Optional">
         <span id="volumes_count_python">
 <a href="#volumes_count_python" style="color: inherit; text-decoration: inherit;">volumes_<wbr>count</a>
@@ -713,8 +626,7 @@ The following output properties are available:
         <span class="property-indicator"></span>
         <span class="property-type">int</span>
     </dt>
-    <dd>{{% md %}}The count of volumes on the device.{{% /md %}}</dd>
-</dl>
+    <dd>{{% md %}}The count of volumes on the device.{{% /md %}}</dd></dl>
 {{% /choosable %}}
 
 <h4 id="targeteligibilityerrormessageresponse">Target<wbr>Eligibility<wbr>Error<wbr>Message<wbr>Response</h4>
@@ -722,9 +634,7 @@ The following output properties are available:
 
 
 {{% choosable language csharp %}}
-<dl class="resources-properties">
-
-    <dt class="property-optional"
+<dl class="resources-properties"><dt class="property-optional"
             title="Optional">
         <span id="message_csharp">
 <a href="#message_csharp" style="color: inherit; text-decoration: inherit;">Message</a>
@@ -732,8 +642,7 @@ The following output properties are available:
         <span class="property-indicator"></span>
         <span class="property-type">string</span>
     </dt>
-    <dd>{{% md %}}The localized error message stating the reason why the device is not eligible as a target device.{{% /md %}}</dd>
-    <dt class="property-optional"
+    <dd>{{% md %}}The localized error message stating the reason why the device is not eligible as a target device.{{% /md %}}</dd><dt class="property-optional"
             title="Optional">
         <span id="resolution_csharp">
 <a href="#resolution_csharp" style="color: inherit; text-decoration: inherit;">Resolution</a>
@@ -741,8 +650,7 @@ The following output properties are available:
         <span class="property-indicator"></span>
         <span class="property-type">string</span>
     </dt>
-    <dd>{{% md %}}The localized resolution message for the error.{{% /md %}}</dd>
-    <dt class="property-optional"
+    <dd>{{% md %}}The localized resolution message for the error.{{% /md %}}</dd><dt class="property-optional"
             title="Optional">
         <span id="resultcode_csharp">
 <a href="#resultcode_csharp" style="color: inherit; text-decoration: inherit;">Result<wbr>Code</a>
@@ -750,14 +658,11 @@ The following output properties are available:
         <span class="property-indicator"></span>
         <span class="property-type">string</span>
     </dt>
-    <dd>{{% md %}}The result code for the error, due to which the device does not qualify as a failover target device.{{% /md %}}</dd>
-</dl>
+    <dd>{{% md %}}The result code for the error, due to which the device does not qualify as a failover target device.{{% /md %}}</dd></dl>
 {{% /choosable %}}
 
 {{% choosable language go %}}
-<dl class="resources-properties">
-
-    <dt class="property-optional"
+<dl class="resources-properties"><dt class="property-optional"
             title="Optional">
         <span id="message_go">
 <a href="#message_go" style="color: inherit; text-decoration: inherit;">Message</a>
@@ -765,8 +670,7 @@ The following output properties are available:
         <span class="property-indicator"></span>
         <span class="property-type">string</span>
     </dt>
-    <dd>{{% md %}}The localized error message stating the reason why the device is not eligible as a target device.{{% /md %}}</dd>
-    <dt class="property-optional"
+    <dd>{{% md %}}The localized error message stating the reason why the device is not eligible as a target device.{{% /md %}}</dd><dt class="property-optional"
             title="Optional">
         <span id="resolution_go">
 <a href="#resolution_go" style="color: inherit; text-decoration: inherit;">Resolution</a>
@@ -774,8 +678,7 @@ The following output properties are available:
         <span class="property-indicator"></span>
         <span class="property-type">string</span>
     </dt>
-    <dd>{{% md %}}The localized resolution message for the error.{{% /md %}}</dd>
-    <dt class="property-optional"
+    <dd>{{% md %}}The localized resolution message for the error.{{% /md %}}</dd><dt class="property-optional"
             title="Optional">
         <span id="resultcode_go">
 <a href="#resultcode_go" style="color: inherit; text-decoration: inherit;">Result<wbr>Code</a>
@@ -783,14 +686,11 @@ The following output properties are available:
         <span class="property-indicator"></span>
         <span class="property-type">string</span>
     </dt>
-    <dd>{{% md %}}The result code for the error, due to which the device does not qualify as a failover target device.{{% /md %}}</dd>
-</dl>
+    <dd>{{% md %}}The result code for the error, due to which the device does not qualify as a failover target device.{{% /md %}}</dd></dl>
 {{% /choosable %}}
 
 {{% choosable language nodejs %}}
-<dl class="resources-properties">
-
-    <dt class="property-optional"
+<dl class="resources-properties"><dt class="property-optional"
             title="Optional">
         <span id="message_nodejs">
 <a href="#message_nodejs" style="color: inherit; text-decoration: inherit;">message</a>
@@ -798,8 +698,7 @@ The following output properties are available:
         <span class="property-indicator"></span>
         <span class="property-type">string</span>
     </dt>
-    <dd>{{% md %}}The localized error message stating the reason why the device is not eligible as a target device.{{% /md %}}</dd>
-    <dt class="property-optional"
+    <dd>{{% md %}}The localized error message stating the reason why the device is not eligible as a target device.{{% /md %}}</dd><dt class="property-optional"
             title="Optional">
         <span id="resolution_nodejs">
 <a href="#resolution_nodejs" style="color: inherit; text-decoration: inherit;">resolution</a>
@@ -807,8 +706,7 @@ The following output properties are available:
         <span class="property-indicator"></span>
         <span class="property-type">string</span>
     </dt>
-    <dd>{{% md %}}The localized resolution message for the error.{{% /md %}}</dd>
-    <dt class="property-optional"
+    <dd>{{% md %}}The localized resolution message for the error.{{% /md %}}</dd><dt class="property-optional"
             title="Optional">
         <span id="resultcode_nodejs">
 <a href="#resultcode_nodejs" style="color: inherit; text-decoration: inherit;">result<wbr>Code</a>
@@ -816,14 +714,11 @@ The following output properties are available:
         <span class="property-indicator"></span>
         <span class="property-type">string</span>
     </dt>
-    <dd>{{% md %}}The result code for the error, due to which the device does not qualify as a failover target device.{{% /md %}}</dd>
-</dl>
+    <dd>{{% md %}}The result code for the error, due to which the device does not qualify as a failover target device.{{% /md %}}</dd></dl>
 {{% /choosable %}}
 
 {{% choosable language python %}}
-<dl class="resources-properties">
-
-    <dt class="property-optional"
+<dl class="resources-properties"><dt class="property-optional"
             title="Optional">
         <span id="message_python">
 <a href="#message_python" style="color: inherit; text-decoration: inherit;">message</a>
@@ -831,8 +726,7 @@ The following output properties are available:
         <span class="property-indicator"></span>
         <span class="property-type">str</span>
     </dt>
-    <dd>{{% md %}}The localized error message stating the reason why the device is not eligible as a target device.{{% /md %}}</dd>
-    <dt class="property-optional"
+    <dd>{{% md %}}The localized error message stating the reason why the device is not eligible as a target device.{{% /md %}}</dd><dt class="property-optional"
             title="Optional">
         <span id="resolution_python">
 <a href="#resolution_python" style="color: inherit; text-decoration: inherit;">resolution</a>
@@ -840,8 +734,7 @@ The following output properties are available:
         <span class="property-indicator"></span>
         <span class="property-type">str</span>
     </dt>
-    <dd>{{% md %}}The localized resolution message for the error.{{% /md %}}</dd>
-    <dt class="property-optional"
+    <dd>{{% md %}}The localized resolution message for the error.{{% /md %}}</dd><dt class="property-optional"
             title="Optional">
         <span id="result_code_python">
 <a href="#result_code_python" style="color: inherit; text-decoration: inherit;">result_<wbr>code</a>
@@ -849,8 +742,7 @@ The following output properties are available:
         <span class="property-indicator"></span>
         <span class="property-type">str</span>
     </dt>
-    <dd>{{% md %}}The result code for the error, due to which the device does not qualify as a failover target device.{{% /md %}}</dd>
-</dl>
+    <dd>{{% md %}}The result code for the error, due to which the device does not qualify as a failover target device.{{% /md %}}</dd></dl>
 {{% /choosable %}}
 
 <h4 id="targeteligibilityresultresponse">Target<wbr>Eligibility<wbr>Result<wbr>Response</h4>
@@ -858,9 +750,7 @@ The following output properties are available:
 
 
 {{% choosable language csharp %}}
-<dl class="resources-properties">
-
-    <dt class="property-optional"
+<dl class="resources-properties"><dt class="property-optional"
             title="Optional">
         <span id="eligibilitystatus_csharp">
 <a href="#eligibilitystatus_csharp" style="color: inherit; text-decoration: inherit;">Eligibility<wbr>Status</a>
@@ -868,8 +758,7 @@ The following output properties are available:
         <span class="property-indicator"></span>
         <span class="property-type">string</span>
     </dt>
-    <dd>{{% md %}}The eligibility status of device, as a failover target device.{{% /md %}}</dd>
-    <dt class="property-optional"
+    <dd>{{% md %}}The eligibility status of device, as a failover target device.{{% /md %}}</dd><dt class="property-optional"
             title="Optional">
         <span id="messages_csharp">
 <a href="#messages_csharp" style="color: inherit; text-decoration: inherit;">Messages</a>
@@ -877,14 +766,11 @@ The following output properties are available:
         <span class="property-indicator"></span>
         <span class="property-type"><a href="#targeteligibilityerrormessageresponse">List&lt;Pulumi.<wbr>Azure<wbr>Native.<wbr>Stor<wbr>Simple.<wbr>Inputs.<wbr>Target<wbr>Eligibility<wbr>Error<wbr>Message<wbr>Response<wbr>Args&gt;</a></span>
     </dt>
-    <dd>{{% md %}}The list of error messages, if a device does not qualify as a failover target device.{{% /md %}}</dd>
-</dl>
+    <dd>{{% md %}}The list of error messages, if a device does not qualify as a failover target device.{{% /md %}}</dd></dl>
 {{% /choosable %}}
 
 {{% choosable language go %}}
-<dl class="resources-properties">
-
-    <dt class="property-optional"
+<dl class="resources-properties"><dt class="property-optional"
             title="Optional">
         <span id="eligibilitystatus_go">
 <a href="#eligibilitystatus_go" style="color: inherit; text-decoration: inherit;">Eligibility<wbr>Status</a>
@@ -892,8 +778,7 @@ The following output properties are available:
         <span class="property-indicator"></span>
         <span class="property-type">string</span>
     </dt>
-    <dd>{{% md %}}The eligibility status of device, as a failover target device.{{% /md %}}</dd>
-    <dt class="property-optional"
+    <dd>{{% md %}}The eligibility status of device, as a failover target device.{{% /md %}}</dd><dt class="property-optional"
             title="Optional">
         <span id="messages_go">
 <a href="#messages_go" style="color: inherit; text-decoration: inherit;">Messages</a>
@@ -901,14 +786,11 @@ The following output properties are available:
         <span class="property-indicator"></span>
         <span class="property-type"><a href="#targeteligibilityerrormessageresponse">[]Target<wbr>Eligibility<wbr>Error<wbr>Message<wbr>Response</a></span>
     </dt>
-    <dd>{{% md %}}The list of error messages, if a device does not qualify as a failover target device.{{% /md %}}</dd>
-</dl>
+    <dd>{{% md %}}The list of error messages, if a device does not qualify as a failover target device.{{% /md %}}</dd></dl>
 {{% /choosable %}}
 
 {{% choosable language nodejs %}}
-<dl class="resources-properties">
-
-    <dt class="property-optional"
+<dl class="resources-properties"><dt class="property-optional"
             title="Optional">
         <span id="eligibilitystatus_nodejs">
 <a href="#eligibilitystatus_nodejs" style="color: inherit; text-decoration: inherit;">eligibility<wbr>Status</a>
@@ -916,8 +798,7 @@ The following output properties are available:
         <span class="property-indicator"></span>
         <span class="property-type">string</span>
     </dt>
-    <dd>{{% md %}}The eligibility status of device, as a failover target device.{{% /md %}}</dd>
-    <dt class="property-optional"
+    <dd>{{% md %}}The eligibility status of device, as a failover target device.{{% /md %}}</dd><dt class="property-optional"
             title="Optional">
         <span id="messages_nodejs">
 <a href="#messages_nodejs" style="color: inherit; text-decoration: inherit;">messages</a>
@@ -925,14 +806,11 @@ The following output properties are available:
         <span class="property-indicator"></span>
         <span class="property-type"><a href="#targeteligibilityerrormessageresponse">Target<wbr>Eligibility<wbr>Error<wbr>Message<wbr>Response[]</a></span>
     </dt>
-    <dd>{{% md %}}The list of error messages, if a device does not qualify as a failover target device.{{% /md %}}</dd>
-</dl>
+    <dd>{{% md %}}The list of error messages, if a device does not qualify as a failover target device.{{% /md %}}</dd></dl>
 {{% /choosable %}}
 
 {{% choosable language python %}}
-<dl class="resources-properties">
-
-    <dt class="property-optional"
+<dl class="resources-properties"><dt class="property-optional"
             title="Optional">
         <span id="eligibility_status_python">
 <a href="#eligibility_status_python" style="color: inherit; text-decoration: inherit;">eligibility_<wbr>status</a>
@@ -940,8 +818,7 @@ The following output properties are available:
         <span class="property-indicator"></span>
         <span class="property-type">str</span>
     </dt>
-    <dd>{{% md %}}The eligibility status of device, as a failover target device.{{% /md %}}</dd>
-    <dt class="property-optional"
+    <dd>{{% md %}}The eligibility status of device, as a failover target device.{{% /md %}}</dd><dt class="property-optional"
             title="Optional">
         <span id="messages_python">
 <a href="#messages_python" style="color: inherit; text-decoration: inherit;">messages</a>
@@ -949,8 +826,7 @@ The following output properties are available:
         <span class="property-indicator"></span>
         <span class="property-type"><a href="#targeteligibilityerrormessageresponse">Sequence[Target<wbr>Eligibility<wbr>Error<wbr>Message<wbr>Response<wbr>Args]</a></span>
     </dt>
-    <dd>{{% md %}}The list of error messages, if a device does not qualify as a failover target device.{{% /md %}}</dd>
-</dl>
+    <dd>{{% md %}}The list of error messages, if a device does not qualify as a failover target device.{{% /md %}}</dd></dl>
 {{% /choosable %}}
 
 

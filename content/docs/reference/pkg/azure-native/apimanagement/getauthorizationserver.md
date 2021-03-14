@@ -51,9 +51,7 @@ The following arguments are supported:
 
 
 {{% choosable language csharp %}}
-<dl class="resources-properties">
-
-    <dt class="property-required"
+<dl class="resources-properties"><dt class="property-required"
             title="Required">
         <span id="authsid_csharp">
 <a href="#authsid_csharp" style="color: inherit; text-decoration: inherit;">Authsid</a>
@@ -61,8 +59,7 @@ The following arguments are supported:
         <span class="property-indicator"></span>
         <span class="property-type">string</span>
     </dt>
-    <dd>{{% md %}}Identifier of the authorization server.{{% /md %}}</dd>
-    <dt class="property-required"
+    <dd>{{% md %}}Identifier of the authorization server.{{% /md %}}</dd><dt class="property-required"
             title="Required">
         <span id="resourcegroupname_csharp">
 <a href="#resourcegroupname_csharp" style="color: inherit; text-decoration: inherit;">Resource<wbr>Group<wbr>Name</a>
@@ -70,8 +67,7 @@ The following arguments are supported:
         <span class="property-indicator"></span>
         <span class="property-type">string</span>
     </dt>
-    <dd>{{% md %}}The name of the resource group.{{% /md %}}</dd>
-    <dt class="property-required"
+    <dd>{{% md %}}The name of the resource group.{{% /md %}}</dd><dt class="property-required"
             title="Required">
         <span id="servicename_csharp">
 <a href="#servicename_csharp" style="color: inherit; text-decoration: inherit;">Service<wbr>Name</a>
@@ -79,14 +75,11 @@ The following arguments are supported:
         <span class="property-indicator"></span>
         <span class="property-type">string</span>
     </dt>
-    <dd>{{% md %}}The name of the API Management service.{{% /md %}}</dd>
-</dl>
+    <dd>{{% md %}}The name of the API Management service.{{% /md %}}</dd></dl>
 {{% /choosable %}}
 
 {{% choosable language go %}}
-<dl class="resources-properties">
-
-    <dt class="property-required"
+<dl class="resources-properties"><dt class="property-required"
             title="Required">
         <span id="authsid_go">
 <a href="#authsid_go" style="color: inherit; text-decoration: inherit;">Authsid</a>
@@ -94,8 +87,7 @@ The following arguments are supported:
         <span class="property-indicator"></span>
         <span class="property-type">string</span>
     </dt>
-    <dd>{{% md %}}Identifier of the authorization server.{{% /md %}}</dd>
-    <dt class="property-required"
+    <dd>{{% md %}}Identifier of the authorization server.{{% /md %}}</dd><dt class="property-required"
             title="Required">
         <span id="resourcegroupname_go">
 <a href="#resourcegroupname_go" style="color: inherit; text-decoration: inherit;">Resource<wbr>Group<wbr>Name</a>
@@ -103,8 +95,7 @@ The following arguments are supported:
         <span class="property-indicator"></span>
         <span class="property-type">string</span>
     </dt>
-    <dd>{{% md %}}The name of the resource group.{{% /md %}}</dd>
-    <dt class="property-required"
+    <dd>{{% md %}}The name of the resource group.{{% /md %}}</dd><dt class="property-required"
             title="Required">
         <span id="servicename_go">
 <a href="#servicename_go" style="color: inherit; text-decoration: inherit;">Service<wbr>Name</a>
@@ -112,14 +103,11 @@ The following arguments are supported:
         <span class="property-indicator"></span>
         <span class="property-type">string</span>
     </dt>
-    <dd>{{% md %}}The name of the API Management service.{{% /md %}}</dd>
-</dl>
+    <dd>{{% md %}}The name of the API Management service.{{% /md %}}</dd></dl>
 {{% /choosable %}}
 
 {{% choosable language nodejs %}}
-<dl class="resources-properties">
-
-    <dt class="property-required"
+<dl class="resources-properties"><dt class="property-required"
             title="Required">
         <span id="authsid_nodejs">
 <a href="#authsid_nodejs" style="color: inherit; text-decoration: inherit;">authsid</a>
@@ -127,8 +115,7 @@ The following arguments are supported:
         <span class="property-indicator"></span>
         <span class="property-type">string</span>
     </dt>
-    <dd>{{% md %}}Identifier of the authorization server.{{% /md %}}</dd>
-    <dt class="property-required"
+    <dd>{{% md %}}Identifier of the authorization server.{{% /md %}}</dd><dt class="property-required"
             title="Required">
         <span id="resourcegroupname_nodejs">
 <a href="#resourcegroupname_nodejs" style="color: inherit; text-decoration: inherit;">resource<wbr>Group<wbr>Name</a>
@@ -136,8 +123,7 @@ The following arguments are supported:
         <span class="property-indicator"></span>
         <span class="property-type">string</span>
     </dt>
-    <dd>{{% md %}}The name of the resource group.{{% /md %}}</dd>
-    <dt class="property-required"
+    <dd>{{% md %}}The name of the resource group.{{% /md %}}</dd><dt class="property-required"
             title="Required">
         <span id="servicename_nodejs">
 <a href="#servicename_nodejs" style="color: inherit; text-decoration: inherit;">service<wbr>Name</a>
@@ -145,14 +131,11 @@ The following arguments are supported:
         <span class="property-indicator"></span>
         <span class="property-type">string</span>
     </dt>
-    <dd>{{% md %}}The name of the API Management service.{{% /md %}}</dd>
-</dl>
+    <dd>{{% md %}}The name of the API Management service.{{% /md %}}</dd></dl>
 {{% /choosable %}}
 
 {{% choosable language python %}}
-<dl class="resources-properties">
-
-    <dt class="property-required"
+<dl class="resources-properties"><dt class="property-required"
             title="Required">
         <span id="authsid_python">
 <a href="#authsid_python" style="color: inherit; text-decoration: inherit;">authsid</a>
@@ -160,8 +143,7 @@ The following arguments are supported:
         <span class="property-indicator"></span>
         <span class="property-type">str</span>
     </dt>
-    <dd>{{% md %}}Identifier of the authorization server.{{% /md %}}</dd>
-    <dt class="property-required"
+    <dd>{{% md %}}Identifier of the authorization server.{{% /md %}}</dd><dt class="property-required"
             title="Required">
         <span id="resource_group_name_python">
 <a href="#resource_group_name_python" style="color: inherit; text-decoration: inherit;">resource_<wbr>group_<wbr>name</a>
@@ -169,8 +151,7 @@ The following arguments are supported:
         <span class="property-indicator"></span>
         <span class="property-type">str</span>
     </dt>
-    <dd>{{% md %}}The name of the resource group.{{% /md %}}</dd>
-    <dt class="property-required"
+    <dd>{{% md %}}The name of the resource group.{{% /md %}}</dd><dt class="property-required"
             title="Required">
         <span id="service_name_python">
 <a href="#service_name_python" style="color: inherit; text-decoration: inherit;">service_<wbr>name</a>
@@ -178,8 +159,7 @@ The following arguments are supported:
         <span class="property-indicator"></span>
         <span class="property-type">str</span>
     </dt>
-    <dd>{{% md %}}The name of the API Management service.{{% /md %}}</dd>
-</dl>
+    <dd>{{% md %}}The name of the API Management service.{{% /md %}}</dd></dl>
 {{% /choosable %}}
 
 
@@ -192,9 +172,7 @@ The following output properties are available:
 
 
 {{% choosable language csharp %}}
-<dl class="resources-properties">
-
-    <dt class="property-"
+<dl class="resources-properties"><dt class="property-"
             title="">
         <span id="authorizationendpoint_csharp">
 <a href="#authorizationendpoint_csharp" style="color: inherit; text-decoration: inherit;">Authorization<wbr>Endpoint</a>
@@ -202,8 +180,7 @@ The following output properties are available:
         <span class="property-indicator"></span>
         <span class="property-type">string</span>
     </dt>
-    <dd>{{% md %}}OAuth authorization endpoint. See http://tools.ietf.org/html/rfc6749#section-3.2.{{% /md %}}</dd>
-    <dt class="property-"
+    <dd>{{% md %}}OAuth authorization endpoint. See http://tools.ietf.org/html/rfc6749#section-3.2.{{% /md %}}</dd><dt class="property-"
             title="">
         <span id="clientid_csharp">
 <a href="#clientid_csharp" style="color: inherit; text-decoration: inherit;">Client<wbr>Id</a>
@@ -211,8 +188,7 @@ The following output properties are available:
         <span class="property-indicator"></span>
         <span class="property-type">string</span>
     </dt>
-    <dd>{{% md %}}Client or app id registered with this authorization server.{{% /md %}}</dd>
-    <dt class="property-"
+    <dd>{{% md %}}Client or app id registered with this authorization server.{{% /md %}}</dd><dt class="property-"
             title="">
         <span id="clientregistrationendpoint_csharp">
 <a href="#clientregistrationendpoint_csharp" style="color: inherit; text-decoration: inherit;">Client<wbr>Registration<wbr>Endpoint</a>
@@ -220,8 +196,7 @@ The following output properties are available:
         <span class="property-indicator"></span>
         <span class="property-type">string</span>
     </dt>
-    <dd>{{% md %}}Optional reference to a page where client or app registration for this authorization server is performed. Contains absolute URL to entity being referenced.{{% /md %}}</dd>
-    <dt class="property-"
+    <dd>{{% md %}}Optional reference to a page where client or app registration for this authorization server is performed. Contains absolute URL to entity being referenced.{{% /md %}}</dd><dt class="property-"
             title="">
         <span id="displayname_csharp">
 <a href="#displayname_csharp" style="color: inherit; text-decoration: inherit;">Display<wbr>Name</a>
@@ -229,8 +204,7 @@ The following output properties are available:
         <span class="property-indicator"></span>
         <span class="property-type">string</span>
     </dt>
-    <dd>{{% md %}}User-friendly authorization server name.{{% /md %}}</dd>
-    <dt class="property-"
+    <dd>{{% md %}}User-friendly authorization server name.{{% /md %}}</dd><dt class="property-"
             title="">
         <span id="granttypes_csharp">
 <a href="#granttypes_csharp" style="color: inherit; text-decoration: inherit;">Grant<wbr>Types</a>
@@ -238,8 +212,7 @@ The following output properties are available:
         <span class="property-indicator"></span>
         <span class="property-type">List&lt;string&gt;</span>
     </dt>
-    <dd>{{% md %}}Form of an authorization grant, which the client uses to request the access token.{{% /md %}}</dd>
-    <dt class="property-"
+    <dd>{{% md %}}Form of an authorization grant, which the client uses to request the access token.{{% /md %}}</dd><dt class="property-"
             title="">
         <span id="id_csharp">
 <a href="#id_csharp" style="color: inherit; text-decoration: inherit;">Id</a>
@@ -247,8 +220,7 @@ The following output properties are available:
         <span class="property-indicator"></span>
         <span class="property-type">string</span>
     </dt>
-    <dd>{{% md %}}Resource ID.{{% /md %}}</dd>
-    <dt class="property-"
+    <dd>{{% md %}}Resource ID.{{% /md %}}</dd><dt class="property-"
             title="">
         <span id="name_csharp">
 <a href="#name_csharp" style="color: inherit; text-decoration: inherit;">Name</a>
@@ -256,8 +228,7 @@ The following output properties are available:
         <span class="property-indicator"></span>
         <span class="property-type">string</span>
     </dt>
-    <dd>{{% md %}}Resource name.{{% /md %}}</dd>
-    <dt class="property-"
+    <dd>{{% md %}}Resource name.{{% /md %}}</dd><dt class="property-"
             title="">
         <span id="type_csharp">
 <a href="#type_csharp" style="color: inherit; text-decoration: inherit;">Type</a>
@@ -265,8 +236,7 @@ The following output properties are available:
         <span class="property-indicator"></span>
         <span class="property-type">string</span>
     </dt>
-    <dd>{{% md %}}Resource type for API Management resource.{{% /md %}}</dd>
-    <dt class="property-"
+    <dd>{{% md %}}Resource type for API Management resource.{{% /md %}}</dd><dt class="property-"
             title="">
         <span id="authorizationmethods_csharp">
 <a href="#authorizationmethods_csharp" style="color: inherit; text-decoration: inherit;">Authorization<wbr>Methods</a>
@@ -274,8 +244,7 @@ The following output properties are available:
         <span class="property-indicator"></span>
         <span class="property-type">List&lt;string&gt;</span>
     </dt>
-    <dd>{{% md %}}HTTP verbs supported by the authorization endpoint. GET must be always present. POST is optional.{{% /md %}}</dd>
-    <dt class="property-"
+    <dd>{{% md %}}HTTP verbs supported by the authorization endpoint. GET must be always present. POST is optional.{{% /md %}}</dd><dt class="property-"
             title="">
         <span id="bearertokensendingmethods_csharp">
 <a href="#bearertokensendingmethods_csharp" style="color: inherit; text-decoration: inherit;">Bearer<wbr>Token<wbr>Sending<wbr>Methods</a>
@@ -283,8 +252,7 @@ The following output properties are available:
         <span class="property-indicator"></span>
         <span class="property-type">List&lt;string&gt;</span>
     </dt>
-    <dd>{{% md %}}Specifies the mechanism by which access token is passed to the API. {{% /md %}}</dd>
-    <dt class="property-"
+    <dd>{{% md %}}Specifies the mechanism by which access token is passed to the API. {{% /md %}}</dd><dt class="property-"
             title="">
         <span id="clientauthenticationmethod_csharp">
 <a href="#clientauthenticationmethod_csharp" style="color: inherit; text-decoration: inherit;">Client<wbr>Authentication<wbr>Method</a>
@@ -292,8 +260,7 @@ The following output properties are available:
         <span class="property-indicator"></span>
         <span class="property-type">List&lt;string&gt;</span>
     </dt>
-    <dd>{{% md %}}Method of authentication supported by the token endpoint of this authorization server. Possible values are Basic and/or Body. When Body is specified, client credentials and other parameters are passed within the request body in the application/x-www-form-urlencoded format.{{% /md %}}</dd>
-    <dt class="property-"
+    <dd>{{% md %}}Method of authentication supported by the token endpoint of this authorization server. Possible values are Basic and/or Body. When Body is specified, client credentials and other parameters are passed within the request body in the application/x-www-form-urlencoded format.{{% /md %}}</dd><dt class="property-"
             title="">
         <span id="clientsecret_csharp">
 <a href="#clientsecret_csharp" style="color: inherit; text-decoration: inherit;">Client<wbr>Secret</a>
@@ -301,8 +268,7 @@ The following output properties are available:
         <span class="property-indicator"></span>
         <span class="property-type">string</span>
     </dt>
-    <dd>{{% md %}}Client or app secret registered with this authorization server. This property will not be filled on 'GET' operations! Use '/listSecrets' POST request to get the value.{{% /md %}}</dd>
-    <dt class="property-"
+    <dd>{{% md %}}Client or app secret registered with this authorization server. This property will not be filled on 'GET' operations! Use '/listSecrets' POST request to get the value.{{% /md %}}</dd><dt class="property-"
             title="">
         <span id="defaultscope_csharp">
 <a href="#defaultscope_csharp" style="color: inherit; text-decoration: inherit;">Default<wbr>Scope</a>
@@ -310,8 +276,7 @@ The following output properties are available:
         <span class="property-indicator"></span>
         <span class="property-type">string</span>
     </dt>
-    <dd>{{% md %}}Access token scope that is going to be requested by default. Can be overridden at the API level. Should be provided in the form of a string containing space-delimited values.{{% /md %}}</dd>
-    <dt class="property-"
+    <dd>{{% md %}}Access token scope that is going to be requested by default. Can be overridden at the API level. Should be provided in the form of a string containing space-delimited values.{{% /md %}}</dd><dt class="property-"
             title="">
         <span id="description_csharp">
 <a href="#description_csharp" style="color: inherit; text-decoration: inherit;">Description</a>
@@ -319,8 +284,7 @@ The following output properties are available:
         <span class="property-indicator"></span>
         <span class="property-type">string</span>
     </dt>
-    <dd>{{% md %}}Description of the authorization server. Can contain HTML formatting tags.{{% /md %}}</dd>
-    <dt class="property-"
+    <dd>{{% md %}}Description of the authorization server. Can contain HTML formatting tags.{{% /md %}}</dd><dt class="property-"
             title="">
         <span id="resourceownerpassword_csharp">
 <a href="#resourceownerpassword_csharp" style="color: inherit; text-decoration: inherit;">Resource<wbr>Owner<wbr>Password</a>
@@ -328,8 +292,7 @@ The following output properties are available:
         <span class="property-indicator"></span>
         <span class="property-type">string</span>
     </dt>
-    <dd>{{% md %}}Can be optionally specified when resource owner password grant type is supported by this authorization server. Default resource owner password.{{% /md %}}</dd>
-    <dt class="property-"
+    <dd>{{% md %}}Can be optionally specified when resource owner password grant type is supported by this authorization server. Default resource owner password.{{% /md %}}</dd><dt class="property-"
             title="">
         <span id="resourceownerusername_csharp">
 <a href="#resourceownerusername_csharp" style="color: inherit; text-decoration: inherit;">Resource<wbr>Owner<wbr>Username</a>
@@ -337,8 +300,7 @@ The following output properties are available:
         <span class="property-indicator"></span>
         <span class="property-type">string</span>
     </dt>
-    <dd>{{% md %}}Can be optionally specified when resource owner password grant type is supported by this authorization server. Default resource owner username.{{% /md %}}</dd>
-    <dt class="property-"
+    <dd>{{% md %}}Can be optionally specified when resource owner password grant type is supported by this authorization server. Default resource owner username.{{% /md %}}</dd><dt class="property-"
             title="">
         <span id="supportstate_csharp">
 <a href="#supportstate_csharp" style="color: inherit; text-decoration: inherit;">Support<wbr>State</a>
@@ -346,8 +308,7 @@ The following output properties are available:
         <span class="property-indicator"></span>
         <span class="property-type">bool</span>
     </dt>
-    <dd>{{% md %}}If true, authorization server will include state parameter from the authorization request to its response. Client may use state parameter to raise protocol security.{{% /md %}}</dd>
-    <dt class="property-"
+    <dd>{{% md %}}If true, authorization server will include state parameter from the authorization request to its response. Client may use state parameter to raise protocol security.{{% /md %}}</dd><dt class="property-"
             title="">
         <span id="tokenbodyparameters_csharp">
 <a href="#tokenbodyparameters_csharp" style="color: inherit; text-decoration: inherit;">Token<wbr>Body<wbr>Parameters</a>
@@ -355,8 +316,7 @@ The following output properties are available:
         <span class="property-indicator"></span>
         <span class="property-type"><a href="#tokenbodyparametercontractresponse">List&lt;Pulumi.<wbr>Azure<wbr>Native.<wbr>Api<wbr>Management.<wbr>Outputs.<wbr>Token<wbr>Body<wbr>Parameter<wbr>Contract<wbr>Response&gt;</a></span>
     </dt>
-    <dd>{{% md %}}Additional parameters required by the token endpoint of this authorization server represented as an array of JSON objects with name and value string properties, i.e. {"name" : "name value", "value": "a value"}.{{% /md %}}</dd>
-    <dt class="property-"
+    <dd>{{% md %}}Additional parameters required by the token endpoint of this authorization server represented as an array of JSON objects with name and value string properties, i.e. {"name" : "name value", "value": "a value"}.{{% /md %}}</dd><dt class="property-"
             title="">
         <span id="tokenendpoint_csharp">
 <a href="#tokenendpoint_csharp" style="color: inherit; text-decoration: inherit;">Token<wbr>Endpoint</a>
@@ -364,14 +324,11 @@ The following output properties are available:
         <span class="property-indicator"></span>
         <span class="property-type">string</span>
     </dt>
-    <dd>{{% md %}}OAuth token endpoint. Contains absolute URI to entity being referenced.{{% /md %}}</dd>
-</dl>
+    <dd>{{% md %}}OAuth token endpoint. Contains absolute URI to entity being referenced.{{% /md %}}</dd></dl>
 {{% /choosable %}}
 
 {{% choosable language go %}}
-<dl class="resources-properties">
-
-    <dt class="property-"
+<dl class="resources-properties"><dt class="property-"
             title="">
         <span id="authorizationendpoint_go">
 <a href="#authorizationendpoint_go" style="color: inherit; text-decoration: inherit;">Authorization<wbr>Endpoint</a>
@@ -379,8 +336,7 @@ The following output properties are available:
         <span class="property-indicator"></span>
         <span class="property-type">string</span>
     </dt>
-    <dd>{{% md %}}OAuth authorization endpoint. See http://tools.ietf.org/html/rfc6749#section-3.2.{{% /md %}}</dd>
-    <dt class="property-"
+    <dd>{{% md %}}OAuth authorization endpoint. See http://tools.ietf.org/html/rfc6749#section-3.2.{{% /md %}}</dd><dt class="property-"
             title="">
         <span id="clientid_go">
 <a href="#clientid_go" style="color: inherit; text-decoration: inherit;">Client<wbr>Id</a>
@@ -388,8 +344,7 @@ The following output properties are available:
         <span class="property-indicator"></span>
         <span class="property-type">string</span>
     </dt>
-    <dd>{{% md %}}Client or app id registered with this authorization server.{{% /md %}}</dd>
-    <dt class="property-"
+    <dd>{{% md %}}Client or app id registered with this authorization server.{{% /md %}}</dd><dt class="property-"
             title="">
         <span id="clientregistrationendpoint_go">
 <a href="#clientregistrationendpoint_go" style="color: inherit; text-decoration: inherit;">Client<wbr>Registration<wbr>Endpoint</a>
@@ -397,8 +352,7 @@ The following output properties are available:
         <span class="property-indicator"></span>
         <span class="property-type">string</span>
     </dt>
-    <dd>{{% md %}}Optional reference to a page where client or app registration for this authorization server is performed. Contains absolute URL to entity being referenced.{{% /md %}}</dd>
-    <dt class="property-"
+    <dd>{{% md %}}Optional reference to a page where client or app registration for this authorization server is performed. Contains absolute URL to entity being referenced.{{% /md %}}</dd><dt class="property-"
             title="">
         <span id="displayname_go">
 <a href="#displayname_go" style="color: inherit; text-decoration: inherit;">Display<wbr>Name</a>
@@ -406,8 +360,7 @@ The following output properties are available:
         <span class="property-indicator"></span>
         <span class="property-type">string</span>
     </dt>
-    <dd>{{% md %}}User-friendly authorization server name.{{% /md %}}</dd>
-    <dt class="property-"
+    <dd>{{% md %}}User-friendly authorization server name.{{% /md %}}</dd><dt class="property-"
             title="">
         <span id="granttypes_go">
 <a href="#granttypes_go" style="color: inherit; text-decoration: inherit;">Grant<wbr>Types</a>
@@ -415,8 +368,7 @@ The following output properties are available:
         <span class="property-indicator"></span>
         <span class="property-type">[]string</span>
     </dt>
-    <dd>{{% md %}}Form of an authorization grant, which the client uses to request the access token.{{% /md %}}</dd>
-    <dt class="property-"
+    <dd>{{% md %}}Form of an authorization grant, which the client uses to request the access token.{{% /md %}}</dd><dt class="property-"
             title="">
         <span id="id_go">
 <a href="#id_go" style="color: inherit; text-decoration: inherit;">Id</a>
@@ -424,8 +376,7 @@ The following output properties are available:
         <span class="property-indicator"></span>
         <span class="property-type">string</span>
     </dt>
-    <dd>{{% md %}}Resource ID.{{% /md %}}</dd>
-    <dt class="property-"
+    <dd>{{% md %}}Resource ID.{{% /md %}}</dd><dt class="property-"
             title="">
         <span id="name_go">
 <a href="#name_go" style="color: inherit; text-decoration: inherit;">Name</a>
@@ -433,8 +384,7 @@ The following output properties are available:
         <span class="property-indicator"></span>
         <span class="property-type">string</span>
     </dt>
-    <dd>{{% md %}}Resource name.{{% /md %}}</dd>
-    <dt class="property-"
+    <dd>{{% md %}}Resource name.{{% /md %}}</dd><dt class="property-"
             title="">
         <span id="type_go">
 <a href="#type_go" style="color: inherit; text-decoration: inherit;">Type</a>
@@ -442,8 +392,7 @@ The following output properties are available:
         <span class="property-indicator"></span>
         <span class="property-type">string</span>
     </dt>
-    <dd>{{% md %}}Resource type for API Management resource.{{% /md %}}</dd>
-    <dt class="property-"
+    <dd>{{% md %}}Resource type for API Management resource.{{% /md %}}</dd><dt class="property-"
             title="">
         <span id="authorizationmethods_go">
 <a href="#authorizationmethods_go" style="color: inherit; text-decoration: inherit;">Authorization<wbr>Methods</a>
@@ -451,8 +400,7 @@ The following output properties are available:
         <span class="property-indicator"></span>
         <span class="property-type">[]string</span>
     </dt>
-    <dd>{{% md %}}HTTP verbs supported by the authorization endpoint. GET must be always present. POST is optional.{{% /md %}}</dd>
-    <dt class="property-"
+    <dd>{{% md %}}HTTP verbs supported by the authorization endpoint. GET must be always present. POST is optional.{{% /md %}}</dd><dt class="property-"
             title="">
         <span id="bearertokensendingmethods_go">
 <a href="#bearertokensendingmethods_go" style="color: inherit; text-decoration: inherit;">Bearer<wbr>Token<wbr>Sending<wbr>Methods</a>
@@ -460,8 +408,7 @@ The following output properties are available:
         <span class="property-indicator"></span>
         <span class="property-type">[]string</span>
     </dt>
-    <dd>{{% md %}}Specifies the mechanism by which access token is passed to the API. {{% /md %}}</dd>
-    <dt class="property-"
+    <dd>{{% md %}}Specifies the mechanism by which access token is passed to the API. {{% /md %}}</dd><dt class="property-"
             title="">
         <span id="clientauthenticationmethod_go">
 <a href="#clientauthenticationmethod_go" style="color: inherit; text-decoration: inherit;">Client<wbr>Authentication<wbr>Method</a>
@@ -469,8 +416,7 @@ The following output properties are available:
         <span class="property-indicator"></span>
         <span class="property-type">[]string</span>
     </dt>
-    <dd>{{% md %}}Method of authentication supported by the token endpoint of this authorization server. Possible values are Basic and/or Body. When Body is specified, client credentials and other parameters are passed within the request body in the application/x-www-form-urlencoded format.{{% /md %}}</dd>
-    <dt class="property-"
+    <dd>{{% md %}}Method of authentication supported by the token endpoint of this authorization server. Possible values are Basic and/or Body. When Body is specified, client credentials and other parameters are passed within the request body in the application/x-www-form-urlencoded format.{{% /md %}}</dd><dt class="property-"
             title="">
         <span id="clientsecret_go">
 <a href="#clientsecret_go" style="color: inherit; text-decoration: inherit;">Client<wbr>Secret</a>
@@ -478,8 +424,7 @@ The following output properties are available:
         <span class="property-indicator"></span>
         <span class="property-type">string</span>
     </dt>
-    <dd>{{% md %}}Client or app secret registered with this authorization server. This property will not be filled on 'GET' operations! Use '/listSecrets' POST request to get the value.{{% /md %}}</dd>
-    <dt class="property-"
+    <dd>{{% md %}}Client or app secret registered with this authorization server. This property will not be filled on 'GET' operations! Use '/listSecrets' POST request to get the value.{{% /md %}}</dd><dt class="property-"
             title="">
         <span id="defaultscope_go">
 <a href="#defaultscope_go" style="color: inherit; text-decoration: inherit;">Default<wbr>Scope</a>
@@ -487,8 +432,7 @@ The following output properties are available:
         <span class="property-indicator"></span>
         <span class="property-type">string</span>
     </dt>
-    <dd>{{% md %}}Access token scope that is going to be requested by default. Can be overridden at the API level. Should be provided in the form of a string containing space-delimited values.{{% /md %}}</dd>
-    <dt class="property-"
+    <dd>{{% md %}}Access token scope that is going to be requested by default. Can be overridden at the API level. Should be provided in the form of a string containing space-delimited values.{{% /md %}}</dd><dt class="property-"
             title="">
         <span id="description_go">
 <a href="#description_go" style="color: inherit; text-decoration: inherit;">Description</a>
@@ -496,8 +440,7 @@ The following output properties are available:
         <span class="property-indicator"></span>
         <span class="property-type">string</span>
     </dt>
-    <dd>{{% md %}}Description of the authorization server. Can contain HTML formatting tags.{{% /md %}}</dd>
-    <dt class="property-"
+    <dd>{{% md %}}Description of the authorization server. Can contain HTML formatting tags.{{% /md %}}</dd><dt class="property-"
             title="">
         <span id="resourceownerpassword_go">
 <a href="#resourceownerpassword_go" style="color: inherit; text-decoration: inherit;">Resource<wbr>Owner<wbr>Password</a>
@@ -505,8 +448,7 @@ The following output properties are available:
         <span class="property-indicator"></span>
         <span class="property-type">string</span>
     </dt>
-    <dd>{{% md %}}Can be optionally specified when resource owner password grant type is supported by this authorization server. Default resource owner password.{{% /md %}}</dd>
-    <dt class="property-"
+    <dd>{{% md %}}Can be optionally specified when resource owner password grant type is supported by this authorization server. Default resource owner password.{{% /md %}}</dd><dt class="property-"
             title="">
         <span id="resourceownerusername_go">
 <a href="#resourceownerusername_go" style="color: inherit; text-decoration: inherit;">Resource<wbr>Owner<wbr>Username</a>
@@ -514,8 +456,7 @@ The following output properties are available:
         <span class="property-indicator"></span>
         <span class="property-type">string</span>
     </dt>
-    <dd>{{% md %}}Can be optionally specified when resource owner password grant type is supported by this authorization server. Default resource owner username.{{% /md %}}</dd>
-    <dt class="property-"
+    <dd>{{% md %}}Can be optionally specified when resource owner password grant type is supported by this authorization server. Default resource owner username.{{% /md %}}</dd><dt class="property-"
             title="">
         <span id="supportstate_go">
 <a href="#supportstate_go" style="color: inherit; text-decoration: inherit;">Support<wbr>State</a>
@@ -523,8 +464,7 @@ The following output properties are available:
         <span class="property-indicator"></span>
         <span class="property-type">bool</span>
     </dt>
-    <dd>{{% md %}}If true, authorization server will include state parameter from the authorization request to its response. Client may use state parameter to raise protocol security.{{% /md %}}</dd>
-    <dt class="property-"
+    <dd>{{% md %}}If true, authorization server will include state parameter from the authorization request to its response. Client may use state parameter to raise protocol security.{{% /md %}}</dd><dt class="property-"
             title="">
         <span id="tokenbodyparameters_go">
 <a href="#tokenbodyparameters_go" style="color: inherit; text-decoration: inherit;">Token<wbr>Body<wbr>Parameters</a>
@@ -532,8 +472,7 @@ The following output properties are available:
         <span class="property-indicator"></span>
         <span class="property-type"><a href="#tokenbodyparametercontractresponse">[]Token<wbr>Body<wbr>Parameter<wbr>Contract<wbr>Response</a></span>
     </dt>
-    <dd>{{% md %}}Additional parameters required by the token endpoint of this authorization server represented as an array of JSON objects with name and value string properties, i.e. {"name" : "name value", "value": "a value"}.{{% /md %}}</dd>
-    <dt class="property-"
+    <dd>{{% md %}}Additional parameters required by the token endpoint of this authorization server represented as an array of JSON objects with name and value string properties, i.e. {"name" : "name value", "value": "a value"}.{{% /md %}}</dd><dt class="property-"
             title="">
         <span id="tokenendpoint_go">
 <a href="#tokenendpoint_go" style="color: inherit; text-decoration: inherit;">Token<wbr>Endpoint</a>
@@ -541,14 +480,11 @@ The following output properties are available:
         <span class="property-indicator"></span>
         <span class="property-type">string</span>
     </dt>
-    <dd>{{% md %}}OAuth token endpoint. Contains absolute URI to entity being referenced.{{% /md %}}</dd>
-</dl>
+    <dd>{{% md %}}OAuth token endpoint. Contains absolute URI to entity being referenced.{{% /md %}}</dd></dl>
 {{% /choosable %}}
 
 {{% choosable language nodejs %}}
-<dl class="resources-properties">
-
-    <dt class="property-"
+<dl class="resources-properties"><dt class="property-"
             title="">
         <span id="authorizationendpoint_nodejs">
 <a href="#authorizationendpoint_nodejs" style="color: inherit; text-decoration: inherit;">authorization<wbr>Endpoint</a>
@@ -556,8 +492,7 @@ The following output properties are available:
         <span class="property-indicator"></span>
         <span class="property-type">string</span>
     </dt>
-    <dd>{{% md %}}OAuth authorization endpoint. See http://tools.ietf.org/html/rfc6749#section-3.2.{{% /md %}}</dd>
-    <dt class="property-"
+    <dd>{{% md %}}OAuth authorization endpoint. See http://tools.ietf.org/html/rfc6749#section-3.2.{{% /md %}}</dd><dt class="property-"
             title="">
         <span id="clientid_nodejs">
 <a href="#clientid_nodejs" style="color: inherit; text-decoration: inherit;">client<wbr>Id</a>
@@ -565,8 +500,7 @@ The following output properties are available:
         <span class="property-indicator"></span>
         <span class="property-type">string</span>
     </dt>
-    <dd>{{% md %}}Client or app id registered with this authorization server.{{% /md %}}</dd>
-    <dt class="property-"
+    <dd>{{% md %}}Client or app id registered with this authorization server.{{% /md %}}</dd><dt class="property-"
             title="">
         <span id="clientregistrationendpoint_nodejs">
 <a href="#clientregistrationendpoint_nodejs" style="color: inherit; text-decoration: inherit;">client<wbr>Registration<wbr>Endpoint</a>
@@ -574,8 +508,7 @@ The following output properties are available:
         <span class="property-indicator"></span>
         <span class="property-type">string</span>
     </dt>
-    <dd>{{% md %}}Optional reference to a page where client or app registration for this authorization server is performed. Contains absolute URL to entity being referenced.{{% /md %}}</dd>
-    <dt class="property-"
+    <dd>{{% md %}}Optional reference to a page where client or app registration for this authorization server is performed. Contains absolute URL to entity being referenced.{{% /md %}}</dd><dt class="property-"
             title="">
         <span id="displayname_nodejs">
 <a href="#displayname_nodejs" style="color: inherit; text-decoration: inherit;">display<wbr>Name</a>
@@ -583,8 +516,7 @@ The following output properties are available:
         <span class="property-indicator"></span>
         <span class="property-type">string</span>
     </dt>
-    <dd>{{% md %}}User-friendly authorization server name.{{% /md %}}</dd>
-    <dt class="property-"
+    <dd>{{% md %}}User-friendly authorization server name.{{% /md %}}</dd><dt class="property-"
             title="">
         <span id="granttypes_nodejs">
 <a href="#granttypes_nodejs" style="color: inherit; text-decoration: inherit;">grant<wbr>Types</a>
@@ -592,8 +524,7 @@ The following output properties are available:
         <span class="property-indicator"></span>
         <span class="property-type">string[]</span>
     </dt>
-    <dd>{{% md %}}Form of an authorization grant, which the client uses to request the access token.{{% /md %}}</dd>
-    <dt class="property-"
+    <dd>{{% md %}}Form of an authorization grant, which the client uses to request the access token.{{% /md %}}</dd><dt class="property-"
             title="">
         <span id="id_nodejs">
 <a href="#id_nodejs" style="color: inherit; text-decoration: inherit;">id</a>
@@ -601,8 +532,7 @@ The following output properties are available:
         <span class="property-indicator"></span>
         <span class="property-type">string</span>
     </dt>
-    <dd>{{% md %}}Resource ID.{{% /md %}}</dd>
-    <dt class="property-"
+    <dd>{{% md %}}Resource ID.{{% /md %}}</dd><dt class="property-"
             title="">
         <span id="name_nodejs">
 <a href="#name_nodejs" style="color: inherit; text-decoration: inherit;">name</a>
@@ -610,8 +540,7 @@ The following output properties are available:
         <span class="property-indicator"></span>
         <span class="property-type">string</span>
     </dt>
-    <dd>{{% md %}}Resource name.{{% /md %}}</dd>
-    <dt class="property-"
+    <dd>{{% md %}}Resource name.{{% /md %}}</dd><dt class="property-"
             title="">
         <span id="type_nodejs">
 <a href="#type_nodejs" style="color: inherit; text-decoration: inherit;">type</a>
@@ -619,8 +548,7 @@ The following output properties are available:
         <span class="property-indicator"></span>
         <span class="property-type">string</span>
     </dt>
-    <dd>{{% md %}}Resource type for API Management resource.{{% /md %}}</dd>
-    <dt class="property-"
+    <dd>{{% md %}}Resource type for API Management resource.{{% /md %}}</dd><dt class="property-"
             title="">
         <span id="authorizationmethods_nodejs">
 <a href="#authorizationmethods_nodejs" style="color: inherit; text-decoration: inherit;">authorization<wbr>Methods</a>
@@ -628,8 +556,7 @@ The following output properties are available:
         <span class="property-indicator"></span>
         <span class="property-type">string[]</span>
     </dt>
-    <dd>{{% md %}}HTTP verbs supported by the authorization endpoint. GET must be always present. POST is optional.{{% /md %}}</dd>
-    <dt class="property-"
+    <dd>{{% md %}}HTTP verbs supported by the authorization endpoint. GET must be always present. POST is optional.{{% /md %}}</dd><dt class="property-"
             title="">
         <span id="bearertokensendingmethods_nodejs">
 <a href="#bearertokensendingmethods_nodejs" style="color: inherit; text-decoration: inherit;">bearer<wbr>Token<wbr>Sending<wbr>Methods</a>
@@ -637,8 +564,7 @@ The following output properties are available:
         <span class="property-indicator"></span>
         <span class="property-type">string[]</span>
     </dt>
-    <dd>{{% md %}}Specifies the mechanism by which access token is passed to the API. {{% /md %}}</dd>
-    <dt class="property-"
+    <dd>{{% md %}}Specifies the mechanism by which access token is passed to the API. {{% /md %}}</dd><dt class="property-"
             title="">
         <span id="clientauthenticationmethod_nodejs">
 <a href="#clientauthenticationmethod_nodejs" style="color: inherit; text-decoration: inherit;">client<wbr>Authentication<wbr>Method</a>
@@ -646,8 +572,7 @@ The following output properties are available:
         <span class="property-indicator"></span>
         <span class="property-type">string[]</span>
     </dt>
-    <dd>{{% md %}}Method of authentication supported by the token endpoint of this authorization server. Possible values are Basic and/or Body. When Body is specified, client credentials and other parameters are passed within the request body in the application/x-www-form-urlencoded format.{{% /md %}}</dd>
-    <dt class="property-"
+    <dd>{{% md %}}Method of authentication supported by the token endpoint of this authorization server. Possible values are Basic and/or Body. When Body is specified, client credentials and other parameters are passed within the request body in the application/x-www-form-urlencoded format.{{% /md %}}</dd><dt class="property-"
             title="">
         <span id="clientsecret_nodejs">
 <a href="#clientsecret_nodejs" style="color: inherit; text-decoration: inherit;">client<wbr>Secret</a>
@@ -655,8 +580,7 @@ The following output properties are available:
         <span class="property-indicator"></span>
         <span class="property-type">string</span>
     </dt>
-    <dd>{{% md %}}Client or app secret registered with this authorization server. This property will not be filled on 'GET' operations! Use '/listSecrets' POST request to get the value.{{% /md %}}</dd>
-    <dt class="property-"
+    <dd>{{% md %}}Client or app secret registered with this authorization server. This property will not be filled on 'GET' operations! Use '/listSecrets' POST request to get the value.{{% /md %}}</dd><dt class="property-"
             title="">
         <span id="defaultscope_nodejs">
 <a href="#defaultscope_nodejs" style="color: inherit; text-decoration: inherit;">default<wbr>Scope</a>
@@ -664,8 +588,7 @@ The following output properties are available:
         <span class="property-indicator"></span>
         <span class="property-type">string</span>
     </dt>
-    <dd>{{% md %}}Access token scope that is going to be requested by default. Can be overridden at the API level. Should be provided in the form of a string containing space-delimited values.{{% /md %}}</dd>
-    <dt class="property-"
+    <dd>{{% md %}}Access token scope that is going to be requested by default. Can be overridden at the API level. Should be provided in the form of a string containing space-delimited values.{{% /md %}}</dd><dt class="property-"
             title="">
         <span id="description_nodejs">
 <a href="#description_nodejs" style="color: inherit; text-decoration: inherit;">description</a>
@@ -673,8 +596,7 @@ The following output properties are available:
         <span class="property-indicator"></span>
         <span class="property-type">string</span>
     </dt>
-    <dd>{{% md %}}Description of the authorization server. Can contain HTML formatting tags.{{% /md %}}</dd>
-    <dt class="property-"
+    <dd>{{% md %}}Description of the authorization server. Can contain HTML formatting tags.{{% /md %}}</dd><dt class="property-"
             title="">
         <span id="resourceownerpassword_nodejs">
 <a href="#resourceownerpassword_nodejs" style="color: inherit; text-decoration: inherit;">resource<wbr>Owner<wbr>Password</a>
@@ -682,8 +604,7 @@ The following output properties are available:
         <span class="property-indicator"></span>
         <span class="property-type">string</span>
     </dt>
-    <dd>{{% md %}}Can be optionally specified when resource owner password grant type is supported by this authorization server. Default resource owner password.{{% /md %}}</dd>
-    <dt class="property-"
+    <dd>{{% md %}}Can be optionally specified when resource owner password grant type is supported by this authorization server. Default resource owner password.{{% /md %}}</dd><dt class="property-"
             title="">
         <span id="resourceownerusername_nodejs">
 <a href="#resourceownerusername_nodejs" style="color: inherit; text-decoration: inherit;">resource<wbr>Owner<wbr>Username</a>
@@ -691,8 +612,7 @@ The following output properties are available:
         <span class="property-indicator"></span>
         <span class="property-type">string</span>
     </dt>
-    <dd>{{% md %}}Can be optionally specified when resource owner password grant type is supported by this authorization server. Default resource owner username.{{% /md %}}</dd>
-    <dt class="property-"
+    <dd>{{% md %}}Can be optionally specified when resource owner password grant type is supported by this authorization server. Default resource owner username.{{% /md %}}</dd><dt class="property-"
             title="">
         <span id="supportstate_nodejs">
 <a href="#supportstate_nodejs" style="color: inherit; text-decoration: inherit;">support<wbr>State</a>
@@ -700,8 +620,7 @@ The following output properties are available:
         <span class="property-indicator"></span>
         <span class="property-type">boolean</span>
     </dt>
-    <dd>{{% md %}}If true, authorization server will include state parameter from the authorization request to its response. Client may use state parameter to raise protocol security.{{% /md %}}</dd>
-    <dt class="property-"
+    <dd>{{% md %}}If true, authorization server will include state parameter from the authorization request to its response. Client may use state parameter to raise protocol security.{{% /md %}}</dd><dt class="property-"
             title="">
         <span id="tokenbodyparameters_nodejs">
 <a href="#tokenbodyparameters_nodejs" style="color: inherit; text-decoration: inherit;">token<wbr>Body<wbr>Parameters</a>
@@ -709,8 +628,7 @@ The following output properties are available:
         <span class="property-indicator"></span>
         <span class="property-type"><a href="#tokenbodyparametercontractresponse">Token<wbr>Body<wbr>Parameter<wbr>Contract<wbr>Response[]</a></span>
     </dt>
-    <dd>{{% md %}}Additional parameters required by the token endpoint of this authorization server represented as an array of JSON objects with name and value string properties, i.e. {"name" : "name value", "value": "a value"}.{{% /md %}}</dd>
-    <dt class="property-"
+    <dd>{{% md %}}Additional parameters required by the token endpoint of this authorization server represented as an array of JSON objects with name and value string properties, i.e. {"name" : "name value", "value": "a value"}.{{% /md %}}</dd><dt class="property-"
             title="">
         <span id="tokenendpoint_nodejs">
 <a href="#tokenendpoint_nodejs" style="color: inherit; text-decoration: inherit;">token<wbr>Endpoint</a>
@@ -718,14 +636,11 @@ The following output properties are available:
         <span class="property-indicator"></span>
         <span class="property-type">string</span>
     </dt>
-    <dd>{{% md %}}OAuth token endpoint. Contains absolute URI to entity being referenced.{{% /md %}}</dd>
-</dl>
+    <dd>{{% md %}}OAuth token endpoint. Contains absolute URI to entity being referenced.{{% /md %}}</dd></dl>
 {{% /choosable %}}
 
 {{% choosable language python %}}
-<dl class="resources-properties">
-
-    <dt class="property-"
+<dl class="resources-properties"><dt class="property-"
             title="">
         <span id="authorization_endpoint_python">
 <a href="#authorization_endpoint_python" style="color: inherit; text-decoration: inherit;">authorization_<wbr>endpoint</a>
@@ -733,8 +648,7 @@ The following output properties are available:
         <span class="property-indicator"></span>
         <span class="property-type">str</span>
     </dt>
-    <dd>{{% md %}}OAuth authorization endpoint. See http://tools.ietf.org/html/rfc6749#section-3.2.{{% /md %}}</dd>
-    <dt class="property-"
+    <dd>{{% md %}}OAuth authorization endpoint. See http://tools.ietf.org/html/rfc6749#section-3.2.{{% /md %}}</dd><dt class="property-"
             title="">
         <span id="client_id_python">
 <a href="#client_id_python" style="color: inherit; text-decoration: inherit;">client_<wbr>id</a>
@@ -742,8 +656,7 @@ The following output properties are available:
         <span class="property-indicator"></span>
         <span class="property-type">str</span>
     </dt>
-    <dd>{{% md %}}Client or app id registered with this authorization server.{{% /md %}}</dd>
-    <dt class="property-"
+    <dd>{{% md %}}Client or app id registered with this authorization server.{{% /md %}}</dd><dt class="property-"
             title="">
         <span id="client_registration_endpoint_python">
 <a href="#client_registration_endpoint_python" style="color: inherit; text-decoration: inherit;">client_<wbr>registration_<wbr>endpoint</a>
@@ -751,8 +664,7 @@ The following output properties are available:
         <span class="property-indicator"></span>
         <span class="property-type">str</span>
     </dt>
-    <dd>{{% md %}}Optional reference to a page where client or app registration for this authorization server is performed. Contains absolute URL to entity being referenced.{{% /md %}}</dd>
-    <dt class="property-"
+    <dd>{{% md %}}Optional reference to a page where client or app registration for this authorization server is performed. Contains absolute URL to entity being referenced.{{% /md %}}</dd><dt class="property-"
             title="">
         <span id="display_name_python">
 <a href="#display_name_python" style="color: inherit; text-decoration: inherit;">display_<wbr>name</a>
@@ -760,8 +672,7 @@ The following output properties are available:
         <span class="property-indicator"></span>
         <span class="property-type">str</span>
     </dt>
-    <dd>{{% md %}}User-friendly authorization server name.{{% /md %}}</dd>
-    <dt class="property-"
+    <dd>{{% md %}}User-friendly authorization server name.{{% /md %}}</dd><dt class="property-"
             title="">
         <span id="grant_types_python">
 <a href="#grant_types_python" style="color: inherit; text-decoration: inherit;">grant_<wbr>types</a>
@@ -769,8 +680,7 @@ The following output properties are available:
         <span class="property-indicator"></span>
         <span class="property-type">Sequence[str]</span>
     </dt>
-    <dd>{{% md %}}Form of an authorization grant, which the client uses to request the access token.{{% /md %}}</dd>
-    <dt class="property-"
+    <dd>{{% md %}}Form of an authorization grant, which the client uses to request the access token.{{% /md %}}</dd><dt class="property-"
             title="">
         <span id="id_python">
 <a href="#id_python" style="color: inherit; text-decoration: inherit;">id</a>
@@ -778,8 +688,7 @@ The following output properties are available:
         <span class="property-indicator"></span>
         <span class="property-type">str</span>
     </dt>
-    <dd>{{% md %}}Resource ID.{{% /md %}}</dd>
-    <dt class="property-"
+    <dd>{{% md %}}Resource ID.{{% /md %}}</dd><dt class="property-"
             title="">
         <span id="name_python">
 <a href="#name_python" style="color: inherit; text-decoration: inherit;">name</a>
@@ -787,8 +696,7 @@ The following output properties are available:
         <span class="property-indicator"></span>
         <span class="property-type">str</span>
     </dt>
-    <dd>{{% md %}}Resource name.{{% /md %}}</dd>
-    <dt class="property-"
+    <dd>{{% md %}}Resource name.{{% /md %}}</dd><dt class="property-"
             title="">
         <span id="type_python">
 <a href="#type_python" style="color: inherit; text-decoration: inherit;">type</a>
@@ -796,8 +704,7 @@ The following output properties are available:
         <span class="property-indicator"></span>
         <span class="property-type">str</span>
     </dt>
-    <dd>{{% md %}}Resource type for API Management resource.{{% /md %}}</dd>
-    <dt class="property-"
+    <dd>{{% md %}}Resource type for API Management resource.{{% /md %}}</dd><dt class="property-"
             title="">
         <span id="authorization_methods_python">
 <a href="#authorization_methods_python" style="color: inherit; text-decoration: inherit;">authorization_<wbr>methods</a>
@@ -805,8 +712,7 @@ The following output properties are available:
         <span class="property-indicator"></span>
         <span class="property-type">Sequence[str]</span>
     </dt>
-    <dd>{{% md %}}HTTP verbs supported by the authorization endpoint. GET must be always present. POST is optional.{{% /md %}}</dd>
-    <dt class="property-"
+    <dd>{{% md %}}HTTP verbs supported by the authorization endpoint. GET must be always present. POST is optional.{{% /md %}}</dd><dt class="property-"
             title="">
         <span id="bearer_token_sending_methods_python">
 <a href="#bearer_token_sending_methods_python" style="color: inherit; text-decoration: inherit;">bearer_<wbr>token_<wbr>sending_<wbr>methods</a>
@@ -814,8 +720,7 @@ The following output properties are available:
         <span class="property-indicator"></span>
         <span class="property-type">Sequence[str]</span>
     </dt>
-    <dd>{{% md %}}Specifies the mechanism by which access token is passed to the API. {{% /md %}}</dd>
-    <dt class="property-"
+    <dd>{{% md %}}Specifies the mechanism by which access token is passed to the API. {{% /md %}}</dd><dt class="property-"
             title="">
         <span id="client_authentication_method_python">
 <a href="#client_authentication_method_python" style="color: inherit; text-decoration: inherit;">client_<wbr>authentication_<wbr>method</a>
@@ -823,8 +728,7 @@ The following output properties are available:
         <span class="property-indicator"></span>
         <span class="property-type">Sequence[str]</span>
     </dt>
-    <dd>{{% md %}}Method of authentication supported by the token endpoint of this authorization server. Possible values are Basic and/or Body. When Body is specified, client credentials and other parameters are passed within the request body in the application/x-www-form-urlencoded format.{{% /md %}}</dd>
-    <dt class="property-"
+    <dd>{{% md %}}Method of authentication supported by the token endpoint of this authorization server. Possible values are Basic and/or Body. When Body is specified, client credentials and other parameters are passed within the request body in the application/x-www-form-urlencoded format.{{% /md %}}</dd><dt class="property-"
             title="">
         <span id="client_secret_python">
 <a href="#client_secret_python" style="color: inherit; text-decoration: inherit;">client_<wbr>secret</a>
@@ -832,8 +736,7 @@ The following output properties are available:
         <span class="property-indicator"></span>
         <span class="property-type">str</span>
     </dt>
-    <dd>{{% md %}}Client or app secret registered with this authorization server. This property will not be filled on 'GET' operations! Use '/listSecrets' POST request to get the value.{{% /md %}}</dd>
-    <dt class="property-"
+    <dd>{{% md %}}Client or app secret registered with this authorization server. This property will not be filled on 'GET' operations! Use '/listSecrets' POST request to get the value.{{% /md %}}</dd><dt class="property-"
             title="">
         <span id="default_scope_python">
 <a href="#default_scope_python" style="color: inherit; text-decoration: inherit;">default_<wbr>scope</a>
@@ -841,8 +744,7 @@ The following output properties are available:
         <span class="property-indicator"></span>
         <span class="property-type">str</span>
     </dt>
-    <dd>{{% md %}}Access token scope that is going to be requested by default. Can be overridden at the API level. Should be provided in the form of a string containing space-delimited values.{{% /md %}}</dd>
-    <dt class="property-"
+    <dd>{{% md %}}Access token scope that is going to be requested by default. Can be overridden at the API level. Should be provided in the form of a string containing space-delimited values.{{% /md %}}</dd><dt class="property-"
             title="">
         <span id="description_python">
 <a href="#description_python" style="color: inherit; text-decoration: inherit;">description</a>
@@ -850,8 +752,7 @@ The following output properties are available:
         <span class="property-indicator"></span>
         <span class="property-type">str</span>
     </dt>
-    <dd>{{% md %}}Description of the authorization server. Can contain HTML formatting tags.{{% /md %}}</dd>
-    <dt class="property-"
+    <dd>{{% md %}}Description of the authorization server. Can contain HTML formatting tags.{{% /md %}}</dd><dt class="property-"
             title="">
         <span id="resource_owner_password_python">
 <a href="#resource_owner_password_python" style="color: inherit; text-decoration: inherit;">resource_<wbr>owner_<wbr>password</a>
@@ -859,8 +760,7 @@ The following output properties are available:
         <span class="property-indicator"></span>
         <span class="property-type">str</span>
     </dt>
-    <dd>{{% md %}}Can be optionally specified when resource owner password grant type is supported by this authorization server. Default resource owner password.{{% /md %}}</dd>
-    <dt class="property-"
+    <dd>{{% md %}}Can be optionally specified when resource owner password grant type is supported by this authorization server. Default resource owner password.{{% /md %}}</dd><dt class="property-"
             title="">
         <span id="resource_owner_username_python">
 <a href="#resource_owner_username_python" style="color: inherit; text-decoration: inherit;">resource_<wbr>owner_<wbr>username</a>
@@ -868,8 +768,7 @@ The following output properties are available:
         <span class="property-indicator"></span>
         <span class="property-type">str</span>
     </dt>
-    <dd>{{% md %}}Can be optionally specified when resource owner password grant type is supported by this authorization server. Default resource owner username.{{% /md %}}</dd>
-    <dt class="property-"
+    <dd>{{% md %}}Can be optionally specified when resource owner password grant type is supported by this authorization server. Default resource owner username.{{% /md %}}</dd><dt class="property-"
             title="">
         <span id="support_state_python">
 <a href="#support_state_python" style="color: inherit; text-decoration: inherit;">support_<wbr>state</a>
@@ -877,8 +776,7 @@ The following output properties are available:
         <span class="property-indicator"></span>
         <span class="property-type">bool</span>
     </dt>
-    <dd>{{% md %}}If true, authorization server will include state parameter from the authorization request to its response. Client may use state parameter to raise protocol security.{{% /md %}}</dd>
-    <dt class="property-"
+    <dd>{{% md %}}If true, authorization server will include state parameter from the authorization request to its response. Client may use state parameter to raise protocol security.{{% /md %}}</dd><dt class="property-"
             title="">
         <span id="token_body_parameters_python">
 <a href="#token_body_parameters_python" style="color: inherit; text-decoration: inherit;">token_<wbr>body_<wbr>parameters</a>
@@ -886,8 +784,7 @@ The following output properties are available:
         <span class="property-indicator"></span>
         <span class="property-type"><a href="#tokenbodyparametercontractresponse">Sequence[Token<wbr>Body<wbr>Parameter<wbr>Contract<wbr>Response]</a></span>
     </dt>
-    <dd>{{% md %}}Additional parameters required by the token endpoint of this authorization server represented as an array of JSON objects with name and value string properties, i.e. {"name" : "name value", "value": "a value"}.{{% /md %}}</dd>
-    <dt class="property-"
+    <dd>{{% md %}}Additional parameters required by the token endpoint of this authorization server represented as an array of JSON objects with name and value string properties, i.e. {"name" : "name value", "value": "a value"}.{{% /md %}}</dd><dt class="property-"
             title="">
         <span id="token_endpoint_python">
 <a href="#token_endpoint_python" style="color: inherit; text-decoration: inherit;">token_<wbr>endpoint</a>
@@ -895,8 +792,7 @@ The following output properties are available:
         <span class="property-indicator"></span>
         <span class="property-type">str</span>
     </dt>
-    <dd>{{% md %}}OAuth token endpoint. Contains absolute URI to entity being referenced.{{% /md %}}</dd>
-</dl>
+    <dd>{{% md %}}OAuth token endpoint. Contains absolute URI to entity being referenced.{{% /md %}}</dd></dl>
 {{% /choosable %}}
 
 
@@ -910,9 +806,7 @@ The following output properties are available:
 
 
 {{% choosable language csharp %}}
-<dl class="resources-properties">
-
-    <dt class="property-required"
+<dl class="resources-properties"><dt class="property-required"
             title="Required">
         <span id="name_csharp">
 <a href="#name_csharp" style="color: inherit; text-decoration: inherit;">Name</a>
@@ -920,8 +814,7 @@ The following output properties are available:
         <span class="property-indicator"></span>
         <span class="property-type">string</span>
     </dt>
-    <dd>{{% md %}}body parameter name.{{% /md %}}</dd>
-    <dt class="property-required"
+    <dd>{{% md %}}body parameter name.{{% /md %}}</dd><dt class="property-required"
             title="Required">
         <span id="value_csharp">
 <a href="#value_csharp" style="color: inherit; text-decoration: inherit;">Value</a>
@@ -929,14 +822,11 @@ The following output properties are available:
         <span class="property-indicator"></span>
         <span class="property-type">string</span>
     </dt>
-    <dd>{{% md %}}body parameter value.{{% /md %}}</dd>
-</dl>
+    <dd>{{% md %}}body parameter value.{{% /md %}}</dd></dl>
 {{% /choosable %}}
 
 {{% choosable language go %}}
-<dl class="resources-properties">
-
-    <dt class="property-required"
+<dl class="resources-properties"><dt class="property-required"
             title="Required">
         <span id="name_go">
 <a href="#name_go" style="color: inherit; text-decoration: inherit;">Name</a>
@@ -944,8 +834,7 @@ The following output properties are available:
         <span class="property-indicator"></span>
         <span class="property-type">string</span>
     </dt>
-    <dd>{{% md %}}body parameter name.{{% /md %}}</dd>
-    <dt class="property-required"
+    <dd>{{% md %}}body parameter name.{{% /md %}}</dd><dt class="property-required"
             title="Required">
         <span id="value_go">
 <a href="#value_go" style="color: inherit; text-decoration: inherit;">Value</a>
@@ -953,14 +842,11 @@ The following output properties are available:
         <span class="property-indicator"></span>
         <span class="property-type">string</span>
     </dt>
-    <dd>{{% md %}}body parameter value.{{% /md %}}</dd>
-</dl>
+    <dd>{{% md %}}body parameter value.{{% /md %}}</dd></dl>
 {{% /choosable %}}
 
 {{% choosable language nodejs %}}
-<dl class="resources-properties">
-
-    <dt class="property-required"
+<dl class="resources-properties"><dt class="property-required"
             title="Required">
         <span id="name_nodejs">
 <a href="#name_nodejs" style="color: inherit; text-decoration: inherit;">name</a>
@@ -968,8 +854,7 @@ The following output properties are available:
         <span class="property-indicator"></span>
         <span class="property-type">string</span>
     </dt>
-    <dd>{{% md %}}body parameter name.{{% /md %}}</dd>
-    <dt class="property-required"
+    <dd>{{% md %}}body parameter name.{{% /md %}}</dd><dt class="property-required"
             title="Required">
         <span id="value_nodejs">
 <a href="#value_nodejs" style="color: inherit; text-decoration: inherit;">value</a>
@@ -977,14 +862,11 @@ The following output properties are available:
         <span class="property-indicator"></span>
         <span class="property-type">string</span>
     </dt>
-    <dd>{{% md %}}body parameter value.{{% /md %}}</dd>
-</dl>
+    <dd>{{% md %}}body parameter value.{{% /md %}}</dd></dl>
 {{% /choosable %}}
 
 {{% choosable language python %}}
-<dl class="resources-properties">
-
-    <dt class="property-required"
+<dl class="resources-properties"><dt class="property-required"
             title="Required">
         <span id="name_python">
 <a href="#name_python" style="color: inherit; text-decoration: inherit;">name</a>
@@ -992,8 +874,7 @@ The following output properties are available:
         <span class="property-indicator"></span>
         <span class="property-type">str</span>
     </dt>
-    <dd>{{% md %}}body parameter name.{{% /md %}}</dd>
-    <dt class="property-required"
+    <dd>{{% md %}}body parameter name.{{% /md %}}</dd><dt class="property-required"
             title="Required">
         <span id="value_python">
 <a href="#value_python" style="color: inherit; text-decoration: inherit;">value</a>
@@ -1001,8 +882,7 @@ The following output properties are available:
         <span class="property-indicator"></span>
         <span class="property-type">str</span>
     </dt>
-    <dd>{{% md %}}body parameter value.{{% /md %}}</dd>
-</dl>
+    <dd>{{% md %}}body parameter value.{{% /md %}}</dd></dl>
 {{% /choosable %}}
 
 

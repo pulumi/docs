@@ -51,9 +51,7 @@ The following arguments are supported:
 
 
 {{% choosable language csharp %}}
-<dl class="resources-properties">
-
-    <dt class="property-required"
+<dl class="resources-properties"><dt class="property-required"
             title="Required">
         <span id="functionname_csharp">
 <a href="#functionname_csharp" style="color: inherit; text-decoration: inherit;">Function<wbr>Name</a>
@@ -61,8 +59,7 @@ The following arguments are supported:
         <span class="property-indicator"></span>
         <span class="property-type">string</span>
     </dt>
-    <dd>{{% md %}}Function name.{{% /md %}}</dd>
-    <dt class="property-required"
+    <dd>{{% md %}}Function name.{{% /md %}}</dd><dt class="property-required"
             title="Required">
         <span id="name_csharp">
 <a href="#name_csharp" style="color: inherit; text-decoration: inherit;">Name</a>
@@ -70,8 +67,7 @@ The following arguments are supported:
         <span class="property-indicator"></span>
         <span class="property-type">string</span>
     </dt>
-    <dd>{{% md %}}Site name.{{% /md %}}</dd>
-    <dt class="property-required"
+    <dd>{{% md %}}Site name.{{% /md %}}</dd><dt class="property-required"
             title="Required">
         <span id="resourcegroupname_csharp">
 <a href="#resourcegroupname_csharp" style="color: inherit; text-decoration: inherit;">Resource<wbr>Group<wbr>Name</a>
@@ -79,8 +75,7 @@ The following arguments are supported:
         <span class="property-indicator"></span>
         <span class="property-type">string</span>
     </dt>
-    <dd>{{% md %}}Name of the resource group to which the resource belongs.{{% /md %}}</dd>
-    <dt class="property-required"
+    <dd>{{% md %}}Name of the resource group to which the resource belongs.{{% /md %}}</dd><dt class="property-required"
             title="Required">
         <span id="slot_csharp">
 <a href="#slot_csharp" style="color: inherit; text-decoration: inherit;">Slot</a>
@@ -88,14 +83,11 @@ The following arguments are supported:
         <span class="property-indicator"></span>
         <span class="property-type">string</span>
     </dt>
-    <dd>{{% md %}}Name of the deployment slot.{{% /md %}}</dd>
-</dl>
+    <dd>{{% md %}}Name of the deployment slot.{{% /md %}}</dd></dl>
 {{% /choosable %}}
 
 {{% choosable language go %}}
-<dl class="resources-properties">
-
-    <dt class="property-required"
+<dl class="resources-properties"><dt class="property-required"
             title="Required">
         <span id="functionname_go">
 <a href="#functionname_go" style="color: inherit; text-decoration: inherit;">Function<wbr>Name</a>
@@ -103,8 +95,7 @@ The following arguments are supported:
         <span class="property-indicator"></span>
         <span class="property-type">string</span>
     </dt>
-    <dd>{{% md %}}Function name.{{% /md %}}</dd>
-    <dt class="property-required"
+    <dd>{{% md %}}Function name.{{% /md %}}</dd><dt class="property-required"
             title="Required">
         <span id="name_go">
 <a href="#name_go" style="color: inherit; text-decoration: inherit;">Name</a>
@@ -112,8 +103,7 @@ The following arguments are supported:
         <span class="property-indicator"></span>
         <span class="property-type">string</span>
     </dt>
-    <dd>{{% md %}}Site name.{{% /md %}}</dd>
-    <dt class="property-required"
+    <dd>{{% md %}}Site name.{{% /md %}}</dd><dt class="property-required"
             title="Required">
         <span id="resourcegroupname_go">
 <a href="#resourcegroupname_go" style="color: inherit; text-decoration: inherit;">Resource<wbr>Group<wbr>Name</a>
@@ -121,8 +111,7 @@ The following arguments are supported:
         <span class="property-indicator"></span>
         <span class="property-type">string</span>
     </dt>
-    <dd>{{% md %}}Name of the resource group to which the resource belongs.{{% /md %}}</dd>
-    <dt class="property-required"
+    <dd>{{% md %}}Name of the resource group to which the resource belongs.{{% /md %}}</dd><dt class="property-required"
             title="Required">
         <span id="slot_go">
 <a href="#slot_go" style="color: inherit; text-decoration: inherit;">Slot</a>
@@ -130,14 +119,11 @@ The following arguments are supported:
         <span class="property-indicator"></span>
         <span class="property-type">string</span>
     </dt>
-    <dd>{{% md %}}Name of the deployment slot.{{% /md %}}</dd>
-</dl>
+    <dd>{{% md %}}Name of the deployment slot.{{% /md %}}</dd></dl>
 {{% /choosable %}}
 
 {{% choosable language nodejs %}}
-<dl class="resources-properties">
-
-    <dt class="property-required"
+<dl class="resources-properties"><dt class="property-required"
             title="Required">
         <span id="functionname_nodejs">
 <a href="#functionname_nodejs" style="color: inherit; text-decoration: inherit;">function<wbr>Name</a>
@@ -145,8 +131,7 @@ The following arguments are supported:
         <span class="property-indicator"></span>
         <span class="property-type">string</span>
     </dt>
-    <dd>{{% md %}}Function name.{{% /md %}}</dd>
-    <dt class="property-required"
+    <dd>{{% md %}}Function name.{{% /md %}}</dd><dt class="property-required"
             title="Required">
         <span id="name_nodejs">
 <a href="#name_nodejs" style="color: inherit; text-decoration: inherit;">name</a>
@@ -154,8 +139,7 @@ The following arguments are supported:
         <span class="property-indicator"></span>
         <span class="property-type">string</span>
     </dt>
-    <dd>{{% md %}}Site name.{{% /md %}}</dd>
-    <dt class="property-required"
+    <dd>{{% md %}}Site name.{{% /md %}}</dd><dt class="property-required"
             title="Required">
         <span id="resourcegroupname_nodejs">
 <a href="#resourcegroupname_nodejs" style="color: inherit; text-decoration: inherit;">resource<wbr>Group<wbr>Name</a>
@@ -163,8 +147,7 @@ The following arguments are supported:
         <span class="property-indicator"></span>
         <span class="property-type">string</span>
     </dt>
-    <dd>{{% md %}}Name of the resource group to which the resource belongs.{{% /md %}}</dd>
-    <dt class="property-required"
+    <dd>{{% md %}}Name of the resource group to which the resource belongs.{{% /md %}}</dd><dt class="property-required"
             title="Required">
         <span id="slot_nodejs">
 <a href="#slot_nodejs" style="color: inherit; text-decoration: inherit;">slot</a>
@@ -172,14 +155,11 @@ The following arguments are supported:
         <span class="property-indicator"></span>
         <span class="property-type">string</span>
     </dt>
-    <dd>{{% md %}}Name of the deployment slot.{{% /md %}}</dd>
-</dl>
+    <dd>{{% md %}}Name of the deployment slot.{{% /md %}}</dd></dl>
 {{% /choosable %}}
 
 {{% choosable language python %}}
-<dl class="resources-properties">
-
-    <dt class="property-required"
+<dl class="resources-properties"><dt class="property-required"
             title="Required">
         <span id="function_name_python">
 <a href="#function_name_python" style="color: inherit; text-decoration: inherit;">function_<wbr>name</a>
@@ -187,8 +167,7 @@ The following arguments are supported:
         <span class="property-indicator"></span>
         <span class="property-type">str</span>
     </dt>
-    <dd>{{% md %}}Function name.{{% /md %}}</dd>
-    <dt class="property-required"
+    <dd>{{% md %}}Function name.{{% /md %}}</dd><dt class="property-required"
             title="Required">
         <span id="name_python">
 <a href="#name_python" style="color: inherit; text-decoration: inherit;">name</a>
@@ -196,8 +175,7 @@ The following arguments are supported:
         <span class="property-indicator"></span>
         <span class="property-type">str</span>
     </dt>
-    <dd>{{% md %}}Site name.{{% /md %}}</dd>
-    <dt class="property-required"
+    <dd>{{% md %}}Site name.{{% /md %}}</dd><dt class="property-required"
             title="Required">
         <span id="resource_group_name_python">
 <a href="#resource_group_name_python" style="color: inherit; text-decoration: inherit;">resource_<wbr>group_<wbr>name</a>
@@ -205,8 +183,7 @@ The following arguments are supported:
         <span class="property-indicator"></span>
         <span class="property-type">str</span>
     </dt>
-    <dd>{{% md %}}Name of the resource group to which the resource belongs.{{% /md %}}</dd>
-    <dt class="property-required"
+    <dd>{{% md %}}Name of the resource group to which the resource belongs.{{% /md %}}</dd><dt class="property-required"
             title="Required">
         <span id="slot_python">
 <a href="#slot_python" style="color: inherit; text-decoration: inherit;">slot</a>
@@ -214,8 +191,7 @@ The following arguments are supported:
         <span class="property-indicator"></span>
         <span class="property-type">str</span>
     </dt>
-    <dd>{{% md %}}Name of the deployment slot.{{% /md %}}</dd>
-</dl>
+    <dd>{{% md %}}Name of the deployment slot.{{% /md %}}</dd></dl>
 {{% /choosable %}}
 
 
@@ -228,9 +204,7 @@ The following output properties are available:
 
 
 {{% choosable language csharp %}}
-<dl class="resources-properties">
-
-    <dt class="property-"
+<dl class="resources-properties"><dt class="property-"
             title="">
         <span id="key_csharp">
 <a href="#key_csharp" style="color: inherit; text-decoration: inherit;">Key</a>
@@ -238,8 +212,7 @@ The following output properties are available:
         <span class="property-indicator"></span>
         <span class="property-type">string</span>
     </dt>
-    <dd>{{% md %}}Secret key.{{% /md %}}</dd>
-    <dt class="property-"
+    <dd>{{% md %}}Secret key.{{% /md %}}</dd><dt class="property-"
             title="">
         <span id="triggerurl_csharp">
 <a href="#triggerurl_csharp" style="color: inherit; text-decoration: inherit;">Trigger<wbr>Url</a>
@@ -247,14 +220,11 @@ The following output properties are available:
         <span class="property-indicator"></span>
         <span class="property-type">string</span>
     </dt>
-    <dd>{{% md %}}Trigger URL.{{% /md %}}</dd>
-</dl>
+    <dd>{{% md %}}Trigger URL.{{% /md %}}</dd></dl>
 {{% /choosable %}}
 
 {{% choosable language go %}}
-<dl class="resources-properties">
-
-    <dt class="property-"
+<dl class="resources-properties"><dt class="property-"
             title="">
         <span id="key_go">
 <a href="#key_go" style="color: inherit; text-decoration: inherit;">Key</a>
@@ -262,8 +232,7 @@ The following output properties are available:
         <span class="property-indicator"></span>
         <span class="property-type">string</span>
     </dt>
-    <dd>{{% md %}}Secret key.{{% /md %}}</dd>
-    <dt class="property-"
+    <dd>{{% md %}}Secret key.{{% /md %}}</dd><dt class="property-"
             title="">
         <span id="triggerurl_go">
 <a href="#triggerurl_go" style="color: inherit; text-decoration: inherit;">Trigger<wbr>Url</a>
@@ -271,14 +240,11 @@ The following output properties are available:
         <span class="property-indicator"></span>
         <span class="property-type">string</span>
     </dt>
-    <dd>{{% md %}}Trigger URL.{{% /md %}}</dd>
-</dl>
+    <dd>{{% md %}}Trigger URL.{{% /md %}}</dd></dl>
 {{% /choosable %}}
 
 {{% choosable language nodejs %}}
-<dl class="resources-properties">
-
-    <dt class="property-"
+<dl class="resources-properties"><dt class="property-"
             title="">
         <span id="key_nodejs">
 <a href="#key_nodejs" style="color: inherit; text-decoration: inherit;">key</a>
@@ -286,8 +252,7 @@ The following output properties are available:
         <span class="property-indicator"></span>
         <span class="property-type">string</span>
     </dt>
-    <dd>{{% md %}}Secret key.{{% /md %}}</dd>
-    <dt class="property-"
+    <dd>{{% md %}}Secret key.{{% /md %}}</dd><dt class="property-"
             title="">
         <span id="triggerurl_nodejs">
 <a href="#triggerurl_nodejs" style="color: inherit; text-decoration: inherit;">trigger<wbr>Url</a>
@@ -295,14 +260,11 @@ The following output properties are available:
         <span class="property-indicator"></span>
         <span class="property-type">string</span>
     </dt>
-    <dd>{{% md %}}Trigger URL.{{% /md %}}</dd>
-</dl>
+    <dd>{{% md %}}Trigger URL.{{% /md %}}</dd></dl>
 {{% /choosable %}}
 
 {{% choosable language python %}}
-<dl class="resources-properties">
-
-    <dt class="property-"
+<dl class="resources-properties"><dt class="property-"
             title="">
         <span id="key_python">
 <a href="#key_python" style="color: inherit; text-decoration: inherit;">key</a>
@@ -310,8 +272,7 @@ The following output properties are available:
         <span class="property-indicator"></span>
         <span class="property-type">str</span>
     </dt>
-    <dd>{{% md %}}Secret key.{{% /md %}}</dd>
-    <dt class="property-"
+    <dd>{{% md %}}Secret key.{{% /md %}}</dd><dt class="property-"
             title="">
         <span id="trigger_url_python">
 <a href="#trigger_url_python" style="color: inherit; text-decoration: inherit;">trigger_<wbr>url</a>
@@ -319,8 +280,7 @@ The following output properties are available:
         <span class="property-indicator"></span>
         <span class="property-type">str</span>
     </dt>
-    <dd>{{% md %}}Trigger URL.{{% /md %}}</dd>
-</dl>
+    <dd>{{% md %}}Trigger URL.{{% /md %}}</dd></dl>
 {{% /choosable %}}
 
 

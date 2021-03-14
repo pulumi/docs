@@ -14,11 +14,17 @@ Describes a Virtual Machine run command.
 API Version: 2020-12-01.
 
 {{% examples %}}
+
 ## Example Usage
 
 {{< chooser language "typescript,python,go,csharp" / >}}
+
+
 ### Create or update a run command.
-{{% example csharp %}}
+
+
+{{< example csharp >}}
+
 ```csharp
 using Pulumi;
 using AzureNative = Pulumi.AzureNative;
@@ -61,9 +67,12 @@ class MyStack : Stack
 
 ```
 
-{{% /example %}}
 
-{{% example go %}}
+{{< /example >}}
+
+
+{{< example go >}}
+
 
 ```go
 package main
@@ -107,9 +116,12 @@ func main() {
 
 ```
 
-{{% /example %}}
 
-{{% example python %}}
+{{< /example >}}
+
+
+{{< example python >}}
+
 
 ```python
 import pulumi
@@ -140,9 +152,12 @@ virtual_machine_run_command_by_virtual_machine = azure_native.compute.VirtualMac
 
 ```
 
-{{% /example %}}
 
-{{% example typescript %}}
+{{< /example >}}
+
+
+{{< example typescript >}}
+
 
 ```typescript
 import * as pulumi from "@pulumi/pulumi";
@@ -174,9 +189,16 @@ const virtualMachineRunCommandByVirtualMachine = new azure_native.compute.Virtua
 
 ```
 
-{{% /example %}}
+
+{{< /example >}}
+
+
+
+
 
 {{% /examples %}}
+
+
 
 
 ## Create a VirtualMachineRunCommandByVirtualMachine Resource {#create}
@@ -201,9 +223,7 @@ const virtualMachineRunCommandByVirtualMachine = new azure_native.compute.Virtua
 
 {{% choosable language nodejs %}}
 
-<dl class="resources-properties">
-  
-    <dt
+<dl class="resources-properties"><dt
         class="property-required" title="Required">
         <span>name</span>
         <span class="property-indicator"></span>
@@ -211,9 +231,7 @@ const virtualMachineRunCommandByVirtualMachine = new azure_native.compute.Virtua
     </dt>
     <dd>
       The unique name of the resource.
-    </dd>
-  
-    <dt
+    </dd><dt
         class="property-required" title="Required">
         <span>args</span>
         <span class="property-indicator"></span>
@@ -221,9 +239,7 @@ const virtualMachineRunCommandByVirtualMachine = new azure_native.compute.Virtua
     </dt>
     <dd>
       The arguments to resource properties.
-    </dd>
-  
-    <dt
+    </dd><dt
         class="property-optional" title="Optional">
         <span>opts</span>
         <span class="property-indicator"></span>
@@ -231,10 +247,7 @@ const virtualMachineRunCommandByVirtualMachine = new azure_native.compute.Virtua
     </dt>
     <dd>
       Bag of options to control resource&#39;s behavior.
-    </dd>
-  
-
-</dl>
+    </dd></dl>
 
 {{% /choosable %}}
 
@@ -260,9 +273,7 @@ const virtualMachineRunCommandByVirtualMachine = new azure_native.compute.Virtua
 
 {{% choosable language go %}}
 
-<dl class="resources-properties">
-  
-    <dt
+<dl class="resources-properties"><dt
         class="property-optional" title="Optional">
         <span>ctx</span>
         <span class="property-indicator"></span>
@@ -270,9 +281,7 @@ const virtualMachineRunCommandByVirtualMachine = new azure_native.compute.Virtua
     </dt>
     <dd>
       Context object for the current deployment.
-    </dd>
-  
-    <dt
+    </dd><dt
         class="property-required" title="Required">
         <span>name</span>
         <span class="property-indicator"></span>
@@ -280,9 +289,7 @@ const virtualMachineRunCommandByVirtualMachine = new azure_native.compute.Virtua
     </dt>
     <dd>
       The unique name of the resource.
-    </dd>
-  
-    <dt
+    </dd><dt
         class="property-required" title="Required">
         <span>args</span>
         <span class="property-indicator"></span>
@@ -290,9 +297,7 @@ const virtualMachineRunCommandByVirtualMachine = new azure_native.compute.Virtua
     </dt>
     <dd>
       The arguments to resource properties.
-    </dd>
-  
-    <dt
+    </dd><dt
         class="property-optional" title="Optional">
         <span>opts</span>
         <span class="property-indicator"></span>
@@ -300,18 +305,13 @@ const virtualMachineRunCommandByVirtualMachine = new azure_native.compute.Virtua
     </dt>
     <dd>
       Bag of options to control resource&#39;s behavior.
-    </dd>
-  
-
-</dl>
+    </dd></dl>
 
 {{% /choosable %}}
 
 {{% choosable language csharp %}}
 
-<dl class="resources-properties">
-  
-    <dt
+<dl class="resources-properties"><dt
         class="property-required" title="Required">
         <span>name</span>
         <span class="property-indicator"></span>
@@ -319,9 +319,7 @@ const virtualMachineRunCommandByVirtualMachine = new azure_native.compute.Virtua
     </dt>
     <dd>
       The unique name of the resource.
-    </dd>
-  
-    <dt
+    </dd><dt
         class="property-required" title="Required">
         <span>args</span>
         <span class="property-indicator"></span>
@@ -329,9 +327,7 @@ const virtualMachineRunCommandByVirtualMachine = new azure_native.compute.Virtua
     </dt>
     <dd>
       The arguments to resource properties.
-    </dd>
-  
-    <dt
+    </dd><dt
         class="property-optional" title="Optional">
         <span>opts</span>
         <span class="property-indicator"></span>
@@ -339,10 +335,7 @@ const virtualMachineRunCommandByVirtualMachine = new azure_native.compute.Virtua
     </dt>
     <dd>
       Bag of options to control resource&#39;s behavior.
-    </dd>
-  
-
-</dl>
+    </dd></dl>
 
 {{% /choosable %}}
 
@@ -357,9 +350,7 @@ The VirtualMachineRunCommandByVirtualMachine resource accepts the following [inp
 
 
 {{% choosable language csharp %}}
-<dl class="resources-properties">
-
-    <dt class="property-required"
+<dl class="resources-properties"><dt class="property-required"
             title="Required">
         <span id="resourcegroupname_csharp">
 <a href="#resourcegroupname_csharp" style="color: inherit; text-decoration: inherit;">Resource<wbr>Group<wbr>Name</a>
@@ -367,8 +358,7 @@ The VirtualMachineRunCommandByVirtualMachine resource accepts the following [inp
         <span class="property-indicator"></span>
         <span class="property-type">string</span>
     </dt>
-    <dd>{{% md %}}The name of the resource group.{{% /md %}}</dd>
-    <dt class="property-required"
+    <dd>{{% md %}}The name of the resource group.{{% /md %}}</dd><dt class="property-required"
             title="Required">
         <span id="vmname_csharp">
 <a href="#vmname_csharp" style="color: inherit; text-decoration: inherit;">Vm<wbr>Name</a>
@@ -376,8 +366,7 @@ The VirtualMachineRunCommandByVirtualMachine resource accepts the following [inp
         <span class="property-indicator"></span>
         <span class="property-type">string</span>
     </dt>
-    <dd>{{% md %}}The name of the virtual machine where the run command should be created or updated.{{% /md %}}</dd>
-    <dt class="property-optional"
+    <dd>{{% md %}}The name of the virtual machine where the run command should be created or updated.{{% /md %}}</dd><dt class="property-optional"
             title="Optional">
         <span id="asyncexecution_csharp">
 <a href="#asyncexecution_csharp" style="color: inherit; text-decoration: inherit;">Async<wbr>Execution</a>
@@ -385,8 +374,7 @@ The VirtualMachineRunCommandByVirtualMachine resource accepts the following [inp
         <span class="property-indicator"></span>
         <span class="property-type">bool</span>
     </dt>
-    <dd>{{% md %}}Optional. If set to true, provisioning will complete as soon as the script starts and will not wait for script to complete.{{% /md %}}</dd>
-    <dt class="property-optional"
+    <dd>{{% md %}}Optional. If set to true, provisioning will complete as soon as the script starts and will not wait for script to complete.{{% /md %}}</dd><dt class="property-optional"
             title="Optional">
         <span id="errorbloburi_csharp">
 <a href="#errorbloburi_csharp" style="color: inherit; text-decoration: inherit;">Error<wbr>Blob<wbr>Uri</a>
@@ -394,8 +382,7 @@ The VirtualMachineRunCommandByVirtualMachine resource accepts the following [inp
         <span class="property-indicator"></span>
         <span class="property-type">string</span>
     </dt>
-    <dd>{{% md %}}Specifies the Azure storage blob where script error stream will be uploaded.{{% /md %}}</dd>
-    <dt class="property-optional"
+    <dd>{{% md %}}Specifies the Azure storage blob where script error stream will be uploaded.{{% /md %}}</dd><dt class="property-optional"
             title="Optional">
         <span id="location_csharp">
 <a href="#location_csharp" style="color: inherit; text-decoration: inherit;">Location</a>
@@ -403,8 +390,7 @@ The VirtualMachineRunCommandByVirtualMachine resource accepts the following [inp
         <span class="property-indicator"></span>
         <span class="property-type">string</span>
     </dt>
-    <dd>{{% md %}}Resource location{{% /md %}}</dd>
-    <dt class="property-optional"
+    <dd>{{% md %}}Resource location{{% /md %}}</dd><dt class="property-optional"
             title="Optional">
         <span id="outputbloburi_csharp">
 <a href="#outputbloburi_csharp" style="color: inherit; text-decoration: inherit;">Output<wbr>Blob<wbr>Uri</a>
@@ -412,8 +398,7 @@ The VirtualMachineRunCommandByVirtualMachine resource accepts the following [inp
         <span class="property-indicator"></span>
         <span class="property-type">string</span>
     </dt>
-    <dd>{{% md %}}Specifies the Azure storage blob where script output stream will be uploaded.{{% /md %}}</dd>
-    <dt class="property-optional"
+    <dd>{{% md %}}Specifies the Azure storage blob where script output stream will be uploaded.{{% /md %}}</dd><dt class="property-optional"
             title="Optional">
         <span id="parameters_csharp">
 <a href="#parameters_csharp" style="color: inherit; text-decoration: inherit;">Parameters</a>
@@ -421,8 +406,7 @@ The VirtualMachineRunCommandByVirtualMachine resource accepts the following [inp
         <span class="property-indicator"></span>
         <span class="property-type"><a href="#runcommandinputparameter">List&lt;Pulumi.<wbr>Azure<wbr>Native.<wbr>Compute.<wbr>Inputs.<wbr>Run<wbr>Command<wbr>Input<wbr>Parameter<wbr>Args&gt;</a></span>
     </dt>
-    <dd>{{% md %}}The parameters used by the script.{{% /md %}}</dd>
-    <dt class="property-optional"
+    <dd>{{% md %}}The parameters used by the script.{{% /md %}}</dd><dt class="property-optional"
             title="Optional">
         <span id="protectedparameters_csharp">
 <a href="#protectedparameters_csharp" style="color: inherit; text-decoration: inherit;">Protected<wbr>Parameters</a>
@@ -430,8 +414,7 @@ The VirtualMachineRunCommandByVirtualMachine resource accepts the following [inp
         <span class="property-indicator"></span>
         <span class="property-type"><a href="#runcommandinputparameter">List&lt;Pulumi.<wbr>Azure<wbr>Native.<wbr>Compute.<wbr>Inputs.<wbr>Run<wbr>Command<wbr>Input<wbr>Parameter<wbr>Args&gt;</a></span>
     </dt>
-    <dd>{{% md %}}The parameters used by the script.{{% /md %}}</dd>
-    <dt class="property-optional"
+    <dd>{{% md %}}The parameters used by the script.{{% /md %}}</dd><dt class="property-optional"
             title="Optional">
         <span id="runaspassword_csharp">
 <a href="#runaspassword_csharp" style="color: inherit; text-decoration: inherit;">Run<wbr>As<wbr>Password</a>
@@ -439,8 +422,7 @@ The VirtualMachineRunCommandByVirtualMachine resource accepts the following [inp
         <span class="property-indicator"></span>
         <span class="property-type">string</span>
     </dt>
-    <dd>{{% md %}}Specifies the user account password on the VM when executing the run command.{{% /md %}}</dd>
-    <dt class="property-optional"
+    <dd>{{% md %}}Specifies the user account password on the VM when executing the run command.{{% /md %}}</dd><dt class="property-optional"
             title="Optional">
         <span id="runasuser_csharp">
 <a href="#runasuser_csharp" style="color: inherit; text-decoration: inherit;">Run<wbr>As<wbr>User</a>
@@ -448,8 +430,7 @@ The VirtualMachineRunCommandByVirtualMachine resource accepts the following [inp
         <span class="property-indicator"></span>
         <span class="property-type">string</span>
     </dt>
-    <dd>{{% md %}}Specifies the user account on the VM when executing the run command.{{% /md %}}</dd>
-    <dt class="property-optional"
+    <dd>{{% md %}}Specifies the user account on the VM when executing the run command.{{% /md %}}</dd><dt class="property-optional"
             title="Optional">
         <span id="runcommandname_csharp">
 <a href="#runcommandname_csharp" style="color: inherit; text-decoration: inherit;">Run<wbr>Command<wbr>Name</a>
@@ -457,8 +438,7 @@ The VirtualMachineRunCommandByVirtualMachine resource accepts the following [inp
         <span class="property-indicator"></span>
         <span class="property-type">string</span>
     </dt>
-    <dd>{{% md %}}The name of the virtual machine run command.{{% /md %}}</dd>
-    <dt class="property-optional"
+    <dd>{{% md %}}The name of the virtual machine run command.{{% /md %}}</dd><dt class="property-optional"
             title="Optional">
         <span id="source_csharp">
 <a href="#source_csharp" style="color: inherit; text-decoration: inherit;">Source</a>
@@ -466,8 +446,7 @@ The VirtualMachineRunCommandByVirtualMachine resource accepts the following [inp
         <span class="property-indicator"></span>
         <span class="property-type"><a href="#virtualmachineruncommandscriptsource">Pulumi.<wbr>Azure<wbr>Native.<wbr>Compute.<wbr>Inputs.<wbr>Virtual<wbr>Machine<wbr>Run<wbr>Command<wbr>Script<wbr>Source<wbr>Args</a></span>
     </dt>
-    <dd>{{% md %}}The source of the run command script.{{% /md %}}</dd>
-    <dt class="property-optional"
+    <dd>{{% md %}}The source of the run command script.{{% /md %}}</dd><dt class="property-optional"
             title="Optional">
         <span id="tags_csharp">
 <a href="#tags_csharp" style="color: inherit; text-decoration: inherit;">Tags</a>
@@ -475,8 +454,7 @@ The VirtualMachineRunCommandByVirtualMachine resource accepts the following [inp
         <span class="property-indicator"></span>
         <span class="property-type">Dictionary&lt;string, string&gt;</span>
     </dt>
-    <dd>{{% md %}}Resource tags{{% /md %}}</dd>
-    <dt class="property-optional"
+    <dd>{{% md %}}Resource tags{{% /md %}}</dd><dt class="property-optional"
             title="Optional">
         <span id="timeoutinseconds_csharp">
 <a href="#timeoutinseconds_csharp" style="color: inherit; text-decoration: inherit;">Timeout<wbr>In<wbr>Seconds</a>
@@ -484,14 +462,11 @@ The VirtualMachineRunCommandByVirtualMachine resource accepts the following [inp
         <span class="property-indicator"></span>
         <span class="property-type">int</span>
     </dt>
-    <dd>{{% md %}}The timeout in seconds to execute the run command.{{% /md %}}</dd>
-</dl>
+    <dd>{{% md %}}The timeout in seconds to execute the run command.{{% /md %}}</dd></dl>
 {{% /choosable %}}
 
 {{% choosable language go %}}
-<dl class="resources-properties">
-
-    <dt class="property-required"
+<dl class="resources-properties"><dt class="property-required"
             title="Required">
         <span id="resourcegroupname_go">
 <a href="#resourcegroupname_go" style="color: inherit; text-decoration: inherit;">Resource<wbr>Group<wbr>Name</a>
@@ -499,8 +474,7 @@ The VirtualMachineRunCommandByVirtualMachine resource accepts the following [inp
         <span class="property-indicator"></span>
         <span class="property-type">string</span>
     </dt>
-    <dd>{{% md %}}The name of the resource group.{{% /md %}}</dd>
-    <dt class="property-required"
+    <dd>{{% md %}}The name of the resource group.{{% /md %}}</dd><dt class="property-required"
             title="Required">
         <span id="vmname_go">
 <a href="#vmname_go" style="color: inherit; text-decoration: inherit;">Vm<wbr>Name</a>
@@ -508,8 +482,7 @@ The VirtualMachineRunCommandByVirtualMachine resource accepts the following [inp
         <span class="property-indicator"></span>
         <span class="property-type">string</span>
     </dt>
-    <dd>{{% md %}}The name of the virtual machine where the run command should be created or updated.{{% /md %}}</dd>
-    <dt class="property-optional"
+    <dd>{{% md %}}The name of the virtual machine where the run command should be created or updated.{{% /md %}}</dd><dt class="property-optional"
             title="Optional">
         <span id="asyncexecution_go">
 <a href="#asyncexecution_go" style="color: inherit; text-decoration: inherit;">Async<wbr>Execution</a>
@@ -517,8 +490,7 @@ The VirtualMachineRunCommandByVirtualMachine resource accepts the following [inp
         <span class="property-indicator"></span>
         <span class="property-type">bool</span>
     </dt>
-    <dd>{{% md %}}Optional. If set to true, provisioning will complete as soon as the script starts and will not wait for script to complete.{{% /md %}}</dd>
-    <dt class="property-optional"
+    <dd>{{% md %}}Optional. If set to true, provisioning will complete as soon as the script starts and will not wait for script to complete.{{% /md %}}</dd><dt class="property-optional"
             title="Optional">
         <span id="errorbloburi_go">
 <a href="#errorbloburi_go" style="color: inherit; text-decoration: inherit;">Error<wbr>Blob<wbr>Uri</a>
@@ -526,8 +498,7 @@ The VirtualMachineRunCommandByVirtualMachine resource accepts the following [inp
         <span class="property-indicator"></span>
         <span class="property-type">string</span>
     </dt>
-    <dd>{{% md %}}Specifies the Azure storage blob where script error stream will be uploaded.{{% /md %}}</dd>
-    <dt class="property-optional"
+    <dd>{{% md %}}Specifies the Azure storage blob where script error stream will be uploaded.{{% /md %}}</dd><dt class="property-optional"
             title="Optional">
         <span id="location_go">
 <a href="#location_go" style="color: inherit; text-decoration: inherit;">Location</a>
@@ -535,8 +506,7 @@ The VirtualMachineRunCommandByVirtualMachine resource accepts the following [inp
         <span class="property-indicator"></span>
         <span class="property-type">string</span>
     </dt>
-    <dd>{{% md %}}Resource location{{% /md %}}</dd>
-    <dt class="property-optional"
+    <dd>{{% md %}}Resource location{{% /md %}}</dd><dt class="property-optional"
             title="Optional">
         <span id="outputbloburi_go">
 <a href="#outputbloburi_go" style="color: inherit; text-decoration: inherit;">Output<wbr>Blob<wbr>Uri</a>
@@ -544,8 +514,7 @@ The VirtualMachineRunCommandByVirtualMachine resource accepts the following [inp
         <span class="property-indicator"></span>
         <span class="property-type">string</span>
     </dt>
-    <dd>{{% md %}}Specifies the Azure storage blob where script output stream will be uploaded.{{% /md %}}</dd>
-    <dt class="property-optional"
+    <dd>{{% md %}}Specifies the Azure storage blob where script output stream will be uploaded.{{% /md %}}</dd><dt class="property-optional"
             title="Optional">
         <span id="parameters_go">
 <a href="#parameters_go" style="color: inherit; text-decoration: inherit;">Parameters</a>
@@ -553,8 +522,7 @@ The VirtualMachineRunCommandByVirtualMachine resource accepts the following [inp
         <span class="property-indicator"></span>
         <span class="property-type"><a href="#runcommandinputparameter">[]Run<wbr>Command<wbr>Input<wbr>Parameter</a></span>
     </dt>
-    <dd>{{% md %}}The parameters used by the script.{{% /md %}}</dd>
-    <dt class="property-optional"
+    <dd>{{% md %}}The parameters used by the script.{{% /md %}}</dd><dt class="property-optional"
             title="Optional">
         <span id="protectedparameters_go">
 <a href="#protectedparameters_go" style="color: inherit; text-decoration: inherit;">Protected<wbr>Parameters</a>
@@ -562,8 +530,7 @@ The VirtualMachineRunCommandByVirtualMachine resource accepts the following [inp
         <span class="property-indicator"></span>
         <span class="property-type"><a href="#runcommandinputparameter">[]Run<wbr>Command<wbr>Input<wbr>Parameter</a></span>
     </dt>
-    <dd>{{% md %}}The parameters used by the script.{{% /md %}}</dd>
-    <dt class="property-optional"
+    <dd>{{% md %}}The parameters used by the script.{{% /md %}}</dd><dt class="property-optional"
             title="Optional">
         <span id="runaspassword_go">
 <a href="#runaspassword_go" style="color: inherit; text-decoration: inherit;">Run<wbr>As<wbr>Password</a>
@@ -571,8 +538,7 @@ The VirtualMachineRunCommandByVirtualMachine resource accepts the following [inp
         <span class="property-indicator"></span>
         <span class="property-type">string</span>
     </dt>
-    <dd>{{% md %}}Specifies the user account password on the VM when executing the run command.{{% /md %}}</dd>
-    <dt class="property-optional"
+    <dd>{{% md %}}Specifies the user account password on the VM when executing the run command.{{% /md %}}</dd><dt class="property-optional"
             title="Optional">
         <span id="runasuser_go">
 <a href="#runasuser_go" style="color: inherit; text-decoration: inherit;">Run<wbr>As<wbr>User</a>
@@ -580,8 +546,7 @@ The VirtualMachineRunCommandByVirtualMachine resource accepts the following [inp
         <span class="property-indicator"></span>
         <span class="property-type">string</span>
     </dt>
-    <dd>{{% md %}}Specifies the user account on the VM when executing the run command.{{% /md %}}</dd>
-    <dt class="property-optional"
+    <dd>{{% md %}}Specifies the user account on the VM when executing the run command.{{% /md %}}</dd><dt class="property-optional"
             title="Optional">
         <span id="runcommandname_go">
 <a href="#runcommandname_go" style="color: inherit; text-decoration: inherit;">Run<wbr>Command<wbr>Name</a>
@@ -589,8 +554,7 @@ The VirtualMachineRunCommandByVirtualMachine resource accepts the following [inp
         <span class="property-indicator"></span>
         <span class="property-type">string</span>
     </dt>
-    <dd>{{% md %}}The name of the virtual machine run command.{{% /md %}}</dd>
-    <dt class="property-optional"
+    <dd>{{% md %}}The name of the virtual machine run command.{{% /md %}}</dd><dt class="property-optional"
             title="Optional">
         <span id="source_go">
 <a href="#source_go" style="color: inherit; text-decoration: inherit;">Source</a>
@@ -598,8 +562,7 @@ The VirtualMachineRunCommandByVirtualMachine resource accepts the following [inp
         <span class="property-indicator"></span>
         <span class="property-type"><a href="#virtualmachineruncommandscriptsource">Virtual<wbr>Machine<wbr>Run<wbr>Command<wbr>Script<wbr>Source</a></span>
     </dt>
-    <dd>{{% md %}}The source of the run command script.{{% /md %}}</dd>
-    <dt class="property-optional"
+    <dd>{{% md %}}The source of the run command script.{{% /md %}}</dd><dt class="property-optional"
             title="Optional">
         <span id="tags_go">
 <a href="#tags_go" style="color: inherit; text-decoration: inherit;">Tags</a>
@@ -607,8 +570,7 @@ The VirtualMachineRunCommandByVirtualMachine resource accepts the following [inp
         <span class="property-indicator"></span>
         <span class="property-type">map[string]string</span>
     </dt>
-    <dd>{{% md %}}Resource tags{{% /md %}}</dd>
-    <dt class="property-optional"
+    <dd>{{% md %}}Resource tags{{% /md %}}</dd><dt class="property-optional"
             title="Optional">
         <span id="timeoutinseconds_go">
 <a href="#timeoutinseconds_go" style="color: inherit; text-decoration: inherit;">Timeout<wbr>In<wbr>Seconds</a>
@@ -616,14 +578,11 @@ The VirtualMachineRunCommandByVirtualMachine resource accepts the following [inp
         <span class="property-indicator"></span>
         <span class="property-type">int</span>
     </dt>
-    <dd>{{% md %}}The timeout in seconds to execute the run command.{{% /md %}}</dd>
-</dl>
+    <dd>{{% md %}}The timeout in seconds to execute the run command.{{% /md %}}</dd></dl>
 {{% /choosable %}}
 
 {{% choosable language nodejs %}}
-<dl class="resources-properties">
-
-    <dt class="property-required"
+<dl class="resources-properties"><dt class="property-required"
             title="Required">
         <span id="resourcegroupname_nodejs">
 <a href="#resourcegroupname_nodejs" style="color: inherit; text-decoration: inherit;">resource<wbr>Group<wbr>Name</a>
@@ -631,8 +590,7 @@ The VirtualMachineRunCommandByVirtualMachine resource accepts the following [inp
         <span class="property-indicator"></span>
         <span class="property-type">string</span>
     </dt>
-    <dd>{{% md %}}The name of the resource group.{{% /md %}}</dd>
-    <dt class="property-required"
+    <dd>{{% md %}}The name of the resource group.{{% /md %}}</dd><dt class="property-required"
             title="Required">
         <span id="vmname_nodejs">
 <a href="#vmname_nodejs" style="color: inherit; text-decoration: inherit;">vm<wbr>Name</a>
@@ -640,8 +598,7 @@ The VirtualMachineRunCommandByVirtualMachine resource accepts the following [inp
         <span class="property-indicator"></span>
         <span class="property-type">string</span>
     </dt>
-    <dd>{{% md %}}The name of the virtual machine where the run command should be created or updated.{{% /md %}}</dd>
-    <dt class="property-optional"
+    <dd>{{% md %}}The name of the virtual machine where the run command should be created or updated.{{% /md %}}</dd><dt class="property-optional"
             title="Optional">
         <span id="asyncexecution_nodejs">
 <a href="#asyncexecution_nodejs" style="color: inherit; text-decoration: inherit;">async<wbr>Execution</a>
@@ -649,8 +606,7 @@ The VirtualMachineRunCommandByVirtualMachine resource accepts the following [inp
         <span class="property-indicator"></span>
         <span class="property-type">boolean</span>
     </dt>
-    <dd>{{% md %}}Optional. If set to true, provisioning will complete as soon as the script starts and will not wait for script to complete.{{% /md %}}</dd>
-    <dt class="property-optional"
+    <dd>{{% md %}}Optional. If set to true, provisioning will complete as soon as the script starts and will not wait for script to complete.{{% /md %}}</dd><dt class="property-optional"
             title="Optional">
         <span id="errorbloburi_nodejs">
 <a href="#errorbloburi_nodejs" style="color: inherit; text-decoration: inherit;">error<wbr>Blob<wbr>Uri</a>
@@ -658,8 +614,7 @@ The VirtualMachineRunCommandByVirtualMachine resource accepts the following [inp
         <span class="property-indicator"></span>
         <span class="property-type">string</span>
     </dt>
-    <dd>{{% md %}}Specifies the Azure storage blob where script error stream will be uploaded.{{% /md %}}</dd>
-    <dt class="property-optional"
+    <dd>{{% md %}}Specifies the Azure storage blob where script error stream will be uploaded.{{% /md %}}</dd><dt class="property-optional"
             title="Optional">
         <span id="location_nodejs">
 <a href="#location_nodejs" style="color: inherit; text-decoration: inherit;">location</a>
@@ -667,8 +622,7 @@ The VirtualMachineRunCommandByVirtualMachine resource accepts the following [inp
         <span class="property-indicator"></span>
         <span class="property-type">string</span>
     </dt>
-    <dd>{{% md %}}Resource location{{% /md %}}</dd>
-    <dt class="property-optional"
+    <dd>{{% md %}}Resource location{{% /md %}}</dd><dt class="property-optional"
             title="Optional">
         <span id="outputbloburi_nodejs">
 <a href="#outputbloburi_nodejs" style="color: inherit; text-decoration: inherit;">output<wbr>Blob<wbr>Uri</a>
@@ -676,8 +630,7 @@ The VirtualMachineRunCommandByVirtualMachine resource accepts the following [inp
         <span class="property-indicator"></span>
         <span class="property-type">string</span>
     </dt>
-    <dd>{{% md %}}Specifies the Azure storage blob where script output stream will be uploaded.{{% /md %}}</dd>
-    <dt class="property-optional"
+    <dd>{{% md %}}Specifies the Azure storage blob where script output stream will be uploaded.{{% /md %}}</dd><dt class="property-optional"
             title="Optional">
         <span id="parameters_nodejs">
 <a href="#parameters_nodejs" style="color: inherit; text-decoration: inherit;">parameters</a>
@@ -685,8 +638,7 @@ The VirtualMachineRunCommandByVirtualMachine resource accepts the following [inp
         <span class="property-indicator"></span>
         <span class="property-type"><a href="#runcommandinputparameter">Run<wbr>Command<wbr>Input<wbr>Parameter[]</a></span>
     </dt>
-    <dd>{{% md %}}The parameters used by the script.{{% /md %}}</dd>
-    <dt class="property-optional"
+    <dd>{{% md %}}The parameters used by the script.{{% /md %}}</dd><dt class="property-optional"
             title="Optional">
         <span id="protectedparameters_nodejs">
 <a href="#protectedparameters_nodejs" style="color: inherit; text-decoration: inherit;">protected<wbr>Parameters</a>
@@ -694,8 +646,7 @@ The VirtualMachineRunCommandByVirtualMachine resource accepts the following [inp
         <span class="property-indicator"></span>
         <span class="property-type"><a href="#runcommandinputparameter">Run<wbr>Command<wbr>Input<wbr>Parameter[]</a></span>
     </dt>
-    <dd>{{% md %}}The parameters used by the script.{{% /md %}}</dd>
-    <dt class="property-optional"
+    <dd>{{% md %}}The parameters used by the script.{{% /md %}}</dd><dt class="property-optional"
             title="Optional">
         <span id="runaspassword_nodejs">
 <a href="#runaspassword_nodejs" style="color: inherit; text-decoration: inherit;">run<wbr>As<wbr>Password</a>
@@ -703,8 +654,7 @@ The VirtualMachineRunCommandByVirtualMachine resource accepts the following [inp
         <span class="property-indicator"></span>
         <span class="property-type">string</span>
     </dt>
-    <dd>{{% md %}}Specifies the user account password on the VM when executing the run command.{{% /md %}}</dd>
-    <dt class="property-optional"
+    <dd>{{% md %}}Specifies the user account password on the VM when executing the run command.{{% /md %}}</dd><dt class="property-optional"
             title="Optional">
         <span id="runasuser_nodejs">
 <a href="#runasuser_nodejs" style="color: inherit; text-decoration: inherit;">run<wbr>As<wbr>User</a>
@@ -712,8 +662,7 @@ The VirtualMachineRunCommandByVirtualMachine resource accepts the following [inp
         <span class="property-indicator"></span>
         <span class="property-type">string</span>
     </dt>
-    <dd>{{% md %}}Specifies the user account on the VM when executing the run command.{{% /md %}}</dd>
-    <dt class="property-optional"
+    <dd>{{% md %}}Specifies the user account on the VM when executing the run command.{{% /md %}}</dd><dt class="property-optional"
             title="Optional">
         <span id="runcommandname_nodejs">
 <a href="#runcommandname_nodejs" style="color: inherit; text-decoration: inherit;">run<wbr>Command<wbr>Name</a>
@@ -721,8 +670,7 @@ The VirtualMachineRunCommandByVirtualMachine resource accepts the following [inp
         <span class="property-indicator"></span>
         <span class="property-type">string</span>
     </dt>
-    <dd>{{% md %}}The name of the virtual machine run command.{{% /md %}}</dd>
-    <dt class="property-optional"
+    <dd>{{% md %}}The name of the virtual machine run command.{{% /md %}}</dd><dt class="property-optional"
             title="Optional">
         <span id="source_nodejs">
 <a href="#source_nodejs" style="color: inherit; text-decoration: inherit;">source</a>
@@ -730,8 +678,7 @@ The VirtualMachineRunCommandByVirtualMachine resource accepts the following [inp
         <span class="property-indicator"></span>
         <span class="property-type"><a href="#virtualmachineruncommandscriptsource">Virtual<wbr>Machine<wbr>Run<wbr>Command<wbr>Script<wbr>Source</a></span>
     </dt>
-    <dd>{{% md %}}The source of the run command script.{{% /md %}}</dd>
-    <dt class="property-optional"
+    <dd>{{% md %}}The source of the run command script.{{% /md %}}</dd><dt class="property-optional"
             title="Optional">
         <span id="tags_nodejs">
 <a href="#tags_nodejs" style="color: inherit; text-decoration: inherit;">tags</a>
@@ -739,8 +686,7 @@ The VirtualMachineRunCommandByVirtualMachine resource accepts the following [inp
         <span class="property-indicator"></span>
         <span class="property-type">{[key: string]: string}</span>
     </dt>
-    <dd>{{% md %}}Resource tags{{% /md %}}</dd>
-    <dt class="property-optional"
+    <dd>{{% md %}}Resource tags{{% /md %}}</dd><dt class="property-optional"
             title="Optional">
         <span id="timeoutinseconds_nodejs">
 <a href="#timeoutinseconds_nodejs" style="color: inherit; text-decoration: inherit;">timeout<wbr>In<wbr>Seconds</a>
@@ -748,14 +694,11 @@ The VirtualMachineRunCommandByVirtualMachine resource accepts the following [inp
         <span class="property-indicator"></span>
         <span class="property-type">number</span>
     </dt>
-    <dd>{{% md %}}The timeout in seconds to execute the run command.{{% /md %}}</dd>
-</dl>
+    <dd>{{% md %}}The timeout in seconds to execute the run command.{{% /md %}}</dd></dl>
 {{% /choosable %}}
 
 {{% choosable language python %}}
-<dl class="resources-properties">
-
-    <dt class="property-required"
+<dl class="resources-properties"><dt class="property-required"
             title="Required">
         <span id="resource_group_name_python">
 <a href="#resource_group_name_python" style="color: inherit; text-decoration: inherit;">resource_<wbr>group_<wbr>name</a>
@@ -763,8 +706,7 @@ The VirtualMachineRunCommandByVirtualMachine resource accepts the following [inp
         <span class="property-indicator"></span>
         <span class="property-type">str</span>
     </dt>
-    <dd>{{% md %}}The name of the resource group.{{% /md %}}</dd>
-    <dt class="property-required"
+    <dd>{{% md %}}The name of the resource group.{{% /md %}}</dd><dt class="property-required"
             title="Required">
         <span id="vm_name_python">
 <a href="#vm_name_python" style="color: inherit; text-decoration: inherit;">vm_<wbr>name</a>
@@ -772,8 +714,7 @@ The VirtualMachineRunCommandByVirtualMachine resource accepts the following [inp
         <span class="property-indicator"></span>
         <span class="property-type">str</span>
     </dt>
-    <dd>{{% md %}}The name of the virtual machine where the run command should be created or updated.{{% /md %}}</dd>
-    <dt class="property-optional"
+    <dd>{{% md %}}The name of the virtual machine where the run command should be created or updated.{{% /md %}}</dd><dt class="property-optional"
             title="Optional">
         <span id="async_execution_python">
 <a href="#async_execution_python" style="color: inherit; text-decoration: inherit;">async_<wbr>execution</a>
@@ -781,8 +722,7 @@ The VirtualMachineRunCommandByVirtualMachine resource accepts the following [inp
         <span class="property-indicator"></span>
         <span class="property-type">bool</span>
     </dt>
-    <dd>{{% md %}}Optional. If set to true, provisioning will complete as soon as the script starts and will not wait for script to complete.{{% /md %}}</dd>
-    <dt class="property-optional"
+    <dd>{{% md %}}Optional. If set to true, provisioning will complete as soon as the script starts and will not wait for script to complete.{{% /md %}}</dd><dt class="property-optional"
             title="Optional">
         <span id="error_blob_uri_python">
 <a href="#error_blob_uri_python" style="color: inherit; text-decoration: inherit;">error_<wbr>blob_<wbr>uri</a>
@@ -790,8 +730,7 @@ The VirtualMachineRunCommandByVirtualMachine resource accepts the following [inp
         <span class="property-indicator"></span>
         <span class="property-type">str</span>
     </dt>
-    <dd>{{% md %}}Specifies the Azure storage blob where script error stream will be uploaded.{{% /md %}}</dd>
-    <dt class="property-optional"
+    <dd>{{% md %}}Specifies the Azure storage blob where script error stream will be uploaded.{{% /md %}}</dd><dt class="property-optional"
             title="Optional">
         <span id="location_python">
 <a href="#location_python" style="color: inherit; text-decoration: inherit;">location</a>
@@ -799,8 +738,7 @@ The VirtualMachineRunCommandByVirtualMachine resource accepts the following [inp
         <span class="property-indicator"></span>
         <span class="property-type">str</span>
     </dt>
-    <dd>{{% md %}}Resource location{{% /md %}}</dd>
-    <dt class="property-optional"
+    <dd>{{% md %}}Resource location{{% /md %}}</dd><dt class="property-optional"
             title="Optional">
         <span id="output_blob_uri_python">
 <a href="#output_blob_uri_python" style="color: inherit; text-decoration: inherit;">output_<wbr>blob_<wbr>uri</a>
@@ -808,8 +746,7 @@ The VirtualMachineRunCommandByVirtualMachine resource accepts the following [inp
         <span class="property-indicator"></span>
         <span class="property-type">str</span>
     </dt>
-    <dd>{{% md %}}Specifies the Azure storage blob where script output stream will be uploaded.{{% /md %}}</dd>
-    <dt class="property-optional"
+    <dd>{{% md %}}Specifies the Azure storage blob where script output stream will be uploaded.{{% /md %}}</dd><dt class="property-optional"
             title="Optional">
         <span id="parameters_python">
 <a href="#parameters_python" style="color: inherit; text-decoration: inherit;">parameters</a>
@@ -817,8 +754,7 @@ The VirtualMachineRunCommandByVirtualMachine resource accepts the following [inp
         <span class="property-indicator"></span>
         <span class="property-type"><a href="#runcommandinputparameter">Sequence[Run<wbr>Command<wbr>Input<wbr>Parameter<wbr>Args]</a></span>
     </dt>
-    <dd>{{% md %}}The parameters used by the script.{{% /md %}}</dd>
-    <dt class="property-optional"
+    <dd>{{% md %}}The parameters used by the script.{{% /md %}}</dd><dt class="property-optional"
             title="Optional">
         <span id="protected_parameters_python">
 <a href="#protected_parameters_python" style="color: inherit; text-decoration: inherit;">protected_<wbr>parameters</a>
@@ -826,8 +762,7 @@ The VirtualMachineRunCommandByVirtualMachine resource accepts the following [inp
         <span class="property-indicator"></span>
         <span class="property-type"><a href="#runcommandinputparameter">Sequence[Run<wbr>Command<wbr>Input<wbr>Parameter<wbr>Args]</a></span>
     </dt>
-    <dd>{{% md %}}The parameters used by the script.{{% /md %}}</dd>
-    <dt class="property-optional"
+    <dd>{{% md %}}The parameters used by the script.{{% /md %}}</dd><dt class="property-optional"
             title="Optional">
         <span id="run_as_password_python">
 <a href="#run_as_password_python" style="color: inherit; text-decoration: inherit;">run_<wbr>as_<wbr>password</a>
@@ -835,8 +770,7 @@ The VirtualMachineRunCommandByVirtualMachine resource accepts the following [inp
         <span class="property-indicator"></span>
         <span class="property-type">str</span>
     </dt>
-    <dd>{{% md %}}Specifies the user account password on the VM when executing the run command.{{% /md %}}</dd>
-    <dt class="property-optional"
+    <dd>{{% md %}}Specifies the user account password on the VM when executing the run command.{{% /md %}}</dd><dt class="property-optional"
             title="Optional">
         <span id="run_as_user_python">
 <a href="#run_as_user_python" style="color: inherit; text-decoration: inherit;">run_<wbr>as_<wbr>user</a>
@@ -844,8 +778,7 @@ The VirtualMachineRunCommandByVirtualMachine resource accepts the following [inp
         <span class="property-indicator"></span>
         <span class="property-type">str</span>
     </dt>
-    <dd>{{% md %}}Specifies the user account on the VM when executing the run command.{{% /md %}}</dd>
-    <dt class="property-optional"
+    <dd>{{% md %}}Specifies the user account on the VM when executing the run command.{{% /md %}}</dd><dt class="property-optional"
             title="Optional">
         <span id="run_command_name_python">
 <a href="#run_command_name_python" style="color: inherit; text-decoration: inherit;">run_<wbr>command_<wbr>name</a>
@@ -853,8 +786,7 @@ The VirtualMachineRunCommandByVirtualMachine resource accepts the following [inp
         <span class="property-indicator"></span>
         <span class="property-type">str</span>
     </dt>
-    <dd>{{% md %}}The name of the virtual machine run command.{{% /md %}}</dd>
-    <dt class="property-optional"
+    <dd>{{% md %}}The name of the virtual machine run command.{{% /md %}}</dd><dt class="property-optional"
             title="Optional">
         <span id="source_python">
 <a href="#source_python" style="color: inherit; text-decoration: inherit;">source</a>
@@ -862,8 +794,7 @@ The VirtualMachineRunCommandByVirtualMachine resource accepts the following [inp
         <span class="property-indicator"></span>
         <span class="property-type"><a href="#virtualmachineruncommandscriptsource">Virtual<wbr>Machine<wbr>Run<wbr>Command<wbr>Script<wbr>Source<wbr>Args</a></span>
     </dt>
-    <dd>{{% md %}}The source of the run command script.{{% /md %}}</dd>
-    <dt class="property-optional"
+    <dd>{{% md %}}The source of the run command script.{{% /md %}}</dd><dt class="property-optional"
             title="Optional">
         <span id="tags_python">
 <a href="#tags_python" style="color: inherit; text-decoration: inherit;">tags</a>
@@ -871,8 +802,7 @@ The VirtualMachineRunCommandByVirtualMachine resource accepts the following [inp
         <span class="property-indicator"></span>
         <span class="property-type">Mapping[str, str]</span>
     </dt>
-    <dd>{{% md %}}Resource tags{{% /md %}}</dd>
-    <dt class="property-optional"
+    <dd>{{% md %}}Resource tags{{% /md %}}</dd><dt class="property-optional"
             title="Optional">
         <span id="timeout_in_seconds_python">
 <a href="#timeout_in_seconds_python" style="color: inherit; text-decoration: inherit;">timeout_<wbr>in_<wbr>seconds</a>
@@ -880,8 +810,7 @@ The VirtualMachineRunCommandByVirtualMachine resource accepts the following [inp
         <span class="property-indicator"></span>
         <span class="property-type">int</span>
     </dt>
-    <dd>{{% md %}}The timeout in seconds to execute the run command.{{% /md %}}</dd>
-</dl>
+    <dd>{{% md %}}The timeout in seconds to execute the run command.{{% /md %}}</dd></dl>
 {{% /choosable %}}
 
 
@@ -892,9 +821,7 @@ All [input](#inputs) properties are implicitly available as output properties. A
 
 
 {{% choosable language csharp %}}
-<dl class="resources-properties">
-
-    <dt class="property-"
+<dl class="resources-properties"><dt class="property-"
             title="">
         <span id="id_csharp">
 <a href="#id_csharp" style="color: inherit; text-decoration: inherit;">Id</a>
@@ -902,8 +829,7 @@ All [input](#inputs) properties are implicitly available as output properties. A
         <span class="property-indicator"></span>
         <span class="property-type">string</span>
     </dt>
-    <dd>{{% md %}}The provider-assigned unique ID for this managed resource.{{% /md %}}</dd>
-    <dt class="property-"
+    <dd>{{% md %}}The provider-assigned unique ID for this managed resource.{{% /md %}}</dd><dt class="property-"
             title="">
         <span id="instanceview_csharp">
 <a href="#instanceview_csharp" style="color: inherit; text-decoration: inherit;">Instance<wbr>View</a>
@@ -911,8 +837,7 @@ All [input](#inputs) properties are implicitly available as output properties. A
         <span class="property-indicator"></span>
         <span class="property-type"><a href="#virtualmachineruncommandinstanceviewresponse">Pulumi.<wbr>Azure<wbr>Native.<wbr>Compute.<wbr>Outputs.<wbr>Virtual<wbr>Machine<wbr>Run<wbr>Command<wbr>Instance<wbr>View<wbr>Response</a></span>
     </dt>
-    <dd>{{% md %}}The virtual machine run command instance view.{{% /md %}}</dd>
-    <dt class="property-"
+    <dd>{{% md %}}The virtual machine run command instance view.{{% /md %}}</dd><dt class="property-"
             title="">
         <span id="name_csharp">
 <a href="#name_csharp" style="color: inherit; text-decoration: inherit;">Name</a>
@@ -920,8 +845,7 @@ All [input](#inputs) properties are implicitly available as output properties. A
         <span class="property-indicator"></span>
         <span class="property-type">string</span>
     </dt>
-    <dd>{{% md %}}Resource name{{% /md %}}</dd>
-    <dt class="property-"
+    <dd>{{% md %}}Resource name{{% /md %}}</dd><dt class="property-"
             title="">
         <span id="provisioningstate_csharp">
 <a href="#provisioningstate_csharp" style="color: inherit; text-decoration: inherit;">Provisioning<wbr>State</a>
@@ -929,8 +853,7 @@ All [input](#inputs) properties are implicitly available as output properties. A
         <span class="property-indicator"></span>
         <span class="property-type">string</span>
     </dt>
-    <dd>{{% md %}}The provisioning state, which only appears in the response.{{% /md %}}</dd>
-    <dt class="property-"
+    <dd>{{% md %}}The provisioning state, which only appears in the response.{{% /md %}}</dd><dt class="property-"
             title="">
         <span id="type_csharp">
 <a href="#type_csharp" style="color: inherit; text-decoration: inherit;">Type</a>
@@ -938,14 +861,11 @@ All [input](#inputs) properties are implicitly available as output properties. A
         <span class="property-indicator"></span>
         <span class="property-type">string</span>
     </dt>
-    <dd>{{% md %}}Resource type{{% /md %}}</dd>
-</dl>
+    <dd>{{% md %}}Resource type{{% /md %}}</dd></dl>
 {{% /choosable %}}
 
 {{% choosable language go %}}
-<dl class="resources-properties">
-
-    <dt class="property-"
+<dl class="resources-properties"><dt class="property-"
             title="">
         <span id="id_go">
 <a href="#id_go" style="color: inherit; text-decoration: inherit;">Id</a>
@@ -953,8 +873,7 @@ All [input](#inputs) properties are implicitly available as output properties. A
         <span class="property-indicator"></span>
         <span class="property-type">string</span>
     </dt>
-    <dd>{{% md %}}The provider-assigned unique ID for this managed resource.{{% /md %}}</dd>
-    <dt class="property-"
+    <dd>{{% md %}}The provider-assigned unique ID for this managed resource.{{% /md %}}</dd><dt class="property-"
             title="">
         <span id="instanceview_go">
 <a href="#instanceview_go" style="color: inherit; text-decoration: inherit;">Instance<wbr>View</a>
@@ -962,8 +881,7 @@ All [input](#inputs) properties are implicitly available as output properties. A
         <span class="property-indicator"></span>
         <span class="property-type"><a href="#virtualmachineruncommandinstanceviewresponse">Virtual<wbr>Machine<wbr>Run<wbr>Command<wbr>Instance<wbr>View<wbr>Response</a></span>
     </dt>
-    <dd>{{% md %}}The virtual machine run command instance view.{{% /md %}}</dd>
-    <dt class="property-"
+    <dd>{{% md %}}The virtual machine run command instance view.{{% /md %}}</dd><dt class="property-"
             title="">
         <span id="name_go">
 <a href="#name_go" style="color: inherit; text-decoration: inherit;">Name</a>
@@ -971,8 +889,7 @@ All [input](#inputs) properties are implicitly available as output properties. A
         <span class="property-indicator"></span>
         <span class="property-type">string</span>
     </dt>
-    <dd>{{% md %}}Resource name{{% /md %}}</dd>
-    <dt class="property-"
+    <dd>{{% md %}}Resource name{{% /md %}}</dd><dt class="property-"
             title="">
         <span id="provisioningstate_go">
 <a href="#provisioningstate_go" style="color: inherit; text-decoration: inherit;">Provisioning<wbr>State</a>
@@ -980,8 +897,7 @@ All [input](#inputs) properties are implicitly available as output properties. A
         <span class="property-indicator"></span>
         <span class="property-type">string</span>
     </dt>
-    <dd>{{% md %}}The provisioning state, which only appears in the response.{{% /md %}}</dd>
-    <dt class="property-"
+    <dd>{{% md %}}The provisioning state, which only appears in the response.{{% /md %}}</dd><dt class="property-"
             title="">
         <span id="type_go">
 <a href="#type_go" style="color: inherit; text-decoration: inherit;">Type</a>
@@ -989,14 +905,11 @@ All [input](#inputs) properties are implicitly available as output properties. A
         <span class="property-indicator"></span>
         <span class="property-type">string</span>
     </dt>
-    <dd>{{% md %}}Resource type{{% /md %}}</dd>
-</dl>
+    <dd>{{% md %}}Resource type{{% /md %}}</dd></dl>
 {{% /choosable %}}
 
 {{% choosable language nodejs %}}
-<dl class="resources-properties">
-
-    <dt class="property-"
+<dl class="resources-properties"><dt class="property-"
             title="">
         <span id="id_nodejs">
 <a href="#id_nodejs" style="color: inherit; text-decoration: inherit;">id</a>
@@ -1004,8 +917,7 @@ All [input](#inputs) properties are implicitly available as output properties. A
         <span class="property-indicator"></span>
         <span class="property-type">string</span>
     </dt>
-    <dd>{{% md %}}The provider-assigned unique ID for this managed resource.{{% /md %}}</dd>
-    <dt class="property-"
+    <dd>{{% md %}}The provider-assigned unique ID for this managed resource.{{% /md %}}</dd><dt class="property-"
             title="">
         <span id="instanceview_nodejs">
 <a href="#instanceview_nodejs" style="color: inherit; text-decoration: inherit;">instance<wbr>View</a>
@@ -1013,8 +925,7 @@ All [input](#inputs) properties are implicitly available as output properties. A
         <span class="property-indicator"></span>
         <span class="property-type"><a href="#virtualmachineruncommandinstanceviewresponse">Virtual<wbr>Machine<wbr>Run<wbr>Command<wbr>Instance<wbr>View<wbr>Response</a></span>
     </dt>
-    <dd>{{% md %}}The virtual machine run command instance view.{{% /md %}}</dd>
-    <dt class="property-"
+    <dd>{{% md %}}The virtual machine run command instance view.{{% /md %}}</dd><dt class="property-"
             title="">
         <span id="name_nodejs">
 <a href="#name_nodejs" style="color: inherit; text-decoration: inherit;">name</a>
@@ -1022,8 +933,7 @@ All [input](#inputs) properties are implicitly available as output properties. A
         <span class="property-indicator"></span>
         <span class="property-type">string</span>
     </dt>
-    <dd>{{% md %}}Resource name{{% /md %}}</dd>
-    <dt class="property-"
+    <dd>{{% md %}}Resource name{{% /md %}}</dd><dt class="property-"
             title="">
         <span id="provisioningstate_nodejs">
 <a href="#provisioningstate_nodejs" style="color: inherit; text-decoration: inherit;">provisioning<wbr>State</a>
@@ -1031,8 +941,7 @@ All [input](#inputs) properties are implicitly available as output properties. A
         <span class="property-indicator"></span>
         <span class="property-type">string</span>
     </dt>
-    <dd>{{% md %}}The provisioning state, which only appears in the response.{{% /md %}}</dd>
-    <dt class="property-"
+    <dd>{{% md %}}The provisioning state, which only appears in the response.{{% /md %}}</dd><dt class="property-"
             title="">
         <span id="type_nodejs">
 <a href="#type_nodejs" style="color: inherit; text-decoration: inherit;">type</a>
@@ -1040,14 +949,11 @@ All [input](#inputs) properties are implicitly available as output properties. A
         <span class="property-indicator"></span>
         <span class="property-type">string</span>
     </dt>
-    <dd>{{% md %}}Resource type{{% /md %}}</dd>
-</dl>
+    <dd>{{% md %}}Resource type{{% /md %}}</dd></dl>
 {{% /choosable %}}
 
 {{% choosable language python %}}
-<dl class="resources-properties">
-
-    <dt class="property-"
+<dl class="resources-properties"><dt class="property-"
             title="">
         <span id="id_python">
 <a href="#id_python" style="color: inherit; text-decoration: inherit;">id</a>
@@ -1055,8 +961,7 @@ All [input](#inputs) properties are implicitly available as output properties. A
         <span class="property-indicator"></span>
         <span class="property-type">str</span>
     </dt>
-    <dd>{{% md %}}The provider-assigned unique ID for this managed resource.{{% /md %}}</dd>
-    <dt class="property-"
+    <dd>{{% md %}}The provider-assigned unique ID for this managed resource.{{% /md %}}</dd><dt class="property-"
             title="">
         <span id="instance_view_python">
 <a href="#instance_view_python" style="color: inherit; text-decoration: inherit;">instance_<wbr>view</a>
@@ -1064,8 +969,7 @@ All [input](#inputs) properties are implicitly available as output properties. A
         <span class="property-indicator"></span>
         <span class="property-type"><a href="#virtualmachineruncommandinstanceviewresponse">Virtual<wbr>Machine<wbr>Run<wbr>Command<wbr>Instance<wbr>View<wbr>Response</a></span>
     </dt>
-    <dd>{{% md %}}The virtual machine run command instance view.{{% /md %}}</dd>
-    <dt class="property-"
+    <dd>{{% md %}}The virtual machine run command instance view.{{% /md %}}</dd><dt class="property-"
             title="">
         <span id="name_python">
 <a href="#name_python" style="color: inherit; text-decoration: inherit;">name</a>
@@ -1073,8 +977,7 @@ All [input](#inputs) properties are implicitly available as output properties. A
         <span class="property-indicator"></span>
         <span class="property-type">str</span>
     </dt>
-    <dd>{{% md %}}Resource name{{% /md %}}</dd>
-    <dt class="property-"
+    <dd>{{% md %}}Resource name{{% /md %}}</dd><dt class="property-"
             title="">
         <span id="provisioning_state_python">
 <a href="#provisioning_state_python" style="color: inherit; text-decoration: inherit;">provisioning_<wbr>state</a>
@@ -1082,8 +985,7 @@ All [input](#inputs) properties are implicitly available as output properties. A
         <span class="property-indicator"></span>
         <span class="property-type">str</span>
     </dt>
-    <dd>{{% md %}}The provisioning state, which only appears in the response.{{% /md %}}</dd>
-    <dt class="property-"
+    <dd>{{% md %}}The provisioning state, which only appears in the response.{{% /md %}}</dd><dt class="property-"
             title="">
         <span id="type_python">
 <a href="#type_python" style="color: inherit; text-decoration: inherit;">type</a>
@@ -1091,8 +993,7 @@ All [input](#inputs) properties are implicitly available as output properties. A
         <span class="property-indicator"></span>
         <span class="property-type">str</span>
     </dt>
-    <dd>{{% md %}}Resource type{{% /md %}}</dd>
-</dl>
+    <dd>{{% md %}}Resource type{{% /md %}}</dd></dl>
 {{% /choosable %}}
 
 
@@ -1108,9 +1009,7 @@ All [input](#inputs) properties are implicitly available as output properties. A
 <h4 id="instanceviewstatusresponse">Instance<wbr>View<wbr>Status<wbr>Response</h4>
 
 {{% choosable language csharp %}}
-<dl class="resources-properties">
-
-    <dt class="property-optional"
+<dl class="resources-properties"><dt class="property-optional"
             title="Optional">
         <span id="code_csharp">
 <a href="#code_csharp" style="color: inherit; text-decoration: inherit;">Code</a>
@@ -1118,8 +1017,7 @@ All [input](#inputs) properties are implicitly available as output properties. A
         <span class="property-indicator"></span>
         <span class="property-type">string</span>
     </dt>
-    <dd>{{% md %}}The status code.{{% /md %}}</dd>
-    <dt class="property-optional"
+    <dd>{{% md %}}The status code.{{% /md %}}</dd><dt class="property-optional"
             title="Optional">
         <span id="displaystatus_csharp">
 <a href="#displaystatus_csharp" style="color: inherit; text-decoration: inherit;">Display<wbr>Status</a>
@@ -1127,8 +1025,7 @@ All [input](#inputs) properties are implicitly available as output properties. A
         <span class="property-indicator"></span>
         <span class="property-type">string</span>
     </dt>
-    <dd>{{% md %}}The short localizable label for the status.{{% /md %}}</dd>
-    <dt class="property-optional"
+    <dd>{{% md %}}The short localizable label for the status.{{% /md %}}</dd><dt class="property-optional"
             title="Optional">
         <span id="level_csharp">
 <a href="#level_csharp" style="color: inherit; text-decoration: inherit;">Level</a>
@@ -1136,8 +1033,7 @@ All [input](#inputs) properties are implicitly available as output properties. A
         <span class="property-indicator"></span>
         <span class="property-type">string</span>
     </dt>
-    <dd>{{% md %}}The level code.{{% /md %}}</dd>
-    <dt class="property-optional"
+    <dd>{{% md %}}The level code.{{% /md %}}</dd><dt class="property-optional"
             title="Optional">
         <span id="message_csharp">
 <a href="#message_csharp" style="color: inherit; text-decoration: inherit;">Message</a>
@@ -1145,8 +1041,7 @@ All [input](#inputs) properties are implicitly available as output properties. A
         <span class="property-indicator"></span>
         <span class="property-type">string</span>
     </dt>
-    <dd>{{% md %}}The detailed status message, including for alerts and error messages.{{% /md %}}</dd>
-    <dt class="property-optional"
+    <dd>{{% md %}}The detailed status message, including for alerts and error messages.{{% /md %}}</dd><dt class="property-optional"
             title="Optional">
         <span id="time_csharp">
 <a href="#time_csharp" style="color: inherit; text-decoration: inherit;">Time</a>
@@ -1154,14 +1049,11 @@ All [input](#inputs) properties are implicitly available as output properties. A
         <span class="property-indicator"></span>
         <span class="property-type">string</span>
     </dt>
-    <dd>{{% md %}}The time of the status.{{% /md %}}</dd>
-</dl>
+    <dd>{{% md %}}The time of the status.{{% /md %}}</dd></dl>
 {{% /choosable %}}
 
 {{% choosable language go %}}
-<dl class="resources-properties">
-
-    <dt class="property-optional"
+<dl class="resources-properties"><dt class="property-optional"
             title="Optional">
         <span id="code_go">
 <a href="#code_go" style="color: inherit; text-decoration: inherit;">Code</a>
@@ -1169,8 +1061,7 @@ All [input](#inputs) properties are implicitly available as output properties. A
         <span class="property-indicator"></span>
         <span class="property-type">string</span>
     </dt>
-    <dd>{{% md %}}The status code.{{% /md %}}</dd>
-    <dt class="property-optional"
+    <dd>{{% md %}}The status code.{{% /md %}}</dd><dt class="property-optional"
             title="Optional">
         <span id="displaystatus_go">
 <a href="#displaystatus_go" style="color: inherit; text-decoration: inherit;">Display<wbr>Status</a>
@@ -1178,8 +1069,7 @@ All [input](#inputs) properties are implicitly available as output properties. A
         <span class="property-indicator"></span>
         <span class="property-type">string</span>
     </dt>
-    <dd>{{% md %}}The short localizable label for the status.{{% /md %}}</dd>
-    <dt class="property-optional"
+    <dd>{{% md %}}The short localizable label for the status.{{% /md %}}</dd><dt class="property-optional"
             title="Optional">
         <span id="level_go">
 <a href="#level_go" style="color: inherit; text-decoration: inherit;">Level</a>
@@ -1187,8 +1077,7 @@ All [input](#inputs) properties are implicitly available as output properties. A
         <span class="property-indicator"></span>
         <span class="property-type">string</span>
     </dt>
-    <dd>{{% md %}}The level code.{{% /md %}}</dd>
-    <dt class="property-optional"
+    <dd>{{% md %}}The level code.{{% /md %}}</dd><dt class="property-optional"
             title="Optional">
         <span id="message_go">
 <a href="#message_go" style="color: inherit; text-decoration: inherit;">Message</a>
@@ -1196,8 +1085,7 @@ All [input](#inputs) properties are implicitly available as output properties. A
         <span class="property-indicator"></span>
         <span class="property-type">string</span>
     </dt>
-    <dd>{{% md %}}The detailed status message, including for alerts and error messages.{{% /md %}}</dd>
-    <dt class="property-optional"
+    <dd>{{% md %}}The detailed status message, including for alerts and error messages.{{% /md %}}</dd><dt class="property-optional"
             title="Optional">
         <span id="time_go">
 <a href="#time_go" style="color: inherit; text-decoration: inherit;">Time</a>
@@ -1205,14 +1093,11 @@ All [input](#inputs) properties are implicitly available as output properties. A
         <span class="property-indicator"></span>
         <span class="property-type">string</span>
     </dt>
-    <dd>{{% md %}}The time of the status.{{% /md %}}</dd>
-</dl>
+    <dd>{{% md %}}The time of the status.{{% /md %}}</dd></dl>
 {{% /choosable %}}
 
 {{% choosable language nodejs %}}
-<dl class="resources-properties">
-
-    <dt class="property-optional"
+<dl class="resources-properties"><dt class="property-optional"
             title="Optional">
         <span id="code_nodejs">
 <a href="#code_nodejs" style="color: inherit; text-decoration: inherit;">code</a>
@@ -1220,8 +1105,7 @@ All [input](#inputs) properties are implicitly available as output properties. A
         <span class="property-indicator"></span>
         <span class="property-type">string</span>
     </dt>
-    <dd>{{% md %}}The status code.{{% /md %}}</dd>
-    <dt class="property-optional"
+    <dd>{{% md %}}The status code.{{% /md %}}</dd><dt class="property-optional"
             title="Optional">
         <span id="displaystatus_nodejs">
 <a href="#displaystatus_nodejs" style="color: inherit; text-decoration: inherit;">display<wbr>Status</a>
@@ -1229,8 +1113,7 @@ All [input](#inputs) properties are implicitly available as output properties. A
         <span class="property-indicator"></span>
         <span class="property-type">string</span>
     </dt>
-    <dd>{{% md %}}The short localizable label for the status.{{% /md %}}</dd>
-    <dt class="property-optional"
+    <dd>{{% md %}}The short localizable label for the status.{{% /md %}}</dd><dt class="property-optional"
             title="Optional">
         <span id="level_nodejs">
 <a href="#level_nodejs" style="color: inherit; text-decoration: inherit;">level</a>
@@ -1238,8 +1121,7 @@ All [input](#inputs) properties are implicitly available as output properties. A
         <span class="property-indicator"></span>
         <span class="property-type">string</span>
     </dt>
-    <dd>{{% md %}}The level code.{{% /md %}}</dd>
-    <dt class="property-optional"
+    <dd>{{% md %}}The level code.{{% /md %}}</dd><dt class="property-optional"
             title="Optional">
         <span id="message_nodejs">
 <a href="#message_nodejs" style="color: inherit; text-decoration: inherit;">message</a>
@@ -1247,8 +1129,7 @@ All [input](#inputs) properties are implicitly available as output properties. A
         <span class="property-indicator"></span>
         <span class="property-type">string</span>
     </dt>
-    <dd>{{% md %}}The detailed status message, including for alerts and error messages.{{% /md %}}</dd>
-    <dt class="property-optional"
+    <dd>{{% md %}}The detailed status message, including for alerts and error messages.{{% /md %}}</dd><dt class="property-optional"
             title="Optional">
         <span id="time_nodejs">
 <a href="#time_nodejs" style="color: inherit; text-decoration: inherit;">time</a>
@@ -1256,14 +1137,11 @@ All [input](#inputs) properties are implicitly available as output properties. A
         <span class="property-indicator"></span>
         <span class="property-type">string</span>
     </dt>
-    <dd>{{% md %}}The time of the status.{{% /md %}}</dd>
-</dl>
+    <dd>{{% md %}}The time of the status.{{% /md %}}</dd></dl>
 {{% /choosable %}}
 
 {{% choosable language python %}}
-<dl class="resources-properties">
-
-    <dt class="property-optional"
+<dl class="resources-properties"><dt class="property-optional"
             title="Optional">
         <span id="code_python">
 <a href="#code_python" style="color: inherit; text-decoration: inherit;">code</a>
@@ -1271,8 +1149,7 @@ All [input](#inputs) properties are implicitly available as output properties. A
         <span class="property-indicator"></span>
         <span class="property-type">str</span>
     </dt>
-    <dd>{{% md %}}The status code.{{% /md %}}</dd>
-    <dt class="property-optional"
+    <dd>{{% md %}}The status code.{{% /md %}}</dd><dt class="property-optional"
             title="Optional">
         <span id="display_status_python">
 <a href="#display_status_python" style="color: inherit; text-decoration: inherit;">display_<wbr>status</a>
@@ -1280,8 +1157,7 @@ All [input](#inputs) properties are implicitly available as output properties. A
         <span class="property-indicator"></span>
         <span class="property-type">str</span>
     </dt>
-    <dd>{{% md %}}The short localizable label for the status.{{% /md %}}</dd>
-    <dt class="property-optional"
+    <dd>{{% md %}}The short localizable label for the status.{{% /md %}}</dd><dt class="property-optional"
             title="Optional">
         <span id="level_python">
 <a href="#level_python" style="color: inherit; text-decoration: inherit;">level</a>
@@ -1289,8 +1165,7 @@ All [input](#inputs) properties are implicitly available as output properties. A
         <span class="property-indicator"></span>
         <span class="property-type">str</span>
     </dt>
-    <dd>{{% md %}}The level code.{{% /md %}}</dd>
-    <dt class="property-optional"
+    <dd>{{% md %}}The level code.{{% /md %}}</dd><dt class="property-optional"
             title="Optional">
         <span id="message_python">
 <a href="#message_python" style="color: inherit; text-decoration: inherit;">message</a>
@@ -1298,8 +1173,7 @@ All [input](#inputs) properties are implicitly available as output properties. A
         <span class="property-indicator"></span>
         <span class="property-type">str</span>
     </dt>
-    <dd>{{% md %}}The detailed status message, including for alerts and error messages.{{% /md %}}</dd>
-    <dt class="property-optional"
+    <dd>{{% md %}}The detailed status message, including for alerts and error messages.{{% /md %}}</dd><dt class="property-optional"
             title="Optional">
         <span id="time_python">
 <a href="#time_python" style="color: inherit; text-decoration: inherit;">time</a>
@@ -1307,16 +1181,13 @@ All [input](#inputs) properties are implicitly available as output properties. A
         <span class="property-indicator"></span>
         <span class="property-type">str</span>
     </dt>
-    <dd>{{% md %}}The time of the status.{{% /md %}}</dd>
-</dl>
+    <dd>{{% md %}}The time of the status.{{% /md %}}</dd></dl>
 {{% /choosable %}}
 
 <h4 id="runcommandinputparameter">Run<wbr>Command<wbr>Input<wbr>Parameter</h4>
 
 {{% choosable language csharp %}}
-<dl class="resources-properties">
-
-    <dt class="property-required"
+<dl class="resources-properties"><dt class="property-required"
             title="Required">
         <span id="name_csharp">
 <a href="#name_csharp" style="color: inherit; text-decoration: inherit;">Name</a>
@@ -1324,8 +1195,7 @@ All [input](#inputs) properties are implicitly available as output properties. A
         <span class="property-indicator"></span>
         <span class="property-type">string</span>
     </dt>
-    <dd>{{% md %}}The run command parameter name.{{% /md %}}</dd>
-    <dt class="property-required"
+    <dd>{{% md %}}The run command parameter name.{{% /md %}}</dd><dt class="property-required"
             title="Required">
         <span id="value_csharp">
 <a href="#value_csharp" style="color: inherit; text-decoration: inherit;">Value</a>
@@ -1333,14 +1203,11 @@ All [input](#inputs) properties are implicitly available as output properties. A
         <span class="property-indicator"></span>
         <span class="property-type">string</span>
     </dt>
-    <dd>{{% md %}}The run command parameter value.{{% /md %}}</dd>
-</dl>
+    <dd>{{% md %}}The run command parameter value.{{% /md %}}</dd></dl>
 {{% /choosable %}}
 
 {{% choosable language go %}}
-<dl class="resources-properties">
-
-    <dt class="property-required"
+<dl class="resources-properties"><dt class="property-required"
             title="Required">
         <span id="name_go">
 <a href="#name_go" style="color: inherit; text-decoration: inherit;">Name</a>
@@ -1348,8 +1215,7 @@ All [input](#inputs) properties are implicitly available as output properties. A
         <span class="property-indicator"></span>
         <span class="property-type">string</span>
     </dt>
-    <dd>{{% md %}}The run command parameter name.{{% /md %}}</dd>
-    <dt class="property-required"
+    <dd>{{% md %}}The run command parameter name.{{% /md %}}</dd><dt class="property-required"
             title="Required">
         <span id="value_go">
 <a href="#value_go" style="color: inherit; text-decoration: inherit;">Value</a>
@@ -1357,14 +1223,11 @@ All [input](#inputs) properties are implicitly available as output properties. A
         <span class="property-indicator"></span>
         <span class="property-type">string</span>
     </dt>
-    <dd>{{% md %}}The run command parameter value.{{% /md %}}</dd>
-</dl>
+    <dd>{{% md %}}The run command parameter value.{{% /md %}}</dd></dl>
 {{% /choosable %}}
 
 {{% choosable language nodejs %}}
-<dl class="resources-properties">
-
-    <dt class="property-required"
+<dl class="resources-properties"><dt class="property-required"
             title="Required">
         <span id="name_nodejs">
 <a href="#name_nodejs" style="color: inherit; text-decoration: inherit;">name</a>
@@ -1372,8 +1235,7 @@ All [input](#inputs) properties are implicitly available as output properties. A
         <span class="property-indicator"></span>
         <span class="property-type">string</span>
     </dt>
-    <dd>{{% md %}}The run command parameter name.{{% /md %}}</dd>
-    <dt class="property-required"
+    <dd>{{% md %}}The run command parameter name.{{% /md %}}</dd><dt class="property-required"
             title="Required">
         <span id="value_nodejs">
 <a href="#value_nodejs" style="color: inherit; text-decoration: inherit;">value</a>
@@ -1381,14 +1243,11 @@ All [input](#inputs) properties are implicitly available as output properties. A
         <span class="property-indicator"></span>
         <span class="property-type">string</span>
     </dt>
-    <dd>{{% md %}}The run command parameter value.{{% /md %}}</dd>
-</dl>
+    <dd>{{% md %}}The run command parameter value.{{% /md %}}</dd></dl>
 {{% /choosable %}}
 
 {{% choosable language python %}}
-<dl class="resources-properties">
-
-    <dt class="property-required"
+<dl class="resources-properties"><dt class="property-required"
             title="Required">
         <span id="name_python">
 <a href="#name_python" style="color: inherit; text-decoration: inherit;">name</a>
@@ -1396,8 +1255,7 @@ All [input](#inputs) properties are implicitly available as output properties. A
         <span class="property-indicator"></span>
         <span class="property-type">str</span>
     </dt>
-    <dd>{{% md %}}The run command parameter name.{{% /md %}}</dd>
-    <dt class="property-required"
+    <dd>{{% md %}}The run command parameter name.{{% /md %}}</dd><dt class="property-required"
             title="Required">
         <span id="value_python">
 <a href="#value_python" style="color: inherit; text-decoration: inherit;">value</a>
@@ -1405,16 +1263,13 @@ All [input](#inputs) properties are implicitly available as output properties. A
         <span class="property-indicator"></span>
         <span class="property-type">str</span>
     </dt>
-    <dd>{{% md %}}The run command parameter value.{{% /md %}}</dd>
-</dl>
+    <dd>{{% md %}}The run command parameter value.{{% /md %}}</dd></dl>
 {{% /choosable %}}
 
 <h4 id="runcommandinputparameterresponse">Run<wbr>Command<wbr>Input<wbr>Parameter<wbr>Response</h4>
 
 {{% choosable language csharp %}}
-<dl class="resources-properties">
-
-    <dt class="property-required"
+<dl class="resources-properties"><dt class="property-required"
             title="Required">
         <span id="name_csharp">
 <a href="#name_csharp" style="color: inherit; text-decoration: inherit;">Name</a>
@@ -1422,8 +1277,7 @@ All [input](#inputs) properties are implicitly available as output properties. A
         <span class="property-indicator"></span>
         <span class="property-type">string</span>
     </dt>
-    <dd>{{% md %}}The run command parameter name.{{% /md %}}</dd>
-    <dt class="property-required"
+    <dd>{{% md %}}The run command parameter name.{{% /md %}}</dd><dt class="property-required"
             title="Required">
         <span id="value_csharp">
 <a href="#value_csharp" style="color: inherit; text-decoration: inherit;">Value</a>
@@ -1431,14 +1285,11 @@ All [input](#inputs) properties are implicitly available as output properties. A
         <span class="property-indicator"></span>
         <span class="property-type">string</span>
     </dt>
-    <dd>{{% md %}}The run command parameter value.{{% /md %}}</dd>
-</dl>
+    <dd>{{% md %}}The run command parameter value.{{% /md %}}</dd></dl>
 {{% /choosable %}}
 
 {{% choosable language go %}}
-<dl class="resources-properties">
-
-    <dt class="property-required"
+<dl class="resources-properties"><dt class="property-required"
             title="Required">
         <span id="name_go">
 <a href="#name_go" style="color: inherit; text-decoration: inherit;">Name</a>
@@ -1446,8 +1297,7 @@ All [input](#inputs) properties are implicitly available as output properties. A
         <span class="property-indicator"></span>
         <span class="property-type">string</span>
     </dt>
-    <dd>{{% md %}}The run command parameter name.{{% /md %}}</dd>
-    <dt class="property-required"
+    <dd>{{% md %}}The run command parameter name.{{% /md %}}</dd><dt class="property-required"
             title="Required">
         <span id="value_go">
 <a href="#value_go" style="color: inherit; text-decoration: inherit;">Value</a>
@@ -1455,14 +1305,11 @@ All [input](#inputs) properties are implicitly available as output properties. A
         <span class="property-indicator"></span>
         <span class="property-type">string</span>
     </dt>
-    <dd>{{% md %}}The run command parameter value.{{% /md %}}</dd>
-</dl>
+    <dd>{{% md %}}The run command parameter value.{{% /md %}}</dd></dl>
 {{% /choosable %}}
 
 {{% choosable language nodejs %}}
-<dl class="resources-properties">
-
-    <dt class="property-required"
+<dl class="resources-properties"><dt class="property-required"
             title="Required">
         <span id="name_nodejs">
 <a href="#name_nodejs" style="color: inherit; text-decoration: inherit;">name</a>
@@ -1470,8 +1317,7 @@ All [input](#inputs) properties are implicitly available as output properties. A
         <span class="property-indicator"></span>
         <span class="property-type">string</span>
     </dt>
-    <dd>{{% md %}}The run command parameter name.{{% /md %}}</dd>
-    <dt class="property-required"
+    <dd>{{% md %}}The run command parameter name.{{% /md %}}</dd><dt class="property-required"
             title="Required">
         <span id="value_nodejs">
 <a href="#value_nodejs" style="color: inherit; text-decoration: inherit;">value</a>
@@ -1479,14 +1325,11 @@ All [input](#inputs) properties are implicitly available as output properties. A
         <span class="property-indicator"></span>
         <span class="property-type">string</span>
     </dt>
-    <dd>{{% md %}}The run command parameter value.{{% /md %}}</dd>
-</dl>
+    <dd>{{% md %}}The run command parameter value.{{% /md %}}</dd></dl>
 {{% /choosable %}}
 
 {{% choosable language python %}}
-<dl class="resources-properties">
-
-    <dt class="property-required"
+<dl class="resources-properties"><dt class="property-required"
             title="Required">
         <span id="name_python">
 <a href="#name_python" style="color: inherit; text-decoration: inherit;">name</a>
@@ -1494,8 +1337,7 @@ All [input](#inputs) properties are implicitly available as output properties. A
         <span class="property-indicator"></span>
         <span class="property-type">str</span>
     </dt>
-    <dd>{{% md %}}The run command parameter name.{{% /md %}}</dd>
-    <dt class="property-required"
+    <dd>{{% md %}}The run command parameter name.{{% /md %}}</dd><dt class="property-required"
             title="Required">
         <span id="value_python">
 <a href="#value_python" style="color: inherit; text-decoration: inherit;">value</a>
@@ -1503,16 +1345,13 @@ All [input](#inputs) properties are implicitly available as output properties. A
         <span class="property-indicator"></span>
         <span class="property-type">str</span>
     </dt>
-    <dd>{{% md %}}The run command parameter value.{{% /md %}}</dd>
-</dl>
+    <dd>{{% md %}}The run command parameter value.{{% /md %}}</dd></dl>
 {{% /choosable %}}
 
 <h4 id="virtualmachineruncommandinstanceviewresponse">Virtual<wbr>Machine<wbr>Run<wbr>Command<wbr>Instance<wbr>View<wbr>Response</h4>
 
 {{% choosable language csharp %}}
-<dl class="resources-properties">
-
-    <dt class="property-optional"
+<dl class="resources-properties"><dt class="property-optional"
             title="Optional">
         <span id="endtime_csharp">
 <a href="#endtime_csharp" style="color: inherit; text-decoration: inherit;">End<wbr>Time</a>
@@ -1520,8 +1359,7 @@ All [input](#inputs) properties are implicitly available as output properties. A
         <span class="property-indicator"></span>
         <span class="property-type">string</span>
     </dt>
-    <dd>{{% md %}}Script end time.{{% /md %}}</dd>
-    <dt class="property-optional"
+    <dd>{{% md %}}Script end time.{{% /md %}}</dd><dt class="property-optional"
             title="Optional">
         <span id="error_csharp">
 <a href="#error_csharp" style="color: inherit; text-decoration: inherit;">Error</a>
@@ -1529,8 +1367,7 @@ All [input](#inputs) properties are implicitly available as output properties. A
         <span class="property-indicator"></span>
         <span class="property-type">string</span>
     </dt>
-    <dd>{{% md %}}Script error stream.{{% /md %}}</dd>
-    <dt class="property-optional"
+    <dd>{{% md %}}Script error stream.{{% /md %}}</dd><dt class="property-optional"
             title="Optional">
         <span id="executionmessage_csharp">
 <a href="#executionmessage_csharp" style="color: inherit; text-decoration: inherit;">Execution<wbr>Message</a>
@@ -1538,8 +1375,7 @@ All [input](#inputs) properties are implicitly available as output properties. A
         <span class="property-indicator"></span>
         <span class="property-type">string</span>
     </dt>
-    <dd>{{% md %}}Communicate script configuration errors or execution messages.{{% /md %}}</dd>
-    <dt class="property-optional"
+    <dd>{{% md %}}Communicate script configuration errors or execution messages.{{% /md %}}</dd><dt class="property-optional"
             title="Optional">
         <span id="executionstate_csharp">
 <a href="#executionstate_csharp" style="color: inherit; text-decoration: inherit;">Execution<wbr>State</a>
@@ -1547,8 +1383,7 @@ All [input](#inputs) properties are implicitly available as output properties. A
         <span class="property-indicator"></span>
         <span class="property-type">string</span>
     </dt>
-    <dd>{{% md %}}Script execution status.{{% /md %}}</dd>
-    <dt class="property-optional"
+    <dd>{{% md %}}Script execution status.{{% /md %}}</dd><dt class="property-optional"
             title="Optional">
         <span id="exitcode_csharp">
 <a href="#exitcode_csharp" style="color: inherit; text-decoration: inherit;">Exit<wbr>Code</a>
@@ -1556,8 +1391,7 @@ All [input](#inputs) properties are implicitly available as output properties. A
         <span class="property-indicator"></span>
         <span class="property-type">int</span>
     </dt>
-    <dd>{{% md %}}Exit code returned from script execution.{{% /md %}}</dd>
-    <dt class="property-optional"
+    <dd>{{% md %}}Exit code returned from script execution.{{% /md %}}</dd><dt class="property-optional"
             title="Optional">
         <span id="output_csharp">
 <a href="#output_csharp" style="color: inherit; text-decoration: inherit;">Output</a>
@@ -1565,8 +1399,7 @@ All [input](#inputs) properties are implicitly available as output properties. A
         <span class="property-indicator"></span>
         <span class="property-type">string</span>
     </dt>
-    <dd>{{% md %}}Script output stream.{{% /md %}}</dd>
-    <dt class="property-optional"
+    <dd>{{% md %}}Script output stream.{{% /md %}}</dd><dt class="property-optional"
             title="Optional">
         <span id="starttime_csharp">
 <a href="#starttime_csharp" style="color: inherit; text-decoration: inherit;">Start<wbr>Time</a>
@@ -1574,8 +1407,7 @@ All [input](#inputs) properties are implicitly available as output properties. A
         <span class="property-indicator"></span>
         <span class="property-type">string</span>
     </dt>
-    <dd>{{% md %}}Script start time.{{% /md %}}</dd>
-    <dt class="property-optional"
+    <dd>{{% md %}}Script start time.{{% /md %}}</dd><dt class="property-optional"
             title="Optional">
         <span id="statuses_csharp">
 <a href="#statuses_csharp" style="color: inherit; text-decoration: inherit;">Statuses</a>
@@ -1583,14 +1415,11 @@ All [input](#inputs) properties are implicitly available as output properties. A
         <span class="property-indicator"></span>
         <span class="property-type"><a href="#instanceviewstatusresponse">List&lt;Pulumi.<wbr>Azure<wbr>Native.<wbr>Compute.<wbr>Inputs.<wbr>Instance<wbr>View<wbr>Status<wbr>Response<wbr>Args&gt;</a></span>
     </dt>
-    <dd>{{% md %}}The resource status information.{{% /md %}}</dd>
-</dl>
+    <dd>{{% md %}}The resource status information.{{% /md %}}</dd></dl>
 {{% /choosable %}}
 
 {{% choosable language go %}}
-<dl class="resources-properties">
-
-    <dt class="property-optional"
+<dl class="resources-properties"><dt class="property-optional"
             title="Optional">
         <span id="endtime_go">
 <a href="#endtime_go" style="color: inherit; text-decoration: inherit;">End<wbr>Time</a>
@@ -1598,8 +1427,7 @@ All [input](#inputs) properties are implicitly available as output properties. A
         <span class="property-indicator"></span>
         <span class="property-type">string</span>
     </dt>
-    <dd>{{% md %}}Script end time.{{% /md %}}</dd>
-    <dt class="property-optional"
+    <dd>{{% md %}}Script end time.{{% /md %}}</dd><dt class="property-optional"
             title="Optional">
         <span id="error_go">
 <a href="#error_go" style="color: inherit; text-decoration: inherit;">Error</a>
@@ -1607,8 +1435,7 @@ All [input](#inputs) properties are implicitly available as output properties. A
         <span class="property-indicator"></span>
         <span class="property-type">string</span>
     </dt>
-    <dd>{{% md %}}Script error stream.{{% /md %}}</dd>
-    <dt class="property-optional"
+    <dd>{{% md %}}Script error stream.{{% /md %}}</dd><dt class="property-optional"
             title="Optional">
         <span id="executionmessage_go">
 <a href="#executionmessage_go" style="color: inherit; text-decoration: inherit;">Execution<wbr>Message</a>
@@ -1616,8 +1443,7 @@ All [input](#inputs) properties are implicitly available as output properties. A
         <span class="property-indicator"></span>
         <span class="property-type">string</span>
     </dt>
-    <dd>{{% md %}}Communicate script configuration errors or execution messages.{{% /md %}}</dd>
-    <dt class="property-optional"
+    <dd>{{% md %}}Communicate script configuration errors or execution messages.{{% /md %}}</dd><dt class="property-optional"
             title="Optional">
         <span id="executionstate_go">
 <a href="#executionstate_go" style="color: inherit; text-decoration: inherit;">Execution<wbr>State</a>
@@ -1625,8 +1451,7 @@ All [input](#inputs) properties are implicitly available as output properties. A
         <span class="property-indicator"></span>
         <span class="property-type">string</span>
     </dt>
-    <dd>{{% md %}}Script execution status.{{% /md %}}</dd>
-    <dt class="property-optional"
+    <dd>{{% md %}}Script execution status.{{% /md %}}</dd><dt class="property-optional"
             title="Optional">
         <span id="exitcode_go">
 <a href="#exitcode_go" style="color: inherit; text-decoration: inherit;">Exit<wbr>Code</a>
@@ -1634,8 +1459,7 @@ All [input](#inputs) properties are implicitly available as output properties. A
         <span class="property-indicator"></span>
         <span class="property-type">int</span>
     </dt>
-    <dd>{{% md %}}Exit code returned from script execution.{{% /md %}}</dd>
-    <dt class="property-optional"
+    <dd>{{% md %}}Exit code returned from script execution.{{% /md %}}</dd><dt class="property-optional"
             title="Optional">
         <span id="output_go">
 <a href="#output_go" style="color: inherit; text-decoration: inherit;">Output</a>
@@ -1643,8 +1467,7 @@ All [input](#inputs) properties are implicitly available as output properties. A
         <span class="property-indicator"></span>
         <span class="property-type">string</span>
     </dt>
-    <dd>{{% md %}}Script output stream.{{% /md %}}</dd>
-    <dt class="property-optional"
+    <dd>{{% md %}}Script output stream.{{% /md %}}</dd><dt class="property-optional"
             title="Optional">
         <span id="starttime_go">
 <a href="#starttime_go" style="color: inherit; text-decoration: inherit;">Start<wbr>Time</a>
@@ -1652,8 +1475,7 @@ All [input](#inputs) properties are implicitly available as output properties. A
         <span class="property-indicator"></span>
         <span class="property-type">string</span>
     </dt>
-    <dd>{{% md %}}Script start time.{{% /md %}}</dd>
-    <dt class="property-optional"
+    <dd>{{% md %}}Script start time.{{% /md %}}</dd><dt class="property-optional"
             title="Optional">
         <span id="statuses_go">
 <a href="#statuses_go" style="color: inherit; text-decoration: inherit;">Statuses</a>
@@ -1661,14 +1483,11 @@ All [input](#inputs) properties are implicitly available as output properties. A
         <span class="property-indicator"></span>
         <span class="property-type"><a href="#instanceviewstatusresponse">[]Instance<wbr>View<wbr>Status<wbr>Response</a></span>
     </dt>
-    <dd>{{% md %}}The resource status information.{{% /md %}}</dd>
-</dl>
+    <dd>{{% md %}}The resource status information.{{% /md %}}</dd></dl>
 {{% /choosable %}}
 
 {{% choosable language nodejs %}}
-<dl class="resources-properties">
-
-    <dt class="property-optional"
+<dl class="resources-properties"><dt class="property-optional"
             title="Optional">
         <span id="endtime_nodejs">
 <a href="#endtime_nodejs" style="color: inherit; text-decoration: inherit;">end<wbr>Time</a>
@@ -1676,8 +1495,7 @@ All [input](#inputs) properties are implicitly available as output properties. A
         <span class="property-indicator"></span>
         <span class="property-type">string</span>
     </dt>
-    <dd>{{% md %}}Script end time.{{% /md %}}</dd>
-    <dt class="property-optional"
+    <dd>{{% md %}}Script end time.{{% /md %}}</dd><dt class="property-optional"
             title="Optional">
         <span id="error_nodejs">
 <a href="#error_nodejs" style="color: inherit; text-decoration: inherit;">error</a>
@@ -1685,8 +1503,7 @@ All [input](#inputs) properties are implicitly available as output properties. A
         <span class="property-indicator"></span>
         <span class="property-type">string</span>
     </dt>
-    <dd>{{% md %}}Script error stream.{{% /md %}}</dd>
-    <dt class="property-optional"
+    <dd>{{% md %}}Script error stream.{{% /md %}}</dd><dt class="property-optional"
             title="Optional">
         <span id="executionmessage_nodejs">
 <a href="#executionmessage_nodejs" style="color: inherit; text-decoration: inherit;">execution<wbr>Message</a>
@@ -1694,8 +1511,7 @@ All [input](#inputs) properties are implicitly available as output properties. A
         <span class="property-indicator"></span>
         <span class="property-type">string</span>
     </dt>
-    <dd>{{% md %}}Communicate script configuration errors or execution messages.{{% /md %}}</dd>
-    <dt class="property-optional"
+    <dd>{{% md %}}Communicate script configuration errors or execution messages.{{% /md %}}</dd><dt class="property-optional"
             title="Optional">
         <span id="executionstate_nodejs">
 <a href="#executionstate_nodejs" style="color: inherit; text-decoration: inherit;">execution<wbr>State</a>
@@ -1703,8 +1519,7 @@ All [input](#inputs) properties are implicitly available as output properties. A
         <span class="property-indicator"></span>
         <span class="property-type">string</span>
     </dt>
-    <dd>{{% md %}}Script execution status.{{% /md %}}</dd>
-    <dt class="property-optional"
+    <dd>{{% md %}}Script execution status.{{% /md %}}</dd><dt class="property-optional"
             title="Optional">
         <span id="exitcode_nodejs">
 <a href="#exitcode_nodejs" style="color: inherit; text-decoration: inherit;">exit<wbr>Code</a>
@@ -1712,8 +1527,7 @@ All [input](#inputs) properties are implicitly available as output properties. A
         <span class="property-indicator"></span>
         <span class="property-type">number</span>
     </dt>
-    <dd>{{% md %}}Exit code returned from script execution.{{% /md %}}</dd>
-    <dt class="property-optional"
+    <dd>{{% md %}}Exit code returned from script execution.{{% /md %}}</dd><dt class="property-optional"
             title="Optional">
         <span id="output_nodejs">
 <a href="#output_nodejs" style="color: inherit; text-decoration: inherit;">output</a>
@@ -1721,8 +1535,7 @@ All [input](#inputs) properties are implicitly available as output properties. A
         <span class="property-indicator"></span>
         <span class="property-type">string</span>
     </dt>
-    <dd>{{% md %}}Script output stream.{{% /md %}}</dd>
-    <dt class="property-optional"
+    <dd>{{% md %}}Script output stream.{{% /md %}}</dd><dt class="property-optional"
             title="Optional">
         <span id="starttime_nodejs">
 <a href="#starttime_nodejs" style="color: inherit; text-decoration: inherit;">start<wbr>Time</a>
@@ -1730,8 +1543,7 @@ All [input](#inputs) properties are implicitly available as output properties. A
         <span class="property-indicator"></span>
         <span class="property-type">string</span>
     </dt>
-    <dd>{{% md %}}Script start time.{{% /md %}}</dd>
-    <dt class="property-optional"
+    <dd>{{% md %}}Script start time.{{% /md %}}</dd><dt class="property-optional"
             title="Optional">
         <span id="statuses_nodejs">
 <a href="#statuses_nodejs" style="color: inherit; text-decoration: inherit;">statuses</a>
@@ -1739,14 +1551,11 @@ All [input](#inputs) properties are implicitly available as output properties. A
         <span class="property-indicator"></span>
         <span class="property-type"><a href="#instanceviewstatusresponse">Instance<wbr>View<wbr>Status<wbr>Response[]</a></span>
     </dt>
-    <dd>{{% md %}}The resource status information.{{% /md %}}</dd>
-</dl>
+    <dd>{{% md %}}The resource status information.{{% /md %}}</dd></dl>
 {{% /choosable %}}
 
 {{% choosable language python %}}
-<dl class="resources-properties">
-
-    <dt class="property-optional"
+<dl class="resources-properties"><dt class="property-optional"
             title="Optional">
         <span id="end_time_python">
 <a href="#end_time_python" style="color: inherit; text-decoration: inherit;">end_<wbr>time</a>
@@ -1754,8 +1563,7 @@ All [input](#inputs) properties are implicitly available as output properties. A
         <span class="property-indicator"></span>
         <span class="property-type">str</span>
     </dt>
-    <dd>{{% md %}}Script end time.{{% /md %}}</dd>
-    <dt class="property-optional"
+    <dd>{{% md %}}Script end time.{{% /md %}}</dd><dt class="property-optional"
             title="Optional">
         <span id="error_python">
 <a href="#error_python" style="color: inherit; text-decoration: inherit;">error</a>
@@ -1763,8 +1571,7 @@ All [input](#inputs) properties are implicitly available as output properties. A
         <span class="property-indicator"></span>
         <span class="property-type">str</span>
     </dt>
-    <dd>{{% md %}}Script error stream.{{% /md %}}</dd>
-    <dt class="property-optional"
+    <dd>{{% md %}}Script error stream.{{% /md %}}</dd><dt class="property-optional"
             title="Optional">
         <span id="execution_message_python">
 <a href="#execution_message_python" style="color: inherit; text-decoration: inherit;">execution_<wbr>message</a>
@@ -1772,8 +1579,7 @@ All [input](#inputs) properties are implicitly available as output properties. A
         <span class="property-indicator"></span>
         <span class="property-type">str</span>
     </dt>
-    <dd>{{% md %}}Communicate script configuration errors or execution messages.{{% /md %}}</dd>
-    <dt class="property-optional"
+    <dd>{{% md %}}Communicate script configuration errors or execution messages.{{% /md %}}</dd><dt class="property-optional"
             title="Optional">
         <span id="execution_state_python">
 <a href="#execution_state_python" style="color: inherit; text-decoration: inherit;">execution_<wbr>state</a>
@@ -1781,8 +1587,7 @@ All [input](#inputs) properties are implicitly available as output properties. A
         <span class="property-indicator"></span>
         <span class="property-type">str</span>
     </dt>
-    <dd>{{% md %}}Script execution status.{{% /md %}}</dd>
-    <dt class="property-optional"
+    <dd>{{% md %}}Script execution status.{{% /md %}}</dd><dt class="property-optional"
             title="Optional">
         <span id="exit_code_python">
 <a href="#exit_code_python" style="color: inherit; text-decoration: inherit;">exit_<wbr>code</a>
@@ -1790,8 +1595,7 @@ All [input](#inputs) properties are implicitly available as output properties. A
         <span class="property-indicator"></span>
         <span class="property-type">int</span>
     </dt>
-    <dd>{{% md %}}Exit code returned from script execution.{{% /md %}}</dd>
-    <dt class="property-optional"
+    <dd>{{% md %}}Exit code returned from script execution.{{% /md %}}</dd><dt class="property-optional"
             title="Optional">
         <span id="output_python">
 <a href="#output_python" style="color: inherit; text-decoration: inherit;">output</a>
@@ -1799,8 +1603,7 @@ All [input](#inputs) properties are implicitly available as output properties. A
         <span class="property-indicator"></span>
         <span class="property-type">str</span>
     </dt>
-    <dd>{{% md %}}Script output stream.{{% /md %}}</dd>
-    <dt class="property-optional"
+    <dd>{{% md %}}Script output stream.{{% /md %}}</dd><dt class="property-optional"
             title="Optional">
         <span id="start_time_python">
 <a href="#start_time_python" style="color: inherit; text-decoration: inherit;">start_<wbr>time</a>
@@ -1808,8 +1611,7 @@ All [input](#inputs) properties are implicitly available as output properties. A
         <span class="property-indicator"></span>
         <span class="property-type">str</span>
     </dt>
-    <dd>{{% md %}}Script start time.{{% /md %}}</dd>
-    <dt class="property-optional"
+    <dd>{{% md %}}Script start time.{{% /md %}}</dd><dt class="property-optional"
             title="Optional">
         <span id="statuses_python">
 <a href="#statuses_python" style="color: inherit; text-decoration: inherit;">statuses</a>
@@ -1817,16 +1619,13 @@ All [input](#inputs) properties are implicitly available as output properties. A
         <span class="property-indicator"></span>
         <span class="property-type"><a href="#instanceviewstatusresponse">Sequence[Instance<wbr>View<wbr>Status<wbr>Response<wbr>Args]</a></span>
     </dt>
-    <dd>{{% md %}}The resource status information.{{% /md %}}</dd>
-</dl>
+    <dd>{{% md %}}The resource status information.{{% /md %}}</dd></dl>
 {{% /choosable %}}
 
 <h4 id="virtualmachineruncommandscriptsource">Virtual<wbr>Machine<wbr>Run<wbr>Command<wbr>Script<wbr>Source</h4>
 
 {{% choosable language csharp %}}
-<dl class="resources-properties">
-
-    <dt class="property-optional"
+<dl class="resources-properties"><dt class="property-optional"
             title="Optional">
         <span id="commandid_csharp">
 <a href="#commandid_csharp" style="color: inherit; text-decoration: inherit;">Command<wbr>Id</a>
@@ -1834,8 +1633,7 @@ All [input](#inputs) properties are implicitly available as output properties. A
         <span class="property-indicator"></span>
         <span class="property-type">string</span>
     </dt>
-    <dd>{{% md %}}Specifies a commandId of predefined built-in script.{{% /md %}}</dd>
-    <dt class="property-optional"
+    <dd>{{% md %}}Specifies a commandId of predefined built-in script.{{% /md %}}</dd><dt class="property-optional"
             title="Optional">
         <span id="script_csharp">
 <a href="#script_csharp" style="color: inherit; text-decoration: inherit;">Script</a>
@@ -1843,8 +1641,7 @@ All [input](#inputs) properties are implicitly available as output properties. A
         <span class="property-indicator"></span>
         <span class="property-type">string</span>
     </dt>
-    <dd>{{% md %}}Specifies the script content to be executed on the VM.{{% /md %}}</dd>
-    <dt class="property-optional"
+    <dd>{{% md %}}Specifies the script content to be executed on the VM.{{% /md %}}</dd><dt class="property-optional"
             title="Optional">
         <span id="scripturi_csharp">
 <a href="#scripturi_csharp" style="color: inherit; text-decoration: inherit;">Script<wbr>Uri</a>
@@ -1852,14 +1649,11 @@ All [input](#inputs) properties are implicitly available as output properties. A
         <span class="property-indicator"></span>
         <span class="property-type">string</span>
     </dt>
-    <dd>{{% md %}}Specifies the script download location.{{% /md %}}</dd>
-</dl>
+    <dd>{{% md %}}Specifies the script download location.{{% /md %}}</dd></dl>
 {{% /choosable %}}
 
 {{% choosable language go %}}
-<dl class="resources-properties">
-
-    <dt class="property-optional"
+<dl class="resources-properties"><dt class="property-optional"
             title="Optional">
         <span id="commandid_go">
 <a href="#commandid_go" style="color: inherit; text-decoration: inherit;">Command<wbr>Id</a>
@@ -1867,8 +1661,7 @@ All [input](#inputs) properties are implicitly available as output properties. A
         <span class="property-indicator"></span>
         <span class="property-type">string</span>
     </dt>
-    <dd>{{% md %}}Specifies a commandId of predefined built-in script.{{% /md %}}</dd>
-    <dt class="property-optional"
+    <dd>{{% md %}}Specifies a commandId of predefined built-in script.{{% /md %}}</dd><dt class="property-optional"
             title="Optional">
         <span id="script_go">
 <a href="#script_go" style="color: inherit; text-decoration: inherit;">Script</a>
@@ -1876,8 +1669,7 @@ All [input](#inputs) properties are implicitly available as output properties. A
         <span class="property-indicator"></span>
         <span class="property-type">string</span>
     </dt>
-    <dd>{{% md %}}Specifies the script content to be executed on the VM.{{% /md %}}</dd>
-    <dt class="property-optional"
+    <dd>{{% md %}}Specifies the script content to be executed on the VM.{{% /md %}}</dd><dt class="property-optional"
             title="Optional">
         <span id="scripturi_go">
 <a href="#scripturi_go" style="color: inherit; text-decoration: inherit;">Script<wbr>Uri</a>
@@ -1885,14 +1677,11 @@ All [input](#inputs) properties are implicitly available as output properties. A
         <span class="property-indicator"></span>
         <span class="property-type">string</span>
     </dt>
-    <dd>{{% md %}}Specifies the script download location.{{% /md %}}</dd>
-</dl>
+    <dd>{{% md %}}Specifies the script download location.{{% /md %}}</dd></dl>
 {{% /choosable %}}
 
 {{% choosable language nodejs %}}
-<dl class="resources-properties">
-
-    <dt class="property-optional"
+<dl class="resources-properties"><dt class="property-optional"
             title="Optional">
         <span id="commandid_nodejs">
 <a href="#commandid_nodejs" style="color: inherit; text-decoration: inherit;">command<wbr>Id</a>
@@ -1900,8 +1689,7 @@ All [input](#inputs) properties are implicitly available as output properties. A
         <span class="property-indicator"></span>
         <span class="property-type">string</span>
     </dt>
-    <dd>{{% md %}}Specifies a commandId of predefined built-in script.{{% /md %}}</dd>
-    <dt class="property-optional"
+    <dd>{{% md %}}Specifies a commandId of predefined built-in script.{{% /md %}}</dd><dt class="property-optional"
             title="Optional">
         <span id="script_nodejs">
 <a href="#script_nodejs" style="color: inherit; text-decoration: inherit;">script</a>
@@ -1909,8 +1697,7 @@ All [input](#inputs) properties are implicitly available as output properties. A
         <span class="property-indicator"></span>
         <span class="property-type">string</span>
     </dt>
-    <dd>{{% md %}}Specifies the script content to be executed on the VM.{{% /md %}}</dd>
-    <dt class="property-optional"
+    <dd>{{% md %}}Specifies the script content to be executed on the VM.{{% /md %}}</dd><dt class="property-optional"
             title="Optional">
         <span id="scripturi_nodejs">
 <a href="#scripturi_nodejs" style="color: inherit; text-decoration: inherit;">script<wbr>Uri</a>
@@ -1918,14 +1705,11 @@ All [input](#inputs) properties are implicitly available as output properties. A
         <span class="property-indicator"></span>
         <span class="property-type">string</span>
     </dt>
-    <dd>{{% md %}}Specifies the script download location.{{% /md %}}</dd>
-</dl>
+    <dd>{{% md %}}Specifies the script download location.{{% /md %}}</dd></dl>
 {{% /choosable %}}
 
 {{% choosable language python %}}
-<dl class="resources-properties">
-
-    <dt class="property-optional"
+<dl class="resources-properties"><dt class="property-optional"
             title="Optional">
         <span id="command_id_python">
 <a href="#command_id_python" style="color: inherit; text-decoration: inherit;">command_<wbr>id</a>
@@ -1933,8 +1717,7 @@ All [input](#inputs) properties are implicitly available as output properties. A
         <span class="property-indicator"></span>
         <span class="property-type">str</span>
     </dt>
-    <dd>{{% md %}}Specifies a commandId of predefined built-in script.{{% /md %}}</dd>
-    <dt class="property-optional"
+    <dd>{{% md %}}Specifies a commandId of predefined built-in script.{{% /md %}}</dd><dt class="property-optional"
             title="Optional">
         <span id="script_python">
 <a href="#script_python" style="color: inherit; text-decoration: inherit;">script</a>
@@ -1942,8 +1725,7 @@ All [input](#inputs) properties are implicitly available as output properties. A
         <span class="property-indicator"></span>
         <span class="property-type">str</span>
     </dt>
-    <dd>{{% md %}}Specifies the script content to be executed on the VM.{{% /md %}}</dd>
-    <dt class="property-optional"
+    <dd>{{% md %}}Specifies the script content to be executed on the VM.{{% /md %}}</dd><dt class="property-optional"
             title="Optional">
         <span id="script_uri_python">
 <a href="#script_uri_python" style="color: inherit; text-decoration: inherit;">script_<wbr>uri</a>
@@ -1951,16 +1733,13 @@ All [input](#inputs) properties are implicitly available as output properties. A
         <span class="property-indicator"></span>
         <span class="property-type">str</span>
     </dt>
-    <dd>{{% md %}}Specifies the script download location.{{% /md %}}</dd>
-</dl>
+    <dd>{{% md %}}Specifies the script download location.{{% /md %}}</dd></dl>
 {{% /choosable %}}
 
 <h4 id="virtualmachineruncommandscriptsourceresponse">Virtual<wbr>Machine<wbr>Run<wbr>Command<wbr>Script<wbr>Source<wbr>Response</h4>
 
 {{% choosable language csharp %}}
-<dl class="resources-properties">
-
-    <dt class="property-optional"
+<dl class="resources-properties"><dt class="property-optional"
             title="Optional">
         <span id="commandid_csharp">
 <a href="#commandid_csharp" style="color: inherit; text-decoration: inherit;">Command<wbr>Id</a>
@@ -1968,8 +1747,7 @@ All [input](#inputs) properties are implicitly available as output properties. A
         <span class="property-indicator"></span>
         <span class="property-type">string</span>
     </dt>
-    <dd>{{% md %}}Specifies a commandId of predefined built-in script.{{% /md %}}</dd>
-    <dt class="property-optional"
+    <dd>{{% md %}}Specifies a commandId of predefined built-in script.{{% /md %}}</dd><dt class="property-optional"
             title="Optional">
         <span id="script_csharp">
 <a href="#script_csharp" style="color: inherit; text-decoration: inherit;">Script</a>
@@ -1977,8 +1755,7 @@ All [input](#inputs) properties are implicitly available as output properties. A
         <span class="property-indicator"></span>
         <span class="property-type">string</span>
     </dt>
-    <dd>{{% md %}}Specifies the script content to be executed on the VM.{{% /md %}}</dd>
-    <dt class="property-optional"
+    <dd>{{% md %}}Specifies the script content to be executed on the VM.{{% /md %}}</dd><dt class="property-optional"
             title="Optional">
         <span id="scripturi_csharp">
 <a href="#scripturi_csharp" style="color: inherit; text-decoration: inherit;">Script<wbr>Uri</a>
@@ -1986,14 +1763,11 @@ All [input](#inputs) properties are implicitly available as output properties. A
         <span class="property-indicator"></span>
         <span class="property-type">string</span>
     </dt>
-    <dd>{{% md %}}Specifies the script download location.{{% /md %}}</dd>
-</dl>
+    <dd>{{% md %}}Specifies the script download location.{{% /md %}}</dd></dl>
 {{% /choosable %}}
 
 {{% choosable language go %}}
-<dl class="resources-properties">
-
-    <dt class="property-optional"
+<dl class="resources-properties"><dt class="property-optional"
             title="Optional">
         <span id="commandid_go">
 <a href="#commandid_go" style="color: inherit; text-decoration: inherit;">Command<wbr>Id</a>
@@ -2001,8 +1775,7 @@ All [input](#inputs) properties are implicitly available as output properties. A
         <span class="property-indicator"></span>
         <span class="property-type">string</span>
     </dt>
-    <dd>{{% md %}}Specifies a commandId of predefined built-in script.{{% /md %}}</dd>
-    <dt class="property-optional"
+    <dd>{{% md %}}Specifies a commandId of predefined built-in script.{{% /md %}}</dd><dt class="property-optional"
             title="Optional">
         <span id="script_go">
 <a href="#script_go" style="color: inherit; text-decoration: inherit;">Script</a>
@@ -2010,8 +1783,7 @@ All [input](#inputs) properties are implicitly available as output properties. A
         <span class="property-indicator"></span>
         <span class="property-type">string</span>
     </dt>
-    <dd>{{% md %}}Specifies the script content to be executed on the VM.{{% /md %}}</dd>
-    <dt class="property-optional"
+    <dd>{{% md %}}Specifies the script content to be executed on the VM.{{% /md %}}</dd><dt class="property-optional"
             title="Optional">
         <span id="scripturi_go">
 <a href="#scripturi_go" style="color: inherit; text-decoration: inherit;">Script<wbr>Uri</a>
@@ -2019,14 +1791,11 @@ All [input](#inputs) properties are implicitly available as output properties. A
         <span class="property-indicator"></span>
         <span class="property-type">string</span>
     </dt>
-    <dd>{{% md %}}Specifies the script download location.{{% /md %}}</dd>
-</dl>
+    <dd>{{% md %}}Specifies the script download location.{{% /md %}}</dd></dl>
 {{% /choosable %}}
 
 {{% choosable language nodejs %}}
-<dl class="resources-properties">
-
-    <dt class="property-optional"
+<dl class="resources-properties"><dt class="property-optional"
             title="Optional">
         <span id="commandid_nodejs">
 <a href="#commandid_nodejs" style="color: inherit; text-decoration: inherit;">command<wbr>Id</a>
@@ -2034,8 +1803,7 @@ All [input](#inputs) properties are implicitly available as output properties. A
         <span class="property-indicator"></span>
         <span class="property-type">string</span>
     </dt>
-    <dd>{{% md %}}Specifies a commandId of predefined built-in script.{{% /md %}}</dd>
-    <dt class="property-optional"
+    <dd>{{% md %}}Specifies a commandId of predefined built-in script.{{% /md %}}</dd><dt class="property-optional"
             title="Optional">
         <span id="script_nodejs">
 <a href="#script_nodejs" style="color: inherit; text-decoration: inherit;">script</a>
@@ -2043,8 +1811,7 @@ All [input](#inputs) properties are implicitly available as output properties. A
         <span class="property-indicator"></span>
         <span class="property-type">string</span>
     </dt>
-    <dd>{{% md %}}Specifies the script content to be executed on the VM.{{% /md %}}</dd>
-    <dt class="property-optional"
+    <dd>{{% md %}}Specifies the script content to be executed on the VM.{{% /md %}}</dd><dt class="property-optional"
             title="Optional">
         <span id="scripturi_nodejs">
 <a href="#scripturi_nodejs" style="color: inherit; text-decoration: inherit;">script<wbr>Uri</a>
@@ -2052,14 +1819,11 @@ All [input](#inputs) properties are implicitly available as output properties. A
         <span class="property-indicator"></span>
         <span class="property-type">string</span>
     </dt>
-    <dd>{{% md %}}Specifies the script download location.{{% /md %}}</dd>
-</dl>
+    <dd>{{% md %}}Specifies the script download location.{{% /md %}}</dd></dl>
 {{% /choosable %}}
 
 {{% choosable language python %}}
-<dl class="resources-properties">
-
-    <dt class="property-optional"
+<dl class="resources-properties"><dt class="property-optional"
             title="Optional">
         <span id="command_id_python">
 <a href="#command_id_python" style="color: inherit; text-decoration: inherit;">command_<wbr>id</a>
@@ -2067,8 +1831,7 @@ All [input](#inputs) properties are implicitly available as output properties. A
         <span class="property-indicator"></span>
         <span class="property-type">str</span>
     </dt>
-    <dd>{{% md %}}Specifies a commandId of predefined built-in script.{{% /md %}}</dd>
-    <dt class="property-optional"
+    <dd>{{% md %}}Specifies a commandId of predefined built-in script.{{% /md %}}</dd><dt class="property-optional"
             title="Optional">
         <span id="script_python">
 <a href="#script_python" style="color: inherit; text-decoration: inherit;">script</a>
@@ -2076,8 +1839,7 @@ All [input](#inputs) properties are implicitly available as output properties. A
         <span class="property-indicator"></span>
         <span class="property-type">str</span>
     </dt>
-    <dd>{{% md %}}Specifies the script content to be executed on the VM.{{% /md %}}</dd>
-    <dt class="property-optional"
+    <dd>{{% md %}}Specifies the script content to be executed on the VM.{{% /md %}}</dd><dt class="property-optional"
             title="Optional">
         <span id="script_uri_python">
 <a href="#script_uri_python" style="color: inherit; text-decoration: inherit;">script_<wbr>uri</a>
@@ -2085,8 +1847,7 @@ All [input](#inputs) properties are implicitly available as output properties. A
         <span class="property-indicator"></span>
         <span class="property-type">str</span>
     </dt>
-    <dd>{{% md %}}Specifies the script download location.{{% /md %}}</dd>
-</dl>
+    <dd>{{% md %}}Specifies the script download location.{{% /md %}}</dd></dl>
 {{% /choosable %}}
 ## Import
 

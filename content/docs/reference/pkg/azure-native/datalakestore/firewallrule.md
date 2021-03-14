@@ -14,11 +14,17 @@ Data Lake Store firewall rule information.
 API Version: 2016-11-01.
 
 {{% examples %}}
+
 ## Example Usage
 
 {{< chooser language "typescript,python,go,csharp" / >}}
+
+
 ### Creates or updates the specified firewall rule. During update, the firewall rule with the specified name will be replaced with this new firewall rule
-{{% example csharp %}}
+
+
+{{< example csharp >}}
+
 ```csharp
 using Pulumi;
 using AzureNative = Pulumi.AzureNative;
@@ -41,9 +47,12 @@ class MyStack : Stack
 
 ```
 
-{{% /example %}}
 
-{{% example go %}}
+{{< /example >}}
+
+
+{{< example go >}}
+
 
 ```go
 package main
@@ -71,9 +80,12 @@ func main() {
 
 ```
 
-{{% /example %}}
 
-{{% example python %}}
+{{< /example >}}
+
+
+{{< example python >}}
+
 
 ```python
 import pulumi
@@ -88,9 +100,12 @@ firewall_rule = azure_native.datalakestore.FirewallRule("firewallRule",
 
 ```
 
-{{% /example %}}
 
-{{% example typescript %}}
+{{< /example >}}
+
+
+{{< example typescript >}}
+
 
 ```typescript
 import * as pulumi from "@pulumi/pulumi";
@@ -106,9 +121,16 @@ const firewallRule = new azure_native.datalakestore.FirewallRule("firewallRule",
 
 ```
 
-{{% /example %}}
+
+{{< /example >}}
+
+
+
+
 
 {{% /examples %}}
+
+
 
 
 ## Create a FirewallRule Resource {#create}
@@ -133,9 +155,7 @@ const firewallRule = new azure_native.datalakestore.FirewallRule("firewallRule",
 
 {{% choosable language nodejs %}}
 
-<dl class="resources-properties">
-  
-    <dt
+<dl class="resources-properties"><dt
         class="property-required" title="Required">
         <span>name</span>
         <span class="property-indicator"></span>
@@ -143,9 +163,7 @@ const firewallRule = new azure_native.datalakestore.FirewallRule("firewallRule",
     </dt>
     <dd>
       The unique name of the resource.
-    </dd>
-  
-    <dt
+    </dd><dt
         class="property-required" title="Required">
         <span>args</span>
         <span class="property-indicator"></span>
@@ -153,9 +171,7 @@ const firewallRule = new azure_native.datalakestore.FirewallRule("firewallRule",
     </dt>
     <dd>
       The arguments to resource properties.
-    </dd>
-  
-    <dt
+    </dd><dt
         class="property-optional" title="Optional">
         <span>opts</span>
         <span class="property-indicator"></span>
@@ -163,10 +179,7 @@ const firewallRule = new azure_native.datalakestore.FirewallRule("firewallRule",
     </dt>
     <dd>
       Bag of options to control resource&#39;s behavior.
-    </dd>
-  
-
-</dl>
+    </dd></dl>
 
 {{% /choosable %}}
 
@@ -192,9 +205,7 @@ const firewallRule = new azure_native.datalakestore.FirewallRule("firewallRule",
 
 {{% choosable language go %}}
 
-<dl class="resources-properties">
-  
-    <dt
+<dl class="resources-properties"><dt
         class="property-optional" title="Optional">
         <span>ctx</span>
         <span class="property-indicator"></span>
@@ -202,9 +213,7 @@ const firewallRule = new azure_native.datalakestore.FirewallRule("firewallRule",
     </dt>
     <dd>
       Context object for the current deployment.
-    </dd>
-  
-    <dt
+    </dd><dt
         class="property-required" title="Required">
         <span>name</span>
         <span class="property-indicator"></span>
@@ -212,9 +221,7 @@ const firewallRule = new azure_native.datalakestore.FirewallRule("firewallRule",
     </dt>
     <dd>
       The unique name of the resource.
-    </dd>
-  
-    <dt
+    </dd><dt
         class="property-required" title="Required">
         <span>args</span>
         <span class="property-indicator"></span>
@@ -222,9 +229,7 @@ const firewallRule = new azure_native.datalakestore.FirewallRule("firewallRule",
     </dt>
     <dd>
       The arguments to resource properties.
-    </dd>
-  
-    <dt
+    </dd><dt
         class="property-optional" title="Optional">
         <span>opts</span>
         <span class="property-indicator"></span>
@@ -232,18 +237,13 @@ const firewallRule = new azure_native.datalakestore.FirewallRule("firewallRule",
     </dt>
     <dd>
       Bag of options to control resource&#39;s behavior.
-    </dd>
-  
-
-</dl>
+    </dd></dl>
 
 {{% /choosable %}}
 
 {{% choosable language csharp %}}
 
-<dl class="resources-properties">
-  
-    <dt
+<dl class="resources-properties"><dt
         class="property-required" title="Required">
         <span>name</span>
         <span class="property-indicator"></span>
@@ -251,9 +251,7 @@ const firewallRule = new azure_native.datalakestore.FirewallRule("firewallRule",
     </dt>
     <dd>
       The unique name of the resource.
-    </dd>
-  
-    <dt
+    </dd><dt
         class="property-required" title="Required">
         <span>args</span>
         <span class="property-indicator"></span>
@@ -261,9 +259,7 @@ const firewallRule = new azure_native.datalakestore.FirewallRule("firewallRule",
     </dt>
     <dd>
       The arguments to resource properties.
-    </dd>
-  
-    <dt
+    </dd><dt
         class="property-optional" title="Optional">
         <span>opts</span>
         <span class="property-indicator"></span>
@@ -271,10 +267,7 @@ const firewallRule = new azure_native.datalakestore.FirewallRule("firewallRule",
     </dt>
     <dd>
       Bag of options to control resource&#39;s behavior.
-    </dd>
-  
-
-</dl>
+    </dd></dl>
 
 {{% /choosable %}}
 
@@ -289,9 +282,7 @@ The FirewallRule resource accepts the following [input]({{< relref "/docs/intro/
 
 
 {{% choosable language csharp %}}
-<dl class="resources-properties">
-
-    <dt class="property-required"
+<dl class="resources-properties"><dt class="property-required"
             title="Required">
         <span id="accountname_csharp">
 <a href="#accountname_csharp" style="color: inherit; text-decoration: inherit;">Account<wbr>Name</a>
@@ -299,8 +290,7 @@ The FirewallRule resource accepts the following [input]({{< relref "/docs/intro/
         <span class="property-indicator"></span>
         <span class="property-type">string</span>
     </dt>
-    <dd>{{% md %}}The name of the Data Lake Store account.{{% /md %}}</dd>
-    <dt class="property-required"
+    <dd>{{% md %}}The name of the Data Lake Store account.{{% /md %}}</dd><dt class="property-required"
             title="Required">
         <span id="endipaddress_csharp">
 <a href="#endipaddress_csharp" style="color: inherit; text-decoration: inherit;">End<wbr>Ip<wbr>Address</a>
@@ -308,8 +298,7 @@ The FirewallRule resource accepts the following [input]({{< relref "/docs/intro/
         <span class="property-indicator"></span>
         <span class="property-type">string</span>
     </dt>
-    <dd>{{% md %}}The end IP address for the firewall rule. This can be either ipv4 or ipv6. Start and End should be in the same protocol.{{% /md %}}</dd>
-    <dt class="property-required"
+    <dd>{{% md %}}The end IP address for the firewall rule. This can be either ipv4 or ipv6. Start and End should be in the same protocol.{{% /md %}}</dd><dt class="property-required"
             title="Required">
         <span id="resourcegroupname_csharp">
 <a href="#resourcegroupname_csharp" style="color: inherit; text-decoration: inherit;">Resource<wbr>Group<wbr>Name</a>
@@ -317,8 +306,7 @@ The FirewallRule resource accepts the following [input]({{< relref "/docs/intro/
         <span class="property-indicator"></span>
         <span class="property-type">string</span>
     </dt>
-    <dd>{{% md %}}The name of the Azure resource group.{{% /md %}}</dd>
-    <dt class="property-required"
+    <dd>{{% md %}}The name of the Azure resource group.{{% /md %}}</dd><dt class="property-required"
             title="Required">
         <span id="startipaddress_csharp">
 <a href="#startipaddress_csharp" style="color: inherit; text-decoration: inherit;">Start<wbr>Ip<wbr>Address</a>
@@ -326,8 +314,7 @@ The FirewallRule resource accepts the following [input]({{< relref "/docs/intro/
         <span class="property-indicator"></span>
         <span class="property-type">string</span>
     </dt>
-    <dd>{{% md %}}The start IP address for the firewall rule. This can be either ipv4 or ipv6. Start and End should be in the same protocol.{{% /md %}}</dd>
-    <dt class="property-optional"
+    <dd>{{% md %}}The start IP address for the firewall rule. This can be either ipv4 or ipv6. Start and End should be in the same protocol.{{% /md %}}</dd><dt class="property-optional"
             title="Optional">
         <span id="firewallrulename_csharp">
 <a href="#firewallrulename_csharp" style="color: inherit; text-decoration: inherit;">Firewall<wbr>Rule<wbr>Name</a>
@@ -335,14 +322,11 @@ The FirewallRule resource accepts the following [input]({{< relref "/docs/intro/
         <span class="property-indicator"></span>
         <span class="property-type">string</span>
     </dt>
-    <dd>{{% md %}}The name of the firewall rule to create or update.{{% /md %}}</dd>
-</dl>
+    <dd>{{% md %}}The name of the firewall rule to create or update.{{% /md %}}</dd></dl>
 {{% /choosable %}}
 
 {{% choosable language go %}}
-<dl class="resources-properties">
-
-    <dt class="property-required"
+<dl class="resources-properties"><dt class="property-required"
             title="Required">
         <span id="accountname_go">
 <a href="#accountname_go" style="color: inherit; text-decoration: inherit;">Account<wbr>Name</a>
@@ -350,8 +334,7 @@ The FirewallRule resource accepts the following [input]({{< relref "/docs/intro/
         <span class="property-indicator"></span>
         <span class="property-type">string</span>
     </dt>
-    <dd>{{% md %}}The name of the Data Lake Store account.{{% /md %}}</dd>
-    <dt class="property-required"
+    <dd>{{% md %}}The name of the Data Lake Store account.{{% /md %}}</dd><dt class="property-required"
             title="Required">
         <span id="endipaddress_go">
 <a href="#endipaddress_go" style="color: inherit; text-decoration: inherit;">End<wbr>Ip<wbr>Address</a>
@@ -359,8 +342,7 @@ The FirewallRule resource accepts the following [input]({{< relref "/docs/intro/
         <span class="property-indicator"></span>
         <span class="property-type">string</span>
     </dt>
-    <dd>{{% md %}}The end IP address for the firewall rule. This can be either ipv4 or ipv6. Start and End should be in the same protocol.{{% /md %}}</dd>
-    <dt class="property-required"
+    <dd>{{% md %}}The end IP address for the firewall rule. This can be either ipv4 or ipv6. Start and End should be in the same protocol.{{% /md %}}</dd><dt class="property-required"
             title="Required">
         <span id="resourcegroupname_go">
 <a href="#resourcegroupname_go" style="color: inherit; text-decoration: inherit;">Resource<wbr>Group<wbr>Name</a>
@@ -368,8 +350,7 @@ The FirewallRule resource accepts the following [input]({{< relref "/docs/intro/
         <span class="property-indicator"></span>
         <span class="property-type">string</span>
     </dt>
-    <dd>{{% md %}}The name of the Azure resource group.{{% /md %}}</dd>
-    <dt class="property-required"
+    <dd>{{% md %}}The name of the Azure resource group.{{% /md %}}</dd><dt class="property-required"
             title="Required">
         <span id="startipaddress_go">
 <a href="#startipaddress_go" style="color: inherit; text-decoration: inherit;">Start<wbr>Ip<wbr>Address</a>
@@ -377,8 +358,7 @@ The FirewallRule resource accepts the following [input]({{< relref "/docs/intro/
         <span class="property-indicator"></span>
         <span class="property-type">string</span>
     </dt>
-    <dd>{{% md %}}The start IP address for the firewall rule. This can be either ipv4 or ipv6. Start and End should be in the same protocol.{{% /md %}}</dd>
-    <dt class="property-optional"
+    <dd>{{% md %}}The start IP address for the firewall rule. This can be either ipv4 or ipv6. Start and End should be in the same protocol.{{% /md %}}</dd><dt class="property-optional"
             title="Optional">
         <span id="firewallrulename_go">
 <a href="#firewallrulename_go" style="color: inherit; text-decoration: inherit;">Firewall<wbr>Rule<wbr>Name</a>
@@ -386,14 +366,11 @@ The FirewallRule resource accepts the following [input]({{< relref "/docs/intro/
         <span class="property-indicator"></span>
         <span class="property-type">string</span>
     </dt>
-    <dd>{{% md %}}The name of the firewall rule to create or update.{{% /md %}}</dd>
-</dl>
+    <dd>{{% md %}}The name of the firewall rule to create or update.{{% /md %}}</dd></dl>
 {{% /choosable %}}
 
 {{% choosable language nodejs %}}
-<dl class="resources-properties">
-
-    <dt class="property-required"
+<dl class="resources-properties"><dt class="property-required"
             title="Required">
         <span id="accountname_nodejs">
 <a href="#accountname_nodejs" style="color: inherit; text-decoration: inherit;">account<wbr>Name</a>
@@ -401,8 +378,7 @@ The FirewallRule resource accepts the following [input]({{< relref "/docs/intro/
         <span class="property-indicator"></span>
         <span class="property-type">string</span>
     </dt>
-    <dd>{{% md %}}The name of the Data Lake Store account.{{% /md %}}</dd>
-    <dt class="property-required"
+    <dd>{{% md %}}The name of the Data Lake Store account.{{% /md %}}</dd><dt class="property-required"
             title="Required">
         <span id="endipaddress_nodejs">
 <a href="#endipaddress_nodejs" style="color: inherit; text-decoration: inherit;">end<wbr>Ip<wbr>Address</a>
@@ -410,8 +386,7 @@ The FirewallRule resource accepts the following [input]({{< relref "/docs/intro/
         <span class="property-indicator"></span>
         <span class="property-type">string</span>
     </dt>
-    <dd>{{% md %}}The end IP address for the firewall rule. This can be either ipv4 or ipv6. Start and End should be in the same protocol.{{% /md %}}</dd>
-    <dt class="property-required"
+    <dd>{{% md %}}The end IP address for the firewall rule. This can be either ipv4 or ipv6. Start and End should be in the same protocol.{{% /md %}}</dd><dt class="property-required"
             title="Required">
         <span id="resourcegroupname_nodejs">
 <a href="#resourcegroupname_nodejs" style="color: inherit; text-decoration: inherit;">resource<wbr>Group<wbr>Name</a>
@@ -419,8 +394,7 @@ The FirewallRule resource accepts the following [input]({{< relref "/docs/intro/
         <span class="property-indicator"></span>
         <span class="property-type">string</span>
     </dt>
-    <dd>{{% md %}}The name of the Azure resource group.{{% /md %}}</dd>
-    <dt class="property-required"
+    <dd>{{% md %}}The name of the Azure resource group.{{% /md %}}</dd><dt class="property-required"
             title="Required">
         <span id="startipaddress_nodejs">
 <a href="#startipaddress_nodejs" style="color: inherit; text-decoration: inherit;">start<wbr>Ip<wbr>Address</a>
@@ -428,8 +402,7 @@ The FirewallRule resource accepts the following [input]({{< relref "/docs/intro/
         <span class="property-indicator"></span>
         <span class="property-type">string</span>
     </dt>
-    <dd>{{% md %}}The start IP address for the firewall rule. This can be either ipv4 or ipv6. Start and End should be in the same protocol.{{% /md %}}</dd>
-    <dt class="property-optional"
+    <dd>{{% md %}}The start IP address for the firewall rule. This can be either ipv4 or ipv6. Start and End should be in the same protocol.{{% /md %}}</dd><dt class="property-optional"
             title="Optional">
         <span id="firewallrulename_nodejs">
 <a href="#firewallrulename_nodejs" style="color: inherit; text-decoration: inherit;">firewall<wbr>Rule<wbr>Name</a>
@@ -437,14 +410,11 @@ The FirewallRule resource accepts the following [input]({{< relref "/docs/intro/
         <span class="property-indicator"></span>
         <span class="property-type">string</span>
     </dt>
-    <dd>{{% md %}}The name of the firewall rule to create or update.{{% /md %}}</dd>
-</dl>
+    <dd>{{% md %}}The name of the firewall rule to create or update.{{% /md %}}</dd></dl>
 {{% /choosable %}}
 
 {{% choosable language python %}}
-<dl class="resources-properties">
-
-    <dt class="property-required"
+<dl class="resources-properties"><dt class="property-required"
             title="Required">
         <span id="account_name_python">
 <a href="#account_name_python" style="color: inherit; text-decoration: inherit;">account_<wbr>name</a>
@@ -452,8 +422,7 @@ The FirewallRule resource accepts the following [input]({{< relref "/docs/intro/
         <span class="property-indicator"></span>
         <span class="property-type">str</span>
     </dt>
-    <dd>{{% md %}}The name of the Data Lake Store account.{{% /md %}}</dd>
-    <dt class="property-required"
+    <dd>{{% md %}}The name of the Data Lake Store account.{{% /md %}}</dd><dt class="property-required"
             title="Required">
         <span id="end_ip_address_python">
 <a href="#end_ip_address_python" style="color: inherit; text-decoration: inherit;">end_<wbr>ip_<wbr>address</a>
@@ -461,8 +430,7 @@ The FirewallRule resource accepts the following [input]({{< relref "/docs/intro/
         <span class="property-indicator"></span>
         <span class="property-type">str</span>
     </dt>
-    <dd>{{% md %}}The end IP address for the firewall rule. This can be either ipv4 or ipv6. Start and End should be in the same protocol.{{% /md %}}</dd>
-    <dt class="property-required"
+    <dd>{{% md %}}The end IP address for the firewall rule. This can be either ipv4 or ipv6. Start and End should be in the same protocol.{{% /md %}}</dd><dt class="property-required"
             title="Required">
         <span id="resource_group_name_python">
 <a href="#resource_group_name_python" style="color: inherit; text-decoration: inherit;">resource_<wbr>group_<wbr>name</a>
@@ -470,8 +438,7 @@ The FirewallRule resource accepts the following [input]({{< relref "/docs/intro/
         <span class="property-indicator"></span>
         <span class="property-type">str</span>
     </dt>
-    <dd>{{% md %}}The name of the Azure resource group.{{% /md %}}</dd>
-    <dt class="property-required"
+    <dd>{{% md %}}The name of the Azure resource group.{{% /md %}}</dd><dt class="property-required"
             title="Required">
         <span id="start_ip_address_python">
 <a href="#start_ip_address_python" style="color: inherit; text-decoration: inherit;">start_<wbr>ip_<wbr>address</a>
@@ -479,8 +446,7 @@ The FirewallRule resource accepts the following [input]({{< relref "/docs/intro/
         <span class="property-indicator"></span>
         <span class="property-type">str</span>
     </dt>
-    <dd>{{% md %}}The start IP address for the firewall rule. This can be either ipv4 or ipv6. Start and End should be in the same protocol.{{% /md %}}</dd>
-    <dt class="property-optional"
+    <dd>{{% md %}}The start IP address for the firewall rule. This can be either ipv4 or ipv6. Start and End should be in the same protocol.{{% /md %}}</dd><dt class="property-optional"
             title="Optional">
         <span id="firewall_rule_name_python">
 <a href="#firewall_rule_name_python" style="color: inherit; text-decoration: inherit;">firewall_<wbr>rule_<wbr>name</a>
@@ -488,8 +454,7 @@ The FirewallRule resource accepts the following [input]({{< relref "/docs/intro/
         <span class="property-indicator"></span>
         <span class="property-type">str</span>
     </dt>
-    <dd>{{% md %}}The name of the firewall rule to create or update.{{% /md %}}</dd>
-</dl>
+    <dd>{{% md %}}The name of the firewall rule to create or update.{{% /md %}}</dd></dl>
 {{% /choosable %}}
 
 
@@ -500,9 +465,7 @@ All [input](#inputs) properties are implicitly available as output properties. A
 
 
 {{% choosable language csharp %}}
-<dl class="resources-properties">
-
-    <dt class="property-"
+<dl class="resources-properties"><dt class="property-"
             title="">
         <span id="id_csharp">
 <a href="#id_csharp" style="color: inherit; text-decoration: inherit;">Id</a>
@@ -510,8 +473,7 @@ All [input](#inputs) properties are implicitly available as output properties. A
         <span class="property-indicator"></span>
         <span class="property-type">string</span>
     </dt>
-    <dd>{{% md %}}The provider-assigned unique ID for this managed resource.{{% /md %}}</dd>
-    <dt class="property-"
+    <dd>{{% md %}}The provider-assigned unique ID for this managed resource.{{% /md %}}</dd><dt class="property-"
             title="">
         <span id="name_csharp">
 <a href="#name_csharp" style="color: inherit; text-decoration: inherit;">Name</a>
@@ -519,8 +481,7 @@ All [input](#inputs) properties are implicitly available as output properties. A
         <span class="property-indicator"></span>
         <span class="property-type">string</span>
     </dt>
-    <dd>{{% md %}}The resource name.{{% /md %}}</dd>
-    <dt class="property-"
+    <dd>{{% md %}}The resource name.{{% /md %}}</dd><dt class="property-"
             title="">
         <span id="type_csharp">
 <a href="#type_csharp" style="color: inherit; text-decoration: inherit;">Type</a>
@@ -528,14 +489,11 @@ All [input](#inputs) properties are implicitly available as output properties. A
         <span class="property-indicator"></span>
         <span class="property-type">string</span>
     </dt>
-    <dd>{{% md %}}The resource type.{{% /md %}}</dd>
-</dl>
+    <dd>{{% md %}}The resource type.{{% /md %}}</dd></dl>
 {{% /choosable %}}
 
 {{% choosable language go %}}
-<dl class="resources-properties">
-
-    <dt class="property-"
+<dl class="resources-properties"><dt class="property-"
             title="">
         <span id="id_go">
 <a href="#id_go" style="color: inherit; text-decoration: inherit;">Id</a>
@@ -543,8 +501,7 @@ All [input](#inputs) properties are implicitly available as output properties. A
         <span class="property-indicator"></span>
         <span class="property-type">string</span>
     </dt>
-    <dd>{{% md %}}The provider-assigned unique ID for this managed resource.{{% /md %}}</dd>
-    <dt class="property-"
+    <dd>{{% md %}}The provider-assigned unique ID for this managed resource.{{% /md %}}</dd><dt class="property-"
             title="">
         <span id="name_go">
 <a href="#name_go" style="color: inherit; text-decoration: inherit;">Name</a>
@@ -552,8 +509,7 @@ All [input](#inputs) properties are implicitly available as output properties. A
         <span class="property-indicator"></span>
         <span class="property-type">string</span>
     </dt>
-    <dd>{{% md %}}The resource name.{{% /md %}}</dd>
-    <dt class="property-"
+    <dd>{{% md %}}The resource name.{{% /md %}}</dd><dt class="property-"
             title="">
         <span id="type_go">
 <a href="#type_go" style="color: inherit; text-decoration: inherit;">Type</a>
@@ -561,14 +517,11 @@ All [input](#inputs) properties are implicitly available as output properties. A
         <span class="property-indicator"></span>
         <span class="property-type">string</span>
     </dt>
-    <dd>{{% md %}}The resource type.{{% /md %}}</dd>
-</dl>
+    <dd>{{% md %}}The resource type.{{% /md %}}</dd></dl>
 {{% /choosable %}}
 
 {{% choosable language nodejs %}}
-<dl class="resources-properties">
-
-    <dt class="property-"
+<dl class="resources-properties"><dt class="property-"
             title="">
         <span id="id_nodejs">
 <a href="#id_nodejs" style="color: inherit; text-decoration: inherit;">id</a>
@@ -576,8 +529,7 @@ All [input](#inputs) properties are implicitly available as output properties. A
         <span class="property-indicator"></span>
         <span class="property-type">string</span>
     </dt>
-    <dd>{{% md %}}The provider-assigned unique ID for this managed resource.{{% /md %}}</dd>
-    <dt class="property-"
+    <dd>{{% md %}}The provider-assigned unique ID for this managed resource.{{% /md %}}</dd><dt class="property-"
             title="">
         <span id="name_nodejs">
 <a href="#name_nodejs" style="color: inherit; text-decoration: inherit;">name</a>
@@ -585,8 +537,7 @@ All [input](#inputs) properties are implicitly available as output properties. A
         <span class="property-indicator"></span>
         <span class="property-type">string</span>
     </dt>
-    <dd>{{% md %}}The resource name.{{% /md %}}</dd>
-    <dt class="property-"
+    <dd>{{% md %}}The resource name.{{% /md %}}</dd><dt class="property-"
             title="">
         <span id="type_nodejs">
 <a href="#type_nodejs" style="color: inherit; text-decoration: inherit;">type</a>
@@ -594,14 +545,11 @@ All [input](#inputs) properties are implicitly available as output properties. A
         <span class="property-indicator"></span>
         <span class="property-type">string</span>
     </dt>
-    <dd>{{% md %}}The resource type.{{% /md %}}</dd>
-</dl>
+    <dd>{{% md %}}The resource type.{{% /md %}}</dd></dl>
 {{% /choosable %}}
 
 {{% choosable language python %}}
-<dl class="resources-properties">
-
-    <dt class="property-"
+<dl class="resources-properties"><dt class="property-"
             title="">
         <span id="id_python">
 <a href="#id_python" style="color: inherit; text-decoration: inherit;">id</a>
@@ -609,8 +557,7 @@ All [input](#inputs) properties are implicitly available as output properties. A
         <span class="property-indicator"></span>
         <span class="property-type">str</span>
     </dt>
-    <dd>{{% md %}}The provider-assigned unique ID for this managed resource.{{% /md %}}</dd>
-    <dt class="property-"
+    <dd>{{% md %}}The provider-assigned unique ID for this managed resource.{{% /md %}}</dd><dt class="property-"
             title="">
         <span id="name_python">
 <a href="#name_python" style="color: inherit; text-decoration: inherit;">name</a>
@@ -618,8 +565,7 @@ All [input](#inputs) properties are implicitly available as output properties. A
         <span class="property-indicator"></span>
         <span class="property-type">str</span>
     </dt>
-    <dd>{{% md %}}The resource name.{{% /md %}}</dd>
-    <dt class="property-"
+    <dd>{{% md %}}The resource name.{{% /md %}}</dd><dt class="property-"
             title="">
         <span id="type_python">
 <a href="#type_python" style="color: inherit; text-decoration: inherit;">type</a>
@@ -627,8 +573,7 @@ All [input](#inputs) properties are implicitly available as output properties. A
         <span class="property-indicator"></span>
         <span class="property-type">str</span>
     </dt>
-    <dd>{{% md %}}The resource type.{{% /md %}}</dd>
-</dl>
+    <dd>{{% md %}}The resource type.{{% /md %}}</dd></dl>
 {{% /choosable %}}
 
 

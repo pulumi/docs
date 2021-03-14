@@ -15,11 +15,17 @@ Provides a ActionTrail Trail resource. For information about alicloud actiontrai
 > **NOTE:** Available in 1.95.0+
 
 {{% examples %}}
+
 ## Example Usage
 
 {{< chooser language "typescript,python,go,csharp" / >}}
 
-{{% example csharp %}}
+
+
+
+
+{{< example csharp >}}
+
 ```csharp
 using Pulumi;
 using AliCloud = Pulumi.AliCloud;
@@ -42,9 +48,12 @@ class MyStack : Stack
 }
 ```
 
-{{% /example %}}
 
-{{% example go %}}
+{{< /example >}}
+
+
+{{< example go >}}
+
 ```go
 package main
 
@@ -70,9 +79,12 @@ func main() {
 }
 ```
 
-{{% /example %}}
 
-{{% example python %}}
+{{< /example >}}
+
+
+{{< example python >}}
+
 ```python
 import pulumi
 import pulumi_alicloud as alicloud
@@ -86,9 +98,12 @@ default = alicloud.actiontrail.Trail("default",
     trail_region="cn-hangzhou")
 ```
 
-{{% /example %}}
 
-{{% example typescript %}}
+{{< /example >}}
+
+
+{{< example typescript >}}
+
 
 ```typescript
 import * as pulumi from "@pulumi/pulumi";
@@ -104,9 +119,16 @@ const defaultTrail = new alicloud.actiontrail.Trail("default", {
 });
 ```
 
-{{% /example %}}
+
+{{< /example >}}
+
+
+
+
 
 {{% /examples %}}
+
+
 
 
 ## Create a Trail Resource {#create}
@@ -131,9 +153,7 @@ const defaultTrail = new alicloud.actiontrail.Trail("default", {
 
 {{% choosable language nodejs %}}
 
-<dl class="resources-properties">
-  
-    <dt
+<dl class="resources-properties"><dt
         class="property-required" title="Required">
         <span>name</span>
         <span class="property-indicator"></span>
@@ -141,9 +161,7 @@ const defaultTrail = new alicloud.actiontrail.Trail("default", {
     </dt>
     <dd>
       The unique name of the resource.
-    </dd>
-  
-    <dt
+    </dd><dt
         class="property-optional" title="Optional">
         <span>args</span>
         <span class="property-indicator"></span>
@@ -151,9 +169,7 @@ const defaultTrail = new alicloud.actiontrail.Trail("default", {
     </dt>
     <dd>
       The arguments to resource properties.
-    </dd>
-  
-    <dt
+    </dd><dt
         class="property-optional" title="Optional">
         <span>opts</span>
         <span class="property-indicator"></span>
@@ -161,10 +177,7 @@ const defaultTrail = new alicloud.actiontrail.Trail("default", {
     </dt>
     <dd>
       Bag of options to control resource&#39;s behavior.
-    </dd>
-  
-
-</dl>
+    </dd></dl>
 
 {{% /choosable %}}
 
@@ -190,9 +203,7 @@ const defaultTrail = new alicloud.actiontrail.Trail("default", {
 
 {{% choosable language go %}}
 
-<dl class="resources-properties">
-  
-    <dt
+<dl class="resources-properties"><dt
         class="property-optional" title="Optional">
         <span>ctx</span>
         <span class="property-indicator"></span>
@@ -200,9 +211,7 @@ const defaultTrail = new alicloud.actiontrail.Trail("default", {
     </dt>
     <dd>
       Context object for the current deployment.
-    </dd>
-  
-    <dt
+    </dd><dt
         class="property-required" title="Required">
         <span>name</span>
         <span class="property-indicator"></span>
@@ -210,9 +219,7 @@ const defaultTrail = new alicloud.actiontrail.Trail("default", {
     </dt>
     <dd>
       The unique name of the resource.
-    </dd>
-  
-    <dt
+    </dd><dt
         class="property-optional" title="Optional">
         <span>args</span>
         <span class="property-indicator"></span>
@@ -220,9 +227,7 @@ const defaultTrail = new alicloud.actiontrail.Trail("default", {
     </dt>
     <dd>
       The arguments to resource properties.
-    </dd>
-  
-    <dt
+    </dd><dt
         class="property-optional" title="Optional">
         <span>opts</span>
         <span class="property-indicator"></span>
@@ -230,18 +235,13 @@ const defaultTrail = new alicloud.actiontrail.Trail("default", {
     </dt>
     <dd>
       Bag of options to control resource&#39;s behavior.
-    </dd>
-  
-
-</dl>
+    </dd></dl>
 
 {{% /choosable %}}
 
 {{% choosable language csharp %}}
 
-<dl class="resources-properties">
-  
-    <dt
+<dl class="resources-properties"><dt
         class="property-required" title="Required">
         <span>name</span>
         <span class="property-indicator"></span>
@@ -249,9 +249,7 @@ const defaultTrail = new alicloud.actiontrail.Trail("default", {
     </dt>
     <dd>
       The unique name of the resource.
-    </dd>
-  
-    <dt
+    </dd><dt
         class="property-optional" title="Optional">
         <span>args</span>
         <span class="property-indicator"></span>
@@ -259,9 +257,7 @@ const defaultTrail = new alicloud.actiontrail.Trail("default", {
     </dt>
     <dd>
       The arguments to resource properties.
-    </dd>
-  
-    <dt
+    </dd><dt
         class="property-optional" title="Optional">
         <span>opts</span>
         <span class="property-indicator"></span>
@@ -269,10 +265,7 @@ const defaultTrail = new alicloud.actiontrail.Trail("default", {
     </dt>
     <dd>
       Bag of options to control resource&#39;s behavior.
-    </dd>
-  
-
-</dl>
+    </dd></dl>
 
 {{% /choosable %}}
 
@@ -287,9 +280,7 @@ The Trail resource accepts the following [input]({{< relref "/docs/intro/concept
 
 
 {{% choosable language csharp %}}
-<dl class="resources-properties">
-
-    <dt class="property-optional"
+<dl class="resources-properties"><dt class="property-optional"
             title="Optional">
         <span id="eventrw_csharp">
 <a href="#eventrw_csharp" style="color: inherit; text-decoration: inherit;">Event<wbr>Rw</a>
@@ -298,8 +289,7 @@ The Trail resource accepts the following [input]({{< relref "/docs/intro/concept
         <span class="property-type">string</span>
     </dt>
     <dd>{{% md %}}Indicates whether the event is a read or a write event. Valid values: `Read`, `Write`, and `All`. Default to `Write`.
-{{% /md %}}</dd>
-    <dt class="property-optional"
+{{% /md %}}</dd><dt class="property-optional"
             title="Optional">
         <span id="isorganizationtrail_csharp">
 <a href="#isorganizationtrail_csharp" style="color: inherit; text-decoration: inherit;">Is<wbr>Organization<wbr>Trail</a>
@@ -307,8 +297,7 @@ The Trail resource accepts the following [input]({{< relref "/docs/intro/concept
         <span class="property-indicator"></span>
         <span class="property-type">bool</span>
     </dt>
-    <dd>{{% md %}}{{% /md %}}</dd>
-    <dt class="property-optional"
+    <dd>{{% md %}}{{% /md %}}</dd><dt class="property-optional"
             title="Optional">
         <span id="mnstopicarn_csharp">
 <a href="#mnstopicarn_csharp" style="color: inherit; text-decoration: inherit;">Mns<wbr>Topic<wbr>Arn</a>
@@ -317,8 +306,7 @@ The Trail resource accepts the following [input]({{< relref "/docs/intro/concept
         <span class="property-type">string</span>
     </dt>
     <dd>{{% md %}}The ARN of the Message Service (MNS) topic to which ActionTrail sends messages. If the ARN is specified, a message is generated and delivered to the MNS topic whenever an event is delivered to OSS.
-{{% /md %}}</dd>
-    <dt class="property-optional property-deprecated"
+{{% /md %}}</dd><dt class="property-optional property-deprecated"
             title="Optional, Deprecated">
         <span id="name_csharp">
 <a href="#name_csharp" style="color: inherit; text-decoration: inherit;">Name</a>
@@ -327,8 +315,7 @@ The Trail resource accepts the following [input]({{< relref "/docs/intro/concept
         <span class="property-type">string</span>
     </dt>
     <dd>{{% md %}}Field `name` has been deprecated from version 1.95.0. Use `trail_name` instead.
-{{% /md %}}<p class="property-message">Deprecated: {{% md %}}Field &#39;name&#39; has been deprecated from version 1.95.0. Use &#39;trail_name&#39; instead.{{% /md %}}</p></dd>
-    <dt class="property-optional"
+{{% /md %}}<p class="property-message">Deprecated: {{% md %}}Field &#39;name&#39; has been deprecated from version 1.95.0. Use &#39;trail_name&#39; instead.{{% /md %}}</p></dd><dt class="property-optional"
             title="Optional">
         <span id="ossbucketname_csharp">
 <a href="#ossbucketname_csharp" style="color: inherit; text-decoration: inherit;">Oss<wbr>Bucket<wbr>Name</a>
@@ -337,8 +324,7 @@ The Trail resource accepts the following [input]({{< relref "/docs/intro/concept
         <span class="property-type">string</span>
     </dt>
     <dd>{{% md %}}The OSS bucket to which the trail delivers logs. Ensure that this is an existing OSS bucket.
-{{% /md %}}</dd>
-    <dt class="property-optional"
+{{% /md %}}</dd><dt class="property-optional"
             title="Optional">
         <span id="osskeyprefix_csharp">
 <a href="#osskeyprefix_csharp" style="color: inherit; text-decoration: inherit;">Oss<wbr>Key<wbr>Prefix</a>
@@ -347,8 +333,7 @@ The Trail resource accepts the following [input]({{< relref "/docs/intro/concept
         <span class="property-type">string</span>
     </dt>
     <dd>{{% md %}}The prefix of the specified OSS bucket name. This parameter can be left empty.
-{{% /md %}}</dd>
-    <dt class="property-optional"
+{{% /md %}}</dd><dt class="property-optional"
             title="Optional">
         <span id="rolename_csharp">
 <a href="#rolename_csharp" style="color: inherit; text-decoration: inherit;">Role<wbr>Name</a>
@@ -357,8 +342,7 @@ The Trail resource accepts the following [input]({{< relref "/docs/intro/concept
         <span class="property-type">string</span>
     </dt>
     <dd>{{% md %}}The RAM role in ActionTrail permitted by the user.
-{{% /md %}}</dd>
-    <dt class="property-optional"
+{{% /md %}}</dd><dt class="property-optional"
             title="Optional">
         <span id="slsprojectarn_csharp">
 <a href="#slsprojectarn_csharp" style="color: inherit; text-decoration: inherit;">Sls<wbr>Project<wbr>Arn</a>
@@ -367,8 +351,7 @@ The Trail resource accepts the following [input]({{< relref "/docs/intro/concept
         <span class="property-type">string</span>
     </dt>
     <dd>{{% md %}}The unique ARN of the Log Service project.
-{{% /md %}}</dd>
-    <dt class="property-optional"
+{{% /md %}}</dd><dt class="property-optional"
             title="Optional">
         <span id="slswriterolearn_csharp">
 <a href="#slswriterolearn_csharp" style="color: inherit; text-decoration: inherit;">Sls<wbr>Write<wbr>Role<wbr>Arn</a>
@@ -377,8 +360,7 @@ The Trail resource accepts the following [input]({{< relref "/docs/intro/concept
         <span class="property-type">string</span>
     </dt>
     <dd>{{% md %}}The unique ARN of the Log Service role.
-{{% /md %}}</dd>
-    <dt class="property-optional"
+{{% /md %}}</dd><dt class="property-optional"
             title="Optional">
         <span id="status_csharp">
 <a href="#status_csharp" style="color: inherit; text-decoration: inherit;">Status</a>
@@ -387,8 +369,7 @@ The Trail resource accepts the following [input]({{< relref "/docs/intro/concept
         <span class="property-type">string</span>
     </dt>
     <dd>{{% md %}}The status of ActionTrail Trail. After creation, tracking is turned on by default, and you can set the status value to `Disable` to turn off tracking. Valid values: `Enable`, `Disable`. Default to `Enable`.
-{{% /md %}}</dd>
-    <dt class="property-optional"
+{{% /md %}}</dd><dt class="property-optional"
             title="Optional">
         <span id="trailname_csharp">
 <a href="#trailname_csharp" style="color: inherit; text-decoration: inherit;">Trail<wbr>Name</a>
@@ -397,8 +378,7 @@ The Trail resource accepts the following [input]({{< relref "/docs/intro/concept
         <span class="property-type">string</span>
     </dt>
     <dd>{{% md %}}The name of the trail to be created, which must be unique for an account.
-{{% /md %}}</dd>
-    <dt class="property-optional"
+{{% /md %}}</dd><dt class="property-optional"
             title="Optional">
         <span id="trailregion_csharp">
 <a href="#trailregion_csharp" style="color: inherit; text-decoration: inherit;">Trail<wbr>Region</a>
@@ -407,14 +387,11 @@ The Trail resource accepts the following [input]({{< relref "/docs/intro/concept
         <span class="property-type">string</span>
     </dt>
     <dd>{{% md %}}The regions to which the trail is applied. Valid values: `cn-beijing`, `cn-hangzhou`, and `All`. Default to `All`.
-{{% /md %}}</dd>
-</dl>
+{{% /md %}}</dd></dl>
 {{% /choosable %}}
 
 {{% choosable language go %}}
-<dl class="resources-properties">
-
-    <dt class="property-optional"
+<dl class="resources-properties"><dt class="property-optional"
             title="Optional">
         <span id="eventrw_go">
 <a href="#eventrw_go" style="color: inherit; text-decoration: inherit;">Event<wbr>Rw</a>
@@ -423,8 +400,7 @@ The Trail resource accepts the following [input]({{< relref "/docs/intro/concept
         <span class="property-type">string</span>
     </dt>
     <dd>{{% md %}}Indicates whether the event is a read or a write event. Valid values: `Read`, `Write`, and `All`. Default to `Write`.
-{{% /md %}}</dd>
-    <dt class="property-optional"
+{{% /md %}}</dd><dt class="property-optional"
             title="Optional">
         <span id="isorganizationtrail_go">
 <a href="#isorganizationtrail_go" style="color: inherit; text-decoration: inherit;">Is<wbr>Organization<wbr>Trail</a>
@@ -432,8 +408,7 @@ The Trail resource accepts the following [input]({{< relref "/docs/intro/concept
         <span class="property-indicator"></span>
         <span class="property-type">bool</span>
     </dt>
-    <dd>{{% md %}}{{% /md %}}</dd>
-    <dt class="property-optional"
+    <dd>{{% md %}}{{% /md %}}</dd><dt class="property-optional"
             title="Optional">
         <span id="mnstopicarn_go">
 <a href="#mnstopicarn_go" style="color: inherit; text-decoration: inherit;">Mns<wbr>Topic<wbr>Arn</a>
@@ -442,8 +417,7 @@ The Trail resource accepts the following [input]({{< relref "/docs/intro/concept
         <span class="property-type">string</span>
     </dt>
     <dd>{{% md %}}The ARN of the Message Service (MNS) topic to which ActionTrail sends messages. If the ARN is specified, a message is generated and delivered to the MNS topic whenever an event is delivered to OSS.
-{{% /md %}}</dd>
-    <dt class="property-optional property-deprecated"
+{{% /md %}}</dd><dt class="property-optional property-deprecated"
             title="Optional, Deprecated">
         <span id="name_go">
 <a href="#name_go" style="color: inherit; text-decoration: inherit;">Name</a>
@@ -452,8 +426,7 @@ The Trail resource accepts the following [input]({{< relref "/docs/intro/concept
         <span class="property-type">string</span>
     </dt>
     <dd>{{% md %}}Field `name` has been deprecated from version 1.95.0. Use `trail_name` instead.
-{{% /md %}}<p class="property-message">Deprecated: {{% md %}}Field &#39;name&#39; has been deprecated from version 1.95.0. Use &#39;trail_name&#39; instead.{{% /md %}}</p></dd>
-    <dt class="property-optional"
+{{% /md %}}<p class="property-message">Deprecated: {{% md %}}Field &#39;name&#39; has been deprecated from version 1.95.0. Use &#39;trail_name&#39; instead.{{% /md %}}</p></dd><dt class="property-optional"
             title="Optional">
         <span id="ossbucketname_go">
 <a href="#ossbucketname_go" style="color: inherit; text-decoration: inherit;">Oss<wbr>Bucket<wbr>Name</a>
@@ -462,8 +435,7 @@ The Trail resource accepts the following [input]({{< relref "/docs/intro/concept
         <span class="property-type">string</span>
     </dt>
     <dd>{{% md %}}The OSS bucket to which the trail delivers logs. Ensure that this is an existing OSS bucket.
-{{% /md %}}</dd>
-    <dt class="property-optional"
+{{% /md %}}</dd><dt class="property-optional"
             title="Optional">
         <span id="osskeyprefix_go">
 <a href="#osskeyprefix_go" style="color: inherit; text-decoration: inherit;">Oss<wbr>Key<wbr>Prefix</a>
@@ -472,8 +444,7 @@ The Trail resource accepts the following [input]({{< relref "/docs/intro/concept
         <span class="property-type">string</span>
     </dt>
     <dd>{{% md %}}The prefix of the specified OSS bucket name. This parameter can be left empty.
-{{% /md %}}</dd>
-    <dt class="property-optional"
+{{% /md %}}</dd><dt class="property-optional"
             title="Optional">
         <span id="rolename_go">
 <a href="#rolename_go" style="color: inherit; text-decoration: inherit;">Role<wbr>Name</a>
@@ -482,8 +453,7 @@ The Trail resource accepts the following [input]({{< relref "/docs/intro/concept
         <span class="property-type">string</span>
     </dt>
     <dd>{{% md %}}The RAM role in ActionTrail permitted by the user.
-{{% /md %}}</dd>
-    <dt class="property-optional"
+{{% /md %}}</dd><dt class="property-optional"
             title="Optional">
         <span id="slsprojectarn_go">
 <a href="#slsprojectarn_go" style="color: inherit; text-decoration: inherit;">Sls<wbr>Project<wbr>Arn</a>
@@ -492,8 +462,7 @@ The Trail resource accepts the following [input]({{< relref "/docs/intro/concept
         <span class="property-type">string</span>
     </dt>
     <dd>{{% md %}}The unique ARN of the Log Service project.
-{{% /md %}}</dd>
-    <dt class="property-optional"
+{{% /md %}}</dd><dt class="property-optional"
             title="Optional">
         <span id="slswriterolearn_go">
 <a href="#slswriterolearn_go" style="color: inherit; text-decoration: inherit;">Sls<wbr>Write<wbr>Role<wbr>Arn</a>
@@ -502,8 +471,7 @@ The Trail resource accepts the following [input]({{< relref "/docs/intro/concept
         <span class="property-type">string</span>
     </dt>
     <dd>{{% md %}}The unique ARN of the Log Service role.
-{{% /md %}}</dd>
-    <dt class="property-optional"
+{{% /md %}}</dd><dt class="property-optional"
             title="Optional">
         <span id="status_go">
 <a href="#status_go" style="color: inherit; text-decoration: inherit;">Status</a>
@@ -512,8 +480,7 @@ The Trail resource accepts the following [input]({{< relref "/docs/intro/concept
         <span class="property-type">string</span>
     </dt>
     <dd>{{% md %}}The status of ActionTrail Trail. After creation, tracking is turned on by default, and you can set the status value to `Disable` to turn off tracking. Valid values: `Enable`, `Disable`. Default to `Enable`.
-{{% /md %}}</dd>
-    <dt class="property-optional"
+{{% /md %}}</dd><dt class="property-optional"
             title="Optional">
         <span id="trailname_go">
 <a href="#trailname_go" style="color: inherit; text-decoration: inherit;">Trail<wbr>Name</a>
@@ -522,8 +489,7 @@ The Trail resource accepts the following [input]({{< relref "/docs/intro/concept
         <span class="property-type">string</span>
     </dt>
     <dd>{{% md %}}The name of the trail to be created, which must be unique for an account.
-{{% /md %}}</dd>
-    <dt class="property-optional"
+{{% /md %}}</dd><dt class="property-optional"
             title="Optional">
         <span id="trailregion_go">
 <a href="#trailregion_go" style="color: inherit; text-decoration: inherit;">Trail<wbr>Region</a>
@@ -532,14 +498,11 @@ The Trail resource accepts the following [input]({{< relref "/docs/intro/concept
         <span class="property-type">string</span>
     </dt>
     <dd>{{% md %}}The regions to which the trail is applied. Valid values: `cn-beijing`, `cn-hangzhou`, and `All`. Default to `All`.
-{{% /md %}}</dd>
-</dl>
+{{% /md %}}</dd></dl>
 {{% /choosable %}}
 
 {{% choosable language nodejs %}}
-<dl class="resources-properties">
-
-    <dt class="property-optional"
+<dl class="resources-properties"><dt class="property-optional"
             title="Optional">
         <span id="eventrw_nodejs">
 <a href="#eventrw_nodejs" style="color: inherit; text-decoration: inherit;">event<wbr>Rw</a>
@@ -548,8 +511,7 @@ The Trail resource accepts the following [input]({{< relref "/docs/intro/concept
         <span class="property-type">string</span>
     </dt>
     <dd>{{% md %}}Indicates whether the event is a read or a write event. Valid values: `Read`, `Write`, and `All`. Default to `Write`.
-{{% /md %}}</dd>
-    <dt class="property-optional"
+{{% /md %}}</dd><dt class="property-optional"
             title="Optional">
         <span id="isorganizationtrail_nodejs">
 <a href="#isorganizationtrail_nodejs" style="color: inherit; text-decoration: inherit;">is<wbr>Organization<wbr>Trail</a>
@@ -557,8 +519,7 @@ The Trail resource accepts the following [input]({{< relref "/docs/intro/concept
         <span class="property-indicator"></span>
         <span class="property-type">boolean</span>
     </dt>
-    <dd>{{% md %}}{{% /md %}}</dd>
-    <dt class="property-optional"
+    <dd>{{% md %}}{{% /md %}}</dd><dt class="property-optional"
             title="Optional">
         <span id="mnstopicarn_nodejs">
 <a href="#mnstopicarn_nodejs" style="color: inherit; text-decoration: inherit;">mns<wbr>Topic<wbr>Arn</a>
@@ -567,8 +528,7 @@ The Trail resource accepts the following [input]({{< relref "/docs/intro/concept
         <span class="property-type">string</span>
     </dt>
     <dd>{{% md %}}The ARN of the Message Service (MNS) topic to which ActionTrail sends messages. If the ARN is specified, a message is generated and delivered to the MNS topic whenever an event is delivered to OSS.
-{{% /md %}}</dd>
-    <dt class="property-optional property-deprecated"
+{{% /md %}}</dd><dt class="property-optional property-deprecated"
             title="Optional, Deprecated">
         <span id="name_nodejs">
 <a href="#name_nodejs" style="color: inherit; text-decoration: inherit;">name</a>
@@ -577,8 +537,7 @@ The Trail resource accepts the following [input]({{< relref "/docs/intro/concept
         <span class="property-type">string</span>
     </dt>
     <dd>{{% md %}}Field `name` has been deprecated from version 1.95.0. Use `trail_name` instead.
-{{% /md %}}<p class="property-message">Deprecated: {{% md %}}Field &#39;name&#39; has been deprecated from version 1.95.0. Use &#39;trail_name&#39; instead.{{% /md %}}</p></dd>
-    <dt class="property-optional"
+{{% /md %}}<p class="property-message">Deprecated: {{% md %}}Field &#39;name&#39; has been deprecated from version 1.95.0. Use &#39;trail_name&#39; instead.{{% /md %}}</p></dd><dt class="property-optional"
             title="Optional">
         <span id="ossbucketname_nodejs">
 <a href="#ossbucketname_nodejs" style="color: inherit; text-decoration: inherit;">oss<wbr>Bucket<wbr>Name</a>
@@ -587,8 +546,7 @@ The Trail resource accepts the following [input]({{< relref "/docs/intro/concept
         <span class="property-type">string</span>
     </dt>
     <dd>{{% md %}}The OSS bucket to which the trail delivers logs. Ensure that this is an existing OSS bucket.
-{{% /md %}}</dd>
-    <dt class="property-optional"
+{{% /md %}}</dd><dt class="property-optional"
             title="Optional">
         <span id="osskeyprefix_nodejs">
 <a href="#osskeyprefix_nodejs" style="color: inherit; text-decoration: inherit;">oss<wbr>Key<wbr>Prefix</a>
@@ -597,8 +555,7 @@ The Trail resource accepts the following [input]({{< relref "/docs/intro/concept
         <span class="property-type">string</span>
     </dt>
     <dd>{{% md %}}The prefix of the specified OSS bucket name. This parameter can be left empty.
-{{% /md %}}</dd>
-    <dt class="property-optional"
+{{% /md %}}</dd><dt class="property-optional"
             title="Optional">
         <span id="rolename_nodejs">
 <a href="#rolename_nodejs" style="color: inherit; text-decoration: inherit;">role<wbr>Name</a>
@@ -607,8 +564,7 @@ The Trail resource accepts the following [input]({{< relref "/docs/intro/concept
         <span class="property-type">string</span>
     </dt>
     <dd>{{% md %}}The RAM role in ActionTrail permitted by the user.
-{{% /md %}}</dd>
-    <dt class="property-optional"
+{{% /md %}}</dd><dt class="property-optional"
             title="Optional">
         <span id="slsprojectarn_nodejs">
 <a href="#slsprojectarn_nodejs" style="color: inherit; text-decoration: inherit;">sls<wbr>Project<wbr>Arn</a>
@@ -617,8 +573,7 @@ The Trail resource accepts the following [input]({{< relref "/docs/intro/concept
         <span class="property-type">string</span>
     </dt>
     <dd>{{% md %}}The unique ARN of the Log Service project.
-{{% /md %}}</dd>
-    <dt class="property-optional"
+{{% /md %}}</dd><dt class="property-optional"
             title="Optional">
         <span id="slswriterolearn_nodejs">
 <a href="#slswriterolearn_nodejs" style="color: inherit; text-decoration: inherit;">sls<wbr>Write<wbr>Role<wbr>Arn</a>
@@ -627,8 +582,7 @@ The Trail resource accepts the following [input]({{< relref "/docs/intro/concept
         <span class="property-type">string</span>
     </dt>
     <dd>{{% md %}}The unique ARN of the Log Service role.
-{{% /md %}}</dd>
-    <dt class="property-optional"
+{{% /md %}}</dd><dt class="property-optional"
             title="Optional">
         <span id="status_nodejs">
 <a href="#status_nodejs" style="color: inherit; text-decoration: inherit;">status</a>
@@ -637,8 +591,7 @@ The Trail resource accepts the following [input]({{< relref "/docs/intro/concept
         <span class="property-type">string</span>
     </dt>
     <dd>{{% md %}}The status of ActionTrail Trail. After creation, tracking is turned on by default, and you can set the status value to `Disable` to turn off tracking. Valid values: `Enable`, `Disable`. Default to `Enable`.
-{{% /md %}}</dd>
-    <dt class="property-optional"
+{{% /md %}}</dd><dt class="property-optional"
             title="Optional">
         <span id="trailname_nodejs">
 <a href="#trailname_nodejs" style="color: inherit; text-decoration: inherit;">trail<wbr>Name</a>
@@ -647,8 +600,7 @@ The Trail resource accepts the following [input]({{< relref "/docs/intro/concept
         <span class="property-type">string</span>
     </dt>
     <dd>{{% md %}}The name of the trail to be created, which must be unique for an account.
-{{% /md %}}</dd>
-    <dt class="property-optional"
+{{% /md %}}</dd><dt class="property-optional"
             title="Optional">
         <span id="trailregion_nodejs">
 <a href="#trailregion_nodejs" style="color: inherit; text-decoration: inherit;">trail<wbr>Region</a>
@@ -657,14 +609,11 @@ The Trail resource accepts the following [input]({{< relref "/docs/intro/concept
         <span class="property-type">string</span>
     </dt>
     <dd>{{% md %}}The regions to which the trail is applied. Valid values: `cn-beijing`, `cn-hangzhou`, and `All`. Default to `All`.
-{{% /md %}}</dd>
-</dl>
+{{% /md %}}</dd></dl>
 {{% /choosable %}}
 
 {{% choosable language python %}}
-<dl class="resources-properties">
-
-    <dt class="property-optional"
+<dl class="resources-properties"><dt class="property-optional"
             title="Optional">
         <span id="event_rw_python">
 <a href="#event_rw_python" style="color: inherit; text-decoration: inherit;">event_<wbr>rw</a>
@@ -673,8 +622,7 @@ The Trail resource accepts the following [input]({{< relref "/docs/intro/concept
         <span class="property-type">str</span>
     </dt>
     <dd>{{% md %}}Indicates whether the event is a read or a write event. Valid values: `Read`, `Write`, and `All`. Default to `Write`.
-{{% /md %}}</dd>
-    <dt class="property-optional"
+{{% /md %}}</dd><dt class="property-optional"
             title="Optional">
         <span id="is_organization_trail_python">
 <a href="#is_organization_trail_python" style="color: inherit; text-decoration: inherit;">is_<wbr>organization_<wbr>trail</a>
@@ -682,8 +630,7 @@ The Trail resource accepts the following [input]({{< relref "/docs/intro/concept
         <span class="property-indicator"></span>
         <span class="property-type">bool</span>
     </dt>
-    <dd>{{% md %}}{{% /md %}}</dd>
-    <dt class="property-optional"
+    <dd>{{% md %}}{{% /md %}}</dd><dt class="property-optional"
             title="Optional">
         <span id="mns_topic_arn_python">
 <a href="#mns_topic_arn_python" style="color: inherit; text-decoration: inherit;">mns_<wbr>topic_<wbr>arn</a>
@@ -692,8 +639,7 @@ The Trail resource accepts the following [input]({{< relref "/docs/intro/concept
         <span class="property-type">str</span>
     </dt>
     <dd>{{% md %}}The ARN of the Message Service (MNS) topic to which ActionTrail sends messages. If the ARN is specified, a message is generated and delivered to the MNS topic whenever an event is delivered to OSS.
-{{% /md %}}</dd>
-    <dt class="property-optional property-deprecated"
+{{% /md %}}</dd><dt class="property-optional property-deprecated"
             title="Optional, Deprecated">
         <span id="name_python">
 <a href="#name_python" style="color: inherit; text-decoration: inherit;">name</a>
@@ -702,8 +648,7 @@ The Trail resource accepts the following [input]({{< relref "/docs/intro/concept
         <span class="property-type">str</span>
     </dt>
     <dd>{{% md %}}Field `name` has been deprecated from version 1.95.0. Use `trail_name` instead.
-{{% /md %}}<p class="property-message">Deprecated: {{% md %}}Field &#39;name&#39; has been deprecated from version 1.95.0. Use &#39;trail_name&#39; instead.{{% /md %}}</p></dd>
-    <dt class="property-optional"
+{{% /md %}}<p class="property-message">Deprecated: {{% md %}}Field &#39;name&#39; has been deprecated from version 1.95.0. Use &#39;trail_name&#39; instead.{{% /md %}}</p></dd><dt class="property-optional"
             title="Optional">
         <span id="oss_bucket_name_python">
 <a href="#oss_bucket_name_python" style="color: inherit; text-decoration: inherit;">oss_<wbr>bucket_<wbr>name</a>
@@ -712,8 +657,7 @@ The Trail resource accepts the following [input]({{< relref "/docs/intro/concept
         <span class="property-type">str</span>
     </dt>
     <dd>{{% md %}}The OSS bucket to which the trail delivers logs. Ensure that this is an existing OSS bucket.
-{{% /md %}}</dd>
-    <dt class="property-optional"
+{{% /md %}}</dd><dt class="property-optional"
             title="Optional">
         <span id="oss_key_prefix_python">
 <a href="#oss_key_prefix_python" style="color: inherit; text-decoration: inherit;">oss_<wbr>key_<wbr>prefix</a>
@@ -722,8 +666,7 @@ The Trail resource accepts the following [input]({{< relref "/docs/intro/concept
         <span class="property-type">str</span>
     </dt>
     <dd>{{% md %}}The prefix of the specified OSS bucket name. This parameter can be left empty.
-{{% /md %}}</dd>
-    <dt class="property-optional"
+{{% /md %}}</dd><dt class="property-optional"
             title="Optional">
         <span id="role_name_python">
 <a href="#role_name_python" style="color: inherit; text-decoration: inherit;">role_<wbr>name</a>
@@ -732,8 +675,7 @@ The Trail resource accepts the following [input]({{< relref "/docs/intro/concept
         <span class="property-type">str</span>
     </dt>
     <dd>{{% md %}}The RAM role in ActionTrail permitted by the user.
-{{% /md %}}</dd>
-    <dt class="property-optional"
+{{% /md %}}</dd><dt class="property-optional"
             title="Optional">
         <span id="sls_project_arn_python">
 <a href="#sls_project_arn_python" style="color: inherit; text-decoration: inherit;">sls_<wbr>project_<wbr>arn</a>
@@ -742,8 +684,7 @@ The Trail resource accepts the following [input]({{< relref "/docs/intro/concept
         <span class="property-type">str</span>
     </dt>
     <dd>{{% md %}}The unique ARN of the Log Service project.
-{{% /md %}}</dd>
-    <dt class="property-optional"
+{{% /md %}}</dd><dt class="property-optional"
             title="Optional">
         <span id="sls_write_role_arn_python">
 <a href="#sls_write_role_arn_python" style="color: inherit; text-decoration: inherit;">sls_<wbr>write_<wbr>role_<wbr>arn</a>
@@ -752,8 +693,7 @@ The Trail resource accepts the following [input]({{< relref "/docs/intro/concept
         <span class="property-type">str</span>
     </dt>
     <dd>{{% md %}}The unique ARN of the Log Service role.
-{{% /md %}}</dd>
-    <dt class="property-optional"
+{{% /md %}}</dd><dt class="property-optional"
             title="Optional">
         <span id="status_python">
 <a href="#status_python" style="color: inherit; text-decoration: inherit;">status</a>
@@ -762,8 +702,7 @@ The Trail resource accepts the following [input]({{< relref "/docs/intro/concept
         <span class="property-type">str</span>
     </dt>
     <dd>{{% md %}}The status of ActionTrail Trail. After creation, tracking is turned on by default, and you can set the status value to `Disable` to turn off tracking. Valid values: `Enable`, `Disable`. Default to `Enable`.
-{{% /md %}}</dd>
-    <dt class="property-optional"
+{{% /md %}}</dd><dt class="property-optional"
             title="Optional">
         <span id="trail_name_python">
 <a href="#trail_name_python" style="color: inherit; text-decoration: inherit;">trail_<wbr>name</a>
@@ -772,8 +711,7 @@ The Trail resource accepts the following [input]({{< relref "/docs/intro/concept
         <span class="property-type">str</span>
     </dt>
     <dd>{{% md %}}The name of the trail to be created, which must be unique for an account.
-{{% /md %}}</dd>
-    <dt class="property-optional"
+{{% /md %}}</dd><dt class="property-optional"
             title="Optional">
         <span id="trail_region_python">
 <a href="#trail_region_python" style="color: inherit; text-decoration: inherit;">trail_<wbr>region</a>
@@ -782,8 +720,7 @@ The Trail resource accepts the following [input]({{< relref "/docs/intro/concept
         <span class="property-type">str</span>
     </dt>
     <dd>{{% md %}}The regions to which the trail is applied. Valid values: `cn-beijing`, `cn-hangzhou`, and `All`. Default to `All`.
-{{% /md %}}</dd>
-</dl>
+{{% /md %}}</dd></dl>
 {{% /choosable %}}
 
 
@@ -794,9 +731,7 @@ All [input](#inputs) properties are implicitly available as output properties. A
 
 
 {{% choosable language csharp %}}
-<dl class="resources-properties">
-
-    <dt class="property-"
+<dl class="resources-properties"><dt class="property-"
             title="">
         <span id="id_csharp">
 <a href="#id_csharp" style="color: inherit; text-decoration: inherit;">Id</a>
@@ -804,14 +739,11 @@ All [input](#inputs) properties are implicitly available as output properties. A
         <span class="property-indicator"></span>
         <span class="property-type">string</span>
     </dt>
-    <dd>{{% md %}}The provider-assigned unique ID for this managed resource.{{% /md %}}</dd>
-</dl>
+    <dd>{{% md %}}The provider-assigned unique ID for this managed resource.{{% /md %}}</dd></dl>
 {{% /choosable %}}
 
 {{% choosable language go %}}
-<dl class="resources-properties">
-
-    <dt class="property-"
+<dl class="resources-properties"><dt class="property-"
             title="">
         <span id="id_go">
 <a href="#id_go" style="color: inherit; text-decoration: inherit;">Id</a>
@@ -819,14 +751,11 @@ All [input](#inputs) properties are implicitly available as output properties. A
         <span class="property-indicator"></span>
         <span class="property-type">string</span>
     </dt>
-    <dd>{{% md %}}The provider-assigned unique ID for this managed resource.{{% /md %}}</dd>
-</dl>
+    <dd>{{% md %}}The provider-assigned unique ID for this managed resource.{{% /md %}}</dd></dl>
 {{% /choosable %}}
 
 {{% choosable language nodejs %}}
-<dl class="resources-properties">
-
-    <dt class="property-"
+<dl class="resources-properties"><dt class="property-"
             title="">
         <span id="id_nodejs">
 <a href="#id_nodejs" style="color: inherit; text-decoration: inherit;">id</a>
@@ -834,14 +763,11 @@ All [input](#inputs) properties are implicitly available as output properties. A
         <span class="property-indicator"></span>
         <span class="property-type">string</span>
     </dt>
-    <dd>{{% md %}}The provider-assigned unique ID for this managed resource.{{% /md %}}</dd>
-</dl>
+    <dd>{{% md %}}The provider-assigned unique ID for this managed resource.{{% /md %}}</dd></dl>
 {{% /choosable %}}
 
 {{% choosable language python %}}
-<dl class="resources-properties">
-
-    <dt class="property-"
+<dl class="resources-properties"><dt class="property-"
             title="">
         <span id="id_python">
 <a href="#id_python" style="color: inherit; text-decoration: inherit;">id</a>
@@ -849,8 +775,7 @@ All [input](#inputs) properties are implicitly available as output properties. A
         <span class="property-indicator"></span>
         <span class="property-type">str</span>
     </dt>
-    <dd>{{% md %}}The provider-assigned unique ID for this managed resource.{{% /md %}}</dd>
-</dl>
+    <dd>{{% md %}}The provider-assigned unique ID for this managed resource.{{% /md %}}</dd></dl>
 {{% /choosable %}}
 
 
@@ -977,9 +902,7 @@ The following state arguments are supported:
 
 
 {{% choosable language csharp %}}
-<dl class="resources-properties">
-
-    <dt class="property-optional"
+<dl class="resources-properties"><dt class="property-optional"
             title="Optional">
         <span id="state_eventrw_csharp">
 <a href="#state_eventrw_csharp" style="color: inherit; text-decoration: inherit;">Event<wbr>Rw</a>
@@ -988,8 +911,7 @@ The following state arguments are supported:
         <span class="property-type">string</span>
     </dt>
     <dd>{{% md %}}Indicates whether the event is a read or a write event. Valid values: `Read`, `Write`, and `All`. Default to `Write`.
-{{% /md %}}</dd>
-    <dt class="property-optional"
+{{% /md %}}</dd><dt class="property-optional"
             title="Optional">
         <span id="state_isorganizationtrail_csharp">
 <a href="#state_isorganizationtrail_csharp" style="color: inherit; text-decoration: inherit;">Is<wbr>Organization<wbr>Trail</a>
@@ -997,8 +919,7 @@ The following state arguments are supported:
         <span class="property-indicator"></span>
         <span class="property-type">bool</span>
     </dt>
-    <dd>{{% md %}}{{% /md %}}</dd>
-    <dt class="property-optional"
+    <dd>{{% md %}}{{% /md %}}</dd><dt class="property-optional"
             title="Optional">
         <span id="state_mnstopicarn_csharp">
 <a href="#state_mnstopicarn_csharp" style="color: inherit; text-decoration: inherit;">Mns<wbr>Topic<wbr>Arn</a>
@@ -1007,8 +928,7 @@ The following state arguments are supported:
         <span class="property-type">string</span>
     </dt>
     <dd>{{% md %}}The ARN of the Message Service (MNS) topic to which ActionTrail sends messages. If the ARN is specified, a message is generated and delivered to the MNS topic whenever an event is delivered to OSS.
-{{% /md %}}</dd>
-    <dt class="property-optional property-deprecated"
+{{% /md %}}</dd><dt class="property-optional property-deprecated"
             title="Optional, Deprecated">
         <span id="state_name_csharp">
 <a href="#state_name_csharp" style="color: inherit; text-decoration: inherit;">Name</a>
@@ -1017,8 +937,7 @@ The following state arguments are supported:
         <span class="property-type">string</span>
     </dt>
     <dd>{{% md %}}Field `name` has been deprecated from version 1.95.0. Use `trail_name` instead.
-{{% /md %}}<p class="property-message">Deprecated: {{% md %}}Field &#39;name&#39; has been deprecated from version 1.95.0. Use &#39;trail_name&#39; instead.{{% /md %}}</p></dd>
-    <dt class="property-optional"
+{{% /md %}}<p class="property-message">Deprecated: {{% md %}}Field &#39;name&#39; has been deprecated from version 1.95.0. Use &#39;trail_name&#39; instead.{{% /md %}}</p></dd><dt class="property-optional"
             title="Optional">
         <span id="state_ossbucketname_csharp">
 <a href="#state_ossbucketname_csharp" style="color: inherit; text-decoration: inherit;">Oss<wbr>Bucket<wbr>Name</a>
@@ -1027,8 +946,7 @@ The following state arguments are supported:
         <span class="property-type">string</span>
     </dt>
     <dd>{{% md %}}The OSS bucket to which the trail delivers logs. Ensure that this is an existing OSS bucket.
-{{% /md %}}</dd>
-    <dt class="property-optional"
+{{% /md %}}</dd><dt class="property-optional"
             title="Optional">
         <span id="state_osskeyprefix_csharp">
 <a href="#state_osskeyprefix_csharp" style="color: inherit; text-decoration: inherit;">Oss<wbr>Key<wbr>Prefix</a>
@@ -1037,8 +955,7 @@ The following state arguments are supported:
         <span class="property-type">string</span>
     </dt>
     <dd>{{% md %}}The prefix of the specified OSS bucket name. This parameter can be left empty.
-{{% /md %}}</dd>
-    <dt class="property-optional"
+{{% /md %}}</dd><dt class="property-optional"
             title="Optional">
         <span id="state_rolename_csharp">
 <a href="#state_rolename_csharp" style="color: inherit; text-decoration: inherit;">Role<wbr>Name</a>
@@ -1047,8 +964,7 @@ The following state arguments are supported:
         <span class="property-type">string</span>
     </dt>
     <dd>{{% md %}}The RAM role in ActionTrail permitted by the user.
-{{% /md %}}</dd>
-    <dt class="property-optional"
+{{% /md %}}</dd><dt class="property-optional"
             title="Optional">
         <span id="state_slsprojectarn_csharp">
 <a href="#state_slsprojectarn_csharp" style="color: inherit; text-decoration: inherit;">Sls<wbr>Project<wbr>Arn</a>
@@ -1057,8 +973,7 @@ The following state arguments are supported:
         <span class="property-type">string</span>
     </dt>
     <dd>{{% md %}}The unique ARN of the Log Service project.
-{{% /md %}}</dd>
-    <dt class="property-optional"
+{{% /md %}}</dd><dt class="property-optional"
             title="Optional">
         <span id="state_slswriterolearn_csharp">
 <a href="#state_slswriterolearn_csharp" style="color: inherit; text-decoration: inherit;">Sls<wbr>Write<wbr>Role<wbr>Arn</a>
@@ -1067,8 +982,7 @@ The following state arguments are supported:
         <span class="property-type">string</span>
     </dt>
     <dd>{{% md %}}The unique ARN of the Log Service role.
-{{% /md %}}</dd>
-    <dt class="property-optional"
+{{% /md %}}</dd><dt class="property-optional"
             title="Optional">
         <span id="state_status_csharp">
 <a href="#state_status_csharp" style="color: inherit; text-decoration: inherit;">Status</a>
@@ -1077,8 +991,7 @@ The following state arguments are supported:
         <span class="property-type">string</span>
     </dt>
     <dd>{{% md %}}The status of ActionTrail Trail. After creation, tracking is turned on by default, and you can set the status value to `Disable` to turn off tracking. Valid values: `Enable`, `Disable`. Default to `Enable`.
-{{% /md %}}</dd>
-    <dt class="property-optional"
+{{% /md %}}</dd><dt class="property-optional"
             title="Optional">
         <span id="state_trailname_csharp">
 <a href="#state_trailname_csharp" style="color: inherit; text-decoration: inherit;">Trail<wbr>Name</a>
@@ -1087,8 +1000,7 @@ The following state arguments are supported:
         <span class="property-type">string</span>
     </dt>
     <dd>{{% md %}}The name of the trail to be created, which must be unique for an account.
-{{% /md %}}</dd>
-    <dt class="property-optional"
+{{% /md %}}</dd><dt class="property-optional"
             title="Optional">
         <span id="state_trailregion_csharp">
 <a href="#state_trailregion_csharp" style="color: inherit; text-decoration: inherit;">Trail<wbr>Region</a>
@@ -1097,14 +1009,11 @@ The following state arguments are supported:
         <span class="property-type">string</span>
     </dt>
     <dd>{{% md %}}The regions to which the trail is applied. Valid values: `cn-beijing`, `cn-hangzhou`, and `All`. Default to `All`.
-{{% /md %}}</dd>
-</dl>
+{{% /md %}}</dd></dl>
 {{% /choosable %}}
 
 {{% choosable language go %}}
-<dl class="resources-properties">
-
-    <dt class="property-optional"
+<dl class="resources-properties"><dt class="property-optional"
             title="Optional">
         <span id="state_eventrw_go">
 <a href="#state_eventrw_go" style="color: inherit; text-decoration: inherit;">Event<wbr>Rw</a>
@@ -1113,8 +1022,7 @@ The following state arguments are supported:
         <span class="property-type">string</span>
     </dt>
     <dd>{{% md %}}Indicates whether the event is a read or a write event. Valid values: `Read`, `Write`, and `All`. Default to `Write`.
-{{% /md %}}</dd>
-    <dt class="property-optional"
+{{% /md %}}</dd><dt class="property-optional"
             title="Optional">
         <span id="state_isorganizationtrail_go">
 <a href="#state_isorganizationtrail_go" style="color: inherit; text-decoration: inherit;">Is<wbr>Organization<wbr>Trail</a>
@@ -1122,8 +1030,7 @@ The following state arguments are supported:
         <span class="property-indicator"></span>
         <span class="property-type">bool</span>
     </dt>
-    <dd>{{% md %}}{{% /md %}}</dd>
-    <dt class="property-optional"
+    <dd>{{% md %}}{{% /md %}}</dd><dt class="property-optional"
             title="Optional">
         <span id="state_mnstopicarn_go">
 <a href="#state_mnstopicarn_go" style="color: inherit; text-decoration: inherit;">Mns<wbr>Topic<wbr>Arn</a>
@@ -1132,8 +1039,7 @@ The following state arguments are supported:
         <span class="property-type">string</span>
     </dt>
     <dd>{{% md %}}The ARN of the Message Service (MNS) topic to which ActionTrail sends messages. If the ARN is specified, a message is generated and delivered to the MNS topic whenever an event is delivered to OSS.
-{{% /md %}}</dd>
-    <dt class="property-optional property-deprecated"
+{{% /md %}}</dd><dt class="property-optional property-deprecated"
             title="Optional, Deprecated">
         <span id="state_name_go">
 <a href="#state_name_go" style="color: inherit; text-decoration: inherit;">Name</a>
@@ -1142,8 +1048,7 @@ The following state arguments are supported:
         <span class="property-type">string</span>
     </dt>
     <dd>{{% md %}}Field `name` has been deprecated from version 1.95.0. Use `trail_name` instead.
-{{% /md %}}<p class="property-message">Deprecated: {{% md %}}Field &#39;name&#39; has been deprecated from version 1.95.0. Use &#39;trail_name&#39; instead.{{% /md %}}</p></dd>
-    <dt class="property-optional"
+{{% /md %}}<p class="property-message">Deprecated: {{% md %}}Field &#39;name&#39; has been deprecated from version 1.95.0. Use &#39;trail_name&#39; instead.{{% /md %}}</p></dd><dt class="property-optional"
             title="Optional">
         <span id="state_ossbucketname_go">
 <a href="#state_ossbucketname_go" style="color: inherit; text-decoration: inherit;">Oss<wbr>Bucket<wbr>Name</a>
@@ -1152,8 +1057,7 @@ The following state arguments are supported:
         <span class="property-type">string</span>
     </dt>
     <dd>{{% md %}}The OSS bucket to which the trail delivers logs. Ensure that this is an existing OSS bucket.
-{{% /md %}}</dd>
-    <dt class="property-optional"
+{{% /md %}}</dd><dt class="property-optional"
             title="Optional">
         <span id="state_osskeyprefix_go">
 <a href="#state_osskeyprefix_go" style="color: inherit; text-decoration: inherit;">Oss<wbr>Key<wbr>Prefix</a>
@@ -1162,8 +1066,7 @@ The following state arguments are supported:
         <span class="property-type">string</span>
     </dt>
     <dd>{{% md %}}The prefix of the specified OSS bucket name. This parameter can be left empty.
-{{% /md %}}</dd>
-    <dt class="property-optional"
+{{% /md %}}</dd><dt class="property-optional"
             title="Optional">
         <span id="state_rolename_go">
 <a href="#state_rolename_go" style="color: inherit; text-decoration: inherit;">Role<wbr>Name</a>
@@ -1172,8 +1075,7 @@ The following state arguments are supported:
         <span class="property-type">string</span>
     </dt>
     <dd>{{% md %}}The RAM role in ActionTrail permitted by the user.
-{{% /md %}}</dd>
-    <dt class="property-optional"
+{{% /md %}}</dd><dt class="property-optional"
             title="Optional">
         <span id="state_slsprojectarn_go">
 <a href="#state_slsprojectarn_go" style="color: inherit; text-decoration: inherit;">Sls<wbr>Project<wbr>Arn</a>
@@ -1182,8 +1084,7 @@ The following state arguments are supported:
         <span class="property-type">string</span>
     </dt>
     <dd>{{% md %}}The unique ARN of the Log Service project.
-{{% /md %}}</dd>
-    <dt class="property-optional"
+{{% /md %}}</dd><dt class="property-optional"
             title="Optional">
         <span id="state_slswriterolearn_go">
 <a href="#state_slswriterolearn_go" style="color: inherit; text-decoration: inherit;">Sls<wbr>Write<wbr>Role<wbr>Arn</a>
@@ -1192,8 +1093,7 @@ The following state arguments are supported:
         <span class="property-type">string</span>
     </dt>
     <dd>{{% md %}}The unique ARN of the Log Service role.
-{{% /md %}}</dd>
-    <dt class="property-optional"
+{{% /md %}}</dd><dt class="property-optional"
             title="Optional">
         <span id="state_status_go">
 <a href="#state_status_go" style="color: inherit; text-decoration: inherit;">Status</a>
@@ -1202,8 +1102,7 @@ The following state arguments are supported:
         <span class="property-type">string</span>
     </dt>
     <dd>{{% md %}}The status of ActionTrail Trail. After creation, tracking is turned on by default, and you can set the status value to `Disable` to turn off tracking. Valid values: `Enable`, `Disable`. Default to `Enable`.
-{{% /md %}}</dd>
-    <dt class="property-optional"
+{{% /md %}}</dd><dt class="property-optional"
             title="Optional">
         <span id="state_trailname_go">
 <a href="#state_trailname_go" style="color: inherit; text-decoration: inherit;">Trail<wbr>Name</a>
@@ -1212,8 +1111,7 @@ The following state arguments are supported:
         <span class="property-type">string</span>
     </dt>
     <dd>{{% md %}}The name of the trail to be created, which must be unique for an account.
-{{% /md %}}</dd>
-    <dt class="property-optional"
+{{% /md %}}</dd><dt class="property-optional"
             title="Optional">
         <span id="state_trailregion_go">
 <a href="#state_trailregion_go" style="color: inherit; text-decoration: inherit;">Trail<wbr>Region</a>
@@ -1222,14 +1120,11 @@ The following state arguments are supported:
         <span class="property-type">string</span>
     </dt>
     <dd>{{% md %}}The regions to which the trail is applied. Valid values: `cn-beijing`, `cn-hangzhou`, and `All`. Default to `All`.
-{{% /md %}}</dd>
-</dl>
+{{% /md %}}</dd></dl>
 {{% /choosable %}}
 
 {{% choosable language nodejs %}}
-<dl class="resources-properties">
-
-    <dt class="property-optional"
+<dl class="resources-properties"><dt class="property-optional"
             title="Optional">
         <span id="state_eventrw_nodejs">
 <a href="#state_eventrw_nodejs" style="color: inherit; text-decoration: inherit;">event<wbr>Rw</a>
@@ -1238,8 +1133,7 @@ The following state arguments are supported:
         <span class="property-type">string</span>
     </dt>
     <dd>{{% md %}}Indicates whether the event is a read or a write event. Valid values: `Read`, `Write`, and `All`. Default to `Write`.
-{{% /md %}}</dd>
-    <dt class="property-optional"
+{{% /md %}}</dd><dt class="property-optional"
             title="Optional">
         <span id="state_isorganizationtrail_nodejs">
 <a href="#state_isorganizationtrail_nodejs" style="color: inherit; text-decoration: inherit;">is<wbr>Organization<wbr>Trail</a>
@@ -1247,8 +1141,7 @@ The following state arguments are supported:
         <span class="property-indicator"></span>
         <span class="property-type">boolean</span>
     </dt>
-    <dd>{{% md %}}{{% /md %}}</dd>
-    <dt class="property-optional"
+    <dd>{{% md %}}{{% /md %}}</dd><dt class="property-optional"
             title="Optional">
         <span id="state_mnstopicarn_nodejs">
 <a href="#state_mnstopicarn_nodejs" style="color: inherit; text-decoration: inherit;">mns<wbr>Topic<wbr>Arn</a>
@@ -1257,8 +1150,7 @@ The following state arguments are supported:
         <span class="property-type">string</span>
     </dt>
     <dd>{{% md %}}The ARN of the Message Service (MNS) topic to which ActionTrail sends messages. If the ARN is specified, a message is generated and delivered to the MNS topic whenever an event is delivered to OSS.
-{{% /md %}}</dd>
-    <dt class="property-optional property-deprecated"
+{{% /md %}}</dd><dt class="property-optional property-deprecated"
             title="Optional, Deprecated">
         <span id="state_name_nodejs">
 <a href="#state_name_nodejs" style="color: inherit; text-decoration: inherit;">name</a>
@@ -1267,8 +1159,7 @@ The following state arguments are supported:
         <span class="property-type">string</span>
     </dt>
     <dd>{{% md %}}Field `name` has been deprecated from version 1.95.0. Use `trail_name` instead.
-{{% /md %}}<p class="property-message">Deprecated: {{% md %}}Field &#39;name&#39; has been deprecated from version 1.95.0. Use &#39;trail_name&#39; instead.{{% /md %}}</p></dd>
-    <dt class="property-optional"
+{{% /md %}}<p class="property-message">Deprecated: {{% md %}}Field &#39;name&#39; has been deprecated from version 1.95.0. Use &#39;trail_name&#39; instead.{{% /md %}}</p></dd><dt class="property-optional"
             title="Optional">
         <span id="state_ossbucketname_nodejs">
 <a href="#state_ossbucketname_nodejs" style="color: inherit; text-decoration: inherit;">oss<wbr>Bucket<wbr>Name</a>
@@ -1277,8 +1168,7 @@ The following state arguments are supported:
         <span class="property-type">string</span>
     </dt>
     <dd>{{% md %}}The OSS bucket to which the trail delivers logs. Ensure that this is an existing OSS bucket.
-{{% /md %}}</dd>
-    <dt class="property-optional"
+{{% /md %}}</dd><dt class="property-optional"
             title="Optional">
         <span id="state_osskeyprefix_nodejs">
 <a href="#state_osskeyprefix_nodejs" style="color: inherit; text-decoration: inherit;">oss<wbr>Key<wbr>Prefix</a>
@@ -1287,8 +1177,7 @@ The following state arguments are supported:
         <span class="property-type">string</span>
     </dt>
     <dd>{{% md %}}The prefix of the specified OSS bucket name. This parameter can be left empty.
-{{% /md %}}</dd>
-    <dt class="property-optional"
+{{% /md %}}</dd><dt class="property-optional"
             title="Optional">
         <span id="state_rolename_nodejs">
 <a href="#state_rolename_nodejs" style="color: inherit; text-decoration: inherit;">role<wbr>Name</a>
@@ -1297,8 +1186,7 @@ The following state arguments are supported:
         <span class="property-type">string</span>
     </dt>
     <dd>{{% md %}}The RAM role in ActionTrail permitted by the user.
-{{% /md %}}</dd>
-    <dt class="property-optional"
+{{% /md %}}</dd><dt class="property-optional"
             title="Optional">
         <span id="state_slsprojectarn_nodejs">
 <a href="#state_slsprojectarn_nodejs" style="color: inherit; text-decoration: inherit;">sls<wbr>Project<wbr>Arn</a>
@@ -1307,8 +1195,7 @@ The following state arguments are supported:
         <span class="property-type">string</span>
     </dt>
     <dd>{{% md %}}The unique ARN of the Log Service project.
-{{% /md %}}</dd>
-    <dt class="property-optional"
+{{% /md %}}</dd><dt class="property-optional"
             title="Optional">
         <span id="state_slswriterolearn_nodejs">
 <a href="#state_slswriterolearn_nodejs" style="color: inherit; text-decoration: inherit;">sls<wbr>Write<wbr>Role<wbr>Arn</a>
@@ -1317,8 +1204,7 @@ The following state arguments are supported:
         <span class="property-type">string</span>
     </dt>
     <dd>{{% md %}}The unique ARN of the Log Service role.
-{{% /md %}}</dd>
-    <dt class="property-optional"
+{{% /md %}}</dd><dt class="property-optional"
             title="Optional">
         <span id="state_status_nodejs">
 <a href="#state_status_nodejs" style="color: inherit; text-decoration: inherit;">status</a>
@@ -1327,8 +1213,7 @@ The following state arguments are supported:
         <span class="property-type">string</span>
     </dt>
     <dd>{{% md %}}The status of ActionTrail Trail. After creation, tracking is turned on by default, and you can set the status value to `Disable` to turn off tracking. Valid values: `Enable`, `Disable`. Default to `Enable`.
-{{% /md %}}</dd>
-    <dt class="property-optional"
+{{% /md %}}</dd><dt class="property-optional"
             title="Optional">
         <span id="state_trailname_nodejs">
 <a href="#state_trailname_nodejs" style="color: inherit; text-decoration: inherit;">trail<wbr>Name</a>
@@ -1337,8 +1222,7 @@ The following state arguments are supported:
         <span class="property-type">string</span>
     </dt>
     <dd>{{% md %}}The name of the trail to be created, which must be unique for an account.
-{{% /md %}}</dd>
-    <dt class="property-optional"
+{{% /md %}}</dd><dt class="property-optional"
             title="Optional">
         <span id="state_trailregion_nodejs">
 <a href="#state_trailregion_nodejs" style="color: inherit; text-decoration: inherit;">trail<wbr>Region</a>
@@ -1347,14 +1231,11 @@ The following state arguments are supported:
         <span class="property-type">string</span>
     </dt>
     <dd>{{% md %}}The regions to which the trail is applied. Valid values: `cn-beijing`, `cn-hangzhou`, and `All`. Default to `All`.
-{{% /md %}}</dd>
-</dl>
+{{% /md %}}</dd></dl>
 {{% /choosable %}}
 
 {{% choosable language python %}}
-<dl class="resources-properties">
-
-    <dt class="property-optional"
+<dl class="resources-properties"><dt class="property-optional"
             title="Optional">
         <span id="state_event_rw_python">
 <a href="#state_event_rw_python" style="color: inherit; text-decoration: inherit;">event_<wbr>rw</a>
@@ -1363,8 +1244,7 @@ The following state arguments are supported:
         <span class="property-type">str</span>
     </dt>
     <dd>{{% md %}}Indicates whether the event is a read or a write event. Valid values: `Read`, `Write`, and `All`. Default to `Write`.
-{{% /md %}}</dd>
-    <dt class="property-optional"
+{{% /md %}}</dd><dt class="property-optional"
             title="Optional">
         <span id="state_is_organization_trail_python">
 <a href="#state_is_organization_trail_python" style="color: inherit; text-decoration: inherit;">is_<wbr>organization_<wbr>trail</a>
@@ -1372,8 +1252,7 @@ The following state arguments are supported:
         <span class="property-indicator"></span>
         <span class="property-type">bool</span>
     </dt>
-    <dd>{{% md %}}{{% /md %}}</dd>
-    <dt class="property-optional"
+    <dd>{{% md %}}{{% /md %}}</dd><dt class="property-optional"
             title="Optional">
         <span id="state_mns_topic_arn_python">
 <a href="#state_mns_topic_arn_python" style="color: inherit; text-decoration: inherit;">mns_<wbr>topic_<wbr>arn</a>
@@ -1382,8 +1261,7 @@ The following state arguments are supported:
         <span class="property-type">str</span>
     </dt>
     <dd>{{% md %}}The ARN of the Message Service (MNS) topic to which ActionTrail sends messages. If the ARN is specified, a message is generated and delivered to the MNS topic whenever an event is delivered to OSS.
-{{% /md %}}</dd>
-    <dt class="property-optional property-deprecated"
+{{% /md %}}</dd><dt class="property-optional property-deprecated"
             title="Optional, Deprecated">
         <span id="state_name_python">
 <a href="#state_name_python" style="color: inherit; text-decoration: inherit;">name</a>
@@ -1392,8 +1270,7 @@ The following state arguments are supported:
         <span class="property-type">str</span>
     </dt>
     <dd>{{% md %}}Field `name` has been deprecated from version 1.95.0. Use `trail_name` instead.
-{{% /md %}}<p class="property-message">Deprecated: {{% md %}}Field &#39;name&#39; has been deprecated from version 1.95.0. Use &#39;trail_name&#39; instead.{{% /md %}}</p></dd>
-    <dt class="property-optional"
+{{% /md %}}<p class="property-message">Deprecated: {{% md %}}Field &#39;name&#39; has been deprecated from version 1.95.0. Use &#39;trail_name&#39; instead.{{% /md %}}</p></dd><dt class="property-optional"
             title="Optional">
         <span id="state_oss_bucket_name_python">
 <a href="#state_oss_bucket_name_python" style="color: inherit; text-decoration: inherit;">oss_<wbr>bucket_<wbr>name</a>
@@ -1402,8 +1279,7 @@ The following state arguments are supported:
         <span class="property-type">str</span>
     </dt>
     <dd>{{% md %}}The OSS bucket to which the trail delivers logs. Ensure that this is an existing OSS bucket.
-{{% /md %}}</dd>
-    <dt class="property-optional"
+{{% /md %}}</dd><dt class="property-optional"
             title="Optional">
         <span id="state_oss_key_prefix_python">
 <a href="#state_oss_key_prefix_python" style="color: inherit; text-decoration: inherit;">oss_<wbr>key_<wbr>prefix</a>
@@ -1412,8 +1288,7 @@ The following state arguments are supported:
         <span class="property-type">str</span>
     </dt>
     <dd>{{% md %}}The prefix of the specified OSS bucket name. This parameter can be left empty.
-{{% /md %}}</dd>
-    <dt class="property-optional"
+{{% /md %}}</dd><dt class="property-optional"
             title="Optional">
         <span id="state_role_name_python">
 <a href="#state_role_name_python" style="color: inherit; text-decoration: inherit;">role_<wbr>name</a>
@@ -1422,8 +1297,7 @@ The following state arguments are supported:
         <span class="property-type">str</span>
     </dt>
     <dd>{{% md %}}The RAM role in ActionTrail permitted by the user.
-{{% /md %}}</dd>
-    <dt class="property-optional"
+{{% /md %}}</dd><dt class="property-optional"
             title="Optional">
         <span id="state_sls_project_arn_python">
 <a href="#state_sls_project_arn_python" style="color: inherit; text-decoration: inherit;">sls_<wbr>project_<wbr>arn</a>
@@ -1432,8 +1306,7 @@ The following state arguments are supported:
         <span class="property-type">str</span>
     </dt>
     <dd>{{% md %}}The unique ARN of the Log Service project.
-{{% /md %}}</dd>
-    <dt class="property-optional"
+{{% /md %}}</dd><dt class="property-optional"
             title="Optional">
         <span id="state_sls_write_role_arn_python">
 <a href="#state_sls_write_role_arn_python" style="color: inherit; text-decoration: inherit;">sls_<wbr>write_<wbr>role_<wbr>arn</a>
@@ -1442,8 +1315,7 @@ The following state arguments are supported:
         <span class="property-type">str</span>
     </dt>
     <dd>{{% md %}}The unique ARN of the Log Service role.
-{{% /md %}}</dd>
-    <dt class="property-optional"
+{{% /md %}}</dd><dt class="property-optional"
             title="Optional">
         <span id="state_status_python">
 <a href="#state_status_python" style="color: inherit; text-decoration: inherit;">status</a>
@@ -1452,8 +1324,7 @@ The following state arguments are supported:
         <span class="property-type">str</span>
     </dt>
     <dd>{{% md %}}The status of ActionTrail Trail. After creation, tracking is turned on by default, and you can set the status value to `Disable` to turn off tracking. Valid values: `Enable`, `Disable`. Default to `Enable`.
-{{% /md %}}</dd>
-    <dt class="property-optional"
+{{% /md %}}</dd><dt class="property-optional"
             title="Optional">
         <span id="state_trail_name_python">
 <a href="#state_trail_name_python" style="color: inherit; text-decoration: inherit;">trail_<wbr>name</a>
@@ -1462,8 +1333,7 @@ The following state arguments are supported:
         <span class="property-type">str</span>
     </dt>
     <dd>{{% md %}}The name of the trail to be created, which must be unique for an account.
-{{% /md %}}</dd>
-    <dt class="property-optional"
+{{% /md %}}</dd><dt class="property-optional"
             title="Optional">
         <span id="state_trail_region_python">
 <a href="#state_trail_region_python" style="color: inherit; text-decoration: inherit;">trail_<wbr>region</a>
@@ -1472,8 +1342,7 @@ The following state arguments are supported:
         <span class="property-type">str</span>
     </dt>
     <dd>{{% md %}}The regions to which the trail is applied. Valid values: `cn-beijing`, `cn-hangzhou`, and `All`. Default to `All`.
-{{% /md %}}</dd>
-</dl>
+{{% /md %}}</dd></dl>
 {{% /choosable %}}
 
 
@@ -1499,6 +1368,6 @@ Action trail can be imported using the id or trail_name, e.g.
 	<dt>License</dt>
 	<dd>Apache-2.0</dd>
 	<dt>Notes</dt>
-	<dd>This Pulumi package is based on the [`alicloud` Terraform Provider](https://github.com/aliyun/terraform-provider-alicloud).</dd>
+	<dd>{{% md %}}This Pulumi package is based on the [`alicloud` Terraform Provider](https://github.com/aliyun/terraform-provider-alicloud).{{% /md %}}</dd>
 </dl>
 

@@ -108,6 +108,7 @@ Notice that your `index.html` file has been added to the bucket:
 ```
 
 {{% choosable language javascript %}}
+
 Now that your `index.html` is in your bucket, modify the program file to have the bucket serve `index.html` as a static website. First, set the `website` property on your bucket.
 
 ```javascript
@@ -138,6 +139,7 @@ exports.bucketEndpoint = pulumi.interpolate`http://${bucket.websiteEndpoint}`;
 {{% /choosable %}}
 
 {{% choosable language typescript %}}
+
 Now that your `index.html` is in your bucket, modify the program file to have the bucket serve `index.html` as a static website. First, set the `website` property on your bucket.
 
 ```typescript
@@ -168,6 +170,7 @@ export const bucketEndpoint = pulumi.interpolate`http://${bucket.websiteEndpoint
 {{% /choosable %}}
 
 {{% choosable language python %}}
+
 Now that your `index.html` is in your bucket, modify the program file to have the bucket serve `index.html` as a static website. First, set the `website` property on your bucket.
 
 ```python
@@ -198,6 +201,7 @@ pulumi.export('bucket_endpoint', pulumi.Output.concat('http://', bucket.website_
 {{% /choosable %}}
 
 {{% choosable language go %}}
+
 Now that your `index.html` is in your bucket, modify the program to have the bucket serve `index.html` as a static website. First, set the `Website` property on your bucket.
 
 ```go
@@ -228,6 +232,7 @@ ctx.Export("bucketEndpoint", pulumi.Sprintf("http://%s", bucket.WebsiteEndpoint)
 {{% /choosable %}}
 
 {{% choosable language csharp %}}
+
 Now that your `index.html` is in your bucket, modify the program to have the bucket serve `index.html` as a static website. First, set the `Website` property on your bucket.
 
 ```csharp

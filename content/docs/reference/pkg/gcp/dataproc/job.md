@@ -16,11 +16,17 @@ Manages a job resource within a Dataproc cluster within GCE. For more informatio
 !> **Note:** This resource does not support 'update' and changing any attributes will cause the resource to be recreated.
 
 {{% examples %}}
+
 ## Example Usage
 
 {{< chooser language "typescript,python,go,csharp" / >}}
 
-{{% example csharp %}}
+
+
+
+
+{{< example csharp >}}
+
 ```csharp
 using Pulumi;
 using Gcp = Pulumi.Gcp;
@@ -95,9 +101,12 @@ class MyStack : Stack
 }
 ```
 
-{{% /example %}}
 
-{{% example go %}}
+{{< /example >}}
+
+
+{{< example go >}}
+
 ```go
 package main
 
@@ -168,9 +177,12 @@ func main() {
 }
 ```
 
-{{% /example %}}
 
-{{% example python %}}
+{{< /example >}}
+
+
+{{< example python >}}
+
 ```python
 import pulumi
 import pulumi_gcp as gcp
@@ -213,9 +225,12 @@ pulumi.export("sparkStatus", spark.statuses[0].state)
 pulumi.export("pysparkStatus", pyspark.statuses[0].state)
 ```
 
-{{% /example %}}
 
-{{% example typescript %}}
+{{< /example >}}
+
+
+{{< example typescript >}}
+
 
 ```typescript
 import * as pulumi from "@pulumi/pulumi";
@@ -261,9 +276,16 @@ export const sparkStatus = spark.statuses.apply(statuses => statuses[0].state);
 export const pysparkStatus = pyspark.statuses.apply(statuses => statuses[0].state);
 ```
 
-{{% /example %}}
+
+{{< /example >}}
+
+
+
+
 
 {{% /examples %}}
+
+
 
 
 ## Create a Job Resource {#create}
@@ -288,9 +310,7 @@ export const pysparkStatus = pyspark.statuses.apply(statuses => statuses[0].stat
 
 {{% choosable language nodejs %}}
 
-<dl class="resources-properties">
-  
-    <dt
+<dl class="resources-properties"><dt
         class="property-required" title="Required">
         <span>name</span>
         <span class="property-indicator"></span>
@@ -298,9 +318,7 @@ export const pysparkStatus = pyspark.statuses.apply(statuses => statuses[0].stat
     </dt>
     <dd>
       The unique name of the resource.
-    </dd>
-  
-    <dt
+    </dd><dt
         class="property-required" title="Required">
         <span>args</span>
         <span class="property-indicator"></span>
@@ -308,9 +326,7 @@ export const pysparkStatus = pyspark.statuses.apply(statuses => statuses[0].stat
     </dt>
     <dd>
       The arguments to resource properties.
-    </dd>
-  
-    <dt
+    </dd><dt
         class="property-optional" title="Optional">
         <span>opts</span>
         <span class="property-indicator"></span>
@@ -318,10 +334,7 @@ export const pysparkStatus = pyspark.statuses.apply(statuses => statuses[0].stat
     </dt>
     <dd>
       Bag of options to control resource&#39;s behavior.
-    </dd>
-  
-
-</dl>
+    </dd></dl>
 
 {{% /choosable %}}
 
@@ -347,9 +360,7 @@ export const pysparkStatus = pyspark.statuses.apply(statuses => statuses[0].stat
 
 {{% choosable language go %}}
 
-<dl class="resources-properties">
-  
-    <dt
+<dl class="resources-properties"><dt
         class="property-optional" title="Optional">
         <span>ctx</span>
         <span class="property-indicator"></span>
@@ -357,9 +368,7 @@ export const pysparkStatus = pyspark.statuses.apply(statuses => statuses[0].stat
     </dt>
     <dd>
       Context object for the current deployment.
-    </dd>
-  
-    <dt
+    </dd><dt
         class="property-required" title="Required">
         <span>name</span>
         <span class="property-indicator"></span>
@@ -367,9 +376,7 @@ export const pysparkStatus = pyspark.statuses.apply(statuses => statuses[0].stat
     </dt>
     <dd>
       The unique name of the resource.
-    </dd>
-  
-    <dt
+    </dd><dt
         class="property-required" title="Required">
         <span>args</span>
         <span class="property-indicator"></span>
@@ -377,9 +384,7 @@ export const pysparkStatus = pyspark.statuses.apply(statuses => statuses[0].stat
     </dt>
     <dd>
       The arguments to resource properties.
-    </dd>
-  
-    <dt
+    </dd><dt
         class="property-optional" title="Optional">
         <span>opts</span>
         <span class="property-indicator"></span>
@@ -387,18 +392,13 @@ export const pysparkStatus = pyspark.statuses.apply(statuses => statuses[0].stat
     </dt>
     <dd>
       Bag of options to control resource&#39;s behavior.
-    </dd>
-  
-
-</dl>
+    </dd></dl>
 
 {{% /choosable %}}
 
 {{% choosable language csharp %}}
 
-<dl class="resources-properties">
-  
-    <dt
+<dl class="resources-properties"><dt
         class="property-required" title="Required">
         <span>name</span>
         <span class="property-indicator"></span>
@@ -406,9 +406,7 @@ export const pysparkStatus = pyspark.statuses.apply(statuses => statuses[0].stat
     </dt>
     <dd>
       The unique name of the resource.
-    </dd>
-  
-    <dt
+    </dd><dt
         class="property-required" title="Required">
         <span>args</span>
         <span class="property-indicator"></span>
@@ -416,9 +414,7 @@ export const pysparkStatus = pyspark.statuses.apply(statuses => statuses[0].stat
     </dt>
     <dd>
       The arguments to resource properties.
-    </dd>
-  
-    <dt
+    </dd><dt
         class="property-optional" title="Optional">
         <span>opts</span>
         <span class="property-indicator"></span>
@@ -426,10 +422,7 @@ export const pysparkStatus = pyspark.statuses.apply(statuses => statuses[0].stat
     </dt>
     <dd>
       Bag of options to control resource&#39;s behavior.
-    </dd>
-  
-
-</dl>
+    </dd></dl>
 
 {{% /choosable %}}
 
@@ -444,9 +437,7 @@ The Job resource accepts the following [input]({{< relref "/docs/intro/concepts/
 
 
 {{% choosable language csharp %}}
-<dl class="resources-properties">
-
-    <dt class="property-required"
+<dl class="resources-properties"><dt class="property-required"
             title="Required">
         <span id="placement_csharp">
 <a href="#placement_csharp" style="color: inherit; text-decoration: inherit;">Placement</a>
@@ -455,8 +446,7 @@ The Job resource accepts the following [input]({{< relref "/docs/intro/concepts/
         <span class="property-type"><a href="#jobplacement">Job<wbr>Placement<wbr>Args</a></span>
     </dt>
     <dd>{{% md %}}The config of job placement.
-{{% /md %}}</dd>
-    <dt class="property-optional"
+{{% /md %}}</dd><dt class="property-optional"
             title="Optional">
         <span id="forcedelete_csharp">
 <a href="#forcedelete_csharp" style="color: inherit; text-decoration: inherit;">Force<wbr>Delete</a>
@@ -467,8 +457,7 @@ The Job resource accepts the following [input]({{< relref "/docs/intro/concepts/
     <dd>{{% md %}}By default, you can only delete inactive jobs within
 Dataproc. Setting this to true, and calling destroy, will ensure that the
 job is first cancelled before issuing the delete.
-{{% /md %}}</dd>
-    <dt class="property-optional"
+{{% /md %}}</dd><dt class="property-optional"
             title="Optional">
         <span id="hadoopconfig_csharp">
 <a href="#hadoopconfig_csharp" style="color: inherit; text-decoration: inherit;">Hadoop<wbr>Config</a>
@@ -477,8 +466,7 @@ job is first cancelled before issuing the delete.
         <span class="property-type"><a href="#jobhadoopconfig">Job<wbr>Hadoop<wbr>Config<wbr>Args</a></span>
     </dt>
     <dd>{{% md %}}The config of Hadoop job
-{{% /md %}}</dd>
-    <dt class="property-optional"
+{{% /md %}}</dd><dt class="property-optional"
             title="Optional">
         <span id="hiveconfig_csharp">
 <a href="#hiveconfig_csharp" style="color: inherit; text-decoration: inherit;">Hive<wbr>Config</a>
@@ -487,8 +475,7 @@ job is first cancelled before issuing the delete.
         <span class="property-type"><a href="#jobhiveconfig">Job<wbr>Hive<wbr>Config<wbr>Args</a></span>
     </dt>
     <dd>{{% md %}}The config of hive job
-{{% /md %}}</dd>
-    <dt class="property-optional"
+{{% /md %}}</dd><dt class="property-optional"
             title="Optional">
         <span id="labels_csharp">
 <a href="#labels_csharp" style="color: inherit; text-decoration: inherit;">Labels</a>
@@ -497,8 +484,7 @@ job is first cancelled before issuing the delete.
         <span class="property-type">Dictionary&lt;string, string&gt;</span>
     </dt>
     <dd>{{% md %}}The list of labels (key/value pairs) to add to the job.
-{{% /md %}}</dd>
-    <dt class="property-optional"
+{{% /md %}}</dd><dt class="property-optional"
             title="Optional">
         <span id="pigconfig_csharp">
 <a href="#pigconfig_csharp" style="color: inherit; text-decoration: inherit;">Pig<wbr>Config</a>
@@ -507,8 +493,7 @@ job is first cancelled before issuing the delete.
         <span class="property-type"><a href="#jobpigconfig">Job<wbr>Pig<wbr>Config<wbr>Args</a></span>
     </dt>
     <dd>{{% md %}}The config of pag job.
-{{% /md %}}</dd>
-    <dt class="property-optional"
+{{% /md %}}</dd><dt class="property-optional"
             title="Optional">
         <span id="project_csharp">
 <a href="#project_csharp" style="color: inherit; text-decoration: inherit;">Project</a>
@@ -518,8 +503,7 @@ job is first cancelled before issuing the delete.
     </dt>
     <dd>{{% md %}}The project in which the `cluster` can be found and jobs
 subsequently run against. If it is not provided, the provider project is used.
-{{% /md %}}</dd>
-    <dt class="property-optional"
+{{% /md %}}</dd><dt class="property-optional"
             title="Optional">
         <span id="pysparkconfig_csharp">
 <a href="#pysparkconfig_csharp" style="color: inherit; text-decoration: inherit;">Pyspark<wbr>Config</a>
@@ -528,8 +512,7 @@ subsequently run against. If it is not provided, the provider project is used.
         <span class="property-type"><a href="#jobpysparkconfig">Job<wbr>Pyspark<wbr>Config<wbr>Args</a></span>
     </dt>
     <dd>{{% md %}}The config of pySpark job.
-{{% /md %}}</dd>
-    <dt class="property-optional"
+{{% /md %}}</dd><dt class="property-optional"
             title="Optional">
         <span id="reference_csharp">
 <a href="#reference_csharp" style="color: inherit; text-decoration: inherit;">Reference</a>
@@ -538,8 +521,7 @@ subsequently run against. If it is not provided, the provider project is used.
         <span class="property-type"><a href="#jobreference">Job<wbr>Reference<wbr>Args</a></span>
     </dt>
     <dd>{{% md %}}The reference of the job
-{{% /md %}}</dd>
-    <dt class="property-optional"
+{{% /md %}}</dd><dt class="property-optional"
             title="Optional">
         <span id="region_csharp">
 <a href="#region_csharp" style="color: inherit; text-decoration: inherit;">Region</a>
@@ -549,8 +531,7 @@ subsequently run against. If it is not provided, the provider project is used.
     </dt>
     <dd>{{% md %}}The Cloud Dataproc region. This essentially determines which clusters are available
 for this job to be submitted to. If not specified, defaults to `global`.
-{{% /md %}}</dd>
-    <dt class="property-optional"
+{{% /md %}}</dd><dt class="property-optional"
             title="Optional">
         <span id="scheduling_csharp">
 <a href="#scheduling_csharp" style="color: inherit; text-decoration: inherit;">Scheduling</a>
@@ -559,8 +540,7 @@ for this job to be submitted to. If not specified, defaults to `global`.
         <span class="property-type"><a href="#jobscheduling">Job<wbr>Scheduling<wbr>Args</a></span>
     </dt>
     <dd>{{% md %}}Optional. Job scheduling configuration.
-{{% /md %}}</dd>
-    <dt class="property-optional"
+{{% /md %}}</dd><dt class="property-optional"
             title="Optional">
         <span id="sparkconfig_csharp">
 <a href="#sparkconfig_csharp" style="color: inherit; text-decoration: inherit;">Spark<wbr>Config</a>
@@ -569,8 +549,7 @@ for this job to be submitted to. If not specified, defaults to `global`.
         <span class="property-type"><a href="#jobsparkconfig">Job<wbr>Spark<wbr>Config<wbr>Args</a></span>
     </dt>
     <dd>{{% md %}}The config of the Spark job.
-{{% /md %}}</dd>
-    <dt class="property-optional"
+{{% /md %}}</dd><dt class="property-optional"
             title="Optional">
         <span id="sparksqlconfig_csharp">
 <a href="#sparksqlconfig_csharp" style="color: inherit; text-decoration: inherit;">Sparksql<wbr>Config</a>
@@ -579,14 +558,11 @@ for this job to be submitted to. If not specified, defaults to `global`.
         <span class="property-type"><a href="#jobsparksqlconfig">Job<wbr>Sparksql<wbr>Config<wbr>Args</a></span>
     </dt>
     <dd>{{% md %}}The config of SparkSql job
-{{% /md %}}</dd>
-</dl>
+{{% /md %}}</dd></dl>
 {{% /choosable %}}
 
 {{% choosable language go %}}
-<dl class="resources-properties">
-
-    <dt class="property-required"
+<dl class="resources-properties"><dt class="property-required"
             title="Required">
         <span id="placement_go">
 <a href="#placement_go" style="color: inherit; text-decoration: inherit;">Placement</a>
@@ -595,8 +571,7 @@ for this job to be submitted to. If not specified, defaults to `global`.
         <span class="property-type"><a href="#jobplacement">Job<wbr>Placement</a></span>
     </dt>
     <dd>{{% md %}}The config of job placement.
-{{% /md %}}</dd>
-    <dt class="property-optional"
+{{% /md %}}</dd><dt class="property-optional"
             title="Optional">
         <span id="forcedelete_go">
 <a href="#forcedelete_go" style="color: inherit; text-decoration: inherit;">Force<wbr>Delete</a>
@@ -607,8 +582,7 @@ for this job to be submitted to. If not specified, defaults to `global`.
     <dd>{{% md %}}By default, you can only delete inactive jobs within
 Dataproc. Setting this to true, and calling destroy, will ensure that the
 job is first cancelled before issuing the delete.
-{{% /md %}}</dd>
-    <dt class="property-optional"
+{{% /md %}}</dd><dt class="property-optional"
             title="Optional">
         <span id="hadoopconfig_go">
 <a href="#hadoopconfig_go" style="color: inherit; text-decoration: inherit;">Hadoop<wbr>Config</a>
@@ -617,8 +591,7 @@ job is first cancelled before issuing the delete.
         <span class="property-type"><a href="#jobhadoopconfig">Job<wbr>Hadoop<wbr>Config</a></span>
     </dt>
     <dd>{{% md %}}The config of Hadoop job
-{{% /md %}}</dd>
-    <dt class="property-optional"
+{{% /md %}}</dd><dt class="property-optional"
             title="Optional">
         <span id="hiveconfig_go">
 <a href="#hiveconfig_go" style="color: inherit; text-decoration: inherit;">Hive<wbr>Config</a>
@@ -627,8 +600,7 @@ job is first cancelled before issuing the delete.
         <span class="property-type"><a href="#jobhiveconfig">Job<wbr>Hive<wbr>Config</a></span>
     </dt>
     <dd>{{% md %}}The config of hive job
-{{% /md %}}</dd>
-    <dt class="property-optional"
+{{% /md %}}</dd><dt class="property-optional"
             title="Optional">
         <span id="labels_go">
 <a href="#labels_go" style="color: inherit; text-decoration: inherit;">Labels</a>
@@ -637,8 +609,7 @@ job is first cancelled before issuing the delete.
         <span class="property-type">map[string]string</span>
     </dt>
     <dd>{{% md %}}The list of labels (key/value pairs) to add to the job.
-{{% /md %}}</dd>
-    <dt class="property-optional"
+{{% /md %}}</dd><dt class="property-optional"
             title="Optional">
         <span id="pigconfig_go">
 <a href="#pigconfig_go" style="color: inherit; text-decoration: inherit;">Pig<wbr>Config</a>
@@ -647,8 +618,7 @@ job is first cancelled before issuing the delete.
         <span class="property-type"><a href="#jobpigconfig">Job<wbr>Pig<wbr>Config</a></span>
     </dt>
     <dd>{{% md %}}The config of pag job.
-{{% /md %}}</dd>
-    <dt class="property-optional"
+{{% /md %}}</dd><dt class="property-optional"
             title="Optional">
         <span id="project_go">
 <a href="#project_go" style="color: inherit; text-decoration: inherit;">Project</a>
@@ -658,8 +628,7 @@ job is first cancelled before issuing the delete.
     </dt>
     <dd>{{% md %}}The project in which the `cluster` can be found and jobs
 subsequently run against. If it is not provided, the provider project is used.
-{{% /md %}}</dd>
-    <dt class="property-optional"
+{{% /md %}}</dd><dt class="property-optional"
             title="Optional">
         <span id="pysparkconfig_go">
 <a href="#pysparkconfig_go" style="color: inherit; text-decoration: inherit;">Pyspark<wbr>Config</a>
@@ -668,8 +637,7 @@ subsequently run against. If it is not provided, the provider project is used.
         <span class="property-type"><a href="#jobpysparkconfig">Job<wbr>Pyspark<wbr>Config</a></span>
     </dt>
     <dd>{{% md %}}The config of pySpark job.
-{{% /md %}}</dd>
-    <dt class="property-optional"
+{{% /md %}}</dd><dt class="property-optional"
             title="Optional">
         <span id="reference_go">
 <a href="#reference_go" style="color: inherit; text-decoration: inherit;">Reference</a>
@@ -678,8 +646,7 @@ subsequently run against. If it is not provided, the provider project is used.
         <span class="property-type"><a href="#jobreference">Job<wbr>Reference</a></span>
     </dt>
     <dd>{{% md %}}The reference of the job
-{{% /md %}}</dd>
-    <dt class="property-optional"
+{{% /md %}}</dd><dt class="property-optional"
             title="Optional">
         <span id="region_go">
 <a href="#region_go" style="color: inherit; text-decoration: inherit;">Region</a>
@@ -689,8 +656,7 @@ subsequently run against. If it is not provided, the provider project is used.
     </dt>
     <dd>{{% md %}}The Cloud Dataproc region. This essentially determines which clusters are available
 for this job to be submitted to. If not specified, defaults to `global`.
-{{% /md %}}</dd>
-    <dt class="property-optional"
+{{% /md %}}</dd><dt class="property-optional"
             title="Optional">
         <span id="scheduling_go">
 <a href="#scheduling_go" style="color: inherit; text-decoration: inherit;">Scheduling</a>
@@ -699,8 +665,7 @@ for this job to be submitted to. If not specified, defaults to `global`.
         <span class="property-type"><a href="#jobscheduling">Job<wbr>Scheduling</a></span>
     </dt>
     <dd>{{% md %}}Optional. Job scheduling configuration.
-{{% /md %}}</dd>
-    <dt class="property-optional"
+{{% /md %}}</dd><dt class="property-optional"
             title="Optional">
         <span id="sparkconfig_go">
 <a href="#sparkconfig_go" style="color: inherit; text-decoration: inherit;">Spark<wbr>Config</a>
@@ -709,8 +674,7 @@ for this job to be submitted to. If not specified, defaults to `global`.
         <span class="property-type"><a href="#jobsparkconfig">Job<wbr>Spark<wbr>Config</a></span>
     </dt>
     <dd>{{% md %}}The config of the Spark job.
-{{% /md %}}</dd>
-    <dt class="property-optional"
+{{% /md %}}</dd><dt class="property-optional"
             title="Optional">
         <span id="sparksqlconfig_go">
 <a href="#sparksqlconfig_go" style="color: inherit; text-decoration: inherit;">Sparksql<wbr>Config</a>
@@ -719,14 +683,11 @@ for this job to be submitted to. If not specified, defaults to `global`.
         <span class="property-type"><a href="#jobsparksqlconfig">Job<wbr>Sparksql<wbr>Config</a></span>
     </dt>
     <dd>{{% md %}}The config of SparkSql job
-{{% /md %}}</dd>
-</dl>
+{{% /md %}}</dd></dl>
 {{% /choosable %}}
 
 {{% choosable language nodejs %}}
-<dl class="resources-properties">
-
-    <dt class="property-required"
+<dl class="resources-properties"><dt class="property-required"
             title="Required">
         <span id="placement_nodejs">
 <a href="#placement_nodejs" style="color: inherit; text-decoration: inherit;">placement</a>
@@ -735,8 +696,7 @@ for this job to be submitted to. If not specified, defaults to `global`.
         <span class="property-type"><a href="#jobplacement">Job<wbr>Placement</a></span>
     </dt>
     <dd>{{% md %}}The config of job placement.
-{{% /md %}}</dd>
-    <dt class="property-optional"
+{{% /md %}}</dd><dt class="property-optional"
             title="Optional">
         <span id="forcedelete_nodejs">
 <a href="#forcedelete_nodejs" style="color: inherit; text-decoration: inherit;">force<wbr>Delete</a>
@@ -747,8 +707,7 @@ for this job to be submitted to. If not specified, defaults to `global`.
     <dd>{{% md %}}By default, you can only delete inactive jobs within
 Dataproc. Setting this to true, and calling destroy, will ensure that the
 job is first cancelled before issuing the delete.
-{{% /md %}}</dd>
-    <dt class="property-optional"
+{{% /md %}}</dd><dt class="property-optional"
             title="Optional">
         <span id="hadoopconfig_nodejs">
 <a href="#hadoopconfig_nodejs" style="color: inherit; text-decoration: inherit;">hadoop<wbr>Config</a>
@@ -757,8 +716,7 @@ job is first cancelled before issuing the delete.
         <span class="property-type"><a href="#jobhadoopconfig">Job<wbr>Hadoop<wbr>Config</a></span>
     </dt>
     <dd>{{% md %}}The config of Hadoop job
-{{% /md %}}</dd>
-    <dt class="property-optional"
+{{% /md %}}</dd><dt class="property-optional"
             title="Optional">
         <span id="hiveconfig_nodejs">
 <a href="#hiveconfig_nodejs" style="color: inherit; text-decoration: inherit;">hive<wbr>Config</a>
@@ -767,8 +725,7 @@ job is first cancelled before issuing the delete.
         <span class="property-type"><a href="#jobhiveconfig">Job<wbr>Hive<wbr>Config</a></span>
     </dt>
     <dd>{{% md %}}The config of hive job
-{{% /md %}}</dd>
-    <dt class="property-optional"
+{{% /md %}}</dd><dt class="property-optional"
             title="Optional">
         <span id="labels_nodejs">
 <a href="#labels_nodejs" style="color: inherit; text-decoration: inherit;">labels</a>
@@ -777,8 +734,7 @@ job is first cancelled before issuing the delete.
         <span class="property-type">{[key: string]: string}</span>
     </dt>
     <dd>{{% md %}}The list of labels (key/value pairs) to add to the job.
-{{% /md %}}</dd>
-    <dt class="property-optional"
+{{% /md %}}</dd><dt class="property-optional"
             title="Optional">
         <span id="pigconfig_nodejs">
 <a href="#pigconfig_nodejs" style="color: inherit; text-decoration: inherit;">pig<wbr>Config</a>
@@ -787,8 +743,7 @@ job is first cancelled before issuing the delete.
         <span class="property-type"><a href="#jobpigconfig">Job<wbr>Pig<wbr>Config</a></span>
     </dt>
     <dd>{{% md %}}The config of pag job.
-{{% /md %}}</dd>
-    <dt class="property-optional"
+{{% /md %}}</dd><dt class="property-optional"
             title="Optional">
         <span id="project_nodejs">
 <a href="#project_nodejs" style="color: inherit; text-decoration: inherit;">project</a>
@@ -798,8 +753,7 @@ job is first cancelled before issuing the delete.
     </dt>
     <dd>{{% md %}}The project in which the `cluster` can be found and jobs
 subsequently run against. If it is not provided, the provider project is used.
-{{% /md %}}</dd>
-    <dt class="property-optional"
+{{% /md %}}</dd><dt class="property-optional"
             title="Optional">
         <span id="pysparkconfig_nodejs">
 <a href="#pysparkconfig_nodejs" style="color: inherit; text-decoration: inherit;">pyspark<wbr>Config</a>
@@ -808,8 +762,7 @@ subsequently run against. If it is not provided, the provider project is used.
         <span class="property-type"><a href="#jobpysparkconfig">Job<wbr>Pyspark<wbr>Config</a></span>
     </dt>
     <dd>{{% md %}}The config of pySpark job.
-{{% /md %}}</dd>
-    <dt class="property-optional"
+{{% /md %}}</dd><dt class="property-optional"
             title="Optional">
         <span id="reference_nodejs">
 <a href="#reference_nodejs" style="color: inherit; text-decoration: inherit;">reference</a>
@@ -818,8 +771,7 @@ subsequently run against. If it is not provided, the provider project is used.
         <span class="property-type"><a href="#jobreference">Job<wbr>Reference</a></span>
     </dt>
     <dd>{{% md %}}The reference of the job
-{{% /md %}}</dd>
-    <dt class="property-optional"
+{{% /md %}}</dd><dt class="property-optional"
             title="Optional">
         <span id="region_nodejs">
 <a href="#region_nodejs" style="color: inherit; text-decoration: inherit;">region</a>
@@ -829,8 +781,7 @@ subsequently run against. If it is not provided, the provider project is used.
     </dt>
     <dd>{{% md %}}The Cloud Dataproc region. This essentially determines which clusters are available
 for this job to be submitted to. If not specified, defaults to `global`.
-{{% /md %}}</dd>
-    <dt class="property-optional"
+{{% /md %}}</dd><dt class="property-optional"
             title="Optional">
         <span id="scheduling_nodejs">
 <a href="#scheduling_nodejs" style="color: inherit; text-decoration: inherit;">scheduling</a>
@@ -839,8 +790,7 @@ for this job to be submitted to. If not specified, defaults to `global`.
         <span class="property-type"><a href="#jobscheduling">Job<wbr>Scheduling</a></span>
     </dt>
     <dd>{{% md %}}Optional. Job scheduling configuration.
-{{% /md %}}</dd>
-    <dt class="property-optional"
+{{% /md %}}</dd><dt class="property-optional"
             title="Optional">
         <span id="sparkconfig_nodejs">
 <a href="#sparkconfig_nodejs" style="color: inherit; text-decoration: inherit;">spark<wbr>Config</a>
@@ -849,8 +799,7 @@ for this job to be submitted to. If not specified, defaults to `global`.
         <span class="property-type"><a href="#jobsparkconfig">Job<wbr>Spark<wbr>Config</a></span>
     </dt>
     <dd>{{% md %}}The config of the Spark job.
-{{% /md %}}</dd>
-    <dt class="property-optional"
+{{% /md %}}</dd><dt class="property-optional"
             title="Optional">
         <span id="sparksqlconfig_nodejs">
 <a href="#sparksqlconfig_nodejs" style="color: inherit; text-decoration: inherit;">sparksql<wbr>Config</a>
@@ -859,14 +808,11 @@ for this job to be submitted to. If not specified, defaults to `global`.
         <span class="property-type"><a href="#jobsparksqlconfig">Job<wbr>Sparksql<wbr>Config</a></span>
     </dt>
     <dd>{{% md %}}The config of SparkSql job
-{{% /md %}}</dd>
-</dl>
+{{% /md %}}</dd></dl>
 {{% /choosable %}}
 
 {{% choosable language python %}}
-<dl class="resources-properties">
-
-    <dt class="property-required"
+<dl class="resources-properties"><dt class="property-required"
             title="Required">
         <span id="placement_python">
 <a href="#placement_python" style="color: inherit; text-decoration: inherit;">placement</a>
@@ -875,8 +821,7 @@ for this job to be submitted to. If not specified, defaults to `global`.
         <span class="property-type"><a href="#jobplacement">Job<wbr>Placement<wbr>Args</a></span>
     </dt>
     <dd>{{% md %}}The config of job placement.
-{{% /md %}}</dd>
-    <dt class="property-optional"
+{{% /md %}}</dd><dt class="property-optional"
             title="Optional">
         <span id="force_delete_python">
 <a href="#force_delete_python" style="color: inherit; text-decoration: inherit;">force_<wbr>delete</a>
@@ -887,8 +832,7 @@ for this job to be submitted to. If not specified, defaults to `global`.
     <dd>{{% md %}}By default, you can only delete inactive jobs within
 Dataproc. Setting this to true, and calling destroy, will ensure that the
 job is first cancelled before issuing the delete.
-{{% /md %}}</dd>
-    <dt class="property-optional"
+{{% /md %}}</dd><dt class="property-optional"
             title="Optional">
         <span id="hadoop_config_python">
 <a href="#hadoop_config_python" style="color: inherit; text-decoration: inherit;">hadoop_<wbr>config</a>
@@ -897,8 +841,7 @@ job is first cancelled before issuing the delete.
         <span class="property-type"><a href="#jobhadoopconfig">Job<wbr>Hadoop<wbr>Config<wbr>Args</a></span>
     </dt>
     <dd>{{% md %}}The config of Hadoop job
-{{% /md %}}</dd>
-    <dt class="property-optional"
+{{% /md %}}</dd><dt class="property-optional"
             title="Optional">
         <span id="hive_config_python">
 <a href="#hive_config_python" style="color: inherit; text-decoration: inherit;">hive_<wbr>config</a>
@@ -907,8 +850,7 @@ job is first cancelled before issuing the delete.
         <span class="property-type"><a href="#jobhiveconfig">Job<wbr>Hive<wbr>Config<wbr>Args</a></span>
     </dt>
     <dd>{{% md %}}The config of hive job
-{{% /md %}}</dd>
-    <dt class="property-optional"
+{{% /md %}}</dd><dt class="property-optional"
             title="Optional">
         <span id="labels_python">
 <a href="#labels_python" style="color: inherit; text-decoration: inherit;">labels</a>
@@ -917,8 +859,7 @@ job is first cancelled before issuing the delete.
         <span class="property-type">Mapping[str, str]</span>
     </dt>
     <dd>{{% md %}}The list of labels (key/value pairs) to add to the job.
-{{% /md %}}</dd>
-    <dt class="property-optional"
+{{% /md %}}</dd><dt class="property-optional"
             title="Optional">
         <span id="pig_config_python">
 <a href="#pig_config_python" style="color: inherit; text-decoration: inherit;">pig_<wbr>config</a>
@@ -927,8 +868,7 @@ job is first cancelled before issuing the delete.
         <span class="property-type"><a href="#jobpigconfig">Job<wbr>Pig<wbr>Config<wbr>Args</a></span>
     </dt>
     <dd>{{% md %}}The config of pag job.
-{{% /md %}}</dd>
-    <dt class="property-optional"
+{{% /md %}}</dd><dt class="property-optional"
             title="Optional">
         <span id="project_python">
 <a href="#project_python" style="color: inherit; text-decoration: inherit;">project</a>
@@ -938,8 +878,7 @@ job is first cancelled before issuing the delete.
     </dt>
     <dd>{{% md %}}The project in which the `cluster` can be found and jobs
 subsequently run against. If it is not provided, the provider project is used.
-{{% /md %}}</dd>
-    <dt class="property-optional"
+{{% /md %}}</dd><dt class="property-optional"
             title="Optional">
         <span id="pyspark_config_python">
 <a href="#pyspark_config_python" style="color: inherit; text-decoration: inherit;">pyspark_<wbr>config</a>
@@ -948,8 +887,7 @@ subsequently run against. If it is not provided, the provider project is used.
         <span class="property-type"><a href="#jobpysparkconfig">Job<wbr>Pyspark<wbr>Config<wbr>Args</a></span>
     </dt>
     <dd>{{% md %}}The config of pySpark job.
-{{% /md %}}</dd>
-    <dt class="property-optional"
+{{% /md %}}</dd><dt class="property-optional"
             title="Optional">
         <span id="reference_python">
 <a href="#reference_python" style="color: inherit; text-decoration: inherit;">reference</a>
@@ -958,8 +896,7 @@ subsequently run against. If it is not provided, the provider project is used.
         <span class="property-type"><a href="#jobreference">Job<wbr>Reference<wbr>Args</a></span>
     </dt>
     <dd>{{% md %}}The reference of the job
-{{% /md %}}</dd>
-    <dt class="property-optional"
+{{% /md %}}</dd><dt class="property-optional"
             title="Optional">
         <span id="region_python">
 <a href="#region_python" style="color: inherit; text-decoration: inherit;">region</a>
@@ -969,8 +906,7 @@ subsequently run against. If it is not provided, the provider project is used.
     </dt>
     <dd>{{% md %}}The Cloud Dataproc region. This essentially determines which clusters are available
 for this job to be submitted to. If not specified, defaults to `global`.
-{{% /md %}}</dd>
-    <dt class="property-optional"
+{{% /md %}}</dd><dt class="property-optional"
             title="Optional">
         <span id="scheduling_python">
 <a href="#scheduling_python" style="color: inherit; text-decoration: inherit;">scheduling</a>
@@ -979,8 +915,7 @@ for this job to be submitted to. If not specified, defaults to `global`.
         <span class="property-type"><a href="#jobscheduling">Job<wbr>Scheduling<wbr>Args</a></span>
     </dt>
     <dd>{{% md %}}Optional. Job scheduling configuration.
-{{% /md %}}</dd>
-    <dt class="property-optional"
+{{% /md %}}</dd><dt class="property-optional"
             title="Optional">
         <span id="spark_config_python">
 <a href="#spark_config_python" style="color: inherit; text-decoration: inherit;">spark_<wbr>config</a>
@@ -989,8 +924,7 @@ for this job to be submitted to. If not specified, defaults to `global`.
         <span class="property-type"><a href="#jobsparkconfig">Job<wbr>Spark<wbr>Config<wbr>Args</a></span>
     </dt>
     <dd>{{% md %}}The config of the Spark job.
-{{% /md %}}</dd>
-    <dt class="property-optional"
+{{% /md %}}</dd><dt class="property-optional"
             title="Optional">
         <span id="sparksql_config_python">
 <a href="#sparksql_config_python" style="color: inherit; text-decoration: inherit;">sparksql_<wbr>config</a>
@@ -999,8 +933,7 @@ for this job to be submitted to. If not specified, defaults to `global`.
         <span class="property-type"><a href="#jobsparksqlconfig">Job<wbr>Sparksql<wbr>Config<wbr>Args</a></span>
     </dt>
     <dd>{{% md %}}The config of SparkSql job
-{{% /md %}}</dd>
-</dl>
+{{% /md %}}</dd></dl>
 {{% /choosable %}}
 
 
@@ -1011,9 +944,7 @@ All [input](#inputs) properties are implicitly available as output properties. A
 
 
 {{% choosable language csharp %}}
-<dl class="resources-properties">
-
-    <dt class="property-"
+<dl class="resources-properties"><dt class="property-"
             title="">
         <span id="drivercontrolsfilesuri_csharp">
 <a href="#drivercontrolsfilesuri_csharp" style="color: inherit; text-decoration: inherit;">Driver<wbr>Controls<wbr>Files<wbr>Uri</a>
@@ -1022,8 +953,7 @@ All [input](#inputs) properties are implicitly available as output properties. A
         <span class="property-type">string</span>
     </dt>
     <dd>{{% md %}}If present, the location of miscellaneous control files which may be used as part of job setup and handling. If not present, control files may be placed in the same location as driver_output_uri.
-{{% /md %}}</dd>
-    <dt class="property-"
+{{% /md %}}</dd><dt class="property-"
             title="">
         <span id="driveroutputresourceuri_csharp">
 <a href="#driveroutputresourceuri_csharp" style="color: inherit; text-decoration: inherit;">Driver<wbr>Output<wbr>Resource<wbr>Uri</a>
@@ -1032,8 +962,7 @@ All [input](#inputs) properties are implicitly available as output properties. A
         <span class="property-type">string</span>
     </dt>
     <dd>{{% md %}}A URI pointing to the location of the stdout of the job's driver program.
-{{% /md %}}</dd>
-    <dt class="property-"
+{{% /md %}}</dd><dt class="property-"
             title="">
         <span id="id_csharp">
 <a href="#id_csharp" style="color: inherit; text-decoration: inherit;">Id</a>
@@ -1041,8 +970,7 @@ All [input](#inputs) properties are implicitly available as output properties. A
         <span class="property-indicator"></span>
         <span class="property-type">string</span>
     </dt>
-    <dd>{{% md %}}The provider-assigned unique ID for this managed resource.{{% /md %}}</dd>
-    <dt class="property-"
+    <dd>{{% md %}}The provider-assigned unique ID for this managed resource.{{% /md %}}</dd><dt class="property-"
             title="">
         <span id="statuses_csharp">
 <a href="#statuses_csharp" style="color: inherit; text-decoration: inherit;">Statuses</a>
@@ -1051,14 +979,11 @@ All [input](#inputs) properties are implicitly available as output properties. A
         <span class="property-type"><a href="#jobstatus">List&lt;Job<wbr>Status&gt;</a></span>
     </dt>
     <dd>{{% md %}}The status of the job.
-{{% /md %}}</dd>
-</dl>
+{{% /md %}}</dd></dl>
 {{% /choosable %}}
 
 {{% choosable language go %}}
-<dl class="resources-properties">
-
-    <dt class="property-"
+<dl class="resources-properties"><dt class="property-"
             title="">
         <span id="drivercontrolsfilesuri_go">
 <a href="#drivercontrolsfilesuri_go" style="color: inherit; text-decoration: inherit;">Driver<wbr>Controls<wbr>Files<wbr>Uri</a>
@@ -1067,8 +992,7 @@ All [input](#inputs) properties are implicitly available as output properties. A
         <span class="property-type">string</span>
     </dt>
     <dd>{{% md %}}If present, the location of miscellaneous control files which may be used as part of job setup and handling. If not present, control files may be placed in the same location as driver_output_uri.
-{{% /md %}}</dd>
-    <dt class="property-"
+{{% /md %}}</dd><dt class="property-"
             title="">
         <span id="driveroutputresourceuri_go">
 <a href="#driveroutputresourceuri_go" style="color: inherit; text-decoration: inherit;">Driver<wbr>Output<wbr>Resource<wbr>Uri</a>
@@ -1077,8 +1001,7 @@ All [input](#inputs) properties are implicitly available as output properties. A
         <span class="property-type">string</span>
     </dt>
     <dd>{{% md %}}A URI pointing to the location of the stdout of the job's driver program.
-{{% /md %}}</dd>
-    <dt class="property-"
+{{% /md %}}</dd><dt class="property-"
             title="">
         <span id="id_go">
 <a href="#id_go" style="color: inherit; text-decoration: inherit;">Id</a>
@@ -1086,8 +1009,7 @@ All [input](#inputs) properties are implicitly available as output properties. A
         <span class="property-indicator"></span>
         <span class="property-type">string</span>
     </dt>
-    <dd>{{% md %}}The provider-assigned unique ID for this managed resource.{{% /md %}}</dd>
-    <dt class="property-"
+    <dd>{{% md %}}The provider-assigned unique ID for this managed resource.{{% /md %}}</dd><dt class="property-"
             title="">
         <span id="statuses_go">
 <a href="#statuses_go" style="color: inherit; text-decoration: inherit;">Statuses</a>
@@ -1096,14 +1018,11 @@ All [input](#inputs) properties are implicitly available as output properties. A
         <span class="property-type"><a href="#jobstatus">[]Job<wbr>Status</a></span>
     </dt>
     <dd>{{% md %}}The status of the job.
-{{% /md %}}</dd>
-</dl>
+{{% /md %}}</dd></dl>
 {{% /choosable %}}
 
 {{% choosable language nodejs %}}
-<dl class="resources-properties">
-
-    <dt class="property-"
+<dl class="resources-properties"><dt class="property-"
             title="">
         <span id="drivercontrolsfilesuri_nodejs">
 <a href="#drivercontrolsfilesuri_nodejs" style="color: inherit; text-decoration: inherit;">driver<wbr>Controls<wbr>Files<wbr>Uri</a>
@@ -1112,8 +1031,7 @@ All [input](#inputs) properties are implicitly available as output properties. A
         <span class="property-type">string</span>
     </dt>
     <dd>{{% md %}}If present, the location of miscellaneous control files which may be used as part of job setup and handling. If not present, control files may be placed in the same location as driver_output_uri.
-{{% /md %}}</dd>
-    <dt class="property-"
+{{% /md %}}</dd><dt class="property-"
             title="">
         <span id="driveroutputresourceuri_nodejs">
 <a href="#driveroutputresourceuri_nodejs" style="color: inherit; text-decoration: inherit;">driver<wbr>Output<wbr>Resource<wbr>Uri</a>
@@ -1122,8 +1040,7 @@ All [input](#inputs) properties are implicitly available as output properties. A
         <span class="property-type">string</span>
     </dt>
     <dd>{{% md %}}A URI pointing to the location of the stdout of the job's driver program.
-{{% /md %}}</dd>
-    <dt class="property-"
+{{% /md %}}</dd><dt class="property-"
             title="">
         <span id="id_nodejs">
 <a href="#id_nodejs" style="color: inherit; text-decoration: inherit;">id</a>
@@ -1131,8 +1048,7 @@ All [input](#inputs) properties are implicitly available as output properties. A
         <span class="property-indicator"></span>
         <span class="property-type">string</span>
     </dt>
-    <dd>{{% md %}}The provider-assigned unique ID for this managed resource.{{% /md %}}</dd>
-    <dt class="property-"
+    <dd>{{% md %}}The provider-assigned unique ID for this managed resource.{{% /md %}}</dd><dt class="property-"
             title="">
         <span id="statuses_nodejs">
 <a href="#statuses_nodejs" style="color: inherit; text-decoration: inherit;">statuses</a>
@@ -1141,14 +1057,11 @@ All [input](#inputs) properties are implicitly available as output properties. A
         <span class="property-type"><a href="#jobstatus">Job<wbr>Status[]</a></span>
     </dt>
     <dd>{{% md %}}The status of the job.
-{{% /md %}}</dd>
-</dl>
+{{% /md %}}</dd></dl>
 {{% /choosable %}}
 
 {{% choosable language python %}}
-<dl class="resources-properties">
-
-    <dt class="property-"
+<dl class="resources-properties"><dt class="property-"
             title="">
         <span id="driver_controls_files_uri_python">
 <a href="#driver_controls_files_uri_python" style="color: inherit; text-decoration: inherit;">driver_<wbr>controls_<wbr>files_<wbr>uri</a>
@@ -1157,8 +1070,7 @@ All [input](#inputs) properties are implicitly available as output properties. A
         <span class="property-type">str</span>
     </dt>
     <dd>{{% md %}}If present, the location of miscellaneous control files which may be used as part of job setup and handling. If not present, control files may be placed in the same location as driver_output_uri.
-{{% /md %}}</dd>
-    <dt class="property-"
+{{% /md %}}</dd><dt class="property-"
             title="">
         <span id="driver_output_resource_uri_python">
 <a href="#driver_output_resource_uri_python" style="color: inherit; text-decoration: inherit;">driver_<wbr>output_<wbr>resource_<wbr>uri</a>
@@ -1167,8 +1079,7 @@ All [input](#inputs) properties are implicitly available as output properties. A
         <span class="property-type">str</span>
     </dt>
     <dd>{{% md %}}A URI pointing to the location of the stdout of the job's driver program.
-{{% /md %}}</dd>
-    <dt class="property-"
+{{% /md %}}</dd><dt class="property-"
             title="">
         <span id="id_python">
 <a href="#id_python" style="color: inherit; text-decoration: inherit;">id</a>
@@ -1176,8 +1087,7 @@ All [input](#inputs) properties are implicitly available as output properties. A
         <span class="property-indicator"></span>
         <span class="property-type">str</span>
     </dt>
-    <dd>{{% md %}}The provider-assigned unique ID for this managed resource.{{% /md %}}</dd>
-    <dt class="property-"
+    <dd>{{% md %}}The provider-assigned unique ID for this managed resource.{{% /md %}}</dd><dt class="property-"
             title="">
         <span id="statuses_python">
 <a href="#statuses_python" style="color: inherit; text-decoration: inherit;">statuses</a>
@@ -1186,8 +1096,7 @@ All [input](#inputs) properties are implicitly available as output properties. A
         <span class="property-type"><a href="#jobstatus">Sequence[Job<wbr>Status]</a></span>
     </dt>
     <dd>{{% md %}}The status of the job.
-{{% /md %}}</dd>
-</dl>
+{{% /md %}}</dd></dl>
 {{% /choosable %}}
 
 
@@ -1314,9 +1223,7 @@ The following state arguments are supported:
 
 
 {{% choosable language csharp %}}
-<dl class="resources-properties">
-
-    <dt class="property-optional"
+<dl class="resources-properties"><dt class="property-optional"
             title="Optional">
         <span id="state_drivercontrolsfilesuri_csharp">
 <a href="#state_drivercontrolsfilesuri_csharp" style="color: inherit; text-decoration: inherit;">Driver<wbr>Controls<wbr>Files<wbr>Uri</a>
@@ -1325,8 +1232,7 @@ The following state arguments are supported:
         <span class="property-type">string</span>
     </dt>
     <dd>{{% md %}}If present, the location of miscellaneous control files which may be used as part of job setup and handling. If not present, control files may be placed in the same location as driver_output_uri.
-{{% /md %}}</dd>
-    <dt class="property-optional"
+{{% /md %}}</dd><dt class="property-optional"
             title="Optional">
         <span id="state_driveroutputresourceuri_csharp">
 <a href="#state_driveroutputresourceuri_csharp" style="color: inherit; text-decoration: inherit;">Driver<wbr>Output<wbr>Resource<wbr>Uri</a>
@@ -1335,8 +1241,7 @@ The following state arguments are supported:
         <span class="property-type">string</span>
     </dt>
     <dd>{{% md %}}A URI pointing to the location of the stdout of the job's driver program.
-{{% /md %}}</dd>
-    <dt class="property-optional"
+{{% /md %}}</dd><dt class="property-optional"
             title="Optional">
         <span id="state_forcedelete_csharp">
 <a href="#state_forcedelete_csharp" style="color: inherit; text-decoration: inherit;">Force<wbr>Delete</a>
@@ -1347,8 +1252,7 @@ The following state arguments are supported:
     <dd>{{% md %}}By default, you can only delete inactive jobs within
 Dataproc. Setting this to true, and calling destroy, will ensure that the
 job is first cancelled before issuing the delete.
-{{% /md %}}</dd>
-    <dt class="property-optional"
+{{% /md %}}</dd><dt class="property-optional"
             title="Optional">
         <span id="state_hadoopconfig_csharp">
 <a href="#state_hadoopconfig_csharp" style="color: inherit; text-decoration: inherit;">Hadoop<wbr>Config</a>
@@ -1357,8 +1261,7 @@ job is first cancelled before issuing the delete.
         <span class="property-type"><a href="#jobhadoopconfig">Job<wbr>Hadoop<wbr>Config<wbr>Args</a></span>
     </dt>
     <dd>{{% md %}}The config of Hadoop job
-{{% /md %}}</dd>
-    <dt class="property-optional"
+{{% /md %}}</dd><dt class="property-optional"
             title="Optional">
         <span id="state_hiveconfig_csharp">
 <a href="#state_hiveconfig_csharp" style="color: inherit; text-decoration: inherit;">Hive<wbr>Config</a>
@@ -1367,8 +1270,7 @@ job is first cancelled before issuing the delete.
         <span class="property-type"><a href="#jobhiveconfig">Job<wbr>Hive<wbr>Config<wbr>Args</a></span>
     </dt>
     <dd>{{% md %}}The config of hive job
-{{% /md %}}</dd>
-    <dt class="property-optional"
+{{% /md %}}</dd><dt class="property-optional"
             title="Optional">
         <span id="state_labels_csharp">
 <a href="#state_labels_csharp" style="color: inherit; text-decoration: inherit;">Labels</a>
@@ -1377,8 +1279,7 @@ job is first cancelled before issuing the delete.
         <span class="property-type">Dictionary&lt;string, string&gt;</span>
     </dt>
     <dd>{{% md %}}The list of labels (key/value pairs) to add to the job.
-{{% /md %}}</dd>
-    <dt class="property-optional"
+{{% /md %}}</dd><dt class="property-optional"
             title="Optional">
         <span id="state_pigconfig_csharp">
 <a href="#state_pigconfig_csharp" style="color: inherit; text-decoration: inherit;">Pig<wbr>Config</a>
@@ -1387,8 +1288,7 @@ job is first cancelled before issuing the delete.
         <span class="property-type"><a href="#jobpigconfig">Job<wbr>Pig<wbr>Config<wbr>Args</a></span>
     </dt>
     <dd>{{% md %}}The config of pag job.
-{{% /md %}}</dd>
-    <dt class="property-optional"
+{{% /md %}}</dd><dt class="property-optional"
             title="Optional">
         <span id="state_placement_csharp">
 <a href="#state_placement_csharp" style="color: inherit; text-decoration: inherit;">Placement</a>
@@ -1397,8 +1297,7 @@ job is first cancelled before issuing the delete.
         <span class="property-type"><a href="#jobplacement">Job<wbr>Placement<wbr>Args</a></span>
     </dt>
     <dd>{{% md %}}The config of job placement.
-{{% /md %}}</dd>
-    <dt class="property-optional"
+{{% /md %}}</dd><dt class="property-optional"
             title="Optional">
         <span id="state_project_csharp">
 <a href="#state_project_csharp" style="color: inherit; text-decoration: inherit;">Project</a>
@@ -1408,8 +1307,7 @@ job is first cancelled before issuing the delete.
     </dt>
     <dd>{{% md %}}The project in which the `cluster` can be found and jobs
 subsequently run against. If it is not provided, the provider project is used.
-{{% /md %}}</dd>
-    <dt class="property-optional"
+{{% /md %}}</dd><dt class="property-optional"
             title="Optional">
         <span id="state_pysparkconfig_csharp">
 <a href="#state_pysparkconfig_csharp" style="color: inherit; text-decoration: inherit;">Pyspark<wbr>Config</a>
@@ -1418,8 +1316,7 @@ subsequently run against. If it is not provided, the provider project is used.
         <span class="property-type"><a href="#jobpysparkconfig">Job<wbr>Pyspark<wbr>Config<wbr>Args</a></span>
     </dt>
     <dd>{{% md %}}The config of pySpark job.
-{{% /md %}}</dd>
-    <dt class="property-optional"
+{{% /md %}}</dd><dt class="property-optional"
             title="Optional">
         <span id="state_reference_csharp">
 <a href="#state_reference_csharp" style="color: inherit; text-decoration: inherit;">Reference</a>
@@ -1428,8 +1325,7 @@ subsequently run against. If it is not provided, the provider project is used.
         <span class="property-type"><a href="#jobreference">Job<wbr>Reference<wbr>Args</a></span>
     </dt>
     <dd>{{% md %}}The reference of the job
-{{% /md %}}</dd>
-    <dt class="property-optional"
+{{% /md %}}</dd><dt class="property-optional"
             title="Optional">
         <span id="state_region_csharp">
 <a href="#state_region_csharp" style="color: inherit; text-decoration: inherit;">Region</a>
@@ -1439,8 +1335,7 @@ subsequently run against. If it is not provided, the provider project is used.
     </dt>
     <dd>{{% md %}}The Cloud Dataproc region. This essentially determines which clusters are available
 for this job to be submitted to. If not specified, defaults to `global`.
-{{% /md %}}</dd>
-    <dt class="property-optional"
+{{% /md %}}</dd><dt class="property-optional"
             title="Optional">
         <span id="state_scheduling_csharp">
 <a href="#state_scheduling_csharp" style="color: inherit; text-decoration: inherit;">Scheduling</a>
@@ -1449,8 +1344,7 @@ for this job to be submitted to. If not specified, defaults to `global`.
         <span class="property-type"><a href="#jobscheduling">Job<wbr>Scheduling<wbr>Args</a></span>
     </dt>
     <dd>{{% md %}}Optional. Job scheduling configuration.
-{{% /md %}}</dd>
-    <dt class="property-optional"
+{{% /md %}}</dd><dt class="property-optional"
             title="Optional">
         <span id="state_sparkconfig_csharp">
 <a href="#state_sparkconfig_csharp" style="color: inherit; text-decoration: inherit;">Spark<wbr>Config</a>
@@ -1459,8 +1353,7 @@ for this job to be submitted to. If not specified, defaults to `global`.
         <span class="property-type"><a href="#jobsparkconfig">Job<wbr>Spark<wbr>Config<wbr>Args</a></span>
     </dt>
     <dd>{{% md %}}The config of the Spark job.
-{{% /md %}}</dd>
-    <dt class="property-optional"
+{{% /md %}}</dd><dt class="property-optional"
             title="Optional">
         <span id="state_sparksqlconfig_csharp">
 <a href="#state_sparksqlconfig_csharp" style="color: inherit; text-decoration: inherit;">Sparksql<wbr>Config</a>
@@ -1469,8 +1362,7 @@ for this job to be submitted to. If not specified, defaults to `global`.
         <span class="property-type"><a href="#jobsparksqlconfig">Job<wbr>Sparksql<wbr>Config<wbr>Args</a></span>
     </dt>
     <dd>{{% md %}}The config of SparkSql job
-{{% /md %}}</dd>
-    <dt class="property-optional"
+{{% /md %}}</dd><dt class="property-optional"
             title="Optional">
         <span id="state_statuses_csharp">
 <a href="#state_statuses_csharp" style="color: inherit; text-decoration: inherit;">Statuses</a>
@@ -1479,14 +1371,11 @@ for this job to be submitted to. If not specified, defaults to `global`.
         <span class="property-type"><a href="#jobstatus">List&lt;Job<wbr>Status<wbr>Args&gt;</a></span>
     </dt>
     <dd>{{% md %}}The status of the job.
-{{% /md %}}</dd>
-</dl>
+{{% /md %}}</dd></dl>
 {{% /choosable %}}
 
 {{% choosable language go %}}
-<dl class="resources-properties">
-
-    <dt class="property-optional"
+<dl class="resources-properties"><dt class="property-optional"
             title="Optional">
         <span id="state_drivercontrolsfilesuri_go">
 <a href="#state_drivercontrolsfilesuri_go" style="color: inherit; text-decoration: inherit;">Driver<wbr>Controls<wbr>Files<wbr>Uri</a>
@@ -1495,8 +1384,7 @@ for this job to be submitted to. If not specified, defaults to `global`.
         <span class="property-type">string</span>
     </dt>
     <dd>{{% md %}}If present, the location of miscellaneous control files which may be used as part of job setup and handling. If not present, control files may be placed in the same location as driver_output_uri.
-{{% /md %}}</dd>
-    <dt class="property-optional"
+{{% /md %}}</dd><dt class="property-optional"
             title="Optional">
         <span id="state_driveroutputresourceuri_go">
 <a href="#state_driveroutputresourceuri_go" style="color: inherit; text-decoration: inherit;">Driver<wbr>Output<wbr>Resource<wbr>Uri</a>
@@ -1505,8 +1393,7 @@ for this job to be submitted to. If not specified, defaults to `global`.
         <span class="property-type">string</span>
     </dt>
     <dd>{{% md %}}A URI pointing to the location of the stdout of the job's driver program.
-{{% /md %}}</dd>
-    <dt class="property-optional"
+{{% /md %}}</dd><dt class="property-optional"
             title="Optional">
         <span id="state_forcedelete_go">
 <a href="#state_forcedelete_go" style="color: inherit; text-decoration: inherit;">Force<wbr>Delete</a>
@@ -1517,8 +1404,7 @@ for this job to be submitted to. If not specified, defaults to `global`.
     <dd>{{% md %}}By default, you can only delete inactive jobs within
 Dataproc. Setting this to true, and calling destroy, will ensure that the
 job is first cancelled before issuing the delete.
-{{% /md %}}</dd>
-    <dt class="property-optional"
+{{% /md %}}</dd><dt class="property-optional"
             title="Optional">
         <span id="state_hadoopconfig_go">
 <a href="#state_hadoopconfig_go" style="color: inherit; text-decoration: inherit;">Hadoop<wbr>Config</a>
@@ -1527,8 +1413,7 @@ job is first cancelled before issuing the delete.
         <span class="property-type"><a href="#jobhadoopconfig">Job<wbr>Hadoop<wbr>Config</a></span>
     </dt>
     <dd>{{% md %}}The config of Hadoop job
-{{% /md %}}</dd>
-    <dt class="property-optional"
+{{% /md %}}</dd><dt class="property-optional"
             title="Optional">
         <span id="state_hiveconfig_go">
 <a href="#state_hiveconfig_go" style="color: inherit; text-decoration: inherit;">Hive<wbr>Config</a>
@@ -1537,8 +1422,7 @@ job is first cancelled before issuing the delete.
         <span class="property-type"><a href="#jobhiveconfig">Job<wbr>Hive<wbr>Config</a></span>
     </dt>
     <dd>{{% md %}}The config of hive job
-{{% /md %}}</dd>
-    <dt class="property-optional"
+{{% /md %}}</dd><dt class="property-optional"
             title="Optional">
         <span id="state_labels_go">
 <a href="#state_labels_go" style="color: inherit; text-decoration: inherit;">Labels</a>
@@ -1547,8 +1431,7 @@ job is first cancelled before issuing the delete.
         <span class="property-type">map[string]string</span>
     </dt>
     <dd>{{% md %}}The list of labels (key/value pairs) to add to the job.
-{{% /md %}}</dd>
-    <dt class="property-optional"
+{{% /md %}}</dd><dt class="property-optional"
             title="Optional">
         <span id="state_pigconfig_go">
 <a href="#state_pigconfig_go" style="color: inherit; text-decoration: inherit;">Pig<wbr>Config</a>
@@ -1557,8 +1440,7 @@ job is first cancelled before issuing the delete.
         <span class="property-type"><a href="#jobpigconfig">Job<wbr>Pig<wbr>Config</a></span>
     </dt>
     <dd>{{% md %}}The config of pag job.
-{{% /md %}}</dd>
-    <dt class="property-optional"
+{{% /md %}}</dd><dt class="property-optional"
             title="Optional">
         <span id="state_placement_go">
 <a href="#state_placement_go" style="color: inherit; text-decoration: inherit;">Placement</a>
@@ -1567,8 +1449,7 @@ job is first cancelled before issuing the delete.
         <span class="property-type"><a href="#jobplacement">Job<wbr>Placement</a></span>
     </dt>
     <dd>{{% md %}}The config of job placement.
-{{% /md %}}</dd>
-    <dt class="property-optional"
+{{% /md %}}</dd><dt class="property-optional"
             title="Optional">
         <span id="state_project_go">
 <a href="#state_project_go" style="color: inherit; text-decoration: inherit;">Project</a>
@@ -1578,8 +1459,7 @@ job is first cancelled before issuing the delete.
     </dt>
     <dd>{{% md %}}The project in which the `cluster` can be found and jobs
 subsequently run against. If it is not provided, the provider project is used.
-{{% /md %}}</dd>
-    <dt class="property-optional"
+{{% /md %}}</dd><dt class="property-optional"
             title="Optional">
         <span id="state_pysparkconfig_go">
 <a href="#state_pysparkconfig_go" style="color: inherit; text-decoration: inherit;">Pyspark<wbr>Config</a>
@@ -1588,8 +1468,7 @@ subsequently run against. If it is not provided, the provider project is used.
         <span class="property-type"><a href="#jobpysparkconfig">Job<wbr>Pyspark<wbr>Config</a></span>
     </dt>
     <dd>{{% md %}}The config of pySpark job.
-{{% /md %}}</dd>
-    <dt class="property-optional"
+{{% /md %}}</dd><dt class="property-optional"
             title="Optional">
         <span id="state_reference_go">
 <a href="#state_reference_go" style="color: inherit; text-decoration: inherit;">Reference</a>
@@ -1598,8 +1477,7 @@ subsequently run against. If it is not provided, the provider project is used.
         <span class="property-type"><a href="#jobreference">Job<wbr>Reference</a></span>
     </dt>
     <dd>{{% md %}}The reference of the job
-{{% /md %}}</dd>
-    <dt class="property-optional"
+{{% /md %}}</dd><dt class="property-optional"
             title="Optional">
         <span id="state_region_go">
 <a href="#state_region_go" style="color: inherit; text-decoration: inherit;">Region</a>
@@ -1609,8 +1487,7 @@ subsequently run against. If it is not provided, the provider project is used.
     </dt>
     <dd>{{% md %}}The Cloud Dataproc region. This essentially determines which clusters are available
 for this job to be submitted to. If not specified, defaults to `global`.
-{{% /md %}}</dd>
-    <dt class="property-optional"
+{{% /md %}}</dd><dt class="property-optional"
             title="Optional">
         <span id="state_scheduling_go">
 <a href="#state_scheduling_go" style="color: inherit; text-decoration: inherit;">Scheduling</a>
@@ -1619,8 +1496,7 @@ for this job to be submitted to. If not specified, defaults to `global`.
         <span class="property-type"><a href="#jobscheduling">Job<wbr>Scheduling</a></span>
     </dt>
     <dd>{{% md %}}Optional. Job scheduling configuration.
-{{% /md %}}</dd>
-    <dt class="property-optional"
+{{% /md %}}</dd><dt class="property-optional"
             title="Optional">
         <span id="state_sparkconfig_go">
 <a href="#state_sparkconfig_go" style="color: inherit; text-decoration: inherit;">Spark<wbr>Config</a>
@@ -1629,8 +1505,7 @@ for this job to be submitted to. If not specified, defaults to `global`.
         <span class="property-type"><a href="#jobsparkconfig">Job<wbr>Spark<wbr>Config</a></span>
     </dt>
     <dd>{{% md %}}The config of the Spark job.
-{{% /md %}}</dd>
-    <dt class="property-optional"
+{{% /md %}}</dd><dt class="property-optional"
             title="Optional">
         <span id="state_sparksqlconfig_go">
 <a href="#state_sparksqlconfig_go" style="color: inherit; text-decoration: inherit;">Sparksql<wbr>Config</a>
@@ -1639,8 +1514,7 @@ for this job to be submitted to. If not specified, defaults to `global`.
         <span class="property-type"><a href="#jobsparksqlconfig">Job<wbr>Sparksql<wbr>Config</a></span>
     </dt>
     <dd>{{% md %}}The config of SparkSql job
-{{% /md %}}</dd>
-    <dt class="property-optional"
+{{% /md %}}</dd><dt class="property-optional"
             title="Optional">
         <span id="state_statuses_go">
 <a href="#state_statuses_go" style="color: inherit; text-decoration: inherit;">Statuses</a>
@@ -1649,14 +1523,11 @@ for this job to be submitted to. If not specified, defaults to `global`.
         <span class="property-type"><a href="#jobstatus">[]Job<wbr>Status</a></span>
     </dt>
     <dd>{{% md %}}The status of the job.
-{{% /md %}}</dd>
-</dl>
+{{% /md %}}</dd></dl>
 {{% /choosable %}}
 
 {{% choosable language nodejs %}}
-<dl class="resources-properties">
-
-    <dt class="property-optional"
+<dl class="resources-properties"><dt class="property-optional"
             title="Optional">
         <span id="state_drivercontrolsfilesuri_nodejs">
 <a href="#state_drivercontrolsfilesuri_nodejs" style="color: inherit; text-decoration: inherit;">driver<wbr>Controls<wbr>Files<wbr>Uri</a>
@@ -1665,8 +1536,7 @@ for this job to be submitted to. If not specified, defaults to `global`.
         <span class="property-type">string</span>
     </dt>
     <dd>{{% md %}}If present, the location of miscellaneous control files which may be used as part of job setup and handling. If not present, control files may be placed in the same location as driver_output_uri.
-{{% /md %}}</dd>
-    <dt class="property-optional"
+{{% /md %}}</dd><dt class="property-optional"
             title="Optional">
         <span id="state_driveroutputresourceuri_nodejs">
 <a href="#state_driveroutputresourceuri_nodejs" style="color: inherit; text-decoration: inherit;">driver<wbr>Output<wbr>Resource<wbr>Uri</a>
@@ -1675,8 +1545,7 @@ for this job to be submitted to. If not specified, defaults to `global`.
         <span class="property-type">string</span>
     </dt>
     <dd>{{% md %}}A URI pointing to the location of the stdout of the job's driver program.
-{{% /md %}}</dd>
-    <dt class="property-optional"
+{{% /md %}}</dd><dt class="property-optional"
             title="Optional">
         <span id="state_forcedelete_nodejs">
 <a href="#state_forcedelete_nodejs" style="color: inherit; text-decoration: inherit;">force<wbr>Delete</a>
@@ -1687,8 +1556,7 @@ for this job to be submitted to. If not specified, defaults to `global`.
     <dd>{{% md %}}By default, you can only delete inactive jobs within
 Dataproc. Setting this to true, and calling destroy, will ensure that the
 job is first cancelled before issuing the delete.
-{{% /md %}}</dd>
-    <dt class="property-optional"
+{{% /md %}}</dd><dt class="property-optional"
             title="Optional">
         <span id="state_hadoopconfig_nodejs">
 <a href="#state_hadoopconfig_nodejs" style="color: inherit; text-decoration: inherit;">hadoop<wbr>Config</a>
@@ -1697,8 +1565,7 @@ job is first cancelled before issuing the delete.
         <span class="property-type"><a href="#jobhadoopconfig">Job<wbr>Hadoop<wbr>Config</a></span>
     </dt>
     <dd>{{% md %}}The config of Hadoop job
-{{% /md %}}</dd>
-    <dt class="property-optional"
+{{% /md %}}</dd><dt class="property-optional"
             title="Optional">
         <span id="state_hiveconfig_nodejs">
 <a href="#state_hiveconfig_nodejs" style="color: inherit; text-decoration: inherit;">hive<wbr>Config</a>
@@ -1707,8 +1574,7 @@ job is first cancelled before issuing the delete.
         <span class="property-type"><a href="#jobhiveconfig">Job<wbr>Hive<wbr>Config</a></span>
     </dt>
     <dd>{{% md %}}The config of hive job
-{{% /md %}}</dd>
-    <dt class="property-optional"
+{{% /md %}}</dd><dt class="property-optional"
             title="Optional">
         <span id="state_labels_nodejs">
 <a href="#state_labels_nodejs" style="color: inherit; text-decoration: inherit;">labels</a>
@@ -1717,8 +1583,7 @@ job is first cancelled before issuing the delete.
         <span class="property-type">{[key: string]: string}</span>
     </dt>
     <dd>{{% md %}}The list of labels (key/value pairs) to add to the job.
-{{% /md %}}</dd>
-    <dt class="property-optional"
+{{% /md %}}</dd><dt class="property-optional"
             title="Optional">
         <span id="state_pigconfig_nodejs">
 <a href="#state_pigconfig_nodejs" style="color: inherit; text-decoration: inherit;">pig<wbr>Config</a>
@@ -1727,8 +1592,7 @@ job is first cancelled before issuing the delete.
         <span class="property-type"><a href="#jobpigconfig">Job<wbr>Pig<wbr>Config</a></span>
     </dt>
     <dd>{{% md %}}The config of pag job.
-{{% /md %}}</dd>
-    <dt class="property-optional"
+{{% /md %}}</dd><dt class="property-optional"
             title="Optional">
         <span id="state_placement_nodejs">
 <a href="#state_placement_nodejs" style="color: inherit; text-decoration: inherit;">placement</a>
@@ -1737,8 +1601,7 @@ job is first cancelled before issuing the delete.
         <span class="property-type"><a href="#jobplacement">Job<wbr>Placement</a></span>
     </dt>
     <dd>{{% md %}}The config of job placement.
-{{% /md %}}</dd>
-    <dt class="property-optional"
+{{% /md %}}</dd><dt class="property-optional"
             title="Optional">
         <span id="state_project_nodejs">
 <a href="#state_project_nodejs" style="color: inherit; text-decoration: inherit;">project</a>
@@ -1748,8 +1611,7 @@ job is first cancelled before issuing the delete.
     </dt>
     <dd>{{% md %}}The project in which the `cluster` can be found and jobs
 subsequently run against. If it is not provided, the provider project is used.
-{{% /md %}}</dd>
-    <dt class="property-optional"
+{{% /md %}}</dd><dt class="property-optional"
             title="Optional">
         <span id="state_pysparkconfig_nodejs">
 <a href="#state_pysparkconfig_nodejs" style="color: inherit; text-decoration: inherit;">pyspark<wbr>Config</a>
@@ -1758,8 +1620,7 @@ subsequently run against. If it is not provided, the provider project is used.
         <span class="property-type"><a href="#jobpysparkconfig">Job<wbr>Pyspark<wbr>Config</a></span>
     </dt>
     <dd>{{% md %}}The config of pySpark job.
-{{% /md %}}</dd>
-    <dt class="property-optional"
+{{% /md %}}</dd><dt class="property-optional"
             title="Optional">
         <span id="state_reference_nodejs">
 <a href="#state_reference_nodejs" style="color: inherit; text-decoration: inherit;">reference</a>
@@ -1768,8 +1629,7 @@ subsequently run against. If it is not provided, the provider project is used.
         <span class="property-type"><a href="#jobreference">Job<wbr>Reference</a></span>
     </dt>
     <dd>{{% md %}}The reference of the job
-{{% /md %}}</dd>
-    <dt class="property-optional"
+{{% /md %}}</dd><dt class="property-optional"
             title="Optional">
         <span id="state_region_nodejs">
 <a href="#state_region_nodejs" style="color: inherit; text-decoration: inherit;">region</a>
@@ -1779,8 +1639,7 @@ subsequently run against. If it is not provided, the provider project is used.
     </dt>
     <dd>{{% md %}}The Cloud Dataproc region. This essentially determines which clusters are available
 for this job to be submitted to. If not specified, defaults to `global`.
-{{% /md %}}</dd>
-    <dt class="property-optional"
+{{% /md %}}</dd><dt class="property-optional"
             title="Optional">
         <span id="state_scheduling_nodejs">
 <a href="#state_scheduling_nodejs" style="color: inherit; text-decoration: inherit;">scheduling</a>
@@ -1789,8 +1648,7 @@ for this job to be submitted to. If not specified, defaults to `global`.
         <span class="property-type"><a href="#jobscheduling">Job<wbr>Scheduling</a></span>
     </dt>
     <dd>{{% md %}}Optional. Job scheduling configuration.
-{{% /md %}}</dd>
-    <dt class="property-optional"
+{{% /md %}}</dd><dt class="property-optional"
             title="Optional">
         <span id="state_sparkconfig_nodejs">
 <a href="#state_sparkconfig_nodejs" style="color: inherit; text-decoration: inherit;">spark<wbr>Config</a>
@@ -1799,8 +1657,7 @@ for this job to be submitted to. If not specified, defaults to `global`.
         <span class="property-type"><a href="#jobsparkconfig">Job<wbr>Spark<wbr>Config</a></span>
     </dt>
     <dd>{{% md %}}The config of the Spark job.
-{{% /md %}}</dd>
-    <dt class="property-optional"
+{{% /md %}}</dd><dt class="property-optional"
             title="Optional">
         <span id="state_sparksqlconfig_nodejs">
 <a href="#state_sparksqlconfig_nodejs" style="color: inherit; text-decoration: inherit;">sparksql<wbr>Config</a>
@@ -1809,8 +1666,7 @@ for this job to be submitted to. If not specified, defaults to `global`.
         <span class="property-type"><a href="#jobsparksqlconfig">Job<wbr>Sparksql<wbr>Config</a></span>
     </dt>
     <dd>{{% md %}}The config of SparkSql job
-{{% /md %}}</dd>
-    <dt class="property-optional"
+{{% /md %}}</dd><dt class="property-optional"
             title="Optional">
         <span id="state_statuses_nodejs">
 <a href="#state_statuses_nodejs" style="color: inherit; text-decoration: inherit;">statuses</a>
@@ -1819,14 +1675,11 @@ for this job to be submitted to. If not specified, defaults to `global`.
         <span class="property-type"><a href="#jobstatus">Job<wbr>Status[]</a></span>
     </dt>
     <dd>{{% md %}}The status of the job.
-{{% /md %}}</dd>
-</dl>
+{{% /md %}}</dd></dl>
 {{% /choosable %}}
 
 {{% choosable language python %}}
-<dl class="resources-properties">
-
-    <dt class="property-optional"
+<dl class="resources-properties"><dt class="property-optional"
             title="Optional">
         <span id="state_driver_controls_files_uri_python">
 <a href="#state_driver_controls_files_uri_python" style="color: inherit; text-decoration: inherit;">driver_<wbr>controls_<wbr>files_<wbr>uri</a>
@@ -1835,8 +1688,7 @@ for this job to be submitted to. If not specified, defaults to `global`.
         <span class="property-type">str</span>
     </dt>
     <dd>{{% md %}}If present, the location of miscellaneous control files which may be used as part of job setup and handling. If not present, control files may be placed in the same location as driver_output_uri.
-{{% /md %}}</dd>
-    <dt class="property-optional"
+{{% /md %}}</dd><dt class="property-optional"
             title="Optional">
         <span id="state_driver_output_resource_uri_python">
 <a href="#state_driver_output_resource_uri_python" style="color: inherit; text-decoration: inherit;">driver_<wbr>output_<wbr>resource_<wbr>uri</a>
@@ -1845,8 +1697,7 @@ for this job to be submitted to. If not specified, defaults to `global`.
         <span class="property-type">str</span>
     </dt>
     <dd>{{% md %}}A URI pointing to the location of the stdout of the job's driver program.
-{{% /md %}}</dd>
-    <dt class="property-optional"
+{{% /md %}}</dd><dt class="property-optional"
             title="Optional">
         <span id="state_force_delete_python">
 <a href="#state_force_delete_python" style="color: inherit; text-decoration: inherit;">force_<wbr>delete</a>
@@ -1857,8 +1708,7 @@ for this job to be submitted to. If not specified, defaults to `global`.
     <dd>{{% md %}}By default, you can only delete inactive jobs within
 Dataproc. Setting this to true, and calling destroy, will ensure that the
 job is first cancelled before issuing the delete.
-{{% /md %}}</dd>
-    <dt class="property-optional"
+{{% /md %}}</dd><dt class="property-optional"
             title="Optional">
         <span id="state_hadoop_config_python">
 <a href="#state_hadoop_config_python" style="color: inherit; text-decoration: inherit;">hadoop_<wbr>config</a>
@@ -1867,8 +1717,7 @@ job is first cancelled before issuing the delete.
         <span class="property-type"><a href="#jobhadoopconfig">Job<wbr>Hadoop<wbr>Config<wbr>Args</a></span>
     </dt>
     <dd>{{% md %}}The config of Hadoop job
-{{% /md %}}</dd>
-    <dt class="property-optional"
+{{% /md %}}</dd><dt class="property-optional"
             title="Optional">
         <span id="state_hive_config_python">
 <a href="#state_hive_config_python" style="color: inherit; text-decoration: inherit;">hive_<wbr>config</a>
@@ -1877,8 +1726,7 @@ job is first cancelled before issuing the delete.
         <span class="property-type"><a href="#jobhiveconfig">Job<wbr>Hive<wbr>Config<wbr>Args</a></span>
     </dt>
     <dd>{{% md %}}The config of hive job
-{{% /md %}}</dd>
-    <dt class="property-optional"
+{{% /md %}}</dd><dt class="property-optional"
             title="Optional">
         <span id="state_labels_python">
 <a href="#state_labels_python" style="color: inherit; text-decoration: inherit;">labels</a>
@@ -1887,8 +1735,7 @@ job is first cancelled before issuing the delete.
         <span class="property-type">Mapping[str, str]</span>
     </dt>
     <dd>{{% md %}}The list of labels (key/value pairs) to add to the job.
-{{% /md %}}</dd>
-    <dt class="property-optional"
+{{% /md %}}</dd><dt class="property-optional"
             title="Optional">
         <span id="state_pig_config_python">
 <a href="#state_pig_config_python" style="color: inherit; text-decoration: inherit;">pig_<wbr>config</a>
@@ -1897,8 +1744,7 @@ job is first cancelled before issuing the delete.
         <span class="property-type"><a href="#jobpigconfig">Job<wbr>Pig<wbr>Config<wbr>Args</a></span>
     </dt>
     <dd>{{% md %}}The config of pag job.
-{{% /md %}}</dd>
-    <dt class="property-optional"
+{{% /md %}}</dd><dt class="property-optional"
             title="Optional">
         <span id="state_placement_python">
 <a href="#state_placement_python" style="color: inherit; text-decoration: inherit;">placement</a>
@@ -1907,8 +1753,7 @@ job is first cancelled before issuing the delete.
         <span class="property-type"><a href="#jobplacement">Job<wbr>Placement<wbr>Args</a></span>
     </dt>
     <dd>{{% md %}}The config of job placement.
-{{% /md %}}</dd>
-    <dt class="property-optional"
+{{% /md %}}</dd><dt class="property-optional"
             title="Optional">
         <span id="state_project_python">
 <a href="#state_project_python" style="color: inherit; text-decoration: inherit;">project</a>
@@ -1918,8 +1763,7 @@ job is first cancelled before issuing the delete.
     </dt>
     <dd>{{% md %}}The project in which the `cluster` can be found and jobs
 subsequently run against. If it is not provided, the provider project is used.
-{{% /md %}}</dd>
-    <dt class="property-optional"
+{{% /md %}}</dd><dt class="property-optional"
             title="Optional">
         <span id="state_pyspark_config_python">
 <a href="#state_pyspark_config_python" style="color: inherit; text-decoration: inherit;">pyspark_<wbr>config</a>
@@ -1928,8 +1772,7 @@ subsequently run against. If it is not provided, the provider project is used.
         <span class="property-type"><a href="#jobpysparkconfig">Job<wbr>Pyspark<wbr>Config<wbr>Args</a></span>
     </dt>
     <dd>{{% md %}}The config of pySpark job.
-{{% /md %}}</dd>
-    <dt class="property-optional"
+{{% /md %}}</dd><dt class="property-optional"
             title="Optional">
         <span id="state_reference_python">
 <a href="#state_reference_python" style="color: inherit; text-decoration: inherit;">reference</a>
@@ -1938,8 +1781,7 @@ subsequently run against. If it is not provided, the provider project is used.
         <span class="property-type"><a href="#jobreference">Job<wbr>Reference<wbr>Args</a></span>
     </dt>
     <dd>{{% md %}}The reference of the job
-{{% /md %}}</dd>
-    <dt class="property-optional"
+{{% /md %}}</dd><dt class="property-optional"
             title="Optional">
         <span id="state_region_python">
 <a href="#state_region_python" style="color: inherit; text-decoration: inherit;">region</a>
@@ -1949,8 +1791,7 @@ subsequently run against. If it is not provided, the provider project is used.
     </dt>
     <dd>{{% md %}}The Cloud Dataproc region. This essentially determines which clusters are available
 for this job to be submitted to. If not specified, defaults to `global`.
-{{% /md %}}</dd>
-    <dt class="property-optional"
+{{% /md %}}</dd><dt class="property-optional"
             title="Optional">
         <span id="state_scheduling_python">
 <a href="#state_scheduling_python" style="color: inherit; text-decoration: inherit;">scheduling</a>
@@ -1959,8 +1800,7 @@ for this job to be submitted to. If not specified, defaults to `global`.
         <span class="property-type"><a href="#jobscheduling">Job<wbr>Scheduling<wbr>Args</a></span>
     </dt>
     <dd>{{% md %}}Optional. Job scheduling configuration.
-{{% /md %}}</dd>
-    <dt class="property-optional"
+{{% /md %}}</dd><dt class="property-optional"
             title="Optional">
         <span id="state_spark_config_python">
 <a href="#state_spark_config_python" style="color: inherit; text-decoration: inherit;">spark_<wbr>config</a>
@@ -1969,8 +1809,7 @@ for this job to be submitted to. If not specified, defaults to `global`.
         <span class="property-type"><a href="#jobsparkconfig">Job<wbr>Spark<wbr>Config<wbr>Args</a></span>
     </dt>
     <dd>{{% md %}}The config of the Spark job.
-{{% /md %}}</dd>
-    <dt class="property-optional"
+{{% /md %}}</dd><dt class="property-optional"
             title="Optional">
         <span id="state_sparksql_config_python">
 <a href="#state_sparksql_config_python" style="color: inherit; text-decoration: inherit;">sparksql_<wbr>config</a>
@@ -1979,8 +1818,7 @@ for this job to be submitted to. If not specified, defaults to `global`.
         <span class="property-type"><a href="#jobsparksqlconfig">Job<wbr>Sparksql<wbr>Config<wbr>Args</a></span>
     </dt>
     <dd>{{% md %}}The config of SparkSql job
-{{% /md %}}</dd>
-    <dt class="property-optional"
+{{% /md %}}</dd><dt class="property-optional"
             title="Optional">
         <span id="state_statuses_python">
 <a href="#state_statuses_python" style="color: inherit; text-decoration: inherit;">statuses</a>
@@ -1989,8 +1827,7 @@ for this job to be submitted to. If not specified, defaults to `global`.
         <span class="property-type"><a href="#jobstatus">Sequence[Job<wbr>Status<wbr>Args]</a></span>
     </dt>
     <dd>{{% md %}}The status of the job.
-{{% /md %}}</dd>
-</dl>
+{{% /md %}}</dd></dl>
 {{% /choosable %}}
 
 
@@ -2005,9 +1842,7 @@ for this job to be submitted to. If not specified, defaults to `global`.
 <h4 id="jobhadoopconfig">Job<wbr>Hadoop<wbr>Config</h4>
 
 {{% choosable language csharp %}}
-<dl class="resources-properties">
-
-    <dt class="property-optional"
+<dl class="resources-properties"><dt class="property-optional"
             title="Optional">
         <span id="archiveuris_csharp">
 <a href="#archiveuris_csharp" style="color: inherit; text-decoration: inherit;">Archive<wbr>Uris</a>
@@ -2016,8 +1851,7 @@ for this job to be submitted to. If not specified, defaults to `global`.
         <span class="property-type">List&lt;string&gt;</span>
     </dt>
     <dd>{{% md %}}HCFS URIs of archives to be extracted in the working directory of .jar, .tar, .tar.gz, .tgz, and .zip.
-{{% /md %}}</dd>
-    <dt class="property-optional"
+{{% /md %}}</dd><dt class="property-optional"
             title="Optional">
         <span id="args_csharp">
 <a href="#args_csharp" style="color: inherit; text-decoration: inherit;">Args</a>
@@ -2026,8 +1860,7 @@ for this job to be submitted to. If not specified, defaults to `global`.
         <span class="property-type">List&lt;string&gt;</span>
     </dt>
     <dd>{{% md %}}The arguments to pass to the driver. Do not include arguments, such as -libjars or -Dfoo=bar, that can be set as job properties, since a collision may occur that causes an incorrect job submission.
-{{% /md %}}</dd>
-    <dt class="property-optional"
+{{% /md %}}</dd><dt class="property-optional"
             title="Optional">
         <span id="fileuris_csharp">
 <a href="#fileuris_csharp" style="color: inherit; text-decoration: inherit;">File<wbr>Uris</a>
@@ -2036,8 +1869,7 @@ for this job to be submitted to. If not specified, defaults to `global`.
         <span class="property-type">List&lt;string&gt;</span>
     </dt>
     <dd>{{% md %}}HCFS URIs of files to be copied to the working directory of Hadoop drivers and distributed tasks. Useful for naively parallel tasks.
-{{% /md %}}</dd>
-    <dt class="property-optional"
+{{% /md %}}</dd><dt class="property-optional"
             title="Optional">
         <span id="jarfileuris_csharp">
 <a href="#jarfileuris_csharp" style="color: inherit; text-decoration: inherit;">Jar<wbr>File<wbr>Uris</a>
@@ -2046,8 +1878,7 @@ for this job to be submitted to. If not specified, defaults to `global`.
         <span class="property-type">List&lt;string&gt;</span>
     </dt>
     <dd>{{% md %}}HCFS URIs of jar files to be added to the Spark CLASSPATH.
-{{% /md %}}</dd>
-    <dt class="property-optional"
+{{% /md %}}</dd><dt class="property-optional"
             title="Optional">
         <span id="loggingconfig_csharp">
 <a href="#loggingconfig_csharp" style="color: inherit; text-decoration: inherit;">Logging<wbr>Config</a>
@@ -2055,8 +1886,7 @@ for this job to be submitted to. If not specified, defaults to `global`.
         <span class="property-indicator"></span>
         <span class="property-type"><a href="#jobhadoopconfigloggingconfig">Job<wbr>Hadoop<wbr>Config<wbr>Logging<wbr>Config<wbr>Args</a></span>
     </dt>
-    <dd>{{% md %}}{{% /md %}}</dd>
-    <dt class="property-optional"
+    <dd>{{% md %}}{{% /md %}}</dd><dt class="property-optional"
             title="Optional">
         <span id="mainclass_csharp">
 <a href="#mainclass_csharp" style="color: inherit; text-decoration: inherit;">Main<wbr>Class</a>
@@ -2065,8 +1895,7 @@ for this job to be submitted to. If not specified, defaults to `global`.
         <span class="property-type">string</span>
     </dt>
     <dd>{{% md %}}The name of the driver's main class. The jar file containing the class must be in the default CLASSPATH or specified in `jar_file_uris`. Conflicts with `main_jar_file_uri`
-{{% /md %}}</dd>
-    <dt class="property-optional"
+{{% /md %}}</dd><dt class="property-optional"
             title="Optional">
         <span id="mainjarfileuri_csharp">
 <a href="#mainjarfileuri_csharp" style="color: inherit; text-decoration: inherit;">Main<wbr>Jar<wbr>File<wbr>Uri</a>
@@ -2075,8 +1904,7 @@ for this job to be submitted to. If not specified, defaults to `global`.
         <span class="property-type">string</span>
     </dt>
     <dd>{{% md %}}The HCFS URI of the jar file containing the main class. Examples: 'gs://foo-bucket/analytics-binaries/extract-useful-metrics-mr.jar' 'hdfs:/tmp/test-samples/custom-wordcount.jar' 'file:///home/usr/lib/hadoop-mapreduce/hadoop-mapreduce-examples.jar'. Conflicts with `main_class`
-{{% /md %}}</dd>
-    <dt class="property-optional"
+{{% /md %}}</dd><dt class="property-optional"
             title="Optional">
         <span id="properties_csharp">
 <a href="#properties_csharp" style="color: inherit; text-decoration: inherit;">Properties</a>
@@ -2085,14 +1913,11 @@ for this job to be submitted to. If not specified, defaults to `global`.
         <span class="property-type">Dictionary&lt;string, string&gt;</span>
     </dt>
     <dd>{{% md %}}A mapping of property names to values, used to configure Spark SQL's SparkConf. Properties that conflict with values set by the Cloud Dataproc API may be overwritten.
-{{% /md %}}</dd>
-</dl>
+{{% /md %}}</dd></dl>
 {{% /choosable %}}
 
 {{% choosable language go %}}
-<dl class="resources-properties">
-
-    <dt class="property-optional"
+<dl class="resources-properties"><dt class="property-optional"
             title="Optional">
         <span id="archiveuris_go">
 <a href="#archiveuris_go" style="color: inherit; text-decoration: inherit;">Archive<wbr>Uris</a>
@@ -2101,8 +1926,7 @@ for this job to be submitted to. If not specified, defaults to `global`.
         <span class="property-type">[]string</span>
     </dt>
     <dd>{{% md %}}HCFS URIs of archives to be extracted in the working directory of .jar, .tar, .tar.gz, .tgz, and .zip.
-{{% /md %}}</dd>
-    <dt class="property-optional"
+{{% /md %}}</dd><dt class="property-optional"
             title="Optional">
         <span id="args_go">
 <a href="#args_go" style="color: inherit; text-decoration: inherit;">Args</a>
@@ -2111,8 +1935,7 @@ for this job to be submitted to. If not specified, defaults to `global`.
         <span class="property-type">[]string</span>
     </dt>
     <dd>{{% md %}}The arguments to pass to the driver. Do not include arguments, such as -libjars or -Dfoo=bar, that can be set as job properties, since a collision may occur that causes an incorrect job submission.
-{{% /md %}}</dd>
-    <dt class="property-optional"
+{{% /md %}}</dd><dt class="property-optional"
             title="Optional">
         <span id="fileuris_go">
 <a href="#fileuris_go" style="color: inherit; text-decoration: inherit;">File<wbr>Uris</a>
@@ -2121,8 +1944,7 @@ for this job to be submitted to. If not specified, defaults to `global`.
         <span class="property-type">[]string</span>
     </dt>
     <dd>{{% md %}}HCFS URIs of files to be copied to the working directory of Hadoop drivers and distributed tasks. Useful for naively parallel tasks.
-{{% /md %}}</dd>
-    <dt class="property-optional"
+{{% /md %}}</dd><dt class="property-optional"
             title="Optional">
         <span id="jarfileuris_go">
 <a href="#jarfileuris_go" style="color: inherit; text-decoration: inherit;">Jar<wbr>File<wbr>Uris</a>
@@ -2131,8 +1953,7 @@ for this job to be submitted to. If not specified, defaults to `global`.
         <span class="property-type">[]string</span>
     </dt>
     <dd>{{% md %}}HCFS URIs of jar files to be added to the Spark CLASSPATH.
-{{% /md %}}</dd>
-    <dt class="property-optional"
+{{% /md %}}</dd><dt class="property-optional"
             title="Optional">
         <span id="loggingconfig_go">
 <a href="#loggingconfig_go" style="color: inherit; text-decoration: inherit;">Logging<wbr>Config</a>
@@ -2140,8 +1961,7 @@ for this job to be submitted to. If not specified, defaults to `global`.
         <span class="property-indicator"></span>
         <span class="property-type"><a href="#jobhadoopconfigloggingconfig">Job<wbr>Hadoop<wbr>Config<wbr>Logging<wbr>Config</a></span>
     </dt>
-    <dd>{{% md %}}{{% /md %}}</dd>
-    <dt class="property-optional"
+    <dd>{{% md %}}{{% /md %}}</dd><dt class="property-optional"
             title="Optional">
         <span id="mainclass_go">
 <a href="#mainclass_go" style="color: inherit; text-decoration: inherit;">Main<wbr>Class</a>
@@ -2150,8 +1970,7 @@ for this job to be submitted to. If not specified, defaults to `global`.
         <span class="property-type">string</span>
     </dt>
     <dd>{{% md %}}The name of the driver's main class. The jar file containing the class must be in the default CLASSPATH or specified in `jar_file_uris`. Conflicts with `main_jar_file_uri`
-{{% /md %}}</dd>
-    <dt class="property-optional"
+{{% /md %}}</dd><dt class="property-optional"
             title="Optional">
         <span id="mainjarfileuri_go">
 <a href="#mainjarfileuri_go" style="color: inherit; text-decoration: inherit;">Main<wbr>Jar<wbr>File<wbr>Uri</a>
@@ -2160,8 +1979,7 @@ for this job to be submitted to. If not specified, defaults to `global`.
         <span class="property-type">string</span>
     </dt>
     <dd>{{% md %}}The HCFS URI of the jar file containing the main class. Examples: 'gs://foo-bucket/analytics-binaries/extract-useful-metrics-mr.jar' 'hdfs:/tmp/test-samples/custom-wordcount.jar' 'file:///home/usr/lib/hadoop-mapreduce/hadoop-mapreduce-examples.jar'. Conflicts with `main_class`
-{{% /md %}}</dd>
-    <dt class="property-optional"
+{{% /md %}}</dd><dt class="property-optional"
             title="Optional">
         <span id="properties_go">
 <a href="#properties_go" style="color: inherit; text-decoration: inherit;">Properties</a>
@@ -2170,14 +1988,11 @@ for this job to be submitted to. If not specified, defaults to `global`.
         <span class="property-type">map[string]string</span>
     </dt>
     <dd>{{% md %}}A mapping of property names to values, used to configure Spark SQL's SparkConf. Properties that conflict with values set by the Cloud Dataproc API may be overwritten.
-{{% /md %}}</dd>
-</dl>
+{{% /md %}}</dd></dl>
 {{% /choosable %}}
 
 {{% choosable language nodejs %}}
-<dl class="resources-properties">
-
-    <dt class="property-optional"
+<dl class="resources-properties"><dt class="property-optional"
             title="Optional">
         <span id="archiveuris_nodejs">
 <a href="#archiveuris_nodejs" style="color: inherit; text-decoration: inherit;">archive<wbr>Uris</a>
@@ -2186,8 +2001,7 @@ for this job to be submitted to. If not specified, defaults to `global`.
         <span class="property-type">string[]</span>
     </dt>
     <dd>{{% md %}}HCFS URIs of archives to be extracted in the working directory of .jar, .tar, .tar.gz, .tgz, and .zip.
-{{% /md %}}</dd>
-    <dt class="property-optional"
+{{% /md %}}</dd><dt class="property-optional"
             title="Optional">
         <span id="args_nodejs">
 <a href="#args_nodejs" style="color: inherit; text-decoration: inherit;">args</a>
@@ -2196,8 +2010,7 @@ for this job to be submitted to. If not specified, defaults to `global`.
         <span class="property-type">string[]</span>
     </dt>
     <dd>{{% md %}}The arguments to pass to the driver. Do not include arguments, such as -libjars or -Dfoo=bar, that can be set as job properties, since a collision may occur that causes an incorrect job submission.
-{{% /md %}}</dd>
-    <dt class="property-optional"
+{{% /md %}}</dd><dt class="property-optional"
             title="Optional">
         <span id="fileuris_nodejs">
 <a href="#fileuris_nodejs" style="color: inherit; text-decoration: inherit;">file<wbr>Uris</a>
@@ -2206,8 +2019,7 @@ for this job to be submitted to. If not specified, defaults to `global`.
         <span class="property-type">string[]</span>
     </dt>
     <dd>{{% md %}}HCFS URIs of files to be copied to the working directory of Hadoop drivers and distributed tasks. Useful for naively parallel tasks.
-{{% /md %}}</dd>
-    <dt class="property-optional"
+{{% /md %}}</dd><dt class="property-optional"
             title="Optional">
         <span id="jarfileuris_nodejs">
 <a href="#jarfileuris_nodejs" style="color: inherit; text-decoration: inherit;">jar<wbr>File<wbr>Uris</a>
@@ -2216,8 +2028,7 @@ for this job to be submitted to. If not specified, defaults to `global`.
         <span class="property-type">string[]</span>
     </dt>
     <dd>{{% md %}}HCFS URIs of jar files to be added to the Spark CLASSPATH.
-{{% /md %}}</dd>
-    <dt class="property-optional"
+{{% /md %}}</dd><dt class="property-optional"
             title="Optional">
         <span id="loggingconfig_nodejs">
 <a href="#loggingconfig_nodejs" style="color: inherit; text-decoration: inherit;">logging<wbr>Config</a>
@@ -2225,8 +2036,7 @@ for this job to be submitted to. If not specified, defaults to `global`.
         <span class="property-indicator"></span>
         <span class="property-type"><a href="#jobhadoopconfigloggingconfig">Job<wbr>Hadoop<wbr>Config<wbr>Logging<wbr>Config</a></span>
     </dt>
-    <dd>{{% md %}}{{% /md %}}</dd>
-    <dt class="property-optional"
+    <dd>{{% md %}}{{% /md %}}</dd><dt class="property-optional"
             title="Optional">
         <span id="mainclass_nodejs">
 <a href="#mainclass_nodejs" style="color: inherit; text-decoration: inherit;">main<wbr>Class</a>
@@ -2235,8 +2045,7 @@ for this job to be submitted to. If not specified, defaults to `global`.
         <span class="property-type">string</span>
     </dt>
     <dd>{{% md %}}The name of the driver's main class. The jar file containing the class must be in the default CLASSPATH or specified in `jar_file_uris`. Conflicts with `main_jar_file_uri`
-{{% /md %}}</dd>
-    <dt class="property-optional"
+{{% /md %}}</dd><dt class="property-optional"
             title="Optional">
         <span id="mainjarfileuri_nodejs">
 <a href="#mainjarfileuri_nodejs" style="color: inherit; text-decoration: inherit;">main<wbr>Jar<wbr>File<wbr>Uri</a>
@@ -2245,8 +2054,7 @@ for this job to be submitted to. If not specified, defaults to `global`.
         <span class="property-type">string</span>
     </dt>
     <dd>{{% md %}}The HCFS URI of the jar file containing the main class. Examples: 'gs://foo-bucket/analytics-binaries/extract-useful-metrics-mr.jar' 'hdfs:/tmp/test-samples/custom-wordcount.jar' 'file:///home/usr/lib/hadoop-mapreduce/hadoop-mapreduce-examples.jar'. Conflicts with `main_class`
-{{% /md %}}</dd>
-    <dt class="property-optional"
+{{% /md %}}</dd><dt class="property-optional"
             title="Optional">
         <span id="properties_nodejs">
 <a href="#properties_nodejs" style="color: inherit; text-decoration: inherit;">properties</a>
@@ -2255,14 +2063,11 @@ for this job to be submitted to. If not specified, defaults to `global`.
         <span class="property-type">{[key: string]: string}</span>
     </dt>
     <dd>{{% md %}}A mapping of property names to values, used to configure Spark SQL's SparkConf. Properties that conflict with values set by the Cloud Dataproc API may be overwritten.
-{{% /md %}}</dd>
-</dl>
+{{% /md %}}</dd></dl>
 {{% /choosable %}}
 
 {{% choosable language python %}}
-<dl class="resources-properties">
-
-    <dt class="property-optional"
+<dl class="resources-properties"><dt class="property-optional"
             title="Optional">
         <span id="archive_uris_python">
 <a href="#archive_uris_python" style="color: inherit; text-decoration: inherit;">archive_<wbr>uris</a>
@@ -2271,8 +2076,7 @@ for this job to be submitted to. If not specified, defaults to `global`.
         <span class="property-type">Sequence[str]</span>
     </dt>
     <dd>{{% md %}}HCFS URIs of archives to be extracted in the working directory of .jar, .tar, .tar.gz, .tgz, and .zip.
-{{% /md %}}</dd>
-    <dt class="property-optional"
+{{% /md %}}</dd><dt class="property-optional"
             title="Optional">
         <span id="args_python">
 <a href="#args_python" style="color: inherit; text-decoration: inherit;">args</a>
@@ -2281,8 +2085,7 @@ for this job to be submitted to. If not specified, defaults to `global`.
         <span class="property-type">Sequence[str]</span>
     </dt>
     <dd>{{% md %}}The arguments to pass to the driver. Do not include arguments, such as -libjars or -Dfoo=bar, that can be set as job properties, since a collision may occur that causes an incorrect job submission.
-{{% /md %}}</dd>
-    <dt class="property-optional"
+{{% /md %}}</dd><dt class="property-optional"
             title="Optional">
         <span id="file_uris_python">
 <a href="#file_uris_python" style="color: inherit; text-decoration: inherit;">file_<wbr>uris</a>
@@ -2291,8 +2094,7 @@ for this job to be submitted to. If not specified, defaults to `global`.
         <span class="property-type">Sequence[str]</span>
     </dt>
     <dd>{{% md %}}HCFS URIs of files to be copied to the working directory of Hadoop drivers and distributed tasks. Useful for naively parallel tasks.
-{{% /md %}}</dd>
-    <dt class="property-optional"
+{{% /md %}}</dd><dt class="property-optional"
             title="Optional">
         <span id="jar_file_uris_python">
 <a href="#jar_file_uris_python" style="color: inherit; text-decoration: inherit;">jar_<wbr>file_<wbr>uris</a>
@@ -2301,8 +2103,7 @@ for this job to be submitted to. If not specified, defaults to `global`.
         <span class="property-type">Sequence[str]</span>
     </dt>
     <dd>{{% md %}}HCFS URIs of jar files to be added to the Spark CLASSPATH.
-{{% /md %}}</dd>
-    <dt class="property-optional"
+{{% /md %}}</dd><dt class="property-optional"
             title="Optional">
         <span id="logging_config_python">
 <a href="#logging_config_python" style="color: inherit; text-decoration: inherit;">logging_<wbr>config</a>
@@ -2310,8 +2111,7 @@ for this job to be submitted to. If not specified, defaults to `global`.
         <span class="property-indicator"></span>
         <span class="property-type"><a href="#jobhadoopconfigloggingconfig">Job<wbr>Hadoop<wbr>Config<wbr>Logging<wbr>Config<wbr>Args</a></span>
     </dt>
-    <dd>{{% md %}}{{% /md %}}</dd>
-    <dt class="property-optional"
+    <dd>{{% md %}}{{% /md %}}</dd><dt class="property-optional"
             title="Optional">
         <span id="main_class_python">
 <a href="#main_class_python" style="color: inherit; text-decoration: inherit;">main_<wbr>class</a>
@@ -2320,8 +2120,7 @@ for this job to be submitted to. If not specified, defaults to `global`.
         <span class="property-type">str</span>
     </dt>
     <dd>{{% md %}}The name of the driver's main class. The jar file containing the class must be in the default CLASSPATH or specified in `jar_file_uris`. Conflicts with `main_jar_file_uri`
-{{% /md %}}</dd>
-    <dt class="property-optional"
+{{% /md %}}</dd><dt class="property-optional"
             title="Optional">
         <span id="main_jar_file_uri_python">
 <a href="#main_jar_file_uri_python" style="color: inherit; text-decoration: inherit;">main_<wbr>jar_<wbr>file_<wbr>uri</a>
@@ -2330,8 +2129,7 @@ for this job to be submitted to. If not specified, defaults to `global`.
         <span class="property-type">str</span>
     </dt>
     <dd>{{% md %}}The HCFS URI of the jar file containing the main class. Examples: 'gs://foo-bucket/analytics-binaries/extract-useful-metrics-mr.jar' 'hdfs:/tmp/test-samples/custom-wordcount.jar' 'file:///home/usr/lib/hadoop-mapreduce/hadoop-mapreduce-examples.jar'. Conflicts with `main_class`
-{{% /md %}}</dd>
-    <dt class="property-optional"
+{{% /md %}}</dd><dt class="property-optional"
             title="Optional">
         <span id="properties_python">
 <a href="#properties_python" style="color: inherit; text-decoration: inherit;">properties</a>
@@ -2340,16 +2138,13 @@ for this job to be submitted to. If not specified, defaults to `global`.
         <span class="property-type">Mapping[str, str]</span>
     </dt>
     <dd>{{% md %}}A mapping of property names to values, used to configure Spark SQL's SparkConf. Properties that conflict with values set by the Cloud Dataproc API may be overwritten.
-{{% /md %}}</dd>
-</dl>
+{{% /md %}}</dd></dl>
 {{% /choosable %}}
 
 <h4 id="jobhadoopconfigloggingconfig">Job<wbr>Hadoop<wbr>Config<wbr>Logging<wbr>Config</h4>
 
 {{% choosable language csharp %}}
-<dl class="resources-properties">
-
-    <dt class="property-required"
+<dl class="resources-properties"><dt class="property-required"
             title="Required">
         <span id="driverloglevels_csharp">
 <a href="#driverloglevels_csharp" style="color: inherit; text-decoration: inherit;">Driver<wbr>Log<wbr>Levels</a>
@@ -2357,14 +2152,11 @@ for this job to be submitted to. If not specified, defaults to `global`.
         <span class="property-indicator"></span>
         <span class="property-type">Dictionary&lt;string, string&gt;</span>
     </dt>
-    <dd>{{% md %}}{{% /md %}}</dd>
-</dl>
+    <dd>{{% md %}}{{% /md %}}</dd></dl>
 {{% /choosable %}}
 
 {{% choosable language go %}}
-<dl class="resources-properties">
-
-    <dt class="property-required"
+<dl class="resources-properties"><dt class="property-required"
             title="Required">
         <span id="driverloglevels_go">
 <a href="#driverloglevels_go" style="color: inherit; text-decoration: inherit;">Driver<wbr>Log<wbr>Levels</a>
@@ -2372,14 +2164,11 @@ for this job to be submitted to. If not specified, defaults to `global`.
         <span class="property-indicator"></span>
         <span class="property-type">map[string]string</span>
     </dt>
-    <dd>{{% md %}}{{% /md %}}</dd>
-</dl>
+    <dd>{{% md %}}{{% /md %}}</dd></dl>
 {{% /choosable %}}
 
 {{% choosable language nodejs %}}
-<dl class="resources-properties">
-
-    <dt class="property-required"
+<dl class="resources-properties"><dt class="property-required"
             title="Required">
         <span id="driverloglevels_nodejs">
 <a href="#driverloglevels_nodejs" style="color: inherit; text-decoration: inherit;">driver<wbr>Log<wbr>Levels</a>
@@ -2387,14 +2176,11 @@ for this job to be submitted to. If not specified, defaults to `global`.
         <span class="property-indicator"></span>
         <span class="property-type">{[key: string]: string}</span>
     </dt>
-    <dd>{{% md %}}{{% /md %}}</dd>
-</dl>
+    <dd>{{% md %}}{{% /md %}}</dd></dl>
 {{% /choosable %}}
 
 {{% choosable language python %}}
-<dl class="resources-properties">
-
-    <dt class="property-required"
+<dl class="resources-properties"><dt class="property-required"
             title="Required">
         <span id="driver_log_levels_python">
 <a href="#driver_log_levels_python" style="color: inherit; text-decoration: inherit;">driver_<wbr>log_<wbr>levels</a>
@@ -2402,16 +2188,13 @@ for this job to be submitted to. If not specified, defaults to `global`.
         <span class="property-indicator"></span>
         <span class="property-type">Mapping[str, str]</span>
     </dt>
-    <dd>{{% md %}}{{% /md %}}</dd>
-</dl>
+    <dd>{{% md %}}{{% /md %}}</dd></dl>
 {{% /choosable %}}
 
 <h4 id="jobhiveconfig">Job<wbr>Hive<wbr>Config</h4>
 
 {{% choosable language csharp %}}
-<dl class="resources-properties">
-
-    <dt class="property-optional"
+<dl class="resources-properties"><dt class="property-optional"
             title="Optional">
         <span id="continueonfailure_csharp">
 <a href="#continueonfailure_csharp" style="color: inherit; text-decoration: inherit;">Continue<wbr>On<wbr>Failure</a>
@@ -2420,8 +2203,7 @@ for this job to be submitted to. If not specified, defaults to `global`.
         <span class="property-type">bool</span>
     </dt>
     <dd>{{% md %}}Whether to continue executing queries if a query fails. The default value is false. Setting to true can be useful when executing independent parallel queries. Defaults to false.
-{{% /md %}}</dd>
-    <dt class="property-optional"
+{{% /md %}}</dd><dt class="property-optional"
             title="Optional">
         <span id="jarfileuris_csharp">
 <a href="#jarfileuris_csharp" style="color: inherit; text-decoration: inherit;">Jar<wbr>File<wbr>Uris</a>
@@ -2430,8 +2212,7 @@ for this job to be submitted to. If not specified, defaults to `global`.
         <span class="property-type">List&lt;string&gt;</span>
     </dt>
     <dd>{{% md %}}HCFS URIs of jar files to be added to the Spark CLASSPATH.
-{{% /md %}}</dd>
-    <dt class="property-optional"
+{{% /md %}}</dd><dt class="property-optional"
             title="Optional">
         <span id="properties_csharp">
 <a href="#properties_csharp" style="color: inherit; text-decoration: inherit;">Properties</a>
@@ -2440,8 +2221,7 @@ for this job to be submitted to. If not specified, defaults to `global`.
         <span class="property-type">Dictionary&lt;string, string&gt;</span>
     </dt>
     <dd>{{% md %}}A mapping of property names to values, used to configure Spark SQL's SparkConf. Properties that conflict with values set by the Cloud Dataproc API may be overwritten.
-{{% /md %}}</dd>
-    <dt class="property-optional"
+{{% /md %}}</dd><dt class="property-optional"
             title="Optional">
         <span id="queryfileuri_csharp">
 <a href="#queryfileuri_csharp" style="color: inherit; text-decoration: inherit;">Query<wbr>File<wbr>Uri</a>
@@ -2451,8 +2231,7 @@ for this job to be submitted to. If not specified, defaults to `global`.
     </dt>
     <dd>{{% md %}}The HCFS URI of the script that contains SQL queries.
 Conflicts with `query_list`
-{{% /md %}}</dd>
-    <dt class="property-optional"
+{{% /md %}}</dd><dt class="property-optional"
             title="Optional">
         <span id="querylists_csharp">
 <a href="#querylists_csharp" style="color: inherit; text-decoration: inherit;">Query<wbr>Lists</a>
@@ -2462,8 +2241,7 @@ Conflicts with `query_list`
     </dt>
     <dd>{{% md %}}The list of SQL queries or statements to execute as part of the job.
 Conflicts with `query_file_uri`
-{{% /md %}}</dd>
-    <dt class="property-optional"
+{{% /md %}}</dd><dt class="property-optional"
             title="Optional">
         <span id="scriptvariables_csharp">
 <a href="#scriptvariables_csharp" style="color: inherit; text-decoration: inherit;">Script<wbr>Variables</a>
@@ -2472,14 +2250,11 @@ Conflicts with `query_file_uri`
         <span class="property-type">Dictionary&lt;string, string&gt;</span>
     </dt>
     <dd>{{% md %}}Mapping of query variable names to values (equivalent to the Spark SQL command: `SET name="value";`).
-{{% /md %}}</dd>
-</dl>
+{{% /md %}}</dd></dl>
 {{% /choosable %}}
 
 {{% choosable language go %}}
-<dl class="resources-properties">
-
-    <dt class="property-optional"
+<dl class="resources-properties"><dt class="property-optional"
             title="Optional">
         <span id="continueonfailure_go">
 <a href="#continueonfailure_go" style="color: inherit; text-decoration: inherit;">Continue<wbr>On<wbr>Failure</a>
@@ -2488,8 +2263,7 @@ Conflicts with `query_file_uri`
         <span class="property-type">bool</span>
     </dt>
     <dd>{{% md %}}Whether to continue executing queries if a query fails. The default value is false. Setting to true can be useful when executing independent parallel queries. Defaults to false.
-{{% /md %}}</dd>
-    <dt class="property-optional"
+{{% /md %}}</dd><dt class="property-optional"
             title="Optional">
         <span id="jarfileuris_go">
 <a href="#jarfileuris_go" style="color: inherit; text-decoration: inherit;">Jar<wbr>File<wbr>Uris</a>
@@ -2498,8 +2272,7 @@ Conflicts with `query_file_uri`
         <span class="property-type">[]string</span>
     </dt>
     <dd>{{% md %}}HCFS URIs of jar files to be added to the Spark CLASSPATH.
-{{% /md %}}</dd>
-    <dt class="property-optional"
+{{% /md %}}</dd><dt class="property-optional"
             title="Optional">
         <span id="properties_go">
 <a href="#properties_go" style="color: inherit; text-decoration: inherit;">Properties</a>
@@ -2508,8 +2281,7 @@ Conflicts with `query_file_uri`
         <span class="property-type">map[string]string</span>
     </dt>
     <dd>{{% md %}}A mapping of property names to values, used to configure Spark SQL's SparkConf. Properties that conflict with values set by the Cloud Dataproc API may be overwritten.
-{{% /md %}}</dd>
-    <dt class="property-optional"
+{{% /md %}}</dd><dt class="property-optional"
             title="Optional">
         <span id="queryfileuri_go">
 <a href="#queryfileuri_go" style="color: inherit; text-decoration: inherit;">Query<wbr>File<wbr>Uri</a>
@@ -2519,8 +2291,7 @@ Conflicts with `query_file_uri`
     </dt>
     <dd>{{% md %}}The HCFS URI of the script that contains SQL queries.
 Conflicts with `query_list`
-{{% /md %}}</dd>
-    <dt class="property-optional"
+{{% /md %}}</dd><dt class="property-optional"
             title="Optional">
         <span id="querylists_go">
 <a href="#querylists_go" style="color: inherit; text-decoration: inherit;">Query<wbr>Lists</a>
@@ -2530,8 +2301,7 @@ Conflicts with `query_list`
     </dt>
     <dd>{{% md %}}The list of SQL queries or statements to execute as part of the job.
 Conflicts with `query_file_uri`
-{{% /md %}}</dd>
-    <dt class="property-optional"
+{{% /md %}}</dd><dt class="property-optional"
             title="Optional">
         <span id="scriptvariables_go">
 <a href="#scriptvariables_go" style="color: inherit; text-decoration: inherit;">Script<wbr>Variables</a>
@@ -2540,14 +2310,11 @@ Conflicts with `query_file_uri`
         <span class="property-type">map[string]string</span>
     </dt>
     <dd>{{% md %}}Mapping of query variable names to values (equivalent to the Spark SQL command: `SET name="value";`).
-{{% /md %}}</dd>
-</dl>
+{{% /md %}}</dd></dl>
 {{% /choosable %}}
 
 {{% choosable language nodejs %}}
-<dl class="resources-properties">
-
-    <dt class="property-optional"
+<dl class="resources-properties"><dt class="property-optional"
             title="Optional">
         <span id="continueonfailure_nodejs">
 <a href="#continueonfailure_nodejs" style="color: inherit; text-decoration: inherit;">continue<wbr>On<wbr>Failure</a>
@@ -2556,8 +2323,7 @@ Conflicts with `query_file_uri`
         <span class="property-type">boolean</span>
     </dt>
     <dd>{{% md %}}Whether to continue executing queries if a query fails. The default value is false. Setting to true can be useful when executing independent parallel queries. Defaults to false.
-{{% /md %}}</dd>
-    <dt class="property-optional"
+{{% /md %}}</dd><dt class="property-optional"
             title="Optional">
         <span id="jarfileuris_nodejs">
 <a href="#jarfileuris_nodejs" style="color: inherit; text-decoration: inherit;">jar<wbr>File<wbr>Uris</a>
@@ -2566,8 +2332,7 @@ Conflicts with `query_file_uri`
         <span class="property-type">string[]</span>
     </dt>
     <dd>{{% md %}}HCFS URIs of jar files to be added to the Spark CLASSPATH.
-{{% /md %}}</dd>
-    <dt class="property-optional"
+{{% /md %}}</dd><dt class="property-optional"
             title="Optional">
         <span id="properties_nodejs">
 <a href="#properties_nodejs" style="color: inherit; text-decoration: inherit;">properties</a>
@@ -2576,8 +2341,7 @@ Conflicts with `query_file_uri`
         <span class="property-type">{[key: string]: string}</span>
     </dt>
     <dd>{{% md %}}A mapping of property names to values, used to configure Spark SQL's SparkConf. Properties that conflict with values set by the Cloud Dataproc API may be overwritten.
-{{% /md %}}</dd>
-    <dt class="property-optional"
+{{% /md %}}</dd><dt class="property-optional"
             title="Optional">
         <span id="queryfileuri_nodejs">
 <a href="#queryfileuri_nodejs" style="color: inherit; text-decoration: inherit;">query<wbr>File<wbr>Uri</a>
@@ -2587,8 +2351,7 @@ Conflicts with `query_file_uri`
     </dt>
     <dd>{{% md %}}The HCFS URI of the script that contains SQL queries.
 Conflicts with `query_list`
-{{% /md %}}</dd>
-    <dt class="property-optional"
+{{% /md %}}</dd><dt class="property-optional"
             title="Optional">
         <span id="querylists_nodejs">
 <a href="#querylists_nodejs" style="color: inherit; text-decoration: inherit;">query<wbr>Lists</a>
@@ -2598,8 +2361,7 @@ Conflicts with `query_list`
     </dt>
     <dd>{{% md %}}The list of SQL queries or statements to execute as part of the job.
 Conflicts with `query_file_uri`
-{{% /md %}}</dd>
-    <dt class="property-optional"
+{{% /md %}}</dd><dt class="property-optional"
             title="Optional">
         <span id="scriptvariables_nodejs">
 <a href="#scriptvariables_nodejs" style="color: inherit; text-decoration: inherit;">script<wbr>Variables</a>
@@ -2608,14 +2370,11 @@ Conflicts with `query_file_uri`
         <span class="property-type">{[key: string]: string}</span>
     </dt>
     <dd>{{% md %}}Mapping of query variable names to values (equivalent to the Spark SQL command: `SET name="value";`).
-{{% /md %}}</dd>
-</dl>
+{{% /md %}}</dd></dl>
 {{% /choosable %}}
 
 {{% choosable language python %}}
-<dl class="resources-properties">
-
-    <dt class="property-optional"
+<dl class="resources-properties"><dt class="property-optional"
             title="Optional">
         <span id="continue_on_failure_python">
 <a href="#continue_on_failure_python" style="color: inherit; text-decoration: inherit;">continue_<wbr>on_<wbr>failure</a>
@@ -2624,8 +2383,7 @@ Conflicts with `query_file_uri`
         <span class="property-type">bool</span>
     </dt>
     <dd>{{% md %}}Whether to continue executing queries if a query fails. The default value is false. Setting to true can be useful when executing independent parallel queries. Defaults to false.
-{{% /md %}}</dd>
-    <dt class="property-optional"
+{{% /md %}}</dd><dt class="property-optional"
             title="Optional">
         <span id="jar_file_uris_python">
 <a href="#jar_file_uris_python" style="color: inherit; text-decoration: inherit;">jar_<wbr>file_<wbr>uris</a>
@@ -2634,8 +2392,7 @@ Conflicts with `query_file_uri`
         <span class="property-type">Sequence[str]</span>
     </dt>
     <dd>{{% md %}}HCFS URIs of jar files to be added to the Spark CLASSPATH.
-{{% /md %}}</dd>
-    <dt class="property-optional"
+{{% /md %}}</dd><dt class="property-optional"
             title="Optional">
         <span id="properties_python">
 <a href="#properties_python" style="color: inherit; text-decoration: inherit;">properties</a>
@@ -2644,8 +2401,7 @@ Conflicts with `query_file_uri`
         <span class="property-type">Mapping[str, str]</span>
     </dt>
     <dd>{{% md %}}A mapping of property names to values, used to configure Spark SQL's SparkConf. Properties that conflict with values set by the Cloud Dataproc API may be overwritten.
-{{% /md %}}</dd>
-    <dt class="property-optional"
+{{% /md %}}</dd><dt class="property-optional"
             title="Optional">
         <span id="query_file_uri_python">
 <a href="#query_file_uri_python" style="color: inherit; text-decoration: inherit;">query_<wbr>file_<wbr>uri</a>
@@ -2655,8 +2411,7 @@ Conflicts with `query_file_uri`
     </dt>
     <dd>{{% md %}}The HCFS URI of the script that contains SQL queries.
 Conflicts with `query_list`
-{{% /md %}}</dd>
-    <dt class="property-optional"
+{{% /md %}}</dd><dt class="property-optional"
             title="Optional">
         <span id="query_lists_python">
 <a href="#query_lists_python" style="color: inherit; text-decoration: inherit;">query_<wbr>lists</a>
@@ -2666,8 +2421,7 @@ Conflicts with `query_list`
     </dt>
     <dd>{{% md %}}The list of SQL queries or statements to execute as part of the job.
 Conflicts with `query_file_uri`
-{{% /md %}}</dd>
-    <dt class="property-optional"
+{{% /md %}}</dd><dt class="property-optional"
             title="Optional">
         <span id="script_variables_python">
 <a href="#script_variables_python" style="color: inherit; text-decoration: inherit;">script_<wbr>variables</a>
@@ -2676,16 +2430,13 @@ Conflicts with `query_file_uri`
         <span class="property-type">Mapping[str, str]</span>
     </dt>
     <dd>{{% md %}}Mapping of query variable names to values (equivalent to the Spark SQL command: `SET name="value";`).
-{{% /md %}}</dd>
-</dl>
+{{% /md %}}</dd></dl>
 {{% /choosable %}}
 
 <h4 id="jobpigconfig">Job<wbr>Pig<wbr>Config</h4>
 
 {{% choosable language csharp %}}
-<dl class="resources-properties">
-
-    <dt class="property-optional"
+<dl class="resources-properties"><dt class="property-optional"
             title="Optional">
         <span id="continueonfailure_csharp">
 <a href="#continueonfailure_csharp" style="color: inherit; text-decoration: inherit;">Continue<wbr>On<wbr>Failure</a>
@@ -2694,8 +2445,7 @@ Conflicts with `query_file_uri`
         <span class="property-type">bool</span>
     </dt>
     <dd>{{% md %}}Whether to continue executing queries if a query fails. The default value is false. Setting to true can be useful when executing independent parallel queries. Defaults to false.
-{{% /md %}}</dd>
-    <dt class="property-optional"
+{{% /md %}}</dd><dt class="property-optional"
             title="Optional">
         <span id="jarfileuris_csharp">
 <a href="#jarfileuris_csharp" style="color: inherit; text-decoration: inherit;">Jar<wbr>File<wbr>Uris</a>
@@ -2704,8 +2454,7 @@ Conflicts with `query_file_uri`
         <span class="property-type">List&lt;string&gt;</span>
     </dt>
     <dd>{{% md %}}HCFS URIs of jar files to be added to the Spark CLASSPATH.
-{{% /md %}}</dd>
-    <dt class="property-optional"
+{{% /md %}}</dd><dt class="property-optional"
             title="Optional">
         <span id="loggingconfig_csharp">
 <a href="#loggingconfig_csharp" style="color: inherit; text-decoration: inherit;">Logging<wbr>Config</a>
@@ -2713,8 +2462,7 @@ Conflicts with `query_file_uri`
         <span class="property-indicator"></span>
         <span class="property-type"><a href="#jobpigconfigloggingconfig">Job<wbr>Pig<wbr>Config<wbr>Logging<wbr>Config<wbr>Args</a></span>
     </dt>
-    <dd>{{% md %}}{{% /md %}}</dd>
-    <dt class="property-optional"
+    <dd>{{% md %}}{{% /md %}}</dd><dt class="property-optional"
             title="Optional">
         <span id="properties_csharp">
 <a href="#properties_csharp" style="color: inherit; text-decoration: inherit;">Properties</a>
@@ -2723,8 +2471,7 @@ Conflicts with `query_file_uri`
         <span class="property-type">Dictionary&lt;string, string&gt;</span>
     </dt>
     <dd>{{% md %}}A mapping of property names to values, used to configure Spark SQL's SparkConf. Properties that conflict with values set by the Cloud Dataproc API may be overwritten.
-{{% /md %}}</dd>
-    <dt class="property-optional"
+{{% /md %}}</dd><dt class="property-optional"
             title="Optional">
         <span id="queryfileuri_csharp">
 <a href="#queryfileuri_csharp" style="color: inherit; text-decoration: inherit;">Query<wbr>File<wbr>Uri</a>
@@ -2734,8 +2481,7 @@ Conflicts with `query_file_uri`
     </dt>
     <dd>{{% md %}}The HCFS URI of the script that contains SQL queries.
 Conflicts with `query_list`
-{{% /md %}}</dd>
-    <dt class="property-optional"
+{{% /md %}}</dd><dt class="property-optional"
             title="Optional">
         <span id="querylists_csharp">
 <a href="#querylists_csharp" style="color: inherit; text-decoration: inherit;">Query<wbr>Lists</a>
@@ -2745,8 +2491,7 @@ Conflicts with `query_list`
     </dt>
     <dd>{{% md %}}The list of SQL queries or statements to execute as part of the job.
 Conflicts with `query_file_uri`
-{{% /md %}}</dd>
-    <dt class="property-optional"
+{{% /md %}}</dd><dt class="property-optional"
             title="Optional">
         <span id="scriptvariables_csharp">
 <a href="#scriptvariables_csharp" style="color: inherit; text-decoration: inherit;">Script<wbr>Variables</a>
@@ -2755,14 +2500,11 @@ Conflicts with `query_file_uri`
         <span class="property-type">Dictionary&lt;string, string&gt;</span>
     </dt>
     <dd>{{% md %}}Mapping of query variable names to values (equivalent to the Spark SQL command: `SET name="value";`).
-{{% /md %}}</dd>
-</dl>
+{{% /md %}}</dd></dl>
 {{% /choosable %}}
 
 {{% choosable language go %}}
-<dl class="resources-properties">
-
-    <dt class="property-optional"
+<dl class="resources-properties"><dt class="property-optional"
             title="Optional">
         <span id="continueonfailure_go">
 <a href="#continueonfailure_go" style="color: inherit; text-decoration: inherit;">Continue<wbr>On<wbr>Failure</a>
@@ -2771,8 +2513,7 @@ Conflicts with `query_file_uri`
         <span class="property-type">bool</span>
     </dt>
     <dd>{{% md %}}Whether to continue executing queries if a query fails. The default value is false. Setting to true can be useful when executing independent parallel queries. Defaults to false.
-{{% /md %}}</dd>
-    <dt class="property-optional"
+{{% /md %}}</dd><dt class="property-optional"
             title="Optional">
         <span id="jarfileuris_go">
 <a href="#jarfileuris_go" style="color: inherit; text-decoration: inherit;">Jar<wbr>File<wbr>Uris</a>
@@ -2781,8 +2522,7 @@ Conflicts with `query_file_uri`
         <span class="property-type">[]string</span>
     </dt>
     <dd>{{% md %}}HCFS URIs of jar files to be added to the Spark CLASSPATH.
-{{% /md %}}</dd>
-    <dt class="property-optional"
+{{% /md %}}</dd><dt class="property-optional"
             title="Optional">
         <span id="loggingconfig_go">
 <a href="#loggingconfig_go" style="color: inherit; text-decoration: inherit;">Logging<wbr>Config</a>
@@ -2790,8 +2530,7 @@ Conflicts with `query_file_uri`
         <span class="property-indicator"></span>
         <span class="property-type"><a href="#jobpigconfigloggingconfig">Job<wbr>Pig<wbr>Config<wbr>Logging<wbr>Config</a></span>
     </dt>
-    <dd>{{% md %}}{{% /md %}}</dd>
-    <dt class="property-optional"
+    <dd>{{% md %}}{{% /md %}}</dd><dt class="property-optional"
             title="Optional">
         <span id="properties_go">
 <a href="#properties_go" style="color: inherit; text-decoration: inherit;">Properties</a>
@@ -2800,8 +2539,7 @@ Conflicts with `query_file_uri`
         <span class="property-type">map[string]string</span>
     </dt>
     <dd>{{% md %}}A mapping of property names to values, used to configure Spark SQL's SparkConf. Properties that conflict with values set by the Cloud Dataproc API may be overwritten.
-{{% /md %}}</dd>
-    <dt class="property-optional"
+{{% /md %}}</dd><dt class="property-optional"
             title="Optional">
         <span id="queryfileuri_go">
 <a href="#queryfileuri_go" style="color: inherit; text-decoration: inherit;">Query<wbr>File<wbr>Uri</a>
@@ -2811,8 +2549,7 @@ Conflicts with `query_file_uri`
     </dt>
     <dd>{{% md %}}The HCFS URI of the script that contains SQL queries.
 Conflicts with `query_list`
-{{% /md %}}</dd>
-    <dt class="property-optional"
+{{% /md %}}</dd><dt class="property-optional"
             title="Optional">
         <span id="querylists_go">
 <a href="#querylists_go" style="color: inherit; text-decoration: inherit;">Query<wbr>Lists</a>
@@ -2822,8 +2559,7 @@ Conflicts with `query_list`
     </dt>
     <dd>{{% md %}}The list of SQL queries or statements to execute as part of the job.
 Conflicts with `query_file_uri`
-{{% /md %}}</dd>
-    <dt class="property-optional"
+{{% /md %}}</dd><dt class="property-optional"
             title="Optional">
         <span id="scriptvariables_go">
 <a href="#scriptvariables_go" style="color: inherit; text-decoration: inherit;">Script<wbr>Variables</a>
@@ -2832,14 +2568,11 @@ Conflicts with `query_file_uri`
         <span class="property-type">map[string]string</span>
     </dt>
     <dd>{{% md %}}Mapping of query variable names to values (equivalent to the Spark SQL command: `SET name="value";`).
-{{% /md %}}</dd>
-</dl>
+{{% /md %}}</dd></dl>
 {{% /choosable %}}
 
 {{% choosable language nodejs %}}
-<dl class="resources-properties">
-
-    <dt class="property-optional"
+<dl class="resources-properties"><dt class="property-optional"
             title="Optional">
         <span id="continueonfailure_nodejs">
 <a href="#continueonfailure_nodejs" style="color: inherit; text-decoration: inherit;">continue<wbr>On<wbr>Failure</a>
@@ -2848,8 +2581,7 @@ Conflicts with `query_file_uri`
         <span class="property-type">boolean</span>
     </dt>
     <dd>{{% md %}}Whether to continue executing queries if a query fails. The default value is false. Setting to true can be useful when executing independent parallel queries. Defaults to false.
-{{% /md %}}</dd>
-    <dt class="property-optional"
+{{% /md %}}</dd><dt class="property-optional"
             title="Optional">
         <span id="jarfileuris_nodejs">
 <a href="#jarfileuris_nodejs" style="color: inherit; text-decoration: inherit;">jar<wbr>File<wbr>Uris</a>
@@ -2858,8 +2590,7 @@ Conflicts with `query_file_uri`
         <span class="property-type">string[]</span>
     </dt>
     <dd>{{% md %}}HCFS URIs of jar files to be added to the Spark CLASSPATH.
-{{% /md %}}</dd>
-    <dt class="property-optional"
+{{% /md %}}</dd><dt class="property-optional"
             title="Optional">
         <span id="loggingconfig_nodejs">
 <a href="#loggingconfig_nodejs" style="color: inherit; text-decoration: inherit;">logging<wbr>Config</a>
@@ -2867,8 +2598,7 @@ Conflicts with `query_file_uri`
         <span class="property-indicator"></span>
         <span class="property-type"><a href="#jobpigconfigloggingconfig">Job<wbr>Pig<wbr>Config<wbr>Logging<wbr>Config</a></span>
     </dt>
-    <dd>{{% md %}}{{% /md %}}</dd>
-    <dt class="property-optional"
+    <dd>{{% md %}}{{% /md %}}</dd><dt class="property-optional"
             title="Optional">
         <span id="properties_nodejs">
 <a href="#properties_nodejs" style="color: inherit; text-decoration: inherit;">properties</a>
@@ -2877,8 +2607,7 @@ Conflicts with `query_file_uri`
         <span class="property-type">{[key: string]: string}</span>
     </dt>
     <dd>{{% md %}}A mapping of property names to values, used to configure Spark SQL's SparkConf. Properties that conflict with values set by the Cloud Dataproc API may be overwritten.
-{{% /md %}}</dd>
-    <dt class="property-optional"
+{{% /md %}}</dd><dt class="property-optional"
             title="Optional">
         <span id="queryfileuri_nodejs">
 <a href="#queryfileuri_nodejs" style="color: inherit; text-decoration: inherit;">query<wbr>File<wbr>Uri</a>
@@ -2888,8 +2617,7 @@ Conflicts with `query_file_uri`
     </dt>
     <dd>{{% md %}}The HCFS URI of the script that contains SQL queries.
 Conflicts with `query_list`
-{{% /md %}}</dd>
-    <dt class="property-optional"
+{{% /md %}}</dd><dt class="property-optional"
             title="Optional">
         <span id="querylists_nodejs">
 <a href="#querylists_nodejs" style="color: inherit; text-decoration: inherit;">query<wbr>Lists</a>
@@ -2899,8 +2627,7 @@ Conflicts with `query_list`
     </dt>
     <dd>{{% md %}}The list of SQL queries or statements to execute as part of the job.
 Conflicts with `query_file_uri`
-{{% /md %}}</dd>
-    <dt class="property-optional"
+{{% /md %}}</dd><dt class="property-optional"
             title="Optional">
         <span id="scriptvariables_nodejs">
 <a href="#scriptvariables_nodejs" style="color: inherit; text-decoration: inherit;">script<wbr>Variables</a>
@@ -2909,14 +2636,11 @@ Conflicts with `query_file_uri`
         <span class="property-type">{[key: string]: string}</span>
     </dt>
     <dd>{{% md %}}Mapping of query variable names to values (equivalent to the Spark SQL command: `SET name="value";`).
-{{% /md %}}</dd>
-</dl>
+{{% /md %}}</dd></dl>
 {{% /choosable %}}
 
 {{% choosable language python %}}
-<dl class="resources-properties">
-
-    <dt class="property-optional"
+<dl class="resources-properties"><dt class="property-optional"
             title="Optional">
         <span id="continue_on_failure_python">
 <a href="#continue_on_failure_python" style="color: inherit; text-decoration: inherit;">continue_<wbr>on_<wbr>failure</a>
@@ -2925,8 +2649,7 @@ Conflicts with `query_file_uri`
         <span class="property-type">bool</span>
     </dt>
     <dd>{{% md %}}Whether to continue executing queries if a query fails. The default value is false. Setting to true can be useful when executing independent parallel queries. Defaults to false.
-{{% /md %}}</dd>
-    <dt class="property-optional"
+{{% /md %}}</dd><dt class="property-optional"
             title="Optional">
         <span id="jar_file_uris_python">
 <a href="#jar_file_uris_python" style="color: inherit; text-decoration: inherit;">jar_<wbr>file_<wbr>uris</a>
@@ -2935,8 +2658,7 @@ Conflicts with `query_file_uri`
         <span class="property-type">Sequence[str]</span>
     </dt>
     <dd>{{% md %}}HCFS URIs of jar files to be added to the Spark CLASSPATH.
-{{% /md %}}</dd>
-    <dt class="property-optional"
+{{% /md %}}</dd><dt class="property-optional"
             title="Optional">
         <span id="logging_config_python">
 <a href="#logging_config_python" style="color: inherit; text-decoration: inherit;">logging_<wbr>config</a>
@@ -2944,8 +2666,7 @@ Conflicts with `query_file_uri`
         <span class="property-indicator"></span>
         <span class="property-type"><a href="#jobpigconfigloggingconfig">Job<wbr>Pig<wbr>Config<wbr>Logging<wbr>Config<wbr>Args</a></span>
     </dt>
-    <dd>{{% md %}}{{% /md %}}</dd>
-    <dt class="property-optional"
+    <dd>{{% md %}}{{% /md %}}</dd><dt class="property-optional"
             title="Optional">
         <span id="properties_python">
 <a href="#properties_python" style="color: inherit; text-decoration: inherit;">properties</a>
@@ -2954,8 +2675,7 @@ Conflicts with `query_file_uri`
         <span class="property-type">Mapping[str, str]</span>
     </dt>
     <dd>{{% md %}}A mapping of property names to values, used to configure Spark SQL's SparkConf. Properties that conflict with values set by the Cloud Dataproc API may be overwritten.
-{{% /md %}}</dd>
-    <dt class="property-optional"
+{{% /md %}}</dd><dt class="property-optional"
             title="Optional">
         <span id="query_file_uri_python">
 <a href="#query_file_uri_python" style="color: inherit; text-decoration: inherit;">query_<wbr>file_<wbr>uri</a>
@@ -2965,8 +2685,7 @@ Conflicts with `query_file_uri`
     </dt>
     <dd>{{% md %}}The HCFS URI of the script that contains SQL queries.
 Conflicts with `query_list`
-{{% /md %}}</dd>
-    <dt class="property-optional"
+{{% /md %}}</dd><dt class="property-optional"
             title="Optional">
         <span id="query_lists_python">
 <a href="#query_lists_python" style="color: inherit; text-decoration: inherit;">query_<wbr>lists</a>
@@ -2976,8 +2695,7 @@ Conflicts with `query_list`
     </dt>
     <dd>{{% md %}}The list of SQL queries or statements to execute as part of the job.
 Conflicts with `query_file_uri`
-{{% /md %}}</dd>
-    <dt class="property-optional"
+{{% /md %}}</dd><dt class="property-optional"
             title="Optional">
         <span id="script_variables_python">
 <a href="#script_variables_python" style="color: inherit; text-decoration: inherit;">script_<wbr>variables</a>
@@ -2986,16 +2704,13 @@ Conflicts with `query_file_uri`
         <span class="property-type">Mapping[str, str]</span>
     </dt>
     <dd>{{% md %}}Mapping of query variable names to values (equivalent to the Spark SQL command: `SET name="value";`).
-{{% /md %}}</dd>
-</dl>
+{{% /md %}}</dd></dl>
 {{% /choosable %}}
 
 <h4 id="jobpigconfigloggingconfig">Job<wbr>Pig<wbr>Config<wbr>Logging<wbr>Config</h4>
 
 {{% choosable language csharp %}}
-<dl class="resources-properties">
-
-    <dt class="property-required"
+<dl class="resources-properties"><dt class="property-required"
             title="Required">
         <span id="driverloglevels_csharp">
 <a href="#driverloglevels_csharp" style="color: inherit; text-decoration: inherit;">Driver<wbr>Log<wbr>Levels</a>
@@ -3003,14 +2718,11 @@ Conflicts with `query_file_uri`
         <span class="property-indicator"></span>
         <span class="property-type">Dictionary&lt;string, string&gt;</span>
     </dt>
-    <dd>{{% md %}}{{% /md %}}</dd>
-</dl>
+    <dd>{{% md %}}{{% /md %}}</dd></dl>
 {{% /choosable %}}
 
 {{% choosable language go %}}
-<dl class="resources-properties">
-
-    <dt class="property-required"
+<dl class="resources-properties"><dt class="property-required"
             title="Required">
         <span id="driverloglevels_go">
 <a href="#driverloglevels_go" style="color: inherit; text-decoration: inherit;">Driver<wbr>Log<wbr>Levels</a>
@@ -3018,14 +2730,11 @@ Conflicts with `query_file_uri`
         <span class="property-indicator"></span>
         <span class="property-type">map[string]string</span>
     </dt>
-    <dd>{{% md %}}{{% /md %}}</dd>
-</dl>
+    <dd>{{% md %}}{{% /md %}}</dd></dl>
 {{% /choosable %}}
 
 {{% choosable language nodejs %}}
-<dl class="resources-properties">
-
-    <dt class="property-required"
+<dl class="resources-properties"><dt class="property-required"
             title="Required">
         <span id="driverloglevels_nodejs">
 <a href="#driverloglevels_nodejs" style="color: inherit; text-decoration: inherit;">driver<wbr>Log<wbr>Levels</a>
@@ -3033,14 +2742,11 @@ Conflicts with `query_file_uri`
         <span class="property-indicator"></span>
         <span class="property-type">{[key: string]: string}</span>
     </dt>
-    <dd>{{% md %}}{{% /md %}}</dd>
-</dl>
+    <dd>{{% md %}}{{% /md %}}</dd></dl>
 {{% /choosable %}}
 
 {{% choosable language python %}}
-<dl class="resources-properties">
-
-    <dt class="property-required"
+<dl class="resources-properties"><dt class="property-required"
             title="Required">
         <span id="driver_log_levels_python">
 <a href="#driver_log_levels_python" style="color: inherit; text-decoration: inherit;">driver_<wbr>log_<wbr>levels</a>
@@ -3048,16 +2754,13 @@ Conflicts with `query_file_uri`
         <span class="property-indicator"></span>
         <span class="property-type">Mapping[str, str]</span>
     </dt>
-    <dd>{{% md %}}{{% /md %}}</dd>
-</dl>
+    <dd>{{% md %}}{{% /md %}}</dd></dl>
 {{% /choosable %}}
 
 <h4 id="jobplacement">Job<wbr>Placement</h4>
 
 {{% choosable language csharp %}}
-<dl class="resources-properties">
-
-    <dt class="property-required"
+<dl class="resources-properties"><dt class="property-required"
             title="Required">
         <span id="clustername_csharp">
 <a href="#clustername_csharp" style="color: inherit; text-decoration: inherit;">Cluster<wbr>Name</a>
@@ -3065,8 +2768,7 @@ Conflicts with `query_file_uri`
         <span class="property-indicator"></span>
         <span class="property-type">string</span>
     </dt>
-    <dd>{{% md %}}{{% /md %}}</dd>
-    <dt class="property-optional"
+    <dd>{{% md %}}{{% /md %}}</dd><dt class="property-optional"
             title="Optional">
         <span id="clusteruuid_csharp">
 <a href="#clusteruuid_csharp" style="color: inherit; text-decoration: inherit;">Cluster<wbr>Uuid</a>
@@ -3074,14 +2776,11 @@ Conflicts with `query_file_uri`
         <span class="property-indicator"></span>
         <span class="property-type">string</span>
     </dt>
-    <dd>{{% md %}}{{% /md %}}</dd>
-</dl>
+    <dd>{{% md %}}{{% /md %}}</dd></dl>
 {{% /choosable %}}
 
 {{% choosable language go %}}
-<dl class="resources-properties">
-
-    <dt class="property-required"
+<dl class="resources-properties"><dt class="property-required"
             title="Required">
         <span id="clustername_go">
 <a href="#clustername_go" style="color: inherit; text-decoration: inherit;">Cluster<wbr>Name</a>
@@ -3089,8 +2788,7 @@ Conflicts with `query_file_uri`
         <span class="property-indicator"></span>
         <span class="property-type">string</span>
     </dt>
-    <dd>{{% md %}}{{% /md %}}</dd>
-    <dt class="property-optional"
+    <dd>{{% md %}}{{% /md %}}</dd><dt class="property-optional"
             title="Optional">
         <span id="clusteruuid_go">
 <a href="#clusteruuid_go" style="color: inherit; text-decoration: inherit;">Cluster<wbr>Uuid</a>
@@ -3098,14 +2796,11 @@ Conflicts with `query_file_uri`
         <span class="property-indicator"></span>
         <span class="property-type">string</span>
     </dt>
-    <dd>{{% md %}}{{% /md %}}</dd>
-</dl>
+    <dd>{{% md %}}{{% /md %}}</dd></dl>
 {{% /choosable %}}
 
 {{% choosable language nodejs %}}
-<dl class="resources-properties">
-
-    <dt class="property-required"
+<dl class="resources-properties"><dt class="property-required"
             title="Required">
         <span id="clustername_nodejs">
 <a href="#clustername_nodejs" style="color: inherit; text-decoration: inherit;">cluster<wbr>Name</a>
@@ -3113,8 +2808,7 @@ Conflicts with `query_file_uri`
         <span class="property-indicator"></span>
         <span class="property-type">string</span>
     </dt>
-    <dd>{{% md %}}{{% /md %}}</dd>
-    <dt class="property-optional"
+    <dd>{{% md %}}{{% /md %}}</dd><dt class="property-optional"
             title="Optional">
         <span id="clusteruuid_nodejs">
 <a href="#clusteruuid_nodejs" style="color: inherit; text-decoration: inherit;">cluster<wbr>Uuid</a>
@@ -3122,14 +2816,11 @@ Conflicts with `query_file_uri`
         <span class="property-indicator"></span>
         <span class="property-type">string</span>
     </dt>
-    <dd>{{% md %}}{{% /md %}}</dd>
-</dl>
+    <dd>{{% md %}}{{% /md %}}</dd></dl>
 {{% /choosable %}}
 
 {{% choosable language python %}}
-<dl class="resources-properties">
-
-    <dt class="property-required"
+<dl class="resources-properties"><dt class="property-required"
             title="Required">
         <span id="cluster_name_python">
 <a href="#cluster_name_python" style="color: inherit; text-decoration: inherit;">cluster_<wbr>name</a>
@@ -3137,8 +2828,7 @@ Conflicts with `query_file_uri`
         <span class="property-indicator"></span>
         <span class="property-type">str</span>
     </dt>
-    <dd>{{% md %}}{{% /md %}}</dd>
-    <dt class="property-optional"
+    <dd>{{% md %}}{{% /md %}}</dd><dt class="property-optional"
             title="Optional">
         <span id="cluster_uuid_python">
 <a href="#cluster_uuid_python" style="color: inherit; text-decoration: inherit;">cluster_<wbr>uuid</a>
@@ -3146,16 +2836,13 @@ Conflicts with `query_file_uri`
         <span class="property-indicator"></span>
         <span class="property-type">str</span>
     </dt>
-    <dd>{{% md %}}{{% /md %}}</dd>
-</dl>
+    <dd>{{% md %}}{{% /md %}}</dd></dl>
 {{% /choosable %}}
 
 <h4 id="jobpysparkconfig">Job<wbr>Pyspark<wbr>Config</h4>
 
 {{% choosable language csharp %}}
-<dl class="resources-properties">
-
-    <dt class="property-required"
+<dl class="resources-properties"><dt class="property-required"
             title="Required">
         <span id="mainpythonfileuri_csharp">
 <a href="#mainpythonfileuri_csharp" style="color: inherit; text-decoration: inherit;">Main<wbr>Python<wbr>File<wbr>Uri</a>
@@ -3164,8 +2851,7 @@ Conflicts with `query_file_uri`
         <span class="property-type">string</span>
     </dt>
     <dd>{{% md %}}The HCFS URI of the main Python file to use as the driver. Must be a .py file.
-{{% /md %}}</dd>
-    <dt class="property-optional"
+{{% /md %}}</dd><dt class="property-optional"
             title="Optional">
         <span id="archiveuris_csharp">
 <a href="#archiveuris_csharp" style="color: inherit; text-decoration: inherit;">Archive<wbr>Uris</a>
@@ -3174,8 +2860,7 @@ Conflicts with `query_file_uri`
         <span class="property-type">List&lt;string&gt;</span>
     </dt>
     <dd>{{% md %}}HCFS URIs of archives to be extracted in the working directory of .jar, .tar, .tar.gz, .tgz, and .zip.
-{{% /md %}}</dd>
-    <dt class="property-optional"
+{{% /md %}}</dd><dt class="property-optional"
             title="Optional">
         <span id="args_csharp">
 <a href="#args_csharp" style="color: inherit; text-decoration: inherit;">Args</a>
@@ -3184,8 +2869,7 @@ Conflicts with `query_file_uri`
         <span class="property-type">List&lt;string&gt;</span>
     </dt>
     <dd>{{% md %}}The arguments to pass to the driver. Do not include arguments, such as -libjars or -Dfoo=bar, that can be set as job properties, since a collision may occur that causes an incorrect job submission.
-{{% /md %}}</dd>
-    <dt class="property-optional"
+{{% /md %}}</dd><dt class="property-optional"
             title="Optional">
         <span id="fileuris_csharp">
 <a href="#fileuris_csharp" style="color: inherit; text-decoration: inherit;">File<wbr>Uris</a>
@@ -3194,8 +2878,7 @@ Conflicts with `query_file_uri`
         <span class="property-type">List&lt;string&gt;</span>
     </dt>
     <dd>{{% md %}}HCFS URIs of files to be copied to the working directory of Hadoop drivers and distributed tasks. Useful for naively parallel tasks.
-{{% /md %}}</dd>
-    <dt class="property-optional"
+{{% /md %}}</dd><dt class="property-optional"
             title="Optional">
         <span id="jarfileuris_csharp">
 <a href="#jarfileuris_csharp" style="color: inherit; text-decoration: inherit;">Jar<wbr>File<wbr>Uris</a>
@@ -3204,8 +2887,7 @@ Conflicts with `query_file_uri`
         <span class="property-type">List&lt;string&gt;</span>
     </dt>
     <dd>{{% md %}}HCFS URIs of jar files to be added to the Spark CLASSPATH.
-{{% /md %}}</dd>
-    <dt class="property-optional"
+{{% /md %}}</dd><dt class="property-optional"
             title="Optional">
         <span id="loggingconfig_csharp">
 <a href="#loggingconfig_csharp" style="color: inherit; text-decoration: inherit;">Logging<wbr>Config</a>
@@ -3213,8 +2895,7 @@ Conflicts with `query_file_uri`
         <span class="property-indicator"></span>
         <span class="property-type"><a href="#jobpysparkconfigloggingconfig">Job<wbr>Pyspark<wbr>Config<wbr>Logging<wbr>Config<wbr>Args</a></span>
     </dt>
-    <dd>{{% md %}}{{% /md %}}</dd>
-    <dt class="property-optional"
+    <dd>{{% md %}}{{% /md %}}</dd><dt class="property-optional"
             title="Optional">
         <span id="properties_csharp">
 <a href="#properties_csharp" style="color: inherit; text-decoration: inherit;">Properties</a>
@@ -3223,8 +2904,7 @@ Conflicts with `query_file_uri`
         <span class="property-type">Dictionary&lt;string, string&gt;</span>
     </dt>
     <dd>{{% md %}}A mapping of property names to values, used to configure Spark SQL's SparkConf. Properties that conflict with values set by the Cloud Dataproc API may be overwritten.
-{{% /md %}}</dd>
-    <dt class="property-optional"
+{{% /md %}}</dd><dt class="property-optional"
             title="Optional">
         <span id="pythonfileuris_csharp">
 <a href="#pythonfileuris_csharp" style="color: inherit; text-decoration: inherit;">Python<wbr>File<wbr>Uris</a>
@@ -3233,14 +2913,11 @@ Conflicts with `query_file_uri`
         <span class="property-type">List&lt;string&gt;</span>
     </dt>
     <dd>{{% md %}}HCFS file URIs of Python files to pass to the PySpark framework. Supported file types: .py, .egg, and .zip.
-{{% /md %}}</dd>
-</dl>
+{{% /md %}}</dd></dl>
 {{% /choosable %}}
 
 {{% choosable language go %}}
-<dl class="resources-properties">
-
-    <dt class="property-required"
+<dl class="resources-properties"><dt class="property-required"
             title="Required">
         <span id="mainpythonfileuri_go">
 <a href="#mainpythonfileuri_go" style="color: inherit; text-decoration: inherit;">Main<wbr>Python<wbr>File<wbr>Uri</a>
@@ -3249,8 +2926,7 @@ Conflicts with `query_file_uri`
         <span class="property-type">string</span>
     </dt>
     <dd>{{% md %}}The HCFS URI of the main Python file to use as the driver. Must be a .py file.
-{{% /md %}}</dd>
-    <dt class="property-optional"
+{{% /md %}}</dd><dt class="property-optional"
             title="Optional">
         <span id="archiveuris_go">
 <a href="#archiveuris_go" style="color: inherit; text-decoration: inherit;">Archive<wbr>Uris</a>
@@ -3259,8 +2935,7 @@ Conflicts with `query_file_uri`
         <span class="property-type">[]string</span>
     </dt>
     <dd>{{% md %}}HCFS URIs of archives to be extracted in the working directory of .jar, .tar, .tar.gz, .tgz, and .zip.
-{{% /md %}}</dd>
-    <dt class="property-optional"
+{{% /md %}}</dd><dt class="property-optional"
             title="Optional">
         <span id="args_go">
 <a href="#args_go" style="color: inherit; text-decoration: inherit;">Args</a>
@@ -3269,8 +2944,7 @@ Conflicts with `query_file_uri`
         <span class="property-type">[]string</span>
     </dt>
     <dd>{{% md %}}The arguments to pass to the driver. Do not include arguments, such as -libjars or -Dfoo=bar, that can be set as job properties, since a collision may occur that causes an incorrect job submission.
-{{% /md %}}</dd>
-    <dt class="property-optional"
+{{% /md %}}</dd><dt class="property-optional"
             title="Optional">
         <span id="fileuris_go">
 <a href="#fileuris_go" style="color: inherit; text-decoration: inherit;">File<wbr>Uris</a>
@@ -3279,8 +2953,7 @@ Conflicts with `query_file_uri`
         <span class="property-type">[]string</span>
     </dt>
     <dd>{{% md %}}HCFS URIs of files to be copied to the working directory of Hadoop drivers and distributed tasks. Useful for naively parallel tasks.
-{{% /md %}}</dd>
-    <dt class="property-optional"
+{{% /md %}}</dd><dt class="property-optional"
             title="Optional">
         <span id="jarfileuris_go">
 <a href="#jarfileuris_go" style="color: inherit; text-decoration: inherit;">Jar<wbr>File<wbr>Uris</a>
@@ -3289,8 +2962,7 @@ Conflicts with `query_file_uri`
         <span class="property-type">[]string</span>
     </dt>
     <dd>{{% md %}}HCFS URIs of jar files to be added to the Spark CLASSPATH.
-{{% /md %}}</dd>
-    <dt class="property-optional"
+{{% /md %}}</dd><dt class="property-optional"
             title="Optional">
         <span id="loggingconfig_go">
 <a href="#loggingconfig_go" style="color: inherit; text-decoration: inherit;">Logging<wbr>Config</a>
@@ -3298,8 +2970,7 @@ Conflicts with `query_file_uri`
         <span class="property-indicator"></span>
         <span class="property-type"><a href="#jobpysparkconfigloggingconfig">Job<wbr>Pyspark<wbr>Config<wbr>Logging<wbr>Config</a></span>
     </dt>
-    <dd>{{% md %}}{{% /md %}}</dd>
-    <dt class="property-optional"
+    <dd>{{% md %}}{{% /md %}}</dd><dt class="property-optional"
             title="Optional">
         <span id="properties_go">
 <a href="#properties_go" style="color: inherit; text-decoration: inherit;">Properties</a>
@@ -3308,8 +2979,7 @@ Conflicts with `query_file_uri`
         <span class="property-type">map[string]string</span>
     </dt>
     <dd>{{% md %}}A mapping of property names to values, used to configure Spark SQL's SparkConf. Properties that conflict with values set by the Cloud Dataproc API may be overwritten.
-{{% /md %}}</dd>
-    <dt class="property-optional"
+{{% /md %}}</dd><dt class="property-optional"
             title="Optional">
         <span id="pythonfileuris_go">
 <a href="#pythonfileuris_go" style="color: inherit; text-decoration: inherit;">Python<wbr>File<wbr>Uris</a>
@@ -3318,14 +2988,11 @@ Conflicts with `query_file_uri`
         <span class="property-type">[]string</span>
     </dt>
     <dd>{{% md %}}HCFS file URIs of Python files to pass to the PySpark framework. Supported file types: .py, .egg, and .zip.
-{{% /md %}}</dd>
-</dl>
+{{% /md %}}</dd></dl>
 {{% /choosable %}}
 
 {{% choosable language nodejs %}}
-<dl class="resources-properties">
-
-    <dt class="property-required"
+<dl class="resources-properties"><dt class="property-required"
             title="Required">
         <span id="mainpythonfileuri_nodejs">
 <a href="#mainpythonfileuri_nodejs" style="color: inherit; text-decoration: inherit;">main<wbr>Python<wbr>File<wbr>Uri</a>
@@ -3334,8 +3001,7 @@ Conflicts with `query_file_uri`
         <span class="property-type">string</span>
     </dt>
     <dd>{{% md %}}The HCFS URI of the main Python file to use as the driver. Must be a .py file.
-{{% /md %}}</dd>
-    <dt class="property-optional"
+{{% /md %}}</dd><dt class="property-optional"
             title="Optional">
         <span id="archiveuris_nodejs">
 <a href="#archiveuris_nodejs" style="color: inherit; text-decoration: inherit;">archive<wbr>Uris</a>
@@ -3344,8 +3010,7 @@ Conflicts with `query_file_uri`
         <span class="property-type">string[]</span>
     </dt>
     <dd>{{% md %}}HCFS URIs of archives to be extracted in the working directory of .jar, .tar, .tar.gz, .tgz, and .zip.
-{{% /md %}}</dd>
-    <dt class="property-optional"
+{{% /md %}}</dd><dt class="property-optional"
             title="Optional">
         <span id="args_nodejs">
 <a href="#args_nodejs" style="color: inherit; text-decoration: inherit;">args</a>
@@ -3354,8 +3019,7 @@ Conflicts with `query_file_uri`
         <span class="property-type">string[]</span>
     </dt>
     <dd>{{% md %}}The arguments to pass to the driver. Do not include arguments, such as -libjars or -Dfoo=bar, that can be set as job properties, since a collision may occur that causes an incorrect job submission.
-{{% /md %}}</dd>
-    <dt class="property-optional"
+{{% /md %}}</dd><dt class="property-optional"
             title="Optional">
         <span id="fileuris_nodejs">
 <a href="#fileuris_nodejs" style="color: inherit; text-decoration: inherit;">file<wbr>Uris</a>
@@ -3364,8 +3028,7 @@ Conflicts with `query_file_uri`
         <span class="property-type">string[]</span>
     </dt>
     <dd>{{% md %}}HCFS URIs of files to be copied to the working directory of Hadoop drivers and distributed tasks. Useful for naively parallel tasks.
-{{% /md %}}</dd>
-    <dt class="property-optional"
+{{% /md %}}</dd><dt class="property-optional"
             title="Optional">
         <span id="jarfileuris_nodejs">
 <a href="#jarfileuris_nodejs" style="color: inherit; text-decoration: inherit;">jar<wbr>File<wbr>Uris</a>
@@ -3374,8 +3037,7 @@ Conflicts with `query_file_uri`
         <span class="property-type">string[]</span>
     </dt>
     <dd>{{% md %}}HCFS URIs of jar files to be added to the Spark CLASSPATH.
-{{% /md %}}</dd>
-    <dt class="property-optional"
+{{% /md %}}</dd><dt class="property-optional"
             title="Optional">
         <span id="loggingconfig_nodejs">
 <a href="#loggingconfig_nodejs" style="color: inherit; text-decoration: inherit;">logging<wbr>Config</a>
@@ -3383,8 +3045,7 @@ Conflicts with `query_file_uri`
         <span class="property-indicator"></span>
         <span class="property-type"><a href="#jobpysparkconfigloggingconfig">Job<wbr>Pyspark<wbr>Config<wbr>Logging<wbr>Config</a></span>
     </dt>
-    <dd>{{% md %}}{{% /md %}}</dd>
-    <dt class="property-optional"
+    <dd>{{% md %}}{{% /md %}}</dd><dt class="property-optional"
             title="Optional">
         <span id="properties_nodejs">
 <a href="#properties_nodejs" style="color: inherit; text-decoration: inherit;">properties</a>
@@ -3393,8 +3054,7 @@ Conflicts with `query_file_uri`
         <span class="property-type">{[key: string]: string}</span>
     </dt>
     <dd>{{% md %}}A mapping of property names to values, used to configure Spark SQL's SparkConf. Properties that conflict with values set by the Cloud Dataproc API may be overwritten.
-{{% /md %}}</dd>
-    <dt class="property-optional"
+{{% /md %}}</dd><dt class="property-optional"
             title="Optional">
         <span id="pythonfileuris_nodejs">
 <a href="#pythonfileuris_nodejs" style="color: inherit; text-decoration: inherit;">python<wbr>File<wbr>Uris</a>
@@ -3403,14 +3063,11 @@ Conflicts with `query_file_uri`
         <span class="property-type">string[]</span>
     </dt>
     <dd>{{% md %}}HCFS file URIs of Python files to pass to the PySpark framework. Supported file types: .py, .egg, and .zip.
-{{% /md %}}</dd>
-</dl>
+{{% /md %}}</dd></dl>
 {{% /choosable %}}
 
 {{% choosable language python %}}
-<dl class="resources-properties">
-
-    <dt class="property-required"
+<dl class="resources-properties"><dt class="property-required"
             title="Required">
         <span id="main_python_file_uri_python">
 <a href="#main_python_file_uri_python" style="color: inherit; text-decoration: inherit;">main_<wbr>python_<wbr>file_<wbr>uri</a>
@@ -3419,8 +3076,7 @@ Conflicts with `query_file_uri`
         <span class="property-type">str</span>
     </dt>
     <dd>{{% md %}}The HCFS URI of the main Python file to use as the driver. Must be a .py file.
-{{% /md %}}</dd>
-    <dt class="property-optional"
+{{% /md %}}</dd><dt class="property-optional"
             title="Optional">
         <span id="archive_uris_python">
 <a href="#archive_uris_python" style="color: inherit; text-decoration: inherit;">archive_<wbr>uris</a>
@@ -3429,8 +3085,7 @@ Conflicts with `query_file_uri`
         <span class="property-type">Sequence[str]</span>
     </dt>
     <dd>{{% md %}}HCFS URIs of archives to be extracted in the working directory of .jar, .tar, .tar.gz, .tgz, and .zip.
-{{% /md %}}</dd>
-    <dt class="property-optional"
+{{% /md %}}</dd><dt class="property-optional"
             title="Optional">
         <span id="args_python">
 <a href="#args_python" style="color: inherit; text-decoration: inherit;">args</a>
@@ -3439,8 +3094,7 @@ Conflicts with `query_file_uri`
         <span class="property-type">Sequence[str]</span>
     </dt>
     <dd>{{% md %}}The arguments to pass to the driver. Do not include arguments, such as -libjars or -Dfoo=bar, that can be set as job properties, since a collision may occur that causes an incorrect job submission.
-{{% /md %}}</dd>
-    <dt class="property-optional"
+{{% /md %}}</dd><dt class="property-optional"
             title="Optional">
         <span id="file_uris_python">
 <a href="#file_uris_python" style="color: inherit; text-decoration: inherit;">file_<wbr>uris</a>
@@ -3449,8 +3103,7 @@ Conflicts with `query_file_uri`
         <span class="property-type">Sequence[str]</span>
     </dt>
     <dd>{{% md %}}HCFS URIs of files to be copied to the working directory of Hadoop drivers and distributed tasks. Useful for naively parallel tasks.
-{{% /md %}}</dd>
-    <dt class="property-optional"
+{{% /md %}}</dd><dt class="property-optional"
             title="Optional">
         <span id="jar_file_uris_python">
 <a href="#jar_file_uris_python" style="color: inherit; text-decoration: inherit;">jar_<wbr>file_<wbr>uris</a>
@@ -3459,8 +3112,7 @@ Conflicts with `query_file_uri`
         <span class="property-type">Sequence[str]</span>
     </dt>
     <dd>{{% md %}}HCFS URIs of jar files to be added to the Spark CLASSPATH.
-{{% /md %}}</dd>
-    <dt class="property-optional"
+{{% /md %}}</dd><dt class="property-optional"
             title="Optional">
         <span id="logging_config_python">
 <a href="#logging_config_python" style="color: inherit; text-decoration: inherit;">logging_<wbr>config</a>
@@ -3468,8 +3120,7 @@ Conflicts with `query_file_uri`
         <span class="property-indicator"></span>
         <span class="property-type"><a href="#jobpysparkconfigloggingconfig">Job<wbr>Pyspark<wbr>Config<wbr>Logging<wbr>Config<wbr>Args</a></span>
     </dt>
-    <dd>{{% md %}}{{% /md %}}</dd>
-    <dt class="property-optional"
+    <dd>{{% md %}}{{% /md %}}</dd><dt class="property-optional"
             title="Optional">
         <span id="properties_python">
 <a href="#properties_python" style="color: inherit; text-decoration: inherit;">properties</a>
@@ -3478,8 +3129,7 @@ Conflicts with `query_file_uri`
         <span class="property-type">Mapping[str, str]</span>
     </dt>
     <dd>{{% md %}}A mapping of property names to values, used to configure Spark SQL's SparkConf. Properties that conflict with values set by the Cloud Dataproc API may be overwritten.
-{{% /md %}}</dd>
-    <dt class="property-optional"
+{{% /md %}}</dd><dt class="property-optional"
             title="Optional">
         <span id="python_file_uris_python">
 <a href="#python_file_uris_python" style="color: inherit; text-decoration: inherit;">python_<wbr>file_<wbr>uris</a>
@@ -3488,16 +3138,13 @@ Conflicts with `query_file_uri`
         <span class="property-type">Sequence[str]</span>
     </dt>
     <dd>{{% md %}}HCFS file URIs of Python files to pass to the PySpark framework. Supported file types: .py, .egg, and .zip.
-{{% /md %}}</dd>
-</dl>
+{{% /md %}}</dd></dl>
 {{% /choosable %}}
 
 <h4 id="jobpysparkconfigloggingconfig">Job<wbr>Pyspark<wbr>Config<wbr>Logging<wbr>Config</h4>
 
 {{% choosable language csharp %}}
-<dl class="resources-properties">
-
-    <dt class="property-required"
+<dl class="resources-properties"><dt class="property-required"
             title="Required">
         <span id="driverloglevels_csharp">
 <a href="#driverloglevels_csharp" style="color: inherit; text-decoration: inherit;">Driver<wbr>Log<wbr>Levels</a>
@@ -3505,14 +3152,11 @@ Conflicts with `query_file_uri`
         <span class="property-indicator"></span>
         <span class="property-type">Dictionary&lt;string, string&gt;</span>
     </dt>
-    <dd>{{% md %}}{{% /md %}}</dd>
-</dl>
+    <dd>{{% md %}}{{% /md %}}</dd></dl>
 {{% /choosable %}}
 
 {{% choosable language go %}}
-<dl class="resources-properties">
-
-    <dt class="property-required"
+<dl class="resources-properties"><dt class="property-required"
             title="Required">
         <span id="driverloglevels_go">
 <a href="#driverloglevels_go" style="color: inherit; text-decoration: inherit;">Driver<wbr>Log<wbr>Levels</a>
@@ -3520,14 +3164,11 @@ Conflicts with `query_file_uri`
         <span class="property-indicator"></span>
         <span class="property-type">map[string]string</span>
     </dt>
-    <dd>{{% md %}}{{% /md %}}</dd>
-</dl>
+    <dd>{{% md %}}{{% /md %}}</dd></dl>
 {{% /choosable %}}
 
 {{% choosable language nodejs %}}
-<dl class="resources-properties">
-
-    <dt class="property-required"
+<dl class="resources-properties"><dt class="property-required"
             title="Required">
         <span id="driverloglevels_nodejs">
 <a href="#driverloglevels_nodejs" style="color: inherit; text-decoration: inherit;">driver<wbr>Log<wbr>Levels</a>
@@ -3535,14 +3176,11 @@ Conflicts with `query_file_uri`
         <span class="property-indicator"></span>
         <span class="property-type">{[key: string]: string}</span>
     </dt>
-    <dd>{{% md %}}{{% /md %}}</dd>
-</dl>
+    <dd>{{% md %}}{{% /md %}}</dd></dl>
 {{% /choosable %}}
 
 {{% choosable language python %}}
-<dl class="resources-properties">
-
-    <dt class="property-required"
+<dl class="resources-properties"><dt class="property-required"
             title="Required">
         <span id="driver_log_levels_python">
 <a href="#driver_log_levels_python" style="color: inherit; text-decoration: inherit;">driver_<wbr>log_<wbr>levels</a>
@@ -3550,16 +3188,13 @@ Conflicts with `query_file_uri`
         <span class="property-indicator"></span>
         <span class="property-type">Mapping[str, str]</span>
     </dt>
-    <dd>{{% md %}}{{% /md %}}</dd>
-</dl>
+    <dd>{{% md %}}{{% /md %}}</dd></dl>
 {{% /choosable %}}
 
 <h4 id="jobreference">Job<wbr>Reference</h4>
 
 {{% choosable language csharp %}}
-<dl class="resources-properties">
-
-    <dt class="property-optional"
+<dl class="resources-properties"><dt class="property-optional"
             title="Optional">
         <span id="jobid_csharp">
 <a href="#jobid_csharp" style="color: inherit; text-decoration: inherit;">Job<wbr>Id</a>
@@ -3567,14 +3202,11 @@ Conflicts with `query_file_uri`
         <span class="property-indicator"></span>
         <span class="property-type">string</span>
     </dt>
-    <dd>{{% md %}}{{% /md %}}</dd>
-</dl>
+    <dd>{{% md %}}{{% /md %}}</dd></dl>
 {{% /choosable %}}
 
 {{% choosable language go %}}
-<dl class="resources-properties">
-
-    <dt class="property-optional"
+<dl class="resources-properties"><dt class="property-optional"
             title="Optional">
         <span id="jobid_go">
 <a href="#jobid_go" style="color: inherit; text-decoration: inherit;">Job<wbr>Id</a>
@@ -3582,14 +3214,11 @@ Conflicts with `query_file_uri`
         <span class="property-indicator"></span>
         <span class="property-type">string</span>
     </dt>
-    <dd>{{% md %}}{{% /md %}}</dd>
-</dl>
+    <dd>{{% md %}}{{% /md %}}</dd></dl>
 {{% /choosable %}}
 
 {{% choosable language nodejs %}}
-<dl class="resources-properties">
-
-    <dt class="property-optional"
+<dl class="resources-properties"><dt class="property-optional"
             title="Optional">
         <span id="jobid_nodejs">
 <a href="#jobid_nodejs" style="color: inherit; text-decoration: inherit;">job<wbr>Id</a>
@@ -3597,14 +3226,11 @@ Conflicts with `query_file_uri`
         <span class="property-indicator"></span>
         <span class="property-type">string</span>
     </dt>
-    <dd>{{% md %}}{{% /md %}}</dd>
-</dl>
+    <dd>{{% md %}}{{% /md %}}</dd></dl>
 {{% /choosable %}}
 
 {{% choosable language python %}}
-<dl class="resources-properties">
-
-    <dt class="property-optional"
+<dl class="resources-properties"><dt class="property-optional"
             title="Optional">
         <span id="job_id_python">
 <a href="#job_id_python" style="color: inherit; text-decoration: inherit;">job_<wbr>id</a>
@@ -3612,16 +3238,13 @@ Conflicts with `query_file_uri`
         <span class="property-indicator"></span>
         <span class="property-type">str</span>
     </dt>
-    <dd>{{% md %}}{{% /md %}}</dd>
-</dl>
+    <dd>{{% md %}}{{% /md %}}</dd></dl>
 {{% /choosable %}}
 
 <h4 id="jobscheduling">Job<wbr>Scheduling</h4>
 
 {{% choosable language csharp %}}
-<dl class="resources-properties">
-
-    <dt class="property-required"
+<dl class="resources-properties"><dt class="property-required"
             title="Required">
         <span id="maxfailuresperhour_csharp">
 <a href="#maxfailuresperhour_csharp" style="color: inherit; text-decoration: inherit;">Max<wbr>Failures<wbr>Per<wbr>Hour</a>
@@ -3629,8 +3252,7 @@ Conflicts with `query_file_uri`
         <span class="property-indicator"></span>
         <span class="property-type">int</span>
     </dt>
-    <dd>{{% md %}}{{% /md %}}</dd>
-    <dt class="property-required"
+    <dd>{{% md %}}{{% /md %}}</dd><dt class="property-required"
             title="Required">
         <span id="maxfailurestotal_csharp">
 <a href="#maxfailurestotal_csharp" style="color: inherit; text-decoration: inherit;">Max<wbr>Failures<wbr>Total</a>
@@ -3638,14 +3260,11 @@ Conflicts with `query_file_uri`
         <span class="property-indicator"></span>
         <span class="property-type">int</span>
     </dt>
-    <dd>{{% md %}}{{% /md %}}</dd>
-</dl>
+    <dd>{{% md %}}{{% /md %}}</dd></dl>
 {{% /choosable %}}
 
 {{% choosable language go %}}
-<dl class="resources-properties">
-
-    <dt class="property-required"
+<dl class="resources-properties"><dt class="property-required"
             title="Required">
         <span id="maxfailuresperhour_go">
 <a href="#maxfailuresperhour_go" style="color: inherit; text-decoration: inherit;">Max<wbr>Failures<wbr>Per<wbr>Hour</a>
@@ -3653,8 +3272,7 @@ Conflicts with `query_file_uri`
         <span class="property-indicator"></span>
         <span class="property-type">int</span>
     </dt>
-    <dd>{{% md %}}{{% /md %}}</dd>
-    <dt class="property-required"
+    <dd>{{% md %}}{{% /md %}}</dd><dt class="property-required"
             title="Required">
         <span id="maxfailurestotal_go">
 <a href="#maxfailurestotal_go" style="color: inherit; text-decoration: inherit;">Max<wbr>Failures<wbr>Total</a>
@@ -3662,14 +3280,11 @@ Conflicts with `query_file_uri`
         <span class="property-indicator"></span>
         <span class="property-type">int</span>
     </dt>
-    <dd>{{% md %}}{{% /md %}}</dd>
-</dl>
+    <dd>{{% md %}}{{% /md %}}</dd></dl>
 {{% /choosable %}}
 
 {{% choosable language nodejs %}}
-<dl class="resources-properties">
-
-    <dt class="property-required"
+<dl class="resources-properties"><dt class="property-required"
             title="Required">
         <span id="maxfailuresperhour_nodejs">
 <a href="#maxfailuresperhour_nodejs" style="color: inherit; text-decoration: inherit;">max<wbr>Failures<wbr>Per<wbr>Hour</a>
@@ -3677,8 +3292,7 @@ Conflicts with `query_file_uri`
         <span class="property-indicator"></span>
         <span class="property-type">number</span>
     </dt>
-    <dd>{{% md %}}{{% /md %}}</dd>
-    <dt class="property-required"
+    <dd>{{% md %}}{{% /md %}}</dd><dt class="property-required"
             title="Required">
         <span id="maxfailurestotal_nodejs">
 <a href="#maxfailurestotal_nodejs" style="color: inherit; text-decoration: inherit;">max<wbr>Failures<wbr>Total</a>
@@ -3686,14 +3300,11 @@ Conflicts with `query_file_uri`
         <span class="property-indicator"></span>
         <span class="property-type">number</span>
     </dt>
-    <dd>{{% md %}}{{% /md %}}</dd>
-</dl>
+    <dd>{{% md %}}{{% /md %}}</dd></dl>
 {{% /choosable %}}
 
 {{% choosable language python %}}
-<dl class="resources-properties">
-
-    <dt class="property-required"
+<dl class="resources-properties"><dt class="property-required"
             title="Required">
         <span id="max_failures_per_hour_python">
 <a href="#max_failures_per_hour_python" style="color: inherit; text-decoration: inherit;">max_<wbr>failures_<wbr>per_<wbr>hour</a>
@@ -3701,8 +3312,7 @@ Conflicts with `query_file_uri`
         <span class="property-indicator"></span>
         <span class="property-type">int</span>
     </dt>
-    <dd>{{% md %}}{{% /md %}}</dd>
-    <dt class="property-required"
+    <dd>{{% md %}}{{% /md %}}</dd><dt class="property-required"
             title="Required">
         <span id="max_failures_total_python">
 <a href="#max_failures_total_python" style="color: inherit; text-decoration: inherit;">max_<wbr>failures_<wbr>total</a>
@@ -3710,16 +3320,13 @@ Conflicts with `query_file_uri`
         <span class="property-indicator"></span>
         <span class="property-type">int</span>
     </dt>
-    <dd>{{% md %}}{{% /md %}}</dd>
-</dl>
+    <dd>{{% md %}}{{% /md %}}</dd></dl>
 {{% /choosable %}}
 
 <h4 id="jobsparkconfig">Job<wbr>Spark<wbr>Config</h4>
 
 {{% choosable language csharp %}}
-<dl class="resources-properties">
-
-    <dt class="property-optional"
+<dl class="resources-properties"><dt class="property-optional"
             title="Optional">
         <span id="archiveuris_csharp">
 <a href="#archiveuris_csharp" style="color: inherit; text-decoration: inherit;">Archive<wbr>Uris</a>
@@ -3728,8 +3335,7 @@ Conflicts with `query_file_uri`
         <span class="property-type">List&lt;string&gt;</span>
     </dt>
     <dd>{{% md %}}HCFS URIs of archives to be extracted in the working directory of .jar, .tar, .tar.gz, .tgz, and .zip.
-{{% /md %}}</dd>
-    <dt class="property-optional"
+{{% /md %}}</dd><dt class="property-optional"
             title="Optional">
         <span id="args_csharp">
 <a href="#args_csharp" style="color: inherit; text-decoration: inherit;">Args</a>
@@ -3738,8 +3344,7 @@ Conflicts with `query_file_uri`
         <span class="property-type">List&lt;string&gt;</span>
     </dt>
     <dd>{{% md %}}The arguments to pass to the driver. Do not include arguments, such as -libjars or -Dfoo=bar, that can be set as job properties, since a collision may occur that causes an incorrect job submission.
-{{% /md %}}</dd>
-    <dt class="property-optional"
+{{% /md %}}</dd><dt class="property-optional"
             title="Optional">
         <span id="fileuris_csharp">
 <a href="#fileuris_csharp" style="color: inherit; text-decoration: inherit;">File<wbr>Uris</a>
@@ -3748,8 +3353,7 @@ Conflicts with `query_file_uri`
         <span class="property-type">List&lt;string&gt;</span>
     </dt>
     <dd>{{% md %}}HCFS URIs of files to be copied to the working directory of Hadoop drivers and distributed tasks. Useful for naively parallel tasks.
-{{% /md %}}</dd>
-    <dt class="property-optional"
+{{% /md %}}</dd><dt class="property-optional"
             title="Optional">
         <span id="jarfileuris_csharp">
 <a href="#jarfileuris_csharp" style="color: inherit; text-decoration: inherit;">Jar<wbr>File<wbr>Uris</a>
@@ -3758,8 +3362,7 @@ Conflicts with `query_file_uri`
         <span class="property-type">List&lt;string&gt;</span>
     </dt>
     <dd>{{% md %}}HCFS URIs of jar files to be added to the Spark CLASSPATH.
-{{% /md %}}</dd>
-    <dt class="property-optional"
+{{% /md %}}</dd><dt class="property-optional"
             title="Optional">
         <span id="loggingconfig_csharp">
 <a href="#loggingconfig_csharp" style="color: inherit; text-decoration: inherit;">Logging<wbr>Config</a>
@@ -3767,8 +3370,7 @@ Conflicts with `query_file_uri`
         <span class="property-indicator"></span>
         <span class="property-type"><a href="#jobsparkconfigloggingconfig">Job<wbr>Spark<wbr>Config<wbr>Logging<wbr>Config<wbr>Args</a></span>
     </dt>
-    <dd>{{% md %}}{{% /md %}}</dd>
-    <dt class="property-optional"
+    <dd>{{% md %}}{{% /md %}}</dd><dt class="property-optional"
             title="Optional">
         <span id="mainclass_csharp">
 <a href="#mainclass_csharp" style="color: inherit; text-decoration: inherit;">Main<wbr>Class</a>
@@ -3777,8 +3379,7 @@ Conflicts with `query_file_uri`
         <span class="property-type">string</span>
     </dt>
     <dd>{{% md %}}The name of the driver's main class. The jar file containing the class must be in the default CLASSPATH or specified in `jar_file_uris`. Conflicts with `main_jar_file_uri`
-{{% /md %}}</dd>
-    <dt class="property-optional"
+{{% /md %}}</dd><dt class="property-optional"
             title="Optional">
         <span id="mainjarfileuri_csharp">
 <a href="#mainjarfileuri_csharp" style="color: inherit; text-decoration: inherit;">Main<wbr>Jar<wbr>File<wbr>Uri</a>
@@ -3787,8 +3388,7 @@ Conflicts with `query_file_uri`
         <span class="property-type">string</span>
     </dt>
     <dd>{{% md %}}The HCFS URI of the jar file containing the main class. Examples: 'gs://foo-bucket/analytics-binaries/extract-useful-metrics-mr.jar' 'hdfs:/tmp/test-samples/custom-wordcount.jar' 'file:///home/usr/lib/hadoop-mapreduce/hadoop-mapreduce-examples.jar'. Conflicts with `main_class`
-{{% /md %}}</dd>
-    <dt class="property-optional"
+{{% /md %}}</dd><dt class="property-optional"
             title="Optional">
         <span id="properties_csharp">
 <a href="#properties_csharp" style="color: inherit; text-decoration: inherit;">Properties</a>
@@ -3797,14 +3397,11 @@ Conflicts with `query_file_uri`
         <span class="property-type">Dictionary&lt;string, string&gt;</span>
     </dt>
     <dd>{{% md %}}A mapping of property names to values, used to configure Spark SQL's SparkConf. Properties that conflict with values set by the Cloud Dataproc API may be overwritten.
-{{% /md %}}</dd>
-</dl>
+{{% /md %}}</dd></dl>
 {{% /choosable %}}
 
 {{% choosable language go %}}
-<dl class="resources-properties">
-
-    <dt class="property-optional"
+<dl class="resources-properties"><dt class="property-optional"
             title="Optional">
         <span id="archiveuris_go">
 <a href="#archiveuris_go" style="color: inherit; text-decoration: inherit;">Archive<wbr>Uris</a>
@@ -3813,8 +3410,7 @@ Conflicts with `query_file_uri`
         <span class="property-type">[]string</span>
     </dt>
     <dd>{{% md %}}HCFS URIs of archives to be extracted in the working directory of .jar, .tar, .tar.gz, .tgz, and .zip.
-{{% /md %}}</dd>
-    <dt class="property-optional"
+{{% /md %}}</dd><dt class="property-optional"
             title="Optional">
         <span id="args_go">
 <a href="#args_go" style="color: inherit; text-decoration: inherit;">Args</a>
@@ -3823,8 +3419,7 @@ Conflicts with `query_file_uri`
         <span class="property-type">[]string</span>
     </dt>
     <dd>{{% md %}}The arguments to pass to the driver. Do not include arguments, such as -libjars or -Dfoo=bar, that can be set as job properties, since a collision may occur that causes an incorrect job submission.
-{{% /md %}}</dd>
-    <dt class="property-optional"
+{{% /md %}}</dd><dt class="property-optional"
             title="Optional">
         <span id="fileuris_go">
 <a href="#fileuris_go" style="color: inherit; text-decoration: inherit;">File<wbr>Uris</a>
@@ -3833,8 +3428,7 @@ Conflicts with `query_file_uri`
         <span class="property-type">[]string</span>
     </dt>
     <dd>{{% md %}}HCFS URIs of files to be copied to the working directory of Hadoop drivers and distributed tasks. Useful for naively parallel tasks.
-{{% /md %}}</dd>
-    <dt class="property-optional"
+{{% /md %}}</dd><dt class="property-optional"
             title="Optional">
         <span id="jarfileuris_go">
 <a href="#jarfileuris_go" style="color: inherit; text-decoration: inherit;">Jar<wbr>File<wbr>Uris</a>
@@ -3843,8 +3437,7 @@ Conflicts with `query_file_uri`
         <span class="property-type">[]string</span>
     </dt>
     <dd>{{% md %}}HCFS URIs of jar files to be added to the Spark CLASSPATH.
-{{% /md %}}</dd>
-    <dt class="property-optional"
+{{% /md %}}</dd><dt class="property-optional"
             title="Optional">
         <span id="loggingconfig_go">
 <a href="#loggingconfig_go" style="color: inherit; text-decoration: inherit;">Logging<wbr>Config</a>
@@ -3852,8 +3445,7 @@ Conflicts with `query_file_uri`
         <span class="property-indicator"></span>
         <span class="property-type"><a href="#jobsparkconfigloggingconfig">Job<wbr>Spark<wbr>Config<wbr>Logging<wbr>Config</a></span>
     </dt>
-    <dd>{{% md %}}{{% /md %}}</dd>
-    <dt class="property-optional"
+    <dd>{{% md %}}{{% /md %}}</dd><dt class="property-optional"
             title="Optional">
         <span id="mainclass_go">
 <a href="#mainclass_go" style="color: inherit; text-decoration: inherit;">Main<wbr>Class</a>
@@ -3862,8 +3454,7 @@ Conflicts with `query_file_uri`
         <span class="property-type">string</span>
     </dt>
     <dd>{{% md %}}The name of the driver's main class. The jar file containing the class must be in the default CLASSPATH or specified in `jar_file_uris`. Conflicts with `main_jar_file_uri`
-{{% /md %}}</dd>
-    <dt class="property-optional"
+{{% /md %}}</dd><dt class="property-optional"
             title="Optional">
         <span id="mainjarfileuri_go">
 <a href="#mainjarfileuri_go" style="color: inherit; text-decoration: inherit;">Main<wbr>Jar<wbr>File<wbr>Uri</a>
@@ -3872,8 +3463,7 @@ Conflicts with `query_file_uri`
         <span class="property-type">string</span>
     </dt>
     <dd>{{% md %}}The HCFS URI of the jar file containing the main class. Examples: 'gs://foo-bucket/analytics-binaries/extract-useful-metrics-mr.jar' 'hdfs:/tmp/test-samples/custom-wordcount.jar' 'file:///home/usr/lib/hadoop-mapreduce/hadoop-mapreduce-examples.jar'. Conflicts with `main_class`
-{{% /md %}}</dd>
-    <dt class="property-optional"
+{{% /md %}}</dd><dt class="property-optional"
             title="Optional">
         <span id="properties_go">
 <a href="#properties_go" style="color: inherit; text-decoration: inherit;">Properties</a>
@@ -3882,14 +3472,11 @@ Conflicts with `query_file_uri`
         <span class="property-type">map[string]string</span>
     </dt>
     <dd>{{% md %}}A mapping of property names to values, used to configure Spark SQL's SparkConf. Properties that conflict with values set by the Cloud Dataproc API may be overwritten.
-{{% /md %}}</dd>
-</dl>
+{{% /md %}}</dd></dl>
 {{% /choosable %}}
 
 {{% choosable language nodejs %}}
-<dl class="resources-properties">
-
-    <dt class="property-optional"
+<dl class="resources-properties"><dt class="property-optional"
             title="Optional">
         <span id="archiveuris_nodejs">
 <a href="#archiveuris_nodejs" style="color: inherit; text-decoration: inherit;">archive<wbr>Uris</a>
@@ -3898,8 +3485,7 @@ Conflicts with `query_file_uri`
         <span class="property-type">string[]</span>
     </dt>
     <dd>{{% md %}}HCFS URIs of archives to be extracted in the working directory of .jar, .tar, .tar.gz, .tgz, and .zip.
-{{% /md %}}</dd>
-    <dt class="property-optional"
+{{% /md %}}</dd><dt class="property-optional"
             title="Optional">
         <span id="args_nodejs">
 <a href="#args_nodejs" style="color: inherit; text-decoration: inherit;">args</a>
@@ -3908,8 +3494,7 @@ Conflicts with `query_file_uri`
         <span class="property-type">string[]</span>
     </dt>
     <dd>{{% md %}}The arguments to pass to the driver. Do not include arguments, such as -libjars or -Dfoo=bar, that can be set as job properties, since a collision may occur that causes an incorrect job submission.
-{{% /md %}}</dd>
-    <dt class="property-optional"
+{{% /md %}}</dd><dt class="property-optional"
             title="Optional">
         <span id="fileuris_nodejs">
 <a href="#fileuris_nodejs" style="color: inherit; text-decoration: inherit;">file<wbr>Uris</a>
@@ -3918,8 +3503,7 @@ Conflicts with `query_file_uri`
         <span class="property-type">string[]</span>
     </dt>
     <dd>{{% md %}}HCFS URIs of files to be copied to the working directory of Hadoop drivers and distributed tasks. Useful for naively parallel tasks.
-{{% /md %}}</dd>
-    <dt class="property-optional"
+{{% /md %}}</dd><dt class="property-optional"
             title="Optional">
         <span id="jarfileuris_nodejs">
 <a href="#jarfileuris_nodejs" style="color: inherit; text-decoration: inherit;">jar<wbr>File<wbr>Uris</a>
@@ -3928,8 +3512,7 @@ Conflicts with `query_file_uri`
         <span class="property-type">string[]</span>
     </dt>
     <dd>{{% md %}}HCFS URIs of jar files to be added to the Spark CLASSPATH.
-{{% /md %}}</dd>
-    <dt class="property-optional"
+{{% /md %}}</dd><dt class="property-optional"
             title="Optional">
         <span id="loggingconfig_nodejs">
 <a href="#loggingconfig_nodejs" style="color: inherit; text-decoration: inherit;">logging<wbr>Config</a>
@@ -3937,8 +3520,7 @@ Conflicts with `query_file_uri`
         <span class="property-indicator"></span>
         <span class="property-type"><a href="#jobsparkconfigloggingconfig">Job<wbr>Spark<wbr>Config<wbr>Logging<wbr>Config</a></span>
     </dt>
-    <dd>{{% md %}}{{% /md %}}</dd>
-    <dt class="property-optional"
+    <dd>{{% md %}}{{% /md %}}</dd><dt class="property-optional"
             title="Optional">
         <span id="mainclass_nodejs">
 <a href="#mainclass_nodejs" style="color: inherit; text-decoration: inherit;">main<wbr>Class</a>
@@ -3947,8 +3529,7 @@ Conflicts with `query_file_uri`
         <span class="property-type">string</span>
     </dt>
     <dd>{{% md %}}The name of the driver's main class. The jar file containing the class must be in the default CLASSPATH or specified in `jar_file_uris`. Conflicts with `main_jar_file_uri`
-{{% /md %}}</dd>
-    <dt class="property-optional"
+{{% /md %}}</dd><dt class="property-optional"
             title="Optional">
         <span id="mainjarfileuri_nodejs">
 <a href="#mainjarfileuri_nodejs" style="color: inherit; text-decoration: inherit;">main<wbr>Jar<wbr>File<wbr>Uri</a>
@@ -3957,8 +3538,7 @@ Conflicts with `query_file_uri`
         <span class="property-type">string</span>
     </dt>
     <dd>{{% md %}}The HCFS URI of the jar file containing the main class. Examples: 'gs://foo-bucket/analytics-binaries/extract-useful-metrics-mr.jar' 'hdfs:/tmp/test-samples/custom-wordcount.jar' 'file:///home/usr/lib/hadoop-mapreduce/hadoop-mapreduce-examples.jar'. Conflicts with `main_class`
-{{% /md %}}</dd>
-    <dt class="property-optional"
+{{% /md %}}</dd><dt class="property-optional"
             title="Optional">
         <span id="properties_nodejs">
 <a href="#properties_nodejs" style="color: inherit; text-decoration: inherit;">properties</a>
@@ -3967,14 +3547,11 @@ Conflicts with `query_file_uri`
         <span class="property-type">{[key: string]: string}</span>
     </dt>
     <dd>{{% md %}}A mapping of property names to values, used to configure Spark SQL's SparkConf. Properties that conflict with values set by the Cloud Dataproc API may be overwritten.
-{{% /md %}}</dd>
-</dl>
+{{% /md %}}</dd></dl>
 {{% /choosable %}}
 
 {{% choosable language python %}}
-<dl class="resources-properties">
-
-    <dt class="property-optional"
+<dl class="resources-properties"><dt class="property-optional"
             title="Optional">
         <span id="archive_uris_python">
 <a href="#archive_uris_python" style="color: inherit; text-decoration: inherit;">archive_<wbr>uris</a>
@@ -3983,8 +3560,7 @@ Conflicts with `query_file_uri`
         <span class="property-type">Sequence[str]</span>
     </dt>
     <dd>{{% md %}}HCFS URIs of archives to be extracted in the working directory of .jar, .tar, .tar.gz, .tgz, and .zip.
-{{% /md %}}</dd>
-    <dt class="property-optional"
+{{% /md %}}</dd><dt class="property-optional"
             title="Optional">
         <span id="args_python">
 <a href="#args_python" style="color: inherit; text-decoration: inherit;">args</a>
@@ -3993,8 +3569,7 @@ Conflicts with `query_file_uri`
         <span class="property-type">Sequence[str]</span>
     </dt>
     <dd>{{% md %}}The arguments to pass to the driver. Do not include arguments, such as -libjars or -Dfoo=bar, that can be set as job properties, since a collision may occur that causes an incorrect job submission.
-{{% /md %}}</dd>
-    <dt class="property-optional"
+{{% /md %}}</dd><dt class="property-optional"
             title="Optional">
         <span id="file_uris_python">
 <a href="#file_uris_python" style="color: inherit; text-decoration: inherit;">file_<wbr>uris</a>
@@ -4003,8 +3578,7 @@ Conflicts with `query_file_uri`
         <span class="property-type">Sequence[str]</span>
     </dt>
     <dd>{{% md %}}HCFS URIs of files to be copied to the working directory of Hadoop drivers and distributed tasks. Useful for naively parallel tasks.
-{{% /md %}}</dd>
-    <dt class="property-optional"
+{{% /md %}}</dd><dt class="property-optional"
             title="Optional">
         <span id="jar_file_uris_python">
 <a href="#jar_file_uris_python" style="color: inherit; text-decoration: inherit;">jar_<wbr>file_<wbr>uris</a>
@@ -4013,8 +3587,7 @@ Conflicts with `query_file_uri`
         <span class="property-type">Sequence[str]</span>
     </dt>
     <dd>{{% md %}}HCFS URIs of jar files to be added to the Spark CLASSPATH.
-{{% /md %}}</dd>
-    <dt class="property-optional"
+{{% /md %}}</dd><dt class="property-optional"
             title="Optional">
         <span id="logging_config_python">
 <a href="#logging_config_python" style="color: inherit; text-decoration: inherit;">logging_<wbr>config</a>
@@ -4022,8 +3595,7 @@ Conflicts with `query_file_uri`
         <span class="property-indicator"></span>
         <span class="property-type"><a href="#jobsparkconfigloggingconfig">Job<wbr>Spark<wbr>Config<wbr>Logging<wbr>Config<wbr>Args</a></span>
     </dt>
-    <dd>{{% md %}}{{% /md %}}</dd>
-    <dt class="property-optional"
+    <dd>{{% md %}}{{% /md %}}</dd><dt class="property-optional"
             title="Optional">
         <span id="main_class_python">
 <a href="#main_class_python" style="color: inherit; text-decoration: inherit;">main_<wbr>class</a>
@@ -4032,8 +3604,7 @@ Conflicts with `query_file_uri`
         <span class="property-type">str</span>
     </dt>
     <dd>{{% md %}}The name of the driver's main class. The jar file containing the class must be in the default CLASSPATH or specified in `jar_file_uris`. Conflicts with `main_jar_file_uri`
-{{% /md %}}</dd>
-    <dt class="property-optional"
+{{% /md %}}</dd><dt class="property-optional"
             title="Optional">
         <span id="main_jar_file_uri_python">
 <a href="#main_jar_file_uri_python" style="color: inherit; text-decoration: inherit;">main_<wbr>jar_<wbr>file_<wbr>uri</a>
@@ -4042,8 +3613,7 @@ Conflicts with `query_file_uri`
         <span class="property-type">str</span>
     </dt>
     <dd>{{% md %}}The HCFS URI of the jar file containing the main class. Examples: 'gs://foo-bucket/analytics-binaries/extract-useful-metrics-mr.jar' 'hdfs:/tmp/test-samples/custom-wordcount.jar' 'file:///home/usr/lib/hadoop-mapreduce/hadoop-mapreduce-examples.jar'. Conflicts with `main_class`
-{{% /md %}}</dd>
-    <dt class="property-optional"
+{{% /md %}}</dd><dt class="property-optional"
             title="Optional">
         <span id="properties_python">
 <a href="#properties_python" style="color: inherit; text-decoration: inherit;">properties</a>
@@ -4052,16 +3622,13 @@ Conflicts with `query_file_uri`
         <span class="property-type">Mapping[str, str]</span>
     </dt>
     <dd>{{% md %}}A mapping of property names to values, used to configure Spark SQL's SparkConf. Properties that conflict with values set by the Cloud Dataproc API may be overwritten.
-{{% /md %}}</dd>
-</dl>
+{{% /md %}}</dd></dl>
 {{% /choosable %}}
 
 <h4 id="jobsparkconfigloggingconfig">Job<wbr>Spark<wbr>Config<wbr>Logging<wbr>Config</h4>
 
 {{% choosable language csharp %}}
-<dl class="resources-properties">
-
-    <dt class="property-required"
+<dl class="resources-properties"><dt class="property-required"
             title="Required">
         <span id="driverloglevels_csharp">
 <a href="#driverloglevels_csharp" style="color: inherit; text-decoration: inherit;">Driver<wbr>Log<wbr>Levels</a>
@@ -4069,14 +3636,11 @@ Conflicts with `query_file_uri`
         <span class="property-indicator"></span>
         <span class="property-type">Dictionary&lt;string, string&gt;</span>
     </dt>
-    <dd>{{% md %}}{{% /md %}}</dd>
-</dl>
+    <dd>{{% md %}}{{% /md %}}</dd></dl>
 {{% /choosable %}}
 
 {{% choosable language go %}}
-<dl class="resources-properties">
-
-    <dt class="property-required"
+<dl class="resources-properties"><dt class="property-required"
             title="Required">
         <span id="driverloglevels_go">
 <a href="#driverloglevels_go" style="color: inherit; text-decoration: inherit;">Driver<wbr>Log<wbr>Levels</a>
@@ -4084,14 +3648,11 @@ Conflicts with `query_file_uri`
         <span class="property-indicator"></span>
         <span class="property-type">map[string]string</span>
     </dt>
-    <dd>{{% md %}}{{% /md %}}</dd>
-</dl>
+    <dd>{{% md %}}{{% /md %}}</dd></dl>
 {{% /choosable %}}
 
 {{% choosable language nodejs %}}
-<dl class="resources-properties">
-
-    <dt class="property-required"
+<dl class="resources-properties"><dt class="property-required"
             title="Required">
         <span id="driverloglevels_nodejs">
 <a href="#driverloglevels_nodejs" style="color: inherit; text-decoration: inherit;">driver<wbr>Log<wbr>Levels</a>
@@ -4099,14 +3660,11 @@ Conflicts with `query_file_uri`
         <span class="property-indicator"></span>
         <span class="property-type">{[key: string]: string}</span>
     </dt>
-    <dd>{{% md %}}{{% /md %}}</dd>
-</dl>
+    <dd>{{% md %}}{{% /md %}}</dd></dl>
 {{% /choosable %}}
 
 {{% choosable language python %}}
-<dl class="resources-properties">
-
-    <dt class="property-required"
+<dl class="resources-properties"><dt class="property-required"
             title="Required">
         <span id="driver_log_levels_python">
 <a href="#driver_log_levels_python" style="color: inherit; text-decoration: inherit;">driver_<wbr>log_<wbr>levels</a>
@@ -4114,16 +3672,13 @@ Conflicts with `query_file_uri`
         <span class="property-indicator"></span>
         <span class="property-type">Mapping[str, str]</span>
     </dt>
-    <dd>{{% md %}}{{% /md %}}</dd>
-</dl>
+    <dd>{{% md %}}{{% /md %}}</dd></dl>
 {{% /choosable %}}
 
 <h4 id="jobsparksqlconfig">Job<wbr>Sparksql<wbr>Config</h4>
 
 {{% choosable language csharp %}}
-<dl class="resources-properties">
-
-    <dt class="property-optional"
+<dl class="resources-properties"><dt class="property-optional"
             title="Optional">
         <span id="jarfileuris_csharp">
 <a href="#jarfileuris_csharp" style="color: inherit; text-decoration: inherit;">Jar<wbr>File<wbr>Uris</a>
@@ -4132,8 +3687,7 @@ Conflicts with `query_file_uri`
         <span class="property-type">List&lt;string&gt;</span>
     </dt>
     <dd>{{% md %}}HCFS URIs of jar files to be added to the Spark CLASSPATH.
-{{% /md %}}</dd>
-    <dt class="property-optional"
+{{% /md %}}</dd><dt class="property-optional"
             title="Optional">
         <span id="loggingconfig_csharp">
 <a href="#loggingconfig_csharp" style="color: inherit; text-decoration: inherit;">Logging<wbr>Config</a>
@@ -4141,8 +3695,7 @@ Conflicts with `query_file_uri`
         <span class="property-indicator"></span>
         <span class="property-type"><a href="#jobsparksqlconfigloggingconfig">Job<wbr>Sparksql<wbr>Config<wbr>Logging<wbr>Config<wbr>Args</a></span>
     </dt>
-    <dd>{{% md %}}{{% /md %}}</dd>
-    <dt class="property-optional"
+    <dd>{{% md %}}{{% /md %}}</dd><dt class="property-optional"
             title="Optional">
         <span id="properties_csharp">
 <a href="#properties_csharp" style="color: inherit; text-decoration: inherit;">Properties</a>
@@ -4151,8 +3704,7 @@ Conflicts with `query_file_uri`
         <span class="property-type">Dictionary&lt;string, string&gt;</span>
     </dt>
     <dd>{{% md %}}A mapping of property names to values, used to configure Spark SQL's SparkConf. Properties that conflict with values set by the Cloud Dataproc API may be overwritten.
-{{% /md %}}</dd>
-    <dt class="property-optional"
+{{% /md %}}</dd><dt class="property-optional"
             title="Optional">
         <span id="queryfileuri_csharp">
 <a href="#queryfileuri_csharp" style="color: inherit; text-decoration: inherit;">Query<wbr>File<wbr>Uri</a>
@@ -4162,8 +3714,7 @@ Conflicts with `query_file_uri`
     </dt>
     <dd>{{% md %}}The HCFS URI of the script that contains SQL queries.
 Conflicts with `query_list`
-{{% /md %}}</dd>
-    <dt class="property-optional"
+{{% /md %}}</dd><dt class="property-optional"
             title="Optional">
         <span id="querylists_csharp">
 <a href="#querylists_csharp" style="color: inherit; text-decoration: inherit;">Query<wbr>Lists</a>
@@ -4173,8 +3724,7 @@ Conflicts with `query_list`
     </dt>
     <dd>{{% md %}}The list of SQL queries or statements to execute as part of the job.
 Conflicts with `query_file_uri`
-{{% /md %}}</dd>
-    <dt class="property-optional"
+{{% /md %}}</dd><dt class="property-optional"
             title="Optional">
         <span id="scriptvariables_csharp">
 <a href="#scriptvariables_csharp" style="color: inherit; text-decoration: inherit;">Script<wbr>Variables</a>
@@ -4183,14 +3733,11 @@ Conflicts with `query_file_uri`
         <span class="property-type">Dictionary&lt;string, string&gt;</span>
     </dt>
     <dd>{{% md %}}Mapping of query variable names to values (equivalent to the Spark SQL command: `SET name="value";`).
-{{% /md %}}</dd>
-</dl>
+{{% /md %}}</dd></dl>
 {{% /choosable %}}
 
 {{% choosable language go %}}
-<dl class="resources-properties">
-
-    <dt class="property-optional"
+<dl class="resources-properties"><dt class="property-optional"
             title="Optional">
         <span id="jarfileuris_go">
 <a href="#jarfileuris_go" style="color: inherit; text-decoration: inherit;">Jar<wbr>File<wbr>Uris</a>
@@ -4199,8 +3746,7 @@ Conflicts with `query_file_uri`
         <span class="property-type">[]string</span>
     </dt>
     <dd>{{% md %}}HCFS URIs of jar files to be added to the Spark CLASSPATH.
-{{% /md %}}</dd>
-    <dt class="property-optional"
+{{% /md %}}</dd><dt class="property-optional"
             title="Optional">
         <span id="loggingconfig_go">
 <a href="#loggingconfig_go" style="color: inherit; text-decoration: inherit;">Logging<wbr>Config</a>
@@ -4208,8 +3754,7 @@ Conflicts with `query_file_uri`
         <span class="property-indicator"></span>
         <span class="property-type"><a href="#jobsparksqlconfigloggingconfig">Job<wbr>Sparksql<wbr>Config<wbr>Logging<wbr>Config</a></span>
     </dt>
-    <dd>{{% md %}}{{% /md %}}</dd>
-    <dt class="property-optional"
+    <dd>{{% md %}}{{% /md %}}</dd><dt class="property-optional"
             title="Optional">
         <span id="properties_go">
 <a href="#properties_go" style="color: inherit; text-decoration: inherit;">Properties</a>
@@ -4218,8 +3763,7 @@ Conflicts with `query_file_uri`
         <span class="property-type">map[string]string</span>
     </dt>
     <dd>{{% md %}}A mapping of property names to values, used to configure Spark SQL's SparkConf. Properties that conflict with values set by the Cloud Dataproc API may be overwritten.
-{{% /md %}}</dd>
-    <dt class="property-optional"
+{{% /md %}}</dd><dt class="property-optional"
             title="Optional">
         <span id="queryfileuri_go">
 <a href="#queryfileuri_go" style="color: inherit; text-decoration: inherit;">Query<wbr>File<wbr>Uri</a>
@@ -4229,8 +3773,7 @@ Conflicts with `query_file_uri`
     </dt>
     <dd>{{% md %}}The HCFS URI of the script that contains SQL queries.
 Conflicts with `query_list`
-{{% /md %}}</dd>
-    <dt class="property-optional"
+{{% /md %}}</dd><dt class="property-optional"
             title="Optional">
         <span id="querylists_go">
 <a href="#querylists_go" style="color: inherit; text-decoration: inherit;">Query<wbr>Lists</a>
@@ -4240,8 +3783,7 @@ Conflicts with `query_list`
     </dt>
     <dd>{{% md %}}The list of SQL queries or statements to execute as part of the job.
 Conflicts with `query_file_uri`
-{{% /md %}}</dd>
-    <dt class="property-optional"
+{{% /md %}}</dd><dt class="property-optional"
             title="Optional">
         <span id="scriptvariables_go">
 <a href="#scriptvariables_go" style="color: inherit; text-decoration: inherit;">Script<wbr>Variables</a>
@@ -4250,14 +3792,11 @@ Conflicts with `query_file_uri`
         <span class="property-type">map[string]string</span>
     </dt>
     <dd>{{% md %}}Mapping of query variable names to values (equivalent to the Spark SQL command: `SET name="value";`).
-{{% /md %}}</dd>
-</dl>
+{{% /md %}}</dd></dl>
 {{% /choosable %}}
 
 {{% choosable language nodejs %}}
-<dl class="resources-properties">
-
-    <dt class="property-optional"
+<dl class="resources-properties"><dt class="property-optional"
             title="Optional">
         <span id="jarfileuris_nodejs">
 <a href="#jarfileuris_nodejs" style="color: inherit; text-decoration: inherit;">jar<wbr>File<wbr>Uris</a>
@@ -4266,8 +3805,7 @@ Conflicts with `query_file_uri`
         <span class="property-type">string[]</span>
     </dt>
     <dd>{{% md %}}HCFS URIs of jar files to be added to the Spark CLASSPATH.
-{{% /md %}}</dd>
-    <dt class="property-optional"
+{{% /md %}}</dd><dt class="property-optional"
             title="Optional">
         <span id="loggingconfig_nodejs">
 <a href="#loggingconfig_nodejs" style="color: inherit; text-decoration: inherit;">logging<wbr>Config</a>
@@ -4275,8 +3813,7 @@ Conflicts with `query_file_uri`
         <span class="property-indicator"></span>
         <span class="property-type"><a href="#jobsparksqlconfigloggingconfig">Job<wbr>Sparksql<wbr>Config<wbr>Logging<wbr>Config</a></span>
     </dt>
-    <dd>{{% md %}}{{% /md %}}</dd>
-    <dt class="property-optional"
+    <dd>{{% md %}}{{% /md %}}</dd><dt class="property-optional"
             title="Optional">
         <span id="properties_nodejs">
 <a href="#properties_nodejs" style="color: inherit; text-decoration: inherit;">properties</a>
@@ -4285,8 +3822,7 @@ Conflicts with `query_file_uri`
         <span class="property-type">{[key: string]: string}</span>
     </dt>
     <dd>{{% md %}}A mapping of property names to values, used to configure Spark SQL's SparkConf. Properties that conflict with values set by the Cloud Dataproc API may be overwritten.
-{{% /md %}}</dd>
-    <dt class="property-optional"
+{{% /md %}}</dd><dt class="property-optional"
             title="Optional">
         <span id="queryfileuri_nodejs">
 <a href="#queryfileuri_nodejs" style="color: inherit; text-decoration: inherit;">query<wbr>File<wbr>Uri</a>
@@ -4296,8 +3832,7 @@ Conflicts with `query_file_uri`
     </dt>
     <dd>{{% md %}}The HCFS URI of the script that contains SQL queries.
 Conflicts with `query_list`
-{{% /md %}}</dd>
-    <dt class="property-optional"
+{{% /md %}}</dd><dt class="property-optional"
             title="Optional">
         <span id="querylists_nodejs">
 <a href="#querylists_nodejs" style="color: inherit; text-decoration: inherit;">query<wbr>Lists</a>
@@ -4307,8 +3842,7 @@ Conflicts with `query_list`
     </dt>
     <dd>{{% md %}}The list of SQL queries or statements to execute as part of the job.
 Conflicts with `query_file_uri`
-{{% /md %}}</dd>
-    <dt class="property-optional"
+{{% /md %}}</dd><dt class="property-optional"
             title="Optional">
         <span id="scriptvariables_nodejs">
 <a href="#scriptvariables_nodejs" style="color: inherit; text-decoration: inherit;">script<wbr>Variables</a>
@@ -4317,14 +3851,11 @@ Conflicts with `query_file_uri`
         <span class="property-type">{[key: string]: string}</span>
     </dt>
     <dd>{{% md %}}Mapping of query variable names to values (equivalent to the Spark SQL command: `SET name="value";`).
-{{% /md %}}</dd>
-</dl>
+{{% /md %}}</dd></dl>
 {{% /choosable %}}
 
 {{% choosable language python %}}
-<dl class="resources-properties">
-
-    <dt class="property-optional"
+<dl class="resources-properties"><dt class="property-optional"
             title="Optional">
         <span id="jar_file_uris_python">
 <a href="#jar_file_uris_python" style="color: inherit; text-decoration: inherit;">jar_<wbr>file_<wbr>uris</a>
@@ -4333,8 +3864,7 @@ Conflicts with `query_file_uri`
         <span class="property-type">Sequence[str]</span>
     </dt>
     <dd>{{% md %}}HCFS URIs of jar files to be added to the Spark CLASSPATH.
-{{% /md %}}</dd>
-    <dt class="property-optional"
+{{% /md %}}</dd><dt class="property-optional"
             title="Optional">
         <span id="logging_config_python">
 <a href="#logging_config_python" style="color: inherit; text-decoration: inherit;">logging_<wbr>config</a>
@@ -4342,8 +3872,7 @@ Conflicts with `query_file_uri`
         <span class="property-indicator"></span>
         <span class="property-type"><a href="#jobsparksqlconfigloggingconfig">Job<wbr>Sparksql<wbr>Config<wbr>Logging<wbr>Config<wbr>Args</a></span>
     </dt>
-    <dd>{{% md %}}{{% /md %}}</dd>
-    <dt class="property-optional"
+    <dd>{{% md %}}{{% /md %}}</dd><dt class="property-optional"
             title="Optional">
         <span id="properties_python">
 <a href="#properties_python" style="color: inherit; text-decoration: inherit;">properties</a>
@@ -4352,8 +3881,7 @@ Conflicts with `query_file_uri`
         <span class="property-type">Mapping[str, str]</span>
     </dt>
     <dd>{{% md %}}A mapping of property names to values, used to configure Spark SQL's SparkConf. Properties that conflict with values set by the Cloud Dataproc API may be overwritten.
-{{% /md %}}</dd>
-    <dt class="property-optional"
+{{% /md %}}</dd><dt class="property-optional"
             title="Optional">
         <span id="query_file_uri_python">
 <a href="#query_file_uri_python" style="color: inherit; text-decoration: inherit;">query_<wbr>file_<wbr>uri</a>
@@ -4363,8 +3891,7 @@ Conflicts with `query_file_uri`
     </dt>
     <dd>{{% md %}}The HCFS URI of the script that contains SQL queries.
 Conflicts with `query_list`
-{{% /md %}}</dd>
-    <dt class="property-optional"
+{{% /md %}}</dd><dt class="property-optional"
             title="Optional">
         <span id="query_lists_python">
 <a href="#query_lists_python" style="color: inherit; text-decoration: inherit;">query_<wbr>lists</a>
@@ -4374,8 +3901,7 @@ Conflicts with `query_list`
     </dt>
     <dd>{{% md %}}The list of SQL queries or statements to execute as part of the job.
 Conflicts with `query_file_uri`
-{{% /md %}}</dd>
-    <dt class="property-optional"
+{{% /md %}}</dd><dt class="property-optional"
             title="Optional">
         <span id="script_variables_python">
 <a href="#script_variables_python" style="color: inherit; text-decoration: inherit;">script_<wbr>variables</a>
@@ -4384,16 +3910,13 @@ Conflicts with `query_file_uri`
         <span class="property-type">Mapping[str, str]</span>
     </dt>
     <dd>{{% md %}}Mapping of query variable names to values (equivalent to the Spark SQL command: `SET name="value";`).
-{{% /md %}}</dd>
-</dl>
+{{% /md %}}</dd></dl>
 {{% /choosable %}}
 
 <h4 id="jobsparksqlconfigloggingconfig">Job<wbr>Sparksql<wbr>Config<wbr>Logging<wbr>Config</h4>
 
 {{% choosable language csharp %}}
-<dl class="resources-properties">
-
-    <dt class="property-required"
+<dl class="resources-properties"><dt class="property-required"
             title="Required">
         <span id="driverloglevels_csharp">
 <a href="#driverloglevels_csharp" style="color: inherit; text-decoration: inherit;">Driver<wbr>Log<wbr>Levels</a>
@@ -4401,14 +3924,11 @@ Conflicts with `query_file_uri`
         <span class="property-indicator"></span>
         <span class="property-type">Dictionary&lt;string, string&gt;</span>
     </dt>
-    <dd>{{% md %}}{{% /md %}}</dd>
-</dl>
+    <dd>{{% md %}}{{% /md %}}</dd></dl>
 {{% /choosable %}}
 
 {{% choosable language go %}}
-<dl class="resources-properties">
-
-    <dt class="property-required"
+<dl class="resources-properties"><dt class="property-required"
             title="Required">
         <span id="driverloglevels_go">
 <a href="#driverloglevels_go" style="color: inherit; text-decoration: inherit;">Driver<wbr>Log<wbr>Levels</a>
@@ -4416,14 +3936,11 @@ Conflicts with `query_file_uri`
         <span class="property-indicator"></span>
         <span class="property-type">map[string]string</span>
     </dt>
-    <dd>{{% md %}}{{% /md %}}</dd>
-</dl>
+    <dd>{{% md %}}{{% /md %}}</dd></dl>
 {{% /choosable %}}
 
 {{% choosable language nodejs %}}
-<dl class="resources-properties">
-
-    <dt class="property-required"
+<dl class="resources-properties"><dt class="property-required"
             title="Required">
         <span id="driverloglevels_nodejs">
 <a href="#driverloglevels_nodejs" style="color: inherit; text-decoration: inherit;">driver<wbr>Log<wbr>Levels</a>
@@ -4431,14 +3948,11 @@ Conflicts with `query_file_uri`
         <span class="property-indicator"></span>
         <span class="property-type">{[key: string]: string}</span>
     </dt>
-    <dd>{{% md %}}{{% /md %}}</dd>
-</dl>
+    <dd>{{% md %}}{{% /md %}}</dd></dl>
 {{% /choosable %}}
 
 {{% choosable language python %}}
-<dl class="resources-properties">
-
-    <dt class="property-required"
+<dl class="resources-properties"><dt class="property-required"
             title="Required">
         <span id="driver_log_levels_python">
 <a href="#driver_log_levels_python" style="color: inherit; text-decoration: inherit;">driver_<wbr>log_<wbr>levels</a>
@@ -4446,16 +3960,13 @@ Conflicts with `query_file_uri`
         <span class="property-indicator"></span>
         <span class="property-type">Mapping[str, str]</span>
     </dt>
-    <dd>{{% md %}}{{% /md %}}</dd>
-</dl>
+    <dd>{{% md %}}{{% /md %}}</dd></dl>
 {{% /choosable %}}
 
 <h4 id="jobstatus">Job<wbr>Status</h4>
 
 {{% choosable language csharp %}}
-<dl class="resources-properties">
-
-    <dt class="property-optional"
+<dl class="resources-properties"><dt class="property-optional"
             title="Optional">
         <span id="details_csharp">
 <a href="#details_csharp" style="color: inherit; text-decoration: inherit;">Details</a>
@@ -4463,8 +3974,7 @@ Conflicts with `query_file_uri`
         <span class="property-indicator"></span>
         <span class="property-type">string</span>
     </dt>
-    <dd>{{% md %}}{{% /md %}}</dd>
-    <dt class="property-optional"
+    <dd>{{% md %}}{{% /md %}}</dd><dt class="property-optional"
             title="Optional">
         <span id="state_csharp">
 <a href="#state_csharp" style="color: inherit; text-decoration: inherit;">State</a>
@@ -4472,8 +3982,7 @@ Conflicts with `query_file_uri`
         <span class="property-indicator"></span>
         <span class="property-type">string</span>
     </dt>
-    <dd>{{% md %}}{{% /md %}}</dd>
-    <dt class="property-optional"
+    <dd>{{% md %}}{{% /md %}}</dd><dt class="property-optional"
             title="Optional">
         <span id="statestarttime_csharp">
 <a href="#statestarttime_csharp" style="color: inherit; text-decoration: inherit;">State<wbr>Start<wbr>Time</a>
@@ -4481,8 +3990,7 @@ Conflicts with `query_file_uri`
         <span class="property-indicator"></span>
         <span class="property-type">string</span>
     </dt>
-    <dd>{{% md %}}{{% /md %}}</dd>
-    <dt class="property-optional"
+    <dd>{{% md %}}{{% /md %}}</dd><dt class="property-optional"
             title="Optional">
         <span id="substate_csharp">
 <a href="#substate_csharp" style="color: inherit; text-decoration: inherit;">Substate</a>
@@ -4490,14 +3998,11 @@ Conflicts with `query_file_uri`
         <span class="property-indicator"></span>
         <span class="property-type">string</span>
     </dt>
-    <dd>{{% md %}}{{% /md %}}</dd>
-</dl>
+    <dd>{{% md %}}{{% /md %}}</dd></dl>
 {{% /choosable %}}
 
 {{% choosable language go %}}
-<dl class="resources-properties">
-
-    <dt class="property-optional"
+<dl class="resources-properties"><dt class="property-optional"
             title="Optional">
         <span id="details_go">
 <a href="#details_go" style="color: inherit; text-decoration: inherit;">Details</a>
@@ -4505,8 +4010,7 @@ Conflicts with `query_file_uri`
         <span class="property-indicator"></span>
         <span class="property-type">string</span>
     </dt>
-    <dd>{{% md %}}{{% /md %}}</dd>
-    <dt class="property-optional"
+    <dd>{{% md %}}{{% /md %}}</dd><dt class="property-optional"
             title="Optional">
         <span id="state_go">
 <a href="#state_go" style="color: inherit; text-decoration: inherit;">State</a>
@@ -4514,8 +4018,7 @@ Conflicts with `query_file_uri`
         <span class="property-indicator"></span>
         <span class="property-type">string</span>
     </dt>
-    <dd>{{% md %}}{{% /md %}}</dd>
-    <dt class="property-optional"
+    <dd>{{% md %}}{{% /md %}}</dd><dt class="property-optional"
             title="Optional">
         <span id="statestarttime_go">
 <a href="#statestarttime_go" style="color: inherit; text-decoration: inherit;">State<wbr>Start<wbr>Time</a>
@@ -4523,8 +4026,7 @@ Conflicts with `query_file_uri`
         <span class="property-indicator"></span>
         <span class="property-type">string</span>
     </dt>
-    <dd>{{% md %}}{{% /md %}}</dd>
-    <dt class="property-optional"
+    <dd>{{% md %}}{{% /md %}}</dd><dt class="property-optional"
             title="Optional">
         <span id="substate_go">
 <a href="#substate_go" style="color: inherit; text-decoration: inherit;">Substate</a>
@@ -4532,14 +4034,11 @@ Conflicts with `query_file_uri`
         <span class="property-indicator"></span>
         <span class="property-type">string</span>
     </dt>
-    <dd>{{% md %}}{{% /md %}}</dd>
-</dl>
+    <dd>{{% md %}}{{% /md %}}</dd></dl>
 {{% /choosable %}}
 
 {{% choosable language nodejs %}}
-<dl class="resources-properties">
-
-    <dt class="property-optional"
+<dl class="resources-properties"><dt class="property-optional"
             title="Optional">
         <span id="details_nodejs">
 <a href="#details_nodejs" style="color: inherit; text-decoration: inherit;">details</a>
@@ -4547,8 +4046,7 @@ Conflicts with `query_file_uri`
         <span class="property-indicator"></span>
         <span class="property-type">string</span>
     </dt>
-    <dd>{{% md %}}{{% /md %}}</dd>
-    <dt class="property-optional"
+    <dd>{{% md %}}{{% /md %}}</dd><dt class="property-optional"
             title="Optional">
         <span id="state_nodejs">
 <a href="#state_nodejs" style="color: inherit; text-decoration: inherit;">state</a>
@@ -4556,8 +4054,7 @@ Conflicts with `query_file_uri`
         <span class="property-indicator"></span>
         <span class="property-type">string</span>
     </dt>
-    <dd>{{% md %}}{{% /md %}}</dd>
-    <dt class="property-optional"
+    <dd>{{% md %}}{{% /md %}}</dd><dt class="property-optional"
             title="Optional">
         <span id="statestarttime_nodejs">
 <a href="#statestarttime_nodejs" style="color: inherit; text-decoration: inherit;">state<wbr>Start<wbr>Time</a>
@@ -4565,8 +4062,7 @@ Conflicts with `query_file_uri`
         <span class="property-indicator"></span>
         <span class="property-type">string</span>
     </dt>
-    <dd>{{% md %}}{{% /md %}}</dd>
-    <dt class="property-optional"
+    <dd>{{% md %}}{{% /md %}}</dd><dt class="property-optional"
             title="Optional">
         <span id="substate_nodejs">
 <a href="#substate_nodejs" style="color: inherit; text-decoration: inherit;">substate</a>
@@ -4574,14 +4070,11 @@ Conflicts with `query_file_uri`
         <span class="property-indicator"></span>
         <span class="property-type">string</span>
     </dt>
-    <dd>{{% md %}}{{% /md %}}</dd>
-</dl>
+    <dd>{{% md %}}{{% /md %}}</dd></dl>
 {{% /choosable %}}
 
 {{% choosable language python %}}
-<dl class="resources-properties">
-
-    <dt class="property-optional"
+<dl class="resources-properties"><dt class="property-optional"
             title="Optional">
         <span id="details_python">
 <a href="#details_python" style="color: inherit; text-decoration: inherit;">details</a>
@@ -4589,8 +4082,7 @@ Conflicts with `query_file_uri`
         <span class="property-indicator"></span>
         <span class="property-type">str</span>
     </dt>
-    <dd>{{% md %}}{{% /md %}}</dd>
-    <dt class="property-optional"
+    <dd>{{% md %}}{{% /md %}}</dd><dt class="property-optional"
             title="Optional">
         <span id="state_python">
 <a href="#state_python" style="color: inherit; text-decoration: inherit;">state</a>
@@ -4598,8 +4090,7 @@ Conflicts with `query_file_uri`
         <span class="property-indicator"></span>
         <span class="property-type">str</span>
     </dt>
-    <dd>{{% md %}}{{% /md %}}</dd>
-    <dt class="property-optional"
+    <dd>{{% md %}}{{% /md %}}</dd><dt class="property-optional"
             title="Optional">
         <span id="state_start_time_python">
 <a href="#state_start_time_python" style="color: inherit; text-decoration: inherit;">state_<wbr>start_<wbr>time</a>
@@ -4607,8 +4098,7 @@ Conflicts with `query_file_uri`
         <span class="property-indicator"></span>
         <span class="property-type">str</span>
     </dt>
-    <dd>{{% md %}}{{% /md %}}</dd>
-    <dt class="property-optional"
+    <dd>{{% md %}}{{% /md %}}</dd><dt class="property-optional"
             title="Optional">
         <span id="substate_python">
 <a href="#substate_python" style="color: inherit; text-decoration: inherit;">substate</a>
@@ -4616,8 +4106,7 @@ Conflicts with `query_file_uri`
         <span class="property-indicator"></span>
         <span class="property-type">str</span>
     </dt>
-    <dd>{{% md %}}{{% /md %}}</dd>
-</dl>
+    <dd>{{% md %}}{{% /md %}}</dd></dl>
 {{% /choosable %}}
 ## Import
 
@@ -4634,6 +4123,6 @@ This resource does not support import.
 	<dt>License</dt>
 	<dd>Apache-2.0</dd>
 	<dt>Notes</dt>
-	<dd>This Pulumi package is based on the [`google-beta` Terraform Provider](https://github.com/hashicorp/terraform-provider-google-beta).</dd>
+	<dd>{{% md %}}This Pulumi package is based on the [`google-beta` Terraform Provider](https://github.com/hashicorp/terraform-provider-google-beta).{{% /md %}}</dd>
 </dl>
 

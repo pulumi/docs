@@ -14,11 +14,17 @@ Capacity pool resource
 API Version: 2020-11-01.
 
 {{% examples %}}
+
 ## Example Usage
 
 {{< chooser language "typescript,python,go,csharp" / >}}
+
+
 ### Pools_CreateOrUpdate
-{{% example csharp %}}
+
+
+{{< example csharp >}}
+
 ```csharp
 using Pulumi;
 using AzureNative = Pulumi.AzureNative;
@@ -43,9 +49,12 @@ class MyStack : Stack
 
 ```
 
-{{% /example %}}
 
-{{% example go %}}
+{{< /example >}}
+
+
+{{< example go >}}
+
 
 ```go
 package main
@@ -75,9 +84,12 @@ func main() {
 
 ```
 
-{{% /example %}}
 
-{{% example python %}}
+{{< /example >}}
+
+
+{{< example python >}}
+
 
 ```python
 import pulumi
@@ -94,9 +106,12 @@ pool = azure_native.netapp.Pool("pool",
 
 ```
 
-{{% /example %}}
 
-{{% example typescript %}}
+{{< /example >}}
+
+
+{{< example typescript >}}
+
 
 ```typescript
 import * as pulumi from "@pulumi/pulumi";
@@ -114,9 +129,16 @@ const pool = new azure_native.netapp.Pool("pool", {
 
 ```
 
-{{% /example %}}
+
+{{< /example >}}
+
+
+
+
 
 {{% /examples %}}
+
+
 
 
 ## Create a Pool Resource {#create}
@@ -141,9 +163,7 @@ const pool = new azure_native.netapp.Pool("pool", {
 
 {{% choosable language nodejs %}}
 
-<dl class="resources-properties">
-  
-    <dt
+<dl class="resources-properties"><dt
         class="property-required" title="Required">
         <span>name</span>
         <span class="property-indicator"></span>
@@ -151,9 +171,7 @@ const pool = new azure_native.netapp.Pool("pool", {
     </dt>
     <dd>
       The unique name of the resource.
-    </dd>
-  
-    <dt
+    </dd><dt
         class="property-required" title="Required">
         <span>args</span>
         <span class="property-indicator"></span>
@@ -161,9 +179,7 @@ const pool = new azure_native.netapp.Pool("pool", {
     </dt>
     <dd>
       The arguments to resource properties.
-    </dd>
-  
-    <dt
+    </dd><dt
         class="property-optional" title="Optional">
         <span>opts</span>
         <span class="property-indicator"></span>
@@ -171,10 +187,7 @@ const pool = new azure_native.netapp.Pool("pool", {
     </dt>
     <dd>
       Bag of options to control resource&#39;s behavior.
-    </dd>
-  
-
-</dl>
+    </dd></dl>
 
 {{% /choosable %}}
 
@@ -200,9 +213,7 @@ const pool = new azure_native.netapp.Pool("pool", {
 
 {{% choosable language go %}}
 
-<dl class="resources-properties">
-  
-    <dt
+<dl class="resources-properties"><dt
         class="property-optional" title="Optional">
         <span>ctx</span>
         <span class="property-indicator"></span>
@@ -210,9 +221,7 @@ const pool = new azure_native.netapp.Pool("pool", {
     </dt>
     <dd>
       Context object for the current deployment.
-    </dd>
-  
-    <dt
+    </dd><dt
         class="property-required" title="Required">
         <span>name</span>
         <span class="property-indicator"></span>
@@ -220,9 +229,7 @@ const pool = new azure_native.netapp.Pool("pool", {
     </dt>
     <dd>
       The unique name of the resource.
-    </dd>
-  
-    <dt
+    </dd><dt
         class="property-required" title="Required">
         <span>args</span>
         <span class="property-indicator"></span>
@@ -230,9 +237,7 @@ const pool = new azure_native.netapp.Pool("pool", {
     </dt>
     <dd>
       The arguments to resource properties.
-    </dd>
-  
-    <dt
+    </dd><dt
         class="property-optional" title="Optional">
         <span>opts</span>
         <span class="property-indicator"></span>
@@ -240,18 +245,13 @@ const pool = new azure_native.netapp.Pool("pool", {
     </dt>
     <dd>
       Bag of options to control resource&#39;s behavior.
-    </dd>
-  
-
-</dl>
+    </dd></dl>
 
 {{% /choosable %}}
 
 {{% choosable language csharp %}}
 
-<dl class="resources-properties">
-  
-    <dt
+<dl class="resources-properties"><dt
         class="property-required" title="Required">
         <span>name</span>
         <span class="property-indicator"></span>
@@ -259,9 +259,7 @@ const pool = new azure_native.netapp.Pool("pool", {
     </dt>
     <dd>
       The unique name of the resource.
-    </dd>
-  
-    <dt
+    </dd><dt
         class="property-required" title="Required">
         <span>args</span>
         <span class="property-indicator"></span>
@@ -269,9 +267,7 @@ const pool = new azure_native.netapp.Pool("pool", {
     </dt>
     <dd>
       The arguments to resource properties.
-    </dd>
-  
-    <dt
+    </dd><dt
         class="property-optional" title="Optional">
         <span>opts</span>
         <span class="property-indicator"></span>
@@ -279,10 +275,7 @@ const pool = new azure_native.netapp.Pool("pool", {
     </dt>
     <dd>
       Bag of options to control resource&#39;s behavior.
-    </dd>
-  
-
-</dl>
+    </dd></dl>
 
 {{% /choosable %}}
 
@@ -297,9 +290,7 @@ The Pool resource accepts the following [input]({{< relref "/docs/intro/concepts
 
 
 {{% choosable language csharp %}}
-<dl class="resources-properties">
-
-    <dt class="property-required"
+<dl class="resources-properties"><dt class="property-required"
             title="Required">
         <span id="accountname_csharp">
 <a href="#accountname_csharp" style="color: inherit; text-decoration: inherit;">Account<wbr>Name</a>
@@ -307,8 +298,7 @@ The Pool resource accepts the following [input]({{< relref "/docs/intro/concepts
         <span class="property-indicator"></span>
         <span class="property-type">string</span>
     </dt>
-    <dd>{{% md %}}The name of the NetApp account{{% /md %}}</dd>
-    <dt class="property-required"
+    <dd>{{% md %}}The name of the NetApp account{{% /md %}}</dd><dt class="property-required"
             title="Required">
         <span id="resourcegroupname_csharp">
 <a href="#resourcegroupname_csharp" style="color: inherit; text-decoration: inherit;">Resource<wbr>Group<wbr>Name</a>
@@ -316,8 +306,7 @@ The Pool resource accepts the following [input]({{< relref "/docs/intro/concepts
         <span class="property-indicator"></span>
         <span class="property-type">string</span>
     </dt>
-    <dd>{{% md %}}The name of the resource group.{{% /md %}}</dd>
-    <dt class="property-required"
+    <dd>{{% md %}}The name of the resource group.{{% /md %}}</dd><dt class="property-required"
             title="Required">
         <span id="servicelevel_csharp">
 <a href="#servicelevel_csharp" style="color: inherit; text-decoration: inherit;">Service<wbr>Level</a>
@@ -325,8 +314,7 @@ The Pool resource accepts the following [input]({{< relref "/docs/intro/concepts
         <span class="property-indicator"></span>
         <span class="property-type">string | <a href="#servicelevel">Pulumi.<wbr>Azure<wbr>Native.<wbr>Net<wbr>App.<wbr>Service<wbr>Level</a></span>
     </dt>
-    <dd>{{% md %}}The service level of the file system{{% /md %}}</dd>
-    <dt class="property-required"
+    <dd>{{% md %}}The service level of the file system{{% /md %}}</dd><dt class="property-required"
             title="Required">
         <span id="size_csharp">
 <a href="#size_csharp" style="color: inherit; text-decoration: inherit;">Size</a>
@@ -334,8 +322,7 @@ The Pool resource accepts the following [input]({{< relref "/docs/intro/concepts
         <span class="property-indicator"></span>
         <span class="property-type">double</span>
     </dt>
-    <dd>{{% md %}}Provisioned size of the pool (in bytes). Allowed values are in 4TiB chunks (value must be multiply of 4398046511104).{{% /md %}}</dd>
-    <dt class="property-optional"
+    <dd>{{% md %}}Provisioned size of the pool (in bytes). Allowed values are in 4TiB chunks (value must be multiply of 4398046511104).{{% /md %}}</dd><dt class="property-optional"
             title="Optional">
         <span id="location_csharp">
 <a href="#location_csharp" style="color: inherit; text-decoration: inherit;">Location</a>
@@ -343,8 +330,7 @@ The Pool resource accepts the following [input]({{< relref "/docs/intro/concepts
         <span class="property-indicator"></span>
         <span class="property-type">string</span>
     </dt>
-    <dd>{{% md %}}Resource location{{% /md %}}</dd>
-    <dt class="property-optional"
+    <dd>{{% md %}}Resource location{{% /md %}}</dd><dt class="property-optional"
             title="Optional">
         <span id="poolname_csharp">
 <a href="#poolname_csharp" style="color: inherit; text-decoration: inherit;">Pool<wbr>Name</a>
@@ -352,8 +338,7 @@ The Pool resource accepts the following [input]({{< relref "/docs/intro/concepts
         <span class="property-indicator"></span>
         <span class="property-type">string</span>
     </dt>
-    <dd>{{% md %}}The name of the capacity pool{{% /md %}}</dd>
-    <dt class="property-optional"
+    <dd>{{% md %}}The name of the capacity pool{{% /md %}}</dd><dt class="property-optional"
             title="Optional">
         <span id="qostype_csharp">
 <a href="#qostype_csharp" style="color: inherit; text-decoration: inherit;">Qos<wbr>Type</a>
@@ -361,8 +346,7 @@ The Pool resource accepts the following [input]({{< relref "/docs/intro/concepts
         <span class="property-indicator"></span>
         <span class="property-type">string | <a href="#qostype">Pulumi.<wbr>Azure<wbr>Native.<wbr>Net<wbr>App.<wbr>Qos<wbr>Type</a></span>
     </dt>
-    <dd>{{% md %}}The qos type of the pool{{% /md %}}</dd>
-    <dt class="property-optional"
+    <dd>{{% md %}}The qos type of the pool{{% /md %}}</dd><dt class="property-optional"
             title="Optional">
         <span id="tags_csharp">
 <a href="#tags_csharp" style="color: inherit; text-decoration: inherit;">Tags</a>
@@ -370,14 +354,11 @@ The Pool resource accepts the following [input]({{< relref "/docs/intro/concepts
         <span class="property-indicator"></span>
         <span class="property-type">Dictionary&lt;string, string&gt;</span>
     </dt>
-    <dd>{{% md %}}Resource tags{{% /md %}}</dd>
-</dl>
+    <dd>{{% md %}}Resource tags{{% /md %}}</dd></dl>
 {{% /choosable %}}
 
 {{% choosable language go %}}
-<dl class="resources-properties">
-
-    <dt class="property-required"
+<dl class="resources-properties"><dt class="property-required"
             title="Required">
         <span id="accountname_go">
 <a href="#accountname_go" style="color: inherit; text-decoration: inherit;">Account<wbr>Name</a>
@@ -385,8 +366,7 @@ The Pool resource accepts the following [input]({{< relref "/docs/intro/concepts
         <span class="property-indicator"></span>
         <span class="property-type">string</span>
     </dt>
-    <dd>{{% md %}}The name of the NetApp account{{% /md %}}</dd>
-    <dt class="property-required"
+    <dd>{{% md %}}The name of the NetApp account{{% /md %}}</dd><dt class="property-required"
             title="Required">
         <span id="resourcegroupname_go">
 <a href="#resourcegroupname_go" style="color: inherit; text-decoration: inherit;">Resource<wbr>Group<wbr>Name</a>
@@ -394,8 +374,7 @@ The Pool resource accepts the following [input]({{< relref "/docs/intro/concepts
         <span class="property-indicator"></span>
         <span class="property-type">string</span>
     </dt>
-    <dd>{{% md %}}The name of the resource group.{{% /md %}}</dd>
-    <dt class="property-required"
+    <dd>{{% md %}}The name of the resource group.{{% /md %}}</dd><dt class="property-required"
             title="Required">
         <span id="servicelevel_go">
 <a href="#servicelevel_go" style="color: inherit; text-decoration: inherit;">Service<wbr>Level</a>
@@ -403,8 +382,7 @@ The Pool resource accepts the following [input]({{< relref "/docs/intro/concepts
         <span class="property-indicator"></span>
         <span class="property-type">string | <a href="#servicelevel">Service<wbr>Level</a></span>
     </dt>
-    <dd>{{% md %}}The service level of the file system{{% /md %}}</dd>
-    <dt class="property-required"
+    <dd>{{% md %}}The service level of the file system{{% /md %}}</dd><dt class="property-required"
             title="Required">
         <span id="size_go">
 <a href="#size_go" style="color: inherit; text-decoration: inherit;">Size</a>
@@ -412,8 +390,7 @@ The Pool resource accepts the following [input]({{< relref "/docs/intro/concepts
         <span class="property-indicator"></span>
         <span class="property-type">float64</span>
     </dt>
-    <dd>{{% md %}}Provisioned size of the pool (in bytes). Allowed values are in 4TiB chunks (value must be multiply of 4398046511104).{{% /md %}}</dd>
-    <dt class="property-optional"
+    <dd>{{% md %}}Provisioned size of the pool (in bytes). Allowed values are in 4TiB chunks (value must be multiply of 4398046511104).{{% /md %}}</dd><dt class="property-optional"
             title="Optional">
         <span id="location_go">
 <a href="#location_go" style="color: inherit; text-decoration: inherit;">Location</a>
@@ -421,8 +398,7 @@ The Pool resource accepts the following [input]({{< relref "/docs/intro/concepts
         <span class="property-indicator"></span>
         <span class="property-type">string</span>
     </dt>
-    <dd>{{% md %}}Resource location{{% /md %}}</dd>
-    <dt class="property-optional"
+    <dd>{{% md %}}Resource location{{% /md %}}</dd><dt class="property-optional"
             title="Optional">
         <span id="poolname_go">
 <a href="#poolname_go" style="color: inherit; text-decoration: inherit;">Pool<wbr>Name</a>
@@ -430,8 +406,7 @@ The Pool resource accepts the following [input]({{< relref "/docs/intro/concepts
         <span class="property-indicator"></span>
         <span class="property-type">string</span>
     </dt>
-    <dd>{{% md %}}The name of the capacity pool{{% /md %}}</dd>
-    <dt class="property-optional"
+    <dd>{{% md %}}The name of the capacity pool{{% /md %}}</dd><dt class="property-optional"
             title="Optional">
         <span id="qostype_go">
 <a href="#qostype_go" style="color: inherit; text-decoration: inherit;">Qos<wbr>Type</a>
@@ -439,8 +414,7 @@ The Pool resource accepts the following [input]({{< relref "/docs/intro/concepts
         <span class="property-indicator"></span>
         <span class="property-type">string | <a href="#qostype">Qos<wbr>Type</a></span>
     </dt>
-    <dd>{{% md %}}The qos type of the pool{{% /md %}}</dd>
-    <dt class="property-optional"
+    <dd>{{% md %}}The qos type of the pool{{% /md %}}</dd><dt class="property-optional"
             title="Optional">
         <span id="tags_go">
 <a href="#tags_go" style="color: inherit; text-decoration: inherit;">Tags</a>
@@ -448,14 +422,11 @@ The Pool resource accepts the following [input]({{< relref "/docs/intro/concepts
         <span class="property-indicator"></span>
         <span class="property-type">map[string]string</span>
     </dt>
-    <dd>{{% md %}}Resource tags{{% /md %}}</dd>
-</dl>
+    <dd>{{% md %}}Resource tags{{% /md %}}</dd></dl>
 {{% /choosable %}}
 
 {{% choosable language nodejs %}}
-<dl class="resources-properties">
-
-    <dt class="property-required"
+<dl class="resources-properties"><dt class="property-required"
             title="Required">
         <span id="accountname_nodejs">
 <a href="#accountname_nodejs" style="color: inherit; text-decoration: inherit;">account<wbr>Name</a>
@@ -463,8 +434,7 @@ The Pool resource accepts the following [input]({{< relref "/docs/intro/concepts
         <span class="property-indicator"></span>
         <span class="property-type">string</span>
     </dt>
-    <dd>{{% md %}}The name of the NetApp account{{% /md %}}</dd>
-    <dt class="property-required"
+    <dd>{{% md %}}The name of the NetApp account{{% /md %}}</dd><dt class="property-required"
             title="Required">
         <span id="resourcegroupname_nodejs">
 <a href="#resourcegroupname_nodejs" style="color: inherit; text-decoration: inherit;">resource<wbr>Group<wbr>Name</a>
@@ -472,8 +442,7 @@ The Pool resource accepts the following [input]({{< relref "/docs/intro/concepts
         <span class="property-indicator"></span>
         <span class="property-type">string</span>
     </dt>
-    <dd>{{% md %}}The name of the resource group.{{% /md %}}</dd>
-    <dt class="property-required"
+    <dd>{{% md %}}The name of the resource group.{{% /md %}}</dd><dt class="property-required"
             title="Required">
         <span id="servicelevel_nodejs">
 <a href="#servicelevel_nodejs" style="color: inherit; text-decoration: inherit;">service<wbr>Level</a>
@@ -481,8 +450,7 @@ The Pool resource accepts the following [input]({{< relref "/docs/intro/concepts
         <span class="property-indicator"></span>
         <span class="property-type">string | <a href="#servicelevel">Service<wbr>Level</a></span>
     </dt>
-    <dd>{{% md %}}The service level of the file system{{% /md %}}</dd>
-    <dt class="property-required"
+    <dd>{{% md %}}The service level of the file system{{% /md %}}</dd><dt class="property-required"
             title="Required">
         <span id="size_nodejs">
 <a href="#size_nodejs" style="color: inherit; text-decoration: inherit;">size</a>
@@ -490,8 +458,7 @@ The Pool resource accepts the following [input]({{< relref "/docs/intro/concepts
         <span class="property-indicator"></span>
         <span class="property-type">number</span>
     </dt>
-    <dd>{{% md %}}Provisioned size of the pool (in bytes). Allowed values are in 4TiB chunks (value must be multiply of 4398046511104).{{% /md %}}</dd>
-    <dt class="property-optional"
+    <dd>{{% md %}}Provisioned size of the pool (in bytes). Allowed values are in 4TiB chunks (value must be multiply of 4398046511104).{{% /md %}}</dd><dt class="property-optional"
             title="Optional">
         <span id="location_nodejs">
 <a href="#location_nodejs" style="color: inherit; text-decoration: inherit;">location</a>
@@ -499,8 +466,7 @@ The Pool resource accepts the following [input]({{< relref "/docs/intro/concepts
         <span class="property-indicator"></span>
         <span class="property-type">string</span>
     </dt>
-    <dd>{{% md %}}Resource location{{% /md %}}</dd>
-    <dt class="property-optional"
+    <dd>{{% md %}}Resource location{{% /md %}}</dd><dt class="property-optional"
             title="Optional">
         <span id="poolname_nodejs">
 <a href="#poolname_nodejs" style="color: inherit; text-decoration: inherit;">pool<wbr>Name</a>
@@ -508,8 +474,7 @@ The Pool resource accepts the following [input]({{< relref "/docs/intro/concepts
         <span class="property-indicator"></span>
         <span class="property-type">string</span>
     </dt>
-    <dd>{{% md %}}The name of the capacity pool{{% /md %}}</dd>
-    <dt class="property-optional"
+    <dd>{{% md %}}The name of the capacity pool{{% /md %}}</dd><dt class="property-optional"
             title="Optional">
         <span id="qostype_nodejs">
 <a href="#qostype_nodejs" style="color: inherit; text-decoration: inherit;">qos<wbr>Type</a>
@@ -517,8 +482,7 @@ The Pool resource accepts the following [input]({{< relref "/docs/intro/concepts
         <span class="property-indicator"></span>
         <span class="property-type">string | <a href="#qostype">Qos<wbr>Type</a></span>
     </dt>
-    <dd>{{% md %}}The qos type of the pool{{% /md %}}</dd>
-    <dt class="property-optional"
+    <dd>{{% md %}}The qos type of the pool{{% /md %}}</dd><dt class="property-optional"
             title="Optional">
         <span id="tags_nodejs">
 <a href="#tags_nodejs" style="color: inherit; text-decoration: inherit;">tags</a>
@@ -526,14 +490,11 @@ The Pool resource accepts the following [input]({{< relref "/docs/intro/concepts
         <span class="property-indicator"></span>
         <span class="property-type">{[key: string]: string}</span>
     </dt>
-    <dd>{{% md %}}Resource tags{{% /md %}}</dd>
-</dl>
+    <dd>{{% md %}}Resource tags{{% /md %}}</dd></dl>
 {{% /choosable %}}
 
 {{% choosable language python %}}
-<dl class="resources-properties">
-
-    <dt class="property-required"
+<dl class="resources-properties"><dt class="property-required"
             title="Required">
         <span id="account_name_python">
 <a href="#account_name_python" style="color: inherit; text-decoration: inherit;">account_<wbr>name</a>
@@ -541,8 +502,7 @@ The Pool resource accepts the following [input]({{< relref "/docs/intro/concepts
         <span class="property-indicator"></span>
         <span class="property-type">str</span>
     </dt>
-    <dd>{{% md %}}The name of the NetApp account{{% /md %}}</dd>
-    <dt class="property-required"
+    <dd>{{% md %}}The name of the NetApp account{{% /md %}}</dd><dt class="property-required"
             title="Required">
         <span id="resource_group_name_python">
 <a href="#resource_group_name_python" style="color: inherit; text-decoration: inherit;">resource_<wbr>group_<wbr>name</a>
@@ -550,8 +510,7 @@ The Pool resource accepts the following [input]({{< relref "/docs/intro/concepts
         <span class="property-indicator"></span>
         <span class="property-type">str</span>
     </dt>
-    <dd>{{% md %}}The name of the resource group.{{% /md %}}</dd>
-    <dt class="property-required"
+    <dd>{{% md %}}The name of the resource group.{{% /md %}}</dd><dt class="property-required"
             title="Required">
         <span id="service_level_python">
 <a href="#service_level_python" style="color: inherit; text-decoration: inherit;">service_<wbr>level</a>
@@ -559,8 +518,7 @@ The Pool resource accepts the following [input]({{< relref "/docs/intro/concepts
         <span class="property-indicator"></span>
         <span class="property-type">str | <a href="#servicelevel">Service<wbr>Level</a></span>
     </dt>
-    <dd>{{% md %}}The service level of the file system{{% /md %}}</dd>
-    <dt class="property-required"
+    <dd>{{% md %}}The service level of the file system{{% /md %}}</dd><dt class="property-required"
             title="Required">
         <span id="size_python">
 <a href="#size_python" style="color: inherit; text-decoration: inherit;">size</a>
@@ -568,8 +526,7 @@ The Pool resource accepts the following [input]({{< relref "/docs/intro/concepts
         <span class="property-indicator"></span>
         <span class="property-type">float</span>
     </dt>
-    <dd>{{% md %}}Provisioned size of the pool (in bytes). Allowed values are in 4TiB chunks (value must be multiply of 4398046511104).{{% /md %}}</dd>
-    <dt class="property-optional"
+    <dd>{{% md %}}Provisioned size of the pool (in bytes). Allowed values are in 4TiB chunks (value must be multiply of 4398046511104).{{% /md %}}</dd><dt class="property-optional"
             title="Optional">
         <span id="location_python">
 <a href="#location_python" style="color: inherit; text-decoration: inherit;">location</a>
@@ -577,8 +534,7 @@ The Pool resource accepts the following [input]({{< relref "/docs/intro/concepts
         <span class="property-indicator"></span>
         <span class="property-type">str</span>
     </dt>
-    <dd>{{% md %}}Resource location{{% /md %}}</dd>
-    <dt class="property-optional"
+    <dd>{{% md %}}Resource location{{% /md %}}</dd><dt class="property-optional"
             title="Optional">
         <span id="pool_name_python">
 <a href="#pool_name_python" style="color: inherit; text-decoration: inherit;">pool_<wbr>name</a>
@@ -586,8 +542,7 @@ The Pool resource accepts the following [input]({{< relref "/docs/intro/concepts
         <span class="property-indicator"></span>
         <span class="property-type">str</span>
     </dt>
-    <dd>{{% md %}}The name of the capacity pool{{% /md %}}</dd>
-    <dt class="property-optional"
+    <dd>{{% md %}}The name of the capacity pool{{% /md %}}</dd><dt class="property-optional"
             title="Optional">
         <span id="qos_type_python">
 <a href="#qos_type_python" style="color: inherit; text-decoration: inherit;">qos_<wbr>type</a>
@@ -595,8 +550,7 @@ The Pool resource accepts the following [input]({{< relref "/docs/intro/concepts
         <span class="property-indicator"></span>
         <span class="property-type">str | <a href="#qostype">Qos<wbr>Type</a></span>
     </dt>
-    <dd>{{% md %}}The qos type of the pool{{% /md %}}</dd>
-    <dt class="property-optional"
+    <dd>{{% md %}}The qos type of the pool{{% /md %}}</dd><dt class="property-optional"
             title="Optional">
         <span id="tags_python">
 <a href="#tags_python" style="color: inherit; text-decoration: inherit;">tags</a>
@@ -604,8 +558,7 @@ The Pool resource accepts the following [input]({{< relref "/docs/intro/concepts
         <span class="property-indicator"></span>
         <span class="property-type">Mapping[str, str]</span>
     </dt>
-    <dd>{{% md %}}Resource tags{{% /md %}}</dd>
-</dl>
+    <dd>{{% md %}}Resource tags{{% /md %}}</dd></dl>
 {{% /choosable %}}
 
 
@@ -616,9 +569,7 @@ All [input](#inputs) properties are implicitly available as output properties. A
 
 
 {{% choosable language csharp %}}
-<dl class="resources-properties">
-
-    <dt class="property-"
+<dl class="resources-properties"><dt class="property-"
             title="">
         <span id="id_csharp">
 <a href="#id_csharp" style="color: inherit; text-decoration: inherit;">Id</a>
@@ -626,8 +577,7 @@ All [input](#inputs) properties are implicitly available as output properties. A
         <span class="property-indicator"></span>
         <span class="property-type">string</span>
     </dt>
-    <dd>{{% md %}}The provider-assigned unique ID for this managed resource.{{% /md %}}</dd>
-    <dt class="property-"
+    <dd>{{% md %}}The provider-assigned unique ID for this managed resource.{{% /md %}}</dd><dt class="property-"
             title="">
         <span id="name_csharp">
 <a href="#name_csharp" style="color: inherit; text-decoration: inherit;">Name</a>
@@ -635,8 +585,7 @@ All [input](#inputs) properties are implicitly available as output properties. A
         <span class="property-indicator"></span>
         <span class="property-type">string</span>
     </dt>
-    <dd>{{% md %}}Resource name{{% /md %}}</dd>
-    <dt class="property-"
+    <dd>{{% md %}}Resource name{{% /md %}}</dd><dt class="property-"
             title="">
         <span id="poolid_csharp">
 <a href="#poolid_csharp" style="color: inherit; text-decoration: inherit;">Pool<wbr>Id</a>
@@ -644,8 +593,7 @@ All [input](#inputs) properties are implicitly available as output properties. A
         <span class="property-indicator"></span>
         <span class="property-type">string</span>
     </dt>
-    <dd>{{% md %}}UUID v4 used to identify the Pool{{% /md %}}</dd>
-    <dt class="property-"
+    <dd>{{% md %}}UUID v4 used to identify the Pool{{% /md %}}</dd><dt class="property-"
             title="">
         <span id="provisioningstate_csharp">
 <a href="#provisioningstate_csharp" style="color: inherit; text-decoration: inherit;">Provisioning<wbr>State</a>
@@ -653,8 +601,7 @@ All [input](#inputs) properties are implicitly available as output properties. A
         <span class="property-indicator"></span>
         <span class="property-type">string</span>
     </dt>
-    <dd>{{% md %}}Azure lifecycle management{{% /md %}}</dd>
-    <dt class="property-"
+    <dd>{{% md %}}Azure lifecycle management{{% /md %}}</dd><dt class="property-"
             title="">
         <span id="totalthroughputmibps_csharp">
 <a href="#totalthroughputmibps_csharp" style="color: inherit; text-decoration: inherit;">Total<wbr>Throughput<wbr>Mibps</a>
@@ -662,8 +609,7 @@ All [input](#inputs) properties are implicitly available as output properties. A
         <span class="property-indicator"></span>
         <span class="property-type">double</span>
     </dt>
-    <dd>{{% md %}}Total throughput of pool in Mibps{{% /md %}}</dd>
-    <dt class="property-"
+    <dd>{{% md %}}Total throughput of pool in Mibps{{% /md %}}</dd><dt class="property-"
             title="">
         <span id="type_csharp">
 <a href="#type_csharp" style="color: inherit; text-decoration: inherit;">Type</a>
@@ -671,8 +617,7 @@ All [input](#inputs) properties are implicitly available as output properties. A
         <span class="property-indicator"></span>
         <span class="property-type">string</span>
     </dt>
-    <dd>{{% md %}}Resource type{{% /md %}}</dd>
-    <dt class="property-"
+    <dd>{{% md %}}Resource type{{% /md %}}</dd><dt class="property-"
             title="">
         <span id="utilizedthroughputmibps_csharp">
 <a href="#utilizedthroughputmibps_csharp" style="color: inherit; text-decoration: inherit;">Utilized<wbr>Throughput<wbr>Mibps</a>
@@ -680,14 +625,11 @@ All [input](#inputs) properties are implicitly available as output properties. A
         <span class="property-indicator"></span>
         <span class="property-type">double</span>
     </dt>
-    <dd>{{% md %}}Utilized throughput of pool in Mibps{{% /md %}}</dd>
-</dl>
+    <dd>{{% md %}}Utilized throughput of pool in Mibps{{% /md %}}</dd></dl>
 {{% /choosable %}}
 
 {{% choosable language go %}}
-<dl class="resources-properties">
-
-    <dt class="property-"
+<dl class="resources-properties"><dt class="property-"
             title="">
         <span id="id_go">
 <a href="#id_go" style="color: inherit; text-decoration: inherit;">Id</a>
@@ -695,8 +637,7 @@ All [input](#inputs) properties are implicitly available as output properties. A
         <span class="property-indicator"></span>
         <span class="property-type">string</span>
     </dt>
-    <dd>{{% md %}}The provider-assigned unique ID for this managed resource.{{% /md %}}</dd>
-    <dt class="property-"
+    <dd>{{% md %}}The provider-assigned unique ID for this managed resource.{{% /md %}}</dd><dt class="property-"
             title="">
         <span id="name_go">
 <a href="#name_go" style="color: inherit; text-decoration: inherit;">Name</a>
@@ -704,8 +645,7 @@ All [input](#inputs) properties are implicitly available as output properties. A
         <span class="property-indicator"></span>
         <span class="property-type">string</span>
     </dt>
-    <dd>{{% md %}}Resource name{{% /md %}}</dd>
-    <dt class="property-"
+    <dd>{{% md %}}Resource name{{% /md %}}</dd><dt class="property-"
             title="">
         <span id="poolid_go">
 <a href="#poolid_go" style="color: inherit; text-decoration: inherit;">Pool<wbr>Id</a>
@@ -713,8 +653,7 @@ All [input](#inputs) properties are implicitly available as output properties. A
         <span class="property-indicator"></span>
         <span class="property-type">string</span>
     </dt>
-    <dd>{{% md %}}UUID v4 used to identify the Pool{{% /md %}}</dd>
-    <dt class="property-"
+    <dd>{{% md %}}UUID v4 used to identify the Pool{{% /md %}}</dd><dt class="property-"
             title="">
         <span id="provisioningstate_go">
 <a href="#provisioningstate_go" style="color: inherit; text-decoration: inherit;">Provisioning<wbr>State</a>
@@ -722,8 +661,7 @@ All [input](#inputs) properties are implicitly available as output properties. A
         <span class="property-indicator"></span>
         <span class="property-type">string</span>
     </dt>
-    <dd>{{% md %}}Azure lifecycle management{{% /md %}}</dd>
-    <dt class="property-"
+    <dd>{{% md %}}Azure lifecycle management{{% /md %}}</dd><dt class="property-"
             title="">
         <span id="totalthroughputmibps_go">
 <a href="#totalthroughputmibps_go" style="color: inherit; text-decoration: inherit;">Total<wbr>Throughput<wbr>Mibps</a>
@@ -731,8 +669,7 @@ All [input](#inputs) properties are implicitly available as output properties. A
         <span class="property-indicator"></span>
         <span class="property-type">float64</span>
     </dt>
-    <dd>{{% md %}}Total throughput of pool in Mibps{{% /md %}}</dd>
-    <dt class="property-"
+    <dd>{{% md %}}Total throughput of pool in Mibps{{% /md %}}</dd><dt class="property-"
             title="">
         <span id="type_go">
 <a href="#type_go" style="color: inherit; text-decoration: inherit;">Type</a>
@@ -740,8 +677,7 @@ All [input](#inputs) properties are implicitly available as output properties. A
         <span class="property-indicator"></span>
         <span class="property-type">string</span>
     </dt>
-    <dd>{{% md %}}Resource type{{% /md %}}</dd>
-    <dt class="property-"
+    <dd>{{% md %}}Resource type{{% /md %}}</dd><dt class="property-"
             title="">
         <span id="utilizedthroughputmibps_go">
 <a href="#utilizedthroughputmibps_go" style="color: inherit; text-decoration: inherit;">Utilized<wbr>Throughput<wbr>Mibps</a>
@@ -749,14 +685,11 @@ All [input](#inputs) properties are implicitly available as output properties. A
         <span class="property-indicator"></span>
         <span class="property-type">float64</span>
     </dt>
-    <dd>{{% md %}}Utilized throughput of pool in Mibps{{% /md %}}</dd>
-</dl>
+    <dd>{{% md %}}Utilized throughput of pool in Mibps{{% /md %}}</dd></dl>
 {{% /choosable %}}
 
 {{% choosable language nodejs %}}
-<dl class="resources-properties">
-
-    <dt class="property-"
+<dl class="resources-properties"><dt class="property-"
             title="">
         <span id="id_nodejs">
 <a href="#id_nodejs" style="color: inherit; text-decoration: inherit;">id</a>
@@ -764,8 +697,7 @@ All [input](#inputs) properties are implicitly available as output properties. A
         <span class="property-indicator"></span>
         <span class="property-type">string</span>
     </dt>
-    <dd>{{% md %}}The provider-assigned unique ID for this managed resource.{{% /md %}}</dd>
-    <dt class="property-"
+    <dd>{{% md %}}The provider-assigned unique ID for this managed resource.{{% /md %}}</dd><dt class="property-"
             title="">
         <span id="name_nodejs">
 <a href="#name_nodejs" style="color: inherit; text-decoration: inherit;">name</a>
@@ -773,8 +705,7 @@ All [input](#inputs) properties are implicitly available as output properties. A
         <span class="property-indicator"></span>
         <span class="property-type">string</span>
     </dt>
-    <dd>{{% md %}}Resource name{{% /md %}}</dd>
-    <dt class="property-"
+    <dd>{{% md %}}Resource name{{% /md %}}</dd><dt class="property-"
             title="">
         <span id="poolid_nodejs">
 <a href="#poolid_nodejs" style="color: inherit; text-decoration: inherit;">pool<wbr>Id</a>
@@ -782,8 +713,7 @@ All [input](#inputs) properties are implicitly available as output properties. A
         <span class="property-indicator"></span>
         <span class="property-type">string</span>
     </dt>
-    <dd>{{% md %}}UUID v4 used to identify the Pool{{% /md %}}</dd>
-    <dt class="property-"
+    <dd>{{% md %}}UUID v4 used to identify the Pool{{% /md %}}</dd><dt class="property-"
             title="">
         <span id="provisioningstate_nodejs">
 <a href="#provisioningstate_nodejs" style="color: inherit; text-decoration: inherit;">provisioning<wbr>State</a>
@@ -791,8 +721,7 @@ All [input](#inputs) properties are implicitly available as output properties. A
         <span class="property-indicator"></span>
         <span class="property-type">string</span>
     </dt>
-    <dd>{{% md %}}Azure lifecycle management{{% /md %}}</dd>
-    <dt class="property-"
+    <dd>{{% md %}}Azure lifecycle management{{% /md %}}</dd><dt class="property-"
             title="">
         <span id="totalthroughputmibps_nodejs">
 <a href="#totalthroughputmibps_nodejs" style="color: inherit; text-decoration: inherit;">total<wbr>Throughput<wbr>Mibps</a>
@@ -800,8 +729,7 @@ All [input](#inputs) properties are implicitly available as output properties. A
         <span class="property-indicator"></span>
         <span class="property-type">number</span>
     </dt>
-    <dd>{{% md %}}Total throughput of pool in Mibps{{% /md %}}</dd>
-    <dt class="property-"
+    <dd>{{% md %}}Total throughput of pool in Mibps{{% /md %}}</dd><dt class="property-"
             title="">
         <span id="type_nodejs">
 <a href="#type_nodejs" style="color: inherit; text-decoration: inherit;">type</a>
@@ -809,8 +737,7 @@ All [input](#inputs) properties are implicitly available as output properties. A
         <span class="property-indicator"></span>
         <span class="property-type">string</span>
     </dt>
-    <dd>{{% md %}}Resource type{{% /md %}}</dd>
-    <dt class="property-"
+    <dd>{{% md %}}Resource type{{% /md %}}</dd><dt class="property-"
             title="">
         <span id="utilizedthroughputmibps_nodejs">
 <a href="#utilizedthroughputmibps_nodejs" style="color: inherit; text-decoration: inherit;">utilized<wbr>Throughput<wbr>Mibps</a>
@@ -818,14 +745,11 @@ All [input](#inputs) properties are implicitly available as output properties. A
         <span class="property-indicator"></span>
         <span class="property-type">number</span>
     </dt>
-    <dd>{{% md %}}Utilized throughput of pool in Mibps{{% /md %}}</dd>
-</dl>
+    <dd>{{% md %}}Utilized throughput of pool in Mibps{{% /md %}}</dd></dl>
 {{% /choosable %}}
 
 {{% choosable language python %}}
-<dl class="resources-properties">
-
-    <dt class="property-"
+<dl class="resources-properties"><dt class="property-"
             title="">
         <span id="id_python">
 <a href="#id_python" style="color: inherit; text-decoration: inherit;">id</a>
@@ -833,8 +757,7 @@ All [input](#inputs) properties are implicitly available as output properties. A
         <span class="property-indicator"></span>
         <span class="property-type">str</span>
     </dt>
-    <dd>{{% md %}}The provider-assigned unique ID for this managed resource.{{% /md %}}</dd>
-    <dt class="property-"
+    <dd>{{% md %}}The provider-assigned unique ID for this managed resource.{{% /md %}}</dd><dt class="property-"
             title="">
         <span id="name_python">
 <a href="#name_python" style="color: inherit; text-decoration: inherit;">name</a>
@@ -842,8 +765,7 @@ All [input](#inputs) properties are implicitly available as output properties. A
         <span class="property-indicator"></span>
         <span class="property-type">str</span>
     </dt>
-    <dd>{{% md %}}Resource name{{% /md %}}</dd>
-    <dt class="property-"
+    <dd>{{% md %}}Resource name{{% /md %}}</dd><dt class="property-"
             title="">
         <span id="pool_id_python">
 <a href="#pool_id_python" style="color: inherit; text-decoration: inherit;">pool_<wbr>id</a>
@@ -851,8 +773,7 @@ All [input](#inputs) properties are implicitly available as output properties. A
         <span class="property-indicator"></span>
         <span class="property-type">str</span>
     </dt>
-    <dd>{{% md %}}UUID v4 used to identify the Pool{{% /md %}}</dd>
-    <dt class="property-"
+    <dd>{{% md %}}UUID v4 used to identify the Pool{{% /md %}}</dd><dt class="property-"
             title="">
         <span id="provisioning_state_python">
 <a href="#provisioning_state_python" style="color: inherit; text-decoration: inherit;">provisioning_<wbr>state</a>
@@ -860,8 +781,7 @@ All [input](#inputs) properties are implicitly available as output properties. A
         <span class="property-indicator"></span>
         <span class="property-type">str</span>
     </dt>
-    <dd>{{% md %}}Azure lifecycle management{{% /md %}}</dd>
-    <dt class="property-"
+    <dd>{{% md %}}Azure lifecycle management{{% /md %}}</dd><dt class="property-"
             title="">
         <span id="total_throughput_mibps_python">
 <a href="#total_throughput_mibps_python" style="color: inherit; text-decoration: inherit;">total_<wbr>throughput_<wbr>mibps</a>
@@ -869,8 +789,7 @@ All [input](#inputs) properties are implicitly available as output properties. A
         <span class="property-indicator"></span>
         <span class="property-type">float</span>
     </dt>
-    <dd>{{% md %}}Total throughput of pool in Mibps{{% /md %}}</dd>
-    <dt class="property-"
+    <dd>{{% md %}}Total throughput of pool in Mibps{{% /md %}}</dd><dt class="property-"
             title="">
         <span id="type_python">
 <a href="#type_python" style="color: inherit; text-decoration: inherit;">type</a>
@@ -878,8 +797,7 @@ All [input](#inputs) properties are implicitly available as output properties. A
         <span class="property-indicator"></span>
         <span class="property-type">str</span>
     </dt>
-    <dd>{{% md %}}Resource type{{% /md %}}</dd>
-    <dt class="property-"
+    <dd>{{% md %}}Resource type{{% /md %}}</dd><dt class="property-"
             title="">
         <span id="utilized_throughput_mibps_python">
 <a href="#utilized_throughput_mibps_python" style="color: inherit; text-decoration: inherit;">utilized_<wbr>throughput_<wbr>mibps</a>
@@ -887,8 +805,7 @@ All [input](#inputs) properties are implicitly available as output properties. A
         <span class="property-indicator"></span>
         <span class="property-type">float</span>
     </dt>
-    <dd>{{% md %}}Utilized throughput of pool in Mibps{{% /md %}}</dd>
-</dl>
+    <dd>{{% md %}}Utilized throughput of pool in Mibps{{% /md %}}</dd></dl>
 {{% /choosable %}}
 
 
@@ -904,85 +821,57 @@ All [input](#inputs) properties are implicitly available as output properties. A
 <h4 id="qostype">Qos<wbr>Type</h4>
 
 {{% choosable language csharp %}}
-<dl class="tabular">
-    <dt>Auto</dt>
-    <dd>Auto{{% md %}}qos type Auto{{% /md %}}</dd>
-    <dt>Manual</dt>
-    <dd>Manual{{% md %}}qos type Manual{{% /md %}}</dd>
-</dl>
+<dl class="tabular"><dt>Auto</dt>
+    <dd>Auto{{% md %}}qos type Auto{{% /md %}}</dd><dt>Manual</dt>
+    <dd>Manual{{% md %}}qos type Manual{{% /md %}}</dd></dl>
 {{% /choosable %}}
 
 {{% choosable language go %}}
-<dl class="tabular">
-    <dt>Qos<wbr>Type<wbr>Auto</dt>
-    <dd>Auto{{% md %}}qos type Auto{{% /md %}}</dd>
-    <dt>Qos<wbr>Type<wbr>Manual</dt>
-    <dd>Manual{{% md %}}qos type Manual{{% /md %}}</dd>
-</dl>
+<dl class="tabular"><dt>Qos<wbr>Type<wbr>Auto</dt>
+    <dd>Auto{{% md %}}qos type Auto{{% /md %}}</dd><dt>Qos<wbr>Type<wbr>Manual</dt>
+    <dd>Manual{{% md %}}qos type Manual{{% /md %}}</dd></dl>
 {{% /choosable %}}
 
 {{% choosable language nodejs %}}
-<dl class="tabular">
-    <dt>Auto</dt>
-    <dd>Auto{{% md %}}qos type Auto{{% /md %}}</dd>
-    <dt>Manual</dt>
-    <dd>Manual{{% md %}}qos type Manual{{% /md %}}</dd>
-</dl>
+<dl class="tabular"><dt>Auto</dt>
+    <dd>Auto{{% md %}}qos type Auto{{% /md %}}</dd><dt>Manual</dt>
+    <dd>Manual{{% md %}}qos type Manual{{% /md %}}</dd></dl>
 {{% /choosable %}}
 
 {{% choosable language python %}}
-<dl class="tabular">
-    <dt>AUTO</dt>
-    <dd>Auto{{% md %}}qos type Auto{{% /md %}}</dd>
-    <dt>MANUAL</dt>
-    <dd>Manual{{% md %}}qos type Manual{{% /md %}}</dd>
-</dl>
+<dl class="tabular"><dt>AUTO</dt>
+    <dd>Auto{{% md %}}qos type Auto{{% /md %}}</dd><dt>MANUAL</dt>
+    <dd>Manual{{% md %}}qos type Manual{{% /md %}}</dd></dl>
 {{% /choosable %}}
 
 <h4 id="servicelevel">Service<wbr>Level</h4>
 
 {{% choosable language csharp %}}
-<dl class="tabular">
-    <dt>Standard</dt>
-    <dd>Standard{{% md %}}Standard service level{{% /md %}}</dd>
-    <dt>Premium</dt>
-    <dd>Premium{{% md %}}Premium service level{{% /md %}}</dd>
-    <dt>Ultra</dt>
-    <dd>Ultra{{% md %}}Ultra service level{{% /md %}}</dd>
-</dl>
+<dl class="tabular"><dt>Standard</dt>
+    <dd>Standard{{% md %}}Standard service level{{% /md %}}</dd><dt>Premium</dt>
+    <dd>Premium{{% md %}}Premium service level{{% /md %}}</dd><dt>Ultra</dt>
+    <dd>Ultra{{% md %}}Ultra service level{{% /md %}}</dd></dl>
 {{% /choosable %}}
 
 {{% choosable language go %}}
-<dl class="tabular">
-    <dt>Service<wbr>Level<wbr>Standard</dt>
-    <dd>Standard{{% md %}}Standard service level{{% /md %}}</dd>
-    <dt>Service<wbr>Level<wbr>Premium</dt>
-    <dd>Premium{{% md %}}Premium service level{{% /md %}}</dd>
-    <dt>Service<wbr>Level<wbr>Ultra</dt>
-    <dd>Ultra{{% md %}}Ultra service level{{% /md %}}</dd>
-</dl>
+<dl class="tabular"><dt>Service<wbr>Level<wbr>Standard</dt>
+    <dd>Standard{{% md %}}Standard service level{{% /md %}}</dd><dt>Service<wbr>Level<wbr>Premium</dt>
+    <dd>Premium{{% md %}}Premium service level{{% /md %}}</dd><dt>Service<wbr>Level<wbr>Ultra</dt>
+    <dd>Ultra{{% md %}}Ultra service level{{% /md %}}</dd></dl>
 {{% /choosable %}}
 
 {{% choosable language nodejs %}}
-<dl class="tabular">
-    <dt>Standard</dt>
-    <dd>Standard{{% md %}}Standard service level{{% /md %}}</dd>
-    <dt>Premium</dt>
-    <dd>Premium{{% md %}}Premium service level{{% /md %}}</dd>
-    <dt>Ultra</dt>
-    <dd>Ultra{{% md %}}Ultra service level{{% /md %}}</dd>
-</dl>
+<dl class="tabular"><dt>Standard</dt>
+    <dd>Standard{{% md %}}Standard service level{{% /md %}}</dd><dt>Premium</dt>
+    <dd>Premium{{% md %}}Premium service level{{% /md %}}</dd><dt>Ultra</dt>
+    <dd>Ultra{{% md %}}Ultra service level{{% /md %}}</dd></dl>
 {{% /choosable %}}
 
 {{% choosable language python %}}
-<dl class="tabular">
-    <dt>STANDARD</dt>
-    <dd>Standard{{% md %}}Standard service level{{% /md %}}</dd>
-    <dt>PREMIUM</dt>
-    <dd>Premium{{% md %}}Premium service level{{% /md %}}</dd>
-    <dt>ULTRA</dt>
-    <dd>Ultra{{% md %}}Ultra service level{{% /md %}}</dd>
-</dl>
+<dl class="tabular"><dt>STANDARD</dt>
+    <dd>Standard{{% md %}}Standard service level{{% /md %}}</dd><dt>PREMIUM</dt>
+    <dd>Premium{{% md %}}Premium service level{{% /md %}}</dd><dt>ULTRA</dt>
+    <dd>Ultra{{% md %}}Ultra service level{{% /md %}}</dd></dl>
 {{% /choosable %}}
 ## Import
 

@@ -15,11 +15,17 @@ meta_desc: "Documentation for the f5bigip.ltm.ProfileHttp resource with examples
 For resources should be named with their "full path". The full path is the combination of the partition + name of the resource. For example /Common/my-pool.
 
 {{% examples %}}
+
 ## Example Usage
 
 {{< chooser language "typescript,python,go,csharp" / >}}
 
-{{% example csharp %}}
+
+
+
+
+{{< example csharp >}}
+
 ```csharp
 using Pulumi;
 using F5BigIP = Pulumi.F5BigIP;
@@ -46,9 +52,12 @@ class MyStack : Stack
 }
 ```
 
-{{% /example %}}
 
-{{% example go %}}
+{{< /example >}}
+
+
+{{< example go >}}
+
 ```go
 package main
 
@@ -78,9 +87,12 @@ func main() {
 }
 ```
 
-{{% /example %}}
 
-{{% example python %}}
+{{< /example >}}
+
+
+{{< example python >}}
+
 ```python
 import pulumi
 import pulumi_f5bigip as f5bigip
@@ -97,9 +109,12 @@ sanjose_http = f5bigip.ltm.ProfileHttp("sanjose-http",
     name="/Common/sanjose-http")
 ```
 
-{{% /example %}}
 
-{{% example typescript %}}
+{{< /example >}}
+
+
+{{< example typescript >}}
+
 
 ```typescript
 import * as pulumi from "@pulumi/pulumi";
@@ -118,9 +133,16 @@ const sanjose_http = new f5bigip.ltm.ProfileHttp("sanjose-http", {
 });
 ```
 
-{{% /example %}}
+
+{{< /example >}}
+
+
+
+
 
 {{% /examples %}}
+
+
 
 
 ## Create a ProfileHttp Resource {#create}
@@ -145,9 +167,7 @@ const sanjose_http = new f5bigip.ltm.ProfileHttp("sanjose-http", {
 
 {{% choosable language nodejs %}}
 
-<dl class="resources-properties">
-  
-    <dt
+<dl class="resources-properties"><dt
         class="property-required" title="Required">
         <span>name</span>
         <span class="property-indicator"></span>
@@ -155,9 +175,7 @@ const sanjose_http = new f5bigip.ltm.ProfileHttp("sanjose-http", {
     </dt>
     <dd>
       The unique name of the resource.
-    </dd>
-  
-    <dt
+    </dd><dt
         class="property-required" title="Required">
         <span>args</span>
         <span class="property-indicator"></span>
@@ -165,9 +183,7 @@ const sanjose_http = new f5bigip.ltm.ProfileHttp("sanjose-http", {
     </dt>
     <dd>
       The arguments to resource properties.
-    </dd>
-  
-    <dt
+    </dd><dt
         class="property-optional" title="Optional">
         <span>opts</span>
         <span class="property-indicator"></span>
@@ -175,10 +191,7 @@ const sanjose_http = new f5bigip.ltm.ProfileHttp("sanjose-http", {
     </dt>
     <dd>
       Bag of options to control resource&#39;s behavior.
-    </dd>
-  
-
-</dl>
+    </dd></dl>
 
 {{% /choosable %}}
 
@@ -204,9 +217,7 @@ const sanjose_http = new f5bigip.ltm.ProfileHttp("sanjose-http", {
 
 {{% choosable language go %}}
 
-<dl class="resources-properties">
-  
-    <dt
+<dl class="resources-properties"><dt
         class="property-optional" title="Optional">
         <span>ctx</span>
         <span class="property-indicator"></span>
@@ -214,9 +225,7 @@ const sanjose_http = new f5bigip.ltm.ProfileHttp("sanjose-http", {
     </dt>
     <dd>
       Context object for the current deployment.
-    </dd>
-  
-    <dt
+    </dd><dt
         class="property-required" title="Required">
         <span>name</span>
         <span class="property-indicator"></span>
@@ -224,9 +233,7 @@ const sanjose_http = new f5bigip.ltm.ProfileHttp("sanjose-http", {
     </dt>
     <dd>
       The unique name of the resource.
-    </dd>
-  
-    <dt
+    </dd><dt
         class="property-required" title="Required">
         <span>args</span>
         <span class="property-indicator"></span>
@@ -234,9 +241,7 @@ const sanjose_http = new f5bigip.ltm.ProfileHttp("sanjose-http", {
     </dt>
     <dd>
       The arguments to resource properties.
-    </dd>
-  
-    <dt
+    </dd><dt
         class="property-optional" title="Optional">
         <span>opts</span>
         <span class="property-indicator"></span>
@@ -244,18 +249,13 @@ const sanjose_http = new f5bigip.ltm.ProfileHttp("sanjose-http", {
     </dt>
     <dd>
       Bag of options to control resource&#39;s behavior.
-    </dd>
-  
-
-</dl>
+    </dd></dl>
 
 {{% /choosable %}}
 
 {{% choosable language csharp %}}
 
-<dl class="resources-properties">
-  
-    <dt
+<dl class="resources-properties"><dt
         class="property-required" title="Required">
         <span>name</span>
         <span class="property-indicator"></span>
@@ -263,9 +263,7 @@ const sanjose_http = new f5bigip.ltm.ProfileHttp("sanjose-http", {
     </dt>
     <dd>
       The unique name of the resource.
-    </dd>
-  
-    <dt
+    </dd><dt
         class="property-required" title="Required">
         <span>args</span>
         <span class="property-indicator"></span>
@@ -273,9 +271,7 @@ const sanjose_http = new f5bigip.ltm.ProfileHttp("sanjose-http", {
     </dt>
     <dd>
       The arguments to resource properties.
-    </dd>
-  
-    <dt
+    </dd><dt
         class="property-optional" title="Optional">
         <span>opts</span>
         <span class="property-indicator"></span>
@@ -283,10 +279,7 @@ const sanjose_http = new f5bigip.ltm.ProfileHttp("sanjose-http", {
     </dt>
     <dd>
       Bag of options to control resource&#39;s behavior.
-    </dd>
-  
-
-</dl>
+    </dd></dl>
 
 {{% /choosable %}}
 
@@ -301,9 +294,7 @@ The ProfileHttp resource accepts the following [input]({{< relref "/docs/intro/c
 
 
 {{% choosable language csharp %}}
-<dl class="resources-properties">
-
-    <dt class="property-required"
+<dl class="resources-properties"><dt class="property-required"
             title="Required">
         <span id="name_csharp">
 <a href="#name_csharp" style="color: inherit; text-decoration: inherit;">Name</a>
@@ -312,8 +303,7 @@ The ProfileHttp resource accepts the following [input]({{< relref "/docs/intro/c
         <span class="property-type">string</span>
     </dt>
     <dd>{{% md %}}Name of the profile_http
-{{% /md %}}</dd>
-    <dt class="property-optional"
+{{% /md %}}</dd><dt class="property-optional"
             title="Optional">
         <span id="acceptxff_csharp">
 <a href="#acceptxff_csharp" style="color: inherit; text-decoration: inherit;">Accept<wbr>Xff</a>
@@ -323,8 +313,7 @@ The ProfileHttp resource accepts the following [input]({{< relref "/docs/intro/c
     </dt>
     <dd>{{% md %}}Enables or disables trusting the client IP address, and statistics from the client IP address, based on the request's
 XFF (X-forwarded-for) headers, if they exist.
-{{% /md %}}</dd>
-    <dt class="property-optional"
+{{% /md %}}</dd><dt class="property-optional"
             title="Optional">
         <span id="appservice_csharp">
 <a href="#appservice_csharp" style="color: inherit; text-decoration: inherit;">App<wbr>Service</a>
@@ -333,8 +322,7 @@ XFF (X-forwarded-for) headers, if they exist.
         <span class="property-type">string</span>
     </dt>
     <dd>{{% md %}}The application service to which the object belongs.
-{{% /md %}}</dd>
-    <dt class="property-optional"
+{{% /md %}}</dd><dt class="property-optional"
             title="Optional">
         <span id="basicauthrealm_csharp">
 <a href="#basicauthrealm_csharp" style="color: inherit; text-decoration: inherit;">Basic<wbr>Auth<wbr>Realm</a>
@@ -343,8 +331,7 @@ XFF (X-forwarded-for) headers, if they exist.
         <span class="property-type">string</span>
     </dt>
     <dd>{{% md %}}Specifies a quoted string for the basic authentication realm. The system sends this string to a client whenever authorization fails. The default value is none
-{{% /md %}}</dd>
-    <dt class="property-optional"
+{{% /md %}}</dd><dt class="property-optional"
             title="Optional">
         <span id="defaultsfrom_csharp">
 <a href="#defaultsfrom_csharp" style="color: inherit; text-decoration: inherit;">Defaults<wbr>From</a>
@@ -353,8 +340,7 @@ XFF (X-forwarded-for) headers, if they exist.
         <span class="property-type">string</span>
     </dt>
     <dd>{{% md %}}Specifies the profile that you want to use as the parent profile. Your new profile inherits all settings and values from the parent profile specified.
-{{% /md %}}</dd>
-    <dt class="property-optional"
+{{% /md %}}</dd><dt class="property-optional"
             title="Optional">
         <span id="description_csharp">
 <a href="#description_csharp" style="color: inherit; text-decoration: inherit;">Description</a>
@@ -363,8 +349,7 @@ XFF (X-forwarded-for) headers, if they exist.
         <span class="property-type">string</span>
     </dt>
     <dd>{{% md %}}User defined description
-{{% /md %}}</dd>
-    <dt class="property-optional"
+{{% /md %}}</dd><dt class="property-optional"
             title="Optional">
         <span id="encryptcookiesecret_csharp">
 <a href="#encryptcookiesecret_csharp" style="color: inherit; text-decoration: inherit;">Encrypt<wbr>Cookie<wbr>Secret</a>
@@ -373,8 +358,7 @@ XFF (X-forwarded-for) headers, if they exist.
         <span class="property-type">string</span>
     </dt>
     <dd>{{% md %}}Specifies a passphrase for the cookie encryption
-{{% /md %}}</dd>
-    <dt class="property-optional"
+{{% /md %}}</dd><dt class="property-optional"
             title="Optional">
         <span id="encryptcookies_csharp">
 <a href="#encryptcookies_csharp" style="color: inherit; text-decoration: inherit;">Encrypt<wbr>Cookies</a>
@@ -383,8 +367,7 @@ XFF (X-forwarded-for) headers, if they exist.
         <span class="property-type">List&lt;string&gt;</span>
     </dt>
     <dd>{{% md %}}Encrypts specified cookies that the BIG-IP system sends to a client system
-{{% /md %}}</dd>
-    <dt class="property-optional"
+{{% /md %}}</dd><dt class="property-optional"
             title="Optional">
         <span id="fallbackhost_csharp">
 <a href="#fallbackhost_csharp" style="color: inherit; text-decoration: inherit;">Fallback<wbr>Host</a>
@@ -393,8 +376,7 @@ XFF (X-forwarded-for) headers, if they exist.
         <span class="property-type">string</span>
     </dt>
     <dd>{{% md %}}Specifies an HTTP fallback host. HTTP redirection allows you to redirect HTTP traffic to another protocol identifier, host name, port number
-{{% /md %}}</dd>
-    <dt class="property-optional"
+{{% /md %}}</dd><dt class="property-optional"
             title="Optional">
         <span id="fallbackstatuscodes_csharp">
 <a href="#fallbackstatuscodes_csharp" style="color: inherit; text-decoration: inherit;">Fallback<wbr>Status<wbr>Codes</a>
@@ -403,8 +385,7 @@ XFF (X-forwarded-for) headers, if they exist.
         <span class="property-type">List&lt;string&gt;</span>
     </dt>
     <dd>{{% md %}}Specifies one or more three-digit status codes that can be returned by an HTTP server.
-{{% /md %}}</dd>
-    <dt class="property-optional"
+{{% /md %}}</dd><dt class="property-optional"
             title="Optional">
         <span id="headerase_csharp">
 <a href="#headerase_csharp" style="color: inherit; text-decoration: inherit;">Head<wbr>Erase</a>
@@ -413,8 +394,7 @@ XFF (X-forwarded-for) headers, if they exist.
         <span class="property-type">string</span>
     </dt>
     <dd>{{% md %}}Specifies the header string that you want to erase from an HTTP request. You can also specify none
-{{% /md %}}</dd>
-    <dt class="property-optional"
+{{% /md %}}</dd><dt class="property-optional"
             title="Optional">
         <span id="headinsert_csharp">
 <a href="#headinsert_csharp" style="color: inherit; text-decoration: inherit;">Head<wbr>Insert</a>
@@ -423,8 +403,7 @@ XFF (X-forwarded-for) headers, if they exist.
         <span class="property-type">string</span>
     </dt>
     <dd>{{% md %}}Specifies a quoted header string that you want to insert into an HTTP request
-{{% /md %}}</dd>
-    <dt class="property-optional"
+{{% /md %}}</dd><dt class="property-optional"
             title="Optional">
         <span id="insertxforwardedfor_csharp">
 <a href="#insertxforwardedfor_csharp" style="color: inherit; text-decoration: inherit;">Insert<wbr>Xforwarded<wbr>For</a>
@@ -433,8 +412,7 @@ XFF (X-forwarded-for) headers, if they exist.
         <span class="property-type">string</span>
     </dt>
     <dd>{{% md %}}When using connection pooling, which allows clients to make use of other client requests' server-side connections, you can insert the X-Forwarded-For header and specify a client IP address
-{{% /md %}}</dd>
-    <dt class="property-optional"
+{{% /md %}}</dd><dt class="property-optional"
             title="Optional">
         <span id="lwsseparator_csharp">
 <a href="#lwsseparator_csharp" style="color: inherit; text-decoration: inherit;">Lws<wbr>Separator</a>
@@ -443,8 +421,7 @@ XFF (X-forwarded-for) headers, if they exist.
         <span class="property-type">string</span>
     </dt>
     <dd>{{% md %}}Specifies a quoted header string that you want to insert into an HTTP request. You can also specify none.
-{{% /md %}}</dd>
-    <dt class="property-optional"
+{{% /md %}}</dd><dt class="property-optional"
             title="Optional">
         <span id="oneconnecttransformations_csharp">
 <a href="#oneconnecttransformations_csharp" style="color: inherit; text-decoration: inherit;">Oneconnect<wbr>Transformations</a>
@@ -453,8 +430,7 @@ XFF (X-forwarded-for) headers, if they exist.
         <span class="property-type">string</span>
     </dt>
     <dd>{{% md %}}Enables the system to perform HTTP header transformations for the purpose of  keeping server-side connections open. This feature requires configuration of a OneConnect profile
-{{% /md %}}</dd>
-    <dt class="property-optional"
+{{% /md %}}</dd><dt class="property-optional"
             title="Optional">
         <span id="proxytype_csharp">
 <a href="#proxytype_csharp" style="color: inherit; text-decoration: inherit;">Proxy<wbr>Type</a>
@@ -463,8 +439,7 @@ XFF (X-forwarded-for) headers, if they exist.
         <span class="property-type">string</span>
     </dt>
     <dd>{{% md %}}Specifies the type of HTTP proxy.
-{{% /md %}}</dd>
-    <dt class="property-optional"
+{{% /md %}}</dd><dt class="property-optional"
             title="Optional">
         <span id="redirectrewrite_csharp">
 <a href="#redirectrewrite_csharp" style="color: inherit; text-decoration: inherit;">Redirect<wbr>Rewrite</a>
@@ -473,8 +448,7 @@ XFF (X-forwarded-for) headers, if they exist.
         <span class="property-type">string</span>
     </dt>
     <dd>{{% md %}}Specifies which of the application HTTP redirects the system rewrites to HTTPS.
-{{% /md %}}</dd>
-    <dt class="property-optional"
+{{% /md %}}</dd><dt class="property-optional"
             title="Optional">
         <span id="requestchunking_csharp">
 <a href="#requestchunking_csharp" style="color: inherit; text-decoration: inherit;">Request<wbr>Chunking</a>
@@ -483,8 +457,7 @@ XFF (X-forwarded-for) headers, if they exist.
         <span class="property-type">string</span>
     </dt>
     <dd>{{% md %}}Specifies how to handle chunked and unchunked requests.
-{{% /md %}}</dd>
-    <dt class="property-optional"
+{{% /md %}}</dd><dt class="property-optional"
             title="Optional">
         <span id="responsechunking_csharp">
 <a href="#responsechunking_csharp" style="color: inherit; text-decoration: inherit;">Response<wbr>Chunking</a>
@@ -493,8 +466,7 @@ XFF (X-forwarded-for) headers, if they exist.
         <span class="property-type">string</span>
     </dt>
     <dd>{{% md %}}Specifies how to handle chunked and unchunked responses.
-{{% /md %}}</dd>
-    <dt class="property-optional"
+{{% /md %}}</dd><dt class="property-optional"
             title="Optional">
         <span id="responseheaderspermitteds_csharp">
 <a href="#responseheaderspermitteds_csharp" style="color: inherit; text-decoration: inherit;">Response<wbr>Headers<wbr>Permitteds</a>
@@ -503,8 +475,7 @@ XFF (X-forwarded-for) headers, if they exist.
         <span class="property-type">List&lt;string&gt;</span>
     </dt>
     <dd>{{% md %}}Specifies headers that the BIG-IP system allows in an HTTP response.
-{{% /md %}}</dd>
-    <dt class="property-optional"
+{{% /md %}}</dd><dt class="property-optional"
             title="Optional">
         <span id="serveragentname_csharp">
 <a href="#serveragentname_csharp" style="color: inherit; text-decoration: inherit;">Server<wbr>Agent<wbr>Name</a>
@@ -514,8 +485,7 @@ XFF (X-forwarded-for) headers, if they exist.
     </dt>
     <dd>{{% md %}}Specifies the value of the Server header in responses that the BIG-IP itself generates. The default is BigIP. If no
 string is specified, then no Server header will be added to such responses
-{{% /md %}}</dd>
-    <dt class="property-optional"
+{{% /md %}}</dd><dt class="property-optional"
             title="Optional">
         <span id="tmpartition_csharp">
 <a href="#tmpartition_csharp" style="color: inherit; text-decoration: inherit;">Tm<wbr>Partition</a>
@@ -524,8 +494,7 @@ string is specified, then no Server header will be added to such responses
         <span class="property-type">string</span>
     </dt>
     <dd>{{% md %}}Displays the administrative partition within which this profile resides.
-{{% /md %}}</dd>
-    <dt class="property-optional"
+{{% /md %}}</dd><dt class="property-optional"
             title="Optional">
         <span id="viahostname_csharp">
 <a href="#viahostname_csharp" style="color: inherit; text-decoration: inherit;">Via<wbr>Host<wbr>Name</a>
@@ -534,8 +503,7 @@ string is specified, then no Server header will be added to such responses
         <span class="property-type">string</span>
     </dt>
     <dd>{{% md %}}Specifies the hostname to include into Via header
-{{% /md %}}</dd>
-    <dt class="property-optional"
+{{% /md %}}</dd><dt class="property-optional"
             title="Optional">
         <span id="viarequest_csharp">
 <a href="#viarequest_csharp" style="color: inherit; text-decoration: inherit;">Via<wbr>Request</a>
@@ -544,8 +512,7 @@ string is specified, then no Server header will be added to such responses
         <span class="property-type">string</span>
     </dt>
     <dd>{{% md %}}Specifies whether to append, remove, or preserve a Via header in an HTTP request
-{{% /md %}}</dd>
-    <dt class="property-optional"
+{{% /md %}}</dd><dt class="property-optional"
             title="Optional">
         <span id="viaresponse_csharp">
 <a href="#viaresponse_csharp" style="color: inherit; text-decoration: inherit;">Via<wbr>Response</a>
@@ -554,8 +521,7 @@ string is specified, then no Server header will be added to such responses
         <span class="property-type">string</span>
     </dt>
     <dd>{{% md %}}Specifies whether to append, remove, or preserve a Via header in an HTTP request
-{{% /md %}}</dd>
-    <dt class="property-optional"
+{{% /md %}}</dd><dt class="property-optional"
             title="Optional">
         <span id="xffalternativenames_csharp">
 <a href="#xffalternativenames_csharp" style="color: inherit; text-decoration: inherit;">Xff<wbr>Alternative<wbr>Names</a>
@@ -564,14 +530,11 @@ string is specified, then no Server header will be added to such responses
         <span class="property-type">List&lt;string&gt;</span>
     </dt>
     <dd>{{% md %}}Specifies alternative XFF headers instead of the default X-forwarded-for header
-{{% /md %}}</dd>
-</dl>
+{{% /md %}}</dd></dl>
 {{% /choosable %}}
 
 {{% choosable language go %}}
-<dl class="resources-properties">
-
-    <dt class="property-required"
+<dl class="resources-properties"><dt class="property-required"
             title="Required">
         <span id="name_go">
 <a href="#name_go" style="color: inherit; text-decoration: inherit;">Name</a>
@@ -580,8 +543,7 @@ string is specified, then no Server header will be added to such responses
         <span class="property-type">string</span>
     </dt>
     <dd>{{% md %}}Name of the profile_http
-{{% /md %}}</dd>
-    <dt class="property-optional"
+{{% /md %}}</dd><dt class="property-optional"
             title="Optional">
         <span id="acceptxff_go">
 <a href="#acceptxff_go" style="color: inherit; text-decoration: inherit;">Accept<wbr>Xff</a>
@@ -591,8 +553,7 @@ string is specified, then no Server header will be added to such responses
     </dt>
     <dd>{{% md %}}Enables or disables trusting the client IP address, and statistics from the client IP address, based on the request's
 XFF (X-forwarded-for) headers, if they exist.
-{{% /md %}}</dd>
-    <dt class="property-optional"
+{{% /md %}}</dd><dt class="property-optional"
             title="Optional">
         <span id="appservice_go">
 <a href="#appservice_go" style="color: inherit; text-decoration: inherit;">App<wbr>Service</a>
@@ -601,8 +562,7 @@ XFF (X-forwarded-for) headers, if they exist.
         <span class="property-type">string</span>
     </dt>
     <dd>{{% md %}}The application service to which the object belongs.
-{{% /md %}}</dd>
-    <dt class="property-optional"
+{{% /md %}}</dd><dt class="property-optional"
             title="Optional">
         <span id="basicauthrealm_go">
 <a href="#basicauthrealm_go" style="color: inherit; text-decoration: inherit;">Basic<wbr>Auth<wbr>Realm</a>
@@ -611,8 +571,7 @@ XFF (X-forwarded-for) headers, if they exist.
         <span class="property-type">string</span>
     </dt>
     <dd>{{% md %}}Specifies a quoted string for the basic authentication realm. The system sends this string to a client whenever authorization fails. The default value is none
-{{% /md %}}</dd>
-    <dt class="property-optional"
+{{% /md %}}</dd><dt class="property-optional"
             title="Optional">
         <span id="defaultsfrom_go">
 <a href="#defaultsfrom_go" style="color: inherit; text-decoration: inherit;">Defaults<wbr>From</a>
@@ -621,8 +580,7 @@ XFF (X-forwarded-for) headers, if they exist.
         <span class="property-type">string</span>
     </dt>
     <dd>{{% md %}}Specifies the profile that you want to use as the parent profile. Your new profile inherits all settings and values from the parent profile specified.
-{{% /md %}}</dd>
-    <dt class="property-optional"
+{{% /md %}}</dd><dt class="property-optional"
             title="Optional">
         <span id="description_go">
 <a href="#description_go" style="color: inherit; text-decoration: inherit;">Description</a>
@@ -631,8 +589,7 @@ XFF (X-forwarded-for) headers, if they exist.
         <span class="property-type">string</span>
     </dt>
     <dd>{{% md %}}User defined description
-{{% /md %}}</dd>
-    <dt class="property-optional"
+{{% /md %}}</dd><dt class="property-optional"
             title="Optional">
         <span id="encryptcookiesecret_go">
 <a href="#encryptcookiesecret_go" style="color: inherit; text-decoration: inherit;">Encrypt<wbr>Cookie<wbr>Secret</a>
@@ -641,8 +598,7 @@ XFF (X-forwarded-for) headers, if they exist.
         <span class="property-type">string</span>
     </dt>
     <dd>{{% md %}}Specifies a passphrase for the cookie encryption
-{{% /md %}}</dd>
-    <dt class="property-optional"
+{{% /md %}}</dd><dt class="property-optional"
             title="Optional">
         <span id="encryptcookies_go">
 <a href="#encryptcookies_go" style="color: inherit; text-decoration: inherit;">Encrypt<wbr>Cookies</a>
@@ -651,8 +607,7 @@ XFF (X-forwarded-for) headers, if they exist.
         <span class="property-type">[]string</span>
     </dt>
     <dd>{{% md %}}Encrypts specified cookies that the BIG-IP system sends to a client system
-{{% /md %}}</dd>
-    <dt class="property-optional"
+{{% /md %}}</dd><dt class="property-optional"
             title="Optional">
         <span id="fallbackhost_go">
 <a href="#fallbackhost_go" style="color: inherit; text-decoration: inherit;">Fallback<wbr>Host</a>
@@ -661,8 +616,7 @@ XFF (X-forwarded-for) headers, if they exist.
         <span class="property-type">string</span>
     </dt>
     <dd>{{% md %}}Specifies an HTTP fallback host. HTTP redirection allows you to redirect HTTP traffic to another protocol identifier, host name, port number
-{{% /md %}}</dd>
-    <dt class="property-optional"
+{{% /md %}}</dd><dt class="property-optional"
             title="Optional">
         <span id="fallbackstatuscodes_go">
 <a href="#fallbackstatuscodes_go" style="color: inherit; text-decoration: inherit;">Fallback<wbr>Status<wbr>Codes</a>
@@ -671,8 +625,7 @@ XFF (X-forwarded-for) headers, if they exist.
         <span class="property-type">[]string</span>
     </dt>
     <dd>{{% md %}}Specifies one or more three-digit status codes that can be returned by an HTTP server.
-{{% /md %}}</dd>
-    <dt class="property-optional"
+{{% /md %}}</dd><dt class="property-optional"
             title="Optional">
         <span id="headerase_go">
 <a href="#headerase_go" style="color: inherit; text-decoration: inherit;">Head<wbr>Erase</a>
@@ -681,8 +634,7 @@ XFF (X-forwarded-for) headers, if they exist.
         <span class="property-type">string</span>
     </dt>
     <dd>{{% md %}}Specifies the header string that you want to erase from an HTTP request. You can also specify none
-{{% /md %}}</dd>
-    <dt class="property-optional"
+{{% /md %}}</dd><dt class="property-optional"
             title="Optional">
         <span id="headinsert_go">
 <a href="#headinsert_go" style="color: inherit; text-decoration: inherit;">Head<wbr>Insert</a>
@@ -691,8 +643,7 @@ XFF (X-forwarded-for) headers, if they exist.
         <span class="property-type">string</span>
     </dt>
     <dd>{{% md %}}Specifies a quoted header string that you want to insert into an HTTP request
-{{% /md %}}</dd>
-    <dt class="property-optional"
+{{% /md %}}</dd><dt class="property-optional"
             title="Optional">
         <span id="insertxforwardedfor_go">
 <a href="#insertxforwardedfor_go" style="color: inherit; text-decoration: inherit;">Insert<wbr>Xforwarded<wbr>For</a>
@@ -701,8 +652,7 @@ XFF (X-forwarded-for) headers, if they exist.
         <span class="property-type">string</span>
     </dt>
     <dd>{{% md %}}When using connection pooling, which allows clients to make use of other client requests' server-side connections, you can insert the X-Forwarded-For header and specify a client IP address
-{{% /md %}}</dd>
-    <dt class="property-optional"
+{{% /md %}}</dd><dt class="property-optional"
             title="Optional">
         <span id="lwsseparator_go">
 <a href="#lwsseparator_go" style="color: inherit; text-decoration: inherit;">Lws<wbr>Separator</a>
@@ -711,8 +661,7 @@ XFF (X-forwarded-for) headers, if they exist.
         <span class="property-type">string</span>
     </dt>
     <dd>{{% md %}}Specifies a quoted header string that you want to insert into an HTTP request. You can also specify none.
-{{% /md %}}</dd>
-    <dt class="property-optional"
+{{% /md %}}</dd><dt class="property-optional"
             title="Optional">
         <span id="oneconnecttransformations_go">
 <a href="#oneconnecttransformations_go" style="color: inherit; text-decoration: inherit;">Oneconnect<wbr>Transformations</a>
@@ -721,8 +670,7 @@ XFF (X-forwarded-for) headers, if they exist.
         <span class="property-type">string</span>
     </dt>
     <dd>{{% md %}}Enables the system to perform HTTP header transformations for the purpose of  keeping server-side connections open. This feature requires configuration of a OneConnect profile
-{{% /md %}}</dd>
-    <dt class="property-optional"
+{{% /md %}}</dd><dt class="property-optional"
             title="Optional">
         <span id="proxytype_go">
 <a href="#proxytype_go" style="color: inherit; text-decoration: inherit;">Proxy<wbr>Type</a>
@@ -731,8 +679,7 @@ XFF (X-forwarded-for) headers, if they exist.
         <span class="property-type">string</span>
     </dt>
     <dd>{{% md %}}Specifies the type of HTTP proxy.
-{{% /md %}}</dd>
-    <dt class="property-optional"
+{{% /md %}}</dd><dt class="property-optional"
             title="Optional">
         <span id="redirectrewrite_go">
 <a href="#redirectrewrite_go" style="color: inherit; text-decoration: inherit;">Redirect<wbr>Rewrite</a>
@@ -741,8 +688,7 @@ XFF (X-forwarded-for) headers, if they exist.
         <span class="property-type">string</span>
     </dt>
     <dd>{{% md %}}Specifies which of the application HTTP redirects the system rewrites to HTTPS.
-{{% /md %}}</dd>
-    <dt class="property-optional"
+{{% /md %}}</dd><dt class="property-optional"
             title="Optional">
         <span id="requestchunking_go">
 <a href="#requestchunking_go" style="color: inherit; text-decoration: inherit;">Request<wbr>Chunking</a>
@@ -751,8 +697,7 @@ XFF (X-forwarded-for) headers, if they exist.
         <span class="property-type">string</span>
     </dt>
     <dd>{{% md %}}Specifies how to handle chunked and unchunked requests.
-{{% /md %}}</dd>
-    <dt class="property-optional"
+{{% /md %}}</dd><dt class="property-optional"
             title="Optional">
         <span id="responsechunking_go">
 <a href="#responsechunking_go" style="color: inherit; text-decoration: inherit;">Response<wbr>Chunking</a>
@@ -761,8 +706,7 @@ XFF (X-forwarded-for) headers, if they exist.
         <span class="property-type">string</span>
     </dt>
     <dd>{{% md %}}Specifies how to handle chunked and unchunked responses.
-{{% /md %}}</dd>
-    <dt class="property-optional"
+{{% /md %}}</dd><dt class="property-optional"
             title="Optional">
         <span id="responseheaderspermitteds_go">
 <a href="#responseheaderspermitteds_go" style="color: inherit; text-decoration: inherit;">Response<wbr>Headers<wbr>Permitteds</a>
@@ -771,8 +715,7 @@ XFF (X-forwarded-for) headers, if they exist.
         <span class="property-type">[]string</span>
     </dt>
     <dd>{{% md %}}Specifies headers that the BIG-IP system allows in an HTTP response.
-{{% /md %}}</dd>
-    <dt class="property-optional"
+{{% /md %}}</dd><dt class="property-optional"
             title="Optional">
         <span id="serveragentname_go">
 <a href="#serveragentname_go" style="color: inherit; text-decoration: inherit;">Server<wbr>Agent<wbr>Name</a>
@@ -782,8 +725,7 @@ XFF (X-forwarded-for) headers, if they exist.
     </dt>
     <dd>{{% md %}}Specifies the value of the Server header in responses that the BIG-IP itself generates. The default is BigIP. If no
 string is specified, then no Server header will be added to such responses
-{{% /md %}}</dd>
-    <dt class="property-optional"
+{{% /md %}}</dd><dt class="property-optional"
             title="Optional">
         <span id="tmpartition_go">
 <a href="#tmpartition_go" style="color: inherit; text-decoration: inherit;">Tm<wbr>Partition</a>
@@ -792,8 +734,7 @@ string is specified, then no Server header will be added to such responses
         <span class="property-type">string</span>
     </dt>
     <dd>{{% md %}}Displays the administrative partition within which this profile resides.
-{{% /md %}}</dd>
-    <dt class="property-optional"
+{{% /md %}}</dd><dt class="property-optional"
             title="Optional">
         <span id="viahostname_go">
 <a href="#viahostname_go" style="color: inherit; text-decoration: inherit;">Via<wbr>Host<wbr>Name</a>
@@ -802,8 +743,7 @@ string is specified, then no Server header will be added to such responses
         <span class="property-type">string</span>
     </dt>
     <dd>{{% md %}}Specifies the hostname to include into Via header
-{{% /md %}}</dd>
-    <dt class="property-optional"
+{{% /md %}}</dd><dt class="property-optional"
             title="Optional">
         <span id="viarequest_go">
 <a href="#viarequest_go" style="color: inherit; text-decoration: inherit;">Via<wbr>Request</a>
@@ -812,8 +752,7 @@ string is specified, then no Server header will be added to such responses
         <span class="property-type">string</span>
     </dt>
     <dd>{{% md %}}Specifies whether to append, remove, or preserve a Via header in an HTTP request
-{{% /md %}}</dd>
-    <dt class="property-optional"
+{{% /md %}}</dd><dt class="property-optional"
             title="Optional">
         <span id="viaresponse_go">
 <a href="#viaresponse_go" style="color: inherit; text-decoration: inherit;">Via<wbr>Response</a>
@@ -822,8 +761,7 @@ string is specified, then no Server header will be added to such responses
         <span class="property-type">string</span>
     </dt>
     <dd>{{% md %}}Specifies whether to append, remove, or preserve a Via header in an HTTP request
-{{% /md %}}</dd>
-    <dt class="property-optional"
+{{% /md %}}</dd><dt class="property-optional"
             title="Optional">
         <span id="xffalternativenames_go">
 <a href="#xffalternativenames_go" style="color: inherit; text-decoration: inherit;">Xff<wbr>Alternative<wbr>Names</a>
@@ -832,14 +770,11 @@ string is specified, then no Server header will be added to such responses
         <span class="property-type">[]string</span>
     </dt>
     <dd>{{% md %}}Specifies alternative XFF headers instead of the default X-forwarded-for header
-{{% /md %}}</dd>
-</dl>
+{{% /md %}}</dd></dl>
 {{% /choosable %}}
 
 {{% choosable language nodejs %}}
-<dl class="resources-properties">
-
-    <dt class="property-required"
+<dl class="resources-properties"><dt class="property-required"
             title="Required">
         <span id="name_nodejs">
 <a href="#name_nodejs" style="color: inherit; text-decoration: inherit;">name</a>
@@ -848,8 +783,7 @@ string is specified, then no Server header will be added to such responses
         <span class="property-type">string</span>
     </dt>
     <dd>{{% md %}}Name of the profile_http
-{{% /md %}}</dd>
-    <dt class="property-optional"
+{{% /md %}}</dd><dt class="property-optional"
             title="Optional">
         <span id="acceptxff_nodejs">
 <a href="#acceptxff_nodejs" style="color: inherit; text-decoration: inherit;">accept<wbr>Xff</a>
@@ -859,8 +793,7 @@ string is specified, then no Server header will be added to such responses
     </dt>
     <dd>{{% md %}}Enables or disables trusting the client IP address, and statistics from the client IP address, based on the request's
 XFF (X-forwarded-for) headers, if they exist.
-{{% /md %}}</dd>
-    <dt class="property-optional"
+{{% /md %}}</dd><dt class="property-optional"
             title="Optional">
         <span id="appservice_nodejs">
 <a href="#appservice_nodejs" style="color: inherit; text-decoration: inherit;">app<wbr>Service</a>
@@ -869,8 +802,7 @@ XFF (X-forwarded-for) headers, if they exist.
         <span class="property-type">string</span>
     </dt>
     <dd>{{% md %}}The application service to which the object belongs.
-{{% /md %}}</dd>
-    <dt class="property-optional"
+{{% /md %}}</dd><dt class="property-optional"
             title="Optional">
         <span id="basicauthrealm_nodejs">
 <a href="#basicauthrealm_nodejs" style="color: inherit; text-decoration: inherit;">basic<wbr>Auth<wbr>Realm</a>
@@ -879,8 +811,7 @@ XFF (X-forwarded-for) headers, if they exist.
         <span class="property-type">string</span>
     </dt>
     <dd>{{% md %}}Specifies a quoted string for the basic authentication realm. The system sends this string to a client whenever authorization fails. The default value is none
-{{% /md %}}</dd>
-    <dt class="property-optional"
+{{% /md %}}</dd><dt class="property-optional"
             title="Optional">
         <span id="defaultsfrom_nodejs">
 <a href="#defaultsfrom_nodejs" style="color: inherit; text-decoration: inherit;">defaults<wbr>From</a>
@@ -889,8 +820,7 @@ XFF (X-forwarded-for) headers, if they exist.
         <span class="property-type">string</span>
     </dt>
     <dd>{{% md %}}Specifies the profile that you want to use as the parent profile. Your new profile inherits all settings and values from the parent profile specified.
-{{% /md %}}</dd>
-    <dt class="property-optional"
+{{% /md %}}</dd><dt class="property-optional"
             title="Optional">
         <span id="description_nodejs">
 <a href="#description_nodejs" style="color: inherit; text-decoration: inherit;">description</a>
@@ -899,8 +829,7 @@ XFF (X-forwarded-for) headers, if they exist.
         <span class="property-type">string</span>
     </dt>
     <dd>{{% md %}}User defined description
-{{% /md %}}</dd>
-    <dt class="property-optional"
+{{% /md %}}</dd><dt class="property-optional"
             title="Optional">
         <span id="encryptcookiesecret_nodejs">
 <a href="#encryptcookiesecret_nodejs" style="color: inherit; text-decoration: inherit;">encrypt<wbr>Cookie<wbr>Secret</a>
@@ -909,8 +838,7 @@ XFF (X-forwarded-for) headers, if they exist.
         <span class="property-type">string</span>
     </dt>
     <dd>{{% md %}}Specifies a passphrase for the cookie encryption
-{{% /md %}}</dd>
-    <dt class="property-optional"
+{{% /md %}}</dd><dt class="property-optional"
             title="Optional">
         <span id="encryptcookies_nodejs">
 <a href="#encryptcookies_nodejs" style="color: inherit; text-decoration: inherit;">encrypt<wbr>Cookies</a>
@@ -919,8 +847,7 @@ XFF (X-forwarded-for) headers, if they exist.
         <span class="property-type">string[]</span>
     </dt>
     <dd>{{% md %}}Encrypts specified cookies that the BIG-IP system sends to a client system
-{{% /md %}}</dd>
-    <dt class="property-optional"
+{{% /md %}}</dd><dt class="property-optional"
             title="Optional">
         <span id="fallbackhost_nodejs">
 <a href="#fallbackhost_nodejs" style="color: inherit; text-decoration: inherit;">fallback<wbr>Host</a>
@@ -929,8 +856,7 @@ XFF (X-forwarded-for) headers, if they exist.
         <span class="property-type">string</span>
     </dt>
     <dd>{{% md %}}Specifies an HTTP fallback host. HTTP redirection allows you to redirect HTTP traffic to another protocol identifier, host name, port number
-{{% /md %}}</dd>
-    <dt class="property-optional"
+{{% /md %}}</dd><dt class="property-optional"
             title="Optional">
         <span id="fallbackstatuscodes_nodejs">
 <a href="#fallbackstatuscodes_nodejs" style="color: inherit; text-decoration: inherit;">fallback<wbr>Status<wbr>Codes</a>
@@ -939,8 +865,7 @@ XFF (X-forwarded-for) headers, if they exist.
         <span class="property-type">string[]</span>
     </dt>
     <dd>{{% md %}}Specifies one or more three-digit status codes that can be returned by an HTTP server.
-{{% /md %}}</dd>
-    <dt class="property-optional"
+{{% /md %}}</dd><dt class="property-optional"
             title="Optional">
         <span id="headerase_nodejs">
 <a href="#headerase_nodejs" style="color: inherit; text-decoration: inherit;">head<wbr>Erase</a>
@@ -949,8 +874,7 @@ XFF (X-forwarded-for) headers, if they exist.
         <span class="property-type">string</span>
     </dt>
     <dd>{{% md %}}Specifies the header string that you want to erase from an HTTP request. You can also specify none
-{{% /md %}}</dd>
-    <dt class="property-optional"
+{{% /md %}}</dd><dt class="property-optional"
             title="Optional">
         <span id="headinsert_nodejs">
 <a href="#headinsert_nodejs" style="color: inherit; text-decoration: inherit;">head<wbr>Insert</a>
@@ -959,8 +883,7 @@ XFF (X-forwarded-for) headers, if they exist.
         <span class="property-type">string</span>
     </dt>
     <dd>{{% md %}}Specifies a quoted header string that you want to insert into an HTTP request
-{{% /md %}}</dd>
-    <dt class="property-optional"
+{{% /md %}}</dd><dt class="property-optional"
             title="Optional">
         <span id="insertxforwardedfor_nodejs">
 <a href="#insertxforwardedfor_nodejs" style="color: inherit; text-decoration: inherit;">insert<wbr>Xforwarded<wbr>For</a>
@@ -969,8 +892,7 @@ XFF (X-forwarded-for) headers, if they exist.
         <span class="property-type">string</span>
     </dt>
     <dd>{{% md %}}When using connection pooling, which allows clients to make use of other client requests' server-side connections, you can insert the X-Forwarded-For header and specify a client IP address
-{{% /md %}}</dd>
-    <dt class="property-optional"
+{{% /md %}}</dd><dt class="property-optional"
             title="Optional">
         <span id="lwsseparator_nodejs">
 <a href="#lwsseparator_nodejs" style="color: inherit; text-decoration: inherit;">lws<wbr>Separator</a>
@@ -979,8 +901,7 @@ XFF (X-forwarded-for) headers, if they exist.
         <span class="property-type">string</span>
     </dt>
     <dd>{{% md %}}Specifies a quoted header string that you want to insert into an HTTP request. You can also specify none.
-{{% /md %}}</dd>
-    <dt class="property-optional"
+{{% /md %}}</dd><dt class="property-optional"
             title="Optional">
         <span id="oneconnecttransformations_nodejs">
 <a href="#oneconnecttransformations_nodejs" style="color: inherit; text-decoration: inherit;">oneconnect<wbr>Transformations</a>
@@ -989,8 +910,7 @@ XFF (X-forwarded-for) headers, if they exist.
         <span class="property-type">string</span>
     </dt>
     <dd>{{% md %}}Enables the system to perform HTTP header transformations for the purpose of  keeping server-side connections open. This feature requires configuration of a OneConnect profile
-{{% /md %}}</dd>
-    <dt class="property-optional"
+{{% /md %}}</dd><dt class="property-optional"
             title="Optional">
         <span id="proxytype_nodejs">
 <a href="#proxytype_nodejs" style="color: inherit; text-decoration: inherit;">proxy<wbr>Type</a>
@@ -999,8 +919,7 @@ XFF (X-forwarded-for) headers, if they exist.
         <span class="property-type">string</span>
     </dt>
     <dd>{{% md %}}Specifies the type of HTTP proxy.
-{{% /md %}}</dd>
-    <dt class="property-optional"
+{{% /md %}}</dd><dt class="property-optional"
             title="Optional">
         <span id="redirectrewrite_nodejs">
 <a href="#redirectrewrite_nodejs" style="color: inherit; text-decoration: inherit;">redirect<wbr>Rewrite</a>
@@ -1009,8 +928,7 @@ XFF (X-forwarded-for) headers, if they exist.
         <span class="property-type">string</span>
     </dt>
     <dd>{{% md %}}Specifies which of the application HTTP redirects the system rewrites to HTTPS.
-{{% /md %}}</dd>
-    <dt class="property-optional"
+{{% /md %}}</dd><dt class="property-optional"
             title="Optional">
         <span id="requestchunking_nodejs">
 <a href="#requestchunking_nodejs" style="color: inherit; text-decoration: inherit;">request<wbr>Chunking</a>
@@ -1019,8 +937,7 @@ XFF (X-forwarded-for) headers, if they exist.
         <span class="property-type">string</span>
     </dt>
     <dd>{{% md %}}Specifies how to handle chunked and unchunked requests.
-{{% /md %}}</dd>
-    <dt class="property-optional"
+{{% /md %}}</dd><dt class="property-optional"
             title="Optional">
         <span id="responsechunking_nodejs">
 <a href="#responsechunking_nodejs" style="color: inherit; text-decoration: inherit;">response<wbr>Chunking</a>
@@ -1029,8 +946,7 @@ XFF (X-forwarded-for) headers, if they exist.
         <span class="property-type">string</span>
     </dt>
     <dd>{{% md %}}Specifies how to handle chunked and unchunked responses.
-{{% /md %}}</dd>
-    <dt class="property-optional"
+{{% /md %}}</dd><dt class="property-optional"
             title="Optional">
         <span id="responseheaderspermitteds_nodejs">
 <a href="#responseheaderspermitteds_nodejs" style="color: inherit; text-decoration: inherit;">response<wbr>Headers<wbr>Permitteds</a>
@@ -1039,8 +955,7 @@ XFF (X-forwarded-for) headers, if they exist.
         <span class="property-type">string[]</span>
     </dt>
     <dd>{{% md %}}Specifies headers that the BIG-IP system allows in an HTTP response.
-{{% /md %}}</dd>
-    <dt class="property-optional"
+{{% /md %}}</dd><dt class="property-optional"
             title="Optional">
         <span id="serveragentname_nodejs">
 <a href="#serveragentname_nodejs" style="color: inherit; text-decoration: inherit;">server<wbr>Agent<wbr>Name</a>
@@ -1050,8 +965,7 @@ XFF (X-forwarded-for) headers, if they exist.
     </dt>
     <dd>{{% md %}}Specifies the value of the Server header in responses that the BIG-IP itself generates. The default is BigIP. If no
 string is specified, then no Server header will be added to such responses
-{{% /md %}}</dd>
-    <dt class="property-optional"
+{{% /md %}}</dd><dt class="property-optional"
             title="Optional">
         <span id="tmpartition_nodejs">
 <a href="#tmpartition_nodejs" style="color: inherit; text-decoration: inherit;">tm<wbr>Partition</a>
@@ -1060,8 +974,7 @@ string is specified, then no Server header will be added to such responses
         <span class="property-type">string</span>
     </dt>
     <dd>{{% md %}}Displays the administrative partition within which this profile resides.
-{{% /md %}}</dd>
-    <dt class="property-optional"
+{{% /md %}}</dd><dt class="property-optional"
             title="Optional">
         <span id="viahostname_nodejs">
 <a href="#viahostname_nodejs" style="color: inherit; text-decoration: inherit;">via<wbr>Host<wbr>Name</a>
@@ -1070,8 +983,7 @@ string is specified, then no Server header will be added to such responses
         <span class="property-type">string</span>
     </dt>
     <dd>{{% md %}}Specifies the hostname to include into Via header
-{{% /md %}}</dd>
-    <dt class="property-optional"
+{{% /md %}}</dd><dt class="property-optional"
             title="Optional">
         <span id="viarequest_nodejs">
 <a href="#viarequest_nodejs" style="color: inherit; text-decoration: inherit;">via<wbr>Request</a>
@@ -1080,8 +992,7 @@ string is specified, then no Server header will be added to such responses
         <span class="property-type">string</span>
     </dt>
     <dd>{{% md %}}Specifies whether to append, remove, or preserve a Via header in an HTTP request
-{{% /md %}}</dd>
-    <dt class="property-optional"
+{{% /md %}}</dd><dt class="property-optional"
             title="Optional">
         <span id="viaresponse_nodejs">
 <a href="#viaresponse_nodejs" style="color: inherit; text-decoration: inherit;">via<wbr>Response</a>
@@ -1090,8 +1001,7 @@ string is specified, then no Server header will be added to such responses
         <span class="property-type">string</span>
     </dt>
     <dd>{{% md %}}Specifies whether to append, remove, or preserve a Via header in an HTTP request
-{{% /md %}}</dd>
-    <dt class="property-optional"
+{{% /md %}}</dd><dt class="property-optional"
             title="Optional">
         <span id="xffalternativenames_nodejs">
 <a href="#xffalternativenames_nodejs" style="color: inherit; text-decoration: inherit;">xff<wbr>Alternative<wbr>Names</a>
@@ -1100,14 +1010,11 @@ string is specified, then no Server header will be added to such responses
         <span class="property-type">string[]</span>
     </dt>
     <dd>{{% md %}}Specifies alternative XFF headers instead of the default X-forwarded-for header
-{{% /md %}}</dd>
-</dl>
+{{% /md %}}</dd></dl>
 {{% /choosable %}}
 
 {{% choosable language python %}}
-<dl class="resources-properties">
-
-    <dt class="property-required"
+<dl class="resources-properties"><dt class="property-required"
             title="Required">
         <span id="name_python">
 <a href="#name_python" style="color: inherit; text-decoration: inherit;">name</a>
@@ -1116,8 +1023,7 @@ string is specified, then no Server header will be added to such responses
         <span class="property-type">str</span>
     </dt>
     <dd>{{% md %}}Name of the profile_http
-{{% /md %}}</dd>
-    <dt class="property-optional"
+{{% /md %}}</dd><dt class="property-optional"
             title="Optional">
         <span id="accept_xff_python">
 <a href="#accept_xff_python" style="color: inherit; text-decoration: inherit;">accept_<wbr>xff</a>
@@ -1127,8 +1033,7 @@ string is specified, then no Server header will be added to such responses
     </dt>
     <dd>{{% md %}}Enables or disables trusting the client IP address, and statistics from the client IP address, based on the request's
 XFF (X-forwarded-for) headers, if they exist.
-{{% /md %}}</dd>
-    <dt class="property-optional"
+{{% /md %}}</dd><dt class="property-optional"
             title="Optional">
         <span id="app_service_python">
 <a href="#app_service_python" style="color: inherit; text-decoration: inherit;">app_<wbr>service</a>
@@ -1137,8 +1042,7 @@ XFF (X-forwarded-for) headers, if they exist.
         <span class="property-type">str</span>
     </dt>
     <dd>{{% md %}}The application service to which the object belongs.
-{{% /md %}}</dd>
-    <dt class="property-optional"
+{{% /md %}}</dd><dt class="property-optional"
             title="Optional">
         <span id="basic_auth_realm_python">
 <a href="#basic_auth_realm_python" style="color: inherit; text-decoration: inherit;">basic_<wbr>auth_<wbr>realm</a>
@@ -1147,8 +1051,7 @@ XFF (X-forwarded-for) headers, if they exist.
         <span class="property-type">str</span>
     </dt>
     <dd>{{% md %}}Specifies a quoted string for the basic authentication realm. The system sends this string to a client whenever authorization fails. The default value is none
-{{% /md %}}</dd>
-    <dt class="property-optional"
+{{% /md %}}</dd><dt class="property-optional"
             title="Optional">
         <span id="defaults_from_python">
 <a href="#defaults_from_python" style="color: inherit; text-decoration: inherit;">defaults_<wbr>from</a>
@@ -1157,8 +1060,7 @@ XFF (X-forwarded-for) headers, if they exist.
         <span class="property-type">str</span>
     </dt>
     <dd>{{% md %}}Specifies the profile that you want to use as the parent profile. Your new profile inherits all settings and values from the parent profile specified.
-{{% /md %}}</dd>
-    <dt class="property-optional"
+{{% /md %}}</dd><dt class="property-optional"
             title="Optional">
         <span id="description_python">
 <a href="#description_python" style="color: inherit; text-decoration: inherit;">description</a>
@@ -1167,8 +1069,7 @@ XFF (X-forwarded-for) headers, if they exist.
         <span class="property-type">str</span>
     </dt>
     <dd>{{% md %}}User defined description
-{{% /md %}}</dd>
-    <dt class="property-optional"
+{{% /md %}}</dd><dt class="property-optional"
             title="Optional">
         <span id="encrypt_cookie_secret_python">
 <a href="#encrypt_cookie_secret_python" style="color: inherit; text-decoration: inherit;">encrypt_<wbr>cookie_<wbr>secret</a>
@@ -1177,8 +1078,7 @@ XFF (X-forwarded-for) headers, if they exist.
         <span class="property-type">str</span>
     </dt>
     <dd>{{% md %}}Specifies a passphrase for the cookie encryption
-{{% /md %}}</dd>
-    <dt class="property-optional"
+{{% /md %}}</dd><dt class="property-optional"
             title="Optional">
         <span id="encrypt_cookies_python">
 <a href="#encrypt_cookies_python" style="color: inherit; text-decoration: inherit;">encrypt_<wbr>cookies</a>
@@ -1187,8 +1087,7 @@ XFF (X-forwarded-for) headers, if they exist.
         <span class="property-type">Sequence[str]</span>
     </dt>
     <dd>{{% md %}}Encrypts specified cookies that the BIG-IP system sends to a client system
-{{% /md %}}</dd>
-    <dt class="property-optional"
+{{% /md %}}</dd><dt class="property-optional"
             title="Optional">
         <span id="fallback_host_python">
 <a href="#fallback_host_python" style="color: inherit; text-decoration: inherit;">fallback_<wbr>host</a>
@@ -1197,8 +1096,7 @@ XFF (X-forwarded-for) headers, if they exist.
         <span class="property-type">str</span>
     </dt>
     <dd>{{% md %}}Specifies an HTTP fallback host. HTTP redirection allows you to redirect HTTP traffic to another protocol identifier, host name, port number
-{{% /md %}}</dd>
-    <dt class="property-optional"
+{{% /md %}}</dd><dt class="property-optional"
             title="Optional">
         <span id="fallback_status_codes_python">
 <a href="#fallback_status_codes_python" style="color: inherit; text-decoration: inherit;">fallback_<wbr>status_<wbr>codes</a>
@@ -1207,8 +1105,7 @@ XFF (X-forwarded-for) headers, if they exist.
         <span class="property-type">Sequence[str]</span>
     </dt>
     <dd>{{% md %}}Specifies one or more three-digit status codes that can be returned by an HTTP server.
-{{% /md %}}</dd>
-    <dt class="property-optional"
+{{% /md %}}</dd><dt class="property-optional"
             title="Optional">
         <span id="head_erase_python">
 <a href="#head_erase_python" style="color: inherit; text-decoration: inherit;">head_<wbr>erase</a>
@@ -1217,8 +1114,7 @@ XFF (X-forwarded-for) headers, if they exist.
         <span class="property-type">str</span>
     </dt>
     <dd>{{% md %}}Specifies the header string that you want to erase from an HTTP request. You can also specify none
-{{% /md %}}</dd>
-    <dt class="property-optional"
+{{% /md %}}</dd><dt class="property-optional"
             title="Optional">
         <span id="head_insert_python">
 <a href="#head_insert_python" style="color: inherit; text-decoration: inherit;">head_<wbr>insert</a>
@@ -1227,8 +1123,7 @@ XFF (X-forwarded-for) headers, if they exist.
         <span class="property-type">str</span>
     </dt>
     <dd>{{% md %}}Specifies a quoted header string that you want to insert into an HTTP request
-{{% /md %}}</dd>
-    <dt class="property-optional"
+{{% /md %}}</dd><dt class="property-optional"
             title="Optional">
         <span id="insert_xforwarded_for_python">
 <a href="#insert_xforwarded_for_python" style="color: inherit; text-decoration: inherit;">insert_<wbr>xforwarded_<wbr>for</a>
@@ -1237,8 +1132,7 @@ XFF (X-forwarded-for) headers, if they exist.
         <span class="property-type">str</span>
     </dt>
     <dd>{{% md %}}When using connection pooling, which allows clients to make use of other client requests' server-side connections, you can insert the X-Forwarded-For header and specify a client IP address
-{{% /md %}}</dd>
-    <dt class="property-optional"
+{{% /md %}}</dd><dt class="property-optional"
             title="Optional">
         <span id="lws_separator_python">
 <a href="#lws_separator_python" style="color: inherit; text-decoration: inherit;">lws_<wbr>separator</a>
@@ -1247,8 +1141,7 @@ XFF (X-forwarded-for) headers, if they exist.
         <span class="property-type">str</span>
     </dt>
     <dd>{{% md %}}Specifies a quoted header string that you want to insert into an HTTP request. You can also specify none.
-{{% /md %}}</dd>
-    <dt class="property-optional"
+{{% /md %}}</dd><dt class="property-optional"
             title="Optional">
         <span id="oneconnect_transformations_python">
 <a href="#oneconnect_transformations_python" style="color: inherit; text-decoration: inherit;">oneconnect_<wbr>transformations</a>
@@ -1257,8 +1150,7 @@ XFF (X-forwarded-for) headers, if they exist.
         <span class="property-type">str</span>
     </dt>
     <dd>{{% md %}}Enables the system to perform HTTP header transformations for the purpose of  keeping server-side connections open. This feature requires configuration of a OneConnect profile
-{{% /md %}}</dd>
-    <dt class="property-optional"
+{{% /md %}}</dd><dt class="property-optional"
             title="Optional">
         <span id="proxy_type_python">
 <a href="#proxy_type_python" style="color: inherit; text-decoration: inherit;">proxy_<wbr>type</a>
@@ -1267,8 +1159,7 @@ XFF (X-forwarded-for) headers, if they exist.
         <span class="property-type">str</span>
     </dt>
     <dd>{{% md %}}Specifies the type of HTTP proxy.
-{{% /md %}}</dd>
-    <dt class="property-optional"
+{{% /md %}}</dd><dt class="property-optional"
             title="Optional">
         <span id="redirect_rewrite_python">
 <a href="#redirect_rewrite_python" style="color: inherit; text-decoration: inherit;">redirect_<wbr>rewrite</a>
@@ -1277,8 +1168,7 @@ XFF (X-forwarded-for) headers, if they exist.
         <span class="property-type">str</span>
     </dt>
     <dd>{{% md %}}Specifies which of the application HTTP redirects the system rewrites to HTTPS.
-{{% /md %}}</dd>
-    <dt class="property-optional"
+{{% /md %}}</dd><dt class="property-optional"
             title="Optional">
         <span id="request_chunking_python">
 <a href="#request_chunking_python" style="color: inherit; text-decoration: inherit;">request_<wbr>chunking</a>
@@ -1287,8 +1177,7 @@ XFF (X-forwarded-for) headers, if they exist.
         <span class="property-type">str</span>
     </dt>
     <dd>{{% md %}}Specifies how to handle chunked and unchunked requests.
-{{% /md %}}</dd>
-    <dt class="property-optional"
+{{% /md %}}</dd><dt class="property-optional"
             title="Optional">
         <span id="response_chunking_python">
 <a href="#response_chunking_python" style="color: inherit; text-decoration: inherit;">response_<wbr>chunking</a>
@@ -1297,8 +1186,7 @@ XFF (X-forwarded-for) headers, if they exist.
         <span class="property-type">str</span>
     </dt>
     <dd>{{% md %}}Specifies how to handle chunked and unchunked responses.
-{{% /md %}}</dd>
-    <dt class="property-optional"
+{{% /md %}}</dd><dt class="property-optional"
             title="Optional">
         <span id="response_headers_permitteds_python">
 <a href="#response_headers_permitteds_python" style="color: inherit; text-decoration: inherit;">response_<wbr>headers_<wbr>permitteds</a>
@@ -1307,8 +1195,7 @@ XFF (X-forwarded-for) headers, if they exist.
         <span class="property-type">Sequence[str]</span>
     </dt>
     <dd>{{% md %}}Specifies headers that the BIG-IP system allows in an HTTP response.
-{{% /md %}}</dd>
-    <dt class="property-optional"
+{{% /md %}}</dd><dt class="property-optional"
             title="Optional">
         <span id="server_agent_name_python">
 <a href="#server_agent_name_python" style="color: inherit; text-decoration: inherit;">server_<wbr>agent_<wbr>name</a>
@@ -1318,8 +1205,7 @@ XFF (X-forwarded-for) headers, if they exist.
     </dt>
     <dd>{{% md %}}Specifies the value of the Server header in responses that the BIG-IP itself generates. The default is BigIP. If no
 string is specified, then no Server header will be added to such responses
-{{% /md %}}</dd>
-    <dt class="property-optional"
+{{% /md %}}</dd><dt class="property-optional"
             title="Optional">
         <span id="tm_partition_python">
 <a href="#tm_partition_python" style="color: inherit; text-decoration: inherit;">tm_<wbr>partition</a>
@@ -1328,8 +1214,7 @@ string is specified, then no Server header will be added to such responses
         <span class="property-type">str</span>
     </dt>
     <dd>{{% md %}}Displays the administrative partition within which this profile resides.
-{{% /md %}}</dd>
-    <dt class="property-optional"
+{{% /md %}}</dd><dt class="property-optional"
             title="Optional">
         <span id="via_host_name_python">
 <a href="#via_host_name_python" style="color: inherit; text-decoration: inherit;">via_<wbr>host_<wbr>name</a>
@@ -1338,8 +1223,7 @@ string is specified, then no Server header will be added to such responses
         <span class="property-type">str</span>
     </dt>
     <dd>{{% md %}}Specifies the hostname to include into Via header
-{{% /md %}}</dd>
-    <dt class="property-optional"
+{{% /md %}}</dd><dt class="property-optional"
             title="Optional">
         <span id="via_request_python">
 <a href="#via_request_python" style="color: inherit; text-decoration: inherit;">via_<wbr>request</a>
@@ -1348,8 +1232,7 @@ string is specified, then no Server header will be added to such responses
         <span class="property-type">str</span>
     </dt>
     <dd>{{% md %}}Specifies whether to append, remove, or preserve a Via header in an HTTP request
-{{% /md %}}</dd>
-    <dt class="property-optional"
+{{% /md %}}</dd><dt class="property-optional"
             title="Optional">
         <span id="via_response_python">
 <a href="#via_response_python" style="color: inherit; text-decoration: inherit;">via_<wbr>response</a>
@@ -1358,8 +1241,7 @@ string is specified, then no Server header will be added to such responses
         <span class="property-type">str</span>
     </dt>
     <dd>{{% md %}}Specifies whether to append, remove, or preserve a Via header in an HTTP request
-{{% /md %}}</dd>
-    <dt class="property-optional"
+{{% /md %}}</dd><dt class="property-optional"
             title="Optional">
         <span id="xff_alternative_names_python">
 <a href="#xff_alternative_names_python" style="color: inherit; text-decoration: inherit;">xff_<wbr>alternative_<wbr>names</a>
@@ -1368,8 +1250,7 @@ string is specified, then no Server header will be added to such responses
         <span class="property-type">Sequence[str]</span>
     </dt>
     <dd>{{% md %}}Specifies alternative XFF headers instead of the default X-forwarded-for header
-{{% /md %}}</dd>
-</dl>
+{{% /md %}}</dd></dl>
 {{% /choosable %}}
 
 
@@ -1380,9 +1261,7 @@ All [input](#inputs) properties are implicitly available as output properties. A
 
 
 {{% choosable language csharp %}}
-<dl class="resources-properties">
-
-    <dt class="property-"
+<dl class="resources-properties"><dt class="property-"
             title="">
         <span id="id_csharp">
 <a href="#id_csharp" style="color: inherit; text-decoration: inherit;">Id</a>
@@ -1390,14 +1269,11 @@ All [input](#inputs) properties are implicitly available as output properties. A
         <span class="property-indicator"></span>
         <span class="property-type">string</span>
     </dt>
-    <dd>{{% md %}}The provider-assigned unique ID for this managed resource.{{% /md %}}</dd>
-</dl>
+    <dd>{{% md %}}The provider-assigned unique ID for this managed resource.{{% /md %}}</dd></dl>
 {{% /choosable %}}
 
 {{% choosable language go %}}
-<dl class="resources-properties">
-
-    <dt class="property-"
+<dl class="resources-properties"><dt class="property-"
             title="">
         <span id="id_go">
 <a href="#id_go" style="color: inherit; text-decoration: inherit;">Id</a>
@@ -1405,14 +1281,11 @@ All [input](#inputs) properties are implicitly available as output properties. A
         <span class="property-indicator"></span>
         <span class="property-type">string</span>
     </dt>
-    <dd>{{% md %}}The provider-assigned unique ID for this managed resource.{{% /md %}}</dd>
-</dl>
+    <dd>{{% md %}}The provider-assigned unique ID for this managed resource.{{% /md %}}</dd></dl>
 {{% /choosable %}}
 
 {{% choosable language nodejs %}}
-<dl class="resources-properties">
-
-    <dt class="property-"
+<dl class="resources-properties"><dt class="property-"
             title="">
         <span id="id_nodejs">
 <a href="#id_nodejs" style="color: inherit; text-decoration: inherit;">id</a>
@@ -1420,14 +1293,11 @@ All [input](#inputs) properties are implicitly available as output properties. A
         <span class="property-indicator"></span>
         <span class="property-type">string</span>
     </dt>
-    <dd>{{% md %}}The provider-assigned unique ID for this managed resource.{{% /md %}}</dd>
-</dl>
+    <dd>{{% md %}}The provider-assigned unique ID for this managed resource.{{% /md %}}</dd></dl>
 {{% /choosable %}}
 
 {{% choosable language python %}}
-<dl class="resources-properties">
-
-    <dt class="property-"
+<dl class="resources-properties"><dt class="property-"
             title="">
         <span id="id_python">
 <a href="#id_python" style="color: inherit; text-decoration: inherit;">id</a>
@@ -1435,8 +1305,7 @@ All [input](#inputs) properties are implicitly available as output properties. A
         <span class="property-indicator"></span>
         <span class="property-type">str</span>
     </dt>
-    <dd>{{% md %}}The provider-assigned unique ID for this managed resource.{{% /md %}}</dd>
-</dl>
+    <dd>{{% md %}}The provider-assigned unique ID for this managed resource.{{% /md %}}</dd></dl>
 {{% /choosable %}}
 
 
@@ -1563,9 +1432,7 @@ The following state arguments are supported:
 
 
 {{% choosable language csharp %}}
-<dl class="resources-properties">
-
-    <dt class="property-optional"
+<dl class="resources-properties"><dt class="property-optional"
             title="Optional">
         <span id="state_acceptxff_csharp">
 <a href="#state_acceptxff_csharp" style="color: inherit; text-decoration: inherit;">Accept<wbr>Xff</a>
@@ -1575,8 +1442,7 @@ The following state arguments are supported:
     </dt>
     <dd>{{% md %}}Enables or disables trusting the client IP address, and statistics from the client IP address, based on the request's
 XFF (X-forwarded-for) headers, if they exist.
-{{% /md %}}</dd>
-    <dt class="property-optional"
+{{% /md %}}</dd><dt class="property-optional"
             title="Optional">
         <span id="state_appservice_csharp">
 <a href="#state_appservice_csharp" style="color: inherit; text-decoration: inherit;">App<wbr>Service</a>
@@ -1585,8 +1451,7 @@ XFF (X-forwarded-for) headers, if they exist.
         <span class="property-type">string</span>
     </dt>
     <dd>{{% md %}}The application service to which the object belongs.
-{{% /md %}}</dd>
-    <dt class="property-optional"
+{{% /md %}}</dd><dt class="property-optional"
             title="Optional">
         <span id="state_basicauthrealm_csharp">
 <a href="#state_basicauthrealm_csharp" style="color: inherit; text-decoration: inherit;">Basic<wbr>Auth<wbr>Realm</a>
@@ -1595,8 +1460,7 @@ XFF (X-forwarded-for) headers, if they exist.
         <span class="property-type">string</span>
     </dt>
     <dd>{{% md %}}Specifies a quoted string for the basic authentication realm. The system sends this string to a client whenever authorization fails. The default value is none
-{{% /md %}}</dd>
-    <dt class="property-optional"
+{{% /md %}}</dd><dt class="property-optional"
             title="Optional">
         <span id="state_defaultsfrom_csharp">
 <a href="#state_defaultsfrom_csharp" style="color: inherit; text-decoration: inherit;">Defaults<wbr>From</a>
@@ -1605,8 +1469,7 @@ XFF (X-forwarded-for) headers, if they exist.
         <span class="property-type">string</span>
     </dt>
     <dd>{{% md %}}Specifies the profile that you want to use as the parent profile. Your new profile inherits all settings and values from the parent profile specified.
-{{% /md %}}</dd>
-    <dt class="property-optional"
+{{% /md %}}</dd><dt class="property-optional"
             title="Optional">
         <span id="state_description_csharp">
 <a href="#state_description_csharp" style="color: inherit; text-decoration: inherit;">Description</a>
@@ -1615,8 +1478,7 @@ XFF (X-forwarded-for) headers, if they exist.
         <span class="property-type">string</span>
     </dt>
     <dd>{{% md %}}User defined description
-{{% /md %}}</dd>
-    <dt class="property-optional"
+{{% /md %}}</dd><dt class="property-optional"
             title="Optional">
         <span id="state_encryptcookiesecret_csharp">
 <a href="#state_encryptcookiesecret_csharp" style="color: inherit; text-decoration: inherit;">Encrypt<wbr>Cookie<wbr>Secret</a>
@@ -1625,8 +1487,7 @@ XFF (X-forwarded-for) headers, if they exist.
         <span class="property-type">string</span>
     </dt>
     <dd>{{% md %}}Specifies a passphrase for the cookie encryption
-{{% /md %}}</dd>
-    <dt class="property-optional"
+{{% /md %}}</dd><dt class="property-optional"
             title="Optional">
         <span id="state_encryptcookies_csharp">
 <a href="#state_encryptcookies_csharp" style="color: inherit; text-decoration: inherit;">Encrypt<wbr>Cookies</a>
@@ -1635,8 +1496,7 @@ XFF (X-forwarded-for) headers, if they exist.
         <span class="property-type">List&lt;string&gt;</span>
     </dt>
     <dd>{{% md %}}Encrypts specified cookies that the BIG-IP system sends to a client system
-{{% /md %}}</dd>
-    <dt class="property-optional"
+{{% /md %}}</dd><dt class="property-optional"
             title="Optional">
         <span id="state_fallbackhost_csharp">
 <a href="#state_fallbackhost_csharp" style="color: inherit; text-decoration: inherit;">Fallback<wbr>Host</a>
@@ -1645,8 +1505,7 @@ XFF (X-forwarded-for) headers, if they exist.
         <span class="property-type">string</span>
     </dt>
     <dd>{{% md %}}Specifies an HTTP fallback host. HTTP redirection allows you to redirect HTTP traffic to another protocol identifier, host name, port number
-{{% /md %}}</dd>
-    <dt class="property-optional"
+{{% /md %}}</dd><dt class="property-optional"
             title="Optional">
         <span id="state_fallbackstatuscodes_csharp">
 <a href="#state_fallbackstatuscodes_csharp" style="color: inherit; text-decoration: inherit;">Fallback<wbr>Status<wbr>Codes</a>
@@ -1655,8 +1514,7 @@ XFF (X-forwarded-for) headers, if they exist.
         <span class="property-type">List&lt;string&gt;</span>
     </dt>
     <dd>{{% md %}}Specifies one or more three-digit status codes that can be returned by an HTTP server.
-{{% /md %}}</dd>
-    <dt class="property-optional"
+{{% /md %}}</dd><dt class="property-optional"
             title="Optional">
         <span id="state_headerase_csharp">
 <a href="#state_headerase_csharp" style="color: inherit; text-decoration: inherit;">Head<wbr>Erase</a>
@@ -1665,8 +1523,7 @@ XFF (X-forwarded-for) headers, if they exist.
         <span class="property-type">string</span>
     </dt>
     <dd>{{% md %}}Specifies the header string that you want to erase from an HTTP request. You can also specify none
-{{% /md %}}</dd>
-    <dt class="property-optional"
+{{% /md %}}</dd><dt class="property-optional"
             title="Optional">
         <span id="state_headinsert_csharp">
 <a href="#state_headinsert_csharp" style="color: inherit; text-decoration: inherit;">Head<wbr>Insert</a>
@@ -1675,8 +1532,7 @@ XFF (X-forwarded-for) headers, if they exist.
         <span class="property-type">string</span>
     </dt>
     <dd>{{% md %}}Specifies a quoted header string that you want to insert into an HTTP request
-{{% /md %}}</dd>
-    <dt class="property-optional"
+{{% /md %}}</dd><dt class="property-optional"
             title="Optional">
         <span id="state_insertxforwardedfor_csharp">
 <a href="#state_insertxforwardedfor_csharp" style="color: inherit; text-decoration: inherit;">Insert<wbr>Xforwarded<wbr>For</a>
@@ -1685,8 +1541,7 @@ XFF (X-forwarded-for) headers, if they exist.
         <span class="property-type">string</span>
     </dt>
     <dd>{{% md %}}When using connection pooling, which allows clients to make use of other client requests' server-side connections, you can insert the X-Forwarded-For header and specify a client IP address
-{{% /md %}}</dd>
-    <dt class="property-optional"
+{{% /md %}}</dd><dt class="property-optional"
             title="Optional">
         <span id="state_lwsseparator_csharp">
 <a href="#state_lwsseparator_csharp" style="color: inherit; text-decoration: inherit;">Lws<wbr>Separator</a>
@@ -1695,8 +1550,7 @@ XFF (X-forwarded-for) headers, if they exist.
         <span class="property-type">string</span>
     </dt>
     <dd>{{% md %}}Specifies a quoted header string that you want to insert into an HTTP request. You can also specify none.
-{{% /md %}}</dd>
-    <dt class="property-optional"
+{{% /md %}}</dd><dt class="property-optional"
             title="Optional">
         <span id="state_name_csharp">
 <a href="#state_name_csharp" style="color: inherit; text-decoration: inherit;">Name</a>
@@ -1705,8 +1559,7 @@ XFF (X-forwarded-for) headers, if they exist.
         <span class="property-type">string</span>
     </dt>
     <dd>{{% md %}}Name of the profile_http
-{{% /md %}}</dd>
-    <dt class="property-optional"
+{{% /md %}}</dd><dt class="property-optional"
             title="Optional">
         <span id="state_oneconnecttransformations_csharp">
 <a href="#state_oneconnecttransformations_csharp" style="color: inherit; text-decoration: inherit;">Oneconnect<wbr>Transformations</a>
@@ -1715,8 +1568,7 @@ XFF (X-forwarded-for) headers, if they exist.
         <span class="property-type">string</span>
     </dt>
     <dd>{{% md %}}Enables the system to perform HTTP header transformations for the purpose of  keeping server-side connections open. This feature requires configuration of a OneConnect profile
-{{% /md %}}</dd>
-    <dt class="property-optional"
+{{% /md %}}</dd><dt class="property-optional"
             title="Optional">
         <span id="state_proxytype_csharp">
 <a href="#state_proxytype_csharp" style="color: inherit; text-decoration: inherit;">Proxy<wbr>Type</a>
@@ -1725,8 +1577,7 @@ XFF (X-forwarded-for) headers, if they exist.
         <span class="property-type">string</span>
     </dt>
     <dd>{{% md %}}Specifies the type of HTTP proxy.
-{{% /md %}}</dd>
-    <dt class="property-optional"
+{{% /md %}}</dd><dt class="property-optional"
             title="Optional">
         <span id="state_redirectrewrite_csharp">
 <a href="#state_redirectrewrite_csharp" style="color: inherit; text-decoration: inherit;">Redirect<wbr>Rewrite</a>
@@ -1735,8 +1586,7 @@ XFF (X-forwarded-for) headers, if they exist.
         <span class="property-type">string</span>
     </dt>
     <dd>{{% md %}}Specifies which of the application HTTP redirects the system rewrites to HTTPS.
-{{% /md %}}</dd>
-    <dt class="property-optional"
+{{% /md %}}</dd><dt class="property-optional"
             title="Optional">
         <span id="state_requestchunking_csharp">
 <a href="#state_requestchunking_csharp" style="color: inherit; text-decoration: inherit;">Request<wbr>Chunking</a>
@@ -1745,8 +1595,7 @@ XFF (X-forwarded-for) headers, if they exist.
         <span class="property-type">string</span>
     </dt>
     <dd>{{% md %}}Specifies how to handle chunked and unchunked requests.
-{{% /md %}}</dd>
-    <dt class="property-optional"
+{{% /md %}}</dd><dt class="property-optional"
             title="Optional">
         <span id="state_responsechunking_csharp">
 <a href="#state_responsechunking_csharp" style="color: inherit; text-decoration: inherit;">Response<wbr>Chunking</a>
@@ -1755,8 +1604,7 @@ XFF (X-forwarded-for) headers, if they exist.
         <span class="property-type">string</span>
     </dt>
     <dd>{{% md %}}Specifies how to handle chunked and unchunked responses.
-{{% /md %}}</dd>
-    <dt class="property-optional"
+{{% /md %}}</dd><dt class="property-optional"
             title="Optional">
         <span id="state_responseheaderspermitteds_csharp">
 <a href="#state_responseheaderspermitteds_csharp" style="color: inherit; text-decoration: inherit;">Response<wbr>Headers<wbr>Permitteds</a>
@@ -1765,8 +1613,7 @@ XFF (X-forwarded-for) headers, if they exist.
         <span class="property-type">List&lt;string&gt;</span>
     </dt>
     <dd>{{% md %}}Specifies headers that the BIG-IP system allows in an HTTP response.
-{{% /md %}}</dd>
-    <dt class="property-optional"
+{{% /md %}}</dd><dt class="property-optional"
             title="Optional">
         <span id="state_serveragentname_csharp">
 <a href="#state_serveragentname_csharp" style="color: inherit; text-decoration: inherit;">Server<wbr>Agent<wbr>Name</a>
@@ -1776,8 +1623,7 @@ XFF (X-forwarded-for) headers, if they exist.
     </dt>
     <dd>{{% md %}}Specifies the value of the Server header in responses that the BIG-IP itself generates. The default is BigIP. If no
 string is specified, then no Server header will be added to such responses
-{{% /md %}}</dd>
-    <dt class="property-optional"
+{{% /md %}}</dd><dt class="property-optional"
             title="Optional">
         <span id="state_tmpartition_csharp">
 <a href="#state_tmpartition_csharp" style="color: inherit; text-decoration: inherit;">Tm<wbr>Partition</a>
@@ -1786,8 +1632,7 @@ string is specified, then no Server header will be added to such responses
         <span class="property-type">string</span>
     </dt>
     <dd>{{% md %}}Displays the administrative partition within which this profile resides.
-{{% /md %}}</dd>
-    <dt class="property-optional"
+{{% /md %}}</dd><dt class="property-optional"
             title="Optional">
         <span id="state_viahostname_csharp">
 <a href="#state_viahostname_csharp" style="color: inherit; text-decoration: inherit;">Via<wbr>Host<wbr>Name</a>
@@ -1796,8 +1641,7 @@ string is specified, then no Server header will be added to such responses
         <span class="property-type">string</span>
     </dt>
     <dd>{{% md %}}Specifies the hostname to include into Via header
-{{% /md %}}</dd>
-    <dt class="property-optional"
+{{% /md %}}</dd><dt class="property-optional"
             title="Optional">
         <span id="state_viarequest_csharp">
 <a href="#state_viarequest_csharp" style="color: inherit; text-decoration: inherit;">Via<wbr>Request</a>
@@ -1806,8 +1650,7 @@ string is specified, then no Server header will be added to such responses
         <span class="property-type">string</span>
     </dt>
     <dd>{{% md %}}Specifies whether to append, remove, or preserve a Via header in an HTTP request
-{{% /md %}}</dd>
-    <dt class="property-optional"
+{{% /md %}}</dd><dt class="property-optional"
             title="Optional">
         <span id="state_viaresponse_csharp">
 <a href="#state_viaresponse_csharp" style="color: inherit; text-decoration: inherit;">Via<wbr>Response</a>
@@ -1816,8 +1659,7 @@ string is specified, then no Server header will be added to such responses
         <span class="property-type">string</span>
     </dt>
     <dd>{{% md %}}Specifies whether to append, remove, or preserve a Via header in an HTTP request
-{{% /md %}}</dd>
-    <dt class="property-optional"
+{{% /md %}}</dd><dt class="property-optional"
             title="Optional">
         <span id="state_xffalternativenames_csharp">
 <a href="#state_xffalternativenames_csharp" style="color: inherit; text-decoration: inherit;">Xff<wbr>Alternative<wbr>Names</a>
@@ -1826,14 +1668,11 @@ string is specified, then no Server header will be added to such responses
         <span class="property-type">List&lt;string&gt;</span>
     </dt>
     <dd>{{% md %}}Specifies alternative XFF headers instead of the default X-forwarded-for header
-{{% /md %}}</dd>
-</dl>
+{{% /md %}}</dd></dl>
 {{% /choosable %}}
 
 {{% choosable language go %}}
-<dl class="resources-properties">
-
-    <dt class="property-optional"
+<dl class="resources-properties"><dt class="property-optional"
             title="Optional">
         <span id="state_acceptxff_go">
 <a href="#state_acceptxff_go" style="color: inherit; text-decoration: inherit;">Accept<wbr>Xff</a>
@@ -1843,8 +1682,7 @@ string is specified, then no Server header will be added to such responses
     </dt>
     <dd>{{% md %}}Enables or disables trusting the client IP address, and statistics from the client IP address, based on the request's
 XFF (X-forwarded-for) headers, if they exist.
-{{% /md %}}</dd>
-    <dt class="property-optional"
+{{% /md %}}</dd><dt class="property-optional"
             title="Optional">
         <span id="state_appservice_go">
 <a href="#state_appservice_go" style="color: inherit; text-decoration: inherit;">App<wbr>Service</a>
@@ -1853,8 +1691,7 @@ XFF (X-forwarded-for) headers, if they exist.
         <span class="property-type">string</span>
     </dt>
     <dd>{{% md %}}The application service to which the object belongs.
-{{% /md %}}</dd>
-    <dt class="property-optional"
+{{% /md %}}</dd><dt class="property-optional"
             title="Optional">
         <span id="state_basicauthrealm_go">
 <a href="#state_basicauthrealm_go" style="color: inherit; text-decoration: inherit;">Basic<wbr>Auth<wbr>Realm</a>
@@ -1863,8 +1700,7 @@ XFF (X-forwarded-for) headers, if they exist.
         <span class="property-type">string</span>
     </dt>
     <dd>{{% md %}}Specifies a quoted string for the basic authentication realm. The system sends this string to a client whenever authorization fails. The default value is none
-{{% /md %}}</dd>
-    <dt class="property-optional"
+{{% /md %}}</dd><dt class="property-optional"
             title="Optional">
         <span id="state_defaultsfrom_go">
 <a href="#state_defaultsfrom_go" style="color: inherit; text-decoration: inherit;">Defaults<wbr>From</a>
@@ -1873,8 +1709,7 @@ XFF (X-forwarded-for) headers, if they exist.
         <span class="property-type">string</span>
     </dt>
     <dd>{{% md %}}Specifies the profile that you want to use as the parent profile. Your new profile inherits all settings and values from the parent profile specified.
-{{% /md %}}</dd>
-    <dt class="property-optional"
+{{% /md %}}</dd><dt class="property-optional"
             title="Optional">
         <span id="state_description_go">
 <a href="#state_description_go" style="color: inherit; text-decoration: inherit;">Description</a>
@@ -1883,8 +1718,7 @@ XFF (X-forwarded-for) headers, if they exist.
         <span class="property-type">string</span>
     </dt>
     <dd>{{% md %}}User defined description
-{{% /md %}}</dd>
-    <dt class="property-optional"
+{{% /md %}}</dd><dt class="property-optional"
             title="Optional">
         <span id="state_encryptcookiesecret_go">
 <a href="#state_encryptcookiesecret_go" style="color: inherit; text-decoration: inherit;">Encrypt<wbr>Cookie<wbr>Secret</a>
@@ -1893,8 +1727,7 @@ XFF (X-forwarded-for) headers, if they exist.
         <span class="property-type">string</span>
     </dt>
     <dd>{{% md %}}Specifies a passphrase for the cookie encryption
-{{% /md %}}</dd>
-    <dt class="property-optional"
+{{% /md %}}</dd><dt class="property-optional"
             title="Optional">
         <span id="state_encryptcookies_go">
 <a href="#state_encryptcookies_go" style="color: inherit; text-decoration: inherit;">Encrypt<wbr>Cookies</a>
@@ -1903,8 +1736,7 @@ XFF (X-forwarded-for) headers, if they exist.
         <span class="property-type">[]string</span>
     </dt>
     <dd>{{% md %}}Encrypts specified cookies that the BIG-IP system sends to a client system
-{{% /md %}}</dd>
-    <dt class="property-optional"
+{{% /md %}}</dd><dt class="property-optional"
             title="Optional">
         <span id="state_fallbackhost_go">
 <a href="#state_fallbackhost_go" style="color: inherit; text-decoration: inherit;">Fallback<wbr>Host</a>
@@ -1913,8 +1745,7 @@ XFF (X-forwarded-for) headers, if they exist.
         <span class="property-type">string</span>
     </dt>
     <dd>{{% md %}}Specifies an HTTP fallback host. HTTP redirection allows you to redirect HTTP traffic to another protocol identifier, host name, port number
-{{% /md %}}</dd>
-    <dt class="property-optional"
+{{% /md %}}</dd><dt class="property-optional"
             title="Optional">
         <span id="state_fallbackstatuscodes_go">
 <a href="#state_fallbackstatuscodes_go" style="color: inherit; text-decoration: inherit;">Fallback<wbr>Status<wbr>Codes</a>
@@ -1923,8 +1754,7 @@ XFF (X-forwarded-for) headers, if they exist.
         <span class="property-type">[]string</span>
     </dt>
     <dd>{{% md %}}Specifies one or more three-digit status codes that can be returned by an HTTP server.
-{{% /md %}}</dd>
-    <dt class="property-optional"
+{{% /md %}}</dd><dt class="property-optional"
             title="Optional">
         <span id="state_headerase_go">
 <a href="#state_headerase_go" style="color: inherit; text-decoration: inherit;">Head<wbr>Erase</a>
@@ -1933,8 +1763,7 @@ XFF (X-forwarded-for) headers, if they exist.
         <span class="property-type">string</span>
     </dt>
     <dd>{{% md %}}Specifies the header string that you want to erase from an HTTP request. You can also specify none
-{{% /md %}}</dd>
-    <dt class="property-optional"
+{{% /md %}}</dd><dt class="property-optional"
             title="Optional">
         <span id="state_headinsert_go">
 <a href="#state_headinsert_go" style="color: inherit; text-decoration: inherit;">Head<wbr>Insert</a>
@@ -1943,8 +1772,7 @@ XFF (X-forwarded-for) headers, if they exist.
         <span class="property-type">string</span>
     </dt>
     <dd>{{% md %}}Specifies a quoted header string that you want to insert into an HTTP request
-{{% /md %}}</dd>
-    <dt class="property-optional"
+{{% /md %}}</dd><dt class="property-optional"
             title="Optional">
         <span id="state_insertxforwardedfor_go">
 <a href="#state_insertxforwardedfor_go" style="color: inherit; text-decoration: inherit;">Insert<wbr>Xforwarded<wbr>For</a>
@@ -1953,8 +1781,7 @@ XFF (X-forwarded-for) headers, if they exist.
         <span class="property-type">string</span>
     </dt>
     <dd>{{% md %}}When using connection pooling, which allows clients to make use of other client requests' server-side connections, you can insert the X-Forwarded-For header and specify a client IP address
-{{% /md %}}</dd>
-    <dt class="property-optional"
+{{% /md %}}</dd><dt class="property-optional"
             title="Optional">
         <span id="state_lwsseparator_go">
 <a href="#state_lwsseparator_go" style="color: inherit; text-decoration: inherit;">Lws<wbr>Separator</a>
@@ -1963,8 +1790,7 @@ XFF (X-forwarded-for) headers, if they exist.
         <span class="property-type">string</span>
     </dt>
     <dd>{{% md %}}Specifies a quoted header string that you want to insert into an HTTP request. You can also specify none.
-{{% /md %}}</dd>
-    <dt class="property-optional"
+{{% /md %}}</dd><dt class="property-optional"
             title="Optional">
         <span id="state_name_go">
 <a href="#state_name_go" style="color: inherit; text-decoration: inherit;">Name</a>
@@ -1973,8 +1799,7 @@ XFF (X-forwarded-for) headers, if they exist.
         <span class="property-type">string</span>
     </dt>
     <dd>{{% md %}}Name of the profile_http
-{{% /md %}}</dd>
-    <dt class="property-optional"
+{{% /md %}}</dd><dt class="property-optional"
             title="Optional">
         <span id="state_oneconnecttransformations_go">
 <a href="#state_oneconnecttransformations_go" style="color: inherit; text-decoration: inherit;">Oneconnect<wbr>Transformations</a>
@@ -1983,8 +1808,7 @@ XFF (X-forwarded-for) headers, if they exist.
         <span class="property-type">string</span>
     </dt>
     <dd>{{% md %}}Enables the system to perform HTTP header transformations for the purpose of  keeping server-side connections open. This feature requires configuration of a OneConnect profile
-{{% /md %}}</dd>
-    <dt class="property-optional"
+{{% /md %}}</dd><dt class="property-optional"
             title="Optional">
         <span id="state_proxytype_go">
 <a href="#state_proxytype_go" style="color: inherit; text-decoration: inherit;">Proxy<wbr>Type</a>
@@ -1993,8 +1817,7 @@ XFF (X-forwarded-for) headers, if they exist.
         <span class="property-type">string</span>
     </dt>
     <dd>{{% md %}}Specifies the type of HTTP proxy.
-{{% /md %}}</dd>
-    <dt class="property-optional"
+{{% /md %}}</dd><dt class="property-optional"
             title="Optional">
         <span id="state_redirectrewrite_go">
 <a href="#state_redirectrewrite_go" style="color: inherit; text-decoration: inherit;">Redirect<wbr>Rewrite</a>
@@ -2003,8 +1826,7 @@ XFF (X-forwarded-for) headers, if they exist.
         <span class="property-type">string</span>
     </dt>
     <dd>{{% md %}}Specifies which of the application HTTP redirects the system rewrites to HTTPS.
-{{% /md %}}</dd>
-    <dt class="property-optional"
+{{% /md %}}</dd><dt class="property-optional"
             title="Optional">
         <span id="state_requestchunking_go">
 <a href="#state_requestchunking_go" style="color: inherit; text-decoration: inherit;">Request<wbr>Chunking</a>
@@ -2013,8 +1835,7 @@ XFF (X-forwarded-for) headers, if they exist.
         <span class="property-type">string</span>
     </dt>
     <dd>{{% md %}}Specifies how to handle chunked and unchunked requests.
-{{% /md %}}</dd>
-    <dt class="property-optional"
+{{% /md %}}</dd><dt class="property-optional"
             title="Optional">
         <span id="state_responsechunking_go">
 <a href="#state_responsechunking_go" style="color: inherit; text-decoration: inherit;">Response<wbr>Chunking</a>
@@ -2023,8 +1844,7 @@ XFF (X-forwarded-for) headers, if they exist.
         <span class="property-type">string</span>
     </dt>
     <dd>{{% md %}}Specifies how to handle chunked and unchunked responses.
-{{% /md %}}</dd>
-    <dt class="property-optional"
+{{% /md %}}</dd><dt class="property-optional"
             title="Optional">
         <span id="state_responseheaderspermitteds_go">
 <a href="#state_responseheaderspermitteds_go" style="color: inherit; text-decoration: inherit;">Response<wbr>Headers<wbr>Permitteds</a>
@@ -2033,8 +1853,7 @@ XFF (X-forwarded-for) headers, if they exist.
         <span class="property-type">[]string</span>
     </dt>
     <dd>{{% md %}}Specifies headers that the BIG-IP system allows in an HTTP response.
-{{% /md %}}</dd>
-    <dt class="property-optional"
+{{% /md %}}</dd><dt class="property-optional"
             title="Optional">
         <span id="state_serveragentname_go">
 <a href="#state_serveragentname_go" style="color: inherit; text-decoration: inherit;">Server<wbr>Agent<wbr>Name</a>
@@ -2044,8 +1863,7 @@ XFF (X-forwarded-for) headers, if they exist.
     </dt>
     <dd>{{% md %}}Specifies the value of the Server header in responses that the BIG-IP itself generates. The default is BigIP. If no
 string is specified, then no Server header will be added to such responses
-{{% /md %}}</dd>
-    <dt class="property-optional"
+{{% /md %}}</dd><dt class="property-optional"
             title="Optional">
         <span id="state_tmpartition_go">
 <a href="#state_tmpartition_go" style="color: inherit; text-decoration: inherit;">Tm<wbr>Partition</a>
@@ -2054,8 +1872,7 @@ string is specified, then no Server header will be added to such responses
         <span class="property-type">string</span>
     </dt>
     <dd>{{% md %}}Displays the administrative partition within which this profile resides.
-{{% /md %}}</dd>
-    <dt class="property-optional"
+{{% /md %}}</dd><dt class="property-optional"
             title="Optional">
         <span id="state_viahostname_go">
 <a href="#state_viahostname_go" style="color: inherit; text-decoration: inherit;">Via<wbr>Host<wbr>Name</a>
@@ -2064,8 +1881,7 @@ string is specified, then no Server header will be added to such responses
         <span class="property-type">string</span>
     </dt>
     <dd>{{% md %}}Specifies the hostname to include into Via header
-{{% /md %}}</dd>
-    <dt class="property-optional"
+{{% /md %}}</dd><dt class="property-optional"
             title="Optional">
         <span id="state_viarequest_go">
 <a href="#state_viarequest_go" style="color: inherit; text-decoration: inherit;">Via<wbr>Request</a>
@@ -2074,8 +1890,7 @@ string is specified, then no Server header will be added to such responses
         <span class="property-type">string</span>
     </dt>
     <dd>{{% md %}}Specifies whether to append, remove, or preserve a Via header in an HTTP request
-{{% /md %}}</dd>
-    <dt class="property-optional"
+{{% /md %}}</dd><dt class="property-optional"
             title="Optional">
         <span id="state_viaresponse_go">
 <a href="#state_viaresponse_go" style="color: inherit; text-decoration: inherit;">Via<wbr>Response</a>
@@ -2084,8 +1899,7 @@ string is specified, then no Server header will be added to such responses
         <span class="property-type">string</span>
     </dt>
     <dd>{{% md %}}Specifies whether to append, remove, or preserve a Via header in an HTTP request
-{{% /md %}}</dd>
-    <dt class="property-optional"
+{{% /md %}}</dd><dt class="property-optional"
             title="Optional">
         <span id="state_xffalternativenames_go">
 <a href="#state_xffalternativenames_go" style="color: inherit; text-decoration: inherit;">Xff<wbr>Alternative<wbr>Names</a>
@@ -2094,14 +1908,11 @@ string is specified, then no Server header will be added to such responses
         <span class="property-type">[]string</span>
     </dt>
     <dd>{{% md %}}Specifies alternative XFF headers instead of the default X-forwarded-for header
-{{% /md %}}</dd>
-</dl>
+{{% /md %}}</dd></dl>
 {{% /choosable %}}
 
 {{% choosable language nodejs %}}
-<dl class="resources-properties">
-
-    <dt class="property-optional"
+<dl class="resources-properties"><dt class="property-optional"
             title="Optional">
         <span id="state_acceptxff_nodejs">
 <a href="#state_acceptxff_nodejs" style="color: inherit; text-decoration: inherit;">accept<wbr>Xff</a>
@@ -2111,8 +1922,7 @@ string is specified, then no Server header will be added to such responses
     </dt>
     <dd>{{% md %}}Enables or disables trusting the client IP address, and statistics from the client IP address, based on the request's
 XFF (X-forwarded-for) headers, if they exist.
-{{% /md %}}</dd>
-    <dt class="property-optional"
+{{% /md %}}</dd><dt class="property-optional"
             title="Optional">
         <span id="state_appservice_nodejs">
 <a href="#state_appservice_nodejs" style="color: inherit; text-decoration: inherit;">app<wbr>Service</a>
@@ -2121,8 +1931,7 @@ XFF (X-forwarded-for) headers, if they exist.
         <span class="property-type">string</span>
     </dt>
     <dd>{{% md %}}The application service to which the object belongs.
-{{% /md %}}</dd>
-    <dt class="property-optional"
+{{% /md %}}</dd><dt class="property-optional"
             title="Optional">
         <span id="state_basicauthrealm_nodejs">
 <a href="#state_basicauthrealm_nodejs" style="color: inherit; text-decoration: inherit;">basic<wbr>Auth<wbr>Realm</a>
@@ -2131,8 +1940,7 @@ XFF (X-forwarded-for) headers, if they exist.
         <span class="property-type">string</span>
     </dt>
     <dd>{{% md %}}Specifies a quoted string for the basic authentication realm. The system sends this string to a client whenever authorization fails. The default value is none
-{{% /md %}}</dd>
-    <dt class="property-optional"
+{{% /md %}}</dd><dt class="property-optional"
             title="Optional">
         <span id="state_defaultsfrom_nodejs">
 <a href="#state_defaultsfrom_nodejs" style="color: inherit; text-decoration: inherit;">defaults<wbr>From</a>
@@ -2141,8 +1949,7 @@ XFF (X-forwarded-for) headers, if they exist.
         <span class="property-type">string</span>
     </dt>
     <dd>{{% md %}}Specifies the profile that you want to use as the parent profile. Your new profile inherits all settings and values from the parent profile specified.
-{{% /md %}}</dd>
-    <dt class="property-optional"
+{{% /md %}}</dd><dt class="property-optional"
             title="Optional">
         <span id="state_description_nodejs">
 <a href="#state_description_nodejs" style="color: inherit; text-decoration: inherit;">description</a>
@@ -2151,8 +1958,7 @@ XFF (X-forwarded-for) headers, if they exist.
         <span class="property-type">string</span>
     </dt>
     <dd>{{% md %}}User defined description
-{{% /md %}}</dd>
-    <dt class="property-optional"
+{{% /md %}}</dd><dt class="property-optional"
             title="Optional">
         <span id="state_encryptcookiesecret_nodejs">
 <a href="#state_encryptcookiesecret_nodejs" style="color: inherit; text-decoration: inherit;">encrypt<wbr>Cookie<wbr>Secret</a>
@@ -2161,8 +1967,7 @@ XFF (X-forwarded-for) headers, if they exist.
         <span class="property-type">string</span>
     </dt>
     <dd>{{% md %}}Specifies a passphrase for the cookie encryption
-{{% /md %}}</dd>
-    <dt class="property-optional"
+{{% /md %}}</dd><dt class="property-optional"
             title="Optional">
         <span id="state_encryptcookies_nodejs">
 <a href="#state_encryptcookies_nodejs" style="color: inherit; text-decoration: inherit;">encrypt<wbr>Cookies</a>
@@ -2171,8 +1976,7 @@ XFF (X-forwarded-for) headers, if they exist.
         <span class="property-type">string[]</span>
     </dt>
     <dd>{{% md %}}Encrypts specified cookies that the BIG-IP system sends to a client system
-{{% /md %}}</dd>
-    <dt class="property-optional"
+{{% /md %}}</dd><dt class="property-optional"
             title="Optional">
         <span id="state_fallbackhost_nodejs">
 <a href="#state_fallbackhost_nodejs" style="color: inherit; text-decoration: inherit;">fallback<wbr>Host</a>
@@ -2181,8 +1985,7 @@ XFF (X-forwarded-for) headers, if they exist.
         <span class="property-type">string</span>
     </dt>
     <dd>{{% md %}}Specifies an HTTP fallback host. HTTP redirection allows you to redirect HTTP traffic to another protocol identifier, host name, port number
-{{% /md %}}</dd>
-    <dt class="property-optional"
+{{% /md %}}</dd><dt class="property-optional"
             title="Optional">
         <span id="state_fallbackstatuscodes_nodejs">
 <a href="#state_fallbackstatuscodes_nodejs" style="color: inherit; text-decoration: inherit;">fallback<wbr>Status<wbr>Codes</a>
@@ -2191,8 +1994,7 @@ XFF (X-forwarded-for) headers, if they exist.
         <span class="property-type">string[]</span>
     </dt>
     <dd>{{% md %}}Specifies one or more three-digit status codes that can be returned by an HTTP server.
-{{% /md %}}</dd>
-    <dt class="property-optional"
+{{% /md %}}</dd><dt class="property-optional"
             title="Optional">
         <span id="state_headerase_nodejs">
 <a href="#state_headerase_nodejs" style="color: inherit; text-decoration: inherit;">head<wbr>Erase</a>
@@ -2201,8 +2003,7 @@ XFF (X-forwarded-for) headers, if they exist.
         <span class="property-type">string</span>
     </dt>
     <dd>{{% md %}}Specifies the header string that you want to erase from an HTTP request. You can also specify none
-{{% /md %}}</dd>
-    <dt class="property-optional"
+{{% /md %}}</dd><dt class="property-optional"
             title="Optional">
         <span id="state_headinsert_nodejs">
 <a href="#state_headinsert_nodejs" style="color: inherit; text-decoration: inherit;">head<wbr>Insert</a>
@@ -2211,8 +2012,7 @@ XFF (X-forwarded-for) headers, if they exist.
         <span class="property-type">string</span>
     </dt>
     <dd>{{% md %}}Specifies a quoted header string that you want to insert into an HTTP request
-{{% /md %}}</dd>
-    <dt class="property-optional"
+{{% /md %}}</dd><dt class="property-optional"
             title="Optional">
         <span id="state_insertxforwardedfor_nodejs">
 <a href="#state_insertxforwardedfor_nodejs" style="color: inherit; text-decoration: inherit;">insert<wbr>Xforwarded<wbr>For</a>
@@ -2221,8 +2021,7 @@ XFF (X-forwarded-for) headers, if they exist.
         <span class="property-type">string</span>
     </dt>
     <dd>{{% md %}}When using connection pooling, which allows clients to make use of other client requests' server-side connections, you can insert the X-Forwarded-For header and specify a client IP address
-{{% /md %}}</dd>
-    <dt class="property-optional"
+{{% /md %}}</dd><dt class="property-optional"
             title="Optional">
         <span id="state_lwsseparator_nodejs">
 <a href="#state_lwsseparator_nodejs" style="color: inherit; text-decoration: inherit;">lws<wbr>Separator</a>
@@ -2231,8 +2030,7 @@ XFF (X-forwarded-for) headers, if they exist.
         <span class="property-type">string</span>
     </dt>
     <dd>{{% md %}}Specifies a quoted header string that you want to insert into an HTTP request. You can also specify none.
-{{% /md %}}</dd>
-    <dt class="property-optional"
+{{% /md %}}</dd><dt class="property-optional"
             title="Optional">
         <span id="state_name_nodejs">
 <a href="#state_name_nodejs" style="color: inherit; text-decoration: inherit;">name</a>
@@ -2241,8 +2039,7 @@ XFF (X-forwarded-for) headers, if they exist.
         <span class="property-type">string</span>
     </dt>
     <dd>{{% md %}}Name of the profile_http
-{{% /md %}}</dd>
-    <dt class="property-optional"
+{{% /md %}}</dd><dt class="property-optional"
             title="Optional">
         <span id="state_oneconnecttransformations_nodejs">
 <a href="#state_oneconnecttransformations_nodejs" style="color: inherit; text-decoration: inherit;">oneconnect<wbr>Transformations</a>
@@ -2251,8 +2048,7 @@ XFF (X-forwarded-for) headers, if they exist.
         <span class="property-type">string</span>
     </dt>
     <dd>{{% md %}}Enables the system to perform HTTP header transformations for the purpose of  keeping server-side connections open. This feature requires configuration of a OneConnect profile
-{{% /md %}}</dd>
-    <dt class="property-optional"
+{{% /md %}}</dd><dt class="property-optional"
             title="Optional">
         <span id="state_proxytype_nodejs">
 <a href="#state_proxytype_nodejs" style="color: inherit; text-decoration: inherit;">proxy<wbr>Type</a>
@@ -2261,8 +2057,7 @@ XFF (X-forwarded-for) headers, if they exist.
         <span class="property-type">string</span>
     </dt>
     <dd>{{% md %}}Specifies the type of HTTP proxy.
-{{% /md %}}</dd>
-    <dt class="property-optional"
+{{% /md %}}</dd><dt class="property-optional"
             title="Optional">
         <span id="state_redirectrewrite_nodejs">
 <a href="#state_redirectrewrite_nodejs" style="color: inherit; text-decoration: inherit;">redirect<wbr>Rewrite</a>
@@ -2271,8 +2066,7 @@ XFF (X-forwarded-for) headers, if they exist.
         <span class="property-type">string</span>
     </dt>
     <dd>{{% md %}}Specifies which of the application HTTP redirects the system rewrites to HTTPS.
-{{% /md %}}</dd>
-    <dt class="property-optional"
+{{% /md %}}</dd><dt class="property-optional"
             title="Optional">
         <span id="state_requestchunking_nodejs">
 <a href="#state_requestchunking_nodejs" style="color: inherit; text-decoration: inherit;">request<wbr>Chunking</a>
@@ -2281,8 +2075,7 @@ XFF (X-forwarded-for) headers, if they exist.
         <span class="property-type">string</span>
     </dt>
     <dd>{{% md %}}Specifies how to handle chunked and unchunked requests.
-{{% /md %}}</dd>
-    <dt class="property-optional"
+{{% /md %}}</dd><dt class="property-optional"
             title="Optional">
         <span id="state_responsechunking_nodejs">
 <a href="#state_responsechunking_nodejs" style="color: inherit; text-decoration: inherit;">response<wbr>Chunking</a>
@@ -2291,8 +2084,7 @@ XFF (X-forwarded-for) headers, if they exist.
         <span class="property-type">string</span>
     </dt>
     <dd>{{% md %}}Specifies how to handle chunked and unchunked responses.
-{{% /md %}}</dd>
-    <dt class="property-optional"
+{{% /md %}}</dd><dt class="property-optional"
             title="Optional">
         <span id="state_responseheaderspermitteds_nodejs">
 <a href="#state_responseheaderspermitteds_nodejs" style="color: inherit; text-decoration: inherit;">response<wbr>Headers<wbr>Permitteds</a>
@@ -2301,8 +2093,7 @@ XFF (X-forwarded-for) headers, if they exist.
         <span class="property-type">string[]</span>
     </dt>
     <dd>{{% md %}}Specifies headers that the BIG-IP system allows in an HTTP response.
-{{% /md %}}</dd>
-    <dt class="property-optional"
+{{% /md %}}</dd><dt class="property-optional"
             title="Optional">
         <span id="state_serveragentname_nodejs">
 <a href="#state_serveragentname_nodejs" style="color: inherit; text-decoration: inherit;">server<wbr>Agent<wbr>Name</a>
@@ -2312,8 +2103,7 @@ XFF (X-forwarded-for) headers, if they exist.
     </dt>
     <dd>{{% md %}}Specifies the value of the Server header in responses that the BIG-IP itself generates. The default is BigIP. If no
 string is specified, then no Server header will be added to such responses
-{{% /md %}}</dd>
-    <dt class="property-optional"
+{{% /md %}}</dd><dt class="property-optional"
             title="Optional">
         <span id="state_tmpartition_nodejs">
 <a href="#state_tmpartition_nodejs" style="color: inherit; text-decoration: inherit;">tm<wbr>Partition</a>
@@ -2322,8 +2112,7 @@ string is specified, then no Server header will be added to such responses
         <span class="property-type">string</span>
     </dt>
     <dd>{{% md %}}Displays the administrative partition within which this profile resides.
-{{% /md %}}</dd>
-    <dt class="property-optional"
+{{% /md %}}</dd><dt class="property-optional"
             title="Optional">
         <span id="state_viahostname_nodejs">
 <a href="#state_viahostname_nodejs" style="color: inherit; text-decoration: inherit;">via<wbr>Host<wbr>Name</a>
@@ -2332,8 +2121,7 @@ string is specified, then no Server header will be added to such responses
         <span class="property-type">string</span>
     </dt>
     <dd>{{% md %}}Specifies the hostname to include into Via header
-{{% /md %}}</dd>
-    <dt class="property-optional"
+{{% /md %}}</dd><dt class="property-optional"
             title="Optional">
         <span id="state_viarequest_nodejs">
 <a href="#state_viarequest_nodejs" style="color: inherit; text-decoration: inherit;">via<wbr>Request</a>
@@ -2342,8 +2130,7 @@ string is specified, then no Server header will be added to such responses
         <span class="property-type">string</span>
     </dt>
     <dd>{{% md %}}Specifies whether to append, remove, or preserve a Via header in an HTTP request
-{{% /md %}}</dd>
-    <dt class="property-optional"
+{{% /md %}}</dd><dt class="property-optional"
             title="Optional">
         <span id="state_viaresponse_nodejs">
 <a href="#state_viaresponse_nodejs" style="color: inherit; text-decoration: inherit;">via<wbr>Response</a>
@@ -2352,8 +2139,7 @@ string is specified, then no Server header will be added to such responses
         <span class="property-type">string</span>
     </dt>
     <dd>{{% md %}}Specifies whether to append, remove, or preserve a Via header in an HTTP request
-{{% /md %}}</dd>
-    <dt class="property-optional"
+{{% /md %}}</dd><dt class="property-optional"
             title="Optional">
         <span id="state_xffalternativenames_nodejs">
 <a href="#state_xffalternativenames_nodejs" style="color: inherit; text-decoration: inherit;">xff<wbr>Alternative<wbr>Names</a>
@@ -2362,14 +2148,11 @@ string is specified, then no Server header will be added to such responses
         <span class="property-type">string[]</span>
     </dt>
     <dd>{{% md %}}Specifies alternative XFF headers instead of the default X-forwarded-for header
-{{% /md %}}</dd>
-</dl>
+{{% /md %}}</dd></dl>
 {{% /choosable %}}
 
 {{% choosable language python %}}
-<dl class="resources-properties">
-
-    <dt class="property-optional"
+<dl class="resources-properties"><dt class="property-optional"
             title="Optional">
         <span id="state_accept_xff_python">
 <a href="#state_accept_xff_python" style="color: inherit; text-decoration: inherit;">accept_<wbr>xff</a>
@@ -2379,8 +2162,7 @@ string is specified, then no Server header will be added to such responses
     </dt>
     <dd>{{% md %}}Enables or disables trusting the client IP address, and statistics from the client IP address, based on the request's
 XFF (X-forwarded-for) headers, if they exist.
-{{% /md %}}</dd>
-    <dt class="property-optional"
+{{% /md %}}</dd><dt class="property-optional"
             title="Optional">
         <span id="state_app_service_python">
 <a href="#state_app_service_python" style="color: inherit; text-decoration: inherit;">app_<wbr>service</a>
@@ -2389,8 +2171,7 @@ XFF (X-forwarded-for) headers, if they exist.
         <span class="property-type">str</span>
     </dt>
     <dd>{{% md %}}The application service to which the object belongs.
-{{% /md %}}</dd>
-    <dt class="property-optional"
+{{% /md %}}</dd><dt class="property-optional"
             title="Optional">
         <span id="state_basic_auth_realm_python">
 <a href="#state_basic_auth_realm_python" style="color: inherit; text-decoration: inherit;">basic_<wbr>auth_<wbr>realm</a>
@@ -2399,8 +2180,7 @@ XFF (X-forwarded-for) headers, if they exist.
         <span class="property-type">str</span>
     </dt>
     <dd>{{% md %}}Specifies a quoted string for the basic authentication realm. The system sends this string to a client whenever authorization fails. The default value is none
-{{% /md %}}</dd>
-    <dt class="property-optional"
+{{% /md %}}</dd><dt class="property-optional"
             title="Optional">
         <span id="state_defaults_from_python">
 <a href="#state_defaults_from_python" style="color: inherit; text-decoration: inherit;">defaults_<wbr>from</a>
@@ -2409,8 +2189,7 @@ XFF (X-forwarded-for) headers, if they exist.
         <span class="property-type">str</span>
     </dt>
     <dd>{{% md %}}Specifies the profile that you want to use as the parent profile. Your new profile inherits all settings and values from the parent profile specified.
-{{% /md %}}</dd>
-    <dt class="property-optional"
+{{% /md %}}</dd><dt class="property-optional"
             title="Optional">
         <span id="state_description_python">
 <a href="#state_description_python" style="color: inherit; text-decoration: inherit;">description</a>
@@ -2419,8 +2198,7 @@ XFF (X-forwarded-for) headers, if they exist.
         <span class="property-type">str</span>
     </dt>
     <dd>{{% md %}}User defined description
-{{% /md %}}</dd>
-    <dt class="property-optional"
+{{% /md %}}</dd><dt class="property-optional"
             title="Optional">
         <span id="state_encrypt_cookie_secret_python">
 <a href="#state_encrypt_cookie_secret_python" style="color: inherit; text-decoration: inherit;">encrypt_<wbr>cookie_<wbr>secret</a>
@@ -2429,8 +2207,7 @@ XFF (X-forwarded-for) headers, if they exist.
         <span class="property-type">str</span>
     </dt>
     <dd>{{% md %}}Specifies a passphrase for the cookie encryption
-{{% /md %}}</dd>
-    <dt class="property-optional"
+{{% /md %}}</dd><dt class="property-optional"
             title="Optional">
         <span id="state_encrypt_cookies_python">
 <a href="#state_encrypt_cookies_python" style="color: inherit; text-decoration: inherit;">encrypt_<wbr>cookies</a>
@@ -2439,8 +2216,7 @@ XFF (X-forwarded-for) headers, if they exist.
         <span class="property-type">Sequence[str]</span>
     </dt>
     <dd>{{% md %}}Encrypts specified cookies that the BIG-IP system sends to a client system
-{{% /md %}}</dd>
-    <dt class="property-optional"
+{{% /md %}}</dd><dt class="property-optional"
             title="Optional">
         <span id="state_fallback_host_python">
 <a href="#state_fallback_host_python" style="color: inherit; text-decoration: inherit;">fallback_<wbr>host</a>
@@ -2449,8 +2225,7 @@ XFF (X-forwarded-for) headers, if they exist.
         <span class="property-type">str</span>
     </dt>
     <dd>{{% md %}}Specifies an HTTP fallback host. HTTP redirection allows you to redirect HTTP traffic to another protocol identifier, host name, port number
-{{% /md %}}</dd>
-    <dt class="property-optional"
+{{% /md %}}</dd><dt class="property-optional"
             title="Optional">
         <span id="state_fallback_status_codes_python">
 <a href="#state_fallback_status_codes_python" style="color: inherit; text-decoration: inherit;">fallback_<wbr>status_<wbr>codes</a>
@@ -2459,8 +2234,7 @@ XFF (X-forwarded-for) headers, if they exist.
         <span class="property-type">Sequence[str]</span>
     </dt>
     <dd>{{% md %}}Specifies one or more three-digit status codes that can be returned by an HTTP server.
-{{% /md %}}</dd>
-    <dt class="property-optional"
+{{% /md %}}</dd><dt class="property-optional"
             title="Optional">
         <span id="state_head_erase_python">
 <a href="#state_head_erase_python" style="color: inherit; text-decoration: inherit;">head_<wbr>erase</a>
@@ -2469,8 +2243,7 @@ XFF (X-forwarded-for) headers, if they exist.
         <span class="property-type">str</span>
     </dt>
     <dd>{{% md %}}Specifies the header string that you want to erase from an HTTP request. You can also specify none
-{{% /md %}}</dd>
-    <dt class="property-optional"
+{{% /md %}}</dd><dt class="property-optional"
             title="Optional">
         <span id="state_head_insert_python">
 <a href="#state_head_insert_python" style="color: inherit; text-decoration: inherit;">head_<wbr>insert</a>
@@ -2479,8 +2252,7 @@ XFF (X-forwarded-for) headers, if they exist.
         <span class="property-type">str</span>
     </dt>
     <dd>{{% md %}}Specifies a quoted header string that you want to insert into an HTTP request
-{{% /md %}}</dd>
-    <dt class="property-optional"
+{{% /md %}}</dd><dt class="property-optional"
             title="Optional">
         <span id="state_insert_xforwarded_for_python">
 <a href="#state_insert_xforwarded_for_python" style="color: inherit; text-decoration: inherit;">insert_<wbr>xforwarded_<wbr>for</a>
@@ -2489,8 +2261,7 @@ XFF (X-forwarded-for) headers, if they exist.
         <span class="property-type">str</span>
     </dt>
     <dd>{{% md %}}When using connection pooling, which allows clients to make use of other client requests' server-side connections, you can insert the X-Forwarded-For header and specify a client IP address
-{{% /md %}}</dd>
-    <dt class="property-optional"
+{{% /md %}}</dd><dt class="property-optional"
             title="Optional">
         <span id="state_lws_separator_python">
 <a href="#state_lws_separator_python" style="color: inherit; text-decoration: inherit;">lws_<wbr>separator</a>
@@ -2499,8 +2270,7 @@ XFF (X-forwarded-for) headers, if they exist.
         <span class="property-type">str</span>
     </dt>
     <dd>{{% md %}}Specifies a quoted header string that you want to insert into an HTTP request. You can also specify none.
-{{% /md %}}</dd>
-    <dt class="property-optional"
+{{% /md %}}</dd><dt class="property-optional"
             title="Optional">
         <span id="state_name_python">
 <a href="#state_name_python" style="color: inherit; text-decoration: inherit;">name</a>
@@ -2509,8 +2279,7 @@ XFF (X-forwarded-for) headers, if they exist.
         <span class="property-type">str</span>
     </dt>
     <dd>{{% md %}}Name of the profile_http
-{{% /md %}}</dd>
-    <dt class="property-optional"
+{{% /md %}}</dd><dt class="property-optional"
             title="Optional">
         <span id="state_oneconnect_transformations_python">
 <a href="#state_oneconnect_transformations_python" style="color: inherit; text-decoration: inherit;">oneconnect_<wbr>transformations</a>
@@ -2519,8 +2288,7 @@ XFF (X-forwarded-for) headers, if they exist.
         <span class="property-type">str</span>
     </dt>
     <dd>{{% md %}}Enables the system to perform HTTP header transformations for the purpose of  keeping server-side connections open. This feature requires configuration of a OneConnect profile
-{{% /md %}}</dd>
-    <dt class="property-optional"
+{{% /md %}}</dd><dt class="property-optional"
             title="Optional">
         <span id="state_proxy_type_python">
 <a href="#state_proxy_type_python" style="color: inherit; text-decoration: inherit;">proxy_<wbr>type</a>
@@ -2529,8 +2297,7 @@ XFF (X-forwarded-for) headers, if they exist.
         <span class="property-type">str</span>
     </dt>
     <dd>{{% md %}}Specifies the type of HTTP proxy.
-{{% /md %}}</dd>
-    <dt class="property-optional"
+{{% /md %}}</dd><dt class="property-optional"
             title="Optional">
         <span id="state_redirect_rewrite_python">
 <a href="#state_redirect_rewrite_python" style="color: inherit; text-decoration: inherit;">redirect_<wbr>rewrite</a>
@@ -2539,8 +2306,7 @@ XFF (X-forwarded-for) headers, if they exist.
         <span class="property-type">str</span>
     </dt>
     <dd>{{% md %}}Specifies which of the application HTTP redirects the system rewrites to HTTPS.
-{{% /md %}}</dd>
-    <dt class="property-optional"
+{{% /md %}}</dd><dt class="property-optional"
             title="Optional">
         <span id="state_request_chunking_python">
 <a href="#state_request_chunking_python" style="color: inherit; text-decoration: inherit;">request_<wbr>chunking</a>
@@ -2549,8 +2315,7 @@ XFF (X-forwarded-for) headers, if they exist.
         <span class="property-type">str</span>
     </dt>
     <dd>{{% md %}}Specifies how to handle chunked and unchunked requests.
-{{% /md %}}</dd>
-    <dt class="property-optional"
+{{% /md %}}</dd><dt class="property-optional"
             title="Optional">
         <span id="state_response_chunking_python">
 <a href="#state_response_chunking_python" style="color: inherit; text-decoration: inherit;">response_<wbr>chunking</a>
@@ -2559,8 +2324,7 @@ XFF (X-forwarded-for) headers, if they exist.
         <span class="property-type">str</span>
     </dt>
     <dd>{{% md %}}Specifies how to handle chunked and unchunked responses.
-{{% /md %}}</dd>
-    <dt class="property-optional"
+{{% /md %}}</dd><dt class="property-optional"
             title="Optional">
         <span id="state_response_headers_permitteds_python">
 <a href="#state_response_headers_permitteds_python" style="color: inherit; text-decoration: inherit;">response_<wbr>headers_<wbr>permitteds</a>
@@ -2569,8 +2333,7 @@ XFF (X-forwarded-for) headers, if they exist.
         <span class="property-type">Sequence[str]</span>
     </dt>
     <dd>{{% md %}}Specifies headers that the BIG-IP system allows in an HTTP response.
-{{% /md %}}</dd>
-    <dt class="property-optional"
+{{% /md %}}</dd><dt class="property-optional"
             title="Optional">
         <span id="state_server_agent_name_python">
 <a href="#state_server_agent_name_python" style="color: inherit; text-decoration: inherit;">server_<wbr>agent_<wbr>name</a>
@@ -2580,8 +2343,7 @@ XFF (X-forwarded-for) headers, if they exist.
     </dt>
     <dd>{{% md %}}Specifies the value of the Server header in responses that the BIG-IP itself generates. The default is BigIP. If no
 string is specified, then no Server header will be added to such responses
-{{% /md %}}</dd>
-    <dt class="property-optional"
+{{% /md %}}</dd><dt class="property-optional"
             title="Optional">
         <span id="state_tm_partition_python">
 <a href="#state_tm_partition_python" style="color: inherit; text-decoration: inherit;">tm_<wbr>partition</a>
@@ -2590,8 +2352,7 @@ string is specified, then no Server header will be added to such responses
         <span class="property-type">str</span>
     </dt>
     <dd>{{% md %}}Displays the administrative partition within which this profile resides.
-{{% /md %}}</dd>
-    <dt class="property-optional"
+{{% /md %}}</dd><dt class="property-optional"
             title="Optional">
         <span id="state_via_host_name_python">
 <a href="#state_via_host_name_python" style="color: inherit; text-decoration: inherit;">via_<wbr>host_<wbr>name</a>
@@ -2600,8 +2361,7 @@ string is specified, then no Server header will be added to such responses
         <span class="property-type">str</span>
     </dt>
     <dd>{{% md %}}Specifies the hostname to include into Via header
-{{% /md %}}</dd>
-    <dt class="property-optional"
+{{% /md %}}</dd><dt class="property-optional"
             title="Optional">
         <span id="state_via_request_python">
 <a href="#state_via_request_python" style="color: inherit; text-decoration: inherit;">via_<wbr>request</a>
@@ -2610,8 +2370,7 @@ string is specified, then no Server header will be added to such responses
         <span class="property-type">str</span>
     </dt>
     <dd>{{% md %}}Specifies whether to append, remove, or preserve a Via header in an HTTP request
-{{% /md %}}</dd>
-    <dt class="property-optional"
+{{% /md %}}</dd><dt class="property-optional"
             title="Optional">
         <span id="state_via_response_python">
 <a href="#state_via_response_python" style="color: inherit; text-decoration: inherit;">via_<wbr>response</a>
@@ -2620,8 +2379,7 @@ string is specified, then no Server header will be added to such responses
         <span class="property-type">str</span>
     </dt>
     <dd>{{% md %}}Specifies whether to append, remove, or preserve a Via header in an HTTP request
-{{% /md %}}</dd>
-    <dt class="property-optional"
+{{% /md %}}</dd><dt class="property-optional"
             title="Optional">
         <span id="state_xff_alternative_names_python">
 <a href="#state_xff_alternative_names_python" style="color: inherit; text-decoration: inherit;">xff_<wbr>alternative_<wbr>names</a>
@@ -2630,8 +2388,7 @@ string is specified, then no Server header will be added to such responses
         <span class="property-type">Sequence[str]</span>
     </dt>
     <dd>{{% md %}}Specifies alternative XFF headers instead of the default X-forwarded-for header
-{{% /md %}}</dd>
-</dl>
+{{% /md %}}</dd></dl>
 {{% /choosable %}}
 
 
@@ -2657,6 +2414,6 @@ BIG-IP LTM http profiles can be imported using the `name`, e.g.
 	<dt>License</dt>
 	<dd>Apache-2.0</dd>
 	<dt>Notes</dt>
-	<dd>This Pulumi package is based on the [`bigip` Terraform Provider](https://github.com/F5Networks/terraform-provider-bigip).</dd>
+	<dd>{{% md %}}This Pulumi package is based on the [`bigip` Terraform Provider](https://github.com/F5Networks/terraform-provider-bigip).{{% /md %}}</dd>
 </dl>
 

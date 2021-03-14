@@ -14,11 +14,17 @@ A function object, containing all information associated with the named function
 API Version: 2016-03-01.
 
 {{% examples %}}
+
 ## Example Usage
 
 {{< chooser language "typescript,python,go,csharp" / >}}
+
+
 ### Create a JavaScript function
-{{% example csharp %}}
+
+
+{{< example csharp >}}
+
 ```csharp
 using Pulumi;
 using AzureNative = Pulumi.AzureNative;
@@ -59,13 +65,19 @@ class MyStack : Stack
 
 ```
 
-{{% /example %}}
 
-{{% example go %}}
+{{< /example >}}
+
+
+{{< example go >}}
+
 Coming soon!
-{{% /example %}}
 
-{{% example python %}}
+{{< /example >}}
+
+
+{{< example python >}}
+
 
 ```python
 import pulumi
@@ -91,9 +103,12 @@ function = azure_native.streamanalytics.Function("function",
 
 ```
 
-{{% /example %}}
 
-{{% example typescript %}}
+{{< /example >}}
+
+
+{{< example typescript >}}
+
 
 ```typescript
 import * as pulumi from "@pulumi/pulumi";
@@ -120,10 +135,17 @@ const _function = new azure_native.streamanalytics.Function("function", {
 
 ```
 
-{{% /example %}}
+
+{{< /example >}}
+
+
+
 
 ### Create an Azure ML function
-{{% example csharp %}}
+
+
+{{< example csharp >}}
+
 ```csharp
 using Pulumi;
 using AzureNative = Pulumi.AzureNative;
@@ -187,13 +209,19 @@ class MyStack : Stack
 
 ```
 
-{{% /example %}}
 
-{{% example go %}}
+{{< /example >}}
+
+
+{{< example go >}}
+
 Coming soon!
-{{% /example %}}
 
-{{% example python %}}
+{{< /example >}}
+
+
+{{< example python >}}
+
 
 ```python
 import pulumi
@@ -233,9 +261,12 @@ function = azure_native.streamanalytics.Function("function",
 
 ```
 
-{{% /example %}}
 
-{{% example typescript %}}
+{{< /example >}}
+
+
+{{< example typescript >}}
+
 
 ```typescript
 import * as pulumi from "@pulumi/pulumi";
@@ -276,9 +307,16 @@ const _function = new azure_native.streamanalytics.Function("function", {
 
 ```
 
-{{% /example %}}
+
+{{< /example >}}
+
+
+
+
 
 {{% /examples %}}
+
+
 
 
 ## Create a Function Resource {#create}
@@ -303,9 +341,7 @@ const _function = new azure_native.streamanalytics.Function("function", {
 
 {{% choosable language nodejs %}}
 
-<dl class="resources-properties">
-  
-    <dt
+<dl class="resources-properties"><dt
         class="property-required" title="Required">
         <span>name</span>
         <span class="property-indicator"></span>
@@ -313,9 +349,7 @@ const _function = new azure_native.streamanalytics.Function("function", {
     </dt>
     <dd>
       The unique name of the resource.
-    </dd>
-  
-    <dt
+    </dd><dt
         class="property-required" title="Required">
         <span>args</span>
         <span class="property-indicator"></span>
@@ -323,9 +357,7 @@ const _function = new azure_native.streamanalytics.Function("function", {
     </dt>
     <dd>
       The arguments to resource properties.
-    </dd>
-  
-    <dt
+    </dd><dt
         class="property-optional" title="Optional">
         <span>opts</span>
         <span class="property-indicator"></span>
@@ -333,10 +365,7 @@ const _function = new azure_native.streamanalytics.Function("function", {
     </dt>
     <dd>
       Bag of options to control resource&#39;s behavior.
-    </dd>
-  
-
-</dl>
+    </dd></dl>
 
 {{% /choosable %}}
 
@@ -362,9 +391,7 @@ const _function = new azure_native.streamanalytics.Function("function", {
 
 {{% choosable language go %}}
 
-<dl class="resources-properties">
-  
-    <dt
+<dl class="resources-properties"><dt
         class="property-optional" title="Optional">
         <span>ctx</span>
         <span class="property-indicator"></span>
@@ -372,9 +399,7 @@ const _function = new azure_native.streamanalytics.Function("function", {
     </dt>
     <dd>
       Context object for the current deployment.
-    </dd>
-  
-    <dt
+    </dd><dt
         class="property-required" title="Required">
         <span>name</span>
         <span class="property-indicator"></span>
@@ -382,9 +407,7 @@ const _function = new azure_native.streamanalytics.Function("function", {
     </dt>
     <dd>
       The unique name of the resource.
-    </dd>
-  
-    <dt
+    </dd><dt
         class="property-required" title="Required">
         <span>args</span>
         <span class="property-indicator"></span>
@@ -392,9 +415,7 @@ const _function = new azure_native.streamanalytics.Function("function", {
     </dt>
     <dd>
       The arguments to resource properties.
-    </dd>
-  
-    <dt
+    </dd><dt
         class="property-optional" title="Optional">
         <span>opts</span>
         <span class="property-indicator"></span>
@@ -402,18 +423,13 @@ const _function = new azure_native.streamanalytics.Function("function", {
     </dt>
     <dd>
       Bag of options to control resource&#39;s behavior.
-    </dd>
-  
-
-</dl>
+    </dd></dl>
 
 {{% /choosable %}}
 
 {{% choosable language csharp %}}
 
-<dl class="resources-properties">
-  
-    <dt
+<dl class="resources-properties"><dt
         class="property-required" title="Required">
         <span>name</span>
         <span class="property-indicator"></span>
@@ -421,9 +437,7 @@ const _function = new azure_native.streamanalytics.Function("function", {
     </dt>
     <dd>
       The unique name of the resource.
-    </dd>
-  
-    <dt
+    </dd><dt
         class="property-required" title="Required">
         <span>args</span>
         <span class="property-indicator"></span>
@@ -431,9 +445,7 @@ const _function = new azure_native.streamanalytics.Function("function", {
     </dt>
     <dd>
       The arguments to resource properties.
-    </dd>
-  
-    <dt
+    </dd><dt
         class="property-optional" title="Optional">
         <span>opts</span>
         <span class="property-indicator"></span>
@@ -441,10 +453,7 @@ const _function = new azure_native.streamanalytics.Function("function", {
     </dt>
     <dd>
       Bag of options to control resource&#39;s behavior.
-    </dd>
-  
-
-</dl>
+    </dd></dl>
 
 {{% /choosable %}}
 
@@ -459,9 +468,7 @@ The Function resource accepts the following [input]({{< relref "/docs/intro/conc
 
 
 {{% choosable language csharp %}}
-<dl class="resources-properties">
-
-    <dt class="property-required"
+<dl class="resources-properties"><dt class="property-required"
             title="Required">
         <span id="jobname_csharp">
 <a href="#jobname_csharp" style="color: inherit; text-decoration: inherit;">Job<wbr>Name</a>
@@ -469,8 +476,7 @@ The Function resource accepts the following [input]({{< relref "/docs/intro/conc
         <span class="property-indicator"></span>
         <span class="property-type">string</span>
     </dt>
-    <dd>{{% md %}}The name of the streaming job.{{% /md %}}</dd>
-    <dt class="property-required"
+    <dd>{{% md %}}The name of the streaming job.{{% /md %}}</dd><dt class="property-required"
             title="Required">
         <span id="resourcegroupname_csharp">
 <a href="#resourcegroupname_csharp" style="color: inherit; text-decoration: inherit;">Resource<wbr>Group<wbr>Name</a>
@@ -478,8 +484,7 @@ The Function resource accepts the following [input]({{< relref "/docs/intro/conc
         <span class="property-indicator"></span>
         <span class="property-type">string</span>
     </dt>
-    <dd>{{% md %}}The name of the resource group that contains the resource. You can obtain this value from the Azure Resource Manager API or the portal.{{% /md %}}</dd>
-    <dt class="property-optional"
+    <dd>{{% md %}}The name of the resource group that contains the resource. You can obtain this value from the Azure Resource Manager API or the portal.{{% /md %}}</dd><dt class="property-optional"
             title="Optional">
         <span id="functionname_csharp">
 <a href="#functionname_csharp" style="color: inherit; text-decoration: inherit;">Function<wbr>Name</a>
@@ -487,8 +492,7 @@ The Function resource accepts the following [input]({{< relref "/docs/intro/conc
         <span class="property-indicator"></span>
         <span class="property-type">string</span>
     </dt>
-    <dd>{{% md %}}The name of the function.{{% /md %}}</dd>
-    <dt class="property-optional"
+    <dd>{{% md %}}The name of the function.{{% /md %}}</dd><dt class="property-optional"
             title="Optional">
         <span id="name_csharp">
 <a href="#name_csharp" style="color: inherit; text-decoration: inherit;">Name</a>
@@ -496,8 +500,7 @@ The Function resource accepts the following [input]({{< relref "/docs/intro/conc
         <span class="property-indicator"></span>
         <span class="property-type">string</span>
     </dt>
-    <dd>{{% md %}}Resource name{{% /md %}}</dd>
-    <dt class="property-optional"
+    <dd>{{% md %}}Resource name{{% /md %}}</dd><dt class="property-optional"
             title="Optional">
         <span id="properties_csharp">
 <a href="#properties_csharp" style="color: inherit; text-decoration: inherit;">Properties</a>
@@ -505,14 +508,11 @@ The Function resource accepts the following [input]({{< relref "/docs/intro/conc
         <span class="property-indicator"></span>
         <span class="property-type"><a href="#scalarfunctionproperties">Pulumi.<wbr>Azure<wbr>Native.<wbr>Stream<wbr>Analytics.<wbr>Inputs.<wbr>Scalar<wbr>Function<wbr>Properties<wbr>Args</a></span>
     </dt>
-    <dd>{{% md %}}The properties that are associated with a function.{{% /md %}}</dd>
-</dl>
+    <dd>{{% md %}}The properties that are associated with a function.{{% /md %}}</dd></dl>
 {{% /choosable %}}
 
 {{% choosable language go %}}
-<dl class="resources-properties">
-
-    <dt class="property-required"
+<dl class="resources-properties"><dt class="property-required"
             title="Required">
         <span id="jobname_go">
 <a href="#jobname_go" style="color: inherit; text-decoration: inherit;">Job<wbr>Name</a>
@@ -520,8 +520,7 @@ The Function resource accepts the following [input]({{< relref "/docs/intro/conc
         <span class="property-indicator"></span>
         <span class="property-type">string</span>
     </dt>
-    <dd>{{% md %}}The name of the streaming job.{{% /md %}}</dd>
-    <dt class="property-required"
+    <dd>{{% md %}}The name of the streaming job.{{% /md %}}</dd><dt class="property-required"
             title="Required">
         <span id="resourcegroupname_go">
 <a href="#resourcegroupname_go" style="color: inherit; text-decoration: inherit;">Resource<wbr>Group<wbr>Name</a>
@@ -529,8 +528,7 @@ The Function resource accepts the following [input]({{< relref "/docs/intro/conc
         <span class="property-indicator"></span>
         <span class="property-type">string</span>
     </dt>
-    <dd>{{% md %}}The name of the resource group that contains the resource. You can obtain this value from the Azure Resource Manager API or the portal.{{% /md %}}</dd>
-    <dt class="property-optional"
+    <dd>{{% md %}}The name of the resource group that contains the resource. You can obtain this value from the Azure Resource Manager API or the portal.{{% /md %}}</dd><dt class="property-optional"
             title="Optional">
         <span id="functionname_go">
 <a href="#functionname_go" style="color: inherit; text-decoration: inherit;">Function<wbr>Name</a>
@@ -538,8 +536,7 @@ The Function resource accepts the following [input]({{< relref "/docs/intro/conc
         <span class="property-indicator"></span>
         <span class="property-type">string</span>
     </dt>
-    <dd>{{% md %}}The name of the function.{{% /md %}}</dd>
-    <dt class="property-optional"
+    <dd>{{% md %}}The name of the function.{{% /md %}}</dd><dt class="property-optional"
             title="Optional">
         <span id="name_go">
 <a href="#name_go" style="color: inherit; text-decoration: inherit;">Name</a>
@@ -547,8 +544,7 @@ The Function resource accepts the following [input]({{< relref "/docs/intro/conc
         <span class="property-indicator"></span>
         <span class="property-type">string</span>
     </dt>
-    <dd>{{% md %}}Resource name{{% /md %}}</dd>
-    <dt class="property-optional"
+    <dd>{{% md %}}Resource name{{% /md %}}</dd><dt class="property-optional"
             title="Optional">
         <span id="properties_go">
 <a href="#properties_go" style="color: inherit; text-decoration: inherit;">Properties</a>
@@ -556,14 +552,11 @@ The Function resource accepts the following [input]({{< relref "/docs/intro/conc
         <span class="property-indicator"></span>
         <span class="property-type"><a href="#scalarfunctionproperties">Scalar<wbr>Function<wbr>Properties</a></span>
     </dt>
-    <dd>{{% md %}}The properties that are associated with a function.{{% /md %}}</dd>
-</dl>
+    <dd>{{% md %}}The properties that are associated with a function.{{% /md %}}</dd></dl>
 {{% /choosable %}}
 
 {{% choosable language nodejs %}}
-<dl class="resources-properties">
-
-    <dt class="property-required"
+<dl class="resources-properties"><dt class="property-required"
             title="Required">
         <span id="jobname_nodejs">
 <a href="#jobname_nodejs" style="color: inherit; text-decoration: inherit;">job<wbr>Name</a>
@@ -571,8 +564,7 @@ The Function resource accepts the following [input]({{< relref "/docs/intro/conc
         <span class="property-indicator"></span>
         <span class="property-type">string</span>
     </dt>
-    <dd>{{% md %}}The name of the streaming job.{{% /md %}}</dd>
-    <dt class="property-required"
+    <dd>{{% md %}}The name of the streaming job.{{% /md %}}</dd><dt class="property-required"
             title="Required">
         <span id="resourcegroupname_nodejs">
 <a href="#resourcegroupname_nodejs" style="color: inherit; text-decoration: inherit;">resource<wbr>Group<wbr>Name</a>
@@ -580,8 +572,7 @@ The Function resource accepts the following [input]({{< relref "/docs/intro/conc
         <span class="property-indicator"></span>
         <span class="property-type">string</span>
     </dt>
-    <dd>{{% md %}}The name of the resource group that contains the resource. You can obtain this value from the Azure Resource Manager API or the portal.{{% /md %}}</dd>
-    <dt class="property-optional"
+    <dd>{{% md %}}The name of the resource group that contains the resource. You can obtain this value from the Azure Resource Manager API or the portal.{{% /md %}}</dd><dt class="property-optional"
             title="Optional">
         <span id="functionname_nodejs">
 <a href="#functionname_nodejs" style="color: inherit; text-decoration: inherit;">function<wbr>Name</a>
@@ -589,8 +580,7 @@ The Function resource accepts the following [input]({{< relref "/docs/intro/conc
         <span class="property-indicator"></span>
         <span class="property-type">string</span>
     </dt>
-    <dd>{{% md %}}The name of the function.{{% /md %}}</dd>
-    <dt class="property-optional"
+    <dd>{{% md %}}The name of the function.{{% /md %}}</dd><dt class="property-optional"
             title="Optional">
         <span id="name_nodejs">
 <a href="#name_nodejs" style="color: inherit; text-decoration: inherit;">name</a>
@@ -598,8 +588,7 @@ The Function resource accepts the following [input]({{< relref "/docs/intro/conc
         <span class="property-indicator"></span>
         <span class="property-type">string</span>
     </dt>
-    <dd>{{% md %}}Resource name{{% /md %}}</dd>
-    <dt class="property-optional"
+    <dd>{{% md %}}Resource name{{% /md %}}</dd><dt class="property-optional"
             title="Optional">
         <span id="properties_nodejs">
 <a href="#properties_nodejs" style="color: inherit; text-decoration: inherit;">properties</a>
@@ -607,14 +596,11 @@ The Function resource accepts the following [input]({{< relref "/docs/intro/conc
         <span class="property-indicator"></span>
         <span class="property-type"><a href="#scalarfunctionproperties">Scalar<wbr>Function<wbr>Properties</a></span>
     </dt>
-    <dd>{{% md %}}The properties that are associated with a function.{{% /md %}}</dd>
-</dl>
+    <dd>{{% md %}}The properties that are associated with a function.{{% /md %}}</dd></dl>
 {{% /choosable %}}
 
 {{% choosable language python %}}
-<dl class="resources-properties">
-
-    <dt class="property-required"
+<dl class="resources-properties"><dt class="property-required"
             title="Required">
         <span id="job_name_python">
 <a href="#job_name_python" style="color: inherit; text-decoration: inherit;">job_<wbr>name</a>
@@ -622,8 +608,7 @@ The Function resource accepts the following [input]({{< relref "/docs/intro/conc
         <span class="property-indicator"></span>
         <span class="property-type">str</span>
     </dt>
-    <dd>{{% md %}}The name of the streaming job.{{% /md %}}</dd>
-    <dt class="property-required"
+    <dd>{{% md %}}The name of the streaming job.{{% /md %}}</dd><dt class="property-required"
             title="Required">
         <span id="resource_group_name_python">
 <a href="#resource_group_name_python" style="color: inherit; text-decoration: inherit;">resource_<wbr>group_<wbr>name</a>
@@ -631,8 +616,7 @@ The Function resource accepts the following [input]({{< relref "/docs/intro/conc
         <span class="property-indicator"></span>
         <span class="property-type">str</span>
     </dt>
-    <dd>{{% md %}}The name of the resource group that contains the resource. You can obtain this value from the Azure Resource Manager API or the portal.{{% /md %}}</dd>
-    <dt class="property-optional"
+    <dd>{{% md %}}The name of the resource group that contains the resource. You can obtain this value from the Azure Resource Manager API or the portal.{{% /md %}}</dd><dt class="property-optional"
             title="Optional">
         <span id="function_name_python">
 <a href="#function_name_python" style="color: inherit; text-decoration: inherit;">function_<wbr>name</a>
@@ -640,8 +624,7 @@ The Function resource accepts the following [input]({{< relref "/docs/intro/conc
         <span class="property-indicator"></span>
         <span class="property-type">str</span>
     </dt>
-    <dd>{{% md %}}The name of the function.{{% /md %}}</dd>
-    <dt class="property-optional"
+    <dd>{{% md %}}The name of the function.{{% /md %}}</dd><dt class="property-optional"
             title="Optional">
         <span id="name_python">
 <a href="#name_python" style="color: inherit; text-decoration: inherit;">name</a>
@@ -649,8 +632,7 @@ The Function resource accepts the following [input]({{< relref "/docs/intro/conc
         <span class="property-indicator"></span>
         <span class="property-type">str</span>
     </dt>
-    <dd>{{% md %}}Resource name{{% /md %}}</dd>
-    <dt class="property-optional"
+    <dd>{{% md %}}Resource name{{% /md %}}</dd><dt class="property-optional"
             title="Optional">
         <span id="properties_python">
 <a href="#properties_python" style="color: inherit; text-decoration: inherit;">properties</a>
@@ -658,8 +640,7 @@ The Function resource accepts the following [input]({{< relref "/docs/intro/conc
         <span class="property-indicator"></span>
         <span class="property-type"><a href="#scalarfunctionproperties">Scalar<wbr>Function<wbr>Properties<wbr>Args</a></span>
     </dt>
-    <dd>{{% md %}}The properties that are associated with a function.{{% /md %}}</dd>
-</dl>
+    <dd>{{% md %}}The properties that are associated with a function.{{% /md %}}</dd></dl>
 {{% /choosable %}}
 
 
@@ -670,9 +651,7 @@ All [input](#inputs) properties are implicitly available as output properties. A
 
 
 {{% choosable language csharp %}}
-<dl class="resources-properties">
-
-    <dt class="property-"
+<dl class="resources-properties"><dt class="property-"
             title="">
         <span id="id_csharp">
 <a href="#id_csharp" style="color: inherit; text-decoration: inherit;">Id</a>
@@ -680,8 +659,7 @@ All [input](#inputs) properties are implicitly available as output properties. A
         <span class="property-indicator"></span>
         <span class="property-type">string</span>
     </dt>
-    <dd>{{% md %}}The provider-assigned unique ID for this managed resource.{{% /md %}}</dd>
-    <dt class="property-"
+    <dd>{{% md %}}The provider-assigned unique ID for this managed resource.{{% /md %}}</dd><dt class="property-"
             title="">
         <span id="type_csharp">
 <a href="#type_csharp" style="color: inherit; text-decoration: inherit;">Type</a>
@@ -689,14 +667,11 @@ All [input](#inputs) properties are implicitly available as output properties. A
         <span class="property-indicator"></span>
         <span class="property-type">string</span>
     </dt>
-    <dd>{{% md %}}Resource type{{% /md %}}</dd>
-</dl>
+    <dd>{{% md %}}Resource type{{% /md %}}</dd></dl>
 {{% /choosable %}}
 
 {{% choosable language go %}}
-<dl class="resources-properties">
-
-    <dt class="property-"
+<dl class="resources-properties"><dt class="property-"
             title="">
         <span id="id_go">
 <a href="#id_go" style="color: inherit; text-decoration: inherit;">Id</a>
@@ -704,8 +679,7 @@ All [input](#inputs) properties are implicitly available as output properties. A
         <span class="property-indicator"></span>
         <span class="property-type">string</span>
     </dt>
-    <dd>{{% md %}}The provider-assigned unique ID for this managed resource.{{% /md %}}</dd>
-    <dt class="property-"
+    <dd>{{% md %}}The provider-assigned unique ID for this managed resource.{{% /md %}}</dd><dt class="property-"
             title="">
         <span id="type_go">
 <a href="#type_go" style="color: inherit; text-decoration: inherit;">Type</a>
@@ -713,14 +687,11 @@ All [input](#inputs) properties are implicitly available as output properties. A
         <span class="property-indicator"></span>
         <span class="property-type">string</span>
     </dt>
-    <dd>{{% md %}}Resource type{{% /md %}}</dd>
-</dl>
+    <dd>{{% md %}}Resource type{{% /md %}}</dd></dl>
 {{% /choosable %}}
 
 {{% choosable language nodejs %}}
-<dl class="resources-properties">
-
-    <dt class="property-"
+<dl class="resources-properties"><dt class="property-"
             title="">
         <span id="id_nodejs">
 <a href="#id_nodejs" style="color: inherit; text-decoration: inherit;">id</a>
@@ -728,8 +699,7 @@ All [input](#inputs) properties are implicitly available as output properties. A
         <span class="property-indicator"></span>
         <span class="property-type">string</span>
     </dt>
-    <dd>{{% md %}}The provider-assigned unique ID for this managed resource.{{% /md %}}</dd>
-    <dt class="property-"
+    <dd>{{% md %}}The provider-assigned unique ID for this managed resource.{{% /md %}}</dd><dt class="property-"
             title="">
         <span id="type_nodejs">
 <a href="#type_nodejs" style="color: inherit; text-decoration: inherit;">type</a>
@@ -737,14 +707,11 @@ All [input](#inputs) properties are implicitly available as output properties. A
         <span class="property-indicator"></span>
         <span class="property-type">string</span>
     </dt>
-    <dd>{{% md %}}Resource type{{% /md %}}</dd>
-</dl>
+    <dd>{{% md %}}Resource type{{% /md %}}</dd></dl>
 {{% /choosable %}}
 
 {{% choosable language python %}}
-<dl class="resources-properties">
-
-    <dt class="property-"
+<dl class="resources-properties"><dt class="property-"
             title="">
         <span id="id_python">
 <a href="#id_python" style="color: inherit; text-decoration: inherit;">id</a>
@@ -752,8 +719,7 @@ All [input](#inputs) properties are implicitly available as output properties. A
         <span class="property-indicator"></span>
         <span class="property-type">str</span>
     </dt>
-    <dd>{{% md %}}The provider-assigned unique ID for this managed resource.{{% /md %}}</dd>
-    <dt class="property-"
+    <dd>{{% md %}}The provider-assigned unique ID for this managed resource.{{% /md %}}</dd><dt class="property-"
             title="">
         <span id="type_python">
 <a href="#type_python" style="color: inherit; text-decoration: inherit;">type</a>
@@ -761,8 +727,7 @@ All [input](#inputs) properties are implicitly available as output properties. A
         <span class="property-indicator"></span>
         <span class="property-type">str</span>
     </dt>
-    <dd>{{% md %}}Resource type{{% /md %}}</dd>
-</dl>
+    <dd>{{% md %}}Resource type{{% /md %}}</dd></dl>
 {{% /choosable %}}
 
 
@@ -778,9 +743,7 @@ All [input](#inputs) properties are implicitly available as output properties. A
 <h4 id="azuremachinelearningwebservicefunctionbinding">Azure<wbr>Machine<wbr>Learning<wbr>Web<wbr>Service<wbr>Function<wbr>Binding</h4>
 
 {{% choosable language csharp %}}
-<dl class="resources-properties">
-
-    <dt class="property-optional"
+<dl class="resources-properties"><dt class="property-optional"
             title="Optional">
         <span id="apikey_csharp">
 <a href="#apikey_csharp" style="color: inherit; text-decoration: inherit;">Api<wbr>Key</a>
@@ -788,8 +751,7 @@ All [input](#inputs) properties are implicitly available as output properties. A
         <span class="property-indicator"></span>
         <span class="property-type">string</span>
     </dt>
-    <dd>{{% md %}}The API key used to authenticate with Request-Response endpoint.{{% /md %}}</dd>
-    <dt class="property-optional"
+    <dd>{{% md %}}The API key used to authenticate with Request-Response endpoint.{{% /md %}}</dd><dt class="property-optional"
             title="Optional">
         <span id="batchsize_csharp">
 <a href="#batchsize_csharp" style="color: inherit; text-decoration: inherit;">Batch<wbr>Size</a>
@@ -797,8 +759,7 @@ All [input](#inputs) properties are implicitly available as output properties. A
         <span class="property-indicator"></span>
         <span class="property-type">int</span>
     </dt>
-    <dd>{{% md %}}Number between 1 and 10000 describing maximum number of rows for every Azure ML RRS execute request. Default is 1000.{{% /md %}}</dd>
-    <dt class="property-optional"
+    <dd>{{% md %}}Number between 1 and 10000 describing maximum number of rows for every Azure ML RRS execute request. Default is 1000.{{% /md %}}</dd><dt class="property-optional"
             title="Optional">
         <span id="endpoint_csharp">
 <a href="#endpoint_csharp" style="color: inherit; text-decoration: inherit;">Endpoint</a>
@@ -806,8 +767,7 @@ All [input](#inputs) properties are implicitly available as output properties. A
         <span class="property-indicator"></span>
         <span class="property-type">string</span>
     </dt>
-    <dd>{{% md %}}The Request-Response execute endpoint of the Azure Machine Learning web service. Find out more here: https://docs.microsoft.com/en-us/azure/machine-learning/machine-learning-consume-web-services#request-response-service-rrs{{% /md %}}</dd>
-    <dt class="property-optional"
+    <dd>{{% md %}}The Request-Response execute endpoint of the Azure Machine Learning web service. Find out more here: https://docs.microsoft.com/en-us/azure/machine-learning/machine-learning-consume-web-services#request-response-service-rrs{{% /md %}}</dd><dt class="property-optional"
             title="Optional">
         <span id="inputs_csharp">
 <a href="#inputs_csharp" style="color: inherit; text-decoration: inherit;">Inputs</a>
@@ -815,8 +775,7 @@ All [input](#inputs) properties are implicitly available as output properties. A
         <span class="property-indicator"></span>
         <span class="property-type"><a href="#azuremachinelearningwebserviceinputs">Pulumi.<wbr>Azure<wbr>Native.<wbr>Stream<wbr>Analytics.<wbr>Inputs.<wbr>Azure<wbr>Machine<wbr>Learning<wbr>Web<wbr>Service<wbr>Inputs<wbr>Args</a></span>
     </dt>
-    <dd>{{% md %}}The inputs for the Azure Machine Learning web service endpoint.{{% /md %}}</dd>
-    <dt class="property-optional"
+    <dd>{{% md %}}The inputs for the Azure Machine Learning web service endpoint.{{% /md %}}</dd><dt class="property-optional"
             title="Optional">
         <span id="outputs_csharp">
 <a href="#outputs_csharp" style="color: inherit; text-decoration: inherit;">Outputs</a>
@@ -824,14 +783,11 @@ All [input](#inputs) properties are implicitly available as output properties. A
         <span class="property-indicator"></span>
         <span class="property-type"><a href="#azuremachinelearningwebserviceoutputcolumn">List&lt;Pulumi.<wbr>Azure<wbr>Native.<wbr>Stream<wbr>Analytics.<wbr>Inputs.<wbr>Azure<wbr>Machine<wbr>Learning<wbr>Web<wbr>Service<wbr>Output<wbr>Column<wbr>Args&gt;</a></span>
     </dt>
-    <dd>{{% md %}}A list of outputs from the Azure Machine Learning web service endpoint execution.{{% /md %}}</dd>
-</dl>
+    <dd>{{% md %}}A list of outputs from the Azure Machine Learning web service endpoint execution.{{% /md %}}</dd></dl>
 {{% /choosable %}}
 
 {{% choosable language go %}}
-<dl class="resources-properties">
-
-    <dt class="property-optional"
+<dl class="resources-properties"><dt class="property-optional"
             title="Optional">
         <span id="apikey_go">
 <a href="#apikey_go" style="color: inherit; text-decoration: inherit;">Api<wbr>Key</a>
@@ -839,8 +795,7 @@ All [input](#inputs) properties are implicitly available as output properties. A
         <span class="property-indicator"></span>
         <span class="property-type">string</span>
     </dt>
-    <dd>{{% md %}}The API key used to authenticate with Request-Response endpoint.{{% /md %}}</dd>
-    <dt class="property-optional"
+    <dd>{{% md %}}The API key used to authenticate with Request-Response endpoint.{{% /md %}}</dd><dt class="property-optional"
             title="Optional">
         <span id="batchsize_go">
 <a href="#batchsize_go" style="color: inherit; text-decoration: inherit;">Batch<wbr>Size</a>
@@ -848,8 +803,7 @@ All [input](#inputs) properties are implicitly available as output properties. A
         <span class="property-indicator"></span>
         <span class="property-type">int</span>
     </dt>
-    <dd>{{% md %}}Number between 1 and 10000 describing maximum number of rows for every Azure ML RRS execute request. Default is 1000.{{% /md %}}</dd>
-    <dt class="property-optional"
+    <dd>{{% md %}}Number between 1 and 10000 describing maximum number of rows for every Azure ML RRS execute request. Default is 1000.{{% /md %}}</dd><dt class="property-optional"
             title="Optional">
         <span id="endpoint_go">
 <a href="#endpoint_go" style="color: inherit; text-decoration: inherit;">Endpoint</a>
@@ -857,8 +811,7 @@ All [input](#inputs) properties are implicitly available as output properties. A
         <span class="property-indicator"></span>
         <span class="property-type">string</span>
     </dt>
-    <dd>{{% md %}}The Request-Response execute endpoint of the Azure Machine Learning web service. Find out more here: https://docs.microsoft.com/en-us/azure/machine-learning/machine-learning-consume-web-services#request-response-service-rrs{{% /md %}}</dd>
-    <dt class="property-optional"
+    <dd>{{% md %}}The Request-Response execute endpoint of the Azure Machine Learning web service. Find out more here: https://docs.microsoft.com/en-us/azure/machine-learning/machine-learning-consume-web-services#request-response-service-rrs{{% /md %}}</dd><dt class="property-optional"
             title="Optional">
         <span id="inputs_go">
 <a href="#inputs_go" style="color: inherit; text-decoration: inherit;">Inputs</a>
@@ -866,8 +819,7 @@ All [input](#inputs) properties are implicitly available as output properties. A
         <span class="property-indicator"></span>
         <span class="property-type"><a href="#azuremachinelearningwebserviceinputs">Azure<wbr>Machine<wbr>Learning<wbr>Web<wbr>Service<wbr>Inputs</a></span>
     </dt>
-    <dd>{{% md %}}The inputs for the Azure Machine Learning web service endpoint.{{% /md %}}</dd>
-    <dt class="property-optional"
+    <dd>{{% md %}}The inputs for the Azure Machine Learning web service endpoint.{{% /md %}}</dd><dt class="property-optional"
             title="Optional">
         <span id="outputs_go">
 <a href="#outputs_go" style="color: inherit; text-decoration: inherit;">Outputs</a>
@@ -875,14 +827,11 @@ All [input](#inputs) properties are implicitly available as output properties. A
         <span class="property-indicator"></span>
         <span class="property-type"><a href="#azuremachinelearningwebserviceoutputcolumn">[]Azure<wbr>Machine<wbr>Learning<wbr>Web<wbr>Service<wbr>Output<wbr>Column</a></span>
     </dt>
-    <dd>{{% md %}}A list of outputs from the Azure Machine Learning web service endpoint execution.{{% /md %}}</dd>
-</dl>
+    <dd>{{% md %}}A list of outputs from the Azure Machine Learning web service endpoint execution.{{% /md %}}</dd></dl>
 {{% /choosable %}}
 
 {{% choosable language nodejs %}}
-<dl class="resources-properties">
-
-    <dt class="property-optional"
+<dl class="resources-properties"><dt class="property-optional"
             title="Optional">
         <span id="apikey_nodejs">
 <a href="#apikey_nodejs" style="color: inherit; text-decoration: inherit;">api<wbr>Key</a>
@@ -890,8 +839,7 @@ All [input](#inputs) properties are implicitly available as output properties. A
         <span class="property-indicator"></span>
         <span class="property-type">string</span>
     </dt>
-    <dd>{{% md %}}The API key used to authenticate with Request-Response endpoint.{{% /md %}}</dd>
-    <dt class="property-optional"
+    <dd>{{% md %}}The API key used to authenticate with Request-Response endpoint.{{% /md %}}</dd><dt class="property-optional"
             title="Optional">
         <span id="batchsize_nodejs">
 <a href="#batchsize_nodejs" style="color: inherit; text-decoration: inherit;">batch<wbr>Size</a>
@@ -899,8 +847,7 @@ All [input](#inputs) properties are implicitly available as output properties. A
         <span class="property-indicator"></span>
         <span class="property-type">number</span>
     </dt>
-    <dd>{{% md %}}Number between 1 and 10000 describing maximum number of rows for every Azure ML RRS execute request. Default is 1000.{{% /md %}}</dd>
-    <dt class="property-optional"
+    <dd>{{% md %}}Number between 1 and 10000 describing maximum number of rows for every Azure ML RRS execute request. Default is 1000.{{% /md %}}</dd><dt class="property-optional"
             title="Optional">
         <span id="endpoint_nodejs">
 <a href="#endpoint_nodejs" style="color: inherit; text-decoration: inherit;">endpoint</a>
@@ -908,8 +855,7 @@ All [input](#inputs) properties are implicitly available as output properties. A
         <span class="property-indicator"></span>
         <span class="property-type">string</span>
     </dt>
-    <dd>{{% md %}}The Request-Response execute endpoint of the Azure Machine Learning web service. Find out more here: https://docs.microsoft.com/en-us/azure/machine-learning/machine-learning-consume-web-services#request-response-service-rrs{{% /md %}}</dd>
-    <dt class="property-optional"
+    <dd>{{% md %}}The Request-Response execute endpoint of the Azure Machine Learning web service. Find out more here: https://docs.microsoft.com/en-us/azure/machine-learning/machine-learning-consume-web-services#request-response-service-rrs{{% /md %}}</dd><dt class="property-optional"
             title="Optional">
         <span id="inputs_nodejs">
 <a href="#inputs_nodejs" style="color: inherit; text-decoration: inherit;">inputs</a>
@@ -917,8 +863,7 @@ All [input](#inputs) properties are implicitly available as output properties. A
         <span class="property-indicator"></span>
         <span class="property-type"><a href="#azuremachinelearningwebserviceinputs">Azure<wbr>Machine<wbr>Learning<wbr>Web<wbr>Service<wbr>Inputs</a></span>
     </dt>
-    <dd>{{% md %}}The inputs for the Azure Machine Learning web service endpoint.{{% /md %}}</dd>
-    <dt class="property-optional"
+    <dd>{{% md %}}The inputs for the Azure Machine Learning web service endpoint.{{% /md %}}</dd><dt class="property-optional"
             title="Optional">
         <span id="outputs_nodejs">
 <a href="#outputs_nodejs" style="color: inherit; text-decoration: inherit;">outputs</a>
@@ -926,14 +871,11 @@ All [input](#inputs) properties are implicitly available as output properties. A
         <span class="property-indicator"></span>
         <span class="property-type"><a href="#azuremachinelearningwebserviceoutputcolumn">Azure<wbr>Machine<wbr>Learning<wbr>Web<wbr>Service<wbr>Output<wbr>Column[]</a></span>
     </dt>
-    <dd>{{% md %}}A list of outputs from the Azure Machine Learning web service endpoint execution.{{% /md %}}</dd>
-</dl>
+    <dd>{{% md %}}A list of outputs from the Azure Machine Learning web service endpoint execution.{{% /md %}}</dd></dl>
 {{% /choosable %}}
 
 {{% choosable language python %}}
-<dl class="resources-properties">
-
-    <dt class="property-optional"
+<dl class="resources-properties"><dt class="property-optional"
             title="Optional">
         <span id="api_key_python">
 <a href="#api_key_python" style="color: inherit; text-decoration: inherit;">api_<wbr>key</a>
@@ -941,8 +883,7 @@ All [input](#inputs) properties are implicitly available as output properties. A
         <span class="property-indicator"></span>
         <span class="property-type">str</span>
     </dt>
-    <dd>{{% md %}}The API key used to authenticate with Request-Response endpoint.{{% /md %}}</dd>
-    <dt class="property-optional"
+    <dd>{{% md %}}The API key used to authenticate with Request-Response endpoint.{{% /md %}}</dd><dt class="property-optional"
             title="Optional">
         <span id="batch_size_python">
 <a href="#batch_size_python" style="color: inherit; text-decoration: inherit;">batch_<wbr>size</a>
@@ -950,8 +891,7 @@ All [input](#inputs) properties are implicitly available as output properties. A
         <span class="property-indicator"></span>
         <span class="property-type">int</span>
     </dt>
-    <dd>{{% md %}}Number between 1 and 10000 describing maximum number of rows for every Azure ML RRS execute request. Default is 1000.{{% /md %}}</dd>
-    <dt class="property-optional"
+    <dd>{{% md %}}Number between 1 and 10000 describing maximum number of rows for every Azure ML RRS execute request. Default is 1000.{{% /md %}}</dd><dt class="property-optional"
             title="Optional">
         <span id="endpoint_python">
 <a href="#endpoint_python" style="color: inherit; text-decoration: inherit;">endpoint</a>
@@ -959,8 +899,7 @@ All [input](#inputs) properties are implicitly available as output properties. A
         <span class="property-indicator"></span>
         <span class="property-type">str</span>
     </dt>
-    <dd>{{% md %}}The Request-Response execute endpoint of the Azure Machine Learning web service. Find out more here: https://docs.microsoft.com/en-us/azure/machine-learning/machine-learning-consume-web-services#request-response-service-rrs{{% /md %}}</dd>
-    <dt class="property-optional"
+    <dd>{{% md %}}The Request-Response execute endpoint of the Azure Machine Learning web service. Find out more here: https://docs.microsoft.com/en-us/azure/machine-learning/machine-learning-consume-web-services#request-response-service-rrs{{% /md %}}</dd><dt class="property-optional"
             title="Optional">
         <span id="inputs_python">
 <a href="#inputs_python" style="color: inherit; text-decoration: inherit;">inputs</a>
@@ -968,8 +907,7 @@ All [input](#inputs) properties are implicitly available as output properties. A
         <span class="property-indicator"></span>
         <span class="property-type"><a href="#azuremachinelearningwebserviceinputs">Azure<wbr>Machine<wbr>Learning<wbr>Web<wbr>Service<wbr>Inputs<wbr>Args</a></span>
     </dt>
-    <dd>{{% md %}}The inputs for the Azure Machine Learning web service endpoint.{{% /md %}}</dd>
-    <dt class="property-optional"
+    <dd>{{% md %}}The inputs for the Azure Machine Learning web service endpoint.{{% /md %}}</dd><dt class="property-optional"
             title="Optional">
         <span id="outputs_python">
 <a href="#outputs_python" style="color: inherit; text-decoration: inherit;">outputs</a>
@@ -977,16 +915,13 @@ All [input](#inputs) properties are implicitly available as output properties. A
         <span class="property-indicator"></span>
         <span class="property-type"><a href="#azuremachinelearningwebserviceoutputcolumn">Sequence[Azure<wbr>Machine<wbr>Learning<wbr>Web<wbr>Service<wbr>Output<wbr>Column<wbr>Args]</a></span>
     </dt>
-    <dd>{{% md %}}A list of outputs from the Azure Machine Learning web service endpoint execution.{{% /md %}}</dd>
-</dl>
+    <dd>{{% md %}}A list of outputs from the Azure Machine Learning web service endpoint execution.{{% /md %}}</dd></dl>
 {{% /choosable %}}
 
 <h4 id="azuremachinelearningwebservicefunctionbindingresponse">Azure<wbr>Machine<wbr>Learning<wbr>Web<wbr>Service<wbr>Function<wbr>Binding<wbr>Response</h4>
 
 {{% choosable language csharp %}}
-<dl class="resources-properties">
-
-    <dt class="property-optional"
+<dl class="resources-properties"><dt class="property-optional"
             title="Optional">
         <span id="apikey_csharp">
 <a href="#apikey_csharp" style="color: inherit; text-decoration: inherit;">Api<wbr>Key</a>
@@ -994,8 +929,7 @@ All [input](#inputs) properties are implicitly available as output properties. A
         <span class="property-indicator"></span>
         <span class="property-type">string</span>
     </dt>
-    <dd>{{% md %}}The API key used to authenticate with Request-Response endpoint.{{% /md %}}</dd>
-    <dt class="property-optional"
+    <dd>{{% md %}}The API key used to authenticate with Request-Response endpoint.{{% /md %}}</dd><dt class="property-optional"
             title="Optional">
         <span id="batchsize_csharp">
 <a href="#batchsize_csharp" style="color: inherit; text-decoration: inherit;">Batch<wbr>Size</a>
@@ -1003,8 +937,7 @@ All [input](#inputs) properties are implicitly available as output properties. A
         <span class="property-indicator"></span>
         <span class="property-type">int</span>
     </dt>
-    <dd>{{% md %}}Number between 1 and 10000 describing maximum number of rows for every Azure ML RRS execute request. Default is 1000.{{% /md %}}</dd>
-    <dt class="property-optional"
+    <dd>{{% md %}}Number between 1 and 10000 describing maximum number of rows for every Azure ML RRS execute request. Default is 1000.{{% /md %}}</dd><dt class="property-optional"
             title="Optional">
         <span id="endpoint_csharp">
 <a href="#endpoint_csharp" style="color: inherit; text-decoration: inherit;">Endpoint</a>
@@ -1012,8 +945,7 @@ All [input](#inputs) properties are implicitly available as output properties. A
         <span class="property-indicator"></span>
         <span class="property-type">string</span>
     </dt>
-    <dd>{{% md %}}The Request-Response execute endpoint of the Azure Machine Learning web service. Find out more here: https://docs.microsoft.com/en-us/azure/machine-learning/machine-learning-consume-web-services#request-response-service-rrs{{% /md %}}</dd>
-    <dt class="property-optional"
+    <dd>{{% md %}}The Request-Response execute endpoint of the Azure Machine Learning web service. Find out more here: https://docs.microsoft.com/en-us/azure/machine-learning/machine-learning-consume-web-services#request-response-service-rrs{{% /md %}}</dd><dt class="property-optional"
             title="Optional">
         <span id="inputs_csharp">
 <a href="#inputs_csharp" style="color: inherit; text-decoration: inherit;">Inputs</a>
@@ -1021,8 +953,7 @@ All [input](#inputs) properties are implicitly available as output properties. A
         <span class="property-indicator"></span>
         <span class="property-type"><a href="#azuremachinelearningwebserviceinputsresponse">Pulumi.<wbr>Azure<wbr>Native.<wbr>Stream<wbr>Analytics.<wbr>Inputs.<wbr>Azure<wbr>Machine<wbr>Learning<wbr>Web<wbr>Service<wbr>Inputs<wbr>Response<wbr>Args</a></span>
     </dt>
-    <dd>{{% md %}}The inputs for the Azure Machine Learning web service endpoint.{{% /md %}}</dd>
-    <dt class="property-optional"
+    <dd>{{% md %}}The inputs for the Azure Machine Learning web service endpoint.{{% /md %}}</dd><dt class="property-optional"
             title="Optional">
         <span id="outputs_csharp">
 <a href="#outputs_csharp" style="color: inherit; text-decoration: inherit;">Outputs</a>
@@ -1030,14 +961,11 @@ All [input](#inputs) properties are implicitly available as output properties. A
         <span class="property-indicator"></span>
         <span class="property-type"><a href="#azuremachinelearningwebserviceoutputcolumnresponse">List&lt;Pulumi.<wbr>Azure<wbr>Native.<wbr>Stream<wbr>Analytics.<wbr>Inputs.<wbr>Azure<wbr>Machine<wbr>Learning<wbr>Web<wbr>Service<wbr>Output<wbr>Column<wbr>Response<wbr>Args&gt;</a></span>
     </dt>
-    <dd>{{% md %}}A list of outputs from the Azure Machine Learning web service endpoint execution.{{% /md %}}</dd>
-</dl>
+    <dd>{{% md %}}A list of outputs from the Azure Machine Learning web service endpoint execution.{{% /md %}}</dd></dl>
 {{% /choosable %}}
 
 {{% choosable language go %}}
-<dl class="resources-properties">
-
-    <dt class="property-optional"
+<dl class="resources-properties"><dt class="property-optional"
             title="Optional">
         <span id="apikey_go">
 <a href="#apikey_go" style="color: inherit; text-decoration: inherit;">Api<wbr>Key</a>
@@ -1045,8 +973,7 @@ All [input](#inputs) properties are implicitly available as output properties. A
         <span class="property-indicator"></span>
         <span class="property-type">string</span>
     </dt>
-    <dd>{{% md %}}The API key used to authenticate with Request-Response endpoint.{{% /md %}}</dd>
-    <dt class="property-optional"
+    <dd>{{% md %}}The API key used to authenticate with Request-Response endpoint.{{% /md %}}</dd><dt class="property-optional"
             title="Optional">
         <span id="batchsize_go">
 <a href="#batchsize_go" style="color: inherit; text-decoration: inherit;">Batch<wbr>Size</a>
@@ -1054,8 +981,7 @@ All [input](#inputs) properties are implicitly available as output properties. A
         <span class="property-indicator"></span>
         <span class="property-type">int</span>
     </dt>
-    <dd>{{% md %}}Number between 1 and 10000 describing maximum number of rows for every Azure ML RRS execute request. Default is 1000.{{% /md %}}</dd>
-    <dt class="property-optional"
+    <dd>{{% md %}}Number between 1 and 10000 describing maximum number of rows for every Azure ML RRS execute request. Default is 1000.{{% /md %}}</dd><dt class="property-optional"
             title="Optional">
         <span id="endpoint_go">
 <a href="#endpoint_go" style="color: inherit; text-decoration: inherit;">Endpoint</a>
@@ -1063,8 +989,7 @@ All [input](#inputs) properties are implicitly available as output properties. A
         <span class="property-indicator"></span>
         <span class="property-type">string</span>
     </dt>
-    <dd>{{% md %}}The Request-Response execute endpoint of the Azure Machine Learning web service. Find out more here: https://docs.microsoft.com/en-us/azure/machine-learning/machine-learning-consume-web-services#request-response-service-rrs{{% /md %}}</dd>
-    <dt class="property-optional"
+    <dd>{{% md %}}The Request-Response execute endpoint of the Azure Machine Learning web service. Find out more here: https://docs.microsoft.com/en-us/azure/machine-learning/machine-learning-consume-web-services#request-response-service-rrs{{% /md %}}</dd><dt class="property-optional"
             title="Optional">
         <span id="inputs_go">
 <a href="#inputs_go" style="color: inherit; text-decoration: inherit;">Inputs</a>
@@ -1072,8 +997,7 @@ All [input](#inputs) properties are implicitly available as output properties. A
         <span class="property-indicator"></span>
         <span class="property-type"><a href="#azuremachinelearningwebserviceinputsresponse">Azure<wbr>Machine<wbr>Learning<wbr>Web<wbr>Service<wbr>Inputs<wbr>Response</a></span>
     </dt>
-    <dd>{{% md %}}The inputs for the Azure Machine Learning web service endpoint.{{% /md %}}</dd>
-    <dt class="property-optional"
+    <dd>{{% md %}}The inputs for the Azure Machine Learning web service endpoint.{{% /md %}}</dd><dt class="property-optional"
             title="Optional">
         <span id="outputs_go">
 <a href="#outputs_go" style="color: inherit; text-decoration: inherit;">Outputs</a>
@@ -1081,14 +1005,11 @@ All [input](#inputs) properties are implicitly available as output properties. A
         <span class="property-indicator"></span>
         <span class="property-type"><a href="#azuremachinelearningwebserviceoutputcolumnresponse">[]Azure<wbr>Machine<wbr>Learning<wbr>Web<wbr>Service<wbr>Output<wbr>Column<wbr>Response</a></span>
     </dt>
-    <dd>{{% md %}}A list of outputs from the Azure Machine Learning web service endpoint execution.{{% /md %}}</dd>
-</dl>
+    <dd>{{% md %}}A list of outputs from the Azure Machine Learning web service endpoint execution.{{% /md %}}</dd></dl>
 {{% /choosable %}}
 
 {{% choosable language nodejs %}}
-<dl class="resources-properties">
-
-    <dt class="property-optional"
+<dl class="resources-properties"><dt class="property-optional"
             title="Optional">
         <span id="apikey_nodejs">
 <a href="#apikey_nodejs" style="color: inherit; text-decoration: inherit;">api<wbr>Key</a>
@@ -1096,8 +1017,7 @@ All [input](#inputs) properties are implicitly available as output properties. A
         <span class="property-indicator"></span>
         <span class="property-type">string</span>
     </dt>
-    <dd>{{% md %}}The API key used to authenticate with Request-Response endpoint.{{% /md %}}</dd>
-    <dt class="property-optional"
+    <dd>{{% md %}}The API key used to authenticate with Request-Response endpoint.{{% /md %}}</dd><dt class="property-optional"
             title="Optional">
         <span id="batchsize_nodejs">
 <a href="#batchsize_nodejs" style="color: inherit; text-decoration: inherit;">batch<wbr>Size</a>
@@ -1105,8 +1025,7 @@ All [input](#inputs) properties are implicitly available as output properties. A
         <span class="property-indicator"></span>
         <span class="property-type">number</span>
     </dt>
-    <dd>{{% md %}}Number between 1 and 10000 describing maximum number of rows for every Azure ML RRS execute request. Default is 1000.{{% /md %}}</dd>
-    <dt class="property-optional"
+    <dd>{{% md %}}Number between 1 and 10000 describing maximum number of rows for every Azure ML RRS execute request. Default is 1000.{{% /md %}}</dd><dt class="property-optional"
             title="Optional">
         <span id="endpoint_nodejs">
 <a href="#endpoint_nodejs" style="color: inherit; text-decoration: inherit;">endpoint</a>
@@ -1114,8 +1033,7 @@ All [input](#inputs) properties are implicitly available as output properties. A
         <span class="property-indicator"></span>
         <span class="property-type">string</span>
     </dt>
-    <dd>{{% md %}}The Request-Response execute endpoint of the Azure Machine Learning web service. Find out more here: https://docs.microsoft.com/en-us/azure/machine-learning/machine-learning-consume-web-services#request-response-service-rrs{{% /md %}}</dd>
-    <dt class="property-optional"
+    <dd>{{% md %}}The Request-Response execute endpoint of the Azure Machine Learning web service. Find out more here: https://docs.microsoft.com/en-us/azure/machine-learning/machine-learning-consume-web-services#request-response-service-rrs{{% /md %}}</dd><dt class="property-optional"
             title="Optional">
         <span id="inputs_nodejs">
 <a href="#inputs_nodejs" style="color: inherit; text-decoration: inherit;">inputs</a>
@@ -1123,8 +1041,7 @@ All [input](#inputs) properties are implicitly available as output properties. A
         <span class="property-indicator"></span>
         <span class="property-type"><a href="#azuremachinelearningwebserviceinputsresponse">Azure<wbr>Machine<wbr>Learning<wbr>Web<wbr>Service<wbr>Inputs<wbr>Response</a></span>
     </dt>
-    <dd>{{% md %}}The inputs for the Azure Machine Learning web service endpoint.{{% /md %}}</dd>
-    <dt class="property-optional"
+    <dd>{{% md %}}The inputs for the Azure Machine Learning web service endpoint.{{% /md %}}</dd><dt class="property-optional"
             title="Optional">
         <span id="outputs_nodejs">
 <a href="#outputs_nodejs" style="color: inherit; text-decoration: inherit;">outputs</a>
@@ -1132,14 +1049,11 @@ All [input](#inputs) properties are implicitly available as output properties. A
         <span class="property-indicator"></span>
         <span class="property-type"><a href="#azuremachinelearningwebserviceoutputcolumnresponse">Azure<wbr>Machine<wbr>Learning<wbr>Web<wbr>Service<wbr>Output<wbr>Column<wbr>Response[]</a></span>
     </dt>
-    <dd>{{% md %}}A list of outputs from the Azure Machine Learning web service endpoint execution.{{% /md %}}</dd>
-</dl>
+    <dd>{{% md %}}A list of outputs from the Azure Machine Learning web service endpoint execution.{{% /md %}}</dd></dl>
 {{% /choosable %}}
 
 {{% choosable language python %}}
-<dl class="resources-properties">
-
-    <dt class="property-optional"
+<dl class="resources-properties"><dt class="property-optional"
             title="Optional">
         <span id="api_key_python">
 <a href="#api_key_python" style="color: inherit; text-decoration: inherit;">api_<wbr>key</a>
@@ -1147,8 +1061,7 @@ All [input](#inputs) properties are implicitly available as output properties. A
         <span class="property-indicator"></span>
         <span class="property-type">str</span>
     </dt>
-    <dd>{{% md %}}The API key used to authenticate with Request-Response endpoint.{{% /md %}}</dd>
-    <dt class="property-optional"
+    <dd>{{% md %}}The API key used to authenticate with Request-Response endpoint.{{% /md %}}</dd><dt class="property-optional"
             title="Optional">
         <span id="batch_size_python">
 <a href="#batch_size_python" style="color: inherit; text-decoration: inherit;">batch_<wbr>size</a>
@@ -1156,8 +1069,7 @@ All [input](#inputs) properties are implicitly available as output properties. A
         <span class="property-indicator"></span>
         <span class="property-type">int</span>
     </dt>
-    <dd>{{% md %}}Number between 1 and 10000 describing maximum number of rows for every Azure ML RRS execute request. Default is 1000.{{% /md %}}</dd>
-    <dt class="property-optional"
+    <dd>{{% md %}}Number between 1 and 10000 describing maximum number of rows for every Azure ML RRS execute request. Default is 1000.{{% /md %}}</dd><dt class="property-optional"
             title="Optional">
         <span id="endpoint_python">
 <a href="#endpoint_python" style="color: inherit; text-decoration: inherit;">endpoint</a>
@@ -1165,8 +1077,7 @@ All [input](#inputs) properties are implicitly available as output properties. A
         <span class="property-indicator"></span>
         <span class="property-type">str</span>
     </dt>
-    <dd>{{% md %}}The Request-Response execute endpoint of the Azure Machine Learning web service. Find out more here: https://docs.microsoft.com/en-us/azure/machine-learning/machine-learning-consume-web-services#request-response-service-rrs{{% /md %}}</dd>
-    <dt class="property-optional"
+    <dd>{{% md %}}The Request-Response execute endpoint of the Azure Machine Learning web service. Find out more here: https://docs.microsoft.com/en-us/azure/machine-learning/machine-learning-consume-web-services#request-response-service-rrs{{% /md %}}</dd><dt class="property-optional"
             title="Optional">
         <span id="inputs_python">
 <a href="#inputs_python" style="color: inherit; text-decoration: inherit;">inputs</a>
@@ -1174,8 +1085,7 @@ All [input](#inputs) properties are implicitly available as output properties. A
         <span class="property-indicator"></span>
         <span class="property-type"><a href="#azuremachinelearningwebserviceinputsresponse">Azure<wbr>Machine<wbr>Learning<wbr>Web<wbr>Service<wbr>Inputs<wbr>Response<wbr>Args</a></span>
     </dt>
-    <dd>{{% md %}}The inputs for the Azure Machine Learning web service endpoint.{{% /md %}}</dd>
-    <dt class="property-optional"
+    <dd>{{% md %}}The inputs for the Azure Machine Learning web service endpoint.{{% /md %}}</dd><dt class="property-optional"
             title="Optional">
         <span id="outputs_python">
 <a href="#outputs_python" style="color: inherit; text-decoration: inherit;">outputs</a>
@@ -1183,16 +1093,13 @@ All [input](#inputs) properties are implicitly available as output properties. A
         <span class="property-indicator"></span>
         <span class="property-type"><a href="#azuremachinelearningwebserviceoutputcolumnresponse">Sequence[Azure<wbr>Machine<wbr>Learning<wbr>Web<wbr>Service<wbr>Output<wbr>Column<wbr>Response<wbr>Args]</a></span>
     </dt>
-    <dd>{{% md %}}A list of outputs from the Azure Machine Learning web service endpoint execution.{{% /md %}}</dd>
-</dl>
+    <dd>{{% md %}}A list of outputs from the Azure Machine Learning web service endpoint execution.{{% /md %}}</dd></dl>
 {{% /choosable %}}
 
 <h4 id="azuremachinelearningwebserviceinputcolumn">Azure<wbr>Machine<wbr>Learning<wbr>Web<wbr>Service<wbr>Input<wbr>Column</h4>
 
 {{% choosable language csharp %}}
-<dl class="resources-properties">
-
-    <dt class="property-optional"
+<dl class="resources-properties"><dt class="property-optional"
             title="Optional">
         <span id="datatype_csharp">
 <a href="#datatype_csharp" style="color: inherit; text-decoration: inherit;">Data<wbr>Type</a>
@@ -1200,8 +1107,7 @@ All [input](#inputs) properties are implicitly available as output properties. A
         <span class="property-indicator"></span>
         <span class="property-type">string</span>
     </dt>
-    <dd>{{% md %}}The (Azure Machine Learning supported) data type of the input column. A list of valid  Azure Machine Learning data types are described at https://msdn.microsoft.com/en-us/library/azure/dn905923.aspx .{{% /md %}}</dd>
-    <dt class="property-optional"
+    <dd>{{% md %}}The (Azure Machine Learning supported) data type of the input column. A list of valid  Azure Machine Learning data types are described at https://msdn.microsoft.com/en-us/library/azure/dn905923.aspx .{{% /md %}}</dd><dt class="property-optional"
             title="Optional">
         <span id="mapto_csharp">
 <a href="#mapto_csharp" style="color: inherit; text-decoration: inherit;">Map<wbr>To</a>
@@ -1209,8 +1115,7 @@ All [input](#inputs) properties are implicitly available as output properties. A
         <span class="property-indicator"></span>
         <span class="property-type">int</span>
     </dt>
-    <dd>{{% md %}}The zero based index of the function parameter this input maps to.{{% /md %}}</dd>
-    <dt class="property-optional"
+    <dd>{{% md %}}The zero based index of the function parameter this input maps to.{{% /md %}}</dd><dt class="property-optional"
             title="Optional">
         <span id="name_csharp">
 <a href="#name_csharp" style="color: inherit; text-decoration: inherit;">Name</a>
@@ -1218,14 +1123,11 @@ All [input](#inputs) properties are implicitly available as output properties. A
         <span class="property-indicator"></span>
         <span class="property-type">string</span>
     </dt>
-    <dd>{{% md %}}The name of the input column.{{% /md %}}</dd>
-</dl>
+    <dd>{{% md %}}The name of the input column.{{% /md %}}</dd></dl>
 {{% /choosable %}}
 
 {{% choosable language go %}}
-<dl class="resources-properties">
-
-    <dt class="property-optional"
+<dl class="resources-properties"><dt class="property-optional"
             title="Optional">
         <span id="datatype_go">
 <a href="#datatype_go" style="color: inherit; text-decoration: inherit;">Data<wbr>Type</a>
@@ -1233,8 +1135,7 @@ All [input](#inputs) properties are implicitly available as output properties. A
         <span class="property-indicator"></span>
         <span class="property-type">string</span>
     </dt>
-    <dd>{{% md %}}The (Azure Machine Learning supported) data type of the input column. A list of valid  Azure Machine Learning data types are described at https://msdn.microsoft.com/en-us/library/azure/dn905923.aspx .{{% /md %}}</dd>
-    <dt class="property-optional"
+    <dd>{{% md %}}The (Azure Machine Learning supported) data type of the input column. A list of valid  Azure Machine Learning data types are described at https://msdn.microsoft.com/en-us/library/azure/dn905923.aspx .{{% /md %}}</dd><dt class="property-optional"
             title="Optional">
         <span id="mapto_go">
 <a href="#mapto_go" style="color: inherit; text-decoration: inherit;">Map<wbr>To</a>
@@ -1242,8 +1143,7 @@ All [input](#inputs) properties are implicitly available as output properties. A
         <span class="property-indicator"></span>
         <span class="property-type">int</span>
     </dt>
-    <dd>{{% md %}}The zero based index of the function parameter this input maps to.{{% /md %}}</dd>
-    <dt class="property-optional"
+    <dd>{{% md %}}The zero based index of the function parameter this input maps to.{{% /md %}}</dd><dt class="property-optional"
             title="Optional">
         <span id="name_go">
 <a href="#name_go" style="color: inherit; text-decoration: inherit;">Name</a>
@@ -1251,14 +1151,11 @@ All [input](#inputs) properties are implicitly available as output properties. A
         <span class="property-indicator"></span>
         <span class="property-type">string</span>
     </dt>
-    <dd>{{% md %}}The name of the input column.{{% /md %}}</dd>
-</dl>
+    <dd>{{% md %}}The name of the input column.{{% /md %}}</dd></dl>
 {{% /choosable %}}
 
 {{% choosable language nodejs %}}
-<dl class="resources-properties">
-
-    <dt class="property-optional"
+<dl class="resources-properties"><dt class="property-optional"
             title="Optional">
         <span id="datatype_nodejs">
 <a href="#datatype_nodejs" style="color: inherit; text-decoration: inherit;">data<wbr>Type</a>
@@ -1266,8 +1163,7 @@ All [input](#inputs) properties are implicitly available as output properties. A
         <span class="property-indicator"></span>
         <span class="property-type">string</span>
     </dt>
-    <dd>{{% md %}}The (Azure Machine Learning supported) data type of the input column. A list of valid  Azure Machine Learning data types are described at https://msdn.microsoft.com/en-us/library/azure/dn905923.aspx .{{% /md %}}</dd>
-    <dt class="property-optional"
+    <dd>{{% md %}}The (Azure Machine Learning supported) data type of the input column. A list of valid  Azure Machine Learning data types are described at https://msdn.microsoft.com/en-us/library/azure/dn905923.aspx .{{% /md %}}</dd><dt class="property-optional"
             title="Optional">
         <span id="mapto_nodejs">
 <a href="#mapto_nodejs" style="color: inherit; text-decoration: inherit;">map<wbr>To</a>
@@ -1275,8 +1171,7 @@ All [input](#inputs) properties are implicitly available as output properties. A
         <span class="property-indicator"></span>
         <span class="property-type">number</span>
     </dt>
-    <dd>{{% md %}}The zero based index of the function parameter this input maps to.{{% /md %}}</dd>
-    <dt class="property-optional"
+    <dd>{{% md %}}The zero based index of the function parameter this input maps to.{{% /md %}}</dd><dt class="property-optional"
             title="Optional">
         <span id="name_nodejs">
 <a href="#name_nodejs" style="color: inherit; text-decoration: inherit;">name</a>
@@ -1284,14 +1179,11 @@ All [input](#inputs) properties are implicitly available as output properties. A
         <span class="property-indicator"></span>
         <span class="property-type">string</span>
     </dt>
-    <dd>{{% md %}}The name of the input column.{{% /md %}}</dd>
-</dl>
+    <dd>{{% md %}}The name of the input column.{{% /md %}}</dd></dl>
 {{% /choosable %}}
 
 {{% choosable language python %}}
-<dl class="resources-properties">
-
-    <dt class="property-optional"
+<dl class="resources-properties"><dt class="property-optional"
             title="Optional">
         <span id="data_type_python">
 <a href="#data_type_python" style="color: inherit; text-decoration: inherit;">data_<wbr>type</a>
@@ -1299,8 +1191,7 @@ All [input](#inputs) properties are implicitly available as output properties. A
         <span class="property-indicator"></span>
         <span class="property-type">str</span>
     </dt>
-    <dd>{{% md %}}The (Azure Machine Learning supported) data type of the input column. A list of valid  Azure Machine Learning data types are described at https://msdn.microsoft.com/en-us/library/azure/dn905923.aspx .{{% /md %}}</dd>
-    <dt class="property-optional"
+    <dd>{{% md %}}The (Azure Machine Learning supported) data type of the input column. A list of valid  Azure Machine Learning data types are described at https://msdn.microsoft.com/en-us/library/azure/dn905923.aspx .{{% /md %}}</dd><dt class="property-optional"
             title="Optional">
         <span id="map_to_python">
 <a href="#map_to_python" style="color: inherit; text-decoration: inherit;">map_<wbr>to</a>
@@ -1308,8 +1199,7 @@ All [input](#inputs) properties are implicitly available as output properties. A
         <span class="property-indicator"></span>
         <span class="property-type">int</span>
     </dt>
-    <dd>{{% md %}}The zero based index of the function parameter this input maps to.{{% /md %}}</dd>
-    <dt class="property-optional"
+    <dd>{{% md %}}The zero based index of the function parameter this input maps to.{{% /md %}}</dd><dt class="property-optional"
             title="Optional">
         <span id="name_python">
 <a href="#name_python" style="color: inherit; text-decoration: inherit;">name</a>
@@ -1317,16 +1207,13 @@ All [input](#inputs) properties are implicitly available as output properties. A
         <span class="property-indicator"></span>
         <span class="property-type">str</span>
     </dt>
-    <dd>{{% md %}}The name of the input column.{{% /md %}}</dd>
-</dl>
+    <dd>{{% md %}}The name of the input column.{{% /md %}}</dd></dl>
 {{% /choosable %}}
 
 <h4 id="azuremachinelearningwebserviceinputcolumnresponse">Azure<wbr>Machine<wbr>Learning<wbr>Web<wbr>Service<wbr>Input<wbr>Column<wbr>Response</h4>
 
 {{% choosable language csharp %}}
-<dl class="resources-properties">
-
-    <dt class="property-optional"
+<dl class="resources-properties"><dt class="property-optional"
             title="Optional">
         <span id="datatype_csharp">
 <a href="#datatype_csharp" style="color: inherit; text-decoration: inherit;">Data<wbr>Type</a>
@@ -1334,8 +1221,7 @@ All [input](#inputs) properties are implicitly available as output properties. A
         <span class="property-indicator"></span>
         <span class="property-type">string</span>
     </dt>
-    <dd>{{% md %}}The (Azure Machine Learning supported) data type of the input column. A list of valid  Azure Machine Learning data types are described at https://msdn.microsoft.com/en-us/library/azure/dn905923.aspx .{{% /md %}}</dd>
-    <dt class="property-optional"
+    <dd>{{% md %}}The (Azure Machine Learning supported) data type of the input column. A list of valid  Azure Machine Learning data types are described at https://msdn.microsoft.com/en-us/library/azure/dn905923.aspx .{{% /md %}}</dd><dt class="property-optional"
             title="Optional">
         <span id="mapto_csharp">
 <a href="#mapto_csharp" style="color: inherit; text-decoration: inherit;">Map<wbr>To</a>
@@ -1343,8 +1229,7 @@ All [input](#inputs) properties are implicitly available as output properties. A
         <span class="property-indicator"></span>
         <span class="property-type">int</span>
     </dt>
-    <dd>{{% md %}}The zero based index of the function parameter this input maps to.{{% /md %}}</dd>
-    <dt class="property-optional"
+    <dd>{{% md %}}The zero based index of the function parameter this input maps to.{{% /md %}}</dd><dt class="property-optional"
             title="Optional">
         <span id="name_csharp">
 <a href="#name_csharp" style="color: inherit; text-decoration: inherit;">Name</a>
@@ -1352,14 +1237,11 @@ All [input](#inputs) properties are implicitly available as output properties. A
         <span class="property-indicator"></span>
         <span class="property-type">string</span>
     </dt>
-    <dd>{{% md %}}The name of the input column.{{% /md %}}</dd>
-</dl>
+    <dd>{{% md %}}The name of the input column.{{% /md %}}</dd></dl>
 {{% /choosable %}}
 
 {{% choosable language go %}}
-<dl class="resources-properties">
-
-    <dt class="property-optional"
+<dl class="resources-properties"><dt class="property-optional"
             title="Optional">
         <span id="datatype_go">
 <a href="#datatype_go" style="color: inherit; text-decoration: inherit;">Data<wbr>Type</a>
@@ -1367,8 +1249,7 @@ All [input](#inputs) properties are implicitly available as output properties. A
         <span class="property-indicator"></span>
         <span class="property-type">string</span>
     </dt>
-    <dd>{{% md %}}The (Azure Machine Learning supported) data type of the input column. A list of valid  Azure Machine Learning data types are described at https://msdn.microsoft.com/en-us/library/azure/dn905923.aspx .{{% /md %}}</dd>
-    <dt class="property-optional"
+    <dd>{{% md %}}The (Azure Machine Learning supported) data type of the input column. A list of valid  Azure Machine Learning data types are described at https://msdn.microsoft.com/en-us/library/azure/dn905923.aspx .{{% /md %}}</dd><dt class="property-optional"
             title="Optional">
         <span id="mapto_go">
 <a href="#mapto_go" style="color: inherit; text-decoration: inherit;">Map<wbr>To</a>
@@ -1376,8 +1257,7 @@ All [input](#inputs) properties are implicitly available as output properties. A
         <span class="property-indicator"></span>
         <span class="property-type">int</span>
     </dt>
-    <dd>{{% md %}}The zero based index of the function parameter this input maps to.{{% /md %}}</dd>
-    <dt class="property-optional"
+    <dd>{{% md %}}The zero based index of the function parameter this input maps to.{{% /md %}}</dd><dt class="property-optional"
             title="Optional">
         <span id="name_go">
 <a href="#name_go" style="color: inherit; text-decoration: inherit;">Name</a>
@@ -1385,14 +1265,11 @@ All [input](#inputs) properties are implicitly available as output properties. A
         <span class="property-indicator"></span>
         <span class="property-type">string</span>
     </dt>
-    <dd>{{% md %}}The name of the input column.{{% /md %}}</dd>
-</dl>
+    <dd>{{% md %}}The name of the input column.{{% /md %}}</dd></dl>
 {{% /choosable %}}
 
 {{% choosable language nodejs %}}
-<dl class="resources-properties">
-
-    <dt class="property-optional"
+<dl class="resources-properties"><dt class="property-optional"
             title="Optional">
         <span id="datatype_nodejs">
 <a href="#datatype_nodejs" style="color: inherit; text-decoration: inherit;">data<wbr>Type</a>
@@ -1400,8 +1277,7 @@ All [input](#inputs) properties are implicitly available as output properties. A
         <span class="property-indicator"></span>
         <span class="property-type">string</span>
     </dt>
-    <dd>{{% md %}}The (Azure Machine Learning supported) data type of the input column. A list of valid  Azure Machine Learning data types are described at https://msdn.microsoft.com/en-us/library/azure/dn905923.aspx .{{% /md %}}</dd>
-    <dt class="property-optional"
+    <dd>{{% md %}}The (Azure Machine Learning supported) data type of the input column. A list of valid  Azure Machine Learning data types are described at https://msdn.microsoft.com/en-us/library/azure/dn905923.aspx .{{% /md %}}</dd><dt class="property-optional"
             title="Optional">
         <span id="mapto_nodejs">
 <a href="#mapto_nodejs" style="color: inherit; text-decoration: inherit;">map<wbr>To</a>
@@ -1409,8 +1285,7 @@ All [input](#inputs) properties are implicitly available as output properties. A
         <span class="property-indicator"></span>
         <span class="property-type">number</span>
     </dt>
-    <dd>{{% md %}}The zero based index of the function parameter this input maps to.{{% /md %}}</dd>
-    <dt class="property-optional"
+    <dd>{{% md %}}The zero based index of the function parameter this input maps to.{{% /md %}}</dd><dt class="property-optional"
             title="Optional">
         <span id="name_nodejs">
 <a href="#name_nodejs" style="color: inherit; text-decoration: inherit;">name</a>
@@ -1418,14 +1293,11 @@ All [input](#inputs) properties are implicitly available as output properties. A
         <span class="property-indicator"></span>
         <span class="property-type">string</span>
     </dt>
-    <dd>{{% md %}}The name of the input column.{{% /md %}}</dd>
-</dl>
+    <dd>{{% md %}}The name of the input column.{{% /md %}}</dd></dl>
 {{% /choosable %}}
 
 {{% choosable language python %}}
-<dl class="resources-properties">
-
-    <dt class="property-optional"
+<dl class="resources-properties"><dt class="property-optional"
             title="Optional">
         <span id="data_type_python">
 <a href="#data_type_python" style="color: inherit; text-decoration: inherit;">data_<wbr>type</a>
@@ -1433,8 +1305,7 @@ All [input](#inputs) properties are implicitly available as output properties. A
         <span class="property-indicator"></span>
         <span class="property-type">str</span>
     </dt>
-    <dd>{{% md %}}The (Azure Machine Learning supported) data type of the input column. A list of valid  Azure Machine Learning data types are described at https://msdn.microsoft.com/en-us/library/azure/dn905923.aspx .{{% /md %}}</dd>
-    <dt class="property-optional"
+    <dd>{{% md %}}The (Azure Machine Learning supported) data type of the input column. A list of valid  Azure Machine Learning data types are described at https://msdn.microsoft.com/en-us/library/azure/dn905923.aspx .{{% /md %}}</dd><dt class="property-optional"
             title="Optional">
         <span id="map_to_python">
 <a href="#map_to_python" style="color: inherit; text-decoration: inherit;">map_<wbr>to</a>
@@ -1442,8 +1313,7 @@ All [input](#inputs) properties are implicitly available as output properties. A
         <span class="property-indicator"></span>
         <span class="property-type">int</span>
     </dt>
-    <dd>{{% md %}}The zero based index of the function parameter this input maps to.{{% /md %}}</dd>
-    <dt class="property-optional"
+    <dd>{{% md %}}The zero based index of the function parameter this input maps to.{{% /md %}}</dd><dt class="property-optional"
             title="Optional">
         <span id="name_python">
 <a href="#name_python" style="color: inherit; text-decoration: inherit;">name</a>
@@ -1451,16 +1321,13 @@ All [input](#inputs) properties are implicitly available as output properties. A
         <span class="property-indicator"></span>
         <span class="property-type">str</span>
     </dt>
-    <dd>{{% md %}}The name of the input column.{{% /md %}}</dd>
-</dl>
+    <dd>{{% md %}}The name of the input column.{{% /md %}}</dd></dl>
 {{% /choosable %}}
 
 <h4 id="azuremachinelearningwebserviceinputs">Azure<wbr>Machine<wbr>Learning<wbr>Web<wbr>Service<wbr>Inputs</h4>
 
 {{% choosable language csharp %}}
-<dl class="resources-properties">
-
-    <dt class="property-optional"
+<dl class="resources-properties"><dt class="property-optional"
             title="Optional">
         <span id="columnnames_csharp">
 <a href="#columnnames_csharp" style="color: inherit; text-decoration: inherit;">Column<wbr>Names</a>
@@ -1468,8 +1335,7 @@ All [input](#inputs) properties are implicitly available as output properties. A
         <span class="property-indicator"></span>
         <span class="property-type"><a href="#azuremachinelearningwebserviceinputcolumn">List&lt;Pulumi.<wbr>Azure<wbr>Native.<wbr>Stream<wbr>Analytics.<wbr>Inputs.<wbr>Azure<wbr>Machine<wbr>Learning<wbr>Web<wbr>Service<wbr>Input<wbr>Column<wbr>Args&gt;</a></span>
     </dt>
-    <dd>{{% md %}}A list of input columns for the Azure Machine Learning web service endpoint.{{% /md %}}</dd>
-    <dt class="property-optional"
+    <dd>{{% md %}}A list of input columns for the Azure Machine Learning web service endpoint.{{% /md %}}</dd><dt class="property-optional"
             title="Optional">
         <span id="name_csharp">
 <a href="#name_csharp" style="color: inherit; text-decoration: inherit;">Name</a>
@@ -1477,14 +1343,11 @@ All [input](#inputs) properties are implicitly available as output properties. A
         <span class="property-indicator"></span>
         <span class="property-type">string</span>
     </dt>
-    <dd>{{% md %}}The name of the input. This is the name provided while authoring the endpoint.{{% /md %}}</dd>
-</dl>
+    <dd>{{% md %}}The name of the input. This is the name provided while authoring the endpoint.{{% /md %}}</dd></dl>
 {{% /choosable %}}
 
 {{% choosable language go %}}
-<dl class="resources-properties">
-
-    <dt class="property-optional"
+<dl class="resources-properties"><dt class="property-optional"
             title="Optional">
         <span id="columnnames_go">
 <a href="#columnnames_go" style="color: inherit; text-decoration: inherit;">Column<wbr>Names</a>
@@ -1492,8 +1355,7 @@ All [input](#inputs) properties are implicitly available as output properties. A
         <span class="property-indicator"></span>
         <span class="property-type"><a href="#azuremachinelearningwebserviceinputcolumn">[]Azure<wbr>Machine<wbr>Learning<wbr>Web<wbr>Service<wbr>Input<wbr>Column</a></span>
     </dt>
-    <dd>{{% md %}}A list of input columns for the Azure Machine Learning web service endpoint.{{% /md %}}</dd>
-    <dt class="property-optional"
+    <dd>{{% md %}}A list of input columns for the Azure Machine Learning web service endpoint.{{% /md %}}</dd><dt class="property-optional"
             title="Optional">
         <span id="name_go">
 <a href="#name_go" style="color: inherit; text-decoration: inherit;">Name</a>
@@ -1501,14 +1363,11 @@ All [input](#inputs) properties are implicitly available as output properties. A
         <span class="property-indicator"></span>
         <span class="property-type">string</span>
     </dt>
-    <dd>{{% md %}}The name of the input. This is the name provided while authoring the endpoint.{{% /md %}}</dd>
-</dl>
+    <dd>{{% md %}}The name of the input. This is the name provided while authoring the endpoint.{{% /md %}}</dd></dl>
 {{% /choosable %}}
 
 {{% choosable language nodejs %}}
-<dl class="resources-properties">
-
-    <dt class="property-optional"
+<dl class="resources-properties"><dt class="property-optional"
             title="Optional">
         <span id="columnnames_nodejs">
 <a href="#columnnames_nodejs" style="color: inherit; text-decoration: inherit;">column<wbr>Names</a>
@@ -1516,8 +1375,7 @@ All [input](#inputs) properties are implicitly available as output properties. A
         <span class="property-indicator"></span>
         <span class="property-type"><a href="#azuremachinelearningwebserviceinputcolumn">Azure<wbr>Machine<wbr>Learning<wbr>Web<wbr>Service<wbr>Input<wbr>Column[]</a></span>
     </dt>
-    <dd>{{% md %}}A list of input columns for the Azure Machine Learning web service endpoint.{{% /md %}}</dd>
-    <dt class="property-optional"
+    <dd>{{% md %}}A list of input columns for the Azure Machine Learning web service endpoint.{{% /md %}}</dd><dt class="property-optional"
             title="Optional">
         <span id="name_nodejs">
 <a href="#name_nodejs" style="color: inherit; text-decoration: inherit;">name</a>
@@ -1525,14 +1383,11 @@ All [input](#inputs) properties are implicitly available as output properties. A
         <span class="property-indicator"></span>
         <span class="property-type">string</span>
     </dt>
-    <dd>{{% md %}}The name of the input. This is the name provided while authoring the endpoint.{{% /md %}}</dd>
-</dl>
+    <dd>{{% md %}}The name of the input. This is the name provided while authoring the endpoint.{{% /md %}}</dd></dl>
 {{% /choosable %}}
 
 {{% choosable language python %}}
-<dl class="resources-properties">
-
-    <dt class="property-optional"
+<dl class="resources-properties"><dt class="property-optional"
             title="Optional">
         <span id="column_names_python">
 <a href="#column_names_python" style="color: inherit; text-decoration: inherit;">column_<wbr>names</a>
@@ -1540,8 +1395,7 @@ All [input](#inputs) properties are implicitly available as output properties. A
         <span class="property-indicator"></span>
         <span class="property-type"><a href="#azuremachinelearningwebserviceinputcolumn">Sequence[Azure<wbr>Machine<wbr>Learning<wbr>Web<wbr>Service<wbr>Input<wbr>Column<wbr>Args]</a></span>
     </dt>
-    <dd>{{% md %}}A list of input columns for the Azure Machine Learning web service endpoint.{{% /md %}}</dd>
-    <dt class="property-optional"
+    <dd>{{% md %}}A list of input columns for the Azure Machine Learning web service endpoint.{{% /md %}}</dd><dt class="property-optional"
             title="Optional">
         <span id="name_python">
 <a href="#name_python" style="color: inherit; text-decoration: inherit;">name</a>
@@ -1549,16 +1403,13 @@ All [input](#inputs) properties are implicitly available as output properties. A
         <span class="property-indicator"></span>
         <span class="property-type">str</span>
     </dt>
-    <dd>{{% md %}}The name of the input. This is the name provided while authoring the endpoint.{{% /md %}}</dd>
-</dl>
+    <dd>{{% md %}}The name of the input. This is the name provided while authoring the endpoint.{{% /md %}}</dd></dl>
 {{% /choosable %}}
 
 <h4 id="azuremachinelearningwebserviceinputsresponse">Azure<wbr>Machine<wbr>Learning<wbr>Web<wbr>Service<wbr>Inputs<wbr>Response</h4>
 
 {{% choosable language csharp %}}
-<dl class="resources-properties">
-
-    <dt class="property-optional"
+<dl class="resources-properties"><dt class="property-optional"
             title="Optional">
         <span id="columnnames_csharp">
 <a href="#columnnames_csharp" style="color: inherit; text-decoration: inherit;">Column<wbr>Names</a>
@@ -1566,8 +1417,7 @@ All [input](#inputs) properties are implicitly available as output properties. A
         <span class="property-indicator"></span>
         <span class="property-type"><a href="#azuremachinelearningwebserviceinputcolumnresponse">List&lt;Pulumi.<wbr>Azure<wbr>Native.<wbr>Stream<wbr>Analytics.<wbr>Inputs.<wbr>Azure<wbr>Machine<wbr>Learning<wbr>Web<wbr>Service<wbr>Input<wbr>Column<wbr>Response<wbr>Args&gt;</a></span>
     </dt>
-    <dd>{{% md %}}A list of input columns for the Azure Machine Learning web service endpoint.{{% /md %}}</dd>
-    <dt class="property-optional"
+    <dd>{{% md %}}A list of input columns for the Azure Machine Learning web service endpoint.{{% /md %}}</dd><dt class="property-optional"
             title="Optional">
         <span id="name_csharp">
 <a href="#name_csharp" style="color: inherit; text-decoration: inherit;">Name</a>
@@ -1575,14 +1425,11 @@ All [input](#inputs) properties are implicitly available as output properties. A
         <span class="property-indicator"></span>
         <span class="property-type">string</span>
     </dt>
-    <dd>{{% md %}}The name of the input. This is the name provided while authoring the endpoint.{{% /md %}}</dd>
-</dl>
+    <dd>{{% md %}}The name of the input. This is the name provided while authoring the endpoint.{{% /md %}}</dd></dl>
 {{% /choosable %}}
 
 {{% choosable language go %}}
-<dl class="resources-properties">
-
-    <dt class="property-optional"
+<dl class="resources-properties"><dt class="property-optional"
             title="Optional">
         <span id="columnnames_go">
 <a href="#columnnames_go" style="color: inherit; text-decoration: inherit;">Column<wbr>Names</a>
@@ -1590,8 +1437,7 @@ All [input](#inputs) properties are implicitly available as output properties. A
         <span class="property-indicator"></span>
         <span class="property-type"><a href="#azuremachinelearningwebserviceinputcolumnresponse">[]Azure<wbr>Machine<wbr>Learning<wbr>Web<wbr>Service<wbr>Input<wbr>Column<wbr>Response</a></span>
     </dt>
-    <dd>{{% md %}}A list of input columns for the Azure Machine Learning web service endpoint.{{% /md %}}</dd>
-    <dt class="property-optional"
+    <dd>{{% md %}}A list of input columns for the Azure Machine Learning web service endpoint.{{% /md %}}</dd><dt class="property-optional"
             title="Optional">
         <span id="name_go">
 <a href="#name_go" style="color: inherit; text-decoration: inherit;">Name</a>
@@ -1599,14 +1445,11 @@ All [input](#inputs) properties are implicitly available as output properties. A
         <span class="property-indicator"></span>
         <span class="property-type">string</span>
     </dt>
-    <dd>{{% md %}}The name of the input. This is the name provided while authoring the endpoint.{{% /md %}}</dd>
-</dl>
+    <dd>{{% md %}}The name of the input. This is the name provided while authoring the endpoint.{{% /md %}}</dd></dl>
 {{% /choosable %}}
 
 {{% choosable language nodejs %}}
-<dl class="resources-properties">
-
-    <dt class="property-optional"
+<dl class="resources-properties"><dt class="property-optional"
             title="Optional">
         <span id="columnnames_nodejs">
 <a href="#columnnames_nodejs" style="color: inherit; text-decoration: inherit;">column<wbr>Names</a>
@@ -1614,8 +1457,7 @@ All [input](#inputs) properties are implicitly available as output properties. A
         <span class="property-indicator"></span>
         <span class="property-type"><a href="#azuremachinelearningwebserviceinputcolumnresponse">Azure<wbr>Machine<wbr>Learning<wbr>Web<wbr>Service<wbr>Input<wbr>Column<wbr>Response[]</a></span>
     </dt>
-    <dd>{{% md %}}A list of input columns for the Azure Machine Learning web service endpoint.{{% /md %}}</dd>
-    <dt class="property-optional"
+    <dd>{{% md %}}A list of input columns for the Azure Machine Learning web service endpoint.{{% /md %}}</dd><dt class="property-optional"
             title="Optional">
         <span id="name_nodejs">
 <a href="#name_nodejs" style="color: inherit; text-decoration: inherit;">name</a>
@@ -1623,14 +1465,11 @@ All [input](#inputs) properties are implicitly available as output properties. A
         <span class="property-indicator"></span>
         <span class="property-type">string</span>
     </dt>
-    <dd>{{% md %}}The name of the input. This is the name provided while authoring the endpoint.{{% /md %}}</dd>
-</dl>
+    <dd>{{% md %}}The name of the input. This is the name provided while authoring the endpoint.{{% /md %}}</dd></dl>
 {{% /choosable %}}
 
 {{% choosable language python %}}
-<dl class="resources-properties">
-
-    <dt class="property-optional"
+<dl class="resources-properties"><dt class="property-optional"
             title="Optional">
         <span id="column_names_python">
 <a href="#column_names_python" style="color: inherit; text-decoration: inherit;">column_<wbr>names</a>
@@ -1638,8 +1477,7 @@ All [input](#inputs) properties are implicitly available as output properties. A
         <span class="property-indicator"></span>
         <span class="property-type"><a href="#azuremachinelearningwebserviceinputcolumnresponse">Sequence[Azure<wbr>Machine<wbr>Learning<wbr>Web<wbr>Service<wbr>Input<wbr>Column<wbr>Response<wbr>Args]</a></span>
     </dt>
-    <dd>{{% md %}}A list of input columns for the Azure Machine Learning web service endpoint.{{% /md %}}</dd>
-    <dt class="property-optional"
+    <dd>{{% md %}}A list of input columns for the Azure Machine Learning web service endpoint.{{% /md %}}</dd><dt class="property-optional"
             title="Optional">
         <span id="name_python">
 <a href="#name_python" style="color: inherit; text-decoration: inherit;">name</a>
@@ -1647,16 +1485,13 @@ All [input](#inputs) properties are implicitly available as output properties. A
         <span class="property-indicator"></span>
         <span class="property-type">str</span>
     </dt>
-    <dd>{{% md %}}The name of the input. This is the name provided while authoring the endpoint.{{% /md %}}</dd>
-</dl>
+    <dd>{{% md %}}The name of the input. This is the name provided while authoring the endpoint.{{% /md %}}</dd></dl>
 {{% /choosable %}}
 
 <h4 id="azuremachinelearningwebserviceoutputcolumn">Azure<wbr>Machine<wbr>Learning<wbr>Web<wbr>Service<wbr>Output<wbr>Column</h4>
 
 {{% choosable language csharp %}}
-<dl class="resources-properties">
-
-    <dt class="property-optional"
+<dl class="resources-properties"><dt class="property-optional"
             title="Optional">
         <span id="datatype_csharp">
 <a href="#datatype_csharp" style="color: inherit; text-decoration: inherit;">Data<wbr>Type</a>
@@ -1664,8 +1499,7 @@ All [input](#inputs) properties are implicitly available as output properties. A
         <span class="property-indicator"></span>
         <span class="property-type">string</span>
     </dt>
-    <dd>{{% md %}}The (Azure Machine Learning supported) data type of the output column. A list of valid  Azure Machine Learning data types are described at https://msdn.microsoft.com/en-us/library/azure/dn905923.aspx .{{% /md %}}</dd>
-    <dt class="property-optional"
+    <dd>{{% md %}}The (Azure Machine Learning supported) data type of the output column. A list of valid  Azure Machine Learning data types are described at https://msdn.microsoft.com/en-us/library/azure/dn905923.aspx .{{% /md %}}</dd><dt class="property-optional"
             title="Optional">
         <span id="name_csharp">
 <a href="#name_csharp" style="color: inherit; text-decoration: inherit;">Name</a>
@@ -1673,14 +1507,11 @@ All [input](#inputs) properties are implicitly available as output properties. A
         <span class="property-indicator"></span>
         <span class="property-type">string</span>
     </dt>
-    <dd>{{% md %}}The name of the output column.{{% /md %}}</dd>
-</dl>
+    <dd>{{% md %}}The name of the output column.{{% /md %}}</dd></dl>
 {{% /choosable %}}
 
 {{% choosable language go %}}
-<dl class="resources-properties">
-
-    <dt class="property-optional"
+<dl class="resources-properties"><dt class="property-optional"
             title="Optional">
         <span id="datatype_go">
 <a href="#datatype_go" style="color: inherit; text-decoration: inherit;">Data<wbr>Type</a>
@@ -1688,8 +1519,7 @@ All [input](#inputs) properties are implicitly available as output properties. A
         <span class="property-indicator"></span>
         <span class="property-type">string</span>
     </dt>
-    <dd>{{% md %}}The (Azure Machine Learning supported) data type of the output column. A list of valid  Azure Machine Learning data types are described at https://msdn.microsoft.com/en-us/library/azure/dn905923.aspx .{{% /md %}}</dd>
-    <dt class="property-optional"
+    <dd>{{% md %}}The (Azure Machine Learning supported) data type of the output column. A list of valid  Azure Machine Learning data types are described at https://msdn.microsoft.com/en-us/library/azure/dn905923.aspx .{{% /md %}}</dd><dt class="property-optional"
             title="Optional">
         <span id="name_go">
 <a href="#name_go" style="color: inherit; text-decoration: inherit;">Name</a>
@@ -1697,14 +1527,11 @@ All [input](#inputs) properties are implicitly available as output properties. A
         <span class="property-indicator"></span>
         <span class="property-type">string</span>
     </dt>
-    <dd>{{% md %}}The name of the output column.{{% /md %}}</dd>
-</dl>
+    <dd>{{% md %}}The name of the output column.{{% /md %}}</dd></dl>
 {{% /choosable %}}
 
 {{% choosable language nodejs %}}
-<dl class="resources-properties">
-
-    <dt class="property-optional"
+<dl class="resources-properties"><dt class="property-optional"
             title="Optional">
         <span id="datatype_nodejs">
 <a href="#datatype_nodejs" style="color: inherit; text-decoration: inherit;">data<wbr>Type</a>
@@ -1712,8 +1539,7 @@ All [input](#inputs) properties are implicitly available as output properties. A
         <span class="property-indicator"></span>
         <span class="property-type">string</span>
     </dt>
-    <dd>{{% md %}}The (Azure Machine Learning supported) data type of the output column. A list of valid  Azure Machine Learning data types are described at https://msdn.microsoft.com/en-us/library/azure/dn905923.aspx .{{% /md %}}</dd>
-    <dt class="property-optional"
+    <dd>{{% md %}}The (Azure Machine Learning supported) data type of the output column. A list of valid  Azure Machine Learning data types are described at https://msdn.microsoft.com/en-us/library/azure/dn905923.aspx .{{% /md %}}</dd><dt class="property-optional"
             title="Optional">
         <span id="name_nodejs">
 <a href="#name_nodejs" style="color: inherit; text-decoration: inherit;">name</a>
@@ -1721,14 +1547,11 @@ All [input](#inputs) properties are implicitly available as output properties. A
         <span class="property-indicator"></span>
         <span class="property-type">string</span>
     </dt>
-    <dd>{{% md %}}The name of the output column.{{% /md %}}</dd>
-</dl>
+    <dd>{{% md %}}The name of the output column.{{% /md %}}</dd></dl>
 {{% /choosable %}}
 
 {{% choosable language python %}}
-<dl class="resources-properties">
-
-    <dt class="property-optional"
+<dl class="resources-properties"><dt class="property-optional"
             title="Optional">
         <span id="data_type_python">
 <a href="#data_type_python" style="color: inherit; text-decoration: inherit;">data_<wbr>type</a>
@@ -1736,8 +1559,7 @@ All [input](#inputs) properties are implicitly available as output properties. A
         <span class="property-indicator"></span>
         <span class="property-type">str</span>
     </dt>
-    <dd>{{% md %}}The (Azure Machine Learning supported) data type of the output column. A list of valid  Azure Machine Learning data types are described at https://msdn.microsoft.com/en-us/library/azure/dn905923.aspx .{{% /md %}}</dd>
-    <dt class="property-optional"
+    <dd>{{% md %}}The (Azure Machine Learning supported) data type of the output column. A list of valid  Azure Machine Learning data types are described at https://msdn.microsoft.com/en-us/library/azure/dn905923.aspx .{{% /md %}}</dd><dt class="property-optional"
             title="Optional">
         <span id="name_python">
 <a href="#name_python" style="color: inherit; text-decoration: inherit;">name</a>
@@ -1745,16 +1567,13 @@ All [input](#inputs) properties are implicitly available as output properties. A
         <span class="property-indicator"></span>
         <span class="property-type">str</span>
     </dt>
-    <dd>{{% md %}}The name of the output column.{{% /md %}}</dd>
-</dl>
+    <dd>{{% md %}}The name of the output column.{{% /md %}}</dd></dl>
 {{% /choosable %}}
 
 <h4 id="azuremachinelearningwebserviceoutputcolumnresponse">Azure<wbr>Machine<wbr>Learning<wbr>Web<wbr>Service<wbr>Output<wbr>Column<wbr>Response</h4>
 
 {{% choosable language csharp %}}
-<dl class="resources-properties">
-
-    <dt class="property-optional"
+<dl class="resources-properties"><dt class="property-optional"
             title="Optional">
         <span id="datatype_csharp">
 <a href="#datatype_csharp" style="color: inherit; text-decoration: inherit;">Data<wbr>Type</a>
@@ -1762,8 +1581,7 @@ All [input](#inputs) properties are implicitly available as output properties. A
         <span class="property-indicator"></span>
         <span class="property-type">string</span>
     </dt>
-    <dd>{{% md %}}The (Azure Machine Learning supported) data type of the output column. A list of valid  Azure Machine Learning data types are described at https://msdn.microsoft.com/en-us/library/azure/dn905923.aspx .{{% /md %}}</dd>
-    <dt class="property-optional"
+    <dd>{{% md %}}The (Azure Machine Learning supported) data type of the output column. A list of valid  Azure Machine Learning data types are described at https://msdn.microsoft.com/en-us/library/azure/dn905923.aspx .{{% /md %}}</dd><dt class="property-optional"
             title="Optional">
         <span id="name_csharp">
 <a href="#name_csharp" style="color: inherit; text-decoration: inherit;">Name</a>
@@ -1771,14 +1589,11 @@ All [input](#inputs) properties are implicitly available as output properties. A
         <span class="property-indicator"></span>
         <span class="property-type">string</span>
     </dt>
-    <dd>{{% md %}}The name of the output column.{{% /md %}}</dd>
-</dl>
+    <dd>{{% md %}}The name of the output column.{{% /md %}}</dd></dl>
 {{% /choosable %}}
 
 {{% choosable language go %}}
-<dl class="resources-properties">
-
-    <dt class="property-optional"
+<dl class="resources-properties"><dt class="property-optional"
             title="Optional">
         <span id="datatype_go">
 <a href="#datatype_go" style="color: inherit; text-decoration: inherit;">Data<wbr>Type</a>
@@ -1786,8 +1601,7 @@ All [input](#inputs) properties are implicitly available as output properties. A
         <span class="property-indicator"></span>
         <span class="property-type">string</span>
     </dt>
-    <dd>{{% md %}}The (Azure Machine Learning supported) data type of the output column. A list of valid  Azure Machine Learning data types are described at https://msdn.microsoft.com/en-us/library/azure/dn905923.aspx .{{% /md %}}</dd>
-    <dt class="property-optional"
+    <dd>{{% md %}}The (Azure Machine Learning supported) data type of the output column. A list of valid  Azure Machine Learning data types are described at https://msdn.microsoft.com/en-us/library/azure/dn905923.aspx .{{% /md %}}</dd><dt class="property-optional"
             title="Optional">
         <span id="name_go">
 <a href="#name_go" style="color: inherit; text-decoration: inherit;">Name</a>
@@ -1795,14 +1609,11 @@ All [input](#inputs) properties are implicitly available as output properties. A
         <span class="property-indicator"></span>
         <span class="property-type">string</span>
     </dt>
-    <dd>{{% md %}}The name of the output column.{{% /md %}}</dd>
-</dl>
+    <dd>{{% md %}}The name of the output column.{{% /md %}}</dd></dl>
 {{% /choosable %}}
 
 {{% choosable language nodejs %}}
-<dl class="resources-properties">
-
-    <dt class="property-optional"
+<dl class="resources-properties"><dt class="property-optional"
             title="Optional">
         <span id="datatype_nodejs">
 <a href="#datatype_nodejs" style="color: inherit; text-decoration: inherit;">data<wbr>Type</a>
@@ -1810,8 +1621,7 @@ All [input](#inputs) properties are implicitly available as output properties. A
         <span class="property-indicator"></span>
         <span class="property-type">string</span>
     </dt>
-    <dd>{{% md %}}The (Azure Machine Learning supported) data type of the output column. A list of valid  Azure Machine Learning data types are described at https://msdn.microsoft.com/en-us/library/azure/dn905923.aspx .{{% /md %}}</dd>
-    <dt class="property-optional"
+    <dd>{{% md %}}The (Azure Machine Learning supported) data type of the output column. A list of valid  Azure Machine Learning data types are described at https://msdn.microsoft.com/en-us/library/azure/dn905923.aspx .{{% /md %}}</dd><dt class="property-optional"
             title="Optional">
         <span id="name_nodejs">
 <a href="#name_nodejs" style="color: inherit; text-decoration: inherit;">name</a>
@@ -1819,14 +1629,11 @@ All [input](#inputs) properties are implicitly available as output properties. A
         <span class="property-indicator"></span>
         <span class="property-type">string</span>
     </dt>
-    <dd>{{% md %}}The name of the output column.{{% /md %}}</dd>
-</dl>
+    <dd>{{% md %}}The name of the output column.{{% /md %}}</dd></dl>
 {{% /choosable %}}
 
 {{% choosable language python %}}
-<dl class="resources-properties">
-
-    <dt class="property-optional"
+<dl class="resources-properties"><dt class="property-optional"
             title="Optional">
         <span id="data_type_python">
 <a href="#data_type_python" style="color: inherit; text-decoration: inherit;">data_<wbr>type</a>
@@ -1834,8 +1641,7 @@ All [input](#inputs) properties are implicitly available as output properties. A
         <span class="property-indicator"></span>
         <span class="property-type">str</span>
     </dt>
-    <dd>{{% md %}}The (Azure Machine Learning supported) data type of the output column. A list of valid  Azure Machine Learning data types are described at https://msdn.microsoft.com/en-us/library/azure/dn905923.aspx .{{% /md %}}</dd>
-    <dt class="property-optional"
+    <dd>{{% md %}}The (Azure Machine Learning supported) data type of the output column. A list of valid  Azure Machine Learning data types are described at https://msdn.microsoft.com/en-us/library/azure/dn905923.aspx .{{% /md %}}</dd><dt class="property-optional"
             title="Optional">
         <span id="name_python">
 <a href="#name_python" style="color: inherit; text-decoration: inherit;">name</a>
@@ -1843,16 +1649,13 @@ All [input](#inputs) properties are implicitly available as output properties. A
         <span class="property-indicator"></span>
         <span class="property-type">str</span>
     </dt>
-    <dd>{{% md %}}The name of the output column.{{% /md %}}</dd>
-</dl>
+    <dd>{{% md %}}The name of the output column.{{% /md %}}</dd></dl>
 {{% /choosable %}}
 
 <h4 id="functioninput">Function<wbr>Input</h4>
 
 {{% choosable language csharp %}}
-<dl class="resources-properties">
-
-    <dt class="property-optional"
+<dl class="resources-properties"><dt class="property-optional"
             title="Optional">
         <span id="datatype_csharp">
 <a href="#datatype_csharp" style="color: inherit; text-decoration: inherit;">Data<wbr>Type</a>
@@ -1860,8 +1663,7 @@ All [input](#inputs) properties are implicitly available as output properties. A
         <span class="property-indicator"></span>
         <span class="property-type">string</span>
     </dt>
-    <dd>{{% md %}}The (Azure Stream Analytics supported) data type of the function input parameter. A list of valid Azure Stream Analytics data types are described at https://msdn.microsoft.com/en-us/library/azure/dn835065.aspx{{% /md %}}</dd>
-    <dt class="property-optional"
+    <dd>{{% md %}}The (Azure Stream Analytics supported) data type of the function input parameter. A list of valid Azure Stream Analytics data types are described at https://msdn.microsoft.com/en-us/library/azure/dn835065.aspx{{% /md %}}</dd><dt class="property-optional"
             title="Optional">
         <span id="isconfigurationparameter_csharp">
 <a href="#isconfigurationparameter_csharp" style="color: inherit; text-decoration: inherit;">Is<wbr>Configuration<wbr>Parameter</a>
@@ -1869,14 +1671,11 @@ All [input](#inputs) properties are implicitly available as output properties. A
         <span class="property-indicator"></span>
         <span class="property-type">bool</span>
     </dt>
-    <dd>{{% md %}}A flag indicating if the parameter is a configuration parameter. True if this input parameter is expected to be a constant. Default is false.{{% /md %}}</dd>
-</dl>
+    <dd>{{% md %}}A flag indicating if the parameter is a configuration parameter. True if this input parameter is expected to be a constant. Default is false.{{% /md %}}</dd></dl>
 {{% /choosable %}}
 
 {{% choosable language go %}}
-<dl class="resources-properties">
-
-    <dt class="property-optional"
+<dl class="resources-properties"><dt class="property-optional"
             title="Optional">
         <span id="datatype_go">
 <a href="#datatype_go" style="color: inherit; text-decoration: inherit;">Data<wbr>Type</a>
@@ -1884,8 +1683,7 @@ All [input](#inputs) properties are implicitly available as output properties. A
         <span class="property-indicator"></span>
         <span class="property-type">string</span>
     </dt>
-    <dd>{{% md %}}The (Azure Stream Analytics supported) data type of the function input parameter. A list of valid Azure Stream Analytics data types are described at https://msdn.microsoft.com/en-us/library/azure/dn835065.aspx{{% /md %}}</dd>
-    <dt class="property-optional"
+    <dd>{{% md %}}The (Azure Stream Analytics supported) data type of the function input parameter. A list of valid Azure Stream Analytics data types are described at https://msdn.microsoft.com/en-us/library/azure/dn835065.aspx{{% /md %}}</dd><dt class="property-optional"
             title="Optional">
         <span id="isconfigurationparameter_go">
 <a href="#isconfigurationparameter_go" style="color: inherit; text-decoration: inherit;">Is<wbr>Configuration<wbr>Parameter</a>
@@ -1893,14 +1691,11 @@ All [input](#inputs) properties are implicitly available as output properties. A
         <span class="property-indicator"></span>
         <span class="property-type">bool</span>
     </dt>
-    <dd>{{% md %}}A flag indicating if the parameter is a configuration parameter. True if this input parameter is expected to be a constant. Default is false.{{% /md %}}</dd>
-</dl>
+    <dd>{{% md %}}A flag indicating if the parameter is a configuration parameter. True if this input parameter is expected to be a constant. Default is false.{{% /md %}}</dd></dl>
 {{% /choosable %}}
 
 {{% choosable language nodejs %}}
-<dl class="resources-properties">
-
-    <dt class="property-optional"
+<dl class="resources-properties"><dt class="property-optional"
             title="Optional">
         <span id="datatype_nodejs">
 <a href="#datatype_nodejs" style="color: inherit; text-decoration: inherit;">data<wbr>Type</a>
@@ -1908,8 +1703,7 @@ All [input](#inputs) properties are implicitly available as output properties. A
         <span class="property-indicator"></span>
         <span class="property-type">string</span>
     </dt>
-    <dd>{{% md %}}The (Azure Stream Analytics supported) data type of the function input parameter. A list of valid Azure Stream Analytics data types are described at https://msdn.microsoft.com/en-us/library/azure/dn835065.aspx{{% /md %}}</dd>
-    <dt class="property-optional"
+    <dd>{{% md %}}The (Azure Stream Analytics supported) data type of the function input parameter. A list of valid Azure Stream Analytics data types are described at https://msdn.microsoft.com/en-us/library/azure/dn835065.aspx{{% /md %}}</dd><dt class="property-optional"
             title="Optional">
         <span id="isconfigurationparameter_nodejs">
 <a href="#isconfigurationparameter_nodejs" style="color: inherit; text-decoration: inherit;">is<wbr>Configuration<wbr>Parameter</a>
@@ -1917,14 +1711,11 @@ All [input](#inputs) properties are implicitly available as output properties. A
         <span class="property-indicator"></span>
         <span class="property-type">boolean</span>
     </dt>
-    <dd>{{% md %}}A flag indicating if the parameter is a configuration parameter. True if this input parameter is expected to be a constant. Default is false.{{% /md %}}</dd>
-</dl>
+    <dd>{{% md %}}A flag indicating if the parameter is a configuration parameter. True if this input parameter is expected to be a constant. Default is false.{{% /md %}}</dd></dl>
 {{% /choosable %}}
 
 {{% choosable language python %}}
-<dl class="resources-properties">
-
-    <dt class="property-optional"
+<dl class="resources-properties"><dt class="property-optional"
             title="Optional">
         <span id="data_type_python">
 <a href="#data_type_python" style="color: inherit; text-decoration: inherit;">data_<wbr>type</a>
@@ -1932,8 +1723,7 @@ All [input](#inputs) properties are implicitly available as output properties. A
         <span class="property-indicator"></span>
         <span class="property-type">str</span>
     </dt>
-    <dd>{{% md %}}The (Azure Stream Analytics supported) data type of the function input parameter. A list of valid Azure Stream Analytics data types are described at https://msdn.microsoft.com/en-us/library/azure/dn835065.aspx{{% /md %}}</dd>
-    <dt class="property-optional"
+    <dd>{{% md %}}The (Azure Stream Analytics supported) data type of the function input parameter. A list of valid Azure Stream Analytics data types are described at https://msdn.microsoft.com/en-us/library/azure/dn835065.aspx{{% /md %}}</dd><dt class="property-optional"
             title="Optional">
         <span id="is_configuration_parameter_python">
 <a href="#is_configuration_parameter_python" style="color: inherit; text-decoration: inherit;">is_<wbr>configuration_<wbr>parameter</a>
@@ -1941,16 +1731,13 @@ All [input](#inputs) properties are implicitly available as output properties. A
         <span class="property-indicator"></span>
         <span class="property-type">bool</span>
     </dt>
-    <dd>{{% md %}}A flag indicating if the parameter is a configuration parameter. True if this input parameter is expected to be a constant. Default is false.{{% /md %}}</dd>
-</dl>
+    <dd>{{% md %}}A flag indicating if the parameter is a configuration parameter. True if this input parameter is expected to be a constant. Default is false.{{% /md %}}</dd></dl>
 {{% /choosable %}}
 
 <h4 id="functioninputresponse">Function<wbr>Input<wbr>Response</h4>
 
 {{% choosable language csharp %}}
-<dl class="resources-properties">
-
-    <dt class="property-optional"
+<dl class="resources-properties"><dt class="property-optional"
             title="Optional">
         <span id="datatype_csharp">
 <a href="#datatype_csharp" style="color: inherit; text-decoration: inherit;">Data<wbr>Type</a>
@@ -1958,8 +1745,7 @@ All [input](#inputs) properties are implicitly available as output properties. A
         <span class="property-indicator"></span>
         <span class="property-type">string</span>
     </dt>
-    <dd>{{% md %}}The (Azure Stream Analytics supported) data type of the function input parameter. A list of valid Azure Stream Analytics data types are described at https://msdn.microsoft.com/en-us/library/azure/dn835065.aspx{{% /md %}}</dd>
-    <dt class="property-optional"
+    <dd>{{% md %}}The (Azure Stream Analytics supported) data type of the function input parameter. A list of valid Azure Stream Analytics data types are described at https://msdn.microsoft.com/en-us/library/azure/dn835065.aspx{{% /md %}}</dd><dt class="property-optional"
             title="Optional">
         <span id="isconfigurationparameter_csharp">
 <a href="#isconfigurationparameter_csharp" style="color: inherit; text-decoration: inherit;">Is<wbr>Configuration<wbr>Parameter</a>
@@ -1967,14 +1753,11 @@ All [input](#inputs) properties are implicitly available as output properties. A
         <span class="property-indicator"></span>
         <span class="property-type">bool</span>
     </dt>
-    <dd>{{% md %}}A flag indicating if the parameter is a configuration parameter. True if this input parameter is expected to be a constant. Default is false.{{% /md %}}</dd>
-</dl>
+    <dd>{{% md %}}A flag indicating if the parameter is a configuration parameter. True if this input parameter is expected to be a constant. Default is false.{{% /md %}}</dd></dl>
 {{% /choosable %}}
 
 {{% choosable language go %}}
-<dl class="resources-properties">
-
-    <dt class="property-optional"
+<dl class="resources-properties"><dt class="property-optional"
             title="Optional">
         <span id="datatype_go">
 <a href="#datatype_go" style="color: inherit; text-decoration: inherit;">Data<wbr>Type</a>
@@ -1982,8 +1765,7 @@ All [input](#inputs) properties are implicitly available as output properties. A
         <span class="property-indicator"></span>
         <span class="property-type">string</span>
     </dt>
-    <dd>{{% md %}}The (Azure Stream Analytics supported) data type of the function input parameter. A list of valid Azure Stream Analytics data types are described at https://msdn.microsoft.com/en-us/library/azure/dn835065.aspx{{% /md %}}</dd>
-    <dt class="property-optional"
+    <dd>{{% md %}}The (Azure Stream Analytics supported) data type of the function input parameter. A list of valid Azure Stream Analytics data types are described at https://msdn.microsoft.com/en-us/library/azure/dn835065.aspx{{% /md %}}</dd><dt class="property-optional"
             title="Optional">
         <span id="isconfigurationparameter_go">
 <a href="#isconfigurationparameter_go" style="color: inherit; text-decoration: inherit;">Is<wbr>Configuration<wbr>Parameter</a>
@@ -1991,14 +1773,11 @@ All [input](#inputs) properties are implicitly available as output properties. A
         <span class="property-indicator"></span>
         <span class="property-type">bool</span>
     </dt>
-    <dd>{{% md %}}A flag indicating if the parameter is a configuration parameter. True if this input parameter is expected to be a constant. Default is false.{{% /md %}}</dd>
-</dl>
+    <dd>{{% md %}}A flag indicating if the parameter is a configuration parameter. True if this input parameter is expected to be a constant. Default is false.{{% /md %}}</dd></dl>
 {{% /choosable %}}
 
 {{% choosable language nodejs %}}
-<dl class="resources-properties">
-
-    <dt class="property-optional"
+<dl class="resources-properties"><dt class="property-optional"
             title="Optional">
         <span id="datatype_nodejs">
 <a href="#datatype_nodejs" style="color: inherit; text-decoration: inherit;">data<wbr>Type</a>
@@ -2006,8 +1785,7 @@ All [input](#inputs) properties are implicitly available as output properties. A
         <span class="property-indicator"></span>
         <span class="property-type">string</span>
     </dt>
-    <dd>{{% md %}}The (Azure Stream Analytics supported) data type of the function input parameter. A list of valid Azure Stream Analytics data types are described at https://msdn.microsoft.com/en-us/library/azure/dn835065.aspx{{% /md %}}</dd>
-    <dt class="property-optional"
+    <dd>{{% md %}}The (Azure Stream Analytics supported) data type of the function input parameter. A list of valid Azure Stream Analytics data types are described at https://msdn.microsoft.com/en-us/library/azure/dn835065.aspx{{% /md %}}</dd><dt class="property-optional"
             title="Optional">
         <span id="isconfigurationparameter_nodejs">
 <a href="#isconfigurationparameter_nodejs" style="color: inherit; text-decoration: inherit;">is<wbr>Configuration<wbr>Parameter</a>
@@ -2015,14 +1793,11 @@ All [input](#inputs) properties are implicitly available as output properties. A
         <span class="property-indicator"></span>
         <span class="property-type">boolean</span>
     </dt>
-    <dd>{{% md %}}A flag indicating if the parameter is a configuration parameter. True if this input parameter is expected to be a constant. Default is false.{{% /md %}}</dd>
-</dl>
+    <dd>{{% md %}}A flag indicating if the parameter is a configuration parameter. True if this input parameter is expected to be a constant. Default is false.{{% /md %}}</dd></dl>
 {{% /choosable %}}
 
 {{% choosable language python %}}
-<dl class="resources-properties">
-
-    <dt class="property-optional"
+<dl class="resources-properties"><dt class="property-optional"
             title="Optional">
         <span id="data_type_python">
 <a href="#data_type_python" style="color: inherit; text-decoration: inherit;">data_<wbr>type</a>
@@ -2030,8 +1805,7 @@ All [input](#inputs) properties are implicitly available as output properties. A
         <span class="property-indicator"></span>
         <span class="property-type">str</span>
     </dt>
-    <dd>{{% md %}}The (Azure Stream Analytics supported) data type of the function input parameter. A list of valid Azure Stream Analytics data types are described at https://msdn.microsoft.com/en-us/library/azure/dn835065.aspx{{% /md %}}</dd>
-    <dt class="property-optional"
+    <dd>{{% md %}}The (Azure Stream Analytics supported) data type of the function input parameter. A list of valid Azure Stream Analytics data types are described at https://msdn.microsoft.com/en-us/library/azure/dn835065.aspx{{% /md %}}</dd><dt class="property-optional"
             title="Optional">
         <span id="is_configuration_parameter_python">
 <a href="#is_configuration_parameter_python" style="color: inherit; text-decoration: inherit;">is_<wbr>configuration_<wbr>parameter</a>
@@ -2039,16 +1813,13 @@ All [input](#inputs) properties are implicitly available as output properties. A
         <span class="property-indicator"></span>
         <span class="property-type">bool</span>
     </dt>
-    <dd>{{% md %}}A flag indicating if the parameter is a configuration parameter. True if this input parameter is expected to be a constant. Default is false.{{% /md %}}</dd>
-</dl>
+    <dd>{{% md %}}A flag indicating if the parameter is a configuration parameter. True if this input parameter is expected to be a constant. Default is false.{{% /md %}}</dd></dl>
 {{% /choosable %}}
 
 <h4 id="functionoutput">Function<wbr>Output</h4>
 
 {{% choosable language csharp %}}
-<dl class="resources-properties">
-
-    <dt class="property-optional"
+<dl class="resources-properties"><dt class="property-optional"
             title="Optional">
         <span id="datatype_csharp">
 <a href="#datatype_csharp" style="color: inherit; text-decoration: inherit;">Data<wbr>Type</a>
@@ -2056,14 +1827,11 @@ All [input](#inputs) properties are implicitly available as output properties. A
         <span class="property-indicator"></span>
         <span class="property-type">string</span>
     </dt>
-    <dd>{{% md %}}The (Azure Stream Analytics supported) data type of the function output. A list of valid Azure Stream Analytics data types are described at https://msdn.microsoft.com/en-us/library/azure/dn835065.aspx{{% /md %}}</dd>
-</dl>
+    <dd>{{% md %}}The (Azure Stream Analytics supported) data type of the function output. A list of valid Azure Stream Analytics data types are described at https://msdn.microsoft.com/en-us/library/azure/dn835065.aspx{{% /md %}}</dd></dl>
 {{% /choosable %}}
 
 {{% choosable language go %}}
-<dl class="resources-properties">
-
-    <dt class="property-optional"
+<dl class="resources-properties"><dt class="property-optional"
             title="Optional">
         <span id="datatype_go">
 <a href="#datatype_go" style="color: inherit; text-decoration: inherit;">Data<wbr>Type</a>
@@ -2071,14 +1839,11 @@ All [input](#inputs) properties are implicitly available as output properties. A
         <span class="property-indicator"></span>
         <span class="property-type">string</span>
     </dt>
-    <dd>{{% md %}}The (Azure Stream Analytics supported) data type of the function output. A list of valid Azure Stream Analytics data types are described at https://msdn.microsoft.com/en-us/library/azure/dn835065.aspx{{% /md %}}</dd>
-</dl>
+    <dd>{{% md %}}The (Azure Stream Analytics supported) data type of the function output. A list of valid Azure Stream Analytics data types are described at https://msdn.microsoft.com/en-us/library/azure/dn835065.aspx{{% /md %}}</dd></dl>
 {{% /choosable %}}
 
 {{% choosable language nodejs %}}
-<dl class="resources-properties">
-
-    <dt class="property-optional"
+<dl class="resources-properties"><dt class="property-optional"
             title="Optional">
         <span id="datatype_nodejs">
 <a href="#datatype_nodejs" style="color: inherit; text-decoration: inherit;">data<wbr>Type</a>
@@ -2086,14 +1851,11 @@ All [input](#inputs) properties are implicitly available as output properties. A
         <span class="property-indicator"></span>
         <span class="property-type">string</span>
     </dt>
-    <dd>{{% md %}}The (Azure Stream Analytics supported) data type of the function output. A list of valid Azure Stream Analytics data types are described at https://msdn.microsoft.com/en-us/library/azure/dn835065.aspx{{% /md %}}</dd>
-</dl>
+    <dd>{{% md %}}The (Azure Stream Analytics supported) data type of the function output. A list of valid Azure Stream Analytics data types are described at https://msdn.microsoft.com/en-us/library/azure/dn835065.aspx{{% /md %}}</dd></dl>
 {{% /choosable %}}
 
 {{% choosable language python %}}
-<dl class="resources-properties">
-
-    <dt class="property-optional"
+<dl class="resources-properties"><dt class="property-optional"
             title="Optional">
         <span id="data_type_python">
 <a href="#data_type_python" style="color: inherit; text-decoration: inherit;">data_<wbr>type</a>
@@ -2101,16 +1863,13 @@ All [input](#inputs) properties are implicitly available as output properties. A
         <span class="property-indicator"></span>
         <span class="property-type">str</span>
     </dt>
-    <dd>{{% md %}}The (Azure Stream Analytics supported) data type of the function output. A list of valid Azure Stream Analytics data types are described at https://msdn.microsoft.com/en-us/library/azure/dn835065.aspx{{% /md %}}</dd>
-</dl>
+    <dd>{{% md %}}The (Azure Stream Analytics supported) data type of the function output. A list of valid Azure Stream Analytics data types are described at https://msdn.microsoft.com/en-us/library/azure/dn835065.aspx{{% /md %}}</dd></dl>
 {{% /choosable %}}
 
 <h4 id="functionoutputresponse">Function<wbr>Output<wbr>Response</h4>
 
 {{% choosable language csharp %}}
-<dl class="resources-properties">
-
-    <dt class="property-optional"
+<dl class="resources-properties"><dt class="property-optional"
             title="Optional">
         <span id="datatype_csharp">
 <a href="#datatype_csharp" style="color: inherit; text-decoration: inherit;">Data<wbr>Type</a>
@@ -2118,14 +1877,11 @@ All [input](#inputs) properties are implicitly available as output properties. A
         <span class="property-indicator"></span>
         <span class="property-type">string</span>
     </dt>
-    <dd>{{% md %}}The (Azure Stream Analytics supported) data type of the function output. A list of valid Azure Stream Analytics data types are described at https://msdn.microsoft.com/en-us/library/azure/dn835065.aspx{{% /md %}}</dd>
-</dl>
+    <dd>{{% md %}}The (Azure Stream Analytics supported) data type of the function output. A list of valid Azure Stream Analytics data types are described at https://msdn.microsoft.com/en-us/library/azure/dn835065.aspx{{% /md %}}</dd></dl>
 {{% /choosable %}}
 
 {{% choosable language go %}}
-<dl class="resources-properties">
-
-    <dt class="property-optional"
+<dl class="resources-properties"><dt class="property-optional"
             title="Optional">
         <span id="datatype_go">
 <a href="#datatype_go" style="color: inherit; text-decoration: inherit;">Data<wbr>Type</a>
@@ -2133,14 +1889,11 @@ All [input](#inputs) properties are implicitly available as output properties. A
         <span class="property-indicator"></span>
         <span class="property-type">string</span>
     </dt>
-    <dd>{{% md %}}The (Azure Stream Analytics supported) data type of the function output. A list of valid Azure Stream Analytics data types are described at https://msdn.microsoft.com/en-us/library/azure/dn835065.aspx{{% /md %}}</dd>
-</dl>
+    <dd>{{% md %}}The (Azure Stream Analytics supported) data type of the function output. A list of valid Azure Stream Analytics data types are described at https://msdn.microsoft.com/en-us/library/azure/dn835065.aspx{{% /md %}}</dd></dl>
 {{% /choosable %}}
 
 {{% choosable language nodejs %}}
-<dl class="resources-properties">
-
-    <dt class="property-optional"
+<dl class="resources-properties"><dt class="property-optional"
             title="Optional">
         <span id="datatype_nodejs">
 <a href="#datatype_nodejs" style="color: inherit; text-decoration: inherit;">data<wbr>Type</a>
@@ -2148,14 +1901,11 @@ All [input](#inputs) properties are implicitly available as output properties. A
         <span class="property-indicator"></span>
         <span class="property-type">string</span>
     </dt>
-    <dd>{{% md %}}The (Azure Stream Analytics supported) data type of the function output. A list of valid Azure Stream Analytics data types are described at https://msdn.microsoft.com/en-us/library/azure/dn835065.aspx{{% /md %}}</dd>
-</dl>
+    <dd>{{% md %}}The (Azure Stream Analytics supported) data type of the function output. A list of valid Azure Stream Analytics data types are described at https://msdn.microsoft.com/en-us/library/azure/dn835065.aspx{{% /md %}}</dd></dl>
 {{% /choosable %}}
 
 {{% choosable language python %}}
-<dl class="resources-properties">
-
-    <dt class="property-optional"
+<dl class="resources-properties"><dt class="property-optional"
             title="Optional">
         <span id="data_type_python">
 <a href="#data_type_python" style="color: inherit; text-decoration: inherit;">data_<wbr>type</a>
@@ -2163,16 +1913,13 @@ All [input](#inputs) properties are implicitly available as output properties. A
         <span class="property-indicator"></span>
         <span class="property-type">str</span>
     </dt>
-    <dd>{{% md %}}The (Azure Stream Analytics supported) data type of the function output. A list of valid Azure Stream Analytics data types are described at https://msdn.microsoft.com/en-us/library/azure/dn835065.aspx{{% /md %}}</dd>
-</dl>
+    <dd>{{% md %}}The (Azure Stream Analytics supported) data type of the function output. A list of valid Azure Stream Analytics data types are described at https://msdn.microsoft.com/en-us/library/azure/dn835065.aspx{{% /md %}}</dd></dl>
 {{% /choosable %}}
 
 <h4 id="javascriptfunctionbinding">Java<wbr>Script<wbr>Function<wbr>Binding</h4>
 
 {{% choosable language csharp %}}
-<dl class="resources-properties">
-
-    <dt class="property-optional"
+<dl class="resources-properties"><dt class="property-optional"
             title="Optional">
         <span id="script_csharp">
 <a href="#script_csharp" style="color: inherit; text-decoration: inherit;">Script</a>
@@ -2180,14 +1927,11 @@ All [input](#inputs) properties are implicitly available as output properties. A
         <span class="property-indicator"></span>
         <span class="property-type">string</span>
     </dt>
-    <dd>{{% md %}}The JavaScript code containing a single function definition. For example: 'function (x, y) { return x + y; }'{{% /md %}}</dd>
-</dl>
+    <dd>{{% md %}}The JavaScript code containing a single function definition. For example: 'function (x, y) { return x + y; }'{{% /md %}}</dd></dl>
 {{% /choosable %}}
 
 {{% choosable language go %}}
-<dl class="resources-properties">
-
-    <dt class="property-optional"
+<dl class="resources-properties"><dt class="property-optional"
             title="Optional">
         <span id="script_go">
 <a href="#script_go" style="color: inherit; text-decoration: inherit;">Script</a>
@@ -2195,14 +1939,11 @@ All [input](#inputs) properties are implicitly available as output properties. A
         <span class="property-indicator"></span>
         <span class="property-type">string</span>
     </dt>
-    <dd>{{% md %}}The JavaScript code containing a single function definition. For example: 'function (x, y) { return x + y; }'{{% /md %}}</dd>
-</dl>
+    <dd>{{% md %}}The JavaScript code containing a single function definition. For example: 'function (x, y) { return x + y; }'{{% /md %}}</dd></dl>
 {{% /choosable %}}
 
 {{% choosable language nodejs %}}
-<dl class="resources-properties">
-
-    <dt class="property-optional"
+<dl class="resources-properties"><dt class="property-optional"
             title="Optional">
         <span id="script_nodejs">
 <a href="#script_nodejs" style="color: inherit; text-decoration: inherit;">script</a>
@@ -2210,14 +1951,11 @@ All [input](#inputs) properties are implicitly available as output properties. A
         <span class="property-indicator"></span>
         <span class="property-type">string</span>
     </dt>
-    <dd>{{% md %}}The JavaScript code containing a single function definition. For example: 'function (x, y) { return x + y; }'{{% /md %}}</dd>
-</dl>
+    <dd>{{% md %}}The JavaScript code containing a single function definition. For example: 'function (x, y) { return x + y; }'{{% /md %}}</dd></dl>
 {{% /choosable %}}
 
 {{% choosable language python %}}
-<dl class="resources-properties">
-
-    <dt class="property-optional"
+<dl class="resources-properties"><dt class="property-optional"
             title="Optional">
         <span id="script_python">
 <a href="#script_python" style="color: inherit; text-decoration: inherit;">script</a>
@@ -2225,16 +1963,13 @@ All [input](#inputs) properties are implicitly available as output properties. A
         <span class="property-indicator"></span>
         <span class="property-type">str</span>
     </dt>
-    <dd>{{% md %}}The JavaScript code containing a single function definition. For example: 'function (x, y) { return x + y; }'{{% /md %}}</dd>
-</dl>
+    <dd>{{% md %}}The JavaScript code containing a single function definition. For example: 'function (x, y) { return x + y; }'{{% /md %}}</dd></dl>
 {{% /choosable %}}
 
 <h4 id="javascriptfunctionbindingresponse">Java<wbr>Script<wbr>Function<wbr>Binding<wbr>Response</h4>
 
 {{% choosable language csharp %}}
-<dl class="resources-properties">
-
-    <dt class="property-optional"
+<dl class="resources-properties"><dt class="property-optional"
             title="Optional">
         <span id="script_csharp">
 <a href="#script_csharp" style="color: inherit; text-decoration: inherit;">Script</a>
@@ -2242,14 +1977,11 @@ All [input](#inputs) properties are implicitly available as output properties. A
         <span class="property-indicator"></span>
         <span class="property-type">string</span>
     </dt>
-    <dd>{{% md %}}The JavaScript code containing a single function definition. For example: 'function (x, y) { return x + y; }'{{% /md %}}</dd>
-</dl>
+    <dd>{{% md %}}The JavaScript code containing a single function definition. For example: 'function (x, y) { return x + y; }'{{% /md %}}</dd></dl>
 {{% /choosable %}}
 
 {{% choosable language go %}}
-<dl class="resources-properties">
-
-    <dt class="property-optional"
+<dl class="resources-properties"><dt class="property-optional"
             title="Optional">
         <span id="script_go">
 <a href="#script_go" style="color: inherit; text-decoration: inherit;">Script</a>
@@ -2257,14 +1989,11 @@ All [input](#inputs) properties are implicitly available as output properties. A
         <span class="property-indicator"></span>
         <span class="property-type">string</span>
     </dt>
-    <dd>{{% md %}}The JavaScript code containing a single function definition. For example: 'function (x, y) { return x + y; }'{{% /md %}}</dd>
-</dl>
+    <dd>{{% md %}}The JavaScript code containing a single function definition. For example: 'function (x, y) { return x + y; }'{{% /md %}}</dd></dl>
 {{% /choosable %}}
 
 {{% choosable language nodejs %}}
-<dl class="resources-properties">
-
-    <dt class="property-optional"
+<dl class="resources-properties"><dt class="property-optional"
             title="Optional">
         <span id="script_nodejs">
 <a href="#script_nodejs" style="color: inherit; text-decoration: inherit;">script</a>
@@ -2272,14 +2001,11 @@ All [input](#inputs) properties are implicitly available as output properties. A
         <span class="property-indicator"></span>
         <span class="property-type">string</span>
     </dt>
-    <dd>{{% md %}}The JavaScript code containing a single function definition. For example: 'function (x, y) { return x + y; }'{{% /md %}}</dd>
-</dl>
+    <dd>{{% md %}}The JavaScript code containing a single function definition. For example: 'function (x, y) { return x + y; }'{{% /md %}}</dd></dl>
 {{% /choosable %}}
 
 {{% choosable language python %}}
-<dl class="resources-properties">
-
-    <dt class="property-optional"
+<dl class="resources-properties"><dt class="property-optional"
             title="Optional">
         <span id="script_python">
 <a href="#script_python" style="color: inherit; text-decoration: inherit;">script</a>
@@ -2287,16 +2013,13 @@ All [input](#inputs) properties are implicitly available as output properties. A
         <span class="property-indicator"></span>
         <span class="property-type">str</span>
     </dt>
-    <dd>{{% md %}}The JavaScript code containing a single function definition. For example: 'function (x, y) { return x + y; }'{{% /md %}}</dd>
-</dl>
+    <dd>{{% md %}}The JavaScript code containing a single function definition. For example: 'function (x, y) { return x + y; }'{{% /md %}}</dd></dl>
 {{% /choosable %}}
 
 <h4 id="scalarfunctionproperties">Scalar<wbr>Function<wbr>Properties</h4>
 
 {{% choosable language csharp %}}
-<dl class="resources-properties">
-
-    <dt class="property-optional"
+<dl class="resources-properties"><dt class="property-optional"
             title="Optional">
         <span id="binding_csharp">
 <a href="#binding_csharp" style="color: inherit; text-decoration: inherit;">Binding</a>
@@ -2304,8 +2027,7 @@ All [input](#inputs) properties are implicitly available as output properties. A
         <span class="property-indicator"></span>
         <span class="property-type"><a href="#azuremachinelearningwebservicefunctionbinding">Pulumi.<wbr>Azure<wbr>Native.<wbr>Stream<wbr>Analytics.<wbr>Inputs.<wbr>Azure<wbr>Machine<wbr>Learning<wbr>Web<wbr>Service<wbr>Function<wbr>Binding<wbr>Args</a> | <a href="#javascriptfunctionbinding">Pulumi.<wbr>Azure<wbr>Native.<wbr>Stream<wbr>Analytics.<wbr>Inputs.<wbr>Java<wbr>Script<wbr>Function<wbr>Binding<wbr>Args</a></span>
     </dt>
-    <dd>{{% md %}}The physical binding of the function. For example, in the Azure Machine Learning web service’s case, this describes the endpoint.{{% /md %}}</dd>
-    <dt class="property-optional"
+    <dd>{{% md %}}The physical binding of the function. For example, in the Azure Machine Learning web service’s case, this describes the endpoint.{{% /md %}}</dd><dt class="property-optional"
             title="Optional">
         <span id="inputs_csharp">
 <a href="#inputs_csharp" style="color: inherit; text-decoration: inherit;">Inputs</a>
@@ -2313,8 +2035,7 @@ All [input](#inputs) properties are implicitly available as output properties. A
         <span class="property-indicator"></span>
         <span class="property-type"><a href="#functioninput">List&lt;Pulumi.<wbr>Azure<wbr>Native.<wbr>Stream<wbr>Analytics.<wbr>Inputs.<wbr>Function<wbr>Input<wbr>Args&gt;</a></span>
     </dt>
-    <dd>{{% md %}}A list of inputs describing the parameters of the function.{{% /md %}}</dd>
-    <dt class="property-optional"
+    <dd>{{% md %}}A list of inputs describing the parameters of the function.{{% /md %}}</dd><dt class="property-optional"
             title="Optional">
         <span id="output_csharp">
 <a href="#output_csharp" style="color: inherit; text-decoration: inherit;">Output</a>
@@ -2322,14 +2043,11 @@ All [input](#inputs) properties are implicitly available as output properties. A
         <span class="property-indicator"></span>
         <span class="property-type"><a href="#functionoutput">Pulumi.<wbr>Azure<wbr>Native.<wbr>Stream<wbr>Analytics.<wbr>Inputs.<wbr>Function<wbr>Output<wbr>Args</a></span>
     </dt>
-    <dd>{{% md %}}The output of the function.{{% /md %}}</dd>
-</dl>
+    <dd>{{% md %}}The output of the function.{{% /md %}}</dd></dl>
 {{% /choosable %}}
 
 {{% choosable language go %}}
-<dl class="resources-properties">
-
-    <dt class="property-optional"
+<dl class="resources-properties"><dt class="property-optional"
             title="Optional">
         <span id="binding_go">
 <a href="#binding_go" style="color: inherit; text-decoration: inherit;">Binding</a>
@@ -2337,8 +2055,7 @@ All [input](#inputs) properties are implicitly available as output properties. A
         <span class="property-indicator"></span>
         <span class="property-type"><a href="#azuremachinelearningwebservicefunctionbinding">Azure<wbr>Machine<wbr>Learning<wbr>Web<wbr>Service<wbr>Function<wbr>Binding</a> | <a href="#javascriptfunctionbinding">Java<wbr>Script<wbr>Function<wbr>Binding</a></span>
     </dt>
-    <dd>{{% md %}}The physical binding of the function. For example, in the Azure Machine Learning web service’s case, this describes the endpoint.{{% /md %}}</dd>
-    <dt class="property-optional"
+    <dd>{{% md %}}The physical binding of the function. For example, in the Azure Machine Learning web service’s case, this describes the endpoint.{{% /md %}}</dd><dt class="property-optional"
             title="Optional">
         <span id="inputs_go">
 <a href="#inputs_go" style="color: inherit; text-decoration: inherit;">Inputs</a>
@@ -2346,8 +2063,7 @@ All [input](#inputs) properties are implicitly available as output properties. A
         <span class="property-indicator"></span>
         <span class="property-type"><a href="#functioninput">[]Function<wbr>Input<wbr>Type</a></span>
     </dt>
-    <dd>{{% md %}}A list of inputs describing the parameters of the function.{{% /md %}}</dd>
-    <dt class="property-optional"
+    <dd>{{% md %}}A list of inputs describing the parameters of the function.{{% /md %}}</dd><dt class="property-optional"
             title="Optional">
         <span id="output_go">
 <a href="#output_go" style="color: inherit; text-decoration: inherit;">Output</a>
@@ -2355,14 +2071,11 @@ All [input](#inputs) properties are implicitly available as output properties. A
         <span class="property-indicator"></span>
         <span class="property-type"><a href="#functionoutput">Function<wbr>Output<wbr>Type</a></span>
     </dt>
-    <dd>{{% md %}}The output of the function.{{% /md %}}</dd>
-</dl>
+    <dd>{{% md %}}The output of the function.{{% /md %}}</dd></dl>
 {{% /choosable %}}
 
 {{% choosable language nodejs %}}
-<dl class="resources-properties">
-
-    <dt class="property-optional"
+<dl class="resources-properties"><dt class="property-optional"
             title="Optional">
         <span id="binding_nodejs">
 <a href="#binding_nodejs" style="color: inherit; text-decoration: inherit;">binding</a>
@@ -2370,8 +2083,7 @@ All [input](#inputs) properties are implicitly available as output properties. A
         <span class="property-indicator"></span>
         <span class="property-type"><a href="#azuremachinelearningwebservicefunctionbinding">Azure<wbr>Machine<wbr>Learning<wbr>Web<wbr>Service<wbr>Function<wbr>Binding</a> | <a href="#javascriptfunctionbinding">Java<wbr>Script<wbr>Function<wbr>Binding</a></span>
     </dt>
-    <dd>{{% md %}}The physical binding of the function. For example, in the Azure Machine Learning web service’s case, this describes the endpoint.{{% /md %}}</dd>
-    <dt class="property-optional"
+    <dd>{{% md %}}The physical binding of the function. For example, in the Azure Machine Learning web service’s case, this describes the endpoint.{{% /md %}}</dd><dt class="property-optional"
             title="Optional">
         <span id="inputs_nodejs">
 <a href="#inputs_nodejs" style="color: inherit; text-decoration: inherit;">inputs</a>
@@ -2379,8 +2091,7 @@ All [input](#inputs) properties are implicitly available as output properties. A
         <span class="property-indicator"></span>
         <span class="property-type"><a href="#functioninput">Function<wbr>Input[]</a></span>
     </dt>
-    <dd>{{% md %}}A list of inputs describing the parameters of the function.{{% /md %}}</dd>
-    <dt class="property-optional"
+    <dd>{{% md %}}A list of inputs describing the parameters of the function.{{% /md %}}</dd><dt class="property-optional"
             title="Optional">
         <span id="output_nodejs">
 <a href="#output_nodejs" style="color: inherit; text-decoration: inherit;">output</a>
@@ -2388,14 +2099,11 @@ All [input](#inputs) properties are implicitly available as output properties. A
         <span class="property-indicator"></span>
         <span class="property-type"><a href="#functionoutput">Function<wbr>Output</a></span>
     </dt>
-    <dd>{{% md %}}The output of the function.{{% /md %}}</dd>
-</dl>
+    <dd>{{% md %}}The output of the function.{{% /md %}}</dd></dl>
 {{% /choosable %}}
 
 {{% choosable language python %}}
-<dl class="resources-properties">
-
-    <dt class="property-optional"
+<dl class="resources-properties"><dt class="property-optional"
             title="Optional">
         <span id="binding_python">
 <a href="#binding_python" style="color: inherit; text-decoration: inherit;">binding</a>
@@ -2403,8 +2111,7 @@ All [input](#inputs) properties are implicitly available as output properties. A
         <span class="property-indicator"></span>
         <span class="property-type"><a href="#azuremachinelearningwebservicefunctionbinding">Azure<wbr>Machine<wbr>Learning<wbr>Web<wbr>Service<wbr>Function<wbr>Binding<wbr>Args</a> | <a href="#javascriptfunctionbinding">Java<wbr>Script<wbr>Function<wbr>Binding<wbr>Args</a></span>
     </dt>
-    <dd>{{% md %}}The physical binding of the function. For example, in the Azure Machine Learning web service’s case, this describes the endpoint.{{% /md %}}</dd>
-    <dt class="property-optional"
+    <dd>{{% md %}}The physical binding of the function. For example, in the Azure Machine Learning web service’s case, this describes the endpoint.{{% /md %}}</dd><dt class="property-optional"
             title="Optional">
         <span id="inputs_python">
 <a href="#inputs_python" style="color: inherit; text-decoration: inherit;">inputs</a>
@@ -2412,8 +2119,7 @@ All [input](#inputs) properties are implicitly available as output properties. A
         <span class="property-indicator"></span>
         <span class="property-type"><a href="#functioninput">Sequence[Function<wbr>Input<wbr>Args]</a></span>
     </dt>
-    <dd>{{% md %}}A list of inputs describing the parameters of the function.{{% /md %}}</dd>
-    <dt class="property-optional"
+    <dd>{{% md %}}A list of inputs describing the parameters of the function.{{% /md %}}</dd><dt class="property-optional"
             title="Optional">
         <span id="output_python">
 <a href="#output_python" style="color: inherit; text-decoration: inherit;">output</a>
@@ -2421,16 +2127,13 @@ All [input](#inputs) properties are implicitly available as output properties. A
         <span class="property-indicator"></span>
         <span class="property-type"><a href="#functionoutput">Function<wbr>Output<wbr>Args</a></span>
     </dt>
-    <dd>{{% md %}}The output of the function.{{% /md %}}</dd>
-</dl>
+    <dd>{{% md %}}The output of the function.{{% /md %}}</dd></dl>
 {{% /choosable %}}
 
 <h4 id="scalarfunctionpropertiesresponse">Scalar<wbr>Function<wbr>Properties<wbr>Response</h4>
 
 {{% choosable language csharp %}}
-<dl class="resources-properties">
-
-    <dt class="property-required"
+<dl class="resources-properties"><dt class="property-required"
             title="Required">
         <span id="etag_csharp">
 <a href="#etag_csharp" style="color: inherit; text-decoration: inherit;">Etag</a>
@@ -2438,8 +2141,7 @@ All [input](#inputs) properties are implicitly available as output properties. A
         <span class="property-indicator"></span>
         <span class="property-type">string</span>
     </dt>
-    <dd>{{% md %}}The current entity tag for the function. This is an opaque string. You can use it to detect whether the resource has changed between requests. You can also use it in the If-Match or If-None-Match headers for write operations for optimistic concurrency.{{% /md %}}</dd>
-    <dt class="property-optional"
+    <dd>{{% md %}}The current entity tag for the function. This is an opaque string. You can use it to detect whether the resource has changed between requests. You can also use it in the If-Match or If-None-Match headers for write operations for optimistic concurrency.{{% /md %}}</dd><dt class="property-optional"
             title="Optional">
         <span id="binding_csharp">
 <a href="#binding_csharp" style="color: inherit; text-decoration: inherit;">Binding</a>
@@ -2447,8 +2149,7 @@ All [input](#inputs) properties are implicitly available as output properties. A
         <span class="property-indicator"></span>
         <span class="property-type"><a href="#azuremachinelearningwebservicefunctionbindingresponse">Pulumi.<wbr>Azure<wbr>Native.<wbr>Stream<wbr>Analytics.<wbr>Inputs.<wbr>Azure<wbr>Machine<wbr>Learning<wbr>Web<wbr>Service<wbr>Function<wbr>Binding<wbr>Response<wbr>Args</a> | <a href="#javascriptfunctionbindingresponse">Pulumi.<wbr>Azure<wbr>Native.<wbr>Stream<wbr>Analytics.<wbr>Inputs.<wbr>Java<wbr>Script<wbr>Function<wbr>Binding<wbr>Response<wbr>Args</a></span>
     </dt>
-    <dd>{{% md %}}The physical binding of the function. For example, in the Azure Machine Learning web service’s case, this describes the endpoint.{{% /md %}}</dd>
-    <dt class="property-optional"
+    <dd>{{% md %}}The physical binding of the function. For example, in the Azure Machine Learning web service’s case, this describes the endpoint.{{% /md %}}</dd><dt class="property-optional"
             title="Optional">
         <span id="inputs_csharp">
 <a href="#inputs_csharp" style="color: inherit; text-decoration: inherit;">Inputs</a>
@@ -2456,8 +2157,7 @@ All [input](#inputs) properties are implicitly available as output properties. A
         <span class="property-indicator"></span>
         <span class="property-type"><a href="#functioninputresponse">List&lt;Pulumi.<wbr>Azure<wbr>Native.<wbr>Stream<wbr>Analytics.<wbr>Inputs.<wbr>Function<wbr>Input<wbr>Response<wbr>Args&gt;</a></span>
     </dt>
-    <dd>{{% md %}}A list of inputs describing the parameters of the function.{{% /md %}}</dd>
-    <dt class="property-optional"
+    <dd>{{% md %}}A list of inputs describing the parameters of the function.{{% /md %}}</dd><dt class="property-optional"
             title="Optional">
         <span id="output_csharp">
 <a href="#output_csharp" style="color: inherit; text-decoration: inherit;">Output</a>
@@ -2465,14 +2165,11 @@ All [input](#inputs) properties are implicitly available as output properties. A
         <span class="property-indicator"></span>
         <span class="property-type"><a href="#functionoutputresponse">Pulumi.<wbr>Azure<wbr>Native.<wbr>Stream<wbr>Analytics.<wbr>Inputs.<wbr>Function<wbr>Output<wbr>Response<wbr>Args</a></span>
     </dt>
-    <dd>{{% md %}}The output of the function.{{% /md %}}</dd>
-</dl>
+    <dd>{{% md %}}The output of the function.{{% /md %}}</dd></dl>
 {{% /choosable %}}
 
 {{% choosable language go %}}
-<dl class="resources-properties">
-
-    <dt class="property-required"
+<dl class="resources-properties"><dt class="property-required"
             title="Required">
         <span id="etag_go">
 <a href="#etag_go" style="color: inherit; text-decoration: inherit;">Etag</a>
@@ -2480,8 +2177,7 @@ All [input](#inputs) properties are implicitly available as output properties. A
         <span class="property-indicator"></span>
         <span class="property-type">string</span>
     </dt>
-    <dd>{{% md %}}The current entity tag for the function. This is an opaque string. You can use it to detect whether the resource has changed between requests. You can also use it in the If-Match or If-None-Match headers for write operations for optimistic concurrency.{{% /md %}}</dd>
-    <dt class="property-optional"
+    <dd>{{% md %}}The current entity tag for the function. This is an opaque string. You can use it to detect whether the resource has changed between requests. You can also use it in the If-Match or If-None-Match headers for write operations for optimistic concurrency.{{% /md %}}</dd><dt class="property-optional"
             title="Optional">
         <span id="binding_go">
 <a href="#binding_go" style="color: inherit; text-decoration: inherit;">Binding</a>
@@ -2489,8 +2185,7 @@ All [input](#inputs) properties are implicitly available as output properties. A
         <span class="property-indicator"></span>
         <span class="property-type"><a href="#azuremachinelearningwebservicefunctionbindingresponse">Azure<wbr>Machine<wbr>Learning<wbr>Web<wbr>Service<wbr>Function<wbr>Binding<wbr>Response</a> | <a href="#javascriptfunctionbindingresponse">Java<wbr>Script<wbr>Function<wbr>Binding<wbr>Response</a></span>
     </dt>
-    <dd>{{% md %}}The physical binding of the function. For example, in the Azure Machine Learning web service’s case, this describes the endpoint.{{% /md %}}</dd>
-    <dt class="property-optional"
+    <dd>{{% md %}}The physical binding of the function. For example, in the Azure Machine Learning web service’s case, this describes the endpoint.{{% /md %}}</dd><dt class="property-optional"
             title="Optional">
         <span id="inputs_go">
 <a href="#inputs_go" style="color: inherit; text-decoration: inherit;">Inputs</a>
@@ -2498,8 +2193,7 @@ All [input](#inputs) properties are implicitly available as output properties. A
         <span class="property-indicator"></span>
         <span class="property-type"><a href="#functioninputresponse">[]Function<wbr>Input<wbr>Response</a></span>
     </dt>
-    <dd>{{% md %}}A list of inputs describing the parameters of the function.{{% /md %}}</dd>
-    <dt class="property-optional"
+    <dd>{{% md %}}A list of inputs describing the parameters of the function.{{% /md %}}</dd><dt class="property-optional"
             title="Optional">
         <span id="output_go">
 <a href="#output_go" style="color: inherit; text-decoration: inherit;">Output</a>
@@ -2507,14 +2201,11 @@ All [input](#inputs) properties are implicitly available as output properties. A
         <span class="property-indicator"></span>
         <span class="property-type"><a href="#functionoutputresponse">Function<wbr>Output<wbr>Response</a></span>
     </dt>
-    <dd>{{% md %}}The output of the function.{{% /md %}}</dd>
-</dl>
+    <dd>{{% md %}}The output of the function.{{% /md %}}</dd></dl>
 {{% /choosable %}}
 
 {{% choosable language nodejs %}}
-<dl class="resources-properties">
-
-    <dt class="property-required"
+<dl class="resources-properties"><dt class="property-required"
             title="Required">
         <span id="etag_nodejs">
 <a href="#etag_nodejs" style="color: inherit; text-decoration: inherit;">etag</a>
@@ -2522,8 +2213,7 @@ All [input](#inputs) properties are implicitly available as output properties. A
         <span class="property-indicator"></span>
         <span class="property-type">string</span>
     </dt>
-    <dd>{{% md %}}The current entity tag for the function. This is an opaque string. You can use it to detect whether the resource has changed between requests. You can also use it in the If-Match or If-None-Match headers for write operations for optimistic concurrency.{{% /md %}}</dd>
-    <dt class="property-optional"
+    <dd>{{% md %}}The current entity tag for the function. This is an opaque string. You can use it to detect whether the resource has changed between requests. You can also use it in the If-Match or If-None-Match headers for write operations for optimistic concurrency.{{% /md %}}</dd><dt class="property-optional"
             title="Optional">
         <span id="binding_nodejs">
 <a href="#binding_nodejs" style="color: inherit; text-decoration: inherit;">binding</a>
@@ -2531,8 +2221,7 @@ All [input](#inputs) properties are implicitly available as output properties. A
         <span class="property-indicator"></span>
         <span class="property-type"><a href="#azuremachinelearningwebservicefunctionbindingresponse">Azure<wbr>Machine<wbr>Learning<wbr>Web<wbr>Service<wbr>Function<wbr>Binding<wbr>Response</a> | <a href="#javascriptfunctionbindingresponse">Java<wbr>Script<wbr>Function<wbr>Binding<wbr>Response</a></span>
     </dt>
-    <dd>{{% md %}}The physical binding of the function. For example, in the Azure Machine Learning web service’s case, this describes the endpoint.{{% /md %}}</dd>
-    <dt class="property-optional"
+    <dd>{{% md %}}The physical binding of the function. For example, in the Azure Machine Learning web service’s case, this describes the endpoint.{{% /md %}}</dd><dt class="property-optional"
             title="Optional">
         <span id="inputs_nodejs">
 <a href="#inputs_nodejs" style="color: inherit; text-decoration: inherit;">inputs</a>
@@ -2540,8 +2229,7 @@ All [input](#inputs) properties are implicitly available as output properties. A
         <span class="property-indicator"></span>
         <span class="property-type"><a href="#functioninputresponse">Function<wbr>Input<wbr>Response[]</a></span>
     </dt>
-    <dd>{{% md %}}A list of inputs describing the parameters of the function.{{% /md %}}</dd>
-    <dt class="property-optional"
+    <dd>{{% md %}}A list of inputs describing the parameters of the function.{{% /md %}}</dd><dt class="property-optional"
             title="Optional">
         <span id="output_nodejs">
 <a href="#output_nodejs" style="color: inherit; text-decoration: inherit;">output</a>
@@ -2549,14 +2237,11 @@ All [input](#inputs) properties are implicitly available as output properties. A
         <span class="property-indicator"></span>
         <span class="property-type"><a href="#functionoutputresponse">Function<wbr>Output<wbr>Response</a></span>
     </dt>
-    <dd>{{% md %}}The output of the function.{{% /md %}}</dd>
-</dl>
+    <dd>{{% md %}}The output of the function.{{% /md %}}</dd></dl>
 {{% /choosable %}}
 
 {{% choosable language python %}}
-<dl class="resources-properties">
-
-    <dt class="property-required"
+<dl class="resources-properties"><dt class="property-required"
             title="Required">
         <span id="etag_python">
 <a href="#etag_python" style="color: inherit; text-decoration: inherit;">etag</a>
@@ -2564,8 +2249,7 @@ All [input](#inputs) properties are implicitly available as output properties. A
         <span class="property-indicator"></span>
         <span class="property-type">str</span>
     </dt>
-    <dd>{{% md %}}The current entity tag for the function. This is an opaque string. You can use it to detect whether the resource has changed between requests. You can also use it in the If-Match or If-None-Match headers for write operations for optimistic concurrency.{{% /md %}}</dd>
-    <dt class="property-optional"
+    <dd>{{% md %}}The current entity tag for the function. This is an opaque string. You can use it to detect whether the resource has changed between requests. You can also use it in the If-Match or If-None-Match headers for write operations for optimistic concurrency.{{% /md %}}</dd><dt class="property-optional"
             title="Optional">
         <span id="binding_python">
 <a href="#binding_python" style="color: inherit; text-decoration: inherit;">binding</a>
@@ -2573,8 +2257,7 @@ All [input](#inputs) properties are implicitly available as output properties. A
         <span class="property-indicator"></span>
         <span class="property-type"><a href="#azuremachinelearningwebservicefunctionbindingresponse">Azure<wbr>Machine<wbr>Learning<wbr>Web<wbr>Service<wbr>Function<wbr>Binding<wbr>Response<wbr>Args</a> | <a href="#javascriptfunctionbindingresponse">Java<wbr>Script<wbr>Function<wbr>Binding<wbr>Response<wbr>Args</a></span>
     </dt>
-    <dd>{{% md %}}The physical binding of the function. For example, in the Azure Machine Learning web service’s case, this describes the endpoint.{{% /md %}}</dd>
-    <dt class="property-optional"
+    <dd>{{% md %}}The physical binding of the function. For example, in the Azure Machine Learning web service’s case, this describes the endpoint.{{% /md %}}</dd><dt class="property-optional"
             title="Optional">
         <span id="inputs_python">
 <a href="#inputs_python" style="color: inherit; text-decoration: inherit;">inputs</a>
@@ -2582,8 +2265,7 @@ All [input](#inputs) properties are implicitly available as output properties. A
         <span class="property-indicator"></span>
         <span class="property-type"><a href="#functioninputresponse">Sequence[Function<wbr>Input<wbr>Response<wbr>Args]</a></span>
     </dt>
-    <dd>{{% md %}}A list of inputs describing the parameters of the function.{{% /md %}}</dd>
-    <dt class="property-optional"
+    <dd>{{% md %}}A list of inputs describing the parameters of the function.{{% /md %}}</dd><dt class="property-optional"
             title="Optional">
         <span id="output_python">
 <a href="#output_python" style="color: inherit; text-decoration: inherit;">output</a>
@@ -2591,8 +2273,7 @@ All [input](#inputs) properties are implicitly available as output properties. A
         <span class="property-indicator"></span>
         <span class="property-type"><a href="#functionoutputresponse">Function<wbr>Output<wbr>Response<wbr>Args</a></span>
     </dt>
-    <dd>{{% md %}}The output of the function.{{% /md %}}</dd>
-</dl>
+    <dd>{{% md %}}The output of the function.{{% /md %}}</dd></dl>
 {{% /choosable %}}
 ## Import
 

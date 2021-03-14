@@ -14,11 +14,17 @@ The top level storage insight resource container.
 API Version: 2020-08-01.
 
 {{% examples %}}
+
 ## Example Usage
 
 {{< chooser language "typescript,python,go,csharp" / >}}
+
+
 ### StorageInsightsCreate
-{{% example csharp %}}
+
+
+{{< example csharp >}}
+
 ```csharp
 using Pulumi;
 using AzureNative = Pulumi.AzureNative;
@@ -53,9 +59,12 @@ class MyStack : Stack
 
 ```
 
-{{% /example %}}
 
-{{% example go %}}
+{{< /example >}}
+
+
+{{< example go >}}
+
 
 ```go
 package main
@@ -92,9 +101,12 @@ func main() {
 
 ```
 
-{{% /example %}}
 
-{{% example python %}}
+{{< /example >}}
+
+
+{{< example python >}}
+
 
 ```python
 import pulumi
@@ -116,9 +128,12 @@ storage_insight_config = azure_native.operationalinsights.StorageInsightConfig("
 
 ```
 
-{{% /example %}}
 
-{{% example typescript %}}
+{{< /example >}}
+
+
+{{< example typescript >}}
+
 
 ```typescript
 import * as pulumi from "@pulumi/pulumi";
@@ -141,9 +156,16 @@ const storageInsightConfig = new azure_native.operationalinsights.StorageInsight
 
 ```
 
-{{% /example %}}
+
+{{< /example >}}
+
+
+
+
 
 {{% /examples %}}
+
+
 
 
 ## Create a StorageInsightConfig Resource {#create}
@@ -168,9 +190,7 @@ const storageInsightConfig = new azure_native.operationalinsights.StorageInsight
 
 {{% choosable language nodejs %}}
 
-<dl class="resources-properties">
-  
-    <dt
+<dl class="resources-properties"><dt
         class="property-required" title="Required">
         <span>name</span>
         <span class="property-indicator"></span>
@@ -178,9 +198,7 @@ const storageInsightConfig = new azure_native.operationalinsights.StorageInsight
     </dt>
     <dd>
       The unique name of the resource.
-    </dd>
-  
-    <dt
+    </dd><dt
         class="property-required" title="Required">
         <span>args</span>
         <span class="property-indicator"></span>
@@ -188,9 +206,7 @@ const storageInsightConfig = new azure_native.operationalinsights.StorageInsight
     </dt>
     <dd>
       The arguments to resource properties.
-    </dd>
-  
-    <dt
+    </dd><dt
         class="property-optional" title="Optional">
         <span>opts</span>
         <span class="property-indicator"></span>
@@ -198,10 +214,7 @@ const storageInsightConfig = new azure_native.operationalinsights.StorageInsight
     </dt>
     <dd>
       Bag of options to control resource&#39;s behavior.
-    </dd>
-  
-
-</dl>
+    </dd></dl>
 
 {{% /choosable %}}
 
@@ -227,9 +240,7 @@ const storageInsightConfig = new azure_native.operationalinsights.StorageInsight
 
 {{% choosable language go %}}
 
-<dl class="resources-properties">
-  
-    <dt
+<dl class="resources-properties"><dt
         class="property-optional" title="Optional">
         <span>ctx</span>
         <span class="property-indicator"></span>
@@ -237,9 +248,7 @@ const storageInsightConfig = new azure_native.operationalinsights.StorageInsight
     </dt>
     <dd>
       Context object for the current deployment.
-    </dd>
-  
-    <dt
+    </dd><dt
         class="property-required" title="Required">
         <span>name</span>
         <span class="property-indicator"></span>
@@ -247,9 +256,7 @@ const storageInsightConfig = new azure_native.operationalinsights.StorageInsight
     </dt>
     <dd>
       The unique name of the resource.
-    </dd>
-  
-    <dt
+    </dd><dt
         class="property-required" title="Required">
         <span>args</span>
         <span class="property-indicator"></span>
@@ -257,9 +264,7 @@ const storageInsightConfig = new azure_native.operationalinsights.StorageInsight
     </dt>
     <dd>
       The arguments to resource properties.
-    </dd>
-  
-    <dt
+    </dd><dt
         class="property-optional" title="Optional">
         <span>opts</span>
         <span class="property-indicator"></span>
@@ -267,18 +272,13 @@ const storageInsightConfig = new azure_native.operationalinsights.StorageInsight
     </dt>
     <dd>
       Bag of options to control resource&#39;s behavior.
-    </dd>
-  
-
-</dl>
+    </dd></dl>
 
 {{% /choosable %}}
 
 {{% choosable language csharp %}}
 
-<dl class="resources-properties">
-  
-    <dt
+<dl class="resources-properties"><dt
         class="property-required" title="Required">
         <span>name</span>
         <span class="property-indicator"></span>
@@ -286,9 +286,7 @@ const storageInsightConfig = new azure_native.operationalinsights.StorageInsight
     </dt>
     <dd>
       The unique name of the resource.
-    </dd>
-  
-    <dt
+    </dd><dt
         class="property-required" title="Required">
         <span>args</span>
         <span class="property-indicator"></span>
@@ -296,9 +294,7 @@ const storageInsightConfig = new azure_native.operationalinsights.StorageInsight
     </dt>
     <dd>
       The arguments to resource properties.
-    </dd>
-  
-    <dt
+    </dd><dt
         class="property-optional" title="Optional">
         <span>opts</span>
         <span class="property-indicator"></span>
@@ -306,10 +302,7 @@ const storageInsightConfig = new azure_native.operationalinsights.StorageInsight
     </dt>
     <dd>
       Bag of options to control resource&#39;s behavior.
-    </dd>
-  
-
-</dl>
+    </dd></dl>
 
 {{% /choosable %}}
 
@@ -324,9 +317,7 @@ The StorageInsightConfig resource accepts the following [input]({{< relref "/doc
 
 
 {{% choosable language csharp %}}
-<dl class="resources-properties">
-
-    <dt class="property-required"
+<dl class="resources-properties"><dt class="property-required"
             title="Required">
         <span id="resourcegroupname_csharp">
 <a href="#resourcegroupname_csharp" style="color: inherit; text-decoration: inherit;">Resource<wbr>Group<wbr>Name</a>
@@ -334,8 +325,7 @@ The StorageInsightConfig resource accepts the following [input]({{< relref "/doc
         <span class="property-indicator"></span>
         <span class="property-type">string</span>
     </dt>
-    <dd>{{% md %}}The name of the resource group. The name is case insensitive.{{% /md %}}</dd>
-    <dt class="property-required"
+    <dd>{{% md %}}The name of the resource group. The name is case insensitive.{{% /md %}}</dd><dt class="property-required"
             title="Required">
         <span id="storageaccount_csharp">
 <a href="#storageaccount_csharp" style="color: inherit; text-decoration: inherit;">Storage<wbr>Account</a>
@@ -343,8 +333,7 @@ The StorageInsightConfig resource accepts the following [input]({{< relref "/doc
         <span class="property-indicator"></span>
         <span class="property-type"><a href="#storageaccount">Pulumi.<wbr>Azure<wbr>Native.<wbr>Operational<wbr>Insights.<wbr>Inputs.<wbr>Storage<wbr>Account<wbr>Args</a></span>
     </dt>
-    <dd>{{% md %}}The storage account connection details{{% /md %}}</dd>
-    <dt class="property-required"
+    <dd>{{% md %}}The storage account connection details{{% /md %}}</dd><dt class="property-required"
             title="Required">
         <span id="workspacename_csharp">
 <a href="#workspacename_csharp" style="color: inherit; text-decoration: inherit;">Workspace<wbr>Name</a>
@@ -352,8 +341,7 @@ The StorageInsightConfig resource accepts the following [input]({{< relref "/doc
         <span class="property-indicator"></span>
         <span class="property-type">string</span>
     </dt>
-    <dd>{{% md %}}The name of the workspace.{{% /md %}}</dd>
-    <dt class="property-optional"
+    <dd>{{% md %}}The name of the workspace.{{% /md %}}</dd><dt class="property-optional"
             title="Optional">
         <span id="containers_csharp">
 <a href="#containers_csharp" style="color: inherit; text-decoration: inherit;">Containers</a>
@@ -361,8 +349,7 @@ The StorageInsightConfig resource accepts the following [input]({{< relref "/doc
         <span class="property-indicator"></span>
         <span class="property-type">List&lt;string&gt;</span>
     </dt>
-    <dd>{{% md %}}The names of the blob containers that the workspace should read{{% /md %}}</dd>
-    <dt class="property-optional"
+    <dd>{{% md %}}The names of the blob containers that the workspace should read{{% /md %}}</dd><dt class="property-optional"
             title="Optional">
         <span id="etag_csharp">
 <a href="#etag_csharp" style="color: inherit; text-decoration: inherit;">ETag</a>
@@ -370,8 +357,7 @@ The StorageInsightConfig resource accepts the following [input]({{< relref "/doc
         <span class="property-indicator"></span>
         <span class="property-type">string</span>
     </dt>
-    <dd>{{% md %}}The ETag of the storage insight.{{% /md %}}</dd>
-    <dt class="property-optional"
+    <dd>{{% md %}}The ETag of the storage insight.{{% /md %}}</dd><dt class="property-optional"
             title="Optional">
         <span id="storageinsightname_csharp">
 <a href="#storageinsightname_csharp" style="color: inherit; text-decoration: inherit;">Storage<wbr>Insight<wbr>Name</a>
@@ -379,8 +365,7 @@ The StorageInsightConfig resource accepts the following [input]({{< relref "/doc
         <span class="property-indicator"></span>
         <span class="property-type">string</span>
     </dt>
-    <dd>{{% md %}}Name of the storageInsightsConfigs resource{{% /md %}}</dd>
-    <dt class="property-optional"
+    <dd>{{% md %}}Name of the storageInsightsConfigs resource{{% /md %}}</dd><dt class="property-optional"
             title="Optional">
         <span id="tables_csharp">
 <a href="#tables_csharp" style="color: inherit; text-decoration: inherit;">Tables</a>
@@ -388,8 +373,7 @@ The StorageInsightConfig resource accepts the following [input]({{< relref "/doc
         <span class="property-indicator"></span>
         <span class="property-type">List&lt;string&gt;</span>
     </dt>
-    <dd>{{% md %}}The names of the Azure tables that the workspace should read{{% /md %}}</dd>
-    <dt class="property-optional"
+    <dd>{{% md %}}The names of the Azure tables that the workspace should read{{% /md %}}</dd><dt class="property-optional"
             title="Optional">
         <span id="tags_csharp">
 <a href="#tags_csharp" style="color: inherit; text-decoration: inherit;">Tags</a>
@@ -397,14 +381,11 @@ The StorageInsightConfig resource accepts the following [input]({{< relref "/doc
         <span class="property-indicator"></span>
         <span class="property-type">Dictionary&lt;string, string&gt;</span>
     </dt>
-    <dd>{{% md %}}Resource tags.{{% /md %}}</dd>
-</dl>
+    <dd>{{% md %}}Resource tags.{{% /md %}}</dd></dl>
 {{% /choosable %}}
 
 {{% choosable language go %}}
-<dl class="resources-properties">
-
-    <dt class="property-required"
+<dl class="resources-properties"><dt class="property-required"
             title="Required">
         <span id="resourcegroupname_go">
 <a href="#resourcegroupname_go" style="color: inherit; text-decoration: inherit;">Resource<wbr>Group<wbr>Name</a>
@@ -412,8 +393,7 @@ The StorageInsightConfig resource accepts the following [input]({{< relref "/doc
         <span class="property-indicator"></span>
         <span class="property-type">string</span>
     </dt>
-    <dd>{{% md %}}The name of the resource group. The name is case insensitive.{{% /md %}}</dd>
-    <dt class="property-required"
+    <dd>{{% md %}}The name of the resource group. The name is case insensitive.{{% /md %}}</dd><dt class="property-required"
             title="Required">
         <span id="storageaccount_go">
 <a href="#storageaccount_go" style="color: inherit; text-decoration: inherit;">Storage<wbr>Account</a>
@@ -421,8 +401,7 @@ The StorageInsightConfig resource accepts the following [input]({{< relref "/doc
         <span class="property-indicator"></span>
         <span class="property-type"><a href="#storageaccount">Storage<wbr>Account</a></span>
     </dt>
-    <dd>{{% md %}}The storage account connection details{{% /md %}}</dd>
-    <dt class="property-required"
+    <dd>{{% md %}}The storage account connection details{{% /md %}}</dd><dt class="property-required"
             title="Required">
         <span id="workspacename_go">
 <a href="#workspacename_go" style="color: inherit; text-decoration: inherit;">Workspace<wbr>Name</a>
@@ -430,8 +409,7 @@ The StorageInsightConfig resource accepts the following [input]({{< relref "/doc
         <span class="property-indicator"></span>
         <span class="property-type">string</span>
     </dt>
-    <dd>{{% md %}}The name of the workspace.{{% /md %}}</dd>
-    <dt class="property-optional"
+    <dd>{{% md %}}The name of the workspace.{{% /md %}}</dd><dt class="property-optional"
             title="Optional">
         <span id="containers_go">
 <a href="#containers_go" style="color: inherit; text-decoration: inherit;">Containers</a>
@@ -439,8 +417,7 @@ The StorageInsightConfig resource accepts the following [input]({{< relref "/doc
         <span class="property-indicator"></span>
         <span class="property-type">[]string</span>
     </dt>
-    <dd>{{% md %}}The names of the blob containers that the workspace should read{{% /md %}}</dd>
-    <dt class="property-optional"
+    <dd>{{% md %}}The names of the blob containers that the workspace should read{{% /md %}}</dd><dt class="property-optional"
             title="Optional">
         <span id="etag_go">
 <a href="#etag_go" style="color: inherit; text-decoration: inherit;">ETag</a>
@@ -448,8 +425,7 @@ The StorageInsightConfig resource accepts the following [input]({{< relref "/doc
         <span class="property-indicator"></span>
         <span class="property-type">string</span>
     </dt>
-    <dd>{{% md %}}The ETag of the storage insight.{{% /md %}}</dd>
-    <dt class="property-optional"
+    <dd>{{% md %}}The ETag of the storage insight.{{% /md %}}</dd><dt class="property-optional"
             title="Optional">
         <span id="storageinsightname_go">
 <a href="#storageinsightname_go" style="color: inherit; text-decoration: inherit;">Storage<wbr>Insight<wbr>Name</a>
@@ -457,8 +433,7 @@ The StorageInsightConfig resource accepts the following [input]({{< relref "/doc
         <span class="property-indicator"></span>
         <span class="property-type">string</span>
     </dt>
-    <dd>{{% md %}}Name of the storageInsightsConfigs resource{{% /md %}}</dd>
-    <dt class="property-optional"
+    <dd>{{% md %}}Name of the storageInsightsConfigs resource{{% /md %}}</dd><dt class="property-optional"
             title="Optional">
         <span id="tables_go">
 <a href="#tables_go" style="color: inherit; text-decoration: inherit;">Tables</a>
@@ -466,8 +441,7 @@ The StorageInsightConfig resource accepts the following [input]({{< relref "/doc
         <span class="property-indicator"></span>
         <span class="property-type">[]string</span>
     </dt>
-    <dd>{{% md %}}The names of the Azure tables that the workspace should read{{% /md %}}</dd>
-    <dt class="property-optional"
+    <dd>{{% md %}}The names of the Azure tables that the workspace should read{{% /md %}}</dd><dt class="property-optional"
             title="Optional">
         <span id="tags_go">
 <a href="#tags_go" style="color: inherit; text-decoration: inherit;">Tags</a>
@@ -475,14 +449,11 @@ The StorageInsightConfig resource accepts the following [input]({{< relref "/doc
         <span class="property-indicator"></span>
         <span class="property-type">map[string]string</span>
     </dt>
-    <dd>{{% md %}}Resource tags.{{% /md %}}</dd>
-</dl>
+    <dd>{{% md %}}Resource tags.{{% /md %}}</dd></dl>
 {{% /choosable %}}
 
 {{% choosable language nodejs %}}
-<dl class="resources-properties">
-
-    <dt class="property-required"
+<dl class="resources-properties"><dt class="property-required"
             title="Required">
         <span id="resourcegroupname_nodejs">
 <a href="#resourcegroupname_nodejs" style="color: inherit; text-decoration: inherit;">resource<wbr>Group<wbr>Name</a>
@@ -490,8 +461,7 @@ The StorageInsightConfig resource accepts the following [input]({{< relref "/doc
         <span class="property-indicator"></span>
         <span class="property-type">string</span>
     </dt>
-    <dd>{{% md %}}The name of the resource group. The name is case insensitive.{{% /md %}}</dd>
-    <dt class="property-required"
+    <dd>{{% md %}}The name of the resource group. The name is case insensitive.{{% /md %}}</dd><dt class="property-required"
             title="Required">
         <span id="storageaccount_nodejs">
 <a href="#storageaccount_nodejs" style="color: inherit; text-decoration: inherit;">storage<wbr>Account</a>
@@ -499,8 +469,7 @@ The StorageInsightConfig resource accepts the following [input]({{< relref "/doc
         <span class="property-indicator"></span>
         <span class="property-type"><a href="#storageaccount">Storage<wbr>Account</a></span>
     </dt>
-    <dd>{{% md %}}The storage account connection details{{% /md %}}</dd>
-    <dt class="property-required"
+    <dd>{{% md %}}The storage account connection details{{% /md %}}</dd><dt class="property-required"
             title="Required">
         <span id="workspacename_nodejs">
 <a href="#workspacename_nodejs" style="color: inherit; text-decoration: inherit;">workspace<wbr>Name</a>
@@ -508,8 +477,7 @@ The StorageInsightConfig resource accepts the following [input]({{< relref "/doc
         <span class="property-indicator"></span>
         <span class="property-type">string</span>
     </dt>
-    <dd>{{% md %}}The name of the workspace.{{% /md %}}</dd>
-    <dt class="property-optional"
+    <dd>{{% md %}}The name of the workspace.{{% /md %}}</dd><dt class="property-optional"
             title="Optional">
         <span id="containers_nodejs">
 <a href="#containers_nodejs" style="color: inherit; text-decoration: inherit;">containers</a>
@@ -517,8 +485,7 @@ The StorageInsightConfig resource accepts the following [input]({{< relref "/doc
         <span class="property-indicator"></span>
         <span class="property-type">string[]</span>
     </dt>
-    <dd>{{% md %}}The names of the blob containers that the workspace should read{{% /md %}}</dd>
-    <dt class="property-optional"
+    <dd>{{% md %}}The names of the blob containers that the workspace should read{{% /md %}}</dd><dt class="property-optional"
             title="Optional">
         <span id="etag_nodejs">
 <a href="#etag_nodejs" style="color: inherit; text-decoration: inherit;">e<wbr>Tag</a>
@@ -526,8 +493,7 @@ The StorageInsightConfig resource accepts the following [input]({{< relref "/doc
         <span class="property-indicator"></span>
         <span class="property-type">string</span>
     </dt>
-    <dd>{{% md %}}The ETag of the storage insight.{{% /md %}}</dd>
-    <dt class="property-optional"
+    <dd>{{% md %}}The ETag of the storage insight.{{% /md %}}</dd><dt class="property-optional"
             title="Optional">
         <span id="storageinsightname_nodejs">
 <a href="#storageinsightname_nodejs" style="color: inherit; text-decoration: inherit;">storage<wbr>Insight<wbr>Name</a>
@@ -535,8 +501,7 @@ The StorageInsightConfig resource accepts the following [input]({{< relref "/doc
         <span class="property-indicator"></span>
         <span class="property-type">string</span>
     </dt>
-    <dd>{{% md %}}Name of the storageInsightsConfigs resource{{% /md %}}</dd>
-    <dt class="property-optional"
+    <dd>{{% md %}}Name of the storageInsightsConfigs resource{{% /md %}}</dd><dt class="property-optional"
             title="Optional">
         <span id="tables_nodejs">
 <a href="#tables_nodejs" style="color: inherit; text-decoration: inherit;">tables</a>
@@ -544,8 +509,7 @@ The StorageInsightConfig resource accepts the following [input]({{< relref "/doc
         <span class="property-indicator"></span>
         <span class="property-type">string[]</span>
     </dt>
-    <dd>{{% md %}}The names of the Azure tables that the workspace should read{{% /md %}}</dd>
-    <dt class="property-optional"
+    <dd>{{% md %}}The names of the Azure tables that the workspace should read{{% /md %}}</dd><dt class="property-optional"
             title="Optional">
         <span id="tags_nodejs">
 <a href="#tags_nodejs" style="color: inherit; text-decoration: inherit;">tags</a>
@@ -553,14 +517,11 @@ The StorageInsightConfig resource accepts the following [input]({{< relref "/doc
         <span class="property-indicator"></span>
         <span class="property-type">{[key: string]: string}</span>
     </dt>
-    <dd>{{% md %}}Resource tags.{{% /md %}}</dd>
-</dl>
+    <dd>{{% md %}}Resource tags.{{% /md %}}</dd></dl>
 {{% /choosable %}}
 
 {{% choosable language python %}}
-<dl class="resources-properties">
-
-    <dt class="property-required"
+<dl class="resources-properties"><dt class="property-required"
             title="Required">
         <span id="resource_group_name_python">
 <a href="#resource_group_name_python" style="color: inherit; text-decoration: inherit;">resource_<wbr>group_<wbr>name</a>
@@ -568,8 +529,7 @@ The StorageInsightConfig resource accepts the following [input]({{< relref "/doc
         <span class="property-indicator"></span>
         <span class="property-type">str</span>
     </dt>
-    <dd>{{% md %}}The name of the resource group. The name is case insensitive.{{% /md %}}</dd>
-    <dt class="property-required"
+    <dd>{{% md %}}The name of the resource group. The name is case insensitive.{{% /md %}}</dd><dt class="property-required"
             title="Required">
         <span id="storage_account_python">
 <a href="#storage_account_python" style="color: inherit; text-decoration: inherit;">storage_<wbr>account</a>
@@ -577,8 +537,7 @@ The StorageInsightConfig resource accepts the following [input]({{< relref "/doc
         <span class="property-indicator"></span>
         <span class="property-type"><a href="#storageaccount">Storage<wbr>Account<wbr>Args</a></span>
     </dt>
-    <dd>{{% md %}}The storage account connection details{{% /md %}}</dd>
-    <dt class="property-required"
+    <dd>{{% md %}}The storage account connection details{{% /md %}}</dd><dt class="property-required"
             title="Required">
         <span id="workspace_name_python">
 <a href="#workspace_name_python" style="color: inherit; text-decoration: inherit;">workspace_<wbr>name</a>
@@ -586,8 +545,7 @@ The StorageInsightConfig resource accepts the following [input]({{< relref "/doc
         <span class="property-indicator"></span>
         <span class="property-type">str</span>
     </dt>
-    <dd>{{% md %}}The name of the workspace.{{% /md %}}</dd>
-    <dt class="property-optional"
+    <dd>{{% md %}}The name of the workspace.{{% /md %}}</dd><dt class="property-optional"
             title="Optional">
         <span id="containers_python">
 <a href="#containers_python" style="color: inherit; text-decoration: inherit;">containers</a>
@@ -595,8 +553,7 @@ The StorageInsightConfig resource accepts the following [input]({{< relref "/doc
         <span class="property-indicator"></span>
         <span class="property-type">Sequence[str]</span>
     </dt>
-    <dd>{{% md %}}The names of the blob containers that the workspace should read{{% /md %}}</dd>
-    <dt class="property-optional"
+    <dd>{{% md %}}The names of the blob containers that the workspace should read{{% /md %}}</dd><dt class="property-optional"
             title="Optional">
         <span id="e_tag_python">
 <a href="#e_tag_python" style="color: inherit; text-decoration: inherit;">e_<wbr>tag</a>
@@ -604,8 +561,7 @@ The StorageInsightConfig resource accepts the following [input]({{< relref "/doc
         <span class="property-indicator"></span>
         <span class="property-type">str</span>
     </dt>
-    <dd>{{% md %}}The ETag of the storage insight.{{% /md %}}</dd>
-    <dt class="property-optional"
+    <dd>{{% md %}}The ETag of the storage insight.{{% /md %}}</dd><dt class="property-optional"
             title="Optional">
         <span id="storage_insight_name_python">
 <a href="#storage_insight_name_python" style="color: inherit; text-decoration: inherit;">storage_<wbr>insight_<wbr>name</a>
@@ -613,8 +569,7 @@ The StorageInsightConfig resource accepts the following [input]({{< relref "/doc
         <span class="property-indicator"></span>
         <span class="property-type">str</span>
     </dt>
-    <dd>{{% md %}}Name of the storageInsightsConfigs resource{{% /md %}}</dd>
-    <dt class="property-optional"
+    <dd>{{% md %}}Name of the storageInsightsConfigs resource{{% /md %}}</dd><dt class="property-optional"
             title="Optional">
         <span id="tables_python">
 <a href="#tables_python" style="color: inherit; text-decoration: inherit;">tables</a>
@@ -622,8 +577,7 @@ The StorageInsightConfig resource accepts the following [input]({{< relref "/doc
         <span class="property-indicator"></span>
         <span class="property-type">Sequence[str]</span>
     </dt>
-    <dd>{{% md %}}The names of the Azure tables that the workspace should read{{% /md %}}</dd>
-    <dt class="property-optional"
+    <dd>{{% md %}}The names of the Azure tables that the workspace should read{{% /md %}}</dd><dt class="property-optional"
             title="Optional">
         <span id="tags_python">
 <a href="#tags_python" style="color: inherit; text-decoration: inherit;">tags</a>
@@ -631,8 +585,7 @@ The StorageInsightConfig resource accepts the following [input]({{< relref "/doc
         <span class="property-indicator"></span>
         <span class="property-type">Mapping[str, str]</span>
     </dt>
-    <dd>{{% md %}}Resource tags.{{% /md %}}</dd>
-</dl>
+    <dd>{{% md %}}Resource tags.{{% /md %}}</dd></dl>
 {{% /choosable %}}
 
 
@@ -643,9 +596,7 @@ All [input](#inputs) properties are implicitly available as output properties. A
 
 
 {{% choosable language csharp %}}
-<dl class="resources-properties">
-
-    <dt class="property-"
+<dl class="resources-properties"><dt class="property-"
             title="">
         <span id="id_csharp">
 <a href="#id_csharp" style="color: inherit; text-decoration: inherit;">Id</a>
@@ -653,8 +604,7 @@ All [input](#inputs) properties are implicitly available as output properties. A
         <span class="property-indicator"></span>
         <span class="property-type">string</span>
     </dt>
-    <dd>{{% md %}}The provider-assigned unique ID for this managed resource.{{% /md %}}</dd>
-    <dt class="property-"
+    <dd>{{% md %}}The provider-assigned unique ID for this managed resource.{{% /md %}}</dd><dt class="property-"
             title="">
         <span id="name_csharp">
 <a href="#name_csharp" style="color: inherit; text-decoration: inherit;">Name</a>
@@ -662,8 +612,7 @@ All [input](#inputs) properties are implicitly available as output properties. A
         <span class="property-indicator"></span>
         <span class="property-type">string</span>
     </dt>
-    <dd>{{% md %}}The name of the resource{{% /md %}}</dd>
-    <dt class="property-"
+    <dd>{{% md %}}The name of the resource{{% /md %}}</dd><dt class="property-"
             title="">
         <span id="status_csharp">
 <a href="#status_csharp" style="color: inherit; text-decoration: inherit;">Status</a>
@@ -671,8 +620,7 @@ All [input](#inputs) properties are implicitly available as output properties. A
         <span class="property-indicator"></span>
         <span class="property-type"><a href="#storageinsightstatusresponse">Pulumi.<wbr>Azure<wbr>Native.<wbr>Operational<wbr>Insights.<wbr>Outputs.<wbr>Storage<wbr>Insight<wbr>Status<wbr>Response</a></span>
     </dt>
-    <dd>{{% md %}}The status of the storage insight{{% /md %}}</dd>
-    <dt class="property-"
+    <dd>{{% md %}}The status of the storage insight{{% /md %}}</dd><dt class="property-"
             title="">
         <span id="type_csharp">
 <a href="#type_csharp" style="color: inherit; text-decoration: inherit;">Type</a>
@@ -680,14 +628,11 @@ All [input](#inputs) properties are implicitly available as output properties. A
         <span class="property-indicator"></span>
         <span class="property-type">string</span>
     </dt>
-    <dd>{{% md %}}The type of the resource. E.g. "Microsoft.Compute/virtualMachines" or "Microsoft.Storage/storageAccounts"{{% /md %}}</dd>
-</dl>
+    <dd>{{% md %}}The type of the resource. E.g. "Microsoft.Compute/virtualMachines" or "Microsoft.Storage/storageAccounts"{{% /md %}}</dd></dl>
 {{% /choosable %}}
 
 {{% choosable language go %}}
-<dl class="resources-properties">
-
-    <dt class="property-"
+<dl class="resources-properties"><dt class="property-"
             title="">
         <span id="id_go">
 <a href="#id_go" style="color: inherit; text-decoration: inherit;">Id</a>
@@ -695,8 +640,7 @@ All [input](#inputs) properties are implicitly available as output properties. A
         <span class="property-indicator"></span>
         <span class="property-type">string</span>
     </dt>
-    <dd>{{% md %}}The provider-assigned unique ID for this managed resource.{{% /md %}}</dd>
-    <dt class="property-"
+    <dd>{{% md %}}The provider-assigned unique ID for this managed resource.{{% /md %}}</dd><dt class="property-"
             title="">
         <span id="name_go">
 <a href="#name_go" style="color: inherit; text-decoration: inherit;">Name</a>
@@ -704,8 +648,7 @@ All [input](#inputs) properties are implicitly available as output properties. A
         <span class="property-indicator"></span>
         <span class="property-type">string</span>
     </dt>
-    <dd>{{% md %}}The name of the resource{{% /md %}}</dd>
-    <dt class="property-"
+    <dd>{{% md %}}The name of the resource{{% /md %}}</dd><dt class="property-"
             title="">
         <span id="status_go">
 <a href="#status_go" style="color: inherit; text-decoration: inherit;">Status</a>
@@ -713,8 +656,7 @@ All [input](#inputs) properties are implicitly available as output properties. A
         <span class="property-indicator"></span>
         <span class="property-type"><a href="#storageinsightstatusresponse">Storage<wbr>Insight<wbr>Status<wbr>Response</a></span>
     </dt>
-    <dd>{{% md %}}The status of the storage insight{{% /md %}}</dd>
-    <dt class="property-"
+    <dd>{{% md %}}The status of the storage insight{{% /md %}}</dd><dt class="property-"
             title="">
         <span id="type_go">
 <a href="#type_go" style="color: inherit; text-decoration: inherit;">Type</a>
@@ -722,14 +664,11 @@ All [input](#inputs) properties are implicitly available as output properties. A
         <span class="property-indicator"></span>
         <span class="property-type">string</span>
     </dt>
-    <dd>{{% md %}}The type of the resource. E.g. "Microsoft.Compute/virtualMachines" or "Microsoft.Storage/storageAccounts"{{% /md %}}</dd>
-</dl>
+    <dd>{{% md %}}The type of the resource. E.g. "Microsoft.Compute/virtualMachines" or "Microsoft.Storage/storageAccounts"{{% /md %}}</dd></dl>
 {{% /choosable %}}
 
 {{% choosable language nodejs %}}
-<dl class="resources-properties">
-
-    <dt class="property-"
+<dl class="resources-properties"><dt class="property-"
             title="">
         <span id="id_nodejs">
 <a href="#id_nodejs" style="color: inherit; text-decoration: inherit;">id</a>
@@ -737,8 +676,7 @@ All [input](#inputs) properties are implicitly available as output properties. A
         <span class="property-indicator"></span>
         <span class="property-type">string</span>
     </dt>
-    <dd>{{% md %}}The provider-assigned unique ID for this managed resource.{{% /md %}}</dd>
-    <dt class="property-"
+    <dd>{{% md %}}The provider-assigned unique ID for this managed resource.{{% /md %}}</dd><dt class="property-"
             title="">
         <span id="name_nodejs">
 <a href="#name_nodejs" style="color: inherit; text-decoration: inherit;">name</a>
@@ -746,8 +684,7 @@ All [input](#inputs) properties are implicitly available as output properties. A
         <span class="property-indicator"></span>
         <span class="property-type">string</span>
     </dt>
-    <dd>{{% md %}}The name of the resource{{% /md %}}</dd>
-    <dt class="property-"
+    <dd>{{% md %}}The name of the resource{{% /md %}}</dd><dt class="property-"
             title="">
         <span id="status_nodejs">
 <a href="#status_nodejs" style="color: inherit; text-decoration: inherit;">status</a>
@@ -755,8 +692,7 @@ All [input](#inputs) properties are implicitly available as output properties. A
         <span class="property-indicator"></span>
         <span class="property-type"><a href="#storageinsightstatusresponse">Storage<wbr>Insight<wbr>Status<wbr>Response</a></span>
     </dt>
-    <dd>{{% md %}}The status of the storage insight{{% /md %}}</dd>
-    <dt class="property-"
+    <dd>{{% md %}}The status of the storage insight{{% /md %}}</dd><dt class="property-"
             title="">
         <span id="type_nodejs">
 <a href="#type_nodejs" style="color: inherit; text-decoration: inherit;">type</a>
@@ -764,14 +700,11 @@ All [input](#inputs) properties are implicitly available as output properties. A
         <span class="property-indicator"></span>
         <span class="property-type">string</span>
     </dt>
-    <dd>{{% md %}}The type of the resource. E.g. "Microsoft.Compute/virtualMachines" or "Microsoft.Storage/storageAccounts"{{% /md %}}</dd>
-</dl>
+    <dd>{{% md %}}The type of the resource. E.g. "Microsoft.Compute/virtualMachines" or "Microsoft.Storage/storageAccounts"{{% /md %}}</dd></dl>
 {{% /choosable %}}
 
 {{% choosable language python %}}
-<dl class="resources-properties">
-
-    <dt class="property-"
+<dl class="resources-properties"><dt class="property-"
             title="">
         <span id="id_python">
 <a href="#id_python" style="color: inherit; text-decoration: inherit;">id</a>
@@ -779,8 +712,7 @@ All [input](#inputs) properties are implicitly available as output properties. A
         <span class="property-indicator"></span>
         <span class="property-type">str</span>
     </dt>
-    <dd>{{% md %}}The provider-assigned unique ID for this managed resource.{{% /md %}}</dd>
-    <dt class="property-"
+    <dd>{{% md %}}The provider-assigned unique ID for this managed resource.{{% /md %}}</dd><dt class="property-"
             title="">
         <span id="name_python">
 <a href="#name_python" style="color: inherit; text-decoration: inherit;">name</a>
@@ -788,8 +720,7 @@ All [input](#inputs) properties are implicitly available as output properties. A
         <span class="property-indicator"></span>
         <span class="property-type">str</span>
     </dt>
-    <dd>{{% md %}}The name of the resource{{% /md %}}</dd>
-    <dt class="property-"
+    <dd>{{% md %}}The name of the resource{{% /md %}}</dd><dt class="property-"
             title="">
         <span id="status_python">
 <a href="#status_python" style="color: inherit; text-decoration: inherit;">status</a>
@@ -797,8 +728,7 @@ All [input](#inputs) properties are implicitly available as output properties. A
         <span class="property-indicator"></span>
         <span class="property-type"><a href="#storageinsightstatusresponse">Storage<wbr>Insight<wbr>Status<wbr>Response</a></span>
     </dt>
-    <dd>{{% md %}}The status of the storage insight{{% /md %}}</dd>
-    <dt class="property-"
+    <dd>{{% md %}}The status of the storage insight{{% /md %}}</dd><dt class="property-"
             title="">
         <span id="type_python">
 <a href="#type_python" style="color: inherit; text-decoration: inherit;">type</a>
@@ -806,8 +736,7 @@ All [input](#inputs) properties are implicitly available as output properties. A
         <span class="property-indicator"></span>
         <span class="property-type">str</span>
     </dt>
-    <dd>{{% md %}}The type of the resource. E.g. "Microsoft.Compute/virtualMachines" or "Microsoft.Storage/storageAccounts"{{% /md %}}</dd>
-</dl>
+    <dd>{{% md %}}The type of the resource. E.g. "Microsoft.Compute/virtualMachines" or "Microsoft.Storage/storageAccounts"{{% /md %}}</dd></dl>
 {{% /choosable %}}
 
 
@@ -823,9 +752,7 @@ All [input](#inputs) properties are implicitly available as output properties. A
 <h4 id="storageaccount">Storage<wbr>Account</h4>
 
 {{% choosable language csharp %}}
-<dl class="resources-properties">
-
-    <dt class="property-required"
+<dl class="resources-properties"><dt class="property-required"
             title="Required">
         <span id="id_csharp">
 <a href="#id_csharp" style="color: inherit; text-decoration: inherit;">Id</a>
@@ -833,8 +760,7 @@ All [input](#inputs) properties are implicitly available as output properties. A
         <span class="property-indicator"></span>
         <span class="property-type">string</span>
     </dt>
-    <dd>{{% md %}}The Azure Resource Manager ID of the storage account resource.{{% /md %}}</dd>
-    <dt class="property-required"
+    <dd>{{% md %}}The Azure Resource Manager ID of the storage account resource.{{% /md %}}</dd><dt class="property-required"
             title="Required">
         <span id="key_csharp">
 <a href="#key_csharp" style="color: inherit; text-decoration: inherit;">Key</a>
@@ -842,14 +768,11 @@ All [input](#inputs) properties are implicitly available as output properties. A
         <span class="property-indicator"></span>
         <span class="property-type">string</span>
     </dt>
-    <dd>{{% md %}}The storage account key.{{% /md %}}</dd>
-</dl>
+    <dd>{{% md %}}The storage account key.{{% /md %}}</dd></dl>
 {{% /choosable %}}
 
 {{% choosable language go %}}
-<dl class="resources-properties">
-
-    <dt class="property-required"
+<dl class="resources-properties"><dt class="property-required"
             title="Required">
         <span id="id_go">
 <a href="#id_go" style="color: inherit; text-decoration: inherit;">Id</a>
@@ -857,8 +780,7 @@ All [input](#inputs) properties are implicitly available as output properties. A
         <span class="property-indicator"></span>
         <span class="property-type">string</span>
     </dt>
-    <dd>{{% md %}}The Azure Resource Manager ID of the storage account resource.{{% /md %}}</dd>
-    <dt class="property-required"
+    <dd>{{% md %}}The Azure Resource Manager ID of the storage account resource.{{% /md %}}</dd><dt class="property-required"
             title="Required">
         <span id="key_go">
 <a href="#key_go" style="color: inherit; text-decoration: inherit;">Key</a>
@@ -866,14 +788,11 @@ All [input](#inputs) properties are implicitly available as output properties. A
         <span class="property-indicator"></span>
         <span class="property-type">string</span>
     </dt>
-    <dd>{{% md %}}The storage account key.{{% /md %}}</dd>
-</dl>
+    <dd>{{% md %}}The storage account key.{{% /md %}}</dd></dl>
 {{% /choosable %}}
 
 {{% choosable language nodejs %}}
-<dl class="resources-properties">
-
-    <dt class="property-required"
+<dl class="resources-properties"><dt class="property-required"
             title="Required">
         <span id="id_nodejs">
 <a href="#id_nodejs" style="color: inherit; text-decoration: inherit;">id</a>
@@ -881,8 +800,7 @@ All [input](#inputs) properties are implicitly available as output properties. A
         <span class="property-indicator"></span>
         <span class="property-type">string</span>
     </dt>
-    <dd>{{% md %}}The Azure Resource Manager ID of the storage account resource.{{% /md %}}</dd>
-    <dt class="property-required"
+    <dd>{{% md %}}The Azure Resource Manager ID of the storage account resource.{{% /md %}}</dd><dt class="property-required"
             title="Required">
         <span id="key_nodejs">
 <a href="#key_nodejs" style="color: inherit; text-decoration: inherit;">key</a>
@@ -890,14 +808,11 @@ All [input](#inputs) properties are implicitly available as output properties. A
         <span class="property-indicator"></span>
         <span class="property-type">string</span>
     </dt>
-    <dd>{{% md %}}The storage account key.{{% /md %}}</dd>
-</dl>
+    <dd>{{% md %}}The storage account key.{{% /md %}}</dd></dl>
 {{% /choosable %}}
 
 {{% choosable language python %}}
-<dl class="resources-properties">
-
-    <dt class="property-required"
+<dl class="resources-properties"><dt class="property-required"
             title="Required">
         <span id="id_python">
 <a href="#id_python" style="color: inherit; text-decoration: inherit;">id</a>
@@ -905,8 +820,7 @@ All [input](#inputs) properties are implicitly available as output properties. A
         <span class="property-indicator"></span>
         <span class="property-type">str</span>
     </dt>
-    <dd>{{% md %}}The Azure Resource Manager ID of the storage account resource.{{% /md %}}</dd>
-    <dt class="property-required"
+    <dd>{{% md %}}The Azure Resource Manager ID of the storage account resource.{{% /md %}}</dd><dt class="property-required"
             title="Required">
         <span id="key_python">
 <a href="#key_python" style="color: inherit; text-decoration: inherit;">key</a>
@@ -914,16 +828,13 @@ All [input](#inputs) properties are implicitly available as output properties. A
         <span class="property-indicator"></span>
         <span class="property-type">str</span>
     </dt>
-    <dd>{{% md %}}The storage account key.{{% /md %}}</dd>
-</dl>
+    <dd>{{% md %}}The storage account key.{{% /md %}}</dd></dl>
 {{% /choosable %}}
 
 <h4 id="storageaccountresponse">Storage<wbr>Account<wbr>Response</h4>
 
 {{% choosable language csharp %}}
-<dl class="resources-properties">
-
-    <dt class="property-required"
+<dl class="resources-properties"><dt class="property-required"
             title="Required">
         <span id="id_csharp">
 <a href="#id_csharp" style="color: inherit; text-decoration: inherit;">Id</a>
@@ -931,8 +842,7 @@ All [input](#inputs) properties are implicitly available as output properties. A
         <span class="property-indicator"></span>
         <span class="property-type">string</span>
     </dt>
-    <dd>{{% md %}}The Azure Resource Manager ID of the storage account resource.{{% /md %}}</dd>
-    <dt class="property-required"
+    <dd>{{% md %}}The Azure Resource Manager ID of the storage account resource.{{% /md %}}</dd><dt class="property-required"
             title="Required">
         <span id="key_csharp">
 <a href="#key_csharp" style="color: inherit; text-decoration: inherit;">Key</a>
@@ -940,14 +850,11 @@ All [input](#inputs) properties are implicitly available as output properties. A
         <span class="property-indicator"></span>
         <span class="property-type">string</span>
     </dt>
-    <dd>{{% md %}}The storage account key.{{% /md %}}</dd>
-</dl>
+    <dd>{{% md %}}The storage account key.{{% /md %}}</dd></dl>
 {{% /choosable %}}
 
 {{% choosable language go %}}
-<dl class="resources-properties">
-
-    <dt class="property-required"
+<dl class="resources-properties"><dt class="property-required"
             title="Required">
         <span id="id_go">
 <a href="#id_go" style="color: inherit; text-decoration: inherit;">Id</a>
@@ -955,8 +862,7 @@ All [input](#inputs) properties are implicitly available as output properties. A
         <span class="property-indicator"></span>
         <span class="property-type">string</span>
     </dt>
-    <dd>{{% md %}}The Azure Resource Manager ID of the storage account resource.{{% /md %}}</dd>
-    <dt class="property-required"
+    <dd>{{% md %}}The Azure Resource Manager ID of the storage account resource.{{% /md %}}</dd><dt class="property-required"
             title="Required">
         <span id="key_go">
 <a href="#key_go" style="color: inherit; text-decoration: inherit;">Key</a>
@@ -964,14 +870,11 @@ All [input](#inputs) properties are implicitly available as output properties. A
         <span class="property-indicator"></span>
         <span class="property-type">string</span>
     </dt>
-    <dd>{{% md %}}The storage account key.{{% /md %}}</dd>
-</dl>
+    <dd>{{% md %}}The storage account key.{{% /md %}}</dd></dl>
 {{% /choosable %}}
 
 {{% choosable language nodejs %}}
-<dl class="resources-properties">
-
-    <dt class="property-required"
+<dl class="resources-properties"><dt class="property-required"
             title="Required">
         <span id="id_nodejs">
 <a href="#id_nodejs" style="color: inherit; text-decoration: inherit;">id</a>
@@ -979,8 +882,7 @@ All [input](#inputs) properties are implicitly available as output properties. A
         <span class="property-indicator"></span>
         <span class="property-type">string</span>
     </dt>
-    <dd>{{% md %}}The Azure Resource Manager ID of the storage account resource.{{% /md %}}</dd>
-    <dt class="property-required"
+    <dd>{{% md %}}The Azure Resource Manager ID of the storage account resource.{{% /md %}}</dd><dt class="property-required"
             title="Required">
         <span id="key_nodejs">
 <a href="#key_nodejs" style="color: inherit; text-decoration: inherit;">key</a>
@@ -988,14 +890,11 @@ All [input](#inputs) properties are implicitly available as output properties. A
         <span class="property-indicator"></span>
         <span class="property-type">string</span>
     </dt>
-    <dd>{{% md %}}The storage account key.{{% /md %}}</dd>
-</dl>
+    <dd>{{% md %}}The storage account key.{{% /md %}}</dd></dl>
 {{% /choosable %}}
 
 {{% choosable language python %}}
-<dl class="resources-properties">
-
-    <dt class="property-required"
+<dl class="resources-properties"><dt class="property-required"
             title="Required">
         <span id="id_python">
 <a href="#id_python" style="color: inherit; text-decoration: inherit;">id</a>
@@ -1003,8 +902,7 @@ All [input](#inputs) properties are implicitly available as output properties. A
         <span class="property-indicator"></span>
         <span class="property-type">str</span>
     </dt>
-    <dd>{{% md %}}The Azure Resource Manager ID of the storage account resource.{{% /md %}}</dd>
-    <dt class="property-required"
+    <dd>{{% md %}}The Azure Resource Manager ID of the storage account resource.{{% /md %}}</dd><dt class="property-required"
             title="Required">
         <span id="key_python">
 <a href="#key_python" style="color: inherit; text-decoration: inherit;">key</a>
@@ -1012,16 +910,13 @@ All [input](#inputs) properties are implicitly available as output properties. A
         <span class="property-indicator"></span>
         <span class="property-type">str</span>
     </dt>
-    <dd>{{% md %}}The storage account key.{{% /md %}}</dd>
-</dl>
+    <dd>{{% md %}}The storage account key.{{% /md %}}</dd></dl>
 {{% /choosable %}}
 
 <h4 id="storageinsightstatusresponse">Storage<wbr>Insight<wbr>Status<wbr>Response</h4>
 
 {{% choosable language csharp %}}
-<dl class="resources-properties">
-
-    <dt class="property-required"
+<dl class="resources-properties"><dt class="property-required"
             title="Required">
         <span id="state_csharp">
 <a href="#state_csharp" style="color: inherit; text-decoration: inherit;">State</a>
@@ -1029,8 +924,7 @@ All [input](#inputs) properties are implicitly available as output properties. A
         <span class="property-indicator"></span>
         <span class="property-type">string</span>
     </dt>
-    <dd>{{% md %}}The state of the storage insight connection to the workspace{{% /md %}}</dd>
-    <dt class="property-optional"
+    <dd>{{% md %}}The state of the storage insight connection to the workspace{{% /md %}}</dd><dt class="property-optional"
             title="Optional">
         <span id="description_csharp">
 <a href="#description_csharp" style="color: inherit; text-decoration: inherit;">Description</a>
@@ -1038,14 +932,11 @@ All [input](#inputs) properties are implicitly available as output properties. A
         <span class="property-indicator"></span>
         <span class="property-type">string</span>
     </dt>
-    <dd>{{% md %}}Description of the state of the storage insight.{{% /md %}}</dd>
-</dl>
+    <dd>{{% md %}}Description of the state of the storage insight.{{% /md %}}</dd></dl>
 {{% /choosable %}}
 
 {{% choosable language go %}}
-<dl class="resources-properties">
-
-    <dt class="property-required"
+<dl class="resources-properties"><dt class="property-required"
             title="Required">
         <span id="state_go">
 <a href="#state_go" style="color: inherit; text-decoration: inherit;">State</a>
@@ -1053,8 +944,7 @@ All [input](#inputs) properties are implicitly available as output properties. A
         <span class="property-indicator"></span>
         <span class="property-type">string</span>
     </dt>
-    <dd>{{% md %}}The state of the storage insight connection to the workspace{{% /md %}}</dd>
-    <dt class="property-optional"
+    <dd>{{% md %}}The state of the storage insight connection to the workspace{{% /md %}}</dd><dt class="property-optional"
             title="Optional">
         <span id="description_go">
 <a href="#description_go" style="color: inherit; text-decoration: inherit;">Description</a>
@@ -1062,14 +952,11 @@ All [input](#inputs) properties are implicitly available as output properties. A
         <span class="property-indicator"></span>
         <span class="property-type">string</span>
     </dt>
-    <dd>{{% md %}}Description of the state of the storage insight.{{% /md %}}</dd>
-</dl>
+    <dd>{{% md %}}Description of the state of the storage insight.{{% /md %}}</dd></dl>
 {{% /choosable %}}
 
 {{% choosable language nodejs %}}
-<dl class="resources-properties">
-
-    <dt class="property-required"
+<dl class="resources-properties"><dt class="property-required"
             title="Required">
         <span id="state_nodejs">
 <a href="#state_nodejs" style="color: inherit; text-decoration: inherit;">state</a>
@@ -1077,8 +964,7 @@ All [input](#inputs) properties are implicitly available as output properties. A
         <span class="property-indicator"></span>
         <span class="property-type">string</span>
     </dt>
-    <dd>{{% md %}}The state of the storage insight connection to the workspace{{% /md %}}</dd>
-    <dt class="property-optional"
+    <dd>{{% md %}}The state of the storage insight connection to the workspace{{% /md %}}</dd><dt class="property-optional"
             title="Optional">
         <span id="description_nodejs">
 <a href="#description_nodejs" style="color: inherit; text-decoration: inherit;">description</a>
@@ -1086,14 +972,11 @@ All [input](#inputs) properties are implicitly available as output properties. A
         <span class="property-indicator"></span>
         <span class="property-type">string</span>
     </dt>
-    <dd>{{% md %}}Description of the state of the storage insight.{{% /md %}}</dd>
-</dl>
+    <dd>{{% md %}}Description of the state of the storage insight.{{% /md %}}</dd></dl>
 {{% /choosable %}}
 
 {{% choosable language python %}}
-<dl class="resources-properties">
-
-    <dt class="property-required"
+<dl class="resources-properties"><dt class="property-required"
             title="Required">
         <span id="state_python">
 <a href="#state_python" style="color: inherit; text-decoration: inherit;">state</a>
@@ -1101,8 +984,7 @@ All [input](#inputs) properties are implicitly available as output properties. A
         <span class="property-indicator"></span>
         <span class="property-type">str</span>
     </dt>
-    <dd>{{% md %}}The state of the storage insight connection to the workspace{{% /md %}}</dd>
-    <dt class="property-optional"
+    <dd>{{% md %}}The state of the storage insight connection to the workspace{{% /md %}}</dd><dt class="property-optional"
             title="Optional">
         <span id="description_python">
 <a href="#description_python" style="color: inherit; text-decoration: inherit;">description</a>
@@ -1110,8 +992,7 @@ All [input](#inputs) properties are implicitly available as output properties. A
         <span class="property-indicator"></span>
         <span class="property-type">str</span>
     </dt>
-    <dd>{{% md %}}Description of the state of the storage insight.{{% /md %}}</dd>
-</dl>
+    <dd>{{% md %}}Description of the state of the storage insight.{{% /md %}}</dd></dl>
 {{% /choosable %}}
 ## Import
 

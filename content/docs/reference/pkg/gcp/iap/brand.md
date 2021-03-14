@@ -49,9 +49,7 @@ To get more information about Brand, see:
 
 {{% choosable language nodejs %}}
 
-<dl class="resources-properties">
-  
-    <dt
+<dl class="resources-properties"><dt
         class="property-required" title="Required">
         <span>name</span>
         <span class="property-indicator"></span>
@@ -59,9 +57,7 @@ To get more information about Brand, see:
     </dt>
     <dd>
       The unique name of the resource.
-    </dd>
-  
-    <dt
+    </dd><dt
         class="property-required" title="Required">
         <span>args</span>
         <span class="property-indicator"></span>
@@ -69,9 +65,7 @@ To get more information about Brand, see:
     </dt>
     <dd>
       The arguments to resource properties.
-    </dd>
-  
-    <dt
+    </dd><dt
         class="property-optional" title="Optional">
         <span>opts</span>
         <span class="property-indicator"></span>
@@ -79,10 +73,7 @@ To get more information about Brand, see:
     </dt>
     <dd>
       Bag of options to control resource&#39;s behavior.
-    </dd>
-  
-
-</dl>
+    </dd></dl>
 
 {{% /choosable %}}
 
@@ -108,9 +99,7 @@ To get more information about Brand, see:
 
 {{% choosable language go %}}
 
-<dl class="resources-properties">
-  
-    <dt
+<dl class="resources-properties"><dt
         class="property-optional" title="Optional">
         <span>ctx</span>
         <span class="property-indicator"></span>
@@ -118,9 +107,7 @@ To get more information about Brand, see:
     </dt>
     <dd>
       Context object for the current deployment.
-    </dd>
-  
-    <dt
+    </dd><dt
         class="property-required" title="Required">
         <span>name</span>
         <span class="property-indicator"></span>
@@ -128,9 +115,7 @@ To get more information about Brand, see:
     </dt>
     <dd>
       The unique name of the resource.
-    </dd>
-  
-    <dt
+    </dd><dt
         class="property-required" title="Required">
         <span>args</span>
         <span class="property-indicator"></span>
@@ -138,9 +123,7 @@ To get more information about Brand, see:
     </dt>
     <dd>
       The arguments to resource properties.
-    </dd>
-  
-    <dt
+    </dd><dt
         class="property-optional" title="Optional">
         <span>opts</span>
         <span class="property-indicator"></span>
@@ -148,18 +131,13 @@ To get more information about Brand, see:
     </dt>
     <dd>
       Bag of options to control resource&#39;s behavior.
-    </dd>
-  
-
-</dl>
+    </dd></dl>
 
 {{% /choosable %}}
 
 {{% choosable language csharp %}}
 
-<dl class="resources-properties">
-  
-    <dt
+<dl class="resources-properties"><dt
         class="property-required" title="Required">
         <span>name</span>
         <span class="property-indicator"></span>
@@ -167,9 +145,7 @@ To get more information about Brand, see:
     </dt>
     <dd>
       The unique name of the resource.
-    </dd>
-  
-    <dt
+    </dd><dt
         class="property-required" title="Required">
         <span>args</span>
         <span class="property-indicator"></span>
@@ -177,9 +153,7 @@ To get more information about Brand, see:
     </dt>
     <dd>
       The arguments to resource properties.
-    </dd>
-  
-    <dt
+    </dd><dt
         class="property-optional" title="Optional">
         <span>opts</span>
         <span class="property-indicator"></span>
@@ -187,10 +161,7 @@ To get more information about Brand, see:
     </dt>
     <dd>
       Bag of options to control resource&#39;s behavior.
-    </dd>
-  
-
-</dl>
+    </dd></dl>
 
 {{% /choosable %}}
 
@@ -205,9 +176,7 @@ The Brand resource accepts the following [input]({{< relref "/docs/intro/concept
 
 
 {{% choosable language csharp %}}
-<dl class="resources-properties">
-
-    <dt class="property-required"
+<dl class="resources-properties"><dt class="property-required"
             title="Required">
         <span id="applicationtitle_csharp">
 <a href="#applicationtitle_csharp" style="color: inherit; text-decoration: inherit;">Application<wbr>Title</a>
@@ -216,8 +185,7 @@ The Brand resource accepts the following [input]({{< relref "/docs/intro/concept
         <span class="property-type">string</span>
     </dt>
     <dd>{{% md %}}Application name displayed on OAuth consent screen.
-{{% /md %}}</dd>
-    <dt class="property-required"
+{{% /md %}}</dd><dt class="property-required"
             title="Required">
         <span id="supportemail_csharp">
 <a href="#supportemail_csharp" style="color: inherit; text-decoration: inherit;">Support<wbr>Email</a>
@@ -230,8 +198,7 @@ user or group email. When a user email is specified, the caller must
 be the user with the associated email address. When a group email is
 specified, the caller can be either a user or a service account which
 is an owner of the specified group in Cloud Identity.
-{{% /md %}}</dd>
-    <dt class="property-optional"
+{{% /md %}}</dd><dt class="property-optional"
             title="Optional">
         <span id="project_csharp">
 <a href="#project_csharp" style="color: inherit; text-decoration: inherit;">Project</a>
@@ -241,14 +208,11 @@ is an owner of the specified group in Cloud Identity.
     </dt>
     <dd>{{% md %}}The ID of the project in which the resource belongs.
 If it is not provided, the provider project is used.
-{{% /md %}}</dd>
-</dl>
+{{% /md %}}</dd></dl>
 {{% /choosable %}}
 
 {{% choosable language go %}}
-<dl class="resources-properties">
-
-    <dt class="property-required"
+<dl class="resources-properties"><dt class="property-required"
             title="Required">
         <span id="applicationtitle_go">
 <a href="#applicationtitle_go" style="color: inherit; text-decoration: inherit;">Application<wbr>Title</a>
@@ -257,8 +221,7 @@ If it is not provided, the provider project is used.
         <span class="property-type">string</span>
     </dt>
     <dd>{{% md %}}Application name displayed on OAuth consent screen.
-{{% /md %}}</dd>
-    <dt class="property-required"
+{{% /md %}}</dd><dt class="property-required"
             title="Required">
         <span id="supportemail_go">
 <a href="#supportemail_go" style="color: inherit; text-decoration: inherit;">Support<wbr>Email</a>
@@ -271,8 +234,7 @@ user or group email. When a user email is specified, the caller must
 be the user with the associated email address. When a group email is
 specified, the caller can be either a user or a service account which
 is an owner of the specified group in Cloud Identity.
-{{% /md %}}</dd>
-    <dt class="property-optional"
+{{% /md %}}</dd><dt class="property-optional"
             title="Optional">
         <span id="project_go">
 <a href="#project_go" style="color: inherit; text-decoration: inherit;">Project</a>
@@ -282,14 +244,11 @@ is an owner of the specified group in Cloud Identity.
     </dt>
     <dd>{{% md %}}The ID of the project in which the resource belongs.
 If it is not provided, the provider project is used.
-{{% /md %}}</dd>
-</dl>
+{{% /md %}}</dd></dl>
 {{% /choosable %}}
 
 {{% choosable language nodejs %}}
-<dl class="resources-properties">
-
-    <dt class="property-required"
+<dl class="resources-properties"><dt class="property-required"
             title="Required">
         <span id="applicationtitle_nodejs">
 <a href="#applicationtitle_nodejs" style="color: inherit; text-decoration: inherit;">application<wbr>Title</a>
@@ -298,8 +257,7 @@ If it is not provided, the provider project is used.
         <span class="property-type">string</span>
     </dt>
     <dd>{{% md %}}Application name displayed on OAuth consent screen.
-{{% /md %}}</dd>
-    <dt class="property-required"
+{{% /md %}}</dd><dt class="property-required"
             title="Required">
         <span id="supportemail_nodejs">
 <a href="#supportemail_nodejs" style="color: inherit; text-decoration: inherit;">support<wbr>Email</a>
@@ -312,8 +270,7 @@ user or group email. When a user email is specified, the caller must
 be the user with the associated email address. When a group email is
 specified, the caller can be either a user or a service account which
 is an owner of the specified group in Cloud Identity.
-{{% /md %}}</dd>
-    <dt class="property-optional"
+{{% /md %}}</dd><dt class="property-optional"
             title="Optional">
         <span id="project_nodejs">
 <a href="#project_nodejs" style="color: inherit; text-decoration: inherit;">project</a>
@@ -323,14 +280,11 @@ is an owner of the specified group in Cloud Identity.
     </dt>
     <dd>{{% md %}}The ID of the project in which the resource belongs.
 If it is not provided, the provider project is used.
-{{% /md %}}</dd>
-</dl>
+{{% /md %}}</dd></dl>
 {{% /choosable %}}
 
 {{% choosable language python %}}
-<dl class="resources-properties">
-
-    <dt class="property-required"
+<dl class="resources-properties"><dt class="property-required"
             title="Required">
         <span id="application_title_python">
 <a href="#application_title_python" style="color: inherit; text-decoration: inherit;">application_<wbr>title</a>
@@ -339,8 +293,7 @@ If it is not provided, the provider project is used.
         <span class="property-type">str</span>
     </dt>
     <dd>{{% md %}}Application name displayed on OAuth consent screen.
-{{% /md %}}</dd>
-    <dt class="property-required"
+{{% /md %}}</dd><dt class="property-required"
             title="Required">
         <span id="support_email_python">
 <a href="#support_email_python" style="color: inherit; text-decoration: inherit;">support_<wbr>email</a>
@@ -353,8 +306,7 @@ user or group email. When a user email is specified, the caller must
 be the user with the associated email address. When a group email is
 specified, the caller can be either a user or a service account which
 is an owner of the specified group in Cloud Identity.
-{{% /md %}}</dd>
-    <dt class="property-optional"
+{{% /md %}}</dd><dt class="property-optional"
             title="Optional">
         <span id="project_python">
 <a href="#project_python" style="color: inherit; text-decoration: inherit;">project</a>
@@ -364,8 +316,7 @@ is an owner of the specified group in Cloud Identity.
     </dt>
     <dd>{{% md %}}The ID of the project in which the resource belongs.
 If it is not provided, the provider project is used.
-{{% /md %}}</dd>
-</dl>
+{{% /md %}}</dd></dl>
 {{% /choosable %}}
 
 
@@ -376,9 +327,7 @@ All [input](#inputs) properties are implicitly available as output properties. A
 
 
 {{% choosable language csharp %}}
-<dl class="resources-properties">
-
-    <dt class="property-"
+<dl class="resources-properties"><dt class="property-"
             title="">
         <span id="id_csharp">
 <a href="#id_csharp" style="color: inherit; text-decoration: inherit;">Id</a>
@@ -386,8 +335,7 @@ All [input](#inputs) properties are implicitly available as output properties. A
         <span class="property-indicator"></span>
         <span class="property-type">string</span>
     </dt>
-    <dd>{{% md %}}The provider-assigned unique ID for this managed resource.{{% /md %}}</dd>
-    <dt class="property-"
+    <dd>{{% md %}}The provider-assigned unique ID for this managed resource.{{% /md %}}</dd><dt class="property-"
             title="">
         <span id="name_csharp">
 <a href="#name_csharp" style="color: inherit; text-decoration: inherit;">Name</a>
@@ -397,8 +345,7 @@ All [input](#inputs) properties are implicitly available as output properties. A
     </dt>
     <dd>{{% md %}}Output only. Identifier of the brand, in the format 'projects/{project_number}/brands/{brand_id}'. NOTE: The brand
 identification corresponds to the project number as only one brand per project can be created.
-{{% /md %}}</dd>
-    <dt class="property-"
+{{% /md %}}</dd><dt class="property-"
             title="">
         <span id="orginternalonly_csharp">
 <a href="#orginternalonly_csharp" style="color: inherit; text-decoration: inherit;">Org<wbr>Internal<wbr>Only</a>
@@ -407,14 +354,11 @@ identification corresponds to the project number as only one brand per project c
         <span class="property-type">bool</span>
     </dt>
     <dd>{{% md %}}Whether the brand is only intended for usage inside the GSuite organization only.
-{{% /md %}}</dd>
-</dl>
+{{% /md %}}</dd></dl>
 {{% /choosable %}}
 
 {{% choosable language go %}}
-<dl class="resources-properties">
-
-    <dt class="property-"
+<dl class="resources-properties"><dt class="property-"
             title="">
         <span id="id_go">
 <a href="#id_go" style="color: inherit; text-decoration: inherit;">Id</a>
@@ -422,8 +366,7 @@ identification corresponds to the project number as only one brand per project c
         <span class="property-indicator"></span>
         <span class="property-type">string</span>
     </dt>
-    <dd>{{% md %}}The provider-assigned unique ID for this managed resource.{{% /md %}}</dd>
-    <dt class="property-"
+    <dd>{{% md %}}The provider-assigned unique ID for this managed resource.{{% /md %}}</dd><dt class="property-"
             title="">
         <span id="name_go">
 <a href="#name_go" style="color: inherit; text-decoration: inherit;">Name</a>
@@ -433,8 +376,7 @@ identification corresponds to the project number as only one brand per project c
     </dt>
     <dd>{{% md %}}Output only. Identifier of the brand, in the format 'projects/{project_number}/brands/{brand_id}'. NOTE: The brand
 identification corresponds to the project number as only one brand per project can be created.
-{{% /md %}}</dd>
-    <dt class="property-"
+{{% /md %}}</dd><dt class="property-"
             title="">
         <span id="orginternalonly_go">
 <a href="#orginternalonly_go" style="color: inherit; text-decoration: inherit;">Org<wbr>Internal<wbr>Only</a>
@@ -443,14 +385,11 @@ identification corresponds to the project number as only one brand per project c
         <span class="property-type">bool</span>
     </dt>
     <dd>{{% md %}}Whether the brand is only intended for usage inside the GSuite organization only.
-{{% /md %}}</dd>
-</dl>
+{{% /md %}}</dd></dl>
 {{% /choosable %}}
 
 {{% choosable language nodejs %}}
-<dl class="resources-properties">
-
-    <dt class="property-"
+<dl class="resources-properties"><dt class="property-"
             title="">
         <span id="id_nodejs">
 <a href="#id_nodejs" style="color: inherit; text-decoration: inherit;">id</a>
@@ -458,8 +397,7 @@ identification corresponds to the project number as only one brand per project c
         <span class="property-indicator"></span>
         <span class="property-type">string</span>
     </dt>
-    <dd>{{% md %}}The provider-assigned unique ID for this managed resource.{{% /md %}}</dd>
-    <dt class="property-"
+    <dd>{{% md %}}The provider-assigned unique ID for this managed resource.{{% /md %}}</dd><dt class="property-"
             title="">
         <span id="name_nodejs">
 <a href="#name_nodejs" style="color: inherit; text-decoration: inherit;">name</a>
@@ -469,8 +407,7 @@ identification corresponds to the project number as only one brand per project c
     </dt>
     <dd>{{% md %}}Output only. Identifier of the brand, in the format 'projects/{project_number}/brands/{brand_id}'. NOTE: The brand
 identification corresponds to the project number as only one brand per project can be created.
-{{% /md %}}</dd>
-    <dt class="property-"
+{{% /md %}}</dd><dt class="property-"
             title="">
         <span id="orginternalonly_nodejs">
 <a href="#orginternalonly_nodejs" style="color: inherit; text-decoration: inherit;">org<wbr>Internal<wbr>Only</a>
@@ -479,14 +416,11 @@ identification corresponds to the project number as only one brand per project c
         <span class="property-type">boolean</span>
     </dt>
     <dd>{{% md %}}Whether the brand is only intended for usage inside the GSuite organization only.
-{{% /md %}}</dd>
-</dl>
+{{% /md %}}</dd></dl>
 {{% /choosable %}}
 
 {{% choosable language python %}}
-<dl class="resources-properties">
-
-    <dt class="property-"
+<dl class="resources-properties"><dt class="property-"
             title="">
         <span id="id_python">
 <a href="#id_python" style="color: inherit; text-decoration: inherit;">id</a>
@@ -494,8 +428,7 @@ identification corresponds to the project number as only one brand per project c
         <span class="property-indicator"></span>
         <span class="property-type">str</span>
     </dt>
-    <dd>{{% md %}}The provider-assigned unique ID for this managed resource.{{% /md %}}</dd>
-    <dt class="property-"
+    <dd>{{% md %}}The provider-assigned unique ID for this managed resource.{{% /md %}}</dd><dt class="property-"
             title="">
         <span id="name_python">
 <a href="#name_python" style="color: inherit; text-decoration: inherit;">name</a>
@@ -505,8 +438,7 @@ identification corresponds to the project number as only one brand per project c
     </dt>
     <dd>{{% md %}}Output only. Identifier of the brand, in the format 'projects/{project_number}/brands/{brand_id}'. NOTE: The brand
 identification corresponds to the project number as only one brand per project can be created.
-{{% /md %}}</dd>
-    <dt class="property-"
+{{% /md %}}</dd><dt class="property-"
             title="">
         <span id="org_internal_only_python">
 <a href="#org_internal_only_python" style="color: inherit; text-decoration: inherit;">org_<wbr>internal_<wbr>only</a>
@@ -515,8 +447,7 @@ identification corresponds to the project number as only one brand per project c
         <span class="property-type">bool</span>
     </dt>
     <dd>{{% md %}}Whether the brand is only intended for usage inside the GSuite organization only.
-{{% /md %}}</dd>
-</dl>
+{{% /md %}}</dd></dl>
 {{% /choosable %}}
 
 
@@ -643,9 +574,7 @@ The following state arguments are supported:
 
 
 {{% choosable language csharp %}}
-<dl class="resources-properties">
-
-    <dt class="property-optional"
+<dl class="resources-properties"><dt class="property-optional"
             title="Optional">
         <span id="state_applicationtitle_csharp">
 <a href="#state_applicationtitle_csharp" style="color: inherit; text-decoration: inherit;">Application<wbr>Title</a>
@@ -654,8 +583,7 @@ The following state arguments are supported:
         <span class="property-type">string</span>
     </dt>
     <dd>{{% md %}}Application name displayed on OAuth consent screen.
-{{% /md %}}</dd>
-    <dt class="property-optional"
+{{% /md %}}</dd><dt class="property-optional"
             title="Optional">
         <span id="state_name_csharp">
 <a href="#state_name_csharp" style="color: inherit; text-decoration: inherit;">Name</a>
@@ -665,8 +593,7 @@ The following state arguments are supported:
     </dt>
     <dd>{{% md %}}Output only. Identifier of the brand, in the format 'projects/{project_number}/brands/{brand_id}'. NOTE: The brand
 identification corresponds to the project number as only one brand per project can be created.
-{{% /md %}}</dd>
-    <dt class="property-optional"
+{{% /md %}}</dd><dt class="property-optional"
             title="Optional">
         <span id="state_orginternalonly_csharp">
 <a href="#state_orginternalonly_csharp" style="color: inherit; text-decoration: inherit;">Org<wbr>Internal<wbr>Only</a>
@@ -675,8 +602,7 @@ identification corresponds to the project number as only one brand per project c
         <span class="property-type">bool</span>
     </dt>
     <dd>{{% md %}}Whether the brand is only intended for usage inside the GSuite organization only.
-{{% /md %}}</dd>
-    <dt class="property-optional"
+{{% /md %}}</dd><dt class="property-optional"
             title="Optional">
         <span id="state_project_csharp">
 <a href="#state_project_csharp" style="color: inherit; text-decoration: inherit;">Project</a>
@@ -686,8 +612,7 @@ identification corresponds to the project number as only one brand per project c
     </dt>
     <dd>{{% md %}}The ID of the project in which the resource belongs.
 If it is not provided, the provider project is used.
-{{% /md %}}</dd>
-    <dt class="property-optional"
+{{% /md %}}</dd><dt class="property-optional"
             title="Optional">
         <span id="state_supportemail_csharp">
 <a href="#state_supportemail_csharp" style="color: inherit; text-decoration: inherit;">Support<wbr>Email</a>
@@ -700,14 +625,11 @@ user or group email. When a user email is specified, the caller must
 be the user with the associated email address. When a group email is
 specified, the caller can be either a user or a service account which
 is an owner of the specified group in Cloud Identity.
-{{% /md %}}</dd>
-</dl>
+{{% /md %}}</dd></dl>
 {{% /choosable %}}
 
 {{% choosable language go %}}
-<dl class="resources-properties">
-
-    <dt class="property-optional"
+<dl class="resources-properties"><dt class="property-optional"
             title="Optional">
         <span id="state_applicationtitle_go">
 <a href="#state_applicationtitle_go" style="color: inherit; text-decoration: inherit;">Application<wbr>Title</a>
@@ -716,8 +638,7 @@ is an owner of the specified group in Cloud Identity.
         <span class="property-type">string</span>
     </dt>
     <dd>{{% md %}}Application name displayed on OAuth consent screen.
-{{% /md %}}</dd>
-    <dt class="property-optional"
+{{% /md %}}</dd><dt class="property-optional"
             title="Optional">
         <span id="state_name_go">
 <a href="#state_name_go" style="color: inherit; text-decoration: inherit;">Name</a>
@@ -727,8 +648,7 @@ is an owner of the specified group in Cloud Identity.
     </dt>
     <dd>{{% md %}}Output only. Identifier of the brand, in the format 'projects/{project_number}/brands/{brand_id}'. NOTE: The brand
 identification corresponds to the project number as only one brand per project can be created.
-{{% /md %}}</dd>
-    <dt class="property-optional"
+{{% /md %}}</dd><dt class="property-optional"
             title="Optional">
         <span id="state_orginternalonly_go">
 <a href="#state_orginternalonly_go" style="color: inherit; text-decoration: inherit;">Org<wbr>Internal<wbr>Only</a>
@@ -737,8 +657,7 @@ identification corresponds to the project number as only one brand per project c
         <span class="property-type">bool</span>
     </dt>
     <dd>{{% md %}}Whether the brand is only intended for usage inside the GSuite organization only.
-{{% /md %}}</dd>
-    <dt class="property-optional"
+{{% /md %}}</dd><dt class="property-optional"
             title="Optional">
         <span id="state_project_go">
 <a href="#state_project_go" style="color: inherit; text-decoration: inherit;">Project</a>
@@ -748,8 +667,7 @@ identification corresponds to the project number as only one brand per project c
     </dt>
     <dd>{{% md %}}The ID of the project in which the resource belongs.
 If it is not provided, the provider project is used.
-{{% /md %}}</dd>
-    <dt class="property-optional"
+{{% /md %}}</dd><dt class="property-optional"
             title="Optional">
         <span id="state_supportemail_go">
 <a href="#state_supportemail_go" style="color: inherit; text-decoration: inherit;">Support<wbr>Email</a>
@@ -762,14 +680,11 @@ user or group email. When a user email is specified, the caller must
 be the user with the associated email address. When a group email is
 specified, the caller can be either a user or a service account which
 is an owner of the specified group in Cloud Identity.
-{{% /md %}}</dd>
-</dl>
+{{% /md %}}</dd></dl>
 {{% /choosable %}}
 
 {{% choosable language nodejs %}}
-<dl class="resources-properties">
-
-    <dt class="property-optional"
+<dl class="resources-properties"><dt class="property-optional"
             title="Optional">
         <span id="state_applicationtitle_nodejs">
 <a href="#state_applicationtitle_nodejs" style="color: inherit; text-decoration: inherit;">application<wbr>Title</a>
@@ -778,8 +693,7 @@ is an owner of the specified group in Cloud Identity.
         <span class="property-type">string</span>
     </dt>
     <dd>{{% md %}}Application name displayed on OAuth consent screen.
-{{% /md %}}</dd>
-    <dt class="property-optional"
+{{% /md %}}</dd><dt class="property-optional"
             title="Optional">
         <span id="state_name_nodejs">
 <a href="#state_name_nodejs" style="color: inherit; text-decoration: inherit;">name</a>
@@ -789,8 +703,7 @@ is an owner of the specified group in Cloud Identity.
     </dt>
     <dd>{{% md %}}Output only. Identifier of the brand, in the format 'projects/{project_number}/brands/{brand_id}'. NOTE: The brand
 identification corresponds to the project number as only one brand per project can be created.
-{{% /md %}}</dd>
-    <dt class="property-optional"
+{{% /md %}}</dd><dt class="property-optional"
             title="Optional">
         <span id="state_orginternalonly_nodejs">
 <a href="#state_orginternalonly_nodejs" style="color: inherit; text-decoration: inherit;">org<wbr>Internal<wbr>Only</a>
@@ -799,8 +712,7 @@ identification corresponds to the project number as only one brand per project c
         <span class="property-type">boolean</span>
     </dt>
     <dd>{{% md %}}Whether the brand is only intended for usage inside the GSuite organization only.
-{{% /md %}}</dd>
-    <dt class="property-optional"
+{{% /md %}}</dd><dt class="property-optional"
             title="Optional">
         <span id="state_project_nodejs">
 <a href="#state_project_nodejs" style="color: inherit; text-decoration: inherit;">project</a>
@@ -810,8 +722,7 @@ identification corresponds to the project number as only one brand per project c
     </dt>
     <dd>{{% md %}}The ID of the project in which the resource belongs.
 If it is not provided, the provider project is used.
-{{% /md %}}</dd>
-    <dt class="property-optional"
+{{% /md %}}</dd><dt class="property-optional"
             title="Optional">
         <span id="state_supportemail_nodejs">
 <a href="#state_supportemail_nodejs" style="color: inherit; text-decoration: inherit;">support<wbr>Email</a>
@@ -824,14 +735,11 @@ user or group email. When a user email is specified, the caller must
 be the user with the associated email address. When a group email is
 specified, the caller can be either a user or a service account which
 is an owner of the specified group in Cloud Identity.
-{{% /md %}}</dd>
-</dl>
+{{% /md %}}</dd></dl>
 {{% /choosable %}}
 
 {{% choosable language python %}}
-<dl class="resources-properties">
-
-    <dt class="property-optional"
+<dl class="resources-properties"><dt class="property-optional"
             title="Optional">
         <span id="state_application_title_python">
 <a href="#state_application_title_python" style="color: inherit; text-decoration: inherit;">application_<wbr>title</a>
@@ -840,8 +748,7 @@ is an owner of the specified group in Cloud Identity.
         <span class="property-type">str</span>
     </dt>
     <dd>{{% md %}}Application name displayed on OAuth consent screen.
-{{% /md %}}</dd>
-    <dt class="property-optional"
+{{% /md %}}</dd><dt class="property-optional"
             title="Optional">
         <span id="state_name_python">
 <a href="#state_name_python" style="color: inherit; text-decoration: inherit;">name</a>
@@ -851,8 +758,7 @@ is an owner of the specified group in Cloud Identity.
     </dt>
     <dd>{{% md %}}Output only. Identifier of the brand, in the format 'projects/{project_number}/brands/{brand_id}'. NOTE: The brand
 identification corresponds to the project number as only one brand per project can be created.
-{{% /md %}}</dd>
-    <dt class="property-optional"
+{{% /md %}}</dd><dt class="property-optional"
             title="Optional">
         <span id="state_org_internal_only_python">
 <a href="#state_org_internal_only_python" style="color: inherit; text-decoration: inherit;">org_<wbr>internal_<wbr>only</a>
@@ -861,8 +767,7 @@ identification corresponds to the project number as only one brand per project c
         <span class="property-type">bool</span>
     </dt>
     <dd>{{% md %}}Whether the brand is only intended for usage inside the GSuite organization only.
-{{% /md %}}</dd>
-    <dt class="property-optional"
+{{% /md %}}</dd><dt class="property-optional"
             title="Optional">
         <span id="state_project_python">
 <a href="#state_project_python" style="color: inherit; text-decoration: inherit;">project</a>
@@ -872,8 +777,7 @@ identification corresponds to the project number as only one brand per project c
     </dt>
     <dd>{{% md %}}The ID of the project in which the resource belongs.
 If it is not provided, the provider project is used.
-{{% /md %}}</dd>
-    <dt class="property-optional"
+{{% /md %}}</dd><dt class="property-optional"
             title="Optional">
         <span id="state_support_email_python">
 <a href="#state_support_email_python" style="color: inherit; text-decoration: inherit;">support_<wbr>email</a>
@@ -886,8 +790,7 @@ user or group email. When a user email is specified, the caller must
 be the user with the associated email address. When a group email is
 specified, the caller can be either a user or a service account which
 is an owner of the specified group in Cloud Identity.
-{{% /md %}}</dd>
-</dl>
+{{% /md %}}</dd></dl>
 {{% /choosable %}}
 
 
@@ -913,6 +816,6 @@ Brand can be imported using any of these accepted formats
 	<dt>License</dt>
 	<dd>Apache-2.0</dd>
 	<dt>Notes</dt>
-	<dd>This Pulumi package is based on the [`google-beta` Terraform Provider](https://github.com/hashicorp/terraform-provider-google-beta).</dd>
+	<dd>{{% md %}}This Pulumi package is based on the [`google-beta` Terraform Provider](https://github.com/hashicorp/terraform-provider-google-beta).{{% /md %}}</dd>
 </dl>
 

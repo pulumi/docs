@@ -51,9 +51,7 @@ The following arguments are supported:
 
 
 {{% choosable language csharp %}}
-<dl class="resources-properties">
-
-    <dt class="property-required"
+<dl class="resources-properties"><dt class="property-required"
             title="Required">
         <span id="connectedregistryname_csharp">
 <a href="#connectedregistryname_csharp" style="color: inherit; text-decoration: inherit;">Connected<wbr>Registry<wbr>Name</a>
@@ -61,8 +59,7 @@ The following arguments are supported:
         <span class="property-indicator"></span>
         <span class="property-type">string</span>
     </dt>
-    <dd>{{% md %}}The name of the connected registry.{{% /md %}}</dd>
-    <dt class="property-required"
+    <dd>{{% md %}}The name of the connected registry.{{% /md %}}</dd><dt class="property-required"
             title="Required">
         <span id="registryname_csharp">
 <a href="#registryname_csharp" style="color: inherit; text-decoration: inherit;">Registry<wbr>Name</a>
@@ -70,8 +67,7 @@ The following arguments are supported:
         <span class="property-indicator"></span>
         <span class="property-type">string</span>
     </dt>
-    <dd>{{% md %}}The name of the container registry.{{% /md %}}</dd>
-    <dt class="property-required"
+    <dd>{{% md %}}The name of the container registry.{{% /md %}}</dd><dt class="property-required"
             title="Required">
         <span id="resourcegroupname_csharp">
 <a href="#resourcegroupname_csharp" style="color: inherit; text-decoration: inherit;">Resource<wbr>Group<wbr>Name</a>
@@ -79,14 +75,11 @@ The following arguments are supported:
         <span class="property-indicator"></span>
         <span class="property-type">string</span>
     </dt>
-    <dd>{{% md %}}The name of the resource group to which the container registry belongs.{{% /md %}}</dd>
-</dl>
+    <dd>{{% md %}}The name of the resource group to which the container registry belongs.{{% /md %}}</dd></dl>
 {{% /choosable %}}
 
 {{% choosable language go %}}
-<dl class="resources-properties">
-
-    <dt class="property-required"
+<dl class="resources-properties"><dt class="property-required"
             title="Required">
         <span id="connectedregistryname_go">
 <a href="#connectedregistryname_go" style="color: inherit; text-decoration: inherit;">Connected<wbr>Registry<wbr>Name</a>
@@ -94,8 +87,7 @@ The following arguments are supported:
         <span class="property-indicator"></span>
         <span class="property-type">string</span>
     </dt>
-    <dd>{{% md %}}The name of the connected registry.{{% /md %}}</dd>
-    <dt class="property-required"
+    <dd>{{% md %}}The name of the connected registry.{{% /md %}}</dd><dt class="property-required"
             title="Required">
         <span id="registryname_go">
 <a href="#registryname_go" style="color: inherit; text-decoration: inherit;">Registry<wbr>Name</a>
@@ -103,8 +95,7 @@ The following arguments are supported:
         <span class="property-indicator"></span>
         <span class="property-type">string</span>
     </dt>
-    <dd>{{% md %}}The name of the container registry.{{% /md %}}</dd>
-    <dt class="property-required"
+    <dd>{{% md %}}The name of the container registry.{{% /md %}}</dd><dt class="property-required"
             title="Required">
         <span id="resourcegroupname_go">
 <a href="#resourcegroupname_go" style="color: inherit; text-decoration: inherit;">Resource<wbr>Group<wbr>Name</a>
@@ -112,14 +103,11 @@ The following arguments are supported:
         <span class="property-indicator"></span>
         <span class="property-type">string</span>
     </dt>
-    <dd>{{% md %}}The name of the resource group to which the container registry belongs.{{% /md %}}</dd>
-</dl>
+    <dd>{{% md %}}The name of the resource group to which the container registry belongs.{{% /md %}}</dd></dl>
 {{% /choosable %}}
 
 {{% choosable language nodejs %}}
-<dl class="resources-properties">
-
-    <dt class="property-required"
+<dl class="resources-properties"><dt class="property-required"
             title="Required">
         <span id="connectedregistryname_nodejs">
 <a href="#connectedregistryname_nodejs" style="color: inherit; text-decoration: inherit;">connected<wbr>Registry<wbr>Name</a>
@@ -127,8 +115,7 @@ The following arguments are supported:
         <span class="property-indicator"></span>
         <span class="property-type">string</span>
     </dt>
-    <dd>{{% md %}}The name of the connected registry.{{% /md %}}</dd>
-    <dt class="property-required"
+    <dd>{{% md %}}The name of the connected registry.{{% /md %}}</dd><dt class="property-required"
             title="Required">
         <span id="registryname_nodejs">
 <a href="#registryname_nodejs" style="color: inherit; text-decoration: inherit;">registry<wbr>Name</a>
@@ -136,8 +123,7 @@ The following arguments are supported:
         <span class="property-indicator"></span>
         <span class="property-type">string</span>
     </dt>
-    <dd>{{% md %}}The name of the container registry.{{% /md %}}</dd>
-    <dt class="property-required"
+    <dd>{{% md %}}The name of the container registry.{{% /md %}}</dd><dt class="property-required"
             title="Required">
         <span id="resourcegroupname_nodejs">
 <a href="#resourcegroupname_nodejs" style="color: inherit; text-decoration: inherit;">resource<wbr>Group<wbr>Name</a>
@@ -145,14 +131,11 @@ The following arguments are supported:
         <span class="property-indicator"></span>
         <span class="property-type">string</span>
     </dt>
-    <dd>{{% md %}}The name of the resource group to which the container registry belongs.{{% /md %}}</dd>
-</dl>
+    <dd>{{% md %}}The name of the resource group to which the container registry belongs.{{% /md %}}</dd></dl>
 {{% /choosable %}}
 
 {{% choosable language python %}}
-<dl class="resources-properties">
-
-    <dt class="property-required"
+<dl class="resources-properties"><dt class="property-required"
             title="Required">
         <span id="connected_registry_name_python">
 <a href="#connected_registry_name_python" style="color: inherit; text-decoration: inherit;">connected_<wbr>registry_<wbr>name</a>
@@ -160,8 +143,7 @@ The following arguments are supported:
         <span class="property-indicator"></span>
         <span class="property-type">str</span>
     </dt>
-    <dd>{{% md %}}The name of the connected registry.{{% /md %}}</dd>
-    <dt class="property-required"
+    <dd>{{% md %}}The name of the connected registry.{{% /md %}}</dd><dt class="property-required"
             title="Required">
         <span id="registry_name_python">
 <a href="#registry_name_python" style="color: inherit; text-decoration: inherit;">registry_<wbr>name</a>
@@ -169,8 +151,7 @@ The following arguments are supported:
         <span class="property-indicator"></span>
         <span class="property-type">str</span>
     </dt>
-    <dd>{{% md %}}The name of the container registry.{{% /md %}}</dd>
-    <dt class="property-required"
+    <dd>{{% md %}}The name of the container registry.{{% /md %}}</dd><dt class="property-required"
             title="Required">
         <span id="resource_group_name_python">
 <a href="#resource_group_name_python" style="color: inherit; text-decoration: inherit;">resource_<wbr>group_<wbr>name</a>
@@ -178,8 +159,7 @@ The following arguments are supported:
         <span class="property-indicator"></span>
         <span class="property-type">str</span>
     </dt>
-    <dd>{{% md %}}The name of the resource group to which the container registry belongs.{{% /md %}}</dd>
-</dl>
+    <dd>{{% md %}}The name of the resource group to which the container registry belongs.{{% /md %}}</dd></dl>
 {{% /choosable %}}
 
 
@@ -192,9 +172,7 @@ The following output properties are available:
 
 
 {{% choosable language csharp %}}
-<dl class="resources-properties">
-
-    <dt class="property-"
+<dl class="resources-properties"><dt class="property-"
             title="">
         <span id="activation_csharp">
 <a href="#activation_csharp" style="color: inherit; text-decoration: inherit;">Activation</a>
@@ -202,8 +180,7 @@ The following output properties are available:
         <span class="property-indicator"></span>
         <span class="property-type"><a href="#activationpropertiesresponse">Pulumi.<wbr>Azure<wbr>Native.<wbr>Container<wbr>Registry.<wbr>Outputs.<wbr>Activation<wbr>Properties<wbr>Response</a></span>
     </dt>
-    <dd>{{% md %}}The activation properties of the connected registry.{{% /md %}}</dd>
-    <dt class="property-"
+    <dd>{{% md %}}The activation properties of the connected registry.{{% /md %}}</dd><dt class="property-"
             title="">
         <span id="connectionstate_csharp">
 <a href="#connectionstate_csharp" style="color: inherit; text-decoration: inherit;">Connection<wbr>State</a>
@@ -211,8 +188,7 @@ The following output properties are available:
         <span class="property-indicator"></span>
         <span class="property-type">string</span>
     </dt>
-    <dd>{{% md %}}The current connection state of the connected registry.{{% /md %}}</dd>
-    <dt class="property-"
+    <dd>{{% md %}}The current connection state of the connected registry.{{% /md %}}</dd><dt class="property-"
             title="">
         <span id="id_csharp">
 <a href="#id_csharp" style="color: inherit; text-decoration: inherit;">Id</a>
@@ -220,8 +196,7 @@ The following output properties are available:
         <span class="property-indicator"></span>
         <span class="property-type">string</span>
     </dt>
-    <dd>{{% md %}}The resource ID.{{% /md %}}</dd>
-    <dt class="property-"
+    <dd>{{% md %}}The resource ID.{{% /md %}}</dd><dt class="property-"
             title="">
         <span id="lastactivitytime_csharp">
 <a href="#lastactivitytime_csharp" style="color: inherit; text-decoration: inherit;">Last<wbr>Activity<wbr>Time</a>
@@ -229,8 +204,7 @@ The following output properties are available:
         <span class="property-indicator"></span>
         <span class="property-type">string</span>
     </dt>
-    <dd>{{% md %}}The last activity time of the connected registry.{{% /md %}}</dd>
-    <dt class="property-"
+    <dd>{{% md %}}The last activity time of the connected registry.{{% /md %}}</dd><dt class="property-"
             title="">
         <span id="mode_csharp">
 <a href="#mode_csharp" style="color: inherit; text-decoration: inherit;">Mode</a>
@@ -238,8 +212,7 @@ The following output properties are available:
         <span class="property-indicator"></span>
         <span class="property-type">string</span>
     </dt>
-    <dd>{{% md %}}The mode of the connected registry resource that indicates the permissions of the registry.{{% /md %}}</dd>
-    <dt class="property-"
+    <dd>{{% md %}}The mode of the connected registry resource that indicates the permissions of the registry.{{% /md %}}</dd><dt class="property-"
             title="">
         <span id="name_csharp">
 <a href="#name_csharp" style="color: inherit; text-decoration: inherit;">Name</a>
@@ -247,8 +220,7 @@ The following output properties are available:
         <span class="property-indicator"></span>
         <span class="property-type">string</span>
     </dt>
-    <dd>{{% md %}}The name of the resource.{{% /md %}}</dd>
-    <dt class="property-"
+    <dd>{{% md %}}The name of the resource.{{% /md %}}</dd><dt class="property-"
             title="">
         <span id="parent_csharp">
 <a href="#parent_csharp" style="color: inherit; text-decoration: inherit;">Parent</a>
@@ -256,8 +228,7 @@ The following output properties are available:
         <span class="property-indicator"></span>
         <span class="property-type"><a href="#parentpropertiesresponse">Pulumi.<wbr>Azure<wbr>Native.<wbr>Container<wbr>Registry.<wbr>Outputs.<wbr>Parent<wbr>Properties<wbr>Response</a></span>
     </dt>
-    <dd>{{% md %}}The parent of the connected registry.{{% /md %}}</dd>
-    <dt class="property-"
+    <dd>{{% md %}}The parent of the connected registry.{{% /md %}}</dd><dt class="property-"
             title="">
         <span id="provisioningstate_csharp">
 <a href="#provisioningstate_csharp" style="color: inherit; text-decoration: inherit;">Provisioning<wbr>State</a>
@@ -265,8 +236,7 @@ The following output properties are available:
         <span class="property-indicator"></span>
         <span class="property-type">string</span>
     </dt>
-    <dd>{{% md %}}Provisioning state of the resource.{{% /md %}}</dd>
-    <dt class="property-"
+    <dd>{{% md %}}Provisioning state of the resource.{{% /md %}}</dd><dt class="property-"
             title="">
         <span id="statusdetails_csharp">
 <a href="#statusdetails_csharp" style="color: inherit; text-decoration: inherit;">Status<wbr>Details</a>
@@ -274,8 +244,7 @@ The following output properties are available:
         <span class="property-indicator"></span>
         <span class="property-type"><a href="#statusdetailpropertiesresponse">List&lt;Pulumi.<wbr>Azure<wbr>Native.<wbr>Container<wbr>Registry.<wbr>Outputs.<wbr>Status<wbr>Detail<wbr>Properties<wbr>Response&gt;</a></span>
     </dt>
-    <dd>{{% md %}}The list of current statuses of the connected registry.{{% /md %}}</dd>
-    <dt class="property-"
+    <dd>{{% md %}}The list of current statuses of the connected registry.{{% /md %}}</dd><dt class="property-"
             title="">
         <span id="systemdata_csharp">
 <a href="#systemdata_csharp" style="color: inherit; text-decoration: inherit;">System<wbr>Data</a>
@@ -283,8 +252,7 @@ The following output properties are available:
         <span class="property-indicator"></span>
         <span class="property-type"><a href="#systemdataresponse">Pulumi.<wbr>Azure<wbr>Native.<wbr>Container<wbr>Registry.<wbr>Outputs.<wbr>System<wbr>Data<wbr>Response</a></span>
     </dt>
-    <dd>{{% md %}}Metadata pertaining to creation and last modification of the resource.{{% /md %}}</dd>
-    <dt class="property-"
+    <dd>{{% md %}}Metadata pertaining to creation and last modification of the resource.{{% /md %}}</dd><dt class="property-"
             title="">
         <span id="type_csharp">
 <a href="#type_csharp" style="color: inherit; text-decoration: inherit;">Type</a>
@@ -292,8 +260,7 @@ The following output properties are available:
         <span class="property-indicator"></span>
         <span class="property-type">string</span>
     </dt>
-    <dd>{{% md %}}The type of the resource.{{% /md %}}</dd>
-    <dt class="property-"
+    <dd>{{% md %}}The type of the resource.{{% /md %}}</dd><dt class="property-"
             title="">
         <span id="version_csharp">
 <a href="#version_csharp" style="color: inherit; text-decoration: inherit;">Version</a>
@@ -301,8 +268,7 @@ The following output properties are available:
         <span class="property-indicator"></span>
         <span class="property-type">string</span>
     </dt>
-    <dd>{{% md %}}The current version of ACR runtime on the connected registry.{{% /md %}}</dd>
-    <dt class="property-"
+    <dd>{{% md %}}The current version of ACR runtime on the connected registry.{{% /md %}}</dd><dt class="property-"
             title="">
         <span id="clienttokenids_csharp">
 <a href="#clienttokenids_csharp" style="color: inherit; text-decoration: inherit;">Client<wbr>Token<wbr>Ids</a>
@@ -310,8 +276,7 @@ The following output properties are available:
         <span class="property-indicator"></span>
         <span class="property-type">List&lt;string&gt;</span>
     </dt>
-    <dd>{{% md %}}The list of the ACR token resource IDs used to authenticate clients to the connected registry.{{% /md %}}</dd>
-    <dt class="property-"
+    <dd>{{% md %}}The list of the ACR token resource IDs used to authenticate clients to the connected registry.{{% /md %}}</dd><dt class="property-"
             title="">
         <span id="logging_csharp">
 <a href="#logging_csharp" style="color: inherit; text-decoration: inherit;">Logging</a>
@@ -319,8 +284,7 @@ The following output properties are available:
         <span class="property-indicator"></span>
         <span class="property-type"><a href="#loggingpropertiesresponse">Pulumi.<wbr>Azure<wbr>Native.<wbr>Container<wbr>Registry.<wbr>Outputs.<wbr>Logging<wbr>Properties<wbr>Response</a></span>
     </dt>
-    <dd>{{% md %}}The logging properties of the connected registry.{{% /md %}}</dd>
-    <dt class="property-"
+    <dd>{{% md %}}The logging properties of the connected registry.{{% /md %}}</dd><dt class="property-"
             title="">
         <span id="loginserver_csharp">
 <a href="#loginserver_csharp" style="color: inherit; text-decoration: inherit;">Login<wbr>Server</a>
@@ -328,14 +292,11 @@ The following output properties are available:
         <span class="property-indicator"></span>
         <span class="property-type"><a href="#loginserverpropertiesresponse">Pulumi.<wbr>Azure<wbr>Native.<wbr>Container<wbr>Registry.<wbr>Outputs.<wbr>Login<wbr>Server<wbr>Properties<wbr>Response</a></span>
     </dt>
-    <dd>{{% md %}}The login server properties of the connected registry.{{% /md %}}</dd>
-</dl>
+    <dd>{{% md %}}The login server properties of the connected registry.{{% /md %}}</dd></dl>
 {{% /choosable %}}
 
 {{% choosable language go %}}
-<dl class="resources-properties">
-
-    <dt class="property-"
+<dl class="resources-properties"><dt class="property-"
             title="">
         <span id="activation_go">
 <a href="#activation_go" style="color: inherit; text-decoration: inherit;">Activation</a>
@@ -343,8 +304,7 @@ The following output properties are available:
         <span class="property-indicator"></span>
         <span class="property-type"><a href="#activationpropertiesresponse">Activation<wbr>Properties<wbr>Response</a></span>
     </dt>
-    <dd>{{% md %}}The activation properties of the connected registry.{{% /md %}}</dd>
-    <dt class="property-"
+    <dd>{{% md %}}The activation properties of the connected registry.{{% /md %}}</dd><dt class="property-"
             title="">
         <span id="connectionstate_go">
 <a href="#connectionstate_go" style="color: inherit; text-decoration: inherit;">Connection<wbr>State</a>
@@ -352,8 +312,7 @@ The following output properties are available:
         <span class="property-indicator"></span>
         <span class="property-type">string</span>
     </dt>
-    <dd>{{% md %}}The current connection state of the connected registry.{{% /md %}}</dd>
-    <dt class="property-"
+    <dd>{{% md %}}The current connection state of the connected registry.{{% /md %}}</dd><dt class="property-"
             title="">
         <span id="id_go">
 <a href="#id_go" style="color: inherit; text-decoration: inherit;">Id</a>
@@ -361,8 +320,7 @@ The following output properties are available:
         <span class="property-indicator"></span>
         <span class="property-type">string</span>
     </dt>
-    <dd>{{% md %}}The resource ID.{{% /md %}}</dd>
-    <dt class="property-"
+    <dd>{{% md %}}The resource ID.{{% /md %}}</dd><dt class="property-"
             title="">
         <span id="lastactivitytime_go">
 <a href="#lastactivitytime_go" style="color: inherit; text-decoration: inherit;">Last<wbr>Activity<wbr>Time</a>
@@ -370,8 +328,7 @@ The following output properties are available:
         <span class="property-indicator"></span>
         <span class="property-type">string</span>
     </dt>
-    <dd>{{% md %}}The last activity time of the connected registry.{{% /md %}}</dd>
-    <dt class="property-"
+    <dd>{{% md %}}The last activity time of the connected registry.{{% /md %}}</dd><dt class="property-"
             title="">
         <span id="mode_go">
 <a href="#mode_go" style="color: inherit; text-decoration: inherit;">Mode</a>
@@ -379,8 +336,7 @@ The following output properties are available:
         <span class="property-indicator"></span>
         <span class="property-type">string</span>
     </dt>
-    <dd>{{% md %}}The mode of the connected registry resource that indicates the permissions of the registry.{{% /md %}}</dd>
-    <dt class="property-"
+    <dd>{{% md %}}The mode of the connected registry resource that indicates the permissions of the registry.{{% /md %}}</dd><dt class="property-"
             title="">
         <span id="name_go">
 <a href="#name_go" style="color: inherit; text-decoration: inherit;">Name</a>
@@ -388,8 +344,7 @@ The following output properties are available:
         <span class="property-indicator"></span>
         <span class="property-type">string</span>
     </dt>
-    <dd>{{% md %}}The name of the resource.{{% /md %}}</dd>
-    <dt class="property-"
+    <dd>{{% md %}}The name of the resource.{{% /md %}}</dd><dt class="property-"
             title="">
         <span id="parent_go">
 <a href="#parent_go" style="color: inherit; text-decoration: inherit;">Parent</a>
@@ -397,8 +352,7 @@ The following output properties are available:
         <span class="property-indicator"></span>
         <span class="property-type"><a href="#parentpropertiesresponse">Parent<wbr>Properties<wbr>Response</a></span>
     </dt>
-    <dd>{{% md %}}The parent of the connected registry.{{% /md %}}</dd>
-    <dt class="property-"
+    <dd>{{% md %}}The parent of the connected registry.{{% /md %}}</dd><dt class="property-"
             title="">
         <span id="provisioningstate_go">
 <a href="#provisioningstate_go" style="color: inherit; text-decoration: inherit;">Provisioning<wbr>State</a>
@@ -406,8 +360,7 @@ The following output properties are available:
         <span class="property-indicator"></span>
         <span class="property-type">string</span>
     </dt>
-    <dd>{{% md %}}Provisioning state of the resource.{{% /md %}}</dd>
-    <dt class="property-"
+    <dd>{{% md %}}Provisioning state of the resource.{{% /md %}}</dd><dt class="property-"
             title="">
         <span id="statusdetails_go">
 <a href="#statusdetails_go" style="color: inherit; text-decoration: inherit;">Status<wbr>Details</a>
@@ -415,8 +368,7 @@ The following output properties are available:
         <span class="property-indicator"></span>
         <span class="property-type"><a href="#statusdetailpropertiesresponse">[]Status<wbr>Detail<wbr>Properties<wbr>Response</a></span>
     </dt>
-    <dd>{{% md %}}The list of current statuses of the connected registry.{{% /md %}}</dd>
-    <dt class="property-"
+    <dd>{{% md %}}The list of current statuses of the connected registry.{{% /md %}}</dd><dt class="property-"
             title="">
         <span id="systemdata_go">
 <a href="#systemdata_go" style="color: inherit; text-decoration: inherit;">System<wbr>Data</a>
@@ -424,8 +376,7 @@ The following output properties are available:
         <span class="property-indicator"></span>
         <span class="property-type"><a href="#systemdataresponse">System<wbr>Data<wbr>Response</a></span>
     </dt>
-    <dd>{{% md %}}Metadata pertaining to creation and last modification of the resource.{{% /md %}}</dd>
-    <dt class="property-"
+    <dd>{{% md %}}Metadata pertaining to creation and last modification of the resource.{{% /md %}}</dd><dt class="property-"
             title="">
         <span id="type_go">
 <a href="#type_go" style="color: inherit; text-decoration: inherit;">Type</a>
@@ -433,8 +384,7 @@ The following output properties are available:
         <span class="property-indicator"></span>
         <span class="property-type">string</span>
     </dt>
-    <dd>{{% md %}}The type of the resource.{{% /md %}}</dd>
-    <dt class="property-"
+    <dd>{{% md %}}The type of the resource.{{% /md %}}</dd><dt class="property-"
             title="">
         <span id="version_go">
 <a href="#version_go" style="color: inherit; text-decoration: inherit;">Version</a>
@@ -442,8 +392,7 @@ The following output properties are available:
         <span class="property-indicator"></span>
         <span class="property-type">string</span>
     </dt>
-    <dd>{{% md %}}The current version of ACR runtime on the connected registry.{{% /md %}}</dd>
-    <dt class="property-"
+    <dd>{{% md %}}The current version of ACR runtime on the connected registry.{{% /md %}}</dd><dt class="property-"
             title="">
         <span id="clienttokenids_go">
 <a href="#clienttokenids_go" style="color: inherit; text-decoration: inherit;">Client<wbr>Token<wbr>Ids</a>
@@ -451,8 +400,7 @@ The following output properties are available:
         <span class="property-indicator"></span>
         <span class="property-type">[]string</span>
     </dt>
-    <dd>{{% md %}}The list of the ACR token resource IDs used to authenticate clients to the connected registry.{{% /md %}}</dd>
-    <dt class="property-"
+    <dd>{{% md %}}The list of the ACR token resource IDs used to authenticate clients to the connected registry.{{% /md %}}</dd><dt class="property-"
             title="">
         <span id="logging_go">
 <a href="#logging_go" style="color: inherit; text-decoration: inherit;">Logging</a>
@@ -460,8 +408,7 @@ The following output properties are available:
         <span class="property-indicator"></span>
         <span class="property-type"><a href="#loggingpropertiesresponse">Logging<wbr>Properties<wbr>Response</a></span>
     </dt>
-    <dd>{{% md %}}The logging properties of the connected registry.{{% /md %}}</dd>
-    <dt class="property-"
+    <dd>{{% md %}}The logging properties of the connected registry.{{% /md %}}</dd><dt class="property-"
             title="">
         <span id="loginserver_go">
 <a href="#loginserver_go" style="color: inherit; text-decoration: inherit;">Login<wbr>Server</a>
@@ -469,14 +416,11 @@ The following output properties are available:
         <span class="property-indicator"></span>
         <span class="property-type"><a href="#loginserverpropertiesresponse">Login<wbr>Server<wbr>Properties<wbr>Response</a></span>
     </dt>
-    <dd>{{% md %}}The login server properties of the connected registry.{{% /md %}}</dd>
-</dl>
+    <dd>{{% md %}}The login server properties of the connected registry.{{% /md %}}</dd></dl>
 {{% /choosable %}}
 
 {{% choosable language nodejs %}}
-<dl class="resources-properties">
-
-    <dt class="property-"
+<dl class="resources-properties"><dt class="property-"
             title="">
         <span id="activation_nodejs">
 <a href="#activation_nodejs" style="color: inherit; text-decoration: inherit;">activation</a>
@@ -484,8 +428,7 @@ The following output properties are available:
         <span class="property-indicator"></span>
         <span class="property-type"><a href="#activationpropertiesresponse">Activation<wbr>Properties<wbr>Response</a></span>
     </dt>
-    <dd>{{% md %}}The activation properties of the connected registry.{{% /md %}}</dd>
-    <dt class="property-"
+    <dd>{{% md %}}The activation properties of the connected registry.{{% /md %}}</dd><dt class="property-"
             title="">
         <span id="connectionstate_nodejs">
 <a href="#connectionstate_nodejs" style="color: inherit; text-decoration: inherit;">connection<wbr>State</a>
@@ -493,8 +436,7 @@ The following output properties are available:
         <span class="property-indicator"></span>
         <span class="property-type">string</span>
     </dt>
-    <dd>{{% md %}}The current connection state of the connected registry.{{% /md %}}</dd>
-    <dt class="property-"
+    <dd>{{% md %}}The current connection state of the connected registry.{{% /md %}}</dd><dt class="property-"
             title="">
         <span id="id_nodejs">
 <a href="#id_nodejs" style="color: inherit; text-decoration: inherit;">id</a>
@@ -502,8 +444,7 @@ The following output properties are available:
         <span class="property-indicator"></span>
         <span class="property-type">string</span>
     </dt>
-    <dd>{{% md %}}The resource ID.{{% /md %}}</dd>
-    <dt class="property-"
+    <dd>{{% md %}}The resource ID.{{% /md %}}</dd><dt class="property-"
             title="">
         <span id="lastactivitytime_nodejs">
 <a href="#lastactivitytime_nodejs" style="color: inherit; text-decoration: inherit;">last<wbr>Activity<wbr>Time</a>
@@ -511,8 +452,7 @@ The following output properties are available:
         <span class="property-indicator"></span>
         <span class="property-type">string</span>
     </dt>
-    <dd>{{% md %}}The last activity time of the connected registry.{{% /md %}}</dd>
-    <dt class="property-"
+    <dd>{{% md %}}The last activity time of the connected registry.{{% /md %}}</dd><dt class="property-"
             title="">
         <span id="mode_nodejs">
 <a href="#mode_nodejs" style="color: inherit; text-decoration: inherit;">mode</a>
@@ -520,8 +460,7 @@ The following output properties are available:
         <span class="property-indicator"></span>
         <span class="property-type">string</span>
     </dt>
-    <dd>{{% md %}}The mode of the connected registry resource that indicates the permissions of the registry.{{% /md %}}</dd>
-    <dt class="property-"
+    <dd>{{% md %}}The mode of the connected registry resource that indicates the permissions of the registry.{{% /md %}}</dd><dt class="property-"
             title="">
         <span id="name_nodejs">
 <a href="#name_nodejs" style="color: inherit; text-decoration: inherit;">name</a>
@@ -529,8 +468,7 @@ The following output properties are available:
         <span class="property-indicator"></span>
         <span class="property-type">string</span>
     </dt>
-    <dd>{{% md %}}The name of the resource.{{% /md %}}</dd>
-    <dt class="property-"
+    <dd>{{% md %}}The name of the resource.{{% /md %}}</dd><dt class="property-"
             title="">
         <span id="parent_nodejs">
 <a href="#parent_nodejs" style="color: inherit; text-decoration: inherit;">parent</a>
@@ -538,8 +476,7 @@ The following output properties are available:
         <span class="property-indicator"></span>
         <span class="property-type"><a href="#parentpropertiesresponse">Parent<wbr>Properties<wbr>Response</a></span>
     </dt>
-    <dd>{{% md %}}The parent of the connected registry.{{% /md %}}</dd>
-    <dt class="property-"
+    <dd>{{% md %}}The parent of the connected registry.{{% /md %}}</dd><dt class="property-"
             title="">
         <span id="provisioningstate_nodejs">
 <a href="#provisioningstate_nodejs" style="color: inherit; text-decoration: inherit;">provisioning<wbr>State</a>
@@ -547,8 +484,7 @@ The following output properties are available:
         <span class="property-indicator"></span>
         <span class="property-type">string</span>
     </dt>
-    <dd>{{% md %}}Provisioning state of the resource.{{% /md %}}</dd>
-    <dt class="property-"
+    <dd>{{% md %}}Provisioning state of the resource.{{% /md %}}</dd><dt class="property-"
             title="">
         <span id="statusdetails_nodejs">
 <a href="#statusdetails_nodejs" style="color: inherit; text-decoration: inherit;">status<wbr>Details</a>
@@ -556,8 +492,7 @@ The following output properties are available:
         <span class="property-indicator"></span>
         <span class="property-type"><a href="#statusdetailpropertiesresponse">Status<wbr>Detail<wbr>Properties<wbr>Response[]</a></span>
     </dt>
-    <dd>{{% md %}}The list of current statuses of the connected registry.{{% /md %}}</dd>
-    <dt class="property-"
+    <dd>{{% md %}}The list of current statuses of the connected registry.{{% /md %}}</dd><dt class="property-"
             title="">
         <span id="systemdata_nodejs">
 <a href="#systemdata_nodejs" style="color: inherit; text-decoration: inherit;">system<wbr>Data</a>
@@ -565,8 +500,7 @@ The following output properties are available:
         <span class="property-indicator"></span>
         <span class="property-type"><a href="#systemdataresponse">System<wbr>Data<wbr>Response</a></span>
     </dt>
-    <dd>{{% md %}}Metadata pertaining to creation and last modification of the resource.{{% /md %}}</dd>
-    <dt class="property-"
+    <dd>{{% md %}}Metadata pertaining to creation and last modification of the resource.{{% /md %}}</dd><dt class="property-"
             title="">
         <span id="type_nodejs">
 <a href="#type_nodejs" style="color: inherit; text-decoration: inherit;">type</a>
@@ -574,8 +508,7 @@ The following output properties are available:
         <span class="property-indicator"></span>
         <span class="property-type">string</span>
     </dt>
-    <dd>{{% md %}}The type of the resource.{{% /md %}}</dd>
-    <dt class="property-"
+    <dd>{{% md %}}The type of the resource.{{% /md %}}</dd><dt class="property-"
             title="">
         <span id="version_nodejs">
 <a href="#version_nodejs" style="color: inherit; text-decoration: inherit;">version</a>
@@ -583,8 +516,7 @@ The following output properties are available:
         <span class="property-indicator"></span>
         <span class="property-type">string</span>
     </dt>
-    <dd>{{% md %}}The current version of ACR runtime on the connected registry.{{% /md %}}</dd>
-    <dt class="property-"
+    <dd>{{% md %}}The current version of ACR runtime on the connected registry.{{% /md %}}</dd><dt class="property-"
             title="">
         <span id="clienttokenids_nodejs">
 <a href="#clienttokenids_nodejs" style="color: inherit; text-decoration: inherit;">client<wbr>Token<wbr>Ids</a>
@@ -592,8 +524,7 @@ The following output properties are available:
         <span class="property-indicator"></span>
         <span class="property-type">string[]</span>
     </dt>
-    <dd>{{% md %}}The list of the ACR token resource IDs used to authenticate clients to the connected registry.{{% /md %}}</dd>
-    <dt class="property-"
+    <dd>{{% md %}}The list of the ACR token resource IDs used to authenticate clients to the connected registry.{{% /md %}}</dd><dt class="property-"
             title="">
         <span id="logging_nodejs">
 <a href="#logging_nodejs" style="color: inherit; text-decoration: inherit;">logging</a>
@@ -601,8 +532,7 @@ The following output properties are available:
         <span class="property-indicator"></span>
         <span class="property-type"><a href="#loggingpropertiesresponse">Logging<wbr>Properties<wbr>Response</a></span>
     </dt>
-    <dd>{{% md %}}The logging properties of the connected registry.{{% /md %}}</dd>
-    <dt class="property-"
+    <dd>{{% md %}}The logging properties of the connected registry.{{% /md %}}</dd><dt class="property-"
             title="">
         <span id="loginserver_nodejs">
 <a href="#loginserver_nodejs" style="color: inherit; text-decoration: inherit;">login<wbr>Server</a>
@@ -610,14 +540,11 @@ The following output properties are available:
         <span class="property-indicator"></span>
         <span class="property-type"><a href="#loginserverpropertiesresponse">Login<wbr>Server<wbr>Properties<wbr>Response</a></span>
     </dt>
-    <dd>{{% md %}}The login server properties of the connected registry.{{% /md %}}</dd>
-</dl>
+    <dd>{{% md %}}The login server properties of the connected registry.{{% /md %}}</dd></dl>
 {{% /choosable %}}
 
 {{% choosable language python %}}
-<dl class="resources-properties">
-
-    <dt class="property-"
+<dl class="resources-properties"><dt class="property-"
             title="">
         <span id="activation_python">
 <a href="#activation_python" style="color: inherit; text-decoration: inherit;">activation</a>
@@ -625,8 +552,7 @@ The following output properties are available:
         <span class="property-indicator"></span>
         <span class="property-type"><a href="#activationpropertiesresponse">Activation<wbr>Properties<wbr>Response</a></span>
     </dt>
-    <dd>{{% md %}}The activation properties of the connected registry.{{% /md %}}</dd>
-    <dt class="property-"
+    <dd>{{% md %}}The activation properties of the connected registry.{{% /md %}}</dd><dt class="property-"
             title="">
         <span id="connection_state_python">
 <a href="#connection_state_python" style="color: inherit; text-decoration: inherit;">connection_<wbr>state</a>
@@ -634,8 +560,7 @@ The following output properties are available:
         <span class="property-indicator"></span>
         <span class="property-type">str</span>
     </dt>
-    <dd>{{% md %}}The current connection state of the connected registry.{{% /md %}}</dd>
-    <dt class="property-"
+    <dd>{{% md %}}The current connection state of the connected registry.{{% /md %}}</dd><dt class="property-"
             title="">
         <span id="id_python">
 <a href="#id_python" style="color: inherit; text-decoration: inherit;">id</a>
@@ -643,8 +568,7 @@ The following output properties are available:
         <span class="property-indicator"></span>
         <span class="property-type">str</span>
     </dt>
-    <dd>{{% md %}}The resource ID.{{% /md %}}</dd>
-    <dt class="property-"
+    <dd>{{% md %}}The resource ID.{{% /md %}}</dd><dt class="property-"
             title="">
         <span id="last_activity_time_python">
 <a href="#last_activity_time_python" style="color: inherit; text-decoration: inherit;">last_<wbr>activity_<wbr>time</a>
@@ -652,8 +576,7 @@ The following output properties are available:
         <span class="property-indicator"></span>
         <span class="property-type">str</span>
     </dt>
-    <dd>{{% md %}}The last activity time of the connected registry.{{% /md %}}</dd>
-    <dt class="property-"
+    <dd>{{% md %}}The last activity time of the connected registry.{{% /md %}}</dd><dt class="property-"
             title="">
         <span id="mode_python">
 <a href="#mode_python" style="color: inherit; text-decoration: inherit;">mode</a>
@@ -661,8 +584,7 @@ The following output properties are available:
         <span class="property-indicator"></span>
         <span class="property-type">str</span>
     </dt>
-    <dd>{{% md %}}The mode of the connected registry resource that indicates the permissions of the registry.{{% /md %}}</dd>
-    <dt class="property-"
+    <dd>{{% md %}}The mode of the connected registry resource that indicates the permissions of the registry.{{% /md %}}</dd><dt class="property-"
             title="">
         <span id="name_python">
 <a href="#name_python" style="color: inherit; text-decoration: inherit;">name</a>
@@ -670,8 +592,7 @@ The following output properties are available:
         <span class="property-indicator"></span>
         <span class="property-type">str</span>
     </dt>
-    <dd>{{% md %}}The name of the resource.{{% /md %}}</dd>
-    <dt class="property-"
+    <dd>{{% md %}}The name of the resource.{{% /md %}}</dd><dt class="property-"
             title="">
         <span id="parent_python">
 <a href="#parent_python" style="color: inherit; text-decoration: inherit;">parent</a>
@@ -679,8 +600,7 @@ The following output properties are available:
         <span class="property-indicator"></span>
         <span class="property-type"><a href="#parentpropertiesresponse">Parent<wbr>Properties<wbr>Response</a></span>
     </dt>
-    <dd>{{% md %}}The parent of the connected registry.{{% /md %}}</dd>
-    <dt class="property-"
+    <dd>{{% md %}}The parent of the connected registry.{{% /md %}}</dd><dt class="property-"
             title="">
         <span id="provisioning_state_python">
 <a href="#provisioning_state_python" style="color: inherit; text-decoration: inherit;">provisioning_<wbr>state</a>
@@ -688,8 +608,7 @@ The following output properties are available:
         <span class="property-indicator"></span>
         <span class="property-type">str</span>
     </dt>
-    <dd>{{% md %}}Provisioning state of the resource.{{% /md %}}</dd>
-    <dt class="property-"
+    <dd>{{% md %}}Provisioning state of the resource.{{% /md %}}</dd><dt class="property-"
             title="">
         <span id="status_details_python">
 <a href="#status_details_python" style="color: inherit; text-decoration: inherit;">status_<wbr>details</a>
@@ -697,8 +616,7 @@ The following output properties are available:
         <span class="property-indicator"></span>
         <span class="property-type"><a href="#statusdetailpropertiesresponse">Sequence[Status<wbr>Detail<wbr>Properties<wbr>Response]</a></span>
     </dt>
-    <dd>{{% md %}}The list of current statuses of the connected registry.{{% /md %}}</dd>
-    <dt class="property-"
+    <dd>{{% md %}}The list of current statuses of the connected registry.{{% /md %}}</dd><dt class="property-"
             title="">
         <span id="system_data_python">
 <a href="#system_data_python" style="color: inherit; text-decoration: inherit;">system_<wbr>data</a>
@@ -706,8 +624,7 @@ The following output properties are available:
         <span class="property-indicator"></span>
         <span class="property-type"><a href="#systemdataresponse">System<wbr>Data<wbr>Response</a></span>
     </dt>
-    <dd>{{% md %}}Metadata pertaining to creation and last modification of the resource.{{% /md %}}</dd>
-    <dt class="property-"
+    <dd>{{% md %}}Metadata pertaining to creation and last modification of the resource.{{% /md %}}</dd><dt class="property-"
             title="">
         <span id="type_python">
 <a href="#type_python" style="color: inherit; text-decoration: inherit;">type</a>
@@ -715,8 +632,7 @@ The following output properties are available:
         <span class="property-indicator"></span>
         <span class="property-type">str</span>
     </dt>
-    <dd>{{% md %}}The type of the resource.{{% /md %}}</dd>
-    <dt class="property-"
+    <dd>{{% md %}}The type of the resource.{{% /md %}}</dd><dt class="property-"
             title="">
         <span id="version_python">
 <a href="#version_python" style="color: inherit; text-decoration: inherit;">version</a>
@@ -724,8 +640,7 @@ The following output properties are available:
         <span class="property-indicator"></span>
         <span class="property-type">str</span>
     </dt>
-    <dd>{{% md %}}The current version of ACR runtime on the connected registry.{{% /md %}}</dd>
-    <dt class="property-"
+    <dd>{{% md %}}The current version of ACR runtime on the connected registry.{{% /md %}}</dd><dt class="property-"
             title="">
         <span id="client_token_ids_python">
 <a href="#client_token_ids_python" style="color: inherit; text-decoration: inherit;">client_<wbr>token_<wbr>ids</a>
@@ -733,8 +648,7 @@ The following output properties are available:
         <span class="property-indicator"></span>
         <span class="property-type">Sequence[str]</span>
     </dt>
-    <dd>{{% md %}}The list of the ACR token resource IDs used to authenticate clients to the connected registry.{{% /md %}}</dd>
-    <dt class="property-"
+    <dd>{{% md %}}The list of the ACR token resource IDs used to authenticate clients to the connected registry.{{% /md %}}</dd><dt class="property-"
             title="">
         <span id="logging_python">
 <a href="#logging_python" style="color: inherit; text-decoration: inherit;">logging</a>
@@ -742,8 +656,7 @@ The following output properties are available:
         <span class="property-indicator"></span>
         <span class="property-type"><a href="#loggingpropertiesresponse">Logging<wbr>Properties<wbr>Response</a></span>
     </dt>
-    <dd>{{% md %}}The logging properties of the connected registry.{{% /md %}}</dd>
-    <dt class="property-"
+    <dd>{{% md %}}The logging properties of the connected registry.{{% /md %}}</dd><dt class="property-"
             title="">
         <span id="login_server_python">
 <a href="#login_server_python" style="color: inherit; text-decoration: inherit;">login_<wbr>server</a>
@@ -751,8 +664,7 @@ The following output properties are available:
         <span class="property-indicator"></span>
         <span class="property-type"><a href="#loginserverpropertiesresponse">Login<wbr>Server<wbr>Properties<wbr>Response</a></span>
     </dt>
-    <dd>{{% md %}}The login server properties of the connected registry.{{% /md %}}</dd>
-</dl>
+    <dd>{{% md %}}The login server properties of the connected registry.{{% /md %}}</dd></dl>
 {{% /choosable %}}
 
 
@@ -766,9 +678,7 @@ The following output properties are available:
 
 
 {{% choosable language csharp %}}
-<dl class="resources-properties">
-
-    <dt class="property-required"
+<dl class="resources-properties"><dt class="property-required"
             title="Required">
         <span id="status_csharp">
 <a href="#status_csharp" style="color: inherit; text-decoration: inherit;">Status</a>
@@ -776,14 +686,11 @@ The following output properties are available:
         <span class="property-indicator"></span>
         <span class="property-type">string</span>
     </dt>
-    <dd>{{% md %}}The activation status of the connected registry.{{% /md %}}</dd>
-</dl>
+    <dd>{{% md %}}The activation status of the connected registry.{{% /md %}}</dd></dl>
 {{% /choosable %}}
 
 {{% choosable language go %}}
-<dl class="resources-properties">
-
-    <dt class="property-required"
+<dl class="resources-properties"><dt class="property-required"
             title="Required">
         <span id="status_go">
 <a href="#status_go" style="color: inherit; text-decoration: inherit;">Status</a>
@@ -791,14 +698,11 @@ The following output properties are available:
         <span class="property-indicator"></span>
         <span class="property-type">string</span>
     </dt>
-    <dd>{{% md %}}The activation status of the connected registry.{{% /md %}}</dd>
-</dl>
+    <dd>{{% md %}}The activation status of the connected registry.{{% /md %}}</dd></dl>
 {{% /choosable %}}
 
 {{% choosable language nodejs %}}
-<dl class="resources-properties">
-
-    <dt class="property-required"
+<dl class="resources-properties"><dt class="property-required"
             title="Required">
         <span id="status_nodejs">
 <a href="#status_nodejs" style="color: inherit; text-decoration: inherit;">status</a>
@@ -806,14 +710,11 @@ The following output properties are available:
         <span class="property-indicator"></span>
         <span class="property-type">string</span>
     </dt>
-    <dd>{{% md %}}The activation status of the connected registry.{{% /md %}}</dd>
-</dl>
+    <dd>{{% md %}}The activation status of the connected registry.{{% /md %}}</dd></dl>
 {{% /choosable %}}
 
 {{% choosable language python %}}
-<dl class="resources-properties">
-
-    <dt class="property-required"
+<dl class="resources-properties"><dt class="property-required"
             title="Required">
         <span id="status_python">
 <a href="#status_python" style="color: inherit; text-decoration: inherit;">status</a>
@@ -821,8 +722,7 @@ The following output properties are available:
         <span class="property-indicator"></span>
         <span class="property-type">str</span>
     </dt>
-    <dd>{{% md %}}The activation status of the connected registry.{{% /md %}}</dd>
-</dl>
+    <dd>{{% md %}}The activation status of the connected registry.{{% /md %}}</dd></dl>
 {{% /choosable %}}
 
 <h4 id="loggingpropertiesresponse">Logging<wbr>Properties<wbr>Response</h4>
@@ -830,9 +730,7 @@ The following output properties are available:
 
 
 {{% choosable language csharp %}}
-<dl class="resources-properties">
-
-    <dt class="property-optional"
+<dl class="resources-properties"><dt class="property-optional"
             title="Optional">
         <span id="auditlogstatus_csharp">
 <a href="#auditlogstatus_csharp" style="color: inherit; text-decoration: inherit;">Audit<wbr>Log<wbr>Status</a>
@@ -840,8 +738,7 @@ The following output properties are available:
         <span class="property-indicator"></span>
         <span class="property-type">string</span>
     </dt>
-    <dd>{{% md %}}Indicates whether audit logs are enabled on the connected registry.{{% /md %}}</dd>
-    <dt class="property-optional"
+    <dd>{{% md %}}Indicates whether audit logs are enabled on the connected registry.{{% /md %}}</dd><dt class="property-optional"
             title="Optional">
         <span id="loglevel_csharp">
 <a href="#loglevel_csharp" style="color: inherit; text-decoration: inherit;">Log<wbr>Level</a>
@@ -849,14 +746,11 @@ The following output properties are available:
         <span class="property-indicator"></span>
         <span class="property-type">string</span>
     </dt>
-    <dd>{{% md %}}The verbosity of logs persisted on the connected registry.{{% /md %}}</dd>
-</dl>
+    <dd>{{% md %}}The verbosity of logs persisted on the connected registry.{{% /md %}}</dd></dl>
 {{% /choosable %}}
 
 {{% choosable language go %}}
-<dl class="resources-properties">
-
-    <dt class="property-optional"
+<dl class="resources-properties"><dt class="property-optional"
             title="Optional">
         <span id="auditlogstatus_go">
 <a href="#auditlogstatus_go" style="color: inherit; text-decoration: inherit;">Audit<wbr>Log<wbr>Status</a>
@@ -864,8 +758,7 @@ The following output properties are available:
         <span class="property-indicator"></span>
         <span class="property-type">string</span>
     </dt>
-    <dd>{{% md %}}Indicates whether audit logs are enabled on the connected registry.{{% /md %}}</dd>
-    <dt class="property-optional"
+    <dd>{{% md %}}Indicates whether audit logs are enabled on the connected registry.{{% /md %}}</dd><dt class="property-optional"
             title="Optional">
         <span id="loglevel_go">
 <a href="#loglevel_go" style="color: inherit; text-decoration: inherit;">Log<wbr>Level</a>
@@ -873,14 +766,11 @@ The following output properties are available:
         <span class="property-indicator"></span>
         <span class="property-type">string</span>
     </dt>
-    <dd>{{% md %}}The verbosity of logs persisted on the connected registry.{{% /md %}}</dd>
-</dl>
+    <dd>{{% md %}}The verbosity of logs persisted on the connected registry.{{% /md %}}</dd></dl>
 {{% /choosable %}}
 
 {{% choosable language nodejs %}}
-<dl class="resources-properties">
-
-    <dt class="property-optional"
+<dl class="resources-properties"><dt class="property-optional"
             title="Optional">
         <span id="auditlogstatus_nodejs">
 <a href="#auditlogstatus_nodejs" style="color: inherit; text-decoration: inherit;">audit<wbr>Log<wbr>Status</a>
@@ -888,8 +778,7 @@ The following output properties are available:
         <span class="property-indicator"></span>
         <span class="property-type">string</span>
     </dt>
-    <dd>{{% md %}}Indicates whether audit logs are enabled on the connected registry.{{% /md %}}</dd>
-    <dt class="property-optional"
+    <dd>{{% md %}}Indicates whether audit logs are enabled on the connected registry.{{% /md %}}</dd><dt class="property-optional"
             title="Optional">
         <span id="loglevel_nodejs">
 <a href="#loglevel_nodejs" style="color: inherit; text-decoration: inherit;">log<wbr>Level</a>
@@ -897,14 +786,11 @@ The following output properties are available:
         <span class="property-indicator"></span>
         <span class="property-type">string</span>
     </dt>
-    <dd>{{% md %}}The verbosity of logs persisted on the connected registry.{{% /md %}}</dd>
-</dl>
+    <dd>{{% md %}}The verbosity of logs persisted on the connected registry.{{% /md %}}</dd></dl>
 {{% /choosable %}}
 
 {{% choosable language python %}}
-<dl class="resources-properties">
-
-    <dt class="property-optional"
+<dl class="resources-properties"><dt class="property-optional"
             title="Optional">
         <span id="audit_log_status_python">
 <a href="#audit_log_status_python" style="color: inherit; text-decoration: inherit;">audit_<wbr>log_<wbr>status</a>
@@ -912,8 +798,7 @@ The following output properties are available:
         <span class="property-indicator"></span>
         <span class="property-type">str</span>
     </dt>
-    <dd>{{% md %}}Indicates whether audit logs are enabled on the connected registry.{{% /md %}}</dd>
-    <dt class="property-optional"
+    <dd>{{% md %}}Indicates whether audit logs are enabled on the connected registry.{{% /md %}}</dd><dt class="property-optional"
             title="Optional">
         <span id="log_level_python">
 <a href="#log_level_python" style="color: inherit; text-decoration: inherit;">log_<wbr>level</a>
@@ -921,8 +806,7 @@ The following output properties are available:
         <span class="property-indicator"></span>
         <span class="property-type">str</span>
     </dt>
-    <dd>{{% md %}}The verbosity of logs persisted on the connected registry.{{% /md %}}</dd>
-</dl>
+    <dd>{{% md %}}The verbosity of logs persisted on the connected registry.{{% /md %}}</dd></dl>
 {{% /choosable %}}
 
 <h4 id="loginserverpropertiesresponse">Login<wbr>Server<wbr>Properties<wbr>Response</h4>
@@ -930,9 +814,7 @@ The following output properties are available:
 
 
 {{% choosable language csharp %}}
-<dl class="resources-properties">
-
-    <dt class="property-required"
+<dl class="resources-properties"><dt class="property-required"
             title="Required">
         <span id="host_csharp">
 <a href="#host_csharp" style="color: inherit; text-decoration: inherit;">Host</a>
@@ -940,8 +822,7 @@ The following output properties are available:
         <span class="property-indicator"></span>
         <span class="property-type">string</span>
     </dt>
-    <dd>{{% md %}}The host of the connected registry. Can be FQDN or IP.{{% /md %}}</dd>
-    <dt class="property-required"
+    <dd>{{% md %}}The host of the connected registry. Can be FQDN or IP.{{% /md %}}</dd><dt class="property-required"
             title="Required">
         <span id="tls_csharp">
 <a href="#tls_csharp" style="color: inherit; text-decoration: inherit;">Tls</a>
@@ -949,14 +830,11 @@ The following output properties are available:
         <span class="property-indicator"></span>
         <span class="property-type"><a href="#tlspropertiesresponse">Pulumi.<wbr>Azure<wbr>Native.<wbr>Container<wbr>Registry.<wbr>Inputs.<wbr>Tls<wbr>Properties<wbr>Response<wbr>Args</a></span>
     </dt>
-    <dd>{{% md %}}The TLS properties of the connected registry login server.{{% /md %}}</dd>
-</dl>
+    <dd>{{% md %}}The TLS properties of the connected registry login server.{{% /md %}}</dd></dl>
 {{% /choosable %}}
 
 {{% choosable language go %}}
-<dl class="resources-properties">
-
-    <dt class="property-required"
+<dl class="resources-properties"><dt class="property-required"
             title="Required">
         <span id="host_go">
 <a href="#host_go" style="color: inherit; text-decoration: inherit;">Host</a>
@@ -964,8 +842,7 @@ The following output properties are available:
         <span class="property-indicator"></span>
         <span class="property-type">string</span>
     </dt>
-    <dd>{{% md %}}The host of the connected registry. Can be FQDN or IP.{{% /md %}}</dd>
-    <dt class="property-required"
+    <dd>{{% md %}}The host of the connected registry. Can be FQDN or IP.{{% /md %}}</dd><dt class="property-required"
             title="Required">
         <span id="tls_go">
 <a href="#tls_go" style="color: inherit; text-decoration: inherit;">Tls</a>
@@ -973,14 +850,11 @@ The following output properties are available:
         <span class="property-indicator"></span>
         <span class="property-type"><a href="#tlspropertiesresponse">Tls<wbr>Properties<wbr>Response</a></span>
     </dt>
-    <dd>{{% md %}}The TLS properties of the connected registry login server.{{% /md %}}</dd>
-</dl>
+    <dd>{{% md %}}The TLS properties of the connected registry login server.{{% /md %}}</dd></dl>
 {{% /choosable %}}
 
 {{% choosable language nodejs %}}
-<dl class="resources-properties">
-
-    <dt class="property-required"
+<dl class="resources-properties"><dt class="property-required"
             title="Required">
         <span id="host_nodejs">
 <a href="#host_nodejs" style="color: inherit; text-decoration: inherit;">host</a>
@@ -988,8 +862,7 @@ The following output properties are available:
         <span class="property-indicator"></span>
         <span class="property-type">string</span>
     </dt>
-    <dd>{{% md %}}The host of the connected registry. Can be FQDN or IP.{{% /md %}}</dd>
-    <dt class="property-required"
+    <dd>{{% md %}}The host of the connected registry. Can be FQDN or IP.{{% /md %}}</dd><dt class="property-required"
             title="Required">
         <span id="tls_nodejs">
 <a href="#tls_nodejs" style="color: inherit; text-decoration: inherit;">tls</a>
@@ -997,14 +870,11 @@ The following output properties are available:
         <span class="property-indicator"></span>
         <span class="property-type"><a href="#tlspropertiesresponse">Tls<wbr>Properties<wbr>Response</a></span>
     </dt>
-    <dd>{{% md %}}The TLS properties of the connected registry login server.{{% /md %}}</dd>
-</dl>
+    <dd>{{% md %}}The TLS properties of the connected registry login server.{{% /md %}}</dd></dl>
 {{% /choosable %}}
 
 {{% choosable language python %}}
-<dl class="resources-properties">
-
-    <dt class="property-required"
+<dl class="resources-properties"><dt class="property-required"
             title="Required">
         <span id="host_python">
 <a href="#host_python" style="color: inherit; text-decoration: inherit;">host</a>
@@ -1012,8 +882,7 @@ The following output properties are available:
         <span class="property-indicator"></span>
         <span class="property-type">str</span>
     </dt>
-    <dd>{{% md %}}The host of the connected registry. Can be FQDN or IP.{{% /md %}}</dd>
-    <dt class="property-required"
+    <dd>{{% md %}}The host of the connected registry. Can be FQDN or IP.{{% /md %}}</dd><dt class="property-required"
             title="Required">
         <span id="tls_python">
 <a href="#tls_python" style="color: inherit; text-decoration: inherit;">tls</a>
@@ -1021,8 +890,7 @@ The following output properties are available:
         <span class="property-indicator"></span>
         <span class="property-type"><a href="#tlspropertiesresponse">Tls<wbr>Properties<wbr>Response<wbr>Args</a></span>
     </dt>
-    <dd>{{% md %}}The TLS properties of the connected registry login server.{{% /md %}}</dd>
-</dl>
+    <dd>{{% md %}}The TLS properties of the connected registry login server.{{% /md %}}</dd></dl>
 {{% /choosable %}}
 
 <h4 id="parentpropertiesresponse">Parent<wbr>Properties<wbr>Response</h4>
@@ -1030,9 +898,7 @@ The following output properties are available:
 
 
 {{% choosable language csharp %}}
-<dl class="resources-properties">
-
-    <dt class="property-required"
+<dl class="resources-properties"><dt class="property-required"
             title="Required">
         <span id="syncproperties_csharp">
 <a href="#syncproperties_csharp" style="color: inherit; text-decoration: inherit;">Sync<wbr>Properties</a>
@@ -1040,8 +906,7 @@ The following output properties are available:
         <span class="property-indicator"></span>
         <span class="property-type"><a href="#syncpropertiesresponse">Pulumi.<wbr>Azure<wbr>Native.<wbr>Container<wbr>Registry.<wbr>Inputs.<wbr>Sync<wbr>Properties<wbr>Response<wbr>Args</a></span>
     </dt>
-    <dd>{{% md %}}The sync properties of the connected registry with its parent.{{% /md %}}</dd>
-    <dt class="property-optional"
+    <dd>{{% md %}}The sync properties of the connected registry with its parent.{{% /md %}}</dd><dt class="property-optional"
             title="Optional">
         <span id="id_csharp">
 <a href="#id_csharp" style="color: inherit; text-decoration: inherit;">Id</a>
@@ -1049,14 +914,11 @@ The following output properties are available:
         <span class="property-indicator"></span>
         <span class="property-type">string</span>
     </dt>
-    <dd>{{% md %}}The resource ID of the parent to which the connected registry will be associated.{{% /md %}}</dd>
-</dl>
+    <dd>{{% md %}}The resource ID of the parent to which the connected registry will be associated.{{% /md %}}</dd></dl>
 {{% /choosable %}}
 
 {{% choosable language go %}}
-<dl class="resources-properties">
-
-    <dt class="property-required"
+<dl class="resources-properties"><dt class="property-required"
             title="Required">
         <span id="syncproperties_go">
 <a href="#syncproperties_go" style="color: inherit; text-decoration: inherit;">Sync<wbr>Properties</a>
@@ -1064,8 +926,7 @@ The following output properties are available:
         <span class="property-indicator"></span>
         <span class="property-type"><a href="#syncpropertiesresponse">Sync<wbr>Properties<wbr>Response</a></span>
     </dt>
-    <dd>{{% md %}}The sync properties of the connected registry with its parent.{{% /md %}}</dd>
-    <dt class="property-optional"
+    <dd>{{% md %}}The sync properties of the connected registry with its parent.{{% /md %}}</dd><dt class="property-optional"
             title="Optional">
         <span id="id_go">
 <a href="#id_go" style="color: inherit; text-decoration: inherit;">Id</a>
@@ -1073,14 +934,11 @@ The following output properties are available:
         <span class="property-indicator"></span>
         <span class="property-type">string</span>
     </dt>
-    <dd>{{% md %}}The resource ID of the parent to which the connected registry will be associated.{{% /md %}}</dd>
-</dl>
+    <dd>{{% md %}}The resource ID of the parent to which the connected registry will be associated.{{% /md %}}</dd></dl>
 {{% /choosable %}}
 
 {{% choosable language nodejs %}}
-<dl class="resources-properties">
-
-    <dt class="property-required"
+<dl class="resources-properties"><dt class="property-required"
             title="Required">
         <span id="syncproperties_nodejs">
 <a href="#syncproperties_nodejs" style="color: inherit; text-decoration: inherit;">sync<wbr>Properties</a>
@@ -1088,8 +946,7 @@ The following output properties are available:
         <span class="property-indicator"></span>
         <span class="property-type"><a href="#syncpropertiesresponse">Sync<wbr>Properties<wbr>Response</a></span>
     </dt>
-    <dd>{{% md %}}The sync properties of the connected registry with its parent.{{% /md %}}</dd>
-    <dt class="property-optional"
+    <dd>{{% md %}}The sync properties of the connected registry with its parent.{{% /md %}}</dd><dt class="property-optional"
             title="Optional">
         <span id="id_nodejs">
 <a href="#id_nodejs" style="color: inherit; text-decoration: inherit;">id</a>
@@ -1097,14 +954,11 @@ The following output properties are available:
         <span class="property-indicator"></span>
         <span class="property-type">string</span>
     </dt>
-    <dd>{{% md %}}The resource ID of the parent to which the connected registry will be associated.{{% /md %}}</dd>
-</dl>
+    <dd>{{% md %}}The resource ID of the parent to which the connected registry will be associated.{{% /md %}}</dd></dl>
 {{% /choosable %}}
 
 {{% choosable language python %}}
-<dl class="resources-properties">
-
-    <dt class="property-required"
+<dl class="resources-properties"><dt class="property-required"
             title="Required">
         <span id="sync_properties_python">
 <a href="#sync_properties_python" style="color: inherit; text-decoration: inherit;">sync_<wbr>properties</a>
@@ -1112,8 +966,7 @@ The following output properties are available:
         <span class="property-indicator"></span>
         <span class="property-type"><a href="#syncpropertiesresponse">Sync<wbr>Properties<wbr>Response<wbr>Args</a></span>
     </dt>
-    <dd>{{% md %}}The sync properties of the connected registry with its parent.{{% /md %}}</dd>
-    <dt class="property-optional"
+    <dd>{{% md %}}The sync properties of the connected registry with its parent.{{% /md %}}</dd><dt class="property-optional"
             title="Optional">
         <span id="id_python">
 <a href="#id_python" style="color: inherit; text-decoration: inherit;">id</a>
@@ -1121,8 +974,7 @@ The following output properties are available:
         <span class="property-indicator"></span>
         <span class="property-type">str</span>
     </dt>
-    <dd>{{% md %}}The resource ID of the parent to which the connected registry will be associated.{{% /md %}}</dd>
-</dl>
+    <dd>{{% md %}}The resource ID of the parent to which the connected registry will be associated.{{% /md %}}</dd></dl>
 {{% /choosable %}}
 
 <h4 id="statusdetailpropertiesresponse">Status<wbr>Detail<wbr>Properties<wbr>Response</h4>
@@ -1130,9 +982,7 @@ The following output properties are available:
 
 
 {{% choosable language csharp %}}
-<dl class="resources-properties">
-
-    <dt class="property-required"
+<dl class="resources-properties"><dt class="property-required"
             title="Required">
         <span id="code_csharp">
 <a href="#code_csharp" style="color: inherit; text-decoration: inherit;">Code</a>
@@ -1140,8 +990,7 @@ The following output properties are available:
         <span class="property-indicator"></span>
         <span class="property-type">string</span>
     </dt>
-    <dd>{{% md %}}The code of the status.{{% /md %}}</dd>
-    <dt class="property-required"
+    <dd>{{% md %}}The code of the status.{{% /md %}}</dd><dt class="property-required"
             title="Required">
         <span id="correlationid_csharp">
 <a href="#correlationid_csharp" style="color: inherit; text-decoration: inherit;">Correlation<wbr>Id</a>
@@ -1149,8 +998,7 @@ The following output properties are available:
         <span class="property-indicator"></span>
         <span class="property-type">string</span>
     </dt>
-    <dd>{{% md %}}The correlation ID of the status.{{% /md %}}</dd>
-    <dt class="property-required"
+    <dd>{{% md %}}The correlation ID of the status.{{% /md %}}</dd><dt class="property-required"
             title="Required">
         <span id="description_csharp">
 <a href="#description_csharp" style="color: inherit; text-decoration: inherit;">Description</a>
@@ -1158,8 +1006,7 @@ The following output properties are available:
         <span class="property-indicator"></span>
         <span class="property-type">string</span>
     </dt>
-    <dd>{{% md %}}The description of the status.{{% /md %}}</dd>
-    <dt class="property-required"
+    <dd>{{% md %}}The description of the status.{{% /md %}}</dd><dt class="property-required"
             title="Required">
         <span id="timestamp_csharp">
 <a href="#timestamp_csharp" style="color: inherit; text-decoration: inherit;">Timestamp</a>
@@ -1167,8 +1014,7 @@ The following output properties are available:
         <span class="property-indicator"></span>
         <span class="property-type">string</span>
     </dt>
-    <dd>{{% md %}}The timestamp of the status.{{% /md %}}</dd>
-    <dt class="property-required"
+    <dd>{{% md %}}The timestamp of the status.{{% /md %}}</dd><dt class="property-required"
             title="Required">
         <span id="type_csharp">
 <a href="#type_csharp" style="color: inherit; text-decoration: inherit;">Type</a>
@@ -1176,14 +1022,11 @@ The following output properties are available:
         <span class="property-indicator"></span>
         <span class="property-type">string</span>
     </dt>
-    <dd>{{% md %}}The component of the connected registry corresponding to the status.{{% /md %}}</dd>
-</dl>
+    <dd>{{% md %}}The component of the connected registry corresponding to the status.{{% /md %}}</dd></dl>
 {{% /choosable %}}
 
 {{% choosable language go %}}
-<dl class="resources-properties">
-
-    <dt class="property-required"
+<dl class="resources-properties"><dt class="property-required"
             title="Required">
         <span id="code_go">
 <a href="#code_go" style="color: inherit; text-decoration: inherit;">Code</a>
@@ -1191,8 +1034,7 @@ The following output properties are available:
         <span class="property-indicator"></span>
         <span class="property-type">string</span>
     </dt>
-    <dd>{{% md %}}The code of the status.{{% /md %}}</dd>
-    <dt class="property-required"
+    <dd>{{% md %}}The code of the status.{{% /md %}}</dd><dt class="property-required"
             title="Required">
         <span id="correlationid_go">
 <a href="#correlationid_go" style="color: inherit; text-decoration: inherit;">Correlation<wbr>Id</a>
@@ -1200,8 +1042,7 @@ The following output properties are available:
         <span class="property-indicator"></span>
         <span class="property-type">string</span>
     </dt>
-    <dd>{{% md %}}The correlation ID of the status.{{% /md %}}</dd>
-    <dt class="property-required"
+    <dd>{{% md %}}The correlation ID of the status.{{% /md %}}</dd><dt class="property-required"
             title="Required">
         <span id="description_go">
 <a href="#description_go" style="color: inherit; text-decoration: inherit;">Description</a>
@@ -1209,8 +1050,7 @@ The following output properties are available:
         <span class="property-indicator"></span>
         <span class="property-type">string</span>
     </dt>
-    <dd>{{% md %}}The description of the status.{{% /md %}}</dd>
-    <dt class="property-required"
+    <dd>{{% md %}}The description of the status.{{% /md %}}</dd><dt class="property-required"
             title="Required">
         <span id="timestamp_go">
 <a href="#timestamp_go" style="color: inherit; text-decoration: inherit;">Timestamp</a>
@@ -1218,8 +1058,7 @@ The following output properties are available:
         <span class="property-indicator"></span>
         <span class="property-type">string</span>
     </dt>
-    <dd>{{% md %}}The timestamp of the status.{{% /md %}}</dd>
-    <dt class="property-required"
+    <dd>{{% md %}}The timestamp of the status.{{% /md %}}</dd><dt class="property-required"
             title="Required">
         <span id="type_go">
 <a href="#type_go" style="color: inherit; text-decoration: inherit;">Type</a>
@@ -1227,14 +1066,11 @@ The following output properties are available:
         <span class="property-indicator"></span>
         <span class="property-type">string</span>
     </dt>
-    <dd>{{% md %}}The component of the connected registry corresponding to the status.{{% /md %}}</dd>
-</dl>
+    <dd>{{% md %}}The component of the connected registry corresponding to the status.{{% /md %}}</dd></dl>
 {{% /choosable %}}
 
 {{% choosable language nodejs %}}
-<dl class="resources-properties">
-
-    <dt class="property-required"
+<dl class="resources-properties"><dt class="property-required"
             title="Required">
         <span id="code_nodejs">
 <a href="#code_nodejs" style="color: inherit; text-decoration: inherit;">code</a>
@@ -1242,8 +1078,7 @@ The following output properties are available:
         <span class="property-indicator"></span>
         <span class="property-type">string</span>
     </dt>
-    <dd>{{% md %}}The code of the status.{{% /md %}}</dd>
-    <dt class="property-required"
+    <dd>{{% md %}}The code of the status.{{% /md %}}</dd><dt class="property-required"
             title="Required">
         <span id="correlationid_nodejs">
 <a href="#correlationid_nodejs" style="color: inherit; text-decoration: inherit;">correlation<wbr>Id</a>
@@ -1251,8 +1086,7 @@ The following output properties are available:
         <span class="property-indicator"></span>
         <span class="property-type">string</span>
     </dt>
-    <dd>{{% md %}}The correlation ID of the status.{{% /md %}}</dd>
-    <dt class="property-required"
+    <dd>{{% md %}}The correlation ID of the status.{{% /md %}}</dd><dt class="property-required"
             title="Required">
         <span id="description_nodejs">
 <a href="#description_nodejs" style="color: inherit; text-decoration: inherit;">description</a>
@@ -1260,8 +1094,7 @@ The following output properties are available:
         <span class="property-indicator"></span>
         <span class="property-type">string</span>
     </dt>
-    <dd>{{% md %}}The description of the status.{{% /md %}}</dd>
-    <dt class="property-required"
+    <dd>{{% md %}}The description of the status.{{% /md %}}</dd><dt class="property-required"
             title="Required">
         <span id="timestamp_nodejs">
 <a href="#timestamp_nodejs" style="color: inherit; text-decoration: inherit;">timestamp</a>
@@ -1269,8 +1102,7 @@ The following output properties are available:
         <span class="property-indicator"></span>
         <span class="property-type">string</span>
     </dt>
-    <dd>{{% md %}}The timestamp of the status.{{% /md %}}</dd>
-    <dt class="property-required"
+    <dd>{{% md %}}The timestamp of the status.{{% /md %}}</dd><dt class="property-required"
             title="Required">
         <span id="type_nodejs">
 <a href="#type_nodejs" style="color: inherit; text-decoration: inherit;">type</a>
@@ -1278,14 +1110,11 @@ The following output properties are available:
         <span class="property-indicator"></span>
         <span class="property-type">string</span>
     </dt>
-    <dd>{{% md %}}The component of the connected registry corresponding to the status.{{% /md %}}</dd>
-</dl>
+    <dd>{{% md %}}The component of the connected registry corresponding to the status.{{% /md %}}</dd></dl>
 {{% /choosable %}}
 
 {{% choosable language python %}}
-<dl class="resources-properties">
-
-    <dt class="property-required"
+<dl class="resources-properties"><dt class="property-required"
             title="Required">
         <span id="code_python">
 <a href="#code_python" style="color: inherit; text-decoration: inherit;">code</a>
@@ -1293,8 +1122,7 @@ The following output properties are available:
         <span class="property-indicator"></span>
         <span class="property-type">str</span>
     </dt>
-    <dd>{{% md %}}The code of the status.{{% /md %}}</dd>
-    <dt class="property-required"
+    <dd>{{% md %}}The code of the status.{{% /md %}}</dd><dt class="property-required"
             title="Required">
         <span id="correlation_id_python">
 <a href="#correlation_id_python" style="color: inherit; text-decoration: inherit;">correlation_<wbr>id</a>
@@ -1302,8 +1130,7 @@ The following output properties are available:
         <span class="property-indicator"></span>
         <span class="property-type">str</span>
     </dt>
-    <dd>{{% md %}}The correlation ID of the status.{{% /md %}}</dd>
-    <dt class="property-required"
+    <dd>{{% md %}}The correlation ID of the status.{{% /md %}}</dd><dt class="property-required"
             title="Required">
         <span id="description_python">
 <a href="#description_python" style="color: inherit; text-decoration: inherit;">description</a>
@@ -1311,8 +1138,7 @@ The following output properties are available:
         <span class="property-indicator"></span>
         <span class="property-type">str</span>
     </dt>
-    <dd>{{% md %}}The description of the status.{{% /md %}}</dd>
-    <dt class="property-required"
+    <dd>{{% md %}}The description of the status.{{% /md %}}</dd><dt class="property-required"
             title="Required">
         <span id="timestamp_python">
 <a href="#timestamp_python" style="color: inherit; text-decoration: inherit;">timestamp</a>
@@ -1320,8 +1146,7 @@ The following output properties are available:
         <span class="property-indicator"></span>
         <span class="property-type">str</span>
     </dt>
-    <dd>{{% md %}}The timestamp of the status.{{% /md %}}</dd>
-    <dt class="property-required"
+    <dd>{{% md %}}The timestamp of the status.{{% /md %}}</dd><dt class="property-required"
             title="Required">
         <span id="type_python">
 <a href="#type_python" style="color: inherit; text-decoration: inherit;">type</a>
@@ -1329,8 +1154,7 @@ The following output properties are available:
         <span class="property-indicator"></span>
         <span class="property-type">str</span>
     </dt>
-    <dd>{{% md %}}The component of the connected registry corresponding to the status.{{% /md %}}</dd>
-</dl>
+    <dd>{{% md %}}The component of the connected registry corresponding to the status.{{% /md %}}</dd></dl>
 {{% /choosable %}}
 
 <h4 id="syncpropertiesresponse">Sync<wbr>Properties<wbr>Response</h4>
@@ -1338,9 +1162,7 @@ The following output properties are available:
 
 
 {{% choosable language csharp %}}
-<dl class="resources-properties">
-
-    <dt class="property-required"
+<dl class="resources-properties"><dt class="property-required"
             title="Required">
         <span id="gatewayendpoint_csharp">
 <a href="#gatewayendpoint_csharp" style="color: inherit; text-decoration: inherit;">Gateway<wbr>Endpoint</a>
@@ -1348,8 +1170,7 @@ The following output properties are available:
         <span class="property-indicator"></span>
         <span class="property-type">string</span>
     </dt>
-    <dd>{{% md %}}The gateway endpoint used by the connected registry to communicate with its parent.{{% /md %}}</dd>
-    <dt class="property-required"
+    <dd>{{% md %}}The gateway endpoint used by the connected registry to communicate with its parent.{{% /md %}}</dd><dt class="property-required"
             title="Required">
         <span id="lastsynctime_csharp">
 <a href="#lastsynctime_csharp" style="color: inherit; text-decoration: inherit;">Last<wbr>Sync<wbr>Time</a>
@@ -1357,8 +1178,7 @@ The following output properties are available:
         <span class="property-indicator"></span>
         <span class="property-type">string</span>
     </dt>
-    <dd>{{% md %}}The last time a sync occurred between the connected registry and its parent.{{% /md %}}</dd>
-    <dt class="property-required"
+    <dd>{{% md %}}The last time a sync occurred between the connected registry and its parent.{{% /md %}}</dd><dt class="property-required"
             title="Required">
         <span id="messagettl_csharp">
 <a href="#messagettl_csharp" style="color: inherit; text-decoration: inherit;">Message<wbr>Ttl</a>
@@ -1366,8 +1186,7 @@ The following output properties are available:
         <span class="property-indicator"></span>
         <span class="property-type">string</span>
     </dt>
-    <dd>{{% md %}}The period of time for which a message is available to sync before it is expired. Specify the duration using the format P[n]Y[n]M[n]DT[n]H[n]M[n]S as per ISO8601.{{% /md %}}</dd>
-    <dt class="property-required"
+    <dd>{{% md %}}The period of time for which a message is available to sync before it is expired. Specify the duration using the format P[n]Y[n]M[n]DT[n]H[n]M[n]S as per ISO8601.{{% /md %}}</dd><dt class="property-required"
             title="Required">
         <span id="tokenid_csharp">
 <a href="#tokenid_csharp" style="color: inherit; text-decoration: inherit;">Token<wbr>Id</a>
@@ -1375,8 +1194,7 @@ The following output properties are available:
         <span class="property-indicator"></span>
         <span class="property-type">string</span>
     </dt>
-    <dd>{{% md %}}The resource ID of the ACR token used to authenticate the connected registry to its parent during sync.{{% /md %}}</dd>
-    <dt class="property-optional"
+    <dd>{{% md %}}The resource ID of the ACR token used to authenticate the connected registry to its parent during sync.{{% /md %}}</dd><dt class="property-optional"
             title="Optional">
         <span id="schedule_csharp">
 <a href="#schedule_csharp" style="color: inherit; text-decoration: inherit;">Schedule</a>
@@ -1384,8 +1202,7 @@ The following output properties are available:
         <span class="property-indicator"></span>
         <span class="property-type">string</span>
     </dt>
-    <dd>{{% md %}}The cron expression indicating the schedule that the connected registry will sync with its parent.{{% /md %}}</dd>
-    <dt class="property-optional"
+    <dd>{{% md %}}The cron expression indicating the schedule that the connected registry will sync with its parent.{{% /md %}}</dd><dt class="property-optional"
             title="Optional">
         <span id="syncwindow_csharp">
 <a href="#syncwindow_csharp" style="color: inherit; text-decoration: inherit;">Sync<wbr>Window</a>
@@ -1393,14 +1210,11 @@ The following output properties are available:
         <span class="property-indicator"></span>
         <span class="property-type">string</span>
     </dt>
-    <dd>{{% md %}}The time window during which sync is enabled for each schedule occurrence. Specify the duration using the format P[n]Y[n]M[n]DT[n]H[n]M[n]S as per ISO8601.{{% /md %}}</dd>
-</dl>
+    <dd>{{% md %}}The time window during which sync is enabled for each schedule occurrence. Specify the duration using the format P[n]Y[n]M[n]DT[n]H[n]M[n]S as per ISO8601.{{% /md %}}</dd></dl>
 {{% /choosable %}}
 
 {{% choosable language go %}}
-<dl class="resources-properties">
-
-    <dt class="property-required"
+<dl class="resources-properties"><dt class="property-required"
             title="Required">
         <span id="gatewayendpoint_go">
 <a href="#gatewayendpoint_go" style="color: inherit; text-decoration: inherit;">Gateway<wbr>Endpoint</a>
@@ -1408,8 +1222,7 @@ The following output properties are available:
         <span class="property-indicator"></span>
         <span class="property-type">string</span>
     </dt>
-    <dd>{{% md %}}The gateway endpoint used by the connected registry to communicate with its parent.{{% /md %}}</dd>
-    <dt class="property-required"
+    <dd>{{% md %}}The gateway endpoint used by the connected registry to communicate with its parent.{{% /md %}}</dd><dt class="property-required"
             title="Required">
         <span id="lastsynctime_go">
 <a href="#lastsynctime_go" style="color: inherit; text-decoration: inherit;">Last<wbr>Sync<wbr>Time</a>
@@ -1417,8 +1230,7 @@ The following output properties are available:
         <span class="property-indicator"></span>
         <span class="property-type">string</span>
     </dt>
-    <dd>{{% md %}}The last time a sync occurred between the connected registry and its parent.{{% /md %}}</dd>
-    <dt class="property-required"
+    <dd>{{% md %}}The last time a sync occurred between the connected registry and its parent.{{% /md %}}</dd><dt class="property-required"
             title="Required">
         <span id="messagettl_go">
 <a href="#messagettl_go" style="color: inherit; text-decoration: inherit;">Message<wbr>Ttl</a>
@@ -1426,8 +1238,7 @@ The following output properties are available:
         <span class="property-indicator"></span>
         <span class="property-type">string</span>
     </dt>
-    <dd>{{% md %}}The period of time for which a message is available to sync before it is expired. Specify the duration using the format P[n]Y[n]M[n]DT[n]H[n]M[n]S as per ISO8601.{{% /md %}}</dd>
-    <dt class="property-required"
+    <dd>{{% md %}}The period of time for which a message is available to sync before it is expired. Specify the duration using the format P[n]Y[n]M[n]DT[n]H[n]M[n]S as per ISO8601.{{% /md %}}</dd><dt class="property-required"
             title="Required">
         <span id="tokenid_go">
 <a href="#tokenid_go" style="color: inherit; text-decoration: inherit;">Token<wbr>Id</a>
@@ -1435,8 +1246,7 @@ The following output properties are available:
         <span class="property-indicator"></span>
         <span class="property-type">string</span>
     </dt>
-    <dd>{{% md %}}The resource ID of the ACR token used to authenticate the connected registry to its parent during sync.{{% /md %}}</dd>
-    <dt class="property-optional"
+    <dd>{{% md %}}The resource ID of the ACR token used to authenticate the connected registry to its parent during sync.{{% /md %}}</dd><dt class="property-optional"
             title="Optional">
         <span id="schedule_go">
 <a href="#schedule_go" style="color: inherit; text-decoration: inherit;">Schedule</a>
@@ -1444,8 +1254,7 @@ The following output properties are available:
         <span class="property-indicator"></span>
         <span class="property-type">string</span>
     </dt>
-    <dd>{{% md %}}The cron expression indicating the schedule that the connected registry will sync with its parent.{{% /md %}}</dd>
-    <dt class="property-optional"
+    <dd>{{% md %}}The cron expression indicating the schedule that the connected registry will sync with its parent.{{% /md %}}</dd><dt class="property-optional"
             title="Optional">
         <span id="syncwindow_go">
 <a href="#syncwindow_go" style="color: inherit; text-decoration: inherit;">Sync<wbr>Window</a>
@@ -1453,14 +1262,11 @@ The following output properties are available:
         <span class="property-indicator"></span>
         <span class="property-type">string</span>
     </dt>
-    <dd>{{% md %}}The time window during which sync is enabled for each schedule occurrence. Specify the duration using the format P[n]Y[n]M[n]DT[n]H[n]M[n]S as per ISO8601.{{% /md %}}</dd>
-</dl>
+    <dd>{{% md %}}The time window during which sync is enabled for each schedule occurrence. Specify the duration using the format P[n]Y[n]M[n]DT[n]H[n]M[n]S as per ISO8601.{{% /md %}}</dd></dl>
 {{% /choosable %}}
 
 {{% choosable language nodejs %}}
-<dl class="resources-properties">
-
-    <dt class="property-required"
+<dl class="resources-properties"><dt class="property-required"
             title="Required">
         <span id="gatewayendpoint_nodejs">
 <a href="#gatewayendpoint_nodejs" style="color: inherit; text-decoration: inherit;">gateway<wbr>Endpoint</a>
@@ -1468,8 +1274,7 @@ The following output properties are available:
         <span class="property-indicator"></span>
         <span class="property-type">string</span>
     </dt>
-    <dd>{{% md %}}The gateway endpoint used by the connected registry to communicate with its parent.{{% /md %}}</dd>
-    <dt class="property-required"
+    <dd>{{% md %}}The gateway endpoint used by the connected registry to communicate with its parent.{{% /md %}}</dd><dt class="property-required"
             title="Required">
         <span id="lastsynctime_nodejs">
 <a href="#lastsynctime_nodejs" style="color: inherit; text-decoration: inherit;">last<wbr>Sync<wbr>Time</a>
@@ -1477,8 +1282,7 @@ The following output properties are available:
         <span class="property-indicator"></span>
         <span class="property-type">string</span>
     </dt>
-    <dd>{{% md %}}The last time a sync occurred between the connected registry and its parent.{{% /md %}}</dd>
-    <dt class="property-required"
+    <dd>{{% md %}}The last time a sync occurred between the connected registry and its parent.{{% /md %}}</dd><dt class="property-required"
             title="Required">
         <span id="messagettl_nodejs">
 <a href="#messagettl_nodejs" style="color: inherit; text-decoration: inherit;">message<wbr>Ttl</a>
@@ -1486,8 +1290,7 @@ The following output properties are available:
         <span class="property-indicator"></span>
         <span class="property-type">string</span>
     </dt>
-    <dd>{{% md %}}The period of time for which a message is available to sync before it is expired. Specify the duration using the format P[n]Y[n]M[n]DT[n]H[n]M[n]S as per ISO8601.{{% /md %}}</dd>
-    <dt class="property-required"
+    <dd>{{% md %}}The period of time for which a message is available to sync before it is expired. Specify the duration using the format P[n]Y[n]M[n]DT[n]H[n]M[n]S as per ISO8601.{{% /md %}}</dd><dt class="property-required"
             title="Required">
         <span id="tokenid_nodejs">
 <a href="#tokenid_nodejs" style="color: inherit; text-decoration: inherit;">token<wbr>Id</a>
@@ -1495,8 +1298,7 @@ The following output properties are available:
         <span class="property-indicator"></span>
         <span class="property-type">string</span>
     </dt>
-    <dd>{{% md %}}The resource ID of the ACR token used to authenticate the connected registry to its parent during sync.{{% /md %}}</dd>
-    <dt class="property-optional"
+    <dd>{{% md %}}The resource ID of the ACR token used to authenticate the connected registry to its parent during sync.{{% /md %}}</dd><dt class="property-optional"
             title="Optional">
         <span id="schedule_nodejs">
 <a href="#schedule_nodejs" style="color: inherit; text-decoration: inherit;">schedule</a>
@@ -1504,8 +1306,7 @@ The following output properties are available:
         <span class="property-indicator"></span>
         <span class="property-type">string</span>
     </dt>
-    <dd>{{% md %}}The cron expression indicating the schedule that the connected registry will sync with its parent.{{% /md %}}</dd>
-    <dt class="property-optional"
+    <dd>{{% md %}}The cron expression indicating the schedule that the connected registry will sync with its parent.{{% /md %}}</dd><dt class="property-optional"
             title="Optional">
         <span id="syncwindow_nodejs">
 <a href="#syncwindow_nodejs" style="color: inherit; text-decoration: inherit;">sync<wbr>Window</a>
@@ -1513,14 +1314,11 @@ The following output properties are available:
         <span class="property-indicator"></span>
         <span class="property-type">string</span>
     </dt>
-    <dd>{{% md %}}The time window during which sync is enabled for each schedule occurrence. Specify the duration using the format P[n]Y[n]M[n]DT[n]H[n]M[n]S as per ISO8601.{{% /md %}}</dd>
-</dl>
+    <dd>{{% md %}}The time window during which sync is enabled for each schedule occurrence. Specify the duration using the format P[n]Y[n]M[n]DT[n]H[n]M[n]S as per ISO8601.{{% /md %}}</dd></dl>
 {{% /choosable %}}
 
 {{% choosable language python %}}
-<dl class="resources-properties">
-
-    <dt class="property-required"
+<dl class="resources-properties"><dt class="property-required"
             title="Required">
         <span id="gateway_endpoint_python">
 <a href="#gateway_endpoint_python" style="color: inherit; text-decoration: inherit;">gateway_<wbr>endpoint</a>
@@ -1528,8 +1326,7 @@ The following output properties are available:
         <span class="property-indicator"></span>
         <span class="property-type">str</span>
     </dt>
-    <dd>{{% md %}}The gateway endpoint used by the connected registry to communicate with its parent.{{% /md %}}</dd>
-    <dt class="property-required"
+    <dd>{{% md %}}The gateway endpoint used by the connected registry to communicate with its parent.{{% /md %}}</dd><dt class="property-required"
             title="Required">
         <span id="last_sync_time_python">
 <a href="#last_sync_time_python" style="color: inherit; text-decoration: inherit;">last_<wbr>sync_<wbr>time</a>
@@ -1537,8 +1334,7 @@ The following output properties are available:
         <span class="property-indicator"></span>
         <span class="property-type">str</span>
     </dt>
-    <dd>{{% md %}}The last time a sync occurred between the connected registry and its parent.{{% /md %}}</dd>
-    <dt class="property-required"
+    <dd>{{% md %}}The last time a sync occurred between the connected registry and its parent.{{% /md %}}</dd><dt class="property-required"
             title="Required">
         <span id="message_ttl_python">
 <a href="#message_ttl_python" style="color: inherit; text-decoration: inherit;">message_<wbr>ttl</a>
@@ -1546,8 +1342,7 @@ The following output properties are available:
         <span class="property-indicator"></span>
         <span class="property-type">str</span>
     </dt>
-    <dd>{{% md %}}The period of time for which a message is available to sync before it is expired. Specify the duration using the format P[n]Y[n]M[n]DT[n]H[n]M[n]S as per ISO8601.{{% /md %}}</dd>
-    <dt class="property-required"
+    <dd>{{% md %}}The period of time for which a message is available to sync before it is expired. Specify the duration using the format P[n]Y[n]M[n]DT[n]H[n]M[n]S as per ISO8601.{{% /md %}}</dd><dt class="property-required"
             title="Required">
         <span id="token_id_python">
 <a href="#token_id_python" style="color: inherit; text-decoration: inherit;">token_<wbr>id</a>
@@ -1555,8 +1350,7 @@ The following output properties are available:
         <span class="property-indicator"></span>
         <span class="property-type">str</span>
     </dt>
-    <dd>{{% md %}}The resource ID of the ACR token used to authenticate the connected registry to its parent during sync.{{% /md %}}</dd>
-    <dt class="property-optional"
+    <dd>{{% md %}}The resource ID of the ACR token used to authenticate the connected registry to its parent during sync.{{% /md %}}</dd><dt class="property-optional"
             title="Optional">
         <span id="schedule_python">
 <a href="#schedule_python" style="color: inherit; text-decoration: inherit;">schedule</a>
@@ -1564,8 +1358,7 @@ The following output properties are available:
         <span class="property-indicator"></span>
         <span class="property-type">str</span>
     </dt>
-    <dd>{{% md %}}The cron expression indicating the schedule that the connected registry will sync with its parent.{{% /md %}}</dd>
-    <dt class="property-optional"
+    <dd>{{% md %}}The cron expression indicating the schedule that the connected registry will sync with its parent.{{% /md %}}</dd><dt class="property-optional"
             title="Optional">
         <span id="sync_window_python">
 <a href="#sync_window_python" style="color: inherit; text-decoration: inherit;">sync_<wbr>window</a>
@@ -1573,8 +1366,7 @@ The following output properties are available:
         <span class="property-indicator"></span>
         <span class="property-type">str</span>
     </dt>
-    <dd>{{% md %}}The time window during which sync is enabled for each schedule occurrence. Specify the duration using the format P[n]Y[n]M[n]DT[n]H[n]M[n]S as per ISO8601.{{% /md %}}</dd>
-</dl>
+    <dd>{{% md %}}The time window during which sync is enabled for each schedule occurrence. Specify the duration using the format P[n]Y[n]M[n]DT[n]H[n]M[n]S as per ISO8601.{{% /md %}}</dd></dl>
 {{% /choosable %}}
 
 <h4 id="systemdataresponse">System<wbr>Data<wbr>Response</h4>
@@ -1582,9 +1374,7 @@ The following output properties are available:
 
 
 {{% choosable language csharp %}}
-<dl class="resources-properties">
-
-    <dt class="property-optional"
+<dl class="resources-properties"><dt class="property-optional"
             title="Optional">
         <span id="createdat_csharp">
 <a href="#createdat_csharp" style="color: inherit; text-decoration: inherit;">Created<wbr>At</a>
@@ -1592,8 +1382,7 @@ The following output properties are available:
         <span class="property-indicator"></span>
         <span class="property-type">string</span>
     </dt>
-    <dd>{{% md %}}The timestamp of resource creation (UTC).{{% /md %}}</dd>
-    <dt class="property-optional"
+    <dd>{{% md %}}The timestamp of resource creation (UTC).{{% /md %}}</dd><dt class="property-optional"
             title="Optional">
         <span id="createdby_csharp">
 <a href="#createdby_csharp" style="color: inherit; text-decoration: inherit;">Created<wbr>By</a>
@@ -1601,8 +1390,7 @@ The following output properties are available:
         <span class="property-indicator"></span>
         <span class="property-type">string</span>
     </dt>
-    <dd>{{% md %}}The identity that created the resource.{{% /md %}}</dd>
-    <dt class="property-optional"
+    <dd>{{% md %}}The identity that created the resource.{{% /md %}}</dd><dt class="property-optional"
             title="Optional">
         <span id="createdbytype_csharp">
 <a href="#createdbytype_csharp" style="color: inherit; text-decoration: inherit;">Created<wbr>By<wbr>Type</a>
@@ -1610,8 +1398,7 @@ The following output properties are available:
         <span class="property-indicator"></span>
         <span class="property-type">string</span>
     </dt>
-    <dd>{{% md %}}The type of identity that created the resource.{{% /md %}}</dd>
-    <dt class="property-optional"
+    <dd>{{% md %}}The type of identity that created the resource.{{% /md %}}</dd><dt class="property-optional"
             title="Optional">
         <span id="lastmodifiedat_csharp">
 <a href="#lastmodifiedat_csharp" style="color: inherit; text-decoration: inherit;">Last<wbr>Modified<wbr>At</a>
@@ -1619,8 +1406,7 @@ The following output properties are available:
         <span class="property-indicator"></span>
         <span class="property-type">string</span>
     </dt>
-    <dd>{{% md %}}The timestamp of resource modification (UTC).{{% /md %}}</dd>
-    <dt class="property-optional"
+    <dd>{{% md %}}The timestamp of resource modification (UTC).{{% /md %}}</dd><dt class="property-optional"
             title="Optional">
         <span id="lastmodifiedby_csharp">
 <a href="#lastmodifiedby_csharp" style="color: inherit; text-decoration: inherit;">Last<wbr>Modified<wbr>By</a>
@@ -1628,8 +1414,7 @@ The following output properties are available:
         <span class="property-indicator"></span>
         <span class="property-type">string</span>
     </dt>
-    <dd>{{% md %}}The identity that last modified the resource.{{% /md %}}</dd>
-    <dt class="property-optional"
+    <dd>{{% md %}}The identity that last modified the resource.{{% /md %}}</dd><dt class="property-optional"
             title="Optional">
         <span id="lastmodifiedbytype_csharp">
 <a href="#lastmodifiedbytype_csharp" style="color: inherit; text-decoration: inherit;">Last<wbr>Modified<wbr>By<wbr>Type</a>
@@ -1637,14 +1422,11 @@ The following output properties are available:
         <span class="property-indicator"></span>
         <span class="property-type">string</span>
     </dt>
-    <dd>{{% md %}}The type of identity that last modified the resource.{{% /md %}}</dd>
-</dl>
+    <dd>{{% md %}}The type of identity that last modified the resource.{{% /md %}}</dd></dl>
 {{% /choosable %}}
 
 {{% choosable language go %}}
-<dl class="resources-properties">
-
-    <dt class="property-optional"
+<dl class="resources-properties"><dt class="property-optional"
             title="Optional">
         <span id="createdat_go">
 <a href="#createdat_go" style="color: inherit; text-decoration: inherit;">Created<wbr>At</a>
@@ -1652,8 +1434,7 @@ The following output properties are available:
         <span class="property-indicator"></span>
         <span class="property-type">string</span>
     </dt>
-    <dd>{{% md %}}The timestamp of resource creation (UTC).{{% /md %}}</dd>
-    <dt class="property-optional"
+    <dd>{{% md %}}The timestamp of resource creation (UTC).{{% /md %}}</dd><dt class="property-optional"
             title="Optional">
         <span id="createdby_go">
 <a href="#createdby_go" style="color: inherit; text-decoration: inherit;">Created<wbr>By</a>
@@ -1661,8 +1442,7 @@ The following output properties are available:
         <span class="property-indicator"></span>
         <span class="property-type">string</span>
     </dt>
-    <dd>{{% md %}}The identity that created the resource.{{% /md %}}</dd>
-    <dt class="property-optional"
+    <dd>{{% md %}}The identity that created the resource.{{% /md %}}</dd><dt class="property-optional"
             title="Optional">
         <span id="createdbytype_go">
 <a href="#createdbytype_go" style="color: inherit; text-decoration: inherit;">Created<wbr>By<wbr>Type</a>
@@ -1670,8 +1450,7 @@ The following output properties are available:
         <span class="property-indicator"></span>
         <span class="property-type">string</span>
     </dt>
-    <dd>{{% md %}}The type of identity that created the resource.{{% /md %}}</dd>
-    <dt class="property-optional"
+    <dd>{{% md %}}The type of identity that created the resource.{{% /md %}}</dd><dt class="property-optional"
             title="Optional">
         <span id="lastmodifiedat_go">
 <a href="#lastmodifiedat_go" style="color: inherit; text-decoration: inherit;">Last<wbr>Modified<wbr>At</a>
@@ -1679,8 +1458,7 @@ The following output properties are available:
         <span class="property-indicator"></span>
         <span class="property-type">string</span>
     </dt>
-    <dd>{{% md %}}The timestamp of resource modification (UTC).{{% /md %}}</dd>
-    <dt class="property-optional"
+    <dd>{{% md %}}The timestamp of resource modification (UTC).{{% /md %}}</dd><dt class="property-optional"
             title="Optional">
         <span id="lastmodifiedby_go">
 <a href="#lastmodifiedby_go" style="color: inherit; text-decoration: inherit;">Last<wbr>Modified<wbr>By</a>
@@ -1688,8 +1466,7 @@ The following output properties are available:
         <span class="property-indicator"></span>
         <span class="property-type">string</span>
     </dt>
-    <dd>{{% md %}}The identity that last modified the resource.{{% /md %}}</dd>
-    <dt class="property-optional"
+    <dd>{{% md %}}The identity that last modified the resource.{{% /md %}}</dd><dt class="property-optional"
             title="Optional">
         <span id="lastmodifiedbytype_go">
 <a href="#lastmodifiedbytype_go" style="color: inherit; text-decoration: inherit;">Last<wbr>Modified<wbr>By<wbr>Type</a>
@@ -1697,14 +1474,11 @@ The following output properties are available:
         <span class="property-indicator"></span>
         <span class="property-type">string</span>
     </dt>
-    <dd>{{% md %}}The type of identity that last modified the resource.{{% /md %}}</dd>
-</dl>
+    <dd>{{% md %}}The type of identity that last modified the resource.{{% /md %}}</dd></dl>
 {{% /choosable %}}
 
 {{% choosable language nodejs %}}
-<dl class="resources-properties">
-
-    <dt class="property-optional"
+<dl class="resources-properties"><dt class="property-optional"
             title="Optional">
         <span id="createdat_nodejs">
 <a href="#createdat_nodejs" style="color: inherit; text-decoration: inherit;">created<wbr>At</a>
@@ -1712,8 +1486,7 @@ The following output properties are available:
         <span class="property-indicator"></span>
         <span class="property-type">string</span>
     </dt>
-    <dd>{{% md %}}The timestamp of resource creation (UTC).{{% /md %}}</dd>
-    <dt class="property-optional"
+    <dd>{{% md %}}The timestamp of resource creation (UTC).{{% /md %}}</dd><dt class="property-optional"
             title="Optional">
         <span id="createdby_nodejs">
 <a href="#createdby_nodejs" style="color: inherit; text-decoration: inherit;">created<wbr>By</a>
@@ -1721,8 +1494,7 @@ The following output properties are available:
         <span class="property-indicator"></span>
         <span class="property-type">string</span>
     </dt>
-    <dd>{{% md %}}The identity that created the resource.{{% /md %}}</dd>
-    <dt class="property-optional"
+    <dd>{{% md %}}The identity that created the resource.{{% /md %}}</dd><dt class="property-optional"
             title="Optional">
         <span id="createdbytype_nodejs">
 <a href="#createdbytype_nodejs" style="color: inherit; text-decoration: inherit;">created<wbr>By<wbr>Type</a>
@@ -1730,8 +1502,7 @@ The following output properties are available:
         <span class="property-indicator"></span>
         <span class="property-type">string</span>
     </dt>
-    <dd>{{% md %}}The type of identity that created the resource.{{% /md %}}</dd>
-    <dt class="property-optional"
+    <dd>{{% md %}}The type of identity that created the resource.{{% /md %}}</dd><dt class="property-optional"
             title="Optional">
         <span id="lastmodifiedat_nodejs">
 <a href="#lastmodifiedat_nodejs" style="color: inherit; text-decoration: inherit;">last<wbr>Modified<wbr>At</a>
@@ -1739,8 +1510,7 @@ The following output properties are available:
         <span class="property-indicator"></span>
         <span class="property-type">string</span>
     </dt>
-    <dd>{{% md %}}The timestamp of resource modification (UTC).{{% /md %}}</dd>
-    <dt class="property-optional"
+    <dd>{{% md %}}The timestamp of resource modification (UTC).{{% /md %}}</dd><dt class="property-optional"
             title="Optional">
         <span id="lastmodifiedby_nodejs">
 <a href="#lastmodifiedby_nodejs" style="color: inherit; text-decoration: inherit;">last<wbr>Modified<wbr>By</a>
@@ -1748,8 +1518,7 @@ The following output properties are available:
         <span class="property-indicator"></span>
         <span class="property-type">string</span>
     </dt>
-    <dd>{{% md %}}The identity that last modified the resource.{{% /md %}}</dd>
-    <dt class="property-optional"
+    <dd>{{% md %}}The identity that last modified the resource.{{% /md %}}</dd><dt class="property-optional"
             title="Optional">
         <span id="lastmodifiedbytype_nodejs">
 <a href="#lastmodifiedbytype_nodejs" style="color: inherit; text-decoration: inherit;">last<wbr>Modified<wbr>By<wbr>Type</a>
@@ -1757,14 +1526,11 @@ The following output properties are available:
         <span class="property-indicator"></span>
         <span class="property-type">string</span>
     </dt>
-    <dd>{{% md %}}The type of identity that last modified the resource.{{% /md %}}</dd>
-</dl>
+    <dd>{{% md %}}The type of identity that last modified the resource.{{% /md %}}</dd></dl>
 {{% /choosable %}}
 
 {{% choosable language python %}}
-<dl class="resources-properties">
-
-    <dt class="property-optional"
+<dl class="resources-properties"><dt class="property-optional"
             title="Optional">
         <span id="created_at_python">
 <a href="#created_at_python" style="color: inherit; text-decoration: inherit;">created_<wbr>at</a>
@@ -1772,8 +1538,7 @@ The following output properties are available:
         <span class="property-indicator"></span>
         <span class="property-type">str</span>
     </dt>
-    <dd>{{% md %}}The timestamp of resource creation (UTC).{{% /md %}}</dd>
-    <dt class="property-optional"
+    <dd>{{% md %}}The timestamp of resource creation (UTC).{{% /md %}}</dd><dt class="property-optional"
             title="Optional">
         <span id="created_by_python">
 <a href="#created_by_python" style="color: inherit; text-decoration: inherit;">created_<wbr>by</a>
@@ -1781,8 +1546,7 @@ The following output properties are available:
         <span class="property-indicator"></span>
         <span class="property-type">str</span>
     </dt>
-    <dd>{{% md %}}The identity that created the resource.{{% /md %}}</dd>
-    <dt class="property-optional"
+    <dd>{{% md %}}The identity that created the resource.{{% /md %}}</dd><dt class="property-optional"
             title="Optional">
         <span id="created_by_type_python">
 <a href="#created_by_type_python" style="color: inherit; text-decoration: inherit;">created_<wbr>by_<wbr>type</a>
@@ -1790,8 +1554,7 @@ The following output properties are available:
         <span class="property-indicator"></span>
         <span class="property-type">str</span>
     </dt>
-    <dd>{{% md %}}The type of identity that created the resource.{{% /md %}}</dd>
-    <dt class="property-optional"
+    <dd>{{% md %}}The type of identity that created the resource.{{% /md %}}</dd><dt class="property-optional"
             title="Optional">
         <span id="last_modified_at_python">
 <a href="#last_modified_at_python" style="color: inherit; text-decoration: inherit;">last_<wbr>modified_<wbr>at</a>
@@ -1799,8 +1562,7 @@ The following output properties are available:
         <span class="property-indicator"></span>
         <span class="property-type">str</span>
     </dt>
-    <dd>{{% md %}}The timestamp of resource modification (UTC).{{% /md %}}</dd>
-    <dt class="property-optional"
+    <dd>{{% md %}}The timestamp of resource modification (UTC).{{% /md %}}</dd><dt class="property-optional"
             title="Optional">
         <span id="last_modified_by_python">
 <a href="#last_modified_by_python" style="color: inherit; text-decoration: inherit;">last_<wbr>modified_<wbr>by</a>
@@ -1808,8 +1570,7 @@ The following output properties are available:
         <span class="property-indicator"></span>
         <span class="property-type">str</span>
     </dt>
-    <dd>{{% md %}}The identity that last modified the resource.{{% /md %}}</dd>
-    <dt class="property-optional"
+    <dd>{{% md %}}The identity that last modified the resource.{{% /md %}}</dd><dt class="property-optional"
             title="Optional">
         <span id="last_modified_by_type_python">
 <a href="#last_modified_by_type_python" style="color: inherit; text-decoration: inherit;">last_<wbr>modified_<wbr>by_<wbr>type</a>
@@ -1817,8 +1578,7 @@ The following output properties are available:
         <span class="property-indicator"></span>
         <span class="property-type">str</span>
     </dt>
-    <dd>{{% md %}}The type of identity that last modified the resource.{{% /md %}}</dd>
-</dl>
+    <dd>{{% md %}}The type of identity that last modified the resource.{{% /md %}}</dd></dl>
 {{% /choosable %}}
 
 <h4 id="tlscertificatepropertiesresponse">Tls<wbr>Certificate<wbr>Properties<wbr>Response</h4>
@@ -1826,9 +1586,7 @@ The following output properties are available:
 
 
 {{% choosable language csharp %}}
-<dl class="resources-properties">
-
-    <dt class="property-required"
+<dl class="resources-properties"><dt class="property-required"
             title="Required">
         <span id="location_csharp">
 <a href="#location_csharp" style="color: inherit; text-decoration: inherit;">Location</a>
@@ -1836,8 +1594,7 @@ The following output properties are available:
         <span class="property-indicator"></span>
         <span class="property-type">string</span>
     </dt>
-    <dd>{{% md %}}Indicates the location of the certificates.{{% /md %}}</dd>
-    <dt class="property-required"
+    <dd>{{% md %}}Indicates the location of the certificates.{{% /md %}}</dd><dt class="property-required"
             title="Required">
         <span id="type_csharp">
 <a href="#type_csharp" style="color: inherit; text-decoration: inherit;">Type</a>
@@ -1845,14 +1602,11 @@ The following output properties are available:
         <span class="property-indicator"></span>
         <span class="property-type">string</span>
     </dt>
-    <dd>{{% md %}}The type of certificate location.{{% /md %}}</dd>
-</dl>
+    <dd>{{% md %}}The type of certificate location.{{% /md %}}</dd></dl>
 {{% /choosable %}}
 
 {{% choosable language go %}}
-<dl class="resources-properties">
-
-    <dt class="property-required"
+<dl class="resources-properties"><dt class="property-required"
             title="Required">
         <span id="location_go">
 <a href="#location_go" style="color: inherit; text-decoration: inherit;">Location</a>
@@ -1860,8 +1614,7 @@ The following output properties are available:
         <span class="property-indicator"></span>
         <span class="property-type">string</span>
     </dt>
-    <dd>{{% md %}}Indicates the location of the certificates.{{% /md %}}</dd>
-    <dt class="property-required"
+    <dd>{{% md %}}Indicates the location of the certificates.{{% /md %}}</dd><dt class="property-required"
             title="Required">
         <span id="type_go">
 <a href="#type_go" style="color: inherit; text-decoration: inherit;">Type</a>
@@ -1869,14 +1622,11 @@ The following output properties are available:
         <span class="property-indicator"></span>
         <span class="property-type">string</span>
     </dt>
-    <dd>{{% md %}}The type of certificate location.{{% /md %}}</dd>
-</dl>
+    <dd>{{% md %}}The type of certificate location.{{% /md %}}</dd></dl>
 {{% /choosable %}}
 
 {{% choosable language nodejs %}}
-<dl class="resources-properties">
-
-    <dt class="property-required"
+<dl class="resources-properties"><dt class="property-required"
             title="Required">
         <span id="location_nodejs">
 <a href="#location_nodejs" style="color: inherit; text-decoration: inherit;">location</a>
@@ -1884,8 +1634,7 @@ The following output properties are available:
         <span class="property-indicator"></span>
         <span class="property-type">string</span>
     </dt>
-    <dd>{{% md %}}Indicates the location of the certificates.{{% /md %}}</dd>
-    <dt class="property-required"
+    <dd>{{% md %}}Indicates the location of the certificates.{{% /md %}}</dd><dt class="property-required"
             title="Required">
         <span id="type_nodejs">
 <a href="#type_nodejs" style="color: inherit; text-decoration: inherit;">type</a>
@@ -1893,14 +1642,11 @@ The following output properties are available:
         <span class="property-indicator"></span>
         <span class="property-type">string</span>
     </dt>
-    <dd>{{% md %}}The type of certificate location.{{% /md %}}</dd>
-</dl>
+    <dd>{{% md %}}The type of certificate location.{{% /md %}}</dd></dl>
 {{% /choosable %}}
 
 {{% choosable language python %}}
-<dl class="resources-properties">
-
-    <dt class="property-required"
+<dl class="resources-properties"><dt class="property-required"
             title="Required">
         <span id="location_python">
 <a href="#location_python" style="color: inherit; text-decoration: inherit;">location</a>
@@ -1908,8 +1654,7 @@ The following output properties are available:
         <span class="property-indicator"></span>
         <span class="property-type">str</span>
     </dt>
-    <dd>{{% md %}}Indicates the location of the certificates.{{% /md %}}</dd>
-    <dt class="property-required"
+    <dd>{{% md %}}Indicates the location of the certificates.{{% /md %}}</dd><dt class="property-required"
             title="Required">
         <span id="type_python">
 <a href="#type_python" style="color: inherit; text-decoration: inherit;">type</a>
@@ -1917,8 +1662,7 @@ The following output properties are available:
         <span class="property-indicator"></span>
         <span class="property-type">str</span>
     </dt>
-    <dd>{{% md %}}The type of certificate location.{{% /md %}}</dd>
-</dl>
+    <dd>{{% md %}}The type of certificate location.{{% /md %}}</dd></dl>
 {{% /choosable %}}
 
 <h4 id="tlspropertiesresponse">Tls<wbr>Properties<wbr>Response</h4>
@@ -1926,9 +1670,7 @@ The following output properties are available:
 
 
 {{% choosable language csharp %}}
-<dl class="resources-properties">
-
-    <dt class="property-required"
+<dl class="resources-properties"><dt class="property-required"
             title="Required">
         <span id="certificate_csharp">
 <a href="#certificate_csharp" style="color: inherit; text-decoration: inherit;">Certificate</a>
@@ -1936,8 +1678,7 @@ The following output properties are available:
         <span class="property-indicator"></span>
         <span class="property-type"><a href="#tlscertificatepropertiesresponse">Pulumi.<wbr>Azure<wbr>Native.<wbr>Container<wbr>Registry.<wbr>Inputs.<wbr>Tls<wbr>Certificate<wbr>Properties<wbr>Response<wbr>Args</a></span>
     </dt>
-    <dd>{{% md %}}The certificate used to configure HTTPS for the login server.{{% /md %}}</dd>
-    <dt class="property-required"
+    <dd>{{% md %}}The certificate used to configure HTTPS for the login server.{{% /md %}}</dd><dt class="property-required"
             title="Required">
         <span id="status_csharp">
 <a href="#status_csharp" style="color: inherit; text-decoration: inherit;">Status</a>
@@ -1945,14 +1686,11 @@ The following output properties are available:
         <span class="property-indicator"></span>
         <span class="property-type">string</span>
     </dt>
-    <dd>{{% md %}}Indicates whether HTTPS is enabled for the login server.{{% /md %}}</dd>
-</dl>
+    <dd>{{% md %}}Indicates whether HTTPS is enabled for the login server.{{% /md %}}</dd></dl>
 {{% /choosable %}}
 
 {{% choosable language go %}}
-<dl class="resources-properties">
-
-    <dt class="property-required"
+<dl class="resources-properties"><dt class="property-required"
             title="Required">
         <span id="certificate_go">
 <a href="#certificate_go" style="color: inherit; text-decoration: inherit;">Certificate</a>
@@ -1960,8 +1698,7 @@ The following output properties are available:
         <span class="property-indicator"></span>
         <span class="property-type"><a href="#tlscertificatepropertiesresponse">Tls<wbr>Certificate<wbr>Properties<wbr>Response</a></span>
     </dt>
-    <dd>{{% md %}}The certificate used to configure HTTPS for the login server.{{% /md %}}</dd>
-    <dt class="property-required"
+    <dd>{{% md %}}The certificate used to configure HTTPS for the login server.{{% /md %}}</dd><dt class="property-required"
             title="Required">
         <span id="status_go">
 <a href="#status_go" style="color: inherit; text-decoration: inherit;">Status</a>
@@ -1969,14 +1706,11 @@ The following output properties are available:
         <span class="property-indicator"></span>
         <span class="property-type">string</span>
     </dt>
-    <dd>{{% md %}}Indicates whether HTTPS is enabled for the login server.{{% /md %}}</dd>
-</dl>
+    <dd>{{% md %}}Indicates whether HTTPS is enabled for the login server.{{% /md %}}</dd></dl>
 {{% /choosable %}}
 
 {{% choosable language nodejs %}}
-<dl class="resources-properties">
-
-    <dt class="property-required"
+<dl class="resources-properties"><dt class="property-required"
             title="Required">
         <span id="certificate_nodejs">
 <a href="#certificate_nodejs" style="color: inherit; text-decoration: inherit;">certificate</a>
@@ -1984,8 +1718,7 @@ The following output properties are available:
         <span class="property-indicator"></span>
         <span class="property-type"><a href="#tlscertificatepropertiesresponse">Tls<wbr>Certificate<wbr>Properties<wbr>Response</a></span>
     </dt>
-    <dd>{{% md %}}The certificate used to configure HTTPS for the login server.{{% /md %}}</dd>
-    <dt class="property-required"
+    <dd>{{% md %}}The certificate used to configure HTTPS for the login server.{{% /md %}}</dd><dt class="property-required"
             title="Required">
         <span id="status_nodejs">
 <a href="#status_nodejs" style="color: inherit; text-decoration: inherit;">status</a>
@@ -1993,14 +1726,11 @@ The following output properties are available:
         <span class="property-indicator"></span>
         <span class="property-type">string</span>
     </dt>
-    <dd>{{% md %}}Indicates whether HTTPS is enabled for the login server.{{% /md %}}</dd>
-</dl>
+    <dd>{{% md %}}Indicates whether HTTPS is enabled for the login server.{{% /md %}}</dd></dl>
 {{% /choosable %}}
 
 {{% choosable language python %}}
-<dl class="resources-properties">
-
-    <dt class="property-required"
+<dl class="resources-properties"><dt class="property-required"
             title="Required">
         <span id="certificate_python">
 <a href="#certificate_python" style="color: inherit; text-decoration: inherit;">certificate</a>
@@ -2008,8 +1738,7 @@ The following output properties are available:
         <span class="property-indicator"></span>
         <span class="property-type"><a href="#tlscertificatepropertiesresponse">Tls<wbr>Certificate<wbr>Properties<wbr>Response<wbr>Args</a></span>
     </dt>
-    <dd>{{% md %}}The certificate used to configure HTTPS for the login server.{{% /md %}}</dd>
-    <dt class="property-required"
+    <dd>{{% md %}}The certificate used to configure HTTPS for the login server.{{% /md %}}</dd><dt class="property-required"
             title="Required">
         <span id="status_python">
 <a href="#status_python" style="color: inherit; text-decoration: inherit;">status</a>
@@ -2017,8 +1746,7 @@ The following output properties are available:
         <span class="property-indicator"></span>
         <span class="property-type">str</span>
     </dt>
-    <dd>{{% md %}}Indicates whether HTTPS is enabled for the login server.{{% /md %}}</dd>
-</dl>
+    <dd>{{% md %}}Indicates whether HTTPS is enabled for the login server.{{% /md %}}</dd></dl>
 {{% /choosable %}}
 
 

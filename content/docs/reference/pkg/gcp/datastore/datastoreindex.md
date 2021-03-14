@@ -25,11 +25,17 @@ one, you can create a `gcp.appengine.Application` resource with
 Datastore location will be the same as the App Engine location specified.
 
 {{% examples %}}
+
 ## Example Usage
 
 {{< chooser language "typescript,python,go,csharp" / >}}
+
+
 ### Datastore Index
-{{% example csharp %}}
+
+
+{{< example csharp >}}
+
 ```csharp
 using Pulumi;
 using Gcp = Pulumi.Gcp;
@@ -60,9 +66,12 @@ class MyStack : Stack
 }
 ```
 
-{{% /example %}}
 
-{{% example go %}}
+{{< /example >}}
+
+
+{{< example go >}}
+
 ```go
 package main
 
@@ -94,9 +103,12 @@ func main() {
 }
 ```
 
-{{% /example %}}
 
-{{% example python %}}
+{{< /example >}}
+
+
+{{< example python >}}
+
 ```python
 import pulumi
 import pulumi_gcp as gcp
@@ -115,9 +127,12 @@ default = gcp.datastore.DataStoreIndex("default",
     ])
 ```
 
-{{% /example %}}
 
-{{% example typescript %}}
+{{< /example >}}
+
+
+{{< example typescript >}}
+
 
 ```typescript
 import * as pulumi from "@pulumi/pulumi";
@@ -138,9 +153,16 @@ const defaultDataStoreIndex = new gcp.datastore.DataStoreIndex("default", {
 });
 ```
 
-{{% /example %}}
+
+{{< /example >}}
+
+
+
+
 
 {{% /examples %}}
+
+
 
 
 ## Create a DataStoreIndex Resource {#create}
@@ -165,9 +187,7 @@ const defaultDataStoreIndex = new gcp.datastore.DataStoreIndex("default", {
 
 {{% choosable language nodejs %}}
 
-<dl class="resources-properties">
-  
-    <dt
+<dl class="resources-properties"><dt
         class="property-required" title="Required">
         <span>name</span>
         <span class="property-indicator"></span>
@@ -175,9 +195,7 @@ const defaultDataStoreIndex = new gcp.datastore.DataStoreIndex("default", {
     </dt>
     <dd>
       The unique name of the resource.
-    </dd>
-  
-    <dt
+    </dd><dt
         class="property-required" title="Required">
         <span>args</span>
         <span class="property-indicator"></span>
@@ -185,9 +203,7 @@ const defaultDataStoreIndex = new gcp.datastore.DataStoreIndex("default", {
     </dt>
     <dd>
       The arguments to resource properties.
-    </dd>
-  
-    <dt
+    </dd><dt
         class="property-optional" title="Optional">
         <span>opts</span>
         <span class="property-indicator"></span>
@@ -195,10 +211,7 @@ const defaultDataStoreIndex = new gcp.datastore.DataStoreIndex("default", {
     </dt>
     <dd>
       Bag of options to control resource&#39;s behavior.
-    </dd>
-  
-
-</dl>
+    </dd></dl>
 
 {{% /choosable %}}
 
@@ -224,9 +237,7 @@ const defaultDataStoreIndex = new gcp.datastore.DataStoreIndex("default", {
 
 {{% choosable language go %}}
 
-<dl class="resources-properties">
-  
-    <dt
+<dl class="resources-properties"><dt
         class="property-optional" title="Optional">
         <span>ctx</span>
         <span class="property-indicator"></span>
@@ -234,9 +245,7 @@ const defaultDataStoreIndex = new gcp.datastore.DataStoreIndex("default", {
     </dt>
     <dd>
       Context object for the current deployment.
-    </dd>
-  
-    <dt
+    </dd><dt
         class="property-required" title="Required">
         <span>name</span>
         <span class="property-indicator"></span>
@@ -244,9 +253,7 @@ const defaultDataStoreIndex = new gcp.datastore.DataStoreIndex("default", {
     </dt>
     <dd>
       The unique name of the resource.
-    </dd>
-  
-    <dt
+    </dd><dt
         class="property-required" title="Required">
         <span>args</span>
         <span class="property-indicator"></span>
@@ -254,9 +261,7 @@ const defaultDataStoreIndex = new gcp.datastore.DataStoreIndex("default", {
     </dt>
     <dd>
       The arguments to resource properties.
-    </dd>
-  
-    <dt
+    </dd><dt
         class="property-optional" title="Optional">
         <span>opts</span>
         <span class="property-indicator"></span>
@@ -264,18 +269,13 @@ const defaultDataStoreIndex = new gcp.datastore.DataStoreIndex("default", {
     </dt>
     <dd>
       Bag of options to control resource&#39;s behavior.
-    </dd>
-  
-
-</dl>
+    </dd></dl>
 
 {{% /choosable %}}
 
 {{% choosable language csharp %}}
 
-<dl class="resources-properties">
-  
-    <dt
+<dl class="resources-properties"><dt
         class="property-required" title="Required">
         <span>name</span>
         <span class="property-indicator"></span>
@@ -283,9 +283,7 @@ const defaultDataStoreIndex = new gcp.datastore.DataStoreIndex("default", {
     </dt>
     <dd>
       The unique name of the resource.
-    </dd>
-  
-    <dt
+    </dd><dt
         class="property-required" title="Required">
         <span>args</span>
         <span class="property-indicator"></span>
@@ -293,9 +291,7 @@ const defaultDataStoreIndex = new gcp.datastore.DataStoreIndex("default", {
     </dt>
     <dd>
       The arguments to resource properties.
-    </dd>
-  
-    <dt
+    </dd><dt
         class="property-optional" title="Optional">
         <span>opts</span>
         <span class="property-indicator"></span>
@@ -303,10 +299,7 @@ const defaultDataStoreIndex = new gcp.datastore.DataStoreIndex("default", {
     </dt>
     <dd>
       Bag of options to control resource&#39;s behavior.
-    </dd>
-  
-
-</dl>
+    </dd></dl>
 
 {{% /choosable %}}
 
@@ -321,9 +314,7 @@ The DataStoreIndex resource accepts the following [input]({{< relref "/docs/intr
 
 
 {{% choosable language csharp %}}
-<dl class="resources-properties">
-
-    <dt class="property-required"
+<dl class="resources-properties"><dt class="property-required"
             title="Required">
         <span id="kind_csharp">
 <a href="#kind_csharp" style="color: inherit; text-decoration: inherit;">Kind</a>
@@ -332,8 +323,7 @@ The DataStoreIndex resource accepts the following [input]({{< relref "/docs/intr
         <span class="property-type">string</span>
     </dt>
     <dd>{{% md %}}The entity kind which the index applies to.
-{{% /md %}}</dd>
-    <dt class="property-optional"
+{{% /md %}}</dd><dt class="property-optional"
             title="Optional">
         <span id="ancestor_csharp">
 <a href="#ancestor_csharp" style="color: inherit; text-decoration: inherit;">Ancestor</a>
@@ -344,8 +334,7 @@ The DataStoreIndex resource accepts the following [input]({{< relref "/docs/intr
     <dd>{{% md %}}Policy for including ancestors in the index.
 Default value is `NONE`.
 Possible values are `NONE` and `ALL_ANCESTORS`.
-{{% /md %}}</dd>
-    <dt class="property-optional"
+{{% /md %}}</dd><dt class="property-optional"
             title="Optional">
         <span id="project_csharp">
 <a href="#project_csharp" style="color: inherit; text-decoration: inherit;">Project</a>
@@ -355,8 +344,7 @@ Possible values are `NONE` and `ALL_ANCESTORS`.
     </dt>
     <dd>{{% md %}}The ID of the project in which the resource belongs.
 If it is not provided, the provider project is used.
-{{% /md %}}</dd>
-    <dt class="property-optional"
+{{% /md %}}</dd><dt class="property-optional"
             title="Optional">
         <span id="properties_csharp">
 <a href="#properties_csharp" style="color: inherit; text-decoration: inherit;">Properties</a>
@@ -366,14 +354,11 @@ If it is not provided, the provider project is used.
     </dt>
     <dd>{{% md %}}An ordered list of properties to index on.
 Structure is documented below.
-{{% /md %}}</dd>
-</dl>
+{{% /md %}}</dd></dl>
 {{% /choosable %}}
 
 {{% choosable language go %}}
-<dl class="resources-properties">
-
-    <dt class="property-required"
+<dl class="resources-properties"><dt class="property-required"
             title="Required">
         <span id="kind_go">
 <a href="#kind_go" style="color: inherit; text-decoration: inherit;">Kind</a>
@@ -382,8 +367,7 @@ Structure is documented below.
         <span class="property-type">string</span>
     </dt>
     <dd>{{% md %}}The entity kind which the index applies to.
-{{% /md %}}</dd>
-    <dt class="property-optional"
+{{% /md %}}</dd><dt class="property-optional"
             title="Optional">
         <span id="ancestor_go">
 <a href="#ancestor_go" style="color: inherit; text-decoration: inherit;">Ancestor</a>
@@ -394,8 +378,7 @@ Structure is documented below.
     <dd>{{% md %}}Policy for including ancestors in the index.
 Default value is `NONE`.
 Possible values are `NONE` and `ALL_ANCESTORS`.
-{{% /md %}}</dd>
-    <dt class="property-optional"
+{{% /md %}}</dd><dt class="property-optional"
             title="Optional">
         <span id="project_go">
 <a href="#project_go" style="color: inherit; text-decoration: inherit;">Project</a>
@@ -405,8 +388,7 @@ Possible values are `NONE` and `ALL_ANCESTORS`.
     </dt>
     <dd>{{% md %}}The ID of the project in which the resource belongs.
 If it is not provided, the provider project is used.
-{{% /md %}}</dd>
-    <dt class="property-optional"
+{{% /md %}}</dd><dt class="property-optional"
             title="Optional">
         <span id="properties_go">
 <a href="#properties_go" style="color: inherit; text-decoration: inherit;">Properties</a>
@@ -416,14 +398,11 @@ If it is not provided, the provider project is used.
     </dt>
     <dd>{{% md %}}An ordered list of properties to index on.
 Structure is documented below.
-{{% /md %}}</dd>
-</dl>
+{{% /md %}}</dd></dl>
 {{% /choosable %}}
 
 {{% choosable language nodejs %}}
-<dl class="resources-properties">
-
-    <dt class="property-required"
+<dl class="resources-properties"><dt class="property-required"
             title="Required">
         <span id="kind_nodejs">
 <a href="#kind_nodejs" style="color: inherit; text-decoration: inherit;">kind</a>
@@ -432,8 +411,7 @@ Structure is documented below.
         <span class="property-type">string</span>
     </dt>
     <dd>{{% md %}}The entity kind which the index applies to.
-{{% /md %}}</dd>
-    <dt class="property-optional"
+{{% /md %}}</dd><dt class="property-optional"
             title="Optional">
         <span id="ancestor_nodejs">
 <a href="#ancestor_nodejs" style="color: inherit; text-decoration: inherit;">ancestor</a>
@@ -444,8 +422,7 @@ Structure is documented below.
     <dd>{{% md %}}Policy for including ancestors in the index.
 Default value is `NONE`.
 Possible values are `NONE` and `ALL_ANCESTORS`.
-{{% /md %}}</dd>
-    <dt class="property-optional"
+{{% /md %}}</dd><dt class="property-optional"
             title="Optional">
         <span id="project_nodejs">
 <a href="#project_nodejs" style="color: inherit; text-decoration: inherit;">project</a>
@@ -455,8 +432,7 @@ Possible values are `NONE` and `ALL_ANCESTORS`.
     </dt>
     <dd>{{% md %}}The ID of the project in which the resource belongs.
 If it is not provided, the provider project is used.
-{{% /md %}}</dd>
-    <dt class="property-optional"
+{{% /md %}}</dd><dt class="property-optional"
             title="Optional">
         <span id="properties_nodejs">
 <a href="#properties_nodejs" style="color: inherit; text-decoration: inherit;">properties</a>
@@ -466,14 +442,11 @@ If it is not provided, the provider project is used.
     </dt>
     <dd>{{% md %}}An ordered list of properties to index on.
 Structure is documented below.
-{{% /md %}}</dd>
-</dl>
+{{% /md %}}</dd></dl>
 {{% /choosable %}}
 
 {{% choosable language python %}}
-<dl class="resources-properties">
-
-    <dt class="property-required"
+<dl class="resources-properties"><dt class="property-required"
             title="Required">
         <span id="kind_python">
 <a href="#kind_python" style="color: inherit; text-decoration: inherit;">kind</a>
@@ -482,8 +455,7 @@ Structure is documented below.
         <span class="property-type">str</span>
     </dt>
     <dd>{{% md %}}The entity kind which the index applies to.
-{{% /md %}}</dd>
-    <dt class="property-optional"
+{{% /md %}}</dd><dt class="property-optional"
             title="Optional">
         <span id="ancestor_python">
 <a href="#ancestor_python" style="color: inherit; text-decoration: inherit;">ancestor</a>
@@ -494,8 +466,7 @@ Structure is documented below.
     <dd>{{% md %}}Policy for including ancestors in the index.
 Default value is `NONE`.
 Possible values are `NONE` and `ALL_ANCESTORS`.
-{{% /md %}}</dd>
-    <dt class="property-optional"
+{{% /md %}}</dd><dt class="property-optional"
             title="Optional">
         <span id="project_python">
 <a href="#project_python" style="color: inherit; text-decoration: inherit;">project</a>
@@ -505,8 +476,7 @@ Possible values are `NONE` and `ALL_ANCESTORS`.
     </dt>
     <dd>{{% md %}}The ID of the project in which the resource belongs.
 If it is not provided, the provider project is used.
-{{% /md %}}</dd>
-    <dt class="property-optional"
+{{% /md %}}</dd><dt class="property-optional"
             title="Optional">
         <span id="properties_python">
 <a href="#properties_python" style="color: inherit; text-decoration: inherit;">properties</a>
@@ -516,8 +486,7 @@ If it is not provided, the provider project is used.
     </dt>
     <dd>{{% md %}}An ordered list of properties to index on.
 Structure is documented below.
-{{% /md %}}</dd>
-</dl>
+{{% /md %}}</dd></dl>
 {{% /choosable %}}
 
 
@@ -528,9 +497,7 @@ All [input](#inputs) properties are implicitly available as output properties. A
 
 
 {{% choosable language csharp %}}
-<dl class="resources-properties">
-
-    <dt class="property-"
+<dl class="resources-properties"><dt class="property-"
             title="">
         <span id="id_csharp">
 <a href="#id_csharp" style="color: inherit; text-decoration: inherit;">Id</a>
@@ -538,8 +505,7 @@ All [input](#inputs) properties are implicitly available as output properties. A
         <span class="property-indicator"></span>
         <span class="property-type">string</span>
     </dt>
-    <dd>{{% md %}}The provider-assigned unique ID for this managed resource.{{% /md %}}</dd>
-    <dt class="property-"
+    <dd>{{% md %}}The provider-assigned unique ID for this managed resource.{{% /md %}}</dd><dt class="property-"
             title="">
         <span id="indexid_csharp">
 <a href="#indexid_csharp" style="color: inherit; text-decoration: inherit;">Index<wbr>Id</a>
@@ -548,14 +514,11 @@ All [input](#inputs) properties are implicitly available as output properties. A
         <span class="property-type">string</span>
     </dt>
     <dd>{{% md %}}The index id.
-{{% /md %}}</dd>
-</dl>
+{{% /md %}}</dd></dl>
 {{% /choosable %}}
 
 {{% choosable language go %}}
-<dl class="resources-properties">
-
-    <dt class="property-"
+<dl class="resources-properties"><dt class="property-"
             title="">
         <span id="id_go">
 <a href="#id_go" style="color: inherit; text-decoration: inherit;">Id</a>
@@ -563,8 +526,7 @@ All [input](#inputs) properties are implicitly available as output properties. A
         <span class="property-indicator"></span>
         <span class="property-type">string</span>
     </dt>
-    <dd>{{% md %}}The provider-assigned unique ID for this managed resource.{{% /md %}}</dd>
-    <dt class="property-"
+    <dd>{{% md %}}The provider-assigned unique ID for this managed resource.{{% /md %}}</dd><dt class="property-"
             title="">
         <span id="indexid_go">
 <a href="#indexid_go" style="color: inherit; text-decoration: inherit;">Index<wbr>Id</a>
@@ -573,14 +535,11 @@ All [input](#inputs) properties are implicitly available as output properties. A
         <span class="property-type">string</span>
     </dt>
     <dd>{{% md %}}The index id.
-{{% /md %}}</dd>
-</dl>
+{{% /md %}}</dd></dl>
 {{% /choosable %}}
 
 {{% choosable language nodejs %}}
-<dl class="resources-properties">
-
-    <dt class="property-"
+<dl class="resources-properties"><dt class="property-"
             title="">
         <span id="id_nodejs">
 <a href="#id_nodejs" style="color: inherit; text-decoration: inherit;">id</a>
@@ -588,8 +547,7 @@ All [input](#inputs) properties are implicitly available as output properties. A
         <span class="property-indicator"></span>
         <span class="property-type">string</span>
     </dt>
-    <dd>{{% md %}}The provider-assigned unique ID for this managed resource.{{% /md %}}</dd>
-    <dt class="property-"
+    <dd>{{% md %}}The provider-assigned unique ID for this managed resource.{{% /md %}}</dd><dt class="property-"
             title="">
         <span id="indexid_nodejs">
 <a href="#indexid_nodejs" style="color: inherit; text-decoration: inherit;">index<wbr>Id</a>
@@ -598,14 +556,11 @@ All [input](#inputs) properties are implicitly available as output properties. A
         <span class="property-type">string</span>
     </dt>
     <dd>{{% md %}}The index id.
-{{% /md %}}</dd>
-</dl>
+{{% /md %}}</dd></dl>
 {{% /choosable %}}
 
 {{% choosable language python %}}
-<dl class="resources-properties">
-
-    <dt class="property-"
+<dl class="resources-properties"><dt class="property-"
             title="">
         <span id="id_python">
 <a href="#id_python" style="color: inherit; text-decoration: inherit;">id</a>
@@ -613,8 +568,7 @@ All [input](#inputs) properties are implicitly available as output properties. A
         <span class="property-indicator"></span>
         <span class="property-type">str</span>
     </dt>
-    <dd>{{% md %}}The provider-assigned unique ID for this managed resource.{{% /md %}}</dd>
-    <dt class="property-"
+    <dd>{{% md %}}The provider-assigned unique ID for this managed resource.{{% /md %}}</dd><dt class="property-"
             title="">
         <span id="index_id_python">
 <a href="#index_id_python" style="color: inherit; text-decoration: inherit;">index_<wbr>id</a>
@@ -623,8 +577,7 @@ All [input](#inputs) properties are implicitly available as output properties. A
         <span class="property-type">str</span>
     </dt>
     <dd>{{% md %}}The index id.
-{{% /md %}}</dd>
-</dl>
+{{% /md %}}</dd></dl>
 {{% /choosable %}}
 
 
@@ -751,9 +704,7 @@ The following state arguments are supported:
 
 
 {{% choosable language csharp %}}
-<dl class="resources-properties">
-
-    <dt class="property-optional"
+<dl class="resources-properties"><dt class="property-optional"
             title="Optional">
         <span id="state_ancestor_csharp">
 <a href="#state_ancestor_csharp" style="color: inherit; text-decoration: inherit;">Ancestor</a>
@@ -764,8 +715,7 @@ The following state arguments are supported:
     <dd>{{% md %}}Policy for including ancestors in the index.
 Default value is `NONE`.
 Possible values are `NONE` and `ALL_ANCESTORS`.
-{{% /md %}}</dd>
-    <dt class="property-optional"
+{{% /md %}}</dd><dt class="property-optional"
             title="Optional">
         <span id="state_indexid_csharp">
 <a href="#state_indexid_csharp" style="color: inherit; text-decoration: inherit;">Index<wbr>Id</a>
@@ -774,8 +724,7 @@ Possible values are `NONE` and `ALL_ANCESTORS`.
         <span class="property-type">string</span>
     </dt>
     <dd>{{% md %}}The index id.
-{{% /md %}}</dd>
-    <dt class="property-optional"
+{{% /md %}}</dd><dt class="property-optional"
             title="Optional">
         <span id="state_kind_csharp">
 <a href="#state_kind_csharp" style="color: inherit; text-decoration: inherit;">Kind</a>
@@ -784,8 +733,7 @@ Possible values are `NONE` and `ALL_ANCESTORS`.
         <span class="property-type">string</span>
     </dt>
     <dd>{{% md %}}The entity kind which the index applies to.
-{{% /md %}}</dd>
-    <dt class="property-optional"
+{{% /md %}}</dd><dt class="property-optional"
             title="Optional">
         <span id="state_project_csharp">
 <a href="#state_project_csharp" style="color: inherit; text-decoration: inherit;">Project</a>
@@ -795,8 +743,7 @@ Possible values are `NONE` and `ALL_ANCESTORS`.
     </dt>
     <dd>{{% md %}}The ID of the project in which the resource belongs.
 If it is not provided, the provider project is used.
-{{% /md %}}</dd>
-    <dt class="property-optional"
+{{% /md %}}</dd><dt class="property-optional"
             title="Optional">
         <span id="state_properties_csharp">
 <a href="#state_properties_csharp" style="color: inherit; text-decoration: inherit;">Properties</a>
@@ -806,14 +753,11 @@ If it is not provided, the provider project is used.
     </dt>
     <dd>{{% md %}}An ordered list of properties to index on.
 Structure is documented below.
-{{% /md %}}</dd>
-</dl>
+{{% /md %}}</dd></dl>
 {{% /choosable %}}
 
 {{% choosable language go %}}
-<dl class="resources-properties">
-
-    <dt class="property-optional"
+<dl class="resources-properties"><dt class="property-optional"
             title="Optional">
         <span id="state_ancestor_go">
 <a href="#state_ancestor_go" style="color: inherit; text-decoration: inherit;">Ancestor</a>
@@ -824,8 +768,7 @@ Structure is documented below.
     <dd>{{% md %}}Policy for including ancestors in the index.
 Default value is `NONE`.
 Possible values are `NONE` and `ALL_ANCESTORS`.
-{{% /md %}}</dd>
-    <dt class="property-optional"
+{{% /md %}}</dd><dt class="property-optional"
             title="Optional">
         <span id="state_indexid_go">
 <a href="#state_indexid_go" style="color: inherit; text-decoration: inherit;">Index<wbr>Id</a>
@@ -834,8 +777,7 @@ Possible values are `NONE` and `ALL_ANCESTORS`.
         <span class="property-type">string</span>
     </dt>
     <dd>{{% md %}}The index id.
-{{% /md %}}</dd>
-    <dt class="property-optional"
+{{% /md %}}</dd><dt class="property-optional"
             title="Optional">
         <span id="state_kind_go">
 <a href="#state_kind_go" style="color: inherit; text-decoration: inherit;">Kind</a>
@@ -844,8 +786,7 @@ Possible values are `NONE` and `ALL_ANCESTORS`.
         <span class="property-type">string</span>
     </dt>
     <dd>{{% md %}}The entity kind which the index applies to.
-{{% /md %}}</dd>
-    <dt class="property-optional"
+{{% /md %}}</dd><dt class="property-optional"
             title="Optional">
         <span id="state_project_go">
 <a href="#state_project_go" style="color: inherit; text-decoration: inherit;">Project</a>
@@ -855,8 +796,7 @@ Possible values are `NONE` and `ALL_ANCESTORS`.
     </dt>
     <dd>{{% md %}}The ID of the project in which the resource belongs.
 If it is not provided, the provider project is used.
-{{% /md %}}</dd>
-    <dt class="property-optional"
+{{% /md %}}</dd><dt class="property-optional"
             title="Optional">
         <span id="state_properties_go">
 <a href="#state_properties_go" style="color: inherit; text-decoration: inherit;">Properties</a>
@@ -866,14 +806,11 @@ If it is not provided, the provider project is used.
     </dt>
     <dd>{{% md %}}An ordered list of properties to index on.
 Structure is documented below.
-{{% /md %}}</dd>
-</dl>
+{{% /md %}}</dd></dl>
 {{% /choosable %}}
 
 {{% choosable language nodejs %}}
-<dl class="resources-properties">
-
-    <dt class="property-optional"
+<dl class="resources-properties"><dt class="property-optional"
             title="Optional">
         <span id="state_ancestor_nodejs">
 <a href="#state_ancestor_nodejs" style="color: inherit; text-decoration: inherit;">ancestor</a>
@@ -884,8 +821,7 @@ Structure is documented below.
     <dd>{{% md %}}Policy for including ancestors in the index.
 Default value is `NONE`.
 Possible values are `NONE` and `ALL_ANCESTORS`.
-{{% /md %}}</dd>
-    <dt class="property-optional"
+{{% /md %}}</dd><dt class="property-optional"
             title="Optional">
         <span id="state_indexid_nodejs">
 <a href="#state_indexid_nodejs" style="color: inherit; text-decoration: inherit;">index<wbr>Id</a>
@@ -894,8 +830,7 @@ Possible values are `NONE` and `ALL_ANCESTORS`.
         <span class="property-type">string</span>
     </dt>
     <dd>{{% md %}}The index id.
-{{% /md %}}</dd>
-    <dt class="property-optional"
+{{% /md %}}</dd><dt class="property-optional"
             title="Optional">
         <span id="state_kind_nodejs">
 <a href="#state_kind_nodejs" style="color: inherit; text-decoration: inherit;">kind</a>
@@ -904,8 +839,7 @@ Possible values are `NONE` and `ALL_ANCESTORS`.
         <span class="property-type">string</span>
     </dt>
     <dd>{{% md %}}The entity kind which the index applies to.
-{{% /md %}}</dd>
-    <dt class="property-optional"
+{{% /md %}}</dd><dt class="property-optional"
             title="Optional">
         <span id="state_project_nodejs">
 <a href="#state_project_nodejs" style="color: inherit; text-decoration: inherit;">project</a>
@@ -915,8 +849,7 @@ Possible values are `NONE` and `ALL_ANCESTORS`.
     </dt>
     <dd>{{% md %}}The ID of the project in which the resource belongs.
 If it is not provided, the provider project is used.
-{{% /md %}}</dd>
-    <dt class="property-optional"
+{{% /md %}}</dd><dt class="property-optional"
             title="Optional">
         <span id="state_properties_nodejs">
 <a href="#state_properties_nodejs" style="color: inherit; text-decoration: inherit;">properties</a>
@@ -926,14 +859,11 @@ If it is not provided, the provider project is used.
     </dt>
     <dd>{{% md %}}An ordered list of properties to index on.
 Structure is documented below.
-{{% /md %}}</dd>
-</dl>
+{{% /md %}}</dd></dl>
 {{% /choosable %}}
 
 {{% choosable language python %}}
-<dl class="resources-properties">
-
-    <dt class="property-optional"
+<dl class="resources-properties"><dt class="property-optional"
             title="Optional">
         <span id="state_ancestor_python">
 <a href="#state_ancestor_python" style="color: inherit; text-decoration: inherit;">ancestor</a>
@@ -944,8 +874,7 @@ Structure is documented below.
     <dd>{{% md %}}Policy for including ancestors in the index.
 Default value is `NONE`.
 Possible values are `NONE` and `ALL_ANCESTORS`.
-{{% /md %}}</dd>
-    <dt class="property-optional"
+{{% /md %}}</dd><dt class="property-optional"
             title="Optional">
         <span id="state_index_id_python">
 <a href="#state_index_id_python" style="color: inherit; text-decoration: inherit;">index_<wbr>id</a>
@@ -954,8 +883,7 @@ Possible values are `NONE` and `ALL_ANCESTORS`.
         <span class="property-type">str</span>
     </dt>
     <dd>{{% md %}}The index id.
-{{% /md %}}</dd>
-    <dt class="property-optional"
+{{% /md %}}</dd><dt class="property-optional"
             title="Optional">
         <span id="state_kind_python">
 <a href="#state_kind_python" style="color: inherit; text-decoration: inherit;">kind</a>
@@ -964,8 +892,7 @@ Possible values are `NONE` and `ALL_ANCESTORS`.
         <span class="property-type">str</span>
     </dt>
     <dd>{{% md %}}The entity kind which the index applies to.
-{{% /md %}}</dd>
-    <dt class="property-optional"
+{{% /md %}}</dd><dt class="property-optional"
             title="Optional">
         <span id="state_project_python">
 <a href="#state_project_python" style="color: inherit; text-decoration: inherit;">project</a>
@@ -975,8 +902,7 @@ Possible values are `NONE` and `ALL_ANCESTORS`.
     </dt>
     <dd>{{% md %}}The ID of the project in which the resource belongs.
 If it is not provided, the provider project is used.
-{{% /md %}}</dd>
-    <dt class="property-optional"
+{{% /md %}}</dd><dt class="property-optional"
             title="Optional">
         <span id="state_properties_python">
 <a href="#state_properties_python" style="color: inherit; text-decoration: inherit;">properties</a>
@@ -986,8 +912,7 @@ If it is not provided, the provider project is used.
     </dt>
     <dd>{{% md %}}An ordered list of properties to index on.
 Structure is documented below.
-{{% /md %}}</dd>
-</dl>
+{{% /md %}}</dd></dl>
 {{% /choosable %}}
 
 
@@ -1002,9 +927,7 @@ Structure is documented below.
 <h4 id="datastoreindexproperty">Data<wbr>Store<wbr>Index<wbr>Property</h4>
 
 {{% choosable language csharp %}}
-<dl class="resources-properties">
-
-    <dt class="property-required"
+<dl class="resources-properties"><dt class="property-required"
             title="Required">
         <span id="direction_csharp">
 <a href="#direction_csharp" style="color: inherit; text-decoration: inherit;">Direction</a>
@@ -1014,8 +937,7 @@ Structure is documented below.
     </dt>
     <dd>{{% md %}}The direction the index should optimize for sorting.
 Possible values are `ASCENDING` and `DESCENDING`.
-{{% /md %}}</dd>
-    <dt class="property-required"
+{{% /md %}}</dd><dt class="property-required"
             title="Required">
         <span id="name_csharp">
 <a href="#name_csharp" style="color: inherit; text-decoration: inherit;">Name</a>
@@ -1024,14 +946,11 @@ Possible values are `ASCENDING` and `DESCENDING`.
         <span class="property-type">string</span>
     </dt>
     <dd>{{% md %}}The property name to index.
-{{% /md %}}</dd>
-</dl>
+{{% /md %}}</dd></dl>
 {{% /choosable %}}
 
 {{% choosable language go %}}
-<dl class="resources-properties">
-
-    <dt class="property-required"
+<dl class="resources-properties"><dt class="property-required"
             title="Required">
         <span id="direction_go">
 <a href="#direction_go" style="color: inherit; text-decoration: inherit;">Direction</a>
@@ -1041,8 +960,7 @@ Possible values are `ASCENDING` and `DESCENDING`.
     </dt>
     <dd>{{% md %}}The direction the index should optimize for sorting.
 Possible values are `ASCENDING` and `DESCENDING`.
-{{% /md %}}</dd>
-    <dt class="property-required"
+{{% /md %}}</dd><dt class="property-required"
             title="Required">
         <span id="name_go">
 <a href="#name_go" style="color: inherit; text-decoration: inherit;">Name</a>
@@ -1051,14 +969,11 @@ Possible values are `ASCENDING` and `DESCENDING`.
         <span class="property-type">string</span>
     </dt>
     <dd>{{% md %}}The property name to index.
-{{% /md %}}</dd>
-</dl>
+{{% /md %}}</dd></dl>
 {{% /choosable %}}
 
 {{% choosable language nodejs %}}
-<dl class="resources-properties">
-
-    <dt class="property-required"
+<dl class="resources-properties"><dt class="property-required"
             title="Required">
         <span id="direction_nodejs">
 <a href="#direction_nodejs" style="color: inherit; text-decoration: inherit;">direction</a>
@@ -1068,8 +983,7 @@ Possible values are `ASCENDING` and `DESCENDING`.
     </dt>
     <dd>{{% md %}}The direction the index should optimize for sorting.
 Possible values are `ASCENDING` and `DESCENDING`.
-{{% /md %}}</dd>
-    <dt class="property-required"
+{{% /md %}}</dd><dt class="property-required"
             title="Required">
         <span id="name_nodejs">
 <a href="#name_nodejs" style="color: inherit; text-decoration: inherit;">name</a>
@@ -1078,14 +992,11 @@ Possible values are `ASCENDING` and `DESCENDING`.
         <span class="property-type">string</span>
     </dt>
     <dd>{{% md %}}The property name to index.
-{{% /md %}}</dd>
-</dl>
+{{% /md %}}</dd></dl>
 {{% /choosable %}}
 
 {{% choosable language python %}}
-<dl class="resources-properties">
-
-    <dt class="property-required"
+<dl class="resources-properties"><dt class="property-required"
             title="Required">
         <span id="direction_python">
 <a href="#direction_python" style="color: inherit; text-decoration: inherit;">direction</a>
@@ -1095,8 +1006,7 @@ Possible values are `ASCENDING` and `DESCENDING`.
     </dt>
     <dd>{{% md %}}The direction the index should optimize for sorting.
 Possible values are `ASCENDING` and `DESCENDING`.
-{{% /md %}}</dd>
-    <dt class="property-required"
+{{% /md %}}</dd><dt class="property-required"
             title="Required">
         <span id="name_python">
 <a href="#name_python" style="color: inherit; text-decoration: inherit;">name</a>
@@ -1105,8 +1015,7 @@ Possible values are `ASCENDING` and `DESCENDING`.
         <span class="property-type">str</span>
     </dt>
     <dd>{{% md %}}The property name to index.
-{{% /md %}}</dd>
-</dl>
+{{% /md %}}</dd></dl>
 {{% /choosable %}}
 ## Import
 
@@ -1135,6 +1044,6 @@ Index can be imported using any of these accepted formats
 	<dt>License</dt>
 	<dd>Apache-2.0</dd>
 	<dt>Notes</dt>
-	<dd>This Pulumi package is based on the [`google-beta` Terraform Provider](https://github.com/hashicorp/terraform-provider-google-beta).</dd>
+	<dd>{{% md %}}This Pulumi package is based on the [`google-beta` Terraform Provider](https://github.com/hashicorp/terraform-provider-google-beta).{{% /md %}}</dd>
 </dl>
 

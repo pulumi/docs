@@ -19,11 +19,17 @@ To get more information about Node, see:
     * [Official Documentation](https://cloud.google.com/tpu/docs/)
 
 {{% examples %}}
+
 ## Example Usage
 
 {{< chooser language "typescript,python,go,csharp" / >}}
+
+
 ### TPU Node Basic
-{{% example csharp %}}
+
+
+{{< example csharp >}}
+
 ```csharp
 using Pulumi;
 using Gcp = Pulumi.Gcp;
@@ -45,9 +51,12 @@ class MyStack : Stack
 }
 ```
 
-{{% /example %}}
 
-{{% example go %}}
+{{< /example >}}
+
+
+{{< example go >}}
+
 ```go
 package main
 
@@ -76,9 +85,12 @@ func main() {
 }
 ```
 
-{{% /example %}}
 
-{{% example python %}}
+{{< /example >}}
+
+
+{{< example python >}}
+
 ```python
 import pulumi
 import pulumi_gcp as gcp
@@ -91,9 +103,12 @@ tpu = gcp.tpu.Node("tpu",
     cidr_block="10.2.0.0/29")
 ```
 
-{{% /example %}}
 
-{{% example typescript %}}
+{{< /example >}}
+
+
+{{< example typescript >}}
+
 
 ```typescript
 import * as pulumi from "@pulumi/pulumi";
@@ -108,9 +123,16 @@ const tpu = new gcp.tpu.Node("tpu", {
 });
 ```
 
-{{% /example %}}
+
+{{< /example >}}
+
+
+
+
 
 {{% /examples %}}
+
+
 
 
 ## Create a Node Resource {#create}
@@ -135,9 +157,7 @@ const tpu = new gcp.tpu.Node("tpu", {
 
 {{% choosable language nodejs %}}
 
-<dl class="resources-properties">
-  
-    <dt
+<dl class="resources-properties"><dt
         class="property-required" title="Required">
         <span>name</span>
         <span class="property-indicator"></span>
@@ -145,9 +165,7 @@ const tpu = new gcp.tpu.Node("tpu", {
     </dt>
     <dd>
       The unique name of the resource.
-    </dd>
-  
-    <dt
+    </dd><dt
         class="property-required" title="Required">
         <span>args</span>
         <span class="property-indicator"></span>
@@ -155,9 +173,7 @@ const tpu = new gcp.tpu.Node("tpu", {
     </dt>
     <dd>
       The arguments to resource properties.
-    </dd>
-  
-    <dt
+    </dd><dt
         class="property-optional" title="Optional">
         <span>opts</span>
         <span class="property-indicator"></span>
@@ -165,10 +181,7 @@ const tpu = new gcp.tpu.Node("tpu", {
     </dt>
     <dd>
       Bag of options to control resource&#39;s behavior.
-    </dd>
-  
-
-</dl>
+    </dd></dl>
 
 {{% /choosable %}}
 
@@ -194,9 +207,7 @@ const tpu = new gcp.tpu.Node("tpu", {
 
 {{% choosable language go %}}
 
-<dl class="resources-properties">
-  
-    <dt
+<dl class="resources-properties"><dt
         class="property-optional" title="Optional">
         <span>ctx</span>
         <span class="property-indicator"></span>
@@ -204,9 +215,7 @@ const tpu = new gcp.tpu.Node("tpu", {
     </dt>
     <dd>
       Context object for the current deployment.
-    </dd>
-  
-    <dt
+    </dd><dt
         class="property-required" title="Required">
         <span>name</span>
         <span class="property-indicator"></span>
@@ -214,9 +223,7 @@ const tpu = new gcp.tpu.Node("tpu", {
     </dt>
     <dd>
       The unique name of the resource.
-    </dd>
-  
-    <dt
+    </dd><dt
         class="property-required" title="Required">
         <span>args</span>
         <span class="property-indicator"></span>
@@ -224,9 +231,7 @@ const tpu = new gcp.tpu.Node("tpu", {
     </dt>
     <dd>
       The arguments to resource properties.
-    </dd>
-  
-    <dt
+    </dd><dt
         class="property-optional" title="Optional">
         <span>opts</span>
         <span class="property-indicator"></span>
@@ -234,18 +239,13 @@ const tpu = new gcp.tpu.Node("tpu", {
     </dt>
     <dd>
       Bag of options to control resource&#39;s behavior.
-    </dd>
-  
-
-</dl>
+    </dd></dl>
 
 {{% /choosable %}}
 
 {{% choosable language csharp %}}
 
-<dl class="resources-properties">
-  
-    <dt
+<dl class="resources-properties"><dt
         class="property-required" title="Required">
         <span>name</span>
         <span class="property-indicator"></span>
@@ -253,9 +253,7 @@ const tpu = new gcp.tpu.Node("tpu", {
     </dt>
     <dd>
       The unique name of the resource.
-    </dd>
-  
-    <dt
+    </dd><dt
         class="property-required" title="Required">
         <span>args</span>
         <span class="property-indicator"></span>
@@ -263,9 +261,7 @@ const tpu = new gcp.tpu.Node("tpu", {
     </dt>
     <dd>
       The arguments to resource properties.
-    </dd>
-  
-    <dt
+    </dd><dt
         class="property-optional" title="Optional">
         <span>opts</span>
         <span class="property-indicator"></span>
@@ -273,10 +269,7 @@ const tpu = new gcp.tpu.Node("tpu", {
     </dt>
     <dd>
       Bag of options to control resource&#39;s behavior.
-    </dd>
-  
-
-</dl>
+    </dd></dl>
 
 {{% /choosable %}}
 
@@ -291,9 +284,7 @@ The Node resource accepts the following [input]({{< relref "/docs/intro/concepts
 
 
 {{% choosable language csharp %}}
-<dl class="resources-properties">
-
-    <dt class="property-required"
+<dl class="resources-properties"><dt class="property-required"
             title="Required">
         <span id="acceleratortype_csharp">
 <a href="#acceleratortype_csharp" style="color: inherit; text-decoration: inherit;">Accelerator<wbr>Type</a>
@@ -302,8 +293,7 @@ The Node resource accepts the following [input]({{< relref "/docs/intro/concepts
         <span class="property-type">string</span>
     </dt>
     <dd>{{% md %}}The type of hardware accelerators associated with this node.
-{{% /md %}}</dd>
-    <dt class="property-required"
+{{% /md %}}</dd><dt class="property-required"
             title="Required">
         <span id="tensorflowversion_csharp">
 <a href="#tensorflowversion_csharp" style="color: inherit; text-decoration: inherit;">Tensorflow<wbr>Version</a>
@@ -312,8 +302,7 @@ The Node resource accepts the following [input]({{< relref "/docs/intro/concepts
         <span class="property-type">string</span>
     </dt>
     <dd>{{% md %}}The version of Tensorflow running in the Node.
-{{% /md %}}</dd>
-    <dt class="property-optional"
+{{% /md %}}</dd><dt class="property-optional"
             title="Optional">
         <span id="cidrblock_csharp">
 <a href="#cidrblock_csharp" style="color: inherit; text-decoration: inherit;">Cidr<wbr>Block</a>
@@ -329,8 +318,7 @@ Errors will occur if the CIDR block has already been used for a
 currently existing TPU node, the CIDR block conflicts with any
 subnetworks in the user's provided network, or the provided network
 is peered with another network that is using that CIDR block.
-{{% /md %}}</dd>
-    <dt class="property-optional"
+{{% /md %}}</dd><dt class="property-optional"
             title="Optional">
         <span id="description_csharp">
 <a href="#description_csharp" style="color: inherit; text-decoration: inherit;">Description</a>
@@ -339,8 +327,7 @@ is peered with another network that is using that CIDR block.
         <span class="property-type">string</span>
     </dt>
     <dd>{{% md %}}The user-supplied description of the TPU. Maximum of 512 characters.
-{{% /md %}}</dd>
-    <dt class="property-optional"
+{{% /md %}}</dd><dt class="property-optional"
             title="Optional">
         <span id="labels_csharp">
 <a href="#labels_csharp" style="color: inherit; text-decoration: inherit;">Labels</a>
@@ -349,8 +336,7 @@ is peered with another network that is using that CIDR block.
         <span class="property-type">Dictionary&lt;string, string&gt;</span>
     </dt>
     <dd>{{% md %}}Resource labels to represent user provided metadata.
-{{% /md %}}</dd>
-    <dt class="property-optional"
+{{% /md %}}</dd><dt class="property-optional"
             title="Optional">
         <span id="name_csharp">
 <a href="#name_csharp" style="color: inherit; text-decoration: inherit;">Name</a>
@@ -359,8 +345,7 @@ is peered with another network that is using that CIDR block.
         <span class="property-type">string</span>
     </dt>
     <dd>{{% md %}}The immutable name of the TPU.
-{{% /md %}}</dd>
-    <dt class="property-optional"
+{{% /md %}}</dd><dt class="property-optional"
             title="Optional">
         <span id="network_csharp">
 <a href="#network_csharp" style="color: inherit; text-decoration: inherit;">Network</a>
@@ -372,8 +357,7 @@ is peered with another network that is using that CIDR block.
 preexisting Compute Engine network inside of the project on which
 this API has been activated. If none is provided, "default" will be
 used.
-{{% /md %}}</dd>
-    <dt class="property-optional"
+{{% /md %}}</dd><dt class="property-optional"
             title="Optional">
         <span id="project_csharp">
 <a href="#project_csharp" style="color: inherit; text-decoration: inherit;">Project</a>
@@ -383,8 +367,7 @@ used.
     </dt>
     <dd>{{% md %}}The ID of the project in which the resource belongs.
 If it is not provided, the provider project is used.
-{{% /md %}}</dd>
-    <dt class="property-optional"
+{{% /md %}}</dd><dt class="property-optional"
             title="Optional">
         <span id="schedulingconfig_csharp">
 <a href="#schedulingconfig_csharp" style="color: inherit; text-decoration: inherit;">Scheduling<wbr>Config</a>
@@ -394,8 +377,7 @@ If it is not provided, the provider project is used.
     </dt>
     <dd>{{% md %}}Sets the scheduling options for this TPU instance.
 Structure is documented below.
-{{% /md %}}</dd>
-    <dt class="property-optional"
+{{% /md %}}</dd><dt class="property-optional"
             title="Optional">
         <span id="useservicenetworking_csharp">
 <a href="#useservicenetworking_csharp" style="color: inherit; text-decoration: inherit;">Use<wbr>Service<wbr>Networking</a>
@@ -407,8 +389,7 @@ Structure is documented below.
 The VPC Peering should be set up before provisioning the node. If this field is set,
 cidr_block field should not be specified. If the network that you want to peer the
 TPU Node to is a Shared VPC network, the node must be created with this this field enabled.
-{{% /md %}}</dd>
-    <dt class="property-optional"
+{{% /md %}}</dd><dt class="property-optional"
             title="Optional">
         <span id="zone_csharp">
 <a href="#zone_csharp" style="color: inherit; text-decoration: inherit;">Zone</a>
@@ -417,14 +398,11 @@ TPU Node to is a Shared VPC network, the node must be created with this this fie
         <span class="property-type">string</span>
     </dt>
     <dd>{{% md %}}The GCP location for the TPU. If it is not provided, the provider zone is used.
-{{% /md %}}</dd>
-</dl>
+{{% /md %}}</dd></dl>
 {{% /choosable %}}
 
 {{% choosable language go %}}
-<dl class="resources-properties">
-
-    <dt class="property-required"
+<dl class="resources-properties"><dt class="property-required"
             title="Required">
         <span id="acceleratortype_go">
 <a href="#acceleratortype_go" style="color: inherit; text-decoration: inherit;">Accelerator<wbr>Type</a>
@@ -433,8 +411,7 @@ TPU Node to is a Shared VPC network, the node must be created with this this fie
         <span class="property-type">string</span>
     </dt>
     <dd>{{% md %}}The type of hardware accelerators associated with this node.
-{{% /md %}}</dd>
-    <dt class="property-required"
+{{% /md %}}</dd><dt class="property-required"
             title="Required">
         <span id="tensorflowversion_go">
 <a href="#tensorflowversion_go" style="color: inherit; text-decoration: inherit;">Tensorflow<wbr>Version</a>
@@ -443,8 +420,7 @@ TPU Node to is a Shared VPC network, the node must be created with this this fie
         <span class="property-type">string</span>
     </dt>
     <dd>{{% md %}}The version of Tensorflow running in the Node.
-{{% /md %}}</dd>
-    <dt class="property-optional"
+{{% /md %}}</dd><dt class="property-optional"
             title="Optional">
         <span id="cidrblock_go">
 <a href="#cidrblock_go" style="color: inherit; text-decoration: inherit;">Cidr<wbr>Block</a>
@@ -460,8 +436,7 @@ Errors will occur if the CIDR block has already been used for a
 currently existing TPU node, the CIDR block conflicts with any
 subnetworks in the user's provided network, or the provided network
 is peered with another network that is using that CIDR block.
-{{% /md %}}</dd>
-    <dt class="property-optional"
+{{% /md %}}</dd><dt class="property-optional"
             title="Optional">
         <span id="description_go">
 <a href="#description_go" style="color: inherit; text-decoration: inherit;">Description</a>
@@ -470,8 +445,7 @@ is peered with another network that is using that CIDR block.
         <span class="property-type">string</span>
     </dt>
     <dd>{{% md %}}The user-supplied description of the TPU. Maximum of 512 characters.
-{{% /md %}}</dd>
-    <dt class="property-optional"
+{{% /md %}}</dd><dt class="property-optional"
             title="Optional">
         <span id="labels_go">
 <a href="#labels_go" style="color: inherit; text-decoration: inherit;">Labels</a>
@@ -480,8 +454,7 @@ is peered with another network that is using that CIDR block.
         <span class="property-type">map[string]string</span>
     </dt>
     <dd>{{% md %}}Resource labels to represent user provided metadata.
-{{% /md %}}</dd>
-    <dt class="property-optional"
+{{% /md %}}</dd><dt class="property-optional"
             title="Optional">
         <span id="name_go">
 <a href="#name_go" style="color: inherit; text-decoration: inherit;">Name</a>
@@ -490,8 +463,7 @@ is peered with another network that is using that CIDR block.
         <span class="property-type">string</span>
     </dt>
     <dd>{{% md %}}The immutable name of the TPU.
-{{% /md %}}</dd>
-    <dt class="property-optional"
+{{% /md %}}</dd><dt class="property-optional"
             title="Optional">
         <span id="network_go">
 <a href="#network_go" style="color: inherit; text-decoration: inherit;">Network</a>
@@ -503,8 +475,7 @@ is peered with another network that is using that CIDR block.
 preexisting Compute Engine network inside of the project on which
 this API has been activated. If none is provided, "default" will be
 used.
-{{% /md %}}</dd>
-    <dt class="property-optional"
+{{% /md %}}</dd><dt class="property-optional"
             title="Optional">
         <span id="project_go">
 <a href="#project_go" style="color: inherit; text-decoration: inherit;">Project</a>
@@ -514,8 +485,7 @@ used.
     </dt>
     <dd>{{% md %}}The ID of the project in which the resource belongs.
 If it is not provided, the provider project is used.
-{{% /md %}}</dd>
-    <dt class="property-optional"
+{{% /md %}}</dd><dt class="property-optional"
             title="Optional">
         <span id="schedulingconfig_go">
 <a href="#schedulingconfig_go" style="color: inherit; text-decoration: inherit;">Scheduling<wbr>Config</a>
@@ -525,8 +495,7 @@ If it is not provided, the provider project is used.
     </dt>
     <dd>{{% md %}}Sets the scheduling options for this TPU instance.
 Structure is documented below.
-{{% /md %}}</dd>
-    <dt class="property-optional"
+{{% /md %}}</dd><dt class="property-optional"
             title="Optional">
         <span id="useservicenetworking_go">
 <a href="#useservicenetworking_go" style="color: inherit; text-decoration: inherit;">Use<wbr>Service<wbr>Networking</a>
@@ -538,8 +507,7 @@ Structure is documented below.
 The VPC Peering should be set up before provisioning the node. If this field is set,
 cidr_block field should not be specified. If the network that you want to peer the
 TPU Node to is a Shared VPC network, the node must be created with this this field enabled.
-{{% /md %}}</dd>
-    <dt class="property-optional"
+{{% /md %}}</dd><dt class="property-optional"
             title="Optional">
         <span id="zone_go">
 <a href="#zone_go" style="color: inherit; text-decoration: inherit;">Zone</a>
@@ -548,14 +516,11 @@ TPU Node to is a Shared VPC network, the node must be created with this this fie
         <span class="property-type">string</span>
     </dt>
     <dd>{{% md %}}The GCP location for the TPU. If it is not provided, the provider zone is used.
-{{% /md %}}</dd>
-</dl>
+{{% /md %}}</dd></dl>
 {{% /choosable %}}
 
 {{% choosable language nodejs %}}
-<dl class="resources-properties">
-
-    <dt class="property-required"
+<dl class="resources-properties"><dt class="property-required"
             title="Required">
         <span id="acceleratortype_nodejs">
 <a href="#acceleratortype_nodejs" style="color: inherit; text-decoration: inherit;">accelerator<wbr>Type</a>
@@ -564,8 +529,7 @@ TPU Node to is a Shared VPC network, the node must be created with this this fie
         <span class="property-type">string</span>
     </dt>
     <dd>{{% md %}}The type of hardware accelerators associated with this node.
-{{% /md %}}</dd>
-    <dt class="property-required"
+{{% /md %}}</dd><dt class="property-required"
             title="Required">
         <span id="tensorflowversion_nodejs">
 <a href="#tensorflowversion_nodejs" style="color: inherit; text-decoration: inherit;">tensorflow<wbr>Version</a>
@@ -574,8 +538,7 @@ TPU Node to is a Shared VPC network, the node must be created with this this fie
         <span class="property-type">string</span>
     </dt>
     <dd>{{% md %}}The version of Tensorflow running in the Node.
-{{% /md %}}</dd>
-    <dt class="property-optional"
+{{% /md %}}</dd><dt class="property-optional"
             title="Optional">
         <span id="cidrblock_nodejs">
 <a href="#cidrblock_nodejs" style="color: inherit; text-decoration: inherit;">cidr<wbr>Block</a>
@@ -591,8 +554,7 @@ Errors will occur if the CIDR block has already been used for a
 currently existing TPU node, the CIDR block conflicts with any
 subnetworks in the user's provided network, or the provided network
 is peered with another network that is using that CIDR block.
-{{% /md %}}</dd>
-    <dt class="property-optional"
+{{% /md %}}</dd><dt class="property-optional"
             title="Optional">
         <span id="description_nodejs">
 <a href="#description_nodejs" style="color: inherit; text-decoration: inherit;">description</a>
@@ -601,8 +563,7 @@ is peered with another network that is using that CIDR block.
         <span class="property-type">string</span>
     </dt>
     <dd>{{% md %}}The user-supplied description of the TPU. Maximum of 512 characters.
-{{% /md %}}</dd>
-    <dt class="property-optional"
+{{% /md %}}</dd><dt class="property-optional"
             title="Optional">
         <span id="labels_nodejs">
 <a href="#labels_nodejs" style="color: inherit; text-decoration: inherit;">labels</a>
@@ -611,8 +572,7 @@ is peered with another network that is using that CIDR block.
         <span class="property-type">{[key: string]: string}</span>
     </dt>
     <dd>{{% md %}}Resource labels to represent user provided metadata.
-{{% /md %}}</dd>
-    <dt class="property-optional"
+{{% /md %}}</dd><dt class="property-optional"
             title="Optional">
         <span id="name_nodejs">
 <a href="#name_nodejs" style="color: inherit; text-decoration: inherit;">name</a>
@@ -621,8 +581,7 @@ is peered with another network that is using that CIDR block.
         <span class="property-type">string</span>
     </dt>
     <dd>{{% md %}}The immutable name of the TPU.
-{{% /md %}}</dd>
-    <dt class="property-optional"
+{{% /md %}}</dd><dt class="property-optional"
             title="Optional">
         <span id="network_nodejs">
 <a href="#network_nodejs" style="color: inherit; text-decoration: inherit;">network</a>
@@ -634,8 +593,7 @@ is peered with another network that is using that CIDR block.
 preexisting Compute Engine network inside of the project on which
 this API has been activated. If none is provided, "default" will be
 used.
-{{% /md %}}</dd>
-    <dt class="property-optional"
+{{% /md %}}</dd><dt class="property-optional"
             title="Optional">
         <span id="project_nodejs">
 <a href="#project_nodejs" style="color: inherit; text-decoration: inherit;">project</a>
@@ -645,8 +603,7 @@ used.
     </dt>
     <dd>{{% md %}}The ID of the project in which the resource belongs.
 If it is not provided, the provider project is used.
-{{% /md %}}</dd>
-    <dt class="property-optional"
+{{% /md %}}</dd><dt class="property-optional"
             title="Optional">
         <span id="schedulingconfig_nodejs">
 <a href="#schedulingconfig_nodejs" style="color: inherit; text-decoration: inherit;">scheduling<wbr>Config</a>
@@ -656,8 +613,7 @@ If it is not provided, the provider project is used.
     </dt>
     <dd>{{% md %}}Sets the scheduling options for this TPU instance.
 Structure is documented below.
-{{% /md %}}</dd>
-    <dt class="property-optional"
+{{% /md %}}</dd><dt class="property-optional"
             title="Optional">
         <span id="useservicenetworking_nodejs">
 <a href="#useservicenetworking_nodejs" style="color: inherit; text-decoration: inherit;">use<wbr>Service<wbr>Networking</a>
@@ -669,8 +625,7 @@ Structure is documented below.
 The VPC Peering should be set up before provisioning the node. If this field is set,
 cidr_block field should not be specified. If the network that you want to peer the
 TPU Node to is a Shared VPC network, the node must be created with this this field enabled.
-{{% /md %}}</dd>
-    <dt class="property-optional"
+{{% /md %}}</dd><dt class="property-optional"
             title="Optional">
         <span id="zone_nodejs">
 <a href="#zone_nodejs" style="color: inherit; text-decoration: inherit;">zone</a>
@@ -679,14 +634,11 @@ TPU Node to is a Shared VPC network, the node must be created with this this fie
         <span class="property-type">string</span>
     </dt>
     <dd>{{% md %}}The GCP location for the TPU. If it is not provided, the provider zone is used.
-{{% /md %}}</dd>
-</dl>
+{{% /md %}}</dd></dl>
 {{% /choosable %}}
 
 {{% choosable language python %}}
-<dl class="resources-properties">
-
-    <dt class="property-required"
+<dl class="resources-properties"><dt class="property-required"
             title="Required">
         <span id="accelerator_type_python">
 <a href="#accelerator_type_python" style="color: inherit; text-decoration: inherit;">accelerator_<wbr>type</a>
@@ -695,8 +647,7 @@ TPU Node to is a Shared VPC network, the node must be created with this this fie
         <span class="property-type">str</span>
     </dt>
     <dd>{{% md %}}The type of hardware accelerators associated with this node.
-{{% /md %}}</dd>
-    <dt class="property-required"
+{{% /md %}}</dd><dt class="property-required"
             title="Required">
         <span id="tensorflow_version_python">
 <a href="#tensorflow_version_python" style="color: inherit; text-decoration: inherit;">tensorflow_<wbr>version</a>
@@ -705,8 +656,7 @@ TPU Node to is a Shared VPC network, the node must be created with this this fie
         <span class="property-type">str</span>
     </dt>
     <dd>{{% md %}}The version of Tensorflow running in the Node.
-{{% /md %}}</dd>
-    <dt class="property-optional"
+{{% /md %}}</dd><dt class="property-optional"
             title="Optional">
         <span id="cidr_block_python">
 <a href="#cidr_block_python" style="color: inherit; text-decoration: inherit;">cidr_<wbr>block</a>
@@ -722,8 +672,7 @@ Errors will occur if the CIDR block has already been used for a
 currently existing TPU node, the CIDR block conflicts with any
 subnetworks in the user's provided network, or the provided network
 is peered with another network that is using that CIDR block.
-{{% /md %}}</dd>
-    <dt class="property-optional"
+{{% /md %}}</dd><dt class="property-optional"
             title="Optional">
         <span id="description_python">
 <a href="#description_python" style="color: inherit; text-decoration: inherit;">description</a>
@@ -732,8 +681,7 @@ is peered with another network that is using that CIDR block.
         <span class="property-type">str</span>
     </dt>
     <dd>{{% md %}}The user-supplied description of the TPU. Maximum of 512 characters.
-{{% /md %}}</dd>
-    <dt class="property-optional"
+{{% /md %}}</dd><dt class="property-optional"
             title="Optional">
         <span id="labels_python">
 <a href="#labels_python" style="color: inherit; text-decoration: inherit;">labels</a>
@@ -742,8 +690,7 @@ is peered with another network that is using that CIDR block.
         <span class="property-type">Mapping[str, str]</span>
     </dt>
     <dd>{{% md %}}Resource labels to represent user provided metadata.
-{{% /md %}}</dd>
-    <dt class="property-optional"
+{{% /md %}}</dd><dt class="property-optional"
             title="Optional">
         <span id="name_python">
 <a href="#name_python" style="color: inherit; text-decoration: inherit;">name</a>
@@ -752,8 +699,7 @@ is peered with another network that is using that CIDR block.
         <span class="property-type">str</span>
     </dt>
     <dd>{{% md %}}The immutable name of the TPU.
-{{% /md %}}</dd>
-    <dt class="property-optional"
+{{% /md %}}</dd><dt class="property-optional"
             title="Optional">
         <span id="network_python">
 <a href="#network_python" style="color: inherit; text-decoration: inherit;">network</a>
@@ -765,8 +711,7 @@ is peered with another network that is using that CIDR block.
 preexisting Compute Engine network inside of the project on which
 this API has been activated. If none is provided, "default" will be
 used.
-{{% /md %}}</dd>
-    <dt class="property-optional"
+{{% /md %}}</dd><dt class="property-optional"
             title="Optional">
         <span id="project_python">
 <a href="#project_python" style="color: inherit; text-decoration: inherit;">project</a>
@@ -776,8 +721,7 @@ used.
     </dt>
     <dd>{{% md %}}The ID of the project in which the resource belongs.
 If it is not provided, the provider project is used.
-{{% /md %}}</dd>
-    <dt class="property-optional"
+{{% /md %}}</dd><dt class="property-optional"
             title="Optional">
         <span id="scheduling_config_python">
 <a href="#scheduling_config_python" style="color: inherit; text-decoration: inherit;">scheduling_<wbr>config</a>
@@ -787,8 +731,7 @@ If it is not provided, the provider project is used.
     </dt>
     <dd>{{% md %}}Sets the scheduling options for this TPU instance.
 Structure is documented below.
-{{% /md %}}</dd>
-    <dt class="property-optional"
+{{% /md %}}</dd><dt class="property-optional"
             title="Optional">
         <span id="use_service_networking_python">
 <a href="#use_service_networking_python" style="color: inherit; text-decoration: inherit;">use_<wbr>service_<wbr>networking</a>
@@ -800,8 +743,7 @@ Structure is documented below.
 The VPC Peering should be set up before provisioning the node. If this field is set,
 cidr_block field should not be specified. If the network that you want to peer the
 TPU Node to is a Shared VPC network, the node must be created with this this field enabled.
-{{% /md %}}</dd>
-    <dt class="property-optional"
+{{% /md %}}</dd><dt class="property-optional"
             title="Optional">
         <span id="zone_python">
 <a href="#zone_python" style="color: inherit; text-decoration: inherit;">zone</a>
@@ -810,8 +752,7 @@ TPU Node to is a Shared VPC network, the node must be created with this this fie
         <span class="property-type">str</span>
     </dt>
     <dd>{{% md %}}The GCP location for the TPU. If it is not provided, the provider zone is used.
-{{% /md %}}</dd>
-</dl>
+{{% /md %}}</dd></dl>
 {{% /choosable %}}
 
 
@@ -822,9 +763,7 @@ All [input](#inputs) properties are implicitly available as output properties. A
 
 
 {{% choosable language csharp %}}
-<dl class="resources-properties">
-
-    <dt class="property-"
+<dl class="resources-properties"><dt class="property-"
             title="">
         <span id="id_csharp">
 <a href="#id_csharp" style="color: inherit; text-decoration: inherit;">Id</a>
@@ -832,8 +771,7 @@ All [input](#inputs) properties are implicitly available as output properties. A
         <span class="property-indicator"></span>
         <span class="property-type">string</span>
     </dt>
-    <dd>{{% md %}}The provider-assigned unique ID for this managed resource.{{% /md %}}</dd>
-    <dt class="property-"
+    <dd>{{% md %}}The provider-assigned unique ID for this managed resource.{{% /md %}}</dd><dt class="property-"
             title="">
         <span id="networkendpoints_csharp">
 <a href="#networkendpoints_csharp" style="color: inherit; text-decoration: inherit;">Network<wbr>Endpoints</a>
@@ -843,8 +781,7 @@ All [input](#inputs) properties are implicitly available as output properties. A
     </dt>
     <dd>{{% md %}}The network endpoints where TPU workers can be accessed and sent work. It is recommended that Tensorflow clients of the
 node first reach out to the first (index 0) entry.
-{{% /md %}}</dd>
-    <dt class="property-"
+{{% /md %}}</dd><dt class="property-"
             title="">
         <span id="serviceaccount_csharp">
 <a href="#serviceaccount_csharp" style="color: inherit; text-decoration: inherit;">Service<wbr>Account</a>
@@ -854,14 +791,11 @@ node first reach out to the first (index 0) entry.
     </dt>
     <dd>{{% md %}}The service account used to run the tensor flow services within the node. To share resources, including Google Cloud
 Storage data, with the Tensorflow job running in the Node, this account must have permissions to that data.
-{{% /md %}}</dd>
-</dl>
+{{% /md %}}</dd></dl>
 {{% /choosable %}}
 
 {{% choosable language go %}}
-<dl class="resources-properties">
-
-    <dt class="property-"
+<dl class="resources-properties"><dt class="property-"
             title="">
         <span id="id_go">
 <a href="#id_go" style="color: inherit; text-decoration: inherit;">Id</a>
@@ -869,8 +803,7 @@ Storage data, with the Tensorflow job running in the Node, this account must hav
         <span class="property-indicator"></span>
         <span class="property-type">string</span>
     </dt>
-    <dd>{{% md %}}The provider-assigned unique ID for this managed resource.{{% /md %}}</dd>
-    <dt class="property-"
+    <dd>{{% md %}}The provider-assigned unique ID for this managed resource.{{% /md %}}</dd><dt class="property-"
             title="">
         <span id="networkendpoints_go">
 <a href="#networkendpoints_go" style="color: inherit; text-decoration: inherit;">Network<wbr>Endpoints</a>
@@ -880,8 +813,7 @@ Storage data, with the Tensorflow job running in the Node, this account must hav
     </dt>
     <dd>{{% md %}}The network endpoints where TPU workers can be accessed and sent work. It is recommended that Tensorflow clients of the
 node first reach out to the first (index 0) entry.
-{{% /md %}}</dd>
-    <dt class="property-"
+{{% /md %}}</dd><dt class="property-"
             title="">
         <span id="serviceaccount_go">
 <a href="#serviceaccount_go" style="color: inherit; text-decoration: inherit;">Service<wbr>Account</a>
@@ -891,14 +823,11 @@ node first reach out to the first (index 0) entry.
     </dt>
     <dd>{{% md %}}The service account used to run the tensor flow services within the node. To share resources, including Google Cloud
 Storage data, with the Tensorflow job running in the Node, this account must have permissions to that data.
-{{% /md %}}</dd>
-</dl>
+{{% /md %}}</dd></dl>
 {{% /choosable %}}
 
 {{% choosable language nodejs %}}
-<dl class="resources-properties">
-
-    <dt class="property-"
+<dl class="resources-properties"><dt class="property-"
             title="">
         <span id="id_nodejs">
 <a href="#id_nodejs" style="color: inherit; text-decoration: inherit;">id</a>
@@ -906,8 +835,7 @@ Storage data, with the Tensorflow job running in the Node, this account must hav
         <span class="property-indicator"></span>
         <span class="property-type">string</span>
     </dt>
-    <dd>{{% md %}}The provider-assigned unique ID for this managed resource.{{% /md %}}</dd>
-    <dt class="property-"
+    <dd>{{% md %}}The provider-assigned unique ID for this managed resource.{{% /md %}}</dd><dt class="property-"
             title="">
         <span id="networkendpoints_nodejs">
 <a href="#networkendpoints_nodejs" style="color: inherit; text-decoration: inherit;">network<wbr>Endpoints</a>
@@ -917,8 +845,7 @@ Storage data, with the Tensorflow job running in the Node, this account must hav
     </dt>
     <dd>{{% md %}}The network endpoints where TPU workers can be accessed and sent work. It is recommended that Tensorflow clients of the
 node first reach out to the first (index 0) entry.
-{{% /md %}}</dd>
-    <dt class="property-"
+{{% /md %}}</dd><dt class="property-"
             title="">
         <span id="serviceaccount_nodejs">
 <a href="#serviceaccount_nodejs" style="color: inherit; text-decoration: inherit;">service<wbr>Account</a>
@@ -928,14 +855,11 @@ node first reach out to the first (index 0) entry.
     </dt>
     <dd>{{% md %}}The service account used to run the tensor flow services within the node. To share resources, including Google Cloud
 Storage data, with the Tensorflow job running in the Node, this account must have permissions to that data.
-{{% /md %}}</dd>
-</dl>
+{{% /md %}}</dd></dl>
 {{% /choosable %}}
 
 {{% choosable language python %}}
-<dl class="resources-properties">
-
-    <dt class="property-"
+<dl class="resources-properties"><dt class="property-"
             title="">
         <span id="id_python">
 <a href="#id_python" style="color: inherit; text-decoration: inherit;">id</a>
@@ -943,8 +867,7 @@ Storage data, with the Tensorflow job running in the Node, this account must hav
         <span class="property-indicator"></span>
         <span class="property-type">str</span>
     </dt>
-    <dd>{{% md %}}The provider-assigned unique ID for this managed resource.{{% /md %}}</dd>
-    <dt class="property-"
+    <dd>{{% md %}}The provider-assigned unique ID for this managed resource.{{% /md %}}</dd><dt class="property-"
             title="">
         <span id="network_endpoints_python">
 <a href="#network_endpoints_python" style="color: inherit; text-decoration: inherit;">network_<wbr>endpoints</a>
@@ -954,8 +877,7 @@ Storage data, with the Tensorflow job running in the Node, this account must hav
     </dt>
     <dd>{{% md %}}The network endpoints where TPU workers can be accessed and sent work. It is recommended that Tensorflow clients of the
 node first reach out to the first (index 0) entry.
-{{% /md %}}</dd>
-    <dt class="property-"
+{{% /md %}}</dd><dt class="property-"
             title="">
         <span id="service_account_python">
 <a href="#service_account_python" style="color: inherit; text-decoration: inherit;">service_<wbr>account</a>
@@ -965,8 +887,7 @@ node first reach out to the first (index 0) entry.
     </dt>
     <dd>{{% md %}}The service account used to run the tensor flow services within the node. To share resources, including Google Cloud
 Storage data, with the Tensorflow job running in the Node, this account must have permissions to that data.
-{{% /md %}}</dd>
-</dl>
+{{% /md %}}</dd></dl>
 {{% /choosable %}}
 
 
@@ -1093,9 +1014,7 @@ The following state arguments are supported:
 
 
 {{% choosable language csharp %}}
-<dl class="resources-properties">
-
-    <dt class="property-optional"
+<dl class="resources-properties"><dt class="property-optional"
             title="Optional">
         <span id="state_acceleratortype_csharp">
 <a href="#state_acceleratortype_csharp" style="color: inherit; text-decoration: inherit;">Accelerator<wbr>Type</a>
@@ -1104,8 +1023,7 @@ The following state arguments are supported:
         <span class="property-type">string</span>
     </dt>
     <dd>{{% md %}}The type of hardware accelerators associated with this node.
-{{% /md %}}</dd>
-    <dt class="property-optional"
+{{% /md %}}</dd><dt class="property-optional"
             title="Optional">
         <span id="state_cidrblock_csharp">
 <a href="#state_cidrblock_csharp" style="color: inherit; text-decoration: inherit;">Cidr<wbr>Block</a>
@@ -1121,8 +1039,7 @@ Errors will occur if the CIDR block has already been used for a
 currently existing TPU node, the CIDR block conflicts with any
 subnetworks in the user's provided network, or the provided network
 is peered with another network that is using that CIDR block.
-{{% /md %}}</dd>
-    <dt class="property-optional"
+{{% /md %}}</dd><dt class="property-optional"
             title="Optional">
         <span id="state_description_csharp">
 <a href="#state_description_csharp" style="color: inherit; text-decoration: inherit;">Description</a>
@@ -1131,8 +1048,7 @@ is peered with another network that is using that CIDR block.
         <span class="property-type">string</span>
     </dt>
     <dd>{{% md %}}The user-supplied description of the TPU. Maximum of 512 characters.
-{{% /md %}}</dd>
-    <dt class="property-optional"
+{{% /md %}}</dd><dt class="property-optional"
             title="Optional">
         <span id="state_labels_csharp">
 <a href="#state_labels_csharp" style="color: inherit; text-decoration: inherit;">Labels</a>
@@ -1141,8 +1057,7 @@ is peered with another network that is using that CIDR block.
         <span class="property-type">Dictionary&lt;string, string&gt;</span>
     </dt>
     <dd>{{% md %}}Resource labels to represent user provided metadata.
-{{% /md %}}</dd>
-    <dt class="property-optional"
+{{% /md %}}</dd><dt class="property-optional"
             title="Optional">
         <span id="state_name_csharp">
 <a href="#state_name_csharp" style="color: inherit; text-decoration: inherit;">Name</a>
@@ -1151,8 +1066,7 @@ is peered with another network that is using that CIDR block.
         <span class="property-type">string</span>
     </dt>
     <dd>{{% md %}}The immutable name of the TPU.
-{{% /md %}}</dd>
-    <dt class="property-optional"
+{{% /md %}}</dd><dt class="property-optional"
             title="Optional">
         <span id="state_network_csharp">
 <a href="#state_network_csharp" style="color: inherit; text-decoration: inherit;">Network</a>
@@ -1164,8 +1078,7 @@ is peered with another network that is using that CIDR block.
 preexisting Compute Engine network inside of the project on which
 this API has been activated. If none is provided, "default" will be
 used.
-{{% /md %}}</dd>
-    <dt class="property-optional"
+{{% /md %}}</dd><dt class="property-optional"
             title="Optional">
         <span id="state_networkendpoints_csharp">
 <a href="#state_networkendpoints_csharp" style="color: inherit; text-decoration: inherit;">Network<wbr>Endpoints</a>
@@ -1175,8 +1088,7 @@ used.
     </dt>
     <dd>{{% md %}}The network endpoints where TPU workers can be accessed and sent work. It is recommended that Tensorflow clients of the
 node first reach out to the first (index 0) entry.
-{{% /md %}}</dd>
-    <dt class="property-optional"
+{{% /md %}}</dd><dt class="property-optional"
             title="Optional">
         <span id="state_project_csharp">
 <a href="#state_project_csharp" style="color: inherit; text-decoration: inherit;">Project</a>
@@ -1186,8 +1098,7 @@ node first reach out to the first (index 0) entry.
     </dt>
     <dd>{{% md %}}The ID of the project in which the resource belongs.
 If it is not provided, the provider project is used.
-{{% /md %}}</dd>
-    <dt class="property-optional"
+{{% /md %}}</dd><dt class="property-optional"
             title="Optional">
         <span id="state_schedulingconfig_csharp">
 <a href="#state_schedulingconfig_csharp" style="color: inherit; text-decoration: inherit;">Scheduling<wbr>Config</a>
@@ -1197,8 +1108,7 @@ If it is not provided, the provider project is used.
     </dt>
     <dd>{{% md %}}Sets the scheduling options for this TPU instance.
 Structure is documented below.
-{{% /md %}}</dd>
-    <dt class="property-optional"
+{{% /md %}}</dd><dt class="property-optional"
             title="Optional">
         <span id="state_serviceaccount_csharp">
 <a href="#state_serviceaccount_csharp" style="color: inherit; text-decoration: inherit;">Service<wbr>Account</a>
@@ -1208,8 +1118,7 @@ Structure is documented below.
     </dt>
     <dd>{{% md %}}The service account used to run the tensor flow services within the node. To share resources, including Google Cloud
 Storage data, with the Tensorflow job running in the Node, this account must have permissions to that data.
-{{% /md %}}</dd>
-    <dt class="property-optional"
+{{% /md %}}</dd><dt class="property-optional"
             title="Optional">
         <span id="state_tensorflowversion_csharp">
 <a href="#state_tensorflowversion_csharp" style="color: inherit; text-decoration: inherit;">Tensorflow<wbr>Version</a>
@@ -1218,8 +1127,7 @@ Storage data, with the Tensorflow job running in the Node, this account must hav
         <span class="property-type">string</span>
     </dt>
     <dd>{{% md %}}The version of Tensorflow running in the Node.
-{{% /md %}}</dd>
-    <dt class="property-optional"
+{{% /md %}}</dd><dt class="property-optional"
             title="Optional">
         <span id="state_useservicenetworking_csharp">
 <a href="#state_useservicenetworking_csharp" style="color: inherit; text-decoration: inherit;">Use<wbr>Service<wbr>Networking</a>
@@ -1231,8 +1139,7 @@ Storage data, with the Tensorflow job running in the Node, this account must hav
 The VPC Peering should be set up before provisioning the node. If this field is set,
 cidr_block field should not be specified. If the network that you want to peer the
 TPU Node to is a Shared VPC network, the node must be created with this this field enabled.
-{{% /md %}}</dd>
-    <dt class="property-optional"
+{{% /md %}}</dd><dt class="property-optional"
             title="Optional">
         <span id="state_zone_csharp">
 <a href="#state_zone_csharp" style="color: inherit; text-decoration: inherit;">Zone</a>
@@ -1241,14 +1148,11 @@ TPU Node to is a Shared VPC network, the node must be created with this this fie
         <span class="property-type">string</span>
     </dt>
     <dd>{{% md %}}The GCP location for the TPU. If it is not provided, the provider zone is used.
-{{% /md %}}</dd>
-</dl>
+{{% /md %}}</dd></dl>
 {{% /choosable %}}
 
 {{% choosable language go %}}
-<dl class="resources-properties">
-
-    <dt class="property-optional"
+<dl class="resources-properties"><dt class="property-optional"
             title="Optional">
         <span id="state_acceleratortype_go">
 <a href="#state_acceleratortype_go" style="color: inherit; text-decoration: inherit;">Accelerator<wbr>Type</a>
@@ -1257,8 +1161,7 @@ TPU Node to is a Shared VPC network, the node must be created with this this fie
         <span class="property-type">string</span>
     </dt>
     <dd>{{% md %}}The type of hardware accelerators associated with this node.
-{{% /md %}}</dd>
-    <dt class="property-optional"
+{{% /md %}}</dd><dt class="property-optional"
             title="Optional">
         <span id="state_cidrblock_go">
 <a href="#state_cidrblock_go" style="color: inherit; text-decoration: inherit;">Cidr<wbr>Block</a>
@@ -1274,8 +1177,7 @@ Errors will occur if the CIDR block has already been used for a
 currently existing TPU node, the CIDR block conflicts with any
 subnetworks in the user's provided network, or the provided network
 is peered with another network that is using that CIDR block.
-{{% /md %}}</dd>
-    <dt class="property-optional"
+{{% /md %}}</dd><dt class="property-optional"
             title="Optional">
         <span id="state_description_go">
 <a href="#state_description_go" style="color: inherit; text-decoration: inherit;">Description</a>
@@ -1284,8 +1186,7 @@ is peered with another network that is using that CIDR block.
         <span class="property-type">string</span>
     </dt>
     <dd>{{% md %}}The user-supplied description of the TPU. Maximum of 512 characters.
-{{% /md %}}</dd>
-    <dt class="property-optional"
+{{% /md %}}</dd><dt class="property-optional"
             title="Optional">
         <span id="state_labels_go">
 <a href="#state_labels_go" style="color: inherit; text-decoration: inherit;">Labels</a>
@@ -1294,8 +1195,7 @@ is peered with another network that is using that CIDR block.
         <span class="property-type">map[string]string</span>
     </dt>
     <dd>{{% md %}}Resource labels to represent user provided metadata.
-{{% /md %}}</dd>
-    <dt class="property-optional"
+{{% /md %}}</dd><dt class="property-optional"
             title="Optional">
         <span id="state_name_go">
 <a href="#state_name_go" style="color: inherit; text-decoration: inherit;">Name</a>
@@ -1304,8 +1204,7 @@ is peered with another network that is using that CIDR block.
         <span class="property-type">string</span>
     </dt>
     <dd>{{% md %}}The immutable name of the TPU.
-{{% /md %}}</dd>
-    <dt class="property-optional"
+{{% /md %}}</dd><dt class="property-optional"
             title="Optional">
         <span id="state_network_go">
 <a href="#state_network_go" style="color: inherit; text-decoration: inherit;">Network</a>
@@ -1317,8 +1216,7 @@ is peered with another network that is using that CIDR block.
 preexisting Compute Engine network inside of the project on which
 this API has been activated. If none is provided, "default" will be
 used.
-{{% /md %}}</dd>
-    <dt class="property-optional"
+{{% /md %}}</dd><dt class="property-optional"
             title="Optional">
         <span id="state_networkendpoints_go">
 <a href="#state_networkendpoints_go" style="color: inherit; text-decoration: inherit;">Network<wbr>Endpoints</a>
@@ -1328,8 +1226,7 @@ used.
     </dt>
     <dd>{{% md %}}The network endpoints where TPU workers can be accessed and sent work. It is recommended that Tensorflow clients of the
 node first reach out to the first (index 0) entry.
-{{% /md %}}</dd>
-    <dt class="property-optional"
+{{% /md %}}</dd><dt class="property-optional"
             title="Optional">
         <span id="state_project_go">
 <a href="#state_project_go" style="color: inherit; text-decoration: inherit;">Project</a>
@@ -1339,8 +1236,7 @@ node first reach out to the first (index 0) entry.
     </dt>
     <dd>{{% md %}}The ID of the project in which the resource belongs.
 If it is not provided, the provider project is used.
-{{% /md %}}</dd>
-    <dt class="property-optional"
+{{% /md %}}</dd><dt class="property-optional"
             title="Optional">
         <span id="state_schedulingconfig_go">
 <a href="#state_schedulingconfig_go" style="color: inherit; text-decoration: inherit;">Scheduling<wbr>Config</a>
@@ -1350,8 +1246,7 @@ If it is not provided, the provider project is used.
     </dt>
     <dd>{{% md %}}Sets the scheduling options for this TPU instance.
 Structure is documented below.
-{{% /md %}}</dd>
-    <dt class="property-optional"
+{{% /md %}}</dd><dt class="property-optional"
             title="Optional">
         <span id="state_serviceaccount_go">
 <a href="#state_serviceaccount_go" style="color: inherit; text-decoration: inherit;">Service<wbr>Account</a>
@@ -1361,8 +1256,7 @@ Structure is documented below.
     </dt>
     <dd>{{% md %}}The service account used to run the tensor flow services within the node. To share resources, including Google Cloud
 Storage data, with the Tensorflow job running in the Node, this account must have permissions to that data.
-{{% /md %}}</dd>
-    <dt class="property-optional"
+{{% /md %}}</dd><dt class="property-optional"
             title="Optional">
         <span id="state_tensorflowversion_go">
 <a href="#state_tensorflowversion_go" style="color: inherit; text-decoration: inherit;">Tensorflow<wbr>Version</a>
@@ -1371,8 +1265,7 @@ Storage data, with the Tensorflow job running in the Node, this account must hav
         <span class="property-type">string</span>
     </dt>
     <dd>{{% md %}}The version of Tensorflow running in the Node.
-{{% /md %}}</dd>
-    <dt class="property-optional"
+{{% /md %}}</dd><dt class="property-optional"
             title="Optional">
         <span id="state_useservicenetworking_go">
 <a href="#state_useservicenetworking_go" style="color: inherit; text-decoration: inherit;">Use<wbr>Service<wbr>Networking</a>
@@ -1384,8 +1277,7 @@ Storage data, with the Tensorflow job running in the Node, this account must hav
 The VPC Peering should be set up before provisioning the node. If this field is set,
 cidr_block field should not be specified. If the network that you want to peer the
 TPU Node to is a Shared VPC network, the node must be created with this this field enabled.
-{{% /md %}}</dd>
-    <dt class="property-optional"
+{{% /md %}}</dd><dt class="property-optional"
             title="Optional">
         <span id="state_zone_go">
 <a href="#state_zone_go" style="color: inherit; text-decoration: inherit;">Zone</a>
@@ -1394,14 +1286,11 @@ TPU Node to is a Shared VPC network, the node must be created with this this fie
         <span class="property-type">string</span>
     </dt>
     <dd>{{% md %}}The GCP location for the TPU. If it is not provided, the provider zone is used.
-{{% /md %}}</dd>
-</dl>
+{{% /md %}}</dd></dl>
 {{% /choosable %}}
 
 {{% choosable language nodejs %}}
-<dl class="resources-properties">
-
-    <dt class="property-optional"
+<dl class="resources-properties"><dt class="property-optional"
             title="Optional">
         <span id="state_acceleratortype_nodejs">
 <a href="#state_acceleratortype_nodejs" style="color: inherit; text-decoration: inherit;">accelerator<wbr>Type</a>
@@ -1410,8 +1299,7 @@ TPU Node to is a Shared VPC network, the node must be created with this this fie
         <span class="property-type">string</span>
     </dt>
     <dd>{{% md %}}The type of hardware accelerators associated with this node.
-{{% /md %}}</dd>
-    <dt class="property-optional"
+{{% /md %}}</dd><dt class="property-optional"
             title="Optional">
         <span id="state_cidrblock_nodejs">
 <a href="#state_cidrblock_nodejs" style="color: inherit; text-decoration: inherit;">cidr<wbr>Block</a>
@@ -1427,8 +1315,7 @@ Errors will occur if the CIDR block has already been used for a
 currently existing TPU node, the CIDR block conflicts with any
 subnetworks in the user's provided network, or the provided network
 is peered with another network that is using that CIDR block.
-{{% /md %}}</dd>
-    <dt class="property-optional"
+{{% /md %}}</dd><dt class="property-optional"
             title="Optional">
         <span id="state_description_nodejs">
 <a href="#state_description_nodejs" style="color: inherit; text-decoration: inherit;">description</a>
@@ -1437,8 +1324,7 @@ is peered with another network that is using that CIDR block.
         <span class="property-type">string</span>
     </dt>
     <dd>{{% md %}}The user-supplied description of the TPU. Maximum of 512 characters.
-{{% /md %}}</dd>
-    <dt class="property-optional"
+{{% /md %}}</dd><dt class="property-optional"
             title="Optional">
         <span id="state_labels_nodejs">
 <a href="#state_labels_nodejs" style="color: inherit; text-decoration: inherit;">labels</a>
@@ -1447,8 +1333,7 @@ is peered with another network that is using that CIDR block.
         <span class="property-type">{[key: string]: string}</span>
     </dt>
     <dd>{{% md %}}Resource labels to represent user provided metadata.
-{{% /md %}}</dd>
-    <dt class="property-optional"
+{{% /md %}}</dd><dt class="property-optional"
             title="Optional">
         <span id="state_name_nodejs">
 <a href="#state_name_nodejs" style="color: inherit; text-decoration: inherit;">name</a>
@@ -1457,8 +1342,7 @@ is peered with another network that is using that CIDR block.
         <span class="property-type">string</span>
     </dt>
     <dd>{{% md %}}The immutable name of the TPU.
-{{% /md %}}</dd>
-    <dt class="property-optional"
+{{% /md %}}</dd><dt class="property-optional"
             title="Optional">
         <span id="state_network_nodejs">
 <a href="#state_network_nodejs" style="color: inherit; text-decoration: inherit;">network</a>
@@ -1470,8 +1354,7 @@ is peered with another network that is using that CIDR block.
 preexisting Compute Engine network inside of the project on which
 this API has been activated. If none is provided, "default" will be
 used.
-{{% /md %}}</dd>
-    <dt class="property-optional"
+{{% /md %}}</dd><dt class="property-optional"
             title="Optional">
         <span id="state_networkendpoints_nodejs">
 <a href="#state_networkendpoints_nodejs" style="color: inherit; text-decoration: inherit;">network<wbr>Endpoints</a>
@@ -1481,8 +1364,7 @@ used.
     </dt>
     <dd>{{% md %}}The network endpoints where TPU workers can be accessed and sent work. It is recommended that Tensorflow clients of the
 node first reach out to the first (index 0) entry.
-{{% /md %}}</dd>
-    <dt class="property-optional"
+{{% /md %}}</dd><dt class="property-optional"
             title="Optional">
         <span id="state_project_nodejs">
 <a href="#state_project_nodejs" style="color: inherit; text-decoration: inherit;">project</a>
@@ -1492,8 +1374,7 @@ node first reach out to the first (index 0) entry.
     </dt>
     <dd>{{% md %}}The ID of the project in which the resource belongs.
 If it is not provided, the provider project is used.
-{{% /md %}}</dd>
-    <dt class="property-optional"
+{{% /md %}}</dd><dt class="property-optional"
             title="Optional">
         <span id="state_schedulingconfig_nodejs">
 <a href="#state_schedulingconfig_nodejs" style="color: inherit; text-decoration: inherit;">scheduling<wbr>Config</a>
@@ -1503,8 +1384,7 @@ If it is not provided, the provider project is used.
     </dt>
     <dd>{{% md %}}Sets the scheduling options for this TPU instance.
 Structure is documented below.
-{{% /md %}}</dd>
-    <dt class="property-optional"
+{{% /md %}}</dd><dt class="property-optional"
             title="Optional">
         <span id="state_serviceaccount_nodejs">
 <a href="#state_serviceaccount_nodejs" style="color: inherit; text-decoration: inherit;">service<wbr>Account</a>
@@ -1514,8 +1394,7 @@ Structure is documented below.
     </dt>
     <dd>{{% md %}}The service account used to run the tensor flow services within the node. To share resources, including Google Cloud
 Storage data, with the Tensorflow job running in the Node, this account must have permissions to that data.
-{{% /md %}}</dd>
-    <dt class="property-optional"
+{{% /md %}}</dd><dt class="property-optional"
             title="Optional">
         <span id="state_tensorflowversion_nodejs">
 <a href="#state_tensorflowversion_nodejs" style="color: inherit; text-decoration: inherit;">tensorflow<wbr>Version</a>
@@ -1524,8 +1403,7 @@ Storage data, with the Tensorflow job running in the Node, this account must hav
         <span class="property-type">string</span>
     </dt>
     <dd>{{% md %}}The version of Tensorflow running in the Node.
-{{% /md %}}</dd>
-    <dt class="property-optional"
+{{% /md %}}</dd><dt class="property-optional"
             title="Optional">
         <span id="state_useservicenetworking_nodejs">
 <a href="#state_useservicenetworking_nodejs" style="color: inherit; text-decoration: inherit;">use<wbr>Service<wbr>Networking</a>
@@ -1537,8 +1415,7 @@ Storage data, with the Tensorflow job running in the Node, this account must hav
 The VPC Peering should be set up before provisioning the node. If this field is set,
 cidr_block field should not be specified. If the network that you want to peer the
 TPU Node to is a Shared VPC network, the node must be created with this this field enabled.
-{{% /md %}}</dd>
-    <dt class="property-optional"
+{{% /md %}}</dd><dt class="property-optional"
             title="Optional">
         <span id="state_zone_nodejs">
 <a href="#state_zone_nodejs" style="color: inherit; text-decoration: inherit;">zone</a>
@@ -1547,14 +1424,11 @@ TPU Node to is a Shared VPC network, the node must be created with this this fie
         <span class="property-type">string</span>
     </dt>
     <dd>{{% md %}}The GCP location for the TPU. If it is not provided, the provider zone is used.
-{{% /md %}}</dd>
-</dl>
+{{% /md %}}</dd></dl>
 {{% /choosable %}}
 
 {{% choosable language python %}}
-<dl class="resources-properties">
-
-    <dt class="property-optional"
+<dl class="resources-properties"><dt class="property-optional"
             title="Optional">
         <span id="state_accelerator_type_python">
 <a href="#state_accelerator_type_python" style="color: inherit; text-decoration: inherit;">accelerator_<wbr>type</a>
@@ -1563,8 +1437,7 @@ TPU Node to is a Shared VPC network, the node must be created with this this fie
         <span class="property-type">str</span>
     </dt>
     <dd>{{% md %}}The type of hardware accelerators associated with this node.
-{{% /md %}}</dd>
-    <dt class="property-optional"
+{{% /md %}}</dd><dt class="property-optional"
             title="Optional">
         <span id="state_cidr_block_python">
 <a href="#state_cidr_block_python" style="color: inherit; text-decoration: inherit;">cidr_<wbr>block</a>
@@ -1580,8 +1453,7 @@ Errors will occur if the CIDR block has already been used for a
 currently existing TPU node, the CIDR block conflicts with any
 subnetworks in the user's provided network, or the provided network
 is peered with another network that is using that CIDR block.
-{{% /md %}}</dd>
-    <dt class="property-optional"
+{{% /md %}}</dd><dt class="property-optional"
             title="Optional">
         <span id="state_description_python">
 <a href="#state_description_python" style="color: inherit; text-decoration: inherit;">description</a>
@@ -1590,8 +1462,7 @@ is peered with another network that is using that CIDR block.
         <span class="property-type">str</span>
     </dt>
     <dd>{{% md %}}The user-supplied description of the TPU. Maximum of 512 characters.
-{{% /md %}}</dd>
-    <dt class="property-optional"
+{{% /md %}}</dd><dt class="property-optional"
             title="Optional">
         <span id="state_labels_python">
 <a href="#state_labels_python" style="color: inherit; text-decoration: inherit;">labels</a>
@@ -1600,8 +1471,7 @@ is peered with another network that is using that CIDR block.
         <span class="property-type">Mapping[str, str]</span>
     </dt>
     <dd>{{% md %}}Resource labels to represent user provided metadata.
-{{% /md %}}</dd>
-    <dt class="property-optional"
+{{% /md %}}</dd><dt class="property-optional"
             title="Optional">
         <span id="state_name_python">
 <a href="#state_name_python" style="color: inherit; text-decoration: inherit;">name</a>
@@ -1610,8 +1480,7 @@ is peered with another network that is using that CIDR block.
         <span class="property-type">str</span>
     </dt>
     <dd>{{% md %}}The immutable name of the TPU.
-{{% /md %}}</dd>
-    <dt class="property-optional"
+{{% /md %}}</dd><dt class="property-optional"
             title="Optional">
         <span id="state_network_python">
 <a href="#state_network_python" style="color: inherit; text-decoration: inherit;">network</a>
@@ -1623,8 +1492,7 @@ is peered with another network that is using that CIDR block.
 preexisting Compute Engine network inside of the project on which
 this API has been activated. If none is provided, "default" will be
 used.
-{{% /md %}}</dd>
-    <dt class="property-optional"
+{{% /md %}}</dd><dt class="property-optional"
             title="Optional">
         <span id="state_network_endpoints_python">
 <a href="#state_network_endpoints_python" style="color: inherit; text-decoration: inherit;">network_<wbr>endpoints</a>
@@ -1634,8 +1502,7 @@ used.
     </dt>
     <dd>{{% md %}}The network endpoints where TPU workers can be accessed and sent work. It is recommended that Tensorflow clients of the
 node first reach out to the first (index 0) entry.
-{{% /md %}}</dd>
-    <dt class="property-optional"
+{{% /md %}}</dd><dt class="property-optional"
             title="Optional">
         <span id="state_project_python">
 <a href="#state_project_python" style="color: inherit; text-decoration: inherit;">project</a>
@@ -1645,8 +1512,7 @@ node first reach out to the first (index 0) entry.
     </dt>
     <dd>{{% md %}}The ID of the project in which the resource belongs.
 If it is not provided, the provider project is used.
-{{% /md %}}</dd>
-    <dt class="property-optional"
+{{% /md %}}</dd><dt class="property-optional"
             title="Optional">
         <span id="state_scheduling_config_python">
 <a href="#state_scheduling_config_python" style="color: inherit; text-decoration: inherit;">scheduling_<wbr>config</a>
@@ -1656,8 +1522,7 @@ If it is not provided, the provider project is used.
     </dt>
     <dd>{{% md %}}Sets the scheduling options for this TPU instance.
 Structure is documented below.
-{{% /md %}}</dd>
-    <dt class="property-optional"
+{{% /md %}}</dd><dt class="property-optional"
             title="Optional">
         <span id="state_service_account_python">
 <a href="#state_service_account_python" style="color: inherit; text-decoration: inherit;">service_<wbr>account</a>
@@ -1667,8 +1532,7 @@ Structure is documented below.
     </dt>
     <dd>{{% md %}}The service account used to run the tensor flow services within the node. To share resources, including Google Cloud
 Storage data, with the Tensorflow job running in the Node, this account must have permissions to that data.
-{{% /md %}}</dd>
-    <dt class="property-optional"
+{{% /md %}}</dd><dt class="property-optional"
             title="Optional">
         <span id="state_tensorflow_version_python">
 <a href="#state_tensorflow_version_python" style="color: inherit; text-decoration: inherit;">tensorflow_<wbr>version</a>
@@ -1677,8 +1541,7 @@ Storage data, with the Tensorflow job running in the Node, this account must hav
         <span class="property-type">str</span>
     </dt>
     <dd>{{% md %}}The version of Tensorflow running in the Node.
-{{% /md %}}</dd>
-    <dt class="property-optional"
+{{% /md %}}</dd><dt class="property-optional"
             title="Optional">
         <span id="state_use_service_networking_python">
 <a href="#state_use_service_networking_python" style="color: inherit; text-decoration: inherit;">use_<wbr>service_<wbr>networking</a>
@@ -1690,8 +1553,7 @@ Storage data, with the Tensorflow job running in the Node, this account must hav
 The VPC Peering should be set up before provisioning the node. If this field is set,
 cidr_block field should not be specified. If the network that you want to peer the
 TPU Node to is a Shared VPC network, the node must be created with this this field enabled.
-{{% /md %}}</dd>
-    <dt class="property-optional"
+{{% /md %}}</dd><dt class="property-optional"
             title="Optional">
         <span id="state_zone_python">
 <a href="#state_zone_python" style="color: inherit; text-decoration: inherit;">zone</a>
@@ -1700,8 +1562,7 @@ TPU Node to is a Shared VPC network, the node must be created with this this fie
         <span class="property-type">str</span>
     </dt>
     <dd>{{% md %}}The GCP location for the TPU. If it is not provided, the provider zone is used.
-{{% /md %}}</dd>
-</dl>
+{{% /md %}}</dd></dl>
 {{% /choosable %}}
 
 
@@ -1716,9 +1577,7 @@ TPU Node to is a Shared VPC network, the node must be created with this this fie
 <h4 id="nodenetworkendpoint">Node<wbr>Network<wbr>Endpoint</h4>
 
 {{% choosable language csharp %}}
-<dl class="resources-properties">
-
-    <dt class="property-optional"
+<dl class="resources-properties"><dt class="property-optional"
             title="Optional">
         <span id="ipaddress_csharp">
 <a href="#ipaddress_csharp" style="color: inherit; text-decoration: inherit;">Ip<wbr>Address</a>
@@ -1726,8 +1585,7 @@ TPU Node to is a Shared VPC network, the node must be created with this this fie
         <span class="property-indicator"></span>
         <span class="property-type">string</span>
     </dt>
-    <dd>{{% md %}}{{% /md %}}</dd>
-    <dt class="property-optional"
+    <dd>{{% md %}}{{% /md %}}</dd><dt class="property-optional"
             title="Optional">
         <span id="port_csharp">
 <a href="#port_csharp" style="color: inherit; text-decoration: inherit;">Port</a>
@@ -1735,14 +1593,11 @@ TPU Node to is a Shared VPC network, the node must be created with this this fie
         <span class="property-indicator"></span>
         <span class="property-type">int</span>
     </dt>
-    <dd>{{% md %}}{{% /md %}}</dd>
-</dl>
+    <dd>{{% md %}}{{% /md %}}</dd></dl>
 {{% /choosable %}}
 
 {{% choosable language go %}}
-<dl class="resources-properties">
-
-    <dt class="property-optional"
+<dl class="resources-properties"><dt class="property-optional"
             title="Optional">
         <span id="ipaddress_go">
 <a href="#ipaddress_go" style="color: inherit; text-decoration: inherit;">Ip<wbr>Address</a>
@@ -1750,8 +1605,7 @@ TPU Node to is a Shared VPC network, the node must be created with this this fie
         <span class="property-indicator"></span>
         <span class="property-type">string</span>
     </dt>
-    <dd>{{% md %}}{{% /md %}}</dd>
-    <dt class="property-optional"
+    <dd>{{% md %}}{{% /md %}}</dd><dt class="property-optional"
             title="Optional">
         <span id="port_go">
 <a href="#port_go" style="color: inherit; text-decoration: inherit;">Port</a>
@@ -1759,14 +1613,11 @@ TPU Node to is a Shared VPC network, the node must be created with this this fie
         <span class="property-indicator"></span>
         <span class="property-type">int</span>
     </dt>
-    <dd>{{% md %}}{{% /md %}}</dd>
-</dl>
+    <dd>{{% md %}}{{% /md %}}</dd></dl>
 {{% /choosable %}}
 
 {{% choosable language nodejs %}}
-<dl class="resources-properties">
-
-    <dt class="property-optional"
+<dl class="resources-properties"><dt class="property-optional"
             title="Optional">
         <span id="ipaddress_nodejs">
 <a href="#ipaddress_nodejs" style="color: inherit; text-decoration: inherit;">ip<wbr>Address</a>
@@ -1774,8 +1625,7 @@ TPU Node to is a Shared VPC network, the node must be created with this this fie
         <span class="property-indicator"></span>
         <span class="property-type">string</span>
     </dt>
-    <dd>{{% md %}}{{% /md %}}</dd>
-    <dt class="property-optional"
+    <dd>{{% md %}}{{% /md %}}</dd><dt class="property-optional"
             title="Optional">
         <span id="port_nodejs">
 <a href="#port_nodejs" style="color: inherit; text-decoration: inherit;">port</a>
@@ -1783,14 +1633,11 @@ TPU Node to is a Shared VPC network, the node must be created with this this fie
         <span class="property-indicator"></span>
         <span class="property-type">number</span>
     </dt>
-    <dd>{{% md %}}{{% /md %}}</dd>
-</dl>
+    <dd>{{% md %}}{{% /md %}}</dd></dl>
 {{% /choosable %}}
 
 {{% choosable language python %}}
-<dl class="resources-properties">
-
-    <dt class="property-optional"
+<dl class="resources-properties"><dt class="property-optional"
             title="Optional">
         <span id="ip_address_python">
 <a href="#ip_address_python" style="color: inherit; text-decoration: inherit;">ip_<wbr>address</a>
@@ -1798,8 +1645,7 @@ TPU Node to is a Shared VPC network, the node must be created with this this fie
         <span class="property-indicator"></span>
         <span class="property-type">str</span>
     </dt>
-    <dd>{{% md %}}{{% /md %}}</dd>
-    <dt class="property-optional"
+    <dd>{{% md %}}{{% /md %}}</dd><dt class="property-optional"
             title="Optional">
         <span id="port_python">
 <a href="#port_python" style="color: inherit; text-decoration: inherit;">port</a>
@@ -1807,16 +1653,13 @@ TPU Node to is a Shared VPC network, the node must be created with this this fie
         <span class="property-indicator"></span>
         <span class="property-type">int</span>
     </dt>
-    <dd>{{% md %}}{{% /md %}}</dd>
-</dl>
+    <dd>{{% md %}}{{% /md %}}</dd></dl>
 {{% /choosable %}}
 
 <h4 id="nodeschedulingconfig">Node<wbr>Scheduling<wbr>Config</h4>
 
 {{% choosable language csharp %}}
-<dl class="resources-properties">
-
-    <dt class="property-required"
+<dl class="resources-properties"><dt class="property-required"
             title="Required">
         <span id="preemptible_csharp">
 <a href="#preemptible_csharp" style="color: inherit; text-decoration: inherit;">Preemptible</a>
@@ -1825,14 +1668,11 @@ TPU Node to is a Shared VPC network, the node must be created with this this fie
         <span class="property-type">bool</span>
     </dt>
     <dd>{{% md %}}Defines whether the TPU instance is preemptible.
-{{% /md %}}</dd>
-</dl>
+{{% /md %}}</dd></dl>
 {{% /choosable %}}
 
 {{% choosable language go %}}
-<dl class="resources-properties">
-
-    <dt class="property-required"
+<dl class="resources-properties"><dt class="property-required"
             title="Required">
         <span id="preemptible_go">
 <a href="#preemptible_go" style="color: inherit; text-decoration: inherit;">Preemptible</a>
@@ -1841,14 +1681,11 @@ TPU Node to is a Shared VPC network, the node must be created with this this fie
         <span class="property-type">bool</span>
     </dt>
     <dd>{{% md %}}Defines whether the TPU instance is preemptible.
-{{% /md %}}</dd>
-</dl>
+{{% /md %}}</dd></dl>
 {{% /choosable %}}
 
 {{% choosable language nodejs %}}
-<dl class="resources-properties">
-
-    <dt class="property-required"
+<dl class="resources-properties"><dt class="property-required"
             title="Required">
         <span id="preemptible_nodejs">
 <a href="#preemptible_nodejs" style="color: inherit; text-decoration: inherit;">preemptible</a>
@@ -1857,14 +1694,11 @@ TPU Node to is a Shared VPC network, the node must be created with this this fie
         <span class="property-type">boolean</span>
     </dt>
     <dd>{{% md %}}Defines whether the TPU instance is preemptible.
-{{% /md %}}</dd>
-</dl>
+{{% /md %}}</dd></dl>
 {{% /choosable %}}
 
 {{% choosable language python %}}
-<dl class="resources-properties">
-
-    <dt class="property-required"
+<dl class="resources-properties"><dt class="property-required"
             title="Required">
         <span id="preemptible_python">
 <a href="#preemptible_python" style="color: inherit; text-decoration: inherit;">preemptible</a>
@@ -1873,8 +1707,7 @@ TPU Node to is a Shared VPC network, the node must be created with this this fie
         <span class="property-type">bool</span>
     </dt>
     <dd>{{% md %}}Defines whether the TPU instance is preemptible.
-{{% /md %}}</dd>
-</dl>
+{{% /md %}}</dd></dl>
 {{% /choosable %}}
 ## Import
 
@@ -1907,6 +1740,6 @@ Node can be imported using any of these accepted formats
 	<dt>License</dt>
 	<dd>Apache-2.0</dd>
 	<dt>Notes</dt>
-	<dd>This Pulumi package is based on the [`google-beta` Terraform Provider](https://github.com/hashicorp/terraform-provider-google-beta).</dd>
+	<dd>{{% md %}}This Pulumi package is based on the [`google-beta` Terraform Provider](https://github.com/hashicorp/terraform-provider-google-beta).{{% /md %}}</dd>
 </dl>
 

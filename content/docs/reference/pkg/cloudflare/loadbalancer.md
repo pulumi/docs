@@ -14,11 +14,17 @@ Provides a Cloudflare Load Balancer resource. This sits in front of a number of 
 
 
 {{% examples %}}
+
 ## Example Usage
 
 {{< chooser language "typescript,python,go,csharp" / >}}
 
-{{% example csharp %}}
+
+
+
+
+{{< example csharp >}}
+
 ```csharp
 using Pulumi;
 using Cloudflare = Pulumi.Cloudflare;
@@ -83,9 +89,12 @@ class MyStack : Stack
 }
 ```
 
-{{% /example %}}
 
-{{% example go %}}
+{{< /example >}}
+
+
+{{< example go >}}
+
 ```go
 package main
 
@@ -144,9 +153,12 @@ func main() {
 }
 ```
 
-{{% /example %}}
 
-{{% example python %}}
+{{< /example >}}
+
+
+{{< example python >}}
+
 ```python
 import pulumi
 import pulumi_cloudflare as cloudflare
@@ -179,9 +191,12 @@ bar = cloudflare.LoadBalancer("bar",
     )])
 ```
 
-{{% /example %}}
 
-{{% example typescript %}}
+{{< /example >}}
+
+
+{{< example typescript >}}
+
 
 ```typescript
 import * as pulumi from "@pulumi/pulumi";
@@ -217,9 +232,16 @@ const bar = new cloudflare.LoadBalancer("bar", {
 });
 ```
 
-{{% /example %}}
+
+{{< /example >}}
+
+
+
+
 
 {{% /examples %}}
+
+
 
 
 ## Create a LoadBalancer Resource {#create}
@@ -244,9 +266,7 @@ const bar = new cloudflare.LoadBalancer("bar", {
 
 {{% choosable language nodejs %}}
 
-<dl class="resources-properties">
-  
-    <dt
+<dl class="resources-properties"><dt
         class="property-required" title="Required">
         <span>name</span>
         <span class="property-indicator"></span>
@@ -254,9 +274,7 @@ const bar = new cloudflare.LoadBalancer("bar", {
     </dt>
     <dd>
       The unique name of the resource.
-    </dd>
-  
-    <dt
+    </dd><dt
         class="property-required" title="Required">
         <span>args</span>
         <span class="property-indicator"></span>
@@ -264,9 +282,7 @@ const bar = new cloudflare.LoadBalancer("bar", {
     </dt>
     <dd>
       The arguments to resource properties.
-    </dd>
-  
-    <dt
+    </dd><dt
         class="property-optional" title="Optional">
         <span>opts</span>
         <span class="property-indicator"></span>
@@ -274,10 +290,7 @@ const bar = new cloudflare.LoadBalancer("bar", {
     </dt>
     <dd>
       Bag of options to control resource&#39;s behavior.
-    </dd>
-  
-
-</dl>
+    </dd></dl>
 
 {{% /choosable %}}
 
@@ -303,9 +316,7 @@ const bar = new cloudflare.LoadBalancer("bar", {
 
 {{% choosable language go %}}
 
-<dl class="resources-properties">
-  
-    <dt
+<dl class="resources-properties"><dt
         class="property-optional" title="Optional">
         <span>ctx</span>
         <span class="property-indicator"></span>
@@ -313,9 +324,7 @@ const bar = new cloudflare.LoadBalancer("bar", {
     </dt>
     <dd>
       Context object for the current deployment.
-    </dd>
-  
-    <dt
+    </dd><dt
         class="property-required" title="Required">
         <span>name</span>
         <span class="property-indicator"></span>
@@ -323,9 +332,7 @@ const bar = new cloudflare.LoadBalancer("bar", {
     </dt>
     <dd>
       The unique name of the resource.
-    </dd>
-  
-    <dt
+    </dd><dt
         class="property-required" title="Required">
         <span>args</span>
         <span class="property-indicator"></span>
@@ -333,9 +340,7 @@ const bar = new cloudflare.LoadBalancer("bar", {
     </dt>
     <dd>
       The arguments to resource properties.
-    </dd>
-  
-    <dt
+    </dd><dt
         class="property-optional" title="Optional">
         <span>opts</span>
         <span class="property-indicator"></span>
@@ -343,18 +348,13 @@ const bar = new cloudflare.LoadBalancer("bar", {
     </dt>
     <dd>
       Bag of options to control resource&#39;s behavior.
-    </dd>
-  
-
-</dl>
+    </dd></dl>
 
 {{% /choosable %}}
 
 {{% choosable language csharp %}}
 
-<dl class="resources-properties">
-  
-    <dt
+<dl class="resources-properties"><dt
         class="property-required" title="Required">
         <span>name</span>
         <span class="property-indicator"></span>
@@ -362,9 +362,7 @@ const bar = new cloudflare.LoadBalancer("bar", {
     </dt>
     <dd>
       The unique name of the resource.
-    </dd>
-  
-    <dt
+    </dd><dt
         class="property-required" title="Required">
         <span>args</span>
         <span class="property-indicator"></span>
@@ -372,9 +370,7 @@ const bar = new cloudflare.LoadBalancer("bar", {
     </dt>
     <dd>
       The arguments to resource properties.
-    </dd>
-  
-    <dt
+    </dd><dt
         class="property-optional" title="Optional">
         <span>opts</span>
         <span class="property-indicator"></span>
@@ -382,10 +378,7 @@ const bar = new cloudflare.LoadBalancer("bar", {
     </dt>
     <dd>
       Bag of options to control resource&#39;s behavior.
-    </dd>
-  
-
-</dl>
+    </dd></dl>
 
 {{% /choosable %}}
 
@@ -400,9 +393,7 @@ The LoadBalancer resource accepts the following [input]({{< relref "/docs/intro/
 
 
 {{% choosable language csharp %}}
-<dl class="resources-properties">
-
-    <dt class="property-required"
+<dl class="resources-properties"><dt class="property-required"
             title="Required">
         <span id="defaultpoolids_csharp">
 <a href="#defaultpoolids_csharp" style="color: inherit; text-decoration: inherit;">Default<wbr>Pool<wbr>Ids</a>
@@ -411,8 +402,7 @@ The LoadBalancer resource accepts the following [input]({{< relref "/docs/intro/
         <span class="property-type">List&lt;string&gt;</span>
     </dt>
     <dd>{{% md %}}A list of pool IDs ordered by their failover priority. Used whenever region/pop pools are not defined.
-{{% /md %}}</dd>
-    <dt class="property-required"
+{{% /md %}}</dd><dt class="property-required"
             title="Required">
         <span id="fallbackpoolid_csharp">
 <a href="#fallbackpoolid_csharp" style="color: inherit; text-decoration: inherit;">Fallback<wbr>Pool<wbr>Id</a>
@@ -421,8 +411,7 @@ The LoadBalancer resource accepts the following [input]({{< relref "/docs/intro/
         <span class="property-type">string</span>
     </dt>
     <dd>{{% md %}}The pool ID to use when all other pools are detected as unhealthy.
-{{% /md %}}</dd>
-    <dt class="property-required"
+{{% /md %}}</dd><dt class="property-required"
             title="Required">
         <span id="name_csharp">
 <a href="#name_csharp" style="color: inherit; text-decoration: inherit;">Name</a>
@@ -431,8 +420,7 @@ The LoadBalancer resource accepts the following [input]({{< relref "/docs/intro/
         <span class="property-type">string</span>
     </dt>
     <dd>{{% md %}}The DNS name (FQDN, including the zone) to associate with the load balancer.
-{{% /md %}}</dd>
-    <dt class="property-required"
+{{% /md %}}</dd><dt class="property-required"
             title="Required">
         <span id="zoneid_csharp">
 <a href="#zoneid_csharp" style="color: inherit; text-decoration: inherit;">Zone<wbr>Id</a>
@@ -441,8 +429,7 @@ The LoadBalancer resource accepts the following [input]({{< relref "/docs/intro/
         <span class="property-type">string</span>
     </dt>
     <dd>{{% md %}}The zone ID to add the load balancer to.
-{{% /md %}}</dd>
-    <dt class="property-optional"
+{{% /md %}}</dd><dt class="property-optional"
             title="Optional">
         <span id="description_csharp">
 <a href="#description_csharp" style="color: inherit; text-decoration: inherit;">Description</a>
@@ -451,8 +438,7 @@ The LoadBalancer resource accepts the following [input]({{< relref "/docs/intro/
         <span class="property-type">string</span>
     </dt>
     <dd>{{% md %}}Free text description.
-{{% /md %}}</dd>
-    <dt class="property-optional"
+{{% /md %}}</dd><dt class="property-optional"
             title="Optional">
         <span id="enabled_csharp">
 <a href="#enabled_csharp" style="color: inherit; text-decoration: inherit;">Enabled</a>
@@ -461,8 +447,7 @@ The LoadBalancer resource accepts the following [input]({{< relref "/docs/intro/
         <span class="property-type">bool</span>
     </dt>
     <dd>{{% md %}}Enable or disable the load balancer. Defaults to `true` (enabled).
-{{% /md %}}</dd>
-    <dt class="property-optional"
+{{% /md %}}</dd><dt class="property-optional"
             title="Optional">
         <span id="poppools_csharp">
 <a href="#poppools_csharp" style="color: inherit; text-decoration: inherit;">Pop<wbr>Pools</a>
@@ -471,8 +456,7 @@ The LoadBalancer resource accepts the following [input]({{< relref "/docs/intro/
         <span class="property-type"><a href="#loadbalancerpoppool">List&lt;Load<wbr>Balancer<wbr>Pop<wbr>Pool<wbr>Args&gt;</a></span>
     </dt>
     <dd>{{% md %}}A set containing mappings of Cloudflare Point-of-Presence (PoP) identifiers to a list of pool IDs (ordered by their failover priority) for the PoP (datacenter). This feature is only available to enterprise customers. Fields documented below.
-{{% /md %}}</dd>
-    <dt class="property-optional"
+{{% /md %}}</dd><dt class="property-optional"
             title="Optional">
         <span id="proxied_csharp">
 <a href="#proxied_csharp" style="color: inherit; text-decoration: inherit;">Proxied</a>
@@ -481,8 +465,7 @@ The LoadBalancer resource accepts the following [input]({{< relref "/docs/intro/
         <span class="property-type">bool</span>
     </dt>
     <dd>{{% md %}}Whether the hostname gets Cloudflare's origin protection. Defaults to `false`.
-{{% /md %}}</dd>
-    <dt class="property-optional"
+{{% /md %}}</dd><dt class="property-optional"
             title="Optional">
         <span id="regionpools_csharp">
 <a href="#regionpools_csharp" style="color: inherit; text-decoration: inherit;">Region<wbr>Pools</a>
@@ -491,8 +474,7 @@ The LoadBalancer resource accepts the following [input]({{< relref "/docs/intro/
         <span class="property-type"><a href="#loadbalancerregionpool">List&lt;Load<wbr>Balancer<wbr>Region<wbr>Pool<wbr>Args&gt;</a></span>
     </dt>
     <dd>{{% md %}}A set containing mappings of region/country codes to a list of pool IDs (ordered by their failover priority) for the given region. Fields documented below.
-{{% /md %}}</dd>
-    <dt class="property-optional"
+{{% /md %}}</dd><dt class="property-optional"
             title="Optional">
         <span id="sessionaffinity_csharp">
 <a href="#sessionaffinity_csharp" style="color: inherit; text-decoration: inherit;">Session<wbr>Affinity</a>
@@ -501,8 +483,7 @@ The LoadBalancer resource accepts the following [input]({{< relref "/docs/intro/
         <span class="property-type">string</span>
     </dt>
     <dd>{{% md %}}Associates all requests coming from an end-user with a single origin. Cloudflare will set a cookie on the initial response to the client, such that consequent requests with the cookie in the request will go to the same origin, so long as it is available.  Valid values are: `""`, `"none"`, `"cookie"`, and `"ip_cookie"`.  Default is `""`.
-{{% /md %}}</dd>
-    <dt class="property-optional"
+{{% /md %}}</dd><dt class="property-optional"
             title="Optional">
         <span id="sessionaffinityattributes_csharp">
 <a href="#sessionaffinityattributes_csharp" style="color: inherit; text-decoration: inherit;">Session<wbr>Affinity<wbr>Attributes</a>
@@ -511,8 +492,7 @@ The LoadBalancer resource accepts the following [input]({{< relref "/docs/intro/
         <span class="property-type">Dictionary&lt;string, string&gt;</span>
     </dt>
     <dd>{{% md %}}Configure cookie attributes for session affinity cookie. See the field documentation below.
-{{% /md %}}</dd>
-    <dt class="property-optional"
+{{% /md %}}</dd><dt class="property-optional"
             title="Optional">
         <span id="sessionaffinityttl_csharp">
 <a href="#sessionaffinityttl_csharp" style="color: inherit; text-decoration: inherit;">Session<wbr>Affinity<wbr>Ttl</a>
@@ -521,8 +501,7 @@ The LoadBalancer resource accepts the following [input]({{< relref "/docs/intro/
         <span class="property-type">int</span>
     </dt>
     <dd>{{% md %}}Time, in seconds, until this load balancers session affinity cookie expires after being created. This parameter is ignored unless a supported session affinity policy is set. The current default of 23 hours will be used unless `session_affinity_ttl` is explicitly set. Once the expiry time has been reached, subsequent requests may get sent to a different origin server. Valid values are between 1800 and 604800.
-{{% /md %}}</dd>
-    <dt class="property-optional"
+{{% /md %}}</dd><dt class="property-optional"
             title="Optional">
         <span id="steeringpolicy_csharp">
 <a href="#steeringpolicy_csharp" style="color: inherit; text-decoration: inherit;">Steering<wbr>Policy</a>
@@ -531,8 +510,7 @@ The LoadBalancer resource accepts the following [input]({{< relref "/docs/intro/
         <span class="property-type">string</span>
     </dt>
     <dd>{{% md %}}Determine which method the load balancer uses to determine the fastest route to your origin. Valid values are: `"off"`, `"geo"`, `"dynamic_latency"`, `"random"` or `""`. Default is `""`.
-{{% /md %}}</dd>
-    <dt class="property-optional"
+{{% /md %}}</dd><dt class="property-optional"
             title="Optional">
         <span id="ttl_csharp">
 <a href="#ttl_csharp" style="color: inherit; text-decoration: inherit;">Ttl</a>
@@ -541,14 +519,11 @@ The LoadBalancer resource accepts the following [input]({{< relref "/docs/intro/
         <span class="property-type">int</span>
     </dt>
     <dd>{{% md %}}Time to live (TTL) of this load balancer's DNS `name`. Conflicts with `proxied` - this cannot be set for proxied load balancers. Default is `30`.
-{{% /md %}}</dd>
-</dl>
+{{% /md %}}</dd></dl>
 {{% /choosable %}}
 
 {{% choosable language go %}}
-<dl class="resources-properties">
-
-    <dt class="property-required"
+<dl class="resources-properties"><dt class="property-required"
             title="Required">
         <span id="defaultpoolids_go">
 <a href="#defaultpoolids_go" style="color: inherit; text-decoration: inherit;">Default<wbr>Pool<wbr>Ids</a>
@@ -557,8 +532,7 @@ The LoadBalancer resource accepts the following [input]({{< relref "/docs/intro/
         <span class="property-type">[]string</span>
     </dt>
     <dd>{{% md %}}A list of pool IDs ordered by their failover priority. Used whenever region/pop pools are not defined.
-{{% /md %}}</dd>
-    <dt class="property-required"
+{{% /md %}}</dd><dt class="property-required"
             title="Required">
         <span id="fallbackpoolid_go">
 <a href="#fallbackpoolid_go" style="color: inherit; text-decoration: inherit;">Fallback<wbr>Pool<wbr>Id</a>
@@ -567,8 +541,7 @@ The LoadBalancer resource accepts the following [input]({{< relref "/docs/intro/
         <span class="property-type">string</span>
     </dt>
     <dd>{{% md %}}The pool ID to use when all other pools are detected as unhealthy.
-{{% /md %}}</dd>
-    <dt class="property-required"
+{{% /md %}}</dd><dt class="property-required"
             title="Required">
         <span id="name_go">
 <a href="#name_go" style="color: inherit; text-decoration: inherit;">Name</a>
@@ -577,8 +550,7 @@ The LoadBalancer resource accepts the following [input]({{< relref "/docs/intro/
         <span class="property-type">string</span>
     </dt>
     <dd>{{% md %}}The DNS name (FQDN, including the zone) to associate with the load balancer.
-{{% /md %}}</dd>
-    <dt class="property-required"
+{{% /md %}}</dd><dt class="property-required"
             title="Required">
         <span id="zoneid_go">
 <a href="#zoneid_go" style="color: inherit; text-decoration: inherit;">Zone<wbr>Id</a>
@@ -587,8 +559,7 @@ The LoadBalancer resource accepts the following [input]({{< relref "/docs/intro/
         <span class="property-type">string</span>
     </dt>
     <dd>{{% md %}}The zone ID to add the load balancer to.
-{{% /md %}}</dd>
-    <dt class="property-optional"
+{{% /md %}}</dd><dt class="property-optional"
             title="Optional">
         <span id="description_go">
 <a href="#description_go" style="color: inherit; text-decoration: inherit;">Description</a>
@@ -597,8 +568,7 @@ The LoadBalancer resource accepts the following [input]({{< relref "/docs/intro/
         <span class="property-type">string</span>
     </dt>
     <dd>{{% md %}}Free text description.
-{{% /md %}}</dd>
-    <dt class="property-optional"
+{{% /md %}}</dd><dt class="property-optional"
             title="Optional">
         <span id="enabled_go">
 <a href="#enabled_go" style="color: inherit; text-decoration: inherit;">Enabled</a>
@@ -607,8 +577,7 @@ The LoadBalancer resource accepts the following [input]({{< relref "/docs/intro/
         <span class="property-type">bool</span>
     </dt>
     <dd>{{% md %}}Enable or disable the load balancer. Defaults to `true` (enabled).
-{{% /md %}}</dd>
-    <dt class="property-optional"
+{{% /md %}}</dd><dt class="property-optional"
             title="Optional">
         <span id="poppools_go">
 <a href="#poppools_go" style="color: inherit; text-decoration: inherit;">Pop<wbr>Pools</a>
@@ -617,8 +586,7 @@ The LoadBalancer resource accepts the following [input]({{< relref "/docs/intro/
         <span class="property-type"><a href="#loadbalancerpoppool">[]Load<wbr>Balancer<wbr>Pop<wbr>Pool</a></span>
     </dt>
     <dd>{{% md %}}A set containing mappings of Cloudflare Point-of-Presence (PoP) identifiers to a list of pool IDs (ordered by their failover priority) for the PoP (datacenter). This feature is only available to enterprise customers. Fields documented below.
-{{% /md %}}</dd>
-    <dt class="property-optional"
+{{% /md %}}</dd><dt class="property-optional"
             title="Optional">
         <span id="proxied_go">
 <a href="#proxied_go" style="color: inherit; text-decoration: inherit;">Proxied</a>
@@ -627,8 +595,7 @@ The LoadBalancer resource accepts the following [input]({{< relref "/docs/intro/
         <span class="property-type">bool</span>
     </dt>
     <dd>{{% md %}}Whether the hostname gets Cloudflare's origin protection. Defaults to `false`.
-{{% /md %}}</dd>
-    <dt class="property-optional"
+{{% /md %}}</dd><dt class="property-optional"
             title="Optional">
         <span id="regionpools_go">
 <a href="#regionpools_go" style="color: inherit; text-decoration: inherit;">Region<wbr>Pools</a>
@@ -637,8 +604,7 @@ The LoadBalancer resource accepts the following [input]({{< relref "/docs/intro/
         <span class="property-type"><a href="#loadbalancerregionpool">[]Load<wbr>Balancer<wbr>Region<wbr>Pool</a></span>
     </dt>
     <dd>{{% md %}}A set containing mappings of region/country codes to a list of pool IDs (ordered by their failover priority) for the given region. Fields documented below.
-{{% /md %}}</dd>
-    <dt class="property-optional"
+{{% /md %}}</dd><dt class="property-optional"
             title="Optional">
         <span id="sessionaffinity_go">
 <a href="#sessionaffinity_go" style="color: inherit; text-decoration: inherit;">Session<wbr>Affinity</a>
@@ -647,8 +613,7 @@ The LoadBalancer resource accepts the following [input]({{< relref "/docs/intro/
         <span class="property-type">string</span>
     </dt>
     <dd>{{% md %}}Associates all requests coming from an end-user with a single origin. Cloudflare will set a cookie on the initial response to the client, such that consequent requests with the cookie in the request will go to the same origin, so long as it is available.  Valid values are: `""`, `"none"`, `"cookie"`, and `"ip_cookie"`.  Default is `""`.
-{{% /md %}}</dd>
-    <dt class="property-optional"
+{{% /md %}}</dd><dt class="property-optional"
             title="Optional">
         <span id="sessionaffinityattributes_go">
 <a href="#sessionaffinityattributes_go" style="color: inherit; text-decoration: inherit;">Session<wbr>Affinity<wbr>Attributes</a>
@@ -657,8 +622,7 @@ The LoadBalancer resource accepts the following [input]({{< relref "/docs/intro/
         <span class="property-type">map[string]string</span>
     </dt>
     <dd>{{% md %}}Configure cookie attributes for session affinity cookie. See the field documentation below.
-{{% /md %}}</dd>
-    <dt class="property-optional"
+{{% /md %}}</dd><dt class="property-optional"
             title="Optional">
         <span id="sessionaffinityttl_go">
 <a href="#sessionaffinityttl_go" style="color: inherit; text-decoration: inherit;">Session<wbr>Affinity<wbr>Ttl</a>
@@ -667,8 +631,7 @@ The LoadBalancer resource accepts the following [input]({{< relref "/docs/intro/
         <span class="property-type">int</span>
     </dt>
     <dd>{{% md %}}Time, in seconds, until this load balancers session affinity cookie expires after being created. This parameter is ignored unless a supported session affinity policy is set. The current default of 23 hours will be used unless `session_affinity_ttl` is explicitly set. Once the expiry time has been reached, subsequent requests may get sent to a different origin server. Valid values are between 1800 and 604800.
-{{% /md %}}</dd>
-    <dt class="property-optional"
+{{% /md %}}</dd><dt class="property-optional"
             title="Optional">
         <span id="steeringpolicy_go">
 <a href="#steeringpolicy_go" style="color: inherit; text-decoration: inherit;">Steering<wbr>Policy</a>
@@ -677,8 +640,7 @@ The LoadBalancer resource accepts the following [input]({{< relref "/docs/intro/
         <span class="property-type">string</span>
     </dt>
     <dd>{{% md %}}Determine which method the load balancer uses to determine the fastest route to your origin. Valid values are: `"off"`, `"geo"`, `"dynamic_latency"`, `"random"` or `""`. Default is `""`.
-{{% /md %}}</dd>
-    <dt class="property-optional"
+{{% /md %}}</dd><dt class="property-optional"
             title="Optional">
         <span id="ttl_go">
 <a href="#ttl_go" style="color: inherit; text-decoration: inherit;">Ttl</a>
@@ -687,14 +649,11 @@ The LoadBalancer resource accepts the following [input]({{< relref "/docs/intro/
         <span class="property-type">int</span>
     </dt>
     <dd>{{% md %}}Time to live (TTL) of this load balancer's DNS `name`. Conflicts with `proxied` - this cannot be set for proxied load balancers. Default is `30`.
-{{% /md %}}</dd>
-</dl>
+{{% /md %}}</dd></dl>
 {{% /choosable %}}
 
 {{% choosable language nodejs %}}
-<dl class="resources-properties">
-
-    <dt class="property-required"
+<dl class="resources-properties"><dt class="property-required"
             title="Required">
         <span id="defaultpoolids_nodejs">
 <a href="#defaultpoolids_nodejs" style="color: inherit; text-decoration: inherit;">default<wbr>Pool<wbr>Ids</a>
@@ -703,8 +662,7 @@ The LoadBalancer resource accepts the following [input]({{< relref "/docs/intro/
         <span class="property-type">string[]</span>
     </dt>
     <dd>{{% md %}}A list of pool IDs ordered by their failover priority. Used whenever region/pop pools are not defined.
-{{% /md %}}</dd>
-    <dt class="property-required"
+{{% /md %}}</dd><dt class="property-required"
             title="Required">
         <span id="fallbackpoolid_nodejs">
 <a href="#fallbackpoolid_nodejs" style="color: inherit; text-decoration: inherit;">fallback<wbr>Pool<wbr>Id</a>
@@ -713,8 +671,7 @@ The LoadBalancer resource accepts the following [input]({{< relref "/docs/intro/
         <span class="property-type">string</span>
     </dt>
     <dd>{{% md %}}The pool ID to use when all other pools are detected as unhealthy.
-{{% /md %}}</dd>
-    <dt class="property-required"
+{{% /md %}}</dd><dt class="property-required"
             title="Required">
         <span id="name_nodejs">
 <a href="#name_nodejs" style="color: inherit; text-decoration: inherit;">name</a>
@@ -723,8 +680,7 @@ The LoadBalancer resource accepts the following [input]({{< relref "/docs/intro/
         <span class="property-type">string</span>
     </dt>
     <dd>{{% md %}}The DNS name (FQDN, including the zone) to associate with the load balancer.
-{{% /md %}}</dd>
-    <dt class="property-required"
+{{% /md %}}</dd><dt class="property-required"
             title="Required">
         <span id="zoneid_nodejs">
 <a href="#zoneid_nodejs" style="color: inherit; text-decoration: inherit;">zone<wbr>Id</a>
@@ -733,8 +689,7 @@ The LoadBalancer resource accepts the following [input]({{< relref "/docs/intro/
         <span class="property-type">string</span>
     </dt>
     <dd>{{% md %}}The zone ID to add the load balancer to.
-{{% /md %}}</dd>
-    <dt class="property-optional"
+{{% /md %}}</dd><dt class="property-optional"
             title="Optional">
         <span id="description_nodejs">
 <a href="#description_nodejs" style="color: inherit; text-decoration: inherit;">description</a>
@@ -743,8 +698,7 @@ The LoadBalancer resource accepts the following [input]({{< relref "/docs/intro/
         <span class="property-type">string</span>
     </dt>
     <dd>{{% md %}}Free text description.
-{{% /md %}}</dd>
-    <dt class="property-optional"
+{{% /md %}}</dd><dt class="property-optional"
             title="Optional">
         <span id="enabled_nodejs">
 <a href="#enabled_nodejs" style="color: inherit; text-decoration: inherit;">enabled</a>
@@ -753,8 +707,7 @@ The LoadBalancer resource accepts the following [input]({{< relref "/docs/intro/
         <span class="property-type">boolean</span>
     </dt>
     <dd>{{% md %}}Enable or disable the load balancer. Defaults to `true` (enabled).
-{{% /md %}}</dd>
-    <dt class="property-optional"
+{{% /md %}}</dd><dt class="property-optional"
             title="Optional">
         <span id="poppools_nodejs">
 <a href="#poppools_nodejs" style="color: inherit; text-decoration: inherit;">pop<wbr>Pools</a>
@@ -763,8 +716,7 @@ The LoadBalancer resource accepts the following [input]({{< relref "/docs/intro/
         <span class="property-type"><a href="#loadbalancerpoppool">Load<wbr>Balancer<wbr>Pop<wbr>Pool[]</a></span>
     </dt>
     <dd>{{% md %}}A set containing mappings of Cloudflare Point-of-Presence (PoP) identifiers to a list of pool IDs (ordered by their failover priority) for the PoP (datacenter). This feature is only available to enterprise customers. Fields documented below.
-{{% /md %}}</dd>
-    <dt class="property-optional"
+{{% /md %}}</dd><dt class="property-optional"
             title="Optional">
         <span id="proxied_nodejs">
 <a href="#proxied_nodejs" style="color: inherit; text-decoration: inherit;">proxied</a>
@@ -773,8 +725,7 @@ The LoadBalancer resource accepts the following [input]({{< relref "/docs/intro/
         <span class="property-type">boolean</span>
     </dt>
     <dd>{{% md %}}Whether the hostname gets Cloudflare's origin protection. Defaults to `false`.
-{{% /md %}}</dd>
-    <dt class="property-optional"
+{{% /md %}}</dd><dt class="property-optional"
             title="Optional">
         <span id="regionpools_nodejs">
 <a href="#regionpools_nodejs" style="color: inherit; text-decoration: inherit;">region<wbr>Pools</a>
@@ -783,8 +734,7 @@ The LoadBalancer resource accepts the following [input]({{< relref "/docs/intro/
         <span class="property-type"><a href="#loadbalancerregionpool">Load<wbr>Balancer<wbr>Region<wbr>Pool[]</a></span>
     </dt>
     <dd>{{% md %}}A set containing mappings of region/country codes to a list of pool IDs (ordered by their failover priority) for the given region. Fields documented below.
-{{% /md %}}</dd>
-    <dt class="property-optional"
+{{% /md %}}</dd><dt class="property-optional"
             title="Optional">
         <span id="sessionaffinity_nodejs">
 <a href="#sessionaffinity_nodejs" style="color: inherit; text-decoration: inherit;">session<wbr>Affinity</a>
@@ -793,8 +743,7 @@ The LoadBalancer resource accepts the following [input]({{< relref "/docs/intro/
         <span class="property-type">string</span>
     </dt>
     <dd>{{% md %}}Associates all requests coming from an end-user with a single origin. Cloudflare will set a cookie on the initial response to the client, such that consequent requests with the cookie in the request will go to the same origin, so long as it is available.  Valid values are: `""`, `"none"`, `"cookie"`, and `"ip_cookie"`.  Default is `""`.
-{{% /md %}}</dd>
-    <dt class="property-optional"
+{{% /md %}}</dd><dt class="property-optional"
             title="Optional">
         <span id="sessionaffinityattributes_nodejs">
 <a href="#sessionaffinityattributes_nodejs" style="color: inherit; text-decoration: inherit;">session<wbr>Affinity<wbr>Attributes</a>
@@ -803,8 +752,7 @@ The LoadBalancer resource accepts the following [input]({{< relref "/docs/intro/
         <span class="property-type">{[key: string]: string}</span>
     </dt>
     <dd>{{% md %}}Configure cookie attributes for session affinity cookie. See the field documentation below.
-{{% /md %}}</dd>
-    <dt class="property-optional"
+{{% /md %}}</dd><dt class="property-optional"
             title="Optional">
         <span id="sessionaffinityttl_nodejs">
 <a href="#sessionaffinityttl_nodejs" style="color: inherit; text-decoration: inherit;">session<wbr>Affinity<wbr>Ttl</a>
@@ -813,8 +761,7 @@ The LoadBalancer resource accepts the following [input]({{< relref "/docs/intro/
         <span class="property-type">number</span>
     </dt>
     <dd>{{% md %}}Time, in seconds, until this load balancers session affinity cookie expires after being created. This parameter is ignored unless a supported session affinity policy is set. The current default of 23 hours will be used unless `session_affinity_ttl` is explicitly set. Once the expiry time has been reached, subsequent requests may get sent to a different origin server. Valid values are between 1800 and 604800.
-{{% /md %}}</dd>
-    <dt class="property-optional"
+{{% /md %}}</dd><dt class="property-optional"
             title="Optional">
         <span id="steeringpolicy_nodejs">
 <a href="#steeringpolicy_nodejs" style="color: inherit; text-decoration: inherit;">steering<wbr>Policy</a>
@@ -823,8 +770,7 @@ The LoadBalancer resource accepts the following [input]({{< relref "/docs/intro/
         <span class="property-type">string</span>
     </dt>
     <dd>{{% md %}}Determine which method the load balancer uses to determine the fastest route to your origin. Valid values are: `"off"`, `"geo"`, `"dynamic_latency"`, `"random"` or `""`. Default is `""`.
-{{% /md %}}</dd>
-    <dt class="property-optional"
+{{% /md %}}</dd><dt class="property-optional"
             title="Optional">
         <span id="ttl_nodejs">
 <a href="#ttl_nodejs" style="color: inherit; text-decoration: inherit;">ttl</a>
@@ -833,14 +779,11 @@ The LoadBalancer resource accepts the following [input]({{< relref "/docs/intro/
         <span class="property-type">number</span>
     </dt>
     <dd>{{% md %}}Time to live (TTL) of this load balancer's DNS `name`. Conflicts with `proxied` - this cannot be set for proxied load balancers. Default is `30`.
-{{% /md %}}</dd>
-</dl>
+{{% /md %}}</dd></dl>
 {{% /choosable %}}
 
 {{% choosable language python %}}
-<dl class="resources-properties">
-
-    <dt class="property-required"
+<dl class="resources-properties"><dt class="property-required"
             title="Required">
         <span id="default_pool_ids_python">
 <a href="#default_pool_ids_python" style="color: inherit; text-decoration: inherit;">default_<wbr>pool_<wbr>ids</a>
@@ -849,8 +792,7 @@ The LoadBalancer resource accepts the following [input]({{< relref "/docs/intro/
         <span class="property-type">Sequence[str]</span>
     </dt>
     <dd>{{% md %}}A list of pool IDs ordered by their failover priority. Used whenever region/pop pools are not defined.
-{{% /md %}}</dd>
-    <dt class="property-required"
+{{% /md %}}</dd><dt class="property-required"
             title="Required">
         <span id="fallback_pool_id_python">
 <a href="#fallback_pool_id_python" style="color: inherit; text-decoration: inherit;">fallback_<wbr>pool_<wbr>id</a>
@@ -859,8 +801,7 @@ The LoadBalancer resource accepts the following [input]({{< relref "/docs/intro/
         <span class="property-type">str</span>
     </dt>
     <dd>{{% md %}}The pool ID to use when all other pools are detected as unhealthy.
-{{% /md %}}</dd>
-    <dt class="property-required"
+{{% /md %}}</dd><dt class="property-required"
             title="Required">
         <span id="name_python">
 <a href="#name_python" style="color: inherit; text-decoration: inherit;">name</a>
@@ -869,8 +810,7 @@ The LoadBalancer resource accepts the following [input]({{< relref "/docs/intro/
         <span class="property-type">str</span>
     </dt>
     <dd>{{% md %}}The DNS name (FQDN, including the zone) to associate with the load balancer.
-{{% /md %}}</dd>
-    <dt class="property-required"
+{{% /md %}}</dd><dt class="property-required"
             title="Required">
         <span id="zone_id_python">
 <a href="#zone_id_python" style="color: inherit; text-decoration: inherit;">zone_<wbr>id</a>
@@ -879,8 +819,7 @@ The LoadBalancer resource accepts the following [input]({{< relref "/docs/intro/
         <span class="property-type">str</span>
     </dt>
     <dd>{{% md %}}The zone ID to add the load balancer to.
-{{% /md %}}</dd>
-    <dt class="property-optional"
+{{% /md %}}</dd><dt class="property-optional"
             title="Optional">
         <span id="description_python">
 <a href="#description_python" style="color: inherit; text-decoration: inherit;">description</a>
@@ -889,8 +828,7 @@ The LoadBalancer resource accepts the following [input]({{< relref "/docs/intro/
         <span class="property-type">str</span>
     </dt>
     <dd>{{% md %}}Free text description.
-{{% /md %}}</dd>
-    <dt class="property-optional"
+{{% /md %}}</dd><dt class="property-optional"
             title="Optional">
         <span id="enabled_python">
 <a href="#enabled_python" style="color: inherit; text-decoration: inherit;">enabled</a>
@@ -899,8 +837,7 @@ The LoadBalancer resource accepts the following [input]({{< relref "/docs/intro/
         <span class="property-type">bool</span>
     </dt>
     <dd>{{% md %}}Enable or disable the load balancer. Defaults to `true` (enabled).
-{{% /md %}}</dd>
-    <dt class="property-optional"
+{{% /md %}}</dd><dt class="property-optional"
             title="Optional">
         <span id="pop_pools_python">
 <a href="#pop_pools_python" style="color: inherit; text-decoration: inherit;">pop_<wbr>pools</a>
@@ -909,8 +846,7 @@ The LoadBalancer resource accepts the following [input]({{< relref "/docs/intro/
         <span class="property-type"><a href="#loadbalancerpoppool">Sequence[Load<wbr>Balancer<wbr>Pop<wbr>Pool<wbr>Args]</a></span>
     </dt>
     <dd>{{% md %}}A set containing mappings of Cloudflare Point-of-Presence (PoP) identifiers to a list of pool IDs (ordered by their failover priority) for the PoP (datacenter). This feature is only available to enterprise customers. Fields documented below.
-{{% /md %}}</dd>
-    <dt class="property-optional"
+{{% /md %}}</dd><dt class="property-optional"
             title="Optional">
         <span id="proxied_python">
 <a href="#proxied_python" style="color: inherit; text-decoration: inherit;">proxied</a>
@@ -919,8 +855,7 @@ The LoadBalancer resource accepts the following [input]({{< relref "/docs/intro/
         <span class="property-type">bool</span>
     </dt>
     <dd>{{% md %}}Whether the hostname gets Cloudflare's origin protection. Defaults to `false`.
-{{% /md %}}</dd>
-    <dt class="property-optional"
+{{% /md %}}</dd><dt class="property-optional"
             title="Optional">
         <span id="region_pools_python">
 <a href="#region_pools_python" style="color: inherit; text-decoration: inherit;">region_<wbr>pools</a>
@@ -929,8 +864,7 @@ The LoadBalancer resource accepts the following [input]({{< relref "/docs/intro/
         <span class="property-type"><a href="#loadbalancerregionpool">Sequence[Load<wbr>Balancer<wbr>Region<wbr>Pool<wbr>Args]</a></span>
     </dt>
     <dd>{{% md %}}A set containing mappings of region/country codes to a list of pool IDs (ordered by their failover priority) for the given region. Fields documented below.
-{{% /md %}}</dd>
-    <dt class="property-optional"
+{{% /md %}}</dd><dt class="property-optional"
             title="Optional">
         <span id="session_affinity_python">
 <a href="#session_affinity_python" style="color: inherit; text-decoration: inherit;">session_<wbr>affinity</a>
@@ -939,8 +873,7 @@ The LoadBalancer resource accepts the following [input]({{< relref "/docs/intro/
         <span class="property-type">str</span>
     </dt>
     <dd>{{% md %}}Associates all requests coming from an end-user with a single origin. Cloudflare will set a cookie on the initial response to the client, such that consequent requests with the cookie in the request will go to the same origin, so long as it is available.  Valid values are: `""`, `"none"`, `"cookie"`, and `"ip_cookie"`.  Default is `""`.
-{{% /md %}}</dd>
-    <dt class="property-optional"
+{{% /md %}}</dd><dt class="property-optional"
             title="Optional">
         <span id="session_affinity_attributes_python">
 <a href="#session_affinity_attributes_python" style="color: inherit; text-decoration: inherit;">session_<wbr>affinity_<wbr>attributes</a>
@@ -949,8 +882,7 @@ The LoadBalancer resource accepts the following [input]({{< relref "/docs/intro/
         <span class="property-type">Mapping[str, str]</span>
     </dt>
     <dd>{{% md %}}Configure cookie attributes for session affinity cookie. See the field documentation below.
-{{% /md %}}</dd>
-    <dt class="property-optional"
+{{% /md %}}</dd><dt class="property-optional"
             title="Optional">
         <span id="session_affinity_ttl_python">
 <a href="#session_affinity_ttl_python" style="color: inherit; text-decoration: inherit;">session_<wbr>affinity_<wbr>ttl</a>
@@ -959,8 +891,7 @@ The LoadBalancer resource accepts the following [input]({{< relref "/docs/intro/
         <span class="property-type">int</span>
     </dt>
     <dd>{{% md %}}Time, in seconds, until this load balancers session affinity cookie expires after being created. This parameter is ignored unless a supported session affinity policy is set. The current default of 23 hours will be used unless `session_affinity_ttl` is explicitly set. Once the expiry time has been reached, subsequent requests may get sent to a different origin server. Valid values are between 1800 and 604800.
-{{% /md %}}</dd>
-    <dt class="property-optional"
+{{% /md %}}</dd><dt class="property-optional"
             title="Optional">
         <span id="steering_policy_python">
 <a href="#steering_policy_python" style="color: inherit; text-decoration: inherit;">steering_<wbr>policy</a>
@@ -969,8 +900,7 @@ The LoadBalancer resource accepts the following [input]({{< relref "/docs/intro/
         <span class="property-type">str</span>
     </dt>
     <dd>{{% md %}}Determine which method the load balancer uses to determine the fastest route to your origin. Valid values are: `"off"`, `"geo"`, `"dynamic_latency"`, `"random"` or `""`. Default is `""`.
-{{% /md %}}</dd>
-    <dt class="property-optional"
+{{% /md %}}</dd><dt class="property-optional"
             title="Optional">
         <span id="ttl_python">
 <a href="#ttl_python" style="color: inherit; text-decoration: inherit;">ttl</a>
@@ -979,8 +909,7 @@ The LoadBalancer resource accepts the following [input]({{< relref "/docs/intro/
         <span class="property-type">int</span>
     </dt>
     <dd>{{% md %}}Time to live (TTL) of this load balancer's DNS `name`. Conflicts with `proxied` - this cannot be set for proxied load balancers. Default is `30`.
-{{% /md %}}</dd>
-</dl>
+{{% /md %}}</dd></dl>
 {{% /choosable %}}
 
 
@@ -991,9 +920,7 @@ All [input](#inputs) properties are implicitly available as output properties. A
 
 
 {{% choosable language csharp %}}
-<dl class="resources-properties">
-
-    <dt class="property-"
+<dl class="resources-properties"><dt class="property-"
             title="">
         <span id="createdon_csharp">
 <a href="#createdon_csharp" style="color: inherit; text-decoration: inherit;">Created<wbr>On</a>
@@ -1002,8 +929,7 @@ All [input](#inputs) properties are implicitly available as output properties. A
         <span class="property-type">string</span>
     </dt>
     <dd>{{% md %}}The RFC3339 timestamp of when the load balancer was created.
-{{% /md %}}</dd>
-    <dt class="property-"
+{{% /md %}}</dd><dt class="property-"
             title="">
         <span id="id_csharp">
 <a href="#id_csharp" style="color: inherit; text-decoration: inherit;">Id</a>
@@ -1011,8 +937,7 @@ All [input](#inputs) properties are implicitly available as output properties. A
         <span class="property-indicator"></span>
         <span class="property-type">string</span>
     </dt>
-    <dd>{{% md %}}The provider-assigned unique ID for this managed resource.{{% /md %}}</dd>
-    <dt class="property-"
+    <dd>{{% md %}}The provider-assigned unique ID for this managed resource.{{% /md %}}</dd><dt class="property-"
             title="">
         <span id="modifiedon_csharp">
 <a href="#modifiedon_csharp" style="color: inherit; text-decoration: inherit;">Modified<wbr>On</a>
@@ -1021,14 +946,11 @@ All [input](#inputs) properties are implicitly available as output properties. A
         <span class="property-type">string</span>
     </dt>
     <dd>{{% md %}}The RFC3339 timestamp of when the load balancer was last modified.
-{{% /md %}}</dd>
-</dl>
+{{% /md %}}</dd></dl>
 {{% /choosable %}}
 
 {{% choosable language go %}}
-<dl class="resources-properties">
-
-    <dt class="property-"
+<dl class="resources-properties"><dt class="property-"
             title="">
         <span id="createdon_go">
 <a href="#createdon_go" style="color: inherit; text-decoration: inherit;">Created<wbr>On</a>
@@ -1037,8 +959,7 @@ All [input](#inputs) properties are implicitly available as output properties. A
         <span class="property-type">string</span>
     </dt>
     <dd>{{% md %}}The RFC3339 timestamp of when the load balancer was created.
-{{% /md %}}</dd>
-    <dt class="property-"
+{{% /md %}}</dd><dt class="property-"
             title="">
         <span id="id_go">
 <a href="#id_go" style="color: inherit; text-decoration: inherit;">Id</a>
@@ -1046,8 +967,7 @@ All [input](#inputs) properties are implicitly available as output properties. A
         <span class="property-indicator"></span>
         <span class="property-type">string</span>
     </dt>
-    <dd>{{% md %}}The provider-assigned unique ID for this managed resource.{{% /md %}}</dd>
-    <dt class="property-"
+    <dd>{{% md %}}The provider-assigned unique ID for this managed resource.{{% /md %}}</dd><dt class="property-"
             title="">
         <span id="modifiedon_go">
 <a href="#modifiedon_go" style="color: inherit; text-decoration: inherit;">Modified<wbr>On</a>
@@ -1056,14 +976,11 @@ All [input](#inputs) properties are implicitly available as output properties. A
         <span class="property-type">string</span>
     </dt>
     <dd>{{% md %}}The RFC3339 timestamp of when the load balancer was last modified.
-{{% /md %}}</dd>
-</dl>
+{{% /md %}}</dd></dl>
 {{% /choosable %}}
 
 {{% choosable language nodejs %}}
-<dl class="resources-properties">
-
-    <dt class="property-"
+<dl class="resources-properties"><dt class="property-"
             title="">
         <span id="createdon_nodejs">
 <a href="#createdon_nodejs" style="color: inherit; text-decoration: inherit;">created<wbr>On</a>
@@ -1072,8 +989,7 @@ All [input](#inputs) properties are implicitly available as output properties. A
         <span class="property-type">string</span>
     </dt>
     <dd>{{% md %}}The RFC3339 timestamp of when the load balancer was created.
-{{% /md %}}</dd>
-    <dt class="property-"
+{{% /md %}}</dd><dt class="property-"
             title="">
         <span id="id_nodejs">
 <a href="#id_nodejs" style="color: inherit; text-decoration: inherit;">id</a>
@@ -1081,8 +997,7 @@ All [input](#inputs) properties are implicitly available as output properties. A
         <span class="property-indicator"></span>
         <span class="property-type">string</span>
     </dt>
-    <dd>{{% md %}}The provider-assigned unique ID for this managed resource.{{% /md %}}</dd>
-    <dt class="property-"
+    <dd>{{% md %}}The provider-assigned unique ID for this managed resource.{{% /md %}}</dd><dt class="property-"
             title="">
         <span id="modifiedon_nodejs">
 <a href="#modifiedon_nodejs" style="color: inherit; text-decoration: inherit;">modified<wbr>On</a>
@@ -1091,14 +1006,11 @@ All [input](#inputs) properties are implicitly available as output properties. A
         <span class="property-type">string</span>
     </dt>
     <dd>{{% md %}}The RFC3339 timestamp of when the load balancer was last modified.
-{{% /md %}}</dd>
-</dl>
+{{% /md %}}</dd></dl>
 {{% /choosable %}}
 
 {{% choosable language python %}}
-<dl class="resources-properties">
-
-    <dt class="property-"
+<dl class="resources-properties"><dt class="property-"
             title="">
         <span id="created_on_python">
 <a href="#created_on_python" style="color: inherit; text-decoration: inherit;">created_<wbr>on</a>
@@ -1107,8 +1019,7 @@ All [input](#inputs) properties are implicitly available as output properties. A
         <span class="property-type">str</span>
     </dt>
     <dd>{{% md %}}The RFC3339 timestamp of when the load balancer was created.
-{{% /md %}}</dd>
-    <dt class="property-"
+{{% /md %}}</dd><dt class="property-"
             title="">
         <span id="id_python">
 <a href="#id_python" style="color: inherit; text-decoration: inherit;">id</a>
@@ -1116,8 +1027,7 @@ All [input](#inputs) properties are implicitly available as output properties. A
         <span class="property-indicator"></span>
         <span class="property-type">str</span>
     </dt>
-    <dd>{{% md %}}The provider-assigned unique ID for this managed resource.{{% /md %}}</dd>
-    <dt class="property-"
+    <dd>{{% md %}}The provider-assigned unique ID for this managed resource.{{% /md %}}</dd><dt class="property-"
             title="">
         <span id="modified_on_python">
 <a href="#modified_on_python" style="color: inherit; text-decoration: inherit;">modified_<wbr>on</a>
@@ -1126,8 +1036,7 @@ All [input](#inputs) properties are implicitly available as output properties. A
         <span class="property-type">str</span>
     </dt>
     <dd>{{% md %}}The RFC3339 timestamp of when the load balancer was last modified.
-{{% /md %}}</dd>
-</dl>
+{{% /md %}}</dd></dl>
 {{% /choosable %}}
 
 
@@ -1254,9 +1163,7 @@ The following state arguments are supported:
 
 
 {{% choosable language csharp %}}
-<dl class="resources-properties">
-
-    <dt class="property-optional"
+<dl class="resources-properties"><dt class="property-optional"
             title="Optional">
         <span id="state_createdon_csharp">
 <a href="#state_createdon_csharp" style="color: inherit; text-decoration: inherit;">Created<wbr>On</a>
@@ -1265,8 +1172,7 @@ The following state arguments are supported:
         <span class="property-type">string</span>
     </dt>
     <dd>{{% md %}}The RFC3339 timestamp of when the load balancer was created.
-{{% /md %}}</dd>
-    <dt class="property-optional"
+{{% /md %}}</dd><dt class="property-optional"
             title="Optional">
         <span id="state_defaultpoolids_csharp">
 <a href="#state_defaultpoolids_csharp" style="color: inherit; text-decoration: inherit;">Default<wbr>Pool<wbr>Ids</a>
@@ -1275,8 +1181,7 @@ The following state arguments are supported:
         <span class="property-type">List&lt;string&gt;</span>
     </dt>
     <dd>{{% md %}}A list of pool IDs ordered by their failover priority. Used whenever region/pop pools are not defined.
-{{% /md %}}</dd>
-    <dt class="property-optional"
+{{% /md %}}</dd><dt class="property-optional"
             title="Optional">
         <span id="state_description_csharp">
 <a href="#state_description_csharp" style="color: inherit; text-decoration: inherit;">Description</a>
@@ -1285,8 +1190,7 @@ The following state arguments are supported:
         <span class="property-type">string</span>
     </dt>
     <dd>{{% md %}}Free text description.
-{{% /md %}}</dd>
-    <dt class="property-optional"
+{{% /md %}}</dd><dt class="property-optional"
             title="Optional">
         <span id="state_enabled_csharp">
 <a href="#state_enabled_csharp" style="color: inherit; text-decoration: inherit;">Enabled</a>
@@ -1295,8 +1199,7 @@ The following state arguments are supported:
         <span class="property-type">bool</span>
     </dt>
     <dd>{{% md %}}Enable or disable the load balancer. Defaults to `true` (enabled).
-{{% /md %}}</dd>
-    <dt class="property-optional"
+{{% /md %}}</dd><dt class="property-optional"
             title="Optional">
         <span id="state_fallbackpoolid_csharp">
 <a href="#state_fallbackpoolid_csharp" style="color: inherit; text-decoration: inherit;">Fallback<wbr>Pool<wbr>Id</a>
@@ -1305,8 +1208,7 @@ The following state arguments are supported:
         <span class="property-type">string</span>
     </dt>
     <dd>{{% md %}}The pool ID to use when all other pools are detected as unhealthy.
-{{% /md %}}</dd>
-    <dt class="property-optional"
+{{% /md %}}</dd><dt class="property-optional"
             title="Optional">
         <span id="state_modifiedon_csharp">
 <a href="#state_modifiedon_csharp" style="color: inherit; text-decoration: inherit;">Modified<wbr>On</a>
@@ -1315,8 +1217,7 @@ The following state arguments are supported:
         <span class="property-type">string</span>
     </dt>
     <dd>{{% md %}}The RFC3339 timestamp of when the load balancer was last modified.
-{{% /md %}}</dd>
-    <dt class="property-optional"
+{{% /md %}}</dd><dt class="property-optional"
             title="Optional">
         <span id="state_name_csharp">
 <a href="#state_name_csharp" style="color: inherit; text-decoration: inherit;">Name</a>
@@ -1325,8 +1226,7 @@ The following state arguments are supported:
         <span class="property-type">string</span>
     </dt>
     <dd>{{% md %}}The DNS name (FQDN, including the zone) to associate with the load balancer.
-{{% /md %}}</dd>
-    <dt class="property-optional"
+{{% /md %}}</dd><dt class="property-optional"
             title="Optional">
         <span id="state_poppools_csharp">
 <a href="#state_poppools_csharp" style="color: inherit; text-decoration: inherit;">Pop<wbr>Pools</a>
@@ -1335,8 +1235,7 @@ The following state arguments are supported:
         <span class="property-type"><a href="#loadbalancerpoppool">List&lt;Load<wbr>Balancer<wbr>Pop<wbr>Pool<wbr>Args&gt;</a></span>
     </dt>
     <dd>{{% md %}}A set containing mappings of Cloudflare Point-of-Presence (PoP) identifiers to a list of pool IDs (ordered by their failover priority) for the PoP (datacenter). This feature is only available to enterprise customers. Fields documented below.
-{{% /md %}}</dd>
-    <dt class="property-optional"
+{{% /md %}}</dd><dt class="property-optional"
             title="Optional">
         <span id="state_proxied_csharp">
 <a href="#state_proxied_csharp" style="color: inherit; text-decoration: inherit;">Proxied</a>
@@ -1345,8 +1244,7 @@ The following state arguments are supported:
         <span class="property-type">bool</span>
     </dt>
     <dd>{{% md %}}Whether the hostname gets Cloudflare's origin protection. Defaults to `false`.
-{{% /md %}}</dd>
-    <dt class="property-optional"
+{{% /md %}}</dd><dt class="property-optional"
             title="Optional">
         <span id="state_regionpools_csharp">
 <a href="#state_regionpools_csharp" style="color: inherit; text-decoration: inherit;">Region<wbr>Pools</a>
@@ -1355,8 +1253,7 @@ The following state arguments are supported:
         <span class="property-type"><a href="#loadbalancerregionpool">List&lt;Load<wbr>Balancer<wbr>Region<wbr>Pool<wbr>Args&gt;</a></span>
     </dt>
     <dd>{{% md %}}A set containing mappings of region/country codes to a list of pool IDs (ordered by their failover priority) for the given region. Fields documented below.
-{{% /md %}}</dd>
-    <dt class="property-optional"
+{{% /md %}}</dd><dt class="property-optional"
             title="Optional">
         <span id="state_sessionaffinity_csharp">
 <a href="#state_sessionaffinity_csharp" style="color: inherit; text-decoration: inherit;">Session<wbr>Affinity</a>
@@ -1365,8 +1262,7 @@ The following state arguments are supported:
         <span class="property-type">string</span>
     </dt>
     <dd>{{% md %}}Associates all requests coming from an end-user with a single origin. Cloudflare will set a cookie on the initial response to the client, such that consequent requests with the cookie in the request will go to the same origin, so long as it is available.  Valid values are: `""`, `"none"`, `"cookie"`, and `"ip_cookie"`.  Default is `""`.
-{{% /md %}}</dd>
-    <dt class="property-optional"
+{{% /md %}}</dd><dt class="property-optional"
             title="Optional">
         <span id="state_sessionaffinityattributes_csharp">
 <a href="#state_sessionaffinityattributes_csharp" style="color: inherit; text-decoration: inherit;">Session<wbr>Affinity<wbr>Attributes</a>
@@ -1375,8 +1271,7 @@ The following state arguments are supported:
         <span class="property-type">Dictionary&lt;string, string&gt;</span>
     </dt>
     <dd>{{% md %}}Configure cookie attributes for session affinity cookie. See the field documentation below.
-{{% /md %}}</dd>
-    <dt class="property-optional"
+{{% /md %}}</dd><dt class="property-optional"
             title="Optional">
         <span id="state_sessionaffinityttl_csharp">
 <a href="#state_sessionaffinityttl_csharp" style="color: inherit; text-decoration: inherit;">Session<wbr>Affinity<wbr>Ttl</a>
@@ -1385,8 +1280,7 @@ The following state arguments are supported:
         <span class="property-type">int</span>
     </dt>
     <dd>{{% md %}}Time, in seconds, until this load balancers session affinity cookie expires after being created. This parameter is ignored unless a supported session affinity policy is set. The current default of 23 hours will be used unless `session_affinity_ttl` is explicitly set. Once the expiry time has been reached, subsequent requests may get sent to a different origin server. Valid values are between 1800 and 604800.
-{{% /md %}}</dd>
-    <dt class="property-optional"
+{{% /md %}}</dd><dt class="property-optional"
             title="Optional">
         <span id="state_steeringpolicy_csharp">
 <a href="#state_steeringpolicy_csharp" style="color: inherit; text-decoration: inherit;">Steering<wbr>Policy</a>
@@ -1395,8 +1289,7 @@ The following state arguments are supported:
         <span class="property-type">string</span>
     </dt>
     <dd>{{% md %}}Determine which method the load balancer uses to determine the fastest route to your origin. Valid values are: `"off"`, `"geo"`, `"dynamic_latency"`, `"random"` or `""`. Default is `""`.
-{{% /md %}}</dd>
-    <dt class="property-optional"
+{{% /md %}}</dd><dt class="property-optional"
             title="Optional">
         <span id="state_ttl_csharp">
 <a href="#state_ttl_csharp" style="color: inherit; text-decoration: inherit;">Ttl</a>
@@ -1405,8 +1298,7 @@ The following state arguments are supported:
         <span class="property-type">int</span>
     </dt>
     <dd>{{% md %}}Time to live (TTL) of this load balancer's DNS `name`. Conflicts with `proxied` - this cannot be set for proxied load balancers. Default is `30`.
-{{% /md %}}</dd>
-    <dt class="property-optional"
+{{% /md %}}</dd><dt class="property-optional"
             title="Optional">
         <span id="state_zoneid_csharp">
 <a href="#state_zoneid_csharp" style="color: inherit; text-decoration: inherit;">Zone<wbr>Id</a>
@@ -1415,14 +1307,11 @@ The following state arguments are supported:
         <span class="property-type">string</span>
     </dt>
     <dd>{{% md %}}The zone ID to add the load balancer to.
-{{% /md %}}</dd>
-</dl>
+{{% /md %}}</dd></dl>
 {{% /choosable %}}
 
 {{% choosable language go %}}
-<dl class="resources-properties">
-
-    <dt class="property-optional"
+<dl class="resources-properties"><dt class="property-optional"
             title="Optional">
         <span id="state_createdon_go">
 <a href="#state_createdon_go" style="color: inherit; text-decoration: inherit;">Created<wbr>On</a>
@@ -1431,8 +1320,7 @@ The following state arguments are supported:
         <span class="property-type">string</span>
     </dt>
     <dd>{{% md %}}The RFC3339 timestamp of when the load balancer was created.
-{{% /md %}}</dd>
-    <dt class="property-optional"
+{{% /md %}}</dd><dt class="property-optional"
             title="Optional">
         <span id="state_defaultpoolids_go">
 <a href="#state_defaultpoolids_go" style="color: inherit; text-decoration: inherit;">Default<wbr>Pool<wbr>Ids</a>
@@ -1441,8 +1329,7 @@ The following state arguments are supported:
         <span class="property-type">[]string</span>
     </dt>
     <dd>{{% md %}}A list of pool IDs ordered by their failover priority. Used whenever region/pop pools are not defined.
-{{% /md %}}</dd>
-    <dt class="property-optional"
+{{% /md %}}</dd><dt class="property-optional"
             title="Optional">
         <span id="state_description_go">
 <a href="#state_description_go" style="color: inherit; text-decoration: inherit;">Description</a>
@@ -1451,8 +1338,7 @@ The following state arguments are supported:
         <span class="property-type">string</span>
     </dt>
     <dd>{{% md %}}Free text description.
-{{% /md %}}</dd>
-    <dt class="property-optional"
+{{% /md %}}</dd><dt class="property-optional"
             title="Optional">
         <span id="state_enabled_go">
 <a href="#state_enabled_go" style="color: inherit; text-decoration: inherit;">Enabled</a>
@@ -1461,8 +1347,7 @@ The following state arguments are supported:
         <span class="property-type">bool</span>
     </dt>
     <dd>{{% md %}}Enable or disable the load balancer. Defaults to `true` (enabled).
-{{% /md %}}</dd>
-    <dt class="property-optional"
+{{% /md %}}</dd><dt class="property-optional"
             title="Optional">
         <span id="state_fallbackpoolid_go">
 <a href="#state_fallbackpoolid_go" style="color: inherit; text-decoration: inherit;">Fallback<wbr>Pool<wbr>Id</a>
@@ -1471,8 +1356,7 @@ The following state arguments are supported:
         <span class="property-type">string</span>
     </dt>
     <dd>{{% md %}}The pool ID to use when all other pools are detected as unhealthy.
-{{% /md %}}</dd>
-    <dt class="property-optional"
+{{% /md %}}</dd><dt class="property-optional"
             title="Optional">
         <span id="state_modifiedon_go">
 <a href="#state_modifiedon_go" style="color: inherit; text-decoration: inherit;">Modified<wbr>On</a>
@@ -1481,8 +1365,7 @@ The following state arguments are supported:
         <span class="property-type">string</span>
     </dt>
     <dd>{{% md %}}The RFC3339 timestamp of when the load balancer was last modified.
-{{% /md %}}</dd>
-    <dt class="property-optional"
+{{% /md %}}</dd><dt class="property-optional"
             title="Optional">
         <span id="state_name_go">
 <a href="#state_name_go" style="color: inherit; text-decoration: inherit;">Name</a>
@@ -1491,8 +1374,7 @@ The following state arguments are supported:
         <span class="property-type">string</span>
     </dt>
     <dd>{{% md %}}The DNS name (FQDN, including the zone) to associate with the load balancer.
-{{% /md %}}</dd>
-    <dt class="property-optional"
+{{% /md %}}</dd><dt class="property-optional"
             title="Optional">
         <span id="state_poppools_go">
 <a href="#state_poppools_go" style="color: inherit; text-decoration: inherit;">Pop<wbr>Pools</a>
@@ -1501,8 +1383,7 @@ The following state arguments are supported:
         <span class="property-type"><a href="#loadbalancerpoppool">[]Load<wbr>Balancer<wbr>Pop<wbr>Pool</a></span>
     </dt>
     <dd>{{% md %}}A set containing mappings of Cloudflare Point-of-Presence (PoP) identifiers to a list of pool IDs (ordered by their failover priority) for the PoP (datacenter). This feature is only available to enterprise customers. Fields documented below.
-{{% /md %}}</dd>
-    <dt class="property-optional"
+{{% /md %}}</dd><dt class="property-optional"
             title="Optional">
         <span id="state_proxied_go">
 <a href="#state_proxied_go" style="color: inherit; text-decoration: inherit;">Proxied</a>
@@ -1511,8 +1392,7 @@ The following state arguments are supported:
         <span class="property-type">bool</span>
     </dt>
     <dd>{{% md %}}Whether the hostname gets Cloudflare's origin protection. Defaults to `false`.
-{{% /md %}}</dd>
-    <dt class="property-optional"
+{{% /md %}}</dd><dt class="property-optional"
             title="Optional">
         <span id="state_regionpools_go">
 <a href="#state_regionpools_go" style="color: inherit; text-decoration: inherit;">Region<wbr>Pools</a>
@@ -1521,8 +1401,7 @@ The following state arguments are supported:
         <span class="property-type"><a href="#loadbalancerregionpool">[]Load<wbr>Balancer<wbr>Region<wbr>Pool</a></span>
     </dt>
     <dd>{{% md %}}A set containing mappings of region/country codes to a list of pool IDs (ordered by their failover priority) for the given region. Fields documented below.
-{{% /md %}}</dd>
-    <dt class="property-optional"
+{{% /md %}}</dd><dt class="property-optional"
             title="Optional">
         <span id="state_sessionaffinity_go">
 <a href="#state_sessionaffinity_go" style="color: inherit; text-decoration: inherit;">Session<wbr>Affinity</a>
@@ -1531,8 +1410,7 @@ The following state arguments are supported:
         <span class="property-type">string</span>
     </dt>
     <dd>{{% md %}}Associates all requests coming from an end-user with a single origin. Cloudflare will set a cookie on the initial response to the client, such that consequent requests with the cookie in the request will go to the same origin, so long as it is available.  Valid values are: `""`, `"none"`, `"cookie"`, and `"ip_cookie"`.  Default is `""`.
-{{% /md %}}</dd>
-    <dt class="property-optional"
+{{% /md %}}</dd><dt class="property-optional"
             title="Optional">
         <span id="state_sessionaffinityattributes_go">
 <a href="#state_sessionaffinityattributes_go" style="color: inherit; text-decoration: inherit;">Session<wbr>Affinity<wbr>Attributes</a>
@@ -1541,8 +1419,7 @@ The following state arguments are supported:
         <span class="property-type">map[string]string</span>
     </dt>
     <dd>{{% md %}}Configure cookie attributes for session affinity cookie. See the field documentation below.
-{{% /md %}}</dd>
-    <dt class="property-optional"
+{{% /md %}}</dd><dt class="property-optional"
             title="Optional">
         <span id="state_sessionaffinityttl_go">
 <a href="#state_sessionaffinityttl_go" style="color: inherit; text-decoration: inherit;">Session<wbr>Affinity<wbr>Ttl</a>
@@ -1551,8 +1428,7 @@ The following state arguments are supported:
         <span class="property-type">int</span>
     </dt>
     <dd>{{% md %}}Time, in seconds, until this load balancers session affinity cookie expires after being created. This parameter is ignored unless a supported session affinity policy is set. The current default of 23 hours will be used unless `session_affinity_ttl` is explicitly set. Once the expiry time has been reached, subsequent requests may get sent to a different origin server. Valid values are between 1800 and 604800.
-{{% /md %}}</dd>
-    <dt class="property-optional"
+{{% /md %}}</dd><dt class="property-optional"
             title="Optional">
         <span id="state_steeringpolicy_go">
 <a href="#state_steeringpolicy_go" style="color: inherit; text-decoration: inherit;">Steering<wbr>Policy</a>
@@ -1561,8 +1437,7 @@ The following state arguments are supported:
         <span class="property-type">string</span>
     </dt>
     <dd>{{% md %}}Determine which method the load balancer uses to determine the fastest route to your origin. Valid values are: `"off"`, `"geo"`, `"dynamic_latency"`, `"random"` or `""`. Default is `""`.
-{{% /md %}}</dd>
-    <dt class="property-optional"
+{{% /md %}}</dd><dt class="property-optional"
             title="Optional">
         <span id="state_ttl_go">
 <a href="#state_ttl_go" style="color: inherit; text-decoration: inherit;">Ttl</a>
@@ -1571,8 +1446,7 @@ The following state arguments are supported:
         <span class="property-type">int</span>
     </dt>
     <dd>{{% md %}}Time to live (TTL) of this load balancer's DNS `name`. Conflicts with `proxied` - this cannot be set for proxied load balancers. Default is `30`.
-{{% /md %}}</dd>
-    <dt class="property-optional"
+{{% /md %}}</dd><dt class="property-optional"
             title="Optional">
         <span id="state_zoneid_go">
 <a href="#state_zoneid_go" style="color: inherit; text-decoration: inherit;">Zone<wbr>Id</a>
@@ -1581,14 +1455,11 @@ The following state arguments are supported:
         <span class="property-type">string</span>
     </dt>
     <dd>{{% md %}}The zone ID to add the load balancer to.
-{{% /md %}}</dd>
-</dl>
+{{% /md %}}</dd></dl>
 {{% /choosable %}}
 
 {{% choosable language nodejs %}}
-<dl class="resources-properties">
-
-    <dt class="property-optional"
+<dl class="resources-properties"><dt class="property-optional"
             title="Optional">
         <span id="state_createdon_nodejs">
 <a href="#state_createdon_nodejs" style="color: inherit; text-decoration: inherit;">created<wbr>On</a>
@@ -1597,8 +1468,7 @@ The following state arguments are supported:
         <span class="property-type">string</span>
     </dt>
     <dd>{{% md %}}The RFC3339 timestamp of when the load balancer was created.
-{{% /md %}}</dd>
-    <dt class="property-optional"
+{{% /md %}}</dd><dt class="property-optional"
             title="Optional">
         <span id="state_defaultpoolids_nodejs">
 <a href="#state_defaultpoolids_nodejs" style="color: inherit; text-decoration: inherit;">default<wbr>Pool<wbr>Ids</a>
@@ -1607,8 +1477,7 @@ The following state arguments are supported:
         <span class="property-type">string[]</span>
     </dt>
     <dd>{{% md %}}A list of pool IDs ordered by their failover priority. Used whenever region/pop pools are not defined.
-{{% /md %}}</dd>
-    <dt class="property-optional"
+{{% /md %}}</dd><dt class="property-optional"
             title="Optional">
         <span id="state_description_nodejs">
 <a href="#state_description_nodejs" style="color: inherit; text-decoration: inherit;">description</a>
@@ -1617,8 +1486,7 @@ The following state arguments are supported:
         <span class="property-type">string</span>
     </dt>
     <dd>{{% md %}}Free text description.
-{{% /md %}}</dd>
-    <dt class="property-optional"
+{{% /md %}}</dd><dt class="property-optional"
             title="Optional">
         <span id="state_enabled_nodejs">
 <a href="#state_enabled_nodejs" style="color: inherit; text-decoration: inherit;">enabled</a>
@@ -1627,8 +1495,7 @@ The following state arguments are supported:
         <span class="property-type">boolean</span>
     </dt>
     <dd>{{% md %}}Enable or disable the load balancer. Defaults to `true` (enabled).
-{{% /md %}}</dd>
-    <dt class="property-optional"
+{{% /md %}}</dd><dt class="property-optional"
             title="Optional">
         <span id="state_fallbackpoolid_nodejs">
 <a href="#state_fallbackpoolid_nodejs" style="color: inherit; text-decoration: inherit;">fallback<wbr>Pool<wbr>Id</a>
@@ -1637,8 +1504,7 @@ The following state arguments are supported:
         <span class="property-type">string</span>
     </dt>
     <dd>{{% md %}}The pool ID to use when all other pools are detected as unhealthy.
-{{% /md %}}</dd>
-    <dt class="property-optional"
+{{% /md %}}</dd><dt class="property-optional"
             title="Optional">
         <span id="state_modifiedon_nodejs">
 <a href="#state_modifiedon_nodejs" style="color: inherit; text-decoration: inherit;">modified<wbr>On</a>
@@ -1647,8 +1513,7 @@ The following state arguments are supported:
         <span class="property-type">string</span>
     </dt>
     <dd>{{% md %}}The RFC3339 timestamp of when the load balancer was last modified.
-{{% /md %}}</dd>
-    <dt class="property-optional"
+{{% /md %}}</dd><dt class="property-optional"
             title="Optional">
         <span id="state_name_nodejs">
 <a href="#state_name_nodejs" style="color: inherit; text-decoration: inherit;">name</a>
@@ -1657,8 +1522,7 @@ The following state arguments are supported:
         <span class="property-type">string</span>
     </dt>
     <dd>{{% md %}}The DNS name (FQDN, including the zone) to associate with the load balancer.
-{{% /md %}}</dd>
-    <dt class="property-optional"
+{{% /md %}}</dd><dt class="property-optional"
             title="Optional">
         <span id="state_poppools_nodejs">
 <a href="#state_poppools_nodejs" style="color: inherit; text-decoration: inherit;">pop<wbr>Pools</a>
@@ -1667,8 +1531,7 @@ The following state arguments are supported:
         <span class="property-type"><a href="#loadbalancerpoppool">Load<wbr>Balancer<wbr>Pop<wbr>Pool[]</a></span>
     </dt>
     <dd>{{% md %}}A set containing mappings of Cloudflare Point-of-Presence (PoP) identifiers to a list of pool IDs (ordered by their failover priority) for the PoP (datacenter). This feature is only available to enterprise customers. Fields documented below.
-{{% /md %}}</dd>
-    <dt class="property-optional"
+{{% /md %}}</dd><dt class="property-optional"
             title="Optional">
         <span id="state_proxied_nodejs">
 <a href="#state_proxied_nodejs" style="color: inherit; text-decoration: inherit;">proxied</a>
@@ -1677,8 +1540,7 @@ The following state arguments are supported:
         <span class="property-type">boolean</span>
     </dt>
     <dd>{{% md %}}Whether the hostname gets Cloudflare's origin protection. Defaults to `false`.
-{{% /md %}}</dd>
-    <dt class="property-optional"
+{{% /md %}}</dd><dt class="property-optional"
             title="Optional">
         <span id="state_regionpools_nodejs">
 <a href="#state_regionpools_nodejs" style="color: inherit; text-decoration: inherit;">region<wbr>Pools</a>
@@ -1687,8 +1549,7 @@ The following state arguments are supported:
         <span class="property-type"><a href="#loadbalancerregionpool">Load<wbr>Balancer<wbr>Region<wbr>Pool[]</a></span>
     </dt>
     <dd>{{% md %}}A set containing mappings of region/country codes to a list of pool IDs (ordered by their failover priority) for the given region. Fields documented below.
-{{% /md %}}</dd>
-    <dt class="property-optional"
+{{% /md %}}</dd><dt class="property-optional"
             title="Optional">
         <span id="state_sessionaffinity_nodejs">
 <a href="#state_sessionaffinity_nodejs" style="color: inherit; text-decoration: inherit;">session<wbr>Affinity</a>
@@ -1697,8 +1558,7 @@ The following state arguments are supported:
         <span class="property-type">string</span>
     </dt>
     <dd>{{% md %}}Associates all requests coming from an end-user with a single origin. Cloudflare will set a cookie on the initial response to the client, such that consequent requests with the cookie in the request will go to the same origin, so long as it is available.  Valid values are: `""`, `"none"`, `"cookie"`, and `"ip_cookie"`.  Default is `""`.
-{{% /md %}}</dd>
-    <dt class="property-optional"
+{{% /md %}}</dd><dt class="property-optional"
             title="Optional">
         <span id="state_sessionaffinityattributes_nodejs">
 <a href="#state_sessionaffinityattributes_nodejs" style="color: inherit; text-decoration: inherit;">session<wbr>Affinity<wbr>Attributes</a>
@@ -1707,8 +1567,7 @@ The following state arguments are supported:
         <span class="property-type">{[key: string]: string}</span>
     </dt>
     <dd>{{% md %}}Configure cookie attributes for session affinity cookie. See the field documentation below.
-{{% /md %}}</dd>
-    <dt class="property-optional"
+{{% /md %}}</dd><dt class="property-optional"
             title="Optional">
         <span id="state_sessionaffinityttl_nodejs">
 <a href="#state_sessionaffinityttl_nodejs" style="color: inherit; text-decoration: inherit;">session<wbr>Affinity<wbr>Ttl</a>
@@ -1717,8 +1576,7 @@ The following state arguments are supported:
         <span class="property-type">number</span>
     </dt>
     <dd>{{% md %}}Time, in seconds, until this load balancers session affinity cookie expires after being created. This parameter is ignored unless a supported session affinity policy is set. The current default of 23 hours will be used unless `session_affinity_ttl` is explicitly set. Once the expiry time has been reached, subsequent requests may get sent to a different origin server. Valid values are between 1800 and 604800.
-{{% /md %}}</dd>
-    <dt class="property-optional"
+{{% /md %}}</dd><dt class="property-optional"
             title="Optional">
         <span id="state_steeringpolicy_nodejs">
 <a href="#state_steeringpolicy_nodejs" style="color: inherit; text-decoration: inherit;">steering<wbr>Policy</a>
@@ -1727,8 +1585,7 @@ The following state arguments are supported:
         <span class="property-type">string</span>
     </dt>
     <dd>{{% md %}}Determine which method the load balancer uses to determine the fastest route to your origin. Valid values are: `"off"`, `"geo"`, `"dynamic_latency"`, `"random"` or `""`. Default is `""`.
-{{% /md %}}</dd>
-    <dt class="property-optional"
+{{% /md %}}</dd><dt class="property-optional"
             title="Optional">
         <span id="state_ttl_nodejs">
 <a href="#state_ttl_nodejs" style="color: inherit; text-decoration: inherit;">ttl</a>
@@ -1737,8 +1594,7 @@ The following state arguments are supported:
         <span class="property-type">number</span>
     </dt>
     <dd>{{% md %}}Time to live (TTL) of this load balancer's DNS `name`. Conflicts with `proxied` - this cannot be set for proxied load balancers. Default is `30`.
-{{% /md %}}</dd>
-    <dt class="property-optional"
+{{% /md %}}</dd><dt class="property-optional"
             title="Optional">
         <span id="state_zoneid_nodejs">
 <a href="#state_zoneid_nodejs" style="color: inherit; text-decoration: inherit;">zone<wbr>Id</a>
@@ -1747,14 +1603,11 @@ The following state arguments are supported:
         <span class="property-type">string</span>
     </dt>
     <dd>{{% md %}}The zone ID to add the load balancer to.
-{{% /md %}}</dd>
-</dl>
+{{% /md %}}</dd></dl>
 {{% /choosable %}}
 
 {{% choosable language python %}}
-<dl class="resources-properties">
-
-    <dt class="property-optional"
+<dl class="resources-properties"><dt class="property-optional"
             title="Optional">
         <span id="state_created_on_python">
 <a href="#state_created_on_python" style="color: inherit; text-decoration: inherit;">created_<wbr>on</a>
@@ -1763,8 +1616,7 @@ The following state arguments are supported:
         <span class="property-type">str</span>
     </dt>
     <dd>{{% md %}}The RFC3339 timestamp of when the load balancer was created.
-{{% /md %}}</dd>
-    <dt class="property-optional"
+{{% /md %}}</dd><dt class="property-optional"
             title="Optional">
         <span id="state_default_pool_ids_python">
 <a href="#state_default_pool_ids_python" style="color: inherit; text-decoration: inherit;">default_<wbr>pool_<wbr>ids</a>
@@ -1773,8 +1625,7 @@ The following state arguments are supported:
         <span class="property-type">Sequence[str]</span>
     </dt>
     <dd>{{% md %}}A list of pool IDs ordered by their failover priority. Used whenever region/pop pools are not defined.
-{{% /md %}}</dd>
-    <dt class="property-optional"
+{{% /md %}}</dd><dt class="property-optional"
             title="Optional">
         <span id="state_description_python">
 <a href="#state_description_python" style="color: inherit; text-decoration: inherit;">description</a>
@@ -1783,8 +1634,7 @@ The following state arguments are supported:
         <span class="property-type">str</span>
     </dt>
     <dd>{{% md %}}Free text description.
-{{% /md %}}</dd>
-    <dt class="property-optional"
+{{% /md %}}</dd><dt class="property-optional"
             title="Optional">
         <span id="state_enabled_python">
 <a href="#state_enabled_python" style="color: inherit; text-decoration: inherit;">enabled</a>
@@ -1793,8 +1643,7 @@ The following state arguments are supported:
         <span class="property-type">bool</span>
     </dt>
     <dd>{{% md %}}Enable or disable the load balancer. Defaults to `true` (enabled).
-{{% /md %}}</dd>
-    <dt class="property-optional"
+{{% /md %}}</dd><dt class="property-optional"
             title="Optional">
         <span id="state_fallback_pool_id_python">
 <a href="#state_fallback_pool_id_python" style="color: inherit; text-decoration: inherit;">fallback_<wbr>pool_<wbr>id</a>
@@ -1803,8 +1652,7 @@ The following state arguments are supported:
         <span class="property-type">str</span>
     </dt>
     <dd>{{% md %}}The pool ID to use when all other pools are detected as unhealthy.
-{{% /md %}}</dd>
-    <dt class="property-optional"
+{{% /md %}}</dd><dt class="property-optional"
             title="Optional">
         <span id="state_modified_on_python">
 <a href="#state_modified_on_python" style="color: inherit; text-decoration: inherit;">modified_<wbr>on</a>
@@ -1813,8 +1661,7 @@ The following state arguments are supported:
         <span class="property-type">str</span>
     </dt>
     <dd>{{% md %}}The RFC3339 timestamp of when the load balancer was last modified.
-{{% /md %}}</dd>
-    <dt class="property-optional"
+{{% /md %}}</dd><dt class="property-optional"
             title="Optional">
         <span id="state_name_python">
 <a href="#state_name_python" style="color: inherit; text-decoration: inherit;">name</a>
@@ -1823,8 +1670,7 @@ The following state arguments are supported:
         <span class="property-type">str</span>
     </dt>
     <dd>{{% md %}}The DNS name (FQDN, including the zone) to associate with the load balancer.
-{{% /md %}}</dd>
-    <dt class="property-optional"
+{{% /md %}}</dd><dt class="property-optional"
             title="Optional">
         <span id="state_pop_pools_python">
 <a href="#state_pop_pools_python" style="color: inherit; text-decoration: inherit;">pop_<wbr>pools</a>
@@ -1833,8 +1679,7 @@ The following state arguments are supported:
         <span class="property-type"><a href="#loadbalancerpoppool">Sequence[Load<wbr>Balancer<wbr>Pop<wbr>Pool<wbr>Args]</a></span>
     </dt>
     <dd>{{% md %}}A set containing mappings of Cloudflare Point-of-Presence (PoP) identifiers to a list of pool IDs (ordered by their failover priority) for the PoP (datacenter). This feature is only available to enterprise customers. Fields documented below.
-{{% /md %}}</dd>
-    <dt class="property-optional"
+{{% /md %}}</dd><dt class="property-optional"
             title="Optional">
         <span id="state_proxied_python">
 <a href="#state_proxied_python" style="color: inherit; text-decoration: inherit;">proxied</a>
@@ -1843,8 +1688,7 @@ The following state arguments are supported:
         <span class="property-type">bool</span>
     </dt>
     <dd>{{% md %}}Whether the hostname gets Cloudflare's origin protection. Defaults to `false`.
-{{% /md %}}</dd>
-    <dt class="property-optional"
+{{% /md %}}</dd><dt class="property-optional"
             title="Optional">
         <span id="state_region_pools_python">
 <a href="#state_region_pools_python" style="color: inherit; text-decoration: inherit;">region_<wbr>pools</a>
@@ -1853,8 +1697,7 @@ The following state arguments are supported:
         <span class="property-type"><a href="#loadbalancerregionpool">Sequence[Load<wbr>Balancer<wbr>Region<wbr>Pool<wbr>Args]</a></span>
     </dt>
     <dd>{{% md %}}A set containing mappings of region/country codes to a list of pool IDs (ordered by their failover priority) for the given region. Fields documented below.
-{{% /md %}}</dd>
-    <dt class="property-optional"
+{{% /md %}}</dd><dt class="property-optional"
             title="Optional">
         <span id="state_session_affinity_python">
 <a href="#state_session_affinity_python" style="color: inherit; text-decoration: inherit;">session_<wbr>affinity</a>
@@ -1863,8 +1706,7 @@ The following state arguments are supported:
         <span class="property-type">str</span>
     </dt>
     <dd>{{% md %}}Associates all requests coming from an end-user with a single origin. Cloudflare will set a cookie on the initial response to the client, such that consequent requests with the cookie in the request will go to the same origin, so long as it is available.  Valid values are: `""`, `"none"`, `"cookie"`, and `"ip_cookie"`.  Default is `""`.
-{{% /md %}}</dd>
-    <dt class="property-optional"
+{{% /md %}}</dd><dt class="property-optional"
             title="Optional">
         <span id="state_session_affinity_attributes_python">
 <a href="#state_session_affinity_attributes_python" style="color: inherit; text-decoration: inherit;">session_<wbr>affinity_<wbr>attributes</a>
@@ -1873,8 +1715,7 @@ The following state arguments are supported:
         <span class="property-type">Mapping[str, str]</span>
     </dt>
     <dd>{{% md %}}Configure cookie attributes for session affinity cookie. See the field documentation below.
-{{% /md %}}</dd>
-    <dt class="property-optional"
+{{% /md %}}</dd><dt class="property-optional"
             title="Optional">
         <span id="state_session_affinity_ttl_python">
 <a href="#state_session_affinity_ttl_python" style="color: inherit; text-decoration: inherit;">session_<wbr>affinity_<wbr>ttl</a>
@@ -1883,8 +1724,7 @@ The following state arguments are supported:
         <span class="property-type">int</span>
     </dt>
     <dd>{{% md %}}Time, in seconds, until this load balancers session affinity cookie expires after being created. This parameter is ignored unless a supported session affinity policy is set. The current default of 23 hours will be used unless `session_affinity_ttl` is explicitly set. Once the expiry time has been reached, subsequent requests may get sent to a different origin server. Valid values are between 1800 and 604800.
-{{% /md %}}</dd>
-    <dt class="property-optional"
+{{% /md %}}</dd><dt class="property-optional"
             title="Optional">
         <span id="state_steering_policy_python">
 <a href="#state_steering_policy_python" style="color: inherit; text-decoration: inherit;">steering_<wbr>policy</a>
@@ -1893,8 +1733,7 @@ The following state arguments are supported:
         <span class="property-type">str</span>
     </dt>
     <dd>{{% md %}}Determine which method the load balancer uses to determine the fastest route to your origin. Valid values are: `"off"`, `"geo"`, `"dynamic_latency"`, `"random"` or `""`. Default is `""`.
-{{% /md %}}</dd>
-    <dt class="property-optional"
+{{% /md %}}</dd><dt class="property-optional"
             title="Optional">
         <span id="state_ttl_python">
 <a href="#state_ttl_python" style="color: inherit; text-decoration: inherit;">ttl</a>
@@ -1903,8 +1742,7 @@ The following state arguments are supported:
         <span class="property-type">int</span>
     </dt>
     <dd>{{% md %}}Time to live (TTL) of this load balancer's DNS `name`. Conflicts with `proxied` - this cannot be set for proxied load balancers. Default is `30`.
-{{% /md %}}</dd>
-    <dt class="property-optional"
+{{% /md %}}</dd><dt class="property-optional"
             title="Optional">
         <span id="state_zone_id_python">
 <a href="#state_zone_id_python" style="color: inherit; text-decoration: inherit;">zone_<wbr>id</a>
@@ -1913,8 +1751,7 @@ The following state arguments are supported:
         <span class="property-type">str</span>
     </dt>
     <dd>{{% md %}}The zone ID to add the load balancer to.
-{{% /md %}}</dd>
-</dl>
+{{% /md %}}</dd></dl>
 {{% /choosable %}}
 
 
@@ -1929,9 +1766,7 @@ The following state arguments are supported:
 <h4 id="loadbalancerpoppool">Load<wbr>Balancer<wbr>Pop<wbr>Pool</h4>
 
 {{% choosable language csharp %}}
-<dl class="resources-properties">
-
-    <dt class="property-required"
+<dl class="resources-properties"><dt class="property-required"
             title="Required">
         <span id="poolids_csharp">
 <a href="#poolids_csharp" style="color: inherit; text-decoration: inherit;">Pool<wbr>Ids</a>
@@ -1940,8 +1775,7 @@ The following state arguments are supported:
         <span class="property-type">List&lt;string&gt;</span>
     </dt>
     <dd>{{% md %}}A list of pool IDs in failover priority to use for traffic reaching the given PoP.
-{{% /md %}}</dd>
-    <dt class="property-required"
+{{% /md %}}</dd><dt class="property-required"
             title="Required">
         <span id="pop_csharp">
 <a href="#pop_csharp" style="color: inherit; text-decoration: inherit;">Pop</a>
@@ -1950,14 +1784,11 @@ The following state arguments are supported:
         <span class="property-type">string</span>
     </dt>
     <dd>{{% md %}}A 3-letter code for the Point-of-Presence. Allowed values can be found in the list of datacenters on the [status page](https://www.cloudflarestatus.com/). Multiple entries should not be specified with the same PoP.
-{{% /md %}}</dd>
-</dl>
+{{% /md %}}</dd></dl>
 {{% /choosable %}}
 
 {{% choosable language go %}}
-<dl class="resources-properties">
-
-    <dt class="property-required"
+<dl class="resources-properties"><dt class="property-required"
             title="Required">
         <span id="poolids_go">
 <a href="#poolids_go" style="color: inherit; text-decoration: inherit;">Pool<wbr>Ids</a>
@@ -1966,8 +1797,7 @@ The following state arguments are supported:
         <span class="property-type">[]string</span>
     </dt>
     <dd>{{% md %}}A list of pool IDs in failover priority to use for traffic reaching the given PoP.
-{{% /md %}}</dd>
-    <dt class="property-required"
+{{% /md %}}</dd><dt class="property-required"
             title="Required">
         <span id="pop_go">
 <a href="#pop_go" style="color: inherit; text-decoration: inherit;">Pop</a>
@@ -1976,14 +1806,11 @@ The following state arguments are supported:
         <span class="property-type">string</span>
     </dt>
     <dd>{{% md %}}A 3-letter code for the Point-of-Presence. Allowed values can be found in the list of datacenters on the [status page](https://www.cloudflarestatus.com/). Multiple entries should not be specified with the same PoP.
-{{% /md %}}</dd>
-</dl>
+{{% /md %}}</dd></dl>
 {{% /choosable %}}
 
 {{% choosable language nodejs %}}
-<dl class="resources-properties">
-
-    <dt class="property-required"
+<dl class="resources-properties"><dt class="property-required"
             title="Required">
         <span id="poolids_nodejs">
 <a href="#poolids_nodejs" style="color: inherit; text-decoration: inherit;">pool<wbr>Ids</a>
@@ -1992,8 +1819,7 @@ The following state arguments are supported:
         <span class="property-type">string[]</span>
     </dt>
     <dd>{{% md %}}A list of pool IDs in failover priority to use for traffic reaching the given PoP.
-{{% /md %}}</dd>
-    <dt class="property-required"
+{{% /md %}}</dd><dt class="property-required"
             title="Required">
         <span id="pop_nodejs">
 <a href="#pop_nodejs" style="color: inherit; text-decoration: inherit;">pop</a>
@@ -2002,14 +1828,11 @@ The following state arguments are supported:
         <span class="property-type">string</span>
     </dt>
     <dd>{{% md %}}A 3-letter code for the Point-of-Presence. Allowed values can be found in the list of datacenters on the [status page](https://www.cloudflarestatus.com/). Multiple entries should not be specified with the same PoP.
-{{% /md %}}</dd>
-</dl>
+{{% /md %}}</dd></dl>
 {{% /choosable %}}
 
 {{% choosable language python %}}
-<dl class="resources-properties">
-
-    <dt class="property-required"
+<dl class="resources-properties"><dt class="property-required"
             title="Required">
         <span id="pool_ids_python">
 <a href="#pool_ids_python" style="color: inherit; text-decoration: inherit;">pool_<wbr>ids</a>
@@ -2018,8 +1841,7 @@ The following state arguments are supported:
         <span class="property-type">Sequence[str]</span>
     </dt>
     <dd>{{% md %}}A list of pool IDs in failover priority to use for traffic reaching the given PoP.
-{{% /md %}}</dd>
-    <dt class="property-required"
+{{% /md %}}</dd><dt class="property-required"
             title="Required">
         <span id="pop_python">
 <a href="#pop_python" style="color: inherit; text-decoration: inherit;">pop</a>
@@ -2028,16 +1850,13 @@ The following state arguments are supported:
         <span class="property-type">str</span>
     </dt>
     <dd>{{% md %}}A 3-letter code for the Point-of-Presence. Allowed values can be found in the list of datacenters on the [status page](https://www.cloudflarestatus.com/). Multiple entries should not be specified with the same PoP.
-{{% /md %}}</dd>
-</dl>
+{{% /md %}}</dd></dl>
 {{% /choosable %}}
 
 <h4 id="loadbalancerregionpool">Load<wbr>Balancer<wbr>Region<wbr>Pool</h4>
 
 {{% choosable language csharp %}}
-<dl class="resources-properties">
-
-    <dt class="property-required"
+<dl class="resources-properties"><dt class="property-required"
             title="Required">
         <span id="poolids_csharp">
 <a href="#poolids_csharp" style="color: inherit; text-decoration: inherit;">Pool<wbr>Ids</a>
@@ -2046,8 +1865,7 @@ The following state arguments are supported:
         <span class="property-type">List&lt;string&gt;</span>
     </dt>
     <dd>{{% md %}}A list of pool IDs in failover priority to use for traffic reaching the given PoP.
-{{% /md %}}</dd>
-    <dt class="property-required"
+{{% /md %}}</dd><dt class="property-required"
             title="Required">
         <span id="region_csharp">
 <a href="#region_csharp" style="color: inherit; text-decoration: inherit;">Region</a>
@@ -2056,14 +1874,11 @@ The following state arguments are supported:
         <span class="property-type">string</span>
     </dt>
     <dd>{{% md %}}A region code which must be in the list defined [here](https://support.cloudflare.com/hc/en-us/articles/115000540888-Load-Balancing-Geographic-Regions). Multiple entries should not be specified with the same region.
-{{% /md %}}</dd>
-</dl>
+{{% /md %}}</dd></dl>
 {{% /choosable %}}
 
 {{% choosable language go %}}
-<dl class="resources-properties">
-
-    <dt class="property-required"
+<dl class="resources-properties"><dt class="property-required"
             title="Required">
         <span id="poolids_go">
 <a href="#poolids_go" style="color: inherit; text-decoration: inherit;">Pool<wbr>Ids</a>
@@ -2072,8 +1887,7 @@ The following state arguments are supported:
         <span class="property-type">[]string</span>
     </dt>
     <dd>{{% md %}}A list of pool IDs in failover priority to use for traffic reaching the given PoP.
-{{% /md %}}</dd>
-    <dt class="property-required"
+{{% /md %}}</dd><dt class="property-required"
             title="Required">
         <span id="region_go">
 <a href="#region_go" style="color: inherit; text-decoration: inherit;">Region</a>
@@ -2082,14 +1896,11 @@ The following state arguments are supported:
         <span class="property-type">string</span>
     </dt>
     <dd>{{% md %}}A region code which must be in the list defined [here](https://support.cloudflare.com/hc/en-us/articles/115000540888-Load-Balancing-Geographic-Regions). Multiple entries should not be specified with the same region.
-{{% /md %}}</dd>
-</dl>
+{{% /md %}}</dd></dl>
 {{% /choosable %}}
 
 {{% choosable language nodejs %}}
-<dl class="resources-properties">
-
-    <dt class="property-required"
+<dl class="resources-properties"><dt class="property-required"
             title="Required">
         <span id="poolids_nodejs">
 <a href="#poolids_nodejs" style="color: inherit; text-decoration: inherit;">pool<wbr>Ids</a>
@@ -2098,8 +1909,7 @@ The following state arguments are supported:
         <span class="property-type">string[]</span>
     </dt>
     <dd>{{% md %}}A list of pool IDs in failover priority to use for traffic reaching the given PoP.
-{{% /md %}}</dd>
-    <dt class="property-required"
+{{% /md %}}</dd><dt class="property-required"
             title="Required">
         <span id="region_nodejs">
 <a href="#region_nodejs" style="color: inherit; text-decoration: inherit;">region</a>
@@ -2108,14 +1918,11 @@ The following state arguments are supported:
         <span class="property-type">string</span>
     </dt>
     <dd>{{% md %}}A region code which must be in the list defined [here](https://support.cloudflare.com/hc/en-us/articles/115000540888-Load-Balancing-Geographic-Regions). Multiple entries should not be specified with the same region.
-{{% /md %}}</dd>
-</dl>
+{{% /md %}}</dd></dl>
 {{% /choosable %}}
 
 {{% choosable language python %}}
-<dl class="resources-properties">
-
-    <dt class="property-required"
+<dl class="resources-properties"><dt class="property-required"
             title="Required">
         <span id="pool_ids_python">
 <a href="#pool_ids_python" style="color: inherit; text-decoration: inherit;">pool_<wbr>ids</a>
@@ -2124,8 +1931,7 @@ The following state arguments are supported:
         <span class="property-type">Sequence[str]</span>
     </dt>
     <dd>{{% md %}}A list of pool IDs in failover priority to use for traffic reaching the given PoP.
-{{% /md %}}</dd>
-    <dt class="property-required"
+{{% /md %}}</dd><dt class="property-required"
             title="Required">
         <span id="region_python">
 <a href="#region_python" style="color: inherit; text-decoration: inherit;">region</a>
@@ -2134,8 +1940,7 @@ The following state arguments are supported:
         <span class="property-type">str</span>
     </dt>
     <dd>{{% md %}}A region code which must be in the list defined [here](https://support.cloudflare.com/hc/en-us/articles/115000540888-Load-Balancing-Geographic-Regions). Multiple entries should not be specified with the same region.
-{{% /md %}}</dd>
-</dl>
+{{% /md %}}</dd></dl>
 {{% /choosable %}}
 
 
@@ -2146,6 +1951,6 @@ The following state arguments are supported:
 	<dt>License</dt>
 	<dd>Apache-2.0</dd>
 	<dt>Notes</dt>
-	<dd>This Pulumi package is based on the [`cloudflare` Terraform Provider](https://github.com/cloudflare/terraform-provider-cloudflare).</dd>
+	<dd>{{% md %}}This Pulumi package is based on the [`cloudflare` Terraform Provider](https://github.com/cloudflare/terraform-provider-cloudflare).{{% /md %}}</dd>
 </dl>
 

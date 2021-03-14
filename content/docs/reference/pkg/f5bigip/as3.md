@@ -16,11 +16,17 @@ This resource is helpful to configure as3 declarative JSON on BIG-IP.
 
 
 {{% examples %}}
+
 ## Example Usage
 
 {{< chooser language "typescript,python,go,csharp" / >}}
 
-{{% example csharp %}}
+
+
+
+
+{{< example csharp >}}
+
 ```csharp
 using System.IO;
 using Pulumi;
@@ -46,13 +52,19 @@ class MyStack : Stack
 }
 ```
 
-{{% /example %}}
 
-{{% example go %}}
+{{< /example >}}
+
+
+{{< example go >}}
+
 Coming soon!
-{{% /example %}}
 
-{{% example python %}}
+{{< /example >}}
+
+
+{{< example python >}}
+
 ```python
 import pulumi
 import pulumi_f5bigip as f5bigip
@@ -65,9 +77,12 @@ as3_example1_index_as3_as3 = f5bigip.As3("as3-example1Index/as3As3",
     tenant_filter="Sample_03")
 ```
 
-{{% /example %}}
 
-{{% example typescript %}}
+{{< /example >}}
+
+
+{{< example typescript >}}
+
 
 ```typescript
 import * as pulumi from "@pulumi/pulumi";
@@ -83,9 +98,16 @@ const as3_example1Index_as3As3 = new f5bigip.As3("as3-example1Index/as3As3", {
 });
 ```
 
-{{% /example %}}
+
+{{< /example >}}
+
+
+
+
 
 {{% /examples %}}
+
+
 
 
 ## Create a As3 Resource {#create}
@@ -110,9 +132,7 @@ const as3_example1Index_as3As3 = new f5bigip.As3("as3-example1Index/as3As3", {
 
 {{% choosable language nodejs %}}
 
-<dl class="resources-properties">
-  
-    <dt
+<dl class="resources-properties"><dt
         class="property-required" title="Required">
         <span>name</span>
         <span class="property-indicator"></span>
@@ -120,9 +140,7 @@ const as3_example1Index_as3As3 = new f5bigip.As3("as3-example1Index/as3As3", {
     </dt>
     <dd>
       The unique name of the resource.
-    </dd>
-  
-    <dt
+    </dd><dt
         class="property-required" title="Required">
         <span>args</span>
         <span class="property-indicator"></span>
@@ -130,9 +148,7 @@ const as3_example1Index_as3As3 = new f5bigip.As3("as3-example1Index/as3As3", {
     </dt>
     <dd>
       The arguments to resource properties.
-    </dd>
-  
-    <dt
+    </dd><dt
         class="property-optional" title="Optional">
         <span>opts</span>
         <span class="property-indicator"></span>
@@ -140,10 +156,7 @@ const as3_example1Index_as3As3 = new f5bigip.As3("as3-example1Index/as3As3", {
     </dt>
     <dd>
       Bag of options to control resource&#39;s behavior.
-    </dd>
-  
-
-</dl>
+    </dd></dl>
 
 {{% /choosable %}}
 
@@ -169,9 +182,7 @@ const as3_example1Index_as3As3 = new f5bigip.As3("as3-example1Index/as3As3", {
 
 {{% choosable language go %}}
 
-<dl class="resources-properties">
-  
-    <dt
+<dl class="resources-properties"><dt
         class="property-optional" title="Optional">
         <span>ctx</span>
         <span class="property-indicator"></span>
@@ -179,9 +190,7 @@ const as3_example1Index_as3As3 = new f5bigip.As3("as3-example1Index/as3As3", {
     </dt>
     <dd>
       Context object for the current deployment.
-    </dd>
-  
-    <dt
+    </dd><dt
         class="property-required" title="Required">
         <span>name</span>
         <span class="property-indicator"></span>
@@ -189,9 +198,7 @@ const as3_example1Index_as3As3 = new f5bigip.As3("as3-example1Index/as3As3", {
     </dt>
     <dd>
       The unique name of the resource.
-    </dd>
-  
-    <dt
+    </dd><dt
         class="property-required" title="Required">
         <span>args</span>
         <span class="property-indicator"></span>
@@ -199,9 +206,7 @@ const as3_example1Index_as3As3 = new f5bigip.As3("as3-example1Index/as3As3", {
     </dt>
     <dd>
       The arguments to resource properties.
-    </dd>
-  
-    <dt
+    </dd><dt
         class="property-optional" title="Optional">
         <span>opts</span>
         <span class="property-indicator"></span>
@@ -209,18 +214,13 @@ const as3_example1Index_as3As3 = new f5bigip.As3("as3-example1Index/as3As3", {
     </dt>
     <dd>
       Bag of options to control resource&#39;s behavior.
-    </dd>
-  
-
-</dl>
+    </dd></dl>
 
 {{% /choosable %}}
 
 {{% choosable language csharp %}}
 
-<dl class="resources-properties">
-  
-    <dt
+<dl class="resources-properties"><dt
         class="property-required" title="Required">
         <span>name</span>
         <span class="property-indicator"></span>
@@ -228,9 +228,7 @@ const as3_example1Index_as3As3 = new f5bigip.As3("as3-example1Index/as3As3", {
     </dt>
     <dd>
       The unique name of the resource.
-    </dd>
-  
-    <dt
+    </dd><dt
         class="property-required" title="Required">
         <span>args</span>
         <span class="property-indicator"></span>
@@ -238,9 +236,7 @@ const as3_example1Index_as3As3 = new f5bigip.As3("as3-example1Index/as3As3", {
     </dt>
     <dd>
       The arguments to resource properties.
-    </dd>
-  
-    <dt
+    </dd><dt
         class="property-optional" title="Optional">
         <span>opts</span>
         <span class="property-indicator"></span>
@@ -248,10 +244,7 @@ const as3_example1Index_as3As3 = new f5bigip.As3("as3-example1Index/as3As3", {
     </dt>
     <dd>
       Bag of options to control resource&#39;s behavior.
-    </dd>
-  
-
-</dl>
+    </dd></dl>
 
 {{% /choosable %}}
 
@@ -266,9 +259,7 @@ The As3 resource accepts the following [input]({{< relref "/docs/intro/concepts/
 
 
 {{% choosable language csharp %}}
-<dl class="resources-properties">
-
-    <dt class="property-required"
+<dl class="resources-properties"><dt class="property-required"
             title="Required">
         <span id="as3json_csharp">
 <a href="#as3json_csharp" style="color: inherit; text-decoration: inherit;">As3Json</a>
@@ -277,8 +268,7 @@ The As3 resource accepts the following [input]({{< relref "/docs/intro/concepts/
         <span class="property-type">string</span>
     </dt>
     <dd>{{% md %}}Path/Filename of Declarative AS3 JSON which is a json file used with builtin ```file``` function
-{{% /md %}}</dd>
-    <dt class="property-optional"
+{{% /md %}}</dd><dt class="property-optional"
             title="Optional">
         <span id="applicationlist_csharp">
 <a href="#applicationlist_csharp" style="color: inherit; text-decoration: inherit;">Application<wbr>List</a>
@@ -287,8 +277,7 @@ The As3 resource accepts the following [input]({{< relref "/docs/intro/concepts/
         <span class="property-type">string</span>
     </dt>
     <dd>{{% md %}}Name of Application
-{{% /md %}}</dd>
-    <dt class="property-optional"
+{{% /md %}}</dd><dt class="property-optional"
             title="Optional">
         <span id="tenantfilter_csharp">
 <a href="#tenantfilter_csharp" style="color: inherit; text-decoration: inherit;">Tenant<wbr>Filter</a>
@@ -297,8 +286,7 @@ The As3 resource accepts the following [input]({{< relref "/docs/intro/concepts/
         <span class="property-type">string</span>
     </dt>
     <dd>{{% md %}}If there are muntiple tenants in a json this attribute helps the user to set a particular tenant to which he want to reflect the changes. Other tenants will neither be created nor be modified
-{{% /md %}}</dd>
-    <dt class="property-optional"
+{{% /md %}}</dd><dt class="property-optional"
             title="Optional">
         <span id="tenantlist_csharp">
 <a href="#tenantlist_csharp" style="color: inherit; text-decoration: inherit;">Tenant<wbr>List</a>
@@ -307,8 +295,7 @@ The As3 resource accepts the following [input]({{< relref "/docs/intro/concepts/
         <span class="property-type">string</span>
     </dt>
     <dd>{{% md %}}Name of Tenant
-{{% /md %}}</dd>
-    <dt class="property-optional property-deprecated"
+{{% /md %}}</dd><dt class="property-optional property-deprecated"
             title="Optional, Deprecated">
         <span id="tenantname_csharp">
 <a href="#tenantname_csharp" style="color: inherit; text-decoration: inherit;">Tenant<wbr>Name</a>
@@ -317,14 +304,11 @@ The As3 resource accepts the following [input]({{< relref "/docs/intro/concepts/
         <span class="property-type">string</span>
     </dt>
     <dd>{{% md %}}Name of Tenant
-{{% /md %}}<p class="property-message">Deprecated: {{% md %}}this attribute is no longer in use{{% /md %}}</p></dd>
-</dl>
+{{% /md %}}<p class="property-message">Deprecated: {{% md %}}this attribute is no longer in use{{% /md %}}</p></dd></dl>
 {{% /choosable %}}
 
 {{% choosable language go %}}
-<dl class="resources-properties">
-
-    <dt class="property-required"
+<dl class="resources-properties"><dt class="property-required"
             title="Required">
         <span id="as3json_go">
 <a href="#as3json_go" style="color: inherit; text-decoration: inherit;">As3Json</a>
@@ -333,8 +317,7 @@ The As3 resource accepts the following [input]({{< relref "/docs/intro/concepts/
         <span class="property-type">string</span>
     </dt>
     <dd>{{% md %}}Path/Filename of Declarative AS3 JSON which is a json file used with builtin ```file``` function
-{{% /md %}}</dd>
-    <dt class="property-optional"
+{{% /md %}}</dd><dt class="property-optional"
             title="Optional">
         <span id="applicationlist_go">
 <a href="#applicationlist_go" style="color: inherit; text-decoration: inherit;">Application<wbr>List</a>
@@ -343,8 +326,7 @@ The As3 resource accepts the following [input]({{< relref "/docs/intro/concepts/
         <span class="property-type">string</span>
     </dt>
     <dd>{{% md %}}Name of Application
-{{% /md %}}</dd>
-    <dt class="property-optional"
+{{% /md %}}</dd><dt class="property-optional"
             title="Optional">
         <span id="tenantfilter_go">
 <a href="#tenantfilter_go" style="color: inherit; text-decoration: inherit;">Tenant<wbr>Filter</a>
@@ -353,8 +335,7 @@ The As3 resource accepts the following [input]({{< relref "/docs/intro/concepts/
         <span class="property-type">string</span>
     </dt>
     <dd>{{% md %}}If there are muntiple tenants in a json this attribute helps the user to set a particular tenant to which he want to reflect the changes. Other tenants will neither be created nor be modified
-{{% /md %}}</dd>
-    <dt class="property-optional"
+{{% /md %}}</dd><dt class="property-optional"
             title="Optional">
         <span id="tenantlist_go">
 <a href="#tenantlist_go" style="color: inherit; text-decoration: inherit;">Tenant<wbr>List</a>
@@ -363,8 +344,7 @@ The As3 resource accepts the following [input]({{< relref "/docs/intro/concepts/
         <span class="property-type">string</span>
     </dt>
     <dd>{{% md %}}Name of Tenant
-{{% /md %}}</dd>
-    <dt class="property-optional property-deprecated"
+{{% /md %}}</dd><dt class="property-optional property-deprecated"
             title="Optional, Deprecated">
         <span id="tenantname_go">
 <a href="#tenantname_go" style="color: inherit; text-decoration: inherit;">Tenant<wbr>Name</a>
@@ -373,14 +353,11 @@ The As3 resource accepts the following [input]({{< relref "/docs/intro/concepts/
         <span class="property-type">string</span>
     </dt>
     <dd>{{% md %}}Name of Tenant
-{{% /md %}}<p class="property-message">Deprecated: {{% md %}}this attribute is no longer in use{{% /md %}}</p></dd>
-</dl>
+{{% /md %}}<p class="property-message">Deprecated: {{% md %}}this attribute is no longer in use{{% /md %}}</p></dd></dl>
 {{% /choosable %}}
 
 {{% choosable language nodejs %}}
-<dl class="resources-properties">
-
-    <dt class="property-required"
+<dl class="resources-properties"><dt class="property-required"
             title="Required">
         <span id="as3json_nodejs">
 <a href="#as3json_nodejs" style="color: inherit; text-decoration: inherit;">as3Json</a>
@@ -389,8 +366,7 @@ The As3 resource accepts the following [input]({{< relref "/docs/intro/concepts/
         <span class="property-type">string</span>
     </dt>
     <dd>{{% md %}}Path/Filename of Declarative AS3 JSON which is a json file used with builtin ```file``` function
-{{% /md %}}</dd>
-    <dt class="property-optional"
+{{% /md %}}</dd><dt class="property-optional"
             title="Optional">
         <span id="applicationlist_nodejs">
 <a href="#applicationlist_nodejs" style="color: inherit; text-decoration: inherit;">application<wbr>List</a>
@@ -399,8 +375,7 @@ The As3 resource accepts the following [input]({{< relref "/docs/intro/concepts/
         <span class="property-type">string</span>
     </dt>
     <dd>{{% md %}}Name of Application
-{{% /md %}}</dd>
-    <dt class="property-optional"
+{{% /md %}}</dd><dt class="property-optional"
             title="Optional">
         <span id="tenantfilter_nodejs">
 <a href="#tenantfilter_nodejs" style="color: inherit; text-decoration: inherit;">tenant<wbr>Filter</a>
@@ -409,8 +384,7 @@ The As3 resource accepts the following [input]({{< relref "/docs/intro/concepts/
         <span class="property-type">string</span>
     </dt>
     <dd>{{% md %}}If there are muntiple tenants in a json this attribute helps the user to set a particular tenant to which he want to reflect the changes. Other tenants will neither be created nor be modified
-{{% /md %}}</dd>
-    <dt class="property-optional"
+{{% /md %}}</dd><dt class="property-optional"
             title="Optional">
         <span id="tenantlist_nodejs">
 <a href="#tenantlist_nodejs" style="color: inherit; text-decoration: inherit;">tenant<wbr>List</a>
@@ -419,8 +393,7 @@ The As3 resource accepts the following [input]({{< relref "/docs/intro/concepts/
         <span class="property-type">string</span>
     </dt>
     <dd>{{% md %}}Name of Tenant
-{{% /md %}}</dd>
-    <dt class="property-optional property-deprecated"
+{{% /md %}}</dd><dt class="property-optional property-deprecated"
             title="Optional, Deprecated">
         <span id="tenantname_nodejs">
 <a href="#tenantname_nodejs" style="color: inherit; text-decoration: inherit;">tenant<wbr>Name</a>
@@ -429,14 +402,11 @@ The As3 resource accepts the following [input]({{< relref "/docs/intro/concepts/
         <span class="property-type">string</span>
     </dt>
     <dd>{{% md %}}Name of Tenant
-{{% /md %}}<p class="property-message">Deprecated: {{% md %}}this attribute is no longer in use{{% /md %}}</p></dd>
-</dl>
+{{% /md %}}<p class="property-message">Deprecated: {{% md %}}this attribute is no longer in use{{% /md %}}</p></dd></dl>
 {{% /choosable %}}
 
 {{% choosable language python %}}
-<dl class="resources-properties">
-
-    <dt class="property-required"
+<dl class="resources-properties"><dt class="property-required"
             title="Required">
         <span id="as3_json_python">
 <a href="#as3_json_python" style="color: inherit; text-decoration: inherit;">as3_<wbr>json</a>
@@ -445,8 +415,7 @@ The As3 resource accepts the following [input]({{< relref "/docs/intro/concepts/
         <span class="property-type">str</span>
     </dt>
     <dd>{{% md %}}Path/Filename of Declarative AS3 JSON which is a json file used with builtin ```file``` function
-{{% /md %}}</dd>
-    <dt class="property-optional"
+{{% /md %}}</dd><dt class="property-optional"
             title="Optional">
         <span id="application_list_python">
 <a href="#application_list_python" style="color: inherit; text-decoration: inherit;">application_<wbr>list</a>
@@ -455,8 +424,7 @@ The As3 resource accepts the following [input]({{< relref "/docs/intro/concepts/
         <span class="property-type">str</span>
     </dt>
     <dd>{{% md %}}Name of Application
-{{% /md %}}</dd>
-    <dt class="property-optional"
+{{% /md %}}</dd><dt class="property-optional"
             title="Optional">
         <span id="tenant_filter_python">
 <a href="#tenant_filter_python" style="color: inherit; text-decoration: inherit;">tenant_<wbr>filter</a>
@@ -465,8 +433,7 @@ The As3 resource accepts the following [input]({{< relref "/docs/intro/concepts/
         <span class="property-type">str</span>
     </dt>
     <dd>{{% md %}}If there are muntiple tenants in a json this attribute helps the user to set a particular tenant to which he want to reflect the changes. Other tenants will neither be created nor be modified
-{{% /md %}}</dd>
-    <dt class="property-optional"
+{{% /md %}}</dd><dt class="property-optional"
             title="Optional">
         <span id="tenant_list_python">
 <a href="#tenant_list_python" style="color: inherit; text-decoration: inherit;">tenant_<wbr>list</a>
@@ -475,8 +442,7 @@ The As3 resource accepts the following [input]({{< relref "/docs/intro/concepts/
         <span class="property-type">str</span>
     </dt>
     <dd>{{% md %}}Name of Tenant
-{{% /md %}}</dd>
-    <dt class="property-optional property-deprecated"
+{{% /md %}}</dd><dt class="property-optional property-deprecated"
             title="Optional, Deprecated">
         <span id="tenant_name_python">
 <a href="#tenant_name_python" style="color: inherit; text-decoration: inherit;">tenant_<wbr>name</a>
@@ -485,8 +451,7 @@ The As3 resource accepts the following [input]({{< relref "/docs/intro/concepts/
         <span class="property-type">str</span>
     </dt>
     <dd>{{% md %}}Name of Tenant
-{{% /md %}}<p class="property-message">Deprecated: {{% md %}}this attribute is no longer in use{{% /md %}}</p></dd>
-</dl>
+{{% /md %}}<p class="property-message">Deprecated: {{% md %}}this attribute is no longer in use{{% /md %}}</p></dd></dl>
 {{% /choosable %}}
 
 
@@ -497,9 +462,7 @@ All [input](#inputs) properties are implicitly available as output properties. A
 
 
 {{% choosable language csharp %}}
-<dl class="resources-properties">
-
-    <dt class="property-"
+<dl class="resources-properties"><dt class="property-"
             title="">
         <span id="id_csharp">
 <a href="#id_csharp" style="color: inherit; text-decoration: inherit;">Id</a>
@@ -507,14 +470,11 @@ All [input](#inputs) properties are implicitly available as output properties. A
         <span class="property-indicator"></span>
         <span class="property-type">string</span>
     </dt>
-    <dd>{{% md %}}The provider-assigned unique ID for this managed resource.{{% /md %}}</dd>
-</dl>
+    <dd>{{% md %}}The provider-assigned unique ID for this managed resource.{{% /md %}}</dd></dl>
 {{% /choosable %}}
 
 {{% choosable language go %}}
-<dl class="resources-properties">
-
-    <dt class="property-"
+<dl class="resources-properties"><dt class="property-"
             title="">
         <span id="id_go">
 <a href="#id_go" style="color: inherit; text-decoration: inherit;">Id</a>
@@ -522,14 +482,11 @@ All [input](#inputs) properties are implicitly available as output properties. A
         <span class="property-indicator"></span>
         <span class="property-type">string</span>
     </dt>
-    <dd>{{% md %}}The provider-assigned unique ID for this managed resource.{{% /md %}}</dd>
-</dl>
+    <dd>{{% md %}}The provider-assigned unique ID for this managed resource.{{% /md %}}</dd></dl>
 {{% /choosable %}}
 
 {{% choosable language nodejs %}}
-<dl class="resources-properties">
-
-    <dt class="property-"
+<dl class="resources-properties"><dt class="property-"
             title="">
         <span id="id_nodejs">
 <a href="#id_nodejs" style="color: inherit; text-decoration: inherit;">id</a>
@@ -537,14 +494,11 @@ All [input](#inputs) properties are implicitly available as output properties. A
         <span class="property-indicator"></span>
         <span class="property-type">string</span>
     </dt>
-    <dd>{{% md %}}The provider-assigned unique ID for this managed resource.{{% /md %}}</dd>
-</dl>
+    <dd>{{% md %}}The provider-assigned unique ID for this managed resource.{{% /md %}}</dd></dl>
 {{% /choosable %}}
 
 {{% choosable language python %}}
-<dl class="resources-properties">
-
-    <dt class="property-"
+<dl class="resources-properties"><dt class="property-"
             title="">
         <span id="id_python">
 <a href="#id_python" style="color: inherit; text-decoration: inherit;">id</a>
@@ -552,8 +506,7 @@ All [input](#inputs) properties are implicitly available as output properties. A
         <span class="property-indicator"></span>
         <span class="property-type">str</span>
     </dt>
-    <dd>{{% md %}}The provider-assigned unique ID for this managed resource.{{% /md %}}</dd>
-</dl>
+    <dd>{{% md %}}The provider-assigned unique ID for this managed resource.{{% /md %}}</dd></dl>
 {{% /choosable %}}
 
 
@@ -680,9 +633,7 @@ The following state arguments are supported:
 
 
 {{% choosable language csharp %}}
-<dl class="resources-properties">
-
-    <dt class="property-optional"
+<dl class="resources-properties"><dt class="property-optional"
             title="Optional">
         <span id="state_applicationlist_csharp">
 <a href="#state_applicationlist_csharp" style="color: inherit; text-decoration: inherit;">Application<wbr>List</a>
@@ -691,8 +642,7 @@ The following state arguments are supported:
         <span class="property-type">string</span>
     </dt>
     <dd>{{% md %}}Name of Application
-{{% /md %}}</dd>
-    <dt class="property-optional"
+{{% /md %}}</dd><dt class="property-optional"
             title="Optional">
         <span id="state_as3json_csharp">
 <a href="#state_as3json_csharp" style="color: inherit; text-decoration: inherit;">As3Json</a>
@@ -701,8 +651,7 @@ The following state arguments are supported:
         <span class="property-type">string</span>
     </dt>
     <dd>{{% md %}}Path/Filename of Declarative AS3 JSON which is a json file used with builtin ```file``` function
-{{% /md %}}</dd>
-    <dt class="property-optional"
+{{% /md %}}</dd><dt class="property-optional"
             title="Optional">
         <span id="state_tenantfilter_csharp">
 <a href="#state_tenantfilter_csharp" style="color: inherit; text-decoration: inherit;">Tenant<wbr>Filter</a>
@@ -711,8 +660,7 @@ The following state arguments are supported:
         <span class="property-type">string</span>
     </dt>
     <dd>{{% md %}}If there are muntiple tenants in a json this attribute helps the user to set a particular tenant to which he want to reflect the changes. Other tenants will neither be created nor be modified
-{{% /md %}}</dd>
-    <dt class="property-optional"
+{{% /md %}}</dd><dt class="property-optional"
             title="Optional">
         <span id="state_tenantlist_csharp">
 <a href="#state_tenantlist_csharp" style="color: inherit; text-decoration: inherit;">Tenant<wbr>List</a>
@@ -721,8 +669,7 @@ The following state arguments are supported:
         <span class="property-type">string</span>
     </dt>
     <dd>{{% md %}}Name of Tenant
-{{% /md %}}</dd>
-    <dt class="property-optional property-deprecated"
+{{% /md %}}</dd><dt class="property-optional property-deprecated"
             title="Optional, Deprecated">
         <span id="state_tenantname_csharp">
 <a href="#state_tenantname_csharp" style="color: inherit; text-decoration: inherit;">Tenant<wbr>Name</a>
@@ -731,14 +678,11 @@ The following state arguments are supported:
         <span class="property-type">string</span>
     </dt>
     <dd>{{% md %}}Name of Tenant
-{{% /md %}}<p class="property-message">Deprecated: {{% md %}}this attribute is no longer in use{{% /md %}}</p></dd>
-</dl>
+{{% /md %}}<p class="property-message">Deprecated: {{% md %}}this attribute is no longer in use{{% /md %}}</p></dd></dl>
 {{% /choosable %}}
 
 {{% choosable language go %}}
-<dl class="resources-properties">
-
-    <dt class="property-optional"
+<dl class="resources-properties"><dt class="property-optional"
             title="Optional">
         <span id="state_applicationlist_go">
 <a href="#state_applicationlist_go" style="color: inherit; text-decoration: inherit;">Application<wbr>List</a>
@@ -747,8 +691,7 @@ The following state arguments are supported:
         <span class="property-type">string</span>
     </dt>
     <dd>{{% md %}}Name of Application
-{{% /md %}}</dd>
-    <dt class="property-optional"
+{{% /md %}}</dd><dt class="property-optional"
             title="Optional">
         <span id="state_as3json_go">
 <a href="#state_as3json_go" style="color: inherit; text-decoration: inherit;">As3Json</a>
@@ -757,8 +700,7 @@ The following state arguments are supported:
         <span class="property-type">string</span>
     </dt>
     <dd>{{% md %}}Path/Filename of Declarative AS3 JSON which is a json file used with builtin ```file``` function
-{{% /md %}}</dd>
-    <dt class="property-optional"
+{{% /md %}}</dd><dt class="property-optional"
             title="Optional">
         <span id="state_tenantfilter_go">
 <a href="#state_tenantfilter_go" style="color: inherit; text-decoration: inherit;">Tenant<wbr>Filter</a>
@@ -767,8 +709,7 @@ The following state arguments are supported:
         <span class="property-type">string</span>
     </dt>
     <dd>{{% md %}}If there are muntiple tenants in a json this attribute helps the user to set a particular tenant to which he want to reflect the changes. Other tenants will neither be created nor be modified
-{{% /md %}}</dd>
-    <dt class="property-optional"
+{{% /md %}}</dd><dt class="property-optional"
             title="Optional">
         <span id="state_tenantlist_go">
 <a href="#state_tenantlist_go" style="color: inherit; text-decoration: inherit;">Tenant<wbr>List</a>
@@ -777,8 +718,7 @@ The following state arguments are supported:
         <span class="property-type">string</span>
     </dt>
     <dd>{{% md %}}Name of Tenant
-{{% /md %}}</dd>
-    <dt class="property-optional property-deprecated"
+{{% /md %}}</dd><dt class="property-optional property-deprecated"
             title="Optional, Deprecated">
         <span id="state_tenantname_go">
 <a href="#state_tenantname_go" style="color: inherit; text-decoration: inherit;">Tenant<wbr>Name</a>
@@ -787,14 +727,11 @@ The following state arguments are supported:
         <span class="property-type">string</span>
     </dt>
     <dd>{{% md %}}Name of Tenant
-{{% /md %}}<p class="property-message">Deprecated: {{% md %}}this attribute is no longer in use{{% /md %}}</p></dd>
-</dl>
+{{% /md %}}<p class="property-message">Deprecated: {{% md %}}this attribute is no longer in use{{% /md %}}</p></dd></dl>
 {{% /choosable %}}
 
 {{% choosable language nodejs %}}
-<dl class="resources-properties">
-
-    <dt class="property-optional"
+<dl class="resources-properties"><dt class="property-optional"
             title="Optional">
         <span id="state_applicationlist_nodejs">
 <a href="#state_applicationlist_nodejs" style="color: inherit; text-decoration: inherit;">application<wbr>List</a>
@@ -803,8 +740,7 @@ The following state arguments are supported:
         <span class="property-type">string</span>
     </dt>
     <dd>{{% md %}}Name of Application
-{{% /md %}}</dd>
-    <dt class="property-optional"
+{{% /md %}}</dd><dt class="property-optional"
             title="Optional">
         <span id="state_as3json_nodejs">
 <a href="#state_as3json_nodejs" style="color: inherit; text-decoration: inherit;">as3Json</a>
@@ -813,8 +749,7 @@ The following state arguments are supported:
         <span class="property-type">string</span>
     </dt>
     <dd>{{% md %}}Path/Filename of Declarative AS3 JSON which is a json file used with builtin ```file``` function
-{{% /md %}}</dd>
-    <dt class="property-optional"
+{{% /md %}}</dd><dt class="property-optional"
             title="Optional">
         <span id="state_tenantfilter_nodejs">
 <a href="#state_tenantfilter_nodejs" style="color: inherit; text-decoration: inherit;">tenant<wbr>Filter</a>
@@ -823,8 +758,7 @@ The following state arguments are supported:
         <span class="property-type">string</span>
     </dt>
     <dd>{{% md %}}If there are muntiple tenants in a json this attribute helps the user to set a particular tenant to which he want to reflect the changes. Other tenants will neither be created nor be modified
-{{% /md %}}</dd>
-    <dt class="property-optional"
+{{% /md %}}</dd><dt class="property-optional"
             title="Optional">
         <span id="state_tenantlist_nodejs">
 <a href="#state_tenantlist_nodejs" style="color: inherit; text-decoration: inherit;">tenant<wbr>List</a>
@@ -833,8 +767,7 @@ The following state arguments are supported:
         <span class="property-type">string</span>
     </dt>
     <dd>{{% md %}}Name of Tenant
-{{% /md %}}</dd>
-    <dt class="property-optional property-deprecated"
+{{% /md %}}</dd><dt class="property-optional property-deprecated"
             title="Optional, Deprecated">
         <span id="state_tenantname_nodejs">
 <a href="#state_tenantname_nodejs" style="color: inherit; text-decoration: inherit;">tenant<wbr>Name</a>
@@ -843,14 +776,11 @@ The following state arguments are supported:
         <span class="property-type">string</span>
     </dt>
     <dd>{{% md %}}Name of Tenant
-{{% /md %}}<p class="property-message">Deprecated: {{% md %}}this attribute is no longer in use{{% /md %}}</p></dd>
-</dl>
+{{% /md %}}<p class="property-message">Deprecated: {{% md %}}this attribute is no longer in use{{% /md %}}</p></dd></dl>
 {{% /choosable %}}
 
 {{% choosable language python %}}
-<dl class="resources-properties">
-
-    <dt class="property-optional"
+<dl class="resources-properties"><dt class="property-optional"
             title="Optional">
         <span id="state_application_list_python">
 <a href="#state_application_list_python" style="color: inherit; text-decoration: inherit;">application_<wbr>list</a>
@@ -859,8 +789,7 @@ The following state arguments are supported:
         <span class="property-type">str</span>
     </dt>
     <dd>{{% md %}}Name of Application
-{{% /md %}}</dd>
-    <dt class="property-optional"
+{{% /md %}}</dd><dt class="property-optional"
             title="Optional">
         <span id="state_as3_json_python">
 <a href="#state_as3_json_python" style="color: inherit; text-decoration: inherit;">as3_<wbr>json</a>
@@ -869,8 +798,7 @@ The following state arguments are supported:
         <span class="property-type">str</span>
     </dt>
     <dd>{{% md %}}Path/Filename of Declarative AS3 JSON which is a json file used with builtin ```file``` function
-{{% /md %}}</dd>
-    <dt class="property-optional"
+{{% /md %}}</dd><dt class="property-optional"
             title="Optional">
         <span id="state_tenant_filter_python">
 <a href="#state_tenant_filter_python" style="color: inherit; text-decoration: inherit;">tenant_<wbr>filter</a>
@@ -879,8 +807,7 @@ The following state arguments are supported:
         <span class="property-type">str</span>
     </dt>
     <dd>{{% md %}}If there are muntiple tenants in a json this attribute helps the user to set a particular tenant to which he want to reflect the changes. Other tenants will neither be created nor be modified
-{{% /md %}}</dd>
-    <dt class="property-optional"
+{{% /md %}}</dd><dt class="property-optional"
             title="Optional">
         <span id="state_tenant_list_python">
 <a href="#state_tenant_list_python" style="color: inherit; text-decoration: inherit;">tenant_<wbr>list</a>
@@ -889,8 +816,7 @@ The following state arguments are supported:
         <span class="property-type">str</span>
     </dt>
     <dd>{{% md %}}Name of Tenant
-{{% /md %}}</dd>
-    <dt class="property-optional property-deprecated"
+{{% /md %}}</dd><dt class="property-optional property-deprecated"
             title="Optional, Deprecated">
         <span id="state_tenant_name_python">
 <a href="#state_tenant_name_python" style="color: inherit; text-decoration: inherit;">tenant_<wbr>name</a>
@@ -899,8 +825,7 @@ The following state arguments are supported:
         <span class="property-type">str</span>
     </dt>
     <dd>{{% md %}}Name of Tenant
-{{% /md %}}<p class="property-message">Deprecated: {{% md %}}this attribute is no longer in use{{% /md %}}</p></dd>
-</dl>
+{{% /md %}}<p class="property-message">Deprecated: {{% md %}}this attribute is no longer in use{{% /md %}}</p></dd></dl>
 {{% /choosable %}}
 
 
@@ -916,6 +841,6 @@ The following state arguments are supported:
 	<dt>License</dt>
 	<dd>Apache-2.0</dd>
 	<dt>Notes</dt>
-	<dd>This Pulumi package is based on the [`bigip` Terraform Provider](https://github.com/F5Networks/terraform-provider-bigip).</dd>
+	<dd>{{% md %}}This Pulumi package is based on the [`bigip` Terraform Provider](https://github.com/F5Networks/terraform-provider-bigip).{{% /md %}}</dd>
 </dl>
 

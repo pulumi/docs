@@ -48,9 +48,7 @@ The following arguments are supported:
 
 
 {{% choosable language csharp %}}
-<dl class="resources-properties">
-
-    <dt class="property-required"
+<dl class="resources-properties"><dt class="property-required"
             title="Required">
         <span id="pathprefix_csharp">
 <a href="#pathprefix_csharp" style="color: inherit; text-decoration: inherit;">Path<wbr>Prefix</a>
@@ -61,8 +59,7 @@ The following arguments are supported:
     <dd>{{% md %}}Specifies the common prefix shared by all keys
 that will be read by this data source instance. In most cases, this will
 end with a slash to read a "folder" of subkeys.
-{{% /md %}}</dd>
-    <dt class="property-optional"
+{{% /md %}}</dd><dt class="property-optional"
             title="Optional">
         <span id="datacenter_csharp">
 <a href="#datacenter_csharp" style="color: inherit; text-decoration: inherit;">Datacenter</a>
@@ -72,8 +69,7 @@ end with a slash to read a "folder" of subkeys.
     </dt>
     <dd>{{% md %}}The datacenter to use. This overrides the
 agent's default datacenter and the datacenter in the provider setup.
-{{% /md %}}</dd>
-    <dt class="property-optional"
+{{% /md %}}</dd><dt class="property-optional"
             title="Optional">
         <span id="namespace_csharp">
 <a href="#namespace_csharp" style="color: inherit; text-decoration: inherit;">Namespace</a>
@@ -82,8 +78,7 @@ agent's default datacenter and the datacenter in the provider setup.
         <span class="property-type">string</span>
     </dt>
     <dd>{{% md %}}The namespace to create the keys within.
-{{% /md %}}</dd>
-    <dt class="property-optional"
+{{% /md %}}</dd><dt class="property-optional"
             title="Optional">
         <span id="subkeycollection_csharp">
 <a href="#subkeycollection_csharp" style="color: inherit; text-decoration: inherit;">Subkey<wbr>Collection</a>
@@ -93,8 +88,7 @@ agent's default datacenter and the datacenter in the provider setup.
     </dt>
     <dd>{{% md %}}Specifies a subkey in Consul to be read. Supported
 values documented below. Multiple blocks supported.
-{{% /md %}}</dd>
-    <dt class="property-optional"
+{{% /md %}}</dd><dt class="property-optional"
             title="Optional">
         <span id="token_csharp">
 <a href="#token_csharp" style="color: inherit; text-decoration: inherit;">Token</a>
@@ -104,14 +98,11 @@ values documented below. Multiple blocks supported.
     </dt>
     <dd>{{% md %}}The ACL token to use. This overrides the
 token that the agent provides by default.
-{{% /md %}}</dd>
-</dl>
+{{% /md %}}</dd></dl>
 {{% /choosable %}}
 
 {{% choosable language go %}}
-<dl class="resources-properties">
-
-    <dt class="property-required"
+<dl class="resources-properties"><dt class="property-required"
             title="Required">
         <span id="pathprefix_go">
 <a href="#pathprefix_go" style="color: inherit; text-decoration: inherit;">Path<wbr>Prefix</a>
@@ -122,8 +113,7 @@ token that the agent provides by default.
     <dd>{{% md %}}Specifies the common prefix shared by all keys
 that will be read by this data source instance. In most cases, this will
 end with a slash to read a "folder" of subkeys.
-{{% /md %}}</dd>
-    <dt class="property-optional"
+{{% /md %}}</dd><dt class="property-optional"
             title="Optional">
         <span id="datacenter_go">
 <a href="#datacenter_go" style="color: inherit; text-decoration: inherit;">Datacenter</a>
@@ -133,8 +123,7 @@ end with a slash to read a "folder" of subkeys.
     </dt>
     <dd>{{% md %}}The datacenter to use. This overrides the
 agent's default datacenter and the datacenter in the provider setup.
-{{% /md %}}</dd>
-    <dt class="property-optional"
+{{% /md %}}</dd><dt class="property-optional"
             title="Optional">
         <span id="namespace_go">
 <a href="#namespace_go" style="color: inherit; text-decoration: inherit;">Namespace</a>
@@ -143,8 +132,7 @@ agent's default datacenter and the datacenter in the provider setup.
         <span class="property-type">string</span>
     </dt>
     <dd>{{% md %}}The namespace to create the keys within.
-{{% /md %}}</dd>
-    <dt class="property-optional"
+{{% /md %}}</dd><dt class="property-optional"
             title="Optional">
         <span id="subkeycollection_go">
 <a href="#subkeycollection_go" style="color: inherit; text-decoration: inherit;">Subkey<wbr>Collection</a>
@@ -154,8 +142,7 @@ agent's default datacenter and the datacenter in the provider setup.
     </dt>
     <dd>{{% md %}}Specifies a subkey in Consul to be read. Supported
 values documented below. Multiple blocks supported.
-{{% /md %}}</dd>
-    <dt class="property-optional"
+{{% /md %}}</dd><dt class="property-optional"
             title="Optional">
         <span id="token_go">
 <a href="#token_go" style="color: inherit; text-decoration: inherit;">Token</a>
@@ -165,14 +152,11 @@ values documented below. Multiple blocks supported.
     </dt>
     <dd>{{% md %}}The ACL token to use. This overrides the
 token that the agent provides by default.
-{{% /md %}}</dd>
-</dl>
+{{% /md %}}</dd></dl>
 {{% /choosable %}}
 
 {{% choosable language nodejs %}}
-<dl class="resources-properties">
-
-    <dt class="property-required"
+<dl class="resources-properties"><dt class="property-required"
             title="Required">
         <span id="pathprefix_nodejs">
 <a href="#pathprefix_nodejs" style="color: inherit; text-decoration: inherit;">path<wbr>Prefix</a>
@@ -183,8 +167,7 @@ token that the agent provides by default.
     <dd>{{% md %}}Specifies the common prefix shared by all keys
 that will be read by this data source instance. In most cases, this will
 end with a slash to read a "folder" of subkeys.
-{{% /md %}}</dd>
-    <dt class="property-optional"
+{{% /md %}}</dd><dt class="property-optional"
             title="Optional">
         <span id="datacenter_nodejs">
 <a href="#datacenter_nodejs" style="color: inherit; text-decoration: inherit;">datacenter</a>
@@ -194,8 +177,7 @@ end with a slash to read a "folder" of subkeys.
     </dt>
     <dd>{{% md %}}The datacenter to use. This overrides the
 agent's default datacenter and the datacenter in the provider setup.
-{{% /md %}}</dd>
-    <dt class="property-optional"
+{{% /md %}}</dd><dt class="property-optional"
             title="Optional">
         <span id="namespace_nodejs">
 <a href="#namespace_nodejs" style="color: inherit; text-decoration: inherit;">namespace</a>
@@ -204,8 +186,7 @@ agent's default datacenter and the datacenter in the provider setup.
         <span class="property-type">string</span>
     </dt>
     <dd>{{% md %}}The namespace to create the keys within.
-{{% /md %}}</dd>
-    <dt class="property-optional"
+{{% /md %}}</dd><dt class="property-optional"
             title="Optional">
         <span id="subkeycollection_nodejs">
 <a href="#subkeycollection_nodejs" style="color: inherit; text-decoration: inherit;">subkey<wbr>Collection</a>
@@ -215,8 +196,7 @@ agent's default datacenter and the datacenter in the provider setup.
     </dt>
     <dd>{{% md %}}Specifies a subkey in Consul to be read. Supported
 values documented below. Multiple blocks supported.
-{{% /md %}}</dd>
-    <dt class="property-optional"
+{{% /md %}}</dd><dt class="property-optional"
             title="Optional">
         <span id="token_nodejs">
 <a href="#token_nodejs" style="color: inherit; text-decoration: inherit;">token</a>
@@ -226,14 +206,11 @@ values documented below. Multiple blocks supported.
     </dt>
     <dd>{{% md %}}The ACL token to use. This overrides the
 token that the agent provides by default.
-{{% /md %}}</dd>
-</dl>
+{{% /md %}}</dd></dl>
 {{% /choosable %}}
 
 {{% choosable language python %}}
-<dl class="resources-properties">
-
-    <dt class="property-required"
+<dl class="resources-properties"><dt class="property-required"
             title="Required">
         <span id="path_prefix_python">
 <a href="#path_prefix_python" style="color: inherit; text-decoration: inherit;">path_<wbr>prefix</a>
@@ -244,8 +221,7 @@ token that the agent provides by default.
     <dd>{{% md %}}Specifies the common prefix shared by all keys
 that will be read by this data source instance. In most cases, this will
 end with a slash to read a "folder" of subkeys.
-{{% /md %}}</dd>
-    <dt class="property-optional"
+{{% /md %}}</dd><dt class="property-optional"
             title="Optional">
         <span id="datacenter_python">
 <a href="#datacenter_python" style="color: inherit; text-decoration: inherit;">datacenter</a>
@@ -255,8 +231,7 @@ end with a slash to read a "folder" of subkeys.
     </dt>
     <dd>{{% md %}}The datacenter to use. This overrides the
 agent's default datacenter and the datacenter in the provider setup.
-{{% /md %}}</dd>
-    <dt class="property-optional"
+{{% /md %}}</dd><dt class="property-optional"
             title="Optional">
         <span id="namespace_python">
 <a href="#namespace_python" style="color: inherit; text-decoration: inherit;">namespace</a>
@@ -265,8 +240,7 @@ agent's default datacenter and the datacenter in the provider setup.
         <span class="property-type">str</span>
     </dt>
     <dd>{{% md %}}The namespace to create the keys within.
-{{% /md %}}</dd>
-    <dt class="property-optional"
+{{% /md %}}</dd><dt class="property-optional"
             title="Optional">
         <span id="subkey_collection_python">
 <a href="#subkey_collection_python" style="color: inherit; text-decoration: inherit;">subkey_<wbr>collection</a>
@@ -276,8 +250,7 @@ agent's default datacenter and the datacenter in the provider setup.
     </dt>
     <dd>{{% md %}}Specifies a subkey in Consul to be read. Supported
 values documented below. Multiple blocks supported.
-{{% /md %}}</dd>
-    <dt class="property-optional"
+{{% /md %}}</dd><dt class="property-optional"
             title="Optional">
         <span id="token_python">
 <a href="#token_python" style="color: inherit; text-decoration: inherit;">token</a>
@@ -287,8 +260,7 @@ values documented below. Multiple blocks supported.
     </dt>
     <dd>{{% md %}}The ACL token to use. This overrides the
 token that the agent provides by default.
-{{% /md %}}</dd>
-</dl>
+{{% /md %}}</dd></dl>
 {{% /choosable %}}
 
 
@@ -301,9 +273,7 @@ The following output properties are available:
 
 
 {{% choosable language csharp %}}
-<dl class="resources-properties">
-
-    <dt class="property-"
+<dl class="resources-properties"><dt class="property-"
             title="">
         <span id="datacenter_csharp">
 <a href="#datacenter_csharp" style="color: inherit; text-decoration: inherit;">Datacenter</a>
@@ -312,8 +282,7 @@ The following output properties are available:
         <span class="property-type">string</span>
     </dt>
     <dd>{{% md %}}The datacenter the keys are being read from.
-{{% /md %}}</dd>
-    <dt class="property-"
+{{% /md %}}</dd><dt class="property-"
             title="">
         <span id="id_csharp">
 <a href="#id_csharp" style="color: inherit; text-decoration: inherit;">Id</a>
@@ -322,8 +291,7 @@ The following output properties are available:
         <span class="property-type">string</span>
     </dt>
     <dd>{{% md %}}The provider-assigned unique ID for this managed resource.
-{{% /md %}}</dd>
-    <dt class="property-"
+{{% /md %}}</dd><dt class="property-"
             title="">
         <span id="pathprefix_csharp">
 <a href="#pathprefix_csharp" style="color: inherit; text-decoration: inherit;">Path<wbr>Prefix</a>
@@ -334,8 +302,7 @@ The following output properties are available:
     <dd>{{% md %}}the common prefix shared by all keys being read.
 * `var.<name>` - For each name given, the corresponding attribute
 has the value of the key.
-{{% /md %}}</dd>
-    <dt class="property-"
+{{% /md %}}</dd><dt class="property-"
             title="">
         <span id="subkeys_csharp">
 <a href="#subkeys_csharp" style="color: inherit; text-decoration: inherit;">Subkeys</a>
@@ -345,8 +312,7 @@ has the value of the key.
     </dt>
     <dd>{{% md %}}A map of the subkeys and values is set if no `subkey`
 block is provided.
-{{% /md %}}</dd>
-    <dt class="property-"
+{{% /md %}}</dd><dt class="property-"
             title="">
         <span id="var_csharp">
 <a href="#var_csharp" style="color: inherit; text-decoration: inherit;">Var</a>
@@ -354,8 +320,7 @@ block is provided.
         <span class="property-indicator"></span>
         <span class="property-type">Dictionary&lt;string, string&gt;</span>
     </dt>
-    <dd>{{% md %}}{{% /md %}}</dd>
-    <dt class="property-"
+    <dd>{{% md %}}{{% /md %}}</dd><dt class="property-"
             title="">
         <span id="namespace_csharp">
 <a href="#namespace_csharp" style="color: inherit; text-decoration: inherit;">Namespace</a>
@@ -363,8 +328,7 @@ block is provided.
         <span class="property-indicator"></span>
         <span class="property-type">string</span>
     </dt>
-    <dd>{{% md %}}{{% /md %}}</dd>
-    <dt class="property-"
+    <dd>{{% md %}}{{% /md %}}</dd><dt class="property-"
             title="">
         <span id="subkeycollection_csharp">
 <a href="#subkeycollection_csharp" style="color: inherit; text-decoration: inherit;">Subkey<wbr>Collection</a>
@@ -372,8 +336,7 @@ block is provided.
         <span class="property-indicator"></span>
         <span class="property-type"><a href="#getkeyprefixsubkeycollection">List&lt;Get<wbr>Key<wbr>Prefix<wbr>Subkey<wbr>Collection&gt;</a></span>
     </dt>
-    <dd>{{% md %}}{{% /md %}}</dd>
-    <dt class="property-"
+    <dd>{{% md %}}{{% /md %}}</dd><dt class="property-"
             title="">
         <span id="token_csharp">
 <a href="#token_csharp" style="color: inherit; text-decoration: inherit;">Token</a>
@@ -381,14 +344,11 @@ block is provided.
         <span class="property-indicator"></span>
         <span class="property-type">string</span>
     </dt>
-    <dd>{{% md %}}{{% /md %}}</dd>
-</dl>
+    <dd>{{% md %}}{{% /md %}}</dd></dl>
 {{% /choosable %}}
 
 {{% choosable language go %}}
-<dl class="resources-properties">
-
-    <dt class="property-"
+<dl class="resources-properties"><dt class="property-"
             title="">
         <span id="datacenter_go">
 <a href="#datacenter_go" style="color: inherit; text-decoration: inherit;">Datacenter</a>
@@ -397,8 +357,7 @@ block is provided.
         <span class="property-type">string</span>
     </dt>
     <dd>{{% md %}}The datacenter the keys are being read from.
-{{% /md %}}</dd>
-    <dt class="property-"
+{{% /md %}}</dd><dt class="property-"
             title="">
         <span id="id_go">
 <a href="#id_go" style="color: inherit; text-decoration: inherit;">Id</a>
@@ -407,8 +366,7 @@ block is provided.
         <span class="property-type">string</span>
     </dt>
     <dd>{{% md %}}The provider-assigned unique ID for this managed resource.
-{{% /md %}}</dd>
-    <dt class="property-"
+{{% /md %}}</dd><dt class="property-"
             title="">
         <span id="pathprefix_go">
 <a href="#pathprefix_go" style="color: inherit; text-decoration: inherit;">Path<wbr>Prefix</a>
@@ -419,8 +377,7 @@ block is provided.
     <dd>{{% md %}}the common prefix shared by all keys being read.
 * `var.<name>` - For each name given, the corresponding attribute
 has the value of the key.
-{{% /md %}}</dd>
-    <dt class="property-"
+{{% /md %}}</dd><dt class="property-"
             title="">
         <span id="subkeys_go">
 <a href="#subkeys_go" style="color: inherit; text-decoration: inherit;">Subkeys</a>
@@ -430,8 +387,7 @@ has the value of the key.
     </dt>
     <dd>{{% md %}}A map of the subkeys and values is set if no `subkey`
 block is provided.
-{{% /md %}}</dd>
-    <dt class="property-"
+{{% /md %}}</dd><dt class="property-"
             title="">
         <span id="var_go">
 <a href="#var_go" style="color: inherit; text-decoration: inherit;">Var</a>
@@ -439,8 +395,7 @@ block is provided.
         <span class="property-indicator"></span>
         <span class="property-type">map[string]string</span>
     </dt>
-    <dd>{{% md %}}{{% /md %}}</dd>
-    <dt class="property-"
+    <dd>{{% md %}}{{% /md %}}</dd><dt class="property-"
             title="">
         <span id="namespace_go">
 <a href="#namespace_go" style="color: inherit; text-decoration: inherit;">Namespace</a>
@@ -448,8 +403,7 @@ block is provided.
         <span class="property-indicator"></span>
         <span class="property-type">string</span>
     </dt>
-    <dd>{{% md %}}{{% /md %}}</dd>
-    <dt class="property-"
+    <dd>{{% md %}}{{% /md %}}</dd><dt class="property-"
             title="">
         <span id="subkeycollection_go">
 <a href="#subkeycollection_go" style="color: inherit; text-decoration: inherit;">Subkey<wbr>Collection</a>
@@ -457,8 +411,7 @@ block is provided.
         <span class="property-indicator"></span>
         <span class="property-type"><a href="#getkeyprefixsubkeycollection">[]Get<wbr>Key<wbr>Prefix<wbr>Subkey<wbr>Collection</a></span>
     </dt>
-    <dd>{{% md %}}{{% /md %}}</dd>
-    <dt class="property-"
+    <dd>{{% md %}}{{% /md %}}</dd><dt class="property-"
             title="">
         <span id="token_go">
 <a href="#token_go" style="color: inherit; text-decoration: inherit;">Token</a>
@@ -466,14 +419,11 @@ block is provided.
         <span class="property-indicator"></span>
         <span class="property-type">string</span>
     </dt>
-    <dd>{{% md %}}{{% /md %}}</dd>
-</dl>
+    <dd>{{% md %}}{{% /md %}}</dd></dl>
 {{% /choosable %}}
 
 {{% choosable language nodejs %}}
-<dl class="resources-properties">
-
-    <dt class="property-"
+<dl class="resources-properties"><dt class="property-"
             title="">
         <span id="datacenter_nodejs">
 <a href="#datacenter_nodejs" style="color: inherit; text-decoration: inherit;">datacenter</a>
@@ -482,8 +432,7 @@ block is provided.
         <span class="property-type">string</span>
     </dt>
     <dd>{{% md %}}The datacenter the keys are being read from.
-{{% /md %}}</dd>
-    <dt class="property-"
+{{% /md %}}</dd><dt class="property-"
             title="">
         <span id="id_nodejs">
 <a href="#id_nodejs" style="color: inherit; text-decoration: inherit;">id</a>
@@ -492,8 +441,7 @@ block is provided.
         <span class="property-type">string</span>
     </dt>
     <dd>{{% md %}}The provider-assigned unique ID for this managed resource.
-{{% /md %}}</dd>
-    <dt class="property-"
+{{% /md %}}</dd><dt class="property-"
             title="">
         <span id="pathprefix_nodejs">
 <a href="#pathprefix_nodejs" style="color: inherit; text-decoration: inherit;">path<wbr>Prefix</a>
@@ -504,8 +452,7 @@ block is provided.
     <dd>{{% md %}}the common prefix shared by all keys being read.
 * `var.<name>` - For each name given, the corresponding attribute
 has the value of the key.
-{{% /md %}}</dd>
-    <dt class="property-"
+{{% /md %}}</dd><dt class="property-"
             title="">
         <span id="subkeys_nodejs">
 <a href="#subkeys_nodejs" style="color: inherit; text-decoration: inherit;">subkeys</a>
@@ -515,8 +462,7 @@ has the value of the key.
     </dt>
     <dd>{{% md %}}A map of the subkeys and values is set if no `subkey`
 block is provided.
-{{% /md %}}</dd>
-    <dt class="property-"
+{{% /md %}}</dd><dt class="property-"
             title="">
         <span id="var_nodejs">
 <a href="#var_nodejs" style="color: inherit; text-decoration: inherit;">var</a>
@@ -524,8 +470,7 @@ block is provided.
         <span class="property-indicator"></span>
         <span class="property-type">{[key: string]: string}</span>
     </dt>
-    <dd>{{% md %}}{{% /md %}}</dd>
-    <dt class="property-"
+    <dd>{{% md %}}{{% /md %}}</dd><dt class="property-"
             title="">
         <span id="namespace_nodejs">
 <a href="#namespace_nodejs" style="color: inherit; text-decoration: inherit;">namespace</a>
@@ -533,8 +478,7 @@ block is provided.
         <span class="property-indicator"></span>
         <span class="property-type">string</span>
     </dt>
-    <dd>{{% md %}}{{% /md %}}</dd>
-    <dt class="property-"
+    <dd>{{% md %}}{{% /md %}}</dd><dt class="property-"
             title="">
         <span id="subkeycollection_nodejs">
 <a href="#subkeycollection_nodejs" style="color: inherit; text-decoration: inherit;">subkey<wbr>Collection</a>
@@ -542,8 +486,7 @@ block is provided.
         <span class="property-indicator"></span>
         <span class="property-type"><a href="#getkeyprefixsubkeycollection">Get<wbr>Key<wbr>Prefix<wbr>Subkey<wbr>Collection[]</a></span>
     </dt>
-    <dd>{{% md %}}{{% /md %}}</dd>
-    <dt class="property-"
+    <dd>{{% md %}}{{% /md %}}</dd><dt class="property-"
             title="">
         <span id="token_nodejs">
 <a href="#token_nodejs" style="color: inherit; text-decoration: inherit;">token</a>
@@ -551,14 +494,11 @@ block is provided.
         <span class="property-indicator"></span>
         <span class="property-type">string</span>
     </dt>
-    <dd>{{% md %}}{{% /md %}}</dd>
-</dl>
+    <dd>{{% md %}}{{% /md %}}</dd></dl>
 {{% /choosable %}}
 
 {{% choosable language python %}}
-<dl class="resources-properties">
-
-    <dt class="property-"
+<dl class="resources-properties"><dt class="property-"
             title="">
         <span id="datacenter_python">
 <a href="#datacenter_python" style="color: inherit; text-decoration: inherit;">datacenter</a>
@@ -567,8 +507,7 @@ block is provided.
         <span class="property-type">str</span>
     </dt>
     <dd>{{% md %}}The datacenter the keys are being read from.
-{{% /md %}}</dd>
-    <dt class="property-"
+{{% /md %}}</dd><dt class="property-"
             title="">
         <span id="id_python">
 <a href="#id_python" style="color: inherit; text-decoration: inherit;">id</a>
@@ -577,8 +516,7 @@ block is provided.
         <span class="property-type">str</span>
     </dt>
     <dd>{{% md %}}The provider-assigned unique ID for this managed resource.
-{{% /md %}}</dd>
-    <dt class="property-"
+{{% /md %}}</dd><dt class="property-"
             title="">
         <span id="path_prefix_python">
 <a href="#path_prefix_python" style="color: inherit; text-decoration: inherit;">path_<wbr>prefix</a>
@@ -589,8 +527,7 @@ block is provided.
     <dd>{{% md %}}the common prefix shared by all keys being read.
 * `var.<name>` - For each name given, the corresponding attribute
 has the value of the key.
-{{% /md %}}</dd>
-    <dt class="property-"
+{{% /md %}}</dd><dt class="property-"
             title="">
         <span id="subkeys_python">
 <a href="#subkeys_python" style="color: inherit; text-decoration: inherit;">subkeys</a>
@@ -600,8 +537,7 @@ has the value of the key.
     </dt>
     <dd>{{% md %}}A map of the subkeys and values is set if no `subkey`
 block is provided.
-{{% /md %}}</dd>
-    <dt class="property-"
+{{% /md %}}</dd><dt class="property-"
             title="">
         <span id="var_python">
 <a href="#var_python" style="color: inherit; text-decoration: inherit;">var</a>
@@ -609,8 +545,7 @@ block is provided.
         <span class="property-indicator"></span>
         <span class="property-type">Mapping[str, str]</span>
     </dt>
-    <dd>{{% md %}}{{% /md %}}</dd>
-    <dt class="property-"
+    <dd>{{% md %}}{{% /md %}}</dd><dt class="property-"
             title="">
         <span id="namespace_python">
 <a href="#namespace_python" style="color: inherit; text-decoration: inherit;">namespace</a>
@@ -618,8 +553,7 @@ block is provided.
         <span class="property-indicator"></span>
         <span class="property-type">str</span>
     </dt>
-    <dd>{{% md %}}{{% /md %}}</dd>
-    <dt class="property-"
+    <dd>{{% md %}}{{% /md %}}</dd><dt class="property-"
             title="">
         <span id="subkey_collection_python">
 <a href="#subkey_collection_python" style="color: inherit; text-decoration: inherit;">subkey_<wbr>collection</a>
@@ -627,8 +561,7 @@ block is provided.
         <span class="property-indicator"></span>
         <span class="property-type"><a href="#getkeyprefixsubkeycollection">Sequence[Get<wbr>Key<wbr>Prefix<wbr>Subkey<wbr>Collection]</a></span>
     </dt>
-    <dd>{{% md %}}{{% /md %}}</dd>
-    <dt class="property-"
+    <dd>{{% md %}}{{% /md %}}</dd><dt class="property-"
             title="">
         <span id="token_python">
 <a href="#token_python" style="color: inherit; text-decoration: inherit;">token</a>
@@ -636,8 +569,7 @@ block is provided.
         <span class="property-indicator"></span>
         <span class="property-type">str</span>
     </dt>
-    <dd>{{% md %}}{{% /md %}}</dd>
-</dl>
+    <dd>{{% md %}}{{% /md %}}</dd></dl>
 {{% /choosable %}}
 
 
@@ -651,9 +583,7 @@ block is provided.
 
 
 {{% choosable language csharp %}}
-<dl class="resources-properties">
-
-    <dt class="property-required"
+<dl class="resources-properties"><dt class="property-required"
             title="Required">
         <span id="name_csharp">
 <a href="#name_csharp" style="color: inherit; text-decoration: inherit;">Name</a>
@@ -664,8 +594,7 @@ block is provided.
     <dd>{{% md %}}This is the name of the key. This value of the
 key is exposed as `var.<name>`. This is not the path of the subkey
 in Consul.
-{{% /md %}}</dd>
-    <dt class="property-required"
+{{% /md %}}</dd><dt class="property-required"
             title="Required">
         <span id="path_csharp">
 <a href="#path_csharp" style="color: inherit; text-decoration: inherit;">Path</a>
@@ -676,8 +605,7 @@ in Consul.
     <dd>{{% md %}}This is the subkey path in Consul (which will be appended
 to the given `path_prefix`) to construct the full key that will be used
 to read the value.
-{{% /md %}}</dd>
-    <dt class="property-optional"
+{{% /md %}}</dd><dt class="property-optional"
             title="Optional">
         <span id="default_csharp">
 <a href="#default_csharp" style="color: inherit; text-decoration: inherit;">Default</a>
@@ -687,14 +615,11 @@ to read the value.
     </dt>
     <dd>{{% md %}}This is the default value to set for `var.<name>`
 if the key does not exist in Consul. Defaults to an empty string.
-{{% /md %}}</dd>
-</dl>
+{{% /md %}}</dd></dl>
 {{% /choosable %}}
 
 {{% choosable language go %}}
-<dl class="resources-properties">
-
-    <dt class="property-required"
+<dl class="resources-properties"><dt class="property-required"
             title="Required">
         <span id="name_go">
 <a href="#name_go" style="color: inherit; text-decoration: inherit;">Name</a>
@@ -705,8 +630,7 @@ if the key does not exist in Consul. Defaults to an empty string.
     <dd>{{% md %}}This is the name of the key. This value of the
 key is exposed as `var.<name>`. This is not the path of the subkey
 in Consul.
-{{% /md %}}</dd>
-    <dt class="property-required"
+{{% /md %}}</dd><dt class="property-required"
             title="Required">
         <span id="path_go">
 <a href="#path_go" style="color: inherit; text-decoration: inherit;">Path</a>
@@ -717,8 +641,7 @@ in Consul.
     <dd>{{% md %}}This is the subkey path in Consul (which will be appended
 to the given `path_prefix`) to construct the full key that will be used
 to read the value.
-{{% /md %}}</dd>
-    <dt class="property-optional"
+{{% /md %}}</dd><dt class="property-optional"
             title="Optional">
         <span id="default_go">
 <a href="#default_go" style="color: inherit; text-decoration: inherit;">Default</a>
@@ -728,14 +651,11 @@ to read the value.
     </dt>
     <dd>{{% md %}}This is the default value to set for `var.<name>`
 if the key does not exist in Consul. Defaults to an empty string.
-{{% /md %}}</dd>
-</dl>
+{{% /md %}}</dd></dl>
 {{% /choosable %}}
 
 {{% choosable language nodejs %}}
-<dl class="resources-properties">
-
-    <dt class="property-required"
+<dl class="resources-properties"><dt class="property-required"
             title="Required">
         <span id="name_nodejs">
 <a href="#name_nodejs" style="color: inherit; text-decoration: inherit;">name</a>
@@ -746,8 +666,7 @@ if the key does not exist in Consul. Defaults to an empty string.
     <dd>{{% md %}}This is the name of the key. This value of the
 key is exposed as `var.<name>`. This is not the path of the subkey
 in Consul.
-{{% /md %}}</dd>
-    <dt class="property-required"
+{{% /md %}}</dd><dt class="property-required"
             title="Required">
         <span id="path_nodejs">
 <a href="#path_nodejs" style="color: inherit; text-decoration: inherit;">path</a>
@@ -758,8 +677,7 @@ in Consul.
     <dd>{{% md %}}This is the subkey path in Consul (which will be appended
 to the given `path_prefix`) to construct the full key that will be used
 to read the value.
-{{% /md %}}</dd>
-    <dt class="property-optional"
+{{% /md %}}</dd><dt class="property-optional"
             title="Optional">
         <span id="default_nodejs">
 <a href="#default_nodejs" style="color: inherit; text-decoration: inherit;">default</a>
@@ -769,14 +687,11 @@ to read the value.
     </dt>
     <dd>{{% md %}}This is the default value to set for `var.<name>`
 if the key does not exist in Consul. Defaults to an empty string.
-{{% /md %}}</dd>
-</dl>
+{{% /md %}}</dd></dl>
 {{% /choosable %}}
 
 {{% choosable language python %}}
-<dl class="resources-properties">
-
-    <dt class="property-required"
+<dl class="resources-properties"><dt class="property-required"
             title="Required">
         <span id="name_python">
 <a href="#name_python" style="color: inherit; text-decoration: inherit;">name</a>
@@ -787,8 +702,7 @@ if the key does not exist in Consul. Defaults to an empty string.
     <dd>{{% md %}}This is the name of the key. This value of the
 key is exposed as `var.<name>`. This is not the path of the subkey
 in Consul.
-{{% /md %}}</dd>
-    <dt class="property-required"
+{{% /md %}}</dd><dt class="property-required"
             title="Required">
         <span id="path_python">
 <a href="#path_python" style="color: inherit; text-decoration: inherit;">path</a>
@@ -799,8 +713,7 @@ in Consul.
     <dd>{{% md %}}This is the subkey path in Consul (which will be appended
 to the given `path_prefix`) to construct the full key that will be used
 to read the value.
-{{% /md %}}</dd>
-    <dt class="property-optional"
+{{% /md %}}</dd><dt class="property-optional"
             title="Optional">
         <span id="default_python">
 <a href="#default_python" style="color: inherit; text-decoration: inherit;">default</a>
@@ -810,8 +723,7 @@ to read the value.
     </dt>
     <dd>{{% md %}}This is the default value to set for `var.<name>`
 if the key does not exist in Consul. Defaults to an empty string.
-{{% /md %}}</dd>
-</dl>
+{{% /md %}}</dd></dl>
 {{% /choosable %}}
 
 
@@ -825,6 +737,6 @@ if the key does not exist in Consul. Defaults to an empty string.
 	<dt>License</dt>
 	<dd>Apache-2.0</dd>
 	<dt>Notes</dt>
-	<dd>This Pulumi package is based on the [`consul` Terraform Provider](https://github.com/hashicorp/terraform-provider-consul).</dd>
+	<dd>{{% md %}}This Pulumi package is based on the [`consul` Terraform Provider](https://github.com/hashicorp/terraform-provider-consul).{{% /md %}}</dd>
 </dl>
 

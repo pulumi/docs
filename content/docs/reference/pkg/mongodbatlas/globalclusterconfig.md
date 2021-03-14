@@ -457,9 +457,7 @@ func main() {
 
 {{% choosable language nodejs %}}
 
-<dl class="resources-properties">
-  
-    <dt
+<dl class="resources-properties"><dt
         class="property-required" title="Required">
         <span>name</span>
         <span class="property-indicator"></span>
@@ -467,9 +465,7 @@ func main() {
     </dt>
     <dd>
       The unique name of the resource.
-    </dd>
-  
-    <dt
+    </dd><dt
         class="property-required" title="Required">
         <span>args</span>
         <span class="property-indicator"></span>
@@ -477,9 +473,7 @@ func main() {
     </dt>
     <dd>
       The arguments to resource properties.
-    </dd>
-  
-    <dt
+    </dd><dt
         class="property-optional" title="Optional">
         <span>opts</span>
         <span class="property-indicator"></span>
@@ -487,10 +481,7 @@ func main() {
     </dt>
     <dd>
       Bag of options to control resource&#39;s behavior.
-    </dd>
-  
-
-</dl>
+    </dd></dl>
 
 {{% /choosable %}}
 
@@ -516,9 +507,7 @@ func main() {
 
 {{% choosable language go %}}
 
-<dl class="resources-properties">
-  
-    <dt
+<dl class="resources-properties"><dt
         class="property-optional" title="Optional">
         <span>ctx</span>
         <span class="property-indicator"></span>
@@ -526,9 +515,7 @@ func main() {
     </dt>
     <dd>
       Context object for the current deployment.
-    </dd>
-  
-    <dt
+    </dd><dt
         class="property-required" title="Required">
         <span>name</span>
         <span class="property-indicator"></span>
@@ -536,9 +523,7 @@ func main() {
     </dt>
     <dd>
       The unique name of the resource.
-    </dd>
-  
-    <dt
+    </dd><dt
         class="property-required" title="Required">
         <span>args</span>
         <span class="property-indicator"></span>
@@ -546,9 +531,7 @@ func main() {
     </dt>
     <dd>
       The arguments to resource properties.
-    </dd>
-  
-    <dt
+    </dd><dt
         class="property-optional" title="Optional">
         <span>opts</span>
         <span class="property-indicator"></span>
@@ -556,18 +539,13 @@ func main() {
     </dt>
     <dd>
       Bag of options to control resource&#39;s behavior.
-    </dd>
-  
-
-</dl>
+    </dd></dl>
 
 {{% /choosable %}}
 
 {{% choosable language csharp %}}
 
-<dl class="resources-properties">
-  
-    <dt
+<dl class="resources-properties"><dt
         class="property-required" title="Required">
         <span>name</span>
         <span class="property-indicator"></span>
@@ -575,9 +553,7 @@ func main() {
     </dt>
     <dd>
       The unique name of the resource.
-    </dd>
-  
-    <dt
+    </dd><dt
         class="property-required" title="Required">
         <span>args</span>
         <span class="property-indicator"></span>
@@ -585,9 +561,7 @@ func main() {
     </dt>
     <dd>
       The arguments to resource properties.
-    </dd>
-  
-    <dt
+    </dd><dt
         class="property-optional" title="Optional">
         <span>opts</span>
         <span class="property-indicator"></span>
@@ -595,10 +569,7 @@ func main() {
     </dt>
     <dd>
       Bag of options to control resource&#39;s behavior.
-    </dd>
-  
-
-</dl>
+    </dd></dl>
 
 {{% /choosable %}}
 
@@ -613,9 +584,7 @@ The GlobalClusterConfig resource accepts the following [input]({{< relref "/docs
 
 
 {{% choosable language csharp %}}
-<dl class="resources-properties">
-
-    <dt class="property-required"
+<dl class="resources-properties"><dt class="property-required"
             title="Required">
         <span id="clustername_csharp">
 <a href="#clustername_csharp" style="color: inherit; text-decoration: inherit;">Cluster<wbr>Name</a>
@@ -623,8 +592,7 @@ The GlobalClusterConfig resource accepts the following [input]({{< relref "/docs
         <span class="property-indicator"></span>
         <span class="property-type">string</span>
     </dt>
-    <dd>{{% md %}}{{% /md %}}</dd>
-    <dt class="property-required"
+    <dd>{{% md %}}{{% /md %}}</dd><dt class="property-required"
             title="Required">
         <span id="projectid_csharp">
 <a href="#projectid_csharp" style="color: inherit; text-decoration: inherit;">Project<wbr>Id</a>
@@ -634,8 +602,7 @@ The GlobalClusterConfig resource accepts the following [input]({{< relref "/docs
     </dt>
     <dd>{{% md %}}The unique ID for the project to create the database user.
 * `cluster_name - (Required) The name of the Global Cluster.
-{{% /md %}}</dd>
-    <dt class="property-optional"
+{{% /md %}}</dd><dt class="property-optional"
             title="Optional">
         <span id="customzonemappings_csharp">
 <a href="#customzonemappings_csharp" style="color: inherit; text-decoration: inherit;">Custom<wbr>Zone<wbr>Mappings</a>
@@ -644,8 +611,7 @@ The GlobalClusterConfig resource accepts the following [input]({{< relref "/docs
         <span class="property-type"><a href="#globalclusterconfigcustomzonemapping">List&lt;Global<wbr>Cluster<wbr>Config<wbr>Custom<wbr>Zone<wbr>Mapping<wbr>Args&gt;</a></span>
     </dt>
     <dd>{{% md %}}Each element in the list maps one ISO location code to a zone in your Global Cluster. See Custom Zone Mapping below for more details.
-{{% /md %}}</dd>
-    <dt class="property-optional"
+{{% /md %}}</dd><dt class="property-optional"
             title="Optional">
         <span id="managednamespaces_csharp">
 <a href="#managednamespaces_csharp" style="color: inherit; text-decoration: inherit;">Managed<wbr>Namespaces</a>
@@ -654,14 +620,11 @@ The GlobalClusterConfig resource accepts the following [input]({{< relref "/docs
         <span class="property-type"><a href="#globalclusterconfigmanagednamespace">List&lt;Global<wbr>Cluster<wbr>Config<wbr>Managed<wbr>Namespace<wbr>Args&gt;</a></span>
     </dt>
     <dd>{{% md %}}Add a managed namespaces to a Global Cluster. For more information about managed namespaces, see [Global Clusters](https://docs.atlas.mongodb.com/reference/api/global-clusters/). See Managed Namespace below for more details.
-{{% /md %}}</dd>
-</dl>
+{{% /md %}}</dd></dl>
 {{% /choosable %}}
 
 {{% choosable language go %}}
-<dl class="resources-properties">
-
-    <dt class="property-required"
+<dl class="resources-properties"><dt class="property-required"
             title="Required">
         <span id="clustername_go">
 <a href="#clustername_go" style="color: inherit; text-decoration: inherit;">Cluster<wbr>Name</a>
@@ -669,8 +632,7 @@ The GlobalClusterConfig resource accepts the following [input]({{< relref "/docs
         <span class="property-indicator"></span>
         <span class="property-type">string</span>
     </dt>
-    <dd>{{% md %}}{{% /md %}}</dd>
-    <dt class="property-required"
+    <dd>{{% md %}}{{% /md %}}</dd><dt class="property-required"
             title="Required">
         <span id="projectid_go">
 <a href="#projectid_go" style="color: inherit; text-decoration: inherit;">Project<wbr>Id</a>
@@ -680,8 +642,7 @@ The GlobalClusterConfig resource accepts the following [input]({{< relref "/docs
     </dt>
     <dd>{{% md %}}The unique ID for the project to create the database user.
 * `cluster_name - (Required) The name of the Global Cluster.
-{{% /md %}}</dd>
-    <dt class="property-optional"
+{{% /md %}}</dd><dt class="property-optional"
             title="Optional">
         <span id="customzonemappings_go">
 <a href="#customzonemappings_go" style="color: inherit; text-decoration: inherit;">Custom<wbr>Zone<wbr>Mappings</a>
@@ -690,8 +651,7 @@ The GlobalClusterConfig resource accepts the following [input]({{< relref "/docs
         <span class="property-type"><a href="#globalclusterconfigcustomzonemapping">[]Global<wbr>Cluster<wbr>Config<wbr>Custom<wbr>Zone<wbr>Mapping</a></span>
     </dt>
     <dd>{{% md %}}Each element in the list maps one ISO location code to a zone in your Global Cluster. See Custom Zone Mapping below for more details.
-{{% /md %}}</dd>
-    <dt class="property-optional"
+{{% /md %}}</dd><dt class="property-optional"
             title="Optional">
         <span id="managednamespaces_go">
 <a href="#managednamespaces_go" style="color: inherit; text-decoration: inherit;">Managed<wbr>Namespaces</a>
@@ -700,14 +660,11 @@ The GlobalClusterConfig resource accepts the following [input]({{< relref "/docs
         <span class="property-type"><a href="#globalclusterconfigmanagednamespace">[]Global<wbr>Cluster<wbr>Config<wbr>Managed<wbr>Namespace</a></span>
     </dt>
     <dd>{{% md %}}Add a managed namespaces to a Global Cluster. For more information about managed namespaces, see [Global Clusters](https://docs.atlas.mongodb.com/reference/api/global-clusters/). See Managed Namespace below for more details.
-{{% /md %}}</dd>
-</dl>
+{{% /md %}}</dd></dl>
 {{% /choosable %}}
 
 {{% choosable language nodejs %}}
-<dl class="resources-properties">
-
-    <dt class="property-required"
+<dl class="resources-properties"><dt class="property-required"
             title="Required">
         <span id="clustername_nodejs">
 <a href="#clustername_nodejs" style="color: inherit; text-decoration: inherit;">cluster<wbr>Name</a>
@@ -715,8 +672,7 @@ The GlobalClusterConfig resource accepts the following [input]({{< relref "/docs
         <span class="property-indicator"></span>
         <span class="property-type">string</span>
     </dt>
-    <dd>{{% md %}}{{% /md %}}</dd>
-    <dt class="property-required"
+    <dd>{{% md %}}{{% /md %}}</dd><dt class="property-required"
             title="Required">
         <span id="projectid_nodejs">
 <a href="#projectid_nodejs" style="color: inherit; text-decoration: inherit;">project<wbr>Id</a>
@@ -726,8 +682,7 @@ The GlobalClusterConfig resource accepts the following [input]({{< relref "/docs
     </dt>
     <dd>{{% md %}}The unique ID for the project to create the database user.
 * `cluster_name - (Required) The name of the Global Cluster.
-{{% /md %}}</dd>
-    <dt class="property-optional"
+{{% /md %}}</dd><dt class="property-optional"
             title="Optional">
         <span id="customzonemappings_nodejs">
 <a href="#customzonemappings_nodejs" style="color: inherit; text-decoration: inherit;">custom<wbr>Zone<wbr>Mappings</a>
@@ -736,8 +691,7 @@ The GlobalClusterConfig resource accepts the following [input]({{< relref "/docs
         <span class="property-type"><a href="#globalclusterconfigcustomzonemapping">Global<wbr>Cluster<wbr>Config<wbr>Custom<wbr>Zone<wbr>Mapping[]</a></span>
     </dt>
     <dd>{{% md %}}Each element in the list maps one ISO location code to a zone in your Global Cluster. See Custom Zone Mapping below for more details.
-{{% /md %}}</dd>
-    <dt class="property-optional"
+{{% /md %}}</dd><dt class="property-optional"
             title="Optional">
         <span id="managednamespaces_nodejs">
 <a href="#managednamespaces_nodejs" style="color: inherit; text-decoration: inherit;">managed<wbr>Namespaces</a>
@@ -746,14 +700,11 @@ The GlobalClusterConfig resource accepts the following [input]({{< relref "/docs
         <span class="property-type"><a href="#globalclusterconfigmanagednamespace">Global<wbr>Cluster<wbr>Config<wbr>Managed<wbr>Namespace[]</a></span>
     </dt>
     <dd>{{% md %}}Add a managed namespaces to a Global Cluster. For more information about managed namespaces, see [Global Clusters](https://docs.atlas.mongodb.com/reference/api/global-clusters/). See Managed Namespace below for more details.
-{{% /md %}}</dd>
-</dl>
+{{% /md %}}</dd></dl>
 {{% /choosable %}}
 
 {{% choosable language python %}}
-<dl class="resources-properties">
-
-    <dt class="property-required"
+<dl class="resources-properties"><dt class="property-required"
             title="Required">
         <span id="cluster_name_python">
 <a href="#cluster_name_python" style="color: inherit; text-decoration: inherit;">cluster_<wbr>name</a>
@@ -761,8 +712,7 @@ The GlobalClusterConfig resource accepts the following [input]({{< relref "/docs
         <span class="property-indicator"></span>
         <span class="property-type">str</span>
     </dt>
-    <dd>{{% md %}}{{% /md %}}</dd>
-    <dt class="property-required"
+    <dd>{{% md %}}{{% /md %}}</dd><dt class="property-required"
             title="Required">
         <span id="project_id_python">
 <a href="#project_id_python" style="color: inherit; text-decoration: inherit;">project_<wbr>id</a>
@@ -772,8 +722,7 @@ The GlobalClusterConfig resource accepts the following [input]({{< relref "/docs
     </dt>
     <dd>{{% md %}}The unique ID for the project to create the database user.
 * `cluster_name - (Required) The name of the Global Cluster.
-{{% /md %}}</dd>
-    <dt class="property-optional"
+{{% /md %}}</dd><dt class="property-optional"
             title="Optional">
         <span id="custom_zone_mappings_python">
 <a href="#custom_zone_mappings_python" style="color: inherit; text-decoration: inherit;">custom_<wbr>zone_<wbr>mappings</a>
@@ -782,8 +731,7 @@ The GlobalClusterConfig resource accepts the following [input]({{< relref "/docs
         <span class="property-type"><a href="#globalclusterconfigcustomzonemapping">Sequence[Global<wbr>Cluster<wbr>Config<wbr>Custom<wbr>Zone<wbr>Mapping<wbr>Args]</a></span>
     </dt>
     <dd>{{% md %}}Each element in the list maps one ISO location code to a zone in your Global Cluster. See Custom Zone Mapping below for more details.
-{{% /md %}}</dd>
-    <dt class="property-optional"
+{{% /md %}}</dd><dt class="property-optional"
             title="Optional">
         <span id="managed_namespaces_python">
 <a href="#managed_namespaces_python" style="color: inherit; text-decoration: inherit;">managed_<wbr>namespaces</a>
@@ -792,8 +740,7 @@ The GlobalClusterConfig resource accepts the following [input]({{< relref "/docs
         <span class="property-type"><a href="#globalclusterconfigmanagednamespace">Sequence[Global<wbr>Cluster<wbr>Config<wbr>Managed<wbr>Namespace<wbr>Args]</a></span>
     </dt>
     <dd>{{% md %}}Add a managed namespaces to a Global Cluster. For more information about managed namespaces, see [Global Clusters](https://docs.atlas.mongodb.com/reference/api/global-clusters/). See Managed Namespace below for more details.
-{{% /md %}}</dd>
-</dl>
+{{% /md %}}</dd></dl>
 {{% /choosable %}}
 
 
@@ -804,9 +751,7 @@ All [input](#inputs) properties are implicitly available as output properties. A
 
 
 {{% choosable language csharp %}}
-<dl class="resources-properties">
-
-    <dt class="property-"
+<dl class="resources-properties"><dt class="property-"
             title="">
         <span id="customzonemapping_csharp">
 <a href="#customzonemapping_csharp" style="color: inherit; text-decoration: inherit;">Custom<wbr>Zone<wbr>Mapping</a>
@@ -815,8 +760,7 @@ All [input](#inputs) properties are implicitly available as output properties. A
         <span class="property-type">Dictionary&lt;string, object&gt;</span>
     </dt>
     <dd>{{% md %}}A map of all custom zone mappings defined for the Global Cluster. Atlas automatically maps each location code to the closest geographical zone. Custom zone mappings allow administrators to override these automatic mappings. If your Global Cluster does not have any custom zone mappings, this document is empty.
-{{% /md %}}</dd>
-    <dt class="property-"
+{{% /md %}}</dd><dt class="property-"
             title="">
         <span id="id_csharp">
 <a href="#id_csharp" style="color: inherit; text-decoration: inherit;">Id</a>
@@ -824,14 +768,11 @@ All [input](#inputs) properties are implicitly available as output properties. A
         <span class="property-indicator"></span>
         <span class="property-type">string</span>
     </dt>
-    <dd>{{% md %}}The provider-assigned unique ID for this managed resource.{{% /md %}}</dd>
-</dl>
+    <dd>{{% md %}}The provider-assigned unique ID for this managed resource.{{% /md %}}</dd></dl>
 {{% /choosable %}}
 
 {{% choosable language go %}}
-<dl class="resources-properties">
-
-    <dt class="property-"
+<dl class="resources-properties"><dt class="property-"
             title="">
         <span id="customzonemapping_go">
 <a href="#customzonemapping_go" style="color: inherit; text-decoration: inherit;">Custom<wbr>Zone<wbr>Mapping</a>
@@ -840,8 +781,7 @@ All [input](#inputs) properties are implicitly available as output properties. A
         <span class="property-type">map[string]interface{}</span>
     </dt>
     <dd>{{% md %}}A map of all custom zone mappings defined for the Global Cluster. Atlas automatically maps each location code to the closest geographical zone. Custom zone mappings allow administrators to override these automatic mappings. If your Global Cluster does not have any custom zone mappings, this document is empty.
-{{% /md %}}</dd>
-    <dt class="property-"
+{{% /md %}}</dd><dt class="property-"
             title="">
         <span id="id_go">
 <a href="#id_go" style="color: inherit; text-decoration: inherit;">Id</a>
@@ -849,14 +789,11 @@ All [input](#inputs) properties are implicitly available as output properties. A
         <span class="property-indicator"></span>
         <span class="property-type">string</span>
     </dt>
-    <dd>{{% md %}}The provider-assigned unique ID for this managed resource.{{% /md %}}</dd>
-</dl>
+    <dd>{{% md %}}The provider-assigned unique ID for this managed resource.{{% /md %}}</dd></dl>
 {{% /choosable %}}
 
 {{% choosable language nodejs %}}
-<dl class="resources-properties">
-
-    <dt class="property-"
+<dl class="resources-properties"><dt class="property-"
             title="">
         <span id="customzonemapping_nodejs">
 <a href="#customzonemapping_nodejs" style="color: inherit; text-decoration: inherit;">custom<wbr>Zone<wbr>Mapping</a>
@@ -865,8 +802,7 @@ All [input](#inputs) properties are implicitly available as output properties. A
         <span class="property-type">{[key: string]: any}</span>
     </dt>
     <dd>{{% md %}}A map of all custom zone mappings defined for the Global Cluster. Atlas automatically maps each location code to the closest geographical zone. Custom zone mappings allow administrators to override these automatic mappings. If your Global Cluster does not have any custom zone mappings, this document is empty.
-{{% /md %}}</dd>
-    <dt class="property-"
+{{% /md %}}</dd><dt class="property-"
             title="">
         <span id="id_nodejs">
 <a href="#id_nodejs" style="color: inherit; text-decoration: inherit;">id</a>
@@ -874,14 +810,11 @@ All [input](#inputs) properties are implicitly available as output properties. A
         <span class="property-indicator"></span>
         <span class="property-type">string</span>
     </dt>
-    <dd>{{% md %}}The provider-assigned unique ID for this managed resource.{{% /md %}}</dd>
-</dl>
+    <dd>{{% md %}}The provider-assigned unique ID for this managed resource.{{% /md %}}</dd></dl>
 {{% /choosable %}}
 
 {{% choosable language python %}}
-<dl class="resources-properties">
-
-    <dt class="property-"
+<dl class="resources-properties"><dt class="property-"
             title="">
         <span id="custom_zone_mapping_python">
 <a href="#custom_zone_mapping_python" style="color: inherit; text-decoration: inherit;">custom_<wbr>zone_<wbr>mapping</a>
@@ -890,8 +823,7 @@ All [input](#inputs) properties are implicitly available as output properties. A
         <span class="property-type">Mapping[str, Any]</span>
     </dt>
     <dd>{{% md %}}A map of all custom zone mappings defined for the Global Cluster. Atlas automatically maps each location code to the closest geographical zone. Custom zone mappings allow administrators to override these automatic mappings. If your Global Cluster does not have any custom zone mappings, this document is empty.
-{{% /md %}}</dd>
-    <dt class="property-"
+{{% /md %}}</dd><dt class="property-"
             title="">
         <span id="id_python">
 <a href="#id_python" style="color: inherit; text-decoration: inherit;">id</a>
@@ -899,8 +831,7 @@ All [input](#inputs) properties are implicitly available as output properties. A
         <span class="property-indicator"></span>
         <span class="property-type">str</span>
     </dt>
-    <dd>{{% md %}}The provider-assigned unique ID for this managed resource.{{% /md %}}</dd>
-</dl>
+    <dd>{{% md %}}The provider-assigned unique ID for this managed resource.{{% /md %}}</dd></dl>
 {{% /choosable %}}
 
 
@@ -1027,9 +958,7 @@ The following state arguments are supported:
 
 
 {{% choosable language csharp %}}
-<dl class="resources-properties">
-
-    <dt class="property-optional"
+<dl class="resources-properties"><dt class="property-optional"
             title="Optional">
         <span id="state_clustername_csharp">
 <a href="#state_clustername_csharp" style="color: inherit; text-decoration: inherit;">Cluster<wbr>Name</a>
@@ -1037,8 +966,7 @@ The following state arguments are supported:
         <span class="property-indicator"></span>
         <span class="property-type">string</span>
     </dt>
-    <dd>{{% md %}}{{% /md %}}</dd>
-    <dt class="property-optional"
+    <dd>{{% md %}}{{% /md %}}</dd><dt class="property-optional"
             title="Optional">
         <span id="state_customzonemapping_csharp">
 <a href="#state_customzonemapping_csharp" style="color: inherit; text-decoration: inherit;">Custom<wbr>Zone<wbr>Mapping</a>
@@ -1047,8 +975,7 @@ The following state arguments are supported:
         <span class="property-type">Dictionary&lt;string, object&gt;</span>
     </dt>
     <dd>{{% md %}}A map of all custom zone mappings defined for the Global Cluster. Atlas automatically maps each location code to the closest geographical zone. Custom zone mappings allow administrators to override these automatic mappings. If your Global Cluster does not have any custom zone mappings, this document is empty.
-{{% /md %}}</dd>
-    <dt class="property-optional"
+{{% /md %}}</dd><dt class="property-optional"
             title="Optional">
         <span id="state_customzonemappings_csharp">
 <a href="#state_customzonemappings_csharp" style="color: inherit; text-decoration: inherit;">Custom<wbr>Zone<wbr>Mappings</a>
@@ -1057,8 +984,7 @@ The following state arguments are supported:
         <span class="property-type"><a href="#globalclusterconfigcustomzonemapping">List&lt;Global<wbr>Cluster<wbr>Config<wbr>Custom<wbr>Zone<wbr>Mapping<wbr>Args&gt;</a></span>
     </dt>
     <dd>{{% md %}}Each element in the list maps one ISO location code to a zone in your Global Cluster. See Custom Zone Mapping below for more details.
-{{% /md %}}</dd>
-    <dt class="property-optional"
+{{% /md %}}</dd><dt class="property-optional"
             title="Optional">
         <span id="state_managednamespaces_csharp">
 <a href="#state_managednamespaces_csharp" style="color: inherit; text-decoration: inherit;">Managed<wbr>Namespaces</a>
@@ -1067,8 +993,7 @@ The following state arguments are supported:
         <span class="property-type"><a href="#globalclusterconfigmanagednamespace">List&lt;Global<wbr>Cluster<wbr>Config<wbr>Managed<wbr>Namespace<wbr>Args&gt;</a></span>
     </dt>
     <dd>{{% md %}}Add a managed namespaces to a Global Cluster. For more information about managed namespaces, see [Global Clusters](https://docs.atlas.mongodb.com/reference/api/global-clusters/). See Managed Namespace below for more details.
-{{% /md %}}</dd>
-    <dt class="property-optional"
+{{% /md %}}</dd><dt class="property-optional"
             title="Optional">
         <span id="state_projectid_csharp">
 <a href="#state_projectid_csharp" style="color: inherit; text-decoration: inherit;">Project<wbr>Id</a>
@@ -1078,14 +1003,11 @@ The following state arguments are supported:
     </dt>
     <dd>{{% md %}}The unique ID for the project to create the database user.
 * `cluster_name - (Required) The name of the Global Cluster.
-{{% /md %}}</dd>
-</dl>
+{{% /md %}}</dd></dl>
 {{% /choosable %}}
 
 {{% choosable language go %}}
-<dl class="resources-properties">
-
-    <dt class="property-optional"
+<dl class="resources-properties"><dt class="property-optional"
             title="Optional">
         <span id="state_clustername_go">
 <a href="#state_clustername_go" style="color: inherit; text-decoration: inherit;">Cluster<wbr>Name</a>
@@ -1093,8 +1015,7 @@ The following state arguments are supported:
         <span class="property-indicator"></span>
         <span class="property-type">string</span>
     </dt>
-    <dd>{{% md %}}{{% /md %}}</dd>
-    <dt class="property-optional"
+    <dd>{{% md %}}{{% /md %}}</dd><dt class="property-optional"
             title="Optional">
         <span id="state_customzonemapping_go">
 <a href="#state_customzonemapping_go" style="color: inherit; text-decoration: inherit;">Custom<wbr>Zone<wbr>Mapping</a>
@@ -1103,8 +1024,7 @@ The following state arguments are supported:
         <span class="property-type">map[string]interface{}</span>
     </dt>
     <dd>{{% md %}}A map of all custom zone mappings defined for the Global Cluster. Atlas automatically maps each location code to the closest geographical zone. Custom zone mappings allow administrators to override these automatic mappings. If your Global Cluster does not have any custom zone mappings, this document is empty.
-{{% /md %}}</dd>
-    <dt class="property-optional"
+{{% /md %}}</dd><dt class="property-optional"
             title="Optional">
         <span id="state_customzonemappings_go">
 <a href="#state_customzonemappings_go" style="color: inherit; text-decoration: inherit;">Custom<wbr>Zone<wbr>Mappings</a>
@@ -1113,8 +1033,7 @@ The following state arguments are supported:
         <span class="property-type"><a href="#globalclusterconfigcustomzonemapping">[]Global<wbr>Cluster<wbr>Config<wbr>Custom<wbr>Zone<wbr>Mapping</a></span>
     </dt>
     <dd>{{% md %}}Each element in the list maps one ISO location code to a zone in your Global Cluster. See Custom Zone Mapping below for more details.
-{{% /md %}}</dd>
-    <dt class="property-optional"
+{{% /md %}}</dd><dt class="property-optional"
             title="Optional">
         <span id="state_managednamespaces_go">
 <a href="#state_managednamespaces_go" style="color: inherit; text-decoration: inherit;">Managed<wbr>Namespaces</a>
@@ -1123,8 +1042,7 @@ The following state arguments are supported:
         <span class="property-type"><a href="#globalclusterconfigmanagednamespace">[]Global<wbr>Cluster<wbr>Config<wbr>Managed<wbr>Namespace</a></span>
     </dt>
     <dd>{{% md %}}Add a managed namespaces to a Global Cluster. For more information about managed namespaces, see [Global Clusters](https://docs.atlas.mongodb.com/reference/api/global-clusters/). See Managed Namespace below for more details.
-{{% /md %}}</dd>
-    <dt class="property-optional"
+{{% /md %}}</dd><dt class="property-optional"
             title="Optional">
         <span id="state_projectid_go">
 <a href="#state_projectid_go" style="color: inherit; text-decoration: inherit;">Project<wbr>Id</a>
@@ -1134,14 +1052,11 @@ The following state arguments are supported:
     </dt>
     <dd>{{% md %}}The unique ID for the project to create the database user.
 * `cluster_name - (Required) The name of the Global Cluster.
-{{% /md %}}</dd>
-</dl>
+{{% /md %}}</dd></dl>
 {{% /choosable %}}
 
 {{% choosable language nodejs %}}
-<dl class="resources-properties">
-
-    <dt class="property-optional"
+<dl class="resources-properties"><dt class="property-optional"
             title="Optional">
         <span id="state_clustername_nodejs">
 <a href="#state_clustername_nodejs" style="color: inherit; text-decoration: inherit;">cluster<wbr>Name</a>
@@ -1149,8 +1064,7 @@ The following state arguments are supported:
         <span class="property-indicator"></span>
         <span class="property-type">string</span>
     </dt>
-    <dd>{{% md %}}{{% /md %}}</dd>
-    <dt class="property-optional"
+    <dd>{{% md %}}{{% /md %}}</dd><dt class="property-optional"
             title="Optional">
         <span id="state_customzonemapping_nodejs">
 <a href="#state_customzonemapping_nodejs" style="color: inherit; text-decoration: inherit;">custom<wbr>Zone<wbr>Mapping</a>
@@ -1159,8 +1073,7 @@ The following state arguments are supported:
         <span class="property-type">{[key: string]: any}</span>
     </dt>
     <dd>{{% md %}}A map of all custom zone mappings defined for the Global Cluster. Atlas automatically maps each location code to the closest geographical zone. Custom zone mappings allow administrators to override these automatic mappings. If your Global Cluster does not have any custom zone mappings, this document is empty.
-{{% /md %}}</dd>
-    <dt class="property-optional"
+{{% /md %}}</dd><dt class="property-optional"
             title="Optional">
         <span id="state_customzonemappings_nodejs">
 <a href="#state_customzonemappings_nodejs" style="color: inherit; text-decoration: inherit;">custom<wbr>Zone<wbr>Mappings</a>
@@ -1169,8 +1082,7 @@ The following state arguments are supported:
         <span class="property-type"><a href="#globalclusterconfigcustomzonemapping">Global<wbr>Cluster<wbr>Config<wbr>Custom<wbr>Zone<wbr>Mapping[]</a></span>
     </dt>
     <dd>{{% md %}}Each element in the list maps one ISO location code to a zone in your Global Cluster. See Custom Zone Mapping below for more details.
-{{% /md %}}</dd>
-    <dt class="property-optional"
+{{% /md %}}</dd><dt class="property-optional"
             title="Optional">
         <span id="state_managednamespaces_nodejs">
 <a href="#state_managednamespaces_nodejs" style="color: inherit; text-decoration: inherit;">managed<wbr>Namespaces</a>
@@ -1179,8 +1091,7 @@ The following state arguments are supported:
         <span class="property-type"><a href="#globalclusterconfigmanagednamespace">Global<wbr>Cluster<wbr>Config<wbr>Managed<wbr>Namespace[]</a></span>
     </dt>
     <dd>{{% md %}}Add a managed namespaces to a Global Cluster. For more information about managed namespaces, see [Global Clusters](https://docs.atlas.mongodb.com/reference/api/global-clusters/). See Managed Namespace below for more details.
-{{% /md %}}</dd>
-    <dt class="property-optional"
+{{% /md %}}</dd><dt class="property-optional"
             title="Optional">
         <span id="state_projectid_nodejs">
 <a href="#state_projectid_nodejs" style="color: inherit; text-decoration: inherit;">project<wbr>Id</a>
@@ -1190,14 +1101,11 @@ The following state arguments are supported:
     </dt>
     <dd>{{% md %}}The unique ID for the project to create the database user.
 * `cluster_name - (Required) The name of the Global Cluster.
-{{% /md %}}</dd>
-</dl>
+{{% /md %}}</dd></dl>
 {{% /choosable %}}
 
 {{% choosable language python %}}
-<dl class="resources-properties">
-
-    <dt class="property-optional"
+<dl class="resources-properties"><dt class="property-optional"
             title="Optional">
         <span id="state_cluster_name_python">
 <a href="#state_cluster_name_python" style="color: inherit; text-decoration: inherit;">cluster_<wbr>name</a>
@@ -1205,8 +1113,7 @@ The following state arguments are supported:
         <span class="property-indicator"></span>
         <span class="property-type">str</span>
     </dt>
-    <dd>{{% md %}}{{% /md %}}</dd>
-    <dt class="property-optional"
+    <dd>{{% md %}}{{% /md %}}</dd><dt class="property-optional"
             title="Optional">
         <span id="state_custom_zone_mapping_python">
 <a href="#state_custom_zone_mapping_python" style="color: inherit; text-decoration: inherit;">custom_<wbr>zone_<wbr>mapping</a>
@@ -1215,8 +1122,7 @@ The following state arguments are supported:
         <span class="property-type">Mapping[str, Any]</span>
     </dt>
     <dd>{{% md %}}A map of all custom zone mappings defined for the Global Cluster. Atlas automatically maps each location code to the closest geographical zone. Custom zone mappings allow administrators to override these automatic mappings. If your Global Cluster does not have any custom zone mappings, this document is empty.
-{{% /md %}}</dd>
-    <dt class="property-optional"
+{{% /md %}}</dd><dt class="property-optional"
             title="Optional">
         <span id="state_custom_zone_mappings_python">
 <a href="#state_custom_zone_mappings_python" style="color: inherit; text-decoration: inherit;">custom_<wbr>zone_<wbr>mappings</a>
@@ -1225,8 +1131,7 @@ The following state arguments are supported:
         <span class="property-type"><a href="#globalclusterconfigcustomzonemapping">Sequence[Global<wbr>Cluster<wbr>Config<wbr>Custom<wbr>Zone<wbr>Mapping<wbr>Args]</a></span>
     </dt>
     <dd>{{% md %}}Each element in the list maps one ISO location code to a zone in your Global Cluster. See Custom Zone Mapping below for more details.
-{{% /md %}}</dd>
-    <dt class="property-optional"
+{{% /md %}}</dd><dt class="property-optional"
             title="Optional">
         <span id="state_managed_namespaces_python">
 <a href="#state_managed_namespaces_python" style="color: inherit; text-decoration: inherit;">managed_<wbr>namespaces</a>
@@ -1235,8 +1140,7 @@ The following state arguments are supported:
         <span class="property-type"><a href="#globalclusterconfigmanagednamespace">Sequence[Global<wbr>Cluster<wbr>Config<wbr>Managed<wbr>Namespace<wbr>Args]</a></span>
     </dt>
     <dd>{{% md %}}Add a managed namespaces to a Global Cluster. For more information about managed namespaces, see [Global Clusters](https://docs.atlas.mongodb.com/reference/api/global-clusters/). See Managed Namespace below for more details.
-{{% /md %}}</dd>
-    <dt class="property-optional"
+{{% /md %}}</dd><dt class="property-optional"
             title="Optional">
         <span id="state_project_id_python">
 <a href="#state_project_id_python" style="color: inherit; text-decoration: inherit;">project_<wbr>id</a>
@@ -1246,8 +1150,7 @@ The following state arguments are supported:
     </dt>
     <dd>{{% md %}}The unique ID for the project to create the database user.
 * `cluster_name - (Required) The name of the Global Cluster.
-{{% /md %}}</dd>
-</dl>
+{{% /md %}}</dd></dl>
 {{% /choosable %}}
 
 
@@ -1262,9 +1165,7 @@ The following state arguments are supported:
 <h4 id="globalclusterconfigcustomzonemapping">Global<wbr>Cluster<wbr>Config<wbr>Custom<wbr>Zone<wbr>Mapping</h4>
 
 {{% choosable language csharp %}}
-<dl class="resources-properties">
-
-    <dt class="property-optional"
+<dl class="resources-properties"><dt class="property-optional"
             title="Optional">
         <span id="location_csharp">
 <a href="#location_csharp" style="color: inherit; text-decoration: inherit;">Location</a>
@@ -1273,8 +1174,7 @@ The following state arguments are supported:
         <span class="property-type">string</span>
     </dt>
     <dd>{{% md %}}The ISO location code to which you want to map a zone in your Global Cluster. You can find a list of all supported location codes [here](https://cloud.mongodb.com/static/atlas/country_iso_codes.txt).
-{{% /md %}}</dd>
-    <dt class="property-optional"
+{{% /md %}}</dd><dt class="property-optional"
             title="Optional">
         <span id="zone_csharp">
 <a href="#zone_csharp" style="color: inherit; text-decoration: inherit;">Zone</a>
@@ -1283,14 +1183,11 @@ The following state arguments are supported:
         <span class="property-type">string</span>
     </dt>
     <dd>{{% md %}}The name of the zone in your Global Cluster that you want to map to location.
-{{% /md %}}</dd>
-</dl>
+{{% /md %}}</dd></dl>
 {{% /choosable %}}
 
 {{% choosable language go %}}
-<dl class="resources-properties">
-
-    <dt class="property-optional"
+<dl class="resources-properties"><dt class="property-optional"
             title="Optional">
         <span id="location_go">
 <a href="#location_go" style="color: inherit; text-decoration: inherit;">Location</a>
@@ -1299,8 +1196,7 @@ The following state arguments are supported:
         <span class="property-type">string</span>
     </dt>
     <dd>{{% md %}}The ISO location code to which you want to map a zone in your Global Cluster. You can find a list of all supported location codes [here](https://cloud.mongodb.com/static/atlas/country_iso_codes.txt).
-{{% /md %}}</dd>
-    <dt class="property-optional"
+{{% /md %}}</dd><dt class="property-optional"
             title="Optional">
         <span id="zone_go">
 <a href="#zone_go" style="color: inherit; text-decoration: inherit;">Zone</a>
@@ -1309,14 +1205,11 @@ The following state arguments are supported:
         <span class="property-type">string</span>
     </dt>
     <dd>{{% md %}}The name of the zone in your Global Cluster that you want to map to location.
-{{% /md %}}</dd>
-</dl>
+{{% /md %}}</dd></dl>
 {{% /choosable %}}
 
 {{% choosable language nodejs %}}
-<dl class="resources-properties">
-
-    <dt class="property-optional"
+<dl class="resources-properties"><dt class="property-optional"
             title="Optional">
         <span id="location_nodejs">
 <a href="#location_nodejs" style="color: inherit; text-decoration: inherit;">location</a>
@@ -1325,8 +1218,7 @@ The following state arguments are supported:
         <span class="property-type">string</span>
     </dt>
     <dd>{{% md %}}The ISO location code to which you want to map a zone in your Global Cluster. You can find a list of all supported location codes [here](https://cloud.mongodb.com/static/atlas/country_iso_codes.txt).
-{{% /md %}}</dd>
-    <dt class="property-optional"
+{{% /md %}}</dd><dt class="property-optional"
             title="Optional">
         <span id="zone_nodejs">
 <a href="#zone_nodejs" style="color: inherit; text-decoration: inherit;">zone</a>
@@ -1335,14 +1227,11 @@ The following state arguments are supported:
         <span class="property-type">string</span>
     </dt>
     <dd>{{% md %}}The name of the zone in your Global Cluster that you want to map to location.
-{{% /md %}}</dd>
-</dl>
+{{% /md %}}</dd></dl>
 {{% /choosable %}}
 
 {{% choosable language python %}}
-<dl class="resources-properties">
-
-    <dt class="property-optional"
+<dl class="resources-properties"><dt class="property-optional"
             title="Optional">
         <span id="location_python">
 <a href="#location_python" style="color: inherit; text-decoration: inherit;">location</a>
@@ -1351,8 +1240,7 @@ The following state arguments are supported:
         <span class="property-type">str</span>
     </dt>
     <dd>{{% md %}}The ISO location code to which you want to map a zone in your Global Cluster. You can find a list of all supported location codes [here](https://cloud.mongodb.com/static/atlas/country_iso_codes.txt).
-{{% /md %}}</dd>
-    <dt class="property-optional"
+{{% /md %}}</dd><dt class="property-optional"
             title="Optional">
         <span id="zone_python">
 <a href="#zone_python" style="color: inherit; text-decoration: inherit;">zone</a>
@@ -1361,16 +1249,13 @@ The following state arguments are supported:
         <span class="property-type">str</span>
     </dt>
     <dd>{{% md %}}The name of the zone in your Global Cluster that you want to map to location.
-{{% /md %}}</dd>
-</dl>
+{{% /md %}}</dd></dl>
 {{% /choosable %}}
 
 <h4 id="globalclusterconfigmanagednamespace">Global<wbr>Cluster<wbr>Config<wbr>Managed<wbr>Namespace</h4>
 
 {{% choosable language csharp %}}
-<dl class="resources-properties">
-
-    <dt class="property-required"
+<dl class="resources-properties"><dt class="property-required"
             title="Required">
         <span id="collection_csharp">
 <a href="#collection_csharp" style="color: inherit; text-decoration: inherit;">Collection</a>
@@ -1379,8 +1264,7 @@ The following state arguments are supported:
         <span class="property-type">string</span>
     </dt>
     <dd>{{% md %}}The name of the collection associated with the managed namespace.
-{{% /md %}}</dd>
-    <dt class="property-required"
+{{% /md %}}</dd><dt class="property-required"
             title="Required">
         <span id="customshardkey_csharp">
 <a href="#customshardkey_csharp" style="color: inherit; text-decoration: inherit;">Custom<wbr>Shard<wbr>Key</a>
@@ -1389,8 +1273,7 @@ The following state arguments are supported:
         <span class="property-type">string</span>
     </dt>
     <dd>{{% md %}}The custom shard key for the collection. Global Clusters require a compound shard key consisting of a location field and a user-selected second key, the custom shard key.
-{{% /md %}}</dd>
-    <dt class="property-required"
+{{% /md %}}</dd><dt class="property-required"
             title="Required">
         <span id="db_csharp">
 <a href="#db_csharp" style="color: inherit; text-decoration: inherit;">Db</a>
@@ -1399,14 +1282,11 @@ The following state arguments are supported:
         <span class="property-type">string</span>
     </dt>
     <dd>{{% md %}}The name of the database containing the collection.
-{{% /md %}}</dd>
-</dl>
+{{% /md %}}</dd></dl>
 {{% /choosable %}}
 
 {{% choosable language go %}}
-<dl class="resources-properties">
-
-    <dt class="property-required"
+<dl class="resources-properties"><dt class="property-required"
             title="Required">
         <span id="collection_go">
 <a href="#collection_go" style="color: inherit; text-decoration: inherit;">Collection</a>
@@ -1415,8 +1295,7 @@ The following state arguments are supported:
         <span class="property-type">string</span>
     </dt>
     <dd>{{% md %}}The name of the collection associated with the managed namespace.
-{{% /md %}}</dd>
-    <dt class="property-required"
+{{% /md %}}</dd><dt class="property-required"
             title="Required">
         <span id="customshardkey_go">
 <a href="#customshardkey_go" style="color: inherit; text-decoration: inherit;">Custom<wbr>Shard<wbr>Key</a>
@@ -1425,8 +1304,7 @@ The following state arguments are supported:
         <span class="property-type">string</span>
     </dt>
     <dd>{{% md %}}The custom shard key for the collection. Global Clusters require a compound shard key consisting of a location field and a user-selected second key, the custom shard key.
-{{% /md %}}</dd>
-    <dt class="property-required"
+{{% /md %}}</dd><dt class="property-required"
             title="Required">
         <span id="db_go">
 <a href="#db_go" style="color: inherit; text-decoration: inherit;">Db</a>
@@ -1435,14 +1313,11 @@ The following state arguments are supported:
         <span class="property-type">string</span>
     </dt>
     <dd>{{% md %}}The name of the database containing the collection.
-{{% /md %}}</dd>
-</dl>
+{{% /md %}}</dd></dl>
 {{% /choosable %}}
 
 {{% choosable language nodejs %}}
-<dl class="resources-properties">
-
-    <dt class="property-required"
+<dl class="resources-properties"><dt class="property-required"
             title="Required">
         <span id="collection_nodejs">
 <a href="#collection_nodejs" style="color: inherit; text-decoration: inherit;">collection</a>
@@ -1451,8 +1326,7 @@ The following state arguments are supported:
         <span class="property-type">string</span>
     </dt>
     <dd>{{% md %}}The name of the collection associated with the managed namespace.
-{{% /md %}}</dd>
-    <dt class="property-required"
+{{% /md %}}</dd><dt class="property-required"
             title="Required">
         <span id="customshardkey_nodejs">
 <a href="#customshardkey_nodejs" style="color: inherit; text-decoration: inherit;">custom<wbr>Shard<wbr>Key</a>
@@ -1461,8 +1335,7 @@ The following state arguments are supported:
         <span class="property-type">string</span>
     </dt>
     <dd>{{% md %}}The custom shard key for the collection. Global Clusters require a compound shard key consisting of a location field and a user-selected second key, the custom shard key.
-{{% /md %}}</dd>
-    <dt class="property-required"
+{{% /md %}}</dd><dt class="property-required"
             title="Required">
         <span id="db_nodejs">
 <a href="#db_nodejs" style="color: inherit; text-decoration: inherit;">db</a>
@@ -1471,14 +1344,11 @@ The following state arguments are supported:
         <span class="property-type">string</span>
     </dt>
     <dd>{{% md %}}The name of the database containing the collection.
-{{% /md %}}</dd>
-</dl>
+{{% /md %}}</dd></dl>
 {{% /choosable %}}
 
 {{% choosable language python %}}
-<dl class="resources-properties">
-
-    <dt class="property-required"
+<dl class="resources-properties"><dt class="property-required"
             title="Required">
         <span id="collection_python">
 <a href="#collection_python" style="color: inherit; text-decoration: inherit;">collection</a>
@@ -1487,8 +1357,7 @@ The following state arguments are supported:
         <span class="property-type">str</span>
     </dt>
     <dd>{{% md %}}The name of the collection associated with the managed namespace.
-{{% /md %}}</dd>
-    <dt class="property-required"
+{{% /md %}}</dd><dt class="property-required"
             title="Required">
         <span id="custom_shard_key_python">
 <a href="#custom_shard_key_python" style="color: inherit; text-decoration: inherit;">custom_<wbr>shard_<wbr>key</a>
@@ -1497,8 +1366,7 @@ The following state arguments are supported:
         <span class="property-type">str</span>
     </dt>
     <dd>{{% md %}}The custom shard key for the collection. Global Clusters require a compound shard key consisting of a location field and a user-selected second key, the custom shard key.
-{{% /md %}}</dd>
-    <dt class="property-required"
+{{% /md %}}</dd><dt class="property-required"
             title="Required">
         <span id="db_python">
 <a href="#db_python" style="color: inherit; text-decoration: inherit;">db</a>
@@ -1507,8 +1375,7 @@ The following state arguments are supported:
         <span class="property-type">str</span>
     </dt>
     <dd>{{% md %}}The name of the database containing the collection.
-{{% /md %}}</dd>
-</dl>
+{{% /md %}}</dd></dl>
 {{% /choosable %}}
 ## Import
 
@@ -1531,6 +1398,6 @@ Database users can be imported using project ID and cluster name, in the format 
 	<dt>License</dt>
 	<dd>Apache-2.0</dd>
 	<dt>Notes</dt>
-	<dd>This Pulumi package is based on the [`mongodbatlas` Terraform Provider](https://github.com/mongodb/terraform-provider-mongodbatlas).</dd>
+	<dd>{{% md %}}This Pulumi package is based on the [`mongodbatlas` Terraform Provider](https://github.com/mongodb/terraform-provider-mongodbatlas).{{% /md %}}</dd>
 </dl>
 

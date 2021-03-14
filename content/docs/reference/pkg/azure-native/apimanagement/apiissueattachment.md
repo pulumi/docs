@@ -14,11 +14,17 @@ Issue Attachment Contract details.
 API Version: 2019-12-01.
 
 {{% examples %}}
+
 ## Example Usage
 
 {{< chooser language "typescript,python,go,csharp" / >}}
+
+
 ### ApiManagementCreateApiIssueAttachment
-{{% example csharp %}}
+
+
+{{< example csharp >}}
+
 ```csharp
 using Pulumi;
 using AzureNative = Pulumi.AzureNative;
@@ -44,9 +50,12 @@ class MyStack : Stack
 
 ```
 
-{{% /example %}}
 
-{{% example go %}}
+{{< /example >}}
+
+
+{{< example go >}}
+
 
 ```go
 package main
@@ -77,9 +86,12 @@ func main() {
 
 ```
 
-{{% /example %}}
 
-{{% example python %}}
+{{< /example >}}
+
+
+{{< example python >}}
+
 
 ```python
 import pulumi
@@ -97,9 +109,12 @@ api_issue_attachment = azure_native.apimanagement.ApiIssueAttachment("apiIssueAt
 
 ```
 
-{{% /example %}}
 
-{{% example typescript %}}
+{{< /example >}}
+
+
+{{< example typescript >}}
+
 
 ```typescript
 import * as pulumi from "@pulumi/pulumi";
@@ -118,9 +133,16 @@ const apiIssueAttachment = new azure_native.apimanagement.ApiIssueAttachment("ap
 
 ```
 
-{{% /example %}}
+
+{{< /example >}}
+
+
+
+
 
 {{% /examples %}}
+
+
 
 
 ## Create a ApiIssueAttachment Resource {#create}
@@ -145,9 +167,7 @@ const apiIssueAttachment = new azure_native.apimanagement.ApiIssueAttachment("ap
 
 {{% choosable language nodejs %}}
 
-<dl class="resources-properties">
-  
-    <dt
+<dl class="resources-properties"><dt
         class="property-required" title="Required">
         <span>name</span>
         <span class="property-indicator"></span>
@@ -155,9 +175,7 @@ const apiIssueAttachment = new azure_native.apimanagement.ApiIssueAttachment("ap
     </dt>
     <dd>
       The unique name of the resource.
-    </dd>
-  
-    <dt
+    </dd><dt
         class="property-required" title="Required">
         <span>args</span>
         <span class="property-indicator"></span>
@@ -165,9 +183,7 @@ const apiIssueAttachment = new azure_native.apimanagement.ApiIssueAttachment("ap
     </dt>
     <dd>
       The arguments to resource properties.
-    </dd>
-  
-    <dt
+    </dd><dt
         class="property-optional" title="Optional">
         <span>opts</span>
         <span class="property-indicator"></span>
@@ -175,10 +191,7 @@ const apiIssueAttachment = new azure_native.apimanagement.ApiIssueAttachment("ap
     </dt>
     <dd>
       Bag of options to control resource&#39;s behavior.
-    </dd>
-  
-
-</dl>
+    </dd></dl>
 
 {{% /choosable %}}
 
@@ -204,9 +217,7 @@ const apiIssueAttachment = new azure_native.apimanagement.ApiIssueAttachment("ap
 
 {{% choosable language go %}}
 
-<dl class="resources-properties">
-  
-    <dt
+<dl class="resources-properties"><dt
         class="property-optional" title="Optional">
         <span>ctx</span>
         <span class="property-indicator"></span>
@@ -214,9 +225,7 @@ const apiIssueAttachment = new azure_native.apimanagement.ApiIssueAttachment("ap
     </dt>
     <dd>
       Context object for the current deployment.
-    </dd>
-  
-    <dt
+    </dd><dt
         class="property-required" title="Required">
         <span>name</span>
         <span class="property-indicator"></span>
@@ -224,9 +233,7 @@ const apiIssueAttachment = new azure_native.apimanagement.ApiIssueAttachment("ap
     </dt>
     <dd>
       The unique name of the resource.
-    </dd>
-  
-    <dt
+    </dd><dt
         class="property-required" title="Required">
         <span>args</span>
         <span class="property-indicator"></span>
@@ -234,9 +241,7 @@ const apiIssueAttachment = new azure_native.apimanagement.ApiIssueAttachment("ap
     </dt>
     <dd>
       The arguments to resource properties.
-    </dd>
-  
-    <dt
+    </dd><dt
         class="property-optional" title="Optional">
         <span>opts</span>
         <span class="property-indicator"></span>
@@ -244,18 +249,13 @@ const apiIssueAttachment = new azure_native.apimanagement.ApiIssueAttachment("ap
     </dt>
     <dd>
       Bag of options to control resource&#39;s behavior.
-    </dd>
-  
-
-</dl>
+    </dd></dl>
 
 {{% /choosable %}}
 
 {{% choosable language csharp %}}
 
-<dl class="resources-properties">
-  
-    <dt
+<dl class="resources-properties"><dt
         class="property-required" title="Required">
         <span>name</span>
         <span class="property-indicator"></span>
@@ -263,9 +263,7 @@ const apiIssueAttachment = new azure_native.apimanagement.ApiIssueAttachment("ap
     </dt>
     <dd>
       The unique name of the resource.
-    </dd>
-  
-    <dt
+    </dd><dt
         class="property-required" title="Required">
         <span>args</span>
         <span class="property-indicator"></span>
@@ -273,9 +271,7 @@ const apiIssueAttachment = new azure_native.apimanagement.ApiIssueAttachment("ap
     </dt>
     <dd>
       The arguments to resource properties.
-    </dd>
-  
-    <dt
+    </dd><dt
         class="property-optional" title="Optional">
         <span>opts</span>
         <span class="property-indicator"></span>
@@ -283,10 +279,7 @@ const apiIssueAttachment = new azure_native.apimanagement.ApiIssueAttachment("ap
     </dt>
     <dd>
       Bag of options to control resource&#39;s behavior.
-    </dd>
-  
-
-</dl>
+    </dd></dl>
 
 {{% /choosable %}}
 
@@ -301,9 +294,7 @@ The ApiIssueAttachment resource accepts the following [input]({{< relref "/docs/
 
 
 {{% choosable language csharp %}}
-<dl class="resources-properties">
-
-    <dt class="property-required"
+<dl class="resources-properties"><dt class="property-required"
             title="Required">
         <span id="apiid_csharp">
 <a href="#apiid_csharp" style="color: inherit; text-decoration: inherit;">Api<wbr>Id</a>
@@ -311,8 +302,7 @@ The ApiIssueAttachment resource accepts the following [input]({{< relref "/docs/
         <span class="property-indicator"></span>
         <span class="property-type">string</span>
     </dt>
-    <dd>{{% md %}}API identifier. Must be unique in the current API Management service instance.{{% /md %}}</dd>
-    <dt class="property-required"
+    <dd>{{% md %}}API identifier. Must be unique in the current API Management service instance.{{% /md %}}</dd><dt class="property-required"
             title="Required">
         <span id="content_csharp">
 <a href="#content_csharp" style="color: inherit; text-decoration: inherit;">Content</a>
@@ -320,8 +310,7 @@ The ApiIssueAttachment resource accepts the following [input]({{< relref "/docs/
         <span class="property-indicator"></span>
         <span class="property-type">string</span>
     </dt>
-    <dd>{{% md %}}An HTTP link or Base64-encoded binary data.{{% /md %}}</dd>
-    <dt class="property-required"
+    <dd>{{% md %}}An HTTP link or Base64-encoded binary data.{{% /md %}}</dd><dt class="property-required"
             title="Required">
         <span id="contentformat_csharp">
 <a href="#contentformat_csharp" style="color: inherit; text-decoration: inherit;">Content<wbr>Format</a>
@@ -329,8 +318,7 @@ The ApiIssueAttachment resource accepts the following [input]({{< relref "/docs/
         <span class="property-indicator"></span>
         <span class="property-type">string</span>
     </dt>
-    <dd>{{% md %}}Either 'link' if content is provided via an HTTP link or the MIME type of the Base64-encoded binary data provided in the 'content' property.{{% /md %}}</dd>
-    <dt class="property-required"
+    <dd>{{% md %}}Either 'link' if content is provided via an HTTP link or the MIME type of the Base64-encoded binary data provided in the 'content' property.{{% /md %}}</dd><dt class="property-required"
             title="Required">
         <span id="issueid_csharp">
 <a href="#issueid_csharp" style="color: inherit; text-decoration: inherit;">Issue<wbr>Id</a>
@@ -338,8 +326,7 @@ The ApiIssueAttachment resource accepts the following [input]({{< relref "/docs/
         <span class="property-indicator"></span>
         <span class="property-type">string</span>
     </dt>
-    <dd>{{% md %}}Issue identifier. Must be unique in the current API Management service instance.{{% /md %}}</dd>
-    <dt class="property-required"
+    <dd>{{% md %}}Issue identifier. Must be unique in the current API Management service instance.{{% /md %}}</dd><dt class="property-required"
             title="Required">
         <span id="resourcegroupname_csharp">
 <a href="#resourcegroupname_csharp" style="color: inherit; text-decoration: inherit;">Resource<wbr>Group<wbr>Name</a>
@@ -347,8 +334,7 @@ The ApiIssueAttachment resource accepts the following [input]({{< relref "/docs/
         <span class="property-indicator"></span>
         <span class="property-type">string</span>
     </dt>
-    <dd>{{% md %}}The name of the resource group.{{% /md %}}</dd>
-    <dt class="property-required"
+    <dd>{{% md %}}The name of the resource group.{{% /md %}}</dd><dt class="property-required"
             title="Required">
         <span id="servicename_csharp">
 <a href="#servicename_csharp" style="color: inherit; text-decoration: inherit;">Service<wbr>Name</a>
@@ -356,8 +342,7 @@ The ApiIssueAttachment resource accepts the following [input]({{< relref "/docs/
         <span class="property-indicator"></span>
         <span class="property-type">string</span>
     </dt>
-    <dd>{{% md %}}The name of the API Management service.{{% /md %}}</dd>
-    <dt class="property-required"
+    <dd>{{% md %}}The name of the API Management service.{{% /md %}}</dd><dt class="property-required"
             title="Required">
         <span id="title_csharp">
 <a href="#title_csharp" style="color: inherit; text-decoration: inherit;">Title</a>
@@ -365,8 +350,7 @@ The ApiIssueAttachment resource accepts the following [input]({{< relref "/docs/
         <span class="property-indicator"></span>
         <span class="property-type">string</span>
     </dt>
-    <dd>{{% md %}}Filename by which the binary data will be saved.{{% /md %}}</dd>
-    <dt class="property-optional"
+    <dd>{{% md %}}Filename by which the binary data will be saved.{{% /md %}}</dd><dt class="property-optional"
             title="Optional">
         <span id="attachmentid_csharp">
 <a href="#attachmentid_csharp" style="color: inherit; text-decoration: inherit;">Attachment<wbr>Id</a>
@@ -374,14 +358,11 @@ The ApiIssueAttachment resource accepts the following [input]({{< relref "/docs/
         <span class="property-indicator"></span>
         <span class="property-type">string</span>
     </dt>
-    <dd>{{% md %}}Attachment identifier within an Issue. Must be unique in the current Issue.{{% /md %}}</dd>
-</dl>
+    <dd>{{% md %}}Attachment identifier within an Issue. Must be unique in the current Issue.{{% /md %}}</dd></dl>
 {{% /choosable %}}
 
 {{% choosable language go %}}
-<dl class="resources-properties">
-
-    <dt class="property-required"
+<dl class="resources-properties"><dt class="property-required"
             title="Required">
         <span id="apiid_go">
 <a href="#apiid_go" style="color: inherit; text-decoration: inherit;">Api<wbr>Id</a>
@@ -389,8 +370,7 @@ The ApiIssueAttachment resource accepts the following [input]({{< relref "/docs/
         <span class="property-indicator"></span>
         <span class="property-type">string</span>
     </dt>
-    <dd>{{% md %}}API identifier. Must be unique in the current API Management service instance.{{% /md %}}</dd>
-    <dt class="property-required"
+    <dd>{{% md %}}API identifier. Must be unique in the current API Management service instance.{{% /md %}}</dd><dt class="property-required"
             title="Required">
         <span id="content_go">
 <a href="#content_go" style="color: inherit; text-decoration: inherit;">Content</a>
@@ -398,8 +378,7 @@ The ApiIssueAttachment resource accepts the following [input]({{< relref "/docs/
         <span class="property-indicator"></span>
         <span class="property-type">string</span>
     </dt>
-    <dd>{{% md %}}An HTTP link or Base64-encoded binary data.{{% /md %}}</dd>
-    <dt class="property-required"
+    <dd>{{% md %}}An HTTP link or Base64-encoded binary data.{{% /md %}}</dd><dt class="property-required"
             title="Required">
         <span id="contentformat_go">
 <a href="#contentformat_go" style="color: inherit; text-decoration: inherit;">Content<wbr>Format</a>
@@ -407,8 +386,7 @@ The ApiIssueAttachment resource accepts the following [input]({{< relref "/docs/
         <span class="property-indicator"></span>
         <span class="property-type">string</span>
     </dt>
-    <dd>{{% md %}}Either 'link' if content is provided via an HTTP link or the MIME type of the Base64-encoded binary data provided in the 'content' property.{{% /md %}}</dd>
-    <dt class="property-required"
+    <dd>{{% md %}}Either 'link' if content is provided via an HTTP link or the MIME type of the Base64-encoded binary data provided in the 'content' property.{{% /md %}}</dd><dt class="property-required"
             title="Required">
         <span id="issueid_go">
 <a href="#issueid_go" style="color: inherit; text-decoration: inherit;">Issue<wbr>Id</a>
@@ -416,8 +394,7 @@ The ApiIssueAttachment resource accepts the following [input]({{< relref "/docs/
         <span class="property-indicator"></span>
         <span class="property-type">string</span>
     </dt>
-    <dd>{{% md %}}Issue identifier. Must be unique in the current API Management service instance.{{% /md %}}</dd>
-    <dt class="property-required"
+    <dd>{{% md %}}Issue identifier. Must be unique in the current API Management service instance.{{% /md %}}</dd><dt class="property-required"
             title="Required">
         <span id="resourcegroupname_go">
 <a href="#resourcegroupname_go" style="color: inherit; text-decoration: inherit;">Resource<wbr>Group<wbr>Name</a>
@@ -425,8 +402,7 @@ The ApiIssueAttachment resource accepts the following [input]({{< relref "/docs/
         <span class="property-indicator"></span>
         <span class="property-type">string</span>
     </dt>
-    <dd>{{% md %}}The name of the resource group.{{% /md %}}</dd>
-    <dt class="property-required"
+    <dd>{{% md %}}The name of the resource group.{{% /md %}}</dd><dt class="property-required"
             title="Required">
         <span id="servicename_go">
 <a href="#servicename_go" style="color: inherit; text-decoration: inherit;">Service<wbr>Name</a>
@@ -434,8 +410,7 @@ The ApiIssueAttachment resource accepts the following [input]({{< relref "/docs/
         <span class="property-indicator"></span>
         <span class="property-type">string</span>
     </dt>
-    <dd>{{% md %}}The name of the API Management service.{{% /md %}}</dd>
-    <dt class="property-required"
+    <dd>{{% md %}}The name of the API Management service.{{% /md %}}</dd><dt class="property-required"
             title="Required">
         <span id="title_go">
 <a href="#title_go" style="color: inherit; text-decoration: inherit;">Title</a>
@@ -443,8 +418,7 @@ The ApiIssueAttachment resource accepts the following [input]({{< relref "/docs/
         <span class="property-indicator"></span>
         <span class="property-type">string</span>
     </dt>
-    <dd>{{% md %}}Filename by which the binary data will be saved.{{% /md %}}</dd>
-    <dt class="property-optional"
+    <dd>{{% md %}}Filename by which the binary data will be saved.{{% /md %}}</dd><dt class="property-optional"
             title="Optional">
         <span id="attachmentid_go">
 <a href="#attachmentid_go" style="color: inherit; text-decoration: inherit;">Attachment<wbr>Id</a>
@@ -452,14 +426,11 @@ The ApiIssueAttachment resource accepts the following [input]({{< relref "/docs/
         <span class="property-indicator"></span>
         <span class="property-type">string</span>
     </dt>
-    <dd>{{% md %}}Attachment identifier within an Issue. Must be unique in the current Issue.{{% /md %}}</dd>
-</dl>
+    <dd>{{% md %}}Attachment identifier within an Issue. Must be unique in the current Issue.{{% /md %}}</dd></dl>
 {{% /choosable %}}
 
 {{% choosable language nodejs %}}
-<dl class="resources-properties">
-
-    <dt class="property-required"
+<dl class="resources-properties"><dt class="property-required"
             title="Required">
         <span id="apiid_nodejs">
 <a href="#apiid_nodejs" style="color: inherit; text-decoration: inherit;">api<wbr>Id</a>
@@ -467,8 +438,7 @@ The ApiIssueAttachment resource accepts the following [input]({{< relref "/docs/
         <span class="property-indicator"></span>
         <span class="property-type">string</span>
     </dt>
-    <dd>{{% md %}}API identifier. Must be unique in the current API Management service instance.{{% /md %}}</dd>
-    <dt class="property-required"
+    <dd>{{% md %}}API identifier. Must be unique in the current API Management service instance.{{% /md %}}</dd><dt class="property-required"
             title="Required">
         <span id="content_nodejs">
 <a href="#content_nodejs" style="color: inherit; text-decoration: inherit;">content</a>
@@ -476,8 +446,7 @@ The ApiIssueAttachment resource accepts the following [input]({{< relref "/docs/
         <span class="property-indicator"></span>
         <span class="property-type">string</span>
     </dt>
-    <dd>{{% md %}}An HTTP link or Base64-encoded binary data.{{% /md %}}</dd>
-    <dt class="property-required"
+    <dd>{{% md %}}An HTTP link or Base64-encoded binary data.{{% /md %}}</dd><dt class="property-required"
             title="Required">
         <span id="contentformat_nodejs">
 <a href="#contentformat_nodejs" style="color: inherit; text-decoration: inherit;">content<wbr>Format</a>
@@ -485,8 +454,7 @@ The ApiIssueAttachment resource accepts the following [input]({{< relref "/docs/
         <span class="property-indicator"></span>
         <span class="property-type">string</span>
     </dt>
-    <dd>{{% md %}}Either 'link' if content is provided via an HTTP link or the MIME type of the Base64-encoded binary data provided in the 'content' property.{{% /md %}}</dd>
-    <dt class="property-required"
+    <dd>{{% md %}}Either 'link' if content is provided via an HTTP link or the MIME type of the Base64-encoded binary data provided in the 'content' property.{{% /md %}}</dd><dt class="property-required"
             title="Required">
         <span id="issueid_nodejs">
 <a href="#issueid_nodejs" style="color: inherit; text-decoration: inherit;">issue<wbr>Id</a>
@@ -494,8 +462,7 @@ The ApiIssueAttachment resource accepts the following [input]({{< relref "/docs/
         <span class="property-indicator"></span>
         <span class="property-type">string</span>
     </dt>
-    <dd>{{% md %}}Issue identifier. Must be unique in the current API Management service instance.{{% /md %}}</dd>
-    <dt class="property-required"
+    <dd>{{% md %}}Issue identifier. Must be unique in the current API Management service instance.{{% /md %}}</dd><dt class="property-required"
             title="Required">
         <span id="resourcegroupname_nodejs">
 <a href="#resourcegroupname_nodejs" style="color: inherit; text-decoration: inherit;">resource<wbr>Group<wbr>Name</a>
@@ -503,8 +470,7 @@ The ApiIssueAttachment resource accepts the following [input]({{< relref "/docs/
         <span class="property-indicator"></span>
         <span class="property-type">string</span>
     </dt>
-    <dd>{{% md %}}The name of the resource group.{{% /md %}}</dd>
-    <dt class="property-required"
+    <dd>{{% md %}}The name of the resource group.{{% /md %}}</dd><dt class="property-required"
             title="Required">
         <span id="servicename_nodejs">
 <a href="#servicename_nodejs" style="color: inherit; text-decoration: inherit;">service<wbr>Name</a>
@@ -512,8 +478,7 @@ The ApiIssueAttachment resource accepts the following [input]({{< relref "/docs/
         <span class="property-indicator"></span>
         <span class="property-type">string</span>
     </dt>
-    <dd>{{% md %}}The name of the API Management service.{{% /md %}}</dd>
-    <dt class="property-required"
+    <dd>{{% md %}}The name of the API Management service.{{% /md %}}</dd><dt class="property-required"
             title="Required">
         <span id="title_nodejs">
 <a href="#title_nodejs" style="color: inherit; text-decoration: inherit;">title</a>
@@ -521,8 +486,7 @@ The ApiIssueAttachment resource accepts the following [input]({{< relref "/docs/
         <span class="property-indicator"></span>
         <span class="property-type">string</span>
     </dt>
-    <dd>{{% md %}}Filename by which the binary data will be saved.{{% /md %}}</dd>
-    <dt class="property-optional"
+    <dd>{{% md %}}Filename by which the binary data will be saved.{{% /md %}}</dd><dt class="property-optional"
             title="Optional">
         <span id="attachmentid_nodejs">
 <a href="#attachmentid_nodejs" style="color: inherit; text-decoration: inherit;">attachment<wbr>Id</a>
@@ -530,14 +494,11 @@ The ApiIssueAttachment resource accepts the following [input]({{< relref "/docs/
         <span class="property-indicator"></span>
         <span class="property-type">string</span>
     </dt>
-    <dd>{{% md %}}Attachment identifier within an Issue. Must be unique in the current Issue.{{% /md %}}</dd>
-</dl>
+    <dd>{{% md %}}Attachment identifier within an Issue. Must be unique in the current Issue.{{% /md %}}</dd></dl>
 {{% /choosable %}}
 
 {{% choosable language python %}}
-<dl class="resources-properties">
-
-    <dt class="property-required"
+<dl class="resources-properties"><dt class="property-required"
             title="Required">
         <span id="api_id_python">
 <a href="#api_id_python" style="color: inherit; text-decoration: inherit;">api_<wbr>id</a>
@@ -545,8 +506,7 @@ The ApiIssueAttachment resource accepts the following [input]({{< relref "/docs/
         <span class="property-indicator"></span>
         <span class="property-type">str</span>
     </dt>
-    <dd>{{% md %}}API identifier. Must be unique in the current API Management service instance.{{% /md %}}</dd>
-    <dt class="property-required"
+    <dd>{{% md %}}API identifier. Must be unique in the current API Management service instance.{{% /md %}}</dd><dt class="property-required"
             title="Required">
         <span id="content_python">
 <a href="#content_python" style="color: inherit; text-decoration: inherit;">content</a>
@@ -554,8 +514,7 @@ The ApiIssueAttachment resource accepts the following [input]({{< relref "/docs/
         <span class="property-indicator"></span>
         <span class="property-type">str</span>
     </dt>
-    <dd>{{% md %}}An HTTP link or Base64-encoded binary data.{{% /md %}}</dd>
-    <dt class="property-required"
+    <dd>{{% md %}}An HTTP link or Base64-encoded binary data.{{% /md %}}</dd><dt class="property-required"
             title="Required">
         <span id="content_format_python">
 <a href="#content_format_python" style="color: inherit; text-decoration: inherit;">content_<wbr>format</a>
@@ -563,8 +522,7 @@ The ApiIssueAttachment resource accepts the following [input]({{< relref "/docs/
         <span class="property-indicator"></span>
         <span class="property-type">str</span>
     </dt>
-    <dd>{{% md %}}Either 'link' if content is provided via an HTTP link or the MIME type of the Base64-encoded binary data provided in the 'content' property.{{% /md %}}</dd>
-    <dt class="property-required"
+    <dd>{{% md %}}Either 'link' if content is provided via an HTTP link or the MIME type of the Base64-encoded binary data provided in the 'content' property.{{% /md %}}</dd><dt class="property-required"
             title="Required">
         <span id="issue_id_python">
 <a href="#issue_id_python" style="color: inherit; text-decoration: inherit;">issue_<wbr>id</a>
@@ -572,8 +530,7 @@ The ApiIssueAttachment resource accepts the following [input]({{< relref "/docs/
         <span class="property-indicator"></span>
         <span class="property-type">str</span>
     </dt>
-    <dd>{{% md %}}Issue identifier. Must be unique in the current API Management service instance.{{% /md %}}</dd>
-    <dt class="property-required"
+    <dd>{{% md %}}Issue identifier. Must be unique in the current API Management service instance.{{% /md %}}</dd><dt class="property-required"
             title="Required">
         <span id="resource_group_name_python">
 <a href="#resource_group_name_python" style="color: inherit; text-decoration: inherit;">resource_<wbr>group_<wbr>name</a>
@@ -581,8 +538,7 @@ The ApiIssueAttachment resource accepts the following [input]({{< relref "/docs/
         <span class="property-indicator"></span>
         <span class="property-type">str</span>
     </dt>
-    <dd>{{% md %}}The name of the resource group.{{% /md %}}</dd>
-    <dt class="property-required"
+    <dd>{{% md %}}The name of the resource group.{{% /md %}}</dd><dt class="property-required"
             title="Required">
         <span id="service_name_python">
 <a href="#service_name_python" style="color: inherit; text-decoration: inherit;">service_<wbr>name</a>
@@ -590,8 +546,7 @@ The ApiIssueAttachment resource accepts the following [input]({{< relref "/docs/
         <span class="property-indicator"></span>
         <span class="property-type">str</span>
     </dt>
-    <dd>{{% md %}}The name of the API Management service.{{% /md %}}</dd>
-    <dt class="property-required"
+    <dd>{{% md %}}The name of the API Management service.{{% /md %}}</dd><dt class="property-required"
             title="Required">
         <span id="title_python">
 <a href="#title_python" style="color: inherit; text-decoration: inherit;">title</a>
@@ -599,8 +554,7 @@ The ApiIssueAttachment resource accepts the following [input]({{< relref "/docs/
         <span class="property-indicator"></span>
         <span class="property-type">str</span>
     </dt>
-    <dd>{{% md %}}Filename by which the binary data will be saved.{{% /md %}}</dd>
-    <dt class="property-optional"
+    <dd>{{% md %}}Filename by which the binary data will be saved.{{% /md %}}</dd><dt class="property-optional"
             title="Optional">
         <span id="attachment_id_python">
 <a href="#attachment_id_python" style="color: inherit; text-decoration: inherit;">attachment_<wbr>id</a>
@@ -608,8 +562,7 @@ The ApiIssueAttachment resource accepts the following [input]({{< relref "/docs/
         <span class="property-indicator"></span>
         <span class="property-type">str</span>
     </dt>
-    <dd>{{% md %}}Attachment identifier within an Issue. Must be unique in the current Issue.{{% /md %}}</dd>
-</dl>
+    <dd>{{% md %}}Attachment identifier within an Issue. Must be unique in the current Issue.{{% /md %}}</dd></dl>
 {{% /choosable %}}
 
 
@@ -620,9 +573,7 @@ All [input](#inputs) properties are implicitly available as output properties. A
 
 
 {{% choosable language csharp %}}
-<dl class="resources-properties">
-
-    <dt class="property-"
+<dl class="resources-properties"><dt class="property-"
             title="">
         <span id="id_csharp">
 <a href="#id_csharp" style="color: inherit; text-decoration: inherit;">Id</a>
@@ -630,8 +581,7 @@ All [input](#inputs) properties are implicitly available as output properties. A
         <span class="property-indicator"></span>
         <span class="property-type">string</span>
     </dt>
-    <dd>{{% md %}}The provider-assigned unique ID for this managed resource.{{% /md %}}</dd>
-    <dt class="property-"
+    <dd>{{% md %}}The provider-assigned unique ID for this managed resource.{{% /md %}}</dd><dt class="property-"
             title="">
         <span id="name_csharp">
 <a href="#name_csharp" style="color: inherit; text-decoration: inherit;">Name</a>
@@ -639,8 +589,7 @@ All [input](#inputs) properties are implicitly available as output properties. A
         <span class="property-indicator"></span>
         <span class="property-type">string</span>
     </dt>
-    <dd>{{% md %}}Resource name.{{% /md %}}</dd>
-    <dt class="property-"
+    <dd>{{% md %}}Resource name.{{% /md %}}</dd><dt class="property-"
             title="">
         <span id="type_csharp">
 <a href="#type_csharp" style="color: inherit; text-decoration: inherit;">Type</a>
@@ -648,14 +597,11 @@ All [input](#inputs) properties are implicitly available as output properties. A
         <span class="property-indicator"></span>
         <span class="property-type">string</span>
     </dt>
-    <dd>{{% md %}}Resource type for API Management resource.{{% /md %}}</dd>
-</dl>
+    <dd>{{% md %}}Resource type for API Management resource.{{% /md %}}</dd></dl>
 {{% /choosable %}}
 
 {{% choosable language go %}}
-<dl class="resources-properties">
-
-    <dt class="property-"
+<dl class="resources-properties"><dt class="property-"
             title="">
         <span id="id_go">
 <a href="#id_go" style="color: inherit; text-decoration: inherit;">Id</a>
@@ -663,8 +609,7 @@ All [input](#inputs) properties are implicitly available as output properties. A
         <span class="property-indicator"></span>
         <span class="property-type">string</span>
     </dt>
-    <dd>{{% md %}}The provider-assigned unique ID for this managed resource.{{% /md %}}</dd>
-    <dt class="property-"
+    <dd>{{% md %}}The provider-assigned unique ID for this managed resource.{{% /md %}}</dd><dt class="property-"
             title="">
         <span id="name_go">
 <a href="#name_go" style="color: inherit; text-decoration: inherit;">Name</a>
@@ -672,8 +617,7 @@ All [input](#inputs) properties are implicitly available as output properties. A
         <span class="property-indicator"></span>
         <span class="property-type">string</span>
     </dt>
-    <dd>{{% md %}}Resource name.{{% /md %}}</dd>
-    <dt class="property-"
+    <dd>{{% md %}}Resource name.{{% /md %}}</dd><dt class="property-"
             title="">
         <span id="type_go">
 <a href="#type_go" style="color: inherit; text-decoration: inherit;">Type</a>
@@ -681,14 +625,11 @@ All [input](#inputs) properties are implicitly available as output properties. A
         <span class="property-indicator"></span>
         <span class="property-type">string</span>
     </dt>
-    <dd>{{% md %}}Resource type for API Management resource.{{% /md %}}</dd>
-</dl>
+    <dd>{{% md %}}Resource type for API Management resource.{{% /md %}}</dd></dl>
 {{% /choosable %}}
 
 {{% choosable language nodejs %}}
-<dl class="resources-properties">
-
-    <dt class="property-"
+<dl class="resources-properties"><dt class="property-"
             title="">
         <span id="id_nodejs">
 <a href="#id_nodejs" style="color: inherit; text-decoration: inherit;">id</a>
@@ -696,8 +637,7 @@ All [input](#inputs) properties are implicitly available as output properties. A
         <span class="property-indicator"></span>
         <span class="property-type">string</span>
     </dt>
-    <dd>{{% md %}}The provider-assigned unique ID for this managed resource.{{% /md %}}</dd>
-    <dt class="property-"
+    <dd>{{% md %}}The provider-assigned unique ID for this managed resource.{{% /md %}}</dd><dt class="property-"
             title="">
         <span id="name_nodejs">
 <a href="#name_nodejs" style="color: inherit; text-decoration: inherit;">name</a>
@@ -705,8 +645,7 @@ All [input](#inputs) properties are implicitly available as output properties. A
         <span class="property-indicator"></span>
         <span class="property-type">string</span>
     </dt>
-    <dd>{{% md %}}Resource name.{{% /md %}}</dd>
-    <dt class="property-"
+    <dd>{{% md %}}Resource name.{{% /md %}}</dd><dt class="property-"
             title="">
         <span id="type_nodejs">
 <a href="#type_nodejs" style="color: inherit; text-decoration: inherit;">type</a>
@@ -714,14 +653,11 @@ All [input](#inputs) properties are implicitly available as output properties. A
         <span class="property-indicator"></span>
         <span class="property-type">string</span>
     </dt>
-    <dd>{{% md %}}Resource type for API Management resource.{{% /md %}}</dd>
-</dl>
+    <dd>{{% md %}}Resource type for API Management resource.{{% /md %}}</dd></dl>
 {{% /choosable %}}
 
 {{% choosable language python %}}
-<dl class="resources-properties">
-
-    <dt class="property-"
+<dl class="resources-properties"><dt class="property-"
             title="">
         <span id="id_python">
 <a href="#id_python" style="color: inherit; text-decoration: inherit;">id</a>
@@ -729,8 +665,7 @@ All [input](#inputs) properties are implicitly available as output properties. A
         <span class="property-indicator"></span>
         <span class="property-type">str</span>
     </dt>
-    <dd>{{% md %}}The provider-assigned unique ID for this managed resource.{{% /md %}}</dd>
-    <dt class="property-"
+    <dd>{{% md %}}The provider-assigned unique ID for this managed resource.{{% /md %}}</dd><dt class="property-"
             title="">
         <span id="name_python">
 <a href="#name_python" style="color: inherit; text-decoration: inherit;">name</a>
@@ -738,8 +673,7 @@ All [input](#inputs) properties are implicitly available as output properties. A
         <span class="property-indicator"></span>
         <span class="property-type">str</span>
     </dt>
-    <dd>{{% md %}}Resource name.{{% /md %}}</dd>
-    <dt class="property-"
+    <dd>{{% md %}}Resource name.{{% /md %}}</dd><dt class="property-"
             title="">
         <span id="type_python">
 <a href="#type_python" style="color: inherit; text-decoration: inherit;">type</a>
@@ -747,8 +681,7 @@ All [input](#inputs) properties are implicitly available as output properties. A
         <span class="property-indicator"></span>
         <span class="property-type">str</span>
     </dt>
-    <dd>{{% md %}}Resource type for API Management resource.{{% /md %}}</dd>
-</dl>
+    <dd>{{% md %}}Resource type for API Management resource.{{% /md %}}</dd></dl>
 {{% /choosable %}}
 
 

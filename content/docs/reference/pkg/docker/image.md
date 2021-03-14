@@ -14,11 +14,17 @@ A docker.Image resource represents a Docker image built locally which is publish
 
 
 {{% examples %}}
+
 ## Example Usage
 
 {{< chooser language "typescript,python,go,csharp" / >}}
+
+
 ### Create And Push Image To Azure Container Registry
-{{% example csharp %}}
+
+
+{{< example csharp >}}
+
 
 ```csharp
 
@@ -56,9 +62,12 @@ class MyStack : Stack
 }
 ```
 
-{{% /example %}}
 
-{{% example go %}}
+{{< /example >}}
+
+
+{{< example go >}}
+
 
 ```go
 
@@ -112,9 +121,12 @@ func main() {
 }
 ```
 
-{{% /example %}}
 
-{{% example python %}}
+{{< /example >}}
+
+
+{{< example python >}}
+
 
 ```python
 
@@ -142,9 +154,12 @@ my_image = Image("myimage",
 
 ```
 
-{{% /example %}}
 
-{{% example typescript %}}
+{{< /example >}}
+
+
+{{< example typescript >}}
+
 
 ```typescript
 
@@ -176,9 +191,16 @@ const myImage = new docker.Image(customImage, {
 
 ```
 
-{{% /example %}}
+
+{{< /example >}}
+
+
+
+
 
 {{% /examples %}}
+
+
 
 
 ## Create a Image Resource {#create}
@@ -203,9 +225,7 @@ const myImage = new docker.Image(customImage, {
 
 {{% choosable language nodejs %}}
 
-<dl class="resources-properties">
-  
-    <dt
+<dl class="resources-properties"><dt
         class="property-required" title="Required">
         <span>name</span>
         <span class="property-indicator"></span>
@@ -213,9 +233,7 @@ const myImage = new docker.Image(customImage, {
     </dt>
     <dd>
       The unique name of the resource.
-    </dd>
-  
-    <dt
+    </dd><dt
         class="property-required" title="Required">
         <span>args</span>
         <span class="property-indicator"></span>
@@ -223,9 +241,7 @@ const myImage = new docker.Image(customImage, {
     </dt>
     <dd>
       The arguments to resource properties.
-    </dd>
-  
-    <dt
+    </dd><dt
         class="property-optional" title="Optional">
         <span>opts</span>
         <span class="property-indicator"></span>
@@ -233,10 +249,7 @@ const myImage = new docker.Image(customImage, {
     </dt>
     <dd>
       Bag of options to control resource&#39;s behavior.
-    </dd>
-  
-
-</dl>
+    </dd></dl>
 
 {{% /choosable %}}
 
@@ -262,9 +275,7 @@ const myImage = new docker.Image(customImage, {
 
 {{% choosable language go %}}
 
-<dl class="resources-properties">
-  
-    <dt
+<dl class="resources-properties"><dt
         class="property-optional" title="Optional">
         <span>ctx</span>
         <span class="property-indicator"></span>
@@ -272,9 +283,7 @@ const myImage = new docker.Image(customImage, {
     </dt>
     <dd>
       Context object for the current deployment.
-    </dd>
-  
-    <dt
+    </dd><dt
         class="property-required" title="Required">
         <span>name</span>
         <span class="property-indicator"></span>
@@ -282,9 +291,7 @@ const myImage = new docker.Image(customImage, {
     </dt>
     <dd>
       The unique name of the resource.
-    </dd>
-  
-    <dt
+    </dd><dt
         class="property-required" title="Required">
         <span>args</span>
         <span class="property-indicator"></span>
@@ -292,9 +299,7 @@ const myImage = new docker.Image(customImage, {
     </dt>
     <dd>
       The arguments to resource properties.
-    </dd>
-  
-    <dt
+    </dd><dt
         class="property-optional" title="Optional">
         <span>opts</span>
         <span class="property-indicator"></span>
@@ -302,18 +307,13 @@ const myImage = new docker.Image(customImage, {
     </dt>
     <dd>
       Bag of options to control resource&#39;s behavior.
-    </dd>
-  
-
-</dl>
+    </dd></dl>
 
 {{% /choosable %}}
 
 {{% choosable language csharp %}}
 
-<dl class="resources-properties">
-  
-    <dt
+<dl class="resources-properties"><dt
         class="property-required" title="Required">
         <span>name</span>
         <span class="property-indicator"></span>
@@ -321,9 +321,7 @@ const myImage = new docker.Image(customImage, {
     </dt>
     <dd>
       The unique name of the resource.
-    </dd>
-  
-    <dt
+    </dd><dt
         class="property-required" title="Required">
         <span>args</span>
         <span class="property-indicator"></span>
@@ -331,9 +329,7 @@ const myImage = new docker.Image(customImage, {
     </dt>
     <dd>
       The arguments to resource properties.
-    </dd>
-  
-    <dt
+    </dd><dt
         class="property-optional" title="Optional">
         <span>opts</span>
         <span class="property-indicator"></span>
@@ -341,10 +337,7 @@ const myImage = new docker.Image(customImage, {
     </dt>
     <dd>
       Bag of options to control resource&#39;s behavior.
-    </dd>
-  
-
-</dl>
+    </dd></dl>
 
 {{% /choosable %}}
 
@@ -359,9 +352,7 @@ The Image resource accepts the following [input]({{< relref "/docs/intro/concept
 
 
 {{% choosable language csharp %}}
-<dl class="resources-properties">
-
-    <dt class="property-required"
+<dl class="resources-properties"><dt class="property-required"
             title="Required">
         <span id="build_csharp">
 <a href="#build_csharp" style="color: inherit; text-decoration: inherit;">Build</a>
@@ -369,8 +360,7 @@ The Image resource accepts the following [input]({{< relref "/docs/intro/concept
         <span class="property-indicator"></span>
         <span class="property-type">string | <a href="#dockerbuild">Docker<wbr>Build<wbr>Args</a></span>
     </dt>
-    <dd>{{% md %}}The Docker build context, as a folder path or a detailed DockerBuild object.{{% /md %}}</dd>
-    <dt class="property-required"
+    <dd>{{% md %}}The Docker build context, as a folder path or a detailed DockerBuild object.{{% /md %}}</dd><dt class="property-required"
             title="Required">
         <span id="imagename_csharp">
 <a href="#imagename_csharp" style="color: inherit; text-decoration: inherit;">Image<wbr>Name</a>
@@ -380,8 +370,7 @@ The Image resource accepts the following [input]({{< relref "/docs/intro/concept
     </dt>
     <dd>{{% md %}}The qualified image name that will be pushed to the remote registry. Must be a supported image name for the target registry user. This name can include a tag at the end. If provided all pushed image resources will contain that tag as well.
 
-Either [imageName] or [localImageName] can have a tag. However, if both have a tag, then those tags must match.{{% /md %}}</dd>
-    <dt class="property-optional"
+Either [imageName] or [localImageName] can have a tag. However, if both have a tag, then those tags must match.{{% /md %}}</dd><dt class="property-optional"
             title="Optional">
         <span id="localimagename_csharp">
 <a href="#localimagename_csharp" style="color: inherit; text-decoration: inherit;">Local<wbr>Image<wbr>Name</a>
@@ -391,8 +380,7 @@ Either [imageName] or [localImageName] can have a tag. However, if both have a t
     </dt>
     <dd>{{% md %}}The docker image name to build locally before tagging with imageName. If not provided, it will be given the value of to [imageName]. This name can include a tag at the end. If provided all pushed image resources will contain that tag as well.
 
-Either [imageName] or [localImageName] can have a tag. However, if both have a tag, then those tags must match.{{% /md %}}</dd>
-    <dt class="property-optional"
+Either [imageName] or [localImageName] can have a tag. However, if both have a tag, then those tags must match.{{% /md %}}</dd><dt class="property-optional"
             title="Optional">
         <span id="registry_csharp">
 <a href="#registry_csharp" style="color: inherit; text-decoration: inherit;">Registry</a>
@@ -400,8 +388,7 @@ Either [imageName] or [localImageName] can have a tag. However, if both have a t
         <span class="property-indicator"></span>
         <span class="property-type"><a href="#imageregistry">Image<wbr>Registry<wbr>Args</a></span>
     </dt>
-    <dd>{{% md %}}Credentials for the docker registry to push to.{{% /md %}}</dd>
-    <dt class="property-optional"
+    <dd>{{% md %}}Credentials for the docker registry to push to.{{% /md %}}</dd><dt class="property-optional"
             title="Optional">
         <span id="skippush_csharp">
 <a href="#skippush_csharp" style="color: inherit; text-decoration: inherit;">Skip<wbr>Push</a>
@@ -409,14 +396,11 @@ Either [imageName] or [localImageName] can have a tag. However, if both have a t
         <span class="property-indicator"></span>
         <span class="property-type">bool</span>
     </dt>
-    <dd>{{% md %}}Skip push flag.{{% /md %}}</dd>
-</dl>
+    <dd>{{% md %}}Skip push flag.{{% /md %}}</dd></dl>
 {{% /choosable %}}
 
 {{% choosable language go %}}
-<dl class="resources-properties">
-
-    <dt class="property-required"
+<dl class="resources-properties"><dt class="property-required"
             title="Required">
         <span id="build_go">
 <a href="#build_go" style="color: inherit; text-decoration: inherit;">Build</a>
@@ -424,8 +408,7 @@ Either [imageName] or [localImageName] can have a tag. However, if both have a t
         <span class="property-indicator"></span>
         <span class="property-type">string | <a href="#dockerbuild">Docker<wbr>Build</a></span>
     </dt>
-    <dd>{{% md %}}The Docker build context, as a folder path or a detailed DockerBuild object.{{% /md %}}</dd>
-    <dt class="property-required"
+    <dd>{{% md %}}The Docker build context, as a folder path or a detailed DockerBuild object.{{% /md %}}</dd><dt class="property-required"
             title="Required">
         <span id="imagename_go">
 <a href="#imagename_go" style="color: inherit; text-decoration: inherit;">Image<wbr>Name</a>
@@ -435,8 +418,7 @@ Either [imageName] or [localImageName] can have a tag. However, if both have a t
     </dt>
     <dd>{{% md %}}The qualified image name that will be pushed to the remote registry. Must be a supported image name for the target registry user. This name can include a tag at the end. If provided all pushed image resources will contain that tag as well.
 
-Either [imageName] or [localImageName] can have a tag. However, if both have a tag, then those tags must match.{{% /md %}}</dd>
-    <dt class="property-optional"
+Either [imageName] or [localImageName] can have a tag. However, if both have a tag, then those tags must match.{{% /md %}}</dd><dt class="property-optional"
             title="Optional">
         <span id="localimagename_go">
 <a href="#localimagename_go" style="color: inherit; text-decoration: inherit;">Local<wbr>Image<wbr>Name</a>
@@ -446,8 +428,7 @@ Either [imageName] or [localImageName] can have a tag. However, if both have a t
     </dt>
     <dd>{{% md %}}The docker image name to build locally before tagging with imageName. If not provided, it will be given the value of to [imageName]. This name can include a tag at the end. If provided all pushed image resources will contain that tag as well.
 
-Either [imageName] or [localImageName] can have a tag. However, if both have a tag, then those tags must match.{{% /md %}}</dd>
-    <dt class="property-optional"
+Either [imageName] or [localImageName] can have a tag. However, if both have a tag, then those tags must match.{{% /md %}}</dd><dt class="property-optional"
             title="Optional">
         <span id="registry_go">
 <a href="#registry_go" style="color: inherit; text-decoration: inherit;">Registry</a>
@@ -455,8 +436,7 @@ Either [imageName] or [localImageName] can have a tag. However, if both have a t
         <span class="property-indicator"></span>
         <span class="property-type"><a href="#imageregistry">Image<wbr>Registry</a></span>
     </dt>
-    <dd>{{% md %}}Credentials for the docker registry to push to.{{% /md %}}</dd>
-    <dt class="property-optional"
+    <dd>{{% md %}}Credentials for the docker registry to push to.{{% /md %}}</dd><dt class="property-optional"
             title="Optional">
         <span id="skippush_go">
 <a href="#skippush_go" style="color: inherit; text-decoration: inherit;">Skip<wbr>Push</a>
@@ -464,14 +444,11 @@ Either [imageName] or [localImageName] can have a tag. However, if both have a t
         <span class="property-indicator"></span>
         <span class="property-type">bool</span>
     </dt>
-    <dd>{{% md %}}Skip push flag.{{% /md %}}</dd>
-</dl>
+    <dd>{{% md %}}Skip push flag.{{% /md %}}</dd></dl>
 {{% /choosable %}}
 
 {{% choosable language nodejs %}}
-<dl class="resources-properties">
-
-    <dt class="property-required"
+<dl class="resources-properties"><dt class="property-required"
             title="Required">
         <span id="build_nodejs">
 <a href="#build_nodejs" style="color: inherit; text-decoration: inherit;">build</a>
@@ -479,8 +456,7 @@ Either [imageName] or [localImageName] can have a tag. However, if both have a t
         <span class="property-indicator"></span>
         <span class="property-type">string | <a href="#dockerbuild">Docker<wbr>Build</a></span>
     </dt>
-    <dd>{{% md %}}The Docker build context, as a folder path or a detailed DockerBuild object.{{% /md %}}</dd>
-    <dt class="property-required"
+    <dd>{{% md %}}The Docker build context, as a folder path or a detailed DockerBuild object.{{% /md %}}</dd><dt class="property-required"
             title="Required">
         <span id="imagename_nodejs">
 <a href="#imagename_nodejs" style="color: inherit; text-decoration: inherit;">image<wbr>Name</a>
@@ -490,8 +466,7 @@ Either [imageName] or [localImageName] can have a tag. However, if both have a t
     </dt>
     <dd>{{% md %}}The qualified image name that will be pushed to the remote registry. Must be a supported image name for the target registry user. This name can include a tag at the end. If provided all pushed image resources will contain that tag as well.
 
-Either [imageName] or [localImageName] can have a tag. However, if both have a tag, then those tags must match.{{% /md %}}</dd>
-    <dt class="property-optional"
+Either [imageName] or [localImageName] can have a tag. However, if both have a tag, then those tags must match.{{% /md %}}</dd><dt class="property-optional"
             title="Optional">
         <span id="localimagename_nodejs">
 <a href="#localimagename_nodejs" style="color: inherit; text-decoration: inherit;">local<wbr>Image<wbr>Name</a>
@@ -501,8 +476,7 @@ Either [imageName] or [localImageName] can have a tag. However, if both have a t
     </dt>
     <dd>{{% md %}}The docker image name to build locally before tagging with imageName. If not provided, it will be given the value of to [imageName]. This name can include a tag at the end. If provided all pushed image resources will contain that tag as well.
 
-Either [imageName] or [localImageName] can have a tag. However, if both have a tag, then those tags must match.{{% /md %}}</dd>
-    <dt class="property-optional"
+Either [imageName] or [localImageName] can have a tag. However, if both have a tag, then those tags must match.{{% /md %}}</dd><dt class="property-optional"
             title="Optional">
         <span id="registry_nodejs">
 <a href="#registry_nodejs" style="color: inherit; text-decoration: inherit;">registry</a>
@@ -510,8 +484,7 @@ Either [imageName] or [localImageName] can have a tag. However, if both have a t
         <span class="property-indicator"></span>
         <span class="property-type"><a href="#imageregistry">Image<wbr>Registry</a></span>
     </dt>
-    <dd>{{% md %}}Credentials for the docker registry to push to.{{% /md %}}</dd>
-    <dt class="property-optional"
+    <dd>{{% md %}}Credentials for the docker registry to push to.{{% /md %}}</dd><dt class="property-optional"
             title="Optional">
         <span id="skippush_nodejs">
 <a href="#skippush_nodejs" style="color: inherit; text-decoration: inherit;">skip<wbr>Push</a>
@@ -519,14 +492,11 @@ Either [imageName] or [localImageName] can have a tag. However, if both have a t
         <span class="property-indicator"></span>
         <span class="property-type">boolean</span>
     </dt>
-    <dd>{{% md %}}Skip push flag.{{% /md %}}</dd>
-</dl>
+    <dd>{{% md %}}Skip push flag.{{% /md %}}</dd></dl>
 {{% /choosable %}}
 
 {{% choosable language python %}}
-<dl class="resources-properties">
-
-    <dt class="property-required"
+<dl class="resources-properties"><dt class="property-required"
             title="Required">
         <span id="build_python">
 <a href="#build_python" style="color: inherit; text-decoration: inherit;">build</a>
@@ -534,8 +504,7 @@ Either [imageName] or [localImageName] can have a tag. However, if both have a t
         <span class="property-indicator"></span>
         <span class="property-type">str | <a href="#dockerbuild">Docker<wbr>Build<wbr>Args</a></span>
     </dt>
-    <dd>{{% md %}}The Docker build context, as a folder path or a detailed DockerBuild object.{{% /md %}}</dd>
-    <dt class="property-required"
+    <dd>{{% md %}}The Docker build context, as a folder path or a detailed DockerBuild object.{{% /md %}}</dd><dt class="property-required"
             title="Required">
         <span id="image_name_python">
 <a href="#image_name_python" style="color: inherit; text-decoration: inherit;">image_<wbr>name</a>
@@ -545,8 +514,7 @@ Either [imageName] or [localImageName] can have a tag. However, if both have a t
     </dt>
     <dd>{{% md %}}The qualified image name that will be pushed to the remote registry. Must be a supported image name for the target registry user. This name can include a tag at the end. If provided all pushed image resources will contain that tag as well.
 
-Either [imageName] or [localImageName] can have a tag. However, if both have a tag, then those tags must match.{{% /md %}}</dd>
-    <dt class="property-optional"
+Either [imageName] or [localImageName] can have a tag. However, if both have a tag, then those tags must match.{{% /md %}}</dd><dt class="property-optional"
             title="Optional">
         <span id="local_image_name_python">
 <a href="#local_image_name_python" style="color: inherit; text-decoration: inherit;">local_<wbr>image_<wbr>name</a>
@@ -556,8 +524,7 @@ Either [imageName] or [localImageName] can have a tag. However, if both have a t
     </dt>
     <dd>{{% md %}}The docker image name to build locally before tagging with imageName. If not provided, it will be given the value of to [imageName]. This name can include a tag at the end. If provided all pushed image resources will contain that tag as well.
 
-Either [imageName] or [localImageName] can have a tag. However, if both have a tag, then those tags must match.{{% /md %}}</dd>
-    <dt class="property-optional"
+Either [imageName] or [localImageName] can have a tag. However, if both have a tag, then those tags must match.{{% /md %}}</dd><dt class="property-optional"
             title="Optional">
         <span id="registry_python">
 <a href="#registry_python" style="color: inherit; text-decoration: inherit;">registry</a>
@@ -565,8 +532,7 @@ Either [imageName] or [localImageName] can have a tag. However, if both have a t
         <span class="property-indicator"></span>
         <span class="property-type"><a href="#imageregistry">Image<wbr>Registry<wbr>Args</a></span>
     </dt>
-    <dd>{{% md %}}Credentials for the docker registry to push to.{{% /md %}}</dd>
-    <dt class="property-optional"
+    <dd>{{% md %}}Credentials for the docker registry to push to.{{% /md %}}</dd><dt class="property-optional"
             title="Optional">
         <span id="skip_push_python">
 <a href="#skip_push_python" style="color: inherit; text-decoration: inherit;">skip_<wbr>push</a>
@@ -574,8 +540,7 @@ Either [imageName] or [localImageName] can have a tag. However, if both have a t
         <span class="property-indicator"></span>
         <span class="property-type">bool</span>
     </dt>
-    <dd>{{% md %}}Skip push flag.{{% /md %}}</dd>
-</dl>
+    <dd>{{% md %}}Skip push flag.{{% /md %}}</dd></dl>
 {{% /choosable %}}
 
 
@@ -586,9 +551,7 @@ All [input](#inputs) properties are implicitly available as output properties. A
 
 
 {{% choosable language csharp %}}
-<dl class="resources-properties">
-
-    <dt class="property-"
+<dl class="resources-properties"><dt class="property-"
             title="">
         <span id="id_csharp">
 <a href="#id_csharp" style="color: inherit; text-decoration: inherit;">Id</a>
@@ -596,8 +559,7 @@ All [input](#inputs) properties are implicitly available as output properties. A
         <span class="property-indicator"></span>
         <span class="property-type">string</span>
     </dt>
-    <dd>{{% md %}}The provider-assigned unique ID for this managed resource.{{% /md %}}</dd>
-    <dt class="property-"
+    <dd>{{% md %}}The provider-assigned unique ID for this managed resource.{{% /md %}}</dd><dt class="property-"
             title="">
         <span id="baseimagename_csharp">
 <a href="#baseimagename_csharp" style="color: inherit; text-decoration: inherit;">Base<wbr>Image<wbr>Name</a>
@@ -605,8 +567,7 @@ All [input](#inputs) properties are implicitly available as output properties. A
         <span class="property-indicator"></span>
         <span class="property-type">string</span>
     </dt>
-    <dd>{{% md %}}The base image name that was built and pushed. This does not include the id annotation, so is not pinned to the specific build performed by this docker.Image.{{% /md %}}</dd>
-    <dt class="property- property-deprecated"
+    <dd>{{% md %}}The base image name that was built and pushed. This does not include the id annotation, so is not pinned to the specific build performed by this docker.Image.{{% /md %}}</dd><dt class="property- property-deprecated"
             title=", Deprecated">
         <span id="digest_csharp">
 <a href="#digest_csharp" style="color: inherit; text-decoration: inherit;">Digest</a>
@@ -614,8 +575,7 @@ All [input](#inputs) properties are implicitly available as output properties. A
         <span class="property-indicator"></span>
         <span class="property-type">string</span>
     </dt>
-    <dd>{{% md %}}It can be used to get a unique name for this specific image, but is not the actual repository digest value.{{% /md %}}<p class="property-message">Deprecated: {{% md %}}This will have the same value as [imageName], but will be removed in the future.{{% /md %}}</p></dd>
-    <dt class="property- property-deprecated"
+    <dd>{{% md %}}It can be used to get a unique name for this specific image, but is not the actual repository digest value.{{% /md %}}<p class="property-message">Deprecated: {{% md %}}This will have the same value as [imageName], but will be removed in the future.{{% /md %}}</p></dd><dt class="property- property-deprecated"
             title=", Deprecated">
         <span id="id_csharp">
 <a href="#id_csharp" style="color: inherit; text-decoration: inherit;">Id</a>
@@ -623,8 +583,7 @@ All [input](#inputs) properties are implicitly available as output properties. A
         <span class="property-indicator"></span>
         <span class="property-type">string</span>
     </dt>
-    <dd>{{% md %}}{{% /md %}}<p class="property-message">Deprecated: {{% md %}}This will have the same value as [imageName], but will be removed in the future.{{% /md %}}</p></dd>
-    <dt class="property-"
+    <dd>{{% md %}}{{% /md %}}<p class="property-message">Deprecated: {{% md %}}This will have the same value as [imageName], but will be removed in the future.{{% /md %}}</p></dd><dt class="property-"
             title="">
         <span id="registryserver_csharp">
 <a href="#registryserver_csharp" style="color: inherit; text-decoration: inherit;">Registry<wbr>Server</a>
@@ -632,14 +591,11 @@ All [input](#inputs) properties are implicitly available as output properties. A
         <span class="property-indicator"></span>
         <span class="property-type">string</span>
     </dt>
-    <dd>{{% md %}}The server the image is located at.{{% /md %}}</dd>
-</dl>
+    <dd>{{% md %}}The server the image is located at.{{% /md %}}</dd></dl>
 {{% /choosable %}}
 
 {{% choosable language go %}}
-<dl class="resources-properties">
-
-    <dt class="property-"
+<dl class="resources-properties"><dt class="property-"
             title="">
         <span id="id_go">
 <a href="#id_go" style="color: inherit; text-decoration: inherit;">Id</a>
@@ -647,8 +603,7 @@ All [input](#inputs) properties are implicitly available as output properties. A
         <span class="property-indicator"></span>
         <span class="property-type">string</span>
     </dt>
-    <dd>{{% md %}}The provider-assigned unique ID for this managed resource.{{% /md %}}</dd>
-    <dt class="property-"
+    <dd>{{% md %}}The provider-assigned unique ID for this managed resource.{{% /md %}}</dd><dt class="property-"
             title="">
         <span id="baseimagename_go">
 <a href="#baseimagename_go" style="color: inherit; text-decoration: inherit;">Base<wbr>Image<wbr>Name</a>
@@ -656,8 +611,7 @@ All [input](#inputs) properties are implicitly available as output properties. A
         <span class="property-indicator"></span>
         <span class="property-type">string</span>
     </dt>
-    <dd>{{% md %}}The base image name that was built and pushed. This does not include the id annotation, so is not pinned to the specific build performed by this docker.Image.{{% /md %}}</dd>
-    <dt class="property- property-deprecated"
+    <dd>{{% md %}}The base image name that was built and pushed. This does not include the id annotation, so is not pinned to the specific build performed by this docker.Image.{{% /md %}}</dd><dt class="property- property-deprecated"
             title=", Deprecated">
         <span id="digest_go">
 <a href="#digest_go" style="color: inherit; text-decoration: inherit;">Digest</a>
@@ -665,8 +619,7 @@ All [input](#inputs) properties are implicitly available as output properties. A
         <span class="property-indicator"></span>
         <span class="property-type">string</span>
     </dt>
-    <dd>{{% md %}}It can be used to get a unique name for this specific image, but is not the actual repository digest value.{{% /md %}}<p class="property-message">Deprecated: {{% md %}}This will have the same value as [imageName], but will be removed in the future.{{% /md %}}</p></dd>
-    <dt class="property- property-deprecated"
+    <dd>{{% md %}}It can be used to get a unique name for this specific image, but is not the actual repository digest value.{{% /md %}}<p class="property-message">Deprecated: {{% md %}}This will have the same value as [imageName], but will be removed in the future.{{% /md %}}</p></dd><dt class="property- property-deprecated"
             title=", Deprecated">
         <span id="id_go">
 <a href="#id_go" style="color: inherit; text-decoration: inherit;">Id</a>
@@ -674,8 +627,7 @@ All [input](#inputs) properties are implicitly available as output properties. A
         <span class="property-indicator"></span>
         <span class="property-type">string</span>
     </dt>
-    <dd>{{% md %}}{{% /md %}}<p class="property-message">Deprecated: {{% md %}}This will have the same value as [imageName], but will be removed in the future.{{% /md %}}</p></dd>
-    <dt class="property-"
+    <dd>{{% md %}}{{% /md %}}<p class="property-message">Deprecated: {{% md %}}This will have the same value as [imageName], but will be removed in the future.{{% /md %}}</p></dd><dt class="property-"
             title="">
         <span id="registryserver_go">
 <a href="#registryserver_go" style="color: inherit; text-decoration: inherit;">Registry<wbr>Server</a>
@@ -683,14 +635,11 @@ All [input](#inputs) properties are implicitly available as output properties. A
         <span class="property-indicator"></span>
         <span class="property-type">string</span>
     </dt>
-    <dd>{{% md %}}The server the image is located at.{{% /md %}}</dd>
-</dl>
+    <dd>{{% md %}}The server the image is located at.{{% /md %}}</dd></dl>
 {{% /choosable %}}
 
 {{% choosable language nodejs %}}
-<dl class="resources-properties">
-
-    <dt class="property-"
+<dl class="resources-properties"><dt class="property-"
             title="">
         <span id="id_nodejs">
 <a href="#id_nodejs" style="color: inherit; text-decoration: inherit;">id</a>
@@ -698,8 +647,7 @@ All [input](#inputs) properties are implicitly available as output properties. A
         <span class="property-indicator"></span>
         <span class="property-type">string</span>
     </dt>
-    <dd>{{% md %}}The provider-assigned unique ID for this managed resource.{{% /md %}}</dd>
-    <dt class="property-"
+    <dd>{{% md %}}The provider-assigned unique ID for this managed resource.{{% /md %}}</dd><dt class="property-"
             title="">
         <span id="baseimagename_nodejs">
 <a href="#baseimagename_nodejs" style="color: inherit; text-decoration: inherit;">base<wbr>Image<wbr>Name</a>
@@ -707,8 +655,7 @@ All [input](#inputs) properties are implicitly available as output properties. A
         <span class="property-indicator"></span>
         <span class="property-type">string</span>
     </dt>
-    <dd>{{% md %}}The base image name that was built and pushed. This does not include the id annotation, so is not pinned to the specific build performed by this docker.Image.{{% /md %}}</dd>
-    <dt class="property- property-deprecated"
+    <dd>{{% md %}}The base image name that was built and pushed. This does not include the id annotation, so is not pinned to the specific build performed by this docker.Image.{{% /md %}}</dd><dt class="property- property-deprecated"
             title=", Deprecated">
         <span id="digest_nodejs">
 <a href="#digest_nodejs" style="color: inherit; text-decoration: inherit;">digest</a>
@@ -716,8 +663,7 @@ All [input](#inputs) properties are implicitly available as output properties. A
         <span class="property-indicator"></span>
         <span class="property-type">string</span>
     </dt>
-    <dd>{{% md %}}It can be used to get a unique name for this specific image, but is not the actual repository digest value.{{% /md %}}<p class="property-message">Deprecated: {{% md %}}This will have the same value as [imageName], but will be removed in the future.{{% /md %}}</p></dd>
-    <dt class="property- property-deprecated"
+    <dd>{{% md %}}It can be used to get a unique name for this specific image, but is not the actual repository digest value.{{% /md %}}<p class="property-message">Deprecated: {{% md %}}This will have the same value as [imageName], but will be removed in the future.{{% /md %}}</p></dd><dt class="property- property-deprecated"
             title=", Deprecated">
         <span id="id_nodejs">
 <a href="#id_nodejs" style="color: inherit; text-decoration: inherit;">id</a>
@@ -725,8 +671,7 @@ All [input](#inputs) properties are implicitly available as output properties. A
         <span class="property-indicator"></span>
         <span class="property-type">string</span>
     </dt>
-    <dd>{{% md %}}{{% /md %}}<p class="property-message">Deprecated: {{% md %}}This will have the same value as [imageName], but will be removed in the future.{{% /md %}}</p></dd>
-    <dt class="property-"
+    <dd>{{% md %}}{{% /md %}}<p class="property-message">Deprecated: {{% md %}}This will have the same value as [imageName], but will be removed in the future.{{% /md %}}</p></dd><dt class="property-"
             title="">
         <span id="registryserver_nodejs">
 <a href="#registryserver_nodejs" style="color: inherit; text-decoration: inherit;">registry<wbr>Server</a>
@@ -734,14 +679,11 @@ All [input](#inputs) properties are implicitly available as output properties. A
         <span class="property-indicator"></span>
         <span class="property-type">string</span>
     </dt>
-    <dd>{{% md %}}The server the image is located at.{{% /md %}}</dd>
-</dl>
+    <dd>{{% md %}}The server the image is located at.{{% /md %}}</dd></dl>
 {{% /choosable %}}
 
 {{% choosable language python %}}
-<dl class="resources-properties">
-
-    <dt class="property-"
+<dl class="resources-properties"><dt class="property-"
             title="">
         <span id="id_python">
 <a href="#id_python" style="color: inherit; text-decoration: inherit;">id</a>
@@ -749,8 +691,7 @@ All [input](#inputs) properties are implicitly available as output properties. A
         <span class="property-indicator"></span>
         <span class="property-type">str</span>
     </dt>
-    <dd>{{% md %}}The provider-assigned unique ID for this managed resource.{{% /md %}}</dd>
-    <dt class="property-"
+    <dd>{{% md %}}The provider-assigned unique ID for this managed resource.{{% /md %}}</dd><dt class="property-"
             title="">
         <span id="base_image_name_python">
 <a href="#base_image_name_python" style="color: inherit; text-decoration: inherit;">base_<wbr>image_<wbr>name</a>
@@ -758,8 +699,7 @@ All [input](#inputs) properties are implicitly available as output properties. A
         <span class="property-indicator"></span>
         <span class="property-type">str</span>
     </dt>
-    <dd>{{% md %}}The base image name that was built and pushed. This does not include the id annotation, so is not pinned to the specific build performed by this docker.Image.{{% /md %}}</dd>
-    <dt class="property- property-deprecated"
+    <dd>{{% md %}}The base image name that was built and pushed. This does not include the id annotation, so is not pinned to the specific build performed by this docker.Image.{{% /md %}}</dd><dt class="property- property-deprecated"
             title=", Deprecated">
         <span id="digest_python">
 <a href="#digest_python" style="color: inherit; text-decoration: inherit;">digest</a>
@@ -767,8 +707,7 @@ All [input](#inputs) properties are implicitly available as output properties. A
         <span class="property-indicator"></span>
         <span class="property-type">str</span>
     </dt>
-    <dd>{{% md %}}It can be used to get a unique name for this specific image, but is not the actual repository digest value.{{% /md %}}<p class="property-message">Deprecated: {{% md %}}This will have the same value as [imageName], but will be removed in the future.{{% /md %}}</p></dd>
-    <dt class="property- property-deprecated"
+    <dd>{{% md %}}It can be used to get a unique name for this specific image, but is not the actual repository digest value.{{% /md %}}<p class="property-message">Deprecated: {{% md %}}This will have the same value as [imageName], but will be removed in the future.{{% /md %}}</p></dd><dt class="property- property-deprecated"
             title=", Deprecated">
         <span id="id_python">
 <a href="#id_python" style="color: inherit; text-decoration: inherit;">id</a>
@@ -776,8 +715,7 @@ All [input](#inputs) properties are implicitly available as output properties. A
         <span class="property-indicator"></span>
         <span class="property-type">str</span>
     </dt>
-    <dd>{{% md %}}{{% /md %}}<p class="property-message">Deprecated: {{% md %}}This will have the same value as [imageName], but will be removed in the future.{{% /md %}}</p></dd>
-    <dt class="property-"
+    <dd>{{% md %}}{{% /md %}}<p class="property-message">Deprecated: {{% md %}}This will have the same value as [imageName], but will be removed in the future.{{% /md %}}</p></dd><dt class="property-"
             title="">
         <span id="registry_server_python">
 <a href="#registry_server_python" style="color: inherit; text-decoration: inherit;">registry_<wbr>server</a>
@@ -785,8 +723,7 @@ All [input](#inputs) properties are implicitly available as output properties. A
         <span class="property-indicator"></span>
         <span class="property-type">str</span>
     </dt>
-    <dd>{{% md %}}The server the image is located at.{{% /md %}}</dd>
-</dl>
+    <dd>{{% md %}}The server the image is located at.{{% /md %}}</dd></dl>
 {{% /choosable %}}
 
 
@@ -802,9 +739,7 @@ All [input](#inputs) properties are implicitly available as output properties. A
 <h4 id="cachefrom">Cache<wbr>From</h4>
 
 {{% choosable language csharp %}}
-<dl class="resources-properties">
-
-    <dt class="property-optional"
+<dl class="resources-properties"><dt class="property-optional"
             title="Optional">
         <span id="stages_csharp">
 <a href="#stages_csharp" style="color: inherit; text-decoration: inherit;">Stages</a>
@@ -812,14 +747,11 @@ All [input](#inputs) properties are implicitly available as output properties. A
         <span class="property-indicator"></span>
         <span class="property-type">List&lt;string&gt;</span>
     </dt>
-    <dd>{{% md %}}An optional list of build stages to use for caching. Each build stage in this list will be built explicitly and pushed to the target repository. A given stage’s image will be tagged as "[stage-name]".{{% /md %}}</dd>
-</dl>
+    <dd>{{% md %}}An optional list of build stages to use for caching. Each build stage in this list will be built explicitly and pushed to the target repository. A given stage’s image will be tagged as "[stage-name]".{{% /md %}}</dd></dl>
 {{% /choosable %}}
 
 {{% choosable language go %}}
-<dl class="resources-properties">
-
-    <dt class="property-optional"
+<dl class="resources-properties"><dt class="property-optional"
             title="Optional">
         <span id="stages_go">
 <a href="#stages_go" style="color: inherit; text-decoration: inherit;">Stages</a>
@@ -827,14 +759,11 @@ All [input](#inputs) properties are implicitly available as output properties. A
         <span class="property-indicator"></span>
         <span class="property-type">[]string</span>
     </dt>
-    <dd>{{% md %}}An optional list of build stages to use for caching. Each build stage in this list will be built explicitly and pushed to the target repository. A given stage’s image will be tagged as "[stage-name]".{{% /md %}}</dd>
-</dl>
+    <dd>{{% md %}}An optional list of build stages to use for caching. Each build stage in this list will be built explicitly and pushed to the target repository. A given stage’s image will be tagged as "[stage-name]".{{% /md %}}</dd></dl>
 {{% /choosable %}}
 
 {{% choosable language nodejs %}}
-<dl class="resources-properties">
-
-    <dt class="property-optional"
+<dl class="resources-properties"><dt class="property-optional"
             title="Optional">
         <span id="stages_nodejs">
 <a href="#stages_nodejs" style="color: inherit; text-decoration: inherit;">stages</a>
@@ -842,14 +771,11 @@ All [input](#inputs) properties are implicitly available as output properties. A
         <span class="property-indicator"></span>
         <span class="property-type">string[]</span>
     </dt>
-    <dd>{{% md %}}An optional list of build stages to use for caching. Each build stage in this list will be built explicitly and pushed to the target repository. A given stage’s image will be tagged as "[stage-name]".{{% /md %}}</dd>
-</dl>
+    <dd>{{% md %}}An optional list of build stages to use for caching. Each build stage in this list will be built explicitly and pushed to the target repository. A given stage’s image will be tagged as "[stage-name]".{{% /md %}}</dd></dl>
 {{% /choosable %}}
 
 {{% choosable language python %}}
-<dl class="resources-properties">
-
-    <dt class="property-optional"
+<dl class="resources-properties"><dt class="property-optional"
             title="Optional">
         <span id="stages_python">
 <a href="#stages_python" style="color: inherit; text-decoration: inherit;">stages</a>
@@ -857,16 +783,13 @@ All [input](#inputs) properties are implicitly available as output properties. A
         <span class="property-indicator"></span>
         <span class="property-type">Sequence[str]</span>
     </dt>
-    <dd>{{% md %}}An optional list of build stages to use for caching. Each build stage in this list will be built explicitly and pushed to the target repository. A given stage’s image will be tagged as "[stage-name]".{{% /md %}}</dd>
-</dl>
+    <dd>{{% md %}}An optional list of build stages to use for caching. Each build stage in this list will be built explicitly and pushed to the target repository. A given stage’s image will be tagged as "[stage-name]".{{% /md %}}</dd></dl>
 {{% /choosable %}}
 
 <h4 id="dockerbuild">Docker<wbr>Build</h4>
 
 {{% choosable language csharp %}}
-<dl class="resources-properties">
-
-    <dt class="property-optional"
+<dl class="resources-properties"><dt class="property-optional"
             title="Optional">
         <span id="args_csharp">
 <a href="#args_csharp" style="color: inherit; text-decoration: inherit;">Args</a>
@@ -874,8 +797,7 @@ All [input](#inputs) properties are implicitly available as output properties. A
         <span class="property-indicator"></span>
         <span class="property-type">Dictionary&lt;string, string&gt;</span>
     </dt>
-    <dd>{{% md %}}An optional map of named build-time argument variables to set during the Docker build. This flag allows you to pass built-time variables that can be accessed like environment variables inside the `RUN` instruction.{{% /md %}}</dd>
-    <dt class="property-optional"
+    <dd>{{% md %}}An optional map of named build-time argument variables to set during the Docker build. This flag allows you to pass built-time variables that can be accessed like environment variables inside the `RUN` instruction.{{% /md %}}</dd><dt class="property-optional"
             title="Optional">
         <span id="cachefrom_csharp">
 <a href="#cachefrom_csharp" style="color: inherit; text-decoration: inherit;">Cache<wbr>From</a>
@@ -883,8 +805,7 @@ All [input](#inputs) properties are implicitly available as output properties. A
         <span class="property-indicator"></span>
         <span class="property-type">bool | <a href="#cachefrom">Cache<wbr>From<wbr>Args</a></span>
     </dt>
-    <dd>{{% md %}}{{% /md %}}</dd>
-    <dt class="property-optional"
+    <dd>{{% md %}}{{% /md %}}</dd><dt class="property-optional"
             title="Optional">
         <span id="context_csharp">
 <a href="#context_csharp" style="color: inherit; text-decoration: inherit;">Context</a>
@@ -892,8 +813,7 @@ All [input](#inputs) properties are implicitly available as output properties. A
         <span class="property-indicator"></span>
         <span class="property-type">string</span>
     </dt>
-    <dd>{{% md %}}context is a path to a directory to use for the Docker build context, usually the directory in which the Dockerfile resides (although dockerfile may be used to choose a custom location independent of this choice). If not specified, the context defaults to the current working directory; if a relative path is used, it is relative to the current working directory that Pulumi is evaluating.{{% /md %}}</dd>
-    <dt class="property-optional"
+    <dd>{{% md %}}context is a path to a directory to use for the Docker build context, usually the directory in which the Dockerfile resides (although dockerfile may be used to choose a custom location independent of this choice). If not specified, the context defaults to the current working directory; if a relative path is used, it is relative to the current working directory that Pulumi is evaluating.{{% /md %}}</dd><dt class="property-optional"
             title="Optional">
         <span id="dockerfile_csharp">
 <a href="#dockerfile_csharp" style="color: inherit; text-decoration: inherit;">Dockerfile</a>
@@ -901,8 +821,7 @@ All [input](#inputs) properties are implicitly available as output properties. A
         <span class="property-indicator"></span>
         <span class="property-type">string</span>
     </dt>
-    <dd>{{% md %}}dockerfile may be used to override the default Dockerfile name and/or location. By default, it is assumed to be a file named Dockerfile in the root of the build context.{{% /md %}}</dd>
-    <dt class="property-optional"
+    <dd>{{% md %}}dockerfile may be used to override the default Dockerfile name and/or location. By default, it is assumed to be a file named Dockerfile in the root of the build context.{{% /md %}}</dd><dt class="property-optional"
             title="Optional">
         <span id="env_csharp">
 <a href="#env_csharp" style="color: inherit; text-decoration: inherit;">Env</a>
@@ -910,8 +829,7 @@ All [input](#inputs) properties are implicitly available as output properties. A
         <span class="property-indicator"></span>
         <span class="property-type">Dictionary&lt;string, string&gt;</span>
     </dt>
-    <dd>{{% md %}}Environment variables to set on the invocation of `docker build`, for example to support `DOCKER_BUILDKIT=1 docker build`.{{% /md %}}</dd>
-    <dt class="property-optional"
+    <dd>{{% md %}}Environment variables to set on the invocation of `docker build`, for example to support `DOCKER_BUILDKIT=1 docker build`.{{% /md %}}</dd><dt class="property-optional"
             title="Optional">
         <span id="extraoptions_csharp">
 <a href="#extraoptions_csharp" style="color: inherit; text-decoration: inherit;">Extra<wbr>Options</a>
@@ -919,8 +837,7 @@ All [input](#inputs) properties are implicitly available as output properties. A
         <span class="property-indicator"></span>
         <span class="property-type">List&lt;string&gt;</span>
     </dt>
-    <dd>{{% md %}}An optional catch-all string to provide extra CLI options to the docker build command. For example, use to specify `--network host`.{{% /md %}}</dd>
-    <dt class="property-optional"
+    <dd>{{% md %}}An optional catch-all string to provide extra CLI options to the docker build command. For example, use to specify `--network host`.{{% /md %}}</dd><dt class="property-optional"
             title="Optional">
         <span id="target_csharp">
 <a href="#target_csharp" style="color: inherit; text-decoration: inherit;">Target</a>
@@ -928,14 +845,11 @@ All [input](#inputs) properties are implicitly available as output properties. A
         <span class="property-indicator"></span>
         <span class="property-type">string</span>
     </dt>
-    <dd>{{% md %}}The target of the dockerfile to build{{% /md %}}</dd>
-</dl>
+    <dd>{{% md %}}The target of the dockerfile to build{{% /md %}}</dd></dl>
 {{% /choosable %}}
 
 {{% choosable language go %}}
-<dl class="resources-properties">
-
-    <dt class="property-optional"
+<dl class="resources-properties"><dt class="property-optional"
             title="Optional">
         <span id="args_go">
 <a href="#args_go" style="color: inherit; text-decoration: inherit;">Args</a>
@@ -943,8 +857,7 @@ All [input](#inputs) properties are implicitly available as output properties. A
         <span class="property-indicator"></span>
         <span class="property-type">map[string]string</span>
     </dt>
-    <dd>{{% md %}}An optional map of named build-time argument variables to set during the Docker build. This flag allows you to pass built-time variables that can be accessed like environment variables inside the `RUN` instruction.{{% /md %}}</dd>
-    <dt class="property-optional"
+    <dd>{{% md %}}An optional map of named build-time argument variables to set during the Docker build. This flag allows you to pass built-time variables that can be accessed like environment variables inside the `RUN` instruction.{{% /md %}}</dd><dt class="property-optional"
             title="Optional">
         <span id="cachefrom_go">
 <a href="#cachefrom_go" style="color: inherit; text-decoration: inherit;">Cache<wbr>From</a>
@@ -952,8 +865,7 @@ All [input](#inputs) properties are implicitly available as output properties. A
         <span class="property-indicator"></span>
         <span class="property-type">bool | <a href="#cachefrom">Cache<wbr>From</a></span>
     </dt>
-    <dd>{{% md %}}{{% /md %}}</dd>
-    <dt class="property-optional"
+    <dd>{{% md %}}{{% /md %}}</dd><dt class="property-optional"
             title="Optional">
         <span id="context_go">
 <a href="#context_go" style="color: inherit; text-decoration: inherit;">Context</a>
@@ -961,8 +873,7 @@ All [input](#inputs) properties are implicitly available as output properties. A
         <span class="property-indicator"></span>
         <span class="property-type">string</span>
     </dt>
-    <dd>{{% md %}}context is a path to a directory to use for the Docker build context, usually the directory in which the Dockerfile resides (although dockerfile may be used to choose a custom location independent of this choice). If not specified, the context defaults to the current working directory; if a relative path is used, it is relative to the current working directory that Pulumi is evaluating.{{% /md %}}</dd>
-    <dt class="property-optional"
+    <dd>{{% md %}}context is a path to a directory to use for the Docker build context, usually the directory in which the Dockerfile resides (although dockerfile may be used to choose a custom location independent of this choice). If not specified, the context defaults to the current working directory; if a relative path is used, it is relative to the current working directory that Pulumi is evaluating.{{% /md %}}</dd><dt class="property-optional"
             title="Optional">
         <span id="dockerfile_go">
 <a href="#dockerfile_go" style="color: inherit; text-decoration: inherit;">Dockerfile</a>
@@ -970,8 +881,7 @@ All [input](#inputs) properties are implicitly available as output properties. A
         <span class="property-indicator"></span>
         <span class="property-type">string</span>
     </dt>
-    <dd>{{% md %}}dockerfile may be used to override the default Dockerfile name and/or location. By default, it is assumed to be a file named Dockerfile in the root of the build context.{{% /md %}}</dd>
-    <dt class="property-optional"
+    <dd>{{% md %}}dockerfile may be used to override the default Dockerfile name and/or location. By default, it is assumed to be a file named Dockerfile in the root of the build context.{{% /md %}}</dd><dt class="property-optional"
             title="Optional">
         <span id="env_go">
 <a href="#env_go" style="color: inherit; text-decoration: inherit;">Env</a>
@@ -979,8 +889,7 @@ All [input](#inputs) properties are implicitly available as output properties. A
         <span class="property-indicator"></span>
         <span class="property-type">map[string]string</span>
     </dt>
-    <dd>{{% md %}}Environment variables to set on the invocation of `docker build`, for example to support `DOCKER_BUILDKIT=1 docker build`.{{% /md %}}</dd>
-    <dt class="property-optional"
+    <dd>{{% md %}}Environment variables to set on the invocation of `docker build`, for example to support `DOCKER_BUILDKIT=1 docker build`.{{% /md %}}</dd><dt class="property-optional"
             title="Optional">
         <span id="extraoptions_go">
 <a href="#extraoptions_go" style="color: inherit; text-decoration: inherit;">Extra<wbr>Options</a>
@@ -988,8 +897,7 @@ All [input](#inputs) properties are implicitly available as output properties. A
         <span class="property-indicator"></span>
         <span class="property-type">[]string</span>
     </dt>
-    <dd>{{% md %}}An optional catch-all string to provide extra CLI options to the docker build command. For example, use to specify `--network host`.{{% /md %}}</dd>
-    <dt class="property-optional"
+    <dd>{{% md %}}An optional catch-all string to provide extra CLI options to the docker build command. For example, use to specify `--network host`.{{% /md %}}</dd><dt class="property-optional"
             title="Optional">
         <span id="target_go">
 <a href="#target_go" style="color: inherit; text-decoration: inherit;">Target</a>
@@ -997,14 +905,11 @@ All [input](#inputs) properties are implicitly available as output properties. A
         <span class="property-indicator"></span>
         <span class="property-type">string</span>
     </dt>
-    <dd>{{% md %}}The target of the dockerfile to build{{% /md %}}</dd>
-</dl>
+    <dd>{{% md %}}The target of the dockerfile to build{{% /md %}}</dd></dl>
 {{% /choosable %}}
 
 {{% choosable language nodejs %}}
-<dl class="resources-properties">
-
-    <dt class="property-optional"
+<dl class="resources-properties"><dt class="property-optional"
             title="Optional">
         <span id="args_nodejs">
 <a href="#args_nodejs" style="color: inherit; text-decoration: inherit;">args</a>
@@ -1012,8 +917,7 @@ All [input](#inputs) properties are implicitly available as output properties. A
         <span class="property-indicator"></span>
         <span class="property-type">{[key: string]: string}</span>
     </dt>
-    <dd>{{% md %}}An optional map of named build-time argument variables to set during the Docker build. This flag allows you to pass built-time variables that can be accessed like environment variables inside the `RUN` instruction.{{% /md %}}</dd>
-    <dt class="property-optional"
+    <dd>{{% md %}}An optional map of named build-time argument variables to set during the Docker build. This flag allows you to pass built-time variables that can be accessed like environment variables inside the `RUN` instruction.{{% /md %}}</dd><dt class="property-optional"
             title="Optional">
         <span id="cachefrom_nodejs">
 <a href="#cachefrom_nodejs" style="color: inherit; text-decoration: inherit;">cache<wbr>From</a>
@@ -1021,8 +925,7 @@ All [input](#inputs) properties are implicitly available as output properties. A
         <span class="property-indicator"></span>
         <span class="property-type">boolean | <a href="#cachefrom">Cache<wbr>From</a></span>
     </dt>
-    <dd>{{% md %}}{{% /md %}}</dd>
-    <dt class="property-optional"
+    <dd>{{% md %}}{{% /md %}}</dd><dt class="property-optional"
             title="Optional">
         <span id="context_nodejs">
 <a href="#context_nodejs" style="color: inherit; text-decoration: inherit;">context</a>
@@ -1030,8 +933,7 @@ All [input](#inputs) properties are implicitly available as output properties. A
         <span class="property-indicator"></span>
         <span class="property-type">string</span>
     </dt>
-    <dd>{{% md %}}context is a path to a directory to use for the Docker build context, usually the directory in which the Dockerfile resides (although dockerfile may be used to choose a custom location independent of this choice). If not specified, the context defaults to the current working directory; if a relative path is used, it is relative to the current working directory that Pulumi is evaluating.{{% /md %}}</dd>
-    <dt class="property-optional"
+    <dd>{{% md %}}context is a path to a directory to use for the Docker build context, usually the directory in which the Dockerfile resides (although dockerfile may be used to choose a custom location independent of this choice). If not specified, the context defaults to the current working directory; if a relative path is used, it is relative to the current working directory that Pulumi is evaluating.{{% /md %}}</dd><dt class="property-optional"
             title="Optional">
         <span id="dockerfile_nodejs">
 <a href="#dockerfile_nodejs" style="color: inherit; text-decoration: inherit;">dockerfile</a>
@@ -1039,8 +941,7 @@ All [input](#inputs) properties are implicitly available as output properties. A
         <span class="property-indicator"></span>
         <span class="property-type">string</span>
     </dt>
-    <dd>{{% md %}}dockerfile may be used to override the default Dockerfile name and/or location. By default, it is assumed to be a file named Dockerfile in the root of the build context.{{% /md %}}</dd>
-    <dt class="property-optional"
+    <dd>{{% md %}}dockerfile may be used to override the default Dockerfile name and/or location. By default, it is assumed to be a file named Dockerfile in the root of the build context.{{% /md %}}</dd><dt class="property-optional"
             title="Optional">
         <span id="env_nodejs">
 <a href="#env_nodejs" style="color: inherit; text-decoration: inherit;">env</a>
@@ -1048,8 +949,7 @@ All [input](#inputs) properties are implicitly available as output properties. A
         <span class="property-indicator"></span>
         <span class="property-type">{[key: string]: string}</span>
     </dt>
-    <dd>{{% md %}}Environment variables to set on the invocation of `docker build`, for example to support `DOCKER_BUILDKIT=1 docker build`.{{% /md %}}</dd>
-    <dt class="property-optional"
+    <dd>{{% md %}}Environment variables to set on the invocation of `docker build`, for example to support `DOCKER_BUILDKIT=1 docker build`.{{% /md %}}</dd><dt class="property-optional"
             title="Optional">
         <span id="extraoptions_nodejs">
 <a href="#extraoptions_nodejs" style="color: inherit; text-decoration: inherit;">extra<wbr>Options</a>
@@ -1057,8 +957,7 @@ All [input](#inputs) properties are implicitly available as output properties. A
         <span class="property-indicator"></span>
         <span class="property-type">string[]</span>
     </dt>
-    <dd>{{% md %}}An optional catch-all string to provide extra CLI options to the docker build command. For example, use to specify `--network host`.{{% /md %}}</dd>
-    <dt class="property-optional"
+    <dd>{{% md %}}An optional catch-all string to provide extra CLI options to the docker build command. For example, use to specify `--network host`.{{% /md %}}</dd><dt class="property-optional"
             title="Optional">
         <span id="target_nodejs">
 <a href="#target_nodejs" style="color: inherit; text-decoration: inherit;">target</a>
@@ -1066,14 +965,11 @@ All [input](#inputs) properties are implicitly available as output properties. A
         <span class="property-indicator"></span>
         <span class="property-type">string</span>
     </dt>
-    <dd>{{% md %}}The target of the dockerfile to build{{% /md %}}</dd>
-</dl>
+    <dd>{{% md %}}The target of the dockerfile to build{{% /md %}}</dd></dl>
 {{% /choosable %}}
 
 {{% choosable language python %}}
-<dl class="resources-properties">
-
-    <dt class="property-optional"
+<dl class="resources-properties"><dt class="property-optional"
             title="Optional">
         <span id="args_python">
 <a href="#args_python" style="color: inherit; text-decoration: inherit;">args</a>
@@ -1081,8 +977,7 @@ All [input](#inputs) properties are implicitly available as output properties. A
         <span class="property-indicator"></span>
         <span class="property-type">Mapping[str, str]</span>
     </dt>
-    <dd>{{% md %}}An optional map of named build-time argument variables to set during the Docker build. This flag allows you to pass built-time variables that can be accessed like environment variables inside the `RUN` instruction.{{% /md %}}</dd>
-    <dt class="property-optional"
+    <dd>{{% md %}}An optional map of named build-time argument variables to set during the Docker build. This flag allows you to pass built-time variables that can be accessed like environment variables inside the `RUN` instruction.{{% /md %}}</dd><dt class="property-optional"
             title="Optional">
         <span id="cache_from_python">
 <a href="#cache_from_python" style="color: inherit; text-decoration: inherit;">cache_<wbr>from</a>
@@ -1090,8 +985,7 @@ All [input](#inputs) properties are implicitly available as output properties. A
         <span class="property-indicator"></span>
         <span class="property-type">bool | <a href="#cachefrom">Cache<wbr>From<wbr>Args</a></span>
     </dt>
-    <dd>{{% md %}}{{% /md %}}</dd>
-    <dt class="property-optional"
+    <dd>{{% md %}}{{% /md %}}</dd><dt class="property-optional"
             title="Optional">
         <span id="context_python">
 <a href="#context_python" style="color: inherit; text-decoration: inherit;">context</a>
@@ -1099,8 +993,7 @@ All [input](#inputs) properties are implicitly available as output properties. A
         <span class="property-indicator"></span>
         <span class="property-type">str</span>
     </dt>
-    <dd>{{% md %}}context is a path to a directory to use for the Docker build context, usually the directory in which the Dockerfile resides (although dockerfile may be used to choose a custom location independent of this choice). If not specified, the context defaults to the current working directory; if a relative path is used, it is relative to the current working directory that Pulumi is evaluating.{{% /md %}}</dd>
-    <dt class="property-optional"
+    <dd>{{% md %}}context is a path to a directory to use for the Docker build context, usually the directory in which the Dockerfile resides (although dockerfile may be used to choose a custom location independent of this choice). If not specified, the context defaults to the current working directory; if a relative path is used, it is relative to the current working directory that Pulumi is evaluating.{{% /md %}}</dd><dt class="property-optional"
             title="Optional">
         <span id="dockerfile_python">
 <a href="#dockerfile_python" style="color: inherit; text-decoration: inherit;">dockerfile</a>
@@ -1108,8 +1001,7 @@ All [input](#inputs) properties are implicitly available as output properties. A
         <span class="property-indicator"></span>
         <span class="property-type">str</span>
     </dt>
-    <dd>{{% md %}}dockerfile may be used to override the default Dockerfile name and/or location. By default, it is assumed to be a file named Dockerfile in the root of the build context.{{% /md %}}</dd>
-    <dt class="property-optional"
+    <dd>{{% md %}}dockerfile may be used to override the default Dockerfile name and/or location. By default, it is assumed to be a file named Dockerfile in the root of the build context.{{% /md %}}</dd><dt class="property-optional"
             title="Optional">
         <span id="env_python">
 <a href="#env_python" style="color: inherit; text-decoration: inherit;">env</a>
@@ -1117,8 +1009,7 @@ All [input](#inputs) properties are implicitly available as output properties. A
         <span class="property-indicator"></span>
         <span class="property-type">Mapping[str, str]</span>
     </dt>
-    <dd>{{% md %}}Environment variables to set on the invocation of `docker build`, for example to support `DOCKER_BUILDKIT=1 docker build`.{{% /md %}}</dd>
-    <dt class="property-optional"
+    <dd>{{% md %}}Environment variables to set on the invocation of `docker build`, for example to support `DOCKER_BUILDKIT=1 docker build`.{{% /md %}}</dd><dt class="property-optional"
             title="Optional">
         <span id="extra_options_python">
 <a href="#extra_options_python" style="color: inherit; text-decoration: inherit;">extra_<wbr>options</a>
@@ -1126,8 +1017,7 @@ All [input](#inputs) properties are implicitly available as output properties. A
         <span class="property-indicator"></span>
         <span class="property-type">Sequence[str]</span>
     </dt>
-    <dd>{{% md %}}An optional catch-all string to provide extra CLI options to the docker build command. For example, use to specify `--network host`.{{% /md %}}</dd>
-    <dt class="property-optional"
+    <dd>{{% md %}}An optional catch-all string to provide extra CLI options to the docker build command. For example, use to specify `--network host`.{{% /md %}}</dd><dt class="property-optional"
             title="Optional">
         <span id="target_python">
 <a href="#target_python" style="color: inherit; text-decoration: inherit;">target</a>
@@ -1135,16 +1025,13 @@ All [input](#inputs) properties are implicitly available as output properties. A
         <span class="property-indicator"></span>
         <span class="property-type">str</span>
     </dt>
-    <dd>{{% md %}}The target of the dockerfile to build{{% /md %}}</dd>
-</dl>
+    <dd>{{% md %}}The target of the dockerfile to build{{% /md %}}</dd></dl>
 {{% /choosable %}}
 
 <h4 id="imageregistry">Image<wbr>Registry</h4>
 
 {{% choosable language csharp %}}
-<dl class="resources-properties">
-
-    <dt class="property-optional"
+<dl class="resources-properties"><dt class="property-optional"
             title="Optional">
         <span id="password_csharp">
 <a href="#password_csharp" style="color: inherit; text-decoration: inherit;">Password</a>
@@ -1152,8 +1039,7 @@ All [input](#inputs) properties are implicitly available as output properties. A
         <span class="property-indicator"></span>
         <span class="property-type">string</span>
     </dt>
-    <dd>{{% md %}}Password for login to the target Docker registry.{{% /md %}}</dd>
-    <dt class="property-optional"
+    <dd>{{% md %}}Password for login to the target Docker registry.{{% /md %}}</dd><dt class="property-optional"
             title="Optional">
         <span id="server_csharp">
 <a href="#server_csharp" style="color: inherit; text-decoration: inherit;">Server</a>
@@ -1161,8 +1047,7 @@ All [input](#inputs) properties are implicitly available as output properties. A
         <span class="property-indicator"></span>
         <span class="property-type">string</span>
     </dt>
-    <dd>{{% md %}}Docker registry server URL to push to. Some common values include: DockerHub: `docker.io` or `https://index.docker.io/v1` Azure Container Registry: `<name>.azurecr.io` AWS Elastic Container Registry: `<account>.dkr.ecr.us-east-2.amazonaws.com` Google Container Registry: `<name>.gcr.io`.{{% /md %}}</dd>
-    <dt class="property-optional"
+    <dd>{{% md %}}Docker registry server URL to push to. Some common values include: DockerHub: `docker.io` or `https://index.docker.io/v1` Azure Container Registry: `<name>.azurecr.io` AWS Elastic Container Registry: `<account>.dkr.ecr.us-east-2.amazonaws.com` Google Container Registry: `<name>.gcr.io`.{{% /md %}}</dd><dt class="property-optional"
             title="Optional">
         <span id="username_csharp">
 <a href="#username_csharp" style="color: inherit; text-decoration: inherit;">Username</a>
@@ -1170,14 +1055,11 @@ All [input](#inputs) properties are implicitly available as output properties. A
         <span class="property-indicator"></span>
         <span class="property-type">string</span>
     </dt>
-    <dd>{{% md %}}Username for login to the target Docker registry.{{% /md %}}</dd>
-</dl>
+    <dd>{{% md %}}Username for login to the target Docker registry.{{% /md %}}</dd></dl>
 {{% /choosable %}}
 
 {{% choosable language go %}}
-<dl class="resources-properties">
-
-    <dt class="property-optional"
+<dl class="resources-properties"><dt class="property-optional"
             title="Optional">
         <span id="password_go">
 <a href="#password_go" style="color: inherit; text-decoration: inherit;">Password</a>
@@ -1185,8 +1067,7 @@ All [input](#inputs) properties are implicitly available as output properties. A
         <span class="property-indicator"></span>
         <span class="property-type">string</span>
     </dt>
-    <dd>{{% md %}}Password for login to the target Docker registry.{{% /md %}}</dd>
-    <dt class="property-optional"
+    <dd>{{% md %}}Password for login to the target Docker registry.{{% /md %}}</dd><dt class="property-optional"
             title="Optional">
         <span id="server_go">
 <a href="#server_go" style="color: inherit; text-decoration: inherit;">Server</a>
@@ -1194,8 +1075,7 @@ All [input](#inputs) properties are implicitly available as output properties. A
         <span class="property-indicator"></span>
         <span class="property-type">string</span>
     </dt>
-    <dd>{{% md %}}Docker registry server URL to push to. Some common values include: DockerHub: `docker.io` or `https://index.docker.io/v1` Azure Container Registry: `<name>.azurecr.io` AWS Elastic Container Registry: `<account>.dkr.ecr.us-east-2.amazonaws.com` Google Container Registry: `<name>.gcr.io`.{{% /md %}}</dd>
-    <dt class="property-optional"
+    <dd>{{% md %}}Docker registry server URL to push to. Some common values include: DockerHub: `docker.io` or `https://index.docker.io/v1` Azure Container Registry: `<name>.azurecr.io` AWS Elastic Container Registry: `<account>.dkr.ecr.us-east-2.amazonaws.com` Google Container Registry: `<name>.gcr.io`.{{% /md %}}</dd><dt class="property-optional"
             title="Optional">
         <span id="username_go">
 <a href="#username_go" style="color: inherit; text-decoration: inherit;">Username</a>
@@ -1203,14 +1083,11 @@ All [input](#inputs) properties are implicitly available as output properties. A
         <span class="property-indicator"></span>
         <span class="property-type">string</span>
     </dt>
-    <dd>{{% md %}}Username for login to the target Docker registry.{{% /md %}}</dd>
-</dl>
+    <dd>{{% md %}}Username for login to the target Docker registry.{{% /md %}}</dd></dl>
 {{% /choosable %}}
 
 {{% choosable language nodejs %}}
-<dl class="resources-properties">
-
-    <dt class="property-optional"
+<dl class="resources-properties"><dt class="property-optional"
             title="Optional">
         <span id="password_nodejs">
 <a href="#password_nodejs" style="color: inherit; text-decoration: inherit;">password</a>
@@ -1218,8 +1095,7 @@ All [input](#inputs) properties are implicitly available as output properties. A
         <span class="property-indicator"></span>
         <span class="property-type">string</span>
     </dt>
-    <dd>{{% md %}}Password for login to the target Docker registry.{{% /md %}}</dd>
-    <dt class="property-optional"
+    <dd>{{% md %}}Password for login to the target Docker registry.{{% /md %}}</dd><dt class="property-optional"
             title="Optional">
         <span id="server_nodejs">
 <a href="#server_nodejs" style="color: inherit; text-decoration: inherit;">server</a>
@@ -1227,8 +1103,7 @@ All [input](#inputs) properties are implicitly available as output properties. A
         <span class="property-indicator"></span>
         <span class="property-type">string</span>
     </dt>
-    <dd>{{% md %}}Docker registry server URL to push to. Some common values include: DockerHub: `docker.io` or `https://index.docker.io/v1` Azure Container Registry: `<name>.azurecr.io` AWS Elastic Container Registry: `<account>.dkr.ecr.us-east-2.amazonaws.com` Google Container Registry: `<name>.gcr.io`.{{% /md %}}</dd>
-    <dt class="property-optional"
+    <dd>{{% md %}}Docker registry server URL to push to. Some common values include: DockerHub: `docker.io` or `https://index.docker.io/v1` Azure Container Registry: `<name>.azurecr.io` AWS Elastic Container Registry: `<account>.dkr.ecr.us-east-2.amazonaws.com` Google Container Registry: `<name>.gcr.io`.{{% /md %}}</dd><dt class="property-optional"
             title="Optional">
         <span id="username_nodejs">
 <a href="#username_nodejs" style="color: inherit; text-decoration: inherit;">username</a>
@@ -1236,14 +1111,11 @@ All [input](#inputs) properties are implicitly available as output properties. A
         <span class="property-indicator"></span>
         <span class="property-type">string</span>
     </dt>
-    <dd>{{% md %}}Username for login to the target Docker registry.{{% /md %}}</dd>
-</dl>
+    <dd>{{% md %}}Username for login to the target Docker registry.{{% /md %}}</dd></dl>
 {{% /choosable %}}
 
 {{% choosable language python %}}
-<dl class="resources-properties">
-
-    <dt class="property-optional"
+<dl class="resources-properties"><dt class="property-optional"
             title="Optional">
         <span id="password_python">
 <a href="#password_python" style="color: inherit; text-decoration: inherit;">password</a>
@@ -1251,8 +1123,7 @@ All [input](#inputs) properties are implicitly available as output properties. A
         <span class="property-indicator"></span>
         <span class="property-type">str</span>
     </dt>
-    <dd>{{% md %}}Password for login to the target Docker registry.{{% /md %}}</dd>
-    <dt class="property-optional"
+    <dd>{{% md %}}Password for login to the target Docker registry.{{% /md %}}</dd><dt class="property-optional"
             title="Optional">
         <span id="server_python">
 <a href="#server_python" style="color: inherit; text-decoration: inherit;">server</a>
@@ -1260,8 +1131,7 @@ All [input](#inputs) properties are implicitly available as output properties. A
         <span class="property-indicator"></span>
         <span class="property-type">str</span>
     </dt>
-    <dd>{{% md %}}Docker registry server URL to push to. Some common values include: DockerHub: `docker.io` or `https://index.docker.io/v1` Azure Container Registry: `<name>.azurecr.io` AWS Elastic Container Registry: `<account>.dkr.ecr.us-east-2.amazonaws.com` Google Container Registry: `<name>.gcr.io`.{{% /md %}}</dd>
-    <dt class="property-optional"
+    <dd>{{% md %}}Docker registry server URL to push to. Some common values include: DockerHub: `docker.io` or `https://index.docker.io/v1` Azure Container Registry: `<name>.azurecr.io` AWS Elastic Container Registry: `<account>.dkr.ecr.us-east-2.amazonaws.com` Google Container Registry: `<name>.gcr.io`.{{% /md %}}</dd><dt class="property-optional"
             title="Optional">
         <span id="username_python">
 <a href="#username_python" style="color: inherit; text-decoration: inherit;">username</a>
@@ -1269,8 +1139,7 @@ All [input](#inputs) properties are implicitly available as output properties. A
         <span class="property-indicator"></span>
         <span class="property-type">str</span>
     </dt>
-    <dd>{{% md %}}Username for login to the target Docker registry.{{% /md %}}</dd>
-</dl>
+    <dd>{{% md %}}Username for login to the target Docker registry.{{% /md %}}</dd></dl>
 {{% /choosable %}}
 
 
@@ -1281,6 +1150,6 @@ All [input](#inputs) properties are implicitly available as output properties. A
 	<dt>License</dt>
 	<dd>Apache-2.0</dd>
 	<dt>Notes</dt>
-	<dd>This Pulumi package is based on the [`docker` Terraform Provider](https://github.com/terraform-providers/terraform-provider-docker).</dd>
+	<dd>{{% md %}}This Pulumi package is based on the [`docker` Terraform Provider](https://github.com/terraform-providers/terraform-provider-docker).{{% /md %}}</dd>
 </dl>
 

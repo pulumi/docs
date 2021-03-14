@@ -51,9 +51,7 @@ The following arguments are supported:
 
 
 {{% choosable language csharp %}}
-<dl class="resources-properties">
-
-    <dt class="property-required"
+<dl class="resources-properties"><dt class="property-required"
             title="Required">
         <span id="proximityplacementgroupname_csharp">
 <a href="#proximityplacementgroupname_csharp" style="color: inherit; text-decoration: inherit;">Proximity<wbr>Placement<wbr>Group<wbr>Name</a>
@@ -61,8 +59,7 @@ The following arguments are supported:
         <span class="property-indicator"></span>
         <span class="property-type">string</span>
     </dt>
-    <dd>{{% md %}}The name of the proximity placement group.{{% /md %}}</dd>
-    <dt class="property-required"
+    <dd>{{% md %}}The name of the proximity placement group.{{% /md %}}</dd><dt class="property-required"
             title="Required">
         <span id="resourcegroupname_csharp">
 <a href="#resourcegroupname_csharp" style="color: inherit; text-decoration: inherit;">Resource<wbr>Group<wbr>Name</a>
@@ -70,8 +67,7 @@ The following arguments are supported:
         <span class="property-indicator"></span>
         <span class="property-type">string</span>
     </dt>
-    <dd>{{% md %}}The name of the resource group.{{% /md %}}</dd>
-    <dt class="property-optional"
+    <dd>{{% md %}}The name of the resource group.{{% /md %}}</dd><dt class="property-optional"
             title="Optional">
         <span id="includecolocationstatus_csharp">
 <a href="#includecolocationstatus_csharp" style="color: inherit; text-decoration: inherit;">Include<wbr>Colocation<wbr>Status</a>
@@ -79,14 +75,11 @@ The following arguments are supported:
         <span class="property-indicator"></span>
         <span class="property-type">string</span>
     </dt>
-    <dd>{{% md %}}includeColocationStatus=true enables fetching the colocation status of all the resources in the proximity placement group.{{% /md %}}</dd>
-</dl>
+    <dd>{{% md %}}includeColocationStatus=true enables fetching the colocation status of all the resources in the proximity placement group.{{% /md %}}</dd></dl>
 {{% /choosable %}}
 
 {{% choosable language go %}}
-<dl class="resources-properties">
-
-    <dt class="property-required"
+<dl class="resources-properties"><dt class="property-required"
             title="Required">
         <span id="proximityplacementgroupname_go">
 <a href="#proximityplacementgroupname_go" style="color: inherit; text-decoration: inherit;">Proximity<wbr>Placement<wbr>Group<wbr>Name</a>
@@ -94,8 +87,7 @@ The following arguments are supported:
         <span class="property-indicator"></span>
         <span class="property-type">string</span>
     </dt>
-    <dd>{{% md %}}The name of the proximity placement group.{{% /md %}}</dd>
-    <dt class="property-required"
+    <dd>{{% md %}}The name of the proximity placement group.{{% /md %}}</dd><dt class="property-required"
             title="Required">
         <span id="resourcegroupname_go">
 <a href="#resourcegroupname_go" style="color: inherit; text-decoration: inherit;">Resource<wbr>Group<wbr>Name</a>
@@ -103,8 +95,7 @@ The following arguments are supported:
         <span class="property-indicator"></span>
         <span class="property-type">string</span>
     </dt>
-    <dd>{{% md %}}The name of the resource group.{{% /md %}}</dd>
-    <dt class="property-optional"
+    <dd>{{% md %}}The name of the resource group.{{% /md %}}</dd><dt class="property-optional"
             title="Optional">
         <span id="includecolocationstatus_go">
 <a href="#includecolocationstatus_go" style="color: inherit; text-decoration: inherit;">Include<wbr>Colocation<wbr>Status</a>
@@ -112,14 +103,11 @@ The following arguments are supported:
         <span class="property-indicator"></span>
         <span class="property-type">string</span>
     </dt>
-    <dd>{{% md %}}includeColocationStatus=true enables fetching the colocation status of all the resources in the proximity placement group.{{% /md %}}</dd>
-</dl>
+    <dd>{{% md %}}includeColocationStatus=true enables fetching the colocation status of all the resources in the proximity placement group.{{% /md %}}</dd></dl>
 {{% /choosable %}}
 
 {{% choosable language nodejs %}}
-<dl class="resources-properties">
-
-    <dt class="property-required"
+<dl class="resources-properties"><dt class="property-required"
             title="Required">
         <span id="proximityplacementgroupname_nodejs">
 <a href="#proximityplacementgroupname_nodejs" style="color: inherit; text-decoration: inherit;">proximity<wbr>Placement<wbr>Group<wbr>Name</a>
@@ -127,8 +115,7 @@ The following arguments are supported:
         <span class="property-indicator"></span>
         <span class="property-type">string</span>
     </dt>
-    <dd>{{% md %}}The name of the proximity placement group.{{% /md %}}</dd>
-    <dt class="property-required"
+    <dd>{{% md %}}The name of the proximity placement group.{{% /md %}}</dd><dt class="property-required"
             title="Required">
         <span id="resourcegroupname_nodejs">
 <a href="#resourcegroupname_nodejs" style="color: inherit; text-decoration: inherit;">resource<wbr>Group<wbr>Name</a>
@@ -136,8 +123,7 @@ The following arguments are supported:
         <span class="property-indicator"></span>
         <span class="property-type">string</span>
     </dt>
-    <dd>{{% md %}}The name of the resource group.{{% /md %}}</dd>
-    <dt class="property-optional"
+    <dd>{{% md %}}The name of the resource group.{{% /md %}}</dd><dt class="property-optional"
             title="Optional">
         <span id="includecolocationstatus_nodejs">
 <a href="#includecolocationstatus_nodejs" style="color: inherit; text-decoration: inherit;">include<wbr>Colocation<wbr>Status</a>
@@ -145,14 +131,11 @@ The following arguments are supported:
         <span class="property-indicator"></span>
         <span class="property-type">string</span>
     </dt>
-    <dd>{{% md %}}includeColocationStatus=true enables fetching the colocation status of all the resources in the proximity placement group.{{% /md %}}</dd>
-</dl>
+    <dd>{{% md %}}includeColocationStatus=true enables fetching the colocation status of all the resources in the proximity placement group.{{% /md %}}</dd></dl>
 {{% /choosable %}}
 
 {{% choosable language python %}}
-<dl class="resources-properties">
-
-    <dt class="property-required"
+<dl class="resources-properties"><dt class="property-required"
             title="Required">
         <span id="proximity_placement_group_name_python">
 <a href="#proximity_placement_group_name_python" style="color: inherit; text-decoration: inherit;">proximity_<wbr>placement_<wbr>group_<wbr>name</a>
@@ -160,8 +143,7 @@ The following arguments are supported:
         <span class="property-indicator"></span>
         <span class="property-type">str</span>
     </dt>
-    <dd>{{% md %}}The name of the proximity placement group.{{% /md %}}</dd>
-    <dt class="property-required"
+    <dd>{{% md %}}The name of the proximity placement group.{{% /md %}}</dd><dt class="property-required"
             title="Required">
         <span id="resource_group_name_python">
 <a href="#resource_group_name_python" style="color: inherit; text-decoration: inherit;">resource_<wbr>group_<wbr>name</a>
@@ -169,8 +151,7 @@ The following arguments are supported:
         <span class="property-indicator"></span>
         <span class="property-type">str</span>
     </dt>
-    <dd>{{% md %}}The name of the resource group.{{% /md %}}</dd>
-    <dt class="property-optional"
+    <dd>{{% md %}}The name of the resource group.{{% /md %}}</dd><dt class="property-optional"
             title="Optional">
         <span id="include_colocation_status_python">
 <a href="#include_colocation_status_python" style="color: inherit; text-decoration: inherit;">include_<wbr>colocation_<wbr>status</a>
@@ -178,8 +159,7 @@ The following arguments are supported:
         <span class="property-indicator"></span>
         <span class="property-type">str</span>
     </dt>
-    <dd>{{% md %}}includeColocationStatus=true enables fetching the colocation status of all the resources in the proximity placement group.{{% /md %}}</dd>
-</dl>
+    <dd>{{% md %}}includeColocationStatus=true enables fetching the colocation status of all the resources in the proximity placement group.{{% /md %}}</dd></dl>
 {{% /choosable %}}
 
 
@@ -192,9 +172,7 @@ The following output properties are available:
 
 
 {{% choosable language csharp %}}
-<dl class="resources-properties">
-
-    <dt class="property-"
+<dl class="resources-properties"><dt class="property-"
             title="">
         <span id="availabilitysets_csharp">
 <a href="#availabilitysets_csharp" style="color: inherit; text-decoration: inherit;">Availability<wbr>Sets</a>
@@ -202,8 +180,7 @@ The following output properties are available:
         <span class="property-indicator"></span>
         <span class="property-type"><a href="#subresourcewithcolocationstatusresponse">List&lt;Pulumi.<wbr>Azure<wbr>Native.<wbr>Compute.<wbr>Outputs.<wbr>Sub<wbr>Resource<wbr>With<wbr>Colocation<wbr>Status<wbr>Response&gt;</a></span>
     </dt>
-    <dd>{{% md %}}A list of references to all availability sets in the proximity placement group.{{% /md %}}</dd>
-    <dt class="property-"
+    <dd>{{% md %}}A list of references to all availability sets in the proximity placement group.{{% /md %}}</dd><dt class="property-"
             title="">
         <span id="id_csharp">
 <a href="#id_csharp" style="color: inherit; text-decoration: inherit;">Id</a>
@@ -211,8 +188,7 @@ The following output properties are available:
         <span class="property-indicator"></span>
         <span class="property-type">string</span>
     </dt>
-    <dd>{{% md %}}Resource Id{{% /md %}}</dd>
-    <dt class="property-"
+    <dd>{{% md %}}Resource Id{{% /md %}}</dd><dt class="property-"
             title="">
         <span id="location_csharp">
 <a href="#location_csharp" style="color: inherit; text-decoration: inherit;">Location</a>
@@ -220,8 +196,7 @@ The following output properties are available:
         <span class="property-indicator"></span>
         <span class="property-type">string</span>
     </dt>
-    <dd>{{% md %}}Resource location{{% /md %}}</dd>
-    <dt class="property-"
+    <dd>{{% md %}}Resource location{{% /md %}}</dd><dt class="property-"
             title="">
         <span id="name_csharp">
 <a href="#name_csharp" style="color: inherit; text-decoration: inherit;">Name</a>
@@ -229,8 +204,7 @@ The following output properties are available:
         <span class="property-indicator"></span>
         <span class="property-type">string</span>
     </dt>
-    <dd>{{% md %}}Resource name{{% /md %}}</dd>
-    <dt class="property-"
+    <dd>{{% md %}}Resource name{{% /md %}}</dd><dt class="property-"
             title="">
         <span id="type_csharp">
 <a href="#type_csharp" style="color: inherit; text-decoration: inherit;">Type</a>
@@ -238,8 +212,7 @@ The following output properties are available:
         <span class="property-indicator"></span>
         <span class="property-type">string</span>
     </dt>
-    <dd>{{% md %}}Resource type{{% /md %}}</dd>
-    <dt class="property-"
+    <dd>{{% md %}}Resource type{{% /md %}}</dd><dt class="property-"
             title="">
         <span id="virtualmachinescalesets_csharp">
 <a href="#virtualmachinescalesets_csharp" style="color: inherit; text-decoration: inherit;">Virtual<wbr>Machine<wbr>Scale<wbr>Sets</a>
@@ -247,8 +220,7 @@ The following output properties are available:
         <span class="property-indicator"></span>
         <span class="property-type"><a href="#subresourcewithcolocationstatusresponse">List&lt;Pulumi.<wbr>Azure<wbr>Native.<wbr>Compute.<wbr>Outputs.<wbr>Sub<wbr>Resource<wbr>With<wbr>Colocation<wbr>Status<wbr>Response&gt;</a></span>
     </dt>
-    <dd>{{% md %}}A list of references to all virtual machine scale sets in the proximity placement group.{{% /md %}}</dd>
-    <dt class="property-"
+    <dd>{{% md %}}A list of references to all virtual machine scale sets in the proximity placement group.{{% /md %}}</dd><dt class="property-"
             title="">
         <span id="virtualmachines_csharp">
 <a href="#virtualmachines_csharp" style="color: inherit; text-decoration: inherit;">Virtual<wbr>Machines</a>
@@ -256,8 +228,7 @@ The following output properties are available:
         <span class="property-indicator"></span>
         <span class="property-type"><a href="#subresourcewithcolocationstatusresponse">List&lt;Pulumi.<wbr>Azure<wbr>Native.<wbr>Compute.<wbr>Outputs.<wbr>Sub<wbr>Resource<wbr>With<wbr>Colocation<wbr>Status<wbr>Response&gt;</a></span>
     </dt>
-    <dd>{{% md %}}A list of references to all virtual machines in the proximity placement group.{{% /md %}}</dd>
-    <dt class="property-"
+    <dd>{{% md %}}A list of references to all virtual machines in the proximity placement group.{{% /md %}}</dd><dt class="property-"
             title="">
         <span id="colocationstatus_csharp">
 <a href="#colocationstatus_csharp" style="color: inherit; text-decoration: inherit;">Colocation<wbr>Status</a>
@@ -265,8 +236,7 @@ The following output properties are available:
         <span class="property-indicator"></span>
         <span class="property-type"><a href="#instanceviewstatusresponse">Pulumi.<wbr>Azure<wbr>Native.<wbr>Compute.<wbr>Outputs.<wbr>Instance<wbr>View<wbr>Status<wbr>Response</a></span>
     </dt>
-    <dd>{{% md %}}Describes colocation status of the Proximity Placement Group.{{% /md %}}</dd>
-    <dt class="property-"
+    <dd>{{% md %}}Describes colocation status of the Proximity Placement Group.{{% /md %}}</dd><dt class="property-"
             title="">
         <span id="proximityplacementgrouptype_csharp">
 <a href="#proximityplacementgrouptype_csharp" style="color: inherit; text-decoration: inherit;">Proximity<wbr>Placement<wbr>Group<wbr>Type</a>
@@ -274,8 +244,7 @@ The following output properties are available:
         <span class="property-indicator"></span>
         <span class="property-type">string</span>
     </dt>
-    <dd>{{% md %}}Specifies the type of the proximity placement group. <br><br> Possible values are: <br><br> **Standard** : Co-locate resources within an Azure region or Availability Zone. <br><br> **Ultra** : For future use.{{% /md %}}</dd>
-    <dt class="property-"
+    <dd>{{% md %}}Specifies the type of the proximity placement group. <br><br> Possible values are: <br><br> **Standard** : Co-locate resources within an Azure region or Availability Zone. <br><br> **Ultra** : For future use.{{% /md %}}</dd><dt class="property-"
             title="">
         <span id="tags_csharp">
 <a href="#tags_csharp" style="color: inherit; text-decoration: inherit;">Tags</a>
@@ -283,14 +252,11 @@ The following output properties are available:
         <span class="property-indicator"></span>
         <span class="property-type">Dictionary&lt;string, string&gt;</span>
     </dt>
-    <dd>{{% md %}}Resource tags{{% /md %}}</dd>
-</dl>
+    <dd>{{% md %}}Resource tags{{% /md %}}</dd></dl>
 {{% /choosable %}}
 
 {{% choosable language go %}}
-<dl class="resources-properties">
-
-    <dt class="property-"
+<dl class="resources-properties"><dt class="property-"
             title="">
         <span id="availabilitysets_go">
 <a href="#availabilitysets_go" style="color: inherit; text-decoration: inherit;">Availability<wbr>Sets</a>
@@ -298,8 +264,7 @@ The following output properties are available:
         <span class="property-indicator"></span>
         <span class="property-type"><a href="#subresourcewithcolocationstatusresponse">[]Sub<wbr>Resource<wbr>With<wbr>Colocation<wbr>Status<wbr>Response</a></span>
     </dt>
-    <dd>{{% md %}}A list of references to all availability sets in the proximity placement group.{{% /md %}}</dd>
-    <dt class="property-"
+    <dd>{{% md %}}A list of references to all availability sets in the proximity placement group.{{% /md %}}</dd><dt class="property-"
             title="">
         <span id="id_go">
 <a href="#id_go" style="color: inherit; text-decoration: inherit;">Id</a>
@@ -307,8 +272,7 @@ The following output properties are available:
         <span class="property-indicator"></span>
         <span class="property-type">string</span>
     </dt>
-    <dd>{{% md %}}Resource Id{{% /md %}}</dd>
-    <dt class="property-"
+    <dd>{{% md %}}Resource Id{{% /md %}}</dd><dt class="property-"
             title="">
         <span id="location_go">
 <a href="#location_go" style="color: inherit; text-decoration: inherit;">Location</a>
@@ -316,8 +280,7 @@ The following output properties are available:
         <span class="property-indicator"></span>
         <span class="property-type">string</span>
     </dt>
-    <dd>{{% md %}}Resource location{{% /md %}}</dd>
-    <dt class="property-"
+    <dd>{{% md %}}Resource location{{% /md %}}</dd><dt class="property-"
             title="">
         <span id="name_go">
 <a href="#name_go" style="color: inherit; text-decoration: inherit;">Name</a>
@@ -325,8 +288,7 @@ The following output properties are available:
         <span class="property-indicator"></span>
         <span class="property-type">string</span>
     </dt>
-    <dd>{{% md %}}Resource name{{% /md %}}</dd>
-    <dt class="property-"
+    <dd>{{% md %}}Resource name{{% /md %}}</dd><dt class="property-"
             title="">
         <span id="type_go">
 <a href="#type_go" style="color: inherit; text-decoration: inherit;">Type</a>
@@ -334,8 +296,7 @@ The following output properties are available:
         <span class="property-indicator"></span>
         <span class="property-type">string</span>
     </dt>
-    <dd>{{% md %}}Resource type{{% /md %}}</dd>
-    <dt class="property-"
+    <dd>{{% md %}}Resource type{{% /md %}}</dd><dt class="property-"
             title="">
         <span id="virtualmachinescalesets_go">
 <a href="#virtualmachinescalesets_go" style="color: inherit; text-decoration: inherit;">Virtual<wbr>Machine<wbr>Scale<wbr>Sets</a>
@@ -343,8 +304,7 @@ The following output properties are available:
         <span class="property-indicator"></span>
         <span class="property-type"><a href="#subresourcewithcolocationstatusresponse">[]Sub<wbr>Resource<wbr>With<wbr>Colocation<wbr>Status<wbr>Response</a></span>
     </dt>
-    <dd>{{% md %}}A list of references to all virtual machine scale sets in the proximity placement group.{{% /md %}}</dd>
-    <dt class="property-"
+    <dd>{{% md %}}A list of references to all virtual machine scale sets in the proximity placement group.{{% /md %}}</dd><dt class="property-"
             title="">
         <span id="virtualmachines_go">
 <a href="#virtualmachines_go" style="color: inherit; text-decoration: inherit;">Virtual<wbr>Machines</a>
@@ -352,8 +312,7 @@ The following output properties are available:
         <span class="property-indicator"></span>
         <span class="property-type"><a href="#subresourcewithcolocationstatusresponse">[]Sub<wbr>Resource<wbr>With<wbr>Colocation<wbr>Status<wbr>Response</a></span>
     </dt>
-    <dd>{{% md %}}A list of references to all virtual machines in the proximity placement group.{{% /md %}}</dd>
-    <dt class="property-"
+    <dd>{{% md %}}A list of references to all virtual machines in the proximity placement group.{{% /md %}}</dd><dt class="property-"
             title="">
         <span id="colocationstatus_go">
 <a href="#colocationstatus_go" style="color: inherit; text-decoration: inherit;">Colocation<wbr>Status</a>
@@ -361,8 +320,7 @@ The following output properties are available:
         <span class="property-indicator"></span>
         <span class="property-type"><a href="#instanceviewstatusresponse">Instance<wbr>View<wbr>Status<wbr>Response</a></span>
     </dt>
-    <dd>{{% md %}}Describes colocation status of the Proximity Placement Group.{{% /md %}}</dd>
-    <dt class="property-"
+    <dd>{{% md %}}Describes colocation status of the Proximity Placement Group.{{% /md %}}</dd><dt class="property-"
             title="">
         <span id="proximityplacementgrouptype_go">
 <a href="#proximityplacementgrouptype_go" style="color: inherit; text-decoration: inherit;">Proximity<wbr>Placement<wbr>Group<wbr>Type</a>
@@ -370,8 +328,7 @@ The following output properties are available:
         <span class="property-indicator"></span>
         <span class="property-type">string</span>
     </dt>
-    <dd>{{% md %}}Specifies the type of the proximity placement group. <br><br> Possible values are: <br><br> **Standard** : Co-locate resources within an Azure region or Availability Zone. <br><br> **Ultra** : For future use.{{% /md %}}</dd>
-    <dt class="property-"
+    <dd>{{% md %}}Specifies the type of the proximity placement group. <br><br> Possible values are: <br><br> **Standard** : Co-locate resources within an Azure region or Availability Zone. <br><br> **Ultra** : For future use.{{% /md %}}</dd><dt class="property-"
             title="">
         <span id="tags_go">
 <a href="#tags_go" style="color: inherit; text-decoration: inherit;">Tags</a>
@@ -379,14 +336,11 @@ The following output properties are available:
         <span class="property-indicator"></span>
         <span class="property-type">map[string]string</span>
     </dt>
-    <dd>{{% md %}}Resource tags{{% /md %}}</dd>
-</dl>
+    <dd>{{% md %}}Resource tags{{% /md %}}</dd></dl>
 {{% /choosable %}}
 
 {{% choosable language nodejs %}}
-<dl class="resources-properties">
-
-    <dt class="property-"
+<dl class="resources-properties"><dt class="property-"
             title="">
         <span id="availabilitysets_nodejs">
 <a href="#availabilitysets_nodejs" style="color: inherit; text-decoration: inherit;">availability<wbr>Sets</a>
@@ -394,8 +348,7 @@ The following output properties are available:
         <span class="property-indicator"></span>
         <span class="property-type"><a href="#subresourcewithcolocationstatusresponse">Sub<wbr>Resource<wbr>With<wbr>Colocation<wbr>Status<wbr>Response[]</a></span>
     </dt>
-    <dd>{{% md %}}A list of references to all availability sets in the proximity placement group.{{% /md %}}</dd>
-    <dt class="property-"
+    <dd>{{% md %}}A list of references to all availability sets in the proximity placement group.{{% /md %}}</dd><dt class="property-"
             title="">
         <span id="id_nodejs">
 <a href="#id_nodejs" style="color: inherit; text-decoration: inherit;">id</a>
@@ -403,8 +356,7 @@ The following output properties are available:
         <span class="property-indicator"></span>
         <span class="property-type">string</span>
     </dt>
-    <dd>{{% md %}}Resource Id{{% /md %}}</dd>
-    <dt class="property-"
+    <dd>{{% md %}}Resource Id{{% /md %}}</dd><dt class="property-"
             title="">
         <span id="location_nodejs">
 <a href="#location_nodejs" style="color: inherit; text-decoration: inherit;">location</a>
@@ -412,8 +364,7 @@ The following output properties are available:
         <span class="property-indicator"></span>
         <span class="property-type">string</span>
     </dt>
-    <dd>{{% md %}}Resource location{{% /md %}}</dd>
-    <dt class="property-"
+    <dd>{{% md %}}Resource location{{% /md %}}</dd><dt class="property-"
             title="">
         <span id="name_nodejs">
 <a href="#name_nodejs" style="color: inherit; text-decoration: inherit;">name</a>
@@ -421,8 +372,7 @@ The following output properties are available:
         <span class="property-indicator"></span>
         <span class="property-type">string</span>
     </dt>
-    <dd>{{% md %}}Resource name{{% /md %}}</dd>
-    <dt class="property-"
+    <dd>{{% md %}}Resource name{{% /md %}}</dd><dt class="property-"
             title="">
         <span id="type_nodejs">
 <a href="#type_nodejs" style="color: inherit; text-decoration: inherit;">type</a>
@@ -430,8 +380,7 @@ The following output properties are available:
         <span class="property-indicator"></span>
         <span class="property-type">string</span>
     </dt>
-    <dd>{{% md %}}Resource type{{% /md %}}</dd>
-    <dt class="property-"
+    <dd>{{% md %}}Resource type{{% /md %}}</dd><dt class="property-"
             title="">
         <span id="virtualmachinescalesets_nodejs">
 <a href="#virtualmachinescalesets_nodejs" style="color: inherit; text-decoration: inherit;">virtual<wbr>Machine<wbr>Scale<wbr>Sets</a>
@@ -439,8 +388,7 @@ The following output properties are available:
         <span class="property-indicator"></span>
         <span class="property-type"><a href="#subresourcewithcolocationstatusresponse">Sub<wbr>Resource<wbr>With<wbr>Colocation<wbr>Status<wbr>Response[]</a></span>
     </dt>
-    <dd>{{% md %}}A list of references to all virtual machine scale sets in the proximity placement group.{{% /md %}}</dd>
-    <dt class="property-"
+    <dd>{{% md %}}A list of references to all virtual machine scale sets in the proximity placement group.{{% /md %}}</dd><dt class="property-"
             title="">
         <span id="virtualmachines_nodejs">
 <a href="#virtualmachines_nodejs" style="color: inherit; text-decoration: inherit;">virtual<wbr>Machines</a>
@@ -448,8 +396,7 @@ The following output properties are available:
         <span class="property-indicator"></span>
         <span class="property-type"><a href="#subresourcewithcolocationstatusresponse">Sub<wbr>Resource<wbr>With<wbr>Colocation<wbr>Status<wbr>Response[]</a></span>
     </dt>
-    <dd>{{% md %}}A list of references to all virtual machines in the proximity placement group.{{% /md %}}</dd>
-    <dt class="property-"
+    <dd>{{% md %}}A list of references to all virtual machines in the proximity placement group.{{% /md %}}</dd><dt class="property-"
             title="">
         <span id="colocationstatus_nodejs">
 <a href="#colocationstatus_nodejs" style="color: inherit; text-decoration: inherit;">colocation<wbr>Status</a>
@@ -457,8 +404,7 @@ The following output properties are available:
         <span class="property-indicator"></span>
         <span class="property-type"><a href="#instanceviewstatusresponse">Instance<wbr>View<wbr>Status<wbr>Response</a></span>
     </dt>
-    <dd>{{% md %}}Describes colocation status of the Proximity Placement Group.{{% /md %}}</dd>
-    <dt class="property-"
+    <dd>{{% md %}}Describes colocation status of the Proximity Placement Group.{{% /md %}}</dd><dt class="property-"
             title="">
         <span id="proximityplacementgrouptype_nodejs">
 <a href="#proximityplacementgrouptype_nodejs" style="color: inherit; text-decoration: inherit;">proximity<wbr>Placement<wbr>Group<wbr>Type</a>
@@ -466,8 +412,7 @@ The following output properties are available:
         <span class="property-indicator"></span>
         <span class="property-type">string</span>
     </dt>
-    <dd>{{% md %}}Specifies the type of the proximity placement group. <br><br> Possible values are: <br><br> **Standard** : Co-locate resources within an Azure region or Availability Zone. <br><br> **Ultra** : For future use.{{% /md %}}</dd>
-    <dt class="property-"
+    <dd>{{% md %}}Specifies the type of the proximity placement group. <br><br> Possible values are: <br><br> **Standard** : Co-locate resources within an Azure region or Availability Zone. <br><br> **Ultra** : For future use.{{% /md %}}</dd><dt class="property-"
             title="">
         <span id="tags_nodejs">
 <a href="#tags_nodejs" style="color: inherit; text-decoration: inherit;">tags</a>
@@ -475,14 +420,11 @@ The following output properties are available:
         <span class="property-indicator"></span>
         <span class="property-type">{[key: string]: string}</span>
     </dt>
-    <dd>{{% md %}}Resource tags{{% /md %}}</dd>
-</dl>
+    <dd>{{% md %}}Resource tags{{% /md %}}</dd></dl>
 {{% /choosable %}}
 
 {{% choosable language python %}}
-<dl class="resources-properties">
-
-    <dt class="property-"
+<dl class="resources-properties"><dt class="property-"
             title="">
         <span id="availability_sets_python">
 <a href="#availability_sets_python" style="color: inherit; text-decoration: inherit;">availability_<wbr>sets</a>
@@ -490,8 +432,7 @@ The following output properties are available:
         <span class="property-indicator"></span>
         <span class="property-type"><a href="#subresourcewithcolocationstatusresponse">Sequence[Sub<wbr>Resource<wbr>With<wbr>Colocation<wbr>Status<wbr>Response]</a></span>
     </dt>
-    <dd>{{% md %}}A list of references to all availability sets in the proximity placement group.{{% /md %}}</dd>
-    <dt class="property-"
+    <dd>{{% md %}}A list of references to all availability sets in the proximity placement group.{{% /md %}}</dd><dt class="property-"
             title="">
         <span id="id_python">
 <a href="#id_python" style="color: inherit; text-decoration: inherit;">id</a>
@@ -499,8 +440,7 @@ The following output properties are available:
         <span class="property-indicator"></span>
         <span class="property-type">str</span>
     </dt>
-    <dd>{{% md %}}Resource Id{{% /md %}}</dd>
-    <dt class="property-"
+    <dd>{{% md %}}Resource Id{{% /md %}}</dd><dt class="property-"
             title="">
         <span id="location_python">
 <a href="#location_python" style="color: inherit; text-decoration: inherit;">location</a>
@@ -508,8 +448,7 @@ The following output properties are available:
         <span class="property-indicator"></span>
         <span class="property-type">str</span>
     </dt>
-    <dd>{{% md %}}Resource location{{% /md %}}</dd>
-    <dt class="property-"
+    <dd>{{% md %}}Resource location{{% /md %}}</dd><dt class="property-"
             title="">
         <span id="name_python">
 <a href="#name_python" style="color: inherit; text-decoration: inherit;">name</a>
@@ -517,8 +456,7 @@ The following output properties are available:
         <span class="property-indicator"></span>
         <span class="property-type">str</span>
     </dt>
-    <dd>{{% md %}}Resource name{{% /md %}}</dd>
-    <dt class="property-"
+    <dd>{{% md %}}Resource name{{% /md %}}</dd><dt class="property-"
             title="">
         <span id="type_python">
 <a href="#type_python" style="color: inherit; text-decoration: inherit;">type</a>
@@ -526,8 +464,7 @@ The following output properties are available:
         <span class="property-indicator"></span>
         <span class="property-type">str</span>
     </dt>
-    <dd>{{% md %}}Resource type{{% /md %}}</dd>
-    <dt class="property-"
+    <dd>{{% md %}}Resource type{{% /md %}}</dd><dt class="property-"
             title="">
         <span id="virtual_machine_scale_sets_python">
 <a href="#virtual_machine_scale_sets_python" style="color: inherit; text-decoration: inherit;">virtual_<wbr>machine_<wbr>scale_<wbr>sets</a>
@@ -535,8 +472,7 @@ The following output properties are available:
         <span class="property-indicator"></span>
         <span class="property-type"><a href="#subresourcewithcolocationstatusresponse">Sequence[Sub<wbr>Resource<wbr>With<wbr>Colocation<wbr>Status<wbr>Response]</a></span>
     </dt>
-    <dd>{{% md %}}A list of references to all virtual machine scale sets in the proximity placement group.{{% /md %}}</dd>
-    <dt class="property-"
+    <dd>{{% md %}}A list of references to all virtual machine scale sets in the proximity placement group.{{% /md %}}</dd><dt class="property-"
             title="">
         <span id="virtual_machines_python">
 <a href="#virtual_machines_python" style="color: inherit; text-decoration: inherit;">virtual_<wbr>machines</a>
@@ -544,8 +480,7 @@ The following output properties are available:
         <span class="property-indicator"></span>
         <span class="property-type"><a href="#subresourcewithcolocationstatusresponse">Sequence[Sub<wbr>Resource<wbr>With<wbr>Colocation<wbr>Status<wbr>Response]</a></span>
     </dt>
-    <dd>{{% md %}}A list of references to all virtual machines in the proximity placement group.{{% /md %}}</dd>
-    <dt class="property-"
+    <dd>{{% md %}}A list of references to all virtual machines in the proximity placement group.{{% /md %}}</dd><dt class="property-"
             title="">
         <span id="colocation_status_python">
 <a href="#colocation_status_python" style="color: inherit; text-decoration: inherit;">colocation_<wbr>status</a>
@@ -553,8 +488,7 @@ The following output properties are available:
         <span class="property-indicator"></span>
         <span class="property-type"><a href="#instanceviewstatusresponse">Instance<wbr>View<wbr>Status<wbr>Response</a></span>
     </dt>
-    <dd>{{% md %}}Describes colocation status of the Proximity Placement Group.{{% /md %}}</dd>
-    <dt class="property-"
+    <dd>{{% md %}}Describes colocation status of the Proximity Placement Group.{{% /md %}}</dd><dt class="property-"
             title="">
         <span id="proximity_placement_group_type_python">
 <a href="#proximity_placement_group_type_python" style="color: inherit; text-decoration: inherit;">proximity_<wbr>placement_<wbr>group_<wbr>type</a>
@@ -562,8 +496,7 @@ The following output properties are available:
         <span class="property-indicator"></span>
         <span class="property-type">str</span>
     </dt>
-    <dd>{{% md %}}Specifies the type of the proximity placement group. <br><br> Possible values are: <br><br> **Standard** : Co-locate resources within an Azure region or Availability Zone. <br><br> **Ultra** : For future use.{{% /md %}}</dd>
-    <dt class="property-"
+    <dd>{{% md %}}Specifies the type of the proximity placement group. <br><br> Possible values are: <br><br> **Standard** : Co-locate resources within an Azure region or Availability Zone. <br><br> **Ultra** : For future use.{{% /md %}}</dd><dt class="property-"
             title="">
         <span id="tags_python">
 <a href="#tags_python" style="color: inherit; text-decoration: inherit;">tags</a>
@@ -571,8 +504,7 @@ The following output properties are available:
         <span class="property-indicator"></span>
         <span class="property-type">Mapping[str, str]</span>
     </dt>
-    <dd>{{% md %}}Resource tags{{% /md %}}</dd>
-</dl>
+    <dd>{{% md %}}Resource tags{{% /md %}}</dd></dl>
 {{% /choosable %}}
 
 
@@ -586,9 +518,7 @@ The following output properties are available:
 
 
 {{% choosable language csharp %}}
-<dl class="resources-properties">
-
-    <dt class="property-optional"
+<dl class="resources-properties"><dt class="property-optional"
             title="Optional">
         <span id="code_csharp">
 <a href="#code_csharp" style="color: inherit; text-decoration: inherit;">Code</a>
@@ -596,8 +526,7 @@ The following output properties are available:
         <span class="property-indicator"></span>
         <span class="property-type">string</span>
     </dt>
-    <dd>{{% md %}}The status code.{{% /md %}}</dd>
-    <dt class="property-optional"
+    <dd>{{% md %}}The status code.{{% /md %}}</dd><dt class="property-optional"
             title="Optional">
         <span id="displaystatus_csharp">
 <a href="#displaystatus_csharp" style="color: inherit; text-decoration: inherit;">Display<wbr>Status</a>
@@ -605,8 +534,7 @@ The following output properties are available:
         <span class="property-indicator"></span>
         <span class="property-type">string</span>
     </dt>
-    <dd>{{% md %}}The short localizable label for the status.{{% /md %}}</dd>
-    <dt class="property-optional"
+    <dd>{{% md %}}The short localizable label for the status.{{% /md %}}</dd><dt class="property-optional"
             title="Optional">
         <span id="level_csharp">
 <a href="#level_csharp" style="color: inherit; text-decoration: inherit;">Level</a>
@@ -614,8 +542,7 @@ The following output properties are available:
         <span class="property-indicator"></span>
         <span class="property-type">string</span>
     </dt>
-    <dd>{{% md %}}The level code.{{% /md %}}</dd>
-    <dt class="property-optional"
+    <dd>{{% md %}}The level code.{{% /md %}}</dd><dt class="property-optional"
             title="Optional">
         <span id="message_csharp">
 <a href="#message_csharp" style="color: inherit; text-decoration: inherit;">Message</a>
@@ -623,8 +550,7 @@ The following output properties are available:
         <span class="property-indicator"></span>
         <span class="property-type">string</span>
     </dt>
-    <dd>{{% md %}}The detailed status message, including for alerts and error messages.{{% /md %}}</dd>
-    <dt class="property-optional"
+    <dd>{{% md %}}The detailed status message, including for alerts and error messages.{{% /md %}}</dd><dt class="property-optional"
             title="Optional">
         <span id="time_csharp">
 <a href="#time_csharp" style="color: inherit; text-decoration: inherit;">Time</a>
@@ -632,14 +558,11 @@ The following output properties are available:
         <span class="property-indicator"></span>
         <span class="property-type">string</span>
     </dt>
-    <dd>{{% md %}}The time of the status.{{% /md %}}</dd>
-</dl>
+    <dd>{{% md %}}The time of the status.{{% /md %}}</dd></dl>
 {{% /choosable %}}
 
 {{% choosable language go %}}
-<dl class="resources-properties">
-
-    <dt class="property-optional"
+<dl class="resources-properties"><dt class="property-optional"
             title="Optional">
         <span id="code_go">
 <a href="#code_go" style="color: inherit; text-decoration: inherit;">Code</a>
@@ -647,8 +570,7 @@ The following output properties are available:
         <span class="property-indicator"></span>
         <span class="property-type">string</span>
     </dt>
-    <dd>{{% md %}}The status code.{{% /md %}}</dd>
-    <dt class="property-optional"
+    <dd>{{% md %}}The status code.{{% /md %}}</dd><dt class="property-optional"
             title="Optional">
         <span id="displaystatus_go">
 <a href="#displaystatus_go" style="color: inherit; text-decoration: inherit;">Display<wbr>Status</a>
@@ -656,8 +578,7 @@ The following output properties are available:
         <span class="property-indicator"></span>
         <span class="property-type">string</span>
     </dt>
-    <dd>{{% md %}}The short localizable label for the status.{{% /md %}}</dd>
-    <dt class="property-optional"
+    <dd>{{% md %}}The short localizable label for the status.{{% /md %}}</dd><dt class="property-optional"
             title="Optional">
         <span id="level_go">
 <a href="#level_go" style="color: inherit; text-decoration: inherit;">Level</a>
@@ -665,8 +586,7 @@ The following output properties are available:
         <span class="property-indicator"></span>
         <span class="property-type">string</span>
     </dt>
-    <dd>{{% md %}}The level code.{{% /md %}}</dd>
-    <dt class="property-optional"
+    <dd>{{% md %}}The level code.{{% /md %}}</dd><dt class="property-optional"
             title="Optional">
         <span id="message_go">
 <a href="#message_go" style="color: inherit; text-decoration: inherit;">Message</a>
@@ -674,8 +594,7 @@ The following output properties are available:
         <span class="property-indicator"></span>
         <span class="property-type">string</span>
     </dt>
-    <dd>{{% md %}}The detailed status message, including for alerts and error messages.{{% /md %}}</dd>
-    <dt class="property-optional"
+    <dd>{{% md %}}The detailed status message, including for alerts and error messages.{{% /md %}}</dd><dt class="property-optional"
             title="Optional">
         <span id="time_go">
 <a href="#time_go" style="color: inherit; text-decoration: inherit;">Time</a>
@@ -683,14 +602,11 @@ The following output properties are available:
         <span class="property-indicator"></span>
         <span class="property-type">string</span>
     </dt>
-    <dd>{{% md %}}The time of the status.{{% /md %}}</dd>
-</dl>
+    <dd>{{% md %}}The time of the status.{{% /md %}}</dd></dl>
 {{% /choosable %}}
 
 {{% choosable language nodejs %}}
-<dl class="resources-properties">
-
-    <dt class="property-optional"
+<dl class="resources-properties"><dt class="property-optional"
             title="Optional">
         <span id="code_nodejs">
 <a href="#code_nodejs" style="color: inherit; text-decoration: inherit;">code</a>
@@ -698,8 +614,7 @@ The following output properties are available:
         <span class="property-indicator"></span>
         <span class="property-type">string</span>
     </dt>
-    <dd>{{% md %}}The status code.{{% /md %}}</dd>
-    <dt class="property-optional"
+    <dd>{{% md %}}The status code.{{% /md %}}</dd><dt class="property-optional"
             title="Optional">
         <span id="displaystatus_nodejs">
 <a href="#displaystatus_nodejs" style="color: inherit; text-decoration: inherit;">display<wbr>Status</a>
@@ -707,8 +622,7 @@ The following output properties are available:
         <span class="property-indicator"></span>
         <span class="property-type">string</span>
     </dt>
-    <dd>{{% md %}}The short localizable label for the status.{{% /md %}}</dd>
-    <dt class="property-optional"
+    <dd>{{% md %}}The short localizable label for the status.{{% /md %}}</dd><dt class="property-optional"
             title="Optional">
         <span id="level_nodejs">
 <a href="#level_nodejs" style="color: inherit; text-decoration: inherit;">level</a>
@@ -716,8 +630,7 @@ The following output properties are available:
         <span class="property-indicator"></span>
         <span class="property-type">string</span>
     </dt>
-    <dd>{{% md %}}The level code.{{% /md %}}</dd>
-    <dt class="property-optional"
+    <dd>{{% md %}}The level code.{{% /md %}}</dd><dt class="property-optional"
             title="Optional">
         <span id="message_nodejs">
 <a href="#message_nodejs" style="color: inherit; text-decoration: inherit;">message</a>
@@ -725,8 +638,7 @@ The following output properties are available:
         <span class="property-indicator"></span>
         <span class="property-type">string</span>
     </dt>
-    <dd>{{% md %}}The detailed status message, including for alerts and error messages.{{% /md %}}</dd>
-    <dt class="property-optional"
+    <dd>{{% md %}}The detailed status message, including for alerts and error messages.{{% /md %}}</dd><dt class="property-optional"
             title="Optional">
         <span id="time_nodejs">
 <a href="#time_nodejs" style="color: inherit; text-decoration: inherit;">time</a>
@@ -734,14 +646,11 @@ The following output properties are available:
         <span class="property-indicator"></span>
         <span class="property-type">string</span>
     </dt>
-    <dd>{{% md %}}The time of the status.{{% /md %}}</dd>
-</dl>
+    <dd>{{% md %}}The time of the status.{{% /md %}}</dd></dl>
 {{% /choosable %}}
 
 {{% choosable language python %}}
-<dl class="resources-properties">
-
-    <dt class="property-optional"
+<dl class="resources-properties"><dt class="property-optional"
             title="Optional">
         <span id="code_python">
 <a href="#code_python" style="color: inherit; text-decoration: inherit;">code</a>
@@ -749,8 +658,7 @@ The following output properties are available:
         <span class="property-indicator"></span>
         <span class="property-type">str</span>
     </dt>
-    <dd>{{% md %}}The status code.{{% /md %}}</dd>
-    <dt class="property-optional"
+    <dd>{{% md %}}The status code.{{% /md %}}</dd><dt class="property-optional"
             title="Optional">
         <span id="display_status_python">
 <a href="#display_status_python" style="color: inherit; text-decoration: inherit;">display_<wbr>status</a>
@@ -758,8 +666,7 @@ The following output properties are available:
         <span class="property-indicator"></span>
         <span class="property-type">str</span>
     </dt>
-    <dd>{{% md %}}The short localizable label for the status.{{% /md %}}</dd>
-    <dt class="property-optional"
+    <dd>{{% md %}}The short localizable label for the status.{{% /md %}}</dd><dt class="property-optional"
             title="Optional">
         <span id="level_python">
 <a href="#level_python" style="color: inherit; text-decoration: inherit;">level</a>
@@ -767,8 +674,7 @@ The following output properties are available:
         <span class="property-indicator"></span>
         <span class="property-type">str</span>
     </dt>
-    <dd>{{% md %}}The level code.{{% /md %}}</dd>
-    <dt class="property-optional"
+    <dd>{{% md %}}The level code.{{% /md %}}</dd><dt class="property-optional"
             title="Optional">
         <span id="message_python">
 <a href="#message_python" style="color: inherit; text-decoration: inherit;">message</a>
@@ -776,8 +682,7 @@ The following output properties are available:
         <span class="property-indicator"></span>
         <span class="property-type">str</span>
     </dt>
-    <dd>{{% md %}}The detailed status message, including for alerts and error messages.{{% /md %}}</dd>
-    <dt class="property-optional"
+    <dd>{{% md %}}The detailed status message, including for alerts and error messages.{{% /md %}}</dd><dt class="property-optional"
             title="Optional">
         <span id="time_python">
 <a href="#time_python" style="color: inherit; text-decoration: inherit;">time</a>
@@ -785,8 +690,7 @@ The following output properties are available:
         <span class="property-indicator"></span>
         <span class="property-type">str</span>
     </dt>
-    <dd>{{% md %}}The time of the status.{{% /md %}}</dd>
-</dl>
+    <dd>{{% md %}}The time of the status.{{% /md %}}</dd></dl>
 {{% /choosable %}}
 
 <h4 id="subresourcewithcolocationstatusresponse">Sub<wbr>Resource<wbr>With<wbr>Colocation<wbr>Status<wbr>Response</h4>
@@ -794,9 +698,7 @@ The following output properties are available:
 
 
 {{% choosable language csharp %}}
-<dl class="resources-properties">
-
-    <dt class="property-optional"
+<dl class="resources-properties"><dt class="property-optional"
             title="Optional">
         <span id="colocationstatus_csharp">
 <a href="#colocationstatus_csharp" style="color: inherit; text-decoration: inherit;">Colocation<wbr>Status</a>
@@ -804,8 +706,7 @@ The following output properties are available:
         <span class="property-indicator"></span>
         <span class="property-type"><a href="#instanceviewstatusresponse">Pulumi.<wbr>Azure<wbr>Native.<wbr>Compute.<wbr>Inputs.<wbr>Instance<wbr>View<wbr>Status<wbr>Response<wbr>Args</a></span>
     </dt>
-    <dd>{{% md %}}Describes colocation status of a resource in the Proximity Placement Group.{{% /md %}}</dd>
-    <dt class="property-optional"
+    <dd>{{% md %}}Describes colocation status of a resource in the Proximity Placement Group.{{% /md %}}</dd><dt class="property-optional"
             title="Optional">
         <span id="id_csharp">
 <a href="#id_csharp" style="color: inherit; text-decoration: inherit;">Id</a>
@@ -813,14 +714,11 @@ The following output properties are available:
         <span class="property-indicator"></span>
         <span class="property-type">string</span>
     </dt>
-    <dd>{{% md %}}Resource Id{{% /md %}}</dd>
-</dl>
+    <dd>{{% md %}}Resource Id{{% /md %}}</dd></dl>
 {{% /choosable %}}
 
 {{% choosable language go %}}
-<dl class="resources-properties">
-
-    <dt class="property-optional"
+<dl class="resources-properties"><dt class="property-optional"
             title="Optional">
         <span id="colocationstatus_go">
 <a href="#colocationstatus_go" style="color: inherit; text-decoration: inherit;">Colocation<wbr>Status</a>
@@ -828,8 +726,7 @@ The following output properties are available:
         <span class="property-indicator"></span>
         <span class="property-type"><a href="#instanceviewstatusresponse">Instance<wbr>View<wbr>Status<wbr>Response</a></span>
     </dt>
-    <dd>{{% md %}}Describes colocation status of a resource in the Proximity Placement Group.{{% /md %}}</dd>
-    <dt class="property-optional"
+    <dd>{{% md %}}Describes colocation status of a resource in the Proximity Placement Group.{{% /md %}}</dd><dt class="property-optional"
             title="Optional">
         <span id="id_go">
 <a href="#id_go" style="color: inherit; text-decoration: inherit;">Id</a>
@@ -837,14 +734,11 @@ The following output properties are available:
         <span class="property-indicator"></span>
         <span class="property-type">string</span>
     </dt>
-    <dd>{{% md %}}Resource Id{{% /md %}}</dd>
-</dl>
+    <dd>{{% md %}}Resource Id{{% /md %}}</dd></dl>
 {{% /choosable %}}
 
 {{% choosable language nodejs %}}
-<dl class="resources-properties">
-
-    <dt class="property-optional"
+<dl class="resources-properties"><dt class="property-optional"
             title="Optional">
         <span id="colocationstatus_nodejs">
 <a href="#colocationstatus_nodejs" style="color: inherit; text-decoration: inherit;">colocation<wbr>Status</a>
@@ -852,8 +746,7 @@ The following output properties are available:
         <span class="property-indicator"></span>
         <span class="property-type"><a href="#instanceviewstatusresponse">Instance<wbr>View<wbr>Status<wbr>Response</a></span>
     </dt>
-    <dd>{{% md %}}Describes colocation status of a resource in the Proximity Placement Group.{{% /md %}}</dd>
-    <dt class="property-optional"
+    <dd>{{% md %}}Describes colocation status of a resource in the Proximity Placement Group.{{% /md %}}</dd><dt class="property-optional"
             title="Optional">
         <span id="id_nodejs">
 <a href="#id_nodejs" style="color: inherit; text-decoration: inherit;">id</a>
@@ -861,14 +754,11 @@ The following output properties are available:
         <span class="property-indicator"></span>
         <span class="property-type">string</span>
     </dt>
-    <dd>{{% md %}}Resource Id{{% /md %}}</dd>
-</dl>
+    <dd>{{% md %}}Resource Id{{% /md %}}</dd></dl>
 {{% /choosable %}}
 
 {{% choosable language python %}}
-<dl class="resources-properties">
-
-    <dt class="property-optional"
+<dl class="resources-properties"><dt class="property-optional"
             title="Optional">
         <span id="colocation_status_python">
 <a href="#colocation_status_python" style="color: inherit; text-decoration: inherit;">colocation_<wbr>status</a>
@@ -876,8 +766,7 @@ The following output properties are available:
         <span class="property-indicator"></span>
         <span class="property-type"><a href="#instanceviewstatusresponse">Instance<wbr>View<wbr>Status<wbr>Response<wbr>Args</a></span>
     </dt>
-    <dd>{{% md %}}Describes colocation status of a resource in the Proximity Placement Group.{{% /md %}}</dd>
-    <dt class="property-optional"
+    <dd>{{% md %}}Describes colocation status of a resource in the Proximity Placement Group.{{% /md %}}</dd><dt class="property-optional"
             title="Optional">
         <span id="id_python">
 <a href="#id_python" style="color: inherit; text-decoration: inherit;">id</a>
@@ -885,8 +774,7 @@ The following output properties are available:
         <span class="property-indicator"></span>
         <span class="property-type">str</span>
     </dt>
-    <dd>{{% md %}}Resource Id{{% /md %}}</dd>
-</dl>
+    <dd>{{% md %}}Resource Id{{% /md %}}</dd></dl>
 {{% /choosable %}}
 
 

@@ -51,9 +51,7 @@ The following arguments are supported:
 
 
 {{% choosable language csharp %}}
-<dl class="resources-properties">
-
-    <dt class="property-required"
+<dl class="resources-properties"><dt class="property-required"
             title="Required">
         <span id="computename_csharp">
 <a href="#computename_csharp" style="color: inherit; text-decoration: inherit;">Compute<wbr>Name</a>
@@ -61,8 +59,7 @@ The following arguments are supported:
         <span class="property-indicator"></span>
         <span class="property-type">string</span>
     </dt>
-    <dd>{{% md %}}Name of the Azure Machine Learning compute.{{% /md %}}</dd>
-    <dt class="property-required"
+    <dd>{{% md %}}Name of the Azure Machine Learning compute.{{% /md %}}</dd><dt class="property-required"
             title="Required">
         <span id="resourcegroupname_csharp">
 <a href="#resourcegroupname_csharp" style="color: inherit; text-decoration: inherit;">Resource<wbr>Group<wbr>Name</a>
@@ -70,8 +67,7 @@ The following arguments are supported:
         <span class="property-indicator"></span>
         <span class="property-type">string</span>
     </dt>
-    <dd>{{% md %}}Name of the resource group in which workspace is located.{{% /md %}}</dd>
-    <dt class="property-required"
+    <dd>{{% md %}}Name of the resource group in which workspace is located.{{% /md %}}</dd><dt class="property-required"
             title="Required">
         <span id="workspacename_csharp">
 <a href="#workspacename_csharp" style="color: inherit; text-decoration: inherit;">Workspace<wbr>Name</a>
@@ -79,14 +75,11 @@ The following arguments are supported:
         <span class="property-indicator"></span>
         <span class="property-type">string</span>
     </dt>
-    <dd>{{% md %}}Name of Azure Machine Learning workspace.{{% /md %}}</dd>
-</dl>
+    <dd>{{% md %}}Name of Azure Machine Learning workspace.{{% /md %}}</dd></dl>
 {{% /choosable %}}
 
 {{% choosable language go %}}
-<dl class="resources-properties">
-
-    <dt class="property-required"
+<dl class="resources-properties"><dt class="property-required"
             title="Required">
         <span id="computename_go">
 <a href="#computename_go" style="color: inherit; text-decoration: inherit;">Compute<wbr>Name</a>
@@ -94,8 +87,7 @@ The following arguments are supported:
         <span class="property-indicator"></span>
         <span class="property-type">string</span>
     </dt>
-    <dd>{{% md %}}Name of the Azure Machine Learning compute.{{% /md %}}</dd>
-    <dt class="property-required"
+    <dd>{{% md %}}Name of the Azure Machine Learning compute.{{% /md %}}</dd><dt class="property-required"
             title="Required">
         <span id="resourcegroupname_go">
 <a href="#resourcegroupname_go" style="color: inherit; text-decoration: inherit;">Resource<wbr>Group<wbr>Name</a>
@@ -103,8 +95,7 @@ The following arguments are supported:
         <span class="property-indicator"></span>
         <span class="property-type">string</span>
     </dt>
-    <dd>{{% md %}}Name of the resource group in which workspace is located.{{% /md %}}</dd>
-    <dt class="property-required"
+    <dd>{{% md %}}Name of the resource group in which workspace is located.{{% /md %}}</dd><dt class="property-required"
             title="Required">
         <span id="workspacename_go">
 <a href="#workspacename_go" style="color: inherit; text-decoration: inherit;">Workspace<wbr>Name</a>
@@ -112,14 +103,11 @@ The following arguments are supported:
         <span class="property-indicator"></span>
         <span class="property-type">string</span>
     </dt>
-    <dd>{{% md %}}Name of Azure Machine Learning workspace.{{% /md %}}</dd>
-</dl>
+    <dd>{{% md %}}Name of Azure Machine Learning workspace.{{% /md %}}</dd></dl>
 {{% /choosable %}}
 
 {{% choosable language nodejs %}}
-<dl class="resources-properties">
-
-    <dt class="property-required"
+<dl class="resources-properties"><dt class="property-required"
             title="Required">
         <span id="computename_nodejs">
 <a href="#computename_nodejs" style="color: inherit; text-decoration: inherit;">compute<wbr>Name</a>
@@ -127,8 +115,7 @@ The following arguments are supported:
         <span class="property-indicator"></span>
         <span class="property-type">string</span>
     </dt>
-    <dd>{{% md %}}Name of the Azure Machine Learning compute.{{% /md %}}</dd>
-    <dt class="property-required"
+    <dd>{{% md %}}Name of the Azure Machine Learning compute.{{% /md %}}</dd><dt class="property-required"
             title="Required">
         <span id="resourcegroupname_nodejs">
 <a href="#resourcegroupname_nodejs" style="color: inherit; text-decoration: inherit;">resource<wbr>Group<wbr>Name</a>
@@ -136,8 +123,7 @@ The following arguments are supported:
         <span class="property-indicator"></span>
         <span class="property-type">string</span>
     </dt>
-    <dd>{{% md %}}Name of the resource group in which workspace is located.{{% /md %}}</dd>
-    <dt class="property-required"
+    <dd>{{% md %}}Name of the resource group in which workspace is located.{{% /md %}}</dd><dt class="property-required"
             title="Required">
         <span id="workspacename_nodejs">
 <a href="#workspacename_nodejs" style="color: inherit; text-decoration: inherit;">workspace<wbr>Name</a>
@@ -145,14 +131,11 @@ The following arguments are supported:
         <span class="property-indicator"></span>
         <span class="property-type">string</span>
     </dt>
-    <dd>{{% md %}}Name of Azure Machine Learning workspace.{{% /md %}}</dd>
-</dl>
+    <dd>{{% md %}}Name of Azure Machine Learning workspace.{{% /md %}}</dd></dl>
 {{% /choosable %}}
 
 {{% choosable language python %}}
-<dl class="resources-properties">
-
-    <dt class="property-required"
+<dl class="resources-properties"><dt class="property-required"
             title="Required">
         <span id="compute_name_python">
 <a href="#compute_name_python" style="color: inherit; text-decoration: inherit;">compute_<wbr>name</a>
@@ -160,8 +143,7 @@ The following arguments are supported:
         <span class="property-indicator"></span>
         <span class="property-type">str</span>
     </dt>
-    <dd>{{% md %}}Name of the Azure Machine Learning compute.{{% /md %}}</dd>
-    <dt class="property-required"
+    <dd>{{% md %}}Name of the Azure Machine Learning compute.{{% /md %}}</dd><dt class="property-required"
             title="Required">
         <span id="resource_group_name_python">
 <a href="#resource_group_name_python" style="color: inherit; text-decoration: inherit;">resource_<wbr>group_<wbr>name</a>
@@ -169,8 +151,7 @@ The following arguments are supported:
         <span class="property-indicator"></span>
         <span class="property-type">str</span>
     </dt>
-    <dd>{{% md %}}Name of the resource group in which workspace is located.{{% /md %}}</dd>
-    <dt class="property-required"
+    <dd>{{% md %}}Name of the resource group in which workspace is located.{{% /md %}}</dd><dt class="property-required"
             title="Required">
         <span id="workspace_name_python">
 <a href="#workspace_name_python" style="color: inherit; text-decoration: inherit;">workspace_<wbr>name</a>
@@ -178,8 +159,7 @@ The following arguments are supported:
         <span class="property-indicator"></span>
         <span class="property-type">str</span>
     </dt>
-    <dd>{{% md %}}Name of Azure Machine Learning workspace.{{% /md %}}</dd>
-</dl>
+    <dd>{{% md %}}Name of Azure Machine Learning workspace.{{% /md %}}</dd></dl>
 {{% /choosable %}}
 
 
@@ -192,9 +172,7 @@ The following output properties are available:
 
 
 {{% choosable language csharp %}}
-<dl class="resources-properties">
-
-    <dt class="property-"
+<dl class="resources-properties"><dt class="property-"
             title="">
         <span id="id_csharp">
 <a href="#id_csharp" style="color: inherit; text-decoration: inherit;">Id</a>
@@ -202,8 +180,7 @@ The following output properties are available:
         <span class="property-indicator"></span>
         <span class="property-type">string</span>
     </dt>
-    <dd>{{% md %}}Specifies the resource ID.{{% /md %}}</dd>
-    <dt class="property-"
+    <dd>{{% md %}}Specifies the resource ID.{{% /md %}}</dd><dt class="property-"
             title="">
         <span id="name_csharp">
 <a href="#name_csharp" style="color: inherit; text-decoration: inherit;">Name</a>
@@ -211,8 +188,7 @@ The following output properties are available:
         <span class="property-indicator"></span>
         <span class="property-type">string</span>
     </dt>
-    <dd>{{% md %}}Specifies the name of the resource.{{% /md %}}</dd>
-    <dt class="property-"
+    <dd>{{% md %}}Specifies the name of the resource.{{% /md %}}</dd><dt class="property-"
             title="">
         <span id="properties_csharp">
 <a href="#properties_csharp" style="color: inherit; text-decoration: inherit;">Properties</a>
@@ -220,8 +196,7 @@ The following output properties are available:
         <span class="property-indicator"></span>
         <span class="property-type"><a href="#aksresponse">Pulumi.<wbr>Azure<wbr>Native.<wbr>Machine<wbr>Learning<wbr>Services.<wbr>Outputs.<wbr>AKSResponse</a> | <a href="#amlcomputeresponse">Pulumi.<wbr>Azure<wbr>Native.<wbr>Machine<wbr>Learning<wbr>Services.<wbr>Outputs.<wbr>Aml<wbr>Compute<wbr>Response</a> | <a href="#computeinstanceresponse">Pulumi.<wbr>Azure<wbr>Native.<wbr>Machine<wbr>Learning<wbr>Services.<wbr>Outputs.<wbr>Compute<wbr>Instance<wbr>Response</a> | <a href="#datafactoryresponse">Pulumi.<wbr>Azure<wbr>Native.<wbr>Machine<wbr>Learning<wbr>Services.<wbr>Outputs.<wbr>Data<wbr>Factory<wbr>Response</a> | <a href="#datalakeanalyticsresponse">Pulumi.<wbr>Azure<wbr>Native.<wbr>Machine<wbr>Learning<wbr>Services.<wbr>Outputs.<wbr>Data<wbr>Lake<wbr>Analytics<wbr>Response</a> | <a href="#databricksresponse">Pulumi.<wbr>Azure<wbr>Native.<wbr>Machine<wbr>Learning<wbr>Services.<wbr>Outputs.<wbr>Databricks<wbr>Response</a> | <a href="#hdinsightresponse">Pulumi.<wbr>Azure<wbr>Native.<wbr>Machine<wbr>Learning<wbr>Services.<wbr>Outputs.<wbr>HDInsight<wbr>Response</a> | <a href="#virtualmachineresponse">Pulumi.<wbr>Azure<wbr>Native.<wbr>Machine<wbr>Learning<wbr>Services.<wbr>Outputs.<wbr>Virtual<wbr>Machine<wbr>Response</a></span>
     </dt>
-    <dd>{{% md %}}Compute properties{{% /md %}}</dd>
-    <dt class="property-"
+    <dd>{{% md %}}Compute properties{{% /md %}}</dd><dt class="property-"
             title="">
         <span id="systemdata_csharp">
 <a href="#systemdata_csharp" style="color: inherit; text-decoration: inherit;">System<wbr>Data</a>
@@ -229,8 +204,7 @@ The following output properties are available:
         <span class="property-indicator"></span>
         <span class="property-type"><a href="#systemdataresponse">Pulumi.<wbr>Azure<wbr>Native.<wbr>Machine<wbr>Learning<wbr>Services.<wbr>Outputs.<wbr>System<wbr>Data<wbr>Response</a></span>
     </dt>
-    <dd>{{% md %}}Read only system data{{% /md %}}</dd>
-    <dt class="property-"
+    <dd>{{% md %}}Read only system data{{% /md %}}</dd><dt class="property-"
             title="">
         <span id="type_csharp">
 <a href="#type_csharp" style="color: inherit; text-decoration: inherit;">Type</a>
@@ -238,8 +212,7 @@ The following output properties are available:
         <span class="property-indicator"></span>
         <span class="property-type">string</span>
     </dt>
-    <dd>{{% md %}}Specifies the type of the resource.{{% /md %}}</dd>
-    <dt class="property-"
+    <dd>{{% md %}}Specifies the type of the resource.{{% /md %}}</dd><dt class="property-"
             title="">
         <span id="identity_csharp">
 <a href="#identity_csharp" style="color: inherit; text-decoration: inherit;">Identity</a>
@@ -247,8 +220,7 @@ The following output properties are available:
         <span class="property-indicator"></span>
         <span class="property-type"><a href="#identityresponse">Pulumi.<wbr>Azure<wbr>Native.<wbr>Machine<wbr>Learning<wbr>Services.<wbr>Outputs.<wbr>Identity<wbr>Response</a></span>
     </dt>
-    <dd>{{% md %}}The identity of the resource.{{% /md %}}</dd>
-    <dt class="property-"
+    <dd>{{% md %}}The identity of the resource.{{% /md %}}</dd><dt class="property-"
             title="">
         <span id="location_csharp">
 <a href="#location_csharp" style="color: inherit; text-decoration: inherit;">Location</a>
@@ -256,8 +228,7 @@ The following output properties are available:
         <span class="property-indicator"></span>
         <span class="property-type">string</span>
     </dt>
-    <dd>{{% md %}}Specifies the location of the resource.{{% /md %}}</dd>
-    <dt class="property-"
+    <dd>{{% md %}}Specifies the location of the resource.{{% /md %}}</dd><dt class="property-"
             title="">
         <span id="sku_csharp">
 <a href="#sku_csharp" style="color: inherit; text-decoration: inherit;">Sku</a>
@@ -265,8 +236,7 @@ The following output properties are available:
         <span class="property-indicator"></span>
         <span class="property-type"><a href="#skuresponse">Pulumi.<wbr>Azure<wbr>Native.<wbr>Machine<wbr>Learning<wbr>Services.<wbr>Outputs.<wbr>Sku<wbr>Response</a></span>
     </dt>
-    <dd>{{% md %}}The sku of the workspace.{{% /md %}}</dd>
-    <dt class="property-"
+    <dd>{{% md %}}The sku of the workspace.{{% /md %}}</dd><dt class="property-"
             title="">
         <span id="tags_csharp">
 <a href="#tags_csharp" style="color: inherit; text-decoration: inherit;">Tags</a>
@@ -274,14 +244,11 @@ The following output properties are available:
         <span class="property-indicator"></span>
         <span class="property-type">Dictionary&lt;string, string&gt;</span>
     </dt>
-    <dd>{{% md %}}Contains resource tags defined as key/value pairs.{{% /md %}}</dd>
-</dl>
+    <dd>{{% md %}}Contains resource tags defined as key/value pairs.{{% /md %}}</dd></dl>
 {{% /choosable %}}
 
 {{% choosable language go %}}
-<dl class="resources-properties">
-
-    <dt class="property-"
+<dl class="resources-properties"><dt class="property-"
             title="">
         <span id="id_go">
 <a href="#id_go" style="color: inherit; text-decoration: inherit;">Id</a>
@@ -289,8 +256,7 @@ The following output properties are available:
         <span class="property-indicator"></span>
         <span class="property-type">string</span>
     </dt>
-    <dd>{{% md %}}Specifies the resource ID.{{% /md %}}</dd>
-    <dt class="property-"
+    <dd>{{% md %}}Specifies the resource ID.{{% /md %}}</dd><dt class="property-"
             title="">
         <span id="name_go">
 <a href="#name_go" style="color: inherit; text-decoration: inherit;">Name</a>
@@ -298,8 +264,7 @@ The following output properties are available:
         <span class="property-indicator"></span>
         <span class="property-type">string</span>
     </dt>
-    <dd>{{% md %}}Specifies the name of the resource.{{% /md %}}</dd>
-    <dt class="property-"
+    <dd>{{% md %}}Specifies the name of the resource.{{% /md %}}</dd><dt class="property-"
             title="">
         <span id="properties_go">
 <a href="#properties_go" style="color: inherit; text-decoration: inherit;">Properties</a>
@@ -307,8 +272,7 @@ The following output properties are available:
         <span class="property-indicator"></span>
         <span class="property-type"><a href="#aksresponse">AKSResponse</a> | <a href="#amlcomputeresponse">Aml<wbr>Compute<wbr>Response</a> | <a href="#computeinstanceresponse">Compute<wbr>Instance<wbr>Response</a> | <a href="#datafactoryresponse">Data<wbr>Factory<wbr>Response</a> | <a href="#datalakeanalyticsresponse">Data<wbr>Lake<wbr>Analytics<wbr>Response</a> | <a href="#databricksresponse">Databricks<wbr>Response</a> | <a href="#hdinsightresponse">HDInsight<wbr>Response</a> | <a href="#virtualmachineresponse">Virtual<wbr>Machine<wbr>Response</a></span>
     </dt>
-    <dd>{{% md %}}Compute properties{{% /md %}}</dd>
-    <dt class="property-"
+    <dd>{{% md %}}Compute properties{{% /md %}}</dd><dt class="property-"
             title="">
         <span id="systemdata_go">
 <a href="#systemdata_go" style="color: inherit; text-decoration: inherit;">System<wbr>Data</a>
@@ -316,8 +280,7 @@ The following output properties are available:
         <span class="property-indicator"></span>
         <span class="property-type"><a href="#systemdataresponse">System<wbr>Data<wbr>Response</a></span>
     </dt>
-    <dd>{{% md %}}Read only system data{{% /md %}}</dd>
-    <dt class="property-"
+    <dd>{{% md %}}Read only system data{{% /md %}}</dd><dt class="property-"
             title="">
         <span id="type_go">
 <a href="#type_go" style="color: inherit; text-decoration: inherit;">Type</a>
@@ -325,8 +288,7 @@ The following output properties are available:
         <span class="property-indicator"></span>
         <span class="property-type">string</span>
     </dt>
-    <dd>{{% md %}}Specifies the type of the resource.{{% /md %}}</dd>
-    <dt class="property-"
+    <dd>{{% md %}}Specifies the type of the resource.{{% /md %}}</dd><dt class="property-"
             title="">
         <span id="identity_go">
 <a href="#identity_go" style="color: inherit; text-decoration: inherit;">Identity</a>
@@ -334,8 +296,7 @@ The following output properties are available:
         <span class="property-indicator"></span>
         <span class="property-type"><a href="#identityresponse">Identity<wbr>Response</a></span>
     </dt>
-    <dd>{{% md %}}The identity of the resource.{{% /md %}}</dd>
-    <dt class="property-"
+    <dd>{{% md %}}The identity of the resource.{{% /md %}}</dd><dt class="property-"
             title="">
         <span id="location_go">
 <a href="#location_go" style="color: inherit; text-decoration: inherit;">Location</a>
@@ -343,8 +304,7 @@ The following output properties are available:
         <span class="property-indicator"></span>
         <span class="property-type">string</span>
     </dt>
-    <dd>{{% md %}}Specifies the location of the resource.{{% /md %}}</dd>
-    <dt class="property-"
+    <dd>{{% md %}}Specifies the location of the resource.{{% /md %}}</dd><dt class="property-"
             title="">
         <span id="sku_go">
 <a href="#sku_go" style="color: inherit; text-decoration: inherit;">Sku</a>
@@ -352,8 +312,7 @@ The following output properties are available:
         <span class="property-indicator"></span>
         <span class="property-type"><a href="#skuresponse">Sku<wbr>Response</a></span>
     </dt>
-    <dd>{{% md %}}The sku of the workspace.{{% /md %}}</dd>
-    <dt class="property-"
+    <dd>{{% md %}}The sku of the workspace.{{% /md %}}</dd><dt class="property-"
             title="">
         <span id="tags_go">
 <a href="#tags_go" style="color: inherit; text-decoration: inherit;">Tags</a>
@@ -361,14 +320,11 @@ The following output properties are available:
         <span class="property-indicator"></span>
         <span class="property-type">map[string]string</span>
     </dt>
-    <dd>{{% md %}}Contains resource tags defined as key/value pairs.{{% /md %}}</dd>
-</dl>
+    <dd>{{% md %}}Contains resource tags defined as key/value pairs.{{% /md %}}</dd></dl>
 {{% /choosable %}}
 
 {{% choosable language nodejs %}}
-<dl class="resources-properties">
-
-    <dt class="property-"
+<dl class="resources-properties"><dt class="property-"
             title="">
         <span id="id_nodejs">
 <a href="#id_nodejs" style="color: inherit; text-decoration: inherit;">id</a>
@@ -376,8 +332,7 @@ The following output properties are available:
         <span class="property-indicator"></span>
         <span class="property-type">string</span>
     </dt>
-    <dd>{{% md %}}Specifies the resource ID.{{% /md %}}</dd>
-    <dt class="property-"
+    <dd>{{% md %}}Specifies the resource ID.{{% /md %}}</dd><dt class="property-"
             title="">
         <span id="name_nodejs">
 <a href="#name_nodejs" style="color: inherit; text-decoration: inherit;">name</a>
@@ -385,8 +340,7 @@ The following output properties are available:
         <span class="property-indicator"></span>
         <span class="property-type">string</span>
     </dt>
-    <dd>{{% md %}}Specifies the name of the resource.{{% /md %}}</dd>
-    <dt class="property-"
+    <dd>{{% md %}}Specifies the name of the resource.{{% /md %}}</dd><dt class="property-"
             title="">
         <span id="properties_nodejs">
 <a href="#properties_nodejs" style="color: inherit; text-decoration: inherit;">properties</a>
@@ -394,8 +348,7 @@ The following output properties are available:
         <span class="property-indicator"></span>
         <span class="property-type"><a href="#aksresponse">AKSResponse</a> | <a href="#amlcomputeresponse">Aml<wbr>Compute<wbr>Response</a> | <a href="#computeinstanceresponse">Compute<wbr>Instance<wbr>Response</a> | <a href="#datafactoryresponse">Data<wbr>Factory<wbr>Response</a> | <a href="#datalakeanalyticsresponse">Data<wbr>Lake<wbr>Analytics<wbr>Response</a> | <a href="#databricksresponse">Databricks<wbr>Response</a> | <a href="#hdinsightresponse">HDInsight<wbr>Response</a> | <a href="#virtualmachineresponse">Virtual<wbr>Machine<wbr>Response</a></span>
     </dt>
-    <dd>{{% md %}}Compute properties{{% /md %}}</dd>
-    <dt class="property-"
+    <dd>{{% md %}}Compute properties{{% /md %}}</dd><dt class="property-"
             title="">
         <span id="systemdata_nodejs">
 <a href="#systemdata_nodejs" style="color: inherit; text-decoration: inherit;">system<wbr>Data</a>
@@ -403,8 +356,7 @@ The following output properties are available:
         <span class="property-indicator"></span>
         <span class="property-type"><a href="#systemdataresponse">System<wbr>Data<wbr>Response</a></span>
     </dt>
-    <dd>{{% md %}}Read only system data{{% /md %}}</dd>
-    <dt class="property-"
+    <dd>{{% md %}}Read only system data{{% /md %}}</dd><dt class="property-"
             title="">
         <span id="type_nodejs">
 <a href="#type_nodejs" style="color: inherit; text-decoration: inherit;">type</a>
@@ -412,8 +364,7 @@ The following output properties are available:
         <span class="property-indicator"></span>
         <span class="property-type">string</span>
     </dt>
-    <dd>{{% md %}}Specifies the type of the resource.{{% /md %}}</dd>
-    <dt class="property-"
+    <dd>{{% md %}}Specifies the type of the resource.{{% /md %}}</dd><dt class="property-"
             title="">
         <span id="identity_nodejs">
 <a href="#identity_nodejs" style="color: inherit; text-decoration: inherit;">identity</a>
@@ -421,8 +372,7 @@ The following output properties are available:
         <span class="property-indicator"></span>
         <span class="property-type"><a href="#identityresponse">Identity<wbr>Response</a></span>
     </dt>
-    <dd>{{% md %}}The identity of the resource.{{% /md %}}</dd>
-    <dt class="property-"
+    <dd>{{% md %}}The identity of the resource.{{% /md %}}</dd><dt class="property-"
             title="">
         <span id="location_nodejs">
 <a href="#location_nodejs" style="color: inherit; text-decoration: inherit;">location</a>
@@ -430,8 +380,7 @@ The following output properties are available:
         <span class="property-indicator"></span>
         <span class="property-type">string</span>
     </dt>
-    <dd>{{% md %}}Specifies the location of the resource.{{% /md %}}</dd>
-    <dt class="property-"
+    <dd>{{% md %}}Specifies the location of the resource.{{% /md %}}</dd><dt class="property-"
             title="">
         <span id="sku_nodejs">
 <a href="#sku_nodejs" style="color: inherit; text-decoration: inherit;">sku</a>
@@ -439,8 +388,7 @@ The following output properties are available:
         <span class="property-indicator"></span>
         <span class="property-type"><a href="#skuresponse">Sku<wbr>Response</a></span>
     </dt>
-    <dd>{{% md %}}The sku of the workspace.{{% /md %}}</dd>
-    <dt class="property-"
+    <dd>{{% md %}}The sku of the workspace.{{% /md %}}</dd><dt class="property-"
             title="">
         <span id="tags_nodejs">
 <a href="#tags_nodejs" style="color: inherit; text-decoration: inherit;">tags</a>
@@ -448,14 +396,11 @@ The following output properties are available:
         <span class="property-indicator"></span>
         <span class="property-type">{[key: string]: string}</span>
     </dt>
-    <dd>{{% md %}}Contains resource tags defined as key/value pairs.{{% /md %}}</dd>
-</dl>
+    <dd>{{% md %}}Contains resource tags defined as key/value pairs.{{% /md %}}</dd></dl>
 {{% /choosable %}}
 
 {{% choosable language python %}}
-<dl class="resources-properties">
-
-    <dt class="property-"
+<dl class="resources-properties"><dt class="property-"
             title="">
         <span id="id_python">
 <a href="#id_python" style="color: inherit; text-decoration: inherit;">id</a>
@@ -463,8 +408,7 @@ The following output properties are available:
         <span class="property-indicator"></span>
         <span class="property-type">str</span>
     </dt>
-    <dd>{{% md %}}Specifies the resource ID.{{% /md %}}</dd>
-    <dt class="property-"
+    <dd>{{% md %}}Specifies the resource ID.{{% /md %}}</dd><dt class="property-"
             title="">
         <span id="name_python">
 <a href="#name_python" style="color: inherit; text-decoration: inherit;">name</a>
@@ -472,8 +416,7 @@ The following output properties are available:
         <span class="property-indicator"></span>
         <span class="property-type">str</span>
     </dt>
-    <dd>{{% md %}}Specifies the name of the resource.{{% /md %}}</dd>
-    <dt class="property-"
+    <dd>{{% md %}}Specifies the name of the resource.{{% /md %}}</dd><dt class="property-"
             title="">
         <span id="properties_python">
 <a href="#properties_python" style="color: inherit; text-decoration: inherit;">properties</a>
@@ -481,8 +424,7 @@ The following output properties are available:
         <span class="property-indicator"></span>
         <span class="property-type"><a href="#aksresponse">AKSResponse</a> | <a href="#amlcomputeresponse">Aml<wbr>Compute<wbr>Response</a> | <a href="#computeinstanceresponse">Compute<wbr>Instance<wbr>Response</a> | <a href="#datafactoryresponse">Data<wbr>Factory<wbr>Response</a> | <a href="#datalakeanalyticsresponse">Data<wbr>Lake<wbr>Analytics<wbr>Response</a> | <a href="#databricksresponse">Databricks<wbr>Response</a> | <a href="#hdinsightresponse">HDInsight<wbr>Response</a> | <a href="#virtualmachineresponse">Virtual<wbr>Machine<wbr>Response</a></span>
     </dt>
-    <dd>{{% md %}}Compute properties{{% /md %}}</dd>
-    <dt class="property-"
+    <dd>{{% md %}}Compute properties{{% /md %}}</dd><dt class="property-"
             title="">
         <span id="system_data_python">
 <a href="#system_data_python" style="color: inherit; text-decoration: inherit;">system_<wbr>data</a>
@@ -490,8 +432,7 @@ The following output properties are available:
         <span class="property-indicator"></span>
         <span class="property-type"><a href="#systemdataresponse">System<wbr>Data<wbr>Response</a></span>
     </dt>
-    <dd>{{% md %}}Read only system data{{% /md %}}</dd>
-    <dt class="property-"
+    <dd>{{% md %}}Read only system data{{% /md %}}</dd><dt class="property-"
             title="">
         <span id="type_python">
 <a href="#type_python" style="color: inherit; text-decoration: inherit;">type</a>
@@ -499,8 +440,7 @@ The following output properties are available:
         <span class="property-indicator"></span>
         <span class="property-type">str</span>
     </dt>
-    <dd>{{% md %}}Specifies the type of the resource.{{% /md %}}</dd>
-    <dt class="property-"
+    <dd>{{% md %}}Specifies the type of the resource.{{% /md %}}</dd><dt class="property-"
             title="">
         <span id="identity_python">
 <a href="#identity_python" style="color: inherit; text-decoration: inherit;">identity</a>
@@ -508,8 +448,7 @@ The following output properties are available:
         <span class="property-indicator"></span>
         <span class="property-type"><a href="#identityresponse">Identity<wbr>Response</a></span>
     </dt>
-    <dd>{{% md %}}The identity of the resource.{{% /md %}}</dd>
-    <dt class="property-"
+    <dd>{{% md %}}The identity of the resource.{{% /md %}}</dd><dt class="property-"
             title="">
         <span id="location_python">
 <a href="#location_python" style="color: inherit; text-decoration: inherit;">location</a>
@@ -517,8 +456,7 @@ The following output properties are available:
         <span class="property-indicator"></span>
         <span class="property-type">str</span>
     </dt>
-    <dd>{{% md %}}Specifies the location of the resource.{{% /md %}}</dd>
-    <dt class="property-"
+    <dd>{{% md %}}Specifies the location of the resource.{{% /md %}}</dd><dt class="property-"
             title="">
         <span id="sku_python">
 <a href="#sku_python" style="color: inherit; text-decoration: inherit;">sku</a>
@@ -526,8 +464,7 @@ The following output properties are available:
         <span class="property-indicator"></span>
         <span class="property-type"><a href="#skuresponse">Sku<wbr>Response</a></span>
     </dt>
-    <dd>{{% md %}}The sku of the workspace.{{% /md %}}</dd>
-    <dt class="property-"
+    <dd>{{% md %}}The sku of the workspace.{{% /md %}}</dd><dt class="property-"
             title="">
         <span id="tags_python">
 <a href="#tags_python" style="color: inherit; text-decoration: inherit;">tags</a>
@@ -535,8 +472,7 @@ The following output properties are available:
         <span class="property-indicator"></span>
         <span class="property-type">Mapping[str, str]</span>
     </dt>
-    <dd>{{% md %}}Contains resource tags defined as key/value pairs.{{% /md %}}</dd>
-</dl>
+    <dd>{{% md %}}Contains resource tags defined as key/value pairs.{{% /md %}}</dd></dl>
 {{% /choosable %}}
 
 
@@ -550,9 +486,7 @@ The following output properties are available:
 
 
 {{% choosable language csharp %}}
-<dl class="resources-properties">
-
-    <dt class="property-required"
+<dl class="resources-properties"><dt class="property-required"
             title="Required">
         <span id="isattachedcompute_csharp">
 <a href="#isattachedcompute_csharp" style="color: inherit; text-decoration: inherit;">Is<wbr>Attached<wbr>Compute</a>
@@ -560,8 +494,7 @@ The following output properties are available:
         <span class="property-indicator"></span>
         <span class="property-type">bool</span>
     </dt>
-    <dd>{{% md %}}Indicating whether the compute was provisioned by user and brought from outside if true, or machine learning service provisioned it if false.{{% /md %}}</dd>
-    <dt class="property-required"
+    <dd>{{% md %}}Indicating whether the compute was provisioned by user and brought from outside if true, or machine learning service provisioned it if false.{{% /md %}}</dd><dt class="property-required"
             title="Required">
         <span id="provisioningerrors_csharp">
 <a href="#provisioningerrors_csharp" style="color: inherit; text-decoration: inherit;">Provisioning<wbr>Errors</a>
@@ -569,8 +502,7 @@ The following output properties are available:
         <span class="property-indicator"></span>
         <span class="property-type"><a href="#machinelearningserviceerrorresponse">List&lt;Pulumi.<wbr>Azure<wbr>Native.<wbr>Machine<wbr>Learning<wbr>Services.<wbr>Inputs.<wbr>Machine<wbr>Learning<wbr>Service<wbr>Error<wbr>Response<wbr>Args&gt;</a></span>
     </dt>
-    <dd>{{% md %}}Errors during provisioning{{% /md %}}</dd>
-    <dt class="property-required"
+    <dd>{{% md %}}Errors during provisioning{{% /md %}}</dd><dt class="property-required"
             title="Required">
         <span id="provisioningstate_csharp">
 <a href="#provisioningstate_csharp" style="color: inherit; text-decoration: inherit;">Provisioning<wbr>State</a>
@@ -578,8 +510,7 @@ The following output properties are available:
         <span class="property-indicator"></span>
         <span class="property-type">string</span>
     </dt>
-    <dd>{{% md %}}The provision state of the cluster. Valid values are Unknown, Updating, Provisioning, Succeeded, and Failed.{{% /md %}}</dd>
-    <dt class="property-optional"
+    <dd>{{% md %}}The provision state of the cluster. Valid values are Unknown, Updating, Provisioning, Succeeded, and Failed.{{% /md %}}</dd><dt class="property-optional"
             title="Optional">
         <span id="computelocation_csharp">
 <a href="#computelocation_csharp" style="color: inherit; text-decoration: inherit;">Compute<wbr>Location</a>
@@ -587,8 +518,7 @@ The following output properties are available:
         <span class="property-indicator"></span>
         <span class="property-type">string</span>
     </dt>
-    <dd>{{% md %}}Location for the underlying compute{{% /md %}}</dd>
-    <dt class="property-optional"
+    <dd>{{% md %}}Location for the underlying compute{{% /md %}}</dd><dt class="property-optional"
             title="Optional">
         <span id="description_csharp">
 <a href="#description_csharp" style="color: inherit; text-decoration: inherit;">Description</a>
@@ -596,8 +526,7 @@ The following output properties are available:
         <span class="property-indicator"></span>
         <span class="property-type">string</span>
     </dt>
-    <dd>{{% md %}}The description of the Machine Learning compute.{{% /md %}}</dd>
-    <dt class="property-optional"
+    <dd>{{% md %}}The description of the Machine Learning compute.{{% /md %}}</dd><dt class="property-optional"
             title="Optional">
         <span id="properties_csharp">
 <a href="#properties_csharp" style="color: inherit; text-decoration: inherit;">Properties</a>
@@ -605,8 +534,7 @@ The following output properties are available:
         <span class="property-indicator"></span>
         <span class="property-type"><a href="#aksresponseproperties">Pulumi.<wbr>Azure<wbr>Native.<wbr>Machine<wbr>Learning<wbr>Services.<wbr>Inputs.<wbr>AKSResponse<wbr>Properties<wbr>Args</a></span>
     </dt>
-    <dd>{{% md %}}AKS properties{{% /md %}}</dd>
-    <dt class="property-optional"
+    <dd>{{% md %}}AKS properties{{% /md %}}</dd><dt class="property-optional"
             title="Optional">
         <span id="resourceid_csharp">
 <a href="#resourceid_csharp" style="color: inherit; text-decoration: inherit;">Resource<wbr>Id</a>
@@ -614,14 +542,11 @@ The following output properties are available:
         <span class="property-indicator"></span>
         <span class="property-type">string</span>
     </dt>
-    <dd>{{% md %}}ARM resource id of the underlying compute{{% /md %}}</dd>
-</dl>
+    <dd>{{% md %}}ARM resource id of the underlying compute{{% /md %}}</dd></dl>
 {{% /choosable %}}
 
 {{% choosable language go %}}
-<dl class="resources-properties">
-
-    <dt class="property-required"
+<dl class="resources-properties"><dt class="property-required"
             title="Required">
         <span id="isattachedcompute_go">
 <a href="#isattachedcompute_go" style="color: inherit; text-decoration: inherit;">Is<wbr>Attached<wbr>Compute</a>
@@ -629,8 +554,7 @@ The following output properties are available:
         <span class="property-indicator"></span>
         <span class="property-type">bool</span>
     </dt>
-    <dd>{{% md %}}Indicating whether the compute was provisioned by user and brought from outside if true, or machine learning service provisioned it if false.{{% /md %}}</dd>
-    <dt class="property-required"
+    <dd>{{% md %}}Indicating whether the compute was provisioned by user and brought from outside if true, or machine learning service provisioned it if false.{{% /md %}}</dd><dt class="property-required"
             title="Required">
         <span id="provisioningerrors_go">
 <a href="#provisioningerrors_go" style="color: inherit; text-decoration: inherit;">Provisioning<wbr>Errors</a>
@@ -638,8 +562,7 @@ The following output properties are available:
         <span class="property-indicator"></span>
         <span class="property-type"><a href="#machinelearningserviceerrorresponse">[]Machine<wbr>Learning<wbr>Service<wbr>Error<wbr>Response</a></span>
     </dt>
-    <dd>{{% md %}}Errors during provisioning{{% /md %}}</dd>
-    <dt class="property-required"
+    <dd>{{% md %}}Errors during provisioning{{% /md %}}</dd><dt class="property-required"
             title="Required">
         <span id="provisioningstate_go">
 <a href="#provisioningstate_go" style="color: inherit; text-decoration: inherit;">Provisioning<wbr>State</a>
@@ -647,8 +570,7 @@ The following output properties are available:
         <span class="property-indicator"></span>
         <span class="property-type">string</span>
     </dt>
-    <dd>{{% md %}}The provision state of the cluster. Valid values are Unknown, Updating, Provisioning, Succeeded, and Failed.{{% /md %}}</dd>
-    <dt class="property-optional"
+    <dd>{{% md %}}The provision state of the cluster. Valid values are Unknown, Updating, Provisioning, Succeeded, and Failed.{{% /md %}}</dd><dt class="property-optional"
             title="Optional">
         <span id="computelocation_go">
 <a href="#computelocation_go" style="color: inherit; text-decoration: inherit;">Compute<wbr>Location</a>
@@ -656,8 +578,7 @@ The following output properties are available:
         <span class="property-indicator"></span>
         <span class="property-type">string</span>
     </dt>
-    <dd>{{% md %}}Location for the underlying compute{{% /md %}}</dd>
-    <dt class="property-optional"
+    <dd>{{% md %}}Location for the underlying compute{{% /md %}}</dd><dt class="property-optional"
             title="Optional">
         <span id="description_go">
 <a href="#description_go" style="color: inherit; text-decoration: inherit;">Description</a>
@@ -665,8 +586,7 @@ The following output properties are available:
         <span class="property-indicator"></span>
         <span class="property-type">string</span>
     </dt>
-    <dd>{{% md %}}The description of the Machine Learning compute.{{% /md %}}</dd>
-    <dt class="property-optional"
+    <dd>{{% md %}}The description of the Machine Learning compute.{{% /md %}}</dd><dt class="property-optional"
             title="Optional">
         <span id="properties_go">
 <a href="#properties_go" style="color: inherit; text-decoration: inherit;">Properties</a>
@@ -674,8 +594,7 @@ The following output properties are available:
         <span class="property-indicator"></span>
         <span class="property-type"><a href="#aksresponseproperties">AKSResponse<wbr>Properties</a></span>
     </dt>
-    <dd>{{% md %}}AKS properties{{% /md %}}</dd>
-    <dt class="property-optional"
+    <dd>{{% md %}}AKS properties{{% /md %}}</dd><dt class="property-optional"
             title="Optional">
         <span id="resourceid_go">
 <a href="#resourceid_go" style="color: inherit; text-decoration: inherit;">Resource<wbr>Id</a>
@@ -683,14 +602,11 @@ The following output properties are available:
         <span class="property-indicator"></span>
         <span class="property-type">string</span>
     </dt>
-    <dd>{{% md %}}ARM resource id of the underlying compute{{% /md %}}</dd>
-</dl>
+    <dd>{{% md %}}ARM resource id of the underlying compute{{% /md %}}</dd></dl>
 {{% /choosable %}}
 
 {{% choosable language nodejs %}}
-<dl class="resources-properties">
-
-    <dt class="property-required"
+<dl class="resources-properties"><dt class="property-required"
             title="Required">
         <span id="isattachedcompute_nodejs">
 <a href="#isattachedcompute_nodejs" style="color: inherit; text-decoration: inherit;">is<wbr>Attached<wbr>Compute</a>
@@ -698,8 +614,7 @@ The following output properties are available:
         <span class="property-indicator"></span>
         <span class="property-type">boolean</span>
     </dt>
-    <dd>{{% md %}}Indicating whether the compute was provisioned by user and brought from outside if true, or machine learning service provisioned it if false.{{% /md %}}</dd>
-    <dt class="property-required"
+    <dd>{{% md %}}Indicating whether the compute was provisioned by user and brought from outside if true, or machine learning service provisioned it if false.{{% /md %}}</dd><dt class="property-required"
             title="Required">
         <span id="provisioningerrors_nodejs">
 <a href="#provisioningerrors_nodejs" style="color: inherit; text-decoration: inherit;">provisioning<wbr>Errors</a>
@@ -707,8 +622,7 @@ The following output properties are available:
         <span class="property-indicator"></span>
         <span class="property-type"><a href="#machinelearningserviceerrorresponse">Machine<wbr>Learning<wbr>Service<wbr>Error<wbr>Response[]</a></span>
     </dt>
-    <dd>{{% md %}}Errors during provisioning{{% /md %}}</dd>
-    <dt class="property-required"
+    <dd>{{% md %}}Errors during provisioning{{% /md %}}</dd><dt class="property-required"
             title="Required">
         <span id="provisioningstate_nodejs">
 <a href="#provisioningstate_nodejs" style="color: inherit; text-decoration: inherit;">provisioning<wbr>State</a>
@@ -716,8 +630,7 @@ The following output properties are available:
         <span class="property-indicator"></span>
         <span class="property-type">string</span>
     </dt>
-    <dd>{{% md %}}The provision state of the cluster. Valid values are Unknown, Updating, Provisioning, Succeeded, and Failed.{{% /md %}}</dd>
-    <dt class="property-optional"
+    <dd>{{% md %}}The provision state of the cluster. Valid values are Unknown, Updating, Provisioning, Succeeded, and Failed.{{% /md %}}</dd><dt class="property-optional"
             title="Optional">
         <span id="computelocation_nodejs">
 <a href="#computelocation_nodejs" style="color: inherit; text-decoration: inherit;">compute<wbr>Location</a>
@@ -725,8 +638,7 @@ The following output properties are available:
         <span class="property-indicator"></span>
         <span class="property-type">string</span>
     </dt>
-    <dd>{{% md %}}Location for the underlying compute{{% /md %}}</dd>
-    <dt class="property-optional"
+    <dd>{{% md %}}Location for the underlying compute{{% /md %}}</dd><dt class="property-optional"
             title="Optional">
         <span id="description_nodejs">
 <a href="#description_nodejs" style="color: inherit; text-decoration: inherit;">description</a>
@@ -734,8 +646,7 @@ The following output properties are available:
         <span class="property-indicator"></span>
         <span class="property-type">string</span>
     </dt>
-    <dd>{{% md %}}The description of the Machine Learning compute.{{% /md %}}</dd>
-    <dt class="property-optional"
+    <dd>{{% md %}}The description of the Machine Learning compute.{{% /md %}}</dd><dt class="property-optional"
             title="Optional">
         <span id="properties_nodejs">
 <a href="#properties_nodejs" style="color: inherit; text-decoration: inherit;">properties</a>
@@ -743,8 +654,7 @@ The following output properties are available:
         <span class="property-indicator"></span>
         <span class="property-type"><a href="#aksresponseproperties">AKSResponse<wbr>Properties</a></span>
     </dt>
-    <dd>{{% md %}}AKS properties{{% /md %}}</dd>
-    <dt class="property-optional"
+    <dd>{{% md %}}AKS properties{{% /md %}}</dd><dt class="property-optional"
             title="Optional">
         <span id="resourceid_nodejs">
 <a href="#resourceid_nodejs" style="color: inherit; text-decoration: inherit;">resource<wbr>Id</a>
@@ -752,14 +662,11 @@ The following output properties are available:
         <span class="property-indicator"></span>
         <span class="property-type">string</span>
     </dt>
-    <dd>{{% md %}}ARM resource id of the underlying compute{{% /md %}}</dd>
-</dl>
+    <dd>{{% md %}}ARM resource id of the underlying compute{{% /md %}}</dd></dl>
 {{% /choosable %}}
 
 {{% choosable language python %}}
-<dl class="resources-properties">
-
-    <dt class="property-required"
+<dl class="resources-properties"><dt class="property-required"
             title="Required">
         <span id="is_attached_compute_python">
 <a href="#is_attached_compute_python" style="color: inherit; text-decoration: inherit;">is_<wbr>attached_<wbr>compute</a>
@@ -767,8 +674,7 @@ The following output properties are available:
         <span class="property-indicator"></span>
         <span class="property-type">bool</span>
     </dt>
-    <dd>{{% md %}}Indicating whether the compute was provisioned by user and brought from outside if true, or machine learning service provisioned it if false.{{% /md %}}</dd>
-    <dt class="property-required"
+    <dd>{{% md %}}Indicating whether the compute was provisioned by user and brought from outside if true, or machine learning service provisioned it if false.{{% /md %}}</dd><dt class="property-required"
             title="Required">
         <span id="provisioning_errors_python">
 <a href="#provisioning_errors_python" style="color: inherit; text-decoration: inherit;">provisioning_<wbr>errors</a>
@@ -776,8 +682,7 @@ The following output properties are available:
         <span class="property-indicator"></span>
         <span class="property-type"><a href="#machinelearningserviceerrorresponse">Sequence[Machine<wbr>Learning<wbr>Service<wbr>Error<wbr>Response<wbr>Args]</a></span>
     </dt>
-    <dd>{{% md %}}Errors during provisioning{{% /md %}}</dd>
-    <dt class="property-required"
+    <dd>{{% md %}}Errors during provisioning{{% /md %}}</dd><dt class="property-required"
             title="Required">
         <span id="provisioning_state_python">
 <a href="#provisioning_state_python" style="color: inherit; text-decoration: inherit;">provisioning_<wbr>state</a>
@@ -785,8 +690,7 @@ The following output properties are available:
         <span class="property-indicator"></span>
         <span class="property-type">str</span>
     </dt>
-    <dd>{{% md %}}The provision state of the cluster. Valid values are Unknown, Updating, Provisioning, Succeeded, and Failed.{{% /md %}}</dd>
-    <dt class="property-optional"
+    <dd>{{% md %}}The provision state of the cluster. Valid values are Unknown, Updating, Provisioning, Succeeded, and Failed.{{% /md %}}</dd><dt class="property-optional"
             title="Optional">
         <span id="compute_location_python">
 <a href="#compute_location_python" style="color: inherit; text-decoration: inherit;">compute_<wbr>location</a>
@@ -794,8 +698,7 @@ The following output properties are available:
         <span class="property-indicator"></span>
         <span class="property-type">str</span>
     </dt>
-    <dd>{{% md %}}Location for the underlying compute{{% /md %}}</dd>
-    <dt class="property-optional"
+    <dd>{{% md %}}Location for the underlying compute{{% /md %}}</dd><dt class="property-optional"
             title="Optional">
         <span id="description_python">
 <a href="#description_python" style="color: inherit; text-decoration: inherit;">description</a>
@@ -803,8 +706,7 @@ The following output properties are available:
         <span class="property-indicator"></span>
         <span class="property-type">str</span>
     </dt>
-    <dd>{{% md %}}The description of the Machine Learning compute.{{% /md %}}</dd>
-    <dt class="property-optional"
+    <dd>{{% md %}}The description of the Machine Learning compute.{{% /md %}}</dd><dt class="property-optional"
             title="Optional">
         <span id="properties_python">
 <a href="#properties_python" style="color: inherit; text-decoration: inherit;">properties</a>
@@ -812,8 +714,7 @@ The following output properties are available:
         <span class="property-indicator"></span>
         <span class="property-type"><a href="#aksresponseproperties">AKSResponse<wbr>Properties<wbr>Args</a></span>
     </dt>
-    <dd>{{% md %}}AKS properties{{% /md %}}</dd>
-    <dt class="property-optional"
+    <dd>{{% md %}}AKS properties{{% /md %}}</dd><dt class="property-optional"
             title="Optional">
         <span id="resource_id_python">
 <a href="#resource_id_python" style="color: inherit; text-decoration: inherit;">resource_<wbr>id</a>
@@ -821,8 +722,7 @@ The following output properties are available:
         <span class="property-indicator"></span>
         <span class="property-type">str</span>
     </dt>
-    <dd>{{% md %}}ARM resource id of the underlying compute{{% /md %}}</dd>
-</dl>
+    <dd>{{% md %}}ARM resource id of the underlying compute{{% /md %}}</dd></dl>
 {{% /choosable %}}
 
 <h4 id="aksresponseproperties">AKSResponse<wbr>Properties</h4>
@@ -830,9 +730,7 @@ The following output properties are available:
 
 
 {{% choosable language csharp %}}
-<dl class="resources-properties">
-
-    <dt class="property-required"
+<dl class="resources-properties"><dt class="property-required"
             title="Required">
         <span id="systemservices_csharp">
 <a href="#systemservices_csharp" style="color: inherit; text-decoration: inherit;">System<wbr>Services</a>
@@ -840,8 +738,7 @@ The following output properties are available:
         <span class="property-indicator"></span>
         <span class="property-type"><a href="#systemserviceresponse">List&lt;Pulumi.<wbr>Azure<wbr>Native.<wbr>Machine<wbr>Learning<wbr>Services.<wbr>Inputs.<wbr>System<wbr>Service<wbr>Response<wbr>Args&gt;</a></span>
     </dt>
-    <dd>{{% md %}}System services{{% /md %}}</dd>
-    <dt class="property-optional"
+    <dd>{{% md %}}System services{{% /md %}}</dd><dt class="property-optional"
             title="Optional">
         <span id="agentcount_csharp">
 <a href="#agentcount_csharp" style="color: inherit; text-decoration: inherit;">Agent<wbr>Count</a>
@@ -849,8 +746,7 @@ The following output properties are available:
         <span class="property-indicator"></span>
         <span class="property-type">int</span>
     </dt>
-    <dd>{{% md %}}Number of agents{{% /md %}}</dd>
-    <dt class="property-optional"
+    <dd>{{% md %}}Number of agents{{% /md %}}</dd><dt class="property-optional"
             title="Optional">
         <span id="agentvmsize_csharp">
 <a href="#agentvmsize_csharp" style="color: inherit; text-decoration: inherit;">Agent<wbr>Vm<wbr>Size</a>
@@ -858,8 +754,7 @@ The following output properties are available:
         <span class="property-indicator"></span>
         <span class="property-type">string</span>
     </dt>
-    <dd>{{% md %}}Agent virtual machine size{{% /md %}}</dd>
-    <dt class="property-optional"
+    <dd>{{% md %}}Agent virtual machine size{{% /md %}}</dd><dt class="property-optional"
             title="Optional">
         <span id="aksnetworkingconfiguration_csharp">
 <a href="#aksnetworkingconfiguration_csharp" style="color: inherit; text-decoration: inherit;">Aks<wbr>Networking<wbr>Configuration</a>
@@ -867,8 +762,7 @@ The following output properties are available:
         <span class="property-indicator"></span>
         <span class="property-type"><a href="#aksnetworkingconfigurationresponse">Pulumi.<wbr>Azure<wbr>Native.<wbr>Machine<wbr>Learning<wbr>Services.<wbr>Inputs.<wbr>Aks<wbr>Networking<wbr>Configuration<wbr>Response<wbr>Args</a></span>
     </dt>
-    <dd>{{% md %}}AKS networking configuration for vnet{{% /md %}}</dd>
-    <dt class="property-optional"
+    <dd>{{% md %}}AKS networking configuration for vnet{{% /md %}}</dd><dt class="property-optional"
             title="Optional">
         <span id="clusterfqdn_csharp">
 <a href="#clusterfqdn_csharp" style="color: inherit; text-decoration: inherit;">Cluster<wbr>Fqdn</a>
@@ -876,8 +770,7 @@ The following output properties are available:
         <span class="property-indicator"></span>
         <span class="property-type">string</span>
     </dt>
-    <dd>{{% md %}}Cluster full qualified domain name{{% /md %}}</dd>
-    <dt class="property-optional"
+    <dd>{{% md %}}Cluster full qualified domain name{{% /md %}}</dd><dt class="property-optional"
             title="Optional">
         <span id="clusterpurpose_csharp">
 <a href="#clusterpurpose_csharp" style="color: inherit; text-decoration: inherit;">Cluster<wbr>Purpose</a>
@@ -885,8 +778,7 @@ The following output properties are available:
         <span class="property-indicator"></span>
         <span class="property-type">string</span>
     </dt>
-    <dd>{{% md %}}Intended usage of the cluster{{% /md %}}</dd>
-    <dt class="property-optional"
+    <dd>{{% md %}}Intended usage of the cluster{{% /md %}}</dd><dt class="property-optional"
             title="Optional">
         <span id="sslconfiguration_csharp">
 <a href="#sslconfiguration_csharp" style="color: inherit; text-decoration: inherit;">Ssl<wbr>Configuration</a>
@@ -894,14 +786,11 @@ The following output properties are available:
         <span class="property-indicator"></span>
         <span class="property-type"><a href="#sslconfigurationresponse">Pulumi.<wbr>Azure<wbr>Native.<wbr>Machine<wbr>Learning<wbr>Services.<wbr>Inputs.<wbr>Ssl<wbr>Configuration<wbr>Response<wbr>Args</a></span>
     </dt>
-    <dd>{{% md %}}SSL configuration{{% /md %}}</dd>
-</dl>
+    <dd>{{% md %}}SSL configuration{{% /md %}}</dd></dl>
 {{% /choosable %}}
 
 {{% choosable language go %}}
-<dl class="resources-properties">
-
-    <dt class="property-required"
+<dl class="resources-properties"><dt class="property-required"
             title="Required">
         <span id="systemservices_go">
 <a href="#systemservices_go" style="color: inherit; text-decoration: inherit;">System<wbr>Services</a>
@@ -909,8 +798,7 @@ The following output properties are available:
         <span class="property-indicator"></span>
         <span class="property-type"><a href="#systemserviceresponse">[]System<wbr>Service<wbr>Response</a></span>
     </dt>
-    <dd>{{% md %}}System services{{% /md %}}</dd>
-    <dt class="property-optional"
+    <dd>{{% md %}}System services{{% /md %}}</dd><dt class="property-optional"
             title="Optional">
         <span id="agentcount_go">
 <a href="#agentcount_go" style="color: inherit; text-decoration: inherit;">Agent<wbr>Count</a>
@@ -918,8 +806,7 @@ The following output properties are available:
         <span class="property-indicator"></span>
         <span class="property-type">int</span>
     </dt>
-    <dd>{{% md %}}Number of agents{{% /md %}}</dd>
-    <dt class="property-optional"
+    <dd>{{% md %}}Number of agents{{% /md %}}</dd><dt class="property-optional"
             title="Optional">
         <span id="agentvmsize_go">
 <a href="#agentvmsize_go" style="color: inherit; text-decoration: inherit;">Agent<wbr>Vm<wbr>Size</a>
@@ -927,8 +814,7 @@ The following output properties are available:
         <span class="property-indicator"></span>
         <span class="property-type">string</span>
     </dt>
-    <dd>{{% md %}}Agent virtual machine size{{% /md %}}</dd>
-    <dt class="property-optional"
+    <dd>{{% md %}}Agent virtual machine size{{% /md %}}</dd><dt class="property-optional"
             title="Optional">
         <span id="aksnetworkingconfiguration_go">
 <a href="#aksnetworkingconfiguration_go" style="color: inherit; text-decoration: inherit;">Aks<wbr>Networking<wbr>Configuration</a>
@@ -936,8 +822,7 @@ The following output properties are available:
         <span class="property-indicator"></span>
         <span class="property-type"><a href="#aksnetworkingconfigurationresponse">Aks<wbr>Networking<wbr>Configuration<wbr>Response</a></span>
     </dt>
-    <dd>{{% md %}}AKS networking configuration for vnet{{% /md %}}</dd>
-    <dt class="property-optional"
+    <dd>{{% md %}}AKS networking configuration for vnet{{% /md %}}</dd><dt class="property-optional"
             title="Optional">
         <span id="clusterfqdn_go">
 <a href="#clusterfqdn_go" style="color: inherit; text-decoration: inherit;">Cluster<wbr>Fqdn</a>
@@ -945,8 +830,7 @@ The following output properties are available:
         <span class="property-indicator"></span>
         <span class="property-type">string</span>
     </dt>
-    <dd>{{% md %}}Cluster full qualified domain name{{% /md %}}</dd>
-    <dt class="property-optional"
+    <dd>{{% md %}}Cluster full qualified domain name{{% /md %}}</dd><dt class="property-optional"
             title="Optional">
         <span id="clusterpurpose_go">
 <a href="#clusterpurpose_go" style="color: inherit; text-decoration: inherit;">Cluster<wbr>Purpose</a>
@@ -954,8 +838,7 @@ The following output properties are available:
         <span class="property-indicator"></span>
         <span class="property-type">string</span>
     </dt>
-    <dd>{{% md %}}Intended usage of the cluster{{% /md %}}</dd>
-    <dt class="property-optional"
+    <dd>{{% md %}}Intended usage of the cluster{{% /md %}}</dd><dt class="property-optional"
             title="Optional">
         <span id="sslconfiguration_go">
 <a href="#sslconfiguration_go" style="color: inherit; text-decoration: inherit;">Ssl<wbr>Configuration</a>
@@ -963,14 +846,11 @@ The following output properties are available:
         <span class="property-indicator"></span>
         <span class="property-type"><a href="#sslconfigurationresponse">Ssl<wbr>Configuration<wbr>Response</a></span>
     </dt>
-    <dd>{{% md %}}SSL configuration{{% /md %}}</dd>
-</dl>
+    <dd>{{% md %}}SSL configuration{{% /md %}}</dd></dl>
 {{% /choosable %}}
 
 {{% choosable language nodejs %}}
-<dl class="resources-properties">
-
-    <dt class="property-required"
+<dl class="resources-properties"><dt class="property-required"
             title="Required">
         <span id="systemservices_nodejs">
 <a href="#systemservices_nodejs" style="color: inherit; text-decoration: inherit;">system<wbr>Services</a>
@@ -978,8 +858,7 @@ The following output properties are available:
         <span class="property-indicator"></span>
         <span class="property-type"><a href="#systemserviceresponse">System<wbr>Service<wbr>Response[]</a></span>
     </dt>
-    <dd>{{% md %}}System services{{% /md %}}</dd>
-    <dt class="property-optional"
+    <dd>{{% md %}}System services{{% /md %}}</dd><dt class="property-optional"
             title="Optional">
         <span id="agentcount_nodejs">
 <a href="#agentcount_nodejs" style="color: inherit; text-decoration: inherit;">agent<wbr>Count</a>
@@ -987,8 +866,7 @@ The following output properties are available:
         <span class="property-indicator"></span>
         <span class="property-type">number</span>
     </dt>
-    <dd>{{% md %}}Number of agents{{% /md %}}</dd>
-    <dt class="property-optional"
+    <dd>{{% md %}}Number of agents{{% /md %}}</dd><dt class="property-optional"
             title="Optional">
         <span id="agentvmsize_nodejs">
 <a href="#agentvmsize_nodejs" style="color: inherit; text-decoration: inherit;">agent<wbr>Vm<wbr>Size</a>
@@ -996,8 +874,7 @@ The following output properties are available:
         <span class="property-indicator"></span>
         <span class="property-type">string</span>
     </dt>
-    <dd>{{% md %}}Agent virtual machine size{{% /md %}}</dd>
-    <dt class="property-optional"
+    <dd>{{% md %}}Agent virtual machine size{{% /md %}}</dd><dt class="property-optional"
             title="Optional">
         <span id="aksnetworkingconfiguration_nodejs">
 <a href="#aksnetworkingconfiguration_nodejs" style="color: inherit; text-decoration: inherit;">aks<wbr>Networking<wbr>Configuration</a>
@@ -1005,8 +882,7 @@ The following output properties are available:
         <span class="property-indicator"></span>
         <span class="property-type"><a href="#aksnetworkingconfigurationresponse">Aks<wbr>Networking<wbr>Configuration<wbr>Response</a></span>
     </dt>
-    <dd>{{% md %}}AKS networking configuration for vnet{{% /md %}}</dd>
-    <dt class="property-optional"
+    <dd>{{% md %}}AKS networking configuration for vnet{{% /md %}}</dd><dt class="property-optional"
             title="Optional">
         <span id="clusterfqdn_nodejs">
 <a href="#clusterfqdn_nodejs" style="color: inherit; text-decoration: inherit;">cluster<wbr>Fqdn</a>
@@ -1014,8 +890,7 @@ The following output properties are available:
         <span class="property-indicator"></span>
         <span class="property-type">string</span>
     </dt>
-    <dd>{{% md %}}Cluster full qualified domain name{{% /md %}}</dd>
-    <dt class="property-optional"
+    <dd>{{% md %}}Cluster full qualified domain name{{% /md %}}</dd><dt class="property-optional"
             title="Optional">
         <span id="clusterpurpose_nodejs">
 <a href="#clusterpurpose_nodejs" style="color: inherit; text-decoration: inherit;">cluster<wbr>Purpose</a>
@@ -1023,8 +898,7 @@ The following output properties are available:
         <span class="property-indicator"></span>
         <span class="property-type">string</span>
     </dt>
-    <dd>{{% md %}}Intended usage of the cluster{{% /md %}}</dd>
-    <dt class="property-optional"
+    <dd>{{% md %}}Intended usage of the cluster{{% /md %}}</dd><dt class="property-optional"
             title="Optional">
         <span id="sslconfiguration_nodejs">
 <a href="#sslconfiguration_nodejs" style="color: inherit; text-decoration: inherit;">ssl<wbr>Configuration</a>
@@ -1032,14 +906,11 @@ The following output properties are available:
         <span class="property-indicator"></span>
         <span class="property-type"><a href="#sslconfigurationresponse">Ssl<wbr>Configuration<wbr>Response</a></span>
     </dt>
-    <dd>{{% md %}}SSL configuration{{% /md %}}</dd>
-</dl>
+    <dd>{{% md %}}SSL configuration{{% /md %}}</dd></dl>
 {{% /choosable %}}
 
 {{% choosable language python %}}
-<dl class="resources-properties">
-
-    <dt class="property-required"
+<dl class="resources-properties"><dt class="property-required"
             title="Required">
         <span id="system_services_python">
 <a href="#system_services_python" style="color: inherit; text-decoration: inherit;">system_<wbr>services</a>
@@ -1047,8 +918,7 @@ The following output properties are available:
         <span class="property-indicator"></span>
         <span class="property-type"><a href="#systemserviceresponse">Sequence[System<wbr>Service<wbr>Response<wbr>Args]</a></span>
     </dt>
-    <dd>{{% md %}}System services{{% /md %}}</dd>
-    <dt class="property-optional"
+    <dd>{{% md %}}System services{{% /md %}}</dd><dt class="property-optional"
             title="Optional">
         <span id="agent_count_python">
 <a href="#agent_count_python" style="color: inherit; text-decoration: inherit;">agent_<wbr>count</a>
@@ -1056,8 +926,7 @@ The following output properties are available:
         <span class="property-indicator"></span>
         <span class="property-type">int</span>
     </dt>
-    <dd>{{% md %}}Number of agents{{% /md %}}</dd>
-    <dt class="property-optional"
+    <dd>{{% md %}}Number of agents{{% /md %}}</dd><dt class="property-optional"
             title="Optional">
         <span id="agent_vm_size_python">
 <a href="#agent_vm_size_python" style="color: inherit; text-decoration: inherit;">agent_<wbr>vm_<wbr>size</a>
@@ -1065,8 +934,7 @@ The following output properties are available:
         <span class="property-indicator"></span>
         <span class="property-type">str</span>
     </dt>
-    <dd>{{% md %}}Agent virtual machine size{{% /md %}}</dd>
-    <dt class="property-optional"
+    <dd>{{% md %}}Agent virtual machine size{{% /md %}}</dd><dt class="property-optional"
             title="Optional">
         <span id="aks_networking_configuration_python">
 <a href="#aks_networking_configuration_python" style="color: inherit; text-decoration: inherit;">aks_<wbr>networking_<wbr>configuration</a>
@@ -1074,8 +942,7 @@ The following output properties are available:
         <span class="property-indicator"></span>
         <span class="property-type"><a href="#aksnetworkingconfigurationresponse">Aks<wbr>Networking<wbr>Configuration<wbr>Response<wbr>Args</a></span>
     </dt>
-    <dd>{{% md %}}AKS networking configuration for vnet{{% /md %}}</dd>
-    <dt class="property-optional"
+    <dd>{{% md %}}AKS networking configuration for vnet{{% /md %}}</dd><dt class="property-optional"
             title="Optional">
         <span id="cluster_fqdn_python">
 <a href="#cluster_fqdn_python" style="color: inherit; text-decoration: inherit;">cluster_<wbr>fqdn</a>
@@ -1083,8 +950,7 @@ The following output properties are available:
         <span class="property-indicator"></span>
         <span class="property-type">str</span>
     </dt>
-    <dd>{{% md %}}Cluster full qualified domain name{{% /md %}}</dd>
-    <dt class="property-optional"
+    <dd>{{% md %}}Cluster full qualified domain name{{% /md %}}</dd><dt class="property-optional"
             title="Optional">
         <span id="cluster_purpose_python">
 <a href="#cluster_purpose_python" style="color: inherit; text-decoration: inherit;">cluster_<wbr>purpose</a>
@@ -1092,8 +958,7 @@ The following output properties are available:
         <span class="property-indicator"></span>
         <span class="property-type">str</span>
     </dt>
-    <dd>{{% md %}}Intended usage of the cluster{{% /md %}}</dd>
-    <dt class="property-optional"
+    <dd>{{% md %}}Intended usage of the cluster{{% /md %}}</dd><dt class="property-optional"
             title="Optional">
         <span id="ssl_configuration_python">
 <a href="#ssl_configuration_python" style="color: inherit; text-decoration: inherit;">ssl_<wbr>configuration</a>
@@ -1101,8 +966,7 @@ The following output properties are available:
         <span class="property-indicator"></span>
         <span class="property-type"><a href="#sslconfigurationresponse">Ssl<wbr>Configuration<wbr>Response<wbr>Args</a></span>
     </dt>
-    <dd>{{% md %}}SSL configuration{{% /md %}}</dd>
-</dl>
+    <dd>{{% md %}}SSL configuration{{% /md %}}</dd></dl>
 {{% /choosable %}}
 
 <h4 id="aksnetworkingconfigurationresponse">Aks<wbr>Networking<wbr>Configuration<wbr>Response</h4>
@@ -1110,9 +974,7 @@ The following output properties are available:
 
 
 {{% choosable language csharp %}}
-<dl class="resources-properties">
-
-    <dt class="property-optional"
+<dl class="resources-properties"><dt class="property-optional"
             title="Optional">
         <span id="dnsserviceip_csharp">
 <a href="#dnsserviceip_csharp" style="color: inherit; text-decoration: inherit;">Dns<wbr>Service<wbr>IP</a>
@@ -1120,8 +982,7 @@ The following output properties are available:
         <span class="property-indicator"></span>
         <span class="property-type">string</span>
     </dt>
-    <dd>{{% md %}}An IP address assigned to the Kubernetes DNS service. It must be within the Kubernetes service address range specified in serviceCidr.{{% /md %}}</dd>
-    <dt class="property-optional"
+    <dd>{{% md %}}An IP address assigned to the Kubernetes DNS service. It must be within the Kubernetes service address range specified in serviceCidr.{{% /md %}}</dd><dt class="property-optional"
             title="Optional">
         <span id="dockerbridgecidr_csharp">
 <a href="#dockerbridgecidr_csharp" style="color: inherit; text-decoration: inherit;">Docker<wbr>Bridge<wbr>Cidr</a>
@@ -1129,8 +990,7 @@ The following output properties are available:
         <span class="property-indicator"></span>
         <span class="property-type">string</span>
     </dt>
-    <dd>{{% md %}}A CIDR notation IP range assigned to the Docker bridge network. It must not overlap with any Subnet IP ranges or the Kubernetes service address range.{{% /md %}}</dd>
-    <dt class="property-optional"
+    <dd>{{% md %}}A CIDR notation IP range assigned to the Docker bridge network. It must not overlap with any Subnet IP ranges or the Kubernetes service address range.{{% /md %}}</dd><dt class="property-optional"
             title="Optional">
         <span id="servicecidr_csharp">
 <a href="#servicecidr_csharp" style="color: inherit; text-decoration: inherit;">Service<wbr>Cidr</a>
@@ -1138,8 +998,7 @@ The following output properties are available:
         <span class="property-indicator"></span>
         <span class="property-type">string</span>
     </dt>
-    <dd>{{% md %}}A CIDR notation IP range from which to assign service cluster IPs. It must not overlap with any Subnet IP ranges.{{% /md %}}</dd>
-    <dt class="property-optional"
+    <dd>{{% md %}}A CIDR notation IP range from which to assign service cluster IPs. It must not overlap with any Subnet IP ranges.{{% /md %}}</dd><dt class="property-optional"
             title="Optional">
         <span id="subnetid_csharp">
 <a href="#subnetid_csharp" style="color: inherit; text-decoration: inherit;">Subnet<wbr>Id</a>
@@ -1147,14 +1006,11 @@ The following output properties are available:
         <span class="property-indicator"></span>
         <span class="property-type">string</span>
     </dt>
-    <dd>{{% md %}}Virtual network subnet resource ID the compute nodes belong to{{% /md %}}</dd>
-</dl>
+    <dd>{{% md %}}Virtual network subnet resource ID the compute nodes belong to{{% /md %}}</dd></dl>
 {{% /choosable %}}
 
 {{% choosable language go %}}
-<dl class="resources-properties">
-
-    <dt class="property-optional"
+<dl class="resources-properties"><dt class="property-optional"
             title="Optional">
         <span id="dnsserviceip_go">
 <a href="#dnsserviceip_go" style="color: inherit; text-decoration: inherit;">Dns<wbr>Service<wbr>IP</a>
@@ -1162,8 +1018,7 @@ The following output properties are available:
         <span class="property-indicator"></span>
         <span class="property-type">string</span>
     </dt>
-    <dd>{{% md %}}An IP address assigned to the Kubernetes DNS service. It must be within the Kubernetes service address range specified in serviceCidr.{{% /md %}}</dd>
-    <dt class="property-optional"
+    <dd>{{% md %}}An IP address assigned to the Kubernetes DNS service. It must be within the Kubernetes service address range specified in serviceCidr.{{% /md %}}</dd><dt class="property-optional"
             title="Optional">
         <span id="dockerbridgecidr_go">
 <a href="#dockerbridgecidr_go" style="color: inherit; text-decoration: inherit;">Docker<wbr>Bridge<wbr>Cidr</a>
@@ -1171,8 +1026,7 @@ The following output properties are available:
         <span class="property-indicator"></span>
         <span class="property-type">string</span>
     </dt>
-    <dd>{{% md %}}A CIDR notation IP range assigned to the Docker bridge network. It must not overlap with any Subnet IP ranges or the Kubernetes service address range.{{% /md %}}</dd>
-    <dt class="property-optional"
+    <dd>{{% md %}}A CIDR notation IP range assigned to the Docker bridge network. It must not overlap with any Subnet IP ranges or the Kubernetes service address range.{{% /md %}}</dd><dt class="property-optional"
             title="Optional">
         <span id="servicecidr_go">
 <a href="#servicecidr_go" style="color: inherit; text-decoration: inherit;">Service<wbr>Cidr</a>
@@ -1180,8 +1034,7 @@ The following output properties are available:
         <span class="property-indicator"></span>
         <span class="property-type">string</span>
     </dt>
-    <dd>{{% md %}}A CIDR notation IP range from which to assign service cluster IPs. It must not overlap with any Subnet IP ranges.{{% /md %}}</dd>
-    <dt class="property-optional"
+    <dd>{{% md %}}A CIDR notation IP range from which to assign service cluster IPs. It must not overlap with any Subnet IP ranges.{{% /md %}}</dd><dt class="property-optional"
             title="Optional">
         <span id="subnetid_go">
 <a href="#subnetid_go" style="color: inherit; text-decoration: inherit;">Subnet<wbr>Id</a>
@@ -1189,14 +1042,11 @@ The following output properties are available:
         <span class="property-indicator"></span>
         <span class="property-type">string</span>
     </dt>
-    <dd>{{% md %}}Virtual network subnet resource ID the compute nodes belong to{{% /md %}}</dd>
-</dl>
+    <dd>{{% md %}}Virtual network subnet resource ID the compute nodes belong to{{% /md %}}</dd></dl>
 {{% /choosable %}}
 
 {{% choosable language nodejs %}}
-<dl class="resources-properties">
-
-    <dt class="property-optional"
+<dl class="resources-properties"><dt class="property-optional"
             title="Optional">
         <span id="dnsserviceip_nodejs">
 <a href="#dnsserviceip_nodejs" style="color: inherit; text-decoration: inherit;">dns<wbr>Service<wbr>IP</a>
@@ -1204,8 +1054,7 @@ The following output properties are available:
         <span class="property-indicator"></span>
         <span class="property-type">string</span>
     </dt>
-    <dd>{{% md %}}An IP address assigned to the Kubernetes DNS service. It must be within the Kubernetes service address range specified in serviceCidr.{{% /md %}}</dd>
-    <dt class="property-optional"
+    <dd>{{% md %}}An IP address assigned to the Kubernetes DNS service. It must be within the Kubernetes service address range specified in serviceCidr.{{% /md %}}</dd><dt class="property-optional"
             title="Optional">
         <span id="dockerbridgecidr_nodejs">
 <a href="#dockerbridgecidr_nodejs" style="color: inherit; text-decoration: inherit;">docker<wbr>Bridge<wbr>Cidr</a>
@@ -1213,8 +1062,7 @@ The following output properties are available:
         <span class="property-indicator"></span>
         <span class="property-type">string</span>
     </dt>
-    <dd>{{% md %}}A CIDR notation IP range assigned to the Docker bridge network. It must not overlap with any Subnet IP ranges or the Kubernetes service address range.{{% /md %}}</dd>
-    <dt class="property-optional"
+    <dd>{{% md %}}A CIDR notation IP range assigned to the Docker bridge network. It must not overlap with any Subnet IP ranges or the Kubernetes service address range.{{% /md %}}</dd><dt class="property-optional"
             title="Optional">
         <span id="servicecidr_nodejs">
 <a href="#servicecidr_nodejs" style="color: inherit; text-decoration: inherit;">service<wbr>Cidr</a>
@@ -1222,8 +1070,7 @@ The following output properties are available:
         <span class="property-indicator"></span>
         <span class="property-type">string</span>
     </dt>
-    <dd>{{% md %}}A CIDR notation IP range from which to assign service cluster IPs. It must not overlap with any Subnet IP ranges.{{% /md %}}</dd>
-    <dt class="property-optional"
+    <dd>{{% md %}}A CIDR notation IP range from which to assign service cluster IPs. It must not overlap with any Subnet IP ranges.{{% /md %}}</dd><dt class="property-optional"
             title="Optional">
         <span id="subnetid_nodejs">
 <a href="#subnetid_nodejs" style="color: inherit; text-decoration: inherit;">subnet<wbr>Id</a>
@@ -1231,14 +1078,11 @@ The following output properties are available:
         <span class="property-indicator"></span>
         <span class="property-type">string</span>
     </dt>
-    <dd>{{% md %}}Virtual network subnet resource ID the compute nodes belong to{{% /md %}}</dd>
-</dl>
+    <dd>{{% md %}}Virtual network subnet resource ID the compute nodes belong to{{% /md %}}</dd></dl>
 {{% /choosable %}}
 
 {{% choosable language python %}}
-<dl class="resources-properties">
-
-    <dt class="property-optional"
+<dl class="resources-properties"><dt class="property-optional"
             title="Optional">
         <span id="dns_service_ip_python">
 <a href="#dns_service_ip_python" style="color: inherit; text-decoration: inherit;">dns_<wbr>service_<wbr>ip</a>
@@ -1246,8 +1090,7 @@ The following output properties are available:
         <span class="property-indicator"></span>
         <span class="property-type">str</span>
     </dt>
-    <dd>{{% md %}}An IP address assigned to the Kubernetes DNS service. It must be within the Kubernetes service address range specified in serviceCidr.{{% /md %}}</dd>
-    <dt class="property-optional"
+    <dd>{{% md %}}An IP address assigned to the Kubernetes DNS service. It must be within the Kubernetes service address range specified in serviceCidr.{{% /md %}}</dd><dt class="property-optional"
             title="Optional">
         <span id="docker_bridge_cidr_python">
 <a href="#docker_bridge_cidr_python" style="color: inherit; text-decoration: inherit;">docker_<wbr>bridge_<wbr>cidr</a>
@@ -1255,8 +1098,7 @@ The following output properties are available:
         <span class="property-indicator"></span>
         <span class="property-type">str</span>
     </dt>
-    <dd>{{% md %}}A CIDR notation IP range assigned to the Docker bridge network. It must not overlap with any Subnet IP ranges or the Kubernetes service address range.{{% /md %}}</dd>
-    <dt class="property-optional"
+    <dd>{{% md %}}A CIDR notation IP range assigned to the Docker bridge network. It must not overlap with any Subnet IP ranges or the Kubernetes service address range.{{% /md %}}</dd><dt class="property-optional"
             title="Optional">
         <span id="service_cidr_python">
 <a href="#service_cidr_python" style="color: inherit; text-decoration: inherit;">service_<wbr>cidr</a>
@@ -1264,8 +1106,7 @@ The following output properties are available:
         <span class="property-indicator"></span>
         <span class="property-type">str</span>
     </dt>
-    <dd>{{% md %}}A CIDR notation IP range from which to assign service cluster IPs. It must not overlap with any Subnet IP ranges.{{% /md %}}</dd>
-    <dt class="property-optional"
+    <dd>{{% md %}}A CIDR notation IP range from which to assign service cluster IPs. It must not overlap with any Subnet IP ranges.{{% /md %}}</dd><dt class="property-optional"
             title="Optional">
         <span id="subnet_id_python">
 <a href="#subnet_id_python" style="color: inherit; text-decoration: inherit;">subnet_<wbr>id</a>
@@ -1273,8 +1114,7 @@ The following output properties are available:
         <span class="property-indicator"></span>
         <span class="property-type">str</span>
     </dt>
-    <dd>{{% md %}}Virtual network subnet resource ID the compute nodes belong to{{% /md %}}</dd>
-</dl>
+    <dd>{{% md %}}Virtual network subnet resource ID the compute nodes belong to{{% /md %}}</dd></dl>
 {{% /choosable %}}
 
 <h4 id="amlcomputeresponse">Aml<wbr>Compute<wbr>Response</h4>
@@ -1282,9 +1122,7 @@ The following output properties are available:
 
 
 {{% choosable language csharp %}}
-<dl class="resources-properties">
-
-    <dt class="property-required"
+<dl class="resources-properties"><dt class="property-required"
             title="Required">
         <span id="isattachedcompute_csharp">
 <a href="#isattachedcompute_csharp" style="color: inherit; text-decoration: inherit;">Is<wbr>Attached<wbr>Compute</a>
@@ -1292,8 +1130,7 @@ The following output properties are available:
         <span class="property-indicator"></span>
         <span class="property-type">bool</span>
     </dt>
-    <dd>{{% md %}}Indicating whether the compute was provisioned by user and brought from outside if true, or machine learning service provisioned it if false.{{% /md %}}</dd>
-    <dt class="property-required"
+    <dd>{{% md %}}Indicating whether the compute was provisioned by user and brought from outside if true, or machine learning service provisioned it if false.{{% /md %}}</dd><dt class="property-required"
             title="Required">
         <span id="provisioningerrors_csharp">
 <a href="#provisioningerrors_csharp" style="color: inherit; text-decoration: inherit;">Provisioning<wbr>Errors</a>
@@ -1301,8 +1138,7 @@ The following output properties are available:
         <span class="property-indicator"></span>
         <span class="property-type"><a href="#machinelearningserviceerrorresponse">List&lt;Pulumi.<wbr>Azure<wbr>Native.<wbr>Machine<wbr>Learning<wbr>Services.<wbr>Inputs.<wbr>Machine<wbr>Learning<wbr>Service<wbr>Error<wbr>Response<wbr>Args&gt;</a></span>
     </dt>
-    <dd>{{% md %}}Errors during provisioning{{% /md %}}</dd>
-    <dt class="property-required"
+    <dd>{{% md %}}Errors during provisioning{{% /md %}}</dd><dt class="property-required"
             title="Required">
         <span id="provisioningstate_csharp">
 <a href="#provisioningstate_csharp" style="color: inherit; text-decoration: inherit;">Provisioning<wbr>State</a>
@@ -1310,8 +1146,7 @@ The following output properties are available:
         <span class="property-indicator"></span>
         <span class="property-type">string</span>
     </dt>
-    <dd>{{% md %}}The provision state of the cluster. Valid values are Unknown, Updating, Provisioning, Succeeded, and Failed.{{% /md %}}</dd>
-    <dt class="property-optional"
+    <dd>{{% md %}}The provision state of the cluster. Valid values are Unknown, Updating, Provisioning, Succeeded, and Failed.{{% /md %}}</dd><dt class="property-optional"
             title="Optional">
         <span id="computelocation_csharp">
 <a href="#computelocation_csharp" style="color: inherit; text-decoration: inherit;">Compute<wbr>Location</a>
@@ -1319,8 +1154,7 @@ The following output properties are available:
         <span class="property-indicator"></span>
         <span class="property-type">string</span>
     </dt>
-    <dd>{{% md %}}Location for the underlying compute{{% /md %}}</dd>
-    <dt class="property-optional"
+    <dd>{{% md %}}Location for the underlying compute{{% /md %}}</dd><dt class="property-optional"
             title="Optional">
         <span id="description_csharp">
 <a href="#description_csharp" style="color: inherit; text-decoration: inherit;">Description</a>
@@ -1328,8 +1162,7 @@ The following output properties are available:
         <span class="property-indicator"></span>
         <span class="property-type">string</span>
     </dt>
-    <dd>{{% md %}}The description of the Machine Learning compute.{{% /md %}}</dd>
-    <dt class="property-optional"
+    <dd>{{% md %}}The description of the Machine Learning compute.{{% /md %}}</dd><dt class="property-optional"
             title="Optional">
         <span id="properties_csharp">
 <a href="#properties_csharp" style="color: inherit; text-decoration: inherit;">Properties</a>
@@ -1337,8 +1170,7 @@ The following output properties are available:
         <span class="property-indicator"></span>
         <span class="property-type"><a href="#amlcomputeresponseproperties">Pulumi.<wbr>Azure<wbr>Native.<wbr>Machine<wbr>Learning<wbr>Services.<wbr>Inputs.<wbr>Aml<wbr>Compute<wbr>Response<wbr>Properties<wbr>Args</a></span>
     </dt>
-    <dd>{{% md %}}AML Compute properties{{% /md %}}</dd>
-    <dt class="property-optional"
+    <dd>{{% md %}}AML Compute properties{{% /md %}}</dd><dt class="property-optional"
             title="Optional">
         <span id="resourceid_csharp">
 <a href="#resourceid_csharp" style="color: inherit; text-decoration: inherit;">Resource<wbr>Id</a>
@@ -1346,14 +1178,11 @@ The following output properties are available:
         <span class="property-indicator"></span>
         <span class="property-type">string</span>
     </dt>
-    <dd>{{% md %}}ARM resource id of the underlying compute{{% /md %}}</dd>
-</dl>
+    <dd>{{% md %}}ARM resource id of the underlying compute{{% /md %}}</dd></dl>
 {{% /choosable %}}
 
 {{% choosable language go %}}
-<dl class="resources-properties">
-
-    <dt class="property-required"
+<dl class="resources-properties"><dt class="property-required"
             title="Required">
         <span id="isattachedcompute_go">
 <a href="#isattachedcompute_go" style="color: inherit; text-decoration: inherit;">Is<wbr>Attached<wbr>Compute</a>
@@ -1361,8 +1190,7 @@ The following output properties are available:
         <span class="property-indicator"></span>
         <span class="property-type">bool</span>
     </dt>
-    <dd>{{% md %}}Indicating whether the compute was provisioned by user and brought from outside if true, or machine learning service provisioned it if false.{{% /md %}}</dd>
-    <dt class="property-required"
+    <dd>{{% md %}}Indicating whether the compute was provisioned by user and brought from outside if true, or machine learning service provisioned it if false.{{% /md %}}</dd><dt class="property-required"
             title="Required">
         <span id="provisioningerrors_go">
 <a href="#provisioningerrors_go" style="color: inherit; text-decoration: inherit;">Provisioning<wbr>Errors</a>
@@ -1370,8 +1198,7 @@ The following output properties are available:
         <span class="property-indicator"></span>
         <span class="property-type"><a href="#machinelearningserviceerrorresponse">[]Machine<wbr>Learning<wbr>Service<wbr>Error<wbr>Response</a></span>
     </dt>
-    <dd>{{% md %}}Errors during provisioning{{% /md %}}</dd>
-    <dt class="property-required"
+    <dd>{{% md %}}Errors during provisioning{{% /md %}}</dd><dt class="property-required"
             title="Required">
         <span id="provisioningstate_go">
 <a href="#provisioningstate_go" style="color: inherit; text-decoration: inherit;">Provisioning<wbr>State</a>
@@ -1379,8 +1206,7 @@ The following output properties are available:
         <span class="property-indicator"></span>
         <span class="property-type">string</span>
     </dt>
-    <dd>{{% md %}}The provision state of the cluster. Valid values are Unknown, Updating, Provisioning, Succeeded, and Failed.{{% /md %}}</dd>
-    <dt class="property-optional"
+    <dd>{{% md %}}The provision state of the cluster. Valid values are Unknown, Updating, Provisioning, Succeeded, and Failed.{{% /md %}}</dd><dt class="property-optional"
             title="Optional">
         <span id="computelocation_go">
 <a href="#computelocation_go" style="color: inherit; text-decoration: inherit;">Compute<wbr>Location</a>
@@ -1388,8 +1214,7 @@ The following output properties are available:
         <span class="property-indicator"></span>
         <span class="property-type">string</span>
     </dt>
-    <dd>{{% md %}}Location for the underlying compute{{% /md %}}</dd>
-    <dt class="property-optional"
+    <dd>{{% md %}}Location for the underlying compute{{% /md %}}</dd><dt class="property-optional"
             title="Optional">
         <span id="description_go">
 <a href="#description_go" style="color: inherit; text-decoration: inherit;">Description</a>
@@ -1397,8 +1222,7 @@ The following output properties are available:
         <span class="property-indicator"></span>
         <span class="property-type">string</span>
     </dt>
-    <dd>{{% md %}}The description of the Machine Learning compute.{{% /md %}}</dd>
-    <dt class="property-optional"
+    <dd>{{% md %}}The description of the Machine Learning compute.{{% /md %}}</dd><dt class="property-optional"
             title="Optional">
         <span id="properties_go">
 <a href="#properties_go" style="color: inherit; text-decoration: inherit;">Properties</a>
@@ -1406,8 +1230,7 @@ The following output properties are available:
         <span class="property-indicator"></span>
         <span class="property-type"><a href="#amlcomputeresponseproperties">Aml<wbr>Compute<wbr>Response<wbr>Properties</a></span>
     </dt>
-    <dd>{{% md %}}AML Compute properties{{% /md %}}</dd>
-    <dt class="property-optional"
+    <dd>{{% md %}}AML Compute properties{{% /md %}}</dd><dt class="property-optional"
             title="Optional">
         <span id="resourceid_go">
 <a href="#resourceid_go" style="color: inherit; text-decoration: inherit;">Resource<wbr>Id</a>
@@ -1415,14 +1238,11 @@ The following output properties are available:
         <span class="property-indicator"></span>
         <span class="property-type">string</span>
     </dt>
-    <dd>{{% md %}}ARM resource id of the underlying compute{{% /md %}}</dd>
-</dl>
+    <dd>{{% md %}}ARM resource id of the underlying compute{{% /md %}}</dd></dl>
 {{% /choosable %}}
 
 {{% choosable language nodejs %}}
-<dl class="resources-properties">
-
-    <dt class="property-required"
+<dl class="resources-properties"><dt class="property-required"
             title="Required">
         <span id="isattachedcompute_nodejs">
 <a href="#isattachedcompute_nodejs" style="color: inherit; text-decoration: inherit;">is<wbr>Attached<wbr>Compute</a>
@@ -1430,8 +1250,7 @@ The following output properties are available:
         <span class="property-indicator"></span>
         <span class="property-type">boolean</span>
     </dt>
-    <dd>{{% md %}}Indicating whether the compute was provisioned by user and brought from outside if true, or machine learning service provisioned it if false.{{% /md %}}</dd>
-    <dt class="property-required"
+    <dd>{{% md %}}Indicating whether the compute was provisioned by user and brought from outside if true, or machine learning service provisioned it if false.{{% /md %}}</dd><dt class="property-required"
             title="Required">
         <span id="provisioningerrors_nodejs">
 <a href="#provisioningerrors_nodejs" style="color: inherit; text-decoration: inherit;">provisioning<wbr>Errors</a>
@@ -1439,8 +1258,7 @@ The following output properties are available:
         <span class="property-indicator"></span>
         <span class="property-type"><a href="#machinelearningserviceerrorresponse">Machine<wbr>Learning<wbr>Service<wbr>Error<wbr>Response[]</a></span>
     </dt>
-    <dd>{{% md %}}Errors during provisioning{{% /md %}}</dd>
-    <dt class="property-required"
+    <dd>{{% md %}}Errors during provisioning{{% /md %}}</dd><dt class="property-required"
             title="Required">
         <span id="provisioningstate_nodejs">
 <a href="#provisioningstate_nodejs" style="color: inherit; text-decoration: inherit;">provisioning<wbr>State</a>
@@ -1448,8 +1266,7 @@ The following output properties are available:
         <span class="property-indicator"></span>
         <span class="property-type">string</span>
     </dt>
-    <dd>{{% md %}}The provision state of the cluster. Valid values are Unknown, Updating, Provisioning, Succeeded, and Failed.{{% /md %}}</dd>
-    <dt class="property-optional"
+    <dd>{{% md %}}The provision state of the cluster. Valid values are Unknown, Updating, Provisioning, Succeeded, and Failed.{{% /md %}}</dd><dt class="property-optional"
             title="Optional">
         <span id="computelocation_nodejs">
 <a href="#computelocation_nodejs" style="color: inherit; text-decoration: inherit;">compute<wbr>Location</a>
@@ -1457,8 +1274,7 @@ The following output properties are available:
         <span class="property-indicator"></span>
         <span class="property-type">string</span>
     </dt>
-    <dd>{{% md %}}Location for the underlying compute{{% /md %}}</dd>
-    <dt class="property-optional"
+    <dd>{{% md %}}Location for the underlying compute{{% /md %}}</dd><dt class="property-optional"
             title="Optional">
         <span id="description_nodejs">
 <a href="#description_nodejs" style="color: inherit; text-decoration: inherit;">description</a>
@@ -1466,8 +1282,7 @@ The following output properties are available:
         <span class="property-indicator"></span>
         <span class="property-type">string</span>
     </dt>
-    <dd>{{% md %}}The description of the Machine Learning compute.{{% /md %}}</dd>
-    <dt class="property-optional"
+    <dd>{{% md %}}The description of the Machine Learning compute.{{% /md %}}</dd><dt class="property-optional"
             title="Optional">
         <span id="properties_nodejs">
 <a href="#properties_nodejs" style="color: inherit; text-decoration: inherit;">properties</a>
@@ -1475,8 +1290,7 @@ The following output properties are available:
         <span class="property-indicator"></span>
         <span class="property-type"><a href="#amlcomputeresponseproperties">Aml<wbr>Compute<wbr>Response<wbr>Properties</a></span>
     </dt>
-    <dd>{{% md %}}AML Compute properties{{% /md %}}</dd>
-    <dt class="property-optional"
+    <dd>{{% md %}}AML Compute properties{{% /md %}}</dd><dt class="property-optional"
             title="Optional">
         <span id="resourceid_nodejs">
 <a href="#resourceid_nodejs" style="color: inherit; text-decoration: inherit;">resource<wbr>Id</a>
@@ -1484,14 +1298,11 @@ The following output properties are available:
         <span class="property-indicator"></span>
         <span class="property-type">string</span>
     </dt>
-    <dd>{{% md %}}ARM resource id of the underlying compute{{% /md %}}</dd>
-</dl>
+    <dd>{{% md %}}ARM resource id of the underlying compute{{% /md %}}</dd></dl>
 {{% /choosable %}}
 
 {{% choosable language python %}}
-<dl class="resources-properties">
-
-    <dt class="property-required"
+<dl class="resources-properties"><dt class="property-required"
             title="Required">
         <span id="is_attached_compute_python">
 <a href="#is_attached_compute_python" style="color: inherit; text-decoration: inherit;">is_<wbr>attached_<wbr>compute</a>
@@ -1499,8 +1310,7 @@ The following output properties are available:
         <span class="property-indicator"></span>
         <span class="property-type">bool</span>
     </dt>
-    <dd>{{% md %}}Indicating whether the compute was provisioned by user and brought from outside if true, or machine learning service provisioned it if false.{{% /md %}}</dd>
-    <dt class="property-required"
+    <dd>{{% md %}}Indicating whether the compute was provisioned by user and brought from outside if true, or machine learning service provisioned it if false.{{% /md %}}</dd><dt class="property-required"
             title="Required">
         <span id="provisioning_errors_python">
 <a href="#provisioning_errors_python" style="color: inherit; text-decoration: inherit;">provisioning_<wbr>errors</a>
@@ -1508,8 +1318,7 @@ The following output properties are available:
         <span class="property-indicator"></span>
         <span class="property-type"><a href="#machinelearningserviceerrorresponse">Sequence[Machine<wbr>Learning<wbr>Service<wbr>Error<wbr>Response<wbr>Args]</a></span>
     </dt>
-    <dd>{{% md %}}Errors during provisioning{{% /md %}}</dd>
-    <dt class="property-required"
+    <dd>{{% md %}}Errors during provisioning{{% /md %}}</dd><dt class="property-required"
             title="Required">
         <span id="provisioning_state_python">
 <a href="#provisioning_state_python" style="color: inherit; text-decoration: inherit;">provisioning_<wbr>state</a>
@@ -1517,8 +1326,7 @@ The following output properties are available:
         <span class="property-indicator"></span>
         <span class="property-type">str</span>
     </dt>
-    <dd>{{% md %}}The provision state of the cluster. Valid values are Unknown, Updating, Provisioning, Succeeded, and Failed.{{% /md %}}</dd>
-    <dt class="property-optional"
+    <dd>{{% md %}}The provision state of the cluster. Valid values are Unknown, Updating, Provisioning, Succeeded, and Failed.{{% /md %}}</dd><dt class="property-optional"
             title="Optional">
         <span id="compute_location_python">
 <a href="#compute_location_python" style="color: inherit; text-decoration: inherit;">compute_<wbr>location</a>
@@ -1526,8 +1334,7 @@ The following output properties are available:
         <span class="property-indicator"></span>
         <span class="property-type">str</span>
     </dt>
-    <dd>{{% md %}}Location for the underlying compute{{% /md %}}</dd>
-    <dt class="property-optional"
+    <dd>{{% md %}}Location for the underlying compute{{% /md %}}</dd><dt class="property-optional"
             title="Optional">
         <span id="description_python">
 <a href="#description_python" style="color: inherit; text-decoration: inherit;">description</a>
@@ -1535,8 +1342,7 @@ The following output properties are available:
         <span class="property-indicator"></span>
         <span class="property-type">str</span>
     </dt>
-    <dd>{{% md %}}The description of the Machine Learning compute.{{% /md %}}</dd>
-    <dt class="property-optional"
+    <dd>{{% md %}}The description of the Machine Learning compute.{{% /md %}}</dd><dt class="property-optional"
             title="Optional">
         <span id="properties_python">
 <a href="#properties_python" style="color: inherit; text-decoration: inherit;">properties</a>
@@ -1544,8 +1350,7 @@ The following output properties are available:
         <span class="property-indicator"></span>
         <span class="property-type"><a href="#amlcomputeresponseproperties">Aml<wbr>Compute<wbr>Response<wbr>Properties<wbr>Args</a></span>
     </dt>
-    <dd>{{% md %}}AML Compute properties{{% /md %}}</dd>
-    <dt class="property-optional"
+    <dd>{{% md %}}AML Compute properties{{% /md %}}</dd><dt class="property-optional"
             title="Optional">
         <span id="resource_id_python">
 <a href="#resource_id_python" style="color: inherit; text-decoration: inherit;">resource_<wbr>id</a>
@@ -1553,8 +1358,7 @@ The following output properties are available:
         <span class="property-indicator"></span>
         <span class="property-type">str</span>
     </dt>
-    <dd>{{% md %}}ARM resource id of the underlying compute{{% /md %}}</dd>
-</dl>
+    <dd>{{% md %}}ARM resource id of the underlying compute{{% /md %}}</dd></dl>
 {{% /choosable %}}
 
 <h4 id="amlcomputeresponseproperties">Aml<wbr>Compute<wbr>Response<wbr>Properties</h4>
@@ -1562,9 +1366,7 @@ The following output properties are available:
 
 
 {{% choosable language csharp %}}
-<dl class="resources-properties">
-
-    <dt class="property-required"
+<dl class="resources-properties"><dt class="property-required"
             title="Required">
         <span id="allocationstate_csharp">
 <a href="#allocationstate_csharp" style="color: inherit; text-decoration: inherit;">Allocation<wbr>State</a>
@@ -1572,8 +1374,7 @@ The following output properties are available:
         <span class="property-indicator"></span>
         <span class="property-type">string</span>
     </dt>
-    <dd>{{% md %}}Allocation state of the compute. Possible values are: steady - Indicates that the compute is not resizing. There are no changes to the number of compute nodes in the compute in progress. A compute enters this state when it is created and when no operations are being performed on the compute to change the number of compute nodes. resizing - Indicates that the compute is resizing; that is, compute nodes are being added to or removed from the compute.{{% /md %}}</dd>
-    <dt class="property-required"
+    <dd>{{% md %}}Allocation state of the compute. Possible values are: steady - Indicates that the compute is not resizing. There are no changes to the number of compute nodes in the compute in progress. A compute enters this state when it is created and when no operations are being performed on the compute to change the number of compute nodes. resizing - Indicates that the compute is resizing; that is, compute nodes are being added to or removed from the compute.{{% /md %}}</dd><dt class="property-required"
             title="Required">
         <span id="allocationstatetransitiontime_csharp">
 <a href="#allocationstatetransitiontime_csharp" style="color: inherit; text-decoration: inherit;">Allocation<wbr>State<wbr>Transition<wbr>Time</a>
@@ -1581,8 +1382,7 @@ The following output properties are available:
         <span class="property-indicator"></span>
         <span class="property-type">string</span>
     </dt>
-    <dd>{{% md %}}The time at which the compute entered its current allocation state.{{% /md %}}</dd>
-    <dt class="property-required"
+    <dd>{{% md %}}The time at which the compute entered its current allocation state.{{% /md %}}</dd><dt class="property-required"
             title="Required">
         <span id="currentnodecount_csharp">
 <a href="#currentnodecount_csharp" style="color: inherit; text-decoration: inherit;">Current<wbr>Node<wbr>Count</a>
@@ -1590,8 +1390,7 @@ The following output properties are available:
         <span class="property-indicator"></span>
         <span class="property-type">int</span>
     </dt>
-    <dd>{{% md %}}The number of compute nodes currently assigned to the compute.{{% /md %}}</dd>
-    <dt class="property-required"
+    <dd>{{% md %}}The number of compute nodes currently assigned to the compute.{{% /md %}}</dd><dt class="property-required"
             title="Required">
         <span id="errors_csharp">
 <a href="#errors_csharp" style="color: inherit; text-decoration: inherit;">Errors</a>
@@ -1599,8 +1398,7 @@ The following output properties are available:
         <span class="property-indicator"></span>
         <span class="property-type"><a href="#machinelearningserviceerrorresponse">List&lt;Pulumi.<wbr>Azure<wbr>Native.<wbr>Machine<wbr>Learning<wbr>Services.<wbr>Inputs.<wbr>Machine<wbr>Learning<wbr>Service<wbr>Error<wbr>Response<wbr>Args&gt;</a></span>
     </dt>
-    <dd>{{% md %}}Collection of errors encountered by various compute nodes during node setup.{{% /md %}}</dd>
-    <dt class="property-required"
+    <dd>{{% md %}}Collection of errors encountered by various compute nodes during node setup.{{% /md %}}</dd><dt class="property-required"
             title="Required">
         <span id="nodestatecounts_csharp">
 <a href="#nodestatecounts_csharp" style="color: inherit; text-decoration: inherit;">Node<wbr>State<wbr>Counts</a>
@@ -1608,8 +1406,7 @@ The following output properties are available:
         <span class="property-indicator"></span>
         <span class="property-type"><a href="#nodestatecountsresponse">Pulumi.<wbr>Azure<wbr>Native.<wbr>Machine<wbr>Learning<wbr>Services.<wbr>Inputs.<wbr>Node<wbr>State<wbr>Counts<wbr>Response<wbr>Args</a></span>
     </dt>
-    <dd>{{% md %}}Counts of various node states on the compute.{{% /md %}}</dd>
-    <dt class="property-required"
+    <dd>{{% md %}}Counts of various node states on the compute.{{% /md %}}</dd><dt class="property-required"
             title="Required">
         <span id="targetnodecount_csharp">
 <a href="#targetnodecount_csharp" style="color: inherit; text-decoration: inherit;">Target<wbr>Node<wbr>Count</a>
@@ -1617,8 +1414,7 @@ The following output properties are available:
         <span class="property-indicator"></span>
         <span class="property-type">int</span>
     </dt>
-    <dd>{{% md %}}The target number of compute nodes for the compute. If the allocationState is resizing, this property denotes the target node count for the ongoing resize operation. If the allocationState is steady, this property denotes the target node count for the previous resize operation.{{% /md %}}</dd>
-    <dt class="property-optional"
+    <dd>{{% md %}}The target number of compute nodes for the compute. If the allocationState is resizing, this property denotes the target node count for the ongoing resize operation. If the allocationState is steady, this property denotes the target node count for the previous resize operation.{{% /md %}}</dd><dt class="property-optional"
             title="Optional">
         <span id="enablenodepublicip_csharp">
 <a href="#enablenodepublicip_csharp" style="color: inherit; text-decoration: inherit;">Enable<wbr>Node<wbr>Public<wbr>Ip</a>
@@ -1626,8 +1422,7 @@ The following output properties are available:
         <span class="property-indicator"></span>
         <span class="property-type">bool</span>
     </dt>
-    <dd>{{% md %}}Enable or disable node public IP address provisioning. Possible values are: Possible values are: true - Indicates that the compute nodes will have public IPs provisioned. false - Indicates that the compute nodes will have a private endpoint and no public IPs.{{% /md %}}</dd>
-    <dt class="property-optional"
+    <dd>{{% md %}}Enable or disable node public IP address provisioning. Possible values are: Possible values are: true - Indicates that the compute nodes will have public IPs provisioned. false - Indicates that the compute nodes will have a private endpoint and no public IPs.{{% /md %}}</dd><dt class="property-optional"
             title="Optional">
         <span id="isolatednetwork_csharp">
 <a href="#isolatednetwork_csharp" style="color: inherit; text-decoration: inherit;">Isolated<wbr>Network</a>
@@ -1635,8 +1430,7 @@ The following output properties are available:
         <span class="property-indicator"></span>
         <span class="property-type">bool</span>
     </dt>
-    <dd>{{% md %}}Network is isolated or not{{% /md %}}</dd>
-    <dt class="property-optional"
+    <dd>{{% md %}}Network is isolated or not{{% /md %}}</dd><dt class="property-optional"
             title="Optional">
         <span id="ostype_csharp">
 <a href="#ostype_csharp" style="color: inherit; text-decoration: inherit;">Os<wbr>Type</a>
@@ -1644,8 +1438,7 @@ The following output properties are available:
         <span class="property-indicator"></span>
         <span class="property-type">string</span>
     </dt>
-    <dd>{{% md %}}Compute OS Type{{% /md %}}</dd>
-    <dt class="property-optional"
+    <dd>{{% md %}}Compute OS Type{{% /md %}}</dd><dt class="property-optional"
             title="Optional">
         <span id="remoteloginportpublicaccess_csharp">
 <a href="#remoteloginportpublicaccess_csharp" style="color: inherit; text-decoration: inherit;">Remote<wbr>Login<wbr>Port<wbr>Public<wbr>Access</a>
@@ -1653,8 +1446,7 @@ The following output properties are available:
         <span class="property-indicator"></span>
         <span class="property-type">string</span>
     </dt>
-    <dd>{{% md %}}State of the public SSH port. Possible values are: Disabled - Indicates that the public ssh port is closed on all nodes of the cluster. Enabled - Indicates that the public ssh port is open on all nodes of the cluster. NotSpecified - Indicates that the public ssh port is closed on all nodes of the cluster if VNet is defined, else is open all public nodes. It can be default only during cluster creation time, after creation it will be either enabled or disabled.{{% /md %}}</dd>
-    <dt class="property-optional"
+    <dd>{{% md %}}State of the public SSH port. Possible values are: Disabled - Indicates that the public ssh port is closed on all nodes of the cluster. Enabled - Indicates that the public ssh port is open on all nodes of the cluster. NotSpecified - Indicates that the public ssh port is closed on all nodes of the cluster if VNet is defined, else is open all public nodes. It can be default only during cluster creation time, after creation it will be either enabled or disabled.{{% /md %}}</dd><dt class="property-optional"
             title="Optional">
         <span id="scalesettings_csharp">
 <a href="#scalesettings_csharp" style="color: inherit; text-decoration: inherit;">Scale<wbr>Settings</a>
@@ -1662,8 +1454,7 @@ The following output properties are available:
         <span class="property-indicator"></span>
         <span class="property-type"><a href="#scalesettingsresponse">Pulumi.<wbr>Azure<wbr>Native.<wbr>Machine<wbr>Learning<wbr>Services.<wbr>Inputs.<wbr>Scale<wbr>Settings<wbr>Response<wbr>Args</a></span>
     </dt>
-    <dd>{{% md %}}Scale settings for AML Compute{{% /md %}}</dd>
-    <dt class="property-optional"
+    <dd>{{% md %}}Scale settings for AML Compute{{% /md %}}</dd><dt class="property-optional"
             title="Optional">
         <span id="subnet_csharp">
 <a href="#subnet_csharp" style="color: inherit; text-decoration: inherit;">Subnet</a>
@@ -1671,8 +1462,7 @@ The following output properties are available:
         <span class="property-indicator"></span>
         <span class="property-type"><a href="#resourceidresponse">Pulumi.<wbr>Azure<wbr>Native.<wbr>Machine<wbr>Learning<wbr>Services.<wbr>Inputs.<wbr>Resource<wbr>Id<wbr>Response<wbr>Args</a></span>
     </dt>
-    <dd>{{% md %}}Virtual network subnet resource ID the compute nodes belong to.{{% /md %}}</dd>
-    <dt class="property-optional"
+    <dd>{{% md %}}Virtual network subnet resource ID the compute nodes belong to.{{% /md %}}</dd><dt class="property-optional"
             title="Optional">
         <span id="useraccountcredentials_csharp">
 <a href="#useraccountcredentials_csharp" style="color: inherit; text-decoration: inherit;">User<wbr>Account<wbr>Credentials</a>
@@ -1680,8 +1470,7 @@ The following output properties are available:
         <span class="property-indicator"></span>
         <span class="property-type"><a href="#useraccountcredentialsresponse">Pulumi.<wbr>Azure<wbr>Native.<wbr>Machine<wbr>Learning<wbr>Services.<wbr>Inputs.<wbr>User<wbr>Account<wbr>Credentials<wbr>Response<wbr>Args</a></span>
     </dt>
-    <dd>{{% md %}}Credentials for an administrator user account that will be created on each compute node.{{% /md %}}</dd>
-    <dt class="property-optional"
+    <dd>{{% md %}}Credentials for an administrator user account that will be created on each compute node.{{% /md %}}</dd><dt class="property-optional"
             title="Optional">
         <span id="virtualmachineimage_csharp">
 <a href="#virtualmachineimage_csharp" style="color: inherit; text-decoration: inherit;">Virtual<wbr>Machine<wbr>Image</a>
@@ -1689,8 +1478,7 @@ The following output properties are available:
         <span class="property-indicator"></span>
         <span class="property-type"><a href="#virtualmachineimageresponse">Pulumi.<wbr>Azure<wbr>Native.<wbr>Machine<wbr>Learning<wbr>Services.<wbr>Inputs.<wbr>Virtual<wbr>Machine<wbr>Image<wbr>Response<wbr>Args</a></span>
     </dt>
-    <dd>{{% md %}}Virtual Machine image for AML Compute - windows only{{% /md %}}</dd>
-    <dt class="property-optional"
+    <dd>{{% md %}}Virtual Machine image for AML Compute - windows only{{% /md %}}</dd><dt class="property-optional"
             title="Optional">
         <span id="vmpriority_csharp">
 <a href="#vmpriority_csharp" style="color: inherit; text-decoration: inherit;">Vm<wbr>Priority</a>
@@ -1698,8 +1486,7 @@ The following output properties are available:
         <span class="property-indicator"></span>
         <span class="property-type">string</span>
     </dt>
-    <dd>{{% md %}}Virtual Machine priority{{% /md %}}</dd>
-    <dt class="property-optional"
+    <dd>{{% md %}}Virtual Machine priority{{% /md %}}</dd><dt class="property-optional"
             title="Optional">
         <span id="vmsize_csharp">
 <a href="#vmsize_csharp" style="color: inherit; text-decoration: inherit;">Vm<wbr>Size</a>
@@ -1707,14 +1494,11 @@ The following output properties are available:
         <span class="property-indicator"></span>
         <span class="property-type">string</span>
     </dt>
-    <dd>{{% md %}}Virtual Machine Size{{% /md %}}</dd>
-</dl>
+    <dd>{{% md %}}Virtual Machine Size{{% /md %}}</dd></dl>
 {{% /choosable %}}
 
 {{% choosable language go %}}
-<dl class="resources-properties">
-
-    <dt class="property-required"
+<dl class="resources-properties"><dt class="property-required"
             title="Required">
         <span id="allocationstate_go">
 <a href="#allocationstate_go" style="color: inherit; text-decoration: inherit;">Allocation<wbr>State</a>
@@ -1722,8 +1506,7 @@ The following output properties are available:
         <span class="property-indicator"></span>
         <span class="property-type">string</span>
     </dt>
-    <dd>{{% md %}}Allocation state of the compute. Possible values are: steady - Indicates that the compute is not resizing. There are no changes to the number of compute nodes in the compute in progress. A compute enters this state when it is created and when no operations are being performed on the compute to change the number of compute nodes. resizing - Indicates that the compute is resizing; that is, compute nodes are being added to or removed from the compute.{{% /md %}}</dd>
-    <dt class="property-required"
+    <dd>{{% md %}}Allocation state of the compute. Possible values are: steady - Indicates that the compute is not resizing. There are no changes to the number of compute nodes in the compute in progress. A compute enters this state when it is created and when no operations are being performed on the compute to change the number of compute nodes. resizing - Indicates that the compute is resizing; that is, compute nodes are being added to or removed from the compute.{{% /md %}}</dd><dt class="property-required"
             title="Required">
         <span id="allocationstatetransitiontime_go">
 <a href="#allocationstatetransitiontime_go" style="color: inherit; text-decoration: inherit;">Allocation<wbr>State<wbr>Transition<wbr>Time</a>
@@ -1731,8 +1514,7 @@ The following output properties are available:
         <span class="property-indicator"></span>
         <span class="property-type">string</span>
     </dt>
-    <dd>{{% md %}}The time at which the compute entered its current allocation state.{{% /md %}}</dd>
-    <dt class="property-required"
+    <dd>{{% md %}}The time at which the compute entered its current allocation state.{{% /md %}}</dd><dt class="property-required"
             title="Required">
         <span id="currentnodecount_go">
 <a href="#currentnodecount_go" style="color: inherit; text-decoration: inherit;">Current<wbr>Node<wbr>Count</a>
@@ -1740,8 +1522,7 @@ The following output properties are available:
         <span class="property-indicator"></span>
         <span class="property-type">int</span>
     </dt>
-    <dd>{{% md %}}The number of compute nodes currently assigned to the compute.{{% /md %}}</dd>
-    <dt class="property-required"
+    <dd>{{% md %}}The number of compute nodes currently assigned to the compute.{{% /md %}}</dd><dt class="property-required"
             title="Required">
         <span id="errors_go">
 <a href="#errors_go" style="color: inherit; text-decoration: inherit;">Errors</a>
@@ -1749,8 +1530,7 @@ The following output properties are available:
         <span class="property-indicator"></span>
         <span class="property-type"><a href="#machinelearningserviceerrorresponse">[]Machine<wbr>Learning<wbr>Service<wbr>Error<wbr>Response</a></span>
     </dt>
-    <dd>{{% md %}}Collection of errors encountered by various compute nodes during node setup.{{% /md %}}</dd>
-    <dt class="property-required"
+    <dd>{{% md %}}Collection of errors encountered by various compute nodes during node setup.{{% /md %}}</dd><dt class="property-required"
             title="Required">
         <span id="nodestatecounts_go">
 <a href="#nodestatecounts_go" style="color: inherit; text-decoration: inherit;">Node<wbr>State<wbr>Counts</a>
@@ -1758,8 +1538,7 @@ The following output properties are available:
         <span class="property-indicator"></span>
         <span class="property-type"><a href="#nodestatecountsresponse">Node<wbr>State<wbr>Counts<wbr>Response</a></span>
     </dt>
-    <dd>{{% md %}}Counts of various node states on the compute.{{% /md %}}</dd>
-    <dt class="property-required"
+    <dd>{{% md %}}Counts of various node states on the compute.{{% /md %}}</dd><dt class="property-required"
             title="Required">
         <span id="targetnodecount_go">
 <a href="#targetnodecount_go" style="color: inherit; text-decoration: inherit;">Target<wbr>Node<wbr>Count</a>
@@ -1767,8 +1546,7 @@ The following output properties are available:
         <span class="property-indicator"></span>
         <span class="property-type">int</span>
     </dt>
-    <dd>{{% md %}}The target number of compute nodes for the compute. If the allocationState is resizing, this property denotes the target node count for the ongoing resize operation. If the allocationState is steady, this property denotes the target node count for the previous resize operation.{{% /md %}}</dd>
-    <dt class="property-optional"
+    <dd>{{% md %}}The target number of compute nodes for the compute. If the allocationState is resizing, this property denotes the target node count for the ongoing resize operation. If the allocationState is steady, this property denotes the target node count for the previous resize operation.{{% /md %}}</dd><dt class="property-optional"
             title="Optional">
         <span id="enablenodepublicip_go">
 <a href="#enablenodepublicip_go" style="color: inherit; text-decoration: inherit;">Enable<wbr>Node<wbr>Public<wbr>Ip</a>
@@ -1776,8 +1554,7 @@ The following output properties are available:
         <span class="property-indicator"></span>
         <span class="property-type">bool</span>
     </dt>
-    <dd>{{% md %}}Enable or disable node public IP address provisioning. Possible values are: Possible values are: true - Indicates that the compute nodes will have public IPs provisioned. false - Indicates that the compute nodes will have a private endpoint and no public IPs.{{% /md %}}</dd>
-    <dt class="property-optional"
+    <dd>{{% md %}}Enable or disable node public IP address provisioning. Possible values are: Possible values are: true - Indicates that the compute nodes will have public IPs provisioned. false - Indicates that the compute nodes will have a private endpoint and no public IPs.{{% /md %}}</dd><dt class="property-optional"
             title="Optional">
         <span id="isolatednetwork_go">
 <a href="#isolatednetwork_go" style="color: inherit; text-decoration: inherit;">Isolated<wbr>Network</a>
@@ -1785,8 +1562,7 @@ The following output properties are available:
         <span class="property-indicator"></span>
         <span class="property-type">bool</span>
     </dt>
-    <dd>{{% md %}}Network is isolated or not{{% /md %}}</dd>
-    <dt class="property-optional"
+    <dd>{{% md %}}Network is isolated or not{{% /md %}}</dd><dt class="property-optional"
             title="Optional">
         <span id="ostype_go">
 <a href="#ostype_go" style="color: inherit; text-decoration: inherit;">Os<wbr>Type</a>
@@ -1794,8 +1570,7 @@ The following output properties are available:
         <span class="property-indicator"></span>
         <span class="property-type">string</span>
     </dt>
-    <dd>{{% md %}}Compute OS Type{{% /md %}}</dd>
-    <dt class="property-optional"
+    <dd>{{% md %}}Compute OS Type{{% /md %}}</dd><dt class="property-optional"
             title="Optional">
         <span id="remoteloginportpublicaccess_go">
 <a href="#remoteloginportpublicaccess_go" style="color: inherit; text-decoration: inherit;">Remote<wbr>Login<wbr>Port<wbr>Public<wbr>Access</a>
@@ -1803,8 +1578,7 @@ The following output properties are available:
         <span class="property-indicator"></span>
         <span class="property-type">string</span>
     </dt>
-    <dd>{{% md %}}State of the public SSH port. Possible values are: Disabled - Indicates that the public ssh port is closed on all nodes of the cluster. Enabled - Indicates that the public ssh port is open on all nodes of the cluster. NotSpecified - Indicates that the public ssh port is closed on all nodes of the cluster if VNet is defined, else is open all public nodes. It can be default only during cluster creation time, after creation it will be either enabled or disabled.{{% /md %}}</dd>
-    <dt class="property-optional"
+    <dd>{{% md %}}State of the public SSH port. Possible values are: Disabled - Indicates that the public ssh port is closed on all nodes of the cluster. Enabled - Indicates that the public ssh port is open on all nodes of the cluster. NotSpecified - Indicates that the public ssh port is closed on all nodes of the cluster if VNet is defined, else is open all public nodes. It can be default only during cluster creation time, after creation it will be either enabled or disabled.{{% /md %}}</dd><dt class="property-optional"
             title="Optional">
         <span id="scalesettings_go">
 <a href="#scalesettings_go" style="color: inherit; text-decoration: inherit;">Scale<wbr>Settings</a>
@@ -1812,8 +1586,7 @@ The following output properties are available:
         <span class="property-indicator"></span>
         <span class="property-type"><a href="#scalesettingsresponse">Scale<wbr>Settings<wbr>Response</a></span>
     </dt>
-    <dd>{{% md %}}Scale settings for AML Compute{{% /md %}}</dd>
-    <dt class="property-optional"
+    <dd>{{% md %}}Scale settings for AML Compute{{% /md %}}</dd><dt class="property-optional"
             title="Optional">
         <span id="subnet_go">
 <a href="#subnet_go" style="color: inherit; text-decoration: inherit;">Subnet</a>
@@ -1821,8 +1594,7 @@ The following output properties are available:
         <span class="property-indicator"></span>
         <span class="property-type"><a href="#resourceidresponse">Resource<wbr>Id<wbr>Response</a></span>
     </dt>
-    <dd>{{% md %}}Virtual network subnet resource ID the compute nodes belong to.{{% /md %}}</dd>
-    <dt class="property-optional"
+    <dd>{{% md %}}Virtual network subnet resource ID the compute nodes belong to.{{% /md %}}</dd><dt class="property-optional"
             title="Optional">
         <span id="useraccountcredentials_go">
 <a href="#useraccountcredentials_go" style="color: inherit; text-decoration: inherit;">User<wbr>Account<wbr>Credentials</a>
@@ -1830,8 +1602,7 @@ The following output properties are available:
         <span class="property-indicator"></span>
         <span class="property-type"><a href="#useraccountcredentialsresponse">User<wbr>Account<wbr>Credentials<wbr>Response</a></span>
     </dt>
-    <dd>{{% md %}}Credentials for an administrator user account that will be created on each compute node.{{% /md %}}</dd>
-    <dt class="property-optional"
+    <dd>{{% md %}}Credentials for an administrator user account that will be created on each compute node.{{% /md %}}</dd><dt class="property-optional"
             title="Optional">
         <span id="virtualmachineimage_go">
 <a href="#virtualmachineimage_go" style="color: inherit; text-decoration: inherit;">Virtual<wbr>Machine<wbr>Image</a>
@@ -1839,8 +1610,7 @@ The following output properties are available:
         <span class="property-indicator"></span>
         <span class="property-type"><a href="#virtualmachineimageresponse">Virtual<wbr>Machine<wbr>Image<wbr>Response</a></span>
     </dt>
-    <dd>{{% md %}}Virtual Machine image for AML Compute - windows only{{% /md %}}</dd>
-    <dt class="property-optional"
+    <dd>{{% md %}}Virtual Machine image for AML Compute - windows only{{% /md %}}</dd><dt class="property-optional"
             title="Optional">
         <span id="vmpriority_go">
 <a href="#vmpriority_go" style="color: inherit; text-decoration: inherit;">Vm<wbr>Priority</a>
@@ -1848,8 +1618,7 @@ The following output properties are available:
         <span class="property-indicator"></span>
         <span class="property-type">string</span>
     </dt>
-    <dd>{{% md %}}Virtual Machine priority{{% /md %}}</dd>
-    <dt class="property-optional"
+    <dd>{{% md %}}Virtual Machine priority{{% /md %}}</dd><dt class="property-optional"
             title="Optional">
         <span id="vmsize_go">
 <a href="#vmsize_go" style="color: inherit; text-decoration: inherit;">Vm<wbr>Size</a>
@@ -1857,14 +1626,11 @@ The following output properties are available:
         <span class="property-indicator"></span>
         <span class="property-type">string</span>
     </dt>
-    <dd>{{% md %}}Virtual Machine Size{{% /md %}}</dd>
-</dl>
+    <dd>{{% md %}}Virtual Machine Size{{% /md %}}</dd></dl>
 {{% /choosable %}}
 
 {{% choosable language nodejs %}}
-<dl class="resources-properties">
-
-    <dt class="property-required"
+<dl class="resources-properties"><dt class="property-required"
             title="Required">
         <span id="allocationstate_nodejs">
 <a href="#allocationstate_nodejs" style="color: inherit; text-decoration: inherit;">allocation<wbr>State</a>
@@ -1872,8 +1638,7 @@ The following output properties are available:
         <span class="property-indicator"></span>
         <span class="property-type">string</span>
     </dt>
-    <dd>{{% md %}}Allocation state of the compute. Possible values are: steady - Indicates that the compute is not resizing. There are no changes to the number of compute nodes in the compute in progress. A compute enters this state when it is created and when no operations are being performed on the compute to change the number of compute nodes. resizing - Indicates that the compute is resizing; that is, compute nodes are being added to or removed from the compute.{{% /md %}}</dd>
-    <dt class="property-required"
+    <dd>{{% md %}}Allocation state of the compute. Possible values are: steady - Indicates that the compute is not resizing. There are no changes to the number of compute nodes in the compute in progress. A compute enters this state when it is created and when no operations are being performed on the compute to change the number of compute nodes. resizing - Indicates that the compute is resizing; that is, compute nodes are being added to or removed from the compute.{{% /md %}}</dd><dt class="property-required"
             title="Required">
         <span id="allocationstatetransitiontime_nodejs">
 <a href="#allocationstatetransitiontime_nodejs" style="color: inherit; text-decoration: inherit;">allocation<wbr>State<wbr>Transition<wbr>Time</a>
@@ -1881,8 +1646,7 @@ The following output properties are available:
         <span class="property-indicator"></span>
         <span class="property-type">string</span>
     </dt>
-    <dd>{{% md %}}The time at which the compute entered its current allocation state.{{% /md %}}</dd>
-    <dt class="property-required"
+    <dd>{{% md %}}The time at which the compute entered its current allocation state.{{% /md %}}</dd><dt class="property-required"
             title="Required">
         <span id="currentnodecount_nodejs">
 <a href="#currentnodecount_nodejs" style="color: inherit; text-decoration: inherit;">current<wbr>Node<wbr>Count</a>
@@ -1890,8 +1654,7 @@ The following output properties are available:
         <span class="property-indicator"></span>
         <span class="property-type">number</span>
     </dt>
-    <dd>{{% md %}}The number of compute nodes currently assigned to the compute.{{% /md %}}</dd>
-    <dt class="property-required"
+    <dd>{{% md %}}The number of compute nodes currently assigned to the compute.{{% /md %}}</dd><dt class="property-required"
             title="Required">
         <span id="errors_nodejs">
 <a href="#errors_nodejs" style="color: inherit; text-decoration: inherit;">errors</a>
@@ -1899,8 +1662,7 @@ The following output properties are available:
         <span class="property-indicator"></span>
         <span class="property-type"><a href="#machinelearningserviceerrorresponse">Machine<wbr>Learning<wbr>Service<wbr>Error<wbr>Response[]</a></span>
     </dt>
-    <dd>{{% md %}}Collection of errors encountered by various compute nodes during node setup.{{% /md %}}</dd>
-    <dt class="property-required"
+    <dd>{{% md %}}Collection of errors encountered by various compute nodes during node setup.{{% /md %}}</dd><dt class="property-required"
             title="Required">
         <span id="nodestatecounts_nodejs">
 <a href="#nodestatecounts_nodejs" style="color: inherit; text-decoration: inherit;">node<wbr>State<wbr>Counts</a>
@@ -1908,8 +1670,7 @@ The following output properties are available:
         <span class="property-indicator"></span>
         <span class="property-type"><a href="#nodestatecountsresponse">Node<wbr>State<wbr>Counts<wbr>Response</a></span>
     </dt>
-    <dd>{{% md %}}Counts of various node states on the compute.{{% /md %}}</dd>
-    <dt class="property-required"
+    <dd>{{% md %}}Counts of various node states on the compute.{{% /md %}}</dd><dt class="property-required"
             title="Required">
         <span id="targetnodecount_nodejs">
 <a href="#targetnodecount_nodejs" style="color: inherit; text-decoration: inherit;">target<wbr>Node<wbr>Count</a>
@@ -1917,8 +1678,7 @@ The following output properties are available:
         <span class="property-indicator"></span>
         <span class="property-type">number</span>
     </dt>
-    <dd>{{% md %}}The target number of compute nodes for the compute. If the allocationState is resizing, this property denotes the target node count for the ongoing resize operation. If the allocationState is steady, this property denotes the target node count for the previous resize operation.{{% /md %}}</dd>
-    <dt class="property-optional"
+    <dd>{{% md %}}The target number of compute nodes for the compute. If the allocationState is resizing, this property denotes the target node count for the ongoing resize operation. If the allocationState is steady, this property denotes the target node count for the previous resize operation.{{% /md %}}</dd><dt class="property-optional"
             title="Optional">
         <span id="enablenodepublicip_nodejs">
 <a href="#enablenodepublicip_nodejs" style="color: inherit; text-decoration: inherit;">enable<wbr>Node<wbr>Public<wbr>Ip</a>
@@ -1926,8 +1686,7 @@ The following output properties are available:
         <span class="property-indicator"></span>
         <span class="property-type">boolean</span>
     </dt>
-    <dd>{{% md %}}Enable or disable node public IP address provisioning. Possible values are: Possible values are: true - Indicates that the compute nodes will have public IPs provisioned. false - Indicates that the compute nodes will have a private endpoint and no public IPs.{{% /md %}}</dd>
-    <dt class="property-optional"
+    <dd>{{% md %}}Enable or disable node public IP address provisioning. Possible values are: Possible values are: true - Indicates that the compute nodes will have public IPs provisioned. false - Indicates that the compute nodes will have a private endpoint and no public IPs.{{% /md %}}</dd><dt class="property-optional"
             title="Optional">
         <span id="isolatednetwork_nodejs">
 <a href="#isolatednetwork_nodejs" style="color: inherit; text-decoration: inherit;">isolated<wbr>Network</a>
@@ -1935,8 +1694,7 @@ The following output properties are available:
         <span class="property-indicator"></span>
         <span class="property-type">boolean</span>
     </dt>
-    <dd>{{% md %}}Network is isolated or not{{% /md %}}</dd>
-    <dt class="property-optional"
+    <dd>{{% md %}}Network is isolated or not{{% /md %}}</dd><dt class="property-optional"
             title="Optional">
         <span id="ostype_nodejs">
 <a href="#ostype_nodejs" style="color: inherit; text-decoration: inherit;">os<wbr>Type</a>
@@ -1944,8 +1702,7 @@ The following output properties are available:
         <span class="property-indicator"></span>
         <span class="property-type">string</span>
     </dt>
-    <dd>{{% md %}}Compute OS Type{{% /md %}}</dd>
-    <dt class="property-optional"
+    <dd>{{% md %}}Compute OS Type{{% /md %}}</dd><dt class="property-optional"
             title="Optional">
         <span id="remoteloginportpublicaccess_nodejs">
 <a href="#remoteloginportpublicaccess_nodejs" style="color: inherit; text-decoration: inherit;">remote<wbr>Login<wbr>Port<wbr>Public<wbr>Access</a>
@@ -1953,8 +1710,7 @@ The following output properties are available:
         <span class="property-indicator"></span>
         <span class="property-type">string</span>
     </dt>
-    <dd>{{% md %}}State of the public SSH port. Possible values are: Disabled - Indicates that the public ssh port is closed on all nodes of the cluster. Enabled - Indicates that the public ssh port is open on all nodes of the cluster. NotSpecified - Indicates that the public ssh port is closed on all nodes of the cluster if VNet is defined, else is open all public nodes. It can be default only during cluster creation time, after creation it will be either enabled or disabled.{{% /md %}}</dd>
-    <dt class="property-optional"
+    <dd>{{% md %}}State of the public SSH port. Possible values are: Disabled - Indicates that the public ssh port is closed on all nodes of the cluster. Enabled - Indicates that the public ssh port is open on all nodes of the cluster. NotSpecified - Indicates that the public ssh port is closed on all nodes of the cluster if VNet is defined, else is open all public nodes. It can be default only during cluster creation time, after creation it will be either enabled or disabled.{{% /md %}}</dd><dt class="property-optional"
             title="Optional">
         <span id="scalesettings_nodejs">
 <a href="#scalesettings_nodejs" style="color: inherit; text-decoration: inherit;">scale<wbr>Settings</a>
@@ -1962,8 +1718,7 @@ The following output properties are available:
         <span class="property-indicator"></span>
         <span class="property-type"><a href="#scalesettingsresponse">Scale<wbr>Settings<wbr>Response</a></span>
     </dt>
-    <dd>{{% md %}}Scale settings for AML Compute{{% /md %}}</dd>
-    <dt class="property-optional"
+    <dd>{{% md %}}Scale settings for AML Compute{{% /md %}}</dd><dt class="property-optional"
             title="Optional">
         <span id="subnet_nodejs">
 <a href="#subnet_nodejs" style="color: inherit; text-decoration: inherit;">subnet</a>
@@ -1971,8 +1726,7 @@ The following output properties are available:
         <span class="property-indicator"></span>
         <span class="property-type"><a href="#resourceidresponse">Resource<wbr>Id<wbr>Response</a></span>
     </dt>
-    <dd>{{% md %}}Virtual network subnet resource ID the compute nodes belong to.{{% /md %}}</dd>
-    <dt class="property-optional"
+    <dd>{{% md %}}Virtual network subnet resource ID the compute nodes belong to.{{% /md %}}</dd><dt class="property-optional"
             title="Optional">
         <span id="useraccountcredentials_nodejs">
 <a href="#useraccountcredentials_nodejs" style="color: inherit; text-decoration: inherit;">user<wbr>Account<wbr>Credentials</a>
@@ -1980,8 +1734,7 @@ The following output properties are available:
         <span class="property-indicator"></span>
         <span class="property-type"><a href="#useraccountcredentialsresponse">User<wbr>Account<wbr>Credentials<wbr>Response</a></span>
     </dt>
-    <dd>{{% md %}}Credentials for an administrator user account that will be created on each compute node.{{% /md %}}</dd>
-    <dt class="property-optional"
+    <dd>{{% md %}}Credentials for an administrator user account that will be created on each compute node.{{% /md %}}</dd><dt class="property-optional"
             title="Optional">
         <span id="virtualmachineimage_nodejs">
 <a href="#virtualmachineimage_nodejs" style="color: inherit; text-decoration: inherit;">virtual<wbr>Machine<wbr>Image</a>
@@ -1989,8 +1742,7 @@ The following output properties are available:
         <span class="property-indicator"></span>
         <span class="property-type"><a href="#virtualmachineimageresponse">Virtual<wbr>Machine<wbr>Image<wbr>Response</a></span>
     </dt>
-    <dd>{{% md %}}Virtual Machine image for AML Compute - windows only{{% /md %}}</dd>
-    <dt class="property-optional"
+    <dd>{{% md %}}Virtual Machine image for AML Compute - windows only{{% /md %}}</dd><dt class="property-optional"
             title="Optional">
         <span id="vmpriority_nodejs">
 <a href="#vmpriority_nodejs" style="color: inherit; text-decoration: inherit;">vm<wbr>Priority</a>
@@ -1998,8 +1750,7 @@ The following output properties are available:
         <span class="property-indicator"></span>
         <span class="property-type">string</span>
     </dt>
-    <dd>{{% md %}}Virtual Machine priority{{% /md %}}</dd>
-    <dt class="property-optional"
+    <dd>{{% md %}}Virtual Machine priority{{% /md %}}</dd><dt class="property-optional"
             title="Optional">
         <span id="vmsize_nodejs">
 <a href="#vmsize_nodejs" style="color: inherit; text-decoration: inherit;">vm<wbr>Size</a>
@@ -2007,14 +1758,11 @@ The following output properties are available:
         <span class="property-indicator"></span>
         <span class="property-type">string</span>
     </dt>
-    <dd>{{% md %}}Virtual Machine Size{{% /md %}}</dd>
-</dl>
+    <dd>{{% md %}}Virtual Machine Size{{% /md %}}</dd></dl>
 {{% /choosable %}}
 
 {{% choosable language python %}}
-<dl class="resources-properties">
-
-    <dt class="property-required"
+<dl class="resources-properties"><dt class="property-required"
             title="Required">
         <span id="allocation_state_python">
 <a href="#allocation_state_python" style="color: inherit; text-decoration: inherit;">allocation_<wbr>state</a>
@@ -2022,8 +1770,7 @@ The following output properties are available:
         <span class="property-indicator"></span>
         <span class="property-type">str</span>
     </dt>
-    <dd>{{% md %}}Allocation state of the compute. Possible values are: steady - Indicates that the compute is not resizing. There are no changes to the number of compute nodes in the compute in progress. A compute enters this state when it is created and when no operations are being performed on the compute to change the number of compute nodes. resizing - Indicates that the compute is resizing; that is, compute nodes are being added to or removed from the compute.{{% /md %}}</dd>
-    <dt class="property-required"
+    <dd>{{% md %}}Allocation state of the compute. Possible values are: steady - Indicates that the compute is not resizing. There are no changes to the number of compute nodes in the compute in progress. A compute enters this state when it is created and when no operations are being performed on the compute to change the number of compute nodes. resizing - Indicates that the compute is resizing; that is, compute nodes are being added to or removed from the compute.{{% /md %}}</dd><dt class="property-required"
             title="Required">
         <span id="allocation_state_transition_time_python">
 <a href="#allocation_state_transition_time_python" style="color: inherit; text-decoration: inherit;">allocation_<wbr>state_<wbr>transition_<wbr>time</a>
@@ -2031,8 +1778,7 @@ The following output properties are available:
         <span class="property-indicator"></span>
         <span class="property-type">str</span>
     </dt>
-    <dd>{{% md %}}The time at which the compute entered its current allocation state.{{% /md %}}</dd>
-    <dt class="property-required"
+    <dd>{{% md %}}The time at which the compute entered its current allocation state.{{% /md %}}</dd><dt class="property-required"
             title="Required">
         <span id="current_node_count_python">
 <a href="#current_node_count_python" style="color: inherit; text-decoration: inherit;">current_<wbr>node_<wbr>count</a>
@@ -2040,8 +1786,7 @@ The following output properties are available:
         <span class="property-indicator"></span>
         <span class="property-type">int</span>
     </dt>
-    <dd>{{% md %}}The number of compute nodes currently assigned to the compute.{{% /md %}}</dd>
-    <dt class="property-required"
+    <dd>{{% md %}}The number of compute nodes currently assigned to the compute.{{% /md %}}</dd><dt class="property-required"
             title="Required">
         <span id="errors_python">
 <a href="#errors_python" style="color: inherit; text-decoration: inherit;">errors</a>
@@ -2049,8 +1794,7 @@ The following output properties are available:
         <span class="property-indicator"></span>
         <span class="property-type"><a href="#machinelearningserviceerrorresponse">Sequence[Machine<wbr>Learning<wbr>Service<wbr>Error<wbr>Response<wbr>Args]</a></span>
     </dt>
-    <dd>{{% md %}}Collection of errors encountered by various compute nodes during node setup.{{% /md %}}</dd>
-    <dt class="property-required"
+    <dd>{{% md %}}Collection of errors encountered by various compute nodes during node setup.{{% /md %}}</dd><dt class="property-required"
             title="Required">
         <span id="node_state_counts_python">
 <a href="#node_state_counts_python" style="color: inherit; text-decoration: inherit;">node_<wbr>state_<wbr>counts</a>
@@ -2058,8 +1802,7 @@ The following output properties are available:
         <span class="property-indicator"></span>
         <span class="property-type"><a href="#nodestatecountsresponse">Node<wbr>State<wbr>Counts<wbr>Response<wbr>Args</a></span>
     </dt>
-    <dd>{{% md %}}Counts of various node states on the compute.{{% /md %}}</dd>
-    <dt class="property-required"
+    <dd>{{% md %}}Counts of various node states on the compute.{{% /md %}}</dd><dt class="property-required"
             title="Required">
         <span id="target_node_count_python">
 <a href="#target_node_count_python" style="color: inherit; text-decoration: inherit;">target_<wbr>node_<wbr>count</a>
@@ -2067,8 +1810,7 @@ The following output properties are available:
         <span class="property-indicator"></span>
         <span class="property-type">int</span>
     </dt>
-    <dd>{{% md %}}The target number of compute nodes for the compute. If the allocationState is resizing, this property denotes the target node count for the ongoing resize operation. If the allocationState is steady, this property denotes the target node count for the previous resize operation.{{% /md %}}</dd>
-    <dt class="property-optional"
+    <dd>{{% md %}}The target number of compute nodes for the compute. If the allocationState is resizing, this property denotes the target node count for the ongoing resize operation. If the allocationState is steady, this property denotes the target node count for the previous resize operation.{{% /md %}}</dd><dt class="property-optional"
             title="Optional">
         <span id="enable_node_public_ip_python">
 <a href="#enable_node_public_ip_python" style="color: inherit; text-decoration: inherit;">enable_<wbr>node_<wbr>public_<wbr>ip</a>
@@ -2076,8 +1818,7 @@ The following output properties are available:
         <span class="property-indicator"></span>
         <span class="property-type">bool</span>
     </dt>
-    <dd>{{% md %}}Enable or disable node public IP address provisioning. Possible values are: Possible values are: true - Indicates that the compute nodes will have public IPs provisioned. false - Indicates that the compute nodes will have a private endpoint and no public IPs.{{% /md %}}</dd>
-    <dt class="property-optional"
+    <dd>{{% md %}}Enable or disable node public IP address provisioning. Possible values are: Possible values are: true - Indicates that the compute nodes will have public IPs provisioned. false - Indicates that the compute nodes will have a private endpoint and no public IPs.{{% /md %}}</dd><dt class="property-optional"
             title="Optional">
         <span id="isolated_network_python">
 <a href="#isolated_network_python" style="color: inherit; text-decoration: inherit;">isolated_<wbr>network</a>
@@ -2085,8 +1826,7 @@ The following output properties are available:
         <span class="property-indicator"></span>
         <span class="property-type">bool</span>
     </dt>
-    <dd>{{% md %}}Network is isolated or not{{% /md %}}</dd>
-    <dt class="property-optional"
+    <dd>{{% md %}}Network is isolated or not{{% /md %}}</dd><dt class="property-optional"
             title="Optional">
         <span id="os_type_python">
 <a href="#os_type_python" style="color: inherit; text-decoration: inherit;">os_<wbr>type</a>
@@ -2094,8 +1834,7 @@ The following output properties are available:
         <span class="property-indicator"></span>
         <span class="property-type">str</span>
     </dt>
-    <dd>{{% md %}}Compute OS Type{{% /md %}}</dd>
-    <dt class="property-optional"
+    <dd>{{% md %}}Compute OS Type{{% /md %}}</dd><dt class="property-optional"
             title="Optional">
         <span id="remote_login_port_public_access_python">
 <a href="#remote_login_port_public_access_python" style="color: inherit; text-decoration: inherit;">remote_<wbr>login_<wbr>port_<wbr>public_<wbr>access</a>
@@ -2103,8 +1842,7 @@ The following output properties are available:
         <span class="property-indicator"></span>
         <span class="property-type">str</span>
     </dt>
-    <dd>{{% md %}}State of the public SSH port. Possible values are: Disabled - Indicates that the public ssh port is closed on all nodes of the cluster. Enabled - Indicates that the public ssh port is open on all nodes of the cluster. NotSpecified - Indicates that the public ssh port is closed on all nodes of the cluster if VNet is defined, else is open all public nodes. It can be default only during cluster creation time, after creation it will be either enabled or disabled.{{% /md %}}</dd>
-    <dt class="property-optional"
+    <dd>{{% md %}}State of the public SSH port. Possible values are: Disabled - Indicates that the public ssh port is closed on all nodes of the cluster. Enabled - Indicates that the public ssh port is open on all nodes of the cluster. NotSpecified - Indicates that the public ssh port is closed on all nodes of the cluster if VNet is defined, else is open all public nodes. It can be default only during cluster creation time, after creation it will be either enabled or disabled.{{% /md %}}</dd><dt class="property-optional"
             title="Optional">
         <span id="scale_settings_python">
 <a href="#scale_settings_python" style="color: inherit; text-decoration: inherit;">scale_<wbr>settings</a>
@@ -2112,8 +1850,7 @@ The following output properties are available:
         <span class="property-indicator"></span>
         <span class="property-type"><a href="#scalesettingsresponse">Scale<wbr>Settings<wbr>Response<wbr>Args</a></span>
     </dt>
-    <dd>{{% md %}}Scale settings for AML Compute{{% /md %}}</dd>
-    <dt class="property-optional"
+    <dd>{{% md %}}Scale settings for AML Compute{{% /md %}}</dd><dt class="property-optional"
             title="Optional">
         <span id="subnet_python">
 <a href="#subnet_python" style="color: inherit; text-decoration: inherit;">subnet</a>
@@ -2121,8 +1858,7 @@ The following output properties are available:
         <span class="property-indicator"></span>
         <span class="property-type"><a href="#resourceidresponse">Resource<wbr>Id<wbr>Response<wbr>Args</a></span>
     </dt>
-    <dd>{{% md %}}Virtual network subnet resource ID the compute nodes belong to.{{% /md %}}</dd>
-    <dt class="property-optional"
+    <dd>{{% md %}}Virtual network subnet resource ID the compute nodes belong to.{{% /md %}}</dd><dt class="property-optional"
             title="Optional">
         <span id="user_account_credentials_python">
 <a href="#user_account_credentials_python" style="color: inherit; text-decoration: inherit;">user_<wbr>account_<wbr>credentials</a>
@@ -2130,8 +1866,7 @@ The following output properties are available:
         <span class="property-indicator"></span>
         <span class="property-type"><a href="#useraccountcredentialsresponse">User<wbr>Account<wbr>Credentials<wbr>Response<wbr>Args</a></span>
     </dt>
-    <dd>{{% md %}}Credentials for an administrator user account that will be created on each compute node.{{% /md %}}</dd>
-    <dt class="property-optional"
+    <dd>{{% md %}}Credentials for an administrator user account that will be created on each compute node.{{% /md %}}</dd><dt class="property-optional"
             title="Optional">
         <span id="virtual_machine_image_python">
 <a href="#virtual_machine_image_python" style="color: inherit; text-decoration: inherit;">virtual_<wbr>machine_<wbr>image</a>
@@ -2139,8 +1874,7 @@ The following output properties are available:
         <span class="property-indicator"></span>
         <span class="property-type"><a href="#virtualmachineimageresponse">Virtual<wbr>Machine<wbr>Image<wbr>Response<wbr>Args</a></span>
     </dt>
-    <dd>{{% md %}}Virtual Machine image for AML Compute - windows only{{% /md %}}</dd>
-    <dt class="property-optional"
+    <dd>{{% md %}}Virtual Machine image for AML Compute - windows only{{% /md %}}</dd><dt class="property-optional"
             title="Optional">
         <span id="vm_priority_python">
 <a href="#vm_priority_python" style="color: inherit; text-decoration: inherit;">vm_<wbr>priority</a>
@@ -2148,8 +1882,7 @@ The following output properties are available:
         <span class="property-indicator"></span>
         <span class="property-type">str</span>
     </dt>
-    <dd>{{% md %}}Virtual Machine priority{{% /md %}}</dd>
-    <dt class="property-optional"
+    <dd>{{% md %}}Virtual Machine priority{{% /md %}}</dd><dt class="property-optional"
             title="Optional">
         <span id="vm_size_python">
 <a href="#vm_size_python" style="color: inherit; text-decoration: inherit;">vm_<wbr>size</a>
@@ -2157,8 +1890,7 @@ The following output properties are available:
         <span class="property-indicator"></span>
         <span class="property-type">str</span>
     </dt>
-    <dd>{{% md %}}Virtual Machine Size{{% /md %}}</dd>
-</dl>
+    <dd>{{% md %}}Virtual Machine Size{{% /md %}}</dd></dl>
 {{% /choosable %}}
 
 <h4 id="assigneduserresponse">Assigned<wbr>User<wbr>Response</h4>
@@ -2166,9 +1898,7 @@ The following output properties are available:
 
 
 {{% choosable language csharp %}}
-<dl class="resources-properties">
-
-    <dt class="property-required"
+<dl class="resources-properties"><dt class="property-required"
             title="Required">
         <span id="objectid_csharp">
 <a href="#objectid_csharp" style="color: inherit; text-decoration: inherit;">Object<wbr>Id</a>
@@ -2176,8 +1906,7 @@ The following output properties are available:
         <span class="property-indicator"></span>
         <span class="property-type">string</span>
     </dt>
-    <dd>{{% md %}}User’s AAD Object Id.{{% /md %}}</dd>
-    <dt class="property-required"
+    <dd>{{% md %}}User’s AAD Object Id.{{% /md %}}</dd><dt class="property-required"
             title="Required">
         <span id="tenantid_csharp">
 <a href="#tenantid_csharp" style="color: inherit; text-decoration: inherit;">Tenant<wbr>Id</a>
@@ -2185,14 +1914,11 @@ The following output properties are available:
         <span class="property-indicator"></span>
         <span class="property-type">string</span>
     </dt>
-    <dd>{{% md %}}User’s AAD Tenant Id.{{% /md %}}</dd>
-</dl>
+    <dd>{{% md %}}User’s AAD Tenant Id.{{% /md %}}</dd></dl>
 {{% /choosable %}}
 
 {{% choosable language go %}}
-<dl class="resources-properties">
-
-    <dt class="property-required"
+<dl class="resources-properties"><dt class="property-required"
             title="Required">
         <span id="objectid_go">
 <a href="#objectid_go" style="color: inherit; text-decoration: inherit;">Object<wbr>Id</a>
@@ -2200,8 +1926,7 @@ The following output properties are available:
         <span class="property-indicator"></span>
         <span class="property-type">string</span>
     </dt>
-    <dd>{{% md %}}User’s AAD Object Id.{{% /md %}}</dd>
-    <dt class="property-required"
+    <dd>{{% md %}}User’s AAD Object Id.{{% /md %}}</dd><dt class="property-required"
             title="Required">
         <span id="tenantid_go">
 <a href="#tenantid_go" style="color: inherit; text-decoration: inherit;">Tenant<wbr>Id</a>
@@ -2209,14 +1934,11 @@ The following output properties are available:
         <span class="property-indicator"></span>
         <span class="property-type">string</span>
     </dt>
-    <dd>{{% md %}}User’s AAD Tenant Id.{{% /md %}}</dd>
-</dl>
+    <dd>{{% md %}}User’s AAD Tenant Id.{{% /md %}}</dd></dl>
 {{% /choosable %}}
 
 {{% choosable language nodejs %}}
-<dl class="resources-properties">
-
-    <dt class="property-required"
+<dl class="resources-properties"><dt class="property-required"
             title="Required">
         <span id="objectid_nodejs">
 <a href="#objectid_nodejs" style="color: inherit; text-decoration: inherit;">object<wbr>Id</a>
@@ -2224,8 +1946,7 @@ The following output properties are available:
         <span class="property-indicator"></span>
         <span class="property-type">string</span>
     </dt>
-    <dd>{{% md %}}User’s AAD Object Id.{{% /md %}}</dd>
-    <dt class="property-required"
+    <dd>{{% md %}}User’s AAD Object Id.{{% /md %}}</dd><dt class="property-required"
             title="Required">
         <span id="tenantid_nodejs">
 <a href="#tenantid_nodejs" style="color: inherit; text-decoration: inherit;">tenant<wbr>Id</a>
@@ -2233,14 +1954,11 @@ The following output properties are available:
         <span class="property-indicator"></span>
         <span class="property-type">string</span>
     </dt>
-    <dd>{{% md %}}User’s AAD Tenant Id.{{% /md %}}</dd>
-</dl>
+    <dd>{{% md %}}User’s AAD Tenant Id.{{% /md %}}</dd></dl>
 {{% /choosable %}}
 
 {{% choosable language python %}}
-<dl class="resources-properties">
-
-    <dt class="property-required"
+<dl class="resources-properties"><dt class="property-required"
             title="Required">
         <span id="object_id_python">
 <a href="#object_id_python" style="color: inherit; text-decoration: inherit;">object_<wbr>id</a>
@@ -2248,8 +1966,7 @@ The following output properties are available:
         <span class="property-indicator"></span>
         <span class="property-type">str</span>
     </dt>
-    <dd>{{% md %}}User’s AAD Object Id.{{% /md %}}</dd>
-    <dt class="property-required"
+    <dd>{{% md %}}User’s AAD Object Id.{{% /md %}}</dd><dt class="property-required"
             title="Required">
         <span id="tenant_id_python">
 <a href="#tenant_id_python" style="color: inherit; text-decoration: inherit;">tenant_<wbr>id</a>
@@ -2257,8 +1974,7 @@ The following output properties are available:
         <span class="property-indicator"></span>
         <span class="property-type">str</span>
     </dt>
-    <dd>{{% md %}}User’s AAD Tenant Id.{{% /md %}}</dd>
-</dl>
+    <dd>{{% md %}}User’s AAD Tenant Id.{{% /md %}}</dd></dl>
 {{% /choosable %}}
 
 <h4 id="computeinstanceapplicationresponse">Compute<wbr>Instance<wbr>Application<wbr>Response</h4>
@@ -2266,9 +1982,7 @@ The following output properties are available:
 
 
 {{% choosable language csharp %}}
-<dl class="resources-properties">
-
-    <dt class="property-optional"
+<dl class="resources-properties"><dt class="property-optional"
             title="Optional">
         <span id="displayname_csharp">
 <a href="#displayname_csharp" style="color: inherit; text-decoration: inherit;">Display<wbr>Name</a>
@@ -2276,8 +1990,7 @@ The following output properties are available:
         <span class="property-indicator"></span>
         <span class="property-type">string</span>
     </dt>
-    <dd>{{% md %}}Name of the ComputeInstance application.{{% /md %}}</dd>
-    <dt class="property-optional"
+    <dd>{{% md %}}Name of the ComputeInstance application.{{% /md %}}</dd><dt class="property-optional"
             title="Optional">
         <span id="endpointuri_csharp">
 <a href="#endpointuri_csharp" style="color: inherit; text-decoration: inherit;">Endpoint<wbr>Uri</a>
@@ -2285,14 +1998,11 @@ The following output properties are available:
         <span class="property-indicator"></span>
         <span class="property-type">string</span>
     </dt>
-    <dd>{{% md %}}Application' endpoint URI.{{% /md %}}</dd>
-</dl>
+    <dd>{{% md %}}Application' endpoint URI.{{% /md %}}</dd></dl>
 {{% /choosable %}}
 
 {{% choosable language go %}}
-<dl class="resources-properties">
-
-    <dt class="property-optional"
+<dl class="resources-properties"><dt class="property-optional"
             title="Optional">
         <span id="displayname_go">
 <a href="#displayname_go" style="color: inherit; text-decoration: inherit;">Display<wbr>Name</a>
@@ -2300,8 +2010,7 @@ The following output properties are available:
         <span class="property-indicator"></span>
         <span class="property-type">string</span>
     </dt>
-    <dd>{{% md %}}Name of the ComputeInstance application.{{% /md %}}</dd>
-    <dt class="property-optional"
+    <dd>{{% md %}}Name of the ComputeInstance application.{{% /md %}}</dd><dt class="property-optional"
             title="Optional">
         <span id="endpointuri_go">
 <a href="#endpointuri_go" style="color: inherit; text-decoration: inherit;">Endpoint<wbr>Uri</a>
@@ -2309,14 +2018,11 @@ The following output properties are available:
         <span class="property-indicator"></span>
         <span class="property-type">string</span>
     </dt>
-    <dd>{{% md %}}Application' endpoint URI.{{% /md %}}</dd>
-</dl>
+    <dd>{{% md %}}Application' endpoint URI.{{% /md %}}</dd></dl>
 {{% /choosable %}}
 
 {{% choosable language nodejs %}}
-<dl class="resources-properties">
-
-    <dt class="property-optional"
+<dl class="resources-properties"><dt class="property-optional"
             title="Optional">
         <span id="displayname_nodejs">
 <a href="#displayname_nodejs" style="color: inherit; text-decoration: inherit;">display<wbr>Name</a>
@@ -2324,8 +2030,7 @@ The following output properties are available:
         <span class="property-indicator"></span>
         <span class="property-type">string</span>
     </dt>
-    <dd>{{% md %}}Name of the ComputeInstance application.{{% /md %}}</dd>
-    <dt class="property-optional"
+    <dd>{{% md %}}Name of the ComputeInstance application.{{% /md %}}</dd><dt class="property-optional"
             title="Optional">
         <span id="endpointuri_nodejs">
 <a href="#endpointuri_nodejs" style="color: inherit; text-decoration: inherit;">endpoint<wbr>Uri</a>
@@ -2333,14 +2038,11 @@ The following output properties are available:
         <span class="property-indicator"></span>
         <span class="property-type">string</span>
     </dt>
-    <dd>{{% md %}}Application' endpoint URI.{{% /md %}}</dd>
-</dl>
+    <dd>{{% md %}}Application' endpoint URI.{{% /md %}}</dd></dl>
 {{% /choosable %}}
 
 {{% choosable language python %}}
-<dl class="resources-properties">
-
-    <dt class="property-optional"
+<dl class="resources-properties"><dt class="property-optional"
             title="Optional">
         <span id="display_name_python">
 <a href="#display_name_python" style="color: inherit; text-decoration: inherit;">display_<wbr>name</a>
@@ -2348,8 +2050,7 @@ The following output properties are available:
         <span class="property-indicator"></span>
         <span class="property-type">str</span>
     </dt>
-    <dd>{{% md %}}Name of the ComputeInstance application.{{% /md %}}</dd>
-    <dt class="property-optional"
+    <dd>{{% md %}}Name of the ComputeInstance application.{{% /md %}}</dd><dt class="property-optional"
             title="Optional">
         <span id="endpoint_uri_python">
 <a href="#endpoint_uri_python" style="color: inherit; text-decoration: inherit;">endpoint_<wbr>uri</a>
@@ -2357,8 +2058,7 @@ The following output properties are available:
         <span class="property-indicator"></span>
         <span class="property-type">str</span>
     </dt>
-    <dd>{{% md %}}Application' endpoint URI.{{% /md %}}</dd>
-</dl>
+    <dd>{{% md %}}Application' endpoint URI.{{% /md %}}</dd></dl>
 {{% /choosable %}}
 
 <h4 id="computeinstanceconnectivityendpointsresponse">Compute<wbr>Instance<wbr>Connectivity<wbr>Endpoints<wbr>Response</h4>
@@ -2366,9 +2066,7 @@ The following output properties are available:
 
 
 {{% choosable language csharp %}}
-<dl class="resources-properties">
-
-    <dt class="property-required"
+<dl class="resources-properties"><dt class="property-required"
             title="Required">
         <span id="privateipaddress_csharp">
 <a href="#privateipaddress_csharp" style="color: inherit; text-decoration: inherit;">Private<wbr>Ip<wbr>Address</a>
@@ -2376,8 +2074,7 @@ The following output properties are available:
         <span class="property-indicator"></span>
         <span class="property-type">string</span>
     </dt>
-    <dd>{{% md %}}Private IP Address of this ComputeInstance (local to the VNET in which the compute instance is deployed).{{% /md %}}</dd>
-    <dt class="property-required"
+    <dd>{{% md %}}Private IP Address of this ComputeInstance (local to the VNET in which the compute instance is deployed).{{% /md %}}</dd><dt class="property-required"
             title="Required">
         <span id="publicipaddress_csharp">
 <a href="#publicipaddress_csharp" style="color: inherit; text-decoration: inherit;">Public<wbr>Ip<wbr>Address</a>
@@ -2385,14 +2082,11 @@ The following output properties are available:
         <span class="property-indicator"></span>
         <span class="property-type">string</span>
     </dt>
-    <dd>{{% md %}}Public IP Address of this ComputeInstance.{{% /md %}}</dd>
-</dl>
+    <dd>{{% md %}}Public IP Address of this ComputeInstance.{{% /md %}}</dd></dl>
 {{% /choosable %}}
 
 {{% choosable language go %}}
-<dl class="resources-properties">
-
-    <dt class="property-required"
+<dl class="resources-properties"><dt class="property-required"
             title="Required">
         <span id="privateipaddress_go">
 <a href="#privateipaddress_go" style="color: inherit; text-decoration: inherit;">Private<wbr>Ip<wbr>Address</a>
@@ -2400,8 +2094,7 @@ The following output properties are available:
         <span class="property-indicator"></span>
         <span class="property-type">string</span>
     </dt>
-    <dd>{{% md %}}Private IP Address of this ComputeInstance (local to the VNET in which the compute instance is deployed).{{% /md %}}</dd>
-    <dt class="property-required"
+    <dd>{{% md %}}Private IP Address of this ComputeInstance (local to the VNET in which the compute instance is deployed).{{% /md %}}</dd><dt class="property-required"
             title="Required">
         <span id="publicipaddress_go">
 <a href="#publicipaddress_go" style="color: inherit; text-decoration: inherit;">Public<wbr>Ip<wbr>Address</a>
@@ -2409,14 +2102,11 @@ The following output properties are available:
         <span class="property-indicator"></span>
         <span class="property-type">string</span>
     </dt>
-    <dd>{{% md %}}Public IP Address of this ComputeInstance.{{% /md %}}</dd>
-</dl>
+    <dd>{{% md %}}Public IP Address of this ComputeInstance.{{% /md %}}</dd></dl>
 {{% /choosable %}}
 
 {{% choosable language nodejs %}}
-<dl class="resources-properties">
-
-    <dt class="property-required"
+<dl class="resources-properties"><dt class="property-required"
             title="Required">
         <span id="privateipaddress_nodejs">
 <a href="#privateipaddress_nodejs" style="color: inherit; text-decoration: inherit;">private<wbr>Ip<wbr>Address</a>
@@ -2424,8 +2114,7 @@ The following output properties are available:
         <span class="property-indicator"></span>
         <span class="property-type">string</span>
     </dt>
-    <dd>{{% md %}}Private IP Address of this ComputeInstance (local to the VNET in which the compute instance is deployed).{{% /md %}}</dd>
-    <dt class="property-required"
+    <dd>{{% md %}}Private IP Address of this ComputeInstance (local to the VNET in which the compute instance is deployed).{{% /md %}}</dd><dt class="property-required"
             title="Required">
         <span id="publicipaddress_nodejs">
 <a href="#publicipaddress_nodejs" style="color: inherit; text-decoration: inherit;">public<wbr>Ip<wbr>Address</a>
@@ -2433,14 +2122,11 @@ The following output properties are available:
         <span class="property-indicator"></span>
         <span class="property-type">string</span>
     </dt>
-    <dd>{{% md %}}Public IP Address of this ComputeInstance.{{% /md %}}</dd>
-</dl>
+    <dd>{{% md %}}Public IP Address of this ComputeInstance.{{% /md %}}</dd></dl>
 {{% /choosable %}}
 
 {{% choosable language python %}}
-<dl class="resources-properties">
-
-    <dt class="property-required"
+<dl class="resources-properties"><dt class="property-required"
             title="Required">
         <span id="private_ip_address_python">
 <a href="#private_ip_address_python" style="color: inherit; text-decoration: inherit;">private_<wbr>ip_<wbr>address</a>
@@ -2448,8 +2134,7 @@ The following output properties are available:
         <span class="property-indicator"></span>
         <span class="property-type">str</span>
     </dt>
-    <dd>{{% md %}}Private IP Address of this ComputeInstance (local to the VNET in which the compute instance is deployed).{{% /md %}}</dd>
-    <dt class="property-required"
+    <dd>{{% md %}}Private IP Address of this ComputeInstance (local to the VNET in which the compute instance is deployed).{{% /md %}}</dd><dt class="property-required"
             title="Required">
         <span id="public_ip_address_python">
 <a href="#public_ip_address_python" style="color: inherit; text-decoration: inherit;">public_<wbr>ip_<wbr>address</a>
@@ -2457,8 +2142,7 @@ The following output properties are available:
         <span class="property-indicator"></span>
         <span class="property-type">str</span>
     </dt>
-    <dd>{{% md %}}Public IP Address of this ComputeInstance.{{% /md %}}</dd>
-</dl>
+    <dd>{{% md %}}Public IP Address of this ComputeInstance.{{% /md %}}</dd></dl>
 {{% /choosable %}}
 
 <h4 id="computeinstancecreatedbyresponse">Compute<wbr>Instance<wbr>Created<wbr>By<wbr>Response</h4>
@@ -2466,9 +2150,7 @@ The following output properties are available:
 
 
 {{% choosable language csharp %}}
-<dl class="resources-properties">
-
-    <dt class="property-required"
+<dl class="resources-properties"><dt class="property-required"
             title="Required">
         <span id="userid_csharp">
 <a href="#userid_csharp" style="color: inherit; text-decoration: inherit;">User<wbr>Id</a>
@@ -2476,8 +2158,7 @@ The following output properties are available:
         <span class="property-indicator"></span>
         <span class="property-type">string</span>
     </dt>
-    <dd>{{% md %}}Uniquely identifies the user within his/her organization.{{% /md %}}</dd>
-    <dt class="property-required"
+    <dd>{{% md %}}Uniquely identifies the user within his/her organization.{{% /md %}}</dd><dt class="property-required"
             title="Required">
         <span id="username_csharp">
 <a href="#username_csharp" style="color: inherit; text-decoration: inherit;">User<wbr>Name</a>
@@ -2485,8 +2166,7 @@ The following output properties are available:
         <span class="property-indicator"></span>
         <span class="property-type">string</span>
     </dt>
-    <dd>{{% md %}}Name of the user.{{% /md %}}</dd>
-    <dt class="property-required"
+    <dd>{{% md %}}Name of the user.{{% /md %}}</dd><dt class="property-required"
             title="Required">
         <span id="userorgid_csharp">
 <a href="#userorgid_csharp" style="color: inherit; text-decoration: inherit;">User<wbr>Org<wbr>Id</a>
@@ -2494,14 +2174,11 @@ The following output properties are available:
         <span class="property-indicator"></span>
         <span class="property-type">string</span>
     </dt>
-    <dd>{{% md %}}Uniquely identifies user' Azure Active Directory organization.{{% /md %}}</dd>
-</dl>
+    <dd>{{% md %}}Uniquely identifies user' Azure Active Directory organization.{{% /md %}}</dd></dl>
 {{% /choosable %}}
 
 {{% choosable language go %}}
-<dl class="resources-properties">
-
-    <dt class="property-required"
+<dl class="resources-properties"><dt class="property-required"
             title="Required">
         <span id="userid_go">
 <a href="#userid_go" style="color: inherit; text-decoration: inherit;">User<wbr>Id</a>
@@ -2509,8 +2186,7 @@ The following output properties are available:
         <span class="property-indicator"></span>
         <span class="property-type">string</span>
     </dt>
-    <dd>{{% md %}}Uniquely identifies the user within his/her organization.{{% /md %}}</dd>
-    <dt class="property-required"
+    <dd>{{% md %}}Uniquely identifies the user within his/her organization.{{% /md %}}</dd><dt class="property-required"
             title="Required">
         <span id="username_go">
 <a href="#username_go" style="color: inherit; text-decoration: inherit;">User<wbr>Name</a>
@@ -2518,8 +2194,7 @@ The following output properties are available:
         <span class="property-indicator"></span>
         <span class="property-type">string</span>
     </dt>
-    <dd>{{% md %}}Name of the user.{{% /md %}}</dd>
-    <dt class="property-required"
+    <dd>{{% md %}}Name of the user.{{% /md %}}</dd><dt class="property-required"
             title="Required">
         <span id="userorgid_go">
 <a href="#userorgid_go" style="color: inherit; text-decoration: inherit;">User<wbr>Org<wbr>Id</a>
@@ -2527,14 +2202,11 @@ The following output properties are available:
         <span class="property-indicator"></span>
         <span class="property-type">string</span>
     </dt>
-    <dd>{{% md %}}Uniquely identifies user' Azure Active Directory organization.{{% /md %}}</dd>
-</dl>
+    <dd>{{% md %}}Uniquely identifies user' Azure Active Directory organization.{{% /md %}}</dd></dl>
 {{% /choosable %}}
 
 {{% choosable language nodejs %}}
-<dl class="resources-properties">
-
-    <dt class="property-required"
+<dl class="resources-properties"><dt class="property-required"
             title="Required">
         <span id="userid_nodejs">
 <a href="#userid_nodejs" style="color: inherit; text-decoration: inherit;">user<wbr>Id</a>
@@ -2542,8 +2214,7 @@ The following output properties are available:
         <span class="property-indicator"></span>
         <span class="property-type">string</span>
     </dt>
-    <dd>{{% md %}}Uniquely identifies the user within his/her organization.{{% /md %}}</dd>
-    <dt class="property-required"
+    <dd>{{% md %}}Uniquely identifies the user within his/her organization.{{% /md %}}</dd><dt class="property-required"
             title="Required">
         <span id="username_nodejs">
 <a href="#username_nodejs" style="color: inherit; text-decoration: inherit;">user<wbr>Name</a>
@@ -2551,8 +2222,7 @@ The following output properties are available:
         <span class="property-indicator"></span>
         <span class="property-type">string</span>
     </dt>
-    <dd>{{% md %}}Name of the user.{{% /md %}}</dd>
-    <dt class="property-required"
+    <dd>{{% md %}}Name of the user.{{% /md %}}</dd><dt class="property-required"
             title="Required">
         <span id="userorgid_nodejs">
 <a href="#userorgid_nodejs" style="color: inherit; text-decoration: inherit;">user<wbr>Org<wbr>Id</a>
@@ -2560,14 +2230,11 @@ The following output properties are available:
         <span class="property-indicator"></span>
         <span class="property-type">string</span>
     </dt>
-    <dd>{{% md %}}Uniquely identifies user' Azure Active Directory organization.{{% /md %}}</dd>
-</dl>
+    <dd>{{% md %}}Uniquely identifies user' Azure Active Directory organization.{{% /md %}}</dd></dl>
 {{% /choosable %}}
 
 {{% choosable language python %}}
-<dl class="resources-properties">
-
-    <dt class="property-required"
+<dl class="resources-properties"><dt class="property-required"
             title="Required">
         <span id="user_id_python">
 <a href="#user_id_python" style="color: inherit; text-decoration: inherit;">user_<wbr>id</a>
@@ -2575,8 +2242,7 @@ The following output properties are available:
         <span class="property-indicator"></span>
         <span class="property-type">str</span>
     </dt>
-    <dd>{{% md %}}Uniquely identifies the user within his/her organization.{{% /md %}}</dd>
-    <dt class="property-required"
+    <dd>{{% md %}}Uniquely identifies the user within his/her organization.{{% /md %}}</dd><dt class="property-required"
             title="Required">
         <span id="user_name_python">
 <a href="#user_name_python" style="color: inherit; text-decoration: inherit;">user_<wbr>name</a>
@@ -2584,8 +2250,7 @@ The following output properties are available:
         <span class="property-indicator"></span>
         <span class="property-type">str</span>
     </dt>
-    <dd>{{% md %}}Name of the user.{{% /md %}}</dd>
-    <dt class="property-required"
+    <dd>{{% md %}}Name of the user.{{% /md %}}</dd><dt class="property-required"
             title="Required">
         <span id="user_org_id_python">
 <a href="#user_org_id_python" style="color: inherit; text-decoration: inherit;">user_<wbr>org_<wbr>id</a>
@@ -2593,8 +2258,7 @@ The following output properties are available:
         <span class="property-indicator"></span>
         <span class="property-type">str</span>
     </dt>
-    <dd>{{% md %}}Uniquely identifies user' Azure Active Directory organization.{{% /md %}}</dd>
-</dl>
+    <dd>{{% md %}}Uniquely identifies user' Azure Active Directory organization.{{% /md %}}</dd></dl>
 {{% /choosable %}}
 
 <h4 id="computeinstancelastoperationresponse">Compute<wbr>Instance<wbr>Last<wbr>Operation<wbr>Response</h4>
@@ -2602,9 +2266,7 @@ The following output properties are available:
 
 
 {{% choosable language csharp %}}
-<dl class="resources-properties">
-
-    <dt class="property-optional"
+<dl class="resources-properties"><dt class="property-optional"
             title="Optional">
         <span id="operationname_csharp">
 <a href="#operationname_csharp" style="color: inherit; text-decoration: inherit;">Operation<wbr>Name</a>
@@ -2612,8 +2274,7 @@ The following output properties are available:
         <span class="property-indicator"></span>
         <span class="property-type">string</span>
     </dt>
-    <dd>{{% md %}}Name of the last operation.{{% /md %}}</dd>
-    <dt class="property-optional"
+    <dd>{{% md %}}Name of the last operation.{{% /md %}}</dd><dt class="property-optional"
             title="Optional">
         <span id="operationstatus_csharp">
 <a href="#operationstatus_csharp" style="color: inherit; text-decoration: inherit;">Operation<wbr>Status</a>
@@ -2621,8 +2282,7 @@ The following output properties are available:
         <span class="property-indicator"></span>
         <span class="property-type">string</span>
     </dt>
-    <dd>{{% md %}}Operation status.{{% /md %}}</dd>
-    <dt class="property-optional"
+    <dd>{{% md %}}Operation status.{{% /md %}}</dd><dt class="property-optional"
             title="Optional">
         <span id="operationtime_csharp">
 <a href="#operationtime_csharp" style="color: inherit; text-decoration: inherit;">Operation<wbr>Time</a>
@@ -2630,14 +2290,11 @@ The following output properties are available:
         <span class="property-indicator"></span>
         <span class="property-type">string</span>
     </dt>
-    <dd>{{% md %}}Time of the last operation.{{% /md %}}</dd>
-</dl>
+    <dd>{{% md %}}Time of the last operation.{{% /md %}}</dd></dl>
 {{% /choosable %}}
 
 {{% choosable language go %}}
-<dl class="resources-properties">
-
-    <dt class="property-optional"
+<dl class="resources-properties"><dt class="property-optional"
             title="Optional">
         <span id="operationname_go">
 <a href="#operationname_go" style="color: inherit; text-decoration: inherit;">Operation<wbr>Name</a>
@@ -2645,8 +2302,7 @@ The following output properties are available:
         <span class="property-indicator"></span>
         <span class="property-type">string</span>
     </dt>
-    <dd>{{% md %}}Name of the last operation.{{% /md %}}</dd>
-    <dt class="property-optional"
+    <dd>{{% md %}}Name of the last operation.{{% /md %}}</dd><dt class="property-optional"
             title="Optional">
         <span id="operationstatus_go">
 <a href="#operationstatus_go" style="color: inherit; text-decoration: inherit;">Operation<wbr>Status</a>
@@ -2654,8 +2310,7 @@ The following output properties are available:
         <span class="property-indicator"></span>
         <span class="property-type">string</span>
     </dt>
-    <dd>{{% md %}}Operation status.{{% /md %}}</dd>
-    <dt class="property-optional"
+    <dd>{{% md %}}Operation status.{{% /md %}}</dd><dt class="property-optional"
             title="Optional">
         <span id="operationtime_go">
 <a href="#operationtime_go" style="color: inherit; text-decoration: inherit;">Operation<wbr>Time</a>
@@ -2663,14 +2318,11 @@ The following output properties are available:
         <span class="property-indicator"></span>
         <span class="property-type">string</span>
     </dt>
-    <dd>{{% md %}}Time of the last operation.{{% /md %}}</dd>
-</dl>
+    <dd>{{% md %}}Time of the last operation.{{% /md %}}</dd></dl>
 {{% /choosable %}}
 
 {{% choosable language nodejs %}}
-<dl class="resources-properties">
-
-    <dt class="property-optional"
+<dl class="resources-properties"><dt class="property-optional"
             title="Optional">
         <span id="operationname_nodejs">
 <a href="#operationname_nodejs" style="color: inherit; text-decoration: inherit;">operation<wbr>Name</a>
@@ -2678,8 +2330,7 @@ The following output properties are available:
         <span class="property-indicator"></span>
         <span class="property-type">string</span>
     </dt>
-    <dd>{{% md %}}Name of the last operation.{{% /md %}}</dd>
-    <dt class="property-optional"
+    <dd>{{% md %}}Name of the last operation.{{% /md %}}</dd><dt class="property-optional"
             title="Optional">
         <span id="operationstatus_nodejs">
 <a href="#operationstatus_nodejs" style="color: inherit; text-decoration: inherit;">operation<wbr>Status</a>
@@ -2687,8 +2338,7 @@ The following output properties are available:
         <span class="property-indicator"></span>
         <span class="property-type">string</span>
     </dt>
-    <dd>{{% md %}}Operation status.{{% /md %}}</dd>
-    <dt class="property-optional"
+    <dd>{{% md %}}Operation status.{{% /md %}}</dd><dt class="property-optional"
             title="Optional">
         <span id="operationtime_nodejs">
 <a href="#operationtime_nodejs" style="color: inherit; text-decoration: inherit;">operation<wbr>Time</a>
@@ -2696,14 +2346,11 @@ The following output properties are available:
         <span class="property-indicator"></span>
         <span class="property-type">string</span>
     </dt>
-    <dd>{{% md %}}Time of the last operation.{{% /md %}}</dd>
-</dl>
+    <dd>{{% md %}}Time of the last operation.{{% /md %}}</dd></dl>
 {{% /choosable %}}
 
 {{% choosable language python %}}
-<dl class="resources-properties">
-
-    <dt class="property-optional"
+<dl class="resources-properties"><dt class="property-optional"
             title="Optional">
         <span id="operation_name_python">
 <a href="#operation_name_python" style="color: inherit; text-decoration: inherit;">operation_<wbr>name</a>
@@ -2711,8 +2358,7 @@ The following output properties are available:
         <span class="property-indicator"></span>
         <span class="property-type">str</span>
     </dt>
-    <dd>{{% md %}}Name of the last operation.{{% /md %}}</dd>
-    <dt class="property-optional"
+    <dd>{{% md %}}Name of the last operation.{{% /md %}}</dd><dt class="property-optional"
             title="Optional">
         <span id="operation_status_python">
 <a href="#operation_status_python" style="color: inherit; text-decoration: inherit;">operation_<wbr>status</a>
@@ -2720,8 +2366,7 @@ The following output properties are available:
         <span class="property-indicator"></span>
         <span class="property-type">str</span>
     </dt>
-    <dd>{{% md %}}Operation status.{{% /md %}}</dd>
-    <dt class="property-optional"
+    <dd>{{% md %}}Operation status.{{% /md %}}</dd><dt class="property-optional"
             title="Optional">
         <span id="operation_time_python">
 <a href="#operation_time_python" style="color: inherit; text-decoration: inherit;">operation_<wbr>time</a>
@@ -2729,8 +2374,7 @@ The following output properties are available:
         <span class="property-indicator"></span>
         <span class="property-type">str</span>
     </dt>
-    <dd>{{% md %}}Time of the last operation.{{% /md %}}</dd>
-</dl>
+    <dd>{{% md %}}Time of the last operation.{{% /md %}}</dd></dl>
 {{% /choosable %}}
 
 <h4 id="computeinstanceresponse">Compute<wbr>Instance<wbr>Response</h4>
@@ -2738,9 +2382,7 @@ The following output properties are available:
 
 
 {{% choosable language csharp %}}
-<dl class="resources-properties">
-
-    <dt class="property-required"
+<dl class="resources-properties"><dt class="property-required"
             title="Required">
         <span id="isattachedcompute_csharp">
 <a href="#isattachedcompute_csharp" style="color: inherit; text-decoration: inherit;">Is<wbr>Attached<wbr>Compute</a>
@@ -2748,8 +2390,7 @@ The following output properties are available:
         <span class="property-indicator"></span>
         <span class="property-type">bool</span>
     </dt>
-    <dd>{{% md %}}Indicating whether the compute was provisioned by user and brought from outside if true, or machine learning service provisioned it if false.{{% /md %}}</dd>
-    <dt class="property-required"
+    <dd>{{% md %}}Indicating whether the compute was provisioned by user and brought from outside if true, or machine learning service provisioned it if false.{{% /md %}}</dd><dt class="property-required"
             title="Required">
         <span id="provisioningerrors_csharp">
 <a href="#provisioningerrors_csharp" style="color: inherit; text-decoration: inherit;">Provisioning<wbr>Errors</a>
@@ -2757,8 +2398,7 @@ The following output properties are available:
         <span class="property-indicator"></span>
         <span class="property-type"><a href="#machinelearningserviceerrorresponse">List&lt;Pulumi.<wbr>Azure<wbr>Native.<wbr>Machine<wbr>Learning<wbr>Services.<wbr>Inputs.<wbr>Machine<wbr>Learning<wbr>Service<wbr>Error<wbr>Response<wbr>Args&gt;</a></span>
     </dt>
-    <dd>{{% md %}}Errors during provisioning{{% /md %}}</dd>
-    <dt class="property-required"
+    <dd>{{% md %}}Errors during provisioning{{% /md %}}</dd><dt class="property-required"
             title="Required">
         <span id="provisioningstate_csharp">
 <a href="#provisioningstate_csharp" style="color: inherit; text-decoration: inherit;">Provisioning<wbr>State</a>
@@ -2766,8 +2406,7 @@ The following output properties are available:
         <span class="property-indicator"></span>
         <span class="property-type">string</span>
     </dt>
-    <dd>{{% md %}}The provision state of the cluster. Valid values are Unknown, Updating, Provisioning, Succeeded, and Failed.{{% /md %}}</dd>
-    <dt class="property-optional"
+    <dd>{{% md %}}The provision state of the cluster. Valid values are Unknown, Updating, Provisioning, Succeeded, and Failed.{{% /md %}}</dd><dt class="property-optional"
             title="Optional">
         <span id="computelocation_csharp">
 <a href="#computelocation_csharp" style="color: inherit; text-decoration: inherit;">Compute<wbr>Location</a>
@@ -2775,8 +2414,7 @@ The following output properties are available:
         <span class="property-indicator"></span>
         <span class="property-type">string</span>
     </dt>
-    <dd>{{% md %}}Location for the underlying compute{{% /md %}}</dd>
-    <dt class="property-optional"
+    <dd>{{% md %}}Location for the underlying compute{{% /md %}}</dd><dt class="property-optional"
             title="Optional">
         <span id="description_csharp">
 <a href="#description_csharp" style="color: inherit; text-decoration: inherit;">Description</a>
@@ -2784,8 +2422,7 @@ The following output properties are available:
         <span class="property-indicator"></span>
         <span class="property-type">string</span>
     </dt>
-    <dd>{{% md %}}The description of the Machine Learning compute.{{% /md %}}</dd>
-    <dt class="property-optional"
+    <dd>{{% md %}}The description of the Machine Learning compute.{{% /md %}}</dd><dt class="property-optional"
             title="Optional">
         <span id="properties_csharp">
 <a href="#properties_csharp" style="color: inherit; text-decoration: inherit;">Properties</a>
@@ -2793,8 +2430,7 @@ The following output properties are available:
         <span class="property-indicator"></span>
         <span class="property-type"><a href="#computeinstanceresponseproperties">Pulumi.<wbr>Azure<wbr>Native.<wbr>Machine<wbr>Learning<wbr>Services.<wbr>Inputs.<wbr>Compute<wbr>Instance<wbr>Response<wbr>Properties<wbr>Args</a></span>
     </dt>
-    <dd>{{% md %}}Compute Instance properties{{% /md %}}</dd>
-    <dt class="property-optional"
+    <dd>{{% md %}}Compute Instance properties{{% /md %}}</dd><dt class="property-optional"
             title="Optional">
         <span id="resourceid_csharp">
 <a href="#resourceid_csharp" style="color: inherit; text-decoration: inherit;">Resource<wbr>Id</a>
@@ -2802,14 +2438,11 @@ The following output properties are available:
         <span class="property-indicator"></span>
         <span class="property-type">string</span>
     </dt>
-    <dd>{{% md %}}ARM resource id of the underlying compute{{% /md %}}</dd>
-</dl>
+    <dd>{{% md %}}ARM resource id of the underlying compute{{% /md %}}</dd></dl>
 {{% /choosable %}}
 
 {{% choosable language go %}}
-<dl class="resources-properties">
-
-    <dt class="property-required"
+<dl class="resources-properties"><dt class="property-required"
             title="Required">
         <span id="isattachedcompute_go">
 <a href="#isattachedcompute_go" style="color: inherit; text-decoration: inherit;">Is<wbr>Attached<wbr>Compute</a>
@@ -2817,8 +2450,7 @@ The following output properties are available:
         <span class="property-indicator"></span>
         <span class="property-type">bool</span>
     </dt>
-    <dd>{{% md %}}Indicating whether the compute was provisioned by user and brought from outside if true, or machine learning service provisioned it if false.{{% /md %}}</dd>
-    <dt class="property-required"
+    <dd>{{% md %}}Indicating whether the compute was provisioned by user and brought from outside if true, or machine learning service provisioned it if false.{{% /md %}}</dd><dt class="property-required"
             title="Required">
         <span id="provisioningerrors_go">
 <a href="#provisioningerrors_go" style="color: inherit; text-decoration: inherit;">Provisioning<wbr>Errors</a>
@@ -2826,8 +2458,7 @@ The following output properties are available:
         <span class="property-indicator"></span>
         <span class="property-type"><a href="#machinelearningserviceerrorresponse">[]Machine<wbr>Learning<wbr>Service<wbr>Error<wbr>Response</a></span>
     </dt>
-    <dd>{{% md %}}Errors during provisioning{{% /md %}}</dd>
-    <dt class="property-required"
+    <dd>{{% md %}}Errors during provisioning{{% /md %}}</dd><dt class="property-required"
             title="Required">
         <span id="provisioningstate_go">
 <a href="#provisioningstate_go" style="color: inherit; text-decoration: inherit;">Provisioning<wbr>State</a>
@@ -2835,8 +2466,7 @@ The following output properties are available:
         <span class="property-indicator"></span>
         <span class="property-type">string</span>
     </dt>
-    <dd>{{% md %}}The provision state of the cluster. Valid values are Unknown, Updating, Provisioning, Succeeded, and Failed.{{% /md %}}</dd>
-    <dt class="property-optional"
+    <dd>{{% md %}}The provision state of the cluster. Valid values are Unknown, Updating, Provisioning, Succeeded, and Failed.{{% /md %}}</dd><dt class="property-optional"
             title="Optional">
         <span id="computelocation_go">
 <a href="#computelocation_go" style="color: inherit; text-decoration: inherit;">Compute<wbr>Location</a>
@@ -2844,8 +2474,7 @@ The following output properties are available:
         <span class="property-indicator"></span>
         <span class="property-type">string</span>
     </dt>
-    <dd>{{% md %}}Location for the underlying compute{{% /md %}}</dd>
-    <dt class="property-optional"
+    <dd>{{% md %}}Location for the underlying compute{{% /md %}}</dd><dt class="property-optional"
             title="Optional">
         <span id="description_go">
 <a href="#description_go" style="color: inherit; text-decoration: inherit;">Description</a>
@@ -2853,8 +2482,7 @@ The following output properties are available:
         <span class="property-indicator"></span>
         <span class="property-type">string</span>
     </dt>
-    <dd>{{% md %}}The description of the Machine Learning compute.{{% /md %}}</dd>
-    <dt class="property-optional"
+    <dd>{{% md %}}The description of the Machine Learning compute.{{% /md %}}</dd><dt class="property-optional"
             title="Optional">
         <span id="properties_go">
 <a href="#properties_go" style="color: inherit; text-decoration: inherit;">Properties</a>
@@ -2862,8 +2490,7 @@ The following output properties are available:
         <span class="property-indicator"></span>
         <span class="property-type"><a href="#computeinstanceresponseproperties">Compute<wbr>Instance<wbr>Response<wbr>Properties</a></span>
     </dt>
-    <dd>{{% md %}}Compute Instance properties{{% /md %}}</dd>
-    <dt class="property-optional"
+    <dd>{{% md %}}Compute Instance properties{{% /md %}}</dd><dt class="property-optional"
             title="Optional">
         <span id="resourceid_go">
 <a href="#resourceid_go" style="color: inherit; text-decoration: inherit;">Resource<wbr>Id</a>
@@ -2871,14 +2498,11 @@ The following output properties are available:
         <span class="property-indicator"></span>
         <span class="property-type">string</span>
     </dt>
-    <dd>{{% md %}}ARM resource id of the underlying compute{{% /md %}}</dd>
-</dl>
+    <dd>{{% md %}}ARM resource id of the underlying compute{{% /md %}}</dd></dl>
 {{% /choosable %}}
 
 {{% choosable language nodejs %}}
-<dl class="resources-properties">
-
-    <dt class="property-required"
+<dl class="resources-properties"><dt class="property-required"
             title="Required">
         <span id="isattachedcompute_nodejs">
 <a href="#isattachedcompute_nodejs" style="color: inherit; text-decoration: inherit;">is<wbr>Attached<wbr>Compute</a>
@@ -2886,8 +2510,7 @@ The following output properties are available:
         <span class="property-indicator"></span>
         <span class="property-type">boolean</span>
     </dt>
-    <dd>{{% md %}}Indicating whether the compute was provisioned by user and brought from outside if true, or machine learning service provisioned it if false.{{% /md %}}</dd>
-    <dt class="property-required"
+    <dd>{{% md %}}Indicating whether the compute was provisioned by user and brought from outside if true, or machine learning service provisioned it if false.{{% /md %}}</dd><dt class="property-required"
             title="Required">
         <span id="provisioningerrors_nodejs">
 <a href="#provisioningerrors_nodejs" style="color: inherit; text-decoration: inherit;">provisioning<wbr>Errors</a>
@@ -2895,8 +2518,7 @@ The following output properties are available:
         <span class="property-indicator"></span>
         <span class="property-type"><a href="#machinelearningserviceerrorresponse">Machine<wbr>Learning<wbr>Service<wbr>Error<wbr>Response[]</a></span>
     </dt>
-    <dd>{{% md %}}Errors during provisioning{{% /md %}}</dd>
-    <dt class="property-required"
+    <dd>{{% md %}}Errors during provisioning{{% /md %}}</dd><dt class="property-required"
             title="Required">
         <span id="provisioningstate_nodejs">
 <a href="#provisioningstate_nodejs" style="color: inherit; text-decoration: inherit;">provisioning<wbr>State</a>
@@ -2904,8 +2526,7 @@ The following output properties are available:
         <span class="property-indicator"></span>
         <span class="property-type">string</span>
     </dt>
-    <dd>{{% md %}}The provision state of the cluster. Valid values are Unknown, Updating, Provisioning, Succeeded, and Failed.{{% /md %}}</dd>
-    <dt class="property-optional"
+    <dd>{{% md %}}The provision state of the cluster. Valid values are Unknown, Updating, Provisioning, Succeeded, and Failed.{{% /md %}}</dd><dt class="property-optional"
             title="Optional">
         <span id="computelocation_nodejs">
 <a href="#computelocation_nodejs" style="color: inherit; text-decoration: inherit;">compute<wbr>Location</a>
@@ -2913,8 +2534,7 @@ The following output properties are available:
         <span class="property-indicator"></span>
         <span class="property-type">string</span>
     </dt>
-    <dd>{{% md %}}Location for the underlying compute{{% /md %}}</dd>
-    <dt class="property-optional"
+    <dd>{{% md %}}Location for the underlying compute{{% /md %}}</dd><dt class="property-optional"
             title="Optional">
         <span id="description_nodejs">
 <a href="#description_nodejs" style="color: inherit; text-decoration: inherit;">description</a>
@@ -2922,8 +2542,7 @@ The following output properties are available:
         <span class="property-indicator"></span>
         <span class="property-type">string</span>
     </dt>
-    <dd>{{% md %}}The description of the Machine Learning compute.{{% /md %}}</dd>
-    <dt class="property-optional"
+    <dd>{{% md %}}The description of the Machine Learning compute.{{% /md %}}</dd><dt class="property-optional"
             title="Optional">
         <span id="properties_nodejs">
 <a href="#properties_nodejs" style="color: inherit; text-decoration: inherit;">properties</a>
@@ -2931,8 +2550,7 @@ The following output properties are available:
         <span class="property-indicator"></span>
         <span class="property-type"><a href="#computeinstanceresponseproperties">Compute<wbr>Instance<wbr>Response<wbr>Properties</a></span>
     </dt>
-    <dd>{{% md %}}Compute Instance properties{{% /md %}}</dd>
-    <dt class="property-optional"
+    <dd>{{% md %}}Compute Instance properties{{% /md %}}</dd><dt class="property-optional"
             title="Optional">
         <span id="resourceid_nodejs">
 <a href="#resourceid_nodejs" style="color: inherit; text-decoration: inherit;">resource<wbr>Id</a>
@@ -2940,14 +2558,11 @@ The following output properties are available:
         <span class="property-indicator"></span>
         <span class="property-type">string</span>
     </dt>
-    <dd>{{% md %}}ARM resource id of the underlying compute{{% /md %}}</dd>
-</dl>
+    <dd>{{% md %}}ARM resource id of the underlying compute{{% /md %}}</dd></dl>
 {{% /choosable %}}
 
 {{% choosable language python %}}
-<dl class="resources-properties">
-
-    <dt class="property-required"
+<dl class="resources-properties"><dt class="property-required"
             title="Required">
         <span id="is_attached_compute_python">
 <a href="#is_attached_compute_python" style="color: inherit; text-decoration: inherit;">is_<wbr>attached_<wbr>compute</a>
@@ -2955,8 +2570,7 @@ The following output properties are available:
         <span class="property-indicator"></span>
         <span class="property-type">bool</span>
     </dt>
-    <dd>{{% md %}}Indicating whether the compute was provisioned by user and brought from outside if true, or machine learning service provisioned it if false.{{% /md %}}</dd>
-    <dt class="property-required"
+    <dd>{{% md %}}Indicating whether the compute was provisioned by user and brought from outside if true, or machine learning service provisioned it if false.{{% /md %}}</dd><dt class="property-required"
             title="Required">
         <span id="provisioning_errors_python">
 <a href="#provisioning_errors_python" style="color: inherit; text-decoration: inherit;">provisioning_<wbr>errors</a>
@@ -2964,8 +2578,7 @@ The following output properties are available:
         <span class="property-indicator"></span>
         <span class="property-type"><a href="#machinelearningserviceerrorresponse">Sequence[Machine<wbr>Learning<wbr>Service<wbr>Error<wbr>Response<wbr>Args]</a></span>
     </dt>
-    <dd>{{% md %}}Errors during provisioning{{% /md %}}</dd>
-    <dt class="property-required"
+    <dd>{{% md %}}Errors during provisioning{{% /md %}}</dd><dt class="property-required"
             title="Required">
         <span id="provisioning_state_python">
 <a href="#provisioning_state_python" style="color: inherit; text-decoration: inherit;">provisioning_<wbr>state</a>
@@ -2973,8 +2586,7 @@ The following output properties are available:
         <span class="property-indicator"></span>
         <span class="property-type">str</span>
     </dt>
-    <dd>{{% md %}}The provision state of the cluster. Valid values are Unknown, Updating, Provisioning, Succeeded, and Failed.{{% /md %}}</dd>
-    <dt class="property-optional"
+    <dd>{{% md %}}The provision state of the cluster. Valid values are Unknown, Updating, Provisioning, Succeeded, and Failed.{{% /md %}}</dd><dt class="property-optional"
             title="Optional">
         <span id="compute_location_python">
 <a href="#compute_location_python" style="color: inherit; text-decoration: inherit;">compute_<wbr>location</a>
@@ -2982,8 +2594,7 @@ The following output properties are available:
         <span class="property-indicator"></span>
         <span class="property-type">str</span>
     </dt>
-    <dd>{{% md %}}Location for the underlying compute{{% /md %}}</dd>
-    <dt class="property-optional"
+    <dd>{{% md %}}Location for the underlying compute{{% /md %}}</dd><dt class="property-optional"
             title="Optional">
         <span id="description_python">
 <a href="#description_python" style="color: inherit; text-decoration: inherit;">description</a>
@@ -2991,8 +2602,7 @@ The following output properties are available:
         <span class="property-indicator"></span>
         <span class="property-type">str</span>
     </dt>
-    <dd>{{% md %}}The description of the Machine Learning compute.{{% /md %}}</dd>
-    <dt class="property-optional"
+    <dd>{{% md %}}The description of the Machine Learning compute.{{% /md %}}</dd><dt class="property-optional"
             title="Optional">
         <span id="properties_python">
 <a href="#properties_python" style="color: inherit; text-decoration: inherit;">properties</a>
@@ -3000,8 +2610,7 @@ The following output properties are available:
         <span class="property-indicator"></span>
         <span class="property-type"><a href="#computeinstanceresponseproperties">Compute<wbr>Instance<wbr>Response<wbr>Properties<wbr>Args</a></span>
     </dt>
-    <dd>{{% md %}}Compute Instance properties{{% /md %}}</dd>
-    <dt class="property-optional"
+    <dd>{{% md %}}Compute Instance properties{{% /md %}}</dd><dt class="property-optional"
             title="Optional">
         <span id="resource_id_python">
 <a href="#resource_id_python" style="color: inherit; text-decoration: inherit;">resource_<wbr>id</a>
@@ -3009,8 +2618,7 @@ The following output properties are available:
         <span class="property-indicator"></span>
         <span class="property-type">str</span>
     </dt>
-    <dd>{{% md %}}ARM resource id of the underlying compute{{% /md %}}</dd>
-</dl>
+    <dd>{{% md %}}ARM resource id of the underlying compute{{% /md %}}</dd></dl>
 {{% /choosable %}}
 
 <h4 id="computeinstanceresponseproperties">Compute<wbr>Instance<wbr>Response<wbr>Properties</h4>
@@ -3018,9 +2626,7 @@ The following output properties are available:
 
 
 {{% choosable language csharp %}}
-<dl class="resources-properties">
-
-    <dt class="property-required"
+<dl class="resources-properties"><dt class="property-required"
             title="Required">
         <span id="applications_csharp">
 <a href="#applications_csharp" style="color: inherit; text-decoration: inherit;">Applications</a>
@@ -3028,8 +2634,7 @@ The following output properties are available:
         <span class="property-indicator"></span>
         <span class="property-type"><a href="#computeinstanceapplicationresponse">List&lt;Pulumi.<wbr>Azure<wbr>Native.<wbr>Machine<wbr>Learning<wbr>Services.<wbr>Inputs.<wbr>Compute<wbr>Instance<wbr>Application<wbr>Response<wbr>Args&gt;</a></span>
     </dt>
-    <dd>{{% md %}}Describes available applications and their endpoints on this ComputeInstance.{{% /md %}}</dd>
-    <dt class="property-required"
+    <dd>{{% md %}}Describes available applications and their endpoints on this ComputeInstance.{{% /md %}}</dd><dt class="property-required"
             title="Required">
         <span id="connectivityendpoints_csharp">
 <a href="#connectivityendpoints_csharp" style="color: inherit; text-decoration: inherit;">Connectivity<wbr>Endpoints</a>
@@ -3037,8 +2642,7 @@ The following output properties are available:
         <span class="property-indicator"></span>
         <span class="property-type"><a href="#computeinstanceconnectivityendpointsresponse">Pulumi.<wbr>Azure<wbr>Native.<wbr>Machine<wbr>Learning<wbr>Services.<wbr>Inputs.<wbr>Compute<wbr>Instance<wbr>Connectivity<wbr>Endpoints<wbr>Response<wbr>Args</a></span>
     </dt>
-    <dd>{{% md %}}Describes all connectivity endpoints available for this ComputeInstance.{{% /md %}}</dd>
-    <dt class="property-required"
+    <dd>{{% md %}}Describes all connectivity endpoints available for this ComputeInstance.{{% /md %}}</dd><dt class="property-required"
             title="Required">
         <span id="createdby_csharp">
 <a href="#createdby_csharp" style="color: inherit; text-decoration: inherit;">Created<wbr>By</a>
@@ -3046,8 +2650,7 @@ The following output properties are available:
         <span class="property-indicator"></span>
         <span class="property-type"><a href="#computeinstancecreatedbyresponse">Pulumi.<wbr>Azure<wbr>Native.<wbr>Machine<wbr>Learning<wbr>Services.<wbr>Inputs.<wbr>Compute<wbr>Instance<wbr>Created<wbr>By<wbr>Response<wbr>Args</a></span>
     </dt>
-    <dd>{{% md %}}Describes information on user who created this ComputeInstance.{{% /md %}}</dd>
-    <dt class="property-required"
+    <dd>{{% md %}}Describes information on user who created this ComputeInstance.{{% /md %}}</dd><dt class="property-required"
             title="Required">
         <span id="errors_csharp">
 <a href="#errors_csharp" style="color: inherit; text-decoration: inherit;">Errors</a>
@@ -3055,8 +2658,7 @@ The following output properties are available:
         <span class="property-indicator"></span>
         <span class="property-type"><a href="#machinelearningserviceerrorresponse">List&lt;Pulumi.<wbr>Azure<wbr>Native.<wbr>Machine<wbr>Learning<wbr>Services.<wbr>Inputs.<wbr>Machine<wbr>Learning<wbr>Service<wbr>Error<wbr>Response<wbr>Args&gt;</a></span>
     </dt>
-    <dd>{{% md %}}Collection of errors encountered on this ComputeInstance.{{% /md %}}</dd>
-    <dt class="property-required"
+    <dd>{{% md %}}Collection of errors encountered on this ComputeInstance.{{% /md %}}</dd><dt class="property-required"
             title="Required">
         <span id="lastoperation_csharp">
 <a href="#lastoperation_csharp" style="color: inherit; text-decoration: inherit;">Last<wbr>Operation</a>
@@ -3064,8 +2666,7 @@ The following output properties are available:
         <span class="property-indicator"></span>
         <span class="property-type"><a href="#computeinstancelastoperationresponse">Pulumi.<wbr>Azure<wbr>Native.<wbr>Machine<wbr>Learning<wbr>Services.<wbr>Inputs.<wbr>Compute<wbr>Instance<wbr>Last<wbr>Operation<wbr>Response<wbr>Args</a></span>
     </dt>
-    <dd>{{% md %}}The last operation on ComputeInstance.{{% /md %}}</dd>
-    <dt class="property-required"
+    <dd>{{% md %}}The last operation on ComputeInstance.{{% /md %}}</dd><dt class="property-required"
             title="Required">
         <span id="state_csharp">
 <a href="#state_csharp" style="color: inherit; text-decoration: inherit;">State</a>
@@ -3073,8 +2674,7 @@ The following output properties are available:
         <span class="property-indicator"></span>
         <span class="property-type">string</span>
     </dt>
-    <dd>{{% md %}}The current state of this ComputeInstance.{{% /md %}}</dd>
-    <dt class="property-optional"
+    <dd>{{% md %}}The current state of this ComputeInstance.{{% /md %}}</dd><dt class="property-optional"
             title="Optional">
         <span id="applicationsharingpolicy_csharp">
 <a href="#applicationsharingpolicy_csharp" style="color: inherit; text-decoration: inherit;">Application<wbr>Sharing<wbr>Policy</a>
@@ -3082,8 +2682,7 @@ The following output properties are available:
         <span class="property-indicator"></span>
         <span class="property-type">string</span>
     </dt>
-    <dd>{{% md %}}Policy for sharing applications on this compute instance among users of parent workspace. If Personal, only the creator can access applications on this compute instance. When Shared, any workspace user can access applications on this instance depending on his/her assigned role.{{% /md %}}</dd>
-    <dt class="property-optional"
+    <dd>{{% md %}}Policy for sharing applications on this compute instance among users of parent workspace. If Personal, only the creator can access applications on this compute instance. When Shared, any workspace user can access applications on this instance depending on his/her assigned role.{{% /md %}}</dd><dt class="property-optional"
             title="Optional">
         <span id="computeinstanceauthorizationtype_csharp">
 <a href="#computeinstanceauthorizationtype_csharp" style="color: inherit; text-decoration: inherit;">Compute<wbr>Instance<wbr>Authorization<wbr>Type</a>
@@ -3091,8 +2690,7 @@ The following output properties are available:
         <span class="property-indicator"></span>
         <span class="property-type">string</span>
     </dt>
-    <dd>{{% md %}}The Compute Instance Authorization type. Available values are personal (default).{{% /md %}}</dd>
-    <dt class="property-optional"
+    <dd>{{% md %}}The Compute Instance Authorization type. Available values are personal (default).{{% /md %}}</dd><dt class="property-optional"
             title="Optional">
         <span id="personalcomputeinstancesettings_csharp">
 <a href="#personalcomputeinstancesettings_csharp" style="color: inherit; text-decoration: inherit;">Personal<wbr>Compute<wbr>Instance<wbr>Settings</a>
@@ -3100,8 +2698,7 @@ The following output properties are available:
         <span class="property-indicator"></span>
         <span class="property-type"><a href="#personalcomputeinstancesettingsresponse">Pulumi.<wbr>Azure<wbr>Native.<wbr>Machine<wbr>Learning<wbr>Services.<wbr>Inputs.<wbr>Personal<wbr>Compute<wbr>Instance<wbr>Settings<wbr>Response<wbr>Args</a></span>
     </dt>
-    <dd>{{% md %}}Settings for a personal compute instance.{{% /md %}}</dd>
-    <dt class="property-optional"
+    <dd>{{% md %}}Settings for a personal compute instance.{{% /md %}}</dd><dt class="property-optional"
             title="Optional">
         <span id="setupscripts_csharp">
 <a href="#setupscripts_csharp" style="color: inherit; text-decoration: inherit;">Setup<wbr>Scripts</a>
@@ -3109,8 +2706,7 @@ The following output properties are available:
         <span class="property-indicator"></span>
         <span class="property-type"><a href="#setupscriptsresponse">Pulumi.<wbr>Azure<wbr>Native.<wbr>Machine<wbr>Learning<wbr>Services.<wbr>Inputs.<wbr>Setup<wbr>Scripts<wbr>Response<wbr>Args</a></span>
     </dt>
-    <dd>{{% md %}}Details of customized scripts to execute for setting up the cluster.{{% /md %}}</dd>
-    <dt class="property-optional"
+    <dd>{{% md %}}Details of customized scripts to execute for setting up the cluster.{{% /md %}}</dd><dt class="property-optional"
             title="Optional">
         <span id="sshsettings_csharp">
 <a href="#sshsettings_csharp" style="color: inherit; text-decoration: inherit;">Ssh<wbr>Settings</a>
@@ -3118,8 +2714,7 @@ The following output properties are available:
         <span class="property-indicator"></span>
         <span class="property-type"><a href="#computeinstancesshsettingsresponse">Pulumi.<wbr>Azure<wbr>Native.<wbr>Machine<wbr>Learning<wbr>Services.<wbr>Inputs.<wbr>Compute<wbr>Instance<wbr>Ssh<wbr>Settings<wbr>Response<wbr>Args</a></span>
     </dt>
-    <dd>{{% md %}}Specifies policy and settings for SSH access.{{% /md %}}</dd>
-    <dt class="property-optional"
+    <dd>{{% md %}}Specifies policy and settings for SSH access.{{% /md %}}</dd><dt class="property-optional"
             title="Optional">
         <span id="subnet_csharp">
 <a href="#subnet_csharp" style="color: inherit; text-decoration: inherit;">Subnet</a>
@@ -3127,8 +2722,7 @@ The following output properties are available:
         <span class="property-indicator"></span>
         <span class="property-type"><a href="#resourceidresponse">Pulumi.<wbr>Azure<wbr>Native.<wbr>Machine<wbr>Learning<wbr>Services.<wbr>Inputs.<wbr>Resource<wbr>Id<wbr>Response<wbr>Args</a></span>
     </dt>
-    <dd>{{% md %}}Virtual network subnet resource ID the compute nodes belong to.{{% /md %}}</dd>
-    <dt class="property-optional"
+    <dd>{{% md %}}Virtual network subnet resource ID the compute nodes belong to.{{% /md %}}</dd><dt class="property-optional"
             title="Optional">
         <span id="vmsize_csharp">
 <a href="#vmsize_csharp" style="color: inherit; text-decoration: inherit;">Vm<wbr>Size</a>
@@ -3136,14 +2730,11 @@ The following output properties are available:
         <span class="property-indicator"></span>
         <span class="property-type">string</span>
     </dt>
-    <dd>{{% md %}}Virtual Machine Size{{% /md %}}</dd>
-</dl>
+    <dd>{{% md %}}Virtual Machine Size{{% /md %}}</dd></dl>
 {{% /choosable %}}
 
 {{% choosable language go %}}
-<dl class="resources-properties">
-
-    <dt class="property-required"
+<dl class="resources-properties"><dt class="property-required"
             title="Required">
         <span id="applications_go">
 <a href="#applications_go" style="color: inherit; text-decoration: inherit;">Applications</a>
@@ -3151,8 +2742,7 @@ The following output properties are available:
         <span class="property-indicator"></span>
         <span class="property-type"><a href="#computeinstanceapplicationresponse">[]Compute<wbr>Instance<wbr>Application<wbr>Response</a></span>
     </dt>
-    <dd>{{% md %}}Describes available applications and their endpoints on this ComputeInstance.{{% /md %}}</dd>
-    <dt class="property-required"
+    <dd>{{% md %}}Describes available applications and their endpoints on this ComputeInstance.{{% /md %}}</dd><dt class="property-required"
             title="Required">
         <span id="connectivityendpoints_go">
 <a href="#connectivityendpoints_go" style="color: inherit; text-decoration: inherit;">Connectivity<wbr>Endpoints</a>
@@ -3160,8 +2750,7 @@ The following output properties are available:
         <span class="property-indicator"></span>
         <span class="property-type"><a href="#computeinstanceconnectivityendpointsresponse">Compute<wbr>Instance<wbr>Connectivity<wbr>Endpoints<wbr>Response</a></span>
     </dt>
-    <dd>{{% md %}}Describes all connectivity endpoints available for this ComputeInstance.{{% /md %}}</dd>
-    <dt class="property-required"
+    <dd>{{% md %}}Describes all connectivity endpoints available for this ComputeInstance.{{% /md %}}</dd><dt class="property-required"
             title="Required">
         <span id="createdby_go">
 <a href="#createdby_go" style="color: inherit; text-decoration: inherit;">Created<wbr>By</a>
@@ -3169,8 +2758,7 @@ The following output properties are available:
         <span class="property-indicator"></span>
         <span class="property-type"><a href="#computeinstancecreatedbyresponse">Compute<wbr>Instance<wbr>Created<wbr>By<wbr>Response</a></span>
     </dt>
-    <dd>{{% md %}}Describes information on user who created this ComputeInstance.{{% /md %}}</dd>
-    <dt class="property-required"
+    <dd>{{% md %}}Describes information on user who created this ComputeInstance.{{% /md %}}</dd><dt class="property-required"
             title="Required">
         <span id="errors_go">
 <a href="#errors_go" style="color: inherit; text-decoration: inherit;">Errors</a>
@@ -3178,8 +2766,7 @@ The following output properties are available:
         <span class="property-indicator"></span>
         <span class="property-type"><a href="#machinelearningserviceerrorresponse">[]Machine<wbr>Learning<wbr>Service<wbr>Error<wbr>Response</a></span>
     </dt>
-    <dd>{{% md %}}Collection of errors encountered on this ComputeInstance.{{% /md %}}</dd>
-    <dt class="property-required"
+    <dd>{{% md %}}Collection of errors encountered on this ComputeInstance.{{% /md %}}</dd><dt class="property-required"
             title="Required">
         <span id="lastoperation_go">
 <a href="#lastoperation_go" style="color: inherit; text-decoration: inherit;">Last<wbr>Operation</a>
@@ -3187,8 +2774,7 @@ The following output properties are available:
         <span class="property-indicator"></span>
         <span class="property-type"><a href="#computeinstancelastoperationresponse">Compute<wbr>Instance<wbr>Last<wbr>Operation<wbr>Response</a></span>
     </dt>
-    <dd>{{% md %}}The last operation on ComputeInstance.{{% /md %}}</dd>
-    <dt class="property-required"
+    <dd>{{% md %}}The last operation on ComputeInstance.{{% /md %}}</dd><dt class="property-required"
             title="Required">
         <span id="state_go">
 <a href="#state_go" style="color: inherit; text-decoration: inherit;">State</a>
@@ -3196,8 +2782,7 @@ The following output properties are available:
         <span class="property-indicator"></span>
         <span class="property-type">string</span>
     </dt>
-    <dd>{{% md %}}The current state of this ComputeInstance.{{% /md %}}</dd>
-    <dt class="property-optional"
+    <dd>{{% md %}}The current state of this ComputeInstance.{{% /md %}}</dd><dt class="property-optional"
             title="Optional">
         <span id="applicationsharingpolicy_go">
 <a href="#applicationsharingpolicy_go" style="color: inherit; text-decoration: inherit;">Application<wbr>Sharing<wbr>Policy</a>
@@ -3205,8 +2790,7 @@ The following output properties are available:
         <span class="property-indicator"></span>
         <span class="property-type">string</span>
     </dt>
-    <dd>{{% md %}}Policy for sharing applications on this compute instance among users of parent workspace. If Personal, only the creator can access applications on this compute instance. When Shared, any workspace user can access applications on this instance depending on his/her assigned role.{{% /md %}}</dd>
-    <dt class="property-optional"
+    <dd>{{% md %}}Policy for sharing applications on this compute instance among users of parent workspace. If Personal, only the creator can access applications on this compute instance. When Shared, any workspace user can access applications on this instance depending on his/her assigned role.{{% /md %}}</dd><dt class="property-optional"
             title="Optional">
         <span id="computeinstanceauthorizationtype_go">
 <a href="#computeinstanceauthorizationtype_go" style="color: inherit; text-decoration: inherit;">Compute<wbr>Instance<wbr>Authorization<wbr>Type</a>
@@ -3214,8 +2798,7 @@ The following output properties are available:
         <span class="property-indicator"></span>
         <span class="property-type">string</span>
     </dt>
-    <dd>{{% md %}}The Compute Instance Authorization type. Available values are personal (default).{{% /md %}}</dd>
-    <dt class="property-optional"
+    <dd>{{% md %}}The Compute Instance Authorization type. Available values are personal (default).{{% /md %}}</dd><dt class="property-optional"
             title="Optional">
         <span id="personalcomputeinstancesettings_go">
 <a href="#personalcomputeinstancesettings_go" style="color: inherit; text-decoration: inherit;">Personal<wbr>Compute<wbr>Instance<wbr>Settings</a>
@@ -3223,8 +2806,7 @@ The following output properties are available:
         <span class="property-indicator"></span>
         <span class="property-type"><a href="#personalcomputeinstancesettingsresponse">Personal<wbr>Compute<wbr>Instance<wbr>Settings<wbr>Response</a></span>
     </dt>
-    <dd>{{% md %}}Settings for a personal compute instance.{{% /md %}}</dd>
-    <dt class="property-optional"
+    <dd>{{% md %}}Settings for a personal compute instance.{{% /md %}}</dd><dt class="property-optional"
             title="Optional">
         <span id="setupscripts_go">
 <a href="#setupscripts_go" style="color: inherit; text-decoration: inherit;">Setup<wbr>Scripts</a>
@@ -3232,8 +2814,7 @@ The following output properties are available:
         <span class="property-indicator"></span>
         <span class="property-type"><a href="#setupscriptsresponse">Setup<wbr>Scripts<wbr>Response</a></span>
     </dt>
-    <dd>{{% md %}}Details of customized scripts to execute for setting up the cluster.{{% /md %}}</dd>
-    <dt class="property-optional"
+    <dd>{{% md %}}Details of customized scripts to execute for setting up the cluster.{{% /md %}}</dd><dt class="property-optional"
             title="Optional">
         <span id="sshsettings_go">
 <a href="#sshsettings_go" style="color: inherit; text-decoration: inherit;">Ssh<wbr>Settings</a>
@@ -3241,8 +2822,7 @@ The following output properties are available:
         <span class="property-indicator"></span>
         <span class="property-type"><a href="#computeinstancesshsettingsresponse">Compute<wbr>Instance<wbr>Ssh<wbr>Settings<wbr>Response</a></span>
     </dt>
-    <dd>{{% md %}}Specifies policy and settings for SSH access.{{% /md %}}</dd>
-    <dt class="property-optional"
+    <dd>{{% md %}}Specifies policy and settings for SSH access.{{% /md %}}</dd><dt class="property-optional"
             title="Optional">
         <span id="subnet_go">
 <a href="#subnet_go" style="color: inherit; text-decoration: inherit;">Subnet</a>
@@ -3250,8 +2830,7 @@ The following output properties are available:
         <span class="property-indicator"></span>
         <span class="property-type"><a href="#resourceidresponse">Resource<wbr>Id<wbr>Response</a></span>
     </dt>
-    <dd>{{% md %}}Virtual network subnet resource ID the compute nodes belong to.{{% /md %}}</dd>
-    <dt class="property-optional"
+    <dd>{{% md %}}Virtual network subnet resource ID the compute nodes belong to.{{% /md %}}</dd><dt class="property-optional"
             title="Optional">
         <span id="vmsize_go">
 <a href="#vmsize_go" style="color: inherit; text-decoration: inherit;">Vm<wbr>Size</a>
@@ -3259,14 +2838,11 @@ The following output properties are available:
         <span class="property-indicator"></span>
         <span class="property-type">string</span>
     </dt>
-    <dd>{{% md %}}Virtual Machine Size{{% /md %}}</dd>
-</dl>
+    <dd>{{% md %}}Virtual Machine Size{{% /md %}}</dd></dl>
 {{% /choosable %}}
 
 {{% choosable language nodejs %}}
-<dl class="resources-properties">
-
-    <dt class="property-required"
+<dl class="resources-properties"><dt class="property-required"
             title="Required">
         <span id="applications_nodejs">
 <a href="#applications_nodejs" style="color: inherit; text-decoration: inherit;">applications</a>
@@ -3274,8 +2850,7 @@ The following output properties are available:
         <span class="property-indicator"></span>
         <span class="property-type"><a href="#computeinstanceapplicationresponse">Compute<wbr>Instance<wbr>Application<wbr>Response[]</a></span>
     </dt>
-    <dd>{{% md %}}Describes available applications and their endpoints on this ComputeInstance.{{% /md %}}</dd>
-    <dt class="property-required"
+    <dd>{{% md %}}Describes available applications and their endpoints on this ComputeInstance.{{% /md %}}</dd><dt class="property-required"
             title="Required">
         <span id="connectivityendpoints_nodejs">
 <a href="#connectivityendpoints_nodejs" style="color: inherit; text-decoration: inherit;">connectivity<wbr>Endpoints</a>
@@ -3283,8 +2858,7 @@ The following output properties are available:
         <span class="property-indicator"></span>
         <span class="property-type"><a href="#computeinstanceconnectivityendpointsresponse">Compute<wbr>Instance<wbr>Connectivity<wbr>Endpoints<wbr>Response</a></span>
     </dt>
-    <dd>{{% md %}}Describes all connectivity endpoints available for this ComputeInstance.{{% /md %}}</dd>
-    <dt class="property-required"
+    <dd>{{% md %}}Describes all connectivity endpoints available for this ComputeInstance.{{% /md %}}</dd><dt class="property-required"
             title="Required">
         <span id="createdby_nodejs">
 <a href="#createdby_nodejs" style="color: inherit; text-decoration: inherit;">created<wbr>By</a>
@@ -3292,8 +2866,7 @@ The following output properties are available:
         <span class="property-indicator"></span>
         <span class="property-type"><a href="#computeinstancecreatedbyresponse">Compute<wbr>Instance<wbr>Created<wbr>By<wbr>Response</a></span>
     </dt>
-    <dd>{{% md %}}Describes information on user who created this ComputeInstance.{{% /md %}}</dd>
-    <dt class="property-required"
+    <dd>{{% md %}}Describes information on user who created this ComputeInstance.{{% /md %}}</dd><dt class="property-required"
             title="Required">
         <span id="errors_nodejs">
 <a href="#errors_nodejs" style="color: inherit; text-decoration: inherit;">errors</a>
@@ -3301,8 +2874,7 @@ The following output properties are available:
         <span class="property-indicator"></span>
         <span class="property-type"><a href="#machinelearningserviceerrorresponse">Machine<wbr>Learning<wbr>Service<wbr>Error<wbr>Response[]</a></span>
     </dt>
-    <dd>{{% md %}}Collection of errors encountered on this ComputeInstance.{{% /md %}}</dd>
-    <dt class="property-required"
+    <dd>{{% md %}}Collection of errors encountered on this ComputeInstance.{{% /md %}}</dd><dt class="property-required"
             title="Required">
         <span id="lastoperation_nodejs">
 <a href="#lastoperation_nodejs" style="color: inherit; text-decoration: inherit;">last<wbr>Operation</a>
@@ -3310,8 +2882,7 @@ The following output properties are available:
         <span class="property-indicator"></span>
         <span class="property-type"><a href="#computeinstancelastoperationresponse">Compute<wbr>Instance<wbr>Last<wbr>Operation<wbr>Response</a></span>
     </dt>
-    <dd>{{% md %}}The last operation on ComputeInstance.{{% /md %}}</dd>
-    <dt class="property-required"
+    <dd>{{% md %}}The last operation on ComputeInstance.{{% /md %}}</dd><dt class="property-required"
             title="Required">
         <span id="state_nodejs">
 <a href="#state_nodejs" style="color: inherit; text-decoration: inherit;">state</a>
@@ -3319,8 +2890,7 @@ The following output properties are available:
         <span class="property-indicator"></span>
         <span class="property-type">string</span>
     </dt>
-    <dd>{{% md %}}The current state of this ComputeInstance.{{% /md %}}</dd>
-    <dt class="property-optional"
+    <dd>{{% md %}}The current state of this ComputeInstance.{{% /md %}}</dd><dt class="property-optional"
             title="Optional">
         <span id="applicationsharingpolicy_nodejs">
 <a href="#applicationsharingpolicy_nodejs" style="color: inherit; text-decoration: inherit;">application<wbr>Sharing<wbr>Policy</a>
@@ -3328,8 +2898,7 @@ The following output properties are available:
         <span class="property-indicator"></span>
         <span class="property-type">string</span>
     </dt>
-    <dd>{{% md %}}Policy for sharing applications on this compute instance among users of parent workspace. If Personal, only the creator can access applications on this compute instance. When Shared, any workspace user can access applications on this instance depending on his/her assigned role.{{% /md %}}</dd>
-    <dt class="property-optional"
+    <dd>{{% md %}}Policy for sharing applications on this compute instance among users of parent workspace. If Personal, only the creator can access applications on this compute instance. When Shared, any workspace user can access applications on this instance depending on his/her assigned role.{{% /md %}}</dd><dt class="property-optional"
             title="Optional">
         <span id="computeinstanceauthorizationtype_nodejs">
 <a href="#computeinstanceauthorizationtype_nodejs" style="color: inherit; text-decoration: inherit;">compute<wbr>Instance<wbr>Authorization<wbr>Type</a>
@@ -3337,8 +2906,7 @@ The following output properties are available:
         <span class="property-indicator"></span>
         <span class="property-type">string</span>
     </dt>
-    <dd>{{% md %}}The Compute Instance Authorization type. Available values are personal (default).{{% /md %}}</dd>
-    <dt class="property-optional"
+    <dd>{{% md %}}The Compute Instance Authorization type. Available values are personal (default).{{% /md %}}</dd><dt class="property-optional"
             title="Optional">
         <span id="personalcomputeinstancesettings_nodejs">
 <a href="#personalcomputeinstancesettings_nodejs" style="color: inherit; text-decoration: inherit;">personal<wbr>Compute<wbr>Instance<wbr>Settings</a>
@@ -3346,8 +2914,7 @@ The following output properties are available:
         <span class="property-indicator"></span>
         <span class="property-type"><a href="#personalcomputeinstancesettingsresponse">Personal<wbr>Compute<wbr>Instance<wbr>Settings<wbr>Response</a></span>
     </dt>
-    <dd>{{% md %}}Settings for a personal compute instance.{{% /md %}}</dd>
-    <dt class="property-optional"
+    <dd>{{% md %}}Settings for a personal compute instance.{{% /md %}}</dd><dt class="property-optional"
             title="Optional">
         <span id="setupscripts_nodejs">
 <a href="#setupscripts_nodejs" style="color: inherit; text-decoration: inherit;">setup<wbr>Scripts</a>
@@ -3355,8 +2922,7 @@ The following output properties are available:
         <span class="property-indicator"></span>
         <span class="property-type"><a href="#setupscriptsresponse">Setup<wbr>Scripts<wbr>Response</a></span>
     </dt>
-    <dd>{{% md %}}Details of customized scripts to execute for setting up the cluster.{{% /md %}}</dd>
-    <dt class="property-optional"
+    <dd>{{% md %}}Details of customized scripts to execute for setting up the cluster.{{% /md %}}</dd><dt class="property-optional"
             title="Optional">
         <span id="sshsettings_nodejs">
 <a href="#sshsettings_nodejs" style="color: inherit; text-decoration: inherit;">ssh<wbr>Settings</a>
@@ -3364,8 +2930,7 @@ The following output properties are available:
         <span class="property-indicator"></span>
         <span class="property-type"><a href="#computeinstancesshsettingsresponse">Compute<wbr>Instance<wbr>Ssh<wbr>Settings<wbr>Response</a></span>
     </dt>
-    <dd>{{% md %}}Specifies policy and settings for SSH access.{{% /md %}}</dd>
-    <dt class="property-optional"
+    <dd>{{% md %}}Specifies policy and settings for SSH access.{{% /md %}}</dd><dt class="property-optional"
             title="Optional">
         <span id="subnet_nodejs">
 <a href="#subnet_nodejs" style="color: inherit; text-decoration: inherit;">subnet</a>
@@ -3373,8 +2938,7 @@ The following output properties are available:
         <span class="property-indicator"></span>
         <span class="property-type"><a href="#resourceidresponse">Resource<wbr>Id<wbr>Response</a></span>
     </dt>
-    <dd>{{% md %}}Virtual network subnet resource ID the compute nodes belong to.{{% /md %}}</dd>
-    <dt class="property-optional"
+    <dd>{{% md %}}Virtual network subnet resource ID the compute nodes belong to.{{% /md %}}</dd><dt class="property-optional"
             title="Optional">
         <span id="vmsize_nodejs">
 <a href="#vmsize_nodejs" style="color: inherit; text-decoration: inherit;">vm<wbr>Size</a>
@@ -3382,14 +2946,11 @@ The following output properties are available:
         <span class="property-indicator"></span>
         <span class="property-type">string</span>
     </dt>
-    <dd>{{% md %}}Virtual Machine Size{{% /md %}}</dd>
-</dl>
+    <dd>{{% md %}}Virtual Machine Size{{% /md %}}</dd></dl>
 {{% /choosable %}}
 
 {{% choosable language python %}}
-<dl class="resources-properties">
-
-    <dt class="property-required"
+<dl class="resources-properties"><dt class="property-required"
             title="Required">
         <span id="applications_python">
 <a href="#applications_python" style="color: inherit; text-decoration: inherit;">applications</a>
@@ -3397,8 +2958,7 @@ The following output properties are available:
         <span class="property-indicator"></span>
         <span class="property-type"><a href="#computeinstanceapplicationresponse">Sequence[Compute<wbr>Instance<wbr>Application<wbr>Response<wbr>Args]</a></span>
     </dt>
-    <dd>{{% md %}}Describes available applications and their endpoints on this ComputeInstance.{{% /md %}}</dd>
-    <dt class="property-required"
+    <dd>{{% md %}}Describes available applications and their endpoints on this ComputeInstance.{{% /md %}}</dd><dt class="property-required"
             title="Required">
         <span id="connectivity_endpoints_python">
 <a href="#connectivity_endpoints_python" style="color: inherit; text-decoration: inherit;">connectivity_<wbr>endpoints</a>
@@ -3406,8 +2966,7 @@ The following output properties are available:
         <span class="property-indicator"></span>
         <span class="property-type"><a href="#computeinstanceconnectivityendpointsresponse">Compute<wbr>Instance<wbr>Connectivity<wbr>Endpoints<wbr>Response<wbr>Args</a></span>
     </dt>
-    <dd>{{% md %}}Describes all connectivity endpoints available for this ComputeInstance.{{% /md %}}</dd>
-    <dt class="property-required"
+    <dd>{{% md %}}Describes all connectivity endpoints available for this ComputeInstance.{{% /md %}}</dd><dt class="property-required"
             title="Required">
         <span id="created_by_python">
 <a href="#created_by_python" style="color: inherit; text-decoration: inherit;">created_<wbr>by</a>
@@ -3415,8 +2974,7 @@ The following output properties are available:
         <span class="property-indicator"></span>
         <span class="property-type"><a href="#computeinstancecreatedbyresponse">Compute<wbr>Instance<wbr>Created<wbr>By<wbr>Response<wbr>Args</a></span>
     </dt>
-    <dd>{{% md %}}Describes information on user who created this ComputeInstance.{{% /md %}}</dd>
-    <dt class="property-required"
+    <dd>{{% md %}}Describes information on user who created this ComputeInstance.{{% /md %}}</dd><dt class="property-required"
             title="Required">
         <span id="errors_python">
 <a href="#errors_python" style="color: inherit; text-decoration: inherit;">errors</a>
@@ -3424,8 +2982,7 @@ The following output properties are available:
         <span class="property-indicator"></span>
         <span class="property-type"><a href="#machinelearningserviceerrorresponse">Sequence[Machine<wbr>Learning<wbr>Service<wbr>Error<wbr>Response<wbr>Args]</a></span>
     </dt>
-    <dd>{{% md %}}Collection of errors encountered on this ComputeInstance.{{% /md %}}</dd>
-    <dt class="property-required"
+    <dd>{{% md %}}Collection of errors encountered on this ComputeInstance.{{% /md %}}</dd><dt class="property-required"
             title="Required">
         <span id="last_operation_python">
 <a href="#last_operation_python" style="color: inherit; text-decoration: inherit;">last_<wbr>operation</a>
@@ -3433,8 +2990,7 @@ The following output properties are available:
         <span class="property-indicator"></span>
         <span class="property-type"><a href="#computeinstancelastoperationresponse">Compute<wbr>Instance<wbr>Last<wbr>Operation<wbr>Response<wbr>Args</a></span>
     </dt>
-    <dd>{{% md %}}The last operation on ComputeInstance.{{% /md %}}</dd>
-    <dt class="property-required"
+    <dd>{{% md %}}The last operation on ComputeInstance.{{% /md %}}</dd><dt class="property-required"
             title="Required">
         <span id="state_python">
 <a href="#state_python" style="color: inherit; text-decoration: inherit;">state</a>
@@ -3442,8 +2998,7 @@ The following output properties are available:
         <span class="property-indicator"></span>
         <span class="property-type">str</span>
     </dt>
-    <dd>{{% md %}}The current state of this ComputeInstance.{{% /md %}}</dd>
-    <dt class="property-optional"
+    <dd>{{% md %}}The current state of this ComputeInstance.{{% /md %}}</dd><dt class="property-optional"
             title="Optional">
         <span id="application_sharing_policy_python">
 <a href="#application_sharing_policy_python" style="color: inherit; text-decoration: inherit;">application_<wbr>sharing_<wbr>policy</a>
@@ -3451,8 +3006,7 @@ The following output properties are available:
         <span class="property-indicator"></span>
         <span class="property-type">str</span>
     </dt>
-    <dd>{{% md %}}Policy for sharing applications on this compute instance among users of parent workspace. If Personal, only the creator can access applications on this compute instance. When Shared, any workspace user can access applications on this instance depending on his/her assigned role.{{% /md %}}</dd>
-    <dt class="property-optional"
+    <dd>{{% md %}}Policy for sharing applications on this compute instance among users of parent workspace. If Personal, only the creator can access applications on this compute instance. When Shared, any workspace user can access applications on this instance depending on his/her assigned role.{{% /md %}}</dd><dt class="property-optional"
             title="Optional">
         <span id="compute_instance_authorization_type_python">
 <a href="#compute_instance_authorization_type_python" style="color: inherit; text-decoration: inherit;">compute_<wbr>instance_<wbr>authorization_<wbr>type</a>
@@ -3460,8 +3014,7 @@ The following output properties are available:
         <span class="property-indicator"></span>
         <span class="property-type">str</span>
     </dt>
-    <dd>{{% md %}}The Compute Instance Authorization type. Available values are personal (default).{{% /md %}}</dd>
-    <dt class="property-optional"
+    <dd>{{% md %}}The Compute Instance Authorization type. Available values are personal (default).{{% /md %}}</dd><dt class="property-optional"
             title="Optional">
         <span id="personal_compute_instance_settings_python">
 <a href="#personal_compute_instance_settings_python" style="color: inherit; text-decoration: inherit;">personal_<wbr>compute_<wbr>instance_<wbr>settings</a>
@@ -3469,8 +3022,7 @@ The following output properties are available:
         <span class="property-indicator"></span>
         <span class="property-type"><a href="#personalcomputeinstancesettingsresponse">Personal<wbr>Compute<wbr>Instance<wbr>Settings<wbr>Response<wbr>Args</a></span>
     </dt>
-    <dd>{{% md %}}Settings for a personal compute instance.{{% /md %}}</dd>
-    <dt class="property-optional"
+    <dd>{{% md %}}Settings for a personal compute instance.{{% /md %}}</dd><dt class="property-optional"
             title="Optional">
         <span id="setup_scripts_python">
 <a href="#setup_scripts_python" style="color: inherit; text-decoration: inherit;">setup_<wbr>scripts</a>
@@ -3478,8 +3030,7 @@ The following output properties are available:
         <span class="property-indicator"></span>
         <span class="property-type"><a href="#setupscriptsresponse">Setup<wbr>Scripts<wbr>Response<wbr>Args</a></span>
     </dt>
-    <dd>{{% md %}}Details of customized scripts to execute for setting up the cluster.{{% /md %}}</dd>
-    <dt class="property-optional"
+    <dd>{{% md %}}Details of customized scripts to execute for setting up the cluster.{{% /md %}}</dd><dt class="property-optional"
             title="Optional">
         <span id="ssh_settings_python">
 <a href="#ssh_settings_python" style="color: inherit; text-decoration: inherit;">ssh_<wbr>settings</a>
@@ -3487,8 +3038,7 @@ The following output properties are available:
         <span class="property-indicator"></span>
         <span class="property-type"><a href="#computeinstancesshsettingsresponse">Compute<wbr>Instance<wbr>Ssh<wbr>Settings<wbr>Response<wbr>Args</a></span>
     </dt>
-    <dd>{{% md %}}Specifies policy and settings for SSH access.{{% /md %}}</dd>
-    <dt class="property-optional"
+    <dd>{{% md %}}Specifies policy and settings for SSH access.{{% /md %}}</dd><dt class="property-optional"
             title="Optional">
         <span id="subnet_python">
 <a href="#subnet_python" style="color: inherit; text-decoration: inherit;">subnet</a>
@@ -3496,8 +3046,7 @@ The following output properties are available:
         <span class="property-indicator"></span>
         <span class="property-type"><a href="#resourceidresponse">Resource<wbr>Id<wbr>Response<wbr>Args</a></span>
     </dt>
-    <dd>{{% md %}}Virtual network subnet resource ID the compute nodes belong to.{{% /md %}}</dd>
-    <dt class="property-optional"
+    <dd>{{% md %}}Virtual network subnet resource ID the compute nodes belong to.{{% /md %}}</dd><dt class="property-optional"
             title="Optional">
         <span id="vm_size_python">
 <a href="#vm_size_python" style="color: inherit; text-decoration: inherit;">vm_<wbr>size</a>
@@ -3505,8 +3054,7 @@ The following output properties are available:
         <span class="property-indicator"></span>
         <span class="property-type">str</span>
     </dt>
-    <dd>{{% md %}}Virtual Machine Size{{% /md %}}</dd>
-</dl>
+    <dd>{{% md %}}Virtual Machine Size{{% /md %}}</dd></dl>
 {{% /choosable %}}
 
 <h4 id="computeinstancesshsettingsresponse">Compute<wbr>Instance<wbr>Ssh<wbr>Settings<wbr>Response</h4>
@@ -3514,9 +3062,7 @@ The following output properties are available:
 
 
 {{% choosable language csharp %}}
-<dl class="resources-properties">
-
-    <dt class="property-required"
+<dl class="resources-properties"><dt class="property-required"
             title="Required">
         <span id="adminusername_csharp">
 <a href="#adminusername_csharp" style="color: inherit; text-decoration: inherit;">Admin<wbr>User<wbr>Name</a>
@@ -3524,8 +3070,7 @@ The following output properties are available:
         <span class="property-indicator"></span>
         <span class="property-type">string</span>
     </dt>
-    <dd>{{% md %}}Describes the admin user name.{{% /md %}}</dd>
-    <dt class="property-required"
+    <dd>{{% md %}}Describes the admin user name.{{% /md %}}</dd><dt class="property-required"
             title="Required">
         <span id="sshport_csharp">
 <a href="#sshport_csharp" style="color: inherit; text-decoration: inherit;">Ssh<wbr>Port</a>
@@ -3533,8 +3078,7 @@ The following output properties are available:
         <span class="property-indicator"></span>
         <span class="property-type">int</span>
     </dt>
-    <dd>{{% md %}}Describes the port for connecting through SSH.{{% /md %}}</dd>
-    <dt class="property-optional"
+    <dd>{{% md %}}Describes the port for connecting through SSH.{{% /md %}}</dd><dt class="property-optional"
             title="Optional">
         <span id="adminpublickey_csharp">
 <a href="#adminpublickey_csharp" style="color: inherit; text-decoration: inherit;">Admin<wbr>Public<wbr>Key</a>
@@ -3542,8 +3086,7 @@ The following output properties are available:
         <span class="property-indicator"></span>
         <span class="property-type">string</span>
     </dt>
-    <dd>{{% md %}}Specifies the SSH rsa public key file as a string. Use "ssh-keygen -t rsa -b 2048" to generate your SSH key pairs.{{% /md %}}</dd>
-    <dt class="property-optional"
+    <dd>{{% md %}}Specifies the SSH rsa public key file as a string. Use "ssh-keygen -t rsa -b 2048" to generate your SSH key pairs.{{% /md %}}</dd><dt class="property-optional"
             title="Optional">
         <span id="sshpublicaccess_csharp">
 <a href="#sshpublicaccess_csharp" style="color: inherit; text-decoration: inherit;">Ssh<wbr>Public<wbr>Access</a>
@@ -3551,14 +3094,11 @@ The following output properties are available:
         <span class="property-indicator"></span>
         <span class="property-type">string</span>
     </dt>
-    <dd>{{% md %}}State of the public SSH port. Possible values are: Disabled - Indicates that the public ssh port is closed on this instance. Enabled - Indicates that the public ssh port is open and accessible according to the VNet/subnet policy if applicable.{{% /md %}}</dd>
-</dl>
+    <dd>{{% md %}}State of the public SSH port. Possible values are: Disabled - Indicates that the public ssh port is closed on this instance. Enabled - Indicates that the public ssh port is open and accessible according to the VNet/subnet policy if applicable.{{% /md %}}</dd></dl>
 {{% /choosable %}}
 
 {{% choosable language go %}}
-<dl class="resources-properties">
-
-    <dt class="property-required"
+<dl class="resources-properties"><dt class="property-required"
             title="Required">
         <span id="adminusername_go">
 <a href="#adminusername_go" style="color: inherit; text-decoration: inherit;">Admin<wbr>User<wbr>Name</a>
@@ -3566,8 +3106,7 @@ The following output properties are available:
         <span class="property-indicator"></span>
         <span class="property-type">string</span>
     </dt>
-    <dd>{{% md %}}Describes the admin user name.{{% /md %}}</dd>
-    <dt class="property-required"
+    <dd>{{% md %}}Describes the admin user name.{{% /md %}}</dd><dt class="property-required"
             title="Required">
         <span id="sshport_go">
 <a href="#sshport_go" style="color: inherit; text-decoration: inherit;">Ssh<wbr>Port</a>
@@ -3575,8 +3114,7 @@ The following output properties are available:
         <span class="property-indicator"></span>
         <span class="property-type">int</span>
     </dt>
-    <dd>{{% md %}}Describes the port for connecting through SSH.{{% /md %}}</dd>
-    <dt class="property-optional"
+    <dd>{{% md %}}Describes the port for connecting through SSH.{{% /md %}}</dd><dt class="property-optional"
             title="Optional">
         <span id="adminpublickey_go">
 <a href="#adminpublickey_go" style="color: inherit; text-decoration: inherit;">Admin<wbr>Public<wbr>Key</a>
@@ -3584,8 +3122,7 @@ The following output properties are available:
         <span class="property-indicator"></span>
         <span class="property-type">string</span>
     </dt>
-    <dd>{{% md %}}Specifies the SSH rsa public key file as a string. Use "ssh-keygen -t rsa -b 2048" to generate your SSH key pairs.{{% /md %}}</dd>
-    <dt class="property-optional"
+    <dd>{{% md %}}Specifies the SSH rsa public key file as a string. Use "ssh-keygen -t rsa -b 2048" to generate your SSH key pairs.{{% /md %}}</dd><dt class="property-optional"
             title="Optional">
         <span id="sshpublicaccess_go">
 <a href="#sshpublicaccess_go" style="color: inherit; text-decoration: inherit;">Ssh<wbr>Public<wbr>Access</a>
@@ -3593,14 +3130,11 @@ The following output properties are available:
         <span class="property-indicator"></span>
         <span class="property-type">string</span>
     </dt>
-    <dd>{{% md %}}State of the public SSH port. Possible values are: Disabled - Indicates that the public ssh port is closed on this instance. Enabled - Indicates that the public ssh port is open and accessible according to the VNet/subnet policy if applicable.{{% /md %}}</dd>
-</dl>
+    <dd>{{% md %}}State of the public SSH port. Possible values are: Disabled - Indicates that the public ssh port is closed on this instance. Enabled - Indicates that the public ssh port is open and accessible according to the VNet/subnet policy if applicable.{{% /md %}}</dd></dl>
 {{% /choosable %}}
 
 {{% choosable language nodejs %}}
-<dl class="resources-properties">
-
-    <dt class="property-required"
+<dl class="resources-properties"><dt class="property-required"
             title="Required">
         <span id="adminusername_nodejs">
 <a href="#adminusername_nodejs" style="color: inherit; text-decoration: inherit;">admin<wbr>User<wbr>Name</a>
@@ -3608,8 +3142,7 @@ The following output properties are available:
         <span class="property-indicator"></span>
         <span class="property-type">string</span>
     </dt>
-    <dd>{{% md %}}Describes the admin user name.{{% /md %}}</dd>
-    <dt class="property-required"
+    <dd>{{% md %}}Describes the admin user name.{{% /md %}}</dd><dt class="property-required"
             title="Required">
         <span id="sshport_nodejs">
 <a href="#sshport_nodejs" style="color: inherit; text-decoration: inherit;">ssh<wbr>Port</a>
@@ -3617,8 +3150,7 @@ The following output properties are available:
         <span class="property-indicator"></span>
         <span class="property-type">number</span>
     </dt>
-    <dd>{{% md %}}Describes the port for connecting through SSH.{{% /md %}}</dd>
-    <dt class="property-optional"
+    <dd>{{% md %}}Describes the port for connecting through SSH.{{% /md %}}</dd><dt class="property-optional"
             title="Optional">
         <span id="adminpublickey_nodejs">
 <a href="#adminpublickey_nodejs" style="color: inherit; text-decoration: inherit;">admin<wbr>Public<wbr>Key</a>
@@ -3626,8 +3158,7 @@ The following output properties are available:
         <span class="property-indicator"></span>
         <span class="property-type">string</span>
     </dt>
-    <dd>{{% md %}}Specifies the SSH rsa public key file as a string. Use "ssh-keygen -t rsa -b 2048" to generate your SSH key pairs.{{% /md %}}</dd>
-    <dt class="property-optional"
+    <dd>{{% md %}}Specifies the SSH rsa public key file as a string. Use "ssh-keygen -t rsa -b 2048" to generate your SSH key pairs.{{% /md %}}</dd><dt class="property-optional"
             title="Optional">
         <span id="sshpublicaccess_nodejs">
 <a href="#sshpublicaccess_nodejs" style="color: inherit; text-decoration: inherit;">ssh<wbr>Public<wbr>Access</a>
@@ -3635,14 +3166,11 @@ The following output properties are available:
         <span class="property-indicator"></span>
         <span class="property-type">string</span>
     </dt>
-    <dd>{{% md %}}State of the public SSH port. Possible values are: Disabled - Indicates that the public ssh port is closed on this instance. Enabled - Indicates that the public ssh port is open and accessible according to the VNet/subnet policy if applicable.{{% /md %}}</dd>
-</dl>
+    <dd>{{% md %}}State of the public SSH port. Possible values are: Disabled - Indicates that the public ssh port is closed on this instance. Enabled - Indicates that the public ssh port is open and accessible according to the VNet/subnet policy if applicable.{{% /md %}}</dd></dl>
 {{% /choosable %}}
 
 {{% choosable language python %}}
-<dl class="resources-properties">
-
-    <dt class="property-required"
+<dl class="resources-properties"><dt class="property-required"
             title="Required">
         <span id="admin_user_name_python">
 <a href="#admin_user_name_python" style="color: inherit; text-decoration: inherit;">admin_<wbr>user_<wbr>name</a>
@@ -3650,8 +3178,7 @@ The following output properties are available:
         <span class="property-indicator"></span>
         <span class="property-type">str</span>
     </dt>
-    <dd>{{% md %}}Describes the admin user name.{{% /md %}}</dd>
-    <dt class="property-required"
+    <dd>{{% md %}}Describes the admin user name.{{% /md %}}</dd><dt class="property-required"
             title="Required">
         <span id="ssh_port_python">
 <a href="#ssh_port_python" style="color: inherit; text-decoration: inherit;">ssh_<wbr>port</a>
@@ -3659,8 +3186,7 @@ The following output properties are available:
         <span class="property-indicator"></span>
         <span class="property-type">int</span>
     </dt>
-    <dd>{{% md %}}Describes the port for connecting through SSH.{{% /md %}}</dd>
-    <dt class="property-optional"
+    <dd>{{% md %}}Describes the port for connecting through SSH.{{% /md %}}</dd><dt class="property-optional"
             title="Optional">
         <span id="admin_public_key_python">
 <a href="#admin_public_key_python" style="color: inherit; text-decoration: inherit;">admin_<wbr>public_<wbr>key</a>
@@ -3668,8 +3194,7 @@ The following output properties are available:
         <span class="property-indicator"></span>
         <span class="property-type">str</span>
     </dt>
-    <dd>{{% md %}}Specifies the SSH rsa public key file as a string. Use "ssh-keygen -t rsa -b 2048" to generate your SSH key pairs.{{% /md %}}</dd>
-    <dt class="property-optional"
+    <dd>{{% md %}}Specifies the SSH rsa public key file as a string. Use "ssh-keygen -t rsa -b 2048" to generate your SSH key pairs.{{% /md %}}</dd><dt class="property-optional"
             title="Optional">
         <span id="ssh_public_access_python">
 <a href="#ssh_public_access_python" style="color: inherit; text-decoration: inherit;">ssh_<wbr>public_<wbr>access</a>
@@ -3677,8 +3202,7 @@ The following output properties are available:
         <span class="property-indicator"></span>
         <span class="property-type">str</span>
     </dt>
-    <dd>{{% md %}}State of the public SSH port. Possible values are: Disabled - Indicates that the public ssh port is closed on this instance. Enabled - Indicates that the public ssh port is open and accessible according to the VNet/subnet policy if applicable.{{% /md %}}</dd>
-</dl>
+    <dd>{{% md %}}State of the public SSH port. Possible values are: Disabled - Indicates that the public ssh port is closed on this instance. Enabled - Indicates that the public ssh port is open and accessible according to the VNet/subnet policy if applicable.{{% /md %}}</dd></dl>
 {{% /choosable %}}
 
 <h4 id="datafactoryresponse">Data<wbr>Factory<wbr>Response</h4>
@@ -3686,9 +3210,7 @@ The following output properties are available:
 
 
 {{% choosable language csharp %}}
-<dl class="resources-properties">
-
-    <dt class="property-required"
+<dl class="resources-properties"><dt class="property-required"
             title="Required">
         <span id="isattachedcompute_csharp">
 <a href="#isattachedcompute_csharp" style="color: inherit; text-decoration: inherit;">Is<wbr>Attached<wbr>Compute</a>
@@ -3696,8 +3218,7 @@ The following output properties are available:
         <span class="property-indicator"></span>
         <span class="property-type">bool</span>
     </dt>
-    <dd>{{% md %}}Indicating whether the compute was provisioned by user and brought from outside if true, or machine learning service provisioned it if false.{{% /md %}}</dd>
-    <dt class="property-required"
+    <dd>{{% md %}}Indicating whether the compute was provisioned by user and brought from outside if true, or machine learning service provisioned it if false.{{% /md %}}</dd><dt class="property-required"
             title="Required">
         <span id="provisioningerrors_csharp">
 <a href="#provisioningerrors_csharp" style="color: inherit; text-decoration: inherit;">Provisioning<wbr>Errors</a>
@@ -3705,8 +3226,7 @@ The following output properties are available:
         <span class="property-indicator"></span>
         <span class="property-type"><a href="#machinelearningserviceerrorresponse">List&lt;Pulumi.<wbr>Azure<wbr>Native.<wbr>Machine<wbr>Learning<wbr>Services.<wbr>Inputs.<wbr>Machine<wbr>Learning<wbr>Service<wbr>Error<wbr>Response<wbr>Args&gt;</a></span>
     </dt>
-    <dd>{{% md %}}Errors during provisioning{{% /md %}}</dd>
-    <dt class="property-required"
+    <dd>{{% md %}}Errors during provisioning{{% /md %}}</dd><dt class="property-required"
             title="Required">
         <span id="provisioningstate_csharp">
 <a href="#provisioningstate_csharp" style="color: inherit; text-decoration: inherit;">Provisioning<wbr>State</a>
@@ -3714,8 +3234,7 @@ The following output properties are available:
         <span class="property-indicator"></span>
         <span class="property-type">string</span>
     </dt>
-    <dd>{{% md %}}The provision state of the cluster. Valid values are Unknown, Updating, Provisioning, Succeeded, and Failed.{{% /md %}}</dd>
-    <dt class="property-optional"
+    <dd>{{% md %}}The provision state of the cluster. Valid values are Unknown, Updating, Provisioning, Succeeded, and Failed.{{% /md %}}</dd><dt class="property-optional"
             title="Optional">
         <span id="computelocation_csharp">
 <a href="#computelocation_csharp" style="color: inherit; text-decoration: inherit;">Compute<wbr>Location</a>
@@ -3723,8 +3242,7 @@ The following output properties are available:
         <span class="property-indicator"></span>
         <span class="property-type">string</span>
     </dt>
-    <dd>{{% md %}}Location for the underlying compute{{% /md %}}</dd>
-    <dt class="property-optional"
+    <dd>{{% md %}}Location for the underlying compute{{% /md %}}</dd><dt class="property-optional"
             title="Optional">
         <span id="description_csharp">
 <a href="#description_csharp" style="color: inherit; text-decoration: inherit;">Description</a>
@@ -3732,8 +3250,7 @@ The following output properties are available:
         <span class="property-indicator"></span>
         <span class="property-type">string</span>
     </dt>
-    <dd>{{% md %}}The description of the Machine Learning compute.{{% /md %}}</dd>
-    <dt class="property-optional"
+    <dd>{{% md %}}The description of the Machine Learning compute.{{% /md %}}</dd><dt class="property-optional"
             title="Optional">
         <span id="resourceid_csharp">
 <a href="#resourceid_csharp" style="color: inherit; text-decoration: inherit;">Resource<wbr>Id</a>
@@ -3741,14 +3258,11 @@ The following output properties are available:
         <span class="property-indicator"></span>
         <span class="property-type">string</span>
     </dt>
-    <dd>{{% md %}}ARM resource id of the underlying compute{{% /md %}}</dd>
-</dl>
+    <dd>{{% md %}}ARM resource id of the underlying compute{{% /md %}}</dd></dl>
 {{% /choosable %}}
 
 {{% choosable language go %}}
-<dl class="resources-properties">
-
-    <dt class="property-required"
+<dl class="resources-properties"><dt class="property-required"
             title="Required">
         <span id="isattachedcompute_go">
 <a href="#isattachedcompute_go" style="color: inherit; text-decoration: inherit;">Is<wbr>Attached<wbr>Compute</a>
@@ -3756,8 +3270,7 @@ The following output properties are available:
         <span class="property-indicator"></span>
         <span class="property-type">bool</span>
     </dt>
-    <dd>{{% md %}}Indicating whether the compute was provisioned by user and brought from outside if true, or machine learning service provisioned it if false.{{% /md %}}</dd>
-    <dt class="property-required"
+    <dd>{{% md %}}Indicating whether the compute was provisioned by user and brought from outside if true, or machine learning service provisioned it if false.{{% /md %}}</dd><dt class="property-required"
             title="Required">
         <span id="provisioningerrors_go">
 <a href="#provisioningerrors_go" style="color: inherit; text-decoration: inherit;">Provisioning<wbr>Errors</a>
@@ -3765,8 +3278,7 @@ The following output properties are available:
         <span class="property-indicator"></span>
         <span class="property-type"><a href="#machinelearningserviceerrorresponse">[]Machine<wbr>Learning<wbr>Service<wbr>Error<wbr>Response</a></span>
     </dt>
-    <dd>{{% md %}}Errors during provisioning{{% /md %}}</dd>
-    <dt class="property-required"
+    <dd>{{% md %}}Errors during provisioning{{% /md %}}</dd><dt class="property-required"
             title="Required">
         <span id="provisioningstate_go">
 <a href="#provisioningstate_go" style="color: inherit; text-decoration: inherit;">Provisioning<wbr>State</a>
@@ -3774,8 +3286,7 @@ The following output properties are available:
         <span class="property-indicator"></span>
         <span class="property-type">string</span>
     </dt>
-    <dd>{{% md %}}The provision state of the cluster. Valid values are Unknown, Updating, Provisioning, Succeeded, and Failed.{{% /md %}}</dd>
-    <dt class="property-optional"
+    <dd>{{% md %}}The provision state of the cluster. Valid values are Unknown, Updating, Provisioning, Succeeded, and Failed.{{% /md %}}</dd><dt class="property-optional"
             title="Optional">
         <span id="computelocation_go">
 <a href="#computelocation_go" style="color: inherit; text-decoration: inherit;">Compute<wbr>Location</a>
@@ -3783,8 +3294,7 @@ The following output properties are available:
         <span class="property-indicator"></span>
         <span class="property-type">string</span>
     </dt>
-    <dd>{{% md %}}Location for the underlying compute{{% /md %}}</dd>
-    <dt class="property-optional"
+    <dd>{{% md %}}Location for the underlying compute{{% /md %}}</dd><dt class="property-optional"
             title="Optional">
         <span id="description_go">
 <a href="#description_go" style="color: inherit; text-decoration: inherit;">Description</a>
@@ -3792,8 +3302,7 @@ The following output properties are available:
         <span class="property-indicator"></span>
         <span class="property-type">string</span>
     </dt>
-    <dd>{{% md %}}The description of the Machine Learning compute.{{% /md %}}</dd>
-    <dt class="property-optional"
+    <dd>{{% md %}}The description of the Machine Learning compute.{{% /md %}}</dd><dt class="property-optional"
             title="Optional">
         <span id="resourceid_go">
 <a href="#resourceid_go" style="color: inherit; text-decoration: inherit;">Resource<wbr>Id</a>
@@ -3801,14 +3310,11 @@ The following output properties are available:
         <span class="property-indicator"></span>
         <span class="property-type">string</span>
     </dt>
-    <dd>{{% md %}}ARM resource id of the underlying compute{{% /md %}}</dd>
-</dl>
+    <dd>{{% md %}}ARM resource id of the underlying compute{{% /md %}}</dd></dl>
 {{% /choosable %}}
 
 {{% choosable language nodejs %}}
-<dl class="resources-properties">
-
-    <dt class="property-required"
+<dl class="resources-properties"><dt class="property-required"
             title="Required">
         <span id="isattachedcompute_nodejs">
 <a href="#isattachedcompute_nodejs" style="color: inherit; text-decoration: inherit;">is<wbr>Attached<wbr>Compute</a>
@@ -3816,8 +3322,7 @@ The following output properties are available:
         <span class="property-indicator"></span>
         <span class="property-type">boolean</span>
     </dt>
-    <dd>{{% md %}}Indicating whether the compute was provisioned by user and brought from outside if true, or machine learning service provisioned it if false.{{% /md %}}</dd>
-    <dt class="property-required"
+    <dd>{{% md %}}Indicating whether the compute was provisioned by user and brought from outside if true, or machine learning service provisioned it if false.{{% /md %}}</dd><dt class="property-required"
             title="Required">
         <span id="provisioningerrors_nodejs">
 <a href="#provisioningerrors_nodejs" style="color: inherit; text-decoration: inherit;">provisioning<wbr>Errors</a>
@@ -3825,8 +3330,7 @@ The following output properties are available:
         <span class="property-indicator"></span>
         <span class="property-type"><a href="#machinelearningserviceerrorresponse">Machine<wbr>Learning<wbr>Service<wbr>Error<wbr>Response[]</a></span>
     </dt>
-    <dd>{{% md %}}Errors during provisioning{{% /md %}}</dd>
-    <dt class="property-required"
+    <dd>{{% md %}}Errors during provisioning{{% /md %}}</dd><dt class="property-required"
             title="Required">
         <span id="provisioningstate_nodejs">
 <a href="#provisioningstate_nodejs" style="color: inherit; text-decoration: inherit;">provisioning<wbr>State</a>
@@ -3834,8 +3338,7 @@ The following output properties are available:
         <span class="property-indicator"></span>
         <span class="property-type">string</span>
     </dt>
-    <dd>{{% md %}}The provision state of the cluster. Valid values are Unknown, Updating, Provisioning, Succeeded, and Failed.{{% /md %}}</dd>
-    <dt class="property-optional"
+    <dd>{{% md %}}The provision state of the cluster. Valid values are Unknown, Updating, Provisioning, Succeeded, and Failed.{{% /md %}}</dd><dt class="property-optional"
             title="Optional">
         <span id="computelocation_nodejs">
 <a href="#computelocation_nodejs" style="color: inherit; text-decoration: inherit;">compute<wbr>Location</a>
@@ -3843,8 +3346,7 @@ The following output properties are available:
         <span class="property-indicator"></span>
         <span class="property-type">string</span>
     </dt>
-    <dd>{{% md %}}Location for the underlying compute{{% /md %}}</dd>
-    <dt class="property-optional"
+    <dd>{{% md %}}Location for the underlying compute{{% /md %}}</dd><dt class="property-optional"
             title="Optional">
         <span id="description_nodejs">
 <a href="#description_nodejs" style="color: inherit; text-decoration: inherit;">description</a>
@@ -3852,8 +3354,7 @@ The following output properties are available:
         <span class="property-indicator"></span>
         <span class="property-type">string</span>
     </dt>
-    <dd>{{% md %}}The description of the Machine Learning compute.{{% /md %}}</dd>
-    <dt class="property-optional"
+    <dd>{{% md %}}The description of the Machine Learning compute.{{% /md %}}</dd><dt class="property-optional"
             title="Optional">
         <span id="resourceid_nodejs">
 <a href="#resourceid_nodejs" style="color: inherit; text-decoration: inherit;">resource<wbr>Id</a>
@@ -3861,14 +3362,11 @@ The following output properties are available:
         <span class="property-indicator"></span>
         <span class="property-type">string</span>
     </dt>
-    <dd>{{% md %}}ARM resource id of the underlying compute{{% /md %}}</dd>
-</dl>
+    <dd>{{% md %}}ARM resource id of the underlying compute{{% /md %}}</dd></dl>
 {{% /choosable %}}
 
 {{% choosable language python %}}
-<dl class="resources-properties">
-
-    <dt class="property-required"
+<dl class="resources-properties"><dt class="property-required"
             title="Required">
         <span id="is_attached_compute_python">
 <a href="#is_attached_compute_python" style="color: inherit; text-decoration: inherit;">is_<wbr>attached_<wbr>compute</a>
@@ -3876,8 +3374,7 @@ The following output properties are available:
         <span class="property-indicator"></span>
         <span class="property-type">bool</span>
     </dt>
-    <dd>{{% md %}}Indicating whether the compute was provisioned by user and brought from outside if true, or machine learning service provisioned it if false.{{% /md %}}</dd>
-    <dt class="property-required"
+    <dd>{{% md %}}Indicating whether the compute was provisioned by user and brought from outside if true, or machine learning service provisioned it if false.{{% /md %}}</dd><dt class="property-required"
             title="Required">
         <span id="provisioning_errors_python">
 <a href="#provisioning_errors_python" style="color: inherit; text-decoration: inherit;">provisioning_<wbr>errors</a>
@@ -3885,8 +3382,7 @@ The following output properties are available:
         <span class="property-indicator"></span>
         <span class="property-type"><a href="#machinelearningserviceerrorresponse">Sequence[Machine<wbr>Learning<wbr>Service<wbr>Error<wbr>Response<wbr>Args]</a></span>
     </dt>
-    <dd>{{% md %}}Errors during provisioning{{% /md %}}</dd>
-    <dt class="property-required"
+    <dd>{{% md %}}Errors during provisioning{{% /md %}}</dd><dt class="property-required"
             title="Required">
         <span id="provisioning_state_python">
 <a href="#provisioning_state_python" style="color: inherit; text-decoration: inherit;">provisioning_<wbr>state</a>
@@ -3894,8 +3390,7 @@ The following output properties are available:
         <span class="property-indicator"></span>
         <span class="property-type">str</span>
     </dt>
-    <dd>{{% md %}}The provision state of the cluster. Valid values are Unknown, Updating, Provisioning, Succeeded, and Failed.{{% /md %}}</dd>
-    <dt class="property-optional"
+    <dd>{{% md %}}The provision state of the cluster. Valid values are Unknown, Updating, Provisioning, Succeeded, and Failed.{{% /md %}}</dd><dt class="property-optional"
             title="Optional">
         <span id="compute_location_python">
 <a href="#compute_location_python" style="color: inherit; text-decoration: inherit;">compute_<wbr>location</a>
@@ -3903,8 +3398,7 @@ The following output properties are available:
         <span class="property-indicator"></span>
         <span class="property-type">str</span>
     </dt>
-    <dd>{{% md %}}Location for the underlying compute{{% /md %}}</dd>
-    <dt class="property-optional"
+    <dd>{{% md %}}Location for the underlying compute{{% /md %}}</dd><dt class="property-optional"
             title="Optional">
         <span id="description_python">
 <a href="#description_python" style="color: inherit; text-decoration: inherit;">description</a>
@@ -3912,8 +3406,7 @@ The following output properties are available:
         <span class="property-indicator"></span>
         <span class="property-type">str</span>
     </dt>
-    <dd>{{% md %}}The description of the Machine Learning compute.{{% /md %}}</dd>
-    <dt class="property-optional"
+    <dd>{{% md %}}The description of the Machine Learning compute.{{% /md %}}</dd><dt class="property-optional"
             title="Optional">
         <span id="resource_id_python">
 <a href="#resource_id_python" style="color: inherit; text-decoration: inherit;">resource_<wbr>id</a>
@@ -3921,8 +3414,7 @@ The following output properties are available:
         <span class="property-indicator"></span>
         <span class="property-type">str</span>
     </dt>
-    <dd>{{% md %}}ARM resource id of the underlying compute{{% /md %}}</dd>
-</dl>
+    <dd>{{% md %}}ARM resource id of the underlying compute{{% /md %}}</dd></dl>
 {{% /choosable %}}
 
 <h4 id="datalakeanalyticsresponse">Data<wbr>Lake<wbr>Analytics<wbr>Response</h4>
@@ -3930,9 +3422,7 @@ The following output properties are available:
 
 
 {{% choosable language csharp %}}
-<dl class="resources-properties">
-
-    <dt class="property-required"
+<dl class="resources-properties"><dt class="property-required"
             title="Required">
         <span id="isattachedcompute_csharp">
 <a href="#isattachedcompute_csharp" style="color: inherit; text-decoration: inherit;">Is<wbr>Attached<wbr>Compute</a>
@@ -3940,8 +3430,7 @@ The following output properties are available:
         <span class="property-indicator"></span>
         <span class="property-type">bool</span>
     </dt>
-    <dd>{{% md %}}Indicating whether the compute was provisioned by user and brought from outside if true, or machine learning service provisioned it if false.{{% /md %}}</dd>
-    <dt class="property-required"
+    <dd>{{% md %}}Indicating whether the compute was provisioned by user and brought from outside if true, or machine learning service provisioned it if false.{{% /md %}}</dd><dt class="property-required"
             title="Required">
         <span id="provisioningerrors_csharp">
 <a href="#provisioningerrors_csharp" style="color: inherit; text-decoration: inherit;">Provisioning<wbr>Errors</a>
@@ -3949,8 +3438,7 @@ The following output properties are available:
         <span class="property-indicator"></span>
         <span class="property-type"><a href="#machinelearningserviceerrorresponse">List&lt;Pulumi.<wbr>Azure<wbr>Native.<wbr>Machine<wbr>Learning<wbr>Services.<wbr>Inputs.<wbr>Machine<wbr>Learning<wbr>Service<wbr>Error<wbr>Response<wbr>Args&gt;</a></span>
     </dt>
-    <dd>{{% md %}}Errors during provisioning{{% /md %}}</dd>
-    <dt class="property-required"
+    <dd>{{% md %}}Errors during provisioning{{% /md %}}</dd><dt class="property-required"
             title="Required">
         <span id="provisioningstate_csharp">
 <a href="#provisioningstate_csharp" style="color: inherit; text-decoration: inherit;">Provisioning<wbr>State</a>
@@ -3958,8 +3446,7 @@ The following output properties are available:
         <span class="property-indicator"></span>
         <span class="property-type">string</span>
     </dt>
-    <dd>{{% md %}}The provision state of the cluster. Valid values are Unknown, Updating, Provisioning, Succeeded, and Failed.{{% /md %}}</dd>
-    <dt class="property-optional"
+    <dd>{{% md %}}The provision state of the cluster. Valid values are Unknown, Updating, Provisioning, Succeeded, and Failed.{{% /md %}}</dd><dt class="property-optional"
             title="Optional">
         <span id="computelocation_csharp">
 <a href="#computelocation_csharp" style="color: inherit; text-decoration: inherit;">Compute<wbr>Location</a>
@@ -3967,8 +3454,7 @@ The following output properties are available:
         <span class="property-indicator"></span>
         <span class="property-type">string</span>
     </dt>
-    <dd>{{% md %}}Location for the underlying compute{{% /md %}}</dd>
-    <dt class="property-optional"
+    <dd>{{% md %}}Location for the underlying compute{{% /md %}}</dd><dt class="property-optional"
             title="Optional">
         <span id="description_csharp">
 <a href="#description_csharp" style="color: inherit; text-decoration: inherit;">Description</a>
@@ -3976,8 +3462,7 @@ The following output properties are available:
         <span class="property-indicator"></span>
         <span class="property-type">string</span>
     </dt>
-    <dd>{{% md %}}The description of the Machine Learning compute.{{% /md %}}</dd>
-    <dt class="property-optional"
+    <dd>{{% md %}}The description of the Machine Learning compute.{{% /md %}}</dd><dt class="property-optional"
             title="Optional">
         <span id="properties_csharp">
 <a href="#properties_csharp" style="color: inherit; text-decoration: inherit;">Properties</a>
@@ -3985,8 +3470,7 @@ The following output properties are available:
         <span class="property-indicator"></span>
         <span class="property-type"><a href="#datalakeanalyticsresponseproperties">Pulumi.<wbr>Azure<wbr>Native.<wbr>Machine<wbr>Learning<wbr>Services.<wbr>Inputs.<wbr>Data<wbr>Lake<wbr>Analytics<wbr>Response<wbr>Properties<wbr>Args</a></span>
     </dt>
-    <dd>{{% md %}}{{% /md %}}</dd>
-    <dt class="property-optional"
+    <dd>{{% md %}}{{% /md %}}</dd><dt class="property-optional"
             title="Optional">
         <span id="resourceid_csharp">
 <a href="#resourceid_csharp" style="color: inherit; text-decoration: inherit;">Resource<wbr>Id</a>
@@ -3994,14 +3478,11 @@ The following output properties are available:
         <span class="property-indicator"></span>
         <span class="property-type">string</span>
     </dt>
-    <dd>{{% md %}}ARM resource id of the underlying compute{{% /md %}}</dd>
-</dl>
+    <dd>{{% md %}}ARM resource id of the underlying compute{{% /md %}}</dd></dl>
 {{% /choosable %}}
 
 {{% choosable language go %}}
-<dl class="resources-properties">
-
-    <dt class="property-required"
+<dl class="resources-properties"><dt class="property-required"
             title="Required">
         <span id="isattachedcompute_go">
 <a href="#isattachedcompute_go" style="color: inherit; text-decoration: inherit;">Is<wbr>Attached<wbr>Compute</a>
@@ -4009,8 +3490,7 @@ The following output properties are available:
         <span class="property-indicator"></span>
         <span class="property-type">bool</span>
     </dt>
-    <dd>{{% md %}}Indicating whether the compute was provisioned by user and brought from outside if true, or machine learning service provisioned it if false.{{% /md %}}</dd>
-    <dt class="property-required"
+    <dd>{{% md %}}Indicating whether the compute was provisioned by user and brought from outside if true, or machine learning service provisioned it if false.{{% /md %}}</dd><dt class="property-required"
             title="Required">
         <span id="provisioningerrors_go">
 <a href="#provisioningerrors_go" style="color: inherit; text-decoration: inherit;">Provisioning<wbr>Errors</a>
@@ -4018,8 +3498,7 @@ The following output properties are available:
         <span class="property-indicator"></span>
         <span class="property-type"><a href="#machinelearningserviceerrorresponse">[]Machine<wbr>Learning<wbr>Service<wbr>Error<wbr>Response</a></span>
     </dt>
-    <dd>{{% md %}}Errors during provisioning{{% /md %}}</dd>
-    <dt class="property-required"
+    <dd>{{% md %}}Errors during provisioning{{% /md %}}</dd><dt class="property-required"
             title="Required">
         <span id="provisioningstate_go">
 <a href="#provisioningstate_go" style="color: inherit; text-decoration: inherit;">Provisioning<wbr>State</a>
@@ -4027,8 +3506,7 @@ The following output properties are available:
         <span class="property-indicator"></span>
         <span class="property-type">string</span>
     </dt>
-    <dd>{{% md %}}The provision state of the cluster. Valid values are Unknown, Updating, Provisioning, Succeeded, and Failed.{{% /md %}}</dd>
-    <dt class="property-optional"
+    <dd>{{% md %}}The provision state of the cluster. Valid values are Unknown, Updating, Provisioning, Succeeded, and Failed.{{% /md %}}</dd><dt class="property-optional"
             title="Optional">
         <span id="computelocation_go">
 <a href="#computelocation_go" style="color: inherit; text-decoration: inherit;">Compute<wbr>Location</a>
@@ -4036,8 +3514,7 @@ The following output properties are available:
         <span class="property-indicator"></span>
         <span class="property-type">string</span>
     </dt>
-    <dd>{{% md %}}Location for the underlying compute{{% /md %}}</dd>
-    <dt class="property-optional"
+    <dd>{{% md %}}Location for the underlying compute{{% /md %}}</dd><dt class="property-optional"
             title="Optional">
         <span id="description_go">
 <a href="#description_go" style="color: inherit; text-decoration: inherit;">Description</a>
@@ -4045,8 +3522,7 @@ The following output properties are available:
         <span class="property-indicator"></span>
         <span class="property-type">string</span>
     </dt>
-    <dd>{{% md %}}The description of the Machine Learning compute.{{% /md %}}</dd>
-    <dt class="property-optional"
+    <dd>{{% md %}}The description of the Machine Learning compute.{{% /md %}}</dd><dt class="property-optional"
             title="Optional">
         <span id="properties_go">
 <a href="#properties_go" style="color: inherit; text-decoration: inherit;">Properties</a>
@@ -4054,8 +3530,7 @@ The following output properties are available:
         <span class="property-indicator"></span>
         <span class="property-type"><a href="#datalakeanalyticsresponseproperties">Data<wbr>Lake<wbr>Analytics<wbr>Response<wbr>Properties</a></span>
     </dt>
-    <dd>{{% md %}}{{% /md %}}</dd>
-    <dt class="property-optional"
+    <dd>{{% md %}}{{% /md %}}</dd><dt class="property-optional"
             title="Optional">
         <span id="resourceid_go">
 <a href="#resourceid_go" style="color: inherit; text-decoration: inherit;">Resource<wbr>Id</a>
@@ -4063,14 +3538,11 @@ The following output properties are available:
         <span class="property-indicator"></span>
         <span class="property-type">string</span>
     </dt>
-    <dd>{{% md %}}ARM resource id of the underlying compute{{% /md %}}</dd>
-</dl>
+    <dd>{{% md %}}ARM resource id of the underlying compute{{% /md %}}</dd></dl>
 {{% /choosable %}}
 
 {{% choosable language nodejs %}}
-<dl class="resources-properties">
-
-    <dt class="property-required"
+<dl class="resources-properties"><dt class="property-required"
             title="Required">
         <span id="isattachedcompute_nodejs">
 <a href="#isattachedcompute_nodejs" style="color: inherit; text-decoration: inherit;">is<wbr>Attached<wbr>Compute</a>
@@ -4078,8 +3550,7 @@ The following output properties are available:
         <span class="property-indicator"></span>
         <span class="property-type">boolean</span>
     </dt>
-    <dd>{{% md %}}Indicating whether the compute was provisioned by user and brought from outside if true, or machine learning service provisioned it if false.{{% /md %}}</dd>
-    <dt class="property-required"
+    <dd>{{% md %}}Indicating whether the compute was provisioned by user and brought from outside if true, or machine learning service provisioned it if false.{{% /md %}}</dd><dt class="property-required"
             title="Required">
         <span id="provisioningerrors_nodejs">
 <a href="#provisioningerrors_nodejs" style="color: inherit; text-decoration: inherit;">provisioning<wbr>Errors</a>
@@ -4087,8 +3558,7 @@ The following output properties are available:
         <span class="property-indicator"></span>
         <span class="property-type"><a href="#machinelearningserviceerrorresponse">Machine<wbr>Learning<wbr>Service<wbr>Error<wbr>Response[]</a></span>
     </dt>
-    <dd>{{% md %}}Errors during provisioning{{% /md %}}</dd>
-    <dt class="property-required"
+    <dd>{{% md %}}Errors during provisioning{{% /md %}}</dd><dt class="property-required"
             title="Required">
         <span id="provisioningstate_nodejs">
 <a href="#provisioningstate_nodejs" style="color: inherit; text-decoration: inherit;">provisioning<wbr>State</a>
@@ -4096,8 +3566,7 @@ The following output properties are available:
         <span class="property-indicator"></span>
         <span class="property-type">string</span>
     </dt>
-    <dd>{{% md %}}The provision state of the cluster. Valid values are Unknown, Updating, Provisioning, Succeeded, and Failed.{{% /md %}}</dd>
-    <dt class="property-optional"
+    <dd>{{% md %}}The provision state of the cluster. Valid values are Unknown, Updating, Provisioning, Succeeded, and Failed.{{% /md %}}</dd><dt class="property-optional"
             title="Optional">
         <span id="computelocation_nodejs">
 <a href="#computelocation_nodejs" style="color: inherit; text-decoration: inherit;">compute<wbr>Location</a>
@@ -4105,8 +3574,7 @@ The following output properties are available:
         <span class="property-indicator"></span>
         <span class="property-type">string</span>
     </dt>
-    <dd>{{% md %}}Location for the underlying compute{{% /md %}}</dd>
-    <dt class="property-optional"
+    <dd>{{% md %}}Location for the underlying compute{{% /md %}}</dd><dt class="property-optional"
             title="Optional">
         <span id="description_nodejs">
 <a href="#description_nodejs" style="color: inherit; text-decoration: inherit;">description</a>
@@ -4114,8 +3582,7 @@ The following output properties are available:
         <span class="property-indicator"></span>
         <span class="property-type">string</span>
     </dt>
-    <dd>{{% md %}}The description of the Machine Learning compute.{{% /md %}}</dd>
-    <dt class="property-optional"
+    <dd>{{% md %}}The description of the Machine Learning compute.{{% /md %}}</dd><dt class="property-optional"
             title="Optional">
         <span id="properties_nodejs">
 <a href="#properties_nodejs" style="color: inherit; text-decoration: inherit;">properties</a>
@@ -4123,8 +3590,7 @@ The following output properties are available:
         <span class="property-indicator"></span>
         <span class="property-type"><a href="#datalakeanalyticsresponseproperties">Data<wbr>Lake<wbr>Analytics<wbr>Response<wbr>Properties</a></span>
     </dt>
-    <dd>{{% md %}}{{% /md %}}</dd>
-    <dt class="property-optional"
+    <dd>{{% md %}}{{% /md %}}</dd><dt class="property-optional"
             title="Optional">
         <span id="resourceid_nodejs">
 <a href="#resourceid_nodejs" style="color: inherit; text-decoration: inherit;">resource<wbr>Id</a>
@@ -4132,14 +3598,11 @@ The following output properties are available:
         <span class="property-indicator"></span>
         <span class="property-type">string</span>
     </dt>
-    <dd>{{% md %}}ARM resource id of the underlying compute{{% /md %}}</dd>
-</dl>
+    <dd>{{% md %}}ARM resource id of the underlying compute{{% /md %}}</dd></dl>
 {{% /choosable %}}
 
 {{% choosable language python %}}
-<dl class="resources-properties">
-
-    <dt class="property-required"
+<dl class="resources-properties"><dt class="property-required"
             title="Required">
         <span id="is_attached_compute_python">
 <a href="#is_attached_compute_python" style="color: inherit; text-decoration: inherit;">is_<wbr>attached_<wbr>compute</a>
@@ -4147,8 +3610,7 @@ The following output properties are available:
         <span class="property-indicator"></span>
         <span class="property-type">bool</span>
     </dt>
-    <dd>{{% md %}}Indicating whether the compute was provisioned by user and brought from outside if true, or machine learning service provisioned it if false.{{% /md %}}</dd>
-    <dt class="property-required"
+    <dd>{{% md %}}Indicating whether the compute was provisioned by user and brought from outside if true, or machine learning service provisioned it if false.{{% /md %}}</dd><dt class="property-required"
             title="Required">
         <span id="provisioning_errors_python">
 <a href="#provisioning_errors_python" style="color: inherit; text-decoration: inherit;">provisioning_<wbr>errors</a>
@@ -4156,8 +3618,7 @@ The following output properties are available:
         <span class="property-indicator"></span>
         <span class="property-type"><a href="#machinelearningserviceerrorresponse">Sequence[Machine<wbr>Learning<wbr>Service<wbr>Error<wbr>Response<wbr>Args]</a></span>
     </dt>
-    <dd>{{% md %}}Errors during provisioning{{% /md %}}</dd>
-    <dt class="property-required"
+    <dd>{{% md %}}Errors during provisioning{{% /md %}}</dd><dt class="property-required"
             title="Required">
         <span id="provisioning_state_python">
 <a href="#provisioning_state_python" style="color: inherit; text-decoration: inherit;">provisioning_<wbr>state</a>
@@ -4165,8 +3626,7 @@ The following output properties are available:
         <span class="property-indicator"></span>
         <span class="property-type">str</span>
     </dt>
-    <dd>{{% md %}}The provision state of the cluster. Valid values are Unknown, Updating, Provisioning, Succeeded, and Failed.{{% /md %}}</dd>
-    <dt class="property-optional"
+    <dd>{{% md %}}The provision state of the cluster. Valid values are Unknown, Updating, Provisioning, Succeeded, and Failed.{{% /md %}}</dd><dt class="property-optional"
             title="Optional">
         <span id="compute_location_python">
 <a href="#compute_location_python" style="color: inherit; text-decoration: inherit;">compute_<wbr>location</a>
@@ -4174,8 +3634,7 @@ The following output properties are available:
         <span class="property-indicator"></span>
         <span class="property-type">str</span>
     </dt>
-    <dd>{{% md %}}Location for the underlying compute{{% /md %}}</dd>
-    <dt class="property-optional"
+    <dd>{{% md %}}Location for the underlying compute{{% /md %}}</dd><dt class="property-optional"
             title="Optional">
         <span id="description_python">
 <a href="#description_python" style="color: inherit; text-decoration: inherit;">description</a>
@@ -4183,8 +3642,7 @@ The following output properties are available:
         <span class="property-indicator"></span>
         <span class="property-type">str</span>
     </dt>
-    <dd>{{% md %}}The description of the Machine Learning compute.{{% /md %}}</dd>
-    <dt class="property-optional"
+    <dd>{{% md %}}The description of the Machine Learning compute.{{% /md %}}</dd><dt class="property-optional"
             title="Optional">
         <span id="properties_python">
 <a href="#properties_python" style="color: inherit; text-decoration: inherit;">properties</a>
@@ -4192,8 +3650,7 @@ The following output properties are available:
         <span class="property-indicator"></span>
         <span class="property-type"><a href="#datalakeanalyticsresponseproperties">Data<wbr>Lake<wbr>Analytics<wbr>Response<wbr>Properties<wbr>Args</a></span>
     </dt>
-    <dd>{{% md %}}{{% /md %}}</dd>
-    <dt class="property-optional"
+    <dd>{{% md %}}{{% /md %}}</dd><dt class="property-optional"
             title="Optional">
         <span id="resource_id_python">
 <a href="#resource_id_python" style="color: inherit; text-decoration: inherit;">resource_<wbr>id</a>
@@ -4201,8 +3658,7 @@ The following output properties are available:
         <span class="property-indicator"></span>
         <span class="property-type">str</span>
     </dt>
-    <dd>{{% md %}}ARM resource id of the underlying compute{{% /md %}}</dd>
-</dl>
+    <dd>{{% md %}}ARM resource id of the underlying compute{{% /md %}}</dd></dl>
 {{% /choosable %}}
 
 <h4 id="datalakeanalyticsresponseproperties">Data<wbr>Lake<wbr>Analytics<wbr>Response<wbr>Properties</h4>
@@ -4210,9 +3666,7 @@ The following output properties are available:
 
 
 {{% choosable language csharp %}}
-<dl class="resources-properties">
-
-    <dt class="property-optional"
+<dl class="resources-properties"><dt class="property-optional"
             title="Optional">
         <span id="datalakestoreaccountname_csharp">
 <a href="#datalakestoreaccountname_csharp" style="color: inherit; text-decoration: inherit;">Data<wbr>Lake<wbr>Store<wbr>Account<wbr>Name</a>
@@ -4220,14 +3674,11 @@ The following output properties are available:
         <span class="property-indicator"></span>
         <span class="property-type">string</span>
     </dt>
-    <dd>{{% md %}}DataLake Store Account Name{{% /md %}}</dd>
-</dl>
+    <dd>{{% md %}}DataLake Store Account Name{{% /md %}}</dd></dl>
 {{% /choosable %}}
 
 {{% choosable language go %}}
-<dl class="resources-properties">
-
-    <dt class="property-optional"
+<dl class="resources-properties"><dt class="property-optional"
             title="Optional">
         <span id="datalakestoreaccountname_go">
 <a href="#datalakestoreaccountname_go" style="color: inherit; text-decoration: inherit;">Data<wbr>Lake<wbr>Store<wbr>Account<wbr>Name</a>
@@ -4235,14 +3686,11 @@ The following output properties are available:
         <span class="property-indicator"></span>
         <span class="property-type">string</span>
     </dt>
-    <dd>{{% md %}}DataLake Store Account Name{{% /md %}}</dd>
-</dl>
+    <dd>{{% md %}}DataLake Store Account Name{{% /md %}}</dd></dl>
 {{% /choosable %}}
 
 {{% choosable language nodejs %}}
-<dl class="resources-properties">
-
-    <dt class="property-optional"
+<dl class="resources-properties"><dt class="property-optional"
             title="Optional">
         <span id="datalakestoreaccountname_nodejs">
 <a href="#datalakestoreaccountname_nodejs" style="color: inherit; text-decoration: inherit;">data<wbr>Lake<wbr>Store<wbr>Account<wbr>Name</a>
@@ -4250,14 +3698,11 @@ The following output properties are available:
         <span class="property-indicator"></span>
         <span class="property-type">string</span>
     </dt>
-    <dd>{{% md %}}DataLake Store Account Name{{% /md %}}</dd>
-</dl>
+    <dd>{{% md %}}DataLake Store Account Name{{% /md %}}</dd></dl>
 {{% /choosable %}}
 
 {{% choosable language python %}}
-<dl class="resources-properties">
-
-    <dt class="property-optional"
+<dl class="resources-properties"><dt class="property-optional"
             title="Optional">
         <span id="data_lake_store_account_name_python">
 <a href="#data_lake_store_account_name_python" style="color: inherit; text-decoration: inherit;">data_<wbr>lake_<wbr>store_<wbr>account_<wbr>name</a>
@@ -4265,8 +3710,7 @@ The following output properties are available:
         <span class="property-indicator"></span>
         <span class="property-type">str</span>
     </dt>
-    <dd>{{% md %}}DataLake Store Account Name{{% /md %}}</dd>
-</dl>
+    <dd>{{% md %}}DataLake Store Account Name{{% /md %}}</dd></dl>
 {{% /choosable %}}
 
 <h4 id="databricksresponse">Databricks<wbr>Response</h4>
@@ -4274,9 +3718,7 @@ The following output properties are available:
 
 
 {{% choosable language csharp %}}
-<dl class="resources-properties">
-
-    <dt class="property-required"
+<dl class="resources-properties"><dt class="property-required"
             title="Required">
         <span id="isattachedcompute_csharp">
 <a href="#isattachedcompute_csharp" style="color: inherit; text-decoration: inherit;">Is<wbr>Attached<wbr>Compute</a>
@@ -4284,8 +3726,7 @@ The following output properties are available:
         <span class="property-indicator"></span>
         <span class="property-type">bool</span>
     </dt>
-    <dd>{{% md %}}Indicating whether the compute was provisioned by user and brought from outside if true, or machine learning service provisioned it if false.{{% /md %}}</dd>
-    <dt class="property-required"
+    <dd>{{% md %}}Indicating whether the compute was provisioned by user and brought from outside if true, or machine learning service provisioned it if false.{{% /md %}}</dd><dt class="property-required"
             title="Required">
         <span id="provisioningerrors_csharp">
 <a href="#provisioningerrors_csharp" style="color: inherit; text-decoration: inherit;">Provisioning<wbr>Errors</a>
@@ -4293,8 +3734,7 @@ The following output properties are available:
         <span class="property-indicator"></span>
         <span class="property-type"><a href="#machinelearningserviceerrorresponse">List&lt;Pulumi.<wbr>Azure<wbr>Native.<wbr>Machine<wbr>Learning<wbr>Services.<wbr>Inputs.<wbr>Machine<wbr>Learning<wbr>Service<wbr>Error<wbr>Response<wbr>Args&gt;</a></span>
     </dt>
-    <dd>{{% md %}}Errors during provisioning{{% /md %}}</dd>
-    <dt class="property-required"
+    <dd>{{% md %}}Errors during provisioning{{% /md %}}</dd><dt class="property-required"
             title="Required">
         <span id="provisioningstate_csharp">
 <a href="#provisioningstate_csharp" style="color: inherit; text-decoration: inherit;">Provisioning<wbr>State</a>
@@ -4302,8 +3742,7 @@ The following output properties are available:
         <span class="property-indicator"></span>
         <span class="property-type">string</span>
     </dt>
-    <dd>{{% md %}}The provision state of the cluster. Valid values are Unknown, Updating, Provisioning, Succeeded, and Failed.{{% /md %}}</dd>
-    <dt class="property-optional"
+    <dd>{{% md %}}The provision state of the cluster. Valid values are Unknown, Updating, Provisioning, Succeeded, and Failed.{{% /md %}}</dd><dt class="property-optional"
             title="Optional">
         <span id="computelocation_csharp">
 <a href="#computelocation_csharp" style="color: inherit; text-decoration: inherit;">Compute<wbr>Location</a>
@@ -4311,8 +3750,7 @@ The following output properties are available:
         <span class="property-indicator"></span>
         <span class="property-type">string</span>
     </dt>
-    <dd>{{% md %}}Location for the underlying compute{{% /md %}}</dd>
-    <dt class="property-optional"
+    <dd>{{% md %}}Location for the underlying compute{{% /md %}}</dd><dt class="property-optional"
             title="Optional">
         <span id="description_csharp">
 <a href="#description_csharp" style="color: inherit; text-decoration: inherit;">Description</a>
@@ -4320,8 +3758,7 @@ The following output properties are available:
         <span class="property-indicator"></span>
         <span class="property-type">string</span>
     </dt>
-    <dd>{{% md %}}The description of the Machine Learning compute.{{% /md %}}</dd>
-    <dt class="property-optional"
+    <dd>{{% md %}}The description of the Machine Learning compute.{{% /md %}}</dd><dt class="property-optional"
             title="Optional">
         <span id="properties_csharp">
 <a href="#properties_csharp" style="color: inherit; text-decoration: inherit;">Properties</a>
@@ -4329,8 +3766,7 @@ The following output properties are available:
         <span class="property-indicator"></span>
         <span class="property-type"><a href="#databricksresponseproperties">Pulumi.<wbr>Azure<wbr>Native.<wbr>Machine<wbr>Learning<wbr>Services.<wbr>Inputs.<wbr>Databricks<wbr>Response<wbr>Properties<wbr>Args</a></span>
     </dt>
-    <dd>{{% md %}}{{% /md %}}</dd>
-    <dt class="property-optional"
+    <dd>{{% md %}}{{% /md %}}</dd><dt class="property-optional"
             title="Optional">
         <span id="resourceid_csharp">
 <a href="#resourceid_csharp" style="color: inherit; text-decoration: inherit;">Resource<wbr>Id</a>
@@ -4338,14 +3774,11 @@ The following output properties are available:
         <span class="property-indicator"></span>
         <span class="property-type">string</span>
     </dt>
-    <dd>{{% md %}}ARM resource id of the underlying compute{{% /md %}}</dd>
-</dl>
+    <dd>{{% md %}}ARM resource id of the underlying compute{{% /md %}}</dd></dl>
 {{% /choosable %}}
 
 {{% choosable language go %}}
-<dl class="resources-properties">
-
-    <dt class="property-required"
+<dl class="resources-properties"><dt class="property-required"
             title="Required">
         <span id="isattachedcompute_go">
 <a href="#isattachedcompute_go" style="color: inherit; text-decoration: inherit;">Is<wbr>Attached<wbr>Compute</a>
@@ -4353,8 +3786,7 @@ The following output properties are available:
         <span class="property-indicator"></span>
         <span class="property-type">bool</span>
     </dt>
-    <dd>{{% md %}}Indicating whether the compute was provisioned by user and brought from outside if true, or machine learning service provisioned it if false.{{% /md %}}</dd>
-    <dt class="property-required"
+    <dd>{{% md %}}Indicating whether the compute was provisioned by user and brought from outside if true, or machine learning service provisioned it if false.{{% /md %}}</dd><dt class="property-required"
             title="Required">
         <span id="provisioningerrors_go">
 <a href="#provisioningerrors_go" style="color: inherit; text-decoration: inherit;">Provisioning<wbr>Errors</a>
@@ -4362,8 +3794,7 @@ The following output properties are available:
         <span class="property-indicator"></span>
         <span class="property-type"><a href="#machinelearningserviceerrorresponse">[]Machine<wbr>Learning<wbr>Service<wbr>Error<wbr>Response</a></span>
     </dt>
-    <dd>{{% md %}}Errors during provisioning{{% /md %}}</dd>
-    <dt class="property-required"
+    <dd>{{% md %}}Errors during provisioning{{% /md %}}</dd><dt class="property-required"
             title="Required">
         <span id="provisioningstate_go">
 <a href="#provisioningstate_go" style="color: inherit; text-decoration: inherit;">Provisioning<wbr>State</a>
@@ -4371,8 +3802,7 @@ The following output properties are available:
         <span class="property-indicator"></span>
         <span class="property-type">string</span>
     </dt>
-    <dd>{{% md %}}The provision state of the cluster. Valid values are Unknown, Updating, Provisioning, Succeeded, and Failed.{{% /md %}}</dd>
-    <dt class="property-optional"
+    <dd>{{% md %}}The provision state of the cluster. Valid values are Unknown, Updating, Provisioning, Succeeded, and Failed.{{% /md %}}</dd><dt class="property-optional"
             title="Optional">
         <span id="computelocation_go">
 <a href="#computelocation_go" style="color: inherit; text-decoration: inherit;">Compute<wbr>Location</a>
@@ -4380,8 +3810,7 @@ The following output properties are available:
         <span class="property-indicator"></span>
         <span class="property-type">string</span>
     </dt>
-    <dd>{{% md %}}Location for the underlying compute{{% /md %}}</dd>
-    <dt class="property-optional"
+    <dd>{{% md %}}Location for the underlying compute{{% /md %}}</dd><dt class="property-optional"
             title="Optional">
         <span id="description_go">
 <a href="#description_go" style="color: inherit; text-decoration: inherit;">Description</a>
@@ -4389,8 +3818,7 @@ The following output properties are available:
         <span class="property-indicator"></span>
         <span class="property-type">string</span>
     </dt>
-    <dd>{{% md %}}The description of the Machine Learning compute.{{% /md %}}</dd>
-    <dt class="property-optional"
+    <dd>{{% md %}}The description of the Machine Learning compute.{{% /md %}}</dd><dt class="property-optional"
             title="Optional">
         <span id="properties_go">
 <a href="#properties_go" style="color: inherit; text-decoration: inherit;">Properties</a>
@@ -4398,8 +3826,7 @@ The following output properties are available:
         <span class="property-indicator"></span>
         <span class="property-type"><a href="#databricksresponseproperties">Databricks<wbr>Response<wbr>Properties</a></span>
     </dt>
-    <dd>{{% md %}}{{% /md %}}</dd>
-    <dt class="property-optional"
+    <dd>{{% md %}}{{% /md %}}</dd><dt class="property-optional"
             title="Optional">
         <span id="resourceid_go">
 <a href="#resourceid_go" style="color: inherit; text-decoration: inherit;">Resource<wbr>Id</a>
@@ -4407,14 +3834,11 @@ The following output properties are available:
         <span class="property-indicator"></span>
         <span class="property-type">string</span>
     </dt>
-    <dd>{{% md %}}ARM resource id of the underlying compute{{% /md %}}</dd>
-</dl>
+    <dd>{{% md %}}ARM resource id of the underlying compute{{% /md %}}</dd></dl>
 {{% /choosable %}}
 
 {{% choosable language nodejs %}}
-<dl class="resources-properties">
-
-    <dt class="property-required"
+<dl class="resources-properties"><dt class="property-required"
             title="Required">
         <span id="isattachedcompute_nodejs">
 <a href="#isattachedcompute_nodejs" style="color: inherit; text-decoration: inherit;">is<wbr>Attached<wbr>Compute</a>
@@ -4422,8 +3846,7 @@ The following output properties are available:
         <span class="property-indicator"></span>
         <span class="property-type">boolean</span>
     </dt>
-    <dd>{{% md %}}Indicating whether the compute was provisioned by user and brought from outside if true, or machine learning service provisioned it if false.{{% /md %}}</dd>
-    <dt class="property-required"
+    <dd>{{% md %}}Indicating whether the compute was provisioned by user and brought from outside if true, or machine learning service provisioned it if false.{{% /md %}}</dd><dt class="property-required"
             title="Required">
         <span id="provisioningerrors_nodejs">
 <a href="#provisioningerrors_nodejs" style="color: inherit; text-decoration: inherit;">provisioning<wbr>Errors</a>
@@ -4431,8 +3854,7 @@ The following output properties are available:
         <span class="property-indicator"></span>
         <span class="property-type"><a href="#machinelearningserviceerrorresponse">Machine<wbr>Learning<wbr>Service<wbr>Error<wbr>Response[]</a></span>
     </dt>
-    <dd>{{% md %}}Errors during provisioning{{% /md %}}</dd>
-    <dt class="property-required"
+    <dd>{{% md %}}Errors during provisioning{{% /md %}}</dd><dt class="property-required"
             title="Required">
         <span id="provisioningstate_nodejs">
 <a href="#provisioningstate_nodejs" style="color: inherit; text-decoration: inherit;">provisioning<wbr>State</a>
@@ -4440,8 +3862,7 @@ The following output properties are available:
         <span class="property-indicator"></span>
         <span class="property-type">string</span>
     </dt>
-    <dd>{{% md %}}The provision state of the cluster. Valid values are Unknown, Updating, Provisioning, Succeeded, and Failed.{{% /md %}}</dd>
-    <dt class="property-optional"
+    <dd>{{% md %}}The provision state of the cluster. Valid values are Unknown, Updating, Provisioning, Succeeded, and Failed.{{% /md %}}</dd><dt class="property-optional"
             title="Optional">
         <span id="computelocation_nodejs">
 <a href="#computelocation_nodejs" style="color: inherit; text-decoration: inherit;">compute<wbr>Location</a>
@@ -4449,8 +3870,7 @@ The following output properties are available:
         <span class="property-indicator"></span>
         <span class="property-type">string</span>
     </dt>
-    <dd>{{% md %}}Location for the underlying compute{{% /md %}}</dd>
-    <dt class="property-optional"
+    <dd>{{% md %}}Location for the underlying compute{{% /md %}}</dd><dt class="property-optional"
             title="Optional">
         <span id="description_nodejs">
 <a href="#description_nodejs" style="color: inherit; text-decoration: inherit;">description</a>
@@ -4458,8 +3878,7 @@ The following output properties are available:
         <span class="property-indicator"></span>
         <span class="property-type">string</span>
     </dt>
-    <dd>{{% md %}}The description of the Machine Learning compute.{{% /md %}}</dd>
-    <dt class="property-optional"
+    <dd>{{% md %}}The description of the Machine Learning compute.{{% /md %}}</dd><dt class="property-optional"
             title="Optional">
         <span id="properties_nodejs">
 <a href="#properties_nodejs" style="color: inherit; text-decoration: inherit;">properties</a>
@@ -4467,8 +3886,7 @@ The following output properties are available:
         <span class="property-indicator"></span>
         <span class="property-type"><a href="#databricksresponseproperties">Databricks<wbr>Response<wbr>Properties</a></span>
     </dt>
-    <dd>{{% md %}}{{% /md %}}</dd>
-    <dt class="property-optional"
+    <dd>{{% md %}}{{% /md %}}</dd><dt class="property-optional"
             title="Optional">
         <span id="resourceid_nodejs">
 <a href="#resourceid_nodejs" style="color: inherit; text-decoration: inherit;">resource<wbr>Id</a>
@@ -4476,14 +3894,11 @@ The following output properties are available:
         <span class="property-indicator"></span>
         <span class="property-type">string</span>
     </dt>
-    <dd>{{% md %}}ARM resource id of the underlying compute{{% /md %}}</dd>
-</dl>
+    <dd>{{% md %}}ARM resource id of the underlying compute{{% /md %}}</dd></dl>
 {{% /choosable %}}
 
 {{% choosable language python %}}
-<dl class="resources-properties">
-
-    <dt class="property-required"
+<dl class="resources-properties"><dt class="property-required"
             title="Required">
         <span id="is_attached_compute_python">
 <a href="#is_attached_compute_python" style="color: inherit; text-decoration: inherit;">is_<wbr>attached_<wbr>compute</a>
@@ -4491,8 +3906,7 @@ The following output properties are available:
         <span class="property-indicator"></span>
         <span class="property-type">bool</span>
     </dt>
-    <dd>{{% md %}}Indicating whether the compute was provisioned by user and brought from outside if true, or machine learning service provisioned it if false.{{% /md %}}</dd>
-    <dt class="property-required"
+    <dd>{{% md %}}Indicating whether the compute was provisioned by user and brought from outside if true, or machine learning service provisioned it if false.{{% /md %}}</dd><dt class="property-required"
             title="Required">
         <span id="provisioning_errors_python">
 <a href="#provisioning_errors_python" style="color: inherit; text-decoration: inherit;">provisioning_<wbr>errors</a>
@@ -4500,8 +3914,7 @@ The following output properties are available:
         <span class="property-indicator"></span>
         <span class="property-type"><a href="#machinelearningserviceerrorresponse">Sequence[Machine<wbr>Learning<wbr>Service<wbr>Error<wbr>Response<wbr>Args]</a></span>
     </dt>
-    <dd>{{% md %}}Errors during provisioning{{% /md %}}</dd>
-    <dt class="property-required"
+    <dd>{{% md %}}Errors during provisioning{{% /md %}}</dd><dt class="property-required"
             title="Required">
         <span id="provisioning_state_python">
 <a href="#provisioning_state_python" style="color: inherit; text-decoration: inherit;">provisioning_<wbr>state</a>
@@ -4509,8 +3922,7 @@ The following output properties are available:
         <span class="property-indicator"></span>
         <span class="property-type">str</span>
     </dt>
-    <dd>{{% md %}}The provision state of the cluster. Valid values are Unknown, Updating, Provisioning, Succeeded, and Failed.{{% /md %}}</dd>
-    <dt class="property-optional"
+    <dd>{{% md %}}The provision state of the cluster. Valid values are Unknown, Updating, Provisioning, Succeeded, and Failed.{{% /md %}}</dd><dt class="property-optional"
             title="Optional">
         <span id="compute_location_python">
 <a href="#compute_location_python" style="color: inherit; text-decoration: inherit;">compute_<wbr>location</a>
@@ -4518,8 +3930,7 @@ The following output properties are available:
         <span class="property-indicator"></span>
         <span class="property-type">str</span>
     </dt>
-    <dd>{{% md %}}Location for the underlying compute{{% /md %}}</dd>
-    <dt class="property-optional"
+    <dd>{{% md %}}Location for the underlying compute{{% /md %}}</dd><dt class="property-optional"
             title="Optional">
         <span id="description_python">
 <a href="#description_python" style="color: inherit; text-decoration: inherit;">description</a>
@@ -4527,8 +3938,7 @@ The following output properties are available:
         <span class="property-indicator"></span>
         <span class="property-type">str</span>
     </dt>
-    <dd>{{% md %}}The description of the Machine Learning compute.{{% /md %}}</dd>
-    <dt class="property-optional"
+    <dd>{{% md %}}The description of the Machine Learning compute.{{% /md %}}</dd><dt class="property-optional"
             title="Optional">
         <span id="properties_python">
 <a href="#properties_python" style="color: inherit; text-decoration: inherit;">properties</a>
@@ -4536,8 +3946,7 @@ The following output properties are available:
         <span class="property-indicator"></span>
         <span class="property-type"><a href="#databricksresponseproperties">Databricks<wbr>Response<wbr>Properties<wbr>Args</a></span>
     </dt>
-    <dd>{{% md %}}{{% /md %}}</dd>
-    <dt class="property-optional"
+    <dd>{{% md %}}{{% /md %}}</dd><dt class="property-optional"
             title="Optional">
         <span id="resource_id_python">
 <a href="#resource_id_python" style="color: inherit; text-decoration: inherit;">resource_<wbr>id</a>
@@ -4545,8 +3954,7 @@ The following output properties are available:
         <span class="property-indicator"></span>
         <span class="property-type">str</span>
     </dt>
-    <dd>{{% md %}}ARM resource id of the underlying compute{{% /md %}}</dd>
-</dl>
+    <dd>{{% md %}}ARM resource id of the underlying compute{{% /md %}}</dd></dl>
 {{% /choosable %}}
 
 <h4 id="databricksresponseproperties">Databricks<wbr>Response<wbr>Properties</h4>
@@ -4554,9 +3962,7 @@ The following output properties are available:
 
 
 {{% choosable language csharp %}}
-<dl class="resources-properties">
-
-    <dt class="property-optional"
+<dl class="resources-properties"><dt class="property-optional"
             title="Optional">
         <span id="databricksaccesstoken_csharp">
 <a href="#databricksaccesstoken_csharp" style="color: inherit; text-decoration: inherit;">Databricks<wbr>Access<wbr>Token</a>
@@ -4564,8 +3970,7 @@ The following output properties are available:
         <span class="property-indicator"></span>
         <span class="property-type">string</span>
     </dt>
-    <dd>{{% md %}}Databricks access token{{% /md %}}</dd>
-    <dt class="property-optional"
+    <dd>{{% md %}}Databricks access token{{% /md %}}</dd><dt class="property-optional"
             title="Optional">
         <span id="workspaceurl_csharp">
 <a href="#workspaceurl_csharp" style="color: inherit; text-decoration: inherit;">Workspace<wbr>Url</a>
@@ -4573,14 +3978,11 @@ The following output properties are available:
         <span class="property-indicator"></span>
         <span class="property-type">string</span>
     </dt>
-    <dd>{{% md %}}Workspace Url{{% /md %}}</dd>
-</dl>
+    <dd>{{% md %}}Workspace Url{{% /md %}}</dd></dl>
 {{% /choosable %}}
 
 {{% choosable language go %}}
-<dl class="resources-properties">
-
-    <dt class="property-optional"
+<dl class="resources-properties"><dt class="property-optional"
             title="Optional">
         <span id="databricksaccesstoken_go">
 <a href="#databricksaccesstoken_go" style="color: inherit; text-decoration: inherit;">Databricks<wbr>Access<wbr>Token</a>
@@ -4588,8 +3990,7 @@ The following output properties are available:
         <span class="property-indicator"></span>
         <span class="property-type">string</span>
     </dt>
-    <dd>{{% md %}}Databricks access token{{% /md %}}</dd>
-    <dt class="property-optional"
+    <dd>{{% md %}}Databricks access token{{% /md %}}</dd><dt class="property-optional"
             title="Optional">
         <span id="workspaceurl_go">
 <a href="#workspaceurl_go" style="color: inherit; text-decoration: inherit;">Workspace<wbr>Url</a>
@@ -4597,14 +3998,11 @@ The following output properties are available:
         <span class="property-indicator"></span>
         <span class="property-type">string</span>
     </dt>
-    <dd>{{% md %}}Workspace Url{{% /md %}}</dd>
-</dl>
+    <dd>{{% md %}}Workspace Url{{% /md %}}</dd></dl>
 {{% /choosable %}}
 
 {{% choosable language nodejs %}}
-<dl class="resources-properties">
-
-    <dt class="property-optional"
+<dl class="resources-properties"><dt class="property-optional"
             title="Optional">
         <span id="databricksaccesstoken_nodejs">
 <a href="#databricksaccesstoken_nodejs" style="color: inherit; text-decoration: inherit;">databricks<wbr>Access<wbr>Token</a>
@@ -4612,8 +4010,7 @@ The following output properties are available:
         <span class="property-indicator"></span>
         <span class="property-type">string</span>
     </dt>
-    <dd>{{% md %}}Databricks access token{{% /md %}}</dd>
-    <dt class="property-optional"
+    <dd>{{% md %}}Databricks access token{{% /md %}}</dd><dt class="property-optional"
             title="Optional">
         <span id="workspaceurl_nodejs">
 <a href="#workspaceurl_nodejs" style="color: inherit; text-decoration: inherit;">workspace<wbr>Url</a>
@@ -4621,14 +4018,11 @@ The following output properties are available:
         <span class="property-indicator"></span>
         <span class="property-type">string</span>
     </dt>
-    <dd>{{% md %}}Workspace Url{{% /md %}}</dd>
-</dl>
+    <dd>{{% md %}}Workspace Url{{% /md %}}</dd></dl>
 {{% /choosable %}}
 
 {{% choosable language python %}}
-<dl class="resources-properties">
-
-    <dt class="property-optional"
+<dl class="resources-properties"><dt class="property-optional"
             title="Optional">
         <span id="databricks_access_token_python">
 <a href="#databricks_access_token_python" style="color: inherit; text-decoration: inherit;">databricks_<wbr>access_<wbr>token</a>
@@ -4636,8 +4030,7 @@ The following output properties are available:
         <span class="property-indicator"></span>
         <span class="property-type">str</span>
     </dt>
-    <dd>{{% md %}}Databricks access token{{% /md %}}</dd>
-    <dt class="property-optional"
+    <dd>{{% md %}}Databricks access token{{% /md %}}</dd><dt class="property-optional"
             title="Optional">
         <span id="workspace_url_python">
 <a href="#workspace_url_python" style="color: inherit; text-decoration: inherit;">workspace_<wbr>url</a>
@@ -4645,8 +4038,7 @@ The following output properties are available:
         <span class="property-indicator"></span>
         <span class="property-type">str</span>
     </dt>
-    <dd>{{% md %}}Workspace Url{{% /md %}}</dd>
-</dl>
+    <dd>{{% md %}}Workspace Url{{% /md %}}</dd></dl>
 {{% /choosable %}}
 
 <h4 id="errordetailresponse">Error<wbr>Detail<wbr>Response</h4>
@@ -4654,9 +4046,7 @@ The following output properties are available:
 
 
 {{% choosable language csharp %}}
-<dl class="resources-properties">
-
-    <dt class="property-required"
+<dl class="resources-properties"><dt class="property-required"
             title="Required">
         <span id="code_csharp">
 <a href="#code_csharp" style="color: inherit; text-decoration: inherit;">Code</a>
@@ -4664,8 +4054,7 @@ The following output properties are available:
         <span class="property-indicator"></span>
         <span class="property-type">string</span>
     </dt>
-    <dd>{{% md %}}Error code.{{% /md %}}</dd>
-    <dt class="property-required"
+    <dd>{{% md %}}Error code.{{% /md %}}</dd><dt class="property-required"
             title="Required">
         <span id="message_csharp">
 <a href="#message_csharp" style="color: inherit; text-decoration: inherit;">Message</a>
@@ -4673,14 +4062,11 @@ The following output properties are available:
         <span class="property-indicator"></span>
         <span class="property-type">string</span>
     </dt>
-    <dd>{{% md %}}Error message.{{% /md %}}</dd>
-</dl>
+    <dd>{{% md %}}Error message.{{% /md %}}</dd></dl>
 {{% /choosable %}}
 
 {{% choosable language go %}}
-<dl class="resources-properties">
-
-    <dt class="property-required"
+<dl class="resources-properties"><dt class="property-required"
             title="Required">
         <span id="code_go">
 <a href="#code_go" style="color: inherit; text-decoration: inherit;">Code</a>
@@ -4688,8 +4074,7 @@ The following output properties are available:
         <span class="property-indicator"></span>
         <span class="property-type">string</span>
     </dt>
-    <dd>{{% md %}}Error code.{{% /md %}}</dd>
-    <dt class="property-required"
+    <dd>{{% md %}}Error code.{{% /md %}}</dd><dt class="property-required"
             title="Required">
         <span id="message_go">
 <a href="#message_go" style="color: inherit; text-decoration: inherit;">Message</a>
@@ -4697,14 +4082,11 @@ The following output properties are available:
         <span class="property-indicator"></span>
         <span class="property-type">string</span>
     </dt>
-    <dd>{{% md %}}Error message.{{% /md %}}</dd>
-</dl>
+    <dd>{{% md %}}Error message.{{% /md %}}</dd></dl>
 {{% /choosable %}}
 
 {{% choosable language nodejs %}}
-<dl class="resources-properties">
-
-    <dt class="property-required"
+<dl class="resources-properties"><dt class="property-required"
             title="Required">
         <span id="code_nodejs">
 <a href="#code_nodejs" style="color: inherit; text-decoration: inherit;">code</a>
@@ -4712,8 +4094,7 @@ The following output properties are available:
         <span class="property-indicator"></span>
         <span class="property-type">string</span>
     </dt>
-    <dd>{{% md %}}Error code.{{% /md %}}</dd>
-    <dt class="property-required"
+    <dd>{{% md %}}Error code.{{% /md %}}</dd><dt class="property-required"
             title="Required">
         <span id="message_nodejs">
 <a href="#message_nodejs" style="color: inherit; text-decoration: inherit;">message</a>
@@ -4721,14 +4102,11 @@ The following output properties are available:
         <span class="property-indicator"></span>
         <span class="property-type">string</span>
     </dt>
-    <dd>{{% md %}}Error message.{{% /md %}}</dd>
-</dl>
+    <dd>{{% md %}}Error message.{{% /md %}}</dd></dl>
 {{% /choosable %}}
 
 {{% choosable language python %}}
-<dl class="resources-properties">
-
-    <dt class="property-required"
+<dl class="resources-properties"><dt class="property-required"
             title="Required">
         <span id="code_python">
 <a href="#code_python" style="color: inherit; text-decoration: inherit;">code</a>
@@ -4736,8 +4114,7 @@ The following output properties are available:
         <span class="property-indicator"></span>
         <span class="property-type">str</span>
     </dt>
-    <dd>{{% md %}}Error code.{{% /md %}}</dd>
-    <dt class="property-required"
+    <dd>{{% md %}}Error code.{{% /md %}}</dd><dt class="property-required"
             title="Required">
         <span id="message_python">
 <a href="#message_python" style="color: inherit; text-decoration: inherit;">message</a>
@@ -4745,8 +4122,7 @@ The following output properties are available:
         <span class="property-indicator"></span>
         <span class="property-type">str</span>
     </dt>
-    <dd>{{% md %}}Error message.{{% /md %}}</dd>
-</dl>
+    <dd>{{% md %}}Error message.{{% /md %}}</dd></dl>
 {{% /choosable %}}
 
 <h4 id="errorresponseresponse">Error<wbr>Response<wbr>Response</h4>
@@ -4754,9 +4130,7 @@ The following output properties are available:
 
 
 {{% choosable language csharp %}}
-<dl class="resources-properties">
-
-    <dt class="property-required"
+<dl class="resources-properties"><dt class="property-required"
             title="Required">
         <span id="code_csharp">
 <a href="#code_csharp" style="color: inherit; text-decoration: inherit;">Code</a>
@@ -4764,8 +4138,7 @@ The following output properties are available:
         <span class="property-indicator"></span>
         <span class="property-type">string</span>
     </dt>
-    <dd>{{% md %}}Error code.{{% /md %}}</dd>
-    <dt class="property-required"
+    <dd>{{% md %}}Error code.{{% /md %}}</dd><dt class="property-required"
             title="Required">
         <span id="details_csharp">
 <a href="#details_csharp" style="color: inherit; text-decoration: inherit;">Details</a>
@@ -4773,8 +4146,7 @@ The following output properties are available:
         <span class="property-indicator"></span>
         <span class="property-type"><a href="#errordetailresponse">List&lt;Pulumi.<wbr>Azure<wbr>Native.<wbr>Machine<wbr>Learning<wbr>Services.<wbr>Inputs.<wbr>Error<wbr>Detail<wbr>Response<wbr>Args&gt;</a></span>
     </dt>
-    <dd>{{% md %}}An array of error detail objects.{{% /md %}}</dd>
-    <dt class="property-required"
+    <dd>{{% md %}}An array of error detail objects.{{% /md %}}</dd><dt class="property-required"
             title="Required">
         <span id="message_csharp">
 <a href="#message_csharp" style="color: inherit; text-decoration: inherit;">Message</a>
@@ -4782,14 +4154,11 @@ The following output properties are available:
         <span class="property-indicator"></span>
         <span class="property-type">string</span>
     </dt>
-    <dd>{{% md %}}Error message.{{% /md %}}</dd>
-</dl>
+    <dd>{{% md %}}Error message.{{% /md %}}</dd></dl>
 {{% /choosable %}}
 
 {{% choosable language go %}}
-<dl class="resources-properties">
-
-    <dt class="property-required"
+<dl class="resources-properties"><dt class="property-required"
             title="Required">
         <span id="code_go">
 <a href="#code_go" style="color: inherit; text-decoration: inherit;">Code</a>
@@ -4797,8 +4166,7 @@ The following output properties are available:
         <span class="property-indicator"></span>
         <span class="property-type">string</span>
     </dt>
-    <dd>{{% md %}}Error code.{{% /md %}}</dd>
-    <dt class="property-required"
+    <dd>{{% md %}}Error code.{{% /md %}}</dd><dt class="property-required"
             title="Required">
         <span id="details_go">
 <a href="#details_go" style="color: inherit; text-decoration: inherit;">Details</a>
@@ -4806,8 +4174,7 @@ The following output properties are available:
         <span class="property-indicator"></span>
         <span class="property-type"><a href="#errordetailresponse">[]Error<wbr>Detail<wbr>Response</a></span>
     </dt>
-    <dd>{{% md %}}An array of error detail objects.{{% /md %}}</dd>
-    <dt class="property-required"
+    <dd>{{% md %}}An array of error detail objects.{{% /md %}}</dd><dt class="property-required"
             title="Required">
         <span id="message_go">
 <a href="#message_go" style="color: inherit; text-decoration: inherit;">Message</a>
@@ -4815,14 +4182,11 @@ The following output properties are available:
         <span class="property-indicator"></span>
         <span class="property-type">string</span>
     </dt>
-    <dd>{{% md %}}Error message.{{% /md %}}</dd>
-</dl>
+    <dd>{{% md %}}Error message.{{% /md %}}</dd></dl>
 {{% /choosable %}}
 
 {{% choosable language nodejs %}}
-<dl class="resources-properties">
-
-    <dt class="property-required"
+<dl class="resources-properties"><dt class="property-required"
             title="Required">
         <span id="code_nodejs">
 <a href="#code_nodejs" style="color: inherit; text-decoration: inherit;">code</a>
@@ -4830,8 +4194,7 @@ The following output properties are available:
         <span class="property-indicator"></span>
         <span class="property-type">string</span>
     </dt>
-    <dd>{{% md %}}Error code.{{% /md %}}</dd>
-    <dt class="property-required"
+    <dd>{{% md %}}Error code.{{% /md %}}</dd><dt class="property-required"
             title="Required">
         <span id="details_nodejs">
 <a href="#details_nodejs" style="color: inherit; text-decoration: inherit;">details</a>
@@ -4839,8 +4202,7 @@ The following output properties are available:
         <span class="property-indicator"></span>
         <span class="property-type"><a href="#errordetailresponse">Error<wbr>Detail<wbr>Response[]</a></span>
     </dt>
-    <dd>{{% md %}}An array of error detail objects.{{% /md %}}</dd>
-    <dt class="property-required"
+    <dd>{{% md %}}An array of error detail objects.{{% /md %}}</dd><dt class="property-required"
             title="Required">
         <span id="message_nodejs">
 <a href="#message_nodejs" style="color: inherit; text-decoration: inherit;">message</a>
@@ -4848,14 +4210,11 @@ The following output properties are available:
         <span class="property-indicator"></span>
         <span class="property-type">string</span>
     </dt>
-    <dd>{{% md %}}Error message.{{% /md %}}</dd>
-</dl>
+    <dd>{{% md %}}Error message.{{% /md %}}</dd></dl>
 {{% /choosable %}}
 
 {{% choosable language python %}}
-<dl class="resources-properties">
-
-    <dt class="property-required"
+<dl class="resources-properties"><dt class="property-required"
             title="Required">
         <span id="code_python">
 <a href="#code_python" style="color: inherit; text-decoration: inherit;">code</a>
@@ -4863,8 +4222,7 @@ The following output properties are available:
         <span class="property-indicator"></span>
         <span class="property-type">str</span>
     </dt>
-    <dd>{{% md %}}Error code.{{% /md %}}</dd>
-    <dt class="property-required"
+    <dd>{{% md %}}Error code.{{% /md %}}</dd><dt class="property-required"
             title="Required">
         <span id="details_python">
 <a href="#details_python" style="color: inherit; text-decoration: inherit;">details</a>
@@ -4872,8 +4230,7 @@ The following output properties are available:
         <span class="property-indicator"></span>
         <span class="property-type"><a href="#errordetailresponse">Sequence[Error<wbr>Detail<wbr>Response<wbr>Args]</a></span>
     </dt>
-    <dd>{{% md %}}An array of error detail objects.{{% /md %}}</dd>
-    <dt class="property-required"
+    <dd>{{% md %}}An array of error detail objects.{{% /md %}}</dd><dt class="property-required"
             title="Required">
         <span id="message_python">
 <a href="#message_python" style="color: inherit; text-decoration: inherit;">message</a>
@@ -4881,8 +4238,7 @@ The following output properties are available:
         <span class="property-indicator"></span>
         <span class="property-type">str</span>
     </dt>
-    <dd>{{% md %}}Error message.{{% /md %}}</dd>
-</dl>
+    <dd>{{% md %}}Error message.{{% /md %}}</dd></dl>
 {{% /choosable %}}
 
 <h4 id="hdinsightresponse">HDInsight<wbr>Response</h4>
@@ -4890,9 +4246,7 @@ The following output properties are available:
 
 
 {{% choosable language csharp %}}
-<dl class="resources-properties">
-
-    <dt class="property-required"
+<dl class="resources-properties"><dt class="property-required"
             title="Required">
         <span id="isattachedcompute_csharp">
 <a href="#isattachedcompute_csharp" style="color: inherit; text-decoration: inherit;">Is<wbr>Attached<wbr>Compute</a>
@@ -4900,8 +4254,7 @@ The following output properties are available:
         <span class="property-indicator"></span>
         <span class="property-type">bool</span>
     </dt>
-    <dd>{{% md %}}Indicating whether the compute was provisioned by user and brought from outside if true, or machine learning service provisioned it if false.{{% /md %}}</dd>
-    <dt class="property-required"
+    <dd>{{% md %}}Indicating whether the compute was provisioned by user and brought from outside if true, or machine learning service provisioned it if false.{{% /md %}}</dd><dt class="property-required"
             title="Required">
         <span id="provisioningerrors_csharp">
 <a href="#provisioningerrors_csharp" style="color: inherit; text-decoration: inherit;">Provisioning<wbr>Errors</a>
@@ -4909,8 +4262,7 @@ The following output properties are available:
         <span class="property-indicator"></span>
         <span class="property-type"><a href="#machinelearningserviceerrorresponse">List&lt;Pulumi.<wbr>Azure<wbr>Native.<wbr>Machine<wbr>Learning<wbr>Services.<wbr>Inputs.<wbr>Machine<wbr>Learning<wbr>Service<wbr>Error<wbr>Response<wbr>Args&gt;</a></span>
     </dt>
-    <dd>{{% md %}}Errors during provisioning{{% /md %}}</dd>
-    <dt class="property-required"
+    <dd>{{% md %}}Errors during provisioning{{% /md %}}</dd><dt class="property-required"
             title="Required">
         <span id="provisioningstate_csharp">
 <a href="#provisioningstate_csharp" style="color: inherit; text-decoration: inherit;">Provisioning<wbr>State</a>
@@ -4918,8 +4270,7 @@ The following output properties are available:
         <span class="property-indicator"></span>
         <span class="property-type">string</span>
     </dt>
-    <dd>{{% md %}}The provision state of the cluster. Valid values are Unknown, Updating, Provisioning, Succeeded, and Failed.{{% /md %}}</dd>
-    <dt class="property-optional"
+    <dd>{{% md %}}The provision state of the cluster. Valid values are Unknown, Updating, Provisioning, Succeeded, and Failed.{{% /md %}}</dd><dt class="property-optional"
             title="Optional">
         <span id="computelocation_csharp">
 <a href="#computelocation_csharp" style="color: inherit; text-decoration: inherit;">Compute<wbr>Location</a>
@@ -4927,8 +4278,7 @@ The following output properties are available:
         <span class="property-indicator"></span>
         <span class="property-type">string</span>
     </dt>
-    <dd>{{% md %}}Location for the underlying compute{{% /md %}}</dd>
-    <dt class="property-optional"
+    <dd>{{% md %}}Location for the underlying compute{{% /md %}}</dd><dt class="property-optional"
             title="Optional">
         <span id="description_csharp">
 <a href="#description_csharp" style="color: inherit; text-decoration: inherit;">Description</a>
@@ -4936,8 +4286,7 @@ The following output properties are available:
         <span class="property-indicator"></span>
         <span class="property-type">string</span>
     </dt>
-    <dd>{{% md %}}The description of the Machine Learning compute.{{% /md %}}</dd>
-    <dt class="property-optional"
+    <dd>{{% md %}}The description of the Machine Learning compute.{{% /md %}}</dd><dt class="property-optional"
             title="Optional">
         <span id="properties_csharp">
 <a href="#properties_csharp" style="color: inherit; text-decoration: inherit;">Properties</a>
@@ -4945,8 +4294,7 @@ The following output properties are available:
         <span class="property-indicator"></span>
         <span class="property-type"><a href="#hdinsightresponseproperties">Pulumi.<wbr>Azure<wbr>Native.<wbr>Machine<wbr>Learning<wbr>Services.<wbr>Inputs.<wbr>HDInsight<wbr>Response<wbr>Properties<wbr>Args</a></span>
     </dt>
-    <dd>{{% md %}}{{% /md %}}</dd>
-    <dt class="property-optional"
+    <dd>{{% md %}}{{% /md %}}</dd><dt class="property-optional"
             title="Optional">
         <span id="resourceid_csharp">
 <a href="#resourceid_csharp" style="color: inherit; text-decoration: inherit;">Resource<wbr>Id</a>
@@ -4954,14 +4302,11 @@ The following output properties are available:
         <span class="property-indicator"></span>
         <span class="property-type">string</span>
     </dt>
-    <dd>{{% md %}}ARM resource id of the underlying compute{{% /md %}}</dd>
-</dl>
+    <dd>{{% md %}}ARM resource id of the underlying compute{{% /md %}}</dd></dl>
 {{% /choosable %}}
 
 {{% choosable language go %}}
-<dl class="resources-properties">
-
-    <dt class="property-required"
+<dl class="resources-properties"><dt class="property-required"
             title="Required">
         <span id="isattachedcompute_go">
 <a href="#isattachedcompute_go" style="color: inherit; text-decoration: inherit;">Is<wbr>Attached<wbr>Compute</a>
@@ -4969,8 +4314,7 @@ The following output properties are available:
         <span class="property-indicator"></span>
         <span class="property-type">bool</span>
     </dt>
-    <dd>{{% md %}}Indicating whether the compute was provisioned by user and brought from outside if true, or machine learning service provisioned it if false.{{% /md %}}</dd>
-    <dt class="property-required"
+    <dd>{{% md %}}Indicating whether the compute was provisioned by user and brought from outside if true, or machine learning service provisioned it if false.{{% /md %}}</dd><dt class="property-required"
             title="Required">
         <span id="provisioningerrors_go">
 <a href="#provisioningerrors_go" style="color: inherit; text-decoration: inherit;">Provisioning<wbr>Errors</a>
@@ -4978,8 +4322,7 @@ The following output properties are available:
         <span class="property-indicator"></span>
         <span class="property-type"><a href="#machinelearningserviceerrorresponse">[]Machine<wbr>Learning<wbr>Service<wbr>Error<wbr>Response</a></span>
     </dt>
-    <dd>{{% md %}}Errors during provisioning{{% /md %}}</dd>
-    <dt class="property-required"
+    <dd>{{% md %}}Errors during provisioning{{% /md %}}</dd><dt class="property-required"
             title="Required">
         <span id="provisioningstate_go">
 <a href="#provisioningstate_go" style="color: inherit; text-decoration: inherit;">Provisioning<wbr>State</a>
@@ -4987,8 +4330,7 @@ The following output properties are available:
         <span class="property-indicator"></span>
         <span class="property-type">string</span>
     </dt>
-    <dd>{{% md %}}The provision state of the cluster. Valid values are Unknown, Updating, Provisioning, Succeeded, and Failed.{{% /md %}}</dd>
-    <dt class="property-optional"
+    <dd>{{% md %}}The provision state of the cluster. Valid values are Unknown, Updating, Provisioning, Succeeded, and Failed.{{% /md %}}</dd><dt class="property-optional"
             title="Optional">
         <span id="computelocation_go">
 <a href="#computelocation_go" style="color: inherit; text-decoration: inherit;">Compute<wbr>Location</a>
@@ -4996,8 +4338,7 @@ The following output properties are available:
         <span class="property-indicator"></span>
         <span class="property-type">string</span>
     </dt>
-    <dd>{{% md %}}Location for the underlying compute{{% /md %}}</dd>
-    <dt class="property-optional"
+    <dd>{{% md %}}Location for the underlying compute{{% /md %}}</dd><dt class="property-optional"
             title="Optional">
         <span id="description_go">
 <a href="#description_go" style="color: inherit; text-decoration: inherit;">Description</a>
@@ -5005,8 +4346,7 @@ The following output properties are available:
         <span class="property-indicator"></span>
         <span class="property-type">string</span>
     </dt>
-    <dd>{{% md %}}The description of the Machine Learning compute.{{% /md %}}</dd>
-    <dt class="property-optional"
+    <dd>{{% md %}}The description of the Machine Learning compute.{{% /md %}}</dd><dt class="property-optional"
             title="Optional">
         <span id="properties_go">
 <a href="#properties_go" style="color: inherit; text-decoration: inherit;">Properties</a>
@@ -5014,8 +4354,7 @@ The following output properties are available:
         <span class="property-indicator"></span>
         <span class="property-type"><a href="#hdinsightresponseproperties">HDInsight<wbr>Response<wbr>Properties</a></span>
     </dt>
-    <dd>{{% md %}}{{% /md %}}</dd>
-    <dt class="property-optional"
+    <dd>{{% md %}}{{% /md %}}</dd><dt class="property-optional"
             title="Optional">
         <span id="resourceid_go">
 <a href="#resourceid_go" style="color: inherit; text-decoration: inherit;">Resource<wbr>Id</a>
@@ -5023,14 +4362,11 @@ The following output properties are available:
         <span class="property-indicator"></span>
         <span class="property-type">string</span>
     </dt>
-    <dd>{{% md %}}ARM resource id of the underlying compute{{% /md %}}</dd>
-</dl>
+    <dd>{{% md %}}ARM resource id of the underlying compute{{% /md %}}</dd></dl>
 {{% /choosable %}}
 
 {{% choosable language nodejs %}}
-<dl class="resources-properties">
-
-    <dt class="property-required"
+<dl class="resources-properties"><dt class="property-required"
             title="Required">
         <span id="isattachedcompute_nodejs">
 <a href="#isattachedcompute_nodejs" style="color: inherit; text-decoration: inherit;">is<wbr>Attached<wbr>Compute</a>
@@ -5038,8 +4374,7 @@ The following output properties are available:
         <span class="property-indicator"></span>
         <span class="property-type">boolean</span>
     </dt>
-    <dd>{{% md %}}Indicating whether the compute was provisioned by user and brought from outside if true, or machine learning service provisioned it if false.{{% /md %}}</dd>
-    <dt class="property-required"
+    <dd>{{% md %}}Indicating whether the compute was provisioned by user and brought from outside if true, or machine learning service provisioned it if false.{{% /md %}}</dd><dt class="property-required"
             title="Required">
         <span id="provisioningerrors_nodejs">
 <a href="#provisioningerrors_nodejs" style="color: inherit; text-decoration: inherit;">provisioning<wbr>Errors</a>
@@ -5047,8 +4382,7 @@ The following output properties are available:
         <span class="property-indicator"></span>
         <span class="property-type"><a href="#machinelearningserviceerrorresponse">Machine<wbr>Learning<wbr>Service<wbr>Error<wbr>Response[]</a></span>
     </dt>
-    <dd>{{% md %}}Errors during provisioning{{% /md %}}</dd>
-    <dt class="property-required"
+    <dd>{{% md %}}Errors during provisioning{{% /md %}}</dd><dt class="property-required"
             title="Required">
         <span id="provisioningstate_nodejs">
 <a href="#provisioningstate_nodejs" style="color: inherit; text-decoration: inherit;">provisioning<wbr>State</a>
@@ -5056,8 +4390,7 @@ The following output properties are available:
         <span class="property-indicator"></span>
         <span class="property-type">string</span>
     </dt>
-    <dd>{{% md %}}The provision state of the cluster. Valid values are Unknown, Updating, Provisioning, Succeeded, and Failed.{{% /md %}}</dd>
-    <dt class="property-optional"
+    <dd>{{% md %}}The provision state of the cluster. Valid values are Unknown, Updating, Provisioning, Succeeded, and Failed.{{% /md %}}</dd><dt class="property-optional"
             title="Optional">
         <span id="computelocation_nodejs">
 <a href="#computelocation_nodejs" style="color: inherit; text-decoration: inherit;">compute<wbr>Location</a>
@@ -5065,8 +4398,7 @@ The following output properties are available:
         <span class="property-indicator"></span>
         <span class="property-type">string</span>
     </dt>
-    <dd>{{% md %}}Location for the underlying compute{{% /md %}}</dd>
-    <dt class="property-optional"
+    <dd>{{% md %}}Location for the underlying compute{{% /md %}}</dd><dt class="property-optional"
             title="Optional">
         <span id="description_nodejs">
 <a href="#description_nodejs" style="color: inherit; text-decoration: inherit;">description</a>
@@ -5074,8 +4406,7 @@ The following output properties are available:
         <span class="property-indicator"></span>
         <span class="property-type">string</span>
     </dt>
-    <dd>{{% md %}}The description of the Machine Learning compute.{{% /md %}}</dd>
-    <dt class="property-optional"
+    <dd>{{% md %}}The description of the Machine Learning compute.{{% /md %}}</dd><dt class="property-optional"
             title="Optional">
         <span id="properties_nodejs">
 <a href="#properties_nodejs" style="color: inherit; text-decoration: inherit;">properties</a>
@@ -5083,8 +4414,7 @@ The following output properties are available:
         <span class="property-indicator"></span>
         <span class="property-type"><a href="#hdinsightresponseproperties">HDInsight<wbr>Response<wbr>Properties</a></span>
     </dt>
-    <dd>{{% md %}}{{% /md %}}</dd>
-    <dt class="property-optional"
+    <dd>{{% md %}}{{% /md %}}</dd><dt class="property-optional"
             title="Optional">
         <span id="resourceid_nodejs">
 <a href="#resourceid_nodejs" style="color: inherit; text-decoration: inherit;">resource<wbr>Id</a>
@@ -5092,14 +4422,11 @@ The following output properties are available:
         <span class="property-indicator"></span>
         <span class="property-type">string</span>
     </dt>
-    <dd>{{% md %}}ARM resource id of the underlying compute{{% /md %}}</dd>
-</dl>
+    <dd>{{% md %}}ARM resource id of the underlying compute{{% /md %}}</dd></dl>
 {{% /choosable %}}
 
 {{% choosable language python %}}
-<dl class="resources-properties">
-
-    <dt class="property-required"
+<dl class="resources-properties"><dt class="property-required"
             title="Required">
         <span id="is_attached_compute_python">
 <a href="#is_attached_compute_python" style="color: inherit; text-decoration: inherit;">is_<wbr>attached_<wbr>compute</a>
@@ -5107,8 +4434,7 @@ The following output properties are available:
         <span class="property-indicator"></span>
         <span class="property-type">bool</span>
     </dt>
-    <dd>{{% md %}}Indicating whether the compute was provisioned by user and brought from outside if true, or machine learning service provisioned it if false.{{% /md %}}</dd>
-    <dt class="property-required"
+    <dd>{{% md %}}Indicating whether the compute was provisioned by user and brought from outside if true, or machine learning service provisioned it if false.{{% /md %}}</dd><dt class="property-required"
             title="Required">
         <span id="provisioning_errors_python">
 <a href="#provisioning_errors_python" style="color: inherit; text-decoration: inherit;">provisioning_<wbr>errors</a>
@@ -5116,8 +4442,7 @@ The following output properties are available:
         <span class="property-indicator"></span>
         <span class="property-type"><a href="#machinelearningserviceerrorresponse">Sequence[Machine<wbr>Learning<wbr>Service<wbr>Error<wbr>Response<wbr>Args]</a></span>
     </dt>
-    <dd>{{% md %}}Errors during provisioning{{% /md %}}</dd>
-    <dt class="property-required"
+    <dd>{{% md %}}Errors during provisioning{{% /md %}}</dd><dt class="property-required"
             title="Required">
         <span id="provisioning_state_python">
 <a href="#provisioning_state_python" style="color: inherit; text-decoration: inherit;">provisioning_<wbr>state</a>
@@ -5125,8 +4450,7 @@ The following output properties are available:
         <span class="property-indicator"></span>
         <span class="property-type">str</span>
     </dt>
-    <dd>{{% md %}}The provision state of the cluster. Valid values are Unknown, Updating, Provisioning, Succeeded, and Failed.{{% /md %}}</dd>
-    <dt class="property-optional"
+    <dd>{{% md %}}The provision state of the cluster. Valid values are Unknown, Updating, Provisioning, Succeeded, and Failed.{{% /md %}}</dd><dt class="property-optional"
             title="Optional">
         <span id="compute_location_python">
 <a href="#compute_location_python" style="color: inherit; text-decoration: inherit;">compute_<wbr>location</a>
@@ -5134,8 +4458,7 @@ The following output properties are available:
         <span class="property-indicator"></span>
         <span class="property-type">str</span>
     </dt>
-    <dd>{{% md %}}Location for the underlying compute{{% /md %}}</dd>
-    <dt class="property-optional"
+    <dd>{{% md %}}Location for the underlying compute{{% /md %}}</dd><dt class="property-optional"
             title="Optional">
         <span id="description_python">
 <a href="#description_python" style="color: inherit; text-decoration: inherit;">description</a>
@@ -5143,8 +4466,7 @@ The following output properties are available:
         <span class="property-indicator"></span>
         <span class="property-type">str</span>
     </dt>
-    <dd>{{% md %}}The description of the Machine Learning compute.{{% /md %}}</dd>
-    <dt class="property-optional"
+    <dd>{{% md %}}The description of the Machine Learning compute.{{% /md %}}</dd><dt class="property-optional"
             title="Optional">
         <span id="properties_python">
 <a href="#properties_python" style="color: inherit; text-decoration: inherit;">properties</a>
@@ -5152,8 +4474,7 @@ The following output properties are available:
         <span class="property-indicator"></span>
         <span class="property-type"><a href="#hdinsightresponseproperties">HDInsight<wbr>Response<wbr>Properties<wbr>Args</a></span>
     </dt>
-    <dd>{{% md %}}{{% /md %}}</dd>
-    <dt class="property-optional"
+    <dd>{{% md %}}{{% /md %}}</dd><dt class="property-optional"
             title="Optional">
         <span id="resource_id_python">
 <a href="#resource_id_python" style="color: inherit; text-decoration: inherit;">resource_<wbr>id</a>
@@ -5161,8 +4482,7 @@ The following output properties are available:
         <span class="property-indicator"></span>
         <span class="property-type">str</span>
     </dt>
-    <dd>{{% md %}}ARM resource id of the underlying compute{{% /md %}}</dd>
-</dl>
+    <dd>{{% md %}}ARM resource id of the underlying compute{{% /md %}}</dd></dl>
 {{% /choosable %}}
 
 <h4 id="hdinsightresponseproperties">HDInsight<wbr>Response<wbr>Properties</h4>
@@ -5170,9 +4490,7 @@ The following output properties are available:
 
 
 {{% choosable language csharp %}}
-<dl class="resources-properties">
-
-    <dt class="property-optional"
+<dl class="resources-properties"><dt class="property-optional"
             title="Optional">
         <span id="address_csharp">
 <a href="#address_csharp" style="color: inherit; text-decoration: inherit;">Address</a>
@@ -5180,8 +4498,7 @@ The following output properties are available:
         <span class="property-indicator"></span>
         <span class="property-type">string</span>
     </dt>
-    <dd>{{% md %}}Public IP address of the master node of the cluster.{{% /md %}}</dd>
-    <dt class="property-optional"
+    <dd>{{% md %}}Public IP address of the master node of the cluster.{{% /md %}}</dd><dt class="property-optional"
             title="Optional">
         <span id="administratoraccount_csharp">
 <a href="#administratoraccount_csharp" style="color: inherit; text-decoration: inherit;">Administrator<wbr>Account</a>
@@ -5189,8 +4506,7 @@ The following output properties are available:
         <span class="property-indicator"></span>
         <span class="property-type"><a href="#virtualmachinesshcredentialsresponse">Pulumi.<wbr>Azure<wbr>Native.<wbr>Machine<wbr>Learning<wbr>Services.<wbr>Inputs.<wbr>Virtual<wbr>Machine<wbr>Ssh<wbr>Credentials<wbr>Response<wbr>Args</a></span>
     </dt>
-    <dd>{{% md %}}Admin credentials for master node of the cluster{{% /md %}}</dd>
-    <dt class="property-optional"
+    <dd>{{% md %}}Admin credentials for master node of the cluster{{% /md %}}</dd><dt class="property-optional"
             title="Optional">
         <span id="sshport_csharp">
 <a href="#sshport_csharp" style="color: inherit; text-decoration: inherit;">Ssh<wbr>Port</a>
@@ -5198,14 +4514,11 @@ The following output properties are available:
         <span class="property-indicator"></span>
         <span class="property-type">int</span>
     </dt>
-    <dd>{{% md %}}Port open for ssh connections on the master node of the cluster.{{% /md %}}</dd>
-</dl>
+    <dd>{{% md %}}Port open for ssh connections on the master node of the cluster.{{% /md %}}</dd></dl>
 {{% /choosable %}}
 
 {{% choosable language go %}}
-<dl class="resources-properties">
-
-    <dt class="property-optional"
+<dl class="resources-properties"><dt class="property-optional"
             title="Optional">
         <span id="address_go">
 <a href="#address_go" style="color: inherit; text-decoration: inherit;">Address</a>
@@ -5213,8 +4526,7 @@ The following output properties are available:
         <span class="property-indicator"></span>
         <span class="property-type">string</span>
     </dt>
-    <dd>{{% md %}}Public IP address of the master node of the cluster.{{% /md %}}</dd>
-    <dt class="property-optional"
+    <dd>{{% md %}}Public IP address of the master node of the cluster.{{% /md %}}</dd><dt class="property-optional"
             title="Optional">
         <span id="administratoraccount_go">
 <a href="#administratoraccount_go" style="color: inherit; text-decoration: inherit;">Administrator<wbr>Account</a>
@@ -5222,8 +4534,7 @@ The following output properties are available:
         <span class="property-indicator"></span>
         <span class="property-type"><a href="#virtualmachinesshcredentialsresponse">Virtual<wbr>Machine<wbr>Ssh<wbr>Credentials<wbr>Response</a></span>
     </dt>
-    <dd>{{% md %}}Admin credentials for master node of the cluster{{% /md %}}</dd>
-    <dt class="property-optional"
+    <dd>{{% md %}}Admin credentials for master node of the cluster{{% /md %}}</dd><dt class="property-optional"
             title="Optional">
         <span id="sshport_go">
 <a href="#sshport_go" style="color: inherit; text-decoration: inherit;">Ssh<wbr>Port</a>
@@ -5231,14 +4542,11 @@ The following output properties are available:
         <span class="property-indicator"></span>
         <span class="property-type">int</span>
     </dt>
-    <dd>{{% md %}}Port open for ssh connections on the master node of the cluster.{{% /md %}}</dd>
-</dl>
+    <dd>{{% md %}}Port open for ssh connections on the master node of the cluster.{{% /md %}}</dd></dl>
 {{% /choosable %}}
 
 {{% choosable language nodejs %}}
-<dl class="resources-properties">
-
-    <dt class="property-optional"
+<dl class="resources-properties"><dt class="property-optional"
             title="Optional">
         <span id="address_nodejs">
 <a href="#address_nodejs" style="color: inherit; text-decoration: inherit;">address</a>
@@ -5246,8 +4554,7 @@ The following output properties are available:
         <span class="property-indicator"></span>
         <span class="property-type">string</span>
     </dt>
-    <dd>{{% md %}}Public IP address of the master node of the cluster.{{% /md %}}</dd>
-    <dt class="property-optional"
+    <dd>{{% md %}}Public IP address of the master node of the cluster.{{% /md %}}</dd><dt class="property-optional"
             title="Optional">
         <span id="administratoraccount_nodejs">
 <a href="#administratoraccount_nodejs" style="color: inherit; text-decoration: inherit;">administrator<wbr>Account</a>
@@ -5255,8 +4562,7 @@ The following output properties are available:
         <span class="property-indicator"></span>
         <span class="property-type"><a href="#virtualmachinesshcredentialsresponse">Virtual<wbr>Machine<wbr>Ssh<wbr>Credentials<wbr>Response</a></span>
     </dt>
-    <dd>{{% md %}}Admin credentials for master node of the cluster{{% /md %}}</dd>
-    <dt class="property-optional"
+    <dd>{{% md %}}Admin credentials for master node of the cluster{{% /md %}}</dd><dt class="property-optional"
             title="Optional">
         <span id="sshport_nodejs">
 <a href="#sshport_nodejs" style="color: inherit; text-decoration: inherit;">ssh<wbr>Port</a>
@@ -5264,14 +4570,11 @@ The following output properties are available:
         <span class="property-indicator"></span>
         <span class="property-type">number</span>
     </dt>
-    <dd>{{% md %}}Port open for ssh connections on the master node of the cluster.{{% /md %}}</dd>
-</dl>
+    <dd>{{% md %}}Port open for ssh connections on the master node of the cluster.{{% /md %}}</dd></dl>
 {{% /choosable %}}
 
 {{% choosable language python %}}
-<dl class="resources-properties">
-
-    <dt class="property-optional"
+<dl class="resources-properties"><dt class="property-optional"
             title="Optional">
         <span id="address_python">
 <a href="#address_python" style="color: inherit; text-decoration: inherit;">address</a>
@@ -5279,8 +4582,7 @@ The following output properties are available:
         <span class="property-indicator"></span>
         <span class="property-type">str</span>
     </dt>
-    <dd>{{% md %}}Public IP address of the master node of the cluster.{{% /md %}}</dd>
-    <dt class="property-optional"
+    <dd>{{% md %}}Public IP address of the master node of the cluster.{{% /md %}}</dd><dt class="property-optional"
             title="Optional">
         <span id="administrator_account_python">
 <a href="#administrator_account_python" style="color: inherit; text-decoration: inherit;">administrator_<wbr>account</a>
@@ -5288,8 +4590,7 @@ The following output properties are available:
         <span class="property-indicator"></span>
         <span class="property-type"><a href="#virtualmachinesshcredentialsresponse">Virtual<wbr>Machine<wbr>Ssh<wbr>Credentials<wbr>Response<wbr>Args</a></span>
     </dt>
-    <dd>{{% md %}}Admin credentials for master node of the cluster{{% /md %}}</dd>
-    <dt class="property-optional"
+    <dd>{{% md %}}Admin credentials for master node of the cluster{{% /md %}}</dd><dt class="property-optional"
             title="Optional">
         <span id="ssh_port_python">
 <a href="#ssh_port_python" style="color: inherit; text-decoration: inherit;">ssh_<wbr>port</a>
@@ -5297,8 +4598,7 @@ The following output properties are available:
         <span class="property-indicator"></span>
         <span class="property-type">int</span>
     </dt>
-    <dd>{{% md %}}Port open for ssh connections on the master node of the cluster.{{% /md %}}</dd>
-</dl>
+    <dd>{{% md %}}Port open for ssh connections on the master node of the cluster.{{% /md %}}</dd></dl>
 {{% /choosable %}}
 
 <h4 id="identityresponse">Identity<wbr>Response</h4>
@@ -5306,9 +4606,7 @@ The following output properties are available:
 
 
 {{% choosable language csharp %}}
-<dl class="resources-properties">
-
-    <dt class="property-required"
+<dl class="resources-properties"><dt class="property-required"
             title="Required">
         <span id="principalid_csharp">
 <a href="#principalid_csharp" style="color: inherit; text-decoration: inherit;">Principal<wbr>Id</a>
@@ -5316,8 +4614,7 @@ The following output properties are available:
         <span class="property-indicator"></span>
         <span class="property-type">string</span>
     </dt>
-    <dd>{{% md %}}The principal ID of resource identity.{{% /md %}}</dd>
-    <dt class="property-required"
+    <dd>{{% md %}}The principal ID of resource identity.{{% /md %}}</dd><dt class="property-required"
             title="Required">
         <span id="tenantid_csharp">
 <a href="#tenantid_csharp" style="color: inherit; text-decoration: inherit;">Tenant<wbr>Id</a>
@@ -5325,8 +4622,7 @@ The following output properties are available:
         <span class="property-indicator"></span>
         <span class="property-type">string</span>
     </dt>
-    <dd>{{% md %}}The tenant ID of resource.{{% /md %}}</dd>
-    <dt class="property-optional"
+    <dd>{{% md %}}The tenant ID of resource.{{% /md %}}</dd><dt class="property-optional"
             title="Optional">
         <span id="type_csharp">
 <a href="#type_csharp" style="color: inherit; text-decoration: inherit;">Type</a>
@@ -5334,8 +4630,7 @@ The following output properties are available:
         <span class="property-indicator"></span>
         <span class="property-type">string</span>
     </dt>
-    <dd>{{% md %}}The identity type.{{% /md %}}</dd>
-    <dt class="property-optional"
+    <dd>{{% md %}}The identity type.{{% /md %}}</dd><dt class="property-optional"
             title="Optional">
         <span id="userassignedidentities_csharp">
 <a href="#userassignedidentities_csharp" style="color: inherit; text-decoration: inherit;">User<wbr>Assigned<wbr>Identities</a>
@@ -5343,14 +4638,11 @@ The following output properties are available:
         <span class="property-indicator"></span>
         <span class="property-type">Dictionary&lt;string, Pulumi.<wbr>Azure<wbr>Native.<wbr>Machine<wbr>Learning<wbr>Services.<wbr>Inputs.<wbr>User<wbr>Assigned<wbr>Identity<wbr>Response<wbr>Args&gt;</span>
     </dt>
-    <dd>{{% md %}}The user assigned identities associated with the resource.{{% /md %}}</dd>
-</dl>
+    <dd>{{% md %}}The user assigned identities associated with the resource.{{% /md %}}</dd></dl>
 {{% /choosable %}}
 
 {{% choosable language go %}}
-<dl class="resources-properties">
-
-    <dt class="property-required"
+<dl class="resources-properties"><dt class="property-required"
             title="Required">
         <span id="principalid_go">
 <a href="#principalid_go" style="color: inherit; text-decoration: inherit;">Principal<wbr>Id</a>
@@ -5358,8 +4650,7 @@ The following output properties are available:
         <span class="property-indicator"></span>
         <span class="property-type">string</span>
     </dt>
-    <dd>{{% md %}}The principal ID of resource identity.{{% /md %}}</dd>
-    <dt class="property-required"
+    <dd>{{% md %}}The principal ID of resource identity.{{% /md %}}</dd><dt class="property-required"
             title="Required">
         <span id="tenantid_go">
 <a href="#tenantid_go" style="color: inherit; text-decoration: inherit;">Tenant<wbr>Id</a>
@@ -5367,8 +4658,7 @@ The following output properties are available:
         <span class="property-indicator"></span>
         <span class="property-type">string</span>
     </dt>
-    <dd>{{% md %}}The tenant ID of resource.{{% /md %}}</dd>
-    <dt class="property-optional"
+    <dd>{{% md %}}The tenant ID of resource.{{% /md %}}</dd><dt class="property-optional"
             title="Optional">
         <span id="type_go">
 <a href="#type_go" style="color: inherit; text-decoration: inherit;">Type</a>
@@ -5376,8 +4666,7 @@ The following output properties are available:
         <span class="property-indicator"></span>
         <span class="property-type">string</span>
     </dt>
-    <dd>{{% md %}}The identity type.{{% /md %}}</dd>
-    <dt class="property-optional"
+    <dd>{{% md %}}The identity type.{{% /md %}}</dd><dt class="property-optional"
             title="Optional">
         <span id="userassignedidentities_go">
 <a href="#userassignedidentities_go" style="color: inherit; text-decoration: inherit;">User<wbr>Assigned<wbr>Identities</a>
@@ -5385,14 +4674,11 @@ The following output properties are available:
         <span class="property-indicator"></span>
         <span class="property-type">map[string]User<wbr>Assigned<wbr>Identity<wbr>Response</span>
     </dt>
-    <dd>{{% md %}}The user assigned identities associated with the resource.{{% /md %}}</dd>
-</dl>
+    <dd>{{% md %}}The user assigned identities associated with the resource.{{% /md %}}</dd></dl>
 {{% /choosable %}}
 
 {{% choosable language nodejs %}}
-<dl class="resources-properties">
-
-    <dt class="property-required"
+<dl class="resources-properties"><dt class="property-required"
             title="Required">
         <span id="principalid_nodejs">
 <a href="#principalid_nodejs" style="color: inherit; text-decoration: inherit;">principal<wbr>Id</a>
@@ -5400,8 +4686,7 @@ The following output properties are available:
         <span class="property-indicator"></span>
         <span class="property-type">string</span>
     </dt>
-    <dd>{{% md %}}The principal ID of resource identity.{{% /md %}}</dd>
-    <dt class="property-required"
+    <dd>{{% md %}}The principal ID of resource identity.{{% /md %}}</dd><dt class="property-required"
             title="Required">
         <span id="tenantid_nodejs">
 <a href="#tenantid_nodejs" style="color: inherit; text-decoration: inherit;">tenant<wbr>Id</a>
@@ -5409,8 +4694,7 @@ The following output properties are available:
         <span class="property-indicator"></span>
         <span class="property-type">string</span>
     </dt>
-    <dd>{{% md %}}The tenant ID of resource.{{% /md %}}</dd>
-    <dt class="property-optional"
+    <dd>{{% md %}}The tenant ID of resource.{{% /md %}}</dd><dt class="property-optional"
             title="Optional">
         <span id="type_nodejs">
 <a href="#type_nodejs" style="color: inherit; text-decoration: inherit;">type</a>
@@ -5418,8 +4702,7 @@ The following output properties are available:
         <span class="property-indicator"></span>
         <span class="property-type">string</span>
     </dt>
-    <dd>{{% md %}}The identity type.{{% /md %}}</dd>
-    <dt class="property-optional"
+    <dd>{{% md %}}The identity type.{{% /md %}}</dd><dt class="property-optional"
             title="Optional">
         <span id="userassignedidentities_nodejs">
 <a href="#userassignedidentities_nodejs" style="color: inherit; text-decoration: inherit;">user<wbr>Assigned<wbr>Identities</a>
@@ -5427,14 +4710,11 @@ The following output properties are available:
         <span class="property-indicator"></span>
         <span class="property-type">{[key: string]: User<wbr>Assigned<wbr>Identity<wbr>Response}</span>
     </dt>
-    <dd>{{% md %}}The user assigned identities associated with the resource.{{% /md %}}</dd>
-</dl>
+    <dd>{{% md %}}The user assigned identities associated with the resource.{{% /md %}}</dd></dl>
 {{% /choosable %}}
 
 {{% choosable language python %}}
-<dl class="resources-properties">
-
-    <dt class="property-required"
+<dl class="resources-properties"><dt class="property-required"
             title="Required">
         <span id="principal_id_python">
 <a href="#principal_id_python" style="color: inherit; text-decoration: inherit;">principal_<wbr>id</a>
@@ -5442,8 +4722,7 @@ The following output properties are available:
         <span class="property-indicator"></span>
         <span class="property-type">str</span>
     </dt>
-    <dd>{{% md %}}The principal ID of resource identity.{{% /md %}}</dd>
-    <dt class="property-required"
+    <dd>{{% md %}}The principal ID of resource identity.{{% /md %}}</dd><dt class="property-required"
             title="Required">
         <span id="tenant_id_python">
 <a href="#tenant_id_python" style="color: inherit; text-decoration: inherit;">tenant_<wbr>id</a>
@@ -5451,8 +4730,7 @@ The following output properties are available:
         <span class="property-indicator"></span>
         <span class="property-type">str</span>
     </dt>
-    <dd>{{% md %}}The tenant ID of resource.{{% /md %}}</dd>
-    <dt class="property-optional"
+    <dd>{{% md %}}The tenant ID of resource.{{% /md %}}</dd><dt class="property-optional"
             title="Optional">
         <span id="type_python">
 <a href="#type_python" style="color: inherit; text-decoration: inherit;">type</a>
@@ -5460,8 +4738,7 @@ The following output properties are available:
         <span class="property-indicator"></span>
         <span class="property-type">str</span>
     </dt>
-    <dd>{{% md %}}The identity type.{{% /md %}}</dd>
-    <dt class="property-optional"
+    <dd>{{% md %}}The identity type.{{% /md %}}</dd><dt class="property-optional"
             title="Optional">
         <span id="user_assigned_identities_python">
 <a href="#user_assigned_identities_python" style="color: inherit; text-decoration: inherit;">user_<wbr>assigned_<wbr>identities</a>
@@ -5469,8 +4746,7 @@ The following output properties are available:
         <span class="property-indicator"></span>
         <span class="property-type">Mapping[str, User<wbr>Assigned<wbr>Identity<wbr>Response<wbr>Args]</span>
     </dt>
-    <dd>{{% md %}}The user assigned identities associated with the resource.{{% /md %}}</dd>
-</dl>
+    <dd>{{% md %}}The user assigned identities associated with the resource.{{% /md %}}</dd></dl>
 {{% /choosable %}}
 
 <h4 id="machinelearningserviceerrorresponse">Machine<wbr>Learning<wbr>Service<wbr>Error<wbr>Response</h4>
@@ -5478,9 +4754,7 @@ The following output properties are available:
 
 
 {{% choosable language csharp %}}
-<dl class="resources-properties">
-
-    <dt class="property-required"
+<dl class="resources-properties"><dt class="property-required"
             title="Required">
         <span id="error_csharp">
 <a href="#error_csharp" style="color: inherit; text-decoration: inherit;">Error</a>
@@ -5488,14 +4762,11 @@ The following output properties are available:
         <span class="property-indicator"></span>
         <span class="property-type"><a href="#errorresponseresponse">Pulumi.<wbr>Azure<wbr>Native.<wbr>Machine<wbr>Learning<wbr>Services.<wbr>Inputs.<wbr>Error<wbr>Response<wbr>Response<wbr>Args</a></span>
     </dt>
-    <dd>{{% md %}}The error response.{{% /md %}}</dd>
-</dl>
+    <dd>{{% md %}}The error response.{{% /md %}}</dd></dl>
 {{% /choosable %}}
 
 {{% choosable language go %}}
-<dl class="resources-properties">
-
-    <dt class="property-required"
+<dl class="resources-properties"><dt class="property-required"
             title="Required">
         <span id="error_go">
 <a href="#error_go" style="color: inherit; text-decoration: inherit;">Error</a>
@@ -5503,14 +4774,11 @@ The following output properties are available:
         <span class="property-indicator"></span>
         <span class="property-type"><a href="#errorresponseresponse">Error<wbr>Response<wbr>Response</a></span>
     </dt>
-    <dd>{{% md %}}The error response.{{% /md %}}</dd>
-</dl>
+    <dd>{{% md %}}The error response.{{% /md %}}</dd></dl>
 {{% /choosable %}}
 
 {{% choosable language nodejs %}}
-<dl class="resources-properties">
-
-    <dt class="property-required"
+<dl class="resources-properties"><dt class="property-required"
             title="Required">
         <span id="error_nodejs">
 <a href="#error_nodejs" style="color: inherit; text-decoration: inherit;">error</a>
@@ -5518,14 +4786,11 @@ The following output properties are available:
         <span class="property-indicator"></span>
         <span class="property-type"><a href="#errorresponseresponse">Error<wbr>Response<wbr>Response</a></span>
     </dt>
-    <dd>{{% md %}}The error response.{{% /md %}}</dd>
-</dl>
+    <dd>{{% md %}}The error response.{{% /md %}}</dd></dl>
 {{% /choosable %}}
 
 {{% choosable language python %}}
-<dl class="resources-properties">
-
-    <dt class="property-required"
+<dl class="resources-properties"><dt class="property-required"
             title="Required">
         <span id="error_python">
 <a href="#error_python" style="color: inherit; text-decoration: inherit;">error</a>
@@ -5533,8 +4798,7 @@ The following output properties are available:
         <span class="property-indicator"></span>
         <span class="property-type"><a href="#errorresponseresponse">Error<wbr>Response<wbr>Response<wbr>Args</a></span>
     </dt>
-    <dd>{{% md %}}The error response.{{% /md %}}</dd>
-</dl>
+    <dd>{{% md %}}The error response.{{% /md %}}</dd></dl>
 {{% /choosable %}}
 
 <h4 id="nodestatecountsresponse">Node<wbr>State<wbr>Counts<wbr>Response</h4>
@@ -5542,9 +4806,7 @@ The following output properties are available:
 
 
 {{% choosable language csharp %}}
-<dl class="resources-properties">
-
-    <dt class="property-required"
+<dl class="resources-properties"><dt class="property-required"
             title="Required">
         <span id="idlenodecount_csharp">
 <a href="#idlenodecount_csharp" style="color: inherit; text-decoration: inherit;">Idle<wbr>Node<wbr>Count</a>
@@ -5552,8 +4814,7 @@ The following output properties are available:
         <span class="property-indicator"></span>
         <span class="property-type">int</span>
     </dt>
-    <dd>{{% md %}}Number of compute nodes in idle state.{{% /md %}}</dd>
-    <dt class="property-required"
+    <dd>{{% md %}}Number of compute nodes in idle state.{{% /md %}}</dd><dt class="property-required"
             title="Required">
         <span id="leavingnodecount_csharp">
 <a href="#leavingnodecount_csharp" style="color: inherit; text-decoration: inherit;">Leaving<wbr>Node<wbr>Count</a>
@@ -5561,8 +4822,7 @@ The following output properties are available:
         <span class="property-indicator"></span>
         <span class="property-type">int</span>
     </dt>
-    <dd>{{% md %}}Number of compute nodes which are leaving the amlCompute.{{% /md %}}</dd>
-    <dt class="property-required"
+    <dd>{{% md %}}Number of compute nodes which are leaving the amlCompute.{{% /md %}}</dd><dt class="property-required"
             title="Required">
         <span id="preemptednodecount_csharp">
 <a href="#preemptednodecount_csharp" style="color: inherit; text-decoration: inherit;">Preempted<wbr>Node<wbr>Count</a>
@@ -5570,8 +4830,7 @@ The following output properties are available:
         <span class="property-indicator"></span>
         <span class="property-type">int</span>
     </dt>
-    <dd>{{% md %}}Number of compute nodes which are in preempted state.{{% /md %}}</dd>
-    <dt class="property-required"
+    <dd>{{% md %}}Number of compute nodes which are in preempted state.{{% /md %}}</dd><dt class="property-required"
             title="Required">
         <span id="preparingnodecount_csharp">
 <a href="#preparingnodecount_csharp" style="color: inherit; text-decoration: inherit;">Preparing<wbr>Node<wbr>Count</a>
@@ -5579,8 +4838,7 @@ The following output properties are available:
         <span class="property-indicator"></span>
         <span class="property-type">int</span>
     </dt>
-    <dd>{{% md %}}Number of compute nodes which are being prepared.{{% /md %}}</dd>
-    <dt class="property-required"
+    <dd>{{% md %}}Number of compute nodes which are being prepared.{{% /md %}}</dd><dt class="property-required"
             title="Required">
         <span id="runningnodecount_csharp">
 <a href="#runningnodecount_csharp" style="color: inherit; text-decoration: inherit;">Running<wbr>Node<wbr>Count</a>
@@ -5588,8 +4846,7 @@ The following output properties are available:
         <span class="property-indicator"></span>
         <span class="property-type">int</span>
     </dt>
-    <dd>{{% md %}}Number of compute nodes which are running jobs.{{% /md %}}</dd>
-    <dt class="property-required"
+    <dd>{{% md %}}Number of compute nodes which are running jobs.{{% /md %}}</dd><dt class="property-required"
             title="Required">
         <span id="unusablenodecount_csharp">
 <a href="#unusablenodecount_csharp" style="color: inherit; text-decoration: inherit;">Unusable<wbr>Node<wbr>Count</a>
@@ -5597,14 +4854,11 @@ The following output properties are available:
         <span class="property-indicator"></span>
         <span class="property-type">int</span>
     </dt>
-    <dd>{{% md %}}Number of compute nodes which are in unusable state.{{% /md %}}</dd>
-</dl>
+    <dd>{{% md %}}Number of compute nodes which are in unusable state.{{% /md %}}</dd></dl>
 {{% /choosable %}}
 
 {{% choosable language go %}}
-<dl class="resources-properties">
-
-    <dt class="property-required"
+<dl class="resources-properties"><dt class="property-required"
             title="Required">
         <span id="idlenodecount_go">
 <a href="#idlenodecount_go" style="color: inherit; text-decoration: inherit;">Idle<wbr>Node<wbr>Count</a>
@@ -5612,8 +4866,7 @@ The following output properties are available:
         <span class="property-indicator"></span>
         <span class="property-type">int</span>
     </dt>
-    <dd>{{% md %}}Number of compute nodes in idle state.{{% /md %}}</dd>
-    <dt class="property-required"
+    <dd>{{% md %}}Number of compute nodes in idle state.{{% /md %}}</dd><dt class="property-required"
             title="Required">
         <span id="leavingnodecount_go">
 <a href="#leavingnodecount_go" style="color: inherit; text-decoration: inherit;">Leaving<wbr>Node<wbr>Count</a>
@@ -5621,8 +4874,7 @@ The following output properties are available:
         <span class="property-indicator"></span>
         <span class="property-type">int</span>
     </dt>
-    <dd>{{% md %}}Number of compute nodes which are leaving the amlCompute.{{% /md %}}</dd>
-    <dt class="property-required"
+    <dd>{{% md %}}Number of compute nodes which are leaving the amlCompute.{{% /md %}}</dd><dt class="property-required"
             title="Required">
         <span id="preemptednodecount_go">
 <a href="#preemptednodecount_go" style="color: inherit; text-decoration: inherit;">Preempted<wbr>Node<wbr>Count</a>
@@ -5630,8 +4882,7 @@ The following output properties are available:
         <span class="property-indicator"></span>
         <span class="property-type">int</span>
     </dt>
-    <dd>{{% md %}}Number of compute nodes which are in preempted state.{{% /md %}}</dd>
-    <dt class="property-required"
+    <dd>{{% md %}}Number of compute nodes which are in preempted state.{{% /md %}}</dd><dt class="property-required"
             title="Required">
         <span id="preparingnodecount_go">
 <a href="#preparingnodecount_go" style="color: inherit; text-decoration: inherit;">Preparing<wbr>Node<wbr>Count</a>
@@ -5639,8 +4890,7 @@ The following output properties are available:
         <span class="property-indicator"></span>
         <span class="property-type">int</span>
     </dt>
-    <dd>{{% md %}}Number of compute nodes which are being prepared.{{% /md %}}</dd>
-    <dt class="property-required"
+    <dd>{{% md %}}Number of compute nodes which are being prepared.{{% /md %}}</dd><dt class="property-required"
             title="Required">
         <span id="runningnodecount_go">
 <a href="#runningnodecount_go" style="color: inherit; text-decoration: inherit;">Running<wbr>Node<wbr>Count</a>
@@ -5648,8 +4898,7 @@ The following output properties are available:
         <span class="property-indicator"></span>
         <span class="property-type">int</span>
     </dt>
-    <dd>{{% md %}}Number of compute nodes which are running jobs.{{% /md %}}</dd>
-    <dt class="property-required"
+    <dd>{{% md %}}Number of compute nodes which are running jobs.{{% /md %}}</dd><dt class="property-required"
             title="Required">
         <span id="unusablenodecount_go">
 <a href="#unusablenodecount_go" style="color: inherit; text-decoration: inherit;">Unusable<wbr>Node<wbr>Count</a>
@@ -5657,14 +4906,11 @@ The following output properties are available:
         <span class="property-indicator"></span>
         <span class="property-type">int</span>
     </dt>
-    <dd>{{% md %}}Number of compute nodes which are in unusable state.{{% /md %}}</dd>
-</dl>
+    <dd>{{% md %}}Number of compute nodes which are in unusable state.{{% /md %}}</dd></dl>
 {{% /choosable %}}
 
 {{% choosable language nodejs %}}
-<dl class="resources-properties">
-
-    <dt class="property-required"
+<dl class="resources-properties"><dt class="property-required"
             title="Required">
         <span id="idlenodecount_nodejs">
 <a href="#idlenodecount_nodejs" style="color: inherit; text-decoration: inherit;">idle<wbr>Node<wbr>Count</a>
@@ -5672,8 +4918,7 @@ The following output properties are available:
         <span class="property-indicator"></span>
         <span class="property-type">number</span>
     </dt>
-    <dd>{{% md %}}Number of compute nodes in idle state.{{% /md %}}</dd>
-    <dt class="property-required"
+    <dd>{{% md %}}Number of compute nodes in idle state.{{% /md %}}</dd><dt class="property-required"
             title="Required">
         <span id="leavingnodecount_nodejs">
 <a href="#leavingnodecount_nodejs" style="color: inherit; text-decoration: inherit;">leaving<wbr>Node<wbr>Count</a>
@@ -5681,8 +4926,7 @@ The following output properties are available:
         <span class="property-indicator"></span>
         <span class="property-type">number</span>
     </dt>
-    <dd>{{% md %}}Number of compute nodes which are leaving the amlCompute.{{% /md %}}</dd>
-    <dt class="property-required"
+    <dd>{{% md %}}Number of compute nodes which are leaving the amlCompute.{{% /md %}}</dd><dt class="property-required"
             title="Required">
         <span id="preemptednodecount_nodejs">
 <a href="#preemptednodecount_nodejs" style="color: inherit; text-decoration: inherit;">preempted<wbr>Node<wbr>Count</a>
@@ -5690,8 +4934,7 @@ The following output properties are available:
         <span class="property-indicator"></span>
         <span class="property-type">number</span>
     </dt>
-    <dd>{{% md %}}Number of compute nodes which are in preempted state.{{% /md %}}</dd>
-    <dt class="property-required"
+    <dd>{{% md %}}Number of compute nodes which are in preempted state.{{% /md %}}</dd><dt class="property-required"
             title="Required">
         <span id="preparingnodecount_nodejs">
 <a href="#preparingnodecount_nodejs" style="color: inherit; text-decoration: inherit;">preparing<wbr>Node<wbr>Count</a>
@@ -5699,8 +4942,7 @@ The following output properties are available:
         <span class="property-indicator"></span>
         <span class="property-type">number</span>
     </dt>
-    <dd>{{% md %}}Number of compute nodes which are being prepared.{{% /md %}}</dd>
-    <dt class="property-required"
+    <dd>{{% md %}}Number of compute nodes which are being prepared.{{% /md %}}</dd><dt class="property-required"
             title="Required">
         <span id="runningnodecount_nodejs">
 <a href="#runningnodecount_nodejs" style="color: inherit; text-decoration: inherit;">running<wbr>Node<wbr>Count</a>
@@ -5708,8 +4950,7 @@ The following output properties are available:
         <span class="property-indicator"></span>
         <span class="property-type">number</span>
     </dt>
-    <dd>{{% md %}}Number of compute nodes which are running jobs.{{% /md %}}</dd>
-    <dt class="property-required"
+    <dd>{{% md %}}Number of compute nodes which are running jobs.{{% /md %}}</dd><dt class="property-required"
             title="Required">
         <span id="unusablenodecount_nodejs">
 <a href="#unusablenodecount_nodejs" style="color: inherit; text-decoration: inherit;">unusable<wbr>Node<wbr>Count</a>
@@ -5717,14 +4958,11 @@ The following output properties are available:
         <span class="property-indicator"></span>
         <span class="property-type">number</span>
     </dt>
-    <dd>{{% md %}}Number of compute nodes which are in unusable state.{{% /md %}}</dd>
-</dl>
+    <dd>{{% md %}}Number of compute nodes which are in unusable state.{{% /md %}}</dd></dl>
 {{% /choosable %}}
 
 {{% choosable language python %}}
-<dl class="resources-properties">
-
-    <dt class="property-required"
+<dl class="resources-properties"><dt class="property-required"
             title="Required">
         <span id="idle_node_count_python">
 <a href="#idle_node_count_python" style="color: inherit; text-decoration: inherit;">idle_<wbr>node_<wbr>count</a>
@@ -5732,8 +4970,7 @@ The following output properties are available:
         <span class="property-indicator"></span>
         <span class="property-type">int</span>
     </dt>
-    <dd>{{% md %}}Number of compute nodes in idle state.{{% /md %}}</dd>
-    <dt class="property-required"
+    <dd>{{% md %}}Number of compute nodes in idle state.{{% /md %}}</dd><dt class="property-required"
             title="Required">
         <span id="leaving_node_count_python">
 <a href="#leaving_node_count_python" style="color: inherit; text-decoration: inherit;">leaving_<wbr>node_<wbr>count</a>
@@ -5741,8 +4978,7 @@ The following output properties are available:
         <span class="property-indicator"></span>
         <span class="property-type">int</span>
     </dt>
-    <dd>{{% md %}}Number of compute nodes which are leaving the amlCompute.{{% /md %}}</dd>
-    <dt class="property-required"
+    <dd>{{% md %}}Number of compute nodes which are leaving the amlCompute.{{% /md %}}</dd><dt class="property-required"
             title="Required">
         <span id="preempted_node_count_python">
 <a href="#preempted_node_count_python" style="color: inherit; text-decoration: inherit;">preempted_<wbr>node_<wbr>count</a>
@@ -5750,8 +4986,7 @@ The following output properties are available:
         <span class="property-indicator"></span>
         <span class="property-type">int</span>
     </dt>
-    <dd>{{% md %}}Number of compute nodes which are in preempted state.{{% /md %}}</dd>
-    <dt class="property-required"
+    <dd>{{% md %}}Number of compute nodes which are in preempted state.{{% /md %}}</dd><dt class="property-required"
             title="Required">
         <span id="preparing_node_count_python">
 <a href="#preparing_node_count_python" style="color: inherit; text-decoration: inherit;">preparing_<wbr>node_<wbr>count</a>
@@ -5759,8 +4994,7 @@ The following output properties are available:
         <span class="property-indicator"></span>
         <span class="property-type">int</span>
     </dt>
-    <dd>{{% md %}}Number of compute nodes which are being prepared.{{% /md %}}</dd>
-    <dt class="property-required"
+    <dd>{{% md %}}Number of compute nodes which are being prepared.{{% /md %}}</dd><dt class="property-required"
             title="Required">
         <span id="running_node_count_python">
 <a href="#running_node_count_python" style="color: inherit; text-decoration: inherit;">running_<wbr>node_<wbr>count</a>
@@ -5768,8 +5002,7 @@ The following output properties are available:
         <span class="property-indicator"></span>
         <span class="property-type">int</span>
     </dt>
-    <dd>{{% md %}}Number of compute nodes which are running jobs.{{% /md %}}</dd>
-    <dt class="property-required"
+    <dd>{{% md %}}Number of compute nodes which are running jobs.{{% /md %}}</dd><dt class="property-required"
             title="Required">
         <span id="unusable_node_count_python">
 <a href="#unusable_node_count_python" style="color: inherit; text-decoration: inherit;">unusable_<wbr>node_<wbr>count</a>
@@ -5777,8 +5010,7 @@ The following output properties are available:
         <span class="property-indicator"></span>
         <span class="property-type">int</span>
     </dt>
-    <dd>{{% md %}}Number of compute nodes which are in unusable state.{{% /md %}}</dd>
-</dl>
+    <dd>{{% md %}}Number of compute nodes which are in unusable state.{{% /md %}}</dd></dl>
 {{% /choosable %}}
 
 <h4 id="personalcomputeinstancesettingsresponse">Personal<wbr>Compute<wbr>Instance<wbr>Settings<wbr>Response</h4>
@@ -5786,9 +5018,7 @@ The following output properties are available:
 
 
 {{% choosable language csharp %}}
-<dl class="resources-properties">
-
-    <dt class="property-optional"
+<dl class="resources-properties"><dt class="property-optional"
             title="Optional">
         <span id="assigneduser_csharp">
 <a href="#assigneduser_csharp" style="color: inherit; text-decoration: inherit;">Assigned<wbr>User</a>
@@ -5796,14 +5026,11 @@ The following output properties are available:
         <span class="property-indicator"></span>
         <span class="property-type"><a href="#assigneduserresponse">Pulumi.<wbr>Azure<wbr>Native.<wbr>Machine<wbr>Learning<wbr>Services.<wbr>Inputs.<wbr>Assigned<wbr>User<wbr>Response<wbr>Args</a></span>
     </dt>
-    <dd>{{% md %}}A user explicitly assigned to a personal compute instance.{{% /md %}}</dd>
-</dl>
+    <dd>{{% md %}}A user explicitly assigned to a personal compute instance.{{% /md %}}</dd></dl>
 {{% /choosable %}}
 
 {{% choosable language go %}}
-<dl class="resources-properties">
-
-    <dt class="property-optional"
+<dl class="resources-properties"><dt class="property-optional"
             title="Optional">
         <span id="assigneduser_go">
 <a href="#assigneduser_go" style="color: inherit; text-decoration: inherit;">Assigned<wbr>User</a>
@@ -5811,14 +5038,11 @@ The following output properties are available:
         <span class="property-indicator"></span>
         <span class="property-type"><a href="#assigneduserresponse">Assigned<wbr>User<wbr>Response</a></span>
     </dt>
-    <dd>{{% md %}}A user explicitly assigned to a personal compute instance.{{% /md %}}</dd>
-</dl>
+    <dd>{{% md %}}A user explicitly assigned to a personal compute instance.{{% /md %}}</dd></dl>
 {{% /choosable %}}
 
 {{% choosable language nodejs %}}
-<dl class="resources-properties">
-
-    <dt class="property-optional"
+<dl class="resources-properties"><dt class="property-optional"
             title="Optional">
         <span id="assigneduser_nodejs">
 <a href="#assigneduser_nodejs" style="color: inherit; text-decoration: inherit;">assigned<wbr>User</a>
@@ -5826,14 +5050,11 @@ The following output properties are available:
         <span class="property-indicator"></span>
         <span class="property-type"><a href="#assigneduserresponse">Assigned<wbr>User<wbr>Response</a></span>
     </dt>
-    <dd>{{% md %}}A user explicitly assigned to a personal compute instance.{{% /md %}}</dd>
-</dl>
+    <dd>{{% md %}}A user explicitly assigned to a personal compute instance.{{% /md %}}</dd></dl>
 {{% /choosable %}}
 
 {{% choosable language python %}}
-<dl class="resources-properties">
-
-    <dt class="property-optional"
+<dl class="resources-properties"><dt class="property-optional"
             title="Optional">
         <span id="assigned_user_python">
 <a href="#assigned_user_python" style="color: inherit; text-decoration: inherit;">assigned_<wbr>user</a>
@@ -5841,8 +5062,7 @@ The following output properties are available:
         <span class="property-indicator"></span>
         <span class="property-type"><a href="#assigneduserresponse">Assigned<wbr>User<wbr>Response<wbr>Args</a></span>
     </dt>
-    <dd>{{% md %}}A user explicitly assigned to a personal compute instance.{{% /md %}}</dd>
-</dl>
+    <dd>{{% md %}}A user explicitly assigned to a personal compute instance.{{% /md %}}</dd></dl>
 {{% /choosable %}}
 
 <h4 id="resourceidresponse">Resource<wbr>Id<wbr>Response</h4>
@@ -5850,9 +5070,7 @@ The following output properties are available:
 
 
 {{% choosable language csharp %}}
-<dl class="resources-properties">
-
-    <dt class="property-required"
+<dl class="resources-properties"><dt class="property-required"
             title="Required">
         <span id="id_csharp">
 <a href="#id_csharp" style="color: inherit; text-decoration: inherit;">Id</a>
@@ -5860,14 +5078,11 @@ The following output properties are available:
         <span class="property-indicator"></span>
         <span class="property-type">string</span>
     </dt>
-    <dd>{{% md %}}The ID of the resource{{% /md %}}</dd>
-</dl>
+    <dd>{{% md %}}The ID of the resource{{% /md %}}</dd></dl>
 {{% /choosable %}}
 
 {{% choosable language go %}}
-<dl class="resources-properties">
-
-    <dt class="property-required"
+<dl class="resources-properties"><dt class="property-required"
             title="Required">
         <span id="id_go">
 <a href="#id_go" style="color: inherit; text-decoration: inherit;">Id</a>
@@ -5875,14 +5090,11 @@ The following output properties are available:
         <span class="property-indicator"></span>
         <span class="property-type">string</span>
     </dt>
-    <dd>{{% md %}}The ID of the resource{{% /md %}}</dd>
-</dl>
+    <dd>{{% md %}}The ID of the resource{{% /md %}}</dd></dl>
 {{% /choosable %}}
 
 {{% choosable language nodejs %}}
-<dl class="resources-properties">
-
-    <dt class="property-required"
+<dl class="resources-properties"><dt class="property-required"
             title="Required">
         <span id="id_nodejs">
 <a href="#id_nodejs" style="color: inherit; text-decoration: inherit;">id</a>
@@ -5890,14 +5102,11 @@ The following output properties are available:
         <span class="property-indicator"></span>
         <span class="property-type">string</span>
     </dt>
-    <dd>{{% md %}}The ID of the resource{{% /md %}}</dd>
-</dl>
+    <dd>{{% md %}}The ID of the resource{{% /md %}}</dd></dl>
 {{% /choosable %}}
 
 {{% choosable language python %}}
-<dl class="resources-properties">
-
-    <dt class="property-required"
+<dl class="resources-properties"><dt class="property-required"
             title="Required">
         <span id="id_python">
 <a href="#id_python" style="color: inherit; text-decoration: inherit;">id</a>
@@ -5905,8 +5114,7 @@ The following output properties are available:
         <span class="property-indicator"></span>
         <span class="property-type">str</span>
     </dt>
-    <dd>{{% md %}}The ID of the resource{{% /md %}}</dd>
-</dl>
+    <dd>{{% md %}}The ID of the resource{{% /md %}}</dd></dl>
 {{% /choosable %}}
 
 <h4 id="scalesettingsresponse">Scale<wbr>Settings<wbr>Response</h4>
@@ -5914,9 +5122,7 @@ The following output properties are available:
 
 
 {{% choosable language csharp %}}
-<dl class="resources-properties">
-
-    <dt class="property-required"
+<dl class="resources-properties"><dt class="property-required"
             title="Required">
         <span id="maxnodecount_csharp">
 <a href="#maxnodecount_csharp" style="color: inherit; text-decoration: inherit;">Max<wbr>Node<wbr>Count</a>
@@ -5924,8 +5130,7 @@ The following output properties are available:
         <span class="property-indicator"></span>
         <span class="property-type">int</span>
     </dt>
-    <dd>{{% md %}}Max number of nodes to use{{% /md %}}</dd>
-    <dt class="property-optional"
+    <dd>{{% md %}}Max number of nodes to use{{% /md %}}</dd><dt class="property-optional"
             title="Optional">
         <span id="minnodecount_csharp">
 <a href="#minnodecount_csharp" style="color: inherit; text-decoration: inherit;">Min<wbr>Node<wbr>Count</a>
@@ -5933,8 +5138,7 @@ The following output properties are available:
         <span class="property-indicator"></span>
         <span class="property-type">int</span>
     </dt>
-    <dd>{{% md %}}Min number of nodes to use{{% /md %}}</dd>
-    <dt class="property-optional"
+    <dd>{{% md %}}Min number of nodes to use{{% /md %}}</dd><dt class="property-optional"
             title="Optional">
         <span id="nodeidletimebeforescaledown_csharp">
 <a href="#nodeidletimebeforescaledown_csharp" style="color: inherit; text-decoration: inherit;">Node<wbr>Idle<wbr>Time<wbr>Before<wbr>Scale<wbr>Down</a>
@@ -5942,14 +5146,11 @@ The following output properties are available:
         <span class="property-indicator"></span>
         <span class="property-type">string</span>
     </dt>
-    <dd>{{% md %}}Node Idle Time before scaling down amlCompute. This string needs to be in the RFC Format.{{% /md %}}</dd>
-</dl>
+    <dd>{{% md %}}Node Idle Time before scaling down amlCompute. This string needs to be in the RFC Format.{{% /md %}}</dd></dl>
 {{% /choosable %}}
 
 {{% choosable language go %}}
-<dl class="resources-properties">
-
-    <dt class="property-required"
+<dl class="resources-properties"><dt class="property-required"
             title="Required">
         <span id="maxnodecount_go">
 <a href="#maxnodecount_go" style="color: inherit; text-decoration: inherit;">Max<wbr>Node<wbr>Count</a>
@@ -5957,8 +5158,7 @@ The following output properties are available:
         <span class="property-indicator"></span>
         <span class="property-type">int</span>
     </dt>
-    <dd>{{% md %}}Max number of nodes to use{{% /md %}}</dd>
-    <dt class="property-optional"
+    <dd>{{% md %}}Max number of nodes to use{{% /md %}}</dd><dt class="property-optional"
             title="Optional">
         <span id="minnodecount_go">
 <a href="#minnodecount_go" style="color: inherit; text-decoration: inherit;">Min<wbr>Node<wbr>Count</a>
@@ -5966,8 +5166,7 @@ The following output properties are available:
         <span class="property-indicator"></span>
         <span class="property-type">int</span>
     </dt>
-    <dd>{{% md %}}Min number of nodes to use{{% /md %}}</dd>
-    <dt class="property-optional"
+    <dd>{{% md %}}Min number of nodes to use{{% /md %}}</dd><dt class="property-optional"
             title="Optional">
         <span id="nodeidletimebeforescaledown_go">
 <a href="#nodeidletimebeforescaledown_go" style="color: inherit; text-decoration: inherit;">Node<wbr>Idle<wbr>Time<wbr>Before<wbr>Scale<wbr>Down</a>
@@ -5975,14 +5174,11 @@ The following output properties are available:
         <span class="property-indicator"></span>
         <span class="property-type">string</span>
     </dt>
-    <dd>{{% md %}}Node Idle Time before scaling down amlCompute. This string needs to be in the RFC Format.{{% /md %}}</dd>
-</dl>
+    <dd>{{% md %}}Node Idle Time before scaling down amlCompute. This string needs to be in the RFC Format.{{% /md %}}</dd></dl>
 {{% /choosable %}}
 
 {{% choosable language nodejs %}}
-<dl class="resources-properties">
-
-    <dt class="property-required"
+<dl class="resources-properties"><dt class="property-required"
             title="Required">
         <span id="maxnodecount_nodejs">
 <a href="#maxnodecount_nodejs" style="color: inherit; text-decoration: inherit;">max<wbr>Node<wbr>Count</a>
@@ -5990,8 +5186,7 @@ The following output properties are available:
         <span class="property-indicator"></span>
         <span class="property-type">number</span>
     </dt>
-    <dd>{{% md %}}Max number of nodes to use{{% /md %}}</dd>
-    <dt class="property-optional"
+    <dd>{{% md %}}Max number of nodes to use{{% /md %}}</dd><dt class="property-optional"
             title="Optional">
         <span id="minnodecount_nodejs">
 <a href="#minnodecount_nodejs" style="color: inherit; text-decoration: inherit;">min<wbr>Node<wbr>Count</a>
@@ -5999,8 +5194,7 @@ The following output properties are available:
         <span class="property-indicator"></span>
         <span class="property-type">number</span>
     </dt>
-    <dd>{{% md %}}Min number of nodes to use{{% /md %}}</dd>
-    <dt class="property-optional"
+    <dd>{{% md %}}Min number of nodes to use{{% /md %}}</dd><dt class="property-optional"
             title="Optional">
         <span id="nodeidletimebeforescaledown_nodejs">
 <a href="#nodeidletimebeforescaledown_nodejs" style="color: inherit; text-decoration: inherit;">node<wbr>Idle<wbr>Time<wbr>Before<wbr>Scale<wbr>Down</a>
@@ -6008,14 +5202,11 @@ The following output properties are available:
         <span class="property-indicator"></span>
         <span class="property-type">string</span>
     </dt>
-    <dd>{{% md %}}Node Idle Time before scaling down amlCompute. This string needs to be in the RFC Format.{{% /md %}}</dd>
-</dl>
+    <dd>{{% md %}}Node Idle Time before scaling down amlCompute. This string needs to be in the RFC Format.{{% /md %}}</dd></dl>
 {{% /choosable %}}
 
 {{% choosable language python %}}
-<dl class="resources-properties">
-
-    <dt class="property-required"
+<dl class="resources-properties"><dt class="property-required"
             title="Required">
         <span id="max_node_count_python">
 <a href="#max_node_count_python" style="color: inherit; text-decoration: inherit;">max_<wbr>node_<wbr>count</a>
@@ -6023,8 +5214,7 @@ The following output properties are available:
         <span class="property-indicator"></span>
         <span class="property-type">int</span>
     </dt>
-    <dd>{{% md %}}Max number of nodes to use{{% /md %}}</dd>
-    <dt class="property-optional"
+    <dd>{{% md %}}Max number of nodes to use{{% /md %}}</dd><dt class="property-optional"
             title="Optional">
         <span id="min_node_count_python">
 <a href="#min_node_count_python" style="color: inherit; text-decoration: inherit;">min_<wbr>node_<wbr>count</a>
@@ -6032,8 +5222,7 @@ The following output properties are available:
         <span class="property-indicator"></span>
         <span class="property-type">int</span>
     </dt>
-    <dd>{{% md %}}Min number of nodes to use{{% /md %}}</dd>
-    <dt class="property-optional"
+    <dd>{{% md %}}Min number of nodes to use{{% /md %}}</dd><dt class="property-optional"
             title="Optional">
         <span id="node_idle_time_before_scale_down_python">
 <a href="#node_idle_time_before_scale_down_python" style="color: inherit; text-decoration: inherit;">node_<wbr>idle_<wbr>time_<wbr>before_<wbr>scale_<wbr>down</a>
@@ -6041,8 +5230,7 @@ The following output properties are available:
         <span class="property-indicator"></span>
         <span class="property-type">str</span>
     </dt>
-    <dd>{{% md %}}Node Idle Time before scaling down amlCompute. This string needs to be in the RFC Format.{{% /md %}}</dd>
-</dl>
+    <dd>{{% md %}}Node Idle Time before scaling down amlCompute. This string needs to be in the RFC Format.{{% /md %}}</dd></dl>
 {{% /choosable %}}
 
 <h4 id="scriptreferenceresponse">Script<wbr>Reference<wbr>Response</h4>
@@ -6050,9 +5238,7 @@ The following output properties are available:
 
 
 {{% choosable language csharp %}}
-<dl class="resources-properties">
-
-    <dt class="property-optional"
+<dl class="resources-properties"><dt class="property-optional"
             title="Optional">
         <span id="scriptarguments_csharp">
 <a href="#scriptarguments_csharp" style="color: inherit; text-decoration: inherit;">Script<wbr>Arguments</a>
@@ -6060,8 +5246,7 @@ The following output properties are available:
         <span class="property-indicator"></span>
         <span class="property-type">string</span>
     </dt>
-    <dd>{{% md %}}Optional command line arguments passed to the script to run.{{% /md %}}</dd>
-    <dt class="property-optional"
+    <dd>{{% md %}}Optional command line arguments passed to the script to run.{{% /md %}}</dd><dt class="property-optional"
             title="Optional">
         <span id="scriptdata_csharp">
 <a href="#scriptdata_csharp" style="color: inherit; text-decoration: inherit;">Script<wbr>Data</a>
@@ -6069,8 +5254,7 @@ The following output properties are available:
         <span class="property-indicator"></span>
         <span class="property-type">string</span>
     </dt>
-    <dd>{{% md %}}The location of scripts in the mounted volume.{{% /md %}}</dd>
-    <dt class="property-optional"
+    <dd>{{% md %}}The location of scripts in the mounted volume.{{% /md %}}</dd><dt class="property-optional"
             title="Optional">
         <span id="scriptsource_csharp">
 <a href="#scriptsource_csharp" style="color: inherit; text-decoration: inherit;">Script<wbr>Source</a>
@@ -6078,8 +5262,7 @@ The following output properties are available:
         <span class="property-indicator"></span>
         <span class="property-type">string</span>
     </dt>
-    <dd>{{% md %}}The storage source of the script: inline, workspace.{{% /md %}}</dd>
-    <dt class="property-optional"
+    <dd>{{% md %}}The storage source of the script: inline, workspace.{{% /md %}}</dd><dt class="property-optional"
             title="Optional">
         <span id="timeout_csharp">
 <a href="#timeout_csharp" style="color: inherit; text-decoration: inherit;">Timeout</a>
@@ -6087,14 +5270,11 @@ The following output properties are available:
         <span class="property-indicator"></span>
         <span class="property-type">string</span>
     </dt>
-    <dd>{{% md %}}Optional time period passed to timeout command.{{% /md %}}</dd>
-</dl>
+    <dd>{{% md %}}Optional time period passed to timeout command.{{% /md %}}</dd></dl>
 {{% /choosable %}}
 
 {{% choosable language go %}}
-<dl class="resources-properties">
-
-    <dt class="property-optional"
+<dl class="resources-properties"><dt class="property-optional"
             title="Optional">
         <span id="scriptarguments_go">
 <a href="#scriptarguments_go" style="color: inherit; text-decoration: inherit;">Script<wbr>Arguments</a>
@@ -6102,8 +5282,7 @@ The following output properties are available:
         <span class="property-indicator"></span>
         <span class="property-type">string</span>
     </dt>
-    <dd>{{% md %}}Optional command line arguments passed to the script to run.{{% /md %}}</dd>
-    <dt class="property-optional"
+    <dd>{{% md %}}Optional command line arguments passed to the script to run.{{% /md %}}</dd><dt class="property-optional"
             title="Optional">
         <span id="scriptdata_go">
 <a href="#scriptdata_go" style="color: inherit; text-decoration: inherit;">Script<wbr>Data</a>
@@ -6111,8 +5290,7 @@ The following output properties are available:
         <span class="property-indicator"></span>
         <span class="property-type">string</span>
     </dt>
-    <dd>{{% md %}}The location of scripts in the mounted volume.{{% /md %}}</dd>
-    <dt class="property-optional"
+    <dd>{{% md %}}The location of scripts in the mounted volume.{{% /md %}}</dd><dt class="property-optional"
             title="Optional">
         <span id="scriptsource_go">
 <a href="#scriptsource_go" style="color: inherit; text-decoration: inherit;">Script<wbr>Source</a>
@@ -6120,8 +5298,7 @@ The following output properties are available:
         <span class="property-indicator"></span>
         <span class="property-type">string</span>
     </dt>
-    <dd>{{% md %}}The storage source of the script: inline, workspace.{{% /md %}}</dd>
-    <dt class="property-optional"
+    <dd>{{% md %}}The storage source of the script: inline, workspace.{{% /md %}}</dd><dt class="property-optional"
             title="Optional">
         <span id="timeout_go">
 <a href="#timeout_go" style="color: inherit; text-decoration: inherit;">Timeout</a>
@@ -6129,14 +5306,11 @@ The following output properties are available:
         <span class="property-indicator"></span>
         <span class="property-type">string</span>
     </dt>
-    <dd>{{% md %}}Optional time period passed to timeout command.{{% /md %}}</dd>
-</dl>
+    <dd>{{% md %}}Optional time period passed to timeout command.{{% /md %}}</dd></dl>
 {{% /choosable %}}
 
 {{% choosable language nodejs %}}
-<dl class="resources-properties">
-
-    <dt class="property-optional"
+<dl class="resources-properties"><dt class="property-optional"
             title="Optional">
         <span id="scriptarguments_nodejs">
 <a href="#scriptarguments_nodejs" style="color: inherit; text-decoration: inherit;">script<wbr>Arguments</a>
@@ -6144,8 +5318,7 @@ The following output properties are available:
         <span class="property-indicator"></span>
         <span class="property-type">string</span>
     </dt>
-    <dd>{{% md %}}Optional command line arguments passed to the script to run.{{% /md %}}</dd>
-    <dt class="property-optional"
+    <dd>{{% md %}}Optional command line arguments passed to the script to run.{{% /md %}}</dd><dt class="property-optional"
             title="Optional">
         <span id="scriptdata_nodejs">
 <a href="#scriptdata_nodejs" style="color: inherit; text-decoration: inherit;">script<wbr>Data</a>
@@ -6153,8 +5326,7 @@ The following output properties are available:
         <span class="property-indicator"></span>
         <span class="property-type">string</span>
     </dt>
-    <dd>{{% md %}}The location of scripts in the mounted volume.{{% /md %}}</dd>
-    <dt class="property-optional"
+    <dd>{{% md %}}The location of scripts in the mounted volume.{{% /md %}}</dd><dt class="property-optional"
             title="Optional">
         <span id="scriptsource_nodejs">
 <a href="#scriptsource_nodejs" style="color: inherit; text-decoration: inherit;">script<wbr>Source</a>
@@ -6162,8 +5334,7 @@ The following output properties are available:
         <span class="property-indicator"></span>
         <span class="property-type">string</span>
     </dt>
-    <dd>{{% md %}}The storage source of the script: inline, workspace.{{% /md %}}</dd>
-    <dt class="property-optional"
+    <dd>{{% md %}}The storage source of the script: inline, workspace.{{% /md %}}</dd><dt class="property-optional"
             title="Optional">
         <span id="timeout_nodejs">
 <a href="#timeout_nodejs" style="color: inherit; text-decoration: inherit;">timeout</a>
@@ -6171,14 +5342,11 @@ The following output properties are available:
         <span class="property-indicator"></span>
         <span class="property-type">string</span>
     </dt>
-    <dd>{{% md %}}Optional time period passed to timeout command.{{% /md %}}</dd>
-</dl>
+    <dd>{{% md %}}Optional time period passed to timeout command.{{% /md %}}</dd></dl>
 {{% /choosable %}}
 
 {{% choosable language python %}}
-<dl class="resources-properties">
-
-    <dt class="property-optional"
+<dl class="resources-properties"><dt class="property-optional"
             title="Optional">
         <span id="script_arguments_python">
 <a href="#script_arguments_python" style="color: inherit; text-decoration: inherit;">script_<wbr>arguments</a>
@@ -6186,8 +5354,7 @@ The following output properties are available:
         <span class="property-indicator"></span>
         <span class="property-type">str</span>
     </dt>
-    <dd>{{% md %}}Optional command line arguments passed to the script to run.{{% /md %}}</dd>
-    <dt class="property-optional"
+    <dd>{{% md %}}Optional command line arguments passed to the script to run.{{% /md %}}</dd><dt class="property-optional"
             title="Optional">
         <span id="script_data_python">
 <a href="#script_data_python" style="color: inherit; text-decoration: inherit;">script_<wbr>data</a>
@@ -6195,8 +5362,7 @@ The following output properties are available:
         <span class="property-indicator"></span>
         <span class="property-type">str</span>
     </dt>
-    <dd>{{% md %}}The location of scripts in the mounted volume.{{% /md %}}</dd>
-    <dt class="property-optional"
+    <dd>{{% md %}}The location of scripts in the mounted volume.{{% /md %}}</dd><dt class="property-optional"
             title="Optional">
         <span id="script_source_python">
 <a href="#script_source_python" style="color: inherit; text-decoration: inherit;">script_<wbr>source</a>
@@ -6204,8 +5370,7 @@ The following output properties are available:
         <span class="property-indicator"></span>
         <span class="property-type">str</span>
     </dt>
-    <dd>{{% md %}}The storage source of the script: inline, workspace.{{% /md %}}</dd>
-    <dt class="property-optional"
+    <dd>{{% md %}}The storage source of the script: inline, workspace.{{% /md %}}</dd><dt class="property-optional"
             title="Optional">
         <span id="timeout_python">
 <a href="#timeout_python" style="color: inherit; text-decoration: inherit;">timeout</a>
@@ -6213,8 +5378,7 @@ The following output properties are available:
         <span class="property-indicator"></span>
         <span class="property-type">str</span>
     </dt>
-    <dd>{{% md %}}Optional time period passed to timeout command.{{% /md %}}</dd>
-</dl>
+    <dd>{{% md %}}Optional time period passed to timeout command.{{% /md %}}</dd></dl>
 {{% /choosable %}}
 
 <h4 id="scriptstoexecuteresponse">Scripts<wbr>To<wbr>Execute<wbr>Response</h4>
@@ -6222,9 +5386,7 @@ The following output properties are available:
 
 
 {{% choosable language csharp %}}
-<dl class="resources-properties">
-
-    <dt class="property-optional"
+<dl class="resources-properties"><dt class="property-optional"
             title="Optional">
         <span id="creationscript_csharp">
 <a href="#creationscript_csharp" style="color: inherit; text-decoration: inherit;">Creation<wbr>Script</a>
@@ -6232,8 +5394,7 @@ The following output properties are available:
         <span class="property-indicator"></span>
         <span class="property-type"><a href="#scriptreferenceresponse">Pulumi.<wbr>Azure<wbr>Native.<wbr>Machine<wbr>Learning<wbr>Services.<wbr>Inputs.<wbr>Script<wbr>Reference<wbr>Response<wbr>Args</a></span>
     </dt>
-    <dd>{{% md %}}Script that's run only once during provision of the compute.{{% /md %}}</dd>
-    <dt class="property-optional"
+    <dd>{{% md %}}Script that's run only once during provision of the compute.{{% /md %}}</dd><dt class="property-optional"
             title="Optional">
         <span id="startupscript_csharp">
 <a href="#startupscript_csharp" style="color: inherit; text-decoration: inherit;">Startup<wbr>Script</a>
@@ -6241,14 +5402,11 @@ The following output properties are available:
         <span class="property-indicator"></span>
         <span class="property-type"><a href="#scriptreferenceresponse">Pulumi.<wbr>Azure<wbr>Native.<wbr>Machine<wbr>Learning<wbr>Services.<wbr>Inputs.<wbr>Script<wbr>Reference<wbr>Response<wbr>Args</a></span>
     </dt>
-    <dd>{{% md %}}Script that's run every time the machine starts.{{% /md %}}</dd>
-</dl>
+    <dd>{{% md %}}Script that's run every time the machine starts.{{% /md %}}</dd></dl>
 {{% /choosable %}}
 
 {{% choosable language go %}}
-<dl class="resources-properties">
-
-    <dt class="property-optional"
+<dl class="resources-properties"><dt class="property-optional"
             title="Optional">
         <span id="creationscript_go">
 <a href="#creationscript_go" style="color: inherit; text-decoration: inherit;">Creation<wbr>Script</a>
@@ -6256,8 +5414,7 @@ The following output properties are available:
         <span class="property-indicator"></span>
         <span class="property-type"><a href="#scriptreferenceresponse">Script<wbr>Reference<wbr>Response</a></span>
     </dt>
-    <dd>{{% md %}}Script that's run only once during provision of the compute.{{% /md %}}</dd>
-    <dt class="property-optional"
+    <dd>{{% md %}}Script that's run only once during provision of the compute.{{% /md %}}</dd><dt class="property-optional"
             title="Optional">
         <span id="startupscript_go">
 <a href="#startupscript_go" style="color: inherit; text-decoration: inherit;">Startup<wbr>Script</a>
@@ -6265,14 +5422,11 @@ The following output properties are available:
         <span class="property-indicator"></span>
         <span class="property-type"><a href="#scriptreferenceresponse">Script<wbr>Reference<wbr>Response</a></span>
     </dt>
-    <dd>{{% md %}}Script that's run every time the machine starts.{{% /md %}}</dd>
-</dl>
+    <dd>{{% md %}}Script that's run every time the machine starts.{{% /md %}}</dd></dl>
 {{% /choosable %}}
 
 {{% choosable language nodejs %}}
-<dl class="resources-properties">
-
-    <dt class="property-optional"
+<dl class="resources-properties"><dt class="property-optional"
             title="Optional">
         <span id="creationscript_nodejs">
 <a href="#creationscript_nodejs" style="color: inherit; text-decoration: inherit;">creation<wbr>Script</a>
@@ -6280,8 +5434,7 @@ The following output properties are available:
         <span class="property-indicator"></span>
         <span class="property-type"><a href="#scriptreferenceresponse">Script<wbr>Reference<wbr>Response</a></span>
     </dt>
-    <dd>{{% md %}}Script that's run only once during provision of the compute.{{% /md %}}</dd>
-    <dt class="property-optional"
+    <dd>{{% md %}}Script that's run only once during provision of the compute.{{% /md %}}</dd><dt class="property-optional"
             title="Optional">
         <span id="startupscript_nodejs">
 <a href="#startupscript_nodejs" style="color: inherit; text-decoration: inherit;">startup<wbr>Script</a>
@@ -6289,14 +5442,11 @@ The following output properties are available:
         <span class="property-indicator"></span>
         <span class="property-type"><a href="#scriptreferenceresponse">Script<wbr>Reference<wbr>Response</a></span>
     </dt>
-    <dd>{{% md %}}Script that's run every time the machine starts.{{% /md %}}</dd>
-</dl>
+    <dd>{{% md %}}Script that's run every time the machine starts.{{% /md %}}</dd></dl>
 {{% /choosable %}}
 
 {{% choosable language python %}}
-<dl class="resources-properties">
-
-    <dt class="property-optional"
+<dl class="resources-properties"><dt class="property-optional"
             title="Optional">
         <span id="creation_script_python">
 <a href="#creation_script_python" style="color: inherit; text-decoration: inherit;">creation_<wbr>script</a>
@@ -6304,8 +5454,7 @@ The following output properties are available:
         <span class="property-indicator"></span>
         <span class="property-type"><a href="#scriptreferenceresponse">Script<wbr>Reference<wbr>Response<wbr>Args</a></span>
     </dt>
-    <dd>{{% md %}}Script that's run only once during provision of the compute.{{% /md %}}</dd>
-    <dt class="property-optional"
+    <dd>{{% md %}}Script that's run only once during provision of the compute.{{% /md %}}</dd><dt class="property-optional"
             title="Optional">
         <span id="startup_script_python">
 <a href="#startup_script_python" style="color: inherit; text-decoration: inherit;">startup_<wbr>script</a>
@@ -6313,8 +5462,7 @@ The following output properties are available:
         <span class="property-indicator"></span>
         <span class="property-type"><a href="#scriptreferenceresponse">Script<wbr>Reference<wbr>Response<wbr>Args</a></span>
     </dt>
-    <dd>{{% md %}}Script that's run every time the machine starts.{{% /md %}}</dd>
-</dl>
+    <dd>{{% md %}}Script that's run every time the machine starts.{{% /md %}}</dd></dl>
 {{% /choosable %}}
 
 <h4 id="setupscriptsresponse">Setup<wbr>Scripts<wbr>Response</h4>
@@ -6322,9 +5470,7 @@ The following output properties are available:
 
 
 {{% choosable language csharp %}}
-<dl class="resources-properties">
-
-    <dt class="property-optional"
+<dl class="resources-properties"><dt class="property-optional"
             title="Optional">
         <span id="scripts_csharp">
 <a href="#scripts_csharp" style="color: inherit; text-decoration: inherit;">Scripts</a>
@@ -6332,14 +5478,11 @@ The following output properties are available:
         <span class="property-indicator"></span>
         <span class="property-type"><a href="#scriptstoexecuteresponse">Pulumi.<wbr>Azure<wbr>Native.<wbr>Machine<wbr>Learning<wbr>Services.<wbr>Inputs.<wbr>Scripts<wbr>To<wbr>Execute<wbr>Response<wbr>Args</a></span>
     </dt>
-    <dd>{{% md %}}Customized setup scripts{{% /md %}}</dd>
-</dl>
+    <dd>{{% md %}}Customized setup scripts{{% /md %}}</dd></dl>
 {{% /choosable %}}
 
 {{% choosable language go %}}
-<dl class="resources-properties">
-
-    <dt class="property-optional"
+<dl class="resources-properties"><dt class="property-optional"
             title="Optional">
         <span id="scripts_go">
 <a href="#scripts_go" style="color: inherit; text-decoration: inherit;">Scripts</a>
@@ -6347,14 +5490,11 @@ The following output properties are available:
         <span class="property-indicator"></span>
         <span class="property-type"><a href="#scriptstoexecuteresponse">Scripts<wbr>To<wbr>Execute<wbr>Response</a></span>
     </dt>
-    <dd>{{% md %}}Customized setup scripts{{% /md %}}</dd>
-</dl>
+    <dd>{{% md %}}Customized setup scripts{{% /md %}}</dd></dl>
 {{% /choosable %}}
 
 {{% choosable language nodejs %}}
-<dl class="resources-properties">
-
-    <dt class="property-optional"
+<dl class="resources-properties"><dt class="property-optional"
             title="Optional">
         <span id="scripts_nodejs">
 <a href="#scripts_nodejs" style="color: inherit; text-decoration: inherit;">scripts</a>
@@ -6362,14 +5502,11 @@ The following output properties are available:
         <span class="property-indicator"></span>
         <span class="property-type"><a href="#scriptstoexecuteresponse">Scripts<wbr>To<wbr>Execute<wbr>Response</a></span>
     </dt>
-    <dd>{{% md %}}Customized setup scripts{{% /md %}}</dd>
-</dl>
+    <dd>{{% md %}}Customized setup scripts{{% /md %}}</dd></dl>
 {{% /choosable %}}
 
 {{% choosable language python %}}
-<dl class="resources-properties">
-
-    <dt class="property-optional"
+<dl class="resources-properties"><dt class="property-optional"
             title="Optional">
         <span id="scripts_python">
 <a href="#scripts_python" style="color: inherit; text-decoration: inherit;">scripts</a>
@@ -6377,8 +5514,7 @@ The following output properties are available:
         <span class="property-indicator"></span>
         <span class="property-type"><a href="#scriptstoexecuteresponse">Scripts<wbr>To<wbr>Execute<wbr>Response<wbr>Args</a></span>
     </dt>
-    <dd>{{% md %}}Customized setup scripts{{% /md %}}</dd>
-</dl>
+    <dd>{{% md %}}Customized setup scripts{{% /md %}}</dd></dl>
 {{% /choosable %}}
 
 <h4 id="skuresponse">Sku<wbr>Response</h4>
@@ -6386,9 +5522,7 @@ The following output properties are available:
 
 
 {{% choosable language csharp %}}
-<dl class="resources-properties">
-
-    <dt class="property-optional"
+<dl class="resources-properties"><dt class="property-optional"
             title="Optional">
         <span id="name_csharp">
 <a href="#name_csharp" style="color: inherit; text-decoration: inherit;">Name</a>
@@ -6396,8 +5530,7 @@ The following output properties are available:
         <span class="property-indicator"></span>
         <span class="property-type">string</span>
     </dt>
-    <dd>{{% md %}}Name of the sku{{% /md %}}</dd>
-    <dt class="property-optional"
+    <dd>{{% md %}}Name of the sku{{% /md %}}</dd><dt class="property-optional"
             title="Optional">
         <span id="tier_csharp">
 <a href="#tier_csharp" style="color: inherit; text-decoration: inherit;">Tier</a>
@@ -6405,14 +5538,11 @@ The following output properties are available:
         <span class="property-indicator"></span>
         <span class="property-type">string</span>
     </dt>
-    <dd>{{% md %}}Tier of the sku like Basic or Enterprise{{% /md %}}</dd>
-</dl>
+    <dd>{{% md %}}Tier of the sku like Basic or Enterprise{{% /md %}}</dd></dl>
 {{% /choosable %}}
 
 {{% choosable language go %}}
-<dl class="resources-properties">
-
-    <dt class="property-optional"
+<dl class="resources-properties"><dt class="property-optional"
             title="Optional">
         <span id="name_go">
 <a href="#name_go" style="color: inherit; text-decoration: inherit;">Name</a>
@@ -6420,8 +5550,7 @@ The following output properties are available:
         <span class="property-indicator"></span>
         <span class="property-type">string</span>
     </dt>
-    <dd>{{% md %}}Name of the sku{{% /md %}}</dd>
-    <dt class="property-optional"
+    <dd>{{% md %}}Name of the sku{{% /md %}}</dd><dt class="property-optional"
             title="Optional">
         <span id="tier_go">
 <a href="#tier_go" style="color: inherit; text-decoration: inherit;">Tier</a>
@@ -6429,14 +5558,11 @@ The following output properties are available:
         <span class="property-indicator"></span>
         <span class="property-type">string</span>
     </dt>
-    <dd>{{% md %}}Tier of the sku like Basic or Enterprise{{% /md %}}</dd>
-</dl>
+    <dd>{{% md %}}Tier of the sku like Basic or Enterprise{{% /md %}}</dd></dl>
 {{% /choosable %}}
 
 {{% choosable language nodejs %}}
-<dl class="resources-properties">
-
-    <dt class="property-optional"
+<dl class="resources-properties"><dt class="property-optional"
             title="Optional">
         <span id="name_nodejs">
 <a href="#name_nodejs" style="color: inherit; text-decoration: inherit;">name</a>
@@ -6444,8 +5570,7 @@ The following output properties are available:
         <span class="property-indicator"></span>
         <span class="property-type">string</span>
     </dt>
-    <dd>{{% md %}}Name of the sku{{% /md %}}</dd>
-    <dt class="property-optional"
+    <dd>{{% md %}}Name of the sku{{% /md %}}</dd><dt class="property-optional"
             title="Optional">
         <span id="tier_nodejs">
 <a href="#tier_nodejs" style="color: inherit; text-decoration: inherit;">tier</a>
@@ -6453,14 +5578,11 @@ The following output properties are available:
         <span class="property-indicator"></span>
         <span class="property-type">string</span>
     </dt>
-    <dd>{{% md %}}Tier of the sku like Basic or Enterprise{{% /md %}}</dd>
-</dl>
+    <dd>{{% md %}}Tier of the sku like Basic or Enterprise{{% /md %}}</dd></dl>
 {{% /choosable %}}
 
 {{% choosable language python %}}
-<dl class="resources-properties">
-
-    <dt class="property-optional"
+<dl class="resources-properties"><dt class="property-optional"
             title="Optional">
         <span id="name_python">
 <a href="#name_python" style="color: inherit; text-decoration: inherit;">name</a>
@@ -6468,8 +5590,7 @@ The following output properties are available:
         <span class="property-indicator"></span>
         <span class="property-type">str</span>
     </dt>
-    <dd>{{% md %}}Name of the sku{{% /md %}}</dd>
-    <dt class="property-optional"
+    <dd>{{% md %}}Name of the sku{{% /md %}}</dd><dt class="property-optional"
             title="Optional">
         <span id="tier_python">
 <a href="#tier_python" style="color: inherit; text-decoration: inherit;">tier</a>
@@ -6477,8 +5598,7 @@ The following output properties are available:
         <span class="property-indicator"></span>
         <span class="property-type">str</span>
     </dt>
-    <dd>{{% md %}}Tier of the sku like Basic or Enterprise{{% /md %}}</dd>
-</dl>
+    <dd>{{% md %}}Tier of the sku like Basic or Enterprise{{% /md %}}</dd></dl>
 {{% /choosable %}}
 
 <h4 id="sslconfigurationresponse">Ssl<wbr>Configuration<wbr>Response</h4>
@@ -6486,9 +5606,7 @@ The following output properties are available:
 
 
 {{% choosable language csharp %}}
-<dl class="resources-properties">
-
-    <dt class="property-optional"
+<dl class="resources-properties"><dt class="property-optional"
             title="Optional">
         <span id="cert_csharp">
 <a href="#cert_csharp" style="color: inherit; text-decoration: inherit;">Cert</a>
@@ -6496,8 +5614,7 @@ The following output properties are available:
         <span class="property-indicator"></span>
         <span class="property-type">string</span>
     </dt>
-    <dd>{{% md %}}Cert data{{% /md %}}</dd>
-    <dt class="property-optional"
+    <dd>{{% md %}}Cert data{{% /md %}}</dd><dt class="property-optional"
             title="Optional">
         <span id="cname_csharp">
 <a href="#cname_csharp" style="color: inherit; text-decoration: inherit;">Cname</a>
@@ -6505,8 +5622,7 @@ The following output properties are available:
         <span class="property-indicator"></span>
         <span class="property-type">string</span>
     </dt>
-    <dd>{{% md %}}CNAME of the cert{{% /md %}}</dd>
-    <dt class="property-optional"
+    <dd>{{% md %}}CNAME of the cert{{% /md %}}</dd><dt class="property-optional"
             title="Optional">
         <span id="key_csharp">
 <a href="#key_csharp" style="color: inherit; text-decoration: inherit;">Key</a>
@@ -6514,8 +5630,7 @@ The following output properties are available:
         <span class="property-indicator"></span>
         <span class="property-type">string</span>
     </dt>
-    <dd>{{% md %}}Key data{{% /md %}}</dd>
-    <dt class="property-optional"
+    <dd>{{% md %}}Key data{{% /md %}}</dd><dt class="property-optional"
             title="Optional">
         <span id="status_csharp">
 <a href="#status_csharp" style="color: inherit; text-decoration: inherit;">Status</a>
@@ -6523,14 +5638,11 @@ The following output properties are available:
         <span class="property-indicator"></span>
         <span class="property-type">string</span>
     </dt>
-    <dd>{{% md %}}Enable or disable ssl for scoring{{% /md %}}</dd>
-</dl>
+    <dd>{{% md %}}Enable or disable ssl for scoring{{% /md %}}</dd></dl>
 {{% /choosable %}}
 
 {{% choosable language go %}}
-<dl class="resources-properties">
-
-    <dt class="property-optional"
+<dl class="resources-properties"><dt class="property-optional"
             title="Optional">
         <span id="cert_go">
 <a href="#cert_go" style="color: inherit; text-decoration: inherit;">Cert</a>
@@ -6538,8 +5650,7 @@ The following output properties are available:
         <span class="property-indicator"></span>
         <span class="property-type">string</span>
     </dt>
-    <dd>{{% md %}}Cert data{{% /md %}}</dd>
-    <dt class="property-optional"
+    <dd>{{% md %}}Cert data{{% /md %}}</dd><dt class="property-optional"
             title="Optional">
         <span id="cname_go">
 <a href="#cname_go" style="color: inherit; text-decoration: inherit;">Cname</a>
@@ -6547,8 +5658,7 @@ The following output properties are available:
         <span class="property-indicator"></span>
         <span class="property-type">string</span>
     </dt>
-    <dd>{{% md %}}CNAME of the cert{{% /md %}}</dd>
-    <dt class="property-optional"
+    <dd>{{% md %}}CNAME of the cert{{% /md %}}</dd><dt class="property-optional"
             title="Optional">
         <span id="key_go">
 <a href="#key_go" style="color: inherit; text-decoration: inherit;">Key</a>
@@ -6556,8 +5666,7 @@ The following output properties are available:
         <span class="property-indicator"></span>
         <span class="property-type">string</span>
     </dt>
-    <dd>{{% md %}}Key data{{% /md %}}</dd>
-    <dt class="property-optional"
+    <dd>{{% md %}}Key data{{% /md %}}</dd><dt class="property-optional"
             title="Optional">
         <span id="status_go">
 <a href="#status_go" style="color: inherit; text-decoration: inherit;">Status</a>
@@ -6565,14 +5674,11 @@ The following output properties are available:
         <span class="property-indicator"></span>
         <span class="property-type">string</span>
     </dt>
-    <dd>{{% md %}}Enable or disable ssl for scoring{{% /md %}}</dd>
-</dl>
+    <dd>{{% md %}}Enable or disable ssl for scoring{{% /md %}}</dd></dl>
 {{% /choosable %}}
 
 {{% choosable language nodejs %}}
-<dl class="resources-properties">
-
-    <dt class="property-optional"
+<dl class="resources-properties"><dt class="property-optional"
             title="Optional">
         <span id="cert_nodejs">
 <a href="#cert_nodejs" style="color: inherit; text-decoration: inherit;">cert</a>
@@ -6580,8 +5686,7 @@ The following output properties are available:
         <span class="property-indicator"></span>
         <span class="property-type">string</span>
     </dt>
-    <dd>{{% md %}}Cert data{{% /md %}}</dd>
-    <dt class="property-optional"
+    <dd>{{% md %}}Cert data{{% /md %}}</dd><dt class="property-optional"
             title="Optional">
         <span id="cname_nodejs">
 <a href="#cname_nodejs" style="color: inherit; text-decoration: inherit;">cname</a>
@@ -6589,8 +5694,7 @@ The following output properties are available:
         <span class="property-indicator"></span>
         <span class="property-type">string</span>
     </dt>
-    <dd>{{% md %}}CNAME of the cert{{% /md %}}</dd>
-    <dt class="property-optional"
+    <dd>{{% md %}}CNAME of the cert{{% /md %}}</dd><dt class="property-optional"
             title="Optional">
         <span id="key_nodejs">
 <a href="#key_nodejs" style="color: inherit; text-decoration: inherit;">key</a>
@@ -6598,8 +5702,7 @@ The following output properties are available:
         <span class="property-indicator"></span>
         <span class="property-type">string</span>
     </dt>
-    <dd>{{% md %}}Key data{{% /md %}}</dd>
-    <dt class="property-optional"
+    <dd>{{% md %}}Key data{{% /md %}}</dd><dt class="property-optional"
             title="Optional">
         <span id="status_nodejs">
 <a href="#status_nodejs" style="color: inherit; text-decoration: inherit;">status</a>
@@ -6607,14 +5710,11 @@ The following output properties are available:
         <span class="property-indicator"></span>
         <span class="property-type">string</span>
     </dt>
-    <dd>{{% md %}}Enable or disable ssl for scoring{{% /md %}}</dd>
-</dl>
+    <dd>{{% md %}}Enable or disable ssl for scoring{{% /md %}}</dd></dl>
 {{% /choosable %}}
 
 {{% choosable language python %}}
-<dl class="resources-properties">
-
-    <dt class="property-optional"
+<dl class="resources-properties"><dt class="property-optional"
             title="Optional">
         <span id="cert_python">
 <a href="#cert_python" style="color: inherit; text-decoration: inherit;">cert</a>
@@ -6622,8 +5722,7 @@ The following output properties are available:
         <span class="property-indicator"></span>
         <span class="property-type">str</span>
     </dt>
-    <dd>{{% md %}}Cert data{{% /md %}}</dd>
-    <dt class="property-optional"
+    <dd>{{% md %}}Cert data{{% /md %}}</dd><dt class="property-optional"
             title="Optional">
         <span id="cname_python">
 <a href="#cname_python" style="color: inherit; text-decoration: inherit;">cname</a>
@@ -6631,8 +5730,7 @@ The following output properties are available:
         <span class="property-indicator"></span>
         <span class="property-type">str</span>
     </dt>
-    <dd>{{% md %}}CNAME of the cert{{% /md %}}</dd>
-    <dt class="property-optional"
+    <dd>{{% md %}}CNAME of the cert{{% /md %}}</dd><dt class="property-optional"
             title="Optional">
         <span id="key_python">
 <a href="#key_python" style="color: inherit; text-decoration: inherit;">key</a>
@@ -6640,8 +5738,7 @@ The following output properties are available:
         <span class="property-indicator"></span>
         <span class="property-type">str</span>
     </dt>
-    <dd>{{% md %}}Key data{{% /md %}}</dd>
-    <dt class="property-optional"
+    <dd>{{% md %}}Key data{{% /md %}}</dd><dt class="property-optional"
             title="Optional">
         <span id="status_python">
 <a href="#status_python" style="color: inherit; text-decoration: inherit;">status</a>
@@ -6649,8 +5746,7 @@ The following output properties are available:
         <span class="property-indicator"></span>
         <span class="property-type">str</span>
     </dt>
-    <dd>{{% md %}}Enable or disable ssl for scoring{{% /md %}}</dd>
-</dl>
+    <dd>{{% md %}}Enable or disable ssl for scoring{{% /md %}}</dd></dl>
 {{% /choosable %}}
 
 <h4 id="systemdataresponse">System<wbr>Data<wbr>Response</h4>
@@ -6658,9 +5754,7 @@ The following output properties are available:
 
 
 {{% choosable language csharp %}}
-<dl class="resources-properties">
-
-    <dt class="property-optional"
+<dl class="resources-properties"><dt class="property-optional"
             title="Optional">
         <span id="createdat_csharp">
 <a href="#createdat_csharp" style="color: inherit; text-decoration: inherit;">Created<wbr>At</a>
@@ -6668,8 +5762,7 @@ The following output properties are available:
         <span class="property-indicator"></span>
         <span class="property-type">string</span>
     </dt>
-    <dd>{{% md %}}The timestamp of resource creation (UTC){{% /md %}}</dd>
-    <dt class="property-optional"
+    <dd>{{% md %}}The timestamp of resource creation (UTC){{% /md %}}</dd><dt class="property-optional"
             title="Optional">
         <span id="createdby_csharp">
 <a href="#createdby_csharp" style="color: inherit; text-decoration: inherit;">Created<wbr>By</a>
@@ -6677,8 +5770,7 @@ The following output properties are available:
         <span class="property-indicator"></span>
         <span class="property-type">string</span>
     </dt>
-    <dd>{{% md %}}An identifier for the identity that created the resource{{% /md %}}</dd>
-    <dt class="property-optional"
+    <dd>{{% md %}}An identifier for the identity that created the resource{{% /md %}}</dd><dt class="property-optional"
             title="Optional">
         <span id="createdbytype_csharp">
 <a href="#createdbytype_csharp" style="color: inherit; text-decoration: inherit;">Created<wbr>By<wbr>Type</a>
@@ -6686,8 +5778,7 @@ The following output properties are available:
         <span class="property-indicator"></span>
         <span class="property-type">string</span>
     </dt>
-    <dd>{{% md %}}The type of identity that created the resource{{% /md %}}</dd>
-    <dt class="property-optional"
+    <dd>{{% md %}}The type of identity that created the resource{{% /md %}}</dd><dt class="property-optional"
             title="Optional">
         <span id="lastmodifiedat_csharp">
 <a href="#lastmodifiedat_csharp" style="color: inherit; text-decoration: inherit;">Last<wbr>Modified<wbr>At</a>
@@ -6695,8 +5786,7 @@ The following output properties are available:
         <span class="property-indicator"></span>
         <span class="property-type">string</span>
     </dt>
-    <dd>{{% md %}}The timestamp of resource last modification (UTC){{% /md %}}</dd>
-    <dt class="property-optional"
+    <dd>{{% md %}}The timestamp of resource last modification (UTC){{% /md %}}</dd><dt class="property-optional"
             title="Optional">
         <span id="lastmodifiedby_csharp">
 <a href="#lastmodifiedby_csharp" style="color: inherit; text-decoration: inherit;">Last<wbr>Modified<wbr>By</a>
@@ -6704,8 +5794,7 @@ The following output properties are available:
         <span class="property-indicator"></span>
         <span class="property-type">string</span>
     </dt>
-    <dd>{{% md %}}An identifier for the identity that last modified the resource{{% /md %}}</dd>
-    <dt class="property-optional"
+    <dd>{{% md %}}An identifier for the identity that last modified the resource{{% /md %}}</dd><dt class="property-optional"
             title="Optional">
         <span id="lastmodifiedbytype_csharp">
 <a href="#lastmodifiedbytype_csharp" style="color: inherit; text-decoration: inherit;">Last<wbr>Modified<wbr>By<wbr>Type</a>
@@ -6713,14 +5802,11 @@ The following output properties are available:
         <span class="property-indicator"></span>
         <span class="property-type">string</span>
     </dt>
-    <dd>{{% md %}}The type of identity that last modified the resource{{% /md %}}</dd>
-</dl>
+    <dd>{{% md %}}The type of identity that last modified the resource{{% /md %}}</dd></dl>
 {{% /choosable %}}
 
 {{% choosable language go %}}
-<dl class="resources-properties">
-
-    <dt class="property-optional"
+<dl class="resources-properties"><dt class="property-optional"
             title="Optional">
         <span id="createdat_go">
 <a href="#createdat_go" style="color: inherit; text-decoration: inherit;">Created<wbr>At</a>
@@ -6728,8 +5814,7 @@ The following output properties are available:
         <span class="property-indicator"></span>
         <span class="property-type">string</span>
     </dt>
-    <dd>{{% md %}}The timestamp of resource creation (UTC){{% /md %}}</dd>
-    <dt class="property-optional"
+    <dd>{{% md %}}The timestamp of resource creation (UTC){{% /md %}}</dd><dt class="property-optional"
             title="Optional">
         <span id="createdby_go">
 <a href="#createdby_go" style="color: inherit; text-decoration: inherit;">Created<wbr>By</a>
@@ -6737,8 +5822,7 @@ The following output properties are available:
         <span class="property-indicator"></span>
         <span class="property-type">string</span>
     </dt>
-    <dd>{{% md %}}An identifier for the identity that created the resource{{% /md %}}</dd>
-    <dt class="property-optional"
+    <dd>{{% md %}}An identifier for the identity that created the resource{{% /md %}}</dd><dt class="property-optional"
             title="Optional">
         <span id="createdbytype_go">
 <a href="#createdbytype_go" style="color: inherit; text-decoration: inherit;">Created<wbr>By<wbr>Type</a>
@@ -6746,8 +5830,7 @@ The following output properties are available:
         <span class="property-indicator"></span>
         <span class="property-type">string</span>
     </dt>
-    <dd>{{% md %}}The type of identity that created the resource{{% /md %}}</dd>
-    <dt class="property-optional"
+    <dd>{{% md %}}The type of identity that created the resource{{% /md %}}</dd><dt class="property-optional"
             title="Optional">
         <span id="lastmodifiedat_go">
 <a href="#lastmodifiedat_go" style="color: inherit; text-decoration: inherit;">Last<wbr>Modified<wbr>At</a>
@@ -6755,8 +5838,7 @@ The following output properties are available:
         <span class="property-indicator"></span>
         <span class="property-type">string</span>
     </dt>
-    <dd>{{% md %}}The timestamp of resource last modification (UTC){{% /md %}}</dd>
-    <dt class="property-optional"
+    <dd>{{% md %}}The timestamp of resource last modification (UTC){{% /md %}}</dd><dt class="property-optional"
             title="Optional">
         <span id="lastmodifiedby_go">
 <a href="#lastmodifiedby_go" style="color: inherit; text-decoration: inherit;">Last<wbr>Modified<wbr>By</a>
@@ -6764,8 +5846,7 @@ The following output properties are available:
         <span class="property-indicator"></span>
         <span class="property-type">string</span>
     </dt>
-    <dd>{{% md %}}An identifier for the identity that last modified the resource{{% /md %}}</dd>
-    <dt class="property-optional"
+    <dd>{{% md %}}An identifier for the identity that last modified the resource{{% /md %}}</dd><dt class="property-optional"
             title="Optional">
         <span id="lastmodifiedbytype_go">
 <a href="#lastmodifiedbytype_go" style="color: inherit; text-decoration: inherit;">Last<wbr>Modified<wbr>By<wbr>Type</a>
@@ -6773,14 +5854,11 @@ The following output properties are available:
         <span class="property-indicator"></span>
         <span class="property-type">string</span>
     </dt>
-    <dd>{{% md %}}The type of identity that last modified the resource{{% /md %}}</dd>
-</dl>
+    <dd>{{% md %}}The type of identity that last modified the resource{{% /md %}}</dd></dl>
 {{% /choosable %}}
 
 {{% choosable language nodejs %}}
-<dl class="resources-properties">
-
-    <dt class="property-optional"
+<dl class="resources-properties"><dt class="property-optional"
             title="Optional">
         <span id="createdat_nodejs">
 <a href="#createdat_nodejs" style="color: inherit; text-decoration: inherit;">created<wbr>At</a>
@@ -6788,8 +5866,7 @@ The following output properties are available:
         <span class="property-indicator"></span>
         <span class="property-type">string</span>
     </dt>
-    <dd>{{% md %}}The timestamp of resource creation (UTC){{% /md %}}</dd>
-    <dt class="property-optional"
+    <dd>{{% md %}}The timestamp of resource creation (UTC){{% /md %}}</dd><dt class="property-optional"
             title="Optional">
         <span id="createdby_nodejs">
 <a href="#createdby_nodejs" style="color: inherit; text-decoration: inherit;">created<wbr>By</a>
@@ -6797,8 +5874,7 @@ The following output properties are available:
         <span class="property-indicator"></span>
         <span class="property-type">string</span>
     </dt>
-    <dd>{{% md %}}An identifier for the identity that created the resource{{% /md %}}</dd>
-    <dt class="property-optional"
+    <dd>{{% md %}}An identifier for the identity that created the resource{{% /md %}}</dd><dt class="property-optional"
             title="Optional">
         <span id="createdbytype_nodejs">
 <a href="#createdbytype_nodejs" style="color: inherit; text-decoration: inherit;">created<wbr>By<wbr>Type</a>
@@ -6806,8 +5882,7 @@ The following output properties are available:
         <span class="property-indicator"></span>
         <span class="property-type">string</span>
     </dt>
-    <dd>{{% md %}}The type of identity that created the resource{{% /md %}}</dd>
-    <dt class="property-optional"
+    <dd>{{% md %}}The type of identity that created the resource{{% /md %}}</dd><dt class="property-optional"
             title="Optional">
         <span id="lastmodifiedat_nodejs">
 <a href="#lastmodifiedat_nodejs" style="color: inherit; text-decoration: inherit;">last<wbr>Modified<wbr>At</a>
@@ -6815,8 +5890,7 @@ The following output properties are available:
         <span class="property-indicator"></span>
         <span class="property-type">string</span>
     </dt>
-    <dd>{{% md %}}The timestamp of resource last modification (UTC){{% /md %}}</dd>
-    <dt class="property-optional"
+    <dd>{{% md %}}The timestamp of resource last modification (UTC){{% /md %}}</dd><dt class="property-optional"
             title="Optional">
         <span id="lastmodifiedby_nodejs">
 <a href="#lastmodifiedby_nodejs" style="color: inherit; text-decoration: inherit;">last<wbr>Modified<wbr>By</a>
@@ -6824,8 +5898,7 @@ The following output properties are available:
         <span class="property-indicator"></span>
         <span class="property-type">string</span>
     </dt>
-    <dd>{{% md %}}An identifier for the identity that last modified the resource{{% /md %}}</dd>
-    <dt class="property-optional"
+    <dd>{{% md %}}An identifier for the identity that last modified the resource{{% /md %}}</dd><dt class="property-optional"
             title="Optional">
         <span id="lastmodifiedbytype_nodejs">
 <a href="#lastmodifiedbytype_nodejs" style="color: inherit; text-decoration: inherit;">last<wbr>Modified<wbr>By<wbr>Type</a>
@@ -6833,14 +5906,11 @@ The following output properties are available:
         <span class="property-indicator"></span>
         <span class="property-type">string</span>
     </dt>
-    <dd>{{% md %}}The type of identity that last modified the resource{{% /md %}}</dd>
-</dl>
+    <dd>{{% md %}}The type of identity that last modified the resource{{% /md %}}</dd></dl>
 {{% /choosable %}}
 
 {{% choosable language python %}}
-<dl class="resources-properties">
-
-    <dt class="property-optional"
+<dl class="resources-properties"><dt class="property-optional"
             title="Optional">
         <span id="created_at_python">
 <a href="#created_at_python" style="color: inherit; text-decoration: inherit;">created_<wbr>at</a>
@@ -6848,8 +5918,7 @@ The following output properties are available:
         <span class="property-indicator"></span>
         <span class="property-type">str</span>
     </dt>
-    <dd>{{% md %}}The timestamp of resource creation (UTC){{% /md %}}</dd>
-    <dt class="property-optional"
+    <dd>{{% md %}}The timestamp of resource creation (UTC){{% /md %}}</dd><dt class="property-optional"
             title="Optional">
         <span id="created_by_python">
 <a href="#created_by_python" style="color: inherit; text-decoration: inherit;">created_<wbr>by</a>
@@ -6857,8 +5926,7 @@ The following output properties are available:
         <span class="property-indicator"></span>
         <span class="property-type">str</span>
     </dt>
-    <dd>{{% md %}}An identifier for the identity that created the resource{{% /md %}}</dd>
-    <dt class="property-optional"
+    <dd>{{% md %}}An identifier for the identity that created the resource{{% /md %}}</dd><dt class="property-optional"
             title="Optional">
         <span id="created_by_type_python">
 <a href="#created_by_type_python" style="color: inherit; text-decoration: inherit;">created_<wbr>by_<wbr>type</a>
@@ -6866,8 +5934,7 @@ The following output properties are available:
         <span class="property-indicator"></span>
         <span class="property-type">str</span>
     </dt>
-    <dd>{{% md %}}The type of identity that created the resource{{% /md %}}</dd>
-    <dt class="property-optional"
+    <dd>{{% md %}}The type of identity that created the resource{{% /md %}}</dd><dt class="property-optional"
             title="Optional">
         <span id="last_modified_at_python">
 <a href="#last_modified_at_python" style="color: inherit; text-decoration: inherit;">last_<wbr>modified_<wbr>at</a>
@@ -6875,8 +5942,7 @@ The following output properties are available:
         <span class="property-indicator"></span>
         <span class="property-type">str</span>
     </dt>
-    <dd>{{% md %}}The timestamp of resource last modification (UTC){{% /md %}}</dd>
-    <dt class="property-optional"
+    <dd>{{% md %}}The timestamp of resource last modification (UTC){{% /md %}}</dd><dt class="property-optional"
             title="Optional">
         <span id="last_modified_by_python">
 <a href="#last_modified_by_python" style="color: inherit; text-decoration: inherit;">last_<wbr>modified_<wbr>by</a>
@@ -6884,8 +5950,7 @@ The following output properties are available:
         <span class="property-indicator"></span>
         <span class="property-type">str</span>
     </dt>
-    <dd>{{% md %}}An identifier for the identity that last modified the resource{{% /md %}}</dd>
-    <dt class="property-optional"
+    <dd>{{% md %}}An identifier for the identity that last modified the resource{{% /md %}}</dd><dt class="property-optional"
             title="Optional">
         <span id="last_modified_by_type_python">
 <a href="#last_modified_by_type_python" style="color: inherit; text-decoration: inherit;">last_<wbr>modified_<wbr>by_<wbr>type</a>
@@ -6893,8 +5958,7 @@ The following output properties are available:
         <span class="property-indicator"></span>
         <span class="property-type">str</span>
     </dt>
-    <dd>{{% md %}}The type of identity that last modified the resource{{% /md %}}</dd>
-</dl>
+    <dd>{{% md %}}The type of identity that last modified the resource{{% /md %}}</dd></dl>
 {{% /choosable %}}
 
 <h4 id="systemserviceresponse">System<wbr>Service<wbr>Response</h4>
@@ -6902,9 +5966,7 @@ The following output properties are available:
 
 
 {{% choosable language csharp %}}
-<dl class="resources-properties">
-
-    <dt class="property-required"
+<dl class="resources-properties"><dt class="property-required"
             title="Required">
         <span id="publicipaddress_csharp">
 <a href="#publicipaddress_csharp" style="color: inherit; text-decoration: inherit;">Public<wbr>Ip<wbr>Address</a>
@@ -6912,8 +5974,7 @@ The following output properties are available:
         <span class="property-indicator"></span>
         <span class="property-type">string</span>
     </dt>
-    <dd>{{% md %}}Public IP address{{% /md %}}</dd>
-    <dt class="property-required"
+    <dd>{{% md %}}Public IP address{{% /md %}}</dd><dt class="property-required"
             title="Required">
         <span id="systemservicetype_csharp">
 <a href="#systemservicetype_csharp" style="color: inherit; text-decoration: inherit;">System<wbr>Service<wbr>Type</a>
@@ -6921,8 +5982,7 @@ The following output properties are available:
         <span class="property-indicator"></span>
         <span class="property-type">string</span>
     </dt>
-    <dd>{{% md %}}The type of this system service.{{% /md %}}</dd>
-    <dt class="property-required"
+    <dd>{{% md %}}The type of this system service.{{% /md %}}</dd><dt class="property-required"
             title="Required">
         <span id="version_csharp">
 <a href="#version_csharp" style="color: inherit; text-decoration: inherit;">Version</a>
@@ -6930,14 +5990,11 @@ The following output properties are available:
         <span class="property-indicator"></span>
         <span class="property-type">string</span>
     </dt>
-    <dd>{{% md %}}The version for this type.{{% /md %}}</dd>
-</dl>
+    <dd>{{% md %}}The version for this type.{{% /md %}}</dd></dl>
 {{% /choosable %}}
 
 {{% choosable language go %}}
-<dl class="resources-properties">
-
-    <dt class="property-required"
+<dl class="resources-properties"><dt class="property-required"
             title="Required">
         <span id="publicipaddress_go">
 <a href="#publicipaddress_go" style="color: inherit; text-decoration: inherit;">Public<wbr>Ip<wbr>Address</a>
@@ -6945,8 +6002,7 @@ The following output properties are available:
         <span class="property-indicator"></span>
         <span class="property-type">string</span>
     </dt>
-    <dd>{{% md %}}Public IP address{{% /md %}}</dd>
-    <dt class="property-required"
+    <dd>{{% md %}}Public IP address{{% /md %}}</dd><dt class="property-required"
             title="Required">
         <span id="systemservicetype_go">
 <a href="#systemservicetype_go" style="color: inherit; text-decoration: inherit;">System<wbr>Service<wbr>Type</a>
@@ -6954,8 +6010,7 @@ The following output properties are available:
         <span class="property-indicator"></span>
         <span class="property-type">string</span>
     </dt>
-    <dd>{{% md %}}The type of this system service.{{% /md %}}</dd>
-    <dt class="property-required"
+    <dd>{{% md %}}The type of this system service.{{% /md %}}</dd><dt class="property-required"
             title="Required">
         <span id="version_go">
 <a href="#version_go" style="color: inherit; text-decoration: inherit;">Version</a>
@@ -6963,14 +6018,11 @@ The following output properties are available:
         <span class="property-indicator"></span>
         <span class="property-type">string</span>
     </dt>
-    <dd>{{% md %}}The version for this type.{{% /md %}}</dd>
-</dl>
+    <dd>{{% md %}}The version for this type.{{% /md %}}</dd></dl>
 {{% /choosable %}}
 
 {{% choosable language nodejs %}}
-<dl class="resources-properties">
-
-    <dt class="property-required"
+<dl class="resources-properties"><dt class="property-required"
             title="Required">
         <span id="publicipaddress_nodejs">
 <a href="#publicipaddress_nodejs" style="color: inherit; text-decoration: inherit;">public<wbr>Ip<wbr>Address</a>
@@ -6978,8 +6030,7 @@ The following output properties are available:
         <span class="property-indicator"></span>
         <span class="property-type">string</span>
     </dt>
-    <dd>{{% md %}}Public IP address{{% /md %}}</dd>
-    <dt class="property-required"
+    <dd>{{% md %}}Public IP address{{% /md %}}</dd><dt class="property-required"
             title="Required">
         <span id="systemservicetype_nodejs">
 <a href="#systemservicetype_nodejs" style="color: inherit; text-decoration: inherit;">system<wbr>Service<wbr>Type</a>
@@ -6987,8 +6038,7 @@ The following output properties are available:
         <span class="property-indicator"></span>
         <span class="property-type">string</span>
     </dt>
-    <dd>{{% md %}}The type of this system service.{{% /md %}}</dd>
-    <dt class="property-required"
+    <dd>{{% md %}}The type of this system service.{{% /md %}}</dd><dt class="property-required"
             title="Required">
         <span id="version_nodejs">
 <a href="#version_nodejs" style="color: inherit; text-decoration: inherit;">version</a>
@@ -6996,14 +6046,11 @@ The following output properties are available:
         <span class="property-indicator"></span>
         <span class="property-type">string</span>
     </dt>
-    <dd>{{% md %}}The version for this type.{{% /md %}}</dd>
-</dl>
+    <dd>{{% md %}}The version for this type.{{% /md %}}</dd></dl>
 {{% /choosable %}}
 
 {{% choosable language python %}}
-<dl class="resources-properties">
-
-    <dt class="property-required"
+<dl class="resources-properties"><dt class="property-required"
             title="Required">
         <span id="public_ip_address_python">
 <a href="#public_ip_address_python" style="color: inherit; text-decoration: inherit;">public_<wbr>ip_<wbr>address</a>
@@ -7011,8 +6058,7 @@ The following output properties are available:
         <span class="property-indicator"></span>
         <span class="property-type">str</span>
     </dt>
-    <dd>{{% md %}}Public IP address{{% /md %}}</dd>
-    <dt class="property-required"
+    <dd>{{% md %}}Public IP address{{% /md %}}</dd><dt class="property-required"
             title="Required">
         <span id="system_service_type_python">
 <a href="#system_service_type_python" style="color: inherit; text-decoration: inherit;">system_<wbr>service_<wbr>type</a>
@@ -7020,8 +6066,7 @@ The following output properties are available:
         <span class="property-indicator"></span>
         <span class="property-type">str</span>
     </dt>
-    <dd>{{% md %}}The type of this system service.{{% /md %}}</dd>
-    <dt class="property-required"
+    <dd>{{% md %}}The type of this system service.{{% /md %}}</dd><dt class="property-required"
             title="Required">
         <span id="version_python">
 <a href="#version_python" style="color: inherit; text-decoration: inherit;">version</a>
@@ -7029,8 +6074,7 @@ The following output properties are available:
         <span class="property-indicator"></span>
         <span class="property-type">str</span>
     </dt>
-    <dd>{{% md %}}The version for this type.{{% /md %}}</dd>
-</dl>
+    <dd>{{% md %}}The version for this type.{{% /md %}}</dd></dl>
 {{% /choosable %}}
 
 <h4 id="useraccountcredentialsresponse">User<wbr>Account<wbr>Credentials<wbr>Response</h4>
@@ -7038,9 +6082,7 @@ The following output properties are available:
 
 
 {{% choosable language csharp %}}
-<dl class="resources-properties">
-
-    <dt class="property-required"
+<dl class="resources-properties"><dt class="property-required"
             title="Required">
         <span id="adminusername_csharp">
 <a href="#adminusername_csharp" style="color: inherit; text-decoration: inherit;">Admin<wbr>User<wbr>Name</a>
@@ -7048,8 +6090,7 @@ The following output properties are available:
         <span class="property-indicator"></span>
         <span class="property-type">string</span>
     </dt>
-    <dd>{{% md %}}Name of the administrator user account which can be used to SSH to nodes.{{% /md %}}</dd>
-    <dt class="property-optional"
+    <dd>{{% md %}}Name of the administrator user account which can be used to SSH to nodes.{{% /md %}}</dd><dt class="property-optional"
             title="Optional">
         <span id="adminuserpassword_csharp">
 <a href="#adminuserpassword_csharp" style="color: inherit; text-decoration: inherit;">Admin<wbr>User<wbr>Password</a>
@@ -7057,8 +6098,7 @@ The following output properties are available:
         <span class="property-indicator"></span>
         <span class="property-type">string</span>
     </dt>
-    <dd>{{% md %}}Password of the administrator user account.{{% /md %}}</dd>
-    <dt class="property-optional"
+    <dd>{{% md %}}Password of the administrator user account.{{% /md %}}</dd><dt class="property-optional"
             title="Optional">
         <span id="adminusersshpublickey_csharp">
 <a href="#adminusersshpublickey_csharp" style="color: inherit; text-decoration: inherit;">Admin<wbr>User<wbr>Ssh<wbr>Public<wbr>Key</a>
@@ -7066,14 +6106,11 @@ The following output properties are available:
         <span class="property-indicator"></span>
         <span class="property-type">string</span>
     </dt>
-    <dd>{{% md %}}SSH public key of the administrator user account.{{% /md %}}</dd>
-</dl>
+    <dd>{{% md %}}SSH public key of the administrator user account.{{% /md %}}</dd></dl>
 {{% /choosable %}}
 
 {{% choosable language go %}}
-<dl class="resources-properties">
-
-    <dt class="property-required"
+<dl class="resources-properties"><dt class="property-required"
             title="Required">
         <span id="adminusername_go">
 <a href="#adminusername_go" style="color: inherit; text-decoration: inherit;">Admin<wbr>User<wbr>Name</a>
@@ -7081,8 +6118,7 @@ The following output properties are available:
         <span class="property-indicator"></span>
         <span class="property-type">string</span>
     </dt>
-    <dd>{{% md %}}Name of the administrator user account which can be used to SSH to nodes.{{% /md %}}</dd>
-    <dt class="property-optional"
+    <dd>{{% md %}}Name of the administrator user account which can be used to SSH to nodes.{{% /md %}}</dd><dt class="property-optional"
             title="Optional">
         <span id="adminuserpassword_go">
 <a href="#adminuserpassword_go" style="color: inherit; text-decoration: inherit;">Admin<wbr>User<wbr>Password</a>
@@ -7090,8 +6126,7 @@ The following output properties are available:
         <span class="property-indicator"></span>
         <span class="property-type">string</span>
     </dt>
-    <dd>{{% md %}}Password of the administrator user account.{{% /md %}}</dd>
-    <dt class="property-optional"
+    <dd>{{% md %}}Password of the administrator user account.{{% /md %}}</dd><dt class="property-optional"
             title="Optional">
         <span id="adminusersshpublickey_go">
 <a href="#adminusersshpublickey_go" style="color: inherit; text-decoration: inherit;">Admin<wbr>User<wbr>Ssh<wbr>Public<wbr>Key</a>
@@ -7099,14 +6134,11 @@ The following output properties are available:
         <span class="property-indicator"></span>
         <span class="property-type">string</span>
     </dt>
-    <dd>{{% md %}}SSH public key of the administrator user account.{{% /md %}}</dd>
-</dl>
+    <dd>{{% md %}}SSH public key of the administrator user account.{{% /md %}}</dd></dl>
 {{% /choosable %}}
 
 {{% choosable language nodejs %}}
-<dl class="resources-properties">
-
-    <dt class="property-required"
+<dl class="resources-properties"><dt class="property-required"
             title="Required">
         <span id="adminusername_nodejs">
 <a href="#adminusername_nodejs" style="color: inherit; text-decoration: inherit;">admin<wbr>User<wbr>Name</a>
@@ -7114,8 +6146,7 @@ The following output properties are available:
         <span class="property-indicator"></span>
         <span class="property-type">string</span>
     </dt>
-    <dd>{{% md %}}Name of the administrator user account which can be used to SSH to nodes.{{% /md %}}</dd>
-    <dt class="property-optional"
+    <dd>{{% md %}}Name of the administrator user account which can be used to SSH to nodes.{{% /md %}}</dd><dt class="property-optional"
             title="Optional">
         <span id="adminuserpassword_nodejs">
 <a href="#adminuserpassword_nodejs" style="color: inherit; text-decoration: inherit;">admin<wbr>User<wbr>Password</a>
@@ -7123,8 +6154,7 @@ The following output properties are available:
         <span class="property-indicator"></span>
         <span class="property-type">string</span>
     </dt>
-    <dd>{{% md %}}Password of the administrator user account.{{% /md %}}</dd>
-    <dt class="property-optional"
+    <dd>{{% md %}}Password of the administrator user account.{{% /md %}}</dd><dt class="property-optional"
             title="Optional">
         <span id="adminusersshpublickey_nodejs">
 <a href="#adminusersshpublickey_nodejs" style="color: inherit; text-decoration: inherit;">admin<wbr>User<wbr>Ssh<wbr>Public<wbr>Key</a>
@@ -7132,14 +6162,11 @@ The following output properties are available:
         <span class="property-indicator"></span>
         <span class="property-type">string</span>
     </dt>
-    <dd>{{% md %}}SSH public key of the administrator user account.{{% /md %}}</dd>
-</dl>
+    <dd>{{% md %}}SSH public key of the administrator user account.{{% /md %}}</dd></dl>
 {{% /choosable %}}
 
 {{% choosable language python %}}
-<dl class="resources-properties">
-
-    <dt class="property-required"
+<dl class="resources-properties"><dt class="property-required"
             title="Required">
         <span id="admin_user_name_python">
 <a href="#admin_user_name_python" style="color: inherit; text-decoration: inherit;">admin_<wbr>user_<wbr>name</a>
@@ -7147,8 +6174,7 @@ The following output properties are available:
         <span class="property-indicator"></span>
         <span class="property-type">str</span>
     </dt>
-    <dd>{{% md %}}Name of the administrator user account which can be used to SSH to nodes.{{% /md %}}</dd>
-    <dt class="property-optional"
+    <dd>{{% md %}}Name of the administrator user account which can be used to SSH to nodes.{{% /md %}}</dd><dt class="property-optional"
             title="Optional">
         <span id="admin_user_password_python">
 <a href="#admin_user_password_python" style="color: inherit; text-decoration: inherit;">admin_<wbr>user_<wbr>password</a>
@@ -7156,8 +6182,7 @@ The following output properties are available:
         <span class="property-indicator"></span>
         <span class="property-type">str</span>
     </dt>
-    <dd>{{% md %}}Password of the administrator user account.{{% /md %}}</dd>
-    <dt class="property-optional"
+    <dd>{{% md %}}Password of the administrator user account.{{% /md %}}</dd><dt class="property-optional"
             title="Optional">
         <span id="admin_user_ssh_public_key_python">
 <a href="#admin_user_ssh_public_key_python" style="color: inherit; text-decoration: inherit;">admin_<wbr>user_<wbr>ssh_<wbr>public_<wbr>key</a>
@@ -7165,8 +6190,7 @@ The following output properties are available:
         <span class="property-indicator"></span>
         <span class="property-type">str</span>
     </dt>
-    <dd>{{% md %}}SSH public key of the administrator user account.{{% /md %}}</dd>
-</dl>
+    <dd>{{% md %}}SSH public key of the administrator user account.{{% /md %}}</dd></dl>
 {{% /choosable %}}
 
 <h4 id="userassignedidentityresponse">User<wbr>Assigned<wbr>Identity<wbr>Response</h4>
@@ -7174,9 +6198,7 @@ The following output properties are available:
 
 
 {{% choosable language csharp %}}
-<dl class="resources-properties">
-
-    <dt class="property-required"
+<dl class="resources-properties"><dt class="property-required"
             title="Required">
         <span id="clientid_csharp">
 <a href="#clientid_csharp" style="color: inherit; text-decoration: inherit;">Client<wbr>Id</a>
@@ -7184,8 +6206,7 @@ The following output properties are available:
         <span class="property-indicator"></span>
         <span class="property-type">string</span>
     </dt>
-    <dd>{{% md %}}The clientId(aka appId) of the user assigned identity.{{% /md %}}</dd>
-    <dt class="property-required"
+    <dd>{{% md %}}The clientId(aka appId) of the user assigned identity.{{% /md %}}</dd><dt class="property-required"
             title="Required">
         <span id="principalid_csharp">
 <a href="#principalid_csharp" style="color: inherit; text-decoration: inherit;">Principal<wbr>Id</a>
@@ -7193,8 +6214,7 @@ The following output properties are available:
         <span class="property-indicator"></span>
         <span class="property-type">string</span>
     </dt>
-    <dd>{{% md %}}The principal ID of the user assigned identity.{{% /md %}}</dd>
-    <dt class="property-required"
+    <dd>{{% md %}}The principal ID of the user assigned identity.{{% /md %}}</dd><dt class="property-required"
             title="Required">
         <span id="tenantid_csharp">
 <a href="#tenantid_csharp" style="color: inherit; text-decoration: inherit;">Tenant<wbr>Id</a>
@@ -7202,14 +6222,11 @@ The following output properties are available:
         <span class="property-indicator"></span>
         <span class="property-type">string</span>
     </dt>
-    <dd>{{% md %}}The tenant ID of the user assigned identity.{{% /md %}}</dd>
-</dl>
+    <dd>{{% md %}}The tenant ID of the user assigned identity.{{% /md %}}</dd></dl>
 {{% /choosable %}}
 
 {{% choosable language go %}}
-<dl class="resources-properties">
-
-    <dt class="property-required"
+<dl class="resources-properties"><dt class="property-required"
             title="Required">
         <span id="clientid_go">
 <a href="#clientid_go" style="color: inherit; text-decoration: inherit;">Client<wbr>Id</a>
@@ -7217,8 +6234,7 @@ The following output properties are available:
         <span class="property-indicator"></span>
         <span class="property-type">string</span>
     </dt>
-    <dd>{{% md %}}The clientId(aka appId) of the user assigned identity.{{% /md %}}</dd>
-    <dt class="property-required"
+    <dd>{{% md %}}The clientId(aka appId) of the user assigned identity.{{% /md %}}</dd><dt class="property-required"
             title="Required">
         <span id="principalid_go">
 <a href="#principalid_go" style="color: inherit; text-decoration: inherit;">Principal<wbr>Id</a>
@@ -7226,8 +6242,7 @@ The following output properties are available:
         <span class="property-indicator"></span>
         <span class="property-type">string</span>
     </dt>
-    <dd>{{% md %}}The principal ID of the user assigned identity.{{% /md %}}</dd>
-    <dt class="property-required"
+    <dd>{{% md %}}The principal ID of the user assigned identity.{{% /md %}}</dd><dt class="property-required"
             title="Required">
         <span id="tenantid_go">
 <a href="#tenantid_go" style="color: inherit; text-decoration: inherit;">Tenant<wbr>Id</a>
@@ -7235,14 +6250,11 @@ The following output properties are available:
         <span class="property-indicator"></span>
         <span class="property-type">string</span>
     </dt>
-    <dd>{{% md %}}The tenant ID of the user assigned identity.{{% /md %}}</dd>
-</dl>
+    <dd>{{% md %}}The tenant ID of the user assigned identity.{{% /md %}}</dd></dl>
 {{% /choosable %}}
 
 {{% choosable language nodejs %}}
-<dl class="resources-properties">
-
-    <dt class="property-required"
+<dl class="resources-properties"><dt class="property-required"
             title="Required">
         <span id="clientid_nodejs">
 <a href="#clientid_nodejs" style="color: inherit; text-decoration: inherit;">client<wbr>Id</a>
@@ -7250,8 +6262,7 @@ The following output properties are available:
         <span class="property-indicator"></span>
         <span class="property-type">string</span>
     </dt>
-    <dd>{{% md %}}The clientId(aka appId) of the user assigned identity.{{% /md %}}</dd>
-    <dt class="property-required"
+    <dd>{{% md %}}The clientId(aka appId) of the user assigned identity.{{% /md %}}</dd><dt class="property-required"
             title="Required">
         <span id="principalid_nodejs">
 <a href="#principalid_nodejs" style="color: inherit; text-decoration: inherit;">principal<wbr>Id</a>
@@ -7259,8 +6270,7 @@ The following output properties are available:
         <span class="property-indicator"></span>
         <span class="property-type">string</span>
     </dt>
-    <dd>{{% md %}}The principal ID of the user assigned identity.{{% /md %}}</dd>
-    <dt class="property-required"
+    <dd>{{% md %}}The principal ID of the user assigned identity.{{% /md %}}</dd><dt class="property-required"
             title="Required">
         <span id="tenantid_nodejs">
 <a href="#tenantid_nodejs" style="color: inherit; text-decoration: inherit;">tenant<wbr>Id</a>
@@ -7268,14 +6278,11 @@ The following output properties are available:
         <span class="property-indicator"></span>
         <span class="property-type">string</span>
     </dt>
-    <dd>{{% md %}}The tenant ID of the user assigned identity.{{% /md %}}</dd>
-</dl>
+    <dd>{{% md %}}The tenant ID of the user assigned identity.{{% /md %}}</dd></dl>
 {{% /choosable %}}
 
 {{% choosable language python %}}
-<dl class="resources-properties">
-
-    <dt class="property-required"
+<dl class="resources-properties"><dt class="property-required"
             title="Required">
         <span id="client_id_python">
 <a href="#client_id_python" style="color: inherit; text-decoration: inherit;">client_<wbr>id</a>
@@ -7283,8 +6290,7 @@ The following output properties are available:
         <span class="property-indicator"></span>
         <span class="property-type">str</span>
     </dt>
-    <dd>{{% md %}}The clientId(aka appId) of the user assigned identity.{{% /md %}}</dd>
-    <dt class="property-required"
+    <dd>{{% md %}}The clientId(aka appId) of the user assigned identity.{{% /md %}}</dd><dt class="property-required"
             title="Required">
         <span id="principal_id_python">
 <a href="#principal_id_python" style="color: inherit; text-decoration: inherit;">principal_<wbr>id</a>
@@ -7292,8 +6298,7 @@ The following output properties are available:
         <span class="property-indicator"></span>
         <span class="property-type">str</span>
     </dt>
-    <dd>{{% md %}}The principal ID of the user assigned identity.{{% /md %}}</dd>
-    <dt class="property-required"
+    <dd>{{% md %}}The principal ID of the user assigned identity.{{% /md %}}</dd><dt class="property-required"
             title="Required">
         <span id="tenant_id_python">
 <a href="#tenant_id_python" style="color: inherit; text-decoration: inherit;">tenant_<wbr>id</a>
@@ -7301,8 +6306,7 @@ The following output properties are available:
         <span class="property-indicator"></span>
         <span class="property-type">str</span>
     </dt>
-    <dd>{{% md %}}The tenant ID of the user assigned identity.{{% /md %}}</dd>
-</dl>
+    <dd>{{% md %}}The tenant ID of the user assigned identity.{{% /md %}}</dd></dl>
 {{% /choosable %}}
 
 <h4 id="virtualmachineimageresponse">Virtual<wbr>Machine<wbr>Image<wbr>Response</h4>
@@ -7310,9 +6314,7 @@ The following output properties are available:
 
 
 {{% choosable language csharp %}}
-<dl class="resources-properties">
-
-    <dt class="property-required"
+<dl class="resources-properties"><dt class="property-required"
             title="Required">
         <span id="id_csharp">
 <a href="#id_csharp" style="color: inherit; text-decoration: inherit;">Id</a>
@@ -7320,14 +6322,11 @@ The following output properties are available:
         <span class="property-indicator"></span>
         <span class="property-type">string</span>
     </dt>
-    <dd>{{% md %}}Virtual Machine image path{{% /md %}}</dd>
-</dl>
+    <dd>{{% md %}}Virtual Machine image path{{% /md %}}</dd></dl>
 {{% /choosable %}}
 
 {{% choosable language go %}}
-<dl class="resources-properties">
-
-    <dt class="property-required"
+<dl class="resources-properties"><dt class="property-required"
             title="Required">
         <span id="id_go">
 <a href="#id_go" style="color: inherit; text-decoration: inherit;">Id</a>
@@ -7335,14 +6334,11 @@ The following output properties are available:
         <span class="property-indicator"></span>
         <span class="property-type">string</span>
     </dt>
-    <dd>{{% md %}}Virtual Machine image path{{% /md %}}</dd>
-</dl>
+    <dd>{{% md %}}Virtual Machine image path{{% /md %}}</dd></dl>
 {{% /choosable %}}
 
 {{% choosable language nodejs %}}
-<dl class="resources-properties">
-
-    <dt class="property-required"
+<dl class="resources-properties"><dt class="property-required"
             title="Required">
         <span id="id_nodejs">
 <a href="#id_nodejs" style="color: inherit; text-decoration: inherit;">id</a>
@@ -7350,14 +6346,11 @@ The following output properties are available:
         <span class="property-indicator"></span>
         <span class="property-type">string</span>
     </dt>
-    <dd>{{% md %}}Virtual Machine image path{{% /md %}}</dd>
-</dl>
+    <dd>{{% md %}}Virtual Machine image path{{% /md %}}</dd></dl>
 {{% /choosable %}}
 
 {{% choosable language python %}}
-<dl class="resources-properties">
-
-    <dt class="property-required"
+<dl class="resources-properties"><dt class="property-required"
             title="Required">
         <span id="id_python">
 <a href="#id_python" style="color: inherit; text-decoration: inherit;">id</a>
@@ -7365,8 +6358,7 @@ The following output properties are available:
         <span class="property-indicator"></span>
         <span class="property-type">str</span>
     </dt>
-    <dd>{{% md %}}Virtual Machine image path{{% /md %}}</dd>
-</dl>
+    <dd>{{% md %}}Virtual Machine image path{{% /md %}}</dd></dl>
 {{% /choosable %}}
 
 <h4 id="virtualmachineresponse">Virtual<wbr>Machine<wbr>Response</h4>
@@ -7374,9 +6366,7 @@ The following output properties are available:
 
 
 {{% choosable language csharp %}}
-<dl class="resources-properties">
-
-    <dt class="property-required"
+<dl class="resources-properties"><dt class="property-required"
             title="Required">
         <span id="isattachedcompute_csharp">
 <a href="#isattachedcompute_csharp" style="color: inherit; text-decoration: inherit;">Is<wbr>Attached<wbr>Compute</a>
@@ -7384,8 +6374,7 @@ The following output properties are available:
         <span class="property-indicator"></span>
         <span class="property-type">bool</span>
     </dt>
-    <dd>{{% md %}}Indicating whether the compute was provisioned by user and brought from outside if true, or machine learning service provisioned it if false.{{% /md %}}</dd>
-    <dt class="property-required"
+    <dd>{{% md %}}Indicating whether the compute was provisioned by user and brought from outside if true, or machine learning service provisioned it if false.{{% /md %}}</dd><dt class="property-required"
             title="Required">
         <span id="provisioningerrors_csharp">
 <a href="#provisioningerrors_csharp" style="color: inherit; text-decoration: inherit;">Provisioning<wbr>Errors</a>
@@ -7393,8 +6382,7 @@ The following output properties are available:
         <span class="property-indicator"></span>
         <span class="property-type"><a href="#machinelearningserviceerrorresponse">List&lt;Pulumi.<wbr>Azure<wbr>Native.<wbr>Machine<wbr>Learning<wbr>Services.<wbr>Inputs.<wbr>Machine<wbr>Learning<wbr>Service<wbr>Error<wbr>Response<wbr>Args&gt;</a></span>
     </dt>
-    <dd>{{% md %}}Errors during provisioning{{% /md %}}</dd>
-    <dt class="property-required"
+    <dd>{{% md %}}Errors during provisioning{{% /md %}}</dd><dt class="property-required"
             title="Required">
         <span id="provisioningstate_csharp">
 <a href="#provisioningstate_csharp" style="color: inherit; text-decoration: inherit;">Provisioning<wbr>State</a>
@@ -7402,8 +6390,7 @@ The following output properties are available:
         <span class="property-indicator"></span>
         <span class="property-type">string</span>
     </dt>
-    <dd>{{% md %}}The provision state of the cluster. Valid values are Unknown, Updating, Provisioning, Succeeded, and Failed.{{% /md %}}</dd>
-    <dt class="property-optional"
+    <dd>{{% md %}}The provision state of the cluster. Valid values are Unknown, Updating, Provisioning, Succeeded, and Failed.{{% /md %}}</dd><dt class="property-optional"
             title="Optional">
         <span id="computelocation_csharp">
 <a href="#computelocation_csharp" style="color: inherit; text-decoration: inherit;">Compute<wbr>Location</a>
@@ -7411,8 +6398,7 @@ The following output properties are available:
         <span class="property-indicator"></span>
         <span class="property-type">string</span>
     </dt>
-    <dd>{{% md %}}Location for the underlying compute{{% /md %}}</dd>
-    <dt class="property-optional"
+    <dd>{{% md %}}Location for the underlying compute{{% /md %}}</dd><dt class="property-optional"
             title="Optional">
         <span id="description_csharp">
 <a href="#description_csharp" style="color: inherit; text-decoration: inherit;">Description</a>
@@ -7420,8 +6406,7 @@ The following output properties are available:
         <span class="property-indicator"></span>
         <span class="property-type">string</span>
     </dt>
-    <dd>{{% md %}}The description of the Machine Learning compute.{{% /md %}}</dd>
-    <dt class="property-optional"
+    <dd>{{% md %}}The description of the Machine Learning compute.{{% /md %}}</dd><dt class="property-optional"
             title="Optional">
         <span id="properties_csharp">
 <a href="#properties_csharp" style="color: inherit; text-decoration: inherit;">Properties</a>
@@ -7429,8 +6414,7 @@ The following output properties are available:
         <span class="property-indicator"></span>
         <span class="property-type"><a href="#virtualmachineresponseproperties">Pulumi.<wbr>Azure<wbr>Native.<wbr>Machine<wbr>Learning<wbr>Services.<wbr>Inputs.<wbr>Virtual<wbr>Machine<wbr>Response<wbr>Properties<wbr>Args</a></span>
     </dt>
-    <dd>{{% md %}}{{% /md %}}</dd>
-    <dt class="property-optional"
+    <dd>{{% md %}}{{% /md %}}</dd><dt class="property-optional"
             title="Optional">
         <span id="resourceid_csharp">
 <a href="#resourceid_csharp" style="color: inherit; text-decoration: inherit;">Resource<wbr>Id</a>
@@ -7438,14 +6422,11 @@ The following output properties are available:
         <span class="property-indicator"></span>
         <span class="property-type">string</span>
     </dt>
-    <dd>{{% md %}}ARM resource id of the underlying compute{{% /md %}}</dd>
-</dl>
+    <dd>{{% md %}}ARM resource id of the underlying compute{{% /md %}}</dd></dl>
 {{% /choosable %}}
 
 {{% choosable language go %}}
-<dl class="resources-properties">
-
-    <dt class="property-required"
+<dl class="resources-properties"><dt class="property-required"
             title="Required">
         <span id="isattachedcompute_go">
 <a href="#isattachedcompute_go" style="color: inherit; text-decoration: inherit;">Is<wbr>Attached<wbr>Compute</a>
@@ -7453,8 +6434,7 @@ The following output properties are available:
         <span class="property-indicator"></span>
         <span class="property-type">bool</span>
     </dt>
-    <dd>{{% md %}}Indicating whether the compute was provisioned by user and brought from outside if true, or machine learning service provisioned it if false.{{% /md %}}</dd>
-    <dt class="property-required"
+    <dd>{{% md %}}Indicating whether the compute was provisioned by user and brought from outside if true, or machine learning service provisioned it if false.{{% /md %}}</dd><dt class="property-required"
             title="Required">
         <span id="provisioningerrors_go">
 <a href="#provisioningerrors_go" style="color: inherit; text-decoration: inherit;">Provisioning<wbr>Errors</a>
@@ -7462,8 +6442,7 @@ The following output properties are available:
         <span class="property-indicator"></span>
         <span class="property-type"><a href="#machinelearningserviceerrorresponse">[]Machine<wbr>Learning<wbr>Service<wbr>Error<wbr>Response</a></span>
     </dt>
-    <dd>{{% md %}}Errors during provisioning{{% /md %}}</dd>
-    <dt class="property-required"
+    <dd>{{% md %}}Errors during provisioning{{% /md %}}</dd><dt class="property-required"
             title="Required">
         <span id="provisioningstate_go">
 <a href="#provisioningstate_go" style="color: inherit; text-decoration: inherit;">Provisioning<wbr>State</a>
@@ -7471,8 +6450,7 @@ The following output properties are available:
         <span class="property-indicator"></span>
         <span class="property-type">string</span>
     </dt>
-    <dd>{{% md %}}The provision state of the cluster. Valid values are Unknown, Updating, Provisioning, Succeeded, and Failed.{{% /md %}}</dd>
-    <dt class="property-optional"
+    <dd>{{% md %}}The provision state of the cluster. Valid values are Unknown, Updating, Provisioning, Succeeded, and Failed.{{% /md %}}</dd><dt class="property-optional"
             title="Optional">
         <span id="computelocation_go">
 <a href="#computelocation_go" style="color: inherit; text-decoration: inherit;">Compute<wbr>Location</a>
@@ -7480,8 +6458,7 @@ The following output properties are available:
         <span class="property-indicator"></span>
         <span class="property-type">string</span>
     </dt>
-    <dd>{{% md %}}Location for the underlying compute{{% /md %}}</dd>
-    <dt class="property-optional"
+    <dd>{{% md %}}Location for the underlying compute{{% /md %}}</dd><dt class="property-optional"
             title="Optional">
         <span id="description_go">
 <a href="#description_go" style="color: inherit; text-decoration: inherit;">Description</a>
@@ -7489,8 +6466,7 @@ The following output properties are available:
         <span class="property-indicator"></span>
         <span class="property-type">string</span>
     </dt>
-    <dd>{{% md %}}The description of the Machine Learning compute.{{% /md %}}</dd>
-    <dt class="property-optional"
+    <dd>{{% md %}}The description of the Machine Learning compute.{{% /md %}}</dd><dt class="property-optional"
             title="Optional">
         <span id="properties_go">
 <a href="#properties_go" style="color: inherit; text-decoration: inherit;">Properties</a>
@@ -7498,8 +6474,7 @@ The following output properties are available:
         <span class="property-indicator"></span>
         <span class="property-type"><a href="#virtualmachineresponseproperties">Virtual<wbr>Machine<wbr>Response<wbr>Properties</a></span>
     </dt>
-    <dd>{{% md %}}{{% /md %}}</dd>
-    <dt class="property-optional"
+    <dd>{{% md %}}{{% /md %}}</dd><dt class="property-optional"
             title="Optional">
         <span id="resourceid_go">
 <a href="#resourceid_go" style="color: inherit; text-decoration: inherit;">Resource<wbr>Id</a>
@@ -7507,14 +6482,11 @@ The following output properties are available:
         <span class="property-indicator"></span>
         <span class="property-type">string</span>
     </dt>
-    <dd>{{% md %}}ARM resource id of the underlying compute{{% /md %}}</dd>
-</dl>
+    <dd>{{% md %}}ARM resource id of the underlying compute{{% /md %}}</dd></dl>
 {{% /choosable %}}
 
 {{% choosable language nodejs %}}
-<dl class="resources-properties">
-
-    <dt class="property-required"
+<dl class="resources-properties"><dt class="property-required"
             title="Required">
         <span id="isattachedcompute_nodejs">
 <a href="#isattachedcompute_nodejs" style="color: inherit; text-decoration: inherit;">is<wbr>Attached<wbr>Compute</a>
@@ -7522,8 +6494,7 @@ The following output properties are available:
         <span class="property-indicator"></span>
         <span class="property-type">boolean</span>
     </dt>
-    <dd>{{% md %}}Indicating whether the compute was provisioned by user and brought from outside if true, or machine learning service provisioned it if false.{{% /md %}}</dd>
-    <dt class="property-required"
+    <dd>{{% md %}}Indicating whether the compute was provisioned by user and brought from outside if true, or machine learning service provisioned it if false.{{% /md %}}</dd><dt class="property-required"
             title="Required">
         <span id="provisioningerrors_nodejs">
 <a href="#provisioningerrors_nodejs" style="color: inherit; text-decoration: inherit;">provisioning<wbr>Errors</a>
@@ -7531,8 +6502,7 @@ The following output properties are available:
         <span class="property-indicator"></span>
         <span class="property-type"><a href="#machinelearningserviceerrorresponse">Machine<wbr>Learning<wbr>Service<wbr>Error<wbr>Response[]</a></span>
     </dt>
-    <dd>{{% md %}}Errors during provisioning{{% /md %}}</dd>
-    <dt class="property-required"
+    <dd>{{% md %}}Errors during provisioning{{% /md %}}</dd><dt class="property-required"
             title="Required">
         <span id="provisioningstate_nodejs">
 <a href="#provisioningstate_nodejs" style="color: inherit; text-decoration: inherit;">provisioning<wbr>State</a>
@@ -7540,8 +6510,7 @@ The following output properties are available:
         <span class="property-indicator"></span>
         <span class="property-type">string</span>
     </dt>
-    <dd>{{% md %}}The provision state of the cluster. Valid values are Unknown, Updating, Provisioning, Succeeded, and Failed.{{% /md %}}</dd>
-    <dt class="property-optional"
+    <dd>{{% md %}}The provision state of the cluster. Valid values are Unknown, Updating, Provisioning, Succeeded, and Failed.{{% /md %}}</dd><dt class="property-optional"
             title="Optional">
         <span id="computelocation_nodejs">
 <a href="#computelocation_nodejs" style="color: inherit; text-decoration: inherit;">compute<wbr>Location</a>
@@ -7549,8 +6518,7 @@ The following output properties are available:
         <span class="property-indicator"></span>
         <span class="property-type">string</span>
     </dt>
-    <dd>{{% md %}}Location for the underlying compute{{% /md %}}</dd>
-    <dt class="property-optional"
+    <dd>{{% md %}}Location for the underlying compute{{% /md %}}</dd><dt class="property-optional"
             title="Optional">
         <span id="description_nodejs">
 <a href="#description_nodejs" style="color: inherit; text-decoration: inherit;">description</a>
@@ -7558,8 +6526,7 @@ The following output properties are available:
         <span class="property-indicator"></span>
         <span class="property-type">string</span>
     </dt>
-    <dd>{{% md %}}The description of the Machine Learning compute.{{% /md %}}</dd>
-    <dt class="property-optional"
+    <dd>{{% md %}}The description of the Machine Learning compute.{{% /md %}}</dd><dt class="property-optional"
             title="Optional">
         <span id="properties_nodejs">
 <a href="#properties_nodejs" style="color: inherit; text-decoration: inherit;">properties</a>
@@ -7567,8 +6534,7 @@ The following output properties are available:
         <span class="property-indicator"></span>
         <span class="property-type"><a href="#virtualmachineresponseproperties">Virtual<wbr>Machine<wbr>Response<wbr>Properties</a></span>
     </dt>
-    <dd>{{% md %}}{{% /md %}}</dd>
-    <dt class="property-optional"
+    <dd>{{% md %}}{{% /md %}}</dd><dt class="property-optional"
             title="Optional">
         <span id="resourceid_nodejs">
 <a href="#resourceid_nodejs" style="color: inherit; text-decoration: inherit;">resource<wbr>Id</a>
@@ -7576,14 +6542,11 @@ The following output properties are available:
         <span class="property-indicator"></span>
         <span class="property-type">string</span>
     </dt>
-    <dd>{{% md %}}ARM resource id of the underlying compute{{% /md %}}</dd>
-</dl>
+    <dd>{{% md %}}ARM resource id of the underlying compute{{% /md %}}</dd></dl>
 {{% /choosable %}}
 
 {{% choosable language python %}}
-<dl class="resources-properties">
-
-    <dt class="property-required"
+<dl class="resources-properties"><dt class="property-required"
             title="Required">
         <span id="is_attached_compute_python">
 <a href="#is_attached_compute_python" style="color: inherit; text-decoration: inherit;">is_<wbr>attached_<wbr>compute</a>
@@ -7591,8 +6554,7 @@ The following output properties are available:
         <span class="property-indicator"></span>
         <span class="property-type">bool</span>
     </dt>
-    <dd>{{% md %}}Indicating whether the compute was provisioned by user and brought from outside if true, or machine learning service provisioned it if false.{{% /md %}}</dd>
-    <dt class="property-required"
+    <dd>{{% md %}}Indicating whether the compute was provisioned by user and brought from outside if true, or machine learning service provisioned it if false.{{% /md %}}</dd><dt class="property-required"
             title="Required">
         <span id="provisioning_errors_python">
 <a href="#provisioning_errors_python" style="color: inherit; text-decoration: inherit;">provisioning_<wbr>errors</a>
@@ -7600,8 +6562,7 @@ The following output properties are available:
         <span class="property-indicator"></span>
         <span class="property-type"><a href="#machinelearningserviceerrorresponse">Sequence[Machine<wbr>Learning<wbr>Service<wbr>Error<wbr>Response<wbr>Args]</a></span>
     </dt>
-    <dd>{{% md %}}Errors during provisioning{{% /md %}}</dd>
-    <dt class="property-required"
+    <dd>{{% md %}}Errors during provisioning{{% /md %}}</dd><dt class="property-required"
             title="Required">
         <span id="provisioning_state_python">
 <a href="#provisioning_state_python" style="color: inherit; text-decoration: inherit;">provisioning_<wbr>state</a>
@@ -7609,8 +6570,7 @@ The following output properties are available:
         <span class="property-indicator"></span>
         <span class="property-type">str</span>
     </dt>
-    <dd>{{% md %}}The provision state of the cluster. Valid values are Unknown, Updating, Provisioning, Succeeded, and Failed.{{% /md %}}</dd>
-    <dt class="property-optional"
+    <dd>{{% md %}}The provision state of the cluster. Valid values are Unknown, Updating, Provisioning, Succeeded, and Failed.{{% /md %}}</dd><dt class="property-optional"
             title="Optional">
         <span id="compute_location_python">
 <a href="#compute_location_python" style="color: inherit; text-decoration: inherit;">compute_<wbr>location</a>
@@ -7618,8 +6578,7 @@ The following output properties are available:
         <span class="property-indicator"></span>
         <span class="property-type">str</span>
     </dt>
-    <dd>{{% md %}}Location for the underlying compute{{% /md %}}</dd>
-    <dt class="property-optional"
+    <dd>{{% md %}}Location for the underlying compute{{% /md %}}</dd><dt class="property-optional"
             title="Optional">
         <span id="description_python">
 <a href="#description_python" style="color: inherit; text-decoration: inherit;">description</a>
@@ -7627,8 +6586,7 @@ The following output properties are available:
         <span class="property-indicator"></span>
         <span class="property-type">str</span>
     </dt>
-    <dd>{{% md %}}The description of the Machine Learning compute.{{% /md %}}</dd>
-    <dt class="property-optional"
+    <dd>{{% md %}}The description of the Machine Learning compute.{{% /md %}}</dd><dt class="property-optional"
             title="Optional">
         <span id="properties_python">
 <a href="#properties_python" style="color: inherit; text-decoration: inherit;">properties</a>
@@ -7636,8 +6594,7 @@ The following output properties are available:
         <span class="property-indicator"></span>
         <span class="property-type"><a href="#virtualmachineresponseproperties">Virtual<wbr>Machine<wbr>Response<wbr>Properties<wbr>Args</a></span>
     </dt>
-    <dd>{{% md %}}{{% /md %}}</dd>
-    <dt class="property-optional"
+    <dd>{{% md %}}{{% /md %}}</dd><dt class="property-optional"
             title="Optional">
         <span id="resource_id_python">
 <a href="#resource_id_python" style="color: inherit; text-decoration: inherit;">resource_<wbr>id</a>
@@ -7645,8 +6602,7 @@ The following output properties are available:
         <span class="property-indicator"></span>
         <span class="property-type">str</span>
     </dt>
-    <dd>{{% md %}}ARM resource id of the underlying compute{{% /md %}}</dd>
-</dl>
+    <dd>{{% md %}}ARM resource id of the underlying compute{{% /md %}}</dd></dl>
 {{% /choosable %}}
 
 <h4 id="virtualmachineresponseproperties">Virtual<wbr>Machine<wbr>Response<wbr>Properties</h4>
@@ -7654,9 +6610,7 @@ The following output properties are available:
 
 
 {{% choosable language csharp %}}
-<dl class="resources-properties">
-
-    <dt class="property-optional"
+<dl class="resources-properties"><dt class="property-optional"
             title="Optional">
         <span id="address_csharp">
 <a href="#address_csharp" style="color: inherit; text-decoration: inherit;">Address</a>
@@ -7664,8 +6618,7 @@ The following output properties are available:
         <span class="property-indicator"></span>
         <span class="property-type">string</span>
     </dt>
-    <dd>{{% md %}}Public IP address of the virtual machine.{{% /md %}}</dd>
-    <dt class="property-optional"
+    <dd>{{% md %}}Public IP address of the virtual machine.{{% /md %}}</dd><dt class="property-optional"
             title="Optional">
         <span id="administratoraccount_csharp">
 <a href="#administratoraccount_csharp" style="color: inherit; text-decoration: inherit;">Administrator<wbr>Account</a>
@@ -7673,8 +6626,7 @@ The following output properties are available:
         <span class="property-indicator"></span>
         <span class="property-type"><a href="#virtualmachinesshcredentialsresponse">Pulumi.<wbr>Azure<wbr>Native.<wbr>Machine<wbr>Learning<wbr>Services.<wbr>Inputs.<wbr>Virtual<wbr>Machine<wbr>Ssh<wbr>Credentials<wbr>Response<wbr>Args</a></span>
     </dt>
-    <dd>{{% md %}}Admin credentials for virtual machine{{% /md %}}</dd>
-    <dt class="property-optional"
+    <dd>{{% md %}}Admin credentials for virtual machine{{% /md %}}</dd><dt class="property-optional"
             title="Optional">
         <span id="sshport_csharp">
 <a href="#sshport_csharp" style="color: inherit; text-decoration: inherit;">Ssh<wbr>Port</a>
@@ -7682,8 +6634,7 @@ The following output properties are available:
         <span class="property-indicator"></span>
         <span class="property-type">int</span>
     </dt>
-    <dd>{{% md %}}Port open for ssh connections.{{% /md %}}</dd>
-    <dt class="property-optional"
+    <dd>{{% md %}}Port open for ssh connections.{{% /md %}}</dd><dt class="property-optional"
             title="Optional">
         <span id="virtualmachinesize_csharp">
 <a href="#virtualmachinesize_csharp" style="color: inherit; text-decoration: inherit;">Virtual<wbr>Machine<wbr>Size</a>
@@ -7691,14 +6642,11 @@ The following output properties are available:
         <span class="property-indicator"></span>
         <span class="property-type">string</span>
     </dt>
-    <dd>{{% md %}}Virtual Machine size{{% /md %}}</dd>
-</dl>
+    <dd>{{% md %}}Virtual Machine size{{% /md %}}</dd></dl>
 {{% /choosable %}}
 
 {{% choosable language go %}}
-<dl class="resources-properties">
-
-    <dt class="property-optional"
+<dl class="resources-properties"><dt class="property-optional"
             title="Optional">
         <span id="address_go">
 <a href="#address_go" style="color: inherit; text-decoration: inherit;">Address</a>
@@ -7706,8 +6654,7 @@ The following output properties are available:
         <span class="property-indicator"></span>
         <span class="property-type">string</span>
     </dt>
-    <dd>{{% md %}}Public IP address of the virtual machine.{{% /md %}}</dd>
-    <dt class="property-optional"
+    <dd>{{% md %}}Public IP address of the virtual machine.{{% /md %}}</dd><dt class="property-optional"
             title="Optional">
         <span id="administratoraccount_go">
 <a href="#administratoraccount_go" style="color: inherit; text-decoration: inherit;">Administrator<wbr>Account</a>
@@ -7715,8 +6662,7 @@ The following output properties are available:
         <span class="property-indicator"></span>
         <span class="property-type"><a href="#virtualmachinesshcredentialsresponse">Virtual<wbr>Machine<wbr>Ssh<wbr>Credentials<wbr>Response</a></span>
     </dt>
-    <dd>{{% md %}}Admin credentials for virtual machine{{% /md %}}</dd>
-    <dt class="property-optional"
+    <dd>{{% md %}}Admin credentials for virtual machine{{% /md %}}</dd><dt class="property-optional"
             title="Optional">
         <span id="sshport_go">
 <a href="#sshport_go" style="color: inherit; text-decoration: inherit;">Ssh<wbr>Port</a>
@@ -7724,8 +6670,7 @@ The following output properties are available:
         <span class="property-indicator"></span>
         <span class="property-type">int</span>
     </dt>
-    <dd>{{% md %}}Port open for ssh connections.{{% /md %}}</dd>
-    <dt class="property-optional"
+    <dd>{{% md %}}Port open for ssh connections.{{% /md %}}</dd><dt class="property-optional"
             title="Optional">
         <span id="virtualmachinesize_go">
 <a href="#virtualmachinesize_go" style="color: inherit; text-decoration: inherit;">Virtual<wbr>Machine<wbr>Size</a>
@@ -7733,14 +6678,11 @@ The following output properties are available:
         <span class="property-indicator"></span>
         <span class="property-type">string</span>
     </dt>
-    <dd>{{% md %}}Virtual Machine size{{% /md %}}</dd>
-</dl>
+    <dd>{{% md %}}Virtual Machine size{{% /md %}}</dd></dl>
 {{% /choosable %}}
 
 {{% choosable language nodejs %}}
-<dl class="resources-properties">
-
-    <dt class="property-optional"
+<dl class="resources-properties"><dt class="property-optional"
             title="Optional">
         <span id="address_nodejs">
 <a href="#address_nodejs" style="color: inherit; text-decoration: inherit;">address</a>
@@ -7748,8 +6690,7 @@ The following output properties are available:
         <span class="property-indicator"></span>
         <span class="property-type">string</span>
     </dt>
-    <dd>{{% md %}}Public IP address of the virtual machine.{{% /md %}}</dd>
-    <dt class="property-optional"
+    <dd>{{% md %}}Public IP address of the virtual machine.{{% /md %}}</dd><dt class="property-optional"
             title="Optional">
         <span id="administratoraccount_nodejs">
 <a href="#administratoraccount_nodejs" style="color: inherit; text-decoration: inherit;">administrator<wbr>Account</a>
@@ -7757,8 +6698,7 @@ The following output properties are available:
         <span class="property-indicator"></span>
         <span class="property-type"><a href="#virtualmachinesshcredentialsresponse">Virtual<wbr>Machine<wbr>Ssh<wbr>Credentials<wbr>Response</a></span>
     </dt>
-    <dd>{{% md %}}Admin credentials for virtual machine{{% /md %}}</dd>
-    <dt class="property-optional"
+    <dd>{{% md %}}Admin credentials for virtual machine{{% /md %}}</dd><dt class="property-optional"
             title="Optional">
         <span id="sshport_nodejs">
 <a href="#sshport_nodejs" style="color: inherit; text-decoration: inherit;">ssh<wbr>Port</a>
@@ -7766,8 +6706,7 @@ The following output properties are available:
         <span class="property-indicator"></span>
         <span class="property-type">number</span>
     </dt>
-    <dd>{{% md %}}Port open for ssh connections.{{% /md %}}</dd>
-    <dt class="property-optional"
+    <dd>{{% md %}}Port open for ssh connections.{{% /md %}}</dd><dt class="property-optional"
             title="Optional">
         <span id="virtualmachinesize_nodejs">
 <a href="#virtualmachinesize_nodejs" style="color: inherit; text-decoration: inherit;">virtual<wbr>Machine<wbr>Size</a>
@@ -7775,14 +6714,11 @@ The following output properties are available:
         <span class="property-indicator"></span>
         <span class="property-type">string</span>
     </dt>
-    <dd>{{% md %}}Virtual Machine size{{% /md %}}</dd>
-</dl>
+    <dd>{{% md %}}Virtual Machine size{{% /md %}}</dd></dl>
 {{% /choosable %}}
 
 {{% choosable language python %}}
-<dl class="resources-properties">
-
-    <dt class="property-optional"
+<dl class="resources-properties"><dt class="property-optional"
             title="Optional">
         <span id="address_python">
 <a href="#address_python" style="color: inherit; text-decoration: inherit;">address</a>
@@ -7790,8 +6726,7 @@ The following output properties are available:
         <span class="property-indicator"></span>
         <span class="property-type">str</span>
     </dt>
-    <dd>{{% md %}}Public IP address of the virtual machine.{{% /md %}}</dd>
-    <dt class="property-optional"
+    <dd>{{% md %}}Public IP address of the virtual machine.{{% /md %}}</dd><dt class="property-optional"
             title="Optional">
         <span id="administrator_account_python">
 <a href="#administrator_account_python" style="color: inherit; text-decoration: inherit;">administrator_<wbr>account</a>
@@ -7799,8 +6734,7 @@ The following output properties are available:
         <span class="property-indicator"></span>
         <span class="property-type"><a href="#virtualmachinesshcredentialsresponse">Virtual<wbr>Machine<wbr>Ssh<wbr>Credentials<wbr>Response<wbr>Args</a></span>
     </dt>
-    <dd>{{% md %}}Admin credentials for virtual machine{{% /md %}}</dd>
-    <dt class="property-optional"
+    <dd>{{% md %}}Admin credentials for virtual machine{{% /md %}}</dd><dt class="property-optional"
             title="Optional">
         <span id="ssh_port_python">
 <a href="#ssh_port_python" style="color: inherit; text-decoration: inherit;">ssh_<wbr>port</a>
@@ -7808,8 +6742,7 @@ The following output properties are available:
         <span class="property-indicator"></span>
         <span class="property-type">int</span>
     </dt>
-    <dd>{{% md %}}Port open for ssh connections.{{% /md %}}</dd>
-    <dt class="property-optional"
+    <dd>{{% md %}}Port open for ssh connections.{{% /md %}}</dd><dt class="property-optional"
             title="Optional">
         <span id="virtual_machine_size_python">
 <a href="#virtual_machine_size_python" style="color: inherit; text-decoration: inherit;">virtual_<wbr>machine_<wbr>size</a>
@@ -7817,8 +6750,7 @@ The following output properties are available:
         <span class="property-indicator"></span>
         <span class="property-type">str</span>
     </dt>
-    <dd>{{% md %}}Virtual Machine size{{% /md %}}</dd>
-</dl>
+    <dd>{{% md %}}Virtual Machine size{{% /md %}}</dd></dl>
 {{% /choosable %}}
 
 <h4 id="virtualmachinesshcredentialsresponse">Virtual<wbr>Machine<wbr>Ssh<wbr>Credentials<wbr>Response</h4>
@@ -7826,9 +6758,7 @@ The following output properties are available:
 
 
 {{% choosable language csharp %}}
-<dl class="resources-properties">
-
-    <dt class="property-optional"
+<dl class="resources-properties"><dt class="property-optional"
             title="Optional">
         <span id="password_csharp">
 <a href="#password_csharp" style="color: inherit; text-decoration: inherit;">Password</a>
@@ -7836,8 +6766,7 @@ The following output properties are available:
         <span class="property-indicator"></span>
         <span class="property-type">string</span>
     </dt>
-    <dd>{{% md %}}Password of admin account{{% /md %}}</dd>
-    <dt class="property-optional"
+    <dd>{{% md %}}Password of admin account{{% /md %}}</dd><dt class="property-optional"
             title="Optional">
         <span id="privatekeydata_csharp">
 <a href="#privatekeydata_csharp" style="color: inherit; text-decoration: inherit;">Private<wbr>Key<wbr>Data</a>
@@ -7845,8 +6774,7 @@ The following output properties are available:
         <span class="property-indicator"></span>
         <span class="property-type">string</span>
     </dt>
-    <dd>{{% md %}}Private key data{{% /md %}}</dd>
-    <dt class="property-optional"
+    <dd>{{% md %}}Private key data{{% /md %}}</dd><dt class="property-optional"
             title="Optional">
         <span id="publickeydata_csharp">
 <a href="#publickeydata_csharp" style="color: inherit; text-decoration: inherit;">Public<wbr>Key<wbr>Data</a>
@@ -7854,8 +6782,7 @@ The following output properties are available:
         <span class="property-indicator"></span>
         <span class="property-type">string</span>
     </dt>
-    <dd>{{% md %}}Public key data{{% /md %}}</dd>
-    <dt class="property-optional"
+    <dd>{{% md %}}Public key data{{% /md %}}</dd><dt class="property-optional"
             title="Optional">
         <span id="username_csharp">
 <a href="#username_csharp" style="color: inherit; text-decoration: inherit;">Username</a>
@@ -7863,14 +6790,11 @@ The following output properties are available:
         <span class="property-indicator"></span>
         <span class="property-type">string</span>
     </dt>
-    <dd>{{% md %}}Username of admin account{{% /md %}}</dd>
-</dl>
+    <dd>{{% md %}}Username of admin account{{% /md %}}</dd></dl>
 {{% /choosable %}}
 
 {{% choosable language go %}}
-<dl class="resources-properties">
-
-    <dt class="property-optional"
+<dl class="resources-properties"><dt class="property-optional"
             title="Optional">
         <span id="password_go">
 <a href="#password_go" style="color: inherit; text-decoration: inherit;">Password</a>
@@ -7878,8 +6802,7 @@ The following output properties are available:
         <span class="property-indicator"></span>
         <span class="property-type">string</span>
     </dt>
-    <dd>{{% md %}}Password of admin account{{% /md %}}</dd>
-    <dt class="property-optional"
+    <dd>{{% md %}}Password of admin account{{% /md %}}</dd><dt class="property-optional"
             title="Optional">
         <span id="privatekeydata_go">
 <a href="#privatekeydata_go" style="color: inherit; text-decoration: inherit;">Private<wbr>Key<wbr>Data</a>
@@ -7887,8 +6810,7 @@ The following output properties are available:
         <span class="property-indicator"></span>
         <span class="property-type">string</span>
     </dt>
-    <dd>{{% md %}}Private key data{{% /md %}}</dd>
-    <dt class="property-optional"
+    <dd>{{% md %}}Private key data{{% /md %}}</dd><dt class="property-optional"
             title="Optional">
         <span id="publickeydata_go">
 <a href="#publickeydata_go" style="color: inherit; text-decoration: inherit;">Public<wbr>Key<wbr>Data</a>
@@ -7896,8 +6818,7 @@ The following output properties are available:
         <span class="property-indicator"></span>
         <span class="property-type">string</span>
     </dt>
-    <dd>{{% md %}}Public key data{{% /md %}}</dd>
-    <dt class="property-optional"
+    <dd>{{% md %}}Public key data{{% /md %}}</dd><dt class="property-optional"
             title="Optional">
         <span id="username_go">
 <a href="#username_go" style="color: inherit; text-decoration: inherit;">Username</a>
@@ -7905,14 +6826,11 @@ The following output properties are available:
         <span class="property-indicator"></span>
         <span class="property-type">string</span>
     </dt>
-    <dd>{{% md %}}Username of admin account{{% /md %}}</dd>
-</dl>
+    <dd>{{% md %}}Username of admin account{{% /md %}}</dd></dl>
 {{% /choosable %}}
 
 {{% choosable language nodejs %}}
-<dl class="resources-properties">
-
-    <dt class="property-optional"
+<dl class="resources-properties"><dt class="property-optional"
             title="Optional">
         <span id="password_nodejs">
 <a href="#password_nodejs" style="color: inherit; text-decoration: inherit;">password</a>
@@ -7920,8 +6838,7 @@ The following output properties are available:
         <span class="property-indicator"></span>
         <span class="property-type">string</span>
     </dt>
-    <dd>{{% md %}}Password of admin account{{% /md %}}</dd>
-    <dt class="property-optional"
+    <dd>{{% md %}}Password of admin account{{% /md %}}</dd><dt class="property-optional"
             title="Optional">
         <span id="privatekeydata_nodejs">
 <a href="#privatekeydata_nodejs" style="color: inherit; text-decoration: inherit;">private<wbr>Key<wbr>Data</a>
@@ -7929,8 +6846,7 @@ The following output properties are available:
         <span class="property-indicator"></span>
         <span class="property-type">string</span>
     </dt>
-    <dd>{{% md %}}Private key data{{% /md %}}</dd>
-    <dt class="property-optional"
+    <dd>{{% md %}}Private key data{{% /md %}}</dd><dt class="property-optional"
             title="Optional">
         <span id="publickeydata_nodejs">
 <a href="#publickeydata_nodejs" style="color: inherit; text-decoration: inherit;">public<wbr>Key<wbr>Data</a>
@@ -7938,8 +6854,7 @@ The following output properties are available:
         <span class="property-indicator"></span>
         <span class="property-type">string</span>
     </dt>
-    <dd>{{% md %}}Public key data{{% /md %}}</dd>
-    <dt class="property-optional"
+    <dd>{{% md %}}Public key data{{% /md %}}</dd><dt class="property-optional"
             title="Optional">
         <span id="username_nodejs">
 <a href="#username_nodejs" style="color: inherit; text-decoration: inherit;">username</a>
@@ -7947,14 +6862,11 @@ The following output properties are available:
         <span class="property-indicator"></span>
         <span class="property-type">string</span>
     </dt>
-    <dd>{{% md %}}Username of admin account{{% /md %}}</dd>
-</dl>
+    <dd>{{% md %}}Username of admin account{{% /md %}}</dd></dl>
 {{% /choosable %}}
 
 {{% choosable language python %}}
-<dl class="resources-properties">
-
-    <dt class="property-optional"
+<dl class="resources-properties"><dt class="property-optional"
             title="Optional">
         <span id="password_python">
 <a href="#password_python" style="color: inherit; text-decoration: inherit;">password</a>
@@ -7962,8 +6874,7 @@ The following output properties are available:
         <span class="property-indicator"></span>
         <span class="property-type">str</span>
     </dt>
-    <dd>{{% md %}}Password of admin account{{% /md %}}</dd>
-    <dt class="property-optional"
+    <dd>{{% md %}}Password of admin account{{% /md %}}</dd><dt class="property-optional"
             title="Optional">
         <span id="private_key_data_python">
 <a href="#private_key_data_python" style="color: inherit; text-decoration: inherit;">private_<wbr>key_<wbr>data</a>
@@ -7971,8 +6882,7 @@ The following output properties are available:
         <span class="property-indicator"></span>
         <span class="property-type">str</span>
     </dt>
-    <dd>{{% md %}}Private key data{{% /md %}}</dd>
-    <dt class="property-optional"
+    <dd>{{% md %}}Private key data{{% /md %}}</dd><dt class="property-optional"
             title="Optional">
         <span id="public_key_data_python">
 <a href="#public_key_data_python" style="color: inherit; text-decoration: inherit;">public_<wbr>key_<wbr>data</a>
@@ -7980,8 +6890,7 @@ The following output properties are available:
         <span class="property-indicator"></span>
         <span class="property-type">str</span>
     </dt>
-    <dd>{{% md %}}Public key data{{% /md %}}</dd>
-    <dt class="property-optional"
+    <dd>{{% md %}}Public key data{{% /md %}}</dd><dt class="property-optional"
             title="Optional">
         <span id="username_python">
 <a href="#username_python" style="color: inherit; text-decoration: inherit;">username</a>
@@ -7989,8 +6898,7 @@ The following output properties are available:
         <span class="property-indicator"></span>
         <span class="property-type">str</span>
     </dt>
-    <dd>{{% md %}}Username of admin account{{% /md %}}</dd>
-</dl>
+    <dd>{{% md %}}Username of admin account{{% /md %}}</dd></dl>
 {{% /choosable %}}
 
 

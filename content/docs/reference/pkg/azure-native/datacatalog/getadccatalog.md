@@ -51,9 +51,7 @@ The following arguments are supported:
 
 
 {{% choosable language csharp %}}
-<dl class="resources-properties">
-
-    <dt class="property-required"
+<dl class="resources-properties"><dt class="property-required"
             title="Required">
         <span id="catalogname_csharp">
 <a href="#catalogname_csharp" style="color: inherit; text-decoration: inherit;">Catalog<wbr>Name</a>
@@ -61,8 +59,7 @@ The following arguments are supported:
         <span class="property-indicator"></span>
         <span class="property-type">string</span>
     </dt>
-    <dd>{{% md %}}The name of the data catalog in the specified subscription and resource group.{{% /md %}}</dd>
-    <dt class="property-required"
+    <dd>{{% md %}}The name of the data catalog in the specified subscription and resource group.{{% /md %}}</dd><dt class="property-required"
             title="Required">
         <span id="resourcegroupname_csharp">
 <a href="#resourcegroupname_csharp" style="color: inherit; text-decoration: inherit;">Resource<wbr>Group<wbr>Name</a>
@@ -70,14 +67,11 @@ The following arguments are supported:
         <span class="property-indicator"></span>
         <span class="property-type">string</span>
     </dt>
-    <dd>{{% md %}}The name of the resource group within the user's subscription. The name is case insensitive.{{% /md %}}</dd>
-</dl>
+    <dd>{{% md %}}The name of the resource group within the user's subscription. The name is case insensitive.{{% /md %}}</dd></dl>
 {{% /choosable %}}
 
 {{% choosable language go %}}
-<dl class="resources-properties">
-
-    <dt class="property-required"
+<dl class="resources-properties"><dt class="property-required"
             title="Required">
         <span id="catalogname_go">
 <a href="#catalogname_go" style="color: inherit; text-decoration: inherit;">Catalog<wbr>Name</a>
@@ -85,8 +79,7 @@ The following arguments are supported:
         <span class="property-indicator"></span>
         <span class="property-type">string</span>
     </dt>
-    <dd>{{% md %}}The name of the data catalog in the specified subscription and resource group.{{% /md %}}</dd>
-    <dt class="property-required"
+    <dd>{{% md %}}The name of the data catalog in the specified subscription and resource group.{{% /md %}}</dd><dt class="property-required"
             title="Required">
         <span id="resourcegroupname_go">
 <a href="#resourcegroupname_go" style="color: inherit; text-decoration: inherit;">Resource<wbr>Group<wbr>Name</a>
@@ -94,14 +87,11 @@ The following arguments are supported:
         <span class="property-indicator"></span>
         <span class="property-type">string</span>
     </dt>
-    <dd>{{% md %}}The name of the resource group within the user's subscription. The name is case insensitive.{{% /md %}}</dd>
-</dl>
+    <dd>{{% md %}}The name of the resource group within the user's subscription. The name is case insensitive.{{% /md %}}</dd></dl>
 {{% /choosable %}}
 
 {{% choosable language nodejs %}}
-<dl class="resources-properties">
-
-    <dt class="property-required"
+<dl class="resources-properties"><dt class="property-required"
             title="Required">
         <span id="catalogname_nodejs">
 <a href="#catalogname_nodejs" style="color: inherit; text-decoration: inherit;">catalog<wbr>Name</a>
@@ -109,8 +99,7 @@ The following arguments are supported:
         <span class="property-indicator"></span>
         <span class="property-type">string</span>
     </dt>
-    <dd>{{% md %}}The name of the data catalog in the specified subscription and resource group.{{% /md %}}</dd>
-    <dt class="property-required"
+    <dd>{{% md %}}The name of the data catalog in the specified subscription and resource group.{{% /md %}}</dd><dt class="property-required"
             title="Required">
         <span id="resourcegroupname_nodejs">
 <a href="#resourcegroupname_nodejs" style="color: inherit; text-decoration: inherit;">resource<wbr>Group<wbr>Name</a>
@@ -118,14 +107,11 @@ The following arguments are supported:
         <span class="property-indicator"></span>
         <span class="property-type">string</span>
     </dt>
-    <dd>{{% md %}}The name of the resource group within the user's subscription. The name is case insensitive.{{% /md %}}</dd>
-</dl>
+    <dd>{{% md %}}The name of the resource group within the user's subscription. The name is case insensitive.{{% /md %}}</dd></dl>
 {{% /choosable %}}
 
 {{% choosable language python %}}
-<dl class="resources-properties">
-
-    <dt class="property-required"
+<dl class="resources-properties"><dt class="property-required"
             title="Required">
         <span id="catalog_name_python">
 <a href="#catalog_name_python" style="color: inherit; text-decoration: inherit;">catalog_<wbr>name</a>
@@ -133,8 +119,7 @@ The following arguments are supported:
         <span class="property-indicator"></span>
         <span class="property-type">str</span>
     </dt>
-    <dd>{{% md %}}The name of the data catalog in the specified subscription and resource group.{{% /md %}}</dd>
-    <dt class="property-required"
+    <dd>{{% md %}}The name of the data catalog in the specified subscription and resource group.{{% /md %}}</dd><dt class="property-required"
             title="Required">
         <span id="resource_group_name_python">
 <a href="#resource_group_name_python" style="color: inherit; text-decoration: inherit;">resource_<wbr>group_<wbr>name</a>
@@ -142,8 +127,7 @@ The following arguments are supported:
         <span class="property-indicator"></span>
         <span class="property-type">str</span>
     </dt>
-    <dd>{{% md %}}The name of the resource group within the user's subscription. The name is case insensitive.{{% /md %}}</dd>
-</dl>
+    <dd>{{% md %}}The name of the resource group within the user's subscription. The name is case insensitive.{{% /md %}}</dd></dl>
 {{% /choosable %}}
 
 
@@ -156,9 +140,7 @@ The following output properties are available:
 
 
 {{% choosable language csharp %}}
-<dl class="resources-properties">
-
-    <dt class="property-"
+<dl class="resources-properties"><dt class="property-"
             title="">
         <span id="id_csharp">
 <a href="#id_csharp" style="color: inherit; text-decoration: inherit;">Id</a>
@@ -166,8 +148,7 @@ The following output properties are available:
         <span class="property-indicator"></span>
         <span class="property-type">string</span>
     </dt>
-    <dd>{{% md %}}Resource Id{{% /md %}}</dd>
-    <dt class="property-"
+    <dd>{{% md %}}Resource Id{{% /md %}}</dd><dt class="property-"
             title="">
         <span id="name_csharp">
 <a href="#name_csharp" style="color: inherit; text-decoration: inherit;">Name</a>
@@ -175,8 +156,7 @@ The following output properties are available:
         <span class="property-indicator"></span>
         <span class="property-type">string</span>
     </dt>
-    <dd>{{% md %}}Resource name{{% /md %}}</dd>
-    <dt class="property-"
+    <dd>{{% md %}}Resource name{{% /md %}}</dd><dt class="property-"
             title="">
         <span id="type_csharp">
 <a href="#type_csharp" style="color: inherit; text-decoration: inherit;">Type</a>
@@ -184,8 +164,7 @@ The following output properties are available:
         <span class="property-indicator"></span>
         <span class="property-type">string</span>
     </dt>
-    <dd>{{% md %}}Resource type{{% /md %}}</dd>
-    <dt class="property-"
+    <dd>{{% md %}}Resource type{{% /md %}}</dd><dt class="property-"
             title="">
         <span id="admins_csharp">
 <a href="#admins_csharp" style="color: inherit; text-decoration: inherit;">Admins</a>
@@ -193,8 +172,7 @@ The following output properties are available:
         <span class="property-indicator"></span>
         <span class="property-type"><a href="#principalsresponse">List&lt;Pulumi.<wbr>Azure<wbr>Native.<wbr>Data<wbr>Catalog.<wbr>Outputs.<wbr>Principals<wbr>Response&gt;</a></span>
     </dt>
-    <dd>{{% md %}}Azure data catalog admin list.{{% /md %}}</dd>
-    <dt class="property-"
+    <dd>{{% md %}}Azure data catalog admin list.{{% /md %}}</dd><dt class="property-"
             title="">
         <span id="enableautomaticunitadjustment_csharp">
 <a href="#enableautomaticunitadjustment_csharp" style="color: inherit; text-decoration: inherit;">Enable<wbr>Automatic<wbr>Unit<wbr>Adjustment</a>
@@ -202,8 +180,7 @@ The following output properties are available:
         <span class="property-indicator"></span>
         <span class="property-type">bool</span>
     </dt>
-    <dd>{{% md %}}Automatic unit adjustment enabled or not.{{% /md %}}</dd>
-    <dt class="property-"
+    <dd>{{% md %}}Automatic unit adjustment enabled or not.{{% /md %}}</dd><dt class="property-"
             title="">
         <span id="etag_csharp">
 <a href="#etag_csharp" style="color: inherit; text-decoration: inherit;">Etag</a>
@@ -211,8 +188,7 @@ The following output properties are available:
         <span class="property-indicator"></span>
         <span class="property-type">string</span>
     </dt>
-    <dd>{{% md %}}Resource etag{{% /md %}}</dd>
-    <dt class="property-"
+    <dd>{{% md %}}Resource etag{{% /md %}}</dd><dt class="property-"
             title="">
         <span id="location_csharp">
 <a href="#location_csharp" style="color: inherit; text-decoration: inherit;">Location</a>
@@ -220,8 +196,7 @@ The following output properties are available:
         <span class="property-indicator"></span>
         <span class="property-type">string</span>
     </dt>
-    <dd>{{% md %}}Resource location{{% /md %}}</dd>
-    <dt class="property-"
+    <dd>{{% md %}}Resource location{{% /md %}}</dd><dt class="property-"
             title="">
         <span id="sku_csharp">
 <a href="#sku_csharp" style="color: inherit; text-decoration: inherit;">Sku</a>
@@ -229,8 +204,7 @@ The following output properties are available:
         <span class="property-indicator"></span>
         <span class="property-type">string</span>
     </dt>
-    <dd>{{% md %}}Azure data catalog SKU.{{% /md %}}</dd>
-    <dt class="property-"
+    <dd>{{% md %}}Azure data catalog SKU.{{% /md %}}</dd><dt class="property-"
             title="">
         <span id="successfullyprovisioned_csharp">
 <a href="#successfullyprovisioned_csharp" style="color: inherit; text-decoration: inherit;">Successfully<wbr>Provisioned</a>
@@ -238,8 +212,7 @@ The following output properties are available:
         <span class="property-indicator"></span>
         <span class="property-type">bool</span>
     </dt>
-    <dd>{{% md %}}Azure data catalog provision status.{{% /md %}}</dd>
-    <dt class="property-"
+    <dd>{{% md %}}Azure data catalog provision status.{{% /md %}}</dd><dt class="property-"
             title="">
         <span id="tags_csharp">
 <a href="#tags_csharp" style="color: inherit; text-decoration: inherit;">Tags</a>
@@ -247,8 +220,7 @@ The following output properties are available:
         <span class="property-indicator"></span>
         <span class="property-type">Dictionary&lt;string, string&gt;</span>
     </dt>
-    <dd>{{% md %}}Resource tags{{% /md %}}</dd>
-    <dt class="property-"
+    <dd>{{% md %}}Resource tags{{% /md %}}</dd><dt class="property-"
             title="">
         <span id="units_csharp">
 <a href="#units_csharp" style="color: inherit; text-decoration: inherit;">Units</a>
@@ -256,8 +228,7 @@ The following output properties are available:
         <span class="property-indicator"></span>
         <span class="property-type">int</span>
     </dt>
-    <dd>{{% md %}}Azure data catalog units.{{% /md %}}</dd>
-    <dt class="property-"
+    <dd>{{% md %}}Azure data catalog units.{{% /md %}}</dd><dt class="property-"
             title="">
         <span id="users_csharp">
 <a href="#users_csharp" style="color: inherit; text-decoration: inherit;">Users</a>
@@ -265,14 +236,11 @@ The following output properties are available:
         <span class="property-indicator"></span>
         <span class="property-type"><a href="#principalsresponse">List&lt;Pulumi.<wbr>Azure<wbr>Native.<wbr>Data<wbr>Catalog.<wbr>Outputs.<wbr>Principals<wbr>Response&gt;</a></span>
     </dt>
-    <dd>{{% md %}}Azure data catalog user list.{{% /md %}}</dd>
-</dl>
+    <dd>{{% md %}}Azure data catalog user list.{{% /md %}}</dd></dl>
 {{% /choosable %}}
 
 {{% choosable language go %}}
-<dl class="resources-properties">
-
-    <dt class="property-"
+<dl class="resources-properties"><dt class="property-"
             title="">
         <span id="id_go">
 <a href="#id_go" style="color: inherit; text-decoration: inherit;">Id</a>
@@ -280,8 +248,7 @@ The following output properties are available:
         <span class="property-indicator"></span>
         <span class="property-type">string</span>
     </dt>
-    <dd>{{% md %}}Resource Id{{% /md %}}</dd>
-    <dt class="property-"
+    <dd>{{% md %}}Resource Id{{% /md %}}</dd><dt class="property-"
             title="">
         <span id="name_go">
 <a href="#name_go" style="color: inherit; text-decoration: inherit;">Name</a>
@@ -289,8 +256,7 @@ The following output properties are available:
         <span class="property-indicator"></span>
         <span class="property-type">string</span>
     </dt>
-    <dd>{{% md %}}Resource name{{% /md %}}</dd>
-    <dt class="property-"
+    <dd>{{% md %}}Resource name{{% /md %}}</dd><dt class="property-"
             title="">
         <span id="type_go">
 <a href="#type_go" style="color: inherit; text-decoration: inherit;">Type</a>
@@ -298,8 +264,7 @@ The following output properties are available:
         <span class="property-indicator"></span>
         <span class="property-type">string</span>
     </dt>
-    <dd>{{% md %}}Resource type{{% /md %}}</dd>
-    <dt class="property-"
+    <dd>{{% md %}}Resource type{{% /md %}}</dd><dt class="property-"
             title="">
         <span id="admins_go">
 <a href="#admins_go" style="color: inherit; text-decoration: inherit;">Admins</a>
@@ -307,8 +272,7 @@ The following output properties are available:
         <span class="property-indicator"></span>
         <span class="property-type"><a href="#principalsresponse">[]Principals<wbr>Response</a></span>
     </dt>
-    <dd>{{% md %}}Azure data catalog admin list.{{% /md %}}</dd>
-    <dt class="property-"
+    <dd>{{% md %}}Azure data catalog admin list.{{% /md %}}</dd><dt class="property-"
             title="">
         <span id="enableautomaticunitadjustment_go">
 <a href="#enableautomaticunitadjustment_go" style="color: inherit; text-decoration: inherit;">Enable<wbr>Automatic<wbr>Unit<wbr>Adjustment</a>
@@ -316,8 +280,7 @@ The following output properties are available:
         <span class="property-indicator"></span>
         <span class="property-type">bool</span>
     </dt>
-    <dd>{{% md %}}Automatic unit adjustment enabled or not.{{% /md %}}</dd>
-    <dt class="property-"
+    <dd>{{% md %}}Automatic unit adjustment enabled or not.{{% /md %}}</dd><dt class="property-"
             title="">
         <span id="etag_go">
 <a href="#etag_go" style="color: inherit; text-decoration: inherit;">Etag</a>
@@ -325,8 +288,7 @@ The following output properties are available:
         <span class="property-indicator"></span>
         <span class="property-type">string</span>
     </dt>
-    <dd>{{% md %}}Resource etag{{% /md %}}</dd>
-    <dt class="property-"
+    <dd>{{% md %}}Resource etag{{% /md %}}</dd><dt class="property-"
             title="">
         <span id="location_go">
 <a href="#location_go" style="color: inherit; text-decoration: inherit;">Location</a>
@@ -334,8 +296,7 @@ The following output properties are available:
         <span class="property-indicator"></span>
         <span class="property-type">string</span>
     </dt>
-    <dd>{{% md %}}Resource location{{% /md %}}</dd>
-    <dt class="property-"
+    <dd>{{% md %}}Resource location{{% /md %}}</dd><dt class="property-"
             title="">
         <span id="sku_go">
 <a href="#sku_go" style="color: inherit; text-decoration: inherit;">Sku</a>
@@ -343,8 +304,7 @@ The following output properties are available:
         <span class="property-indicator"></span>
         <span class="property-type">string</span>
     </dt>
-    <dd>{{% md %}}Azure data catalog SKU.{{% /md %}}</dd>
-    <dt class="property-"
+    <dd>{{% md %}}Azure data catalog SKU.{{% /md %}}</dd><dt class="property-"
             title="">
         <span id="successfullyprovisioned_go">
 <a href="#successfullyprovisioned_go" style="color: inherit; text-decoration: inherit;">Successfully<wbr>Provisioned</a>
@@ -352,8 +312,7 @@ The following output properties are available:
         <span class="property-indicator"></span>
         <span class="property-type">bool</span>
     </dt>
-    <dd>{{% md %}}Azure data catalog provision status.{{% /md %}}</dd>
-    <dt class="property-"
+    <dd>{{% md %}}Azure data catalog provision status.{{% /md %}}</dd><dt class="property-"
             title="">
         <span id="tags_go">
 <a href="#tags_go" style="color: inherit; text-decoration: inherit;">Tags</a>
@@ -361,8 +320,7 @@ The following output properties are available:
         <span class="property-indicator"></span>
         <span class="property-type">map[string]string</span>
     </dt>
-    <dd>{{% md %}}Resource tags{{% /md %}}</dd>
-    <dt class="property-"
+    <dd>{{% md %}}Resource tags{{% /md %}}</dd><dt class="property-"
             title="">
         <span id="units_go">
 <a href="#units_go" style="color: inherit; text-decoration: inherit;">Units</a>
@@ -370,8 +328,7 @@ The following output properties are available:
         <span class="property-indicator"></span>
         <span class="property-type">int</span>
     </dt>
-    <dd>{{% md %}}Azure data catalog units.{{% /md %}}</dd>
-    <dt class="property-"
+    <dd>{{% md %}}Azure data catalog units.{{% /md %}}</dd><dt class="property-"
             title="">
         <span id="users_go">
 <a href="#users_go" style="color: inherit; text-decoration: inherit;">Users</a>
@@ -379,14 +336,11 @@ The following output properties are available:
         <span class="property-indicator"></span>
         <span class="property-type"><a href="#principalsresponse">[]Principals<wbr>Response</a></span>
     </dt>
-    <dd>{{% md %}}Azure data catalog user list.{{% /md %}}</dd>
-</dl>
+    <dd>{{% md %}}Azure data catalog user list.{{% /md %}}</dd></dl>
 {{% /choosable %}}
 
 {{% choosable language nodejs %}}
-<dl class="resources-properties">
-
-    <dt class="property-"
+<dl class="resources-properties"><dt class="property-"
             title="">
         <span id="id_nodejs">
 <a href="#id_nodejs" style="color: inherit; text-decoration: inherit;">id</a>
@@ -394,8 +348,7 @@ The following output properties are available:
         <span class="property-indicator"></span>
         <span class="property-type">string</span>
     </dt>
-    <dd>{{% md %}}Resource Id{{% /md %}}</dd>
-    <dt class="property-"
+    <dd>{{% md %}}Resource Id{{% /md %}}</dd><dt class="property-"
             title="">
         <span id="name_nodejs">
 <a href="#name_nodejs" style="color: inherit; text-decoration: inherit;">name</a>
@@ -403,8 +356,7 @@ The following output properties are available:
         <span class="property-indicator"></span>
         <span class="property-type">string</span>
     </dt>
-    <dd>{{% md %}}Resource name{{% /md %}}</dd>
-    <dt class="property-"
+    <dd>{{% md %}}Resource name{{% /md %}}</dd><dt class="property-"
             title="">
         <span id="type_nodejs">
 <a href="#type_nodejs" style="color: inherit; text-decoration: inherit;">type</a>
@@ -412,8 +364,7 @@ The following output properties are available:
         <span class="property-indicator"></span>
         <span class="property-type">string</span>
     </dt>
-    <dd>{{% md %}}Resource type{{% /md %}}</dd>
-    <dt class="property-"
+    <dd>{{% md %}}Resource type{{% /md %}}</dd><dt class="property-"
             title="">
         <span id="admins_nodejs">
 <a href="#admins_nodejs" style="color: inherit; text-decoration: inherit;">admins</a>
@@ -421,8 +372,7 @@ The following output properties are available:
         <span class="property-indicator"></span>
         <span class="property-type"><a href="#principalsresponse">Principals<wbr>Response[]</a></span>
     </dt>
-    <dd>{{% md %}}Azure data catalog admin list.{{% /md %}}</dd>
-    <dt class="property-"
+    <dd>{{% md %}}Azure data catalog admin list.{{% /md %}}</dd><dt class="property-"
             title="">
         <span id="enableautomaticunitadjustment_nodejs">
 <a href="#enableautomaticunitadjustment_nodejs" style="color: inherit; text-decoration: inherit;">enable<wbr>Automatic<wbr>Unit<wbr>Adjustment</a>
@@ -430,8 +380,7 @@ The following output properties are available:
         <span class="property-indicator"></span>
         <span class="property-type">boolean</span>
     </dt>
-    <dd>{{% md %}}Automatic unit adjustment enabled or not.{{% /md %}}</dd>
-    <dt class="property-"
+    <dd>{{% md %}}Automatic unit adjustment enabled or not.{{% /md %}}</dd><dt class="property-"
             title="">
         <span id="etag_nodejs">
 <a href="#etag_nodejs" style="color: inherit; text-decoration: inherit;">etag</a>
@@ -439,8 +388,7 @@ The following output properties are available:
         <span class="property-indicator"></span>
         <span class="property-type">string</span>
     </dt>
-    <dd>{{% md %}}Resource etag{{% /md %}}</dd>
-    <dt class="property-"
+    <dd>{{% md %}}Resource etag{{% /md %}}</dd><dt class="property-"
             title="">
         <span id="location_nodejs">
 <a href="#location_nodejs" style="color: inherit; text-decoration: inherit;">location</a>
@@ -448,8 +396,7 @@ The following output properties are available:
         <span class="property-indicator"></span>
         <span class="property-type">string</span>
     </dt>
-    <dd>{{% md %}}Resource location{{% /md %}}</dd>
-    <dt class="property-"
+    <dd>{{% md %}}Resource location{{% /md %}}</dd><dt class="property-"
             title="">
         <span id="sku_nodejs">
 <a href="#sku_nodejs" style="color: inherit; text-decoration: inherit;">sku</a>
@@ -457,8 +404,7 @@ The following output properties are available:
         <span class="property-indicator"></span>
         <span class="property-type">string</span>
     </dt>
-    <dd>{{% md %}}Azure data catalog SKU.{{% /md %}}</dd>
-    <dt class="property-"
+    <dd>{{% md %}}Azure data catalog SKU.{{% /md %}}</dd><dt class="property-"
             title="">
         <span id="successfullyprovisioned_nodejs">
 <a href="#successfullyprovisioned_nodejs" style="color: inherit; text-decoration: inherit;">successfully<wbr>Provisioned</a>
@@ -466,8 +412,7 @@ The following output properties are available:
         <span class="property-indicator"></span>
         <span class="property-type">boolean</span>
     </dt>
-    <dd>{{% md %}}Azure data catalog provision status.{{% /md %}}</dd>
-    <dt class="property-"
+    <dd>{{% md %}}Azure data catalog provision status.{{% /md %}}</dd><dt class="property-"
             title="">
         <span id="tags_nodejs">
 <a href="#tags_nodejs" style="color: inherit; text-decoration: inherit;">tags</a>
@@ -475,8 +420,7 @@ The following output properties are available:
         <span class="property-indicator"></span>
         <span class="property-type">{[key: string]: string}</span>
     </dt>
-    <dd>{{% md %}}Resource tags{{% /md %}}</dd>
-    <dt class="property-"
+    <dd>{{% md %}}Resource tags{{% /md %}}</dd><dt class="property-"
             title="">
         <span id="units_nodejs">
 <a href="#units_nodejs" style="color: inherit; text-decoration: inherit;">units</a>
@@ -484,8 +428,7 @@ The following output properties are available:
         <span class="property-indicator"></span>
         <span class="property-type">number</span>
     </dt>
-    <dd>{{% md %}}Azure data catalog units.{{% /md %}}</dd>
-    <dt class="property-"
+    <dd>{{% md %}}Azure data catalog units.{{% /md %}}</dd><dt class="property-"
             title="">
         <span id="users_nodejs">
 <a href="#users_nodejs" style="color: inherit; text-decoration: inherit;">users</a>
@@ -493,14 +436,11 @@ The following output properties are available:
         <span class="property-indicator"></span>
         <span class="property-type"><a href="#principalsresponse">Principals<wbr>Response[]</a></span>
     </dt>
-    <dd>{{% md %}}Azure data catalog user list.{{% /md %}}</dd>
-</dl>
+    <dd>{{% md %}}Azure data catalog user list.{{% /md %}}</dd></dl>
 {{% /choosable %}}
 
 {{% choosable language python %}}
-<dl class="resources-properties">
-
-    <dt class="property-"
+<dl class="resources-properties"><dt class="property-"
             title="">
         <span id="id_python">
 <a href="#id_python" style="color: inherit; text-decoration: inherit;">id</a>
@@ -508,8 +448,7 @@ The following output properties are available:
         <span class="property-indicator"></span>
         <span class="property-type">str</span>
     </dt>
-    <dd>{{% md %}}Resource Id{{% /md %}}</dd>
-    <dt class="property-"
+    <dd>{{% md %}}Resource Id{{% /md %}}</dd><dt class="property-"
             title="">
         <span id="name_python">
 <a href="#name_python" style="color: inherit; text-decoration: inherit;">name</a>
@@ -517,8 +456,7 @@ The following output properties are available:
         <span class="property-indicator"></span>
         <span class="property-type">str</span>
     </dt>
-    <dd>{{% md %}}Resource name{{% /md %}}</dd>
-    <dt class="property-"
+    <dd>{{% md %}}Resource name{{% /md %}}</dd><dt class="property-"
             title="">
         <span id="type_python">
 <a href="#type_python" style="color: inherit; text-decoration: inherit;">type</a>
@@ -526,8 +464,7 @@ The following output properties are available:
         <span class="property-indicator"></span>
         <span class="property-type">str</span>
     </dt>
-    <dd>{{% md %}}Resource type{{% /md %}}</dd>
-    <dt class="property-"
+    <dd>{{% md %}}Resource type{{% /md %}}</dd><dt class="property-"
             title="">
         <span id="admins_python">
 <a href="#admins_python" style="color: inherit; text-decoration: inherit;">admins</a>
@@ -535,8 +472,7 @@ The following output properties are available:
         <span class="property-indicator"></span>
         <span class="property-type"><a href="#principalsresponse">Sequence[Principals<wbr>Response]</a></span>
     </dt>
-    <dd>{{% md %}}Azure data catalog admin list.{{% /md %}}</dd>
-    <dt class="property-"
+    <dd>{{% md %}}Azure data catalog admin list.{{% /md %}}</dd><dt class="property-"
             title="">
         <span id="enable_automatic_unit_adjustment_python">
 <a href="#enable_automatic_unit_adjustment_python" style="color: inherit; text-decoration: inherit;">enable_<wbr>automatic_<wbr>unit_<wbr>adjustment</a>
@@ -544,8 +480,7 @@ The following output properties are available:
         <span class="property-indicator"></span>
         <span class="property-type">bool</span>
     </dt>
-    <dd>{{% md %}}Automatic unit adjustment enabled or not.{{% /md %}}</dd>
-    <dt class="property-"
+    <dd>{{% md %}}Automatic unit adjustment enabled or not.{{% /md %}}</dd><dt class="property-"
             title="">
         <span id="etag_python">
 <a href="#etag_python" style="color: inherit; text-decoration: inherit;">etag</a>
@@ -553,8 +488,7 @@ The following output properties are available:
         <span class="property-indicator"></span>
         <span class="property-type">str</span>
     </dt>
-    <dd>{{% md %}}Resource etag{{% /md %}}</dd>
-    <dt class="property-"
+    <dd>{{% md %}}Resource etag{{% /md %}}</dd><dt class="property-"
             title="">
         <span id="location_python">
 <a href="#location_python" style="color: inherit; text-decoration: inherit;">location</a>
@@ -562,8 +496,7 @@ The following output properties are available:
         <span class="property-indicator"></span>
         <span class="property-type">str</span>
     </dt>
-    <dd>{{% md %}}Resource location{{% /md %}}</dd>
-    <dt class="property-"
+    <dd>{{% md %}}Resource location{{% /md %}}</dd><dt class="property-"
             title="">
         <span id="sku_python">
 <a href="#sku_python" style="color: inherit; text-decoration: inherit;">sku</a>
@@ -571,8 +504,7 @@ The following output properties are available:
         <span class="property-indicator"></span>
         <span class="property-type">str</span>
     </dt>
-    <dd>{{% md %}}Azure data catalog SKU.{{% /md %}}</dd>
-    <dt class="property-"
+    <dd>{{% md %}}Azure data catalog SKU.{{% /md %}}</dd><dt class="property-"
             title="">
         <span id="successfully_provisioned_python">
 <a href="#successfully_provisioned_python" style="color: inherit; text-decoration: inherit;">successfully_<wbr>provisioned</a>
@@ -580,8 +512,7 @@ The following output properties are available:
         <span class="property-indicator"></span>
         <span class="property-type">bool</span>
     </dt>
-    <dd>{{% md %}}Azure data catalog provision status.{{% /md %}}</dd>
-    <dt class="property-"
+    <dd>{{% md %}}Azure data catalog provision status.{{% /md %}}</dd><dt class="property-"
             title="">
         <span id="tags_python">
 <a href="#tags_python" style="color: inherit; text-decoration: inherit;">tags</a>
@@ -589,8 +520,7 @@ The following output properties are available:
         <span class="property-indicator"></span>
         <span class="property-type">Mapping[str, str]</span>
     </dt>
-    <dd>{{% md %}}Resource tags{{% /md %}}</dd>
-    <dt class="property-"
+    <dd>{{% md %}}Resource tags{{% /md %}}</dd><dt class="property-"
             title="">
         <span id="units_python">
 <a href="#units_python" style="color: inherit; text-decoration: inherit;">units</a>
@@ -598,8 +528,7 @@ The following output properties are available:
         <span class="property-indicator"></span>
         <span class="property-type">int</span>
     </dt>
-    <dd>{{% md %}}Azure data catalog units.{{% /md %}}</dd>
-    <dt class="property-"
+    <dd>{{% md %}}Azure data catalog units.{{% /md %}}</dd><dt class="property-"
             title="">
         <span id="users_python">
 <a href="#users_python" style="color: inherit; text-decoration: inherit;">users</a>
@@ -607,8 +536,7 @@ The following output properties are available:
         <span class="property-indicator"></span>
         <span class="property-type"><a href="#principalsresponse">Sequence[Principals<wbr>Response]</a></span>
     </dt>
-    <dd>{{% md %}}Azure data catalog user list.{{% /md %}}</dd>
-</dl>
+    <dd>{{% md %}}Azure data catalog user list.{{% /md %}}</dd></dl>
 {{% /choosable %}}
 
 
@@ -622,9 +550,7 @@ The following output properties are available:
 
 
 {{% choosable language csharp %}}
-<dl class="resources-properties">
-
-    <dt class="property-optional"
+<dl class="resources-properties"><dt class="property-optional"
             title="Optional">
         <span id="objectid_csharp">
 <a href="#objectid_csharp" style="color: inherit; text-decoration: inherit;">Object<wbr>Id</a>
@@ -632,8 +558,7 @@ The following output properties are available:
         <span class="property-indicator"></span>
         <span class="property-type">string</span>
     </dt>
-    <dd>{{% md %}}Object Id for the user{{% /md %}}</dd>
-    <dt class="property-optional"
+    <dd>{{% md %}}Object Id for the user{{% /md %}}</dd><dt class="property-optional"
             title="Optional">
         <span id="upn_csharp">
 <a href="#upn_csharp" style="color: inherit; text-decoration: inherit;">Upn</a>
@@ -641,14 +566,11 @@ The following output properties are available:
         <span class="property-indicator"></span>
         <span class="property-type">string</span>
     </dt>
-    <dd>{{% md %}}UPN of the user.{{% /md %}}</dd>
-</dl>
+    <dd>{{% md %}}UPN of the user.{{% /md %}}</dd></dl>
 {{% /choosable %}}
 
 {{% choosable language go %}}
-<dl class="resources-properties">
-
-    <dt class="property-optional"
+<dl class="resources-properties"><dt class="property-optional"
             title="Optional">
         <span id="objectid_go">
 <a href="#objectid_go" style="color: inherit; text-decoration: inherit;">Object<wbr>Id</a>
@@ -656,8 +578,7 @@ The following output properties are available:
         <span class="property-indicator"></span>
         <span class="property-type">string</span>
     </dt>
-    <dd>{{% md %}}Object Id for the user{{% /md %}}</dd>
-    <dt class="property-optional"
+    <dd>{{% md %}}Object Id for the user{{% /md %}}</dd><dt class="property-optional"
             title="Optional">
         <span id="upn_go">
 <a href="#upn_go" style="color: inherit; text-decoration: inherit;">Upn</a>
@@ -665,14 +586,11 @@ The following output properties are available:
         <span class="property-indicator"></span>
         <span class="property-type">string</span>
     </dt>
-    <dd>{{% md %}}UPN of the user.{{% /md %}}</dd>
-</dl>
+    <dd>{{% md %}}UPN of the user.{{% /md %}}</dd></dl>
 {{% /choosable %}}
 
 {{% choosable language nodejs %}}
-<dl class="resources-properties">
-
-    <dt class="property-optional"
+<dl class="resources-properties"><dt class="property-optional"
             title="Optional">
         <span id="objectid_nodejs">
 <a href="#objectid_nodejs" style="color: inherit; text-decoration: inherit;">object<wbr>Id</a>
@@ -680,8 +598,7 @@ The following output properties are available:
         <span class="property-indicator"></span>
         <span class="property-type">string</span>
     </dt>
-    <dd>{{% md %}}Object Id for the user{{% /md %}}</dd>
-    <dt class="property-optional"
+    <dd>{{% md %}}Object Id for the user{{% /md %}}</dd><dt class="property-optional"
             title="Optional">
         <span id="upn_nodejs">
 <a href="#upn_nodejs" style="color: inherit; text-decoration: inherit;">upn</a>
@@ -689,14 +606,11 @@ The following output properties are available:
         <span class="property-indicator"></span>
         <span class="property-type">string</span>
     </dt>
-    <dd>{{% md %}}UPN of the user.{{% /md %}}</dd>
-</dl>
+    <dd>{{% md %}}UPN of the user.{{% /md %}}</dd></dl>
 {{% /choosable %}}
 
 {{% choosable language python %}}
-<dl class="resources-properties">
-
-    <dt class="property-optional"
+<dl class="resources-properties"><dt class="property-optional"
             title="Optional">
         <span id="object_id_python">
 <a href="#object_id_python" style="color: inherit; text-decoration: inherit;">object_<wbr>id</a>
@@ -704,8 +618,7 @@ The following output properties are available:
         <span class="property-indicator"></span>
         <span class="property-type">str</span>
     </dt>
-    <dd>{{% md %}}Object Id for the user{{% /md %}}</dd>
-    <dt class="property-optional"
+    <dd>{{% md %}}Object Id for the user{{% /md %}}</dd><dt class="property-optional"
             title="Optional">
         <span id="upn_python">
 <a href="#upn_python" style="color: inherit; text-decoration: inherit;">upn</a>
@@ -713,8 +626,7 @@ The following output properties are available:
         <span class="property-indicator"></span>
         <span class="property-type">str</span>
     </dt>
-    <dd>{{% md %}}UPN of the user.{{% /md %}}</dd>
-</dl>
+    <dd>{{% md %}}UPN of the user.{{% /md %}}</dd></dl>
 {{% /choosable %}}
 
 

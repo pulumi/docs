@@ -51,9 +51,7 @@ The following arguments are supported:
 
 
 {{% choosable language csharp %}}
-<dl class="resources-properties">
-
-    <dt class="property-required"
+<dl class="resources-properties"><dt class="property-required"
             title="Required">
         <span id="cloudendpointname_csharp">
 <a href="#cloudendpointname_csharp" style="color: inherit; text-decoration: inherit;">Cloud<wbr>Endpoint<wbr>Name</a>
@@ -61,8 +59,7 @@ The following arguments are supported:
         <span class="property-indicator"></span>
         <span class="property-type">string</span>
     </dt>
-    <dd>{{% md %}}Name of Cloud Endpoint object.{{% /md %}}</dd>
-    <dt class="property-required"
+    <dd>{{% md %}}Name of Cloud Endpoint object.{{% /md %}}</dd><dt class="property-required"
             title="Required">
         <span id="resourcegroupname_csharp">
 <a href="#resourcegroupname_csharp" style="color: inherit; text-decoration: inherit;">Resource<wbr>Group<wbr>Name</a>
@@ -70,8 +67,7 @@ The following arguments are supported:
         <span class="property-indicator"></span>
         <span class="property-type">string</span>
     </dt>
-    <dd>{{% md %}}The name of the resource group. The name is case insensitive.{{% /md %}}</dd>
-    <dt class="property-required"
+    <dd>{{% md %}}The name of the resource group. The name is case insensitive.{{% /md %}}</dd><dt class="property-required"
             title="Required">
         <span id="storagesyncservicename_csharp">
 <a href="#storagesyncservicename_csharp" style="color: inherit; text-decoration: inherit;">Storage<wbr>Sync<wbr>Service<wbr>Name</a>
@@ -79,8 +75,7 @@ The following arguments are supported:
         <span class="property-indicator"></span>
         <span class="property-type">string</span>
     </dt>
-    <dd>{{% md %}}Name of Storage Sync Service resource.{{% /md %}}</dd>
-    <dt class="property-required"
+    <dd>{{% md %}}Name of Storage Sync Service resource.{{% /md %}}</dd><dt class="property-required"
             title="Required">
         <span id="syncgroupname_csharp">
 <a href="#syncgroupname_csharp" style="color: inherit; text-decoration: inherit;">Sync<wbr>Group<wbr>Name</a>
@@ -88,14 +83,11 @@ The following arguments are supported:
         <span class="property-indicator"></span>
         <span class="property-type">string</span>
     </dt>
-    <dd>{{% md %}}Name of Sync Group resource.{{% /md %}}</dd>
-</dl>
+    <dd>{{% md %}}Name of Sync Group resource.{{% /md %}}</dd></dl>
 {{% /choosable %}}
 
 {{% choosable language go %}}
-<dl class="resources-properties">
-
-    <dt class="property-required"
+<dl class="resources-properties"><dt class="property-required"
             title="Required">
         <span id="cloudendpointname_go">
 <a href="#cloudendpointname_go" style="color: inherit; text-decoration: inherit;">Cloud<wbr>Endpoint<wbr>Name</a>
@@ -103,8 +95,7 @@ The following arguments are supported:
         <span class="property-indicator"></span>
         <span class="property-type">string</span>
     </dt>
-    <dd>{{% md %}}Name of Cloud Endpoint object.{{% /md %}}</dd>
-    <dt class="property-required"
+    <dd>{{% md %}}Name of Cloud Endpoint object.{{% /md %}}</dd><dt class="property-required"
             title="Required">
         <span id="resourcegroupname_go">
 <a href="#resourcegroupname_go" style="color: inherit; text-decoration: inherit;">Resource<wbr>Group<wbr>Name</a>
@@ -112,8 +103,7 @@ The following arguments are supported:
         <span class="property-indicator"></span>
         <span class="property-type">string</span>
     </dt>
-    <dd>{{% md %}}The name of the resource group. The name is case insensitive.{{% /md %}}</dd>
-    <dt class="property-required"
+    <dd>{{% md %}}The name of the resource group. The name is case insensitive.{{% /md %}}</dd><dt class="property-required"
             title="Required">
         <span id="storagesyncservicename_go">
 <a href="#storagesyncservicename_go" style="color: inherit; text-decoration: inherit;">Storage<wbr>Sync<wbr>Service<wbr>Name</a>
@@ -121,8 +111,7 @@ The following arguments are supported:
         <span class="property-indicator"></span>
         <span class="property-type">string</span>
     </dt>
-    <dd>{{% md %}}Name of Storage Sync Service resource.{{% /md %}}</dd>
-    <dt class="property-required"
+    <dd>{{% md %}}Name of Storage Sync Service resource.{{% /md %}}</dd><dt class="property-required"
             title="Required">
         <span id="syncgroupname_go">
 <a href="#syncgroupname_go" style="color: inherit; text-decoration: inherit;">Sync<wbr>Group<wbr>Name</a>
@@ -130,14 +119,11 @@ The following arguments are supported:
         <span class="property-indicator"></span>
         <span class="property-type">string</span>
     </dt>
-    <dd>{{% md %}}Name of Sync Group resource.{{% /md %}}</dd>
-</dl>
+    <dd>{{% md %}}Name of Sync Group resource.{{% /md %}}</dd></dl>
 {{% /choosable %}}
 
 {{% choosable language nodejs %}}
-<dl class="resources-properties">
-
-    <dt class="property-required"
+<dl class="resources-properties"><dt class="property-required"
             title="Required">
         <span id="cloudendpointname_nodejs">
 <a href="#cloudendpointname_nodejs" style="color: inherit; text-decoration: inherit;">cloud<wbr>Endpoint<wbr>Name</a>
@@ -145,8 +131,7 @@ The following arguments are supported:
         <span class="property-indicator"></span>
         <span class="property-type">string</span>
     </dt>
-    <dd>{{% md %}}Name of Cloud Endpoint object.{{% /md %}}</dd>
-    <dt class="property-required"
+    <dd>{{% md %}}Name of Cloud Endpoint object.{{% /md %}}</dd><dt class="property-required"
             title="Required">
         <span id="resourcegroupname_nodejs">
 <a href="#resourcegroupname_nodejs" style="color: inherit; text-decoration: inherit;">resource<wbr>Group<wbr>Name</a>
@@ -154,8 +139,7 @@ The following arguments are supported:
         <span class="property-indicator"></span>
         <span class="property-type">string</span>
     </dt>
-    <dd>{{% md %}}The name of the resource group. The name is case insensitive.{{% /md %}}</dd>
-    <dt class="property-required"
+    <dd>{{% md %}}The name of the resource group. The name is case insensitive.{{% /md %}}</dd><dt class="property-required"
             title="Required">
         <span id="storagesyncservicename_nodejs">
 <a href="#storagesyncservicename_nodejs" style="color: inherit; text-decoration: inherit;">storage<wbr>Sync<wbr>Service<wbr>Name</a>
@@ -163,8 +147,7 @@ The following arguments are supported:
         <span class="property-indicator"></span>
         <span class="property-type">string</span>
     </dt>
-    <dd>{{% md %}}Name of Storage Sync Service resource.{{% /md %}}</dd>
-    <dt class="property-required"
+    <dd>{{% md %}}Name of Storage Sync Service resource.{{% /md %}}</dd><dt class="property-required"
             title="Required">
         <span id="syncgroupname_nodejs">
 <a href="#syncgroupname_nodejs" style="color: inherit; text-decoration: inherit;">sync<wbr>Group<wbr>Name</a>
@@ -172,14 +155,11 @@ The following arguments are supported:
         <span class="property-indicator"></span>
         <span class="property-type">string</span>
     </dt>
-    <dd>{{% md %}}Name of Sync Group resource.{{% /md %}}</dd>
-</dl>
+    <dd>{{% md %}}Name of Sync Group resource.{{% /md %}}</dd></dl>
 {{% /choosable %}}
 
 {{% choosable language python %}}
-<dl class="resources-properties">
-
-    <dt class="property-required"
+<dl class="resources-properties"><dt class="property-required"
             title="Required">
         <span id="cloud_endpoint_name_python">
 <a href="#cloud_endpoint_name_python" style="color: inherit; text-decoration: inherit;">cloud_<wbr>endpoint_<wbr>name</a>
@@ -187,8 +167,7 @@ The following arguments are supported:
         <span class="property-indicator"></span>
         <span class="property-type">str</span>
     </dt>
-    <dd>{{% md %}}Name of Cloud Endpoint object.{{% /md %}}</dd>
-    <dt class="property-required"
+    <dd>{{% md %}}Name of Cloud Endpoint object.{{% /md %}}</dd><dt class="property-required"
             title="Required">
         <span id="resource_group_name_python">
 <a href="#resource_group_name_python" style="color: inherit; text-decoration: inherit;">resource_<wbr>group_<wbr>name</a>
@@ -196,8 +175,7 @@ The following arguments are supported:
         <span class="property-indicator"></span>
         <span class="property-type">str</span>
     </dt>
-    <dd>{{% md %}}The name of the resource group. The name is case insensitive.{{% /md %}}</dd>
-    <dt class="property-required"
+    <dd>{{% md %}}The name of the resource group. The name is case insensitive.{{% /md %}}</dd><dt class="property-required"
             title="Required">
         <span id="storage_sync_service_name_python">
 <a href="#storage_sync_service_name_python" style="color: inherit; text-decoration: inherit;">storage_<wbr>sync_<wbr>service_<wbr>name</a>
@@ -205,8 +183,7 @@ The following arguments are supported:
         <span class="property-indicator"></span>
         <span class="property-type">str</span>
     </dt>
-    <dd>{{% md %}}Name of Storage Sync Service resource.{{% /md %}}</dd>
-    <dt class="property-required"
+    <dd>{{% md %}}Name of Storage Sync Service resource.{{% /md %}}</dd><dt class="property-required"
             title="Required">
         <span id="sync_group_name_python">
 <a href="#sync_group_name_python" style="color: inherit; text-decoration: inherit;">sync_<wbr>group_<wbr>name</a>
@@ -214,8 +191,7 @@ The following arguments are supported:
         <span class="property-indicator"></span>
         <span class="property-type">str</span>
     </dt>
-    <dd>{{% md %}}Name of Sync Group resource.{{% /md %}}</dd>
-</dl>
+    <dd>{{% md %}}Name of Sync Group resource.{{% /md %}}</dd></dl>
 {{% /choosable %}}
 
 
@@ -228,9 +204,7 @@ The following output properties are available:
 
 
 {{% choosable language csharp %}}
-<dl class="resources-properties">
-
-    <dt class="property-"
+<dl class="resources-properties"><dt class="property-"
             title="">
         <span id="backupenabled_csharp">
 <a href="#backupenabled_csharp" style="color: inherit; text-decoration: inherit;">Backup<wbr>Enabled</a>
@@ -238,8 +212,7 @@ The following output properties are available:
         <span class="property-indicator"></span>
         <span class="property-type">string</span>
     </dt>
-    <dd>{{% md %}}Backup Enabled{{% /md %}}</dd>
-    <dt class="property-"
+    <dd>{{% md %}}Backup Enabled{{% /md %}}</dd><dt class="property-"
             title="">
         <span id="id_csharp">
 <a href="#id_csharp" style="color: inherit; text-decoration: inherit;">Id</a>
@@ -247,8 +220,7 @@ The following output properties are available:
         <span class="property-indicator"></span>
         <span class="property-type">string</span>
     </dt>
-    <dd>{{% md %}}Fully qualified resource ID for the resource. Ex - /subscriptions/{subscriptionId}/resourceGroups/{resourceGroupName}/providers/{resourceProviderNamespace}/{resourceType}/{resourceName}{{% /md %}}</dd>
-    <dt class="property-"
+    <dd>{{% md %}}Fully qualified resource ID for the resource. Ex - /subscriptions/{subscriptionId}/resourceGroups/{resourceGroupName}/providers/{resourceProviderNamespace}/{resourceType}/{resourceName}{{% /md %}}</dd><dt class="property-"
             title="">
         <span id="name_csharp">
 <a href="#name_csharp" style="color: inherit; text-decoration: inherit;">Name</a>
@@ -256,8 +228,7 @@ The following output properties are available:
         <span class="property-indicator"></span>
         <span class="property-type">string</span>
     </dt>
-    <dd>{{% md %}}The name of the resource{{% /md %}}</dd>
-    <dt class="property-"
+    <dd>{{% md %}}The name of the resource{{% /md %}}</dd><dt class="property-"
             title="">
         <span id="type_csharp">
 <a href="#type_csharp" style="color: inherit; text-decoration: inherit;">Type</a>
@@ -265,8 +236,7 @@ The following output properties are available:
         <span class="property-indicator"></span>
         <span class="property-type">string</span>
     </dt>
-    <dd>{{% md %}}The type of the resource. E.g. "Microsoft.Compute/virtualMachines" or "Microsoft.Storage/storageAccounts"{{% /md %}}</dd>
-    <dt class="property-"
+    <dd>{{% md %}}The type of the resource. E.g. "Microsoft.Compute/virtualMachines" or "Microsoft.Storage/storageAccounts"{{% /md %}}</dd><dt class="property-"
             title="">
         <span id="azurefilesharename_csharp">
 <a href="#azurefilesharename_csharp" style="color: inherit; text-decoration: inherit;">Azure<wbr>File<wbr>Share<wbr>Name</a>
@@ -274,8 +244,7 @@ The following output properties are available:
         <span class="property-indicator"></span>
         <span class="property-type">string</span>
     </dt>
-    <dd>{{% md %}}Azure file share name{{% /md %}}</dd>
-    <dt class="property-"
+    <dd>{{% md %}}Azure file share name{{% /md %}}</dd><dt class="property-"
             title="">
         <span id="friendlyname_csharp">
 <a href="#friendlyname_csharp" style="color: inherit; text-decoration: inherit;">Friendly<wbr>Name</a>
@@ -283,8 +252,7 @@ The following output properties are available:
         <span class="property-indicator"></span>
         <span class="property-type">string</span>
     </dt>
-    <dd>{{% md %}}Friendly Name{{% /md %}}</dd>
-    <dt class="property-"
+    <dd>{{% md %}}Friendly Name{{% /md %}}</dd><dt class="property-"
             title="">
         <span id="lastoperationname_csharp">
 <a href="#lastoperationname_csharp" style="color: inherit; text-decoration: inherit;">Last<wbr>Operation<wbr>Name</a>
@@ -292,8 +260,7 @@ The following output properties are available:
         <span class="property-indicator"></span>
         <span class="property-type">string</span>
     </dt>
-    <dd>{{% md %}}Resource Last Operation Name{{% /md %}}</dd>
-    <dt class="property-"
+    <dd>{{% md %}}Resource Last Operation Name{{% /md %}}</dd><dt class="property-"
             title="">
         <span id="lastworkflowid_csharp">
 <a href="#lastworkflowid_csharp" style="color: inherit; text-decoration: inherit;">Last<wbr>Workflow<wbr>Id</a>
@@ -301,8 +268,7 @@ The following output properties are available:
         <span class="property-indicator"></span>
         <span class="property-type">string</span>
     </dt>
-    <dd>{{% md %}}CloudEndpoint lastWorkflowId{{% /md %}}</dd>
-    <dt class="property-"
+    <dd>{{% md %}}CloudEndpoint lastWorkflowId{{% /md %}}</dd><dt class="property-"
             title="">
         <span id="partnershipid_csharp">
 <a href="#partnershipid_csharp" style="color: inherit; text-decoration: inherit;">Partnership<wbr>Id</a>
@@ -310,8 +276,7 @@ The following output properties are available:
         <span class="property-indicator"></span>
         <span class="property-type">string</span>
     </dt>
-    <dd>{{% md %}}Partnership Id{{% /md %}}</dd>
-    <dt class="property-"
+    <dd>{{% md %}}Partnership Id{{% /md %}}</dd><dt class="property-"
             title="">
         <span id="provisioningstate_csharp">
 <a href="#provisioningstate_csharp" style="color: inherit; text-decoration: inherit;">Provisioning<wbr>State</a>
@@ -319,8 +284,7 @@ The following output properties are available:
         <span class="property-indicator"></span>
         <span class="property-type">string</span>
     </dt>
-    <dd>{{% md %}}CloudEndpoint Provisioning State{{% /md %}}</dd>
-    <dt class="property-"
+    <dd>{{% md %}}CloudEndpoint Provisioning State{{% /md %}}</dd><dt class="property-"
             title="">
         <span id="storageaccountresourceid_csharp">
 <a href="#storageaccountresourceid_csharp" style="color: inherit; text-decoration: inherit;">Storage<wbr>Account<wbr>Resource<wbr>Id</a>
@@ -328,8 +292,7 @@ The following output properties are available:
         <span class="property-indicator"></span>
         <span class="property-type">string</span>
     </dt>
-    <dd>{{% md %}}Storage Account Resource Id{{% /md %}}</dd>
-    <dt class="property-"
+    <dd>{{% md %}}Storage Account Resource Id{{% /md %}}</dd><dt class="property-"
             title="">
         <span id="storageaccounttenantid_csharp">
 <a href="#storageaccounttenantid_csharp" style="color: inherit; text-decoration: inherit;">Storage<wbr>Account<wbr>Tenant<wbr>Id</a>
@@ -337,14 +300,11 @@ The following output properties are available:
         <span class="property-indicator"></span>
         <span class="property-type">string</span>
     </dt>
-    <dd>{{% md %}}Storage Account Tenant Id{{% /md %}}</dd>
-</dl>
+    <dd>{{% md %}}Storage Account Tenant Id{{% /md %}}</dd></dl>
 {{% /choosable %}}
 
 {{% choosable language go %}}
-<dl class="resources-properties">
-
-    <dt class="property-"
+<dl class="resources-properties"><dt class="property-"
             title="">
         <span id="backupenabled_go">
 <a href="#backupenabled_go" style="color: inherit; text-decoration: inherit;">Backup<wbr>Enabled</a>
@@ -352,8 +312,7 @@ The following output properties are available:
         <span class="property-indicator"></span>
         <span class="property-type">string</span>
     </dt>
-    <dd>{{% md %}}Backup Enabled{{% /md %}}</dd>
-    <dt class="property-"
+    <dd>{{% md %}}Backup Enabled{{% /md %}}</dd><dt class="property-"
             title="">
         <span id="id_go">
 <a href="#id_go" style="color: inherit; text-decoration: inherit;">Id</a>
@@ -361,8 +320,7 @@ The following output properties are available:
         <span class="property-indicator"></span>
         <span class="property-type">string</span>
     </dt>
-    <dd>{{% md %}}Fully qualified resource ID for the resource. Ex - /subscriptions/{subscriptionId}/resourceGroups/{resourceGroupName}/providers/{resourceProviderNamespace}/{resourceType}/{resourceName}{{% /md %}}</dd>
-    <dt class="property-"
+    <dd>{{% md %}}Fully qualified resource ID for the resource. Ex - /subscriptions/{subscriptionId}/resourceGroups/{resourceGroupName}/providers/{resourceProviderNamespace}/{resourceType}/{resourceName}{{% /md %}}</dd><dt class="property-"
             title="">
         <span id="name_go">
 <a href="#name_go" style="color: inherit; text-decoration: inherit;">Name</a>
@@ -370,8 +328,7 @@ The following output properties are available:
         <span class="property-indicator"></span>
         <span class="property-type">string</span>
     </dt>
-    <dd>{{% md %}}The name of the resource{{% /md %}}</dd>
-    <dt class="property-"
+    <dd>{{% md %}}The name of the resource{{% /md %}}</dd><dt class="property-"
             title="">
         <span id="type_go">
 <a href="#type_go" style="color: inherit; text-decoration: inherit;">Type</a>
@@ -379,8 +336,7 @@ The following output properties are available:
         <span class="property-indicator"></span>
         <span class="property-type">string</span>
     </dt>
-    <dd>{{% md %}}The type of the resource. E.g. "Microsoft.Compute/virtualMachines" or "Microsoft.Storage/storageAccounts"{{% /md %}}</dd>
-    <dt class="property-"
+    <dd>{{% md %}}The type of the resource. E.g. "Microsoft.Compute/virtualMachines" or "Microsoft.Storage/storageAccounts"{{% /md %}}</dd><dt class="property-"
             title="">
         <span id="azurefilesharename_go">
 <a href="#azurefilesharename_go" style="color: inherit; text-decoration: inherit;">Azure<wbr>File<wbr>Share<wbr>Name</a>
@@ -388,8 +344,7 @@ The following output properties are available:
         <span class="property-indicator"></span>
         <span class="property-type">string</span>
     </dt>
-    <dd>{{% md %}}Azure file share name{{% /md %}}</dd>
-    <dt class="property-"
+    <dd>{{% md %}}Azure file share name{{% /md %}}</dd><dt class="property-"
             title="">
         <span id="friendlyname_go">
 <a href="#friendlyname_go" style="color: inherit; text-decoration: inherit;">Friendly<wbr>Name</a>
@@ -397,8 +352,7 @@ The following output properties are available:
         <span class="property-indicator"></span>
         <span class="property-type">string</span>
     </dt>
-    <dd>{{% md %}}Friendly Name{{% /md %}}</dd>
-    <dt class="property-"
+    <dd>{{% md %}}Friendly Name{{% /md %}}</dd><dt class="property-"
             title="">
         <span id="lastoperationname_go">
 <a href="#lastoperationname_go" style="color: inherit; text-decoration: inherit;">Last<wbr>Operation<wbr>Name</a>
@@ -406,8 +360,7 @@ The following output properties are available:
         <span class="property-indicator"></span>
         <span class="property-type">string</span>
     </dt>
-    <dd>{{% md %}}Resource Last Operation Name{{% /md %}}</dd>
-    <dt class="property-"
+    <dd>{{% md %}}Resource Last Operation Name{{% /md %}}</dd><dt class="property-"
             title="">
         <span id="lastworkflowid_go">
 <a href="#lastworkflowid_go" style="color: inherit; text-decoration: inherit;">Last<wbr>Workflow<wbr>Id</a>
@@ -415,8 +368,7 @@ The following output properties are available:
         <span class="property-indicator"></span>
         <span class="property-type">string</span>
     </dt>
-    <dd>{{% md %}}CloudEndpoint lastWorkflowId{{% /md %}}</dd>
-    <dt class="property-"
+    <dd>{{% md %}}CloudEndpoint lastWorkflowId{{% /md %}}</dd><dt class="property-"
             title="">
         <span id="partnershipid_go">
 <a href="#partnershipid_go" style="color: inherit; text-decoration: inherit;">Partnership<wbr>Id</a>
@@ -424,8 +376,7 @@ The following output properties are available:
         <span class="property-indicator"></span>
         <span class="property-type">string</span>
     </dt>
-    <dd>{{% md %}}Partnership Id{{% /md %}}</dd>
-    <dt class="property-"
+    <dd>{{% md %}}Partnership Id{{% /md %}}</dd><dt class="property-"
             title="">
         <span id="provisioningstate_go">
 <a href="#provisioningstate_go" style="color: inherit; text-decoration: inherit;">Provisioning<wbr>State</a>
@@ -433,8 +384,7 @@ The following output properties are available:
         <span class="property-indicator"></span>
         <span class="property-type">string</span>
     </dt>
-    <dd>{{% md %}}CloudEndpoint Provisioning State{{% /md %}}</dd>
-    <dt class="property-"
+    <dd>{{% md %}}CloudEndpoint Provisioning State{{% /md %}}</dd><dt class="property-"
             title="">
         <span id="storageaccountresourceid_go">
 <a href="#storageaccountresourceid_go" style="color: inherit; text-decoration: inherit;">Storage<wbr>Account<wbr>Resource<wbr>Id</a>
@@ -442,8 +392,7 @@ The following output properties are available:
         <span class="property-indicator"></span>
         <span class="property-type">string</span>
     </dt>
-    <dd>{{% md %}}Storage Account Resource Id{{% /md %}}</dd>
-    <dt class="property-"
+    <dd>{{% md %}}Storage Account Resource Id{{% /md %}}</dd><dt class="property-"
             title="">
         <span id="storageaccounttenantid_go">
 <a href="#storageaccounttenantid_go" style="color: inherit; text-decoration: inherit;">Storage<wbr>Account<wbr>Tenant<wbr>Id</a>
@@ -451,14 +400,11 @@ The following output properties are available:
         <span class="property-indicator"></span>
         <span class="property-type">string</span>
     </dt>
-    <dd>{{% md %}}Storage Account Tenant Id{{% /md %}}</dd>
-</dl>
+    <dd>{{% md %}}Storage Account Tenant Id{{% /md %}}</dd></dl>
 {{% /choosable %}}
 
 {{% choosable language nodejs %}}
-<dl class="resources-properties">
-
-    <dt class="property-"
+<dl class="resources-properties"><dt class="property-"
             title="">
         <span id="backupenabled_nodejs">
 <a href="#backupenabled_nodejs" style="color: inherit; text-decoration: inherit;">backup<wbr>Enabled</a>
@@ -466,8 +412,7 @@ The following output properties are available:
         <span class="property-indicator"></span>
         <span class="property-type">string</span>
     </dt>
-    <dd>{{% md %}}Backup Enabled{{% /md %}}</dd>
-    <dt class="property-"
+    <dd>{{% md %}}Backup Enabled{{% /md %}}</dd><dt class="property-"
             title="">
         <span id="id_nodejs">
 <a href="#id_nodejs" style="color: inherit; text-decoration: inherit;">id</a>
@@ -475,8 +420,7 @@ The following output properties are available:
         <span class="property-indicator"></span>
         <span class="property-type">string</span>
     </dt>
-    <dd>{{% md %}}Fully qualified resource ID for the resource. Ex - /subscriptions/{subscriptionId}/resourceGroups/{resourceGroupName}/providers/{resourceProviderNamespace}/{resourceType}/{resourceName}{{% /md %}}</dd>
-    <dt class="property-"
+    <dd>{{% md %}}Fully qualified resource ID for the resource. Ex - /subscriptions/{subscriptionId}/resourceGroups/{resourceGroupName}/providers/{resourceProviderNamespace}/{resourceType}/{resourceName}{{% /md %}}</dd><dt class="property-"
             title="">
         <span id="name_nodejs">
 <a href="#name_nodejs" style="color: inherit; text-decoration: inherit;">name</a>
@@ -484,8 +428,7 @@ The following output properties are available:
         <span class="property-indicator"></span>
         <span class="property-type">string</span>
     </dt>
-    <dd>{{% md %}}The name of the resource{{% /md %}}</dd>
-    <dt class="property-"
+    <dd>{{% md %}}The name of the resource{{% /md %}}</dd><dt class="property-"
             title="">
         <span id="type_nodejs">
 <a href="#type_nodejs" style="color: inherit; text-decoration: inherit;">type</a>
@@ -493,8 +436,7 @@ The following output properties are available:
         <span class="property-indicator"></span>
         <span class="property-type">string</span>
     </dt>
-    <dd>{{% md %}}The type of the resource. E.g. "Microsoft.Compute/virtualMachines" or "Microsoft.Storage/storageAccounts"{{% /md %}}</dd>
-    <dt class="property-"
+    <dd>{{% md %}}The type of the resource. E.g. "Microsoft.Compute/virtualMachines" or "Microsoft.Storage/storageAccounts"{{% /md %}}</dd><dt class="property-"
             title="">
         <span id="azurefilesharename_nodejs">
 <a href="#azurefilesharename_nodejs" style="color: inherit; text-decoration: inherit;">azure<wbr>File<wbr>Share<wbr>Name</a>
@@ -502,8 +444,7 @@ The following output properties are available:
         <span class="property-indicator"></span>
         <span class="property-type">string</span>
     </dt>
-    <dd>{{% md %}}Azure file share name{{% /md %}}</dd>
-    <dt class="property-"
+    <dd>{{% md %}}Azure file share name{{% /md %}}</dd><dt class="property-"
             title="">
         <span id="friendlyname_nodejs">
 <a href="#friendlyname_nodejs" style="color: inherit; text-decoration: inherit;">friendly<wbr>Name</a>
@@ -511,8 +452,7 @@ The following output properties are available:
         <span class="property-indicator"></span>
         <span class="property-type">string</span>
     </dt>
-    <dd>{{% md %}}Friendly Name{{% /md %}}</dd>
-    <dt class="property-"
+    <dd>{{% md %}}Friendly Name{{% /md %}}</dd><dt class="property-"
             title="">
         <span id="lastoperationname_nodejs">
 <a href="#lastoperationname_nodejs" style="color: inherit; text-decoration: inherit;">last<wbr>Operation<wbr>Name</a>
@@ -520,8 +460,7 @@ The following output properties are available:
         <span class="property-indicator"></span>
         <span class="property-type">string</span>
     </dt>
-    <dd>{{% md %}}Resource Last Operation Name{{% /md %}}</dd>
-    <dt class="property-"
+    <dd>{{% md %}}Resource Last Operation Name{{% /md %}}</dd><dt class="property-"
             title="">
         <span id="lastworkflowid_nodejs">
 <a href="#lastworkflowid_nodejs" style="color: inherit; text-decoration: inherit;">last<wbr>Workflow<wbr>Id</a>
@@ -529,8 +468,7 @@ The following output properties are available:
         <span class="property-indicator"></span>
         <span class="property-type">string</span>
     </dt>
-    <dd>{{% md %}}CloudEndpoint lastWorkflowId{{% /md %}}</dd>
-    <dt class="property-"
+    <dd>{{% md %}}CloudEndpoint lastWorkflowId{{% /md %}}</dd><dt class="property-"
             title="">
         <span id="partnershipid_nodejs">
 <a href="#partnershipid_nodejs" style="color: inherit; text-decoration: inherit;">partnership<wbr>Id</a>
@@ -538,8 +476,7 @@ The following output properties are available:
         <span class="property-indicator"></span>
         <span class="property-type">string</span>
     </dt>
-    <dd>{{% md %}}Partnership Id{{% /md %}}</dd>
-    <dt class="property-"
+    <dd>{{% md %}}Partnership Id{{% /md %}}</dd><dt class="property-"
             title="">
         <span id="provisioningstate_nodejs">
 <a href="#provisioningstate_nodejs" style="color: inherit; text-decoration: inherit;">provisioning<wbr>State</a>
@@ -547,8 +484,7 @@ The following output properties are available:
         <span class="property-indicator"></span>
         <span class="property-type">string</span>
     </dt>
-    <dd>{{% md %}}CloudEndpoint Provisioning State{{% /md %}}</dd>
-    <dt class="property-"
+    <dd>{{% md %}}CloudEndpoint Provisioning State{{% /md %}}</dd><dt class="property-"
             title="">
         <span id="storageaccountresourceid_nodejs">
 <a href="#storageaccountresourceid_nodejs" style="color: inherit; text-decoration: inherit;">storage<wbr>Account<wbr>Resource<wbr>Id</a>
@@ -556,8 +492,7 @@ The following output properties are available:
         <span class="property-indicator"></span>
         <span class="property-type">string</span>
     </dt>
-    <dd>{{% md %}}Storage Account Resource Id{{% /md %}}</dd>
-    <dt class="property-"
+    <dd>{{% md %}}Storage Account Resource Id{{% /md %}}</dd><dt class="property-"
             title="">
         <span id="storageaccounttenantid_nodejs">
 <a href="#storageaccounttenantid_nodejs" style="color: inherit; text-decoration: inherit;">storage<wbr>Account<wbr>Tenant<wbr>Id</a>
@@ -565,14 +500,11 @@ The following output properties are available:
         <span class="property-indicator"></span>
         <span class="property-type">string</span>
     </dt>
-    <dd>{{% md %}}Storage Account Tenant Id{{% /md %}}</dd>
-</dl>
+    <dd>{{% md %}}Storage Account Tenant Id{{% /md %}}</dd></dl>
 {{% /choosable %}}
 
 {{% choosable language python %}}
-<dl class="resources-properties">
-
-    <dt class="property-"
+<dl class="resources-properties"><dt class="property-"
             title="">
         <span id="backup_enabled_python">
 <a href="#backup_enabled_python" style="color: inherit; text-decoration: inherit;">backup_<wbr>enabled</a>
@@ -580,8 +512,7 @@ The following output properties are available:
         <span class="property-indicator"></span>
         <span class="property-type">str</span>
     </dt>
-    <dd>{{% md %}}Backup Enabled{{% /md %}}</dd>
-    <dt class="property-"
+    <dd>{{% md %}}Backup Enabled{{% /md %}}</dd><dt class="property-"
             title="">
         <span id="id_python">
 <a href="#id_python" style="color: inherit; text-decoration: inherit;">id</a>
@@ -589,8 +520,7 @@ The following output properties are available:
         <span class="property-indicator"></span>
         <span class="property-type">str</span>
     </dt>
-    <dd>{{% md %}}Fully qualified resource ID for the resource. Ex - /subscriptions/{subscriptionId}/resourceGroups/{resourceGroupName}/providers/{resourceProviderNamespace}/{resourceType}/{resourceName}{{% /md %}}</dd>
-    <dt class="property-"
+    <dd>{{% md %}}Fully qualified resource ID for the resource. Ex - /subscriptions/{subscriptionId}/resourceGroups/{resourceGroupName}/providers/{resourceProviderNamespace}/{resourceType}/{resourceName}{{% /md %}}</dd><dt class="property-"
             title="">
         <span id="name_python">
 <a href="#name_python" style="color: inherit; text-decoration: inherit;">name</a>
@@ -598,8 +528,7 @@ The following output properties are available:
         <span class="property-indicator"></span>
         <span class="property-type">str</span>
     </dt>
-    <dd>{{% md %}}The name of the resource{{% /md %}}</dd>
-    <dt class="property-"
+    <dd>{{% md %}}The name of the resource{{% /md %}}</dd><dt class="property-"
             title="">
         <span id="type_python">
 <a href="#type_python" style="color: inherit; text-decoration: inherit;">type</a>
@@ -607,8 +536,7 @@ The following output properties are available:
         <span class="property-indicator"></span>
         <span class="property-type">str</span>
     </dt>
-    <dd>{{% md %}}The type of the resource. E.g. "Microsoft.Compute/virtualMachines" or "Microsoft.Storage/storageAccounts"{{% /md %}}</dd>
-    <dt class="property-"
+    <dd>{{% md %}}The type of the resource. E.g. "Microsoft.Compute/virtualMachines" or "Microsoft.Storage/storageAccounts"{{% /md %}}</dd><dt class="property-"
             title="">
         <span id="azure_file_share_name_python">
 <a href="#azure_file_share_name_python" style="color: inherit; text-decoration: inherit;">azure_<wbr>file_<wbr>share_<wbr>name</a>
@@ -616,8 +544,7 @@ The following output properties are available:
         <span class="property-indicator"></span>
         <span class="property-type">str</span>
     </dt>
-    <dd>{{% md %}}Azure file share name{{% /md %}}</dd>
-    <dt class="property-"
+    <dd>{{% md %}}Azure file share name{{% /md %}}</dd><dt class="property-"
             title="">
         <span id="friendly_name_python">
 <a href="#friendly_name_python" style="color: inherit; text-decoration: inherit;">friendly_<wbr>name</a>
@@ -625,8 +552,7 @@ The following output properties are available:
         <span class="property-indicator"></span>
         <span class="property-type">str</span>
     </dt>
-    <dd>{{% md %}}Friendly Name{{% /md %}}</dd>
-    <dt class="property-"
+    <dd>{{% md %}}Friendly Name{{% /md %}}</dd><dt class="property-"
             title="">
         <span id="last_operation_name_python">
 <a href="#last_operation_name_python" style="color: inherit; text-decoration: inherit;">last_<wbr>operation_<wbr>name</a>
@@ -634,8 +560,7 @@ The following output properties are available:
         <span class="property-indicator"></span>
         <span class="property-type">str</span>
     </dt>
-    <dd>{{% md %}}Resource Last Operation Name{{% /md %}}</dd>
-    <dt class="property-"
+    <dd>{{% md %}}Resource Last Operation Name{{% /md %}}</dd><dt class="property-"
             title="">
         <span id="last_workflow_id_python">
 <a href="#last_workflow_id_python" style="color: inherit; text-decoration: inherit;">last_<wbr>workflow_<wbr>id</a>
@@ -643,8 +568,7 @@ The following output properties are available:
         <span class="property-indicator"></span>
         <span class="property-type">str</span>
     </dt>
-    <dd>{{% md %}}CloudEndpoint lastWorkflowId{{% /md %}}</dd>
-    <dt class="property-"
+    <dd>{{% md %}}CloudEndpoint lastWorkflowId{{% /md %}}</dd><dt class="property-"
             title="">
         <span id="partnership_id_python">
 <a href="#partnership_id_python" style="color: inherit; text-decoration: inherit;">partnership_<wbr>id</a>
@@ -652,8 +576,7 @@ The following output properties are available:
         <span class="property-indicator"></span>
         <span class="property-type">str</span>
     </dt>
-    <dd>{{% md %}}Partnership Id{{% /md %}}</dd>
-    <dt class="property-"
+    <dd>{{% md %}}Partnership Id{{% /md %}}</dd><dt class="property-"
             title="">
         <span id="provisioning_state_python">
 <a href="#provisioning_state_python" style="color: inherit; text-decoration: inherit;">provisioning_<wbr>state</a>
@@ -661,8 +584,7 @@ The following output properties are available:
         <span class="property-indicator"></span>
         <span class="property-type">str</span>
     </dt>
-    <dd>{{% md %}}CloudEndpoint Provisioning State{{% /md %}}</dd>
-    <dt class="property-"
+    <dd>{{% md %}}CloudEndpoint Provisioning State{{% /md %}}</dd><dt class="property-"
             title="">
         <span id="storage_account_resource_id_python">
 <a href="#storage_account_resource_id_python" style="color: inherit; text-decoration: inherit;">storage_<wbr>account_<wbr>resource_<wbr>id</a>
@@ -670,8 +592,7 @@ The following output properties are available:
         <span class="property-indicator"></span>
         <span class="property-type">str</span>
     </dt>
-    <dd>{{% md %}}Storage Account Resource Id{{% /md %}}</dd>
-    <dt class="property-"
+    <dd>{{% md %}}Storage Account Resource Id{{% /md %}}</dd><dt class="property-"
             title="">
         <span id="storage_account_tenant_id_python">
 <a href="#storage_account_tenant_id_python" style="color: inherit; text-decoration: inherit;">storage_<wbr>account_<wbr>tenant_<wbr>id</a>
@@ -679,8 +600,7 @@ The following output properties are available:
         <span class="property-indicator"></span>
         <span class="property-type">str</span>
     </dt>
-    <dd>{{% md %}}Storage Account Tenant Id{{% /md %}}</dd>
-</dl>
+    <dd>{{% md %}}Storage Account Tenant Id{{% /md %}}</dd></dl>
 {{% /choosable %}}
 
 

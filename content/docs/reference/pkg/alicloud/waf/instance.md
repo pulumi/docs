@@ -17,11 +17,17 @@ For information about WAF and how to use it, see [What is Alibaba Cloud WAF](htt
 > **NOTE:** Available in 1.83.0+ .
 
 {{% examples %}}
+
 ## Example Usage
 
 {{< chooser language "typescript,python,go,csharp" / >}}
 
-{{% example csharp %}}
+
+
+
+
+{{< example csharp >}}
+
 ```csharp
 using Pulumi;
 using AliCloud = Pulumi.AliCloud;
@@ -50,9 +56,12 @@ class MyStack : Stack
 }
 ```
 
-{{% /example %}}
 
-{{% example go %}}
+{{< /example >}}
+
+
+{{< example go >}}
+
 ```go
 package main
 
@@ -85,9 +94,12 @@ func main() {
 }
 ```
 
-{{% /example %}}
 
-{{% example python %}}
+{{< /example >}}
+
+
+{{< example python >}}
+
 ```python
 import pulumi
 import pulumi_alicloud as alicloud
@@ -107,9 +119,12 @@ default = alicloud.waf.Instance("default",
     waf_log="false")
 ```
 
-{{% /example %}}
 
-{{% example typescript %}}
+{{< /example >}}
+
+
+{{< example typescript >}}
+
 
 ```typescript
 import * as pulumi from "@pulumi/pulumi";
@@ -131,9 +146,16 @@ const defaultInstance = new alicloud.waf.Instance("default", {
 });
 ```
 
-{{% /example %}}
+
+{{< /example >}}
+
+
+
+
 
 {{% /examples %}}
+
+
 
 
 ## Create a Instance Resource {#create}
@@ -158,9 +180,7 @@ const defaultInstance = new alicloud.waf.Instance("default", {
 
 {{% choosable language nodejs %}}
 
-<dl class="resources-properties">
-  
-    <dt
+<dl class="resources-properties"><dt
         class="property-required" title="Required">
         <span>name</span>
         <span class="property-indicator"></span>
@@ -168,9 +188,7 @@ const defaultInstance = new alicloud.waf.Instance("default", {
     </dt>
     <dd>
       The unique name of the resource.
-    </dd>
-  
-    <dt
+    </dd><dt
         class="property-required" title="Required">
         <span>args</span>
         <span class="property-indicator"></span>
@@ -178,9 +196,7 @@ const defaultInstance = new alicloud.waf.Instance("default", {
     </dt>
     <dd>
       The arguments to resource properties.
-    </dd>
-  
-    <dt
+    </dd><dt
         class="property-optional" title="Optional">
         <span>opts</span>
         <span class="property-indicator"></span>
@@ -188,10 +204,7 @@ const defaultInstance = new alicloud.waf.Instance("default", {
     </dt>
     <dd>
       Bag of options to control resource&#39;s behavior.
-    </dd>
-  
-
-</dl>
+    </dd></dl>
 
 {{% /choosable %}}
 
@@ -217,9 +230,7 @@ const defaultInstance = new alicloud.waf.Instance("default", {
 
 {{% choosable language go %}}
 
-<dl class="resources-properties">
-  
-    <dt
+<dl class="resources-properties"><dt
         class="property-optional" title="Optional">
         <span>ctx</span>
         <span class="property-indicator"></span>
@@ -227,9 +238,7 @@ const defaultInstance = new alicloud.waf.Instance("default", {
     </dt>
     <dd>
       Context object for the current deployment.
-    </dd>
-  
-    <dt
+    </dd><dt
         class="property-required" title="Required">
         <span>name</span>
         <span class="property-indicator"></span>
@@ -237,9 +246,7 @@ const defaultInstance = new alicloud.waf.Instance("default", {
     </dt>
     <dd>
       The unique name of the resource.
-    </dd>
-  
-    <dt
+    </dd><dt
         class="property-required" title="Required">
         <span>args</span>
         <span class="property-indicator"></span>
@@ -247,9 +254,7 @@ const defaultInstance = new alicloud.waf.Instance("default", {
     </dt>
     <dd>
       The arguments to resource properties.
-    </dd>
-  
-    <dt
+    </dd><dt
         class="property-optional" title="Optional">
         <span>opts</span>
         <span class="property-indicator"></span>
@@ -257,18 +262,13 @@ const defaultInstance = new alicloud.waf.Instance("default", {
     </dt>
     <dd>
       Bag of options to control resource&#39;s behavior.
-    </dd>
-  
-
-</dl>
+    </dd></dl>
 
 {{% /choosable %}}
 
 {{% choosable language csharp %}}
 
-<dl class="resources-properties">
-  
-    <dt
+<dl class="resources-properties"><dt
         class="property-required" title="Required">
         <span>name</span>
         <span class="property-indicator"></span>
@@ -276,9 +276,7 @@ const defaultInstance = new alicloud.waf.Instance("default", {
     </dt>
     <dd>
       The unique name of the resource.
-    </dd>
-  
-    <dt
+    </dd><dt
         class="property-required" title="Required">
         <span>args</span>
         <span class="property-indicator"></span>
@@ -286,9 +284,7 @@ const defaultInstance = new alicloud.waf.Instance("default", {
     </dt>
     <dd>
       The arguments to resource properties.
-    </dd>
-  
-    <dt
+    </dd><dt
         class="property-optional" title="Optional">
         <span>opts</span>
         <span class="property-indicator"></span>
@@ -296,10 +292,7 @@ const defaultInstance = new alicloud.waf.Instance("default", {
     </dt>
     <dd>
       Bag of options to control resource&#39;s behavior.
-    </dd>
-  
-
-</dl>
+    </dd></dl>
 
 {{% /choosable %}}
 
@@ -314,9 +307,7 @@ The Instance resource accepts the following [input]({{< relref "/docs/intro/conc
 
 
 {{% choosable language csharp %}}
-<dl class="resources-properties">
-
-    <dt class="property-required"
+<dl class="resources-properties"><dt class="property-required"
             title="Required">
         <span id="bigscreen_csharp">
 <a href="#bigscreen_csharp" style="color: inherit; text-decoration: inherit;">Big<wbr>Screen</a>
@@ -325,8 +316,7 @@ The Instance resource accepts the following [input]({{< relref "/docs/intro/conc
         <span class="property-type">string</span>
     </dt>
     <dd>{{% md %}}Specify whether big screen is supported. Valid values: ["0", "1"]. "0" for false and "1" for true.
-{{% /md %}}</dd>
-    <dt class="property-required"
+{{% /md %}}</dd><dt class="property-required"
             title="Required">
         <span id="exclusiveippackage_csharp">
 <a href="#exclusiveippackage_csharp" style="color: inherit; text-decoration: inherit;">Exclusive<wbr>Ip<wbr>Package</a>
@@ -335,8 +325,7 @@ The Instance resource accepts the following [input]({{< relref "/docs/intro/conc
         <span class="property-type">string</span>
     </dt>
     <dd>{{% md %}}Specify the number of exclusive WAF IP addresses.
-{{% /md %}}</dd>
-    <dt class="property-required"
+{{% /md %}}</dd><dt class="property-required"
             title="Required">
         <span id="extbandwidth_csharp">
 <a href="#extbandwidth_csharp" style="color: inherit; text-decoration: inherit;">Ext<wbr>Bandwidth</a>
@@ -345,8 +334,7 @@ The Instance resource accepts the following [input]({{< relref "/docs/intro/conc
         <span class="property-type">string</span>
     </dt>
     <dd>{{% md %}}The extra bandwidth. Unit: Mbit/s.
-{{% /md %}}</dd>
-    <dt class="property-required"
+{{% /md %}}</dd><dt class="property-required"
             title="Required">
         <span id="extdomainpackage_csharp">
 <a href="#extdomainpackage_csharp" style="color: inherit; text-decoration: inherit;">Ext<wbr>Domain<wbr>Package</a>
@@ -355,8 +343,7 @@ The Instance resource accepts the following [input]({{< relref "/docs/intro/conc
         <span class="property-type">string</span>
     </dt>
     <dd>{{% md %}}The number of extra domains.
-{{% /md %}}</dd>
-    <dt class="property-required"
+{{% /md %}}</dd><dt class="property-required"
             title="Required">
         <span id="logstorage_csharp">
 <a href="#logstorage_csharp" style="color: inherit; text-decoration: inherit;">Log<wbr>Storage</a>
@@ -365,8 +352,7 @@ The Instance resource accepts the following [input]({{< relref "/docs/intro/conc
         <span class="property-type">string</span>
     </dt>
     <dd>{{% md %}}Log storage size. Unit: T. Valid values: [3, 5, 10, 20, 50].
-{{% /md %}}</dd>
-    <dt class="property-required"
+{{% /md %}}</dd><dt class="property-required"
             title="Required">
         <span id="logtime_csharp">
 <a href="#logtime_csharp" style="color: inherit; text-decoration: inherit;">Log<wbr>Time</a>
@@ -375,8 +361,7 @@ The Instance resource accepts the following [input]({{< relref "/docs/intro/conc
         <span class="property-type">string</span>
     </dt>
     <dd>{{% md %}}Log storage period. Unit: day. Valid values: [180, 360].
-{{% /md %}}</dd>
-    <dt class="property-required"
+{{% /md %}}</dd><dt class="property-required"
             title="Required">
         <span id="packagecode_csharp">
 <a href="#packagecode_csharp" style="color: inherit; text-decoration: inherit;">Package<wbr>Code</a>
@@ -389,8 +374,7 @@ The Instance resource accepts the following [input]({{< relref "/docs/intro/conc
 * China site customers can purchase the following versions of International region, valid values: ["version_pro_asia", "version_business_asia", "version_enterprise_asia"]
 * International site customers can purchase the following versions of China Mainland region: ["version_pro_china", "version_business_china", "version_enterprise_china"]
 * International site customers can purchase the following versions of International region: ["version_pro", "version_business", "version_enterprise"].
-{{% /md %}}</dd>
-    <dt class="property-required"
+{{% /md %}}</dd><dt class="property-required"
             title="Required">
         <span id="prefessionalservice_csharp">
 <a href="#prefessionalservice_csharp" style="color: inherit; text-decoration: inherit;">Prefessional<wbr>Service</a>
@@ -399,8 +383,7 @@ The Instance resource accepts the following [input]({{< relref "/docs/intro/conc
         <span class="property-type">string</span>
     </dt>
     <dd>{{% md %}}Specify whether professional service is supported. Valid values: ["true", "false"]
-{{% /md %}}</dd>
-    <dt class="property-required"
+{{% /md %}}</dd><dt class="property-required"
             title="Required">
         <span id="subscriptiontype_csharp">
 <a href="#subscriptiontype_csharp" style="color: inherit; text-decoration: inherit;">Subscription<wbr>Type</a>
@@ -409,8 +392,7 @@ The Instance resource accepts the following [input]({{< relref "/docs/intro/conc
         <span class="property-type">string</span>
     </dt>
     <dd>{{% md %}}Subscription of WAF service. Valid values: ["Subscription", "PayAsYouGo"].
-{{% /md %}}</dd>
-    <dt class="property-required"
+{{% /md %}}</dd><dt class="property-required"
             title="Required">
         <span id="waflog_csharp">
 <a href="#waflog_csharp" style="color: inherit; text-decoration: inherit;">Waf<wbr>Log</a>
@@ -419,8 +401,7 @@ The Instance resource accepts the following [input]({{< relref "/docs/intro/conc
         <span class="property-type">string</span>
     </dt>
     <dd>{{% md %}}Specify whether Log service is supported. Valid values: ["true", "false"]
-{{% /md %}}</dd>
-    <dt class="property-optional"
+{{% /md %}}</dd><dt class="property-optional"
             title="Optional">
         <span id="modifytype_csharp">
 <a href="#modifytype_csharp" style="color: inherit; text-decoration: inherit;">Modify<wbr>Type</a>
@@ -429,8 +410,7 @@ The Instance resource accepts the following [input]({{< relref "/docs/intro/conc
         <span class="property-type">string</span>
     </dt>
     <dd>{{% md %}}Type of configuration change. Valid value: Upgrade.
-{{% /md %}}</dd>
-    <dt class="property-optional"
+{{% /md %}}</dd><dt class="property-optional"
             title="Optional">
         <span id="period_csharp">
 <a href="#period_csharp" style="color: inherit; text-decoration: inherit;">Period</a>
@@ -439,8 +419,7 @@ The Instance resource accepts the following [input]({{< relref "/docs/intro/conc
         <span class="property-type">int</span>
     </dt>
     <dd>{{% md %}}Service time of Web Application Firewall.
-{{% /md %}}</dd>
-    <dt class="property-optional"
+{{% /md %}}</dd><dt class="property-optional"
             title="Optional">
         <span id="renewperiod_csharp">
 <a href="#renewperiod_csharp" style="color: inherit; text-decoration: inherit;">Renew<wbr>Period</a>
@@ -449,8 +428,7 @@ The Instance resource accepts the following [input]({{< relref "/docs/intro/conc
         <span class="property-type">int</span>
     </dt>
     <dd>{{% md %}}Renewal period of WAF service. Unit: month
-{{% /md %}}</dd>
-    <dt class="property-optional"
+{{% /md %}}</dd><dt class="property-optional"
             title="Optional">
         <span id="renewalstatus_csharp">
 <a href="#renewalstatus_csharp" style="color: inherit; text-decoration: inherit;">Renewal<wbr>Status</a>
@@ -461,8 +439,7 @@ The Instance resource accepts the following [input]({{< relref "/docs/intro/conc
     <dd>{{% md %}}Renewal status of WAF service. Valid values: 
 * AutoRenewal: The service time of WAF is renewed automatically.
 * ManualRenewal (default): The service time of WAF is renewed manually.Specifies whether to configure a Layer-7 proxy, such as Anti-DDoS Pro or CDN, to filter the inbound traffic before it is forwarded to WAF. Valid values: "On" and "Off". Default to "Off".
-{{% /md %}}</dd>
-    <dt class="property-optional"
+{{% /md %}}</dd><dt class="property-optional"
             title="Optional">
         <span id="resourcegroupid_csharp">
 <a href="#resourcegroupid_csharp" style="color: inherit; text-decoration: inherit;">Resource<wbr>Group<wbr>Id</a>
@@ -471,14 +448,11 @@ The Instance resource accepts the following [input]({{< relref "/docs/intro/conc
         <span class="property-type">string</span>
     </dt>
     <dd>{{% md %}}The resource group ID.
-{{% /md %}}</dd>
-</dl>
+{{% /md %}}</dd></dl>
 {{% /choosable %}}
 
 {{% choosable language go %}}
-<dl class="resources-properties">
-
-    <dt class="property-required"
+<dl class="resources-properties"><dt class="property-required"
             title="Required">
         <span id="bigscreen_go">
 <a href="#bigscreen_go" style="color: inherit; text-decoration: inherit;">Big<wbr>Screen</a>
@@ -487,8 +461,7 @@ The Instance resource accepts the following [input]({{< relref "/docs/intro/conc
         <span class="property-type">string</span>
     </dt>
     <dd>{{% md %}}Specify whether big screen is supported. Valid values: ["0", "1"]. "0" for false and "1" for true.
-{{% /md %}}</dd>
-    <dt class="property-required"
+{{% /md %}}</dd><dt class="property-required"
             title="Required">
         <span id="exclusiveippackage_go">
 <a href="#exclusiveippackage_go" style="color: inherit; text-decoration: inherit;">Exclusive<wbr>Ip<wbr>Package</a>
@@ -497,8 +470,7 @@ The Instance resource accepts the following [input]({{< relref "/docs/intro/conc
         <span class="property-type">string</span>
     </dt>
     <dd>{{% md %}}Specify the number of exclusive WAF IP addresses.
-{{% /md %}}</dd>
-    <dt class="property-required"
+{{% /md %}}</dd><dt class="property-required"
             title="Required">
         <span id="extbandwidth_go">
 <a href="#extbandwidth_go" style="color: inherit; text-decoration: inherit;">Ext<wbr>Bandwidth</a>
@@ -507,8 +479,7 @@ The Instance resource accepts the following [input]({{< relref "/docs/intro/conc
         <span class="property-type">string</span>
     </dt>
     <dd>{{% md %}}The extra bandwidth. Unit: Mbit/s.
-{{% /md %}}</dd>
-    <dt class="property-required"
+{{% /md %}}</dd><dt class="property-required"
             title="Required">
         <span id="extdomainpackage_go">
 <a href="#extdomainpackage_go" style="color: inherit; text-decoration: inherit;">Ext<wbr>Domain<wbr>Package</a>
@@ -517,8 +488,7 @@ The Instance resource accepts the following [input]({{< relref "/docs/intro/conc
         <span class="property-type">string</span>
     </dt>
     <dd>{{% md %}}The number of extra domains.
-{{% /md %}}</dd>
-    <dt class="property-required"
+{{% /md %}}</dd><dt class="property-required"
             title="Required">
         <span id="logstorage_go">
 <a href="#logstorage_go" style="color: inherit; text-decoration: inherit;">Log<wbr>Storage</a>
@@ -527,8 +497,7 @@ The Instance resource accepts the following [input]({{< relref "/docs/intro/conc
         <span class="property-type">string</span>
     </dt>
     <dd>{{% md %}}Log storage size. Unit: T. Valid values: [3, 5, 10, 20, 50].
-{{% /md %}}</dd>
-    <dt class="property-required"
+{{% /md %}}</dd><dt class="property-required"
             title="Required">
         <span id="logtime_go">
 <a href="#logtime_go" style="color: inherit; text-decoration: inherit;">Log<wbr>Time</a>
@@ -537,8 +506,7 @@ The Instance resource accepts the following [input]({{< relref "/docs/intro/conc
         <span class="property-type">string</span>
     </dt>
     <dd>{{% md %}}Log storage period. Unit: day. Valid values: [180, 360].
-{{% /md %}}</dd>
-    <dt class="property-required"
+{{% /md %}}</dd><dt class="property-required"
             title="Required">
         <span id="packagecode_go">
 <a href="#packagecode_go" style="color: inherit; text-decoration: inherit;">Package<wbr>Code</a>
@@ -551,8 +519,7 @@ The Instance resource accepts the following [input]({{< relref "/docs/intro/conc
 * China site customers can purchase the following versions of International region, valid values: ["version_pro_asia", "version_business_asia", "version_enterprise_asia"]
 * International site customers can purchase the following versions of China Mainland region: ["version_pro_china", "version_business_china", "version_enterprise_china"]
 * International site customers can purchase the following versions of International region: ["version_pro", "version_business", "version_enterprise"].
-{{% /md %}}</dd>
-    <dt class="property-required"
+{{% /md %}}</dd><dt class="property-required"
             title="Required">
         <span id="prefessionalservice_go">
 <a href="#prefessionalservice_go" style="color: inherit; text-decoration: inherit;">Prefessional<wbr>Service</a>
@@ -561,8 +528,7 @@ The Instance resource accepts the following [input]({{< relref "/docs/intro/conc
         <span class="property-type">string</span>
     </dt>
     <dd>{{% md %}}Specify whether professional service is supported. Valid values: ["true", "false"]
-{{% /md %}}</dd>
-    <dt class="property-required"
+{{% /md %}}</dd><dt class="property-required"
             title="Required">
         <span id="subscriptiontype_go">
 <a href="#subscriptiontype_go" style="color: inherit; text-decoration: inherit;">Subscription<wbr>Type</a>
@@ -571,8 +537,7 @@ The Instance resource accepts the following [input]({{< relref "/docs/intro/conc
         <span class="property-type">string</span>
     </dt>
     <dd>{{% md %}}Subscription of WAF service. Valid values: ["Subscription", "PayAsYouGo"].
-{{% /md %}}</dd>
-    <dt class="property-required"
+{{% /md %}}</dd><dt class="property-required"
             title="Required">
         <span id="waflog_go">
 <a href="#waflog_go" style="color: inherit; text-decoration: inherit;">Waf<wbr>Log</a>
@@ -581,8 +546,7 @@ The Instance resource accepts the following [input]({{< relref "/docs/intro/conc
         <span class="property-type">string</span>
     </dt>
     <dd>{{% md %}}Specify whether Log service is supported. Valid values: ["true", "false"]
-{{% /md %}}</dd>
-    <dt class="property-optional"
+{{% /md %}}</dd><dt class="property-optional"
             title="Optional">
         <span id="modifytype_go">
 <a href="#modifytype_go" style="color: inherit; text-decoration: inherit;">Modify<wbr>Type</a>
@@ -591,8 +555,7 @@ The Instance resource accepts the following [input]({{< relref "/docs/intro/conc
         <span class="property-type">string</span>
     </dt>
     <dd>{{% md %}}Type of configuration change. Valid value: Upgrade.
-{{% /md %}}</dd>
-    <dt class="property-optional"
+{{% /md %}}</dd><dt class="property-optional"
             title="Optional">
         <span id="period_go">
 <a href="#period_go" style="color: inherit; text-decoration: inherit;">Period</a>
@@ -601,8 +564,7 @@ The Instance resource accepts the following [input]({{< relref "/docs/intro/conc
         <span class="property-type">int</span>
     </dt>
     <dd>{{% md %}}Service time of Web Application Firewall.
-{{% /md %}}</dd>
-    <dt class="property-optional"
+{{% /md %}}</dd><dt class="property-optional"
             title="Optional">
         <span id="renewperiod_go">
 <a href="#renewperiod_go" style="color: inherit; text-decoration: inherit;">Renew<wbr>Period</a>
@@ -611,8 +573,7 @@ The Instance resource accepts the following [input]({{< relref "/docs/intro/conc
         <span class="property-type">int</span>
     </dt>
     <dd>{{% md %}}Renewal period of WAF service. Unit: month
-{{% /md %}}</dd>
-    <dt class="property-optional"
+{{% /md %}}</dd><dt class="property-optional"
             title="Optional">
         <span id="renewalstatus_go">
 <a href="#renewalstatus_go" style="color: inherit; text-decoration: inherit;">Renewal<wbr>Status</a>
@@ -623,8 +584,7 @@ The Instance resource accepts the following [input]({{< relref "/docs/intro/conc
     <dd>{{% md %}}Renewal status of WAF service. Valid values: 
 * AutoRenewal: The service time of WAF is renewed automatically.
 * ManualRenewal (default): The service time of WAF is renewed manually.Specifies whether to configure a Layer-7 proxy, such as Anti-DDoS Pro or CDN, to filter the inbound traffic before it is forwarded to WAF. Valid values: "On" and "Off". Default to "Off".
-{{% /md %}}</dd>
-    <dt class="property-optional"
+{{% /md %}}</dd><dt class="property-optional"
             title="Optional">
         <span id="resourcegroupid_go">
 <a href="#resourcegroupid_go" style="color: inherit; text-decoration: inherit;">Resource<wbr>Group<wbr>Id</a>
@@ -633,14 +593,11 @@ The Instance resource accepts the following [input]({{< relref "/docs/intro/conc
         <span class="property-type">string</span>
     </dt>
     <dd>{{% md %}}The resource group ID.
-{{% /md %}}</dd>
-</dl>
+{{% /md %}}</dd></dl>
 {{% /choosable %}}
 
 {{% choosable language nodejs %}}
-<dl class="resources-properties">
-
-    <dt class="property-required"
+<dl class="resources-properties"><dt class="property-required"
             title="Required">
         <span id="bigscreen_nodejs">
 <a href="#bigscreen_nodejs" style="color: inherit; text-decoration: inherit;">big<wbr>Screen</a>
@@ -649,8 +606,7 @@ The Instance resource accepts the following [input]({{< relref "/docs/intro/conc
         <span class="property-type">string</span>
     </dt>
     <dd>{{% md %}}Specify whether big screen is supported. Valid values: ["0", "1"]. "0" for false and "1" for true.
-{{% /md %}}</dd>
-    <dt class="property-required"
+{{% /md %}}</dd><dt class="property-required"
             title="Required">
         <span id="exclusiveippackage_nodejs">
 <a href="#exclusiveippackage_nodejs" style="color: inherit; text-decoration: inherit;">exclusive<wbr>Ip<wbr>Package</a>
@@ -659,8 +615,7 @@ The Instance resource accepts the following [input]({{< relref "/docs/intro/conc
         <span class="property-type">string</span>
     </dt>
     <dd>{{% md %}}Specify the number of exclusive WAF IP addresses.
-{{% /md %}}</dd>
-    <dt class="property-required"
+{{% /md %}}</dd><dt class="property-required"
             title="Required">
         <span id="extbandwidth_nodejs">
 <a href="#extbandwidth_nodejs" style="color: inherit; text-decoration: inherit;">ext<wbr>Bandwidth</a>
@@ -669,8 +624,7 @@ The Instance resource accepts the following [input]({{< relref "/docs/intro/conc
         <span class="property-type">string</span>
     </dt>
     <dd>{{% md %}}The extra bandwidth. Unit: Mbit/s.
-{{% /md %}}</dd>
-    <dt class="property-required"
+{{% /md %}}</dd><dt class="property-required"
             title="Required">
         <span id="extdomainpackage_nodejs">
 <a href="#extdomainpackage_nodejs" style="color: inherit; text-decoration: inherit;">ext<wbr>Domain<wbr>Package</a>
@@ -679,8 +633,7 @@ The Instance resource accepts the following [input]({{< relref "/docs/intro/conc
         <span class="property-type">string</span>
     </dt>
     <dd>{{% md %}}The number of extra domains.
-{{% /md %}}</dd>
-    <dt class="property-required"
+{{% /md %}}</dd><dt class="property-required"
             title="Required">
         <span id="logstorage_nodejs">
 <a href="#logstorage_nodejs" style="color: inherit; text-decoration: inherit;">log<wbr>Storage</a>
@@ -689,8 +642,7 @@ The Instance resource accepts the following [input]({{< relref "/docs/intro/conc
         <span class="property-type">string</span>
     </dt>
     <dd>{{% md %}}Log storage size. Unit: T. Valid values: [3, 5, 10, 20, 50].
-{{% /md %}}</dd>
-    <dt class="property-required"
+{{% /md %}}</dd><dt class="property-required"
             title="Required">
         <span id="logtime_nodejs">
 <a href="#logtime_nodejs" style="color: inherit; text-decoration: inherit;">log<wbr>Time</a>
@@ -699,8 +651,7 @@ The Instance resource accepts the following [input]({{< relref "/docs/intro/conc
         <span class="property-type">string</span>
     </dt>
     <dd>{{% md %}}Log storage period. Unit: day. Valid values: [180, 360].
-{{% /md %}}</dd>
-    <dt class="property-required"
+{{% /md %}}</dd><dt class="property-required"
             title="Required">
         <span id="packagecode_nodejs">
 <a href="#packagecode_nodejs" style="color: inherit; text-decoration: inherit;">package<wbr>Code</a>
@@ -713,8 +664,7 @@ The Instance resource accepts the following [input]({{< relref "/docs/intro/conc
 * China site customers can purchase the following versions of International region, valid values: ["version_pro_asia", "version_business_asia", "version_enterprise_asia"]
 * International site customers can purchase the following versions of China Mainland region: ["version_pro_china", "version_business_china", "version_enterprise_china"]
 * International site customers can purchase the following versions of International region: ["version_pro", "version_business", "version_enterprise"].
-{{% /md %}}</dd>
-    <dt class="property-required"
+{{% /md %}}</dd><dt class="property-required"
             title="Required">
         <span id="prefessionalservice_nodejs">
 <a href="#prefessionalservice_nodejs" style="color: inherit; text-decoration: inherit;">prefessional<wbr>Service</a>
@@ -723,8 +673,7 @@ The Instance resource accepts the following [input]({{< relref "/docs/intro/conc
         <span class="property-type">string</span>
     </dt>
     <dd>{{% md %}}Specify whether professional service is supported. Valid values: ["true", "false"]
-{{% /md %}}</dd>
-    <dt class="property-required"
+{{% /md %}}</dd><dt class="property-required"
             title="Required">
         <span id="subscriptiontype_nodejs">
 <a href="#subscriptiontype_nodejs" style="color: inherit; text-decoration: inherit;">subscription<wbr>Type</a>
@@ -733,8 +682,7 @@ The Instance resource accepts the following [input]({{< relref "/docs/intro/conc
         <span class="property-type">string</span>
     </dt>
     <dd>{{% md %}}Subscription of WAF service. Valid values: ["Subscription", "PayAsYouGo"].
-{{% /md %}}</dd>
-    <dt class="property-required"
+{{% /md %}}</dd><dt class="property-required"
             title="Required">
         <span id="waflog_nodejs">
 <a href="#waflog_nodejs" style="color: inherit; text-decoration: inherit;">waf<wbr>Log</a>
@@ -743,8 +691,7 @@ The Instance resource accepts the following [input]({{< relref "/docs/intro/conc
         <span class="property-type">string</span>
     </dt>
     <dd>{{% md %}}Specify whether Log service is supported. Valid values: ["true", "false"]
-{{% /md %}}</dd>
-    <dt class="property-optional"
+{{% /md %}}</dd><dt class="property-optional"
             title="Optional">
         <span id="modifytype_nodejs">
 <a href="#modifytype_nodejs" style="color: inherit; text-decoration: inherit;">modify<wbr>Type</a>
@@ -753,8 +700,7 @@ The Instance resource accepts the following [input]({{< relref "/docs/intro/conc
         <span class="property-type">string</span>
     </dt>
     <dd>{{% md %}}Type of configuration change. Valid value: Upgrade.
-{{% /md %}}</dd>
-    <dt class="property-optional"
+{{% /md %}}</dd><dt class="property-optional"
             title="Optional">
         <span id="period_nodejs">
 <a href="#period_nodejs" style="color: inherit; text-decoration: inherit;">period</a>
@@ -763,8 +709,7 @@ The Instance resource accepts the following [input]({{< relref "/docs/intro/conc
         <span class="property-type">number</span>
     </dt>
     <dd>{{% md %}}Service time of Web Application Firewall.
-{{% /md %}}</dd>
-    <dt class="property-optional"
+{{% /md %}}</dd><dt class="property-optional"
             title="Optional">
         <span id="renewperiod_nodejs">
 <a href="#renewperiod_nodejs" style="color: inherit; text-decoration: inherit;">renew<wbr>Period</a>
@@ -773,8 +718,7 @@ The Instance resource accepts the following [input]({{< relref "/docs/intro/conc
         <span class="property-type">number</span>
     </dt>
     <dd>{{% md %}}Renewal period of WAF service. Unit: month
-{{% /md %}}</dd>
-    <dt class="property-optional"
+{{% /md %}}</dd><dt class="property-optional"
             title="Optional">
         <span id="renewalstatus_nodejs">
 <a href="#renewalstatus_nodejs" style="color: inherit; text-decoration: inherit;">renewal<wbr>Status</a>
@@ -785,8 +729,7 @@ The Instance resource accepts the following [input]({{< relref "/docs/intro/conc
     <dd>{{% md %}}Renewal status of WAF service. Valid values: 
 * AutoRenewal: The service time of WAF is renewed automatically.
 * ManualRenewal (default): The service time of WAF is renewed manually.Specifies whether to configure a Layer-7 proxy, such as Anti-DDoS Pro or CDN, to filter the inbound traffic before it is forwarded to WAF. Valid values: "On" and "Off". Default to "Off".
-{{% /md %}}</dd>
-    <dt class="property-optional"
+{{% /md %}}</dd><dt class="property-optional"
             title="Optional">
         <span id="resourcegroupid_nodejs">
 <a href="#resourcegroupid_nodejs" style="color: inherit; text-decoration: inherit;">resource<wbr>Group<wbr>Id</a>
@@ -795,14 +738,11 @@ The Instance resource accepts the following [input]({{< relref "/docs/intro/conc
         <span class="property-type">string</span>
     </dt>
     <dd>{{% md %}}The resource group ID.
-{{% /md %}}</dd>
-</dl>
+{{% /md %}}</dd></dl>
 {{% /choosable %}}
 
 {{% choosable language python %}}
-<dl class="resources-properties">
-
-    <dt class="property-required"
+<dl class="resources-properties"><dt class="property-required"
             title="Required">
         <span id="big_screen_python">
 <a href="#big_screen_python" style="color: inherit; text-decoration: inherit;">big_<wbr>screen</a>
@@ -811,8 +751,7 @@ The Instance resource accepts the following [input]({{< relref "/docs/intro/conc
         <span class="property-type">str</span>
     </dt>
     <dd>{{% md %}}Specify whether big screen is supported. Valid values: ["0", "1"]. "0" for false and "1" for true.
-{{% /md %}}</dd>
-    <dt class="property-required"
+{{% /md %}}</dd><dt class="property-required"
             title="Required">
         <span id="exclusive_ip_package_python">
 <a href="#exclusive_ip_package_python" style="color: inherit; text-decoration: inherit;">exclusive_<wbr>ip_<wbr>package</a>
@@ -821,8 +760,7 @@ The Instance resource accepts the following [input]({{< relref "/docs/intro/conc
         <span class="property-type">str</span>
     </dt>
     <dd>{{% md %}}Specify the number of exclusive WAF IP addresses.
-{{% /md %}}</dd>
-    <dt class="property-required"
+{{% /md %}}</dd><dt class="property-required"
             title="Required">
         <span id="ext_bandwidth_python">
 <a href="#ext_bandwidth_python" style="color: inherit; text-decoration: inherit;">ext_<wbr>bandwidth</a>
@@ -831,8 +769,7 @@ The Instance resource accepts the following [input]({{< relref "/docs/intro/conc
         <span class="property-type">str</span>
     </dt>
     <dd>{{% md %}}The extra bandwidth. Unit: Mbit/s.
-{{% /md %}}</dd>
-    <dt class="property-required"
+{{% /md %}}</dd><dt class="property-required"
             title="Required">
         <span id="ext_domain_package_python">
 <a href="#ext_domain_package_python" style="color: inherit; text-decoration: inherit;">ext_<wbr>domain_<wbr>package</a>
@@ -841,8 +778,7 @@ The Instance resource accepts the following [input]({{< relref "/docs/intro/conc
         <span class="property-type">str</span>
     </dt>
     <dd>{{% md %}}The number of extra domains.
-{{% /md %}}</dd>
-    <dt class="property-required"
+{{% /md %}}</dd><dt class="property-required"
             title="Required">
         <span id="log_storage_python">
 <a href="#log_storage_python" style="color: inherit; text-decoration: inherit;">log_<wbr>storage</a>
@@ -851,8 +787,7 @@ The Instance resource accepts the following [input]({{< relref "/docs/intro/conc
         <span class="property-type">str</span>
     </dt>
     <dd>{{% md %}}Log storage size. Unit: T. Valid values: [3, 5, 10, 20, 50].
-{{% /md %}}</dd>
-    <dt class="property-required"
+{{% /md %}}</dd><dt class="property-required"
             title="Required">
         <span id="log_time_python">
 <a href="#log_time_python" style="color: inherit; text-decoration: inherit;">log_<wbr>time</a>
@@ -861,8 +796,7 @@ The Instance resource accepts the following [input]({{< relref "/docs/intro/conc
         <span class="property-type">str</span>
     </dt>
     <dd>{{% md %}}Log storage period. Unit: day. Valid values: [180, 360].
-{{% /md %}}</dd>
-    <dt class="property-required"
+{{% /md %}}</dd><dt class="property-required"
             title="Required">
         <span id="package_code_python">
 <a href="#package_code_python" style="color: inherit; text-decoration: inherit;">package_<wbr>code</a>
@@ -875,8 +809,7 @@ The Instance resource accepts the following [input]({{< relref "/docs/intro/conc
 * China site customers can purchase the following versions of International region, valid values: ["version_pro_asia", "version_business_asia", "version_enterprise_asia"]
 * International site customers can purchase the following versions of China Mainland region: ["version_pro_china", "version_business_china", "version_enterprise_china"]
 * International site customers can purchase the following versions of International region: ["version_pro", "version_business", "version_enterprise"].
-{{% /md %}}</dd>
-    <dt class="property-required"
+{{% /md %}}</dd><dt class="property-required"
             title="Required">
         <span id="prefessional_service_python">
 <a href="#prefessional_service_python" style="color: inherit; text-decoration: inherit;">prefessional_<wbr>service</a>
@@ -885,8 +818,7 @@ The Instance resource accepts the following [input]({{< relref "/docs/intro/conc
         <span class="property-type">str</span>
     </dt>
     <dd>{{% md %}}Specify whether professional service is supported. Valid values: ["true", "false"]
-{{% /md %}}</dd>
-    <dt class="property-required"
+{{% /md %}}</dd><dt class="property-required"
             title="Required">
         <span id="subscription_type_python">
 <a href="#subscription_type_python" style="color: inherit; text-decoration: inherit;">subscription_<wbr>type</a>
@@ -895,8 +827,7 @@ The Instance resource accepts the following [input]({{< relref "/docs/intro/conc
         <span class="property-type">str</span>
     </dt>
     <dd>{{% md %}}Subscription of WAF service. Valid values: ["Subscription", "PayAsYouGo"].
-{{% /md %}}</dd>
-    <dt class="property-required"
+{{% /md %}}</dd><dt class="property-required"
             title="Required">
         <span id="waf_log_python">
 <a href="#waf_log_python" style="color: inherit; text-decoration: inherit;">waf_<wbr>log</a>
@@ -905,8 +836,7 @@ The Instance resource accepts the following [input]({{< relref "/docs/intro/conc
         <span class="property-type">str</span>
     </dt>
     <dd>{{% md %}}Specify whether Log service is supported. Valid values: ["true", "false"]
-{{% /md %}}</dd>
-    <dt class="property-optional"
+{{% /md %}}</dd><dt class="property-optional"
             title="Optional">
         <span id="modify_type_python">
 <a href="#modify_type_python" style="color: inherit; text-decoration: inherit;">modify_<wbr>type</a>
@@ -915,8 +845,7 @@ The Instance resource accepts the following [input]({{< relref "/docs/intro/conc
         <span class="property-type">str</span>
     </dt>
     <dd>{{% md %}}Type of configuration change. Valid value: Upgrade.
-{{% /md %}}</dd>
-    <dt class="property-optional"
+{{% /md %}}</dd><dt class="property-optional"
             title="Optional">
         <span id="period_python">
 <a href="#period_python" style="color: inherit; text-decoration: inherit;">period</a>
@@ -925,8 +854,7 @@ The Instance resource accepts the following [input]({{< relref "/docs/intro/conc
         <span class="property-type">int</span>
     </dt>
     <dd>{{% md %}}Service time of Web Application Firewall.
-{{% /md %}}</dd>
-    <dt class="property-optional"
+{{% /md %}}</dd><dt class="property-optional"
             title="Optional">
         <span id="renew_period_python">
 <a href="#renew_period_python" style="color: inherit; text-decoration: inherit;">renew_<wbr>period</a>
@@ -935,8 +863,7 @@ The Instance resource accepts the following [input]({{< relref "/docs/intro/conc
         <span class="property-type">int</span>
     </dt>
     <dd>{{% md %}}Renewal period of WAF service. Unit: month
-{{% /md %}}</dd>
-    <dt class="property-optional"
+{{% /md %}}</dd><dt class="property-optional"
             title="Optional">
         <span id="renewal_status_python">
 <a href="#renewal_status_python" style="color: inherit; text-decoration: inherit;">renewal_<wbr>status</a>
@@ -947,8 +874,7 @@ The Instance resource accepts the following [input]({{< relref "/docs/intro/conc
     <dd>{{% md %}}Renewal status of WAF service. Valid values: 
 * AutoRenewal: The service time of WAF is renewed automatically.
 * ManualRenewal (default): The service time of WAF is renewed manually.Specifies whether to configure a Layer-7 proxy, such as Anti-DDoS Pro or CDN, to filter the inbound traffic before it is forwarded to WAF. Valid values: "On" and "Off". Default to "Off".
-{{% /md %}}</dd>
-    <dt class="property-optional"
+{{% /md %}}</dd><dt class="property-optional"
             title="Optional">
         <span id="resource_group_id_python">
 <a href="#resource_group_id_python" style="color: inherit; text-decoration: inherit;">resource_<wbr>group_<wbr>id</a>
@@ -957,8 +883,7 @@ The Instance resource accepts the following [input]({{< relref "/docs/intro/conc
         <span class="property-type">str</span>
     </dt>
     <dd>{{% md %}}The resource group ID.
-{{% /md %}}</dd>
-</dl>
+{{% /md %}}</dd></dl>
 {{% /choosable %}}
 
 
@@ -969,9 +894,7 @@ All [input](#inputs) properties are implicitly available as output properties. A
 
 
 {{% choosable language csharp %}}
-<dl class="resources-properties">
-
-    <dt class="property-"
+<dl class="resources-properties"><dt class="property-"
             title="">
         <span id="id_csharp">
 <a href="#id_csharp" style="color: inherit; text-decoration: inherit;">Id</a>
@@ -979,8 +902,7 @@ All [input](#inputs) properties are implicitly available as output properties. A
         <span class="property-indicator"></span>
         <span class="property-type">string</span>
     </dt>
-    <dd>{{% md %}}The provider-assigned unique ID for this managed resource.{{% /md %}}</dd>
-    <dt class="property-"
+    <dd>{{% md %}}The provider-assigned unique ID for this managed resource.{{% /md %}}</dd><dt class="property-"
             title="">
         <span id="status_csharp">
 <a href="#status_csharp" style="color: inherit; text-decoration: inherit;">Status</a>
@@ -989,14 +911,11 @@ All [input](#inputs) properties are implicitly available as output properties. A
         <span class="property-type">int</span>
     </dt>
     <dd>{{% md %}}The status of the instance.
-{{% /md %}}</dd>
-</dl>
+{{% /md %}}</dd></dl>
 {{% /choosable %}}
 
 {{% choosable language go %}}
-<dl class="resources-properties">
-
-    <dt class="property-"
+<dl class="resources-properties"><dt class="property-"
             title="">
         <span id="id_go">
 <a href="#id_go" style="color: inherit; text-decoration: inherit;">Id</a>
@@ -1004,8 +923,7 @@ All [input](#inputs) properties are implicitly available as output properties. A
         <span class="property-indicator"></span>
         <span class="property-type">string</span>
     </dt>
-    <dd>{{% md %}}The provider-assigned unique ID for this managed resource.{{% /md %}}</dd>
-    <dt class="property-"
+    <dd>{{% md %}}The provider-assigned unique ID for this managed resource.{{% /md %}}</dd><dt class="property-"
             title="">
         <span id="status_go">
 <a href="#status_go" style="color: inherit; text-decoration: inherit;">Status</a>
@@ -1014,14 +932,11 @@ All [input](#inputs) properties are implicitly available as output properties. A
         <span class="property-type">int</span>
     </dt>
     <dd>{{% md %}}The status of the instance.
-{{% /md %}}</dd>
-</dl>
+{{% /md %}}</dd></dl>
 {{% /choosable %}}
 
 {{% choosable language nodejs %}}
-<dl class="resources-properties">
-
-    <dt class="property-"
+<dl class="resources-properties"><dt class="property-"
             title="">
         <span id="id_nodejs">
 <a href="#id_nodejs" style="color: inherit; text-decoration: inherit;">id</a>
@@ -1029,8 +944,7 @@ All [input](#inputs) properties are implicitly available as output properties. A
         <span class="property-indicator"></span>
         <span class="property-type">string</span>
     </dt>
-    <dd>{{% md %}}The provider-assigned unique ID for this managed resource.{{% /md %}}</dd>
-    <dt class="property-"
+    <dd>{{% md %}}The provider-assigned unique ID for this managed resource.{{% /md %}}</dd><dt class="property-"
             title="">
         <span id="status_nodejs">
 <a href="#status_nodejs" style="color: inherit; text-decoration: inherit;">status</a>
@@ -1039,14 +953,11 @@ All [input](#inputs) properties are implicitly available as output properties. A
         <span class="property-type">number</span>
     </dt>
     <dd>{{% md %}}The status of the instance.
-{{% /md %}}</dd>
-</dl>
+{{% /md %}}</dd></dl>
 {{% /choosable %}}
 
 {{% choosable language python %}}
-<dl class="resources-properties">
-
-    <dt class="property-"
+<dl class="resources-properties"><dt class="property-"
             title="">
         <span id="id_python">
 <a href="#id_python" style="color: inherit; text-decoration: inherit;">id</a>
@@ -1054,8 +965,7 @@ All [input](#inputs) properties are implicitly available as output properties. A
         <span class="property-indicator"></span>
         <span class="property-type">str</span>
     </dt>
-    <dd>{{% md %}}The provider-assigned unique ID for this managed resource.{{% /md %}}</dd>
-    <dt class="property-"
+    <dd>{{% md %}}The provider-assigned unique ID for this managed resource.{{% /md %}}</dd><dt class="property-"
             title="">
         <span id="status_python">
 <a href="#status_python" style="color: inherit; text-decoration: inherit;">status</a>
@@ -1064,8 +974,7 @@ All [input](#inputs) properties are implicitly available as output properties. A
         <span class="property-type">int</span>
     </dt>
     <dd>{{% md %}}The status of the instance.
-{{% /md %}}</dd>
-</dl>
+{{% /md %}}</dd></dl>
 {{% /choosable %}}
 
 
@@ -1192,9 +1101,7 @@ The following state arguments are supported:
 
 
 {{% choosable language csharp %}}
-<dl class="resources-properties">
-
-    <dt class="property-optional"
+<dl class="resources-properties"><dt class="property-optional"
             title="Optional">
         <span id="state_bigscreen_csharp">
 <a href="#state_bigscreen_csharp" style="color: inherit; text-decoration: inherit;">Big<wbr>Screen</a>
@@ -1203,8 +1110,7 @@ The following state arguments are supported:
         <span class="property-type">string</span>
     </dt>
     <dd>{{% md %}}Specify whether big screen is supported. Valid values: ["0", "1"]. "0" for false and "1" for true.
-{{% /md %}}</dd>
-    <dt class="property-optional"
+{{% /md %}}</dd><dt class="property-optional"
             title="Optional">
         <span id="state_exclusiveippackage_csharp">
 <a href="#state_exclusiveippackage_csharp" style="color: inherit; text-decoration: inherit;">Exclusive<wbr>Ip<wbr>Package</a>
@@ -1213,8 +1119,7 @@ The following state arguments are supported:
         <span class="property-type">string</span>
     </dt>
     <dd>{{% md %}}Specify the number of exclusive WAF IP addresses.
-{{% /md %}}</dd>
-    <dt class="property-optional"
+{{% /md %}}</dd><dt class="property-optional"
             title="Optional">
         <span id="state_extbandwidth_csharp">
 <a href="#state_extbandwidth_csharp" style="color: inherit; text-decoration: inherit;">Ext<wbr>Bandwidth</a>
@@ -1223,8 +1128,7 @@ The following state arguments are supported:
         <span class="property-type">string</span>
     </dt>
     <dd>{{% md %}}The extra bandwidth. Unit: Mbit/s.
-{{% /md %}}</dd>
-    <dt class="property-optional"
+{{% /md %}}</dd><dt class="property-optional"
             title="Optional">
         <span id="state_extdomainpackage_csharp">
 <a href="#state_extdomainpackage_csharp" style="color: inherit; text-decoration: inherit;">Ext<wbr>Domain<wbr>Package</a>
@@ -1233,8 +1137,7 @@ The following state arguments are supported:
         <span class="property-type">string</span>
     </dt>
     <dd>{{% md %}}The number of extra domains.
-{{% /md %}}</dd>
-    <dt class="property-optional"
+{{% /md %}}</dd><dt class="property-optional"
             title="Optional">
         <span id="state_logstorage_csharp">
 <a href="#state_logstorage_csharp" style="color: inherit; text-decoration: inherit;">Log<wbr>Storage</a>
@@ -1243,8 +1146,7 @@ The following state arguments are supported:
         <span class="property-type">string</span>
     </dt>
     <dd>{{% md %}}Log storage size. Unit: T. Valid values: [3, 5, 10, 20, 50].
-{{% /md %}}</dd>
-    <dt class="property-optional"
+{{% /md %}}</dd><dt class="property-optional"
             title="Optional">
         <span id="state_logtime_csharp">
 <a href="#state_logtime_csharp" style="color: inherit; text-decoration: inherit;">Log<wbr>Time</a>
@@ -1253,8 +1155,7 @@ The following state arguments are supported:
         <span class="property-type">string</span>
     </dt>
     <dd>{{% md %}}Log storage period. Unit: day. Valid values: [180, 360].
-{{% /md %}}</dd>
-    <dt class="property-optional"
+{{% /md %}}</dd><dt class="property-optional"
             title="Optional">
         <span id="state_modifytype_csharp">
 <a href="#state_modifytype_csharp" style="color: inherit; text-decoration: inherit;">Modify<wbr>Type</a>
@@ -1263,8 +1164,7 @@ The following state arguments are supported:
         <span class="property-type">string</span>
     </dt>
     <dd>{{% md %}}Type of configuration change. Valid value: Upgrade.
-{{% /md %}}</dd>
-    <dt class="property-optional"
+{{% /md %}}</dd><dt class="property-optional"
             title="Optional">
         <span id="state_packagecode_csharp">
 <a href="#state_packagecode_csharp" style="color: inherit; text-decoration: inherit;">Package<wbr>Code</a>
@@ -1277,8 +1177,7 @@ The following state arguments are supported:
 * China site customers can purchase the following versions of International region, valid values: ["version_pro_asia", "version_business_asia", "version_enterprise_asia"]
 * International site customers can purchase the following versions of China Mainland region: ["version_pro_china", "version_business_china", "version_enterprise_china"]
 * International site customers can purchase the following versions of International region: ["version_pro", "version_business", "version_enterprise"].
-{{% /md %}}</dd>
-    <dt class="property-optional"
+{{% /md %}}</dd><dt class="property-optional"
             title="Optional">
         <span id="state_period_csharp">
 <a href="#state_period_csharp" style="color: inherit; text-decoration: inherit;">Period</a>
@@ -1287,8 +1186,7 @@ The following state arguments are supported:
         <span class="property-type">int</span>
     </dt>
     <dd>{{% md %}}Service time of Web Application Firewall.
-{{% /md %}}</dd>
-    <dt class="property-optional"
+{{% /md %}}</dd><dt class="property-optional"
             title="Optional">
         <span id="state_prefessionalservice_csharp">
 <a href="#state_prefessionalservice_csharp" style="color: inherit; text-decoration: inherit;">Prefessional<wbr>Service</a>
@@ -1297,8 +1195,7 @@ The following state arguments are supported:
         <span class="property-type">string</span>
     </dt>
     <dd>{{% md %}}Specify whether professional service is supported. Valid values: ["true", "false"]
-{{% /md %}}</dd>
-    <dt class="property-optional"
+{{% /md %}}</dd><dt class="property-optional"
             title="Optional">
         <span id="state_renewperiod_csharp">
 <a href="#state_renewperiod_csharp" style="color: inherit; text-decoration: inherit;">Renew<wbr>Period</a>
@@ -1307,8 +1204,7 @@ The following state arguments are supported:
         <span class="property-type">int</span>
     </dt>
     <dd>{{% md %}}Renewal period of WAF service. Unit: month
-{{% /md %}}</dd>
-    <dt class="property-optional"
+{{% /md %}}</dd><dt class="property-optional"
             title="Optional">
         <span id="state_renewalstatus_csharp">
 <a href="#state_renewalstatus_csharp" style="color: inherit; text-decoration: inherit;">Renewal<wbr>Status</a>
@@ -1319,8 +1215,7 @@ The following state arguments are supported:
     <dd>{{% md %}}Renewal status of WAF service. Valid values: 
 * AutoRenewal: The service time of WAF is renewed automatically.
 * ManualRenewal (default): The service time of WAF is renewed manually.Specifies whether to configure a Layer-7 proxy, such as Anti-DDoS Pro or CDN, to filter the inbound traffic before it is forwarded to WAF. Valid values: "On" and "Off". Default to "Off".
-{{% /md %}}</dd>
-    <dt class="property-optional"
+{{% /md %}}</dd><dt class="property-optional"
             title="Optional">
         <span id="state_resourcegroupid_csharp">
 <a href="#state_resourcegroupid_csharp" style="color: inherit; text-decoration: inherit;">Resource<wbr>Group<wbr>Id</a>
@@ -1329,8 +1224,7 @@ The following state arguments are supported:
         <span class="property-type">string</span>
     </dt>
     <dd>{{% md %}}The resource group ID.
-{{% /md %}}</dd>
-    <dt class="property-optional"
+{{% /md %}}</dd><dt class="property-optional"
             title="Optional">
         <span id="state_status_csharp">
 <a href="#state_status_csharp" style="color: inherit; text-decoration: inherit;">Status</a>
@@ -1339,8 +1233,7 @@ The following state arguments are supported:
         <span class="property-type">int</span>
     </dt>
     <dd>{{% md %}}The status of the instance.
-{{% /md %}}</dd>
-    <dt class="property-optional"
+{{% /md %}}</dd><dt class="property-optional"
             title="Optional">
         <span id="state_subscriptiontype_csharp">
 <a href="#state_subscriptiontype_csharp" style="color: inherit; text-decoration: inherit;">Subscription<wbr>Type</a>
@@ -1349,8 +1242,7 @@ The following state arguments are supported:
         <span class="property-type">string</span>
     </dt>
     <dd>{{% md %}}Subscription of WAF service. Valid values: ["Subscription", "PayAsYouGo"].
-{{% /md %}}</dd>
-    <dt class="property-optional"
+{{% /md %}}</dd><dt class="property-optional"
             title="Optional">
         <span id="state_waflog_csharp">
 <a href="#state_waflog_csharp" style="color: inherit; text-decoration: inherit;">Waf<wbr>Log</a>
@@ -1359,14 +1251,11 @@ The following state arguments are supported:
         <span class="property-type">string</span>
     </dt>
     <dd>{{% md %}}Specify whether Log service is supported. Valid values: ["true", "false"]
-{{% /md %}}</dd>
-</dl>
+{{% /md %}}</dd></dl>
 {{% /choosable %}}
 
 {{% choosable language go %}}
-<dl class="resources-properties">
-
-    <dt class="property-optional"
+<dl class="resources-properties"><dt class="property-optional"
             title="Optional">
         <span id="state_bigscreen_go">
 <a href="#state_bigscreen_go" style="color: inherit; text-decoration: inherit;">Big<wbr>Screen</a>
@@ -1375,8 +1264,7 @@ The following state arguments are supported:
         <span class="property-type">string</span>
     </dt>
     <dd>{{% md %}}Specify whether big screen is supported. Valid values: ["0", "1"]. "0" for false and "1" for true.
-{{% /md %}}</dd>
-    <dt class="property-optional"
+{{% /md %}}</dd><dt class="property-optional"
             title="Optional">
         <span id="state_exclusiveippackage_go">
 <a href="#state_exclusiveippackage_go" style="color: inherit; text-decoration: inherit;">Exclusive<wbr>Ip<wbr>Package</a>
@@ -1385,8 +1273,7 @@ The following state arguments are supported:
         <span class="property-type">string</span>
     </dt>
     <dd>{{% md %}}Specify the number of exclusive WAF IP addresses.
-{{% /md %}}</dd>
-    <dt class="property-optional"
+{{% /md %}}</dd><dt class="property-optional"
             title="Optional">
         <span id="state_extbandwidth_go">
 <a href="#state_extbandwidth_go" style="color: inherit; text-decoration: inherit;">Ext<wbr>Bandwidth</a>
@@ -1395,8 +1282,7 @@ The following state arguments are supported:
         <span class="property-type">string</span>
     </dt>
     <dd>{{% md %}}The extra bandwidth. Unit: Mbit/s.
-{{% /md %}}</dd>
-    <dt class="property-optional"
+{{% /md %}}</dd><dt class="property-optional"
             title="Optional">
         <span id="state_extdomainpackage_go">
 <a href="#state_extdomainpackage_go" style="color: inherit; text-decoration: inherit;">Ext<wbr>Domain<wbr>Package</a>
@@ -1405,8 +1291,7 @@ The following state arguments are supported:
         <span class="property-type">string</span>
     </dt>
     <dd>{{% md %}}The number of extra domains.
-{{% /md %}}</dd>
-    <dt class="property-optional"
+{{% /md %}}</dd><dt class="property-optional"
             title="Optional">
         <span id="state_logstorage_go">
 <a href="#state_logstorage_go" style="color: inherit; text-decoration: inherit;">Log<wbr>Storage</a>
@@ -1415,8 +1300,7 @@ The following state arguments are supported:
         <span class="property-type">string</span>
     </dt>
     <dd>{{% md %}}Log storage size. Unit: T. Valid values: [3, 5, 10, 20, 50].
-{{% /md %}}</dd>
-    <dt class="property-optional"
+{{% /md %}}</dd><dt class="property-optional"
             title="Optional">
         <span id="state_logtime_go">
 <a href="#state_logtime_go" style="color: inherit; text-decoration: inherit;">Log<wbr>Time</a>
@@ -1425,8 +1309,7 @@ The following state arguments are supported:
         <span class="property-type">string</span>
     </dt>
     <dd>{{% md %}}Log storage period. Unit: day. Valid values: [180, 360].
-{{% /md %}}</dd>
-    <dt class="property-optional"
+{{% /md %}}</dd><dt class="property-optional"
             title="Optional">
         <span id="state_modifytype_go">
 <a href="#state_modifytype_go" style="color: inherit; text-decoration: inherit;">Modify<wbr>Type</a>
@@ -1435,8 +1318,7 @@ The following state arguments are supported:
         <span class="property-type">string</span>
     </dt>
     <dd>{{% md %}}Type of configuration change. Valid value: Upgrade.
-{{% /md %}}</dd>
-    <dt class="property-optional"
+{{% /md %}}</dd><dt class="property-optional"
             title="Optional">
         <span id="state_packagecode_go">
 <a href="#state_packagecode_go" style="color: inherit; text-decoration: inherit;">Package<wbr>Code</a>
@@ -1449,8 +1331,7 @@ The following state arguments are supported:
 * China site customers can purchase the following versions of International region, valid values: ["version_pro_asia", "version_business_asia", "version_enterprise_asia"]
 * International site customers can purchase the following versions of China Mainland region: ["version_pro_china", "version_business_china", "version_enterprise_china"]
 * International site customers can purchase the following versions of International region: ["version_pro", "version_business", "version_enterprise"].
-{{% /md %}}</dd>
-    <dt class="property-optional"
+{{% /md %}}</dd><dt class="property-optional"
             title="Optional">
         <span id="state_period_go">
 <a href="#state_period_go" style="color: inherit; text-decoration: inherit;">Period</a>
@@ -1459,8 +1340,7 @@ The following state arguments are supported:
         <span class="property-type">int</span>
     </dt>
     <dd>{{% md %}}Service time of Web Application Firewall.
-{{% /md %}}</dd>
-    <dt class="property-optional"
+{{% /md %}}</dd><dt class="property-optional"
             title="Optional">
         <span id="state_prefessionalservice_go">
 <a href="#state_prefessionalservice_go" style="color: inherit; text-decoration: inherit;">Prefessional<wbr>Service</a>
@@ -1469,8 +1349,7 @@ The following state arguments are supported:
         <span class="property-type">string</span>
     </dt>
     <dd>{{% md %}}Specify whether professional service is supported. Valid values: ["true", "false"]
-{{% /md %}}</dd>
-    <dt class="property-optional"
+{{% /md %}}</dd><dt class="property-optional"
             title="Optional">
         <span id="state_renewperiod_go">
 <a href="#state_renewperiod_go" style="color: inherit; text-decoration: inherit;">Renew<wbr>Period</a>
@@ -1479,8 +1358,7 @@ The following state arguments are supported:
         <span class="property-type">int</span>
     </dt>
     <dd>{{% md %}}Renewal period of WAF service. Unit: month
-{{% /md %}}</dd>
-    <dt class="property-optional"
+{{% /md %}}</dd><dt class="property-optional"
             title="Optional">
         <span id="state_renewalstatus_go">
 <a href="#state_renewalstatus_go" style="color: inherit; text-decoration: inherit;">Renewal<wbr>Status</a>
@@ -1491,8 +1369,7 @@ The following state arguments are supported:
     <dd>{{% md %}}Renewal status of WAF service. Valid values: 
 * AutoRenewal: The service time of WAF is renewed automatically.
 * ManualRenewal (default): The service time of WAF is renewed manually.Specifies whether to configure a Layer-7 proxy, such as Anti-DDoS Pro or CDN, to filter the inbound traffic before it is forwarded to WAF. Valid values: "On" and "Off". Default to "Off".
-{{% /md %}}</dd>
-    <dt class="property-optional"
+{{% /md %}}</dd><dt class="property-optional"
             title="Optional">
         <span id="state_resourcegroupid_go">
 <a href="#state_resourcegroupid_go" style="color: inherit; text-decoration: inherit;">Resource<wbr>Group<wbr>Id</a>
@@ -1501,8 +1378,7 @@ The following state arguments are supported:
         <span class="property-type">string</span>
     </dt>
     <dd>{{% md %}}The resource group ID.
-{{% /md %}}</dd>
-    <dt class="property-optional"
+{{% /md %}}</dd><dt class="property-optional"
             title="Optional">
         <span id="state_status_go">
 <a href="#state_status_go" style="color: inherit; text-decoration: inherit;">Status</a>
@@ -1511,8 +1387,7 @@ The following state arguments are supported:
         <span class="property-type">int</span>
     </dt>
     <dd>{{% md %}}The status of the instance.
-{{% /md %}}</dd>
-    <dt class="property-optional"
+{{% /md %}}</dd><dt class="property-optional"
             title="Optional">
         <span id="state_subscriptiontype_go">
 <a href="#state_subscriptiontype_go" style="color: inherit; text-decoration: inherit;">Subscription<wbr>Type</a>
@@ -1521,8 +1396,7 @@ The following state arguments are supported:
         <span class="property-type">string</span>
     </dt>
     <dd>{{% md %}}Subscription of WAF service. Valid values: ["Subscription", "PayAsYouGo"].
-{{% /md %}}</dd>
-    <dt class="property-optional"
+{{% /md %}}</dd><dt class="property-optional"
             title="Optional">
         <span id="state_waflog_go">
 <a href="#state_waflog_go" style="color: inherit; text-decoration: inherit;">Waf<wbr>Log</a>
@@ -1531,14 +1405,11 @@ The following state arguments are supported:
         <span class="property-type">string</span>
     </dt>
     <dd>{{% md %}}Specify whether Log service is supported. Valid values: ["true", "false"]
-{{% /md %}}</dd>
-</dl>
+{{% /md %}}</dd></dl>
 {{% /choosable %}}
 
 {{% choosable language nodejs %}}
-<dl class="resources-properties">
-
-    <dt class="property-optional"
+<dl class="resources-properties"><dt class="property-optional"
             title="Optional">
         <span id="state_bigscreen_nodejs">
 <a href="#state_bigscreen_nodejs" style="color: inherit; text-decoration: inherit;">big<wbr>Screen</a>
@@ -1547,8 +1418,7 @@ The following state arguments are supported:
         <span class="property-type">string</span>
     </dt>
     <dd>{{% md %}}Specify whether big screen is supported. Valid values: ["0", "1"]. "0" for false and "1" for true.
-{{% /md %}}</dd>
-    <dt class="property-optional"
+{{% /md %}}</dd><dt class="property-optional"
             title="Optional">
         <span id="state_exclusiveippackage_nodejs">
 <a href="#state_exclusiveippackage_nodejs" style="color: inherit; text-decoration: inherit;">exclusive<wbr>Ip<wbr>Package</a>
@@ -1557,8 +1427,7 @@ The following state arguments are supported:
         <span class="property-type">string</span>
     </dt>
     <dd>{{% md %}}Specify the number of exclusive WAF IP addresses.
-{{% /md %}}</dd>
-    <dt class="property-optional"
+{{% /md %}}</dd><dt class="property-optional"
             title="Optional">
         <span id="state_extbandwidth_nodejs">
 <a href="#state_extbandwidth_nodejs" style="color: inherit; text-decoration: inherit;">ext<wbr>Bandwidth</a>
@@ -1567,8 +1436,7 @@ The following state arguments are supported:
         <span class="property-type">string</span>
     </dt>
     <dd>{{% md %}}The extra bandwidth. Unit: Mbit/s.
-{{% /md %}}</dd>
-    <dt class="property-optional"
+{{% /md %}}</dd><dt class="property-optional"
             title="Optional">
         <span id="state_extdomainpackage_nodejs">
 <a href="#state_extdomainpackage_nodejs" style="color: inherit; text-decoration: inherit;">ext<wbr>Domain<wbr>Package</a>
@@ -1577,8 +1445,7 @@ The following state arguments are supported:
         <span class="property-type">string</span>
     </dt>
     <dd>{{% md %}}The number of extra domains.
-{{% /md %}}</dd>
-    <dt class="property-optional"
+{{% /md %}}</dd><dt class="property-optional"
             title="Optional">
         <span id="state_logstorage_nodejs">
 <a href="#state_logstorage_nodejs" style="color: inherit; text-decoration: inherit;">log<wbr>Storage</a>
@@ -1587,8 +1454,7 @@ The following state arguments are supported:
         <span class="property-type">string</span>
     </dt>
     <dd>{{% md %}}Log storage size. Unit: T. Valid values: [3, 5, 10, 20, 50].
-{{% /md %}}</dd>
-    <dt class="property-optional"
+{{% /md %}}</dd><dt class="property-optional"
             title="Optional">
         <span id="state_logtime_nodejs">
 <a href="#state_logtime_nodejs" style="color: inherit; text-decoration: inherit;">log<wbr>Time</a>
@@ -1597,8 +1463,7 @@ The following state arguments are supported:
         <span class="property-type">string</span>
     </dt>
     <dd>{{% md %}}Log storage period. Unit: day. Valid values: [180, 360].
-{{% /md %}}</dd>
-    <dt class="property-optional"
+{{% /md %}}</dd><dt class="property-optional"
             title="Optional">
         <span id="state_modifytype_nodejs">
 <a href="#state_modifytype_nodejs" style="color: inherit; text-decoration: inherit;">modify<wbr>Type</a>
@@ -1607,8 +1472,7 @@ The following state arguments are supported:
         <span class="property-type">string</span>
     </dt>
     <dd>{{% md %}}Type of configuration change. Valid value: Upgrade.
-{{% /md %}}</dd>
-    <dt class="property-optional"
+{{% /md %}}</dd><dt class="property-optional"
             title="Optional">
         <span id="state_packagecode_nodejs">
 <a href="#state_packagecode_nodejs" style="color: inherit; text-decoration: inherit;">package<wbr>Code</a>
@@ -1621,8 +1485,7 @@ The following state arguments are supported:
 * China site customers can purchase the following versions of International region, valid values: ["version_pro_asia", "version_business_asia", "version_enterprise_asia"]
 * International site customers can purchase the following versions of China Mainland region: ["version_pro_china", "version_business_china", "version_enterprise_china"]
 * International site customers can purchase the following versions of International region: ["version_pro", "version_business", "version_enterprise"].
-{{% /md %}}</dd>
-    <dt class="property-optional"
+{{% /md %}}</dd><dt class="property-optional"
             title="Optional">
         <span id="state_period_nodejs">
 <a href="#state_period_nodejs" style="color: inherit; text-decoration: inherit;">period</a>
@@ -1631,8 +1494,7 @@ The following state arguments are supported:
         <span class="property-type">number</span>
     </dt>
     <dd>{{% md %}}Service time of Web Application Firewall.
-{{% /md %}}</dd>
-    <dt class="property-optional"
+{{% /md %}}</dd><dt class="property-optional"
             title="Optional">
         <span id="state_prefessionalservice_nodejs">
 <a href="#state_prefessionalservice_nodejs" style="color: inherit; text-decoration: inherit;">prefessional<wbr>Service</a>
@@ -1641,8 +1503,7 @@ The following state arguments are supported:
         <span class="property-type">string</span>
     </dt>
     <dd>{{% md %}}Specify whether professional service is supported. Valid values: ["true", "false"]
-{{% /md %}}</dd>
-    <dt class="property-optional"
+{{% /md %}}</dd><dt class="property-optional"
             title="Optional">
         <span id="state_renewperiod_nodejs">
 <a href="#state_renewperiod_nodejs" style="color: inherit; text-decoration: inherit;">renew<wbr>Period</a>
@@ -1651,8 +1512,7 @@ The following state arguments are supported:
         <span class="property-type">number</span>
     </dt>
     <dd>{{% md %}}Renewal period of WAF service. Unit: month
-{{% /md %}}</dd>
-    <dt class="property-optional"
+{{% /md %}}</dd><dt class="property-optional"
             title="Optional">
         <span id="state_renewalstatus_nodejs">
 <a href="#state_renewalstatus_nodejs" style="color: inherit; text-decoration: inherit;">renewal<wbr>Status</a>
@@ -1663,8 +1523,7 @@ The following state arguments are supported:
     <dd>{{% md %}}Renewal status of WAF service. Valid values: 
 * AutoRenewal: The service time of WAF is renewed automatically.
 * ManualRenewal (default): The service time of WAF is renewed manually.Specifies whether to configure a Layer-7 proxy, such as Anti-DDoS Pro or CDN, to filter the inbound traffic before it is forwarded to WAF. Valid values: "On" and "Off". Default to "Off".
-{{% /md %}}</dd>
-    <dt class="property-optional"
+{{% /md %}}</dd><dt class="property-optional"
             title="Optional">
         <span id="state_resourcegroupid_nodejs">
 <a href="#state_resourcegroupid_nodejs" style="color: inherit; text-decoration: inherit;">resource<wbr>Group<wbr>Id</a>
@@ -1673,8 +1532,7 @@ The following state arguments are supported:
         <span class="property-type">string</span>
     </dt>
     <dd>{{% md %}}The resource group ID.
-{{% /md %}}</dd>
-    <dt class="property-optional"
+{{% /md %}}</dd><dt class="property-optional"
             title="Optional">
         <span id="state_status_nodejs">
 <a href="#state_status_nodejs" style="color: inherit; text-decoration: inherit;">status</a>
@@ -1683,8 +1541,7 @@ The following state arguments are supported:
         <span class="property-type">number</span>
     </dt>
     <dd>{{% md %}}The status of the instance.
-{{% /md %}}</dd>
-    <dt class="property-optional"
+{{% /md %}}</dd><dt class="property-optional"
             title="Optional">
         <span id="state_subscriptiontype_nodejs">
 <a href="#state_subscriptiontype_nodejs" style="color: inherit; text-decoration: inherit;">subscription<wbr>Type</a>
@@ -1693,8 +1550,7 @@ The following state arguments are supported:
         <span class="property-type">string</span>
     </dt>
     <dd>{{% md %}}Subscription of WAF service. Valid values: ["Subscription", "PayAsYouGo"].
-{{% /md %}}</dd>
-    <dt class="property-optional"
+{{% /md %}}</dd><dt class="property-optional"
             title="Optional">
         <span id="state_waflog_nodejs">
 <a href="#state_waflog_nodejs" style="color: inherit; text-decoration: inherit;">waf<wbr>Log</a>
@@ -1703,14 +1559,11 @@ The following state arguments are supported:
         <span class="property-type">string</span>
     </dt>
     <dd>{{% md %}}Specify whether Log service is supported. Valid values: ["true", "false"]
-{{% /md %}}</dd>
-</dl>
+{{% /md %}}</dd></dl>
 {{% /choosable %}}
 
 {{% choosable language python %}}
-<dl class="resources-properties">
-
-    <dt class="property-optional"
+<dl class="resources-properties"><dt class="property-optional"
             title="Optional">
         <span id="state_big_screen_python">
 <a href="#state_big_screen_python" style="color: inherit; text-decoration: inherit;">big_<wbr>screen</a>
@@ -1719,8 +1572,7 @@ The following state arguments are supported:
         <span class="property-type">str</span>
     </dt>
     <dd>{{% md %}}Specify whether big screen is supported. Valid values: ["0", "1"]. "0" for false and "1" for true.
-{{% /md %}}</dd>
-    <dt class="property-optional"
+{{% /md %}}</dd><dt class="property-optional"
             title="Optional">
         <span id="state_exclusive_ip_package_python">
 <a href="#state_exclusive_ip_package_python" style="color: inherit; text-decoration: inherit;">exclusive_<wbr>ip_<wbr>package</a>
@@ -1729,8 +1581,7 @@ The following state arguments are supported:
         <span class="property-type">str</span>
     </dt>
     <dd>{{% md %}}Specify the number of exclusive WAF IP addresses.
-{{% /md %}}</dd>
-    <dt class="property-optional"
+{{% /md %}}</dd><dt class="property-optional"
             title="Optional">
         <span id="state_ext_bandwidth_python">
 <a href="#state_ext_bandwidth_python" style="color: inherit; text-decoration: inherit;">ext_<wbr>bandwidth</a>
@@ -1739,8 +1590,7 @@ The following state arguments are supported:
         <span class="property-type">str</span>
     </dt>
     <dd>{{% md %}}The extra bandwidth. Unit: Mbit/s.
-{{% /md %}}</dd>
-    <dt class="property-optional"
+{{% /md %}}</dd><dt class="property-optional"
             title="Optional">
         <span id="state_ext_domain_package_python">
 <a href="#state_ext_domain_package_python" style="color: inherit; text-decoration: inherit;">ext_<wbr>domain_<wbr>package</a>
@@ -1749,8 +1599,7 @@ The following state arguments are supported:
         <span class="property-type">str</span>
     </dt>
     <dd>{{% md %}}The number of extra domains.
-{{% /md %}}</dd>
-    <dt class="property-optional"
+{{% /md %}}</dd><dt class="property-optional"
             title="Optional">
         <span id="state_log_storage_python">
 <a href="#state_log_storage_python" style="color: inherit; text-decoration: inherit;">log_<wbr>storage</a>
@@ -1759,8 +1608,7 @@ The following state arguments are supported:
         <span class="property-type">str</span>
     </dt>
     <dd>{{% md %}}Log storage size. Unit: T. Valid values: [3, 5, 10, 20, 50].
-{{% /md %}}</dd>
-    <dt class="property-optional"
+{{% /md %}}</dd><dt class="property-optional"
             title="Optional">
         <span id="state_log_time_python">
 <a href="#state_log_time_python" style="color: inherit; text-decoration: inherit;">log_<wbr>time</a>
@@ -1769,8 +1617,7 @@ The following state arguments are supported:
         <span class="property-type">str</span>
     </dt>
     <dd>{{% md %}}Log storage period. Unit: day. Valid values: [180, 360].
-{{% /md %}}</dd>
-    <dt class="property-optional"
+{{% /md %}}</dd><dt class="property-optional"
             title="Optional">
         <span id="state_modify_type_python">
 <a href="#state_modify_type_python" style="color: inherit; text-decoration: inherit;">modify_<wbr>type</a>
@@ -1779,8 +1626,7 @@ The following state arguments are supported:
         <span class="property-type">str</span>
     </dt>
     <dd>{{% md %}}Type of configuration change. Valid value: Upgrade.
-{{% /md %}}</dd>
-    <dt class="property-optional"
+{{% /md %}}</dd><dt class="property-optional"
             title="Optional">
         <span id="state_package_code_python">
 <a href="#state_package_code_python" style="color: inherit; text-decoration: inherit;">package_<wbr>code</a>
@@ -1793,8 +1639,7 @@ The following state arguments are supported:
 * China site customers can purchase the following versions of International region, valid values: ["version_pro_asia", "version_business_asia", "version_enterprise_asia"]
 * International site customers can purchase the following versions of China Mainland region: ["version_pro_china", "version_business_china", "version_enterprise_china"]
 * International site customers can purchase the following versions of International region: ["version_pro", "version_business", "version_enterprise"].
-{{% /md %}}</dd>
-    <dt class="property-optional"
+{{% /md %}}</dd><dt class="property-optional"
             title="Optional">
         <span id="state_period_python">
 <a href="#state_period_python" style="color: inherit; text-decoration: inherit;">period</a>
@@ -1803,8 +1648,7 @@ The following state arguments are supported:
         <span class="property-type">int</span>
     </dt>
     <dd>{{% md %}}Service time of Web Application Firewall.
-{{% /md %}}</dd>
-    <dt class="property-optional"
+{{% /md %}}</dd><dt class="property-optional"
             title="Optional">
         <span id="state_prefessional_service_python">
 <a href="#state_prefessional_service_python" style="color: inherit; text-decoration: inherit;">prefessional_<wbr>service</a>
@@ -1813,8 +1657,7 @@ The following state arguments are supported:
         <span class="property-type">str</span>
     </dt>
     <dd>{{% md %}}Specify whether professional service is supported. Valid values: ["true", "false"]
-{{% /md %}}</dd>
-    <dt class="property-optional"
+{{% /md %}}</dd><dt class="property-optional"
             title="Optional">
         <span id="state_renew_period_python">
 <a href="#state_renew_period_python" style="color: inherit; text-decoration: inherit;">renew_<wbr>period</a>
@@ -1823,8 +1666,7 @@ The following state arguments are supported:
         <span class="property-type">int</span>
     </dt>
     <dd>{{% md %}}Renewal period of WAF service. Unit: month
-{{% /md %}}</dd>
-    <dt class="property-optional"
+{{% /md %}}</dd><dt class="property-optional"
             title="Optional">
         <span id="state_renewal_status_python">
 <a href="#state_renewal_status_python" style="color: inherit; text-decoration: inherit;">renewal_<wbr>status</a>
@@ -1835,8 +1677,7 @@ The following state arguments are supported:
     <dd>{{% md %}}Renewal status of WAF service. Valid values: 
 * AutoRenewal: The service time of WAF is renewed automatically.
 * ManualRenewal (default): The service time of WAF is renewed manually.Specifies whether to configure a Layer-7 proxy, such as Anti-DDoS Pro or CDN, to filter the inbound traffic before it is forwarded to WAF. Valid values: "On" and "Off". Default to "Off".
-{{% /md %}}</dd>
-    <dt class="property-optional"
+{{% /md %}}</dd><dt class="property-optional"
             title="Optional">
         <span id="state_resource_group_id_python">
 <a href="#state_resource_group_id_python" style="color: inherit; text-decoration: inherit;">resource_<wbr>group_<wbr>id</a>
@@ -1845,8 +1686,7 @@ The following state arguments are supported:
         <span class="property-type">str</span>
     </dt>
     <dd>{{% md %}}The resource group ID.
-{{% /md %}}</dd>
-    <dt class="property-optional"
+{{% /md %}}</dd><dt class="property-optional"
             title="Optional">
         <span id="state_status_python">
 <a href="#state_status_python" style="color: inherit; text-decoration: inherit;">status</a>
@@ -1855,8 +1695,7 @@ The following state arguments are supported:
         <span class="property-type">int</span>
     </dt>
     <dd>{{% md %}}The status of the instance.
-{{% /md %}}</dd>
-    <dt class="property-optional"
+{{% /md %}}</dd><dt class="property-optional"
             title="Optional">
         <span id="state_subscription_type_python">
 <a href="#state_subscription_type_python" style="color: inherit; text-decoration: inherit;">subscription_<wbr>type</a>
@@ -1865,8 +1704,7 @@ The following state arguments are supported:
         <span class="property-type">str</span>
     </dt>
     <dd>{{% md %}}Subscription of WAF service. Valid values: ["Subscription", "PayAsYouGo"].
-{{% /md %}}</dd>
-    <dt class="property-optional"
+{{% /md %}}</dd><dt class="property-optional"
             title="Optional">
         <span id="state_waf_log_python">
 <a href="#state_waf_log_python" style="color: inherit; text-decoration: inherit;">waf_<wbr>log</a>
@@ -1875,8 +1713,7 @@ The following state arguments are supported:
         <span class="property-type">str</span>
     </dt>
     <dd>{{% md %}}Specify whether Log service is supported. Valid values: ["true", "false"]
-{{% /md %}}</dd>
-</dl>
+{{% /md %}}</dd></dl>
 {{% /choosable %}}
 
 
@@ -1902,6 +1739,6 @@ WAF instance can be imported using the id, e.g.
 	<dt>License</dt>
 	<dd>Apache-2.0</dd>
 	<dt>Notes</dt>
-	<dd>This Pulumi package is based on the [`alicloud` Terraform Provider](https://github.com/aliyun/terraform-provider-alicloud).</dd>
+	<dd>{{% md %}}This Pulumi package is based on the [`alicloud` Terraform Provider](https://github.com/aliyun/terraform-provider-alicloud).{{% /md %}}</dd>
 </dl>
 

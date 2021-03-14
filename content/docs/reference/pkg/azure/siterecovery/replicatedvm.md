@@ -36,9 +36,7 @@ Manages a VM replicated using Azure Site Recovery (Azure to Azure only). A repli
 
 {{% choosable language nodejs %}}
 
-<dl class="resources-properties">
-  
-    <dt
+<dl class="resources-properties"><dt
         class="property-required" title="Required">
         <span>name</span>
         <span class="property-indicator"></span>
@@ -46,9 +44,7 @@ Manages a VM replicated using Azure Site Recovery (Azure to Azure only). A repli
     </dt>
     <dd>
       The unique name of the resource.
-    </dd>
-  
-    <dt
+    </dd><dt
         class="property-required" title="Required">
         <span>args</span>
         <span class="property-indicator"></span>
@@ -56,9 +52,7 @@ Manages a VM replicated using Azure Site Recovery (Azure to Azure only). A repli
     </dt>
     <dd>
       The arguments to resource properties.
-    </dd>
-  
-    <dt
+    </dd><dt
         class="property-optional" title="Optional">
         <span>opts</span>
         <span class="property-indicator"></span>
@@ -66,10 +60,7 @@ Manages a VM replicated using Azure Site Recovery (Azure to Azure only). A repli
     </dt>
     <dd>
       Bag of options to control resource&#39;s behavior.
-    </dd>
-  
-
-</dl>
+    </dd></dl>
 
 {{% /choosable %}}
 
@@ -95,9 +86,7 @@ Manages a VM replicated using Azure Site Recovery (Azure to Azure only). A repli
 
 {{% choosable language go %}}
 
-<dl class="resources-properties">
-  
-    <dt
+<dl class="resources-properties"><dt
         class="property-optional" title="Optional">
         <span>ctx</span>
         <span class="property-indicator"></span>
@@ -105,9 +94,7 @@ Manages a VM replicated using Azure Site Recovery (Azure to Azure only). A repli
     </dt>
     <dd>
       Context object for the current deployment.
-    </dd>
-  
-    <dt
+    </dd><dt
         class="property-required" title="Required">
         <span>name</span>
         <span class="property-indicator"></span>
@@ -115,9 +102,7 @@ Manages a VM replicated using Azure Site Recovery (Azure to Azure only). A repli
     </dt>
     <dd>
       The unique name of the resource.
-    </dd>
-  
-    <dt
+    </dd><dt
         class="property-required" title="Required">
         <span>args</span>
         <span class="property-indicator"></span>
@@ -125,9 +110,7 @@ Manages a VM replicated using Azure Site Recovery (Azure to Azure only). A repli
     </dt>
     <dd>
       The arguments to resource properties.
-    </dd>
-  
-    <dt
+    </dd><dt
         class="property-optional" title="Optional">
         <span>opts</span>
         <span class="property-indicator"></span>
@@ -135,18 +118,13 @@ Manages a VM replicated using Azure Site Recovery (Azure to Azure only). A repli
     </dt>
     <dd>
       Bag of options to control resource&#39;s behavior.
-    </dd>
-  
-
-</dl>
+    </dd></dl>
 
 {{% /choosable %}}
 
 {{% choosable language csharp %}}
 
-<dl class="resources-properties">
-  
-    <dt
+<dl class="resources-properties"><dt
         class="property-required" title="Required">
         <span>name</span>
         <span class="property-indicator"></span>
@@ -154,9 +132,7 @@ Manages a VM replicated using Azure Site Recovery (Azure to Azure only). A repli
     </dt>
     <dd>
       The unique name of the resource.
-    </dd>
-  
-    <dt
+    </dd><dt
         class="property-required" title="Required">
         <span>args</span>
         <span class="property-indicator"></span>
@@ -164,9 +140,7 @@ Manages a VM replicated using Azure Site Recovery (Azure to Azure only). A repli
     </dt>
     <dd>
       The arguments to resource properties.
-    </dd>
-  
-    <dt
+    </dd><dt
         class="property-optional" title="Optional">
         <span>opts</span>
         <span class="property-indicator"></span>
@@ -174,10 +148,7 @@ Manages a VM replicated using Azure Site Recovery (Azure to Azure only). A repli
     </dt>
     <dd>
       Bag of options to control resource&#39;s behavior.
-    </dd>
-  
-
-</dl>
+    </dd></dl>
 
 {{% /choosable %}}
 
@@ -192,9 +163,7 @@ The ReplicatedVM resource accepts the following [input]({{< relref "/docs/intro/
 
 
 {{% choosable language csharp %}}
-<dl class="resources-properties">
-
-    <dt class="property-required"
+<dl class="resources-properties"><dt class="property-required"
             title="Required">
         <span id="recoveryreplicationpolicyid_csharp">
 <a href="#recoveryreplicationpolicyid_csharp" style="color: inherit; text-decoration: inherit;">Recovery<wbr>Replication<wbr>Policy<wbr>Id</a>
@@ -202,8 +171,7 @@ The ReplicatedVM resource accepts the following [input]({{< relref "/docs/intro/
         <span class="property-indicator"></span>
         <span class="property-type">string</span>
     </dt>
-    <dd>{{% md %}}{{% /md %}}</dd>
-    <dt class="property-required"
+    <dd>{{% md %}}{{% /md %}}</dd><dt class="property-required"
             title="Required">
         <span id="recoveryvaultname_csharp">
 <a href="#recoveryvaultname_csharp" style="color: inherit; text-decoration: inherit;">Recovery<wbr>Vault<wbr>Name</a>
@@ -212,8 +180,7 @@ The ReplicatedVM resource accepts the following [input]({{< relref "/docs/intro/
         <span class="property-type">string</span>
     </dt>
     <dd>{{% md %}}The name of the vault that should be updated.
-{{% /md %}}</dd>
-    <dt class="property-required"
+{{% /md %}}</dd><dt class="property-required"
             title="Required">
         <span id="resourcegroupname_csharp">
 <a href="#resourcegroupname_csharp" style="color: inherit; text-decoration: inherit;">Resource<wbr>Group<wbr>Name</a>
@@ -222,8 +189,7 @@ The ReplicatedVM resource accepts the following [input]({{< relref "/docs/intro/
         <span class="property-type">string</span>
     </dt>
     <dd>{{% md %}}Name of the resource group where the vault that should be updated is located.
-{{% /md %}}</dd>
-    <dt class="property-required"
+{{% /md %}}</dd><dt class="property-required"
             title="Required">
         <span id="sourcerecoveryfabricname_csharp">
 <a href="#sourcerecoveryfabricname_csharp" style="color: inherit; text-decoration: inherit;">Source<wbr>Recovery<wbr>Fabric<wbr>Name</a>
@@ -232,8 +198,7 @@ The ReplicatedVM resource accepts the following [input]({{< relref "/docs/intro/
         <span class="property-type">string</span>
     </dt>
     <dd>{{% md %}}Name of fabric that should contains this replication.
-{{% /md %}}</dd>
-    <dt class="property-required"
+{{% /md %}}</dd><dt class="property-required"
             title="Required">
         <span id="sourcerecoveryprotectioncontainername_csharp">
 <a href="#sourcerecoveryprotectioncontainername_csharp" style="color: inherit; text-decoration: inherit;">Source<wbr>Recovery<wbr>Protection<wbr>Container<wbr>Name</a>
@@ -242,8 +207,7 @@ The ReplicatedVM resource accepts the following [input]({{< relref "/docs/intro/
         <span class="property-type">string</span>
     </dt>
     <dd>{{% md %}}Name of the protection container to use.
-{{% /md %}}</dd>
-    <dt class="property-required"
+{{% /md %}}</dd><dt class="property-required"
             title="Required">
         <span id="sourcevmid_csharp">
 <a href="#sourcevmid_csharp" style="color: inherit; text-decoration: inherit;">Source<wbr>Vm<wbr>Id</a>
@@ -252,8 +216,7 @@ The ReplicatedVM resource accepts the following [input]({{< relref "/docs/intro/
         <span class="property-type">string</span>
     </dt>
     <dd>{{% md %}}Id of the VM to replicate
-{{% /md %}}</dd>
-    <dt class="property-required"
+{{% /md %}}</dd><dt class="property-required"
             title="Required">
         <span id="targetrecoveryfabricid_csharp">
 <a href="#targetrecoveryfabricid_csharp" style="color: inherit; text-decoration: inherit;">Target<wbr>Recovery<wbr>Fabric<wbr>Id</a>
@@ -262,8 +225,7 @@ The ReplicatedVM resource accepts the following [input]({{< relref "/docs/intro/
         <span class="property-type">string</span>
     </dt>
     <dd>{{% md %}}Id of fabric where the VM replication should be handled when a failover is done.
-{{% /md %}}</dd>
-    <dt class="property-required"
+{{% /md %}}</dd><dt class="property-required"
             title="Required">
         <span id="targetrecoveryprotectioncontainerid_csharp">
 <a href="#targetrecoveryprotectioncontainerid_csharp" style="color: inherit; text-decoration: inherit;">Target<wbr>Recovery<wbr>Protection<wbr>Container<wbr>Id</a>
@@ -272,8 +234,7 @@ The ReplicatedVM resource accepts the following [input]({{< relref "/docs/intro/
         <span class="property-type">string</span>
     </dt>
     <dd>{{% md %}}Id of protection container where the VM replication should be created when a failover is done.
-{{% /md %}}</dd>
-    <dt class="property-required"
+{{% /md %}}</dd><dt class="property-required"
             title="Required">
         <span id="targetresourcegroupid_csharp">
 <a href="#targetresourcegroupid_csharp" style="color: inherit; text-decoration: inherit;">Target<wbr>Resource<wbr>Group<wbr>Id</a>
@@ -282,8 +243,7 @@ The ReplicatedVM resource accepts the following [input]({{< relref "/docs/intro/
         <span class="property-type">string</span>
     </dt>
     <dd>{{% md %}}Id of resource group where the VM should be created when a failover is done.
-{{% /md %}}</dd>
-    <dt class="property-optional"
+{{% /md %}}</dd><dt class="property-optional"
             title="Optional">
         <span id="manageddisks_csharp">
 <a href="#manageddisks_csharp" style="color: inherit; text-decoration: inherit;">Managed<wbr>Disks</a>
@@ -292,8 +252,7 @@ The ReplicatedVM resource accepts the following [input]({{< relref "/docs/intro/
         <span class="property-type"><a href="#replicatedvmmanageddisk">List&lt;Replicated<wbr>VMManaged<wbr>Disk<wbr>Args&gt;</a></span>
     </dt>
     <dd>{{% md %}}One or more `managed_disk` block.
-{{% /md %}}</dd>
-    <dt class="property-optional"
+{{% /md %}}</dd><dt class="property-optional"
             title="Optional">
         <span id="name_csharp">
 <a href="#name_csharp" style="color: inherit; text-decoration: inherit;">Name</a>
@@ -302,8 +261,7 @@ The ReplicatedVM resource accepts the following [input]({{< relref "/docs/intro/
         <span class="property-type">string</span>
     </dt>
     <dd>{{% md %}}The name of the network mapping.
-{{% /md %}}</dd>
-    <dt class="property-optional"
+{{% /md %}}</dd><dt class="property-optional"
             title="Optional">
         <span id="networkinterfaces_csharp">
 <a href="#networkinterfaces_csharp" style="color: inherit; text-decoration: inherit;">Network<wbr>Interfaces</a>
@@ -312,8 +270,7 @@ The ReplicatedVM resource accepts the following [input]({{< relref "/docs/intro/
         <span class="property-type"><a href="#replicatedvmnetworkinterface">List&lt;Replicated<wbr>VMNetwork<wbr>Interface<wbr>Args&gt;</a></span>
     </dt>
     <dd>{{% md %}}One or more `network_interface` block.
-{{% /md %}}</dd>
-    <dt class="property-optional"
+{{% /md %}}</dd><dt class="property-optional"
             title="Optional">
         <span id="targetavailabilitysetid_csharp">
 <a href="#targetavailabilitysetid_csharp" style="color: inherit; text-decoration: inherit;">Target<wbr>Availability<wbr>Set<wbr>Id</a>
@@ -322,8 +279,7 @@ The ReplicatedVM resource accepts the following [input]({{< relref "/docs/intro/
         <span class="property-type">string</span>
     </dt>
     <dd>{{% md %}}Id of availability set that the new VM should belong to when a failover is done.
-{{% /md %}}</dd>
-    <dt class="property-optional"
+{{% /md %}}</dd><dt class="property-optional"
             title="Optional">
         <span id="targetnetworkid_csharp">
 <a href="#targetnetworkid_csharp" style="color: inherit; text-decoration: inherit;">Target<wbr>Network<wbr>Id</a>
@@ -332,14 +288,11 @@ The ReplicatedVM resource accepts the following [input]({{< relref "/docs/intro/
         <span class="property-type">string</span>
     </dt>
     <dd>{{% md %}}Network to use when a failover is done (recommended to set if any network_interface is configured for failover).
-{{% /md %}}</dd>
-</dl>
+{{% /md %}}</dd></dl>
 {{% /choosable %}}
 
 {{% choosable language go %}}
-<dl class="resources-properties">
-
-    <dt class="property-required"
+<dl class="resources-properties"><dt class="property-required"
             title="Required">
         <span id="recoveryreplicationpolicyid_go">
 <a href="#recoveryreplicationpolicyid_go" style="color: inherit; text-decoration: inherit;">Recovery<wbr>Replication<wbr>Policy<wbr>Id</a>
@@ -347,8 +300,7 @@ The ReplicatedVM resource accepts the following [input]({{< relref "/docs/intro/
         <span class="property-indicator"></span>
         <span class="property-type">string</span>
     </dt>
-    <dd>{{% md %}}{{% /md %}}</dd>
-    <dt class="property-required"
+    <dd>{{% md %}}{{% /md %}}</dd><dt class="property-required"
             title="Required">
         <span id="recoveryvaultname_go">
 <a href="#recoveryvaultname_go" style="color: inherit; text-decoration: inherit;">Recovery<wbr>Vault<wbr>Name</a>
@@ -357,8 +309,7 @@ The ReplicatedVM resource accepts the following [input]({{< relref "/docs/intro/
         <span class="property-type">string</span>
     </dt>
     <dd>{{% md %}}The name of the vault that should be updated.
-{{% /md %}}</dd>
-    <dt class="property-required"
+{{% /md %}}</dd><dt class="property-required"
             title="Required">
         <span id="resourcegroupname_go">
 <a href="#resourcegroupname_go" style="color: inherit; text-decoration: inherit;">Resource<wbr>Group<wbr>Name</a>
@@ -367,8 +318,7 @@ The ReplicatedVM resource accepts the following [input]({{< relref "/docs/intro/
         <span class="property-type">string</span>
     </dt>
     <dd>{{% md %}}Name of the resource group where the vault that should be updated is located.
-{{% /md %}}</dd>
-    <dt class="property-required"
+{{% /md %}}</dd><dt class="property-required"
             title="Required">
         <span id="sourcerecoveryfabricname_go">
 <a href="#sourcerecoveryfabricname_go" style="color: inherit; text-decoration: inherit;">Source<wbr>Recovery<wbr>Fabric<wbr>Name</a>
@@ -377,8 +327,7 @@ The ReplicatedVM resource accepts the following [input]({{< relref "/docs/intro/
         <span class="property-type">string</span>
     </dt>
     <dd>{{% md %}}Name of fabric that should contains this replication.
-{{% /md %}}</dd>
-    <dt class="property-required"
+{{% /md %}}</dd><dt class="property-required"
             title="Required">
         <span id="sourcerecoveryprotectioncontainername_go">
 <a href="#sourcerecoveryprotectioncontainername_go" style="color: inherit; text-decoration: inherit;">Source<wbr>Recovery<wbr>Protection<wbr>Container<wbr>Name</a>
@@ -387,8 +336,7 @@ The ReplicatedVM resource accepts the following [input]({{< relref "/docs/intro/
         <span class="property-type">string</span>
     </dt>
     <dd>{{% md %}}Name of the protection container to use.
-{{% /md %}}</dd>
-    <dt class="property-required"
+{{% /md %}}</dd><dt class="property-required"
             title="Required">
         <span id="sourcevmid_go">
 <a href="#sourcevmid_go" style="color: inherit; text-decoration: inherit;">Source<wbr>Vm<wbr>Id</a>
@@ -397,8 +345,7 @@ The ReplicatedVM resource accepts the following [input]({{< relref "/docs/intro/
         <span class="property-type">string</span>
     </dt>
     <dd>{{% md %}}Id of the VM to replicate
-{{% /md %}}</dd>
-    <dt class="property-required"
+{{% /md %}}</dd><dt class="property-required"
             title="Required">
         <span id="targetrecoveryfabricid_go">
 <a href="#targetrecoveryfabricid_go" style="color: inherit; text-decoration: inherit;">Target<wbr>Recovery<wbr>Fabric<wbr>Id</a>
@@ -407,8 +354,7 @@ The ReplicatedVM resource accepts the following [input]({{< relref "/docs/intro/
         <span class="property-type">string</span>
     </dt>
     <dd>{{% md %}}Id of fabric where the VM replication should be handled when a failover is done.
-{{% /md %}}</dd>
-    <dt class="property-required"
+{{% /md %}}</dd><dt class="property-required"
             title="Required">
         <span id="targetrecoveryprotectioncontainerid_go">
 <a href="#targetrecoveryprotectioncontainerid_go" style="color: inherit; text-decoration: inherit;">Target<wbr>Recovery<wbr>Protection<wbr>Container<wbr>Id</a>
@@ -417,8 +363,7 @@ The ReplicatedVM resource accepts the following [input]({{< relref "/docs/intro/
         <span class="property-type">string</span>
     </dt>
     <dd>{{% md %}}Id of protection container where the VM replication should be created when a failover is done.
-{{% /md %}}</dd>
-    <dt class="property-required"
+{{% /md %}}</dd><dt class="property-required"
             title="Required">
         <span id="targetresourcegroupid_go">
 <a href="#targetresourcegroupid_go" style="color: inherit; text-decoration: inherit;">Target<wbr>Resource<wbr>Group<wbr>Id</a>
@@ -427,8 +372,7 @@ The ReplicatedVM resource accepts the following [input]({{< relref "/docs/intro/
         <span class="property-type">string</span>
     </dt>
     <dd>{{% md %}}Id of resource group where the VM should be created when a failover is done.
-{{% /md %}}</dd>
-    <dt class="property-optional"
+{{% /md %}}</dd><dt class="property-optional"
             title="Optional">
         <span id="manageddisks_go">
 <a href="#manageddisks_go" style="color: inherit; text-decoration: inherit;">Managed<wbr>Disks</a>
@@ -437,8 +381,7 @@ The ReplicatedVM resource accepts the following [input]({{< relref "/docs/intro/
         <span class="property-type"><a href="#replicatedvmmanageddisk">[]Replicated<wbr>VMManaged<wbr>Disk</a></span>
     </dt>
     <dd>{{% md %}}One or more `managed_disk` block.
-{{% /md %}}</dd>
-    <dt class="property-optional"
+{{% /md %}}</dd><dt class="property-optional"
             title="Optional">
         <span id="name_go">
 <a href="#name_go" style="color: inherit; text-decoration: inherit;">Name</a>
@@ -447,8 +390,7 @@ The ReplicatedVM resource accepts the following [input]({{< relref "/docs/intro/
         <span class="property-type">string</span>
     </dt>
     <dd>{{% md %}}The name of the network mapping.
-{{% /md %}}</dd>
-    <dt class="property-optional"
+{{% /md %}}</dd><dt class="property-optional"
             title="Optional">
         <span id="networkinterfaces_go">
 <a href="#networkinterfaces_go" style="color: inherit; text-decoration: inherit;">Network<wbr>Interfaces</a>
@@ -457,8 +399,7 @@ The ReplicatedVM resource accepts the following [input]({{< relref "/docs/intro/
         <span class="property-type"><a href="#replicatedvmnetworkinterface">[]Replicated<wbr>VMNetwork<wbr>Interface</a></span>
     </dt>
     <dd>{{% md %}}One or more `network_interface` block.
-{{% /md %}}</dd>
-    <dt class="property-optional"
+{{% /md %}}</dd><dt class="property-optional"
             title="Optional">
         <span id="targetavailabilitysetid_go">
 <a href="#targetavailabilitysetid_go" style="color: inherit; text-decoration: inherit;">Target<wbr>Availability<wbr>Set<wbr>Id</a>
@@ -467,8 +408,7 @@ The ReplicatedVM resource accepts the following [input]({{< relref "/docs/intro/
         <span class="property-type">string</span>
     </dt>
     <dd>{{% md %}}Id of availability set that the new VM should belong to when a failover is done.
-{{% /md %}}</dd>
-    <dt class="property-optional"
+{{% /md %}}</dd><dt class="property-optional"
             title="Optional">
         <span id="targetnetworkid_go">
 <a href="#targetnetworkid_go" style="color: inherit; text-decoration: inherit;">Target<wbr>Network<wbr>Id</a>
@@ -477,14 +417,11 @@ The ReplicatedVM resource accepts the following [input]({{< relref "/docs/intro/
         <span class="property-type">string</span>
     </dt>
     <dd>{{% md %}}Network to use when a failover is done (recommended to set if any network_interface is configured for failover).
-{{% /md %}}</dd>
-</dl>
+{{% /md %}}</dd></dl>
 {{% /choosable %}}
 
 {{% choosable language nodejs %}}
-<dl class="resources-properties">
-
-    <dt class="property-required"
+<dl class="resources-properties"><dt class="property-required"
             title="Required">
         <span id="recoveryreplicationpolicyid_nodejs">
 <a href="#recoveryreplicationpolicyid_nodejs" style="color: inherit; text-decoration: inherit;">recovery<wbr>Replication<wbr>Policy<wbr>Id</a>
@@ -492,8 +429,7 @@ The ReplicatedVM resource accepts the following [input]({{< relref "/docs/intro/
         <span class="property-indicator"></span>
         <span class="property-type">string</span>
     </dt>
-    <dd>{{% md %}}{{% /md %}}</dd>
-    <dt class="property-required"
+    <dd>{{% md %}}{{% /md %}}</dd><dt class="property-required"
             title="Required">
         <span id="recoveryvaultname_nodejs">
 <a href="#recoveryvaultname_nodejs" style="color: inherit; text-decoration: inherit;">recovery<wbr>Vault<wbr>Name</a>
@@ -502,8 +438,7 @@ The ReplicatedVM resource accepts the following [input]({{< relref "/docs/intro/
         <span class="property-type">string</span>
     </dt>
     <dd>{{% md %}}The name of the vault that should be updated.
-{{% /md %}}</dd>
-    <dt class="property-required"
+{{% /md %}}</dd><dt class="property-required"
             title="Required">
         <span id="resourcegroupname_nodejs">
 <a href="#resourcegroupname_nodejs" style="color: inherit; text-decoration: inherit;">resource<wbr>Group<wbr>Name</a>
@@ -512,8 +447,7 @@ The ReplicatedVM resource accepts the following [input]({{< relref "/docs/intro/
         <span class="property-type">string</span>
     </dt>
     <dd>{{% md %}}Name of the resource group where the vault that should be updated is located.
-{{% /md %}}</dd>
-    <dt class="property-required"
+{{% /md %}}</dd><dt class="property-required"
             title="Required">
         <span id="sourcerecoveryfabricname_nodejs">
 <a href="#sourcerecoveryfabricname_nodejs" style="color: inherit; text-decoration: inherit;">source<wbr>Recovery<wbr>Fabric<wbr>Name</a>
@@ -522,8 +456,7 @@ The ReplicatedVM resource accepts the following [input]({{< relref "/docs/intro/
         <span class="property-type">string</span>
     </dt>
     <dd>{{% md %}}Name of fabric that should contains this replication.
-{{% /md %}}</dd>
-    <dt class="property-required"
+{{% /md %}}</dd><dt class="property-required"
             title="Required">
         <span id="sourcerecoveryprotectioncontainername_nodejs">
 <a href="#sourcerecoveryprotectioncontainername_nodejs" style="color: inherit; text-decoration: inherit;">source<wbr>Recovery<wbr>Protection<wbr>Container<wbr>Name</a>
@@ -532,8 +465,7 @@ The ReplicatedVM resource accepts the following [input]({{< relref "/docs/intro/
         <span class="property-type">string</span>
     </dt>
     <dd>{{% md %}}Name of the protection container to use.
-{{% /md %}}</dd>
-    <dt class="property-required"
+{{% /md %}}</dd><dt class="property-required"
             title="Required">
         <span id="sourcevmid_nodejs">
 <a href="#sourcevmid_nodejs" style="color: inherit; text-decoration: inherit;">source<wbr>Vm<wbr>Id</a>
@@ -542,8 +474,7 @@ The ReplicatedVM resource accepts the following [input]({{< relref "/docs/intro/
         <span class="property-type">string</span>
     </dt>
     <dd>{{% md %}}Id of the VM to replicate
-{{% /md %}}</dd>
-    <dt class="property-required"
+{{% /md %}}</dd><dt class="property-required"
             title="Required">
         <span id="targetrecoveryfabricid_nodejs">
 <a href="#targetrecoveryfabricid_nodejs" style="color: inherit; text-decoration: inherit;">target<wbr>Recovery<wbr>Fabric<wbr>Id</a>
@@ -552,8 +483,7 @@ The ReplicatedVM resource accepts the following [input]({{< relref "/docs/intro/
         <span class="property-type">string</span>
     </dt>
     <dd>{{% md %}}Id of fabric where the VM replication should be handled when a failover is done.
-{{% /md %}}</dd>
-    <dt class="property-required"
+{{% /md %}}</dd><dt class="property-required"
             title="Required">
         <span id="targetrecoveryprotectioncontainerid_nodejs">
 <a href="#targetrecoveryprotectioncontainerid_nodejs" style="color: inherit; text-decoration: inherit;">target<wbr>Recovery<wbr>Protection<wbr>Container<wbr>Id</a>
@@ -562,8 +492,7 @@ The ReplicatedVM resource accepts the following [input]({{< relref "/docs/intro/
         <span class="property-type">string</span>
     </dt>
     <dd>{{% md %}}Id of protection container where the VM replication should be created when a failover is done.
-{{% /md %}}</dd>
-    <dt class="property-required"
+{{% /md %}}</dd><dt class="property-required"
             title="Required">
         <span id="targetresourcegroupid_nodejs">
 <a href="#targetresourcegroupid_nodejs" style="color: inherit; text-decoration: inherit;">target<wbr>Resource<wbr>Group<wbr>Id</a>
@@ -572,8 +501,7 @@ The ReplicatedVM resource accepts the following [input]({{< relref "/docs/intro/
         <span class="property-type">string</span>
     </dt>
     <dd>{{% md %}}Id of resource group where the VM should be created when a failover is done.
-{{% /md %}}</dd>
-    <dt class="property-optional"
+{{% /md %}}</dd><dt class="property-optional"
             title="Optional">
         <span id="manageddisks_nodejs">
 <a href="#manageddisks_nodejs" style="color: inherit; text-decoration: inherit;">managed<wbr>Disks</a>
@@ -582,8 +510,7 @@ The ReplicatedVM resource accepts the following [input]({{< relref "/docs/intro/
         <span class="property-type"><a href="#replicatedvmmanageddisk">Replicated<wbr>VMManaged<wbr>Disk[]</a></span>
     </dt>
     <dd>{{% md %}}One or more `managed_disk` block.
-{{% /md %}}</dd>
-    <dt class="property-optional"
+{{% /md %}}</dd><dt class="property-optional"
             title="Optional">
         <span id="name_nodejs">
 <a href="#name_nodejs" style="color: inherit; text-decoration: inherit;">name</a>
@@ -592,8 +519,7 @@ The ReplicatedVM resource accepts the following [input]({{< relref "/docs/intro/
         <span class="property-type">string</span>
     </dt>
     <dd>{{% md %}}The name of the network mapping.
-{{% /md %}}</dd>
-    <dt class="property-optional"
+{{% /md %}}</dd><dt class="property-optional"
             title="Optional">
         <span id="networkinterfaces_nodejs">
 <a href="#networkinterfaces_nodejs" style="color: inherit; text-decoration: inherit;">network<wbr>Interfaces</a>
@@ -602,8 +528,7 @@ The ReplicatedVM resource accepts the following [input]({{< relref "/docs/intro/
         <span class="property-type"><a href="#replicatedvmnetworkinterface">Replicated<wbr>VMNetwork<wbr>Interface[]</a></span>
     </dt>
     <dd>{{% md %}}One or more `network_interface` block.
-{{% /md %}}</dd>
-    <dt class="property-optional"
+{{% /md %}}</dd><dt class="property-optional"
             title="Optional">
         <span id="targetavailabilitysetid_nodejs">
 <a href="#targetavailabilitysetid_nodejs" style="color: inherit; text-decoration: inherit;">target<wbr>Availability<wbr>Set<wbr>Id</a>
@@ -612,8 +537,7 @@ The ReplicatedVM resource accepts the following [input]({{< relref "/docs/intro/
         <span class="property-type">string</span>
     </dt>
     <dd>{{% md %}}Id of availability set that the new VM should belong to when a failover is done.
-{{% /md %}}</dd>
-    <dt class="property-optional"
+{{% /md %}}</dd><dt class="property-optional"
             title="Optional">
         <span id="targetnetworkid_nodejs">
 <a href="#targetnetworkid_nodejs" style="color: inherit; text-decoration: inherit;">target<wbr>Network<wbr>Id</a>
@@ -622,14 +546,11 @@ The ReplicatedVM resource accepts the following [input]({{< relref "/docs/intro/
         <span class="property-type">string</span>
     </dt>
     <dd>{{% md %}}Network to use when a failover is done (recommended to set if any network_interface is configured for failover).
-{{% /md %}}</dd>
-</dl>
+{{% /md %}}</dd></dl>
 {{% /choosable %}}
 
 {{% choosable language python %}}
-<dl class="resources-properties">
-
-    <dt class="property-required"
+<dl class="resources-properties"><dt class="property-required"
             title="Required">
         <span id="recovery_replication_policy_id_python">
 <a href="#recovery_replication_policy_id_python" style="color: inherit; text-decoration: inherit;">recovery_<wbr>replication_<wbr>policy_<wbr>id</a>
@@ -637,8 +558,7 @@ The ReplicatedVM resource accepts the following [input]({{< relref "/docs/intro/
         <span class="property-indicator"></span>
         <span class="property-type">str</span>
     </dt>
-    <dd>{{% md %}}{{% /md %}}</dd>
-    <dt class="property-required"
+    <dd>{{% md %}}{{% /md %}}</dd><dt class="property-required"
             title="Required">
         <span id="recovery_vault_name_python">
 <a href="#recovery_vault_name_python" style="color: inherit; text-decoration: inherit;">recovery_<wbr>vault_<wbr>name</a>
@@ -647,8 +567,7 @@ The ReplicatedVM resource accepts the following [input]({{< relref "/docs/intro/
         <span class="property-type">str</span>
     </dt>
     <dd>{{% md %}}The name of the vault that should be updated.
-{{% /md %}}</dd>
-    <dt class="property-required"
+{{% /md %}}</dd><dt class="property-required"
             title="Required">
         <span id="resource_group_name_python">
 <a href="#resource_group_name_python" style="color: inherit; text-decoration: inherit;">resource_<wbr>group_<wbr>name</a>
@@ -657,8 +576,7 @@ The ReplicatedVM resource accepts the following [input]({{< relref "/docs/intro/
         <span class="property-type">str</span>
     </dt>
     <dd>{{% md %}}Name of the resource group where the vault that should be updated is located.
-{{% /md %}}</dd>
-    <dt class="property-required"
+{{% /md %}}</dd><dt class="property-required"
             title="Required">
         <span id="source_recovery_fabric_name_python">
 <a href="#source_recovery_fabric_name_python" style="color: inherit; text-decoration: inherit;">source_<wbr>recovery_<wbr>fabric_<wbr>name</a>
@@ -667,8 +585,7 @@ The ReplicatedVM resource accepts the following [input]({{< relref "/docs/intro/
         <span class="property-type">str</span>
     </dt>
     <dd>{{% md %}}Name of fabric that should contains this replication.
-{{% /md %}}</dd>
-    <dt class="property-required"
+{{% /md %}}</dd><dt class="property-required"
             title="Required">
         <span id="source_recovery_protection_container_name_python">
 <a href="#source_recovery_protection_container_name_python" style="color: inherit; text-decoration: inherit;">source_<wbr>recovery_<wbr>protection_<wbr>container_<wbr>name</a>
@@ -677,8 +594,7 @@ The ReplicatedVM resource accepts the following [input]({{< relref "/docs/intro/
         <span class="property-type">str</span>
     </dt>
     <dd>{{% md %}}Name of the protection container to use.
-{{% /md %}}</dd>
-    <dt class="property-required"
+{{% /md %}}</dd><dt class="property-required"
             title="Required">
         <span id="source_vm_id_python">
 <a href="#source_vm_id_python" style="color: inherit; text-decoration: inherit;">source_<wbr>vm_<wbr>id</a>
@@ -687,8 +603,7 @@ The ReplicatedVM resource accepts the following [input]({{< relref "/docs/intro/
         <span class="property-type">str</span>
     </dt>
     <dd>{{% md %}}Id of the VM to replicate
-{{% /md %}}</dd>
-    <dt class="property-required"
+{{% /md %}}</dd><dt class="property-required"
             title="Required">
         <span id="target_recovery_fabric_id_python">
 <a href="#target_recovery_fabric_id_python" style="color: inherit; text-decoration: inherit;">target_<wbr>recovery_<wbr>fabric_<wbr>id</a>
@@ -697,8 +612,7 @@ The ReplicatedVM resource accepts the following [input]({{< relref "/docs/intro/
         <span class="property-type">str</span>
     </dt>
     <dd>{{% md %}}Id of fabric where the VM replication should be handled when a failover is done.
-{{% /md %}}</dd>
-    <dt class="property-required"
+{{% /md %}}</dd><dt class="property-required"
             title="Required">
         <span id="target_recovery_protection_container_id_python">
 <a href="#target_recovery_protection_container_id_python" style="color: inherit; text-decoration: inherit;">target_<wbr>recovery_<wbr>protection_<wbr>container_<wbr>id</a>
@@ -707,8 +621,7 @@ The ReplicatedVM resource accepts the following [input]({{< relref "/docs/intro/
         <span class="property-type">str</span>
     </dt>
     <dd>{{% md %}}Id of protection container where the VM replication should be created when a failover is done.
-{{% /md %}}</dd>
-    <dt class="property-required"
+{{% /md %}}</dd><dt class="property-required"
             title="Required">
         <span id="target_resource_group_id_python">
 <a href="#target_resource_group_id_python" style="color: inherit; text-decoration: inherit;">target_<wbr>resource_<wbr>group_<wbr>id</a>
@@ -717,8 +630,7 @@ The ReplicatedVM resource accepts the following [input]({{< relref "/docs/intro/
         <span class="property-type">str</span>
     </dt>
     <dd>{{% md %}}Id of resource group where the VM should be created when a failover is done.
-{{% /md %}}</dd>
-    <dt class="property-optional"
+{{% /md %}}</dd><dt class="property-optional"
             title="Optional">
         <span id="managed_disks_python">
 <a href="#managed_disks_python" style="color: inherit; text-decoration: inherit;">managed_<wbr>disks</a>
@@ -727,8 +639,7 @@ The ReplicatedVM resource accepts the following [input]({{< relref "/docs/intro/
         <span class="property-type"><a href="#replicatedvmmanageddisk">Sequence[Replicated<wbr>VMManaged<wbr>Disk<wbr>Args]</a></span>
     </dt>
     <dd>{{% md %}}One or more `managed_disk` block.
-{{% /md %}}</dd>
-    <dt class="property-optional"
+{{% /md %}}</dd><dt class="property-optional"
             title="Optional">
         <span id="name_python">
 <a href="#name_python" style="color: inherit; text-decoration: inherit;">name</a>
@@ -737,8 +648,7 @@ The ReplicatedVM resource accepts the following [input]({{< relref "/docs/intro/
         <span class="property-type">str</span>
     </dt>
     <dd>{{% md %}}The name of the network mapping.
-{{% /md %}}</dd>
-    <dt class="property-optional"
+{{% /md %}}</dd><dt class="property-optional"
             title="Optional">
         <span id="network_interfaces_python">
 <a href="#network_interfaces_python" style="color: inherit; text-decoration: inherit;">network_<wbr>interfaces</a>
@@ -747,8 +657,7 @@ The ReplicatedVM resource accepts the following [input]({{< relref "/docs/intro/
         <span class="property-type"><a href="#replicatedvmnetworkinterface">Sequence[Replicated<wbr>VMNetwork<wbr>Interface<wbr>Args]</a></span>
     </dt>
     <dd>{{% md %}}One or more `network_interface` block.
-{{% /md %}}</dd>
-    <dt class="property-optional"
+{{% /md %}}</dd><dt class="property-optional"
             title="Optional">
         <span id="target_availability_set_id_python">
 <a href="#target_availability_set_id_python" style="color: inherit; text-decoration: inherit;">target_<wbr>availability_<wbr>set_<wbr>id</a>
@@ -757,8 +666,7 @@ The ReplicatedVM resource accepts the following [input]({{< relref "/docs/intro/
         <span class="property-type">str</span>
     </dt>
     <dd>{{% md %}}Id of availability set that the new VM should belong to when a failover is done.
-{{% /md %}}</dd>
-    <dt class="property-optional"
+{{% /md %}}</dd><dt class="property-optional"
             title="Optional">
         <span id="target_network_id_python">
 <a href="#target_network_id_python" style="color: inherit; text-decoration: inherit;">target_<wbr>network_<wbr>id</a>
@@ -767,8 +675,7 @@ The ReplicatedVM resource accepts the following [input]({{< relref "/docs/intro/
         <span class="property-type">str</span>
     </dt>
     <dd>{{% md %}}Network to use when a failover is done (recommended to set if any network_interface is configured for failover).
-{{% /md %}}</dd>
-</dl>
+{{% /md %}}</dd></dl>
 {{% /choosable %}}
 
 
@@ -779,9 +686,7 @@ All [input](#inputs) properties are implicitly available as output properties. A
 
 
 {{% choosable language csharp %}}
-<dl class="resources-properties">
-
-    <dt class="property-"
+<dl class="resources-properties"><dt class="property-"
             title="">
         <span id="id_csharp">
 <a href="#id_csharp" style="color: inherit; text-decoration: inherit;">Id</a>
@@ -789,14 +694,11 @@ All [input](#inputs) properties are implicitly available as output properties. A
         <span class="property-indicator"></span>
         <span class="property-type">string</span>
     </dt>
-    <dd>{{% md %}}The provider-assigned unique ID for this managed resource.{{% /md %}}</dd>
-</dl>
+    <dd>{{% md %}}The provider-assigned unique ID for this managed resource.{{% /md %}}</dd></dl>
 {{% /choosable %}}
 
 {{% choosable language go %}}
-<dl class="resources-properties">
-
-    <dt class="property-"
+<dl class="resources-properties"><dt class="property-"
             title="">
         <span id="id_go">
 <a href="#id_go" style="color: inherit; text-decoration: inherit;">Id</a>
@@ -804,14 +706,11 @@ All [input](#inputs) properties are implicitly available as output properties. A
         <span class="property-indicator"></span>
         <span class="property-type">string</span>
     </dt>
-    <dd>{{% md %}}The provider-assigned unique ID for this managed resource.{{% /md %}}</dd>
-</dl>
+    <dd>{{% md %}}The provider-assigned unique ID for this managed resource.{{% /md %}}</dd></dl>
 {{% /choosable %}}
 
 {{% choosable language nodejs %}}
-<dl class="resources-properties">
-
-    <dt class="property-"
+<dl class="resources-properties"><dt class="property-"
             title="">
         <span id="id_nodejs">
 <a href="#id_nodejs" style="color: inherit; text-decoration: inherit;">id</a>
@@ -819,14 +718,11 @@ All [input](#inputs) properties are implicitly available as output properties. A
         <span class="property-indicator"></span>
         <span class="property-type">string</span>
     </dt>
-    <dd>{{% md %}}The provider-assigned unique ID for this managed resource.{{% /md %}}</dd>
-</dl>
+    <dd>{{% md %}}The provider-assigned unique ID for this managed resource.{{% /md %}}</dd></dl>
 {{% /choosable %}}
 
 {{% choosable language python %}}
-<dl class="resources-properties">
-
-    <dt class="property-"
+<dl class="resources-properties"><dt class="property-"
             title="">
         <span id="id_python">
 <a href="#id_python" style="color: inherit; text-decoration: inherit;">id</a>
@@ -834,8 +730,7 @@ All [input](#inputs) properties are implicitly available as output properties. A
         <span class="property-indicator"></span>
         <span class="property-type">str</span>
     </dt>
-    <dd>{{% md %}}The provider-assigned unique ID for this managed resource.{{% /md %}}</dd>
-</dl>
+    <dd>{{% md %}}The provider-assigned unique ID for this managed resource.{{% /md %}}</dd></dl>
 {{% /choosable %}}
 
 
@@ -962,9 +857,7 @@ The following state arguments are supported:
 
 
 {{% choosable language csharp %}}
-<dl class="resources-properties">
-
-    <dt class="property-optional"
+<dl class="resources-properties"><dt class="property-optional"
             title="Optional">
         <span id="state_manageddisks_csharp">
 <a href="#state_manageddisks_csharp" style="color: inherit; text-decoration: inherit;">Managed<wbr>Disks</a>
@@ -973,8 +866,7 @@ The following state arguments are supported:
         <span class="property-type"><a href="#replicatedvmmanageddisk">List&lt;Replicated<wbr>VMManaged<wbr>Disk<wbr>Args&gt;</a></span>
     </dt>
     <dd>{{% md %}}One or more `managed_disk` block.
-{{% /md %}}</dd>
-    <dt class="property-optional"
+{{% /md %}}</dd><dt class="property-optional"
             title="Optional">
         <span id="state_name_csharp">
 <a href="#state_name_csharp" style="color: inherit; text-decoration: inherit;">Name</a>
@@ -983,8 +875,7 @@ The following state arguments are supported:
         <span class="property-type">string</span>
     </dt>
     <dd>{{% md %}}The name of the network mapping.
-{{% /md %}}</dd>
-    <dt class="property-optional"
+{{% /md %}}</dd><dt class="property-optional"
             title="Optional">
         <span id="state_networkinterfaces_csharp">
 <a href="#state_networkinterfaces_csharp" style="color: inherit; text-decoration: inherit;">Network<wbr>Interfaces</a>
@@ -993,8 +884,7 @@ The following state arguments are supported:
         <span class="property-type"><a href="#replicatedvmnetworkinterface">List&lt;Replicated<wbr>VMNetwork<wbr>Interface<wbr>Args&gt;</a></span>
     </dt>
     <dd>{{% md %}}One or more `network_interface` block.
-{{% /md %}}</dd>
-    <dt class="property-optional"
+{{% /md %}}</dd><dt class="property-optional"
             title="Optional">
         <span id="state_recoveryreplicationpolicyid_csharp">
 <a href="#state_recoveryreplicationpolicyid_csharp" style="color: inherit; text-decoration: inherit;">Recovery<wbr>Replication<wbr>Policy<wbr>Id</a>
@@ -1002,8 +892,7 @@ The following state arguments are supported:
         <span class="property-indicator"></span>
         <span class="property-type">string</span>
     </dt>
-    <dd>{{% md %}}{{% /md %}}</dd>
-    <dt class="property-optional"
+    <dd>{{% md %}}{{% /md %}}</dd><dt class="property-optional"
             title="Optional">
         <span id="state_recoveryvaultname_csharp">
 <a href="#state_recoveryvaultname_csharp" style="color: inherit; text-decoration: inherit;">Recovery<wbr>Vault<wbr>Name</a>
@@ -1012,8 +901,7 @@ The following state arguments are supported:
         <span class="property-type">string</span>
     </dt>
     <dd>{{% md %}}The name of the vault that should be updated.
-{{% /md %}}</dd>
-    <dt class="property-optional"
+{{% /md %}}</dd><dt class="property-optional"
             title="Optional">
         <span id="state_resourcegroupname_csharp">
 <a href="#state_resourcegroupname_csharp" style="color: inherit; text-decoration: inherit;">Resource<wbr>Group<wbr>Name</a>
@@ -1022,8 +910,7 @@ The following state arguments are supported:
         <span class="property-type">string</span>
     </dt>
     <dd>{{% md %}}Name of the resource group where the vault that should be updated is located.
-{{% /md %}}</dd>
-    <dt class="property-optional"
+{{% /md %}}</dd><dt class="property-optional"
             title="Optional">
         <span id="state_sourcerecoveryfabricname_csharp">
 <a href="#state_sourcerecoveryfabricname_csharp" style="color: inherit; text-decoration: inherit;">Source<wbr>Recovery<wbr>Fabric<wbr>Name</a>
@@ -1032,8 +919,7 @@ The following state arguments are supported:
         <span class="property-type">string</span>
     </dt>
     <dd>{{% md %}}Name of fabric that should contains this replication.
-{{% /md %}}</dd>
-    <dt class="property-optional"
+{{% /md %}}</dd><dt class="property-optional"
             title="Optional">
         <span id="state_sourcerecoveryprotectioncontainername_csharp">
 <a href="#state_sourcerecoveryprotectioncontainername_csharp" style="color: inherit; text-decoration: inherit;">Source<wbr>Recovery<wbr>Protection<wbr>Container<wbr>Name</a>
@@ -1042,8 +928,7 @@ The following state arguments are supported:
         <span class="property-type">string</span>
     </dt>
     <dd>{{% md %}}Name of the protection container to use.
-{{% /md %}}</dd>
-    <dt class="property-optional"
+{{% /md %}}</dd><dt class="property-optional"
             title="Optional">
         <span id="state_sourcevmid_csharp">
 <a href="#state_sourcevmid_csharp" style="color: inherit; text-decoration: inherit;">Source<wbr>Vm<wbr>Id</a>
@@ -1052,8 +937,7 @@ The following state arguments are supported:
         <span class="property-type">string</span>
     </dt>
     <dd>{{% md %}}Id of the VM to replicate
-{{% /md %}}</dd>
-    <dt class="property-optional"
+{{% /md %}}</dd><dt class="property-optional"
             title="Optional">
         <span id="state_targetavailabilitysetid_csharp">
 <a href="#state_targetavailabilitysetid_csharp" style="color: inherit; text-decoration: inherit;">Target<wbr>Availability<wbr>Set<wbr>Id</a>
@@ -1062,8 +946,7 @@ The following state arguments are supported:
         <span class="property-type">string</span>
     </dt>
     <dd>{{% md %}}Id of availability set that the new VM should belong to when a failover is done.
-{{% /md %}}</dd>
-    <dt class="property-optional"
+{{% /md %}}</dd><dt class="property-optional"
             title="Optional">
         <span id="state_targetnetworkid_csharp">
 <a href="#state_targetnetworkid_csharp" style="color: inherit; text-decoration: inherit;">Target<wbr>Network<wbr>Id</a>
@@ -1072,8 +955,7 @@ The following state arguments are supported:
         <span class="property-type">string</span>
     </dt>
     <dd>{{% md %}}Network to use when a failover is done (recommended to set if any network_interface is configured for failover).
-{{% /md %}}</dd>
-    <dt class="property-optional"
+{{% /md %}}</dd><dt class="property-optional"
             title="Optional">
         <span id="state_targetrecoveryfabricid_csharp">
 <a href="#state_targetrecoveryfabricid_csharp" style="color: inherit; text-decoration: inherit;">Target<wbr>Recovery<wbr>Fabric<wbr>Id</a>
@@ -1082,8 +964,7 @@ The following state arguments are supported:
         <span class="property-type">string</span>
     </dt>
     <dd>{{% md %}}Id of fabric where the VM replication should be handled when a failover is done.
-{{% /md %}}</dd>
-    <dt class="property-optional"
+{{% /md %}}</dd><dt class="property-optional"
             title="Optional">
         <span id="state_targetrecoveryprotectioncontainerid_csharp">
 <a href="#state_targetrecoveryprotectioncontainerid_csharp" style="color: inherit; text-decoration: inherit;">Target<wbr>Recovery<wbr>Protection<wbr>Container<wbr>Id</a>
@@ -1092,8 +973,7 @@ The following state arguments are supported:
         <span class="property-type">string</span>
     </dt>
     <dd>{{% md %}}Id of protection container where the VM replication should be created when a failover is done.
-{{% /md %}}</dd>
-    <dt class="property-optional"
+{{% /md %}}</dd><dt class="property-optional"
             title="Optional">
         <span id="state_targetresourcegroupid_csharp">
 <a href="#state_targetresourcegroupid_csharp" style="color: inherit; text-decoration: inherit;">Target<wbr>Resource<wbr>Group<wbr>Id</a>
@@ -1102,14 +982,11 @@ The following state arguments are supported:
         <span class="property-type">string</span>
     </dt>
     <dd>{{% md %}}Id of resource group where the VM should be created when a failover is done.
-{{% /md %}}</dd>
-</dl>
+{{% /md %}}</dd></dl>
 {{% /choosable %}}
 
 {{% choosable language go %}}
-<dl class="resources-properties">
-
-    <dt class="property-optional"
+<dl class="resources-properties"><dt class="property-optional"
             title="Optional">
         <span id="state_manageddisks_go">
 <a href="#state_manageddisks_go" style="color: inherit; text-decoration: inherit;">Managed<wbr>Disks</a>
@@ -1118,8 +995,7 @@ The following state arguments are supported:
         <span class="property-type"><a href="#replicatedvmmanageddisk">[]Replicated<wbr>VMManaged<wbr>Disk</a></span>
     </dt>
     <dd>{{% md %}}One or more `managed_disk` block.
-{{% /md %}}</dd>
-    <dt class="property-optional"
+{{% /md %}}</dd><dt class="property-optional"
             title="Optional">
         <span id="state_name_go">
 <a href="#state_name_go" style="color: inherit; text-decoration: inherit;">Name</a>
@@ -1128,8 +1004,7 @@ The following state arguments are supported:
         <span class="property-type">string</span>
     </dt>
     <dd>{{% md %}}The name of the network mapping.
-{{% /md %}}</dd>
-    <dt class="property-optional"
+{{% /md %}}</dd><dt class="property-optional"
             title="Optional">
         <span id="state_networkinterfaces_go">
 <a href="#state_networkinterfaces_go" style="color: inherit; text-decoration: inherit;">Network<wbr>Interfaces</a>
@@ -1138,8 +1013,7 @@ The following state arguments are supported:
         <span class="property-type"><a href="#replicatedvmnetworkinterface">[]Replicated<wbr>VMNetwork<wbr>Interface</a></span>
     </dt>
     <dd>{{% md %}}One or more `network_interface` block.
-{{% /md %}}</dd>
-    <dt class="property-optional"
+{{% /md %}}</dd><dt class="property-optional"
             title="Optional">
         <span id="state_recoveryreplicationpolicyid_go">
 <a href="#state_recoveryreplicationpolicyid_go" style="color: inherit; text-decoration: inherit;">Recovery<wbr>Replication<wbr>Policy<wbr>Id</a>
@@ -1147,8 +1021,7 @@ The following state arguments are supported:
         <span class="property-indicator"></span>
         <span class="property-type">string</span>
     </dt>
-    <dd>{{% md %}}{{% /md %}}</dd>
-    <dt class="property-optional"
+    <dd>{{% md %}}{{% /md %}}</dd><dt class="property-optional"
             title="Optional">
         <span id="state_recoveryvaultname_go">
 <a href="#state_recoveryvaultname_go" style="color: inherit; text-decoration: inherit;">Recovery<wbr>Vault<wbr>Name</a>
@@ -1157,8 +1030,7 @@ The following state arguments are supported:
         <span class="property-type">string</span>
     </dt>
     <dd>{{% md %}}The name of the vault that should be updated.
-{{% /md %}}</dd>
-    <dt class="property-optional"
+{{% /md %}}</dd><dt class="property-optional"
             title="Optional">
         <span id="state_resourcegroupname_go">
 <a href="#state_resourcegroupname_go" style="color: inherit; text-decoration: inherit;">Resource<wbr>Group<wbr>Name</a>
@@ -1167,8 +1039,7 @@ The following state arguments are supported:
         <span class="property-type">string</span>
     </dt>
     <dd>{{% md %}}Name of the resource group where the vault that should be updated is located.
-{{% /md %}}</dd>
-    <dt class="property-optional"
+{{% /md %}}</dd><dt class="property-optional"
             title="Optional">
         <span id="state_sourcerecoveryfabricname_go">
 <a href="#state_sourcerecoveryfabricname_go" style="color: inherit; text-decoration: inherit;">Source<wbr>Recovery<wbr>Fabric<wbr>Name</a>
@@ -1177,8 +1048,7 @@ The following state arguments are supported:
         <span class="property-type">string</span>
     </dt>
     <dd>{{% md %}}Name of fabric that should contains this replication.
-{{% /md %}}</dd>
-    <dt class="property-optional"
+{{% /md %}}</dd><dt class="property-optional"
             title="Optional">
         <span id="state_sourcerecoveryprotectioncontainername_go">
 <a href="#state_sourcerecoveryprotectioncontainername_go" style="color: inherit; text-decoration: inherit;">Source<wbr>Recovery<wbr>Protection<wbr>Container<wbr>Name</a>
@@ -1187,8 +1057,7 @@ The following state arguments are supported:
         <span class="property-type">string</span>
     </dt>
     <dd>{{% md %}}Name of the protection container to use.
-{{% /md %}}</dd>
-    <dt class="property-optional"
+{{% /md %}}</dd><dt class="property-optional"
             title="Optional">
         <span id="state_sourcevmid_go">
 <a href="#state_sourcevmid_go" style="color: inherit; text-decoration: inherit;">Source<wbr>Vm<wbr>Id</a>
@@ -1197,8 +1066,7 @@ The following state arguments are supported:
         <span class="property-type">string</span>
     </dt>
     <dd>{{% md %}}Id of the VM to replicate
-{{% /md %}}</dd>
-    <dt class="property-optional"
+{{% /md %}}</dd><dt class="property-optional"
             title="Optional">
         <span id="state_targetavailabilitysetid_go">
 <a href="#state_targetavailabilitysetid_go" style="color: inherit; text-decoration: inherit;">Target<wbr>Availability<wbr>Set<wbr>Id</a>
@@ -1207,8 +1075,7 @@ The following state arguments are supported:
         <span class="property-type">string</span>
     </dt>
     <dd>{{% md %}}Id of availability set that the new VM should belong to when a failover is done.
-{{% /md %}}</dd>
-    <dt class="property-optional"
+{{% /md %}}</dd><dt class="property-optional"
             title="Optional">
         <span id="state_targetnetworkid_go">
 <a href="#state_targetnetworkid_go" style="color: inherit; text-decoration: inherit;">Target<wbr>Network<wbr>Id</a>
@@ -1217,8 +1084,7 @@ The following state arguments are supported:
         <span class="property-type">string</span>
     </dt>
     <dd>{{% md %}}Network to use when a failover is done (recommended to set if any network_interface is configured for failover).
-{{% /md %}}</dd>
-    <dt class="property-optional"
+{{% /md %}}</dd><dt class="property-optional"
             title="Optional">
         <span id="state_targetrecoveryfabricid_go">
 <a href="#state_targetrecoveryfabricid_go" style="color: inherit; text-decoration: inherit;">Target<wbr>Recovery<wbr>Fabric<wbr>Id</a>
@@ -1227,8 +1093,7 @@ The following state arguments are supported:
         <span class="property-type">string</span>
     </dt>
     <dd>{{% md %}}Id of fabric where the VM replication should be handled when a failover is done.
-{{% /md %}}</dd>
-    <dt class="property-optional"
+{{% /md %}}</dd><dt class="property-optional"
             title="Optional">
         <span id="state_targetrecoveryprotectioncontainerid_go">
 <a href="#state_targetrecoveryprotectioncontainerid_go" style="color: inherit; text-decoration: inherit;">Target<wbr>Recovery<wbr>Protection<wbr>Container<wbr>Id</a>
@@ -1237,8 +1102,7 @@ The following state arguments are supported:
         <span class="property-type">string</span>
     </dt>
     <dd>{{% md %}}Id of protection container where the VM replication should be created when a failover is done.
-{{% /md %}}</dd>
-    <dt class="property-optional"
+{{% /md %}}</dd><dt class="property-optional"
             title="Optional">
         <span id="state_targetresourcegroupid_go">
 <a href="#state_targetresourcegroupid_go" style="color: inherit; text-decoration: inherit;">Target<wbr>Resource<wbr>Group<wbr>Id</a>
@@ -1247,14 +1111,11 @@ The following state arguments are supported:
         <span class="property-type">string</span>
     </dt>
     <dd>{{% md %}}Id of resource group where the VM should be created when a failover is done.
-{{% /md %}}</dd>
-</dl>
+{{% /md %}}</dd></dl>
 {{% /choosable %}}
 
 {{% choosable language nodejs %}}
-<dl class="resources-properties">
-
-    <dt class="property-optional"
+<dl class="resources-properties"><dt class="property-optional"
             title="Optional">
         <span id="state_manageddisks_nodejs">
 <a href="#state_manageddisks_nodejs" style="color: inherit; text-decoration: inherit;">managed<wbr>Disks</a>
@@ -1263,8 +1124,7 @@ The following state arguments are supported:
         <span class="property-type"><a href="#replicatedvmmanageddisk">Replicated<wbr>VMManaged<wbr>Disk[]</a></span>
     </dt>
     <dd>{{% md %}}One or more `managed_disk` block.
-{{% /md %}}</dd>
-    <dt class="property-optional"
+{{% /md %}}</dd><dt class="property-optional"
             title="Optional">
         <span id="state_name_nodejs">
 <a href="#state_name_nodejs" style="color: inherit; text-decoration: inherit;">name</a>
@@ -1273,8 +1133,7 @@ The following state arguments are supported:
         <span class="property-type">string</span>
     </dt>
     <dd>{{% md %}}The name of the network mapping.
-{{% /md %}}</dd>
-    <dt class="property-optional"
+{{% /md %}}</dd><dt class="property-optional"
             title="Optional">
         <span id="state_networkinterfaces_nodejs">
 <a href="#state_networkinterfaces_nodejs" style="color: inherit; text-decoration: inherit;">network<wbr>Interfaces</a>
@@ -1283,8 +1142,7 @@ The following state arguments are supported:
         <span class="property-type"><a href="#replicatedvmnetworkinterface">Replicated<wbr>VMNetwork<wbr>Interface[]</a></span>
     </dt>
     <dd>{{% md %}}One or more `network_interface` block.
-{{% /md %}}</dd>
-    <dt class="property-optional"
+{{% /md %}}</dd><dt class="property-optional"
             title="Optional">
         <span id="state_recoveryreplicationpolicyid_nodejs">
 <a href="#state_recoveryreplicationpolicyid_nodejs" style="color: inherit; text-decoration: inherit;">recovery<wbr>Replication<wbr>Policy<wbr>Id</a>
@@ -1292,8 +1150,7 @@ The following state arguments are supported:
         <span class="property-indicator"></span>
         <span class="property-type">string</span>
     </dt>
-    <dd>{{% md %}}{{% /md %}}</dd>
-    <dt class="property-optional"
+    <dd>{{% md %}}{{% /md %}}</dd><dt class="property-optional"
             title="Optional">
         <span id="state_recoveryvaultname_nodejs">
 <a href="#state_recoveryvaultname_nodejs" style="color: inherit; text-decoration: inherit;">recovery<wbr>Vault<wbr>Name</a>
@@ -1302,8 +1159,7 @@ The following state arguments are supported:
         <span class="property-type">string</span>
     </dt>
     <dd>{{% md %}}The name of the vault that should be updated.
-{{% /md %}}</dd>
-    <dt class="property-optional"
+{{% /md %}}</dd><dt class="property-optional"
             title="Optional">
         <span id="state_resourcegroupname_nodejs">
 <a href="#state_resourcegroupname_nodejs" style="color: inherit; text-decoration: inherit;">resource<wbr>Group<wbr>Name</a>
@@ -1312,8 +1168,7 @@ The following state arguments are supported:
         <span class="property-type">string</span>
     </dt>
     <dd>{{% md %}}Name of the resource group where the vault that should be updated is located.
-{{% /md %}}</dd>
-    <dt class="property-optional"
+{{% /md %}}</dd><dt class="property-optional"
             title="Optional">
         <span id="state_sourcerecoveryfabricname_nodejs">
 <a href="#state_sourcerecoveryfabricname_nodejs" style="color: inherit; text-decoration: inherit;">source<wbr>Recovery<wbr>Fabric<wbr>Name</a>
@@ -1322,8 +1177,7 @@ The following state arguments are supported:
         <span class="property-type">string</span>
     </dt>
     <dd>{{% md %}}Name of fabric that should contains this replication.
-{{% /md %}}</dd>
-    <dt class="property-optional"
+{{% /md %}}</dd><dt class="property-optional"
             title="Optional">
         <span id="state_sourcerecoveryprotectioncontainername_nodejs">
 <a href="#state_sourcerecoveryprotectioncontainername_nodejs" style="color: inherit; text-decoration: inherit;">source<wbr>Recovery<wbr>Protection<wbr>Container<wbr>Name</a>
@@ -1332,8 +1186,7 @@ The following state arguments are supported:
         <span class="property-type">string</span>
     </dt>
     <dd>{{% md %}}Name of the protection container to use.
-{{% /md %}}</dd>
-    <dt class="property-optional"
+{{% /md %}}</dd><dt class="property-optional"
             title="Optional">
         <span id="state_sourcevmid_nodejs">
 <a href="#state_sourcevmid_nodejs" style="color: inherit; text-decoration: inherit;">source<wbr>Vm<wbr>Id</a>
@@ -1342,8 +1195,7 @@ The following state arguments are supported:
         <span class="property-type">string</span>
     </dt>
     <dd>{{% md %}}Id of the VM to replicate
-{{% /md %}}</dd>
-    <dt class="property-optional"
+{{% /md %}}</dd><dt class="property-optional"
             title="Optional">
         <span id="state_targetavailabilitysetid_nodejs">
 <a href="#state_targetavailabilitysetid_nodejs" style="color: inherit; text-decoration: inherit;">target<wbr>Availability<wbr>Set<wbr>Id</a>
@@ -1352,8 +1204,7 @@ The following state arguments are supported:
         <span class="property-type">string</span>
     </dt>
     <dd>{{% md %}}Id of availability set that the new VM should belong to when a failover is done.
-{{% /md %}}</dd>
-    <dt class="property-optional"
+{{% /md %}}</dd><dt class="property-optional"
             title="Optional">
         <span id="state_targetnetworkid_nodejs">
 <a href="#state_targetnetworkid_nodejs" style="color: inherit; text-decoration: inherit;">target<wbr>Network<wbr>Id</a>
@@ -1362,8 +1213,7 @@ The following state arguments are supported:
         <span class="property-type">string</span>
     </dt>
     <dd>{{% md %}}Network to use when a failover is done (recommended to set if any network_interface is configured for failover).
-{{% /md %}}</dd>
-    <dt class="property-optional"
+{{% /md %}}</dd><dt class="property-optional"
             title="Optional">
         <span id="state_targetrecoveryfabricid_nodejs">
 <a href="#state_targetrecoveryfabricid_nodejs" style="color: inherit; text-decoration: inherit;">target<wbr>Recovery<wbr>Fabric<wbr>Id</a>
@@ -1372,8 +1222,7 @@ The following state arguments are supported:
         <span class="property-type">string</span>
     </dt>
     <dd>{{% md %}}Id of fabric where the VM replication should be handled when a failover is done.
-{{% /md %}}</dd>
-    <dt class="property-optional"
+{{% /md %}}</dd><dt class="property-optional"
             title="Optional">
         <span id="state_targetrecoveryprotectioncontainerid_nodejs">
 <a href="#state_targetrecoveryprotectioncontainerid_nodejs" style="color: inherit; text-decoration: inherit;">target<wbr>Recovery<wbr>Protection<wbr>Container<wbr>Id</a>
@@ -1382,8 +1231,7 @@ The following state arguments are supported:
         <span class="property-type">string</span>
     </dt>
     <dd>{{% md %}}Id of protection container where the VM replication should be created when a failover is done.
-{{% /md %}}</dd>
-    <dt class="property-optional"
+{{% /md %}}</dd><dt class="property-optional"
             title="Optional">
         <span id="state_targetresourcegroupid_nodejs">
 <a href="#state_targetresourcegroupid_nodejs" style="color: inherit; text-decoration: inherit;">target<wbr>Resource<wbr>Group<wbr>Id</a>
@@ -1392,14 +1240,11 @@ The following state arguments are supported:
         <span class="property-type">string</span>
     </dt>
     <dd>{{% md %}}Id of resource group where the VM should be created when a failover is done.
-{{% /md %}}</dd>
-</dl>
+{{% /md %}}</dd></dl>
 {{% /choosable %}}
 
 {{% choosable language python %}}
-<dl class="resources-properties">
-
-    <dt class="property-optional"
+<dl class="resources-properties"><dt class="property-optional"
             title="Optional">
         <span id="state_managed_disks_python">
 <a href="#state_managed_disks_python" style="color: inherit; text-decoration: inherit;">managed_<wbr>disks</a>
@@ -1408,8 +1253,7 @@ The following state arguments are supported:
         <span class="property-type"><a href="#replicatedvmmanageddisk">Sequence[Replicated<wbr>VMManaged<wbr>Disk<wbr>Args]</a></span>
     </dt>
     <dd>{{% md %}}One or more `managed_disk` block.
-{{% /md %}}</dd>
-    <dt class="property-optional"
+{{% /md %}}</dd><dt class="property-optional"
             title="Optional">
         <span id="state_name_python">
 <a href="#state_name_python" style="color: inherit; text-decoration: inherit;">name</a>
@@ -1418,8 +1262,7 @@ The following state arguments are supported:
         <span class="property-type">str</span>
     </dt>
     <dd>{{% md %}}The name of the network mapping.
-{{% /md %}}</dd>
-    <dt class="property-optional"
+{{% /md %}}</dd><dt class="property-optional"
             title="Optional">
         <span id="state_network_interfaces_python">
 <a href="#state_network_interfaces_python" style="color: inherit; text-decoration: inherit;">network_<wbr>interfaces</a>
@@ -1428,8 +1271,7 @@ The following state arguments are supported:
         <span class="property-type"><a href="#replicatedvmnetworkinterface">Sequence[Replicated<wbr>VMNetwork<wbr>Interface<wbr>Args]</a></span>
     </dt>
     <dd>{{% md %}}One or more `network_interface` block.
-{{% /md %}}</dd>
-    <dt class="property-optional"
+{{% /md %}}</dd><dt class="property-optional"
             title="Optional">
         <span id="state_recovery_replication_policy_id_python">
 <a href="#state_recovery_replication_policy_id_python" style="color: inherit; text-decoration: inherit;">recovery_<wbr>replication_<wbr>policy_<wbr>id</a>
@@ -1437,8 +1279,7 @@ The following state arguments are supported:
         <span class="property-indicator"></span>
         <span class="property-type">str</span>
     </dt>
-    <dd>{{% md %}}{{% /md %}}</dd>
-    <dt class="property-optional"
+    <dd>{{% md %}}{{% /md %}}</dd><dt class="property-optional"
             title="Optional">
         <span id="state_recovery_vault_name_python">
 <a href="#state_recovery_vault_name_python" style="color: inherit; text-decoration: inherit;">recovery_<wbr>vault_<wbr>name</a>
@@ -1447,8 +1288,7 @@ The following state arguments are supported:
         <span class="property-type">str</span>
     </dt>
     <dd>{{% md %}}The name of the vault that should be updated.
-{{% /md %}}</dd>
-    <dt class="property-optional"
+{{% /md %}}</dd><dt class="property-optional"
             title="Optional">
         <span id="state_resource_group_name_python">
 <a href="#state_resource_group_name_python" style="color: inherit; text-decoration: inherit;">resource_<wbr>group_<wbr>name</a>
@@ -1457,8 +1297,7 @@ The following state arguments are supported:
         <span class="property-type">str</span>
     </dt>
     <dd>{{% md %}}Name of the resource group where the vault that should be updated is located.
-{{% /md %}}</dd>
-    <dt class="property-optional"
+{{% /md %}}</dd><dt class="property-optional"
             title="Optional">
         <span id="state_source_recovery_fabric_name_python">
 <a href="#state_source_recovery_fabric_name_python" style="color: inherit; text-decoration: inherit;">source_<wbr>recovery_<wbr>fabric_<wbr>name</a>
@@ -1467,8 +1306,7 @@ The following state arguments are supported:
         <span class="property-type">str</span>
     </dt>
     <dd>{{% md %}}Name of fabric that should contains this replication.
-{{% /md %}}</dd>
-    <dt class="property-optional"
+{{% /md %}}</dd><dt class="property-optional"
             title="Optional">
         <span id="state_source_recovery_protection_container_name_python">
 <a href="#state_source_recovery_protection_container_name_python" style="color: inherit; text-decoration: inherit;">source_<wbr>recovery_<wbr>protection_<wbr>container_<wbr>name</a>
@@ -1477,8 +1315,7 @@ The following state arguments are supported:
         <span class="property-type">str</span>
     </dt>
     <dd>{{% md %}}Name of the protection container to use.
-{{% /md %}}</dd>
-    <dt class="property-optional"
+{{% /md %}}</dd><dt class="property-optional"
             title="Optional">
         <span id="state_source_vm_id_python">
 <a href="#state_source_vm_id_python" style="color: inherit; text-decoration: inherit;">source_<wbr>vm_<wbr>id</a>
@@ -1487,8 +1324,7 @@ The following state arguments are supported:
         <span class="property-type">str</span>
     </dt>
     <dd>{{% md %}}Id of the VM to replicate
-{{% /md %}}</dd>
-    <dt class="property-optional"
+{{% /md %}}</dd><dt class="property-optional"
             title="Optional">
         <span id="state_target_availability_set_id_python">
 <a href="#state_target_availability_set_id_python" style="color: inherit; text-decoration: inherit;">target_<wbr>availability_<wbr>set_<wbr>id</a>
@@ -1497,8 +1333,7 @@ The following state arguments are supported:
         <span class="property-type">str</span>
     </dt>
     <dd>{{% md %}}Id of availability set that the new VM should belong to when a failover is done.
-{{% /md %}}</dd>
-    <dt class="property-optional"
+{{% /md %}}</dd><dt class="property-optional"
             title="Optional">
         <span id="state_target_network_id_python">
 <a href="#state_target_network_id_python" style="color: inherit; text-decoration: inherit;">target_<wbr>network_<wbr>id</a>
@@ -1507,8 +1342,7 @@ The following state arguments are supported:
         <span class="property-type">str</span>
     </dt>
     <dd>{{% md %}}Network to use when a failover is done (recommended to set if any network_interface is configured for failover).
-{{% /md %}}</dd>
-    <dt class="property-optional"
+{{% /md %}}</dd><dt class="property-optional"
             title="Optional">
         <span id="state_target_recovery_fabric_id_python">
 <a href="#state_target_recovery_fabric_id_python" style="color: inherit; text-decoration: inherit;">target_<wbr>recovery_<wbr>fabric_<wbr>id</a>
@@ -1517,8 +1351,7 @@ The following state arguments are supported:
         <span class="property-type">str</span>
     </dt>
     <dd>{{% md %}}Id of fabric where the VM replication should be handled when a failover is done.
-{{% /md %}}</dd>
-    <dt class="property-optional"
+{{% /md %}}</dd><dt class="property-optional"
             title="Optional">
         <span id="state_target_recovery_protection_container_id_python">
 <a href="#state_target_recovery_protection_container_id_python" style="color: inherit; text-decoration: inherit;">target_<wbr>recovery_<wbr>protection_<wbr>container_<wbr>id</a>
@@ -1527,8 +1360,7 @@ The following state arguments are supported:
         <span class="property-type">str</span>
     </dt>
     <dd>{{% md %}}Id of protection container where the VM replication should be created when a failover is done.
-{{% /md %}}</dd>
-    <dt class="property-optional"
+{{% /md %}}</dd><dt class="property-optional"
             title="Optional">
         <span id="state_target_resource_group_id_python">
 <a href="#state_target_resource_group_id_python" style="color: inherit; text-decoration: inherit;">target_<wbr>resource_<wbr>group_<wbr>id</a>
@@ -1537,8 +1369,7 @@ The following state arguments are supported:
         <span class="property-type">str</span>
     </dt>
     <dd>{{% md %}}Id of resource group where the VM should be created when a failover is done.
-{{% /md %}}</dd>
-</dl>
+{{% /md %}}</dd></dl>
 {{% /choosable %}}
 
 
@@ -1553,9 +1384,7 @@ The following state arguments are supported:
 <h4 id="replicatedvmmanageddisk">Replicated<wbr>VMManaged<wbr>Disk</h4>
 
 {{% choosable language csharp %}}
-<dl class="resources-properties">
-
-    <dt class="property-required"
+<dl class="resources-properties"><dt class="property-required"
             title="Required">
         <span id="diskid_csharp">
 <a href="#diskid_csharp" style="color: inherit; text-decoration: inherit;">Disk<wbr>Id</a>
@@ -1564,8 +1393,7 @@ The following state arguments are supported:
         <span class="property-type">string</span>
     </dt>
     <dd>{{% md %}}Id of disk that should be replicated.
-{{% /md %}}</dd>
-    <dt class="property-required"
+{{% /md %}}</dd><dt class="property-required"
             title="Required">
         <span id="stagingstorageaccountid_csharp">
 <a href="#stagingstorageaccountid_csharp" style="color: inherit; text-decoration: inherit;">Staging<wbr>Storage<wbr>Account<wbr>Id</a>
@@ -1574,8 +1402,7 @@ The following state arguments are supported:
         <span class="property-type">string</span>
     </dt>
     <dd>{{% md %}}Storage account that should be used for caching.
-{{% /md %}}</dd>
-    <dt class="property-required"
+{{% /md %}}</dd><dt class="property-required"
             title="Required">
         <span id="targetdisktype_csharp">
 <a href="#targetdisktype_csharp" style="color: inherit; text-decoration: inherit;">Target<wbr>Disk<wbr>Type</a>
@@ -1584,8 +1411,7 @@ The following state arguments are supported:
         <span class="property-type">string</span>
     </dt>
     <dd>{{% md %}}What type should the disk be when a failover is done.
-{{% /md %}}</dd>
-    <dt class="property-required"
+{{% /md %}}</dd><dt class="property-required"
             title="Required">
         <span id="targetreplicadisktype_csharp">
 <a href="#targetreplicadisktype_csharp" style="color: inherit; text-decoration: inherit;">Target<wbr>Replica<wbr>Disk<wbr>Type</a>
@@ -1594,8 +1420,7 @@ The following state arguments are supported:
         <span class="property-type">string</span>
     </dt>
     <dd>{{% md %}}What type should the disk be that holds the replication data.
-{{% /md %}}</dd>
-    <dt class="property-required"
+{{% /md %}}</dd><dt class="property-required"
             title="Required">
         <span id="targetresourcegroupid_csharp">
 <a href="#targetresourcegroupid_csharp" style="color: inherit; text-decoration: inherit;">Target<wbr>Resource<wbr>Group<wbr>Id</a>
@@ -1604,14 +1429,11 @@ The following state arguments are supported:
         <span class="property-type">string</span>
     </dt>
     <dd>{{% md %}}Resource group disk should belong to when a failover is done.
-{{% /md %}}</dd>
-</dl>
+{{% /md %}}</dd></dl>
 {{% /choosable %}}
 
 {{% choosable language go %}}
-<dl class="resources-properties">
-
-    <dt class="property-required"
+<dl class="resources-properties"><dt class="property-required"
             title="Required">
         <span id="diskid_go">
 <a href="#diskid_go" style="color: inherit; text-decoration: inherit;">Disk<wbr>Id</a>
@@ -1620,8 +1442,7 @@ The following state arguments are supported:
         <span class="property-type">string</span>
     </dt>
     <dd>{{% md %}}Id of disk that should be replicated.
-{{% /md %}}</dd>
-    <dt class="property-required"
+{{% /md %}}</dd><dt class="property-required"
             title="Required">
         <span id="stagingstorageaccountid_go">
 <a href="#stagingstorageaccountid_go" style="color: inherit; text-decoration: inherit;">Staging<wbr>Storage<wbr>Account<wbr>Id</a>
@@ -1630,8 +1451,7 @@ The following state arguments are supported:
         <span class="property-type">string</span>
     </dt>
     <dd>{{% md %}}Storage account that should be used for caching.
-{{% /md %}}</dd>
-    <dt class="property-required"
+{{% /md %}}</dd><dt class="property-required"
             title="Required">
         <span id="targetdisktype_go">
 <a href="#targetdisktype_go" style="color: inherit; text-decoration: inherit;">Target<wbr>Disk<wbr>Type</a>
@@ -1640,8 +1460,7 @@ The following state arguments are supported:
         <span class="property-type">string</span>
     </dt>
     <dd>{{% md %}}What type should the disk be when a failover is done.
-{{% /md %}}</dd>
-    <dt class="property-required"
+{{% /md %}}</dd><dt class="property-required"
             title="Required">
         <span id="targetreplicadisktype_go">
 <a href="#targetreplicadisktype_go" style="color: inherit; text-decoration: inherit;">Target<wbr>Replica<wbr>Disk<wbr>Type</a>
@@ -1650,8 +1469,7 @@ The following state arguments are supported:
         <span class="property-type">string</span>
     </dt>
     <dd>{{% md %}}What type should the disk be that holds the replication data.
-{{% /md %}}</dd>
-    <dt class="property-required"
+{{% /md %}}</dd><dt class="property-required"
             title="Required">
         <span id="targetresourcegroupid_go">
 <a href="#targetresourcegroupid_go" style="color: inherit; text-decoration: inherit;">Target<wbr>Resource<wbr>Group<wbr>Id</a>
@@ -1660,14 +1478,11 @@ The following state arguments are supported:
         <span class="property-type">string</span>
     </dt>
     <dd>{{% md %}}Resource group disk should belong to when a failover is done.
-{{% /md %}}</dd>
-</dl>
+{{% /md %}}</dd></dl>
 {{% /choosable %}}
 
 {{% choosable language nodejs %}}
-<dl class="resources-properties">
-
-    <dt class="property-required"
+<dl class="resources-properties"><dt class="property-required"
             title="Required">
         <span id="diskid_nodejs">
 <a href="#diskid_nodejs" style="color: inherit; text-decoration: inherit;">disk<wbr>Id</a>
@@ -1676,8 +1491,7 @@ The following state arguments are supported:
         <span class="property-type">string</span>
     </dt>
     <dd>{{% md %}}Id of disk that should be replicated.
-{{% /md %}}</dd>
-    <dt class="property-required"
+{{% /md %}}</dd><dt class="property-required"
             title="Required">
         <span id="stagingstorageaccountid_nodejs">
 <a href="#stagingstorageaccountid_nodejs" style="color: inherit; text-decoration: inherit;">staging<wbr>Storage<wbr>Account<wbr>Id</a>
@@ -1686,8 +1500,7 @@ The following state arguments are supported:
         <span class="property-type">string</span>
     </dt>
     <dd>{{% md %}}Storage account that should be used for caching.
-{{% /md %}}</dd>
-    <dt class="property-required"
+{{% /md %}}</dd><dt class="property-required"
             title="Required">
         <span id="targetdisktype_nodejs">
 <a href="#targetdisktype_nodejs" style="color: inherit; text-decoration: inherit;">target<wbr>Disk<wbr>Type</a>
@@ -1696,8 +1509,7 @@ The following state arguments are supported:
         <span class="property-type">string</span>
     </dt>
     <dd>{{% md %}}What type should the disk be when a failover is done.
-{{% /md %}}</dd>
-    <dt class="property-required"
+{{% /md %}}</dd><dt class="property-required"
             title="Required">
         <span id="targetreplicadisktype_nodejs">
 <a href="#targetreplicadisktype_nodejs" style="color: inherit; text-decoration: inherit;">target<wbr>Replica<wbr>Disk<wbr>Type</a>
@@ -1706,8 +1518,7 @@ The following state arguments are supported:
         <span class="property-type">string</span>
     </dt>
     <dd>{{% md %}}What type should the disk be that holds the replication data.
-{{% /md %}}</dd>
-    <dt class="property-required"
+{{% /md %}}</dd><dt class="property-required"
             title="Required">
         <span id="targetresourcegroupid_nodejs">
 <a href="#targetresourcegroupid_nodejs" style="color: inherit; text-decoration: inherit;">target<wbr>Resource<wbr>Group<wbr>Id</a>
@@ -1716,14 +1527,11 @@ The following state arguments are supported:
         <span class="property-type">string</span>
     </dt>
     <dd>{{% md %}}Resource group disk should belong to when a failover is done.
-{{% /md %}}</dd>
-</dl>
+{{% /md %}}</dd></dl>
 {{% /choosable %}}
 
 {{% choosable language python %}}
-<dl class="resources-properties">
-
-    <dt class="property-required"
+<dl class="resources-properties"><dt class="property-required"
             title="Required">
         <span id="disk_id_python">
 <a href="#disk_id_python" style="color: inherit; text-decoration: inherit;">disk_<wbr>id</a>
@@ -1732,8 +1540,7 @@ The following state arguments are supported:
         <span class="property-type">str</span>
     </dt>
     <dd>{{% md %}}Id of disk that should be replicated.
-{{% /md %}}</dd>
-    <dt class="property-required"
+{{% /md %}}</dd><dt class="property-required"
             title="Required">
         <span id="staging_storage_account_id_python">
 <a href="#staging_storage_account_id_python" style="color: inherit; text-decoration: inherit;">staging_<wbr>storage_<wbr>account_<wbr>id</a>
@@ -1742,8 +1549,7 @@ The following state arguments are supported:
         <span class="property-type">str</span>
     </dt>
     <dd>{{% md %}}Storage account that should be used for caching.
-{{% /md %}}</dd>
-    <dt class="property-required"
+{{% /md %}}</dd><dt class="property-required"
             title="Required">
         <span id="target_disk_type_python">
 <a href="#target_disk_type_python" style="color: inherit; text-decoration: inherit;">target_<wbr>disk_<wbr>type</a>
@@ -1752,8 +1558,7 @@ The following state arguments are supported:
         <span class="property-type">str</span>
     </dt>
     <dd>{{% md %}}What type should the disk be when a failover is done.
-{{% /md %}}</dd>
-    <dt class="property-required"
+{{% /md %}}</dd><dt class="property-required"
             title="Required">
         <span id="target_replica_disk_type_python">
 <a href="#target_replica_disk_type_python" style="color: inherit; text-decoration: inherit;">target_<wbr>replica_<wbr>disk_<wbr>type</a>
@@ -1762,8 +1567,7 @@ The following state arguments are supported:
         <span class="property-type">str</span>
     </dt>
     <dd>{{% md %}}What type should the disk be that holds the replication data.
-{{% /md %}}</dd>
-    <dt class="property-required"
+{{% /md %}}</dd><dt class="property-required"
             title="Required">
         <span id="target_resource_group_id_python">
 <a href="#target_resource_group_id_python" style="color: inherit; text-decoration: inherit;">target_<wbr>resource_<wbr>group_<wbr>id</a>
@@ -1772,16 +1576,13 @@ The following state arguments are supported:
         <span class="property-type">str</span>
     </dt>
     <dd>{{% md %}}Resource group disk should belong to when a failover is done.
-{{% /md %}}</dd>
-</dl>
+{{% /md %}}</dd></dl>
 {{% /choosable %}}
 
 <h4 id="replicatedvmnetworkinterface">Replicated<wbr>VMNetwork<wbr>Interface</h4>
 
 {{% choosable language csharp %}}
-<dl class="resources-properties">
-
-    <dt class="property-optional"
+<dl class="resources-properties"><dt class="property-optional"
             title="Optional">
         <span id="recoverypublicipaddressid_csharp">
 <a href="#recoverypublicipaddressid_csharp" style="color: inherit; text-decoration: inherit;">Recovery<wbr>Public<wbr>Ip<wbr>Address<wbr>Id</a>
@@ -1790,8 +1591,7 @@ The following state arguments are supported:
         <span class="property-type">string</span>
     </dt>
     <dd>{{% md %}}Id of the public IP object to use when a failover is done.
-{{% /md %}}</dd>
-    <dt class="property-optional"
+{{% /md %}}</dd><dt class="property-optional"
             title="Optional">
         <span id="sourcenetworkinterfaceid_csharp">
 <a href="#sourcenetworkinterfaceid_csharp" style="color: inherit; text-decoration: inherit;">Source<wbr>Network<wbr>Interface<wbr>Id</a>
@@ -1800,8 +1600,7 @@ The following state arguments are supported:
         <span class="property-type">string</span>
     </dt>
     <dd>{{% md %}}Id source network interface.
-{{% /md %}}</dd>
-    <dt class="property-optional"
+{{% /md %}}</dd><dt class="property-optional"
             title="Optional">
         <span id="targetstaticip_csharp">
 <a href="#targetstaticip_csharp" style="color: inherit; text-decoration: inherit;">Target<wbr>Static<wbr>Ip</a>
@@ -1810,8 +1609,7 @@ The following state arguments are supported:
         <span class="property-type">string</span>
     </dt>
     <dd>{{% md %}}Static IP to assign when a failover is done.
-{{% /md %}}</dd>
-    <dt class="property-optional"
+{{% /md %}}</dd><dt class="property-optional"
             title="Optional">
         <span id="targetsubnetname_csharp">
 <a href="#targetsubnetname_csharp" style="color: inherit; text-decoration: inherit;">Target<wbr>Subnet<wbr>Name</a>
@@ -1820,14 +1618,11 @@ The following state arguments are supported:
         <span class="property-type">string</span>
     </dt>
     <dd>{{% md %}}Name of the subnet to to use when a failover is done.
-{{% /md %}}</dd>
-</dl>
+{{% /md %}}</dd></dl>
 {{% /choosable %}}
 
 {{% choosable language go %}}
-<dl class="resources-properties">
-
-    <dt class="property-optional"
+<dl class="resources-properties"><dt class="property-optional"
             title="Optional">
         <span id="recoverypublicipaddressid_go">
 <a href="#recoverypublicipaddressid_go" style="color: inherit; text-decoration: inherit;">Recovery<wbr>Public<wbr>Ip<wbr>Address<wbr>Id</a>
@@ -1836,8 +1631,7 @@ The following state arguments are supported:
         <span class="property-type">string</span>
     </dt>
     <dd>{{% md %}}Id of the public IP object to use when a failover is done.
-{{% /md %}}</dd>
-    <dt class="property-optional"
+{{% /md %}}</dd><dt class="property-optional"
             title="Optional">
         <span id="sourcenetworkinterfaceid_go">
 <a href="#sourcenetworkinterfaceid_go" style="color: inherit; text-decoration: inherit;">Source<wbr>Network<wbr>Interface<wbr>Id</a>
@@ -1846,8 +1640,7 @@ The following state arguments are supported:
         <span class="property-type">string</span>
     </dt>
     <dd>{{% md %}}Id source network interface.
-{{% /md %}}</dd>
-    <dt class="property-optional"
+{{% /md %}}</dd><dt class="property-optional"
             title="Optional">
         <span id="targetstaticip_go">
 <a href="#targetstaticip_go" style="color: inherit; text-decoration: inherit;">Target<wbr>Static<wbr>Ip</a>
@@ -1856,8 +1649,7 @@ The following state arguments are supported:
         <span class="property-type">string</span>
     </dt>
     <dd>{{% md %}}Static IP to assign when a failover is done.
-{{% /md %}}</dd>
-    <dt class="property-optional"
+{{% /md %}}</dd><dt class="property-optional"
             title="Optional">
         <span id="targetsubnetname_go">
 <a href="#targetsubnetname_go" style="color: inherit; text-decoration: inherit;">Target<wbr>Subnet<wbr>Name</a>
@@ -1866,14 +1658,11 @@ The following state arguments are supported:
         <span class="property-type">string</span>
     </dt>
     <dd>{{% md %}}Name of the subnet to to use when a failover is done.
-{{% /md %}}</dd>
-</dl>
+{{% /md %}}</dd></dl>
 {{% /choosable %}}
 
 {{% choosable language nodejs %}}
-<dl class="resources-properties">
-
-    <dt class="property-optional"
+<dl class="resources-properties"><dt class="property-optional"
             title="Optional">
         <span id="recoverypublicipaddressid_nodejs">
 <a href="#recoverypublicipaddressid_nodejs" style="color: inherit; text-decoration: inherit;">recovery<wbr>Public<wbr>Ip<wbr>Address<wbr>Id</a>
@@ -1882,8 +1671,7 @@ The following state arguments are supported:
         <span class="property-type">string</span>
     </dt>
     <dd>{{% md %}}Id of the public IP object to use when a failover is done.
-{{% /md %}}</dd>
-    <dt class="property-optional"
+{{% /md %}}</dd><dt class="property-optional"
             title="Optional">
         <span id="sourcenetworkinterfaceid_nodejs">
 <a href="#sourcenetworkinterfaceid_nodejs" style="color: inherit; text-decoration: inherit;">source<wbr>Network<wbr>Interface<wbr>Id</a>
@@ -1892,8 +1680,7 @@ The following state arguments are supported:
         <span class="property-type">string</span>
     </dt>
     <dd>{{% md %}}Id source network interface.
-{{% /md %}}</dd>
-    <dt class="property-optional"
+{{% /md %}}</dd><dt class="property-optional"
             title="Optional">
         <span id="targetstaticip_nodejs">
 <a href="#targetstaticip_nodejs" style="color: inherit; text-decoration: inherit;">target<wbr>Static<wbr>Ip</a>
@@ -1902,8 +1689,7 @@ The following state arguments are supported:
         <span class="property-type">string</span>
     </dt>
     <dd>{{% md %}}Static IP to assign when a failover is done.
-{{% /md %}}</dd>
-    <dt class="property-optional"
+{{% /md %}}</dd><dt class="property-optional"
             title="Optional">
         <span id="targetsubnetname_nodejs">
 <a href="#targetsubnetname_nodejs" style="color: inherit; text-decoration: inherit;">target<wbr>Subnet<wbr>Name</a>
@@ -1912,14 +1698,11 @@ The following state arguments are supported:
         <span class="property-type">string</span>
     </dt>
     <dd>{{% md %}}Name of the subnet to to use when a failover is done.
-{{% /md %}}</dd>
-</dl>
+{{% /md %}}</dd></dl>
 {{% /choosable %}}
 
 {{% choosable language python %}}
-<dl class="resources-properties">
-
-    <dt class="property-optional"
+<dl class="resources-properties"><dt class="property-optional"
             title="Optional">
         <span id="recovery_public_ip_address_id_python">
 <a href="#recovery_public_ip_address_id_python" style="color: inherit; text-decoration: inherit;">recovery_<wbr>public_<wbr>ip_<wbr>address_<wbr>id</a>
@@ -1928,8 +1711,7 @@ The following state arguments are supported:
         <span class="property-type">str</span>
     </dt>
     <dd>{{% md %}}Id of the public IP object to use when a failover is done.
-{{% /md %}}</dd>
-    <dt class="property-optional"
+{{% /md %}}</dd><dt class="property-optional"
             title="Optional">
         <span id="source_network_interface_id_python">
 <a href="#source_network_interface_id_python" style="color: inherit; text-decoration: inherit;">source_<wbr>network_<wbr>interface_<wbr>id</a>
@@ -1938,8 +1720,7 @@ The following state arguments are supported:
         <span class="property-type">str</span>
     </dt>
     <dd>{{% md %}}Id source network interface.
-{{% /md %}}</dd>
-    <dt class="property-optional"
+{{% /md %}}</dd><dt class="property-optional"
             title="Optional">
         <span id="target_static_ip_python">
 <a href="#target_static_ip_python" style="color: inherit; text-decoration: inherit;">target_<wbr>static_<wbr>ip</a>
@@ -1948,8 +1729,7 @@ The following state arguments are supported:
         <span class="property-type">str</span>
     </dt>
     <dd>{{% md %}}Static IP to assign when a failover is done.
-{{% /md %}}</dd>
-    <dt class="property-optional"
+{{% /md %}}</dd><dt class="property-optional"
             title="Optional">
         <span id="target_subnet_name_python">
 <a href="#target_subnet_name_python" style="color: inherit; text-decoration: inherit;">target_<wbr>subnet_<wbr>name</a>
@@ -1958,8 +1738,7 @@ The following state arguments are supported:
         <span class="property-type">str</span>
     </dt>
     <dd>{{% md %}}Name of the subnet to to use when a failover is done.
-{{% /md %}}</dd>
-</dl>
+{{% /md %}}</dd></dl>
 {{% /choosable %}}
 ## Import
 
@@ -1980,6 +1759,6 @@ Site Recovery Replicated VM's can be imported using the `resource id`, e.g.
 	<dt>License</dt>
 	<dd>Apache-2.0</dd>
 	<dt>Notes</dt>
-	<dd>This Pulumi package is based on the [`azurerm` Terraform Provider](https://github.com/terraform-providers/terraform-provider-azurerm).</dd>
+	<dd>{{% md %}}This Pulumi package is based on the [`azurerm` Terraform Provider](https://github.com/terraform-providers/terraform-provider-azurerm).{{% /md %}}</dd>
 </dl>
 

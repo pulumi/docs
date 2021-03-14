@@ -51,9 +51,7 @@ The following arguments are supported:
 
 
 {{% choosable language csharp %}}
-<dl class="resources-properties">
-
-    <dt class="property-required"
+<dl class="resources-properties"><dt class="property-required"
             title="Required">
         <span id="denyassignmentname_csharp">
 <a href="#denyassignmentname_csharp" style="color: inherit; text-decoration: inherit;">Deny<wbr>Assignment<wbr>Name</a>
@@ -61,8 +59,7 @@ The following arguments are supported:
         <span class="property-indicator"></span>
         <span class="property-type">string</span>
     </dt>
-    <dd>{{% md %}}The name of the deny assignment. It can be any valid GUID.{{% /md %}}</dd>
-    <dt class="property-required"
+    <dd>{{% md %}}The name of the deny assignment. It can be any valid GUID.{{% /md %}}</dd><dt class="property-required"
             title="Required">
         <span id="scope_csharp">
 <a href="#scope_csharp" style="color: inherit; text-decoration: inherit;">Scope</a>
@@ -70,14 +67,11 @@ The following arguments are supported:
         <span class="property-indicator"></span>
         <span class="property-type">string</span>
     </dt>
-    <dd>{{% md %}}The scope of the operation or resource. Valid scopes are: subscription (format: '/subscriptions/{subscriptionId}'), resource group (format: '/subscriptions/{subscriptionId}/resourceGroups/{resourceGroupName}', or resource (format: '/subscriptions/{subscriptionId}/resourceGroups/{resourceGroupName}/providers/{resourceProviderNamespace}/[{parentResourcePath}/]{resourceType}/{resourceName}'{{% /md %}}</dd>
-</dl>
+    <dd>{{% md %}}The scope of the operation or resource. Valid scopes are: subscription (format: '/subscriptions/{subscriptionId}'), resource group (format: '/subscriptions/{subscriptionId}/resourceGroups/{resourceGroupName}', or resource (format: '/subscriptions/{subscriptionId}/resourceGroups/{resourceGroupName}/providers/{resourceProviderNamespace}/[{parentResourcePath}/]{resourceType}/{resourceName}'{{% /md %}}</dd></dl>
 {{% /choosable %}}
 
 {{% choosable language go %}}
-<dl class="resources-properties">
-
-    <dt class="property-required"
+<dl class="resources-properties"><dt class="property-required"
             title="Required">
         <span id="denyassignmentname_go">
 <a href="#denyassignmentname_go" style="color: inherit; text-decoration: inherit;">Deny<wbr>Assignment<wbr>Name</a>
@@ -85,8 +79,7 @@ The following arguments are supported:
         <span class="property-indicator"></span>
         <span class="property-type">string</span>
     </dt>
-    <dd>{{% md %}}The name of the deny assignment. It can be any valid GUID.{{% /md %}}</dd>
-    <dt class="property-required"
+    <dd>{{% md %}}The name of the deny assignment. It can be any valid GUID.{{% /md %}}</dd><dt class="property-required"
             title="Required">
         <span id="scope_go">
 <a href="#scope_go" style="color: inherit; text-decoration: inherit;">Scope</a>
@@ -94,14 +87,11 @@ The following arguments are supported:
         <span class="property-indicator"></span>
         <span class="property-type">string</span>
     </dt>
-    <dd>{{% md %}}The scope of the operation or resource. Valid scopes are: subscription (format: '/subscriptions/{subscriptionId}'), resource group (format: '/subscriptions/{subscriptionId}/resourceGroups/{resourceGroupName}', or resource (format: '/subscriptions/{subscriptionId}/resourceGroups/{resourceGroupName}/providers/{resourceProviderNamespace}/[{parentResourcePath}/]{resourceType}/{resourceName}'{{% /md %}}</dd>
-</dl>
+    <dd>{{% md %}}The scope of the operation or resource. Valid scopes are: subscription (format: '/subscriptions/{subscriptionId}'), resource group (format: '/subscriptions/{subscriptionId}/resourceGroups/{resourceGroupName}', or resource (format: '/subscriptions/{subscriptionId}/resourceGroups/{resourceGroupName}/providers/{resourceProviderNamespace}/[{parentResourcePath}/]{resourceType}/{resourceName}'{{% /md %}}</dd></dl>
 {{% /choosable %}}
 
 {{% choosable language nodejs %}}
-<dl class="resources-properties">
-
-    <dt class="property-required"
+<dl class="resources-properties"><dt class="property-required"
             title="Required">
         <span id="denyassignmentname_nodejs">
 <a href="#denyassignmentname_nodejs" style="color: inherit; text-decoration: inherit;">deny<wbr>Assignment<wbr>Name</a>
@@ -109,8 +99,7 @@ The following arguments are supported:
         <span class="property-indicator"></span>
         <span class="property-type">string</span>
     </dt>
-    <dd>{{% md %}}The name of the deny assignment. It can be any valid GUID.{{% /md %}}</dd>
-    <dt class="property-required"
+    <dd>{{% md %}}The name of the deny assignment. It can be any valid GUID.{{% /md %}}</dd><dt class="property-required"
             title="Required">
         <span id="scope_nodejs">
 <a href="#scope_nodejs" style="color: inherit; text-decoration: inherit;">scope</a>
@@ -118,14 +107,11 @@ The following arguments are supported:
         <span class="property-indicator"></span>
         <span class="property-type">string</span>
     </dt>
-    <dd>{{% md %}}The scope of the operation or resource. Valid scopes are: subscription (format: '/subscriptions/{subscriptionId}'), resource group (format: '/subscriptions/{subscriptionId}/resourceGroups/{resourceGroupName}', or resource (format: '/subscriptions/{subscriptionId}/resourceGroups/{resourceGroupName}/providers/{resourceProviderNamespace}/[{parentResourcePath}/]{resourceType}/{resourceName}'{{% /md %}}</dd>
-</dl>
+    <dd>{{% md %}}The scope of the operation or resource. Valid scopes are: subscription (format: '/subscriptions/{subscriptionId}'), resource group (format: '/subscriptions/{subscriptionId}/resourceGroups/{resourceGroupName}', or resource (format: '/subscriptions/{subscriptionId}/resourceGroups/{resourceGroupName}/providers/{resourceProviderNamespace}/[{parentResourcePath}/]{resourceType}/{resourceName}'{{% /md %}}</dd></dl>
 {{% /choosable %}}
 
 {{% choosable language python %}}
-<dl class="resources-properties">
-
-    <dt class="property-required"
+<dl class="resources-properties"><dt class="property-required"
             title="Required">
         <span id="deny_assignment_name_python">
 <a href="#deny_assignment_name_python" style="color: inherit; text-decoration: inherit;">deny_<wbr>assignment_<wbr>name</a>
@@ -133,8 +119,7 @@ The following arguments are supported:
         <span class="property-indicator"></span>
         <span class="property-type">str</span>
     </dt>
-    <dd>{{% md %}}The name of the deny assignment. It can be any valid GUID.{{% /md %}}</dd>
-    <dt class="property-required"
+    <dd>{{% md %}}The name of the deny assignment. It can be any valid GUID.{{% /md %}}</dd><dt class="property-required"
             title="Required">
         <span id="scope_python">
 <a href="#scope_python" style="color: inherit; text-decoration: inherit;">scope</a>
@@ -142,8 +127,7 @@ The following arguments are supported:
         <span class="property-indicator"></span>
         <span class="property-type">str</span>
     </dt>
-    <dd>{{% md %}}The scope of the operation or resource. Valid scopes are: subscription (format: '/subscriptions/{subscriptionId}'), resource group (format: '/subscriptions/{subscriptionId}/resourceGroups/{resourceGroupName}', or resource (format: '/subscriptions/{subscriptionId}/resourceGroups/{resourceGroupName}/providers/{resourceProviderNamespace}/[{parentResourcePath}/]{resourceType}/{resourceName}'{{% /md %}}</dd>
-</dl>
+    <dd>{{% md %}}The scope of the operation or resource. Valid scopes are: subscription (format: '/subscriptions/{subscriptionId}'), resource group (format: '/subscriptions/{subscriptionId}/resourceGroups/{resourceGroupName}', or resource (format: '/subscriptions/{subscriptionId}/resourceGroups/{resourceGroupName}/providers/{resourceProviderNamespace}/[{parentResourcePath}/]{resourceType}/{resourceName}'{{% /md %}}</dd></dl>
 {{% /choosable %}}
 
 
@@ -156,9 +140,7 @@ The following output properties are available:
 
 
 {{% choosable language csharp %}}
-<dl class="resources-properties">
-
-    <dt class="property-"
+<dl class="resources-properties"><dt class="property-"
             title="">
         <span id="createdby_csharp">
 <a href="#createdby_csharp" style="color: inherit; text-decoration: inherit;">Created<wbr>By</a>
@@ -166,8 +148,7 @@ The following output properties are available:
         <span class="property-indicator"></span>
         <span class="property-type">string</span>
     </dt>
-    <dd>{{% md %}}Id of the user who created the assignment{{% /md %}}</dd>
-    <dt class="property-"
+    <dd>{{% md %}}Id of the user who created the assignment{{% /md %}}</dd><dt class="property-"
             title="">
         <span id="createdon_csharp">
 <a href="#createdon_csharp" style="color: inherit; text-decoration: inherit;">Created<wbr>On</a>
@@ -175,8 +156,7 @@ The following output properties are available:
         <span class="property-indicator"></span>
         <span class="property-type">string</span>
     </dt>
-    <dd>{{% md %}}Time it was created{{% /md %}}</dd>
-    <dt class="property-"
+    <dd>{{% md %}}Time it was created{{% /md %}}</dd><dt class="property-"
             title="">
         <span id="id_csharp">
 <a href="#id_csharp" style="color: inherit; text-decoration: inherit;">Id</a>
@@ -184,8 +164,7 @@ The following output properties are available:
         <span class="property-indicator"></span>
         <span class="property-type">string</span>
     </dt>
-    <dd>{{% md %}}The deny assignment ID.{{% /md %}}</dd>
-    <dt class="property-"
+    <dd>{{% md %}}The deny assignment ID.{{% /md %}}</dd><dt class="property-"
             title="">
         <span id="name_csharp">
 <a href="#name_csharp" style="color: inherit; text-decoration: inherit;">Name</a>
@@ -193,8 +172,7 @@ The following output properties are available:
         <span class="property-indicator"></span>
         <span class="property-type">string</span>
     </dt>
-    <dd>{{% md %}}The deny assignment name.{{% /md %}}</dd>
-    <dt class="property-"
+    <dd>{{% md %}}The deny assignment name.{{% /md %}}</dd><dt class="property-"
             title="">
         <span id="permissions_csharp">
 <a href="#permissions_csharp" style="color: inherit; text-decoration: inherit;">Permissions</a>
@@ -202,8 +180,7 @@ The following output properties are available:
         <span class="property-indicator"></span>
         <span class="property-type"><a href="#permissionresponse">List&lt;Pulumi.<wbr>Azure<wbr>Native.<wbr>Authorization.<wbr>Outputs.<wbr>Permission<wbr>Response&gt;</a></span>
     </dt>
-    <dd>{{% md %}}An array of permissions that are denied by the deny assignment.{{% /md %}}</dd>
-    <dt class="property-"
+    <dd>{{% md %}}An array of permissions that are denied by the deny assignment.{{% /md %}}</dd><dt class="property-"
             title="">
         <span id="principals_csharp">
 <a href="#principals_csharp" style="color: inherit; text-decoration: inherit;">Principals</a>
@@ -211,8 +188,7 @@ The following output properties are available:
         <span class="property-indicator"></span>
         <span class="property-type"><a href="#principalresponse">List&lt;Pulumi.<wbr>Azure<wbr>Native.<wbr>Authorization.<wbr>Outputs.<wbr>Principal<wbr>Response&gt;</a></span>
     </dt>
-    <dd>{{% md %}}Array of principals to which the deny assignment applies.{{% /md %}}</dd>
-    <dt class="property-"
+    <dd>{{% md %}}Array of principals to which the deny assignment applies.{{% /md %}}</dd><dt class="property-"
             title="">
         <span id="type_csharp">
 <a href="#type_csharp" style="color: inherit; text-decoration: inherit;">Type</a>
@@ -220,8 +196,7 @@ The following output properties are available:
         <span class="property-indicator"></span>
         <span class="property-type">string</span>
     </dt>
-    <dd>{{% md %}}The deny assignment type.{{% /md %}}</dd>
-    <dt class="property-"
+    <dd>{{% md %}}The deny assignment type.{{% /md %}}</dd><dt class="property-"
             title="">
         <span id="updatedby_csharp">
 <a href="#updatedby_csharp" style="color: inherit; text-decoration: inherit;">Updated<wbr>By</a>
@@ -229,8 +204,7 @@ The following output properties are available:
         <span class="property-indicator"></span>
         <span class="property-type">string</span>
     </dt>
-    <dd>{{% md %}}Id of the user who updated the assignment{{% /md %}}</dd>
-    <dt class="property-"
+    <dd>{{% md %}}Id of the user who updated the assignment{{% /md %}}</dd><dt class="property-"
             title="">
         <span id="updatedon_csharp">
 <a href="#updatedon_csharp" style="color: inherit; text-decoration: inherit;">Updated<wbr>On</a>
@@ -238,8 +212,7 @@ The following output properties are available:
         <span class="property-indicator"></span>
         <span class="property-type">string</span>
     </dt>
-    <dd>{{% md %}}Time it was updated{{% /md %}}</dd>
-    <dt class="property-"
+    <dd>{{% md %}}Time it was updated{{% /md %}}</dd><dt class="property-"
             title="">
         <span id="condition_csharp">
 <a href="#condition_csharp" style="color: inherit; text-decoration: inherit;">Condition</a>
@@ -247,8 +220,7 @@ The following output properties are available:
         <span class="property-indicator"></span>
         <span class="property-type">string</span>
     </dt>
-    <dd>{{% md %}}The conditions on the role assignment. This limits the resources it can be assigned to. e.g.: @Resource[Microsoft.Storage/storageAccounts/blobServices/containers:ContainerName] StringEqualsIgnoreCase 'foo_storage_container'{{% /md %}}</dd>
-    <dt class="property-"
+    <dd>{{% md %}}The conditions on the role assignment. This limits the resources it can be assigned to. e.g.: @Resource[Microsoft.Storage/storageAccounts/blobServices/containers:ContainerName] StringEqualsIgnoreCase 'foo_storage_container'{{% /md %}}</dd><dt class="property-"
             title="">
         <span id="conditionversion_csharp">
 <a href="#conditionversion_csharp" style="color: inherit; text-decoration: inherit;">Condition<wbr>Version</a>
@@ -256,8 +228,7 @@ The following output properties are available:
         <span class="property-indicator"></span>
         <span class="property-type">string</span>
     </dt>
-    <dd>{{% md %}}Version of the condition. Currently accepted value is '2.0'{{% /md %}}</dd>
-    <dt class="property-"
+    <dd>{{% md %}}Version of the condition. Currently accepted value is '2.0'{{% /md %}}</dd><dt class="property-"
             title="">
         <span id="denyassignmentname_csharp">
 <a href="#denyassignmentname_csharp" style="color: inherit; text-decoration: inherit;">Deny<wbr>Assignment<wbr>Name</a>
@@ -265,8 +236,7 @@ The following output properties are available:
         <span class="property-indicator"></span>
         <span class="property-type">string</span>
     </dt>
-    <dd>{{% md %}}The display name of the deny assignment.{{% /md %}}</dd>
-    <dt class="property-"
+    <dd>{{% md %}}The display name of the deny assignment.{{% /md %}}</dd><dt class="property-"
             title="">
         <span id="description_csharp">
 <a href="#description_csharp" style="color: inherit; text-decoration: inherit;">Description</a>
@@ -274,8 +244,7 @@ The following output properties are available:
         <span class="property-indicator"></span>
         <span class="property-type">string</span>
     </dt>
-    <dd>{{% md %}}The description of the deny assignment.{{% /md %}}</dd>
-    <dt class="property-"
+    <dd>{{% md %}}The description of the deny assignment.{{% /md %}}</dd><dt class="property-"
             title="">
         <span id="donotapplytochildscopes_csharp">
 <a href="#donotapplytochildscopes_csharp" style="color: inherit; text-decoration: inherit;">Do<wbr>Not<wbr>Apply<wbr>To<wbr>Child<wbr>Scopes</a>
@@ -283,8 +252,7 @@ The following output properties are available:
         <span class="property-indicator"></span>
         <span class="property-type">bool</span>
     </dt>
-    <dd>{{% md %}}Determines if the deny assignment applies to child scopes. Default value is false.{{% /md %}}</dd>
-    <dt class="property-"
+    <dd>{{% md %}}Determines if the deny assignment applies to child scopes. Default value is false.{{% /md %}}</dd><dt class="property-"
             title="">
         <span id="excludeprincipals_csharp">
 <a href="#excludeprincipals_csharp" style="color: inherit; text-decoration: inherit;">Exclude<wbr>Principals</a>
@@ -292,8 +260,7 @@ The following output properties are available:
         <span class="property-indicator"></span>
         <span class="property-type"><a href="#principalresponse">List&lt;Pulumi.<wbr>Azure<wbr>Native.<wbr>Authorization.<wbr>Outputs.<wbr>Principal<wbr>Response&gt;</a></span>
     </dt>
-    <dd>{{% md %}}Array of principals to which the deny assignment does not apply.{{% /md %}}</dd>
-    <dt class="property-"
+    <dd>{{% md %}}Array of principals to which the deny assignment does not apply.{{% /md %}}</dd><dt class="property-"
             title="">
         <span id="issystemprotected_csharp">
 <a href="#issystemprotected_csharp" style="color: inherit; text-decoration: inherit;">Is<wbr>System<wbr>Protected</a>
@@ -301,8 +268,7 @@ The following output properties are available:
         <span class="property-indicator"></span>
         <span class="property-type">bool</span>
     </dt>
-    <dd>{{% md %}}Specifies whether this deny assignment was created by Azure and cannot be edited or deleted.{{% /md %}}</dd>
-    <dt class="property-"
+    <dd>{{% md %}}Specifies whether this deny assignment was created by Azure and cannot be edited or deleted.{{% /md %}}</dd><dt class="property-"
             title="">
         <span id="scope_csharp">
 <a href="#scope_csharp" style="color: inherit; text-decoration: inherit;">Scope</a>
@@ -310,14 +276,11 @@ The following output properties are available:
         <span class="property-indicator"></span>
         <span class="property-type">string</span>
     </dt>
-    <dd>{{% md %}}The deny assignment scope.{{% /md %}}</dd>
-</dl>
+    <dd>{{% md %}}The deny assignment scope.{{% /md %}}</dd></dl>
 {{% /choosable %}}
 
 {{% choosable language go %}}
-<dl class="resources-properties">
-
-    <dt class="property-"
+<dl class="resources-properties"><dt class="property-"
             title="">
         <span id="createdby_go">
 <a href="#createdby_go" style="color: inherit; text-decoration: inherit;">Created<wbr>By</a>
@@ -325,8 +288,7 @@ The following output properties are available:
         <span class="property-indicator"></span>
         <span class="property-type">string</span>
     </dt>
-    <dd>{{% md %}}Id of the user who created the assignment{{% /md %}}</dd>
-    <dt class="property-"
+    <dd>{{% md %}}Id of the user who created the assignment{{% /md %}}</dd><dt class="property-"
             title="">
         <span id="createdon_go">
 <a href="#createdon_go" style="color: inherit; text-decoration: inherit;">Created<wbr>On</a>
@@ -334,8 +296,7 @@ The following output properties are available:
         <span class="property-indicator"></span>
         <span class="property-type">string</span>
     </dt>
-    <dd>{{% md %}}Time it was created{{% /md %}}</dd>
-    <dt class="property-"
+    <dd>{{% md %}}Time it was created{{% /md %}}</dd><dt class="property-"
             title="">
         <span id="id_go">
 <a href="#id_go" style="color: inherit; text-decoration: inherit;">Id</a>
@@ -343,8 +304,7 @@ The following output properties are available:
         <span class="property-indicator"></span>
         <span class="property-type">string</span>
     </dt>
-    <dd>{{% md %}}The deny assignment ID.{{% /md %}}</dd>
-    <dt class="property-"
+    <dd>{{% md %}}The deny assignment ID.{{% /md %}}</dd><dt class="property-"
             title="">
         <span id="name_go">
 <a href="#name_go" style="color: inherit; text-decoration: inherit;">Name</a>
@@ -352,8 +312,7 @@ The following output properties are available:
         <span class="property-indicator"></span>
         <span class="property-type">string</span>
     </dt>
-    <dd>{{% md %}}The deny assignment name.{{% /md %}}</dd>
-    <dt class="property-"
+    <dd>{{% md %}}The deny assignment name.{{% /md %}}</dd><dt class="property-"
             title="">
         <span id="permissions_go">
 <a href="#permissions_go" style="color: inherit; text-decoration: inherit;">Permissions</a>
@@ -361,8 +320,7 @@ The following output properties are available:
         <span class="property-indicator"></span>
         <span class="property-type"><a href="#permissionresponse">[]Permission<wbr>Response</a></span>
     </dt>
-    <dd>{{% md %}}An array of permissions that are denied by the deny assignment.{{% /md %}}</dd>
-    <dt class="property-"
+    <dd>{{% md %}}An array of permissions that are denied by the deny assignment.{{% /md %}}</dd><dt class="property-"
             title="">
         <span id="principals_go">
 <a href="#principals_go" style="color: inherit; text-decoration: inherit;">Principals</a>
@@ -370,8 +328,7 @@ The following output properties are available:
         <span class="property-indicator"></span>
         <span class="property-type"><a href="#principalresponse">[]Principal<wbr>Response</a></span>
     </dt>
-    <dd>{{% md %}}Array of principals to which the deny assignment applies.{{% /md %}}</dd>
-    <dt class="property-"
+    <dd>{{% md %}}Array of principals to which the deny assignment applies.{{% /md %}}</dd><dt class="property-"
             title="">
         <span id="type_go">
 <a href="#type_go" style="color: inherit; text-decoration: inherit;">Type</a>
@@ -379,8 +336,7 @@ The following output properties are available:
         <span class="property-indicator"></span>
         <span class="property-type">string</span>
     </dt>
-    <dd>{{% md %}}The deny assignment type.{{% /md %}}</dd>
-    <dt class="property-"
+    <dd>{{% md %}}The deny assignment type.{{% /md %}}</dd><dt class="property-"
             title="">
         <span id="updatedby_go">
 <a href="#updatedby_go" style="color: inherit; text-decoration: inherit;">Updated<wbr>By</a>
@@ -388,8 +344,7 @@ The following output properties are available:
         <span class="property-indicator"></span>
         <span class="property-type">string</span>
     </dt>
-    <dd>{{% md %}}Id of the user who updated the assignment{{% /md %}}</dd>
-    <dt class="property-"
+    <dd>{{% md %}}Id of the user who updated the assignment{{% /md %}}</dd><dt class="property-"
             title="">
         <span id="updatedon_go">
 <a href="#updatedon_go" style="color: inherit; text-decoration: inherit;">Updated<wbr>On</a>
@@ -397,8 +352,7 @@ The following output properties are available:
         <span class="property-indicator"></span>
         <span class="property-type">string</span>
     </dt>
-    <dd>{{% md %}}Time it was updated{{% /md %}}</dd>
-    <dt class="property-"
+    <dd>{{% md %}}Time it was updated{{% /md %}}</dd><dt class="property-"
             title="">
         <span id="condition_go">
 <a href="#condition_go" style="color: inherit; text-decoration: inherit;">Condition</a>
@@ -406,8 +360,7 @@ The following output properties are available:
         <span class="property-indicator"></span>
         <span class="property-type">string</span>
     </dt>
-    <dd>{{% md %}}The conditions on the role assignment. This limits the resources it can be assigned to. e.g.: @Resource[Microsoft.Storage/storageAccounts/blobServices/containers:ContainerName] StringEqualsIgnoreCase 'foo_storage_container'{{% /md %}}</dd>
-    <dt class="property-"
+    <dd>{{% md %}}The conditions on the role assignment. This limits the resources it can be assigned to. e.g.: @Resource[Microsoft.Storage/storageAccounts/blobServices/containers:ContainerName] StringEqualsIgnoreCase 'foo_storage_container'{{% /md %}}</dd><dt class="property-"
             title="">
         <span id="conditionversion_go">
 <a href="#conditionversion_go" style="color: inherit; text-decoration: inherit;">Condition<wbr>Version</a>
@@ -415,8 +368,7 @@ The following output properties are available:
         <span class="property-indicator"></span>
         <span class="property-type">string</span>
     </dt>
-    <dd>{{% md %}}Version of the condition. Currently accepted value is '2.0'{{% /md %}}</dd>
-    <dt class="property-"
+    <dd>{{% md %}}Version of the condition. Currently accepted value is '2.0'{{% /md %}}</dd><dt class="property-"
             title="">
         <span id="denyassignmentname_go">
 <a href="#denyassignmentname_go" style="color: inherit; text-decoration: inherit;">Deny<wbr>Assignment<wbr>Name</a>
@@ -424,8 +376,7 @@ The following output properties are available:
         <span class="property-indicator"></span>
         <span class="property-type">string</span>
     </dt>
-    <dd>{{% md %}}The display name of the deny assignment.{{% /md %}}</dd>
-    <dt class="property-"
+    <dd>{{% md %}}The display name of the deny assignment.{{% /md %}}</dd><dt class="property-"
             title="">
         <span id="description_go">
 <a href="#description_go" style="color: inherit; text-decoration: inherit;">Description</a>
@@ -433,8 +384,7 @@ The following output properties are available:
         <span class="property-indicator"></span>
         <span class="property-type">string</span>
     </dt>
-    <dd>{{% md %}}The description of the deny assignment.{{% /md %}}</dd>
-    <dt class="property-"
+    <dd>{{% md %}}The description of the deny assignment.{{% /md %}}</dd><dt class="property-"
             title="">
         <span id="donotapplytochildscopes_go">
 <a href="#donotapplytochildscopes_go" style="color: inherit; text-decoration: inherit;">Do<wbr>Not<wbr>Apply<wbr>To<wbr>Child<wbr>Scopes</a>
@@ -442,8 +392,7 @@ The following output properties are available:
         <span class="property-indicator"></span>
         <span class="property-type">bool</span>
     </dt>
-    <dd>{{% md %}}Determines if the deny assignment applies to child scopes. Default value is false.{{% /md %}}</dd>
-    <dt class="property-"
+    <dd>{{% md %}}Determines if the deny assignment applies to child scopes. Default value is false.{{% /md %}}</dd><dt class="property-"
             title="">
         <span id="excludeprincipals_go">
 <a href="#excludeprincipals_go" style="color: inherit; text-decoration: inherit;">Exclude<wbr>Principals</a>
@@ -451,8 +400,7 @@ The following output properties are available:
         <span class="property-indicator"></span>
         <span class="property-type"><a href="#principalresponse">[]Principal<wbr>Response</a></span>
     </dt>
-    <dd>{{% md %}}Array of principals to which the deny assignment does not apply.{{% /md %}}</dd>
-    <dt class="property-"
+    <dd>{{% md %}}Array of principals to which the deny assignment does not apply.{{% /md %}}</dd><dt class="property-"
             title="">
         <span id="issystemprotected_go">
 <a href="#issystemprotected_go" style="color: inherit; text-decoration: inherit;">Is<wbr>System<wbr>Protected</a>
@@ -460,8 +408,7 @@ The following output properties are available:
         <span class="property-indicator"></span>
         <span class="property-type">bool</span>
     </dt>
-    <dd>{{% md %}}Specifies whether this deny assignment was created by Azure and cannot be edited or deleted.{{% /md %}}</dd>
-    <dt class="property-"
+    <dd>{{% md %}}Specifies whether this deny assignment was created by Azure and cannot be edited or deleted.{{% /md %}}</dd><dt class="property-"
             title="">
         <span id="scope_go">
 <a href="#scope_go" style="color: inherit; text-decoration: inherit;">Scope</a>
@@ -469,14 +416,11 @@ The following output properties are available:
         <span class="property-indicator"></span>
         <span class="property-type">string</span>
     </dt>
-    <dd>{{% md %}}The deny assignment scope.{{% /md %}}</dd>
-</dl>
+    <dd>{{% md %}}The deny assignment scope.{{% /md %}}</dd></dl>
 {{% /choosable %}}
 
 {{% choosable language nodejs %}}
-<dl class="resources-properties">
-
-    <dt class="property-"
+<dl class="resources-properties"><dt class="property-"
             title="">
         <span id="createdby_nodejs">
 <a href="#createdby_nodejs" style="color: inherit; text-decoration: inherit;">created<wbr>By</a>
@@ -484,8 +428,7 @@ The following output properties are available:
         <span class="property-indicator"></span>
         <span class="property-type">string</span>
     </dt>
-    <dd>{{% md %}}Id of the user who created the assignment{{% /md %}}</dd>
-    <dt class="property-"
+    <dd>{{% md %}}Id of the user who created the assignment{{% /md %}}</dd><dt class="property-"
             title="">
         <span id="createdon_nodejs">
 <a href="#createdon_nodejs" style="color: inherit; text-decoration: inherit;">created<wbr>On</a>
@@ -493,8 +436,7 @@ The following output properties are available:
         <span class="property-indicator"></span>
         <span class="property-type">string</span>
     </dt>
-    <dd>{{% md %}}Time it was created{{% /md %}}</dd>
-    <dt class="property-"
+    <dd>{{% md %}}Time it was created{{% /md %}}</dd><dt class="property-"
             title="">
         <span id="id_nodejs">
 <a href="#id_nodejs" style="color: inherit; text-decoration: inherit;">id</a>
@@ -502,8 +444,7 @@ The following output properties are available:
         <span class="property-indicator"></span>
         <span class="property-type">string</span>
     </dt>
-    <dd>{{% md %}}The deny assignment ID.{{% /md %}}</dd>
-    <dt class="property-"
+    <dd>{{% md %}}The deny assignment ID.{{% /md %}}</dd><dt class="property-"
             title="">
         <span id="name_nodejs">
 <a href="#name_nodejs" style="color: inherit; text-decoration: inherit;">name</a>
@@ -511,8 +452,7 @@ The following output properties are available:
         <span class="property-indicator"></span>
         <span class="property-type">string</span>
     </dt>
-    <dd>{{% md %}}The deny assignment name.{{% /md %}}</dd>
-    <dt class="property-"
+    <dd>{{% md %}}The deny assignment name.{{% /md %}}</dd><dt class="property-"
             title="">
         <span id="permissions_nodejs">
 <a href="#permissions_nodejs" style="color: inherit; text-decoration: inherit;">permissions</a>
@@ -520,8 +460,7 @@ The following output properties are available:
         <span class="property-indicator"></span>
         <span class="property-type"><a href="#permissionresponse">Permission<wbr>Response[]</a></span>
     </dt>
-    <dd>{{% md %}}An array of permissions that are denied by the deny assignment.{{% /md %}}</dd>
-    <dt class="property-"
+    <dd>{{% md %}}An array of permissions that are denied by the deny assignment.{{% /md %}}</dd><dt class="property-"
             title="">
         <span id="principals_nodejs">
 <a href="#principals_nodejs" style="color: inherit; text-decoration: inherit;">principals</a>
@@ -529,8 +468,7 @@ The following output properties are available:
         <span class="property-indicator"></span>
         <span class="property-type"><a href="#principalresponse">Principal<wbr>Response[]</a></span>
     </dt>
-    <dd>{{% md %}}Array of principals to which the deny assignment applies.{{% /md %}}</dd>
-    <dt class="property-"
+    <dd>{{% md %}}Array of principals to which the deny assignment applies.{{% /md %}}</dd><dt class="property-"
             title="">
         <span id="type_nodejs">
 <a href="#type_nodejs" style="color: inherit; text-decoration: inherit;">type</a>
@@ -538,8 +476,7 @@ The following output properties are available:
         <span class="property-indicator"></span>
         <span class="property-type">string</span>
     </dt>
-    <dd>{{% md %}}The deny assignment type.{{% /md %}}</dd>
-    <dt class="property-"
+    <dd>{{% md %}}The deny assignment type.{{% /md %}}</dd><dt class="property-"
             title="">
         <span id="updatedby_nodejs">
 <a href="#updatedby_nodejs" style="color: inherit; text-decoration: inherit;">updated<wbr>By</a>
@@ -547,8 +484,7 @@ The following output properties are available:
         <span class="property-indicator"></span>
         <span class="property-type">string</span>
     </dt>
-    <dd>{{% md %}}Id of the user who updated the assignment{{% /md %}}</dd>
-    <dt class="property-"
+    <dd>{{% md %}}Id of the user who updated the assignment{{% /md %}}</dd><dt class="property-"
             title="">
         <span id="updatedon_nodejs">
 <a href="#updatedon_nodejs" style="color: inherit; text-decoration: inherit;">updated<wbr>On</a>
@@ -556,8 +492,7 @@ The following output properties are available:
         <span class="property-indicator"></span>
         <span class="property-type">string</span>
     </dt>
-    <dd>{{% md %}}Time it was updated{{% /md %}}</dd>
-    <dt class="property-"
+    <dd>{{% md %}}Time it was updated{{% /md %}}</dd><dt class="property-"
             title="">
         <span id="condition_nodejs">
 <a href="#condition_nodejs" style="color: inherit; text-decoration: inherit;">condition</a>
@@ -565,8 +500,7 @@ The following output properties are available:
         <span class="property-indicator"></span>
         <span class="property-type">string</span>
     </dt>
-    <dd>{{% md %}}The conditions on the role assignment. This limits the resources it can be assigned to. e.g.: @Resource[Microsoft.Storage/storageAccounts/blobServices/containers:ContainerName] StringEqualsIgnoreCase 'foo_storage_container'{{% /md %}}</dd>
-    <dt class="property-"
+    <dd>{{% md %}}The conditions on the role assignment. This limits the resources it can be assigned to. e.g.: @Resource[Microsoft.Storage/storageAccounts/blobServices/containers:ContainerName] StringEqualsIgnoreCase 'foo_storage_container'{{% /md %}}</dd><dt class="property-"
             title="">
         <span id="conditionversion_nodejs">
 <a href="#conditionversion_nodejs" style="color: inherit; text-decoration: inherit;">condition<wbr>Version</a>
@@ -574,8 +508,7 @@ The following output properties are available:
         <span class="property-indicator"></span>
         <span class="property-type">string</span>
     </dt>
-    <dd>{{% md %}}Version of the condition. Currently accepted value is '2.0'{{% /md %}}</dd>
-    <dt class="property-"
+    <dd>{{% md %}}Version of the condition. Currently accepted value is '2.0'{{% /md %}}</dd><dt class="property-"
             title="">
         <span id="denyassignmentname_nodejs">
 <a href="#denyassignmentname_nodejs" style="color: inherit; text-decoration: inherit;">deny<wbr>Assignment<wbr>Name</a>
@@ -583,8 +516,7 @@ The following output properties are available:
         <span class="property-indicator"></span>
         <span class="property-type">string</span>
     </dt>
-    <dd>{{% md %}}The display name of the deny assignment.{{% /md %}}</dd>
-    <dt class="property-"
+    <dd>{{% md %}}The display name of the deny assignment.{{% /md %}}</dd><dt class="property-"
             title="">
         <span id="description_nodejs">
 <a href="#description_nodejs" style="color: inherit; text-decoration: inherit;">description</a>
@@ -592,8 +524,7 @@ The following output properties are available:
         <span class="property-indicator"></span>
         <span class="property-type">string</span>
     </dt>
-    <dd>{{% md %}}The description of the deny assignment.{{% /md %}}</dd>
-    <dt class="property-"
+    <dd>{{% md %}}The description of the deny assignment.{{% /md %}}</dd><dt class="property-"
             title="">
         <span id="donotapplytochildscopes_nodejs">
 <a href="#donotapplytochildscopes_nodejs" style="color: inherit; text-decoration: inherit;">do<wbr>Not<wbr>Apply<wbr>To<wbr>Child<wbr>Scopes</a>
@@ -601,8 +532,7 @@ The following output properties are available:
         <span class="property-indicator"></span>
         <span class="property-type">boolean</span>
     </dt>
-    <dd>{{% md %}}Determines if the deny assignment applies to child scopes. Default value is false.{{% /md %}}</dd>
-    <dt class="property-"
+    <dd>{{% md %}}Determines if the deny assignment applies to child scopes. Default value is false.{{% /md %}}</dd><dt class="property-"
             title="">
         <span id="excludeprincipals_nodejs">
 <a href="#excludeprincipals_nodejs" style="color: inherit; text-decoration: inherit;">exclude<wbr>Principals</a>
@@ -610,8 +540,7 @@ The following output properties are available:
         <span class="property-indicator"></span>
         <span class="property-type"><a href="#principalresponse">Principal<wbr>Response[]</a></span>
     </dt>
-    <dd>{{% md %}}Array of principals to which the deny assignment does not apply.{{% /md %}}</dd>
-    <dt class="property-"
+    <dd>{{% md %}}Array of principals to which the deny assignment does not apply.{{% /md %}}</dd><dt class="property-"
             title="">
         <span id="issystemprotected_nodejs">
 <a href="#issystemprotected_nodejs" style="color: inherit; text-decoration: inherit;">is<wbr>System<wbr>Protected</a>
@@ -619,8 +548,7 @@ The following output properties are available:
         <span class="property-indicator"></span>
         <span class="property-type">boolean</span>
     </dt>
-    <dd>{{% md %}}Specifies whether this deny assignment was created by Azure and cannot be edited or deleted.{{% /md %}}</dd>
-    <dt class="property-"
+    <dd>{{% md %}}Specifies whether this deny assignment was created by Azure and cannot be edited or deleted.{{% /md %}}</dd><dt class="property-"
             title="">
         <span id="scope_nodejs">
 <a href="#scope_nodejs" style="color: inherit; text-decoration: inherit;">scope</a>
@@ -628,14 +556,11 @@ The following output properties are available:
         <span class="property-indicator"></span>
         <span class="property-type">string</span>
     </dt>
-    <dd>{{% md %}}The deny assignment scope.{{% /md %}}</dd>
-</dl>
+    <dd>{{% md %}}The deny assignment scope.{{% /md %}}</dd></dl>
 {{% /choosable %}}
 
 {{% choosable language python %}}
-<dl class="resources-properties">
-
-    <dt class="property-"
+<dl class="resources-properties"><dt class="property-"
             title="">
         <span id="created_by_python">
 <a href="#created_by_python" style="color: inherit; text-decoration: inherit;">created_<wbr>by</a>
@@ -643,8 +568,7 @@ The following output properties are available:
         <span class="property-indicator"></span>
         <span class="property-type">str</span>
     </dt>
-    <dd>{{% md %}}Id of the user who created the assignment{{% /md %}}</dd>
-    <dt class="property-"
+    <dd>{{% md %}}Id of the user who created the assignment{{% /md %}}</dd><dt class="property-"
             title="">
         <span id="created_on_python">
 <a href="#created_on_python" style="color: inherit; text-decoration: inherit;">created_<wbr>on</a>
@@ -652,8 +576,7 @@ The following output properties are available:
         <span class="property-indicator"></span>
         <span class="property-type">str</span>
     </dt>
-    <dd>{{% md %}}Time it was created{{% /md %}}</dd>
-    <dt class="property-"
+    <dd>{{% md %}}Time it was created{{% /md %}}</dd><dt class="property-"
             title="">
         <span id="id_python">
 <a href="#id_python" style="color: inherit; text-decoration: inherit;">id</a>
@@ -661,8 +584,7 @@ The following output properties are available:
         <span class="property-indicator"></span>
         <span class="property-type">str</span>
     </dt>
-    <dd>{{% md %}}The deny assignment ID.{{% /md %}}</dd>
-    <dt class="property-"
+    <dd>{{% md %}}The deny assignment ID.{{% /md %}}</dd><dt class="property-"
             title="">
         <span id="name_python">
 <a href="#name_python" style="color: inherit; text-decoration: inherit;">name</a>
@@ -670,8 +592,7 @@ The following output properties are available:
         <span class="property-indicator"></span>
         <span class="property-type">str</span>
     </dt>
-    <dd>{{% md %}}The deny assignment name.{{% /md %}}</dd>
-    <dt class="property-"
+    <dd>{{% md %}}The deny assignment name.{{% /md %}}</dd><dt class="property-"
             title="">
         <span id="permissions_python">
 <a href="#permissions_python" style="color: inherit; text-decoration: inherit;">permissions</a>
@@ -679,8 +600,7 @@ The following output properties are available:
         <span class="property-indicator"></span>
         <span class="property-type"><a href="#permissionresponse">Sequence[Permission<wbr>Response]</a></span>
     </dt>
-    <dd>{{% md %}}An array of permissions that are denied by the deny assignment.{{% /md %}}</dd>
-    <dt class="property-"
+    <dd>{{% md %}}An array of permissions that are denied by the deny assignment.{{% /md %}}</dd><dt class="property-"
             title="">
         <span id="principals_python">
 <a href="#principals_python" style="color: inherit; text-decoration: inherit;">principals</a>
@@ -688,8 +608,7 @@ The following output properties are available:
         <span class="property-indicator"></span>
         <span class="property-type"><a href="#principalresponse">Sequence[Principal<wbr>Response]</a></span>
     </dt>
-    <dd>{{% md %}}Array of principals to which the deny assignment applies.{{% /md %}}</dd>
-    <dt class="property-"
+    <dd>{{% md %}}Array of principals to which the deny assignment applies.{{% /md %}}</dd><dt class="property-"
             title="">
         <span id="type_python">
 <a href="#type_python" style="color: inherit; text-decoration: inherit;">type</a>
@@ -697,8 +616,7 @@ The following output properties are available:
         <span class="property-indicator"></span>
         <span class="property-type">str</span>
     </dt>
-    <dd>{{% md %}}The deny assignment type.{{% /md %}}</dd>
-    <dt class="property-"
+    <dd>{{% md %}}The deny assignment type.{{% /md %}}</dd><dt class="property-"
             title="">
         <span id="updated_by_python">
 <a href="#updated_by_python" style="color: inherit; text-decoration: inherit;">updated_<wbr>by</a>
@@ -706,8 +624,7 @@ The following output properties are available:
         <span class="property-indicator"></span>
         <span class="property-type">str</span>
     </dt>
-    <dd>{{% md %}}Id of the user who updated the assignment{{% /md %}}</dd>
-    <dt class="property-"
+    <dd>{{% md %}}Id of the user who updated the assignment{{% /md %}}</dd><dt class="property-"
             title="">
         <span id="updated_on_python">
 <a href="#updated_on_python" style="color: inherit; text-decoration: inherit;">updated_<wbr>on</a>
@@ -715,8 +632,7 @@ The following output properties are available:
         <span class="property-indicator"></span>
         <span class="property-type">str</span>
     </dt>
-    <dd>{{% md %}}Time it was updated{{% /md %}}</dd>
-    <dt class="property-"
+    <dd>{{% md %}}Time it was updated{{% /md %}}</dd><dt class="property-"
             title="">
         <span id="condition_python">
 <a href="#condition_python" style="color: inherit; text-decoration: inherit;">condition</a>
@@ -724,8 +640,7 @@ The following output properties are available:
         <span class="property-indicator"></span>
         <span class="property-type">str</span>
     </dt>
-    <dd>{{% md %}}The conditions on the role assignment. This limits the resources it can be assigned to. e.g.: @Resource[Microsoft.Storage/storageAccounts/blobServices/containers:ContainerName] StringEqualsIgnoreCase 'foo_storage_container'{{% /md %}}</dd>
-    <dt class="property-"
+    <dd>{{% md %}}The conditions on the role assignment. This limits the resources it can be assigned to. e.g.: @Resource[Microsoft.Storage/storageAccounts/blobServices/containers:ContainerName] StringEqualsIgnoreCase 'foo_storage_container'{{% /md %}}</dd><dt class="property-"
             title="">
         <span id="condition_version_python">
 <a href="#condition_version_python" style="color: inherit; text-decoration: inherit;">condition_<wbr>version</a>
@@ -733,8 +648,7 @@ The following output properties are available:
         <span class="property-indicator"></span>
         <span class="property-type">str</span>
     </dt>
-    <dd>{{% md %}}Version of the condition. Currently accepted value is '2.0'{{% /md %}}</dd>
-    <dt class="property-"
+    <dd>{{% md %}}Version of the condition. Currently accepted value is '2.0'{{% /md %}}</dd><dt class="property-"
             title="">
         <span id="deny_assignment_name_python">
 <a href="#deny_assignment_name_python" style="color: inherit; text-decoration: inherit;">deny_<wbr>assignment_<wbr>name</a>
@@ -742,8 +656,7 @@ The following output properties are available:
         <span class="property-indicator"></span>
         <span class="property-type">str</span>
     </dt>
-    <dd>{{% md %}}The display name of the deny assignment.{{% /md %}}</dd>
-    <dt class="property-"
+    <dd>{{% md %}}The display name of the deny assignment.{{% /md %}}</dd><dt class="property-"
             title="">
         <span id="description_python">
 <a href="#description_python" style="color: inherit; text-decoration: inherit;">description</a>
@@ -751,8 +664,7 @@ The following output properties are available:
         <span class="property-indicator"></span>
         <span class="property-type">str</span>
     </dt>
-    <dd>{{% md %}}The description of the deny assignment.{{% /md %}}</dd>
-    <dt class="property-"
+    <dd>{{% md %}}The description of the deny assignment.{{% /md %}}</dd><dt class="property-"
             title="">
         <span id="do_not_apply_to_child_scopes_python">
 <a href="#do_not_apply_to_child_scopes_python" style="color: inherit; text-decoration: inherit;">do_<wbr>not_<wbr>apply_<wbr>to_<wbr>child_<wbr>scopes</a>
@@ -760,8 +672,7 @@ The following output properties are available:
         <span class="property-indicator"></span>
         <span class="property-type">bool</span>
     </dt>
-    <dd>{{% md %}}Determines if the deny assignment applies to child scopes. Default value is false.{{% /md %}}</dd>
-    <dt class="property-"
+    <dd>{{% md %}}Determines if the deny assignment applies to child scopes. Default value is false.{{% /md %}}</dd><dt class="property-"
             title="">
         <span id="exclude_principals_python">
 <a href="#exclude_principals_python" style="color: inherit; text-decoration: inherit;">exclude_<wbr>principals</a>
@@ -769,8 +680,7 @@ The following output properties are available:
         <span class="property-indicator"></span>
         <span class="property-type"><a href="#principalresponse">Sequence[Principal<wbr>Response]</a></span>
     </dt>
-    <dd>{{% md %}}Array of principals to which the deny assignment does not apply.{{% /md %}}</dd>
-    <dt class="property-"
+    <dd>{{% md %}}Array of principals to which the deny assignment does not apply.{{% /md %}}</dd><dt class="property-"
             title="">
         <span id="is_system_protected_python">
 <a href="#is_system_protected_python" style="color: inherit; text-decoration: inherit;">is_<wbr>system_<wbr>protected</a>
@@ -778,8 +688,7 @@ The following output properties are available:
         <span class="property-indicator"></span>
         <span class="property-type">bool</span>
     </dt>
-    <dd>{{% md %}}Specifies whether this deny assignment was created by Azure and cannot be edited or deleted.{{% /md %}}</dd>
-    <dt class="property-"
+    <dd>{{% md %}}Specifies whether this deny assignment was created by Azure and cannot be edited or deleted.{{% /md %}}</dd><dt class="property-"
             title="">
         <span id="scope_python">
 <a href="#scope_python" style="color: inherit; text-decoration: inherit;">scope</a>
@@ -787,8 +696,7 @@ The following output properties are available:
         <span class="property-indicator"></span>
         <span class="property-type">str</span>
     </dt>
-    <dd>{{% md %}}The deny assignment scope.{{% /md %}}</dd>
-</dl>
+    <dd>{{% md %}}The deny assignment scope.{{% /md %}}</dd></dl>
 {{% /choosable %}}
 
 
@@ -802,9 +710,7 @@ The following output properties are available:
 
 
 {{% choosable language csharp %}}
-<dl class="resources-properties">
-
-    <dt class="property-optional"
+<dl class="resources-properties"><dt class="property-optional"
             title="Optional">
         <span id="actions_csharp">
 <a href="#actions_csharp" style="color: inherit; text-decoration: inherit;">Actions</a>
@@ -812,8 +718,7 @@ The following output properties are available:
         <span class="property-indicator"></span>
         <span class="property-type">List&lt;string&gt;</span>
     </dt>
-    <dd>{{% md %}}Allowed actions.{{% /md %}}</dd>
-    <dt class="property-optional"
+    <dd>{{% md %}}Allowed actions.{{% /md %}}</dd><dt class="property-optional"
             title="Optional">
         <span id="dataactions_csharp">
 <a href="#dataactions_csharp" style="color: inherit; text-decoration: inherit;">Data<wbr>Actions</a>
@@ -821,8 +726,7 @@ The following output properties are available:
         <span class="property-indicator"></span>
         <span class="property-type">List&lt;string&gt;</span>
     </dt>
-    <dd>{{% md %}}Allowed Data actions.{{% /md %}}</dd>
-    <dt class="property-optional"
+    <dd>{{% md %}}Allowed Data actions.{{% /md %}}</dd><dt class="property-optional"
             title="Optional">
         <span id="notactions_csharp">
 <a href="#notactions_csharp" style="color: inherit; text-decoration: inherit;">Not<wbr>Actions</a>
@@ -830,8 +734,7 @@ The following output properties are available:
         <span class="property-indicator"></span>
         <span class="property-type">List&lt;string&gt;</span>
     </dt>
-    <dd>{{% md %}}Denied actions.{{% /md %}}</dd>
-    <dt class="property-optional"
+    <dd>{{% md %}}Denied actions.{{% /md %}}</dd><dt class="property-optional"
             title="Optional">
         <span id="notdataactions_csharp">
 <a href="#notdataactions_csharp" style="color: inherit; text-decoration: inherit;">Not<wbr>Data<wbr>Actions</a>
@@ -839,14 +742,11 @@ The following output properties are available:
         <span class="property-indicator"></span>
         <span class="property-type">List&lt;string&gt;</span>
     </dt>
-    <dd>{{% md %}}Denied Data actions.{{% /md %}}</dd>
-</dl>
+    <dd>{{% md %}}Denied Data actions.{{% /md %}}</dd></dl>
 {{% /choosable %}}
 
 {{% choosable language go %}}
-<dl class="resources-properties">
-
-    <dt class="property-optional"
+<dl class="resources-properties"><dt class="property-optional"
             title="Optional">
         <span id="actions_go">
 <a href="#actions_go" style="color: inherit; text-decoration: inherit;">Actions</a>
@@ -854,8 +754,7 @@ The following output properties are available:
         <span class="property-indicator"></span>
         <span class="property-type">[]string</span>
     </dt>
-    <dd>{{% md %}}Allowed actions.{{% /md %}}</dd>
-    <dt class="property-optional"
+    <dd>{{% md %}}Allowed actions.{{% /md %}}</dd><dt class="property-optional"
             title="Optional">
         <span id="dataactions_go">
 <a href="#dataactions_go" style="color: inherit; text-decoration: inherit;">Data<wbr>Actions</a>
@@ -863,8 +762,7 @@ The following output properties are available:
         <span class="property-indicator"></span>
         <span class="property-type">[]string</span>
     </dt>
-    <dd>{{% md %}}Allowed Data actions.{{% /md %}}</dd>
-    <dt class="property-optional"
+    <dd>{{% md %}}Allowed Data actions.{{% /md %}}</dd><dt class="property-optional"
             title="Optional">
         <span id="notactions_go">
 <a href="#notactions_go" style="color: inherit; text-decoration: inherit;">Not<wbr>Actions</a>
@@ -872,8 +770,7 @@ The following output properties are available:
         <span class="property-indicator"></span>
         <span class="property-type">[]string</span>
     </dt>
-    <dd>{{% md %}}Denied actions.{{% /md %}}</dd>
-    <dt class="property-optional"
+    <dd>{{% md %}}Denied actions.{{% /md %}}</dd><dt class="property-optional"
             title="Optional">
         <span id="notdataactions_go">
 <a href="#notdataactions_go" style="color: inherit; text-decoration: inherit;">Not<wbr>Data<wbr>Actions</a>
@@ -881,14 +778,11 @@ The following output properties are available:
         <span class="property-indicator"></span>
         <span class="property-type">[]string</span>
     </dt>
-    <dd>{{% md %}}Denied Data actions.{{% /md %}}</dd>
-</dl>
+    <dd>{{% md %}}Denied Data actions.{{% /md %}}</dd></dl>
 {{% /choosable %}}
 
 {{% choosable language nodejs %}}
-<dl class="resources-properties">
-
-    <dt class="property-optional"
+<dl class="resources-properties"><dt class="property-optional"
             title="Optional">
         <span id="actions_nodejs">
 <a href="#actions_nodejs" style="color: inherit; text-decoration: inherit;">actions</a>
@@ -896,8 +790,7 @@ The following output properties are available:
         <span class="property-indicator"></span>
         <span class="property-type">string[]</span>
     </dt>
-    <dd>{{% md %}}Allowed actions.{{% /md %}}</dd>
-    <dt class="property-optional"
+    <dd>{{% md %}}Allowed actions.{{% /md %}}</dd><dt class="property-optional"
             title="Optional">
         <span id="dataactions_nodejs">
 <a href="#dataactions_nodejs" style="color: inherit; text-decoration: inherit;">data<wbr>Actions</a>
@@ -905,8 +798,7 @@ The following output properties are available:
         <span class="property-indicator"></span>
         <span class="property-type">string[]</span>
     </dt>
-    <dd>{{% md %}}Allowed Data actions.{{% /md %}}</dd>
-    <dt class="property-optional"
+    <dd>{{% md %}}Allowed Data actions.{{% /md %}}</dd><dt class="property-optional"
             title="Optional">
         <span id="notactions_nodejs">
 <a href="#notactions_nodejs" style="color: inherit; text-decoration: inherit;">not<wbr>Actions</a>
@@ -914,8 +806,7 @@ The following output properties are available:
         <span class="property-indicator"></span>
         <span class="property-type">string[]</span>
     </dt>
-    <dd>{{% md %}}Denied actions.{{% /md %}}</dd>
-    <dt class="property-optional"
+    <dd>{{% md %}}Denied actions.{{% /md %}}</dd><dt class="property-optional"
             title="Optional">
         <span id="notdataactions_nodejs">
 <a href="#notdataactions_nodejs" style="color: inherit; text-decoration: inherit;">not<wbr>Data<wbr>Actions</a>
@@ -923,14 +814,11 @@ The following output properties are available:
         <span class="property-indicator"></span>
         <span class="property-type">string[]</span>
     </dt>
-    <dd>{{% md %}}Denied Data actions.{{% /md %}}</dd>
-</dl>
+    <dd>{{% md %}}Denied Data actions.{{% /md %}}</dd></dl>
 {{% /choosable %}}
 
 {{% choosable language python %}}
-<dl class="resources-properties">
-
-    <dt class="property-optional"
+<dl class="resources-properties"><dt class="property-optional"
             title="Optional">
         <span id="actions_python">
 <a href="#actions_python" style="color: inherit; text-decoration: inherit;">actions</a>
@@ -938,8 +826,7 @@ The following output properties are available:
         <span class="property-indicator"></span>
         <span class="property-type">Sequence[str]</span>
     </dt>
-    <dd>{{% md %}}Allowed actions.{{% /md %}}</dd>
-    <dt class="property-optional"
+    <dd>{{% md %}}Allowed actions.{{% /md %}}</dd><dt class="property-optional"
             title="Optional">
         <span id="data_actions_python">
 <a href="#data_actions_python" style="color: inherit; text-decoration: inherit;">data_<wbr>actions</a>
@@ -947,8 +834,7 @@ The following output properties are available:
         <span class="property-indicator"></span>
         <span class="property-type">Sequence[str]</span>
     </dt>
-    <dd>{{% md %}}Allowed Data actions.{{% /md %}}</dd>
-    <dt class="property-optional"
+    <dd>{{% md %}}Allowed Data actions.{{% /md %}}</dd><dt class="property-optional"
             title="Optional">
         <span id="not_actions_python">
 <a href="#not_actions_python" style="color: inherit; text-decoration: inherit;">not_<wbr>actions</a>
@@ -956,8 +842,7 @@ The following output properties are available:
         <span class="property-indicator"></span>
         <span class="property-type">Sequence[str]</span>
     </dt>
-    <dd>{{% md %}}Denied actions.{{% /md %}}</dd>
-    <dt class="property-optional"
+    <dd>{{% md %}}Denied actions.{{% /md %}}</dd><dt class="property-optional"
             title="Optional">
         <span id="not_data_actions_python">
 <a href="#not_data_actions_python" style="color: inherit; text-decoration: inherit;">not_<wbr>data_<wbr>actions</a>
@@ -965,8 +850,7 @@ The following output properties are available:
         <span class="property-indicator"></span>
         <span class="property-type">Sequence[str]</span>
     </dt>
-    <dd>{{% md %}}Denied Data actions.{{% /md %}}</dd>
-</dl>
+    <dd>{{% md %}}Denied Data actions.{{% /md %}}</dd></dl>
 {{% /choosable %}}
 
 <h4 id="principalresponse">Principal<wbr>Response</h4>
@@ -974,9 +858,7 @@ The following output properties are available:
 
 
 {{% choosable language csharp %}}
-<dl class="resources-properties">
-
-    <dt class="property-optional"
+<dl class="resources-properties"><dt class="property-optional"
             title="Optional">
         <span id="id_csharp">
 <a href="#id_csharp" style="color: inherit; text-decoration: inherit;">Id</a>
@@ -984,8 +866,7 @@ The following output properties are available:
         <span class="property-indicator"></span>
         <span class="property-type">string</span>
     </dt>
-    <dd>{{% md %}}Object ID of the Azure AD principal (user, group, or service principal) to which the deny assignment applies. An empty guid '00000000-0000-0000-0000-000000000000' as principal id and principal type as 'Everyone' represents all users, groups and service principals.{{% /md %}}</dd>
-    <dt class="property-optional"
+    <dd>{{% md %}}Object ID of the Azure AD principal (user, group, or service principal) to which the deny assignment applies. An empty guid '00000000-0000-0000-0000-000000000000' as principal id and principal type as 'Everyone' represents all users, groups and service principals.{{% /md %}}</dd><dt class="property-optional"
             title="Optional">
         <span id="type_csharp">
 <a href="#type_csharp" style="color: inherit; text-decoration: inherit;">Type</a>
@@ -993,14 +874,11 @@ The following output properties are available:
         <span class="property-indicator"></span>
         <span class="property-type">string</span>
     </dt>
-    <dd>{{% md %}}Type of object represented by principal id (user, group, or service principal). An empty guid '00000000-0000-0000-0000-000000000000' as principal id and principal type as 'Everyone' represents all users, groups and service principals.{{% /md %}}</dd>
-</dl>
+    <dd>{{% md %}}Type of object represented by principal id (user, group, or service principal). An empty guid '00000000-0000-0000-0000-000000000000' as principal id and principal type as 'Everyone' represents all users, groups and service principals.{{% /md %}}</dd></dl>
 {{% /choosable %}}
 
 {{% choosable language go %}}
-<dl class="resources-properties">
-
-    <dt class="property-optional"
+<dl class="resources-properties"><dt class="property-optional"
             title="Optional">
         <span id="id_go">
 <a href="#id_go" style="color: inherit; text-decoration: inherit;">Id</a>
@@ -1008,8 +886,7 @@ The following output properties are available:
         <span class="property-indicator"></span>
         <span class="property-type">string</span>
     </dt>
-    <dd>{{% md %}}Object ID of the Azure AD principal (user, group, or service principal) to which the deny assignment applies. An empty guid '00000000-0000-0000-0000-000000000000' as principal id and principal type as 'Everyone' represents all users, groups and service principals.{{% /md %}}</dd>
-    <dt class="property-optional"
+    <dd>{{% md %}}Object ID of the Azure AD principal (user, group, or service principal) to which the deny assignment applies. An empty guid '00000000-0000-0000-0000-000000000000' as principal id and principal type as 'Everyone' represents all users, groups and service principals.{{% /md %}}</dd><dt class="property-optional"
             title="Optional">
         <span id="type_go">
 <a href="#type_go" style="color: inherit; text-decoration: inherit;">Type</a>
@@ -1017,14 +894,11 @@ The following output properties are available:
         <span class="property-indicator"></span>
         <span class="property-type">string</span>
     </dt>
-    <dd>{{% md %}}Type of object represented by principal id (user, group, or service principal). An empty guid '00000000-0000-0000-0000-000000000000' as principal id and principal type as 'Everyone' represents all users, groups and service principals.{{% /md %}}</dd>
-</dl>
+    <dd>{{% md %}}Type of object represented by principal id (user, group, or service principal). An empty guid '00000000-0000-0000-0000-000000000000' as principal id and principal type as 'Everyone' represents all users, groups and service principals.{{% /md %}}</dd></dl>
 {{% /choosable %}}
 
 {{% choosable language nodejs %}}
-<dl class="resources-properties">
-
-    <dt class="property-optional"
+<dl class="resources-properties"><dt class="property-optional"
             title="Optional">
         <span id="id_nodejs">
 <a href="#id_nodejs" style="color: inherit; text-decoration: inherit;">id</a>
@@ -1032,8 +906,7 @@ The following output properties are available:
         <span class="property-indicator"></span>
         <span class="property-type">string</span>
     </dt>
-    <dd>{{% md %}}Object ID of the Azure AD principal (user, group, or service principal) to which the deny assignment applies. An empty guid '00000000-0000-0000-0000-000000000000' as principal id and principal type as 'Everyone' represents all users, groups and service principals.{{% /md %}}</dd>
-    <dt class="property-optional"
+    <dd>{{% md %}}Object ID of the Azure AD principal (user, group, or service principal) to which the deny assignment applies. An empty guid '00000000-0000-0000-0000-000000000000' as principal id and principal type as 'Everyone' represents all users, groups and service principals.{{% /md %}}</dd><dt class="property-optional"
             title="Optional">
         <span id="type_nodejs">
 <a href="#type_nodejs" style="color: inherit; text-decoration: inherit;">type</a>
@@ -1041,14 +914,11 @@ The following output properties are available:
         <span class="property-indicator"></span>
         <span class="property-type">string</span>
     </dt>
-    <dd>{{% md %}}Type of object represented by principal id (user, group, or service principal). An empty guid '00000000-0000-0000-0000-000000000000' as principal id and principal type as 'Everyone' represents all users, groups and service principals.{{% /md %}}</dd>
-</dl>
+    <dd>{{% md %}}Type of object represented by principal id (user, group, or service principal). An empty guid '00000000-0000-0000-0000-000000000000' as principal id and principal type as 'Everyone' represents all users, groups and service principals.{{% /md %}}</dd></dl>
 {{% /choosable %}}
 
 {{% choosable language python %}}
-<dl class="resources-properties">
-
-    <dt class="property-optional"
+<dl class="resources-properties"><dt class="property-optional"
             title="Optional">
         <span id="id_python">
 <a href="#id_python" style="color: inherit; text-decoration: inherit;">id</a>
@@ -1056,8 +926,7 @@ The following output properties are available:
         <span class="property-indicator"></span>
         <span class="property-type">str</span>
     </dt>
-    <dd>{{% md %}}Object ID of the Azure AD principal (user, group, or service principal) to which the deny assignment applies. An empty guid '00000000-0000-0000-0000-000000000000' as principal id and principal type as 'Everyone' represents all users, groups and service principals.{{% /md %}}</dd>
-    <dt class="property-optional"
+    <dd>{{% md %}}Object ID of the Azure AD principal (user, group, or service principal) to which the deny assignment applies. An empty guid '00000000-0000-0000-0000-000000000000' as principal id and principal type as 'Everyone' represents all users, groups and service principals.{{% /md %}}</dd><dt class="property-optional"
             title="Optional">
         <span id="type_python">
 <a href="#type_python" style="color: inherit; text-decoration: inherit;">type</a>
@@ -1065,8 +934,7 @@ The following output properties are available:
         <span class="property-indicator"></span>
         <span class="property-type">str</span>
     </dt>
-    <dd>{{% md %}}Type of object represented by principal id (user, group, or service principal). An empty guid '00000000-0000-0000-0000-000000000000' as principal id and principal type as 'Everyone' represents all users, groups and service principals.{{% /md %}}</dd>
-</dl>
+    <dd>{{% md %}}Type of object represented by principal id (user, group, or service principal). An empty guid '00000000-0000-0000-0000-000000000000' as principal id and principal type as 'Everyone' represents all users, groups and service principals.{{% /md %}}</dd></dl>
 {{% /choosable %}}
 
 

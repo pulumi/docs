@@ -13,11 +13,17 @@ meta_desc: "Documentation for the azure.sentinel.AlertRuleMsSecurityIncident res
 Manages a Sentinel MS Security Incident Alert Rule.
 
 {{% examples %}}
+
 ## Example Usage
 
 {{< chooser language "typescript,python,go,csharp" / >}}
 
-{{% example csharp %}}
+
+
+
+
+{{< example csharp >}}
+
 ```csharp
 using Pulumi;
 using Azure = Pulumi.Azure;
@@ -51,9 +57,12 @@ class MyStack : Stack
 }
 ```
 
-{{% /example %}}
 
-{{% example go %}}
+{{< /example >}}
+
+
+{{< example go >}}
+
 ```go
 package main
 
@@ -96,9 +105,12 @@ func main() {
 }
 ```
 
-{{% /example %}}
 
-{{% example python %}}
+{{< /example >}}
+
+
+{{< example python >}}
+
 ```python
 import pulumi
 import pulumi_azure as azure
@@ -115,9 +127,12 @@ example_alert_rule_ms_security_incident = azure.sentinel.AlertRuleMsSecurityInci
     severity_filters=["High"])
 ```
 
-{{% /example %}}
 
-{{% example typescript %}}
+{{< /example >}}
+
+
+{{< example typescript >}}
+
 
 ```typescript
 import * as pulumi from "@pulumi/pulumi";
@@ -137,9 +152,16 @@ const exampleAlertRuleMsSecurityIncident = new azure.sentinel.AlertRuleMsSecurit
 });
 ```
 
-{{% /example %}}
+
+{{< /example >}}
+
+
+
+
 
 {{% /examples %}}
+
+
 
 
 ## Create a AlertRuleMsSecurityIncident Resource {#create}
@@ -164,9 +186,7 @@ const exampleAlertRuleMsSecurityIncident = new azure.sentinel.AlertRuleMsSecurit
 
 {{% choosable language nodejs %}}
 
-<dl class="resources-properties">
-  
-    <dt
+<dl class="resources-properties"><dt
         class="property-required" title="Required">
         <span>name</span>
         <span class="property-indicator"></span>
@@ -174,9 +194,7 @@ const exampleAlertRuleMsSecurityIncident = new azure.sentinel.AlertRuleMsSecurit
     </dt>
     <dd>
       The unique name of the resource.
-    </dd>
-  
-    <dt
+    </dd><dt
         class="property-required" title="Required">
         <span>args</span>
         <span class="property-indicator"></span>
@@ -184,9 +202,7 @@ const exampleAlertRuleMsSecurityIncident = new azure.sentinel.AlertRuleMsSecurit
     </dt>
     <dd>
       The arguments to resource properties.
-    </dd>
-  
-    <dt
+    </dd><dt
         class="property-optional" title="Optional">
         <span>opts</span>
         <span class="property-indicator"></span>
@@ -194,10 +210,7 @@ const exampleAlertRuleMsSecurityIncident = new azure.sentinel.AlertRuleMsSecurit
     </dt>
     <dd>
       Bag of options to control resource&#39;s behavior.
-    </dd>
-  
-
-</dl>
+    </dd></dl>
 
 {{% /choosable %}}
 
@@ -223,9 +236,7 @@ const exampleAlertRuleMsSecurityIncident = new azure.sentinel.AlertRuleMsSecurit
 
 {{% choosable language go %}}
 
-<dl class="resources-properties">
-  
-    <dt
+<dl class="resources-properties"><dt
         class="property-optional" title="Optional">
         <span>ctx</span>
         <span class="property-indicator"></span>
@@ -233,9 +244,7 @@ const exampleAlertRuleMsSecurityIncident = new azure.sentinel.AlertRuleMsSecurit
     </dt>
     <dd>
       Context object for the current deployment.
-    </dd>
-  
-    <dt
+    </dd><dt
         class="property-required" title="Required">
         <span>name</span>
         <span class="property-indicator"></span>
@@ -243,9 +252,7 @@ const exampleAlertRuleMsSecurityIncident = new azure.sentinel.AlertRuleMsSecurit
     </dt>
     <dd>
       The unique name of the resource.
-    </dd>
-  
-    <dt
+    </dd><dt
         class="property-required" title="Required">
         <span>args</span>
         <span class="property-indicator"></span>
@@ -253,9 +260,7 @@ const exampleAlertRuleMsSecurityIncident = new azure.sentinel.AlertRuleMsSecurit
     </dt>
     <dd>
       The arguments to resource properties.
-    </dd>
-  
-    <dt
+    </dd><dt
         class="property-optional" title="Optional">
         <span>opts</span>
         <span class="property-indicator"></span>
@@ -263,18 +268,13 @@ const exampleAlertRuleMsSecurityIncident = new azure.sentinel.AlertRuleMsSecurit
     </dt>
     <dd>
       Bag of options to control resource&#39;s behavior.
-    </dd>
-  
-
-</dl>
+    </dd></dl>
 
 {{% /choosable %}}
 
 {{% choosable language csharp %}}
 
-<dl class="resources-properties">
-  
-    <dt
+<dl class="resources-properties"><dt
         class="property-required" title="Required">
         <span>name</span>
         <span class="property-indicator"></span>
@@ -282,9 +282,7 @@ const exampleAlertRuleMsSecurityIncident = new azure.sentinel.AlertRuleMsSecurit
     </dt>
     <dd>
       The unique name of the resource.
-    </dd>
-  
-    <dt
+    </dd><dt
         class="property-required" title="Required">
         <span>args</span>
         <span class="property-indicator"></span>
@@ -292,9 +290,7 @@ const exampleAlertRuleMsSecurityIncident = new azure.sentinel.AlertRuleMsSecurit
     </dt>
     <dd>
       The arguments to resource properties.
-    </dd>
-  
-    <dt
+    </dd><dt
         class="property-optional" title="Optional">
         <span>opts</span>
         <span class="property-indicator"></span>
@@ -302,10 +298,7 @@ const exampleAlertRuleMsSecurityIncident = new azure.sentinel.AlertRuleMsSecurit
     </dt>
     <dd>
       Bag of options to control resource&#39;s behavior.
-    </dd>
-  
-
-</dl>
+    </dd></dl>
 
 {{% /choosable %}}
 
@@ -320,9 +313,7 @@ The AlertRuleMsSecurityIncident resource accepts the following [input]({{< relre
 
 
 {{% choosable language csharp %}}
-<dl class="resources-properties">
-
-    <dt class="property-required"
+<dl class="resources-properties"><dt class="property-required"
             title="Required">
         <span id="displayname_csharp">
 <a href="#displayname_csharp" style="color: inherit; text-decoration: inherit;">Display<wbr>Name</a>
@@ -331,8 +322,7 @@ The AlertRuleMsSecurityIncident resource accepts the following [input]({{< relre
         <span class="property-type">string</span>
     </dt>
     <dd>{{% md %}}The friendly name of this Sentinel MS Security Incident Alert Rule.
-{{% /md %}}</dd>
-    <dt class="property-required"
+{{% /md %}}</dd><dt class="property-required"
             title="Required">
         <span id="loganalyticsworkspaceid_csharp">
 <a href="#loganalyticsworkspaceid_csharp" style="color: inherit; text-decoration: inherit;">Log<wbr>Analytics<wbr>Workspace<wbr>Id</a>
@@ -341,8 +331,7 @@ The AlertRuleMsSecurityIncident resource accepts the following [input]({{< relre
         <span class="property-type">string</span>
     </dt>
     <dd>{{% md %}}The ID of the Log Analytics Workspace this Sentinel MS Security Incident Alert Rule belongs to. Changing this forces a new Sentinel MS Security Incident Alert Rule to be created.
-{{% /md %}}</dd>
-    <dt class="property-required"
+{{% /md %}}</dd><dt class="property-required"
             title="Required">
         <span id="productfilter_csharp">
 <a href="#productfilter_csharp" style="color: inherit; text-decoration: inherit;">Product<wbr>Filter</a>
@@ -351,8 +340,7 @@ The AlertRuleMsSecurityIncident resource accepts the following [input]({{< relre
         <span class="property-type">string</span>
     </dt>
     <dd>{{% md %}}The Microsoft Security Service from where the alert will be generated. Possible values are `Azure Active Directory Identity Protection`, `Azure Advanced Threat Protection`, `Azure Security Center`, `Azure Security Center for IoT`, `Microsoft Cloud App Security`, `Microsoft Defender Advanced Threat Protection` and `Office 365 Advanced Threat Protection`.
-{{% /md %}}</dd>
-    <dt class="property-required"
+{{% /md %}}</dd><dt class="property-required"
             title="Required">
         <span id="severityfilters_csharp">
 <a href="#severityfilters_csharp" style="color: inherit; text-decoration: inherit;">Severity<wbr>Filters</a>
@@ -361,8 +349,7 @@ The AlertRuleMsSecurityIncident resource accepts the following [input]({{< relre
         <span class="property-type">List&lt;string&gt;</span>
     </dt>
     <dd>{{% md %}}Only create incidents from alerts when alert severity level is contained in this list. Possible values are `High`, `Medium`, `Low` and `Informational`.
-{{% /md %}}</dd>
-    <dt class="property-optional"
+{{% /md %}}</dd><dt class="property-optional"
             title="Optional">
         <span id="alertruletemplateguid_csharp">
 <a href="#alertruletemplateguid_csharp" style="color: inherit; text-decoration: inherit;">Alert<wbr>Rule<wbr>Template<wbr>Guid</a>
@@ -371,8 +358,7 @@ The AlertRuleMsSecurityIncident resource accepts the following [input]({{< relre
         <span class="property-type">string</span>
     </dt>
     <dd>{{% md %}}The GUID of the alert rule template which is used to create this Sentinel Scheduled Alert Rule. Changing this forces a new Sentinel MS Security Incident Alert Rule to be created.
-{{% /md %}}</dd>
-    <dt class="property-optional"
+{{% /md %}}</dd><dt class="property-optional"
             title="Optional">
         <span id="description_csharp">
 <a href="#description_csharp" style="color: inherit; text-decoration: inherit;">Description</a>
@@ -381,8 +367,7 @@ The AlertRuleMsSecurityIncident resource accepts the following [input]({{< relre
         <span class="property-type">string</span>
     </dt>
     <dd>{{% md %}}The description of this Sentinel MS Security Incident Alert Rule.
-{{% /md %}}</dd>
-    <dt class="property-optional"
+{{% /md %}}</dd><dt class="property-optional"
             title="Optional">
         <span id="displaynameexcludefilters_csharp">
 <a href="#displaynameexcludefilters_csharp" style="color: inherit; text-decoration: inherit;">Display<wbr>Name<wbr>Exclude<wbr>Filters</a>
@@ -391,8 +376,7 @@ The AlertRuleMsSecurityIncident resource accepts the following [input]({{< relre
         <span class="property-type">List&lt;string&gt;</span>
     </dt>
     <dd>{{% md %}}Only create incidents when the alert display name doesn't contain text from this list.
-{{% /md %}}</dd>
-    <dt class="property-optional"
+{{% /md %}}</dd><dt class="property-optional"
             title="Optional">
         <span id="displaynamefilters_csharp">
 <a href="#displaynamefilters_csharp" style="color: inherit; text-decoration: inherit;">Display<wbr>Name<wbr>Filters</a>
@@ -401,8 +385,7 @@ The AlertRuleMsSecurityIncident resource accepts the following [input]({{< relre
         <span class="property-type">List&lt;string&gt;</span>
     </dt>
     <dd>{{% md %}}Only create incidents when the alert display name contain text from this list, leave empty to apply no filter.
-{{% /md %}}</dd>
-    <dt class="property-optional"
+{{% /md %}}</dd><dt class="property-optional"
             title="Optional">
         <span id="enabled_csharp">
 <a href="#enabled_csharp" style="color: inherit; text-decoration: inherit;">Enabled</a>
@@ -411,8 +394,7 @@ The AlertRuleMsSecurityIncident resource accepts the following [input]({{< relre
         <span class="property-type">bool</span>
     </dt>
     <dd>{{% md %}}Should this Sentinel MS Security Incident Alert Rule be enabled? Defaults to `true`.
-{{% /md %}}</dd>
-    <dt class="property-optional"
+{{% /md %}}</dd><dt class="property-optional"
             title="Optional">
         <span id="name_csharp">
 <a href="#name_csharp" style="color: inherit; text-decoration: inherit;">Name</a>
@@ -421,8 +403,7 @@ The AlertRuleMsSecurityIncident resource accepts the following [input]({{< relre
         <span class="property-type">string</span>
     </dt>
     <dd>{{% md %}}The name which should be used for this Sentinel MS Security Incident Alert Rule. Changing this forces a new Sentinel MS Security Incident Alert Rule to be created.
-{{% /md %}}</dd>
-    <dt class="property-optional property-deprecated"
+{{% /md %}}</dd><dt class="property-optional property-deprecated"
             title="Optional, Deprecated">
         <span id="textwhitelists_csharp">
 <a href="#textwhitelists_csharp" style="color: inherit; text-decoration: inherit;">Text<wbr>Whitelists</a>
@@ -430,14 +411,11 @@ The AlertRuleMsSecurityIncident resource accepts the following [input]({{< relre
         <span class="property-indicator"></span>
         <span class="property-type">List&lt;string&gt;</span>
     </dt>
-    <dd>{{% md %}}{{% /md %}}<p class="property-message">Deprecated: {{% md %}}this property has been renamed to display_name_filter to better match the SDK &amp; API{{% /md %}}</p></dd>
-</dl>
+    <dd>{{% md %}}{{% /md %}}<p class="property-message">Deprecated: {{% md %}}this property has been renamed to display_name_filter to better match the SDK &amp; API{{% /md %}}</p></dd></dl>
 {{% /choosable %}}
 
 {{% choosable language go %}}
-<dl class="resources-properties">
-
-    <dt class="property-required"
+<dl class="resources-properties"><dt class="property-required"
             title="Required">
         <span id="displayname_go">
 <a href="#displayname_go" style="color: inherit; text-decoration: inherit;">Display<wbr>Name</a>
@@ -446,8 +424,7 @@ The AlertRuleMsSecurityIncident resource accepts the following [input]({{< relre
         <span class="property-type">string</span>
     </dt>
     <dd>{{% md %}}The friendly name of this Sentinel MS Security Incident Alert Rule.
-{{% /md %}}</dd>
-    <dt class="property-required"
+{{% /md %}}</dd><dt class="property-required"
             title="Required">
         <span id="loganalyticsworkspaceid_go">
 <a href="#loganalyticsworkspaceid_go" style="color: inherit; text-decoration: inherit;">Log<wbr>Analytics<wbr>Workspace<wbr>Id</a>
@@ -456,8 +433,7 @@ The AlertRuleMsSecurityIncident resource accepts the following [input]({{< relre
         <span class="property-type">string</span>
     </dt>
     <dd>{{% md %}}The ID of the Log Analytics Workspace this Sentinel MS Security Incident Alert Rule belongs to. Changing this forces a new Sentinel MS Security Incident Alert Rule to be created.
-{{% /md %}}</dd>
-    <dt class="property-required"
+{{% /md %}}</dd><dt class="property-required"
             title="Required">
         <span id="productfilter_go">
 <a href="#productfilter_go" style="color: inherit; text-decoration: inherit;">Product<wbr>Filter</a>
@@ -466,8 +442,7 @@ The AlertRuleMsSecurityIncident resource accepts the following [input]({{< relre
         <span class="property-type">string</span>
     </dt>
     <dd>{{% md %}}The Microsoft Security Service from where the alert will be generated. Possible values are `Azure Active Directory Identity Protection`, `Azure Advanced Threat Protection`, `Azure Security Center`, `Azure Security Center for IoT`, `Microsoft Cloud App Security`, `Microsoft Defender Advanced Threat Protection` and `Office 365 Advanced Threat Protection`.
-{{% /md %}}</dd>
-    <dt class="property-required"
+{{% /md %}}</dd><dt class="property-required"
             title="Required">
         <span id="severityfilters_go">
 <a href="#severityfilters_go" style="color: inherit; text-decoration: inherit;">Severity<wbr>Filters</a>
@@ -476,8 +451,7 @@ The AlertRuleMsSecurityIncident resource accepts the following [input]({{< relre
         <span class="property-type">[]string</span>
     </dt>
     <dd>{{% md %}}Only create incidents from alerts when alert severity level is contained in this list. Possible values are `High`, `Medium`, `Low` and `Informational`.
-{{% /md %}}</dd>
-    <dt class="property-optional"
+{{% /md %}}</dd><dt class="property-optional"
             title="Optional">
         <span id="alertruletemplateguid_go">
 <a href="#alertruletemplateguid_go" style="color: inherit; text-decoration: inherit;">Alert<wbr>Rule<wbr>Template<wbr>Guid</a>
@@ -486,8 +460,7 @@ The AlertRuleMsSecurityIncident resource accepts the following [input]({{< relre
         <span class="property-type">string</span>
     </dt>
     <dd>{{% md %}}The GUID of the alert rule template which is used to create this Sentinel Scheduled Alert Rule. Changing this forces a new Sentinel MS Security Incident Alert Rule to be created.
-{{% /md %}}</dd>
-    <dt class="property-optional"
+{{% /md %}}</dd><dt class="property-optional"
             title="Optional">
         <span id="description_go">
 <a href="#description_go" style="color: inherit; text-decoration: inherit;">Description</a>
@@ -496,8 +469,7 @@ The AlertRuleMsSecurityIncident resource accepts the following [input]({{< relre
         <span class="property-type">string</span>
     </dt>
     <dd>{{% md %}}The description of this Sentinel MS Security Incident Alert Rule.
-{{% /md %}}</dd>
-    <dt class="property-optional"
+{{% /md %}}</dd><dt class="property-optional"
             title="Optional">
         <span id="displaynameexcludefilters_go">
 <a href="#displaynameexcludefilters_go" style="color: inherit; text-decoration: inherit;">Display<wbr>Name<wbr>Exclude<wbr>Filters</a>
@@ -506,8 +478,7 @@ The AlertRuleMsSecurityIncident resource accepts the following [input]({{< relre
         <span class="property-type">[]string</span>
     </dt>
     <dd>{{% md %}}Only create incidents when the alert display name doesn't contain text from this list.
-{{% /md %}}</dd>
-    <dt class="property-optional"
+{{% /md %}}</dd><dt class="property-optional"
             title="Optional">
         <span id="displaynamefilters_go">
 <a href="#displaynamefilters_go" style="color: inherit; text-decoration: inherit;">Display<wbr>Name<wbr>Filters</a>
@@ -516,8 +487,7 @@ The AlertRuleMsSecurityIncident resource accepts the following [input]({{< relre
         <span class="property-type">[]string</span>
     </dt>
     <dd>{{% md %}}Only create incidents when the alert display name contain text from this list, leave empty to apply no filter.
-{{% /md %}}</dd>
-    <dt class="property-optional"
+{{% /md %}}</dd><dt class="property-optional"
             title="Optional">
         <span id="enabled_go">
 <a href="#enabled_go" style="color: inherit; text-decoration: inherit;">Enabled</a>
@@ -526,8 +496,7 @@ The AlertRuleMsSecurityIncident resource accepts the following [input]({{< relre
         <span class="property-type">bool</span>
     </dt>
     <dd>{{% md %}}Should this Sentinel MS Security Incident Alert Rule be enabled? Defaults to `true`.
-{{% /md %}}</dd>
-    <dt class="property-optional"
+{{% /md %}}</dd><dt class="property-optional"
             title="Optional">
         <span id="name_go">
 <a href="#name_go" style="color: inherit; text-decoration: inherit;">Name</a>
@@ -536,8 +505,7 @@ The AlertRuleMsSecurityIncident resource accepts the following [input]({{< relre
         <span class="property-type">string</span>
     </dt>
     <dd>{{% md %}}The name which should be used for this Sentinel MS Security Incident Alert Rule. Changing this forces a new Sentinel MS Security Incident Alert Rule to be created.
-{{% /md %}}</dd>
-    <dt class="property-optional property-deprecated"
+{{% /md %}}</dd><dt class="property-optional property-deprecated"
             title="Optional, Deprecated">
         <span id="textwhitelists_go">
 <a href="#textwhitelists_go" style="color: inherit; text-decoration: inherit;">Text<wbr>Whitelists</a>
@@ -545,14 +513,11 @@ The AlertRuleMsSecurityIncident resource accepts the following [input]({{< relre
         <span class="property-indicator"></span>
         <span class="property-type">[]string</span>
     </dt>
-    <dd>{{% md %}}{{% /md %}}<p class="property-message">Deprecated: {{% md %}}this property has been renamed to display_name_filter to better match the SDK &amp; API{{% /md %}}</p></dd>
-</dl>
+    <dd>{{% md %}}{{% /md %}}<p class="property-message">Deprecated: {{% md %}}this property has been renamed to display_name_filter to better match the SDK &amp; API{{% /md %}}</p></dd></dl>
 {{% /choosable %}}
 
 {{% choosable language nodejs %}}
-<dl class="resources-properties">
-
-    <dt class="property-required"
+<dl class="resources-properties"><dt class="property-required"
             title="Required">
         <span id="displayname_nodejs">
 <a href="#displayname_nodejs" style="color: inherit; text-decoration: inherit;">display<wbr>Name</a>
@@ -561,8 +526,7 @@ The AlertRuleMsSecurityIncident resource accepts the following [input]({{< relre
         <span class="property-type">string</span>
     </dt>
     <dd>{{% md %}}The friendly name of this Sentinel MS Security Incident Alert Rule.
-{{% /md %}}</dd>
-    <dt class="property-required"
+{{% /md %}}</dd><dt class="property-required"
             title="Required">
         <span id="loganalyticsworkspaceid_nodejs">
 <a href="#loganalyticsworkspaceid_nodejs" style="color: inherit; text-decoration: inherit;">log<wbr>Analytics<wbr>Workspace<wbr>Id</a>
@@ -571,8 +535,7 @@ The AlertRuleMsSecurityIncident resource accepts the following [input]({{< relre
         <span class="property-type">string</span>
     </dt>
     <dd>{{% md %}}The ID of the Log Analytics Workspace this Sentinel MS Security Incident Alert Rule belongs to. Changing this forces a new Sentinel MS Security Incident Alert Rule to be created.
-{{% /md %}}</dd>
-    <dt class="property-required"
+{{% /md %}}</dd><dt class="property-required"
             title="Required">
         <span id="productfilter_nodejs">
 <a href="#productfilter_nodejs" style="color: inherit; text-decoration: inherit;">product<wbr>Filter</a>
@@ -581,8 +544,7 @@ The AlertRuleMsSecurityIncident resource accepts the following [input]({{< relre
         <span class="property-type">string</span>
     </dt>
     <dd>{{% md %}}The Microsoft Security Service from where the alert will be generated. Possible values are `Azure Active Directory Identity Protection`, `Azure Advanced Threat Protection`, `Azure Security Center`, `Azure Security Center for IoT`, `Microsoft Cloud App Security`, `Microsoft Defender Advanced Threat Protection` and `Office 365 Advanced Threat Protection`.
-{{% /md %}}</dd>
-    <dt class="property-required"
+{{% /md %}}</dd><dt class="property-required"
             title="Required">
         <span id="severityfilters_nodejs">
 <a href="#severityfilters_nodejs" style="color: inherit; text-decoration: inherit;">severity<wbr>Filters</a>
@@ -591,8 +553,7 @@ The AlertRuleMsSecurityIncident resource accepts the following [input]({{< relre
         <span class="property-type">string[]</span>
     </dt>
     <dd>{{% md %}}Only create incidents from alerts when alert severity level is contained in this list. Possible values are `High`, `Medium`, `Low` and `Informational`.
-{{% /md %}}</dd>
-    <dt class="property-optional"
+{{% /md %}}</dd><dt class="property-optional"
             title="Optional">
         <span id="alertruletemplateguid_nodejs">
 <a href="#alertruletemplateguid_nodejs" style="color: inherit; text-decoration: inherit;">alert<wbr>Rule<wbr>Template<wbr>Guid</a>
@@ -601,8 +562,7 @@ The AlertRuleMsSecurityIncident resource accepts the following [input]({{< relre
         <span class="property-type">string</span>
     </dt>
     <dd>{{% md %}}The GUID of the alert rule template which is used to create this Sentinel Scheduled Alert Rule. Changing this forces a new Sentinel MS Security Incident Alert Rule to be created.
-{{% /md %}}</dd>
-    <dt class="property-optional"
+{{% /md %}}</dd><dt class="property-optional"
             title="Optional">
         <span id="description_nodejs">
 <a href="#description_nodejs" style="color: inherit; text-decoration: inherit;">description</a>
@@ -611,8 +571,7 @@ The AlertRuleMsSecurityIncident resource accepts the following [input]({{< relre
         <span class="property-type">string</span>
     </dt>
     <dd>{{% md %}}The description of this Sentinel MS Security Incident Alert Rule.
-{{% /md %}}</dd>
-    <dt class="property-optional"
+{{% /md %}}</dd><dt class="property-optional"
             title="Optional">
         <span id="displaynameexcludefilters_nodejs">
 <a href="#displaynameexcludefilters_nodejs" style="color: inherit; text-decoration: inherit;">display<wbr>Name<wbr>Exclude<wbr>Filters</a>
@@ -621,8 +580,7 @@ The AlertRuleMsSecurityIncident resource accepts the following [input]({{< relre
         <span class="property-type">string[]</span>
     </dt>
     <dd>{{% md %}}Only create incidents when the alert display name doesn't contain text from this list.
-{{% /md %}}</dd>
-    <dt class="property-optional"
+{{% /md %}}</dd><dt class="property-optional"
             title="Optional">
         <span id="displaynamefilters_nodejs">
 <a href="#displaynamefilters_nodejs" style="color: inherit; text-decoration: inherit;">display<wbr>Name<wbr>Filters</a>
@@ -631,8 +589,7 @@ The AlertRuleMsSecurityIncident resource accepts the following [input]({{< relre
         <span class="property-type">string[]</span>
     </dt>
     <dd>{{% md %}}Only create incidents when the alert display name contain text from this list, leave empty to apply no filter.
-{{% /md %}}</dd>
-    <dt class="property-optional"
+{{% /md %}}</dd><dt class="property-optional"
             title="Optional">
         <span id="enabled_nodejs">
 <a href="#enabled_nodejs" style="color: inherit; text-decoration: inherit;">enabled</a>
@@ -641,8 +598,7 @@ The AlertRuleMsSecurityIncident resource accepts the following [input]({{< relre
         <span class="property-type">boolean</span>
     </dt>
     <dd>{{% md %}}Should this Sentinel MS Security Incident Alert Rule be enabled? Defaults to `true`.
-{{% /md %}}</dd>
-    <dt class="property-optional"
+{{% /md %}}</dd><dt class="property-optional"
             title="Optional">
         <span id="name_nodejs">
 <a href="#name_nodejs" style="color: inherit; text-decoration: inherit;">name</a>
@@ -651,8 +607,7 @@ The AlertRuleMsSecurityIncident resource accepts the following [input]({{< relre
         <span class="property-type">string</span>
     </dt>
     <dd>{{% md %}}The name which should be used for this Sentinel MS Security Incident Alert Rule. Changing this forces a new Sentinel MS Security Incident Alert Rule to be created.
-{{% /md %}}</dd>
-    <dt class="property-optional property-deprecated"
+{{% /md %}}</dd><dt class="property-optional property-deprecated"
             title="Optional, Deprecated">
         <span id="textwhitelists_nodejs">
 <a href="#textwhitelists_nodejs" style="color: inherit; text-decoration: inherit;">text<wbr>Whitelists</a>
@@ -660,14 +615,11 @@ The AlertRuleMsSecurityIncident resource accepts the following [input]({{< relre
         <span class="property-indicator"></span>
         <span class="property-type">string[]</span>
     </dt>
-    <dd>{{% md %}}{{% /md %}}<p class="property-message">Deprecated: {{% md %}}this property has been renamed to display_name_filter to better match the SDK &amp; API{{% /md %}}</p></dd>
-</dl>
+    <dd>{{% md %}}{{% /md %}}<p class="property-message">Deprecated: {{% md %}}this property has been renamed to display_name_filter to better match the SDK &amp; API{{% /md %}}</p></dd></dl>
 {{% /choosable %}}
 
 {{% choosable language python %}}
-<dl class="resources-properties">
-
-    <dt class="property-required"
+<dl class="resources-properties"><dt class="property-required"
             title="Required">
         <span id="display_name_python">
 <a href="#display_name_python" style="color: inherit; text-decoration: inherit;">display_<wbr>name</a>
@@ -676,8 +628,7 @@ The AlertRuleMsSecurityIncident resource accepts the following [input]({{< relre
         <span class="property-type">str</span>
     </dt>
     <dd>{{% md %}}The friendly name of this Sentinel MS Security Incident Alert Rule.
-{{% /md %}}</dd>
-    <dt class="property-required"
+{{% /md %}}</dd><dt class="property-required"
             title="Required">
         <span id="log_analytics_workspace_id_python">
 <a href="#log_analytics_workspace_id_python" style="color: inherit; text-decoration: inherit;">log_<wbr>analytics_<wbr>workspace_<wbr>id</a>
@@ -686,8 +637,7 @@ The AlertRuleMsSecurityIncident resource accepts the following [input]({{< relre
         <span class="property-type">str</span>
     </dt>
     <dd>{{% md %}}The ID of the Log Analytics Workspace this Sentinel MS Security Incident Alert Rule belongs to. Changing this forces a new Sentinel MS Security Incident Alert Rule to be created.
-{{% /md %}}</dd>
-    <dt class="property-required"
+{{% /md %}}</dd><dt class="property-required"
             title="Required">
         <span id="product_filter_python">
 <a href="#product_filter_python" style="color: inherit; text-decoration: inherit;">product_<wbr>filter</a>
@@ -696,8 +646,7 @@ The AlertRuleMsSecurityIncident resource accepts the following [input]({{< relre
         <span class="property-type">str</span>
     </dt>
     <dd>{{% md %}}The Microsoft Security Service from where the alert will be generated. Possible values are `Azure Active Directory Identity Protection`, `Azure Advanced Threat Protection`, `Azure Security Center`, `Azure Security Center for IoT`, `Microsoft Cloud App Security`, `Microsoft Defender Advanced Threat Protection` and `Office 365 Advanced Threat Protection`.
-{{% /md %}}</dd>
-    <dt class="property-required"
+{{% /md %}}</dd><dt class="property-required"
             title="Required">
         <span id="severity_filters_python">
 <a href="#severity_filters_python" style="color: inherit; text-decoration: inherit;">severity_<wbr>filters</a>
@@ -706,8 +655,7 @@ The AlertRuleMsSecurityIncident resource accepts the following [input]({{< relre
         <span class="property-type">Sequence[str]</span>
     </dt>
     <dd>{{% md %}}Only create incidents from alerts when alert severity level is contained in this list. Possible values are `High`, `Medium`, `Low` and `Informational`.
-{{% /md %}}</dd>
-    <dt class="property-optional"
+{{% /md %}}</dd><dt class="property-optional"
             title="Optional">
         <span id="alert_rule_template_guid_python">
 <a href="#alert_rule_template_guid_python" style="color: inherit; text-decoration: inherit;">alert_<wbr>rule_<wbr>template_<wbr>guid</a>
@@ -716,8 +664,7 @@ The AlertRuleMsSecurityIncident resource accepts the following [input]({{< relre
         <span class="property-type">str</span>
     </dt>
     <dd>{{% md %}}The GUID of the alert rule template which is used to create this Sentinel Scheduled Alert Rule. Changing this forces a new Sentinel MS Security Incident Alert Rule to be created.
-{{% /md %}}</dd>
-    <dt class="property-optional"
+{{% /md %}}</dd><dt class="property-optional"
             title="Optional">
         <span id="description_python">
 <a href="#description_python" style="color: inherit; text-decoration: inherit;">description</a>
@@ -726,8 +673,7 @@ The AlertRuleMsSecurityIncident resource accepts the following [input]({{< relre
         <span class="property-type">str</span>
     </dt>
     <dd>{{% md %}}The description of this Sentinel MS Security Incident Alert Rule.
-{{% /md %}}</dd>
-    <dt class="property-optional"
+{{% /md %}}</dd><dt class="property-optional"
             title="Optional">
         <span id="display_name_exclude_filters_python">
 <a href="#display_name_exclude_filters_python" style="color: inherit; text-decoration: inherit;">display_<wbr>name_<wbr>exclude_<wbr>filters</a>
@@ -736,8 +682,7 @@ The AlertRuleMsSecurityIncident resource accepts the following [input]({{< relre
         <span class="property-type">Sequence[str]</span>
     </dt>
     <dd>{{% md %}}Only create incidents when the alert display name doesn't contain text from this list.
-{{% /md %}}</dd>
-    <dt class="property-optional"
+{{% /md %}}</dd><dt class="property-optional"
             title="Optional">
         <span id="display_name_filters_python">
 <a href="#display_name_filters_python" style="color: inherit; text-decoration: inherit;">display_<wbr>name_<wbr>filters</a>
@@ -746,8 +691,7 @@ The AlertRuleMsSecurityIncident resource accepts the following [input]({{< relre
         <span class="property-type">Sequence[str]</span>
     </dt>
     <dd>{{% md %}}Only create incidents when the alert display name contain text from this list, leave empty to apply no filter.
-{{% /md %}}</dd>
-    <dt class="property-optional"
+{{% /md %}}</dd><dt class="property-optional"
             title="Optional">
         <span id="enabled_python">
 <a href="#enabled_python" style="color: inherit; text-decoration: inherit;">enabled</a>
@@ -756,8 +700,7 @@ The AlertRuleMsSecurityIncident resource accepts the following [input]({{< relre
         <span class="property-type">bool</span>
     </dt>
     <dd>{{% md %}}Should this Sentinel MS Security Incident Alert Rule be enabled? Defaults to `true`.
-{{% /md %}}</dd>
-    <dt class="property-optional"
+{{% /md %}}</dd><dt class="property-optional"
             title="Optional">
         <span id="name_python">
 <a href="#name_python" style="color: inherit; text-decoration: inherit;">name</a>
@@ -766,8 +709,7 @@ The AlertRuleMsSecurityIncident resource accepts the following [input]({{< relre
         <span class="property-type">str</span>
     </dt>
     <dd>{{% md %}}The name which should be used for this Sentinel MS Security Incident Alert Rule. Changing this forces a new Sentinel MS Security Incident Alert Rule to be created.
-{{% /md %}}</dd>
-    <dt class="property-optional property-deprecated"
+{{% /md %}}</dd><dt class="property-optional property-deprecated"
             title="Optional, Deprecated">
         <span id="text_whitelists_python">
 <a href="#text_whitelists_python" style="color: inherit; text-decoration: inherit;">text_<wbr>whitelists</a>
@@ -775,8 +717,7 @@ The AlertRuleMsSecurityIncident resource accepts the following [input]({{< relre
         <span class="property-indicator"></span>
         <span class="property-type">Sequence[str]</span>
     </dt>
-    <dd>{{% md %}}{{% /md %}}<p class="property-message">Deprecated: {{% md %}}this property has been renamed to display_name_filter to better match the SDK &amp; API{{% /md %}}</p></dd>
-</dl>
+    <dd>{{% md %}}{{% /md %}}<p class="property-message">Deprecated: {{% md %}}this property has been renamed to display_name_filter to better match the SDK &amp; API{{% /md %}}</p></dd></dl>
 {{% /choosable %}}
 
 
@@ -787,9 +728,7 @@ All [input](#inputs) properties are implicitly available as output properties. A
 
 
 {{% choosable language csharp %}}
-<dl class="resources-properties">
-
-    <dt class="property-"
+<dl class="resources-properties"><dt class="property-"
             title="">
         <span id="id_csharp">
 <a href="#id_csharp" style="color: inherit; text-decoration: inherit;">Id</a>
@@ -797,14 +736,11 @@ All [input](#inputs) properties are implicitly available as output properties. A
         <span class="property-indicator"></span>
         <span class="property-type">string</span>
     </dt>
-    <dd>{{% md %}}The provider-assigned unique ID for this managed resource.{{% /md %}}</dd>
-</dl>
+    <dd>{{% md %}}The provider-assigned unique ID for this managed resource.{{% /md %}}</dd></dl>
 {{% /choosable %}}
 
 {{% choosable language go %}}
-<dl class="resources-properties">
-
-    <dt class="property-"
+<dl class="resources-properties"><dt class="property-"
             title="">
         <span id="id_go">
 <a href="#id_go" style="color: inherit; text-decoration: inherit;">Id</a>
@@ -812,14 +748,11 @@ All [input](#inputs) properties are implicitly available as output properties. A
         <span class="property-indicator"></span>
         <span class="property-type">string</span>
     </dt>
-    <dd>{{% md %}}The provider-assigned unique ID for this managed resource.{{% /md %}}</dd>
-</dl>
+    <dd>{{% md %}}The provider-assigned unique ID for this managed resource.{{% /md %}}</dd></dl>
 {{% /choosable %}}
 
 {{% choosable language nodejs %}}
-<dl class="resources-properties">
-
-    <dt class="property-"
+<dl class="resources-properties"><dt class="property-"
             title="">
         <span id="id_nodejs">
 <a href="#id_nodejs" style="color: inherit; text-decoration: inherit;">id</a>
@@ -827,14 +760,11 @@ All [input](#inputs) properties are implicitly available as output properties. A
         <span class="property-indicator"></span>
         <span class="property-type">string</span>
     </dt>
-    <dd>{{% md %}}The provider-assigned unique ID for this managed resource.{{% /md %}}</dd>
-</dl>
+    <dd>{{% md %}}The provider-assigned unique ID for this managed resource.{{% /md %}}</dd></dl>
 {{% /choosable %}}
 
 {{% choosable language python %}}
-<dl class="resources-properties">
-
-    <dt class="property-"
+<dl class="resources-properties"><dt class="property-"
             title="">
         <span id="id_python">
 <a href="#id_python" style="color: inherit; text-decoration: inherit;">id</a>
@@ -842,8 +772,7 @@ All [input](#inputs) properties are implicitly available as output properties. A
         <span class="property-indicator"></span>
         <span class="property-type">str</span>
     </dt>
-    <dd>{{% md %}}The provider-assigned unique ID for this managed resource.{{% /md %}}</dd>
-</dl>
+    <dd>{{% md %}}The provider-assigned unique ID for this managed resource.{{% /md %}}</dd></dl>
 {{% /choosable %}}
 
 
@@ -970,9 +899,7 @@ The following state arguments are supported:
 
 
 {{% choosable language csharp %}}
-<dl class="resources-properties">
-
-    <dt class="property-optional"
+<dl class="resources-properties"><dt class="property-optional"
             title="Optional">
         <span id="state_alertruletemplateguid_csharp">
 <a href="#state_alertruletemplateguid_csharp" style="color: inherit; text-decoration: inherit;">Alert<wbr>Rule<wbr>Template<wbr>Guid</a>
@@ -981,8 +908,7 @@ The following state arguments are supported:
         <span class="property-type">string</span>
     </dt>
     <dd>{{% md %}}The GUID of the alert rule template which is used to create this Sentinel Scheduled Alert Rule. Changing this forces a new Sentinel MS Security Incident Alert Rule to be created.
-{{% /md %}}</dd>
-    <dt class="property-optional"
+{{% /md %}}</dd><dt class="property-optional"
             title="Optional">
         <span id="state_description_csharp">
 <a href="#state_description_csharp" style="color: inherit; text-decoration: inherit;">Description</a>
@@ -991,8 +917,7 @@ The following state arguments are supported:
         <span class="property-type">string</span>
     </dt>
     <dd>{{% md %}}The description of this Sentinel MS Security Incident Alert Rule.
-{{% /md %}}</dd>
-    <dt class="property-optional"
+{{% /md %}}</dd><dt class="property-optional"
             title="Optional">
         <span id="state_displayname_csharp">
 <a href="#state_displayname_csharp" style="color: inherit; text-decoration: inherit;">Display<wbr>Name</a>
@@ -1001,8 +926,7 @@ The following state arguments are supported:
         <span class="property-type">string</span>
     </dt>
     <dd>{{% md %}}The friendly name of this Sentinel MS Security Incident Alert Rule.
-{{% /md %}}</dd>
-    <dt class="property-optional"
+{{% /md %}}</dd><dt class="property-optional"
             title="Optional">
         <span id="state_displaynameexcludefilters_csharp">
 <a href="#state_displaynameexcludefilters_csharp" style="color: inherit; text-decoration: inherit;">Display<wbr>Name<wbr>Exclude<wbr>Filters</a>
@@ -1011,8 +935,7 @@ The following state arguments are supported:
         <span class="property-type">List&lt;string&gt;</span>
     </dt>
     <dd>{{% md %}}Only create incidents when the alert display name doesn't contain text from this list.
-{{% /md %}}</dd>
-    <dt class="property-optional"
+{{% /md %}}</dd><dt class="property-optional"
             title="Optional">
         <span id="state_displaynamefilters_csharp">
 <a href="#state_displaynamefilters_csharp" style="color: inherit; text-decoration: inherit;">Display<wbr>Name<wbr>Filters</a>
@@ -1021,8 +944,7 @@ The following state arguments are supported:
         <span class="property-type">List&lt;string&gt;</span>
     </dt>
     <dd>{{% md %}}Only create incidents when the alert display name contain text from this list, leave empty to apply no filter.
-{{% /md %}}</dd>
-    <dt class="property-optional"
+{{% /md %}}</dd><dt class="property-optional"
             title="Optional">
         <span id="state_enabled_csharp">
 <a href="#state_enabled_csharp" style="color: inherit; text-decoration: inherit;">Enabled</a>
@@ -1031,8 +953,7 @@ The following state arguments are supported:
         <span class="property-type">bool</span>
     </dt>
     <dd>{{% md %}}Should this Sentinel MS Security Incident Alert Rule be enabled? Defaults to `true`.
-{{% /md %}}</dd>
-    <dt class="property-optional"
+{{% /md %}}</dd><dt class="property-optional"
             title="Optional">
         <span id="state_loganalyticsworkspaceid_csharp">
 <a href="#state_loganalyticsworkspaceid_csharp" style="color: inherit; text-decoration: inherit;">Log<wbr>Analytics<wbr>Workspace<wbr>Id</a>
@@ -1041,8 +962,7 @@ The following state arguments are supported:
         <span class="property-type">string</span>
     </dt>
     <dd>{{% md %}}The ID of the Log Analytics Workspace this Sentinel MS Security Incident Alert Rule belongs to. Changing this forces a new Sentinel MS Security Incident Alert Rule to be created.
-{{% /md %}}</dd>
-    <dt class="property-optional"
+{{% /md %}}</dd><dt class="property-optional"
             title="Optional">
         <span id="state_name_csharp">
 <a href="#state_name_csharp" style="color: inherit; text-decoration: inherit;">Name</a>
@@ -1051,8 +971,7 @@ The following state arguments are supported:
         <span class="property-type">string</span>
     </dt>
     <dd>{{% md %}}The name which should be used for this Sentinel MS Security Incident Alert Rule. Changing this forces a new Sentinel MS Security Incident Alert Rule to be created.
-{{% /md %}}</dd>
-    <dt class="property-optional"
+{{% /md %}}</dd><dt class="property-optional"
             title="Optional">
         <span id="state_productfilter_csharp">
 <a href="#state_productfilter_csharp" style="color: inherit; text-decoration: inherit;">Product<wbr>Filter</a>
@@ -1061,8 +980,7 @@ The following state arguments are supported:
         <span class="property-type">string</span>
     </dt>
     <dd>{{% md %}}The Microsoft Security Service from where the alert will be generated. Possible values are `Azure Active Directory Identity Protection`, `Azure Advanced Threat Protection`, `Azure Security Center`, `Azure Security Center for IoT`, `Microsoft Cloud App Security`, `Microsoft Defender Advanced Threat Protection` and `Office 365 Advanced Threat Protection`.
-{{% /md %}}</dd>
-    <dt class="property-optional"
+{{% /md %}}</dd><dt class="property-optional"
             title="Optional">
         <span id="state_severityfilters_csharp">
 <a href="#state_severityfilters_csharp" style="color: inherit; text-decoration: inherit;">Severity<wbr>Filters</a>
@@ -1071,8 +989,7 @@ The following state arguments are supported:
         <span class="property-type">List&lt;string&gt;</span>
     </dt>
     <dd>{{% md %}}Only create incidents from alerts when alert severity level is contained in this list. Possible values are `High`, `Medium`, `Low` and `Informational`.
-{{% /md %}}</dd>
-    <dt class="property-optional property-deprecated"
+{{% /md %}}</dd><dt class="property-optional property-deprecated"
             title="Optional, Deprecated">
         <span id="state_textwhitelists_csharp">
 <a href="#state_textwhitelists_csharp" style="color: inherit; text-decoration: inherit;">Text<wbr>Whitelists</a>
@@ -1080,14 +997,11 @@ The following state arguments are supported:
         <span class="property-indicator"></span>
         <span class="property-type">List&lt;string&gt;</span>
     </dt>
-    <dd>{{% md %}}{{% /md %}}<p class="property-message">Deprecated: {{% md %}}this property has been renamed to display_name_filter to better match the SDK &amp; API{{% /md %}}</p></dd>
-</dl>
+    <dd>{{% md %}}{{% /md %}}<p class="property-message">Deprecated: {{% md %}}this property has been renamed to display_name_filter to better match the SDK &amp; API{{% /md %}}</p></dd></dl>
 {{% /choosable %}}
 
 {{% choosable language go %}}
-<dl class="resources-properties">
-
-    <dt class="property-optional"
+<dl class="resources-properties"><dt class="property-optional"
             title="Optional">
         <span id="state_alertruletemplateguid_go">
 <a href="#state_alertruletemplateguid_go" style="color: inherit; text-decoration: inherit;">Alert<wbr>Rule<wbr>Template<wbr>Guid</a>
@@ -1096,8 +1010,7 @@ The following state arguments are supported:
         <span class="property-type">string</span>
     </dt>
     <dd>{{% md %}}The GUID of the alert rule template which is used to create this Sentinel Scheduled Alert Rule. Changing this forces a new Sentinel MS Security Incident Alert Rule to be created.
-{{% /md %}}</dd>
-    <dt class="property-optional"
+{{% /md %}}</dd><dt class="property-optional"
             title="Optional">
         <span id="state_description_go">
 <a href="#state_description_go" style="color: inherit; text-decoration: inherit;">Description</a>
@@ -1106,8 +1019,7 @@ The following state arguments are supported:
         <span class="property-type">string</span>
     </dt>
     <dd>{{% md %}}The description of this Sentinel MS Security Incident Alert Rule.
-{{% /md %}}</dd>
-    <dt class="property-optional"
+{{% /md %}}</dd><dt class="property-optional"
             title="Optional">
         <span id="state_displayname_go">
 <a href="#state_displayname_go" style="color: inherit; text-decoration: inherit;">Display<wbr>Name</a>
@@ -1116,8 +1028,7 @@ The following state arguments are supported:
         <span class="property-type">string</span>
     </dt>
     <dd>{{% md %}}The friendly name of this Sentinel MS Security Incident Alert Rule.
-{{% /md %}}</dd>
-    <dt class="property-optional"
+{{% /md %}}</dd><dt class="property-optional"
             title="Optional">
         <span id="state_displaynameexcludefilters_go">
 <a href="#state_displaynameexcludefilters_go" style="color: inherit; text-decoration: inherit;">Display<wbr>Name<wbr>Exclude<wbr>Filters</a>
@@ -1126,8 +1037,7 @@ The following state arguments are supported:
         <span class="property-type">[]string</span>
     </dt>
     <dd>{{% md %}}Only create incidents when the alert display name doesn't contain text from this list.
-{{% /md %}}</dd>
-    <dt class="property-optional"
+{{% /md %}}</dd><dt class="property-optional"
             title="Optional">
         <span id="state_displaynamefilters_go">
 <a href="#state_displaynamefilters_go" style="color: inherit; text-decoration: inherit;">Display<wbr>Name<wbr>Filters</a>
@@ -1136,8 +1046,7 @@ The following state arguments are supported:
         <span class="property-type">[]string</span>
     </dt>
     <dd>{{% md %}}Only create incidents when the alert display name contain text from this list, leave empty to apply no filter.
-{{% /md %}}</dd>
-    <dt class="property-optional"
+{{% /md %}}</dd><dt class="property-optional"
             title="Optional">
         <span id="state_enabled_go">
 <a href="#state_enabled_go" style="color: inherit; text-decoration: inherit;">Enabled</a>
@@ -1146,8 +1055,7 @@ The following state arguments are supported:
         <span class="property-type">bool</span>
     </dt>
     <dd>{{% md %}}Should this Sentinel MS Security Incident Alert Rule be enabled? Defaults to `true`.
-{{% /md %}}</dd>
-    <dt class="property-optional"
+{{% /md %}}</dd><dt class="property-optional"
             title="Optional">
         <span id="state_loganalyticsworkspaceid_go">
 <a href="#state_loganalyticsworkspaceid_go" style="color: inherit; text-decoration: inherit;">Log<wbr>Analytics<wbr>Workspace<wbr>Id</a>
@@ -1156,8 +1064,7 @@ The following state arguments are supported:
         <span class="property-type">string</span>
     </dt>
     <dd>{{% md %}}The ID of the Log Analytics Workspace this Sentinel MS Security Incident Alert Rule belongs to. Changing this forces a new Sentinel MS Security Incident Alert Rule to be created.
-{{% /md %}}</dd>
-    <dt class="property-optional"
+{{% /md %}}</dd><dt class="property-optional"
             title="Optional">
         <span id="state_name_go">
 <a href="#state_name_go" style="color: inherit; text-decoration: inherit;">Name</a>
@@ -1166,8 +1073,7 @@ The following state arguments are supported:
         <span class="property-type">string</span>
     </dt>
     <dd>{{% md %}}The name which should be used for this Sentinel MS Security Incident Alert Rule. Changing this forces a new Sentinel MS Security Incident Alert Rule to be created.
-{{% /md %}}</dd>
-    <dt class="property-optional"
+{{% /md %}}</dd><dt class="property-optional"
             title="Optional">
         <span id="state_productfilter_go">
 <a href="#state_productfilter_go" style="color: inherit; text-decoration: inherit;">Product<wbr>Filter</a>
@@ -1176,8 +1082,7 @@ The following state arguments are supported:
         <span class="property-type">string</span>
     </dt>
     <dd>{{% md %}}The Microsoft Security Service from where the alert will be generated. Possible values are `Azure Active Directory Identity Protection`, `Azure Advanced Threat Protection`, `Azure Security Center`, `Azure Security Center for IoT`, `Microsoft Cloud App Security`, `Microsoft Defender Advanced Threat Protection` and `Office 365 Advanced Threat Protection`.
-{{% /md %}}</dd>
-    <dt class="property-optional"
+{{% /md %}}</dd><dt class="property-optional"
             title="Optional">
         <span id="state_severityfilters_go">
 <a href="#state_severityfilters_go" style="color: inherit; text-decoration: inherit;">Severity<wbr>Filters</a>
@@ -1186,8 +1091,7 @@ The following state arguments are supported:
         <span class="property-type">[]string</span>
     </dt>
     <dd>{{% md %}}Only create incidents from alerts when alert severity level is contained in this list. Possible values are `High`, `Medium`, `Low` and `Informational`.
-{{% /md %}}</dd>
-    <dt class="property-optional property-deprecated"
+{{% /md %}}</dd><dt class="property-optional property-deprecated"
             title="Optional, Deprecated">
         <span id="state_textwhitelists_go">
 <a href="#state_textwhitelists_go" style="color: inherit; text-decoration: inherit;">Text<wbr>Whitelists</a>
@@ -1195,14 +1099,11 @@ The following state arguments are supported:
         <span class="property-indicator"></span>
         <span class="property-type">[]string</span>
     </dt>
-    <dd>{{% md %}}{{% /md %}}<p class="property-message">Deprecated: {{% md %}}this property has been renamed to display_name_filter to better match the SDK &amp; API{{% /md %}}</p></dd>
-</dl>
+    <dd>{{% md %}}{{% /md %}}<p class="property-message">Deprecated: {{% md %}}this property has been renamed to display_name_filter to better match the SDK &amp; API{{% /md %}}</p></dd></dl>
 {{% /choosable %}}
 
 {{% choosable language nodejs %}}
-<dl class="resources-properties">
-
-    <dt class="property-optional"
+<dl class="resources-properties"><dt class="property-optional"
             title="Optional">
         <span id="state_alertruletemplateguid_nodejs">
 <a href="#state_alertruletemplateguid_nodejs" style="color: inherit; text-decoration: inherit;">alert<wbr>Rule<wbr>Template<wbr>Guid</a>
@@ -1211,8 +1112,7 @@ The following state arguments are supported:
         <span class="property-type">string</span>
     </dt>
     <dd>{{% md %}}The GUID of the alert rule template which is used to create this Sentinel Scheduled Alert Rule. Changing this forces a new Sentinel MS Security Incident Alert Rule to be created.
-{{% /md %}}</dd>
-    <dt class="property-optional"
+{{% /md %}}</dd><dt class="property-optional"
             title="Optional">
         <span id="state_description_nodejs">
 <a href="#state_description_nodejs" style="color: inherit; text-decoration: inherit;">description</a>
@@ -1221,8 +1121,7 @@ The following state arguments are supported:
         <span class="property-type">string</span>
     </dt>
     <dd>{{% md %}}The description of this Sentinel MS Security Incident Alert Rule.
-{{% /md %}}</dd>
-    <dt class="property-optional"
+{{% /md %}}</dd><dt class="property-optional"
             title="Optional">
         <span id="state_displayname_nodejs">
 <a href="#state_displayname_nodejs" style="color: inherit; text-decoration: inherit;">display<wbr>Name</a>
@@ -1231,8 +1130,7 @@ The following state arguments are supported:
         <span class="property-type">string</span>
     </dt>
     <dd>{{% md %}}The friendly name of this Sentinel MS Security Incident Alert Rule.
-{{% /md %}}</dd>
-    <dt class="property-optional"
+{{% /md %}}</dd><dt class="property-optional"
             title="Optional">
         <span id="state_displaynameexcludefilters_nodejs">
 <a href="#state_displaynameexcludefilters_nodejs" style="color: inherit; text-decoration: inherit;">display<wbr>Name<wbr>Exclude<wbr>Filters</a>
@@ -1241,8 +1139,7 @@ The following state arguments are supported:
         <span class="property-type">string[]</span>
     </dt>
     <dd>{{% md %}}Only create incidents when the alert display name doesn't contain text from this list.
-{{% /md %}}</dd>
-    <dt class="property-optional"
+{{% /md %}}</dd><dt class="property-optional"
             title="Optional">
         <span id="state_displaynamefilters_nodejs">
 <a href="#state_displaynamefilters_nodejs" style="color: inherit; text-decoration: inherit;">display<wbr>Name<wbr>Filters</a>
@@ -1251,8 +1148,7 @@ The following state arguments are supported:
         <span class="property-type">string[]</span>
     </dt>
     <dd>{{% md %}}Only create incidents when the alert display name contain text from this list, leave empty to apply no filter.
-{{% /md %}}</dd>
-    <dt class="property-optional"
+{{% /md %}}</dd><dt class="property-optional"
             title="Optional">
         <span id="state_enabled_nodejs">
 <a href="#state_enabled_nodejs" style="color: inherit; text-decoration: inherit;">enabled</a>
@@ -1261,8 +1157,7 @@ The following state arguments are supported:
         <span class="property-type">boolean</span>
     </dt>
     <dd>{{% md %}}Should this Sentinel MS Security Incident Alert Rule be enabled? Defaults to `true`.
-{{% /md %}}</dd>
-    <dt class="property-optional"
+{{% /md %}}</dd><dt class="property-optional"
             title="Optional">
         <span id="state_loganalyticsworkspaceid_nodejs">
 <a href="#state_loganalyticsworkspaceid_nodejs" style="color: inherit; text-decoration: inherit;">log<wbr>Analytics<wbr>Workspace<wbr>Id</a>
@@ -1271,8 +1166,7 @@ The following state arguments are supported:
         <span class="property-type">string</span>
     </dt>
     <dd>{{% md %}}The ID of the Log Analytics Workspace this Sentinel MS Security Incident Alert Rule belongs to. Changing this forces a new Sentinel MS Security Incident Alert Rule to be created.
-{{% /md %}}</dd>
-    <dt class="property-optional"
+{{% /md %}}</dd><dt class="property-optional"
             title="Optional">
         <span id="state_name_nodejs">
 <a href="#state_name_nodejs" style="color: inherit; text-decoration: inherit;">name</a>
@@ -1281,8 +1175,7 @@ The following state arguments are supported:
         <span class="property-type">string</span>
     </dt>
     <dd>{{% md %}}The name which should be used for this Sentinel MS Security Incident Alert Rule. Changing this forces a new Sentinel MS Security Incident Alert Rule to be created.
-{{% /md %}}</dd>
-    <dt class="property-optional"
+{{% /md %}}</dd><dt class="property-optional"
             title="Optional">
         <span id="state_productfilter_nodejs">
 <a href="#state_productfilter_nodejs" style="color: inherit; text-decoration: inherit;">product<wbr>Filter</a>
@@ -1291,8 +1184,7 @@ The following state arguments are supported:
         <span class="property-type">string</span>
     </dt>
     <dd>{{% md %}}The Microsoft Security Service from where the alert will be generated. Possible values are `Azure Active Directory Identity Protection`, `Azure Advanced Threat Protection`, `Azure Security Center`, `Azure Security Center for IoT`, `Microsoft Cloud App Security`, `Microsoft Defender Advanced Threat Protection` and `Office 365 Advanced Threat Protection`.
-{{% /md %}}</dd>
-    <dt class="property-optional"
+{{% /md %}}</dd><dt class="property-optional"
             title="Optional">
         <span id="state_severityfilters_nodejs">
 <a href="#state_severityfilters_nodejs" style="color: inherit; text-decoration: inherit;">severity<wbr>Filters</a>
@@ -1301,8 +1193,7 @@ The following state arguments are supported:
         <span class="property-type">string[]</span>
     </dt>
     <dd>{{% md %}}Only create incidents from alerts when alert severity level is contained in this list. Possible values are `High`, `Medium`, `Low` and `Informational`.
-{{% /md %}}</dd>
-    <dt class="property-optional property-deprecated"
+{{% /md %}}</dd><dt class="property-optional property-deprecated"
             title="Optional, Deprecated">
         <span id="state_textwhitelists_nodejs">
 <a href="#state_textwhitelists_nodejs" style="color: inherit; text-decoration: inherit;">text<wbr>Whitelists</a>
@@ -1310,14 +1201,11 @@ The following state arguments are supported:
         <span class="property-indicator"></span>
         <span class="property-type">string[]</span>
     </dt>
-    <dd>{{% md %}}{{% /md %}}<p class="property-message">Deprecated: {{% md %}}this property has been renamed to display_name_filter to better match the SDK &amp; API{{% /md %}}</p></dd>
-</dl>
+    <dd>{{% md %}}{{% /md %}}<p class="property-message">Deprecated: {{% md %}}this property has been renamed to display_name_filter to better match the SDK &amp; API{{% /md %}}</p></dd></dl>
 {{% /choosable %}}
 
 {{% choosable language python %}}
-<dl class="resources-properties">
-
-    <dt class="property-optional"
+<dl class="resources-properties"><dt class="property-optional"
             title="Optional">
         <span id="state_alert_rule_template_guid_python">
 <a href="#state_alert_rule_template_guid_python" style="color: inherit; text-decoration: inherit;">alert_<wbr>rule_<wbr>template_<wbr>guid</a>
@@ -1326,8 +1214,7 @@ The following state arguments are supported:
         <span class="property-type">str</span>
     </dt>
     <dd>{{% md %}}The GUID of the alert rule template which is used to create this Sentinel Scheduled Alert Rule. Changing this forces a new Sentinel MS Security Incident Alert Rule to be created.
-{{% /md %}}</dd>
-    <dt class="property-optional"
+{{% /md %}}</dd><dt class="property-optional"
             title="Optional">
         <span id="state_description_python">
 <a href="#state_description_python" style="color: inherit; text-decoration: inherit;">description</a>
@@ -1336,8 +1223,7 @@ The following state arguments are supported:
         <span class="property-type">str</span>
     </dt>
     <dd>{{% md %}}The description of this Sentinel MS Security Incident Alert Rule.
-{{% /md %}}</dd>
-    <dt class="property-optional"
+{{% /md %}}</dd><dt class="property-optional"
             title="Optional">
         <span id="state_display_name_python">
 <a href="#state_display_name_python" style="color: inherit; text-decoration: inherit;">display_<wbr>name</a>
@@ -1346,8 +1232,7 @@ The following state arguments are supported:
         <span class="property-type">str</span>
     </dt>
     <dd>{{% md %}}The friendly name of this Sentinel MS Security Incident Alert Rule.
-{{% /md %}}</dd>
-    <dt class="property-optional"
+{{% /md %}}</dd><dt class="property-optional"
             title="Optional">
         <span id="state_display_name_exclude_filters_python">
 <a href="#state_display_name_exclude_filters_python" style="color: inherit; text-decoration: inherit;">display_<wbr>name_<wbr>exclude_<wbr>filters</a>
@@ -1356,8 +1241,7 @@ The following state arguments are supported:
         <span class="property-type">Sequence[str]</span>
     </dt>
     <dd>{{% md %}}Only create incidents when the alert display name doesn't contain text from this list.
-{{% /md %}}</dd>
-    <dt class="property-optional"
+{{% /md %}}</dd><dt class="property-optional"
             title="Optional">
         <span id="state_display_name_filters_python">
 <a href="#state_display_name_filters_python" style="color: inherit; text-decoration: inherit;">display_<wbr>name_<wbr>filters</a>
@@ -1366,8 +1250,7 @@ The following state arguments are supported:
         <span class="property-type">Sequence[str]</span>
     </dt>
     <dd>{{% md %}}Only create incidents when the alert display name contain text from this list, leave empty to apply no filter.
-{{% /md %}}</dd>
-    <dt class="property-optional"
+{{% /md %}}</dd><dt class="property-optional"
             title="Optional">
         <span id="state_enabled_python">
 <a href="#state_enabled_python" style="color: inherit; text-decoration: inherit;">enabled</a>
@@ -1376,8 +1259,7 @@ The following state arguments are supported:
         <span class="property-type">bool</span>
     </dt>
     <dd>{{% md %}}Should this Sentinel MS Security Incident Alert Rule be enabled? Defaults to `true`.
-{{% /md %}}</dd>
-    <dt class="property-optional"
+{{% /md %}}</dd><dt class="property-optional"
             title="Optional">
         <span id="state_log_analytics_workspace_id_python">
 <a href="#state_log_analytics_workspace_id_python" style="color: inherit; text-decoration: inherit;">log_<wbr>analytics_<wbr>workspace_<wbr>id</a>
@@ -1386,8 +1268,7 @@ The following state arguments are supported:
         <span class="property-type">str</span>
     </dt>
     <dd>{{% md %}}The ID of the Log Analytics Workspace this Sentinel MS Security Incident Alert Rule belongs to. Changing this forces a new Sentinel MS Security Incident Alert Rule to be created.
-{{% /md %}}</dd>
-    <dt class="property-optional"
+{{% /md %}}</dd><dt class="property-optional"
             title="Optional">
         <span id="state_name_python">
 <a href="#state_name_python" style="color: inherit; text-decoration: inherit;">name</a>
@@ -1396,8 +1277,7 @@ The following state arguments are supported:
         <span class="property-type">str</span>
     </dt>
     <dd>{{% md %}}The name which should be used for this Sentinel MS Security Incident Alert Rule. Changing this forces a new Sentinel MS Security Incident Alert Rule to be created.
-{{% /md %}}</dd>
-    <dt class="property-optional"
+{{% /md %}}</dd><dt class="property-optional"
             title="Optional">
         <span id="state_product_filter_python">
 <a href="#state_product_filter_python" style="color: inherit; text-decoration: inherit;">product_<wbr>filter</a>
@@ -1406,8 +1286,7 @@ The following state arguments are supported:
         <span class="property-type">str</span>
     </dt>
     <dd>{{% md %}}The Microsoft Security Service from where the alert will be generated. Possible values are `Azure Active Directory Identity Protection`, `Azure Advanced Threat Protection`, `Azure Security Center`, `Azure Security Center for IoT`, `Microsoft Cloud App Security`, `Microsoft Defender Advanced Threat Protection` and `Office 365 Advanced Threat Protection`.
-{{% /md %}}</dd>
-    <dt class="property-optional"
+{{% /md %}}</dd><dt class="property-optional"
             title="Optional">
         <span id="state_severity_filters_python">
 <a href="#state_severity_filters_python" style="color: inherit; text-decoration: inherit;">severity_<wbr>filters</a>
@@ -1416,8 +1295,7 @@ The following state arguments are supported:
         <span class="property-type">Sequence[str]</span>
     </dt>
     <dd>{{% md %}}Only create incidents from alerts when alert severity level is contained in this list. Possible values are `High`, `Medium`, `Low` and `Informational`.
-{{% /md %}}</dd>
-    <dt class="property-optional property-deprecated"
+{{% /md %}}</dd><dt class="property-optional property-deprecated"
             title="Optional, Deprecated">
         <span id="state_text_whitelists_python">
 <a href="#state_text_whitelists_python" style="color: inherit; text-decoration: inherit;">text_<wbr>whitelists</a>
@@ -1425,8 +1303,7 @@ The following state arguments are supported:
         <span class="property-indicator"></span>
         <span class="property-type">Sequence[str]</span>
     </dt>
-    <dd>{{% md %}}{{% /md %}}<p class="property-message">Deprecated: {{% md %}}this property has been renamed to display_name_filter to better match the SDK &amp; API{{% /md %}}</p></dd>
-</dl>
+    <dd>{{% md %}}{{% /md %}}<p class="property-message">Deprecated: {{% md %}}this property has been renamed to display_name_filter to better match the SDK &amp; API{{% /md %}}</p></dd></dl>
 {{% /choosable %}}
 
 
@@ -1452,6 +1329,6 @@ Sentinel MS Security Incident Alert Rules can be imported using the `resource id
 	<dt>License</dt>
 	<dd>Apache-2.0</dd>
 	<dt>Notes</dt>
-	<dd>This Pulumi package is based on the [`azurerm` Terraform Provider](https://github.com/terraform-providers/terraform-provider-azurerm).</dd>
+	<dd>{{% md %}}This Pulumi package is based on the [`azurerm` Terraform Provider](https://github.com/terraform-providers/terraform-provider-azurerm).{{% /md %}}</dd>
 </dl>
 

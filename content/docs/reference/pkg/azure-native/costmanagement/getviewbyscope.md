@@ -51,9 +51,7 @@ The following arguments are supported:
 
 
 {{% choosable language csharp %}}
-<dl class="resources-properties">
-
-    <dt class="property-required"
+<dl class="resources-properties"><dt class="property-required"
             title="Required">
         <span id="scope_csharp">
 <a href="#scope_csharp" style="color: inherit; text-decoration: inherit;">Scope</a>
@@ -61,8 +59,7 @@ The following arguments are supported:
         <span class="property-indicator"></span>
         <span class="property-type">string</span>
     </dt>
-    <dd>{{% md %}}The scope associated with view operations. This includes 'subscriptions/{subscriptionId}' for subscription scope, 'subscriptions/{subscriptionId}/resourceGroups/{resourceGroupName}' for resourceGroup scope, 'providers/Microsoft.Billing/billingAccounts/{billingAccountId}' for Billing Account scope, 'providers/Microsoft.Billing/billingAccounts/{billingAccountId}/departments/{departmentId}' for Department scope, 'providers/Microsoft.Billing/billingAccounts/{billingAccountId}/enrollmentAccounts/{enrollmentAccountId}' for EnrollmentAccount scope, 'providers/Microsoft.Billing/billingAccounts/{billingAccountId}/billingProfiles/{billingProfileId}' for BillingProfile scope, 'providers/Microsoft.Billing/billingAccounts/{billingAccountId}/invoiceSections/{invoiceSectionId}' for InvoiceSection scope, 'providers/Microsoft.Management/managementGroups/{managementGroupId}' for Management Group scope, 'providers/Microsoft.CostManagement/externalBillingAccounts/{externalBillingAccountName}' for External Billing Account scope and 'providers/Microsoft.CostManagement/externalSubscriptions/{externalSubscriptionName}' for External Subscription scope.{{% /md %}}</dd>
-    <dt class="property-required"
+    <dd>{{% md %}}The scope associated with view operations. This includes 'subscriptions/{subscriptionId}' for subscription scope, 'subscriptions/{subscriptionId}/resourceGroups/{resourceGroupName}' for resourceGroup scope, 'providers/Microsoft.Billing/billingAccounts/{billingAccountId}' for Billing Account scope, 'providers/Microsoft.Billing/billingAccounts/{billingAccountId}/departments/{departmentId}' for Department scope, 'providers/Microsoft.Billing/billingAccounts/{billingAccountId}/enrollmentAccounts/{enrollmentAccountId}' for EnrollmentAccount scope, 'providers/Microsoft.Billing/billingAccounts/{billingAccountId}/billingProfiles/{billingProfileId}' for BillingProfile scope, 'providers/Microsoft.Billing/billingAccounts/{billingAccountId}/invoiceSections/{invoiceSectionId}' for InvoiceSection scope, 'providers/Microsoft.Management/managementGroups/{managementGroupId}' for Management Group scope, 'providers/Microsoft.CostManagement/externalBillingAccounts/{externalBillingAccountName}' for External Billing Account scope and 'providers/Microsoft.CostManagement/externalSubscriptions/{externalSubscriptionName}' for External Subscription scope.{{% /md %}}</dd><dt class="property-required"
             title="Required">
         <span id="viewname_csharp">
 <a href="#viewname_csharp" style="color: inherit; text-decoration: inherit;">View<wbr>Name</a>
@@ -70,14 +67,11 @@ The following arguments are supported:
         <span class="property-indicator"></span>
         <span class="property-type">string</span>
     </dt>
-    <dd>{{% md %}}View name{{% /md %}}</dd>
-</dl>
+    <dd>{{% md %}}View name{{% /md %}}</dd></dl>
 {{% /choosable %}}
 
 {{% choosable language go %}}
-<dl class="resources-properties">
-
-    <dt class="property-required"
+<dl class="resources-properties"><dt class="property-required"
             title="Required">
         <span id="scope_go">
 <a href="#scope_go" style="color: inherit; text-decoration: inherit;">Scope</a>
@@ -85,8 +79,7 @@ The following arguments are supported:
         <span class="property-indicator"></span>
         <span class="property-type">string</span>
     </dt>
-    <dd>{{% md %}}The scope associated with view operations. This includes 'subscriptions/{subscriptionId}' for subscription scope, 'subscriptions/{subscriptionId}/resourceGroups/{resourceGroupName}' for resourceGroup scope, 'providers/Microsoft.Billing/billingAccounts/{billingAccountId}' for Billing Account scope, 'providers/Microsoft.Billing/billingAccounts/{billingAccountId}/departments/{departmentId}' for Department scope, 'providers/Microsoft.Billing/billingAccounts/{billingAccountId}/enrollmentAccounts/{enrollmentAccountId}' for EnrollmentAccount scope, 'providers/Microsoft.Billing/billingAccounts/{billingAccountId}/billingProfiles/{billingProfileId}' for BillingProfile scope, 'providers/Microsoft.Billing/billingAccounts/{billingAccountId}/invoiceSections/{invoiceSectionId}' for InvoiceSection scope, 'providers/Microsoft.Management/managementGroups/{managementGroupId}' for Management Group scope, 'providers/Microsoft.CostManagement/externalBillingAccounts/{externalBillingAccountName}' for External Billing Account scope and 'providers/Microsoft.CostManagement/externalSubscriptions/{externalSubscriptionName}' for External Subscription scope.{{% /md %}}</dd>
-    <dt class="property-required"
+    <dd>{{% md %}}The scope associated with view operations. This includes 'subscriptions/{subscriptionId}' for subscription scope, 'subscriptions/{subscriptionId}/resourceGroups/{resourceGroupName}' for resourceGroup scope, 'providers/Microsoft.Billing/billingAccounts/{billingAccountId}' for Billing Account scope, 'providers/Microsoft.Billing/billingAccounts/{billingAccountId}/departments/{departmentId}' for Department scope, 'providers/Microsoft.Billing/billingAccounts/{billingAccountId}/enrollmentAccounts/{enrollmentAccountId}' for EnrollmentAccount scope, 'providers/Microsoft.Billing/billingAccounts/{billingAccountId}/billingProfiles/{billingProfileId}' for BillingProfile scope, 'providers/Microsoft.Billing/billingAccounts/{billingAccountId}/invoiceSections/{invoiceSectionId}' for InvoiceSection scope, 'providers/Microsoft.Management/managementGroups/{managementGroupId}' for Management Group scope, 'providers/Microsoft.CostManagement/externalBillingAccounts/{externalBillingAccountName}' for External Billing Account scope and 'providers/Microsoft.CostManagement/externalSubscriptions/{externalSubscriptionName}' for External Subscription scope.{{% /md %}}</dd><dt class="property-required"
             title="Required">
         <span id="viewname_go">
 <a href="#viewname_go" style="color: inherit; text-decoration: inherit;">View<wbr>Name</a>
@@ -94,14 +87,11 @@ The following arguments are supported:
         <span class="property-indicator"></span>
         <span class="property-type">string</span>
     </dt>
-    <dd>{{% md %}}View name{{% /md %}}</dd>
-</dl>
+    <dd>{{% md %}}View name{{% /md %}}</dd></dl>
 {{% /choosable %}}
 
 {{% choosable language nodejs %}}
-<dl class="resources-properties">
-
-    <dt class="property-required"
+<dl class="resources-properties"><dt class="property-required"
             title="Required">
         <span id="scope_nodejs">
 <a href="#scope_nodejs" style="color: inherit; text-decoration: inherit;">scope</a>
@@ -109,8 +99,7 @@ The following arguments are supported:
         <span class="property-indicator"></span>
         <span class="property-type">string</span>
     </dt>
-    <dd>{{% md %}}The scope associated with view operations. This includes 'subscriptions/{subscriptionId}' for subscription scope, 'subscriptions/{subscriptionId}/resourceGroups/{resourceGroupName}' for resourceGroup scope, 'providers/Microsoft.Billing/billingAccounts/{billingAccountId}' for Billing Account scope, 'providers/Microsoft.Billing/billingAccounts/{billingAccountId}/departments/{departmentId}' for Department scope, 'providers/Microsoft.Billing/billingAccounts/{billingAccountId}/enrollmentAccounts/{enrollmentAccountId}' for EnrollmentAccount scope, 'providers/Microsoft.Billing/billingAccounts/{billingAccountId}/billingProfiles/{billingProfileId}' for BillingProfile scope, 'providers/Microsoft.Billing/billingAccounts/{billingAccountId}/invoiceSections/{invoiceSectionId}' for InvoiceSection scope, 'providers/Microsoft.Management/managementGroups/{managementGroupId}' for Management Group scope, 'providers/Microsoft.CostManagement/externalBillingAccounts/{externalBillingAccountName}' for External Billing Account scope and 'providers/Microsoft.CostManagement/externalSubscriptions/{externalSubscriptionName}' for External Subscription scope.{{% /md %}}</dd>
-    <dt class="property-required"
+    <dd>{{% md %}}The scope associated with view operations. This includes 'subscriptions/{subscriptionId}' for subscription scope, 'subscriptions/{subscriptionId}/resourceGroups/{resourceGroupName}' for resourceGroup scope, 'providers/Microsoft.Billing/billingAccounts/{billingAccountId}' for Billing Account scope, 'providers/Microsoft.Billing/billingAccounts/{billingAccountId}/departments/{departmentId}' for Department scope, 'providers/Microsoft.Billing/billingAccounts/{billingAccountId}/enrollmentAccounts/{enrollmentAccountId}' for EnrollmentAccount scope, 'providers/Microsoft.Billing/billingAccounts/{billingAccountId}/billingProfiles/{billingProfileId}' for BillingProfile scope, 'providers/Microsoft.Billing/billingAccounts/{billingAccountId}/invoiceSections/{invoiceSectionId}' for InvoiceSection scope, 'providers/Microsoft.Management/managementGroups/{managementGroupId}' for Management Group scope, 'providers/Microsoft.CostManagement/externalBillingAccounts/{externalBillingAccountName}' for External Billing Account scope and 'providers/Microsoft.CostManagement/externalSubscriptions/{externalSubscriptionName}' for External Subscription scope.{{% /md %}}</dd><dt class="property-required"
             title="Required">
         <span id="viewname_nodejs">
 <a href="#viewname_nodejs" style="color: inherit; text-decoration: inherit;">view<wbr>Name</a>
@@ -118,14 +107,11 @@ The following arguments are supported:
         <span class="property-indicator"></span>
         <span class="property-type">string</span>
     </dt>
-    <dd>{{% md %}}View name{{% /md %}}</dd>
-</dl>
+    <dd>{{% md %}}View name{{% /md %}}</dd></dl>
 {{% /choosable %}}
 
 {{% choosable language python %}}
-<dl class="resources-properties">
-
-    <dt class="property-required"
+<dl class="resources-properties"><dt class="property-required"
             title="Required">
         <span id="scope_python">
 <a href="#scope_python" style="color: inherit; text-decoration: inherit;">scope</a>
@@ -133,8 +119,7 @@ The following arguments are supported:
         <span class="property-indicator"></span>
         <span class="property-type">str</span>
     </dt>
-    <dd>{{% md %}}The scope associated with view operations. This includes 'subscriptions/{subscriptionId}' for subscription scope, 'subscriptions/{subscriptionId}/resourceGroups/{resourceGroupName}' for resourceGroup scope, 'providers/Microsoft.Billing/billingAccounts/{billingAccountId}' for Billing Account scope, 'providers/Microsoft.Billing/billingAccounts/{billingAccountId}/departments/{departmentId}' for Department scope, 'providers/Microsoft.Billing/billingAccounts/{billingAccountId}/enrollmentAccounts/{enrollmentAccountId}' for EnrollmentAccount scope, 'providers/Microsoft.Billing/billingAccounts/{billingAccountId}/billingProfiles/{billingProfileId}' for BillingProfile scope, 'providers/Microsoft.Billing/billingAccounts/{billingAccountId}/invoiceSections/{invoiceSectionId}' for InvoiceSection scope, 'providers/Microsoft.Management/managementGroups/{managementGroupId}' for Management Group scope, 'providers/Microsoft.CostManagement/externalBillingAccounts/{externalBillingAccountName}' for External Billing Account scope and 'providers/Microsoft.CostManagement/externalSubscriptions/{externalSubscriptionName}' for External Subscription scope.{{% /md %}}</dd>
-    <dt class="property-required"
+    <dd>{{% md %}}The scope associated with view operations. This includes 'subscriptions/{subscriptionId}' for subscription scope, 'subscriptions/{subscriptionId}/resourceGroups/{resourceGroupName}' for resourceGroup scope, 'providers/Microsoft.Billing/billingAccounts/{billingAccountId}' for Billing Account scope, 'providers/Microsoft.Billing/billingAccounts/{billingAccountId}/departments/{departmentId}' for Department scope, 'providers/Microsoft.Billing/billingAccounts/{billingAccountId}/enrollmentAccounts/{enrollmentAccountId}' for EnrollmentAccount scope, 'providers/Microsoft.Billing/billingAccounts/{billingAccountId}/billingProfiles/{billingProfileId}' for BillingProfile scope, 'providers/Microsoft.Billing/billingAccounts/{billingAccountId}/invoiceSections/{invoiceSectionId}' for InvoiceSection scope, 'providers/Microsoft.Management/managementGroups/{managementGroupId}' for Management Group scope, 'providers/Microsoft.CostManagement/externalBillingAccounts/{externalBillingAccountName}' for External Billing Account scope and 'providers/Microsoft.CostManagement/externalSubscriptions/{externalSubscriptionName}' for External Subscription scope.{{% /md %}}</dd><dt class="property-required"
             title="Required">
         <span id="view_name_python">
 <a href="#view_name_python" style="color: inherit; text-decoration: inherit;">view_<wbr>name</a>
@@ -142,8 +127,7 @@ The following arguments are supported:
         <span class="property-indicator"></span>
         <span class="property-type">str</span>
     </dt>
-    <dd>{{% md %}}View name{{% /md %}}</dd>
-</dl>
+    <dd>{{% md %}}View name{{% /md %}}</dd></dl>
 {{% /choosable %}}
 
 
@@ -156,9 +140,7 @@ The following output properties are available:
 
 
 {{% choosable language csharp %}}
-<dl class="resources-properties">
-
-    <dt class="property-"
+<dl class="resources-properties"><dt class="property-"
             title="">
         <span id="createdon_csharp">
 <a href="#createdon_csharp" style="color: inherit; text-decoration: inherit;">Created<wbr>On</a>
@@ -166,8 +148,7 @@ The following output properties are available:
         <span class="property-indicator"></span>
         <span class="property-type">string</span>
     </dt>
-    <dd>{{% md %}}Date the user created this view.{{% /md %}}</dd>
-    <dt class="property-"
+    <dd>{{% md %}}Date the user created this view.{{% /md %}}</dd><dt class="property-"
             title="">
         <span id="currency_csharp">
 <a href="#currency_csharp" style="color: inherit; text-decoration: inherit;">Currency</a>
@@ -175,8 +156,7 @@ The following output properties are available:
         <span class="property-indicator"></span>
         <span class="property-type">string</span>
     </dt>
-    <dd>{{% md %}}Selected currency.{{% /md %}}</dd>
-    <dt class="property-"
+    <dd>{{% md %}}Selected currency.{{% /md %}}</dd><dt class="property-"
             title="">
         <span id="daterange_csharp">
 <a href="#daterange_csharp" style="color: inherit; text-decoration: inherit;">Date<wbr>Range</a>
@@ -184,8 +164,7 @@ The following output properties are available:
         <span class="property-indicator"></span>
         <span class="property-type">string</span>
     </dt>
-    <dd>{{% md %}}Selected date range for viewing cost in.{{% /md %}}</dd>
-    <dt class="property-"
+    <dd>{{% md %}}Selected date range for viewing cost in.{{% /md %}}</dd><dt class="property-"
             title="">
         <span id="id_csharp">
 <a href="#id_csharp" style="color: inherit; text-decoration: inherit;">Id</a>
@@ -193,8 +172,7 @@ The following output properties are available:
         <span class="property-indicator"></span>
         <span class="property-type">string</span>
     </dt>
-    <dd>{{% md %}}Resource Id.{{% /md %}}</dd>
-    <dt class="property-"
+    <dd>{{% md %}}Resource Id.{{% /md %}}</dd><dt class="property-"
             title="">
         <span id="includemonetarycommitment_csharp">
 <a href="#includemonetarycommitment_csharp" style="color: inherit; text-decoration: inherit;">Include<wbr>Monetary<wbr>Commitment</a>
@@ -202,8 +180,7 @@ The following output properties are available:
         <span class="property-indicator"></span>
         <span class="property-type">bool</span>
     </dt>
-    <dd>{{% md %}}Include monetary commitment{{% /md %}}</dd>
-    <dt class="property-"
+    <dd>{{% md %}}Include monetary commitment{{% /md %}}</dd><dt class="property-"
             title="">
         <span id="modifiedon_csharp">
 <a href="#modifiedon_csharp" style="color: inherit; text-decoration: inherit;">Modified<wbr>On</a>
@@ -211,8 +188,7 @@ The following output properties are available:
         <span class="property-indicator"></span>
         <span class="property-type">string</span>
     </dt>
-    <dd>{{% md %}}Date when the user last modified this view.{{% /md %}}</dd>
-    <dt class="property-"
+    <dd>{{% md %}}Date when the user last modified this view.{{% /md %}}</dd><dt class="property-"
             title="">
         <span id="name_csharp">
 <a href="#name_csharp" style="color: inherit; text-decoration: inherit;">Name</a>
@@ -220,8 +196,7 @@ The following output properties are available:
         <span class="property-indicator"></span>
         <span class="property-type">string</span>
     </dt>
-    <dd>{{% md %}}Resource name.{{% /md %}}</dd>
-    <dt class="property-"
+    <dd>{{% md %}}Resource name.{{% /md %}}</dd><dt class="property-"
             title="">
         <span id="timeframe_csharp">
 <a href="#timeframe_csharp" style="color: inherit; text-decoration: inherit;">Timeframe</a>
@@ -229,8 +204,7 @@ The following output properties are available:
         <span class="property-indicator"></span>
         <span class="property-type">string</span>
     </dt>
-    <dd>{{% md %}}The time frame for pulling data for the report. If custom, then a specific time period must be provided.{{% /md %}}</dd>
-    <dt class="property-"
+    <dd>{{% md %}}The time frame for pulling data for the report. If custom, then a specific time period must be provided.{{% /md %}}</dd><dt class="property-"
             title="">
         <span id="type_csharp">
 <a href="#type_csharp" style="color: inherit; text-decoration: inherit;">Type</a>
@@ -238,8 +212,7 @@ The following output properties are available:
         <span class="property-indicator"></span>
         <span class="property-type">string</span>
     </dt>
-    <dd>{{% md %}}Resource type.{{% /md %}}</dd>
-    <dt class="property-"
+    <dd>{{% md %}}Resource type.{{% /md %}}</dd><dt class="property-"
             title="">
         <span id="accumulated_csharp">
 <a href="#accumulated_csharp" style="color: inherit; text-decoration: inherit;">Accumulated</a>
@@ -247,8 +220,7 @@ The following output properties are available:
         <span class="property-indicator"></span>
         <span class="property-type">string</span>
     </dt>
-    <dd>{{% md %}}Show costs accumulated over time.{{% /md %}}</dd>
-    <dt class="property-"
+    <dd>{{% md %}}Show costs accumulated over time.{{% /md %}}</dd><dt class="property-"
             title="">
         <span id="chart_csharp">
 <a href="#chart_csharp" style="color: inherit; text-decoration: inherit;">Chart</a>
@@ -256,8 +228,7 @@ The following output properties are available:
         <span class="property-indicator"></span>
         <span class="property-type">string</span>
     </dt>
-    <dd>{{% md %}}Chart type of the main view in Cost Analysis. Required.{{% /md %}}</dd>
-    <dt class="property-"
+    <dd>{{% md %}}Chart type of the main view in Cost Analysis. Required.{{% /md %}}</dd><dt class="property-"
             title="">
         <span id="dataset_csharp">
 <a href="#dataset_csharp" style="color: inherit; text-decoration: inherit;">Data<wbr>Set</a>
@@ -265,8 +236,7 @@ The following output properties are available:
         <span class="property-indicator"></span>
         <span class="property-type"><a href="#reportconfigdatasetresponse">Pulumi.<wbr>Azure<wbr>Native.<wbr>Cost<wbr>Management.<wbr>Outputs.<wbr>Report<wbr>Config<wbr>Dataset<wbr>Response</a></span>
     </dt>
-    <dd>{{% md %}}Has definition for data in this report config.{{% /md %}}</dd>
-    <dt class="property-"
+    <dd>{{% md %}}Has definition for data in this report config.{{% /md %}}</dd><dt class="property-"
             title="">
         <span id="displayname_csharp">
 <a href="#displayname_csharp" style="color: inherit; text-decoration: inherit;">Display<wbr>Name</a>
@@ -274,8 +244,7 @@ The following output properties are available:
         <span class="property-indicator"></span>
         <span class="property-type">string</span>
     </dt>
-    <dd>{{% md %}}User input name of the view. Required.{{% /md %}}</dd>
-    <dt class="property-"
+    <dd>{{% md %}}User input name of the view. Required.{{% /md %}}</dd><dt class="property-"
             title="">
         <span id="etag_csharp">
 <a href="#etag_csharp" style="color: inherit; text-decoration: inherit;">ETag</a>
@@ -283,8 +252,7 @@ The following output properties are available:
         <span class="property-indicator"></span>
         <span class="property-type">string</span>
     </dt>
-    <dd>{{% md %}}eTag of the resource. To handle concurrent update scenario, this field will be used to determine whether the user is updating the latest version or not.{{% /md %}}</dd>
-    <dt class="property-"
+    <dd>{{% md %}}eTag of the resource. To handle concurrent update scenario, this field will be used to determine whether the user is updating the latest version or not.{{% /md %}}</dd><dt class="property-"
             title="">
         <span id="kpis_csharp">
 <a href="#kpis_csharp" style="color: inherit; text-decoration: inherit;">Kpis</a>
@@ -292,8 +260,7 @@ The following output properties are available:
         <span class="property-indicator"></span>
         <span class="property-type"><a href="#kpipropertiesresponse">List&lt;Pulumi.<wbr>Azure<wbr>Native.<wbr>Cost<wbr>Management.<wbr>Outputs.<wbr>Kpi<wbr>Properties<wbr>Response&gt;</a></span>
     </dt>
-    <dd>{{% md %}}List of KPIs to show in Cost Analysis UI.{{% /md %}}</dd>
-    <dt class="property-"
+    <dd>{{% md %}}List of KPIs to show in Cost Analysis UI.{{% /md %}}</dd><dt class="property-"
             title="">
         <span id="metric_csharp">
 <a href="#metric_csharp" style="color: inherit; text-decoration: inherit;">Metric</a>
@@ -301,8 +268,7 @@ The following output properties are available:
         <span class="property-indicator"></span>
         <span class="property-type">string</span>
     </dt>
-    <dd>{{% md %}}Metric to use when displaying costs.{{% /md %}}</dd>
-    <dt class="property-"
+    <dd>{{% md %}}Metric to use when displaying costs.{{% /md %}}</dd><dt class="property-"
             title="">
         <span id="pivots_csharp">
 <a href="#pivots_csharp" style="color: inherit; text-decoration: inherit;">Pivots</a>
@@ -310,8 +276,7 @@ The following output properties are available:
         <span class="property-indicator"></span>
         <span class="property-type"><a href="#pivotpropertiesresponse">List&lt;Pulumi.<wbr>Azure<wbr>Native.<wbr>Cost<wbr>Management.<wbr>Outputs.<wbr>Pivot<wbr>Properties<wbr>Response&gt;</a></span>
     </dt>
-    <dd>{{% md %}}Configuration of 3 sub-views in the Cost Analysis UI.{{% /md %}}</dd>
-    <dt class="property-"
+    <dd>{{% md %}}Configuration of 3 sub-views in the Cost Analysis UI.{{% /md %}}</dd><dt class="property-"
             title="">
         <span id="scope_csharp">
 <a href="#scope_csharp" style="color: inherit; text-decoration: inherit;">Scope</a>
@@ -319,8 +284,7 @@ The following output properties are available:
         <span class="property-indicator"></span>
         <span class="property-type">string</span>
     </dt>
-    <dd>{{% md %}}Cost Management scope to save the view on. This includes 'subscriptions/{subscriptionId}' for subscription scope, 'subscriptions/{subscriptionId}/resourceGroups/{resourceGroupName}' for resourceGroup scope, 'providers/Microsoft.Billing/billingAccounts/{billingAccountId}' for Billing Account scope, 'providers/Microsoft.Billing/billingAccounts/{billingAccountId}/departments/{departmentId}' for Department scope, 'providers/Microsoft.Billing/billingAccounts/{billingAccountId}/enrollmentAccounts/{enrollmentAccountId}' for EnrollmentAccount scope, 'providers/Microsoft.Billing/billingAccounts/{billingAccountId}/billingProfiles/{billingProfileId}' for BillingProfile scope, 'providers/Microsoft.Billing/billingAccounts/{billingAccountId}/invoiceSections/{invoiceSectionId}' for InvoiceSection scope, 'providers/Microsoft.Management/managementGroups/{managementGroupId}' for Management Group scope, '/providers/Microsoft.CostManagement/externalBillingAccounts/{externalBillingAccountName}' for ExternalBillingAccount scope, and '/providers/Microsoft.CostManagement/externalSubscriptions/{externalSubscriptionName}' for ExternalSubscription scope.{{% /md %}}</dd>
-    <dt class="property-"
+    <dd>{{% md %}}Cost Management scope to save the view on. This includes 'subscriptions/{subscriptionId}' for subscription scope, 'subscriptions/{subscriptionId}/resourceGroups/{resourceGroupName}' for resourceGroup scope, 'providers/Microsoft.Billing/billingAccounts/{billingAccountId}' for Billing Account scope, 'providers/Microsoft.Billing/billingAccounts/{billingAccountId}/departments/{departmentId}' for Department scope, 'providers/Microsoft.Billing/billingAccounts/{billingAccountId}/enrollmentAccounts/{enrollmentAccountId}' for EnrollmentAccount scope, 'providers/Microsoft.Billing/billingAccounts/{billingAccountId}/billingProfiles/{billingProfileId}' for BillingProfile scope, 'providers/Microsoft.Billing/billingAccounts/{billingAccountId}/invoiceSections/{invoiceSectionId}' for InvoiceSection scope, 'providers/Microsoft.Management/managementGroups/{managementGroupId}' for Management Group scope, '/providers/Microsoft.CostManagement/externalBillingAccounts/{externalBillingAccountName}' for ExternalBillingAccount scope, and '/providers/Microsoft.CostManagement/externalSubscriptions/{externalSubscriptionName}' for ExternalSubscription scope.{{% /md %}}</dd><dt class="property-"
             title="">
         <span id="timeperiod_csharp">
 <a href="#timeperiod_csharp" style="color: inherit; text-decoration: inherit;">Time<wbr>Period</a>
@@ -328,14 +292,11 @@ The following output properties are available:
         <span class="property-indicator"></span>
         <span class="property-type"><a href="#reportconfigtimeperiodresponse">Pulumi.<wbr>Azure<wbr>Native.<wbr>Cost<wbr>Management.<wbr>Outputs.<wbr>Report<wbr>Config<wbr>Time<wbr>Period<wbr>Response</a></span>
     </dt>
-    <dd>{{% md %}}Has time period for pulling data for the report.{{% /md %}}</dd>
-</dl>
+    <dd>{{% md %}}Has time period for pulling data for the report.{{% /md %}}</dd></dl>
 {{% /choosable %}}
 
 {{% choosable language go %}}
-<dl class="resources-properties">
-
-    <dt class="property-"
+<dl class="resources-properties"><dt class="property-"
             title="">
         <span id="createdon_go">
 <a href="#createdon_go" style="color: inherit; text-decoration: inherit;">Created<wbr>On</a>
@@ -343,8 +304,7 @@ The following output properties are available:
         <span class="property-indicator"></span>
         <span class="property-type">string</span>
     </dt>
-    <dd>{{% md %}}Date the user created this view.{{% /md %}}</dd>
-    <dt class="property-"
+    <dd>{{% md %}}Date the user created this view.{{% /md %}}</dd><dt class="property-"
             title="">
         <span id="currency_go">
 <a href="#currency_go" style="color: inherit; text-decoration: inherit;">Currency</a>
@@ -352,8 +312,7 @@ The following output properties are available:
         <span class="property-indicator"></span>
         <span class="property-type">string</span>
     </dt>
-    <dd>{{% md %}}Selected currency.{{% /md %}}</dd>
-    <dt class="property-"
+    <dd>{{% md %}}Selected currency.{{% /md %}}</dd><dt class="property-"
             title="">
         <span id="daterange_go">
 <a href="#daterange_go" style="color: inherit; text-decoration: inherit;">Date<wbr>Range</a>
@@ -361,8 +320,7 @@ The following output properties are available:
         <span class="property-indicator"></span>
         <span class="property-type">string</span>
     </dt>
-    <dd>{{% md %}}Selected date range for viewing cost in.{{% /md %}}</dd>
-    <dt class="property-"
+    <dd>{{% md %}}Selected date range for viewing cost in.{{% /md %}}</dd><dt class="property-"
             title="">
         <span id="id_go">
 <a href="#id_go" style="color: inherit; text-decoration: inherit;">Id</a>
@@ -370,8 +328,7 @@ The following output properties are available:
         <span class="property-indicator"></span>
         <span class="property-type">string</span>
     </dt>
-    <dd>{{% md %}}Resource Id.{{% /md %}}</dd>
-    <dt class="property-"
+    <dd>{{% md %}}Resource Id.{{% /md %}}</dd><dt class="property-"
             title="">
         <span id="includemonetarycommitment_go">
 <a href="#includemonetarycommitment_go" style="color: inherit; text-decoration: inherit;">Include<wbr>Monetary<wbr>Commitment</a>
@@ -379,8 +336,7 @@ The following output properties are available:
         <span class="property-indicator"></span>
         <span class="property-type">bool</span>
     </dt>
-    <dd>{{% md %}}Include monetary commitment{{% /md %}}</dd>
-    <dt class="property-"
+    <dd>{{% md %}}Include monetary commitment{{% /md %}}</dd><dt class="property-"
             title="">
         <span id="modifiedon_go">
 <a href="#modifiedon_go" style="color: inherit; text-decoration: inherit;">Modified<wbr>On</a>
@@ -388,8 +344,7 @@ The following output properties are available:
         <span class="property-indicator"></span>
         <span class="property-type">string</span>
     </dt>
-    <dd>{{% md %}}Date when the user last modified this view.{{% /md %}}</dd>
-    <dt class="property-"
+    <dd>{{% md %}}Date when the user last modified this view.{{% /md %}}</dd><dt class="property-"
             title="">
         <span id="name_go">
 <a href="#name_go" style="color: inherit; text-decoration: inherit;">Name</a>
@@ -397,8 +352,7 @@ The following output properties are available:
         <span class="property-indicator"></span>
         <span class="property-type">string</span>
     </dt>
-    <dd>{{% md %}}Resource name.{{% /md %}}</dd>
-    <dt class="property-"
+    <dd>{{% md %}}Resource name.{{% /md %}}</dd><dt class="property-"
             title="">
         <span id="timeframe_go">
 <a href="#timeframe_go" style="color: inherit; text-decoration: inherit;">Timeframe</a>
@@ -406,8 +360,7 @@ The following output properties are available:
         <span class="property-indicator"></span>
         <span class="property-type">string</span>
     </dt>
-    <dd>{{% md %}}The time frame for pulling data for the report. If custom, then a specific time period must be provided.{{% /md %}}</dd>
-    <dt class="property-"
+    <dd>{{% md %}}The time frame for pulling data for the report. If custom, then a specific time period must be provided.{{% /md %}}</dd><dt class="property-"
             title="">
         <span id="type_go">
 <a href="#type_go" style="color: inherit; text-decoration: inherit;">Type</a>
@@ -415,8 +368,7 @@ The following output properties are available:
         <span class="property-indicator"></span>
         <span class="property-type">string</span>
     </dt>
-    <dd>{{% md %}}Resource type.{{% /md %}}</dd>
-    <dt class="property-"
+    <dd>{{% md %}}Resource type.{{% /md %}}</dd><dt class="property-"
             title="">
         <span id="accumulated_go">
 <a href="#accumulated_go" style="color: inherit; text-decoration: inherit;">Accumulated</a>
@@ -424,8 +376,7 @@ The following output properties are available:
         <span class="property-indicator"></span>
         <span class="property-type">string</span>
     </dt>
-    <dd>{{% md %}}Show costs accumulated over time.{{% /md %}}</dd>
-    <dt class="property-"
+    <dd>{{% md %}}Show costs accumulated over time.{{% /md %}}</dd><dt class="property-"
             title="">
         <span id="chart_go">
 <a href="#chart_go" style="color: inherit; text-decoration: inherit;">Chart</a>
@@ -433,8 +384,7 @@ The following output properties are available:
         <span class="property-indicator"></span>
         <span class="property-type">string</span>
     </dt>
-    <dd>{{% md %}}Chart type of the main view in Cost Analysis. Required.{{% /md %}}</dd>
-    <dt class="property-"
+    <dd>{{% md %}}Chart type of the main view in Cost Analysis. Required.{{% /md %}}</dd><dt class="property-"
             title="">
         <span id="dataset_go">
 <a href="#dataset_go" style="color: inherit; text-decoration: inherit;">Data<wbr>Set</a>
@@ -442,8 +392,7 @@ The following output properties are available:
         <span class="property-indicator"></span>
         <span class="property-type"><a href="#reportconfigdatasetresponse">Report<wbr>Config<wbr>Dataset<wbr>Response</a></span>
     </dt>
-    <dd>{{% md %}}Has definition for data in this report config.{{% /md %}}</dd>
-    <dt class="property-"
+    <dd>{{% md %}}Has definition for data in this report config.{{% /md %}}</dd><dt class="property-"
             title="">
         <span id="displayname_go">
 <a href="#displayname_go" style="color: inherit; text-decoration: inherit;">Display<wbr>Name</a>
@@ -451,8 +400,7 @@ The following output properties are available:
         <span class="property-indicator"></span>
         <span class="property-type">string</span>
     </dt>
-    <dd>{{% md %}}User input name of the view. Required.{{% /md %}}</dd>
-    <dt class="property-"
+    <dd>{{% md %}}User input name of the view. Required.{{% /md %}}</dd><dt class="property-"
             title="">
         <span id="etag_go">
 <a href="#etag_go" style="color: inherit; text-decoration: inherit;">ETag</a>
@@ -460,8 +408,7 @@ The following output properties are available:
         <span class="property-indicator"></span>
         <span class="property-type">string</span>
     </dt>
-    <dd>{{% md %}}eTag of the resource. To handle concurrent update scenario, this field will be used to determine whether the user is updating the latest version or not.{{% /md %}}</dd>
-    <dt class="property-"
+    <dd>{{% md %}}eTag of the resource. To handle concurrent update scenario, this field will be used to determine whether the user is updating the latest version or not.{{% /md %}}</dd><dt class="property-"
             title="">
         <span id="kpis_go">
 <a href="#kpis_go" style="color: inherit; text-decoration: inherit;">Kpis</a>
@@ -469,8 +416,7 @@ The following output properties are available:
         <span class="property-indicator"></span>
         <span class="property-type"><a href="#kpipropertiesresponse">[]Kpi<wbr>Properties<wbr>Response</a></span>
     </dt>
-    <dd>{{% md %}}List of KPIs to show in Cost Analysis UI.{{% /md %}}</dd>
-    <dt class="property-"
+    <dd>{{% md %}}List of KPIs to show in Cost Analysis UI.{{% /md %}}</dd><dt class="property-"
             title="">
         <span id="metric_go">
 <a href="#metric_go" style="color: inherit; text-decoration: inherit;">Metric</a>
@@ -478,8 +424,7 @@ The following output properties are available:
         <span class="property-indicator"></span>
         <span class="property-type">string</span>
     </dt>
-    <dd>{{% md %}}Metric to use when displaying costs.{{% /md %}}</dd>
-    <dt class="property-"
+    <dd>{{% md %}}Metric to use when displaying costs.{{% /md %}}</dd><dt class="property-"
             title="">
         <span id="pivots_go">
 <a href="#pivots_go" style="color: inherit; text-decoration: inherit;">Pivots</a>
@@ -487,8 +432,7 @@ The following output properties are available:
         <span class="property-indicator"></span>
         <span class="property-type"><a href="#pivotpropertiesresponse">[]Pivot<wbr>Properties<wbr>Response</a></span>
     </dt>
-    <dd>{{% md %}}Configuration of 3 sub-views in the Cost Analysis UI.{{% /md %}}</dd>
-    <dt class="property-"
+    <dd>{{% md %}}Configuration of 3 sub-views in the Cost Analysis UI.{{% /md %}}</dd><dt class="property-"
             title="">
         <span id="scope_go">
 <a href="#scope_go" style="color: inherit; text-decoration: inherit;">Scope</a>
@@ -496,8 +440,7 @@ The following output properties are available:
         <span class="property-indicator"></span>
         <span class="property-type">string</span>
     </dt>
-    <dd>{{% md %}}Cost Management scope to save the view on. This includes 'subscriptions/{subscriptionId}' for subscription scope, 'subscriptions/{subscriptionId}/resourceGroups/{resourceGroupName}' for resourceGroup scope, 'providers/Microsoft.Billing/billingAccounts/{billingAccountId}' for Billing Account scope, 'providers/Microsoft.Billing/billingAccounts/{billingAccountId}/departments/{departmentId}' for Department scope, 'providers/Microsoft.Billing/billingAccounts/{billingAccountId}/enrollmentAccounts/{enrollmentAccountId}' for EnrollmentAccount scope, 'providers/Microsoft.Billing/billingAccounts/{billingAccountId}/billingProfiles/{billingProfileId}' for BillingProfile scope, 'providers/Microsoft.Billing/billingAccounts/{billingAccountId}/invoiceSections/{invoiceSectionId}' for InvoiceSection scope, 'providers/Microsoft.Management/managementGroups/{managementGroupId}' for Management Group scope, '/providers/Microsoft.CostManagement/externalBillingAccounts/{externalBillingAccountName}' for ExternalBillingAccount scope, and '/providers/Microsoft.CostManagement/externalSubscriptions/{externalSubscriptionName}' for ExternalSubscription scope.{{% /md %}}</dd>
-    <dt class="property-"
+    <dd>{{% md %}}Cost Management scope to save the view on. This includes 'subscriptions/{subscriptionId}' for subscription scope, 'subscriptions/{subscriptionId}/resourceGroups/{resourceGroupName}' for resourceGroup scope, 'providers/Microsoft.Billing/billingAccounts/{billingAccountId}' for Billing Account scope, 'providers/Microsoft.Billing/billingAccounts/{billingAccountId}/departments/{departmentId}' for Department scope, 'providers/Microsoft.Billing/billingAccounts/{billingAccountId}/enrollmentAccounts/{enrollmentAccountId}' for EnrollmentAccount scope, 'providers/Microsoft.Billing/billingAccounts/{billingAccountId}/billingProfiles/{billingProfileId}' for BillingProfile scope, 'providers/Microsoft.Billing/billingAccounts/{billingAccountId}/invoiceSections/{invoiceSectionId}' for InvoiceSection scope, 'providers/Microsoft.Management/managementGroups/{managementGroupId}' for Management Group scope, '/providers/Microsoft.CostManagement/externalBillingAccounts/{externalBillingAccountName}' for ExternalBillingAccount scope, and '/providers/Microsoft.CostManagement/externalSubscriptions/{externalSubscriptionName}' for ExternalSubscription scope.{{% /md %}}</dd><dt class="property-"
             title="">
         <span id="timeperiod_go">
 <a href="#timeperiod_go" style="color: inherit; text-decoration: inherit;">Time<wbr>Period</a>
@@ -505,14 +448,11 @@ The following output properties are available:
         <span class="property-indicator"></span>
         <span class="property-type"><a href="#reportconfigtimeperiodresponse">Report<wbr>Config<wbr>Time<wbr>Period<wbr>Response</a></span>
     </dt>
-    <dd>{{% md %}}Has time period for pulling data for the report.{{% /md %}}</dd>
-</dl>
+    <dd>{{% md %}}Has time period for pulling data for the report.{{% /md %}}</dd></dl>
 {{% /choosable %}}
 
 {{% choosable language nodejs %}}
-<dl class="resources-properties">
-
-    <dt class="property-"
+<dl class="resources-properties"><dt class="property-"
             title="">
         <span id="createdon_nodejs">
 <a href="#createdon_nodejs" style="color: inherit; text-decoration: inherit;">created<wbr>On</a>
@@ -520,8 +460,7 @@ The following output properties are available:
         <span class="property-indicator"></span>
         <span class="property-type">string</span>
     </dt>
-    <dd>{{% md %}}Date the user created this view.{{% /md %}}</dd>
-    <dt class="property-"
+    <dd>{{% md %}}Date the user created this view.{{% /md %}}</dd><dt class="property-"
             title="">
         <span id="currency_nodejs">
 <a href="#currency_nodejs" style="color: inherit; text-decoration: inherit;">currency</a>
@@ -529,8 +468,7 @@ The following output properties are available:
         <span class="property-indicator"></span>
         <span class="property-type">string</span>
     </dt>
-    <dd>{{% md %}}Selected currency.{{% /md %}}</dd>
-    <dt class="property-"
+    <dd>{{% md %}}Selected currency.{{% /md %}}</dd><dt class="property-"
             title="">
         <span id="daterange_nodejs">
 <a href="#daterange_nodejs" style="color: inherit; text-decoration: inherit;">date<wbr>Range</a>
@@ -538,8 +476,7 @@ The following output properties are available:
         <span class="property-indicator"></span>
         <span class="property-type">string</span>
     </dt>
-    <dd>{{% md %}}Selected date range for viewing cost in.{{% /md %}}</dd>
-    <dt class="property-"
+    <dd>{{% md %}}Selected date range for viewing cost in.{{% /md %}}</dd><dt class="property-"
             title="">
         <span id="id_nodejs">
 <a href="#id_nodejs" style="color: inherit; text-decoration: inherit;">id</a>
@@ -547,8 +484,7 @@ The following output properties are available:
         <span class="property-indicator"></span>
         <span class="property-type">string</span>
     </dt>
-    <dd>{{% md %}}Resource Id.{{% /md %}}</dd>
-    <dt class="property-"
+    <dd>{{% md %}}Resource Id.{{% /md %}}</dd><dt class="property-"
             title="">
         <span id="includemonetarycommitment_nodejs">
 <a href="#includemonetarycommitment_nodejs" style="color: inherit; text-decoration: inherit;">include<wbr>Monetary<wbr>Commitment</a>
@@ -556,8 +492,7 @@ The following output properties are available:
         <span class="property-indicator"></span>
         <span class="property-type">boolean</span>
     </dt>
-    <dd>{{% md %}}Include monetary commitment{{% /md %}}</dd>
-    <dt class="property-"
+    <dd>{{% md %}}Include monetary commitment{{% /md %}}</dd><dt class="property-"
             title="">
         <span id="modifiedon_nodejs">
 <a href="#modifiedon_nodejs" style="color: inherit; text-decoration: inherit;">modified<wbr>On</a>
@@ -565,8 +500,7 @@ The following output properties are available:
         <span class="property-indicator"></span>
         <span class="property-type">string</span>
     </dt>
-    <dd>{{% md %}}Date when the user last modified this view.{{% /md %}}</dd>
-    <dt class="property-"
+    <dd>{{% md %}}Date when the user last modified this view.{{% /md %}}</dd><dt class="property-"
             title="">
         <span id="name_nodejs">
 <a href="#name_nodejs" style="color: inherit; text-decoration: inherit;">name</a>
@@ -574,8 +508,7 @@ The following output properties are available:
         <span class="property-indicator"></span>
         <span class="property-type">string</span>
     </dt>
-    <dd>{{% md %}}Resource name.{{% /md %}}</dd>
-    <dt class="property-"
+    <dd>{{% md %}}Resource name.{{% /md %}}</dd><dt class="property-"
             title="">
         <span id="timeframe_nodejs">
 <a href="#timeframe_nodejs" style="color: inherit; text-decoration: inherit;">timeframe</a>
@@ -583,8 +516,7 @@ The following output properties are available:
         <span class="property-indicator"></span>
         <span class="property-type">string</span>
     </dt>
-    <dd>{{% md %}}The time frame for pulling data for the report. If custom, then a specific time period must be provided.{{% /md %}}</dd>
-    <dt class="property-"
+    <dd>{{% md %}}The time frame for pulling data for the report. If custom, then a specific time period must be provided.{{% /md %}}</dd><dt class="property-"
             title="">
         <span id="type_nodejs">
 <a href="#type_nodejs" style="color: inherit; text-decoration: inherit;">type</a>
@@ -592,8 +524,7 @@ The following output properties are available:
         <span class="property-indicator"></span>
         <span class="property-type">string</span>
     </dt>
-    <dd>{{% md %}}Resource type.{{% /md %}}</dd>
-    <dt class="property-"
+    <dd>{{% md %}}Resource type.{{% /md %}}</dd><dt class="property-"
             title="">
         <span id="accumulated_nodejs">
 <a href="#accumulated_nodejs" style="color: inherit; text-decoration: inherit;">accumulated</a>
@@ -601,8 +532,7 @@ The following output properties are available:
         <span class="property-indicator"></span>
         <span class="property-type">string</span>
     </dt>
-    <dd>{{% md %}}Show costs accumulated over time.{{% /md %}}</dd>
-    <dt class="property-"
+    <dd>{{% md %}}Show costs accumulated over time.{{% /md %}}</dd><dt class="property-"
             title="">
         <span id="chart_nodejs">
 <a href="#chart_nodejs" style="color: inherit; text-decoration: inherit;">chart</a>
@@ -610,8 +540,7 @@ The following output properties are available:
         <span class="property-indicator"></span>
         <span class="property-type">string</span>
     </dt>
-    <dd>{{% md %}}Chart type of the main view in Cost Analysis. Required.{{% /md %}}</dd>
-    <dt class="property-"
+    <dd>{{% md %}}Chart type of the main view in Cost Analysis. Required.{{% /md %}}</dd><dt class="property-"
             title="">
         <span id="dataset_nodejs">
 <a href="#dataset_nodejs" style="color: inherit; text-decoration: inherit;">data<wbr>Set</a>
@@ -619,8 +548,7 @@ The following output properties are available:
         <span class="property-indicator"></span>
         <span class="property-type"><a href="#reportconfigdatasetresponse">Report<wbr>Config<wbr>Dataset<wbr>Response</a></span>
     </dt>
-    <dd>{{% md %}}Has definition for data in this report config.{{% /md %}}</dd>
-    <dt class="property-"
+    <dd>{{% md %}}Has definition for data in this report config.{{% /md %}}</dd><dt class="property-"
             title="">
         <span id="displayname_nodejs">
 <a href="#displayname_nodejs" style="color: inherit; text-decoration: inherit;">display<wbr>Name</a>
@@ -628,8 +556,7 @@ The following output properties are available:
         <span class="property-indicator"></span>
         <span class="property-type">string</span>
     </dt>
-    <dd>{{% md %}}User input name of the view. Required.{{% /md %}}</dd>
-    <dt class="property-"
+    <dd>{{% md %}}User input name of the view. Required.{{% /md %}}</dd><dt class="property-"
             title="">
         <span id="etag_nodejs">
 <a href="#etag_nodejs" style="color: inherit; text-decoration: inherit;">e<wbr>Tag</a>
@@ -637,8 +564,7 @@ The following output properties are available:
         <span class="property-indicator"></span>
         <span class="property-type">string</span>
     </dt>
-    <dd>{{% md %}}eTag of the resource. To handle concurrent update scenario, this field will be used to determine whether the user is updating the latest version or not.{{% /md %}}</dd>
-    <dt class="property-"
+    <dd>{{% md %}}eTag of the resource. To handle concurrent update scenario, this field will be used to determine whether the user is updating the latest version or not.{{% /md %}}</dd><dt class="property-"
             title="">
         <span id="kpis_nodejs">
 <a href="#kpis_nodejs" style="color: inherit; text-decoration: inherit;">kpis</a>
@@ -646,8 +572,7 @@ The following output properties are available:
         <span class="property-indicator"></span>
         <span class="property-type"><a href="#kpipropertiesresponse">Kpi<wbr>Properties<wbr>Response[]</a></span>
     </dt>
-    <dd>{{% md %}}List of KPIs to show in Cost Analysis UI.{{% /md %}}</dd>
-    <dt class="property-"
+    <dd>{{% md %}}List of KPIs to show in Cost Analysis UI.{{% /md %}}</dd><dt class="property-"
             title="">
         <span id="metric_nodejs">
 <a href="#metric_nodejs" style="color: inherit; text-decoration: inherit;">metric</a>
@@ -655,8 +580,7 @@ The following output properties are available:
         <span class="property-indicator"></span>
         <span class="property-type">string</span>
     </dt>
-    <dd>{{% md %}}Metric to use when displaying costs.{{% /md %}}</dd>
-    <dt class="property-"
+    <dd>{{% md %}}Metric to use when displaying costs.{{% /md %}}</dd><dt class="property-"
             title="">
         <span id="pivots_nodejs">
 <a href="#pivots_nodejs" style="color: inherit; text-decoration: inherit;">pivots</a>
@@ -664,8 +588,7 @@ The following output properties are available:
         <span class="property-indicator"></span>
         <span class="property-type"><a href="#pivotpropertiesresponse">Pivot<wbr>Properties<wbr>Response[]</a></span>
     </dt>
-    <dd>{{% md %}}Configuration of 3 sub-views in the Cost Analysis UI.{{% /md %}}</dd>
-    <dt class="property-"
+    <dd>{{% md %}}Configuration of 3 sub-views in the Cost Analysis UI.{{% /md %}}</dd><dt class="property-"
             title="">
         <span id="scope_nodejs">
 <a href="#scope_nodejs" style="color: inherit; text-decoration: inherit;">scope</a>
@@ -673,8 +596,7 @@ The following output properties are available:
         <span class="property-indicator"></span>
         <span class="property-type">string</span>
     </dt>
-    <dd>{{% md %}}Cost Management scope to save the view on. This includes 'subscriptions/{subscriptionId}' for subscription scope, 'subscriptions/{subscriptionId}/resourceGroups/{resourceGroupName}' for resourceGroup scope, 'providers/Microsoft.Billing/billingAccounts/{billingAccountId}' for Billing Account scope, 'providers/Microsoft.Billing/billingAccounts/{billingAccountId}/departments/{departmentId}' for Department scope, 'providers/Microsoft.Billing/billingAccounts/{billingAccountId}/enrollmentAccounts/{enrollmentAccountId}' for EnrollmentAccount scope, 'providers/Microsoft.Billing/billingAccounts/{billingAccountId}/billingProfiles/{billingProfileId}' for BillingProfile scope, 'providers/Microsoft.Billing/billingAccounts/{billingAccountId}/invoiceSections/{invoiceSectionId}' for InvoiceSection scope, 'providers/Microsoft.Management/managementGroups/{managementGroupId}' for Management Group scope, '/providers/Microsoft.CostManagement/externalBillingAccounts/{externalBillingAccountName}' for ExternalBillingAccount scope, and '/providers/Microsoft.CostManagement/externalSubscriptions/{externalSubscriptionName}' for ExternalSubscription scope.{{% /md %}}</dd>
-    <dt class="property-"
+    <dd>{{% md %}}Cost Management scope to save the view on. This includes 'subscriptions/{subscriptionId}' for subscription scope, 'subscriptions/{subscriptionId}/resourceGroups/{resourceGroupName}' for resourceGroup scope, 'providers/Microsoft.Billing/billingAccounts/{billingAccountId}' for Billing Account scope, 'providers/Microsoft.Billing/billingAccounts/{billingAccountId}/departments/{departmentId}' for Department scope, 'providers/Microsoft.Billing/billingAccounts/{billingAccountId}/enrollmentAccounts/{enrollmentAccountId}' for EnrollmentAccount scope, 'providers/Microsoft.Billing/billingAccounts/{billingAccountId}/billingProfiles/{billingProfileId}' for BillingProfile scope, 'providers/Microsoft.Billing/billingAccounts/{billingAccountId}/invoiceSections/{invoiceSectionId}' for InvoiceSection scope, 'providers/Microsoft.Management/managementGroups/{managementGroupId}' for Management Group scope, '/providers/Microsoft.CostManagement/externalBillingAccounts/{externalBillingAccountName}' for ExternalBillingAccount scope, and '/providers/Microsoft.CostManagement/externalSubscriptions/{externalSubscriptionName}' for ExternalSubscription scope.{{% /md %}}</dd><dt class="property-"
             title="">
         <span id="timeperiod_nodejs">
 <a href="#timeperiod_nodejs" style="color: inherit; text-decoration: inherit;">time<wbr>Period</a>
@@ -682,14 +604,11 @@ The following output properties are available:
         <span class="property-indicator"></span>
         <span class="property-type"><a href="#reportconfigtimeperiodresponse">Report<wbr>Config<wbr>Time<wbr>Period<wbr>Response</a></span>
     </dt>
-    <dd>{{% md %}}Has time period for pulling data for the report.{{% /md %}}</dd>
-</dl>
+    <dd>{{% md %}}Has time period for pulling data for the report.{{% /md %}}</dd></dl>
 {{% /choosable %}}
 
 {{% choosable language python %}}
-<dl class="resources-properties">
-
-    <dt class="property-"
+<dl class="resources-properties"><dt class="property-"
             title="">
         <span id="created_on_python">
 <a href="#created_on_python" style="color: inherit; text-decoration: inherit;">created_<wbr>on</a>
@@ -697,8 +616,7 @@ The following output properties are available:
         <span class="property-indicator"></span>
         <span class="property-type">str</span>
     </dt>
-    <dd>{{% md %}}Date the user created this view.{{% /md %}}</dd>
-    <dt class="property-"
+    <dd>{{% md %}}Date the user created this view.{{% /md %}}</dd><dt class="property-"
             title="">
         <span id="currency_python">
 <a href="#currency_python" style="color: inherit; text-decoration: inherit;">currency</a>
@@ -706,8 +624,7 @@ The following output properties are available:
         <span class="property-indicator"></span>
         <span class="property-type">str</span>
     </dt>
-    <dd>{{% md %}}Selected currency.{{% /md %}}</dd>
-    <dt class="property-"
+    <dd>{{% md %}}Selected currency.{{% /md %}}</dd><dt class="property-"
             title="">
         <span id="date_range_python">
 <a href="#date_range_python" style="color: inherit; text-decoration: inherit;">date_<wbr>range</a>
@@ -715,8 +632,7 @@ The following output properties are available:
         <span class="property-indicator"></span>
         <span class="property-type">str</span>
     </dt>
-    <dd>{{% md %}}Selected date range for viewing cost in.{{% /md %}}</dd>
-    <dt class="property-"
+    <dd>{{% md %}}Selected date range for viewing cost in.{{% /md %}}</dd><dt class="property-"
             title="">
         <span id="id_python">
 <a href="#id_python" style="color: inherit; text-decoration: inherit;">id</a>
@@ -724,8 +640,7 @@ The following output properties are available:
         <span class="property-indicator"></span>
         <span class="property-type">str</span>
     </dt>
-    <dd>{{% md %}}Resource Id.{{% /md %}}</dd>
-    <dt class="property-"
+    <dd>{{% md %}}Resource Id.{{% /md %}}</dd><dt class="property-"
             title="">
         <span id="include_monetary_commitment_python">
 <a href="#include_monetary_commitment_python" style="color: inherit; text-decoration: inherit;">include_<wbr>monetary_<wbr>commitment</a>
@@ -733,8 +648,7 @@ The following output properties are available:
         <span class="property-indicator"></span>
         <span class="property-type">bool</span>
     </dt>
-    <dd>{{% md %}}Include monetary commitment{{% /md %}}</dd>
-    <dt class="property-"
+    <dd>{{% md %}}Include monetary commitment{{% /md %}}</dd><dt class="property-"
             title="">
         <span id="modified_on_python">
 <a href="#modified_on_python" style="color: inherit; text-decoration: inherit;">modified_<wbr>on</a>
@@ -742,8 +656,7 @@ The following output properties are available:
         <span class="property-indicator"></span>
         <span class="property-type">str</span>
     </dt>
-    <dd>{{% md %}}Date when the user last modified this view.{{% /md %}}</dd>
-    <dt class="property-"
+    <dd>{{% md %}}Date when the user last modified this view.{{% /md %}}</dd><dt class="property-"
             title="">
         <span id="name_python">
 <a href="#name_python" style="color: inherit; text-decoration: inherit;">name</a>
@@ -751,8 +664,7 @@ The following output properties are available:
         <span class="property-indicator"></span>
         <span class="property-type">str</span>
     </dt>
-    <dd>{{% md %}}Resource name.{{% /md %}}</dd>
-    <dt class="property-"
+    <dd>{{% md %}}Resource name.{{% /md %}}</dd><dt class="property-"
             title="">
         <span id="timeframe_python">
 <a href="#timeframe_python" style="color: inherit; text-decoration: inherit;">timeframe</a>
@@ -760,8 +672,7 @@ The following output properties are available:
         <span class="property-indicator"></span>
         <span class="property-type">str</span>
     </dt>
-    <dd>{{% md %}}The time frame for pulling data for the report. If custom, then a specific time period must be provided.{{% /md %}}</dd>
-    <dt class="property-"
+    <dd>{{% md %}}The time frame for pulling data for the report. If custom, then a specific time period must be provided.{{% /md %}}</dd><dt class="property-"
             title="">
         <span id="type_python">
 <a href="#type_python" style="color: inherit; text-decoration: inherit;">type</a>
@@ -769,8 +680,7 @@ The following output properties are available:
         <span class="property-indicator"></span>
         <span class="property-type">str</span>
     </dt>
-    <dd>{{% md %}}Resource type.{{% /md %}}</dd>
-    <dt class="property-"
+    <dd>{{% md %}}Resource type.{{% /md %}}</dd><dt class="property-"
             title="">
         <span id="accumulated_python">
 <a href="#accumulated_python" style="color: inherit; text-decoration: inherit;">accumulated</a>
@@ -778,8 +688,7 @@ The following output properties are available:
         <span class="property-indicator"></span>
         <span class="property-type">str</span>
     </dt>
-    <dd>{{% md %}}Show costs accumulated over time.{{% /md %}}</dd>
-    <dt class="property-"
+    <dd>{{% md %}}Show costs accumulated over time.{{% /md %}}</dd><dt class="property-"
             title="">
         <span id="chart_python">
 <a href="#chart_python" style="color: inherit; text-decoration: inherit;">chart</a>
@@ -787,8 +696,7 @@ The following output properties are available:
         <span class="property-indicator"></span>
         <span class="property-type">str</span>
     </dt>
-    <dd>{{% md %}}Chart type of the main view in Cost Analysis. Required.{{% /md %}}</dd>
-    <dt class="property-"
+    <dd>{{% md %}}Chart type of the main view in Cost Analysis. Required.{{% /md %}}</dd><dt class="property-"
             title="">
         <span id="data_set_python">
 <a href="#data_set_python" style="color: inherit; text-decoration: inherit;">data_<wbr>set</a>
@@ -796,8 +704,7 @@ The following output properties are available:
         <span class="property-indicator"></span>
         <span class="property-type"><a href="#reportconfigdatasetresponse">Report<wbr>Config<wbr>Dataset<wbr>Response</a></span>
     </dt>
-    <dd>{{% md %}}Has definition for data in this report config.{{% /md %}}</dd>
-    <dt class="property-"
+    <dd>{{% md %}}Has definition for data in this report config.{{% /md %}}</dd><dt class="property-"
             title="">
         <span id="display_name_python">
 <a href="#display_name_python" style="color: inherit; text-decoration: inherit;">display_<wbr>name</a>
@@ -805,8 +712,7 @@ The following output properties are available:
         <span class="property-indicator"></span>
         <span class="property-type">str</span>
     </dt>
-    <dd>{{% md %}}User input name of the view. Required.{{% /md %}}</dd>
-    <dt class="property-"
+    <dd>{{% md %}}User input name of the view. Required.{{% /md %}}</dd><dt class="property-"
             title="">
         <span id="e_tag_python">
 <a href="#e_tag_python" style="color: inherit; text-decoration: inherit;">e_<wbr>tag</a>
@@ -814,8 +720,7 @@ The following output properties are available:
         <span class="property-indicator"></span>
         <span class="property-type">str</span>
     </dt>
-    <dd>{{% md %}}eTag of the resource. To handle concurrent update scenario, this field will be used to determine whether the user is updating the latest version or not.{{% /md %}}</dd>
-    <dt class="property-"
+    <dd>{{% md %}}eTag of the resource. To handle concurrent update scenario, this field will be used to determine whether the user is updating the latest version or not.{{% /md %}}</dd><dt class="property-"
             title="">
         <span id="kpis_python">
 <a href="#kpis_python" style="color: inherit; text-decoration: inherit;">kpis</a>
@@ -823,8 +728,7 @@ The following output properties are available:
         <span class="property-indicator"></span>
         <span class="property-type"><a href="#kpipropertiesresponse">Sequence[Kpi<wbr>Properties<wbr>Response]</a></span>
     </dt>
-    <dd>{{% md %}}List of KPIs to show in Cost Analysis UI.{{% /md %}}</dd>
-    <dt class="property-"
+    <dd>{{% md %}}List of KPIs to show in Cost Analysis UI.{{% /md %}}</dd><dt class="property-"
             title="">
         <span id="metric_python">
 <a href="#metric_python" style="color: inherit; text-decoration: inherit;">metric</a>
@@ -832,8 +736,7 @@ The following output properties are available:
         <span class="property-indicator"></span>
         <span class="property-type">str</span>
     </dt>
-    <dd>{{% md %}}Metric to use when displaying costs.{{% /md %}}</dd>
-    <dt class="property-"
+    <dd>{{% md %}}Metric to use when displaying costs.{{% /md %}}</dd><dt class="property-"
             title="">
         <span id="pivots_python">
 <a href="#pivots_python" style="color: inherit; text-decoration: inherit;">pivots</a>
@@ -841,8 +744,7 @@ The following output properties are available:
         <span class="property-indicator"></span>
         <span class="property-type"><a href="#pivotpropertiesresponse">Sequence[Pivot<wbr>Properties<wbr>Response]</a></span>
     </dt>
-    <dd>{{% md %}}Configuration of 3 sub-views in the Cost Analysis UI.{{% /md %}}</dd>
-    <dt class="property-"
+    <dd>{{% md %}}Configuration of 3 sub-views in the Cost Analysis UI.{{% /md %}}</dd><dt class="property-"
             title="">
         <span id="scope_python">
 <a href="#scope_python" style="color: inherit; text-decoration: inherit;">scope</a>
@@ -850,8 +752,7 @@ The following output properties are available:
         <span class="property-indicator"></span>
         <span class="property-type">str</span>
     </dt>
-    <dd>{{% md %}}Cost Management scope to save the view on. This includes 'subscriptions/{subscriptionId}' for subscription scope, 'subscriptions/{subscriptionId}/resourceGroups/{resourceGroupName}' for resourceGroup scope, 'providers/Microsoft.Billing/billingAccounts/{billingAccountId}' for Billing Account scope, 'providers/Microsoft.Billing/billingAccounts/{billingAccountId}/departments/{departmentId}' for Department scope, 'providers/Microsoft.Billing/billingAccounts/{billingAccountId}/enrollmentAccounts/{enrollmentAccountId}' for EnrollmentAccount scope, 'providers/Microsoft.Billing/billingAccounts/{billingAccountId}/billingProfiles/{billingProfileId}' for BillingProfile scope, 'providers/Microsoft.Billing/billingAccounts/{billingAccountId}/invoiceSections/{invoiceSectionId}' for InvoiceSection scope, 'providers/Microsoft.Management/managementGroups/{managementGroupId}' for Management Group scope, '/providers/Microsoft.CostManagement/externalBillingAccounts/{externalBillingAccountName}' for ExternalBillingAccount scope, and '/providers/Microsoft.CostManagement/externalSubscriptions/{externalSubscriptionName}' for ExternalSubscription scope.{{% /md %}}</dd>
-    <dt class="property-"
+    <dd>{{% md %}}Cost Management scope to save the view on. This includes 'subscriptions/{subscriptionId}' for subscription scope, 'subscriptions/{subscriptionId}/resourceGroups/{resourceGroupName}' for resourceGroup scope, 'providers/Microsoft.Billing/billingAccounts/{billingAccountId}' for Billing Account scope, 'providers/Microsoft.Billing/billingAccounts/{billingAccountId}/departments/{departmentId}' for Department scope, 'providers/Microsoft.Billing/billingAccounts/{billingAccountId}/enrollmentAccounts/{enrollmentAccountId}' for EnrollmentAccount scope, 'providers/Microsoft.Billing/billingAccounts/{billingAccountId}/billingProfiles/{billingProfileId}' for BillingProfile scope, 'providers/Microsoft.Billing/billingAccounts/{billingAccountId}/invoiceSections/{invoiceSectionId}' for InvoiceSection scope, 'providers/Microsoft.Management/managementGroups/{managementGroupId}' for Management Group scope, '/providers/Microsoft.CostManagement/externalBillingAccounts/{externalBillingAccountName}' for ExternalBillingAccount scope, and '/providers/Microsoft.CostManagement/externalSubscriptions/{externalSubscriptionName}' for ExternalSubscription scope.{{% /md %}}</dd><dt class="property-"
             title="">
         <span id="time_period_python">
 <a href="#time_period_python" style="color: inherit; text-decoration: inherit;">time_<wbr>period</a>
@@ -859,8 +760,7 @@ The following output properties are available:
         <span class="property-indicator"></span>
         <span class="property-type"><a href="#reportconfigtimeperiodresponse">Report<wbr>Config<wbr>Time<wbr>Period<wbr>Response</a></span>
     </dt>
-    <dd>{{% md %}}Has time period for pulling data for the report.{{% /md %}}</dd>
-</dl>
+    <dd>{{% md %}}Has time period for pulling data for the report.{{% /md %}}</dd></dl>
 {{% /choosable %}}
 
 
@@ -874,9 +774,7 @@ The following output properties are available:
 
 
 {{% choosable language csharp %}}
-<dl class="resources-properties">
-
-    <dt class="property-optional"
+<dl class="resources-properties"><dt class="property-optional"
             title="Optional">
         <span id="enabled_csharp">
 <a href="#enabled_csharp" style="color: inherit; text-decoration: inherit;">Enabled</a>
@@ -884,8 +782,7 @@ The following output properties are available:
         <span class="property-indicator"></span>
         <span class="property-type">bool</span>
     </dt>
-    <dd>{{% md %}}show the KPI in the UI?{{% /md %}}</dd>
-    <dt class="property-optional"
+    <dd>{{% md %}}show the KPI in the UI?{{% /md %}}</dd><dt class="property-optional"
             title="Optional">
         <span id="id_csharp">
 <a href="#id_csharp" style="color: inherit; text-decoration: inherit;">Id</a>
@@ -893,8 +790,7 @@ The following output properties are available:
         <span class="property-indicator"></span>
         <span class="property-type">string</span>
     </dt>
-    <dd>{{% md %}}ID of resource related to metric (budget).{{% /md %}}</dd>
-    <dt class="property-optional"
+    <dd>{{% md %}}ID of resource related to metric (budget).{{% /md %}}</dd><dt class="property-optional"
             title="Optional">
         <span id="type_csharp">
 <a href="#type_csharp" style="color: inherit; text-decoration: inherit;">Type</a>
@@ -902,14 +798,11 @@ The following output properties are available:
         <span class="property-indicator"></span>
         <span class="property-type">string</span>
     </dt>
-    <dd>{{% md %}}KPI type (Forecast, Budget).{{% /md %}}</dd>
-</dl>
+    <dd>{{% md %}}KPI type (Forecast, Budget).{{% /md %}}</dd></dl>
 {{% /choosable %}}
 
 {{% choosable language go %}}
-<dl class="resources-properties">
-
-    <dt class="property-optional"
+<dl class="resources-properties"><dt class="property-optional"
             title="Optional">
         <span id="enabled_go">
 <a href="#enabled_go" style="color: inherit; text-decoration: inherit;">Enabled</a>
@@ -917,8 +810,7 @@ The following output properties are available:
         <span class="property-indicator"></span>
         <span class="property-type">bool</span>
     </dt>
-    <dd>{{% md %}}show the KPI in the UI?{{% /md %}}</dd>
-    <dt class="property-optional"
+    <dd>{{% md %}}show the KPI in the UI?{{% /md %}}</dd><dt class="property-optional"
             title="Optional">
         <span id="id_go">
 <a href="#id_go" style="color: inherit; text-decoration: inherit;">Id</a>
@@ -926,8 +818,7 @@ The following output properties are available:
         <span class="property-indicator"></span>
         <span class="property-type">string</span>
     </dt>
-    <dd>{{% md %}}ID of resource related to metric (budget).{{% /md %}}</dd>
-    <dt class="property-optional"
+    <dd>{{% md %}}ID of resource related to metric (budget).{{% /md %}}</dd><dt class="property-optional"
             title="Optional">
         <span id="type_go">
 <a href="#type_go" style="color: inherit; text-decoration: inherit;">Type</a>
@@ -935,14 +826,11 @@ The following output properties are available:
         <span class="property-indicator"></span>
         <span class="property-type">string</span>
     </dt>
-    <dd>{{% md %}}KPI type (Forecast, Budget).{{% /md %}}</dd>
-</dl>
+    <dd>{{% md %}}KPI type (Forecast, Budget).{{% /md %}}</dd></dl>
 {{% /choosable %}}
 
 {{% choosable language nodejs %}}
-<dl class="resources-properties">
-
-    <dt class="property-optional"
+<dl class="resources-properties"><dt class="property-optional"
             title="Optional">
         <span id="enabled_nodejs">
 <a href="#enabled_nodejs" style="color: inherit; text-decoration: inherit;">enabled</a>
@@ -950,8 +838,7 @@ The following output properties are available:
         <span class="property-indicator"></span>
         <span class="property-type">boolean</span>
     </dt>
-    <dd>{{% md %}}show the KPI in the UI?{{% /md %}}</dd>
-    <dt class="property-optional"
+    <dd>{{% md %}}show the KPI in the UI?{{% /md %}}</dd><dt class="property-optional"
             title="Optional">
         <span id="id_nodejs">
 <a href="#id_nodejs" style="color: inherit; text-decoration: inherit;">id</a>
@@ -959,8 +846,7 @@ The following output properties are available:
         <span class="property-indicator"></span>
         <span class="property-type">string</span>
     </dt>
-    <dd>{{% md %}}ID of resource related to metric (budget).{{% /md %}}</dd>
-    <dt class="property-optional"
+    <dd>{{% md %}}ID of resource related to metric (budget).{{% /md %}}</dd><dt class="property-optional"
             title="Optional">
         <span id="type_nodejs">
 <a href="#type_nodejs" style="color: inherit; text-decoration: inherit;">type</a>
@@ -968,14 +854,11 @@ The following output properties are available:
         <span class="property-indicator"></span>
         <span class="property-type">string</span>
     </dt>
-    <dd>{{% md %}}KPI type (Forecast, Budget).{{% /md %}}</dd>
-</dl>
+    <dd>{{% md %}}KPI type (Forecast, Budget).{{% /md %}}</dd></dl>
 {{% /choosable %}}
 
 {{% choosable language python %}}
-<dl class="resources-properties">
-
-    <dt class="property-optional"
+<dl class="resources-properties"><dt class="property-optional"
             title="Optional">
         <span id="enabled_python">
 <a href="#enabled_python" style="color: inherit; text-decoration: inherit;">enabled</a>
@@ -983,8 +866,7 @@ The following output properties are available:
         <span class="property-indicator"></span>
         <span class="property-type">bool</span>
     </dt>
-    <dd>{{% md %}}show the KPI in the UI?{{% /md %}}</dd>
-    <dt class="property-optional"
+    <dd>{{% md %}}show the KPI in the UI?{{% /md %}}</dd><dt class="property-optional"
             title="Optional">
         <span id="id_python">
 <a href="#id_python" style="color: inherit; text-decoration: inherit;">id</a>
@@ -992,8 +874,7 @@ The following output properties are available:
         <span class="property-indicator"></span>
         <span class="property-type">str</span>
     </dt>
-    <dd>{{% md %}}ID of resource related to metric (budget).{{% /md %}}</dd>
-    <dt class="property-optional"
+    <dd>{{% md %}}ID of resource related to metric (budget).{{% /md %}}</dd><dt class="property-optional"
             title="Optional">
         <span id="type_python">
 <a href="#type_python" style="color: inherit; text-decoration: inherit;">type</a>
@@ -1001,8 +882,7 @@ The following output properties are available:
         <span class="property-indicator"></span>
         <span class="property-type">str</span>
     </dt>
-    <dd>{{% md %}}KPI type (Forecast, Budget).{{% /md %}}</dd>
-</dl>
+    <dd>{{% md %}}KPI type (Forecast, Budget).{{% /md %}}</dd></dl>
 {{% /choosable %}}
 
 <h4 id="pivotpropertiesresponse">Pivot<wbr>Properties<wbr>Response</h4>
@@ -1010,9 +890,7 @@ The following output properties are available:
 
 
 {{% choosable language csharp %}}
-<dl class="resources-properties">
-
-    <dt class="property-optional"
+<dl class="resources-properties"><dt class="property-optional"
             title="Optional">
         <span id="name_csharp">
 <a href="#name_csharp" style="color: inherit; text-decoration: inherit;">Name</a>
@@ -1020,8 +898,7 @@ The following output properties are available:
         <span class="property-indicator"></span>
         <span class="property-type">string</span>
     </dt>
-    <dd>{{% md %}}Data field to show in view.{{% /md %}}</dd>
-    <dt class="property-optional"
+    <dd>{{% md %}}Data field to show in view.{{% /md %}}</dd><dt class="property-optional"
             title="Optional">
         <span id="type_csharp">
 <a href="#type_csharp" style="color: inherit; text-decoration: inherit;">Type</a>
@@ -1029,14 +906,11 @@ The following output properties are available:
         <span class="property-indicator"></span>
         <span class="property-type">string</span>
     </dt>
-    <dd>{{% md %}}Data type to show in view.{{% /md %}}</dd>
-</dl>
+    <dd>{{% md %}}Data type to show in view.{{% /md %}}</dd></dl>
 {{% /choosable %}}
 
 {{% choosable language go %}}
-<dl class="resources-properties">
-
-    <dt class="property-optional"
+<dl class="resources-properties"><dt class="property-optional"
             title="Optional">
         <span id="name_go">
 <a href="#name_go" style="color: inherit; text-decoration: inherit;">Name</a>
@@ -1044,8 +918,7 @@ The following output properties are available:
         <span class="property-indicator"></span>
         <span class="property-type">string</span>
     </dt>
-    <dd>{{% md %}}Data field to show in view.{{% /md %}}</dd>
-    <dt class="property-optional"
+    <dd>{{% md %}}Data field to show in view.{{% /md %}}</dd><dt class="property-optional"
             title="Optional">
         <span id="type_go">
 <a href="#type_go" style="color: inherit; text-decoration: inherit;">Type</a>
@@ -1053,14 +926,11 @@ The following output properties are available:
         <span class="property-indicator"></span>
         <span class="property-type">string</span>
     </dt>
-    <dd>{{% md %}}Data type to show in view.{{% /md %}}</dd>
-</dl>
+    <dd>{{% md %}}Data type to show in view.{{% /md %}}</dd></dl>
 {{% /choosable %}}
 
 {{% choosable language nodejs %}}
-<dl class="resources-properties">
-
-    <dt class="property-optional"
+<dl class="resources-properties"><dt class="property-optional"
             title="Optional">
         <span id="name_nodejs">
 <a href="#name_nodejs" style="color: inherit; text-decoration: inherit;">name</a>
@@ -1068,8 +938,7 @@ The following output properties are available:
         <span class="property-indicator"></span>
         <span class="property-type">string</span>
     </dt>
-    <dd>{{% md %}}Data field to show in view.{{% /md %}}</dd>
-    <dt class="property-optional"
+    <dd>{{% md %}}Data field to show in view.{{% /md %}}</dd><dt class="property-optional"
             title="Optional">
         <span id="type_nodejs">
 <a href="#type_nodejs" style="color: inherit; text-decoration: inherit;">type</a>
@@ -1077,14 +946,11 @@ The following output properties are available:
         <span class="property-indicator"></span>
         <span class="property-type">string</span>
     </dt>
-    <dd>{{% md %}}Data type to show in view.{{% /md %}}</dd>
-</dl>
+    <dd>{{% md %}}Data type to show in view.{{% /md %}}</dd></dl>
 {{% /choosable %}}
 
 {{% choosable language python %}}
-<dl class="resources-properties">
-
-    <dt class="property-optional"
+<dl class="resources-properties"><dt class="property-optional"
             title="Optional">
         <span id="name_python">
 <a href="#name_python" style="color: inherit; text-decoration: inherit;">name</a>
@@ -1092,8 +958,7 @@ The following output properties are available:
         <span class="property-indicator"></span>
         <span class="property-type">str</span>
     </dt>
-    <dd>{{% md %}}Data field to show in view.{{% /md %}}</dd>
-    <dt class="property-optional"
+    <dd>{{% md %}}Data field to show in view.{{% /md %}}</dd><dt class="property-optional"
             title="Optional">
         <span id="type_python">
 <a href="#type_python" style="color: inherit; text-decoration: inherit;">type</a>
@@ -1101,8 +966,7 @@ The following output properties are available:
         <span class="property-indicator"></span>
         <span class="property-type">str</span>
     </dt>
-    <dd>{{% md %}}Data type to show in view.{{% /md %}}</dd>
-</dl>
+    <dd>{{% md %}}Data type to show in view.{{% /md %}}</dd></dl>
 {{% /choosable %}}
 
 <h4 id="reportconfigaggregationresponse">Report<wbr>Config<wbr>Aggregation<wbr>Response</h4>
@@ -1110,9 +974,7 @@ The following output properties are available:
 
 
 {{% choosable language csharp %}}
-<dl class="resources-properties">
-
-    <dt class="property-required"
+<dl class="resources-properties"><dt class="property-required"
             title="Required">
         <span id="function_csharp">
 <a href="#function_csharp" style="color: inherit; text-decoration: inherit;">Function</a>
@@ -1120,8 +982,7 @@ The following output properties are available:
         <span class="property-indicator"></span>
         <span class="property-type">string</span>
     </dt>
-    <dd>{{% md %}}The name of the aggregation function to use.{{% /md %}}</dd>
-    <dt class="property-required"
+    <dd>{{% md %}}The name of the aggregation function to use.{{% /md %}}</dd><dt class="property-required"
             title="Required">
         <span id="name_csharp">
 <a href="#name_csharp" style="color: inherit; text-decoration: inherit;">Name</a>
@@ -1129,14 +990,11 @@ The following output properties are available:
         <span class="property-indicator"></span>
         <span class="property-type">string</span>
     </dt>
-    <dd>{{% md %}}The name of the column to aggregate.{{% /md %}}</dd>
-</dl>
+    <dd>{{% md %}}The name of the column to aggregate.{{% /md %}}</dd></dl>
 {{% /choosable %}}
 
 {{% choosable language go %}}
-<dl class="resources-properties">
-
-    <dt class="property-required"
+<dl class="resources-properties"><dt class="property-required"
             title="Required">
         <span id="function_go">
 <a href="#function_go" style="color: inherit; text-decoration: inherit;">Function</a>
@@ -1144,8 +1002,7 @@ The following output properties are available:
         <span class="property-indicator"></span>
         <span class="property-type">string</span>
     </dt>
-    <dd>{{% md %}}The name of the aggregation function to use.{{% /md %}}</dd>
-    <dt class="property-required"
+    <dd>{{% md %}}The name of the aggregation function to use.{{% /md %}}</dd><dt class="property-required"
             title="Required">
         <span id="name_go">
 <a href="#name_go" style="color: inherit; text-decoration: inherit;">Name</a>
@@ -1153,14 +1010,11 @@ The following output properties are available:
         <span class="property-indicator"></span>
         <span class="property-type">string</span>
     </dt>
-    <dd>{{% md %}}The name of the column to aggregate.{{% /md %}}</dd>
-</dl>
+    <dd>{{% md %}}The name of the column to aggregate.{{% /md %}}</dd></dl>
 {{% /choosable %}}
 
 {{% choosable language nodejs %}}
-<dl class="resources-properties">
-
-    <dt class="property-required"
+<dl class="resources-properties"><dt class="property-required"
             title="Required">
         <span id="function_nodejs">
 <a href="#function_nodejs" style="color: inherit; text-decoration: inherit;">function</a>
@@ -1168,8 +1022,7 @@ The following output properties are available:
         <span class="property-indicator"></span>
         <span class="property-type">string</span>
     </dt>
-    <dd>{{% md %}}The name of the aggregation function to use.{{% /md %}}</dd>
-    <dt class="property-required"
+    <dd>{{% md %}}The name of the aggregation function to use.{{% /md %}}</dd><dt class="property-required"
             title="Required">
         <span id="name_nodejs">
 <a href="#name_nodejs" style="color: inherit; text-decoration: inherit;">name</a>
@@ -1177,14 +1030,11 @@ The following output properties are available:
         <span class="property-indicator"></span>
         <span class="property-type">string</span>
     </dt>
-    <dd>{{% md %}}The name of the column to aggregate.{{% /md %}}</dd>
-</dl>
+    <dd>{{% md %}}The name of the column to aggregate.{{% /md %}}</dd></dl>
 {{% /choosable %}}
 
 {{% choosable language python %}}
-<dl class="resources-properties">
-
-    <dt class="property-required"
+<dl class="resources-properties"><dt class="property-required"
             title="Required">
         <span id="function_python">
 <a href="#function_python" style="color: inherit; text-decoration: inherit;">function</a>
@@ -1192,8 +1042,7 @@ The following output properties are available:
         <span class="property-indicator"></span>
         <span class="property-type">str</span>
     </dt>
-    <dd>{{% md %}}The name of the aggregation function to use.{{% /md %}}</dd>
-    <dt class="property-required"
+    <dd>{{% md %}}The name of the aggregation function to use.{{% /md %}}</dd><dt class="property-required"
             title="Required">
         <span id="name_python">
 <a href="#name_python" style="color: inherit; text-decoration: inherit;">name</a>
@@ -1201,8 +1050,7 @@ The following output properties are available:
         <span class="property-indicator"></span>
         <span class="property-type">str</span>
     </dt>
-    <dd>{{% md %}}The name of the column to aggregate.{{% /md %}}</dd>
-</dl>
+    <dd>{{% md %}}The name of the column to aggregate.{{% /md %}}</dd></dl>
 {{% /choosable %}}
 
 <h4 id="reportconfigcomparisonexpressionresponse">Report<wbr>Config<wbr>Comparison<wbr>Expression<wbr>Response</h4>
@@ -1210,9 +1058,7 @@ The following output properties are available:
 
 
 {{% choosable language csharp %}}
-<dl class="resources-properties">
-
-    <dt class="property-required"
+<dl class="resources-properties"><dt class="property-required"
             title="Required">
         <span id="name_csharp">
 <a href="#name_csharp" style="color: inherit; text-decoration: inherit;">Name</a>
@@ -1220,8 +1066,7 @@ The following output properties are available:
         <span class="property-indicator"></span>
         <span class="property-type">string</span>
     </dt>
-    <dd>{{% md %}}The name of the column to use in comparison.{{% /md %}}</dd>
-    <dt class="property-required"
+    <dd>{{% md %}}The name of the column to use in comparison.{{% /md %}}</dd><dt class="property-required"
             title="Required">
         <span id="operator_csharp">
 <a href="#operator_csharp" style="color: inherit; text-decoration: inherit;">Operator</a>
@@ -1229,8 +1074,7 @@ The following output properties are available:
         <span class="property-indicator"></span>
         <span class="property-type">string</span>
     </dt>
-    <dd>{{% md %}}The operator to use for comparison.{{% /md %}}</dd>
-    <dt class="property-required"
+    <dd>{{% md %}}The operator to use for comparison.{{% /md %}}</dd><dt class="property-required"
             title="Required">
         <span id="values_csharp">
 <a href="#values_csharp" style="color: inherit; text-decoration: inherit;">Values</a>
@@ -1238,14 +1082,11 @@ The following output properties are available:
         <span class="property-indicator"></span>
         <span class="property-type">List&lt;string&gt;</span>
     </dt>
-    <dd>{{% md %}}Array of values to use for comparison{{% /md %}}</dd>
-</dl>
+    <dd>{{% md %}}Array of values to use for comparison{{% /md %}}</dd></dl>
 {{% /choosable %}}
 
 {{% choosable language go %}}
-<dl class="resources-properties">
-
-    <dt class="property-required"
+<dl class="resources-properties"><dt class="property-required"
             title="Required">
         <span id="name_go">
 <a href="#name_go" style="color: inherit; text-decoration: inherit;">Name</a>
@@ -1253,8 +1094,7 @@ The following output properties are available:
         <span class="property-indicator"></span>
         <span class="property-type">string</span>
     </dt>
-    <dd>{{% md %}}The name of the column to use in comparison.{{% /md %}}</dd>
-    <dt class="property-required"
+    <dd>{{% md %}}The name of the column to use in comparison.{{% /md %}}</dd><dt class="property-required"
             title="Required">
         <span id="operator_go">
 <a href="#operator_go" style="color: inherit; text-decoration: inherit;">Operator</a>
@@ -1262,8 +1102,7 @@ The following output properties are available:
         <span class="property-indicator"></span>
         <span class="property-type">string</span>
     </dt>
-    <dd>{{% md %}}The operator to use for comparison.{{% /md %}}</dd>
-    <dt class="property-required"
+    <dd>{{% md %}}The operator to use for comparison.{{% /md %}}</dd><dt class="property-required"
             title="Required">
         <span id="values_go">
 <a href="#values_go" style="color: inherit; text-decoration: inherit;">Values</a>
@@ -1271,14 +1110,11 @@ The following output properties are available:
         <span class="property-indicator"></span>
         <span class="property-type">[]string</span>
     </dt>
-    <dd>{{% md %}}Array of values to use for comparison{{% /md %}}</dd>
-</dl>
+    <dd>{{% md %}}Array of values to use for comparison{{% /md %}}</dd></dl>
 {{% /choosable %}}
 
 {{% choosable language nodejs %}}
-<dl class="resources-properties">
-
-    <dt class="property-required"
+<dl class="resources-properties"><dt class="property-required"
             title="Required">
         <span id="name_nodejs">
 <a href="#name_nodejs" style="color: inherit; text-decoration: inherit;">name</a>
@@ -1286,8 +1122,7 @@ The following output properties are available:
         <span class="property-indicator"></span>
         <span class="property-type">string</span>
     </dt>
-    <dd>{{% md %}}The name of the column to use in comparison.{{% /md %}}</dd>
-    <dt class="property-required"
+    <dd>{{% md %}}The name of the column to use in comparison.{{% /md %}}</dd><dt class="property-required"
             title="Required">
         <span id="operator_nodejs">
 <a href="#operator_nodejs" style="color: inherit; text-decoration: inherit;">operator</a>
@@ -1295,8 +1130,7 @@ The following output properties are available:
         <span class="property-indicator"></span>
         <span class="property-type">string</span>
     </dt>
-    <dd>{{% md %}}The operator to use for comparison.{{% /md %}}</dd>
-    <dt class="property-required"
+    <dd>{{% md %}}The operator to use for comparison.{{% /md %}}</dd><dt class="property-required"
             title="Required">
         <span id="values_nodejs">
 <a href="#values_nodejs" style="color: inherit; text-decoration: inherit;">values</a>
@@ -1304,14 +1138,11 @@ The following output properties are available:
         <span class="property-indicator"></span>
         <span class="property-type">string[]</span>
     </dt>
-    <dd>{{% md %}}Array of values to use for comparison{{% /md %}}</dd>
-</dl>
+    <dd>{{% md %}}Array of values to use for comparison{{% /md %}}</dd></dl>
 {{% /choosable %}}
 
 {{% choosable language python %}}
-<dl class="resources-properties">
-
-    <dt class="property-required"
+<dl class="resources-properties"><dt class="property-required"
             title="Required">
         <span id="name_python">
 <a href="#name_python" style="color: inherit; text-decoration: inherit;">name</a>
@@ -1319,8 +1150,7 @@ The following output properties are available:
         <span class="property-indicator"></span>
         <span class="property-type">str</span>
     </dt>
-    <dd>{{% md %}}The name of the column to use in comparison.{{% /md %}}</dd>
-    <dt class="property-required"
+    <dd>{{% md %}}The name of the column to use in comparison.{{% /md %}}</dd><dt class="property-required"
             title="Required">
         <span id="operator_python">
 <a href="#operator_python" style="color: inherit; text-decoration: inherit;">operator</a>
@@ -1328,8 +1158,7 @@ The following output properties are available:
         <span class="property-indicator"></span>
         <span class="property-type">str</span>
     </dt>
-    <dd>{{% md %}}The operator to use for comparison.{{% /md %}}</dd>
-    <dt class="property-required"
+    <dd>{{% md %}}The operator to use for comparison.{{% /md %}}</dd><dt class="property-required"
             title="Required">
         <span id="values_python">
 <a href="#values_python" style="color: inherit; text-decoration: inherit;">values</a>
@@ -1337,8 +1166,7 @@ The following output properties are available:
         <span class="property-indicator"></span>
         <span class="property-type">Sequence[str]</span>
     </dt>
-    <dd>{{% md %}}Array of values to use for comparison{{% /md %}}</dd>
-</dl>
+    <dd>{{% md %}}Array of values to use for comparison{{% /md %}}</dd></dl>
 {{% /choosable %}}
 
 <h4 id="reportconfigdatasetconfigurationresponse">Report<wbr>Config<wbr>Dataset<wbr>Configuration<wbr>Response</h4>
@@ -1346,9 +1174,7 @@ The following output properties are available:
 
 
 {{% choosable language csharp %}}
-<dl class="resources-properties">
-
-    <dt class="property-optional"
+<dl class="resources-properties"><dt class="property-optional"
             title="Optional">
         <span id="columns_csharp">
 <a href="#columns_csharp" style="color: inherit; text-decoration: inherit;">Columns</a>
@@ -1356,14 +1182,11 @@ The following output properties are available:
         <span class="property-indicator"></span>
         <span class="property-type">List&lt;string&gt;</span>
     </dt>
-    <dd>{{% md %}}Array of column names to be included in the report. Any valid report column name is allowed. If not provided, then report includes all columns.{{% /md %}}</dd>
-</dl>
+    <dd>{{% md %}}Array of column names to be included in the report. Any valid report column name is allowed. If not provided, then report includes all columns.{{% /md %}}</dd></dl>
 {{% /choosable %}}
 
 {{% choosable language go %}}
-<dl class="resources-properties">
-
-    <dt class="property-optional"
+<dl class="resources-properties"><dt class="property-optional"
             title="Optional">
         <span id="columns_go">
 <a href="#columns_go" style="color: inherit; text-decoration: inherit;">Columns</a>
@@ -1371,14 +1194,11 @@ The following output properties are available:
         <span class="property-indicator"></span>
         <span class="property-type">[]string</span>
     </dt>
-    <dd>{{% md %}}Array of column names to be included in the report. Any valid report column name is allowed. If not provided, then report includes all columns.{{% /md %}}</dd>
-</dl>
+    <dd>{{% md %}}Array of column names to be included in the report. Any valid report column name is allowed. If not provided, then report includes all columns.{{% /md %}}</dd></dl>
 {{% /choosable %}}
 
 {{% choosable language nodejs %}}
-<dl class="resources-properties">
-
-    <dt class="property-optional"
+<dl class="resources-properties"><dt class="property-optional"
             title="Optional">
         <span id="columns_nodejs">
 <a href="#columns_nodejs" style="color: inherit; text-decoration: inherit;">columns</a>
@@ -1386,14 +1206,11 @@ The following output properties are available:
         <span class="property-indicator"></span>
         <span class="property-type">string[]</span>
     </dt>
-    <dd>{{% md %}}Array of column names to be included in the report. Any valid report column name is allowed. If not provided, then report includes all columns.{{% /md %}}</dd>
-</dl>
+    <dd>{{% md %}}Array of column names to be included in the report. Any valid report column name is allowed. If not provided, then report includes all columns.{{% /md %}}</dd></dl>
 {{% /choosable %}}
 
 {{% choosable language python %}}
-<dl class="resources-properties">
-
-    <dt class="property-optional"
+<dl class="resources-properties"><dt class="property-optional"
             title="Optional">
         <span id="columns_python">
 <a href="#columns_python" style="color: inherit; text-decoration: inherit;">columns</a>
@@ -1401,8 +1218,7 @@ The following output properties are available:
         <span class="property-indicator"></span>
         <span class="property-type">Sequence[str]</span>
     </dt>
-    <dd>{{% md %}}Array of column names to be included in the report. Any valid report column name is allowed. If not provided, then report includes all columns.{{% /md %}}</dd>
-</dl>
+    <dd>{{% md %}}Array of column names to be included in the report. Any valid report column name is allowed. If not provided, then report includes all columns.{{% /md %}}</dd></dl>
 {{% /choosable %}}
 
 <h4 id="reportconfigdatasetresponse">Report<wbr>Config<wbr>Dataset<wbr>Response</h4>
@@ -1410,9 +1226,7 @@ The following output properties are available:
 
 
 {{% choosable language csharp %}}
-<dl class="resources-properties">
-
-    <dt class="property-optional"
+<dl class="resources-properties"><dt class="property-optional"
             title="Optional">
         <span id="aggregation_csharp">
 <a href="#aggregation_csharp" style="color: inherit; text-decoration: inherit;">Aggregation</a>
@@ -1420,8 +1234,7 @@ The following output properties are available:
         <span class="property-indicator"></span>
         <span class="property-type">Dictionary&lt;string, Pulumi.<wbr>Azure<wbr>Native.<wbr>Cost<wbr>Management.<wbr>Inputs.<wbr>Report<wbr>Config<wbr>Aggregation<wbr>Response<wbr>Args&gt;</span>
     </dt>
-    <dd>{{% md %}}Dictionary of aggregation expression to use in the report. The key of each item in the dictionary is the alias for the aggregated column. Report can have up to 2 aggregation clauses.{{% /md %}}</dd>
-    <dt class="property-optional"
+    <dd>{{% md %}}Dictionary of aggregation expression to use in the report. The key of each item in the dictionary is the alias for the aggregated column. Report can have up to 2 aggregation clauses.{{% /md %}}</dd><dt class="property-optional"
             title="Optional">
         <span id="configuration_csharp">
 <a href="#configuration_csharp" style="color: inherit; text-decoration: inherit;">Configuration</a>
@@ -1429,8 +1242,7 @@ The following output properties are available:
         <span class="property-indicator"></span>
         <span class="property-type"><a href="#reportconfigdatasetconfigurationresponse">Pulumi.<wbr>Azure<wbr>Native.<wbr>Cost<wbr>Management.<wbr>Inputs.<wbr>Report<wbr>Config<wbr>Dataset<wbr>Configuration<wbr>Response<wbr>Args</a></span>
     </dt>
-    <dd>{{% md %}}Has configuration information for the data in the report. The configuration will be ignored if aggregation and grouping are provided.{{% /md %}}</dd>
-    <dt class="property-optional"
+    <dd>{{% md %}}Has configuration information for the data in the report. The configuration will be ignored if aggregation and grouping are provided.{{% /md %}}</dd><dt class="property-optional"
             title="Optional">
         <span id="filter_csharp">
 <a href="#filter_csharp" style="color: inherit; text-decoration: inherit;">Filter</a>
@@ -1438,8 +1250,7 @@ The following output properties are available:
         <span class="property-indicator"></span>
         <span class="property-type"><a href="#reportconfigfilterresponse">Pulumi.<wbr>Azure<wbr>Native.<wbr>Cost<wbr>Management.<wbr>Inputs.<wbr>Report<wbr>Config<wbr>Filter<wbr>Response<wbr>Args</a></span>
     </dt>
-    <dd>{{% md %}}Has filter expression to use in the report.{{% /md %}}</dd>
-    <dt class="property-optional"
+    <dd>{{% md %}}Has filter expression to use in the report.{{% /md %}}</dd><dt class="property-optional"
             title="Optional">
         <span id="granularity_csharp">
 <a href="#granularity_csharp" style="color: inherit; text-decoration: inherit;">Granularity</a>
@@ -1447,8 +1258,7 @@ The following output properties are available:
         <span class="property-indicator"></span>
         <span class="property-type">string</span>
     </dt>
-    <dd>{{% md %}}The granularity of rows in the report.{{% /md %}}</dd>
-    <dt class="property-optional"
+    <dd>{{% md %}}The granularity of rows in the report.{{% /md %}}</dd><dt class="property-optional"
             title="Optional">
         <span id="grouping_csharp">
 <a href="#grouping_csharp" style="color: inherit; text-decoration: inherit;">Grouping</a>
@@ -1456,8 +1266,7 @@ The following output properties are available:
         <span class="property-indicator"></span>
         <span class="property-type"><a href="#reportconfiggroupingresponse">List&lt;Pulumi.<wbr>Azure<wbr>Native.<wbr>Cost<wbr>Management.<wbr>Inputs.<wbr>Report<wbr>Config<wbr>Grouping<wbr>Response<wbr>Args&gt;</a></span>
     </dt>
-    <dd>{{% md %}}Array of group by expression to use in the report. Report can have up to 2 group by clauses.{{% /md %}}</dd>
-    <dt class="property-optional"
+    <dd>{{% md %}}Array of group by expression to use in the report. Report can have up to 2 group by clauses.{{% /md %}}</dd><dt class="property-optional"
             title="Optional">
         <span id="sorting_csharp">
 <a href="#sorting_csharp" style="color: inherit; text-decoration: inherit;">Sorting</a>
@@ -1465,14 +1274,11 @@ The following output properties are available:
         <span class="property-indicator"></span>
         <span class="property-type"><a href="#reportconfigsortingresponse">List&lt;Pulumi.<wbr>Azure<wbr>Native.<wbr>Cost<wbr>Management.<wbr>Inputs.<wbr>Report<wbr>Config<wbr>Sorting<wbr>Response<wbr>Args&gt;</a></span>
     </dt>
-    <dd>{{% md %}}Array of order by expression to use in the report.{{% /md %}}</dd>
-</dl>
+    <dd>{{% md %}}Array of order by expression to use in the report.{{% /md %}}</dd></dl>
 {{% /choosable %}}
 
 {{% choosable language go %}}
-<dl class="resources-properties">
-
-    <dt class="property-optional"
+<dl class="resources-properties"><dt class="property-optional"
             title="Optional">
         <span id="aggregation_go">
 <a href="#aggregation_go" style="color: inherit; text-decoration: inherit;">Aggregation</a>
@@ -1480,8 +1286,7 @@ The following output properties are available:
         <span class="property-indicator"></span>
         <span class="property-type">map[string]Report<wbr>Config<wbr>Aggregation<wbr>Response</span>
     </dt>
-    <dd>{{% md %}}Dictionary of aggregation expression to use in the report. The key of each item in the dictionary is the alias for the aggregated column. Report can have up to 2 aggregation clauses.{{% /md %}}</dd>
-    <dt class="property-optional"
+    <dd>{{% md %}}Dictionary of aggregation expression to use in the report. The key of each item in the dictionary is the alias for the aggregated column. Report can have up to 2 aggregation clauses.{{% /md %}}</dd><dt class="property-optional"
             title="Optional">
         <span id="configuration_go">
 <a href="#configuration_go" style="color: inherit; text-decoration: inherit;">Configuration</a>
@@ -1489,8 +1294,7 @@ The following output properties are available:
         <span class="property-indicator"></span>
         <span class="property-type"><a href="#reportconfigdatasetconfigurationresponse">Report<wbr>Config<wbr>Dataset<wbr>Configuration<wbr>Response</a></span>
     </dt>
-    <dd>{{% md %}}Has configuration information for the data in the report. The configuration will be ignored if aggregation and grouping are provided.{{% /md %}}</dd>
-    <dt class="property-optional"
+    <dd>{{% md %}}Has configuration information for the data in the report. The configuration will be ignored if aggregation and grouping are provided.{{% /md %}}</dd><dt class="property-optional"
             title="Optional">
         <span id="filter_go">
 <a href="#filter_go" style="color: inherit; text-decoration: inherit;">Filter</a>
@@ -1498,8 +1302,7 @@ The following output properties are available:
         <span class="property-indicator"></span>
         <span class="property-type"><a href="#reportconfigfilterresponse">Report<wbr>Config<wbr>Filter<wbr>Response</a></span>
     </dt>
-    <dd>{{% md %}}Has filter expression to use in the report.{{% /md %}}</dd>
-    <dt class="property-optional"
+    <dd>{{% md %}}Has filter expression to use in the report.{{% /md %}}</dd><dt class="property-optional"
             title="Optional">
         <span id="granularity_go">
 <a href="#granularity_go" style="color: inherit; text-decoration: inherit;">Granularity</a>
@@ -1507,8 +1310,7 @@ The following output properties are available:
         <span class="property-indicator"></span>
         <span class="property-type">string</span>
     </dt>
-    <dd>{{% md %}}The granularity of rows in the report.{{% /md %}}</dd>
-    <dt class="property-optional"
+    <dd>{{% md %}}The granularity of rows in the report.{{% /md %}}</dd><dt class="property-optional"
             title="Optional">
         <span id="grouping_go">
 <a href="#grouping_go" style="color: inherit; text-decoration: inherit;">Grouping</a>
@@ -1516,8 +1318,7 @@ The following output properties are available:
         <span class="property-indicator"></span>
         <span class="property-type"><a href="#reportconfiggroupingresponse">[]Report<wbr>Config<wbr>Grouping<wbr>Response</a></span>
     </dt>
-    <dd>{{% md %}}Array of group by expression to use in the report. Report can have up to 2 group by clauses.{{% /md %}}</dd>
-    <dt class="property-optional"
+    <dd>{{% md %}}Array of group by expression to use in the report. Report can have up to 2 group by clauses.{{% /md %}}</dd><dt class="property-optional"
             title="Optional">
         <span id="sorting_go">
 <a href="#sorting_go" style="color: inherit; text-decoration: inherit;">Sorting</a>
@@ -1525,14 +1326,11 @@ The following output properties are available:
         <span class="property-indicator"></span>
         <span class="property-type"><a href="#reportconfigsortingresponse">[]Report<wbr>Config<wbr>Sorting<wbr>Response</a></span>
     </dt>
-    <dd>{{% md %}}Array of order by expression to use in the report.{{% /md %}}</dd>
-</dl>
+    <dd>{{% md %}}Array of order by expression to use in the report.{{% /md %}}</dd></dl>
 {{% /choosable %}}
 
 {{% choosable language nodejs %}}
-<dl class="resources-properties">
-
-    <dt class="property-optional"
+<dl class="resources-properties"><dt class="property-optional"
             title="Optional">
         <span id="aggregation_nodejs">
 <a href="#aggregation_nodejs" style="color: inherit; text-decoration: inherit;">aggregation</a>
@@ -1540,8 +1338,7 @@ The following output properties are available:
         <span class="property-indicator"></span>
         <span class="property-type">{[key: string]: Report<wbr>Config<wbr>Aggregation<wbr>Response}</span>
     </dt>
-    <dd>{{% md %}}Dictionary of aggregation expression to use in the report. The key of each item in the dictionary is the alias for the aggregated column. Report can have up to 2 aggregation clauses.{{% /md %}}</dd>
-    <dt class="property-optional"
+    <dd>{{% md %}}Dictionary of aggregation expression to use in the report. The key of each item in the dictionary is the alias for the aggregated column. Report can have up to 2 aggregation clauses.{{% /md %}}</dd><dt class="property-optional"
             title="Optional">
         <span id="configuration_nodejs">
 <a href="#configuration_nodejs" style="color: inherit; text-decoration: inherit;">configuration</a>
@@ -1549,8 +1346,7 @@ The following output properties are available:
         <span class="property-indicator"></span>
         <span class="property-type"><a href="#reportconfigdatasetconfigurationresponse">Report<wbr>Config<wbr>Dataset<wbr>Configuration<wbr>Response</a></span>
     </dt>
-    <dd>{{% md %}}Has configuration information for the data in the report. The configuration will be ignored if aggregation and grouping are provided.{{% /md %}}</dd>
-    <dt class="property-optional"
+    <dd>{{% md %}}Has configuration information for the data in the report. The configuration will be ignored if aggregation and grouping are provided.{{% /md %}}</dd><dt class="property-optional"
             title="Optional">
         <span id="filter_nodejs">
 <a href="#filter_nodejs" style="color: inherit; text-decoration: inherit;">filter</a>
@@ -1558,8 +1354,7 @@ The following output properties are available:
         <span class="property-indicator"></span>
         <span class="property-type"><a href="#reportconfigfilterresponse">Report<wbr>Config<wbr>Filter<wbr>Response</a></span>
     </dt>
-    <dd>{{% md %}}Has filter expression to use in the report.{{% /md %}}</dd>
-    <dt class="property-optional"
+    <dd>{{% md %}}Has filter expression to use in the report.{{% /md %}}</dd><dt class="property-optional"
             title="Optional">
         <span id="granularity_nodejs">
 <a href="#granularity_nodejs" style="color: inherit; text-decoration: inherit;">granularity</a>
@@ -1567,8 +1362,7 @@ The following output properties are available:
         <span class="property-indicator"></span>
         <span class="property-type">string</span>
     </dt>
-    <dd>{{% md %}}The granularity of rows in the report.{{% /md %}}</dd>
-    <dt class="property-optional"
+    <dd>{{% md %}}The granularity of rows in the report.{{% /md %}}</dd><dt class="property-optional"
             title="Optional">
         <span id="grouping_nodejs">
 <a href="#grouping_nodejs" style="color: inherit; text-decoration: inherit;">grouping</a>
@@ -1576,8 +1370,7 @@ The following output properties are available:
         <span class="property-indicator"></span>
         <span class="property-type"><a href="#reportconfiggroupingresponse">Report<wbr>Config<wbr>Grouping<wbr>Response[]</a></span>
     </dt>
-    <dd>{{% md %}}Array of group by expression to use in the report. Report can have up to 2 group by clauses.{{% /md %}}</dd>
-    <dt class="property-optional"
+    <dd>{{% md %}}Array of group by expression to use in the report. Report can have up to 2 group by clauses.{{% /md %}}</dd><dt class="property-optional"
             title="Optional">
         <span id="sorting_nodejs">
 <a href="#sorting_nodejs" style="color: inherit; text-decoration: inherit;">sorting</a>
@@ -1585,14 +1378,11 @@ The following output properties are available:
         <span class="property-indicator"></span>
         <span class="property-type"><a href="#reportconfigsortingresponse">Report<wbr>Config<wbr>Sorting<wbr>Response[]</a></span>
     </dt>
-    <dd>{{% md %}}Array of order by expression to use in the report.{{% /md %}}</dd>
-</dl>
+    <dd>{{% md %}}Array of order by expression to use in the report.{{% /md %}}</dd></dl>
 {{% /choosable %}}
 
 {{% choosable language python %}}
-<dl class="resources-properties">
-
-    <dt class="property-optional"
+<dl class="resources-properties"><dt class="property-optional"
             title="Optional">
         <span id="aggregation_python">
 <a href="#aggregation_python" style="color: inherit; text-decoration: inherit;">aggregation</a>
@@ -1600,8 +1390,7 @@ The following output properties are available:
         <span class="property-indicator"></span>
         <span class="property-type">Mapping[str, Report<wbr>Config<wbr>Aggregation<wbr>Response<wbr>Args]</span>
     </dt>
-    <dd>{{% md %}}Dictionary of aggregation expression to use in the report. The key of each item in the dictionary is the alias for the aggregated column. Report can have up to 2 aggregation clauses.{{% /md %}}</dd>
-    <dt class="property-optional"
+    <dd>{{% md %}}Dictionary of aggregation expression to use in the report. The key of each item in the dictionary is the alias for the aggregated column. Report can have up to 2 aggregation clauses.{{% /md %}}</dd><dt class="property-optional"
             title="Optional">
         <span id="configuration_python">
 <a href="#configuration_python" style="color: inherit; text-decoration: inherit;">configuration</a>
@@ -1609,8 +1398,7 @@ The following output properties are available:
         <span class="property-indicator"></span>
         <span class="property-type"><a href="#reportconfigdatasetconfigurationresponse">Report<wbr>Config<wbr>Dataset<wbr>Configuration<wbr>Response<wbr>Args</a></span>
     </dt>
-    <dd>{{% md %}}Has configuration information for the data in the report. The configuration will be ignored if aggregation and grouping are provided.{{% /md %}}</dd>
-    <dt class="property-optional"
+    <dd>{{% md %}}Has configuration information for the data in the report. The configuration will be ignored if aggregation and grouping are provided.{{% /md %}}</dd><dt class="property-optional"
             title="Optional">
         <span id="filter_python">
 <a href="#filter_python" style="color: inherit; text-decoration: inherit;">filter</a>
@@ -1618,8 +1406,7 @@ The following output properties are available:
         <span class="property-indicator"></span>
         <span class="property-type"><a href="#reportconfigfilterresponse">Report<wbr>Config<wbr>Filter<wbr>Response<wbr>Args</a></span>
     </dt>
-    <dd>{{% md %}}Has filter expression to use in the report.{{% /md %}}</dd>
-    <dt class="property-optional"
+    <dd>{{% md %}}Has filter expression to use in the report.{{% /md %}}</dd><dt class="property-optional"
             title="Optional">
         <span id="granularity_python">
 <a href="#granularity_python" style="color: inherit; text-decoration: inherit;">granularity</a>
@@ -1627,8 +1414,7 @@ The following output properties are available:
         <span class="property-indicator"></span>
         <span class="property-type">str</span>
     </dt>
-    <dd>{{% md %}}The granularity of rows in the report.{{% /md %}}</dd>
-    <dt class="property-optional"
+    <dd>{{% md %}}The granularity of rows in the report.{{% /md %}}</dd><dt class="property-optional"
             title="Optional">
         <span id="grouping_python">
 <a href="#grouping_python" style="color: inherit; text-decoration: inherit;">grouping</a>
@@ -1636,8 +1422,7 @@ The following output properties are available:
         <span class="property-indicator"></span>
         <span class="property-type"><a href="#reportconfiggroupingresponse">Sequence[Report<wbr>Config<wbr>Grouping<wbr>Response<wbr>Args]</a></span>
     </dt>
-    <dd>{{% md %}}Array of group by expression to use in the report. Report can have up to 2 group by clauses.{{% /md %}}</dd>
-    <dt class="property-optional"
+    <dd>{{% md %}}Array of group by expression to use in the report. Report can have up to 2 group by clauses.{{% /md %}}</dd><dt class="property-optional"
             title="Optional">
         <span id="sorting_python">
 <a href="#sorting_python" style="color: inherit; text-decoration: inherit;">sorting</a>
@@ -1645,8 +1430,7 @@ The following output properties are available:
         <span class="property-indicator"></span>
         <span class="property-type"><a href="#reportconfigsortingresponse">Sequence[Report<wbr>Config<wbr>Sorting<wbr>Response<wbr>Args]</a></span>
     </dt>
-    <dd>{{% md %}}Array of order by expression to use in the report.{{% /md %}}</dd>
-</dl>
+    <dd>{{% md %}}Array of order by expression to use in the report.{{% /md %}}</dd></dl>
 {{% /choosable %}}
 
 <h4 id="reportconfigfilterresponse">Report<wbr>Config<wbr>Filter<wbr>Response</h4>
@@ -1654,9 +1438,7 @@ The following output properties are available:
 
 
 {{% choosable language csharp %}}
-<dl class="resources-properties">
-
-    <dt class="property-optional"
+<dl class="resources-properties"><dt class="property-optional"
             title="Optional">
         <span id="and_csharp">
 <a href="#and_csharp" style="color: inherit; text-decoration: inherit;">And</a>
@@ -1664,8 +1446,7 @@ The following output properties are available:
         <span class="property-indicator"></span>
         <span class="property-type"><a href="#reportconfigfilterresponse">List&lt;Pulumi.<wbr>Azure<wbr>Native.<wbr>Cost<wbr>Management.<wbr>Inputs.<wbr>Report<wbr>Config<wbr>Filter<wbr>Response<wbr>Args&gt;</a></span>
     </dt>
-    <dd>{{% md %}}The logical "AND" expression. Must have at least 2 items.{{% /md %}}</dd>
-    <dt class="property-optional"
+    <dd>{{% md %}}The logical "AND" expression. Must have at least 2 items.{{% /md %}}</dd><dt class="property-optional"
             title="Optional">
         <span id="dimensions_csharp">
 <a href="#dimensions_csharp" style="color: inherit; text-decoration: inherit;">Dimensions</a>
@@ -1673,8 +1454,7 @@ The following output properties are available:
         <span class="property-indicator"></span>
         <span class="property-type"><a href="#reportconfigcomparisonexpressionresponse">Pulumi.<wbr>Azure<wbr>Native.<wbr>Cost<wbr>Management.<wbr>Inputs.<wbr>Report<wbr>Config<wbr>Comparison<wbr>Expression<wbr>Response<wbr>Args</a></span>
     </dt>
-    <dd>{{% md %}}Has comparison expression for a dimension{{% /md %}}</dd>
-    <dt class="property-optional"
+    <dd>{{% md %}}Has comparison expression for a dimension{{% /md %}}</dd><dt class="property-optional"
             title="Optional">
         <span id="or_csharp">
 <a href="#or_csharp" style="color: inherit; text-decoration: inherit;">Or</a>
@@ -1682,8 +1462,7 @@ The following output properties are available:
         <span class="property-indicator"></span>
         <span class="property-type"><a href="#reportconfigfilterresponse">List&lt;Pulumi.<wbr>Azure<wbr>Native.<wbr>Cost<wbr>Management.<wbr>Inputs.<wbr>Report<wbr>Config<wbr>Filter<wbr>Response<wbr>Args&gt;</a></span>
     </dt>
-    <dd>{{% md %}}The logical "OR" expression. Must have at least 2 items.{{% /md %}}</dd>
-    <dt class="property-optional"
+    <dd>{{% md %}}The logical "OR" expression. Must have at least 2 items.{{% /md %}}</dd><dt class="property-optional"
             title="Optional">
         <span id="tagkey_csharp">
 <a href="#tagkey_csharp" style="color: inherit; text-decoration: inherit;">Tag<wbr>Key</a>
@@ -1691,8 +1470,7 @@ The following output properties are available:
         <span class="property-indicator"></span>
         <span class="property-type"><a href="#reportconfigcomparisonexpressionresponse">Pulumi.<wbr>Azure<wbr>Native.<wbr>Cost<wbr>Management.<wbr>Inputs.<wbr>Report<wbr>Config<wbr>Comparison<wbr>Expression<wbr>Response<wbr>Args</a></span>
     </dt>
-    <dd>{{% md %}}Has comparison expression for a tag key{{% /md %}}</dd>
-    <dt class="property-optional"
+    <dd>{{% md %}}Has comparison expression for a tag key{{% /md %}}</dd><dt class="property-optional"
             title="Optional">
         <span id="tagvalue_csharp">
 <a href="#tagvalue_csharp" style="color: inherit; text-decoration: inherit;">Tag<wbr>Value</a>
@@ -1700,8 +1478,7 @@ The following output properties are available:
         <span class="property-indicator"></span>
         <span class="property-type"><a href="#reportconfigcomparisonexpressionresponse">Pulumi.<wbr>Azure<wbr>Native.<wbr>Cost<wbr>Management.<wbr>Inputs.<wbr>Report<wbr>Config<wbr>Comparison<wbr>Expression<wbr>Response<wbr>Args</a></span>
     </dt>
-    <dd>{{% md %}}Has comparison expression for a tag value{{% /md %}}</dd>
-    <dt class="property-optional"
+    <dd>{{% md %}}Has comparison expression for a tag value{{% /md %}}</dd><dt class="property-optional"
             title="Optional">
         <span id="tags_csharp">
 <a href="#tags_csharp" style="color: inherit; text-decoration: inherit;">Tags</a>
@@ -1709,14 +1486,11 @@ The following output properties are available:
         <span class="property-indicator"></span>
         <span class="property-type"><a href="#reportconfigcomparisonexpressionresponse">Pulumi.<wbr>Azure<wbr>Native.<wbr>Cost<wbr>Management.<wbr>Inputs.<wbr>Report<wbr>Config<wbr>Comparison<wbr>Expression<wbr>Response<wbr>Args</a></span>
     </dt>
-    <dd>{{% md %}}Has comparison expression for a tag{{% /md %}}</dd>
-</dl>
+    <dd>{{% md %}}Has comparison expression for a tag{{% /md %}}</dd></dl>
 {{% /choosable %}}
 
 {{% choosable language go %}}
-<dl class="resources-properties">
-
-    <dt class="property-optional"
+<dl class="resources-properties"><dt class="property-optional"
             title="Optional">
         <span id="and_go">
 <a href="#and_go" style="color: inherit; text-decoration: inherit;">And</a>
@@ -1724,8 +1498,7 @@ The following output properties are available:
         <span class="property-indicator"></span>
         <span class="property-type"><a href="#reportconfigfilterresponse">[]Report<wbr>Config<wbr>Filter<wbr>Response</a></span>
     </dt>
-    <dd>{{% md %}}The logical "AND" expression. Must have at least 2 items.{{% /md %}}</dd>
-    <dt class="property-optional"
+    <dd>{{% md %}}The logical "AND" expression. Must have at least 2 items.{{% /md %}}</dd><dt class="property-optional"
             title="Optional">
         <span id="dimensions_go">
 <a href="#dimensions_go" style="color: inherit; text-decoration: inherit;">Dimensions</a>
@@ -1733,8 +1506,7 @@ The following output properties are available:
         <span class="property-indicator"></span>
         <span class="property-type"><a href="#reportconfigcomparisonexpressionresponse">Report<wbr>Config<wbr>Comparison<wbr>Expression<wbr>Response</a></span>
     </dt>
-    <dd>{{% md %}}Has comparison expression for a dimension{{% /md %}}</dd>
-    <dt class="property-optional"
+    <dd>{{% md %}}Has comparison expression for a dimension{{% /md %}}</dd><dt class="property-optional"
             title="Optional">
         <span id="or_go">
 <a href="#or_go" style="color: inherit; text-decoration: inherit;">Or</a>
@@ -1742,8 +1514,7 @@ The following output properties are available:
         <span class="property-indicator"></span>
         <span class="property-type"><a href="#reportconfigfilterresponse">[]Report<wbr>Config<wbr>Filter<wbr>Response</a></span>
     </dt>
-    <dd>{{% md %}}The logical "OR" expression. Must have at least 2 items.{{% /md %}}</dd>
-    <dt class="property-optional"
+    <dd>{{% md %}}The logical "OR" expression. Must have at least 2 items.{{% /md %}}</dd><dt class="property-optional"
             title="Optional">
         <span id="tagkey_go">
 <a href="#tagkey_go" style="color: inherit; text-decoration: inherit;">Tag<wbr>Key</a>
@@ -1751,8 +1522,7 @@ The following output properties are available:
         <span class="property-indicator"></span>
         <span class="property-type"><a href="#reportconfigcomparisonexpressionresponse">Report<wbr>Config<wbr>Comparison<wbr>Expression<wbr>Response</a></span>
     </dt>
-    <dd>{{% md %}}Has comparison expression for a tag key{{% /md %}}</dd>
-    <dt class="property-optional"
+    <dd>{{% md %}}Has comparison expression for a tag key{{% /md %}}</dd><dt class="property-optional"
             title="Optional">
         <span id="tagvalue_go">
 <a href="#tagvalue_go" style="color: inherit; text-decoration: inherit;">Tag<wbr>Value</a>
@@ -1760,8 +1530,7 @@ The following output properties are available:
         <span class="property-indicator"></span>
         <span class="property-type"><a href="#reportconfigcomparisonexpressionresponse">Report<wbr>Config<wbr>Comparison<wbr>Expression<wbr>Response</a></span>
     </dt>
-    <dd>{{% md %}}Has comparison expression for a tag value{{% /md %}}</dd>
-    <dt class="property-optional"
+    <dd>{{% md %}}Has comparison expression for a tag value{{% /md %}}</dd><dt class="property-optional"
             title="Optional">
         <span id="tags_go">
 <a href="#tags_go" style="color: inherit; text-decoration: inherit;">Tags</a>
@@ -1769,14 +1538,11 @@ The following output properties are available:
         <span class="property-indicator"></span>
         <span class="property-type"><a href="#reportconfigcomparisonexpressionresponse">Report<wbr>Config<wbr>Comparison<wbr>Expression<wbr>Response</a></span>
     </dt>
-    <dd>{{% md %}}Has comparison expression for a tag{{% /md %}}</dd>
-</dl>
+    <dd>{{% md %}}Has comparison expression for a tag{{% /md %}}</dd></dl>
 {{% /choosable %}}
 
 {{% choosable language nodejs %}}
-<dl class="resources-properties">
-
-    <dt class="property-optional"
+<dl class="resources-properties"><dt class="property-optional"
             title="Optional">
         <span id="and_nodejs">
 <a href="#and_nodejs" style="color: inherit; text-decoration: inherit;">and</a>
@@ -1784,8 +1550,7 @@ The following output properties are available:
         <span class="property-indicator"></span>
         <span class="property-type"><a href="#reportconfigfilterresponse">Report<wbr>Config<wbr>Filter<wbr>Response[]</a></span>
     </dt>
-    <dd>{{% md %}}The logical "AND" expression. Must have at least 2 items.{{% /md %}}</dd>
-    <dt class="property-optional"
+    <dd>{{% md %}}The logical "AND" expression. Must have at least 2 items.{{% /md %}}</dd><dt class="property-optional"
             title="Optional">
         <span id="dimensions_nodejs">
 <a href="#dimensions_nodejs" style="color: inherit; text-decoration: inherit;">dimensions</a>
@@ -1793,8 +1558,7 @@ The following output properties are available:
         <span class="property-indicator"></span>
         <span class="property-type"><a href="#reportconfigcomparisonexpressionresponse">Report<wbr>Config<wbr>Comparison<wbr>Expression<wbr>Response</a></span>
     </dt>
-    <dd>{{% md %}}Has comparison expression for a dimension{{% /md %}}</dd>
-    <dt class="property-optional"
+    <dd>{{% md %}}Has comparison expression for a dimension{{% /md %}}</dd><dt class="property-optional"
             title="Optional">
         <span id="or_nodejs">
 <a href="#or_nodejs" style="color: inherit; text-decoration: inherit;">or</a>
@@ -1802,8 +1566,7 @@ The following output properties are available:
         <span class="property-indicator"></span>
         <span class="property-type"><a href="#reportconfigfilterresponse">Report<wbr>Config<wbr>Filter<wbr>Response[]</a></span>
     </dt>
-    <dd>{{% md %}}The logical "OR" expression. Must have at least 2 items.{{% /md %}}</dd>
-    <dt class="property-optional"
+    <dd>{{% md %}}The logical "OR" expression. Must have at least 2 items.{{% /md %}}</dd><dt class="property-optional"
             title="Optional">
         <span id="tagkey_nodejs">
 <a href="#tagkey_nodejs" style="color: inherit; text-decoration: inherit;">tag<wbr>Key</a>
@@ -1811,8 +1574,7 @@ The following output properties are available:
         <span class="property-indicator"></span>
         <span class="property-type"><a href="#reportconfigcomparisonexpressionresponse">Report<wbr>Config<wbr>Comparison<wbr>Expression<wbr>Response</a></span>
     </dt>
-    <dd>{{% md %}}Has comparison expression for a tag key{{% /md %}}</dd>
-    <dt class="property-optional"
+    <dd>{{% md %}}Has comparison expression for a tag key{{% /md %}}</dd><dt class="property-optional"
             title="Optional">
         <span id="tagvalue_nodejs">
 <a href="#tagvalue_nodejs" style="color: inherit; text-decoration: inherit;">tag<wbr>Value</a>
@@ -1820,8 +1582,7 @@ The following output properties are available:
         <span class="property-indicator"></span>
         <span class="property-type"><a href="#reportconfigcomparisonexpressionresponse">Report<wbr>Config<wbr>Comparison<wbr>Expression<wbr>Response</a></span>
     </dt>
-    <dd>{{% md %}}Has comparison expression for a tag value{{% /md %}}</dd>
-    <dt class="property-optional"
+    <dd>{{% md %}}Has comparison expression for a tag value{{% /md %}}</dd><dt class="property-optional"
             title="Optional">
         <span id="tags_nodejs">
 <a href="#tags_nodejs" style="color: inherit; text-decoration: inherit;">tags</a>
@@ -1829,14 +1590,11 @@ The following output properties are available:
         <span class="property-indicator"></span>
         <span class="property-type"><a href="#reportconfigcomparisonexpressionresponse">Report<wbr>Config<wbr>Comparison<wbr>Expression<wbr>Response</a></span>
     </dt>
-    <dd>{{% md %}}Has comparison expression for a tag{{% /md %}}</dd>
-</dl>
+    <dd>{{% md %}}Has comparison expression for a tag{{% /md %}}</dd></dl>
 {{% /choosable %}}
 
 {{% choosable language python %}}
-<dl class="resources-properties">
-
-    <dt class="property-optional"
+<dl class="resources-properties"><dt class="property-optional"
             title="Optional">
         <span id="and__python">
 <a href="#and__python" style="color: inherit; text-decoration: inherit;">and_</a>
@@ -1844,8 +1602,7 @@ The following output properties are available:
         <span class="property-indicator"></span>
         <span class="property-type"><a href="#reportconfigfilterresponse">Sequence[Report<wbr>Config<wbr>Filter<wbr>Response<wbr>Args]</a></span>
     </dt>
-    <dd>{{% md %}}The logical "AND" expression. Must have at least 2 items.{{% /md %}}</dd>
-    <dt class="property-optional"
+    <dd>{{% md %}}The logical "AND" expression. Must have at least 2 items.{{% /md %}}</dd><dt class="property-optional"
             title="Optional">
         <span id="dimensions_python">
 <a href="#dimensions_python" style="color: inherit; text-decoration: inherit;">dimensions</a>
@@ -1853,8 +1610,7 @@ The following output properties are available:
         <span class="property-indicator"></span>
         <span class="property-type"><a href="#reportconfigcomparisonexpressionresponse">Report<wbr>Config<wbr>Comparison<wbr>Expression<wbr>Response<wbr>Args</a></span>
     </dt>
-    <dd>{{% md %}}Has comparison expression for a dimension{{% /md %}}</dd>
-    <dt class="property-optional"
+    <dd>{{% md %}}Has comparison expression for a dimension{{% /md %}}</dd><dt class="property-optional"
             title="Optional">
         <span id="or__python">
 <a href="#or__python" style="color: inherit; text-decoration: inherit;">or_</a>
@@ -1862,8 +1618,7 @@ The following output properties are available:
         <span class="property-indicator"></span>
         <span class="property-type"><a href="#reportconfigfilterresponse">Sequence[Report<wbr>Config<wbr>Filter<wbr>Response<wbr>Args]</a></span>
     </dt>
-    <dd>{{% md %}}The logical "OR" expression. Must have at least 2 items.{{% /md %}}</dd>
-    <dt class="property-optional"
+    <dd>{{% md %}}The logical "OR" expression. Must have at least 2 items.{{% /md %}}</dd><dt class="property-optional"
             title="Optional">
         <span id="tag_key_python">
 <a href="#tag_key_python" style="color: inherit; text-decoration: inherit;">tag_<wbr>key</a>
@@ -1871,8 +1626,7 @@ The following output properties are available:
         <span class="property-indicator"></span>
         <span class="property-type"><a href="#reportconfigcomparisonexpressionresponse">Report<wbr>Config<wbr>Comparison<wbr>Expression<wbr>Response<wbr>Args</a></span>
     </dt>
-    <dd>{{% md %}}Has comparison expression for a tag key{{% /md %}}</dd>
-    <dt class="property-optional"
+    <dd>{{% md %}}Has comparison expression for a tag key{{% /md %}}</dd><dt class="property-optional"
             title="Optional">
         <span id="tag_value_python">
 <a href="#tag_value_python" style="color: inherit; text-decoration: inherit;">tag_<wbr>value</a>
@@ -1880,8 +1634,7 @@ The following output properties are available:
         <span class="property-indicator"></span>
         <span class="property-type"><a href="#reportconfigcomparisonexpressionresponse">Report<wbr>Config<wbr>Comparison<wbr>Expression<wbr>Response<wbr>Args</a></span>
     </dt>
-    <dd>{{% md %}}Has comparison expression for a tag value{{% /md %}}</dd>
-    <dt class="property-optional"
+    <dd>{{% md %}}Has comparison expression for a tag value{{% /md %}}</dd><dt class="property-optional"
             title="Optional">
         <span id="tags_python">
 <a href="#tags_python" style="color: inherit; text-decoration: inherit;">tags</a>
@@ -1889,8 +1642,7 @@ The following output properties are available:
         <span class="property-indicator"></span>
         <span class="property-type"><a href="#reportconfigcomparisonexpressionresponse">Report<wbr>Config<wbr>Comparison<wbr>Expression<wbr>Response<wbr>Args</a></span>
     </dt>
-    <dd>{{% md %}}Has comparison expression for a tag{{% /md %}}</dd>
-</dl>
+    <dd>{{% md %}}Has comparison expression for a tag{{% /md %}}</dd></dl>
 {{% /choosable %}}
 
 <h4 id="reportconfiggroupingresponse">Report<wbr>Config<wbr>Grouping<wbr>Response</h4>
@@ -1898,9 +1650,7 @@ The following output properties are available:
 
 
 {{% choosable language csharp %}}
-<dl class="resources-properties">
-
-    <dt class="property-required"
+<dl class="resources-properties"><dt class="property-required"
             title="Required">
         <span id="name_csharp">
 <a href="#name_csharp" style="color: inherit; text-decoration: inherit;">Name</a>
@@ -1908,8 +1658,7 @@ The following output properties are available:
         <span class="property-indicator"></span>
         <span class="property-type">string</span>
     </dt>
-    <dd>{{% md %}}The name of the column to group. This version supports subscription lowest possible grain.{{% /md %}}</dd>
-    <dt class="property-required"
+    <dd>{{% md %}}The name of the column to group. This version supports subscription lowest possible grain.{{% /md %}}</dd><dt class="property-required"
             title="Required">
         <span id="type_csharp">
 <a href="#type_csharp" style="color: inherit; text-decoration: inherit;">Type</a>
@@ -1917,14 +1666,11 @@ The following output properties are available:
         <span class="property-indicator"></span>
         <span class="property-type">string</span>
     </dt>
-    <dd>{{% md %}}Has type of the column to group.{{% /md %}}</dd>
-</dl>
+    <dd>{{% md %}}Has type of the column to group.{{% /md %}}</dd></dl>
 {{% /choosable %}}
 
 {{% choosable language go %}}
-<dl class="resources-properties">
-
-    <dt class="property-required"
+<dl class="resources-properties"><dt class="property-required"
             title="Required">
         <span id="name_go">
 <a href="#name_go" style="color: inherit; text-decoration: inherit;">Name</a>
@@ -1932,8 +1678,7 @@ The following output properties are available:
         <span class="property-indicator"></span>
         <span class="property-type">string</span>
     </dt>
-    <dd>{{% md %}}The name of the column to group. This version supports subscription lowest possible grain.{{% /md %}}</dd>
-    <dt class="property-required"
+    <dd>{{% md %}}The name of the column to group. This version supports subscription lowest possible grain.{{% /md %}}</dd><dt class="property-required"
             title="Required">
         <span id="type_go">
 <a href="#type_go" style="color: inherit; text-decoration: inherit;">Type</a>
@@ -1941,14 +1686,11 @@ The following output properties are available:
         <span class="property-indicator"></span>
         <span class="property-type">string</span>
     </dt>
-    <dd>{{% md %}}Has type of the column to group.{{% /md %}}</dd>
-</dl>
+    <dd>{{% md %}}Has type of the column to group.{{% /md %}}</dd></dl>
 {{% /choosable %}}
 
 {{% choosable language nodejs %}}
-<dl class="resources-properties">
-
-    <dt class="property-required"
+<dl class="resources-properties"><dt class="property-required"
             title="Required">
         <span id="name_nodejs">
 <a href="#name_nodejs" style="color: inherit; text-decoration: inherit;">name</a>
@@ -1956,8 +1698,7 @@ The following output properties are available:
         <span class="property-indicator"></span>
         <span class="property-type">string</span>
     </dt>
-    <dd>{{% md %}}The name of the column to group. This version supports subscription lowest possible grain.{{% /md %}}</dd>
-    <dt class="property-required"
+    <dd>{{% md %}}The name of the column to group. This version supports subscription lowest possible grain.{{% /md %}}</dd><dt class="property-required"
             title="Required">
         <span id="type_nodejs">
 <a href="#type_nodejs" style="color: inherit; text-decoration: inherit;">type</a>
@@ -1965,14 +1706,11 @@ The following output properties are available:
         <span class="property-indicator"></span>
         <span class="property-type">string</span>
     </dt>
-    <dd>{{% md %}}Has type of the column to group.{{% /md %}}</dd>
-</dl>
+    <dd>{{% md %}}Has type of the column to group.{{% /md %}}</dd></dl>
 {{% /choosable %}}
 
 {{% choosable language python %}}
-<dl class="resources-properties">
-
-    <dt class="property-required"
+<dl class="resources-properties"><dt class="property-required"
             title="Required">
         <span id="name_python">
 <a href="#name_python" style="color: inherit; text-decoration: inherit;">name</a>
@@ -1980,8 +1718,7 @@ The following output properties are available:
         <span class="property-indicator"></span>
         <span class="property-type">str</span>
     </dt>
-    <dd>{{% md %}}The name of the column to group. This version supports subscription lowest possible grain.{{% /md %}}</dd>
-    <dt class="property-required"
+    <dd>{{% md %}}The name of the column to group. This version supports subscription lowest possible grain.{{% /md %}}</dd><dt class="property-required"
             title="Required">
         <span id="type_python">
 <a href="#type_python" style="color: inherit; text-decoration: inherit;">type</a>
@@ -1989,8 +1726,7 @@ The following output properties are available:
         <span class="property-indicator"></span>
         <span class="property-type">str</span>
     </dt>
-    <dd>{{% md %}}Has type of the column to group.{{% /md %}}</dd>
-</dl>
+    <dd>{{% md %}}Has type of the column to group.{{% /md %}}</dd></dl>
 {{% /choosable %}}
 
 <h4 id="reportconfigsortingresponse">Report<wbr>Config<wbr>Sorting<wbr>Response</h4>
@@ -1998,9 +1734,7 @@ The following output properties are available:
 
 
 {{% choosable language csharp %}}
-<dl class="resources-properties">
-
-    <dt class="property-required"
+<dl class="resources-properties"><dt class="property-required"
             title="Required">
         <span id="name_csharp">
 <a href="#name_csharp" style="color: inherit; text-decoration: inherit;">Name</a>
@@ -2008,8 +1742,7 @@ The following output properties are available:
         <span class="property-indicator"></span>
         <span class="property-type">string</span>
     </dt>
-    <dd>{{% md %}}The name of the column to sort.{{% /md %}}</dd>
-    <dt class="property-optional"
+    <dd>{{% md %}}The name of the column to sort.{{% /md %}}</dd><dt class="property-optional"
             title="Optional">
         <span id="direction_csharp">
 <a href="#direction_csharp" style="color: inherit; text-decoration: inherit;">Direction</a>
@@ -2017,14 +1750,11 @@ The following output properties are available:
         <span class="property-indicator"></span>
         <span class="property-type">string</span>
     </dt>
-    <dd>{{% md %}}Direction of sort.{{% /md %}}</dd>
-</dl>
+    <dd>{{% md %}}Direction of sort.{{% /md %}}</dd></dl>
 {{% /choosable %}}
 
 {{% choosable language go %}}
-<dl class="resources-properties">
-
-    <dt class="property-required"
+<dl class="resources-properties"><dt class="property-required"
             title="Required">
         <span id="name_go">
 <a href="#name_go" style="color: inherit; text-decoration: inherit;">Name</a>
@@ -2032,8 +1762,7 @@ The following output properties are available:
         <span class="property-indicator"></span>
         <span class="property-type">string</span>
     </dt>
-    <dd>{{% md %}}The name of the column to sort.{{% /md %}}</dd>
-    <dt class="property-optional"
+    <dd>{{% md %}}The name of the column to sort.{{% /md %}}</dd><dt class="property-optional"
             title="Optional">
         <span id="direction_go">
 <a href="#direction_go" style="color: inherit; text-decoration: inherit;">Direction</a>
@@ -2041,14 +1770,11 @@ The following output properties are available:
         <span class="property-indicator"></span>
         <span class="property-type">string</span>
     </dt>
-    <dd>{{% md %}}Direction of sort.{{% /md %}}</dd>
-</dl>
+    <dd>{{% md %}}Direction of sort.{{% /md %}}</dd></dl>
 {{% /choosable %}}
 
 {{% choosable language nodejs %}}
-<dl class="resources-properties">
-
-    <dt class="property-required"
+<dl class="resources-properties"><dt class="property-required"
             title="Required">
         <span id="name_nodejs">
 <a href="#name_nodejs" style="color: inherit; text-decoration: inherit;">name</a>
@@ -2056,8 +1782,7 @@ The following output properties are available:
         <span class="property-indicator"></span>
         <span class="property-type">string</span>
     </dt>
-    <dd>{{% md %}}The name of the column to sort.{{% /md %}}</dd>
-    <dt class="property-optional"
+    <dd>{{% md %}}The name of the column to sort.{{% /md %}}</dd><dt class="property-optional"
             title="Optional">
         <span id="direction_nodejs">
 <a href="#direction_nodejs" style="color: inherit; text-decoration: inherit;">direction</a>
@@ -2065,14 +1790,11 @@ The following output properties are available:
         <span class="property-indicator"></span>
         <span class="property-type">string</span>
     </dt>
-    <dd>{{% md %}}Direction of sort.{{% /md %}}</dd>
-</dl>
+    <dd>{{% md %}}Direction of sort.{{% /md %}}</dd></dl>
 {{% /choosable %}}
 
 {{% choosable language python %}}
-<dl class="resources-properties">
-
-    <dt class="property-required"
+<dl class="resources-properties"><dt class="property-required"
             title="Required">
         <span id="name_python">
 <a href="#name_python" style="color: inherit; text-decoration: inherit;">name</a>
@@ -2080,8 +1802,7 @@ The following output properties are available:
         <span class="property-indicator"></span>
         <span class="property-type">str</span>
     </dt>
-    <dd>{{% md %}}The name of the column to sort.{{% /md %}}</dd>
-    <dt class="property-optional"
+    <dd>{{% md %}}The name of the column to sort.{{% /md %}}</dd><dt class="property-optional"
             title="Optional">
         <span id="direction_python">
 <a href="#direction_python" style="color: inherit; text-decoration: inherit;">direction</a>
@@ -2089,8 +1810,7 @@ The following output properties are available:
         <span class="property-indicator"></span>
         <span class="property-type">str</span>
     </dt>
-    <dd>{{% md %}}Direction of sort.{{% /md %}}</dd>
-</dl>
+    <dd>{{% md %}}Direction of sort.{{% /md %}}</dd></dl>
 {{% /choosable %}}
 
 <h4 id="reportconfigtimeperiodresponse">Report<wbr>Config<wbr>Time<wbr>Period<wbr>Response</h4>
@@ -2098,9 +1818,7 @@ The following output properties are available:
 
 
 {{% choosable language csharp %}}
-<dl class="resources-properties">
-
-    <dt class="property-required"
+<dl class="resources-properties"><dt class="property-required"
             title="Required">
         <span id="from_csharp">
 <a href="#from_csharp" style="color: inherit; text-decoration: inherit;">From</a>
@@ -2108,8 +1826,7 @@ The following output properties are available:
         <span class="property-indicator"></span>
         <span class="property-type">string</span>
     </dt>
-    <dd>{{% md %}}The start date to pull data from.{{% /md %}}</dd>
-    <dt class="property-required"
+    <dd>{{% md %}}The start date to pull data from.{{% /md %}}</dd><dt class="property-required"
             title="Required">
         <span id="to_csharp">
 <a href="#to_csharp" style="color: inherit; text-decoration: inherit;">To</a>
@@ -2117,14 +1834,11 @@ The following output properties are available:
         <span class="property-indicator"></span>
         <span class="property-type">string</span>
     </dt>
-    <dd>{{% md %}}The end date to pull data to.{{% /md %}}</dd>
-</dl>
+    <dd>{{% md %}}The end date to pull data to.{{% /md %}}</dd></dl>
 {{% /choosable %}}
 
 {{% choosable language go %}}
-<dl class="resources-properties">
-
-    <dt class="property-required"
+<dl class="resources-properties"><dt class="property-required"
             title="Required">
         <span id="from_go">
 <a href="#from_go" style="color: inherit; text-decoration: inherit;">From</a>
@@ -2132,8 +1846,7 @@ The following output properties are available:
         <span class="property-indicator"></span>
         <span class="property-type">string</span>
     </dt>
-    <dd>{{% md %}}The start date to pull data from.{{% /md %}}</dd>
-    <dt class="property-required"
+    <dd>{{% md %}}The start date to pull data from.{{% /md %}}</dd><dt class="property-required"
             title="Required">
         <span id="to_go">
 <a href="#to_go" style="color: inherit; text-decoration: inherit;">To</a>
@@ -2141,14 +1854,11 @@ The following output properties are available:
         <span class="property-indicator"></span>
         <span class="property-type">string</span>
     </dt>
-    <dd>{{% md %}}The end date to pull data to.{{% /md %}}</dd>
-</dl>
+    <dd>{{% md %}}The end date to pull data to.{{% /md %}}</dd></dl>
 {{% /choosable %}}
 
 {{% choosable language nodejs %}}
-<dl class="resources-properties">
-
-    <dt class="property-required"
+<dl class="resources-properties"><dt class="property-required"
             title="Required">
         <span id="from_nodejs">
 <a href="#from_nodejs" style="color: inherit; text-decoration: inherit;">from</a>
@@ -2156,8 +1866,7 @@ The following output properties are available:
         <span class="property-indicator"></span>
         <span class="property-type">string</span>
     </dt>
-    <dd>{{% md %}}The start date to pull data from.{{% /md %}}</dd>
-    <dt class="property-required"
+    <dd>{{% md %}}The start date to pull data from.{{% /md %}}</dd><dt class="property-required"
             title="Required">
         <span id="to_nodejs">
 <a href="#to_nodejs" style="color: inherit; text-decoration: inherit;">to</a>
@@ -2165,14 +1874,11 @@ The following output properties are available:
         <span class="property-indicator"></span>
         <span class="property-type">string</span>
     </dt>
-    <dd>{{% md %}}The end date to pull data to.{{% /md %}}</dd>
-</dl>
+    <dd>{{% md %}}The end date to pull data to.{{% /md %}}</dd></dl>
 {{% /choosable %}}
 
 {{% choosable language python %}}
-<dl class="resources-properties">
-
-    <dt class="property-required"
+<dl class="resources-properties"><dt class="property-required"
             title="Required">
         <span id="from__python">
 <a href="#from__python" style="color: inherit; text-decoration: inherit;">from_</a>
@@ -2180,8 +1886,7 @@ The following output properties are available:
         <span class="property-indicator"></span>
         <span class="property-type">str</span>
     </dt>
-    <dd>{{% md %}}The start date to pull data from.{{% /md %}}</dd>
-    <dt class="property-required"
+    <dd>{{% md %}}The start date to pull data from.{{% /md %}}</dd><dt class="property-required"
             title="Required">
         <span id="to_python">
 <a href="#to_python" style="color: inherit; text-decoration: inherit;">to</a>
@@ -2189,8 +1894,7 @@ The following output properties are available:
         <span class="property-indicator"></span>
         <span class="property-type">str</span>
     </dt>
-    <dd>{{% md %}}The end date to pull data to.{{% /md %}}</dd>
-</dl>
+    <dd>{{% md %}}The end date to pull data to.{{% /md %}}</dd></dl>
 {{% /choosable %}}
 
 

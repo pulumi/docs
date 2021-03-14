@@ -21,11 +21,17 @@ Allows creation and management of an App Engine application.
 state as plain-text. [Read more about sensitive data in state](https://www.terraform.io/docs/state/sensitive-data.html).
 
 {{% examples %}}
+
 ## Example Usage
 
 {{< chooser language "typescript,python,go,csharp" / >}}
 
-{{% example csharp %}}
+
+
+
+
+{{< example csharp >}}
+
 ```csharp
 using Pulumi;
 using Gcp = Pulumi.Gcp;
@@ -49,9 +55,12 @@ class MyStack : Stack
 }
 ```
 
-{{% /example %}}
 
-{{% example go %}}
+{{< /example >}}
+
+
+{{< example go >}}
+
 ```go
 package main
 
@@ -82,9 +91,12 @@ func main() {
 }
 ```
 
-{{% /example %}}
 
-{{% example python %}}
+{{< /example >}}
+
+
+{{< example python >}}
+
 ```python
 import pulumi
 import pulumi_gcp as gcp
@@ -97,9 +109,12 @@ app = gcp.appengine.Application("app",
     location_id="us-central")
 ```
 
-{{% /example %}}
 
-{{% example typescript %}}
+{{< /example >}}
+
+
+{{< example typescript >}}
+
 
 ```typescript
 import * as pulumi from "@pulumi/pulumi";
@@ -115,9 +130,16 @@ const app = new gcp.appengine.Application("app", {
 });
 ```
 
-{{% /example %}}
+
+{{< /example >}}
+
+
+
+
 
 {{% /examples %}}
+
+
 
 
 ## Create a Application Resource {#create}
@@ -142,9 +164,7 @@ const app = new gcp.appengine.Application("app", {
 
 {{% choosable language nodejs %}}
 
-<dl class="resources-properties">
-  
-    <dt
+<dl class="resources-properties"><dt
         class="property-required" title="Required">
         <span>name</span>
         <span class="property-indicator"></span>
@@ -152,9 +172,7 @@ const app = new gcp.appengine.Application("app", {
     </dt>
     <dd>
       The unique name of the resource.
-    </dd>
-  
-    <dt
+    </dd><dt
         class="property-required" title="Required">
         <span>args</span>
         <span class="property-indicator"></span>
@@ -162,9 +180,7 @@ const app = new gcp.appengine.Application("app", {
     </dt>
     <dd>
       The arguments to resource properties.
-    </dd>
-  
-    <dt
+    </dd><dt
         class="property-optional" title="Optional">
         <span>opts</span>
         <span class="property-indicator"></span>
@@ -172,10 +188,7 @@ const app = new gcp.appengine.Application("app", {
     </dt>
     <dd>
       Bag of options to control resource&#39;s behavior.
-    </dd>
-  
-
-</dl>
+    </dd></dl>
 
 {{% /choosable %}}
 
@@ -201,9 +214,7 @@ const app = new gcp.appengine.Application("app", {
 
 {{% choosable language go %}}
 
-<dl class="resources-properties">
-  
-    <dt
+<dl class="resources-properties"><dt
         class="property-optional" title="Optional">
         <span>ctx</span>
         <span class="property-indicator"></span>
@@ -211,9 +222,7 @@ const app = new gcp.appengine.Application("app", {
     </dt>
     <dd>
       Context object for the current deployment.
-    </dd>
-  
-    <dt
+    </dd><dt
         class="property-required" title="Required">
         <span>name</span>
         <span class="property-indicator"></span>
@@ -221,9 +230,7 @@ const app = new gcp.appengine.Application("app", {
     </dt>
     <dd>
       The unique name of the resource.
-    </dd>
-  
-    <dt
+    </dd><dt
         class="property-required" title="Required">
         <span>args</span>
         <span class="property-indicator"></span>
@@ -231,9 +238,7 @@ const app = new gcp.appengine.Application("app", {
     </dt>
     <dd>
       The arguments to resource properties.
-    </dd>
-  
-    <dt
+    </dd><dt
         class="property-optional" title="Optional">
         <span>opts</span>
         <span class="property-indicator"></span>
@@ -241,18 +246,13 @@ const app = new gcp.appengine.Application("app", {
     </dt>
     <dd>
       Bag of options to control resource&#39;s behavior.
-    </dd>
-  
-
-</dl>
+    </dd></dl>
 
 {{% /choosable %}}
 
 {{% choosable language csharp %}}
 
-<dl class="resources-properties">
-  
-    <dt
+<dl class="resources-properties"><dt
         class="property-required" title="Required">
         <span>name</span>
         <span class="property-indicator"></span>
@@ -260,9 +260,7 @@ const app = new gcp.appengine.Application("app", {
     </dt>
     <dd>
       The unique name of the resource.
-    </dd>
-  
-    <dt
+    </dd><dt
         class="property-required" title="Required">
         <span>args</span>
         <span class="property-indicator"></span>
@@ -270,9 +268,7 @@ const app = new gcp.appengine.Application("app", {
     </dt>
     <dd>
       The arguments to resource properties.
-    </dd>
-  
-    <dt
+    </dd><dt
         class="property-optional" title="Optional">
         <span>opts</span>
         <span class="property-indicator"></span>
@@ -280,10 +276,7 @@ const app = new gcp.appengine.Application("app", {
     </dt>
     <dd>
       Bag of options to control resource&#39;s behavior.
-    </dd>
-  
-
-</dl>
+    </dd></dl>
 
 {{% /choosable %}}
 
@@ -298,9 +291,7 @@ The Application resource accepts the following [input]({{< relref "/docs/intro/c
 
 
 {{% choosable language csharp %}}
-<dl class="resources-properties">
-
-    <dt class="property-required"
+<dl class="resources-properties"><dt class="property-required"
             title="Required">
         <span id="locationid_csharp">
 <a href="#locationid_csharp" style="color: inherit; text-decoration: inherit;">Location<wbr>Id</a>
@@ -310,8 +301,7 @@ The Application resource accepts the following [input]({{< relref "/docs/intro/c
     </dt>
     <dd>{{% md %}}The [location](https://cloud.google.com/appengine/docs/locations)
 to serve the app from.
-{{% /md %}}</dd>
-    <dt class="property-optional"
+{{% /md %}}</dd><dt class="property-optional"
             title="Optional">
         <span id="authdomain_csharp">
 <a href="#authdomain_csharp" style="color: inherit; text-decoration: inherit;">Auth<wbr>Domain</a>
@@ -320,8 +310,7 @@ to serve the app from.
         <span class="property-type">string</span>
     </dt>
     <dd>{{% md %}}The domain to authenticate users with when using App Engine's User API.
-{{% /md %}}</dd>
-    <dt class="property-optional"
+{{% /md %}}</dd><dt class="property-optional"
             title="Optional">
         <span id="databasetype_csharp">
 <a href="#databasetype_csharp" style="color: inherit; text-decoration: inherit;">Database<wbr>Type</a>
@@ -333,8 +322,7 @@ to serve the app from.
 Can be `CLOUD_FIRESTORE` or `CLOUD_DATASTORE_COMPATIBILITY` for new
 instances.  To support old instances, the value `CLOUD_DATASTORE` is accepted
 by the provider, but will be rejected by the API.
-{{% /md %}}</dd>
-    <dt class="property-optional"
+{{% /md %}}</dd><dt class="property-optional"
             title="Optional">
         <span id="featuresettings_csharp">
 <a href="#featuresettings_csharp" style="color: inherit; text-decoration: inherit;">Feature<wbr>Settings</a>
@@ -343,8 +331,7 @@ by the provider, but will be rejected by the API.
         <span class="property-type"><a href="#applicationfeaturesettings">Application<wbr>Feature<wbr>Settings<wbr>Args</a></span>
     </dt>
     <dd>{{% md %}}A block of optional settings to configure specific App Engine features:
-{{% /md %}}</dd>
-    <dt class="property-optional"
+{{% /md %}}</dd><dt class="property-optional"
             title="Optional">
         <span id="iap_csharp">
 <a href="#iap_csharp" style="color: inherit; text-decoration: inherit;">Iap</a>
@@ -353,8 +340,7 @@ by the provider, but will be rejected by the API.
         <span class="property-type"><a href="#applicationiap">Application<wbr>Iap<wbr>Args</a></span>
     </dt>
     <dd>{{% md %}}Settings for enabling Cloud Identity Aware Proxy
-{{% /md %}}</dd>
-    <dt class="property-optional"
+{{% /md %}}</dd><dt class="property-optional"
             title="Optional">
         <span id="project_csharp">
 <a href="#project_csharp" style="color: inherit; text-decoration: inherit;">Project</a>
@@ -365,8 +351,7 @@ by the provider, but will be rejected by the API.
     <dd>{{% md %}}The project ID to create the application under.
 ~>**NOTE:** GCP only accepts project ID, not project number. If you are using number,
 you may get a "Permission denied" error.
-{{% /md %}}</dd>
-    <dt class="property-optional"
+{{% /md %}}</dd><dt class="property-optional"
             title="Optional">
         <span id="servingstatus_csharp">
 <a href="#servingstatus_csharp" style="color: inherit; text-decoration: inherit;">Serving<wbr>Status</a>
@@ -375,14 +360,11 @@ you may get a "Permission denied" error.
         <span class="property-type">string</span>
     </dt>
     <dd>{{% md %}}The serving status of the app.
-{{% /md %}}</dd>
-</dl>
+{{% /md %}}</dd></dl>
 {{% /choosable %}}
 
 {{% choosable language go %}}
-<dl class="resources-properties">
-
-    <dt class="property-required"
+<dl class="resources-properties"><dt class="property-required"
             title="Required">
         <span id="locationid_go">
 <a href="#locationid_go" style="color: inherit; text-decoration: inherit;">Location<wbr>Id</a>
@@ -392,8 +374,7 @@ you may get a "Permission denied" error.
     </dt>
     <dd>{{% md %}}The [location](https://cloud.google.com/appengine/docs/locations)
 to serve the app from.
-{{% /md %}}</dd>
-    <dt class="property-optional"
+{{% /md %}}</dd><dt class="property-optional"
             title="Optional">
         <span id="authdomain_go">
 <a href="#authdomain_go" style="color: inherit; text-decoration: inherit;">Auth<wbr>Domain</a>
@@ -402,8 +383,7 @@ to serve the app from.
         <span class="property-type">string</span>
     </dt>
     <dd>{{% md %}}The domain to authenticate users with when using App Engine's User API.
-{{% /md %}}</dd>
-    <dt class="property-optional"
+{{% /md %}}</dd><dt class="property-optional"
             title="Optional">
         <span id="databasetype_go">
 <a href="#databasetype_go" style="color: inherit; text-decoration: inherit;">Database<wbr>Type</a>
@@ -415,8 +395,7 @@ to serve the app from.
 Can be `CLOUD_FIRESTORE` or `CLOUD_DATASTORE_COMPATIBILITY` for new
 instances.  To support old instances, the value `CLOUD_DATASTORE` is accepted
 by the provider, but will be rejected by the API.
-{{% /md %}}</dd>
-    <dt class="property-optional"
+{{% /md %}}</dd><dt class="property-optional"
             title="Optional">
         <span id="featuresettings_go">
 <a href="#featuresettings_go" style="color: inherit; text-decoration: inherit;">Feature<wbr>Settings</a>
@@ -425,8 +404,7 @@ by the provider, but will be rejected by the API.
         <span class="property-type"><a href="#applicationfeaturesettings">Application<wbr>Feature<wbr>Settings</a></span>
     </dt>
     <dd>{{% md %}}A block of optional settings to configure specific App Engine features:
-{{% /md %}}</dd>
-    <dt class="property-optional"
+{{% /md %}}</dd><dt class="property-optional"
             title="Optional">
         <span id="iap_go">
 <a href="#iap_go" style="color: inherit; text-decoration: inherit;">Iap</a>
@@ -435,8 +413,7 @@ by the provider, but will be rejected by the API.
         <span class="property-type"><a href="#applicationiap">Application<wbr>Iap</a></span>
     </dt>
     <dd>{{% md %}}Settings for enabling Cloud Identity Aware Proxy
-{{% /md %}}</dd>
-    <dt class="property-optional"
+{{% /md %}}</dd><dt class="property-optional"
             title="Optional">
         <span id="project_go">
 <a href="#project_go" style="color: inherit; text-decoration: inherit;">Project</a>
@@ -447,8 +424,7 @@ by the provider, but will be rejected by the API.
     <dd>{{% md %}}The project ID to create the application under.
 ~>**NOTE:** GCP only accepts project ID, not project number. If you are using number,
 you may get a "Permission denied" error.
-{{% /md %}}</dd>
-    <dt class="property-optional"
+{{% /md %}}</dd><dt class="property-optional"
             title="Optional">
         <span id="servingstatus_go">
 <a href="#servingstatus_go" style="color: inherit; text-decoration: inherit;">Serving<wbr>Status</a>
@@ -457,14 +433,11 @@ you may get a "Permission denied" error.
         <span class="property-type">string</span>
     </dt>
     <dd>{{% md %}}The serving status of the app.
-{{% /md %}}</dd>
-</dl>
+{{% /md %}}</dd></dl>
 {{% /choosable %}}
 
 {{% choosable language nodejs %}}
-<dl class="resources-properties">
-
-    <dt class="property-required"
+<dl class="resources-properties"><dt class="property-required"
             title="Required">
         <span id="locationid_nodejs">
 <a href="#locationid_nodejs" style="color: inherit; text-decoration: inherit;">location<wbr>Id</a>
@@ -474,8 +447,7 @@ you may get a "Permission denied" error.
     </dt>
     <dd>{{% md %}}The [location](https://cloud.google.com/appengine/docs/locations)
 to serve the app from.
-{{% /md %}}</dd>
-    <dt class="property-optional"
+{{% /md %}}</dd><dt class="property-optional"
             title="Optional">
         <span id="authdomain_nodejs">
 <a href="#authdomain_nodejs" style="color: inherit; text-decoration: inherit;">auth<wbr>Domain</a>
@@ -484,8 +456,7 @@ to serve the app from.
         <span class="property-type">string</span>
     </dt>
     <dd>{{% md %}}The domain to authenticate users with when using App Engine's User API.
-{{% /md %}}</dd>
-    <dt class="property-optional"
+{{% /md %}}</dd><dt class="property-optional"
             title="Optional">
         <span id="databasetype_nodejs">
 <a href="#databasetype_nodejs" style="color: inherit; text-decoration: inherit;">database<wbr>Type</a>
@@ -497,8 +468,7 @@ to serve the app from.
 Can be `CLOUD_FIRESTORE` or `CLOUD_DATASTORE_COMPATIBILITY` for new
 instances.  To support old instances, the value `CLOUD_DATASTORE` is accepted
 by the provider, but will be rejected by the API.
-{{% /md %}}</dd>
-    <dt class="property-optional"
+{{% /md %}}</dd><dt class="property-optional"
             title="Optional">
         <span id="featuresettings_nodejs">
 <a href="#featuresettings_nodejs" style="color: inherit; text-decoration: inherit;">feature<wbr>Settings</a>
@@ -507,8 +477,7 @@ by the provider, but will be rejected by the API.
         <span class="property-type"><a href="#applicationfeaturesettings">Application<wbr>Feature<wbr>Settings</a></span>
     </dt>
     <dd>{{% md %}}A block of optional settings to configure specific App Engine features:
-{{% /md %}}</dd>
-    <dt class="property-optional"
+{{% /md %}}</dd><dt class="property-optional"
             title="Optional">
         <span id="iap_nodejs">
 <a href="#iap_nodejs" style="color: inherit; text-decoration: inherit;">iap</a>
@@ -517,8 +486,7 @@ by the provider, but will be rejected by the API.
         <span class="property-type"><a href="#applicationiap">Application<wbr>Iap</a></span>
     </dt>
     <dd>{{% md %}}Settings for enabling Cloud Identity Aware Proxy
-{{% /md %}}</dd>
-    <dt class="property-optional"
+{{% /md %}}</dd><dt class="property-optional"
             title="Optional">
         <span id="project_nodejs">
 <a href="#project_nodejs" style="color: inherit; text-decoration: inherit;">project</a>
@@ -529,8 +497,7 @@ by the provider, but will be rejected by the API.
     <dd>{{% md %}}The project ID to create the application under.
 ~>**NOTE:** GCP only accepts project ID, not project number. If you are using number,
 you may get a "Permission denied" error.
-{{% /md %}}</dd>
-    <dt class="property-optional"
+{{% /md %}}</dd><dt class="property-optional"
             title="Optional">
         <span id="servingstatus_nodejs">
 <a href="#servingstatus_nodejs" style="color: inherit; text-decoration: inherit;">serving<wbr>Status</a>
@@ -539,14 +506,11 @@ you may get a "Permission denied" error.
         <span class="property-type">string</span>
     </dt>
     <dd>{{% md %}}The serving status of the app.
-{{% /md %}}</dd>
-</dl>
+{{% /md %}}</dd></dl>
 {{% /choosable %}}
 
 {{% choosable language python %}}
-<dl class="resources-properties">
-
-    <dt class="property-required"
+<dl class="resources-properties"><dt class="property-required"
             title="Required">
         <span id="location_id_python">
 <a href="#location_id_python" style="color: inherit; text-decoration: inherit;">location_<wbr>id</a>
@@ -556,8 +520,7 @@ you may get a "Permission denied" error.
     </dt>
     <dd>{{% md %}}The [location](https://cloud.google.com/appengine/docs/locations)
 to serve the app from.
-{{% /md %}}</dd>
-    <dt class="property-optional"
+{{% /md %}}</dd><dt class="property-optional"
             title="Optional">
         <span id="auth_domain_python">
 <a href="#auth_domain_python" style="color: inherit; text-decoration: inherit;">auth_<wbr>domain</a>
@@ -566,8 +529,7 @@ to serve the app from.
         <span class="property-type">str</span>
     </dt>
     <dd>{{% md %}}The domain to authenticate users with when using App Engine's User API.
-{{% /md %}}</dd>
-    <dt class="property-optional"
+{{% /md %}}</dd><dt class="property-optional"
             title="Optional">
         <span id="database_type_python">
 <a href="#database_type_python" style="color: inherit; text-decoration: inherit;">database_<wbr>type</a>
@@ -579,8 +541,7 @@ to serve the app from.
 Can be `CLOUD_FIRESTORE` or `CLOUD_DATASTORE_COMPATIBILITY` for new
 instances.  To support old instances, the value `CLOUD_DATASTORE` is accepted
 by the provider, but will be rejected by the API.
-{{% /md %}}</dd>
-    <dt class="property-optional"
+{{% /md %}}</dd><dt class="property-optional"
             title="Optional">
         <span id="feature_settings_python">
 <a href="#feature_settings_python" style="color: inherit; text-decoration: inherit;">feature_<wbr>settings</a>
@@ -589,8 +550,7 @@ by the provider, but will be rejected by the API.
         <span class="property-type"><a href="#applicationfeaturesettings">Application<wbr>Feature<wbr>Settings<wbr>Args</a></span>
     </dt>
     <dd>{{% md %}}A block of optional settings to configure specific App Engine features:
-{{% /md %}}</dd>
-    <dt class="property-optional"
+{{% /md %}}</dd><dt class="property-optional"
             title="Optional">
         <span id="iap_python">
 <a href="#iap_python" style="color: inherit; text-decoration: inherit;">iap</a>
@@ -599,8 +559,7 @@ by the provider, but will be rejected by the API.
         <span class="property-type"><a href="#applicationiap">Application<wbr>Iap<wbr>Args</a></span>
     </dt>
     <dd>{{% md %}}Settings for enabling Cloud Identity Aware Proxy
-{{% /md %}}</dd>
-    <dt class="property-optional"
+{{% /md %}}</dd><dt class="property-optional"
             title="Optional">
         <span id="project_python">
 <a href="#project_python" style="color: inherit; text-decoration: inherit;">project</a>
@@ -611,8 +570,7 @@ by the provider, but will be rejected by the API.
     <dd>{{% md %}}The project ID to create the application under.
 ~>**NOTE:** GCP only accepts project ID, not project number. If you are using number,
 you may get a "Permission denied" error.
-{{% /md %}}</dd>
-    <dt class="property-optional"
+{{% /md %}}</dd><dt class="property-optional"
             title="Optional">
         <span id="serving_status_python">
 <a href="#serving_status_python" style="color: inherit; text-decoration: inherit;">serving_<wbr>status</a>
@@ -621,8 +579,7 @@ you may get a "Permission denied" error.
         <span class="property-type">str</span>
     </dt>
     <dd>{{% md %}}The serving status of the app.
-{{% /md %}}</dd>
-</dl>
+{{% /md %}}</dd></dl>
 {{% /choosable %}}
 
 
@@ -633,9 +590,7 @@ All [input](#inputs) properties are implicitly available as output properties. A
 
 
 {{% choosable language csharp %}}
-<dl class="resources-properties">
-
-    <dt class="property-"
+<dl class="resources-properties"><dt class="property-"
             title="">
         <span id="appid_csharp">
 <a href="#appid_csharp" style="color: inherit; text-decoration: inherit;">App<wbr>Id</a>
@@ -644,8 +599,7 @@ All [input](#inputs) properties are implicitly available as output properties. A
         <span class="property-type">string</span>
     </dt>
     <dd>{{% md %}}Identifier of the app, usually `{PROJECT_ID}`
-{{% /md %}}</dd>
-    <dt class="property-"
+{{% /md %}}</dd><dt class="property-"
             title="">
         <span id="codebucket_csharp">
 <a href="#codebucket_csharp" style="color: inherit; text-decoration: inherit;">Code<wbr>Bucket</a>
@@ -654,8 +608,7 @@ All [input](#inputs) properties are implicitly available as output properties. A
         <span class="property-type">string</span>
     </dt>
     <dd>{{% md %}}The GCS bucket code is being stored in for this app.
-{{% /md %}}</dd>
-    <dt class="property-"
+{{% /md %}}</dd><dt class="property-"
             title="">
         <span id="defaultbucket_csharp">
 <a href="#defaultbucket_csharp" style="color: inherit; text-decoration: inherit;">Default<wbr>Bucket</a>
@@ -664,8 +617,7 @@ All [input](#inputs) properties are implicitly available as output properties. A
         <span class="property-type">string</span>
     </dt>
     <dd>{{% md %}}The GCS bucket content is being stored in for this app.
-{{% /md %}}</dd>
-    <dt class="property-"
+{{% /md %}}</dd><dt class="property-"
             title="">
         <span id="defaulthostname_csharp">
 <a href="#defaulthostname_csharp" style="color: inherit; text-decoration: inherit;">Default<wbr>Hostname</a>
@@ -674,8 +626,7 @@ All [input](#inputs) properties are implicitly available as output properties. A
         <span class="property-type">string</span>
     </dt>
     <dd>{{% md %}}The default hostname for this app.
-{{% /md %}}</dd>
-    <dt class="property-"
+{{% /md %}}</dd><dt class="property-"
             title="">
         <span id="gcrdomain_csharp">
 <a href="#gcrdomain_csharp" style="color: inherit; text-decoration: inherit;">Gcr<wbr>Domain</a>
@@ -684,8 +635,7 @@ All [input](#inputs) properties are implicitly available as output properties. A
         <span class="property-type">string</span>
     </dt>
     <dd>{{% md %}}The GCR domain used for storing managed Docker images for this app.
-{{% /md %}}</dd>
-    <dt class="property-"
+{{% /md %}}</dd><dt class="property-"
             title="">
         <span id="id_csharp">
 <a href="#id_csharp" style="color: inherit; text-decoration: inherit;">Id</a>
@@ -693,8 +643,7 @@ All [input](#inputs) properties are implicitly available as output properties. A
         <span class="property-indicator"></span>
         <span class="property-type">string</span>
     </dt>
-    <dd>{{% md %}}The provider-assigned unique ID for this managed resource.{{% /md %}}</dd>
-    <dt class="property-"
+    <dd>{{% md %}}The provider-assigned unique ID for this managed resource.{{% /md %}}</dd><dt class="property-"
             title="">
         <span id="name_csharp">
 <a href="#name_csharp" style="color: inherit; text-decoration: inherit;">Name</a>
@@ -703,8 +652,7 @@ All [input](#inputs) properties are implicitly available as output properties. A
         <span class="property-type">string</span>
     </dt>
     <dd>{{% md %}}Unique name of the app, usually `apps/{PROJECT_ID}`
-{{% /md %}}</dd>
-    <dt class="property-"
+{{% /md %}}</dd><dt class="property-"
             title="">
         <span id="urldispatchrules_csharp">
 <a href="#urldispatchrules_csharp" style="color: inherit; text-decoration: inherit;">Url<wbr>Dispatch<wbr>Rules</a>
@@ -713,14 +661,11 @@ All [input](#inputs) properties are implicitly available as output properties. A
         <span class="property-type"><a href="#applicationurldispatchrule">List&lt;Application<wbr>Url<wbr>Dispatch<wbr>Rule&gt;</a></span>
     </dt>
     <dd>{{% md %}}A list of dispatch rule blocks. Each block has a `domain`, `path`, and `service` field.
-{{% /md %}}</dd>
-</dl>
+{{% /md %}}</dd></dl>
 {{% /choosable %}}
 
 {{% choosable language go %}}
-<dl class="resources-properties">
-
-    <dt class="property-"
+<dl class="resources-properties"><dt class="property-"
             title="">
         <span id="appid_go">
 <a href="#appid_go" style="color: inherit; text-decoration: inherit;">App<wbr>Id</a>
@@ -729,8 +674,7 @@ All [input](#inputs) properties are implicitly available as output properties. A
         <span class="property-type">string</span>
     </dt>
     <dd>{{% md %}}Identifier of the app, usually `{PROJECT_ID}`
-{{% /md %}}</dd>
-    <dt class="property-"
+{{% /md %}}</dd><dt class="property-"
             title="">
         <span id="codebucket_go">
 <a href="#codebucket_go" style="color: inherit; text-decoration: inherit;">Code<wbr>Bucket</a>
@@ -739,8 +683,7 @@ All [input](#inputs) properties are implicitly available as output properties. A
         <span class="property-type">string</span>
     </dt>
     <dd>{{% md %}}The GCS bucket code is being stored in for this app.
-{{% /md %}}</dd>
-    <dt class="property-"
+{{% /md %}}</dd><dt class="property-"
             title="">
         <span id="defaultbucket_go">
 <a href="#defaultbucket_go" style="color: inherit; text-decoration: inherit;">Default<wbr>Bucket</a>
@@ -749,8 +692,7 @@ All [input](#inputs) properties are implicitly available as output properties. A
         <span class="property-type">string</span>
     </dt>
     <dd>{{% md %}}The GCS bucket content is being stored in for this app.
-{{% /md %}}</dd>
-    <dt class="property-"
+{{% /md %}}</dd><dt class="property-"
             title="">
         <span id="defaulthostname_go">
 <a href="#defaulthostname_go" style="color: inherit; text-decoration: inherit;">Default<wbr>Hostname</a>
@@ -759,8 +701,7 @@ All [input](#inputs) properties are implicitly available as output properties. A
         <span class="property-type">string</span>
     </dt>
     <dd>{{% md %}}The default hostname for this app.
-{{% /md %}}</dd>
-    <dt class="property-"
+{{% /md %}}</dd><dt class="property-"
             title="">
         <span id="gcrdomain_go">
 <a href="#gcrdomain_go" style="color: inherit; text-decoration: inherit;">Gcr<wbr>Domain</a>
@@ -769,8 +710,7 @@ All [input](#inputs) properties are implicitly available as output properties. A
         <span class="property-type">string</span>
     </dt>
     <dd>{{% md %}}The GCR domain used for storing managed Docker images for this app.
-{{% /md %}}</dd>
-    <dt class="property-"
+{{% /md %}}</dd><dt class="property-"
             title="">
         <span id="id_go">
 <a href="#id_go" style="color: inherit; text-decoration: inherit;">Id</a>
@@ -778,8 +718,7 @@ All [input](#inputs) properties are implicitly available as output properties. A
         <span class="property-indicator"></span>
         <span class="property-type">string</span>
     </dt>
-    <dd>{{% md %}}The provider-assigned unique ID for this managed resource.{{% /md %}}</dd>
-    <dt class="property-"
+    <dd>{{% md %}}The provider-assigned unique ID for this managed resource.{{% /md %}}</dd><dt class="property-"
             title="">
         <span id="name_go">
 <a href="#name_go" style="color: inherit; text-decoration: inherit;">Name</a>
@@ -788,8 +727,7 @@ All [input](#inputs) properties are implicitly available as output properties. A
         <span class="property-type">string</span>
     </dt>
     <dd>{{% md %}}Unique name of the app, usually `apps/{PROJECT_ID}`
-{{% /md %}}</dd>
-    <dt class="property-"
+{{% /md %}}</dd><dt class="property-"
             title="">
         <span id="urldispatchrules_go">
 <a href="#urldispatchrules_go" style="color: inherit; text-decoration: inherit;">Url<wbr>Dispatch<wbr>Rules</a>
@@ -798,14 +736,11 @@ All [input](#inputs) properties are implicitly available as output properties. A
         <span class="property-type"><a href="#applicationurldispatchrule">[]Application<wbr>Url<wbr>Dispatch<wbr>Rule</a></span>
     </dt>
     <dd>{{% md %}}A list of dispatch rule blocks. Each block has a `domain`, `path`, and `service` field.
-{{% /md %}}</dd>
-</dl>
+{{% /md %}}</dd></dl>
 {{% /choosable %}}
 
 {{% choosable language nodejs %}}
-<dl class="resources-properties">
-
-    <dt class="property-"
+<dl class="resources-properties"><dt class="property-"
             title="">
         <span id="appid_nodejs">
 <a href="#appid_nodejs" style="color: inherit; text-decoration: inherit;">app<wbr>Id</a>
@@ -814,8 +749,7 @@ All [input](#inputs) properties are implicitly available as output properties. A
         <span class="property-type">string</span>
     </dt>
     <dd>{{% md %}}Identifier of the app, usually `{PROJECT_ID}`
-{{% /md %}}</dd>
-    <dt class="property-"
+{{% /md %}}</dd><dt class="property-"
             title="">
         <span id="codebucket_nodejs">
 <a href="#codebucket_nodejs" style="color: inherit; text-decoration: inherit;">code<wbr>Bucket</a>
@@ -824,8 +758,7 @@ All [input](#inputs) properties are implicitly available as output properties. A
         <span class="property-type">string</span>
     </dt>
     <dd>{{% md %}}The GCS bucket code is being stored in for this app.
-{{% /md %}}</dd>
-    <dt class="property-"
+{{% /md %}}</dd><dt class="property-"
             title="">
         <span id="defaultbucket_nodejs">
 <a href="#defaultbucket_nodejs" style="color: inherit; text-decoration: inherit;">default<wbr>Bucket</a>
@@ -834,8 +767,7 @@ All [input](#inputs) properties are implicitly available as output properties. A
         <span class="property-type">string</span>
     </dt>
     <dd>{{% md %}}The GCS bucket content is being stored in for this app.
-{{% /md %}}</dd>
-    <dt class="property-"
+{{% /md %}}</dd><dt class="property-"
             title="">
         <span id="defaulthostname_nodejs">
 <a href="#defaulthostname_nodejs" style="color: inherit; text-decoration: inherit;">default<wbr>Hostname</a>
@@ -844,8 +776,7 @@ All [input](#inputs) properties are implicitly available as output properties. A
         <span class="property-type">string</span>
     </dt>
     <dd>{{% md %}}The default hostname for this app.
-{{% /md %}}</dd>
-    <dt class="property-"
+{{% /md %}}</dd><dt class="property-"
             title="">
         <span id="gcrdomain_nodejs">
 <a href="#gcrdomain_nodejs" style="color: inherit; text-decoration: inherit;">gcr<wbr>Domain</a>
@@ -854,8 +785,7 @@ All [input](#inputs) properties are implicitly available as output properties. A
         <span class="property-type">string</span>
     </dt>
     <dd>{{% md %}}The GCR domain used for storing managed Docker images for this app.
-{{% /md %}}</dd>
-    <dt class="property-"
+{{% /md %}}</dd><dt class="property-"
             title="">
         <span id="id_nodejs">
 <a href="#id_nodejs" style="color: inherit; text-decoration: inherit;">id</a>
@@ -863,8 +793,7 @@ All [input](#inputs) properties are implicitly available as output properties. A
         <span class="property-indicator"></span>
         <span class="property-type">string</span>
     </dt>
-    <dd>{{% md %}}The provider-assigned unique ID for this managed resource.{{% /md %}}</dd>
-    <dt class="property-"
+    <dd>{{% md %}}The provider-assigned unique ID for this managed resource.{{% /md %}}</dd><dt class="property-"
             title="">
         <span id="name_nodejs">
 <a href="#name_nodejs" style="color: inherit; text-decoration: inherit;">name</a>
@@ -873,8 +802,7 @@ All [input](#inputs) properties are implicitly available as output properties. A
         <span class="property-type">string</span>
     </dt>
     <dd>{{% md %}}Unique name of the app, usually `apps/{PROJECT_ID}`
-{{% /md %}}</dd>
-    <dt class="property-"
+{{% /md %}}</dd><dt class="property-"
             title="">
         <span id="urldispatchrules_nodejs">
 <a href="#urldispatchrules_nodejs" style="color: inherit; text-decoration: inherit;">url<wbr>Dispatch<wbr>Rules</a>
@@ -883,14 +811,11 @@ All [input](#inputs) properties are implicitly available as output properties. A
         <span class="property-type"><a href="#applicationurldispatchrule">Application<wbr>Url<wbr>Dispatch<wbr>Rule[]</a></span>
     </dt>
     <dd>{{% md %}}A list of dispatch rule blocks. Each block has a `domain`, `path`, and `service` field.
-{{% /md %}}</dd>
-</dl>
+{{% /md %}}</dd></dl>
 {{% /choosable %}}
 
 {{% choosable language python %}}
-<dl class="resources-properties">
-
-    <dt class="property-"
+<dl class="resources-properties"><dt class="property-"
             title="">
         <span id="app_id_python">
 <a href="#app_id_python" style="color: inherit; text-decoration: inherit;">app_<wbr>id</a>
@@ -899,8 +824,7 @@ All [input](#inputs) properties are implicitly available as output properties. A
         <span class="property-type">str</span>
     </dt>
     <dd>{{% md %}}Identifier of the app, usually `{PROJECT_ID}`
-{{% /md %}}</dd>
-    <dt class="property-"
+{{% /md %}}</dd><dt class="property-"
             title="">
         <span id="code_bucket_python">
 <a href="#code_bucket_python" style="color: inherit; text-decoration: inherit;">code_<wbr>bucket</a>
@@ -909,8 +833,7 @@ All [input](#inputs) properties are implicitly available as output properties. A
         <span class="property-type">str</span>
     </dt>
     <dd>{{% md %}}The GCS bucket code is being stored in for this app.
-{{% /md %}}</dd>
-    <dt class="property-"
+{{% /md %}}</dd><dt class="property-"
             title="">
         <span id="default_bucket_python">
 <a href="#default_bucket_python" style="color: inherit; text-decoration: inherit;">default_<wbr>bucket</a>
@@ -919,8 +842,7 @@ All [input](#inputs) properties are implicitly available as output properties. A
         <span class="property-type">str</span>
     </dt>
     <dd>{{% md %}}The GCS bucket content is being stored in for this app.
-{{% /md %}}</dd>
-    <dt class="property-"
+{{% /md %}}</dd><dt class="property-"
             title="">
         <span id="default_hostname_python">
 <a href="#default_hostname_python" style="color: inherit; text-decoration: inherit;">default_<wbr>hostname</a>
@@ -929,8 +851,7 @@ All [input](#inputs) properties are implicitly available as output properties. A
         <span class="property-type">str</span>
     </dt>
     <dd>{{% md %}}The default hostname for this app.
-{{% /md %}}</dd>
-    <dt class="property-"
+{{% /md %}}</dd><dt class="property-"
             title="">
         <span id="gcr_domain_python">
 <a href="#gcr_domain_python" style="color: inherit; text-decoration: inherit;">gcr_<wbr>domain</a>
@@ -939,8 +860,7 @@ All [input](#inputs) properties are implicitly available as output properties. A
         <span class="property-type">str</span>
     </dt>
     <dd>{{% md %}}The GCR domain used for storing managed Docker images for this app.
-{{% /md %}}</dd>
-    <dt class="property-"
+{{% /md %}}</dd><dt class="property-"
             title="">
         <span id="id_python">
 <a href="#id_python" style="color: inherit; text-decoration: inherit;">id</a>
@@ -948,8 +868,7 @@ All [input](#inputs) properties are implicitly available as output properties. A
         <span class="property-indicator"></span>
         <span class="property-type">str</span>
     </dt>
-    <dd>{{% md %}}The provider-assigned unique ID for this managed resource.{{% /md %}}</dd>
-    <dt class="property-"
+    <dd>{{% md %}}The provider-assigned unique ID for this managed resource.{{% /md %}}</dd><dt class="property-"
             title="">
         <span id="name_python">
 <a href="#name_python" style="color: inherit; text-decoration: inherit;">name</a>
@@ -958,8 +877,7 @@ All [input](#inputs) properties are implicitly available as output properties. A
         <span class="property-type">str</span>
     </dt>
     <dd>{{% md %}}Unique name of the app, usually `apps/{PROJECT_ID}`
-{{% /md %}}</dd>
-    <dt class="property-"
+{{% /md %}}</dd><dt class="property-"
             title="">
         <span id="url_dispatch_rules_python">
 <a href="#url_dispatch_rules_python" style="color: inherit; text-decoration: inherit;">url_<wbr>dispatch_<wbr>rules</a>
@@ -968,8 +886,7 @@ All [input](#inputs) properties are implicitly available as output properties. A
         <span class="property-type"><a href="#applicationurldispatchrule">Sequence[Application<wbr>Url<wbr>Dispatch<wbr>Rule]</a></span>
     </dt>
     <dd>{{% md %}}A list of dispatch rule blocks. Each block has a `domain`, `path`, and `service` field.
-{{% /md %}}</dd>
-</dl>
+{{% /md %}}</dd></dl>
 {{% /choosable %}}
 
 
@@ -1096,9 +1013,7 @@ The following state arguments are supported:
 
 
 {{% choosable language csharp %}}
-<dl class="resources-properties">
-
-    <dt class="property-optional"
+<dl class="resources-properties"><dt class="property-optional"
             title="Optional">
         <span id="state_appid_csharp">
 <a href="#state_appid_csharp" style="color: inherit; text-decoration: inherit;">App<wbr>Id</a>
@@ -1107,8 +1022,7 @@ The following state arguments are supported:
         <span class="property-type">string</span>
     </dt>
     <dd>{{% md %}}Identifier of the app, usually `{PROJECT_ID}`
-{{% /md %}}</dd>
-    <dt class="property-optional"
+{{% /md %}}</dd><dt class="property-optional"
             title="Optional">
         <span id="state_authdomain_csharp">
 <a href="#state_authdomain_csharp" style="color: inherit; text-decoration: inherit;">Auth<wbr>Domain</a>
@@ -1117,8 +1031,7 @@ The following state arguments are supported:
         <span class="property-type">string</span>
     </dt>
     <dd>{{% md %}}The domain to authenticate users with when using App Engine's User API.
-{{% /md %}}</dd>
-    <dt class="property-optional"
+{{% /md %}}</dd><dt class="property-optional"
             title="Optional">
         <span id="state_codebucket_csharp">
 <a href="#state_codebucket_csharp" style="color: inherit; text-decoration: inherit;">Code<wbr>Bucket</a>
@@ -1127,8 +1040,7 @@ The following state arguments are supported:
         <span class="property-type">string</span>
     </dt>
     <dd>{{% md %}}The GCS bucket code is being stored in for this app.
-{{% /md %}}</dd>
-    <dt class="property-optional"
+{{% /md %}}</dd><dt class="property-optional"
             title="Optional">
         <span id="state_databasetype_csharp">
 <a href="#state_databasetype_csharp" style="color: inherit; text-decoration: inherit;">Database<wbr>Type</a>
@@ -1140,8 +1052,7 @@ The following state arguments are supported:
 Can be `CLOUD_FIRESTORE` or `CLOUD_DATASTORE_COMPATIBILITY` for new
 instances.  To support old instances, the value `CLOUD_DATASTORE` is accepted
 by the provider, but will be rejected by the API.
-{{% /md %}}</dd>
-    <dt class="property-optional"
+{{% /md %}}</dd><dt class="property-optional"
             title="Optional">
         <span id="state_defaultbucket_csharp">
 <a href="#state_defaultbucket_csharp" style="color: inherit; text-decoration: inherit;">Default<wbr>Bucket</a>
@@ -1150,8 +1061,7 @@ by the provider, but will be rejected by the API.
         <span class="property-type">string</span>
     </dt>
     <dd>{{% md %}}The GCS bucket content is being stored in for this app.
-{{% /md %}}</dd>
-    <dt class="property-optional"
+{{% /md %}}</dd><dt class="property-optional"
             title="Optional">
         <span id="state_defaulthostname_csharp">
 <a href="#state_defaulthostname_csharp" style="color: inherit; text-decoration: inherit;">Default<wbr>Hostname</a>
@@ -1160,8 +1070,7 @@ by the provider, but will be rejected by the API.
         <span class="property-type">string</span>
     </dt>
     <dd>{{% md %}}The default hostname for this app.
-{{% /md %}}</dd>
-    <dt class="property-optional"
+{{% /md %}}</dd><dt class="property-optional"
             title="Optional">
         <span id="state_featuresettings_csharp">
 <a href="#state_featuresettings_csharp" style="color: inherit; text-decoration: inherit;">Feature<wbr>Settings</a>
@@ -1170,8 +1079,7 @@ by the provider, but will be rejected by the API.
         <span class="property-type"><a href="#applicationfeaturesettings">Application<wbr>Feature<wbr>Settings<wbr>Args</a></span>
     </dt>
     <dd>{{% md %}}A block of optional settings to configure specific App Engine features:
-{{% /md %}}</dd>
-    <dt class="property-optional"
+{{% /md %}}</dd><dt class="property-optional"
             title="Optional">
         <span id="state_gcrdomain_csharp">
 <a href="#state_gcrdomain_csharp" style="color: inherit; text-decoration: inherit;">Gcr<wbr>Domain</a>
@@ -1180,8 +1088,7 @@ by the provider, but will be rejected by the API.
         <span class="property-type">string</span>
     </dt>
     <dd>{{% md %}}The GCR domain used for storing managed Docker images for this app.
-{{% /md %}}</dd>
-    <dt class="property-optional"
+{{% /md %}}</dd><dt class="property-optional"
             title="Optional">
         <span id="state_iap_csharp">
 <a href="#state_iap_csharp" style="color: inherit; text-decoration: inherit;">Iap</a>
@@ -1190,8 +1097,7 @@ by the provider, but will be rejected by the API.
         <span class="property-type"><a href="#applicationiap">Application<wbr>Iap<wbr>Args</a></span>
     </dt>
     <dd>{{% md %}}Settings for enabling Cloud Identity Aware Proxy
-{{% /md %}}</dd>
-    <dt class="property-optional"
+{{% /md %}}</dd><dt class="property-optional"
             title="Optional">
         <span id="state_locationid_csharp">
 <a href="#state_locationid_csharp" style="color: inherit; text-decoration: inherit;">Location<wbr>Id</a>
@@ -1201,8 +1107,7 @@ by the provider, but will be rejected by the API.
     </dt>
     <dd>{{% md %}}The [location](https://cloud.google.com/appengine/docs/locations)
 to serve the app from.
-{{% /md %}}</dd>
-    <dt class="property-optional"
+{{% /md %}}</dd><dt class="property-optional"
             title="Optional">
         <span id="state_name_csharp">
 <a href="#state_name_csharp" style="color: inherit; text-decoration: inherit;">Name</a>
@@ -1211,8 +1116,7 @@ to serve the app from.
         <span class="property-type">string</span>
     </dt>
     <dd>{{% md %}}Unique name of the app, usually `apps/{PROJECT_ID}`
-{{% /md %}}</dd>
-    <dt class="property-optional"
+{{% /md %}}</dd><dt class="property-optional"
             title="Optional">
         <span id="state_project_csharp">
 <a href="#state_project_csharp" style="color: inherit; text-decoration: inherit;">Project</a>
@@ -1223,8 +1127,7 @@ to serve the app from.
     <dd>{{% md %}}The project ID to create the application under.
 ~>**NOTE:** GCP only accepts project ID, not project number. If you are using number,
 you may get a "Permission denied" error.
-{{% /md %}}</dd>
-    <dt class="property-optional"
+{{% /md %}}</dd><dt class="property-optional"
             title="Optional">
         <span id="state_servingstatus_csharp">
 <a href="#state_servingstatus_csharp" style="color: inherit; text-decoration: inherit;">Serving<wbr>Status</a>
@@ -1233,8 +1136,7 @@ you may get a "Permission denied" error.
         <span class="property-type">string</span>
     </dt>
     <dd>{{% md %}}The serving status of the app.
-{{% /md %}}</dd>
-    <dt class="property-optional"
+{{% /md %}}</dd><dt class="property-optional"
             title="Optional">
         <span id="state_urldispatchrules_csharp">
 <a href="#state_urldispatchrules_csharp" style="color: inherit; text-decoration: inherit;">Url<wbr>Dispatch<wbr>Rules</a>
@@ -1243,14 +1145,11 @@ you may get a "Permission denied" error.
         <span class="property-type"><a href="#applicationurldispatchrule">List&lt;Application<wbr>Url<wbr>Dispatch<wbr>Rule<wbr>Args&gt;</a></span>
     </dt>
     <dd>{{% md %}}A list of dispatch rule blocks. Each block has a `domain`, `path`, and `service` field.
-{{% /md %}}</dd>
-</dl>
+{{% /md %}}</dd></dl>
 {{% /choosable %}}
 
 {{% choosable language go %}}
-<dl class="resources-properties">
-
-    <dt class="property-optional"
+<dl class="resources-properties"><dt class="property-optional"
             title="Optional">
         <span id="state_appid_go">
 <a href="#state_appid_go" style="color: inherit; text-decoration: inherit;">App<wbr>Id</a>
@@ -1259,8 +1158,7 @@ you may get a "Permission denied" error.
         <span class="property-type">string</span>
     </dt>
     <dd>{{% md %}}Identifier of the app, usually `{PROJECT_ID}`
-{{% /md %}}</dd>
-    <dt class="property-optional"
+{{% /md %}}</dd><dt class="property-optional"
             title="Optional">
         <span id="state_authdomain_go">
 <a href="#state_authdomain_go" style="color: inherit; text-decoration: inherit;">Auth<wbr>Domain</a>
@@ -1269,8 +1167,7 @@ you may get a "Permission denied" error.
         <span class="property-type">string</span>
     </dt>
     <dd>{{% md %}}The domain to authenticate users with when using App Engine's User API.
-{{% /md %}}</dd>
-    <dt class="property-optional"
+{{% /md %}}</dd><dt class="property-optional"
             title="Optional">
         <span id="state_codebucket_go">
 <a href="#state_codebucket_go" style="color: inherit; text-decoration: inherit;">Code<wbr>Bucket</a>
@@ -1279,8 +1176,7 @@ you may get a "Permission denied" error.
         <span class="property-type">string</span>
     </dt>
     <dd>{{% md %}}The GCS bucket code is being stored in for this app.
-{{% /md %}}</dd>
-    <dt class="property-optional"
+{{% /md %}}</dd><dt class="property-optional"
             title="Optional">
         <span id="state_databasetype_go">
 <a href="#state_databasetype_go" style="color: inherit; text-decoration: inherit;">Database<wbr>Type</a>
@@ -1292,8 +1188,7 @@ you may get a "Permission denied" error.
 Can be `CLOUD_FIRESTORE` or `CLOUD_DATASTORE_COMPATIBILITY` for new
 instances.  To support old instances, the value `CLOUD_DATASTORE` is accepted
 by the provider, but will be rejected by the API.
-{{% /md %}}</dd>
-    <dt class="property-optional"
+{{% /md %}}</dd><dt class="property-optional"
             title="Optional">
         <span id="state_defaultbucket_go">
 <a href="#state_defaultbucket_go" style="color: inherit; text-decoration: inherit;">Default<wbr>Bucket</a>
@@ -1302,8 +1197,7 @@ by the provider, but will be rejected by the API.
         <span class="property-type">string</span>
     </dt>
     <dd>{{% md %}}The GCS bucket content is being stored in for this app.
-{{% /md %}}</dd>
-    <dt class="property-optional"
+{{% /md %}}</dd><dt class="property-optional"
             title="Optional">
         <span id="state_defaulthostname_go">
 <a href="#state_defaulthostname_go" style="color: inherit; text-decoration: inherit;">Default<wbr>Hostname</a>
@@ -1312,8 +1206,7 @@ by the provider, but will be rejected by the API.
         <span class="property-type">string</span>
     </dt>
     <dd>{{% md %}}The default hostname for this app.
-{{% /md %}}</dd>
-    <dt class="property-optional"
+{{% /md %}}</dd><dt class="property-optional"
             title="Optional">
         <span id="state_featuresettings_go">
 <a href="#state_featuresettings_go" style="color: inherit; text-decoration: inherit;">Feature<wbr>Settings</a>
@@ -1322,8 +1215,7 @@ by the provider, but will be rejected by the API.
         <span class="property-type"><a href="#applicationfeaturesettings">Application<wbr>Feature<wbr>Settings</a></span>
     </dt>
     <dd>{{% md %}}A block of optional settings to configure specific App Engine features:
-{{% /md %}}</dd>
-    <dt class="property-optional"
+{{% /md %}}</dd><dt class="property-optional"
             title="Optional">
         <span id="state_gcrdomain_go">
 <a href="#state_gcrdomain_go" style="color: inherit; text-decoration: inherit;">Gcr<wbr>Domain</a>
@@ -1332,8 +1224,7 @@ by the provider, but will be rejected by the API.
         <span class="property-type">string</span>
     </dt>
     <dd>{{% md %}}The GCR domain used for storing managed Docker images for this app.
-{{% /md %}}</dd>
-    <dt class="property-optional"
+{{% /md %}}</dd><dt class="property-optional"
             title="Optional">
         <span id="state_iap_go">
 <a href="#state_iap_go" style="color: inherit; text-decoration: inherit;">Iap</a>
@@ -1342,8 +1233,7 @@ by the provider, but will be rejected by the API.
         <span class="property-type"><a href="#applicationiap">Application<wbr>Iap</a></span>
     </dt>
     <dd>{{% md %}}Settings for enabling Cloud Identity Aware Proxy
-{{% /md %}}</dd>
-    <dt class="property-optional"
+{{% /md %}}</dd><dt class="property-optional"
             title="Optional">
         <span id="state_locationid_go">
 <a href="#state_locationid_go" style="color: inherit; text-decoration: inherit;">Location<wbr>Id</a>
@@ -1353,8 +1243,7 @@ by the provider, but will be rejected by the API.
     </dt>
     <dd>{{% md %}}The [location](https://cloud.google.com/appengine/docs/locations)
 to serve the app from.
-{{% /md %}}</dd>
-    <dt class="property-optional"
+{{% /md %}}</dd><dt class="property-optional"
             title="Optional">
         <span id="state_name_go">
 <a href="#state_name_go" style="color: inherit; text-decoration: inherit;">Name</a>
@@ -1363,8 +1252,7 @@ to serve the app from.
         <span class="property-type">string</span>
     </dt>
     <dd>{{% md %}}Unique name of the app, usually `apps/{PROJECT_ID}`
-{{% /md %}}</dd>
-    <dt class="property-optional"
+{{% /md %}}</dd><dt class="property-optional"
             title="Optional">
         <span id="state_project_go">
 <a href="#state_project_go" style="color: inherit; text-decoration: inherit;">Project</a>
@@ -1375,8 +1263,7 @@ to serve the app from.
     <dd>{{% md %}}The project ID to create the application under.
 ~>**NOTE:** GCP only accepts project ID, not project number. If you are using number,
 you may get a "Permission denied" error.
-{{% /md %}}</dd>
-    <dt class="property-optional"
+{{% /md %}}</dd><dt class="property-optional"
             title="Optional">
         <span id="state_servingstatus_go">
 <a href="#state_servingstatus_go" style="color: inherit; text-decoration: inherit;">Serving<wbr>Status</a>
@@ -1385,8 +1272,7 @@ you may get a "Permission denied" error.
         <span class="property-type">string</span>
     </dt>
     <dd>{{% md %}}The serving status of the app.
-{{% /md %}}</dd>
-    <dt class="property-optional"
+{{% /md %}}</dd><dt class="property-optional"
             title="Optional">
         <span id="state_urldispatchrules_go">
 <a href="#state_urldispatchrules_go" style="color: inherit; text-decoration: inherit;">Url<wbr>Dispatch<wbr>Rules</a>
@@ -1395,14 +1281,11 @@ you may get a "Permission denied" error.
         <span class="property-type"><a href="#applicationurldispatchrule">[]Application<wbr>Url<wbr>Dispatch<wbr>Rule</a></span>
     </dt>
     <dd>{{% md %}}A list of dispatch rule blocks. Each block has a `domain`, `path`, and `service` field.
-{{% /md %}}</dd>
-</dl>
+{{% /md %}}</dd></dl>
 {{% /choosable %}}
 
 {{% choosable language nodejs %}}
-<dl class="resources-properties">
-
-    <dt class="property-optional"
+<dl class="resources-properties"><dt class="property-optional"
             title="Optional">
         <span id="state_appid_nodejs">
 <a href="#state_appid_nodejs" style="color: inherit; text-decoration: inherit;">app<wbr>Id</a>
@@ -1411,8 +1294,7 @@ you may get a "Permission denied" error.
         <span class="property-type">string</span>
     </dt>
     <dd>{{% md %}}Identifier of the app, usually `{PROJECT_ID}`
-{{% /md %}}</dd>
-    <dt class="property-optional"
+{{% /md %}}</dd><dt class="property-optional"
             title="Optional">
         <span id="state_authdomain_nodejs">
 <a href="#state_authdomain_nodejs" style="color: inherit; text-decoration: inherit;">auth<wbr>Domain</a>
@@ -1421,8 +1303,7 @@ you may get a "Permission denied" error.
         <span class="property-type">string</span>
     </dt>
     <dd>{{% md %}}The domain to authenticate users with when using App Engine's User API.
-{{% /md %}}</dd>
-    <dt class="property-optional"
+{{% /md %}}</dd><dt class="property-optional"
             title="Optional">
         <span id="state_codebucket_nodejs">
 <a href="#state_codebucket_nodejs" style="color: inherit; text-decoration: inherit;">code<wbr>Bucket</a>
@@ -1431,8 +1312,7 @@ you may get a "Permission denied" error.
         <span class="property-type">string</span>
     </dt>
     <dd>{{% md %}}The GCS bucket code is being stored in for this app.
-{{% /md %}}</dd>
-    <dt class="property-optional"
+{{% /md %}}</dd><dt class="property-optional"
             title="Optional">
         <span id="state_databasetype_nodejs">
 <a href="#state_databasetype_nodejs" style="color: inherit; text-decoration: inherit;">database<wbr>Type</a>
@@ -1444,8 +1324,7 @@ you may get a "Permission denied" error.
 Can be `CLOUD_FIRESTORE` or `CLOUD_DATASTORE_COMPATIBILITY` for new
 instances.  To support old instances, the value `CLOUD_DATASTORE` is accepted
 by the provider, but will be rejected by the API.
-{{% /md %}}</dd>
-    <dt class="property-optional"
+{{% /md %}}</dd><dt class="property-optional"
             title="Optional">
         <span id="state_defaultbucket_nodejs">
 <a href="#state_defaultbucket_nodejs" style="color: inherit; text-decoration: inherit;">default<wbr>Bucket</a>
@@ -1454,8 +1333,7 @@ by the provider, but will be rejected by the API.
         <span class="property-type">string</span>
     </dt>
     <dd>{{% md %}}The GCS bucket content is being stored in for this app.
-{{% /md %}}</dd>
-    <dt class="property-optional"
+{{% /md %}}</dd><dt class="property-optional"
             title="Optional">
         <span id="state_defaulthostname_nodejs">
 <a href="#state_defaulthostname_nodejs" style="color: inherit; text-decoration: inherit;">default<wbr>Hostname</a>
@@ -1464,8 +1342,7 @@ by the provider, but will be rejected by the API.
         <span class="property-type">string</span>
     </dt>
     <dd>{{% md %}}The default hostname for this app.
-{{% /md %}}</dd>
-    <dt class="property-optional"
+{{% /md %}}</dd><dt class="property-optional"
             title="Optional">
         <span id="state_featuresettings_nodejs">
 <a href="#state_featuresettings_nodejs" style="color: inherit; text-decoration: inherit;">feature<wbr>Settings</a>
@@ -1474,8 +1351,7 @@ by the provider, but will be rejected by the API.
         <span class="property-type"><a href="#applicationfeaturesettings">Application<wbr>Feature<wbr>Settings</a></span>
     </dt>
     <dd>{{% md %}}A block of optional settings to configure specific App Engine features:
-{{% /md %}}</dd>
-    <dt class="property-optional"
+{{% /md %}}</dd><dt class="property-optional"
             title="Optional">
         <span id="state_gcrdomain_nodejs">
 <a href="#state_gcrdomain_nodejs" style="color: inherit; text-decoration: inherit;">gcr<wbr>Domain</a>
@@ -1484,8 +1360,7 @@ by the provider, but will be rejected by the API.
         <span class="property-type">string</span>
     </dt>
     <dd>{{% md %}}The GCR domain used for storing managed Docker images for this app.
-{{% /md %}}</dd>
-    <dt class="property-optional"
+{{% /md %}}</dd><dt class="property-optional"
             title="Optional">
         <span id="state_iap_nodejs">
 <a href="#state_iap_nodejs" style="color: inherit; text-decoration: inherit;">iap</a>
@@ -1494,8 +1369,7 @@ by the provider, but will be rejected by the API.
         <span class="property-type"><a href="#applicationiap">Application<wbr>Iap</a></span>
     </dt>
     <dd>{{% md %}}Settings for enabling Cloud Identity Aware Proxy
-{{% /md %}}</dd>
-    <dt class="property-optional"
+{{% /md %}}</dd><dt class="property-optional"
             title="Optional">
         <span id="state_locationid_nodejs">
 <a href="#state_locationid_nodejs" style="color: inherit; text-decoration: inherit;">location<wbr>Id</a>
@@ -1505,8 +1379,7 @@ by the provider, but will be rejected by the API.
     </dt>
     <dd>{{% md %}}The [location](https://cloud.google.com/appengine/docs/locations)
 to serve the app from.
-{{% /md %}}</dd>
-    <dt class="property-optional"
+{{% /md %}}</dd><dt class="property-optional"
             title="Optional">
         <span id="state_name_nodejs">
 <a href="#state_name_nodejs" style="color: inherit; text-decoration: inherit;">name</a>
@@ -1515,8 +1388,7 @@ to serve the app from.
         <span class="property-type">string</span>
     </dt>
     <dd>{{% md %}}Unique name of the app, usually `apps/{PROJECT_ID}`
-{{% /md %}}</dd>
-    <dt class="property-optional"
+{{% /md %}}</dd><dt class="property-optional"
             title="Optional">
         <span id="state_project_nodejs">
 <a href="#state_project_nodejs" style="color: inherit; text-decoration: inherit;">project</a>
@@ -1527,8 +1399,7 @@ to serve the app from.
     <dd>{{% md %}}The project ID to create the application under.
 ~>**NOTE:** GCP only accepts project ID, not project number. If you are using number,
 you may get a "Permission denied" error.
-{{% /md %}}</dd>
-    <dt class="property-optional"
+{{% /md %}}</dd><dt class="property-optional"
             title="Optional">
         <span id="state_servingstatus_nodejs">
 <a href="#state_servingstatus_nodejs" style="color: inherit; text-decoration: inherit;">serving<wbr>Status</a>
@@ -1537,8 +1408,7 @@ you may get a "Permission denied" error.
         <span class="property-type">string</span>
     </dt>
     <dd>{{% md %}}The serving status of the app.
-{{% /md %}}</dd>
-    <dt class="property-optional"
+{{% /md %}}</dd><dt class="property-optional"
             title="Optional">
         <span id="state_urldispatchrules_nodejs">
 <a href="#state_urldispatchrules_nodejs" style="color: inherit; text-decoration: inherit;">url<wbr>Dispatch<wbr>Rules</a>
@@ -1547,14 +1417,11 @@ you may get a "Permission denied" error.
         <span class="property-type"><a href="#applicationurldispatchrule">Application<wbr>Url<wbr>Dispatch<wbr>Rule[]</a></span>
     </dt>
     <dd>{{% md %}}A list of dispatch rule blocks. Each block has a `domain`, `path`, and `service` field.
-{{% /md %}}</dd>
-</dl>
+{{% /md %}}</dd></dl>
 {{% /choosable %}}
 
 {{% choosable language python %}}
-<dl class="resources-properties">
-
-    <dt class="property-optional"
+<dl class="resources-properties"><dt class="property-optional"
             title="Optional">
         <span id="state_app_id_python">
 <a href="#state_app_id_python" style="color: inherit; text-decoration: inherit;">app_<wbr>id</a>
@@ -1563,8 +1430,7 @@ you may get a "Permission denied" error.
         <span class="property-type">str</span>
     </dt>
     <dd>{{% md %}}Identifier of the app, usually `{PROJECT_ID}`
-{{% /md %}}</dd>
-    <dt class="property-optional"
+{{% /md %}}</dd><dt class="property-optional"
             title="Optional">
         <span id="state_auth_domain_python">
 <a href="#state_auth_domain_python" style="color: inherit; text-decoration: inherit;">auth_<wbr>domain</a>
@@ -1573,8 +1439,7 @@ you may get a "Permission denied" error.
         <span class="property-type">str</span>
     </dt>
     <dd>{{% md %}}The domain to authenticate users with when using App Engine's User API.
-{{% /md %}}</dd>
-    <dt class="property-optional"
+{{% /md %}}</dd><dt class="property-optional"
             title="Optional">
         <span id="state_code_bucket_python">
 <a href="#state_code_bucket_python" style="color: inherit; text-decoration: inherit;">code_<wbr>bucket</a>
@@ -1583,8 +1448,7 @@ you may get a "Permission denied" error.
         <span class="property-type">str</span>
     </dt>
     <dd>{{% md %}}The GCS bucket code is being stored in for this app.
-{{% /md %}}</dd>
-    <dt class="property-optional"
+{{% /md %}}</dd><dt class="property-optional"
             title="Optional">
         <span id="state_database_type_python">
 <a href="#state_database_type_python" style="color: inherit; text-decoration: inherit;">database_<wbr>type</a>
@@ -1596,8 +1460,7 @@ you may get a "Permission denied" error.
 Can be `CLOUD_FIRESTORE` or `CLOUD_DATASTORE_COMPATIBILITY` for new
 instances.  To support old instances, the value `CLOUD_DATASTORE` is accepted
 by the provider, but will be rejected by the API.
-{{% /md %}}</dd>
-    <dt class="property-optional"
+{{% /md %}}</dd><dt class="property-optional"
             title="Optional">
         <span id="state_default_bucket_python">
 <a href="#state_default_bucket_python" style="color: inherit; text-decoration: inherit;">default_<wbr>bucket</a>
@@ -1606,8 +1469,7 @@ by the provider, but will be rejected by the API.
         <span class="property-type">str</span>
     </dt>
     <dd>{{% md %}}The GCS bucket content is being stored in for this app.
-{{% /md %}}</dd>
-    <dt class="property-optional"
+{{% /md %}}</dd><dt class="property-optional"
             title="Optional">
         <span id="state_default_hostname_python">
 <a href="#state_default_hostname_python" style="color: inherit; text-decoration: inherit;">default_<wbr>hostname</a>
@@ -1616,8 +1478,7 @@ by the provider, but will be rejected by the API.
         <span class="property-type">str</span>
     </dt>
     <dd>{{% md %}}The default hostname for this app.
-{{% /md %}}</dd>
-    <dt class="property-optional"
+{{% /md %}}</dd><dt class="property-optional"
             title="Optional">
         <span id="state_feature_settings_python">
 <a href="#state_feature_settings_python" style="color: inherit; text-decoration: inherit;">feature_<wbr>settings</a>
@@ -1626,8 +1487,7 @@ by the provider, but will be rejected by the API.
         <span class="property-type"><a href="#applicationfeaturesettings">Application<wbr>Feature<wbr>Settings<wbr>Args</a></span>
     </dt>
     <dd>{{% md %}}A block of optional settings to configure specific App Engine features:
-{{% /md %}}</dd>
-    <dt class="property-optional"
+{{% /md %}}</dd><dt class="property-optional"
             title="Optional">
         <span id="state_gcr_domain_python">
 <a href="#state_gcr_domain_python" style="color: inherit; text-decoration: inherit;">gcr_<wbr>domain</a>
@@ -1636,8 +1496,7 @@ by the provider, but will be rejected by the API.
         <span class="property-type">str</span>
     </dt>
     <dd>{{% md %}}The GCR domain used for storing managed Docker images for this app.
-{{% /md %}}</dd>
-    <dt class="property-optional"
+{{% /md %}}</dd><dt class="property-optional"
             title="Optional">
         <span id="state_iap_python">
 <a href="#state_iap_python" style="color: inherit; text-decoration: inherit;">iap</a>
@@ -1646,8 +1505,7 @@ by the provider, but will be rejected by the API.
         <span class="property-type"><a href="#applicationiap">Application<wbr>Iap<wbr>Args</a></span>
     </dt>
     <dd>{{% md %}}Settings for enabling Cloud Identity Aware Proxy
-{{% /md %}}</dd>
-    <dt class="property-optional"
+{{% /md %}}</dd><dt class="property-optional"
             title="Optional">
         <span id="state_location_id_python">
 <a href="#state_location_id_python" style="color: inherit; text-decoration: inherit;">location_<wbr>id</a>
@@ -1657,8 +1515,7 @@ by the provider, but will be rejected by the API.
     </dt>
     <dd>{{% md %}}The [location](https://cloud.google.com/appengine/docs/locations)
 to serve the app from.
-{{% /md %}}</dd>
-    <dt class="property-optional"
+{{% /md %}}</dd><dt class="property-optional"
             title="Optional">
         <span id="state_name_python">
 <a href="#state_name_python" style="color: inherit; text-decoration: inherit;">name</a>
@@ -1667,8 +1524,7 @@ to serve the app from.
         <span class="property-type">str</span>
     </dt>
     <dd>{{% md %}}Unique name of the app, usually `apps/{PROJECT_ID}`
-{{% /md %}}</dd>
-    <dt class="property-optional"
+{{% /md %}}</dd><dt class="property-optional"
             title="Optional">
         <span id="state_project_python">
 <a href="#state_project_python" style="color: inherit; text-decoration: inherit;">project</a>
@@ -1679,8 +1535,7 @@ to serve the app from.
     <dd>{{% md %}}The project ID to create the application under.
 ~>**NOTE:** GCP only accepts project ID, not project number. If you are using number,
 you may get a "Permission denied" error.
-{{% /md %}}</dd>
-    <dt class="property-optional"
+{{% /md %}}</dd><dt class="property-optional"
             title="Optional">
         <span id="state_serving_status_python">
 <a href="#state_serving_status_python" style="color: inherit; text-decoration: inherit;">serving_<wbr>status</a>
@@ -1689,8 +1544,7 @@ you may get a "Permission denied" error.
         <span class="property-type">str</span>
     </dt>
     <dd>{{% md %}}The serving status of the app.
-{{% /md %}}</dd>
-    <dt class="property-optional"
+{{% /md %}}</dd><dt class="property-optional"
             title="Optional">
         <span id="state_url_dispatch_rules_python">
 <a href="#state_url_dispatch_rules_python" style="color: inherit; text-decoration: inherit;">url_<wbr>dispatch_<wbr>rules</a>
@@ -1699,8 +1553,7 @@ you may get a "Permission denied" error.
         <span class="property-type"><a href="#applicationurldispatchrule">Sequence[Application<wbr>Url<wbr>Dispatch<wbr>Rule<wbr>Args]</a></span>
     </dt>
     <dd>{{% md %}}A list of dispatch rule blocks. Each block has a `domain`, `path`, and `service` field.
-{{% /md %}}</dd>
-</dl>
+{{% /md %}}</dd></dl>
 {{% /choosable %}}
 
 
@@ -1715,9 +1568,7 @@ you may get a "Permission denied" error.
 <h4 id="applicationfeaturesettings">Application<wbr>Feature<wbr>Settings</h4>
 
 {{% choosable language csharp %}}
-<dl class="resources-properties">
-
-    <dt class="property-required"
+<dl class="resources-properties"><dt class="property-required"
             title="Required">
         <span id="splithealthchecks_csharp">
 <a href="#splithealthchecks_csharp" style="color: inherit; text-decoration: inherit;">Split<wbr>Health<wbr>Checks</a>
@@ -1727,14 +1578,11 @@ you may get a "Permission denied" error.
     </dt>
     <dd>{{% md %}}Set to false to use the legacy health check instead of the readiness
 and liveness checks.
-{{% /md %}}</dd>
-</dl>
+{{% /md %}}</dd></dl>
 {{% /choosable %}}
 
 {{% choosable language go %}}
-<dl class="resources-properties">
-
-    <dt class="property-required"
+<dl class="resources-properties"><dt class="property-required"
             title="Required">
         <span id="splithealthchecks_go">
 <a href="#splithealthchecks_go" style="color: inherit; text-decoration: inherit;">Split<wbr>Health<wbr>Checks</a>
@@ -1744,14 +1592,11 @@ and liveness checks.
     </dt>
     <dd>{{% md %}}Set to false to use the legacy health check instead of the readiness
 and liveness checks.
-{{% /md %}}</dd>
-</dl>
+{{% /md %}}</dd></dl>
 {{% /choosable %}}
 
 {{% choosable language nodejs %}}
-<dl class="resources-properties">
-
-    <dt class="property-required"
+<dl class="resources-properties"><dt class="property-required"
             title="Required">
         <span id="splithealthchecks_nodejs">
 <a href="#splithealthchecks_nodejs" style="color: inherit; text-decoration: inherit;">split<wbr>Health<wbr>Checks</a>
@@ -1761,14 +1606,11 @@ and liveness checks.
     </dt>
     <dd>{{% md %}}Set to false to use the legacy health check instead of the readiness
 and liveness checks.
-{{% /md %}}</dd>
-</dl>
+{{% /md %}}</dd></dl>
 {{% /choosable %}}
 
 {{% choosable language python %}}
-<dl class="resources-properties">
-
-    <dt class="property-required"
+<dl class="resources-properties"><dt class="property-required"
             title="Required">
         <span id="split_health_checks_python">
 <a href="#split_health_checks_python" style="color: inherit; text-decoration: inherit;">split_<wbr>health_<wbr>checks</a>
@@ -1778,16 +1620,13 @@ and liveness checks.
     </dt>
     <dd>{{% md %}}Set to false to use the legacy health check instead of the readiness
 and liveness checks.
-{{% /md %}}</dd>
-</dl>
+{{% /md %}}</dd></dl>
 {{% /choosable %}}
 
 <h4 id="applicationiap">Application<wbr>Iap</h4>
 
 {{% choosable language csharp %}}
-<dl class="resources-properties">
-
-    <dt class="property-required"
+<dl class="resources-properties"><dt class="property-required"
             title="Required">
         <span id="oauth2clientid_csharp">
 <a href="#oauth2clientid_csharp" style="color: inherit; text-decoration: inherit;">Oauth2Client<wbr>Id</a>
@@ -1796,8 +1635,7 @@ and liveness checks.
         <span class="property-type">string</span>
     </dt>
     <dd>{{% md %}}OAuth2 client ID to use for the authentication flow.
-{{% /md %}}</dd>
-    <dt class="property-required"
+{{% /md %}}</dd><dt class="property-required"
             title="Required">
         <span id="oauth2clientsecret_csharp">
 <a href="#oauth2clientsecret_csharp" style="color: inherit; text-decoration: inherit;">Oauth2Client<wbr>Secret</a>
@@ -1807,8 +1645,7 @@ and liveness checks.
     </dt>
     <dd>{{% md %}}OAuth2 client secret to use for the authentication flow.
 The SHA-256 hash of the value is returned in the oauth2ClientSecretSha256 field.
-{{% /md %}}</dd>
-    <dt class="property-optional"
+{{% /md %}}</dd><dt class="property-optional"
             title="Optional">
         <span id="enabled_csharp">
 <a href="#enabled_csharp" style="color: inherit; text-decoration: inherit;">Enabled</a>
@@ -1818,8 +1655,7 @@ The SHA-256 hash of the value is returned in the oauth2ClientSecretSha256 field.
     </dt>
     <dd>{{% md %}}(Optional) Whether the serving infrastructure will authenticate and authorize all incoming requests. 
 (default is false)
-{{% /md %}}</dd>
-    <dt class="property-optional"
+{{% /md %}}</dd><dt class="property-optional"
             title="Optional">
         <span id="oauth2clientsecretsha256_csharp">
 <a href="#oauth2clientsecretsha256_csharp" style="color: inherit; text-decoration: inherit;">Oauth2Client<wbr>Secret<wbr>Sha256</a>
@@ -1828,14 +1664,11 @@ The SHA-256 hash of the value is returned in the oauth2ClientSecretSha256 field.
         <span class="property-type">string</span>
     </dt>
     <dd>{{% md %}}Hex-encoded SHA-256 hash of the client secret.
-{{% /md %}}</dd>
-</dl>
+{{% /md %}}</dd></dl>
 {{% /choosable %}}
 
 {{% choosable language go %}}
-<dl class="resources-properties">
-
-    <dt class="property-required"
+<dl class="resources-properties"><dt class="property-required"
             title="Required">
         <span id="oauth2clientid_go">
 <a href="#oauth2clientid_go" style="color: inherit; text-decoration: inherit;">Oauth2Client<wbr>Id</a>
@@ -1844,8 +1677,7 @@ The SHA-256 hash of the value is returned in the oauth2ClientSecretSha256 field.
         <span class="property-type">string</span>
     </dt>
     <dd>{{% md %}}OAuth2 client ID to use for the authentication flow.
-{{% /md %}}</dd>
-    <dt class="property-required"
+{{% /md %}}</dd><dt class="property-required"
             title="Required">
         <span id="oauth2clientsecret_go">
 <a href="#oauth2clientsecret_go" style="color: inherit; text-decoration: inherit;">Oauth2Client<wbr>Secret</a>
@@ -1855,8 +1687,7 @@ The SHA-256 hash of the value is returned in the oauth2ClientSecretSha256 field.
     </dt>
     <dd>{{% md %}}OAuth2 client secret to use for the authentication flow.
 The SHA-256 hash of the value is returned in the oauth2ClientSecretSha256 field.
-{{% /md %}}</dd>
-    <dt class="property-optional"
+{{% /md %}}</dd><dt class="property-optional"
             title="Optional">
         <span id="enabled_go">
 <a href="#enabled_go" style="color: inherit; text-decoration: inherit;">Enabled</a>
@@ -1866,8 +1697,7 @@ The SHA-256 hash of the value is returned in the oauth2ClientSecretSha256 field.
     </dt>
     <dd>{{% md %}}(Optional) Whether the serving infrastructure will authenticate and authorize all incoming requests. 
 (default is false)
-{{% /md %}}</dd>
-    <dt class="property-optional"
+{{% /md %}}</dd><dt class="property-optional"
             title="Optional">
         <span id="oauth2clientsecretsha256_go">
 <a href="#oauth2clientsecretsha256_go" style="color: inherit; text-decoration: inherit;">Oauth2Client<wbr>Secret<wbr>Sha256</a>
@@ -1876,14 +1706,11 @@ The SHA-256 hash of the value is returned in the oauth2ClientSecretSha256 field.
         <span class="property-type">string</span>
     </dt>
     <dd>{{% md %}}Hex-encoded SHA-256 hash of the client secret.
-{{% /md %}}</dd>
-</dl>
+{{% /md %}}</dd></dl>
 {{% /choosable %}}
 
 {{% choosable language nodejs %}}
-<dl class="resources-properties">
-
-    <dt class="property-required"
+<dl class="resources-properties"><dt class="property-required"
             title="Required">
         <span id="oauth2clientid_nodejs">
 <a href="#oauth2clientid_nodejs" style="color: inherit; text-decoration: inherit;">oauth2Client<wbr>Id</a>
@@ -1892,8 +1719,7 @@ The SHA-256 hash of the value is returned in the oauth2ClientSecretSha256 field.
         <span class="property-type">string</span>
     </dt>
     <dd>{{% md %}}OAuth2 client ID to use for the authentication flow.
-{{% /md %}}</dd>
-    <dt class="property-required"
+{{% /md %}}</dd><dt class="property-required"
             title="Required">
         <span id="oauth2clientsecret_nodejs">
 <a href="#oauth2clientsecret_nodejs" style="color: inherit; text-decoration: inherit;">oauth2Client<wbr>Secret</a>
@@ -1903,8 +1729,7 @@ The SHA-256 hash of the value is returned in the oauth2ClientSecretSha256 field.
     </dt>
     <dd>{{% md %}}OAuth2 client secret to use for the authentication flow.
 The SHA-256 hash of the value is returned in the oauth2ClientSecretSha256 field.
-{{% /md %}}</dd>
-    <dt class="property-optional"
+{{% /md %}}</dd><dt class="property-optional"
             title="Optional">
         <span id="enabled_nodejs">
 <a href="#enabled_nodejs" style="color: inherit; text-decoration: inherit;">enabled</a>
@@ -1914,8 +1739,7 @@ The SHA-256 hash of the value is returned in the oauth2ClientSecretSha256 field.
     </dt>
     <dd>{{% md %}}(Optional) Whether the serving infrastructure will authenticate and authorize all incoming requests. 
 (default is false)
-{{% /md %}}</dd>
-    <dt class="property-optional"
+{{% /md %}}</dd><dt class="property-optional"
             title="Optional">
         <span id="oauth2clientsecretsha256_nodejs">
 <a href="#oauth2clientsecretsha256_nodejs" style="color: inherit; text-decoration: inherit;">oauth2Client<wbr>Secret<wbr>Sha256</a>
@@ -1924,14 +1748,11 @@ The SHA-256 hash of the value is returned in the oauth2ClientSecretSha256 field.
         <span class="property-type">string</span>
     </dt>
     <dd>{{% md %}}Hex-encoded SHA-256 hash of the client secret.
-{{% /md %}}</dd>
-</dl>
+{{% /md %}}</dd></dl>
 {{% /choosable %}}
 
 {{% choosable language python %}}
-<dl class="resources-properties">
-
-    <dt class="property-required"
+<dl class="resources-properties"><dt class="property-required"
             title="Required">
         <span id="oauth2_client_id_python">
 <a href="#oauth2_client_id_python" style="color: inherit; text-decoration: inherit;">oauth2_<wbr>client_<wbr>id</a>
@@ -1940,8 +1761,7 @@ The SHA-256 hash of the value is returned in the oauth2ClientSecretSha256 field.
         <span class="property-type">str</span>
     </dt>
     <dd>{{% md %}}OAuth2 client ID to use for the authentication flow.
-{{% /md %}}</dd>
-    <dt class="property-required"
+{{% /md %}}</dd><dt class="property-required"
             title="Required">
         <span id="oauth2_client_secret_python">
 <a href="#oauth2_client_secret_python" style="color: inherit; text-decoration: inherit;">oauth2_<wbr>client_<wbr>secret</a>
@@ -1951,8 +1771,7 @@ The SHA-256 hash of the value is returned in the oauth2ClientSecretSha256 field.
     </dt>
     <dd>{{% md %}}OAuth2 client secret to use for the authentication flow.
 The SHA-256 hash of the value is returned in the oauth2ClientSecretSha256 field.
-{{% /md %}}</dd>
-    <dt class="property-optional"
+{{% /md %}}</dd><dt class="property-optional"
             title="Optional">
         <span id="enabled_python">
 <a href="#enabled_python" style="color: inherit; text-decoration: inherit;">enabled</a>
@@ -1962,8 +1781,7 @@ The SHA-256 hash of the value is returned in the oauth2ClientSecretSha256 field.
     </dt>
     <dd>{{% md %}}(Optional) Whether the serving infrastructure will authenticate and authorize all incoming requests. 
 (default is false)
-{{% /md %}}</dd>
-    <dt class="property-optional"
+{{% /md %}}</dd><dt class="property-optional"
             title="Optional">
         <span id="oauth2_client_secret_sha256_python">
 <a href="#oauth2_client_secret_sha256_python" style="color: inherit; text-decoration: inherit;">oauth2_<wbr>client_<wbr>secret_<wbr>sha256</a>
@@ -1972,16 +1790,13 @@ The SHA-256 hash of the value is returned in the oauth2ClientSecretSha256 field.
         <span class="property-type">str</span>
     </dt>
     <dd>{{% md %}}Hex-encoded SHA-256 hash of the client secret.
-{{% /md %}}</dd>
-</dl>
+{{% /md %}}</dd></dl>
 {{% /choosable %}}
 
 <h4 id="applicationurldispatchrule">Application<wbr>Url<wbr>Dispatch<wbr>Rule</h4>
 
 {{% choosable language csharp %}}
-<dl class="resources-properties">
-
-    <dt class="property-optional"
+<dl class="resources-properties"><dt class="property-optional"
             title="Optional">
         <span id="domain_csharp">
 <a href="#domain_csharp" style="color: inherit; text-decoration: inherit;">Domain</a>
@@ -1989,8 +1804,7 @@ The SHA-256 hash of the value is returned in the oauth2ClientSecretSha256 field.
         <span class="property-indicator"></span>
         <span class="property-type">string</span>
     </dt>
-    <dd>{{% md %}}{{% /md %}}</dd>
-    <dt class="property-optional"
+    <dd>{{% md %}}{{% /md %}}</dd><dt class="property-optional"
             title="Optional">
         <span id="path_csharp">
 <a href="#path_csharp" style="color: inherit; text-decoration: inherit;">Path</a>
@@ -1998,8 +1812,7 @@ The SHA-256 hash of the value is returned in the oauth2ClientSecretSha256 field.
         <span class="property-indicator"></span>
         <span class="property-type">string</span>
     </dt>
-    <dd>{{% md %}}{{% /md %}}</dd>
-    <dt class="property-optional"
+    <dd>{{% md %}}{{% /md %}}</dd><dt class="property-optional"
             title="Optional">
         <span id="service_csharp">
 <a href="#service_csharp" style="color: inherit; text-decoration: inherit;">Service</a>
@@ -2007,14 +1820,11 @@ The SHA-256 hash of the value is returned in the oauth2ClientSecretSha256 field.
         <span class="property-indicator"></span>
         <span class="property-type">string</span>
     </dt>
-    <dd>{{% md %}}{{% /md %}}</dd>
-</dl>
+    <dd>{{% md %}}{{% /md %}}</dd></dl>
 {{% /choosable %}}
 
 {{% choosable language go %}}
-<dl class="resources-properties">
-
-    <dt class="property-optional"
+<dl class="resources-properties"><dt class="property-optional"
             title="Optional">
         <span id="domain_go">
 <a href="#domain_go" style="color: inherit; text-decoration: inherit;">Domain</a>
@@ -2022,8 +1832,7 @@ The SHA-256 hash of the value is returned in the oauth2ClientSecretSha256 field.
         <span class="property-indicator"></span>
         <span class="property-type">string</span>
     </dt>
-    <dd>{{% md %}}{{% /md %}}</dd>
-    <dt class="property-optional"
+    <dd>{{% md %}}{{% /md %}}</dd><dt class="property-optional"
             title="Optional">
         <span id="path_go">
 <a href="#path_go" style="color: inherit; text-decoration: inherit;">Path</a>
@@ -2031,8 +1840,7 @@ The SHA-256 hash of the value is returned in the oauth2ClientSecretSha256 field.
         <span class="property-indicator"></span>
         <span class="property-type">string</span>
     </dt>
-    <dd>{{% md %}}{{% /md %}}</dd>
-    <dt class="property-optional"
+    <dd>{{% md %}}{{% /md %}}</dd><dt class="property-optional"
             title="Optional">
         <span id="service_go">
 <a href="#service_go" style="color: inherit; text-decoration: inherit;">Service</a>
@@ -2040,14 +1848,11 @@ The SHA-256 hash of the value is returned in the oauth2ClientSecretSha256 field.
         <span class="property-indicator"></span>
         <span class="property-type">string</span>
     </dt>
-    <dd>{{% md %}}{{% /md %}}</dd>
-</dl>
+    <dd>{{% md %}}{{% /md %}}</dd></dl>
 {{% /choosable %}}
 
 {{% choosable language nodejs %}}
-<dl class="resources-properties">
-
-    <dt class="property-optional"
+<dl class="resources-properties"><dt class="property-optional"
             title="Optional">
         <span id="domain_nodejs">
 <a href="#domain_nodejs" style="color: inherit; text-decoration: inherit;">domain</a>
@@ -2055,8 +1860,7 @@ The SHA-256 hash of the value is returned in the oauth2ClientSecretSha256 field.
         <span class="property-indicator"></span>
         <span class="property-type">string</span>
     </dt>
-    <dd>{{% md %}}{{% /md %}}</dd>
-    <dt class="property-optional"
+    <dd>{{% md %}}{{% /md %}}</dd><dt class="property-optional"
             title="Optional">
         <span id="path_nodejs">
 <a href="#path_nodejs" style="color: inherit; text-decoration: inherit;">path</a>
@@ -2064,8 +1868,7 @@ The SHA-256 hash of the value is returned in the oauth2ClientSecretSha256 field.
         <span class="property-indicator"></span>
         <span class="property-type">string</span>
     </dt>
-    <dd>{{% md %}}{{% /md %}}</dd>
-    <dt class="property-optional"
+    <dd>{{% md %}}{{% /md %}}</dd><dt class="property-optional"
             title="Optional">
         <span id="service_nodejs">
 <a href="#service_nodejs" style="color: inherit; text-decoration: inherit;">service</a>
@@ -2073,14 +1876,11 @@ The SHA-256 hash of the value is returned in the oauth2ClientSecretSha256 field.
         <span class="property-indicator"></span>
         <span class="property-type">string</span>
     </dt>
-    <dd>{{% md %}}{{% /md %}}</dd>
-</dl>
+    <dd>{{% md %}}{{% /md %}}</dd></dl>
 {{% /choosable %}}
 
 {{% choosable language python %}}
-<dl class="resources-properties">
-
-    <dt class="property-optional"
+<dl class="resources-properties"><dt class="property-optional"
             title="Optional">
         <span id="domain_python">
 <a href="#domain_python" style="color: inherit; text-decoration: inherit;">domain</a>
@@ -2088,8 +1888,7 @@ The SHA-256 hash of the value is returned in the oauth2ClientSecretSha256 field.
         <span class="property-indicator"></span>
         <span class="property-type">str</span>
     </dt>
-    <dd>{{% md %}}{{% /md %}}</dd>
-    <dt class="property-optional"
+    <dd>{{% md %}}{{% /md %}}</dd><dt class="property-optional"
             title="Optional">
         <span id="path_python">
 <a href="#path_python" style="color: inherit; text-decoration: inherit;">path</a>
@@ -2097,8 +1896,7 @@ The SHA-256 hash of the value is returned in the oauth2ClientSecretSha256 field.
         <span class="property-indicator"></span>
         <span class="property-type">str</span>
     </dt>
-    <dd>{{% md %}}{{% /md %}}</dd>
-    <dt class="property-optional"
+    <dd>{{% md %}}{{% /md %}}</dd><dt class="property-optional"
             title="Optional">
         <span id="service_python">
 <a href="#service_python" style="color: inherit; text-decoration: inherit;">service</a>
@@ -2106,8 +1904,7 @@ The SHA-256 hash of the value is returned in the oauth2ClientSecretSha256 field.
         <span class="property-indicator"></span>
         <span class="property-type">str</span>
     </dt>
-    <dd>{{% md %}}{{% /md %}}</dd>
-</dl>
+    <dd>{{% md %}}{{% /md %}}</dd></dl>
 {{% /choosable %}}
 ## Import
 
@@ -2128,6 +1925,6 @@ Applications can be imported using the ID of the project the application belongs
 	<dt>License</dt>
 	<dd>Apache-2.0</dd>
 	<dt>Notes</dt>
-	<dd>This Pulumi package is based on the [`google-beta` Terraform Provider](https://github.com/hashicorp/terraform-provider-google-beta).</dd>
+	<dd>{{% md %}}This Pulumi package is based on the [`google-beta` Terraform Provider](https://github.com/hashicorp/terraform-provider-google-beta).{{% /md %}}</dd>
 </dl>
 

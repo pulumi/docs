@@ -23,11 +23,17 @@ For detailed steps to create a service principal with Azure cli see the [documen
 - [Azure DevOps Service REST API 5.1 - Service End points](https://docs.microsoft.com/en-us/rest/api/azure/devops/serviceendpoint/endpoints?view=azure-devops-rest-5.1)
 
 {{% examples %}}
+
 ## Example Usage
 
 {{< chooser language "typescript,python,go,csharp" / >}}
+
+
 ### Manual AzureRM Service Endpoint
-{{% example csharp %}}
+
+
+{{< example csharp >}}
+
 ```csharp
 using Pulumi;
 using AzureDevOps = Pulumi.AzureDevOps;
@@ -61,15 +67,17 @@ class MyStack : Stack
 }
 ```
 
-{{% /example %}}
 
-{{% example go %}}
+{{< /example >}}
+
+
+{{< example go >}}
+
 ```go
 package main
 
 import (
 	"github.com/pulumi/pulumi-azuredevops/sdk/go/azuredevops"
-	"github.com/pulumi/pulumi-azuredevops/sdk/go/azuredevops/"
 	"github.com/pulumi/pulumi/sdk/v2/go/pulumi"
 )
 
@@ -103,9 +111,12 @@ func main() {
 }
 ```
 
-{{% /example %}}
 
-{{% example python %}}
+{{< /example >}}
+
+
+{{< example python >}}
+
 ```python
 import pulumi
 import pulumi_azuredevops as azuredevops
@@ -127,9 +138,12 @@ endpointazure = azuredevops.ServiceEndpointAzureRM("endpointazure",
     azurerm_subscription_name="Sample Subscription")
 ```
 
-{{% /example %}}
 
-{{% example typescript %}}
+{{< /example >}}
+
+
+{{< example typescript >}}
+
 
 ```typescript
 import * as pulumi from "@pulumi/pulumi";
@@ -154,10 +168,17 @@ const endpointazure = new azuredevops.ServiceEndpointAzureRM("endpointazure", {
 });
 ```
 
-{{% /example %}}
+
+{{< /example >}}
+
+
+
 
 ### Automatic AzureRM Service Endpoint
-{{% example csharp %}}
+
+
+{{< example csharp >}}
+
 ```csharp
 using Pulumi;
 using AzureDevOps = Pulumi.AzureDevOps;
@@ -186,14 +207,17 @@ class MyStack : Stack
 }
 ```
 
-{{% /example %}}
 
-{{% example go %}}
+{{< /example >}}
+
+
+{{< example go >}}
+
 ```go
 package main
 
 import (
-	"github.com/pulumi/pulumi-azuredevops/sdk/go/azuredevops/"
+	"github.com/pulumi/pulumi-azuredevops/sdk/go/azuredevops"
 	"github.com/pulumi/pulumi/sdk/v2/go/pulumi"
 )
 
@@ -223,9 +247,12 @@ func main() {
 }
 ```
 
-{{% /example %}}
 
-{{% example python %}}
+{{< /example >}}
+
+
+{{< example python >}}
+
 ```python
 import pulumi
 import pulumi_azuredevops as azuredevops
@@ -243,9 +270,12 @@ endpointazure = azuredevops.ServiceEndpointAzureRM("endpointazure",
     azurerm_subscription_name="Microsoft Azure DEMO")
 ```
 
-{{% /example %}}
 
-{{% example typescript %}}
+{{< /example >}}
+
+
+{{< example typescript >}}
+
 
 ```typescript
 import * as pulumi from "@pulumi/pulumi";
@@ -266,9 +296,16 @@ const endpointazure = new azuredevops.ServiceEndpointAzureRM("endpointazure", {
 });
 ```
 
-{{% /example %}}
+
+{{< /example >}}
+
+
+
+
 
 {{% /examples %}}
+
+
 
 
 ## Create a AzureRM Resource {#create}
@@ -293,9 +330,7 @@ const endpointazure = new azuredevops.ServiceEndpointAzureRM("endpointazure", {
 
 {{% choosable language nodejs %}}
 
-<dl class="resources-properties">
-  
-    <dt
+<dl class="resources-properties"><dt
         class="property-required" title="Required">
         <span>name</span>
         <span class="property-indicator"></span>
@@ -303,9 +338,7 @@ const endpointazure = new azuredevops.ServiceEndpointAzureRM("endpointazure", {
     </dt>
     <dd>
       The unique name of the resource.
-    </dd>
-  
-    <dt
+    </dd><dt
         class="property-required" title="Required">
         <span>args</span>
         <span class="property-indicator"></span>
@@ -313,9 +346,7 @@ const endpointazure = new azuredevops.ServiceEndpointAzureRM("endpointazure", {
     </dt>
     <dd>
       The arguments to resource properties.
-    </dd>
-  
-    <dt
+    </dd><dt
         class="property-optional" title="Optional">
         <span>opts</span>
         <span class="property-indicator"></span>
@@ -323,10 +354,7 @@ const endpointazure = new azuredevops.ServiceEndpointAzureRM("endpointazure", {
     </dt>
     <dd>
       Bag of options to control resource&#39;s behavior.
-    </dd>
-  
-
-</dl>
+    </dd></dl>
 
 {{% /choosable %}}
 
@@ -352,9 +380,7 @@ const endpointazure = new azuredevops.ServiceEndpointAzureRM("endpointazure", {
 
 {{% choosable language go %}}
 
-<dl class="resources-properties">
-  
-    <dt
+<dl class="resources-properties"><dt
         class="property-optional" title="Optional">
         <span>ctx</span>
         <span class="property-indicator"></span>
@@ -362,9 +388,7 @@ const endpointazure = new azuredevops.ServiceEndpointAzureRM("endpointazure", {
     </dt>
     <dd>
       Context object for the current deployment.
-    </dd>
-  
-    <dt
+    </dd><dt
         class="property-required" title="Required">
         <span>name</span>
         <span class="property-indicator"></span>
@@ -372,9 +396,7 @@ const endpointazure = new azuredevops.ServiceEndpointAzureRM("endpointazure", {
     </dt>
     <dd>
       The unique name of the resource.
-    </dd>
-  
-    <dt
+    </dd><dt
         class="property-required" title="Required">
         <span>args</span>
         <span class="property-indicator"></span>
@@ -382,9 +404,7 @@ const endpointazure = new azuredevops.ServiceEndpointAzureRM("endpointazure", {
     </dt>
     <dd>
       The arguments to resource properties.
-    </dd>
-  
-    <dt
+    </dd><dt
         class="property-optional" title="Optional">
         <span>opts</span>
         <span class="property-indicator"></span>
@@ -392,18 +412,13 @@ const endpointazure = new azuredevops.ServiceEndpointAzureRM("endpointazure", {
     </dt>
     <dd>
       Bag of options to control resource&#39;s behavior.
-    </dd>
-  
-
-</dl>
+    </dd></dl>
 
 {{% /choosable %}}
 
 {{% choosable language csharp %}}
 
-<dl class="resources-properties">
-  
-    <dt
+<dl class="resources-properties"><dt
         class="property-required" title="Required">
         <span>name</span>
         <span class="property-indicator"></span>
@@ -411,9 +426,7 @@ const endpointazure = new azuredevops.ServiceEndpointAzureRM("endpointazure", {
     </dt>
     <dd>
       The unique name of the resource.
-    </dd>
-  
-    <dt
+    </dd><dt
         class="property-required" title="Required">
         <span>args</span>
         <span class="property-indicator"></span>
@@ -421,9 +434,7 @@ const endpointazure = new azuredevops.ServiceEndpointAzureRM("endpointazure", {
     </dt>
     <dd>
       The arguments to resource properties.
-    </dd>
-  
-    <dt
+    </dd><dt
         class="property-optional" title="Optional">
         <span>opts</span>
         <span class="property-indicator"></span>
@@ -431,10 +442,7 @@ const endpointazure = new azuredevops.ServiceEndpointAzureRM("endpointazure", {
     </dt>
     <dd>
       Bag of options to control resource&#39;s behavior.
-    </dd>
-  
-
-</dl>
+    </dd></dl>
 
 {{% /choosable %}}
 
@@ -449,9 +457,7 @@ The AzureRM resource accepts the following [input]({{< relref "/docs/intro/conce
 
 
 {{% choosable language csharp %}}
-<dl class="resources-properties">
-
-    <dt class="property-required"
+<dl class="resources-properties"><dt class="property-required"
             title="Required">
         <span id="azurermspntenantid_csharp">
 <a href="#azurermspntenantid_csharp" style="color: inherit; text-decoration: inherit;">Azurerm<wbr>Spn<wbr>Tenantid</a>
@@ -460,8 +466,7 @@ The AzureRM resource accepts the following [input]({{< relref "/docs/intro/conce
         <span class="property-type">string</span>
     </dt>
     <dd>{{% md %}}The tenant id if the service principal.
-{{% /md %}}</dd>
-    <dt class="property-required"
+{{% /md %}}</dd><dt class="property-required"
             title="Required">
         <span id="azurermsubscriptionid_csharp">
 <a href="#azurermsubscriptionid_csharp" style="color: inherit; text-decoration: inherit;">Azurerm<wbr>Subscription<wbr>Id</a>
@@ -470,8 +475,7 @@ The AzureRM resource accepts the following [input]({{< relref "/docs/intro/conce
         <span class="property-type">string</span>
     </dt>
     <dd>{{% md %}}The subscription Id of the Azure targets.
-{{% /md %}}</dd>
-    <dt class="property-required"
+{{% /md %}}</dd><dt class="property-required"
             title="Required">
         <span id="azurermsubscriptionname_csharp">
 <a href="#azurermsubscriptionname_csharp" style="color: inherit; text-decoration: inherit;">Azurerm<wbr>Subscription<wbr>Name</a>
@@ -480,8 +484,7 @@ The AzureRM resource accepts the following [input]({{< relref "/docs/intro/conce
         <span class="property-type">string</span>
     </dt>
     <dd>{{% md %}}The subscription Name of the targets.
-{{% /md %}}</dd>
-    <dt class="property-required"
+{{% /md %}}</dd><dt class="property-required"
             title="Required">
         <span id="projectid_csharp">
 <a href="#projectid_csharp" style="color: inherit; text-decoration: inherit;">Project<wbr>Id</a>
@@ -490,8 +493,7 @@ The AzureRM resource accepts the following [input]({{< relref "/docs/intro/conce
         <span class="property-type">string</span>
     </dt>
     <dd>{{% md %}}The project ID or project name.
-{{% /md %}}</dd>
-    <dt class="property-required"
+{{% /md %}}</dd><dt class="property-required"
             title="Required">
         <span id="serviceendpointname_csharp">
 <a href="#serviceendpointname_csharp" style="color: inherit; text-decoration: inherit;">Service<wbr>Endpoint<wbr>Name</a>
@@ -500,8 +502,7 @@ The AzureRM resource accepts the following [input]({{< relref "/docs/intro/conce
         <span class="property-type">string</span>
     </dt>
     <dd>{{% md %}}The Service Endpoint name.
-{{% /md %}}</dd>
-    <dt class="property-optional"
+{{% /md %}}</dd><dt class="property-optional"
             title="Optional">
         <span id="authorization_csharp">
 <a href="#authorization_csharp" style="color: inherit; text-decoration: inherit;">Authorization</a>
@@ -509,8 +510,7 @@ The AzureRM resource accepts the following [input]({{< relref "/docs/intro/conce
         <span class="property-indicator"></span>
         <span class="property-type">Dictionary&lt;string, string&gt;</span>
     </dt>
-    <dd>{{% md %}}{{% /md %}}</dd>
-    <dt class="property-optional"
+    <dd>{{% md %}}{{% /md %}}</dd><dt class="property-optional"
             title="Optional">
         <span id="credentials_csharp">
 <a href="#credentials_csharp" style="color: inherit; text-decoration: inherit;">Credentials</a>
@@ -519,8 +519,7 @@ The AzureRM resource accepts the following [input]({{< relref "/docs/intro/conce
         <span class="property-type"><a href="#azurermcredentials">Pulumi.<wbr>Azure<wbr>Dev<wbr>Ops.<wbr>Service<wbr>Endpoint.<wbr>Inputs.<wbr>Azure<wbr>RMCredentials<wbr>Args</a></span>
     </dt>
     <dd>{{% md %}}A `credentials` block.
-{{% /md %}}</dd>
-    <dt class="property-optional"
+{{% /md %}}</dd><dt class="property-optional"
             title="Optional">
         <span id="description_csharp">
 <a href="#description_csharp" style="color: inherit; text-decoration: inherit;">Description</a>
@@ -529,8 +528,7 @@ The AzureRM resource accepts the following [input]({{< relref "/docs/intro/conce
         <span class="property-type">string</span>
     </dt>
     <dd>{{% md %}}Service connection description.
-{{% /md %}}</dd>
-    <dt class="property-optional"
+{{% /md %}}</dd><dt class="property-optional"
             title="Optional">
         <span id="resourcegroup_csharp">
 <a href="#resourcegroup_csharp" style="color: inherit; text-decoration: inherit;">Resource<wbr>Group</a>
@@ -539,14 +537,11 @@ The AzureRM resource accepts the following [input]({{< relref "/docs/intro/conce
         <span class="property-type">string</span>
     </dt>
     <dd>{{% md %}}The resource group used for scope of automatic service endpoint.
-{{% /md %}}</dd>
-</dl>
+{{% /md %}}</dd></dl>
 {{% /choosable %}}
 
 {{% choosable language go %}}
-<dl class="resources-properties">
-
-    <dt class="property-required"
+<dl class="resources-properties"><dt class="property-required"
             title="Required">
         <span id="azurermspntenantid_go">
 <a href="#azurermspntenantid_go" style="color: inherit; text-decoration: inherit;">Azurerm<wbr>Spn<wbr>Tenantid</a>
@@ -555,8 +550,7 @@ The AzureRM resource accepts the following [input]({{< relref "/docs/intro/conce
         <span class="property-type">string</span>
     </dt>
     <dd>{{% md %}}The tenant id if the service principal.
-{{% /md %}}</dd>
-    <dt class="property-required"
+{{% /md %}}</dd><dt class="property-required"
             title="Required">
         <span id="azurermsubscriptionid_go">
 <a href="#azurermsubscriptionid_go" style="color: inherit; text-decoration: inherit;">Azurerm<wbr>Subscription<wbr>Id</a>
@@ -565,8 +559,7 @@ The AzureRM resource accepts the following [input]({{< relref "/docs/intro/conce
         <span class="property-type">string</span>
     </dt>
     <dd>{{% md %}}The subscription Id of the Azure targets.
-{{% /md %}}</dd>
-    <dt class="property-required"
+{{% /md %}}</dd><dt class="property-required"
             title="Required">
         <span id="azurermsubscriptionname_go">
 <a href="#azurermsubscriptionname_go" style="color: inherit; text-decoration: inherit;">Azurerm<wbr>Subscription<wbr>Name</a>
@@ -575,8 +568,7 @@ The AzureRM resource accepts the following [input]({{< relref "/docs/intro/conce
         <span class="property-type">string</span>
     </dt>
     <dd>{{% md %}}The subscription Name of the targets.
-{{% /md %}}</dd>
-    <dt class="property-required"
+{{% /md %}}</dd><dt class="property-required"
             title="Required">
         <span id="projectid_go">
 <a href="#projectid_go" style="color: inherit; text-decoration: inherit;">Project<wbr>Id</a>
@@ -585,8 +577,7 @@ The AzureRM resource accepts the following [input]({{< relref "/docs/intro/conce
         <span class="property-type">string</span>
     </dt>
     <dd>{{% md %}}The project ID or project name.
-{{% /md %}}</dd>
-    <dt class="property-required"
+{{% /md %}}</dd><dt class="property-required"
             title="Required">
         <span id="serviceendpointname_go">
 <a href="#serviceendpointname_go" style="color: inherit; text-decoration: inherit;">Service<wbr>Endpoint<wbr>Name</a>
@@ -595,8 +586,7 @@ The AzureRM resource accepts the following [input]({{< relref "/docs/intro/conce
         <span class="property-type">string</span>
     </dt>
     <dd>{{% md %}}The Service Endpoint name.
-{{% /md %}}</dd>
-    <dt class="property-optional"
+{{% /md %}}</dd><dt class="property-optional"
             title="Optional">
         <span id="authorization_go">
 <a href="#authorization_go" style="color: inherit; text-decoration: inherit;">Authorization</a>
@@ -604,8 +594,7 @@ The AzureRM resource accepts the following [input]({{< relref "/docs/intro/conce
         <span class="property-indicator"></span>
         <span class="property-type">map[string]string</span>
     </dt>
-    <dd>{{% md %}}{{% /md %}}</dd>
-    <dt class="property-optional"
+    <dd>{{% md %}}{{% /md %}}</dd><dt class="property-optional"
             title="Optional">
         <span id="credentials_go">
 <a href="#credentials_go" style="color: inherit; text-decoration: inherit;">Credentials</a>
@@ -614,8 +603,7 @@ The AzureRM resource accepts the following [input]({{< relref "/docs/intro/conce
         <span class="property-type"><a href="#azurermcredentials">Azure<wbr>RMCredentials</a></span>
     </dt>
     <dd>{{% md %}}A `credentials` block.
-{{% /md %}}</dd>
-    <dt class="property-optional"
+{{% /md %}}</dd><dt class="property-optional"
             title="Optional">
         <span id="description_go">
 <a href="#description_go" style="color: inherit; text-decoration: inherit;">Description</a>
@@ -624,8 +612,7 @@ The AzureRM resource accepts the following [input]({{< relref "/docs/intro/conce
         <span class="property-type">string</span>
     </dt>
     <dd>{{% md %}}Service connection description.
-{{% /md %}}</dd>
-    <dt class="property-optional"
+{{% /md %}}</dd><dt class="property-optional"
             title="Optional">
         <span id="resourcegroup_go">
 <a href="#resourcegroup_go" style="color: inherit; text-decoration: inherit;">Resource<wbr>Group</a>
@@ -634,14 +621,11 @@ The AzureRM resource accepts the following [input]({{< relref "/docs/intro/conce
         <span class="property-type">string</span>
     </dt>
     <dd>{{% md %}}The resource group used for scope of automatic service endpoint.
-{{% /md %}}</dd>
-</dl>
+{{% /md %}}</dd></dl>
 {{% /choosable %}}
 
 {{% choosable language nodejs %}}
-<dl class="resources-properties">
-
-    <dt class="property-required"
+<dl class="resources-properties"><dt class="property-required"
             title="Required">
         <span id="azurermspntenantid_nodejs">
 <a href="#azurermspntenantid_nodejs" style="color: inherit; text-decoration: inherit;">azurerm<wbr>Spn<wbr>Tenantid</a>
@@ -650,8 +634,7 @@ The AzureRM resource accepts the following [input]({{< relref "/docs/intro/conce
         <span class="property-type">string</span>
     </dt>
     <dd>{{% md %}}The tenant id if the service principal.
-{{% /md %}}</dd>
-    <dt class="property-required"
+{{% /md %}}</dd><dt class="property-required"
             title="Required">
         <span id="azurermsubscriptionid_nodejs">
 <a href="#azurermsubscriptionid_nodejs" style="color: inherit; text-decoration: inherit;">azurerm<wbr>Subscription<wbr>Id</a>
@@ -660,8 +643,7 @@ The AzureRM resource accepts the following [input]({{< relref "/docs/intro/conce
         <span class="property-type">string</span>
     </dt>
     <dd>{{% md %}}The subscription Id of the Azure targets.
-{{% /md %}}</dd>
-    <dt class="property-required"
+{{% /md %}}</dd><dt class="property-required"
             title="Required">
         <span id="azurermsubscriptionname_nodejs">
 <a href="#azurermsubscriptionname_nodejs" style="color: inherit; text-decoration: inherit;">azurerm<wbr>Subscription<wbr>Name</a>
@@ -670,8 +652,7 @@ The AzureRM resource accepts the following [input]({{< relref "/docs/intro/conce
         <span class="property-type">string</span>
     </dt>
     <dd>{{% md %}}The subscription Name of the targets.
-{{% /md %}}</dd>
-    <dt class="property-required"
+{{% /md %}}</dd><dt class="property-required"
             title="Required">
         <span id="projectid_nodejs">
 <a href="#projectid_nodejs" style="color: inherit; text-decoration: inherit;">project<wbr>Id</a>
@@ -680,8 +661,7 @@ The AzureRM resource accepts the following [input]({{< relref "/docs/intro/conce
         <span class="property-type">string</span>
     </dt>
     <dd>{{% md %}}The project ID or project name.
-{{% /md %}}</dd>
-    <dt class="property-required"
+{{% /md %}}</dd><dt class="property-required"
             title="Required">
         <span id="serviceendpointname_nodejs">
 <a href="#serviceendpointname_nodejs" style="color: inherit; text-decoration: inherit;">service<wbr>Endpoint<wbr>Name</a>
@@ -690,8 +670,7 @@ The AzureRM resource accepts the following [input]({{< relref "/docs/intro/conce
         <span class="property-type">string</span>
     </dt>
     <dd>{{% md %}}The Service Endpoint name.
-{{% /md %}}</dd>
-    <dt class="property-optional"
+{{% /md %}}</dd><dt class="property-optional"
             title="Optional">
         <span id="authorization_nodejs">
 <a href="#authorization_nodejs" style="color: inherit; text-decoration: inherit;">authorization</a>
@@ -699,8 +678,7 @@ The AzureRM resource accepts the following [input]({{< relref "/docs/intro/conce
         <span class="property-indicator"></span>
         <span class="property-type">{[key: string]: string}</span>
     </dt>
-    <dd>{{% md %}}{{% /md %}}</dd>
-    <dt class="property-optional"
+    <dd>{{% md %}}{{% /md %}}</dd><dt class="property-optional"
             title="Optional">
         <span id="credentials_nodejs">
 <a href="#credentials_nodejs" style="color: inherit; text-decoration: inherit;">credentials</a>
@@ -709,8 +687,7 @@ The AzureRM resource accepts the following [input]({{< relref "/docs/intro/conce
         <span class="property-type"><a href="#azurermcredentials">Azure<wbr>RMCredentials</a></span>
     </dt>
     <dd>{{% md %}}A `credentials` block.
-{{% /md %}}</dd>
-    <dt class="property-optional"
+{{% /md %}}</dd><dt class="property-optional"
             title="Optional">
         <span id="description_nodejs">
 <a href="#description_nodejs" style="color: inherit; text-decoration: inherit;">description</a>
@@ -719,8 +696,7 @@ The AzureRM resource accepts the following [input]({{< relref "/docs/intro/conce
         <span class="property-type">string</span>
     </dt>
     <dd>{{% md %}}Service connection description.
-{{% /md %}}</dd>
-    <dt class="property-optional"
+{{% /md %}}</dd><dt class="property-optional"
             title="Optional">
         <span id="resourcegroup_nodejs">
 <a href="#resourcegroup_nodejs" style="color: inherit; text-decoration: inherit;">resource<wbr>Group</a>
@@ -729,14 +705,11 @@ The AzureRM resource accepts the following [input]({{< relref "/docs/intro/conce
         <span class="property-type">string</span>
     </dt>
     <dd>{{% md %}}The resource group used for scope of automatic service endpoint.
-{{% /md %}}</dd>
-</dl>
+{{% /md %}}</dd></dl>
 {{% /choosable %}}
 
 {{% choosable language python %}}
-<dl class="resources-properties">
-
-    <dt class="property-required"
+<dl class="resources-properties"><dt class="property-required"
             title="Required">
         <span id="azurerm_spn_tenantid_python">
 <a href="#azurerm_spn_tenantid_python" style="color: inherit; text-decoration: inherit;">azurerm_<wbr>spn_<wbr>tenantid</a>
@@ -745,8 +718,7 @@ The AzureRM resource accepts the following [input]({{< relref "/docs/intro/conce
         <span class="property-type">str</span>
     </dt>
     <dd>{{% md %}}The tenant id if the service principal.
-{{% /md %}}</dd>
-    <dt class="property-required"
+{{% /md %}}</dd><dt class="property-required"
             title="Required">
         <span id="azurerm_subscription_id_python">
 <a href="#azurerm_subscription_id_python" style="color: inherit; text-decoration: inherit;">azurerm_<wbr>subscription_<wbr>id</a>
@@ -755,8 +727,7 @@ The AzureRM resource accepts the following [input]({{< relref "/docs/intro/conce
         <span class="property-type">str</span>
     </dt>
     <dd>{{% md %}}The subscription Id of the Azure targets.
-{{% /md %}}</dd>
-    <dt class="property-required"
+{{% /md %}}</dd><dt class="property-required"
             title="Required">
         <span id="azurerm_subscription_name_python">
 <a href="#azurerm_subscription_name_python" style="color: inherit; text-decoration: inherit;">azurerm_<wbr>subscription_<wbr>name</a>
@@ -765,8 +736,7 @@ The AzureRM resource accepts the following [input]({{< relref "/docs/intro/conce
         <span class="property-type">str</span>
     </dt>
     <dd>{{% md %}}The subscription Name of the targets.
-{{% /md %}}</dd>
-    <dt class="property-required"
+{{% /md %}}</dd><dt class="property-required"
             title="Required">
         <span id="project_id_python">
 <a href="#project_id_python" style="color: inherit; text-decoration: inherit;">project_<wbr>id</a>
@@ -775,8 +745,7 @@ The AzureRM resource accepts the following [input]({{< relref "/docs/intro/conce
         <span class="property-type">str</span>
     </dt>
     <dd>{{% md %}}The project ID or project name.
-{{% /md %}}</dd>
-    <dt class="property-required"
+{{% /md %}}</dd><dt class="property-required"
             title="Required">
         <span id="service_endpoint_name_python">
 <a href="#service_endpoint_name_python" style="color: inherit; text-decoration: inherit;">service_<wbr>endpoint_<wbr>name</a>
@@ -785,8 +754,7 @@ The AzureRM resource accepts the following [input]({{< relref "/docs/intro/conce
         <span class="property-type">str</span>
     </dt>
     <dd>{{% md %}}The Service Endpoint name.
-{{% /md %}}</dd>
-    <dt class="property-optional"
+{{% /md %}}</dd><dt class="property-optional"
             title="Optional">
         <span id="authorization_python">
 <a href="#authorization_python" style="color: inherit; text-decoration: inherit;">authorization</a>
@@ -794,8 +762,7 @@ The AzureRM resource accepts the following [input]({{< relref "/docs/intro/conce
         <span class="property-indicator"></span>
         <span class="property-type">Mapping[str, str]</span>
     </dt>
-    <dd>{{% md %}}{{% /md %}}</dd>
-    <dt class="property-optional"
+    <dd>{{% md %}}{{% /md %}}</dd><dt class="property-optional"
             title="Optional">
         <span id="credentials_python">
 <a href="#credentials_python" style="color: inherit; text-decoration: inherit;">credentials</a>
@@ -804,8 +771,7 @@ The AzureRM resource accepts the following [input]({{< relref "/docs/intro/conce
         <span class="property-type"><a href="#azurermcredentials">Azure<wbr>RMCredentials<wbr>Args</a></span>
     </dt>
     <dd>{{% md %}}A `credentials` block.
-{{% /md %}}</dd>
-    <dt class="property-optional"
+{{% /md %}}</dd><dt class="property-optional"
             title="Optional">
         <span id="description_python">
 <a href="#description_python" style="color: inherit; text-decoration: inherit;">description</a>
@@ -814,8 +780,7 @@ The AzureRM resource accepts the following [input]({{< relref "/docs/intro/conce
         <span class="property-type">str</span>
     </dt>
     <dd>{{% md %}}Service connection description.
-{{% /md %}}</dd>
-    <dt class="property-optional"
+{{% /md %}}</dd><dt class="property-optional"
             title="Optional">
         <span id="resource_group_python">
 <a href="#resource_group_python" style="color: inherit; text-decoration: inherit;">resource_<wbr>group</a>
@@ -824,8 +789,7 @@ The AzureRM resource accepts the following [input]({{< relref "/docs/intro/conce
         <span class="property-type">str</span>
     </dt>
     <dd>{{% md %}}The resource group used for scope of automatic service endpoint.
-{{% /md %}}</dd>
-</dl>
+{{% /md %}}</dd></dl>
 {{% /choosable %}}
 
 
@@ -836,9 +800,7 @@ All [input](#inputs) properties are implicitly available as output properties. A
 
 
 {{% choosable language csharp %}}
-<dl class="resources-properties">
-
-    <dt class="property-"
+<dl class="resources-properties"><dt class="property-"
             title="">
         <span id="id_csharp">
 <a href="#id_csharp" style="color: inherit; text-decoration: inherit;">Id</a>
@@ -846,14 +808,11 @@ All [input](#inputs) properties are implicitly available as output properties. A
         <span class="property-indicator"></span>
         <span class="property-type">string</span>
     </dt>
-    <dd>{{% md %}}The provider-assigned unique ID for this managed resource.{{% /md %}}</dd>
-</dl>
+    <dd>{{% md %}}The provider-assigned unique ID for this managed resource.{{% /md %}}</dd></dl>
 {{% /choosable %}}
 
 {{% choosable language go %}}
-<dl class="resources-properties">
-
-    <dt class="property-"
+<dl class="resources-properties"><dt class="property-"
             title="">
         <span id="id_go">
 <a href="#id_go" style="color: inherit; text-decoration: inherit;">Id</a>
@@ -861,14 +820,11 @@ All [input](#inputs) properties are implicitly available as output properties. A
         <span class="property-indicator"></span>
         <span class="property-type">string</span>
     </dt>
-    <dd>{{% md %}}The provider-assigned unique ID for this managed resource.{{% /md %}}</dd>
-</dl>
+    <dd>{{% md %}}The provider-assigned unique ID for this managed resource.{{% /md %}}</dd></dl>
 {{% /choosable %}}
 
 {{% choosable language nodejs %}}
-<dl class="resources-properties">
-
-    <dt class="property-"
+<dl class="resources-properties"><dt class="property-"
             title="">
         <span id="id_nodejs">
 <a href="#id_nodejs" style="color: inherit; text-decoration: inherit;">id</a>
@@ -876,14 +832,11 @@ All [input](#inputs) properties are implicitly available as output properties. A
         <span class="property-indicator"></span>
         <span class="property-type">string</span>
     </dt>
-    <dd>{{% md %}}The provider-assigned unique ID for this managed resource.{{% /md %}}</dd>
-</dl>
+    <dd>{{% md %}}The provider-assigned unique ID for this managed resource.{{% /md %}}</dd></dl>
 {{% /choosable %}}
 
 {{% choosable language python %}}
-<dl class="resources-properties">
-
-    <dt class="property-"
+<dl class="resources-properties"><dt class="property-"
             title="">
         <span id="id_python">
 <a href="#id_python" style="color: inherit; text-decoration: inherit;">id</a>
@@ -891,8 +844,7 @@ All [input](#inputs) properties are implicitly available as output properties. A
         <span class="property-indicator"></span>
         <span class="property-type">str</span>
     </dt>
-    <dd>{{% md %}}The provider-assigned unique ID for this managed resource.{{% /md %}}</dd>
-</dl>
+    <dd>{{% md %}}The provider-assigned unique ID for this managed resource.{{% /md %}}</dd></dl>
 {{% /choosable %}}
 
 
@@ -1019,9 +971,7 @@ The following state arguments are supported:
 
 
 {{% choosable language csharp %}}
-<dl class="resources-properties">
-
-    <dt class="property-optional"
+<dl class="resources-properties"><dt class="property-optional"
             title="Optional">
         <span id="state_authorization_csharp">
 <a href="#state_authorization_csharp" style="color: inherit; text-decoration: inherit;">Authorization</a>
@@ -1029,8 +979,7 @@ The following state arguments are supported:
         <span class="property-indicator"></span>
         <span class="property-type">Dictionary&lt;string, string&gt;</span>
     </dt>
-    <dd>{{% md %}}{{% /md %}}</dd>
-    <dt class="property-optional"
+    <dd>{{% md %}}{{% /md %}}</dd><dt class="property-optional"
             title="Optional">
         <span id="state_azurermspntenantid_csharp">
 <a href="#state_azurermspntenantid_csharp" style="color: inherit; text-decoration: inherit;">Azurerm<wbr>Spn<wbr>Tenantid</a>
@@ -1039,8 +988,7 @@ The following state arguments are supported:
         <span class="property-type">string</span>
     </dt>
     <dd>{{% md %}}The tenant id if the service principal.
-{{% /md %}}</dd>
-    <dt class="property-optional"
+{{% /md %}}</dd><dt class="property-optional"
             title="Optional">
         <span id="state_azurermsubscriptionid_csharp">
 <a href="#state_azurermsubscriptionid_csharp" style="color: inherit; text-decoration: inherit;">Azurerm<wbr>Subscription<wbr>Id</a>
@@ -1049,8 +997,7 @@ The following state arguments are supported:
         <span class="property-type">string</span>
     </dt>
     <dd>{{% md %}}The subscription Id of the Azure targets.
-{{% /md %}}</dd>
-    <dt class="property-optional"
+{{% /md %}}</dd><dt class="property-optional"
             title="Optional">
         <span id="state_azurermsubscriptionname_csharp">
 <a href="#state_azurermsubscriptionname_csharp" style="color: inherit; text-decoration: inherit;">Azurerm<wbr>Subscription<wbr>Name</a>
@@ -1059,8 +1006,7 @@ The following state arguments are supported:
         <span class="property-type">string</span>
     </dt>
     <dd>{{% md %}}The subscription Name of the targets.
-{{% /md %}}</dd>
-    <dt class="property-optional"
+{{% /md %}}</dd><dt class="property-optional"
             title="Optional">
         <span id="state_credentials_csharp">
 <a href="#state_credentials_csharp" style="color: inherit; text-decoration: inherit;">Credentials</a>
@@ -1069,8 +1015,7 @@ The following state arguments are supported:
         <span class="property-type"><a href="#azurermcredentials">Pulumi.<wbr>Azure<wbr>Dev<wbr>Ops.<wbr>Service<wbr>Endpoint.<wbr>Inputs.<wbr>Azure<wbr>RMCredentials<wbr>Args</a></span>
     </dt>
     <dd>{{% md %}}A `credentials` block.
-{{% /md %}}</dd>
-    <dt class="property-optional"
+{{% /md %}}</dd><dt class="property-optional"
             title="Optional">
         <span id="state_description_csharp">
 <a href="#state_description_csharp" style="color: inherit; text-decoration: inherit;">Description</a>
@@ -1079,8 +1024,7 @@ The following state arguments are supported:
         <span class="property-type">string</span>
     </dt>
     <dd>{{% md %}}Service connection description.
-{{% /md %}}</dd>
-    <dt class="property-optional"
+{{% /md %}}</dd><dt class="property-optional"
             title="Optional">
         <span id="state_projectid_csharp">
 <a href="#state_projectid_csharp" style="color: inherit; text-decoration: inherit;">Project<wbr>Id</a>
@@ -1089,8 +1033,7 @@ The following state arguments are supported:
         <span class="property-type">string</span>
     </dt>
     <dd>{{% md %}}The project ID or project name.
-{{% /md %}}</dd>
-    <dt class="property-optional"
+{{% /md %}}</dd><dt class="property-optional"
             title="Optional">
         <span id="state_resourcegroup_csharp">
 <a href="#state_resourcegroup_csharp" style="color: inherit; text-decoration: inherit;">Resource<wbr>Group</a>
@@ -1099,8 +1042,7 @@ The following state arguments are supported:
         <span class="property-type">string</span>
     </dt>
     <dd>{{% md %}}The resource group used for scope of automatic service endpoint.
-{{% /md %}}</dd>
-    <dt class="property-optional"
+{{% /md %}}</dd><dt class="property-optional"
             title="Optional">
         <span id="state_serviceendpointname_csharp">
 <a href="#state_serviceendpointname_csharp" style="color: inherit; text-decoration: inherit;">Service<wbr>Endpoint<wbr>Name</a>
@@ -1109,14 +1051,11 @@ The following state arguments are supported:
         <span class="property-type">string</span>
     </dt>
     <dd>{{% md %}}The Service Endpoint name.
-{{% /md %}}</dd>
-</dl>
+{{% /md %}}</dd></dl>
 {{% /choosable %}}
 
 {{% choosable language go %}}
-<dl class="resources-properties">
-
-    <dt class="property-optional"
+<dl class="resources-properties"><dt class="property-optional"
             title="Optional">
         <span id="state_authorization_go">
 <a href="#state_authorization_go" style="color: inherit; text-decoration: inherit;">Authorization</a>
@@ -1124,8 +1063,7 @@ The following state arguments are supported:
         <span class="property-indicator"></span>
         <span class="property-type">map[string]string</span>
     </dt>
-    <dd>{{% md %}}{{% /md %}}</dd>
-    <dt class="property-optional"
+    <dd>{{% md %}}{{% /md %}}</dd><dt class="property-optional"
             title="Optional">
         <span id="state_azurermspntenantid_go">
 <a href="#state_azurermspntenantid_go" style="color: inherit; text-decoration: inherit;">Azurerm<wbr>Spn<wbr>Tenantid</a>
@@ -1134,8 +1072,7 @@ The following state arguments are supported:
         <span class="property-type">string</span>
     </dt>
     <dd>{{% md %}}The tenant id if the service principal.
-{{% /md %}}</dd>
-    <dt class="property-optional"
+{{% /md %}}</dd><dt class="property-optional"
             title="Optional">
         <span id="state_azurermsubscriptionid_go">
 <a href="#state_azurermsubscriptionid_go" style="color: inherit; text-decoration: inherit;">Azurerm<wbr>Subscription<wbr>Id</a>
@@ -1144,8 +1081,7 @@ The following state arguments are supported:
         <span class="property-type">string</span>
     </dt>
     <dd>{{% md %}}The subscription Id of the Azure targets.
-{{% /md %}}</dd>
-    <dt class="property-optional"
+{{% /md %}}</dd><dt class="property-optional"
             title="Optional">
         <span id="state_azurermsubscriptionname_go">
 <a href="#state_azurermsubscriptionname_go" style="color: inherit; text-decoration: inherit;">Azurerm<wbr>Subscription<wbr>Name</a>
@@ -1154,8 +1090,7 @@ The following state arguments are supported:
         <span class="property-type">string</span>
     </dt>
     <dd>{{% md %}}The subscription Name of the targets.
-{{% /md %}}</dd>
-    <dt class="property-optional"
+{{% /md %}}</dd><dt class="property-optional"
             title="Optional">
         <span id="state_credentials_go">
 <a href="#state_credentials_go" style="color: inherit; text-decoration: inherit;">Credentials</a>
@@ -1164,8 +1099,7 @@ The following state arguments are supported:
         <span class="property-type"><a href="#azurermcredentials">Azure<wbr>RMCredentials</a></span>
     </dt>
     <dd>{{% md %}}A `credentials` block.
-{{% /md %}}</dd>
-    <dt class="property-optional"
+{{% /md %}}</dd><dt class="property-optional"
             title="Optional">
         <span id="state_description_go">
 <a href="#state_description_go" style="color: inherit; text-decoration: inherit;">Description</a>
@@ -1174,8 +1108,7 @@ The following state arguments are supported:
         <span class="property-type">string</span>
     </dt>
     <dd>{{% md %}}Service connection description.
-{{% /md %}}</dd>
-    <dt class="property-optional"
+{{% /md %}}</dd><dt class="property-optional"
             title="Optional">
         <span id="state_projectid_go">
 <a href="#state_projectid_go" style="color: inherit; text-decoration: inherit;">Project<wbr>Id</a>
@@ -1184,8 +1117,7 @@ The following state arguments are supported:
         <span class="property-type">string</span>
     </dt>
     <dd>{{% md %}}The project ID or project name.
-{{% /md %}}</dd>
-    <dt class="property-optional"
+{{% /md %}}</dd><dt class="property-optional"
             title="Optional">
         <span id="state_resourcegroup_go">
 <a href="#state_resourcegroup_go" style="color: inherit; text-decoration: inherit;">Resource<wbr>Group</a>
@@ -1194,8 +1126,7 @@ The following state arguments are supported:
         <span class="property-type">string</span>
     </dt>
     <dd>{{% md %}}The resource group used for scope of automatic service endpoint.
-{{% /md %}}</dd>
-    <dt class="property-optional"
+{{% /md %}}</dd><dt class="property-optional"
             title="Optional">
         <span id="state_serviceendpointname_go">
 <a href="#state_serviceendpointname_go" style="color: inherit; text-decoration: inherit;">Service<wbr>Endpoint<wbr>Name</a>
@@ -1204,14 +1135,11 @@ The following state arguments are supported:
         <span class="property-type">string</span>
     </dt>
     <dd>{{% md %}}The Service Endpoint name.
-{{% /md %}}</dd>
-</dl>
+{{% /md %}}</dd></dl>
 {{% /choosable %}}
 
 {{% choosable language nodejs %}}
-<dl class="resources-properties">
-
-    <dt class="property-optional"
+<dl class="resources-properties"><dt class="property-optional"
             title="Optional">
         <span id="state_authorization_nodejs">
 <a href="#state_authorization_nodejs" style="color: inherit; text-decoration: inherit;">authorization</a>
@@ -1219,8 +1147,7 @@ The following state arguments are supported:
         <span class="property-indicator"></span>
         <span class="property-type">{[key: string]: string}</span>
     </dt>
-    <dd>{{% md %}}{{% /md %}}</dd>
-    <dt class="property-optional"
+    <dd>{{% md %}}{{% /md %}}</dd><dt class="property-optional"
             title="Optional">
         <span id="state_azurermspntenantid_nodejs">
 <a href="#state_azurermspntenantid_nodejs" style="color: inherit; text-decoration: inherit;">azurerm<wbr>Spn<wbr>Tenantid</a>
@@ -1229,8 +1156,7 @@ The following state arguments are supported:
         <span class="property-type">string</span>
     </dt>
     <dd>{{% md %}}The tenant id if the service principal.
-{{% /md %}}</dd>
-    <dt class="property-optional"
+{{% /md %}}</dd><dt class="property-optional"
             title="Optional">
         <span id="state_azurermsubscriptionid_nodejs">
 <a href="#state_azurermsubscriptionid_nodejs" style="color: inherit; text-decoration: inherit;">azurerm<wbr>Subscription<wbr>Id</a>
@@ -1239,8 +1165,7 @@ The following state arguments are supported:
         <span class="property-type">string</span>
     </dt>
     <dd>{{% md %}}The subscription Id of the Azure targets.
-{{% /md %}}</dd>
-    <dt class="property-optional"
+{{% /md %}}</dd><dt class="property-optional"
             title="Optional">
         <span id="state_azurermsubscriptionname_nodejs">
 <a href="#state_azurermsubscriptionname_nodejs" style="color: inherit; text-decoration: inherit;">azurerm<wbr>Subscription<wbr>Name</a>
@@ -1249,8 +1174,7 @@ The following state arguments are supported:
         <span class="property-type">string</span>
     </dt>
     <dd>{{% md %}}The subscription Name of the targets.
-{{% /md %}}</dd>
-    <dt class="property-optional"
+{{% /md %}}</dd><dt class="property-optional"
             title="Optional">
         <span id="state_credentials_nodejs">
 <a href="#state_credentials_nodejs" style="color: inherit; text-decoration: inherit;">credentials</a>
@@ -1259,8 +1183,7 @@ The following state arguments are supported:
         <span class="property-type"><a href="#azurermcredentials">Azure<wbr>RMCredentials</a></span>
     </dt>
     <dd>{{% md %}}A `credentials` block.
-{{% /md %}}</dd>
-    <dt class="property-optional"
+{{% /md %}}</dd><dt class="property-optional"
             title="Optional">
         <span id="state_description_nodejs">
 <a href="#state_description_nodejs" style="color: inherit; text-decoration: inherit;">description</a>
@@ -1269,8 +1192,7 @@ The following state arguments are supported:
         <span class="property-type">string</span>
     </dt>
     <dd>{{% md %}}Service connection description.
-{{% /md %}}</dd>
-    <dt class="property-optional"
+{{% /md %}}</dd><dt class="property-optional"
             title="Optional">
         <span id="state_projectid_nodejs">
 <a href="#state_projectid_nodejs" style="color: inherit; text-decoration: inherit;">project<wbr>Id</a>
@@ -1279,8 +1201,7 @@ The following state arguments are supported:
         <span class="property-type">string</span>
     </dt>
     <dd>{{% md %}}The project ID or project name.
-{{% /md %}}</dd>
-    <dt class="property-optional"
+{{% /md %}}</dd><dt class="property-optional"
             title="Optional">
         <span id="state_resourcegroup_nodejs">
 <a href="#state_resourcegroup_nodejs" style="color: inherit; text-decoration: inherit;">resource<wbr>Group</a>
@@ -1289,8 +1210,7 @@ The following state arguments are supported:
         <span class="property-type">string</span>
     </dt>
     <dd>{{% md %}}The resource group used for scope of automatic service endpoint.
-{{% /md %}}</dd>
-    <dt class="property-optional"
+{{% /md %}}</dd><dt class="property-optional"
             title="Optional">
         <span id="state_serviceendpointname_nodejs">
 <a href="#state_serviceendpointname_nodejs" style="color: inherit; text-decoration: inherit;">service<wbr>Endpoint<wbr>Name</a>
@@ -1299,14 +1219,11 @@ The following state arguments are supported:
         <span class="property-type">string</span>
     </dt>
     <dd>{{% md %}}The Service Endpoint name.
-{{% /md %}}</dd>
-</dl>
+{{% /md %}}</dd></dl>
 {{% /choosable %}}
 
 {{% choosable language python %}}
-<dl class="resources-properties">
-
-    <dt class="property-optional"
+<dl class="resources-properties"><dt class="property-optional"
             title="Optional">
         <span id="state_authorization_python">
 <a href="#state_authorization_python" style="color: inherit; text-decoration: inherit;">authorization</a>
@@ -1314,8 +1231,7 @@ The following state arguments are supported:
         <span class="property-indicator"></span>
         <span class="property-type">Mapping[str, str]</span>
     </dt>
-    <dd>{{% md %}}{{% /md %}}</dd>
-    <dt class="property-optional"
+    <dd>{{% md %}}{{% /md %}}</dd><dt class="property-optional"
             title="Optional">
         <span id="state_azurerm_spn_tenantid_python">
 <a href="#state_azurerm_spn_tenantid_python" style="color: inherit; text-decoration: inherit;">azurerm_<wbr>spn_<wbr>tenantid</a>
@@ -1324,8 +1240,7 @@ The following state arguments are supported:
         <span class="property-type">str</span>
     </dt>
     <dd>{{% md %}}The tenant id if the service principal.
-{{% /md %}}</dd>
-    <dt class="property-optional"
+{{% /md %}}</dd><dt class="property-optional"
             title="Optional">
         <span id="state_azurerm_subscription_id_python">
 <a href="#state_azurerm_subscription_id_python" style="color: inherit; text-decoration: inherit;">azurerm_<wbr>subscription_<wbr>id</a>
@@ -1334,8 +1249,7 @@ The following state arguments are supported:
         <span class="property-type">str</span>
     </dt>
     <dd>{{% md %}}The subscription Id of the Azure targets.
-{{% /md %}}</dd>
-    <dt class="property-optional"
+{{% /md %}}</dd><dt class="property-optional"
             title="Optional">
         <span id="state_azurerm_subscription_name_python">
 <a href="#state_azurerm_subscription_name_python" style="color: inherit; text-decoration: inherit;">azurerm_<wbr>subscription_<wbr>name</a>
@@ -1344,8 +1258,7 @@ The following state arguments are supported:
         <span class="property-type">str</span>
     </dt>
     <dd>{{% md %}}The subscription Name of the targets.
-{{% /md %}}</dd>
-    <dt class="property-optional"
+{{% /md %}}</dd><dt class="property-optional"
             title="Optional">
         <span id="state_credentials_python">
 <a href="#state_credentials_python" style="color: inherit; text-decoration: inherit;">credentials</a>
@@ -1354,8 +1267,7 @@ The following state arguments are supported:
         <span class="property-type"><a href="#azurermcredentials">Azure<wbr>RMCredentials<wbr>Args</a></span>
     </dt>
     <dd>{{% md %}}A `credentials` block.
-{{% /md %}}</dd>
-    <dt class="property-optional"
+{{% /md %}}</dd><dt class="property-optional"
             title="Optional">
         <span id="state_description_python">
 <a href="#state_description_python" style="color: inherit; text-decoration: inherit;">description</a>
@@ -1364,8 +1276,7 @@ The following state arguments are supported:
         <span class="property-type">str</span>
     </dt>
     <dd>{{% md %}}Service connection description.
-{{% /md %}}</dd>
-    <dt class="property-optional"
+{{% /md %}}</dd><dt class="property-optional"
             title="Optional">
         <span id="state_project_id_python">
 <a href="#state_project_id_python" style="color: inherit; text-decoration: inherit;">project_<wbr>id</a>
@@ -1374,8 +1285,7 @@ The following state arguments are supported:
         <span class="property-type">str</span>
     </dt>
     <dd>{{% md %}}The project ID or project name.
-{{% /md %}}</dd>
-    <dt class="property-optional"
+{{% /md %}}</dd><dt class="property-optional"
             title="Optional">
         <span id="state_resource_group_python">
 <a href="#state_resource_group_python" style="color: inherit; text-decoration: inherit;">resource_<wbr>group</a>
@@ -1384,8 +1294,7 @@ The following state arguments are supported:
         <span class="property-type">str</span>
     </dt>
     <dd>{{% md %}}The resource group used for scope of automatic service endpoint.
-{{% /md %}}</dd>
-    <dt class="property-optional"
+{{% /md %}}</dd><dt class="property-optional"
             title="Optional">
         <span id="state_service_endpoint_name_python">
 <a href="#state_service_endpoint_name_python" style="color: inherit; text-decoration: inherit;">service_<wbr>endpoint_<wbr>name</a>
@@ -1394,8 +1303,7 @@ The following state arguments are supported:
         <span class="property-type">str</span>
     </dt>
     <dd>{{% md %}}The Service Endpoint name.
-{{% /md %}}</dd>
-</dl>
+{{% /md %}}</dd></dl>
 {{% /choosable %}}
 
 
@@ -1410,9 +1318,7 @@ The following state arguments are supported:
 <h4 id="azurermcredentials">Azure<wbr>RMCredentials</h4>
 
 {{% choosable language csharp %}}
-<dl class="resources-properties">
-
-    <dt class="property-required"
+<dl class="resources-properties"><dt class="property-required"
             title="Required">
         <span id="serviceprincipalid_csharp">
 <a href="#serviceprincipalid_csharp" style="color: inherit; text-decoration: inherit;">Serviceprincipalid</a>
@@ -1421,8 +1327,7 @@ The following state arguments are supported:
         <span class="property-type">string</span>
     </dt>
     <dd>{{% md %}}The service principal application Id
-{{% /md %}}</dd>
-    <dt class="property-required"
+{{% /md %}}</dd><dt class="property-required"
             title="Required">
         <span id="serviceprincipalkey_csharp">
 <a href="#serviceprincipalkey_csharp" style="color: inherit; text-decoration: inherit;">Serviceprincipalkey</a>
@@ -1431,8 +1336,7 @@ The following state arguments are supported:
         <span class="property-type">string</span>
     </dt>
     <dd>{{% md %}}The service principal secret.
-{{% /md %}}</dd>
-    <dt class="property-optional"
+{{% /md %}}</dd><dt class="property-optional"
             title="Optional">
         <span id="serviceprincipalkeyhash_csharp">
 <a href="#serviceprincipalkeyhash_csharp" style="color: inherit; text-decoration: inherit;">Serviceprincipalkey<wbr>Hash</a>
@@ -1440,14 +1344,11 @@ The following state arguments are supported:
         <span class="property-indicator"></span>
         <span class="property-type">string</span>
     </dt>
-    <dd>{{% md %}}{{% /md %}}</dd>
-</dl>
+    <dd>{{% md %}}{{% /md %}}</dd></dl>
 {{% /choosable %}}
 
 {{% choosable language go %}}
-<dl class="resources-properties">
-
-    <dt class="property-required"
+<dl class="resources-properties"><dt class="property-required"
             title="Required">
         <span id="serviceprincipalid_go">
 <a href="#serviceprincipalid_go" style="color: inherit; text-decoration: inherit;">Serviceprincipalid</a>
@@ -1456,8 +1357,7 @@ The following state arguments are supported:
         <span class="property-type">string</span>
     </dt>
     <dd>{{% md %}}The service principal application Id
-{{% /md %}}</dd>
-    <dt class="property-required"
+{{% /md %}}</dd><dt class="property-required"
             title="Required">
         <span id="serviceprincipalkey_go">
 <a href="#serviceprincipalkey_go" style="color: inherit; text-decoration: inherit;">Serviceprincipalkey</a>
@@ -1466,8 +1366,7 @@ The following state arguments are supported:
         <span class="property-type">string</span>
     </dt>
     <dd>{{% md %}}The service principal secret.
-{{% /md %}}</dd>
-    <dt class="property-optional"
+{{% /md %}}</dd><dt class="property-optional"
             title="Optional">
         <span id="serviceprincipalkeyhash_go">
 <a href="#serviceprincipalkeyhash_go" style="color: inherit; text-decoration: inherit;">Serviceprincipalkey<wbr>Hash</a>
@@ -1475,14 +1374,11 @@ The following state arguments are supported:
         <span class="property-indicator"></span>
         <span class="property-type">string</span>
     </dt>
-    <dd>{{% md %}}{{% /md %}}</dd>
-</dl>
+    <dd>{{% md %}}{{% /md %}}</dd></dl>
 {{% /choosable %}}
 
 {{% choosable language nodejs %}}
-<dl class="resources-properties">
-
-    <dt class="property-required"
+<dl class="resources-properties"><dt class="property-required"
             title="Required">
         <span id="serviceprincipalid_nodejs">
 <a href="#serviceprincipalid_nodejs" style="color: inherit; text-decoration: inherit;">serviceprincipalid</a>
@@ -1491,8 +1387,7 @@ The following state arguments are supported:
         <span class="property-type">string</span>
     </dt>
     <dd>{{% md %}}The service principal application Id
-{{% /md %}}</dd>
-    <dt class="property-required"
+{{% /md %}}</dd><dt class="property-required"
             title="Required">
         <span id="serviceprincipalkey_nodejs">
 <a href="#serviceprincipalkey_nodejs" style="color: inherit; text-decoration: inherit;">serviceprincipalkey</a>
@@ -1501,8 +1396,7 @@ The following state arguments are supported:
         <span class="property-type">string</span>
     </dt>
     <dd>{{% md %}}The service principal secret.
-{{% /md %}}</dd>
-    <dt class="property-optional"
+{{% /md %}}</dd><dt class="property-optional"
             title="Optional">
         <span id="serviceprincipalkeyhash_nodejs">
 <a href="#serviceprincipalkeyhash_nodejs" style="color: inherit; text-decoration: inherit;">serviceprincipalkey<wbr>Hash</a>
@@ -1510,14 +1404,11 @@ The following state arguments are supported:
         <span class="property-indicator"></span>
         <span class="property-type">string</span>
     </dt>
-    <dd>{{% md %}}{{% /md %}}</dd>
-</dl>
+    <dd>{{% md %}}{{% /md %}}</dd></dl>
 {{% /choosable %}}
 
 {{% choosable language python %}}
-<dl class="resources-properties">
-
-    <dt class="property-required"
+<dl class="resources-properties"><dt class="property-required"
             title="Required">
         <span id="serviceprincipalid_python">
 <a href="#serviceprincipalid_python" style="color: inherit; text-decoration: inherit;">serviceprincipalid</a>
@@ -1526,8 +1417,7 @@ The following state arguments are supported:
         <span class="property-type">str</span>
     </dt>
     <dd>{{% md %}}The service principal application Id
-{{% /md %}}</dd>
-    <dt class="property-required"
+{{% /md %}}</dd><dt class="property-required"
             title="Required">
         <span id="serviceprincipalkey_python">
 <a href="#serviceprincipalkey_python" style="color: inherit; text-decoration: inherit;">serviceprincipalkey</a>
@@ -1536,8 +1426,7 @@ The following state arguments are supported:
         <span class="property-type">str</span>
     </dt>
     <dd>{{% md %}}The service principal secret.
-{{% /md %}}</dd>
-    <dt class="property-optional"
+{{% /md %}}</dd><dt class="property-optional"
             title="Optional">
         <span id="serviceprincipalkey_hash_python">
 <a href="#serviceprincipalkey_hash_python" style="color: inherit; text-decoration: inherit;">serviceprincipalkey_<wbr>hash</a>
@@ -1545,8 +1434,7 @@ The following state arguments are supported:
         <span class="property-indicator"></span>
         <span class="property-type">str</span>
     </dt>
-    <dd>{{% md %}}{{% /md %}}</dd>
-</dl>
+    <dd>{{% md %}}{{% /md %}}</dd></dl>
 {{% /choosable %}}
 ## Import
 
@@ -1567,6 +1455,6 @@ Azure DevOps Service Endpoint Azure Resource Manage can be imported using **proj
 	<dt>License</dt>
 	<dd>Apache-2.0</dd>
 	<dt>Notes</dt>
-	<dd>This Pulumi package is based on the [`azuredevops` Terraform Provider](https://github.com/microsoft/terraform-provider-azuredevops).</dd>
+	<dd>{{% md %}}This Pulumi package is based on the [`azuredevops` Terraform Provider](https://github.com/microsoft/terraform-provider-azuredevops).{{% /md %}}</dd>
 </dl>
 

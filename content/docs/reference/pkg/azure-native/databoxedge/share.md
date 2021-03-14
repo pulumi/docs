@@ -14,11 +14,17 @@ Represents a share on the  Data Box Edge/Gateway device.
 API Version: 2020-12-01.
 
 {{% examples %}}
+
 ## Example Usage
 
 {{< chooser language "typescript,python,go,csharp" / >}}
+
+
 ### SharePut
-{{% example csharp %}}
+
+
+{{< example csharp >}}
+
 ```csharp
 using Pulumi;
 using AzureNative = Pulumi.AzureNative;
@@ -58,9 +64,12 @@ class MyStack : Stack
 
 ```
 
-{{% /example %}}
 
-{{% example go %}}
+{{< /example >}}
+
+
+{{< example go >}}
+
 
 ```go
 package main
@@ -102,9 +111,12 @@ func main() {
 
 ```
 
-{{% /example %}}
 
-{{% example python %}}
+{{< /example >}}
+
+
+{{< example python >}}
+
 
 ```python
 import pulumi
@@ -131,9 +143,12 @@ share = azure_native.databoxedge.Share("share",
 
 ```
 
-{{% /example %}}
 
-{{% example typescript %}}
+{{< /example >}}
+
+
+{{< example typescript >}}
+
 
 ```typescript
 import * as pulumi from "@pulumi/pulumi";
@@ -161,9 +176,16 @@ const share = new azure_native.databoxedge.Share("share", {
 
 ```
 
-{{% /example %}}
+
+{{< /example >}}
+
+
+
+
 
 {{% /examples %}}
+
+
 
 
 ## Create a Share Resource {#create}
@@ -188,9 +210,7 @@ const share = new azure_native.databoxedge.Share("share", {
 
 {{% choosable language nodejs %}}
 
-<dl class="resources-properties">
-  
-    <dt
+<dl class="resources-properties"><dt
         class="property-required" title="Required">
         <span>name</span>
         <span class="property-indicator"></span>
@@ -198,9 +218,7 @@ const share = new azure_native.databoxedge.Share("share", {
     </dt>
     <dd>
       The unique name of the resource.
-    </dd>
-  
-    <dt
+    </dd><dt
         class="property-required" title="Required">
         <span>args</span>
         <span class="property-indicator"></span>
@@ -208,9 +226,7 @@ const share = new azure_native.databoxedge.Share("share", {
     </dt>
     <dd>
       The arguments to resource properties.
-    </dd>
-  
-    <dt
+    </dd><dt
         class="property-optional" title="Optional">
         <span>opts</span>
         <span class="property-indicator"></span>
@@ -218,10 +234,7 @@ const share = new azure_native.databoxedge.Share("share", {
     </dt>
     <dd>
       Bag of options to control resource&#39;s behavior.
-    </dd>
-  
-
-</dl>
+    </dd></dl>
 
 {{% /choosable %}}
 
@@ -247,9 +260,7 @@ const share = new azure_native.databoxedge.Share("share", {
 
 {{% choosable language go %}}
 
-<dl class="resources-properties">
-  
-    <dt
+<dl class="resources-properties"><dt
         class="property-optional" title="Optional">
         <span>ctx</span>
         <span class="property-indicator"></span>
@@ -257,9 +268,7 @@ const share = new azure_native.databoxedge.Share("share", {
     </dt>
     <dd>
       Context object for the current deployment.
-    </dd>
-  
-    <dt
+    </dd><dt
         class="property-required" title="Required">
         <span>name</span>
         <span class="property-indicator"></span>
@@ -267,9 +276,7 @@ const share = new azure_native.databoxedge.Share("share", {
     </dt>
     <dd>
       The unique name of the resource.
-    </dd>
-  
-    <dt
+    </dd><dt
         class="property-required" title="Required">
         <span>args</span>
         <span class="property-indicator"></span>
@@ -277,9 +284,7 @@ const share = new azure_native.databoxedge.Share("share", {
     </dt>
     <dd>
       The arguments to resource properties.
-    </dd>
-  
-    <dt
+    </dd><dt
         class="property-optional" title="Optional">
         <span>opts</span>
         <span class="property-indicator"></span>
@@ -287,18 +292,13 @@ const share = new azure_native.databoxedge.Share("share", {
     </dt>
     <dd>
       Bag of options to control resource&#39;s behavior.
-    </dd>
-  
-
-</dl>
+    </dd></dl>
 
 {{% /choosable %}}
 
 {{% choosable language csharp %}}
 
-<dl class="resources-properties">
-  
-    <dt
+<dl class="resources-properties"><dt
         class="property-required" title="Required">
         <span>name</span>
         <span class="property-indicator"></span>
@@ -306,9 +306,7 @@ const share = new azure_native.databoxedge.Share("share", {
     </dt>
     <dd>
       The unique name of the resource.
-    </dd>
-  
-    <dt
+    </dd><dt
         class="property-required" title="Required">
         <span>args</span>
         <span class="property-indicator"></span>
@@ -316,9 +314,7 @@ const share = new azure_native.databoxedge.Share("share", {
     </dt>
     <dd>
       The arguments to resource properties.
-    </dd>
-  
-    <dt
+    </dd><dt
         class="property-optional" title="Optional">
         <span>opts</span>
         <span class="property-indicator"></span>
@@ -326,10 +322,7 @@ const share = new azure_native.databoxedge.Share("share", {
     </dt>
     <dd>
       Bag of options to control resource&#39;s behavior.
-    </dd>
-  
-
-</dl>
+    </dd></dl>
 
 {{% /choosable %}}
 
@@ -344,9 +337,7 @@ The Share resource accepts the following [input]({{< relref "/docs/intro/concept
 
 
 {{% choosable language csharp %}}
-<dl class="resources-properties">
-
-    <dt class="property-required"
+<dl class="resources-properties"><dt class="property-required"
             title="Required">
         <span id="accessprotocol_csharp">
 <a href="#accessprotocol_csharp" style="color: inherit; text-decoration: inherit;">Access<wbr>Protocol</a>
@@ -354,8 +345,7 @@ The Share resource accepts the following [input]({{< relref "/docs/intro/concept
         <span class="property-indicator"></span>
         <span class="property-type">string | <a href="#shareaccessprotocol">Pulumi.<wbr>Azure<wbr>Native.<wbr>Data<wbr>Box<wbr>Edge.<wbr>Share<wbr>Access<wbr>Protocol</a></span>
     </dt>
-    <dd>{{% md %}}Access protocol to be used by the share.{{% /md %}}</dd>
-    <dt class="property-required"
+    <dd>{{% md %}}Access protocol to be used by the share.{{% /md %}}</dd><dt class="property-required"
             title="Required">
         <span id="devicename_csharp">
 <a href="#devicename_csharp" style="color: inherit; text-decoration: inherit;">Device<wbr>Name</a>
@@ -363,8 +353,7 @@ The Share resource accepts the following [input]({{< relref "/docs/intro/concept
         <span class="property-indicator"></span>
         <span class="property-type">string</span>
     </dt>
-    <dd>{{% md %}}The device name.{{% /md %}}</dd>
-    <dt class="property-required"
+    <dd>{{% md %}}The device name.{{% /md %}}</dd><dt class="property-required"
             title="Required">
         <span id="monitoringstatus_csharp">
 <a href="#monitoringstatus_csharp" style="color: inherit; text-decoration: inherit;">Monitoring<wbr>Status</a>
@@ -372,8 +361,7 @@ The Share resource accepts the following [input]({{< relref "/docs/intro/concept
         <span class="property-indicator"></span>
         <span class="property-type">string | <a href="#monitoringstatus">Pulumi.<wbr>Azure<wbr>Native.<wbr>Data<wbr>Box<wbr>Edge.<wbr>Monitoring<wbr>Status</a></span>
     </dt>
-    <dd>{{% md %}}Current monitoring status of the share.{{% /md %}}</dd>
-    <dt class="property-required"
+    <dd>{{% md %}}Current monitoring status of the share.{{% /md %}}</dd><dt class="property-required"
             title="Required">
         <span id="resourcegroupname_csharp">
 <a href="#resourcegroupname_csharp" style="color: inherit; text-decoration: inherit;">Resource<wbr>Group<wbr>Name</a>
@@ -381,8 +369,7 @@ The Share resource accepts the following [input]({{< relref "/docs/intro/concept
         <span class="property-indicator"></span>
         <span class="property-type">string</span>
     </dt>
-    <dd>{{% md %}}The resource group name.{{% /md %}}</dd>
-    <dt class="property-required"
+    <dd>{{% md %}}The resource group name.{{% /md %}}</dd><dt class="property-required"
             title="Required">
         <span id="sharestatus_csharp">
 <a href="#sharestatus_csharp" style="color: inherit; text-decoration: inherit;">Share<wbr>Status</a>
@@ -390,8 +377,7 @@ The Share resource accepts the following [input]({{< relref "/docs/intro/concept
         <span class="property-indicator"></span>
         <span class="property-type">string | <a href="#sharestatus">Pulumi.<wbr>Azure<wbr>Native.<wbr>Data<wbr>Box<wbr>Edge.<wbr>Share<wbr>Status</a></span>
     </dt>
-    <dd>{{% md %}}Current status of the share.{{% /md %}}</dd>
-    <dt class="property-optional"
+    <dd>{{% md %}}Current status of the share.{{% /md %}}</dd><dt class="property-optional"
             title="Optional">
         <span id="azurecontainerinfo_csharp">
 <a href="#azurecontainerinfo_csharp" style="color: inherit; text-decoration: inherit;">Azure<wbr>Container<wbr>Info</a>
@@ -399,8 +385,7 @@ The Share resource accepts the following [input]({{< relref "/docs/intro/concept
         <span class="property-indicator"></span>
         <span class="property-type"><a href="#azurecontainerinfo">Pulumi.<wbr>Azure<wbr>Native.<wbr>Data<wbr>Box<wbr>Edge.<wbr>Inputs.<wbr>Azure<wbr>Container<wbr>Info<wbr>Args</a></span>
     </dt>
-    <dd>{{% md %}}Azure container mapping for the share.{{% /md %}}</dd>
-    <dt class="property-optional"
+    <dd>{{% md %}}Azure container mapping for the share.{{% /md %}}</dd><dt class="property-optional"
             title="Optional">
         <span id="clientaccessrights_csharp">
 <a href="#clientaccessrights_csharp" style="color: inherit; text-decoration: inherit;">Client<wbr>Access<wbr>Rights</a>
@@ -408,8 +393,7 @@ The Share resource accepts the following [input]({{< relref "/docs/intro/concept
         <span class="property-indicator"></span>
         <span class="property-type"><a href="#clientaccessright">List&lt;Pulumi.<wbr>Azure<wbr>Native.<wbr>Data<wbr>Box<wbr>Edge.<wbr>Inputs.<wbr>Client<wbr>Access<wbr>Right<wbr>Args&gt;</a></span>
     </dt>
-    <dd>{{% md %}}List of IP addresses and corresponding access rights on the share(required for NFS protocol).{{% /md %}}</dd>
-    <dt class="property-optional"
+    <dd>{{% md %}}List of IP addresses and corresponding access rights on the share(required for NFS protocol).{{% /md %}}</dd><dt class="property-optional"
             title="Optional">
         <span id="datapolicy_csharp">
 <a href="#datapolicy_csharp" style="color: inherit; text-decoration: inherit;">Data<wbr>Policy</a>
@@ -417,8 +401,7 @@ The Share resource accepts the following [input]({{< relref "/docs/intro/concept
         <span class="property-indicator"></span>
         <span class="property-type">string | <a href="#datapolicy">Pulumi.<wbr>Azure<wbr>Native.<wbr>Data<wbr>Box<wbr>Edge.<wbr>Data<wbr>Policy</a></span>
     </dt>
-    <dd>{{% md %}}Data policy of the share.{{% /md %}}</dd>
-    <dt class="property-optional"
+    <dd>{{% md %}}Data policy of the share.{{% /md %}}</dd><dt class="property-optional"
             title="Optional">
         <span id="description_csharp">
 <a href="#description_csharp" style="color: inherit; text-decoration: inherit;">Description</a>
@@ -426,8 +409,7 @@ The Share resource accepts the following [input]({{< relref "/docs/intro/concept
         <span class="property-indicator"></span>
         <span class="property-type">string</span>
     </dt>
-    <dd>{{% md %}}Description for the share.{{% /md %}}</dd>
-    <dt class="property-optional"
+    <dd>{{% md %}}Description for the share.{{% /md %}}</dd><dt class="property-optional"
             title="Optional">
         <span id="name_csharp">
 <a href="#name_csharp" style="color: inherit; text-decoration: inherit;">Name</a>
@@ -435,8 +417,7 @@ The Share resource accepts the following [input]({{< relref "/docs/intro/concept
         <span class="property-indicator"></span>
         <span class="property-type">string</span>
     </dt>
-    <dd>{{% md %}}The share name.{{% /md %}}</dd>
-    <dt class="property-optional"
+    <dd>{{% md %}}The share name.{{% /md %}}</dd><dt class="property-optional"
             title="Optional">
         <span id="refreshdetails_csharp">
 <a href="#refreshdetails_csharp" style="color: inherit; text-decoration: inherit;">Refresh<wbr>Details</a>
@@ -444,8 +425,7 @@ The Share resource accepts the following [input]({{< relref "/docs/intro/concept
         <span class="property-indicator"></span>
         <span class="property-type"><a href="#refreshdetails">Pulumi.<wbr>Azure<wbr>Native.<wbr>Data<wbr>Box<wbr>Edge.<wbr>Inputs.<wbr>Refresh<wbr>Details<wbr>Args</a></span>
     </dt>
-    <dd>{{% md %}}Details of the refresh job on this share.{{% /md %}}</dd>
-    <dt class="property-optional"
+    <dd>{{% md %}}Details of the refresh job on this share.{{% /md %}}</dd><dt class="property-optional"
             title="Optional">
         <span id="useraccessrights_csharp">
 <a href="#useraccessrights_csharp" style="color: inherit; text-decoration: inherit;">User<wbr>Access<wbr>Rights</a>
@@ -453,14 +433,11 @@ The Share resource accepts the following [input]({{< relref "/docs/intro/concept
         <span class="property-indicator"></span>
         <span class="property-type"><a href="#useraccessright">List&lt;Pulumi.<wbr>Azure<wbr>Native.<wbr>Data<wbr>Box<wbr>Edge.<wbr>Inputs.<wbr>User<wbr>Access<wbr>Right<wbr>Args&gt;</a></span>
     </dt>
-    <dd>{{% md %}}Mapping of users and corresponding access rights on the share (required for SMB protocol).{{% /md %}}</dd>
-</dl>
+    <dd>{{% md %}}Mapping of users and corresponding access rights on the share (required for SMB protocol).{{% /md %}}</dd></dl>
 {{% /choosable %}}
 
 {{% choosable language go %}}
-<dl class="resources-properties">
-
-    <dt class="property-required"
+<dl class="resources-properties"><dt class="property-required"
             title="Required">
         <span id="accessprotocol_go">
 <a href="#accessprotocol_go" style="color: inherit; text-decoration: inherit;">Access<wbr>Protocol</a>
@@ -468,8 +445,7 @@ The Share resource accepts the following [input]({{< relref "/docs/intro/concept
         <span class="property-indicator"></span>
         <span class="property-type">string | <a href="#shareaccessprotocol">Share<wbr>Access<wbr>Protocol</a></span>
     </dt>
-    <dd>{{% md %}}Access protocol to be used by the share.{{% /md %}}</dd>
-    <dt class="property-required"
+    <dd>{{% md %}}Access protocol to be used by the share.{{% /md %}}</dd><dt class="property-required"
             title="Required">
         <span id="devicename_go">
 <a href="#devicename_go" style="color: inherit; text-decoration: inherit;">Device<wbr>Name</a>
@@ -477,8 +453,7 @@ The Share resource accepts the following [input]({{< relref "/docs/intro/concept
         <span class="property-indicator"></span>
         <span class="property-type">string</span>
     </dt>
-    <dd>{{% md %}}The device name.{{% /md %}}</dd>
-    <dt class="property-required"
+    <dd>{{% md %}}The device name.{{% /md %}}</dd><dt class="property-required"
             title="Required">
         <span id="monitoringstatus_go">
 <a href="#monitoringstatus_go" style="color: inherit; text-decoration: inherit;">Monitoring<wbr>Status</a>
@@ -486,8 +461,7 @@ The Share resource accepts the following [input]({{< relref "/docs/intro/concept
         <span class="property-indicator"></span>
         <span class="property-type">string | <a href="#monitoringstatus">Monitoring<wbr>Status</a></span>
     </dt>
-    <dd>{{% md %}}Current monitoring status of the share.{{% /md %}}</dd>
-    <dt class="property-required"
+    <dd>{{% md %}}Current monitoring status of the share.{{% /md %}}</dd><dt class="property-required"
             title="Required">
         <span id="resourcegroupname_go">
 <a href="#resourcegroupname_go" style="color: inherit; text-decoration: inherit;">Resource<wbr>Group<wbr>Name</a>
@@ -495,8 +469,7 @@ The Share resource accepts the following [input]({{< relref "/docs/intro/concept
         <span class="property-indicator"></span>
         <span class="property-type">string</span>
     </dt>
-    <dd>{{% md %}}The resource group name.{{% /md %}}</dd>
-    <dt class="property-required"
+    <dd>{{% md %}}The resource group name.{{% /md %}}</dd><dt class="property-required"
             title="Required">
         <span id="sharestatus_go">
 <a href="#sharestatus_go" style="color: inherit; text-decoration: inherit;">Share<wbr>Status</a>
@@ -504,8 +477,7 @@ The Share resource accepts the following [input]({{< relref "/docs/intro/concept
         <span class="property-indicator"></span>
         <span class="property-type">string | <a href="#sharestatus">Share<wbr>Status</a></span>
     </dt>
-    <dd>{{% md %}}Current status of the share.{{% /md %}}</dd>
-    <dt class="property-optional"
+    <dd>{{% md %}}Current status of the share.{{% /md %}}</dd><dt class="property-optional"
             title="Optional">
         <span id="azurecontainerinfo_go">
 <a href="#azurecontainerinfo_go" style="color: inherit; text-decoration: inherit;">Azure<wbr>Container<wbr>Info</a>
@@ -513,8 +485,7 @@ The Share resource accepts the following [input]({{< relref "/docs/intro/concept
         <span class="property-indicator"></span>
         <span class="property-type"><a href="#azurecontainerinfo">Azure<wbr>Container<wbr>Info</a></span>
     </dt>
-    <dd>{{% md %}}Azure container mapping for the share.{{% /md %}}</dd>
-    <dt class="property-optional"
+    <dd>{{% md %}}Azure container mapping for the share.{{% /md %}}</dd><dt class="property-optional"
             title="Optional">
         <span id="clientaccessrights_go">
 <a href="#clientaccessrights_go" style="color: inherit; text-decoration: inherit;">Client<wbr>Access<wbr>Rights</a>
@@ -522,8 +493,7 @@ The Share resource accepts the following [input]({{< relref "/docs/intro/concept
         <span class="property-indicator"></span>
         <span class="property-type"><a href="#clientaccessright">[]Client<wbr>Access<wbr>Right</a></span>
     </dt>
-    <dd>{{% md %}}List of IP addresses and corresponding access rights on the share(required for NFS protocol).{{% /md %}}</dd>
-    <dt class="property-optional"
+    <dd>{{% md %}}List of IP addresses and corresponding access rights on the share(required for NFS protocol).{{% /md %}}</dd><dt class="property-optional"
             title="Optional">
         <span id="datapolicy_go">
 <a href="#datapolicy_go" style="color: inherit; text-decoration: inherit;">Data<wbr>Policy</a>
@@ -531,8 +501,7 @@ The Share resource accepts the following [input]({{< relref "/docs/intro/concept
         <span class="property-indicator"></span>
         <span class="property-type">string | <a href="#datapolicy">Data<wbr>Policy</a></span>
     </dt>
-    <dd>{{% md %}}Data policy of the share.{{% /md %}}</dd>
-    <dt class="property-optional"
+    <dd>{{% md %}}Data policy of the share.{{% /md %}}</dd><dt class="property-optional"
             title="Optional">
         <span id="description_go">
 <a href="#description_go" style="color: inherit; text-decoration: inherit;">Description</a>
@@ -540,8 +509,7 @@ The Share resource accepts the following [input]({{< relref "/docs/intro/concept
         <span class="property-indicator"></span>
         <span class="property-type">string</span>
     </dt>
-    <dd>{{% md %}}Description for the share.{{% /md %}}</dd>
-    <dt class="property-optional"
+    <dd>{{% md %}}Description for the share.{{% /md %}}</dd><dt class="property-optional"
             title="Optional">
         <span id="name_go">
 <a href="#name_go" style="color: inherit; text-decoration: inherit;">Name</a>
@@ -549,8 +517,7 @@ The Share resource accepts the following [input]({{< relref "/docs/intro/concept
         <span class="property-indicator"></span>
         <span class="property-type">string</span>
     </dt>
-    <dd>{{% md %}}The share name.{{% /md %}}</dd>
-    <dt class="property-optional"
+    <dd>{{% md %}}The share name.{{% /md %}}</dd><dt class="property-optional"
             title="Optional">
         <span id="refreshdetails_go">
 <a href="#refreshdetails_go" style="color: inherit; text-decoration: inherit;">Refresh<wbr>Details</a>
@@ -558,8 +525,7 @@ The Share resource accepts the following [input]({{< relref "/docs/intro/concept
         <span class="property-indicator"></span>
         <span class="property-type"><a href="#refreshdetails">Refresh<wbr>Details</a></span>
     </dt>
-    <dd>{{% md %}}Details of the refresh job on this share.{{% /md %}}</dd>
-    <dt class="property-optional"
+    <dd>{{% md %}}Details of the refresh job on this share.{{% /md %}}</dd><dt class="property-optional"
             title="Optional">
         <span id="useraccessrights_go">
 <a href="#useraccessrights_go" style="color: inherit; text-decoration: inherit;">User<wbr>Access<wbr>Rights</a>
@@ -567,14 +533,11 @@ The Share resource accepts the following [input]({{< relref "/docs/intro/concept
         <span class="property-indicator"></span>
         <span class="property-type"><a href="#useraccessright">[]User<wbr>Access<wbr>Right</a></span>
     </dt>
-    <dd>{{% md %}}Mapping of users and corresponding access rights on the share (required for SMB protocol).{{% /md %}}</dd>
-</dl>
+    <dd>{{% md %}}Mapping of users and corresponding access rights on the share (required for SMB protocol).{{% /md %}}</dd></dl>
 {{% /choosable %}}
 
 {{% choosable language nodejs %}}
-<dl class="resources-properties">
-
-    <dt class="property-required"
+<dl class="resources-properties"><dt class="property-required"
             title="Required">
         <span id="accessprotocol_nodejs">
 <a href="#accessprotocol_nodejs" style="color: inherit; text-decoration: inherit;">access<wbr>Protocol</a>
@@ -582,8 +545,7 @@ The Share resource accepts the following [input]({{< relref "/docs/intro/concept
         <span class="property-indicator"></span>
         <span class="property-type">string | <a href="#shareaccessprotocol">Share<wbr>Access<wbr>Protocol</a></span>
     </dt>
-    <dd>{{% md %}}Access protocol to be used by the share.{{% /md %}}</dd>
-    <dt class="property-required"
+    <dd>{{% md %}}Access protocol to be used by the share.{{% /md %}}</dd><dt class="property-required"
             title="Required">
         <span id="devicename_nodejs">
 <a href="#devicename_nodejs" style="color: inherit; text-decoration: inherit;">device<wbr>Name</a>
@@ -591,8 +553,7 @@ The Share resource accepts the following [input]({{< relref "/docs/intro/concept
         <span class="property-indicator"></span>
         <span class="property-type">string</span>
     </dt>
-    <dd>{{% md %}}The device name.{{% /md %}}</dd>
-    <dt class="property-required"
+    <dd>{{% md %}}The device name.{{% /md %}}</dd><dt class="property-required"
             title="Required">
         <span id="monitoringstatus_nodejs">
 <a href="#monitoringstatus_nodejs" style="color: inherit; text-decoration: inherit;">monitoring<wbr>Status</a>
@@ -600,8 +561,7 @@ The Share resource accepts the following [input]({{< relref "/docs/intro/concept
         <span class="property-indicator"></span>
         <span class="property-type">string | <a href="#monitoringstatus">Monitoring<wbr>Status</a></span>
     </dt>
-    <dd>{{% md %}}Current monitoring status of the share.{{% /md %}}</dd>
-    <dt class="property-required"
+    <dd>{{% md %}}Current monitoring status of the share.{{% /md %}}</dd><dt class="property-required"
             title="Required">
         <span id="resourcegroupname_nodejs">
 <a href="#resourcegroupname_nodejs" style="color: inherit; text-decoration: inherit;">resource<wbr>Group<wbr>Name</a>
@@ -609,8 +569,7 @@ The Share resource accepts the following [input]({{< relref "/docs/intro/concept
         <span class="property-indicator"></span>
         <span class="property-type">string</span>
     </dt>
-    <dd>{{% md %}}The resource group name.{{% /md %}}</dd>
-    <dt class="property-required"
+    <dd>{{% md %}}The resource group name.{{% /md %}}</dd><dt class="property-required"
             title="Required">
         <span id="sharestatus_nodejs">
 <a href="#sharestatus_nodejs" style="color: inherit; text-decoration: inherit;">share<wbr>Status</a>
@@ -618,8 +577,7 @@ The Share resource accepts the following [input]({{< relref "/docs/intro/concept
         <span class="property-indicator"></span>
         <span class="property-type">string | <a href="#sharestatus">Share<wbr>Status</a></span>
     </dt>
-    <dd>{{% md %}}Current status of the share.{{% /md %}}</dd>
-    <dt class="property-optional"
+    <dd>{{% md %}}Current status of the share.{{% /md %}}</dd><dt class="property-optional"
             title="Optional">
         <span id="azurecontainerinfo_nodejs">
 <a href="#azurecontainerinfo_nodejs" style="color: inherit; text-decoration: inherit;">azure<wbr>Container<wbr>Info</a>
@@ -627,8 +585,7 @@ The Share resource accepts the following [input]({{< relref "/docs/intro/concept
         <span class="property-indicator"></span>
         <span class="property-type"><a href="#azurecontainerinfo">Azure<wbr>Container<wbr>Info</a></span>
     </dt>
-    <dd>{{% md %}}Azure container mapping for the share.{{% /md %}}</dd>
-    <dt class="property-optional"
+    <dd>{{% md %}}Azure container mapping for the share.{{% /md %}}</dd><dt class="property-optional"
             title="Optional">
         <span id="clientaccessrights_nodejs">
 <a href="#clientaccessrights_nodejs" style="color: inherit; text-decoration: inherit;">client<wbr>Access<wbr>Rights</a>
@@ -636,8 +593,7 @@ The Share resource accepts the following [input]({{< relref "/docs/intro/concept
         <span class="property-indicator"></span>
         <span class="property-type"><a href="#clientaccessright">Client<wbr>Access<wbr>Right[]</a></span>
     </dt>
-    <dd>{{% md %}}List of IP addresses and corresponding access rights on the share(required for NFS protocol).{{% /md %}}</dd>
-    <dt class="property-optional"
+    <dd>{{% md %}}List of IP addresses and corresponding access rights on the share(required for NFS protocol).{{% /md %}}</dd><dt class="property-optional"
             title="Optional">
         <span id="datapolicy_nodejs">
 <a href="#datapolicy_nodejs" style="color: inherit; text-decoration: inherit;">data<wbr>Policy</a>
@@ -645,8 +601,7 @@ The Share resource accepts the following [input]({{< relref "/docs/intro/concept
         <span class="property-indicator"></span>
         <span class="property-type">string | <a href="#datapolicy">Data<wbr>Policy</a></span>
     </dt>
-    <dd>{{% md %}}Data policy of the share.{{% /md %}}</dd>
-    <dt class="property-optional"
+    <dd>{{% md %}}Data policy of the share.{{% /md %}}</dd><dt class="property-optional"
             title="Optional">
         <span id="description_nodejs">
 <a href="#description_nodejs" style="color: inherit; text-decoration: inherit;">description</a>
@@ -654,8 +609,7 @@ The Share resource accepts the following [input]({{< relref "/docs/intro/concept
         <span class="property-indicator"></span>
         <span class="property-type">string</span>
     </dt>
-    <dd>{{% md %}}Description for the share.{{% /md %}}</dd>
-    <dt class="property-optional"
+    <dd>{{% md %}}Description for the share.{{% /md %}}</dd><dt class="property-optional"
             title="Optional">
         <span id="name_nodejs">
 <a href="#name_nodejs" style="color: inherit; text-decoration: inherit;">name</a>
@@ -663,8 +617,7 @@ The Share resource accepts the following [input]({{< relref "/docs/intro/concept
         <span class="property-indicator"></span>
         <span class="property-type">string</span>
     </dt>
-    <dd>{{% md %}}The share name.{{% /md %}}</dd>
-    <dt class="property-optional"
+    <dd>{{% md %}}The share name.{{% /md %}}</dd><dt class="property-optional"
             title="Optional">
         <span id="refreshdetails_nodejs">
 <a href="#refreshdetails_nodejs" style="color: inherit; text-decoration: inherit;">refresh<wbr>Details</a>
@@ -672,8 +625,7 @@ The Share resource accepts the following [input]({{< relref "/docs/intro/concept
         <span class="property-indicator"></span>
         <span class="property-type"><a href="#refreshdetails">Refresh<wbr>Details</a></span>
     </dt>
-    <dd>{{% md %}}Details of the refresh job on this share.{{% /md %}}</dd>
-    <dt class="property-optional"
+    <dd>{{% md %}}Details of the refresh job on this share.{{% /md %}}</dd><dt class="property-optional"
             title="Optional">
         <span id="useraccessrights_nodejs">
 <a href="#useraccessrights_nodejs" style="color: inherit; text-decoration: inherit;">user<wbr>Access<wbr>Rights</a>
@@ -681,14 +633,11 @@ The Share resource accepts the following [input]({{< relref "/docs/intro/concept
         <span class="property-indicator"></span>
         <span class="property-type"><a href="#useraccessright">User<wbr>Access<wbr>Right[]</a></span>
     </dt>
-    <dd>{{% md %}}Mapping of users and corresponding access rights on the share (required for SMB protocol).{{% /md %}}</dd>
-</dl>
+    <dd>{{% md %}}Mapping of users and corresponding access rights on the share (required for SMB protocol).{{% /md %}}</dd></dl>
 {{% /choosable %}}
 
 {{% choosable language python %}}
-<dl class="resources-properties">
-
-    <dt class="property-required"
+<dl class="resources-properties"><dt class="property-required"
             title="Required">
         <span id="access_protocol_python">
 <a href="#access_protocol_python" style="color: inherit; text-decoration: inherit;">access_<wbr>protocol</a>
@@ -696,8 +645,7 @@ The Share resource accepts the following [input]({{< relref "/docs/intro/concept
         <span class="property-indicator"></span>
         <span class="property-type">str | <a href="#shareaccessprotocol">Share<wbr>Access<wbr>Protocol</a></span>
     </dt>
-    <dd>{{% md %}}Access protocol to be used by the share.{{% /md %}}</dd>
-    <dt class="property-required"
+    <dd>{{% md %}}Access protocol to be used by the share.{{% /md %}}</dd><dt class="property-required"
             title="Required">
         <span id="device_name_python">
 <a href="#device_name_python" style="color: inherit; text-decoration: inherit;">device_<wbr>name</a>
@@ -705,8 +653,7 @@ The Share resource accepts the following [input]({{< relref "/docs/intro/concept
         <span class="property-indicator"></span>
         <span class="property-type">str</span>
     </dt>
-    <dd>{{% md %}}The device name.{{% /md %}}</dd>
-    <dt class="property-required"
+    <dd>{{% md %}}The device name.{{% /md %}}</dd><dt class="property-required"
             title="Required">
         <span id="monitoring_status_python">
 <a href="#monitoring_status_python" style="color: inherit; text-decoration: inherit;">monitoring_<wbr>status</a>
@@ -714,8 +661,7 @@ The Share resource accepts the following [input]({{< relref "/docs/intro/concept
         <span class="property-indicator"></span>
         <span class="property-type">str | <a href="#monitoringstatus">Monitoring<wbr>Status</a></span>
     </dt>
-    <dd>{{% md %}}Current monitoring status of the share.{{% /md %}}</dd>
-    <dt class="property-required"
+    <dd>{{% md %}}Current monitoring status of the share.{{% /md %}}</dd><dt class="property-required"
             title="Required">
         <span id="resource_group_name_python">
 <a href="#resource_group_name_python" style="color: inherit; text-decoration: inherit;">resource_<wbr>group_<wbr>name</a>
@@ -723,8 +669,7 @@ The Share resource accepts the following [input]({{< relref "/docs/intro/concept
         <span class="property-indicator"></span>
         <span class="property-type">str</span>
     </dt>
-    <dd>{{% md %}}The resource group name.{{% /md %}}</dd>
-    <dt class="property-required"
+    <dd>{{% md %}}The resource group name.{{% /md %}}</dd><dt class="property-required"
             title="Required">
         <span id="share_status_python">
 <a href="#share_status_python" style="color: inherit; text-decoration: inherit;">share_<wbr>status</a>
@@ -732,8 +677,7 @@ The Share resource accepts the following [input]({{< relref "/docs/intro/concept
         <span class="property-indicator"></span>
         <span class="property-type">str | <a href="#sharestatus">Share<wbr>Status</a></span>
     </dt>
-    <dd>{{% md %}}Current status of the share.{{% /md %}}</dd>
-    <dt class="property-optional"
+    <dd>{{% md %}}Current status of the share.{{% /md %}}</dd><dt class="property-optional"
             title="Optional">
         <span id="azure_container_info_python">
 <a href="#azure_container_info_python" style="color: inherit; text-decoration: inherit;">azure_<wbr>container_<wbr>info</a>
@@ -741,8 +685,7 @@ The Share resource accepts the following [input]({{< relref "/docs/intro/concept
         <span class="property-indicator"></span>
         <span class="property-type"><a href="#azurecontainerinfo">Azure<wbr>Container<wbr>Info<wbr>Args</a></span>
     </dt>
-    <dd>{{% md %}}Azure container mapping for the share.{{% /md %}}</dd>
-    <dt class="property-optional"
+    <dd>{{% md %}}Azure container mapping for the share.{{% /md %}}</dd><dt class="property-optional"
             title="Optional">
         <span id="client_access_rights_python">
 <a href="#client_access_rights_python" style="color: inherit; text-decoration: inherit;">client_<wbr>access_<wbr>rights</a>
@@ -750,8 +693,7 @@ The Share resource accepts the following [input]({{< relref "/docs/intro/concept
         <span class="property-indicator"></span>
         <span class="property-type"><a href="#clientaccessright">Sequence[Client<wbr>Access<wbr>Right<wbr>Args]</a></span>
     </dt>
-    <dd>{{% md %}}List of IP addresses and corresponding access rights on the share(required for NFS protocol).{{% /md %}}</dd>
-    <dt class="property-optional"
+    <dd>{{% md %}}List of IP addresses and corresponding access rights on the share(required for NFS protocol).{{% /md %}}</dd><dt class="property-optional"
             title="Optional">
         <span id="data_policy_python">
 <a href="#data_policy_python" style="color: inherit; text-decoration: inherit;">data_<wbr>policy</a>
@@ -759,8 +701,7 @@ The Share resource accepts the following [input]({{< relref "/docs/intro/concept
         <span class="property-indicator"></span>
         <span class="property-type">str | <a href="#datapolicy">Data<wbr>Policy</a></span>
     </dt>
-    <dd>{{% md %}}Data policy of the share.{{% /md %}}</dd>
-    <dt class="property-optional"
+    <dd>{{% md %}}Data policy of the share.{{% /md %}}</dd><dt class="property-optional"
             title="Optional">
         <span id="description_python">
 <a href="#description_python" style="color: inherit; text-decoration: inherit;">description</a>
@@ -768,8 +709,7 @@ The Share resource accepts the following [input]({{< relref "/docs/intro/concept
         <span class="property-indicator"></span>
         <span class="property-type">str</span>
     </dt>
-    <dd>{{% md %}}Description for the share.{{% /md %}}</dd>
-    <dt class="property-optional"
+    <dd>{{% md %}}Description for the share.{{% /md %}}</dd><dt class="property-optional"
             title="Optional">
         <span id="name_python">
 <a href="#name_python" style="color: inherit; text-decoration: inherit;">name</a>
@@ -777,8 +717,7 @@ The Share resource accepts the following [input]({{< relref "/docs/intro/concept
         <span class="property-indicator"></span>
         <span class="property-type">str</span>
     </dt>
-    <dd>{{% md %}}The share name.{{% /md %}}</dd>
-    <dt class="property-optional"
+    <dd>{{% md %}}The share name.{{% /md %}}</dd><dt class="property-optional"
             title="Optional">
         <span id="refresh_details_python">
 <a href="#refresh_details_python" style="color: inherit; text-decoration: inherit;">refresh_<wbr>details</a>
@@ -786,8 +725,7 @@ The Share resource accepts the following [input]({{< relref "/docs/intro/concept
         <span class="property-indicator"></span>
         <span class="property-type"><a href="#refreshdetails">Refresh<wbr>Details<wbr>Args</a></span>
     </dt>
-    <dd>{{% md %}}Details of the refresh job on this share.{{% /md %}}</dd>
-    <dt class="property-optional"
+    <dd>{{% md %}}Details of the refresh job on this share.{{% /md %}}</dd><dt class="property-optional"
             title="Optional">
         <span id="user_access_rights_python">
 <a href="#user_access_rights_python" style="color: inherit; text-decoration: inherit;">user_<wbr>access_<wbr>rights</a>
@@ -795,8 +733,7 @@ The Share resource accepts the following [input]({{< relref "/docs/intro/concept
         <span class="property-indicator"></span>
         <span class="property-type"><a href="#useraccessright">Sequence[User<wbr>Access<wbr>Right<wbr>Args]</a></span>
     </dt>
-    <dd>{{% md %}}Mapping of users and corresponding access rights on the share (required for SMB protocol).{{% /md %}}</dd>
-</dl>
+    <dd>{{% md %}}Mapping of users and corresponding access rights on the share (required for SMB protocol).{{% /md %}}</dd></dl>
 {{% /choosable %}}
 
 
@@ -807,9 +744,7 @@ All [input](#inputs) properties are implicitly available as output properties. A
 
 
 {{% choosable language csharp %}}
-<dl class="resources-properties">
-
-    <dt class="property-"
+<dl class="resources-properties"><dt class="property-"
             title="">
         <span id="id_csharp">
 <a href="#id_csharp" style="color: inherit; text-decoration: inherit;">Id</a>
@@ -817,8 +752,7 @@ All [input](#inputs) properties are implicitly available as output properties. A
         <span class="property-indicator"></span>
         <span class="property-type">string</span>
     </dt>
-    <dd>{{% md %}}The provider-assigned unique ID for this managed resource.{{% /md %}}</dd>
-    <dt class="property-"
+    <dd>{{% md %}}The provider-assigned unique ID for this managed resource.{{% /md %}}</dd><dt class="property-"
             title="">
         <span id="sharemappings_csharp">
 <a href="#sharemappings_csharp" style="color: inherit; text-decoration: inherit;">Share<wbr>Mappings</a>
@@ -826,8 +760,7 @@ All [input](#inputs) properties are implicitly available as output properties. A
         <span class="property-indicator"></span>
         <span class="property-type"><a href="#mountpointmapresponse">List&lt;Pulumi.<wbr>Azure<wbr>Native.<wbr>Data<wbr>Box<wbr>Edge.<wbr>Outputs.<wbr>Mount<wbr>Point<wbr>Map<wbr>Response&gt;</a></span>
     </dt>
-    <dd>{{% md %}}Share mount point to the role.{{% /md %}}</dd>
-    <dt class="property-"
+    <dd>{{% md %}}Share mount point to the role.{{% /md %}}</dd><dt class="property-"
             title="">
         <span id="systemdata_csharp">
 <a href="#systemdata_csharp" style="color: inherit; text-decoration: inherit;">System<wbr>Data</a>
@@ -835,8 +768,7 @@ All [input](#inputs) properties are implicitly available as output properties. A
         <span class="property-indicator"></span>
         <span class="property-type"><a href="#systemdataresponse">Pulumi.<wbr>Azure<wbr>Native.<wbr>Data<wbr>Box<wbr>Edge.<wbr>Outputs.<wbr>System<wbr>Data<wbr>Response</a></span>
     </dt>
-    <dd>{{% md %}}Share on ASE device{{% /md %}}</dd>
-    <dt class="property-"
+    <dd>{{% md %}}Share on ASE device{{% /md %}}</dd><dt class="property-"
             title="">
         <span id="type_csharp">
 <a href="#type_csharp" style="color: inherit; text-decoration: inherit;">Type</a>
@@ -844,14 +776,11 @@ All [input](#inputs) properties are implicitly available as output properties. A
         <span class="property-indicator"></span>
         <span class="property-type">string</span>
     </dt>
-    <dd>{{% md %}}The hierarchical type of the object.{{% /md %}}</dd>
-</dl>
+    <dd>{{% md %}}The hierarchical type of the object.{{% /md %}}</dd></dl>
 {{% /choosable %}}
 
 {{% choosable language go %}}
-<dl class="resources-properties">
-
-    <dt class="property-"
+<dl class="resources-properties"><dt class="property-"
             title="">
         <span id="id_go">
 <a href="#id_go" style="color: inherit; text-decoration: inherit;">Id</a>
@@ -859,8 +788,7 @@ All [input](#inputs) properties are implicitly available as output properties. A
         <span class="property-indicator"></span>
         <span class="property-type">string</span>
     </dt>
-    <dd>{{% md %}}The provider-assigned unique ID for this managed resource.{{% /md %}}</dd>
-    <dt class="property-"
+    <dd>{{% md %}}The provider-assigned unique ID for this managed resource.{{% /md %}}</dd><dt class="property-"
             title="">
         <span id="sharemappings_go">
 <a href="#sharemappings_go" style="color: inherit; text-decoration: inherit;">Share<wbr>Mappings</a>
@@ -868,8 +796,7 @@ All [input](#inputs) properties are implicitly available as output properties. A
         <span class="property-indicator"></span>
         <span class="property-type"><a href="#mountpointmapresponse">[]Mount<wbr>Point<wbr>Map<wbr>Response</a></span>
     </dt>
-    <dd>{{% md %}}Share mount point to the role.{{% /md %}}</dd>
-    <dt class="property-"
+    <dd>{{% md %}}Share mount point to the role.{{% /md %}}</dd><dt class="property-"
             title="">
         <span id="systemdata_go">
 <a href="#systemdata_go" style="color: inherit; text-decoration: inherit;">System<wbr>Data</a>
@@ -877,8 +804,7 @@ All [input](#inputs) properties are implicitly available as output properties. A
         <span class="property-indicator"></span>
         <span class="property-type"><a href="#systemdataresponse">System<wbr>Data<wbr>Response</a></span>
     </dt>
-    <dd>{{% md %}}Share on ASE device{{% /md %}}</dd>
-    <dt class="property-"
+    <dd>{{% md %}}Share on ASE device{{% /md %}}</dd><dt class="property-"
             title="">
         <span id="type_go">
 <a href="#type_go" style="color: inherit; text-decoration: inherit;">Type</a>
@@ -886,14 +812,11 @@ All [input](#inputs) properties are implicitly available as output properties. A
         <span class="property-indicator"></span>
         <span class="property-type">string</span>
     </dt>
-    <dd>{{% md %}}The hierarchical type of the object.{{% /md %}}</dd>
-</dl>
+    <dd>{{% md %}}The hierarchical type of the object.{{% /md %}}</dd></dl>
 {{% /choosable %}}
 
 {{% choosable language nodejs %}}
-<dl class="resources-properties">
-
-    <dt class="property-"
+<dl class="resources-properties"><dt class="property-"
             title="">
         <span id="id_nodejs">
 <a href="#id_nodejs" style="color: inherit; text-decoration: inherit;">id</a>
@@ -901,8 +824,7 @@ All [input](#inputs) properties are implicitly available as output properties. A
         <span class="property-indicator"></span>
         <span class="property-type">string</span>
     </dt>
-    <dd>{{% md %}}The provider-assigned unique ID for this managed resource.{{% /md %}}</dd>
-    <dt class="property-"
+    <dd>{{% md %}}The provider-assigned unique ID for this managed resource.{{% /md %}}</dd><dt class="property-"
             title="">
         <span id="sharemappings_nodejs">
 <a href="#sharemappings_nodejs" style="color: inherit; text-decoration: inherit;">share<wbr>Mappings</a>
@@ -910,8 +832,7 @@ All [input](#inputs) properties are implicitly available as output properties. A
         <span class="property-indicator"></span>
         <span class="property-type"><a href="#mountpointmapresponse">Mount<wbr>Point<wbr>Map<wbr>Response[]</a></span>
     </dt>
-    <dd>{{% md %}}Share mount point to the role.{{% /md %}}</dd>
-    <dt class="property-"
+    <dd>{{% md %}}Share mount point to the role.{{% /md %}}</dd><dt class="property-"
             title="">
         <span id="systemdata_nodejs">
 <a href="#systemdata_nodejs" style="color: inherit; text-decoration: inherit;">system<wbr>Data</a>
@@ -919,8 +840,7 @@ All [input](#inputs) properties are implicitly available as output properties. A
         <span class="property-indicator"></span>
         <span class="property-type"><a href="#systemdataresponse">System<wbr>Data<wbr>Response</a></span>
     </dt>
-    <dd>{{% md %}}Share on ASE device{{% /md %}}</dd>
-    <dt class="property-"
+    <dd>{{% md %}}Share on ASE device{{% /md %}}</dd><dt class="property-"
             title="">
         <span id="type_nodejs">
 <a href="#type_nodejs" style="color: inherit; text-decoration: inherit;">type</a>
@@ -928,14 +848,11 @@ All [input](#inputs) properties are implicitly available as output properties. A
         <span class="property-indicator"></span>
         <span class="property-type">string</span>
     </dt>
-    <dd>{{% md %}}The hierarchical type of the object.{{% /md %}}</dd>
-</dl>
+    <dd>{{% md %}}The hierarchical type of the object.{{% /md %}}</dd></dl>
 {{% /choosable %}}
 
 {{% choosable language python %}}
-<dl class="resources-properties">
-
-    <dt class="property-"
+<dl class="resources-properties"><dt class="property-"
             title="">
         <span id="id_python">
 <a href="#id_python" style="color: inherit; text-decoration: inherit;">id</a>
@@ -943,8 +860,7 @@ All [input](#inputs) properties are implicitly available as output properties. A
         <span class="property-indicator"></span>
         <span class="property-type">str</span>
     </dt>
-    <dd>{{% md %}}The provider-assigned unique ID for this managed resource.{{% /md %}}</dd>
-    <dt class="property-"
+    <dd>{{% md %}}The provider-assigned unique ID for this managed resource.{{% /md %}}</dd><dt class="property-"
             title="">
         <span id="share_mappings_python">
 <a href="#share_mappings_python" style="color: inherit; text-decoration: inherit;">share_<wbr>mappings</a>
@@ -952,8 +868,7 @@ All [input](#inputs) properties are implicitly available as output properties. A
         <span class="property-indicator"></span>
         <span class="property-type"><a href="#mountpointmapresponse">Sequence[Mount<wbr>Point<wbr>Map<wbr>Response]</a></span>
     </dt>
-    <dd>{{% md %}}Share mount point to the role.{{% /md %}}</dd>
-    <dt class="property-"
+    <dd>{{% md %}}Share mount point to the role.{{% /md %}}</dd><dt class="property-"
             title="">
         <span id="system_data_python">
 <a href="#system_data_python" style="color: inherit; text-decoration: inherit;">system_<wbr>data</a>
@@ -961,8 +876,7 @@ All [input](#inputs) properties are implicitly available as output properties. A
         <span class="property-indicator"></span>
         <span class="property-type"><a href="#systemdataresponse">System<wbr>Data<wbr>Response</a></span>
     </dt>
-    <dd>{{% md %}}Share on ASE device{{% /md %}}</dd>
-    <dt class="property-"
+    <dd>{{% md %}}Share on ASE device{{% /md %}}</dd><dt class="property-"
             title="">
         <span id="type_python">
 <a href="#type_python" style="color: inherit; text-decoration: inherit;">type</a>
@@ -970,8 +884,7 @@ All [input](#inputs) properties are implicitly available as output properties. A
         <span class="property-indicator"></span>
         <span class="property-type">str</span>
     </dt>
-    <dd>{{% md %}}The hierarchical type of the object.{{% /md %}}</dd>
-</dl>
+    <dd>{{% md %}}The hierarchical type of the object.{{% /md %}}</dd></dl>
 {{% /choosable %}}
 
 
@@ -987,55 +900,37 @@ All [input](#inputs) properties are implicitly available as output properties. A
 <h4 id="azurecontainerdataformat">Azure<wbr>Container<wbr>Data<wbr>Format</h4>
 
 {{% choosable language csharp %}}
-<dl class="tabular">
-    <dt>Block<wbr>Blob</dt>
-    <dd>BlockBlob</dd>
-    <dt>Page<wbr>Blob</dt>
-    <dd>PageBlob</dd>
-    <dt>Azure<wbr>File</dt>
-    <dd>AzureFile</dd>
-</dl>
+<dl class="tabular"><dt>Block<wbr>Blob</dt>
+    <dd>BlockBlob</dd><dt>Page<wbr>Blob</dt>
+    <dd>PageBlob</dd><dt>Azure<wbr>File</dt>
+    <dd>AzureFile</dd></dl>
 {{% /choosable %}}
 
 {{% choosable language go %}}
-<dl class="tabular">
-    <dt>Azure<wbr>Container<wbr>Data<wbr>Format<wbr>Block<wbr>Blob</dt>
-    <dd>BlockBlob</dd>
-    <dt>Azure<wbr>Container<wbr>Data<wbr>Format<wbr>Page<wbr>Blob</dt>
-    <dd>PageBlob</dd>
-    <dt>Azure<wbr>Container<wbr>Data<wbr>Format<wbr>Azure<wbr>File</dt>
-    <dd>AzureFile</dd>
-</dl>
+<dl class="tabular"><dt>Azure<wbr>Container<wbr>Data<wbr>Format<wbr>Block<wbr>Blob</dt>
+    <dd>BlockBlob</dd><dt>Azure<wbr>Container<wbr>Data<wbr>Format<wbr>Page<wbr>Blob</dt>
+    <dd>PageBlob</dd><dt>Azure<wbr>Container<wbr>Data<wbr>Format<wbr>Azure<wbr>File</dt>
+    <dd>AzureFile</dd></dl>
 {{% /choosable %}}
 
 {{% choosable language nodejs %}}
-<dl class="tabular">
-    <dt>Block<wbr>Blob</dt>
-    <dd>BlockBlob</dd>
-    <dt>Page<wbr>Blob</dt>
-    <dd>PageBlob</dd>
-    <dt>Azure<wbr>File</dt>
-    <dd>AzureFile</dd>
-</dl>
+<dl class="tabular"><dt>Block<wbr>Blob</dt>
+    <dd>BlockBlob</dd><dt>Page<wbr>Blob</dt>
+    <dd>PageBlob</dd><dt>Azure<wbr>File</dt>
+    <dd>AzureFile</dd></dl>
 {{% /choosable %}}
 
 {{% choosable language python %}}
-<dl class="tabular">
-    <dt>BLOCK_BLOB</dt>
-    <dd>BlockBlob</dd>
-    <dt>PAGE_BLOB</dt>
-    <dd>PageBlob</dd>
-    <dt>AZURE_FILE</dt>
-    <dd>AzureFile</dd>
-</dl>
+<dl class="tabular"><dt>BLOCK_BLOB</dt>
+    <dd>BlockBlob</dd><dt>PAGE_BLOB</dt>
+    <dd>PageBlob</dd><dt>AZURE_FILE</dt>
+    <dd>AzureFile</dd></dl>
 {{% /choosable %}}
 
 <h4 id="azurecontainerinfo">Azure<wbr>Container<wbr>Info</h4>
 
 {{% choosable language csharp %}}
-<dl class="resources-properties">
-
-    <dt class="property-required"
+<dl class="resources-properties"><dt class="property-required"
             title="Required">
         <span id="containername_csharp">
 <a href="#containername_csharp" style="color: inherit; text-decoration: inherit;">Container<wbr>Name</a>
@@ -1043,8 +938,7 @@ All [input](#inputs) properties are implicitly available as output properties. A
         <span class="property-indicator"></span>
         <span class="property-type">string</span>
     </dt>
-    <dd>{{% md %}}Container name (Based on the data format specified, this represents the name of Azure Files/Page blob/Block blob).{{% /md %}}</dd>
-    <dt class="property-required"
+    <dd>{{% md %}}Container name (Based on the data format specified, this represents the name of Azure Files/Page blob/Block blob).{{% /md %}}</dd><dt class="property-required"
             title="Required">
         <span id="dataformat_csharp">
 <a href="#dataformat_csharp" style="color: inherit; text-decoration: inherit;">Data<wbr>Format</a>
@@ -1052,8 +946,7 @@ All [input](#inputs) properties are implicitly available as output properties. A
         <span class="property-indicator"></span>
         <span class="property-type">string | <a href="#azurecontainerdataformat">Pulumi.<wbr>Azure<wbr>Native.<wbr>Data<wbr>Box<wbr>Edge.<wbr>Azure<wbr>Container<wbr>Data<wbr>Format</a></span>
     </dt>
-    <dd>{{% md %}}Storage format used for the file represented by the share.{{% /md %}}</dd>
-    <dt class="property-required"
+    <dd>{{% md %}}Storage format used for the file represented by the share.{{% /md %}}</dd><dt class="property-required"
             title="Required">
         <span id="storageaccountcredentialid_csharp">
 <a href="#storageaccountcredentialid_csharp" style="color: inherit; text-decoration: inherit;">Storage<wbr>Account<wbr>Credential<wbr>Id</a>
@@ -1061,14 +954,11 @@ All [input](#inputs) properties are implicitly available as output properties. A
         <span class="property-indicator"></span>
         <span class="property-type">string</span>
     </dt>
-    <dd>{{% md %}}ID of the storage account credential used to access storage.{{% /md %}}</dd>
-</dl>
+    <dd>{{% md %}}ID of the storage account credential used to access storage.{{% /md %}}</dd></dl>
 {{% /choosable %}}
 
 {{% choosable language go %}}
-<dl class="resources-properties">
-
-    <dt class="property-required"
+<dl class="resources-properties"><dt class="property-required"
             title="Required">
         <span id="containername_go">
 <a href="#containername_go" style="color: inherit; text-decoration: inherit;">Container<wbr>Name</a>
@@ -1076,8 +966,7 @@ All [input](#inputs) properties are implicitly available as output properties. A
         <span class="property-indicator"></span>
         <span class="property-type">string</span>
     </dt>
-    <dd>{{% md %}}Container name (Based on the data format specified, this represents the name of Azure Files/Page blob/Block blob).{{% /md %}}</dd>
-    <dt class="property-required"
+    <dd>{{% md %}}Container name (Based on the data format specified, this represents the name of Azure Files/Page blob/Block blob).{{% /md %}}</dd><dt class="property-required"
             title="Required">
         <span id="dataformat_go">
 <a href="#dataformat_go" style="color: inherit; text-decoration: inherit;">Data<wbr>Format</a>
@@ -1085,8 +974,7 @@ All [input](#inputs) properties are implicitly available as output properties. A
         <span class="property-indicator"></span>
         <span class="property-type">string | <a href="#azurecontainerdataformat">Azure<wbr>Container<wbr>Data<wbr>Format</a></span>
     </dt>
-    <dd>{{% md %}}Storage format used for the file represented by the share.{{% /md %}}</dd>
-    <dt class="property-required"
+    <dd>{{% md %}}Storage format used for the file represented by the share.{{% /md %}}</dd><dt class="property-required"
             title="Required">
         <span id="storageaccountcredentialid_go">
 <a href="#storageaccountcredentialid_go" style="color: inherit; text-decoration: inherit;">Storage<wbr>Account<wbr>Credential<wbr>Id</a>
@@ -1094,14 +982,11 @@ All [input](#inputs) properties are implicitly available as output properties. A
         <span class="property-indicator"></span>
         <span class="property-type">string</span>
     </dt>
-    <dd>{{% md %}}ID of the storage account credential used to access storage.{{% /md %}}</dd>
-</dl>
+    <dd>{{% md %}}ID of the storage account credential used to access storage.{{% /md %}}</dd></dl>
 {{% /choosable %}}
 
 {{% choosable language nodejs %}}
-<dl class="resources-properties">
-
-    <dt class="property-required"
+<dl class="resources-properties"><dt class="property-required"
             title="Required">
         <span id="containername_nodejs">
 <a href="#containername_nodejs" style="color: inherit; text-decoration: inherit;">container<wbr>Name</a>
@@ -1109,8 +994,7 @@ All [input](#inputs) properties are implicitly available as output properties. A
         <span class="property-indicator"></span>
         <span class="property-type">string</span>
     </dt>
-    <dd>{{% md %}}Container name (Based on the data format specified, this represents the name of Azure Files/Page blob/Block blob).{{% /md %}}</dd>
-    <dt class="property-required"
+    <dd>{{% md %}}Container name (Based on the data format specified, this represents the name of Azure Files/Page blob/Block blob).{{% /md %}}</dd><dt class="property-required"
             title="Required">
         <span id="dataformat_nodejs">
 <a href="#dataformat_nodejs" style="color: inherit; text-decoration: inherit;">data<wbr>Format</a>
@@ -1118,8 +1002,7 @@ All [input](#inputs) properties are implicitly available as output properties. A
         <span class="property-indicator"></span>
         <span class="property-type">string | <a href="#azurecontainerdataformat">Azure<wbr>Container<wbr>Data<wbr>Format</a></span>
     </dt>
-    <dd>{{% md %}}Storage format used for the file represented by the share.{{% /md %}}</dd>
-    <dt class="property-required"
+    <dd>{{% md %}}Storage format used for the file represented by the share.{{% /md %}}</dd><dt class="property-required"
             title="Required">
         <span id="storageaccountcredentialid_nodejs">
 <a href="#storageaccountcredentialid_nodejs" style="color: inherit; text-decoration: inherit;">storage<wbr>Account<wbr>Credential<wbr>Id</a>
@@ -1127,14 +1010,11 @@ All [input](#inputs) properties are implicitly available as output properties. A
         <span class="property-indicator"></span>
         <span class="property-type">string</span>
     </dt>
-    <dd>{{% md %}}ID of the storage account credential used to access storage.{{% /md %}}</dd>
-</dl>
+    <dd>{{% md %}}ID of the storage account credential used to access storage.{{% /md %}}</dd></dl>
 {{% /choosable %}}
 
 {{% choosable language python %}}
-<dl class="resources-properties">
-
-    <dt class="property-required"
+<dl class="resources-properties"><dt class="property-required"
             title="Required">
         <span id="container_name_python">
 <a href="#container_name_python" style="color: inherit; text-decoration: inherit;">container_<wbr>name</a>
@@ -1142,8 +1022,7 @@ All [input](#inputs) properties are implicitly available as output properties. A
         <span class="property-indicator"></span>
         <span class="property-type">str</span>
     </dt>
-    <dd>{{% md %}}Container name (Based on the data format specified, this represents the name of Azure Files/Page blob/Block blob).{{% /md %}}</dd>
-    <dt class="property-required"
+    <dd>{{% md %}}Container name (Based on the data format specified, this represents the name of Azure Files/Page blob/Block blob).{{% /md %}}</dd><dt class="property-required"
             title="Required">
         <span id="data_format_python">
 <a href="#data_format_python" style="color: inherit; text-decoration: inherit;">data_<wbr>format</a>
@@ -1151,8 +1030,7 @@ All [input](#inputs) properties are implicitly available as output properties. A
         <span class="property-indicator"></span>
         <span class="property-type">str | <a href="#azurecontainerdataformat">Azure<wbr>Container<wbr>Data<wbr>Format</a></span>
     </dt>
-    <dd>{{% md %}}Storage format used for the file represented by the share.{{% /md %}}</dd>
-    <dt class="property-required"
+    <dd>{{% md %}}Storage format used for the file represented by the share.{{% /md %}}</dd><dt class="property-required"
             title="Required">
         <span id="storage_account_credential_id_python">
 <a href="#storage_account_credential_id_python" style="color: inherit; text-decoration: inherit;">storage_<wbr>account_<wbr>credential_<wbr>id</a>
@@ -1160,16 +1038,13 @@ All [input](#inputs) properties are implicitly available as output properties. A
         <span class="property-indicator"></span>
         <span class="property-type">str</span>
     </dt>
-    <dd>{{% md %}}ID of the storage account credential used to access storage.{{% /md %}}</dd>
-</dl>
+    <dd>{{% md %}}ID of the storage account credential used to access storage.{{% /md %}}</dd></dl>
 {{% /choosable %}}
 
 <h4 id="azurecontainerinforesponse">Azure<wbr>Container<wbr>Info<wbr>Response</h4>
 
 {{% choosable language csharp %}}
-<dl class="resources-properties">
-
-    <dt class="property-required"
+<dl class="resources-properties"><dt class="property-required"
             title="Required">
         <span id="containername_csharp">
 <a href="#containername_csharp" style="color: inherit; text-decoration: inherit;">Container<wbr>Name</a>
@@ -1177,8 +1052,7 @@ All [input](#inputs) properties are implicitly available as output properties. A
         <span class="property-indicator"></span>
         <span class="property-type">string</span>
     </dt>
-    <dd>{{% md %}}Container name (Based on the data format specified, this represents the name of Azure Files/Page blob/Block blob).{{% /md %}}</dd>
-    <dt class="property-required"
+    <dd>{{% md %}}Container name (Based on the data format specified, this represents the name of Azure Files/Page blob/Block blob).{{% /md %}}</dd><dt class="property-required"
             title="Required">
         <span id="dataformat_csharp">
 <a href="#dataformat_csharp" style="color: inherit; text-decoration: inherit;">Data<wbr>Format</a>
@@ -1186,8 +1060,7 @@ All [input](#inputs) properties are implicitly available as output properties. A
         <span class="property-indicator"></span>
         <span class="property-type">string</span>
     </dt>
-    <dd>{{% md %}}Storage format used for the file represented by the share.{{% /md %}}</dd>
-    <dt class="property-required"
+    <dd>{{% md %}}Storage format used for the file represented by the share.{{% /md %}}</dd><dt class="property-required"
             title="Required">
         <span id="storageaccountcredentialid_csharp">
 <a href="#storageaccountcredentialid_csharp" style="color: inherit; text-decoration: inherit;">Storage<wbr>Account<wbr>Credential<wbr>Id</a>
@@ -1195,14 +1068,11 @@ All [input](#inputs) properties are implicitly available as output properties. A
         <span class="property-indicator"></span>
         <span class="property-type">string</span>
     </dt>
-    <dd>{{% md %}}ID of the storage account credential used to access storage.{{% /md %}}</dd>
-</dl>
+    <dd>{{% md %}}ID of the storage account credential used to access storage.{{% /md %}}</dd></dl>
 {{% /choosable %}}
 
 {{% choosable language go %}}
-<dl class="resources-properties">
-
-    <dt class="property-required"
+<dl class="resources-properties"><dt class="property-required"
             title="Required">
         <span id="containername_go">
 <a href="#containername_go" style="color: inherit; text-decoration: inherit;">Container<wbr>Name</a>
@@ -1210,8 +1080,7 @@ All [input](#inputs) properties are implicitly available as output properties. A
         <span class="property-indicator"></span>
         <span class="property-type">string</span>
     </dt>
-    <dd>{{% md %}}Container name (Based on the data format specified, this represents the name of Azure Files/Page blob/Block blob).{{% /md %}}</dd>
-    <dt class="property-required"
+    <dd>{{% md %}}Container name (Based on the data format specified, this represents the name of Azure Files/Page blob/Block blob).{{% /md %}}</dd><dt class="property-required"
             title="Required">
         <span id="dataformat_go">
 <a href="#dataformat_go" style="color: inherit; text-decoration: inherit;">Data<wbr>Format</a>
@@ -1219,8 +1088,7 @@ All [input](#inputs) properties are implicitly available as output properties. A
         <span class="property-indicator"></span>
         <span class="property-type">string</span>
     </dt>
-    <dd>{{% md %}}Storage format used for the file represented by the share.{{% /md %}}</dd>
-    <dt class="property-required"
+    <dd>{{% md %}}Storage format used for the file represented by the share.{{% /md %}}</dd><dt class="property-required"
             title="Required">
         <span id="storageaccountcredentialid_go">
 <a href="#storageaccountcredentialid_go" style="color: inherit; text-decoration: inherit;">Storage<wbr>Account<wbr>Credential<wbr>Id</a>
@@ -1228,14 +1096,11 @@ All [input](#inputs) properties are implicitly available as output properties. A
         <span class="property-indicator"></span>
         <span class="property-type">string</span>
     </dt>
-    <dd>{{% md %}}ID of the storage account credential used to access storage.{{% /md %}}</dd>
-</dl>
+    <dd>{{% md %}}ID of the storage account credential used to access storage.{{% /md %}}</dd></dl>
 {{% /choosable %}}
 
 {{% choosable language nodejs %}}
-<dl class="resources-properties">
-
-    <dt class="property-required"
+<dl class="resources-properties"><dt class="property-required"
             title="Required">
         <span id="containername_nodejs">
 <a href="#containername_nodejs" style="color: inherit; text-decoration: inherit;">container<wbr>Name</a>
@@ -1243,8 +1108,7 @@ All [input](#inputs) properties are implicitly available as output properties. A
         <span class="property-indicator"></span>
         <span class="property-type">string</span>
     </dt>
-    <dd>{{% md %}}Container name (Based on the data format specified, this represents the name of Azure Files/Page blob/Block blob).{{% /md %}}</dd>
-    <dt class="property-required"
+    <dd>{{% md %}}Container name (Based on the data format specified, this represents the name of Azure Files/Page blob/Block blob).{{% /md %}}</dd><dt class="property-required"
             title="Required">
         <span id="dataformat_nodejs">
 <a href="#dataformat_nodejs" style="color: inherit; text-decoration: inherit;">data<wbr>Format</a>
@@ -1252,8 +1116,7 @@ All [input](#inputs) properties are implicitly available as output properties. A
         <span class="property-indicator"></span>
         <span class="property-type">string</span>
     </dt>
-    <dd>{{% md %}}Storage format used for the file represented by the share.{{% /md %}}</dd>
-    <dt class="property-required"
+    <dd>{{% md %}}Storage format used for the file represented by the share.{{% /md %}}</dd><dt class="property-required"
             title="Required">
         <span id="storageaccountcredentialid_nodejs">
 <a href="#storageaccountcredentialid_nodejs" style="color: inherit; text-decoration: inherit;">storage<wbr>Account<wbr>Credential<wbr>Id</a>
@@ -1261,14 +1124,11 @@ All [input](#inputs) properties are implicitly available as output properties. A
         <span class="property-indicator"></span>
         <span class="property-type">string</span>
     </dt>
-    <dd>{{% md %}}ID of the storage account credential used to access storage.{{% /md %}}</dd>
-</dl>
+    <dd>{{% md %}}ID of the storage account credential used to access storage.{{% /md %}}</dd></dl>
 {{% /choosable %}}
 
 {{% choosable language python %}}
-<dl class="resources-properties">
-
-    <dt class="property-required"
+<dl class="resources-properties"><dt class="property-required"
             title="Required">
         <span id="container_name_python">
 <a href="#container_name_python" style="color: inherit; text-decoration: inherit;">container_<wbr>name</a>
@@ -1276,8 +1136,7 @@ All [input](#inputs) properties are implicitly available as output properties. A
         <span class="property-indicator"></span>
         <span class="property-type">str</span>
     </dt>
-    <dd>{{% md %}}Container name (Based on the data format specified, this represents the name of Azure Files/Page blob/Block blob).{{% /md %}}</dd>
-    <dt class="property-required"
+    <dd>{{% md %}}Container name (Based on the data format specified, this represents the name of Azure Files/Page blob/Block blob).{{% /md %}}</dd><dt class="property-required"
             title="Required">
         <span id="data_format_python">
 <a href="#data_format_python" style="color: inherit; text-decoration: inherit;">data_<wbr>format</a>
@@ -1285,8 +1144,7 @@ All [input](#inputs) properties are implicitly available as output properties. A
         <span class="property-indicator"></span>
         <span class="property-type">str</span>
     </dt>
-    <dd>{{% md %}}Storage format used for the file represented by the share.{{% /md %}}</dd>
-    <dt class="property-required"
+    <dd>{{% md %}}Storage format used for the file represented by the share.{{% /md %}}</dd><dt class="property-required"
             title="Required">
         <span id="storage_account_credential_id_python">
 <a href="#storage_account_credential_id_python" style="color: inherit; text-decoration: inherit;">storage_<wbr>account_<wbr>credential_<wbr>id</a>
@@ -1294,16 +1152,13 @@ All [input](#inputs) properties are implicitly available as output properties. A
         <span class="property-indicator"></span>
         <span class="property-type">str</span>
     </dt>
-    <dd>{{% md %}}ID of the storage account credential used to access storage.{{% /md %}}</dd>
-</dl>
+    <dd>{{% md %}}ID of the storage account credential used to access storage.{{% /md %}}</dd></dl>
 {{% /choosable %}}
 
 <h4 id="clientaccessright">Client<wbr>Access<wbr>Right</h4>
 
 {{% choosable language csharp %}}
-<dl class="resources-properties">
-
-    <dt class="property-required"
+<dl class="resources-properties"><dt class="property-required"
             title="Required">
         <span id="accesspermission_csharp">
 <a href="#accesspermission_csharp" style="color: inherit; text-decoration: inherit;">Access<wbr>Permission</a>
@@ -1311,8 +1166,7 @@ All [input](#inputs) properties are implicitly available as output properties. A
         <span class="property-indicator"></span>
         <span class="property-type">string | <a href="#clientpermissiontype">Pulumi.<wbr>Azure<wbr>Native.<wbr>Data<wbr>Box<wbr>Edge.<wbr>Client<wbr>Permission<wbr>Type</a></span>
     </dt>
-    <dd>{{% md %}}Type of access to be allowed for the client.{{% /md %}}</dd>
-    <dt class="property-required"
+    <dd>{{% md %}}Type of access to be allowed for the client.{{% /md %}}</dd><dt class="property-required"
             title="Required">
         <span id="client_csharp">
 <a href="#client_csharp" style="color: inherit; text-decoration: inherit;">Client</a>
@@ -1320,14 +1174,11 @@ All [input](#inputs) properties are implicitly available as output properties. A
         <span class="property-indicator"></span>
         <span class="property-type">string</span>
     </dt>
-    <dd>{{% md %}}IP of the client.{{% /md %}}</dd>
-</dl>
+    <dd>{{% md %}}IP of the client.{{% /md %}}</dd></dl>
 {{% /choosable %}}
 
 {{% choosable language go %}}
-<dl class="resources-properties">
-
-    <dt class="property-required"
+<dl class="resources-properties"><dt class="property-required"
             title="Required">
         <span id="accesspermission_go">
 <a href="#accesspermission_go" style="color: inherit; text-decoration: inherit;">Access<wbr>Permission</a>
@@ -1335,8 +1186,7 @@ All [input](#inputs) properties are implicitly available as output properties. A
         <span class="property-indicator"></span>
         <span class="property-type">string | <a href="#clientpermissiontype">Client<wbr>Permission<wbr>Type</a></span>
     </dt>
-    <dd>{{% md %}}Type of access to be allowed for the client.{{% /md %}}</dd>
-    <dt class="property-required"
+    <dd>{{% md %}}Type of access to be allowed for the client.{{% /md %}}</dd><dt class="property-required"
             title="Required">
         <span id="client_go">
 <a href="#client_go" style="color: inherit; text-decoration: inherit;">Client</a>
@@ -1344,14 +1194,11 @@ All [input](#inputs) properties are implicitly available as output properties. A
         <span class="property-indicator"></span>
         <span class="property-type">string</span>
     </dt>
-    <dd>{{% md %}}IP of the client.{{% /md %}}</dd>
-</dl>
+    <dd>{{% md %}}IP of the client.{{% /md %}}</dd></dl>
 {{% /choosable %}}
 
 {{% choosable language nodejs %}}
-<dl class="resources-properties">
-
-    <dt class="property-required"
+<dl class="resources-properties"><dt class="property-required"
             title="Required">
         <span id="accesspermission_nodejs">
 <a href="#accesspermission_nodejs" style="color: inherit; text-decoration: inherit;">access<wbr>Permission</a>
@@ -1359,8 +1206,7 @@ All [input](#inputs) properties are implicitly available as output properties. A
         <span class="property-indicator"></span>
         <span class="property-type">string | <a href="#clientpermissiontype">Client<wbr>Permission<wbr>Type</a></span>
     </dt>
-    <dd>{{% md %}}Type of access to be allowed for the client.{{% /md %}}</dd>
-    <dt class="property-required"
+    <dd>{{% md %}}Type of access to be allowed for the client.{{% /md %}}</dd><dt class="property-required"
             title="Required">
         <span id="client_nodejs">
 <a href="#client_nodejs" style="color: inherit; text-decoration: inherit;">client</a>
@@ -1368,14 +1214,11 @@ All [input](#inputs) properties are implicitly available as output properties. A
         <span class="property-indicator"></span>
         <span class="property-type">string</span>
     </dt>
-    <dd>{{% md %}}IP of the client.{{% /md %}}</dd>
-</dl>
+    <dd>{{% md %}}IP of the client.{{% /md %}}</dd></dl>
 {{% /choosable %}}
 
 {{% choosable language python %}}
-<dl class="resources-properties">
-
-    <dt class="property-required"
+<dl class="resources-properties"><dt class="property-required"
             title="Required">
         <span id="access_permission_python">
 <a href="#access_permission_python" style="color: inherit; text-decoration: inherit;">access_<wbr>permission</a>
@@ -1383,8 +1226,7 @@ All [input](#inputs) properties are implicitly available as output properties. A
         <span class="property-indicator"></span>
         <span class="property-type">str | <a href="#clientpermissiontype">Client<wbr>Permission<wbr>Type</a></span>
     </dt>
-    <dd>{{% md %}}Type of access to be allowed for the client.{{% /md %}}</dd>
-    <dt class="property-required"
+    <dd>{{% md %}}Type of access to be allowed for the client.{{% /md %}}</dd><dt class="property-required"
             title="Required">
         <span id="client_python">
 <a href="#client_python" style="color: inherit; text-decoration: inherit;">client</a>
@@ -1392,16 +1234,13 @@ All [input](#inputs) properties are implicitly available as output properties. A
         <span class="property-indicator"></span>
         <span class="property-type">str</span>
     </dt>
-    <dd>{{% md %}}IP of the client.{{% /md %}}</dd>
-</dl>
+    <dd>{{% md %}}IP of the client.{{% /md %}}</dd></dl>
 {{% /choosable %}}
 
 <h4 id="clientaccessrightresponse">Client<wbr>Access<wbr>Right<wbr>Response</h4>
 
 {{% choosable language csharp %}}
-<dl class="resources-properties">
-
-    <dt class="property-required"
+<dl class="resources-properties"><dt class="property-required"
             title="Required">
         <span id="accesspermission_csharp">
 <a href="#accesspermission_csharp" style="color: inherit; text-decoration: inherit;">Access<wbr>Permission</a>
@@ -1409,8 +1248,7 @@ All [input](#inputs) properties are implicitly available as output properties. A
         <span class="property-indicator"></span>
         <span class="property-type">string</span>
     </dt>
-    <dd>{{% md %}}Type of access to be allowed for the client.{{% /md %}}</dd>
-    <dt class="property-required"
+    <dd>{{% md %}}Type of access to be allowed for the client.{{% /md %}}</dd><dt class="property-required"
             title="Required">
         <span id="client_csharp">
 <a href="#client_csharp" style="color: inherit; text-decoration: inherit;">Client</a>
@@ -1418,14 +1256,11 @@ All [input](#inputs) properties are implicitly available as output properties. A
         <span class="property-indicator"></span>
         <span class="property-type">string</span>
     </dt>
-    <dd>{{% md %}}IP of the client.{{% /md %}}</dd>
-</dl>
+    <dd>{{% md %}}IP of the client.{{% /md %}}</dd></dl>
 {{% /choosable %}}
 
 {{% choosable language go %}}
-<dl class="resources-properties">
-
-    <dt class="property-required"
+<dl class="resources-properties"><dt class="property-required"
             title="Required">
         <span id="accesspermission_go">
 <a href="#accesspermission_go" style="color: inherit; text-decoration: inherit;">Access<wbr>Permission</a>
@@ -1433,8 +1268,7 @@ All [input](#inputs) properties are implicitly available as output properties. A
         <span class="property-indicator"></span>
         <span class="property-type">string</span>
     </dt>
-    <dd>{{% md %}}Type of access to be allowed for the client.{{% /md %}}</dd>
-    <dt class="property-required"
+    <dd>{{% md %}}Type of access to be allowed for the client.{{% /md %}}</dd><dt class="property-required"
             title="Required">
         <span id="client_go">
 <a href="#client_go" style="color: inherit; text-decoration: inherit;">Client</a>
@@ -1442,14 +1276,11 @@ All [input](#inputs) properties are implicitly available as output properties. A
         <span class="property-indicator"></span>
         <span class="property-type">string</span>
     </dt>
-    <dd>{{% md %}}IP of the client.{{% /md %}}</dd>
-</dl>
+    <dd>{{% md %}}IP of the client.{{% /md %}}</dd></dl>
 {{% /choosable %}}
 
 {{% choosable language nodejs %}}
-<dl class="resources-properties">
-
-    <dt class="property-required"
+<dl class="resources-properties"><dt class="property-required"
             title="Required">
         <span id="accesspermission_nodejs">
 <a href="#accesspermission_nodejs" style="color: inherit; text-decoration: inherit;">access<wbr>Permission</a>
@@ -1457,8 +1288,7 @@ All [input](#inputs) properties are implicitly available as output properties. A
         <span class="property-indicator"></span>
         <span class="property-type">string</span>
     </dt>
-    <dd>{{% md %}}Type of access to be allowed for the client.{{% /md %}}</dd>
-    <dt class="property-required"
+    <dd>{{% md %}}Type of access to be allowed for the client.{{% /md %}}</dd><dt class="property-required"
             title="Required">
         <span id="client_nodejs">
 <a href="#client_nodejs" style="color: inherit; text-decoration: inherit;">client</a>
@@ -1466,14 +1296,11 @@ All [input](#inputs) properties are implicitly available as output properties. A
         <span class="property-indicator"></span>
         <span class="property-type">string</span>
     </dt>
-    <dd>{{% md %}}IP of the client.{{% /md %}}</dd>
-</dl>
+    <dd>{{% md %}}IP of the client.{{% /md %}}</dd></dl>
 {{% /choosable %}}
 
 {{% choosable language python %}}
-<dl class="resources-properties">
-
-    <dt class="property-required"
+<dl class="resources-properties"><dt class="property-required"
             title="Required">
         <span id="access_permission_python">
 <a href="#access_permission_python" style="color: inherit; text-decoration: inherit;">access_<wbr>permission</a>
@@ -1481,8 +1308,7 @@ All [input](#inputs) properties are implicitly available as output properties. A
         <span class="property-indicator"></span>
         <span class="property-type">str</span>
     </dt>
-    <dd>{{% md %}}Type of access to be allowed for the client.{{% /md %}}</dd>
-    <dt class="property-required"
+    <dd>{{% md %}}Type of access to be allowed for the client.{{% /md %}}</dd><dt class="property-required"
             title="Required">
         <span id="client_python">
 <a href="#client_python" style="color: inherit; text-decoration: inherit;">client</a>
@@ -1490,138 +1316,95 @@ All [input](#inputs) properties are implicitly available as output properties. A
         <span class="property-indicator"></span>
         <span class="property-type">str</span>
     </dt>
-    <dd>{{% md %}}IP of the client.{{% /md %}}</dd>
-</dl>
+    <dd>{{% md %}}IP of the client.{{% /md %}}</dd></dl>
 {{% /choosable %}}
 
 <h4 id="clientpermissiontype">Client<wbr>Permission<wbr>Type</h4>
 
 {{% choosable language csharp %}}
-<dl class="tabular">
-    <dt>No<wbr>Access</dt>
-    <dd>NoAccess</dd>
-    <dt>Read<wbr>Only</dt>
-    <dd>ReadOnly</dd>
-    <dt>Read<wbr>Write</dt>
-    <dd>ReadWrite</dd>
-</dl>
+<dl class="tabular"><dt>No<wbr>Access</dt>
+    <dd>NoAccess</dd><dt>Read<wbr>Only</dt>
+    <dd>ReadOnly</dd><dt>Read<wbr>Write</dt>
+    <dd>ReadWrite</dd></dl>
 {{% /choosable %}}
 
 {{% choosable language go %}}
-<dl class="tabular">
-    <dt>Client<wbr>Permission<wbr>Type<wbr>No<wbr>Access</dt>
-    <dd>NoAccess</dd>
-    <dt>Client<wbr>Permission<wbr>Type<wbr>Read<wbr>Only</dt>
-    <dd>ReadOnly</dd>
-    <dt>Client<wbr>Permission<wbr>Type<wbr>Read<wbr>Write</dt>
-    <dd>ReadWrite</dd>
-</dl>
+<dl class="tabular"><dt>Client<wbr>Permission<wbr>Type<wbr>No<wbr>Access</dt>
+    <dd>NoAccess</dd><dt>Client<wbr>Permission<wbr>Type<wbr>Read<wbr>Only</dt>
+    <dd>ReadOnly</dd><dt>Client<wbr>Permission<wbr>Type<wbr>Read<wbr>Write</dt>
+    <dd>ReadWrite</dd></dl>
 {{% /choosable %}}
 
 {{% choosable language nodejs %}}
-<dl class="tabular">
-    <dt>No<wbr>Access</dt>
-    <dd>NoAccess</dd>
-    <dt>Read<wbr>Only</dt>
-    <dd>ReadOnly</dd>
-    <dt>Read<wbr>Write</dt>
-    <dd>ReadWrite</dd>
-</dl>
+<dl class="tabular"><dt>No<wbr>Access</dt>
+    <dd>NoAccess</dd><dt>Read<wbr>Only</dt>
+    <dd>ReadOnly</dd><dt>Read<wbr>Write</dt>
+    <dd>ReadWrite</dd></dl>
 {{% /choosable %}}
 
 {{% choosable language python %}}
-<dl class="tabular">
-    <dt>NO_ACCESS</dt>
-    <dd>NoAccess</dd>
-    <dt>READ_ONLY</dt>
-    <dd>ReadOnly</dd>
-    <dt>READ_WRITE</dt>
-    <dd>ReadWrite</dd>
-</dl>
+<dl class="tabular"><dt>NO_ACCESS</dt>
+    <dd>NoAccess</dd><dt>READ_ONLY</dt>
+    <dd>ReadOnly</dd><dt>READ_WRITE</dt>
+    <dd>ReadWrite</dd></dl>
 {{% /choosable %}}
 
 <h4 id="datapolicy">Data<wbr>Policy</h4>
 
 {{% choosable language csharp %}}
-<dl class="tabular">
-    <dt>Cloud</dt>
-    <dd>Cloud</dd>
-    <dt>Local</dt>
-    <dd>Local</dd>
-</dl>
+<dl class="tabular"><dt>Cloud</dt>
+    <dd>Cloud</dd><dt>Local</dt>
+    <dd>Local</dd></dl>
 {{% /choosable %}}
 
 {{% choosable language go %}}
-<dl class="tabular">
-    <dt>Data<wbr>Policy<wbr>Cloud</dt>
-    <dd>Cloud</dd>
-    <dt>Data<wbr>Policy<wbr>Local</dt>
-    <dd>Local</dd>
-</dl>
+<dl class="tabular"><dt>Data<wbr>Policy<wbr>Cloud</dt>
+    <dd>Cloud</dd><dt>Data<wbr>Policy<wbr>Local</dt>
+    <dd>Local</dd></dl>
 {{% /choosable %}}
 
 {{% choosable language nodejs %}}
-<dl class="tabular">
-    <dt>Cloud</dt>
-    <dd>Cloud</dd>
-    <dt>Local</dt>
-    <dd>Local</dd>
-</dl>
+<dl class="tabular"><dt>Cloud</dt>
+    <dd>Cloud</dd><dt>Local</dt>
+    <dd>Local</dd></dl>
 {{% /choosable %}}
 
 {{% choosable language python %}}
-<dl class="tabular">
-    <dt>CLOUD</dt>
-    <dd>Cloud</dd>
-    <dt>LOCAL</dt>
-    <dd>Local</dd>
-</dl>
+<dl class="tabular"><dt>CLOUD</dt>
+    <dd>Cloud</dd><dt>LOCAL</dt>
+    <dd>Local</dd></dl>
 {{% /choosable %}}
 
 <h4 id="monitoringstatus">Monitoring<wbr>Status</h4>
 
 {{% choosable language csharp %}}
-<dl class="tabular">
-    <dt>Enabled</dt>
-    <dd>Enabled</dd>
-    <dt>Disabled</dt>
-    <dd>Disabled</dd>
-</dl>
+<dl class="tabular"><dt>Enabled</dt>
+    <dd>Enabled</dd><dt>Disabled</dt>
+    <dd>Disabled</dd></dl>
 {{% /choosable %}}
 
 {{% choosable language go %}}
-<dl class="tabular">
-    <dt>Monitoring<wbr>Status<wbr>Enabled</dt>
-    <dd>Enabled</dd>
-    <dt>Monitoring<wbr>Status<wbr>Disabled</dt>
-    <dd>Disabled</dd>
-</dl>
+<dl class="tabular"><dt>Monitoring<wbr>Status<wbr>Enabled</dt>
+    <dd>Enabled</dd><dt>Monitoring<wbr>Status<wbr>Disabled</dt>
+    <dd>Disabled</dd></dl>
 {{% /choosable %}}
 
 {{% choosable language nodejs %}}
-<dl class="tabular">
-    <dt>Enabled</dt>
-    <dd>Enabled</dd>
-    <dt>Disabled</dt>
-    <dd>Disabled</dd>
-</dl>
+<dl class="tabular"><dt>Enabled</dt>
+    <dd>Enabled</dd><dt>Disabled</dt>
+    <dd>Disabled</dd></dl>
 {{% /choosable %}}
 
 {{% choosable language python %}}
-<dl class="tabular">
-    <dt>ENABLED</dt>
-    <dd>Enabled</dd>
-    <dt>DISABLED</dt>
-    <dd>Disabled</dd>
-</dl>
+<dl class="tabular"><dt>ENABLED</dt>
+    <dd>Enabled</dd><dt>DISABLED</dt>
+    <dd>Disabled</dd></dl>
 {{% /choosable %}}
 
 <h4 id="mountpointmapresponse">Mount<wbr>Point<wbr>Map<wbr>Response</h4>
 
 {{% choosable language csharp %}}
-<dl class="resources-properties">
-
-    <dt class="property-required"
+<dl class="resources-properties"><dt class="property-required"
             title="Required">
         <span id="mountpoint_csharp">
 <a href="#mountpoint_csharp" style="color: inherit; text-decoration: inherit;">Mount<wbr>Point</a>
@@ -1629,8 +1412,7 @@ All [input](#inputs) properties are implicitly available as output properties. A
         <span class="property-indicator"></span>
         <span class="property-type">string</span>
     </dt>
-    <dd>{{% md %}}Mount point for the share.{{% /md %}}</dd>
-    <dt class="property-required"
+    <dd>{{% md %}}Mount point for the share.{{% /md %}}</dd><dt class="property-required"
             title="Required">
         <span id="mounttype_csharp">
 <a href="#mounttype_csharp" style="color: inherit; text-decoration: inherit;">Mount<wbr>Type</a>
@@ -1638,8 +1420,7 @@ All [input](#inputs) properties are implicitly available as output properties. A
         <span class="property-indicator"></span>
         <span class="property-type">string</span>
     </dt>
-    <dd>{{% md %}}Mounting type.{{% /md %}}</dd>
-    <dt class="property-required"
+    <dd>{{% md %}}Mounting type.{{% /md %}}</dd><dt class="property-required"
             title="Required">
         <span id="roleid_csharp">
 <a href="#roleid_csharp" style="color: inherit; text-decoration: inherit;">Role<wbr>Id</a>
@@ -1647,8 +1428,7 @@ All [input](#inputs) properties are implicitly available as output properties. A
         <span class="property-indicator"></span>
         <span class="property-type">string</span>
     </dt>
-    <dd>{{% md %}}ID of the role to which share is mounted.{{% /md %}}</dd>
-    <dt class="property-required"
+    <dd>{{% md %}}ID of the role to which share is mounted.{{% /md %}}</dd><dt class="property-required"
             title="Required">
         <span id="roletype_csharp">
 <a href="#roletype_csharp" style="color: inherit; text-decoration: inherit;">Role<wbr>Type</a>
@@ -1656,8 +1436,7 @@ All [input](#inputs) properties are implicitly available as output properties. A
         <span class="property-indicator"></span>
         <span class="property-type">string</span>
     </dt>
-    <dd>{{% md %}}Role type.{{% /md %}}</dd>
-    <dt class="property-required"
+    <dd>{{% md %}}Role type.{{% /md %}}</dd><dt class="property-required"
             title="Required">
         <span id="shareid_csharp">
 <a href="#shareid_csharp" style="color: inherit; text-decoration: inherit;">Share<wbr>Id</a>
@@ -1665,14 +1444,11 @@ All [input](#inputs) properties are implicitly available as output properties. A
         <span class="property-indicator"></span>
         <span class="property-type">string</span>
     </dt>
-    <dd>{{% md %}}ID of the share mounted to the role VM.{{% /md %}}</dd>
-</dl>
+    <dd>{{% md %}}ID of the share mounted to the role VM.{{% /md %}}</dd></dl>
 {{% /choosable %}}
 
 {{% choosable language go %}}
-<dl class="resources-properties">
-
-    <dt class="property-required"
+<dl class="resources-properties"><dt class="property-required"
             title="Required">
         <span id="mountpoint_go">
 <a href="#mountpoint_go" style="color: inherit; text-decoration: inherit;">Mount<wbr>Point</a>
@@ -1680,8 +1456,7 @@ All [input](#inputs) properties are implicitly available as output properties. A
         <span class="property-indicator"></span>
         <span class="property-type">string</span>
     </dt>
-    <dd>{{% md %}}Mount point for the share.{{% /md %}}</dd>
-    <dt class="property-required"
+    <dd>{{% md %}}Mount point for the share.{{% /md %}}</dd><dt class="property-required"
             title="Required">
         <span id="mounttype_go">
 <a href="#mounttype_go" style="color: inherit; text-decoration: inherit;">Mount<wbr>Type</a>
@@ -1689,8 +1464,7 @@ All [input](#inputs) properties are implicitly available as output properties. A
         <span class="property-indicator"></span>
         <span class="property-type">string</span>
     </dt>
-    <dd>{{% md %}}Mounting type.{{% /md %}}</dd>
-    <dt class="property-required"
+    <dd>{{% md %}}Mounting type.{{% /md %}}</dd><dt class="property-required"
             title="Required">
         <span id="roleid_go">
 <a href="#roleid_go" style="color: inherit; text-decoration: inherit;">Role<wbr>Id</a>
@@ -1698,8 +1472,7 @@ All [input](#inputs) properties are implicitly available as output properties. A
         <span class="property-indicator"></span>
         <span class="property-type">string</span>
     </dt>
-    <dd>{{% md %}}ID of the role to which share is mounted.{{% /md %}}</dd>
-    <dt class="property-required"
+    <dd>{{% md %}}ID of the role to which share is mounted.{{% /md %}}</dd><dt class="property-required"
             title="Required">
         <span id="roletype_go">
 <a href="#roletype_go" style="color: inherit; text-decoration: inherit;">Role<wbr>Type</a>
@@ -1707,8 +1480,7 @@ All [input](#inputs) properties are implicitly available as output properties. A
         <span class="property-indicator"></span>
         <span class="property-type">string</span>
     </dt>
-    <dd>{{% md %}}Role type.{{% /md %}}</dd>
-    <dt class="property-required"
+    <dd>{{% md %}}Role type.{{% /md %}}</dd><dt class="property-required"
             title="Required">
         <span id="shareid_go">
 <a href="#shareid_go" style="color: inherit; text-decoration: inherit;">Share<wbr>Id</a>
@@ -1716,14 +1488,11 @@ All [input](#inputs) properties are implicitly available as output properties. A
         <span class="property-indicator"></span>
         <span class="property-type">string</span>
     </dt>
-    <dd>{{% md %}}ID of the share mounted to the role VM.{{% /md %}}</dd>
-</dl>
+    <dd>{{% md %}}ID of the share mounted to the role VM.{{% /md %}}</dd></dl>
 {{% /choosable %}}
 
 {{% choosable language nodejs %}}
-<dl class="resources-properties">
-
-    <dt class="property-required"
+<dl class="resources-properties"><dt class="property-required"
             title="Required">
         <span id="mountpoint_nodejs">
 <a href="#mountpoint_nodejs" style="color: inherit; text-decoration: inherit;">mount<wbr>Point</a>
@@ -1731,8 +1500,7 @@ All [input](#inputs) properties are implicitly available as output properties. A
         <span class="property-indicator"></span>
         <span class="property-type">string</span>
     </dt>
-    <dd>{{% md %}}Mount point for the share.{{% /md %}}</dd>
-    <dt class="property-required"
+    <dd>{{% md %}}Mount point for the share.{{% /md %}}</dd><dt class="property-required"
             title="Required">
         <span id="mounttype_nodejs">
 <a href="#mounttype_nodejs" style="color: inherit; text-decoration: inherit;">mount<wbr>Type</a>
@@ -1740,8 +1508,7 @@ All [input](#inputs) properties are implicitly available as output properties. A
         <span class="property-indicator"></span>
         <span class="property-type">string</span>
     </dt>
-    <dd>{{% md %}}Mounting type.{{% /md %}}</dd>
-    <dt class="property-required"
+    <dd>{{% md %}}Mounting type.{{% /md %}}</dd><dt class="property-required"
             title="Required">
         <span id="roleid_nodejs">
 <a href="#roleid_nodejs" style="color: inherit; text-decoration: inherit;">role<wbr>Id</a>
@@ -1749,8 +1516,7 @@ All [input](#inputs) properties are implicitly available as output properties. A
         <span class="property-indicator"></span>
         <span class="property-type">string</span>
     </dt>
-    <dd>{{% md %}}ID of the role to which share is mounted.{{% /md %}}</dd>
-    <dt class="property-required"
+    <dd>{{% md %}}ID of the role to which share is mounted.{{% /md %}}</dd><dt class="property-required"
             title="Required">
         <span id="roletype_nodejs">
 <a href="#roletype_nodejs" style="color: inherit; text-decoration: inherit;">role<wbr>Type</a>
@@ -1758,8 +1524,7 @@ All [input](#inputs) properties are implicitly available as output properties. A
         <span class="property-indicator"></span>
         <span class="property-type">string</span>
     </dt>
-    <dd>{{% md %}}Role type.{{% /md %}}</dd>
-    <dt class="property-required"
+    <dd>{{% md %}}Role type.{{% /md %}}</dd><dt class="property-required"
             title="Required">
         <span id="shareid_nodejs">
 <a href="#shareid_nodejs" style="color: inherit; text-decoration: inherit;">share<wbr>Id</a>
@@ -1767,14 +1532,11 @@ All [input](#inputs) properties are implicitly available as output properties. A
         <span class="property-indicator"></span>
         <span class="property-type">string</span>
     </dt>
-    <dd>{{% md %}}ID of the share mounted to the role VM.{{% /md %}}</dd>
-</dl>
+    <dd>{{% md %}}ID of the share mounted to the role VM.{{% /md %}}</dd></dl>
 {{% /choosable %}}
 
 {{% choosable language python %}}
-<dl class="resources-properties">
-
-    <dt class="property-required"
+<dl class="resources-properties"><dt class="property-required"
             title="Required">
         <span id="mount_point_python">
 <a href="#mount_point_python" style="color: inherit; text-decoration: inherit;">mount_<wbr>point</a>
@@ -1782,8 +1544,7 @@ All [input](#inputs) properties are implicitly available as output properties. A
         <span class="property-indicator"></span>
         <span class="property-type">str</span>
     </dt>
-    <dd>{{% md %}}Mount point for the share.{{% /md %}}</dd>
-    <dt class="property-required"
+    <dd>{{% md %}}Mount point for the share.{{% /md %}}</dd><dt class="property-required"
             title="Required">
         <span id="mount_type_python">
 <a href="#mount_type_python" style="color: inherit; text-decoration: inherit;">mount_<wbr>type</a>
@@ -1791,8 +1552,7 @@ All [input](#inputs) properties are implicitly available as output properties. A
         <span class="property-indicator"></span>
         <span class="property-type">str</span>
     </dt>
-    <dd>{{% md %}}Mounting type.{{% /md %}}</dd>
-    <dt class="property-required"
+    <dd>{{% md %}}Mounting type.{{% /md %}}</dd><dt class="property-required"
             title="Required">
         <span id="role_id_python">
 <a href="#role_id_python" style="color: inherit; text-decoration: inherit;">role_<wbr>id</a>
@@ -1800,8 +1560,7 @@ All [input](#inputs) properties are implicitly available as output properties. A
         <span class="property-indicator"></span>
         <span class="property-type">str</span>
     </dt>
-    <dd>{{% md %}}ID of the role to which share is mounted.{{% /md %}}</dd>
-    <dt class="property-required"
+    <dd>{{% md %}}ID of the role to which share is mounted.{{% /md %}}</dd><dt class="property-required"
             title="Required">
         <span id="role_type_python">
 <a href="#role_type_python" style="color: inherit; text-decoration: inherit;">role_<wbr>type</a>
@@ -1809,8 +1568,7 @@ All [input](#inputs) properties are implicitly available as output properties. A
         <span class="property-indicator"></span>
         <span class="property-type">str</span>
     </dt>
-    <dd>{{% md %}}Role type.{{% /md %}}</dd>
-    <dt class="property-required"
+    <dd>{{% md %}}Role type.{{% /md %}}</dd><dt class="property-required"
             title="Required">
         <span id="share_id_python">
 <a href="#share_id_python" style="color: inherit; text-decoration: inherit;">share_<wbr>id</a>
@@ -1818,16 +1576,13 @@ All [input](#inputs) properties are implicitly available as output properties. A
         <span class="property-indicator"></span>
         <span class="property-type">str</span>
     </dt>
-    <dd>{{% md %}}ID of the share mounted to the role VM.{{% /md %}}</dd>
-</dl>
+    <dd>{{% md %}}ID of the share mounted to the role VM.{{% /md %}}</dd></dl>
 {{% /choosable %}}
 
 <h4 id="refreshdetails">Refresh<wbr>Details</h4>
 
 {{% choosable language csharp %}}
-<dl class="resources-properties">
-
-    <dt class="property-optional"
+<dl class="resources-properties"><dt class="property-optional"
             title="Optional">
         <span id="errormanifestfile_csharp">
 <a href="#errormanifestfile_csharp" style="color: inherit; text-decoration: inherit;">Error<wbr>Manifest<wbr>File</a>
@@ -1835,8 +1590,7 @@ All [input](#inputs) properties are implicitly available as output properties. A
         <span class="property-indicator"></span>
         <span class="property-type">string</span>
     </dt>
-    <dd>{{% md %}}Indicates the relative path of the error xml for the last refresh job on this particular share or container, if any. This could be a failed job or a successful job.{{% /md %}}</dd>
-    <dt class="property-optional"
+    <dd>{{% md %}}Indicates the relative path of the error xml for the last refresh job on this particular share or container, if any. This could be a failed job or a successful job.{{% /md %}}</dd><dt class="property-optional"
             title="Optional">
         <span id="inprogressrefreshjobid_csharp">
 <a href="#inprogressrefreshjobid_csharp" style="color: inherit; text-decoration: inherit;">In<wbr>Progress<wbr>Refresh<wbr>Job<wbr>Id</a>
@@ -1844,8 +1598,7 @@ All [input](#inputs) properties are implicitly available as output properties. A
         <span class="property-indicator"></span>
         <span class="property-type">string</span>
     </dt>
-    <dd>{{% md %}}If a refresh job is currently in progress on this share or container, this field indicates the ARM resource ID of that job. The field is empty if no job is in progress.{{% /md %}}</dd>
-    <dt class="property-optional"
+    <dd>{{% md %}}If a refresh job is currently in progress on this share or container, this field indicates the ARM resource ID of that job. The field is empty if no job is in progress.{{% /md %}}</dd><dt class="property-optional"
             title="Optional">
         <span id="lastcompletedrefreshjobtimeinutc_csharp">
 <a href="#lastcompletedrefreshjobtimeinutc_csharp" style="color: inherit; text-decoration: inherit;">Last<wbr>Completed<wbr>Refresh<wbr>Job<wbr>Time<wbr>In<wbr>UTC</a>
@@ -1853,8 +1606,7 @@ All [input](#inputs) properties are implicitly available as output properties. A
         <span class="property-indicator"></span>
         <span class="property-type">string</span>
     </dt>
-    <dd>{{% md %}}Indicates the completed time for the last refresh job on this particular share or container, if any.This could be a failed job or a successful job.{{% /md %}}</dd>
-    <dt class="property-optional"
+    <dd>{{% md %}}Indicates the completed time for the last refresh job on this particular share or container, if any.This could be a failed job or a successful job.{{% /md %}}</dd><dt class="property-optional"
             title="Optional">
         <span id="lastjob_csharp">
 <a href="#lastjob_csharp" style="color: inherit; text-decoration: inherit;">Last<wbr>Job</a>
@@ -1862,14 +1614,11 @@ All [input](#inputs) properties are implicitly available as output properties. A
         <span class="property-indicator"></span>
         <span class="property-type">string</span>
     </dt>
-    <dd>{{% md %}}Indicates the id of the last refresh job on this particular share or container,if any. This could be a failed job or a successful job.{{% /md %}}</dd>
-</dl>
+    <dd>{{% md %}}Indicates the id of the last refresh job on this particular share or container,if any. This could be a failed job or a successful job.{{% /md %}}</dd></dl>
 {{% /choosable %}}
 
 {{% choosable language go %}}
-<dl class="resources-properties">
-
-    <dt class="property-optional"
+<dl class="resources-properties"><dt class="property-optional"
             title="Optional">
         <span id="errormanifestfile_go">
 <a href="#errormanifestfile_go" style="color: inherit; text-decoration: inherit;">Error<wbr>Manifest<wbr>File</a>
@@ -1877,8 +1626,7 @@ All [input](#inputs) properties are implicitly available as output properties. A
         <span class="property-indicator"></span>
         <span class="property-type">string</span>
     </dt>
-    <dd>{{% md %}}Indicates the relative path of the error xml for the last refresh job on this particular share or container, if any. This could be a failed job or a successful job.{{% /md %}}</dd>
-    <dt class="property-optional"
+    <dd>{{% md %}}Indicates the relative path of the error xml for the last refresh job on this particular share or container, if any. This could be a failed job or a successful job.{{% /md %}}</dd><dt class="property-optional"
             title="Optional">
         <span id="inprogressrefreshjobid_go">
 <a href="#inprogressrefreshjobid_go" style="color: inherit; text-decoration: inherit;">In<wbr>Progress<wbr>Refresh<wbr>Job<wbr>Id</a>
@@ -1886,8 +1634,7 @@ All [input](#inputs) properties are implicitly available as output properties. A
         <span class="property-indicator"></span>
         <span class="property-type">string</span>
     </dt>
-    <dd>{{% md %}}If a refresh job is currently in progress on this share or container, this field indicates the ARM resource ID of that job. The field is empty if no job is in progress.{{% /md %}}</dd>
-    <dt class="property-optional"
+    <dd>{{% md %}}If a refresh job is currently in progress on this share or container, this field indicates the ARM resource ID of that job. The field is empty if no job is in progress.{{% /md %}}</dd><dt class="property-optional"
             title="Optional">
         <span id="lastcompletedrefreshjobtimeinutc_go">
 <a href="#lastcompletedrefreshjobtimeinutc_go" style="color: inherit; text-decoration: inherit;">Last<wbr>Completed<wbr>Refresh<wbr>Job<wbr>Time<wbr>In<wbr>UTC</a>
@@ -1895,8 +1642,7 @@ All [input](#inputs) properties are implicitly available as output properties. A
         <span class="property-indicator"></span>
         <span class="property-type">string</span>
     </dt>
-    <dd>{{% md %}}Indicates the completed time for the last refresh job on this particular share or container, if any.This could be a failed job or a successful job.{{% /md %}}</dd>
-    <dt class="property-optional"
+    <dd>{{% md %}}Indicates the completed time for the last refresh job on this particular share or container, if any.This could be a failed job or a successful job.{{% /md %}}</dd><dt class="property-optional"
             title="Optional">
         <span id="lastjob_go">
 <a href="#lastjob_go" style="color: inherit; text-decoration: inherit;">Last<wbr>Job</a>
@@ -1904,14 +1650,11 @@ All [input](#inputs) properties are implicitly available as output properties. A
         <span class="property-indicator"></span>
         <span class="property-type">string</span>
     </dt>
-    <dd>{{% md %}}Indicates the id of the last refresh job on this particular share or container,if any. This could be a failed job or a successful job.{{% /md %}}</dd>
-</dl>
+    <dd>{{% md %}}Indicates the id of the last refresh job on this particular share or container,if any. This could be a failed job or a successful job.{{% /md %}}</dd></dl>
 {{% /choosable %}}
 
 {{% choosable language nodejs %}}
-<dl class="resources-properties">
-
-    <dt class="property-optional"
+<dl class="resources-properties"><dt class="property-optional"
             title="Optional">
         <span id="errormanifestfile_nodejs">
 <a href="#errormanifestfile_nodejs" style="color: inherit; text-decoration: inherit;">error<wbr>Manifest<wbr>File</a>
@@ -1919,8 +1662,7 @@ All [input](#inputs) properties are implicitly available as output properties. A
         <span class="property-indicator"></span>
         <span class="property-type">string</span>
     </dt>
-    <dd>{{% md %}}Indicates the relative path of the error xml for the last refresh job on this particular share or container, if any. This could be a failed job or a successful job.{{% /md %}}</dd>
-    <dt class="property-optional"
+    <dd>{{% md %}}Indicates the relative path of the error xml for the last refresh job on this particular share or container, if any. This could be a failed job or a successful job.{{% /md %}}</dd><dt class="property-optional"
             title="Optional">
         <span id="inprogressrefreshjobid_nodejs">
 <a href="#inprogressrefreshjobid_nodejs" style="color: inherit; text-decoration: inherit;">in<wbr>Progress<wbr>Refresh<wbr>Job<wbr>Id</a>
@@ -1928,8 +1670,7 @@ All [input](#inputs) properties are implicitly available as output properties. A
         <span class="property-indicator"></span>
         <span class="property-type">string</span>
     </dt>
-    <dd>{{% md %}}If a refresh job is currently in progress on this share or container, this field indicates the ARM resource ID of that job. The field is empty if no job is in progress.{{% /md %}}</dd>
-    <dt class="property-optional"
+    <dd>{{% md %}}If a refresh job is currently in progress on this share or container, this field indicates the ARM resource ID of that job. The field is empty if no job is in progress.{{% /md %}}</dd><dt class="property-optional"
             title="Optional">
         <span id="lastcompletedrefreshjobtimeinutc_nodejs">
 <a href="#lastcompletedrefreshjobtimeinutc_nodejs" style="color: inherit; text-decoration: inherit;">last<wbr>Completed<wbr>Refresh<wbr>Job<wbr>Time<wbr>In<wbr>UTC</a>
@@ -1937,8 +1678,7 @@ All [input](#inputs) properties are implicitly available as output properties. A
         <span class="property-indicator"></span>
         <span class="property-type">string</span>
     </dt>
-    <dd>{{% md %}}Indicates the completed time for the last refresh job on this particular share or container, if any.This could be a failed job or a successful job.{{% /md %}}</dd>
-    <dt class="property-optional"
+    <dd>{{% md %}}Indicates the completed time for the last refresh job on this particular share or container, if any.This could be a failed job or a successful job.{{% /md %}}</dd><dt class="property-optional"
             title="Optional">
         <span id="lastjob_nodejs">
 <a href="#lastjob_nodejs" style="color: inherit; text-decoration: inherit;">last<wbr>Job</a>
@@ -1946,14 +1686,11 @@ All [input](#inputs) properties are implicitly available as output properties. A
         <span class="property-indicator"></span>
         <span class="property-type">string</span>
     </dt>
-    <dd>{{% md %}}Indicates the id of the last refresh job on this particular share or container,if any. This could be a failed job or a successful job.{{% /md %}}</dd>
-</dl>
+    <dd>{{% md %}}Indicates the id of the last refresh job on this particular share or container,if any. This could be a failed job or a successful job.{{% /md %}}</dd></dl>
 {{% /choosable %}}
 
 {{% choosable language python %}}
-<dl class="resources-properties">
-
-    <dt class="property-optional"
+<dl class="resources-properties"><dt class="property-optional"
             title="Optional">
         <span id="error_manifest_file_python">
 <a href="#error_manifest_file_python" style="color: inherit; text-decoration: inherit;">error_<wbr>manifest_<wbr>file</a>
@@ -1961,8 +1698,7 @@ All [input](#inputs) properties are implicitly available as output properties. A
         <span class="property-indicator"></span>
         <span class="property-type">str</span>
     </dt>
-    <dd>{{% md %}}Indicates the relative path of the error xml for the last refresh job on this particular share or container, if any. This could be a failed job or a successful job.{{% /md %}}</dd>
-    <dt class="property-optional"
+    <dd>{{% md %}}Indicates the relative path of the error xml for the last refresh job on this particular share or container, if any. This could be a failed job or a successful job.{{% /md %}}</dd><dt class="property-optional"
             title="Optional">
         <span id="in_progress_refresh_job_id_python">
 <a href="#in_progress_refresh_job_id_python" style="color: inherit; text-decoration: inherit;">in_<wbr>progress_<wbr>refresh_<wbr>job_<wbr>id</a>
@@ -1970,8 +1706,7 @@ All [input](#inputs) properties are implicitly available as output properties. A
         <span class="property-indicator"></span>
         <span class="property-type">str</span>
     </dt>
-    <dd>{{% md %}}If a refresh job is currently in progress on this share or container, this field indicates the ARM resource ID of that job. The field is empty if no job is in progress.{{% /md %}}</dd>
-    <dt class="property-optional"
+    <dd>{{% md %}}If a refresh job is currently in progress on this share or container, this field indicates the ARM resource ID of that job. The field is empty if no job is in progress.{{% /md %}}</dd><dt class="property-optional"
             title="Optional">
         <span id="last_completed_refresh_job_time_in_utc_python">
 <a href="#last_completed_refresh_job_time_in_utc_python" style="color: inherit; text-decoration: inherit;">last_<wbr>completed_<wbr>refresh_<wbr>job_<wbr>time_<wbr>in_<wbr>utc</a>
@@ -1979,8 +1714,7 @@ All [input](#inputs) properties are implicitly available as output properties. A
         <span class="property-indicator"></span>
         <span class="property-type">str</span>
     </dt>
-    <dd>{{% md %}}Indicates the completed time for the last refresh job on this particular share or container, if any.This could be a failed job or a successful job.{{% /md %}}</dd>
-    <dt class="property-optional"
+    <dd>{{% md %}}Indicates the completed time for the last refresh job on this particular share or container, if any.This could be a failed job or a successful job.{{% /md %}}</dd><dt class="property-optional"
             title="Optional">
         <span id="last_job_python">
 <a href="#last_job_python" style="color: inherit; text-decoration: inherit;">last_<wbr>job</a>
@@ -1988,16 +1722,13 @@ All [input](#inputs) properties are implicitly available as output properties. A
         <span class="property-indicator"></span>
         <span class="property-type">str</span>
     </dt>
-    <dd>{{% md %}}Indicates the id of the last refresh job on this particular share or container,if any. This could be a failed job or a successful job.{{% /md %}}</dd>
-</dl>
+    <dd>{{% md %}}Indicates the id of the last refresh job on this particular share or container,if any. This could be a failed job or a successful job.{{% /md %}}</dd></dl>
 {{% /choosable %}}
 
 <h4 id="refreshdetailsresponse">Refresh<wbr>Details<wbr>Response</h4>
 
 {{% choosable language csharp %}}
-<dl class="resources-properties">
-
-    <dt class="property-optional"
+<dl class="resources-properties"><dt class="property-optional"
             title="Optional">
         <span id="errormanifestfile_csharp">
 <a href="#errormanifestfile_csharp" style="color: inherit; text-decoration: inherit;">Error<wbr>Manifest<wbr>File</a>
@@ -2005,8 +1736,7 @@ All [input](#inputs) properties are implicitly available as output properties. A
         <span class="property-indicator"></span>
         <span class="property-type">string</span>
     </dt>
-    <dd>{{% md %}}Indicates the relative path of the error xml for the last refresh job on this particular share or container, if any. This could be a failed job or a successful job.{{% /md %}}</dd>
-    <dt class="property-optional"
+    <dd>{{% md %}}Indicates the relative path of the error xml for the last refresh job on this particular share or container, if any. This could be a failed job or a successful job.{{% /md %}}</dd><dt class="property-optional"
             title="Optional">
         <span id="inprogressrefreshjobid_csharp">
 <a href="#inprogressrefreshjobid_csharp" style="color: inherit; text-decoration: inherit;">In<wbr>Progress<wbr>Refresh<wbr>Job<wbr>Id</a>
@@ -2014,8 +1744,7 @@ All [input](#inputs) properties are implicitly available as output properties. A
         <span class="property-indicator"></span>
         <span class="property-type">string</span>
     </dt>
-    <dd>{{% md %}}If a refresh job is currently in progress on this share or container, this field indicates the ARM resource ID of that job. The field is empty if no job is in progress.{{% /md %}}</dd>
-    <dt class="property-optional"
+    <dd>{{% md %}}If a refresh job is currently in progress on this share or container, this field indicates the ARM resource ID of that job. The field is empty if no job is in progress.{{% /md %}}</dd><dt class="property-optional"
             title="Optional">
         <span id="lastcompletedrefreshjobtimeinutc_csharp">
 <a href="#lastcompletedrefreshjobtimeinutc_csharp" style="color: inherit; text-decoration: inherit;">Last<wbr>Completed<wbr>Refresh<wbr>Job<wbr>Time<wbr>In<wbr>UTC</a>
@@ -2023,8 +1752,7 @@ All [input](#inputs) properties are implicitly available as output properties. A
         <span class="property-indicator"></span>
         <span class="property-type">string</span>
     </dt>
-    <dd>{{% md %}}Indicates the completed time for the last refresh job on this particular share or container, if any.This could be a failed job or a successful job.{{% /md %}}</dd>
-    <dt class="property-optional"
+    <dd>{{% md %}}Indicates the completed time for the last refresh job on this particular share or container, if any.This could be a failed job or a successful job.{{% /md %}}</dd><dt class="property-optional"
             title="Optional">
         <span id="lastjob_csharp">
 <a href="#lastjob_csharp" style="color: inherit; text-decoration: inherit;">Last<wbr>Job</a>
@@ -2032,14 +1760,11 @@ All [input](#inputs) properties are implicitly available as output properties. A
         <span class="property-indicator"></span>
         <span class="property-type">string</span>
     </dt>
-    <dd>{{% md %}}Indicates the id of the last refresh job on this particular share or container,if any. This could be a failed job or a successful job.{{% /md %}}</dd>
-</dl>
+    <dd>{{% md %}}Indicates the id of the last refresh job on this particular share or container,if any. This could be a failed job or a successful job.{{% /md %}}</dd></dl>
 {{% /choosable %}}
 
 {{% choosable language go %}}
-<dl class="resources-properties">
-
-    <dt class="property-optional"
+<dl class="resources-properties"><dt class="property-optional"
             title="Optional">
         <span id="errormanifestfile_go">
 <a href="#errormanifestfile_go" style="color: inherit; text-decoration: inherit;">Error<wbr>Manifest<wbr>File</a>
@@ -2047,8 +1772,7 @@ All [input](#inputs) properties are implicitly available as output properties. A
         <span class="property-indicator"></span>
         <span class="property-type">string</span>
     </dt>
-    <dd>{{% md %}}Indicates the relative path of the error xml for the last refresh job on this particular share or container, if any. This could be a failed job or a successful job.{{% /md %}}</dd>
-    <dt class="property-optional"
+    <dd>{{% md %}}Indicates the relative path of the error xml for the last refresh job on this particular share or container, if any. This could be a failed job or a successful job.{{% /md %}}</dd><dt class="property-optional"
             title="Optional">
         <span id="inprogressrefreshjobid_go">
 <a href="#inprogressrefreshjobid_go" style="color: inherit; text-decoration: inherit;">In<wbr>Progress<wbr>Refresh<wbr>Job<wbr>Id</a>
@@ -2056,8 +1780,7 @@ All [input](#inputs) properties are implicitly available as output properties. A
         <span class="property-indicator"></span>
         <span class="property-type">string</span>
     </dt>
-    <dd>{{% md %}}If a refresh job is currently in progress on this share or container, this field indicates the ARM resource ID of that job. The field is empty if no job is in progress.{{% /md %}}</dd>
-    <dt class="property-optional"
+    <dd>{{% md %}}If a refresh job is currently in progress on this share or container, this field indicates the ARM resource ID of that job. The field is empty if no job is in progress.{{% /md %}}</dd><dt class="property-optional"
             title="Optional">
         <span id="lastcompletedrefreshjobtimeinutc_go">
 <a href="#lastcompletedrefreshjobtimeinutc_go" style="color: inherit; text-decoration: inherit;">Last<wbr>Completed<wbr>Refresh<wbr>Job<wbr>Time<wbr>In<wbr>UTC</a>
@@ -2065,8 +1788,7 @@ All [input](#inputs) properties are implicitly available as output properties. A
         <span class="property-indicator"></span>
         <span class="property-type">string</span>
     </dt>
-    <dd>{{% md %}}Indicates the completed time for the last refresh job on this particular share or container, if any.This could be a failed job or a successful job.{{% /md %}}</dd>
-    <dt class="property-optional"
+    <dd>{{% md %}}Indicates the completed time for the last refresh job on this particular share or container, if any.This could be a failed job or a successful job.{{% /md %}}</dd><dt class="property-optional"
             title="Optional">
         <span id="lastjob_go">
 <a href="#lastjob_go" style="color: inherit; text-decoration: inherit;">Last<wbr>Job</a>
@@ -2074,14 +1796,11 @@ All [input](#inputs) properties are implicitly available as output properties. A
         <span class="property-indicator"></span>
         <span class="property-type">string</span>
     </dt>
-    <dd>{{% md %}}Indicates the id of the last refresh job on this particular share or container,if any. This could be a failed job or a successful job.{{% /md %}}</dd>
-</dl>
+    <dd>{{% md %}}Indicates the id of the last refresh job on this particular share or container,if any. This could be a failed job or a successful job.{{% /md %}}</dd></dl>
 {{% /choosable %}}
 
 {{% choosable language nodejs %}}
-<dl class="resources-properties">
-
-    <dt class="property-optional"
+<dl class="resources-properties"><dt class="property-optional"
             title="Optional">
         <span id="errormanifestfile_nodejs">
 <a href="#errormanifestfile_nodejs" style="color: inherit; text-decoration: inherit;">error<wbr>Manifest<wbr>File</a>
@@ -2089,8 +1808,7 @@ All [input](#inputs) properties are implicitly available as output properties. A
         <span class="property-indicator"></span>
         <span class="property-type">string</span>
     </dt>
-    <dd>{{% md %}}Indicates the relative path of the error xml for the last refresh job on this particular share or container, if any. This could be a failed job or a successful job.{{% /md %}}</dd>
-    <dt class="property-optional"
+    <dd>{{% md %}}Indicates the relative path of the error xml for the last refresh job on this particular share or container, if any. This could be a failed job or a successful job.{{% /md %}}</dd><dt class="property-optional"
             title="Optional">
         <span id="inprogressrefreshjobid_nodejs">
 <a href="#inprogressrefreshjobid_nodejs" style="color: inherit; text-decoration: inherit;">in<wbr>Progress<wbr>Refresh<wbr>Job<wbr>Id</a>
@@ -2098,8 +1816,7 @@ All [input](#inputs) properties are implicitly available as output properties. A
         <span class="property-indicator"></span>
         <span class="property-type">string</span>
     </dt>
-    <dd>{{% md %}}If a refresh job is currently in progress on this share or container, this field indicates the ARM resource ID of that job. The field is empty if no job is in progress.{{% /md %}}</dd>
-    <dt class="property-optional"
+    <dd>{{% md %}}If a refresh job is currently in progress on this share or container, this field indicates the ARM resource ID of that job. The field is empty if no job is in progress.{{% /md %}}</dd><dt class="property-optional"
             title="Optional">
         <span id="lastcompletedrefreshjobtimeinutc_nodejs">
 <a href="#lastcompletedrefreshjobtimeinutc_nodejs" style="color: inherit; text-decoration: inherit;">last<wbr>Completed<wbr>Refresh<wbr>Job<wbr>Time<wbr>In<wbr>UTC</a>
@@ -2107,8 +1824,7 @@ All [input](#inputs) properties are implicitly available as output properties. A
         <span class="property-indicator"></span>
         <span class="property-type">string</span>
     </dt>
-    <dd>{{% md %}}Indicates the completed time for the last refresh job on this particular share or container, if any.This could be a failed job or a successful job.{{% /md %}}</dd>
-    <dt class="property-optional"
+    <dd>{{% md %}}Indicates the completed time for the last refresh job on this particular share or container, if any.This could be a failed job or a successful job.{{% /md %}}</dd><dt class="property-optional"
             title="Optional">
         <span id="lastjob_nodejs">
 <a href="#lastjob_nodejs" style="color: inherit; text-decoration: inherit;">last<wbr>Job</a>
@@ -2116,14 +1832,11 @@ All [input](#inputs) properties are implicitly available as output properties. A
         <span class="property-indicator"></span>
         <span class="property-type">string</span>
     </dt>
-    <dd>{{% md %}}Indicates the id of the last refresh job on this particular share or container,if any. This could be a failed job or a successful job.{{% /md %}}</dd>
-</dl>
+    <dd>{{% md %}}Indicates the id of the last refresh job on this particular share or container,if any. This could be a failed job or a successful job.{{% /md %}}</dd></dl>
 {{% /choosable %}}
 
 {{% choosable language python %}}
-<dl class="resources-properties">
-
-    <dt class="property-optional"
+<dl class="resources-properties"><dt class="property-optional"
             title="Optional">
         <span id="error_manifest_file_python">
 <a href="#error_manifest_file_python" style="color: inherit; text-decoration: inherit;">error_<wbr>manifest_<wbr>file</a>
@@ -2131,8 +1844,7 @@ All [input](#inputs) properties are implicitly available as output properties. A
         <span class="property-indicator"></span>
         <span class="property-type">str</span>
     </dt>
-    <dd>{{% md %}}Indicates the relative path of the error xml for the last refresh job on this particular share or container, if any. This could be a failed job or a successful job.{{% /md %}}</dd>
-    <dt class="property-optional"
+    <dd>{{% md %}}Indicates the relative path of the error xml for the last refresh job on this particular share or container, if any. This could be a failed job or a successful job.{{% /md %}}</dd><dt class="property-optional"
             title="Optional">
         <span id="in_progress_refresh_job_id_python">
 <a href="#in_progress_refresh_job_id_python" style="color: inherit; text-decoration: inherit;">in_<wbr>progress_<wbr>refresh_<wbr>job_<wbr>id</a>
@@ -2140,8 +1852,7 @@ All [input](#inputs) properties are implicitly available as output properties. A
         <span class="property-indicator"></span>
         <span class="property-type">str</span>
     </dt>
-    <dd>{{% md %}}If a refresh job is currently in progress on this share or container, this field indicates the ARM resource ID of that job. The field is empty if no job is in progress.{{% /md %}}</dd>
-    <dt class="property-optional"
+    <dd>{{% md %}}If a refresh job is currently in progress on this share or container, this field indicates the ARM resource ID of that job. The field is empty if no job is in progress.{{% /md %}}</dd><dt class="property-optional"
             title="Optional">
         <span id="last_completed_refresh_job_time_in_utc_python">
 <a href="#last_completed_refresh_job_time_in_utc_python" style="color: inherit; text-decoration: inherit;">last_<wbr>completed_<wbr>refresh_<wbr>job_<wbr>time_<wbr>in_<wbr>utc</a>
@@ -2149,8 +1860,7 @@ All [input](#inputs) properties are implicitly available as output properties. A
         <span class="property-indicator"></span>
         <span class="property-type">str</span>
     </dt>
-    <dd>{{% md %}}Indicates the completed time for the last refresh job on this particular share or container, if any.This could be a failed job or a successful job.{{% /md %}}</dd>
-    <dt class="property-optional"
+    <dd>{{% md %}}Indicates the completed time for the last refresh job on this particular share or container, if any.This could be a failed job or a successful job.{{% /md %}}</dd><dt class="property-optional"
             title="Optional">
         <span id="last_job_python">
 <a href="#last_job_python" style="color: inherit; text-decoration: inherit;">last_<wbr>job</a>
@@ -2158,162 +1868,107 @@ All [input](#inputs) properties are implicitly available as output properties. A
         <span class="property-indicator"></span>
         <span class="property-type">str</span>
     </dt>
-    <dd>{{% md %}}Indicates the id of the last refresh job on this particular share or container,if any. This could be a failed job or a successful job.{{% /md %}}</dd>
-</dl>
+    <dd>{{% md %}}Indicates the id of the last refresh job on this particular share or container,if any. This could be a failed job or a successful job.{{% /md %}}</dd></dl>
 {{% /choosable %}}
 
 <h4 id="shareaccessprotocol">Share<wbr>Access<wbr>Protocol</h4>
 
 {{% choosable language csharp %}}
-<dl class="tabular">
-    <dt>SMB</dt>
-    <dd>SMB</dd>
-    <dt>NFS</dt>
-    <dd>NFS</dd>
-</dl>
+<dl class="tabular"><dt>SMB</dt>
+    <dd>SMB</dd><dt>NFS</dt>
+    <dd>NFS</dd></dl>
 {{% /choosable %}}
 
 {{% choosable language go %}}
-<dl class="tabular">
-    <dt>Share<wbr>Access<wbr>Protocol<wbr>SMB</dt>
-    <dd>SMB</dd>
-    <dt>Share<wbr>Access<wbr>Protocol<wbr>NFS</dt>
-    <dd>NFS</dd>
-</dl>
+<dl class="tabular"><dt>Share<wbr>Access<wbr>Protocol<wbr>SMB</dt>
+    <dd>SMB</dd><dt>Share<wbr>Access<wbr>Protocol<wbr>NFS</dt>
+    <dd>NFS</dd></dl>
 {{% /choosable %}}
 
 {{% choosable language nodejs %}}
-<dl class="tabular">
-    <dt>SMB</dt>
-    <dd>SMB</dd>
-    <dt>NFS</dt>
-    <dd>NFS</dd>
-</dl>
+<dl class="tabular"><dt>SMB</dt>
+    <dd>SMB</dd><dt>NFS</dt>
+    <dd>NFS</dd></dl>
 {{% /choosable %}}
 
 {{% choosable language python %}}
-<dl class="tabular">
-    <dt>SMB</dt>
-    <dd>SMB</dd>
-    <dt>NFS</dt>
-    <dd>NFS</dd>
-</dl>
+<dl class="tabular"><dt>SMB</dt>
+    <dd>SMB</dd><dt>NFS</dt>
+    <dd>NFS</dd></dl>
 {{% /choosable %}}
 
 <h4 id="shareaccesstype">Share<wbr>Access<wbr>Type</h4>
 
 {{% choosable language csharp %}}
-<dl class="tabular">
-    <dt>Change</dt>
-    <dd>Change</dd>
-    <dt>Read</dt>
-    <dd>Read</dd>
-    <dt>Custom</dt>
-    <dd>Custom</dd>
-</dl>
+<dl class="tabular"><dt>Change</dt>
+    <dd>Change</dd><dt>Read</dt>
+    <dd>Read</dd><dt>Custom</dt>
+    <dd>Custom</dd></dl>
 {{% /choosable %}}
 
 {{% choosable language go %}}
-<dl class="tabular">
-    <dt>Share<wbr>Access<wbr>Type<wbr>Change</dt>
-    <dd>Change</dd>
-    <dt>Share<wbr>Access<wbr>Type<wbr>Read</dt>
-    <dd>Read</dd>
-    <dt>Share<wbr>Access<wbr>Type<wbr>Custom</dt>
-    <dd>Custom</dd>
-</dl>
+<dl class="tabular"><dt>Share<wbr>Access<wbr>Type<wbr>Change</dt>
+    <dd>Change</dd><dt>Share<wbr>Access<wbr>Type<wbr>Read</dt>
+    <dd>Read</dd><dt>Share<wbr>Access<wbr>Type<wbr>Custom</dt>
+    <dd>Custom</dd></dl>
 {{% /choosable %}}
 
 {{% choosable language nodejs %}}
-<dl class="tabular">
-    <dt>Change</dt>
-    <dd>Change</dd>
-    <dt>Read</dt>
-    <dd>Read</dd>
-    <dt>Custom</dt>
-    <dd>Custom</dd>
-</dl>
+<dl class="tabular"><dt>Change</dt>
+    <dd>Change</dd><dt>Read</dt>
+    <dd>Read</dd><dt>Custom</dt>
+    <dd>Custom</dd></dl>
 {{% /choosable %}}
 
 {{% choosable language python %}}
-<dl class="tabular">
-    <dt>CHANGE</dt>
-    <dd>Change</dd>
-    <dt>READ</dt>
-    <dd>Read</dd>
-    <dt>CUSTOM</dt>
-    <dd>Custom</dd>
-</dl>
+<dl class="tabular"><dt>CHANGE</dt>
+    <dd>Change</dd><dt>READ</dt>
+    <dd>Read</dd><dt>CUSTOM</dt>
+    <dd>Custom</dd></dl>
 {{% /choosable %}}
 
 <h4 id="sharestatus">Share<wbr>Status</h4>
 
 {{% choosable language csharp %}}
-<dl class="tabular">
-    <dt>Offline</dt>
-    <dd>Offline</dd>
-    <dt>Unknown</dt>
-    <dd>Unknown</dd>
-    <dt>OK</dt>
-    <dd>OK</dd>
-    <dt>Updating</dt>
-    <dd>Updating</dd>
-    <dt>Needs<wbr>Attention</dt>
-    <dd>NeedsAttention</dd>
-</dl>
+<dl class="tabular"><dt>Offline</dt>
+    <dd>Offline</dd><dt>Unknown</dt>
+    <dd>Unknown</dd><dt>OK</dt>
+    <dd>OK</dd><dt>Updating</dt>
+    <dd>Updating</dd><dt>Needs<wbr>Attention</dt>
+    <dd>NeedsAttention</dd></dl>
 {{% /choosable %}}
 
 {{% choosable language go %}}
-<dl class="tabular">
-    <dt>Share<wbr>Status<wbr>Offline</dt>
-    <dd>Offline</dd>
-    <dt>Share<wbr>Status<wbr>Unknown</dt>
-    <dd>Unknown</dd>
-    <dt>Share<wbr>Status<wbr>OK</dt>
-    <dd>OK</dd>
-    <dt>Share<wbr>Status<wbr>Updating</dt>
-    <dd>Updating</dd>
-    <dt>Share<wbr>Status<wbr>Needs<wbr>Attention</dt>
-    <dd>NeedsAttention</dd>
-</dl>
+<dl class="tabular"><dt>Share<wbr>Status<wbr>Offline</dt>
+    <dd>Offline</dd><dt>Share<wbr>Status<wbr>Unknown</dt>
+    <dd>Unknown</dd><dt>Share<wbr>Status<wbr>OK</dt>
+    <dd>OK</dd><dt>Share<wbr>Status<wbr>Updating</dt>
+    <dd>Updating</dd><dt>Share<wbr>Status<wbr>Needs<wbr>Attention</dt>
+    <dd>NeedsAttention</dd></dl>
 {{% /choosable %}}
 
 {{% choosable language nodejs %}}
-<dl class="tabular">
-    <dt>Offline</dt>
-    <dd>Offline</dd>
-    <dt>Unknown</dt>
-    <dd>Unknown</dd>
-    <dt>OK</dt>
-    <dd>OK</dd>
-    <dt>Updating</dt>
-    <dd>Updating</dd>
-    <dt>Needs<wbr>Attention</dt>
-    <dd>NeedsAttention</dd>
-</dl>
+<dl class="tabular"><dt>Offline</dt>
+    <dd>Offline</dd><dt>Unknown</dt>
+    <dd>Unknown</dd><dt>OK</dt>
+    <dd>OK</dd><dt>Updating</dt>
+    <dd>Updating</dd><dt>Needs<wbr>Attention</dt>
+    <dd>NeedsAttention</dd></dl>
 {{% /choosable %}}
 
 {{% choosable language python %}}
-<dl class="tabular">
-    <dt>OFFLINE</dt>
-    <dd>Offline</dd>
-    <dt>UNKNOWN</dt>
-    <dd>Unknown</dd>
-    <dt>OK</dt>
-    <dd>OK</dd>
-    <dt>UPDATING</dt>
-    <dd>Updating</dd>
-    <dt>NEEDS_ATTENTION</dt>
-    <dd>NeedsAttention</dd>
-</dl>
+<dl class="tabular"><dt>OFFLINE</dt>
+    <dd>Offline</dd><dt>UNKNOWN</dt>
+    <dd>Unknown</dd><dt>OK</dt>
+    <dd>OK</dd><dt>UPDATING</dt>
+    <dd>Updating</dd><dt>NEEDS_ATTENTION</dt>
+    <dd>NeedsAttention</dd></dl>
 {{% /choosable %}}
 
 <h4 id="systemdataresponse">System<wbr>Data<wbr>Response</h4>
 
 {{% choosable language csharp %}}
-<dl class="resources-properties">
-
-    <dt class="property-optional"
+<dl class="resources-properties"><dt class="property-optional"
             title="Optional">
         <span id="createdat_csharp">
 <a href="#createdat_csharp" style="color: inherit; text-decoration: inherit;">Created<wbr>At</a>
@@ -2321,8 +1976,7 @@ All [input](#inputs) properties are implicitly available as output properties. A
         <span class="property-indicator"></span>
         <span class="property-type">string</span>
     </dt>
-    <dd>{{% md %}}The timestamp of resource creation (UTC).{{% /md %}}</dd>
-    <dt class="property-optional"
+    <dd>{{% md %}}The timestamp of resource creation (UTC).{{% /md %}}</dd><dt class="property-optional"
             title="Optional">
         <span id="createdby_csharp">
 <a href="#createdby_csharp" style="color: inherit; text-decoration: inherit;">Created<wbr>By</a>
@@ -2330,8 +1984,7 @@ All [input](#inputs) properties are implicitly available as output properties. A
         <span class="property-indicator"></span>
         <span class="property-type">string</span>
     </dt>
-    <dd>{{% md %}}The identity that created the resource.{{% /md %}}</dd>
-    <dt class="property-optional"
+    <dd>{{% md %}}The identity that created the resource.{{% /md %}}</dd><dt class="property-optional"
             title="Optional">
         <span id="createdbytype_csharp">
 <a href="#createdbytype_csharp" style="color: inherit; text-decoration: inherit;">Created<wbr>By<wbr>Type</a>
@@ -2339,8 +1992,7 @@ All [input](#inputs) properties are implicitly available as output properties. A
         <span class="property-indicator"></span>
         <span class="property-type">string</span>
     </dt>
-    <dd>{{% md %}}The type of identity that created the resource.{{% /md %}}</dd>
-    <dt class="property-optional"
+    <dd>{{% md %}}The type of identity that created the resource.{{% /md %}}</dd><dt class="property-optional"
             title="Optional">
         <span id="lastmodifiedat_csharp">
 <a href="#lastmodifiedat_csharp" style="color: inherit; text-decoration: inherit;">Last<wbr>Modified<wbr>At</a>
@@ -2348,8 +2000,7 @@ All [input](#inputs) properties are implicitly available as output properties. A
         <span class="property-indicator"></span>
         <span class="property-type">string</span>
     </dt>
-    <dd>{{% md %}}The type of identity that last modified the resource.{{% /md %}}</dd>
-    <dt class="property-optional"
+    <dd>{{% md %}}The type of identity that last modified the resource.{{% /md %}}</dd><dt class="property-optional"
             title="Optional">
         <span id="lastmodifiedby_csharp">
 <a href="#lastmodifiedby_csharp" style="color: inherit; text-decoration: inherit;">Last<wbr>Modified<wbr>By</a>
@@ -2357,8 +2008,7 @@ All [input](#inputs) properties are implicitly available as output properties. A
         <span class="property-indicator"></span>
         <span class="property-type">string</span>
     </dt>
-    <dd>{{% md %}}The identity that last modified the resource.{{% /md %}}</dd>
-    <dt class="property-optional"
+    <dd>{{% md %}}The identity that last modified the resource.{{% /md %}}</dd><dt class="property-optional"
             title="Optional">
         <span id="lastmodifiedbytype_csharp">
 <a href="#lastmodifiedbytype_csharp" style="color: inherit; text-decoration: inherit;">Last<wbr>Modified<wbr>By<wbr>Type</a>
@@ -2366,14 +2016,11 @@ All [input](#inputs) properties are implicitly available as output properties. A
         <span class="property-indicator"></span>
         <span class="property-type">string</span>
     </dt>
-    <dd>{{% md %}}The type of identity that last modified the resource.{{% /md %}}</dd>
-</dl>
+    <dd>{{% md %}}The type of identity that last modified the resource.{{% /md %}}</dd></dl>
 {{% /choosable %}}
 
 {{% choosable language go %}}
-<dl class="resources-properties">
-
-    <dt class="property-optional"
+<dl class="resources-properties"><dt class="property-optional"
             title="Optional">
         <span id="createdat_go">
 <a href="#createdat_go" style="color: inherit; text-decoration: inherit;">Created<wbr>At</a>
@@ -2381,8 +2028,7 @@ All [input](#inputs) properties are implicitly available as output properties. A
         <span class="property-indicator"></span>
         <span class="property-type">string</span>
     </dt>
-    <dd>{{% md %}}The timestamp of resource creation (UTC).{{% /md %}}</dd>
-    <dt class="property-optional"
+    <dd>{{% md %}}The timestamp of resource creation (UTC).{{% /md %}}</dd><dt class="property-optional"
             title="Optional">
         <span id="createdby_go">
 <a href="#createdby_go" style="color: inherit; text-decoration: inherit;">Created<wbr>By</a>
@@ -2390,8 +2036,7 @@ All [input](#inputs) properties are implicitly available as output properties. A
         <span class="property-indicator"></span>
         <span class="property-type">string</span>
     </dt>
-    <dd>{{% md %}}The identity that created the resource.{{% /md %}}</dd>
-    <dt class="property-optional"
+    <dd>{{% md %}}The identity that created the resource.{{% /md %}}</dd><dt class="property-optional"
             title="Optional">
         <span id="createdbytype_go">
 <a href="#createdbytype_go" style="color: inherit; text-decoration: inherit;">Created<wbr>By<wbr>Type</a>
@@ -2399,8 +2044,7 @@ All [input](#inputs) properties are implicitly available as output properties. A
         <span class="property-indicator"></span>
         <span class="property-type">string</span>
     </dt>
-    <dd>{{% md %}}The type of identity that created the resource.{{% /md %}}</dd>
-    <dt class="property-optional"
+    <dd>{{% md %}}The type of identity that created the resource.{{% /md %}}</dd><dt class="property-optional"
             title="Optional">
         <span id="lastmodifiedat_go">
 <a href="#lastmodifiedat_go" style="color: inherit; text-decoration: inherit;">Last<wbr>Modified<wbr>At</a>
@@ -2408,8 +2052,7 @@ All [input](#inputs) properties are implicitly available as output properties. A
         <span class="property-indicator"></span>
         <span class="property-type">string</span>
     </dt>
-    <dd>{{% md %}}The type of identity that last modified the resource.{{% /md %}}</dd>
-    <dt class="property-optional"
+    <dd>{{% md %}}The type of identity that last modified the resource.{{% /md %}}</dd><dt class="property-optional"
             title="Optional">
         <span id="lastmodifiedby_go">
 <a href="#lastmodifiedby_go" style="color: inherit; text-decoration: inherit;">Last<wbr>Modified<wbr>By</a>
@@ -2417,8 +2060,7 @@ All [input](#inputs) properties are implicitly available as output properties. A
         <span class="property-indicator"></span>
         <span class="property-type">string</span>
     </dt>
-    <dd>{{% md %}}The identity that last modified the resource.{{% /md %}}</dd>
-    <dt class="property-optional"
+    <dd>{{% md %}}The identity that last modified the resource.{{% /md %}}</dd><dt class="property-optional"
             title="Optional">
         <span id="lastmodifiedbytype_go">
 <a href="#lastmodifiedbytype_go" style="color: inherit; text-decoration: inherit;">Last<wbr>Modified<wbr>By<wbr>Type</a>
@@ -2426,14 +2068,11 @@ All [input](#inputs) properties are implicitly available as output properties. A
         <span class="property-indicator"></span>
         <span class="property-type">string</span>
     </dt>
-    <dd>{{% md %}}The type of identity that last modified the resource.{{% /md %}}</dd>
-</dl>
+    <dd>{{% md %}}The type of identity that last modified the resource.{{% /md %}}</dd></dl>
 {{% /choosable %}}
 
 {{% choosable language nodejs %}}
-<dl class="resources-properties">
-
-    <dt class="property-optional"
+<dl class="resources-properties"><dt class="property-optional"
             title="Optional">
         <span id="createdat_nodejs">
 <a href="#createdat_nodejs" style="color: inherit; text-decoration: inherit;">created<wbr>At</a>
@@ -2441,8 +2080,7 @@ All [input](#inputs) properties are implicitly available as output properties. A
         <span class="property-indicator"></span>
         <span class="property-type">string</span>
     </dt>
-    <dd>{{% md %}}The timestamp of resource creation (UTC).{{% /md %}}</dd>
-    <dt class="property-optional"
+    <dd>{{% md %}}The timestamp of resource creation (UTC).{{% /md %}}</dd><dt class="property-optional"
             title="Optional">
         <span id="createdby_nodejs">
 <a href="#createdby_nodejs" style="color: inherit; text-decoration: inherit;">created<wbr>By</a>
@@ -2450,8 +2088,7 @@ All [input](#inputs) properties are implicitly available as output properties. A
         <span class="property-indicator"></span>
         <span class="property-type">string</span>
     </dt>
-    <dd>{{% md %}}The identity that created the resource.{{% /md %}}</dd>
-    <dt class="property-optional"
+    <dd>{{% md %}}The identity that created the resource.{{% /md %}}</dd><dt class="property-optional"
             title="Optional">
         <span id="createdbytype_nodejs">
 <a href="#createdbytype_nodejs" style="color: inherit; text-decoration: inherit;">created<wbr>By<wbr>Type</a>
@@ -2459,8 +2096,7 @@ All [input](#inputs) properties are implicitly available as output properties. A
         <span class="property-indicator"></span>
         <span class="property-type">string</span>
     </dt>
-    <dd>{{% md %}}The type of identity that created the resource.{{% /md %}}</dd>
-    <dt class="property-optional"
+    <dd>{{% md %}}The type of identity that created the resource.{{% /md %}}</dd><dt class="property-optional"
             title="Optional">
         <span id="lastmodifiedat_nodejs">
 <a href="#lastmodifiedat_nodejs" style="color: inherit; text-decoration: inherit;">last<wbr>Modified<wbr>At</a>
@@ -2468,8 +2104,7 @@ All [input](#inputs) properties are implicitly available as output properties. A
         <span class="property-indicator"></span>
         <span class="property-type">string</span>
     </dt>
-    <dd>{{% md %}}The type of identity that last modified the resource.{{% /md %}}</dd>
-    <dt class="property-optional"
+    <dd>{{% md %}}The type of identity that last modified the resource.{{% /md %}}</dd><dt class="property-optional"
             title="Optional">
         <span id="lastmodifiedby_nodejs">
 <a href="#lastmodifiedby_nodejs" style="color: inherit; text-decoration: inherit;">last<wbr>Modified<wbr>By</a>
@@ -2477,8 +2112,7 @@ All [input](#inputs) properties are implicitly available as output properties. A
         <span class="property-indicator"></span>
         <span class="property-type">string</span>
     </dt>
-    <dd>{{% md %}}The identity that last modified the resource.{{% /md %}}</dd>
-    <dt class="property-optional"
+    <dd>{{% md %}}The identity that last modified the resource.{{% /md %}}</dd><dt class="property-optional"
             title="Optional">
         <span id="lastmodifiedbytype_nodejs">
 <a href="#lastmodifiedbytype_nodejs" style="color: inherit; text-decoration: inherit;">last<wbr>Modified<wbr>By<wbr>Type</a>
@@ -2486,14 +2120,11 @@ All [input](#inputs) properties are implicitly available as output properties. A
         <span class="property-indicator"></span>
         <span class="property-type">string</span>
     </dt>
-    <dd>{{% md %}}The type of identity that last modified the resource.{{% /md %}}</dd>
-</dl>
+    <dd>{{% md %}}The type of identity that last modified the resource.{{% /md %}}</dd></dl>
 {{% /choosable %}}
 
 {{% choosable language python %}}
-<dl class="resources-properties">
-
-    <dt class="property-optional"
+<dl class="resources-properties"><dt class="property-optional"
             title="Optional">
         <span id="created_at_python">
 <a href="#created_at_python" style="color: inherit; text-decoration: inherit;">created_<wbr>at</a>
@@ -2501,8 +2132,7 @@ All [input](#inputs) properties are implicitly available as output properties. A
         <span class="property-indicator"></span>
         <span class="property-type">str</span>
     </dt>
-    <dd>{{% md %}}The timestamp of resource creation (UTC).{{% /md %}}</dd>
-    <dt class="property-optional"
+    <dd>{{% md %}}The timestamp of resource creation (UTC).{{% /md %}}</dd><dt class="property-optional"
             title="Optional">
         <span id="created_by_python">
 <a href="#created_by_python" style="color: inherit; text-decoration: inherit;">created_<wbr>by</a>
@@ -2510,8 +2140,7 @@ All [input](#inputs) properties are implicitly available as output properties. A
         <span class="property-indicator"></span>
         <span class="property-type">str</span>
     </dt>
-    <dd>{{% md %}}The identity that created the resource.{{% /md %}}</dd>
-    <dt class="property-optional"
+    <dd>{{% md %}}The identity that created the resource.{{% /md %}}</dd><dt class="property-optional"
             title="Optional">
         <span id="created_by_type_python">
 <a href="#created_by_type_python" style="color: inherit; text-decoration: inherit;">created_<wbr>by_<wbr>type</a>
@@ -2519,8 +2148,7 @@ All [input](#inputs) properties are implicitly available as output properties. A
         <span class="property-indicator"></span>
         <span class="property-type">str</span>
     </dt>
-    <dd>{{% md %}}The type of identity that created the resource.{{% /md %}}</dd>
-    <dt class="property-optional"
+    <dd>{{% md %}}The type of identity that created the resource.{{% /md %}}</dd><dt class="property-optional"
             title="Optional">
         <span id="last_modified_at_python">
 <a href="#last_modified_at_python" style="color: inherit; text-decoration: inherit;">last_<wbr>modified_<wbr>at</a>
@@ -2528,8 +2156,7 @@ All [input](#inputs) properties are implicitly available as output properties. A
         <span class="property-indicator"></span>
         <span class="property-type">str</span>
     </dt>
-    <dd>{{% md %}}The type of identity that last modified the resource.{{% /md %}}</dd>
-    <dt class="property-optional"
+    <dd>{{% md %}}The type of identity that last modified the resource.{{% /md %}}</dd><dt class="property-optional"
             title="Optional">
         <span id="last_modified_by_python">
 <a href="#last_modified_by_python" style="color: inherit; text-decoration: inherit;">last_<wbr>modified_<wbr>by</a>
@@ -2537,8 +2164,7 @@ All [input](#inputs) properties are implicitly available as output properties. A
         <span class="property-indicator"></span>
         <span class="property-type">str</span>
     </dt>
-    <dd>{{% md %}}The identity that last modified the resource.{{% /md %}}</dd>
-    <dt class="property-optional"
+    <dd>{{% md %}}The identity that last modified the resource.{{% /md %}}</dd><dt class="property-optional"
             title="Optional">
         <span id="last_modified_by_type_python">
 <a href="#last_modified_by_type_python" style="color: inherit; text-decoration: inherit;">last_<wbr>modified_<wbr>by_<wbr>type</a>
@@ -2546,16 +2172,13 @@ All [input](#inputs) properties are implicitly available as output properties. A
         <span class="property-indicator"></span>
         <span class="property-type">str</span>
     </dt>
-    <dd>{{% md %}}The type of identity that last modified the resource.{{% /md %}}</dd>
-</dl>
+    <dd>{{% md %}}The type of identity that last modified the resource.{{% /md %}}</dd></dl>
 {{% /choosable %}}
 
 <h4 id="useraccessright">User<wbr>Access<wbr>Right</h4>
 
 {{% choosable language csharp %}}
-<dl class="resources-properties">
-
-    <dt class="property-required"
+<dl class="resources-properties"><dt class="property-required"
             title="Required">
         <span id="accesstype_csharp">
 <a href="#accesstype_csharp" style="color: inherit; text-decoration: inherit;">Access<wbr>Type</a>
@@ -2563,8 +2186,7 @@ All [input](#inputs) properties are implicitly available as output properties. A
         <span class="property-indicator"></span>
         <span class="property-type">string | <a href="#shareaccesstype">Pulumi.<wbr>Azure<wbr>Native.<wbr>Data<wbr>Box<wbr>Edge.<wbr>Share<wbr>Access<wbr>Type</a></span>
     </dt>
-    <dd>{{% md %}}Type of access to be allowed for the user.{{% /md %}}</dd>
-    <dt class="property-required"
+    <dd>{{% md %}}Type of access to be allowed for the user.{{% /md %}}</dd><dt class="property-required"
             title="Required">
         <span id="userid_csharp">
 <a href="#userid_csharp" style="color: inherit; text-decoration: inherit;">User<wbr>Id</a>
@@ -2572,14 +2194,11 @@ All [input](#inputs) properties are implicitly available as output properties. A
         <span class="property-indicator"></span>
         <span class="property-type">string</span>
     </dt>
-    <dd>{{% md %}}User ID (already existing in the device).{{% /md %}}</dd>
-</dl>
+    <dd>{{% md %}}User ID (already existing in the device).{{% /md %}}</dd></dl>
 {{% /choosable %}}
 
 {{% choosable language go %}}
-<dl class="resources-properties">
-
-    <dt class="property-required"
+<dl class="resources-properties"><dt class="property-required"
             title="Required">
         <span id="accesstype_go">
 <a href="#accesstype_go" style="color: inherit; text-decoration: inherit;">Access<wbr>Type</a>
@@ -2587,8 +2206,7 @@ All [input](#inputs) properties are implicitly available as output properties. A
         <span class="property-indicator"></span>
         <span class="property-type">string | <a href="#shareaccesstype">Share<wbr>Access<wbr>Type</a></span>
     </dt>
-    <dd>{{% md %}}Type of access to be allowed for the user.{{% /md %}}</dd>
-    <dt class="property-required"
+    <dd>{{% md %}}Type of access to be allowed for the user.{{% /md %}}</dd><dt class="property-required"
             title="Required">
         <span id="userid_go">
 <a href="#userid_go" style="color: inherit; text-decoration: inherit;">User<wbr>Id</a>
@@ -2596,14 +2214,11 @@ All [input](#inputs) properties are implicitly available as output properties. A
         <span class="property-indicator"></span>
         <span class="property-type">string</span>
     </dt>
-    <dd>{{% md %}}User ID (already existing in the device).{{% /md %}}</dd>
-</dl>
+    <dd>{{% md %}}User ID (already existing in the device).{{% /md %}}</dd></dl>
 {{% /choosable %}}
 
 {{% choosable language nodejs %}}
-<dl class="resources-properties">
-
-    <dt class="property-required"
+<dl class="resources-properties"><dt class="property-required"
             title="Required">
         <span id="accesstype_nodejs">
 <a href="#accesstype_nodejs" style="color: inherit; text-decoration: inherit;">access<wbr>Type</a>
@@ -2611,8 +2226,7 @@ All [input](#inputs) properties are implicitly available as output properties. A
         <span class="property-indicator"></span>
         <span class="property-type">string | <a href="#shareaccesstype">Share<wbr>Access<wbr>Type</a></span>
     </dt>
-    <dd>{{% md %}}Type of access to be allowed for the user.{{% /md %}}</dd>
-    <dt class="property-required"
+    <dd>{{% md %}}Type of access to be allowed for the user.{{% /md %}}</dd><dt class="property-required"
             title="Required">
         <span id="userid_nodejs">
 <a href="#userid_nodejs" style="color: inherit; text-decoration: inherit;">user<wbr>Id</a>
@@ -2620,14 +2234,11 @@ All [input](#inputs) properties are implicitly available as output properties. A
         <span class="property-indicator"></span>
         <span class="property-type">string</span>
     </dt>
-    <dd>{{% md %}}User ID (already existing in the device).{{% /md %}}</dd>
-</dl>
+    <dd>{{% md %}}User ID (already existing in the device).{{% /md %}}</dd></dl>
 {{% /choosable %}}
 
 {{% choosable language python %}}
-<dl class="resources-properties">
-
-    <dt class="property-required"
+<dl class="resources-properties"><dt class="property-required"
             title="Required">
         <span id="access_type_python">
 <a href="#access_type_python" style="color: inherit; text-decoration: inherit;">access_<wbr>type</a>
@@ -2635,8 +2246,7 @@ All [input](#inputs) properties are implicitly available as output properties. A
         <span class="property-indicator"></span>
         <span class="property-type">str | <a href="#shareaccesstype">Share<wbr>Access<wbr>Type</a></span>
     </dt>
-    <dd>{{% md %}}Type of access to be allowed for the user.{{% /md %}}</dd>
-    <dt class="property-required"
+    <dd>{{% md %}}Type of access to be allowed for the user.{{% /md %}}</dd><dt class="property-required"
             title="Required">
         <span id="user_id_python">
 <a href="#user_id_python" style="color: inherit; text-decoration: inherit;">user_<wbr>id</a>
@@ -2644,16 +2254,13 @@ All [input](#inputs) properties are implicitly available as output properties. A
         <span class="property-indicator"></span>
         <span class="property-type">str</span>
     </dt>
-    <dd>{{% md %}}User ID (already existing in the device).{{% /md %}}</dd>
-</dl>
+    <dd>{{% md %}}User ID (already existing in the device).{{% /md %}}</dd></dl>
 {{% /choosable %}}
 
 <h4 id="useraccessrightresponse">User<wbr>Access<wbr>Right<wbr>Response</h4>
 
 {{% choosable language csharp %}}
-<dl class="resources-properties">
-
-    <dt class="property-required"
+<dl class="resources-properties"><dt class="property-required"
             title="Required">
         <span id="accesstype_csharp">
 <a href="#accesstype_csharp" style="color: inherit; text-decoration: inherit;">Access<wbr>Type</a>
@@ -2661,8 +2268,7 @@ All [input](#inputs) properties are implicitly available as output properties. A
         <span class="property-indicator"></span>
         <span class="property-type">string</span>
     </dt>
-    <dd>{{% md %}}Type of access to be allowed for the user.{{% /md %}}</dd>
-    <dt class="property-required"
+    <dd>{{% md %}}Type of access to be allowed for the user.{{% /md %}}</dd><dt class="property-required"
             title="Required">
         <span id="userid_csharp">
 <a href="#userid_csharp" style="color: inherit; text-decoration: inherit;">User<wbr>Id</a>
@@ -2670,14 +2276,11 @@ All [input](#inputs) properties are implicitly available as output properties. A
         <span class="property-indicator"></span>
         <span class="property-type">string</span>
     </dt>
-    <dd>{{% md %}}User ID (already existing in the device).{{% /md %}}</dd>
-</dl>
+    <dd>{{% md %}}User ID (already existing in the device).{{% /md %}}</dd></dl>
 {{% /choosable %}}
 
 {{% choosable language go %}}
-<dl class="resources-properties">
-
-    <dt class="property-required"
+<dl class="resources-properties"><dt class="property-required"
             title="Required">
         <span id="accesstype_go">
 <a href="#accesstype_go" style="color: inherit; text-decoration: inherit;">Access<wbr>Type</a>
@@ -2685,8 +2288,7 @@ All [input](#inputs) properties are implicitly available as output properties. A
         <span class="property-indicator"></span>
         <span class="property-type">string</span>
     </dt>
-    <dd>{{% md %}}Type of access to be allowed for the user.{{% /md %}}</dd>
-    <dt class="property-required"
+    <dd>{{% md %}}Type of access to be allowed for the user.{{% /md %}}</dd><dt class="property-required"
             title="Required">
         <span id="userid_go">
 <a href="#userid_go" style="color: inherit; text-decoration: inherit;">User<wbr>Id</a>
@@ -2694,14 +2296,11 @@ All [input](#inputs) properties are implicitly available as output properties. A
         <span class="property-indicator"></span>
         <span class="property-type">string</span>
     </dt>
-    <dd>{{% md %}}User ID (already existing in the device).{{% /md %}}</dd>
-</dl>
+    <dd>{{% md %}}User ID (already existing in the device).{{% /md %}}</dd></dl>
 {{% /choosable %}}
 
 {{% choosable language nodejs %}}
-<dl class="resources-properties">
-
-    <dt class="property-required"
+<dl class="resources-properties"><dt class="property-required"
             title="Required">
         <span id="accesstype_nodejs">
 <a href="#accesstype_nodejs" style="color: inherit; text-decoration: inherit;">access<wbr>Type</a>
@@ -2709,8 +2308,7 @@ All [input](#inputs) properties are implicitly available as output properties. A
         <span class="property-indicator"></span>
         <span class="property-type">string</span>
     </dt>
-    <dd>{{% md %}}Type of access to be allowed for the user.{{% /md %}}</dd>
-    <dt class="property-required"
+    <dd>{{% md %}}Type of access to be allowed for the user.{{% /md %}}</dd><dt class="property-required"
             title="Required">
         <span id="userid_nodejs">
 <a href="#userid_nodejs" style="color: inherit; text-decoration: inherit;">user<wbr>Id</a>
@@ -2718,14 +2316,11 @@ All [input](#inputs) properties are implicitly available as output properties. A
         <span class="property-indicator"></span>
         <span class="property-type">string</span>
     </dt>
-    <dd>{{% md %}}User ID (already existing in the device).{{% /md %}}</dd>
-</dl>
+    <dd>{{% md %}}User ID (already existing in the device).{{% /md %}}</dd></dl>
 {{% /choosable %}}
 
 {{% choosable language python %}}
-<dl class="resources-properties">
-
-    <dt class="property-required"
+<dl class="resources-properties"><dt class="property-required"
             title="Required">
         <span id="access_type_python">
 <a href="#access_type_python" style="color: inherit; text-decoration: inherit;">access_<wbr>type</a>
@@ -2733,8 +2328,7 @@ All [input](#inputs) properties are implicitly available as output properties. A
         <span class="property-indicator"></span>
         <span class="property-type">str</span>
     </dt>
-    <dd>{{% md %}}Type of access to be allowed for the user.{{% /md %}}</dd>
-    <dt class="property-required"
+    <dd>{{% md %}}Type of access to be allowed for the user.{{% /md %}}</dd><dt class="property-required"
             title="Required">
         <span id="user_id_python">
 <a href="#user_id_python" style="color: inherit; text-decoration: inherit;">user_<wbr>id</a>
@@ -2742,8 +2336,7 @@ All [input](#inputs) properties are implicitly available as output properties. A
         <span class="property-indicator"></span>
         <span class="property-type">str</span>
     </dt>
-    <dd>{{% md %}}User ID (already existing in the device).{{% /md %}}</dd>
-</dl>
+    <dd>{{% md %}}User ID (already existing in the device).{{% /md %}}</dd></dl>
 {{% /choosable %}}
 ## Import
 

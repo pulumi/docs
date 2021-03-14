@@ -13,11 +13,17 @@ meta_desc: "Documentation for the azure-native.datadog.Monitor resource with exa
 API Version: 2020-02-01-preview.
 
 {{% examples %}}
+
 ## Example Usage
 
 {{< chooser language "typescript,python,go,csharp" / >}}
+
+
 ### Monitors_Create
-{{% example csharp %}}
+
+
+{{< example csharp >}}
+
 ```csharp
 using Pulumi;
 using AzureNative = Pulumi.AzureNative;
@@ -37,9 +43,12 @@ class MyStack : Stack
 
 ```
 
-{{% /example %}}
 
-{{% example go %}}
+{{< /example >}}
+
+
+{{< example go >}}
+
 
 ```go
 package main
@@ -64,9 +73,12 @@ func main() {
 
 ```
 
-{{% /example %}}
 
-{{% example python %}}
+{{< /example >}}
+
+
+{{< example python >}}
+
 
 ```python
 import pulumi
@@ -78,9 +90,12 @@ monitor = azure_native.datadog.Monitor("monitor",
 
 ```
 
-{{% /example %}}
 
-{{% example typescript %}}
+{{< /example >}}
+
+
+{{< example typescript >}}
+
 
 ```typescript
 import * as pulumi from "@pulumi/pulumi";
@@ -93,9 +108,16 @@ const monitor = new azure_native.datadog.Monitor("monitor", {
 
 ```
 
-{{% /example %}}
+
+{{< /example >}}
+
+
+
+
 
 {{% /examples %}}
+
+
 
 
 ## Create a Monitor Resource {#create}
@@ -120,9 +142,7 @@ const monitor = new azure_native.datadog.Monitor("monitor", {
 
 {{% choosable language nodejs %}}
 
-<dl class="resources-properties">
-  
-    <dt
+<dl class="resources-properties"><dt
         class="property-required" title="Required">
         <span>name</span>
         <span class="property-indicator"></span>
@@ -130,9 +150,7 @@ const monitor = new azure_native.datadog.Monitor("monitor", {
     </dt>
     <dd>
       The unique name of the resource.
-    </dd>
-  
-    <dt
+    </dd><dt
         class="property-required" title="Required">
         <span>args</span>
         <span class="property-indicator"></span>
@@ -140,9 +158,7 @@ const monitor = new azure_native.datadog.Monitor("monitor", {
     </dt>
     <dd>
       The arguments to resource properties.
-    </dd>
-  
-    <dt
+    </dd><dt
         class="property-optional" title="Optional">
         <span>opts</span>
         <span class="property-indicator"></span>
@@ -150,10 +166,7 @@ const monitor = new azure_native.datadog.Monitor("monitor", {
     </dt>
     <dd>
       Bag of options to control resource&#39;s behavior.
-    </dd>
-  
-
-</dl>
+    </dd></dl>
 
 {{% /choosable %}}
 
@@ -179,9 +192,7 @@ const monitor = new azure_native.datadog.Monitor("monitor", {
 
 {{% choosable language go %}}
 
-<dl class="resources-properties">
-  
-    <dt
+<dl class="resources-properties"><dt
         class="property-optional" title="Optional">
         <span>ctx</span>
         <span class="property-indicator"></span>
@@ -189,9 +200,7 @@ const monitor = new azure_native.datadog.Monitor("monitor", {
     </dt>
     <dd>
       Context object for the current deployment.
-    </dd>
-  
-    <dt
+    </dd><dt
         class="property-required" title="Required">
         <span>name</span>
         <span class="property-indicator"></span>
@@ -199,9 +208,7 @@ const monitor = new azure_native.datadog.Monitor("monitor", {
     </dt>
     <dd>
       The unique name of the resource.
-    </dd>
-  
-    <dt
+    </dd><dt
         class="property-required" title="Required">
         <span>args</span>
         <span class="property-indicator"></span>
@@ -209,9 +216,7 @@ const monitor = new azure_native.datadog.Monitor("monitor", {
     </dt>
     <dd>
       The arguments to resource properties.
-    </dd>
-  
-    <dt
+    </dd><dt
         class="property-optional" title="Optional">
         <span>opts</span>
         <span class="property-indicator"></span>
@@ -219,18 +224,13 @@ const monitor = new azure_native.datadog.Monitor("monitor", {
     </dt>
     <dd>
       Bag of options to control resource&#39;s behavior.
-    </dd>
-  
-
-</dl>
+    </dd></dl>
 
 {{% /choosable %}}
 
 {{% choosable language csharp %}}
 
-<dl class="resources-properties">
-  
-    <dt
+<dl class="resources-properties"><dt
         class="property-required" title="Required">
         <span>name</span>
         <span class="property-indicator"></span>
@@ -238,9 +238,7 @@ const monitor = new azure_native.datadog.Monitor("monitor", {
     </dt>
     <dd>
       The unique name of the resource.
-    </dd>
-  
-    <dt
+    </dd><dt
         class="property-required" title="Required">
         <span>args</span>
         <span class="property-indicator"></span>
@@ -248,9 +246,7 @@ const monitor = new azure_native.datadog.Monitor("monitor", {
     </dt>
     <dd>
       The arguments to resource properties.
-    </dd>
-  
-    <dt
+    </dd><dt
         class="property-optional" title="Optional">
         <span>opts</span>
         <span class="property-indicator"></span>
@@ -258,10 +254,7 @@ const monitor = new azure_native.datadog.Monitor("monitor", {
     </dt>
     <dd>
       Bag of options to control resource&#39;s behavior.
-    </dd>
-  
-
-</dl>
+    </dd></dl>
 
 {{% /choosable %}}
 
@@ -276,9 +269,7 @@ The Monitor resource accepts the following [input]({{< relref "/docs/intro/conce
 
 
 {{% choosable language csharp %}}
-<dl class="resources-properties">
-
-    <dt class="property-required"
+<dl class="resources-properties"><dt class="property-required"
             title="Required">
         <span id="resourcegroupname_csharp">
 <a href="#resourcegroupname_csharp" style="color: inherit; text-decoration: inherit;">Resource<wbr>Group<wbr>Name</a>
@@ -286,8 +277,7 @@ The Monitor resource accepts the following [input]({{< relref "/docs/intro/conce
         <span class="property-indicator"></span>
         <span class="property-type">string</span>
     </dt>
-    <dd>{{% md %}}The name of the resource group to which the Datadog resource belongs.{{% /md %}}</dd>
-    <dt class="property-optional"
+    <dd>{{% md %}}The name of the resource group to which the Datadog resource belongs.{{% /md %}}</dd><dt class="property-optional"
             title="Optional">
         <span id="identity_csharp">
 <a href="#identity_csharp" style="color: inherit; text-decoration: inherit;">Identity</a>
@@ -295,8 +285,7 @@ The Monitor resource accepts the following [input]({{< relref "/docs/intro/conce
         <span class="property-indicator"></span>
         <span class="property-type"><a href="#identityproperties">Pulumi.<wbr>Azure<wbr>Native.<wbr>Datadog.<wbr>Inputs.<wbr>Identity<wbr>Properties<wbr>Args</a></span>
     </dt>
-    <dd>{{% md %}}{{% /md %}}</dd>
-    <dt class="property-optional"
+    <dd>{{% md %}}{{% /md %}}</dd><dt class="property-optional"
             title="Optional">
         <span id="location_csharp">
 <a href="#location_csharp" style="color: inherit; text-decoration: inherit;">Location</a>
@@ -304,8 +293,7 @@ The Monitor resource accepts the following [input]({{< relref "/docs/intro/conce
         <span class="property-indicator"></span>
         <span class="property-type">string</span>
     </dt>
-    <dd>{{% md %}}{{% /md %}}</dd>
-    <dt class="property-optional"
+    <dd>{{% md %}}{{% /md %}}</dd><dt class="property-optional"
             title="Optional">
         <span id="monitorname_csharp">
 <a href="#monitorname_csharp" style="color: inherit; text-decoration: inherit;">Monitor<wbr>Name</a>
@@ -313,8 +301,7 @@ The Monitor resource accepts the following [input]({{< relref "/docs/intro/conce
         <span class="property-indicator"></span>
         <span class="property-type">string</span>
     </dt>
-    <dd>{{% md %}}Monitor resource name{{% /md %}}</dd>
-    <dt class="property-optional"
+    <dd>{{% md %}}Monitor resource name{{% /md %}}</dd><dt class="property-optional"
             title="Optional">
         <span id="properties_csharp">
 <a href="#properties_csharp" style="color: inherit; text-decoration: inherit;">Properties</a>
@@ -322,8 +309,7 @@ The Monitor resource accepts the following [input]({{< relref "/docs/intro/conce
         <span class="property-indicator"></span>
         <span class="property-type"><a href="#monitorproperties">Pulumi.<wbr>Azure<wbr>Native.<wbr>Datadog.<wbr>Inputs.<wbr>Monitor<wbr>Properties<wbr>Args</a></span>
     </dt>
-    <dd>{{% md %}}Properties specific to the monitor resource.{{% /md %}}</dd>
-    <dt class="property-optional"
+    <dd>{{% md %}}Properties specific to the monitor resource.{{% /md %}}</dd><dt class="property-optional"
             title="Optional">
         <span id="sku_csharp">
 <a href="#sku_csharp" style="color: inherit; text-decoration: inherit;">Sku</a>
@@ -331,8 +317,7 @@ The Monitor resource accepts the following [input]({{< relref "/docs/intro/conce
         <span class="property-indicator"></span>
         <span class="property-type"><a href="#resourcesku">Pulumi.<wbr>Azure<wbr>Native.<wbr>Datadog.<wbr>Inputs.<wbr>Resource<wbr>Sku<wbr>Args</a></span>
     </dt>
-    <dd>{{% md %}}{{% /md %}}</dd>
-    <dt class="property-optional"
+    <dd>{{% md %}}{{% /md %}}</dd><dt class="property-optional"
             title="Optional">
         <span id="tags_csharp">
 <a href="#tags_csharp" style="color: inherit; text-decoration: inherit;">Tags</a>
@@ -340,14 +325,11 @@ The Monitor resource accepts the following [input]({{< relref "/docs/intro/conce
         <span class="property-indicator"></span>
         <span class="property-type">Dictionary&lt;string, string&gt;</span>
     </dt>
-    <dd>{{% md %}}{{% /md %}}</dd>
-</dl>
+    <dd>{{% md %}}{{% /md %}}</dd></dl>
 {{% /choosable %}}
 
 {{% choosable language go %}}
-<dl class="resources-properties">
-
-    <dt class="property-required"
+<dl class="resources-properties"><dt class="property-required"
             title="Required">
         <span id="resourcegroupname_go">
 <a href="#resourcegroupname_go" style="color: inherit; text-decoration: inherit;">Resource<wbr>Group<wbr>Name</a>
@@ -355,8 +337,7 @@ The Monitor resource accepts the following [input]({{< relref "/docs/intro/conce
         <span class="property-indicator"></span>
         <span class="property-type">string</span>
     </dt>
-    <dd>{{% md %}}The name of the resource group to which the Datadog resource belongs.{{% /md %}}</dd>
-    <dt class="property-optional"
+    <dd>{{% md %}}The name of the resource group to which the Datadog resource belongs.{{% /md %}}</dd><dt class="property-optional"
             title="Optional">
         <span id="identity_go">
 <a href="#identity_go" style="color: inherit; text-decoration: inherit;">Identity</a>
@@ -364,8 +345,7 @@ The Monitor resource accepts the following [input]({{< relref "/docs/intro/conce
         <span class="property-indicator"></span>
         <span class="property-type"><a href="#identityproperties">Identity<wbr>Properties</a></span>
     </dt>
-    <dd>{{% md %}}{{% /md %}}</dd>
-    <dt class="property-optional"
+    <dd>{{% md %}}{{% /md %}}</dd><dt class="property-optional"
             title="Optional">
         <span id="location_go">
 <a href="#location_go" style="color: inherit; text-decoration: inherit;">Location</a>
@@ -373,8 +353,7 @@ The Monitor resource accepts the following [input]({{< relref "/docs/intro/conce
         <span class="property-indicator"></span>
         <span class="property-type">string</span>
     </dt>
-    <dd>{{% md %}}{{% /md %}}</dd>
-    <dt class="property-optional"
+    <dd>{{% md %}}{{% /md %}}</dd><dt class="property-optional"
             title="Optional">
         <span id="monitorname_go">
 <a href="#monitorname_go" style="color: inherit; text-decoration: inherit;">Monitor<wbr>Name</a>
@@ -382,8 +361,7 @@ The Monitor resource accepts the following [input]({{< relref "/docs/intro/conce
         <span class="property-indicator"></span>
         <span class="property-type">string</span>
     </dt>
-    <dd>{{% md %}}Monitor resource name{{% /md %}}</dd>
-    <dt class="property-optional"
+    <dd>{{% md %}}Monitor resource name{{% /md %}}</dd><dt class="property-optional"
             title="Optional">
         <span id="properties_go">
 <a href="#properties_go" style="color: inherit; text-decoration: inherit;">Properties</a>
@@ -391,8 +369,7 @@ The Monitor resource accepts the following [input]({{< relref "/docs/intro/conce
         <span class="property-indicator"></span>
         <span class="property-type"><a href="#monitorproperties">Monitor<wbr>Properties</a></span>
     </dt>
-    <dd>{{% md %}}Properties specific to the monitor resource.{{% /md %}}</dd>
-    <dt class="property-optional"
+    <dd>{{% md %}}Properties specific to the monitor resource.{{% /md %}}</dd><dt class="property-optional"
             title="Optional">
         <span id="sku_go">
 <a href="#sku_go" style="color: inherit; text-decoration: inherit;">Sku</a>
@@ -400,8 +377,7 @@ The Monitor resource accepts the following [input]({{< relref "/docs/intro/conce
         <span class="property-indicator"></span>
         <span class="property-type"><a href="#resourcesku">Resource<wbr>Sku</a></span>
     </dt>
-    <dd>{{% md %}}{{% /md %}}</dd>
-    <dt class="property-optional"
+    <dd>{{% md %}}{{% /md %}}</dd><dt class="property-optional"
             title="Optional">
         <span id="tags_go">
 <a href="#tags_go" style="color: inherit; text-decoration: inherit;">Tags</a>
@@ -409,14 +385,11 @@ The Monitor resource accepts the following [input]({{< relref "/docs/intro/conce
         <span class="property-indicator"></span>
         <span class="property-type">map[string]string</span>
     </dt>
-    <dd>{{% md %}}{{% /md %}}</dd>
-</dl>
+    <dd>{{% md %}}{{% /md %}}</dd></dl>
 {{% /choosable %}}
 
 {{% choosable language nodejs %}}
-<dl class="resources-properties">
-
-    <dt class="property-required"
+<dl class="resources-properties"><dt class="property-required"
             title="Required">
         <span id="resourcegroupname_nodejs">
 <a href="#resourcegroupname_nodejs" style="color: inherit; text-decoration: inherit;">resource<wbr>Group<wbr>Name</a>
@@ -424,8 +397,7 @@ The Monitor resource accepts the following [input]({{< relref "/docs/intro/conce
         <span class="property-indicator"></span>
         <span class="property-type">string</span>
     </dt>
-    <dd>{{% md %}}The name of the resource group to which the Datadog resource belongs.{{% /md %}}</dd>
-    <dt class="property-optional"
+    <dd>{{% md %}}The name of the resource group to which the Datadog resource belongs.{{% /md %}}</dd><dt class="property-optional"
             title="Optional">
         <span id="identity_nodejs">
 <a href="#identity_nodejs" style="color: inherit; text-decoration: inherit;">identity</a>
@@ -433,8 +405,7 @@ The Monitor resource accepts the following [input]({{< relref "/docs/intro/conce
         <span class="property-indicator"></span>
         <span class="property-type"><a href="#identityproperties">Identity<wbr>Properties</a></span>
     </dt>
-    <dd>{{% md %}}{{% /md %}}</dd>
-    <dt class="property-optional"
+    <dd>{{% md %}}{{% /md %}}</dd><dt class="property-optional"
             title="Optional">
         <span id="location_nodejs">
 <a href="#location_nodejs" style="color: inherit; text-decoration: inherit;">location</a>
@@ -442,8 +413,7 @@ The Monitor resource accepts the following [input]({{< relref "/docs/intro/conce
         <span class="property-indicator"></span>
         <span class="property-type">string</span>
     </dt>
-    <dd>{{% md %}}{{% /md %}}</dd>
-    <dt class="property-optional"
+    <dd>{{% md %}}{{% /md %}}</dd><dt class="property-optional"
             title="Optional">
         <span id="monitorname_nodejs">
 <a href="#monitorname_nodejs" style="color: inherit; text-decoration: inherit;">monitor<wbr>Name</a>
@@ -451,8 +421,7 @@ The Monitor resource accepts the following [input]({{< relref "/docs/intro/conce
         <span class="property-indicator"></span>
         <span class="property-type">string</span>
     </dt>
-    <dd>{{% md %}}Monitor resource name{{% /md %}}</dd>
-    <dt class="property-optional"
+    <dd>{{% md %}}Monitor resource name{{% /md %}}</dd><dt class="property-optional"
             title="Optional">
         <span id="properties_nodejs">
 <a href="#properties_nodejs" style="color: inherit; text-decoration: inherit;">properties</a>
@@ -460,8 +429,7 @@ The Monitor resource accepts the following [input]({{< relref "/docs/intro/conce
         <span class="property-indicator"></span>
         <span class="property-type"><a href="#monitorproperties">Monitor<wbr>Properties</a></span>
     </dt>
-    <dd>{{% md %}}Properties specific to the monitor resource.{{% /md %}}</dd>
-    <dt class="property-optional"
+    <dd>{{% md %}}Properties specific to the monitor resource.{{% /md %}}</dd><dt class="property-optional"
             title="Optional">
         <span id="sku_nodejs">
 <a href="#sku_nodejs" style="color: inherit; text-decoration: inherit;">sku</a>
@@ -469,8 +437,7 @@ The Monitor resource accepts the following [input]({{< relref "/docs/intro/conce
         <span class="property-indicator"></span>
         <span class="property-type"><a href="#resourcesku">Resource<wbr>Sku</a></span>
     </dt>
-    <dd>{{% md %}}{{% /md %}}</dd>
-    <dt class="property-optional"
+    <dd>{{% md %}}{{% /md %}}</dd><dt class="property-optional"
             title="Optional">
         <span id="tags_nodejs">
 <a href="#tags_nodejs" style="color: inherit; text-decoration: inherit;">tags</a>
@@ -478,14 +445,11 @@ The Monitor resource accepts the following [input]({{< relref "/docs/intro/conce
         <span class="property-indicator"></span>
         <span class="property-type">{[key: string]: string}</span>
     </dt>
-    <dd>{{% md %}}{{% /md %}}</dd>
-</dl>
+    <dd>{{% md %}}{{% /md %}}</dd></dl>
 {{% /choosable %}}
 
 {{% choosable language python %}}
-<dl class="resources-properties">
-
-    <dt class="property-required"
+<dl class="resources-properties"><dt class="property-required"
             title="Required">
         <span id="resource_group_name_python">
 <a href="#resource_group_name_python" style="color: inherit; text-decoration: inherit;">resource_<wbr>group_<wbr>name</a>
@@ -493,8 +457,7 @@ The Monitor resource accepts the following [input]({{< relref "/docs/intro/conce
         <span class="property-indicator"></span>
         <span class="property-type">str</span>
     </dt>
-    <dd>{{% md %}}The name of the resource group to which the Datadog resource belongs.{{% /md %}}</dd>
-    <dt class="property-optional"
+    <dd>{{% md %}}The name of the resource group to which the Datadog resource belongs.{{% /md %}}</dd><dt class="property-optional"
             title="Optional">
         <span id="identity_python">
 <a href="#identity_python" style="color: inherit; text-decoration: inherit;">identity</a>
@@ -502,8 +465,7 @@ The Monitor resource accepts the following [input]({{< relref "/docs/intro/conce
         <span class="property-indicator"></span>
         <span class="property-type"><a href="#identityproperties">Identity<wbr>Properties<wbr>Args</a></span>
     </dt>
-    <dd>{{% md %}}{{% /md %}}</dd>
-    <dt class="property-optional"
+    <dd>{{% md %}}{{% /md %}}</dd><dt class="property-optional"
             title="Optional">
         <span id="location_python">
 <a href="#location_python" style="color: inherit; text-decoration: inherit;">location</a>
@@ -511,8 +473,7 @@ The Monitor resource accepts the following [input]({{< relref "/docs/intro/conce
         <span class="property-indicator"></span>
         <span class="property-type">str</span>
     </dt>
-    <dd>{{% md %}}{{% /md %}}</dd>
-    <dt class="property-optional"
+    <dd>{{% md %}}{{% /md %}}</dd><dt class="property-optional"
             title="Optional">
         <span id="monitor_name_python">
 <a href="#monitor_name_python" style="color: inherit; text-decoration: inherit;">monitor_<wbr>name</a>
@@ -520,8 +481,7 @@ The Monitor resource accepts the following [input]({{< relref "/docs/intro/conce
         <span class="property-indicator"></span>
         <span class="property-type">str</span>
     </dt>
-    <dd>{{% md %}}Monitor resource name{{% /md %}}</dd>
-    <dt class="property-optional"
+    <dd>{{% md %}}Monitor resource name{{% /md %}}</dd><dt class="property-optional"
             title="Optional">
         <span id="properties_python">
 <a href="#properties_python" style="color: inherit; text-decoration: inherit;">properties</a>
@@ -529,8 +489,7 @@ The Monitor resource accepts the following [input]({{< relref "/docs/intro/conce
         <span class="property-indicator"></span>
         <span class="property-type"><a href="#monitorproperties">Monitor<wbr>Properties<wbr>Args</a></span>
     </dt>
-    <dd>{{% md %}}Properties specific to the monitor resource.{{% /md %}}</dd>
-    <dt class="property-optional"
+    <dd>{{% md %}}Properties specific to the monitor resource.{{% /md %}}</dd><dt class="property-optional"
             title="Optional">
         <span id="sku_python">
 <a href="#sku_python" style="color: inherit; text-decoration: inherit;">sku</a>
@@ -538,8 +497,7 @@ The Monitor resource accepts the following [input]({{< relref "/docs/intro/conce
         <span class="property-indicator"></span>
         <span class="property-type"><a href="#resourcesku">Resource<wbr>Sku<wbr>Args</a></span>
     </dt>
-    <dd>{{% md %}}{{% /md %}}</dd>
-    <dt class="property-optional"
+    <dd>{{% md %}}{{% /md %}}</dd><dt class="property-optional"
             title="Optional">
         <span id="tags_python">
 <a href="#tags_python" style="color: inherit; text-decoration: inherit;">tags</a>
@@ -547,8 +505,7 @@ The Monitor resource accepts the following [input]({{< relref "/docs/intro/conce
         <span class="property-indicator"></span>
         <span class="property-type">Mapping[str, str]</span>
     </dt>
-    <dd>{{% md %}}{{% /md %}}</dd>
-</dl>
+    <dd>{{% md %}}{{% /md %}}</dd></dl>
 {{% /choosable %}}
 
 
@@ -559,9 +516,7 @@ All [input](#inputs) properties are implicitly available as output properties. A
 
 
 {{% choosable language csharp %}}
-<dl class="resources-properties">
-
-    <dt class="property-"
+<dl class="resources-properties"><dt class="property-"
             title="">
         <span id="id_csharp">
 <a href="#id_csharp" style="color: inherit; text-decoration: inherit;">Id</a>
@@ -569,8 +524,7 @@ All [input](#inputs) properties are implicitly available as output properties. A
         <span class="property-indicator"></span>
         <span class="property-type">string</span>
     </dt>
-    <dd>{{% md %}}The provider-assigned unique ID for this managed resource.{{% /md %}}</dd>
-    <dt class="property-"
+    <dd>{{% md %}}The provider-assigned unique ID for this managed resource.{{% /md %}}</dd><dt class="property-"
             title="">
         <span id="name_csharp">
 <a href="#name_csharp" style="color: inherit; text-decoration: inherit;">Name</a>
@@ -578,8 +532,7 @@ All [input](#inputs) properties are implicitly available as output properties. A
         <span class="property-indicator"></span>
         <span class="property-type">string</span>
     </dt>
-    <dd>{{% md %}}Name of the monitor resource.{{% /md %}}</dd>
-    <dt class="property-"
+    <dd>{{% md %}}Name of the monitor resource.{{% /md %}}</dd><dt class="property-"
             title="">
         <span id="type_csharp">
 <a href="#type_csharp" style="color: inherit; text-decoration: inherit;">Type</a>
@@ -587,14 +540,11 @@ All [input](#inputs) properties are implicitly available as output properties. A
         <span class="property-indicator"></span>
         <span class="property-type">string</span>
     </dt>
-    <dd>{{% md %}}The type of the monitor resource.{{% /md %}}</dd>
-</dl>
+    <dd>{{% md %}}The type of the monitor resource.{{% /md %}}</dd></dl>
 {{% /choosable %}}
 
 {{% choosable language go %}}
-<dl class="resources-properties">
-
-    <dt class="property-"
+<dl class="resources-properties"><dt class="property-"
             title="">
         <span id="id_go">
 <a href="#id_go" style="color: inherit; text-decoration: inherit;">Id</a>
@@ -602,8 +552,7 @@ All [input](#inputs) properties are implicitly available as output properties. A
         <span class="property-indicator"></span>
         <span class="property-type">string</span>
     </dt>
-    <dd>{{% md %}}The provider-assigned unique ID for this managed resource.{{% /md %}}</dd>
-    <dt class="property-"
+    <dd>{{% md %}}The provider-assigned unique ID for this managed resource.{{% /md %}}</dd><dt class="property-"
             title="">
         <span id="name_go">
 <a href="#name_go" style="color: inherit; text-decoration: inherit;">Name</a>
@@ -611,8 +560,7 @@ All [input](#inputs) properties are implicitly available as output properties. A
         <span class="property-indicator"></span>
         <span class="property-type">string</span>
     </dt>
-    <dd>{{% md %}}Name of the monitor resource.{{% /md %}}</dd>
-    <dt class="property-"
+    <dd>{{% md %}}Name of the monitor resource.{{% /md %}}</dd><dt class="property-"
             title="">
         <span id="type_go">
 <a href="#type_go" style="color: inherit; text-decoration: inherit;">Type</a>
@@ -620,14 +568,11 @@ All [input](#inputs) properties are implicitly available as output properties. A
         <span class="property-indicator"></span>
         <span class="property-type">string</span>
     </dt>
-    <dd>{{% md %}}The type of the monitor resource.{{% /md %}}</dd>
-</dl>
+    <dd>{{% md %}}The type of the monitor resource.{{% /md %}}</dd></dl>
 {{% /choosable %}}
 
 {{% choosable language nodejs %}}
-<dl class="resources-properties">
-
-    <dt class="property-"
+<dl class="resources-properties"><dt class="property-"
             title="">
         <span id="id_nodejs">
 <a href="#id_nodejs" style="color: inherit; text-decoration: inherit;">id</a>
@@ -635,8 +580,7 @@ All [input](#inputs) properties are implicitly available as output properties. A
         <span class="property-indicator"></span>
         <span class="property-type">string</span>
     </dt>
-    <dd>{{% md %}}The provider-assigned unique ID for this managed resource.{{% /md %}}</dd>
-    <dt class="property-"
+    <dd>{{% md %}}The provider-assigned unique ID for this managed resource.{{% /md %}}</dd><dt class="property-"
             title="">
         <span id="name_nodejs">
 <a href="#name_nodejs" style="color: inherit; text-decoration: inherit;">name</a>
@@ -644,8 +588,7 @@ All [input](#inputs) properties are implicitly available as output properties. A
         <span class="property-indicator"></span>
         <span class="property-type">string</span>
     </dt>
-    <dd>{{% md %}}Name of the monitor resource.{{% /md %}}</dd>
-    <dt class="property-"
+    <dd>{{% md %}}Name of the monitor resource.{{% /md %}}</dd><dt class="property-"
             title="">
         <span id="type_nodejs">
 <a href="#type_nodejs" style="color: inherit; text-decoration: inherit;">type</a>
@@ -653,14 +596,11 @@ All [input](#inputs) properties are implicitly available as output properties. A
         <span class="property-indicator"></span>
         <span class="property-type">string</span>
     </dt>
-    <dd>{{% md %}}The type of the monitor resource.{{% /md %}}</dd>
-</dl>
+    <dd>{{% md %}}The type of the monitor resource.{{% /md %}}</dd></dl>
 {{% /choosable %}}
 
 {{% choosable language python %}}
-<dl class="resources-properties">
-
-    <dt class="property-"
+<dl class="resources-properties"><dt class="property-"
             title="">
         <span id="id_python">
 <a href="#id_python" style="color: inherit; text-decoration: inherit;">id</a>
@@ -668,8 +608,7 @@ All [input](#inputs) properties are implicitly available as output properties. A
         <span class="property-indicator"></span>
         <span class="property-type">str</span>
     </dt>
-    <dd>{{% md %}}The provider-assigned unique ID for this managed resource.{{% /md %}}</dd>
-    <dt class="property-"
+    <dd>{{% md %}}The provider-assigned unique ID for this managed resource.{{% /md %}}</dd><dt class="property-"
             title="">
         <span id="name_python">
 <a href="#name_python" style="color: inherit; text-decoration: inherit;">name</a>
@@ -677,8 +616,7 @@ All [input](#inputs) properties are implicitly available as output properties. A
         <span class="property-indicator"></span>
         <span class="property-type">str</span>
     </dt>
-    <dd>{{% md %}}Name of the monitor resource.{{% /md %}}</dd>
-    <dt class="property-"
+    <dd>{{% md %}}Name of the monitor resource.{{% /md %}}</dd><dt class="property-"
             title="">
         <span id="type_python">
 <a href="#type_python" style="color: inherit; text-decoration: inherit;">type</a>
@@ -686,8 +624,7 @@ All [input](#inputs) properties are implicitly available as output properties. A
         <span class="property-indicator"></span>
         <span class="property-type">str</span>
     </dt>
-    <dd>{{% md %}}The type of the monitor resource.{{% /md %}}</dd>
-</dl>
+    <dd>{{% md %}}The type of the monitor resource.{{% /md %}}</dd></dl>
 {{% /choosable %}}
 
 
@@ -703,9 +640,7 @@ All [input](#inputs) properties are implicitly available as output properties. A
 <h4 id="datadogorganizationproperties">Datadog<wbr>Organization<wbr>Properties</h4>
 
 {{% choosable language csharp %}}
-<dl class="resources-properties">
-
-    <dt class="property-optional"
+<dl class="resources-properties"><dt class="property-optional"
             title="Optional">
         <span id="apikey_csharp">
 <a href="#apikey_csharp" style="color: inherit; text-decoration: inherit;">Api<wbr>Key</a>
@@ -713,8 +648,7 @@ All [input](#inputs) properties are implicitly available as output properties. A
         <span class="property-indicator"></span>
         <span class="property-type">string</span>
     </dt>
-    <dd>{{% md %}}Api key associated to the Datadog organization.{{% /md %}}</dd>
-    <dt class="property-optional"
+    <dd>{{% md %}}Api key associated to the Datadog organization.{{% /md %}}</dd><dt class="property-optional"
             title="Optional">
         <span id="applicationkey_csharp">
 <a href="#applicationkey_csharp" style="color: inherit; text-decoration: inherit;">Application<wbr>Key</a>
@@ -722,8 +656,7 @@ All [input](#inputs) properties are implicitly available as output properties. A
         <span class="property-indicator"></span>
         <span class="property-type">string</span>
     </dt>
-    <dd>{{% md %}}Application key associated to the Datadog organization.{{% /md %}}</dd>
-    <dt class="property-optional"
+    <dd>{{% md %}}Application key associated to the Datadog organization.{{% /md %}}</dd><dt class="property-optional"
             title="Optional">
         <span id="enterpriseappid_csharp">
 <a href="#enterpriseappid_csharp" style="color: inherit; text-decoration: inherit;">Enterprise<wbr>App<wbr>Id</a>
@@ -731,8 +664,7 @@ All [input](#inputs) properties are implicitly available as output properties. A
         <span class="property-indicator"></span>
         <span class="property-type">string</span>
     </dt>
-    <dd>{{% md %}}The Id of the Enterprise App used for Single sign on.{{% /md %}}</dd>
-    <dt class="property-optional"
+    <dd>{{% md %}}The Id of the Enterprise App used for Single sign on.{{% /md %}}</dd><dt class="property-optional"
             title="Optional">
         <span id="linkingauthcode_csharp">
 <a href="#linkingauthcode_csharp" style="color: inherit; text-decoration: inherit;">Linking<wbr>Auth<wbr>Code</a>
@@ -740,8 +672,7 @@ All [input](#inputs) properties are implicitly available as output properties. A
         <span class="property-indicator"></span>
         <span class="property-type">string</span>
     </dt>
-    <dd>{{% md %}}The auth code used to linking to an existing datadog organization.{{% /md %}}</dd>
-    <dt class="property-optional"
+    <dd>{{% md %}}The auth code used to linking to an existing datadog organization.{{% /md %}}</dd><dt class="property-optional"
             title="Optional">
         <span id="linkingclientid_csharp">
 <a href="#linkingclientid_csharp" style="color: inherit; text-decoration: inherit;">Linking<wbr>Client<wbr>Id</a>
@@ -749,8 +680,7 @@ All [input](#inputs) properties are implicitly available as output properties. A
         <span class="property-indicator"></span>
         <span class="property-type">string</span>
     </dt>
-    <dd>{{% md %}}The client_id from an existing in exchange for an auth token to link organization.{{% /md %}}</dd>
-    <dt class="property-optional"
+    <dd>{{% md %}}The client_id from an existing in exchange for an auth token to link organization.{{% /md %}}</dd><dt class="property-optional"
             title="Optional">
         <span id="redirecturi_csharp">
 <a href="#redirecturi_csharp" style="color: inherit; text-decoration: inherit;">Redirect<wbr>Uri</a>
@@ -758,14 +688,11 @@ All [input](#inputs) properties are implicitly available as output properties. A
         <span class="property-indicator"></span>
         <span class="property-type">string</span>
     </dt>
-    <dd>{{% md %}}The redirect uri for linking.{{% /md %}}</dd>
-</dl>
+    <dd>{{% md %}}The redirect uri for linking.{{% /md %}}</dd></dl>
 {{% /choosable %}}
 
 {{% choosable language go %}}
-<dl class="resources-properties">
-
-    <dt class="property-optional"
+<dl class="resources-properties"><dt class="property-optional"
             title="Optional">
         <span id="apikey_go">
 <a href="#apikey_go" style="color: inherit; text-decoration: inherit;">Api<wbr>Key</a>
@@ -773,8 +700,7 @@ All [input](#inputs) properties are implicitly available as output properties. A
         <span class="property-indicator"></span>
         <span class="property-type">string</span>
     </dt>
-    <dd>{{% md %}}Api key associated to the Datadog organization.{{% /md %}}</dd>
-    <dt class="property-optional"
+    <dd>{{% md %}}Api key associated to the Datadog organization.{{% /md %}}</dd><dt class="property-optional"
             title="Optional">
         <span id="applicationkey_go">
 <a href="#applicationkey_go" style="color: inherit; text-decoration: inherit;">Application<wbr>Key</a>
@@ -782,8 +708,7 @@ All [input](#inputs) properties are implicitly available as output properties. A
         <span class="property-indicator"></span>
         <span class="property-type">string</span>
     </dt>
-    <dd>{{% md %}}Application key associated to the Datadog organization.{{% /md %}}</dd>
-    <dt class="property-optional"
+    <dd>{{% md %}}Application key associated to the Datadog organization.{{% /md %}}</dd><dt class="property-optional"
             title="Optional">
         <span id="enterpriseappid_go">
 <a href="#enterpriseappid_go" style="color: inherit; text-decoration: inherit;">Enterprise<wbr>App<wbr>Id</a>
@@ -791,8 +716,7 @@ All [input](#inputs) properties are implicitly available as output properties. A
         <span class="property-indicator"></span>
         <span class="property-type">string</span>
     </dt>
-    <dd>{{% md %}}The Id of the Enterprise App used for Single sign on.{{% /md %}}</dd>
-    <dt class="property-optional"
+    <dd>{{% md %}}The Id of the Enterprise App used for Single sign on.{{% /md %}}</dd><dt class="property-optional"
             title="Optional">
         <span id="linkingauthcode_go">
 <a href="#linkingauthcode_go" style="color: inherit; text-decoration: inherit;">Linking<wbr>Auth<wbr>Code</a>
@@ -800,8 +724,7 @@ All [input](#inputs) properties are implicitly available as output properties. A
         <span class="property-indicator"></span>
         <span class="property-type">string</span>
     </dt>
-    <dd>{{% md %}}The auth code used to linking to an existing datadog organization.{{% /md %}}</dd>
-    <dt class="property-optional"
+    <dd>{{% md %}}The auth code used to linking to an existing datadog organization.{{% /md %}}</dd><dt class="property-optional"
             title="Optional">
         <span id="linkingclientid_go">
 <a href="#linkingclientid_go" style="color: inherit; text-decoration: inherit;">Linking<wbr>Client<wbr>Id</a>
@@ -809,8 +732,7 @@ All [input](#inputs) properties are implicitly available as output properties. A
         <span class="property-indicator"></span>
         <span class="property-type">string</span>
     </dt>
-    <dd>{{% md %}}The client_id from an existing in exchange for an auth token to link organization.{{% /md %}}</dd>
-    <dt class="property-optional"
+    <dd>{{% md %}}The client_id from an existing in exchange for an auth token to link organization.{{% /md %}}</dd><dt class="property-optional"
             title="Optional">
         <span id="redirecturi_go">
 <a href="#redirecturi_go" style="color: inherit; text-decoration: inherit;">Redirect<wbr>Uri</a>
@@ -818,14 +740,11 @@ All [input](#inputs) properties are implicitly available as output properties. A
         <span class="property-indicator"></span>
         <span class="property-type">string</span>
     </dt>
-    <dd>{{% md %}}The redirect uri for linking.{{% /md %}}</dd>
-</dl>
+    <dd>{{% md %}}The redirect uri for linking.{{% /md %}}</dd></dl>
 {{% /choosable %}}
 
 {{% choosable language nodejs %}}
-<dl class="resources-properties">
-
-    <dt class="property-optional"
+<dl class="resources-properties"><dt class="property-optional"
             title="Optional">
         <span id="apikey_nodejs">
 <a href="#apikey_nodejs" style="color: inherit; text-decoration: inherit;">api<wbr>Key</a>
@@ -833,8 +752,7 @@ All [input](#inputs) properties are implicitly available as output properties. A
         <span class="property-indicator"></span>
         <span class="property-type">string</span>
     </dt>
-    <dd>{{% md %}}Api key associated to the Datadog organization.{{% /md %}}</dd>
-    <dt class="property-optional"
+    <dd>{{% md %}}Api key associated to the Datadog organization.{{% /md %}}</dd><dt class="property-optional"
             title="Optional">
         <span id="applicationkey_nodejs">
 <a href="#applicationkey_nodejs" style="color: inherit; text-decoration: inherit;">application<wbr>Key</a>
@@ -842,8 +760,7 @@ All [input](#inputs) properties are implicitly available as output properties. A
         <span class="property-indicator"></span>
         <span class="property-type">string</span>
     </dt>
-    <dd>{{% md %}}Application key associated to the Datadog organization.{{% /md %}}</dd>
-    <dt class="property-optional"
+    <dd>{{% md %}}Application key associated to the Datadog organization.{{% /md %}}</dd><dt class="property-optional"
             title="Optional">
         <span id="enterpriseappid_nodejs">
 <a href="#enterpriseappid_nodejs" style="color: inherit; text-decoration: inherit;">enterprise<wbr>App<wbr>Id</a>
@@ -851,8 +768,7 @@ All [input](#inputs) properties are implicitly available as output properties. A
         <span class="property-indicator"></span>
         <span class="property-type">string</span>
     </dt>
-    <dd>{{% md %}}The Id of the Enterprise App used for Single sign on.{{% /md %}}</dd>
-    <dt class="property-optional"
+    <dd>{{% md %}}The Id of the Enterprise App used for Single sign on.{{% /md %}}</dd><dt class="property-optional"
             title="Optional">
         <span id="linkingauthcode_nodejs">
 <a href="#linkingauthcode_nodejs" style="color: inherit; text-decoration: inherit;">linking<wbr>Auth<wbr>Code</a>
@@ -860,8 +776,7 @@ All [input](#inputs) properties are implicitly available as output properties. A
         <span class="property-indicator"></span>
         <span class="property-type">string</span>
     </dt>
-    <dd>{{% md %}}The auth code used to linking to an existing datadog organization.{{% /md %}}</dd>
-    <dt class="property-optional"
+    <dd>{{% md %}}The auth code used to linking to an existing datadog organization.{{% /md %}}</dd><dt class="property-optional"
             title="Optional">
         <span id="linkingclientid_nodejs">
 <a href="#linkingclientid_nodejs" style="color: inherit; text-decoration: inherit;">linking<wbr>Client<wbr>Id</a>
@@ -869,8 +784,7 @@ All [input](#inputs) properties are implicitly available as output properties. A
         <span class="property-indicator"></span>
         <span class="property-type">string</span>
     </dt>
-    <dd>{{% md %}}The client_id from an existing in exchange for an auth token to link organization.{{% /md %}}</dd>
-    <dt class="property-optional"
+    <dd>{{% md %}}The client_id from an existing in exchange for an auth token to link organization.{{% /md %}}</dd><dt class="property-optional"
             title="Optional">
         <span id="redirecturi_nodejs">
 <a href="#redirecturi_nodejs" style="color: inherit; text-decoration: inherit;">redirect<wbr>Uri</a>
@@ -878,14 +792,11 @@ All [input](#inputs) properties are implicitly available as output properties. A
         <span class="property-indicator"></span>
         <span class="property-type">string</span>
     </dt>
-    <dd>{{% md %}}The redirect uri for linking.{{% /md %}}</dd>
-</dl>
+    <dd>{{% md %}}The redirect uri for linking.{{% /md %}}</dd></dl>
 {{% /choosable %}}
 
 {{% choosable language python %}}
-<dl class="resources-properties">
-
-    <dt class="property-optional"
+<dl class="resources-properties"><dt class="property-optional"
             title="Optional">
         <span id="api_key_python">
 <a href="#api_key_python" style="color: inherit; text-decoration: inherit;">api_<wbr>key</a>
@@ -893,8 +804,7 @@ All [input](#inputs) properties are implicitly available as output properties. A
         <span class="property-indicator"></span>
         <span class="property-type">str</span>
     </dt>
-    <dd>{{% md %}}Api key associated to the Datadog organization.{{% /md %}}</dd>
-    <dt class="property-optional"
+    <dd>{{% md %}}Api key associated to the Datadog organization.{{% /md %}}</dd><dt class="property-optional"
             title="Optional">
         <span id="application_key_python">
 <a href="#application_key_python" style="color: inherit; text-decoration: inherit;">application_<wbr>key</a>
@@ -902,8 +812,7 @@ All [input](#inputs) properties are implicitly available as output properties. A
         <span class="property-indicator"></span>
         <span class="property-type">str</span>
     </dt>
-    <dd>{{% md %}}Application key associated to the Datadog organization.{{% /md %}}</dd>
-    <dt class="property-optional"
+    <dd>{{% md %}}Application key associated to the Datadog organization.{{% /md %}}</dd><dt class="property-optional"
             title="Optional">
         <span id="enterprise_app_id_python">
 <a href="#enterprise_app_id_python" style="color: inherit; text-decoration: inherit;">enterprise_<wbr>app_<wbr>id</a>
@@ -911,8 +820,7 @@ All [input](#inputs) properties are implicitly available as output properties. A
         <span class="property-indicator"></span>
         <span class="property-type">str</span>
     </dt>
-    <dd>{{% md %}}The Id of the Enterprise App used for Single sign on.{{% /md %}}</dd>
-    <dt class="property-optional"
+    <dd>{{% md %}}The Id of the Enterprise App used for Single sign on.{{% /md %}}</dd><dt class="property-optional"
             title="Optional">
         <span id="linking_auth_code_python">
 <a href="#linking_auth_code_python" style="color: inherit; text-decoration: inherit;">linking_<wbr>auth_<wbr>code</a>
@@ -920,8 +828,7 @@ All [input](#inputs) properties are implicitly available as output properties. A
         <span class="property-indicator"></span>
         <span class="property-type">str</span>
     </dt>
-    <dd>{{% md %}}The auth code used to linking to an existing datadog organization.{{% /md %}}</dd>
-    <dt class="property-optional"
+    <dd>{{% md %}}The auth code used to linking to an existing datadog organization.{{% /md %}}</dd><dt class="property-optional"
             title="Optional">
         <span id="linking_client_id_python">
 <a href="#linking_client_id_python" style="color: inherit; text-decoration: inherit;">linking_<wbr>client_<wbr>id</a>
@@ -929,8 +836,7 @@ All [input](#inputs) properties are implicitly available as output properties. A
         <span class="property-indicator"></span>
         <span class="property-type">str</span>
     </dt>
-    <dd>{{% md %}}The client_id from an existing in exchange for an auth token to link organization.{{% /md %}}</dd>
-    <dt class="property-optional"
+    <dd>{{% md %}}The client_id from an existing in exchange for an auth token to link organization.{{% /md %}}</dd><dt class="property-optional"
             title="Optional">
         <span id="redirect_uri_python">
 <a href="#redirect_uri_python" style="color: inherit; text-decoration: inherit;">redirect_<wbr>uri</a>
@@ -938,16 +844,13 @@ All [input](#inputs) properties are implicitly available as output properties. A
         <span class="property-indicator"></span>
         <span class="property-type">str</span>
     </dt>
-    <dd>{{% md %}}The redirect uri for linking.{{% /md %}}</dd>
-</dl>
+    <dd>{{% md %}}The redirect uri for linking.{{% /md %}}</dd></dl>
 {{% /choosable %}}
 
 <h4 id="datadogorganizationpropertiesresponse">Datadog<wbr>Organization<wbr>Properties<wbr>Response</h4>
 
 {{% choosable language csharp %}}
-<dl class="resources-properties">
-
-    <dt class="property-required"
+<dl class="resources-properties"><dt class="property-required"
             title="Required">
         <span id="id_csharp">
 <a href="#id_csharp" style="color: inherit; text-decoration: inherit;">Id</a>
@@ -955,8 +858,7 @@ All [input](#inputs) properties are implicitly available as output properties. A
         <span class="property-indicator"></span>
         <span class="property-type">string</span>
     </dt>
-    <dd>{{% md %}}Id of the Datadog organization.{{% /md %}}</dd>
-    <dt class="property-required"
+    <dd>{{% md %}}Id of the Datadog organization.{{% /md %}}</dd><dt class="property-required"
             title="Required">
         <span id="name_csharp">
 <a href="#name_csharp" style="color: inherit; text-decoration: inherit;">Name</a>
@@ -964,8 +866,7 @@ All [input](#inputs) properties are implicitly available as output properties. A
         <span class="property-indicator"></span>
         <span class="property-type">string</span>
     </dt>
-    <dd>{{% md %}}Name of the Datadog organization.{{% /md %}}</dd>
-    <dt class="property-optional"
+    <dd>{{% md %}}Name of the Datadog organization.{{% /md %}}</dd><dt class="property-optional"
             title="Optional">
         <span id="apikey_csharp">
 <a href="#apikey_csharp" style="color: inherit; text-decoration: inherit;">Api<wbr>Key</a>
@@ -973,8 +874,7 @@ All [input](#inputs) properties are implicitly available as output properties. A
         <span class="property-indicator"></span>
         <span class="property-type">string</span>
     </dt>
-    <dd>{{% md %}}Api key associated to the Datadog organization.{{% /md %}}</dd>
-    <dt class="property-optional"
+    <dd>{{% md %}}Api key associated to the Datadog organization.{{% /md %}}</dd><dt class="property-optional"
             title="Optional">
         <span id="applicationkey_csharp">
 <a href="#applicationkey_csharp" style="color: inherit; text-decoration: inherit;">Application<wbr>Key</a>
@@ -982,8 +882,7 @@ All [input](#inputs) properties are implicitly available as output properties. A
         <span class="property-indicator"></span>
         <span class="property-type">string</span>
     </dt>
-    <dd>{{% md %}}Application key associated to the Datadog organization.{{% /md %}}</dd>
-    <dt class="property-optional"
+    <dd>{{% md %}}Application key associated to the Datadog organization.{{% /md %}}</dd><dt class="property-optional"
             title="Optional">
         <span id="enterpriseappid_csharp">
 <a href="#enterpriseappid_csharp" style="color: inherit; text-decoration: inherit;">Enterprise<wbr>App<wbr>Id</a>
@@ -991,8 +890,7 @@ All [input](#inputs) properties are implicitly available as output properties. A
         <span class="property-indicator"></span>
         <span class="property-type">string</span>
     </dt>
-    <dd>{{% md %}}The Id of the Enterprise App used for Single sign on.{{% /md %}}</dd>
-    <dt class="property-optional"
+    <dd>{{% md %}}The Id of the Enterprise App used for Single sign on.{{% /md %}}</dd><dt class="property-optional"
             title="Optional">
         <span id="linkingauthcode_csharp">
 <a href="#linkingauthcode_csharp" style="color: inherit; text-decoration: inherit;">Linking<wbr>Auth<wbr>Code</a>
@@ -1000,8 +898,7 @@ All [input](#inputs) properties are implicitly available as output properties. A
         <span class="property-indicator"></span>
         <span class="property-type">string</span>
     </dt>
-    <dd>{{% md %}}The auth code used to linking to an existing datadog organization.{{% /md %}}</dd>
-    <dt class="property-optional"
+    <dd>{{% md %}}The auth code used to linking to an existing datadog organization.{{% /md %}}</dd><dt class="property-optional"
             title="Optional">
         <span id="linkingclientid_csharp">
 <a href="#linkingclientid_csharp" style="color: inherit; text-decoration: inherit;">Linking<wbr>Client<wbr>Id</a>
@@ -1009,8 +906,7 @@ All [input](#inputs) properties are implicitly available as output properties. A
         <span class="property-indicator"></span>
         <span class="property-type">string</span>
     </dt>
-    <dd>{{% md %}}The client_id from an existing in exchange for an auth token to link organization.{{% /md %}}</dd>
-    <dt class="property-optional"
+    <dd>{{% md %}}The client_id from an existing in exchange for an auth token to link organization.{{% /md %}}</dd><dt class="property-optional"
             title="Optional">
         <span id="redirecturi_csharp">
 <a href="#redirecturi_csharp" style="color: inherit; text-decoration: inherit;">Redirect<wbr>Uri</a>
@@ -1018,14 +914,11 @@ All [input](#inputs) properties are implicitly available as output properties. A
         <span class="property-indicator"></span>
         <span class="property-type">string</span>
     </dt>
-    <dd>{{% md %}}The redirect uri for linking.{{% /md %}}</dd>
-</dl>
+    <dd>{{% md %}}The redirect uri for linking.{{% /md %}}</dd></dl>
 {{% /choosable %}}
 
 {{% choosable language go %}}
-<dl class="resources-properties">
-
-    <dt class="property-required"
+<dl class="resources-properties"><dt class="property-required"
             title="Required">
         <span id="id_go">
 <a href="#id_go" style="color: inherit; text-decoration: inherit;">Id</a>
@@ -1033,8 +926,7 @@ All [input](#inputs) properties are implicitly available as output properties. A
         <span class="property-indicator"></span>
         <span class="property-type">string</span>
     </dt>
-    <dd>{{% md %}}Id of the Datadog organization.{{% /md %}}</dd>
-    <dt class="property-required"
+    <dd>{{% md %}}Id of the Datadog organization.{{% /md %}}</dd><dt class="property-required"
             title="Required">
         <span id="name_go">
 <a href="#name_go" style="color: inherit; text-decoration: inherit;">Name</a>
@@ -1042,8 +934,7 @@ All [input](#inputs) properties are implicitly available as output properties. A
         <span class="property-indicator"></span>
         <span class="property-type">string</span>
     </dt>
-    <dd>{{% md %}}Name of the Datadog organization.{{% /md %}}</dd>
-    <dt class="property-optional"
+    <dd>{{% md %}}Name of the Datadog organization.{{% /md %}}</dd><dt class="property-optional"
             title="Optional">
         <span id="apikey_go">
 <a href="#apikey_go" style="color: inherit; text-decoration: inherit;">Api<wbr>Key</a>
@@ -1051,8 +942,7 @@ All [input](#inputs) properties are implicitly available as output properties. A
         <span class="property-indicator"></span>
         <span class="property-type">string</span>
     </dt>
-    <dd>{{% md %}}Api key associated to the Datadog organization.{{% /md %}}</dd>
-    <dt class="property-optional"
+    <dd>{{% md %}}Api key associated to the Datadog organization.{{% /md %}}</dd><dt class="property-optional"
             title="Optional">
         <span id="applicationkey_go">
 <a href="#applicationkey_go" style="color: inherit; text-decoration: inherit;">Application<wbr>Key</a>
@@ -1060,8 +950,7 @@ All [input](#inputs) properties are implicitly available as output properties. A
         <span class="property-indicator"></span>
         <span class="property-type">string</span>
     </dt>
-    <dd>{{% md %}}Application key associated to the Datadog organization.{{% /md %}}</dd>
-    <dt class="property-optional"
+    <dd>{{% md %}}Application key associated to the Datadog organization.{{% /md %}}</dd><dt class="property-optional"
             title="Optional">
         <span id="enterpriseappid_go">
 <a href="#enterpriseappid_go" style="color: inherit; text-decoration: inherit;">Enterprise<wbr>App<wbr>Id</a>
@@ -1069,8 +958,7 @@ All [input](#inputs) properties are implicitly available as output properties. A
         <span class="property-indicator"></span>
         <span class="property-type">string</span>
     </dt>
-    <dd>{{% md %}}The Id of the Enterprise App used for Single sign on.{{% /md %}}</dd>
-    <dt class="property-optional"
+    <dd>{{% md %}}The Id of the Enterprise App used for Single sign on.{{% /md %}}</dd><dt class="property-optional"
             title="Optional">
         <span id="linkingauthcode_go">
 <a href="#linkingauthcode_go" style="color: inherit; text-decoration: inherit;">Linking<wbr>Auth<wbr>Code</a>
@@ -1078,8 +966,7 @@ All [input](#inputs) properties are implicitly available as output properties. A
         <span class="property-indicator"></span>
         <span class="property-type">string</span>
     </dt>
-    <dd>{{% md %}}The auth code used to linking to an existing datadog organization.{{% /md %}}</dd>
-    <dt class="property-optional"
+    <dd>{{% md %}}The auth code used to linking to an existing datadog organization.{{% /md %}}</dd><dt class="property-optional"
             title="Optional">
         <span id="linkingclientid_go">
 <a href="#linkingclientid_go" style="color: inherit; text-decoration: inherit;">Linking<wbr>Client<wbr>Id</a>
@@ -1087,8 +974,7 @@ All [input](#inputs) properties are implicitly available as output properties. A
         <span class="property-indicator"></span>
         <span class="property-type">string</span>
     </dt>
-    <dd>{{% md %}}The client_id from an existing in exchange for an auth token to link organization.{{% /md %}}</dd>
-    <dt class="property-optional"
+    <dd>{{% md %}}The client_id from an existing in exchange for an auth token to link organization.{{% /md %}}</dd><dt class="property-optional"
             title="Optional">
         <span id="redirecturi_go">
 <a href="#redirecturi_go" style="color: inherit; text-decoration: inherit;">Redirect<wbr>Uri</a>
@@ -1096,14 +982,11 @@ All [input](#inputs) properties are implicitly available as output properties. A
         <span class="property-indicator"></span>
         <span class="property-type">string</span>
     </dt>
-    <dd>{{% md %}}The redirect uri for linking.{{% /md %}}</dd>
-</dl>
+    <dd>{{% md %}}The redirect uri for linking.{{% /md %}}</dd></dl>
 {{% /choosable %}}
 
 {{% choosable language nodejs %}}
-<dl class="resources-properties">
-
-    <dt class="property-required"
+<dl class="resources-properties"><dt class="property-required"
             title="Required">
         <span id="id_nodejs">
 <a href="#id_nodejs" style="color: inherit; text-decoration: inherit;">id</a>
@@ -1111,8 +994,7 @@ All [input](#inputs) properties are implicitly available as output properties. A
         <span class="property-indicator"></span>
         <span class="property-type">string</span>
     </dt>
-    <dd>{{% md %}}Id of the Datadog organization.{{% /md %}}</dd>
-    <dt class="property-required"
+    <dd>{{% md %}}Id of the Datadog organization.{{% /md %}}</dd><dt class="property-required"
             title="Required">
         <span id="name_nodejs">
 <a href="#name_nodejs" style="color: inherit; text-decoration: inherit;">name</a>
@@ -1120,8 +1002,7 @@ All [input](#inputs) properties are implicitly available as output properties. A
         <span class="property-indicator"></span>
         <span class="property-type">string</span>
     </dt>
-    <dd>{{% md %}}Name of the Datadog organization.{{% /md %}}</dd>
-    <dt class="property-optional"
+    <dd>{{% md %}}Name of the Datadog organization.{{% /md %}}</dd><dt class="property-optional"
             title="Optional">
         <span id="apikey_nodejs">
 <a href="#apikey_nodejs" style="color: inherit; text-decoration: inherit;">api<wbr>Key</a>
@@ -1129,8 +1010,7 @@ All [input](#inputs) properties are implicitly available as output properties. A
         <span class="property-indicator"></span>
         <span class="property-type">string</span>
     </dt>
-    <dd>{{% md %}}Api key associated to the Datadog organization.{{% /md %}}</dd>
-    <dt class="property-optional"
+    <dd>{{% md %}}Api key associated to the Datadog organization.{{% /md %}}</dd><dt class="property-optional"
             title="Optional">
         <span id="applicationkey_nodejs">
 <a href="#applicationkey_nodejs" style="color: inherit; text-decoration: inherit;">application<wbr>Key</a>
@@ -1138,8 +1018,7 @@ All [input](#inputs) properties are implicitly available as output properties. A
         <span class="property-indicator"></span>
         <span class="property-type">string</span>
     </dt>
-    <dd>{{% md %}}Application key associated to the Datadog organization.{{% /md %}}</dd>
-    <dt class="property-optional"
+    <dd>{{% md %}}Application key associated to the Datadog organization.{{% /md %}}</dd><dt class="property-optional"
             title="Optional">
         <span id="enterpriseappid_nodejs">
 <a href="#enterpriseappid_nodejs" style="color: inherit; text-decoration: inherit;">enterprise<wbr>App<wbr>Id</a>
@@ -1147,8 +1026,7 @@ All [input](#inputs) properties are implicitly available as output properties. A
         <span class="property-indicator"></span>
         <span class="property-type">string</span>
     </dt>
-    <dd>{{% md %}}The Id of the Enterprise App used for Single sign on.{{% /md %}}</dd>
-    <dt class="property-optional"
+    <dd>{{% md %}}The Id of the Enterprise App used for Single sign on.{{% /md %}}</dd><dt class="property-optional"
             title="Optional">
         <span id="linkingauthcode_nodejs">
 <a href="#linkingauthcode_nodejs" style="color: inherit; text-decoration: inherit;">linking<wbr>Auth<wbr>Code</a>
@@ -1156,8 +1034,7 @@ All [input](#inputs) properties are implicitly available as output properties. A
         <span class="property-indicator"></span>
         <span class="property-type">string</span>
     </dt>
-    <dd>{{% md %}}The auth code used to linking to an existing datadog organization.{{% /md %}}</dd>
-    <dt class="property-optional"
+    <dd>{{% md %}}The auth code used to linking to an existing datadog organization.{{% /md %}}</dd><dt class="property-optional"
             title="Optional">
         <span id="linkingclientid_nodejs">
 <a href="#linkingclientid_nodejs" style="color: inherit; text-decoration: inherit;">linking<wbr>Client<wbr>Id</a>
@@ -1165,8 +1042,7 @@ All [input](#inputs) properties are implicitly available as output properties. A
         <span class="property-indicator"></span>
         <span class="property-type">string</span>
     </dt>
-    <dd>{{% md %}}The client_id from an existing in exchange for an auth token to link organization.{{% /md %}}</dd>
-    <dt class="property-optional"
+    <dd>{{% md %}}The client_id from an existing in exchange for an auth token to link organization.{{% /md %}}</dd><dt class="property-optional"
             title="Optional">
         <span id="redirecturi_nodejs">
 <a href="#redirecturi_nodejs" style="color: inherit; text-decoration: inherit;">redirect<wbr>Uri</a>
@@ -1174,14 +1050,11 @@ All [input](#inputs) properties are implicitly available as output properties. A
         <span class="property-indicator"></span>
         <span class="property-type">string</span>
     </dt>
-    <dd>{{% md %}}The redirect uri for linking.{{% /md %}}</dd>
-</dl>
+    <dd>{{% md %}}The redirect uri for linking.{{% /md %}}</dd></dl>
 {{% /choosable %}}
 
 {{% choosable language python %}}
-<dl class="resources-properties">
-
-    <dt class="property-required"
+<dl class="resources-properties"><dt class="property-required"
             title="Required">
         <span id="id_python">
 <a href="#id_python" style="color: inherit; text-decoration: inherit;">id</a>
@@ -1189,8 +1062,7 @@ All [input](#inputs) properties are implicitly available as output properties. A
         <span class="property-indicator"></span>
         <span class="property-type">str</span>
     </dt>
-    <dd>{{% md %}}Id of the Datadog organization.{{% /md %}}</dd>
-    <dt class="property-required"
+    <dd>{{% md %}}Id of the Datadog organization.{{% /md %}}</dd><dt class="property-required"
             title="Required">
         <span id="name_python">
 <a href="#name_python" style="color: inherit; text-decoration: inherit;">name</a>
@@ -1198,8 +1070,7 @@ All [input](#inputs) properties are implicitly available as output properties. A
         <span class="property-indicator"></span>
         <span class="property-type">str</span>
     </dt>
-    <dd>{{% md %}}Name of the Datadog organization.{{% /md %}}</dd>
-    <dt class="property-optional"
+    <dd>{{% md %}}Name of the Datadog organization.{{% /md %}}</dd><dt class="property-optional"
             title="Optional">
         <span id="api_key_python">
 <a href="#api_key_python" style="color: inherit; text-decoration: inherit;">api_<wbr>key</a>
@@ -1207,8 +1078,7 @@ All [input](#inputs) properties are implicitly available as output properties. A
         <span class="property-indicator"></span>
         <span class="property-type">str</span>
     </dt>
-    <dd>{{% md %}}Api key associated to the Datadog organization.{{% /md %}}</dd>
-    <dt class="property-optional"
+    <dd>{{% md %}}Api key associated to the Datadog organization.{{% /md %}}</dd><dt class="property-optional"
             title="Optional">
         <span id="application_key_python">
 <a href="#application_key_python" style="color: inherit; text-decoration: inherit;">application_<wbr>key</a>
@@ -1216,8 +1086,7 @@ All [input](#inputs) properties are implicitly available as output properties. A
         <span class="property-indicator"></span>
         <span class="property-type">str</span>
     </dt>
-    <dd>{{% md %}}Application key associated to the Datadog organization.{{% /md %}}</dd>
-    <dt class="property-optional"
+    <dd>{{% md %}}Application key associated to the Datadog organization.{{% /md %}}</dd><dt class="property-optional"
             title="Optional">
         <span id="enterprise_app_id_python">
 <a href="#enterprise_app_id_python" style="color: inherit; text-decoration: inherit;">enterprise_<wbr>app_<wbr>id</a>
@@ -1225,8 +1094,7 @@ All [input](#inputs) properties are implicitly available as output properties. A
         <span class="property-indicator"></span>
         <span class="property-type">str</span>
     </dt>
-    <dd>{{% md %}}The Id of the Enterprise App used for Single sign on.{{% /md %}}</dd>
-    <dt class="property-optional"
+    <dd>{{% md %}}The Id of the Enterprise App used for Single sign on.{{% /md %}}</dd><dt class="property-optional"
             title="Optional">
         <span id="linking_auth_code_python">
 <a href="#linking_auth_code_python" style="color: inherit; text-decoration: inherit;">linking_<wbr>auth_<wbr>code</a>
@@ -1234,8 +1102,7 @@ All [input](#inputs) properties are implicitly available as output properties. A
         <span class="property-indicator"></span>
         <span class="property-type">str</span>
     </dt>
-    <dd>{{% md %}}The auth code used to linking to an existing datadog organization.{{% /md %}}</dd>
-    <dt class="property-optional"
+    <dd>{{% md %}}The auth code used to linking to an existing datadog organization.{{% /md %}}</dd><dt class="property-optional"
             title="Optional">
         <span id="linking_client_id_python">
 <a href="#linking_client_id_python" style="color: inherit; text-decoration: inherit;">linking_<wbr>client_<wbr>id</a>
@@ -1243,8 +1110,7 @@ All [input](#inputs) properties are implicitly available as output properties. A
         <span class="property-indicator"></span>
         <span class="property-type">str</span>
     </dt>
-    <dd>{{% md %}}The client_id from an existing in exchange for an auth token to link organization.{{% /md %}}</dd>
-    <dt class="property-optional"
+    <dd>{{% md %}}The client_id from an existing in exchange for an auth token to link organization.{{% /md %}}</dd><dt class="property-optional"
             title="Optional">
         <span id="redirect_uri_python">
 <a href="#redirect_uri_python" style="color: inherit; text-decoration: inherit;">redirect_<wbr>uri</a>
@@ -1252,16 +1118,13 @@ All [input](#inputs) properties are implicitly available as output properties. A
         <span class="property-indicator"></span>
         <span class="property-type">str</span>
     </dt>
-    <dd>{{% md %}}The redirect uri for linking.{{% /md %}}</dd>
-</dl>
+    <dd>{{% md %}}The redirect uri for linking.{{% /md %}}</dd></dl>
 {{% /choosable %}}
 
 <h4 id="identityproperties">Identity<wbr>Properties</h4>
 
 {{% choosable language csharp %}}
-<dl class="resources-properties">
-
-    <dt class="property-optional"
+<dl class="resources-properties"><dt class="property-optional"
             title="Optional">
         <span id="type_csharp">
 <a href="#type_csharp" style="color: inherit; text-decoration: inherit;">Type</a>
@@ -1269,14 +1132,11 @@ All [input](#inputs) properties are implicitly available as output properties. A
         <span class="property-indicator"></span>
         <span class="property-type">string | <a href="#managedidentitytypes">Pulumi.<wbr>Azure<wbr>Native.<wbr>Datadog.<wbr>Managed<wbr>Identity<wbr>Types</a></span>
     </dt>
-    <dd>{{% md %}}Identity type{{% /md %}}</dd>
-</dl>
+    <dd>{{% md %}}Identity type{{% /md %}}</dd></dl>
 {{% /choosable %}}
 
 {{% choosable language go %}}
-<dl class="resources-properties">
-
-    <dt class="property-optional"
+<dl class="resources-properties"><dt class="property-optional"
             title="Optional">
         <span id="type_go">
 <a href="#type_go" style="color: inherit; text-decoration: inherit;">Type</a>
@@ -1284,14 +1144,11 @@ All [input](#inputs) properties are implicitly available as output properties. A
         <span class="property-indicator"></span>
         <span class="property-type">string | <a href="#managedidentitytypes">Managed<wbr>Identity<wbr>Types</a></span>
     </dt>
-    <dd>{{% md %}}Identity type{{% /md %}}</dd>
-</dl>
+    <dd>{{% md %}}Identity type{{% /md %}}</dd></dl>
 {{% /choosable %}}
 
 {{% choosable language nodejs %}}
-<dl class="resources-properties">
-
-    <dt class="property-optional"
+<dl class="resources-properties"><dt class="property-optional"
             title="Optional">
         <span id="type_nodejs">
 <a href="#type_nodejs" style="color: inherit; text-decoration: inherit;">type</a>
@@ -1299,14 +1156,11 @@ All [input](#inputs) properties are implicitly available as output properties. A
         <span class="property-indicator"></span>
         <span class="property-type">string | <a href="#managedidentitytypes">Managed<wbr>Identity<wbr>Types</a></span>
     </dt>
-    <dd>{{% md %}}Identity type{{% /md %}}</dd>
-</dl>
+    <dd>{{% md %}}Identity type{{% /md %}}</dd></dl>
 {{% /choosable %}}
 
 {{% choosable language python %}}
-<dl class="resources-properties">
-
-    <dt class="property-optional"
+<dl class="resources-properties"><dt class="property-optional"
             title="Optional">
         <span id="type_python">
 <a href="#type_python" style="color: inherit; text-decoration: inherit;">type</a>
@@ -1314,16 +1168,13 @@ All [input](#inputs) properties are implicitly available as output properties. A
         <span class="property-indicator"></span>
         <span class="property-type">str | <a href="#managedidentitytypes">Managed<wbr>Identity<wbr>Types</a></span>
     </dt>
-    <dd>{{% md %}}Identity type{{% /md %}}</dd>
-</dl>
+    <dd>{{% md %}}Identity type{{% /md %}}</dd></dl>
 {{% /choosable %}}
 
 <h4 id="identitypropertiesresponse">Identity<wbr>Properties<wbr>Response</h4>
 
 {{% choosable language csharp %}}
-<dl class="resources-properties">
-
-    <dt class="property-required"
+<dl class="resources-properties"><dt class="property-required"
             title="Required">
         <span id="principalid_csharp">
 <a href="#principalid_csharp" style="color: inherit; text-decoration: inherit;">Principal<wbr>Id</a>
@@ -1331,8 +1182,7 @@ All [input](#inputs) properties are implicitly available as output properties. A
         <span class="property-indicator"></span>
         <span class="property-type">string</span>
     </dt>
-    <dd>{{% md %}}The identity ID.{{% /md %}}</dd>
-    <dt class="property-required"
+    <dd>{{% md %}}The identity ID.{{% /md %}}</dd><dt class="property-required"
             title="Required">
         <span id="tenantid_csharp">
 <a href="#tenantid_csharp" style="color: inherit; text-decoration: inherit;">Tenant<wbr>Id</a>
@@ -1340,8 +1190,7 @@ All [input](#inputs) properties are implicitly available as output properties. A
         <span class="property-indicator"></span>
         <span class="property-type">string</span>
     </dt>
-    <dd>{{% md %}}The tenant ID of resource.{{% /md %}}</dd>
-    <dt class="property-optional"
+    <dd>{{% md %}}The tenant ID of resource.{{% /md %}}</dd><dt class="property-optional"
             title="Optional">
         <span id="type_csharp">
 <a href="#type_csharp" style="color: inherit; text-decoration: inherit;">Type</a>
@@ -1349,14 +1198,11 @@ All [input](#inputs) properties are implicitly available as output properties. A
         <span class="property-indicator"></span>
         <span class="property-type">string</span>
     </dt>
-    <dd>{{% md %}}Identity type{{% /md %}}</dd>
-</dl>
+    <dd>{{% md %}}Identity type{{% /md %}}</dd></dl>
 {{% /choosable %}}
 
 {{% choosable language go %}}
-<dl class="resources-properties">
-
-    <dt class="property-required"
+<dl class="resources-properties"><dt class="property-required"
             title="Required">
         <span id="principalid_go">
 <a href="#principalid_go" style="color: inherit; text-decoration: inherit;">Principal<wbr>Id</a>
@@ -1364,8 +1210,7 @@ All [input](#inputs) properties are implicitly available as output properties. A
         <span class="property-indicator"></span>
         <span class="property-type">string</span>
     </dt>
-    <dd>{{% md %}}The identity ID.{{% /md %}}</dd>
-    <dt class="property-required"
+    <dd>{{% md %}}The identity ID.{{% /md %}}</dd><dt class="property-required"
             title="Required">
         <span id="tenantid_go">
 <a href="#tenantid_go" style="color: inherit; text-decoration: inherit;">Tenant<wbr>Id</a>
@@ -1373,8 +1218,7 @@ All [input](#inputs) properties are implicitly available as output properties. A
         <span class="property-indicator"></span>
         <span class="property-type">string</span>
     </dt>
-    <dd>{{% md %}}The tenant ID of resource.{{% /md %}}</dd>
-    <dt class="property-optional"
+    <dd>{{% md %}}The tenant ID of resource.{{% /md %}}</dd><dt class="property-optional"
             title="Optional">
         <span id="type_go">
 <a href="#type_go" style="color: inherit; text-decoration: inherit;">Type</a>
@@ -1382,14 +1226,11 @@ All [input](#inputs) properties are implicitly available as output properties. A
         <span class="property-indicator"></span>
         <span class="property-type">string</span>
     </dt>
-    <dd>{{% md %}}Identity type{{% /md %}}</dd>
-</dl>
+    <dd>{{% md %}}Identity type{{% /md %}}</dd></dl>
 {{% /choosable %}}
 
 {{% choosable language nodejs %}}
-<dl class="resources-properties">
-
-    <dt class="property-required"
+<dl class="resources-properties"><dt class="property-required"
             title="Required">
         <span id="principalid_nodejs">
 <a href="#principalid_nodejs" style="color: inherit; text-decoration: inherit;">principal<wbr>Id</a>
@@ -1397,8 +1238,7 @@ All [input](#inputs) properties are implicitly available as output properties. A
         <span class="property-indicator"></span>
         <span class="property-type">string</span>
     </dt>
-    <dd>{{% md %}}The identity ID.{{% /md %}}</dd>
-    <dt class="property-required"
+    <dd>{{% md %}}The identity ID.{{% /md %}}</dd><dt class="property-required"
             title="Required">
         <span id="tenantid_nodejs">
 <a href="#tenantid_nodejs" style="color: inherit; text-decoration: inherit;">tenant<wbr>Id</a>
@@ -1406,8 +1246,7 @@ All [input](#inputs) properties are implicitly available as output properties. A
         <span class="property-indicator"></span>
         <span class="property-type">string</span>
     </dt>
-    <dd>{{% md %}}The tenant ID of resource.{{% /md %}}</dd>
-    <dt class="property-optional"
+    <dd>{{% md %}}The tenant ID of resource.{{% /md %}}</dd><dt class="property-optional"
             title="Optional">
         <span id="type_nodejs">
 <a href="#type_nodejs" style="color: inherit; text-decoration: inherit;">type</a>
@@ -1415,14 +1254,11 @@ All [input](#inputs) properties are implicitly available as output properties. A
         <span class="property-indicator"></span>
         <span class="property-type">string</span>
     </dt>
-    <dd>{{% md %}}Identity type{{% /md %}}</dd>
-</dl>
+    <dd>{{% md %}}Identity type{{% /md %}}</dd></dl>
 {{% /choosable %}}
 
 {{% choosable language python %}}
-<dl class="resources-properties">
-
-    <dt class="property-required"
+<dl class="resources-properties"><dt class="property-required"
             title="Required">
         <span id="principal_id_python">
 <a href="#principal_id_python" style="color: inherit; text-decoration: inherit;">principal_<wbr>id</a>
@@ -1430,8 +1266,7 @@ All [input](#inputs) properties are implicitly available as output properties. A
         <span class="property-indicator"></span>
         <span class="property-type">str</span>
     </dt>
-    <dd>{{% md %}}The identity ID.{{% /md %}}</dd>
-    <dt class="property-required"
+    <dd>{{% md %}}The identity ID.{{% /md %}}</dd><dt class="property-required"
             title="Required">
         <span id="tenant_id_python">
 <a href="#tenant_id_python" style="color: inherit; text-decoration: inherit;">tenant_<wbr>id</a>
@@ -1439,8 +1274,7 @@ All [input](#inputs) properties are implicitly available as output properties. A
         <span class="property-indicator"></span>
         <span class="property-type">str</span>
     </dt>
-    <dd>{{% md %}}The tenant ID of resource.{{% /md %}}</dd>
-    <dt class="property-optional"
+    <dd>{{% md %}}The tenant ID of resource.{{% /md %}}</dd><dt class="property-optional"
             title="Optional">
         <span id="type_python">
 <a href="#type_python" style="color: inherit; text-decoration: inherit;">type</a>
@@ -1448,54 +1282,39 @@ All [input](#inputs) properties are implicitly available as output properties. A
         <span class="property-indicator"></span>
         <span class="property-type">str</span>
     </dt>
-    <dd>{{% md %}}Identity type{{% /md %}}</dd>
-</dl>
+    <dd>{{% md %}}Identity type{{% /md %}}</dd></dl>
 {{% /choosable %}}
 
 <h4 id="managedidentitytypes">Managed<wbr>Identity<wbr>Types</h4>
 
 {{% choosable language csharp %}}
-<dl class="tabular">
-    <dt>System<wbr>Assigned</dt>
-    <dd>SystemAssigned</dd>
-    <dt>User<wbr>Assigned</dt>
-    <dd>UserAssigned</dd>
-</dl>
+<dl class="tabular"><dt>System<wbr>Assigned</dt>
+    <dd>SystemAssigned</dd><dt>User<wbr>Assigned</dt>
+    <dd>UserAssigned</dd></dl>
 {{% /choosable %}}
 
 {{% choosable language go %}}
-<dl class="tabular">
-    <dt>Managed<wbr>Identity<wbr>Types<wbr>System<wbr>Assigned</dt>
-    <dd>SystemAssigned</dd>
-    <dt>Managed<wbr>Identity<wbr>Types<wbr>User<wbr>Assigned</dt>
-    <dd>UserAssigned</dd>
-</dl>
+<dl class="tabular"><dt>Managed<wbr>Identity<wbr>Types<wbr>System<wbr>Assigned</dt>
+    <dd>SystemAssigned</dd><dt>Managed<wbr>Identity<wbr>Types<wbr>User<wbr>Assigned</dt>
+    <dd>UserAssigned</dd></dl>
 {{% /choosable %}}
 
 {{% choosable language nodejs %}}
-<dl class="tabular">
-    <dt>System<wbr>Assigned</dt>
-    <dd>SystemAssigned</dd>
-    <dt>User<wbr>Assigned</dt>
-    <dd>UserAssigned</dd>
-</dl>
+<dl class="tabular"><dt>System<wbr>Assigned</dt>
+    <dd>SystemAssigned</dd><dt>User<wbr>Assigned</dt>
+    <dd>UserAssigned</dd></dl>
 {{% /choosable %}}
 
 {{% choosable language python %}}
-<dl class="tabular">
-    <dt>SYSTEM_ASSIGNED</dt>
-    <dd>SystemAssigned</dd>
-    <dt>USER_ASSIGNED</dt>
-    <dd>UserAssigned</dd>
-</dl>
+<dl class="tabular"><dt>SYSTEM_ASSIGNED</dt>
+    <dd>SystemAssigned</dd><dt>USER_ASSIGNED</dt>
+    <dd>UserAssigned</dd></dl>
 {{% /choosable %}}
 
 <h4 id="monitorproperties">Monitor<wbr>Properties</h4>
 
 {{% choosable language csharp %}}
-<dl class="resources-properties">
-
-    <dt class="property-optional"
+<dl class="resources-properties"><dt class="property-optional"
             title="Optional">
         <span id="datadogorganizationproperties_csharp">
 <a href="#datadogorganizationproperties_csharp" style="color: inherit; text-decoration: inherit;">Datadog<wbr>Organization<wbr>Properties</a>
@@ -1503,8 +1322,7 @@ All [input](#inputs) properties are implicitly available as output properties. A
         <span class="property-indicator"></span>
         <span class="property-type"><a href="#datadogorganizationproperties">Pulumi.<wbr>Azure<wbr>Native.<wbr>Datadog.<wbr>Inputs.<wbr>Datadog<wbr>Organization<wbr>Properties<wbr>Args</a></span>
     </dt>
-    <dd>{{% md %}}Datadog organization properties{{% /md %}}</dd>
-    <dt class="property-optional"
+    <dd>{{% md %}}Datadog organization properties{{% /md %}}</dd><dt class="property-optional"
             title="Optional">
         <span id="monitoringstatus_csharp">
 <a href="#monitoringstatus_csharp" style="color: inherit; text-decoration: inherit;">Monitoring<wbr>Status</a>
@@ -1512,8 +1330,7 @@ All [input](#inputs) properties are implicitly available as output properties. A
         <span class="property-indicator"></span>
         <span class="property-type">string | <a href="#monitoringstatus">Pulumi.<wbr>Azure<wbr>Native.<wbr>Datadog.<wbr>Monitoring<wbr>Status</a></span>
     </dt>
-    <dd>{{% md %}}Flag specifying if the resource monitoring is enabled or disabled.{{% /md %}}</dd>
-    <dt class="property-optional"
+    <dd>{{% md %}}Flag specifying if the resource monitoring is enabled or disabled.{{% /md %}}</dd><dt class="property-optional"
             title="Optional">
         <span id="provisioningstate_csharp">
 <a href="#provisioningstate_csharp" style="color: inherit; text-decoration: inherit;">Provisioning<wbr>State</a>
@@ -1521,8 +1338,7 @@ All [input](#inputs) properties are implicitly available as output properties. A
         <span class="property-indicator"></span>
         <span class="property-type">string | <a href="#provisioningstate">Pulumi.<wbr>Azure<wbr>Native.<wbr>Datadog.<wbr>Provisioning<wbr>State</a></span>
     </dt>
-    <dd>{{% md %}}{{% /md %}}</dd>
-    <dt class="property-optional"
+    <dd>{{% md %}}{{% /md %}}</dd><dt class="property-optional"
             title="Optional">
         <span id="userinfo_csharp">
 <a href="#userinfo_csharp" style="color: inherit; text-decoration: inherit;">User<wbr>Info</a>
@@ -1530,14 +1346,11 @@ All [input](#inputs) properties are implicitly available as output properties. A
         <span class="property-indicator"></span>
         <span class="property-type"><a href="#userinfo">Pulumi.<wbr>Azure<wbr>Native.<wbr>Datadog.<wbr>Inputs.<wbr>User<wbr>Info<wbr>Args</a></span>
     </dt>
-    <dd>{{% md %}}User info{{% /md %}}</dd>
-</dl>
+    <dd>{{% md %}}User info{{% /md %}}</dd></dl>
 {{% /choosable %}}
 
 {{% choosable language go %}}
-<dl class="resources-properties">
-
-    <dt class="property-optional"
+<dl class="resources-properties"><dt class="property-optional"
             title="Optional">
         <span id="datadogorganizationproperties_go">
 <a href="#datadogorganizationproperties_go" style="color: inherit; text-decoration: inherit;">Datadog<wbr>Organization<wbr>Properties</a>
@@ -1545,8 +1358,7 @@ All [input](#inputs) properties are implicitly available as output properties. A
         <span class="property-indicator"></span>
         <span class="property-type"><a href="#datadogorganizationproperties">Datadog<wbr>Organization<wbr>Properties</a></span>
     </dt>
-    <dd>{{% md %}}Datadog organization properties{{% /md %}}</dd>
-    <dt class="property-optional"
+    <dd>{{% md %}}Datadog organization properties{{% /md %}}</dd><dt class="property-optional"
             title="Optional">
         <span id="monitoringstatus_go">
 <a href="#monitoringstatus_go" style="color: inherit; text-decoration: inherit;">Monitoring<wbr>Status</a>
@@ -1554,8 +1366,7 @@ All [input](#inputs) properties are implicitly available as output properties. A
         <span class="property-indicator"></span>
         <span class="property-type">string | <a href="#monitoringstatus">Monitoring<wbr>Status</a></span>
     </dt>
-    <dd>{{% md %}}Flag specifying if the resource monitoring is enabled or disabled.{{% /md %}}</dd>
-    <dt class="property-optional"
+    <dd>{{% md %}}Flag specifying if the resource monitoring is enabled or disabled.{{% /md %}}</dd><dt class="property-optional"
             title="Optional">
         <span id="provisioningstate_go">
 <a href="#provisioningstate_go" style="color: inherit; text-decoration: inherit;">Provisioning<wbr>State</a>
@@ -1563,8 +1374,7 @@ All [input](#inputs) properties are implicitly available as output properties. A
         <span class="property-indicator"></span>
         <span class="property-type">string | <a href="#provisioningstate">Provisioning<wbr>State</a></span>
     </dt>
-    <dd>{{% md %}}{{% /md %}}</dd>
-    <dt class="property-optional"
+    <dd>{{% md %}}{{% /md %}}</dd><dt class="property-optional"
             title="Optional">
         <span id="userinfo_go">
 <a href="#userinfo_go" style="color: inherit; text-decoration: inherit;">User<wbr>Info</a>
@@ -1572,14 +1382,11 @@ All [input](#inputs) properties are implicitly available as output properties. A
         <span class="property-indicator"></span>
         <span class="property-type"><a href="#userinfo">User<wbr>Info</a></span>
     </dt>
-    <dd>{{% md %}}User info{{% /md %}}</dd>
-</dl>
+    <dd>{{% md %}}User info{{% /md %}}</dd></dl>
 {{% /choosable %}}
 
 {{% choosable language nodejs %}}
-<dl class="resources-properties">
-
-    <dt class="property-optional"
+<dl class="resources-properties"><dt class="property-optional"
             title="Optional">
         <span id="datadogorganizationproperties_nodejs">
 <a href="#datadogorganizationproperties_nodejs" style="color: inherit; text-decoration: inherit;">datadog<wbr>Organization<wbr>Properties</a>
@@ -1587,8 +1394,7 @@ All [input](#inputs) properties are implicitly available as output properties. A
         <span class="property-indicator"></span>
         <span class="property-type"><a href="#datadogorganizationproperties">Datadog<wbr>Organization<wbr>Properties</a></span>
     </dt>
-    <dd>{{% md %}}Datadog organization properties{{% /md %}}</dd>
-    <dt class="property-optional"
+    <dd>{{% md %}}Datadog organization properties{{% /md %}}</dd><dt class="property-optional"
             title="Optional">
         <span id="monitoringstatus_nodejs">
 <a href="#monitoringstatus_nodejs" style="color: inherit; text-decoration: inherit;">monitoring<wbr>Status</a>
@@ -1596,8 +1402,7 @@ All [input](#inputs) properties are implicitly available as output properties. A
         <span class="property-indicator"></span>
         <span class="property-type">string | <a href="#monitoringstatus">Monitoring<wbr>Status</a></span>
     </dt>
-    <dd>{{% md %}}Flag specifying if the resource monitoring is enabled or disabled.{{% /md %}}</dd>
-    <dt class="property-optional"
+    <dd>{{% md %}}Flag specifying if the resource monitoring is enabled or disabled.{{% /md %}}</dd><dt class="property-optional"
             title="Optional">
         <span id="provisioningstate_nodejs">
 <a href="#provisioningstate_nodejs" style="color: inherit; text-decoration: inherit;">provisioning<wbr>State</a>
@@ -1605,8 +1410,7 @@ All [input](#inputs) properties are implicitly available as output properties. A
         <span class="property-indicator"></span>
         <span class="property-type">string | <a href="#provisioningstate">Provisioning<wbr>State</a></span>
     </dt>
-    <dd>{{% md %}}{{% /md %}}</dd>
-    <dt class="property-optional"
+    <dd>{{% md %}}{{% /md %}}</dd><dt class="property-optional"
             title="Optional">
         <span id="userinfo_nodejs">
 <a href="#userinfo_nodejs" style="color: inherit; text-decoration: inherit;">user<wbr>Info</a>
@@ -1614,14 +1418,11 @@ All [input](#inputs) properties are implicitly available as output properties. A
         <span class="property-indicator"></span>
         <span class="property-type"><a href="#userinfo">User<wbr>Info</a></span>
     </dt>
-    <dd>{{% md %}}User info{{% /md %}}</dd>
-</dl>
+    <dd>{{% md %}}User info{{% /md %}}</dd></dl>
 {{% /choosable %}}
 
 {{% choosable language python %}}
-<dl class="resources-properties">
-
-    <dt class="property-optional"
+<dl class="resources-properties"><dt class="property-optional"
             title="Optional">
         <span id="datadog_organization_properties_python">
 <a href="#datadog_organization_properties_python" style="color: inherit; text-decoration: inherit;">datadog_<wbr>organization_<wbr>properties</a>
@@ -1629,8 +1430,7 @@ All [input](#inputs) properties are implicitly available as output properties. A
         <span class="property-indicator"></span>
         <span class="property-type"><a href="#datadogorganizationproperties">Datadog<wbr>Organization<wbr>Properties<wbr>Args</a></span>
     </dt>
-    <dd>{{% md %}}Datadog organization properties{{% /md %}}</dd>
-    <dt class="property-optional"
+    <dd>{{% md %}}Datadog organization properties{{% /md %}}</dd><dt class="property-optional"
             title="Optional">
         <span id="monitoring_status_python">
 <a href="#monitoring_status_python" style="color: inherit; text-decoration: inherit;">monitoring_<wbr>status</a>
@@ -1638,8 +1438,7 @@ All [input](#inputs) properties are implicitly available as output properties. A
         <span class="property-indicator"></span>
         <span class="property-type">str | <a href="#monitoringstatus">Monitoring<wbr>Status</a></span>
     </dt>
-    <dd>{{% md %}}Flag specifying if the resource monitoring is enabled or disabled.{{% /md %}}</dd>
-    <dt class="property-optional"
+    <dd>{{% md %}}Flag specifying if the resource monitoring is enabled or disabled.{{% /md %}}</dd><dt class="property-optional"
             title="Optional">
         <span id="provisioning_state_python">
 <a href="#provisioning_state_python" style="color: inherit; text-decoration: inherit;">provisioning_<wbr>state</a>
@@ -1647,8 +1446,7 @@ All [input](#inputs) properties are implicitly available as output properties. A
         <span class="property-indicator"></span>
         <span class="property-type">str | <a href="#provisioningstate">Provisioning<wbr>State</a></span>
     </dt>
-    <dd>{{% md %}}{{% /md %}}</dd>
-    <dt class="property-optional"
+    <dd>{{% md %}}{{% /md %}}</dd><dt class="property-optional"
             title="Optional">
         <span id="user_info_python">
 <a href="#user_info_python" style="color: inherit; text-decoration: inherit;">user_<wbr>info</a>
@@ -1656,16 +1454,13 @@ All [input](#inputs) properties are implicitly available as output properties. A
         <span class="property-indicator"></span>
         <span class="property-type"><a href="#userinfo">User<wbr>Info<wbr>Args</a></span>
     </dt>
-    <dd>{{% md %}}User info{{% /md %}}</dd>
-</dl>
+    <dd>{{% md %}}User info{{% /md %}}</dd></dl>
 {{% /choosable %}}
 
 <h4 id="monitorpropertiesresponse">Monitor<wbr>Properties<wbr>Response</h4>
 
 {{% choosable language csharp %}}
-<dl class="resources-properties">
-
-    <dt class="property-required"
+<dl class="resources-properties"><dt class="property-required"
             title="Required">
         <span id="liftrresourcecategory_csharp">
 <a href="#liftrresourcecategory_csharp" style="color: inherit; text-decoration: inherit;">Liftr<wbr>Resource<wbr>Category</a>
@@ -1673,8 +1468,7 @@ All [input](#inputs) properties are implicitly available as output properties. A
         <span class="property-indicator"></span>
         <span class="property-type">string</span>
     </dt>
-    <dd>{{% md %}}{{% /md %}}</dd>
-    <dt class="property-required"
+    <dd>{{% md %}}{{% /md %}}</dd><dt class="property-required"
             title="Required">
         <span id="liftrresourcepreference_csharp">
 <a href="#liftrresourcepreference_csharp" style="color: inherit; text-decoration: inherit;">Liftr<wbr>Resource<wbr>Preference</a>
@@ -1682,8 +1476,7 @@ All [input](#inputs) properties are implicitly available as output properties. A
         <span class="property-indicator"></span>
         <span class="property-type">int</span>
     </dt>
-    <dd>{{% md %}}The priority of the resource.{{% /md %}}</dd>
-    <dt class="property-required"
+    <dd>{{% md %}}The priority of the resource.{{% /md %}}</dd><dt class="property-required"
             title="Required">
         <span id="marketplacesubscriptionstatus_csharp">
 <a href="#marketplacesubscriptionstatus_csharp" style="color: inherit; text-decoration: inherit;">Marketplace<wbr>Subscription<wbr>Status</a>
@@ -1691,8 +1484,7 @@ All [input](#inputs) properties are implicitly available as output properties. A
         <span class="property-indicator"></span>
         <span class="property-type">string</span>
     </dt>
-    <dd>{{% md %}}Flag specifying the Marketplace Subscription Status of the resource. If payment is not made in time, the resource will go in Suspended state.{{% /md %}}</dd>
-    <dt class="property-optional"
+    <dd>{{% md %}}Flag specifying the Marketplace Subscription Status of the resource. If payment is not made in time, the resource will go in Suspended state.{{% /md %}}</dd><dt class="property-optional"
             title="Optional">
         <span id="datadogorganizationproperties_csharp">
 <a href="#datadogorganizationproperties_csharp" style="color: inherit; text-decoration: inherit;">Datadog<wbr>Organization<wbr>Properties</a>
@@ -1700,8 +1492,7 @@ All [input](#inputs) properties are implicitly available as output properties. A
         <span class="property-indicator"></span>
         <span class="property-type"><a href="#datadogorganizationpropertiesresponse">Pulumi.<wbr>Azure<wbr>Native.<wbr>Datadog.<wbr>Inputs.<wbr>Datadog<wbr>Organization<wbr>Properties<wbr>Response<wbr>Args</a></span>
     </dt>
-    <dd>{{% md %}}Datadog organization properties{{% /md %}}</dd>
-    <dt class="property-optional"
+    <dd>{{% md %}}Datadog organization properties{{% /md %}}</dd><dt class="property-optional"
             title="Optional">
         <span id="monitoringstatus_csharp">
 <a href="#monitoringstatus_csharp" style="color: inherit; text-decoration: inherit;">Monitoring<wbr>Status</a>
@@ -1709,8 +1500,7 @@ All [input](#inputs) properties are implicitly available as output properties. A
         <span class="property-indicator"></span>
         <span class="property-type">string</span>
     </dt>
-    <dd>{{% md %}}Flag specifying if the resource monitoring is enabled or disabled.{{% /md %}}</dd>
-    <dt class="property-optional"
+    <dd>{{% md %}}Flag specifying if the resource monitoring is enabled or disabled.{{% /md %}}</dd><dt class="property-optional"
             title="Optional">
         <span id="provisioningstate_csharp">
 <a href="#provisioningstate_csharp" style="color: inherit; text-decoration: inherit;">Provisioning<wbr>State</a>
@@ -1718,8 +1508,7 @@ All [input](#inputs) properties are implicitly available as output properties. A
         <span class="property-indicator"></span>
         <span class="property-type">string</span>
     </dt>
-    <dd>{{% md %}}{{% /md %}}</dd>
-    <dt class="property-optional"
+    <dd>{{% md %}}{{% /md %}}</dd><dt class="property-optional"
             title="Optional">
         <span id="userinfo_csharp">
 <a href="#userinfo_csharp" style="color: inherit; text-decoration: inherit;">User<wbr>Info</a>
@@ -1727,14 +1516,11 @@ All [input](#inputs) properties are implicitly available as output properties. A
         <span class="property-indicator"></span>
         <span class="property-type"><a href="#userinforesponse">Pulumi.<wbr>Azure<wbr>Native.<wbr>Datadog.<wbr>Inputs.<wbr>User<wbr>Info<wbr>Response<wbr>Args</a></span>
     </dt>
-    <dd>{{% md %}}User info{{% /md %}}</dd>
-</dl>
+    <dd>{{% md %}}User info{{% /md %}}</dd></dl>
 {{% /choosable %}}
 
 {{% choosable language go %}}
-<dl class="resources-properties">
-
-    <dt class="property-required"
+<dl class="resources-properties"><dt class="property-required"
             title="Required">
         <span id="liftrresourcecategory_go">
 <a href="#liftrresourcecategory_go" style="color: inherit; text-decoration: inherit;">Liftr<wbr>Resource<wbr>Category</a>
@@ -1742,8 +1528,7 @@ All [input](#inputs) properties are implicitly available as output properties. A
         <span class="property-indicator"></span>
         <span class="property-type">string</span>
     </dt>
-    <dd>{{% md %}}{{% /md %}}</dd>
-    <dt class="property-required"
+    <dd>{{% md %}}{{% /md %}}</dd><dt class="property-required"
             title="Required">
         <span id="liftrresourcepreference_go">
 <a href="#liftrresourcepreference_go" style="color: inherit; text-decoration: inherit;">Liftr<wbr>Resource<wbr>Preference</a>
@@ -1751,8 +1536,7 @@ All [input](#inputs) properties are implicitly available as output properties. A
         <span class="property-indicator"></span>
         <span class="property-type">int</span>
     </dt>
-    <dd>{{% md %}}The priority of the resource.{{% /md %}}</dd>
-    <dt class="property-required"
+    <dd>{{% md %}}The priority of the resource.{{% /md %}}</dd><dt class="property-required"
             title="Required">
         <span id="marketplacesubscriptionstatus_go">
 <a href="#marketplacesubscriptionstatus_go" style="color: inherit; text-decoration: inherit;">Marketplace<wbr>Subscription<wbr>Status</a>
@@ -1760,8 +1544,7 @@ All [input](#inputs) properties are implicitly available as output properties. A
         <span class="property-indicator"></span>
         <span class="property-type">string</span>
     </dt>
-    <dd>{{% md %}}Flag specifying the Marketplace Subscription Status of the resource. If payment is not made in time, the resource will go in Suspended state.{{% /md %}}</dd>
-    <dt class="property-optional"
+    <dd>{{% md %}}Flag specifying the Marketplace Subscription Status of the resource. If payment is not made in time, the resource will go in Suspended state.{{% /md %}}</dd><dt class="property-optional"
             title="Optional">
         <span id="datadogorganizationproperties_go">
 <a href="#datadogorganizationproperties_go" style="color: inherit; text-decoration: inherit;">Datadog<wbr>Organization<wbr>Properties</a>
@@ -1769,8 +1552,7 @@ All [input](#inputs) properties are implicitly available as output properties. A
         <span class="property-indicator"></span>
         <span class="property-type"><a href="#datadogorganizationpropertiesresponse">Datadog<wbr>Organization<wbr>Properties<wbr>Response</a></span>
     </dt>
-    <dd>{{% md %}}Datadog organization properties{{% /md %}}</dd>
-    <dt class="property-optional"
+    <dd>{{% md %}}Datadog organization properties{{% /md %}}</dd><dt class="property-optional"
             title="Optional">
         <span id="monitoringstatus_go">
 <a href="#monitoringstatus_go" style="color: inherit; text-decoration: inherit;">Monitoring<wbr>Status</a>
@@ -1778,8 +1560,7 @@ All [input](#inputs) properties are implicitly available as output properties. A
         <span class="property-indicator"></span>
         <span class="property-type">string</span>
     </dt>
-    <dd>{{% md %}}Flag specifying if the resource monitoring is enabled or disabled.{{% /md %}}</dd>
-    <dt class="property-optional"
+    <dd>{{% md %}}Flag specifying if the resource monitoring is enabled or disabled.{{% /md %}}</dd><dt class="property-optional"
             title="Optional">
         <span id="provisioningstate_go">
 <a href="#provisioningstate_go" style="color: inherit; text-decoration: inherit;">Provisioning<wbr>State</a>
@@ -1787,8 +1568,7 @@ All [input](#inputs) properties are implicitly available as output properties. A
         <span class="property-indicator"></span>
         <span class="property-type">string</span>
     </dt>
-    <dd>{{% md %}}{{% /md %}}</dd>
-    <dt class="property-optional"
+    <dd>{{% md %}}{{% /md %}}</dd><dt class="property-optional"
             title="Optional">
         <span id="userinfo_go">
 <a href="#userinfo_go" style="color: inherit; text-decoration: inherit;">User<wbr>Info</a>
@@ -1796,14 +1576,11 @@ All [input](#inputs) properties are implicitly available as output properties. A
         <span class="property-indicator"></span>
         <span class="property-type"><a href="#userinforesponse">User<wbr>Info<wbr>Response</a></span>
     </dt>
-    <dd>{{% md %}}User info{{% /md %}}</dd>
-</dl>
+    <dd>{{% md %}}User info{{% /md %}}</dd></dl>
 {{% /choosable %}}
 
 {{% choosable language nodejs %}}
-<dl class="resources-properties">
-
-    <dt class="property-required"
+<dl class="resources-properties"><dt class="property-required"
             title="Required">
         <span id="liftrresourcecategory_nodejs">
 <a href="#liftrresourcecategory_nodejs" style="color: inherit; text-decoration: inherit;">liftr<wbr>Resource<wbr>Category</a>
@@ -1811,8 +1588,7 @@ All [input](#inputs) properties are implicitly available as output properties. A
         <span class="property-indicator"></span>
         <span class="property-type">string</span>
     </dt>
-    <dd>{{% md %}}{{% /md %}}</dd>
-    <dt class="property-required"
+    <dd>{{% md %}}{{% /md %}}</dd><dt class="property-required"
             title="Required">
         <span id="liftrresourcepreference_nodejs">
 <a href="#liftrresourcepreference_nodejs" style="color: inherit; text-decoration: inherit;">liftr<wbr>Resource<wbr>Preference</a>
@@ -1820,8 +1596,7 @@ All [input](#inputs) properties are implicitly available as output properties. A
         <span class="property-indicator"></span>
         <span class="property-type">number</span>
     </dt>
-    <dd>{{% md %}}The priority of the resource.{{% /md %}}</dd>
-    <dt class="property-required"
+    <dd>{{% md %}}The priority of the resource.{{% /md %}}</dd><dt class="property-required"
             title="Required">
         <span id="marketplacesubscriptionstatus_nodejs">
 <a href="#marketplacesubscriptionstatus_nodejs" style="color: inherit; text-decoration: inherit;">marketplace<wbr>Subscription<wbr>Status</a>
@@ -1829,8 +1604,7 @@ All [input](#inputs) properties are implicitly available as output properties. A
         <span class="property-indicator"></span>
         <span class="property-type">string</span>
     </dt>
-    <dd>{{% md %}}Flag specifying the Marketplace Subscription Status of the resource. If payment is not made in time, the resource will go in Suspended state.{{% /md %}}</dd>
-    <dt class="property-optional"
+    <dd>{{% md %}}Flag specifying the Marketplace Subscription Status of the resource. If payment is not made in time, the resource will go in Suspended state.{{% /md %}}</dd><dt class="property-optional"
             title="Optional">
         <span id="datadogorganizationproperties_nodejs">
 <a href="#datadogorganizationproperties_nodejs" style="color: inherit; text-decoration: inherit;">datadog<wbr>Organization<wbr>Properties</a>
@@ -1838,8 +1612,7 @@ All [input](#inputs) properties are implicitly available as output properties. A
         <span class="property-indicator"></span>
         <span class="property-type"><a href="#datadogorganizationpropertiesresponse">Datadog<wbr>Organization<wbr>Properties<wbr>Response</a></span>
     </dt>
-    <dd>{{% md %}}Datadog organization properties{{% /md %}}</dd>
-    <dt class="property-optional"
+    <dd>{{% md %}}Datadog organization properties{{% /md %}}</dd><dt class="property-optional"
             title="Optional">
         <span id="monitoringstatus_nodejs">
 <a href="#monitoringstatus_nodejs" style="color: inherit; text-decoration: inherit;">monitoring<wbr>Status</a>
@@ -1847,8 +1620,7 @@ All [input](#inputs) properties are implicitly available as output properties. A
         <span class="property-indicator"></span>
         <span class="property-type">string</span>
     </dt>
-    <dd>{{% md %}}Flag specifying if the resource monitoring is enabled or disabled.{{% /md %}}</dd>
-    <dt class="property-optional"
+    <dd>{{% md %}}Flag specifying if the resource monitoring is enabled or disabled.{{% /md %}}</dd><dt class="property-optional"
             title="Optional">
         <span id="provisioningstate_nodejs">
 <a href="#provisioningstate_nodejs" style="color: inherit; text-decoration: inherit;">provisioning<wbr>State</a>
@@ -1856,8 +1628,7 @@ All [input](#inputs) properties are implicitly available as output properties. A
         <span class="property-indicator"></span>
         <span class="property-type">string</span>
     </dt>
-    <dd>{{% md %}}{{% /md %}}</dd>
-    <dt class="property-optional"
+    <dd>{{% md %}}{{% /md %}}</dd><dt class="property-optional"
             title="Optional">
         <span id="userinfo_nodejs">
 <a href="#userinfo_nodejs" style="color: inherit; text-decoration: inherit;">user<wbr>Info</a>
@@ -1865,14 +1636,11 @@ All [input](#inputs) properties are implicitly available as output properties. A
         <span class="property-indicator"></span>
         <span class="property-type"><a href="#userinforesponse">User<wbr>Info<wbr>Response</a></span>
     </dt>
-    <dd>{{% md %}}User info{{% /md %}}</dd>
-</dl>
+    <dd>{{% md %}}User info{{% /md %}}</dd></dl>
 {{% /choosable %}}
 
 {{% choosable language python %}}
-<dl class="resources-properties">
-
-    <dt class="property-required"
+<dl class="resources-properties"><dt class="property-required"
             title="Required">
         <span id="liftr_resource_category_python">
 <a href="#liftr_resource_category_python" style="color: inherit; text-decoration: inherit;">liftr_<wbr>resource_<wbr>category</a>
@@ -1880,8 +1648,7 @@ All [input](#inputs) properties are implicitly available as output properties. A
         <span class="property-indicator"></span>
         <span class="property-type">str</span>
     </dt>
-    <dd>{{% md %}}{{% /md %}}</dd>
-    <dt class="property-required"
+    <dd>{{% md %}}{{% /md %}}</dd><dt class="property-required"
             title="Required">
         <span id="liftr_resource_preference_python">
 <a href="#liftr_resource_preference_python" style="color: inherit; text-decoration: inherit;">liftr_<wbr>resource_<wbr>preference</a>
@@ -1889,8 +1656,7 @@ All [input](#inputs) properties are implicitly available as output properties. A
         <span class="property-indicator"></span>
         <span class="property-type">int</span>
     </dt>
-    <dd>{{% md %}}The priority of the resource.{{% /md %}}</dd>
-    <dt class="property-required"
+    <dd>{{% md %}}The priority of the resource.{{% /md %}}</dd><dt class="property-required"
             title="Required">
         <span id="marketplace_subscription_status_python">
 <a href="#marketplace_subscription_status_python" style="color: inherit; text-decoration: inherit;">marketplace_<wbr>subscription_<wbr>status</a>
@@ -1898,8 +1664,7 @@ All [input](#inputs) properties are implicitly available as output properties. A
         <span class="property-indicator"></span>
         <span class="property-type">str</span>
     </dt>
-    <dd>{{% md %}}Flag specifying the Marketplace Subscription Status of the resource. If payment is not made in time, the resource will go in Suspended state.{{% /md %}}</dd>
-    <dt class="property-optional"
+    <dd>{{% md %}}Flag specifying the Marketplace Subscription Status of the resource. If payment is not made in time, the resource will go in Suspended state.{{% /md %}}</dd><dt class="property-optional"
             title="Optional">
         <span id="datadog_organization_properties_python">
 <a href="#datadog_organization_properties_python" style="color: inherit; text-decoration: inherit;">datadog_<wbr>organization_<wbr>properties</a>
@@ -1907,8 +1672,7 @@ All [input](#inputs) properties are implicitly available as output properties. A
         <span class="property-indicator"></span>
         <span class="property-type"><a href="#datadogorganizationpropertiesresponse">Datadog<wbr>Organization<wbr>Properties<wbr>Response<wbr>Args</a></span>
     </dt>
-    <dd>{{% md %}}Datadog organization properties{{% /md %}}</dd>
-    <dt class="property-optional"
+    <dd>{{% md %}}Datadog organization properties{{% /md %}}</dd><dt class="property-optional"
             title="Optional">
         <span id="monitoring_status_python">
 <a href="#monitoring_status_python" style="color: inherit; text-decoration: inherit;">monitoring_<wbr>status</a>
@@ -1916,8 +1680,7 @@ All [input](#inputs) properties are implicitly available as output properties. A
         <span class="property-indicator"></span>
         <span class="property-type">str</span>
     </dt>
-    <dd>{{% md %}}Flag specifying if the resource monitoring is enabled or disabled.{{% /md %}}</dd>
-    <dt class="property-optional"
+    <dd>{{% md %}}Flag specifying if the resource monitoring is enabled or disabled.{{% /md %}}</dd><dt class="property-optional"
             title="Optional">
         <span id="provisioning_state_python">
 <a href="#provisioning_state_python" style="color: inherit; text-decoration: inherit;">provisioning_<wbr>state</a>
@@ -1925,8 +1688,7 @@ All [input](#inputs) properties are implicitly available as output properties. A
         <span class="property-indicator"></span>
         <span class="property-type">str</span>
     </dt>
-    <dd>{{% md %}}{{% /md %}}</dd>
-    <dt class="property-optional"
+    <dd>{{% md %}}{{% /md %}}</dd><dt class="property-optional"
             title="Optional">
         <span id="user_info_python">
 <a href="#user_info_python" style="color: inherit; text-decoration: inherit;">user_<wbr>info</a>
@@ -1934,148 +1696,93 @@ All [input](#inputs) properties are implicitly available as output properties. A
         <span class="property-indicator"></span>
         <span class="property-type"><a href="#userinforesponse">User<wbr>Info<wbr>Response<wbr>Args</a></span>
     </dt>
-    <dd>{{% md %}}User info{{% /md %}}</dd>
-</dl>
+    <dd>{{% md %}}User info{{% /md %}}</dd></dl>
 {{% /choosable %}}
 
 <h4 id="monitoringstatus">Monitoring<wbr>Status</h4>
 
 {{% choosable language csharp %}}
-<dl class="tabular">
-    <dt>Enabled</dt>
-    <dd>Enabled</dd>
-    <dt>Disabled</dt>
-    <dd>Disabled</dd>
-</dl>
+<dl class="tabular"><dt>Enabled</dt>
+    <dd>Enabled</dd><dt>Disabled</dt>
+    <dd>Disabled</dd></dl>
 {{% /choosable %}}
 
 {{% choosable language go %}}
-<dl class="tabular">
-    <dt>Monitoring<wbr>Status<wbr>Enabled</dt>
-    <dd>Enabled</dd>
-    <dt>Monitoring<wbr>Status<wbr>Disabled</dt>
-    <dd>Disabled</dd>
-</dl>
+<dl class="tabular"><dt>Monitoring<wbr>Status<wbr>Enabled</dt>
+    <dd>Enabled</dd><dt>Monitoring<wbr>Status<wbr>Disabled</dt>
+    <dd>Disabled</dd></dl>
 {{% /choosable %}}
 
 {{% choosable language nodejs %}}
-<dl class="tabular">
-    <dt>Enabled</dt>
-    <dd>Enabled</dd>
-    <dt>Disabled</dt>
-    <dd>Disabled</dd>
-</dl>
+<dl class="tabular"><dt>Enabled</dt>
+    <dd>Enabled</dd><dt>Disabled</dt>
+    <dd>Disabled</dd></dl>
 {{% /choosable %}}
 
 {{% choosable language python %}}
-<dl class="tabular">
-    <dt>ENABLED</dt>
-    <dd>Enabled</dd>
-    <dt>DISABLED</dt>
-    <dd>Disabled</dd>
-</dl>
+<dl class="tabular"><dt>ENABLED</dt>
+    <dd>Enabled</dd><dt>DISABLED</dt>
+    <dd>Disabled</dd></dl>
 {{% /choosable %}}
 
 <h4 id="provisioningstate">Provisioning<wbr>State</h4>
 
 {{% choosable language csharp %}}
-<dl class="tabular">
-    <dt>Accepted</dt>
-    <dd>Accepted</dd>
-    <dt>Creating</dt>
-    <dd>Creating</dd>
-    <dt>Updating</dt>
-    <dd>Updating</dd>
-    <dt>Deleting</dt>
-    <dd>Deleting</dd>
-    <dt>Succeeded</dt>
-    <dd>Succeeded</dd>
-    <dt>Failed</dt>
-    <dd>Failed</dd>
-    <dt>Canceled</dt>
-    <dd>Canceled</dd>
-    <dt>Deleted</dt>
-    <dd>Deleted</dd>
-    <dt>Not<wbr>Specified</dt>
-    <dd>NotSpecified</dd>
-</dl>
+<dl class="tabular"><dt>Accepted</dt>
+    <dd>Accepted</dd><dt>Creating</dt>
+    <dd>Creating</dd><dt>Updating</dt>
+    <dd>Updating</dd><dt>Deleting</dt>
+    <dd>Deleting</dd><dt>Succeeded</dt>
+    <dd>Succeeded</dd><dt>Failed</dt>
+    <dd>Failed</dd><dt>Canceled</dt>
+    <dd>Canceled</dd><dt>Deleted</dt>
+    <dd>Deleted</dd><dt>Not<wbr>Specified</dt>
+    <dd>NotSpecified</dd></dl>
 {{% /choosable %}}
 
 {{% choosable language go %}}
-<dl class="tabular">
-    <dt>Provisioning<wbr>State<wbr>Accepted</dt>
-    <dd>Accepted</dd>
-    <dt>Provisioning<wbr>State<wbr>Creating</dt>
-    <dd>Creating</dd>
-    <dt>Provisioning<wbr>State<wbr>Updating</dt>
-    <dd>Updating</dd>
-    <dt>Provisioning<wbr>State<wbr>Deleting</dt>
-    <dd>Deleting</dd>
-    <dt>Provisioning<wbr>State<wbr>Succeeded</dt>
-    <dd>Succeeded</dd>
-    <dt>Provisioning<wbr>State<wbr>Failed</dt>
-    <dd>Failed</dd>
-    <dt>Provisioning<wbr>State<wbr>Canceled</dt>
-    <dd>Canceled</dd>
-    <dt>Provisioning<wbr>State<wbr>Deleted</dt>
-    <dd>Deleted</dd>
-    <dt>Provisioning<wbr>State<wbr>Not<wbr>Specified</dt>
-    <dd>NotSpecified</dd>
-</dl>
+<dl class="tabular"><dt>Provisioning<wbr>State<wbr>Accepted</dt>
+    <dd>Accepted</dd><dt>Provisioning<wbr>State<wbr>Creating</dt>
+    <dd>Creating</dd><dt>Provisioning<wbr>State<wbr>Updating</dt>
+    <dd>Updating</dd><dt>Provisioning<wbr>State<wbr>Deleting</dt>
+    <dd>Deleting</dd><dt>Provisioning<wbr>State<wbr>Succeeded</dt>
+    <dd>Succeeded</dd><dt>Provisioning<wbr>State<wbr>Failed</dt>
+    <dd>Failed</dd><dt>Provisioning<wbr>State<wbr>Canceled</dt>
+    <dd>Canceled</dd><dt>Provisioning<wbr>State<wbr>Deleted</dt>
+    <dd>Deleted</dd><dt>Provisioning<wbr>State<wbr>Not<wbr>Specified</dt>
+    <dd>NotSpecified</dd></dl>
 {{% /choosable %}}
 
 {{% choosable language nodejs %}}
-<dl class="tabular">
-    <dt>Accepted</dt>
-    <dd>Accepted</dd>
-    <dt>Creating</dt>
-    <dd>Creating</dd>
-    <dt>Updating</dt>
-    <dd>Updating</dd>
-    <dt>Deleting</dt>
-    <dd>Deleting</dd>
-    <dt>Succeeded</dt>
-    <dd>Succeeded</dd>
-    <dt>Failed</dt>
-    <dd>Failed</dd>
-    <dt>Canceled</dt>
-    <dd>Canceled</dd>
-    <dt>Deleted</dt>
-    <dd>Deleted</dd>
-    <dt>Not<wbr>Specified</dt>
-    <dd>NotSpecified</dd>
-</dl>
+<dl class="tabular"><dt>Accepted</dt>
+    <dd>Accepted</dd><dt>Creating</dt>
+    <dd>Creating</dd><dt>Updating</dt>
+    <dd>Updating</dd><dt>Deleting</dt>
+    <dd>Deleting</dd><dt>Succeeded</dt>
+    <dd>Succeeded</dd><dt>Failed</dt>
+    <dd>Failed</dd><dt>Canceled</dt>
+    <dd>Canceled</dd><dt>Deleted</dt>
+    <dd>Deleted</dd><dt>Not<wbr>Specified</dt>
+    <dd>NotSpecified</dd></dl>
 {{% /choosable %}}
 
 {{% choosable language python %}}
-<dl class="tabular">
-    <dt>ACCEPTED</dt>
-    <dd>Accepted</dd>
-    <dt>CREATING</dt>
-    <dd>Creating</dd>
-    <dt>UPDATING</dt>
-    <dd>Updating</dd>
-    <dt>DELETING</dt>
-    <dd>Deleting</dd>
-    <dt>SUCCEEDED</dt>
-    <dd>Succeeded</dd>
-    <dt>FAILED</dt>
-    <dd>Failed</dd>
-    <dt>CANCELED</dt>
-    <dd>Canceled</dd>
-    <dt>DELETED</dt>
-    <dd>Deleted</dd>
-    <dt>NOT_SPECIFIED</dt>
-    <dd>NotSpecified</dd>
-</dl>
+<dl class="tabular"><dt>ACCEPTED</dt>
+    <dd>Accepted</dd><dt>CREATING</dt>
+    <dd>Creating</dd><dt>UPDATING</dt>
+    <dd>Updating</dd><dt>DELETING</dt>
+    <dd>Deleting</dd><dt>SUCCEEDED</dt>
+    <dd>Succeeded</dd><dt>FAILED</dt>
+    <dd>Failed</dd><dt>CANCELED</dt>
+    <dd>Canceled</dd><dt>DELETED</dt>
+    <dd>Deleted</dd><dt>NOT_SPECIFIED</dt>
+    <dd>NotSpecified</dd></dl>
 {{% /choosable %}}
 
 <h4 id="resourcesku">Resource<wbr>Sku</h4>
 
 {{% choosable language csharp %}}
-<dl class="resources-properties">
-
-    <dt class="property-required"
+<dl class="resources-properties"><dt class="property-required"
             title="Required">
         <span id="name_csharp">
 <a href="#name_csharp" style="color: inherit; text-decoration: inherit;">Name</a>
@@ -2083,14 +1790,11 @@ All [input](#inputs) properties are implicitly available as output properties. A
         <span class="property-indicator"></span>
         <span class="property-type">string</span>
     </dt>
-    <dd>{{% md %}}Name of the SKU.{{% /md %}}</dd>
-</dl>
+    <dd>{{% md %}}Name of the SKU.{{% /md %}}</dd></dl>
 {{% /choosable %}}
 
 {{% choosable language go %}}
-<dl class="resources-properties">
-
-    <dt class="property-required"
+<dl class="resources-properties"><dt class="property-required"
             title="Required">
         <span id="name_go">
 <a href="#name_go" style="color: inherit; text-decoration: inherit;">Name</a>
@@ -2098,14 +1802,11 @@ All [input](#inputs) properties are implicitly available as output properties. A
         <span class="property-indicator"></span>
         <span class="property-type">string</span>
     </dt>
-    <dd>{{% md %}}Name of the SKU.{{% /md %}}</dd>
-</dl>
+    <dd>{{% md %}}Name of the SKU.{{% /md %}}</dd></dl>
 {{% /choosable %}}
 
 {{% choosable language nodejs %}}
-<dl class="resources-properties">
-
-    <dt class="property-required"
+<dl class="resources-properties"><dt class="property-required"
             title="Required">
         <span id="name_nodejs">
 <a href="#name_nodejs" style="color: inherit; text-decoration: inherit;">name</a>
@@ -2113,14 +1814,11 @@ All [input](#inputs) properties are implicitly available as output properties. A
         <span class="property-indicator"></span>
         <span class="property-type">string</span>
     </dt>
-    <dd>{{% md %}}Name of the SKU.{{% /md %}}</dd>
-</dl>
+    <dd>{{% md %}}Name of the SKU.{{% /md %}}</dd></dl>
 {{% /choosable %}}
 
 {{% choosable language python %}}
-<dl class="resources-properties">
-
-    <dt class="property-required"
+<dl class="resources-properties"><dt class="property-required"
             title="Required">
         <span id="name_python">
 <a href="#name_python" style="color: inherit; text-decoration: inherit;">name</a>
@@ -2128,16 +1826,13 @@ All [input](#inputs) properties are implicitly available as output properties. A
         <span class="property-indicator"></span>
         <span class="property-type">str</span>
     </dt>
-    <dd>{{% md %}}Name of the SKU.{{% /md %}}</dd>
-</dl>
+    <dd>{{% md %}}Name of the SKU.{{% /md %}}</dd></dl>
 {{% /choosable %}}
 
 <h4 id="resourceskuresponse">Resource<wbr>Sku<wbr>Response</h4>
 
 {{% choosable language csharp %}}
-<dl class="resources-properties">
-
-    <dt class="property-required"
+<dl class="resources-properties"><dt class="property-required"
             title="Required">
         <span id="name_csharp">
 <a href="#name_csharp" style="color: inherit; text-decoration: inherit;">Name</a>
@@ -2145,14 +1840,11 @@ All [input](#inputs) properties are implicitly available as output properties. A
         <span class="property-indicator"></span>
         <span class="property-type">string</span>
     </dt>
-    <dd>{{% md %}}Name of the SKU.{{% /md %}}</dd>
-</dl>
+    <dd>{{% md %}}Name of the SKU.{{% /md %}}</dd></dl>
 {{% /choosable %}}
 
 {{% choosable language go %}}
-<dl class="resources-properties">
-
-    <dt class="property-required"
+<dl class="resources-properties"><dt class="property-required"
             title="Required">
         <span id="name_go">
 <a href="#name_go" style="color: inherit; text-decoration: inherit;">Name</a>
@@ -2160,14 +1852,11 @@ All [input](#inputs) properties are implicitly available as output properties. A
         <span class="property-indicator"></span>
         <span class="property-type">string</span>
     </dt>
-    <dd>{{% md %}}Name of the SKU.{{% /md %}}</dd>
-</dl>
+    <dd>{{% md %}}Name of the SKU.{{% /md %}}</dd></dl>
 {{% /choosable %}}
 
 {{% choosable language nodejs %}}
-<dl class="resources-properties">
-
-    <dt class="property-required"
+<dl class="resources-properties"><dt class="property-required"
             title="Required">
         <span id="name_nodejs">
 <a href="#name_nodejs" style="color: inherit; text-decoration: inherit;">name</a>
@@ -2175,14 +1864,11 @@ All [input](#inputs) properties are implicitly available as output properties. A
         <span class="property-indicator"></span>
         <span class="property-type">string</span>
     </dt>
-    <dd>{{% md %}}Name of the SKU.{{% /md %}}</dd>
-</dl>
+    <dd>{{% md %}}Name of the SKU.{{% /md %}}</dd></dl>
 {{% /choosable %}}
 
 {{% choosable language python %}}
-<dl class="resources-properties">
-
-    <dt class="property-required"
+<dl class="resources-properties"><dt class="property-required"
             title="Required">
         <span id="name_python">
 <a href="#name_python" style="color: inherit; text-decoration: inherit;">name</a>
@@ -2190,16 +1876,13 @@ All [input](#inputs) properties are implicitly available as output properties. A
         <span class="property-indicator"></span>
         <span class="property-type">str</span>
     </dt>
-    <dd>{{% md %}}Name of the SKU.{{% /md %}}</dd>
-</dl>
+    <dd>{{% md %}}Name of the SKU.{{% /md %}}</dd></dl>
 {{% /choosable %}}
 
 <h4 id="userinfo">User<wbr>Info</h4>
 
 {{% choosable language csharp %}}
-<dl class="resources-properties">
-
-    <dt class="property-optional"
+<dl class="resources-properties"><dt class="property-optional"
             title="Optional">
         <span id="emailaddress_csharp">
 <a href="#emailaddress_csharp" style="color: inherit; text-decoration: inherit;">Email<wbr>Address</a>
@@ -2207,8 +1890,7 @@ All [input](#inputs) properties are implicitly available as output properties. A
         <span class="property-indicator"></span>
         <span class="property-type">string</span>
     </dt>
-    <dd>{{% md %}}Email of the user used by Datadog for contacting them if needed{{% /md %}}</dd>
-    <dt class="property-optional"
+    <dd>{{% md %}}Email of the user used by Datadog for contacting them if needed{{% /md %}}</dd><dt class="property-optional"
             title="Optional">
         <span id="name_csharp">
 <a href="#name_csharp" style="color: inherit; text-decoration: inherit;">Name</a>
@@ -2216,8 +1898,7 @@ All [input](#inputs) properties are implicitly available as output properties. A
         <span class="property-indicator"></span>
         <span class="property-type">string</span>
     </dt>
-    <dd>{{% md %}}Name of the user{{% /md %}}</dd>
-    <dt class="property-optional"
+    <dd>{{% md %}}Name of the user{{% /md %}}</dd><dt class="property-optional"
             title="Optional">
         <span id="phonenumber_csharp">
 <a href="#phonenumber_csharp" style="color: inherit; text-decoration: inherit;">Phone<wbr>Number</a>
@@ -2225,14 +1906,11 @@ All [input](#inputs) properties are implicitly available as output properties. A
         <span class="property-indicator"></span>
         <span class="property-type">string</span>
     </dt>
-    <dd>{{% md %}}Phone number of the user used by Datadog for contacting them if needed{{% /md %}}</dd>
-</dl>
+    <dd>{{% md %}}Phone number of the user used by Datadog for contacting them if needed{{% /md %}}</dd></dl>
 {{% /choosable %}}
 
 {{% choosable language go %}}
-<dl class="resources-properties">
-
-    <dt class="property-optional"
+<dl class="resources-properties"><dt class="property-optional"
             title="Optional">
         <span id="emailaddress_go">
 <a href="#emailaddress_go" style="color: inherit; text-decoration: inherit;">Email<wbr>Address</a>
@@ -2240,8 +1918,7 @@ All [input](#inputs) properties are implicitly available as output properties. A
         <span class="property-indicator"></span>
         <span class="property-type">string</span>
     </dt>
-    <dd>{{% md %}}Email of the user used by Datadog for contacting them if needed{{% /md %}}</dd>
-    <dt class="property-optional"
+    <dd>{{% md %}}Email of the user used by Datadog for contacting them if needed{{% /md %}}</dd><dt class="property-optional"
             title="Optional">
         <span id="name_go">
 <a href="#name_go" style="color: inherit; text-decoration: inherit;">Name</a>
@@ -2249,8 +1926,7 @@ All [input](#inputs) properties are implicitly available as output properties. A
         <span class="property-indicator"></span>
         <span class="property-type">string</span>
     </dt>
-    <dd>{{% md %}}Name of the user{{% /md %}}</dd>
-    <dt class="property-optional"
+    <dd>{{% md %}}Name of the user{{% /md %}}</dd><dt class="property-optional"
             title="Optional">
         <span id="phonenumber_go">
 <a href="#phonenumber_go" style="color: inherit; text-decoration: inherit;">Phone<wbr>Number</a>
@@ -2258,14 +1934,11 @@ All [input](#inputs) properties are implicitly available as output properties. A
         <span class="property-indicator"></span>
         <span class="property-type">string</span>
     </dt>
-    <dd>{{% md %}}Phone number of the user used by Datadog for contacting them if needed{{% /md %}}</dd>
-</dl>
+    <dd>{{% md %}}Phone number of the user used by Datadog for contacting them if needed{{% /md %}}</dd></dl>
 {{% /choosable %}}
 
 {{% choosable language nodejs %}}
-<dl class="resources-properties">
-
-    <dt class="property-optional"
+<dl class="resources-properties"><dt class="property-optional"
             title="Optional">
         <span id="emailaddress_nodejs">
 <a href="#emailaddress_nodejs" style="color: inherit; text-decoration: inherit;">email<wbr>Address</a>
@@ -2273,8 +1946,7 @@ All [input](#inputs) properties are implicitly available as output properties. A
         <span class="property-indicator"></span>
         <span class="property-type">string</span>
     </dt>
-    <dd>{{% md %}}Email of the user used by Datadog for contacting them if needed{{% /md %}}</dd>
-    <dt class="property-optional"
+    <dd>{{% md %}}Email of the user used by Datadog for contacting them if needed{{% /md %}}</dd><dt class="property-optional"
             title="Optional">
         <span id="name_nodejs">
 <a href="#name_nodejs" style="color: inherit; text-decoration: inherit;">name</a>
@@ -2282,8 +1954,7 @@ All [input](#inputs) properties are implicitly available as output properties. A
         <span class="property-indicator"></span>
         <span class="property-type">string</span>
     </dt>
-    <dd>{{% md %}}Name of the user{{% /md %}}</dd>
-    <dt class="property-optional"
+    <dd>{{% md %}}Name of the user{{% /md %}}</dd><dt class="property-optional"
             title="Optional">
         <span id="phonenumber_nodejs">
 <a href="#phonenumber_nodejs" style="color: inherit; text-decoration: inherit;">phone<wbr>Number</a>
@@ -2291,14 +1962,11 @@ All [input](#inputs) properties are implicitly available as output properties. A
         <span class="property-indicator"></span>
         <span class="property-type">string</span>
     </dt>
-    <dd>{{% md %}}Phone number of the user used by Datadog for contacting them if needed{{% /md %}}</dd>
-</dl>
+    <dd>{{% md %}}Phone number of the user used by Datadog for contacting them if needed{{% /md %}}</dd></dl>
 {{% /choosable %}}
 
 {{% choosable language python %}}
-<dl class="resources-properties">
-
-    <dt class="property-optional"
+<dl class="resources-properties"><dt class="property-optional"
             title="Optional">
         <span id="email_address_python">
 <a href="#email_address_python" style="color: inherit; text-decoration: inherit;">email_<wbr>address</a>
@@ -2306,8 +1974,7 @@ All [input](#inputs) properties are implicitly available as output properties. A
         <span class="property-indicator"></span>
         <span class="property-type">str</span>
     </dt>
-    <dd>{{% md %}}Email of the user used by Datadog for contacting them if needed{{% /md %}}</dd>
-    <dt class="property-optional"
+    <dd>{{% md %}}Email of the user used by Datadog for contacting them if needed{{% /md %}}</dd><dt class="property-optional"
             title="Optional">
         <span id="name_python">
 <a href="#name_python" style="color: inherit; text-decoration: inherit;">name</a>
@@ -2315,8 +1982,7 @@ All [input](#inputs) properties are implicitly available as output properties. A
         <span class="property-indicator"></span>
         <span class="property-type">str</span>
     </dt>
-    <dd>{{% md %}}Name of the user{{% /md %}}</dd>
-    <dt class="property-optional"
+    <dd>{{% md %}}Name of the user{{% /md %}}</dd><dt class="property-optional"
             title="Optional">
         <span id="phone_number_python">
 <a href="#phone_number_python" style="color: inherit; text-decoration: inherit;">phone_<wbr>number</a>
@@ -2324,16 +1990,13 @@ All [input](#inputs) properties are implicitly available as output properties. A
         <span class="property-indicator"></span>
         <span class="property-type">str</span>
     </dt>
-    <dd>{{% md %}}Phone number of the user used by Datadog for contacting them if needed{{% /md %}}</dd>
-</dl>
+    <dd>{{% md %}}Phone number of the user used by Datadog for contacting them if needed{{% /md %}}</dd></dl>
 {{% /choosable %}}
 
 <h4 id="userinforesponse">User<wbr>Info<wbr>Response</h4>
 
 {{% choosable language csharp %}}
-<dl class="resources-properties">
-
-    <dt class="property-optional"
+<dl class="resources-properties"><dt class="property-optional"
             title="Optional">
         <span id="emailaddress_csharp">
 <a href="#emailaddress_csharp" style="color: inherit; text-decoration: inherit;">Email<wbr>Address</a>
@@ -2341,8 +2004,7 @@ All [input](#inputs) properties are implicitly available as output properties. A
         <span class="property-indicator"></span>
         <span class="property-type">string</span>
     </dt>
-    <dd>{{% md %}}Email of the user used by Datadog for contacting them if needed{{% /md %}}</dd>
-    <dt class="property-optional"
+    <dd>{{% md %}}Email of the user used by Datadog for contacting them if needed{{% /md %}}</dd><dt class="property-optional"
             title="Optional">
         <span id="name_csharp">
 <a href="#name_csharp" style="color: inherit; text-decoration: inherit;">Name</a>
@@ -2350,8 +2012,7 @@ All [input](#inputs) properties are implicitly available as output properties. A
         <span class="property-indicator"></span>
         <span class="property-type">string</span>
     </dt>
-    <dd>{{% md %}}Name of the user{{% /md %}}</dd>
-    <dt class="property-optional"
+    <dd>{{% md %}}Name of the user{{% /md %}}</dd><dt class="property-optional"
             title="Optional">
         <span id="phonenumber_csharp">
 <a href="#phonenumber_csharp" style="color: inherit; text-decoration: inherit;">Phone<wbr>Number</a>
@@ -2359,14 +2020,11 @@ All [input](#inputs) properties are implicitly available as output properties. A
         <span class="property-indicator"></span>
         <span class="property-type">string</span>
     </dt>
-    <dd>{{% md %}}Phone number of the user used by Datadog for contacting them if needed{{% /md %}}</dd>
-</dl>
+    <dd>{{% md %}}Phone number of the user used by Datadog for contacting them if needed{{% /md %}}</dd></dl>
 {{% /choosable %}}
 
 {{% choosable language go %}}
-<dl class="resources-properties">
-
-    <dt class="property-optional"
+<dl class="resources-properties"><dt class="property-optional"
             title="Optional">
         <span id="emailaddress_go">
 <a href="#emailaddress_go" style="color: inherit; text-decoration: inherit;">Email<wbr>Address</a>
@@ -2374,8 +2032,7 @@ All [input](#inputs) properties are implicitly available as output properties. A
         <span class="property-indicator"></span>
         <span class="property-type">string</span>
     </dt>
-    <dd>{{% md %}}Email of the user used by Datadog for contacting them if needed{{% /md %}}</dd>
-    <dt class="property-optional"
+    <dd>{{% md %}}Email of the user used by Datadog for contacting them if needed{{% /md %}}</dd><dt class="property-optional"
             title="Optional">
         <span id="name_go">
 <a href="#name_go" style="color: inherit; text-decoration: inherit;">Name</a>
@@ -2383,8 +2040,7 @@ All [input](#inputs) properties are implicitly available as output properties. A
         <span class="property-indicator"></span>
         <span class="property-type">string</span>
     </dt>
-    <dd>{{% md %}}Name of the user{{% /md %}}</dd>
-    <dt class="property-optional"
+    <dd>{{% md %}}Name of the user{{% /md %}}</dd><dt class="property-optional"
             title="Optional">
         <span id="phonenumber_go">
 <a href="#phonenumber_go" style="color: inherit; text-decoration: inherit;">Phone<wbr>Number</a>
@@ -2392,14 +2048,11 @@ All [input](#inputs) properties are implicitly available as output properties. A
         <span class="property-indicator"></span>
         <span class="property-type">string</span>
     </dt>
-    <dd>{{% md %}}Phone number of the user used by Datadog for contacting them if needed{{% /md %}}</dd>
-</dl>
+    <dd>{{% md %}}Phone number of the user used by Datadog for contacting them if needed{{% /md %}}</dd></dl>
 {{% /choosable %}}
 
 {{% choosable language nodejs %}}
-<dl class="resources-properties">
-
-    <dt class="property-optional"
+<dl class="resources-properties"><dt class="property-optional"
             title="Optional">
         <span id="emailaddress_nodejs">
 <a href="#emailaddress_nodejs" style="color: inherit; text-decoration: inherit;">email<wbr>Address</a>
@@ -2407,8 +2060,7 @@ All [input](#inputs) properties are implicitly available as output properties. A
         <span class="property-indicator"></span>
         <span class="property-type">string</span>
     </dt>
-    <dd>{{% md %}}Email of the user used by Datadog for contacting them if needed{{% /md %}}</dd>
-    <dt class="property-optional"
+    <dd>{{% md %}}Email of the user used by Datadog for contacting them if needed{{% /md %}}</dd><dt class="property-optional"
             title="Optional">
         <span id="name_nodejs">
 <a href="#name_nodejs" style="color: inherit; text-decoration: inherit;">name</a>
@@ -2416,8 +2068,7 @@ All [input](#inputs) properties are implicitly available as output properties. A
         <span class="property-indicator"></span>
         <span class="property-type">string</span>
     </dt>
-    <dd>{{% md %}}Name of the user{{% /md %}}</dd>
-    <dt class="property-optional"
+    <dd>{{% md %}}Name of the user{{% /md %}}</dd><dt class="property-optional"
             title="Optional">
         <span id="phonenumber_nodejs">
 <a href="#phonenumber_nodejs" style="color: inherit; text-decoration: inherit;">phone<wbr>Number</a>
@@ -2425,14 +2076,11 @@ All [input](#inputs) properties are implicitly available as output properties. A
         <span class="property-indicator"></span>
         <span class="property-type">string</span>
     </dt>
-    <dd>{{% md %}}Phone number of the user used by Datadog for contacting them if needed{{% /md %}}</dd>
-</dl>
+    <dd>{{% md %}}Phone number of the user used by Datadog for contacting them if needed{{% /md %}}</dd></dl>
 {{% /choosable %}}
 
 {{% choosable language python %}}
-<dl class="resources-properties">
-
-    <dt class="property-optional"
+<dl class="resources-properties"><dt class="property-optional"
             title="Optional">
         <span id="email_address_python">
 <a href="#email_address_python" style="color: inherit; text-decoration: inherit;">email_<wbr>address</a>
@@ -2440,8 +2088,7 @@ All [input](#inputs) properties are implicitly available as output properties. A
         <span class="property-indicator"></span>
         <span class="property-type">str</span>
     </dt>
-    <dd>{{% md %}}Email of the user used by Datadog for contacting them if needed{{% /md %}}</dd>
-    <dt class="property-optional"
+    <dd>{{% md %}}Email of the user used by Datadog for contacting them if needed{{% /md %}}</dd><dt class="property-optional"
             title="Optional">
         <span id="name_python">
 <a href="#name_python" style="color: inherit; text-decoration: inherit;">name</a>
@@ -2449,8 +2096,7 @@ All [input](#inputs) properties are implicitly available as output properties. A
         <span class="property-indicator"></span>
         <span class="property-type">str</span>
     </dt>
-    <dd>{{% md %}}Name of the user{{% /md %}}</dd>
-    <dt class="property-optional"
+    <dd>{{% md %}}Name of the user{{% /md %}}</dd><dt class="property-optional"
             title="Optional">
         <span id="phone_number_python">
 <a href="#phone_number_python" style="color: inherit; text-decoration: inherit;">phone_<wbr>number</a>
@@ -2458,8 +2104,7 @@ All [input](#inputs) properties are implicitly available as output properties. A
         <span class="property-indicator"></span>
         <span class="property-type">str</span>
     </dt>
-    <dd>{{% md %}}Phone number of the user used by Datadog for contacting them if needed{{% /md %}}</dd>
-</dl>
+    <dd>{{% md %}}Phone number of the user used by Datadog for contacting them if needed{{% /md %}}</dd></dl>
 {{% /choosable %}}
 ## Import
 

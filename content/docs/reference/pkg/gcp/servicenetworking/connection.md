@@ -35,9 +35,7 @@ meta_desc: "Documentation for the gcp.servicenetworking.Connection resource with
 
 {{% choosable language nodejs %}}
 
-<dl class="resources-properties">
-  
-    <dt
+<dl class="resources-properties"><dt
         class="property-required" title="Required">
         <span>name</span>
         <span class="property-indicator"></span>
@@ -45,9 +43,7 @@ meta_desc: "Documentation for the gcp.servicenetworking.Connection resource with
     </dt>
     <dd>
       The unique name of the resource.
-    </dd>
-  
-    <dt
+    </dd><dt
         class="property-required" title="Required">
         <span>args</span>
         <span class="property-indicator"></span>
@@ -55,9 +51,7 @@ meta_desc: "Documentation for the gcp.servicenetworking.Connection resource with
     </dt>
     <dd>
       The arguments to resource properties.
-    </dd>
-  
-    <dt
+    </dd><dt
         class="property-optional" title="Optional">
         <span>opts</span>
         <span class="property-indicator"></span>
@@ -65,10 +59,7 @@ meta_desc: "Documentation for the gcp.servicenetworking.Connection resource with
     </dt>
     <dd>
       Bag of options to control resource&#39;s behavior.
-    </dd>
-  
-
-</dl>
+    </dd></dl>
 
 {{% /choosable %}}
 
@@ -94,9 +85,7 @@ meta_desc: "Documentation for the gcp.servicenetworking.Connection resource with
 
 {{% choosable language go %}}
 
-<dl class="resources-properties">
-  
-    <dt
+<dl class="resources-properties"><dt
         class="property-optional" title="Optional">
         <span>ctx</span>
         <span class="property-indicator"></span>
@@ -104,9 +93,7 @@ meta_desc: "Documentation for the gcp.servicenetworking.Connection resource with
     </dt>
     <dd>
       Context object for the current deployment.
-    </dd>
-  
-    <dt
+    </dd><dt
         class="property-required" title="Required">
         <span>name</span>
         <span class="property-indicator"></span>
@@ -114,9 +101,7 @@ meta_desc: "Documentation for the gcp.servicenetworking.Connection resource with
     </dt>
     <dd>
       The unique name of the resource.
-    </dd>
-  
-    <dt
+    </dd><dt
         class="property-required" title="Required">
         <span>args</span>
         <span class="property-indicator"></span>
@@ -124,9 +109,7 @@ meta_desc: "Documentation for the gcp.servicenetworking.Connection resource with
     </dt>
     <dd>
       The arguments to resource properties.
-    </dd>
-  
-    <dt
+    </dd><dt
         class="property-optional" title="Optional">
         <span>opts</span>
         <span class="property-indicator"></span>
@@ -134,18 +117,13 @@ meta_desc: "Documentation for the gcp.servicenetworking.Connection resource with
     </dt>
     <dd>
       Bag of options to control resource&#39;s behavior.
-    </dd>
-  
-
-</dl>
+    </dd></dl>
 
 {{% /choosable %}}
 
 {{% choosable language csharp %}}
 
-<dl class="resources-properties">
-  
-    <dt
+<dl class="resources-properties"><dt
         class="property-required" title="Required">
         <span>name</span>
         <span class="property-indicator"></span>
@@ -153,9 +131,7 @@ meta_desc: "Documentation for the gcp.servicenetworking.Connection resource with
     </dt>
     <dd>
       The unique name of the resource.
-    </dd>
-  
-    <dt
+    </dd><dt
         class="property-required" title="Required">
         <span>args</span>
         <span class="property-indicator"></span>
@@ -163,9 +139,7 @@ meta_desc: "Documentation for the gcp.servicenetworking.Connection resource with
     </dt>
     <dd>
       The arguments to resource properties.
-    </dd>
-  
-    <dt
+    </dd><dt
         class="property-optional" title="Optional">
         <span>opts</span>
         <span class="property-indicator"></span>
@@ -173,10 +147,7 @@ meta_desc: "Documentation for the gcp.servicenetworking.Connection resource with
     </dt>
     <dd>
       Bag of options to control resource&#39;s behavior.
-    </dd>
-  
-
-</dl>
+    </dd></dl>
 
 {{% /choosable %}}
 
@@ -191,9 +162,7 @@ The Connection resource accepts the following [input]({{< relref "/docs/intro/co
 
 
 {{% choosable language csharp %}}
-<dl class="resources-properties">
-
-    <dt class="property-required"
+<dl class="resources-properties"><dt class="property-required"
             title="Required">
         <span id="network_csharp">
 <a href="#network_csharp" style="color: inherit; text-decoration: inherit;">Network</a>
@@ -202,8 +171,7 @@ The Connection resource accepts the following [input]({{< relref "/docs/intro/co
         <span class="property-type">string</span>
     </dt>
     <dd>{{% md %}}Name of VPC network connected with service producers using VPC peering.
-{{% /md %}}</dd>
-    <dt class="property-required"
+{{% /md %}}</dd><dt class="property-required"
             title="Required">
         <span id="reservedpeeringranges_csharp">
 <a href="#reservedpeeringranges_csharp" style="color: inherit; text-decoration: inherit;">Reserved<wbr>Peering<wbr>Ranges</a>
@@ -214,8 +182,7 @@ The Connection resource accepts the following [input]({{< relref "/docs/intro/co
     <dd>{{% md %}}Named IP address range(s) of PEERING type reserved for
 this service provider. Note that invoking this method with a different range when connection
 is already established will not reallocate already provisioned service producer subnetworks.
-{{% /md %}}</dd>
-    <dt class="property-required"
+{{% /md %}}</dd><dt class="property-required"
             title="Required">
         <span id="service_csharp">
 <a href="#service_csharp" style="color: inherit; text-decoration: inherit;">Service</a>
@@ -226,14 +193,11 @@ is already established will not reallocate already provisioned service producer 
     <dd>{{% md %}}Provider peering service that is managing peering connectivity for a
 service provider organization. For Google services that support this functionality it is
 'servicenetworking.googleapis.com'.
-{{% /md %}}</dd>
-</dl>
+{{% /md %}}</dd></dl>
 {{% /choosable %}}
 
 {{% choosable language go %}}
-<dl class="resources-properties">
-
-    <dt class="property-required"
+<dl class="resources-properties"><dt class="property-required"
             title="Required">
         <span id="network_go">
 <a href="#network_go" style="color: inherit; text-decoration: inherit;">Network</a>
@@ -242,8 +206,7 @@ service provider organization. For Google services that support this functionali
         <span class="property-type">string</span>
     </dt>
     <dd>{{% md %}}Name of VPC network connected with service producers using VPC peering.
-{{% /md %}}</dd>
-    <dt class="property-required"
+{{% /md %}}</dd><dt class="property-required"
             title="Required">
         <span id="reservedpeeringranges_go">
 <a href="#reservedpeeringranges_go" style="color: inherit; text-decoration: inherit;">Reserved<wbr>Peering<wbr>Ranges</a>
@@ -254,8 +217,7 @@ service provider organization. For Google services that support this functionali
     <dd>{{% md %}}Named IP address range(s) of PEERING type reserved for
 this service provider. Note that invoking this method with a different range when connection
 is already established will not reallocate already provisioned service producer subnetworks.
-{{% /md %}}</dd>
-    <dt class="property-required"
+{{% /md %}}</dd><dt class="property-required"
             title="Required">
         <span id="service_go">
 <a href="#service_go" style="color: inherit; text-decoration: inherit;">Service</a>
@@ -266,14 +228,11 @@ is already established will not reallocate already provisioned service producer 
     <dd>{{% md %}}Provider peering service that is managing peering connectivity for a
 service provider organization. For Google services that support this functionality it is
 'servicenetworking.googleapis.com'.
-{{% /md %}}</dd>
-</dl>
+{{% /md %}}</dd></dl>
 {{% /choosable %}}
 
 {{% choosable language nodejs %}}
-<dl class="resources-properties">
-
-    <dt class="property-required"
+<dl class="resources-properties"><dt class="property-required"
             title="Required">
         <span id="network_nodejs">
 <a href="#network_nodejs" style="color: inherit; text-decoration: inherit;">network</a>
@@ -282,8 +241,7 @@ service provider organization. For Google services that support this functionali
         <span class="property-type">string</span>
     </dt>
     <dd>{{% md %}}Name of VPC network connected with service producers using VPC peering.
-{{% /md %}}</dd>
-    <dt class="property-required"
+{{% /md %}}</dd><dt class="property-required"
             title="Required">
         <span id="reservedpeeringranges_nodejs">
 <a href="#reservedpeeringranges_nodejs" style="color: inherit; text-decoration: inherit;">reserved<wbr>Peering<wbr>Ranges</a>
@@ -294,8 +252,7 @@ service provider organization. For Google services that support this functionali
     <dd>{{% md %}}Named IP address range(s) of PEERING type reserved for
 this service provider. Note that invoking this method with a different range when connection
 is already established will not reallocate already provisioned service producer subnetworks.
-{{% /md %}}</dd>
-    <dt class="property-required"
+{{% /md %}}</dd><dt class="property-required"
             title="Required">
         <span id="service_nodejs">
 <a href="#service_nodejs" style="color: inherit; text-decoration: inherit;">service</a>
@@ -306,14 +263,11 @@ is already established will not reallocate already provisioned service producer 
     <dd>{{% md %}}Provider peering service that is managing peering connectivity for a
 service provider organization. For Google services that support this functionality it is
 'servicenetworking.googleapis.com'.
-{{% /md %}}</dd>
-</dl>
+{{% /md %}}</dd></dl>
 {{% /choosable %}}
 
 {{% choosable language python %}}
-<dl class="resources-properties">
-
-    <dt class="property-required"
+<dl class="resources-properties"><dt class="property-required"
             title="Required">
         <span id="network_python">
 <a href="#network_python" style="color: inherit; text-decoration: inherit;">network</a>
@@ -322,8 +276,7 @@ service provider organization. For Google services that support this functionali
         <span class="property-type">str</span>
     </dt>
     <dd>{{% md %}}Name of VPC network connected with service producers using VPC peering.
-{{% /md %}}</dd>
-    <dt class="property-required"
+{{% /md %}}</dd><dt class="property-required"
             title="Required">
         <span id="reserved_peering_ranges_python">
 <a href="#reserved_peering_ranges_python" style="color: inherit; text-decoration: inherit;">reserved_<wbr>peering_<wbr>ranges</a>
@@ -334,8 +287,7 @@ service provider organization. For Google services that support this functionali
     <dd>{{% md %}}Named IP address range(s) of PEERING type reserved for
 this service provider. Note that invoking this method with a different range when connection
 is already established will not reallocate already provisioned service producer subnetworks.
-{{% /md %}}</dd>
-    <dt class="property-required"
+{{% /md %}}</dd><dt class="property-required"
             title="Required">
         <span id="service_python">
 <a href="#service_python" style="color: inherit; text-decoration: inherit;">service</a>
@@ -346,8 +298,7 @@ is already established will not reallocate already provisioned service producer 
     <dd>{{% md %}}Provider peering service that is managing peering connectivity for a
 service provider organization. For Google services that support this functionality it is
 'servicenetworking.googleapis.com'.
-{{% /md %}}</dd>
-</dl>
+{{% /md %}}</dd></dl>
 {{% /choosable %}}
 
 
@@ -358,9 +309,7 @@ All [input](#inputs) properties are implicitly available as output properties. A
 
 
 {{% choosable language csharp %}}
-<dl class="resources-properties">
-
-    <dt class="property-"
+<dl class="resources-properties"><dt class="property-"
             title="">
         <span id="id_csharp">
 <a href="#id_csharp" style="color: inherit; text-decoration: inherit;">Id</a>
@@ -368,8 +317,7 @@ All [input](#inputs) properties are implicitly available as output properties. A
         <span class="property-indicator"></span>
         <span class="property-type">string</span>
     </dt>
-    <dd>{{% md %}}The provider-assigned unique ID for this managed resource.{{% /md %}}</dd>
-    <dt class="property-"
+    <dd>{{% md %}}The provider-assigned unique ID for this managed resource.{{% /md %}}</dd><dt class="property-"
             title="">
         <span id="peering_csharp">
 <a href="#peering_csharp" style="color: inherit; text-decoration: inherit;">Peering</a>
@@ -377,14 +325,11 @@ All [input](#inputs) properties are implicitly available as output properties. A
         <span class="property-indicator"></span>
         <span class="property-type">string</span>
     </dt>
-    <dd>{{% md %}}{{% /md %}}</dd>
-</dl>
+    <dd>{{% md %}}{{% /md %}}</dd></dl>
 {{% /choosable %}}
 
 {{% choosable language go %}}
-<dl class="resources-properties">
-
-    <dt class="property-"
+<dl class="resources-properties"><dt class="property-"
             title="">
         <span id="id_go">
 <a href="#id_go" style="color: inherit; text-decoration: inherit;">Id</a>
@@ -392,8 +337,7 @@ All [input](#inputs) properties are implicitly available as output properties. A
         <span class="property-indicator"></span>
         <span class="property-type">string</span>
     </dt>
-    <dd>{{% md %}}The provider-assigned unique ID for this managed resource.{{% /md %}}</dd>
-    <dt class="property-"
+    <dd>{{% md %}}The provider-assigned unique ID for this managed resource.{{% /md %}}</dd><dt class="property-"
             title="">
         <span id="peering_go">
 <a href="#peering_go" style="color: inherit; text-decoration: inherit;">Peering</a>
@@ -401,14 +345,11 @@ All [input](#inputs) properties are implicitly available as output properties. A
         <span class="property-indicator"></span>
         <span class="property-type">string</span>
     </dt>
-    <dd>{{% md %}}{{% /md %}}</dd>
-</dl>
+    <dd>{{% md %}}{{% /md %}}</dd></dl>
 {{% /choosable %}}
 
 {{% choosable language nodejs %}}
-<dl class="resources-properties">
-
-    <dt class="property-"
+<dl class="resources-properties"><dt class="property-"
             title="">
         <span id="id_nodejs">
 <a href="#id_nodejs" style="color: inherit; text-decoration: inherit;">id</a>
@@ -416,8 +357,7 @@ All [input](#inputs) properties are implicitly available as output properties. A
         <span class="property-indicator"></span>
         <span class="property-type">string</span>
     </dt>
-    <dd>{{% md %}}The provider-assigned unique ID for this managed resource.{{% /md %}}</dd>
-    <dt class="property-"
+    <dd>{{% md %}}The provider-assigned unique ID for this managed resource.{{% /md %}}</dd><dt class="property-"
             title="">
         <span id="peering_nodejs">
 <a href="#peering_nodejs" style="color: inherit; text-decoration: inherit;">peering</a>
@@ -425,14 +365,11 @@ All [input](#inputs) properties are implicitly available as output properties. A
         <span class="property-indicator"></span>
         <span class="property-type">string</span>
     </dt>
-    <dd>{{% md %}}{{% /md %}}</dd>
-</dl>
+    <dd>{{% md %}}{{% /md %}}</dd></dl>
 {{% /choosable %}}
 
 {{% choosable language python %}}
-<dl class="resources-properties">
-
-    <dt class="property-"
+<dl class="resources-properties"><dt class="property-"
             title="">
         <span id="id_python">
 <a href="#id_python" style="color: inherit; text-decoration: inherit;">id</a>
@@ -440,8 +377,7 @@ All [input](#inputs) properties are implicitly available as output properties. A
         <span class="property-indicator"></span>
         <span class="property-type">str</span>
     </dt>
-    <dd>{{% md %}}The provider-assigned unique ID for this managed resource.{{% /md %}}</dd>
-    <dt class="property-"
+    <dd>{{% md %}}The provider-assigned unique ID for this managed resource.{{% /md %}}</dd><dt class="property-"
             title="">
         <span id="peering_python">
 <a href="#peering_python" style="color: inherit; text-decoration: inherit;">peering</a>
@@ -449,8 +385,7 @@ All [input](#inputs) properties are implicitly available as output properties. A
         <span class="property-indicator"></span>
         <span class="property-type">str</span>
     </dt>
-    <dd>{{% md %}}{{% /md %}}</dd>
-</dl>
+    <dd>{{% md %}}{{% /md %}}</dd></dl>
 {{% /choosable %}}
 
 
@@ -577,9 +512,7 @@ The following state arguments are supported:
 
 
 {{% choosable language csharp %}}
-<dl class="resources-properties">
-
-    <dt class="property-optional"
+<dl class="resources-properties"><dt class="property-optional"
             title="Optional">
         <span id="state_network_csharp">
 <a href="#state_network_csharp" style="color: inherit; text-decoration: inherit;">Network</a>
@@ -588,8 +521,7 @@ The following state arguments are supported:
         <span class="property-type">string</span>
     </dt>
     <dd>{{% md %}}Name of VPC network connected with service producers using VPC peering.
-{{% /md %}}</dd>
-    <dt class="property-optional"
+{{% /md %}}</dd><dt class="property-optional"
             title="Optional">
         <span id="state_peering_csharp">
 <a href="#state_peering_csharp" style="color: inherit; text-decoration: inherit;">Peering</a>
@@ -597,8 +529,7 @@ The following state arguments are supported:
         <span class="property-indicator"></span>
         <span class="property-type">string</span>
     </dt>
-    <dd>{{% md %}}{{% /md %}}</dd>
-    <dt class="property-optional"
+    <dd>{{% md %}}{{% /md %}}</dd><dt class="property-optional"
             title="Optional">
         <span id="state_reservedpeeringranges_csharp">
 <a href="#state_reservedpeeringranges_csharp" style="color: inherit; text-decoration: inherit;">Reserved<wbr>Peering<wbr>Ranges</a>
@@ -609,8 +540,7 @@ The following state arguments are supported:
     <dd>{{% md %}}Named IP address range(s) of PEERING type reserved for
 this service provider. Note that invoking this method with a different range when connection
 is already established will not reallocate already provisioned service producer subnetworks.
-{{% /md %}}</dd>
-    <dt class="property-optional"
+{{% /md %}}</dd><dt class="property-optional"
             title="Optional">
         <span id="state_service_csharp">
 <a href="#state_service_csharp" style="color: inherit; text-decoration: inherit;">Service</a>
@@ -621,14 +551,11 @@ is already established will not reallocate already provisioned service producer 
     <dd>{{% md %}}Provider peering service that is managing peering connectivity for a
 service provider organization. For Google services that support this functionality it is
 'servicenetworking.googleapis.com'.
-{{% /md %}}</dd>
-</dl>
+{{% /md %}}</dd></dl>
 {{% /choosable %}}
 
 {{% choosable language go %}}
-<dl class="resources-properties">
-
-    <dt class="property-optional"
+<dl class="resources-properties"><dt class="property-optional"
             title="Optional">
         <span id="state_network_go">
 <a href="#state_network_go" style="color: inherit; text-decoration: inherit;">Network</a>
@@ -637,8 +564,7 @@ service provider organization. For Google services that support this functionali
         <span class="property-type">string</span>
     </dt>
     <dd>{{% md %}}Name of VPC network connected with service producers using VPC peering.
-{{% /md %}}</dd>
-    <dt class="property-optional"
+{{% /md %}}</dd><dt class="property-optional"
             title="Optional">
         <span id="state_peering_go">
 <a href="#state_peering_go" style="color: inherit; text-decoration: inherit;">Peering</a>
@@ -646,8 +572,7 @@ service provider organization. For Google services that support this functionali
         <span class="property-indicator"></span>
         <span class="property-type">string</span>
     </dt>
-    <dd>{{% md %}}{{% /md %}}</dd>
-    <dt class="property-optional"
+    <dd>{{% md %}}{{% /md %}}</dd><dt class="property-optional"
             title="Optional">
         <span id="state_reservedpeeringranges_go">
 <a href="#state_reservedpeeringranges_go" style="color: inherit; text-decoration: inherit;">Reserved<wbr>Peering<wbr>Ranges</a>
@@ -658,8 +583,7 @@ service provider organization. For Google services that support this functionali
     <dd>{{% md %}}Named IP address range(s) of PEERING type reserved for
 this service provider. Note that invoking this method with a different range when connection
 is already established will not reallocate already provisioned service producer subnetworks.
-{{% /md %}}</dd>
-    <dt class="property-optional"
+{{% /md %}}</dd><dt class="property-optional"
             title="Optional">
         <span id="state_service_go">
 <a href="#state_service_go" style="color: inherit; text-decoration: inherit;">Service</a>
@@ -670,14 +594,11 @@ is already established will not reallocate already provisioned service producer 
     <dd>{{% md %}}Provider peering service that is managing peering connectivity for a
 service provider organization. For Google services that support this functionality it is
 'servicenetworking.googleapis.com'.
-{{% /md %}}</dd>
-</dl>
+{{% /md %}}</dd></dl>
 {{% /choosable %}}
 
 {{% choosable language nodejs %}}
-<dl class="resources-properties">
-
-    <dt class="property-optional"
+<dl class="resources-properties"><dt class="property-optional"
             title="Optional">
         <span id="state_network_nodejs">
 <a href="#state_network_nodejs" style="color: inherit; text-decoration: inherit;">network</a>
@@ -686,8 +607,7 @@ service provider organization. For Google services that support this functionali
         <span class="property-type">string</span>
     </dt>
     <dd>{{% md %}}Name of VPC network connected with service producers using VPC peering.
-{{% /md %}}</dd>
-    <dt class="property-optional"
+{{% /md %}}</dd><dt class="property-optional"
             title="Optional">
         <span id="state_peering_nodejs">
 <a href="#state_peering_nodejs" style="color: inherit; text-decoration: inherit;">peering</a>
@@ -695,8 +615,7 @@ service provider organization. For Google services that support this functionali
         <span class="property-indicator"></span>
         <span class="property-type">string</span>
     </dt>
-    <dd>{{% md %}}{{% /md %}}</dd>
-    <dt class="property-optional"
+    <dd>{{% md %}}{{% /md %}}</dd><dt class="property-optional"
             title="Optional">
         <span id="state_reservedpeeringranges_nodejs">
 <a href="#state_reservedpeeringranges_nodejs" style="color: inherit; text-decoration: inherit;">reserved<wbr>Peering<wbr>Ranges</a>
@@ -707,8 +626,7 @@ service provider organization. For Google services that support this functionali
     <dd>{{% md %}}Named IP address range(s) of PEERING type reserved for
 this service provider. Note that invoking this method with a different range when connection
 is already established will not reallocate already provisioned service producer subnetworks.
-{{% /md %}}</dd>
-    <dt class="property-optional"
+{{% /md %}}</dd><dt class="property-optional"
             title="Optional">
         <span id="state_service_nodejs">
 <a href="#state_service_nodejs" style="color: inherit; text-decoration: inherit;">service</a>
@@ -719,14 +637,11 @@ is already established will not reallocate already provisioned service producer 
     <dd>{{% md %}}Provider peering service that is managing peering connectivity for a
 service provider organization. For Google services that support this functionality it is
 'servicenetworking.googleapis.com'.
-{{% /md %}}</dd>
-</dl>
+{{% /md %}}</dd></dl>
 {{% /choosable %}}
 
 {{% choosable language python %}}
-<dl class="resources-properties">
-
-    <dt class="property-optional"
+<dl class="resources-properties"><dt class="property-optional"
             title="Optional">
         <span id="state_network_python">
 <a href="#state_network_python" style="color: inherit; text-decoration: inherit;">network</a>
@@ -735,8 +650,7 @@ service provider organization. For Google services that support this functionali
         <span class="property-type">str</span>
     </dt>
     <dd>{{% md %}}Name of VPC network connected with service producers using VPC peering.
-{{% /md %}}</dd>
-    <dt class="property-optional"
+{{% /md %}}</dd><dt class="property-optional"
             title="Optional">
         <span id="state_peering_python">
 <a href="#state_peering_python" style="color: inherit; text-decoration: inherit;">peering</a>
@@ -744,8 +658,7 @@ service provider organization. For Google services that support this functionali
         <span class="property-indicator"></span>
         <span class="property-type">str</span>
     </dt>
-    <dd>{{% md %}}{{% /md %}}</dd>
-    <dt class="property-optional"
+    <dd>{{% md %}}{{% /md %}}</dd><dt class="property-optional"
             title="Optional">
         <span id="state_reserved_peering_ranges_python">
 <a href="#state_reserved_peering_ranges_python" style="color: inherit; text-decoration: inherit;">reserved_<wbr>peering_<wbr>ranges</a>
@@ -756,8 +669,7 @@ service provider organization. For Google services that support this functionali
     <dd>{{% md %}}Named IP address range(s) of PEERING type reserved for
 this service provider. Note that invoking this method with a different range when connection
 is already established will not reallocate already provisioned service producer subnetworks.
-{{% /md %}}</dd>
-    <dt class="property-optional"
+{{% /md %}}</dd><dt class="property-optional"
             title="Optional">
         <span id="state_service_python">
 <a href="#state_service_python" style="color: inherit; text-decoration: inherit;">service</a>
@@ -768,8 +680,7 @@ is already established will not reallocate already provisioned service producer 
     <dd>{{% md %}}Provider peering service that is managing peering connectivity for a
 service provider organization. For Google services that support this functionality it is
 'servicenetworking.googleapis.com'.
-{{% /md %}}</dd>
-</dl>
+{{% /md %}}</dd></dl>
 {{% /choosable %}}
 
 
@@ -785,6 +696,6 @@ service provider organization. For Google services that support this functionali
 	<dt>License</dt>
 	<dd>Apache-2.0</dd>
 	<dt>Notes</dt>
-	<dd>This Pulumi package is based on the [`google-beta` Terraform Provider](https://github.com/hashicorp/terraform-provider-google-beta).</dd>
+	<dd>{{% md %}}This Pulumi package is based on the [`google-beta` Terraform Provider](https://github.com/hashicorp/terraform-provider-google-beta).{{% /md %}}</dd>
 </dl>
 

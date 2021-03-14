@@ -16,11 +16,17 @@ Provides an OTS table resource.
 you should use resource alicloud_ots_table's new field 'instance_name' and 'table_name' to re-import this resource.
 
 {{% examples %}}
+
 ## Example Usage
 
 {{< chooser language "typescript,python,go,csharp" / >}}
 
-{{% example csharp %}}
+
+
+
+
+{{< example csharp >}}
+
 ```csharp
 using Pulumi;
 using AliCloud = Pulumi.AliCloud;
@@ -72,9 +78,12 @@ class MyStack : Stack
 }
 ```
 
-{{% /example %}}
 
-{{% example go %}}
+{{< /example >}}
+
+
+{{< example go >}}
+
 ```go
 package main
 
@@ -131,9 +140,12 @@ func main() {
 }
 ```
 
-{{% /example %}}
 
-{{% example python %}}
+{{< /example >}}
+
+
+{{< example python >}}
+
 ```python
 import pulumi
 import pulumi_alicloud as alicloud
@@ -171,9 +183,12 @@ basic = alicloud.ots.Table("basic",
     deviation_cell_version_in_sec="1")
 ```
 
-{{% /example %}}
 
-{{% example typescript %}}
+{{< /example >}}
+
+
+{{< example typescript >}}
+
 
 ```typescript
 import * as pulumi from "@pulumi/pulumi";
@@ -212,9 +227,16 @@ const basic = new alicloud.ots.Table("basic", {
 });
 ```
 
-{{% /example %}}
+
+{{< /example >}}
+
+
+
+
 
 {{% /examples %}}
+
+
 
 
 ## Create a Table Resource {#create}
@@ -239,9 +261,7 @@ const basic = new alicloud.ots.Table("basic", {
 
 {{% choosable language nodejs %}}
 
-<dl class="resources-properties">
-  
-    <dt
+<dl class="resources-properties"><dt
         class="property-required" title="Required">
         <span>name</span>
         <span class="property-indicator"></span>
@@ -249,9 +269,7 @@ const basic = new alicloud.ots.Table("basic", {
     </dt>
     <dd>
       The unique name of the resource.
-    </dd>
-  
-    <dt
+    </dd><dt
         class="property-required" title="Required">
         <span>args</span>
         <span class="property-indicator"></span>
@@ -259,9 +277,7 @@ const basic = new alicloud.ots.Table("basic", {
     </dt>
     <dd>
       The arguments to resource properties.
-    </dd>
-  
-    <dt
+    </dd><dt
         class="property-optional" title="Optional">
         <span>opts</span>
         <span class="property-indicator"></span>
@@ -269,10 +285,7 @@ const basic = new alicloud.ots.Table("basic", {
     </dt>
     <dd>
       Bag of options to control resource&#39;s behavior.
-    </dd>
-  
-
-</dl>
+    </dd></dl>
 
 {{% /choosable %}}
 
@@ -298,9 +311,7 @@ const basic = new alicloud.ots.Table("basic", {
 
 {{% choosable language go %}}
 
-<dl class="resources-properties">
-  
-    <dt
+<dl class="resources-properties"><dt
         class="property-optional" title="Optional">
         <span>ctx</span>
         <span class="property-indicator"></span>
@@ -308,9 +319,7 @@ const basic = new alicloud.ots.Table("basic", {
     </dt>
     <dd>
       Context object for the current deployment.
-    </dd>
-  
-    <dt
+    </dd><dt
         class="property-required" title="Required">
         <span>name</span>
         <span class="property-indicator"></span>
@@ -318,9 +327,7 @@ const basic = new alicloud.ots.Table("basic", {
     </dt>
     <dd>
       The unique name of the resource.
-    </dd>
-  
-    <dt
+    </dd><dt
         class="property-required" title="Required">
         <span>args</span>
         <span class="property-indicator"></span>
@@ -328,9 +335,7 @@ const basic = new alicloud.ots.Table("basic", {
     </dt>
     <dd>
       The arguments to resource properties.
-    </dd>
-  
-    <dt
+    </dd><dt
         class="property-optional" title="Optional">
         <span>opts</span>
         <span class="property-indicator"></span>
@@ -338,18 +343,13 @@ const basic = new alicloud.ots.Table("basic", {
     </dt>
     <dd>
       Bag of options to control resource&#39;s behavior.
-    </dd>
-  
-
-</dl>
+    </dd></dl>
 
 {{% /choosable %}}
 
 {{% choosable language csharp %}}
 
-<dl class="resources-properties">
-  
-    <dt
+<dl class="resources-properties"><dt
         class="property-required" title="Required">
         <span>name</span>
         <span class="property-indicator"></span>
@@ -357,9 +357,7 @@ const basic = new alicloud.ots.Table("basic", {
     </dt>
     <dd>
       The unique name of the resource.
-    </dd>
-  
-    <dt
+    </dd><dt
         class="property-required" title="Required">
         <span>args</span>
         <span class="property-indicator"></span>
@@ -367,9 +365,7 @@ const basic = new alicloud.ots.Table("basic", {
     </dt>
     <dd>
       The arguments to resource properties.
-    </dd>
-  
-    <dt
+    </dd><dt
         class="property-optional" title="Optional">
         <span>opts</span>
         <span class="property-indicator"></span>
@@ -377,10 +373,7 @@ const basic = new alicloud.ots.Table("basic", {
     </dt>
     <dd>
       Bag of options to control resource&#39;s behavior.
-    </dd>
-  
-
-</dl>
+    </dd></dl>
 
 {{% /choosable %}}
 
@@ -395,9 +388,7 @@ The Table resource accepts the following [input]({{< relref "/docs/intro/concept
 
 
 {{% choosable language csharp %}}
-<dl class="resources-properties">
-
-    <dt class="property-required"
+<dl class="resources-properties"><dt class="property-required"
             title="Required">
         <span id="instancename_csharp">
 <a href="#instancename_csharp" style="color: inherit; text-decoration: inherit;">Instance<wbr>Name</a>
@@ -406,8 +397,7 @@ The Table resource accepts the following [input]({{< relref "/docs/intro/concept
         <span class="property-type">string</span>
     </dt>
     <dd>{{% md %}}The name of the OTS instance in which table will located.
-{{% /md %}}</dd>
-    <dt class="property-required"
+{{% /md %}}</dd><dt class="property-required"
             title="Required">
         <span id="maxversion_csharp">
 <a href="#maxversion_csharp" style="color: inherit; text-decoration: inherit;">Max<wbr>Version</a>
@@ -416,8 +406,7 @@ The Table resource accepts the following [input]({{< relref "/docs/intro/concept
         <span class="property-type">int</span>
     </dt>
     <dd>{{% md %}}The maximum number of versions stored in this table. The valid value is 1-2147483647.
-{{% /md %}}</dd>
-    <dt class="property-required"
+{{% /md %}}</dd><dt class="property-required"
             title="Required">
         <span id="primarykeys_csharp">
 <a href="#primarykeys_csharp" style="color: inherit; text-decoration: inherit;">Primary<wbr>Keys</a>
@@ -426,8 +415,7 @@ The Table resource accepts the following [input]({{< relref "/docs/intro/concept
         <span class="property-type"><a href="#tableprimarykey">List&lt;Pulumi.<wbr>Ali<wbr>Cloud.<wbr>Ots.<wbr>Inputs.<wbr>Table<wbr>Primary<wbr>Key<wbr>Args&gt;</a></span>
     </dt>
     <dd>{{% md %}}The property of `TableMeta` which indicates the structure information of a table. It describes the attribute value of primary key. The number of `primary_key` should not be less than one and not be more than four.
-{{% /md %}}</dd>
-    <dt class="property-required"
+{{% /md %}}</dd><dt class="property-required"
             title="Required">
         <span id="tablename_csharp">
 <a href="#tablename_csharp" style="color: inherit; text-decoration: inherit;">Table<wbr>Name</a>
@@ -436,8 +424,7 @@ The Table resource accepts the following [input]({{< relref "/docs/intro/concept
         <span class="property-type">string</span>
     </dt>
     <dd>{{% md %}}The table name of the OTS instance. If changed, a new table would be created.
-{{% /md %}}</dd>
-    <dt class="property-required"
+{{% /md %}}</dd><dt class="property-required"
             title="Required">
         <span id="timetolive_csharp">
 <a href="#timetolive_csharp" style="color: inherit; text-decoration: inherit;">Time<wbr>To<wbr>Live</a>
@@ -446,8 +433,7 @@ The Table resource accepts the following [input]({{< relref "/docs/intro/concept
         <span class="property-type">int</span>
     </dt>
     <dd>{{% md %}}The retention time of data stored in this table (unit: second). The value maximum is 2147483647 and -1 means never expired.
-{{% /md %}}</dd>
-    <dt class="property-optional"
+{{% /md %}}</dd><dt class="property-optional"
             title="Optional">
         <span id="deviationcellversioninsec_csharp">
 <a href="#deviationcellversioninsec_csharp" style="color: inherit; text-decoration: inherit;">Deviation<wbr>Cell<wbr>Version<wbr>In<wbr>Sec</a>
@@ -456,14 +442,11 @@ The Table resource accepts the following [input]({{< relref "/docs/intro/concept
         <span class="property-type">string</span>
     </dt>
     <dd>{{% md %}}The max version offset of the table. The valid value is 1-9223372036854775807. Defaults to 86400.
-{{% /md %}}</dd>
-</dl>
+{{% /md %}}</dd></dl>
 {{% /choosable %}}
 
 {{% choosable language go %}}
-<dl class="resources-properties">
-
-    <dt class="property-required"
+<dl class="resources-properties"><dt class="property-required"
             title="Required">
         <span id="instancename_go">
 <a href="#instancename_go" style="color: inherit; text-decoration: inherit;">Instance<wbr>Name</a>
@@ -472,8 +455,7 @@ The Table resource accepts the following [input]({{< relref "/docs/intro/concept
         <span class="property-type">string</span>
     </dt>
     <dd>{{% md %}}The name of the OTS instance in which table will located.
-{{% /md %}}</dd>
-    <dt class="property-required"
+{{% /md %}}</dd><dt class="property-required"
             title="Required">
         <span id="maxversion_go">
 <a href="#maxversion_go" style="color: inherit; text-decoration: inherit;">Max<wbr>Version</a>
@@ -482,8 +464,7 @@ The Table resource accepts the following [input]({{< relref "/docs/intro/concept
         <span class="property-type">int</span>
     </dt>
     <dd>{{% md %}}The maximum number of versions stored in this table. The valid value is 1-2147483647.
-{{% /md %}}</dd>
-    <dt class="property-required"
+{{% /md %}}</dd><dt class="property-required"
             title="Required">
         <span id="primarykeys_go">
 <a href="#primarykeys_go" style="color: inherit; text-decoration: inherit;">Primary<wbr>Keys</a>
@@ -492,8 +473,7 @@ The Table resource accepts the following [input]({{< relref "/docs/intro/concept
         <span class="property-type"><a href="#tableprimarykey">[]Table<wbr>Primary<wbr>Key</a></span>
     </dt>
     <dd>{{% md %}}The property of `TableMeta` which indicates the structure information of a table. It describes the attribute value of primary key. The number of `primary_key` should not be less than one and not be more than four.
-{{% /md %}}</dd>
-    <dt class="property-required"
+{{% /md %}}</dd><dt class="property-required"
             title="Required">
         <span id="tablename_go">
 <a href="#tablename_go" style="color: inherit; text-decoration: inherit;">Table<wbr>Name</a>
@@ -502,8 +482,7 @@ The Table resource accepts the following [input]({{< relref "/docs/intro/concept
         <span class="property-type">string</span>
     </dt>
     <dd>{{% md %}}The table name of the OTS instance. If changed, a new table would be created.
-{{% /md %}}</dd>
-    <dt class="property-required"
+{{% /md %}}</dd><dt class="property-required"
             title="Required">
         <span id="timetolive_go">
 <a href="#timetolive_go" style="color: inherit; text-decoration: inherit;">Time<wbr>To<wbr>Live</a>
@@ -512,8 +491,7 @@ The Table resource accepts the following [input]({{< relref "/docs/intro/concept
         <span class="property-type">int</span>
     </dt>
     <dd>{{% md %}}The retention time of data stored in this table (unit: second). The value maximum is 2147483647 and -1 means never expired.
-{{% /md %}}</dd>
-    <dt class="property-optional"
+{{% /md %}}</dd><dt class="property-optional"
             title="Optional">
         <span id="deviationcellversioninsec_go">
 <a href="#deviationcellversioninsec_go" style="color: inherit; text-decoration: inherit;">Deviation<wbr>Cell<wbr>Version<wbr>In<wbr>Sec</a>
@@ -522,14 +500,11 @@ The Table resource accepts the following [input]({{< relref "/docs/intro/concept
         <span class="property-type">string</span>
     </dt>
     <dd>{{% md %}}The max version offset of the table. The valid value is 1-9223372036854775807. Defaults to 86400.
-{{% /md %}}</dd>
-</dl>
+{{% /md %}}</dd></dl>
 {{% /choosable %}}
 
 {{% choosable language nodejs %}}
-<dl class="resources-properties">
-
-    <dt class="property-required"
+<dl class="resources-properties"><dt class="property-required"
             title="Required">
         <span id="instancename_nodejs">
 <a href="#instancename_nodejs" style="color: inherit; text-decoration: inherit;">instance<wbr>Name</a>
@@ -538,8 +513,7 @@ The Table resource accepts the following [input]({{< relref "/docs/intro/concept
         <span class="property-type">string</span>
     </dt>
     <dd>{{% md %}}The name of the OTS instance in which table will located.
-{{% /md %}}</dd>
-    <dt class="property-required"
+{{% /md %}}</dd><dt class="property-required"
             title="Required">
         <span id="maxversion_nodejs">
 <a href="#maxversion_nodejs" style="color: inherit; text-decoration: inherit;">max<wbr>Version</a>
@@ -548,8 +522,7 @@ The Table resource accepts the following [input]({{< relref "/docs/intro/concept
         <span class="property-type">number</span>
     </dt>
     <dd>{{% md %}}The maximum number of versions stored in this table. The valid value is 1-2147483647.
-{{% /md %}}</dd>
-    <dt class="property-required"
+{{% /md %}}</dd><dt class="property-required"
             title="Required">
         <span id="primarykeys_nodejs">
 <a href="#primarykeys_nodejs" style="color: inherit; text-decoration: inherit;">primary<wbr>Keys</a>
@@ -558,8 +531,7 @@ The Table resource accepts the following [input]({{< relref "/docs/intro/concept
         <span class="property-type"><a href="#tableprimarykey">Table<wbr>Primary<wbr>Key[]</a></span>
     </dt>
     <dd>{{% md %}}The property of `TableMeta` which indicates the structure information of a table. It describes the attribute value of primary key. The number of `primary_key` should not be less than one and not be more than four.
-{{% /md %}}</dd>
-    <dt class="property-required"
+{{% /md %}}</dd><dt class="property-required"
             title="Required">
         <span id="tablename_nodejs">
 <a href="#tablename_nodejs" style="color: inherit; text-decoration: inherit;">table<wbr>Name</a>
@@ -568,8 +540,7 @@ The Table resource accepts the following [input]({{< relref "/docs/intro/concept
         <span class="property-type">string</span>
     </dt>
     <dd>{{% md %}}The table name of the OTS instance. If changed, a new table would be created.
-{{% /md %}}</dd>
-    <dt class="property-required"
+{{% /md %}}</dd><dt class="property-required"
             title="Required">
         <span id="timetolive_nodejs">
 <a href="#timetolive_nodejs" style="color: inherit; text-decoration: inherit;">time<wbr>To<wbr>Live</a>
@@ -578,8 +549,7 @@ The Table resource accepts the following [input]({{< relref "/docs/intro/concept
         <span class="property-type">number</span>
     </dt>
     <dd>{{% md %}}The retention time of data stored in this table (unit: second). The value maximum is 2147483647 and -1 means never expired.
-{{% /md %}}</dd>
-    <dt class="property-optional"
+{{% /md %}}</dd><dt class="property-optional"
             title="Optional">
         <span id="deviationcellversioninsec_nodejs">
 <a href="#deviationcellversioninsec_nodejs" style="color: inherit; text-decoration: inherit;">deviation<wbr>Cell<wbr>Version<wbr>In<wbr>Sec</a>
@@ -588,14 +558,11 @@ The Table resource accepts the following [input]({{< relref "/docs/intro/concept
         <span class="property-type">string</span>
     </dt>
     <dd>{{% md %}}The max version offset of the table. The valid value is 1-9223372036854775807. Defaults to 86400.
-{{% /md %}}</dd>
-</dl>
+{{% /md %}}</dd></dl>
 {{% /choosable %}}
 
 {{% choosable language python %}}
-<dl class="resources-properties">
-
-    <dt class="property-required"
+<dl class="resources-properties"><dt class="property-required"
             title="Required">
         <span id="instance_name_python">
 <a href="#instance_name_python" style="color: inherit; text-decoration: inherit;">instance_<wbr>name</a>
@@ -604,8 +571,7 @@ The Table resource accepts the following [input]({{< relref "/docs/intro/concept
         <span class="property-type">str</span>
     </dt>
     <dd>{{% md %}}The name of the OTS instance in which table will located.
-{{% /md %}}</dd>
-    <dt class="property-required"
+{{% /md %}}</dd><dt class="property-required"
             title="Required">
         <span id="max_version_python">
 <a href="#max_version_python" style="color: inherit; text-decoration: inherit;">max_<wbr>version</a>
@@ -614,8 +580,7 @@ The Table resource accepts the following [input]({{< relref "/docs/intro/concept
         <span class="property-type">int</span>
     </dt>
     <dd>{{% md %}}The maximum number of versions stored in this table. The valid value is 1-2147483647.
-{{% /md %}}</dd>
-    <dt class="property-required"
+{{% /md %}}</dd><dt class="property-required"
             title="Required">
         <span id="primary_keys_python">
 <a href="#primary_keys_python" style="color: inherit; text-decoration: inherit;">primary_<wbr>keys</a>
@@ -624,8 +589,7 @@ The Table resource accepts the following [input]({{< relref "/docs/intro/concept
         <span class="property-type"><a href="#tableprimarykey">Sequence[Table<wbr>Primary<wbr>Key<wbr>Args]</a></span>
     </dt>
     <dd>{{% md %}}The property of `TableMeta` which indicates the structure information of a table. It describes the attribute value of primary key. The number of `primary_key` should not be less than one and not be more than four.
-{{% /md %}}</dd>
-    <dt class="property-required"
+{{% /md %}}</dd><dt class="property-required"
             title="Required">
         <span id="table_name_python">
 <a href="#table_name_python" style="color: inherit; text-decoration: inherit;">table_<wbr>name</a>
@@ -634,8 +598,7 @@ The Table resource accepts the following [input]({{< relref "/docs/intro/concept
         <span class="property-type">str</span>
     </dt>
     <dd>{{% md %}}The table name of the OTS instance. If changed, a new table would be created.
-{{% /md %}}</dd>
-    <dt class="property-required"
+{{% /md %}}</dd><dt class="property-required"
             title="Required">
         <span id="time_to_live_python">
 <a href="#time_to_live_python" style="color: inherit; text-decoration: inherit;">time_<wbr>to_<wbr>live</a>
@@ -644,8 +607,7 @@ The Table resource accepts the following [input]({{< relref "/docs/intro/concept
         <span class="property-type">int</span>
     </dt>
     <dd>{{% md %}}The retention time of data stored in this table (unit: second). The value maximum is 2147483647 and -1 means never expired.
-{{% /md %}}</dd>
-    <dt class="property-optional"
+{{% /md %}}</dd><dt class="property-optional"
             title="Optional">
         <span id="deviation_cell_version_in_sec_python">
 <a href="#deviation_cell_version_in_sec_python" style="color: inherit; text-decoration: inherit;">deviation_<wbr>cell_<wbr>version_<wbr>in_<wbr>sec</a>
@@ -654,8 +616,7 @@ The Table resource accepts the following [input]({{< relref "/docs/intro/concept
         <span class="property-type">str</span>
     </dt>
     <dd>{{% md %}}The max version offset of the table. The valid value is 1-9223372036854775807. Defaults to 86400.
-{{% /md %}}</dd>
-</dl>
+{{% /md %}}</dd></dl>
 {{% /choosable %}}
 
 
@@ -666,9 +627,7 @@ All [input](#inputs) properties are implicitly available as output properties. A
 
 
 {{% choosable language csharp %}}
-<dl class="resources-properties">
-
-    <dt class="property-"
+<dl class="resources-properties"><dt class="property-"
             title="">
         <span id="id_csharp">
 <a href="#id_csharp" style="color: inherit; text-decoration: inherit;">Id</a>
@@ -676,14 +635,11 @@ All [input](#inputs) properties are implicitly available as output properties. A
         <span class="property-indicator"></span>
         <span class="property-type">string</span>
     </dt>
-    <dd>{{% md %}}The provider-assigned unique ID for this managed resource.{{% /md %}}</dd>
-</dl>
+    <dd>{{% md %}}The provider-assigned unique ID for this managed resource.{{% /md %}}</dd></dl>
 {{% /choosable %}}
 
 {{% choosable language go %}}
-<dl class="resources-properties">
-
-    <dt class="property-"
+<dl class="resources-properties"><dt class="property-"
             title="">
         <span id="id_go">
 <a href="#id_go" style="color: inherit; text-decoration: inherit;">Id</a>
@@ -691,14 +647,11 @@ All [input](#inputs) properties are implicitly available as output properties. A
         <span class="property-indicator"></span>
         <span class="property-type">string</span>
     </dt>
-    <dd>{{% md %}}The provider-assigned unique ID for this managed resource.{{% /md %}}</dd>
-</dl>
+    <dd>{{% md %}}The provider-assigned unique ID for this managed resource.{{% /md %}}</dd></dl>
 {{% /choosable %}}
 
 {{% choosable language nodejs %}}
-<dl class="resources-properties">
-
-    <dt class="property-"
+<dl class="resources-properties"><dt class="property-"
             title="">
         <span id="id_nodejs">
 <a href="#id_nodejs" style="color: inherit; text-decoration: inherit;">id</a>
@@ -706,14 +659,11 @@ All [input](#inputs) properties are implicitly available as output properties. A
         <span class="property-indicator"></span>
         <span class="property-type">string</span>
     </dt>
-    <dd>{{% md %}}The provider-assigned unique ID for this managed resource.{{% /md %}}</dd>
-</dl>
+    <dd>{{% md %}}The provider-assigned unique ID for this managed resource.{{% /md %}}</dd></dl>
 {{% /choosable %}}
 
 {{% choosable language python %}}
-<dl class="resources-properties">
-
-    <dt class="property-"
+<dl class="resources-properties"><dt class="property-"
             title="">
         <span id="id_python">
 <a href="#id_python" style="color: inherit; text-decoration: inherit;">id</a>
@@ -721,8 +671,7 @@ All [input](#inputs) properties are implicitly available as output properties. A
         <span class="property-indicator"></span>
         <span class="property-type">str</span>
     </dt>
-    <dd>{{% md %}}The provider-assigned unique ID for this managed resource.{{% /md %}}</dd>
-</dl>
+    <dd>{{% md %}}The provider-assigned unique ID for this managed resource.{{% /md %}}</dd></dl>
 {{% /choosable %}}
 
 
@@ -849,9 +798,7 @@ The following state arguments are supported:
 
 
 {{% choosable language csharp %}}
-<dl class="resources-properties">
-
-    <dt class="property-optional"
+<dl class="resources-properties"><dt class="property-optional"
             title="Optional">
         <span id="state_deviationcellversioninsec_csharp">
 <a href="#state_deviationcellversioninsec_csharp" style="color: inherit; text-decoration: inherit;">Deviation<wbr>Cell<wbr>Version<wbr>In<wbr>Sec</a>
@@ -860,8 +807,7 @@ The following state arguments are supported:
         <span class="property-type">string</span>
     </dt>
     <dd>{{% md %}}The max version offset of the table. The valid value is 1-9223372036854775807. Defaults to 86400.
-{{% /md %}}</dd>
-    <dt class="property-optional"
+{{% /md %}}</dd><dt class="property-optional"
             title="Optional">
         <span id="state_instancename_csharp">
 <a href="#state_instancename_csharp" style="color: inherit; text-decoration: inherit;">Instance<wbr>Name</a>
@@ -870,8 +816,7 @@ The following state arguments are supported:
         <span class="property-type">string</span>
     </dt>
     <dd>{{% md %}}The name of the OTS instance in which table will located.
-{{% /md %}}</dd>
-    <dt class="property-optional"
+{{% /md %}}</dd><dt class="property-optional"
             title="Optional">
         <span id="state_maxversion_csharp">
 <a href="#state_maxversion_csharp" style="color: inherit; text-decoration: inherit;">Max<wbr>Version</a>
@@ -880,8 +825,7 @@ The following state arguments are supported:
         <span class="property-type">int</span>
     </dt>
     <dd>{{% md %}}The maximum number of versions stored in this table. The valid value is 1-2147483647.
-{{% /md %}}</dd>
-    <dt class="property-optional"
+{{% /md %}}</dd><dt class="property-optional"
             title="Optional">
         <span id="state_primarykeys_csharp">
 <a href="#state_primarykeys_csharp" style="color: inherit; text-decoration: inherit;">Primary<wbr>Keys</a>
@@ -890,8 +834,7 @@ The following state arguments are supported:
         <span class="property-type"><a href="#tableprimarykey">List&lt;Pulumi.<wbr>Ali<wbr>Cloud.<wbr>Ots.<wbr>Inputs.<wbr>Table<wbr>Primary<wbr>Key<wbr>Args&gt;</a></span>
     </dt>
     <dd>{{% md %}}The property of `TableMeta` which indicates the structure information of a table. It describes the attribute value of primary key. The number of `primary_key` should not be less than one and not be more than four.
-{{% /md %}}</dd>
-    <dt class="property-optional"
+{{% /md %}}</dd><dt class="property-optional"
             title="Optional">
         <span id="state_tablename_csharp">
 <a href="#state_tablename_csharp" style="color: inherit; text-decoration: inherit;">Table<wbr>Name</a>
@@ -900,8 +843,7 @@ The following state arguments are supported:
         <span class="property-type">string</span>
     </dt>
     <dd>{{% md %}}The table name of the OTS instance. If changed, a new table would be created.
-{{% /md %}}</dd>
-    <dt class="property-optional"
+{{% /md %}}</dd><dt class="property-optional"
             title="Optional">
         <span id="state_timetolive_csharp">
 <a href="#state_timetolive_csharp" style="color: inherit; text-decoration: inherit;">Time<wbr>To<wbr>Live</a>
@@ -910,14 +852,11 @@ The following state arguments are supported:
         <span class="property-type">int</span>
     </dt>
     <dd>{{% md %}}The retention time of data stored in this table (unit: second). The value maximum is 2147483647 and -1 means never expired.
-{{% /md %}}</dd>
-</dl>
+{{% /md %}}</dd></dl>
 {{% /choosable %}}
 
 {{% choosable language go %}}
-<dl class="resources-properties">
-
-    <dt class="property-optional"
+<dl class="resources-properties"><dt class="property-optional"
             title="Optional">
         <span id="state_deviationcellversioninsec_go">
 <a href="#state_deviationcellversioninsec_go" style="color: inherit; text-decoration: inherit;">Deviation<wbr>Cell<wbr>Version<wbr>In<wbr>Sec</a>
@@ -926,8 +865,7 @@ The following state arguments are supported:
         <span class="property-type">string</span>
     </dt>
     <dd>{{% md %}}The max version offset of the table. The valid value is 1-9223372036854775807. Defaults to 86400.
-{{% /md %}}</dd>
-    <dt class="property-optional"
+{{% /md %}}</dd><dt class="property-optional"
             title="Optional">
         <span id="state_instancename_go">
 <a href="#state_instancename_go" style="color: inherit; text-decoration: inherit;">Instance<wbr>Name</a>
@@ -936,8 +874,7 @@ The following state arguments are supported:
         <span class="property-type">string</span>
     </dt>
     <dd>{{% md %}}The name of the OTS instance in which table will located.
-{{% /md %}}</dd>
-    <dt class="property-optional"
+{{% /md %}}</dd><dt class="property-optional"
             title="Optional">
         <span id="state_maxversion_go">
 <a href="#state_maxversion_go" style="color: inherit; text-decoration: inherit;">Max<wbr>Version</a>
@@ -946,8 +883,7 @@ The following state arguments are supported:
         <span class="property-type">int</span>
     </dt>
     <dd>{{% md %}}The maximum number of versions stored in this table. The valid value is 1-2147483647.
-{{% /md %}}</dd>
-    <dt class="property-optional"
+{{% /md %}}</dd><dt class="property-optional"
             title="Optional">
         <span id="state_primarykeys_go">
 <a href="#state_primarykeys_go" style="color: inherit; text-decoration: inherit;">Primary<wbr>Keys</a>
@@ -956,8 +892,7 @@ The following state arguments are supported:
         <span class="property-type"><a href="#tableprimarykey">[]Table<wbr>Primary<wbr>Key</a></span>
     </dt>
     <dd>{{% md %}}The property of `TableMeta` which indicates the structure information of a table. It describes the attribute value of primary key. The number of `primary_key` should not be less than one and not be more than four.
-{{% /md %}}</dd>
-    <dt class="property-optional"
+{{% /md %}}</dd><dt class="property-optional"
             title="Optional">
         <span id="state_tablename_go">
 <a href="#state_tablename_go" style="color: inherit; text-decoration: inherit;">Table<wbr>Name</a>
@@ -966,8 +901,7 @@ The following state arguments are supported:
         <span class="property-type">string</span>
     </dt>
     <dd>{{% md %}}The table name of the OTS instance. If changed, a new table would be created.
-{{% /md %}}</dd>
-    <dt class="property-optional"
+{{% /md %}}</dd><dt class="property-optional"
             title="Optional">
         <span id="state_timetolive_go">
 <a href="#state_timetolive_go" style="color: inherit; text-decoration: inherit;">Time<wbr>To<wbr>Live</a>
@@ -976,14 +910,11 @@ The following state arguments are supported:
         <span class="property-type">int</span>
     </dt>
     <dd>{{% md %}}The retention time of data stored in this table (unit: second). The value maximum is 2147483647 and -1 means never expired.
-{{% /md %}}</dd>
-</dl>
+{{% /md %}}</dd></dl>
 {{% /choosable %}}
 
 {{% choosable language nodejs %}}
-<dl class="resources-properties">
-
-    <dt class="property-optional"
+<dl class="resources-properties"><dt class="property-optional"
             title="Optional">
         <span id="state_deviationcellversioninsec_nodejs">
 <a href="#state_deviationcellversioninsec_nodejs" style="color: inherit; text-decoration: inherit;">deviation<wbr>Cell<wbr>Version<wbr>In<wbr>Sec</a>
@@ -992,8 +923,7 @@ The following state arguments are supported:
         <span class="property-type">string</span>
     </dt>
     <dd>{{% md %}}The max version offset of the table. The valid value is 1-9223372036854775807. Defaults to 86400.
-{{% /md %}}</dd>
-    <dt class="property-optional"
+{{% /md %}}</dd><dt class="property-optional"
             title="Optional">
         <span id="state_instancename_nodejs">
 <a href="#state_instancename_nodejs" style="color: inherit; text-decoration: inherit;">instance<wbr>Name</a>
@@ -1002,8 +932,7 @@ The following state arguments are supported:
         <span class="property-type">string</span>
     </dt>
     <dd>{{% md %}}The name of the OTS instance in which table will located.
-{{% /md %}}</dd>
-    <dt class="property-optional"
+{{% /md %}}</dd><dt class="property-optional"
             title="Optional">
         <span id="state_maxversion_nodejs">
 <a href="#state_maxversion_nodejs" style="color: inherit; text-decoration: inherit;">max<wbr>Version</a>
@@ -1012,8 +941,7 @@ The following state arguments are supported:
         <span class="property-type">number</span>
     </dt>
     <dd>{{% md %}}The maximum number of versions stored in this table. The valid value is 1-2147483647.
-{{% /md %}}</dd>
-    <dt class="property-optional"
+{{% /md %}}</dd><dt class="property-optional"
             title="Optional">
         <span id="state_primarykeys_nodejs">
 <a href="#state_primarykeys_nodejs" style="color: inherit; text-decoration: inherit;">primary<wbr>Keys</a>
@@ -1022,8 +950,7 @@ The following state arguments are supported:
         <span class="property-type"><a href="#tableprimarykey">Table<wbr>Primary<wbr>Key[]</a></span>
     </dt>
     <dd>{{% md %}}The property of `TableMeta` which indicates the structure information of a table. It describes the attribute value of primary key. The number of `primary_key` should not be less than one and not be more than four.
-{{% /md %}}</dd>
-    <dt class="property-optional"
+{{% /md %}}</dd><dt class="property-optional"
             title="Optional">
         <span id="state_tablename_nodejs">
 <a href="#state_tablename_nodejs" style="color: inherit; text-decoration: inherit;">table<wbr>Name</a>
@@ -1032,8 +959,7 @@ The following state arguments are supported:
         <span class="property-type">string</span>
     </dt>
     <dd>{{% md %}}The table name of the OTS instance. If changed, a new table would be created.
-{{% /md %}}</dd>
-    <dt class="property-optional"
+{{% /md %}}</dd><dt class="property-optional"
             title="Optional">
         <span id="state_timetolive_nodejs">
 <a href="#state_timetolive_nodejs" style="color: inherit; text-decoration: inherit;">time<wbr>To<wbr>Live</a>
@@ -1042,14 +968,11 @@ The following state arguments are supported:
         <span class="property-type">number</span>
     </dt>
     <dd>{{% md %}}The retention time of data stored in this table (unit: second). The value maximum is 2147483647 and -1 means never expired.
-{{% /md %}}</dd>
-</dl>
+{{% /md %}}</dd></dl>
 {{% /choosable %}}
 
 {{% choosable language python %}}
-<dl class="resources-properties">
-
-    <dt class="property-optional"
+<dl class="resources-properties"><dt class="property-optional"
             title="Optional">
         <span id="state_deviation_cell_version_in_sec_python">
 <a href="#state_deviation_cell_version_in_sec_python" style="color: inherit; text-decoration: inherit;">deviation_<wbr>cell_<wbr>version_<wbr>in_<wbr>sec</a>
@@ -1058,8 +981,7 @@ The following state arguments are supported:
         <span class="property-type">str</span>
     </dt>
     <dd>{{% md %}}The max version offset of the table. The valid value is 1-9223372036854775807. Defaults to 86400.
-{{% /md %}}</dd>
-    <dt class="property-optional"
+{{% /md %}}</dd><dt class="property-optional"
             title="Optional">
         <span id="state_instance_name_python">
 <a href="#state_instance_name_python" style="color: inherit; text-decoration: inherit;">instance_<wbr>name</a>
@@ -1068,8 +990,7 @@ The following state arguments are supported:
         <span class="property-type">str</span>
     </dt>
     <dd>{{% md %}}The name of the OTS instance in which table will located.
-{{% /md %}}</dd>
-    <dt class="property-optional"
+{{% /md %}}</dd><dt class="property-optional"
             title="Optional">
         <span id="state_max_version_python">
 <a href="#state_max_version_python" style="color: inherit; text-decoration: inherit;">max_<wbr>version</a>
@@ -1078,8 +999,7 @@ The following state arguments are supported:
         <span class="property-type">int</span>
     </dt>
     <dd>{{% md %}}The maximum number of versions stored in this table. The valid value is 1-2147483647.
-{{% /md %}}</dd>
-    <dt class="property-optional"
+{{% /md %}}</dd><dt class="property-optional"
             title="Optional">
         <span id="state_primary_keys_python">
 <a href="#state_primary_keys_python" style="color: inherit; text-decoration: inherit;">primary_<wbr>keys</a>
@@ -1088,8 +1008,7 @@ The following state arguments are supported:
         <span class="property-type"><a href="#tableprimarykey">Sequence[Table<wbr>Primary<wbr>Key<wbr>Args]</a></span>
     </dt>
     <dd>{{% md %}}The property of `TableMeta` which indicates the structure information of a table. It describes the attribute value of primary key. The number of `primary_key` should not be less than one and not be more than four.
-{{% /md %}}</dd>
-    <dt class="property-optional"
+{{% /md %}}</dd><dt class="property-optional"
             title="Optional">
         <span id="state_table_name_python">
 <a href="#state_table_name_python" style="color: inherit; text-decoration: inherit;">table_<wbr>name</a>
@@ -1098,8 +1017,7 @@ The following state arguments are supported:
         <span class="property-type">str</span>
     </dt>
     <dd>{{% md %}}The table name of the OTS instance. If changed, a new table would be created.
-{{% /md %}}</dd>
-    <dt class="property-optional"
+{{% /md %}}</dd><dt class="property-optional"
             title="Optional">
         <span id="state_time_to_live_python">
 <a href="#state_time_to_live_python" style="color: inherit; text-decoration: inherit;">time_<wbr>to_<wbr>live</a>
@@ -1108,8 +1026,7 @@ The following state arguments are supported:
         <span class="property-type">int</span>
     </dt>
     <dd>{{% md %}}The retention time of data stored in this table (unit: second). The value maximum is 2147483647 and -1 means never expired.
-{{% /md %}}</dd>
-</dl>
+{{% /md %}}</dd></dl>
 {{% /choosable %}}
 
 
@@ -1124,9 +1041,7 @@ The following state arguments are supported:
 <h4 id="tableprimarykey">Table<wbr>Primary<wbr>Key</h4>
 
 {{% choosable language csharp %}}
-<dl class="resources-properties">
-
-    <dt class="property-required"
+<dl class="resources-properties"><dt class="property-required"
             title="Required">
         <span id="name_csharp">
 <a href="#name_csharp" style="color: inherit; text-decoration: inherit;">Name</a>
@@ -1135,8 +1050,7 @@ The following state arguments are supported:
         <span class="property-type">string</span>
     </dt>
     <dd>{{% md %}}Name for primary key.
-{{% /md %}}</dd>
-    <dt class="property-required"
+{{% /md %}}</dd><dt class="property-required"
             title="Required">
         <span id="type_csharp">
 <a href="#type_csharp" style="color: inherit; text-decoration: inherit;">Type</a>
@@ -1145,14 +1059,11 @@ The following state arguments are supported:
         <span class="property-type">string</span>
     </dt>
     <dd>{{% md %}}Type for primary key. Only `Integer`, `String` or `Binary` is allowed.
-{{% /md %}}</dd>
-</dl>
+{{% /md %}}</dd></dl>
 {{% /choosable %}}
 
 {{% choosable language go %}}
-<dl class="resources-properties">
-
-    <dt class="property-required"
+<dl class="resources-properties"><dt class="property-required"
             title="Required">
         <span id="name_go">
 <a href="#name_go" style="color: inherit; text-decoration: inherit;">Name</a>
@@ -1161,8 +1072,7 @@ The following state arguments are supported:
         <span class="property-type">string</span>
     </dt>
     <dd>{{% md %}}Name for primary key.
-{{% /md %}}</dd>
-    <dt class="property-required"
+{{% /md %}}</dd><dt class="property-required"
             title="Required">
         <span id="type_go">
 <a href="#type_go" style="color: inherit; text-decoration: inherit;">Type</a>
@@ -1171,14 +1081,11 @@ The following state arguments are supported:
         <span class="property-type">string</span>
     </dt>
     <dd>{{% md %}}Type for primary key. Only `Integer`, `String` or `Binary` is allowed.
-{{% /md %}}</dd>
-</dl>
+{{% /md %}}</dd></dl>
 {{% /choosable %}}
 
 {{% choosable language nodejs %}}
-<dl class="resources-properties">
-
-    <dt class="property-required"
+<dl class="resources-properties"><dt class="property-required"
             title="Required">
         <span id="name_nodejs">
 <a href="#name_nodejs" style="color: inherit; text-decoration: inherit;">name</a>
@@ -1187,8 +1094,7 @@ The following state arguments are supported:
         <span class="property-type">string</span>
     </dt>
     <dd>{{% md %}}Name for primary key.
-{{% /md %}}</dd>
-    <dt class="property-required"
+{{% /md %}}</dd><dt class="property-required"
             title="Required">
         <span id="type_nodejs">
 <a href="#type_nodejs" style="color: inherit; text-decoration: inherit;">type</a>
@@ -1197,14 +1103,11 @@ The following state arguments are supported:
         <span class="property-type">string</span>
     </dt>
     <dd>{{% md %}}Type for primary key. Only `Integer`, `String` or `Binary` is allowed.
-{{% /md %}}</dd>
-</dl>
+{{% /md %}}</dd></dl>
 {{% /choosable %}}
 
 {{% choosable language python %}}
-<dl class="resources-properties">
-
-    <dt class="property-required"
+<dl class="resources-properties"><dt class="property-required"
             title="Required">
         <span id="name_python">
 <a href="#name_python" style="color: inherit; text-decoration: inherit;">name</a>
@@ -1213,8 +1116,7 @@ The following state arguments are supported:
         <span class="property-type">str</span>
     </dt>
     <dd>{{% md %}}Name for primary key.
-{{% /md %}}</dd>
-    <dt class="property-required"
+{{% /md %}}</dd><dt class="property-required"
             title="Required">
         <span id="type_python">
 <a href="#type_python" style="color: inherit; text-decoration: inherit;">type</a>
@@ -1223,8 +1125,7 @@ The following state arguments are supported:
         <span class="property-type">str</span>
     </dt>
     <dd>{{% md %}}Type for primary key. Only `Integer`, `String` or `Binary` is allowed.
-{{% /md %}}</dd>
-</dl>
+{{% /md %}}</dd></dl>
 {{% /choosable %}}
 ## Import
 
@@ -1245,6 +1146,6 @@ OTS table can be imported using id, e.g.
 	<dt>License</dt>
 	<dd>Apache-2.0</dd>
 	<dt>Notes</dt>
-	<dd>This Pulumi package is based on the [`alicloud` Terraform Provider](https://github.com/aliyun/terraform-provider-alicloud).</dd>
+	<dd>{{% md %}}This Pulumi package is based on the [`alicloud` Terraform Provider](https://github.com/aliyun/terraform-provider-alicloud).{{% /md %}}</dd>
 </dl>
 

@@ -14,11 +14,17 @@ The Setting.
 API Version: 2019-01-01-preview.
 
 {{% examples %}}
+
 ## Example Usage
 
 {{< chooser language "typescript,python,go,csharp" / >}}
+
+
 ### Update EyesOn settings.
-{{% example csharp %}}
+
+
+{{< example csharp >}}
+
 ```csharp
 using Pulumi;
 using AzureNative = Pulumi.AzureNative;
@@ -42,9 +48,12 @@ class MyStack : Stack
 
 ```
 
-{{% /example %}}
 
-{{% example go %}}
+{{< /example >}}
+
+
+{{< example go >}}
+
 
 ```go
 package main
@@ -73,9 +82,12 @@ func main() {
 
 ```
 
-{{% /example %}}
 
-{{% example python %}}
+{{< /example >}}
+
+
+{{< example python >}}
+
 
 ```python
 import pulumi
@@ -91,9 +103,12 @@ product_setting = azure_native.securityinsights.ProductSetting("productSetting",
 
 ```
 
-{{% /example %}}
 
-{{% example typescript %}}
+{{< /example >}}
+
+
+{{< example typescript >}}
+
 
 ```typescript
 import * as pulumi from "@pulumi/pulumi";
@@ -110,9 +125,16 @@ const productSetting = new azure_native.securityinsights.ProductSetting("product
 
 ```
 
-{{% /example %}}
+
+{{< /example >}}
+
+
+
+
 
 {{% /examples %}}
+
+
 
 
 ## Create a ProductSetting Resource {#create}
@@ -137,9 +159,7 @@ const productSetting = new azure_native.securityinsights.ProductSetting("product
 
 {{% choosable language nodejs %}}
 
-<dl class="resources-properties">
-  
-    <dt
+<dl class="resources-properties"><dt
         class="property-required" title="Required">
         <span>name</span>
         <span class="property-indicator"></span>
@@ -147,9 +167,7 @@ const productSetting = new azure_native.securityinsights.ProductSetting("product
     </dt>
     <dd>
       The unique name of the resource.
-    </dd>
-  
-    <dt
+    </dd><dt
         class="property-required" title="Required">
         <span>args</span>
         <span class="property-indicator"></span>
@@ -157,9 +175,7 @@ const productSetting = new azure_native.securityinsights.ProductSetting("product
     </dt>
     <dd>
       The arguments to resource properties.
-    </dd>
-  
-    <dt
+    </dd><dt
         class="property-optional" title="Optional">
         <span>opts</span>
         <span class="property-indicator"></span>
@@ -167,10 +183,7 @@ const productSetting = new azure_native.securityinsights.ProductSetting("product
     </dt>
     <dd>
       Bag of options to control resource&#39;s behavior.
-    </dd>
-  
-
-</dl>
+    </dd></dl>
 
 {{% /choosable %}}
 
@@ -196,9 +209,7 @@ const productSetting = new azure_native.securityinsights.ProductSetting("product
 
 {{% choosable language go %}}
 
-<dl class="resources-properties">
-  
-    <dt
+<dl class="resources-properties"><dt
         class="property-optional" title="Optional">
         <span>ctx</span>
         <span class="property-indicator"></span>
@@ -206,9 +217,7 @@ const productSetting = new azure_native.securityinsights.ProductSetting("product
     </dt>
     <dd>
       Context object for the current deployment.
-    </dd>
-  
-    <dt
+    </dd><dt
         class="property-required" title="Required">
         <span>name</span>
         <span class="property-indicator"></span>
@@ -216,9 +225,7 @@ const productSetting = new azure_native.securityinsights.ProductSetting("product
     </dt>
     <dd>
       The unique name of the resource.
-    </dd>
-  
-    <dt
+    </dd><dt
         class="property-required" title="Required">
         <span>args</span>
         <span class="property-indicator"></span>
@@ -226,9 +233,7 @@ const productSetting = new azure_native.securityinsights.ProductSetting("product
     </dt>
     <dd>
       The arguments to resource properties.
-    </dd>
-  
-    <dt
+    </dd><dt
         class="property-optional" title="Optional">
         <span>opts</span>
         <span class="property-indicator"></span>
@@ -236,18 +241,13 @@ const productSetting = new azure_native.securityinsights.ProductSetting("product
     </dt>
     <dd>
       Bag of options to control resource&#39;s behavior.
-    </dd>
-  
-
-</dl>
+    </dd></dl>
 
 {{% /choosable %}}
 
 {{% choosable language csharp %}}
 
-<dl class="resources-properties">
-  
-    <dt
+<dl class="resources-properties"><dt
         class="property-required" title="Required">
         <span>name</span>
         <span class="property-indicator"></span>
@@ -255,9 +255,7 @@ const productSetting = new azure_native.securityinsights.ProductSetting("product
     </dt>
     <dd>
       The unique name of the resource.
-    </dd>
-  
-    <dt
+    </dd><dt
         class="property-required" title="Required">
         <span>args</span>
         <span class="property-indicator"></span>
@@ -265,9 +263,7 @@ const productSetting = new azure_native.securityinsights.ProductSetting("product
     </dt>
     <dd>
       The arguments to resource properties.
-    </dd>
-  
-    <dt
+    </dd><dt
         class="property-optional" title="Optional">
         <span>opts</span>
         <span class="property-indicator"></span>
@@ -275,10 +271,7 @@ const productSetting = new azure_native.securityinsights.ProductSetting("product
     </dt>
     <dd>
       Bag of options to control resource&#39;s behavior.
-    </dd>
-  
-
-</dl>
+    </dd></dl>
 
 {{% /choosable %}}
 
@@ -293,9 +286,7 @@ The ProductSetting resource accepts the following [input]({{< relref "/docs/intr
 
 
 {{% choosable language csharp %}}
-<dl class="resources-properties">
-
-    <dt class="property-required"
+<dl class="resources-properties"><dt class="property-required"
             title="Required">
         <span id="kind_csharp">
 <a href="#kind_csharp" style="color: inherit; text-decoration: inherit;">Kind</a>
@@ -303,8 +294,7 @@ The ProductSetting resource accepts the following [input]({{< relref "/docs/intr
         <span class="property-indicator"></span>
         <span class="property-type">string | <a href="#settingkind">Pulumi.<wbr>Azure<wbr>Native.<wbr>Security<wbr>Insights.<wbr>Setting<wbr>Kind</a></span>
     </dt>
-    <dd>{{% md %}}The kind of the setting{{% /md %}}</dd>
-    <dt class="property-required"
+    <dd>{{% md %}}The kind of the setting{{% /md %}}</dd><dt class="property-required"
             title="Required">
         <span id="operationalinsightsresourceprovider_csharp">
 <a href="#operationalinsightsresourceprovider_csharp" style="color: inherit; text-decoration: inherit;">Operational<wbr>Insights<wbr>Resource<wbr>Provider</a>
@@ -312,8 +302,7 @@ The ProductSetting resource accepts the following [input]({{< relref "/docs/intr
         <span class="property-indicator"></span>
         <span class="property-type">string</span>
     </dt>
-    <dd>{{% md %}}The namespace of workspaces resource provider- Microsoft.OperationalInsights.{{% /md %}}</dd>
-    <dt class="property-required"
+    <dd>{{% md %}}The namespace of workspaces resource provider- Microsoft.OperationalInsights.{{% /md %}}</dd><dt class="property-required"
             title="Required">
         <span id="resourcegroupname_csharp">
 <a href="#resourcegroupname_csharp" style="color: inherit; text-decoration: inherit;">Resource<wbr>Group<wbr>Name</a>
@@ -321,8 +310,7 @@ The ProductSetting resource accepts the following [input]({{< relref "/docs/intr
         <span class="property-indicator"></span>
         <span class="property-type">string</span>
     </dt>
-    <dd>{{% md %}}The name of the resource group within the user's subscription. The name is case insensitive.{{% /md %}}</dd>
-    <dt class="property-required"
+    <dd>{{% md %}}The name of the resource group within the user's subscription. The name is case insensitive.{{% /md %}}</dd><dt class="property-required"
             title="Required">
         <span id="workspacename_csharp">
 <a href="#workspacename_csharp" style="color: inherit; text-decoration: inherit;">Workspace<wbr>Name</a>
@@ -330,8 +318,7 @@ The ProductSetting resource accepts the following [input]({{< relref "/docs/intr
         <span class="property-indicator"></span>
         <span class="property-type">string</span>
     </dt>
-    <dd>{{% md %}}The name of the workspace.{{% /md %}}</dd>
-    <dt class="property-optional"
+    <dd>{{% md %}}The name of the workspace.{{% /md %}}</dd><dt class="property-optional"
             title="Optional">
         <span id="etag_csharp">
 <a href="#etag_csharp" style="color: inherit; text-decoration: inherit;">Etag</a>
@@ -339,8 +326,7 @@ The ProductSetting resource accepts the following [input]({{< relref "/docs/intr
         <span class="property-indicator"></span>
         <span class="property-type">string</span>
     </dt>
-    <dd>{{% md %}}Etag of the azure resource{{% /md %}}</dd>
-    <dt class="property-optional"
+    <dd>{{% md %}}Etag of the azure resource{{% /md %}}</dd><dt class="property-optional"
             title="Optional">
         <span id="settingsname_csharp">
 <a href="#settingsname_csharp" style="color: inherit; text-decoration: inherit;">Settings<wbr>Name</a>
@@ -348,14 +334,11 @@ The ProductSetting resource accepts the following [input]({{< relref "/docs/intr
         <span class="property-indicator"></span>
         <span class="property-type">string</span>
     </dt>
-    <dd>{{% md %}}The setting name. Supports - EyesOn, EntityAnalytics, Ueba{{% /md %}}</dd>
-</dl>
+    <dd>{{% md %}}The setting name. Supports - EyesOn, EntityAnalytics, Ueba{{% /md %}}</dd></dl>
 {{% /choosable %}}
 
 {{% choosable language go %}}
-<dl class="resources-properties">
-
-    <dt class="property-required"
+<dl class="resources-properties"><dt class="property-required"
             title="Required">
         <span id="kind_go">
 <a href="#kind_go" style="color: inherit; text-decoration: inherit;">Kind</a>
@@ -363,8 +346,7 @@ The ProductSetting resource accepts the following [input]({{< relref "/docs/intr
         <span class="property-indicator"></span>
         <span class="property-type">string | <a href="#settingkind">Setting<wbr>Kind</a></span>
     </dt>
-    <dd>{{% md %}}The kind of the setting{{% /md %}}</dd>
-    <dt class="property-required"
+    <dd>{{% md %}}The kind of the setting{{% /md %}}</dd><dt class="property-required"
             title="Required">
         <span id="operationalinsightsresourceprovider_go">
 <a href="#operationalinsightsresourceprovider_go" style="color: inherit; text-decoration: inherit;">Operational<wbr>Insights<wbr>Resource<wbr>Provider</a>
@@ -372,8 +354,7 @@ The ProductSetting resource accepts the following [input]({{< relref "/docs/intr
         <span class="property-indicator"></span>
         <span class="property-type">string</span>
     </dt>
-    <dd>{{% md %}}The namespace of workspaces resource provider- Microsoft.OperationalInsights.{{% /md %}}</dd>
-    <dt class="property-required"
+    <dd>{{% md %}}The namespace of workspaces resource provider- Microsoft.OperationalInsights.{{% /md %}}</dd><dt class="property-required"
             title="Required">
         <span id="resourcegroupname_go">
 <a href="#resourcegroupname_go" style="color: inherit; text-decoration: inherit;">Resource<wbr>Group<wbr>Name</a>
@@ -381,8 +362,7 @@ The ProductSetting resource accepts the following [input]({{< relref "/docs/intr
         <span class="property-indicator"></span>
         <span class="property-type">string</span>
     </dt>
-    <dd>{{% md %}}The name of the resource group within the user's subscription. The name is case insensitive.{{% /md %}}</dd>
-    <dt class="property-required"
+    <dd>{{% md %}}The name of the resource group within the user's subscription. The name is case insensitive.{{% /md %}}</dd><dt class="property-required"
             title="Required">
         <span id="workspacename_go">
 <a href="#workspacename_go" style="color: inherit; text-decoration: inherit;">Workspace<wbr>Name</a>
@@ -390,8 +370,7 @@ The ProductSetting resource accepts the following [input]({{< relref "/docs/intr
         <span class="property-indicator"></span>
         <span class="property-type">string</span>
     </dt>
-    <dd>{{% md %}}The name of the workspace.{{% /md %}}</dd>
-    <dt class="property-optional"
+    <dd>{{% md %}}The name of the workspace.{{% /md %}}</dd><dt class="property-optional"
             title="Optional">
         <span id="etag_go">
 <a href="#etag_go" style="color: inherit; text-decoration: inherit;">Etag</a>
@@ -399,8 +378,7 @@ The ProductSetting resource accepts the following [input]({{< relref "/docs/intr
         <span class="property-indicator"></span>
         <span class="property-type">string</span>
     </dt>
-    <dd>{{% md %}}Etag of the azure resource{{% /md %}}</dd>
-    <dt class="property-optional"
+    <dd>{{% md %}}Etag of the azure resource{{% /md %}}</dd><dt class="property-optional"
             title="Optional">
         <span id="settingsname_go">
 <a href="#settingsname_go" style="color: inherit; text-decoration: inherit;">Settings<wbr>Name</a>
@@ -408,14 +386,11 @@ The ProductSetting resource accepts the following [input]({{< relref "/docs/intr
         <span class="property-indicator"></span>
         <span class="property-type">string</span>
     </dt>
-    <dd>{{% md %}}The setting name. Supports - EyesOn, EntityAnalytics, Ueba{{% /md %}}</dd>
-</dl>
+    <dd>{{% md %}}The setting name. Supports - EyesOn, EntityAnalytics, Ueba{{% /md %}}</dd></dl>
 {{% /choosable %}}
 
 {{% choosable language nodejs %}}
-<dl class="resources-properties">
-
-    <dt class="property-required"
+<dl class="resources-properties"><dt class="property-required"
             title="Required">
         <span id="kind_nodejs">
 <a href="#kind_nodejs" style="color: inherit; text-decoration: inherit;">kind</a>
@@ -423,8 +398,7 @@ The ProductSetting resource accepts the following [input]({{< relref "/docs/intr
         <span class="property-indicator"></span>
         <span class="property-type">string | <a href="#settingkind">Setting<wbr>Kind</a></span>
     </dt>
-    <dd>{{% md %}}The kind of the setting{{% /md %}}</dd>
-    <dt class="property-required"
+    <dd>{{% md %}}The kind of the setting{{% /md %}}</dd><dt class="property-required"
             title="Required">
         <span id="operationalinsightsresourceprovider_nodejs">
 <a href="#operationalinsightsresourceprovider_nodejs" style="color: inherit; text-decoration: inherit;">operational<wbr>Insights<wbr>Resource<wbr>Provider</a>
@@ -432,8 +406,7 @@ The ProductSetting resource accepts the following [input]({{< relref "/docs/intr
         <span class="property-indicator"></span>
         <span class="property-type">string</span>
     </dt>
-    <dd>{{% md %}}The namespace of workspaces resource provider- Microsoft.OperationalInsights.{{% /md %}}</dd>
-    <dt class="property-required"
+    <dd>{{% md %}}The namespace of workspaces resource provider- Microsoft.OperationalInsights.{{% /md %}}</dd><dt class="property-required"
             title="Required">
         <span id="resourcegroupname_nodejs">
 <a href="#resourcegroupname_nodejs" style="color: inherit; text-decoration: inherit;">resource<wbr>Group<wbr>Name</a>
@@ -441,8 +414,7 @@ The ProductSetting resource accepts the following [input]({{< relref "/docs/intr
         <span class="property-indicator"></span>
         <span class="property-type">string</span>
     </dt>
-    <dd>{{% md %}}The name of the resource group within the user's subscription. The name is case insensitive.{{% /md %}}</dd>
-    <dt class="property-required"
+    <dd>{{% md %}}The name of the resource group within the user's subscription. The name is case insensitive.{{% /md %}}</dd><dt class="property-required"
             title="Required">
         <span id="workspacename_nodejs">
 <a href="#workspacename_nodejs" style="color: inherit; text-decoration: inherit;">workspace<wbr>Name</a>
@@ -450,8 +422,7 @@ The ProductSetting resource accepts the following [input]({{< relref "/docs/intr
         <span class="property-indicator"></span>
         <span class="property-type">string</span>
     </dt>
-    <dd>{{% md %}}The name of the workspace.{{% /md %}}</dd>
-    <dt class="property-optional"
+    <dd>{{% md %}}The name of the workspace.{{% /md %}}</dd><dt class="property-optional"
             title="Optional">
         <span id="etag_nodejs">
 <a href="#etag_nodejs" style="color: inherit; text-decoration: inherit;">etag</a>
@@ -459,8 +430,7 @@ The ProductSetting resource accepts the following [input]({{< relref "/docs/intr
         <span class="property-indicator"></span>
         <span class="property-type">string</span>
     </dt>
-    <dd>{{% md %}}Etag of the azure resource{{% /md %}}</dd>
-    <dt class="property-optional"
+    <dd>{{% md %}}Etag of the azure resource{{% /md %}}</dd><dt class="property-optional"
             title="Optional">
         <span id="settingsname_nodejs">
 <a href="#settingsname_nodejs" style="color: inherit; text-decoration: inherit;">settings<wbr>Name</a>
@@ -468,14 +438,11 @@ The ProductSetting resource accepts the following [input]({{< relref "/docs/intr
         <span class="property-indicator"></span>
         <span class="property-type">string</span>
     </dt>
-    <dd>{{% md %}}The setting name. Supports - EyesOn, EntityAnalytics, Ueba{{% /md %}}</dd>
-</dl>
+    <dd>{{% md %}}The setting name. Supports - EyesOn, EntityAnalytics, Ueba{{% /md %}}</dd></dl>
 {{% /choosable %}}
 
 {{% choosable language python %}}
-<dl class="resources-properties">
-
-    <dt class="property-required"
+<dl class="resources-properties"><dt class="property-required"
             title="Required">
         <span id="kind_python">
 <a href="#kind_python" style="color: inherit; text-decoration: inherit;">kind</a>
@@ -483,8 +450,7 @@ The ProductSetting resource accepts the following [input]({{< relref "/docs/intr
         <span class="property-indicator"></span>
         <span class="property-type">str | <a href="#settingkind">Setting<wbr>Kind</a></span>
     </dt>
-    <dd>{{% md %}}The kind of the setting{{% /md %}}</dd>
-    <dt class="property-required"
+    <dd>{{% md %}}The kind of the setting{{% /md %}}</dd><dt class="property-required"
             title="Required">
         <span id="operational_insights_resource_provider_python">
 <a href="#operational_insights_resource_provider_python" style="color: inherit; text-decoration: inherit;">operational_<wbr>insights_<wbr>resource_<wbr>provider</a>
@@ -492,8 +458,7 @@ The ProductSetting resource accepts the following [input]({{< relref "/docs/intr
         <span class="property-indicator"></span>
         <span class="property-type">str</span>
     </dt>
-    <dd>{{% md %}}The namespace of workspaces resource provider- Microsoft.OperationalInsights.{{% /md %}}</dd>
-    <dt class="property-required"
+    <dd>{{% md %}}The namespace of workspaces resource provider- Microsoft.OperationalInsights.{{% /md %}}</dd><dt class="property-required"
             title="Required">
         <span id="resource_group_name_python">
 <a href="#resource_group_name_python" style="color: inherit; text-decoration: inherit;">resource_<wbr>group_<wbr>name</a>
@@ -501,8 +466,7 @@ The ProductSetting resource accepts the following [input]({{< relref "/docs/intr
         <span class="property-indicator"></span>
         <span class="property-type">str</span>
     </dt>
-    <dd>{{% md %}}The name of the resource group within the user's subscription. The name is case insensitive.{{% /md %}}</dd>
-    <dt class="property-required"
+    <dd>{{% md %}}The name of the resource group within the user's subscription. The name is case insensitive.{{% /md %}}</dd><dt class="property-required"
             title="Required">
         <span id="workspace_name_python">
 <a href="#workspace_name_python" style="color: inherit; text-decoration: inherit;">workspace_<wbr>name</a>
@@ -510,8 +474,7 @@ The ProductSetting resource accepts the following [input]({{< relref "/docs/intr
         <span class="property-indicator"></span>
         <span class="property-type">str</span>
     </dt>
-    <dd>{{% md %}}The name of the workspace.{{% /md %}}</dd>
-    <dt class="property-optional"
+    <dd>{{% md %}}The name of the workspace.{{% /md %}}</dd><dt class="property-optional"
             title="Optional">
         <span id="etag_python">
 <a href="#etag_python" style="color: inherit; text-decoration: inherit;">etag</a>
@@ -519,8 +482,7 @@ The ProductSetting resource accepts the following [input]({{< relref "/docs/intr
         <span class="property-indicator"></span>
         <span class="property-type">str</span>
     </dt>
-    <dd>{{% md %}}Etag of the azure resource{{% /md %}}</dd>
-    <dt class="property-optional"
+    <dd>{{% md %}}Etag of the azure resource{{% /md %}}</dd><dt class="property-optional"
             title="Optional">
         <span id="settings_name_python">
 <a href="#settings_name_python" style="color: inherit; text-decoration: inherit;">settings_<wbr>name</a>
@@ -528,8 +490,7 @@ The ProductSetting resource accepts the following [input]({{< relref "/docs/intr
         <span class="property-indicator"></span>
         <span class="property-type">str</span>
     </dt>
-    <dd>{{% md %}}The setting name. Supports - EyesOn, EntityAnalytics, Ueba{{% /md %}}</dd>
-</dl>
+    <dd>{{% md %}}The setting name. Supports - EyesOn, EntityAnalytics, Ueba{{% /md %}}</dd></dl>
 {{% /choosable %}}
 
 
@@ -540,9 +501,7 @@ All [input](#inputs) properties are implicitly available as output properties. A
 
 
 {{% choosable language csharp %}}
-<dl class="resources-properties">
-
-    <dt class="property-"
+<dl class="resources-properties"><dt class="property-"
             title="">
         <span id="id_csharp">
 <a href="#id_csharp" style="color: inherit; text-decoration: inherit;">Id</a>
@@ -550,8 +509,7 @@ All [input](#inputs) properties are implicitly available as output properties. A
         <span class="property-indicator"></span>
         <span class="property-type">string</span>
     </dt>
-    <dd>{{% md %}}The provider-assigned unique ID for this managed resource.{{% /md %}}</dd>
-    <dt class="property-"
+    <dd>{{% md %}}The provider-assigned unique ID for this managed resource.{{% /md %}}</dd><dt class="property-"
             title="">
         <span id="name_csharp">
 <a href="#name_csharp" style="color: inherit; text-decoration: inherit;">Name</a>
@@ -559,8 +517,7 @@ All [input](#inputs) properties are implicitly available as output properties. A
         <span class="property-indicator"></span>
         <span class="property-type">string</span>
     </dt>
-    <dd>{{% md %}}Azure resource name{{% /md %}}</dd>
-    <dt class="property-"
+    <dd>{{% md %}}Azure resource name{{% /md %}}</dd><dt class="property-"
             title="">
         <span id="type_csharp">
 <a href="#type_csharp" style="color: inherit; text-decoration: inherit;">Type</a>
@@ -568,14 +525,11 @@ All [input](#inputs) properties are implicitly available as output properties. A
         <span class="property-indicator"></span>
         <span class="property-type">string</span>
     </dt>
-    <dd>{{% md %}}Azure resource type{{% /md %}}</dd>
-</dl>
+    <dd>{{% md %}}Azure resource type{{% /md %}}</dd></dl>
 {{% /choosable %}}
 
 {{% choosable language go %}}
-<dl class="resources-properties">
-
-    <dt class="property-"
+<dl class="resources-properties"><dt class="property-"
             title="">
         <span id="id_go">
 <a href="#id_go" style="color: inherit; text-decoration: inherit;">Id</a>
@@ -583,8 +537,7 @@ All [input](#inputs) properties are implicitly available as output properties. A
         <span class="property-indicator"></span>
         <span class="property-type">string</span>
     </dt>
-    <dd>{{% md %}}The provider-assigned unique ID for this managed resource.{{% /md %}}</dd>
-    <dt class="property-"
+    <dd>{{% md %}}The provider-assigned unique ID for this managed resource.{{% /md %}}</dd><dt class="property-"
             title="">
         <span id="name_go">
 <a href="#name_go" style="color: inherit; text-decoration: inherit;">Name</a>
@@ -592,8 +545,7 @@ All [input](#inputs) properties are implicitly available as output properties. A
         <span class="property-indicator"></span>
         <span class="property-type">string</span>
     </dt>
-    <dd>{{% md %}}Azure resource name{{% /md %}}</dd>
-    <dt class="property-"
+    <dd>{{% md %}}Azure resource name{{% /md %}}</dd><dt class="property-"
             title="">
         <span id="type_go">
 <a href="#type_go" style="color: inherit; text-decoration: inherit;">Type</a>
@@ -601,14 +553,11 @@ All [input](#inputs) properties are implicitly available as output properties. A
         <span class="property-indicator"></span>
         <span class="property-type">string</span>
     </dt>
-    <dd>{{% md %}}Azure resource type{{% /md %}}</dd>
-</dl>
+    <dd>{{% md %}}Azure resource type{{% /md %}}</dd></dl>
 {{% /choosable %}}
 
 {{% choosable language nodejs %}}
-<dl class="resources-properties">
-
-    <dt class="property-"
+<dl class="resources-properties"><dt class="property-"
             title="">
         <span id="id_nodejs">
 <a href="#id_nodejs" style="color: inherit; text-decoration: inherit;">id</a>
@@ -616,8 +565,7 @@ All [input](#inputs) properties are implicitly available as output properties. A
         <span class="property-indicator"></span>
         <span class="property-type">string</span>
     </dt>
-    <dd>{{% md %}}The provider-assigned unique ID for this managed resource.{{% /md %}}</dd>
-    <dt class="property-"
+    <dd>{{% md %}}The provider-assigned unique ID for this managed resource.{{% /md %}}</dd><dt class="property-"
             title="">
         <span id="name_nodejs">
 <a href="#name_nodejs" style="color: inherit; text-decoration: inherit;">name</a>
@@ -625,8 +573,7 @@ All [input](#inputs) properties are implicitly available as output properties. A
         <span class="property-indicator"></span>
         <span class="property-type">string</span>
     </dt>
-    <dd>{{% md %}}Azure resource name{{% /md %}}</dd>
-    <dt class="property-"
+    <dd>{{% md %}}Azure resource name{{% /md %}}</dd><dt class="property-"
             title="">
         <span id="type_nodejs">
 <a href="#type_nodejs" style="color: inherit; text-decoration: inherit;">type</a>
@@ -634,14 +581,11 @@ All [input](#inputs) properties are implicitly available as output properties. A
         <span class="property-indicator"></span>
         <span class="property-type">string</span>
     </dt>
-    <dd>{{% md %}}Azure resource type{{% /md %}}</dd>
-</dl>
+    <dd>{{% md %}}Azure resource type{{% /md %}}</dd></dl>
 {{% /choosable %}}
 
 {{% choosable language python %}}
-<dl class="resources-properties">
-
-    <dt class="property-"
+<dl class="resources-properties"><dt class="property-"
             title="">
         <span id="id_python">
 <a href="#id_python" style="color: inherit; text-decoration: inherit;">id</a>
@@ -649,8 +593,7 @@ All [input](#inputs) properties are implicitly available as output properties. A
         <span class="property-indicator"></span>
         <span class="property-type">str</span>
     </dt>
-    <dd>{{% md %}}The provider-assigned unique ID for this managed resource.{{% /md %}}</dd>
-    <dt class="property-"
+    <dd>{{% md %}}The provider-assigned unique ID for this managed resource.{{% /md %}}</dd><dt class="property-"
             title="">
         <span id="name_python">
 <a href="#name_python" style="color: inherit; text-decoration: inherit;">name</a>
@@ -658,8 +601,7 @@ All [input](#inputs) properties are implicitly available as output properties. A
         <span class="property-indicator"></span>
         <span class="property-type">str</span>
     </dt>
-    <dd>{{% md %}}Azure resource name{{% /md %}}</dd>
-    <dt class="property-"
+    <dd>{{% md %}}Azure resource name{{% /md %}}</dd><dt class="property-"
             title="">
         <span id="type_python">
 <a href="#type_python" style="color: inherit; text-decoration: inherit;">type</a>
@@ -667,8 +609,7 @@ All [input](#inputs) properties are implicitly available as output properties. A
         <span class="property-indicator"></span>
         <span class="property-type">str</span>
     </dt>
-    <dd>{{% md %}}Azure resource type{{% /md %}}</dd>
-</dl>
+    <dd>{{% md %}}Azure resource type{{% /md %}}</dd></dl>
 {{% /choosable %}}
 
 
@@ -684,47 +625,31 @@ All [input](#inputs) properties are implicitly available as output properties. A
 <h4 id="settingkind">Setting<wbr>Kind</h4>
 
 {{% choosable language csharp %}}
-<dl class="tabular">
-    <dt>Eyes<wbr>On</dt>
-    <dd>EyesOn</dd>
-    <dt>Entity<wbr>Analytics</dt>
-    <dd>EntityAnalytics</dd>
-    <dt>Ueba</dt>
-    <dd>Ueba</dd>
-</dl>
+<dl class="tabular"><dt>Eyes<wbr>On</dt>
+    <dd>EyesOn</dd><dt>Entity<wbr>Analytics</dt>
+    <dd>EntityAnalytics</dd><dt>Ueba</dt>
+    <dd>Ueba</dd></dl>
 {{% /choosable %}}
 
 {{% choosable language go %}}
-<dl class="tabular">
-    <dt>Setting<wbr>Kind<wbr>Eyes<wbr>On</dt>
-    <dd>EyesOn</dd>
-    <dt>Setting<wbr>Kind<wbr>Entity<wbr>Analytics</dt>
-    <dd>EntityAnalytics</dd>
-    <dt>Setting<wbr>Kind<wbr>Ueba</dt>
-    <dd>Ueba</dd>
-</dl>
+<dl class="tabular"><dt>Setting<wbr>Kind<wbr>Eyes<wbr>On</dt>
+    <dd>EyesOn</dd><dt>Setting<wbr>Kind<wbr>Entity<wbr>Analytics</dt>
+    <dd>EntityAnalytics</dd><dt>Setting<wbr>Kind<wbr>Ueba</dt>
+    <dd>Ueba</dd></dl>
 {{% /choosable %}}
 
 {{% choosable language nodejs %}}
-<dl class="tabular">
-    <dt>Eyes<wbr>On</dt>
-    <dd>EyesOn</dd>
-    <dt>Entity<wbr>Analytics</dt>
-    <dd>EntityAnalytics</dd>
-    <dt>Ueba</dt>
-    <dd>Ueba</dd>
-</dl>
+<dl class="tabular"><dt>Eyes<wbr>On</dt>
+    <dd>EyesOn</dd><dt>Entity<wbr>Analytics</dt>
+    <dd>EntityAnalytics</dd><dt>Ueba</dt>
+    <dd>Ueba</dd></dl>
 {{% /choosable %}}
 
 {{% choosable language python %}}
-<dl class="tabular">
-    <dt>EYES_ON</dt>
-    <dd>EyesOn</dd>
-    <dt>ENTITY_ANALYTICS</dt>
-    <dd>EntityAnalytics</dd>
-    <dt>UEBA</dt>
-    <dd>Ueba</dd>
-</dl>
+<dl class="tabular"><dt>EYES_ON</dt>
+    <dd>EyesOn</dd><dt>ENTITY_ANALYTICS</dt>
+    <dd>EntityAnalytics</dd><dt>UEBA</dt>
+    <dd>Ueba</dd></dl>
 {{% /choosable %}}
 ## Import
 

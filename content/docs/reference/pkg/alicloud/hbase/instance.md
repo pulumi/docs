@@ -23,11 +23,17 @@ The official website mark  more regions. or you can call [DescribeRegions](https
 > **NOTE:**  Create HBase instance or change instance type and storage would cost 15 minutes. Please make full preparation
 
 {{% examples %}}
+
 ## Example Usage
 
 {{< chooser language "typescript,python,go,csharp" / >}}
+
+
 ### Create a hbase instance
-{{% example csharp %}}
+
+
+{{< example csharp >}}
+
 ```csharp
 using Pulumi;
 using AliCloud = Pulumi.AliCloud;
@@ -55,9 +61,12 @@ class MyStack : Stack
 }
 ```
 
-{{% /example %}}
 
-{{% example go %}}
+{{< /example >}}
+
+
+{{< example go >}}
+
 ```go
 package main
 
@@ -89,9 +98,12 @@ func main() {
 }
 ```
 
-{{% /example %}}
 
-{{% example python %}}
+{{< /example >}}
+
+
+{{< example python >}}
+
 ```python
 import pulumi
 import pulumi_alicloud as alicloud
@@ -110,9 +122,12 @@ default = alicloud.hbase.Instance("default",
     zone_id="cn-shenzhen-b")
 ```
 
-{{% /example %}}
 
-{{% example typescript %}}
+{{< /example >}}
+
+
+{{< example typescript >}}
+
 
 ```typescript
 import * as pulumi from "@pulumi/pulumi";
@@ -133,9 +148,16 @@ const defaultInstance = new alicloud.hbase.Instance("default", {
 });
 ```
 
-{{% /example %}}
+
+{{< /example >}}
+
+
+
+
 
 {{% /examples %}}
+
+
 
 
 ## Create a Instance Resource {#create}
@@ -160,9 +182,7 @@ const defaultInstance = new alicloud.hbase.Instance("default", {
 
 {{% choosable language nodejs %}}
 
-<dl class="resources-properties">
-  
-    <dt
+<dl class="resources-properties"><dt
         class="property-required" title="Required">
         <span>name</span>
         <span class="property-indicator"></span>
@@ -170,9 +190,7 @@ const defaultInstance = new alicloud.hbase.Instance("default", {
     </dt>
     <dd>
       The unique name of the resource.
-    </dd>
-  
-    <dt
+    </dd><dt
         class="property-required" title="Required">
         <span>args</span>
         <span class="property-indicator"></span>
@@ -180,9 +198,7 @@ const defaultInstance = new alicloud.hbase.Instance("default", {
     </dt>
     <dd>
       The arguments to resource properties.
-    </dd>
-  
-    <dt
+    </dd><dt
         class="property-optional" title="Optional">
         <span>opts</span>
         <span class="property-indicator"></span>
@@ -190,10 +206,7 @@ const defaultInstance = new alicloud.hbase.Instance("default", {
     </dt>
     <dd>
       Bag of options to control resource&#39;s behavior.
-    </dd>
-  
-
-</dl>
+    </dd></dl>
 
 {{% /choosable %}}
 
@@ -219,9 +232,7 @@ const defaultInstance = new alicloud.hbase.Instance("default", {
 
 {{% choosable language go %}}
 
-<dl class="resources-properties">
-  
-    <dt
+<dl class="resources-properties"><dt
         class="property-optional" title="Optional">
         <span>ctx</span>
         <span class="property-indicator"></span>
@@ -229,9 +240,7 @@ const defaultInstance = new alicloud.hbase.Instance("default", {
     </dt>
     <dd>
       Context object for the current deployment.
-    </dd>
-  
-    <dt
+    </dd><dt
         class="property-required" title="Required">
         <span>name</span>
         <span class="property-indicator"></span>
@@ -239,9 +248,7 @@ const defaultInstance = new alicloud.hbase.Instance("default", {
     </dt>
     <dd>
       The unique name of the resource.
-    </dd>
-  
-    <dt
+    </dd><dt
         class="property-required" title="Required">
         <span>args</span>
         <span class="property-indicator"></span>
@@ -249,9 +256,7 @@ const defaultInstance = new alicloud.hbase.Instance("default", {
     </dt>
     <dd>
       The arguments to resource properties.
-    </dd>
-  
-    <dt
+    </dd><dt
         class="property-optional" title="Optional">
         <span>opts</span>
         <span class="property-indicator"></span>
@@ -259,18 +264,13 @@ const defaultInstance = new alicloud.hbase.Instance("default", {
     </dt>
     <dd>
       Bag of options to control resource&#39;s behavior.
-    </dd>
-  
-
-</dl>
+    </dd></dl>
 
 {{% /choosable %}}
 
 {{% choosable language csharp %}}
 
-<dl class="resources-properties">
-  
-    <dt
+<dl class="resources-properties"><dt
         class="property-required" title="Required">
         <span>name</span>
         <span class="property-indicator"></span>
@@ -278,9 +278,7 @@ const defaultInstance = new alicloud.hbase.Instance("default", {
     </dt>
     <dd>
       The unique name of the resource.
-    </dd>
-  
-    <dt
+    </dd><dt
         class="property-required" title="Required">
         <span>args</span>
         <span class="property-indicator"></span>
@@ -288,9 +286,7 @@ const defaultInstance = new alicloud.hbase.Instance("default", {
     </dt>
     <dd>
       The arguments to resource properties.
-    </dd>
-  
-    <dt
+    </dd><dt
         class="property-optional" title="Optional">
         <span>opts</span>
         <span class="property-indicator"></span>
@@ -298,10 +294,7 @@ const defaultInstance = new alicloud.hbase.Instance("default", {
     </dt>
     <dd>
       Bag of options to control resource&#39;s behavior.
-    </dd>
-  
-
-</dl>
+    </dd></dl>
 
 {{% /choosable %}}
 
@@ -316,9 +309,7 @@ The Instance resource accepts the following [input]({{< relref "/docs/intro/conc
 
 
 {{% choosable language csharp %}}
-<dl class="resources-properties">
-
-    <dt class="property-required"
+<dl class="resources-properties"><dt class="property-required"
             title="Required">
         <span id="coreinstancetype_csharp">
 <a href="#coreinstancetype_csharp" style="color: inherit; text-decoration: inherit;">Core<wbr>Instance<wbr>Type</a>
@@ -326,8 +317,7 @@ The Instance resource accepts the following [input]({{< relref "/docs/intro/conc
         <span class="property-indicator"></span>
         <span class="property-type">string</span>
     </dt>
-    <dd>{{% md %}}{{% /md %}}</dd>
-    <dt class="property-required"
+    <dd>{{% md %}}{{% /md %}}</dd><dt class="property-required"
             title="Required">
         <span id="engineversion_csharp">
 <a href="#engineversion_csharp" style="color: inherit; text-decoration: inherit;">Engine<wbr>Version</a>
@@ -337,8 +327,7 @@ The Instance resource accepts the following [input]({{< relref "/docs/intro/conc
     </dt>
     <dd>{{% md %}}HBase major version. hbase:1.1/2.0, hbaseue:2.0, bds:1.0, unsupport other engine temporarily. Value options can refer to the latest docs [CreateInstance](https://help.aliyun.com/document_detail/144607.html).
 * `master_instance_type`, `core_instance_type` - (Required, ForceNew) Instance specification. See [Instance specifications](https://help.aliyun.com/document_detail/53532.html), or you can call describeInstanceType api.
-{{% /md %}}</dd>
-    <dt class="property-required"
+{{% /md %}}</dd><dt class="property-required"
             title="Required">
         <span id="masterinstancetype_csharp">
 <a href="#masterinstancetype_csharp" style="color: inherit; text-decoration: inherit;">Master<wbr>Instance<wbr>Type</a>
@@ -346,8 +335,7 @@ The Instance resource accepts the following [input]({{< relref "/docs/intro/conc
         <span class="property-indicator"></span>
         <span class="property-type">string</span>
     </dt>
-    <dd>{{% md %}}{{% /md %}}</dd>
-    <dt class="property-optional"
+    <dd>{{% md %}}{{% /md %}}</dd><dt class="property-optional"
             title="Optional">
         <span id="account_csharp">
 <a href="#account_csharp" style="color: inherit; text-decoration: inherit;">Account</a>
@@ -356,8 +344,7 @@ The Instance resource accepts the following [input]({{< relref "/docs/intro/conc
         <span class="property-type">string</span>
     </dt>
     <dd>{{% md %}}The account of the cluster web ui. Size [0-128].
-{{% /md %}}</dd>
-    <dt class="property-optional"
+{{% /md %}}</dd><dt class="property-optional"
             title="Optional">
         <span id="autorenew_csharp">
 <a href="#autorenew_csharp" style="color: inherit; text-decoration: inherit;">Auto<wbr>Renew</a>
@@ -366,8 +353,7 @@ The Instance resource accepts the following [input]({{< relref "/docs/intro/conc
         <span class="property-type">bool</span>
     </dt>
     <dd>{{% md %}}Valid values are `true`, `false`, system default to `false`, valid when pay_type = PrePaid.
-{{% /md %}}</dd>
-    <dt class="property-optional"
+{{% /md %}}</dd><dt class="property-optional"
             title="Optional">
         <span id="coldstoragesize_csharp">
 <a href="#coldstoragesize_csharp" style="color: inherit; text-decoration: inherit;">Cold<wbr>Storage<wbr>Size</a>
@@ -376,8 +362,7 @@ The Instance resource accepts the following [input]({{< relref "/docs/intro/conc
         <span class="property-type">int</span>
     </dt>
     <dd>{{% md %}}0 or [800, 1000000], step:10-GB increments. 0 means is_cold_storage = false. [800, 1000000] means is_cold_storage = true.
-{{% /md %}}</dd>
-    <dt class="property-optional"
+{{% /md %}}</dd><dt class="property-optional"
             title="Optional">
         <span id="coredisksize_csharp">
 <a href="#coredisksize_csharp" style="color: inherit; text-decoration: inherit;">Core<wbr>Disk<wbr>Size</a>
@@ -389,8 +374,7 @@ The Instance resource accepts the following [input]({{< relref "/docs/intro/conc
 - Custom storage space, value range: [20, 64000].
 - Cluster [400, 64000], step:40-GB increments.
 - Single [20-500GB], step:1-GB increments.
-{{% /md %}}</dd>
-    <dt class="property-optional"
+{{% /md %}}</dd><dt class="property-optional"
             title="Optional">
         <span id="coredisktype_csharp">
 <a href="#coredisktype_csharp" style="color: inherit; text-decoration: inherit;">Core<wbr>Disk<wbr>Type</a>
@@ -399,8 +383,7 @@ The Instance resource accepts the following [input]({{< relref "/docs/intro/conc
         <span class="property-type">string</span>
     </dt>
     <dd>{{% md %}}Valid values are `cloud_ssd`, `cloud_essd_pl1`, `cloud_efficiency`, `local_hdd_pro`, `local_ssd_pro`，``, local_disk size is fixed. When engine=bds, no need to set disk type(or empty string).
-{{% /md %}}</dd>
-    <dt class="property-optional"
+{{% /md %}}</dd><dt class="property-optional"
             title="Optional">
         <span id="coreinstancequantity_csharp">
 <a href="#coreinstancequantity_csharp" style="color: inherit; text-decoration: inherit;">Core<wbr>Instance<wbr>Quantity</a>
@@ -409,8 +392,7 @@ The Instance resource accepts the following [input]({{< relref "/docs/intro/conc
         <span class="property-type">int</span>
     </dt>
     <dd>{{% md %}}Default=2, [1-200]. If core_instance_quantity > 1, this is cluster's instance. If core_instance_quantity = 1, this is a single instance.
-{{% /md %}}</dd>
-    <dt class="property-optional"
+{{% /md %}}</dd><dt class="property-optional"
             title="Optional">
         <span id="deletionprotection_csharp">
 <a href="#deletionprotection_csharp" style="color: inherit; text-decoration: inherit;">Deletion<wbr>Protection</a>
@@ -419,8 +401,7 @@ The Instance resource accepts the following [input]({{< relref "/docs/intro/conc
         <span class="property-type">bool</span>
     </dt>
     <dd>{{% md %}}The switch of delete protection. True: delete protect, False: no delete protect. You must set false when you want to delete cluster.
-{{% /md %}}</dd>
-    <dt class="property-optional"
+{{% /md %}}</dd><dt class="property-optional"
             title="Optional">
         <span id="duration_csharp">
 <a href="#duration_csharp" style="color: inherit; text-decoration: inherit;">Duration</a>
@@ -429,8 +410,7 @@ The Instance resource accepts the following [input]({{< relref "/docs/intro/conc
         <span class="property-type">int</span>
     </dt>
     <dd>{{% md %}}1, 2, 3, 4, 5, 6, 7, 8, 9, 12, 24, 36, valid when pay_type = PrePaid,  unit: month. 12, 24, 36 mean 1, 2, 3 years.
-{{% /md %}}</dd>
-    <dt class="property-optional"
+{{% /md %}}</dd><dt class="property-optional"
             title="Optional">
         <span id="engine_csharp">
 <a href="#engine_csharp" style="color: inherit; text-decoration: inherit;">Engine</a>
@@ -439,8 +419,7 @@ The Instance resource accepts the following [input]({{< relref "/docs/intro/conc
         <span class="property-type">string</span>
     </dt>
     <dd>{{% md %}}Valid values are "hbase/hbaseue/bds". The following types are supported after v1.73.0: `hbaseue` and `bds`. Single hbase instance need to set engine=hbase, core_instance_quantity=1.
-{{% /md %}}</dd>
-    <dt class="property-optional"
+{{% /md %}}</dd><dt class="property-optional"
             title="Optional">
         <span id="immediatedeleteflag_csharp">
 <a href="#immediatedeleteflag_csharp" style="color: inherit; text-decoration: inherit;">Immediate<wbr>Delete<wbr>Flag</a>
@@ -449,8 +428,7 @@ The Instance resource accepts the following [input]({{< relref "/docs/intro/conc
         <span class="property-type">bool</span>
     </dt>
     <dd>{{% md %}}The switch of delete immediate. True: delete immediate, False: delete delay. You will not found the cluster no matter set true or false.
-{{% /md %}}</dd>
-    <dt class="property-optional"
+{{% /md %}}</dd><dt class="property-optional"
             title="Optional">
         <span id="ipwhite_csharp">
 <a href="#ipwhite_csharp" style="color: inherit; text-decoration: inherit;">Ip<wbr>White</a>
@@ -459,8 +437,7 @@ The Instance resource accepts the following [input]({{< relref "/docs/intro/conc
         <span class="property-type">string</span>
     </dt>
     <dd>{{% md %}}The white ip list of the cluster.
-{{% /md %}}</dd>
-    <dt class="property-optional"
+{{% /md %}}</dd><dt class="property-optional"
             title="Optional">
         <span id="maintainendtime_csharp">
 <a href="#maintainendtime_csharp" style="color: inherit; text-decoration: inherit;">Maintain<wbr>End<wbr>Time</a>
@@ -469,8 +446,7 @@ The Instance resource accepts the following [input]({{< relref "/docs/intro/conc
         <span class="property-type">string</span>
     </dt>
     <dd>{{% md %}}The end time of the operation and maintenance time period of the instance, in the format of HH:mmZ (UTC time), for example 04:00Z.
-{{% /md %}}</dd>
-    <dt class="property-optional"
+{{% /md %}}</dd><dt class="property-optional"
             title="Optional">
         <span id="maintainstarttime_csharp">
 <a href="#maintainstarttime_csharp" style="color: inherit; text-decoration: inherit;">Maintain<wbr>Start<wbr>Time</a>
@@ -479,8 +455,7 @@ The Instance resource accepts the following [input]({{< relref "/docs/intro/conc
         <span class="property-type">string</span>
     </dt>
     <dd>{{% md %}}The start time of the operation and maintenance time period of the instance, in the format of HH:mmZ (UTC time), for example 02:00Z.
-{{% /md %}}</dd>
-    <dt class="property-optional"
+{{% /md %}}</dd><dt class="property-optional"
             title="Optional">
         <span id="name_csharp">
 <a href="#name_csharp" style="color: inherit; text-decoration: inherit;">Name</a>
@@ -489,8 +464,7 @@ The Instance resource accepts the following [input]({{< relref "/docs/intro/conc
         <span class="property-type">string</span>
     </dt>
     <dd>{{% md %}}HBase instance name. Length must be 2-128 characters long. Only Chinese characters, English letters, numbers, period (.), underline (_), or dash (-) are permitted.
-{{% /md %}}</dd>
-    <dt class="property-optional"
+{{% /md %}}</dd><dt class="property-optional"
             title="Optional">
         <span id="password_csharp">
 <a href="#password_csharp" style="color: inherit; text-decoration: inherit;">Password</a>
@@ -499,8 +473,7 @@ The Instance resource accepts the following [input]({{< relref "/docs/intro/conc
         <span class="property-type">string</span>
     </dt>
     <dd>{{% md %}}The password of the cluster web ui account. Size [0-128].
-{{% /md %}}</dd>
-    <dt class="property-optional"
+{{% /md %}}</dd><dt class="property-optional"
             title="Optional">
         <span id="paytype_csharp">
 <a href="#paytype_csharp" style="color: inherit; text-decoration: inherit;">Pay<wbr>Type</a>
@@ -509,8 +482,7 @@ The Instance resource accepts the following [input]({{< relref "/docs/intro/conc
         <span class="property-type">string</span>
     </dt>
     <dd>{{% md %}}Valid values are `PrePaid`, `PostPaid`, System default to `PostPaid`. You can also convert PostPaid to PrePaid. And support convert PrePaid to PostPaid from 1.115.0+.
-{{% /md %}}</dd>
-    <dt class="property-optional"
+{{% /md %}}</dd><dt class="property-optional"
             title="Optional">
         <span id="securitygroups_csharp">
 <a href="#securitygroups_csharp" style="color: inherit; text-decoration: inherit;">Security<wbr>Groups</a>
@@ -519,8 +491,7 @@ The Instance resource accepts the following [input]({{< relref "/docs/intro/conc
         <span class="property-type">List&lt;string&gt;</span>
     </dt>
     <dd>{{% md %}}The security group resource of the cluster.
-{{% /md %}}</dd>
-    <dt class="property-optional"
+{{% /md %}}</dd><dt class="property-optional"
             title="Optional">
         <span id="tags_csharp">
 <a href="#tags_csharp" style="color: inherit; text-decoration: inherit;">Tags</a>
@@ -529,8 +500,7 @@ The Instance resource accepts the following [input]({{< relref "/docs/intro/conc
         <span class="property-type">Dictionary&lt;string, object&gt;</span>
     </dt>
     <dd>{{% md %}}A mapping of tags to assign to the resource.
-{{% /md %}}</dd>
-    <dt class="property-optional"
+{{% /md %}}</dd><dt class="property-optional"
             title="Optional">
         <span id="vswitchid_csharp">
 <a href="#vswitchid_csharp" style="color: inherit; text-decoration: inherit;">Vswitch<wbr>Id</a>
@@ -539,8 +509,7 @@ The Instance resource accepts the following [input]({{< relref "/docs/intro/conc
         <span class="property-type">string</span>
     </dt>
     <dd>{{% md %}}If vswitch_id is not empty, that mean net_type = vpc and has a same region. If vswitch_id is empty, net_type=classic. Intl site not support classic network.
-{{% /md %}}</dd>
-    <dt class="property-optional"
+{{% /md %}}</dd><dt class="property-optional"
             title="Optional">
         <span id="zoneid_csharp">
 <a href="#zoneid_csharp" style="color: inherit; text-decoration: inherit;">Zone<wbr>Id</a>
@@ -549,14 +518,11 @@ The Instance resource accepts the following [input]({{< relref "/docs/intro/conc
         <span class="property-type">string</span>
     </dt>
     <dd>{{% md %}}The Zone to launch the HBase instance. If vswitch_id is not empty, this zone_id can be "" or consistent.
-{{% /md %}}</dd>
-</dl>
+{{% /md %}}</dd></dl>
 {{% /choosable %}}
 
 {{% choosable language go %}}
-<dl class="resources-properties">
-
-    <dt class="property-required"
+<dl class="resources-properties"><dt class="property-required"
             title="Required">
         <span id="coreinstancetype_go">
 <a href="#coreinstancetype_go" style="color: inherit; text-decoration: inherit;">Core<wbr>Instance<wbr>Type</a>
@@ -564,8 +530,7 @@ The Instance resource accepts the following [input]({{< relref "/docs/intro/conc
         <span class="property-indicator"></span>
         <span class="property-type">string</span>
     </dt>
-    <dd>{{% md %}}{{% /md %}}</dd>
-    <dt class="property-required"
+    <dd>{{% md %}}{{% /md %}}</dd><dt class="property-required"
             title="Required">
         <span id="engineversion_go">
 <a href="#engineversion_go" style="color: inherit; text-decoration: inherit;">Engine<wbr>Version</a>
@@ -575,8 +540,7 @@ The Instance resource accepts the following [input]({{< relref "/docs/intro/conc
     </dt>
     <dd>{{% md %}}HBase major version. hbase:1.1/2.0, hbaseue:2.0, bds:1.0, unsupport other engine temporarily. Value options can refer to the latest docs [CreateInstance](https://help.aliyun.com/document_detail/144607.html).
 * `master_instance_type`, `core_instance_type` - (Required, ForceNew) Instance specification. See [Instance specifications](https://help.aliyun.com/document_detail/53532.html), or you can call describeInstanceType api.
-{{% /md %}}</dd>
-    <dt class="property-required"
+{{% /md %}}</dd><dt class="property-required"
             title="Required">
         <span id="masterinstancetype_go">
 <a href="#masterinstancetype_go" style="color: inherit; text-decoration: inherit;">Master<wbr>Instance<wbr>Type</a>
@@ -584,8 +548,7 @@ The Instance resource accepts the following [input]({{< relref "/docs/intro/conc
         <span class="property-indicator"></span>
         <span class="property-type">string</span>
     </dt>
-    <dd>{{% md %}}{{% /md %}}</dd>
-    <dt class="property-optional"
+    <dd>{{% md %}}{{% /md %}}</dd><dt class="property-optional"
             title="Optional">
         <span id="account_go">
 <a href="#account_go" style="color: inherit; text-decoration: inherit;">Account</a>
@@ -594,8 +557,7 @@ The Instance resource accepts the following [input]({{< relref "/docs/intro/conc
         <span class="property-type">string</span>
     </dt>
     <dd>{{% md %}}The account of the cluster web ui. Size [0-128].
-{{% /md %}}</dd>
-    <dt class="property-optional"
+{{% /md %}}</dd><dt class="property-optional"
             title="Optional">
         <span id="autorenew_go">
 <a href="#autorenew_go" style="color: inherit; text-decoration: inherit;">Auto<wbr>Renew</a>
@@ -604,8 +566,7 @@ The Instance resource accepts the following [input]({{< relref "/docs/intro/conc
         <span class="property-type">bool</span>
     </dt>
     <dd>{{% md %}}Valid values are `true`, `false`, system default to `false`, valid when pay_type = PrePaid.
-{{% /md %}}</dd>
-    <dt class="property-optional"
+{{% /md %}}</dd><dt class="property-optional"
             title="Optional">
         <span id="coldstoragesize_go">
 <a href="#coldstoragesize_go" style="color: inherit; text-decoration: inherit;">Cold<wbr>Storage<wbr>Size</a>
@@ -614,8 +575,7 @@ The Instance resource accepts the following [input]({{< relref "/docs/intro/conc
         <span class="property-type">int</span>
     </dt>
     <dd>{{% md %}}0 or [800, 1000000], step:10-GB increments. 0 means is_cold_storage = false. [800, 1000000] means is_cold_storage = true.
-{{% /md %}}</dd>
-    <dt class="property-optional"
+{{% /md %}}</dd><dt class="property-optional"
             title="Optional">
         <span id="coredisksize_go">
 <a href="#coredisksize_go" style="color: inherit; text-decoration: inherit;">Core<wbr>Disk<wbr>Size</a>
@@ -627,8 +587,7 @@ The Instance resource accepts the following [input]({{< relref "/docs/intro/conc
 - Custom storage space, value range: [20, 64000].
 - Cluster [400, 64000], step:40-GB increments.
 - Single [20-500GB], step:1-GB increments.
-{{% /md %}}</dd>
-    <dt class="property-optional"
+{{% /md %}}</dd><dt class="property-optional"
             title="Optional">
         <span id="coredisktype_go">
 <a href="#coredisktype_go" style="color: inherit; text-decoration: inherit;">Core<wbr>Disk<wbr>Type</a>
@@ -637,8 +596,7 @@ The Instance resource accepts the following [input]({{< relref "/docs/intro/conc
         <span class="property-type">string</span>
     </dt>
     <dd>{{% md %}}Valid values are `cloud_ssd`, `cloud_essd_pl1`, `cloud_efficiency`, `local_hdd_pro`, `local_ssd_pro`，``, local_disk size is fixed. When engine=bds, no need to set disk type(or empty string).
-{{% /md %}}</dd>
-    <dt class="property-optional"
+{{% /md %}}</dd><dt class="property-optional"
             title="Optional">
         <span id="coreinstancequantity_go">
 <a href="#coreinstancequantity_go" style="color: inherit; text-decoration: inherit;">Core<wbr>Instance<wbr>Quantity</a>
@@ -647,8 +605,7 @@ The Instance resource accepts the following [input]({{< relref "/docs/intro/conc
         <span class="property-type">int</span>
     </dt>
     <dd>{{% md %}}Default=2, [1-200]. If core_instance_quantity > 1, this is cluster's instance. If core_instance_quantity = 1, this is a single instance.
-{{% /md %}}</dd>
-    <dt class="property-optional"
+{{% /md %}}</dd><dt class="property-optional"
             title="Optional">
         <span id="deletionprotection_go">
 <a href="#deletionprotection_go" style="color: inherit; text-decoration: inherit;">Deletion<wbr>Protection</a>
@@ -657,8 +614,7 @@ The Instance resource accepts the following [input]({{< relref "/docs/intro/conc
         <span class="property-type">bool</span>
     </dt>
     <dd>{{% md %}}The switch of delete protection. True: delete protect, False: no delete protect. You must set false when you want to delete cluster.
-{{% /md %}}</dd>
-    <dt class="property-optional"
+{{% /md %}}</dd><dt class="property-optional"
             title="Optional">
         <span id="duration_go">
 <a href="#duration_go" style="color: inherit; text-decoration: inherit;">Duration</a>
@@ -667,8 +623,7 @@ The Instance resource accepts the following [input]({{< relref "/docs/intro/conc
         <span class="property-type">int</span>
     </dt>
     <dd>{{% md %}}1, 2, 3, 4, 5, 6, 7, 8, 9, 12, 24, 36, valid when pay_type = PrePaid,  unit: month. 12, 24, 36 mean 1, 2, 3 years.
-{{% /md %}}</dd>
-    <dt class="property-optional"
+{{% /md %}}</dd><dt class="property-optional"
             title="Optional">
         <span id="engine_go">
 <a href="#engine_go" style="color: inherit; text-decoration: inherit;">Engine</a>
@@ -677,8 +632,7 @@ The Instance resource accepts the following [input]({{< relref "/docs/intro/conc
         <span class="property-type">string</span>
     </dt>
     <dd>{{% md %}}Valid values are "hbase/hbaseue/bds". The following types are supported after v1.73.0: `hbaseue` and `bds`. Single hbase instance need to set engine=hbase, core_instance_quantity=1.
-{{% /md %}}</dd>
-    <dt class="property-optional"
+{{% /md %}}</dd><dt class="property-optional"
             title="Optional">
         <span id="immediatedeleteflag_go">
 <a href="#immediatedeleteflag_go" style="color: inherit; text-decoration: inherit;">Immediate<wbr>Delete<wbr>Flag</a>
@@ -687,8 +641,7 @@ The Instance resource accepts the following [input]({{< relref "/docs/intro/conc
         <span class="property-type">bool</span>
     </dt>
     <dd>{{% md %}}The switch of delete immediate. True: delete immediate, False: delete delay. You will not found the cluster no matter set true or false.
-{{% /md %}}</dd>
-    <dt class="property-optional"
+{{% /md %}}</dd><dt class="property-optional"
             title="Optional">
         <span id="ipwhite_go">
 <a href="#ipwhite_go" style="color: inherit; text-decoration: inherit;">Ip<wbr>White</a>
@@ -697,8 +650,7 @@ The Instance resource accepts the following [input]({{< relref "/docs/intro/conc
         <span class="property-type">string</span>
     </dt>
     <dd>{{% md %}}The white ip list of the cluster.
-{{% /md %}}</dd>
-    <dt class="property-optional"
+{{% /md %}}</dd><dt class="property-optional"
             title="Optional">
         <span id="maintainendtime_go">
 <a href="#maintainendtime_go" style="color: inherit; text-decoration: inherit;">Maintain<wbr>End<wbr>Time</a>
@@ -707,8 +659,7 @@ The Instance resource accepts the following [input]({{< relref "/docs/intro/conc
         <span class="property-type">string</span>
     </dt>
     <dd>{{% md %}}The end time of the operation and maintenance time period of the instance, in the format of HH:mmZ (UTC time), for example 04:00Z.
-{{% /md %}}</dd>
-    <dt class="property-optional"
+{{% /md %}}</dd><dt class="property-optional"
             title="Optional">
         <span id="maintainstarttime_go">
 <a href="#maintainstarttime_go" style="color: inherit; text-decoration: inherit;">Maintain<wbr>Start<wbr>Time</a>
@@ -717,8 +668,7 @@ The Instance resource accepts the following [input]({{< relref "/docs/intro/conc
         <span class="property-type">string</span>
     </dt>
     <dd>{{% md %}}The start time of the operation and maintenance time period of the instance, in the format of HH:mmZ (UTC time), for example 02:00Z.
-{{% /md %}}</dd>
-    <dt class="property-optional"
+{{% /md %}}</dd><dt class="property-optional"
             title="Optional">
         <span id="name_go">
 <a href="#name_go" style="color: inherit; text-decoration: inherit;">Name</a>
@@ -727,8 +677,7 @@ The Instance resource accepts the following [input]({{< relref "/docs/intro/conc
         <span class="property-type">string</span>
     </dt>
     <dd>{{% md %}}HBase instance name. Length must be 2-128 characters long. Only Chinese characters, English letters, numbers, period (.), underline (_), or dash (-) are permitted.
-{{% /md %}}</dd>
-    <dt class="property-optional"
+{{% /md %}}</dd><dt class="property-optional"
             title="Optional">
         <span id="password_go">
 <a href="#password_go" style="color: inherit; text-decoration: inherit;">Password</a>
@@ -737,8 +686,7 @@ The Instance resource accepts the following [input]({{< relref "/docs/intro/conc
         <span class="property-type">string</span>
     </dt>
     <dd>{{% md %}}The password of the cluster web ui account. Size [0-128].
-{{% /md %}}</dd>
-    <dt class="property-optional"
+{{% /md %}}</dd><dt class="property-optional"
             title="Optional">
         <span id="paytype_go">
 <a href="#paytype_go" style="color: inherit; text-decoration: inherit;">Pay<wbr>Type</a>
@@ -747,8 +695,7 @@ The Instance resource accepts the following [input]({{< relref "/docs/intro/conc
         <span class="property-type">string</span>
     </dt>
     <dd>{{% md %}}Valid values are `PrePaid`, `PostPaid`, System default to `PostPaid`. You can also convert PostPaid to PrePaid. And support convert PrePaid to PostPaid from 1.115.0+.
-{{% /md %}}</dd>
-    <dt class="property-optional"
+{{% /md %}}</dd><dt class="property-optional"
             title="Optional">
         <span id="securitygroups_go">
 <a href="#securitygroups_go" style="color: inherit; text-decoration: inherit;">Security<wbr>Groups</a>
@@ -757,8 +704,7 @@ The Instance resource accepts the following [input]({{< relref "/docs/intro/conc
         <span class="property-type">[]string</span>
     </dt>
     <dd>{{% md %}}The security group resource of the cluster.
-{{% /md %}}</dd>
-    <dt class="property-optional"
+{{% /md %}}</dd><dt class="property-optional"
             title="Optional">
         <span id="tags_go">
 <a href="#tags_go" style="color: inherit; text-decoration: inherit;">Tags</a>
@@ -767,8 +713,7 @@ The Instance resource accepts the following [input]({{< relref "/docs/intro/conc
         <span class="property-type">map[string]interface{}</span>
     </dt>
     <dd>{{% md %}}A mapping of tags to assign to the resource.
-{{% /md %}}</dd>
-    <dt class="property-optional"
+{{% /md %}}</dd><dt class="property-optional"
             title="Optional">
         <span id="vswitchid_go">
 <a href="#vswitchid_go" style="color: inherit; text-decoration: inherit;">Vswitch<wbr>Id</a>
@@ -777,8 +722,7 @@ The Instance resource accepts the following [input]({{< relref "/docs/intro/conc
         <span class="property-type">string</span>
     </dt>
     <dd>{{% md %}}If vswitch_id is not empty, that mean net_type = vpc and has a same region. If vswitch_id is empty, net_type=classic. Intl site not support classic network.
-{{% /md %}}</dd>
-    <dt class="property-optional"
+{{% /md %}}</dd><dt class="property-optional"
             title="Optional">
         <span id="zoneid_go">
 <a href="#zoneid_go" style="color: inherit; text-decoration: inherit;">Zone<wbr>Id</a>
@@ -787,14 +731,11 @@ The Instance resource accepts the following [input]({{< relref "/docs/intro/conc
         <span class="property-type">string</span>
     </dt>
     <dd>{{% md %}}The Zone to launch the HBase instance. If vswitch_id is not empty, this zone_id can be "" or consistent.
-{{% /md %}}</dd>
-</dl>
+{{% /md %}}</dd></dl>
 {{% /choosable %}}
 
 {{% choosable language nodejs %}}
-<dl class="resources-properties">
-
-    <dt class="property-required"
+<dl class="resources-properties"><dt class="property-required"
             title="Required">
         <span id="coreinstancetype_nodejs">
 <a href="#coreinstancetype_nodejs" style="color: inherit; text-decoration: inherit;">core<wbr>Instance<wbr>Type</a>
@@ -802,8 +743,7 @@ The Instance resource accepts the following [input]({{< relref "/docs/intro/conc
         <span class="property-indicator"></span>
         <span class="property-type">string</span>
     </dt>
-    <dd>{{% md %}}{{% /md %}}</dd>
-    <dt class="property-required"
+    <dd>{{% md %}}{{% /md %}}</dd><dt class="property-required"
             title="Required">
         <span id="engineversion_nodejs">
 <a href="#engineversion_nodejs" style="color: inherit; text-decoration: inherit;">engine<wbr>Version</a>
@@ -813,8 +753,7 @@ The Instance resource accepts the following [input]({{< relref "/docs/intro/conc
     </dt>
     <dd>{{% md %}}HBase major version. hbase:1.1/2.0, hbaseue:2.0, bds:1.0, unsupport other engine temporarily. Value options can refer to the latest docs [CreateInstance](https://help.aliyun.com/document_detail/144607.html).
 * `master_instance_type`, `core_instance_type` - (Required, ForceNew) Instance specification. See [Instance specifications](https://help.aliyun.com/document_detail/53532.html), or you can call describeInstanceType api.
-{{% /md %}}</dd>
-    <dt class="property-required"
+{{% /md %}}</dd><dt class="property-required"
             title="Required">
         <span id="masterinstancetype_nodejs">
 <a href="#masterinstancetype_nodejs" style="color: inherit; text-decoration: inherit;">master<wbr>Instance<wbr>Type</a>
@@ -822,8 +761,7 @@ The Instance resource accepts the following [input]({{< relref "/docs/intro/conc
         <span class="property-indicator"></span>
         <span class="property-type">string</span>
     </dt>
-    <dd>{{% md %}}{{% /md %}}</dd>
-    <dt class="property-optional"
+    <dd>{{% md %}}{{% /md %}}</dd><dt class="property-optional"
             title="Optional">
         <span id="account_nodejs">
 <a href="#account_nodejs" style="color: inherit; text-decoration: inherit;">account</a>
@@ -832,8 +770,7 @@ The Instance resource accepts the following [input]({{< relref "/docs/intro/conc
         <span class="property-type">string</span>
     </dt>
     <dd>{{% md %}}The account of the cluster web ui. Size [0-128].
-{{% /md %}}</dd>
-    <dt class="property-optional"
+{{% /md %}}</dd><dt class="property-optional"
             title="Optional">
         <span id="autorenew_nodejs">
 <a href="#autorenew_nodejs" style="color: inherit; text-decoration: inherit;">auto<wbr>Renew</a>
@@ -842,8 +779,7 @@ The Instance resource accepts the following [input]({{< relref "/docs/intro/conc
         <span class="property-type">boolean</span>
     </dt>
     <dd>{{% md %}}Valid values are `true`, `false`, system default to `false`, valid when pay_type = PrePaid.
-{{% /md %}}</dd>
-    <dt class="property-optional"
+{{% /md %}}</dd><dt class="property-optional"
             title="Optional">
         <span id="coldstoragesize_nodejs">
 <a href="#coldstoragesize_nodejs" style="color: inherit; text-decoration: inherit;">cold<wbr>Storage<wbr>Size</a>
@@ -852,8 +788,7 @@ The Instance resource accepts the following [input]({{< relref "/docs/intro/conc
         <span class="property-type">number</span>
     </dt>
     <dd>{{% md %}}0 or [800, 1000000], step:10-GB increments. 0 means is_cold_storage = false. [800, 1000000] means is_cold_storage = true.
-{{% /md %}}</dd>
-    <dt class="property-optional"
+{{% /md %}}</dd><dt class="property-optional"
             title="Optional">
         <span id="coredisksize_nodejs">
 <a href="#coredisksize_nodejs" style="color: inherit; text-decoration: inherit;">core<wbr>Disk<wbr>Size</a>
@@ -865,8 +800,7 @@ The Instance resource accepts the following [input]({{< relref "/docs/intro/conc
 - Custom storage space, value range: [20, 64000].
 - Cluster [400, 64000], step:40-GB increments.
 - Single [20-500GB], step:1-GB increments.
-{{% /md %}}</dd>
-    <dt class="property-optional"
+{{% /md %}}</dd><dt class="property-optional"
             title="Optional">
         <span id="coredisktype_nodejs">
 <a href="#coredisktype_nodejs" style="color: inherit; text-decoration: inherit;">core<wbr>Disk<wbr>Type</a>
@@ -875,8 +809,7 @@ The Instance resource accepts the following [input]({{< relref "/docs/intro/conc
         <span class="property-type">string</span>
     </dt>
     <dd>{{% md %}}Valid values are `cloud_ssd`, `cloud_essd_pl1`, `cloud_efficiency`, `local_hdd_pro`, `local_ssd_pro`，``, local_disk size is fixed. When engine=bds, no need to set disk type(or empty string).
-{{% /md %}}</dd>
-    <dt class="property-optional"
+{{% /md %}}</dd><dt class="property-optional"
             title="Optional">
         <span id="coreinstancequantity_nodejs">
 <a href="#coreinstancequantity_nodejs" style="color: inherit; text-decoration: inherit;">core<wbr>Instance<wbr>Quantity</a>
@@ -885,8 +818,7 @@ The Instance resource accepts the following [input]({{< relref "/docs/intro/conc
         <span class="property-type">number</span>
     </dt>
     <dd>{{% md %}}Default=2, [1-200]. If core_instance_quantity > 1, this is cluster's instance. If core_instance_quantity = 1, this is a single instance.
-{{% /md %}}</dd>
-    <dt class="property-optional"
+{{% /md %}}</dd><dt class="property-optional"
             title="Optional">
         <span id="deletionprotection_nodejs">
 <a href="#deletionprotection_nodejs" style="color: inherit; text-decoration: inherit;">deletion<wbr>Protection</a>
@@ -895,8 +827,7 @@ The Instance resource accepts the following [input]({{< relref "/docs/intro/conc
         <span class="property-type">boolean</span>
     </dt>
     <dd>{{% md %}}The switch of delete protection. True: delete protect, False: no delete protect. You must set false when you want to delete cluster.
-{{% /md %}}</dd>
-    <dt class="property-optional"
+{{% /md %}}</dd><dt class="property-optional"
             title="Optional">
         <span id="duration_nodejs">
 <a href="#duration_nodejs" style="color: inherit; text-decoration: inherit;">duration</a>
@@ -905,8 +836,7 @@ The Instance resource accepts the following [input]({{< relref "/docs/intro/conc
         <span class="property-type">number</span>
     </dt>
     <dd>{{% md %}}1, 2, 3, 4, 5, 6, 7, 8, 9, 12, 24, 36, valid when pay_type = PrePaid,  unit: month. 12, 24, 36 mean 1, 2, 3 years.
-{{% /md %}}</dd>
-    <dt class="property-optional"
+{{% /md %}}</dd><dt class="property-optional"
             title="Optional">
         <span id="engine_nodejs">
 <a href="#engine_nodejs" style="color: inherit; text-decoration: inherit;">engine</a>
@@ -915,8 +845,7 @@ The Instance resource accepts the following [input]({{< relref "/docs/intro/conc
         <span class="property-type">string</span>
     </dt>
     <dd>{{% md %}}Valid values are "hbase/hbaseue/bds". The following types are supported after v1.73.0: `hbaseue` and `bds`. Single hbase instance need to set engine=hbase, core_instance_quantity=1.
-{{% /md %}}</dd>
-    <dt class="property-optional"
+{{% /md %}}</dd><dt class="property-optional"
             title="Optional">
         <span id="immediatedeleteflag_nodejs">
 <a href="#immediatedeleteflag_nodejs" style="color: inherit; text-decoration: inherit;">immediate<wbr>Delete<wbr>Flag</a>
@@ -925,8 +854,7 @@ The Instance resource accepts the following [input]({{< relref "/docs/intro/conc
         <span class="property-type">boolean</span>
     </dt>
     <dd>{{% md %}}The switch of delete immediate. True: delete immediate, False: delete delay. You will not found the cluster no matter set true or false.
-{{% /md %}}</dd>
-    <dt class="property-optional"
+{{% /md %}}</dd><dt class="property-optional"
             title="Optional">
         <span id="ipwhite_nodejs">
 <a href="#ipwhite_nodejs" style="color: inherit; text-decoration: inherit;">ip<wbr>White</a>
@@ -935,8 +863,7 @@ The Instance resource accepts the following [input]({{< relref "/docs/intro/conc
         <span class="property-type">string</span>
     </dt>
     <dd>{{% md %}}The white ip list of the cluster.
-{{% /md %}}</dd>
-    <dt class="property-optional"
+{{% /md %}}</dd><dt class="property-optional"
             title="Optional">
         <span id="maintainendtime_nodejs">
 <a href="#maintainendtime_nodejs" style="color: inherit; text-decoration: inherit;">maintain<wbr>End<wbr>Time</a>
@@ -945,8 +872,7 @@ The Instance resource accepts the following [input]({{< relref "/docs/intro/conc
         <span class="property-type">string</span>
     </dt>
     <dd>{{% md %}}The end time of the operation and maintenance time period of the instance, in the format of HH:mmZ (UTC time), for example 04:00Z.
-{{% /md %}}</dd>
-    <dt class="property-optional"
+{{% /md %}}</dd><dt class="property-optional"
             title="Optional">
         <span id="maintainstarttime_nodejs">
 <a href="#maintainstarttime_nodejs" style="color: inherit; text-decoration: inherit;">maintain<wbr>Start<wbr>Time</a>
@@ -955,8 +881,7 @@ The Instance resource accepts the following [input]({{< relref "/docs/intro/conc
         <span class="property-type">string</span>
     </dt>
     <dd>{{% md %}}The start time of the operation and maintenance time period of the instance, in the format of HH:mmZ (UTC time), for example 02:00Z.
-{{% /md %}}</dd>
-    <dt class="property-optional"
+{{% /md %}}</dd><dt class="property-optional"
             title="Optional">
         <span id="name_nodejs">
 <a href="#name_nodejs" style="color: inherit; text-decoration: inherit;">name</a>
@@ -965,8 +890,7 @@ The Instance resource accepts the following [input]({{< relref "/docs/intro/conc
         <span class="property-type">string</span>
     </dt>
     <dd>{{% md %}}HBase instance name. Length must be 2-128 characters long. Only Chinese characters, English letters, numbers, period (.), underline (_), or dash (-) are permitted.
-{{% /md %}}</dd>
-    <dt class="property-optional"
+{{% /md %}}</dd><dt class="property-optional"
             title="Optional">
         <span id="password_nodejs">
 <a href="#password_nodejs" style="color: inherit; text-decoration: inherit;">password</a>
@@ -975,8 +899,7 @@ The Instance resource accepts the following [input]({{< relref "/docs/intro/conc
         <span class="property-type">string</span>
     </dt>
     <dd>{{% md %}}The password of the cluster web ui account. Size [0-128].
-{{% /md %}}</dd>
-    <dt class="property-optional"
+{{% /md %}}</dd><dt class="property-optional"
             title="Optional">
         <span id="paytype_nodejs">
 <a href="#paytype_nodejs" style="color: inherit; text-decoration: inherit;">pay<wbr>Type</a>
@@ -985,8 +908,7 @@ The Instance resource accepts the following [input]({{< relref "/docs/intro/conc
         <span class="property-type">string</span>
     </dt>
     <dd>{{% md %}}Valid values are `PrePaid`, `PostPaid`, System default to `PostPaid`. You can also convert PostPaid to PrePaid. And support convert PrePaid to PostPaid from 1.115.0+.
-{{% /md %}}</dd>
-    <dt class="property-optional"
+{{% /md %}}</dd><dt class="property-optional"
             title="Optional">
         <span id="securitygroups_nodejs">
 <a href="#securitygroups_nodejs" style="color: inherit; text-decoration: inherit;">security<wbr>Groups</a>
@@ -995,8 +917,7 @@ The Instance resource accepts the following [input]({{< relref "/docs/intro/conc
         <span class="property-type">string[]</span>
     </dt>
     <dd>{{% md %}}The security group resource of the cluster.
-{{% /md %}}</dd>
-    <dt class="property-optional"
+{{% /md %}}</dd><dt class="property-optional"
             title="Optional">
         <span id="tags_nodejs">
 <a href="#tags_nodejs" style="color: inherit; text-decoration: inherit;">tags</a>
@@ -1005,8 +926,7 @@ The Instance resource accepts the following [input]({{< relref "/docs/intro/conc
         <span class="property-type">{[key: string]: any}</span>
     </dt>
     <dd>{{% md %}}A mapping of tags to assign to the resource.
-{{% /md %}}</dd>
-    <dt class="property-optional"
+{{% /md %}}</dd><dt class="property-optional"
             title="Optional">
         <span id="vswitchid_nodejs">
 <a href="#vswitchid_nodejs" style="color: inherit; text-decoration: inherit;">vswitch<wbr>Id</a>
@@ -1015,8 +935,7 @@ The Instance resource accepts the following [input]({{< relref "/docs/intro/conc
         <span class="property-type">string</span>
     </dt>
     <dd>{{% md %}}If vswitch_id is not empty, that mean net_type = vpc and has a same region. If vswitch_id is empty, net_type=classic. Intl site not support classic network.
-{{% /md %}}</dd>
-    <dt class="property-optional"
+{{% /md %}}</dd><dt class="property-optional"
             title="Optional">
         <span id="zoneid_nodejs">
 <a href="#zoneid_nodejs" style="color: inherit; text-decoration: inherit;">zone<wbr>Id</a>
@@ -1025,14 +944,11 @@ The Instance resource accepts the following [input]({{< relref "/docs/intro/conc
         <span class="property-type">string</span>
     </dt>
     <dd>{{% md %}}The Zone to launch the HBase instance. If vswitch_id is not empty, this zone_id can be "" or consistent.
-{{% /md %}}</dd>
-</dl>
+{{% /md %}}</dd></dl>
 {{% /choosable %}}
 
 {{% choosable language python %}}
-<dl class="resources-properties">
-
-    <dt class="property-required"
+<dl class="resources-properties"><dt class="property-required"
             title="Required">
         <span id="core_instance_type_python">
 <a href="#core_instance_type_python" style="color: inherit; text-decoration: inherit;">core_<wbr>instance_<wbr>type</a>
@@ -1040,8 +956,7 @@ The Instance resource accepts the following [input]({{< relref "/docs/intro/conc
         <span class="property-indicator"></span>
         <span class="property-type">str</span>
     </dt>
-    <dd>{{% md %}}{{% /md %}}</dd>
-    <dt class="property-required"
+    <dd>{{% md %}}{{% /md %}}</dd><dt class="property-required"
             title="Required">
         <span id="engine_version_python">
 <a href="#engine_version_python" style="color: inherit; text-decoration: inherit;">engine_<wbr>version</a>
@@ -1051,8 +966,7 @@ The Instance resource accepts the following [input]({{< relref "/docs/intro/conc
     </dt>
     <dd>{{% md %}}HBase major version. hbase:1.1/2.0, hbaseue:2.0, bds:1.0, unsupport other engine temporarily. Value options can refer to the latest docs [CreateInstance](https://help.aliyun.com/document_detail/144607.html).
 * `master_instance_type`, `core_instance_type` - (Required, ForceNew) Instance specification. See [Instance specifications](https://help.aliyun.com/document_detail/53532.html), or you can call describeInstanceType api.
-{{% /md %}}</dd>
-    <dt class="property-required"
+{{% /md %}}</dd><dt class="property-required"
             title="Required">
         <span id="master_instance_type_python">
 <a href="#master_instance_type_python" style="color: inherit; text-decoration: inherit;">master_<wbr>instance_<wbr>type</a>
@@ -1060,8 +974,7 @@ The Instance resource accepts the following [input]({{< relref "/docs/intro/conc
         <span class="property-indicator"></span>
         <span class="property-type">str</span>
     </dt>
-    <dd>{{% md %}}{{% /md %}}</dd>
-    <dt class="property-optional"
+    <dd>{{% md %}}{{% /md %}}</dd><dt class="property-optional"
             title="Optional">
         <span id="account_python">
 <a href="#account_python" style="color: inherit; text-decoration: inherit;">account</a>
@@ -1070,8 +983,7 @@ The Instance resource accepts the following [input]({{< relref "/docs/intro/conc
         <span class="property-type">str</span>
     </dt>
     <dd>{{% md %}}The account of the cluster web ui. Size [0-128].
-{{% /md %}}</dd>
-    <dt class="property-optional"
+{{% /md %}}</dd><dt class="property-optional"
             title="Optional">
         <span id="auto_renew_python">
 <a href="#auto_renew_python" style="color: inherit; text-decoration: inherit;">auto_<wbr>renew</a>
@@ -1080,8 +992,7 @@ The Instance resource accepts the following [input]({{< relref "/docs/intro/conc
         <span class="property-type">bool</span>
     </dt>
     <dd>{{% md %}}Valid values are `true`, `false`, system default to `false`, valid when pay_type = PrePaid.
-{{% /md %}}</dd>
-    <dt class="property-optional"
+{{% /md %}}</dd><dt class="property-optional"
             title="Optional">
         <span id="cold_storage_size_python">
 <a href="#cold_storage_size_python" style="color: inherit; text-decoration: inherit;">cold_<wbr>storage_<wbr>size</a>
@@ -1090,8 +1001,7 @@ The Instance resource accepts the following [input]({{< relref "/docs/intro/conc
         <span class="property-type">int</span>
     </dt>
     <dd>{{% md %}}0 or [800, 1000000], step:10-GB increments. 0 means is_cold_storage = false. [800, 1000000] means is_cold_storage = true.
-{{% /md %}}</dd>
-    <dt class="property-optional"
+{{% /md %}}</dd><dt class="property-optional"
             title="Optional">
         <span id="core_disk_size_python">
 <a href="#core_disk_size_python" style="color: inherit; text-decoration: inherit;">core_<wbr>disk_<wbr>size</a>
@@ -1103,8 +1013,7 @@ The Instance resource accepts the following [input]({{< relref "/docs/intro/conc
 - Custom storage space, value range: [20, 64000].
 - Cluster [400, 64000], step:40-GB increments.
 - Single [20-500GB], step:1-GB increments.
-{{% /md %}}</dd>
-    <dt class="property-optional"
+{{% /md %}}</dd><dt class="property-optional"
             title="Optional">
         <span id="core_disk_type_python">
 <a href="#core_disk_type_python" style="color: inherit; text-decoration: inherit;">core_<wbr>disk_<wbr>type</a>
@@ -1113,8 +1022,7 @@ The Instance resource accepts the following [input]({{< relref "/docs/intro/conc
         <span class="property-type">str</span>
     </dt>
     <dd>{{% md %}}Valid values are `cloud_ssd`, `cloud_essd_pl1`, `cloud_efficiency`, `local_hdd_pro`, `local_ssd_pro`，``, local_disk size is fixed. When engine=bds, no need to set disk type(or empty string).
-{{% /md %}}</dd>
-    <dt class="property-optional"
+{{% /md %}}</dd><dt class="property-optional"
             title="Optional">
         <span id="core_instance_quantity_python">
 <a href="#core_instance_quantity_python" style="color: inherit; text-decoration: inherit;">core_<wbr>instance_<wbr>quantity</a>
@@ -1123,8 +1031,7 @@ The Instance resource accepts the following [input]({{< relref "/docs/intro/conc
         <span class="property-type">int</span>
     </dt>
     <dd>{{% md %}}Default=2, [1-200]. If core_instance_quantity > 1, this is cluster's instance. If core_instance_quantity = 1, this is a single instance.
-{{% /md %}}</dd>
-    <dt class="property-optional"
+{{% /md %}}</dd><dt class="property-optional"
             title="Optional">
         <span id="deletion_protection_python">
 <a href="#deletion_protection_python" style="color: inherit; text-decoration: inherit;">deletion_<wbr>protection</a>
@@ -1133,8 +1040,7 @@ The Instance resource accepts the following [input]({{< relref "/docs/intro/conc
         <span class="property-type">bool</span>
     </dt>
     <dd>{{% md %}}The switch of delete protection. True: delete protect, False: no delete protect. You must set false when you want to delete cluster.
-{{% /md %}}</dd>
-    <dt class="property-optional"
+{{% /md %}}</dd><dt class="property-optional"
             title="Optional">
         <span id="duration_python">
 <a href="#duration_python" style="color: inherit; text-decoration: inherit;">duration</a>
@@ -1143,8 +1049,7 @@ The Instance resource accepts the following [input]({{< relref "/docs/intro/conc
         <span class="property-type">int</span>
     </dt>
     <dd>{{% md %}}1, 2, 3, 4, 5, 6, 7, 8, 9, 12, 24, 36, valid when pay_type = PrePaid,  unit: month. 12, 24, 36 mean 1, 2, 3 years.
-{{% /md %}}</dd>
-    <dt class="property-optional"
+{{% /md %}}</dd><dt class="property-optional"
             title="Optional">
         <span id="engine_python">
 <a href="#engine_python" style="color: inherit; text-decoration: inherit;">engine</a>
@@ -1153,8 +1058,7 @@ The Instance resource accepts the following [input]({{< relref "/docs/intro/conc
         <span class="property-type">str</span>
     </dt>
     <dd>{{% md %}}Valid values are "hbase/hbaseue/bds". The following types are supported after v1.73.0: `hbaseue` and `bds`. Single hbase instance need to set engine=hbase, core_instance_quantity=1.
-{{% /md %}}</dd>
-    <dt class="property-optional"
+{{% /md %}}</dd><dt class="property-optional"
             title="Optional">
         <span id="immediate_delete_flag_python">
 <a href="#immediate_delete_flag_python" style="color: inherit; text-decoration: inherit;">immediate_<wbr>delete_<wbr>flag</a>
@@ -1163,8 +1067,7 @@ The Instance resource accepts the following [input]({{< relref "/docs/intro/conc
         <span class="property-type">bool</span>
     </dt>
     <dd>{{% md %}}The switch of delete immediate. True: delete immediate, False: delete delay. You will not found the cluster no matter set true or false.
-{{% /md %}}</dd>
-    <dt class="property-optional"
+{{% /md %}}</dd><dt class="property-optional"
             title="Optional">
         <span id="ip_white_python">
 <a href="#ip_white_python" style="color: inherit; text-decoration: inherit;">ip_<wbr>white</a>
@@ -1173,8 +1076,7 @@ The Instance resource accepts the following [input]({{< relref "/docs/intro/conc
         <span class="property-type">str</span>
     </dt>
     <dd>{{% md %}}The white ip list of the cluster.
-{{% /md %}}</dd>
-    <dt class="property-optional"
+{{% /md %}}</dd><dt class="property-optional"
             title="Optional">
         <span id="maintain_end_time_python">
 <a href="#maintain_end_time_python" style="color: inherit; text-decoration: inherit;">maintain_<wbr>end_<wbr>time</a>
@@ -1183,8 +1085,7 @@ The Instance resource accepts the following [input]({{< relref "/docs/intro/conc
         <span class="property-type">str</span>
     </dt>
     <dd>{{% md %}}The end time of the operation and maintenance time period of the instance, in the format of HH:mmZ (UTC time), for example 04:00Z.
-{{% /md %}}</dd>
-    <dt class="property-optional"
+{{% /md %}}</dd><dt class="property-optional"
             title="Optional">
         <span id="maintain_start_time_python">
 <a href="#maintain_start_time_python" style="color: inherit; text-decoration: inherit;">maintain_<wbr>start_<wbr>time</a>
@@ -1193,8 +1094,7 @@ The Instance resource accepts the following [input]({{< relref "/docs/intro/conc
         <span class="property-type">str</span>
     </dt>
     <dd>{{% md %}}The start time of the operation and maintenance time period of the instance, in the format of HH:mmZ (UTC time), for example 02:00Z.
-{{% /md %}}</dd>
-    <dt class="property-optional"
+{{% /md %}}</dd><dt class="property-optional"
             title="Optional">
         <span id="name_python">
 <a href="#name_python" style="color: inherit; text-decoration: inherit;">name</a>
@@ -1203,8 +1103,7 @@ The Instance resource accepts the following [input]({{< relref "/docs/intro/conc
         <span class="property-type">str</span>
     </dt>
     <dd>{{% md %}}HBase instance name. Length must be 2-128 characters long. Only Chinese characters, English letters, numbers, period (.), underline (_), or dash (-) are permitted.
-{{% /md %}}</dd>
-    <dt class="property-optional"
+{{% /md %}}</dd><dt class="property-optional"
             title="Optional">
         <span id="password_python">
 <a href="#password_python" style="color: inherit; text-decoration: inherit;">password</a>
@@ -1213,8 +1112,7 @@ The Instance resource accepts the following [input]({{< relref "/docs/intro/conc
         <span class="property-type">str</span>
     </dt>
     <dd>{{% md %}}The password of the cluster web ui account. Size [0-128].
-{{% /md %}}</dd>
-    <dt class="property-optional"
+{{% /md %}}</dd><dt class="property-optional"
             title="Optional">
         <span id="pay_type_python">
 <a href="#pay_type_python" style="color: inherit; text-decoration: inherit;">pay_<wbr>type</a>
@@ -1223,8 +1121,7 @@ The Instance resource accepts the following [input]({{< relref "/docs/intro/conc
         <span class="property-type">str</span>
     </dt>
     <dd>{{% md %}}Valid values are `PrePaid`, `PostPaid`, System default to `PostPaid`. You can also convert PostPaid to PrePaid. And support convert PrePaid to PostPaid from 1.115.0+.
-{{% /md %}}</dd>
-    <dt class="property-optional"
+{{% /md %}}</dd><dt class="property-optional"
             title="Optional">
         <span id="security_groups_python">
 <a href="#security_groups_python" style="color: inherit; text-decoration: inherit;">security_<wbr>groups</a>
@@ -1233,8 +1130,7 @@ The Instance resource accepts the following [input]({{< relref "/docs/intro/conc
         <span class="property-type">Sequence[str]</span>
     </dt>
     <dd>{{% md %}}The security group resource of the cluster.
-{{% /md %}}</dd>
-    <dt class="property-optional"
+{{% /md %}}</dd><dt class="property-optional"
             title="Optional">
         <span id="tags_python">
 <a href="#tags_python" style="color: inherit; text-decoration: inherit;">tags</a>
@@ -1243,8 +1139,7 @@ The Instance resource accepts the following [input]({{< relref "/docs/intro/conc
         <span class="property-type">Mapping[str, Any]</span>
     </dt>
     <dd>{{% md %}}A mapping of tags to assign to the resource.
-{{% /md %}}</dd>
-    <dt class="property-optional"
+{{% /md %}}</dd><dt class="property-optional"
             title="Optional">
         <span id="vswitch_id_python">
 <a href="#vswitch_id_python" style="color: inherit; text-decoration: inherit;">vswitch_<wbr>id</a>
@@ -1253,8 +1148,7 @@ The Instance resource accepts the following [input]({{< relref "/docs/intro/conc
         <span class="property-type">str</span>
     </dt>
     <dd>{{% md %}}If vswitch_id is not empty, that mean net_type = vpc and has a same region. If vswitch_id is empty, net_type=classic. Intl site not support classic network.
-{{% /md %}}</dd>
-    <dt class="property-optional"
+{{% /md %}}</dd><dt class="property-optional"
             title="Optional">
         <span id="zone_id_python">
 <a href="#zone_id_python" style="color: inherit; text-decoration: inherit;">zone_<wbr>id</a>
@@ -1263,8 +1157,7 @@ The Instance resource accepts the following [input]({{< relref "/docs/intro/conc
         <span class="property-type">str</span>
     </dt>
     <dd>{{% md %}}The Zone to launch the HBase instance. If vswitch_id is not empty, this zone_id can be "" or consistent.
-{{% /md %}}</dd>
-</dl>
+{{% /md %}}</dd></dl>
 {{% /choosable %}}
 
 
@@ -1275,9 +1168,7 @@ All [input](#inputs) properties are implicitly available as output properties. A
 
 
 {{% choosable language csharp %}}
-<dl class="resources-properties">
-
-    <dt class="property-"
+<dl class="resources-properties"><dt class="property-"
             title="">
         <span id="id_csharp">
 <a href="#id_csharp" style="color: inherit; text-decoration: inherit;">Id</a>
@@ -1285,8 +1176,7 @@ All [input](#inputs) properties are implicitly available as output properties. A
         <span class="property-indicator"></span>
         <span class="property-type">string</span>
     </dt>
-    <dd>{{% md %}}The provider-assigned unique ID for this managed resource.{{% /md %}}</dd>
-    <dt class="property-"
+    <dd>{{% md %}}The provider-assigned unique ID for this managed resource.{{% /md %}}</dd><dt class="property-"
             title="">
         <span id="masterinstancequantity_csharp">
 <a href="#masterinstancequantity_csharp" style="color: inherit; text-decoration: inherit;">Master<wbr>Instance<wbr>Quantity</a>
@@ -1295,8 +1185,7 @@ All [input](#inputs) properties are implicitly available as output properties. A
         <span class="property-type">int</span>
     </dt>
     <dd>{{% md %}}Count nodes of the master node.
-{{% /md %}}</dd>
-    <dt class="property-"
+{{% /md %}}</dd><dt class="property-"
             title="">
         <span id="slbconnaddrs_csharp">
 <a href="#slbconnaddrs_csharp" style="color: inherit; text-decoration: inherit;">Slb<wbr>Conn<wbr>Addrs</a>
@@ -1305,8 +1194,7 @@ All [input](#inputs) properties are implicitly available as output properties. A
         <span class="property-type"><a href="#instanceslbconnaddr">List&lt;Pulumi.<wbr>Ali<wbr>Cloud.<wbr>Hbase.<wbr>Outputs.<wbr>Instance<wbr>Slb<wbr>Conn<wbr>Addr&gt;</a></span>
     </dt>
     <dd>{{% md %}}(Available in 1.105.0+) The slb service addresses of the cluster.
-{{% /md %}}</dd>
-    <dt class="property-"
+{{% /md %}}</dd><dt class="property-"
             title="">
         <span id="uiproxyconnaddrs_csharp">
 <a href="#uiproxyconnaddrs_csharp" style="color: inherit; text-decoration: inherit;">Ui<wbr>Proxy<wbr>Conn<wbr>Addrs</a>
@@ -1315,8 +1203,7 @@ All [input](#inputs) properties are implicitly available as output properties. A
         <span class="property-type"><a href="#instanceuiproxyconnaddr">List&lt;Pulumi.<wbr>Ali<wbr>Cloud.<wbr>Hbase.<wbr>Outputs.<wbr>Instance<wbr>Ui<wbr>Proxy<wbr>Conn<wbr>Addr&gt;</a></span>
     </dt>
     <dd>{{% md %}}(Available in 1.105.0+) The Web UI proxy addresses of the cluster.
-{{% /md %}}</dd>
-    <dt class="property-"
+{{% /md %}}</dd><dt class="property-"
             title="">
         <span id="zkconnaddrs_csharp">
 <a href="#zkconnaddrs_csharp" style="color: inherit; text-decoration: inherit;">Zk<wbr>Conn<wbr>Addrs</a>
@@ -1325,14 +1212,11 @@ All [input](#inputs) properties are implicitly available as output properties. A
         <span class="property-type"><a href="#instancezkconnaddr">List&lt;Pulumi.<wbr>Ali<wbr>Cloud.<wbr>Hbase.<wbr>Outputs.<wbr>Instance<wbr>Zk<wbr>Conn<wbr>Addr&gt;</a></span>
     </dt>
     <dd>{{% md %}}(Available in 1.105.0+) The zookeeper addresses of the cluster.
-{{% /md %}}</dd>
-</dl>
+{{% /md %}}</dd></dl>
 {{% /choosable %}}
 
 {{% choosable language go %}}
-<dl class="resources-properties">
-
-    <dt class="property-"
+<dl class="resources-properties"><dt class="property-"
             title="">
         <span id="id_go">
 <a href="#id_go" style="color: inherit; text-decoration: inherit;">Id</a>
@@ -1340,8 +1224,7 @@ All [input](#inputs) properties are implicitly available as output properties. A
         <span class="property-indicator"></span>
         <span class="property-type">string</span>
     </dt>
-    <dd>{{% md %}}The provider-assigned unique ID for this managed resource.{{% /md %}}</dd>
-    <dt class="property-"
+    <dd>{{% md %}}The provider-assigned unique ID for this managed resource.{{% /md %}}</dd><dt class="property-"
             title="">
         <span id="masterinstancequantity_go">
 <a href="#masterinstancequantity_go" style="color: inherit; text-decoration: inherit;">Master<wbr>Instance<wbr>Quantity</a>
@@ -1350,8 +1233,7 @@ All [input](#inputs) properties are implicitly available as output properties. A
         <span class="property-type">int</span>
     </dt>
     <dd>{{% md %}}Count nodes of the master node.
-{{% /md %}}</dd>
-    <dt class="property-"
+{{% /md %}}</dd><dt class="property-"
             title="">
         <span id="slbconnaddrs_go">
 <a href="#slbconnaddrs_go" style="color: inherit; text-decoration: inherit;">Slb<wbr>Conn<wbr>Addrs</a>
@@ -1360,8 +1242,7 @@ All [input](#inputs) properties are implicitly available as output properties. A
         <span class="property-type"><a href="#instanceslbconnaddr">[]Instance<wbr>Slb<wbr>Conn<wbr>Addr</a></span>
     </dt>
     <dd>{{% md %}}(Available in 1.105.0+) The slb service addresses of the cluster.
-{{% /md %}}</dd>
-    <dt class="property-"
+{{% /md %}}</dd><dt class="property-"
             title="">
         <span id="uiproxyconnaddrs_go">
 <a href="#uiproxyconnaddrs_go" style="color: inherit; text-decoration: inherit;">Ui<wbr>Proxy<wbr>Conn<wbr>Addrs</a>
@@ -1370,8 +1251,7 @@ All [input](#inputs) properties are implicitly available as output properties. A
         <span class="property-type"><a href="#instanceuiproxyconnaddr">[]Instance<wbr>Ui<wbr>Proxy<wbr>Conn<wbr>Addr</a></span>
     </dt>
     <dd>{{% md %}}(Available in 1.105.0+) The Web UI proxy addresses of the cluster.
-{{% /md %}}</dd>
-    <dt class="property-"
+{{% /md %}}</dd><dt class="property-"
             title="">
         <span id="zkconnaddrs_go">
 <a href="#zkconnaddrs_go" style="color: inherit; text-decoration: inherit;">Zk<wbr>Conn<wbr>Addrs</a>
@@ -1380,14 +1260,11 @@ All [input](#inputs) properties are implicitly available as output properties. A
         <span class="property-type"><a href="#instancezkconnaddr">[]Instance<wbr>Zk<wbr>Conn<wbr>Addr</a></span>
     </dt>
     <dd>{{% md %}}(Available in 1.105.0+) The zookeeper addresses of the cluster.
-{{% /md %}}</dd>
-</dl>
+{{% /md %}}</dd></dl>
 {{% /choosable %}}
 
 {{% choosable language nodejs %}}
-<dl class="resources-properties">
-
-    <dt class="property-"
+<dl class="resources-properties"><dt class="property-"
             title="">
         <span id="id_nodejs">
 <a href="#id_nodejs" style="color: inherit; text-decoration: inherit;">id</a>
@@ -1395,8 +1272,7 @@ All [input](#inputs) properties are implicitly available as output properties. A
         <span class="property-indicator"></span>
         <span class="property-type">string</span>
     </dt>
-    <dd>{{% md %}}The provider-assigned unique ID for this managed resource.{{% /md %}}</dd>
-    <dt class="property-"
+    <dd>{{% md %}}The provider-assigned unique ID for this managed resource.{{% /md %}}</dd><dt class="property-"
             title="">
         <span id="masterinstancequantity_nodejs">
 <a href="#masterinstancequantity_nodejs" style="color: inherit; text-decoration: inherit;">master<wbr>Instance<wbr>Quantity</a>
@@ -1405,8 +1281,7 @@ All [input](#inputs) properties are implicitly available as output properties. A
         <span class="property-type">number</span>
     </dt>
     <dd>{{% md %}}Count nodes of the master node.
-{{% /md %}}</dd>
-    <dt class="property-"
+{{% /md %}}</dd><dt class="property-"
             title="">
         <span id="slbconnaddrs_nodejs">
 <a href="#slbconnaddrs_nodejs" style="color: inherit; text-decoration: inherit;">slb<wbr>Conn<wbr>Addrs</a>
@@ -1415,8 +1290,7 @@ All [input](#inputs) properties are implicitly available as output properties. A
         <span class="property-type"><a href="#instanceslbconnaddr">Instance<wbr>Slb<wbr>Conn<wbr>Addr[]</a></span>
     </dt>
     <dd>{{% md %}}(Available in 1.105.0+) The slb service addresses of the cluster.
-{{% /md %}}</dd>
-    <dt class="property-"
+{{% /md %}}</dd><dt class="property-"
             title="">
         <span id="uiproxyconnaddrs_nodejs">
 <a href="#uiproxyconnaddrs_nodejs" style="color: inherit; text-decoration: inherit;">ui<wbr>Proxy<wbr>Conn<wbr>Addrs</a>
@@ -1425,8 +1299,7 @@ All [input](#inputs) properties are implicitly available as output properties. A
         <span class="property-type"><a href="#instanceuiproxyconnaddr">Instance<wbr>Ui<wbr>Proxy<wbr>Conn<wbr>Addr[]</a></span>
     </dt>
     <dd>{{% md %}}(Available in 1.105.0+) The Web UI proxy addresses of the cluster.
-{{% /md %}}</dd>
-    <dt class="property-"
+{{% /md %}}</dd><dt class="property-"
             title="">
         <span id="zkconnaddrs_nodejs">
 <a href="#zkconnaddrs_nodejs" style="color: inherit; text-decoration: inherit;">zk<wbr>Conn<wbr>Addrs</a>
@@ -1435,14 +1308,11 @@ All [input](#inputs) properties are implicitly available as output properties. A
         <span class="property-type"><a href="#instancezkconnaddr">Instance<wbr>Zk<wbr>Conn<wbr>Addr[]</a></span>
     </dt>
     <dd>{{% md %}}(Available in 1.105.0+) The zookeeper addresses of the cluster.
-{{% /md %}}</dd>
-</dl>
+{{% /md %}}</dd></dl>
 {{% /choosable %}}
 
 {{% choosable language python %}}
-<dl class="resources-properties">
-
-    <dt class="property-"
+<dl class="resources-properties"><dt class="property-"
             title="">
         <span id="id_python">
 <a href="#id_python" style="color: inherit; text-decoration: inherit;">id</a>
@@ -1450,8 +1320,7 @@ All [input](#inputs) properties are implicitly available as output properties. A
         <span class="property-indicator"></span>
         <span class="property-type">str</span>
     </dt>
-    <dd>{{% md %}}The provider-assigned unique ID for this managed resource.{{% /md %}}</dd>
-    <dt class="property-"
+    <dd>{{% md %}}The provider-assigned unique ID for this managed resource.{{% /md %}}</dd><dt class="property-"
             title="">
         <span id="master_instance_quantity_python">
 <a href="#master_instance_quantity_python" style="color: inherit; text-decoration: inherit;">master_<wbr>instance_<wbr>quantity</a>
@@ -1460,8 +1329,7 @@ All [input](#inputs) properties are implicitly available as output properties. A
         <span class="property-type">int</span>
     </dt>
     <dd>{{% md %}}Count nodes of the master node.
-{{% /md %}}</dd>
-    <dt class="property-"
+{{% /md %}}</dd><dt class="property-"
             title="">
         <span id="slb_conn_addrs_python">
 <a href="#slb_conn_addrs_python" style="color: inherit; text-decoration: inherit;">slb_<wbr>conn_<wbr>addrs</a>
@@ -1470,8 +1338,7 @@ All [input](#inputs) properties are implicitly available as output properties. A
         <span class="property-type"><a href="#instanceslbconnaddr">Sequence[Instance<wbr>Slb<wbr>Conn<wbr>Addr]</a></span>
     </dt>
     <dd>{{% md %}}(Available in 1.105.0+) The slb service addresses of the cluster.
-{{% /md %}}</dd>
-    <dt class="property-"
+{{% /md %}}</dd><dt class="property-"
             title="">
         <span id="ui_proxy_conn_addrs_python">
 <a href="#ui_proxy_conn_addrs_python" style="color: inherit; text-decoration: inherit;">ui_<wbr>proxy_<wbr>conn_<wbr>addrs</a>
@@ -1480,8 +1347,7 @@ All [input](#inputs) properties are implicitly available as output properties. A
         <span class="property-type"><a href="#instanceuiproxyconnaddr">Sequence[Instance<wbr>Ui<wbr>Proxy<wbr>Conn<wbr>Addr]</a></span>
     </dt>
     <dd>{{% md %}}(Available in 1.105.0+) The Web UI proxy addresses of the cluster.
-{{% /md %}}</dd>
-    <dt class="property-"
+{{% /md %}}</dd><dt class="property-"
             title="">
         <span id="zk_conn_addrs_python">
 <a href="#zk_conn_addrs_python" style="color: inherit; text-decoration: inherit;">zk_<wbr>conn_<wbr>addrs</a>
@@ -1490,8 +1356,7 @@ All [input](#inputs) properties are implicitly available as output properties. A
         <span class="property-type"><a href="#instancezkconnaddr">Sequence[Instance<wbr>Zk<wbr>Conn<wbr>Addr]</a></span>
     </dt>
     <dd>{{% md %}}(Available in 1.105.0+) The zookeeper addresses of the cluster.
-{{% /md %}}</dd>
-</dl>
+{{% /md %}}</dd></dl>
 {{% /choosable %}}
 
 
@@ -1618,9 +1483,7 @@ The following state arguments are supported:
 
 
 {{% choosable language csharp %}}
-<dl class="resources-properties">
-
-    <dt class="property-optional"
+<dl class="resources-properties"><dt class="property-optional"
             title="Optional">
         <span id="state_account_csharp">
 <a href="#state_account_csharp" style="color: inherit; text-decoration: inherit;">Account</a>
@@ -1629,8 +1492,7 @@ The following state arguments are supported:
         <span class="property-type">string</span>
     </dt>
     <dd>{{% md %}}The account of the cluster web ui. Size [0-128].
-{{% /md %}}</dd>
-    <dt class="property-optional"
+{{% /md %}}</dd><dt class="property-optional"
             title="Optional">
         <span id="state_autorenew_csharp">
 <a href="#state_autorenew_csharp" style="color: inherit; text-decoration: inherit;">Auto<wbr>Renew</a>
@@ -1639,8 +1501,7 @@ The following state arguments are supported:
         <span class="property-type">bool</span>
     </dt>
     <dd>{{% md %}}Valid values are `true`, `false`, system default to `false`, valid when pay_type = PrePaid.
-{{% /md %}}</dd>
-    <dt class="property-optional"
+{{% /md %}}</dd><dt class="property-optional"
             title="Optional">
         <span id="state_coldstoragesize_csharp">
 <a href="#state_coldstoragesize_csharp" style="color: inherit; text-decoration: inherit;">Cold<wbr>Storage<wbr>Size</a>
@@ -1649,8 +1510,7 @@ The following state arguments are supported:
         <span class="property-type">int</span>
     </dt>
     <dd>{{% md %}}0 or [800, 1000000], step:10-GB increments. 0 means is_cold_storage = false. [800, 1000000] means is_cold_storage = true.
-{{% /md %}}</dd>
-    <dt class="property-optional"
+{{% /md %}}</dd><dt class="property-optional"
             title="Optional">
         <span id="state_coredisksize_csharp">
 <a href="#state_coredisksize_csharp" style="color: inherit; text-decoration: inherit;">Core<wbr>Disk<wbr>Size</a>
@@ -1662,8 +1522,7 @@ The following state arguments are supported:
 - Custom storage space, value range: [20, 64000].
 - Cluster [400, 64000], step:40-GB increments.
 - Single [20-500GB], step:1-GB increments.
-{{% /md %}}</dd>
-    <dt class="property-optional"
+{{% /md %}}</dd><dt class="property-optional"
             title="Optional">
         <span id="state_coredisktype_csharp">
 <a href="#state_coredisktype_csharp" style="color: inherit; text-decoration: inherit;">Core<wbr>Disk<wbr>Type</a>
@@ -1672,8 +1531,7 @@ The following state arguments are supported:
         <span class="property-type">string</span>
     </dt>
     <dd>{{% md %}}Valid values are `cloud_ssd`, `cloud_essd_pl1`, `cloud_efficiency`, `local_hdd_pro`, `local_ssd_pro`，``, local_disk size is fixed. When engine=bds, no need to set disk type(or empty string).
-{{% /md %}}</dd>
-    <dt class="property-optional"
+{{% /md %}}</dd><dt class="property-optional"
             title="Optional">
         <span id="state_coreinstancequantity_csharp">
 <a href="#state_coreinstancequantity_csharp" style="color: inherit; text-decoration: inherit;">Core<wbr>Instance<wbr>Quantity</a>
@@ -1682,8 +1540,7 @@ The following state arguments are supported:
         <span class="property-type">int</span>
     </dt>
     <dd>{{% md %}}Default=2, [1-200]. If core_instance_quantity > 1, this is cluster's instance. If core_instance_quantity = 1, this is a single instance.
-{{% /md %}}</dd>
-    <dt class="property-optional"
+{{% /md %}}</dd><dt class="property-optional"
             title="Optional">
         <span id="state_coreinstancetype_csharp">
 <a href="#state_coreinstancetype_csharp" style="color: inherit; text-decoration: inherit;">Core<wbr>Instance<wbr>Type</a>
@@ -1691,8 +1548,7 @@ The following state arguments are supported:
         <span class="property-indicator"></span>
         <span class="property-type">string</span>
     </dt>
-    <dd>{{% md %}}{{% /md %}}</dd>
-    <dt class="property-optional"
+    <dd>{{% md %}}{{% /md %}}</dd><dt class="property-optional"
             title="Optional">
         <span id="state_deletionprotection_csharp">
 <a href="#state_deletionprotection_csharp" style="color: inherit; text-decoration: inherit;">Deletion<wbr>Protection</a>
@@ -1701,8 +1557,7 @@ The following state arguments are supported:
         <span class="property-type">bool</span>
     </dt>
     <dd>{{% md %}}The switch of delete protection. True: delete protect, False: no delete protect. You must set false when you want to delete cluster.
-{{% /md %}}</dd>
-    <dt class="property-optional"
+{{% /md %}}</dd><dt class="property-optional"
             title="Optional">
         <span id="state_duration_csharp">
 <a href="#state_duration_csharp" style="color: inherit; text-decoration: inherit;">Duration</a>
@@ -1711,8 +1566,7 @@ The following state arguments are supported:
         <span class="property-type">int</span>
     </dt>
     <dd>{{% md %}}1, 2, 3, 4, 5, 6, 7, 8, 9, 12, 24, 36, valid when pay_type = PrePaid,  unit: month. 12, 24, 36 mean 1, 2, 3 years.
-{{% /md %}}</dd>
-    <dt class="property-optional"
+{{% /md %}}</dd><dt class="property-optional"
             title="Optional">
         <span id="state_engine_csharp">
 <a href="#state_engine_csharp" style="color: inherit; text-decoration: inherit;">Engine</a>
@@ -1721,8 +1575,7 @@ The following state arguments are supported:
         <span class="property-type">string</span>
     </dt>
     <dd>{{% md %}}Valid values are "hbase/hbaseue/bds". The following types are supported after v1.73.0: `hbaseue` and `bds`. Single hbase instance need to set engine=hbase, core_instance_quantity=1.
-{{% /md %}}</dd>
-    <dt class="property-optional"
+{{% /md %}}</dd><dt class="property-optional"
             title="Optional">
         <span id="state_engineversion_csharp">
 <a href="#state_engineversion_csharp" style="color: inherit; text-decoration: inherit;">Engine<wbr>Version</a>
@@ -1732,8 +1585,7 @@ The following state arguments are supported:
     </dt>
     <dd>{{% md %}}HBase major version. hbase:1.1/2.0, hbaseue:2.0, bds:1.0, unsupport other engine temporarily. Value options can refer to the latest docs [CreateInstance](https://help.aliyun.com/document_detail/144607.html).
 * `master_instance_type`, `core_instance_type` - (Required, ForceNew) Instance specification. See [Instance specifications](https://help.aliyun.com/document_detail/53532.html), or you can call describeInstanceType api.
-{{% /md %}}</dd>
-    <dt class="property-optional"
+{{% /md %}}</dd><dt class="property-optional"
             title="Optional">
         <span id="state_immediatedeleteflag_csharp">
 <a href="#state_immediatedeleteflag_csharp" style="color: inherit; text-decoration: inherit;">Immediate<wbr>Delete<wbr>Flag</a>
@@ -1742,8 +1594,7 @@ The following state arguments are supported:
         <span class="property-type">bool</span>
     </dt>
     <dd>{{% md %}}The switch of delete immediate. True: delete immediate, False: delete delay. You will not found the cluster no matter set true or false.
-{{% /md %}}</dd>
-    <dt class="property-optional"
+{{% /md %}}</dd><dt class="property-optional"
             title="Optional">
         <span id="state_ipwhite_csharp">
 <a href="#state_ipwhite_csharp" style="color: inherit; text-decoration: inherit;">Ip<wbr>White</a>
@@ -1752,8 +1603,7 @@ The following state arguments are supported:
         <span class="property-type">string</span>
     </dt>
     <dd>{{% md %}}The white ip list of the cluster.
-{{% /md %}}</dd>
-    <dt class="property-optional"
+{{% /md %}}</dd><dt class="property-optional"
             title="Optional">
         <span id="state_maintainendtime_csharp">
 <a href="#state_maintainendtime_csharp" style="color: inherit; text-decoration: inherit;">Maintain<wbr>End<wbr>Time</a>
@@ -1762,8 +1612,7 @@ The following state arguments are supported:
         <span class="property-type">string</span>
     </dt>
     <dd>{{% md %}}The end time of the operation and maintenance time period of the instance, in the format of HH:mmZ (UTC time), for example 04:00Z.
-{{% /md %}}</dd>
-    <dt class="property-optional"
+{{% /md %}}</dd><dt class="property-optional"
             title="Optional">
         <span id="state_maintainstarttime_csharp">
 <a href="#state_maintainstarttime_csharp" style="color: inherit; text-decoration: inherit;">Maintain<wbr>Start<wbr>Time</a>
@@ -1772,8 +1621,7 @@ The following state arguments are supported:
         <span class="property-type">string</span>
     </dt>
     <dd>{{% md %}}The start time of the operation and maintenance time period of the instance, in the format of HH:mmZ (UTC time), for example 02:00Z.
-{{% /md %}}</dd>
-    <dt class="property-optional"
+{{% /md %}}</dd><dt class="property-optional"
             title="Optional">
         <span id="state_masterinstancequantity_csharp">
 <a href="#state_masterinstancequantity_csharp" style="color: inherit; text-decoration: inherit;">Master<wbr>Instance<wbr>Quantity</a>
@@ -1782,8 +1630,7 @@ The following state arguments are supported:
         <span class="property-type">int</span>
     </dt>
     <dd>{{% md %}}Count nodes of the master node.
-{{% /md %}}</dd>
-    <dt class="property-optional"
+{{% /md %}}</dd><dt class="property-optional"
             title="Optional">
         <span id="state_masterinstancetype_csharp">
 <a href="#state_masterinstancetype_csharp" style="color: inherit; text-decoration: inherit;">Master<wbr>Instance<wbr>Type</a>
@@ -1791,8 +1638,7 @@ The following state arguments are supported:
         <span class="property-indicator"></span>
         <span class="property-type">string</span>
     </dt>
-    <dd>{{% md %}}{{% /md %}}</dd>
-    <dt class="property-optional"
+    <dd>{{% md %}}{{% /md %}}</dd><dt class="property-optional"
             title="Optional">
         <span id="state_name_csharp">
 <a href="#state_name_csharp" style="color: inherit; text-decoration: inherit;">Name</a>
@@ -1801,8 +1647,7 @@ The following state arguments are supported:
         <span class="property-type">string</span>
     </dt>
     <dd>{{% md %}}HBase instance name. Length must be 2-128 characters long. Only Chinese characters, English letters, numbers, period (.), underline (_), or dash (-) are permitted.
-{{% /md %}}</dd>
-    <dt class="property-optional"
+{{% /md %}}</dd><dt class="property-optional"
             title="Optional">
         <span id="state_password_csharp">
 <a href="#state_password_csharp" style="color: inherit; text-decoration: inherit;">Password</a>
@@ -1811,8 +1656,7 @@ The following state arguments are supported:
         <span class="property-type">string</span>
     </dt>
     <dd>{{% md %}}The password of the cluster web ui account. Size [0-128].
-{{% /md %}}</dd>
-    <dt class="property-optional"
+{{% /md %}}</dd><dt class="property-optional"
             title="Optional">
         <span id="state_paytype_csharp">
 <a href="#state_paytype_csharp" style="color: inherit; text-decoration: inherit;">Pay<wbr>Type</a>
@@ -1821,8 +1665,7 @@ The following state arguments are supported:
         <span class="property-type">string</span>
     </dt>
     <dd>{{% md %}}Valid values are `PrePaid`, `PostPaid`, System default to `PostPaid`. You can also convert PostPaid to PrePaid. And support convert PrePaid to PostPaid from 1.115.0+.
-{{% /md %}}</dd>
-    <dt class="property-optional"
+{{% /md %}}</dd><dt class="property-optional"
             title="Optional">
         <span id="state_securitygroups_csharp">
 <a href="#state_securitygroups_csharp" style="color: inherit; text-decoration: inherit;">Security<wbr>Groups</a>
@@ -1831,8 +1674,7 @@ The following state arguments are supported:
         <span class="property-type">List&lt;string&gt;</span>
     </dt>
     <dd>{{% md %}}The security group resource of the cluster.
-{{% /md %}}</dd>
-    <dt class="property-optional"
+{{% /md %}}</dd><dt class="property-optional"
             title="Optional">
         <span id="state_slbconnaddrs_csharp">
 <a href="#state_slbconnaddrs_csharp" style="color: inherit; text-decoration: inherit;">Slb<wbr>Conn<wbr>Addrs</a>
@@ -1841,8 +1683,7 @@ The following state arguments are supported:
         <span class="property-type"><a href="#instanceslbconnaddr">List&lt;Pulumi.<wbr>Ali<wbr>Cloud.<wbr>Hbase.<wbr>Inputs.<wbr>Instance<wbr>Slb<wbr>Conn<wbr>Addr<wbr>Args&gt;</a></span>
     </dt>
     <dd>{{% md %}}(Available in 1.105.0+) The slb service addresses of the cluster.
-{{% /md %}}</dd>
-    <dt class="property-optional"
+{{% /md %}}</dd><dt class="property-optional"
             title="Optional">
         <span id="state_tags_csharp">
 <a href="#state_tags_csharp" style="color: inherit; text-decoration: inherit;">Tags</a>
@@ -1851,8 +1692,7 @@ The following state arguments are supported:
         <span class="property-type">Dictionary&lt;string, object&gt;</span>
     </dt>
     <dd>{{% md %}}A mapping of tags to assign to the resource.
-{{% /md %}}</dd>
-    <dt class="property-optional"
+{{% /md %}}</dd><dt class="property-optional"
             title="Optional">
         <span id="state_uiproxyconnaddrs_csharp">
 <a href="#state_uiproxyconnaddrs_csharp" style="color: inherit; text-decoration: inherit;">Ui<wbr>Proxy<wbr>Conn<wbr>Addrs</a>
@@ -1861,8 +1701,7 @@ The following state arguments are supported:
         <span class="property-type"><a href="#instanceuiproxyconnaddr">List&lt;Pulumi.<wbr>Ali<wbr>Cloud.<wbr>Hbase.<wbr>Inputs.<wbr>Instance<wbr>Ui<wbr>Proxy<wbr>Conn<wbr>Addr<wbr>Args&gt;</a></span>
     </dt>
     <dd>{{% md %}}(Available in 1.105.0+) The Web UI proxy addresses of the cluster.
-{{% /md %}}</dd>
-    <dt class="property-optional"
+{{% /md %}}</dd><dt class="property-optional"
             title="Optional">
         <span id="state_vswitchid_csharp">
 <a href="#state_vswitchid_csharp" style="color: inherit; text-decoration: inherit;">Vswitch<wbr>Id</a>
@@ -1871,8 +1710,7 @@ The following state arguments are supported:
         <span class="property-type">string</span>
     </dt>
     <dd>{{% md %}}If vswitch_id is not empty, that mean net_type = vpc and has a same region. If vswitch_id is empty, net_type=classic. Intl site not support classic network.
-{{% /md %}}</dd>
-    <dt class="property-optional"
+{{% /md %}}</dd><dt class="property-optional"
             title="Optional">
         <span id="state_zkconnaddrs_csharp">
 <a href="#state_zkconnaddrs_csharp" style="color: inherit; text-decoration: inherit;">Zk<wbr>Conn<wbr>Addrs</a>
@@ -1881,8 +1719,7 @@ The following state arguments are supported:
         <span class="property-type"><a href="#instancezkconnaddr">List&lt;Pulumi.<wbr>Ali<wbr>Cloud.<wbr>Hbase.<wbr>Inputs.<wbr>Instance<wbr>Zk<wbr>Conn<wbr>Addr<wbr>Args&gt;</a></span>
     </dt>
     <dd>{{% md %}}(Available in 1.105.0+) The zookeeper addresses of the cluster.
-{{% /md %}}</dd>
-    <dt class="property-optional"
+{{% /md %}}</dd><dt class="property-optional"
             title="Optional">
         <span id="state_zoneid_csharp">
 <a href="#state_zoneid_csharp" style="color: inherit; text-decoration: inherit;">Zone<wbr>Id</a>
@@ -1891,14 +1728,11 @@ The following state arguments are supported:
         <span class="property-type">string</span>
     </dt>
     <dd>{{% md %}}The Zone to launch the HBase instance. If vswitch_id is not empty, this zone_id can be "" or consistent.
-{{% /md %}}</dd>
-</dl>
+{{% /md %}}</dd></dl>
 {{% /choosable %}}
 
 {{% choosable language go %}}
-<dl class="resources-properties">
-
-    <dt class="property-optional"
+<dl class="resources-properties"><dt class="property-optional"
             title="Optional">
         <span id="state_account_go">
 <a href="#state_account_go" style="color: inherit; text-decoration: inherit;">Account</a>
@@ -1907,8 +1741,7 @@ The following state arguments are supported:
         <span class="property-type">string</span>
     </dt>
     <dd>{{% md %}}The account of the cluster web ui. Size [0-128].
-{{% /md %}}</dd>
-    <dt class="property-optional"
+{{% /md %}}</dd><dt class="property-optional"
             title="Optional">
         <span id="state_autorenew_go">
 <a href="#state_autorenew_go" style="color: inherit; text-decoration: inherit;">Auto<wbr>Renew</a>
@@ -1917,8 +1750,7 @@ The following state arguments are supported:
         <span class="property-type">bool</span>
     </dt>
     <dd>{{% md %}}Valid values are `true`, `false`, system default to `false`, valid when pay_type = PrePaid.
-{{% /md %}}</dd>
-    <dt class="property-optional"
+{{% /md %}}</dd><dt class="property-optional"
             title="Optional">
         <span id="state_coldstoragesize_go">
 <a href="#state_coldstoragesize_go" style="color: inherit; text-decoration: inherit;">Cold<wbr>Storage<wbr>Size</a>
@@ -1927,8 +1759,7 @@ The following state arguments are supported:
         <span class="property-type">int</span>
     </dt>
     <dd>{{% md %}}0 or [800, 1000000], step:10-GB increments. 0 means is_cold_storage = false. [800, 1000000] means is_cold_storage = true.
-{{% /md %}}</dd>
-    <dt class="property-optional"
+{{% /md %}}</dd><dt class="property-optional"
             title="Optional">
         <span id="state_coredisksize_go">
 <a href="#state_coredisksize_go" style="color: inherit; text-decoration: inherit;">Core<wbr>Disk<wbr>Size</a>
@@ -1940,8 +1771,7 @@ The following state arguments are supported:
 - Custom storage space, value range: [20, 64000].
 - Cluster [400, 64000], step:40-GB increments.
 - Single [20-500GB], step:1-GB increments.
-{{% /md %}}</dd>
-    <dt class="property-optional"
+{{% /md %}}</dd><dt class="property-optional"
             title="Optional">
         <span id="state_coredisktype_go">
 <a href="#state_coredisktype_go" style="color: inherit; text-decoration: inherit;">Core<wbr>Disk<wbr>Type</a>
@@ -1950,8 +1780,7 @@ The following state arguments are supported:
         <span class="property-type">string</span>
     </dt>
     <dd>{{% md %}}Valid values are `cloud_ssd`, `cloud_essd_pl1`, `cloud_efficiency`, `local_hdd_pro`, `local_ssd_pro`，``, local_disk size is fixed. When engine=bds, no need to set disk type(or empty string).
-{{% /md %}}</dd>
-    <dt class="property-optional"
+{{% /md %}}</dd><dt class="property-optional"
             title="Optional">
         <span id="state_coreinstancequantity_go">
 <a href="#state_coreinstancequantity_go" style="color: inherit; text-decoration: inherit;">Core<wbr>Instance<wbr>Quantity</a>
@@ -1960,8 +1789,7 @@ The following state arguments are supported:
         <span class="property-type">int</span>
     </dt>
     <dd>{{% md %}}Default=2, [1-200]. If core_instance_quantity > 1, this is cluster's instance. If core_instance_quantity = 1, this is a single instance.
-{{% /md %}}</dd>
-    <dt class="property-optional"
+{{% /md %}}</dd><dt class="property-optional"
             title="Optional">
         <span id="state_coreinstancetype_go">
 <a href="#state_coreinstancetype_go" style="color: inherit; text-decoration: inherit;">Core<wbr>Instance<wbr>Type</a>
@@ -1969,8 +1797,7 @@ The following state arguments are supported:
         <span class="property-indicator"></span>
         <span class="property-type">string</span>
     </dt>
-    <dd>{{% md %}}{{% /md %}}</dd>
-    <dt class="property-optional"
+    <dd>{{% md %}}{{% /md %}}</dd><dt class="property-optional"
             title="Optional">
         <span id="state_deletionprotection_go">
 <a href="#state_deletionprotection_go" style="color: inherit; text-decoration: inherit;">Deletion<wbr>Protection</a>
@@ -1979,8 +1806,7 @@ The following state arguments are supported:
         <span class="property-type">bool</span>
     </dt>
     <dd>{{% md %}}The switch of delete protection. True: delete protect, False: no delete protect. You must set false when you want to delete cluster.
-{{% /md %}}</dd>
-    <dt class="property-optional"
+{{% /md %}}</dd><dt class="property-optional"
             title="Optional">
         <span id="state_duration_go">
 <a href="#state_duration_go" style="color: inherit; text-decoration: inherit;">Duration</a>
@@ -1989,8 +1815,7 @@ The following state arguments are supported:
         <span class="property-type">int</span>
     </dt>
     <dd>{{% md %}}1, 2, 3, 4, 5, 6, 7, 8, 9, 12, 24, 36, valid when pay_type = PrePaid,  unit: month. 12, 24, 36 mean 1, 2, 3 years.
-{{% /md %}}</dd>
-    <dt class="property-optional"
+{{% /md %}}</dd><dt class="property-optional"
             title="Optional">
         <span id="state_engine_go">
 <a href="#state_engine_go" style="color: inherit; text-decoration: inherit;">Engine</a>
@@ -1999,8 +1824,7 @@ The following state arguments are supported:
         <span class="property-type">string</span>
     </dt>
     <dd>{{% md %}}Valid values are "hbase/hbaseue/bds". The following types are supported after v1.73.0: `hbaseue` and `bds`. Single hbase instance need to set engine=hbase, core_instance_quantity=1.
-{{% /md %}}</dd>
-    <dt class="property-optional"
+{{% /md %}}</dd><dt class="property-optional"
             title="Optional">
         <span id="state_engineversion_go">
 <a href="#state_engineversion_go" style="color: inherit; text-decoration: inherit;">Engine<wbr>Version</a>
@@ -2010,8 +1834,7 @@ The following state arguments are supported:
     </dt>
     <dd>{{% md %}}HBase major version. hbase:1.1/2.0, hbaseue:2.0, bds:1.0, unsupport other engine temporarily. Value options can refer to the latest docs [CreateInstance](https://help.aliyun.com/document_detail/144607.html).
 * `master_instance_type`, `core_instance_type` - (Required, ForceNew) Instance specification. See [Instance specifications](https://help.aliyun.com/document_detail/53532.html), or you can call describeInstanceType api.
-{{% /md %}}</dd>
-    <dt class="property-optional"
+{{% /md %}}</dd><dt class="property-optional"
             title="Optional">
         <span id="state_immediatedeleteflag_go">
 <a href="#state_immediatedeleteflag_go" style="color: inherit; text-decoration: inherit;">Immediate<wbr>Delete<wbr>Flag</a>
@@ -2020,8 +1843,7 @@ The following state arguments are supported:
         <span class="property-type">bool</span>
     </dt>
     <dd>{{% md %}}The switch of delete immediate. True: delete immediate, False: delete delay. You will not found the cluster no matter set true or false.
-{{% /md %}}</dd>
-    <dt class="property-optional"
+{{% /md %}}</dd><dt class="property-optional"
             title="Optional">
         <span id="state_ipwhite_go">
 <a href="#state_ipwhite_go" style="color: inherit; text-decoration: inherit;">Ip<wbr>White</a>
@@ -2030,8 +1852,7 @@ The following state arguments are supported:
         <span class="property-type">string</span>
     </dt>
     <dd>{{% md %}}The white ip list of the cluster.
-{{% /md %}}</dd>
-    <dt class="property-optional"
+{{% /md %}}</dd><dt class="property-optional"
             title="Optional">
         <span id="state_maintainendtime_go">
 <a href="#state_maintainendtime_go" style="color: inherit; text-decoration: inherit;">Maintain<wbr>End<wbr>Time</a>
@@ -2040,8 +1861,7 @@ The following state arguments are supported:
         <span class="property-type">string</span>
     </dt>
     <dd>{{% md %}}The end time of the operation and maintenance time period of the instance, in the format of HH:mmZ (UTC time), for example 04:00Z.
-{{% /md %}}</dd>
-    <dt class="property-optional"
+{{% /md %}}</dd><dt class="property-optional"
             title="Optional">
         <span id="state_maintainstarttime_go">
 <a href="#state_maintainstarttime_go" style="color: inherit; text-decoration: inherit;">Maintain<wbr>Start<wbr>Time</a>
@@ -2050,8 +1870,7 @@ The following state arguments are supported:
         <span class="property-type">string</span>
     </dt>
     <dd>{{% md %}}The start time of the operation and maintenance time period of the instance, in the format of HH:mmZ (UTC time), for example 02:00Z.
-{{% /md %}}</dd>
-    <dt class="property-optional"
+{{% /md %}}</dd><dt class="property-optional"
             title="Optional">
         <span id="state_masterinstancequantity_go">
 <a href="#state_masterinstancequantity_go" style="color: inherit; text-decoration: inherit;">Master<wbr>Instance<wbr>Quantity</a>
@@ -2060,8 +1879,7 @@ The following state arguments are supported:
         <span class="property-type">int</span>
     </dt>
     <dd>{{% md %}}Count nodes of the master node.
-{{% /md %}}</dd>
-    <dt class="property-optional"
+{{% /md %}}</dd><dt class="property-optional"
             title="Optional">
         <span id="state_masterinstancetype_go">
 <a href="#state_masterinstancetype_go" style="color: inherit; text-decoration: inherit;">Master<wbr>Instance<wbr>Type</a>
@@ -2069,8 +1887,7 @@ The following state arguments are supported:
         <span class="property-indicator"></span>
         <span class="property-type">string</span>
     </dt>
-    <dd>{{% md %}}{{% /md %}}</dd>
-    <dt class="property-optional"
+    <dd>{{% md %}}{{% /md %}}</dd><dt class="property-optional"
             title="Optional">
         <span id="state_name_go">
 <a href="#state_name_go" style="color: inherit; text-decoration: inherit;">Name</a>
@@ -2079,8 +1896,7 @@ The following state arguments are supported:
         <span class="property-type">string</span>
     </dt>
     <dd>{{% md %}}HBase instance name. Length must be 2-128 characters long. Only Chinese characters, English letters, numbers, period (.), underline (_), or dash (-) are permitted.
-{{% /md %}}</dd>
-    <dt class="property-optional"
+{{% /md %}}</dd><dt class="property-optional"
             title="Optional">
         <span id="state_password_go">
 <a href="#state_password_go" style="color: inherit; text-decoration: inherit;">Password</a>
@@ -2089,8 +1905,7 @@ The following state arguments are supported:
         <span class="property-type">string</span>
     </dt>
     <dd>{{% md %}}The password of the cluster web ui account. Size [0-128].
-{{% /md %}}</dd>
-    <dt class="property-optional"
+{{% /md %}}</dd><dt class="property-optional"
             title="Optional">
         <span id="state_paytype_go">
 <a href="#state_paytype_go" style="color: inherit; text-decoration: inherit;">Pay<wbr>Type</a>
@@ -2099,8 +1914,7 @@ The following state arguments are supported:
         <span class="property-type">string</span>
     </dt>
     <dd>{{% md %}}Valid values are `PrePaid`, `PostPaid`, System default to `PostPaid`. You can also convert PostPaid to PrePaid. And support convert PrePaid to PostPaid from 1.115.0+.
-{{% /md %}}</dd>
-    <dt class="property-optional"
+{{% /md %}}</dd><dt class="property-optional"
             title="Optional">
         <span id="state_securitygroups_go">
 <a href="#state_securitygroups_go" style="color: inherit; text-decoration: inherit;">Security<wbr>Groups</a>
@@ -2109,8 +1923,7 @@ The following state arguments are supported:
         <span class="property-type">[]string</span>
     </dt>
     <dd>{{% md %}}The security group resource of the cluster.
-{{% /md %}}</dd>
-    <dt class="property-optional"
+{{% /md %}}</dd><dt class="property-optional"
             title="Optional">
         <span id="state_slbconnaddrs_go">
 <a href="#state_slbconnaddrs_go" style="color: inherit; text-decoration: inherit;">Slb<wbr>Conn<wbr>Addrs</a>
@@ -2119,8 +1932,7 @@ The following state arguments are supported:
         <span class="property-type"><a href="#instanceslbconnaddr">[]Instance<wbr>Slb<wbr>Conn<wbr>Addr</a></span>
     </dt>
     <dd>{{% md %}}(Available in 1.105.0+) The slb service addresses of the cluster.
-{{% /md %}}</dd>
-    <dt class="property-optional"
+{{% /md %}}</dd><dt class="property-optional"
             title="Optional">
         <span id="state_tags_go">
 <a href="#state_tags_go" style="color: inherit; text-decoration: inherit;">Tags</a>
@@ -2129,8 +1941,7 @@ The following state arguments are supported:
         <span class="property-type">map[string]interface{}</span>
     </dt>
     <dd>{{% md %}}A mapping of tags to assign to the resource.
-{{% /md %}}</dd>
-    <dt class="property-optional"
+{{% /md %}}</dd><dt class="property-optional"
             title="Optional">
         <span id="state_uiproxyconnaddrs_go">
 <a href="#state_uiproxyconnaddrs_go" style="color: inherit; text-decoration: inherit;">Ui<wbr>Proxy<wbr>Conn<wbr>Addrs</a>
@@ -2139,8 +1950,7 @@ The following state arguments are supported:
         <span class="property-type"><a href="#instanceuiproxyconnaddr">[]Instance<wbr>Ui<wbr>Proxy<wbr>Conn<wbr>Addr</a></span>
     </dt>
     <dd>{{% md %}}(Available in 1.105.0+) The Web UI proxy addresses of the cluster.
-{{% /md %}}</dd>
-    <dt class="property-optional"
+{{% /md %}}</dd><dt class="property-optional"
             title="Optional">
         <span id="state_vswitchid_go">
 <a href="#state_vswitchid_go" style="color: inherit; text-decoration: inherit;">Vswitch<wbr>Id</a>
@@ -2149,8 +1959,7 @@ The following state arguments are supported:
         <span class="property-type">string</span>
     </dt>
     <dd>{{% md %}}If vswitch_id is not empty, that mean net_type = vpc and has a same region. If vswitch_id is empty, net_type=classic. Intl site not support classic network.
-{{% /md %}}</dd>
-    <dt class="property-optional"
+{{% /md %}}</dd><dt class="property-optional"
             title="Optional">
         <span id="state_zkconnaddrs_go">
 <a href="#state_zkconnaddrs_go" style="color: inherit; text-decoration: inherit;">Zk<wbr>Conn<wbr>Addrs</a>
@@ -2159,8 +1968,7 @@ The following state arguments are supported:
         <span class="property-type"><a href="#instancezkconnaddr">[]Instance<wbr>Zk<wbr>Conn<wbr>Addr</a></span>
     </dt>
     <dd>{{% md %}}(Available in 1.105.0+) The zookeeper addresses of the cluster.
-{{% /md %}}</dd>
-    <dt class="property-optional"
+{{% /md %}}</dd><dt class="property-optional"
             title="Optional">
         <span id="state_zoneid_go">
 <a href="#state_zoneid_go" style="color: inherit; text-decoration: inherit;">Zone<wbr>Id</a>
@@ -2169,14 +1977,11 @@ The following state arguments are supported:
         <span class="property-type">string</span>
     </dt>
     <dd>{{% md %}}The Zone to launch the HBase instance. If vswitch_id is not empty, this zone_id can be "" or consistent.
-{{% /md %}}</dd>
-</dl>
+{{% /md %}}</dd></dl>
 {{% /choosable %}}
 
 {{% choosable language nodejs %}}
-<dl class="resources-properties">
-
-    <dt class="property-optional"
+<dl class="resources-properties"><dt class="property-optional"
             title="Optional">
         <span id="state_account_nodejs">
 <a href="#state_account_nodejs" style="color: inherit; text-decoration: inherit;">account</a>
@@ -2185,8 +1990,7 @@ The following state arguments are supported:
         <span class="property-type">string</span>
     </dt>
     <dd>{{% md %}}The account of the cluster web ui. Size [0-128].
-{{% /md %}}</dd>
-    <dt class="property-optional"
+{{% /md %}}</dd><dt class="property-optional"
             title="Optional">
         <span id="state_autorenew_nodejs">
 <a href="#state_autorenew_nodejs" style="color: inherit; text-decoration: inherit;">auto<wbr>Renew</a>
@@ -2195,8 +1999,7 @@ The following state arguments are supported:
         <span class="property-type">boolean</span>
     </dt>
     <dd>{{% md %}}Valid values are `true`, `false`, system default to `false`, valid when pay_type = PrePaid.
-{{% /md %}}</dd>
-    <dt class="property-optional"
+{{% /md %}}</dd><dt class="property-optional"
             title="Optional">
         <span id="state_coldstoragesize_nodejs">
 <a href="#state_coldstoragesize_nodejs" style="color: inherit; text-decoration: inherit;">cold<wbr>Storage<wbr>Size</a>
@@ -2205,8 +2008,7 @@ The following state arguments are supported:
         <span class="property-type">number</span>
     </dt>
     <dd>{{% md %}}0 or [800, 1000000], step:10-GB increments. 0 means is_cold_storage = false. [800, 1000000] means is_cold_storage = true.
-{{% /md %}}</dd>
-    <dt class="property-optional"
+{{% /md %}}</dd><dt class="property-optional"
             title="Optional">
         <span id="state_coredisksize_nodejs">
 <a href="#state_coredisksize_nodejs" style="color: inherit; text-decoration: inherit;">core<wbr>Disk<wbr>Size</a>
@@ -2218,8 +2020,7 @@ The following state arguments are supported:
 - Custom storage space, value range: [20, 64000].
 - Cluster [400, 64000], step:40-GB increments.
 - Single [20-500GB], step:1-GB increments.
-{{% /md %}}</dd>
-    <dt class="property-optional"
+{{% /md %}}</dd><dt class="property-optional"
             title="Optional">
         <span id="state_coredisktype_nodejs">
 <a href="#state_coredisktype_nodejs" style="color: inherit; text-decoration: inherit;">core<wbr>Disk<wbr>Type</a>
@@ -2228,8 +2029,7 @@ The following state arguments are supported:
         <span class="property-type">string</span>
     </dt>
     <dd>{{% md %}}Valid values are `cloud_ssd`, `cloud_essd_pl1`, `cloud_efficiency`, `local_hdd_pro`, `local_ssd_pro`，``, local_disk size is fixed. When engine=bds, no need to set disk type(or empty string).
-{{% /md %}}</dd>
-    <dt class="property-optional"
+{{% /md %}}</dd><dt class="property-optional"
             title="Optional">
         <span id="state_coreinstancequantity_nodejs">
 <a href="#state_coreinstancequantity_nodejs" style="color: inherit; text-decoration: inherit;">core<wbr>Instance<wbr>Quantity</a>
@@ -2238,8 +2038,7 @@ The following state arguments are supported:
         <span class="property-type">number</span>
     </dt>
     <dd>{{% md %}}Default=2, [1-200]. If core_instance_quantity > 1, this is cluster's instance. If core_instance_quantity = 1, this is a single instance.
-{{% /md %}}</dd>
-    <dt class="property-optional"
+{{% /md %}}</dd><dt class="property-optional"
             title="Optional">
         <span id="state_coreinstancetype_nodejs">
 <a href="#state_coreinstancetype_nodejs" style="color: inherit; text-decoration: inherit;">core<wbr>Instance<wbr>Type</a>
@@ -2247,8 +2046,7 @@ The following state arguments are supported:
         <span class="property-indicator"></span>
         <span class="property-type">string</span>
     </dt>
-    <dd>{{% md %}}{{% /md %}}</dd>
-    <dt class="property-optional"
+    <dd>{{% md %}}{{% /md %}}</dd><dt class="property-optional"
             title="Optional">
         <span id="state_deletionprotection_nodejs">
 <a href="#state_deletionprotection_nodejs" style="color: inherit; text-decoration: inherit;">deletion<wbr>Protection</a>
@@ -2257,8 +2055,7 @@ The following state arguments are supported:
         <span class="property-type">boolean</span>
     </dt>
     <dd>{{% md %}}The switch of delete protection. True: delete protect, False: no delete protect. You must set false when you want to delete cluster.
-{{% /md %}}</dd>
-    <dt class="property-optional"
+{{% /md %}}</dd><dt class="property-optional"
             title="Optional">
         <span id="state_duration_nodejs">
 <a href="#state_duration_nodejs" style="color: inherit; text-decoration: inherit;">duration</a>
@@ -2267,8 +2064,7 @@ The following state arguments are supported:
         <span class="property-type">number</span>
     </dt>
     <dd>{{% md %}}1, 2, 3, 4, 5, 6, 7, 8, 9, 12, 24, 36, valid when pay_type = PrePaid,  unit: month. 12, 24, 36 mean 1, 2, 3 years.
-{{% /md %}}</dd>
-    <dt class="property-optional"
+{{% /md %}}</dd><dt class="property-optional"
             title="Optional">
         <span id="state_engine_nodejs">
 <a href="#state_engine_nodejs" style="color: inherit; text-decoration: inherit;">engine</a>
@@ -2277,8 +2073,7 @@ The following state arguments are supported:
         <span class="property-type">string</span>
     </dt>
     <dd>{{% md %}}Valid values are "hbase/hbaseue/bds". The following types are supported after v1.73.0: `hbaseue` and `bds`. Single hbase instance need to set engine=hbase, core_instance_quantity=1.
-{{% /md %}}</dd>
-    <dt class="property-optional"
+{{% /md %}}</dd><dt class="property-optional"
             title="Optional">
         <span id="state_engineversion_nodejs">
 <a href="#state_engineversion_nodejs" style="color: inherit; text-decoration: inherit;">engine<wbr>Version</a>
@@ -2288,8 +2083,7 @@ The following state arguments are supported:
     </dt>
     <dd>{{% md %}}HBase major version. hbase:1.1/2.0, hbaseue:2.0, bds:1.0, unsupport other engine temporarily. Value options can refer to the latest docs [CreateInstance](https://help.aliyun.com/document_detail/144607.html).
 * `master_instance_type`, `core_instance_type` - (Required, ForceNew) Instance specification. See [Instance specifications](https://help.aliyun.com/document_detail/53532.html), or you can call describeInstanceType api.
-{{% /md %}}</dd>
-    <dt class="property-optional"
+{{% /md %}}</dd><dt class="property-optional"
             title="Optional">
         <span id="state_immediatedeleteflag_nodejs">
 <a href="#state_immediatedeleteflag_nodejs" style="color: inherit; text-decoration: inherit;">immediate<wbr>Delete<wbr>Flag</a>
@@ -2298,8 +2092,7 @@ The following state arguments are supported:
         <span class="property-type">boolean</span>
     </dt>
     <dd>{{% md %}}The switch of delete immediate. True: delete immediate, False: delete delay. You will not found the cluster no matter set true or false.
-{{% /md %}}</dd>
-    <dt class="property-optional"
+{{% /md %}}</dd><dt class="property-optional"
             title="Optional">
         <span id="state_ipwhite_nodejs">
 <a href="#state_ipwhite_nodejs" style="color: inherit; text-decoration: inherit;">ip<wbr>White</a>
@@ -2308,8 +2101,7 @@ The following state arguments are supported:
         <span class="property-type">string</span>
     </dt>
     <dd>{{% md %}}The white ip list of the cluster.
-{{% /md %}}</dd>
-    <dt class="property-optional"
+{{% /md %}}</dd><dt class="property-optional"
             title="Optional">
         <span id="state_maintainendtime_nodejs">
 <a href="#state_maintainendtime_nodejs" style="color: inherit; text-decoration: inherit;">maintain<wbr>End<wbr>Time</a>
@@ -2318,8 +2110,7 @@ The following state arguments are supported:
         <span class="property-type">string</span>
     </dt>
     <dd>{{% md %}}The end time of the operation and maintenance time period of the instance, in the format of HH:mmZ (UTC time), for example 04:00Z.
-{{% /md %}}</dd>
-    <dt class="property-optional"
+{{% /md %}}</dd><dt class="property-optional"
             title="Optional">
         <span id="state_maintainstarttime_nodejs">
 <a href="#state_maintainstarttime_nodejs" style="color: inherit; text-decoration: inherit;">maintain<wbr>Start<wbr>Time</a>
@@ -2328,8 +2119,7 @@ The following state arguments are supported:
         <span class="property-type">string</span>
     </dt>
     <dd>{{% md %}}The start time of the operation and maintenance time period of the instance, in the format of HH:mmZ (UTC time), for example 02:00Z.
-{{% /md %}}</dd>
-    <dt class="property-optional"
+{{% /md %}}</dd><dt class="property-optional"
             title="Optional">
         <span id="state_masterinstancequantity_nodejs">
 <a href="#state_masterinstancequantity_nodejs" style="color: inherit; text-decoration: inherit;">master<wbr>Instance<wbr>Quantity</a>
@@ -2338,8 +2128,7 @@ The following state arguments are supported:
         <span class="property-type">number</span>
     </dt>
     <dd>{{% md %}}Count nodes of the master node.
-{{% /md %}}</dd>
-    <dt class="property-optional"
+{{% /md %}}</dd><dt class="property-optional"
             title="Optional">
         <span id="state_masterinstancetype_nodejs">
 <a href="#state_masterinstancetype_nodejs" style="color: inherit; text-decoration: inherit;">master<wbr>Instance<wbr>Type</a>
@@ -2347,8 +2136,7 @@ The following state arguments are supported:
         <span class="property-indicator"></span>
         <span class="property-type">string</span>
     </dt>
-    <dd>{{% md %}}{{% /md %}}</dd>
-    <dt class="property-optional"
+    <dd>{{% md %}}{{% /md %}}</dd><dt class="property-optional"
             title="Optional">
         <span id="state_name_nodejs">
 <a href="#state_name_nodejs" style="color: inherit; text-decoration: inherit;">name</a>
@@ -2357,8 +2145,7 @@ The following state arguments are supported:
         <span class="property-type">string</span>
     </dt>
     <dd>{{% md %}}HBase instance name. Length must be 2-128 characters long. Only Chinese characters, English letters, numbers, period (.), underline (_), or dash (-) are permitted.
-{{% /md %}}</dd>
-    <dt class="property-optional"
+{{% /md %}}</dd><dt class="property-optional"
             title="Optional">
         <span id="state_password_nodejs">
 <a href="#state_password_nodejs" style="color: inherit; text-decoration: inherit;">password</a>
@@ -2367,8 +2154,7 @@ The following state arguments are supported:
         <span class="property-type">string</span>
     </dt>
     <dd>{{% md %}}The password of the cluster web ui account. Size [0-128].
-{{% /md %}}</dd>
-    <dt class="property-optional"
+{{% /md %}}</dd><dt class="property-optional"
             title="Optional">
         <span id="state_paytype_nodejs">
 <a href="#state_paytype_nodejs" style="color: inherit; text-decoration: inherit;">pay<wbr>Type</a>
@@ -2377,8 +2163,7 @@ The following state arguments are supported:
         <span class="property-type">string</span>
     </dt>
     <dd>{{% md %}}Valid values are `PrePaid`, `PostPaid`, System default to `PostPaid`. You can also convert PostPaid to PrePaid. And support convert PrePaid to PostPaid from 1.115.0+.
-{{% /md %}}</dd>
-    <dt class="property-optional"
+{{% /md %}}</dd><dt class="property-optional"
             title="Optional">
         <span id="state_securitygroups_nodejs">
 <a href="#state_securitygroups_nodejs" style="color: inherit; text-decoration: inherit;">security<wbr>Groups</a>
@@ -2387,8 +2172,7 @@ The following state arguments are supported:
         <span class="property-type">string[]</span>
     </dt>
     <dd>{{% md %}}The security group resource of the cluster.
-{{% /md %}}</dd>
-    <dt class="property-optional"
+{{% /md %}}</dd><dt class="property-optional"
             title="Optional">
         <span id="state_slbconnaddrs_nodejs">
 <a href="#state_slbconnaddrs_nodejs" style="color: inherit; text-decoration: inherit;">slb<wbr>Conn<wbr>Addrs</a>
@@ -2397,8 +2181,7 @@ The following state arguments are supported:
         <span class="property-type"><a href="#instanceslbconnaddr">Instance<wbr>Slb<wbr>Conn<wbr>Addr[]</a></span>
     </dt>
     <dd>{{% md %}}(Available in 1.105.0+) The slb service addresses of the cluster.
-{{% /md %}}</dd>
-    <dt class="property-optional"
+{{% /md %}}</dd><dt class="property-optional"
             title="Optional">
         <span id="state_tags_nodejs">
 <a href="#state_tags_nodejs" style="color: inherit; text-decoration: inherit;">tags</a>
@@ -2407,8 +2190,7 @@ The following state arguments are supported:
         <span class="property-type">{[key: string]: any}</span>
     </dt>
     <dd>{{% md %}}A mapping of tags to assign to the resource.
-{{% /md %}}</dd>
-    <dt class="property-optional"
+{{% /md %}}</dd><dt class="property-optional"
             title="Optional">
         <span id="state_uiproxyconnaddrs_nodejs">
 <a href="#state_uiproxyconnaddrs_nodejs" style="color: inherit; text-decoration: inherit;">ui<wbr>Proxy<wbr>Conn<wbr>Addrs</a>
@@ -2417,8 +2199,7 @@ The following state arguments are supported:
         <span class="property-type"><a href="#instanceuiproxyconnaddr">Instance<wbr>Ui<wbr>Proxy<wbr>Conn<wbr>Addr[]</a></span>
     </dt>
     <dd>{{% md %}}(Available in 1.105.0+) The Web UI proxy addresses of the cluster.
-{{% /md %}}</dd>
-    <dt class="property-optional"
+{{% /md %}}</dd><dt class="property-optional"
             title="Optional">
         <span id="state_vswitchid_nodejs">
 <a href="#state_vswitchid_nodejs" style="color: inherit; text-decoration: inherit;">vswitch<wbr>Id</a>
@@ -2427,8 +2208,7 @@ The following state arguments are supported:
         <span class="property-type">string</span>
     </dt>
     <dd>{{% md %}}If vswitch_id is not empty, that mean net_type = vpc and has a same region. If vswitch_id is empty, net_type=classic. Intl site not support classic network.
-{{% /md %}}</dd>
-    <dt class="property-optional"
+{{% /md %}}</dd><dt class="property-optional"
             title="Optional">
         <span id="state_zkconnaddrs_nodejs">
 <a href="#state_zkconnaddrs_nodejs" style="color: inherit; text-decoration: inherit;">zk<wbr>Conn<wbr>Addrs</a>
@@ -2437,8 +2217,7 @@ The following state arguments are supported:
         <span class="property-type"><a href="#instancezkconnaddr">Instance<wbr>Zk<wbr>Conn<wbr>Addr[]</a></span>
     </dt>
     <dd>{{% md %}}(Available in 1.105.0+) The zookeeper addresses of the cluster.
-{{% /md %}}</dd>
-    <dt class="property-optional"
+{{% /md %}}</dd><dt class="property-optional"
             title="Optional">
         <span id="state_zoneid_nodejs">
 <a href="#state_zoneid_nodejs" style="color: inherit; text-decoration: inherit;">zone<wbr>Id</a>
@@ -2447,14 +2226,11 @@ The following state arguments are supported:
         <span class="property-type">string</span>
     </dt>
     <dd>{{% md %}}The Zone to launch the HBase instance. If vswitch_id is not empty, this zone_id can be "" or consistent.
-{{% /md %}}</dd>
-</dl>
+{{% /md %}}</dd></dl>
 {{% /choosable %}}
 
 {{% choosable language python %}}
-<dl class="resources-properties">
-
-    <dt class="property-optional"
+<dl class="resources-properties"><dt class="property-optional"
             title="Optional">
         <span id="state_account_python">
 <a href="#state_account_python" style="color: inherit; text-decoration: inherit;">account</a>
@@ -2463,8 +2239,7 @@ The following state arguments are supported:
         <span class="property-type">str</span>
     </dt>
     <dd>{{% md %}}The account of the cluster web ui. Size [0-128].
-{{% /md %}}</dd>
-    <dt class="property-optional"
+{{% /md %}}</dd><dt class="property-optional"
             title="Optional">
         <span id="state_auto_renew_python">
 <a href="#state_auto_renew_python" style="color: inherit; text-decoration: inherit;">auto_<wbr>renew</a>
@@ -2473,8 +2248,7 @@ The following state arguments are supported:
         <span class="property-type">bool</span>
     </dt>
     <dd>{{% md %}}Valid values are `true`, `false`, system default to `false`, valid when pay_type = PrePaid.
-{{% /md %}}</dd>
-    <dt class="property-optional"
+{{% /md %}}</dd><dt class="property-optional"
             title="Optional">
         <span id="state_cold_storage_size_python">
 <a href="#state_cold_storage_size_python" style="color: inherit; text-decoration: inherit;">cold_<wbr>storage_<wbr>size</a>
@@ -2483,8 +2257,7 @@ The following state arguments are supported:
         <span class="property-type">int</span>
     </dt>
     <dd>{{% md %}}0 or [800, 1000000], step:10-GB increments. 0 means is_cold_storage = false. [800, 1000000] means is_cold_storage = true.
-{{% /md %}}</dd>
-    <dt class="property-optional"
+{{% /md %}}</dd><dt class="property-optional"
             title="Optional">
         <span id="state_core_disk_size_python">
 <a href="#state_core_disk_size_python" style="color: inherit; text-decoration: inherit;">core_<wbr>disk_<wbr>size</a>
@@ -2496,8 +2269,7 @@ The following state arguments are supported:
 - Custom storage space, value range: [20, 64000].
 - Cluster [400, 64000], step:40-GB increments.
 - Single [20-500GB], step:1-GB increments.
-{{% /md %}}</dd>
-    <dt class="property-optional"
+{{% /md %}}</dd><dt class="property-optional"
             title="Optional">
         <span id="state_core_disk_type_python">
 <a href="#state_core_disk_type_python" style="color: inherit; text-decoration: inherit;">core_<wbr>disk_<wbr>type</a>
@@ -2506,8 +2278,7 @@ The following state arguments are supported:
         <span class="property-type">str</span>
     </dt>
     <dd>{{% md %}}Valid values are `cloud_ssd`, `cloud_essd_pl1`, `cloud_efficiency`, `local_hdd_pro`, `local_ssd_pro`，``, local_disk size is fixed. When engine=bds, no need to set disk type(or empty string).
-{{% /md %}}</dd>
-    <dt class="property-optional"
+{{% /md %}}</dd><dt class="property-optional"
             title="Optional">
         <span id="state_core_instance_quantity_python">
 <a href="#state_core_instance_quantity_python" style="color: inherit; text-decoration: inherit;">core_<wbr>instance_<wbr>quantity</a>
@@ -2516,8 +2287,7 @@ The following state arguments are supported:
         <span class="property-type">int</span>
     </dt>
     <dd>{{% md %}}Default=2, [1-200]. If core_instance_quantity > 1, this is cluster's instance. If core_instance_quantity = 1, this is a single instance.
-{{% /md %}}</dd>
-    <dt class="property-optional"
+{{% /md %}}</dd><dt class="property-optional"
             title="Optional">
         <span id="state_core_instance_type_python">
 <a href="#state_core_instance_type_python" style="color: inherit; text-decoration: inherit;">core_<wbr>instance_<wbr>type</a>
@@ -2525,8 +2295,7 @@ The following state arguments are supported:
         <span class="property-indicator"></span>
         <span class="property-type">str</span>
     </dt>
-    <dd>{{% md %}}{{% /md %}}</dd>
-    <dt class="property-optional"
+    <dd>{{% md %}}{{% /md %}}</dd><dt class="property-optional"
             title="Optional">
         <span id="state_deletion_protection_python">
 <a href="#state_deletion_protection_python" style="color: inherit; text-decoration: inherit;">deletion_<wbr>protection</a>
@@ -2535,8 +2304,7 @@ The following state arguments are supported:
         <span class="property-type">bool</span>
     </dt>
     <dd>{{% md %}}The switch of delete protection. True: delete protect, False: no delete protect. You must set false when you want to delete cluster.
-{{% /md %}}</dd>
-    <dt class="property-optional"
+{{% /md %}}</dd><dt class="property-optional"
             title="Optional">
         <span id="state_duration_python">
 <a href="#state_duration_python" style="color: inherit; text-decoration: inherit;">duration</a>
@@ -2545,8 +2313,7 @@ The following state arguments are supported:
         <span class="property-type">int</span>
     </dt>
     <dd>{{% md %}}1, 2, 3, 4, 5, 6, 7, 8, 9, 12, 24, 36, valid when pay_type = PrePaid,  unit: month. 12, 24, 36 mean 1, 2, 3 years.
-{{% /md %}}</dd>
-    <dt class="property-optional"
+{{% /md %}}</dd><dt class="property-optional"
             title="Optional">
         <span id="state_engine_python">
 <a href="#state_engine_python" style="color: inherit; text-decoration: inherit;">engine</a>
@@ -2555,8 +2322,7 @@ The following state arguments are supported:
         <span class="property-type">str</span>
     </dt>
     <dd>{{% md %}}Valid values are "hbase/hbaseue/bds". The following types are supported after v1.73.0: `hbaseue` and `bds`. Single hbase instance need to set engine=hbase, core_instance_quantity=1.
-{{% /md %}}</dd>
-    <dt class="property-optional"
+{{% /md %}}</dd><dt class="property-optional"
             title="Optional">
         <span id="state_engine_version_python">
 <a href="#state_engine_version_python" style="color: inherit; text-decoration: inherit;">engine_<wbr>version</a>
@@ -2566,8 +2332,7 @@ The following state arguments are supported:
     </dt>
     <dd>{{% md %}}HBase major version. hbase:1.1/2.0, hbaseue:2.0, bds:1.0, unsupport other engine temporarily. Value options can refer to the latest docs [CreateInstance](https://help.aliyun.com/document_detail/144607.html).
 * `master_instance_type`, `core_instance_type` - (Required, ForceNew) Instance specification. See [Instance specifications](https://help.aliyun.com/document_detail/53532.html), or you can call describeInstanceType api.
-{{% /md %}}</dd>
-    <dt class="property-optional"
+{{% /md %}}</dd><dt class="property-optional"
             title="Optional">
         <span id="state_immediate_delete_flag_python">
 <a href="#state_immediate_delete_flag_python" style="color: inherit; text-decoration: inherit;">immediate_<wbr>delete_<wbr>flag</a>
@@ -2576,8 +2341,7 @@ The following state arguments are supported:
         <span class="property-type">bool</span>
     </dt>
     <dd>{{% md %}}The switch of delete immediate. True: delete immediate, False: delete delay. You will not found the cluster no matter set true or false.
-{{% /md %}}</dd>
-    <dt class="property-optional"
+{{% /md %}}</dd><dt class="property-optional"
             title="Optional">
         <span id="state_ip_white_python">
 <a href="#state_ip_white_python" style="color: inherit; text-decoration: inherit;">ip_<wbr>white</a>
@@ -2586,8 +2350,7 @@ The following state arguments are supported:
         <span class="property-type">str</span>
     </dt>
     <dd>{{% md %}}The white ip list of the cluster.
-{{% /md %}}</dd>
-    <dt class="property-optional"
+{{% /md %}}</dd><dt class="property-optional"
             title="Optional">
         <span id="state_maintain_end_time_python">
 <a href="#state_maintain_end_time_python" style="color: inherit; text-decoration: inherit;">maintain_<wbr>end_<wbr>time</a>
@@ -2596,8 +2359,7 @@ The following state arguments are supported:
         <span class="property-type">str</span>
     </dt>
     <dd>{{% md %}}The end time of the operation and maintenance time period of the instance, in the format of HH:mmZ (UTC time), for example 04:00Z.
-{{% /md %}}</dd>
-    <dt class="property-optional"
+{{% /md %}}</dd><dt class="property-optional"
             title="Optional">
         <span id="state_maintain_start_time_python">
 <a href="#state_maintain_start_time_python" style="color: inherit; text-decoration: inherit;">maintain_<wbr>start_<wbr>time</a>
@@ -2606,8 +2368,7 @@ The following state arguments are supported:
         <span class="property-type">str</span>
     </dt>
     <dd>{{% md %}}The start time of the operation and maintenance time period of the instance, in the format of HH:mmZ (UTC time), for example 02:00Z.
-{{% /md %}}</dd>
-    <dt class="property-optional"
+{{% /md %}}</dd><dt class="property-optional"
             title="Optional">
         <span id="state_master_instance_quantity_python">
 <a href="#state_master_instance_quantity_python" style="color: inherit; text-decoration: inherit;">master_<wbr>instance_<wbr>quantity</a>
@@ -2616,8 +2377,7 @@ The following state arguments are supported:
         <span class="property-type">int</span>
     </dt>
     <dd>{{% md %}}Count nodes of the master node.
-{{% /md %}}</dd>
-    <dt class="property-optional"
+{{% /md %}}</dd><dt class="property-optional"
             title="Optional">
         <span id="state_master_instance_type_python">
 <a href="#state_master_instance_type_python" style="color: inherit; text-decoration: inherit;">master_<wbr>instance_<wbr>type</a>
@@ -2625,8 +2385,7 @@ The following state arguments are supported:
         <span class="property-indicator"></span>
         <span class="property-type">str</span>
     </dt>
-    <dd>{{% md %}}{{% /md %}}</dd>
-    <dt class="property-optional"
+    <dd>{{% md %}}{{% /md %}}</dd><dt class="property-optional"
             title="Optional">
         <span id="state_name_python">
 <a href="#state_name_python" style="color: inherit; text-decoration: inherit;">name</a>
@@ -2635,8 +2394,7 @@ The following state arguments are supported:
         <span class="property-type">str</span>
     </dt>
     <dd>{{% md %}}HBase instance name. Length must be 2-128 characters long. Only Chinese characters, English letters, numbers, period (.), underline (_), or dash (-) are permitted.
-{{% /md %}}</dd>
-    <dt class="property-optional"
+{{% /md %}}</dd><dt class="property-optional"
             title="Optional">
         <span id="state_password_python">
 <a href="#state_password_python" style="color: inherit; text-decoration: inherit;">password</a>
@@ -2645,8 +2403,7 @@ The following state arguments are supported:
         <span class="property-type">str</span>
     </dt>
     <dd>{{% md %}}The password of the cluster web ui account. Size [0-128].
-{{% /md %}}</dd>
-    <dt class="property-optional"
+{{% /md %}}</dd><dt class="property-optional"
             title="Optional">
         <span id="state_pay_type_python">
 <a href="#state_pay_type_python" style="color: inherit; text-decoration: inherit;">pay_<wbr>type</a>
@@ -2655,8 +2412,7 @@ The following state arguments are supported:
         <span class="property-type">str</span>
     </dt>
     <dd>{{% md %}}Valid values are `PrePaid`, `PostPaid`, System default to `PostPaid`. You can also convert PostPaid to PrePaid. And support convert PrePaid to PostPaid from 1.115.0+.
-{{% /md %}}</dd>
-    <dt class="property-optional"
+{{% /md %}}</dd><dt class="property-optional"
             title="Optional">
         <span id="state_security_groups_python">
 <a href="#state_security_groups_python" style="color: inherit; text-decoration: inherit;">security_<wbr>groups</a>
@@ -2665,8 +2421,7 @@ The following state arguments are supported:
         <span class="property-type">Sequence[str]</span>
     </dt>
     <dd>{{% md %}}The security group resource of the cluster.
-{{% /md %}}</dd>
-    <dt class="property-optional"
+{{% /md %}}</dd><dt class="property-optional"
             title="Optional">
         <span id="state_slb_conn_addrs_python">
 <a href="#state_slb_conn_addrs_python" style="color: inherit; text-decoration: inherit;">slb_<wbr>conn_<wbr>addrs</a>
@@ -2675,8 +2430,7 @@ The following state arguments are supported:
         <span class="property-type"><a href="#instanceslbconnaddr">Sequence[Instance<wbr>Slb<wbr>Conn<wbr>Addr<wbr>Args]</a></span>
     </dt>
     <dd>{{% md %}}(Available in 1.105.0+) The slb service addresses of the cluster.
-{{% /md %}}</dd>
-    <dt class="property-optional"
+{{% /md %}}</dd><dt class="property-optional"
             title="Optional">
         <span id="state_tags_python">
 <a href="#state_tags_python" style="color: inherit; text-decoration: inherit;">tags</a>
@@ -2685,8 +2439,7 @@ The following state arguments are supported:
         <span class="property-type">Mapping[str, Any]</span>
     </dt>
     <dd>{{% md %}}A mapping of tags to assign to the resource.
-{{% /md %}}</dd>
-    <dt class="property-optional"
+{{% /md %}}</dd><dt class="property-optional"
             title="Optional">
         <span id="state_ui_proxy_conn_addrs_python">
 <a href="#state_ui_proxy_conn_addrs_python" style="color: inherit; text-decoration: inherit;">ui_<wbr>proxy_<wbr>conn_<wbr>addrs</a>
@@ -2695,8 +2448,7 @@ The following state arguments are supported:
         <span class="property-type"><a href="#instanceuiproxyconnaddr">Sequence[Instance<wbr>Ui<wbr>Proxy<wbr>Conn<wbr>Addr<wbr>Args]</a></span>
     </dt>
     <dd>{{% md %}}(Available in 1.105.0+) The Web UI proxy addresses of the cluster.
-{{% /md %}}</dd>
-    <dt class="property-optional"
+{{% /md %}}</dd><dt class="property-optional"
             title="Optional">
         <span id="state_vswitch_id_python">
 <a href="#state_vswitch_id_python" style="color: inherit; text-decoration: inherit;">vswitch_<wbr>id</a>
@@ -2705,8 +2457,7 @@ The following state arguments are supported:
         <span class="property-type">str</span>
     </dt>
     <dd>{{% md %}}If vswitch_id is not empty, that mean net_type = vpc and has a same region. If vswitch_id is empty, net_type=classic. Intl site not support classic network.
-{{% /md %}}</dd>
-    <dt class="property-optional"
+{{% /md %}}</dd><dt class="property-optional"
             title="Optional">
         <span id="state_zk_conn_addrs_python">
 <a href="#state_zk_conn_addrs_python" style="color: inherit; text-decoration: inherit;">zk_<wbr>conn_<wbr>addrs</a>
@@ -2715,8 +2466,7 @@ The following state arguments are supported:
         <span class="property-type"><a href="#instancezkconnaddr">Sequence[Instance<wbr>Zk<wbr>Conn<wbr>Addr<wbr>Args]</a></span>
     </dt>
     <dd>{{% md %}}(Available in 1.105.0+) The zookeeper addresses of the cluster.
-{{% /md %}}</dd>
-    <dt class="property-optional"
+{{% /md %}}</dd><dt class="property-optional"
             title="Optional">
         <span id="state_zone_id_python">
 <a href="#state_zone_id_python" style="color: inherit; text-decoration: inherit;">zone_<wbr>id</a>
@@ -2725,8 +2475,7 @@ The following state arguments are supported:
         <span class="property-type">str</span>
     </dt>
     <dd>{{% md %}}The Zone to launch the HBase instance. If vswitch_id is not empty, this zone_id can be "" or consistent.
-{{% /md %}}</dd>
-</dl>
+{{% /md %}}</dd></dl>
 {{% /choosable %}}
 
 
@@ -2741,9 +2490,7 @@ The following state arguments are supported:
 <h4 id="instanceslbconnaddr">Instance<wbr>Slb<wbr>Conn<wbr>Addr</h4>
 
 {{% choosable language csharp %}}
-<dl class="resources-properties">
-
-    <dt class="property-optional"
+<dl class="resources-properties"><dt class="property-optional"
             title="Optional">
         <span id="connaddr_csharp">
 <a href="#connaddr_csharp" style="color: inherit; text-decoration: inherit;">Conn<wbr>Addr</a>
@@ -2751,8 +2498,7 @@ The following state arguments are supported:
         <span class="property-indicator"></span>
         <span class="property-type">string</span>
     </dt>
-    <dd>{{% md %}}{{% /md %}}</dd>
-    <dt class="property-optional"
+    <dd>{{% md %}}{{% /md %}}</dd><dt class="property-optional"
             title="Optional">
         <span id="connaddrport_csharp">
 <a href="#connaddrport_csharp" style="color: inherit; text-decoration: inherit;">Conn<wbr>Addr<wbr>Port</a>
@@ -2760,8 +2506,7 @@ The following state arguments are supported:
         <span class="property-indicator"></span>
         <span class="property-type">string</span>
     </dt>
-    <dd>{{% md %}}{{% /md %}}</dd>
-    <dt class="property-optional"
+    <dd>{{% md %}}{{% /md %}}</dd><dt class="property-optional"
             title="Optional">
         <span id="nettype_csharp">
 <a href="#nettype_csharp" style="color: inherit; text-decoration: inherit;">Net<wbr>Type</a>
@@ -2769,14 +2514,11 @@ The following state arguments are supported:
         <span class="property-indicator"></span>
         <span class="property-type">string</span>
     </dt>
-    <dd>{{% md %}}{{% /md %}}</dd>
-</dl>
+    <dd>{{% md %}}{{% /md %}}</dd></dl>
 {{% /choosable %}}
 
 {{% choosable language go %}}
-<dl class="resources-properties">
-
-    <dt class="property-optional"
+<dl class="resources-properties"><dt class="property-optional"
             title="Optional">
         <span id="connaddr_go">
 <a href="#connaddr_go" style="color: inherit; text-decoration: inherit;">Conn<wbr>Addr</a>
@@ -2784,8 +2526,7 @@ The following state arguments are supported:
         <span class="property-indicator"></span>
         <span class="property-type">string</span>
     </dt>
-    <dd>{{% md %}}{{% /md %}}</dd>
-    <dt class="property-optional"
+    <dd>{{% md %}}{{% /md %}}</dd><dt class="property-optional"
             title="Optional">
         <span id="connaddrport_go">
 <a href="#connaddrport_go" style="color: inherit; text-decoration: inherit;">Conn<wbr>Addr<wbr>Port</a>
@@ -2793,8 +2534,7 @@ The following state arguments are supported:
         <span class="property-indicator"></span>
         <span class="property-type">string</span>
     </dt>
-    <dd>{{% md %}}{{% /md %}}</dd>
-    <dt class="property-optional"
+    <dd>{{% md %}}{{% /md %}}</dd><dt class="property-optional"
             title="Optional">
         <span id="nettype_go">
 <a href="#nettype_go" style="color: inherit; text-decoration: inherit;">Net<wbr>Type</a>
@@ -2802,14 +2542,11 @@ The following state arguments are supported:
         <span class="property-indicator"></span>
         <span class="property-type">string</span>
     </dt>
-    <dd>{{% md %}}{{% /md %}}</dd>
-</dl>
+    <dd>{{% md %}}{{% /md %}}</dd></dl>
 {{% /choosable %}}
 
 {{% choosable language nodejs %}}
-<dl class="resources-properties">
-
-    <dt class="property-optional"
+<dl class="resources-properties"><dt class="property-optional"
             title="Optional">
         <span id="connaddr_nodejs">
 <a href="#connaddr_nodejs" style="color: inherit; text-decoration: inherit;">conn<wbr>Addr</a>
@@ -2817,8 +2554,7 @@ The following state arguments are supported:
         <span class="property-indicator"></span>
         <span class="property-type">string</span>
     </dt>
-    <dd>{{% md %}}{{% /md %}}</dd>
-    <dt class="property-optional"
+    <dd>{{% md %}}{{% /md %}}</dd><dt class="property-optional"
             title="Optional">
         <span id="connaddrport_nodejs">
 <a href="#connaddrport_nodejs" style="color: inherit; text-decoration: inherit;">conn<wbr>Addr<wbr>Port</a>
@@ -2826,8 +2562,7 @@ The following state arguments are supported:
         <span class="property-indicator"></span>
         <span class="property-type">string</span>
     </dt>
-    <dd>{{% md %}}{{% /md %}}</dd>
-    <dt class="property-optional"
+    <dd>{{% md %}}{{% /md %}}</dd><dt class="property-optional"
             title="Optional">
         <span id="nettype_nodejs">
 <a href="#nettype_nodejs" style="color: inherit; text-decoration: inherit;">net<wbr>Type</a>
@@ -2835,14 +2570,11 @@ The following state arguments are supported:
         <span class="property-indicator"></span>
         <span class="property-type">string</span>
     </dt>
-    <dd>{{% md %}}{{% /md %}}</dd>
-</dl>
+    <dd>{{% md %}}{{% /md %}}</dd></dl>
 {{% /choosable %}}
 
 {{% choosable language python %}}
-<dl class="resources-properties">
-
-    <dt class="property-optional"
+<dl class="resources-properties"><dt class="property-optional"
             title="Optional">
         <span id="conn_addr_python">
 <a href="#conn_addr_python" style="color: inherit; text-decoration: inherit;">conn_<wbr>addr</a>
@@ -2850,8 +2582,7 @@ The following state arguments are supported:
         <span class="property-indicator"></span>
         <span class="property-type">str</span>
     </dt>
-    <dd>{{% md %}}{{% /md %}}</dd>
-    <dt class="property-optional"
+    <dd>{{% md %}}{{% /md %}}</dd><dt class="property-optional"
             title="Optional">
         <span id="conn_addr_port_python">
 <a href="#conn_addr_port_python" style="color: inherit; text-decoration: inherit;">conn_<wbr>addr_<wbr>port</a>
@@ -2859,8 +2590,7 @@ The following state arguments are supported:
         <span class="property-indicator"></span>
         <span class="property-type">str</span>
     </dt>
-    <dd>{{% md %}}{{% /md %}}</dd>
-    <dt class="property-optional"
+    <dd>{{% md %}}{{% /md %}}</dd><dt class="property-optional"
             title="Optional">
         <span id="net_type_python">
 <a href="#net_type_python" style="color: inherit; text-decoration: inherit;">net_<wbr>type</a>
@@ -2868,16 +2598,13 @@ The following state arguments are supported:
         <span class="property-indicator"></span>
         <span class="property-type">str</span>
     </dt>
-    <dd>{{% md %}}{{% /md %}}</dd>
-</dl>
+    <dd>{{% md %}}{{% /md %}}</dd></dl>
 {{% /choosable %}}
 
 <h4 id="instanceuiproxyconnaddr">Instance<wbr>Ui<wbr>Proxy<wbr>Conn<wbr>Addr</h4>
 
 {{% choosable language csharp %}}
-<dl class="resources-properties">
-
-    <dt class="property-optional"
+<dl class="resources-properties"><dt class="property-optional"
             title="Optional">
         <span id="connaddr_csharp">
 <a href="#connaddr_csharp" style="color: inherit; text-decoration: inherit;">Conn<wbr>Addr</a>
@@ -2885,8 +2612,7 @@ The following state arguments are supported:
         <span class="property-indicator"></span>
         <span class="property-type">string</span>
     </dt>
-    <dd>{{% md %}}{{% /md %}}</dd>
-    <dt class="property-optional"
+    <dd>{{% md %}}{{% /md %}}</dd><dt class="property-optional"
             title="Optional">
         <span id="connaddrport_csharp">
 <a href="#connaddrport_csharp" style="color: inherit; text-decoration: inherit;">Conn<wbr>Addr<wbr>Port</a>
@@ -2894,8 +2620,7 @@ The following state arguments are supported:
         <span class="property-indicator"></span>
         <span class="property-type">string</span>
     </dt>
-    <dd>{{% md %}}{{% /md %}}</dd>
-    <dt class="property-optional"
+    <dd>{{% md %}}{{% /md %}}</dd><dt class="property-optional"
             title="Optional">
         <span id="nettype_csharp">
 <a href="#nettype_csharp" style="color: inherit; text-decoration: inherit;">Net<wbr>Type</a>
@@ -2903,14 +2628,11 @@ The following state arguments are supported:
         <span class="property-indicator"></span>
         <span class="property-type">string</span>
     </dt>
-    <dd>{{% md %}}{{% /md %}}</dd>
-</dl>
+    <dd>{{% md %}}{{% /md %}}</dd></dl>
 {{% /choosable %}}
 
 {{% choosable language go %}}
-<dl class="resources-properties">
-
-    <dt class="property-optional"
+<dl class="resources-properties"><dt class="property-optional"
             title="Optional">
         <span id="connaddr_go">
 <a href="#connaddr_go" style="color: inherit; text-decoration: inherit;">Conn<wbr>Addr</a>
@@ -2918,8 +2640,7 @@ The following state arguments are supported:
         <span class="property-indicator"></span>
         <span class="property-type">string</span>
     </dt>
-    <dd>{{% md %}}{{% /md %}}</dd>
-    <dt class="property-optional"
+    <dd>{{% md %}}{{% /md %}}</dd><dt class="property-optional"
             title="Optional">
         <span id="connaddrport_go">
 <a href="#connaddrport_go" style="color: inherit; text-decoration: inherit;">Conn<wbr>Addr<wbr>Port</a>
@@ -2927,8 +2648,7 @@ The following state arguments are supported:
         <span class="property-indicator"></span>
         <span class="property-type">string</span>
     </dt>
-    <dd>{{% md %}}{{% /md %}}</dd>
-    <dt class="property-optional"
+    <dd>{{% md %}}{{% /md %}}</dd><dt class="property-optional"
             title="Optional">
         <span id="nettype_go">
 <a href="#nettype_go" style="color: inherit; text-decoration: inherit;">Net<wbr>Type</a>
@@ -2936,14 +2656,11 @@ The following state arguments are supported:
         <span class="property-indicator"></span>
         <span class="property-type">string</span>
     </dt>
-    <dd>{{% md %}}{{% /md %}}</dd>
-</dl>
+    <dd>{{% md %}}{{% /md %}}</dd></dl>
 {{% /choosable %}}
 
 {{% choosable language nodejs %}}
-<dl class="resources-properties">
-
-    <dt class="property-optional"
+<dl class="resources-properties"><dt class="property-optional"
             title="Optional">
         <span id="connaddr_nodejs">
 <a href="#connaddr_nodejs" style="color: inherit; text-decoration: inherit;">conn<wbr>Addr</a>
@@ -2951,8 +2668,7 @@ The following state arguments are supported:
         <span class="property-indicator"></span>
         <span class="property-type">string</span>
     </dt>
-    <dd>{{% md %}}{{% /md %}}</dd>
-    <dt class="property-optional"
+    <dd>{{% md %}}{{% /md %}}</dd><dt class="property-optional"
             title="Optional">
         <span id="connaddrport_nodejs">
 <a href="#connaddrport_nodejs" style="color: inherit; text-decoration: inherit;">conn<wbr>Addr<wbr>Port</a>
@@ -2960,8 +2676,7 @@ The following state arguments are supported:
         <span class="property-indicator"></span>
         <span class="property-type">string</span>
     </dt>
-    <dd>{{% md %}}{{% /md %}}</dd>
-    <dt class="property-optional"
+    <dd>{{% md %}}{{% /md %}}</dd><dt class="property-optional"
             title="Optional">
         <span id="nettype_nodejs">
 <a href="#nettype_nodejs" style="color: inherit; text-decoration: inherit;">net<wbr>Type</a>
@@ -2969,14 +2684,11 @@ The following state arguments are supported:
         <span class="property-indicator"></span>
         <span class="property-type">string</span>
     </dt>
-    <dd>{{% md %}}{{% /md %}}</dd>
-</dl>
+    <dd>{{% md %}}{{% /md %}}</dd></dl>
 {{% /choosable %}}
 
 {{% choosable language python %}}
-<dl class="resources-properties">
-
-    <dt class="property-optional"
+<dl class="resources-properties"><dt class="property-optional"
             title="Optional">
         <span id="conn_addr_python">
 <a href="#conn_addr_python" style="color: inherit; text-decoration: inherit;">conn_<wbr>addr</a>
@@ -2984,8 +2696,7 @@ The following state arguments are supported:
         <span class="property-indicator"></span>
         <span class="property-type">str</span>
     </dt>
-    <dd>{{% md %}}{{% /md %}}</dd>
-    <dt class="property-optional"
+    <dd>{{% md %}}{{% /md %}}</dd><dt class="property-optional"
             title="Optional">
         <span id="conn_addr_port_python">
 <a href="#conn_addr_port_python" style="color: inherit; text-decoration: inherit;">conn_<wbr>addr_<wbr>port</a>
@@ -2993,8 +2704,7 @@ The following state arguments are supported:
         <span class="property-indicator"></span>
         <span class="property-type">str</span>
     </dt>
-    <dd>{{% md %}}{{% /md %}}</dd>
-    <dt class="property-optional"
+    <dd>{{% md %}}{{% /md %}}</dd><dt class="property-optional"
             title="Optional">
         <span id="net_type_python">
 <a href="#net_type_python" style="color: inherit; text-decoration: inherit;">net_<wbr>type</a>
@@ -3002,16 +2712,13 @@ The following state arguments are supported:
         <span class="property-indicator"></span>
         <span class="property-type">str</span>
     </dt>
-    <dd>{{% md %}}{{% /md %}}</dd>
-</dl>
+    <dd>{{% md %}}{{% /md %}}</dd></dl>
 {{% /choosable %}}
 
 <h4 id="instancezkconnaddr">Instance<wbr>Zk<wbr>Conn<wbr>Addr</h4>
 
 {{% choosable language csharp %}}
-<dl class="resources-properties">
-
-    <dt class="property-optional"
+<dl class="resources-properties"><dt class="property-optional"
             title="Optional">
         <span id="connaddr_csharp">
 <a href="#connaddr_csharp" style="color: inherit; text-decoration: inherit;">Conn<wbr>Addr</a>
@@ -3019,8 +2726,7 @@ The following state arguments are supported:
         <span class="property-indicator"></span>
         <span class="property-type">string</span>
     </dt>
-    <dd>{{% md %}}{{% /md %}}</dd>
-    <dt class="property-optional"
+    <dd>{{% md %}}{{% /md %}}</dd><dt class="property-optional"
             title="Optional">
         <span id="connaddrport_csharp">
 <a href="#connaddrport_csharp" style="color: inherit; text-decoration: inherit;">Conn<wbr>Addr<wbr>Port</a>
@@ -3028,8 +2734,7 @@ The following state arguments are supported:
         <span class="property-indicator"></span>
         <span class="property-type">string</span>
     </dt>
-    <dd>{{% md %}}{{% /md %}}</dd>
-    <dt class="property-optional"
+    <dd>{{% md %}}{{% /md %}}</dd><dt class="property-optional"
             title="Optional">
         <span id="nettype_csharp">
 <a href="#nettype_csharp" style="color: inherit; text-decoration: inherit;">Net<wbr>Type</a>
@@ -3037,14 +2742,11 @@ The following state arguments are supported:
         <span class="property-indicator"></span>
         <span class="property-type">string</span>
     </dt>
-    <dd>{{% md %}}{{% /md %}}</dd>
-</dl>
+    <dd>{{% md %}}{{% /md %}}</dd></dl>
 {{% /choosable %}}
 
 {{% choosable language go %}}
-<dl class="resources-properties">
-
-    <dt class="property-optional"
+<dl class="resources-properties"><dt class="property-optional"
             title="Optional">
         <span id="connaddr_go">
 <a href="#connaddr_go" style="color: inherit; text-decoration: inherit;">Conn<wbr>Addr</a>
@@ -3052,8 +2754,7 @@ The following state arguments are supported:
         <span class="property-indicator"></span>
         <span class="property-type">string</span>
     </dt>
-    <dd>{{% md %}}{{% /md %}}</dd>
-    <dt class="property-optional"
+    <dd>{{% md %}}{{% /md %}}</dd><dt class="property-optional"
             title="Optional">
         <span id="connaddrport_go">
 <a href="#connaddrport_go" style="color: inherit; text-decoration: inherit;">Conn<wbr>Addr<wbr>Port</a>
@@ -3061,8 +2762,7 @@ The following state arguments are supported:
         <span class="property-indicator"></span>
         <span class="property-type">string</span>
     </dt>
-    <dd>{{% md %}}{{% /md %}}</dd>
-    <dt class="property-optional"
+    <dd>{{% md %}}{{% /md %}}</dd><dt class="property-optional"
             title="Optional">
         <span id="nettype_go">
 <a href="#nettype_go" style="color: inherit; text-decoration: inherit;">Net<wbr>Type</a>
@@ -3070,14 +2770,11 @@ The following state arguments are supported:
         <span class="property-indicator"></span>
         <span class="property-type">string</span>
     </dt>
-    <dd>{{% md %}}{{% /md %}}</dd>
-</dl>
+    <dd>{{% md %}}{{% /md %}}</dd></dl>
 {{% /choosable %}}
 
 {{% choosable language nodejs %}}
-<dl class="resources-properties">
-
-    <dt class="property-optional"
+<dl class="resources-properties"><dt class="property-optional"
             title="Optional">
         <span id="connaddr_nodejs">
 <a href="#connaddr_nodejs" style="color: inherit; text-decoration: inherit;">conn<wbr>Addr</a>
@@ -3085,8 +2782,7 @@ The following state arguments are supported:
         <span class="property-indicator"></span>
         <span class="property-type">string</span>
     </dt>
-    <dd>{{% md %}}{{% /md %}}</dd>
-    <dt class="property-optional"
+    <dd>{{% md %}}{{% /md %}}</dd><dt class="property-optional"
             title="Optional">
         <span id="connaddrport_nodejs">
 <a href="#connaddrport_nodejs" style="color: inherit; text-decoration: inherit;">conn<wbr>Addr<wbr>Port</a>
@@ -3094,8 +2790,7 @@ The following state arguments are supported:
         <span class="property-indicator"></span>
         <span class="property-type">string</span>
     </dt>
-    <dd>{{% md %}}{{% /md %}}</dd>
-    <dt class="property-optional"
+    <dd>{{% md %}}{{% /md %}}</dd><dt class="property-optional"
             title="Optional">
         <span id="nettype_nodejs">
 <a href="#nettype_nodejs" style="color: inherit; text-decoration: inherit;">net<wbr>Type</a>
@@ -3103,14 +2798,11 @@ The following state arguments are supported:
         <span class="property-indicator"></span>
         <span class="property-type">string</span>
     </dt>
-    <dd>{{% md %}}{{% /md %}}</dd>
-</dl>
+    <dd>{{% md %}}{{% /md %}}</dd></dl>
 {{% /choosable %}}
 
 {{% choosable language python %}}
-<dl class="resources-properties">
-
-    <dt class="property-optional"
+<dl class="resources-properties"><dt class="property-optional"
             title="Optional">
         <span id="conn_addr_python">
 <a href="#conn_addr_python" style="color: inherit; text-decoration: inherit;">conn_<wbr>addr</a>
@@ -3118,8 +2810,7 @@ The following state arguments are supported:
         <span class="property-indicator"></span>
         <span class="property-type">str</span>
     </dt>
-    <dd>{{% md %}}{{% /md %}}</dd>
-    <dt class="property-optional"
+    <dd>{{% md %}}{{% /md %}}</dd><dt class="property-optional"
             title="Optional">
         <span id="conn_addr_port_python">
 <a href="#conn_addr_port_python" style="color: inherit; text-decoration: inherit;">conn_<wbr>addr_<wbr>port</a>
@@ -3127,8 +2818,7 @@ The following state arguments are supported:
         <span class="property-indicator"></span>
         <span class="property-type">str</span>
     </dt>
-    <dd>{{% md %}}{{% /md %}}</dd>
-    <dt class="property-optional"
+    <dd>{{% md %}}{{% /md %}}</dd><dt class="property-optional"
             title="Optional">
         <span id="net_type_python">
 <a href="#net_type_python" style="color: inherit; text-decoration: inherit;">net_<wbr>type</a>
@@ -3136,8 +2826,7 @@ The following state arguments are supported:
         <span class="property-indicator"></span>
         <span class="property-type">str</span>
     </dt>
-    <dd>{{% md %}}{{% /md %}}</dd>
-</dl>
+    <dd>{{% md %}}{{% /md %}}</dd></dl>
 {{% /choosable %}}
 ## Import
 
@@ -3158,6 +2847,6 @@ HBase can be imported using the id, e.g.
 	<dt>License</dt>
 	<dd>Apache-2.0</dd>
 	<dt>Notes</dt>
-	<dd>This Pulumi package is based on the [`alicloud` Terraform Provider](https://github.com/aliyun/terraform-provider-alicloud).</dd>
+	<dd>{{% md %}}This Pulumi package is based on the [`alicloud` Terraform Provider](https://github.com/aliyun/terraform-provider-alicloud).{{% /md %}}</dd>
 </dl>
 

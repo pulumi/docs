@@ -21,11 +21,17 @@ To get more information about TargetSslProxy, see:
     * [Setting Up SSL proxy for Google Cloud Load Balancing](https://cloud.google.com/compute/docs/load-balancing/tcp-ssl/)
 
 {{% examples %}}
+
 ## Example Usage
 
 {{< chooser language "typescript,python,go,csharp" / >}}
+
+
 ### Target Ssl Proxy Basic
-{{% example csharp %}}
+
+
+{{< example csharp >}}
+
 ```csharp
 using System.IO;
 using Pulumi;
@@ -70,13 +76,19 @@ class MyStack : Stack
 }
 ```
 
-{{% /example %}}
 
-{{% example go %}}
+{{< /example >}}
+
+
+{{< example go >}}
+
 Coming soon!
-{{% /example %}}
 
-{{% example python %}}
+{{< /example >}}
+
+
+{{< example python >}}
+
 ```python
 import pulumi
 import pulumi_gcp as gcp
@@ -98,9 +110,12 @@ default_target_ssl_proxy = gcp.compute.TargetSSLProxy("defaultTargetSSLProxy",
     ssl_certificates=[default_ssl_certificate.id])
 ```
 
-{{% /example %}}
 
-{{% example typescript %}}
+{{< /example >}}
+
+
+{{< example typescript >}}
+
 
 ```typescript
 import * as pulumi from "@pulumi/pulumi";
@@ -128,9 +143,16 @@ const defaultTargetSSLProxy = new gcp.compute.TargetSSLProxy("defaultTargetSSLPr
 });
 ```
 
-{{% /example %}}
+
+{{< /example >}}
+
+
+
+
 
 {{% /examples %}}
+
+
 
 
 ## Create a TargetSSLProxy Resource {#create}
@@ -155,9 +177,7 @@ const defaultTargetSSLProxy = new gcp.compute.TargetSSLProxy("defaultTargetSSLPr
 
 {{% choosable language nodejs %}}
 
-<dl class="resources-properties">
-  
-    <dt
+<dl class="resources-properties"><dt
         class="property-required" title="Required">
         <span>name</span>
         <span class="property-indicator"></span>
@@ -165,9 +185,7 @@ const defaultTargetSSLProxy = new gcp.compute.TargetSSLProxy("defaultTargetSSLPr
     </dt>
     <dd>
       The unique name of the resource.
-    </dd>
-  
-    <dt
+    </dd><dt
         class="property-required" title="Required">
         <span>args</span>
         <span class="property-indicator"></span>
@@ -175,9 +193,7 @@ const defaultTargetSSLProxy = new gcp.compute.TargetSSLProxy("defaultTargetSSLPr
     </dt>
     <dd>
       The arguments to resource properties.
-    </dd>
-  
-    <dt
+    </dd><dt
         class="property-optional" title="Optional">
         <span>opts</span>
         <span class="property-indicator"></span>
@@ -185,10 +201,7 @@ const defaultTargetSSLProxy = new gcp.compute.TargetSSLProxy("defaultTargetSSLPr
     </dt>
     <dd>
       Bag of options to control resource&#39;s behavior.
-    </dd>
-  
-
-</dl>
+    </dd></dl>
 
 {{% /choosable %}}
 
@@ -214,9 +227,7 @@ const defaultTargetSSLProxy = new gcp.compute.TargetSSLProxy("defaultTargetSSLPr
 
 {{% choosable language go %}}
 
-<dl class="resources-properties">
-  
-    <dt
+<dl class="resources-properties"><dt
         class="property-optional" title="Optional">
         <span>ctx</span>
         <span class="property-indicator"></span>
@@ -224,9 +235,7 @@ const defaultTargetSSLProxy = new gcp.compute.TargetSSLProxy("defaultTargetSSLPr
     </dt>
     <dd>
       Context object for the current deployment.
-    </dd>
-  
-    <dt
+    </dd><dt
         class="property-required" title="Required">
         <span>name</span>
         <span class="property-indicator"></span>
@@ -234,9 +243,7 @@ const defaultTargetSSLProxy = new gcp.compute.TargetSSLProxy("defaultTargetSSLPr
     </dt>
     <dd>
       The unique name of the resource.
-    </dd>
-  
-    <dt
+    </dd><dt
         class="property-required" title="Required">
         <span>args</span>
         <span class="property-indicator"></span>
@@ -244,9 +251,7 @@ const defaultTargetSSLProxy = new gcp.compute.TargetSSLProxy("defaultTargetSSLPr
     </dt>
     <dd>
       The arguments to resource properties.
-    </dd>
-  
-    <dt
+    </dd><dt
         class="property-optional" title="Optional">
         <span>opts</span>
         <span class="property-indicator"></span>
@@ -254,18 +259,13 @@ const defaultTargetSSLProxy = new gcp.compute.TargetSSLProxy("defaultTargetSSLPr
     </dt>
     <dd>
       Bag of options to control resource&#39;s behavior.
-    </dd>
-  
-
-</dl>
+    </dd></dl>
 
 {{% /choosable %}}
 
 {{% choosable language csharp %}}
 
-<dl class="resources-properties">
-  
-    <dt
+<dl class="resources-properties"><dt
         class="property-required" title="Required">
         <span>name</span>
         <span class="property-indicator"></span>
@@ -273,9 +273,7 @@ const defaultTargetSSLProxy = new gcp.compute.TargetSSLProxy("defaultTargetSSLPr
     </dt>
     <dd>
       The unique name of the resource.
-    </dd>
-  
-    <dt
+    </dd><dt
         class="property-required" title="Required">
         <span>args</span>
         <span class="property-indicator"></span>
@@ -283,9 +281,7 @@ const defaultTargetSSLProxy = new gcp.compute.TargetSSLProxy("defaultTargetSSLPr
     </dt>
     <dd>
       The arguments to resource properties.
-    </dd>
-  
-    <dt
+    </dd><dt
         class="property-optional" title="Optional">
         <span>opts</span>
         <span class="property-indicator"></span>
@@ -293,10 +289,7 @@ const defaultTargetSSLProxy = new gcp.compute.TargetSSLProxy("defaultTargetSSLPr
     </dt>
     <dd>
       Bag of options to control resource&#39;s behavior.
-    </dd>
-  
-
-</dl>
+    </dd></dl>
 
 {{% /choosable %}}
 
@@ -311,9 +304,7 @@ The TargetSSLProxy resource accepts the following [input]({{< relref "/docs/intr
 
 
 {{% choosable language csharp %}}
-<dl class="resources-properties">
-
-    <dt class="property-required"
+<dl class="resources-properties"><dt class="property-required"
             title="Required">
         <span id="backendservice_csharp">
 <a href="#backendservice_csharp" style="color: inherit; text-decoration: inherit;">Backend<wbr>Service</a>
@@ -322,8 +313,7 @@ The TargetSSLProxy resource accepts the following [input]({{< relref "/docs/intr
         <span class="property-type">string</span>
     </dt>
     <dd>{{% md %}}A reference to the BackendService resource.
-{{% /md %}}</dd>
-    <dt class="property-required"
+{{% /md %}}</dd><dt class="property-required"
             title="Required">
         <span id="sslcertificates_csharp">
 <a href="#sslcertificates_csharp" style="color: inherit; text-decoration: inherit;">Ssl<wbr>Certificates</a>
@@ -334,8 +324,7 @@ The TargetSSLProxy resource accepts the following [input]({{< relref "/docs/intr
     <dd>{{% md %}}A list of SslCertificate resources that are used to authenticate
 connections between users and the load balancer. At least one
 SSL certificate must be specified.
-{{% /md %}}</dd>
-    <dt class="property-optional"
+{{% /md %}}</dd><dt class="property-optional"
             title="Optional">
         <span id="description_csharp">
 <a href="#description_csharp" style="color: inherit; text-decoration: inherit;">Description</a>
@@ -344,8 +333,7 @@ SSL certificate must be specified.
         <span class="property-type">string</span>
     </dt>
     <dd>{{% md %}}An optional description of this resource.
-{{% /md %}}</dd>
-    <dt class="property-optional"
+{{% /md %}}</dd><dt class="property-optional"
             title="Optional">
         <span id="name_csharp">
 <a href="#name_csharp" style="color: inherit; text-decoration: inherit;">Name</a>
@@ -360,8 +348,7 @@ the regular expression `a-z?` which means the
 first character must be a lowercase letter, and all following
 characters must be a dash, lowercase letter, or digit, except the last
 character, which cannot be a dash.
-{{% /md %}}</dd>
-    <dt class="property-optional"
+{{% /md %}}</dd><dt class="property-optional"
             title="Optional">
         <span id="project_csharp">
 <a href="#project_csharp" style="color: inherit; text-decoration: inherit;">Project</a>
@@ -371,8 +358,7 @@ character, which cannot be a dash.
     </dt>
     <dd>{{% md %}}The ID of the project in which the resource belongs.
 If it is not provided, the provider project is used.
-{{% /md %}}</dd>
-    <dt class="property-optional"
+{{% /md %}}</dd><dt class="property-optional"
             title="Optional">
         <span id="proxyheader_csharp">
 <a href="#proxyheader_csharp" style="color: inherit; text-decoration: inherit;">Proxy<wbr>Header</a>
@@ -384,8 +370,7 @@ If it is not provided, the provider project is used.
 the backend.
 Default value is `NONE`.
 Possible values are `NONE` and `PROXY_V1`.
-{{% /md %}}</dd>
-    <dt class="property-optional"
+{{% /md %}}</dd><dt class="property-optional"
             title="Optional">
         <span id="sslpolicy_csharp">
 <a href="#sslpolicy_csharp" style="color: inherit; text-decoration: inherit;">Ssl<wbr>Policy</a>
@@ -396,14 +381,11 @@ Possible values are `NONE` and `PROXY_V1`.
     <dd>{{% md %}}A reference to the SslPolicy resource that will be associated with
 the TargetSslProxy resource. If not set, the TargetSslProxy
 resource will not have any SSL policy configured.
-{{% /md %}}</dd>
-</dl>
+{{% /md %}}</dd></dl>
 {{% /choosable %}}
 
 {{% choosable language go %}}
-<dl class="resources-properties">
-
-    <dt class="property-required"
+<dl class="resources-properties"><dt class="property-required"
             title="Required">
         <span id="backendservice_go">
 <a href="#backendservice_go" style="color: inherit; text-decoration: inherit;">Backend<wbr>Service</a>
@@ -412,8 +394,7 @@ resource will not have any SSL policy configured.
         <span class="property-type">string</span>
     </dt>
     <dd>{{% md %}}A reference to the BackendService resource.
-{{% /md %}}</dd>
-    <dt class="property-required"
+{{% /md %}}</dd><dt class="property-required"
             title="Required">
         <span id="sslcertificates_go">
 <a href="#sslcertificates_go" style="color: inherit; text-decoration: inherit;">Ssl<wbr>Certificates</a>
@@ -424,8 +405,7 @@ resource will not have any SSL policy configured.
     <dd>{{% md %}}A list of SslCertificate resources that are used to authenticate
 connections between users and the load balancer. At least one
 SSL certificate must be specified.
-{{% /md %}}</dd>
-    <dt class="property-optional"
+{{% /md %}}</dd><dt class="property-optional"
             title="Optional">
         <span id="description_go">
 <a href="#description_go" style="color: inherit; text-decoration: inherit;">Description</a>
@@ -434,8 +414,7 @@ SSL certificate must be specified.
         <span class="property-type">string</span>
     </dt>
     <dd>{{% md %}}An optional description of this resource.
-{{% /md %}}</dd>
-    <dt class="property-optional"
+{{% /md %}}</dd><dt class="property-optional"
             title="Optional">
         <span id="name_go">
 <a href="#name_go" style="color: inherit; text-decoration: inherit;">Name</a>
@@ -450,8 +429,7 @@ the regular expression `a-z?` which means the
 first character must be a lowercase letter, and all following
 characters must be a dash, lowercase letter, or digit, except the last
 character, which cannot be a dash.
-{{% /md %}}</dd>
-    <dt class="property-optional"
+{{% /md %}}</dd><dt class="property-optional"
             title="Optional">
         <span id="project_go">
 <a href="#project_go" style="color: inherit; text-decoration: inherit;">Project</a>
@@ -461,8 +439,7 @@ character, which cannot be a dash.
     </dt>
     <dd>{{% md %}}The ID of the project in which the resource belongs.
 If it is not provided, the provider project is used.
-{{% /md %}}</dd>
-    <dt class="property-optional"
+{{% /md %}}</dd><dt class="property-optional"
             title="Optional">
         <span id="proxyheader_go">
 <a href="#proxyheader_go" style="color: inherit; text-decoration: inherit;">Proxy<wbr>Header</a>
@@ -474,8 +451,7 @@ If it is not provided, the provider project is used.
 the backend.
 Default value is `NONE`.
 Possible values are `NONE` and `PROXY_V1`.
-{{% /md %}}</dd>
-    <dt class="property-optional"
+{{% /md %}}</dd><dt class="property-optional"
             title="Optional">
         <span id="sslpolicy_go">
 <a href="#sslpolicy_go" style="color: inherit; text-decoration: inherit;">Ssl<wbr>Policy</a>
@@ -486,14 +462,11 @@ Possible values are `NONE` and `PROXY_V1`.
     <dd>{{% md %}}A reference to the SslPolicy resource that will be associated with
 the TargetSslProxy resource. If not set, the TargetSslProxy
 resource will not have any SSL policy configured.
-{{% /md %}}</dd>
-</dl>
+{{% /md %}}</dd></dl>
 {{% /choosable %}}
 
 {{% choosable language nodejs %}}
-<dl class="resources-properties">
-
-    <dt class="property-required"
+<dl class="resources-properties"><dt class="property-required"
             title="Required">
         <span id="backendservice_nodejs">
 <a href="#backendservice_nodejs" style="color: inherit; text-decoration: inherit;">backend<wbr>Service</a>
@@ -502,8 +475,7 @@ resource will not have any SSL policy configured.
         <span class="property-type">string</span>
     </dt>
     <dd>{{% md %}}A reference to the BackendService resource.
-{{% /md %}}</dd>
-    <dt class="property-required"
+{{% /md %}}</dd><dt class="property-required"
             title="Required">
         <span id="sslcertificates_nodejs">
 <a href="#sslcertificates_nodejs" style="color: inherit; text-decoration: inherit;">ssl<wbr>Certificates</a>
@@ -514,8 +486,7 @@ resource will not have any SSL policy configured.
     <dd>{{% md %}}A list of SslCertificate resources that are used to authenticate
 connections between users and the load balancer. At least one
 SSL certificate must be specified.
-{{% /md %}}</dd>
-    <dt class="property-optional"
+{{% /md %}}</dd><dt class="property-optional"
             title="Optional">
         <span id="description_nodejs">
 <a href="#description_nodejs" style="color: inherit; text-decoration: inherit;">description</a>
@@ -524,8 +495,7 @@ SSL certificate must be specified.
         <span class="property-type">string</span>
     </dt>
     <dd>{{% md %}}An optional description of this resource.
-{{% /md %}}</dd>
-    <dt class="property-optional"
+{{% /md %}}</dd><dt class="property-optional"
             title="Optional">
         <span id="name_nodejs">
 <a href="#name_nodejs" style="color: inherit; text-decoration: inherit;">name</a>
@@ -540,8 +510,7 @@ the regular expression `a-z?` which means the
 first character must be a lowercase letter, and all following
 characters must be a dash, lowercase letter, or digit, except the last
 character, which cannot be a dash.
-{{% /md %}}</dd>
-    <dt class="property-optional"
+{{% /md %}}</dd><dt class="property-optional"
             title="Optional">
         <span id="project_nodejs">
 <a href="#project_nodejs" style="color: inherit; text-decoration: inherit;">project</a>
@@ -551,8 +520,7 @@ character, which cannot be a dash.
     </dt>
     <dd>{{% md %}}The ID of the project in which the resource belongs.
 If it is not provided, the provider project is used.
-{{% /md %}}</dd>
-    <dt class="property-optional"
+{{% /md %}}</dd><dt class="property-optional"
             title="Optional">
         <span id="proxyheader_nodejs">
 <a href="#proxyheader_nodejs" style="color: inherit; text-decoration: inherit;">proxy<wbr>Header</a>
@@ -564,8 +532,7 @@ If it is not provided, the provider project is used.
 the backend.
 Default value is `NONE`.
 Possible values are `NONE` and `PROXY_V1`.
-{{% /md %}}</dd>
-    <dt class="property-optional"
+{{% /md %}}</dd><dt class="property-optional"
             title="Optional">
         <span id="sslpolicy_nodejs">
 <a href="#sslpolicy_nodejs" style="color: inherit; text-decoration: inherit;">ssl<wbr>Policy</a>
@@ -576,14 +543,11 @@ Possible values are `NONE` and `PROXY_V1`.
     <dd>{{% md %}}A reference to the SslPolicy resource that will be associated with
 the TargetSslProxy resource. If not set, the TargetSslProxy
 resource will not have any SSL policy configured.
-{{% /md %}}</dd>
-</dl>
+{{% /md %}}</dd></dl>
 {{% /choosable %}}
 
 {{% choosable language python %}}
-<dl class="resources-properties">
-
-    <dt class="property-required"
+<dl class="resources-properties"><dt class="property-required"
             title="Required">
         <span id="backend_service_python">
 <a href="#backend_service_python" style="color: inherit; text-decoration: inherit;">backend_<wbr>service</a>
@@ -592,8 +556,7 @@ resource will not have any SSL policy configured.
         <span class="property-type">str</span>
     </dt>
     <dd>{{% md %}}A reference to the BackendService resource.
-{{% /md %}}</dd>
-    <dt class="property-required"
+{{% /md %}}</dd><dt class="property-required"
             title="Required">
         <span id="ssl_certificates_python">
 <a href="#ssl_certificates_python" style="color: inherit; text-decoration: inherit;">ssl_<wbr>certificates</a>
@@ -604,8 +567,7 @@ resource will not have any SSL policy configured.
     <dd>{{% md %}}A list of SslCertificate resources that are used to authenticate
 connections between users and the load balancer. At least one
 SSL certificate must be specified.
-{{% /md %}}</dd>
-    <dt class="property-optional"
+{{% /md %}}</dd><dt class="property-optional"
             title="Optional">
         <span id="description_python">
 <a href="#description_python" style="color: inherit; text-decoration: inherit;">description</a>
@@ -614,8 +576,7 @@ SSL certificate must be specified.
         <span class="property-type">str</span>
     </dt>
     <dd>{{% md %}}An optional description of this resource.
-{{% /md %}}</dd>
-    <dt class="property-optional"
+{{% /md %}}</dd><dt class="property-optional"
             title="Optional">
         <span id="name_python">
 <a href="#name_python" style="color: inherit; text-decoration: inherit;">name</a>
@@ -630,8 +591,7 @@ the regular expression `a-z?` which means the
 first character must be a lowercase letter, and all following
 characters must be a dash, lowercase letter, or digit, except the last
 character, which cannot be a dash.
-{{% /md %}}</dd>
-    <dt class="property-optional"
+{{% /md %}}</dd><dt class="property-optional"
             title="Optional">
         <span id="project_python">
 <a href="#project_python" style="color: inherit; text-decoration: inherit;">project</a>
@@ -641,8 +601,7 @@ character, which cannot be a dash.
     </dt>
     <dd>{{% md %}}The ID of the project in which the resource belongs.
 If it is not provided, the provider project is used.
-{{% /md %}}</dd>
-    <dt class="property-optional"
+{{% /md %}}</dd><dt class="property-optional"
             title="Optional">
         <span id="proxy_header_python">
 <a href="#proxy_header_python" style="color: inherit; text-decoration: inherit;">proxy_<wbr>header</a>
@@ -654,8 +613,7 @@ If it is not provided, the provider project is used.
 the backend.
 Default value is `NONE`.
 Possible values are `NONE` and `PROXY_V1`.
-{{% /md %}}</dd>
-    <dt class="property-optional"
+{{% /md %}}</dd><dt class="property-optional"
             title="Optional">
         <span id="ssl_policy_python">
 <a href="#ssl_policy_python" style="color: inherit; text-decoration: inherit;">ssl_<wbr>policy</a>
@@ -666,8 +624,7 @@ Possible values are `NONE` and `PROXY_V1`.
     <dd>{{% md %}}A reference to the SslPolicy resource that will be associated with
 the TargetSslProxy resource. If not set, the TargetSslProxy
 resource will not have any SSL policy configured.
-{{% /md %}}</dd>
-</dl>
+{{% /md %}}</dd></dl>
 {{% /choosable %}}
 
 
@@ -678,9 +635,7 @@ All [input](#inputs) properties are implicitly available as output properties. A
 
 
 {{% choosable language csharp %}}
-<dl class="resources-properties">
-
-    <dt class="property-"
+<dl class="resources-properties"><dt class="property-"
             title="">
         <span id="creationtimestamp_csharp">
 <a href="#creationtimestamp_csharp" style="color: inherit; text-decoration: inherit;">Creation<wbr>Timestamp</a>
@@ -689,8 +644,7 @@ All [input](#inputs) properties are implicitly available as output properties. A
         <span class="property-type">string</span>
     </dt>
     <dd>{{% md %}}Creation timestamp in RFC3339 text format.
-{{% /md %}}</dd>
-    <dt class="property-"
+{{% /md %}}</dd><dt class="property-"
             title="">
         <span id="id_csharp">
 <a href="#id_csharp" style="color: inherit; text-decoration: inherit;">Id</a>
@@ -698,8 +652,7 @@ All [input](#inputs) properties are implicitly available as output properties. A
         <span class="property-indicator"></span>
         <span class="property-type">string</span>
     </dt>
-    <dd>{{% md %}}The provider-assigned unique ID for this managed resource.{{% /md %}}</dd>
-    <dt class="property-"
+    <dd>{{% md %}}The provider-assigned unique ID for this managed resource.{{% /md %}}</dd><dt class="property-"
             title="">
         <span id="proxyid_csharp">
 <a href="#proxyid_csharp" style="color: inherit; text-decoration: inherit;">Proxy<wbr>Id</a>
@@ -708,8 +661,7 @@ All [input](#inputs) properties are implicitly available as output properties. A
         <span class="property-type">int</span>
     </dt>
     <dd>{{% md %}}The unique identifier for the resource.
-{{% /md %}}</dd>
-    <dt class="property-"
+{{% /md %}}</dd><dt class="property-"
             title="">
         <span id="selflink_csharp">
 <a href="#selflink_csharp" style="color: inherit; text-decoration: inherit;">Self<wbr>Link</a>
@@ -718,14 +670,11 @@ All [input](#inputs) properties are implicitly available as output properties. A
         <span class="property-type">string</span>
     </dt>
     <dd>{{% md %}}The URI of the created resource.
-{{% /md %}}</dd>
-</dl>
+{{% /md %}}</dd></dl>
 {{% /choosable %}}
 
 {{% choosable language go %}}
-<dl class="resources-properties">
-
-    <dt class="property-"
+<dl class="resources-properties"><dt class="property-"
             title="">
         <span id="creationtimestamp_go">
 <a href="#creationtimestamp_go" style="color: inherit; text-decoration: inherit;">Creation<wbr>Timestamp</a>
@@ -734,8 +683,7 @@ All [input](#inputs) properties are implicitly available as output properties. A
         <span class="property-type">string</span>
     </dt>
     <dd>{{% md %}}Creation timestamp in RFC3339 text format.
-{{% /md %}}</dd>
-    <dt class="property-"
+{{% /md %}}</dd><dt class="property-"
             title="">
         <span id="id_go">
 <a href="#id_go" style="color: inherit; text-decoration: inherit;">Id</a>
@@ -743,8 +691,7 @@ All [input](#inputs) properties are implicitly available as output properties. A
         <span class="property-indicator"></span>
         <span class="property-type">string</span>
     </dt>
-    <dd>{{% md %}}The provider-assigned unique ID for this managed resource.{{% /md %}}</dd>
-    <dt class="property-"
+    <dd>{{% md %}}The provider-assigned unique ID for this managed resource.{{% /md %}}</dd><dt class="property-"
             title="">
         <span id="proxyid_go">
 <a href="#proxyid_go" style="color: inherit; text-decoration: inherit;">Proxy<wbr>Id</a>
@@ -753,8 +700,7 @@ All [input](#inputs) properties are implicitly available as output properties. A
         <span class="property-type">int</span>
     </dt>
     <dd>{{% md %}}The unique identifier for the resource.
-{{% /md %}}</dd>
-    <dt class="property-"
+{{% /md %}}</dd><dt class="property-"
             title="">
         <span id="selflink_go">
 <a href="#selflink_go" style="color: inherit; text-decoration: inherit;">Self<wbr>Link</a>
@@ -763,14 +709,11 @@ All [input](#inputs) properties are implicitly available as output properties. A
         <span class="property-type">string</span>
     </dt>
     <dd>{{% md %}}The URI of the created resource.
-{{% /md %}}</dd>
-</dl>
+{{% /md %}}</dd></dl>
 {{% /choosable %}}
 
 {{% choosable language nodejs %}}
-<dl class="resources-properties">
-
-    <dt class="property-"
+<dl class="resources-properties"><dt class="property-"
             title="">
         <span id="creationtimestamp_nodejs">
 <a href="#creationtimestamp_nodejs" style="color: inherit; text-decoration: inherit;">creation<wbr>Timestamp</a>
@@ -779,8 +722,7 @@ All [input](#inputs) properties are implicitly available as output properties. A
         <span class="property-type">string</span>
     </dt>
     <dd>{{% md %}}Creation timestamp in RFC3339 text format.
-{{% /md %}}</dd>
-    <dt class="property-"
+{{% /md %}}</dd><dt class="property-"
             title="">
         <span id="id_nodejs">
 <a href="#id_nodejs" style="color: inherit; text-decoration: inherit;">id</a>
@@ -788,8 +730,7 @@ All [input](#inputs) properties are implicitly available as output properties. A
         <span class="property-indicator"></span>
         <span class="property-type">string</span>
     </dt>
-    <dd>{{% md %}}The provider-assigned unique ID for this managed resource.{{% /md %}}</dd>
-    <dt class="property-"
+    <dd>{{% md %}}The provider-assigned unique ID for this managed resource.{{% /md %}}</dd><dt class="property-"
             title="">
         <span id="proxyid_nodejs">
 <a href="#proxyid_nodejs" style="color: inherit; text-decoration: inherit;">proxy<wbr>Id</a>
@@ -798,8 +739,7 @@ All [input](#inputs) properties are implicitly available as output properties. A
         <span class="property-type">number</span>
     </dt>
     <dd>{{% md %}}The unique identifier for the resource.
-{{% /md %}}</dd>
-    <dt class="property-"
+{{% /md %}}</dd><dt class="property-"
             title="">
         <span id="selflink_nodejs">
 <a href="#selflink_nodejs" style="color: inherit; text-decoration: inherit;">self<wbr>Link</a>
@@ -808,14 +748,11 @@ All [input](#inputs) properties are implicitly available as output properties. A
         <span class="property-type">string</span>
     </dt>
     <dd>{{% md %}}The URI of the created resource.
-{{% /md %}}</dd>
-</dl>
+{{% /md %}}</dd></dl>
 {{% /choosable %}}
 
 {{% choosable language python %}}
-<dl class="resources-properties">
-
-    <dt class="property-"
+<dl class="resources-properties"><dt class="property-"
             title="">
         <span id="creation_timestamp_python">
 <a href="#creation_timestamp_python" style="color: inherit; text-decoration: inherit;">creation_<wbr>timestamp</a>
@@ -824,8 +761,7 @@ All [input](#inputs) properties are implicitly available as output properties. A
         <span class="property-type">str</span>
     </dt>
     <dd>{{% md %}}Creation timestamp in RFC3339 text format.
-{{% /md %}}</dd>
-    <dt class="property-"
+{{% /md %}}</dd><dt class="property-"
             title="">
         <span id="id_python">
 <a href="#id_python" style="color: inherit; text-decoration: inherit;">id</a>
@@ -833,8 +769,7 @@ All [input](#inputs) properties are implicitly available as output properties. A
         <span class="property-indicator"></span>
         <span class="property-type">str</span>
     </dt>
-    <dd>{{% md %}}The provider-assigned unique ID for this managed resource.{{% /md %}}</dd>
-    <dt class="property-"
+    <dd>{{% md %}}The provider-assigned unique ID for this managed resource.{{% /md %}}</dd><dt class="property-"
             title="">
         <span id="proxy_id_python">
 <a href="#proxy_id_python" style="color: inherit; text-decoration: inherit;">proxy_<wbr>id</a>
@@ -843,8 +778,7 @@ All [input](#inputs) properties are implicitly available as output properties. A
         <span class="property-type">int</span>
     </dt>
     <dd>{{% md %}}The unique identifier for the resource.
-{{% /md %}}</dd>
-    <dt class="property-"
+{{% /md %}}</dd><dt class="property-"
             title="">
         <span id="self_link_python">
 <a href="#self_link_python" style="color: inherit; text-decoration: inherit;">self_<wbr>link</a>
@@ -853,8 +787,7 @@ All [input](#inputs) properties are implicitly available as output properties. A
         <span class="property-type">str</span>
     </dt>
     <dd>{{% md %}}The URI of the created resource.
-{{% /md %}}</dd>
-</dl>
+{{% /md %}}</dd></dl>
 {{% /choosable %}}
 
 
@@ -981,9 +914,7 @@ The following state arguments are supported:
 
 
 {{% choosable language csharp %}}
-<dl class="resources-properties">
-
-    <dt class="property-optional"
+<dl class="resources-properties"><dt class="property-optional"
             title="Optional">
         <span id="state_backendservice_csharp">
 <a href="#state_backendservice_csharp" style="color: inherit; text-decoration: inherit;">Backend<wbr>Service</a>
@@ -992,8 +923,7 @@ The following state arguments are supported:
         <span class="property-type">string</span>
     </dt>
     <dd>{{% md %}}A reference to the BackendService resource.
-{{% /md %}}</dd>
-    <dt class="property-optional"
+{{% /md %}}</dd><dt class="property-optional"
             title="Optional">
         <span id="state_creationtimestamp_csharp">
 <a href="#state_creationtimestamp_csharp" style="color: inherit; text-decoration: inherit;">Creation<wbr>Timestamp</a>
@@ -1002,8 +932,7 @@ The following state arguments are supported:
         <span class="property-type">string</span>
     </dt>
     <dd>{{% md %}}Creation timestamp in RFC3339 text format.
-{{% /md %}}</dd>
-    <dt class="property-optional"
+{{% /md %}}</dd><dt class="property-optional"
             title="Optional">
         <span id="state_description_csharp">
 <a href="#state_description_csharp" style="color: inherit; text-decoration: inherit;">Description</a>
@@ -1012,8 +941,7 @@ The following state arguments are supported:
         <span class="property-type">string</span>
     </dt>
     <dd>{{% md %}}An optional description of this resource.
-{{% /md %}}</dd>
-    <dt class="property-optional"
+{{% /md %}}</dd><dt class="property-optional"
             title="Optional">
         <span id="state_name_csharp">
 <a href="#state_name_csharp" style="color: inherit; text-decoration: inherit;">Name</a>
@@ -1028,8 +956,7 @@ the regular expression `a-z?` which means the
 first character must be a lowercase letter, and all following
 characters must be a dash, lowercase letter, or digit, except the last
 character, which cannot be a dash.
-{{% /md %}}</dd>
-    <dt class="property-optional"
+{{% /md %}}</dd><dt class="property-optional"
             title="Optional">
         <span id="state_project_csharp">
 <a href="#state_project_csharp" style="color: inherit; text-decoration: inherit;">Project</a>
@@ -1039,8 +966,7 @@ character, which cannot be a dash.
     </dt>
     <dd>{{% md %}}The ID of the project in which the resource belongs.
 If it is not provided, the provider project is used.
-{{% /md %}}</dd>
-    <dt class="property-optional"
+{{% /md %}}</dd><dt class="property-optional"
             title="Optional">
         <span id="state_proxyheader_csharp">
 <a href="#state_proxyheader_csharp" style="color: inherit; text-decoration: inherit;">Proxy<wbr>Header</a>
@@ -1052,8 +978,7 @@ If it is not provided, the provider project is used.
 the backend.
 Default value is `NONE`.
 Possible values are `NONE` and `PROXY_V1`.
-{{% /md %}}</dd>
-    <dt class="property-optional"
+{{% /md %}}</dd><dt class="property-optional"
             title="Optional">
         <span id="state_proxyid_csharp">
 <a href="#state_proxyid_csharp" style="color: inherit; text-decoration: inherit;">Proxy<wbr>Id</a>
@@ -1062,8 +987,7 @@ Possible values are `NONE` and `PROXY_V1`.
         <span class="property-type">int</span>
     </dt>
     <dd>{{% md %}}The unique identifier for the resource.
-{{% /md %}}</dd>
-    <dt class="property-optional"
+{{% /md %}}</dd><dt class="property-optional"
             title="Optional">
         <span id="state_selflink_csharp">
 <a href="#state_selflink_csharp" style="color: inherit; text-decoration: inherit;">Self<wbr>Link</a>
@@ -1072,8 +996,7 @@ Possible values are `NONE` and `PROXY_V1`.
         <span class="property-type">string</span>
     </dt>
     <dd>{{% md %}}The URI of the created resource.
-{{% /md %}}</dd>
-    <dt class="property-optional"
+{{% /md %}}</dd><dt class="property-optional"
             title="Optional">
         <span id="state_sslcertificates_csharp">
 <a href="#state_sslcertificates_csharp" style="color: inherit; text-decoration: inherit;">Ssl<wbr>Certificates</a>
@@ -1084,8 +1007,7 @@ Possible values are `NONE` and `PROXY_V1`.
     <dd>{{% md %}}A list of SslCertificate resources that are used to authenticate
 connections between users and the load balancer. At least one
 SSL certificate must be specified.
-{{% /md %}}</dd>
-    <dt class="property-optional"
+{{% /md %}}</dd><dt class="property-optional"
             title="Optional">
         <span id="state_sslpolicy_csharp">
 <a href="#state_sslpolicy_csharp" style="color: inherit; text-decoration: inherit;">Ssl<wbr>Policy</a>
@@ -1096,14 +1018,11 @@ SSL certificate must be specified.
     <dd>{{% md %}}A reference to the SslPolicy resource that will be associated with
 the TargetSslProxy resource. If not set, the TargetSslProxy
 resource will not have any SSL policy configured.
-{{% /md %}}</dd>
-</dl>
+{{% /md %}}</dd></dl>
 {{% /choosable %}}
 
 {{% choosable language go %}}
-<dl class="resources-properties">
-
-    <dt class="property-optional"
+<dl class="resources-properties"><dt class="property-optional"
             title="Optional">
         <span id="state_backendservice_go">
 <a href="#state_backendservice_go" style="color: inherit; text-decoration: inherit;">Backend<wbr>Service</a>
@@ -1112,8 +1031,7 @@ resource will not have any SSL policy configured.
         <span class="property-type">string</span>
     </dt>
     <dd>{{% md %}}A reference to the BackendService resource.
-{{% /md %}}</dd>
-    <dt class="property-optional"
+{{% /md %}}</dd><dt class="property-optional"
             title="Optional">
         <span id="state_creationtimestamp_go">
 <a href="#state_creationtimestamp_go" style="color: inherit; text-decoration: inherit;">Creation<wbr>Timestamp</a>
@@ -1122,8 +1040,7 @@ resource will not have any SSL policy configured.
         <span class="property-type">string</span>
     </dt>
     <dd>{{% md %}}Creation timestamp in RFC3339 text format.
-{{% /md %}}</dd>
-    <dt class="property-optional"
+{{% /md %}}</dd><dt class="property-optional"
             title="Optional">
         <span id="state_description_go">
 <a href="#state_description_go" style="color: inherit; text-decoration: inherit;">Description</a>
@@ -1132,8 +1049,7 @@ resource will not have any SSL policy configured.
         <span class="property-type">string</span>
     </dt>
     <dd>{{% md %}}An optional description of this resource.
-{{% /md %}}</dd>
-    <dt class="property-optional"
+{{% /md %}}</dd><dt class="property-optional"
             title="Optional">
         <span id="state_name_go">
 <a href="#state_name_go" style="color: inherit; text-decoration: inherit;">Name</a>
@@ -1148,8 +1064,7 @@ the regular expression `a-z?` which means the
 first character must be a lowercase letter, and all following
 characters must be a dash, lowercase letter, or digit, except the last
 character, which cannot be a dash.
-{{% /md %}}</dd>
-    <dt class="property-optional"
+{{% /md %}}</dd><dt class="property-optional"
             title="Optional">
         <span id="state_project_go">
 <a href="#state_project_go" style="color: inherit; text-decoration: inherit;">Project</a>
@@ -1159,8 +1074,7 @@ character, which cannot be a dash.
     </dt>
     <dd>{{% md %}}The ID of the project in which the resource belongs.
 If it is not provided, the provider project is used.
-{{% /md %}}</dd>
-    <dt class="property-optional"
+{{% /md %}}</dd><dt class="property-optional"
             title="Optional">
         <span id="state_proxyheader_go">
 <a href="#state_proxyheader_go" style="color: inherit; text-decoration: inherit;">Proxy<wbr>Header</a>
@@ -1172,8 +1086,7 @@ If it is not provided, the provider project is used.
 the backend.
 Default value is `NONE`.
 Possible values are `NONE` and `PROXY_V1`.
-{{% /md %}}</dd>
-    <dt class="property-optional"
+{{% /md %}}</dd><dt class="property-optional"
             title="Optional">
         <span id="state_proxyid_go">
 <a href="#state_proxyid_go" style="color: inherit; text-decoration: inherit;">Proxy<wbr>Id</a>
@@ -1182,8 +1095,7 @@ Possible values are `NONE` and `PROXY_V1`.
         <span class="property-type">int</span>
     </dt>
     <dd>{{% md %}}The unique identifier for the resource.
-{{% /md %}}</dd>
-    <dt class="property-optional"
+{{% /md %}}</dd><dt class="property-optional"
             title="Optional">
         <span id="state_selflink_go">
 <a href="#state_selflink_go" style="color: inherit; text-decoration: inherit;">Self<wbr>Link</a>
@@ -1192,8 +1104,7 @@ Possible values are `NONE` and `PROXY_V1`.
         <span class="property-type">string</span>
     </dt>
     <dd>{{% md %}}The URI of the created resource.
-{{% /md %}}</dd>
-    <dt class="property-optional"
+{{% /md %}}</dd><dt class="property-optional"
             title="Optional">
         <span id="state_sslcertificates_go">
 <a href="#state_sslcertificates_go" style="color: inherit; text-decoration: inherit;">Ssl<wbr>Certificates</a>
@@ -1204,8 +1115,7 @@ Possible values are `NONE` and `PROXY_V1`.
     <dd>{{% md %}}A list of SslCertificate resources that are used to authenticate
 connections between users and the load balancer. At least one
 SSL certificate must be specified.
-{{% /md %}}</dd>
-    <dt class="property-optional"
+{{% /md %}}</dd><dt class="property-optional"
             title="Optional">
         <span id="state_sslpolicy_go">
 <a href="#state_sslpolicy_go" style="color: inherit; text-decoration: inherit;">Ssl<wbr>Policy</a>
@@ -1216,14 +1126,11 @@ SSL certificate must be specified.
     <dd>{{% md %}}A reference to the SslPolicy resource that will be associated with
 the TargetSslProxy resource. If not set, the TargetSslProxy
 resource will not have any SSL policy configured.
-{{% /md %}}</dd>
-</dl>
+{{% /md %}}</dd></dl>
 {{% /choosable %}}
 
 {{% choosable language nodejs %}}
-<dl class="resources-properties">
-
-    <dt class="property-optional"
+<dl class="resources-properties"><dt class="property-optional"
             title="Optional">
         <span id="state_backendservice_nodejs">
 <a href="#state_backendservice_nodejs" style="color: inherit; text-decoration: inherit;">backend<wbr>Service</a>
@@ -1232,8 +1139,7 @@ resource will not have any SSL policy configured.
         <span class="property-type">string</span>
     </dt>
     <dd>{{% md %}}A reference to the BackendService resource.
-{{% /md %}}</dd>
-    <dt class="property-optional"
+{{% /md %}}</dd><dt class="property-optional"
             title="Optional">
         <span id="state_creationtimestamp_nodejs">
 <a href="#state_creationtimestamp_nodejs" style="color: inherit; text-decoration: inherit;">creation<wbr>Timestamp</a>
@@ -1242,8 +1148,7 @@ resource will not have any SSL policy configured.
         <span class="property-type">string</span>
     </dt>
     <dd>{{% md %}}Creation timestamp in RFC3339 text format.
-{{% /md %}}</dd>
-    <dt class="property-optional"
+{{% /md %}}</dd><dt class="property-optional"
             title="Optional">
         <span id="state_description_nodejs">
 <a href="#state_description_nodejs" style="color: inherit; text-decoration: inherit;">description</a>
@@ -1252,8 +1157,7 @@ resource will not have any SSL policy configured.
         <span class="property-type">string</span>
     </dt>
     <dd>{{% md %}}An optional description of this resource.
-{{% /md %}}</dd>
-    <dt class="property-optional"
+{{% /md %}}</dd><dt class="property-optional"
             title="Optional">
         <span id="state_name_nodejs">
 <a href="#state_name_nodejs" style="color: inherit; text-decoration: inherit;">name</a>
@@ -1268,8 +1172,7 @@ the regular expression `a-z?` which means the
 first character must be a lowercase letter, and all following
 characters must be a dash, lowercase letter, or digit, except the last
 character, which cannot be a dash.
-{{% /md %}}</dd>
-    <dt class="property-optional"
+{{% /md %}}</dd><dt class="property-optional"
             title="Optional">
         <span id="state_project_nodejs">
 <a href="#state_project_nodejs" style="color: inherit; text-decoration: inherit;">project</a>
@@ -1279,8 +1182,7 @@ character, which cannot be a dash.
     </dt>
     <dd>{{% md %}}The ID of the project in which the resource belongs.
 If it is not provided, the provider project is used.
-{{% /md %}}</dd>
-    <dt class="property-optional"
+{{% /md %}}</dd><dt class="property-optional"
             title="Optional">
         <span id="state_proxyheader_nodejs">
 <a href="#state_proxyheader_nodejs" style="color: inherit; text-decoration: inherit;">proxy<wbr>Header</a>
@@ -1292,8 +1194,7 @@ If it is not provided, the provider project is used.
 the backend.
 Default value is `NONE`.
 Possible values are `NONE` and `PROXY_V1`.
-{{% /md %}}</dd>
-    <dt class="property-optional"
+{{% /md %}}</dd><dt class="property-optional"
             title="Optional">
         <span id="state_proxyid_nodejs">
 <a href="#state_proxyid_nodejs" style="color: inherit; text-decoration: inherit;">proxy<wbr>Id</a>
@@ -1302,8 +1203,7 @@ Possible values are `NONE` and `PROXY_V1`.
         <span class="property-type">number</span>
     </dt>
     <dd>{{% md %}}The unique identifier for the resource.
-{{% /md %}}</dd>
-    <dt class="property-optional"
+{{% /md %}}</dd><dt class="property-optional"
             title="Optional">
         <span id="state_selflink_nodejs">
 <a href="#state_selflink_nodejs" style="color: inherit; text-decoration: inherit;">self<wbr>Link</a>
@@ -1312,8 +1212,7 @@ Possible values are `NONE` and `PROXY_V1`.
         <span class="property-type">string</span>
     </dt>
     <dd>{{% md %}}The URI of the created resource.
-{{% /md %}}</dd>
-    <dt class="property-optional"
+{{% /md %}}</dd><dt class="property-optional"
             title="Optional">
         <span id="state_sslcertificates_nodejs">
 <a href="#state_sslcertificates_nodejs" style="color: inherit; text-decoration: inherit;">ssl<wbr>Certificates</a>
@@ -1324,8 +1223,7 @@ Possible values are `NONE` and `PROXY_V1`.
     <dd>{{% md %}}A list of SslCertificate resources that are used to authenticate
 connections between users and the load balancer. At least one
 SSL certificate must be specified.
-{{% /md %}}</dd>
-    <dt class="property-optional"
+{{% /md %}}</dd><dt class="property-optional"
             title="Optional">
         <span id="state_sslpolicy_nodejs">
 <a href="#state_sslpolicy_nodejs" style="color: inherit; text-decoration: inherit;">ssl<wbr>Policy</a>
@@ -1336,14 +1234,11 @@ SSL certificate must be specified.
     <dd>{{% md %}}A reference to the SslPolicy resource that will be associated with
 the TargetSslProxy resource. If not set, the TargetSslProxy
 resource will not have any SSL policy configured.
-{{% /md %}}</dd>
-</dl>
+{{% /md %}}</dd></dl>
 {{% /choosable %}}
 
 {{% choosable language python %}}
-<dl class="resources-properties">
-
-    <dt class="property-optional"
+<dl class="resources-properties"><dt class="property-optional"
             title="Optional">
         <span id="state_backend_service_python">
 <a href="#state_backend_service_python" style="color: inherit; text-decoration: inherit;">backend_<wbr>service</a>
@@ -1352,8 +1247,7 @@ resource will not have any SSL policy configured.
         <span class="property-type">str</span>
     </dt>
     <dd>{{% md %}}A reference to the BackendService resource.
-{{% /md %}}</dd>
-    <dt class="property-optional"
+{{% /md %}}</dd><dt class="property-optional"
             title="Optional">
         <span id="state_creation_timestamp_python">
 <a href="#state_creation_timestamp_python" style="color: inherit; text-decoration: inherit;">creation_<wbr>timestamp</a>
@@ -1362,8 +1256,7 @@ resource will not have any SSL policy configured.
         <span class="property-type">str</span>
     </dt>
     <dd>{{% md %}}Creation timestamp in RFC3339 text format.
-{{% /md %}}</dd>
-    <dt class="property-optional"
+{{% /md %}}</dd><dt class="property-optional"
             title="Optional">
         <span id="state_description_python">
 <a href="#state_description_python" style="color: inherit; text-decoration: inherit;">description</a>
@@ -1372,8 +1265,7 @@ resource will not have any SSL policy configured.
         <span class="property-type">str</span>
     </dt>
     <dd>{{% md %}}An optional description of this resource.
-{{% /md %}}</dd>
-    <dt class="property-optional"
+{{% /md %}}</dd><dt class="property-optional"
             title="Optional">
         <span id="state_name_python">
 <a href="#state_name_python" style="color: inherit; text-decoration: inherit;">name</a>
@@ -1388,8 +1280,7 @@ the regular expression `a-z?` which means the
 first character must be a lowercase letter, and all following
 characters must be a dash, lowercase letter, or digit, except the last
 character, which cannot be a dash.
-{{% /md %}}</dd>
-    <dt class="property-optional"
+{{% /md %}}</dd><dt class="property-optional"
             title="Optional">
         <span id="state_project_python">
 <a href="#state_project_python" style="color: inherit; text-decoration: inherit;">project</a>
@@ -1399,8 +1290,7 @@ character, which cannot be a dash.
     </dt>
     <dd>{{% md %}}The ID of the project in which the resource belongs.
 If it is not provided, the provider project is used.
-{{% /md %}}</dd>
-    <dt class="property-optional"
+{{% /md %}}</dd><dt class="property-optional"
             title="Optional">
         <span id="state_proxy_header_python">
 <a href="#state_proxy_header_python" style="color: inherit; text-decoration: inherit;">proxy_<wbr>header</a>
@@ -1412,8 +1302,7 @@ If it is not provided, the provider project is used.
 the backend.
 Default value is `NONE`.
 Possible values are `NONE` and `PROXY_V1`.
-{{% /md %}}</dd>
-    <dt class="property-optional"
+{{% /md %}}</dd><dt class="property-optional"
             title="Optional">
         <span id="state_proxy_id_python">
 <a href="#state_proxy_id_python" style="color: inherit; text-decoration: inherit;">proxy_<wbr>id</a>
@@ -1422,8 +1311,7 @@ Possible values are `NONE` and `PROXY_V1`.
         <span class="property-type">int</span>
     </dt>
     <dd>{{% md %}}The unique identifier for the resource.
-{{% /md %}}</dd>
-    <dt class="property-optional"
+{{% /md %}}</dd><dt class="property-optional"
             title="Optional">
         <span id="state_self_link_python">
 <a href="#state_self_link_python" style="color: inherit; text-decoration: inherit;">self_<wbr>link</a>
@@ -1432,8 +1320,7 @@ Possible values are `NONE` and `PROXY_V1`.
         <span class="property-type">str</span>
     </dt>
     <dd>{{% md %}}The URI of the created resource.
-{{% /md %}}</dd>
-    <dt class="property-optional"
+{{% /md %}}</dd><dt class="property-optional"
             title="Optional">
         <span id="state_ssl_certificates_python">
 <a href="#state_ssl_certificates_python" style="color: inherit; text-decoration: inherit;">ssl_<wbr>certificates</a>
@@ -1444,8 +1331,7 @@ Possible values are `NONE` and `PROXY_V1`.
     <dd>{{% md %}}A list of SslCertificate resources that are used to authenticate
 connections between users and the load balancer. At least one
 SSL certificate must be specified.
-{{% /md %}}</dd>
-    <dt class="property-optional"
+{{% /md %}}</dd><dt class="property-optional"
             title="Optional">
         <span id="state_ssl_policy_python">
 <a href="#state_ssl_policy_python" style="color: inherit; text-decoration: inherit;">ssl_<wbr>policy</a>
@@ -1456,8 +1342,7 @@ SSL certificate must be specified.
     <dd>{{% md %}}A reference to the SslPolicy resource that will be associated with
 the TargetSslProxy resource. If not set, the TargetSslProxy
 resource will not have any SSL policy configured.
-{{% /md %}}</dd>
-</dl>
+{{% /md %}}</dd></dl>
 {{% /choosable %}}
 
 
@@ -1491,6 +1376,6 @@ TargetSslProxy can be imported using any of these accepted formats
 	<dt>License</dt>
 	<dd>Apache-2.0</dd>
 	<dt>Notes</dt>
-	<dd>This Pulumi package is based on the [`google-beta` Terraform Provider](https://github.com/hashicorp/terraform-provider-google-beta).</dd>
+	<dd>{{% md %}}This Pulumi package is based on the [`google-beta` Terraform Provider](https://github.com/hashicorp/terraform-provider-google-beta).{{% /md %}}</dd>
 </dl>
 

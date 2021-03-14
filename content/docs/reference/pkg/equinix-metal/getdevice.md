@@ -18,11 +18,17 @@ Provides an Equinix Metal device datasource.
 
 
 {{% examples %}}
+
 ## Example Usage
 
 {{< chooser language "typescript,python,go,csharp" / >}}
 
-{{% example csharp %}}
+
+
+
+
+{{< example csharp >}}
+
 ```csharp
 using Pulumi;
 using EquinixMetal = Pulumi.EquinixMetal;
@@ -44,9 +50,12 @@ class MyStack : Stack
 }
 ```
 
-{{% /example %}}
 
-{{% example go %}}
+{{< /example >}}
+
+
+{{< example go >}}
+
 ```go
 package main
 
@@ -72,9 +81,12 @@ func main() {
 }
 ```
 
-{{% /example %}}
 
-{{% example python %}}
+{{< /example >}}
+
+
+{{< example python >}}
+
 ```python
 import pulumi
 import pulumi_equinix_metal as equinix_metal
@@ -84,9 +96,12 @@ test = equinix_metal.get_device(project_id=local["project_id"],
 pulumi.export("id", test.id)
 ```
 
-{{% /example %}}
 
-{{% example typescript %}}
+{{< /example >}}
+
+
+{{< example typescript >}}
+
 
 ```typescript
 import * as pulumi from "@pulumi/pulumi";
@@ -99,9 +114,16 @@ const test = equinix_metal.getDevice({
 export const id = test.then(test => test.id);
 ```
 
-{{% /example %}}
+
+{{< /example >}}
+
+
+
+
 
 {{% /examples %}}
+
+
 
 
 ## Using getDevice {#using}
@@ -139,9 +161,7 @@ The following arguments are supported:
 
 
 {{% choosable language csharp %}}
-<dl class="resources-properties">
-
-    <dt class="property-optional"
+<dl class="resources-properties"><dt class="property-optional"
             title="Optional">
         <span id="deviceid_csharp">
 <a href="#deviceid_csharp" style="color: inherit; text-decoration: inherit;">Device<wbr>Id</a>
@@ -150,8 +170,7 @@ The following arguments are supported:
         <span class="property-type">string</span>
     </dt>
     <dd>{{% md %}}Device ID
-{{% /md %}}</dd>
-    <dt class="property-optional"
+{{% /md %}}</dd><dt class="property-optional"
             title="Optional">
         <span id="hostname_csharp">
 <a href="#hostname_csharp" style="color: inherit; text-decoration: inherit;">Hostname</a>
@@ -160,8 +179,7 @@ The following arguments are supported:
         <span class="property-type">string</span>
     </dt>
     <dd>{{% md %}}The device name
-{{% /md %}}</dd>
-    <dt class="property-optional"
+{{% /md %}}</dd><dt class="property-optional"
             title="Optional">
         <span id="projectid_csharp">
 <a href="#projectid_csharp" style="color: inherit; text-decoration: inherit;">Project<wbr>Id</a>
@@ -170,14 +188,11 @@ The following arguments are supported:
         <span class="property-type">string</span>
     </dt>
     <dd>{{% md %}}The id of the project in which the devices exists
-{{% /md %}}</dd>
-</dl>
+{{% /md %}}</dd></dl>
 {{% /choosable %}}
 
 {{% choosable language go %}}
-<dl class="resources-properties">
-
-    <dt class="property-optional"
+<dl class="resources-properties"><dt class="property-optional"
             title="Optional">
         <span id="deviceid_go">
 <a href="#deviceid_go" style="color: inherit; text-decoration: inherit;">Device<wbr>Id</a>
@@ -186,8 +201,7 @@ The following arguments are supported:
         <span class="property-type">string</span>
     </dt>
     <dd>{{% md %}}Device ID
-{{% /md %}}</dd>
-    <dt class="property-optional"
+{{% /md %}}</dd><dt class="property-optional"
             title="Optional">
         <span id="hostname_go">
 <a href="#hostname_go" style="color: inherit; text-decoration: inherit;">Hostname</a>
@@ -196,8 +210,7 @@ The following arguments are supported:
         <span class="property-type">string</span>
     </dt>
     <dd>{{% md %}}The device name
-{{% /md %}}</dd>
-    <dt class="property-optional"
+{{% /md %}}</dd><dt class="property-optional"
             title="Optional">
         <span id="projectid_go">
 <a href="#projectid_go" style="color: inherit; text-decoration: inherit;">Project<wbr>Id</a>
@@ -206,14 +219,11 @@ The following arguments are supported:
         <span class="property-type">string</span>
     </dt>
     <dd>{{% md %}}The id of the project in which the devices exists
-{{% /md %}}</dd>
-</dl>
+{{% /md %}}</dd></dl>
 {{% /choosable %}}
 
 {{% choosable language nodejs %}}
-<dl class="resources-properties">
-
-    <dt class="property-optional"
+<dl class="resources-properties"><dt class="property-optional"
             title="Optional">
         <span id="deviceid_nodejs">
 <a href="#deviceid_nodejs" style="color: inherit; text-decoration: inherit;">device<wbr>Id</a>
@@ -222,8 +232,7 @@ The following arguments are supported:
         <span class="property-type">string</span>
     </dt>
     <dd>{{% md %}}Device ID
-{{% /md %}}</dd>
-    <dt class="property-optional"
+{{% /md %}}</dd><dt class="property-optional"
             title="Optional">
         <span id="hostname_nodejs">
 <a href="#hostname_nodejs" style="color: inherit; text-decoration: inherit;">hostname</a>
@@ -232,8 +241,7 @@ The following arguments are supported:
         <span class="property-type">string</span>
     </dt>
     <dd>{{% md %}}The device name
-{{% /md %}}</dd>
-    <dt class="property-optional"
+{{% /md %}}</dd><dt class="property-optional"
             title="Optional">
         <span id="projectid_nodejs">
 <a href="#projectid_nodejs" style="color: inherit; text-decoration: inherit;">project<wbr>Id</a>
@@ -242,14 +250,11 @@ The following arguments are supported:
         <span class="property-type">string</span>
     </dt>
     <dd>{{% md %}}The id of the project in which the devices exists
-{{% /md %}}</dd>
-</dl>
+{{% /md %}}</dd></dl>
 {{% /choosable %}}
 
 {{% choosable language python %}}
-<dl class="resources-properties">
-
-    <dt class="property-optional"
+<dl class="resources-properties"><dt class="property-optional"
             title="Optional">
         <span id="device_id_python">
 <a href="#device_id_python" style="color: inherit; text-decoration: inherit;">device_<wbr>id</a>
@@ -258,8 +263,7 @@ The following arguments are supported:
         <span class="property-type">str</span>
     </dt>
     <dd>{{% md %}}Device ID
-{{% /md %}}</dd>
-    <dt class="property-optional"
+{{% /md %}}</dd><dt class="property-optional"
             title="Optional">
         <span id="hostname_python">
 <a href="#hostname_python" style="color: inherit; text-decoration: inherit;">hostname</a>
@@ -268,8 +272,7 @@ The following arguments are supported:
         <span class="property-type">str</span>
     </dt>
     <dd>{{% md %}}The device name
-{{% /md %}}</dd>
-    <dt class="property-optional"
+{{% /md %}}</dd><dt class="property-optional"
             title="Optional">
         <span id="project_id_python">
 <a href="#project_id_python" style="color: inherit; text-decoration: inherit;">project_<wbr>id</a>
@@ -278,8 +281,7 @@ The following arguments are supported:
         <span class="property-type">str</span>
     </dt>
     <dd>{{% md %}}The id of the project in which the devices exists
-{{% /md %}}</dd>
-</dl>
+{{% /md %}}</dd></dl>
 {{% /choosable %}}
 
 
@@ -292,9 +294,7 @@ The following output properties are available:
 
 
 {{% choosable language csharp %}}
-<dl class="resources-properties">
-
-    <dt class="property-"
+<dl class="resources-properties"><dt class="property-"
             title="">
         <span id="accessprivateipv4_csharp">
 <a href="#accessprivateipv4_csharp" style="color: inherit; text-decoration: inherit;">Access<wbr>Private<wbr>Ipv4</a>
@@ -303,8 +303,7 @@ The following output properties are available:
         <span class="property-type">string</span>
     </dt>
     <dd>{{% md %}}The ipv4 private IP assigned to the device
-{{% /md %}}</dd>
-    <dt class="property-"
+{{% /md %}}</dd><dt class="property-"
             title="">
         <span id="accesspublicipv4_csharp">
 <a href="#accesspublicipv4_csharp" style="color: inherit; text-decoration: inherit;">Access<wbr>Public<wbr>Ipv4</a>
@@ -313,8 +312,7 @@ The following output properties are available:
         <span class="property-type">string</span>
     </dt>
     <dd>{{% md %}}The ipv4 management IP assigned to the device
-{{% /md %}}</dd>
-    <dt class="property-"
+{{% /md %}}</dd><dt class="property-"
             title="">
         <span id="accesspublicipv6_csharp">
 <a href="#accesspublicipv6_csharp" style="color: inherit; text-decoration: inherit;">Access<wbr>Public<wbr>Ipv6</a>
@@ -323,8 +321,7 @@ The following output properties are available:
         <span class="property-type">string</span>
     </dt>
     <dd>{{% md %}}The ipv6 management IP assigned to the device
-{{% /md %}}</dd>
-    <dt class="property-"
+{{% /md %}}</dd><dt class="property-"
             title="">
         <span id="alwayspxe_csharp">
 <a href="#alwayspxe_csharp" style="color: inherit; text-decoration: inherit;">Always<wbr>Pxe</a>
@@ -332,8 +329,7 @@ The following output properties are available:
         <span class="property-indicator"></span>
         <span class="property-type">bool</span>
     </dt>
-    <dd>{{% md %}}{{% /md %}}</dd>
-    <dt class="property-"
+    <dd>{{% md %}}{{% /md %}}</dd><dt class="property-"
             title="">
         <span id="billingcycle_csharp">
 <a href="#billingcycle_csharp" style="color: inherit; text-decoration: inherit;">Billing<wbr>Cycle</a>
@@ -342,8 +338,7 @@ The following output properties are available:
         <span class="property-type">string</span>
     </dt>
     <dd>{{% md %}}The billing cycle of the device (monthly or hourly)
-{{% /md %}}</dd>
-    <dt class="property-"
+{{% /md %}}</dd><dt class="property-"
             title="">
         <span id="description_csharp">
 <a href="#description_csharp" style="color: inherit; text-decoration: inherit;">Description</a>
@@ -352,8 +347,7 @@ The following output properties are available:
         <span class="property-type">string</span>
     </dt>
     <dd>{{% md %}}Description string for the device
-{{% /md %}}</dd>
-    <dt class="property-"
+{{% /md %}}</dd><dt class="property-"
             title="">
         <span id="deviceid_csharp">
 <a href="#deviceid_csharp" style="color: inherit; text-decoration: inherit;">Device<wbr>Id</a>
@@ -361,8 +355,7 @@ The following output properties are available:
         <span class="property-indicator"></span>
         <span class="property-type">string</span>
     </dt>
-    <dd>{{% md %}}{{% /md %}}</dd>
-    <dt class="property-"
+    <dd>{{% md %}}{{% /md %}}</dd><dt class="property-"
             title="">
         <span id="facility_csharp">
 <a href="#facility_csharp" style="color: inherit; text-decoration: inherit;">Facility</a>
@@ -371,8 +364,7 @@ The following output properties are available:
         <span class="property-type">string</span>
     </dt>
     <dd>{{% md %}}The facility where the device is deployed.
-{{% /md %}}</dd>
-    <dt class="property-"
+{{% /md %}}</dd><dt class="property-"
             title="">
         <span id="hardwarereservationid_csharp">
 <a href="#hardwarereservationid_csharp" style="color: inherit; text-decoration: inherit;">Hardware<wbr>Reservation<wbr>Id</a>
@@ -381,8 +373,7 @@ The following output properties are available:
         <span class="property-type">string</span>
     </dt>
     <dd>{{% md %}}The id of hardware reservation which this device occupies
-{{% /md %}}</dd>
-    <dt class="property-"
+{{% /md %}}</dd><dt class="property-"
             title="">
         <span id="hostname_csharp">
 <a href="#hostname_csharp" style="color: inherit; text-decoration: inherit;">Hostname</a>
@@ -390,8 +381,7 @@ The following output properties are available:
         <span class="property-indicator"></span>
         <span class="property-type">string</span>
     </dt>
-    <dd>{{% md %}}{{% /md %}}</dd>
-    <dt class="property-"
+    <dd>{{% md %}}{{% /md %}}</dd><dt class="property-"
             title="">
         <span id="id_csharp">
 <a href="#id_csharp" style="color: inherit; text-decoration: inherit;">Id</a>
@@ -400,8 +390,7 @@ The following output properties are available:
         <span class="property-type">string</span>
     </dt>
     <dd>{{% md %}}The provider-assigned unique ID for this managed resource.
-{{% /md %}}</dd>
-    <dt class="property-"
+{{% /md %}}</dd><dt class="property-"
             title="">
         <span id="ipxescripturl_csharp">
 <a href="#ipxescripturl_csharp" style="color: inherit; text-decoration: inherit;">Ipxe<wbr>Script<wbr>Url</a>
@@ -409,8 +398,7 @@ The following output properties are available:
         <span class="property-indicator"></span>
         <span class="property-type">string</span>
     </dt>
-    <dd>{{% md %}}{{% /md %}}</dd>
-    <dt class="property-"
+    <dd>{{% md %}}{{% /md %}}</dd><dt class="property-"
             title="">
         <span id="networktype_csharp">
 <a href="#networktype_csharp" style="color: inherit; text-decoration: inherit;">Network<wbr>Type</a>
@@ -419,8 +407,7 @@ The following output properties are available:
         <span class="property-type">string</span>
     </dt>
     <dd>{{% md %}}L2 network type of the device, one of "layer3", "layer2-bonded", "layer2-individual", "hybrid"
-{{% /md %}}</dd>
-    <dt class="property-"
+{{% /md %}}</dd><dt class="property-"
             title="">
         <span id="networks_csharp">
 <a href="#networks_csharp" style="color: inherit; text-decoration: inherit;">Networks</a>
@@ -434,8 +421,7 @@ The following output properties are available:
 * Private IPv4 at `metal_device.name.network.2`
 Elastic addresses then stack by type - an assigned public IPv4 will go after the management public IPv4 (to index 1), and will then shift the indices of the IPv6 and private IPv4. Assigned private IPv4 will go after the management private IPv4 (to the end of the network list).
 The fields of the network attributes are:
-{{% /md %}}</dd>
-    <dt class="property-"
+{{% /md %}}</dd><dt class="property-"
             title="">
         <span id="operatingsystem_csharp">
 <a href="#operatingsystem_csharp" style="color: inherit; text-decoration: inherit;">Operating<wbr>System</a>
@@ -444,8 +430,7 @@ The fields of the network attributes are:
         <span class="property-type">string</span>
     </dt>
     <dd>{{% md %}}The operating system running on the device
-{{% /md %}}</dd>
-    <dt class="property-"
+{{% /md %}}</dd><dt class="property-"
             title="">
         <span id="plan_csharp">
 <a href="#plan_csharp" style="color: inherit; text-decoration: inherit;">Plan</a>
@@ -454,8 +439,7 @@ The fields of the network attributes are:
         <span class="property-type">string</span>
     </dt>
     <dd>{{% md %}}The hardware config of the device
-{{% /md %}}</dd>
-    <dt class="property-"
+{{% /md %}}</dd><dt class="property-"
             title="">
         <span id="ports_csharp">
 <a href="#ports_csharp" style="color: inherit; text-decoration: inherit;">Ports</a>
@@ -464,8 +448,7 @@ The fields of the network attributes are:
         <span class="property-type"><a href="#getdeviceport">List&lt;Pulumi.<wbr>Equinix<wbr>Metal.<wbr>Outputs.<wbr>Get<wbr>Device<wbr>Port&gt;</a></span>
     </dt>
     <dd>{{% md %}}Ports assigned to the device
-{{% /md %}}</dd>
-    <dt class="property-"
+{{% /md %}}</dd><dt class="property-"
             title="">
         <span id="projectid_csharp">
 <a href="#projectid_csharp" style="color: inherit; text-decoration: inherit;">Project<wbr>Id</a>
@@ -473,8 +456,7 @@ The fields of the network attributes are:
         <span class="property-indicator"></span>
         <span class="property-type">string</span>
     </dt>
-    <dd>{{% md %}}{{% /md %}}</dd>
-    <dt class="property-"
+    <dd>{{% md %}}{{% /md %}}</dd><dt class="property-"
             title="">
         <span id="rootpassword_csharp">
 <a href="#rootpassword_csharp" style="color: inherit; text-decoration: inherit;">Root<wbr>Password</a>
@@ -483,8 +465,7 @@ The fields of the network attributes are:
         <span class="property-type">string</span>
     </dt>
     <dd>{{% md %}}Root password to the server (if still available)
-{{% /md %}}</dd>
-    <dt class="property-"
+{{% /md %}}</dd><dt class="property-"
             title="">
         <span id="sshkeyids_csharp">
 <a href="#sshkeyids_csharp" style="color: inherit; text-decoration: inherit;">Ssh<wbr>Key<wbr>Ids</a>
@@ -493,8 +474,7 @@ The fields of the network attributes are:
         <span class="property-type">List&lt;string&gt;</span>
     </dt>
     <dd>{{% md %}}List of IDs of SSH keys deployed in the device, can be both user or project SSH keys
-{{% /md %}}</dd>
-    <dt class="property-"
+{{% /md %}}</dd><dt class="property-"
             title="">
         <span id="state_csharp">
 <a href="#state_csharp" style="color: inherit; text-decoration: inherit;">State</a>
@@ -503,8 +483,7 @@ The fields of the network attributes are:
         <span class="property-type">string</span>
     </dt>
     <dd>{{% md %}}The state of the device
-{{% /md %}}</dd>
-    <dt class="property-"
+{{% /md %}}</dd><dt class="property-"
             title="">
         <span id="storage_csharp">
 <a href="#storage_csharp" style="color: inherit; text-decoration: inherit;">Storage</a>
@@ -512,8 +491,7 @@ The fields of the network attributes are:
         <span class="property-indicator"></span>
         <span class="property-type">string</span>
     </dt>
-    <dd>{{% md %}}{{% /md %}}</dd>
-    <dt class="property-"
+    <dd>{{% md %}}{{% /md %}}</dd><dt class="property-"
             title="">
         <span id="tags_csharp">
 <a href="#tags_csharp" style="color: inherit; text-decoration: inherit;">Tags</a>
@@ -522,14 +500,11 @@ The fields of the network attributes are:
         <span class="property-type">List&lt;string&gt;</span>
     </dt>
     <dd>{{% md %}}Tags attached to the device
-{{% /md %}}</dd>
-</dl>
+{{% /md %}}</dd></dl>
 {{% /choosable %}}
 
 {{% choosable language go %}}
-<dl class="resources-properties">
-
-    <dt class="property-"
+<dl class="resources-properties"><dt class="property-"
             title="">
         <span id="accessprivateipv4_go">
 <a href="#accessprivateipv4_go" style="color: inherit; text-decoration: inherit;">Access<wbr>Private<wbr>Ipv4</a>
@@ -538,8 +513,7 @@ The fields of the network attributes are:
         <span class="property-type">string</span>
     </dt>
     <dd>{{% md %}}The ipv4 private IP assigned to the device
-{{% /md %}}</dd>
-    <dt class="property-"
+{{% /md %}}</dd><dt class="property-"
             title="">
         <span id="accesspublicipv4_go">
 <a href="#accesspublicipv4_go" style="color: inherit; text-decoration: inherit;">Access<wbr>Public<wbr>Ipv4</a>
@@ -548,8 +522,7 @@ The fields of the network attributes are:
         <span class="property-type">string</span>
     </dt>
     <dd>{{% md %}}The ipv4 management IP assigned to the device
-{{% /md %}}</dd>
-    <dt class="property-"
+{{% /md %}}</dd><dt class="property-"
             title="">
         <span id="accesspublicipv6_go">
 <a href="#accesspublicipv6_go" style="color: inherit; text-decoration: inherit;">Access<wbr>Public<wbr>Ipv6</a>
@@ -558,8 +531,7 @@ The fields of the network attributes are:
         <span class="property-type">string</span>
     </dt>
     <dd>{{% md %}}The ipv6 management IP assigned to the device
-{{% /md %}}</dd>
-    <dt class="property-"
+{{% /md %}}</dd><dt class="property-"
             title="">
         <span id="alwayspxe_go">
 <a href="#alwayspxe_go" style="color: inherit; text-decoration: inherit;">Always<wbr>Pxe</a>
@@ -567,8 +539,7 @@ The fields of the network attributes are:
         <span class="property-indicator"></span>
         <span class="property-type">bool</span>
     </dt>
-    <dd>{{% md %}}{{% /md %}}</dd>
-    <dt class="property-"
+    <dd>{{% md %}}{{% /md %}}</dd><dt class="property-"
             title="">
         <span id="billingcycle_go">
 <a href="#billingcycle_go" style="color: inherit; text-decoration: inherit;">Billing<wbr>Cycle</a>
@@ -577,8 +548,7 @@ The fields of the network attributes are:
         <span class="property-type">string</span>
     </dt>
     <dd>{{% md %}}The billing cycle of the device (monthly or hourly)
-{{% /md %}}</dd>
-    <dt class="property-"
+{{% /md %}}</dd><dt class="property-"
             title="">
         <span id="description_go">
 <a href="#description_go" style="color: inherit; text-decoration: inherit;">Description</a>
@@ -587,8 +557,7 @@ The fields of the network attributes are:
         <span class="property-type">string</span>
     </dt>
     <dd>{{% md %}}Description string for the device
-{{% /md %}}</dd>
-    <dt class="property-"
+{{% /md %}}</dd><dt class="property-"
             title="">
         <span id="deviceid_go">
 <a href="#deviceid_go" style="color: inherit; text-decoration: inherit;">Device<wbr>Id</a>
@@ -596,8 +565,7 @@ The fields of the network attributes are:
         <span class="property-indicator"></span>
         <span class="property-type">string</span>
     </dt>
-    <dd>{{% md %}}{{% /md %}}</dd>
-    <dt class="property-"
+    <dd>{{% md %}}{{% /md %}}</dd><dt class="property-"
             title="">
         <span id="facility_go">
 <a href="#facility_go" style="color: inherit; text-decoration: inherit;">Facility</a>
@@ -606,8 +574,7 @@ The fields of the network attributes are:
         <span class="property-type">string</span>
     </dt>
     <dd>{{% md %}}The facility where the device is deployed.
-{{% /md %}}</dd>
-    <dt class="property-"
+{{% /md %}}</dd><dt class="property-"
             title="">
         <span id="hardwarereservationid_go">
 <a href="#hardwarereservationid_go" style="color: inherit; text-decoration: inherit;">Hardware<wbr>Reservation<wbr>Id</a>
@@ -616,8 +583,7 @@ The fields of the network attributes are:
         <span class="property-type">string</span>
     </dt>
     <dd>{{% md %}}The id of hardware reservation which this device occupies
-{{% /md %}}</dd>
-    <dt class="property-"
+{{% /md %}}</dd><dt class="property-"
             title="">
         <span id="hostname_go">
 <a href="#hostname_go" style="color: inherit; text-decoration: inherit;">Hostname</a>
@@ -625,8 +591,7 @@ The fields of the network attributes are:
         <span class="property-indicator"></span>
         <span class="property-type">string</span>
     </dt>
-    <dd>{{% md %}}{{% /md %}}</dd>
-    <dt class="property-"
+    <dd>{{% md %}}{{% /md %}}</dd><dt class="property-"
             title="">
         <span id="id_go">
 <a href="#id_go" style="color: inherit; text-decoration: inherit;">Id</a>
@@ -635,8 +600,7 @@ The fields of the network attributes are:
         <span class="property-type">string</span>
     </dt>
     <dd>{{% md %}}The provider-assigned unique ID for this managed resource.
-{{% /md %}}</dd>
-    <dt class="property-"
+{{% /md %}}</dd><dt class="property-"
             title="">
         <span id="ipxescripturl_go">
 <a href="#ipxescripturl_go" style="color: inherit; text-decoration: inherit;">Ipxe<wbr>Script<wbr>Url</a>
@@ -644,8 +608,7 @@ The fields of the network attributes are:
         <span class="property-indicator"></span>
         <span class="property-type">string</span>
     </dt>
-    <dd>{{% md %}}{{% /md %}}</dd>
-    <dt class="property-"
+    <dd>{{% md %}}{{% /md %}}</dd><dt class="property-"
             title="">
         <span id="networktype_go">
 <a href="#networktype_go" style="color: inherit; text-decoration: inherit;">Network<wbr>Type</a>
@@ -654,8 +617,7 @@ The fields of the network attributes are:
         <span class="property-type">string</span>
     </dt>
     <dd>{{% md %}}L2 network type of the device, one of "layer3", "layer2-bonded", "layer2-individual", "hybrid"
-{{% /md %}}</dd>
-    <dt class="property-"
+{{% /md %}}</dd><dt class="property-"
             title="">
         <span id="networks_go">
 <a href="#networks_go" style="color: inherit; text-decoration: inherit;">Networks</a>
@@ -669,8 +631,7 @@ The fields of the network attributes are:
 * Private IPv4 at `metal_device.name.network.2`
 Elastic addresses then stack by type - an assigned public IPv4 will go after the management public IPv4 (to index 1), and will then shift the indices of the IPv6 and private IPv4. Assigned private IPv4 will go after the management private IPv4 (to the end of the network list).
 The fields of the network attributes are:
-{{% /md %}}</dd>
-    <dt class="property-"
+{{% /md %}}</dd><dt class="property-"
             title="">
         <span id="operatingsystem_go">
 <a href="#operatingsystem_go" style="color: inherit; text-decoration: inherit;">Operating<wbr>System</a>
@@ -679,8 +640,7 @@ The fields of the network attributes are:
         <span class="property-type">string</span>
     </dt>
     <dd>{{% md %}}The operating system running on the device
-{{% /md %}}</dd>
-    <dt class="property-"
+{{% /md %}}</dd><dt class="property-"
             title="">
         <span id="plan_go">
 <a href="#plan_go" style="color: inherit; text-decoration: inherit;">Plan</a>
@@ -689,8 +649,7 @@ The fields of the network attributes are:
         <span class="property-type">string</span>
     </dt>
     <dd>{{% md %}}The hardware config of the device
-{{% /md %}}</dd>
-    <dt class="property-"
+{{% /md %}}</dd><dt class="property-"
             title="">
         <span id="ports_go">
 <a href="#ports_go" style="color: inherit; text-decoration: inherit;">Ports</a>
@@ -699,8 +658,7 @@ The fields of the network attributes are:
         <span class="property-type"><a href="#getdeviceport">[]Get<wbr>Device<wbr>Port</a></span>
     </dt>
     <dd>{{% md %}}Ports assigned to the device
-{{% /md %}}</dd>
-    <dt class="property-"
+{{% /md %}}</dd><dt class="property-"
             title="">
         <span id="projectid_go">
 <a href="#projectid_go" style="color: inherit; text-decoration: inherit;">Project<wbr>Id</a>
@@ -708,8 +666,7 @@ The fields of the network attributes are:
         <span class="property-indicator"></span>
         <span class="property-type">string</span>
     </dt>
-    <dd>{{% md %}}{{% /md %}}</dd>
-    <dt class="property-"
+    <dd>{{% md %}}{{% /md %}}</dd><dt class="property-"
             title="">
         <span id="rootpassword_go">
 <a href="#rootpassword_go" style="color: inherit; text-decoration: inherit;">Root<wbr>Password</a>
@@ -718,8 +675,7 @@ The fields of the network attributes are:
         <span class="property-type">string</span>
     </dt>
     <dd>{{% md %}}Root password to the server (if still available)
-{{% /md %}}</dd>
-    <dt class="property-"
+{{% /md %}}</dd><dt class="property-"
             title="">
         <span id="sshkeyids_go">
 <a href="#sshkeyids_go" style="color: inherit; text-decoration: inherit;">Ssh<wbr>Key<wbr>Ids</a>
@@ -728,8 +684,7 @@ The fields of the network attributes are:
         <span class="property-type">[]string</span>
     </dt>
     <dd>{{% md %}}List of IDs of SSH keys deployed in the device, can be both user or project SSH keys
-{{% /md %}}</dd>
-    <dt class="property-"
+{{% /md %}}</dd><dt class="property-"
             title="">
         <span id="state_go">
 <a href="#state_go" style="color: inherit; text-decoration: inherit;">State</a>
@@ -738,8 +693,7 @@ The fields of the network attributes are:
         <span class="property-type">string</span>
     </dt>
     <dd>{{% md %}}The state of the device
-{{% /md %}}</dd>
-    <dt class="property-"
+{{% /md %}}</dd><dt class="property-"
             title="">
         <span id="storage_go">
 <a href="#storage_go" style="color: inherit; text-decoration: inherit;">Storage</a>
@@ -747,8 +701,7 @@ The fields of the network attributes are:
         <span class="property-indicator"></span>
         <span class="property-type">string</span>
     </dt>
-    <dd>{{% md %}}{{% /md %}}</dd>
-    <dt class="property-"
+    <dd>{{% md %}}{{% /md %}}</dd><dt class="property-"
             title="">
         <span id="tags_go">
 <a href="#tags_go" style="color: inherit; text-decoration: inherit;">Tags</a>
@@ -757,14 +710,11 @@ The fields of the network attributes are:
         <span class="property-type">[]string</span>
     </dt>
     <dd>{{% md %}}Tags attached to the device
-{{% /md %}}</dd>
-</dl>
+{{% /md %}}</dd></dl>
 {{% /choosable %}}
 
 {{% choosable language nodejs %}}
-<dl class="resources-properties">
-
-    <dt class="property-"
+<dl class="resources-properties"><dt class="property-"
             title="">
         <span id="accessprivateipv4_nodejs">
 <a href="#accessprivateipv4_nodejs" style="color: inherit; text-decoration: inherit;">access<wbr>Private<wbr>Ipv4</a>
@@ -773,8 +723,7 @@ The fields of the network attributes are:
         <span class="property-type">string</span>
     </dt>
     <dd>{{% md %}}The ipv4 private IP assigned to the device
-{{% /md %}}</dd>
-    <dt class="property-"
+{{% /md %}}</dd><dt class="property-"
             title="">
         <span id="accesspublicipv4_nodejs">
 <a href="#accesspublicipv4_nodejs" style="color: inherit; text-decoration: inherit;">access<wbr>Public<wbr>Ipv4</a>
@@ -783,8 +732,7 @@ The fields of the network attributes are:
         <span class="property-type">string</span>
     </dt>
     <dd>{{% md %}}The ipv4 management IP assigned to the device
-{{% /md %}}</dd>
-    <dt class="property-"
+{{% /md %}}</dd><dt class="property-"
             title="">
         <span id="accesspublicipv6_nodejs">
 <a href="#accesspublicipv6_nodejs" style="color: inherit; text-decoration: inherit;">access<wbr>Public<wbr>Ipv6</a>
@@ -793,8 +741,7 @@ The fields of the network attributes are:
         <span class="property-type">string</span>
     </dt>
     <dd>{{% md %}}The ipv6 management IP assigned to the device
-{{% /md %}}</dd>
-    <dt class="property-"
+{{% /md %}}</dd><dt class="property-"
             title="">
         <span id="alwayspxe_nodejs">
 <a href="#alwayspxe_nodejs" style="color: inherit; text-decoration: inherit;">always<wbr>Pxe</a>
@@ -802,8 +749,7 @@ The fields of the network attributes are:
         <span class="property-indicator"></span>
         <span class="property-type">boolean</span>
     </dt>
-    <dd>{{% md %}}{{% /md %}}</dd>
-    <dt class="property-"
+    <dd>{{% md %}}{{% /md %}}</dd><dt class="property-"
             title="">
         <span id="billingcycle_nodejs">
 <a href="#billingcycle_nodejs" style="color: inherit; text-decoration: inherit;">billing<wbr>Cycle</a>
@@ -812,8 +758,7 @@ The fields of the network attributes are:
         <span class="property-type">string</span>
     </dt>
     <dd>{{% md %}}The billing cycle of the device (monthly or hourly)
-{{% /md %}}</dd>
-    <dt class="property-"
+{{% /md %}}</dd><dt class="property-"
             title="">
         <span id="description_nodejs">
 <a href="#description_nodejs" style="color: inherit; text-decoration: inherit;">description</a>
@@ -822,8 +767,7 @@ The fields of the network attributes are:
         <span class="property-type">string</span>
     </dt>
     <dd>{{% md %}}Description string for the device
-{{% /md %}}</dd>
-    <dt class="property-"
+{{% /md %}}</dd><dt class="property-"
             title="">
         <span id="deviceid_nodejs">
 <a href="#deviceid_nodejs" style="color: inherit; text-decoration: inherit;">device<wbr>Id</a>
@@ -831,8 +775,7 @@ The fields of the network attributes are:
         <span class="property-indicator"></span>
         <span class="property-type">string</span>
     </dt>
-    <dd>{{% md %}}{{% /md %}}</dd>
-    <dt class="property-"
+    <dd>{{% md %}}{{% /md %}}</dd><dt class="property-"
             title="">
         <span id="facility_nodejs">
 <a href="#facility_nodejs" style="color: inherit; text-decoration: inherit;">facility</a>
@@ -841,8 +784,7 @@ The fields of the network attributes are:
         <span class="property-type">string</span>
     </dt>
     <dd>{{% md %}}The facility where the device is deployed.
-{{% /md %}}</dd>
-    <dt class="property-"
+{{% /md %}}</dd><dt class="property-"
             title="">
         <span id="hardwarereservationid_nodejs">
 <a href="#hardwarereservationid_nodejs" style="color: inherit; text-decoration: inherit;">hardware<wbr>Reservation<wbr>Id</a>
@@ -851,8 +793,7 @@ The fields of the network attributes are:
         <span class="property-type">string</span>
     </dt>
     <dd>{{% md %}}The id of hardware reservation which this device occupies
-{{% /md %}}</dd>
-    <dt class="property-"
+{{% /md %}}</dd><dt class="property-"
             title="">
         <span id="hostname_nodejs">
 <a href="#hostname_nodejs" style="color: inherit; text-decoration: inherit;">hostname</a>
@@ -860,8 +801,7 @@ The fields of the network attributes are:
         <span class="property-indicator"></span>
         <span class="property-type">string</span>
     </dt>
-    <dd>{{% md %}}{{% /md %}}</dd>
-    <dt class="property-"
+    <dd>{{% md %}}{{% /md %}}</dd><dt class="property-"
             title="">
         <span id="id_nodejs">
 <a href="#id_nodejs" style="color: inherit; text-decoration: inherit;">id</a>
@@ -870,8 +810,7 @@ The fields of the network attributes are:
         <span class="property-type">string</span>
     </dt>
     <dd>{{% md %}}The provider-assigned unique ID for this managed resource.
-{{% /md %}}</dd>
-    <dt class="property-"
+{{% /md %}}</dd><dt class="property-"
             title="">
         <span id="ipxescripturl_nodejs">
 <a href="#ipxescripturl_nodejs" style="color: inherit; text-decoration: inherit;">ipxe<wbr>Script<wbr>Url</a>
@@ -879,8 +818,7 @@ The fields of the network attributes are:
         <span class="property-indicator"></span>
         <span class="property-type">string</span>
     </dt>
-    <dd>{{% md %}}{{% /md %}}</dd>
-    <dt class="property-"
+    <dd>{{% md %}}{{% /md %}}</dd><dt class="property-"
             title="">
         <span id="networktype_nodejs">
 <a href="#networktype_nodejs" style="color: inherit; text-decoration: inherit;">network<wbr>Type</a>
@@ -889,8 +827,7 @@ The fields of the network attributes are:
         <span class="property-type">string</span>
     </dt>
     <dd>{{% md %}}L2 network type of the device, one of "layer3", "layer2-bonded", "layer2-individual", "hybrid"
-{{% /md %}}</dd>
-    <dt class="property-"
+{{% /md %}}</dd><dt class="property-"
             title="">
         <span id="networks_nodejs">
 <a href="#networks_nodejs" style="color: inherit; text-decoration: inherit;">networks</a>
@@ -904,8 +841,7 @@ The fields of the network attributes are:
 * Private IPv4 at `metal_device.name.network.2`
 Elastic addresses then stack by type - an assigned public IPv4 will go after the management public IPv4 (to index 1), and will then shift the indices of the IPv6 and private IPv4. Assigned private IPv4 will go after the management private IPv4 (to the end of the network list).
 The fields of the network attributes are:
-{{% /md %}}</dd>
-    <dt class="property-"
+{{% /md %}}</dd><dt class="property-"
             title="">
         <span id="operatingsystem_nodejs">
 <a href="#operatingsystem_nodejs" style="color: inherit; text-decoration: inherit;">operating<wbr>System</a>
@@ -914,8 +850,7 @@ The fields of the network attributes are:
         <span class="property-type">string</span>
     </dt>
     <dd>{{% md %}}The operating system running on the device
-{{% /md %}}</dd>
-    <dt class="property-"
+{{% /md %}}</dd><dt class="property-"
             title="">
         <span id="plan_nodejs">
 <a href="#plan_nodejs" style="color: inherit; text-decoration: inherit;">plan</a>
@@ -924,8 +859,7 @@ The fields of the network attributes are:
         <span class="property-type">string</span>
     </dt>
     <dd>{{% md %}}The hardware config of the device
-{{% /md %}}</dd>
-    <dt class="property-"
+{{% /md %}}</dd><dt class="property-"
             title="">
         <span id="ports_nodejs">
 <a href="#ports_nodejs" style="color: inherit; text-decoration: inherit;">ports</a>
@@ -934,8 +868,7 @@ The fields of the network attributes are:
         <span class="property-type"><a href="#getdeviceport">Get<wbr>Device<wbr>Port[]</a></span>
     </dt>
     <dd>{{% md %}}Ports assigned to the device
-{{% /md %}}</dd>
-    <dt class="property-"
+{{% /md %}}</dd><dt class="property-"
             title="">
         <span id="projectid_nodejs">
 <a href="#projectid_nodejs" style="color: inherit; text-decoration: inherit;">project<wbr>Id</a>
@@ -943,8 +876,7 @@ The fields of the network attributes are:
         <span class="property-indicator"></span>
         <span class="property-type">string</span>
     </dt>
-    <dd>{{% md %}}{{% /md %}}</dd>
-    <dt class="property-"
+    <dd>{{% md %}}{{% /md %}}</dd><dt class="property-"
             title="">
         <span id="rootpassword_nodejs">
 <a href="#rootpassword_nodejs" style="color: inherit; text-decoration: inherit;">root<wbr>Password</a>
@@ -953,8 +885,7 @@ The fields of the network attributes are:
         <span class="property-type">string</span>
     </dt>
     <dd>{{% md %}}Root password to the server (if still available)
-{{% /md %}}</dd>
-    <dt class="property-"
+{{% /md %}}</dd><dt class="property-"
             title="">
         <span id="sshkeyids_nodejs">
 <a href="#sshkeyids_nodejs" style="color: inherit; text-decoration: inherit;">ssh<wbr>Key<wbr>Ids</a>
@@ -963,8 +894,7 @@ The fields of the network attributes are:
         <span class="property-type">string[]</span>
     </dt>
     <dd>{{% md %}}List of IDs of SSH keys deployed in the device, can be both user or project SSH keys
-{{% /md %}}</dd>
-    <dt class="property-"
+{{% /md %}}</dd><dt class="property-"
             title="">
         <span id="state_nodejs">
 <a href="#state_nodejs" style="color: inherit; text-decoration: inherit;">state</a>
@@ -973,8 +903,7 @@ The fields of the network attributes are:
         <span class="property-type">string</span>
     </dt>
     <dd>{{% md %}}The state of the device
-{{% /md %}}</dd>
-    <dt class="property-"
+{{% /md %}}</dd><dt class="property-"
             title="">
         <span id="storage_nodejs">
 <a href="#storage_nodejs" style="color: inherit; text-decoration: inherit;">storage</a>
@@ -982,8 +911,7 @@ The fields of the network attributes are:
         <span class="property-indicator"></span>
         <span class="property-type">string</span>
     </dt>
-    <dd>{{% md %}}{{% /md %}}</dd>
-    <dt class="property-"
+    <dd>{{% md %}}{{% /md %}}</dd><dt class="property-"
             title="">
         <span id="tags_nodejs">
 <a href="#tags_nodejs" style="color: inherit; text-decoration: inherit;">tags</a>
@@ -992,14 +920,11 @@ The fields of the network attributes are:
         <span class="property-type">string[]</span>
     </dt>
     <dd>{{% md %}}Tags attached to the device
-{{% /md %}}</dd>
-</dl>
+{{% /md %}}</dd></dl>
 {{% /choosable %}}
 
 {{% choosable language python %}}
-<dl class="resources-properties">
-
-    <dt class="property-"
+<dl class="resources-properties"><dt class="property-"
             title="">
         <span id="access_private_ipv4_python">
 <a href="#access_private_ipv4_python" style="color: inherit; text-decoration: inherit;">access_<wbr>private_<wbr>ipv4</a>
@@ -1008,8 +933,7 @@ The fields of the network attributes are:
         <span class="property-type">str</span>
     </dt>
     <dd>{{% md %}}The ipv4 private IP assigned to the device
-{{% /md %}}</dd>
-    <dt class="property-"
+{{% /md %}}</dd><dt class="property-"
             title="">
         <span id="access_public_ipv4_python">
 <a href="#access_public_ipv4_python" style="color: inherit; text-decoration: inherit;">access_<wbr>public_<wbr>ipv4</a>
@@ -1018,8 +942,7 @@ The fields of the network attributes are:
         <span class="property-type">str</span>
     </dt>
     <dd>{{% md %}}The ipv4 management IP assigned to the device
-{{% /md %}}</dd>
-    <dt class="property-"
+{{% /md %}}</dd><dt class="property-"
             title="">
         <span id="access_public_ipv6_python">
 <a href="#access_public_ipv6_python" style="color: inherit; text-decoration: inherit;">access_<wbr>public_<wbr>ipv6</a>
@@ -1028,8 +951,7 @@ The fields of the network attributes are:
         <span class="property-type">str</span>
     </dt>
     <dd>{{% md %}}The ipv6 management IP assigned to the device
-{{% /md %}}</dd>
-    <dt class="property-"
+{{% /md %}}</dd><dt class="property-"
             title="">
         <span id="always_pxe_python">
 <a href="#always_pxe_python" style="color: inherit; text-decoration: inherit;">always_<wbr>pxe</a>
@@ -1037,8 +959,7 @@ The fields of the network attributes are:
         <span class="property-indicator"></span>
         <span class="property-type">bool</span>
     </dt>
-    <dd>{{% md %}}{{% /md %}}</dd>
-    <dt class="property-"
+    <dd>{{% md %}}{{% /md %}}</dd><dt class="property-"
             title="">
         <span id="billing_cycle_python">
 <a href="#billing_cycle_python" style="color: inherit; text-decoration: inherit;">billing_<wbr>cycle</a>
@@ -1047,8 +968,7 @@ The fields of the network attributes are:
         <span class="property-type">str</span>
     </dt>
     <dd>{{% md %}}The billing cycle of the device (monthly or hourly)
-{{% /md %}}</dd>
-    <dt class="property-"
+{{% /md %}}</dd><dt class="property-"
             title="">
         <span id="description_python">
 <a href="#description_python" style="color: inherit; text-decoration: inherit;">description</a>
@@ -1057,8 +977,7 @@ The fields of the network attributes are:
         <span class="property-type">str</span>
     </dt>
     <dd>{{% md %}}Description string for the device
-{{% /md %}}</dd>
-    <dt class="property-"
+{{% /md %}}</dd><dt class="property-"
             title="">
         <span id="device_id_python">
 <a href="#device_id_python" style="color: inherit; text-decoration: inherit;">device_<wbr>id</a>
@@ -1066,8 +985,7 @@ The fields of the network attributes are:
         <span class="property-indicator"></span>
         <span class="property-type">str</span>
     </dt>
-    <dd>{{% md %}}{{% /md %}}</dd>
-    <dt class="property-"
+    <dd>{{% md %}}{{% /md %}}</dd><dt class="property-"
             title="">
         <span id="facility_python">
 <a href="#facility_python" style="color: inherit; text-decoration: inherit;">facility</a>
@@ -1076,8 +994,7 @@ The fields of the network attributes are:
         <span class="property-type">str</span>
     </dt>
     <dd>{{% md %}}The facility where the device is deployed.
-{{% /md %}}</dd>
-    <dt class="property-"
+{{% /md %}}</dd><dt class="property-"
             title="">
         <span id="hardware_reservation_id_python">
 <a href="#hardware_reservation_id_python" style="color: inherit; text-decoration: inherit;">hardware_<wbr>reservation_<wbr>id</a>
@@ -1086,8 +1003,7 @@ The fields of the network attributes are:
         <span class="property-type">str</span>
     </dt>
     <dd>{{% md %}}The id of hardware reservation which this device occupies
-{{% /md %}}</dd>
-    <dt class="property-"
+{{% /md %}}</dd><dt class="property-"
             title="">
         <span id="hostname_python">
 <a href="#hostname_python" style="color: inherit; text-decoration: inherit;">hostname</a>
@@ -1095,8 +1011,7 @@ The fields of the network attributes are:
         <span class="property-indicator"></span>
         <span class="property-type">str</span>
     </dt>
-    <dd>{{% md %}}{{% /md %}}</dd>
-    <dt class="property-"
+    <dd>{{% md %}}{{% /md %}}</dd><dt class="property-"
             title="">
         <span id="id_python">
 <a href="#id_python" style="color: inherit; text-decoration: inherit;">id</a>
@@ -1105,8 +1020,7 @@ The fields of the network attributes are:
         <span class="property-type">str</span>
     </dt>
     <dd>{{% md %}}The provider-assigned unique ID for this managed resource.
-{{% /md %}}</dd>
-    <dt class="property-"
+{{% /md %}}</dd><dt class="property-"
             title="">
         <span id="ipxe_script_url_python">
 <a href="#ipxe_script_url_python" style="color: inherit; text-decoration: inherit;">ipxe_<wbr>script_<wbr>url</a>
@@ -1114,8 +1028,7 @@ The fields of the network attributes are:
         <span class="property-indicator"></span>
         <span class="property-type">str</span>
     </dt>
-    <dd>{{% md %}}{{% /md %}}</dd>
-    <dt class="property-"
+    <dd>{{% md %}}{{% /md %}}</dd><dt class="property-"
             title="">
         <span id="network_type_python">
 <a href="#network_type_python" style="color: inherit; text-decoration: inherit;">network_<wbr>type</a>
@@ -1124,8 +1037,7 @@ The fields of the network attributes are:
         <span class="property-type">str</span>
     </dt>
     <dd>{{% md %}}L2 network type of the device, one of "layer3", "layer2-bonded", "layer2-individual", "hybrid"
-{{% /md %}}</dd>
-    <dt class="property-"
+{{% /md %}}</dd><dt class="property-"
             title="">
         <span id="networks_python">
 <a href="#networks_python" style="color: inherit; text-decoration: inherit;">networks</a>
@@ -1139,8 +1051,7 @@ The fields of the network attributes are:
 * Private IPv4 at `metal_device.name.network.2`
 Elastic addresses then stack by type - an assigned public IPv4 will go after the management public IPv4 (to index 1), and will then shift the indices of the IPv6 and private IPv4. Assigned private IPv4 will go after the management private IPv4 (to the end of the network list).
 The fields of the network attributes are:
-{{% /md %}}</dd>
-    <dt class="property-"
+{{% /md %}}</dd><dt class="property-"
             title="">
         <span id="operating_system_python">
 <a href="#operating_system_python" style="color: inherit; text-decoration: inherit;">operating_<wbr>system</a>
@@ -1149,8 +1060,7 @@ The fields of the network attributes are:
         <span class="property-type">str</span>
     </dt>
     <dd>{{% md %}}The operating system running on the device
-{{% /md %}}</dd>
-    <dt class="property-"
+{{% /md %}}</dd><dt class="property-"
             title="">
         <span id="plan_python">
 <a href="#plan_python" style="color: inherit; text-decoration: inherit;">plan</a>
@@ -1159,8 +1069,7 @@ The fields of the network attributes are:
         <span class="property-type">str</span>
     </dt>
     <dd>{{% md %}}The hardware config of the device
-{{% /md %}}</dd>
-    <dt class="property-"
+{{% /md %}}</dd><dt class="property-"
             title="">
         <span id="ports_python">
 <a href="#ports_python" style="color: inherit; text-decoration: inherit;">ports</a>
@@ -1169,8 +1078,7 @@ The fields of the network attributes are:
         <span class="property-type"><a href="#getdeviceport">Sequence[Get<wbr>Device<wbr>Port]</a></span>
     </dt>
     <dd>{{% md %}}Ports assigned to the device
-{{% /md %}}</dd>
-    <dt class="property-"
+{{% /md %}}</dd><dt class="property-"
             title="">
         <span id="project_id_python">
 <a href="#project_id_python" style="color: inherit; text-decoration: inherit;">project_<wbr>id</a>
@@ -1178,8 +1086,7 @@ The fields of the network attributes are:
         <span class="property-indicator"></span>
         <span class="property-type">str</span>
     </dt>
-    <dd>{{% md %}}{{% /md %}}</dd>
-    <dt class="property-"
+    <dd>{{% md %}}{{% /md %}}</dd><dt class="property-"
             title="">
         <span id="root_password_python">
 <a href="#root_password_python" style="color: inherit; text-decoration: inherit;">root_<wbr>password</a>
@@ -1188,8 +1095,7 @@ The fields of the network attributes are:
         <span class="property-type">str</span>
     </dt>
     <dd>{{% md %}}Root password to the server (if still available)
-{{% /md %}}</dd>
-    <dt class="property-"
+{{% /md %}}</dd><dt class="property-"
             title="">
         <span id="ssh_key_ids_python">
 <a href="#ssh_key_ids_python" style="color: inherit; text-decoration: inherit;">ssh_<wbr>key_<wbr>ids</a>
@@ -1198,8 +1104,7 @@ The fields of the network attributes are:
         <span class="property-type">Sequence[str]</span>
     </dt>
     <dd>{{% md %}}List of IDs of SSH keys deployed in the device, can be both user or project SSH keys
-{{% /md %}}</dd>
-    <dt class="property-"
+{{% /md %}}</dd><dt class="property-"
             title="">
         <span id="state_python">
 <a href="#state_python" style="color: inherit; text-decoration: inherit;">state</a>
@@ -1208,8 +1113,7 @@ The fields of the network attributes are:
         <span class="property-type">str</span>
     </dt>
     <dd>{{% md %}}The state of the device
-{{% /md %}}</dd>
-    <dt class="property-"
+{{% /md %}}</dd><dt class="property-"
             title="">
         <span id="storage_python">
 <a href="#storage_python" style="color: inherit; text-decoration: inherit;">storage</a>
@@ -1217,8 +1121,7 @@ The fields of the network attributes are:
         <span class="property-indicator"></span>
         <span class="property-type">str</span>
     </dt>
-    <dd>{{% md %}}{{% /md %}}</dd>
-    <dt class="property-"
+    <dd>{{% md %}}{{% /md %}}</dd><dt class="property-"
             title="">
         <span id="tags_python">
 <a href="#tags_python" style="color: inherit; text-decoration: inherit;">tags</a>
@@ -1227,8 +1130,7 @@ The fields of the network attributes are:
         <span class="property-type">Sequence[str]</span>
     </dt>
     <dd>{{% md %}}Tags attached to the device
-{{% /md %}}</dd>
-</dl>
+{{% /md %}}</dd></dl>
 {{% /choosable %}}
 
 
@@ -1242,9 +1144,7 @@ The fields of the network attributes are:
 
 
 {{% choosable language csharp %}}
-<dl class="resources-properties">
-
-    <dt class="property-required"
+<dl class="resources-properties"><dt class="property-required"
             title="Required">
         <span id="address_csharp">
 <a href="#address_csharp" style="color: inherit; text-decoration: inherit;">Address</a>
@@ -1253,8 +1153,7 @@ The fields of the network attributes are:
         <span class="property-type">string</span>
     </dt>
     <dd>{{% md %}}IPv4 or IPv6 address string
-{{% /md %}}</dd>
-    <dt class="property-required"
+{{% /md %}}</dd><dt class="property-required"
             title="Required">
         <span id="cidr_csharp">
 <a href="#cidr_csharp" style="color: inherit; text-decoration: inherit;">Cidr</a>
@@ -1263,8 +1162,7 @@ The fields of the network attributes are:
         <span class="property-type">int</span>
     </dt>
     <dd>{{% md %}}Bit length of the network mask of the address
-{{% /md %}}</dd>
-    <dt class="property-required"
+{{% /md %}}</dd><dt class="property-required"
             title="Required">
         <span id="family_csharp">
 <a href="#family_csharp" style="color: inherit; text-decoration: inherit;">Family</a>
@@ -1273,8 +1171,7 @@ The fields of the network attributes are:
         <span class="property-type">int</span>
     </dt>
     <dd>{{% md %}}IP version - "4" or "6"
-{{% /md %}}</dd>
-    <dt class="property-required"
+{{% /md %}}</dd><dt class="property-required"
             title="Required">
         <span id="gateway_csharp">
 <a href="#gateway_csharp" style="color: inherit; text-decoration: inherit;">Gateway</a>
@@ -1283,8 +1180,7 @@ The fields of the network attributes are:
         <span class="property-type">string</span>
     </dt>
     <dd>{{% md %}}Address of router
-{{% /md %}}</dd>
-    <dt class="property-required"
+{{% /md %}}</dd><dt class="property-required"
             title="Required">
         <span id="public_csharp">
 <a href="#public_csharp" style="color: inherit; text-decoration: inherit;">Public</a>
@@ -1293,14 +1189,11 @@ The fields of the network attributes are:
         <span class="property-type">bool</span>
     </dt>
     <dd>{{% md %}}Whether the address is routable from the Internet
-{{% /md %}}</dd>
-</dl>
+{{% /md %}}</dd></dl>
 {{% /choosable %}}
 
 {{% choosable language go %}}
-<dl class="resources-properties">
-
-    <dt class="property-required"
+<dl class="resources-properties"><dt class="property-required"
             title="Required">
         <span id="address_go">
 <a href="#address_go" style="color: inherit; text-decoration: inherit;">Address</a>
@@ -1309,8 +1202,7 @@ The fields of the network attributes are:
         <span class="property-type">string</span>
     </dt>
     <dd>{{% md %}}IPv4 or IPv6 address string
-{{% /md %}}</dd>
-    <dt class="property-required"
+{{% /md %}}</dd><dt class="property-required"
             title="Required">
         <span id="cidr_go">
 <a href="#cidr_go" style="color: inherit; text-decoration: inherit;">Cidr</a>
@@ -1319,8 +1211,7 @@ The fields of the network attributes are:
         <span class="property-type">int</span>
     </dt>
     <dd>{{% md %}}Bit length of the network mask of the address
-{{% /md %}}</dd>
-    <dt class="property-required"
+{{% /md %}}</dd><dt class="property-required"
             title="Required">
         <span id="family_go">
 <a href="#family_go" style="color: inherit; text-decoration: inherit;">Family</a>
@@ -1329,8 +1220,7 @@ The fields of the network attributes are:
         <span class="property-type">int</span>
     </dt>
     <dd>{{% md %}}IP version - "4" or "6"
-{{% /md %}}</dd>
-    <dt class="property-required"
+{{% /md %}}</dd><dt class="property-required"
             title="Required">
         <span id="gateway_go">
 <a href="#gateway_go" style="color: inherit; text-decoration: inherit;">Gateway</a>
@@ -1339,8 +1229,7 @@ The fields of the network attributes are:
         <span class="property-type">string</span>
     </dt>
     <dd>{{% md %}}Address of router
-{{% /md %}}</dd>
-    <dt class="property-required"
+{{% /md %}}</dd><dt class="property-required"
             title="Required">
         <span id="public_go">
 <a href="#public_go" style="color: inherit; text-decoration: inherit;">Public</a>
@@ -1349,14 +1238,11 @@ The fields of the network attributes are:
         <span class="property-type">bool</span>
     </dt>
     <dd>{{% md %}}Whether the address is routable from the Internet
-{{% /md %}}</dd>
-</dl>
+{{% /md %}}</dd></dl>
 {{% /choosable %}}
 
 {{% choosable language nodejs %}}
-<dl class="resources-properties">
-
-    <dt class="property-required"
+<dl class="resources-properties"><dt class="property-required"
             title="Required">
         <span id="address_nodejs">
 <a href="#address_nodejs" style="color: inherit; text-decoration: inherit;">address</a>
@@ -1365,8 +1251,7 @@ The fields of the network attributes are:
         <span class="property-type">string</span>
     </dt>
     <dd>{{% md %}}IPv4 or IPv6 address string
-{{% /md %}}</dd>
-    <dt class="property-required"
+{{% /md %}}</dd><dt class="property-required"
             title="Required">
         <span id="cidr_nodejs">
 <a href="#cidr_nodejs" style="color: inherit; text-decoration: inherit;">cidr</a>
@@ -1375,8 +1260,7 @@ The fields of the network attributes are:
         <span class="property-type">number</span>
     </dt>
     <dd>{{% md %}}Bit length of the network mask of the address
-{{% /md %}}</dd>
-    <dt class="property-required"
+{{% /md %}}</dd><dt class="property-required"
             title="Required">
         <span id="family_nodejs">
 <a href="#family_nodejs" style="color: inherit; text-decoration: inherit;">family</a>
@@ -1385,8 +1269,7 @@ The fields of the network attributes are:
         <span class="property-type">number</span>
     </dt>
     <dd>{{% md %}}IP version - "4" or "6"
-{{% /md %}}</dd>
-    <dt class="property-required"
+{{% /md %}}</dd><dt class="property-required"
             title="Required">
         <span id="gateway_nodejs">
 <a href="#gateway_nodejs" style="color: inherit; text-decoration: inherit;">gateway</a>
@@ -1395,8 +1278,7 @@ The fields of the network attributes are:
         <span class="property-type">string</span>
     </dt>
     <dd>{{% md %}}Address of router
-{{% /md %}}</dd>
-    <dt class="property-required"
+{{% /md %}}</dd><dt class="property-required"
             title="Required">
         <span id="public_nodejs">
 <a href="#public_nodejs" style="color: inherit; text-decoration: inherit;">public</a>
@@ -1405,14 +1287,11 @@ The fields of the network attributes are:
         <span class="property-type">boolean</span>
     </dt>
     <dd>{{% md %}}Whether the address is routable from the Internet
-{{% /md %}}</dd>
-</dl>
+{{% /md %}}</dd></dl>
 {{% /choosable %}}
 
 {{% choosable language python %}}
-<dl class="resources-properties">
-
-    <dt class="property-required"
+<dl class="resources-properties"><dt class="property-required"
             title="Required">
         <span id="address_python">
 <a href="#address_python" style="color: inherit; text-decoration: inherit;">address</a>
@@ -1421,8 +1300,7 @@ The fields of the network attributes are:
         <span class="property-type">str</span>
     </dt>
     <dd>{{% md %}}IPv4 or IPv6 address string
-{{% /md %}}</dd>
-    <dt class="property-required"
+{{% /md %}}</dd><dt class="property-required"
             title="Required">
         <span id="cidr_python">
 <a href="#cidr_python" style="color: inherit; text-decoration: inherit;">cidr</a>
@@ -1431,8 +1309,7 @@ The fields of the network attributes are:
         <span class="property-type">int</span>
     </dt>
     <dd>{{% md %}}Bit length of the network mask of the address
-{{% /md %}}</dd>
-    <dt class="property-required"
+{{% /md %}}</dd><dt class="property-required"
             title="Required">
         <span id="family_python">
 <a href="#family_python" style="color: inherit; text-decoration: inherit;">family</a>
@@ -1441,8 +1318,7 @@ The fields of the network attributes are:
         <span class="property-type">int</span>
     </dt>
     <dd>{{% md %}}IP version - "4" or "6"
-{{% /md %}}</dd>
-    <dt class="property-required"
+{{% /md %}}</dd><dt class="property-required"
             title="Required">
         <span id="gateway_python">
 <a href="#gateway_python" style="color: inherit; text-decoration: inherit;">gateway</a>
@@ -1451,8 +1327,7 @@ The fields of the network attributes are:
         <span class="property-type">str</span>
     </dt>
     <dd>{{% md %}}Address of router
-{{% /md %}}</dd>
-    <dt class="property-required"
+{{% /md %}}</dd><dt class="property-required"
             title="Required">
         <span id="public_python">
 <a href="#public_python" style="color: inherit; text-decoration: inherit;">public</a>
@@ -1461,8 +1336,7 @@ The fields of the network attributes are:
         <span class="property-type">bool</span>
     </dt>
     <dd>{{% md %}}Whether the address is routable from the Internet
-{{% /md %}}</dd>
-</dl>
+{{% /md %}}</dd></dl>
 {{% /choosable %}}
 
 <h4 id="getdeviceport">Get<wbr>Device<wbr>Port</h4>
@@ -1470,9 +1344,7 @@ The fields of the network attributes are:
 
 
 {{% choosable language csharp %}}
-<dl class="resources-properties">
-
-    <dt class="property-required"
+<dl class="resources-properties"><dt class="property-required"
             title="Required">
         <span id="bonded_csharp">
 <a href="#bonded_csharp" style="color: inherit; text-decoration: inherit;">Bonded</a>
@@ -1481,8 +1353,7 @@ The fields of the network attributes are:
         <span class="property-type">bool</span>
     </dt>
     <dd>{{% md %}}Whether this port is part of a bond in bonded network setup
-{{% /md %}}</dd>
-    <dt class="property-required"
+{{% /md %}}</dd><dt class="property-required"
             title="Required">
         <span id="id_csharp">
 <a href="#id_csharp" style="color: inherit; text-decoration: inherit;">Id</a>
@@ -1491,8 +1362,7 @@ The fields of the network attributes are:
         <span class="property-type">string</span>
     </dt>
     <dd>{{% md %}}ID of the port
-{{% /md %}}</dd>
-    <dt class="property-required"
+{{% /md %}}</dd><dt class="property-required"
             title="Required">
         <span id="mac_csharp">
 <a href="#mac_csharp" style="color: inherit; text-decoration: inherit;">Mac</a>
@@ -1501,8 +1371,7 @@ The fields of the network attributes are:
         <span class="property-type">string</span>
     </dt>
     <dd>{{% md %}}MAC address assigned to the port
-{{% /md %}}</dd>
-    <dt class="property-required"
+{{% /md %}}</dd><dt class="property-required"
             title="Required">
         <span id="name_csharp">
 <a href="#name_csharp" style="color: inherit; text-decoration: inherit;">Name</a>
@@ -1511,8 +1380,7 @@ The fields of the network attributes are:
         <span class="property-type">string</span>
     </dt>
     <dd>{{% md %}}Name of the port (e.g. `eth0`, or `bond0`)
-{{% /md %}}</dd>
-    <dt class="property-required"
+{{% /md %}}</dd><dt class="property-required"
             title="Required">
         <span id="type_csharp">
 <a href="#type_csharp" style="color: inherit; text-decoration: inherit;">Type</a>
@@ -1521,14 +1389,11 @@ The fields of the network attributes are:
         <span class="property-type">string</span>
     </dt>
     <dd>{{% md %}}Type of the port (e.g. `NetworkPort` or `NetworkBondPort`)
-{{% /md %}}</dd>
-</dl>
+{{% /md %}}</dd></dl>
 {{% /choosable %}}
 
 {{% choosable language go %}}
-<dl class="resources-properties">
-
-    <dt class="property-required"
+<dl class="resources-properties"><dt class="property-required"
             title="Required">
         <span id="bonded_go">
 <a href="#bonded_go" style="color: inherit; text-decoration: inherit;">Bonded</a>
@@ -1537,8 +1402,7 @@ The fields of the network attributes are:
         <span class="property-type">bool</span>
     </dt>
     <dd>{{% md %}}Whether this port is part of a bond in bonded network setup
-{{% /md %}}</dd>
-    <dt class="property-required"
+{{% /md %}}</dd><dt class="property-required"
             title="Required">
         <span id="id_go">
 <a href="#id_go" style="color: inherit; text-decoration: inherit;">Id</a>
@@ -1547,8 +1411,7 @@ The fields of the network attributes are:
         <span class="property-type">string</span>
     </dt>
     <dd>{{% md %}}ID of the port
-{{% /md %}}</dd>
-    <dt class="property-required"
+{{% /md %}}</dd><dt class="property-required"
             title="Required">
         <span id="mac_go">
 <a href="#mac_go" style="color: inherit; text-decoration: inherit;">Mac</a>
@@ -1557,8 +1420,7 @@ The fields of the network attributes are:
         <span class="property-type">string</span>
     </dt>
     <dd>{{% md %}}MAC address assigned to the port
-{{% /md %}}</dd>
-    <dt class="property-required"
+{{% /md %}}</dd><dt class="property-required"
             title="Required">
         <span id="name_go">
 <a href="#name_go" style="color: inherit; text-decoration: inherit;">Name</a>
@@ -1567,8 +1429,7 @@ The fields of the network attributes are:
         <span class="property-type">string</span>
     </dt>
     <dd>{{% md %}}Name of the port (e.g. `eth0`, or `bond0`)
-{{% /md %}}</dd>
-    <dt class="property-required"
+{{% /md %}}</dd><dt class="property-required"
             title="Required">
         <span id="type_go">
 <a href="#type_go" style="color: inherit; text-decoration: inherit;">Type</a>
@@ -1577,14 +1438,11 @@ The fields of the network attributes are:
         <span class="property-type">string</span>
     </dt>
     <dd>{{% md %}}Type of the port (e.g. `NetworkPort` or `NetworkBondPort`)
-{{% /md %}}</dd>
-</dl>
+{{% /md %}}</dd></dl>
 {{% /choosable %}}
 
 {{% choosable language nodejs %}}
-<dl class="resources-properties">
-
-    <dt class="property-required"
+<dl class="resources-properties"><dt class="property-required"
             title="Required">
         <span id="bonded_nodejs">
 <a href="#bonded_nodejs" style="color: inherit; text-decoration: inherit;">bonded</a>
@@ -1593,8 +1451,7 @@ The fields of the network attributes are:
         <span class="property-type">boolean</span>
     </dt>
     <dd>{{% md %}}Whether this port is part of a bond in bonded network setup
-{{% /md %}}</dd>
-    <dt class="property-required"
+{{% /md %}}</dd><dt class="property-required"
             title="Required">
         <span id="id_nodejs">
 <a href="#id_nodejs" style="color: inherit; text-decoration: inherit;">id</a>
@@ -1603,8 +1460,7 @@ The fields of the network attributes are:
         <span class="property-type">string</span>
     </dt>
     <dd>{{% md %}}ID of the port
-{{% /md %}}</dd>
-    <dt class="property-required"
+{{% /md %}}</dd><dt class="property-required"
             title="Required">
         <span id="mac_nodejs">
 <a href="#mac_nodejs" style="color: inherit; text-decoration: inherit;">mac</a>
@@ -1613,8 +1469,7 @@ The fields of the network attributes are:
         <span class="property-type">string</span>
     </dt>
     <dd>{{% md %}}MAC address assigned to the port
-{{% /md %}}</dd>
-    <dt class="property-required"
+{{% /md %}}</dd><dt class="property-required"
             title="Required">
         <span id="name_nodejs">
 <a href="#name_nodejs" style="color: inherit; text-decoration: inherit;">name</a>
@@ -1623,8 +1478,7 @@ The fields of the network attributes are:
         <span class="property-type">string</span>
     </dt>
     <dd>{{% md %}}Name of the port (e.g. `eth0`, or `bond0`)
-{{% /md %}}</dd>
-    <dt class="property-required"
+{{% /md %}}</dd><dt class="property-required"
             title="Required">
         <span id="type_nodejs">
 <a href="#type_nodejs" style="color: inherit; text-decoration: inherit;">type</a>
@@ -1633,14 +1487,11 @@ The fields of the network attributes are:
         <span class="property-type">string</span>
     </dt>
     <dd>{{% md %}}Type of the port (e.g. `NetworkPort` or `NetworkBondPort`)
-{{% /md %}}</dd>
-</dl>
+{{% /md %}}</dd></dl>
 {{% /choosable %}}
 
 {{% choosable language python %}}
-<dl class="resources-properties">
-
-    <dt class="property-required"
+<dl class="resources-properties"><dt class="property-required"
             title="Required">
         <span id="bonded_python">
 <a href="#bonded_python" style="color: inherit; text-decoration: inherit;">bonded</a>
@@ -1649,8 +1500,7 @@ The fields of the network attributes are:
         <span class="property-type">bool</span>
     </dt>
     <dd>{{% md %}}Whether this port is part of a bond in bonded network setup
-{{% /md %}}</dd>
-    <dt class="property-required"
+{{% /md %}}</dd><dt class="property-required"
             title="Required">
         <span id="id_python">
 <a href="#id_python" style="color: inherit; text-decoration: inherit;">id</a>
@@ -1659,8 +1509,7 @@ The fields of the network attributes are:
         <span class="property-type">str</span>
     </dt>
     <dd>{{% md %}}ID of the port
-{{% /md %}}</dd>
-    <dt class="property-required"
+{{% /md %}}</dd><dt class="property-required"
             title="Required">
         <span id="mac_python">
 <a href="#mac_python" style="color: inherit; text-decoration: inherit;">mac</a>
@@ -1669,8 +1518,7 @@ The fields of the network attributes are:
         <span class="property-type">str</span>
     </dt>
     <dd>{{% md %}}MAC address assigned to the port
-{{% /md %}}</dd>
-    <dt class="property-required"
+{{% /md %}}</dd><dt class="property-required"
             title="Required">
         <span id="name_python">
 <a href="#name_python" style="color: inherit; text-decoration: inherit;">name</a>
@@ -1679,8 +1527,7 @@ The fields of the network attributes are:
         <span class="property-type">str</span>
     </dt>
     <dd>{{% md %}}Name of the port (e.g. `eth0`, or `bond0`)
-{{% /md %}}</dd>
-    <dt class="property-required"
+{{% /md %}}</dd><dt class="property-required"
             title="Required">
         <span id="type_python">
 <a href="#type_python" style="color: inherit; text-decoration: inherit;">type</a>
@@ -1689,8 +1536,7 @@ The fields of the network attributes are:
         <span class="property-type">str</span>
     </dt>
     <dd>{{% md %}}Type of the port (e.g. `NetworkPort` or `NetworkBondPort`)
-{{% /md %}}</dd>
-</dl>
+{{% /md %}}</dd></dl>
 {{% /choosable %}}
 
 
@@ -1704,6 +1550,6 @@ The fields of the network attributes are:
 	<dt>License</dt>
 	<dd>Apache-2.0</dd>
 	<dt>Notes</dt>
-	<dd>This Pulumi package is based on the [`metal` Terraform Provider](https://github.com/equinix/terraform-provider-metal).</dd>
+	<dd>{{% md %}}This Pulumi package is based on the [`metal` Terraform Provider](https://github.com/equinix/terraform-provider-metal).{{% /md %}}</dd>
 </dl>
 

@@ -150,11 +150,17 @@ func main() {
 ```
 
 {{% examples %}}
+
 ## Example Usage
 
 {{< chooser language "typescript,python,go,csharp" / >}}
 
-{{% example csharp %}}
+
+
+
+
+{{< example csharp >}}
+
 ```csharp
 using Pulumi;
 using Aws = Pulumi.Aws;
@@ -177,9 +183,12 @@ class MyStack : Stack
 }
 ```
 
-{{% /example %}}
 
-{{% example go %}}
+{{< /example >}}
+
+
+{{< example go >}}
+
 ```go
 package main
 
@@ -208,9 +217,12 @@ func main() {
 }
 ```
 
-{{% /example %}}
 
-{{% example python %}}
+{{< /example >}}
+
+
+{{< example python >}}
+
 ```python
 import pulumi
 import pulumi_aws as aws
@@ -221,9 +233,12 @@ tfenvtest = aws.elasticbeanstalk.Environment("tfenvtest",
     solution_stack_name="64bit Amazon Linux 2015.03 v2.0.3 running Go 1.4")
 ```
 
-{{% /example %}}
 
-{{% example typescript %}}
+{{< /example >}}
+
+
+{{< example typescript >}}
+
 
 ```typescript
 import * as pulumi from "@pulumi/pulumi";
@@ -236,9 +251,16 @@ const tfenvtest = new aws.elasticbeanstalk.Environment("tfenvtest", {
 });
 ```
 
-{{% /example %}}
+
+{{< /example >}}
+
+
+
+
 
 {{% /examples %}}
+
+
 
 
 ## Create a Environment Resource {#create}
@@ -263,9 +285,7 @@ const tfenvtest = new aws.elasticbeanstalk.Environment("tfenvtest", {
 
 {{% choosable language nodejs %}}
 
-<dl class="resources-properties">
-  
-    <dt
+<dl class="resources-properties"><dt
         class="property-required" title="Required">
         <span>name</span>
         <span class="property-indicator"></span>
@@ -273,9 +293,7 @@ const tfenvtest = new aws.elasticbeanstalk.Environment("tfenvtest", {
     </dt>
     <dd>
       The unique name of the resource.
-    </dd>
-  
-    <dt
+    </dd><dt
         class="property-required" title="Required">
         <span>args</span>
         <span class="property-indicator"></span>
@@ -283,9 +301,7 @@ const tfenvtest = new aws.elasticbeanstalk.Environment("tfenvtest", {
     </dt>
     <dd>
       The arguments to resource properties.
-    </dd>
-  
-    <dt
+    </dd><dt
         class="property-optional" title="Optional">
         <span>opts</span>
         <span class="property-indicator"></span>
@@ -293,10 +309,7 @@ const tfenvtest = new aws.elasticbeanstalk.Environment("tfenvtest", {
     </dt>
     <dd>
       Bag of options to control resource&#39;s behavior.
-    </dd>
-  
-
-</dl>
+    </dd></dl>
 
 {{% /choosable %}}
 
@@ -322,9 +335,7 @@ const tfenvtest = new aws.elasticbeanstalk.Environment("tfenvtest", {
 
 {{% choosable language go %}}
 
-<dl class="resources-properties">
-  
-    <dt
+<dl class="resources-properties"><dt
         class="property-optional" title="Optional">
         <span>ctx</span>
         <span class="property-indicator"></span>
@@ -332,9 +343,7 @@ const tfenvtest = new aws.elasticbeanstalk.Environment("tfenvtest", {
     </dt>
     <dd>
       Context object for the current deployment.
-    </dd>
-  
-    <dt
+    </dd><dt
         class="property-required" title="Required">
         <span>name</span>
         <span class="property-indicator"></span>
@@ -342,9 +351,7 @@ const tfenvtest = new aws.elasticbeanstalk.Environment("tfenvtest", {
     </dt>
     <dd>
       The unique name of the resource.
-    </dd>
-  
-    <dt
+    </dd><dt
         class="property-required" title="Required">
         <span>args</span>
         <span class="property-indicator"></span>
@@ -352,9 +359,7 @@ const tfenvtest = new aws.elasticbeanstalk.Environment("tfenvtest", {
     </dt>
     <dd>
       The arguments to resource properties.
-    </dd>
-  
-    <dt
+    </dd><dt
         class="property-optional" title="Optional">
         <span>opts</span>
         <span class="property-indicator"></span>
@@ -362,18 +367,13 @@ const tfenvtest = new aws.elasticbeanstalk.Environment("tfenvtest", {
     </dt>
     <dd>
       Bag of options to control resource&#39;s behavior.
-    </dd>
-  
-
-</dl>
+    </dd></dl>
 
 {{% /choosable %}}
 
 {{% choosable language csharp %}}
 
-<dl class="resources-properties">
-  
-    <dt
+<dl class="resources-properties"><dt
         class="property-required" title="Required">
         <span>name</span>
         <span class="property-indicator"></span>
@@ -381,9 +381,7 @@ const tfenvtest = new aws.elasticbeanstalk.Environment("tfenvtest", {
     </dt>
     <dd>
       The unique name of the resource.
-    </dd>
-  
-    <dt
+    </dd><dt
         class="property-required" title="Required">
         <span>args</span>
         <span class="property-indicator"></span>
@@ -391,9 +389,7 @@ const tfenvtest = new aws.elasticbeanstalk.Environment("tfenvtest", {
     </dt>
     <dd>
       The arguments to resource properties.
-    </dd>
-  
-    <dt
+    </dd><dt
         class="property-optional" title="Optional">
         <span>opts</span>
         <span class="property-indicator"></span>
@@ -401,10 +397,7 @@ const tfenvtest = new aws.elasticbeanstalk.Environment("tfenvtest", {
     </dt>
     <dd>
       Bag of options to control resource&#39;s behavior.
-    </dd>
-  
-
-</dl>
+    </dd></dl>
 
 {{% /choosable %}}
 
@@ -419,9 +412,7 @@ The Environment resource accepts the following [input]({{< relref "/docs/intro/c
 
 
 {{% choosable language csharp %}}
-<dl class="resources-properties">
-
-    <dt class="property-required"
+<dl class="resources-properties"><dt class="property-required"
             title="Required">
         <span id="application_csharp">
 <a href="#application_csharp" style="color: inherit; text-decoration: inherit;">Application</a>
@@ -431,8 +422,7 @@ The Environment resource accepts the following [input]({{< relref "/docs/intro/c
     </dt>
     <dd>{{% md %}}Name of the application that contains the version
 to be deployed
-{{% /md %}}</dd>
-    <dt class="property-optional"
+{{% /md %}}</dd><dt class="property-optional"
             title="Optional">
         <span id="cnameprefix_csharp">
 <a href="#cnameprefix_csharp" style="color: inherit; text-decoration: inherit;">Cname<wbr>Prefix</a>
@@ -442,8 +432,7 @@ to be deployed
     </dt>
     <dd>{{% md %}}Prefix to use for the fully qualified DNS name of
 the Environment.
-{{% /md %}}</dd>
-    <dt class="property-optional"
+{{% /md %}}</dd><dt class="property-optional"
             title="Optional">
         <span id="description_csharp">
 <a href="#description_csharp" style="color: inherit; text-decoration: inherit;">Description</a>
@@ -452,8 +441,7 @@ the Environment.
         <span class="property-type">string</span>
     </dt>
     <dd>{{% md %}}Short description of the Environment
-{{% /md %}}</dd>
-    <dt class="property-optional"
+{{% /md %}}</dd><dt class="property-optional"
             title="Optional">
         <span id="name_csharp">
 <a href="#name_csharp" style="color: inherit; text-decoration: inherit;">Name</a>
@@ -463,8 +451,7 @@ the Environment.
     </dt>
     <dd>{{% md %}}A unique name for this Environment. This name is used
 in the application URL
-{{% /md %}}</dd>
-    <dt class="property-optional"
+{{% /md %}}</dd><dt class="property-optional"
             title="Optional">
         <span id="platformarn_csharp">
 <a href="#platformarn_csharp" style="color: inherit; text-decoration: inherit;">Platform<wbr>Arn</a>
@@ -474,8 +461,7 @@ in the application URL
     </dt>
     <dd>{{% md %}}The [ARN](https://docs.aws.amazon.com/general/latest/gr/aws-arns-and-namespaces.html) of the Elastic Beanstalk [Platform](https://docs.aws.amazon.com/AWSCloudFormation/latest/UserGuide/aws-properties-beanstalk-environment.html#cfn-beanstalk-environment-platformarn)
 to use in deployment
-{{% /md %}}</dd>
-    <dt class="property-optional"
+{{% /md %}}</dd><dt class="property-optional"
             title="Optional">
         <span id="pollinterval_csharp">
 <a href="#pollinterval_csharp" style="color: inherit; text-decoration: inherit;">Poll<wbr>Interval</a>
@@ -487,8 +473,7 @@ to use in deployment
 check if changes have been applied. Use this to adjust the rate of API calls
 for any `create` or `update` action. Minimum `10s`, maximum `180s`. Omit this to
 use the default behavior, which is an exponential backoff
-{{% /md %}}</dd>
-    <dt class="property-optional"
+{{% /md %}}</dd><dt class="property-optional"
             title="Optional">
         <span id="settings_csharp">
 <a href="#settings_csharp" style="color: inherit; text-decoration: inherit;">Settings</a>
@@ -499,8 +484,7 @@ use the default behavior, which is an exponential backoff
     <dd>{{% md %}}Option settings to configure the new Environment. These
 override specific values that are set as defaults. The format is detailed
 below in Option Settings
-{{% /md %}}</dd>
-    <dt class="property-optional"
+{{% /md %}}</dd><dt class="property-optional"
             title="Optional">
         <span id="solutionstackname_csharp">
 <a href="#solutionstackname_csharp" style="color: inherit; text-decoration: inherit;">Solution<wbr>Stack<wbr>Name</a>
@@ -510,8 +494,7 @@ below in Option Settings
     </dt>
     <dd>{{% md %}}A solution stack to base your environment
 off of. Example stacks can be found in the [Amazon API documentation](https://docs.aws.amazon.com/elasticbeanstalk/latest/dg/concepts.platforms.html)
-{{% /md %}}</dd>
-    <dt class="property-optional"
+{{% /md %}}</dd><dt class="property-optional"
             title="Optional">
         <span id="tags_csharp">
 <a href="#tags_csharp" style="color: inherit; text-decoration: inherit;">Tags</a>
@@ -520,8 +503,7 @@ off of. Example stacks can be found in the [Amazon API documentation](https://do
         <span class="property-type">Dictionary&lt;string, string&gt;</span>
     </dt>
     <dd>{{% md %}}A set of tags to apply to the Environment.
-{{% /md %}}</dd>
-    <dt class="property-optional"
+{{% /md %}}</dd><dt class="property-optional"
             title="Optional">
         <span id="templatename_csharp">
 <a href="#templatename_csharp" style="color: inherit; text-decoration: inherit;">Template<wbr>Name</a>
@@ -531,8 +513,7 @@ off of. Example stacks can be found in the [Amazon API documentation](https://do
     </dt>
     <dd>{{% md %}}The name of the Elastic Beanstalk Configuration
 template to use in deployment
-{{% /md %}}</dd>
-    <dt class="property-optional"
+{{% /md %}}</dd><dt class="property-optional"
             title="Optional">
         <span id="tier_csharp">
 <a href="#tier_csharp" style="color: inherit; text-decoration: inherit;">Tier</a>
@@ -542,8 +523,7 @@ template to use in deployment
     </dt>
     <dd>{{% md %}}Elastic Beanstalk Environment tier. Valid values are `Worker`
 or `WebServer`. If tier is left blank `WebServer` will be used.
-{{% /md %}}</dd>
-    <dt class="property-optional"
+{{% /md %}}</dd><dt class="property-optional"
             title="Optional">
         <span id="version_csharp">
 <a href="#version_csharp" style="color: inherit; text-decoration: inherit;">Version</a>
@@ -553,8 +533,7 @@ or `WebServer`. If tier is left blank `WebServer` will be used.
     </dt>
     <dd>{{% md %}}The name of the Elastic Beanstalk Application Version
 to use in deployment.
-{{% /md %}}</dd>
-    <dt class="property-optional"
+{{% /md %}}</dd><dt class="property-optional"
             title="Optional">
         <span id="waitforreadytimeout_csharp">
 <a href="#waitforreadytimeout_csharp" style="color: inherit; text-decoration: inherit;">Wait<wbr>For<wbr>Ready<wbr>Timeout</a>
@@ -566,14 +545,11 @@ to use in deployment.
 [duration](https://golang.org/pkg/time/#ParseDuration) that this provider should
 wait for an Elastic Beanstalk Environment to be in a ready state before timing
 out.
-{{% /md %}}</dd>
-</dl>
+{{% /md %}}</dd></dl>
 {{% /choosable %}}
 
 {{% choosable language go %}}
-<dl class="resources-properties">
-
-    <dt class="property-required"
+<dl class="resources-properties"><dt class="property-required"
             title="Required">
         <span id="application_go">
 <a href="#application_go" style="color: inherit; text-decoration: inherit;">Application</a>
@@ -583,8 +559,7 @@ out.
     </dt>
     <dd>{{% md %}}Name of the application that contains the version
 to be deployed
-{{% /md %}}</dd>
-    <dt class="property-optional"
+{{% /md %}}</dd><dt class="property-optional"
             title="Optional">
         <span id="cnameprefix_go">
 <a href="#cnameprefix_go" style="color: inherit; text-decoration: inherit;">Cname<wbr>Prefix</a>
@@ -594,8 +569,7 @@ to be deployed
     </dt>
     <dd>{{% md %}}Prefix to use for the fully qualified DNS name of
 the Environment.
-{{% /md %}}</dd>
-    <dt class="property-optional"
+{{% /md %}}</dd><dt class="property-optional"
             title="Optional">
         <span id="description_go">
 <a href="#description_go" style="color: inherit; text-decoration: inherit;">Description</a>
@@ -604,8 +578,7 @@ the Environment.
         <span class="property-type">string</span>
     </dt>
     <dd>{{% md %}}Short description of the Environment
-{{% /md %}}</dd>
-    <dt class="property-optional"
+{{% /md %}}</dd><dt class="property-optional"
             title="Optional">
         <span id="name_go">
 <a href="#name_go" style="color: inherit; text-decoration: inherit;">Name</a>
@@ -615,8 +588,7 @@ the Environment.
     </dt>
     <dd>{{% md %}}A unique name for this Environment. This name is used
 in the application URL
-{{% /md %}}</dd>
-    <dt class="property-optional"
+{{% /md %}}</dd><dt class="property-optional"
             title="Optional">
         <span id="platformarn_go">
 <a href="#platformarn_go" style="color: inherit; text-decoration: inherit;">Platform<wbr>Arn</a>
@@ -626,8 +598,7 @@ in the application URL
     </dt>
     <dd>{{% md %}}The [ARN](https://docs.aws.amazon.com/general/latest/gr/aws-arns-and-namespaces.html) of the Elastic Beanstalk [Platform](https://docs.aws.amazon.com/AWSCloudFormation/latest/UserGuide/aws-properties-beanstalk-environment.html#cfn-beanstalk-environment-platformarn)
 to use in deployment
-{{% /md %}}</dd>
-    <dt class="property-optional"
+{{% /md %}}</dd><dt class="property-optional"
             title="Optional">
         <span id="pollinterval_go">
 <a href="#pollinterval_go" style="color: inherit; text-decoration: inherit;">Poll<wbr>Interval</a>
@@ -639,8 +610,7 @@ to use in deployment
 check if changes have been applied. Use this to adjust the rate of API calls
 for any `create` or `update` action. Minimum `10s`, maximum `180s`. Omit this to
 use the default behavior, which is an exponential backoff
-{{% /md %}}</dd>
-    <dt class="property-optional"
+{{% /md %}}</dd><dt class="property-optional"
             title="Optional">
         <span id="settings_go">
 <a href="#settings_go" style="color: inherit; text-decoration: inherit;">Settings</a>
@@ -651,8 +621,7 @@ use the default behavior, which is an exponential backoff
     <dd>{{% md %}}Option settings to configure the new Environment. These
 override specific values that are set as defaults. The format is detailed
 below in Option Settings
-{{% /md %}}</dd>
-    <dt class="property-optional"
+{{% /md %}}</dd><dt class="property-optional"
             title="Optional">
         <span id="solutionstackname_go">
 <a href="#solutionstackname_go" style="color: inherit; text-decoration: inherit;">Solution<wbr>Stack<wbr>Name</a>
@@ -662,8 +631,7 @@ below in Option Settings
     </dt>
     <dd>{{% md %}}A solution stack to base your environment
 off of. Example stacks can be found in the [Amazon API documentation](https://docs.aws.amazon.com/elasticbeanstalk/latest/dg/concepts.platforms.html)
-{{% /md %}}</dd>
-    <dt class="property-optional"
+{{% /md %}}</dd><dt class="property-optional"
             title="Optional">
         <span id="tags_go">
 <a href="#tags_go" style="color: inherit; text-decoration: inherit;">Tags</a>
@@ -672,8 +640,7 @@ off of. Example stacks can be found in the [Amazon API documentation](https://do
         <span class="property-type">map[string]string</span>
     </dt>
     <dd>{{% md %}}A set of tags to apply to the Environment.
-{{% /md %}}</dd>
-    <dt class="property-optional"
+{{% /md %}}</dd><dt class="property-optional"
             title="Optional">
         <span id="templatename_go">
 <a href="#templatename_go" style="color: inherit; text-decoration: inherit;">Template<wbr>Name</a>
@@ -683,8 +650,7 @@ off of. Example stacks can be found in the [Amazon API documentation](https://do
     </dt>
     <dd>{{% md %}}The name of the Elastic Beanstalk Configuration
 template to use in deployment
-{{% /md %}}</dd>
-    <dt class="property-optional"
+{{% /md %}}</dd><dt class="property-optional"
             title="Optional">
         <span id="tier_go">
 <a href="#tier_go" style="color: inherit; text-decoration: inherit;">Tier</a>
@@ -694,8 +660,7 @@ template to use in deployment
     </dt>
     <dd>{{% md %}}Elastic Beanstalk Environment tier. Valid values are `Worker`
 or `WebServer`. If tier is left blank `WebServer` will be used.
-{{% /md %}}</dd>
-    <dt class="property-optional"
+{{% /md %}}</dd><dt class="property-optional"
             title="Optional">
         <span id="version_go">
 <a href="#version_go" style="color: inherit; text-decoration: inherit;">Version</a>
@@ -705,8 +670,7 @@ or `WebServer`. If tier is left blank `WebServer` will be used.
     </dt>
     <dd>{{% md %}}The name of the Elastic Beanstalk Application Version
 to use in deployment.
-{{% /md %}}</dd>
-    <dt class="property-optional"
+{{% /md %}}</dd><dt class="property-optional"
             title="Optional">
         <span id="waitforreadytimeout_go">
 <a href="#waitforreadytimeout_go" style="color: inherit; text-decoration: inherit;">Wait<wbr>For<wbr>Ready<wbr>Timeout</a>
@@ -718,14 +682,11 @@ to use in deployment.
 [duration](https://golang.org/pkg/time/#ParseDuration) that this provider should
 wait for an Elastic Beanstalk Environment to be in a ready state before timing
 out.
-{{% /md %}}</dd>
-</dl>
+{{% /md %}}</dd></dl>
 {{% /choosable %}}
 
 {{% choosable language nodejs %}}
-<dl class="resources-properties">
-
-    <dt class="property-required"
+<dl class="resources-properties"><dt class="property-required"
             title="Required">
         <span id="application_nodejs">
 <a href="#application_nodejs" style="color: inherit; text-decoration: inherit;">application</a>
@@ -735,8 +696,7 @@ out.
     </dt>
     <dd>{{% md %}}Name of the application that contains the version
 to be deployed
-{{% /md %}}</dd>
-    <dt class="property-optional"
+{{% /md %}}</dd><dt class="property-optional"
             title="Optional">
         <span id="cnameprefix_nodejs">
 <a href="#cnameprefix_nodejs" style="color: inherit; text-decoration: inherit;">cname<wbr>Prefix</a>
@@ -746,8 +706,7 @@ to be deployed
     </dt>
     <dd>{{% md %}}Prefix to use for the fully qualified DNS name of
 the Environment.
-{{% /md %}}</dd>
-    <dt class="property-optional"
+{{% /md %}}</dd><dt class="property-optional"
             title="Optional">
         <span id="description_nodejs">
 <a href="#description_nodejs" style="color: inherit; text-decoration: inherit;">description</a>
@@ -756,8 +715,7 @@ the Environment.
         <span class="property-type">string</span>
     </dt>
     <dd>{{% md %}}Short description of the Environment
-{{% /md %}}</dd>
-    <dt class="property-optional"
+{{% /md %}}</dd><dt class="property-optional"
             title="Optional">
         <span id="name_nodejs">
 <a href="#name_nodejs" style="color: inherit; text-decoration: inherit;">name</a>
@@ -767,8 +725,7 @@ the Environment.
     </dt>
     <dd>{{% md %}}A unique name for this Environment. This name is used
 in the application URL
-{{% /md %}}</dd>
-    <dt class="property-optional"
+{{% /md %}}</dd><dt class="property-optional"
             title="Optional">
         <span id="platformarn_nodejs">
 <a href="#platformarn_nodejs" style="color: inherit; text-decoration: inherit;">platform<wbr>Arn</a>
@@ -778,8 +735,7 @@ in the application URL
     </dt>
     <dd>{{% md %}}The [ARN](https://docs.aws.amazon.com/general/latest/gr/aws-arns-and-namespaces.html) of the Elastic Beanstalk [Platform](https://docs.aws.amazon.com/AWSCloudFormation/latest/UserGuide/aws-properties-beanstalk-environment.html#cfn-beanstalk-environment-platformarn)
 to use in deployment
-{{% /md %}}</dd>
-    <dt class="property-optional"
+{{% /md %}}</dd><dt class="property-optional"
             title="Optional">
         <span id="pollinterval_nodejs">
 <a href="#pollinterval_nodejs" style="color: inherit; text-decoration: inherit;">poll<wbr>Interval</a>
@@ -791,8 +747,7 @@ to use in deployment
 check if changes have been applied. Use this to adjust the rate of API calls
 for any `create` or `update` action. Minimum `10s`, maximum `180s`. Omit this to
 use the default behavior, which is an exponential backoff
-{{% /md %}}</dd>
-    <dt class="property-optional"
+{{% /md %}}</dd><dt class="property-optional"
             title="Optional">
         <span id="settings_nodejs">
 <a href="#settings_nodejs" style="color: inherit; text-decoration: inherit;">settings</a>
@@ -803,8 +758,7 @@ use the default behavior, which is an exponential backoff
     <dd>{{% md %}}Option settings to configure the new Environment. These
 override specific values that are set as defaults. The format is detailed
 below in Option Settings
-{{% /md %}}</dd>
-    <dt class="property-optional"
+{{% /md %}}</dd><dt class="property-optional"
             title="Optional">
         <span id="solutionstackname_nodejs">
 <a href="#solutionstackname_nodejs" style="color: inherit; text-decoration: inherit;">solution<wbr>Stack<wbr>Name</a>
@@ -814,8 +768,7 @@ below in Option Settings
     </dt>
     <dd>{{% md %}}A solution stack to base your environment
 off of. Example stacks can be found in the [Amazon API documentation](https://docs.aws.amazon.com/elasticbeanstalk/latest/dg/concepts.platforms.html)
-{{% /md %}}</dd>
-    <dt class="property-optional"
+{{% /md %}}</dd><dt class="property-optional"
             title="Optional">
         <span id="tags_nodejs">
 <a href="#tags_nodejs" style="color: inherit; text-decoration: inherit;">tags</a>
@@ -824,8 +777,7 @@ off of. Example stacks can be found in the [Amazon API documentation](https://do
         <span class="property-type">{[key: string]: string}</span>
     </dt>
     <dd>{{% md %}}A set of tags to apply to the Environment.
-{{% /md %}}</dd>
-    <dt class="property-optional"
+{{% /md %}}</dd><dt class="property-optional"
             title="Optional">
         <span id="templatename_nodejs">
 <a href="#templatename_nodejs" style="color: inherit; text-decoration: inherit;">template<wbr>Name</a>
@@ -835,8 +787,7 @@ off of. Example stacks can be found in the [Amazon API documentation](https://do
     </dt>
     <dd>{{% md %}}The name of the Elastic Beanstalk Configuration
 template to use in deployment
-{{% /md %}}</dd>
-    <dt class="property-optional"
+{{% /md %}}</dd><dt class="property-optional"
             title="Optional">
         <span id="tier_nodejs">
 <a href="#tier_nodejs" style="color: inherit; text-decoration: inherit;">tier</a>
@@ -846,8 +797,7 @@ template to use in deployment
     </dt>
     <dd>{{% md %}}Elastic Beanstalk Environment tier. Valid values are `Worker`
 or `WebServer`. If tier is left blank `WebServer` will be used.
-{{% /md %}}</dd>
-    <dt class="property-optional"
+{{% /md %}}</dd><dt class="property-optional"
             title="Optional">
         <span id="version_nodejs">
 <a href="#version_nodejs" style="color: inherit; text-decoration: inherit;">version</a>
@@ -857,8 +807,7 @@ or `WebServer`. If tier is left blank `WebServer` will be used.
     </dt>
     <dd>{{% md %}}The name of the Elastic Beanstalk Application Version
 to use in deployment.
-{{% /md %}}</dd>
-    <dt class="property-optional"
+{{% /md %}}</dd><dt class="property-optional"
             title="Optional">
         <span id="waitforreadytimeout_nodejs">
 <a href="#waitforreadytimeout_nodejs" style="color: inherit; text-decoration: inherit;">wait<wbr>For<wbr>Ready<wbr>Timeout</a>
@@ -870,14 +819,11 @@ to use in deployment.
 [duration](https://golang.org/pkg/time/#ParseDuration) that this provider should
 wait for an Elastic Beanstalk Environment to be in a ready state before timing
 out.
-{{% /md %}}</dd>
-</dl>
+{{% /md %}}</dd></dl>
 {{% /choosable %}}
 
 {{% choosable language python %}}
-<dl class="resources-properties">
-
-    <dt class="property-required"
+<dl class="resources-properties"><dt class="property-required"
             title="Required">
         <span id="application_python">
 <a href="#application_python" style="color: inherit; text-decoration: inherit;">application</a>
@@ -887,8 +833,7 @@ out.
     </dt>
     <dd>{{% md %}}Name of the application that contains the version
 to be deployed
-{{% /md %}}</dd>
-    <dt class="property-optional"
+{{% /md %}}</dd><dt class="property-optional"
             title="Optional">
         <span id="cname_prefix_python">
 <a href="#cname_prefix_python" style="color: inherit; text-decoration: inherit;">cname_<wbr>prefix</a>
@@ -898,8 +843,7 @@ to be deployed
     </dt>
     <dd>{{% md %}}Prefix to use for the fully qualified DNS name of
 the Environment.
-{{% /md %}}</dd>
-    <dt class="property-optional"
+{{% /md %}}</dd><dt class="property-optional"
             title="Optional">
         <span id="description_python">
 <a href="#description_python" style="color: inherit; text-decoration: inherit;">description</a>
@@ -908,8 +852,7 @@ the Environment.
         <span class="property-type">str</span>
     </dt>
     <dd>{{% md %}}Short description of the Environment
-{{% /md %}}</dd>
-    <dt class="property-optional"
+{{% /md %}}</dd><dt class="property-optional"
             title="Optional">
         <span id="name_python">
 <a href="#name_python" style="color: inherit; text-decoration: inherit;">name</a>
@@ -919,8 +862,7 @@ the Environment.
     </dt>
     <dd>{{% md %}}A unique name for this Environment. This name is used
 in the application URL
-{{% /md %}}</dd>
-    <dt class="property-optional"
+{{% /md %}}</dd><dt class="property-optional"
             title="Optional">
         <span id="platform_arn_python">
 <a href="#platform_arn_python" style="color: inherit; text-decoration: inherit;">platform_<wbr>arn</a>
@@ -930,8 +872,7 @@ in the application URL
     </dt>
     <dd>{{% md %}}The [ARN](https://docs.aws.amazon.com/general/latest/gr/aws-arns-and-namespaces.html) of the Elastic Beanstalk [Platform](https://docs.aws.amazon.com/AWSCloudFormation/latest/UserGuide/aws-properties-beanstalk-environment.html#cfn-beanstalk-environment-platformarn)
 to use in deployment
-{{% /md %}}</dd>
-    <dt class="property-optional"
+{{% /md %}}</dd><dt class="property-optional"
             title="Optional">
         <span id="poll_interval_python">
 <a href="#poll_interval_python" style="color: inherit; text-decoration: inherit;">poll_<wbr>interval</a>
@@ -943,8 +884,7 @@ to use in deployment
 check if changes have been applied. Use this to adjust the rate of API calls
 for any `create` or `update` action. Minimum `10s`, maximum `180s`. Omit this to
 use the default behavior, which is an exponential backoff
-{{% /md %}}</dd>
-    <dt class="property-optional"
+{{% /md %}}</dd><dt class="property-optional"
             title="Optional">
         <span id="settings_python">
 <a href="#settings_python" style="color: inherit; text-decoration: inherit;">settings</a>
@@ -955,8 +895,7 @@ use the default behavior, which is an exponential backoff
     <dd>{{% md %}}Option settings to configure the new Environment. These
 override specific values that are set as defaults. The format is detailed
 below in Option Settings
-{{% /md %}}</dd>
-    <dt class="property-optional"
+{{% /md %}}</dd><dt class="property-optional"
             title="Optional">
         <span id="solution_stack_name_python">
 <a href="#solution_stack_name_python" style="color: inherit; text-decoration: inherit;">solution_<wbr>stack_<wbr>name</a>
@@ -966,8 +905,7 @@ below in Option Settings
     </dt>
     <dd>{{% md %}}A solution stack to base your environment
 off of. Example stacks can be found in the [Amazon API documentation](https://docs.aws.amazon.com/elasticbeanstalk/latest/dg/concepts.platforms.html)
-{{% /md %}}</dd>
-    <dt class="property-optional"
+{{% /md %}}</dd><dt class="property-optional"
             title="Optional">
         <span id="tags_python">
 <a href="#tags_python" style="color: inherit; text-decoration: inherit;">tags</a>
@@ -976,8 +914,7 @@ off of. Example stacks can be found in the [Amazon API documentation](https://do
         <span class="property-type">Mapping[str, str]</span>
     </dt>
     <dd>{{% md %}}A set of tags to apply to the Environment.
-{{% /md %}}</dd>
-    <dt class="property-optional"
+{{% /md %}}</dd><dt class="property-optional"
             title="Optional">
         <span id="template_name_python">
 <a href="#template_name_python" style="color: inherit; text-decoration: inherit;">template_<wbr>name</a>
@@ -987,8 +924,7 @@ off of. Example stacks can be found in the [Amazon API documentation](https://do
     </dt>
     <dd>{{% md %}}The name of the Elastic Beanstalk Configuration
 template to use in deployment
-{{% /md %}}</dd>
-    <dt class="property-optional"
+{{% /md %}}</dd><dt class="property-optional"
             title="Optional">
         <span id="tier_python">
 <a href="#tier_python" style="color: inherit; text-decoration: inherit;">tier</a>
@@ -998,8 +934,7 @@ template to use in deployment
     </dt>
     <dd>{{% md %}}Elastic Beanstalk Environment tier. Valid values are `Worker`
 or `WebServer`. If tier is left blank `WebServer` will be used.
-{{% /md %}}</dd>
-    <dt class="property-optional"
+{{% /md %}}</dd><dt class="property-optional"
             title="Optional">
         <span id="version_python">
 <a href="#version_python" style="color: inherit; text-decoration: inherit;">version</a>
@@ -1009,8 +944,7 @@ or `WebServer`. If tier is left blank `WebServer` will be used.
     </dt>
     <dd>{{% md %}}The name of the Elastic Beanstalk Application Version
 to use in deployment.
-{{% /md %}}</dd>
-    <dt class="property-optional"
+{{% /md %}}</dd><dt class="property-optional"
             title="Optional">
         <span id="wait_for_ready_timeout_python">
 <a href="#wait_for_ready_timeout_python" style="color: inherit; text-decoration: inherit;">wait_<wbr>for_<wbr>ready_<wbr>timeout</a>
@@ -1022,8 +956,7 @@ to use in deployment.
 [duration](https://golang.org/pkg/time/#ParseDuration) that this provider should
 wait for an Elastic Beanstalk Environment to be in a ready state before timing
 out.
-{{% /md %}}</dd>
-</dl>
+{{% /md %}}</dd></dl>
 {{% /choosable %}}
 
 
@@ -1034,9 +967,7 @@ All [input](#inputs) properties are implicitly available as output properties. A
 
 
 {{% choosable language csharp %}}
-<dl class="resources-properties">
-
-    <dt class="property-"
+<dl class="resources-properties"><dt class="property-"
             title="">
         <span id="allsettings_csharp">
 <a href="#allsettings_csharp" style="color: inherit; text-decoration: inherit;">All<wbr>Settings</a>
@@ -1047,8 +978,7 @@ All [input](#inputs) properties are implicitly available as output properties. A
     <dd>{{% md %}}List of all option settings configured in this Environment. These
 are a combination of default settings and their overrides from `setting` in
 the configuration.
-{{% /md %}}</dd>
-    <dt class="property-"
+{{% /md %}}</dd><dt class="property-"
             title="">
         <span id="arn_csharp">
 <a href="#arn_csharp" style="color: inherit; text-decoration: inherit;">Arn</a>
@@ -1056,8 +986,7 @@ the configuration.
         <span class="property-indicator"></span>
         <span class="property-type">string</span>
     </dt>
-    <dd>{{% md %}}{{% /md %}}</dd>
-    <dt class="property-"
+    <dd>{{% md %}}{{% /md %}}</dd><dt class="property-"
             title="">
         <span id="autoscalinggroups_csharp">
 <a href="#autoscalinggroups_csharp" style="color: inherit; text-decoration: inherit;">Autoscaling<wbr>Groups</a>
@@ -1066,8 +995,7 @@ the configuration.
         <span class="property-type">List&lt;string&gt;</span>
     </dt>
     <dd>{{% md %}}The autoscaling groups used by this Environment.
-{{% /md %}}</dd>
-    <dt class="property-"
+{{% /md %}}</dd><dt class="property-"
             title="">
         <span id="cname_csharp">
 <a href="#cname_csharp" style="color: inherit; text-decoration: inherit;">Cname</a>
@@ -1076,8 +1004,7 @@ the configuration.
         <span class="property-type">string</span>
     </dt>
     <dd>{{% md %}}Fully qualified DNS name for this Environment.
-{{% /md %}}</dd>
-    <dt class="property-"
+{{% /md %}}</dd><dt class="property-"
             title="">
         <span id="endpointurl_csharp">
 <a href="#endpointurl_csharp" style="color: inherit; text-decoration: inherit;">Endpoint<wbr>Url</a>
@@ -1086,8 +1013,7 @@ the configuration.
         <span class="property-type">string</span>
     </dt>
     <dd>{{% md %}}The URL to the Load Balancer for this Environment
-{{% /md %}}</dd>
-    <dt class="property-"
+{{% /md %}}</dd><dt class="property-"
             title="">
         <span id="id_csharp">
 <a href="#id_csharp" style="color: inherit; text-decoration: inherit;">Id</a>
@@ -1095,8 +1021,7 @@ the configuration.
         <span class="property-indicator"></span>
         <span class="property-type">string</span>
     </dt>
-    <dd>{{% md %}}The provider-assigned unique ID for this managed resource.{{% /md %}}</dd>
-    <dt class="property-"
+    <dd>{{% md %}}The provider-assigned unique ID for this managed resource.{{% /md %}}</dd><dt class="property-"
             title="">
         <span id="instances_csharp">
 <a href="#instances_csharp" style="color: inherit; text-decoration: inherit;">Instances</a>
@@ -1105,8 +1030,7 @@ the configuration.
         <span class="property-type">List&lt;string&gt;</span>
     </dt>
     <dd>{{% md %}}Instances used by this Environment.
-{{% /md %}}</dd>
-    <dt class="property-"
+{{% /md %}}</dd><dt class="property-"
             title="">
         <span id="launchconfigurations_csharp">
 <a href="#launchconfigurations_csharp" style="color: inherit; text-decoration: inherit;">Launch<wbr>Configurations</a>
@@ -1115,8 +1039,7 @@ the configuration.
         <span class="property-type">List&lt;string&gt;</span>
     </dt>
     <dd>{{% md %}}Launch configurations in use by this Environment.
-{{% /md %}}</dd>
-    <dt class="property-"
+{{% /md %}}</dd><dt class="property-"
             title="">
         <span id="loadbalancers_csharp">
 <a href="#loadbalancers_csharp" style="color: inherit; text-decoration: inherit;">Load<wbr>Balancers</a>
@@ -1125,8 +1048,7 @@ the configuration.
         <span class="property-type">List&lt;string&gt;</span>
     </dt>
     <dd>{{% md %}}Elastic load balancers in use by this Environment.
-{{% /md %}}</dd>
-    <dt class="property-"
+{{% /md %}}</dd><dt class="property-"
             title="">
         <span id="queues_csharp">
 <a href="#queues_csharp" style="color: inherit; text-decoration: inherit;">Queues</a>
@@ -1135,8 +1057,7 @@ the configuration.
         <span class="property-type">List&lt;string&gt;</span>
     </dt>
     <dd>{{% md %}}SQS queues in use by this Environment.
-{{% /md %}}</dd>
-    <dt class="property-"
+{{% /md %}}</dd><dt class="property-"
             title="">
         <span id="triggers_csharp">
 <a href="#triggers_csharp" style="color: inherit; text-decoration: inherit;">Triggers</a>
@@ -1145,14 +1066,11 @@ the configuration.
         <span class="property-type">List&lt;string&gt;</span>
     </dt>
     <dd>{{% md %}}Autoscaling triggers in use by this Environment.
-{{% /md %}}</dd>
-</dl>
+{{% /md %}}</dd></dl>
 {{% /choosable %}}
 
 {{% choosable language go %}}
-<dl class="resources-properties">
-
-    <dt class="property-"
+<dl class="resources-properties"><dt class="property-"
             title="">
         <span id="allsettings_go">
 <a href="#allsettings_go" style="color: inherit; text-decoration: inherit;">All<wbr>Settings</a>
@@ -1163,8 +1081,7 @@ the configuration.
     <dd>{{% md %}}List of all option settings configured in this Environment. These
 are a combination of default settings and their overrides from `setting` in
 the configuration.
-{{% /md %}}</dd>
-    <dt class="property-"
+{{% /md %}}</dd><dt class="property-"
             title="">
         <span id="arn_go">
 <a href="#arn_go" style="color: inherit; text-decoration: inherit;">Arn</a>
@@ -1172,8 +1089,7 @@ the configuration.
         <span class="property-indicator"></span>
         <span class="property-type">string</span>
     </dt>
-    <dd>{{% md %}}{{% /md %}}</dd>
-    <dt class="property-"
+    <dd>{{% md %}}{{% /md %}}</dd><dt class="property-"
             title="">
         <span id="autoscalinggroups_go">
 <a href="#autoscalinggroups_go" style="color: inherit; text-decoration: inherit;">Autoscaling<wbr>Groups</a>
@@ -1182,8 +1098,7 @@ the configuration.
         <span class="property-type">[]string</span>
     </dt>
     <dd>{{% md %}}The autoscaling groups used by this Environment.
-{{% /md %}}</dd>
-    <dt class="property-"
+{{% /md %}}</dd><dt class="property-"
             title="">
         <span id="cname_go">
 <a href="#cname_go" style="color: inherit; text-decoration: inherit;">Cname</a>
@@ -1192,8 +1107,7 @@ the configuration.
         <span class="property-type">string</span>
     </dt>
     <dd>{{% md %}}Fully qualified DNS name for this Environment.
-{{% /md %}}</dd>
-    <dt class="property-"
+{{% /md %}}</dd><dt class="property-"
             title="">
         <span id="endpointurl_go">
 <a href="#endpointurl_go" style="color: inherit; text-decoration: inherit;">Endpoint<wbr>Url</a>
@@ -1202,8 +1116,7 @@ the configuration.
         <span class="property-type">string</span>
     </dt>
     <dd>{{% md %}}The URL to the Load Balancer for this Environment
-{{% /md %}}</dd>
-    <dt class="property-"
+{{% /md %}}</dd><dt class="property-"
             title="">
         <span id="id_go">
 <a href="#id_go" style="color: inherit; text-decoration: inherit;">Id</a>
@@ -1211,8 +1124,7 @@ the configuration.
         <span class="property-indicator"></span>
         <span class="property-type">string</span>
     </dt>
-    <dd>{{% md %}}The provider-assigned unique ID for this managed resource.{{% /md %}}</dd>
-    <dt class="property-"
+    <dd>{{% md %}}The provider-assigned unique ID for this managed resource.{{% /md %}}</dd><dt class="property-"
             title="">
         <span id="instances_go">
 <a href="#instances_go" style="color: inherit; text-decoration: inherit;">Instances</a>
@@ -1221,8 +1133,7 @@ the configuration.
         <span class="property-type">[]string</span>
     </dt>
     <dd>{{% md %}}Instances used by this Environment.
-{{% /md %}}</dd>
-    <dt class="property-"
+{{% /md %}}</dd><dt class="property-"
             title="">
         <span id="launchconfigurations_go">
 <a href="#launchconfigurations_go" style="color: inherit; text-decoration: inherit;">Launch<wbr>Configurations</a>
@@ -1231,8 +1142,7 @@ the configuration.
         <span class="property-type">[]string</span>
     </dt>
     <dd>{{% md %}}Launch configurations in use by this Environment.
-{{% /md %}}</dd>
-    <dt class="property-"
+{{% /md %}}</dd><dt class="property-"
             title="">
         <span id="loadbalancers_go">
 <a href="#loadbalancers_go" style="color: inherit; text-decoration: inherit;">Load<wbr>Balancers</a>
@@ -1241,8 +1151,7 @@ the configuration.
         <span class="property-type">[]string</span>
     </dt>
     <dd>{{% md %}}Elastic load balancers in use by this Environment.
-{{% /md %}}</dd>
-    <dt class="property-"
+{{% /md %}}</dd><dt class="property-"
             title="">
         <span id="queues_go">
 <a href="#queues_go" style="color: inherit; text-decoration: inherit;">Queues</a>
@@ -1251,8 +1160,7 @@ the configuration.
         <span class="property-type">[]string</span>
     </dt>
     <dd>{{% md %}}SQS queues in use by this Environment.
-{{% /md %}}</dd>
-    <dt class="property-"
+{{% /md %}}</dd><dt class="property-"
             title="">
         <span id="triggers_go">
 <a href="#triggers_go" style="color: inherit; text-decoration: inherit;">Triggers</a>
@@ -1261,14 +1169,11 @@ the configuration.
         <span class="property-type">[]string</span>
     </dt>
     <dd>{{% md %}}Autoscaling triggers in use by this Environment.
-{{% /md %}}</dd>
-</dl>
+{{% /md %}}</dd></dl>
 {{% /choosable %}}
 
 {{% choosable language nodejs %}}
-<dl class="resources-properties">
-
-    <dt class="property-"
+<dl class="resources-properties"><dt class="property-"
             title="">
         <span id="allsettings_nodejs">
 <a href="#allsettings_nodejs" style="color: inherit; text-decoration: inherit;">all<wbr>Settings</a>
@@ -1279,8 +1184,7 @@ the configuration.
     <dd>{{% md %}}List of all option settings configured in this Environment. These
 are a combination of default settings and their overrides from `setting` in
 the configuration.
-{{% /md %}}</dd>
-    <dt class="property-"
+{{% /md %}}</dd><dt class="property-"
             title="">
         <span id="arn_nodejs">
 <a href="#arn_nodejs" style="color: inherit; text-decoration: inherit;">arn</a>
@@ -1288,8 +1192,7 @@ the configuration.
         <span class="property-indicator"></span>
         <span class="property-type">string</span>
     </dt>
-    <dd>{{% md %}}{{% /md %}}</dd>
-    <dt class="property-"
+    <dd>{{% md %}}{{% /md %}}</dd><dt class="property-"
             title="">
         <span id="autoscalinggroups_nodejs">
 <a href="#autoscalinggroups_nodejs" style="color: inherit; text-decoration: inherit;">autoscaling<wbr>Groups</a>
@@ -1298,8 +1201,7 @@ the configuration.
         <span class="property-type">string[]</span>
     </dt>
     <dd>{{% md %}}The autoscaling groups used by this Environment.
-{{% /md %}}</dd>
-    <dt class="property-"
+{{% /md %}}</dd><dt class="property-"
             title="">
         <span id="cname_nodejs">
 <a href="#cname_nodejs" style="color: inherit; text-decoration: inherit;">cname</a>
@@ -1308,8 +1210,7 @@ the configuration.
         <span class="property-type">string</span>
     </dt>
     <dd>{{% md %}}Fully qualified DNS name for this Environment.
-{{% /md %}}</dd>
-    <dt class="property-"
+{{% /md %}}</dd><dt class="property-"
             title="">
         <span id="endpointurl_nodejs">
 <a href="#endpointurl_nodejs" style="color: inherit; text-decoration: inherit;">endpoint<wbr>Url</a>
@@ -1318,8 +1219,7 @@ the configuration.
         <span class="property-type">string</span>
     </dt>
     <dd>{{% md %}}The URL to the Load Balancer for this Environment
-{{% /md %}}</dd>
-    <dt class="property-"
+{{% /md %}}</dd><dt class="property-"
             title="">
         <span id="id_nodejs">
 <a href="#id_nodejs" style="color: inherit; text-decoration: inherit;">id</a>
@@ -1327,8 +1227,7 @@ the configuration.
         <span class="property-indicator"></span>
         <span class="property-type">string</span>
     </dt>
-    <dd>{{% md %}}The provider-assigned unique ID for this managed resource.{{% /md %}}</dd>
-    <dt class="property-"
+    <dd>{{% md %}}The provider-assigned unique ID for this managed resource.{{% /md %}}</dd><dt class="property-"
             title="">
         <span id="instances_nodejs">
 <a href="#instances_nodejs" style="color: inherit; text-decoration: inherit;">instances</a>
@@ -1337,8 +1236,7 @@ the configuration.
         <span class="property-type">string[]</span>
     </dt>
     <dd>{{% md %}}Instances used by this Environment.
-{{% /md %}}</dd>
-    <dt class="property-"
+{{% /md %}}</dd><dt class="property-"
             title="">
         <span id="launchconfigurations_nodejs">
 <a href="#launchconfigurations_nodejs" style="color: inherit; text-decoration: inherit;">launch<wbr>Configurations</a>
@@ -1347,8 +1245,7 @@ the configuration.
         <span class="property-type">string[]</span>
     </dt>
     <dd>{{% md %}}Launch configurations in use by this Environment.
-{{% /md %}}</dd>
-    <dt class="property-"
+{{% /md %}}</dd><dt class="property-"
             title="">
         <span id="loadbalancers_nodejs">
 <a href="#loadbalancers_nodejs" style="color: inherit; text-decoration: inherit;">load<wbr>Balancers</a>
@@ -1357,8 +1254,7 @@ the configuration.
         <span class="property-type">string[]</span>
     </dt>
     <dd>{{% md %}}Elastic load balancers in use by this Environment.
-{{% /md %}}</dd>
-    <dt class="property-"
+{{% /md %}}</dd><dt class="property-"
             title="">
         <span id="queues_nodejs">
 <a href="#queues_nodejs" style="color: inherit; text-decoration: inherit;">queues</a>
@@ -1367,8 +1263,7 @@ the configuration.
         <span class="property-type">string[]</span>
     </dt>
     <dd>{{% md %}}SQS queues in use by this Environment.
-{{% /md %}}</dd>
-    <dt class="property-"
+{{% /md %}}</dd><dt class="property-"
             title="">
         <span id="triggers_nodejs">
 <a href="#triggers_nodejs" style="color: inherit; text-decoration: inherit;">triggers</a>
@@ -1377,14 +1272,11 @@ the configuration.
         <span class="property-type">string[]</span>
     </dt>
     <dd>{{% md %}}Autoscaling triggers in use by this Environment.
-{{% /md %}}</dd>
-</dl>
+{{% /md %}}</dd></dl>
 {{% /choosable %}}
 
 {{% choosable language python %}}
-<dl class="resources-properties">
-
-    <dt class="property-"
+<dl class="resources-properties"><dt class="property-"
             title="">
         <span id="all_settings_python">
 <a href="#all_settings_python" style="color: inherit; text-decoration: inherit;">all_<wbr>settings</a>
@@ -1395,8 +1287,7 @@ the configuration.
     <dd>{{% md %}}List of all option settings configured in this Environment. These
 are a combination of default settings and their overrides from `setting` in
 the configuration.
-{{% /md %}}</dd>
-    <dt class="property-"
+{{% /md %}}</dd><dt class="property-"
             title="">
         <span id="arn_python">
 <a href="#arn_python" style="color: inherit; text-decoration: inherit;">arn</a>
@@ -1404,8 +1295,7 @@ the configuration.
         <span class="property-indicator"></span>
         <span class="property-type">str</span>
     </dt>
-    <dd>{{% md %}}{{% /md %}}</dd>
-    <dt class="property-"
+    <dd>{{% md %}}{{% /md %}}</dd><dt class="property-"
             title="">
         <span id="autoscaling_groups_python">
 <a href="#autoscaling_groups_python" style="color: inherit; text-decoration: inherit;">autoscaling_<wbr>groups</a>
@@ -1414,8 +1304,7 @@ the configuration.
         <span class="property-type">Sequence[str]</span>
     </dt>
     <dd>{{% md %}}The autoscaling groups used by this Environment.
-{{% /md %}}</dd>
-    <dt class="property-"
+{{% /md %}}</dd><dt class="property-"
             title="">
         <span id="cname_python">
 <a href="#cname_python" style="color: inherit; text-decoration: inherit;">cname</a>
@@ -1424,8 +1313,7 @@ the configuration.
         <span class="property-type">str</span>
     </dt>
     <dd>{{% md %}}Fully qualified DNS name for this Environment.
-{{% /md %}}</dd>
-    <dt class="property-"
+{{% /md %}}</dd><dt class="property-"
             title="">
         <span id="endpoint_url_python">
 <a href="#endpoint_url_python" style="color: inherit; text-decoration: inherit;">endpoint_<wbr>url</a>
@@ -1434,8 +1322,7 @@ the configuration.
         <span class="property-type">str</span>
     </dt>
     <dd>{{% md %}}The URL to the Load Balancer for this Environment
-{{% /md %}}</dd>
-    <dt class="property-"
+{{% /md %}}</dd><dt class="property-"
             title="">
         <span id="id_python">
 <a href="#id_python" style="color: inherit; text-decoration: inherit;">id</a>
@@ -1443,8 +1330,7 @@ the configuration.
         <span class="property-indicator"></span>
         <span class="property-type">str</span>
     </dt>
-    <dd>{{% md %}}The provider-assigned unique ID for this managed resource.{{% /md %}}</dd>
-    <dt class="property-"
+    <dd>{{% md %}}The provider-assigned unique ID for this managed resource.{{% /md %}}</dd><dt class="property-"
             title="">
         <span id="instances_python">
 <a href="#instances_python" style="color: inherit; text-decoration: inherit;">instances</a>
@@ -1453,8 +1339,7 @@ the configuration.
         <span class="property-type">Sequence[str]</span>
     </dt>
     <dd>{{% md %}}Instances used by this Environment.
-{{% /md %}}</dd>
-    <dt class="property-"
+{{% /md %}}</dd><dt class="property-"
             title="">
         <span id="launch_configurations_python">
 <a href="#launch_configurations_python" style="color: inherit; text-decoration: inherit;">launch_<wbr>configurations</a>
@@ -1463,8 +1348,7 @@ the configuration.
         <span class="property-type">Sequence[str]</span>
     </dt>
     <dd>{{% md %}}Launch configurations in use by this Environment.
-{{% /md %}}</dd>
-    <dt class="property-"
+{{% /md %}}</dd><dt class="property-"
             title="">
         <span id="load_balancers_python">
 <a href="#load_balancers_python" style="color: inherit; text-decoration: inherit;">load_<wbr>balancers</a>
@@ -1473,8 +1357,7 @@ the configuration.
         <span class="property-type">Sequence[str]</span>
     </dt>
     <dd>{{% md %}}Elastic load balancers in use by this Environment.
-{{% /md %}}</dd>
-    <dt class="property-"
+{{% /md %}}</dd><dt class="property-"
             title="">
         <span id="queues_python">
 <a href="#queues_python" style="color: inherit; text-decoration: inherit;">queues</a>
@@ -1483,8 +1366,7 @@ the configuration.
         <span class="property-type">Sequence[str]</span>
     </dt>
     <dd>{{% md %}}SQS queues in use by this Environment.
-{{% /md %}}</dd>
-    <dt class="property-"
+{{% /md %}}</dd><dt class="property-"
             title="">
         <span id="triggers_python">
 <a href="#triggers_python" style="color: inherit; text-decoration: inherit;">triggers</a>
@@ -1493,8 +1375,7 @@ the configuration.
         <span class="property-type">Sequence[str]</span>
     </dt>
     <dd>{{% md %}}Autoscaling triggers in use by this Environment.
-{{% /md %}}</dd>
-</dl>
+{{% /md %}}</dd></dl>
 {{% /choosable %}}
 
 
@@ -1621,9 +1502,7 @@ The following state arguments are supported:
 
 
 {{% choosable language csharp %}}
-<dl class="resources-properties">
-
-    <dt class="property-optional"
+<dl class="resources-properties"><dt class="property-optional"
             title="Optional">
         <span id="state_allsettings_csharp">
 <a href="#state_allsettings_csharp" style="color: inherit; text-decoration: inherit;">All<wbr>Settings</a>
@@ -1634,8 +1513,7 @@ The following state arguments are supported:
     <dd>{{% md %}}List of all option settings configured in this Environment. These
 are a combination of default settings and their overrides from `setting` in
 the configuration.
-{{% /md %}}</dd>
-    <dt class="property-optional"
+{{% /md %}}</dd><dt class="property-optional"
             title="Optional">
         <span id="state_application_csharp">
 <a href="#state_application_csharp" style="color: inherit; text-decoration: inherit;">Application</a>
@@ -1645,8 +1523,7 @@ the configuration.
     </dt>
     <dd>{{% md %}}Name of the application that contains the version
 to be deployed
-{{% /md %}}</dd>
-    <dt class="property-optional"
+{{% /md %}}</dd><dt class="property-optional"
             title="Optional">
         <span id="state_arn_csharp">
 <a href="#state_arn_csharp" style="color: inherit; text-decoration: inherit;">Arn</a>
@@ -1654,8 +1531,7 @@ to be deployed
         <span class="property-indicator"></span>
         <span class="property-type">string</span>
     </dt>
-    <dd>{{% md %}}{{% /md %}}</dd>
-    <dt class="property-optional"
+    <dd>{{% md %}}{{% /md %}}</dd><dt class="property-optional"
             title="Optional">
         <span id="state_autoscalinggroups_csharp">
 <a href="#state_autoscalinggroups_csharp" style="color: inherit; text-decoration: inherit;">Autoscaling<wbr>Groups</a>
@@ -1664,8 +1540,7 @@ to be deployed
         <span class="property-type">List&lt;string&gt;</span>
     </dt>
     <dd>{{% md %}}The autoscaling groups used by this Environment.
-{{% /md %}}</dd>
-    <dt class="property-optional"
+{{% /md %}}</dd><dt class="property-optional"
             title="Optional">
         <span id="state_cname_csharp">
 <a href="#state_cname_csharp" style="color: inherit; text-decoration: inherit;">Cname</a>
@@ -1674,8 +1549,7 @@ to be deployed
         <span class="property-type">string</span>
     </dt>
     <dd>{{% md %}}Fully qualified DNS name for this Environment.
-{{% /md %}}</dd>
-    <dt class="property-optional"
+{{% /md %}}</dd><dt class="property-optional"
             title="Optional">
         <span id="state_cnameprefix_csharp">
 <a href="#state_cnameprefix_csharp" style="color: inherit; text-decoration: inherit;">Cname<wbr>Prefix</a>
@@ -1685,8 +1559,7 @@ to be deployed
     </dt>
     <dd>{{% md %}}Prefix to use for the fully qualified DNS name of
 the Environment.
-{{% /md %}}</dd>
-    <dt class="property-optional"
+{{% /md %}}</dd><dt class="property-optional"
             title="Optional">
         <span id="state_description_csharp">
 <a href="#state_description_csharp" style="color: inherit; text-decoration: inherit;">Description</a>
@@ -1695,8 +1568,7 @@ the Environment.
         <span class="property-type">string</span>
     </dt>
     <dd>{{% md %}}Short description of the Environment
-{{% /md %}}</dd>
-    <dt class="property-optional"
+{{% /md %}}</dd><dt class="property-optional"
             title="Optional">
         <span id="state_endpointurl_csharp">
 <a href="#state_endpointurl_csharp" style="color: inherit; text-decoration: inherit;">Endpoint<wbr>Url</a>
@@ -1705,8 +1577,7 @@ the Environment.
         <span class="property-type">string</span>
     </dt>
     <dd>{{% md %}}The URL to the Load Balancer for this Environment
-{{% /md %}}</dd>
-    <dt class="property-optional"
+{{% /md %}}</dd><dt class="property-optional"
             title="Optional">
         <span id="state_instances_csharp">
 <a href="#state_instances_csharp" style="color: inherit; text-decoration: inherit;">Instances</a>
@@ -1715,8 +1586,7 @@ the Environment.
         <span class="property-type">List&lt;string&gt;</span>
     </dt>
     <dd>{{% md %}}Instances used by this Environment.
-{{% /md %}}</dd>
-    <dt class="property-optional"
+{{% /md %}}</dd><dt class="property-optional"
             title="Optional">
         <span id="state_launchconfigurations_csharp">
 <a href="#state_launchconfigurations_csharp" style="color: inherit; text-decoration: inherit;">Launch<wbr>Configurations</a>
@@ -1725,8 +1595,7 @@ the Environment.
         <span class="property-type">List&lt;string&gt;</span>
     </dt>
     <dd>{{% md %}}Launch configurations in use by this Environment.
-{{% /md %}}</dd>
-    <dt class="property-optional"
+{{% /md %}}</dd><dt class="property-optional"
             title="Optional">
         <span id="state_loadbalancers_csharp">
 <a href="#state_loadbalancers_csharp" style="color: inherit; text-decoration: inherit;">Load<wbr>Balancers</a>
@@ -1735,8 +1604,7 @@ the Environment.
         <span class="property-type">List&lt;string&gt;</span>
     </dt>
     <dd>{{% md %}}Elastic load balancers in use by this Environment.
-{{% /md %}}</dd>
-    <dt class="property-optional"
+{{% /md %}}</dd><dt class="property-optional"
             title="Optional">
         <span id="state_name_csharp">
 <a href="#state_name_csharp" style="color: inherit; text-decoration: inherit;">Name</a>
@@ -1746,8 +1614,7 @@ the Environment.
     </dt>
     <dd>{{% md %}}A unique name for this Environment. This name is used
 in the application URL
-{{% /md %}}</dd>
-    <dt class="property-optional"
+{{% /md %}}</dd><dt class="property-optional"
             title="Optional">
         <span id="state_platformarn_csharp">
 <a href="#state_platformarn_csharp" style="color: inherit; text-decoration: inherit;">Platform<wbr>Arn</a>
@@ -1757,8 +1624,7 @@ in the application URL
     </dt>
     <dd>{{% md %}}The [ARN](https://docs.aws.amazon.com/general/latest/gr/aws-arns-and-namespaces.html) of the Elastic Beanstalk [Platform](https://docs.aws.amazon.com/AWSCloudFormation/latest/UserGuide/aws-properties-beanstalk-environment.html#cfn-beanstalk-environment-platformarn)
 to use in deployment
-{{% /md %}}</dd>
-    <dt class="property-optional"
+{{% /md %}}</dd><dt class="property-optional"
             title="Optional">
         <span id="state_pollinterval_csharp">
 <a href="#state_pollinterval_csharp" style="color: inherit; text-decoration: inherit;">Poll<wbr>Interval</a>
@@ -1770,8 +1636,7 @@ to use in deployment
 check if changes have been applied. Use this to adjust the rate of API calls
 for any `create` or `update` action. Minimum `10s`, maximum `180s`. Omit this to
 use the default behavior, which is an exponential backoff
-{{% /md %}}</dd>
-    <dt class="property-optional"
+{{% /md %}}</dd><dt class="property-optional"
             title="Optional">
         <span id="state_queues_csharp">
 <a href="#state_queues_csharp" style="color: inherit; text-decoration: inherit;">Queues</a>
@@ -1780,8 +1645,7 @@ use the default behavior, which is an exponential backoff
         <span class="property-type">List&lt;string&gt;</span>
     </dt>
     <dd>{{% md %}}SQS queues in use by this Environment.
-{{% /md %}}</dd>
-    <dt class="property-optional"
+{{% /md %}}</dd><dt class="property-optional"
             title="Optional">
         <span id="state_settings_csharp">
 <a href="#state_settings_csharp" style="color: inherit; text-decoration: inherit;">Settings</a>
@@ -1792,8 +1656,7 @@ use the default behavior, which is an exponential backoff
     <dd>{{% md %}}Option settings to configure the new Environment. These
 override specific values that are set as defaults. The format is detailed
 below in Option Settings
-{{% /md %}}</dd>
-    <dt class="property-optional"
+{{% /md %}}</dd><dt class="property-optional"
             title="Optional">
         <span id="state_solutionstackname_csharp">
 <a href="#state_solutionstackname_csharp" style="color: inherit; text-decoration: inherit;">Solution<wbr>Stack<wbr>Name</a>
@@ -1803,8 +1666,7 @@ below in Option Settings
     </dt>
     <dd>{{% md %}}A solution stack to base your environment
 off of. Example stacks can be found in the [Amazon API documentation](https://docs.aws.amazon.com/elasticbeanstalk/latest/dg/concepts.platforms.html)
-{{% /md %}}</dd>
-    <dt class="property-optional"
+{{% /md %}}</dd><dt class="property-optional"
             title="Optional">
         <span id="state_tags_csharp">
 <a href="#state_tags_csharp" style="color: inherit; text-decoration: inherit;">Tags</a>
@@ -1813,8 +1675,7 @@ off of. Example stacks can be found in the [Amazon API documentation](https://do
         <span class="property-type">Dictionary&lt;string, string&gt;</span>
     </dt>
     <dd>{{% md %}}A set of tags to apply to the Environment.
-{{% /md %}}</dd>
-    <dt class="property-optional"
+{{% /md %}}</dd><dt class="property-optional"
             title="Optional">
         <span id="state_templatename_csharp">
 <a href="#state_templatename_csharp" style="color: inherit; text-decoration: inherit;">Template<wbr>Name</a>
@@ -1824,8 +1685,7 @@ off of. Example stacks can be found in the [Amazon API documentation](https://do
     </dt>
     <dd>{{% md %}}The name of the Elastic Beanstalk Configuration
 template to use in deployment
-{{% /md %}}</dd>
-    <dt class="property-optional"
+{{% /md %}}</dd><dt class="property-optional"
             title="Optional">
         <span id="state_tier_csharp">
 <a href="#state_tier_csharp" style="color: inherit; text-decoration: inherit;">Tier</a>
@@ -1835,8 +1695,7 @@ template to use in deployment
     </dt>
     <dd>{{% md %}}Elastic Beanstalk Environment tier. Valid values are `Worker`
 or `WebServer`. If tier is left blank `WebServer` will be used.
-{{% /md %}}</dd>
-    <dt class="property-optional"
+{{% /md %}}</dd><dt class="property-optional"
             title="Optional">
         <span id="state_triggers_csharp">
 <a href="#state_triggers_csharp" style="color: inherit; text-decoration: inherit;">Triggers</a>
@@ -1845,8 +1704,7 @@ or `WebServer`. If tier is left blank `WebServer` will be used.
         <span class="property-type">List&lt;string&gt;</span>
     </dt>
     <dd>{{% md %}}Autoscaling triggers in use by this Environment.
-{{% /md %}}</dd>
-    <dt class="property-optional"
+{{% /md %}}</dd><dt class="property-optional"
             title="Optional">
         <span id="state_version_csharp">
 <a href="#state_version_csharp" style="color: inherit; text-decoration: inherit;">Version</a>
@@ -1856,8 +1714,7 @@ or `WebServer`. If tier is left blank `WebServer` will be used.
     </dt>
     <dd>{{% md %}}The name of the Elastic Beanstalk Application Version
 to use in deployment.
-{{% /md %}}</dd>
-    <dt class="property-optional"
+{{% /md %}}</dd><dt class="property-optional"
             title="Optional">
         <span id="state_waitforreadytimeout_csharp">
 <a href="#state_waitforreadytimeout_csharp" style="color: inherit; text-decoration: inherit;">Wait<wbr>For<wbr>Ready<wbr>Timeout</a>
@@ -1869,14 +1726,11 @@ to use in deployment.
 [duration](https://golang.org/pkg/time/#ParseDuration) that this provider should
 wait for an Elastic Beanstalk Environment to be in a ready state before timing
 out.
-{{% /md %}}</dd>
-</dl>
+{{% /md %}}</dd></dl>
 {{% /choosable %}}
 
 {{% choosable language go %}}
-<dl class="resources-properties">
-
-    <dt class="property-optional"
+<dl class="resources-properties"><dt class="property-optional"
             title="Optional">
         <span id="state_allsettings_go">
 <a href="#state_allsettings_go" style="color: inherit; text-decoration: inherit;">All<wbr>Settings</a>
@@ -1887,8 +1741,7 @@ out.
     <dd>{{% md %}}List of all option settings configured in this Environment. These
 are a combination of default settings and their overrides from `setting` in
 the configuration.
-{{% /md %}}</dd>
-    <dt class="property-optional"
+{{% /md %}}</dd><dt class="property-optional"
             title="Optional">
         <span id="state_application_go">
 <a href="#state_application_go" style="color: inherit; text-decoration: inherit;">Application</a>
@@ -1898,8 +1751,7 @@ the configuration.
     </dt>
     <dd>{{% md %}}Name of the application that contains the version
 to be deployed
-{{% /md %}}</dd>
-    <dt class="property-optional"
+{{% /md %}}</dd><dt class="property-optional"
             title="Optional">
         <span id="state_arn_go">
 <a href="#state_arn_go" style="color: inherit; text-decoration: inherit;">Arn</a>
@@ -1907,8 +1759,7 @@ to be deployed
         <span class="property-indicator"></span>
         <span class="property-type">string</span>
     </dt>
-    <dd>{{% md %}}{{% /md %}}</dd>
-    <dt class="property-optional"
+    <dd>{{% md %}}{{% /md %}}</dd><dt class="property-optional"
             title="Optional">
         <span id="state_autoscalinggroups_go">
 <a href="#state_autoscalinggroups_go" style="color: inherit; text-decoration: inherit;">Autoscaling<wbr>Groups</a>
@@ -1917,8 +1768,7 @@ to be deployed
         <span class="property-type">[]string</span>
     </dt>
     <dd>{{% md %}}The autoscaling groups used by this Environment.
-{{% /md %}}</dd>
-    <dt class="property-optional"
+{{% /md %}}</dd><dt class="property-optional"
             title="Optional">
         <span id="state_cname_go">
 <a href="#state_cname_go" style="color: inherit; text-decoration: inherit;">Cname</a>
@@ -1927,8 +1777,7 @@ to be deployed
         <span class="property-type">string</span>
     </dt>
     <dd>{{% md %}}Fully qualified DNS name for this Environment.
-{{% /md %}}</dd>
-    <dt class="property-optional"
+{{% /md %}}</dd><dt class="property-optional"
             title="Optional">
         <span id="state_cnameprefix_go">
 <a href="#state_cnameprefix_go" style="color: inherit; text-decoration: inherit;">Cname<wbr>Prefix</a>
@@ -1938,8 +1787,7 @@ to be deployed
     </dt>
     <dd>{{% md %}}Prefix to use for the fully qualified DNS name of
 the Environment.
-{{% /md %}}</dd>
-    <dt class="property-optional"
+{{% /md %}}</dd><dt class="property-optional"
             title="Optional">
         <span id="state_description_go">
 <a href="#state_description_go" style="color: inherit; text-decoration: inherit;">Description</a>
@@ -1948,8 +1796,7 @@ the Environment.
         <span class="property-type">string</span>
     </dt>
     <dd>{{% md %}}Short description of the Environment
-{{% /md %}}</dd>
-    <dt class="property-optional"
+{{% /md %}}</dd><dt class="property-optional"
             title="Optional">
         <span id="state_endpointurl_go">
 <a href="#state_endpointurl_go" style="color: inherit; text-decoration: inherit;">Endpoint<wbr>Url</a>
@@ -1958,8 +1805,7 @@ the Environment.
         <span class="property-type">string</span>
     </dt>
     <dd>{{% md %}}The URL to the Load Balancer for this Environment
-{{% /md %}}</dd>
-    <dt class="property-optional"
+{{% /md %}}</dd><dt class="property-optional"
             title="Optional">
         <span id="state_instances_go">
 <a href="#state_instances_go" style="color: inherit; text-decoration: inherit;">Instances</a>
@@ -1968,8 +1814,7 @@ the Environment.
         <span class="property-type">[]string</span>
     </dt>
     <dd>{{% md %}}Instances used by this Environment.
-{{% /md %}}</dd>
-    <dt class="property-optional"
+{{% /md %}}</dd><dt class="property-optional"
             title="Optional">
         <span id="state_launchconfigurations_go">
 <a href="#state_launchconfigurations_go" style="color: inherit; text-decoration: inherit;">Launch<wbr>Configurations</a>
@@ -1978,8 +1823,7 @@ the Environment.
         <span class="property-type">[]string</span>
     </dt>
     <dd>{{% md %}}Launch configurations in use by this Environment.
-{{% /md %}}</dd>
-    <dt class="property-optional"
+{{% /md %}}</dd><dt class="property-optional"
             title="Optional">
         <span id="state_loadbalancers_go">
 <a href="#state_loadbalancers_go" style="color: inherit; text-decoration: inherit;">Load<wbr>Balancers</a>
@@ -1988,8 +1832,7 @@ the Environment.
         <span class="property-type">[]string</span>
     </dt>
     <dd>{{% md %}}Elastic load balancers in use by this Environment.
-{{% /md %}}</dd>
-    <dt class="property-optional"
+{{% /md %}}</dd><dt class="property-optional"
             title="Optional">
         <span id="state_name_go">
 <a href="#state_name_go" style="color: inherit; text-decoration: inherit;">Name</a>
@@ -1999,8 +1842,7 @@ the Environment.
     </dt>
     <dd>{{% md %}}A unique name for this Environment. This name is used
 in the application URL
-{{% /md %}}</dd>
-    <dt class="property-optional"
+{{% /md %}}</dd><dt class="property-optional"
             title="Optional">
         <span id="state_platformarn_go">
 <a href="#state_platformarn_go" style="color: inherit; text-decoration: inherit;">Platform<wbr>Arn</a>
@@ -2010,8 +1852,7 @@ in the application URL
     </dt>
     <dd>{{% md %}}The [ARN](https://docs.aws.amazon.com/general/latest/gr/aws-arns-and-namespaces.html) of the Elastic Beanstalk [Platform](https://docs.aws.amazon.com/AWSCloudFormation/latest/UserGuide/aws-properties-beanstalk-environment.html#cfn-beanstalk-environment-platformarn)
 to use in deployment
-{{% /md %}}</dd>
-    <dt class="property-optional"
+{{% /md %}}</dd><dt class="property-optional"
             title="Optional">
         <span id="state_pollinterval_go">
 <a href="#state_pollinterval_go" style="color: inherit; text-decoration: inherit;">Poll<wbr>Interval</a>
@@ -2023,8 +1864,7 @@ to use in deployment
 check if changes have been applied. Use this to adjust the rate of API calls
 for any `create` or `update` action. Minimum `10s`, maximum `180s`. Omit this to
 use the default behavior, which is an exponential backoff
-{{% /md %}}</dd>
-    <dt class="property-optional"
+{{% /md %}}</dd><dt class="property-optional"
             title="Optional">
         <span id="state_queues_go">
 <a href="#state_queues_go" style="color: inherit; text-decoration: inherit;">Queues</a>
@@ -2033,8 +1873,7 @@ use the default behavior, which is an exponential backoff
         <span class="property-type">[]string</span>
     </dt>
     <dd>{{% md %}}SQS queues in use by this Environment.
-{{% /md %}}</dd>
-    <dt class="property-optional"
+{{% /md %}}</dd><dt class="property-optional"
             title="Optional">
         <span id="state_settings_go">
 <a href="#state_settings_go" style="color: inherit; text-decoration: inherit;">Settings</a>
@@ -2045,8 +1884,7 @@ use the default behavior, which is an exponential backoff
     <dd>{{% md %}}Option settings to configure the new Environment. These
 override specific values that are set as defaults. The format is detailed
 below in Option Settings
-{{% /md %}}</dd>
-    <dt class="property-optional"
+{{% /md %}}</dd><dt class="property-optional"
             title="Optional">
         <span id="state_solutionstackname_go">
 <a href="#state_solutionstackname_go" style="color: inherit; text-decoration: inherit;">Solution<wbr>Stack<wbr>Name</a>
@@ -2056,8 +1894,7 @@ below in Option Settings
     </dt>
     <dd>{{% md %}}A solution stack to base your environment
 off of. Example stacks can be found in the [Amazon API documentation](https://docs.aws.amazon.com/elasticbeanstalk/latest/dg/concepts.platforms.html)
-{{% /md %}}</dd>
-    <dt class="property-optional"
+{{% /md %}}</dd><dt class="property-optional"
             title="Optional">
         <span id="state_tags_go">
 <a href="#state_tags_go" style="color: inherit; text-decoration: inherit;">Tags</a>
@@ -2066,8 +1903,7 @@ off of. Example stacks can be found in the [Amazon API documentation](https://do
         <span class="property-type">map[string]string</span>
     </dt>
     <dd>{{% md %}}A set of tags to apply to the Environment.
-{{% /md %}}</dd>
-    <dt class="property-optional"
+{{% /md %}}</dd><dt class="property-optional"
             title="Optional">
         <span id="state_templatename_go">
 <a href="#state_templatename_go" style="color: inherit; text-decoration: inherit;">Template<wbr>Name</a>
@@ -2077,8 +1913,7 @@ off of. Example stacks can be found in the [Amazon API documentation](https://do
     </dt>
     <dd>{{% md %}}The name of the Elastic Beanstalk Configuration
 template to use in deployment
-{{% /md %}}</dd>
-    <dt class="property-optional"
+{{% /md %}}</dd><dt class="property-optional"
             title="Optional">
         <span id="state_tier_go">
 <a href="#state_tier_go" style="color: inherit; text-decoration: inherit;">Tier</a>
@@ -2088,8 +1923,7 @@ template to use in deployment
     </dt>
     <dd>{{% md %}}Elastic Beanstalk Environment tier. Valid values are `Worker`
 or `WebServer`. If tier is left blank `WebServer` will be used.
-{{% /md %}}</dd>
-    <dt class="property-optional"
+{{% /md %}}</dd><dt class="property-optional"
             title="Optional">
         <span id="state_triggers_go">
 <a href="#state_triggers_go" style="color: inherit; text-decoration: inherit;">Triggers</a>
@@ -2098,8 +1932,7 @@ or `WebServer`. If tier is left blank `WebServer` will be used.
         <span class="property-type">[]string</span>
     </dt>
     <dd>{{% md %}}Autoscaling triggers in use by this Environment.
-{{% /md %}}</dd>
-    <dt class="property-optional"
+{{% /md %}}</dd><dt class="property-optional"
             title="Optional">
         <span id="state_version_go">
 <a href="#state_version_go" style="color: inherit; text-decoration: inherit;">Version</a>
@@ -2109,8 +1942,7 @@ or `WebServer`. If tier is left blank `WebServer` will be used.
     </dt>
     <dd>{{% md %}}The name of the Elastic Beanstalk Application Version
 to use in deployment.
-{{% /md %}}</dd>
-    <dt class="property-optional"
+{{% /md %}}</dd><dt class="property-optional"
             title="Optional">
         <span id="state_waitforreadytimeout_go">
 <a href="#state_waitforreadytimeout_go" style="color: inherit; text-decoration: inherit;">Wait<wbr>For<wbr>Ready<wbr>Timeout</a>
@@ -2122,14 +1954,11 @@ to use in deployment.
 [duration](https://golang.org/pkg/time/#ParseDuration) that this provider should
 wait for an Elastic Beanstalk Environment to be in a ready state before timing
 out.
-{{% /md %}}</dd>
-</dl>
+{{% /md %}}</dd></dl>
 {{% /choosable %}}
 
 {{% choosable language nodejs %}}
-<dl class="resources-properties">
-
-    <dt class="property-optional"
+<dl class="resources-properties"><dt class="property-optional"
             title="Optional">
         <span id="state_allsettings_nodejs">
 <a href="#state_allsettings_nodejs" style="color: inherit; text-decoration: inherit;">all<wbr>Settings</a>
@@ -2140,8 +1969,7 @@ out.
     <dd>{{% md %}}List of all option settings configured in this Environment. These
 are a combination of default settings and their overrides from `setting` in
 the configuration.
-{{% /md %}}</dd>
-    <dt class="property-optional"
+{{% /md %}}</dd><dt class="property-optional"
             title="Optional">
         <span id="state_application_nodejs">
 <a href="#state_application_nodejs" style="color: inherit; text-decoration: inherit;">application</a>
@@ -2151,8 +1979,7 @@ the configuration.
     </dt>
     <dd>{{% md %}}Name of the application that contains the version
 to be deployed
-{{% /md %}}</dd>
-    <dt class="property-optional"
+{{% /md %}}</dd><dt class="property-optional"
             title="Optional">
         <span id="state_arn_nodejs">
 <a href="#state_arn_nodejs" style="color: inherit; text-decoration: inherit;">arn</a>
@@ -2160,8 +1987,7 @@ to be deployed
         <span class="property-indicator"></span>
         <span class="property-type">string</span>
     </dt>
-    <dd>{{% md %}}{{% /md %}}</dd>
-    <dt class="property-optional"
+    <dd>{{% md %}}{{% /md %}}</dd><dt class="property-optional"
             title="Optional">
         <span id="state_autoscalinggroups_nodejs">
 <a href="#state_autoscalinggroups_nodejs" style="color: inherit; text-decoration: inherit;">autoscaling<wbr>Groups</a>
@@ -2170,8 +1996,7 @@ to be deployed
         <span class="property-type">string[]</span>
     </dt>
     <dd>{{% md %}}The autoscaling groups used by this Environment.
-{{% /md %}}</dd>
-    <dt class="property-optional"
+{{% /md %}}</dd><dt class="property-optional"
             title="Optional">
         <span id="state_cname_nodejs">
 <a href="#state_cname_nodejs" style="color: inherit; text-decoration: inherit;">cname</a>
@@ -2180,8 +2005,7 @@ to be deployed
         <span class="property-type">string</span>
     </dt>
     <dd>{{% md %}}Fully qualified DNS name for this Environment.
-{{% /md %}}</dd>
-    <dt class="property-optional"
+{{% /md %}}</dd><dt class="property-optional"
             title="Optional">
         <span id="state_cnameprefix_nodejs">
 <a href="#state_cnameprefix_nodejs" style="color: inherit; text-decoration: inherit;">cname<wbr>Prefix</a>
@@ -2191,8 +2015,7 @@ to be deployed
     </dt>
     <dd>{{% md %}}Prefix to use for the fully qualified DNS name of
 the Environment.
-{{% /md %}}</dd>
-    <dt class="property-optional"
+{{% /md %}}</dd><dt class="property-optional"
             title="Optional">
         <span id="state_description_nodejs">
 <a href="#state_description_nodejs" style="color: inherit; text-decoration: inherit;">description</a>
@@ -2201,8 +2024,7 @@ the Environment.
         <span class="property-type">string</span>
     </dt>
     <dd>{{% md %}}Short description of the Environment
-{{% /md %}}</dd>
-    <dt class="property-optional"
+{{% /md %}}</dd><dt class="property-optional"
             title="Optional">
         <span id="state_endpointurl_nodejs">
 <a href="#state_endpointurl_nodejs" style="color: inherit; text-decoration: inherit;">endpoint<wbr>Url</a>
@@ -2211,8 +2033,7 @@ the Environment.
         <span class="property-type">string</span>
     </dt>
     <dd>{{% md %}}The URL to the Load Balancer for this Environment
-{{% /md %}}</dd>
-    <dt class="property-optional"
+{{% /md %}}</dd><dt class="property-optional"
             title="Optional">
         <span id="state_instances_nodejs">
 <a href="#state_instances_nodejs" style="color: inherit; text-decoration: inherit;">instances</a>
@@ -2221,8 +2042,7 @@ the Environment.
         <span class="property-type">string[]</span>
     </dt>
     <dd>{{% md %}}Instances used by this Environment.
-{{% /md %}}</dd>
-    <dt class="property-optional"
+{{% /md %}}</dd><dt class="property-optional"
             title="Optional">
         <span id="state_launchconfigurations_nodejs">
 <a href="#state_launchconfigurations_nodejs" style="color: inherit; text-decoration: inherit;">launch<wbr>Configurations</a>
@@ -2231,8 +2051,7 @@ the Environment.
         <span class="property-type">string[]</span>
     </dt>
     <dd>{{% md %}}Launch configurations in use by this Environment.
-{{% /md %}}</dd>
-    <dt class="property-optional"
+{{% /md %}}</dd><dt class="property-optional"
             title="Optional">
         <span id="state_loadbalancers_nodejs">
 <a href="#state_loadbalancers_nodejs" style="color: inherit; text-decoration: inherit;">load<wbr>Balancers</a>
@@ -2241,8 +2060,7 @@ the Environment.
         <span class="property-type">string[]</span>
     </dt>
     <dd>{{% md %}}Elastic load balancers in use by this Environment.
-{{% /md %}}</dd>
-    <dt class="property-optional"
+{{% /md %}}</dd><dt class="property-optional"
             title="Optional">
         <span id="state_name_nodejs">
 <a href="#state_name_nodejs" style="color: inherit; text-decoration: inherit;">name</a>
@@ -2252,8 +2070,7 @@ the Environment.
     </dt>
     <dd>{{% md %}}A unique name for this Environment. This name is used
 in the application URL
-{{% /md %}}</dd>
-    <dt class="property-optional"
+{{% /md %}}</dd><dt class="property-optional"
             title="Optional">
         <span id="state_platformarn_nodejs">
 <a href="#state_platformarn_nodejs" style="color: inherit; text-decoration: inherit;">platform<wbr>Arn</a>
@@ -2263,8 +2080,7 @@ in the application URL
     </dt>
     <dd>{{% md %}}The [ARN](https://docs.aws.amazon.com/general/latest/gr/aws-arns-and-namespaces.html) of the Elastic Beanstalk [Platform](https://docs.aws.amazon.com/AWSCloudFormation/latest/UserGuide/aws-properties-beanstalk-environment.html#cfn-beanstalk-environment-platformarn)
 to use in deployment
-{{% /md %}}</dd>
-    <dt class="property-optional"
+{{% /md %}}</dd><dt class="property-optional"
             title="Optional">
         <span id="state_pollinterval_nodejs">
 <a href="#state_pollinterval_nodejs" style="color: inherit; text-decoration: inherit;">poll<wbr>Interval</a>
@@ -2276,8 +2092,7 @@ to use in deployment
 check if changes have been applied. Use this to adjust the rate of API calls
 for any `create` or `update` action. Minimum `10s`, maximum `180s`. Omit this to
 use the default behavior, which is an exponential backoff
-{{% /md %}}</dd>
-    <dt class="property-optional"
+{{% /md %}}</dd><dt class="property-optional"
             title="Optional">
         <span id="state_queues_nodejs">
 <a href="#state_queues_nodejs" style="color: inherit; text-decoration: inherit;">queues</a>
@@ -2286,8 +2101,7 @@ use the default behavior, which is an exponential backoff
         <span class="property-type">string[]</span>
     </dt>
     <dd>{{% md %}}SQS queues in use by this Environment.
-{{% /md %}}</dd>
-    <dt class="property-optional"
+{{% /md %}}</dd><dt class="property-optional"
             title="Optional">
         <span id="state_settings_nodejs">
 <a href="#state_settings_nodejs" style="color: inherit; text-decoration: inherit;">settings</a>
@@ -2298,8 +2112,7 @@ use the default behavior, which is an exponential backoff
     <dd>{{% md %}}Option settings to configure the new Environment. These
 override specific values that are set as defaults. The format is detailed
 below in Option Settings
-{{% /md %}}</dd>
-    <dt class="property-optional"
+{{% /md %}}</dd><dt class="property-optional"
             title="Optional">
         <span id="state_solutionstackname_nodejs">
 <a href="#state_solutionstackname_nodejs" style="color: inherit; text-decoration: inherit;">solution<wbr>Stack<wbr>Name</a>
@@ -2309,8 +2122,7 @@ below in Option Settings
     </dt>
     <dd>{{% md %}}A solution stack to base your environment
 off of. Example stacks can be found in the [Amazon API documentation](https://docs.aws.amazon.com/elasticbeanstalk/latest/dg/concepts.platforms.html)
-{{% /md %}}</dd>
-    <dt class="property-optional"
+{{% /md %}}</dd><dt class="property-optional"
             title="Optional">
         <span id="state_tags_nodejs">
 <a href="#state_tags_nodejs" style="color: inherit; text-decoration: inherit;">tags</a>
@@ -2319,8 +2131,7 @@ off of. Example stacks can be found in the [Amazon API documentation](https://do
         <span class="property-type">{[key: string]: string}</span>
     </dt>
     <dd>{{% md %}}A set of tags to apply to the Environment.
-{{% /md %}}</dd>
-    <dt class="property-optional"
+{{% /md %}}</dd><dt class="property-optional"
             title="Optional">
         <span id="state_templatename_nodejs">
 <a href="#state_templatename_nodejs" style="color: inherit; text-decoration: inherit;">template<wbr>Name</a>
@@ -2330,8 +2141,7 @@ off of. Example stacks can be found in the [Amazon API documentation](https://do
     </dt>
     <dd>{{% md %}}The name of the Elastic Beanstalk Configuration
 template to use in deployment
-{{% /md %}}</dd>
-    <dt class="property-optional"
+{{% /md %}}</dd><dt class="property-optional"
             title="Optional">
         <span id="state_tier_nodejs">
 <a href="#state_tier_nodejs" style="color: inherit; text-decoration: inherit;">tier</a>
@@ -2341,8 +2151,7 @@ template to use in deployment
     </dt>
     <dd>{{% md %}}Elastic Beanstalk Environment tier. Valid values are `Worker`
 or `WebServer`. If tier is left blank `WebServer` will be used.
-{{% /md %}}</dd>
-    <dt class="property-optional"
+{{% /md %}}</dd><dt class="property-optional"
             title="Optional">
         <span id="state_triggers_nodejs">
 <a href="#state_triggers_nodejs" style="color: inherit; text-decoration: inherit;">triggers</a>
@@ -2351,8 +2160,7 @@ or `WebServer`. If tier is left blank `WebServer` will be used.
         <span class="property-type">string[]</span>
     </dt>
     <dd>{{% md %}}Autoscaling triggers in use by this Environment.
-{{% /md %}}</dd>
-    <dt class="property-optional"
+{{% /md %}}</dd><dt class="property-optional"
             title="Optional">
         <span id="state_version_nodejs">
 <a href="#state_version_nodejs" style="color: inherit; text-decoration: inherit;">version</a>
@@ -2362,8 +2170,7 @@ or `WebServer`. If tier is left blank `WebServer` will be used.
     </dt>
     <dd>{{% md %}}The name of the Elastic Beanstalk Application Version
 to use in deployment.
-{{% /md %}}</dd>
-    <dt class="property-optional"
+{{% /md %}}</dd><dt class="property-optional"
             title="Optional">
         <span id="state_waitforreadytimeout_nodejs">
 <a href="#state_waitforreadytimeout_nodejs" style="color: inherit; text-decoration: inherit;">wait<wbr>For<wbr>Ready<wbr>Timeout</a>
@@ -2375,14 +2182,11 @@ to use in deployment.
 [duration](https://golang.org/pkg/time/#ParseDuration) that this provider should
 wait for an Elastic Beanstalk Environment to be in a ready state before timing
 out.
-{{% /md %}}</dd>
-</dl>
+{{% /md %}}</dd></dl>
 {{% /choosable %}}
 
 {{% choosable language python %}}
-<dl class="resources-properties">
-
-    <dt class="property-optional"
+<dl class="resources-properties"><dt class="property-optional"
             title="Optional">
         <span id="state_all_settings_python">
 <a href="#state_all_settings_python" style="color: inherit; text-decoration: inherit;">all_<wbr>settings</a>
@@ -2393,8 +2197,7 @@ out.
     <dd>{{% md %}}List of all option settings configured in this Environment. These
 are a combination of default settings and their overrides from `setting` in
 the configuration.
-{{% /md %}}</dd>
-    <dt class="property-optional"
+{{% /md %}}</dd><dt class="property-optional"
             title="Optional">
         <span id="state_application_python">
 <a href="#state_application_python" style="color: inherit; text-decoration: inherit;">application</a>
@@ -2404,8 +2207,7 @@ the configuration.
     </dt>
     <dd>{{% md %}}Name of the application that contains the version
 to be deployed
-{{% /md %}}</dd>
-    <dt class="property-optional"
+{{% /md %}}</dd><dt class="property-optional"
             title="Optional">
         <span id="state_arn_python">
 <a href="#state_arn_python" style="color: inherit; text-decoration: inherit;">arn</a>
@@ -2413,8 +2215,7 @@ to be deployed
         <span class="property-indicator"></span>
         <span class="property-type">str</span>
     </dt>
-    <dd>{{% md %}}{{% /md %}}</dd>
-    <dt class="property-optional"
+    <dd>{{% md %}}{{% /md %}}</dd><dt class="property-optional"
             title="Optional">
         <span id="state_autoscaling_groups_python">
 <a href="#state_autoscaling_groups_python" style="color: inherit; text-decoration: inherit;">autoscaling_<wbr>groups</a>
@@ -2423,8 +2224,7 @@ to be deployed
         <span class="property-type">Sequence[str]</span>
     </dt>
     <dd>{{% md %}}The autoscaling groups used by this Environment.
-{{% /md %}}</dd>
-    <dt class="property-optional"
+{{% /md %}}</dd><dt class="property-optional"
             title="Optional">
         <span id="state_cname_python">
 <a href="#state_cname_python" style="color: inherit; text-decoration: inherit;">cname</a>
@@ -2433,8 +2233,7 @@ to be deployed
         <span class="property-type">str</span>
     </dt>
     <dd>{{% md %}}Fully qualified DNS name for this Environment.
-{{% /md %}}</dd>
-    <dt class="property-optional"
+{{% /md %}}</dd><dt class="property-optional"
             title="Optional">
         <span id="state_cname_prefix_python">
 <a href="#state_cname_prefix_python" style="color: inherit; text-decoration: inherit;">cname_<wbr>prefix</a>
@@ -2444,8 +2243,7 @@ to be deployed
     </dt>
     <dd>{{% md %}}Prefix to use for the fully qualified DNS name of
 the Environment.
-{{% /md %}}</dd>
-    <dt class="property-optional"
+{{% /md %}}</dd><dt class="property-optional"
             title="Optional">
         <span id="state_description_python">
 <a href="#state_description_python" style="color: inherit; text-decoration: inherit;">description</a>
@@ -2454,8 +2252,7 @@ the Environment.
         <span class="property-type">str</span>
     </dt>
     <dd>{{% md %}}Short description of the Environment
-{{% /md %}}</dd>
-    <dt class="property-optional"
+{{% /md %}}</dd><dt class="property-optional"
             title="Optional">
         <span id="state_endpoint_url_python">
 <a href="#state_endpoint_url_python" style="color: inherit; text-decoration: inherit;">endpoint_<wbr>url</a>
@@ -2464,8 +2261,7 @@ the Environment.
         <span class="property-type">str</span>
     </dt>
     <dd>{{% md %}}The URL to the Load Balancer for this Environment
-{{% /md %}}</dd>
-    <dt class="property-optional"
+{{% /md %}}</dd><dt class="property-optional"
             title="Optional">
         <span id="state_instances_python">
 <a href="#state_instances_python" style="color: inherit; text-decoration: inherit;">instances</a>
@@ -2474,8 +2270,7 @@ the Environment.
         <span class="property-type">Sequence[str]</span>
     </dt>
     <dd>{{% md %}}Instances used by this Environment.
-{{% /md %}}</dd>
-    <dt class="property-optional"
+{{% /md %}}</dd><dt class="property-optional"
             title="Optional">
         <span id="state_launch_configurations_python">
 <a href="#state_launch_configurations_python" style="color: inherit; text-decoration: inherit;">launch_<wbr>configurations</a>
@@ -2484,8 +2279,7 @@ the Environment.
         <span class="property-type">Sequence[str]</span>
     </dt>
     <dd>{{% md %}}Launch configurations in use by this Environment.
-{{% /md %}}</dd>
-    <dt class="property-optional"
+{{% /md %}}</dd><dt class="property-optional"
             title="Optional">
         <span id="state_load_balancers_python">
 <a href="#state_load_balancers_python" style="color: inherit; text-decoration: inherit;">load_<wbr>balancers</a>
@@ -2494,8 +2288,7 @@ the Environment.
         <span class="property-type">Sequence[str]</span>
     </dt>
     <dd>{{% md %}}Elastic load balancers in use by this Environment.
-{{% /md %}}</dd>
-    <dt class="property-optional"
+{{% /md %}}</dd><dt class="property-optional"
             title="Optional">
         <span id="state_name_python">
 <a href="#state_name_python" style="color: inherit; text-decoration: inherit;">name</a>
@@ -2505,8 +2298,7 @@ the Environment.
     </dt>
     <dd>{{% md %}}A unique name for this Environment. This name is used
 in the application URL
-{{% /md %}}</dd>
-    <dt class="property-optional"
+{{% /md %}}</dd><dt class="property-optional"
             title="Optional">
         <span id="state_platform_arn_python">
 <a href="#state_platform_arn_python" style="color: inherit; text-decoration: inherit;">platform_<wbr>arn</a>
@@ -2516,8 +2308,7 @@ in the application URL
     </dt>
     <dd>{{% md %}}The [ARN](https://docs.aws.amazon.com/general/latest/gr/aws-arns-and-namespaces.html) of the Elastic Beanstalk [Platform](https://docs.aws.amazon.com/AWSCloudFormation/latest/UserGuide/aws-properties-beanstalk-environment.html#cfn-beanstalk-environment-platformarn)
 to use in deployment
-{{% /md %}}</dd>
-    <dt class="property-optional"
+{{% /md %}}</dd><dt class="property-optional"
             title="Optional">
         <span id="state_poll_interval_python">
 <a href="#state_poll_interval_python" style="color: inherit; text-decoration: inherit;">poll_<wbr>interval</a>
@@ -2529,8 +2320,7 @@ to use in deployment
 check if changes have been applied. Use this to adjust the rate of API calls
 for any `create` or `update` action. Minimum `10s`, maximum `180s`. Omit this to
 use the default behavior, which is an exponential backoff
-{{% /md %}}</dd>
-    <dt class="property-optional"
+{{% /md %}}</dd><dt class="property-optional"
             title="Optional">
         <span id="state_queues_python">
 <a href="#state_queues_python" style="color: inherit; text-decoration: inherit;">queues</a>
@@ -2539,8 +2329,7 @@ use the default behavior, which is an exponential backoff
         <span class="property-type">Sequence[str]</span>
     </dt>
     <dd>{{% md %}}SQS queues in use by this Environment.
-{{% /md %}}</dd>
-    <dt class="property-optional"
+{{% /md %}}</dd><dt class="property-optional"
             title="Optional">
         <span id="state_settings_python">
 <a href="#state_settings_python" style="color: inherit; text-decoration: inherit;">settings</a>
@@ -2551,8 +2340,7 @@ use the default behavior, which is an exponential backoff
     <dd>{{% md %}}Option settings to configure the new Environment. These
 override specific values that are set as defaults. The format is detailed
 below in Option Settings
-{{% /md %}}</dd>
-    <dt class="property-optional"
+{{% /md %}}</dd><dt class="property-optional"
             title="Optional">
         <span id="state_solution_stack_name_python">
 <a href="#state_solution_stack_name_python" style="color: inherit; text-decoration: inherit;">solution_<wbr>stack_<wbr>name</a>
@@ -2562,8 +2350,7 @@ below in Option Settings
     </dt>
     <dd>{{% md %}}A solution stack to base your environment
 off of. Example stacks can be found in the [Amazon API documentation](https://docs.aws.amazon.com/elasticbeanstalk/latest/dg/concepts.platforms.html)
-{{% /md %}}</dd>
-    <dt class="property-optional"
+{{% /md %}}</dd><dt class="property-optional"
             title="Optional">
         <span id="state_tags_python">
 <a href="#state_tags_python" style="color: inherit; text-decoration: inherit;">tags</a>
@@ -2572,8 +2359,7 @@ off of. Example stacks can be found in the [Amazon API documentation](https://do
         <span class="property-type">Mapping[str, str]</span>
     </dt>
     <dd>{{% md %}}A set of tags to apply to the Environment.
-{{% /md %}}</dd>
-    <dt class="property-optional"
+{{% /md %}}</dd><dt class="property-optional"
             title="Optional">
         <span id="state_template_name_python">
 <a href="#state_template_name_python" style="color: inherit; text-decoration: inherit;">template_<wbr>name</a>
@@ -2583,8 +2369,7 @@ off of. Example stacks can be found in the [Amazon API documentation](https://do
     </dt>
     <dd>{{% md %}}The name of the Elastic Beanstalk Configuration
 template to use in deployment
-{{% /md %}}</dd>
-    <dt class="property-optional"
+{{% /md %}}</dd><dt class="property-optional"
             title="Optional">
         <span id="state_tier_python">
 <a href="#state_tier_python" style="color: inherit; text-decoration: inherit;">tier</a>
@@ -2594,8 +2379,7 @@ template to use in deployment
     </dt>
     <dd>{{% md %}}Elastic Beanstalk Environment tier. Valid values are `Worker`
 or `WebServer`. If tier is left blank `WebServer` will be used.
-{{% /md %}}</dd>
-    <dt class="property-optional"
+{{% /md %}}</dd><dt class="property-optional"
             title="Optional">
         <span id="state_triggers_python">
 <a href="#state_triggers_python" style="color: inherit; text-decoration: inherit;">triggers</a>
@@ -2604,8 +2388,7 @@ or `WebServer`. If tier is left blank `WebServer` will be used.
         <span class="property-type">Sequence[str]</span>
     </dt>
     <dd>{{% md %}}Autoscaling triggers in use by this Environment.
-{{% /md %}}</dd>
-    <dt class="property-optional"
+{{% /md %}}</dd><dt class="property-optional"
             title="Optional">
         <span id="state_version_python">
 <a href="#state_version_python" style="color: inherit; text-decoration: inherit;">version</a>
@@ -2615,8 +2398,7 @@ or `WebServer`. If tier is left blank `WebServer` will be used.
     </dt>
     <dd>{{% md %}}The name of the Elastic Beanstalk Application Version
 to use in deployment.
-{{% /md %}}</dd>
-    <dt class="property-optional"
+{{% /md %}}</dd><dt class="property-optional"
             title="Optional">
         <span id="state_wait_for_ready_timeout_python">
 <a href="#state_wait_for_ready_timeout_python" style="color: inherit; text-decoration: inherit;">wait_<wbr>for_<wbr>ready_<wbr>timeout</a>
@@ -2628,8 +2410,7 @@ to use in deployment.
 [duration](https://golang.org/pkg/time/#ParseDuration) that this provider should
 wait for an Elastic Beanstalk Environment to be in a ready state before timing
 out.
-{{% /md %}}</dd>
-</dl>
+{{% /md %}}</dd></dl>
 {{% /choosable %}}
 
 
@@ -2644,9 +2425,7 @@ out.
 <h4 id="environmentallsetting">Environment<wbr>All<wbr>Setting</h4>
 
 {{% choosable language csharp %}}
-<dl class="resources-properties">
-
-    <dt class="property-required"
+<dl class="resources-properties"><dt class="property-required"
             title="Required">
         <span id="name_csharp">
 <a href="#name_csharp" style="color: inherit; text-decoration: inherit;">Name</a>
@@ -2656,8 +2435,7 @@ out.
     </dt>
     <dd>{{% md %}}A unique name for this Environment. This name is used
 in the application URL
-{{% /md %}}</dd>
-    <dt class="property-required"
+{{% /md %}}</dd><dt class="property-required"
             title="Required">
         <span id="namespace_csharp">
 <a href="#namespace_csharp" style="color: inherit; text-decoration: inherit;">Namespace</a>
@@ -2665,8 +2443,7 @@ in the application URL
         <span class="property-indicator"></span>
         <span class="property-type">string</span>
     </dt>
-    <dd>{{% md %}}{{% /md %}}</dd>
-    <dt class="property-required"
+    <dd>{{% md %}}{{% /md %}}</dd><dt class="property-required"
             title="Required">
         <span id="value_csharp">
 <a href="#value_csharp" style="color: inherit; text-decoration: inherit;">Value</a>
@@ -2674,8 +2451,7 @@ in the application URL
         <span class="property-indicator"></span>
         <span class="property-type">string</span>
     </dt>
-    <dd>{{% md %}}{{% /md %}}</dd>
-    <dt class="property-optional"
+    <dd>{{% md %}}{{% /md %}}</dd><dt class="property-optional"
             title="Optional">
         <span id="resource_csharp">
 <a href="#resource_csharp" style="color: inherit; text-decoration: inherit;">Resource</a>
@@ -2683,14 +2459,11 @@ in the application URL
         <span class="property-indicator"></span>
         <span class="property-type">string</span>
     </dt>
-    <dd>{{% md %}}{{% /md %}}</dd>
-</dl>
+    <dd>{{% md %}}{{% /md %}}</dd></dl>
 {{% /choosable %}}
 
 {{% choosable language go %}}
-<dl class="resources-properties">
-
-    <dt class="property-required"
+<dl class="resources-properties"><dt class="property-required"
             title="Required">
         <span id="name_go">
 <a href="#name_go" style="color: inherit; text-decoration: inherit;">Name</a>
@@ -2700,8 +2473,7 @@ in the application URL
     </dt>
     <dd>{{% md %}}A unique name for this Environment. This name is used
 in the application URL
-{{% /md %}}</dd>
-    <dt class="property-required"
+{{% /md %}}</dd><dt class="property-required"
             title="Required">
         <span id="namespace_go">
 <a href="#namespace_go" style="color: inherit; text-decoration: inherit;">Namespace</a>
@@ -2709,8 +2481,7 @@ in the application URL
         <span class="property-indicator"></span>
         <span class="property-type">string</span>
     </dt>
-    <dd>{{% md %}}{{% /md %}}</dd>
-    <dt class="property-required"
+    <dd>{{% md %}}{{% /md %}}</dd><dt class="property-required"
             title="Required">
         <span id="value_go">
 <a href="#value_go" style="color: inherit; text-decoration: inherit;">Value</a>
@@ -2718,8 +2489,7 @@ in the application URL
         <span class="property-indicator"></span>
         <span class="property-type">string</span>
     </dt>
-    <dd>{{% md %}}{{% /md %}}</dd>
-    <dt class="property-optional"
+    <dd>{{% md %}}{{% /md %}}</dd><dt class="property-optional"
             title="Optional">
         <span id="resource_go">
 <a href="#resource_go" style="color: inherit; text-decoration: inherit;">Resource</a>
@@ -2727,14 +2497,11 @@ in the application URL
         <span class="property-indicator"></span>
         <span class="property-type">string</span>
     </dt>
-    <dd>{{% md %}}{{% /md %}}</dd>
-</dl>
+    <dd>{{% md %}}{{% /md %}}</dd></dl>
 {{% /choosable %}}
 
 {{% choosable language nodejs %}}
-<dl class="resources-properties">
-
-    <dt class="property-required"
+<dl class="resources-properties"><dt class="property-required"
             title="Required">
         <span id="name_nodejs">
 <a href="#name_nodejs" style="color: inherit; text-decoration: inherit;">name</a>
@@ -2744,8 +2511,7 @@ in the application URL
     </dt>
     <dd>{{% md %}}A unique name for this Environment. This name is used
 in the application URL
-{{% /md %}}</dd>
-    <dt class="property-required"
+{{% /md %}}</dd><dt class="property-required"
             title="Required">
         <span id="namespace_nodejs">
 <a href="#namespace_nodejs" style="color: inherit; text-decoration: inherit;">namespace</a>
@@ -2753,8 +2519,7 @@ in the application URL
         <span class="property-indicator"></span>
         <span class="property-type">string</span>
     </dt>
-    <dd>{{% md %}}{{% /md %}}</dd>
-    <dt class="property-required"
+    <dd>{{% md %}}{{% /md %}}</dd><dt class="property-required"
             title="Required">
         <span id="value_nodejs">
 <a href="#value_nodejs" style="color: inherit; text-decoration: inherit;">value</a>
@@ -2762,8 +2527,7 @@ in the application URL
         <span class="property-indicator"></span>
         <span class="property-type">string</span>
     </dt>
-    <dd>{{% md %}}{{% /md %}}</dd>
-    <dt class="property-optional"
+    <dd>{{% md %}}{{% /md %}}</dd><dt class="property-optional"
             title="Optional">
         <span id="resource_nodejs">
 <a href="#resource_nodejs" style="color: inherit; text-decoration: inherit;">resource</a>
@@ -2771,14 +2535,11 @@ in the application URL
         <span class="property-indicator"></span>
         <span class="property-type">string</span>
     </dt>
-    <dd>{{% md %}}{{% /md %}}</dd>
-</dl>
+    <dd>{{% md %}}{{% /md %}}</dd></dl>
 {{% /choosable %}}
 
 {{% choosable language python %}}
-<dl class="resources-properties">
-
-    <dt class="property-required"
+<dl class="resources-properties"><dt class="property-required"
             title="Required">
         <span id="name_python">
 <a href="#name_python" style="color: inherit; text-decoration: inherit;">name</a>
@@ -2788,8 +2549,7 @@ in the application URL
     </dt>
     <dd>{{% md %}}A unique name for this Environment. This name is used
 in the application URL
-{{% /md %}}</dd>
-    <dt class="property-required"
+{{% /md %}}</dd><dt class="property-required"
             title="Required">
         <span id="namespace_python">
 <a href="#namespace_python" style="color: inherit; text-decoration: inherit;">namespace</a>
@@ -2797,8 +2557,7 @@ in the application URL
         <span class="property-indicator"></span>
         <span class="property-type">str</span>
     </dt>
-    <dd>{{% md %}}{{% /md %}}</dd>
-    <dt class="property-required"
+    <dd>{{% md %}}{{% /md %}}</dd><dt class="property-required"
             title="Required">
         <span id="value_python">
 <a href="#value_python" style="color: inherit; text-decoration: inherit;">value</a>
@@ -2806,8 +2565,7 @@ in the application URL
         <span class="property-indicator"></span>
         <span class="property-type">str</span>
     </dt>
-    <dd>{{% md %}}{{% /md %}}</dd>
-    <dt class="property-optional"
+    <dd>{{% md %}}{{% /md %}}</dd><dt class="property-optional"
             title="Optional">
         <span id="resource_python">
 <a href="#resource_python" style="color: inherit; text-decoration: inherit;">resource</a>
@@ -2815,16 +2573,13 @@ in the application URL
         <span class="property-indicator"></span>
         <span class="property-type">str</span>
     </dt>
-    <dd>{{% md %}}{{% /md %}}</dd>
-</dl>
+    <dd>{{% md %}}{{% /md %}}</dd></dl>
 {{% /choosable %}}
 
 <h4 id="environmentsetting">Environment<wbr>Setting</h4>
 
 {{% choosable language csharp %}}
-<dl class="resources-properties">
-
-    <dt class="property-required"
+<dl class="resources-properties"><dt class="property-required"
             title="Required">
         <span id="name_csharp">
 <a href="#name_csharp" style="color: inherit; text-decoration: inherit;">Name</a>
@@ -2834,8 +2589,7 @@ in the application URL
     </dt>
     <dd>{{% md %}}A unique name for this Environment. This name is used
 in the application URL
-{{% /md %}}</dd>
-    <dt class="property-required"
+{{% /md %}}</dd><dt class="property-required"
             title="Required">
         <span id="namespace_csharp">
 <a href="#namespace_csharp" style="color: inherit; text-decoration: inherit;">Namespace</a>
@@ -2843,8 +2597,7 @@ in the application URL
         <span class="property-indicator"></span>
         <span class="property-type">string</span>
     </dt>
-    <dd>{{% md %}}{{% /md %}}</dd>
-    <dt class="property-required"
+    <dd>{{% md %}}{{% /md %}}</dd><dt class="property-required"
             title="Required">
         <span id="value_csharp">
 <a href="#value_csharp" style="color: inherit; text-decoration: inherit;">Value</a>
@@ -2852,8 +2605,7 @@ in the application URL
         <span class="property-indicator"></span>
         <span class="property-type">string</span>
     </dt>
-    <dd>{{% md %}}{{% /md %}}</dd>
-    <dt class="property-optional"
+    <dd>{{% md %}}{{% /md %}}</dd><dt class="property-optional"
             title="Optional">
         <span id="resource_csharp">
 <a href="#resource_csharp" style="color: inherit; text-decoration: inherit;">Resource</a>
@@ -2861,14 +2613,11 @@ in the application URL
         <span class="property-indicator"></span>
         <span class="property-type">string</span>
     </dt>
-    <dd>{{% md %}}{{% /md %}}</dd>
-</dl>
+    <dd>{{% md %}}{{% /md %}}</dd></dl>
 {{% /choosable %}}
 
 {{% choosable language go %}}
-<dl class="resources-properties">
-
-    <dt class="property-required"
+<dl class="resources-properties"><dt class="property-required"
             title="Required">
         <span id="name_go">
 <a href="#name_go" style="color: inherit; text-decoration: inherit;">Name</a>
@@ -2878,8 +2627,7 @@ in the application URL
     </dt>
     <dd>{{% md %}}A unique name for this Environment. This name is used
 in the application URL
-{{% /md %}}</dd>
-    <dt class="property-required"
+{{% /md %}}</dd><dt class="property-required"
             title="Required">
         <span id="namespace_go">
 <a href="#namespace_go" style="color: inherit; text-decoration: inherit;">Namespace</a>
@@ -2887,8 +2635,7 @@ in the application URL
         <span class="property-indicator"></span>
         <span class="property-type">string</span>
     </dt>
-    <dd>{{% md %}}{{% /md %}}</dd>
-    <dt class="property-required"
+    <dd>{{% md %}}{{% /md %}}</dd><dt class="property-required"
             title="Required">
         <span id="value_go">
 <a href="#value_go" style="color: inherit; text-decoration: inherit;">Value</a>
@@ -2896,8 +2643,7 @@ in the application URL
         <span class="property-indicator"></span>
         <span class="property-type">string</span>
     </dt>
-    <dd>{{% md %}}{{% /md %}}</dd>
-    <dt class="property-optional"
+    <dd>{{% md %}}{{% /md %}}</dd><dt class="property-optional"
             title="Optional">
         <span id="resource_go">
 <a href="#resource_go" style="color: inherit; text-decoration: inherit;">Resource</a>
@@ -2905,14 +2651,11 @@ in the application URL
         <span class="property-indicator"></span>
         <span class="property-type">string</span>
     </dt>
-    <dd>{{% md %}}{{% /md %}}</dd>
-</dl>
+    <dd>{{% md %}}{{% /md %}}</dd></dl>
 {{% /choosable %}}
 
 {{% choosable language nodejs %}}
-<dl class="resources-properties">
-
-    <dt class="property-required"
+<dl class="resources-properties"><dt class="property-required"
             title="Required">
         <span id="name_nodejs">
 <a href="#name_nodejs" style="color: inherit; text-decoration: inherit;">name</a>
@@ -2922,8 +2665,7 @@ in the application URL
     </dt>
     <dd>{{% md %}}A unique name for this Environment. This name is used
 in the application URL
-{{% /md %}}</dd>
-    <dt class="property-required"
+{{% /md %}}</dd><dt class="property-required"
             title="Required">
         <span id="namespace_nodejs">
 <a href="#namespace_nodejs" style="color: inherit; text-decoration: inherit;">namespace</a>
@@ -2931,8 +2673,7 @@ in the application URL
         <span class="property-indicator"></span>
         <span class="property-type">string</span>
     </dt>
-    <dd>{{% md %}}{{% /md %}}</dd>
-    <dt class="property-required"
+    <dd>{{% md %}}{{% /md %}}</dd><dt class="property-required"
             title="Required">
         <span id="value_nodejs">
 <a href="#value_nodejs" style="color: inherit; text-decoration: inherit;">value</a>
@@ -2940,8 +2681,7 @@ in the application URL
         <span class="property-indicator"></span>
         <span class="property-type">string</span>
     </dt>
-    <dd>{{% md %}}{{% /md %}}</dd>
-    <dt class="property-optional"
+    <dd>{{% md %}}{{% /md %}}</dd><dt class="property-optional"
             title="Optional">
         <span id="resource_nodejs">
 <a href="#resource_nodejs" style="color: inherit; text-decoration: inherit;">resource</a>
@@ -2949,14 +2689,11 @@ in the application URL
         <span class="property-indicator"></span>
         <span class="property-type">string</span>
     </dt>
-    <dd>{{% md %}}{{% /md %}}</dd>
-</dl>
+    <dd>{{% md %}}{{% /md %}}</dd></dl>
 {{% /choosable %}}
 
 {{% choosable language python %}}
-<dl class="resources-properties">
-
-    <dt class="property-required"
+<dl class="resources-properties"><dt class="property-required"
             title="Required">
         <span id="name_python">
 <a href="#name_python" style="color: inherit; text-decoration: inherit;">name</a>
@@ -2966,8 +2703,7 @@ in the application URL
     </dt>
     <dd>{{% md %}}A unique name for this Environment. This name is used
 in the application URL
-{{% /md %}}</dd>
-    <dt class="property-required"
+{{% /md %}}</dd><dt class="property-required"
             title="Required">
         <span id="namespace_python">
 <a href="#namespace_python" style="color: inherit; text-decoration: inherit;">namespace</a>
@@ -2975,8 +2711,7 @@ in the application URL
         <span class="property-indicator"></span>
         <span class="property-type">str</span>
     </dt>
-    <dd>{{% md %}}{{% /md %}}</dd>
-    <dt class="property-required"
+    <dd>{{% md %}}{{% /md %}}</dd><dt class="property-required"
             title="Required">
         <span id="value_python">
 <a href="#value_python" style="color: inherit; text-decoration: inherit;">value</a>
@@ -2984,8 +2719,7 @@ in the application URL
         <span class="property-indicator"></span>
         <span class="property-type">str</span>
     </dt>
-    <dd>{{% md %}}{{% /md %}}</dd>
-    <dt class="property-optional"
+    <dd>{{% md %}}{{% /md %}}</dd><dt class="property-optional"
             title="Optional">
         <span id="resource_python">
 <a href="#resource_python" style="color: inherit; text-decoration: inherit;">resource</a>
@@ -2993,8 +2727,7 @@ in the application URL
         <span class="property-indicator"></span>
         <span class="property-type">str</span>
     </dt>
-    <dd>{{% md %}}{{% /md %}}</dd>
-</dl>
+    <dd>{{% md %}}{{% /md %}}</dd></dl>
 {{% /choosable %}}
 ## Import
 
@@ -3015,6 +2748,6 @@ Elastic Beanstalk Environments can be imported using the `id`, e.g.
 	<dt>License</dt>
 	<dd>Apache-2.0</dd>
 	<dt>Notes</dt>
-	<dd>This Pulumi package is based on the [`aws` Terraform Provider](https://github.com/terraform-providers/terraform-provider-aws).</dd>
+	<dd>{{% md %}}This Pulumi package is based on the [`aws` Terraform Provider](https://github.com/terraform-providers/terraform-provider-aws).{{% /md %}}</dd>
 </dl>
 

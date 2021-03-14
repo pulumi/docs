@@ -15,11 +15,17 @@ Creates an OIDC Application.
 This resource allows you to create and configure an OIDC Application.
 
 {{% examples %}}
+
 ## Example Usage
 
 {{< chooser language "typescript,python,go,csharp" / >}}
 
-{{% example csharp %}}
+
+
+
+
+{{< example csharp >}}
+
 ```csharp
 using Pulumi;
 using Okta = Pulumi.Okta;
@@ -50,9 +56,12 @@ class MyStack : Stack
 }
 ```
 
-{{% /example %}}
 
-{{% example go %}}
+{{< /example >}}
+
+
+{{< example go >}}
+
 ```go
 package main
 
@@ -84,9 +93,12 @@ func main() {
 }
 ```
 
-{{% /example %}}
 
-{{% example python %}}
+{{< /example >}}
+
+
+{{< example python >}}
+
 ```python
 import pulumi
 import pulumi_okta as okta
@@ -99,9 +111,12 @@ example = okta.app.OAuth("example",
     type="web")
 ```
 
-{{% /example %}}
 
-{{% example typescript %}}
+{{< /example >}}
+
+
+{{< example typescript >}}
+
 
 ```typescript
 import * as pulumi from "@pulumi/pulumi";
@@ -116,9 +131,16 @@ const example = new okta.app.OAuth("example", {
 });
 ```
 
-{{% /example %}}
+
+{{< /example >}}
+
+
+
+
 
 {{% /examples %}}
+
+
 
 
 ## Create a OAuth Resource {#create}
@@ -143,9 +165,7 @@ const example = new okta.app.OAuth("example", {
 
 {{% choosable language nodejs %}}
 
-<dl class="resources-properties">
-  
-    <dt
+<dl class="resources-properties"><dt
         class="property-required" title="Required">
         <span>name</span>
         <span class="property-indicator"></span>
@@ -153,9 +173,7 @@ const example = new okta.app.OAuth("example", {
     </dt>
     <dd>
       The unique name of the resource.
-    </dd>
-  
-    <dt
+    </dd><dt
         class="property-required" title="Required">
         <span>args</span>
         <span class="property-indicator"></span>
@@ -163,9 +181,7 @@ const example = new okta.app.OAuth("example", {
     </dt>
     <dd>
       The arguments to resource properties.
-    </dd>
-  
-    <dt
+    </dd><dt
         class="property-optional" title="Optional">
         <span>opts</span>
         <span class="property-indicator"></span>
@@ -173,10 +189,7 @@ const example = new okta.app.OAuth("example", {
     </dt>
     <dd>
       Bag of options to control resource&#39;s behavior.
-    </dd>
-  
-
-</dl>
+    </dd></dl>
 
 {{% /choosable %}}
 
@@ -202,9 +215,7 @@ const example = new okta.app.OAuth("example", {
 
 {{% choosable language go %}}
 
-<dl class="resources-properties">
-  
-    <dt
+<dl class="resources-properties"><dt
         class="property-optional" title="Optional">
         <span>ctx</span>
         <span class="property-indicator"></span>
@@ -212,9 +223,7 @@ const example = new okta.app.OAuth("example", {
     </dt>
     <dd>
       Context object for the current deployment.
-    </dd>
-  
-    <dt
+    </dd><dt
         class="property-required" title="Required">
         <span>name</span>
         <span class="property-indicator"></span>
@@ -222,9 +231,7 @@ const example = new okta.app.OAuth("example", {
     </dt>
     <dd>
       The unique name of the resource.
-    </dd>
-  
-    <dt
+    </dd><dt
         class="property-required" title="Required">
         <span>args</span>
         <span class="property-indicator"></span>
@@ -232,9 +239,7 @@ const example = new okta.app.OAuth("example", {
     </dt>
     <dd>
       The arguments to resource properties.
-    </dd>
-  
-    <dt
+    </dd><dt
         class="property-optional" title="Optional">
         <span>opts</span>
         <span class="property-indicator"></span>
@@ -242,18 +247,13 @@ const example = new okta.app.OAuth("example", {
     </dt>
     <dd>
       Bag of options to control resource&#39;s behavior.
-    </dd>
-  
-
-</dl>
+    </dd></dl>
 
 {{% /choosable %}}
 
 {{% choosable language csharp %}}
 
-<dl class="resources-properties">
-  
-    <dt
+<dl class="resources-properties"><dt
         class="property-required" title="Required">
         <span>name</span>
         <span class="property-indicator"></span>
@@ -261,9 +261,7 @@ const example = new okta.app.OAuth("example", {
     </dt>
     <dd>
       The unique name of the resource.
-    </dd>
-  
-    <dt
+    </dd><dt
         class="property-required" title="Required">
         <span>args</span>
         <span class="property-indicator"></span>
@@ -271,9 +269,7 @@ const example = new okta.app.OAuth("example", {
     </dt>
     <dd>
       The arguments to resource properties.
-    </dd>
-  
-    <dt
+    </dd><dt
         class="property-optional" title="Optional">
         <span>opts</span>
         <span class="property-indicator"></span>
@@ -281,10 +277,7 @@ const example = new okta.app.OAuth("example", {
     </dt>
     <dd>
       Bag of options to control resource&#39;s behavior.
-    </dd>
-  
-
-</dl>
+    </dd></dl>
 
 {{% /choosable %}}
 
@@ -299,9 +292,7 @@ The OAuth resource accepts the following [input]({{< relref "/docs/intro/concept
 
 
 {{% choosable language csharp %}}
-<dl class="resources-properties">
-
-    <dt class="property-required"
+<dl class="resources-properties"><dt class="property-required"
             title="Required">
         <span id="label_csharp">
 <a href="#label_csharp" style="color: inherit; text-decoration: inherit;">Label</a>
@@ -310,8 +301,7 @@ The OAuth resource accepts the following [input]({{< relref "/docs/intro/concept
         <span class="property-type">string</span>
     </dt>
     <dd>{{% md %}}The Application's display name.
-{{% /md %}}</dd>
-    <dt class="property-required"
+{{% /md %}}</dd><dt class="property-required"
             title="Required">
         <span id="type_csharp">
 <a href="#type_csharp" style="color: inherit; text-decoration: inherit;">Type</a>
@@ -320,8 +310,7 @@ The OAuth resource accepts the following [input]({{< relref "/docs/intro/concept
         <span class="property-type">string</span>
     </dt>
     <dd>{{% md %}}The type of OAuth application. Valid values: `"web"`, `"native"`, `"browser"`, `"service"`.
-{{% /md %}}</dd>
-    <dt class="property-optional"
+{{% /md %}}</dd><dt class="property-optional"
             title="Optional">
         <span id="autokeyrotation_csharp">
 <a href="#autokeyrotation_csharp" style="color: inherit; text-decoration: inherit;">Auto<wbr>Key<wbr>Rotation</a>
@@ -330,8 +319,7 @@ The OAuth resource accepts the following [input]({{< relref "/docs/intro/concept
         <span class="property-type">bool</span>
     </dt>
     <dd>{{% md %}}Requested key rotation mode.
-{{% /md %}}</dd>
-    <dt class="property-optional"
+{{% /md %}}</dd><dt class="property-optional"
             title="Optional">
         <span id="autosubmittoolbar_csharp">
 <a href="#autosubmittoolbar_csharp" style="color: inherit; text-decoration: inherit;">Auto<wbr>Submit<wbr>Toolbar</a>
@@ -340,8 +328,7 @@ The OAuth resource accepts the following [input]({{< relref "/docs/intro/concept
         <span class="property-type">bool</span>
     </dt>
     <dd>{{% md %}}Display auto submit toolbar.
-{{% /md %}}</dd>
-    <dt class="property-optional"
+{{% /md %}}</dd><dt class="property-optional"
             title="Optional">
         <span id="clientbasicsecret_csharp">
 <a href="#clientbasicsecret_csharp" style="color: inherit; text-decoration: inherit;">Client<wbr>Basic<wbr>Secret</a>
@@ -350,8 +337,7 @@ The OAuth resource accepts the following [input]({{< relref "/docs/intro/concept
         <span class="property-type">string</span>
     </dt>
     <dd>{{% md %}}OAuth client secret key, this can be set when token_endpoint_auth_method is client_secret_basic.
-{{% /md %}}</dd>
-    <dt class="property-optional"
+{{% /md %}}</dd><dt class="property-optional"
             title="Optional">
         <span id="clientid_csharp">
 <a href="#clientid_csharp" style="color: inherit; text-decoration: inherit;">Client<wbr>Id</a>
@@ -360,8 +346,7 @@ The OAuth resource accepts the following [input]({{< relref "/docs/intro/concept
         <span class="property-type">string</span>
     </dt>
     <dd>{{% md %}}OAuth client ID. If set during creation, app is created with this id.
-{{% /md %}}</dd>
-    <dt class="property-optional"
+{{% /md %}}</dd><dt class="property-optional"
             title="Optional">
         <span id="clienturi_csharp">
 <a href="#clienturi_csharp" style="color: inherit; text-decoration: inherit;">Client<wbr>Uri</a>
@@ -370,8 +355,7 @@ The OAuth resource accepts the following [input]({{< relref "/docs/intro/concept
         <span class="property-type">string</span>
     </dt>
     <dd>{{% md %}}URI to a web page providing information about the client.
-{{% /md %}}</dd>
-    <dt class="property-optional"
+{{% /md %}}</dd><dt class="property-optional"
             title="Optional">
         <span id="consentmethod_csharp">
 <a href="#consentmethod_csharp" style="color: inherit; text-decoration: inherit;">Consent<wbr>Method</a>
@@ -380,8 +364,7 @@ The OAuth resource accepts the following [input]({{< relref "/docs/intro/concept
         <span class="property-type">string</span>
     </dt>
     <dd>{{% md %}}Indicates whether user consent is required or implicit. Valid values: `"REQUIRED"`, `"TRUSTED"`. Default value is `"TRUSTED"`.
-{{% /md %}}</dd>
-    <dt class="property-optional property-deprecated"
+{{% /md %}}</dd><dt class="property-optional property-deprecated"
             title="Optional, Deprecated">
         <span id="customclientid_csharp">
 <a href="#customclientid_csharp" style="color: inherit; text-decoration: inherit;">Custom<wbr>Client<wbr>Id</a>
@@ -391,8 +374,7 @@ The OAuth resource accepts the following [input]({{< relref "/docs/intro/concept
     </dt>
     <dd>{{% md %}}**Deprecated** This property allows you to set your client_id during creation. NOTE: updating after creation will be a
 no-op, use client_id for that behavior instead.
-{{% /md %}}<p class="property-message">Deprecated: {{% md %}}This field is being replaced by client_id. Please set that field instead.{{% /md %}}</p></dd>
-    <dt class="property-optional"
+{{% /md %}}<p class="property-message">Deprecated: {{% md %}}This field is being replaced by client_id. Please set that field instead.{{% /md %}}</p></dd><dt class="property-optional"
             title="Optional">
         <span id="granttypes_csharp">
 <a href="#granttypes_csharp" style="color: inherit; text-decoration: inherit;">Grant<wbr>Types</a>
@@ -402,8 +384,7 @@ no-op, use client_id for that behavior instead.
     </dt>
     <dd>{{% md %}}List of OAuth 2.0 grant types. Conditional validation params found [here](https://developer.okta.com/docs/api/resources/apps#credentials-settings-details). 
 Defaults to minimum requirements per app type. Valid values: `"authorization_code"`, `"implicit"`, `"password"`, `"refresh_token"`, `"client_credentials"`.
-{{% /md %}}</dd>
-    <dt class="property-optional"
+{{% /md %}}</dd><dt class="property-optional"
             title="Optional">
         <span id="groups_csharp">
 <a href="#groups_csharp" style="color: inherit; text-decoration: inherit;">Groups</a>
@@ -412,8 +393,7 @@ Defaults to minimum requirements per app type. Valid values: `"authorization_cod
         <span class="property-type">List&lt;string&gt;</span>
     </dt>
     <dd>{{% md %}}The groups assigned to the application. It is recommended not to use this and instead use `okta.app.GroupAssignment`.
-{{% /md %}}</dd>
-    <dt class="property-optional"
+{{% /md %}}</dd><dt class="property-optional"
             title="Optional">
         <span id="hideios_csharp">
 <a href="#hideios_csharp" style="color: inherit; text-decoration: inherit;">Hide<wbr>Ios</a>
@@ -422,8 +402,7 @@ Defaults to minimum requirements per app type. Valid values: `"authorization_cod
         <span class="property-type">bool</span>
     </dt>
     <dd>{{% md %}}Do not display application icon on mobile app.
-{{% /md %}}</dd>
-    <dt class="property-optional"
+{{% /md %}}</dd><dt class="property-optional"
             title="Optional">
         <span id="hideweb_csharp">
 <a href="#hideweb_csharp" style="color: inherit; text-decoration: inherit;">Hide<wbr>Web</a>
@@ -432,8 +411,7 @@ Defaults to minimum requirements per app type. Valid values: `"authorization_cod
         <span class="property-type">bool</span>
     </dt>
     <dd>{{% md %}}Do not display application icon to users.
-{{% /md %}}</dd>
-    <dt class="property-optional"
+{{% /md %}}</dd><dt class="property-optional"
             title="Optional">
         <span id="implicitassignment_csharp">
 <a href="#implicitassignment_csharp" style="color: inherit; text-decoration: inherit;">Implicit<wbr>Assignment</a>
@@ -442,8 +420,7 @@ Defaults to minimum requirements per app type. Valid values: `"authorization_cod
         <span class="property-type">bool</span>
     </dt>
     <dd>{{% md %}}*Early Access Property*. Enables Federation Broker Mode. When this mode is enabled, `users` and `groups` arguments are ignored.
-{{% /md %}}</dd>
-    <dt class="property-optional"
+{{% /md %}}</dd><dt class="property-optional"
             title="Optional">
         <span id="issuermode_csharp">
 <a href="#issuermode_csharp" style="color: inherit; text-decoration: inherit;">Issuer<wbr>Mode</a>
@@ -452,8 +429,7 @@ Defaults to minimum requirements per app type. Valid values: `"authorization_cod
         <span class="property-type">string</span>
     </dt>
     <dd>{{% md %}}Indicates whether the Okta Authorization Server uses the original Okta org domain URL or a custom domain URL as the issuer of ID token for this client.
-{{% /md %}}</dd>
-    <dt class="property-optional"
+{{% /md %}}</dd><dt class="property-optional"
             title="Optional">
         <span id="jwks_csharp">
 <a href="#jwks_csharp" style="color: inherit; text-decoration: inherit;">Jwks</a>
@@ -461,8 +437,7 @@ Defaults to minimum requirements per app type. Valid values: `"authorization_cod
         <span class="property-indicator"></span>
         <span class="property-type"><a href="#oauthjwk">List&lt;OAuth<wbr>Jwk<wbr>Args&gt;</a></span>
     </dt>
-    <dd>{{% md %}}{{% /md %}}</dd>
-    <dt class="property-optional"
+    <dd>{{% md %}}{{% /md %}}</dd><dt class="property-optional"
             title="Optional">
         <span id="loginmode_csharp">
 <a href="#loginmode_csharp" style="color: inherit; text-decoration: inherit;">Login<wbr>Mode</a>
@@ -471,8 +446,7 @@ Defaults to minimum requirements per app type. Valid values: `"authorization_cod
         <span class="property-type">string</span>
     </dt>
     <dd>{{% md %}}The type of Idp-Initiated login that the client supports, if any. Valid values: `"DISABLED"`, `"SPEC"`, `"OKTA"`. Default is `"DISABLED"`.
-{{% /md %}}</dd>
-    <dt class="property-optional"
+{{% /md %}}</dd><dt class="property-optional"
             title="Optional">
         <span id="loginscopes_csharp">
 <a href="#loginscopes_csharp" style="color: inherit; text-decoration: inherit;">Login<wbr>Scopes</a>
@@ -481,8 +455,7 @@ Defaults to minimum requirements per app type. Valid values: `"authorization_cod
         <span class="property-type">List&lt;string&gt;</span>
     </dt>
     <dd>{{% md %}}List of scopes to use for the request. Valid values: `"openid"`, `"profile"`, `"email"`, `"address"`, `"phone"`. Required when `login_mode` is NOT `DISABLED`.
-{{% /md %}}</dd>
-    <dt class="property-optional"
+{{% /md %}}</dd><dt class="property-optional"
             title="Optional">
         <span id="loginuri_csharp">
 <a href="#loginuri_csharp" style="color: inherit; text-decoration: inherit;">Login<wbr>Uri</a>
@@ -491,8 +464,7 @@ Defaults to minimum requirements per app type. Valid values: `"authorization_cod
         <span class="property-type">string</span>
     </dt>
     <dd>{{% md %}}URI that initiates login. Required when `login_mode` is NOT `DISABLED`.
-{{% /md %}}</dd>
-    <dt class="property-optional"
+{{% /md %}}</dd><dt class="property-optional"
             title="Optional">
         <span id="logouri_csharp">
 <a href="#logouri_csharp" style="color: inherit; text-decoration: inherit;">Logo<wbr>Uri</a>
@@ -501,8 +473,7 @@ Defaults to minimum requirements per app type. Valid values: `"authorization_cod
         <span class="property-type">string</span>
     </dt>
     <dd>{{% md %}}URI that references a logo for the client.
-{{% /md %}}</dd>
-    <dt class="property-optional"
+{{% /md %}}</dd><dt class="property-optional"
             title="Optional">
         <span id="omitsecret_csharp">
 <a href="#omitsecret_csharp" style="color: inherit; text-decoration: inherit;">Omit<wbr>Secret</a>
@@ -511,8 +482,7 @@ Defaults to minimum requirements per app type. Valid values: `"authorization_cod
         <span class="property-type">bool</span>
     </dt>
     <dd>{{% md %}}This tells the provider not to persist the application's secret to state. Your app will be recreated if this ever changes from true => false.
-{{% /md %}}</dd>
-    <dt class="property-optional"
+{{% /md %}}</dd><dt class="property-optional"
             title="Optional">
         <span id="policyuri_csharp">
 <a href="#policyuri_csharp" style="color: inherit; text-decoration: inherit;">Policy<wbr>Uri</a>
@@ -521,8 +491,7 @@ Defaults to minimum requirements per app type. Valid values: `"authorization_cod
         <span class="property-type">string</span>
     </dt>
     <dd>{{% md %}}URI to web page providing client policy document.
-{{% /md %}}</dd>
-    <dt class="property-optional"
+{{% /md %}}</dd><dt class="property-optional"
             title="Optional">
         <span id="postlogoutredirecturis_csharp">
 <a href="#postlogoutredirecturis_csharp" style="color: inherit; text-decoration: inherit;">Post<wbr>Logout<wbr>Redirect<wbr>Uris</a>
@@ -531,8 +500,7 @@ Defaults to minimum requirements per app type. Valid values: `"authorization_cod
         <span class="property-type">List&lt;string&gt;</span>
     </dt>
     <dd>{{% md %}}List of URIs for redirection after logout.
-{{% /md %}}</dd>
-    <dt class="property-optional"
+{{% /md %}}</dd><dt class="property-optional"
             title="Optional">
         <span id="profile_csharp">
 <a href="#profile_csharp" style="color: inherit; text-decoration: inherit;">Profile</a>
@@ -541,8 +509,7 @@ Defaults to minimum requirements per app type. Valid values: `"authorization_cod
         <span class="property-type">string</span>
     </dt>
     <dd>{{% md %}}Custom JSON that represents an OAuth application's profile.
-{{% /md %}}</dd>
-    <dt class="property-optional"
+{{% /md %}}</dd><dt class="property-optional"
             title="Optional">
         <span id="redirecturis_csharp">
 <a href="#redirecturis_csharp" style="color: inherit; text-decoration: inherit;">Redirect<wbr>Uris</a>
@@ -551,8 +518,7 @@ Defaults to minimum requirements per app type. Valid values: `"authorization_cod
         <span class="property-type">List&lt;string&gt;</span>
     </dt>
     <dd>{{% md %}}List of URIs for use in the redirect-based flow. This is required for all application types except service.
-{{% /md %}}</dd>
-    <dt class="property-optional"
+{{% /md %}}</dd><dt class="property-optional"
             title="Optional">
         <span id="responsetypes_csharp">
 <a href="#responsetypes_csharp" style="color: inherit; text-decoration: inherit;">Response<wbr>Types</a>
@@ -561,8 +527,7 @@ Defaults to minimum requirements per app type. Valid values: `"authorization_cod
         <span class="property-type">List&lt;string&gt;</span>
     </dt>
     <dd>{{% md %}}List of OAuth 2.0 response type strings.
-{{% /md %}}</dd>
-    <dt class="property-optional"
+{{% /md %}}</dd><dt class="property-optional"
             title="Optional">
         <span id="status_csharp">
 <a href="#status_csharp" style="color: inherit; text-decoration: inherit;">Status</a>
@@ -571,8 +536,7 @@ Defaults to minimum requirements per app type. Valid values: `"authorization_cod
         <span class="property-type">string</span>
     </dt>
     <dd>{{% md %}}The status of the application, by default, it is `"ACTIVE"`.
-{{% /md %}}</dd>
-    <dt class="property-optional"
+{{% /md %}}</dd><dt class="property-optional"
             title="Optional">
         <span id="tokenendpointauthmethod_csharp">
 <a href="#tokenendpointauthmethod_csharp" style="color: inherit; text-decoration: inherit;">Token<wbr>Endpoint<wbr>Auth<wbr>Method</a>
@@ -581,8 +545,7 @@ Defaults to minimum requirements per app type. Valid values: `"authorization_cod
         <span class="property-type">string</span>
     </dt>
     <dd>{{% md %}}Requested authentication method for the token endpoint. It can be set to `"none"`, `"client_secret_post"`, `"client_secret_basic"`, `"client_secret_jwt"`, `"private_key_jwt"`.
-{{% /md %}}</dd>
-    <dt class="property-optional"
+{{% /md %}}</dd><dt class="property-optional"
             title="Optional">
         <span id="tosuri_csharp">
 <a href="#tosuri_csharp" style="color: inherit; text-decoration: inherit;">Tos<wbr>Uri</a>
@@ -591,8 +554,7 @@ Defaults to minimum requirements per app type. Valid values: `"authorization_cod
         <span class="property-type">string</span>
     </dt>
     <dd>{{% md %}}URI to web page providing client tos (terms of service).
-{{% /md %}}</dd>
-    <dt class="property-optional"
+{{% /md %}}</dd><dt class="property-optional"
             title="Optional">
         <span id="users_csharp">
 <a href="#users_csharp" style="color: inherit; text-decoration: inherit;">Users</a>
@@ -601,14 +563,11 @@ Defaults to minimum requirements per app type. Valid values: `"authorization_cod
         <span class="property-type"><a href="#oauthuser">List&lt;OAuth<wbr>User<wbr>Args&gt;</a></span>
     </dt>
     <dd>{{% md %}}The users assigned to the application. It is recommended not to use this and instead use `okta.app.User`.
-{{% /md %}}</dd>
-</dl>
+{{% /md %}}</dd></dl>
 {{% /choosable %}}
 
 {{% choosable language go %}}
-<dl class="resources-properties">
-
-    <dt class="property-required"
+<dl class="resources-properties"><dt class="property-required"
             title="Required">
         <span id="label_go">
 <a href="#label_go" style="color: inherit; text-decoration: inherit;">Label</a>
@@ -617,8 +576,7 @@ Defaults to minimum requirements per app type. Valid values: `"authorization_cod
         <span class="property-type">string</span>
     </dt>
     <dd>{{% md %}}The Application's display name.
-{{% /md %}}</dd>
-    <dt class="property-required"
+{{% /md %}}</dd><dt class="property-required"
             title="Required">
         <span id="type_go">
 <a href="#type_go" style="color: inherit; text-decoration: inherit;">Type</a>
@@ -627,8 +585,7 @@ Defaults to minimum requirements per app type. Valid values: `"authorization_cod
         <span class="property-type">string</span>
     </dt>
     <dd>{{% md %}}The type of OAuth application. Valid values: `"web"`, `"native"`, `"browser"`, `"service"`.
-{{% /md %}}</dd>
-    <dt class="property-optional"
+{{% /md %}}</dd><dt class="property-optional"
             title="Optional">
         <span id="autokeyrotation_go">
 <a href="#autokeyrotation_go" style="color: inherit; text-decoration: inherit;">Auto<wbr>Key<wbr>Rotation</a>
@@ -637,8 +594,7 @@ Defaults to minimum requirements per app type. Valid values: `"authorization_cod
         <span class="property-type">bool</span>
     </dt>
     <dd>{{% md %}}Requested key rotation mode.
-{{% /md %}}</dd>
-    <dt class="property-optional"
+{{% /md %}}</dd><dt class="property-optional"
             title="Optional">
         <span id="autosubmittoolbar_go">
 <a href="#autosubmittoolbar_go" style="color: inherit; text-decoration: inherit;">Auto<wbr>Submit<wbr>Toolbar</a>
@@ -647,8 +603,7 @@ Defaults to minimum requirements per app type. Valid values: `"authorization_cod
         <span class="property-type">bool</span>
     </dt>
     <dd>{{% md %}}Display auto submit toolbar.
-{{% /md %}}</dd>
-    <dt class="property-optional"
+{{% /md %}}</dd><dt class="property-optional"
             title="Optional">
         <span id="clientbasicsecret_go">
 <a href="#clientbasicsecret_go" style="color: inherit; text-decoration: inherit;">Client<wbr>Basic<wbr>Secret</a>
@@ -657,8 +612,7 @@ Defaults to minimum requirements per app type. Valid values: `"authorization_cod
         <span class="property-type">string</span>
     </dt>
     <dd>{{% md %}}OAuth client secret key, this can be set when token_endpoint_auth_method is client_secret_basic.
-{{% /md %}}</dd>
-    <dt class="property-optional"
+{{% /md %}}</dd><dt class="property-optional"
             title="Optional">
         <span id="clientid_go">
 <a href="#clientid_go" style="color: inherit; text-decoration: inherit;">Client<wbr>Id</a>
@@ -667,8 +621,7 @@ Defaults to minimum requirements per app type. Valid values: `"authorization_cod
         <span class="property-type">string</span>
     </dt>
     <dd>{{% md %}}OAuth client ID. If set during creation, app is created with this id.
-{{% /md %}}</dd>
-    <dt class="property-optional"
+{{% /md %}}</dd><dt class="property-optional"
             title="Optional">
         <span id="clienturi_go">
 <a href="#clienturi_go" style="color: inherit; text-decoration: inherit;">Client<wbr>Uri</a>
@@ -677,8 +630,7 @@ Defaults to minimum requirements per app type. Valid values: `"authorization_cod
         <span class="property-type">string</span>
     </dt>
     <dd>{{% md %}}URI to a web page providing information about the client.
-{{% /md %}}</dd>
-    <dt class="property-optional"
+{{% /md %}}</dd><dt class="property-optional"
             title="Optional">
         <span id="consentmethod_go">
 <a href="#consentmethod_go" style="color: inherit; text-decoration: inherit;">Consent<wbr>Method</a>
@@ -687,8 +639,7 @@ Defaults to minimum requirements per app type. Valid values: `"authorization_cod
         <span class="property-type">string</span>
     </dt>
     <dd>{{% md %}}Indicates whether user consent is required or implicit. Valid values: `"REQUIRED"`, `"TRUSTED"`. Default value is `"TRUSTED"`.
-{{% /md %}}</dd>
-    <dt class="property-optional property-deprecated"
+{{% /md %}}</dd><dt class="property-optional property-deprecated"
             title="Optional, Deprecated">
         <span id="customclientid_go">
 <a href="#customclientid_go" style="color: inherit; text-decoration: inherit;">Custom<wbr>Client<wbr>Id</a>
@@ -698,8 +649,7 @@ Defaults to minimum requirements per app type. Valid values: `"authorization_cod
     </dt>
     <dd>{{% md %}}**Deprecated** This property allows you to set your client_id during creation. NOTE: updating after creation will be a
 no-op, use client_id for that behavior instead.
-{{% /md %}}<p class="property-message">Deprecated: {{% md %}}This field is being replaced by client_id. Please set that field instead.{{% /md %}}</p></dd>
-    <dt class="property-optional"
+{{% /md %}}<p class="property-message">Deprecated: {{% md %}}This field is being replaced by client_id. Please set that field instead.{{% /md %}}</p></dd><dt class="property-optional"
             title="Optional">
         <span id="granttypes_go">
 <a href="#granttypes_go" style="color: inherit; text-decoration: inherit;">Grant<wbr>Types</a>
@@ -709,8 +659,7 @@ no-op, use client_id for that behavior instead.
     </dt>
     <dd>{{% md %}}List of OAuth 2.0 grant types. Conditional validation params found [here](https://developer.okta.com/docs/api/resources/apps#credentials-settings-details). 
 Defaults to minimum requirements per app type. Valid values: `"authorization_code"`, `"implicit"`, `"password"`, `"refresh_token"`, `"client_credentials"`.
-{{% /md %}}</dd>
-    <dt class="property-optional"
+{{% /md %}}</dd><dt class="property-optional"
             title="Optional">
         <span id="groups_go">
 <a href="#groups_go" style="color: inherit; text-decoration: inherit;">Groups</a>
@@ -719,8 +668,7 @@ Defaults to minimum requirements per app type. Valid values: `"authorization_cod
         <span class="property-type">[]string</span>
     </dt>
     <dd>{{% md %}}The groups assigned to the application. It is recommended not to use this and instead use `okta.app.GroupAssignment`.
-{{% /md %}}</dd>
-    <dt class="property-optional"
+{{% /md %}}</dd><dt class="property-optional"
             title="Optional">
         <span id="hideios_go">
 <a href="#hideios_go" style="color: inherit; text-decoration: inherit;">Hide<wbr>Ios</a>
@@ -729,8 +677,7 @@ Defaults to minimum requirements per app type. Valid values: `"authorization_cod
         <span class="property-type">bool</span>
     </dt>
     <dd>{{% md %}}Do not display application icon on mobile app.
-{{% /md %}}</dd>
-    <dt class="property-optional"
+{{% /md %}}</dd><dt class="property-optional"
             title="Optional">
         <span id="hideweb_go">
 <a href="#hideweb_go" style="color: inherit; text-decoration: inherit;">Hide<wbr>Web</a>
@@ -739,8 +686,7 @@ Defaults to minimum requirements per app type. Valid values: `"authorization_cod
         <span class="property-type">bool</span>
     </dt>
     <dd>{{% md %}}Do not display application icon to users.
-{{% /md %}}</dd>
-    <dt class="property-optional"
+{{% /md %}}</dd><dt class="property-optional"
             title="Optional">
         <span id="implicitassignment_go">
 <a href="#implicitassignment_go" style="color: inherit; text-decoration: inherit;">Implicit<wbr>Assignment</a>
@@ -749,8 +695,7 @@ Defaults to minimum requirements per app type. Valid values: `"authorization_cod
         <span class="property-type">bool</span>
     </dt>
     <dd>{{% md %}}*Early Access Property*. Enables Federation Broker Mode. When this mode is enabled, `users` and `groups` arguments are ignored.
-{{% /md %}}</dd>
-    <dt class="property-optional"
+{{% /md %}}</dd><dt class="property-optional"
             title="Optional">
         <span id="issuermode_go">
 <a href="#issuermode_go" style="color: inherit; text-decoration: inherit;">Issuer<wbr>Mode</a>
@@ -759,8 +704,7 @@ Defaults to minimum requirements per app type. Valid values: `"authorization_cod
         <span class="property-type">string</span>
     </dt>
     <dd>{{% md %}}Indicates whether the Okta Authorization Server uses the original Okta org domain URL or a custom domain URL as the issuer of ID token for this client.
-{{% /md %}}</dd>
-    <dt class="property-optional"
+{{% /md %}}</dd><dt class="property-optional"
             title="Optional">
         <span id="jwks_go">
 <a href="#jwks_go" style="color: inherit; text-decoration: inherit;">Jwks</a>
@@ -768,8 +712,7 @@ Defaults to minimum requirements per app type. Valid values: `"authorization_cod
         <span class="property-indicator"></span>
         <span class="property-type"><a href="#oauthjwk">[]OAuth<wbr>Jwk</a></span>
     </dt>
-    <dd>{{% md %}}{{% /md %}}</dd>
-    <dt class="property-optional"
+    <dd>{{% md %}}{{% /md %}}</dd><dt class="property-optional"
             title="Optional">
         <span id="loginmode_go">
 <a href="#loginmode_go" style="color: inherit; text-decoration: inherit;">Login<wbr>Mode</a>
@@ -778,8 +721,7 @@ Defaults to minimum requirements per app type. Valid values: `"authorization_cod
         <span class="property-type">string</span>
     </dt>
     <dd>{{% md %}}The type of Idp-Initiated login that the client supports, if any. Valid values: `"DISABLED"`, `"SPEC"`, `"OKTA"`. Default is `"DISABLED"`.
-{{% /md %}}</dd>
-    <dt class="property-optional"
+{{% /md %}}</dd><dt class="property-optional"
             title="Optional">
         <span id="loginscopes_go">
 <a href="#loginscopes_go" style="color: inherit; text-decoration: inherit;">Login<wbr>Scopes</a>
@@ -788,8 +730,7 @@ Defaults to minimum requirements per app type. Valid values: `"authorization_cod
         <span class="property-type">[]string</span>
     </dt>
     <dd>{{% md %}}List of scopes to use for the request. Valid values: `"openid"`, `"profile"`, `"email"`, `"address"`, `"phone"`. Required when `login_mode` is NOT `DISABLED`.
-{{% /md %}}</dd>
-    <dt class="property-optional"
+{{% /md %}}</dd><dt class="property-optional"
             title="Optional">
         <span id="loginuri_go">
 <a href="#loginuri_go" style="color: inherit; text-decoration: inherit;">Login<wbr>Uri</a>
@@ -798,8 +739,7 @@ Defaults to minimum requirements per app type. Valid values: `"authorization_cod
         <span class="property-type">string</span>
     </dt>
     <dd>{{% md %}}URI that initiates login. Required when `login_mode` is NOT `DISABLED`.
-{{% /md %}}</dd>
-    <dt class="property-optional"
+{{% /md %}}</dd><dt class="property-optional"
             title="Optional">
         <span id="logouri_go">
 <a href="#logouri_go" style="color: inherit; text-decoration: inherit;">Logo<wbr>Uri</a>
@@ -808,8 +748,7 @@ Defaults to minimum requirements per app type. Valid values: `"authorization_cod
         <span class="property-type">string</span>
     </dt>
     <dd>{{% md %}}URI that references a logo for the client.
-{{% /md %}}</dd>
-    <dt class="property-optional"
+{{% /md %}}</dd><dt class="property-optional"
             title="Optional">
         <span id="omitsecret_go">
 <a href="#omitsecret_go" style="color: inherit; text-decoration: inherit;">Omit<wbr>Secret</a>
@@ -818,8 +757,7 @@ Defaults to minimum requirements per app type. Valid values: `"authorization_cod
         <span class="property-type">bool</span>
     </dt>
     <dd>{{% md %}}This tells the provider not to persist the application's secret to state. Your app will be recreated if this ever changes from true => false.
-{{% /md %}}</dd>
-    <dt class="property-optional"
+{{% /md %}}</dd><dt class="property-optional"
             title="Optional">
         <span id="policyuri_go">
 <a href="#policyuri_go" style="color: inherit; text-decoration: inherit;">Policy<wbr>Uri</a>
@@ -828,8 +766,7 @@ Defaults to minimum requirements per app type. Valid values: `"authorization_cod
         <span class="property-type">string</span>
     </dt>
     <dd>{{% md %}}URI to web page providing client policy document.
-{{% /md %}}</dd>
-    <dt class="property-optional"
+{{% /md %}}</dd><dt class="property-optional"
             title="Optional">
         <span id="postlogoutredirecturis_go">
 <a href="#postlogoutredirecturis_go" style="color: inherit; text-decoration: inherit;">Post<wbr>Logout<wbr>Redirect<wbr>Uris</a>
@@ -838,8 +775,7 @@ Defaults to minimum requirements per app type. Valid values: `"authorization_cod
         <span class="property-type">[]string</span>
     </dt>
     <dd>{{% md %}}List of URIs for redirection after logout.
-{{% /md %}}</dd>
-    <dt class="property-optional"
+{{% /md %}}</dd><dt class="property-optional"
             title="Optional">
         <span id="profile_go">
 <a href="#profile_go" style="color: inherit; text-decoration: inherit;">Profile</a>
@@ -848,8 +784,7 @@ Defaults to minimum requirements per app type. Valid values: `"authorization_cod
         <span class="property-type">string</span>
     </dt>
     <dd>{{% md %}}Custom JSON that represents an OAuth application's profile.
-{{% /md %}}</dd>
-    <dt class="property-optional"
+{{% /md %}}</dd><dt class="property-optional"
             title="Optional">
         <span id="redirecturis_go">
 <a href="#redirecturis_go" style="color: inherit; text-decoration: inherit;">Redirect<wbr>Uris</a>
@@ -858,8 +793,7 @@ Defaults to minimum requirements per app type. Valid values: `"authorization_cod
         <span class="property-type">[]string</span>
     </dt>
     <dd>{{% md %}}List of URIs for use in the redirect-based flow. This is required for all application types except service.
-{{% /md %}}</dd>
-    <dt class="property-optional"
+{{% /md %}}</dd><dt class="property-optional"
             title="Optional">
         <span id="responsetypes_go">
 <a href="#responsetypes_go" style="color: inherit; text-decoration: inherit;">Response<wbr>Types</a>
@@ -868,8 +802,7 @@ Defaults to minimum requirements per app type. Valid values: `"authorization_cod
         <span class="property-type">[]string</span>
     </dt>
     <dd>{{% md %}}List of OAuth 2.0 response type strings.
-{{% /md %}}</dd>
-    <dt class="property-optional"
+{{% /md %}}</dd><dt class="property-optional"
             title="Optional">
         <span id="status_go">
 <a href="#status_go" style="color: inherit; text-decoration: inherit;">Status</a>
@@ -878,8 +811,7 @@ Defaults to minimum requirements per app type. Valid values: `"authorization_cod
         <span class="property-type">string</span>
     </dt>
     <dd>{{% md %}}The status of the application, by default, it is `"ACTIVE"`.
-{{% /md %}}</dd>
-    <dt class="property-optional"
+{{% /md %}}</dd><dt class="property-optional"
             title="Optional">
         <span id="tokenendpointauthmethod_go">
 <a href="#tokenendpointauthmethod_go" style="color: inherit; text-decoration: inherit;">Token<wbr>Endpoint<wbr>Auth<wbr>Method</a>
@@ -888,8 +820,7 @@ Defaults to minimum requirements per app type. Valid values: `"authorization_cod
         <span class="property-type">string</span>
     </dt>
     <dd>{{% md %}}Requested authentication method for the token endpoint. It can be set to `"none"`, `"client_secret_post"`, `"client_secret_basic"`, `"client_secret_jwt"`, `"private_key_jwt"`.
-{{% /md %}}</dd>
-    <dt class="property-optional"
+{{% /md %}}</dd><dt class="property-optional"
             title="Optional">
         <span id="tosuri_go">
 <a href="#tosuri_go" style="color: inherit; text-decoration: inherit;">Tos<wbr>Uri</a>
@@ -898,8 +829,7 @@ Defaults to minimum requirements per app type. Valid values: `"authorization_cod
         <span class="property-type">string</span>
     </dt>
     <dd>{{% md %}}URI to web page providing client tos (terms of service).
-{{% /md %}}</dd>
-    <dt class="property-optional"
+{{% /md %}}</dd><dt class="property-optional"
             title="Optional">
         <span id="users_go">
 <a href="#users_go" style="color: inherit; text-decoration: inherit;">Users</a>
@@ -908,14 +838,11 @@ Defaults to minimum requirements per app type. Valid values: `"authorization_cod
         <span class="property-type"><a href="#oauthuser">[]OAuth<wbr>User</a></span>
     </dt>
     <dd>{{% md %}}The users assigned to the application. It is recommended not to use this and instead use `okta.app.User`.
-{{% /md %}}</dd>
-</dl>
+{{% /md %}}</dd></dl>
 {{% /choosable %}}
 
 {{% choosable language nodejs %}}
-<dl class="resources-properties">
-
-    <dt class="property-required"
+<dl class="resources-properties"><dt class="property-required"
             title="Required">
         <span id="label_nodejs">
 <a href="#label_nodejs" style="color: inherit; text-decoration: inherit;">label</a>
@@ -924,8 +851,7 @@ Defaults to minimum requirements per app type. Valid values: `"authorization_cod
         <span class="property-type">string</span>
     </dt>
     <dd>{{% md %}}The Application's display name.
-{{% /md %}}</dd>
-    <dt class="property-required"
+{{% /md %}}</dd><dt class="property-required"
             title="Required">
         <span id="type_nodejs">
 <a href="#type_nodejs" style="color: inherit; text-decoration: inherit;">type</a>
@@ -934,8 +860,7 @@ Defaults to minimum requirements per app type. Valid values: `"authorization_cod
         <span class="property-type">string</span>
     </dt>
     <dd>{{% md %}}The type of OAuth application. Valid values: `"web"`, `"native"`, `"browser"`, `"service"`.
-{{% /md %}}</dd>
-    <dt class="property-optional"
+{{% /md %}}</dd><dt class="property-optional"
             title="Optional">
         <span id="autokeyrotation_nodejs">
 <a href="#autokeyrotation_nodejs" style="color: inherit; text-decoration: inherit;">auto<wbr>Key<wbr>Rotation</a>
@@ -944,8 +869,7 @@ Defaults to minimum requirements per app type. Valid values: `"authorization_cod
         <span class="property-type">boolean</span>
     </dt>
     <dd>{{% md %}}Requested key rotation mode.
-{{% /md %}}</dd>
-    <dt class="property-optional"
+{{% /md %}}</dd><dt class="property-optional"
             title="Optional">
         <span id="autosubmittoolbar_nodejs">
 <a href="#autosubmittoolbar_nodejs" style="color: inherit; text-decoration: inherit;">auto<wbr>Submit<wbr>Toolbar</a>
@@ -954,8 +878,7 @@ Defaults to minimum requirements per app type. Valid values: `"authorization_cod
         <span class="property-type">boolean</span>
     </dt>
     <dd>{{% md %}}Display auto submit toolbar.
-{{% /md %}}</dd>
-    <dt class="property-optional"
+{{% /md %}}</dd><dt class="property-optional"
             title="Optional">
         <span id="clientbasicsecret_nodejs">
 <a href="#clientbasicsecret_nodejs" style="color: inherit; text-decoration: inherit;">client<wbr>Basic<wbr>Secret</a>
@@ -964,8 +887,7 @@ Defaults to minimum requirements per app type. Valid values: `"authorization_cod
         <span class="property-type">string</span>
     </dt>
     <dd>{{% md %}}OAuth client secret key, this can be set when token_endpoint_auth_method is client_secret_basic.
-{{% /md %}}</dd>
-    <dt class="property-optional"
+{{% /md %}}</dd><dt class="property-optional"
             title="Optional">
         <span id="clientid_nodejs">
 <a href="#clientid_nodejs" style="color: inherit; text-decoration: inherit;">client<wbr>Id</a>
@@ -974,8 +896,7 @@ Defaults to minimum requirements per app type. Valid values: `"authorization_cod
         <span class="property-type">string</span>
     </dt>
     <dd>{{% md %}}OAuth client ID. If set during creation, app is created with this id.
-{{% /md %}}</dd>
-    <dt class="property-optional"
+{{% /md %}}</dd><dt class="property-optional"
             title="Optional">
         <span id="clienturi_nodejs">
 <a href="#clienturi_nodejs" style="color: inherit; text-decoration: inherit;">client<wbr>Uri</a>
@@ -984,8 +905,7 @@ Defaults to minimum requirements per app type. Valid values: `"authorization_cod
         <span class="property-type">string</span>
     </dt>
     <dd>{{% md %}}URI to a web page providing information about the client.
-{{% /md %}}</dd>
-    <dt class="property-optional"
+{{% /md %}}</dd><dt class="property-optional"
             title="Optional">
         <span id="consentmethod_nodejs">
 <a href="#consentmethod_nodejs" style="color: inherit; text-decoration: inherit;">consent<wbr>Method</a>
@@ -994,8 +914,7 @@ Defaults to minimum requirements per app type. Valid values: `"authorization_cod
         <span class="property-type">string</span>
     </dt>
     <dd>{{% md %}}Indicates whether user consent is required or implicit. Valid values: `"REQUIRED"`, `"TRUSTED"`. Default value is `"TRUSTED"`.
-{{% /md %}}</dd>
-    <dt class="property-optional property-deprecated"
+{{% /md %}}</dd><dt class="property-optional property-deprecated"
             title="Optional, Deprecated">
         <span id="customclientid_nodejs">
 <a href="#customclientid_nodejs" style="color: inherit; text-decoration: inherit;">custom<wbr>Client<wbr>Id</a>
@@ -1005,8 +924,7 @@ Defaults to minimum requirements per app type. Valid values: `"authorization_cod
     </dt>
     <dd>{{% md %}}**Deprecated** This property allows you to set your client_id during creation. NOTE: updating after creation will be a
 no-op, use client_id for that behavior instead.
-{{% /md %}}<p class="property-message">Deprecated: {{% md %}}This field is being replaced by client_id. Please set that field instead.{{% /md %}}</p></dd>
-    <dt class="property-optional"
+{{% /md %}}<p class="property-message">Deprecated: {{% md %}}This field is being replaced by client_id. Please set that field instead.{{% /md %}}</p></dd><dt class="property-optional"
             title="Optional">
         <span id="granttypes_nodejs">
 <a href="#granttypes_nodejs" style="color: inherit; text-decoration: inherit;">grant<wbr>Types</a>
@@ -1016,8 +934,7 @@ no-op, use client_id for that behavior instead.
     </dt>
     <dd>{{% md %}}List of OAuth 2.0 grant types. Conditional validation params found [here](https://developer.okta.com/docs/api/resources/apps#credentials-settings-details). 
 Defaults to minimum requirements per app type. Valid values: `"authorization_code"`, `"implicit"`, `"password"`, `"refresh_token"`, `"client_credentials"`.
-{{% /md %}}</dd>
-    <dt class="property-optional"
+{{% /md %}}</dd><dt class="property-optional"
             title="Optional">
         <span id="groups_nodejs">
 <a href="#groups_nodejs" style="color: inherit; text-decoration: inherit;">groups</a>
@@ -1026,8 +943,7 @@ Defaults to minimum requirements per app type. Valid values: `"authorization_cod
         <span class="property-type">string[]</span>
     </dt>
     <dd>{{% md %}}The groups assigned to the application. It is recommended not to use this and instead use `okta.app.GroupAssignment`.
-{{% /md %}}</dd>
-    <dt class="property-optional"
+{{% /md %}}</dd><dt class="property-optional"
             title="Optional">
         <span id="hideios_nodejs">
 <a href="#hideios_nodejs" style="color: inherit; text-decoration: inherit;">hide<wbr>Ios</a>
@@ -1036,8 +952,7 @@ Defaults to minimum requirements per app type. Valid values: `"authorization_cod
         <span class="property-type">boolean</span>
     </dt>
     <dd>{{% md %}}Do not display application icon on mobile app.
-{{% /md %}}</dd>
-    <dt class="property-optional"
+{{% /md %}}</dd><dt class="property-optional"
             title="Optional">
         <span id="hideweb_nodejs">
 <a href="#hideweb_nodejs" style="color: inherit; text-decoration: inherit;">hide<wbr>Web</a>
@@ -1046,8 +961,7 @@ Defaults to minimum requirements per app type. Valid values: `"authorization_cod
         <span class="property-type">boolean</span>
     </dt>
     <dd>{{% md %}}Do not display application icon to users.
-{{% /md %}}</dd>
-    <dt class="property-optional"
+{{% /md %}}</dd><dt class="property-optional"
             title="Optional">
         <span id="implicitassignment_nodejs">
 <a href="#implicitassignment_nodejs" style="color: inherit; text-decoration: inherit;">implicit<wbr>Assignment</a>
@@ -1056,8 +970,7 @@ Defaults to minimum requirements per app type. Valid values: `"authorization_cod
         <span class="property-type">boolean</span>
     </dt>
     <dd>{{% md %}}*Early Access Property*. Enables Federation Broker Mode. When this mode is enabled, `users` and `groups` arguments are ignored.
-{{% /md %}}</dd>
-    <dt class="property-optional"
+{{% /md %}}</dd><dt class="property-optional"
             title="Optional">
         <span id="issuermode_nodejs">
 <a href="#issuermode_nodejs" style="color: inherit; text-decoration: inherit;">issuer<wbr>Mode</a>
@@ -1066,8 +979,7 @@ Defaults to minimum requirements per app type. Valid values: `"authorization_cod
         <span class="property-type">string</span>
     </dt>
     <dd>{{% md %}}Indicates whether the Okta Authorization Server uses the original Okta org domain URL or a custom domain URL as the issuer of ID token for this client.
-{{% /md %}}</dd>
-    <dt class="property-optional"
+{{% /md %}}</dd><dt class="property-optional"
             title="Optional">
         <span id="jwks_nodejs">
 <a href="#jwks_nodejs" style="color: inherit; text-decoration: inherit;">jwks</a>
@@ -1075,8 +987,7 @@ Defaults to minimum requirements per app type. Valid values: `"authorization_cod
         <span class="property-indicator"></span>
         <span class="property-type"><a href="#oauthjwk">OAuth<wbr>Jwk[]</a></span>
     </dt>
-    <dd>{{% md %}}{{% /md %}}</dd>
-    <dt class="property-optional"
+    <dd>{{% md %}}{{% /md %}}</dd><dt class="property-optional"
             title="Optional">
         <span id="loginmode_nodejs">
 <a href="#loginmode_nodejs" style="color: inherit; text-decoration: inherit;">login<wbr>Mode</a>
@@ -1085,8 +996,7 @@ Defaults to minimum requirements per app type. Valid values: `"authorization_cod
         <span class="property-type">string</span>
     </dt>
     <dd>{{% md %}}The type of Idp-Initiated login that the client supports, if any. Valid values: `"DISABLED"`, `"SPEC"`, `"OKTA"`. Default is `"DISABLED"`.
-{{% /md %}}</dd>
-    <dt class="property-optional"
+{{% /md %}}</dd><dt class="property-optional"
             title="Optional">
         <span id="loginscopes_nodejs">
 <a href="#loginscopes_nodejs" style="color: inherit; text-decoration: inherit;">login<wbr>Scopes</a>
@@ -1095,8 +1005,7 @@ Defaults to minimum requirements per app type. Valid values: `"authorization_cod
         <span class="property-type">string[]</span>
     </dt>
     <dd>{{% md %}}List of scopes to use for the request. Valid values: `"openid"`, `"profile"`, `"email"`, `"address"`, `"phone"`. Required when `login_mode` is NOT `DISABLED`.
-{{% /md %}}</dd>
-    <dt class="property-optional"
+{{% /md %}}</dd><dt class="property-optional"
             title="Optional">
         <span id="loginuri_nodejs">
 <a href="#loginuri_nodejs" style="color: inherit; text-decoration: inherit;">login<wbr>Uri</a>
@@ -1105,8 +1014,7 @@ Defaults to minimum requirements per app type. Valid values: `"authorization_cod
         <span class="property-type">string</span>
     </dt>
     <dd>{{% md %}}URI that initiates login. Required when `login_mode` is NOT `DISABLED`.
-{{% /md %}}</dd>
-    <dt class="property-optional"
+{{% /md %}}</dd><dt class="property-optional"
             title="Optional">
         <span id="logouri_nodejs">
 <a href="#logouri_nodejs" style="color: inherit; text-decoration: inherit;">logo<wbr>Uri</a>
@@ -1115,8 +1023,7 @@ Defaults to minimum requirements per app type. Valid values: `"authorization_cod
         <span class="property-type">string</span>
     </dt>
     <dd>{{% md %}}URI that references a logo for the client.
-{{% /md %}}</dd>
-    <dt class="property-optional"
+{{% /md %}}</dd><dt class="property-optional"
             title="Optional">
         <span id="omitsecret_nodejs">
 <a href="#omitsecret_nodejs" style="color: inherit; text-decoration: inherit;">omit<wbr>Secret</a>
@@ -1125,8 +1032,7 @@ Defaults to minimum requirements per app type. Valid values: `"authorization_cod
         <span class="property-type">boolean</span>
     </dt>
     <dd>{{% md %}}This tells the provider not to persist the application's secret to state. Your app will be recreated if this ever changes from true => false.
-{{% /md %}}</dd>
-    <dt class="property-optional"
+{{% /md %}}</dd><dt class="property-optional"
             title="Optional">
         <span id="policyuri_nodejs">
 <a href="#policyuri_nodejs" style="color: inherit; text-decoration: inherit;">policy<wbr>Uri</a>
@@ -1135,8 +1041,7 @@ Defaults to minimum requirements per app type. Valid values: `"authorization_cod
         <span class="property-type">string</span>
     </dt>
     <dd>{{% md %}}URI to web page providing client policy document.
-{{% /md %}}</dd>
-    <dt class="property-optional"
+{{% /md %}}</dd><dt class="property-optional"
             title="Optional">
         <span id="postlogoutredirecturis_nodejs">
 <a href="#postlogoutredirecturis_nodejs" style="color: inherit; text-decoration: inherit;">post<wbr>Logout<wbr>Redirect<wbr>Uris</a>
@@ -1145,8 +1050,7 @@ Defaults to minimum requirements per app type. Valid values: `"authorization_cod
         <span class="property-type">string[]</span>
     </dt>
     <dd>{{% md %}}List of URIs for redirection after logout.
-{{% /md %}}</dd>
-    <dt class="property-optional"
+{{% /md %}}</dd><dt class="property-optional"
             title="Optional">
         <span id="profile_nodejs">
 <a href="#profile_nodejs" style="color: inherit; text-decoration: inherit;">profile</a>
@@ -1155,8 +1059,7 @@ Defaults to minimum requirements per app type. Valid values: `"authorization_cod
         <span class="property-type">string</span>
     </dt>
     <dd>{{% md %}}Custom JSON that represents an OAuth application's profile.
-{{% /md %}}</dd>
-    <dt class="property-optional"
+{{% /md %}}</dd><dt class="property-optional"
             title="Optional">
         <span id="redirecturis_nodejs">
 <a href="#redirecturis_nodejs" style="color: inherit; text-decoration: inherit;">redirect<wbr>Uris</a>
@@ -1165,8 +1068,7 @@ Defaults to minimum requirements per app type. Valid values: `"authorization_cod
         <span class="property-type">string[]</span>
     </dt>
     <dd>{{% md %}}List of URIs for use in the redirect-based flow. This is required for all application types except service.
-{{% /md %}}</dd>
-    <dt class="property-optional"
+{{% /md %}}</dd><dt class="property-optional"
             title="Optional">
         <span id="responsetypes_nodejs">
 <a href="#responsetypes_nodejs" style="color: inherit; text-decoration: inherit;">response<wbr>Types</a>
@@ -1175,8 +1077,7 @@ Defaults to minimum requirements per app type. Valid values: `"authorization_cod
         <span class="property-type">string[]</span>
     </dt>
     <dd>{{% md %}}List of OAuth 2.0 response type strings.
-{{% /md %}}</dd>
-    <dt class="property-optional"
+{{% /md %}}</dd><dt class="property-optional"
             title="Optional">
         <span id="status_nodejs">
 <a href="#status_nodejs" style="color: inherit; text-decoration: inherit;">status</a>
@@ -1185,8 +1086,7 @@ Defaults to minimum requirements per app type. Valid values: `"authorization_cod
         <span class="property-type">string</span>
     </dt>
     <dd>{{% md %}}The status of the application, by default, it is `"ACTIVE"`.
-{{% /md %}}</dd>
-    <dt class="property-optional"
+{{% /md %}}</dd><dt class="property-optional"
             title="Optional">
         <span id="tokenendpointauthmethod_nodejs">
 <a href="#tokenendpointauthmethod_nodejs" style="color: inherit; text-decoration: inherit;">token<wbr>Endpoint<wbr>Auth<wbr>Method</a>
@@ -1195,8 +1095,7 @@ Defaults to minimum requirements per app type. Valid values: `"authorization_cod
         <span class="property-type">string</span>
     </dt>
     <dd>{{% md %}}Requested authentication method for the token endpoint. It can be set to `"none"`, `"client_secret_post"`, `"client_secret_basic"`, `"client_secret_jwt"`, `"private_key_jwt"`.
-{{% /md %}}</dd>
-    <dt class="property-optional"
+{{% /md %}}</dd><dt class="property-optional"
             title="Optional">
         <span id="tosuri_nodejs">
 <a href="#tosuri_nodejs" style="color: inherit; text-decoration: inherit;">tos<wbr>Uri</a>
@@ -1205,8 +1104,7 @@ Defaults to minimum requirements per app type. Valid values: `"authorization_cod
         <span class="property-type">string</span>
     </dt>
     <dd>{{% md %}}URI to web page providing client tos (terms of service).
-{{% /md %}}</dd>
-    <dt class="property-optional"
+{{% /md %}}</dd><dt class="property-optional"
             title="Optional">
         <span id="users_nodejs">
 <a href="#users_nodejs" style="color: inherit; text-decoration: inherit;">users</a>
@@ -1215,14 +1113,11 @@ Defaults to minimum requirements per app type. Valid values: `"authorization_cod
         <span class="property-type"><a href="#oauthuser">OAuth<wbr>User[]</a></span>
     </dt>
     <dd>{{% md %}}The users assigned to the application. It is recommended not to use this and instead use `okta.app.User`.
-{{% /md %}}</dd>
-</dl>
+{{% /md %}}</dd></dl>
 {{% /choosable %}}
 
 {{% choosable language python %}}
-<dl class="resources-properties">
-
-    <dt class="property-required"
+<dl class="resources-properties"><dt class="property-required"
             title="Required">
         <span id="label_python">
 <a href="#label_python" style="color: inherit; text-decoration: inherit;">label</a>
@@ -1231,8 +1126,7 @@ Defaults to minimum requirements per app type. Valid values: `"authorization_cod
         <span class="property-type">str</span>
     </dt>
     <dd>{{% md %}}The Application's display name.
-{{% /md %}}</dd>
-    <dt class="property-required"
+{{% /md %}}</dd><dt class="property-required"
             title="Required">
         <span id="type_python">
 <a href="#type_python" style="color: inherit; text-decoration: inherit;">type</a>
@@ -1241,8 +1135,7 @@ Defaults to minimum requirements per app type. Valid values: `"authorization_cod
         <span class="property-type">str</span>
     </dt>
     <dd>{{% md %}}The type of OAuth application. Valid values: `"web"`, `"native"`, `"browser"`, `"service"`.
-{{% /md %}}</dd>
-    <dt class="property-optional"
+{{% /md %}}</dd><dt class="property-optional"
             title="Optional">
         <span id="auto_key_rotation_python">
 <a href="#auto_key_rotation_python" style="color: inherit; text-decoration: inherit;">auto_<wbr>key_<wbr>rotation</a>
@@ -1251,8 +1144,7 @@ Defaults to minimum requirements per app type. Valid values: `"authorization_cod
         <span class="property-type">bool</span>
     </dt>
     <dd>{{% md %}}Requested key rotation mode.
-{{% /md %}}</dd>
-    <dt class="property-optional"
+{{% /md %}}</dd><dt class="property-optional"
             title="Optional">
         <span id="auto_submit_toolbar_python">
 <a href="#auto_submit_toolbar_python" style="color: inherit; text-decoration: inherit;">auto_<wbr>submit_<wbr>toolbar</a>
@@ -1261,8 +1153,7 @@ Defaults to minimum requirements per app type. Valid values: `"authorization_cod
         <span class="property-type">bool</span>
     </dt>
     <dd>{{% md %}}Display auto submit toolbar.
-{{% /md %}}</dd>
-    <dt class="property-optional"
+{{% /md %}}</dd><dt class="property-optional"
             title="Optional">
         <span id="client_basic_secret_python">
 <a href="#client_basic_secret_python" style="color: inherit; text-decoration: inherit;">client_<wbr>basic_<wbr>secret</a>
@@ -1271,8 +1162,7 @@ Defaults to minimum requirements per app type. Valid values: `"authorization_cod
         <span class="property-type">str</span>
     </dt>
     <dd>{{% md %}}OAuth client secret key, this can be set when token_endpoint_auth_method is client_secret_basic.
-{{% /md %}}</dd>
-    <dt class="property-optional"
+{{% /md %}}</dd><dt class="property-optional"
             title="Optional">
         <span id="client_id_python">
 <a href="#client_id_python" style="color: inherit; text-decoration: inherit;">client_<wbr>id</a>
@@ -1281,8 +1171,7 @@ Defaults to minimum requirements per app type. Valid values: `"authorization_cod
         <span class="property-type">str</span>
     </dt>
     <dd>{{% md %}}OAuth client ID. If set during creation, app is created with this id.
-{{% /md %}}</dd>
-    <dt class="property-optional"
+{{% /md %}}</dd><dt class="property-optional"
             title="Optional">
         <span id="client_uri_python">
 <a href="#client_uri_python" style="color: inherit; text-decoration: inherit;">client_<wbr>uri</a>
@@ -1291,8 +1180,7 @@ Defaults to minimum requirements per app type. Valid values: `"authorization_cod
         <span class="property-type">str</span>
     </dt>
     <dd>{{% md %}}URI to a web page providing information about the client.
-{{% /md %}}</dd>
-    <dt class="property-optional"
+{{% /md %}}</dd><dt class="property-optional"
             title="Optional">
         <span id="consent_method_python">
 <a href="#consent_method_python" style="color: inherit; text-decoration: inherit;">consent_<wbr>method</a>
@@ -1301,8 +1189,7 @@ Defaults to minimum requirements per app type. Valid values: `"authorization_cod
         <span class="property-type">str</span>
     </dt>
     <dd>{{% md %}}Indicates whether user consent is required or implicit. Valid values: `"REQUIRED"`, `"TRUSTED"`. Default value is `"TRUSTED"`.
-{{% /md %}}</dd>
-    <dt class="property-optional property-deprecated"
+{{% /md %}}</dd><dt class="property-optional property-deprecated"
             title="Optional, Deprecated">
         <span id="custom_client_id_python">
 <a href="#custom_client_id_python" style="color: inherit; text-decoration: inherit;">custom_<wbr>client_<wbr>id</a>
@@ -1312,8 +1199,7 @@ Defaults to minimum requirements per app type. Valid values: `"authorization_cod
     </dt>
     <dd>{{% md %}}**Deprecated** This property allows you to set your client_id during creation. NOTE: updating after creation will be a
 no-op, use client_id for that behavior instead.
-{{% /md %}}<p class="property-message">Deprecated: {{% md %}}This field is being replaced by client_id. Please set that field instead.{{% /md %}}</p></dd>
-    <dt class="property-optional"
+{{% /md %}}<p class="property-message">Deprecated: {{% md %}}This field is being replaced by client_id. Please set that field instead.{{% /md %}}</p></dd><dt class="property-optional"
             title="Optional">
         <span id="grant_types_python">
 <a href="#grant_types_python" style="color: inherit; text-decoration: inherit;">grant_<wbr>types</a>
@@ -1323,8 +1209,7 @@ no-op, use client_id for that behavior instead.
     </dt>
     <dd>{{% md %}}List of OAuth 2.0 grant types. Conditional validation params found [here](https://developer.okta.com/docs/api/resources/apps#credentials-settings-details). 
 Defaults to minimum requirements per app type. Valid values: `"authorization_code"`, `"implicit"`, `"password"`, `"refresh_token"`, `"client_credentials"`.
-{{% /md %}}</dd>
-    <dt class="property-optional"
+{{% /md %}}</dd><dt class="property-optional"
             title="Optional">
         <span id="groups_python">
 <a href="#groups_python" style="color: inherit; text-decoration: inherit;">groups</a>
@@ -1333,8 +1218,7 @@ Defaults to minimum requirements per app type. Valid values: `"authorization_cod
         <span class="property-type">Sequence[str]</span>
     </dt>
     <dd>{{% md %}}The groups assigned to the application. It is recommended not to use this and instead use `okta.app.GroupAssignment`.
-{{% /md %}}</dd>
-    <dt class="property-optional"
+{{% /md %}}</dd><dt class="property-optional"
             title="Optional">
         <span id="hide_ios_python">
 <a href="#hide_ios_python" style="color: inherit; text-decoration: inherit;">hide_<wbr>ios</a>
@@ -1343,8 +1227,7 @@ Defaults to minimum requirements per app type. Valid values: `"authorization_cod
         <span class="property-type">bool</span>
     </dt>
     <dd>{{% md %}}Do not display application icon on mobile app.
-{{% /md %}}</dd>
-    <dt class="property-optional"
+{{% /md %}}</dd><dt class="property-optional"
             title="Optional">
         <span id="hide_web_python">
 <a href="#hide_web_python" style="color: inherit; text-decoration: inherit;">hide_<wbr>web</a>
@@ -1353,8 +1236,7 @@ Defaults to minimum requirements per app type. Valid values: `"authorization_cod
         <span class="property-type">bool</span>
     </dt>
     <dd>{{% md %}}Do not display application icon to users.
-{{% /md %}}</dd>
-    <dt class="property-optional"
+{{% /md %}}</dd><dt class="property-optional"
             title="Optional">
         <span id="implicit_assignment_python">
 <a href="#implicit_assignment_python" style="color: inherit; text-decoration: inherit;">implicit_<wbr>assignment</a>
@@ -1363,8 +1245,7 @@ Defaults to minimum requirements per app type. Valid values: `"authorization_cod
         <span class="property-type">bool</span>
     </dt>
     <dd>{{% md %}}*Early Access Property*. Enables Federation Broker Mode. When this mode is enabled, `users` and `groups` arguments are ignored.
-{{% /md %}}</dd>
-    <dt class="property-optional"
+{{% /md %}}</dd><dt class="property-optional"
             title="Optional">
         <span id="issuer_mode_python">
 <a href="#issuer_mode_python" style="color: inherit; text-decoration: inherit;">issuer_<wbr>mode</a>
@@ -1373,8 +1254,7 @@ Defaults to minimum requirements per app type. Valid values: `"authorization_cod
         <span class="property-type">str</span>
     </dt>
     <dd>{{% md %}}Indicates whether the Okta Authorization Server uses the original Okta org domain URL or a custom domain URL as the issuer of ID token for this client.
-{{% /md %}}</dd>
-    <dt class="property-optional"
+{{% /md %}}</dd><dt class="property-optional"
             title="Optional">
         <span id="jwks_python">
 <a href="#jwks_python" style="color: inherit; text-decoration: inherit;">jwks</a>
@@ -1382,8 +1262,7 @@ Defaults to minimum requirements per app type. Valid values: `"authorization_cod
         <span class="property-indicator"></span>
         <span class="property-type"><a href="#oauthjwk">Sequence[OAuth<wbr>Jwk<wbr>Args]</a></span>
     </dt>
-    <dd>{{% md %}}{{% /md %}}</dd>
-    <dt class="property-optional"
+    <dd>{{% md %}}{{% /md %}}</dd><dt class="property-optional"
             title="Optional">
         <span id="login_mode_python">
 <a href="#login_mode_python" style="color: inherit; text-decoration: inherit;">login_<wbr>mode</a>
@@ -1392,8 +1271,7 @@ Defaults to minimum requirements per app type. Valid values: `"authorization_cod
         <span class="property-type">str</span>
     </dt>
     <dd>{{% md %}}The type of Idp-Initiated login that the client supports, if any. Valid values: `"DISABLED"`, `"SPEC"`, `"OKTA"`. Default is `"DISABLED"`.
-{{% /md %}}</dd>
-    <dt class="property-optional"
+{{% /md %}}</dd><dt class="property-optional"
             title="Optional">
         <span id="login_scopes_python">
 <a href="#login_scopes_python" style="color: inherit; text-decoration: inherit;">login_<wbr>scopes</a>
@@ -1402,8 +1280,7 @@ Defaults to minimum requirements per app type. Valid values: `"authorization_cod
         <span class="property-type">Sequence[str]</span>
     </dt>
     <dd>{{% md %}}List of scopes to use for the request. Valid values: `"openid"`, `"profile"`, `"email"`, `"address"`, `"phone"`. Required when `login_mode` is NOT `DISABLED`.
-{{% /md %}}</dd>
-    <dt class="property-optional"
+{{% /md %}}</dd><dt class="property-optional"
             title="Optional">
         <span id="login_uri_python">
 <a href="#login_uri_python" style="color: inherit; text-decoration: inherit;">login_<wbr>uri</a>
@@ -1412,8 +1289,7 @@ Defaults to minimum requirements per app type. Valid values: `"authorization_cod
         <span class="property-type">str</span>
     </dt>
     <dd>{{% md %}}URI that initiates login. Required when `login_mode` is NOT `DISABLED`.
-{{% /md %}}</dd>
-    <dt class="property-optional"
+{{% /md %}}</dd><dt class="property-optional"
             title="Optional">
         <span id="logo_uri_python">
 <a href="#logo_uri_python" style="color: inherit; text-decoration: inherit;">logo_<wbr>uri</a>
@@ -1422,8 +1298,7 @@ Defaults to minimum requirements per app type. Valid values: `"authorization_cod
         <span class="property-type">str</span>
     </dt>
     <dd>{{% md %}}URI that references a logo for the client.
-{{% /md %}}</dd>
-    <dt class="property-optional"
+{{% /md %}}</dd><dt class="property-optional"
             title="Optional">
         <span id="omit_secret_python">
 <a href="#omit_secret_python" style="color: inherit; text-decoration: inherit;">omit_<wbr>secret</a>
@@ -1432,8 +1307,7 @@ Defaults to minimum requirements per app type. Valid values: `"authorization_cod
         <span class="property-type">bool</span>
     </dt>
     <dd>{{% md %}}This tells the provider not to persist the application's secret to state. Your app will be recreated if this ever changes from true => false.
-{{% /md %}}</dd>
-    <dt class="property-optional"
+{{% /md %}}</dd><dt class="property-optional"
             title="Optional">
         <span id="policy_uri_python">
 <a href="#policy_uri_python" style="color: inherit; text-decoration: inherit;">policy_<wbr>uri</a>
@@ -1442,8 +1316,7 @@ Defaults to minimum requirements per app type. Valid values: `"authorization_cod
         <span class="property-type">str</span>
     </dt>
     <dd>{{% md %}}URI to web page providing client policy document.
-{{% /md %}}</dd>
-    <dt class="property-optional"
+{{% /md %}}</dd><dt class="property-optional"
             title="Optional">
         <span id="post_logout_redirect_uris_python">
 <a href="#post_logout_redirect_uris_python" style="color: inherit; text-decoration: inherit;">post_<wbr>logout_<wbr>redirect_<wbr>uris</a>
@@ -1452,8 +1325,7 @@ Defaults to minimum requirements per app type. Valid values: `"authorization_cod
         <span class="property-type">Sequence[str]</span>
     </dt>
     <dd>{{% md %}}List of URIs for redirection after logout.
-{{% /md %}}</dd>
-    <dt class="property-optional"
+{{% /md %}}</dd><dt class="property-optional"
             title="Optional">
         <span id="profile_python">
 <a href="#profile_python" style="color: inherit; text-decoration: inherit;">profile</a>
@@ -1462,8 +1334,7 @@ Defaults to minimum requirements per app type. Valid values: `"authorization_cod
         <span class="property-type">str</span>
     </dt>
     <dd>{{% md %}}Custom JSON that represents an OAuth application's profile.
-{{% /md %}}</dd>
-    <dt class="property-optional"
+{{% /md %}}</dd><dt class="property-optional"
             title="Optional">
         <span id="redirect_uris_python">
 <a href="#redirect_uris_python" style="color: inherit; text-decoration: inherit;">redirect_<wbr>uris</a>
@@ -1472,8 +1343,7 @@ Defaults to minimum requirements per app type. Valid values: `"authorization_cod
         <span class="property-type">Sequence[str]</span>
     </dt>
     <dd>{{% md %}}List of URIs for use in the redirect-based flow. This is required for all application types except service.
-{{% /md %}}</dd>
-    <dt class="property-optional"
+{{% /md %}}</dd><dt class="property-optional"
             title="Optional">
         <span id="response_types_python">
 <a href="#response_types_python" style="color: inherit; text-decoration: inherit;">response_<wbr>types</a>
@@ -1482,8 +1352,7 @@ Defaults to minimum requirements per app type. Valid values: `"authorization_cod
         <span class="property-type">Sequence[str]</span>
     </dt>
     <dd>{{% md %}}List of OAuth 2.0 response type strings.
-{{% /md %}}</dd>
-    <dt class="property-optional"
+{{% /md %}}</dd><dt class="property-optional"
             title="Optional">
         <span id="status_python">
 <a href="#status_python" style="color: inherit; text-decoration: inherit;">status</a>
@@ -1492,8 +1361,7 @@ Defaults to minimum requirements per app type. Valid values: `"authorization_cod
         <span class="property-type">str</span>
     </dt>
     <dd>{{% md %}}The status of the application, by default, it is `"ACTIVE"`.
-{{% /md %}}</dd>
-    <dt class="property-optional"
+{{% /md %}}</dd><dt class="property-optional"
             title="Optional">
         <span id="token_endpoint_auth_method_python">
 <a href="#token_endpoint_auth_method_python" style="color: inherit; text-decoration: inherit;">token_<wbr>endpoint_<wbr>auth_<wbr>method</a>
@@ -1502,8 +1370,7 @@ Defaults to minimum requirements per app type. Valid values: `"authorization_cod
         <span class="property-type">str</span>
     </dt>
     <dd>{{% md %}}Requested authentication method for the token endpoint. It can be set to `"none"`, `"client_secret_post"`, `"client_secret_basic"`, `"client_secret_jwt"`, `"private_key_jwt"`.
-{{% /md %}}</dd>
-    <dt class="property-optional"
+{{% /md %}}</dd><dt class="property-optional"
             title="Optional">
         <span id="tos_uri_python">
 <a href="#tos_uri_python" style="color: inherit; text-decoration: inherit;">tos_<wbr>uri</a>
@@ -1512,8 +1379,7 @@ Defaults to minimum requirements per app type. Valid values: `"authorization_cod
         <span class="property-type">str</span>
     </dt>
     <dd>{{% md %}}URI to web page providing client tos (terms of service).
-{{% /md %}}</dd>
-    <dt class="property-optional"
+{{% /md %}}</dd><dt class="property-optional"
             title="Optional">
         <span id="users_python">
 <a href="#users_python" style="color: inherit; text-decoration: inherit;">users</a>
@@ -1522,8 +1388,7 @@ Defaults to minimum requirements per app type. Valid values: `"authorization_cod
         <span class="property-type"><a href="#oauthuser">Sequence[OAuth<wbr>User<wbr>Args]</a></span>
     </dt>
     <dd>{{% md %}}The users assigned to the application. It is recommended not to use this and instead use `okta.app.User`.
-{{% /md %}}</dd>
-</dl>
+{{% /md %}}</dd></dl>
 {{% /choosable %}}
 
 
@@ -1534,9 +1399,7 @@ All [input](#inputs) properties are implicitly available as output properties. A
 
 
 {{% choosable language csharp %}}
-<dl class="resources-properties">
-
-    <dt class="property-"
+<dl class="resources-properties"><dt class="property-"
             title="">
         <span id="clientsecret_csharp">
 <a href="#clientsecret_csharp" style="color: inherit; text-decoration: inherit;">Client<wbr>Secret</a>
@@ -1545,8 +1408,7 @@ All [input](#inputs) properties are implicitly available as output properties. A
         <span class="property-type">string</span>
     </dt>
     <dd>{{% md %}}The client secret of the application.
-{{% /md %}}</dd>
-    <dt class="property-"
+{{% /md %}}</dd><dt class="property-"
             title="">
         <span id="id_csharp">
 <a href="#id_csharp" style="color: inherit; text-decoration: inherit;">Id</a>
@@ -1554,8 +1416,7 @@ All [input](#inputs) properties are implicitly available as output properties. A
         <span class="property-indicator"></span>
         <span class="property-type">string</span>
     </dt>
-    <dd>{{% md %}}The provider-assigned unique ID for this managed resource.{{% /md %}}</dd>
-    <dt class="property-"
+    <dd>{{% md %}}The provider-assigned unique ID for this managed resource.{{% /md %}}</dd><dt class="property-"
             title="">
         <span id="name_csharp">
 <a href="#name_csharp" style="color: inherit; text-decoration: inherit;">Name</a>
@@ -1564,8 +1425,7 @@ All [input](#inputs) properties are implicitly available as output properties. A
         <span class="property-type">string</span>
     </dt>
     <dd>{{% md %}}Name assigned to the application by Okta.
-{{% /md %}}</dd>
-    <dt class="property-"
+{{% /md %}}</dd><dt class="property-"
             title="">
         <span id="signonmode_csharp">
 <a href="#signonmode_csharp" style="color: inherit; text-decoration: inherit;">Sign<wbr>On<wbr>Mode</a>
@@ -1574,14 +1434,11 @@ All [input](#inputs) properties are implicitly available as output properties. A
         <span class="property-type">string</span>
     </dt>
     <dd>{{% md %}}Sign-on mode of application.
-{{% /md %}}</dd>
-</dl>
+{{% /md %}}</dd></dl>
 {{% /choosable %}}
 
 {{% choosable language go %}}
-<dl class="resources-properties">
-
-    <dt class="property-"
+<dl class="resources-properties"><dt class="property-"
             title="">
         <span id="clientsecret_go">
 <a href="#clientsecret_go" style="color: inherit; text-decoration: inherit;">Client<wbr>Secret</a>
@@ -1590,8 +1447,7 @@ All [input](#inputs) properties are implicitly available as output properties. A
         <span class="property-type">string</span>
     </dt>
     <dd>{{% md %}}The client secret of the application.
-{{% /md %}}</dd>
-    <dt class="property-"
+{{% /md %}}</dd><dt class="property-"
             title="">
         <span id="id_go">
 <a href="#id_go" style="color: inherit; text-decoration: inherit;">Id</a>
@@ -1599,8 +1455,7 @@ All [input](#inputs) properties are implicitly available as output properties. A
         <span class="property-indicator"></span>
         <span class="property-type">string</span>
     </dt>
-    <dd>{{% md %}}The provider-assigned unique ID for this managed resource.{{% /md %}}</dd>
-    <dt class="property-"
+    <dd>{{% md %}}The provider-assigned unique ID for this managed resource.{{% /md %}}</dd><dt class="property-"
             title="">
         <span id="name_go">
 <a href="#name_go" style="color: inherit; text-decoration: inherit;">Name</a>
@@ -1609,8 +1464,7 @@ All [input](#inputs) properties are implicitly available as output properties. A
         <span class="property-type">string</span>
     </dt>
     <dd>{{% md %}}Name assigned to the application by Okta.
-{{% /md %}}</dd>
-    <dt class="property-"
+{{% /md %}}</dd><dt class="property-"
             title="">
         <span id="signonmode_go">
 <a href="#signonmode_go" style="color: inherit; text-decoration: inherit;">Sign<wbr>On<wbr>Mode</a>
@@ -1619,14 +1473,11 @@ All [input](#inputs) properties are implicitly available as output properties. A
         <span class="property-type">string</span>
     </dt>
     <dd>{{% md %}}Sign-on mode of application.
-{{% /md %}}</dd>
-</dl>
+{{% /md %}}</dd></dl>
 {{% /choosable %}}
 
 {{% choosable language nodejs %}}
-<dl class="resources-properties">
-
-    <dt class="property-"
+<dl class="resources-properties"><dt class="property-"
             title="">
         <span id="clientsecret_nodejs">
 <a href="#clientsecret_nodejs" style="color: inherit; text-decoration: inherit;">client<wbr>Secret</a>
@@ -1635,8 +1486,7 @@ All [input](#inputs) properties are implicitly available as output properties. A
         <span class="property-type">string</span>
     </dt>
     <dd>{{% md %}}The client secret of the application.
-{{% /md %}}</dd>
-    <dt class="property-"
+{{% /md %}}</dd><dt class="property-"
             title="">
         <span id="id_nodejs">
 <a href="#id_nodejs" style="color: inherit; text-decoration: inherit;">id</a>
@@ -1644,8 +1494,7 @@ All [input](#inputs) properties are implicitly available as output properties. A
         <span class="property-indicator"></span>
         <span class="property-type">string</span>
     </dt>
-    <dd>{{% md %}}The provider-assigned unique ID for this managed resource.{{% /md %}}</dd>
-    <dt class="property-"
+    <dd>{{% md %}}The provider-assigned unique ID for this managed resource.{{% /md %}}</dd><dt class="property-"
             title="">
         <span id="name_nodejs">
 <a href="#name_nodejs" style="color: inherit; text-decoration: inherit;">name</a>
@@ -1654,8 +1503,7 @@ All [input](#inputs) properties are implicitly available as output properties. A
         <span class="property-type">string</span>
     </dt>
     <dd>{{% md %}}Name assigned to the application by Okta.
-{{% /md %}}</dd>
-    <dt class="property-"
+{{% /md %}}</dd><dt class="property-"
             title="">
         <span id="signonmode_nodejs">
 <a href="#signonmode_nodejs" style="color: inherit; text-decoration: inherit;">sign<wbr>On<wbr>Mode</a>
@@ -1664,14 +1512,11 @@ All [input](#inputs) properties are implicitly available as output properties. A
         <span class="property-type">string</span>
     </dt>
     <dd>{{% md %}}Sign-on mode of application.
-{{% /md %}}</dd>
-</dl>
+{{% /md %}}</dd></dl>
 {{% /choosable %}}
 
 {{% choosable language python %}}
-<dl class="resources-properties">
-
-    <dt class="property-"
+<dl class="resources-properties"><dt class="property-"
             title="">
         <span id="client_secret_python">
 <a href="#client_secret_python" style="color: inherit; text-decoration: inherit;">client_<wbr>secret</a>
@@ -1680,8 +1525,7 @@ All [input](#inputs) properties are implicitly available as output properties. A
         <span class="property-type">str</span>
     </dt>
     <dd>{{% md %}}The client secret of the application.
-{{% /md %}}</dd>
-    <dt class="property-"
+{{% /md %}}</dd><dt class="property-"
             title="">
         <span id="id_python">
 <a href="#id_python" style="color: inherit; text-decoration: inherit;">id</a>
@@ -1689,8 +1533,7 @@ All [input](#inputs) properties are implicitly available as output properties. A
         <span class="property-indicator"></span>
         <span class="property-type">str</span>
     </dt>
-    <dd>{{% md %}}The provider-assigned unique ID for this managed resource.{{% /md %}}</dd>
-    <dt class="property-"
+    <dd>{{% md %}}The provider-assigned unique ID for this managed resource.{{% /md %}}</dd><dt class="property-"
             title="">
         <span id="name_python">
 <a href="#name_python" style="color: inherit; text-decoration: inherit;">name</a>
@@ -1699,8 +1542,7 @@ All [input](#inputs) properties are implicitly available as output properties. A
         <span class="property-type">str</span>
     </dt>
     <dd>{{% md %}}Name assigned to the application by Okta.
-{{% /md %}}</dd>
-    <dt class="property-"
+{{% /md %}}</dd><dt class="property-"
             title="">
         <span id="sign_on_mode_python">
 <a href="#sign_on_mode_python" style="color: inherit; text-decoration: inherit;">sign_<wbr>on_<wbr>mode</a>
@@ -1709,8 +1551,7 @@ All [input](#inputs) properties are implicitly available as output properties. A
         <span class="property-type">str</span>
     </dt>
     <dd>{{% md %}}Sign-on mode of application.
-{{% /md %}}</dd>
-</dl>
+{{% /md %}}</dd></dl>
 {{% /choosable %}}
 
 
@@ -1837,9 +1678,7 @@ The following state arguments are supported:
 
 
 {{% choosable language csharp %}}
-<dl class="resources-properties">
-
-    <dt class="property-optional"
+<dl class="resources-properties"><dt class="property-optional"
             title="Optional">
         <span id="state_autokeyrotation_csharp">
 <a href="#state_autokeyrotation_csharp" style="color: inherit; text-decoration: inherit;">Auto<wbr>Key<wbr>Rotation</a>
@@ -1848,8 +1687,7 @@ The following state arguments are supported:
         <span class="property-type">bool</span>
     </dt>
     <dd>{{% md %}}Requested key rotation mode.
-{{% /md %}}</dd>
-    <dt class="property-optional"
+{{% /md %}}</dd><dt class="property-optional"
             title="Optional">
         <span id="state_autosubmittoolbar_csharp">
 <a href="#state_autosubmittoolbar_csharp" style="color: inherit; text-decoration: inherit;">Auto<wbr>Submit<wbr>Toolbar</a>
@@ -1858,8 +1696,7 @@ The following state arguments are supported:
         <span class="property-type">bool</span>
     </dt>
     <dd>{{% md %}}Display auto submit toolbar.
-{{% /md %}}</dd>
-    <dt class="property-optional"
+{{% /md %}}</dd><dt class="property-optional"
             title="Optional">
         <span id="state_clientbasicsecret_csharp">
 <a href="#state_clientbasicsecret_csharp" style="color: inherit; text-decoration: inherit;">Client<wbr>Basic<wbr>Secret</a>
@@ -1868,8 +1705,7 @@ The following state arguments are supported:
         <span class="property-type">string</span>
     </dt>
     <dd>{{% md %}}OAuth client secret key, this can be set when token_endpoint_auth_method is client_secret_basic.
-{{% /md %}}</dd>
-    <dt class="property-optional"
+{{% /md %}}</dd><dt class="property-optional"
             title="Optional">
         <span id="state_clientid_csharp">
 <a href="#state_clientid_csharp" style="color: inherit; text-decoration: inherit;">Client<wbr>Id</a>
@@ -1878,8 +1714,7 @@ The following state arguments are supported:
         <span class="property-type">string</span>
     </dt>
     <dd>{{% md %}}OAuth client ID. If set during creation, app is created with this id.
-{{% /md %}}</dd>
-    <dt class="property-optional"
+{{% /md %}}</dd><dt class="property-optional"
             title="Optional">
         <span id="state_clientsecret_csharp">
 <a href="#state_clientsecret_csharp" style="color: inherit; text-decoration: inherit;">Client<wbr>Secret</a>
@@ -1888,8 +1723,7 @@ The following state arguments are supported:
         <span class="property-type">string</span>
     </dt>
     <dd>{{% md %}}The client secret of the application.
-{{% /md %}}</dd>
-    <dt class="property-optional"
+{{% /md %}}</dd><dt class="property-optional"
             title="Optional">
         <span id="state_clienturi_csharp">
 <a href="#state_clienturi_csharp" style="color: inherit; text-decoration: inherit;">Client<wbr>Uri</a>
@@ -1898,8 +1732,7 @@ The following state arguments are supported:
         <span class="property-type">string</span>
     </dt>
     <dd>{{% md %}}URI to a web page providing information about the client.
-{{% /md %}}</dd>
-    <dt class="property-optional"
+{{% /md %}}</dd><dt class="property-optional"
             title="Optional">
         <span id="state_consentmethod_csharp">
 <a href="#state_consentmethod_csharp" style="color: inherit; text-decoration: inherit;">Consent<wbr>Method</a>
@@ -1908,8 +1741,7 @@ The following state arguments are supported:
         <span class="property-type">string</span>
     </dt>
     <dd>{{% md %}}Indicates whether user consent is required or implicit. Valid values: `"REQUIRED"`, `"TRUSTED"`. Default value is `"TRUSTED"`.
-{{% /md %}}</dd>
-    <dt class="property-optional property-deprecated"
+{{% /md %}}</dd><dt class="property-optional property-deprecated"
             title="Optional, Deprecated">
         <span id="state_customclientid_csharp">
 <a href="#state_customclientid_csharp" style="color: inherit; text-decoration: inherit;">Custom<wbr>Client<wbr>Id</a>
@@ -1919,8 +1751,7 @@ The following state arguments are supported:
     </dt>
     <dd>{{% md %}}**Deprecated** This property allows you to set your client_id during creation. NOTE: updating after creation will be a
 no-op, use client_id for that behavior instead.
-{{% /md %}}<p class="property-message">Deprecated: {{% md %}}This field is being replaced by client_id. Please set that field instead.{{% /md %}}</p></dd>
-    <dt class="property-optional"
+{{% /md %}}<p class="property-message">Deprecated: {{% md %}}This field is being replaced by client_id. Please set that field instead.{{% /md %}}</p></dd><dt class="property-optional"
             title="Optional">
         <span id="state_granttypes_csharp">
 <a href="#state_granttypes_csharp" style="color: inherit; text-decoration: inherit;">Grant<wbr>Types</a>
@@ -1930,8 +1761,7 @@ no-op, use client_id for that behavior instead.
     </dt>
     <dd>{{% md %}}List of OAuth 2.0 grant types. Conditional validation params found [here](https://developer.okta.com/docs/api/resources/apps#credentials-settings-details). 
 Defaults to minimum requirements per app type. Valid values: `"authorization_code"`, `"implicit"`, `"password"`, `"refresh_token"`, `"client_credentials"`.
-{{% /md %}}</dd>
-    <dt class="property-optional"
+{{% /md %}}</dd><dt class="property-optional"
             title="Optional">
         <span id="state_groups_csharp">
 <a href="#state_groups_csharp" style="color: inherit; text-decoration: inherit;">Groups</a>
@@ -1940,8 +1770,7 @@ Defaults to minimum requirements per app type. Valid values: `"authorization_cod
         <span class="property-type">List&lt;string&gt;</span>
     </dt>
     <dd>{{% md %}}The groups assigned to the application. It is recommended not to use this and instead use `okta.app.GroupAssignment`.
-{{% /md %}}</dd>
-    <dt class="property-optional"
+{{% /md %}}</dd><dt class="property-optional"
             title="Optional">
         <span id="state_hideios_csharp">
 <a href="#state_hideios_csharp" style="color: inherit; text-decoration: inherit;">Hide<wbr>Ios</a>
@@ -1950,8 +1779,7 @@ Defaults to minimum requirements per app type. Valid values: `"authorization_cod
         <span class="property-type">bool</span>
     </dt>
     <dd>{{% md %}}Do not display application icon on mobile app.
-{{% /md %}}</dd>
-    <dt class="property-optional"
+{{% /md %}}</dd><dt class="property-optional"
             title="Optional">
         <span id="state_hideweb_csharp">
 <a href="#state_hideweb_csharp" style="color: inherit; text-decoration: inherit;">Hide<wbr>Web</a>
@@ -1960,8 +1788,7 @@ Defaults to minimum requirements per app type. Valid values: `"authorization_cod
         <span class="property-type">bool</span>
     </dt>
     <dd>{{% md %}}Do not display application icon to users.
-{{% /md %}}</dd>
-    <dt class="property-optional"
+{{% /md %}}</dd><dt class="property-optional"
             title="Optional">
         <span id="state_implicitassignment_csharp">
 <a href="#state_implicitassignment_csharp" style="color: inherit; text-decoration: inherit;">Implicit<wbr>Assignment</a>
@@ -1970,8 +1797,7 @@ Defaults to minimum requirements per app type. Valid values: `"authorization_cod
         <span class="property-type">bool</span>
     </dt>
     <dd>{{% md %}}*Early Access Property*. Enables Federation Broker Mode. When this mode is enabled, `users` and `groups` arguments are ignored.
-{{% /md %}}</dd>
-    <dt class="property-optional"
+{{% /md %}}</dd><dt class="property-optional"
             title="Optional">
         <span id="state_issuermode_csharp">
 <a href="#state_issuermode_csharp" style="color: inherit; text-decoration: inherit;">Issuer<wbr>Mode</a>
@@ -1980,8 +1806,7 @@ Defaults to minimum requirements per app type. Valid values: `"authorization_cod
         <span class="property-type">string</span>
     </dt>
     <dd>{{% md %}}Indicates whether the Okta Authorization Server uses the original Okta org domain URL or a custom domain URL as the issuer of ID token for this client.
-{{% /md %}}</dd>
-    <dt class="property-optional"
+{{% /md %}}</dd><dt class="property-optional"
             title="Optional">
         <span id="state_jwks_csharp">
 <a href="#state_jwks_csharp" style="color: inherit; text-decoration: inherit;">Jwks</a>
@@ -1989,8 +1814,7 @@ Defaults to minimum requirements per app type. Valid values: `"authorization_cod
         <span class="property-indicator"></span>
         <span class="property-type"><a href="#oauthjwk">List&lt;OAuth<wbr>Jwk<wbr>Args&gt;</a></span>
     </dt>
-    <dd>{{% md %}}{{% /md %}}</dd>
-    <dt class="property-optional"
+    <dd>{{% md %}}{{% /md %}}</dd><dt class="property-optional"
             title="Optional">
         <span id="state_label_csharp">
 <a href="#state_label_csharp" style="color: inherit; text-decoration: inherit;">Label</a>
@@ -1999,8 +1823,7 @@ Defaults to minimum requirements per app type. Valid values: `"authorization_cod
         <span class="property-type">string</span>
     </dt>
     <dd>{{% md %}}The Application's display name.
-{{% /md %}}</dd>
-    <dt class="property-optional"
+{{% /md %}}</dd><dt class="property-optional"
             title="Optional">
         <span id="state_loginmode_csharp">
 <a href="#state_loginmode_csharp" style="color: inherit; text-decoration: inherit;">Login<wbr>Mode</a>
@@ -2009,8 +1832,7 @@ Defaults to minimum requirements per app type. Valid values: `"authorization_cod
         <span class="property-type">string</span>
     </dt>
     <dd>{{% md %}}The type of Idp-Initiated login that the client supports, if any. Valid values: `"DISABLED"`, `"SPEC"`, `"OKTA"`. Default is `"DISABLED"`.
-{{% /md %}}</dd>
-    <dt class="property-optional"
+{{% /md %}}</dd><dt class="property-optional"
             title="Optional">
         <span id="state_loginscopes_csharp">
 <a href="#state_loginscopes_csharp" style="color: inherit; text-decoration: inherit;">Login<wbr>Scopes</a>
@@ -2019,8 +1841,7 @@ Defaults to minimum requirements per app type. Valid values: `"authorization_cod
         <span class="property-type">List&lt;string&gt;</span>
     </dt>
     <dd>{{% md %}}List of scopes to use for the request. Valid values: `"openid"`, `"profile"`, `"email"`, `"address"`, `"phone"`. Required when `login_mode` is NOT `DISABLED`.
-{{% /md %}}</dd>
-    <dt class="property-optional"
+{{% /md %}}</dd><dt class="property-optional"
             title="Optional">
         <span id="state_loginuri_csharp">
 <a href="#state_loginuri_csharp" style="color: inherit; text-decoration: inherit;">Login<wbr>Uri</a>
@@ -2029,8 +1850,7 @@ Defaults to minimum requirements per app type. Valid values: `"authorization_cod
         <span class="property-type">string</span>
     </dt>
     <dd>{{% md %}}URI that initiates login. Required when `login_mode` is NOT `DISABLED`.
-{{% /md %}}</dd>
-    <dt class="property-optional"
+{{% /md %}}</dd><dt class="property-optional"
             title="Optional">
         <span id="state_logouri_csharp">
 <a href="#state_logouri_csharp" style="color: inherit; text-decoration: inherit;">Logo<wbr>Uri</a>
@@ -2039,8 +1859,7 @@ Defaults to minimum requirements per app type. Valid values: `"authorization_cod
         <span class="property-type">string</span>
     </dt>
     <dd>{{% md %}}URI that references a logo for the client.
-{{% /md %}}</dd>
-    <dt class="property-optional"
+{{% /md %}}</dd><dt class="property-optional"
             title="Optional">
         <span id="state_name_csharp">
 <a href="#state_name_csharp" style="color: inherit; text-decoration: inherit;">Name</a>
@@ -2049,8 +1868,7 @@ Defaults to minimum requirements per app type. Valid values: `"authorization_cod
         <span class="property-type">string</span>
     </dt>
     <dd>{{% md %}}Name assigned to the application by Okta.
-{{% /md %}}</dd>
-    <dt class="property-optional"
+{{% /md %}}</dd><dt class="property-optional"
             title="Optional">
         <span id="state_omitsecret_csharp">
 <a href="#state_omitsecret_csharp" style="color: inherit; text-decoration: inherit;">Omit<wbr>Secret</a>
@@ -2059,8 +1877,7 @@ Defaults to minimum requirements per app type. Valid values: `"authorization_cod
         <span class="property-type">bool</span>
     </dt>
     <dd>{{% md %}}This tells the provider not to persist the application's secret to state. Your app will be recreated if this ever changes from true => false.
-{{% /md %}}</dd>
-    <dt class="property-optional"
+{{% /md %}}</dd><dt class="property-optional"
             title="Optional">
         <span id="state_policyuri_csharp">
 <a href="#state_policyuri_csharp" style="color: inherit; text-decoration: inherit;">Policy<wbr>Uri</a>
@@ -2069,8 +1886,7 @@ Defaults to minimum requirements per app type. Valid values: `"authorization_cod
         <span class="property-type">string</span>
     </dt>
     <dd>{{% md %}}URI to web page providing client policy document.
-{{% /md %}}</dd>
-    <dt class="property-optional"
+{{% /md %}}</dd><dt class="property-optional"
             title="Optional">
         <span id="state_postlogoutredirecturis_csharp">
 <a href="#state_postlogoutredirecturis_csharp" style="color: inherit; text-decoration: inherit;">Post<wbr>Logout<wbr>Redirect<wbr>Uris</a>
@@ -2079,8 +1895,7 @@ Defaults to minimum requirements per app type. Valid values: `"authorization_cod
         <span class="property-type">List&lt;string&gt;</span>
     </dt>
     <dd>{{% md %}}List of URIs for redirection after logout.
-{{% /md %}}</dd>
-    <dt class="property-optional"
+{{% /md %}}</dd><dt class="property-optional"
             title="Optional">
         <span id="state_profile_csharp">
 <a href="#state_profile_csharp" style="color: inherit; text-decoration: inherit;">Profile</a>
@@ -2089,8 +1904,7 @@ Defaults to minimum requirements per app type. Valid values: `"authorization_cod
         <span class="property-type">string</span>
     </dt>
     <dd>{{% md %}}Custom JSON that represents an OAuth application's profile.
-{{% /md %}}</dd>
-    <dt class="property-optional"
+{{% /md %}}</dd><dt class="property-optional"
             title="Optional">
         <span id="state_redirecturis_csharp">
 <a href="#state_redirecturis_csharp" style="color: inherit; text-decoration: inherit;">Redirect<wbr>Uris</a>
@@ -2099,8 +1913,7 @@ Defaults to minimum requirements per app type. Valid values: `"authorization_cod
         <span class="property-type">List&lt;string&gt;</span>
     </dt>
     <dd>{{% md %}}List of URIs for use in the redirect-based flow. This is required for all application types except service.
-{{% /md %}}</dd>
-    <dt class="property-optional"
+{{% /md %}}</dd><dt class="property-optional"
             title="Optional">
         <span id="state_responsetypes_csharp">
 <a href="#state_responsetypes_csharp" style="color: inherit; text-decoration: inherit;">Response<wbr>Types</a>
@@ -2109,8 +1922,7 @@ Defaults to minimum requirements per app type. Valid values: `"authorization_cod
         <span class="property-type">List&lt;string&gt;</span>
     </dt>
     <dd>{{% md %}}List of OAuth 2.0 response type strings.
-{{% /md %}}</dd>
-    <dt class="property-optional"
+{{% /md %}}</dd><dt class="property-optional"
             title="Optional">
         <span id="state_signonmode_csharp">
 <a href="#state_signonmode_csharp" style="color: inherit; text-decoration: inherit;">Sign<wbr>On<wbr>Mode</a>
@@ -2119,8 +1931,7 @@ Defaults to minimum requirements per app type. Valid values: `"authorization_cod
         <span class="property-type">string</span>
     </dt>
     <dd>{{% md %}}Sign-on mode of application.
-{{% /md %}}</dd>
-    <dt class="property-optional"
+{{% /md %}}</dd><dt class="property-optional"
             title="Optional">
         <span id="state_status_csharp">
 <a href="#state_status_csharp" style="color: inherit; text-decoration: inherit;">Status</a>
@@ -2129,8 +1940,7 @@ Defaults to minimum requirements per app type. Valid values: `"authorization_cod
         <span class="property-type">string</span>
     </dt>
     <dd>{{% md %}}The status of the application, by default, it is `"ACTIVE"`.
-{{% /md %}}</dd>
-    <dt class="property-optional"
+{{% /md %}}</dd><dt class="property-optional"
             title="Optional">
         <span id="state_tokenendpointauthmethod_csharp">
 <a href="#state_tokenendpointauthmethod_csharp" style="color: inherit; text-decoration: inherit;">Token<wbr>Endpoint<wbr>Auth<wbr>Method</a>
@@ -2139,8 +1949,7 @@ Defaults to minimum requirements per app type. Valid values: `"authorization_cod
         <span class="property-type">string</span>
     </dt>
     <dd>{{% md %}}Requested authentication method for the token endpoint. It can be set to `"none"`, `"client_secret_post"`, `"client_secret_basic"`, `"client_secret_jwt"`, `"private_key_jwt"`.
-{{% /md %}}</dd>
-    <dt class="property-optional"
+{{% /md %}}</dd><dt class="property-optional"
             title="Optional">
         <span id="state_tosuri_csharp">
 <a href="#state_tosuri_csharp" style="color: inherit; text-decoration: inherit;">Tos<wbr>Uri</a>
@@ -2149,8 +1958,7 @@ Defaults to minimum requirements per app type. Valid values: `"authorization_cod
         <span class="property-type">string</span>
     </dt>
     <dd>{{% md %}}URI to web page providing client tos (terms of service).
-{{% /md %}}</dd>
-    <dt class="property-optional"
+{{% /md %}}</dd><dt class="property-optional"
             title="Optional">
         <span id="state_type_csharp">
 <a href="#state_type_csharp" style="color: inherit; text-decoration: inherit;">Type</a>
@@ -2159,8 +1967,7 @@ Defaults to minimum requirements per app type. Valid values: `"authorization_cod
         <span class="property-type">string</span>
     </dt>
     <dd>{{% md %}}The type of OAuth application. Valid values: `"web"`, `"native"`, `"browser"`, `"service"`.
-{{% /md %}}</dd>
-    <dt class="property-optional"
+{{% /md %}}</dd><dt class="property-optional"
             title="Optional">
         <span id="state_users_csharp">
 <a href="#state_users_csharp" style="color: inherit; text-decoration: inherit;">Users</a>
@@ -2169,14 +1976,11 @@ Defaults to minimum requirements per app type. Valid values: `"authorization_cod
         <span class="property-type"><a href="#oauthuser">List&lt;OAuth<wbr>User<wbr>Args&gt;</a></span>
     </dt>
     <dd>{{% md %}}The users assigned to the application. It is recommended not to use this and instead use `okta.app.User`.
-{{% /md %}}</dd>
-</dl>
+{{% /md %}}</dd></dl>
 {{% /choosable %}}
 
 {{% choosable language go %}}
-<dl class="resources-properties">
-
-    <dt class="property-optional"
+<dl class="resources-properties"><dt class="property-optional"
             title="Optional">
         <span id="state_autokeyrotation_go">
 <a href="#state_autokeyrotation_go" style="color: inherit; text-decoration: inherit;">Auto<wbr>Key<wbr>Rotation</a>
@@ -2185,8 +1989,7 @@ Defaults to minimum requirements per app type. Valid values: `"authorization_cod
         <span class="property-type">bool</span>
     </dt>
     <dd>{{% md %}}Requested key rotation mode.
-{{% /md %}}</dd>
-    <dt class="property-optional"
+{{% /md %}}</dd><dt class="property-optional"
             title="Optional">
         <span id="state_autosubmittoolbar_go">
 <a href="#state_autosubmittoolbar_go" style="color: inherit; text-decoration: inherit;">Auto<wbr>Submit<wbr>Toolbar</a>
@@ -2195,8 +1998,7 @@ Defaults to minimum requirements per app type. Valid values: `"authorization_cod
         <span class="property-type">bool</span>
     </dt>
     <dd>{{% md %}}Display auto submit toolbar.
-{{% /md %}}</dd>
-    <dt class="property-optional"
+{{% /md %}}</dd><dt class="property-optional"
             title="Optional">
         <span id="state_clientbasicsecret_go">
 <a href="#state_clientbasicsecret_go" style="color: inherit; text-decoration: inherit;">Client<wbr>Basic<wbr>Secret</a>
@@ -2205,8 +2007,7 @@ Defaults to minimum requirements per app type. Valid values: `"authorization_cod
         <span class="property-type">string</span>
     </dt>
     <dd>{{% md %}}OAuth client secret key, this can be set when token_endpoint_auth_method is client_secret_basic.
-{{% /md %}}</dd>
-    <dt class="property-optional"
+{{% /md %}}</dd><dt class="property-optional"
             title="Optional">
         <span id="state_clientid_go">
 <a href="#state_clientid_go" style="color: inherit; text-decoration: inherit;">Client<wbr>Id</a>
@@ -2215,8 +2016,7 @@ Defaults to minimum requirements per app type. Valid values: `"authorization_cod
         <span class="property-type">string</span>
     </dt>
     <dd>{{% md %}}OAuth client ID. If set during creation, app is created with this id.
-{{% /md %}}</dd>
-    <dt class="property-optional"
+{{% /md %}}</dd><dt class="property-optional"
             title="Optional">
         <span id="state_clientsecret_go">
 <a href="#state_clientsecret_go" style="color: inherit; text-decoration: inherit;">Client<wbr>Secret</a>
@@ -2225,8 +2025,7 @@ Defaults to minimum requirements per app type. Valid values: `"authorization_cod
         <span class="property-type">string</span>
     </dt>
     <dd>{{% md %}}The client secret of the application.
-{{% /md %}}</dd>
-    <dt class="property-optional"
+{{% /md %}}</dd><dt class="property-optional"
             title="Optional">
         <span id="state_clienturi_go">
 <a href="#state_clienturi_go" style="color: inherit; text-decoration: inherit;">Client<wbr>Uri</a>
@@ -2235,8 +2034,7 @@ Defaults to minimum requirements per app type. Valid values: `"authorization_cod
         <span class="property-type">string</span>
     </dt>
     <dd>{{% md %}}URI to a web page providing information about the client.
-{{% /md %}}</dd>
-    <dt class="property-optional"
+{{% /md %}}</dd><dt class="property-optional"
             title="Optional">
         <span id="state_consentmethod_go">
 <a href="#state_consentmethod_go" style="color: inherit; text-decoration: inherit;">Consent<wbr>Method</a>
@@ -2245,8 +2043,7 @@ Defaults to minimum requirements per app type. Valid values: `"authorization_cod
         <span class="property-type">string</span>
     </dt>
     <dd>{{% md %}}Indicates whether user consent is required or implicit. Valid values: `"REQUIRED"`, `"TRUSTED"`. Default value is `"TRUSTED"`.
-{{% /md %}}</dd>
-    <dt class="property-optional property-deprecated"
+{{% /md %}}</dd><dt class="property-optional property-deprecated"
             title="Optional, Deprecated">
         <span id="state_customclientid_go">
 <a href="#state_customclientid_go" style="color: inherit; text-decoration: inherit;">Custom<wbr>Client<wbr>Id</a>
@@ -2256,8 +2053,7 @@ Defaults to minimum requirements per app type. Valid values: `"authorization_cod
     </dt>
     <dd>{{% md %}}**Deprecated** This property allows you to set your client_id during creation. NOTE: updating after creation will be a
 no-op, use client_id for that behavior instead.
-{{% /md %}}<p class="property-message">Deprecated: {{% md %}}This field is being replaced by client_id. Please set that field instead.{{% /md %}}</p></dd>
-    <dt class="property-optional"
+{{% /md %}}<p class="property-message">Deprecated: {{% md %}}This field is being replaced by client_id. Please set that field instead.{{% /md %}}</p></dd><dt class="property-optional"
             title="Optional">
         <span id="state_granttypes_go">
 <a href="#state_granttypes_go" style="color: inherit; text-decoration: inherit;">Grant<wbr>Types</a>
@@ -2267,8 +2063,7 @@ no-op, use client_id for that behavior instead.
     </dt>
     <dd>{{% md %}}List of OAuth 2.0 grant types. Conditional validation params found [here](https://developer.okta.com/docs/api/resources/apps#credentials-settings-details). 
 Defaults to minimum requirements per app type. Valid values: `"authorization_code"`, `"implicit"`, `"password"`, `"refresh_token"`, `"client_credentials"`.
-{{% /md %}}</dd>
-    <dt class="property-optional"
+{{% /md %}}</dd><dt class="property-optional"
             title="Optional">
         <span id="state_groups_go">
 <a href="#state_groups_go" style="color: inherit; text-decoration: inherit;">Groups</a>
@@ -2277,8 +2072,7 @@ Defaults to minimum requirements per app type. Valid values: `"authorization_cod
         <span class="property-type">[]string</span>
     </dt>
     <dd>{{% md %}}The groups assigned to the application. It is recommended not to use this and instead use `okta.app.GroupAssignment`.
-{{% /md %}}</dd>
-    <dt class="property-optional"
+{{% /md %}}</dd><dt class="property-optional"
             title="Optional">
         <span id="state_hideios_go">
 <a href="#state_hideios_go" style="color: inherit; text-decoration: inherit;">Hide<wbr>Ios</a>
@@ -2287,8 +2081,7 @@ Defaults to minimum requirements per app type. Valid values: `"authorization_cod
         <span class="property-type">bool</span>
     </dt>
     <dd>{{% md %}}Do not display application icon on mobile app.
-{{% /md %}}</dd>
-    <dt class="property-optional"
+{{% /md %}}</dd><dt class="property-optional"
             title="Optional">
         <span id="state_hideweb_go">
 <a href="#state_hideweb_go" style="color: inherit; text-decoration: inherit;">Hide<wbr>Web</a>
@@ -2297,8 +2090,7 @@ Defaults to minimum requirements per app type. Valid values: `"authorization_cod
         <span class="property-type">bool</span>
     </dt>
     <dd>{{% md %}}Do not display application icon to users.
-{{% /md %}}</dd>
-    <dt class="property-optional"
+{{% /md %}}</dd><dt class="property-optional"
             title="Optional">
         <span id="state_implicitassignment_go">
 <a href="#state_implicitassignment_go" style="color: inherit; text-decoration: inherit;">Implicit<wbr>Assignment</a>
@@ -2307,8 +2099,7 @@ Defaults to minimum requirements per app type. Valid values: `"authorization_cod
         <span class="property-type">bool</span>
     </dt>
     <dd>{{% md %}}*Early Access Property*. Enables Federation Broker Mode. When this mode is enabled, `users` and `groups` arguments are ignored.
-{{% /md %}}</dd>
-    <dt class="property-optional"
+{{% /md %}}</dd><dt class="property-optional"
             title="Optional">
         <span id="state_issuermode_go">
 <a href="#state_issuermode_go" style="color: inherit; text-decoration: inherit;">Issuer<wbr>Mode</a>
@@ -2317,8 +2108,7 @@ Defaults to minimum requirements per app type. Valid values: `"authorization_cod
         <span class="property-type">string</span>
     </dt>
     <dd>{{% md %}}Indicates whether the Okta Authorization Server uses the original Okta org domain URL or a custom domain URL as the issuer of ID token for this client.
-{{% /md %}}</dd>
-    <dt class="property-optional"
+{{% /md %}}</dd><dt class="property-optional"
             title="Optional">
         <span id="state_jwks_go">
 <a href="#state_jwks_go" style="color: inherit; text-decoration: inherit;">Jwks</a>
@@ -2326,8 +2116,7 @@ Defaults to minimum requirements per app type. Valid values: `"authorization_cod
         <span class="property-indicator"></span>
         <span class="property-type"><a href="#oauthjwk">[]OAuth<wbr>Jwk</a></span>
     </dt>
-    <dd>{{% md %}}{{% /md %}}</dd>
-    <dt class="property-optional"
+    <dd>{{% md %}}{{% /md %}}</dd><dt class="property-optional"
             title="Optional">
         <span id="state_label_go">
 <a href="#state_label_go" style="color: inherit; text-decoration: inherit;">Label</a>
@@ -2336,8 +2125,7 @@ Defaults to minimum requirements per app type. Valid values: `"authorization_cod
         <span class="property-type">string</span>
     </dt>
     <dd>{{% md %}}The Application's display name.
-{{% /md %}}</dd>
-    <dt class="property-optional"
+{{% /md %}}</dd><dt class="property-optional"
             title="Optional">
         <span id="state_loginmode_go">
 <a href="#state_loginmode_go" style="color: inherit; text-decoration: inherit;">Login<wbr>Mode</a>
@@ -2346,8 +2134,7 @@ Defaults to minimum requirements per app type. Valid values: `"authorization_cod
         <span class="property-type">string</span>
     </dt>
     <dd>{{% md %}}The type of Idp-Initiated login that the client supports, if any. Valid values: `"DISABLED"`, `"SPEC"`, `"OKTA"`. Default is `"DISABLED"`.
-{{% /md %}}</dd>
-    <dt class="property-optional"
+{{% /md %}}</dd><dt class="property-optional"
             title="Optional">
         <span id="state_loginscopes_go">
 <a href="#state_loginscopes_go" style="color: inherit; text-decoration: inherit;">Login<wbr>Scopes</a>
@@ -2356,8 +2143,7 @@ Defaults to minimum requirements per app type. Valid values: `"authorization_cod
         <span class="property-type">[]string</span>
     </dt>
     <dd>{{% md %}}List of scopes to use for the request. Valid values: `"openid"`, `"profile"`, `"email"`, `"address"`, `"phone"`. Required when `login_mode` is NOT `DISABLED`.
-{{% /md %}}</dd>
-    <dt class="property-optional"
+{{% /md %}}</dd><dt class="property-optional"
             title="Optional">
         <span id="state_loginuri_go">
 <a href="#state_loginuri_go" style="color: inherit; text-decoration: inherit;">Login<wbr>Uri</a>
@@ -2366,8 +2152,7 @@ Defaults to minimum requirements per app type. Valid values: `"authorization_cod
         <span class="property-type">string</span>
     </dt>
     <dd>{{% md %}}URI that initiates login. Required when `login_mode` is NOT `DISABLED`.
-{{% /md %}}</dd>
-    <dt class="property-optional"
+{{% /md %}}</dd><dt class="property-optional"
             title="Optional">
         <span id="state_logouri_go">
 <a href="#state_logouri_go" style="color: inherit; text-decoration: inherit;">Logo<wbr>Uri</a>
@@ -2376,8 +2161,7 @@ Defaults to minimum requirements per app type. Valid values: `"authorization_cod
         <span class="property-type">string</span>
     </dt>
     <dd>{{% md %}}URI that references a logo for the client.
-{{% /md %}}</dd>
-    <dt class="property-optional"
+{{% /md %}}</dd><dt class="property-optional"
             title="Optional">
         <span id="state_name_go">
 <a href="#state_name_go" style="color: inherit; text-decoration: inherit;">Name</a>
@@ -2386,8 +2170,7 @@ Defaults to minimum requirements per app type. Valid values: `"authorization_cod
         <span class="property-type">string</span>
     </dt>
     <dd>{{% md %}}Name assigned to the application by Okta.
-{{% /md %}}</dd>
-    <dt class="property-optional"
+{{% /md %}}</dd><dt class="property-optional"
             title="Optional">
         <span id="state_omitsecret_go">
 <a href="#state_omitsecret_go" style="color: inherit; text-decoration: inherit;">Omit<wbr>Secret</a>
@@ -2396,8 +2179,7 @@ Defaults to minimum requirements per app type. Valid values: `"authorization_cod
         <span class="property-type">bool</span>
     </dt>
     <dd>{{% md %}}This tells the provider not to persist the application's secret to state. Your app will be recreated if this ever changes from true => false.
-{{% /md %}}</dd>
-    <dt class="property-optional"
+{{% /md %}}</dd><dt class="property-optional"
             title="Optional">
         <span id="state_policyuri_go">
 <a href="#state_policyuri_go" style="color: inherit; text-decoration: inherit;">Policy<wbr>Uri</a>
@@ -2406,8 +2188,7 @@ Defaults to minimum requirements per app type. Valid values: `"authorization_cod
         <span class="property-type">string</span>
     </dt>
     <dd>{{% md %}}URI to web page providing client policy document.
-{{% /md %}}</dd>
-    <dt class="property-optional"
+{{% /md %}}</dd><dt class="property-optional"
             title="Optional">
         <span id="state_postlogoutredirecturis_go">
 <a href="#state_postlogoutredirecturis_go" style="color: inherit; text-decoration: inherit;">Post<wbr>Logout<wbr>Redirect<wbr>Uris</a>
@@ -2416,8 +2197,7 @@ Defaults to minimum requirements per app type. Valid values: `"authorization_cod
         <span class="property-type">[]string</span>
     </dt>
     <dd>{{% md %}}List of URIs for redirection after logout.
-{{% /md %}}</dd>
-    <dt class="property-optional"
+{{% /md %}}</dd><dt class="property-optional"
             title="Optional">
         <span id="state_profile_go">
 <a href="#state_profile_go" style="color: inherit; text-decoration: inherit;">Profile</a>
@@ -2426,8 +2206,7 @@ Defaults to minimum requirements per app type. Valid values: `"authorization_cod
         <span class="property-type">string</span>
     </dt>
     <dd>{{% md %}}Custom JSON that represents an OAuth application's profile.
-{{% /md %}}</dd>
-    <dt class="property-optional"
+{{% /md %}}</dd><dt class="property-optional"
             title="Optional">
         <span id="state_redirecturis_go">
 <a href="#state_redirecturis_go" style="color: inherit; text-decoration: inherit;">Redirect<wbr>Uris</a>
@@ -2436,8 +2215,7 @@ Defaults to minimum requirements per app type. Valid values: `"authorization_cod
         <span class="property-type">[]string</span>
     </dt>
     <dd>{{% md %}}List of URIs for use in the redirect-based flow. This is required for all application types except service.
-{{% /md %}}</dd>
-    <dt class="property-optional"
+{{% /md %}}</dd><dt class="property-optional"
             title="Optional">
         <span id="state_responsetypes_go">
 <a href="#state_responsetypes_go" style="color: inherit; text-decoration: inherit;">Response<wbr>Types</a>
@@ -2446,8 +2224,7 @@ Defaults to minimum requirements per app type. Valid values: `"authorization_cod
         <span class="property-type">[]string</span>
     </dt>
     <dd>{{% md %}}List of OAuth 2.0 response type strings.
-{{% /md %}}</dd>
-    <dt class="property-optional"
+{{% /md %}}</dd><dt class="property-optional"
             title="Optional">
         <span id="state_signonmode_go">
 <a href="#state_signonmode_go" style="color: inherit; text-decoration: inherit;">Sign<wbr>On<wbr>Mode</a>
@@ -2456,8 +2233,7 @@ Defaults to minimum requirements per app type. Valid values: `"authorization_cod
         <span class="property-type">string</span>
     </dt>
     <dd>{{% md %}}Sign-on mode of application.
-{{% /md %}}</dd>
-    <dt class="property-optional"
+{{% /md %}}</dd><dt class="property-optional"
             title="Optional">
         <span id="state_status_go">
 <a href="#state_status_go" style="color: inherit; text-decoration: inherit;">Status</a>
@@ -2466,8 +2242,7 @@ Defaults to minimum requirements per app type. Valid values: `"authorization_cod
         <span class="property-type">string</span>
     </dt>
     <dd>{{% md %}}The status of the application, by default, it is `"ACTIVE"`.
-{{% /md %}}</dd>
-    <dt class="property-optional"
+{{% /md %}}</dd><dt class="property-optional"
             title="Optional">
         <span id="state_tokenendpointauthmethod_go">
 <a href="#state_tokenendpointauthmethod_go" style="color: inherit; text-decoration: inherit;">Token<wbr>Endpoint<wbr>Auth<wbr>Method</a>
@@ -2476,8 +2251,7 @@ Defaults to minimum requirements per app type. Valid values: `"authorization_cod
         <span class="property-type">string</span>
     </dt>
     <dd>{{% md %}}Requested authentication method for the token endpoint. It can be set to `"none"`, `"client_secret_post"`, `"client_secret_basic"`, `"client_secret_jwt"`, `"private_key_jwt"`.
-{{% /md %}}</dd>
-    <dt class="property-optional"
+{{% /md %}}</dd><dt class="property-optional"
             title="Optional">
         <span id="state_tosuri_go">
 <a href="#state_tosuri_go" style="color: inherit; text-decoration: inherit;">Tos<wbr>Uri</a>
@@ -2486,8 +2260,7 @@ Defaults to minimum requirements per app type. Valid values: `"authorization_cod
         <span class="property-type">string</span>
     </dt>
     <dd>{{% md %}}URI to web page providing client tos (terms of service).
-{{% /md %}}</dd>
-    <dt class="property-optional"
+{{% /md %}}</dd><dt class="property-optional"
             title="Optional">
         <span id="state_type_go">
 <a href="#state_type_go" style="color: inherit; text-decoration: inherit;">Type</a>
@@ -2496,8 +2269,7 @@ Defaults to minimum requirements per app type. Valid values: `"authorization_cod
         <span class="property-type">string</span>
     </dt>
     <dd>{{% md %}}The type of OAuth application. Valid values: `"web"`, `"native"`, `"browser"`, `"service"`.
-{{% /md %}}</dd>
-    <dt class="property-optional"
+{{% /md %}}</dd><dt class="property-optional"
             title="Optional">
         <span id="state_users_go">
 <a href="#state_users_go" style="color: inherit; text-decoration: inherit;">Users</a>
@@ -2506,14 +2278,11 @@ Defaults to minimum requirements per app type. Valid values: `"authorization_cod
         <span class="property-type"><a href="#oauthuser">[]OAuth<wbr>User</a></span>
     </dt>
     <dd>{{% md %}}The users assigned to the application. It is recommended not to use this and instead use `okta.app.User`.
-{{% /md %}}</dd>
-</dl>
+{{% /md %}}</dd></dl>
 {{% /choosable %}}
 
 {{% choosable language nodejs %}}
-<dl class="resources-properties">
-
-    <dt class="property-optional"
+<dl class="resources-properties"><dt class="property-optional"
             title="Optional">
         <span id="state_autokeyrotation_nodejs">
 <a href="#state_autokeyrotation_nodejs" style="color: inherit; text-decoration: inherit;">auto<wbr>Key<wbr>Rotation</a>
@@ -2522,8 +2291,7 @@ Defaults to minimum requirements per app type. Valid values: `"authorization_cod
         <span class="property-type">boolean</span>
     </dt>
     <dd>{{% md %}}Requested key rotation mode.
-{{% /md %}}</dd>
-    <dt class="property-optional"
+{{% /md %}}</dd><dt class="property-optional"
             title="Optional">
         <span id="state_autosubmittoolbar_nodejs">
 <a href="#state_autosubmittoolbar_nodejs" style="color: inherit; text-decoration: inherit;">auto<wbr>Submit<wbr>Toolbar</a>
@@ -2532,8 +2300,7 @@ Defaults to minimum requirements per app type. Valid values: `"authorization_cod
         <span class="property-type">boolean</span>
     </dt>
     <dd>{{% md %}}Display auto submit toolbar.
-{{% /md %}}</dd>
-    <dt class="property-optional"
+{{% /md %}}</dd><dt class="property-optional"
             title="Optional">
         <span id="state_clientbasicsecret_nodejs">
 <a href="#state_clientbasicsecret_nodejs" style="color: inherit; text-decoration: inherit;">client<wbr>Basic<wbr>Secret</a>
@@ -2542,8 +2309,7 @@ Defaults to minimum requirements per app type. Valid values: `"authorization_cod
         <span class="property-type">string</span>
     </dt>
     <dd>{{% md %}}OAuth client secret key, this can be set when token_endpoint_auth_method is client_secret_basic.
-{{% /md %}}</dd>
-    <dt class="property-optional"
+{{% /md %}}</dd><dt class="property-optional"
             title="Optional">
         <span id="state_clientid_nodejs">
 <a href="#state_clientid_nodejs" style="color: inherit; text-decoration: inherit;">client<wbr>Id</a>
@@ -2552,8 +2318,7 @@ Defaults to minimum requirements per app type. Valid values: `"authorization_cod
         <span class="property-type">string</span>
     </dt>
     <dd>{{% md %}}OAuth client ID. If set during creation, app is created with this id.
-{{% /md %}}</dd>
-    <dt class="property-optional"
+{{% /md %}}</dd><dt class="property-optional"
             title="Optional">
         <span id="state_clientsecret_nodejs">
 <a href="#state_clientsecret_nodejs" style="color: inherit; text-decoration: inherit;">client<wbr>Secret</a>
@@ -2562,8 +2327,7 @@ Defaults to minimum requirements per app type. Valid values: `"authorization_cod
         <span class="property-type">string</span>
     </dt>
     <dd>{{% md %}}The client secret of the application.
-{{% /md %}}</dd>
-    <dt class="property-optional"
+{{% /md %}}</dd><dt class="property-optional"
             title="Optional">
         <span id="state_clienturi_nodejs">
 <a href="#state_clienturi_nodejs" style="color: inherit; text-decoration: inherit;">client<wbr>Uri</a>
@@ -2572,8 +2336,7 @@ Defaults to minimum requirements per app type. Valid values: `"authorization_cod
         <span class="property-type">string</span>
     </dt>
     <dd>{{% md %}}URI to a web page providing information about the client.
-{{% /md %}}</dd>
-    <dt class="property-optional"
+{{% /md %}}</dd><dt class="property-optional"
             title="Optional">
         <span id="state_consentmethod_nodejs">
 <a href="#state_consentmethod_nodejs" style="color: inherit; text-decoration: inherit;">consent<wbr>Method</a>
@@ -2582,8 +2345,7 @@ Defaults to minimum requirements per app type. Valid values: `"authorization_cod
         <span class="property-type">string</span>
     </dt>
     <dd>{{% md %}}Indicates whether user consent is required or implicit. Valid values: `"REQUIRED"`, `"TRUSTED"`. Default value is `"TRUSTED"`.
-{{% /md %}}</dd>
-    <dt class="property-optional property-deprecated"
+{{% /md %}}</dd><dt class="property-optional property-deprecated"
             title="Optional, Deprecated">
         <span id="state_customclientid_nodejs">
 <a href="#state_customclientid_nodejs" style="color: inherit; text-decoration: inherit;">custom<wbr>Client<wbr>Id</a>
@@ -2593,8 +2355,7 @@ Defaults to minimum requirements per app type. Valid values: `"authorization_cod
     </dt>
     <dd>{{% md %}}**Deprecated** This property allows you to set your client_id during creation. NOTE: updating after creation will be a
 no-op, use client_id for that behavior instead.
-{{% /md %}}<p class="property-message">Deprecated: {{% md %}}This field is being replaced by client_id. Please set that field instead.{{% /md %}}</p></dd>
-    <dt class="property-optional"
+{{% /md %}}<p class="property-message">Deprecated: {{% md %}}This field is being replaced by client_id. Please set that field instead.{{% /md %}}</p></dd><dt class="property-optional"
             title="Optional">
         <span id="state_granttypes_nodejs">
 <a href="#state_granttypes_nodejs" style="color: inherit; text-decoration: inherit;">grant<wbr>Types</a>
@@ -2604,8 +2365,7 @@ no-op, use client_id for that behavior instead.
     </dt>
     <dd>{{% md %}}List of OAuth 2.0 grant types. Conditional validation params found [here](https://developer.okta.com/docs/api/resources/apps#credentials-settings-details). 
 Defaults to minimum requirements per app type. Valid values: `"authorization_code"`, `"implicit"`, `"password"`, `"refresh_token"`, `"client_credentials"`.
-{{% /md %}}</dd>
-    <dt class="property-optional"
+{{% /md %}}</dd><dt class="property-optional"
             title="Optional">
         <span id="state_groups_nodejs">
 <a href="#state_groups_nodejs" style="color: inherit; text-decoration: inherit;">groups</a>
@@ -2614,8 +2374,7 @@ Defaults to minimum requirements per app type. Valid values: `"authorization_cod
         <span class="property-type">string[]</span>
     </dt>
     <dd>{{% md %}}The groups assigned to the application. It is recommended not to use this and instead use `okta.app.GroupAssignment`.
-{{% /md %}}</dd>
-    <dt class="property-optional"
+{{% /md %}}</dd><dt class="property-optional"
             title="Optional">
         <span id="state_hideios_nodejs">
 <a href="#state_hideios_nodejs" style="color: inherit; text-decoration: inherit;">hide<wbr>Ios</a>
@@ -2624,8 +2383,7 @@ Defaults to minimum requirements per app type. Valid values: `"authorization_cod
         <span class="property-type">boolean</span>
     </dt>
     <dd>{{% md %}}Do not display application icon on mobile app.
-{{% /md %}}</dd>
-    <dt class="property-optional"
+{{% /md %}}</dd><dt class="property-optional"
             title="Optional">
         <span id="state_hideweb_nodejs">
 <a href="#state_hideweb_nodejs" style="color: inherit; text-decoration: inherit;">hide<wbr>Web</a>
@@ -2634,8 +2392,7 @@ Defaults to minimum requirements per app type. Valid values: `"authorization_cod
         <span class="property-type">boolean</span>
     </dt>
     <dd>{{% md %}}Do not display application icon to users.
-{{% /md %}}</dd>
-    <dt class="property-optional"
+{{% /md %}}</dd><dt class="property-optional"
             title="Optional">
         <span id="state_implicitassignment_nodejs">
 <a href="#state_implicitassignment_nodejs" style="color: inherit; text-decoration: inherit;">implicit<wbr>Assignment</a>
@@ -2644,8 +2401,7 @@ Defaults to minimum requirements per app type. Valid values: `"authorization_cod
         <span class="property-type">boolean</span>
     </dt>
     <dd>{{% md %}}*Early Access Property*. Enables Federation Broker Mode. When this mode is enabled, `users` and `groups` arguments are ignored.
-{{% /md %}}</dd>
-    <dt class="property-optional"
+{{% /md %}}</dd><dt class="property-optional"
             title="Optional">
         <span id="state_issuermode_nodejs">
 <a href="#state_issuermode_nodejs" style="color: inherit; text-decoration: inherit;">issuer<wbr>Mode</a>
@@ -2654,8 +2410,7 @@ Defaults to minimum requirements per app type. Valid values: `"authorization_cod
         <span class="property-type">string</span>
     </dt>
     <dd>{{% md %}}Indicates whether the Okta Authorization Server uses the original Okta org domain URL or a custom domain URL as the issuer of ID token for this client.
-{{% /md %}}</dd>
-    <dt class="property-optional"
+{{% /md %}}</dd><dt class="property-optional"
             title="Optional">
         <span id="state_jwks_nodejs">
 <a href="#state_jwks_nodejs" style="color: inherit; text-decoration: inherit;">jwks</a>
@@ -2663,8 +2418,7 @@ Defaults to minimum requirements per app type. Valid values: `"authorization_cod
         <span class="property-indicator"></span>
         <span class="property-type"><a href="#oauthjwk">OAuth<wbr>Jwk[]</a></span>
     </dt>
-    <dd>{{% md %}}{{% /md %}}</dd>
-    <dt class="property-optional"
+    <dd>{{% md %}}{{% /md %}}</dd><dt class="property-optional"
             title="Optional">
         <span id="state_label_nodejs">
 <a href="#state_label_nodejs" style="color: inherit; text-decoration: inherit;">label</a>
@@ -2673,8 +2427,7 @@ Defaults to minimum requirements per app type. Valid values: `"authorization_cod
         <span class="property-type">string</span>
     </dt>
     <dd>{{% md %}}The Application's display name.
-{{% /md %}}</dd>
-    <dt class="property-optional"
+{{% /md %}}</dd><dt class="property-optional"
             title="Optional">
         <span id="state_loginmode_nodejs">
 <a href="#state_loginmode_nodejs" style="color: inherit; text-decoration: inherit;">login<wbr>Mode</a>
@@ -2683,8 +2436,7 @@ Defaults to minimum requirements per app type. Valid values: `"authorization_cod
         <span class="property-type">string</span>
     </dt>
     <dd>{{% md %}}The type of Idp-Initiated login that the client supports, if any. Valid values: `"DISABLED"`, `"SPEC"`, `"OKTA"`. Default is `"DISABLED"`.
-{{% /md %}}</dd>
-    <dt class="property-optional"
+{{% /md %}}</dd><dt class="property-optional"
             title="Optional">
         <span id="state_loginscopes_nodejs">
 <a href="#state_loginscopes_nodejs" style="color: inherit; text-decoration: inherit;">login<wbr>Scopes</a>
@@ -2693,8 +2445,7 @@ Defaults to minimum requirements per app type. Valid values: `"authorization_cod
         <span class="property-type">string[]</span>
     </dt>
     <dd>{{% md %}}List of scopes to use for the request. Valid values: `"openid"`, `"profile"`, `"email"`, `"address"`, `"phone"`. Required when `login_mode` is NOT `DISABLED`.
-{{% /md %}}</dd>
-    <dt class="property-optional"
+{{% /md %}}</dd><dt class="property-optional"
             title="Optional">
         <span id="state_loginuri_nodejs">
 <a href="#state_loginuri_nodejs" style="color: inherit; text-decoration: inherit;">login<wbr>Uri</a>
@@ -2703,8 +2454,7 @@ Defaults to minimum requirements per app type. Valid values: `"authorization_cod
         <span class="property-type">string</span>
     </dt>
     <dd>{{% md %}}URI that initiates login. Required when `login_mode` is NOT `DISABLED`.
-{{% /md %}}</dd>
-    <dt class="property-optional"
+{{% /md %}}</dd><dt class="property-optional"
             title="Optional">
         <span id="state_logouri_nodejs">
 <a href="#state_logouri_nodejs" style="color: inherit; text-decoration: inherit;">logo<wbr>Uri</a>
@@ -2713,8 +2463,7 @@ Defaults to minimum requirements per app type. Valid values: `"authorization_cod
         <span class="property-type">string</span>
     </dt>
     <dd>{{% md %}}URI that references a logo for the client.
-{{% /md %}}</dd>
-    <dt class="property-optional"
+{{% /md %}}</dd><dt class="property-optional"
             title="Optional">
         <span id="state_name_nodejs">
 <a href="#state_name_nodejs" style="color: inherit; text-decoration: inherit;">name</a>
@@ -2723,8 +2472,7 @@ Defaults to minimum requirements per app type. Valid values: `"authorization_cod
         <span class="property-type">string</span>
     </dt>
     <dd>{{% md %}}Name assigned to the application by Okta.
-{{% /md %}}</dd>
-    <dt class="property-optional"
+{{% /md %}}</dd><dt class="property-optional"
             title="Optional">
         <span id="state_omitsecret_nodejs">
 <a href="#state_omitsecret_nodejs" style="color: inherit; text-decoration: inherit;">omit<wbr>Secret</a>
@@ -2733,8 +2481,7 @@ Defaults to minimum requirements per app type. Valid values: `"authorization_cod
         <span class="property-type">boolean</span>
     </dt>
     <dd>{{% md %}}This tells the provider not to persist the application's secret to state. Your app will be recreated if this ever changes from true => false.
-{{% /md %}}</dd>
-    <dt class="property-optional"
+{{% /md %}}</dd><dt class="property-optional"
             title="Optional">
         <span id="state_policyuri_nodejs">
 <a href="#state_policyuri_nodejs" style="color: inherit; text-decoration: inherit;">policy<wbr>Uri</a>
@@ -2743,8 +2490,7 @@ Defaults to minimum requirements per app type. Valid values: `"authorization_cod
         <span class="property-type">string</span>
     </dt>
     <dd>{{% md %}}URI to web page providing client policy document.
-{{% /md %}}</dd>
-    <dt class="property-optional"
+{{% /md %}}</dd><dt class="property-optional"
             title="Optional">
         <span id="state_postlogoutredirecturis_nodejs">
 <a href="#state_postlogoutredirecturis_nodejs" style="color: inherit; text-decoration: inherit;">post<wbr>Logout<wbr>Redirect<wbr>Uris</a>
@@ -2753,8 +2499,7 @@ Defaults to minimum requirements per app type. Valid values: `"authorization_cod
         <span class="property-type">string[]</span>
     </dt>
     <dd>{{% md %}}List of URIs for redirection after logout.
-{{% /md %}}</dd>
-    <dt class="property-optional"
+{{% /md %}}</dd><dt class="property-optional"
             title="Optional">
         <span id="state_profile_nodejs">
 <a href="#state_profile_nodejs" style="color: inherit; text-decoration: inherit;">profile</a>
@@ -2763,8 +2508,7 @@ Defaults to minimum requirements per app type. Valid values: `"authorization_cod
         <span class="property-type">string</span>
     </dt>
     <dd>{{% md %}}Custom JSON that represents an OAuth application's profile.
-{{% /md %}}</dd>
-    <dt class="property-optional"
+{{% /md %}}</dd><dt class="property-optional"
             title="Optional">
         <span id="state_redirecturis_nodejs">
 <a href="#state_redirecturis_nodejs" style="color: inherit; text-decoration: inherit;">redirect<wbr>Uris</a>
@@ -2773,8 +2517,7 @@ Defaults to minimum requirements per app type. Valid values: `"authorization_cod
         <span class="property-type">string[]</span>
     </dt>
     <dd>{{% md %}}List of URIs for use in the redirect-based flow. This is required for all application types except service.
-{{% /md %}}</dd>
-    <dt class="property-optional"
+{{% /md %}}</dd><dt class="property-optional"
             title="Optional">
         <span id="state_responsetypes_nodejs">
 <a href="#state_responsetypes_nodejs" style="color: inherit; text-decoration: inherit;">response<wbr>Types</a>
@@ -2783,8 +2526,7 @@ Defaults to minimum requirements per app type. Valid values: `"authorization_cod
         <span class="property-type">string[]</span>
     </dt>
     <dd>{{% md %}}List of OAuth 2.0 response type strings.
-{{% /md %}}</dd>
-    <dt class="property-optional"
+{{% /md %}}</dd><dt class="property-optional"
             title="Optional">
         <span id="state_signonmode_nodejs">
 <a href="#state_signonmode_nodejs" style="color: inherit; text-decoration: inherit;">sign<wbr>On<wbr>Mode</a>
@@ -2793,8 +2535,7 @@ Defaults to minimum requirements per app type. Valid values: `"authorization_cod
         <span class="property-type">string</span>
     </dt>
     <dd>{{% md %}}Sign-on mode of application.
-{{% /md %}}</dd>
-    <dt class="property-optional"
+{{% /md %}}</dd><dt class="property-optional"
             title="Optional">
         <span id="state_status_nodejs">
 <a href="#state_status_nodejs" style="color: inherit; text-decoration: inherit;">status</a>
@@ -2803,8 +2544,7 @@ Defaults to minimum requirements per app type. Valid values: `"authorization_cod
         <span class="property-type">string</span>
     </dt>
     <dd>{{% md %}}The status of the application, by default, it is `"ACTIVE"`.
-{{% /md %}}</dd>
-    <dt class="property-optional"
+{{% /md %}}</dd><dt class="property-optional"
             title="Optional">
         <span id="state_tokenendpointauthmethod_nodejs">
 <a href="#state_tokenendpointauthmethod_nodejs" style="color: inherit; text-decoration: inherit;">token<wbr>Endpoint<wbr>Auth<wbr>Method</a>
@@ -2813,8 +2553,7 @@ Defaults to minimum requirements per app type. Valid values: `"authorization_cod
         <span class="property-type">string</span>
     </dt>
     <dd>{{% md %}}Requested authentication method for the token endpoint. It can be set to `"none"`, `"client_secret_post"`, `"client_secret_basic"`, `"client_secret_jwt"`, `"private_key_jwt"`.
-{{% /md %}}</dd>
-    <dt class="property-optional"
+{{% /md %}}</dd><dt class="property-optional"
             title="Optional">
         <span id="state_tosuri_nodejs">
 <a href="#state_tosuri_nodejs" style="color: inherit; text-decoration: inherit;">tos<wbr>Uri</a>
@@ -2823,8 +2562,7 @@ Defaults to minimum requirements per app type. Valid values: `"authorization_cod
         <span class="property-type">string</span>
     </dt>
     <dd>{{% md %}}URI to web page providing client tos (terms of service).
-{{% /md %}}</dd>
-    <dt class="property-optional"
+{{% /md %}}</dd><dt class="property-optional"
             title="Optional">
         <span id="state_type_nodejs">
 <a href="#state_type_nodejs" style="color: inherit; text-decoration: inherit;">type</a>
@@ -2833,8 +2571,7 @@ Defaults to minimum requirements per app type. Valid values: `"authorization_cod
         <span class="property-type">string</span>
     </dt>
     <dd>{{% md %}}The type of OAuth application. Valid values: `"web"`, `"native"`, `"browser"`, `"service"`.
-{{% /md %}}</dd>
-    <dt class="property-optional"
+{{% /md %}}</dd><dt class="property-optional"
             title="Optional">
         <span id="state_users_nodejs">
 <a href="#state_users_nodejs" style="color: inherit; text-decoration: inherit;">users</a>
@@ -2843,14 +2580,11 @@ Defaults to minimum requirements per app type. Valid values: `"authorization_cod
         <span class="property-type"><a href="#oauthuser">OAuth<wbr>User[]</a></span>
     </dt>
     <dd>{{% md %}}The users assigned to the application. It is recommended not to use this and instead use `okta.app.User`.
-{{% /md %}}</dd>
-</dl>
+{{% /md %}}</dd></dl>
 {{% /choosable %}}
 
 {{% choosable language python %}}
-<dl class="resources-properties">
-
-    <dt class="property-optional"
+<dl class="resources-properties"><dt class="property-optional"
             title="Optional">
         <span id="state_auto_key_rotation_python">
 <a href="#state_auto_key_rotation_python" style="color: inherit; text-decoration: inherit;">auto_<wbr>key_<wbr>rotation</a>
@@ -2859,8 +2593,7 @@ Defaults to minimum requirements per app type. Valid values: `"authorization_cod
         <span class="property-type">bool</span>
     </dt>
     <dd>{{% md %}}Requested key rotation mode.
-{{% /md %}}</dd>
-    <dt class="property-optional"
+{{% /md %}}</dd><dt class="property-optional"
             title="Optional">
         <span id="state_auto_submit_toolbar_python">
 <a href="#state_auto_submit_toolbar_python" style="color: inherit; text-decoration: inherit;">auto_<wbr>submit_<wbr>toolbar</a>
@@ -2869,8 +2602,7 @@ Defaults to minimum requirements per app type. Valid values: `"authorization_cod
         <span class="property-type">bool</span>
     </dt>
     <dd>{{% md %}}Display auto submit toolbar.
-{{% /md %}}</dd>
-    <dt class="property-optional"
+{{% /md %}}</dd><dt class="property-optional"
             title="Optional">
         <span id="state_client_basic_secret_python">
 <a href="#state_client_basic_secret_python" style="color: inherit; text-decoration: inherit;">client_<wbr>basic_<wbr>secret</a>
@@ -2879,8 +2611,7 @@ Defaults to minimum requirements per app type. Valid values: `"authorization_cod
         <span class="property-type">str</span>
     </dt>
     <dd>{{% md %}}OAuth client secret key, this can be set when token_endpoint_auth_method is client_secret_basic.
-{{% /md %}}</dd>
-    <dt class="property-optional"
+{{% /md %}}</dd><dt class="property-optional"
             title="Optional">
         <span id="state_client_id_python">
 <a href="#state_client_id_python" style="color: inherit; text-decoration: inherit;">client_<wbr>id</a>
@@ -2889,8 +2620,7 @@ Defaults to minimum requirements per app type. Valid values: `"authorization_cod
         <span class="property-type">str</span>
     </dt>
     <dd>{{% md %}}OAuth client ID. If set during creation, app is created with this id.
-{{% /md %}}</dd>
-    <dt class="property-optional"
+{{% /md %}}</dd><dt class="property-optional"
             title="Optional">
         <span id="state_client_secret_python">
 <a href="#state_client_secret_python" style="color: inherit; text-decoration: inherit;">client_<wbr>secret</a>
@@ -2899,8 +2629,7 @@ Defaults to minimum requirements per app type. Valid values: `"authorization_cod
         <span class="property-type">str</span>
     </dt>
     <dd>{{% md %}}The client secret of the application.
-{{% /md %}}</dd>
-    <dt class="property-optional"
+{{% /md %}}</dd><dt class="property-optional"
             title="Optional">
         <span id="state_client_uri_python">
 <a href="#state_client_uri_python" style="color: inherit; text-decoration: inherit;">client_<wbr>uri</a>
@@ -2909,8 +2638,7 @@ Defaults to minimum requirements per app type. Valid values: `"authorization_cod
         <span class="property-type">str</span>
     </dt>
     <dd>{{% md %}}URI to a web page providing information about the client.
-{{% /md %}}</dd>
-    <dt class="property-optional"
+{{% /md %}}</dd><dt class="property-optional"
             title="Optional">
         <span id="state_consent_method_python">
 <a href="#state_consent_method_python" style="color: inherit; text-decoration: inherit;">consent_<wbr>method</a>
@@ -2919,8 +2647,7 @@ Defaults to minimum requirements per app type. Valid values: `"authorization_cod
         <span class="property-type">str</span>
     </dt>
     <dd>{{% md %}}Indicates whether user consent is required or implicit. Valid values: `"REQUIRED"`, `"TRUSTED"`. Default value is `"TRUSTED"`.
-{{% /md %}}</dd>
-    <dt class="property-optional property-deprecated"
+{{% /md %}}</dd><dt class="property-optional property-deprecated"
             title="Optional, Deprecated">
         <span id="state_custom_client_id_python">
 <a href="#state_custom_client_id_python" style="color: inherit; text-decoration: inherit;">custom_<wbr>client_<wbr>id</a>
@@ -2930,8 +2657,7 @@ Defaults to minimum requirements per app type. Valid values: `"authorization_cod
     </dt>
     <dd>{{% md %}}**Deprecated** This property allows you to set your client_id during creation. NOTE: updating after creation will be a
 no-op, use client_id for that behavior instead.
-{{% /md %}}<p class="property-message">Deprecated: {{% md %}}This field is being replaced by client_id. Please set that field instead.{{% /md %}}</p></dd>
-    <dt class="property-optional"
+{{% /md %}}<p class="property-message">Deprecated: {{% md %}}This field is being replaced by client_id. Please set that field instead.{{% /md %}}</p></dd><dt class="property-optional"
             title="Optional">
         <span id="state_grant_types_python">
 <a href="#state_grant_types_python" style="color: inherit; text-decoration: inherit;">grant_<wbr>types</a>
@@ -2941,8 +2667,7 @@ no-op, use client_id for that behavior instead.
     </dt>
     <dd>{{% md %}}List of OAuth 2.0 grant types. Conditional validation params found [here](https://developer.okta.com/docs/api/resources/apps#credentials-settings-details). 
 Defaults to minimum requirements per app type. Valid values: `"authorization_code"`, `"implicit"`, `"password"`, `"refresh_token"`, `"client_credentials"`.
-{{% /md %}}</dd>
-    <dt class="property-optional"
+{{% /md %}}</dd><dt class="property-optional"
             title="Optional">
         <span id="state_groups_python">
 <a href="#state_groups_python" style="color: inherit; text-decoration: inherit;">groups</a>
@@ -2951,8 +2676,7 @@ Defaults to minimum requirements per app type. Valid values: `"authorization_cod
         <span class="property-type">Sequence[str]</span>
     </dt>
     <dd>{{% md %}}The groups assigned to the application. It is recommended not to use this and instead use `okta.app.GroupAssignment`.
-{{% /md %}}</dd>
-    <dt class="property-optional"
+{{% /md %}}</dd><dt class="property-optional"
             title="Optional">
         <span id="state_hide_ios_python">
 <a href="#state_hide_ios_python" style="color: inherit; text-decoration: inherit;">hide_<wbr>ios</a>
@@ -2961,8 +2685,7 @@ Defaults to minimum requirements per app type. Valid values: `"authorization_cod
         <span class="property-type">bool</span>
     </dt>
     <dd>{{% md %}}Do not display application icon on mobile app.
-{{% /md %}}</dd>
-    <dt class="property-optional"
+{{% /md %}}</dd><dt class="property-optional"
             title="Optional">
         <span id="state_hide_web_python">
 <a href="#state_hide_web_python" style="color: inherit; text-decoration: inherit;">hide_<wbr>web</a>
@@ -2971,8 +2694,7 @@ Defaults to minimum requirements per app type. Valid values: `"authorization_cod
         <span class="property-type">bool</span>
     </dt>
     <dd>{{% md %}}Do not display application icon to users.
-{{% /md %}}</dd>
-    <dt class="property-optional"
+{{% /md %}}</dd><dt class="property-optional"
             title="Optional">
         <span id="state_implicit_assignment_python">
 <a href="#state_implicit_assignment_python" style="color: inherit; text-decoration: inherit;">implicit_<wbr>assignment</a>
@@ -2981,8 +2703,7 @@ Defaults to minimum requirements per app type. Valid values: `"authorization_cod
         <span class="property-type">bool</span>
     </dt>
     <dd>{{% md %}}*Early Access Property*. Enables Federation Broker Mode. When this mode is enabled, `users` and `groups` arguments are ignored.
-{{% /md %}}</dd>
-    <dt class="property-optional"
+{{% /md %}}</dd><dt class="property-optional"
             title="Optional">
         <span id="state_issuer_mode_python">
 <a href="#state_issuer_mode_python" style="color: inherit; text-decoration: inherit;">issuer_<wbr>mode</a>
@@ -2991,8 +2712,7 @@ Defaults to minimum requirements per app type. Valid values: `"authorization_cod
         <span class="property-type">str</span>
     </dt>
     <dd>{{% md %}}Indicates whether the Okta Authorization Server uses the original Okta org domain URL or a custom domain URL as the issuer of ID token for this client.
-{{% /md %}}</dd>
-    <dt class="property-optional"
+{{% /md %}}</dd><dt class="property-optional"
             title="Optional">
         <span id="state_jwks_python">
 <a href="#state_jwks_python" style="color: inherit; text-decoration: inherit;">jwks</a>
@@ -3000,8 +2720,7 @@ Defaults to minimum requirements per app type. Valid values: `"authorization_cod
         <span class="property-indicator"></span>
         <span class="property-type"><a href="#oauthjwk">Sequence[OAuth<wbr>Jwk<wbr>Args]</a></span>
     </dt>
-    <dd>{{% md %}}{{% /md %}}</dd>
-    <dt class="property-optional"
+    <dd>{{% md %}}{{% /md %}}</dd><dt class="property-optional"
             title="Optional">
         <span id="state_label_python">
 <a href="#state_label_python" style="color: inherit; text-decoration: inherit;">label</a>
@@ -3010,8 +2729,7 @@ Defaults to minimum requirements per app type. Valid values: `"authorization_cod
         <span class="property-type">str</span>
     </dt>
     <dd>{{% md %}}The Application's display name.
-{{% /md %}}</dd>
-    <dt class="property-optional"
+{{% /md %}}</dd><dt class="property-optional"
             title="Optional">
         <span id="state_login_mode_python">
 <a href="#state_login_mode_python" style="color: inherit; text-decoration: inherit;">login_<wbr>mode</a>
@@ -3020,8 +2738,7 @@ Defaults to minimum requirements per app type. Valid values: `"authorization_cod
         <span class="property-type">str</span>
     </dt>
     <dd>{{% md %}}The type of Idp-Initiated login that the client supports, if any. Valid values: `"DISABLED"`, `"SPEC"`, `"OKTA"`. Default is `"DISABLED"`.
-{{% /md %}}</dd>
-    <dt class="property-optional"
+{{% /md %}}</dd><dt class="property-optional"
             title="Optional">
         <span id="state_login_scopes_python">
 <a href="#state_login_scopes_python" style="color: inherit; text-decoration: inherit;">login_<wbr>scopes</a>
@@ -3030,8 +2747,7 @@ Defaults to minimum requirements per app type. Valid values: `"authorization_cod
         <span class="property-type">Sequence[str]</span>
     </dt>
     <dd>{{% md %}}List of scopes to use for the request. Valid values: `"openid"`, `"profile"`, `"email"`, `"address"`, `"phone"`. Required when `login_mode` is NOT `DISABLED`.
-{{% /md %}}</dd>
-    <dt class="property-optional"
+{{% /md %}}</dd><dt class="property-optional"
             title="Optional">
         <span id="state_login_uri_python">
 <a href="#state_login_uri_python" style="color: inherit; text-decoration: inherit;">login_<wbr>uri</a>
@@ -3040,8 +2756,7 @@ Defaults to minimum requirements per app type. Valid values: `"authorization_cod
         <span class="property-type">str</span>
     </dt>
     <dd>{{% md %}}URI that initiates login. Required when `login_mode` is NOT `DISABLED`.
-{{% /md %}}</dd>
-    <dt class="property-optional"
+{{% /md %}}</dd><dt class="property-optional"
             title="Optional">
         <span id="state_logo_uri_python">
 <a href="#state_logo_uri_python" style="color: inherit; text-decoration: inherit;">logo_<wbr>uri</a>
@@ -3050,8 +2765,7 @@ Defaults to minimum requirements per app type. Valid values: `"authorization_cod
         <span class="property-type">str</span>
     </dt>
     <dd>{{% md %}}URI that references a logo for the client.
-{{% /md %}}</dd>
-    <dt class="property-optional"
+{{% /md %}}</dd><dt class="property-optional"
             title="Optional">
         <span id="state_name_python">
 <a href="#state_name_python" style="color: inherit; text-decoration: inherit;">name</a>
@@ -3060,8 +2774,7 @@ Defaults to minimum requirements per app type. Valid values: `"authorization_cod
         <span class="property-type">str</span>
     </dt>
     <dd>{{% md %}}Name assigned to the application by Okta.
-{{% /md %}}</dd>
-    <dt class="property-optional"
+{{% /md %}}</dd><dt class="property-optional"
             title="Optional">
         <span id="state_omit_secret_python">
 <a href="#state_omit_secret_python" style="color: inherit; text-decoration: inherit;">omit_<wbr>secret</a>
@@ -3070,8 +2783,7 @@ Defaults to minimum requirements per app type. Valid values: `"authorization_cod
         <span class="property-type">bool</span>
     </dt>
     <dd>{{% md %}}This tells the provider not to persist the application's secret to state. Your app will be recreated if this ever changes from true => false.
-{{% /md %}}</dd>
-    <dt class="property-optional"
+{{% /md %}}</dd><dt class="property-optional"
             title="Optional">
         <span id="state_policy_uri_python">
 <a href="#state_policy_uri_python" style="color: inherit; text-decoration: inherit;">policy_<wbr>uri</a>
@@ -3080,8 +2792,7 @@ Defaults to minimum requirements per app type. Valid values: `"authorization_cod
         <span class="property-type">str</span>
     </dt>
     <dd>{{% md %}}URI to web page providing client policy document.
-{{% /md %}}</dd>
-    <dt class="property-optional"
+{{% /md %}}</dd><dt class="property-optional"
             title="Optional">
         <span id="state_post_logout_redirect_uris_python">
 <a href="#state_post_logout_redirect_uris_python" style="color: inherit; text-decoration: inherit;">post_<wbr>logout_<wbr>redirect_<wbr>uris</a>
@@ -3090,8 +2801,7 @@ Defaults to minimum requirements per app type. Valid values: `"authorization_cod
         <span class="property-type">Sequence[str]</span>
     </dt>
     <dd>{{% md %}}List of URIs for redirection after logout.
-{{% /md %}}</dd>
-    <dt class="property-optional"
+{{% /md %}}</dd><dt class="property-optional"
             title="Optional">
         <span id="state_profile_python">
 <a href="#state_profile_python" style="color: inherit; text-decoration: inherit;">profile</a>
@@ -3100,8 +2810,7 @@ Defaults to minimum requirements per app type. Valid values: `"authorization_cod
         <span class="property-type">str</span>
     </dt>
     <dd>{{% md %}}Custom JSON that represents an OAuth application's profile.
-{{% /md %}}</dd>
-    <dt class="property-optional"
+{{% /md %}}</dd><dt class="property-optional"
             title="Optional">
         <span id="state_redirect_uris_python">
 <a href="#state_redirect_uris_python" style="color: inherit; text-decoration: inherit;">redirect_<wbr>uris</a>
@@ -3110,8 +2819,7 @@ Defaults to minimum requirements per app type. Valid values: `"authorization_cod
         <span class="property-type">Sequence[str]</span>
     </dt>
     <dd>{{% md %}}List of URIs for use in the redirect-based flow. This is required for all application types except service.
-{{% /md %}}</dd>
-    <dt class="property-optional"
+{{% /md %}}</dd><dt class="property-optional"
             title="Optional">
         <span id="state_response_types_python">
 <a href="#state_response_types_python" style="color: inherit; text-decoration: inherit;">response_<wbr>types</a>
@@ -3120,8 +2828,7 @@ Defaults to minimum requirements per app type. Valid values: `"authorization_cod
         <span class="property-type">Sequence[str]</span>
     </dt>
     <dd>{{% md %}}List of OAuth 2.0 response type strings.
-{{% /md %}}</dd>
-    <dt class="property-optional"
+{{% /md %}}</dd><dt class="property-optional"
             title="Optional">
         <span id="state_sign_on_mode_python">
 <a href="#state_sign_on_mode_python" style="color: inherit; text-decoration: inherit;">sign_<wbr>on_<wbr>mode</a>
@@ -3130,8 +2837,7 @@ Defaults to minimum requirements per app type. Valid values: `"authorization_cod
         <span class="property-type">str</span>
     </dt>
     <dd>{{% md %}}Sign-on mode of application.
-{{% /md %}}</dd>
-    <dt class="property-optional"
+{{% /md %}}</dd><dt class="property-optional"
             title="Optional">
         <span id="state_status_python">
 <a href="#state_status_python" style="color: inherit; text-decoration: inherit;">status</a>
@@ -3140,8 +2846,7 @@ Defaults to minimum requirements per app type. Valid values: `"authorization_cod
         <span class="property-type">str</span>
     </dt>
     <dd>{{% md %}}The status of the application, by default, it is `"ACTIVE"`.
-{{% /md %}}</dd>
-    <dt class="property-optional"
+{{% /md %}}</dd><dt class="property-optional"
             title="Optional">
         <span id="state_token_endpoint_auth_method_python">
 <a href="#state_token_endpoint_auth_method_python" style="color: inherit; text-decoration: inherit;">token_<wbr>endpoint_<wbr>auth_<wbr>method</a>
@@ -3150,8 +2855,7 @@ Defaults to minimum requirements per app type. Valid values: `"authorization_cod
         <span class="property-type">str</span>
     </dt>
     <dd>{{% md %}}Requested authentication method for the token endpoint. It can be set to `"none"`, `"client_secret_post"`, `"client_secret_basic"`, `"client_secret_jwt"`, `"private_key_jwt"`.
-{{% /md %}}</dd>
-    <dt class="property-optional"
+{{% /md %}}</dd><dt class="property-optional"
             title="Optional">
         <span id="state_tos_uri_python">
 <a href="#state_tos_uri_python" style="color: inherit; text-decoration: inherit;">tos_<wbr>uri</a>
@@ -3160,8 +2864,7 @@ Defaults to minimum requirements per app type. Valid values: `"authorization_cod
         <span class="property-type">str</span>
     </dt>
     <dd>{{% md %}}URI to web page providing client tos (terms of service).
-{{% /md %}}</dd>
-    <dt class="property-optional"
+{{% /md %}}</dd><dt class="property-optional"
             title="Optional">
         <span id="state_type_python">
 <a href="#state_type_python" style="color: inherit; text-decoration: inherit;">type</a>
@@ -3170,8 +2873,7 @@ Defaults to minimum requirements per app type. Valid values: `"authorization_cod
         <span class="property-type">str</span>
     </dt>
     <dd>{{% md %}}The type of OAuth application. Valid values: `"web"`, `"native"`, `"browser"`, `"service"`.
-{{% /md %}}</dd>
-    <dt class="property-optional"
+{{% /md %}}</dd><dt class="property-optional"
             title="Optional">
         <span id="state_users_python">
 <a href="#state_users_python" style="color: inherit; text-decoration: inherit;">users</a>
@@ -3180,8 +2882,7 @@ Defaults to minimum requirements per app type. Valid values: `"authorization_cod
         <span class="property-type"><a href="#oauthuser">Sequence[OAuth<wbr>User<wbr>Args]</a></span>
     </dt>
     <dd>{{% md %}}The users assigned to the application. It is recommended not to use this and instead use `okta.app.User`.
-{{% /md %}}</dd>
-</dl>
+{{% /md %}}</dd></dl>
 {{% /choosable %}}
 
 
@@ -3196,9 +2897,7 @@ Defaults to minimum requirements per app type. Valid values: `"authorization_cod
 <h4 id="oauthjwk">OAuth<wbr>Jwk</h4>
 
 {{% choosable language csharp %}}
-<dl class="resources-properties">
-
-    <dt class="property-required"
+<dl class="resources-properties"><dt class="property-required"
             title="Required">
         <span id="kid_csharp">
 <a href="#kid_csharp" style="color: inherit; text-decoration: inherit;">Kid</a>
@@ -3206,8 +2905,7 @@ Defaults to minimum requirements per app type. Valid values: `"authorization_cod
         <span class="property-indicator"></span>
         <span class="property-type">string</span>
     </dt>
-    <dd>{{% md %}}{{% /md %}}</dd>
-    <dt class="property-required"
+    <dd>{{% md %}}{{% /md %}}</dd><dt class="property-required"
             title="Required">
         <span id="kty_csharp">
 <a href="#kty_csharp" style="color: inherit; text-decoration: inherit;">Kty</a>
@@ -3215,8 +2913,7 @@ Defaults to minimum requirements per app type. Valid values: `"authorization_cod
         <span class="property-indicator"></span>
         <span class="property-type">string</span>
     </dt>
-    <dd>{{% md %}}{{% /md %}}</dd>
-    <dt class="property-optional"
+    <dd>{{% md %}}{{% /md %}}</dd><dt class="property-optional"
             title="Optional">
         <span id="e_csharp">
 <a href="#e_csharp" style="color: inherit; text-decoration: inherit;">E</a>
@@ -3224,8 +2921,7 @@ Defaults to minimum requirements per app type. Valid values: `"authorization_cod
         <span class="property-indicator"></span>
         <span class="property-type">string</span>
     </dt>
-    <dd>{{% md %}}{{% /md %}}</dd>
-    <dt class="property-optional"
+    <dd>{{% md %}}{{% /md %}}</dd><dt class="property-optional"
             title="Optional">
         <span id="n_csharp">
 <a href="#n_csharp" style="color: inherit; text-decoration: inherit;">N</a>
@@ -3233,14 +2929,11 @@ Defaults to minimum requirements per app type. Valid values: `"authorization_cod
         <span class="property-indicator"></span>
         <span class="property-type">string</span>
     </dt>
-    <dd>{{% md %}}{{% /md %}}</dd>
-</dl>
+    <dd>{{% md %}}{{% /md %}}</dd></dl>
 {{% /choosable %}}
 
 {{% choosable language go %}}
-<dl class="resources-properties">
-
-    <dt class="property-required"
+<dl class="resources-properties"><dt class="property-required"
             title="Required">
         <span id="kid_go">
 <a href="#kid_go" style="color: inherit; text-decoration: inherit;">Kid</a>
@@ -3248,8 +2941,7 @@ Defaults to minimum requirements per app type. Valid values: `"authorization_cod
         <span class="property-indicator"></span>
         <span class="property-type">string</span>
     </dt>
-    <dd>{{% md %}}{{% /md %}}</dd>
-    <dt class="property-required"
+    <dd>{{% md %}}{{% /md %}}</dd><dt class="property-required"
             title="Required">
         <span id="kty_go">
 <a href="#kty_go" style="color: inherit; text-decoration: inherit;">Kty</a>
@@ -3257,8 +2949,7 @@ Defaults to minimum requirements per app type. Valid values: `"authorization_cod
         <span class="property-indicator"></span>
         <span class="property-type">string</span>
     </dt>
-    <dd>{{% md %}}{{% /md %}}</dd>
-    <dt class="property-optional"
+    <dd>{{% md %}}{{% /md %}}</dd><dt class="property-optional"
             title="Optional">
         <span id="e_go">
 <a href="#e_go" style="color: inherit; text-decoration: inherit;">E</a>
@@ -3266,8 +2957,7 @@ Defaults to minimum requirements per app type. Valid values: `"authorization_cod
         <span class="property-indicator"></span>
         <span class="property-type">string</span>
     </dt>
-    <dd>{{% md %}}{{% /md %}}</dd>
-    <dt class="property-optional"
+    <dd>{{% md %}}{{% /md %}}</dd><dt class="property-optional"
             title="Optional">
         <span id="n_go">
 <a href="#n_go" style="color: inherit; text-decoration: inherit;">N</a>
@@ -3275,14 +2965,11 @@ Defaults to minimum requirements per app type. Valid values: `"authorization_cod
         <span class="property-indicator"></span>
         <span class="property-type">string</span>
     </dt>
-    <dd>{{% md %}}{{% /md %}}</dd>
-</dl>
+    <dd>{{% md %}}{{% /md %}}</dd></dl>
 {{% /choosable %}}
 
 {{% choosable language nodejs %}}
-<dl class="resources-properties">
-
-    <dt class="property-required"
+<dl class="resources-properties"><dt class="property-required"
             title="Required">
         <span id="kid_nodejs">
 <a href="#kid_nodejs" style="color: inherit; text-decoration: inherit;">kid</a>
@@ -3290,8 +2977,7 @@ Defaults to minimum requirements per app type. Valid values: `"authorization_cod
         <span class="property-indicator"></span>
         <span class="property-type">string</span>
     </dt>
-    <dd>{{% md %}}{{% /md %}}</dd>
-    <dt class="property-required"
+    <dd>{{% md %}}{{% /md %}}</dd><dt class="property-required"
             title="Required">
         <span id="kty_nodejs">
 <a href="#kty_nodejs" style="color: inherit; text-decoration: inherit;">kty</a>
@@ -3299,8 +2985,7 @@ Defaults to minimum requirements per app type. Valid values: `"authorization_cod
         <span class="property-indicator"></span>
         <span class="property-type">string</span>
     </dt>
-    <dd>{{% md %}}{{% /md %}}</dd>
-    <dt class="property-optional"
+    <dd>{{% md %}}{{% /md %}}</dd><dt class="property-optional"
             title="Optional">
         <span id="e_nodejs">
 <a href="#e_nodejs" style="color: inherit; text-decoration: inherit;">e</a>
@@ -3308,8 +2993,7 @@ Defaults to minimum requirements per app type. Valid values: `"authorization_cod
         <span class="property-indicator"></span>
         <span class="property-type">string</span>
     </dt>
-    <dd>{{% md %}}{{% /md %}}</dd>
-    <dt class="property-optional"
+    <dd>{{% md %}}{{% /md %}}</dd><dt class="property-optional"
             title="Optional">
         <span id="n_nodejs">
 <a href="#n_nodejs" style="color: inherit; text-decoration: inherit;">n</a>
@@ -3317,14 +3001,11 @@ Defaults to minimum requirements per app type. Valid values: `"authorization_cod
         <span class="property-indicator"></span>
         <span class="property-type">string</span>
     </dt>
-    <dd>{{% md %}}{{% /md %}}</dd>
-</dl>
+    <dd>{{% md %}}{{% /md %}}</dd></dl>
 {{% /choosable %}}
 
 {{% choosable language python %}}
-<dl class="resources-properties">
-
-    <dt class="property-required"
+<dl class="resources-properties"><dt class="property-required"
             title="Required">
         <span id="kid_python">
 <a href="#kid_python" style="color: inherit; text-decoration: inherit;">kid</a>
@@ -3332,8 +3013,7 @@ Defaults to minimum requirements per app type. Valid values: `"authorization_cod
         <span class="property-indicator"></span>
         <span class="property-type">str</span>
     </dt>
-    <dd>{{% md %}}{{% /md %}}</dd>
-    <dt class="property-required"
+    <dd>{{% md %}}{{% /md %}}</dd><dt class="property-required"
             title="Required">
         <span id="kty_python">
 <a href="#kty_python" style="color: inherit; text-decoration: inherit;">kty</a>
@@ -3341,8 +3021,7 @@ Defaults to minimum requirements per app type. Valid values: `"authorization_cod
         <span class="property-indicator"></span>
         <span class="property-type">str</span>
     </dt>
-    <dd>{{% md %}}{{% /md %}}</dd>
-    <dt class="property-optional"
+    <dd>{{% md %}}{{% /md %}}</dd><dt class="property-optional"
             title="Optional">
         <span id="e_python">
 <a href="#e_python" style="color: inherit; text-decoration: inherit;">e</a>
@@ -3350,8 +3029,7 @@ Defaults to minimum requirements per app type. Valid values: `"authorization_cod
         <span class="property-indicator"></span>
         <span class="property-type">str</span>
     </dt>
-    <dd>{{% md %}}{{% /md %}}</dd>
-    <dt class="property-optional"
+    <dd>{{% md %}}{{% /md %}}</dd><dt class="property-optional"
             title="Optional">
         <span id="n_python">
 <a href="#n_python" style="color: inherit; text-decoration: inherit;">n</a>
@@ -3359,16 +3037,13 @@ Defaults to minimum requirements per app type. Valid values: `"authorization_cod
         <span class="property-indicator"></span>
         <span class="property-type">str</span>
     </dt>
-    <dd>{{% md %}}{{% /md %}}</dd>
-</dl>
+    <dd>{{% md %}}{{% /md %}}</dd></dl>
 {{% /choosable %}}
 
 <h4 id="oauthuser">OAuth<wbr>User</h4>
 
 {{% choosable language csharp %}}
-<dl class="resources-properties">
-
-    <dt class="property-optional"
+<dl class="resources-properties"><dt class="property-optional"
             title="Optional">
         <span id="id_csharp">
 <a href="#id_csharp" style="color: inherit; text-decoration: inherit;">Id</a>
@@ -3377,8 +3052,7 @@ Defaults to minimum requirements per app type. Valid values: `"authorization_cod
         <span class="property-type">string</span>
     </dt>
     <dd>{{% md %}}ID of the application.
-{{% /md %}}</dd>
-    <dt class="property-optional"
+{{% /md %}}</dd><dt class="property-optional"
             title="Optional">
         <span id="password_csharp">
 <a href="#password_csharp" style="color: inherit; text-decoration: inherit;">Password</a>
@@ -3386,8 +3060,7 @@ Defaults to minimum requirements per app type. Valid values: `"authorization_cod
         <span class="property-indicator"></span>
         <span class="property-type">string</span>
     </dt>
-    <dd>{{% md %}}{{% /md %}}</dd>
-    <dt class="property-optional"
+    <dd>{{% md %}}{{% /md %}}</dd><dt class="property-optional"
             title="Optional">
         <span id="scope_csharp">
 <a href="#scope_csharp" style="color: inherit; text-decoration: inherit;">Scope</a>
@@ -3395,8 +3068,7 @@ Defaults to minimum requirements per app type. Valid values: `"authorization_cod
         <span class="property-indicator"></span>
         <span class="property-type">string</span>
     </dt>
-    <dd>{{% md %}}{{% /md %}}</dd>
-    <dt class="property-optional"
+    <dd>{{% md %}}{{% /md %}}</dd><dt class="property-optional"
             title="Optional">
         <span id="username_csharp">
 <a href="#username_csharp" style="color: inherit; text-decoration: inherit;">Username</a>
@@ -3404,14 +3076,11 @@ Defaults to minimum requirements per app type. Valid values: `"authorization_cod
         <span class="property-indicator"></span>
         <span class="property-type">string</span>
     </dt>
-    <dd>{{% md %}}{{% /md %}}</dd>
-</dl>
+    <dd>{{% md %}}{{% /md %}}</dd></dl>
 {{% /choosable %}}
 
 {{% choosable language go %}}
-<dl class="resources-properties">
-
-    <dt class="property-optional"
+<dl class="resources-properties"><dt class="property-optional"
             title="Optional">
         <span id="id_go">
 <a href="#id_go" style="color: inherit; text-decoration: inherit;">Id</a>
@@ -3420,8 +3089,7 @@ Defaults to minimum requirements per app type. Valid values: `"authorization_cod
         <span class="property-type">string</span>
     </dt>
     <dd>{{% md %}}ID of the application.
-{{% /md %}}</dd>
-    <dt class="property-optional"
+{{% /md %}}</dd><dt class="property-optional"
             title="Optional">
         <span id="password_go">
 <a href="#password_go" style="color: inherit; text-decoration: inherit;">Password</a>
@@ -3429,8 +3097,7 @@ Defaults to minimum requirements per app type. Valid values: `"authorization_cod
         <span class="property-indicator"></span>
         <span class="property-type">string</span>
     </dt>
-    <dd>{{% md %}}{{% /md %}}</dd>
-    <dt class="property-optional"
+    <dd>{{% md %}}{{% /md %}}</dd><dt class="property-optional"
             title="Optional">
         <span id="scope_go">
 <a href="#scope_go" style="color: inherit; text-decoration: inherit;">Scope</a>
@@ -3438,8 +3105,7 @@ Defaults to minimum requirements per app type. Valid values: `"authorization_cod
         <span class="property-indicator"></span>
         <span class="property-type">string</span>
     </dt>
-    <dd>{{% md %}}{{% /md %}}</dd>
-    <dt class="property-optional"
+    <dd>{{% md %}}{{% /md %}}</dd><dt class="property-optional"
             title="Optional">
         <span id="username_go">
 <a href="#username_go" style="color: inherit; text-decoration: inherit;">Username</a>
@@ -3447,14 +3113,11 @@ Defaults to minimum requirements per app type. Valid values: `"authorization_cod
         <span class="property-indicator"></span>
         <span class="property-type">string</span>
     </dt>
-    <dd>{{% md %}}{{% /md %}}</dd>
-</dl>
+    <dd>{{% md %}}{{% /md %}}</dd></dl>
 {{% /choosable %}}
 
 {{% choosable language nodejs %}}
-<dl class="resources-properties">
-
-    <dt class="property-optional"
+<dl class="resources-properties"><dt class="property-optional"
             title="Optional">
         <span id="id_nodejs">
 <a href="#id_nodejs" style="color: inherit; text-decoration: inherit;">id</a>
@@ -3463,8 +3126,7 @@ Defaults to minimum requirements per app type. Valid values: `"authorization_cod
         <span class="property-type">string</span>
     </dt>
     <dd>{{% md %}}ID of the application.
-{{% /md %}}</dd>
-    <dt class="property-optional"
+{{% /md %}}</dd><dt class="property-optional"
             title="Optional">
         <span id="password_nodejs">
 <a href="#password_nodejs" style="color: inherit; text-decoration: inherit;">password</a>
@@ -3472,8 +3134,7 @@ Defaults to minimum requirements per app type. Valid values: `"authorization_cod
         <span class="property-indicator"></span>
         <span class="property-type">string</span>
     </dt>
-    <dd>{{% md %}}{{% /md %}}</dd>
-    <dt class="property-optional"
+    <dd>{{% md %}}{{% /md %}}</dd><dt class="property-optional"
             title="Optional">
         <span id="scope_nodejs">
 <a href="#scope_nodejs" style="color: inherit; text-decoration: inherit;">scope</a>
@@ -3481,8 +3142,7 @@ Defaults to minimum requirements per app type. Valid values: `"authorization_cod
         <span class="property-indicator"></span>
         <span class="property-type">string</span>
     </dt>
-    <dd>{{% md %}}{{% /md %}}</dd>
-    <dt class="property-optional"
+    <dd>{{% md %}}{{% /md %}}</dd><dt class="property-optional"
             title="Optional">
         <span id="username_nodejs">
 <a href="#username_nodejs" style="color: inherit; text-decoration: inherit;">username</a>
@@ -3490,14 +3150,11 @@ Defaults to minimum requirements per app type. Valid values: `"authorization_cod
         <span class="property-indicator"></span>
         <span class="property-type">string</span>
     </dt>
-    <dd>{{% md %}}{{% /md %}}</dd>
-</dl>
+    <dd>{{% md %}}{{% /md %}}</dd></dl>
 {{% /choosable %}}
 
 {{% choosable language python %}}
-<dl class="resources-properties">
-
-    <dt class="property-optional"
+<dl class="resources-properties"><dt class="property-optional"
             title="Optional">
         <span id="id_python">
 <a href="#id_python" style="color: inherit; text-decoration: inherit;">id</a>
@@ -3506,8 +3163,7 @@ Defaults to minimum requirements per app type. Valid values: `"authorization_cod
         <span class="property-type">str</span>
     </dt>
     <dd>{{% md %}}ID of the application.
-{{% /md %}}</dd>
-    <dt class="property-optional"
+{{% /md %}}</dd><dt class="property-optional"
             title="Optional">
         <span id="password_python">
 <a href="#password_python" style="color: inherit; text-decoration: inherit;">password</a>
@@ -3515,8 +3171,7 @@ Defaults to minimum requirements per app type. Valid values: `"authorization_cod
         <span class="property-indicator"></span>
         <span class="property-type">str</span>
     </dt>
-    <dd>{{% md %}}{{% /md %}}</dd>
-    <dt class="property-optional"
+    <dd>{{% md %}}{{% /md %}}</dd><dt class="property-optional"
             title="Optional">
         <span id="scope_python">
 <a href="#scope_python" style="color: inherit; text-decoration: inherit;">scope</a>
@@ -3524,8 +3179,7 @@ Defaults to minimum requirements per app type. Valid values: `"authorization_cod
         <span class="property-indicator"></span>
         <span class="property-type">str</span>
     </dt>
-    <dd>{{% md %}}{{% /md %}}</dd>
-    <dt class="property-optional"
+    <dd>{{% md %}}{{% /md %}}</dd><dt class="property-optional"
             title="Optional">
         <span id="username_python">
 <a href="#username_python" style="color: inherit; text-decoration: inherit;">username</a>
@@ -3533,8 +3187,7 @@ Defaults to minimum requirements per app type. Valid values: `"authorization_cod
         <span class="property-indicator"></span>
         <span class="property-type">str</span>
     </dt>
-    <dd>{{% md %}}{{% /md %}}</dd>
-</dl>
+    <dd>{{% md %}}{{% /md %}}</dd></dl>
 {{% /choosable %}}
 ## Import
 
@@ -3555,6 +3208,6 @@ An OIDC Application can be imported via the Okta ID.
 	<dt>License</dt>
 	<dd>Apache-2.0</dd>
 	<dt>Notes</dt>
-	<dd>This Pulumi package is based on the [`okta` Terraform Provider](https://github.com/oktadeveloper/terraform-provider-okta).</dd>
+	<dd>{{% md %}}This Pulumi package is based on the [`okta` Terraform Provider](https://github.com/oktadeveloper/terraform-provider-okta).{{% /md %}}</dd>
 </dl>
 

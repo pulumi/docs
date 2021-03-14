@@ -46,9 +46,7 @@ Device and reserved block must be in the same facility.
 
 {{% choosable language nodejs %}}
 
-<dl class="resources-properties">
-  
-    <dt
+<dl class="resources-properties"><dt
         class="property-required" title="Required">
         <span>name</span>
         <span class="property-indicator"></span>
@@ -56,9 +54,7 @@ Device and reserved block must be in the same facility.
     </dt>
     <dd>
       The unique name of the resource.
-    </dd>
-  
-    <dt
+    </dd><dt
         class="property-required" title="Required">
         <span>args</span>
         <span class="property-indicator"></span>
@@ -66,9 +62,7 @@ Device and reserved block must be in the same facility.
     </dt>
     <dd>
       The arguments to resource properties.
-    </dd>
-  
-    <dt
+    </dd><dt
         class="property-optional" title="Optional">
         <span>opts</span>
         <span class="property-indicator"></span>
@@ -76,10 +70,7 @@ Device and reserved block must be in the same facility.
     </dt>
     <dd>
       Bag of options to control resource&#39;s behavior.
-    </dd>
-  
-
-</dl>
+    </dd></dl>
 
 {{% /choosable %}}
 
@@ -105,9 +96,7 @@ Device and reserved block must be in the same facility.
 
 {{% choosable language go %}}
 
-<dl class="resources-properties">
-  
-    <dt
+<dl class="resources-properties"><dt
         class="property-optional" title="Optional">
         <span>ctx</span>
         <span class="property-indicator"></span>
@@ -115,9 +104,7 @@ Device and reserved block must be in the same facility.
     </dt>
     <dd>
       Context object for the current deployment.
-    </dd>
-  
-    <dt
+    </dd><dt
         class="property-required" title="Required">
         <span>name</span>
         <span class="property-indicator"></span>
@@ -125,9 +112,7 @@ Device and reserved block must be in the same facility.
     </dt>
     <dd>
       The unique name of the resource.
-    </dd>
-  
-    <dt
+    </dd><dt
         class="property-required" title="Required">
         <span>args</span>
         <span class="property-indicator"></span>
@@ -135,9 +120,7 @@ Device and reserved block must be in the same facility.
     </dt>
     <dd>
       The arguments to resource properties.
-    </dd>
-  
-    <dt
+    </dd><dt
         class="property-optional" title="Optional">
         <span>opts</span>
         <span class="property-indicator"></span>
@@ -145,18 +128,13 @@ Device and reserved block must be in the same facility.
     </dt>
     <dd>
       Bag of options to control resource&#39;s behavior.
-    </dd>
-  
-
-</dl>
+    </dd></dl>
 
 {{% /choosable %}}
 
 {{% choosable language csharp %}}
 
-<dl class="resources-properties">
-  
-    <dt
+<dl class="resources-properties"><dt
         class="property-required" title="Required">
         <span>name</span>
         <span class="property-indicator"></span>
@@ -164,9 +142,7 @@ Device and reserved block must be in the same facility.
     </dt>
     <dd>
       The unique name of the resource.
-    </dd>
-  
-    <dt
+    </dd><dt
         class="property-required" title="Required">
         <span>args</span>
         <span class="property-indicator"></span>
@@ -174,9 +150,7 @@ Device and reserved block must be in the same facility.
     </dt>
     <dd>
       The arguments to resource properties.
-    </dd>
-  
-    <dt
+    </dd><dt
         class="property-optional" title="Optional">
         <span>opts</span>
         <span class="property-indicator"></span>
@@ -184,10 +158,7 @@ Device and reserved block must be in the same facility.
     </dt>
     <dd>
       Bag of options to control resource&#39;s behavior.
-    </dd>
-  
-
-</dl>
+    </dd></dl>
 
 {{% /choosable %}}
 
@@ -202,9 +173,7 @@ The IpAttachment resource accepts the following [input]({{< relref "/docs/intro/
 
 
 {{% choosable language csharp %}}
-<dl class="resources-properties">
-
-    <dt class="property-required"
+<dl class="resources-properties"><dt class="property-required"
             title="Required">
         <span id="cidrnotation_csharp">
 <a href="#cidrnotation_csharp" style="color: inherit; text-decoration: inherit;">Cidr<wbr>Notation</a>
@@ -214,8 +183,7 @@ The IpAttachment resource accepts the following [input]({{< relref "/docs/intro/
     </dt>
     <dd>{{% md %}}CIDR notation of subnet from block reserved in the same
 project and facility as the device
-{{% /md %}}</dd>
-    <dt class="property-required"
+{{% /md %}}</dd><dt class="property-required"
             title="Required">
         <span id="deviceid_csharp">
 <a href="#deviceid_csharp" style="color: inherit; text-decoration: inherit;">Device<wbr>Id</a>
@@ -224,14 +192,11 @@ project and facility as the device
         <span class="property-type">string</span>
     </dt>
     <dd>{{% md %}}ID of device to which to assign the subnet
-{{% /md %}}</dd>
-</dl>
+{{% /md %}}</dd></dl>
 {{% /choosable %}}
 
 {{% choosable language go %}}
-<dl class="resources-properties">
-
-    <dt class="property-required"
+<dl class="resources-properties"><dt class="property-required"
             title="Required">
         <span id="cidrnotation_go">
 <a href="#cidrnotation_go" style="color: inherit; text-decoration: inherit;">Cidr<wbr>Notation</a>
@@ -241,8 +206,7 @@ project and facility as the device
     </dt>
     <dd>{{% md %}}CIDR notation of subnet from block reserved in the same
 project and facility as the device
-{{% /md %}}</dd>
-    <dt class="property-required"
+{{% /md %}}</dd><dt class="property-required"
             title="Required">
         <span id="deviceid_go">
 <a href="#deviceid_go" style="color: inherit; text-decoration: inherit;">Device<wbr>Id</a>
@@ -251,14 +215,11 @@ project and facility as the device
         <span class="property-type">string</span>
     </dt>
     <dd>{{% md %}}ID of device to which to assign the subnet
-{{% /md %}}</dd>
-</dl>
+{{% /md %}}</dd></dl>
 {{% /choosable %}}
 
 {{% choosable language nodejs %}}
-<dl class="resources-properties">
-
-    <dt class="property-required"
+<dl class="resources-properties"><dt class="property-required"
             title="Required">
         <span id="cidrnotation_nodejs">
 <a href="#cidrnotation_nodejs" style="color: inherit; text-decoration: inherit;">cidr<wbr>Notation</a>
@@ -268,8 +229,7 @@ project and facility as the device
     </dt>
     <dd>{{% md %}}CIDR notation of subnet from block reserved in the same
 project and facility as the device
-{{% /md %}}</dd>
-    <dt class="property-required"
+{{% /md %}}</dd><dt class="property-required"
             title="Required">
         <span id="deviceid_nodejs">
 <a href="#deviceid_nodejs" style="color: inherit; text-decoration: inherit;">device<wbr>Id</a>
@@ -278,14 +238,11 @@ project and facility as the device
         <span class="property-type">string</span>
     </dt>
     <dd>{{% md %}}ID of device to which to assign the subnet
-{{% /md %}}</dd>
-</dl>
+{{% /md %}}</dd></dl>
 {{% /choosable %}}
 
 {{% choosable language python %}}
-<dl class="resources-properties">
-
-    <dt class="property-required"
+<dl class="resources-properties"><dt class="property-required"
             title="Required">
         <span id="cidr_notation_python">
 <a href="#cidr_notation_python" style="color: inherit; text-decoration: inherit;">cidr_<wbr>notation</a>
@@ -295,8 +252,7 @@ project and facility as the device
     </dt>
     <dd>{{% md %}}CIDR notation of subnet from block reserved in the same
 project and facility as the device
-{{% /md %}}</dd>
-    <dt class="property-required"
+{{% /md %}}</dd><dt class="property-required"
             title="Required">
         <span id="device_id_python">
 <a href="#device_id_python" style="color: inherit; text-decoration: inherit;">device_<wbr>id</a>
@@ -305,8 +261,7 @@ project and facility as the device
         <span class="property-type">str</span>
     </dt>
     <dd>{{% md %}}ID of device to which to assign the subnet
-{{% /md %}}</dd>
-</dl>
+{{% /md %}}</dd></dl>
 {{% /choosable %}}
 
 
@@ -317,9 +272,7 @@ All [input](#inputs) properties are implicitly available as output properties. A
 
 
 {{% choosable language csharp %}}
-<dl class="resources-properties">
-
-    <dt class="property-"
+<dl class="resources-properties"><dt class="property-"
             title="">
         <span id="address_csharp">
 <a href="#address_csharp" style="color: inherit; text-decoration: inherit;">Address</a>
@@ -327,8 +280,7 @@ All [input](#inputs) properties are implicitly available as output properties. A
         <span class="property-indicator"></span>
         <span class="property-type">string</span>
     </dt>
-    <dd>{{% md %}}{{% /md %}}</dd>
-    <dt class="property-"
+    <dd>{{% md %}}{{% /md %}}</dd><dt class="property-"
             title="">
         <span id="addressfamily_csharp">
 <a href="#addressfamily_csharp" style="color: inherit; text-decoration: inherit;">Address<wbr>Family</a>
@@ -337,8 +289,7 @@ All [input](#inputs) properties are implicitly available as output properties. A
         <span class="property-type">int</span>
     </dt>
     <dd>{{% md %}}Address family as integer (4 or 6)
-{{% /md %}}</dd>
-    <dt class="property-"
+{{% /md %}}</dd><dt class="property-"
             title="">
         <span id="cidr_csharp">
 <a href="#cidr_csharp" style="color: inherit; text-decoration: inherit;">Cidr</a>
@@ -347,8 +298,7 @@ All [input](#inputs) properties are implicitly available as output properties. A
         <span class="property-type">int</span>
     </dt>
     <dd>{{% md %}}length of CIDR prefix of the subnet as integer
-{{% /md %}}</dd>
-    <dt class="property-"
+{{% /md %}}</dd><dt class="property-"
             title="">
         <span id="gateway_csharp">
 <a href="#gateway_csharp" style="color: inherit; text-decoration: inherit;">Gateway</a>
@@ -357,8 +307,7 @@ All [input](#inputs) properties are implicitly available as output properties. A
         <span class="property-type">string</span>
     </dt>
     <dd>{{% md %}}IP address of gateway for the subnet
-{{% /md %}}</dd>
-    <dt class="property-"
+{{% /md %}}</dd><dt class="property-"
             title="">
         <span id="global_csharp">
 <a href="#global_csharp" style="color: inherit; text-decoration: inherit;">Global</a>
@@ -366,8 +315,7 @@ All [input](#inputs) properties are implicitly available as output properties. A
         <span class="property-indicator"></span>
         <span class="property-type">bool</span>
     </dt>
-    <dd>{{% md %}}{{% /md %}}</dd>
-    <dt class="property-"
+    <dd>{{% md %}}{{% /md %}}</dd><dt class="property-"
             title="">
         <span id="id_csharp">
 <a href="#id_csharp" style="color: inherit; text-decoration: inherit;">Id</a>
@@ -375,8 +323,7 @@ All [input](#inputs) properties are implicitly available as output properties. A
         <span class="property-indicator"></span>
         <span class="property-type">string</span>
     </dt>
-    <dd>{{% md %}}The provider-assigned unique ID for this managed resource.{{% /md %}}</dd>
-    <dt class="property-"
+    <dd>{{% md %}}The provider-assigned unique ID for this managed resource.{{% /md %}}</dd><dt class="property-"
             title="">
         <span id="manageable_csharp">
 <a href="#manageable_csharp" style="color: inherit; text-decoration: inherit;">Manageable</a>
@@ -384,8 +331,7 @@ All [input](#inputs) properties are implicitly available as output properties. A
         <span class="property-indicator"></span>
         <span class="property-type">bool</span>
     </dt>
-    <dd>{{% md %}}{{% /md %}}</dd>
-    <dt class="property-"
+    <dd>{{% md %}}{{% /md %}}</dd><dt class="property-"
             title="">
         <span id="management_csharp">
 <a href="#management_csharp" style="color: inherit; text-decoration: inherit;">Management</a>
@@ -393,8 +339,7 @@ All [input](#inputs) properties are implicitly available as output properties. A
         <span class="property-indicator"></span>
         <span class="property-type">bool</span>
     </dt>
-    <dd>{{% md %}}{{% /md %}}</dd>
-    <dt class="property-"
+    <dd>{{% md %}}{{% /md %}}</dd><dt class="property-"
             title="">
         <span id="netmask_csharp">
 <a href="#netmask_csharp" style="color: inherit; text-decoration: inherit;">Netmask</a>
@@ -403,8 +348,7 @@ All [input](#inputs) properties are implicitly available as output properties. A
         <span class="property-type">string</span>
     </dt>
     <dd>{{% md %}}Subnet mask in decimal notation, e.g. "255.255.255.0"
-{{% /md %}}</dd>
-    <dt class="property-"
+{{% /md %}}</dd><dt class="property-"
             title="">
         <span id="network_csharp">
 <a href="#network_csharp" style="color: inherit; text-decoration: inherit;">Network</a>
@@ -413,8 +357,7 @@ All [input](#inputs) properties are implicitly available as output properties. A
         <span class="property-type">string</span>
     </dt>
     <dd>{{% md %}}Subnet network address
-{{% /md %}}</dd>
-    <dt class="property-"
+{{% /md %}}</dd><dt class="property-"
             title="">
         <span id="public_csharp">
 <a href="#public_csharp" style="color: inherit; text-decoration: inherit;">Public</a>
@@ -423,14 +366,11 @@ All [input](#inputs) properties are implicitly available as output properties. A
         <span class="property-type">bool</span>
     </dt>
     <dd>{{% md %}}boolean flag whether subnet is reachable from the Internet
-{{% /md %}}</dd>
-</dl>
+{{% /md %}}</dd></dl>
 {{% /choosable %}}
 
 {{% choosable language go %}}
-<dl class="resources-properties">
-
-    <dt class="property-"
+<dl class="resources-properties"><dt class="property-"
             title="">
         <span id="address_go">
 <a href="#address_go" style="color: inherit; text-decoration: inherit;">Address</a>
@@ -438,8 +378,7 @@ All [input](#inputs) properties are implicitly available as output properties. A
         <span class="property-indicator"></span>
         <span class="property-type">string</span>
     </dt>
-    <dd>{{% md %}}{{% /md %}}</dd>
-    <dt class="property-"
+    <dd>{{% md %}}{{% /md %}}</dd><dt class="property-"
             title="">
         <span id="addressfamily_go">
 <a href="#addressfamily_go" style="color: inherit; text-decoration: inherit;">Address<wbr>Family</a>
@@ -448,8 +387,7 @@ All [input](#inputs) properties are implicitly available as output properties. A
         <span class="property-type">int</span>
     </dt>
     <dd>{{% md %}}Address family as integer (4 or 6)
-{{% /md %}}</dd>
-    <dt class="property-"
+{{% /md %}}</dd><dt class="property-"
             title="">
         <span id="cidr_go">
 <a href="#cidr_go" style="color: inherit; text-decoration: inherit;">Cidr</a>
@@ -458,8 +396,7 @@ All [input](#inputs) properties are implicitly available as output properties. A
         <span class="property-type">int</span>
     </dt>
     <dd>{{% md %}}length of CIDR prefix of the subnet as integer
-{{% /md %}}</dd>
-    <dt class="property-"
+{{% /md %}}</dd><dt class="property-"
             title="">
         <span id="gateway_go">
 <a href="#gateway_go" style="color: inherit; text-decoration: inherit;">Gateway</a>
@@ -468,8 +405,7 @@ All [input](#inputs) properties are implicitly available as output properties. A
         <span class="property-type">string</span>
     </dt>
     <dd>{{% md %}}IP address of gateway for the subnet
-{{% /md %}}</dd>
-    <dt class="property-"
+{{% /md %}}</dd><dt class="property-"
             title="">
         <span id="global_go">
 <a href="#global_go" style="color: inherit; text-decoration: inherit;">Global</a>
@@ -477,8 +413,7 @@ All [input](#inputs) properties are implicitly available as output properties. A
         <span class="property-indicator"></span>
         <span class="property-type">bool</span>
     </dt>
-    <dd>{{% md %}}{{% /md %}}</dd>
-    <dt class="property-"
+    <dd>{{% md %}}{{% /md %}}</dd><dt class="property-"
             title="">
         <span id="id_go">
 <a href="#id_go" style="color: inherit; text-decoration: inherit;">Id</a>
@@ -486,8 +421,7 @@ All [input](#inputs) properties are implicitly available as output properties. A
         <span class="property-indicator"></span>
         <span class="property-type">string</span>
     </dt>
-    <dd>{{% md %}}The provider-assigned unique ID for this managed resource.{{% /md %}}</dd>
-    <dt class="property-"
+    <dd>{{% md %}}The provider-assigned unique ID for this managed resource.{{% /md %}}</dd><dt class="property-"
             title="">
         <span id="manageable_go">
 <a href="#manageable_go" style="color: inherit; text-decoration: inherit;">Manageable</a>
@@ -495,8 +429,7 @@ All [input](#inputs) properties are implicitly available as output properties. A
         <span class="property-indicator"></span>
         <span class="property-type">bool</span>
     </dt>
-    <dd>{{% md %}}{{% /md %}}</dd>
-    <dt class="property-"
+    <dd>{{% md %}}{{% /md %}}</dd><dt class="property-"
             title="">
         <span id="management_go">
 <a href="#management_go" style="color: inherit; text-decoration: inherit;">Management</a>
@@ -504,8 +437,7 @@ All [input](#inputs) properties are implicitly available as output properties. A
         <span class="property-indicator"></span>
         <span class="property-type">bool</span>
     </dt>
-    <dd>{{% md %}}{{% /md %}}</dd>
-    <dt class="property-"
+    <dd>{{% md %}}{{% /md %}}</dd><dt class="property-"
             title="">
         <span id="netmask_go">
 <a href="#netmask_go" style="color: inherit; text-decoration: inherit;">Netmask</a>
@@ -514,8 +446,7 @@ All [input](#inputs) properties are implicitly available as output properties. A
         <span class="property-type">string</span>
     </dt>
     <dd>{{% md %}}Subnet mask in decimal notation, e.g. "255.255.255.0"
-{{% /md %}}</dd>
-    <dt class="property-"
+{{% /md %}}</dd><dt class="property-"
             title="">
         <span id="network_go">
 <a href="#network_go" style="color: inherit; text-decoration: inherit;">Network</a>
@@ -524,8 +455,7 @@ All [input](#inputs) properties are implicitly available as output properties. A
         <span class="property-type">string</span>
     </dt>
     <dd>{{% md %}}Subnet network address
-{{% /md %}}</dd>
-    <dt class="property-"
+{{% /md %}}</dd><dt class="property-"
             title="">
         <span id="public_go">
 <a href="#public_go" style="color: inherit; text-decoration: inherit;">Public</a>
@@ -534,14 +464,11 @@ All [input](#inputs) properties are implicitly available as output properties. A
         <span class="property-type">bool</span>
     </dt>
     <dd>{{% md %}}boolean flag whether subnet is reachable from the Internet
-{{% /md %}}</dd>
-</dl>
+{{% /md %}}</dd></dl>
 {{% /choosable %}}
 
 {{% choosable language nodejs %}}
-<dl class="resources-properties">
-
-    <dt class="property-"
+<dl class="resources-properties"><dt class="property-"
             title="">
         <span id="address_nodejs">
 <a href="#address_nodejs" style="color: inherit; text-decoration: inherit;">address</a>
@@ -549,8 +476,7 @@ All [input](#inputs) properties are implicitly available as output properties. A
         <span class="property-indicator"></span>
         <span class="property-type">string</span>
     </dt>
-    <dd>{{% md %}}{{% /md %}}</dd>
-    <dt class="property-"
+    <dd>{{% md %}}{{% /md %}}</dd><dt class="property-"
             title="">
         <span id="addressfamily_nodejs">
 <a href="#addressfamily_nodejs" style="color: inherit; text-decoration: inherit;">address<wbr>Family</a>
@@ -559,8 +485,7 @@ All [input](#inputs) properties are implicitly available as output properties. A
         <span class="property-type">number</span>
     </dt>
     <dd>{{% md %}}Address family as integer (4 or 6)
-{{% /md %}}</dd>
-    <dt class="property-"
+{{% /md %}}</dd><dt class="property-"
             title="">
         <span id="cidr_nodejs">
 <a href="#cidr_nodejs" style="color: inherit; text-decoration: inherit;">cidr</a>
@@ -569,8 +494,7 @@ All [input](#inputs) properties are implicitly available as output properties. A
         <span class="property-type">number</span>
     </dt>
     <dd>{{% md %}}length of CIDR prefix of the subnet as integer
-{{% /md %}}</dd>
-    <dt class="property-"
+{{% /md %}}</dd><dt class="property-"
             title="">
         <span id="gateway_nodejs">
 <a href="#gateway_nodejs" style="color: inherit; text-decoration: inherit;">gateway</a>
@@ -579,8 +503,7 @@ All [input](#inputs) properties are implicitly available as output properties. A
         <span class="property-type">string</span>
     </dt>
     <dd>{{% md %}}IP address of gateway for the subnet
-{{% /md %}}</dd>
-    <dt class="property-"
+{{% /md %}}</dd><dt class="property-"
             title="">
         <span id="global_nodejs">
 <a href="#global_nodejs" style="color: inherit; text-decoration: inherit;">global</a>
@@ -588,8 +511,7 @@ All [input](#inputs) properties are implicitly available as output properties. A
         <span class="property-indicator"></span>
         <span class="property-type">boolean</span>
     </dt>
-    <dd>{{% md %}}{{% /md %}}</dd>
-    <dt class="property-"
+    <dd>{{% md %}}{{% /md %}}</dd><dt class="property-"
             title="">
         <span id="id_nodejs">
 <a href="#id_nodejs" style="color: inherit; text-decoration: inherit;">id</a>
@@ -597,8 +519,7 @@ All [input](#inputs) properties are implicitly available as output properties. A
         <span class="property-indicator"></span>
         <span class="property-type">string</span>
     </dt>
-    <dd>{{% md %}}The provider-assigned unique ID for this managed resource.{{% /md %}}</dd>
-    <dt class="property-"
+    <dd>{{% md %}}The provider-assigned unique ID for this managed resource.{{% /md %}}</dd><dt class="property-"
             title="">
         <span id="manageable_nodejs">
 <a href="#manageable_nodejs" style="color: inherit; text-decoration: inherit;">manageable</a>
@@ -606,8 +527,7 @@ All [input](#inputs) properties are implicitly available as output properties. A
         <span class="property-indicator"></span>
         <span class="property-type">boolean</span>
     </dt>
-    <dd>{{% md %}}{{% /md %}}</dd>
-    <dt class="property-"
+    <dd>{{% md %}}{{% /md %}}</dd><dt class="property-"
             title="">
         <span id="management_nodejs">
 <a href="#management_nodejs" style="color: inherit; text-decoration: inherit;">management</a>
@@ -615,8 +535,7 @@ All [input](#inputs) properties are implicitly available as output properties. A
         <span class="property-indicator"></span>
         <span class="property-type">boolean</span>
     </dt>
-    <dd>{{% md %}}{{% /md %}}</dd>
-    <dt class="property-"
+    <dd>{{% md %}}{{% /md %}}</dd><dt class="property-"
             title="">
         <span id="netmask_nodejs">
 <a href="#netmask_nodejs" style="color: inherit; text-decoration: inherit;">netmask</a>
@@ -625,8 +544,7 @@ All [input](#inputs) properties are implicitly available as output properties. A
         <span class="property-type">string</span>
     </dt>
     <dd>{{% md %}}Subnet mask in decimal notation, e.g. "255.255.255.0"
-{{% /md %}}</dd>
-    <dt class="property-"
+{{% /md %}}</dd><dt class="property-"
             title="">
         <span id="network_nodejs">
 <a href="#network_nodejs" style="color: inherit; text-decoration: inherit;">network</a>
@@ -635,8 +553,7 @@ All [input](#inputs) properties are implicitly available as output properties. A
         <span class="property-type">string</span>
     </dt>
     <dd>{{% md %}}Subnet network address
-{{% /md %}}</dd>
-    <dt class="property-"
+{{% /md %}}</dd><dt class="property-"
             title="">
         <span id="public_nodejs">
 <a href="#public_nodejs" style="color: inherit; text-decoration: inherit;">public</a>
@@ -645,14 +562,11 @@ All [input](#inputs) properties are implicitly available as output properties. A
         <span class="property-type">boolean</span>
     </dt>
     <dd>{{% md %}}boolean flag whether subnet is reachable from the Internet
-{{% /md %}}</dd>
-</dl>
+{{% /md %}}</dd></dl>
 {{% /choosable %}}
 
 {{% choosable language python %}}
-<dl class="resources-properties">
-
-    <dt class="property-"
+<dl class="resources-properties"><dt class="property-"
             title="">
         <span id="address_python">
 <a href="#address_python" style="color: inherit; text-decoration: inherit;">address</a>
@@ -660,8 +574,7 @@ All [input](#inputs) properties are implicitly available as output properties. A
         <span class="property-indicator"></span>
         <span class="property-type">str</span>
     </dt>
-    <dd>{{% md %}}{{% /md %}}</dd>
-    <dt class="property-"
+    <dd>{{% md %}}{{% /md %}}</dd><dt class="property-"
             title="">
         <span id="address_family_python">
 <a href="#address_family_python" style="color: inherit; text-decoration: inherit;">address_<wbr>family</a>
@@ -670,8 +583,7 @@ All [input](#inputs) properties are implicitly available as output properties. A
         <span class="property-type">int</span>
     </dt>
     <dd>{{% md %}}Address family as integer (4 or 6)
-{{% /md %}}</dd>
-    <dt class="property-"
+{{% /md %}}</dd><dt class="property-"
             title="">
         <span id="cidr_python">
 <a href="#cidr_python" style="color: inherit; text-decoration: inherit;">cidr</a>
@@ -680,8 +592,7 @@ All [input](#inputs) properties are implicitly available as output properties. A
         <span class="property-type">int</span>
     </dt>
     <dd>{{% md %}}length of CIDR prefix of the subnet as integer
-{{% /md %}}</dd>
-    <dt class="property-"
+{{% /md %}}</dd><dt class="property-"
             title="">
         <span id="gateway_python">
 <a href="#gateway_python" style="color: inherit; text-decoration: inherit;">gateway</a>
@@ -690,8 +601,7 @@ All [input](#inputs) properties are implicitly available as output properties. A
         <span class="property-type">str</span>
     </dt>
     <dd>{{% md %}}IP address of gateway for the subnet
-{{% /md %}}</dd>
-    <dt class="property-"
+{{% /md %}}</dd><dt class="property-"
             title="">
         <span id="global__python">
 <a href="#global__python" style="color: inherit; text-decoration: inherit;">global_</a>
@@ -699,8 +609,7 @@ All [input](#inputs) properties are implicitly available as output properties. A
         <span class="property-indicator"></span>
         <span class="property-type">bool</span>
     </dt>
-    <dd>{{% md %}}{{% /md %}}</dd>
-    <dt class="property-"
+    <dd>{{% md %}}{{% /md %}}</dd><dt class="property-"
             title="">
         <span id="id_python">
 <a href="#id_python" style="color: inherit; text-decoration: inherit;">id</a>
@@ -708,8 +617,7 @@ All [input](#inputs) properties are implicitly available as output properties. A
         <span class="property-indicator"></span>
         <span class="property-type">str</span>
     </dt>
-    <dd>{{% md %}}The provider-assigned unique ID for this managed resource.{{% /md %}}</dd>
-    <dt class="property-"
+    <dd>{{% md %}}The provider-assigned unique ID for this managed resource.{{% /md %}}</dd><dt class="property-"
             title="">
         <span id="manageable_python">
 <a href="#manageable_python" style="color: inherit; text-decoration: inherit;">manageable</a>
@@ -717,8 +625,7 @@ All [input](#inputs) properties are implicitly available as output properties. A
         <span class="property-indicator"></span>
         <span class="property-type">bool</span>
     </dt>
-    <dd>{{% md %}}{{% /md %}}</dd>
-    <dt class="property-"
+    <dd>{{% md %}}{{% /md %}}</dd><dt class="property-"
             title="">
         <span id="management_python">
 <a href="#management_python" style="color: inherit; text-decoration: inherit;">management</a>
@@ -726,8 +633,7 @@ All [input](#inputs) properties are implicitly available as output properties. A
         <span class="property-indicator"></span>
         <span class="property-type">bool</span>
     </dt>
-    <dd>{{% md %}}{{% /md %}}</dd>
-    <dt class="property-"
+    <dd>{{% md %}}{{% /md %}}</dd><dt class="property-"
             title="">
         <span id="netmask_python">
 <a href="#netmask_python" style="color: inherit; text-decoration: inherit;">netmask</a>
@@ -736,8 +642,7 @@ All [input](#inputs) properties are implicitly available as output properties. A
         <span class="property-type">str</span>
     </dt>
     <dd>{{% md %}}Subnet mask in decimal notation, e.g. "255.255.255.0"
-{{% /md %}}</dd>
-    <dt class="property-"
+{{% /md %}}</dd><dt class="property-"
             title="">
         <span id="network_python">
 <a href="#network_python" style="color: inherit; text-decoration: inherit;">network</a>
@@ -746,8 +651,7 @@ All [input](#inputs) properties are implicitly available as output properties. A
         <span class="property-type">str</span>
     </dt>
     <dd>{{% md %}}Subnet network address
-{{% /md %}}</dd>
-    <dt class="property-"
+{{% /md %}}</dd><dt class="property-"
             title="">
         <span id="public_python">
 <a href="#public_python" style="color: inherit; text-decoration: inherit;">public</a>
@@ -756,8 +660,7 @@ All [input](#inputs) properties are implicitly available as output properties. A
         <span class="property-type">bool</span>
     </dt>
     <dd>{{% md %}}boolean flag whether subnet is reachable from the Internet
-{{% /md %}}</dd>
-</dl>
+{{% /md %}}</dd></dl>
 {{% /choosable %}}
 
 
@@ -884,9 +787,7 @@ The following state arguments are supported:
 
 
 {{% choosable language csharp %}}
-<dl class="resources-properties">
-
-    <dt class="property-optional"
+<dl class="resources-properties"><dt class="property-optional"
             title="Optional">
         <span id="state_address_csharp">
 <a href="#state_address_csharp" style="color: inherit; text-decoration: inherit;">Address</a>
@@ -894,8 +795,7 @@ The following state arguments are supported:
         <span class="property-indicator"></span>
         <span class="property-type">string</span>
     </dt>
-    <dd>{{% md %}}{{% /md %}}</dd>
-    <dt class="property-optional"
+    <dd>{{% md %}}{{% /md %}}</dd><dt class="property-optional"
             title="Optional">
         <span id="state_addressfamily_csharp">
 <a href="#state_addressfamily_csharp" style="color: inherit; text-decoration: inherit;">Address<wbr>Family</a>
@@ -904,8 +804,7 @@ The following state arguments are supported:
         <span class="property-type">int</span>
     </dt>
     <dd>{{% md %}}Address family as integer (4 or 6)
-{{% /md %}}</dd>
-    <dt class="property-optional"
+{{% /md %}}</dd><dt class="property-optional"
             title="Optional">
         <span id="state_cidr_csharp">
 <a href="#state_cidr_csharp" style="color: inherit; text-decoration: inherit;">Cidr</a>
@@ -914,8 +813,7 @@ The following state arguments are supported:
         <span class="property-type">int</span>
     </dt>
     <dd>{{% md %}}length of CIDR prefix of the subnet as integer
-{{% /md %}}</dd>
-    <dt class="property-optional"
+{{% /md %}}</dd><dt class="property-optional"
             title="Optional">
         <span id="state_cidrnotation_csharp">
 <a href="#state_cidrnotation_csharp" style="color: inherit; text-decoration: inherit;">Cidr<wbr>Notation</a>
@@ -925,8 +823,7 @@ The following state arguments are supported:
     </dt>
     <dd>{{% md %}}CIDR notation of subnet from block reserved in the same
 project and facility as the device
-{{% /md %}}</dd>
-    <dt class="property-optional"
+{{% /md %}}</dd><dt class="property-optional"
             title="Optional">
         <span id="state_deviceid_csharp">
 <a href="#state_deviceid_csharp" style="color: inherit; text-decoration: inherit;">Device<wbr>Id</a>
@@ -935,8 +832,7 @@ project and facility as the device
         <span class="property-type">string</span>
     </dt>
     <dd>{{% md %}}ID of device to which to assign the subnet
-{{% /md %}}</dd>
-    <dt class="property-optional"
+{{% /md %}}</dd><dt class="property-optional"
             title="Optional">
         <span id="state_gateway_csharp">
 <a href="#state_gateway_csharp" style="color: inherit; text-decoration: inherit;">Gateway</a>
@@ -945,8 +841,7 @@ project and facility as the device
         <span class="property-type">string</span>
     </dt>
     <dd>{{% md %}}IP address of gateway for the subnet
-{{% /md %}}</dd>
-    <dt class="property-optional"
+{{% /md %}}</dd><dt class="property-optional"
             title="Optional">
         <span id="state_global_csharp">
 <a href="#state_global_csharp" style="color: inherit; text-decoration: inherit;">Global</a>
@@ -954,8 +849,7 @@ project and facility as the device
         <span class="property-indicator"></span>
         <span class="property-type">bool</span>
     </dt>
-    <dd>{{% md %}}{{% /md %}}</dd>
-    <dt class="property-optional"
+    <dd>{{% md %}}{{% /md %}}</dd><dt class="property-optional"
             title="Optional">
         <span id="state_manageable_csharp">
 <a href="#state_manageable_csharp" style="color: inherit; text-decoration: inherit;">Manageable</a>
@@ -963,8 +857,7 @@ project and facility as the device
         <span class="property-indicator"></span>
         <span class="property-type">bool</span>
     </dt>
-    <dd>{{% md %}}{{% /md %}}</dd>
-    <dt class="property-optional"
+    <dd>{{% md %}}{{% /md %}}</dd><dt class="property-optional"
             title="Optional">
         <span id="state_management_csharp">
 <a href="#state_management_csharp" style="color: inherit; text-decoration: inherit;">Management</a>
@@ -972,8 +865,7 @@ project and facility as the device
         <span class="property-indicator"></span>
         <span class="property-type">bool</span>
     </dt>
-    <dd>{{% md %}}{{% /md %}}</dd>
-    <dt class="property-optional"
+    <dd>{{% md %}}{{% /md %}}</dd><dt class="property-optional"
             title="Optional">
         <span id="state_netmask_csharp">
 <a href="#state_netmask_csharp" style="color: inherit; text-decoration: inherit;">Netmask</a>
@@ -982,8 +874,7 @@ project and facility as the device
         <span class="property-type">string</span>
     </dt>
     <dd>{{% md %}}Subnet mask in decimal notation, e.g. "255.255.255.0"
-{{% /md %}}</dd>
-    <dt class="property-optional"
+{{% /md %}}</dd><dt class="property-optional"
             title="Optional">
         <span id="state_network_csharp">
 <a href="#state_network_csharp" style="color: inherit; text-decoration: inherit;">Network</a>
@@ -992,8 +883,7 @@ project and facility as the device
         <span class="property-type">string</span>
     </dt>
     <dd>{{% md %}}Subnet network address
-{{% /md %}}</dd>
-    <dt class="property-optional"
+{{% /md %}}</dd><dt class="property-optional"
             title="Optional">
         <span id="state_public_csharp">
 <a href="#state_public_csharp" style="color: inherit; text-decoration: inherit;">Public</a>
@@ -1002,14 +892,11 @@ project and facility as the device
         <span class="property-type">bool</span>
     </dt>
     <dd>{{% md %}}boolean flag whether subnet is reachable from the Internet
-{{% /md %}}</dd>
-</dl>
+{{% /md %}}</dd></dl>
 {{% /choosable %}}
 
 {{% choosable language go %}}
-<dl class="resources-properties">
-
-    <dt class="property-optional"
+<dl class="resources-properties"><dt class="property-optional"
             title="Optional">
         <span id="state_address_go">
 <a href="#state_address_go" style="color: inherit; text-decoration: inherit;">Address</a>
@@ -1017,8 +904,7 @@ project and facility as the device
         <span class="property-indicator"></span>
         <span class="property-type">string</span>
     </dt>
-    <dd>{{% md %}}{{% /md %}}</dd>
-    <dt class="property-optional"
+    <dd>{{% md %}}{{% /md %}}</dd><dt class="property-optional"
             title="Optional">
         <span id="state_addressfamily_go">
 <a href="#state_addressfamily_go" style="color: inherit; text-decoration: inherit;">Address<wbr>Family</a>
@@ -1027,8 +913,7 @@ project and facility as the device
         <span class="property-type">int</span>
     </dt>
     <dd>{{% md %}}Address family as integer (4 or 6)
-{{% /md %}}</dd>
-    <dt class="property-optional"
+{{% /md %}}</dd><dt class="property-optional"
             title="Optional">
         <span id="state_cidr_go">
 <a href="#state_cidr_go" style="color: inherit; text-decoration: inherit;">Cidr</a>
@@ -1037,8 +922,7 @@ project and facility as the device
         <span class="property-type">int</span>
     </dt>
     <dd>{{% md %}}length of CIDR prefix of the subnet as integer
-{{% /md %}}</dd>
-    <dt class="property-optional"
+{{% /md %}}</dd><dt class="property-optional"
             title="Optional">
         <span id="state_cidrnotation_go">
 <a href="#state_cidrnotation_go" style="color: inherit; text-decoration: inherit;">Cidr<wbr>Notation</a>
@@ -1048,8 +932,7 @@ project and facility as the device
     </dt>
     <dd>{{% md %}}CIDR notation of subnet from block reserved in the same
 project and facility as the device
-{{% /md %}}</dd>
-    <dt class="property-optional"
+{{% /md %}}</dd><dt class="property-optional"
             title="Optional">
         <span id="state_deviceid_go">
 <a href="#state_deviceid_go" style="color: inherit; text-decoration: inherit;">Device<wbr>Id</a>
@@ -1058,8 +941,7 @@ project and facility as the device
         <span class="property-type">string</span>
     </dt>
     <dd>{{% md %}}ID of device to which to assign the subnet
-{{% /md %}}</dd>
-    <dt class="property-optional"
+{{% /md %}}</dd><dt class="property-optional"
             title="Optional">
         <span id="state_gateway_go">
 <a href="#state_gateway_go" style="color: inherit; text-decoration: inherit;">Gateway</a>
@@ -1068,8 +950,7 @@ project and facility as the device
         <span class="property-type">string</span>
     </dt>
     <dd>{{% md %}}IP address of gateway for the subnet
-{{% /md %}}</dd>
-    <dt class="property-optional"
+{{% /md %}}</dd><dt class="property-optional"
             title="Optional">
         <span id="state_global_go">
 <a href="#state_global_go" style="color: inherit; text-decoration: inherit;">Global</a>
@@ -1077,8 +958,7 @@ project and facility as the device
         <span class="property-indicator"></span>
         <span class="property-type">bool</span>
     </dt>
-    <dd>{{% md %}}{{% /md %}}</dd>
-    <dt class="property-optional"
+    <dd>{{% md %}}{{% /md %}}</dd><dt class="property-optional"
             title="Optional">
         <span id="state_manageable_go">
 <a href="#state_manageable_go" style="color: inherit; text-decoration: inherit;">Manageable</a>
@@ -1086,8 +966,7 @@ project and facility as the device
         <span class="property-indicator"></span>
         <span class="property-type">bool</span>
     </dt>
-    <dd>{{% md %}}{{% /md %}}</dd>
-    <dt class="property-optional"
+    <dd>{{% md %}}{{% /md %}}</dd><dt class="property-optional"
             title="Optional">
         <span id="state_management_go">
 <a href="#state_management_go" style="color: inherit; text-decoration: inherit;">Management</a>
@@ -1095,8 +974,7 @@ project and facility as the device
         <span class="property-indicator"></span>
         <span class="property-type">bool</span>
     </dt>
-    <dd>{{% md %}}{{% /md %}}</dd>
-    <dt class="property-optional"
+    <dd>{{% md %}}{{% /md %}}</dd><dt class="property-optional"
             title="Optional">
         <span id="state_netmask_go">
 <a href="#state_netmask_go" style="color: inherit; text-decoration: inherit;">Netmask</a>
@@ -1105,8 +983,7 @@ project and facility as the device
         <span class="property-type">string</span>
     </dt>
     <dd>{{% md %}}Subnet mask in decimal notation, e.g. "255.255.255.0"
-{{% /md %}}</dd>
-    <dt class="property-optional"
+{{% /md %}}</dd><dt class="property-optional"
             title="Optional">
         <span id="state_network_go">
 <a href="#state_network_go" style="color: inherit; text-decoration: inherit;">Network</a>
@@ -1115,8 +992,7 @@ project and facility as the device
         <span class="property-type">string</span>
     </dt>
     <dd>{{% md %}}Subnet network address
-{{% /md %}}</dd>
-    <dt class="property-optional"
+{{% /md %}}</dd><dt class="property-optional"
             title="Optional">
         <span id="state_public_go">
 <a href="#state_public_go" style="color: inherit; text-decoration: inherit;">Public</a>
@@ -1125,14 +1001,11 @@ project and facility as the device
         <span class="property-type">bool</span>
     </dt>
     <dd>{{% md %}}boolean flag whether subnet is reachable from the Internet
-{{% /md %}}</dd>
-</dl>
+{{% /md %}}</dd></dl>
 {{% /choosable %}}
 
 {{% choosable language nodejs %}}
-<dl class="resources-properties">
-
-    <dt class="property-optional"
+<dl class="resources-properties"><dt class="property-optional"
             title="Optional">
         <span id="state_address_nodejs">
 <a href="#state_address_nodejs" style="color: inherit; text-decoration: inherit;">address</a>
@@ -1140,8 +1013,7 @@ project and facility as the device
         <span class="property-indicator"></span>
         <span class="property-type">string</span>
     </dt>
-    <dd>{{% md %}}{{% /md %}}</dd>
-    <dt class="property-optional"
+    <dd>{{% md %}}{{% /md %}}</dd><dt class="property-optional"
             title="Optional">
         <span id="state_addressfamily_nodejs">
 <a href="#state_addressfamily_nodejs" style="color: inherit; text-decoration: inherit;">address<wbr>Family</a>
@@ -1150,8 +1022,7 @@ project and facility as the device
         <span class="property-type">number</span>
     </dt>
     <dd>{{% md %}}Address family as integer (4 or 6)
-{{% /md %}}</dd>
-    <dt class="property-optional"
+{{% /md %}}</dd><dt class="property-optional"
             title="Optional">
         <span id="state_cidr_nodejs">
 <a href="#state_cidr_nodejs" style="color: inherit; text-decoration: inherit;">cidr</a>
@@ -1160,8 +1031,7 @@ project and facility as the device
         <span class="property-type">number</span>
     </dt>
     <dd>{{% md %}}length of CIDR prefix of the subnet as integer
-{{% /md %}}</dd>
-    <dt class="property-optional"
+{{% /md %}}</dd><dt class="property-optional"
             title="Optional">
         <span id="state_cidrnotation_nodejs">
 <a href="#state_cidrnotation_nodejs" style="color: inherit; text-decoration: inherit;">cidr<wbr>Notation</a>
@@ -1171,8 +1041,7 @@ project and facility as the device
     </dt>
     <dd>{{% md %}}CIDR notation of subnet from block reserved in the same
 project and facility as the device
-{{% /md %}}</dd>
-    <dt class="property-optional"
+{{% /md %}}</dd><dt class="property-optional"
             title="Optional">
         <span id="state_deviceid_nodejs">
 <a href="#state_deviceid_nodejs" style="color: inherit; text-decoration: inherit;">device<wbr>Id</a>
@@ -1181,8 +1050,7 @@ project and facility as the device
         <span class="property-type">string</span>
     </dt>
     <dd>{{% md %}}ID of device to which to assign the subnet
-{{% /md %}}</dd>
-    <dt class="property-optional"
+{{% /md %}}</dd><dt class="property-optional"
             title="Optional">
         <span id="state_gateway_nodejs">
 <a href="#state_gateway_nodejs" style="color: inherit; text-decoration: inherit;">gateway</a>
@@ -1191,8 +1059,7 @@ project and facility as the device
         <span class="property-type">string</span>
     </dt>
     <dd>{{% md %}}IP address of gateway for the subnet
-{{% /md %}}</dd>
-    <dt class="property-optional"
+{{% /md %}}</dd><dt class="property-optional"
             title="Optional">
         <span id="state_global_nodejs">
 <a href="#state_global_nodejs" style="color: inherit; text-decoration: inherit;">global</a>
@@ -1200,8 +1067,7 @@ project and facility as the device
         <span class="property-indicator"></span>
         <span class="property-type">boolean</span>
     </dt>
-    <dd>{{% md %}}{{% /md %}}</dd>
-    <dt class="property-optional"
+    <dd>{{% md %}}{{% /md %}}</dd><dt class="property-optional"
             title="Optional">
         <span id="state_manageable_nodejs">
 <a href="#state_manageable_nodejs" style="color: inherit; text-decoration: inherit;">manageable</a>
@@ -1209,8 +1075,7 @@ project and facility as the device
         <span class="property-indicator"></span>
         <span class="property-type">boolean</span>
     </dt>
-    <dd>{{% md %}}{{% /md %}}</dd>
-    <dt class="property-optional"
+    <dd>{{% md %}}{{% /md %}}</dd><dt class="property-optional"
             title="Optional">
         <span id="state_management_nodejs">
 <a href="#state_management_nodejs" style="color: inherit; text-decoration: inherit;">management</a>
@@ -1218,8 +1083,7 @@ project and facility as the device
         <span class="property-indicator"></span>
         <span class="property-type">boolean</span>
     </dt>
-    <dd>{{% md %}}{{% /md %}}</dd>
-    <dt class="property-optional"
+    <dd>{{% md %}}{{% /md %}}</dd><dt class="property-optional"
             title="Optional">
         <span id="state_netmask_nodejs">
 <a href="#state_netmask_nodejs" style="color: inherit; text-decoration: inherit;">netmask</a>
@@ -1228,8 +1092,7 @@ project and facility as the device
         <span class="property-type">string</span>
     </dt>
     <dd>{{% md %}}Subnet mask in decimal notation, e.g. "255.255.255.0"
-{{% /md %}}</dd>
-    <dt class="property-optional"
+{{% /md %}}</dd><dt class="property-optional"
             title="Optional">
         <span id="state_network_nodejs">
 <a href="#state_network_nodejs" style="color: inherit; text-decoration: inherit;">network</a>
@@ -1238,8 +1101,7 @@ project and facility as the device
         <span class="property-type">string</span>
     </dt>
     <dd>{{% md %}}Subnet network address
-{{% /md %}}</dd>
-    <dt class="property-optional"
+{{% /md %}}</dd><dt class="property-optional"
             title="Optional">
         <span id="state_public_nodejs">
 <a href="#state_public_nodejs" style="color: inherit; text-decoration: inherit;">public</a>
@@ -1248,14 +1110,11 @@ project and facility as the device
         <span class="property-type">boolean</span>
     </dt>
     <dd>{{% md %}}boolean flag whether subnet is reachable from the Internet
-{{% /md %}}</dd>
-</dl>
+{{% /md %}}</dd></dl>
 {{% /choosable %}}
 
 {{% choosable language python %}}
-<dl class="resources-properties">
-
-    <dt class="property-optional"
+<dl class="resources-properties"><dt class="property-optional"
             title="Optional">
         <span id="state_address_python">
 <a href="#state_address_python" style="color: inherit; text-decoration: inherit;">address</a>
@@ -1263,8 +1122,7 @@ project and facility as the device
         <span class="property-indicator"></span>
         <span class="property-type">str</span>
     </dt>
-    <dd>{{% md %}}{{% /md %}}</dd>
-    <dt class="property-optional"
+    <dd>{{% md %}}{{% /md %}}</dd><dt class="property-optional"
             title="Optional">
         <span id="state_address_family_python">
 <a href="#state_address_family_python" style="color: inherit; text-decoration: inherit;">address_<wbr>family</a>
@@ -1273,8 +1131,7 @@ project and facility as the device
         <span class="property-type">int</span>
     </dt>
     <dd>{{% md %}}Address family as integer (4 or 6)
-{{% /md %}}</dd>
-    <dt class="property-optional"
+{{% /md %}}</dd><dt class="property-optional"
             title="Optional">
         <span id="state_cidr_python">
 <a href="#state_cidr_python" style="color: inherit; text-decoration: inherit;">cidr</a>
@@ -1283,8 +1140,7 @@ project and facility as the device
         <span class="property-type">int</span>
     </dt>
     <dd>{{% md %}}length of CIDR prefix of the subnet as integer
-{{% /md %}}</dd>
-    <dt class="property-optional"
+{{% /md %}}</dd><dt class="property-optional"
             title="Optional">
         <span id="state_cidr_notation_python">
 <a href="#state_cidr_notation_python" style="color: inherit; text-decoration: inherit;">cidr_<wbr>notation</a>
@@ -1294,8 +1150,7 @@ project and facility as the device
     </dt>
     <dd>{{% md %}}CIDR notation of subnet from block reserved in the same
 project and facility as the device
-{{% /md %}}</dd>
-    <dt class="property-optional"
+{{% /md %}}</dd><dt class="property-optional"
             title="Optional">
         <span id="state_device_id_python">
 <a href="#state_device_id_python" style="color: inherit; text-decoration: inherit;">device_<wbr>id</a>
@@ -1304,8 +1159,7 @@ project and facility as the device
         <span class="property-type">str</span>
     </dt>
     <dd>{{% md %}}ID of device to which to assign the subnet
-{{% /md %}}</dd>
-    <dt class="property-optional"
+{{% /md %}}</dd><dt class="property-optional"
             title="Optional">
         <span id="state_gateway_python">
 <a href="#state_gateway_python" style="color: inherit; text-decoration: inherit;">gateway</a>
@@ -1314,8 +1168,7 @@ project and facility as the device
         <span class="property-type">str</span>
     </dt>
     <dd>{{% md %}}IP address of gateway for the subnet
-{{% /md %}}</dd>
-    <dt class="property-optional"
+{{% /md %}}</dd><dt class="property-optional"
             title="Optional">
         <span id="state_global__python">
 <a href="#state_global__python" style="color: inherit; text-decoration: inherit;">global_</a>
@@ -1323,8 +1176,7 @@ project and facility as the device
         <span class="property-indicator"></span>
         <span class="property-type">bool</span>
     </dt>
-    <dd>{{% md %}}{{% /md %}}</dd>
-    <dt class="property-optional"
+    <dd>{{% md %}}{{% /md %}}</dd><dt class="property-optional"
             title="Optional">
         <span id="state_manageable_python">
 <a href="#state_manageable_python" style="color: inherit; text-decoration: inherit;">manageable</a>
@@ -1332,8 +1184,7 @@ project and facility as the device
         <span class="property-indicator"></span>
         <span class="property-type">bool</span>
     </dt>
-    <dd>{{% md %}}{{% /md %}}</dd>
-    <dt class="property-optional"
+    <dd>{{% md %}}{{% /md %}}</dd><dt class="property-optional"
             title="Optional">
         <span id="state_management_python">
 <a href="#state_management_python" style="color: inherit; text-decoration: inherit;">management</a>
@@ -1341,8 +1192,7 @@ project and facility as the device
         <span class="property-indicator"></span>
         <span class="property-type">bool</span>
     </dt>
-    <dd>{{% md %}}{{% /md %}}</dd>
-    <dt class="property-optional"
+    <dd>{{% md %}}{{% /md %}}</dd><dt class="property-optional"
             title="Optional">
         <span id="state_netmask_python">
 <a href="#state_netmask_python" style="color: inherit; text-decoration: inherit;">netmask</a>
@@ -1351,8 +1201,7 @@ project and facility as the device
         <span class="property-type">str</span>
     </dt>
     <dd>{{% md %}}Subnet mask in decimal notation, e.g. "255.255.255.0"
-{{% /md %}}</dd>
-    <dt class="property-optional"
+{{% /md %}}</dd><dt class="property-optional"
             title="Optional">
         <span id="state_network_python">
 <a href="#state_network_python" style="color: inherit; text-decoration: inherit;">network</a>
@@ -1361,8 +1210,7 @@ project and facility as the device
         <span class="property-type">str</span>
     </dt>
     <dd>{{% md %}}Subnet network address
-{{% /md %}}</dd>
-    <dt class="property-optional"
+{{% /md %}}</dd><dt class="property-optional"
             title="Optional">
         <span id="state_public_python">
 <a href="#state_public_python" style="color: inherit; text-decoration: inherit;">public</a>
@@ -1371,8 +1219,7 @@ project and facility as the device
         <span class="property-type">bool</span>
     </dt>
     <dd>{{% md %}}boolean flag whether subnet is reachable from the Internet
-{{% /md %}}</dd>
-</dl>
+{{% /md %}}</dd></dl>
 {{% /choosable %}}
 
 
@@ -1388,6 +1235,6 @@ project and facility as the device
 	<dt>License</dt>
 	<dd>Apache-2.0</dd>
 	<dt>Notes</dt>
-	<dd>This Pulumi package is based on the [`metal` Terraform Provider](https://github.com/equinix/terraform-provider-metal).</dd>
+	<dd>{{% md %}}This Pulumi package is based on the [`metal` Terraform Provider](https://github.com/equinix/terraform-provider-metal).{{% /md %}}</dd>
 </dl>
 

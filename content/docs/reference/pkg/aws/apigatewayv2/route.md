@@ -14,11 +14,17 @@ Manages an Amazon API Gateway Version 2 route.
 More information can be found in the [Amazon API Gateway Developer Guide](https://docs.aws.amazon.com/apigateway/latest/developerguide/welcome.html) for [WebSocket](https://docs.aws.amazon.com/apigateway/latest/developerguide/websocket-api-develop-routes.html) and [HTTP](https://docs.aws.amazon.com/apigateway/latest/developerguide/http-api-develop-routes.html) APIs.
 
 {{% examples %}}
+
 ## Example Usage
 
 {{< chooser language "typescript,python,go,csharp" / >}}
+
+
 ### Basic
-{{% example csharp %}}
+
+
+{{< example csharp >}}
+
 ```csharp
 using Pulumi;
 using Aws = Pulumi.Aws;
@@ -42,9 +48,12 @@ class MyStack : Stack
 }
 ```
 
-{{% /example %}}
 
-{{% example go %}}
+{{< /example >}}
+
+
+{{< example go >}}
+
 ```go
 package main
 
@@ -76,9 +85,12 @@ func main() {
 }
 ```
 
-{{% /example %}}
 
-{{% example python %}}
+{{< /example >}}
+
+
+{{< example python >}}
+
 ```python
 import pulumi
 import pulumi_aws as aws
@@ -91,9 +103,12 @@ example_route = aws.apigatewayv2.Route("exampleRoute",
     route_key="$default")
 ```
 
-{{% /example %}}
 
-{{% example typescript %}}
+{{< /example >}}
+
+
+{{< example typescript >}}
+
 
 ```typescript
 import * as pulumi from "@pulumi/pulumi";
@@ -109,10 +124,17 @@ const exampleRoute = new aws.apigatewayv2.Route("exampleRoute", {
 });
 ```
 
-{{% /example %}}
+
+{{< /example >}}
+
+
+
 
 ### HTTP Proxy Integration
-{{% example csharp %}}
+
+
+{{< example csharp >}}
+
 ```csharp
 using Pulumi;
 using Aws = Pulumi.Aws;
@@ -143,9 +165,12 @@ class MyStack : Stack
 }
 ```
 
-{{% /example %}}
 
-{{% example go %}}
+{{< /example >}}
+
+
+{{< example go >}}
+
 ```go
 package main
 
@@ -188,9 +213,12 @@ func main() {
 }
 ```
 
-{{% /example %}}
 
-{{% example python %}}
+{{< /example >}}
+
+
+{{< example python >}}
+
 ```python
 import pulumi
 import pulumi_aws as aws
@@ -207,9 +235,12 @@ example_route = aws.apigatewayv2.Route("exampleRoute",
     target=example_integration.id.apply(lambda id: f"integrations/{id}"))
 ```
 
-{{% /example %}}
 
-{{% example typescript %}}
+{{< /example >}}
+
+
+{{< example typescript >}}
+
 
 ```typescript
 import * as pulumi from "@pulumi/pulumi";
@@ -229,9 +260,16 @@ const exampleRoute = new aws.apigatewayv2.Route("exampleRoute", {
 });
 ```
 
-{{% /example %}}
+
+{{< /example >}}
+
+
+
+
 
 {{% /examples %}}
+
+
 
 
 ## Create a Route Resource {#create}
@@ -256,9 +294,7 @@ const exampleRoute = new aws.apigatewayv2.Route("exampleRoute", {
 
 {{% choosable language nodejs %}}
 
-<dl class="resources-properties">
-  
-    <dt
+<dl class="resources-properties"><dt
         class="property-required" title="Required">
         <span>name</span>
         <span class="property-indicator"></span>
@@ -266,9 +302,7 @@ const exampleRoute = new aws.apigatewayv2.Route("exampleRoute", {
     </dt>
     <dd>
       The unique name of the resource.
-    </dd>
-  
-    <dt
+    </dd><dt
         class="property-required" title="Required">
         <span>args</span>
         <span class="property-indicator"></span>
@@ -276,9 +310,7 @@ const exampleRoute = new aws.apigatewayv2.Route("exampleRoute", {
     </dt>
     <dd>
       The arguments to resource properties.
-    </dd>
-  
-    <dt
+    </dd><dt
         class="property-optional" title="Optional">
         <span>opts</span>
         <span class="property-indicator"></span>
@@ -286,10 +318,7 @@ const exampleRoute = new aws.apigatewayv2.Route("exampleRoute", {
     </dt>
     <dd>
       Bag of options to control resource&#39;s behavior.
-    </dd>
-  
-
-</dl>
+    </dd></dl>
 
 {{% /choosable %}}
 
@@ -315,9 +344,7 @@ const exampleRoute = new aws.apigatewayv2.Route("exampleRoute", {
 
 {{% choosable language go %}}
 
-<dl class="resources-properties">
-  
-    <dt
+<dl class="resources-properties"><dt
         class="property-optional" title="Optional">
         <span>ctx</span>
         <span class="property-indicator"></span>
@@ -325,9 +352,7 @@ const exampleRoute = new aws.apigatewayv2.Route("exampleRoute", {
     </dt>
     <dd>
       Context object for the current deployment.
-    </dd>
-  
-    <dt
+    </dd><dt
         class="property-required" title="Required">
         <span>name</span>
         <span class="property-indicator"></span>
@@ -335,9 +360,7 @@ const exampleRoute = new aws.apigatewayv2.Route("exampleRoute", {
     </dt>
     <dd>
       The unique name of the resource.
-    </dd>
-  
-    <dt
+    </dd><dt
         class="property-required" title="Required">
         <span>args</span>
         <span class="property-indicator"></span>
@@ -345,9 +368,7 @@ const exampleRoute = new aws.apigatewayv2.Route("exampleRoute", {
     </dt>
     <dd>
       The arguments to resource properties.
-    </dd>
-  
-    <dt
+    </dd><dt
         class="property-optional" title="Optional">
         <span>opts</span>
         <span class="property-indicator"></span>
@@ -355,18 +376,13 @@ const exampleRoute = new aws.apigatewayv2.Route("exampleRoute", {
     </dt>
     <dd>
       Bag of options to control resource&#39;s behavior.
-    </dd>
-  
-
-</dl>
+    </dd></dl>
 
 {{% /choosable %}}
 
 {{% choosable language csharp %}}
 
-<dl class="resources-properties">
-  
-    <dt
+<dl class="resources-properties"><dt
         class="property-required" title="Required">
         <span>name</span>
         <span class="property-indicator"></span>
@@ -374,9 +390,7 @@ const exampleRoute = new aws.apigatewayv2.Route("exampleRoute", {
     </dt>
     <dd>
       The unique name of the resource.
-    </dd>
-  
-    <dt
+    </dd><dt
         class="property-required" title="Required">
         <span>args</span>
         <span class="property-indicator"></span>
@@ -384,9 +398,7 @@ const exampleRoute = new aws.apigatewayv2.Route("exampleRoute", {
     </dt>
     <dd>
       The arguments to resource properties.
-    </dd>
-  
-    <dt
+    </dd><dt
         class="property-optional" title="Optional">
         <span>opts</span>
         <span class="property-indicator"></span>
@@ -394,10 +406,7 @@ const exampleRoute = new aws.apigatewayv2.Route("exampleRoute", {
     </dt>
     <dd>
       Bag of options to control resource&#39;s behavior.
-    </dd>
-  
-
-</dl>
+    </dd></dl>
 
 {{% /choosable %}}
 
@@ -412,9 +421,7 @@ The Route resource accepts the following [input]({{< relref "/docs/intro/concept
 
 
 {{% choosable language csharp %}}
-<dl class="resources-properties">
-
-    <dt class="property-required"
+<dl class="resources-properties"><dt class="property-required"
             title="Required">
         <span id="apiid_csharp">
 <a href="#apiid_csharp" style="color: inherit; text-decoration: inherit;">Api<wbr>Id</a>
@@ -423,8 +430,7 @@ The Route resource accepts the following [input]({{< relref "/docs/intro/concept
         <span class="property-type">string</span>
     </dt>
     <dd>{{% md %}}The API identifier.
-{{% /md %}}</dd>
-    <dt class="property-required"
+{{% /md %}}</dd><dt class="property-required"
             title="Required">
         <span id="routekey_csharp">
 <a href="#routekey_csharp" style="color: inherit; text-decoration: inherit;">Route<wbr>Key</a>
@@ -433,8 +439,7 @@ The Route resource accepts the following [input]({{< relref "/docs/intro/concept
         <span class="property-type">string</span>
     </dt>
     <dd>{{% md %}}The route key for the route. For HTTP APIs, the route key can be either `$default`, or a combination of an HTTP method and resource path, for example, `GET /pets`.
-{{% /md %}}</dd>
-    <dt class="property-optional"
+{{% /md %}}</dd><dt class="property-optional"
             title="Optional">
         <span id="apikeyrequired_csharp">
 <a href="#apikeyrequired_csharp" style="color: inherit; text-decoration: inherit;">Api<wbr>Key<wbr>Required</a>
@@ -443,8 +448,7 @@ The Route resource accepts the following [input]({{< relref "/docs/intro/concept
         <span class="property-type">bool</span>
     </dt>
     <dd>{{% md %}}Boolean whether an API key is required for the route. Defaults to `false`. Supported only for WebSocket APIs.
-{{% /md %}}</dd>
-    <dt class="property-optional"
+{{% /md %}}</dd><dt class="property-optional"
             title="Optional">
         <span id="authorizationscopes_csharp">
 <a href="#authorizationscopes_csharp" style="color: inherit; text-decoration: inherit;">Authorization<wbr>Scopes</a>
@@ -453,8 +457,7 @@ The Route resource accepts the following [input]({{< relref "/docs/intro/concept
         <span class="property-type">List&lt;string&gt;</span>
     </dt>
     <dd>{{% md %}}The authorization scopes supported by this route. The scopes are used with a JWT authorizer to authorize the method invocation.
-{{% /md %}}</dd>
-    <dt class="property-optional"
+{{% /md %}}</dd><dt class="property-optional"
             title="Optional">
         <span id="authorizationtype_csharp">
 <a href="#authorizationtype_csharp" style="color: inherit; text-decoration: inherit;">Authorization<wbr>Type</a>
@@ -466,8 +469,7 @@ The Route resource accepts the following [input]({{< relref "/docs/intro/concept
 For WebSocket APIs, valid values are `NONE` for open access, `AWS_IAM` for using AWS IAM permissions, and `CUSTOM` for using a Lambda authorizer.
 For HTTP APIs, valid values are `NONE` for open access, `JWT` for using JSON Web Tokens, `AWS_IAM` for using AWS IAM permissions, and `CUSTOM` for using a Lambda authorizer.
 Defaults to `NONE`.
-{{% /md %}}</dd>
-    <dt class="property-optional"
+{{% /md %}}</dd><dt class="property-optional"
             title="Optional">
         <span id="authorizerid_csharp">
 <a href="#authorizerid_csharp" style="color: inherit; text-decoration: inherit;">Authorizer<wbr>Id</a>
@@ -476,8 +478,7 @@ Defaults to `NONE`.
         <span class="property-type">string</span>
     </dt>
     <dd>{{% md %}}The identifier of the `aws.apigatewayv2.Authorizer` resource to be associated with this route.
-{{% /md %}}</dd>
-    <dt class="property-optional"
+{{% /md %}}</dd><dt class="property-optional"
             title="Optional">
         <span id="modelselectionexpression_csharp">
 <a href="#modelselectionexpression_csharp" style="color: inherit; text-decoration: inherit;">Model<wbr>Selection<wbr>Expression</a>
@@ -486,8 +487,7 @@ Defaults to `NONE`.
         <span class="property-type">string</span>
     </dt>
     <dd>{{% md %}}The [model selection expression](https://docs.aws.amazon.com/apigateway/latest/developerguide/apigateway-websocket-api-selection-expressions.html#apigateway-websocket-api-model-selection-expressions) for the route. Supported only for WebSocket APIs.
-{{% /md %}}</dd>
-    <dt class="property-optional"
+{{% /md %}}</dd><dt class="property-optional"
             title="Optional">
         <span id="operationname_csharp">
 <a href="#operationname_csharp" style="color: inherit; text-decoration: inherit;">Operation<wbr>Name</a>
@@ -496,8 +496,7 @@ Defaults to `NONE`.
         <span class="property-type">string</span>
     </dt>
     <dd>{{% md %}}The operation name for the route. Must be between 1 and 64 characters in length.
-{{% /md %}}</dd>
-    <dt class="property-optional"
+{{% /md %}}</dd><dt class="property-optional"
             title="Optional">
         <span id="requestmodels_csharp">
 <a href="#requestmodels_csharp" style="color: inherit; text-decoration: inherit;">Request<wbr>Models</a>
@@ -506,8 +505,7 @@ Defaults to `NONE`.
         <span class="property-type">Dictionary&lt;string, string&gt;</span>
     </dt>
     <dd>{{% md %}}The request models for the route. Supported only for WebSocket APIs.
-{{% /md %}}</dd>
-    <dt class="property-optional"
+{{% /md %}}</dd><dt class="property-optional"
             title="Optional">
         <span id="routeresponseselectionexpression_csharp">
 <a href="#routeresponseselectionexpression_csharp" style="color: inherit; text-decoration: inherit;">Route<wbr>Response<wbr>Selection<wbr>Expression</a>
@@ -516,8 +514,7 @@ Defaults to `NONE`.
         <span class="property-type">string</span>
     </dt>
     <dd>{{% md %}}The [route response selection expression](https://docs.aws.amazon.com/apigateway/latest/developerguide/apigateway-websocket-api-selection-expressions.html#apigateway-websocket-api-route-response-selection-expressions) for the route. Supported only for WebSocket APIs.
-{{% /md %}}</dd>
-    <dt class="property-optional"
+{{% /md %}}</dd><dt class="property-optional"
             title="Optional">
         <span id="target_csharp">
 <a href="#target_csharp" style="color: inherit; text-decoration: inherit;">Target</a>
@@ -526,14 +523,11 @@ Defaults to `NONE`.
         <span class="property-type">string</span>
     </dt>
     <dd>{{% md %}}The target for the route, of the form `integrations/`*`IntegrationID`*, where *`IntegrationID`* is the identifier of an `aws.apigatewayv2.Integration` resource.
-{{% /md %}}</dd>
-</dl>
+{{% /md %}}</dd></dl>
 {{% /choosable %}}
 
 {{% choosable language go %}}
-<dl class="resources-properties">
-
-    <dt class="property-required"
+<dl class="resources-properties"><dt class="property-required"
             title="Required">
         <span id="apiid_go">
 <a href="#apiid_go" style="color: inherit; text-decoration: inherit;">Api<wbr>Id</a>
@@ -542,8 +536,7 @@ Defaults to `NONE`.
         <span class="property-type">string</span>
     </dt>
     <dd>{{% md %}}The API identifier.
-{{% /md %}}</dd>
-    <dt class="property-required"
+{{% /md %}}</dd><dt class="property-required"
             title="Required">
         <span id="routekey_go">
 <a href="#routekey_go" style="color: inherit; text-decoration: inherit;">Route<wbr>Key</a>
@@ -552,8 +545,7 @@ Defaults to `NONE`.
         <span class="property-type">string</span>
     </dt>
     <dd>{{% md %}}The route key for the route. For HTTP APIs, the route key can be either `$default`, or a combination of an HTTP method and resource path, for example, `GET /pets`.
-{{% /md %}}</dd>
-    <dt class="property-optional"
+{{% /md %}}</dd><dt class="property-optional"
             title="Optional">
         <span id="apikeyrequired_go">
 <a href="#apikeyrequired_go" style="color: inherit; text-decoration: inherit;">Api<wbr>Key<wbr>Required</a>
@@ -562,8 +554,7 @@ Defaults to `NONE`.
         <span class="property-type">bool</span>
     </dt>
     <dd>{{% md %}}Boolean whether an API key is required for the route. Defaults to `false`. Supported only for WebSocket APIs.
-{{% /md %}}</dd>
-    <dt class="property-optional"
+{{% /md %}}</dd><dt class="property-optional"
             title="Optional">
         <span id="authorizationscopes_go">
 <a href="#authorizationscopes_go" style="color: inherit; text-decoration: inherit;">Authorization<wbr>Scopes</a>
@@ -572,8 +563,7 @@ Defaults to `NONE`.
         <span class="property-type">[]string</span>
     </dt>
     <dd>{{% md %}}The authorization scopes supported by this route. The scopes are used with a JWT authorizer to authorize the method invocation.
-{{% /md %}}</dd>
-    <dt class="property-optional"
+{{% /md %}}</dd><dt class="property-optional"
             title="Optional">
         <span id="authorizationtype_go">
 <a href="#authorizationtype_go" style="color: inherit; text-decoration: inherit;">Authorization<wbr>Type</a>
@@ -585,8 +575,7 @@ Defaults to `NONE`.
 For WebSocket APIs, valid values are `NONE` for open access, `AWS_IAM` for using AWS IAM permissions, and `CUSTOM` for using a Lambda authorizer.
 For HTTP APIs, valid values are `NONE` for open access, `JWT` for using JSON Web Tokens, `AWS_IAM` for using AWS IAM permissions, and `CUSTOM` for using a Lambda authorizer.
 Defaults to `NONE`.
-{{% /md %}}</dd>
-    <dt class="property-optional"
+{{% /md %}}</dd><dt class="property-optional"
             title="Optional">
         <span id="authorizerid_go">
 <a href="#authorizerid_go" style="color: inherit; text-decoration: inherit;">Authorizer<wbr>Id</a>
@@ -595,8 +584,7 @@ Defaults to `NONE`.
         <span class="property-type">string</span>
     </dt>
     <dd>{{% md %}}The identifier of the `aws.apigatewayv2.Authorizer` resource to be associated with this route.
-{{% /md %}}</dd>
-    <dt class="property-optional"
+{{% /md %}}</dd><dt class="property-optional"
             title="Optional">
         <span id="modelselectionexpression_go">
 <a href="#modelselectionexpression_go" style="color: inherit; text-decoration: inherit;">Model<wbr>Selection<wbr>Expression</a>
@@ -605,8 +593,7 @@ Defaults to `NONE`.
         <span class="property-type">string</span>
     </dt>
     <dd>{{% md %}}The [model selection expression](https://docs.aws.amazon.com/apigateway/latest/developerguide/apigateway-websocket-api-selection-expressions.html#apigateway-websocket-api-model-selection-expressions) for the route. Supported only for WebSocket APIs.
-{{% /md %}}</dd>
-    <dt class="property-optional"
+{{% /md %}}</dd><dt class="property-optional"
             title="Optional">
         <span id="operationname_go">
 <a href="#operationname_go" style="color: inherit; text-decoration: inherit;">Operation<wbr>Name</a>
@@ -615,8 +602,7 @@ Defaults to `NONE`.
         <span class="property-type">string</span>
     </dt>
     <dd>{{% md %}}The operation name for the route. Must be between 1 and 64 characters in length.
-{{% /md %}}</dd>
-    <dt class="property-optional"
+{{% /md %}}</dd><dt class="property-optional"
             title="Optional">
         <span id="requestmodels_go">
 <a href="#requestmodels_go" style="color: inherit; text-decoration: inherit;">Request<wbr>Models</a>
@@ -625,8 +611,7 @@ Defaults to `NONE`.
         <span class="property-type">map[string]string</span>
     </dt>
     <dd>{{% md %}}The request models for the route. Supported only for WebSocket APIs.
-{{% /md %}}</dd>
-    <dt class="property-optional"
+{{% /md %}}</dd><dt class="property-optional"
             title="Optional">
         <span id="routeresponseselectionexpression_go">
 <a href="#routeresponseselectionexpression_go" style="color: inherit; text-decoration: inherit;">Route<wbr>Response<wbr>Selection<wbr>Expression</a>
@@ -635,8 +620,7 @@ Defaults to `NONE`.
         <span class="property-type">string</span>
     </dt>
     <dd>{{% md %}}The [route response selection expression](https://docs.aws.amazon.com/apigateway/latest/developerguide/apigateway-websocket-api-selection-expressions.html#apigateway-websocket-api-route-response-selection-expressions) for the route. Supported only for WebSocket APIs.
-{{% /md %}}</dd>
-    <dt class="property-optional"
+{{% /md %}}</dd><dt class="property-optional"
             title="Optional">
         <span id="target_go">
 <a href="#target_go" style="color: inherit; text-decoration: inherit;">Target</a>
@@ -645,14 +629,11 @@ Defaults to `NONE`.
         <span class="property-type">string</span>
     </dt>
     <dd>{{% md %}}The target for the route, of the form `integrations/`*`IntegrationID`*, where *`IntegrationID`* is the identifier of an `aws.apigatewayv2.Integration` resource.
-{{% /md %}}</dd>
-</dl>
+{{% /md %}}</dd></dl>
 {{% /choosable %}}
 
 {{% choosable language nodejs %}}
-<dl class="resources-properties">
-
-    <dt class="property-required"
+<dl class="resources-properties"><dt class="property-required"
             title="Required">
         <span id="apiid_nodejs">
 <a href="#apiid_nodejs" style="color: inherit; text-decoration: inherit;">api<wbr>Id</a>
@@ -661,8 +642,7 @@ Defaults to `NONE`.
         <span class="property-type">string</span>
     </dt>
     <dd>{{% md %}}The API identifier.
-{{% /md %}}</dd>
-    <dt class="property-required"
+{{% /md %}}</dd><dt class="property-required"
             title="Required">
         <span id="routekey_nodejs">
 <a href="#routekey_nodejs" style="color: inherit; text-decoration: inherit;">route<wbr>Key</a>
@@ -671,8 +651,7 @@ Defaults to `NONE`.
         <span class="property-type">string</span>
     </dt>
     <dd>{{% md %}}The route key for the route. For HTTP APIs, the route key can be either `$default`, or a combination of an HTTP method and resource path, for example, `GET /pets`.
-{{% /md %}}</dd>
-    <dt class="property-optional"
+{{% /md %}}</dd><dt class="property-optional"
             title="Optional">
         <span id="apikeyrequired_nodejs">
 <a href="#apikeyrequired_nodejs" style="color: inherit; text-decoration: inherit;">api<wbr>Key<wbr>Required</a>
@@ -681,8 +660,7 @@ Defaults to `NONE`.
         <span class="property-type">boolean</span>
     </dt>
     <dd>{{% md %}}Boolean whether an API key is required for the route. Defaults to `false`. Supported only for WebSocket APIs.
-{{% /md %}}</dd>
-    <dt class="property-optional"
+{{% /md %}}</dd><dt class="property-optional"
             title="Optional">
         <span id="authorizationscopes_nodejs">
 <a href="#authorizationscopes_nodejs" style="color: inherit; text-decoration: inherit;">authorization<wbr>Scopes</a>
@@ -691,8 +669,7 @@ Defaults to `NONE`.
         <span class="property-type">string[]</span>
     </dt>
     <dd>{{% md %}}The authorization scopes supported by this route. The scopes are used with a JWT authorizer to authorize the method invocation.
-{{% /md %}}</dd>
-    <dt class="property-optional"
+{{% /md %}}</dd><dt class="property-optional"
             title="Optional">
         <span id="authorizationtype_nodejs">
 <a href="#authorizationtype_nodejs" style="color: inherit; text-decoration: inherit;">authorization<wbr>Type</a>
@@ -704,8 +681,7 @@ Defaults to `NONE`.
 For WebSocket APIs, valid values are `NONE` for open access, `AWS_IAM` for using AWS IAM permissions, and `CUSTOM` for using a Lambda authorizer.
 For HTTP APIs, valid values are `NONE` for open access, `JWT` for using JSON Web Tokens, `AWS_IAM` for using AWS IAM permissions, and `CUSTOM` for using a Lambda authorizer.
 Defaults to `NONE`.
-{{% /md %}}</dd>
-    <dt class="property-optional"
+{{% /md %}}</dd><dt class="property-optional"
             title="Optional">
         <span id="authorizerid_nodejs">
 <a href="#authorizerid_nodejs" style="color: inherit; text-decoration: inherit;">authorizer<wbr>Id</a>
@@ -714,8 +690,7 @@ Defaults to `NONE`.
         <span class="property-type">string</span>
     </dt>
     <dd>{{% md %}}The identifier of the `aws.apigatewayv2.Authorizer` resource to be associated with this route.
-{{% /md %}}</dd>
-    <dt class="property-optional"
+{{% /md %}}</dd><dt class="property-optional"
             title="Optional">
         <span id="modelselectionexpression_nodejs">
 <a href="#modelselectionexpression_nodejs" style="color: inherit; text-decoration: inherit;">model<wbr>Selection<wbr>Expression</a>
@@ -724,8 +699,7 @@ Defaults to `NONE`.
         <span class="property-type">string</span>
     </dt>
     <dd>{{% md %}}The [model selection expression](https://docs.aws.amazon.com/apigateway/latest/developerguide/apigateway-websocket-api-selection-expressions.html#apigateway-websocket-api-model-selection-expressions) for the route. Supported only for WebSocket APIs.
-{{% /md %}}</dd>
-    <dt class="property-optional"
+{{% /md %}}</dd><dt class="property-optional"
             title="Optional">
         <span id="operationname_nodejs">
 <a href="#operationname_nodejs" style="color: inherit; text-decoration: inherit;">operation<wbr>Name</a>
@@ -734,8 +708,7 @@ Defaults to `NONE`.
         <span class="property-type">string</span>
     </dt>
     <dd>{{% md %}}The operation name for the route. Must be between 1 and 64 characters in length.
-{{% /md %}}</dd>
-    <dt class="property-optional"
+{{% /md %}}</dd><dt class="property-optional"
             title="Optional">
         <span id="requestmodels_nodejs">
 <a href="#requestmodels_nodejs" style="color: inherit; text-decoration: inherit;">request<wbr>Models</a>
@@ -744,8 +717,7 @@ Defaults to `NONE`.
         <span class="property-type">{[key: string]: string}</span>
     </dt>
     <dd>{{% md %}}The request models for the route. Supported only for WebSocket APIs.
-{{% /md %}}</dd>
-    <dt class="property-optional"
+{{% /md %}}</dd><dt class="property-optional"
             title="Optional">
         <span id="routeresponseselectionexpression_nodejs">
 <a href="#routeresponseselectionexpression_nodejs" style="color: inherit; text-decoration: inherit;">route<wbr>Response<wbr>Selection<wbr>Expression</a>
@@ -754,8 +726,7 @@ Defaults to `NONE`.
         <span class="property-type">string</span>
     </dt>
     <dd>{{% md %}}The [route response selection expression](https://docs.aws.amazon.com/apigateway/latest/developerguide/apigateway-websocket-api-selection-expressions.html#apigateway-websocket-api-route-response-selection-expressions) for the route. Supported only for WebSocket APIs.
-{{% /md %}}</dd>
-    <dt class="property-optional"
+{{% /md %}}</dd><dt class="property-optional"
             title="Optional">
         <span id="target_nodejs">
 <a href="#target_nodejs" style="color: inherit; text-decoration: inherit;">target</a>
@@ -764,14 +735,11 @@ Defaults to `NONE`.
         <span class="property-type">string</span>
     </dt>
     <dd>{{% md %}}The target for the route, of the form `integrations/`*`IntegrationID`*, where *`IntegrationID`* is the identifier of an `aws.apigatewayv2.Integration` resource.
-{{% /md %}}</dd>
-</dl>
+{{% /md %}}</dd></dl>
 {{% /choosable %}}
 
 {{% choosable language python %}}
-<dl class="resources-properties">
-
-    <dt class="property-required"
+<dl class="resources-properties"><dt class="property-required"
             title="Required">
         <span id="api_id_python">
 <a href="#api_id_python" style="color: inherit; text-decoration: inherit;">api_<wbr>id</a>
@@ -780,8 +748,7 @@ Defaults to `NONE`.
         <span class="property-type">str</span>
     </dt>
     <dd>{{% md %}}The API identifier.
-{{% /md %}}</dd>
-    <dt class="property-required"
+{{% /md %}}</dd><dt class="property-required"
             title="Required">
         <span id="route_key_python">
 <a href="#route_key_python" style="color: inherit; text-decoration: inherit;">route_<wbr>key</a>
@@ -790,8 +757,7 @@ Defaults to `NONE`.
         <span class="property-type">str</span>
     </dt>
     <dd>{{% md %}}The route key for the route. For HTTP APIs, the route key can be either `$default`, or a combination of an HTTP method and resource path, for example, `GET /pets`.
-{{% /md %}}</dd>
-    <dt class="property-optional"
+{{% /md %}}</dd><dt class="property-optional"
             title="Optional">
         <span id="api_key_required_python">
 <a href="#api_key_required_python" style="color: inherit; text-decoration: inherit;">api_<wbr>key_<wbr>required</a>
@@ -800,8 +766,7 @@ Defaults to `NONE`.
         <span class="property-type">bool</span>
     </dt>
     <dd>{{% md %}}Boolean whether an API key is required for the route. Defaults to `false`. Supported only for WebSocket APIs.
-{{% /md %}}</dd>
-    <dt class="property-optional"
+{{% /md %}}</dd><dt class="property-optional"
             title="Optional">
         <span id="authorization_scopes_python">
 <a href="#authorization_scopes_python" style="color: inherit; text-decoration: inherit;">authorization_<wbr>scopes</a>
@@ -810,8 +775,7 @@ Defaults to `NONE`.
         <span class="property-type">Sequence[str]</span>
     </dt>
     <dd>{{% md %}}The authorization scopes supported by this route. The scopes are used with a JWT authorizer to authorize the method invocation.
-{{% /md %}}</dd>
-    <dt class="property-optional"
+{{% /md %}}</dd><dt class="property-optional"
             title="Optional">
         <span id="authorization_type_python">
 <a href="#authorization_type_python" style="color: inherit; text-decoration: inherit;">authorization_<wbr>type</a>
@@ -823,8 +787,7 @@ Defaults to `NONE`.
 For WebSocket APIs, valid values are `NONE` for open access, `AWS_IAM` for using AWS IAM permissions, and `CUSTOM` for using a Lambda authorizer.
 For HTTP APIs, valid values are `NONE` for open access, `JWT` for using JSON Web Tokens, `AWS_IAM` for using AWS IAM permissions, and `CUSTOM` for using a Lambda authorizer.
 Defaults to `NONE`.
-{{% /md %}}</dd>
-    <dt class="property-optional"
+{{% /md %}}</dd><dt class="property-optional"
             title="Optional">
         <span id="authorizer_id_python">
 <a href="#authorizer_id_python" style="color: inherit; text-decoration: inherit;">authorizer_<wbr>id</a>
@@ -833,8 +796,7 @@ Defaults to `NONE`.
         <span class="property-type">str</span>
     </dt>
     <dd>{{% md %}}The identifier of the `aws.apigatewayv2.Authorizer` resource to be associated with this route.
-{{% /md %}}</dd>
-    <dt class="property-optional"
+{{% /md %}}</dd><dt class="property-optional"
             title="Optional">
         <span id="model_selection_expression_python">
 <a href="#model_selection_expression_python" style="color: inherit; text-decoration: inherit;">model_<wbr>selection_<wbr>expression</a>
@@ -843,8 +805,7 @@ Defaults to `NONE`.
         <span class="property-type">str</span>
     </dt>
     <dd>{{% md %}}The [model selection expression](https://docs.aws.amazon.com/apigateway/latest/developerguide/apigateway-websocket-api-selection-expressions.html#apigateway-websocket-api-model-selection-expressions) for the route. Supported only for WebSocket APIs.
-{{% /md %}}</dd>
-    <dt class="property-optional"
+{{% /md %}}</dd><dt class="property-optional"
             title="Optional">
         <span id="operation_name_python">
 <a href="#operation_name_python" style="color: inherit; text-decoration: inherit;">operation_<wbr>name</a>
@@ -853,8 +814,7 @@ Defaults to `NONE`.
         <span class="property-type">str</span>
     </dt>
     <dd>{{% md %}}The operation name for the route. Must be between 1 and 64 characters in length.
-{{% /md %}}</dd>
-    <dt class="property-optional"
+{{% /md %}}</dd><dt class="property-optional"
             title="Optional">
         <span id="request_models_python">
 <a href="#request_models_python" style="color: inherit; text-decoration: inherit;">request_<wbr>models</a>
@@ -863,8 +823,7 @@ Defaults to `NONE`.
         <span class="property-type">Mapping[str, str]</span>
     </dt>
     <dd>{{% md %}}The request models for the route. Supported only for WebSocket APIs.
-{{% /md %}}</dd>
-    <dt class="property-optional"
+{{% /md %}}</dd><dt class="property-optional"
             title="Optional">
         <span id="route_response_selection_expression_python">
 <a href="#route_response_selection_expression_python" style="color: inherit; text-decoration: inherit;">route_<wbr>response_<wbr>selection_<wbr>expression</a>
@@ -873,8 +832,7 @@ Defaults to `NONE`.
         <span class="property-type">str</span>
     </dt>
     <dd>{{% md %}}The [route response selection expression](https://docs.aws.amazon.com/apigateway/latest/developerguide/apigateway-websocket-api-selection-expressions.html#apigateway-websocket-api-route-response-selection-expressions) for the route. Supported only for WebSocket APIs.
-{{% /md %}}</dd>
-    <dt class="property-optional"
+{{% /md %}}</dd><dt class="property-optional"
             title="Optional">
         <span id="target_python">
 <a href="#target_python" style="color: inherit; text-decoration: inherit;">target</a>
@@ -883,8 +841,7 @@ Defaults to `NONE`.
         <span class="property-type">str</span>
     </dt>
     <dd>{{% md %}}The target for the route, of the form `integrations/`*`IntegrationID`*, where *`IntegrationID`* is the identifier of an `aws.apigatewayv2.Integration` resource.
-{{% /md %}}</dd>
-</dl>
+{{% /md %}}</dd></dl>
 {{% /choosable %}}
 
 
@@ -895,9 +852,7 @@ All [input](#inputs) properties are implicitly available as output properties. A
 
 
 {{% choosable language csharp %}}
-<dl class="resources-properties">
-
-    <dt class="property-"
+<dl class="resources-properties"><dt class="property-"
             title="">
         <span id="id_csharp">
 <a href="#id_csharp" style="color: inherit; text-decoration: inherit;">Id</a>
@@ -905,14 +860,11 @@ All [input](#inputs) properties are implicitly available as output properties. A
         <span class="property-indicator"></span>
         <span class="property-type">string</span>
     </dt>
-    <dd>{{% md %}}The provider-assigned unique ID for this managed resource.{{% /md %}}</dd>
-</dl>
+    <dd>{{% md %}}The provider-assigned unique ID for this managed resource.{{% /md %}}</dd></dl>
 {{% /choosable %}}
 
 {{% choosable language go %}}
-<dl class="resources-properties">
-
-    <dt class="property-"
+<dl class="resources-properties"><dt class="property-"
             title="">
         <span id="id_go">
 <a href="#id_go" style="color: inherit; text-decoration: inherit;">Id</a>
@@ -920,14 +872,11 @@ All [input](#inputs) properties are implicitly available as output properties. A
         <span class="property-indicator"></span>
         <span class="property-type">string</span>
     </dt>
-    <dd>{{% md %}}The provider-assigned unique ID for this managed resource.{{% /md %}}</dd>
-</dl>
+    <dd>{{% md %}}The provider-assigned unique ID for this managed resource.{{% /md %}}</dd></dl>
 {{% /choosable %}}
 
 {{% choosable language nodejs %}}
-<dl class="resources-properties">
-
-    <dt class="property-"
+<dl class="resources-properties"><dt class="property-"
             title="">
         <span id="id_nodejs">
 <a href="#id_nodejs" style="color: inherit; text-decoration: inherit;">id</a>
@@ -935,14 +884,11 @@ All [input](#inputs) properties are implicitly available as output properties. A
         <span class="property-indicator"></span>
         <span class="property-type">string</span>
     </dt>
-    <dd>{{% md %}}The provider-assigned unique ID for this managed resource.{{% /md %}}</dd>
-</dl>
+    <dd>{{% md %}}The provider-assigned unique ID for this managed resource.{{% /md %}}</dd></dl>
 {{% /choosable %}}
 
 {{% choosable language python %}}
-<dl class="resources-properties">
-
-    <dt class="property-"
+<dl class="resources-properties"><dt class="property-"
             title="">
         <span id="id_python">
 <a href="#id_python" style="color: inherit; text-decoration: inherit;">id</a>
@@ -950,8 +896,7 @@ All [input](#inputs) properties are implicitly available as output properties. A
         <span class="property-indicator"></span>
         <span class="property-type">str</span>
     </dt>
-    <dd>{{% md %}}The provider-assigned unique ID for this managed resource.{{% /md %}}</dd>
-</dl>
+    <dd>{{% md %}}The provider-assigned unique ID for this managed resource.{{% /md %}}</dd></dl>
 {{% /choosable %}}
 
 
@@ -1078,9 +1023,7 @@ The following state arguments are supported:
 
 
 {{% choosable language csharp %}}
-<dl class="resources-properties">
-
-    <dt class="property-optional"
+<dl class="resources-properties"><dt class="property-optional"
             title="Optional">
         <span id="state_apiid_csharp">
 <a href="#state_apiid_csharp" style="color: inherit; text-decoration: inherit;">Api<wbr>Id</a>
@@ -1089,8 +1032,7 @@ The following state arguments are supported:
         <span class="property-type">string</span>
     </dt>
     <dd>{{% md %}}The API identifier.
-{{% /md %}}</dd>
-    <dt class="property-optional"
+{{% /md %}}</dd><dt class="property-optional"
             title="Optional">
         <span id="state_apikeyrequired_csharp">
 <a href="#state_apikeyrequired_csharp" style="color: inherit; text-decoration: inherit;">Api<wbr>Key<wbr>Required</a>
@@ -1099,8 +1041,7 @@ The following state arguments are supported:
         <span class="property-type">bool</span>
     </dt>
     <dd>{{% md %}}Boolean whether an API key is required for the route. Defaults to `false`. Supported only for WebSocket APIs.
-{{% /md %}}</dd>
-    <dt class="property-optional"
+{{% /md %}}</dd><dt class="property-optional"
             title="Optional">
         <span id="state_authorizationscopes_csharp">
 <a href="#state_authorizationscopes_csharp" style="color: inherit; text-decoration: inherit;">Authorization<wbr>Scopes</a>
@@ -1109,8 +1050,7 @@ The following state arguments are supported:
         <span class="property-type">List&lt;string&gt;</span>
     </dt>
     <dd>{{% md %}}The authorization scopes supported by this route. The scopes are used with a JWT authorizer to authorize the method invocation.
-{{% /md %}}</dd>
-    <dt class="property-optional"
+{{% /md %}}</dd><dt class="property-optional"
             title="Optional">
         <span id="state_authorizationtype_csharp">
 <a href="#state_authorizationtype_csharp" style="color: inherit; text-decoration: inherit;">Authorization<wbr>Type</a>
@@ -1122,8 +1062,7 @@ The following state arguments are supported:
 For WebSocket APIs, valid values are `NONE` for open access, `AWS_IAM` for using AWS IAM permissions, and `CUSTOM` for using a Lambda authorizer.
 For HTTP APIs, valid values are `NONE` for open access, `JWT` for using JSON Web Tokens, `AWS_IAM` for using AWS IAM permissions, and `CUSTOM` for using a Lambda authorizer.
 Defaults to `NONE`.
-{{% /md %}}</dd>
-    <dt class="property-optional"
+{{% /md %}}</dd><dt class="property-optional"
             title="Optional">
         <span id="state_authorizerid_csharp">
 <a href="#state_authorizerid_csharp" style="color: inherit; text-decoration: inherit;">Authorizer<wbr>Id</a>
@@ -1132,8 +1071,7 @@ Defaults to `NONE`.
         <span class="property-type">string</span>
     </dt>
     <dd>{{% md %}}The identifier of the `aws.apigatewayv2.Authorizer` resource to be associated with this route.
-{{% /md %}}</dd>
-    <dt class="property-optional"
+{{% /md %}}</dd><dt class="property-optional"
             title="Optional">
         <span id="state_modelselectionexpression_csharp">
 <a href="#state_modelselectionexpression_csharp" style="color: inherit; text-decoration: inherit;">Model<wbr>Selection<wbr>Expression</a>
@@ -1142,8 +1080,7 @@ Defaults to `NONE`.
         <span class="property-type">string</span>
     </dt>
     <dd>{{% md %}}The [model selection expression](https://docs.aws.amazon.com/apigateway/latest/developerguide/apigateway-websocket-api-selection-expressions.html#apigateway-websocket-api-model-selection-expressions) for the route. Supported only for WebSocket APIs.
-{{% /md %}}</dd>
-    <dt class="property-optional"
+{{% /md %}}</dd><dt class="property-optional"
             title="Optional">
         <span id="state_operationname_csharp">
 <a href="#state_operationname_csharp" style="color: inherit; text-decoration: inherit;">Operation<wbr>Name</a>
@@ -1152,8 +1089,7 @@ Defaults to `NONE`.
         <span class="property-type">string</span>
     </dt>
     <dd>{{% md %}}The operation name for the route. Must be between 1 and 64 characters in length.
-{{% /md %}}</dd>
-    <dt class="property-optional"
+{{% /md %}}</dd><dt class="property-optional"
             title="Optional">
         <span id="state_requestmodels_csharp">
 <a href="#state_requestmodels_csharp" style="color: inherit; text-decoration: inherit;">Request<wbr>Models</a>
@@ -1162,8 +1098,7 @@ Defaults to `NONE`.
         <span class="property-type">Dictionary&lt;string, string&gt;</span>
     </dt>
     <dd>{{% md %}}The request models for the route. Supported only for WebSocket APIs.
-{{% /md %}}</dd>
-    <dt class="property-optional"
+{{% /md %}}</dd><dt class="property-optional"
             title="Optional">
         <span id="state_routekey_csharp">
 <a href="#state_routekey_csharp" style="color: inherit; text-decoration: inherit;">Route<wbr>Key</a>
@@ -1172,8 +1107,7 @@ Defaults to `NONE`.
         <span class="property-type">string</span>
     </dt>
     <dd>{{% md %}}The route key for the route. For HTTP APIs, the route key can be either `$default`, or a combination of an HTTP method and resource path, for example, `GET /pets`.
-{{% /md %}}</dd>
-    <dt class="property-optional"
+{{% /md %}}</dd><dt class="property-optional"
             title="Optional">
         <span id="state_routeresponseselectionexpression_csharp">
 <a href="#state_routeresponseselectionexpression_csharp" style="color: inherit; text-decoration: inherit;">Route<wbr>Response<wbr>Selection<wbr>Expression</a>
@@ -1182,8 +1116,7 @@ Defaults to `NONE`.
         <span class="property-type">string</span>
     </dt>
     <dd>{{% md %}}The [route response selection expression](https://docs.aws.amazon.com/apigateway/latest/developerguide/apigateway-websocket-api-selection-expressions.html#apigateway-websocket-api-route-response-selection-expressions) for the route. Supported only for WebSocket APIs.
-{{% /md %}}</dd>
-    <dt class="property-optional"
+{{% /md %}}</dd><dt class="property-optional"
             title="Optional">
         <span id="state_target_csharp">
 <a href="#state_target_csharp" style="color: inherit; text-decoration: inherit;">Target</a>
@@ -1192,14 +1125,11 @@ Defaults to `NONE`.
         <span class="property-type">string</span>
     </dt>
     <dd>{{% md %}}The target for the route, of the form `integrations/`*`IntegrationID`*, where *`IntegrationID`* is the identifier of an `aws.apigatewayv2.Integration` resource.
-{{% /md %}}</dd>
-</dl>
+{{% /md %}}</dd></dl>
 {{% /choosable %}}
 
 {{% choosable language go %}}
-<dl class="resources-properties">
-
-    <dt class="property-optional"
+<dl class="resources-properties"><dt class="property-optional"
             title="Optional">
         <span id="state_apiid_go">
 <a href="#state_apiid_go" style="color: inherit; text-decoration: inherit;">Api<wbr>Id</a>
@@ -1208,8 +1138,7 @@ Defaults to `NONE`.
         <span class="property-type">string</span>
     </dt>
     <dd>{{% md %}}The API identifier.
-{{% /md %}}</dd>
-    <dt class="property-optional"
+{{% /md %}}</dd><dt class="property-optional"
             title="Optional">
         <span id="state_apikeyrequired_go">
 <a href="#state_apikeyrequired_go" style="color: inherit; text-decoration: inherit;">Api<wbr>Key<wbr>Required</a>
@@ -1218,8 +1147,7 @@ Defaults to `NONE`.
         <span class="property-type">bool</span>
     </dt>
     <dd>{{% md %}}Boolean whether an API key is required for the route. Defaults to `false`. Supported only for WebSocket APIs.
-{{% /md %}}</dd>
-    <dt class="property-optional"
+{{% /md %}}</dd><dt class="property-optional"
             title="Optional">
         <span id="state_authorizationscopes_go">
 <a href="#state_authorizationscopes_go" style="color: inherit; text-decoration: inherit;">Authorization<wbr>Scopes</a>
@@ -1228,8 +1156,7 @@ Defaults to `NONE`.
         <span class="property-type">[]string</span>
     </dt>
     <dd>{{% md %}}The authorization scopes supported by this route. The scopes are used with a JWT authorizer to authorize the method invocation.
-{{% /md %}}</dd>
-    <dt class="property-optional"
+{{% /md %}}</dd><dt class="property-optional"
             title="Optional">
         <span id="state_authorizationtype_go">
 <a href="#state_authorizationtype_go" style="color: inherit; text-decoration: inherit;">Authorization<wbr>Type</a>
@@ -1241,8 +1168,7 @@ Defaults to `NONE`.
 For WebSocket APIs, valid values are `NONE` for open access, `AWS_IAM` for using AWS IAM permissions, and `CUSTOM` for using a Lambda authorizer.
 For HTTP APIs, valid values are `NONE` for open access, `JWT` for using JSON Web Tokens, `AWS_IAM` for using AWS IAM permissions, and `CUSTOM` for using a Lambda authorizer.
 Defaults to `NONE`.
-{{% /md %}}</dd>
-    <dt class="property-optional"
+{{% /md %}}</dd><dt class="property-optional"
             title="Optional">
         <span id="state_authorizerid_go">
 <a href="#state_authorizerid_go" style="color: inherit; text-decoration: inherit;">Authorizer<wbr>Id</a>
@@ -1251,8 +1177,7 @@ Defaults to `NONE`.
         <span class="property-type">string</span>
     </dt>
     <dd>{{% md %}}The identifier of the `aws.apigatewayv2.Authorizer` resource to be associated with this route.
-{{% /md %}}</dd>
-    <dt class="property-optional"
+{{% /md %}}</dd><dt class="property-optional"
             title="Optional">
         <span id="state_modelselectionexpression_go">
 <a href="#state_modelselectionexpression_go" style="color: inherit; text-decoration: inherit;">Model<wbr>Selection<wbr>Expression</a>
@@ -1261,8 +1186,7 @@ Defaults to `NONE`.
         <span class="property-type">string</span>
     </dt>
     <dd>{{% md %}}The [model selection expression](https://docs.aws.amazon.com/apigateway/latest/developerguide/apigateway-websocket-api-selection-expressions.html#apigateway-websocket-api-model-selection-expressions) for the route. Supported only for WebSocket APIs.
-{{% /md %}}</dd>
-    <dt class="property-optional"
+{{% /md %}}</dd><dt class="property-optional"
             title="Optional">
         <span id="state_operationname_go">
 <a href="#state_operationname_go" style="color: inherit; text-decoration: inherit;">Operation<wbr>Name</a>
@@ -1271,8 +1195,7 @@ Defaults to `NONE`.
         <span class="property-type">string</span>
     </dt>
     <dd>{{% md %}}The operation name for the route. Must be between 1 and 64 characters in length.
-{{% /md %}}</dd>
-    <dt class="property-optional"
+{{% /md %}}</dd><dt class="property-optional"
             title="Optional">
         <span id="state_requestmodels_go">
 <a href="#state_requestmodels_go" style="color: inherit; text-decoration: inherit;">Request<wbr>Models</a>
@@ -1281,8 +1204,7 @@ Defaults to `NONE`.
         <span class="property-type">map[string]string</span>
     </dt>
     <dd>{{% md %}}The request models for the route. Supported only for WebSocket APIs.
-{{% /md %}}</dd>
-    <dt class="property-optional"
+{{% /md %}}</dd><dt class="property-optional"
             title="Optional">
         <span id="state_routekey_go">
 <a href="#state_routekey_go" style="color: inherit; text-decoration: inherit;">Route<wbr>Key</a>
@@ -1291,8 +1213,7 @@ Defaults to `NONE`.
         <span class="property-type">string</span>
     </dt>
     <dd>{{% md %}}The route key for the route. For HTTP APIs, the route key can be either `$default`, or a combination of an HTTP method and resource path, for example, `GET /pets`.
-{{% /md %}}</dd>
-    <dt class="property-optional"
+{{% /md %}}</dd><dt class="property-optional"
             title="Optional">
         <span id="state_routeresponseselectionexpression_go">
 <a href="#state_routeresponseselectionexpression_go" style="color: inherit; text-decoration: inherit;">Route<wbr>Response<wbr>Selection<wbr>Expression</a>
@@ -1301,8 +1222,7 @@ Defaults to `NONE`.
         <span class="property-type">string</span>
     </dt>
     <dd>{{% md %}}The [route response selection expression](https://docs.aws.amazon.com/apigateway/latest/developerguide/apigateway-websocket-api-selection-expressions.html#apigateway-websocket-api-route-response-selection-expressions) for the route. Supported only for WebSocket APIs.
-{{% /md %}}</dd>
-    <dt class="property-optional"
+{{% /md %}}</dd><dt class="property-optional"
             title="Optional">
         <span id="state_target_go">
 <a href="#state_target_go" style="color: inherit; text-decoration: inherit;">Target</a>
@@ -1311,14 +1231,11 @@ Defaults to `NONE`.
         <span class="property-type">string</span>
     </dt>
     <dd>{{% md %}}The target for the route, of the form `integrations/`*`IntegrationID`*, where *`IntegrationID`* is the identifier of an `aws.apigatewayv2.Integration` resource.
-{{% /md %}}</dd>
-</dl>
+{{% /md %}}</dd></dl>
 {{% /choosable %}}
 
 {{% choosable language nodejs %}}
-<dl class="resources-properties">
-
-    <dt class="property-optional"
+<dl class="resources-properties"><dt class="property-optional"
             title="Optional">
         <span id="state_apiid_nodejs">
 <a href="#state_apiid_nodejs" style="color: inherit; text-decoration: inherit;">api<wbr>Id</a>
@@ -1327,8 +1244,7 @@ Defaults to `NONE`.
         <span class="property-type">string</span>
     </dt>
     <dd>{{% md %}}The API identifier.
-{{% /md %}}</dd>
-    <dt class="property-optional"
+{{% /md %}}</dd><dt class="property-optional"
             title="Optional">
         <span id="state_apikeyrequired_nodejs">
 <a href="#state_apikeyrequired_nodejs" style="color: inherit; text-decoration: inherit;">api<wbr>Key<wbr>Required</a>
@@ -1337,8 +1253,7 @@ Defaults to `NONE`.
         <span class="property-type">boolean</span>
     </dt>
     <dd>{{% md %}}Boolean whether an API key is required for the route. Defaults to `false`. Supported only for WebSocket APIs.
-{{% /md %}}</dd>
-    <dt class="property-optional"
+{{% /md %}}</dd><dt class="property-optional"
             title="Optional">
         <span id="state_authorizationscopes_nodejs">
 <a href="#state_authorizationscopes_nodejs" style="color: inherit; text-decoration: inherit;">authorization<wbr>Scopes</a>
@@ -1347,8 +1262,7 @@ Defaults to `NONE`.
         <span class="property-type">string[]</span>
     </dt>
     <dd>{{% md %}}The authorization scopes supported by this route. The scopes are used with a JWT authorizer to authorize the method invocation.
-{{% /md %}}</dd>
-    <dt class="property-optional"
+{{% /md %}}</dd><dt class="property-optional"
             title="Optional">
         <span id="state_authorizationtype_nodejs">
 <a href="#state_authorizationtype_nodejs" style="color: inherit; text-decoration: inherit;">authorization<wbr>Type</a>
@@ -1360,8 +1274,7 @@ Defaults to `NONE`.
 For WebSocket APIs, valid values are `NONE` for open access, `AWS_IAM` for using AWS IAM permissions, and `CUSTOM` for using a Lambda authorizer.
 For HTTP APIs, valid values are `NONE` for open access, `JWT` for using JSON Web Tokens, `AWS_IAM` for using AWS IAM permissions, and `CUSTOM` for using a Lambda authorizer.
 Defaults to `NONE`.
-{{% /md %}}</dd>
-    <dt class="property-optional"
+{{% /md %}}</dd><dt class="property-optional"
             title="Optional">
         <span id="state_authorizerid_nodejs">
 <a href="#state_authorizerid_nodejs" style="color: inherit; text-decoration: inherit;">authorizer<wbr>Id</a>
@@ -1370,8 +1283,7 @@ Defaults to `NONE`.
         <span class="property-type">string</span>
     </dt>
     <dd>{{% md %}}The identifier of the `aws.apigatewayv2.Authorizer` resource to be associated with this route.
-{{% /md %}}</dd>
-    <dt class="property-optional"
+{{% /md %}}</dd><dt class="property-optional"
             title="Optional">
         <span id="state_modelselectionexpression_nodejs">
 <a href="#state_modelselectionexpression_nodejs" style="color: inherit; text-decoration: inherit;">model<wbr>Selection<wbr>Expression</a>
@@ -1380,8 +1292,7 @@ Defaults to `NONE`.
         <span class="property-type">string</span>
     </dt>
     <dd>{{% md %}}The [model selection expression](https://docs.aws.amazon.com/apigateway/latest/developerguide/apigateway-websocket-api-selection-expressions.html#apigateway-websocket-api-model-selection-expressions) for the route. Supported only for WebSocket APIs.
-{{% /md %}}</dd>
-    <dt class="property-optional"
+{{% /md %}}</dd><dt class="property-optional"
             title="Optional">
         <span id="state_operationname_nodejs">
 <a href="#state_operationname_nodejs" style="color: inherit; text-decoration: inherit;">operation<wbr>Name</a>
@@ -1390,8 +1301,7 @@ Defaults to `NONE`.
         <span class="property-type">string</span>
     </dt>
     <dd>{{% md %}}The operation name for the route. Must be between 1 and 64 characters in length.
-{{% /md %}}</dd>
-    <dt class="property-optional"
+{{% /md %}}</dd><dt class="property-optional"
             title="Optional">
         <span id="state_requestmodels_nodejs">
 <a href="#state_requestmodels_nodejs" style="color: inherit; text-decoration: inherit;">request<wbr>Models</a>
@@ -1400,8 +1310,7 @@ Defaults to `NONE`.
         <span class="property-type">{[key: string]: string}</span>
     </dt>
     <dd>{{% md %}}The request models for the route. Supported only for WebSocket APIs.
-{{% /md %}}</dd>
-    <dt class="property-optional"
+{{% /md %}}</dd><dt class="property-optional"
             title="Optional">
         <span id="state_routekey_nodejs">
 <a href="#state_routekey_nodejs" style="color: inherit; text-decoration: inherit;">route<wbr>Key</a>
@@ -1410,8 +1319,7 @@ Defaults to `NONE`.
         <span class="property-type">string</span>
     </dt>
     <dd>{{% md %}}The route key for the route. For HTTP APIs, the route key can be either `$default`, or a combination of an HTTP method and resource path, for example, `GET /pets`.
-{{% /md %}}</dd>
-    <dt class="property-optional"
+{{% /md %}}</dd><dt class="property-optional"
             title="Optional">
         <span id="state_routeresponseselectionexpression_nodejs">
 <a href="#state_routeresponseselectionexpression_nodejs" style="color: inherit; text-decoration: inherit;">route<wbr>Response<wbr>Selection<wbr>Expression</a>
@@ -1420,8 +1328,7 @@ Defaults to `NONE`.
         <span class="property-type">string</span>
     </dt>
     <dd>{{% md %}}The [route response selection expression](https://docs.aws.amazon.com/apigateway/latest/developerguide/apigateway-websocket-api-selection-expressions.html#apigateway-websocket-api-route-response-selection-expressions) for the route. Supported only for WebSocket APIs.
-{{% /md %}}</dd>
-    <dt class="property-optional"
+{{% /md %}}</dd><dt class="property-optional"
             title="Optional">
         <span id="state_target_nodejs">
 <a href="#state_target_nodejs" style="color: inherit; text-decoration: inherit;">target</a>
@@ -1430,14 +1337,11 @@ Defaults to `NONE`.
         <span class="property-type">string</span>
     </dt>
     <dd>{{% md %}}The target for the route, of the form `integrations/`*`IntegrationID`*, where *`IntegrationID`* is the identifier of an `aws.apigatewayv2.Integration` resource.
-{{% /md %}}</dd>
-</dl>
+{{% /md %}}</dd></dl>
 {{% /choosable %}}
 
 {{% choosable language python %}}
-<dl class="resources-properties">
-
-    <dt class="property-optional"
+<dl class="resources-properties"><dt class="property-optional"
             title="Optional">
         <span id="state_api_id_python">
 <a href="#state_api_id_python" style="color: inherit; text-decoration: inherit;">api_<wbr>id</a>
@@ -1446,8 +1350,7 @@ Defaults to `NONE`.
         <span class="property-type">str</span>
     </dt>
     <dd>{{% md %}}The API identifier.
-{{% /md %}}</dd>
-    <dt class="property-optional"
+{{% /md %}}</dd><dt class="property-optional"
             title="Optional">
         <span id="state_api_key_required_python">
 <a href="#state_api_key_required_python" style="color: inherit; text-decoration: inherit;">api_<wbr>key_<wbr>required</a>
@@ -1456,8 +1359,7 @@ Defaults to `NONE`.
         <span class="property-type">bool</span>
     </dt>
     <dd>{{% md %}}Boolean whether an API key is required for the route. Defaults to `false`. Supported only for WebSocket APIs.
-{{% /md %}}</dd>
-    <dt class="property-optional"
+{{% /md %}}</dd><dt class="property-optional"
             title="Optional">
         <span id="state_authorization_scopes_python">
 <a href="#state_authorization_scopes_python" style="color: inherit; text-decoration: inherit;">authorization_<wbr>scopes</a>
@@ -1466,8 +1368,7 @@ Defaults to `NONE`.
         <span class="property-type">Sequence[str]</span>
     </dt>
     <dd>{{% md %}}The authorization scopes supported by this route. The scopes are used with a JWT authorizer to authorize the method invocation.
-{{% /md %}}</dd>
-    <dt class="property-optional"
+{{% /md %}}</dd><dt class="property-optional"
             title="Optional">
         <span id="state_authorization_type_python">
 <a href="#state_authorization_type_python" style="color: inherit; text-decoration: inherit;">authorization_<wbr>type</a>
@@ -1479,8 +1380,7 @@ Defaults to `NONE`.
 For WebSocket APIs, valid values are `NONE` for open access, `AWS_IAM` for using AWS IAM permissions, and `CUSTOM` for using a Lambda authorizer.
 For HTTP APIs, valid values are `NONE` for open access, `JWT` for using JSON Web Tokens, `AWS_IAM` for using AWS IAM permissions, and `CUSTOM` for using a Lambda authorizer.
 Defaults to `NONE`.
-{{% /md %}}</dd>
-    <dt class="property-optional"
+{{% /md %}}</dd><dt class="property-optional"
             title="Optional">
         <span id="state_authorizer_id_python">
 <a href="#state_authorizer_id_python" style="color: inherit; text-decoration: inherit;">authorizer_<wbr>id</a>
@@ -1489,8 +1389,7 @@ Defaults to `NONE`.
         <span class="property-type">str</span>
     </dt>
     <dd>{{% md %}}The identifier of the `aws.apigatewayv2.Authorizer` resource to be associated with this route.
-{{% /md %}}</dd>
-    <dt class="property-optional"
+{{% /md %}}</dd><dt class="property-optional"
             title="Optional">
         <span id="state_model_selection_expression_python">
 <a href="#state_model_selection_expression_python" style="color: inherit; text-decoration: inherit;">model_<wbr>selection_<wbr>expression</a>
@@ -1499,8 +1398,7 @@ Defaults to `NONE`.
         <span class="property-type">str</span>
     </dt>
     <dd>{{% md %}}The [model selection expression](https://docs.aws.amazon.com/apigateway/latest/developerguide/apigateway-websocket-api-selection-expressions.html#apigateway-websocket-api-model-selection-expressions) for the route. Supported only for WebSocket APIs.
-{{% /md %}}</dd>
-    <dt class="property-optional"
+{{% /md %}}</dd><dt class="property-optional"
             title="Optional">
         <span id="state_operation_name_python">
 <a href="#state_operation_name_python" style="color: inherit; text-decoration: inherit;">operation_<wbr>name</a>
@@ -1509,8 +1407,7 @@ Defaults to `NONE`.
         <span class="property-type">str</span>
     </dt>
     <dd>{{% md %}}The operation name for the route. Must be between 1 and 64 characters in length.
-{{% /md %}}</dd>
-    <dt class="property-optional"
+{{% /md %}}</dd><dt class="property-optional"
             title="Optional">
         <span id="state_request_models_python">
 <a href="#state_request_models_python" style="color: inherit; text-decoration: inherit;">request_<wbr>models</a>
@@ -1519,8 +1416,7 @@ Defaults to `NONE`.
         <span class="property-type">Mapping[str, str]</span>
     </dt>
     <dd>{{% md %}}The request models for the route. Supported only for WebSocket APIs.
-{{% /md %}}</dd>
-    <dt class="property-optional"
+{{% /md %}}</dd><dt class="property-optional"
             title="Optional">
         <span id="state_route_key_python">
 <a href="#state_route_key_python" style="color: inherit; text-decoration: inherit;">route_<wbr>key</a>
@@ -1529,8 +1425,7 @@ Defaults to `NONE`.
         <span class="property-type">str</span>
     </dt>
     <dd>{{% md %}}The route key for the route. For HTTP APIs, the route key can be either `$default`, or a combination of an HTTP method and resource path, for example, `GET /pets`.
-{{% /md %}}</dd>
-    <dt class="property-optional"
+{{% /md %}}</dd><dt class="property-optional"
             title="Optional">
         <span id="state_route_response_selection_expression_python">
 <a href="#state_route_response_selection_expression_python" style="color: inherit; text-decoration: inherit;">route_<wbr>response_<wbr>selection_<wbr>expression</a>
@@ -1539,8 +1434,7 @@ Defaults to `NONE`.
         <span class="property-type">str</span>
     </dt>
     <dd>{{% md %}}The [route response selection expression](https://docs.aws.amazon.com/apigateway/latest/developerguide/apigateway-websocket-api-selection-expressions.html#apigateway-websocket-api-route-response-selection-expressions) for the route. Supported only for WebSocket APIs.
-{{% /md %}}</dd>
-    <dt class="property-optional"
+{{% /md %}}</dd><dt class="property-optional"
             title="Optional">
         <span id="state_target_python">
 <a href="#state_target_python" style="color: inherit; text-decoration: inherit;">target</a>
@@ -1549,8 +1443,7 @@ Defaults to `NONE`.
         <span class="property-type">str</span>
     </dt>
     <dd>{{% md %}}The target for the route, of the form `integrations/`*`IntegrationID`*, where *`IntegrationID`* is the identifier of an `aws.apigatewayv2.Integration` resource.
-{{% /md %}}</dd>
-</dl>
+{{% /md %}}</dd></dl>
 {{% /choosable %}}
 
 
@@ -1576,6 +1469,6 @@ Defaults to `NONE`.
 	<dt>License</dt>
 	<dd>Apache-2.0</dd>
 	<dt>Notes</dt>
-	<dd>This Pulumi package is based on the [`aws` Terraform Provider](https://github.com/terraform-providers/terraform-provider-aws).</dd>
+	<dd>{{% md %}}This Pulumi package is based on the [`aws` Terraform Provider](https://github.com/terraform-providers/terraform-provider-aws).{{% /md %}}</dd>
 </dl>
 

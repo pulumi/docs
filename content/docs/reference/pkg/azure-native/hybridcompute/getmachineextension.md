@@ -51,9 +51,7 @@ The following arguments are supported:
 
 
 {{% choosable language csharp %}}
-<dl class="resources-properties">
-
-    <dt class="property-required"
+<dl class="resources-properties"><dt class="property-required"
             title="Required">
         <span id="extensionname_csharp">
 <a href="#extensionname_csharp" style="color: inherit; text-decoration: inherit;">Extension<wbr>Name</a>
@@ -61,8 +59,7 @@ The following arguments are supported:
         <span class="property-indicator"></span>
         <span class="property-type">string</span>
     </dt>
-    <dd>{{% md %}}The name of the machine extension.{{% /md %}}</dd>
-    <dt class="property-required"
+    <dd>{{% md %}}The name of the machine extension.{{% /md %}}</dd><dt class="property-required"
             title="Required">
         <span id="name_csharp">
 <a href="#name_csharp" style="color: inherit; text-decoration: inherit;">Name</a>
@@ -70,8 +67,7 @@ The following arguments are supported:
         <span class="property-indicator"></span>
         <span class="property-type">string</span>
     </dt>
-    <dd>{{% md %}}The name of the machine containing the extension.{{% /md %}}</dd>
-    <dt class="property-required"
+    <dd>{{% md %}}The name of the machine containing the extension.{{% /md %}}</dd><dt class="property-required"
             title="Required">
         <span id="resourcegroupname_csharp">
 <a href="#resourcegroupname_csharp" style="color: inherit; text-decoration: inherit;">Resource<wbr>Group<wbr>Name</a>
@@ -79,14 +75,11 @@ The following arguments are supported:
         <span class="property-indicator"></span>
         <span class="property-type">string</span>
     </dt>
-    <dd>{{% md %}}The name of the resource group.{{% /md %}}</dd>
-</dl>
+    <dd>{{% md %}}The name of the resource group.{{% /md %}}</dd></dl>
 {{% /choosable %}}
 
 {{% choosable language go %}}
-<dl class="resources-properties">
-
-    <dt class="property-required"
+<dl class="resources-properties"><dt class="property-required"
             title="Required">
         <span id="extensionname_go">
 <a href="#extensionname_go" style="color: inherit; text-decoration: inherit;">Extension<wbr>Name</a>
@@ -94,8 +87,7 @@ The following arguments are supported:
         <span class="property-indicator"></span>
         <span class="property-type">string</span>
     </dt>
-    <dd>{{% md %}}The name of the machine extension.{{% /md %}}</dd>
-    <dt class="property-required"
+    <dd>{{% md %}}The name of the machine extension.{{% /md %}}</dd><dt class="property-required"
             title="Required">
         <span id="name_go">
 <a href="#name_go" style="color: inherit; text-decoration: inherit;">Name</a>
@@ -103,8 +95,7 @@ The following arguments are supported:
         <span class="property-indicator"></span>
         <span class="property-type">string</span>
     </dt>
-    <dd>{{% md %}}The name of the machine containing the extension.{{% /md %}}</dd>
-    <dt class="property-required"
+    <dd>{{% md %}}The name of the machine containing the extension.{{% /md %}}</dd><dt class="property-required"
             title="Required">
         <span id="resourcegroupname_go">
 <a href="#resourcegroupname_go" style="color: inherit; text-decoration: inherit;">Resource<wbr>Group<wbr>Name</a>
@@ -112,14 +103,11 @@ The following arguments are supported:
         <span class="property-indicator"></span>
         <span class="property-type">string</span>
     </dt>
-    <dd>{{% md %}}The name of the resource group.{{% /md %}}</dd>
-</dl>
+    <dd>{{% md %}}The name of the resource group.{{% /md %}}</dd></dl>
 {{% /choosable %}}
 
 {{% choosable language nodejs %}}
-<dl class="resources-properties">
-
-    <dt class="property-required"
+<dl class="resources-properties"><dt class="property-required"
             title="Required">
         <span id="extensionname_nodejs">
 <a href="#extensionname_nodejs" style="color: inherit; text-decoration: inherit;">extension<wbr>Name</a>
@@ -127,8 +115,7 @@ The following arguments are supported:
         <span class="property-indicator"></span>
         <span class="property-type">string</span>
     </dt>
-    <dd>{{% md %}}The name of the machine extension.{{% /md %}}</dd>
-    <dt class="property-required"
+    <dd>{{% md %}}The name of the machine extension.{{% /md %}}</dd><dt class="property-required"
             title="Required">
         <span id="name_nodejs">
 <a href="#name_nodejs" style="color: inherit; text-decoration: inherit;">name</a>
@@ -136,8 +123,7 @@ The following arguments are supported:
         <span class="property-indicator"></span>
         <span class="property-type">string</span>
     </dt>
-    <dd>{{% md %}}The name of the machine containing the extension.{{% /md %}}</dd>
-    <dt class="property-required"
+    <dd>{{% md %}}The name of the machine containing the extension.{{% /md %}}</dd><dt class="property-required"
             title="Required">
         <span id="resourcegroupname_nodejs">
 <a href="#resourcegroupname_nodejs" style="color: inherit; text-decoration: inherit;">resource<wbr>Group<wbr>Name</a>
@@ -145,14 +131,11 @@ The following arguments are supported:
         <span class="property-indicator"></span>
         <span class="property-type">string</span>
     </dt>
-    <dd>{{% md %}}The name of the resource group.{{% /md %}}</dd>
-</dl>
+    <dd>{{% md %}}The name of the resource group.{{% /md %}}</dd></dl>
 {{% /choosable %}}
 
 {{% choosable language python %}}
-<dl class="resources-properties">
-
-    <dt class="property-required"
+<dl class="resources-properties"><dt class="property-required"
             title="Required">
         <span id="extension_name_python">
 <a href="#extension_name_python" style="color: inherit; text-decoration: inherit;">extension_<wbr>name</a>
@@ -160,8 +143,7 @@ The following arguments are supported:
         <span class="property-indicator"></span>
         <span class="property-type">str</span>
     </dt>
-    <dd>{{% md %}}The name of the machine extension.{{% /md %}}</dd>
-    <dt class="property-required"
+    <dd>{{% md %}}The name of the machine extension.{{% /md %}}</dd><dt class="property-required"
             title="Required">
         <span id="name_python">
 <a href="#name_python" style="color: inherit; text-decoration: inherit;">name</a>
@@ -169,8 +151,7 @@ The following arguments are supported:
         <span class="property-indicator"></span>
         <span class="property-type">str</span>
     </dt>
-    <dd>{{% md %}}The name of the machine containing the extension.{{% /md %}}</dd>
-    <dt class="property-required"
+    <dd>{{% md %}}The name of the machine containing the extension.{{% /md %}}</dd><dt class="property-required"
             title="Required">
         <span id="resource_group_name_python">
 <a href="#resource_group_name_python" style="color: inherit; text-decoration: inherit;">resource_<wbr>group_<wbr>name</a>
@@ -178,8 +159,7 @@ The following arguments are supported:
         <span class="property-indicator"></span>
         <span class="property-type">str</span>
     </dt>
-    <dd>{{% md %}}The name of the resource group.{{% /md %}}</dd>
-</dl>
+    <dd>{{% md %}}The name of the resource group.{{% /md %}}</dd></dl>
 {{% /choosable %}}
 
 
@@ -192,9 +172,7 @@ The following output properties are available:
 
 
 {{% choosable language csharp %}}
-<dl class="resources-properties">
-
-    <dt class="property-"
+<dl class="resources-properties"><dt class="property-"
             title="">
         <span id="id_csharp">
 <a href="#id_csharp" style="color: inherit; text-decoration: inherit;">Id</a>
@@ -202,8 +180,7 @@ The following output properties are available:
         <span class="property-indicator"></span>
         <span class="property-type">string</span>
     </dt>
-    <dd>{{% md %}}Fully qualified resource ID for the resource. Ex - /subscriptions/{subscriptionId}/resourceGroups/{resourceGroupName}/providers/{resourceProviderNamespace}/{resourceType}/{resourceName}{{% /md %}}</dd>
-    <dt class="property-"
+    <dd>{{% md %}}Fully qualified resource ID for the resource. Ex - /subscriptions/{subscriptionId}/resourceGroups/{resourceGroupName}/providers/{resourceProviderNamespace}/{resourceType}/{resourceName}{{% /md %}}</dd><dt class="property-"
             title="">
         <span id="location_csharp">
 <a href="#location_csharp" style="color: inherit; text-decoration: inherit;">Location</a>
@@ -211,8 +188,7 @@ The following output properties are available:
         <span class="property-indicator"></span>
         <span class="property-type">string</span>
     </dt>
-    <dd>{{% md %}}The geo-location where the resource lives{{% /md %}}</dd>
-    <dt class="property-"
+    <dd>{{% md %}}The geo-location where the resource lives{{% /md %}}</dd><dt class="property-"
             title="">
         <span id="name_csharp">
 <a href="#name_csharp" style="color: inherit; text-decoration: inherit;">Name</a>
@@ -220,8 +196,7 @@ The following output properties are available:
         <span class="property-indicator"></span>
         <span class="property-type">string</span>
     </dt>
-    <dd>{{% md %}}The name of the resource{{% /md %}}</dd>
-    <dt class="property-"
+    <dd>{{% md %}}The name of the resource{{% /md %}}</dd><dt class="property-"
             title="">
         <span id="provisioningstate_csharp">
 <a href="#provisioningstate_csharp" style="color: inherit; text-decoration: inherit;">Provisioning<wbr>State</a>
@@ -229,8 +204,7 @@ The following output properties are available:
         <span class="property-indicator"></span>
         <span class="property-type">string</span>
     </dt>
-    <dd>{{% md %}}The provisioning state, which only appears in the response.{{% /md %}}</dd>
-    <dt class="property-"
+    <dd>{{% md %}}The provisioning state, which only appears in the response.{{% /md %}}</dd><dt class="property-"
             title="">
         <span id="type_csharp">
 <a href="#type_csharp" style="color: inherit; text-decoration: inherit;">Type</a>
@@ -238,8 +212,7 @@ The following output properties are available:
         <span class="property-indicator"></span>
         <span class="property-type">string</span>
     </dt>
-    <dd>{{% md %}}The type of the resource. E.g. "Microsoft.Compute/virtualMachines" or "Microsoft.Storage/storageAccounts"{{% /md %}}</dd>
-    <dt class="property-"
+    <dd>{{% md %}}The type of the resource. E.g. "Microsoft.Compute/virtualMachines" or "Microsoft.Storage/storageAccounts"{{% /md %}}</dd><dt class="property-"
             title="">
         <span id="autoupgrademinorversion_csharp">
 <a href="#autoupgrademinorversion_csharp" style="color: inherit; text-decoration: inherit;">Auto<wbr>Upgrade<wbr>Minor<wbr>Version</a>
@@ -247,8 +220,7 @@ The following output properties are available:
         <span class="property-indicator"></span>
         <span class="property-type">bool</span>
     </dt>
-    <dd>{{% md %}}Indicates whether the extension should use a newer minor version if one is available at deployment time. Once deployed, however, the extension will not upgrade minor versions unless redeployed, even with this property set to true.{{% /md %}}</dd>
-    <dt class="property-"
+    <dd>{{% md %}}Indicates whether the extension should use a newer minor version if one is available at deployment time. Once deployed, however, the extension will not upgrade minor versions unless redeployed, even with this property set to true.{{% /md %}}</dd><dt class="property-"
             title="">
         <span id="forceupdatetag_csharp">
 <a href="#forceupdatetag_csharp" style="color: inherit; text-decoration: inherit;">Force<wbr>Update<wbr>Tag</a>
@@ -256,8 +228,7 @@ The following output properties are available:
         <span class="property-indicator"></span>
         <span class="property-type">string</span>
     </dt>
-    <dd>{{% md %}}How the extension handler should be forced to update even if the extension configuration has not changed.{{% /md %}}</dd>
-    <dt class="property-"
+    <dd>{{% md %}}How the extension handler should be forced to update even if the extension configuration has not changed.{{% /md %}}</dd><dt class="property-"
             title="">
         <span id="instanceview_csharp">
 <a href="#instanceview_csharp" style="color: inherit; text-decoration: inherit;">Instance<wbr>View</a>
@@ -265,8 +236,7 @@ The following output properties are available:
         <span class="property-indicator"></span>
         <span class="property-type"><a href="#machineextensionpropertiesresponseinstanceview">Pulumi.<wbr>Azure<wbr>Native.<wbr>Hybrid<wbr>Compute.<wbr>Outputs.<wbr>Machine<wbr>Extension<wbr>Properties<wbr>Response<wbr>Instance<wbr>View</a></span>
     </dt>
-    <dd>{{% md %}}The machine extension instance view.{{% /md %}}</dd>
-    <dt class="property-"
+    <dd>{{% md %}}The machine extension instance view.{{% /md %}}</dd><dt class="property-"
             title="">
         <span id="protectedsettings_csharp">
 <a href="#protectedsettings_csharp" style="color: inherit; text-decoration: inherit;">Protected<wbr>Settings</a>
@@ -274,8 +244,7 @@ The following output properties are available:
         <span class="property-indicator"></span>
         <span class="property-type">object</span>
     </dt>
-    <dd>{{% md %}}The extension can contain either protectedSettings or protectedSettingsFromKeyVault or no protected settings at all.{{% /md %}}</dd>
-    <dt class="property-"
+    <dd>{{% md %}}The extension can contain either protectedSettings or protectedSettingsFromKeyVault or no protected settings at all.{{% /md %}}</dd><dt class="property-"
             title="">
         <span id="publisher_csharp">
 <a href="#publisher_csharp" style="color: inherit; text-decoration: inherit;">Publisher</a>
@@ -283,8 +252,7 @@ The following output properties are available:
         <span class="property-indicator"></span>
         <span class="property-type">string</span>
     </dt>
-    <dd>{{% md %}}The name of the extension handler publisher.{{% /md %}}</dd>
-    <dt class="property-"
+    <dd>{{% md %}}The name of the extension handler publisher.{{% /md %}}</dd><dt class="property-"
             title="">
         <span id="settings_csharp">
 <a href="#settings_csharp" style="color: inherit; text-decoration: inherit;">Settings</a>
@@ -292,8 +260,7 @@ The following output properties are available:
         <span class="property-indicator"></span>
         <span class="property-type">object</span>
     </dt>
-    <dd>{{% md %}}Json formatted public settings for the extension.{{% /md %}}</dd>
-    <dt class="property-"
+    <dd>{{% md %}}Json formatted public settings for the extension.{{% /md %}}</dd><dt class="property-"
             title="">
         <span id="tags_csharp">
 <a href="#tags_csharp" style="color: inherit; text-decoration: inherit;">Tags</a>
@@ -301,8 +268,7 @@ The following output properties are available:
         <span class="property-indicator"></span>
         <span class="property-type">Dictionary&lt;string, string&gt;</span>
     </dt>
-    <dd>{{% md %}}Resource tags.{{% /md %}}</dd>
-    <dt class="property-"
+    <dd>{{% md %}}Resource tags.{{% /md %}}</dd><dt class="property-"
             title="">
         <span id="typehandlerversion_csharp">
 <a href="#typehandlerversion_csharp" style="color: inherit; text-decoration: inherit;">Type<wbr>Handler<wbr>Version</a>
@@ -310,14 +276,11 @@ The following output properties are available:
         <span class="property-indicator"></span>
         <span class="property-type">string</span>
     </dt>
-    <dd>{{% md %}}Specifies the version of the script handler.{{% /md %}}</dd>
-</dl>
+    <dd>{{% md %}}Specifies the version of the script handler.{{% /md %}}</dd></dl>
 {{% /choosable %}}
 
 {{% choosable language go %}}
-<dl class="resources-properties">
-
-    <dt class="property-"
+<dl class="resources-properties"><dt class="property-"
             title="">
         <span id="id_go">
 <a href="#id_go" style="color: inherit; text-decoration: inherit;">Id</a>
@@ -325,8 +288,7 @@ The following output properties are available:
         <span class="property-indicator"></span>
         <span class="property-type">string</span>
     </dt>
-    <dd>{{% md %}}Fully qualified resource ID for the resource. Ex - /subscriptions/{subscriptionId}/resourceGroups/{resourceGroupName}/providers/{resourceProviderNamespace}/{resourceType}/{resourceName}{{% /md %}}</dd>
-    <dt class="property-"
+    <dd>{{% md %}}Fully qualified resource ID for the resource. Ex - /subscriptions/{subscriptionId}/resourceGroups/{resourceGroupName}/providers/{resourceProviderNamespace}/{resourceType}/{resourceName}{{% /md %}}</dd><dt class="property-"
             title="">
         <span id="location_go">
 <a href="#location_go" style="color: inherit; text-decoration: inherit;">Location</a>
@@ -334,8 +296,7 @@ The following output properties are available:
         <span class="property-indicator"></span>
         <span class="property-type">string</span>
     </dt>
-    <dd>{{% md %}}The geo-location where the resource lives{{% /md %}}</dd>
-    <dt class="property-"
+    <dd>{{% md %}}The geo-location where the resource lives{{% /md %}}</dd><dt class="property-"
             title="">
         <span id="name_go">
 <a href="#name_go" style="color: inherit; text-decoration: inherit;">Name</a>
@@ -343,8 +304,7 @@ The following output properties are available:
         <span class="property-indicator"></span>
         <span class="property-type">string</span>
     </dt>
-    <dd>{{% md %}}The name of the resource{{% /md %}}</dd>
-    <dt class="property-"
+    <dd>{{% md %}}The name of the resource{{% /md %}}</dd><dt class="property-"
             title="">
         <span id="provisioningstate_go">
 <a href="#provisioningstate_go" style="color: inherit; text-decoration: inherit;">Provisioning<wbr>State</a>
@@ -352,8 +312,7 @@ The following output properties are available:
         <span class="property-indicator"></span>
         <span class="property-type">string</span>
     </dt>
-    <dd>{{% md %}}The provisioning state, which only appears in the response.{{% /md %}}</dd>
-    <dt class="property-"
+    <dd>{{% md %}}The provisioning state, which only appears in the response.{{% /md %}}</dd><dt class="property-"
             title="">
         <span id="type_go">
 <a href="#type_go" style="color: inherit; text-decoration: inherit;">Type</a>
@@ -361,8 +320,7 @@ The following output properties are available:
         <span class="property-indicator"></span>
         <span class="property-type">string</span>
     </dt>
-    <dd>{{% md %}}The type of the resource. E.g. "Microsoft.Compute/virtualMachines" or "Microsoft.Storage/storageAccounts"{{% /md %}}</dd>
-    <dt class="property-"
+    <dd>{{% md %}}The type of the resource. E.g. "Microsoft.Compute/virtualMachines" or "Microsoft.Storage/storageAccounts"{{% /md %}}</dd><dt class="property-"
             title="">
         <span id="autoupgrademinorversion_go">
 <a href="#autoupgrademinorversion_go" style="color: inherit; text-decoration: inherit;">Auto<wbr>Upgrade<wbr>Minor<wbr>Version</a>
@@ -370,8 +328,7 @@ The following output properties are available:
         <span class="property-indicator"></span>
         <span class="property-type">bool</span>
     </dt>
-    <dd>{{% md %}}Indicates whether the extension should use a newer minor version if one is available at deployment time. Once deployed, however, the extension will not upgrade minor versions unless redeployed, even with this property set to true.{{% /md %}}</dd>
-    <dt class="property-"
+    <dd>{{% md %}}Indicates whether the extension should use a newer minor version if one is available at deployment time. Once deployed, however, the extension will not upgrade minor versions unless redeployed, even with this property set to true.{{% /md %}}</dd><dt class="property-"
             title="">
         <span id="forceupdatetag_go">
 <a href="#forceupdatetag_go" style="color: inherit; text-decoration: inherit;">Force<wbr>Update<wbr>Tag</a>
@@ -379,8 +336,7 @@ The following output properties are available:
         <span class="property-indicator"></span>
         <span class="property-type">string</span>
     </dt>
-    <dd>{{% md %}}How the extension handler should be forced to update even if the extension configuration has not changed.{{% /md %}}</dd>
-    <dt class="property-"
+    <dd>{{% md %}}How the extension handler should be forced to update even if the extension configuration has not changed.{{% /md %}}</dd><dt class="property-"
             title="">
         <span id="instanceview_go">
 <a href="#instanceview_go" style="color: inherit; text-decoration: inherit;">Instance<wbr>View</a>
@@ -388,8 +344,7 @@ The following output properties are available:
         <span class="property-indicator"></span>
         <span class="property-type"><a href="#machineextensionpropertiesresponseinstanceview">Machine<wbr>Extension<wbr>Properties<wbr>Response<wbr>Instance<wbr>View</a></span>
     </dt>
-    <dd>{{% md %}}The machine extension instance view.{{% /md %}}</dd>
-    <dt class="property-"
+    <dd>{{% md %}}The machine extension instance view.{{% /md %}}</dd><dt class="property-"
             title="">
         <span id="protectedsettings_go">
 <a href="#protectedsettings_go" style="color: inherit; text-decoration: inherit;">Protected<wbr>Settings</a>
@@ -397,8 +352,7 @@ The following output properties are available:
         <span class="property-indicator"></span>
         <span class="property-type">interface{}</span>
     </dt>
-    <dd>{{% md %}}The extension can contain either protectedSettings or protectedSettingsFromKeyVault or no protected settings at all.{{% /md %}}</dd>
-    <dt class="property-"
+    <dd>{{% md %}}The extension can contain either protectedSettings or protectedSettingsFromKeyVault or no protected settings at all.{{% /md %}}</dd><dt class="property-"
             title="">
         <span id="publisher_go">
 <a href="#publisher_go" style="color: inherit; text-decoration: inherit;">Publisher</a>
@@ -406,8 +360,7 @@ The following output properties are available:
         <span class="property-indicator"></span>
         <span class="property-type">string</span>
     </dt>
-    <dd>{{% md %}}The name of the extension handler publisher.{{% /md %}}</dd>
-    <dt class="property-"
+    <dd>{{% md %}}The name of the extension handler publisher.{{% /md %}}</dd><dt class="property-"
             title="">
         <span id="settings_go">
 <a href="#settings_go" style="color: inherit; text-decoration: inherit;">Settings</a>
@@ -415,8 +368,7 @@ The following output properties are available:
         <span class="property-indicator"></span>
         <span class="property-type">interface{}</span>
     </dt>
-    <dd>{{% md %}}Json formatted public settings for the extension.{{% /md %}}</dd>
-    <dt class="property-"
+    <dd>{{% md %}}Json formatted public settings for the extension.{{% /md %}}</dd><dt class="property-"
             title="">
         <span id="tags_go">
 <a href="#tags_go" style="color: inherit; text-decoration: inherit;">Tags</a>
@@ -424,8 +376,7 @@ The following output properties are available:
         <span class="property-indicator"></span>
         <span class="property-type">map[string]string</span>
     </dt>
-    <dd>{{% md %}}Resource tags.{{% /md %}}</dd>
-    <dt class="property-"
+    <dd>{{% md %}}Resource tags.{{% /md %}}</dd><dt class="property-"
             title="">
         <span id="typehandlerversion_go">
 <a href="#typehandlerversion_go" style="color: inherit; text-decoration: inherit;">Type<wbr>Handler<wbr>Version</a>
@@ -433,14 +384,11 @@ The following output properties are available:
         <span class="property-indicator"></span>
         <span class="property-type">string</span>
     </dt>
-    <dd>{{% md %}}Specifies the version of the script handler.{{% /md %}}</dd>
-</dl>
+    <dd>{{% md %}}Specifies the version of the script handler.{{% /md %}}</dd></dl>
 {{% /choosable %}}
 
 {{% choosable language nodejs %}}
-<dl class="resources-properties">
-
-    <dt class="property-"
+<dl class="resources-properties"><dt class="property-"
             title="">
         <span id="id_nodejs">
 <a href="#id_nodejs" style="color: inherit; text-decoration: inherit;">id</a>
@@ -448,8 +396,7 @@ The following output properties are available:
         <span class="property-indicator"></span>
         <span class="property-type">string</span>
     </dt>
-    <dd>{{% md %}}Fully qualified resource ID for the resource. Ex - /subscriptions/{subscriptionId}/resourceGroups/{resourceGroupName}/providers/{resourceProviderNamespace}/{resourceType}/{resourceName}{{% /md %}}</dd>
-    <dt class="property-"
+    <dd>{{% md %}}Fully qualified resource ID for the resource. Ex - /subscriptions/{subscriptionId}/resourceGroups/{resourceGroupName}/providers/{resourceProviderNamespace}/{resourceType}/{resourceName}{{% /md %}}</dd><dt class="property-"
             title="">
         <span id="location_nodejs">
 <a href="#location_nodejs" style="color: inherit; text-decoration: inherit;">location</a>
@@ -457,8 +404,7 @@ The following output properties are available:
         <span class="property-indicator"></span>
         <span class="property-type">string</span>
     </dt>
-    <dd>{{% md %}}The geo-location where the resource lives{{% /md %}}</dd>
-    <dt class="property-"
+    <dd>{{% md %}}The geo-location where the resource lives{{% /md %}}</dd><dt class="property-"
             title="">
         <span id="name_nodejs">
 <a href="#name_nodejs" style="color: inherit; text-decoration: inherit;">name</a>
@@ -466,8 +412,7 @@ The following output properties are available:
         <span class="property-indicator"></span>
         <span class="property-type">string</span>
     </dt>
-    <dd>{{% md %}}The name of the resource{{% /md %}}</dd>
-    <dt class="property-"
+    <dd>{{% md %}}The name of the resource{{% /md %}}</dd><dt class="property-"
             title="">
         <span id="provisioningstate_nodejs">
 <a href="#provisioningstate_nodejs" style="color: inherit; text-decoration: inherit;">provisioning<wbr>State</a>
@@ -475,8 +420,7 @@ The following output properties are available:
         <span class="property-indicator"></span>
         <span class="property-type">string</span>
     </dt>
-    <dd>{{% md %}}The provisioning state, which only appears in the response.{{% /md %}}</dd>
-    <dt class="property-"
+    <dd>{{% md %}}The provisioning state, which only appears in the response.{{% /md %}}</dd><dt class="property-"
             title="">
         <span id="type_nodejs">
 <a href="#type_nodejs" style="color: inherit; text-decoration: inherit;">type</a>
@@ -484,8 +428,7 @@ The following output properties are available:
         <span class="property-indicator"></span>
         <span class="property-type">string</span>
     </dt>
-    <dd>{{% md %}}The type of the resource. E.g. "Microsoft.Compute/virtualMachines" or "Microsoft.Storage/storageAccounts"{{% /md %}}</dd>
-    <dt class="property-"
+    <dd>{{% md %}}The type of the resource. E.g. "Microsoft.Compute/virtualMachines" or "Microsoft.Storage/storageAccounts"{{% /md %}}</dd><dt class="property-"
             title="">
         <span id="autoupgrademinorversion_nodejs">
 <a href="#autoupgrademinorversion_nodejs" style="color: inherit; text-decoration: inherit;">auto<wbr>Upgrade<wbr>Minor<wbr>Version</a>
@@ -493,8 +436,7 @@ The following output properties are available:
         <span class="property-indicator"></span>
         <span class="property-type">boolean</span>
     </dt>
-    <dd>{{% md %}}Indicates whether the extension should use a newer minor version if one is available at deployment time. Once deployed, however, the extension will not upgrade minor versions unless redeployed, even with this property set to true.{{% /md %}}</dd>
-    <dt class="property-"
+    <dd>{{% md %}}Indicates whether the extension should use a newer minor version if one is available at deployment time. Once deployed, however, the extension will not upgrade minor versions unless redeployed, even with this property set to true.{{% /md %}}</dd><dt class="property-"
             title="">
         <span id="forceupdatetag_nodejs">
 <a href="#forceupdatetag_nodejs" style="color: inherit; text-decoration: inherit;">force<wbr>Update<wbr>Tag</a>
@@ -502,8 +444,7 @@ The following output properties are available:
         <span class="property-indicator"></span>
         <span class="property-type">string</span>
     </dt>
-    <dd>{{% md %}}How the extension handler should be forced to update even if the extension configuration has not changed.{{% /md %}}</dd>
-    <dt class="property-"
+    <dd>{{% md %}}How the extension handler should be forced to update even if the extension configuration has not changed.{{% /md %}}</dd><dt class="property-"
             title="">
         <span id="instanceview_nodejs">
 <a href="#instanceview_nodejs" style="color: inherit; text-decoration: inherit;">instance<wbr>View</a>
@@ -511,8 +452,7 @@ The following output properties are available:
         <span class="property-indicator"></span>
         <span class="property-type"><a href="#machineextensionpropertiesresponseinstanceview">Machine<wbr>Extension<wbr>Properties<wbr>Response<wbr>Instance<wbr>View</a></span>
     </dt>
-    <dd>{{% md %}}The machine extension instance view.{{% /md %}}</dd>
-    <dt class="property-"
+    <dd>{{% md %}}The machine extension instance view.{{% /md %}}</dd><dt class="property-"
             title="">
         <span id="protectedsettings_nodejs">
 <a href="#protectedsettings_nodejs" style="color: inherit; text-decoration: inherit;">protected<wbr>Settings</a>
@@ -520,8 +460,7 @@ The following output properties are available:
         <span class="property-indicator"></span>
         <span class="property-type">any</span>
     </dt>
-    <dd>{{% md %}}The extension can contain either protectedSettings or protectedSettingsFromKeyVault or no protected settings at all.{{% /md %}}</dd>
-    <dt class="property-"
+    <dd>{{% md %}}The extension can contain either protectedSettings or protectedSettingsFromKeyVault or no protected settings at all.{{% /md %}}</dd><dt class="property-"
             title="">
         <span id="publisher_nodejs">
 <a href="#publisher_nodejs" style="color: inherit; text-decoration: inherit;">publisher</a>
@@ -529,8 +468,7 @@ The following output properties are available:
         <span class="property-indicator"></span>
         <span class="property-type">string</span>
     </dt>
-    <dd>{{% md %}}The name of the extension handler publisher.{{% /md %}}</dd>
-    <dt class="property-"
+    <dd>{{% md %}}The name of the extension handler publisher.{{% /md %}}</dd><dt class="property-"
             title="">
         <span id="settings_nodejs">
 <a href="#settings_nodejs" style="color: inherit; text-decoration: inherit;">settings</a>
@@ -538,8 +476,7 @@ The following output properties are available:
         <span class="property-indicator"></span>
         <span class="property-type">any</span>
     </dt>
-    <dd>{{% md %}}Json formatted public settings for the extension.{{% /md %}}</dd>
-    <dt class="property-"
+    <dd>{{% md %}}Json formatted public settings for the extension.{{% /md %}}</dd><dt class="property-"
             title="">
         <span id="tags_nodejs">
 <a href="#tags_nodejs" style="color: inherit; text-decoration: inherit;">tags</a>
@@ -547,8 +484,7 @@ The following output properties are available:
         <span class="property-indicator"></span>
         <span class="property-type">{[key: string]: string}</span>
     </dt>
-    <dd>{{% md %}}Resource tags.{{% /md %}}</dd>
-    <dt class="property-"
+    <dd>{{% md %}}Resource tags.{{% /md %}}</dd><dt class="property-"
             title="">
         <span id="typehandlerversion_nodejs">
 <a href="#typehandlerversion_nodejs" style="color: inherit; text-decoration: inherit;">type<wbr>Handler<wbr>Version</a>
@@ -556,14 +492,11 @@ The following output properties are available:
         <span class="property-indicator"></span>
         <span class="property-type">string</span>
     </dt>
-    <dd>{{% md %}}Specifies the version of the script handler.{{% /md %}}</dd>
-</dl>
+    <dd>{{% md %}}Specifies the version of the script handler.{{% /md %}}</dd></dl>
 {{% /choosable %}}
 
 {{% choosable language python %}}
-<dl class="resources-properties">
-
-    <dt class="property-"
+<dl class="resources-properties"><dt class="property-"
             title="">
         <span id="id_python">
 <a href="#id_python" style="color: inherit; text-decoration: inherit;">id</a>
@@ -571,8 +504,7 @@ The following output properties are available:
         <span class="property-indicator"></span>
         <span class="property-type">str</span>
     </dt>
-    <dd>{{% md %}}Fully qualified resource ID for the resource. Ex - /subscriptions/{subscriptionId}/resourceGroups/{resourceGroupName}/providers/{resourceProviderNamespace}/{resourceType}/{resourceName}{{% /md %}}</dd>
-    <dt class="property-"
+    <dd>{{% md %}}Fully qualified resource ID for the resource. Ex - /subscriptions/{subscriptionId}/resourceGroups/{resourceGroupName}/providers/{resourceProviderNamespace}/{resourceType}/{resourceName}{{% /md %}}</dd><dt class="property-"
             title="">
         <span id="location_python">
 <a href="#location_python" style="color: inherit; text-decoration: inherit;">location</a>
@@ -580,8 +512,7 @@ The following output properties are available:
         <span class="property-indicator"></span>
         <span class="property-type">str</span>
     </dt>
-    <dd>{{% md %}}The geo-location where the resource lives{{% /md %}}</dd>
-    <dt class="property-"
+    <dd>{{% md %}}The geo-location where the resource lives{{% /md %}}</dd><dt class="property-"
             title="">
         <span id="name_python">
 <a href="#name_python" style="color: inherit; text-decoration: inherit;">name</a>
@@ -589,8 +520,7 @@ The following output properties are available:
         <span class="property-indicator"></span>
         <span class="property-type">str</span>
     </dt>
-    <dd>{{% md %}}The name of the resource{{% /md %}}</dd>
-    <dt class="property-"
+    <dd>{{% md %}}The name of the resource{{% /md %}}</dd><dt class="property-"
             title="">
         <span id="provisioning_state_python">
 <a href="#provisioning_state_python" style="color: inherit; text-decoration: inherit;">provisioning_<wbr>state</a>
@@ -598,8 +528,7 @@ The following output properties are available:
         <span class="property-indicator"></span>
         <span class="property-type">str</span>
     </dt>
-    <dd>{{% md %}}The provisioning state, which only appears in the response.{{% /md %}}</dd>
-    <dt class="property-"
+    <dd>{{% md %}}The provisioning state, which only appears in the response.{{% /md %}}</dd><dt class="property-"
             title="">
         <span id="type_python">
 <a href="#type_python" style="color: inherit; text-decoration: inherit;">type</a>
@@ -607,8 +536,7 @@ The following output properties are available:
         <span class="property-indicator"></span>
         <span class="property-type">str</span>
     </dt>
-    <dd>{{% md %}}The type of the resource. E.g. "Microsoft.Compute/virtualMachines" or "Microsoft.Storage/storageAccounts"{{% /md %}}</dd>
-    <dt class="property-"
+    <dd>{{% md %}}The type of the resource. E.g. "Microsoft.Compute/virtualMachines" or "Microsoft.Storage/storageAccounts"{{% /md %}}</dd><dt class="property-"
             title="">
         <span id="auto_upgrade_minor_version_python">
 <a href="#auto_upgrade_minor_version_python" style="color: inherit; text-decoration: inherit;">auto_<wbr>upgrade_<wbr>minor_<wbr>version</a>
@@ -616,8 +544,7 @@ The following output properties are available:
         <span class="property-indicator"></span>
         <span class="property-type">bool</span>
     </dt>
-    <dd>{{% md %}}Indicates whether the extension should use a newer minor version if one is available at deployment time. Once deployed, however, the extension will not upgrade minor versions unless redeployed, even with this property set to true.{{% /md %}}</dd>
-    <dt class="property-"
+    <dd>{{% md %}}Indicates whether the extension should use a newer minor version if one is available at deployment time. Once deployed, however, the extension will not upgrade minor versions unless redeployed, even with this property set to true.{{% /md %}}</dd><dt class="property-"
             title="">
         <span id="force_update_tag_python">
 <a href="#force_update_tag_python" style="color: inherit; text-decoration: inherit;">force_<wbr>update_<wbr>tag</a>
@@ -625,8 +552,7 @@ The following output properties are available:
         <span class="property-indicator"></span>
         <span class="property-type">str</span>
     </dt>
-    <dd>{{% md %}}How the extension handler should be forced to update even if the extension configuration has not changed.{{% /md %}}</dd>
-    <dt class="property-"
+    <dd>{{% md %}}How the extension handler should be forced to update even if the extension configuration has not changed.{{% /md %}}</dd><dt class="property-"
             title="">
         <span id="instance_view_python">
 <a href="#instance_view_python" style="color: inherit; text-decoration: inherit;">instance_<wbr>view</a>
@@ -634,8 +560,7 @@ The following output properties are available:
         <span class="property-indicator"></span>
         <span class="property-type"><a href="#machineextensionpropertiesresponseinstanceview">Machine<wbr>Extension<wbr>Properties<wbr>Response<wbr>Instance<wbr>View</a></span>
     </dt>
-    <dd>{{% md %}}The machine extension instance view.{{% /md %}}</dd>
-    <dt class="property-"
+    <dd>{{% md %}}The machine extension instance view.{{% /md %}}</dd><dt class="property-"
             title="">
         <span id="protected_settings_python">
 <a href="#protected_settings_python" style="color: inherit; text-decoration: inherit;">protected_<wbr>settings</a>
@@ -643,8 +568,7 @@ The following output properties are available:
         <span class="property-indicator"></span>
         <span class="property-type">Any</span>
     </dt>
-    <dd>{{% md %}}The extension can contain either protectedSettings or protectedSettingsFromKeyVault or no protected settings at all.{{% /md %}}</dd>
-    <dt class="property-"
+    <dd>{{% md %}}The extension can contain either protectedSettings or protectedSettingsFromKeyVault or no protected settings at all.{{% /md %}}</dd><dt class="property-"
             title="">
         <span id="publisher_python">
 <a href="#publisher_python" style="color: inherit; text-decoration: inherit;">publisher</a>
@@ -652,8 +576,7 @@ The following output properties are available:
         <span class="property-indicator"></span>
         <span class="property-type">str</span>
     </dt>
-    <dd>{{% md %}}The name of the extension handler publisher.{{% /md %}}</dd>
-    <dt class="property-"
+    <dd>{{% md %}}The name of the extension handler publisher.{{% /md %}}</dd><dt class="property-"
             title="">
         <span id="settings_python">
 <a href="#settings_python" style="color: inherit; text-decoration: inherit;">settings</a>
@@ -661,8 +584,7 @@ The following output properties are available:
         <span class="property-indicator"></span>
         <span class="property-type">Any</span>
     </dt>
-    <dd>{{% md %}}Json formatted public settings for the extension.{{% /md %}}</dd>
-    <dt class="property-"
+    <dd>{{% md %}}Json formatted public settings for the extension.{{% /md %}}</dd><dt class="property-"
             title="">
         <span id="tags_python">
 <a href="#tags_python" style="color: inherit; text-decoration: inherit;">tags</a>
@@ -670,8 +592,7 @@ The following output properties are available:
         <span class="property-indicator"></span>
         <span class="property-type">Mapping[str, str]</span>
     </dt>
-    <dd>{{% md %}}Resource tags.{{% /md %}}</dd>
-    <dt class="property-"
+    <dd>{{% md %}}Resource tags.{{% /md %}}</dd><dt class="property-"
             title="">
         <span id="type_handler_version_python">
 <a href="#type_handler_version_python" style="color: inherit; text-decoration: inherit;">type_<wbr>handler_<wbr>version</a>
@@ -679,8 +600,7 @@ The following output properties are available:
         <span class="property-indicator"></span>
         <span class="property-type">str</span>
     </dt>
-    <dd>{{% md %}}Specifies the version of the script handler.{{% /md %}}</dd>
-</dl>
+    <dd>{{% md %}}Specifies the version of the script handler.{{% /md %}}</dd></dl>
 {{% /choosable %}}
 
 
@@ -694,9 +614,7 @@ The following output properties are available:
 
 
 {{% choosable language csharp %}}
-<dl class="resources-properties">
-
-    <dt class="property-required"
+<dl class="resources-properties"><dt class="property-required"
             title="Required">
         <span id="code_csharp">
 <a href="#code_csharp" style="color: inherit; text-decoration: inherit;">Code</a>
@@ -704,8 +622,7 @@ The following output properties are available:
         <span class="property-indicator"></span>
         <span class="property-type">string</span>
     </dt>
-    <dd>{{% md %}}The status code.{{% /md %}}</dd>
-    <dt class="property-required"
+    <dd>{{% md %}}The status code.{{% /md %}}</dd><dt class="property-required"
             title="Required">
         <span id="displaystatus_csharp">
 <a href="#displaystatus_csharp" style="color: inherit; text-decoration: inherit;">Display<wbr>Status</a>
@@ -713,8 +630,7 @@ The following output properties are available:
         <span class="property-indicator"></span>
         <span class="property-type">string</span>
     </dt>
-    <dd>{{% md %}}The short localizable label for the status.{{% /md %}}</dd>
-    <dt class="property-required"
+    <dd>{{% md %}}The short localizable label for the status.{{% /md %}}</dd><dt class="property-required"
             title="Required">
         <span id="level_csharp">
 <a href="#level_csharp" style="color: inherit; text-decoration: inherit;">Level</a>
@@ -722,8 +638,7 @@ The following output properties are available:
         <span class="property-indicator"></span>
         <span class="property-type">string</span>
     </dt>
-    <dd>{{% md %}}The level code.{{% /md %}}</dd>
-    <dt class="property-required"
+    <dd>{{% md %}}The level code.{{% /md %}}</dd><dt class="property-required"
             title="Required">
         <span id="message_csharp">
 <a href="#message_csharp" style="color: inherit; text-decoration: inherit;">Message</a>
@@ -731,8 +646,7 @@ The following output properties are available:
         <span class="property-indicator"></span>
         <span class="property-type">string</span>
     </dt>
-    <dd>{{% md %}}The detailed status message, including for alerts and error messages.{{% /md %}}</dd>
-    <dt class="property-required"
+    <dd>{{% md %}}The detailed status message, including for alerts and error messages.{{% /md %}}</dd><dt class="property-required"
             title="Required">
         <span id="time_csharp">
 <a href="#time_csharp" style="color: inherit; text-decoration: inherit;">Time</a>
@@ -740,14 +654,11 @@ The following output properties are available:
         <span class="property-indicator"></span>
         <span class="property-type">string</span>
     </dt>
-    <dd>{{% md %}}The time of the status.{{% /md %}}</dd>
-</dl>
+    <dd>{{% md %}}The time of the status.{{% /md %}}</dd></dl>
 {{% /choosable %}}
 
 {{% choosable language go %}}
-<dl class="resources-properties">
-
-    <dt class="property-required"
+<dl class="resources-properties"><dt class="property-required"
             title="Required">
         <span id="code_go">
 <a href="#code_go" style="color: inherit; text-decoration: inherit;">Code</a>
@@ -755,8 +666,7 @@ The following output properties are available:
         <span class="property-indicator"></span>
         <span class="property-type">string</span>
     </dt>
-    <dd>{{% md %}}The status code.{{% /md %}}</dd>
-    <dt class="property-required"
+    <dd>{{% md %}}The status code.{{% /md %}}</dd><dt class="property-required"
             title="Required">
         <span id="displaystatus_go">
 <a href="#displaystatus_go" style="color: inherit; text-decoration: inherit;">Display<wbr>Status</a>
@@ -764,8 +674,7 @@ The following output properties are available:
         <span class="property-indicator"></span>
         <span class="property-type">string</span>
     </dt>
-    <dd>{{% md %}}The short localizable label for the status.{{% /md %}}</dd>
-    <dt class="property-required"
+    <dd>{{% md %}}The short localizable label for the status.{{% /md %}}</dd><dt class="property-required"
             title="Required">
         <span id="level_go">
 <a href="#level_go" style="color: inherit; text-decoration: inherit;">Level</a>
@@ -773,8 +682,7 @@ The following output properties are available:
         <span class="property-indicator"></span>
         <span class="property-type">string</span>
     </dt>
-    <dd>{{% md %}}The level code.{{% /md %}}</dd>
-    <dt class="property-required"
+    <dd>{{% md %}}The level code.{{% /md %}}</dd><dt class="property-required"
             title="Required">
         <span id="message_go">
 <a href="#message_go" style="color: inherit; text-decoration: inherit;">Message</a>
@@ -782,8 +690,7 @@ The following output properties are available:
         <span class="property-indicator"></span>
         <span class="property-type">string</span>
     </dt>
-    <dd>{{% md %}}The detailed status message, including for alerts and error messages.{{% /md %}}</dd>
-    <dt class="property-required"
+    <dd>{{% md %}}The detailed status message, including for alerts and error messages.{{% /md %}}</dd><dt class="property-required"
             title="Required">
         <span id="time_go">
 <a href="#time_go" style="color: inherit; text-decoration: inherit;">Time</a>
@@ -791,14 +698,11 @@ The following output properties are available:
         <span class="property-indicator"></span>
         <span class="property-type">string</span>
     </dt>
-    <dd>{{% md %}}The time of the status.{{% /md %}}</dd>
-</dl>
+    <dd>{{% md %}}The time of the status.{{% /md %}}</dd></dl>
 {{% /choosable %}}
 
 {{% choosable language nodejs %}}
-<dl class="resources-properties">
-
-    <dt class="property-required"
+<dl class="resources-properties"><dt class="property-required"
             title="Required">
         <span id="code_nodejs">
 <a href="#code_nodejs" style="color: inherit; text-decoration: inherit;">code</a>
@@ -806,8 +710,7 @@ The following output properties are available:
         <span class="property-indicator"></span>
         <span class="property-type">string</span>
     </dt>
-    <dd>{{% md %}}The status code.{{% /md %}}</dd>
-    <dt class="property-required"
+    <dd>{{% md %}}The status code.{{% /md %}}</dd><dt class="property-required"
             title="Required">
         <span id="displaystatus_nodejs">
 <a href="#displaystatus_nodejs" style="color: inherit; text-decoration: inherit;">display<wbr>Status</a>
@@ -815,8 +718,7 @@ The following output properties are available:
         <span class="property-indicator"></span>
         <span class="property-type">string</span>
     </dt>
-    <dd>{{% md %}}The short localizable label for the status.{{% /md %}}</dd>
-    <dt class="property-required"
+    <dd>{{% md %}}The short localizable label for the status.{{% /md %}}</dd><dt class="property-required"
             title="Required">
         <span id="level_nodejs">
 <a href="#level_nodejs" style="color: inherit; text-decoration: inherit;">level</a>
@@ -824,8 +726,7 @@ The following output properties are available:
         <span class="property-indicator"></span>
         <span class="property-type">string</span>
     </dt>
-    <dd>{{% md %}}The level code.{{% /md %}}</dd>
-    <dt class="property-required"
+    <dd>{{% md %}}The level code.{{% /md %}}</dd><dt class="property-required"
             title="Required">
         <span id="message_nodejs">
 <a href="#message_nodejs" style="color: inherit; text-decoration: inherit;">message</a>
@@ -833,8 +734,7 @@ The following output properties are available:
         <span class="property-indicator"></span>
         <span class="property-type">string</span>
     </dt>
-    <dd>{{% md %}}The detailed status message, including for alerts and error messages.{{% /md %}}</dd>
-    <dt class="property-required"
+    <dd>{{% md %}}The detailed status message, including for alerts and error messages.{{% /md %}}</dd><dt class="property-required"
             title="Required">
         <span id="time_nodejs">
 <a href="#time_nodejs" style="color: inherit; text-decoration: inherit;">time</a>
@@ -842,14 +742,11 @@ The following output properties are available:
         <span class="property-indicator"></span>
         <span class="property-type">string</span>
     </dt>
-    <dd>{{% md %}}The time of the status.{{% /md %}}</dd>
-</dl>
+    <dd>{{% md %}}The time of the status.{{% /md %}}</dd></dl>
 {{% /choosable %}}
 
 {{% choosable language python %}}
-<dl class="resources-properties">
-
-    <dt class="property-required"
+<dl class="resources-properties"><dt class="property-required"
             title="Required">
         <span id="code_python">
 <a href="#code_python" style="color: inherit; text-decoration: inherit;">code</a>
@@ -857,8 +754,7 @@ The following output properties are available:
         <span class="property-indicator"></span>
         <span class="property-type">str</span>
     </dt>
-    <dd>{{% md %}}The status code.{{% /md %}}</dd>
-    <dt class="property-required"
+    <dd>{{% md %}}The status code.{{% /md %}}</dd><dt class="property-required"
             title="Required">
         <span id="display_status_python">
 <a href="#display_status_python" style="color: inherit; text-decoration: inherit;">display_<wbr>status</a>
@@ -866,8 +762,7 @@ The following output properties are available:
         <span class="property-indicator"></span>
         <span class="property-type">str</span>
     </dt>
-    <dd>{{% md %}}The short localizable label for the status.{{% /md %}}</dd>
-    <dt class="property-required"
+    <dd>{{% md %}}The short localizable label for the status.{{% /md %}}</dd><dt class="property-required"
             title="Required">
         <span id="level_python">
 <a href="#level_python" style="color: inherit; text-decoration: inherit;">level</a>
@@ -875,8 +770,7 @@ The following output properties are available:
         <span class="property-indicator"></span>
         <span class="property-type">str</span>
     </dt>
-    <dd>{{% md %}}The level code.{{% /md %}}</dd>
-    <dt class="property-required"
+    <dd>{{% md %}}The level code.{{% /md %}}</dd><dt class="property-required"
             title="Required">
         <span id="message_python">
 <a href="#message_python" style="color: inherit; text-decoration: inherit;">message</a>
@@ -884,8 +778,7 @@ The following output properties are available:
         <span class="property-indicator"></span>
         <span class="property-type">str</span>
     </dt>
-    <dd>{{% md %}}The detailed status message, including for alerts and error messages.{{% /md %}}</dd>
-    <dt class="property-required"
+    <dd>{{% md %}}The detailed status message, including for alerts and error messages.{{% /md %}}</dd><dt class="property-required"
             title="Required">
         <span id="time_python">
 <a href="#time_python" style="color: inherit; text-decoration: inherit;">time</a>
@@ -893,8 +786,7 @@ The following output properties are available:
         <span class="property-indicator"></span>
         <span class="property-type">str</span>
     </dt>
-    <dd>{{% md %}}The time of the status.{{% /md %}}</dd>
-</dl>
+    <dd>{{% md %}}The time of the status.{{% /md %}}</dd></dl>
 {{% /choosable %}}
 
 <h4 id="machineextensionpropertiesresponseinstanceview">Machine<wbr>Extension<wbr>Properties<wbr>Response<wbr>Instance<wbr>View</h4>
@@ -902,9 +794,7 @@ The following output properties are available:
 
 
 {{% choosable language csharp %}}
-<dl class="resources-properties">
-
-    <dt class="property-required"
+<dl class="resources-properties"><dt class="property-required"
             title="Required">
         <span id="name_csharp">
 <a href="#name_csharp" style="color: inherit; text-decoration: inherit;">Name</a>
@@ -912,8 +802,7 @@ The following output properties are available:
         <span class="property-indicator"></span>
         <span class="property-type">string</span>
     </dt>
-    <dd>{{% md %}}The machine extension name.{{% /md %}}</dd>
-    <dt class="property-required"
+    <dd>{{% md %}}The machine extension name.{{% /md %}}</dd><dt class="property-required"
             title="Required">
         <span id="type_csharp">
 <a href="#type_csharp" style="color: inherit; text-decoration: inherit;">Type</a>
@@ -921,8 +810,7 @@ The following output properties are available:
         <span class="property-indicator"></span>
         <span class="property-type">string</span>
     </dt>
-    <dd>{{% md %}}Specifies the type of the extension; an example is "CustomScriptExtension".{{% /md %}}</dd>
-    <dt class="property-required"
+    <dd>{{% md %}}Specifies the type of the extension; an example is "CustomScriptExtension".{{% /md %}}</dd><dt class="property-required"
             title="Required">
         <span id="typehandlerversion_csharp">
 <a href="#typehandlerversion_csharp" style="color: inherit; text-decoration: inherit;">Type<wbr>Handler<wbr>Version</a>
@@ -930,8 +818,7 @@ The following output properties are available:
         <span class="property-indicator"></span>
         <span class="property-type">string</span>
     </dt>
-    <dd>{{% md %}}Specifies the version of the script handler.{{% /md %}}</dd>
-    <dt class="property-optional"
+    <dd>{{% md %}}Specifies the version of the script handler.{{% /md %}}</dd><dt class="property-optional"
             title="Optional">
         <span id="status_csharp">
 <a href="#status_csharp" style="color: inherit; text-decoration: inherit;">Status</a>
@@ -939,14 +826,11 @@ The following output properties are available:
         <span class="property-indicator"></span>
         <span class="property-type"><a href="#machineextensioninstanceviewresponsestatus">Pulumi.<wbr>Azure<wbr>Native.<wbr>Hybrid<wbr>Compute.<wbr>Inputs.<wbr>Machine<wbr>Extension<wbr>Instance<wbr>View<wbr>Response<wbr>Status<wbr>Args</a></span>
     </dt>
-    <dd>{{% md %}}Instance view status.{{% /md %}}</dd>
-</dl>
+    <dd>{{% md %}}Instance view status.{{% /md %}}</dd></dl>
 {{% /choosable %}}
 
 {{% choosable language go %}}
-<dl class="resources-properties">
-
-    <dt class="property-required"
+<dl class="resources-properties"><dt class="property-required"
             title="Required">
         <span id="name_go">
 <a href="#name_go" style="color: inherit; text-decoration: inherit;">Name</a>
@@ -954,8 +838,7 @@ The following output properties are available:
         <span class="property-indicator"></span>
         <span class="property-type">string</span>
     </dt>
-    <dd>{{% md %}}The machine extension name.{{% /md %}}</dd>
-    <dt class="property-required"
+    <dd>{{% md %}}The machine extension name.{{% /md %}}</dd><dt class="property-required"
             title="Required">
         <span id="type_go">
 <a href="#type_go" style="color: inherit; text-decoration: inherit;">Type</a>
@@ -963,8 +846,7 @@ The following output properties are available:
         <span class="property-indicator"></span>
         <span class="property-type">string</span>
     </dt>
-    <dd>{{% md %}}Specifies the type of the extension; an example is "CustomScriptExtension".{{% /md %}}</dd>
-    <dt class="property-required"
+    <dd>{{% md %}}Specifies the type of the extension; an example is "CustomScriptExtension".{{% /md %}}</dd><dt class="property-required"
             title="Required">
         <span id="typehandlerversion_go">
 <a href="#typehandlerversion_go" style="color: inherit; text-decoration: inherit;">Type<wbr>Handler<wbr>Version</a>
@@ -972,8 +854,7 @@ The following output properties are available:
         <span class="property-indicator"></span>
         <span class="property-type">string</span>
     </dt>
-    <dd>{{% md %}}Specifies the version of the script handler.{{% /md %}}</dd>
-    <dt class="property-optional"
+    <dd>{{% md %}}Specifies the version of the script handler.{{% /md %}}</dd><dt class="property-optional"
             title="Optional">
         <span id="status_go">
 <a href="#status_go" style="color: inherit; text-decoration: inherit;">Status</a>
@@ -981,14 +862,11 @@ The following output properties are available:
         <span class="property-indicator"></span>
         <span class="property-type"><a href="#machineextensioninstanceviewresponsestatus">Machine<wbr>Extension<wbr>Instance<wbr>View<wbr>Response<wbr>Status</a></span>
     </dt>
-    <dd>{{% md %}}Instance view status.{{% /md %}}</dd>
-</dl>
+    <dd>{{% md %}}Instance view status.{{% /md %}}</dd></dl>
 {{% /choosable %}}
 
 {{% choosable language nodejs %}}
-<dl class="resources-properties">
-
-    <dt class="property-required"
+<dl class="resources-properties"><dt class="property-required"
             title="Required">
         <span id="name_nodejs">
 <a href="#name_nodejs" style="color: inherit; text-decoration: inherit;">name</a>
@@ -996,8 +874,7 @@ The following output properties are available:
         <span class="property-indicator"></span>
         <span class="property-type">string</span>
     </dt>
-    <dd>{{% md %}}The machine extension name.{{% /md %}}</dd>
-    <dt class="property-required"
+    <dd>{{% md %}}The machine extension name.{{% /md %}}</dd><dt class="property-required"
             title="Required">
         <span id="type_nodejs">
 <a href="#type_nodejs" style="color: inherit; text-decoration: inherit;">type</a>
@@ -1005,8 +882,7 @@ The following output properties are available:
         <span class="property-indicator"></span>
         <span class="property-type">string</span>
     </dt>
-    <dd>{{% md %}}Specifies the type of the extension; an example is "CustomScriptExtension".{{% /md %}}</dd>
-    <dt class="property-required"
+    <dd>{{% md %}}Specifies the type of the extension; an example is "CustomScriptExtension".{{% /md %}}</dd><dt class="property-required"
             title="Required">
         <span id="typehandlerversion_nodejs">
 <a href="#typehandlerversion_nodejs" style="color: inherit; text-decoration: inherit;">type<wbr>Handler<wbr>Version</a>
@@ -1014,8 +890,7 @@ The following output properties are available:
         <span class="property-indicator"></span>
         <span class="property-type">string</span>
     </dt>
-    <dd>{{% md %}}Specifies the version of the script handler.{{% /md %}}</dd>
-    <dt class="property-optional"
+    <dd>{{% md %}}Specifies the version of the script handler.{{% /md %}}</dd><dt class="property-optional"
             title="Optional">
         <span id="status_nodejs">
 <a href="#status_nodejs" style="color: inherit; text-decoration: inherit;">status</a>
@@ -1023,14 +898,11 @@ The following output properties are available:
         <span class="property-indicator"></span>
         <span class="property-type"><a href="#machineextensioninstanceviewresponsestatus">Machine<wbr>Extension<wbr>Instance<wbr>View<wbr>Response<wbr>Status</a></span>
     </dt>
-    <dd>{{% md %}}Instance view status.{{% /md %}}</dd>
-</dl>
+    <dd>{{% md %}}Instance view status.{{% /md %}}</dd></dl>
 {{% /choosable %}}
 
 {{% choosable language python %}}
-<dl class="resources-properties">
-
-    <dt class="property-required"
+<dl class="resources-properties"><dt class="property-required"
             title="Required">
         <span id="name_python">
 <a href="#name_python" style="color: inherit; text-decoration: inherit;">name</a>
@@ -1038,8 +910,7 @@ The following output properties are available:
         <span class="property-indicator"></span>
         <span class="property-type">str</span>
     </dt>
-    <dd>{{% md %}}The machine extension name.{{% /md %}}</dd>
-    <dt class="property-required"
+    <dd>{{% md %}}The machine extension name.{{% /md %}}</dd><dt class="property-required"
             title="Required">
         <span id="type_python">
 <a href="#type_python" style="color: inherit; text-decoration: inherit;">type</a>
@@ -1047,8 +918,7 @@ The following output properties are available:
         <span class="property-indicator"></span>
         <span class="property-type">str</span>
     </dt>
-    <dd>{{% md %}}Specifies the type of the extension; an example is "CustomScriptExtension".{{% /md %}}</dd>
-    <dt class="property-required"
+    <dd>{{% md %}}Specifies the type of the extension; an example is "CustomScriptExtension".{{% /md %}}</dd><dt class="property-required"
             title="Required">
         <span id="type_handler_version_python">
 <a href="#type_handler_version_python" style="color: inherit; text-decoration: inherit;">type_<wbr>handler_<wbr>version</a>
@@ -1056,8 +926,7 @@ The following output properties are available:
         <span class="property-indicator"></span>
         <span class="property-type">str</span>
     </dt>
-    <dd>{{% md %}}Specifies the version of the script handler.{{% /md %}}</dd>
-    <dt class="property-optional"
+    <dd>{{% md %}}Specifies the version of the script handler.{{% /md %}}</dd><dt class="property-optional"
             title="Optional">
         <span id="status_python">
 <a href="#status_python" style="color: inherit; text-decoration: inherit;">status</a>
@@ -1065,8 +934,7 @@ The following output properties are available:
         <span class="property-indicator"></span>
         <span class="property-type"><a href="#machineextensioninstanceviewresponsestatus">Machine<wbr>Extension<wbr>Instance<wbr>View<wbr>Response<wbr>Status<wbr>Args</a></span>
     </dt>
-    <dd>{{% md %}}Instance view status.{{% /md %}}</dd>
-</dl>
+    <dd>{{% md %}}Instance view status.{{% /md %}}</dd></dl>
 {{% /choosable %}}
 
 

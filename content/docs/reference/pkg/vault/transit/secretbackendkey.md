@@ -13,11 +13,17 @@ meta_desc: "Documentation for the vault.transit.SecretBackendKey resource with e
 Creates an Encryption Keyring on a Transit Secret Backend for Vault.
 
 {{% examples %}}
+
 ## Example Usage
 
 {{< chooser language "typescript,python,go,csharp" / >}}
 
-{{% example csharp %}}
+
+
+
+
+{{< example csharp >}}
+
 ```csharp
 using Pulumi;
 using Vault = Pulumi.Vault;
@@ -43,9 +49,12 @@ class MyStack : Stack
 }
 ```
 
-{{% /example %}}
 
-{{% example go %}}
+{{< /example >}}
+
+
+{{< example go >}}
+
 ```go
 package main
 
@@ -78,9 +87,12 @@ func main() {
 }
 ```
 
-{{% /example %}}
 
-{{% example python %}}
+{{< /example >}}
+
+
+{{< example python >}}
+
 ```python
 import pulumi
 import pulumi_vault as vault
@@ -94,9 +106,12 @@ transit = vault.Mount("transit",
 key = vault.transit.SecretBackendKey("key", backend=transit.path)
 ```
 
-{{% /example %}}
 
-{{% example typescript %}}
+{{< /example >}}
+
+
+{{< example typescript >}}
+
 
 ```typescript
 import * as pulumi from "@pulumi/pulumi";
@@ -114,9 +129,16 @@ const key = new vault.transit.SecretBackendKey("key", {
 });
 ```
 
-{{% /example %}}
+
+{{< /example >}}
+
+
+
+
 
 {{% /examples %}}
+
+
 
 
 ## Create a SecretBackendKey Resource {#create}
@@ -141,9 +163,7 @@ const key = new vault.transit.SecretBackendKey("key", {
 
 {{% choosable language nodejs %}}
 
-<dl class="resources-properties">
-  
-    <dt
+<dl class="resources-properties"><dt
         class="property-required" title="Required">
         <span>name</span>
         <span class="property-indicator"></span>
@@ -151,9 +171,7 @@ const key = new vault.transit.SecretBackendKey("key", {
     </dt>
     <dd>
       The unique name of the resource.
-    </dd>
-  
-    <dt
+    </dd><dt
         class="property-required" title="Required">
         <span>args</span>
         <span class="property-indicator"></span>
@@ -161,9 +179,7 @@ const key = new vault.transit.SecretBackendKey("key", {
     </dt>
     <dd>
       The arguments to resource properties.
-    </dd>
-  
-    <dt
+    </dd><dt
         class="property-optional" title="Optional">
         <span>opts</span>
         <span class="property-indicator"></span>
@@ -171,10 +187,7 @@ const key = new vault.transit.SecretBackendKey("key", {
     </dt>
     <dd>
       Bag of options to control resource&#39;s behavior.
-    </dd>
-  
-
-</dl>
+    </dd></dl>
 
 {{% /choosable %}}
 
@@ -200,9 +213,7 @@ const key = new vault.transit.SecretBackendKey("key", {
 
 {{% choosable language go %}}
 
-<dl class="resources-properties">
-  
-    <dt
+<dl class="resources-properties"><dt
         class="property-optional" title="Optional">
         <span>ctx</span>
         <span class="property-indicator"></span>
@@ -210,9 +221,7 @@ const key = new vault.transit.SecretBackendKey("key", {
     </dt>
     <dd>
       Context object for the current deployment.
-    </dd>
-  
-    <dt
+    </dd><dt
         class="property-required" title="Required">
         <span>name</span>
         <span class="property-indicator"></span>
@@ -220,9 +229,7 @@ const key = new vault.transit.SecretBackendKey("key", {
     </dt>
     <dd>
       The unique name of the resource.
-    </dd>
-  
-    <dt
+    </dd><dt
         class="property-required" title="Required">
         <span>args</span>
         <span class="property-indicator"></span>
@@ -230,9 +237,7 @@ const key = new vault.transit.SecretBackendKey("key", {
     </dt>
     <dd>
       The arguments to resource properties.
-    </dd>
-  
-    <dt
+    </dd><dt
         class="property-optional" title="Optional">
         <span>opts</span>
         <span class="property-indicator"></span>
@@ -240,18 +245,13 @@ const key = new vault.transit.SecretBackendKey("key", {
     </dt>
     <dd>
       Bag of options to control resource&#39;s behavior.
-    </dd>
-  
-
-</dl>
+    </dd></dl>
 
 {{% /choosable %}}
 
 {{% choosable language csharp %}}
 
-<dl class="resources-properties">
-  
-    <dt
+<dl class="resources-properties"><dt
         class="property-required" title="Required">
         <span>name</span>
         <span class="property-indicator"></span>
@@ -259,9 +259,7 @@ const key = new vault.transit.SecretBackendKey("key", {
     </dt>
     <dd>
       The unique name of the resource.
-    </dd>
-  
-    <dt
+    </dd><dt
         class="property-required" title="Required">
         <span>args</span>
         <span class="property-indicator"></span>
@@ -269,9 +267,7 @@ const key = new vault.transit.SecretBackendKey("key", {
     </dt>
     <dd>
       The arguments to resource properties.
-    </dd>
-  
-    <dt
+    </dd><dt
         class="property-optional" title="Optional">
         <span>opts</span>
         <span class="property-indicator"></span>
@@ -279,10 +275,7 @@ const key = new vault.transit.SecretBackendKey("key", {
     </dt>
     <dd>
       Bag of options to control resource&#39;s behavior.
-    </dd>
-  
-
-</dl>
+    </dd></dl>
 
 {{% /choosable %}}
 
@@ -297,9 +290,7 @@ The SecretBackendKey resource accepts the following [input]({{< relref "/docs/in
 
 
 {{% choosable language csharp %}}
-<dl class="resources-properties">
-
-    <dt class="property-required"
+<dl class="resources-properties"><dt class="property-required"
             title="Required">
         <span id="backend_csharp">
 <a href="#backend_csharp" style="color: inherit; text-decoration: inherit;">Backend</a>
@@ -308,8 +299,7 @@ The SecretBackendKey resource accepts the following [input]({{< relref "/docs/in
         <span class="property-type">string</span>
     </dt>
     <dd>{{% md %}}The path the transit secret backend is mounted at, with no leading or trailing `/`s.
-{{% /md %}}</dd>
-    <dt class="property-optional"
+{{% /md %}}</dd><dt class="property-optional"
             title="Optional">
         <span id="allowplaintextbackup_csharp">
 <a href="#allowplaintextbackup_csharp" style="color: inherit; text-decoration: inherit;">Allow<wbr>Plaintext<wbr>Backup</a>
@@ -319,8 +309,7 @@ The SecretBackendKey resource accepts the following [input]({{< relref "/docs/in
     </dt>
     <dd>{{% md %}}Enables taking backup of entire keyring in the plaintext format. Once set, this cannot be disabled.
 * Refer to Vault API documentation on key backups for more information: [Backup Key](https://www.vaultproject.io/api-docs/secret/transit#backup-key)
-{{% /md %}}</dd>
-    <dt class="property-optional"
+{{% /md %}}</dd><dt class="property-optional"
             title="Optional">
         <span id="convergentencryption_csharp">
 <a href="#convergentencryption_csharp" style="color: inherit; text-decoration: inherit;">Convergent<wbr>Encryption</a>
@@ -329,8 +318,7 @@ The SecretBackendKey resource accepts the following [input]({{< relref "/docs/in
         <span class="property-type">bool</span>
     </dt>
     <dd>{{% md %}}Whether or not to support convergent encryption, where the same plaintext creates the same ciphertext. This requires `derived` to be set to `true`.
-{{% /md %}}</dd>
-    <dt class="property-optional"
+{{% /md %}}</dd><dt class="property-optional"
             title="Optional">
         <span id="deletionallowed_csharp">
 <a href="#deletionallowed_csharp" style="color: inherit; text-decoration: inherit;">Deletion<wbr>Allowed</a>
@@ -339,8 +327,7 @@ The SecretBackendKey resource accepts the following [input]({{< relref "/docs/in
         <span class="property-type">bool</span>
     </dt>
     <dd>{{% md %}}Specifies if the key is allowed to be deleted.
-{{% /md %}}</dd>
-    <dt class="property-optional"
+{{% /md %}}</dd><dt class="property-optional"
             title="Optional">
         <span id="derived_csharp">
 <a href="#derived_csharp" style="color: inherit; text-decoration: inherit;">Derived</a>
@@ -349,8 +336,7 @@ The SecretBackendKey resource accepts the following [input]({{< relref "/docs/in
         <span class="property-type">bool</span>
     </dt>
     <dd>{{% md %}}Specifies if key derivation is to be used. If enabled, all encrypt/decrypt requests to this key must provide a context which is used for key derivation.
-{{% /md %}}</dd>
-    <dt class="property-optional"
+{{% /md %}}</dd><dt class="property-optional"
             title="Optional">
         <span id="exportable_csharp">
 <a href="#exportable_csharp" style="color: inherit; text-decoration: inherit;">Exportable</a>
@@ -359,8 +345,7 @@ The SecretBackendKey resource accepts the following [input]({{< relref "/docs/in
         <span class="property-type">bool</span>
     </dt>
     <dd>{{% md %}}Enables keys to be exportable. This allows for all valid private keys in the keyring to be exported. Once set, this cannot be disabled.
-{{% /md %}}</dd>
-    <dt class="property-optional"
+{{% /md %}}</dd><dt class="property-optional"
             title="Optional">
         <span id="mindecryptionversion_csharp">
 <a href="#mindecryptionversion_csharp" style="color: inherit; text-decoration: inherit;">Min<wbr>Decryption<wbr>Version</a>
@@ -369,8 +354,7 @@ The SecretBackendKey resource accepts the following [input]({{< relref "/docs/in
         <span class="property-type">int</span>
     </dt>
     <dd>{{% md %}}Minimum key version to use for decryption.
-{{% /md %}}</dd>
-    <dt class="property-optional"
+{{% /md %}}</dd><dt class="property-optional"
             title="Optional">
         <span id="minencryptionversion_csharp">
 <a href="#minencryptionversion_csharp" style="color: inherit; text-decoration: inherit;">Min<wbr>Encryption<wbr>Version</a>
@@ -379,8 +363,7 @@ The SecretBackendKey resource accepts the following [input]({{< relref "/docs/in
         <span class="property-type">int</span>
     </dt>
     <dd>{{% md %}}Minimum key version to use for encryption
-{{% /md %}}</dd>
-    <dt class="property-optional"
+{{% /md %}}</dd><dt class="property-optional"
             title="Optional">
         <span id="name_csharp">
 <a href="#name_csharp" style="color: inherit; text-decoration: inherit;">Name</a>
@@ -389,8 +372,7 @@ The SecretBackendKey resource accepts the following [input]({{< relref "/docs/in
         <span class="property-type">string</span>
     </dt>
     <dd>{{% md %}}The name to identify this key within the backend. Must be unique within the backend.
-{{% /md %}}</dd>
-    <dt class="property-optional"
+{{% /md %}}</dd><dt class="property-optional"
             title="Optional">
         <span id="type_csharp">
 <a href="#type_csharp" style="color: inherit; text-decoration: inherit;">Type</a>
@@ -400,14 +382,11 @@ The SecretBackendKey resource accepts the following [input]({{< relref "/docs/in
     </dt>
     <dd>{{% md %}}Specifies the type of key to create. The currently-supported types are: `aes128-gcm96`, `aes256-gcm96` (default), `chacha20-poly1305`, `ed25519`, `ecdsa-p256`, `ecdsa-p384`, `ecdsa-p521`, `rsa-2048`, `rsa-3072` and `rsa-4096`. 
 * Refer to the Vault documentation on transit key types for more information: [Key Types](https://www.vaultproject.io/docs/secrets/transit#key-types)
-{{% /md %}}</dd>
-</dl>
+{{% /md %}}</dd></dl>
 {{% /choosable %}}
 
 {{% choosable language go %}}
-<dl class="resources-properties">
-
-    <dt class="property-required"
+<dl class="resources-properties"><dt class="property-required"
             title="Required">
         <span id="backend_go">
 <a href="#backend_go" style="color: inherit; text-decoration: inherit;">Backend</a>
@@ -416,8 +395,7 @@ The SecretBackendKey resource accepts the following [input]({{< relref "/docs/in
         <span class="property-type">string</span>
     </dt>
     <dd>{{% md %}}The path the transit secret backend is mounted at, with no leading or trailing `/`s.
-{{% /md %}}</dd>
-    <dt class="property-optional"
+{{% /md %}}</dd><dt class="property-optional"
             title="Optional">
         <span id="allowplaintextbackup_go">
 <a href="#allowplaintextbackup_go" style="color: inherit; text-decoration: inherit;">Allow<wbr>Plaintext<wbr>Backup</a>
@@ -427,8 +405,7 @@ The SecretBackendKey resource accepts the following [input]({{< relref "/docs/in
     </dt>
     <dd>{{% md %}}Enables taking backup of entire keyring in the plaintext format. Once set, this cannot be disabled.
 * Refer to Vault API documentation on key backups for more information: [Backup Key](https://www.vaultproject.io/api-docs/secret/transit#backup-key)
-{{% /md %}}</dd>
-    <dt class="property-optional"
+{{% /md %}}</dd><dt class="property-optional"
             title="Optional">
         <span id="convergentencryption_go">
 <a href="#convergentencryption_go" style="color: inherit; text-decoration: inherit;">Convergent<wbr>Encryption</a>
@@ -437,8 +414,7 @@ The SecretBackendKey resource accepts the following [input]({{< relref "/docs/in
         <span class="property-type">bool</span>
     </dt>
     <dd>{{% md %}}Whether or not to support convergent encryption, where the same plaintext creates the same ciphertext. This requires `derived` to be set to `true`.
-{{% /md %}}</dd>
-    <dt class="property-optional"
+{{% /md %}}</dd><dt class="property-optional"
             title="Optional">
         <span id="deletionallowed_go">
 <a href="#deletionallowed_go" style="color: inherit; text-decoration: inherit;">Deletion<wbr>Allowed</a>
@@ -447,8 +423,7 @@ The SecretBackendKey resource accepts the following [input]({{< relref "/docs/in
         <span class="property-type">bool</span>
     </dt>
     <dd>{{% md %}}Specifies if the key is allowed to be deleted.
-{{% /md %}}</dd>
-    <dt class="property-optional"
+{{% /md %}}</dd><dt class="property-optional"
             title="Optional">
         <span id="derived_go">
 <a href="#derived_go" style="color: inherit; text-decoration: inherit;">Derived</a>
@@ -457,8 +432,7 @@ The SecretBackendKey resource accepts the following [input]({{< relref "/docs/in
         <span class="property-type">bool</span>
     </dt>
     <dd>{{% md %}}Specifies if key derivation is to be used. If enabled, all encrypt/decrypt requests to this key must provide a context which is used for key derivation.
-{{% /md %}}</dd>
-    <dt class="property-optional"
+{{% /md %}}</dd><dt class="property-optional"
             title="Optional">
         <span id="exportable_go">
 <a href="#exportable_go" style="color: inherit; text-decoration: inherit;">Exportable</a>
@@ -467,8 +441,7 @@ The SecretBackendKey resource accepts the following [input]({{< relref "/docs/in
         <span class="property-type">bool</span>
     </dt>
     <dd>{{% md %}}Enables keys to be exportable. This allows for all valid private keys in the keyring to be exported. Once set, this cannot be disabled.
-{{% /md %}}</dd>
-    <dt class="property-optional"
+{{% /md %}}</dd><dt class="property-optional"
             title="Optional">
         <span id="mindecryptionversion_go">
 <a href="#mindecryptionversion_go" style="color: inherit; text-decoration: inherit;">Min<wbr>Decryption<wbr>Version</a>
@@ -477,8 +450,7 @@ The SecretBackendKey resource accepts the following [input]({{< relref "/docs/in
         <span class="property-type">int</span>
     </dt>
     <dd>{{% md %}}Minimum key version to use for decryption.
-{{% /md %}}</dd>
-    <dt class="property-optional"
+{{% /md %}}</dd><dt class="property-optional"
             title="Optional">
         <span id="minencryptionversion_go">
 <a href="#minencryptionversion_go" style="color: inherit; text-decoration: inherit;">Min<wbr>Encryption<wbr>Version</a>
@@ -487,8 +459,7 @@ The SecretBackendKey resource accepts the following [input]({{< relref "/docs/in
         <span class="property-type">int</span>
     </dt>
     <dd>{{% md %}}Minimum key version to use for encryption
-{{% /md %}}</dd>
-    <dt class="property-optional"
+{{% /md %}}</dd><dt class="property-optional"
             title="Optional">
         <span id="name_go">
 <a href="#name_go" style="color: inherit; text-decoration: inherit;">Name</a>
@@ -497,8 +468,7 @@ The SecretBackendKey resource accepts the following [input]({{< relref "/docs/in
         <span class="property-type">string</span>
     </dt>
     <dd>{{% md %}}The name to identify this key within the backend. Must be unique within the backend.
-{{% /md %}}</dd>
-    <dt class="property-optional"
+{{% /md %}}</dd><dt class="property-optional"
             title="Optional">
         <span id="type_go">
 <a href="#type_go" style="color: inherit; text-decoration: inherit;">Type</a>
@@ -508,14 +478,11 @@ The SecretBackendKey resource accepts the following [input]({{< relref "/docs/in
     </dt>
     <dd>{{% md %}}Specifies the type of key to create. The currently-supported types are: `aes128-gcm96`, `aes256-gcm96` (default), `chacha20-poly1305`, `ed25519`, `ecdsa-p256`, `ecdsa-p384`, `ecdsa-p521`, `rsa-2048`, `rsa-3072` and `rsa-4096`. 
 * Refer to the Vault documentation on transit key types for more information: [Key Types](https://www.vaultproject.io/docs/secrets/transit#key-types)
-{{% /md %}}</dd>
-</dl>
+{{% /md %}}</dd></dl>
 {{% /choosable %}}
 
 {{% choosable language nodejs %}}
-<dl class="resources-properties">
-
-    <dt class="property-required"
+<dl class="resources-properties"><dt class="property-required"
             title="Required">
         <span id="backend_nodejs">
 <a href="#backend_nodejs" style="color: inherit; text-decoration: inherit;">backend</a>
@@ -524,8 +491,7 @@ The SecretBackendKey resource accepts the following [input]({{< relref "/docs/in
         <span class="property-type">string</span>
     </dt>
     <dd>{{% md %}}The path the transit secret backend is mounted at, with no leading or trailing `/`s.
-{{% /md %}}</dd>
-    <dt class="property-optional"
+{{% /md %}}</dd><dt class="property-optional"
             title="Optional">
         <span id="allowplaintextbackup_nodejs">
 <a href="#allowplaintextbackup_nodejs" style="color: inherit; text-decoration: inherit;">allow<wbr>Plaintext<wbr>Backup</a>
@@ -535,8 +501,7 @@ The SecretBackendKey resource accepts the following [input]({{< relref "/docs/in
     </dt>
     <dd>{{% md %}}Enables taking backup of entire keyring in the plaintext format. Once set, this cannot be disabled.
 * Refer to Vault API documentation on key backups for more information: [Backup Key](https://www.vaultproject.io/api-docs/secret/transit#backup-key)
-{{% /md %}}</dd>
-    <dt class="property-optional"
+{{% /md %}}</dd><dt class="property-optional"
             title="Optional">
         <span id="convergentencryption_nodejs">
 <a href="#convergentencryption_nodejs" style="color: inherit; text-decoration: inherit;">convergent<wbr>Encryption</a>
@@ -545,8 +510,7 @@ The SecretBackendKey resource accepts the following [input]({{< relref "/docs/in
         <span class="property-type">boolean</span>
     </dt>
     <dd>{{% md %}}Whether or not to support convergent encryption, where the same plaintext creates the same ciphertext. This requires `derived` to be set to `true`.
-{{% /md %}}</dd>
-    <dt class="property-optional"
+{{% /md %}}</dd><dt class="property-optional"
             title="Optional">
         <span id="deletionallowed_nodejs">
 <a href="#deletionallowed_nodejs" style="color: inherit; text-decoration: inherit;">deletion<wbr>Allowed</a>
@@ -555,8 +519,7 @@ The SecretBackendKey resource accepts the following [input]({{< relref "/docs/in
         <span class="property-type">boolean</span>
     </dt>
     <dd>{{% md %}}Specifies if the key is allowed to be deleted.
-{{% /md %}}</dd>
-    <dt class="property-optional"
+{{% /md %}}</dd><dt class="property-optional"
             title="Optional">
         <span id="derived_nodejs">
 <a href="#derived_nodejs" style="color: inherit; text-decoration: inherit;">derived</a>
@@ -565,8 +528,7 @@ The SecretBackendKey resource accepts the following [input]({{< relref "/docs/in
         <span class="property-type">boolean</span>
     </dt>
     <dd>{{% md %}}Specifies if key derivation is to be used. If enabled, all encrypt/decrypt requests to this key must provide a context which is used for key derivation.
-{{% /md %}}</dd>
-    <dt class="property-optional"
+{{% /md %}}</dd><dt class="property-optional"
             title="Optional">
         <span id="exportable_nodejs">
 <a href="#exportable_nodejs" style="color: inherit; text-decoration: inherit;">exportable</a>
@@ -575,8 +537,7 @@ The SecretBackendKey resource accepts the following [input]({{< relref "/docs/in
         <span class="property-type">boolean</span>
     </dt>
     <dd>{{% md %}}Enables keys to be exportable. This allows for all valid private keys in the keyring to be exported. Once set, this cannot be disabled.
-{{% /md %}}</dd>
-    <dt class="property-optional"
+{{% /md %}}</dd><dt class="property-optional"
             title="Optional">
         <span id="mindecryptionversion_nodejs">
 <a href="#mindecryptionversion_nodejs" style="color: inherit; text-decoration: inherit;">min<wbr>Decryption<wbr>Version</a>
@@ -585,8 +546,7 @@ The SecretBackendKey resource accepts the following [input]({{< relref "/docs/in
         <span class="property-type">number</span>
     </dt>
     <dd>{{% md %}}Minimum key version to use for decryption.
-{{% /md %}}</dd>
-    <dt class="property-optional"
+{{% /md %}}</dd><dt class="property-optional"
             title="Optional">
         <span id="minencryptionversion_nodejs">
 <a href="#minencryptionversion_nodejs" style="color: inherit; text-decoration: inherit;">min<wbr>Encryption<wbr>Version</a>
@@ -595,8 +555,7 @@ The SecretBackendKey resource accepts the following [input]({{< relref "/docs/in
         <span class="property-type">number</span>
     </dt>
     <dd>{{% md %}}Minimum key version to use for encryption
-{{% /md %}}</dd>
-    <dt class="property-optional"
+{{% /md %}}</dd><dt class="property-optional"
             title="Optional">
         <span id="name_nodejs">
 <a href="#name_nodejs" style="color: inherit; text-decoration: inherit;">name</a>
@@ -605,8 +564,7 @@ The SecretBackendKey resource accepts the following [input]({{< relref "/docs/in
         <span class="property-type">string</span>
     </dt>
     <dd>{{% md %}}The name to identify this key within the backend. Must be unique within the backend.
-{{% /md %}}</dd>
-    <dt class="property-optional"
+{{% /md %}}</dd><dt class="property-optional"
             title="Optional">
         <span id="type_nodejs">
 <a href="#type_nodejs" style="color: inherit; text-decoration: inherit;">type</a>
@@ -616,14 +574,11 @@ The SecretBackendKey resource accepts the following [input]({{< relref "/docs/in
     </dt>
     <dd>{{% md %}}Specifies the type of key to create. The currently-supported types are: `aes128-gcm96`, `aes256-gcm96` (default), `chacha20-poly1305`, `ed25519`, `ecdsa-p256`, `ecdsa-p384`, `ecdsa-p521`, `rsa-2048`, `rsa-3072` and `rsa-4096`. 
 * Refer to the Vault documentation on transit key types for more information: [Key Types](https://www.vaultproject.io/docs/secrets/transit#key-types)
-{{% /md %}}</dd>
-</dl>
+{{% /md %}}</dd></dl>
 {{% /choosable %}}
 
 {{% choosable language python %}}
-<dl class="resources-properties">
-
-    <dt class="property-required"
+<dl class="resources-properties"><dt class="property-required"
             title="Required">
         <span id="backend_python">
 <a href="#backend_python" style="color: inherit; text-decoration: inherit;">backend</a>
@@ -632,8 +587,7 @@ The SecretBackendKey resource accepts the following [input]({{< relref "/docs/in
         <span class="property-type">str</span>
     </dt>
     <dd>{{% md %}}The path the transit secret backend is mounted at, with no leading or trailing `/`s.
-{{% /md %}}</dd>
-    <dt class="property-optional"
+{{% /md %}}</dd><dt class="property-optional"
             title="Optional">
         <span id="allow_plaintext_backup_python">
 <a href="#allow_plaintext_backup_python" style="color: inherit; text-decoration: inherit;">allow_<wbr>plaintext_<wbr>backup</a>
@@ -643,8 +597,7 @@ The SecretBackendKey resource accepts the following [input]({{< relref "/docs/in
     </dt>
     <dd>{{% md %}}Enables taking backup of entire keyring in the plaintext format. Once set, this cannot be disabled.
 * Refer to Vault API documentation on key backups for more information: [Backup Key](https://www.vaultproject.io/api-docs/secret/transit#backup-key)
-{{% /md %}}</dd>
-    <dt class="property-optional"
+{{% /md %}}</dd><dt class="property-optional"
             title="Optional">
         <span id="convergent_encryption_python">
 <a href="#convergent_encryption_python" style="color: inherit; text-decoration: inherit;">convergent_<wbr>encryption</a>
@@ -653,8 +606,7 @@ The SecretBackendKey resource accepts the following [input]({{< relref "/docs/in
         <span class="property-type">bool</span>
     </dt>
     <dd>{{% md %}}Whether or not to support convergent encryption, where the same plaintext creates the same ciphertext. This requires `derived` to be set to `true`.
-{{% /md %}}</dd>
-    <dt class="property-optional"
+{{% /md %}}</dd><dt class="property-optional"
             title="Optional">
         <span id="deletion_allowed_python">
 <a href="#deletion_allowed_python" style="color: inherit; text-decoration: inherit;">deletion_<wbr>allowed</a>
@@ -663,8 +615,7 @@ The SecretBackendKey resource accepts the following [input]({{< relref "/docs/in
         <span class="property-type">bool</span>
     </dt>
     <dd>{{% md %}}Specifies if the key is allowed to be deleted.
-{{% /md %}}</dd>
-    <dt class="property-optional"
+{{% /md %}}</dd><dt class="property-optional"
             title="Optional">
         <span id="derived_python">
 <a href="#derived_python" style="color: inherit; text-decoration: inherit;">derived</a>
@@ -673,8 +624,7 @@ The SecretBackendKey resource accepts the following [input]({{< relref "/docs/in
         <span class="property-type">bool</span>
     </dt>
     <dd>{{% md %}}Specifies if key derivation is to be used. If enabled, all encrypt/decrypt requests to this key must provide a context which is used for key derivation.
-{{% /md %}}</dd>
-    <dt class="property-optional"
+{{% /md %}}</dd><dt class="property-optional"
             title="Optional">
         <span id="exportable_python">
 <a href="#exportable_python" style="color: inherit; text-decoration: inherit;">exportable</a>
@@ -683,8 +633,7 @@ The SecretBackendKey resource accepts the following [input]({{< relref "/docs/in
         <span class="property-type">bool</span>
     </dt>
     <dd>{{% md %}}Enables keys to be exportable. This allows for all valid private keys in the keyring to be exported. Once set, this cannot be disabled.
-{{% /md %}}</dd>
-    <dt class="property-optional"
+{{% /md %}}</dd><dt class="property-optional"
             title="Optional">
         <span id="min_decryption_version_python">
 <a href="#min_decryption_version_python" style="color: inherit; text-decoration: inherit;">min_<wbr>decryption_<wbr>version</a>
@@ -693,8 +642,7 @@ The SecretBackendKey resource accepts the following [input]({{< relref "/docs/in
         <span class="property-type">int</span>
     </dt>
     <dd>{{% md %}}Minimum key version to use for decryption.
-{{% /md %}}</dd>
-    <dt class="property-optional"
+{{% /md %}}</dd><dt class="property-optional"
             title="Optional">
         <span id="min_encryption_version_python">
 <a href="#min_encryption_version_python" style="color: inherit; text-decoration: inherit;">min_<wbr>encryption_<wbr>version</a>
@@ -703,8 +651,7 @@ The SecretBackendKey resource accepts the following [input]({{< relref "/docs/in
         <span class="property-type">int</span>
     </dt>
     <dd>{{% md %}}Minimum key version to use for encryption
-{{% /md %}}</dd>
-    <dt class="property-optional"
+{{% /md %}}</dd><dt class="property-optional"
             title="Optional">
         <span id="name_python">
 <a href="#name_python" style="color: inherit; text-decoration: inherit;">name</a>
@@ -713,8 +660,7 @@ The SecretBackendKey resource accepts the following [input]({{< relref "/docs/in
         <span class="property-type">str</span>
     </dt>
     <dd>{{% md %}}The name to identify this key within the backend. Must be unique within the backend.
-{{% /md %}}</dd>
-    <dt class="property-optional"
+{{% /md %}}</dd><dt class="property-optional"
             title="Optional">
         <span id="type_python">
 <a href="#type_python" style="color: inherit; text-decoration: inherit;">type</a>
@@ -724,8 +670,7 @@ The SecretBackendKey resource accepts the following [input]({{< relref "/docs/in
     </dt>
     <dd>{{% md %}}Specifies the type of key to create. The currently-supported types are: `aes128-gcm96`, `aes256-gcm96` (default), `chacha20-poly1305`, `ed25519`, `ecdsa-p256`, `ecdsa-p384`, `ecdsa-p521`, `rsa-2048`, `rsa-3072` and `rsa-4096`. 
 * Refer to the Vault documentation on transit key types for more information: [Key Types](https://www.vaultproject.io/docs/secrets/transit#key-types)
-{{% /md %}}</dd>
-</dl>
+{{% /md %}}</dd></dl>
 {{% /choosable %}}
 
 
@@ -736,9 +681,7 @@ All [input](#inputs) properties are implicitly available as output properties. A
 
 
 {{% choosable language csharp %}}
-<dl class="resources-properties">
-
-    <dt class="property-"
+<dl class="resources-properties"><dt class="property-"
             title="">
         <span id="id_csharp">
 <a href="#id_csharp" style="color: inherit; text-decoration: inherit;">Id</a>
@@ -746,8 +689,7 @@ All [input](#inputs) properties are implicitly available as output properties. A
         <span class="property-indicator"></span>
         <span class="property-type">string</span>
     </dt>
-    <dd>{{% md %}}The provider-assigned unique ID for this managed resource.{{% /md %}}</dd>
-    <dt class="property-"
+    <dd>{{% md %}}The provider-assigned unique ID for this managed resource.{{% /md %}}</dd><dt class="property-"
             title="">
         <span id="keys_csharp">
 <a href="#keys_csharp" style="color: inherit; text-decoration: inherit;">Keys</a>
@@ -758,8 +700,7 @@ All [input](#inputs) properties are implicitly available as output properties. A
     <dd>{{% md %}}List of key versions in the keyring. This attribute is zero-indexed and will contain a map of values depending on the `type` of the encryption key.
 * for key types `aes128-gcm96`, `aes256-gcm96` and `chacha20-poly1305`, each key version will be a map of a single value `id` which is just a hash of the key's metadata.
 * for key types `ed25519`, `ecdsa-p256`, `ecdsa-p384`, `ecdsa-p521`, `rsa-2048`, `rsa-3072` and `rsa-4096`, each key version will be a map of the following:
-{{% /md %}}</dd>
-    <dt class="property-"
+{{% /md %}}</dd><dt class="property-"
             title="">
         <span id="latestversion_csharp">
 <a href="#latestversion_csharp" style="color: inherit; text-decoration: inherit;">Latest<wbr>Version</a>
@@ -768,8 +709,7 @@ All [input](#inputs) properties are implicitly available as output properties. A
         <span class="property-type">int</span>
     </dt>
     <dd>{{% md %}}Latest key version available. This value is 1-indexed, so if `latest_version` is `1`, then the key's information can be referenced from `keys` by selecting element `0`
-{{% /md %}}</dd>
-    <dt class="property-"
+{{% /md %}}</dd><dt class="property-"
             title="">
         <span id="minavailableversion_csharp">
 <a href="#minavailableversion_csharp" style="color: inherit; text-decoration: inherit;">Min<wbr>Available<wbr>Version</a>
@@ -778,8 +718,7 @@ All [input](#inputs) properties are implicitly available as output properties. A
         <span class="property-type">int</span>
     </dt>
     <dd>{{% md %}}Minimum key version available for use. If keys have been archived by increasing `min_decryption_version`, this attribute will reflect that change.
-{{% /md %}}</dd>
-    <dt class="property-"
+{{% /md %}}</dd><dt class="property-"
             title="">
         <span id="supportsdecryption_csharp">
 <a href="#supportsdecryption_csharp" style="color: inherit; text-decoration: inherit;">Supports<wbr>Decryption</a>
@@ -788,8 +727,7 @@ All [input](#inputs) properties are implicitly available as output properties. A
         <span class="property-type">bool</span>
     </dt>
     <dd>{{% md %}}Whether or not the key supports decryption, based on key type.
-{{% /md %}}</dd>
-    <dt class="property-"
+{{% /md %}}</dd><dt class="property-"
             title="">
         <span id="supportsderivation_csharp">
 <a href="#supportsderivation_csharp" style="color: inherit; text-decoration: inherit;">Supports<wbr>Derivation</a>
@@ -798,8 +736,7 @@ All [input](#inputs) properties are implicitly available as output properties. A
         <span class="property-type">bool</span>
     </dt>
     <dd>{{% md %}}Whether or not the key supports derivation, based on key type.
-{{% /md %}}</dd>
-    <dt class="property-"
+{{% /md %}}</dd><dt class="property-"
             title="">
         <span id="supportsencryption_csharp">
 <a href="#supportsencryption_csharp" style="color: inherit; text-decoration: inherit;">Supports<wbr>Encryption</a>
@@ -808,8 +745,7 @@ All [input](#inputs) properties are implicitly available as output properties. A
         <span class="property-type">bool</span>
     </dt>
     <dd>{{% md %}}Whether or not the key supports encryption, based on key type.
-{{% /md %}}</dd>
-    <dt class="property-"
+{{% /md %}}</dd><dt class="property-"
             title="">
         <span id="supportssigning_csharp">
 <a href="#supportssigning_csharp" style="color: inherit; text-decoration: inherit;">Supports<wbr>Signing</a>
@@ -818,14 +754,11 @@ All [input](#inputs) properties are implicitly available as output properties. A
         <span class="property-type">bool</span>
     </dt>
     <dd>{{% md %}}Whether or not the key supports signing, based on key type.
-{{% /md %}}</dd>
-</dl>
+{{% /md %}}</dd></dl>
 {{% /choosable %}}
 
 {{% choosable language go %}}
-<dl class="resources-properties">
-
-    <dt class="property-"
+<dl class="resources-properties"><dt class="property-"
             title="">
         <span id="id_go">
 <a href="#id_go" style="color: inherit; text-decoration: inherit;">Id</a>
@@ -833,8 +766,7 @@ All [input](#inputs) properties are implicitly available as output properties. A
         <span class="property-indicator"></span>
         <span class="property-type">string</span>
     </dt>
-    <dd>{{% md %}}The provider-assigned unique ID for this managed resource.{{% /md %}}</dd>
-    <dt class="property-"
+    <dd>{{% md %}}The provider-assigned unique ID for this managed resource.{{% /md %}}</dd><dt class="property-"
             title="">
         <span id="keys_go">
 <a href="#keys_go" style="color: inherit; text-decoration: inherit;">Keys</a>
@@ -845,8 +777,7 @@ All [input](#inputs) properties are implicitly available as output properties. A
     <dd>{{% md %}}List of key versions in the keyring. This attribute is zero-indexed and will contain a map of values depending on the `type` of the encryption key.
 * for key types `aes128-gcm96`, `aes256-gcm96` and `chacha20-poly1305`, each key version will be a map of a single value `id` which is just a hash of the key's metadata.
 * for key types `ed25519`, `ecdsa-p256`, `ecdsa-p384`, `ecdsa-p521`, `rsa-2048`, `rsa-3072` and `rsa-4096`, each key version will be a map of the following:
-{{% /md %}}</dd>
-    <dt class="property-"
+{{% /md %}}</dd><dt class="property-"
             title="">
         <span id="latestversion_go">
 <a href="#latestversion_go" style="color: inherit; text-decoration: inherit;">Latest<wbr>Version</a>
@@ -855,8 +786,7 @@ All [input](#inputs) properties are implicitly available as output properties. A
         <span class="property-type">int</span>
     </dt>
     <dd>{{% md %}}Latest key version available. This value is 1-indexed, so if `latest_version` is `1`, then the key's information can be referenced from `keys` by selecting element `0`
-{{% /md %}}</dd>
-    <dt class="property-"
+{{% /md %}}</dd><dt class="property-"
             title="">
         <span id="minavailableversion_go">
 <a href="#minavailableversion_go" style="color: inherit; text-decoration: inherit;">Min<wbr>Available<wbr>Version</a>
@@ -865,8 +795,7 @@ All [input](#inputs) properties are implicitly available as output properties. A
         <span class="property-type">int</span>
     </dt>
     <dd>{{% md %}}Minimum key version available for use. If keys have been archived by increasing `min_decryption_version`, this attribute will reflect that change.
-{{% /md %}}</dd>
-    <dt class="property-"
+{{% /md %}}</dd><dt class="property-"
             title="">
         <span id="supportsdecryption_go">
 <a href="#supportsdecryption_go" style="color: inherit; text-decoration: inherit;">Supports<wbr>Decryption</a>
@@ -875,8 +804,7 @@ All [input](#inputs) properties are implicitly available as output properties. A
         <span class="property-type">bool</span>
     </dt>
     <dd>{{% md %}}Whether or not the key supports decryption, based on key type.
-{{% /md %}}</dd>
-    <dt class="property-"
+{{% /md %}}</dd><dt class="property-"
             title="">
         <span id="supportsderivation_go">
 <a href="#supportsderivation_go" style="color: inherit; text-decoration: inherit;">Supports<wbr>Derivation</a>
@@ -885,8 +813,7 @@ All [input](#inputs) properties are implicitly available as output properties. A
         <span class="property-type">bool</span>
     </dt>
     <dd>{{% md %}}Whether or not the key supports derivation, based on key type.
-{{% /md %}}</dd>
-    <dt class="property-"
+{{% /md %}}</dd><dt class="property-"
             title="">
         <span id="supportsencryption_go">
 <a href="#supportsencryption_go" style="color: inherit; text-decoration: inherit;">Supports<wbr>Encryption</a>
@@ -895,8 +822,7 @@ All [input](#inputs) properties are implicitly available as output properties. A
         <span class="property-type">bool</span>
     </dt>
     <dd>{{% md %}}Whether or not the key supports encryption, based on key type.
-{{% /md %}}</dd>
-    <dt class="property-"
+{{% /md %}}</dd><dt class="property-"
             title="">
         <span id="supportssigning_go">
 <a href="#supportssigning_go" style="color: inherit; text-decoration: inherit;">Supports<wbr>Signing</a>
@@ -905,14 +831,11 @@ All [input](#inputs) properties are implicitly available as output properties. A
         <span class="property-type">bool</span>
     </dt>
     <dd>{{% md %}}Whether or not the key supports signing, based on key type.
-{{% /md %}}</dd>
-</dl>
+{{% /md %}}</dd></dl>
 {{% /choosable %}}
 
 {{% choosable language nodejs %}}
-<dl class="resources-properties">
-
-    <dt class="property-"
+<dl class="resources-properties"><dt class="property-"
             title="">
         <span id="id_nodejs">
 <a href="#id_nodejs" style="color: inherit; text-decoration: inherit;">id</a>
@@ -920,8 +843,7 @@ All [input](#inputs) properties are implicitly available as output properties. A
         <span class="property-indicator"></span>
         <span class="property-type">string</span>
     </dt>
-    <dd>{{% md %}}The provider-assigned unique ID for this managed resource.{{% /md %}}</dd>
-    <dt class="property-"
+    <dd>{{% md %}}The provider-assigned unique ID for this managed resource.{{% /md %}}</dd><dt class="property-"
             title="">
         <span id="keys_nodejs">
 <a href="#keys_nodejs" style="color: inherit; text-decoration: inherit;">keys</a>
@@ -932,8 +854,7 @@ All [input](#inputs) properties are implicitly available as output properties. A
     <dd>{{% md %}}List of key versions in the keyring. This attribute is zero-indexed and will contain a map of values depending on the `type` of the encryption key.
 * for key types `aes128-gcm96`, `aes256-gcm96` and `chacha20-poly1305`, each key version will be a map of a single value `id` which is just a hash of the key's metadata.
 * for key types `ed25519`, `ecdsa-p256`, `ecdsa-p384`, `ecdsa-p521`, `rsa-2048`, `rsa-3072` and `rsa-4096`, each key version will be a map of the following:
-{{% /md %}}</dd>
-    <dt class="property-"
+{{% /md %}}</dd><dt class="property-"
             title="">
         <span id="latestversion_nodejs">
 <a href="#latestversion_nodejs" style="color: inherit; text-decoration: inherit;">latest<wbr>Version</a>
@@ -942,8 +863,7 @@ All [input](#inputs) properties are implicitly available as output properties. A
         <span class="property-type">number</span>
     </dt>
     <dd>{{% md %}}Latest key version available. This value is 1-indexed, so if `latest_version` is `1`, then the key's information can be referenced from `keys` by selecting element `0`
-{{% /md %}}</dd>
-    <dt class="property-"
+{{% /md %}}</dd><dt class="property-"
             title="">
         <span id="minavailableversion_nodejs">
 <a href="#minavailableversion_nodejs" style="color: inherit; text-decoration: inherit;">min<wbr>Available<wbr>Version</a>
@@ -952,8 +872,7 @@ All [input](#inputs) properties are implicitly available as output properties. A
         <span class="property-type">number</span>
     </dt>
     <dd>{{% md %}}Minimum key version available for use. If keys have been archived by increasing `min_decryption_version`, this attribute will reflect that change.
-{{% /md %}}</dd>
-    <dt class="property-"
+{{% /md %}}</dd><dt class="property-"
             title="">
         <span id="supportsdecryption_nodejs">
 <a href="#supportsdecryption_nodejs" style="color: inherit; text-decoration: inherit;">supports<wbr>Decryption</a>
@@ -962,8 +881,7 @@ All [input](#inputs) properties are implicitly available as output properties. A
         <span class="property-type">boolean</span>
     </dt>
     <dd>{{% md %}}Whether or not the key supports decryption, based on key type.
-{{% /md %}}</dd>
-    <dt class="property-"
+{{% /md %}}</dd><dt class="property-"
             title="">
         <span id="supportsderivation_nodejs">
 <a href="#supportsderivation_nodejs" style="color: inherit; text-decoration: inherit;">supports<wbr>Derivation</a>
@@ -972,8 +890,7 @@ All [input](#inputs) properties are implicitly available as output properties. A
         <span class="property-type">boolean</span>
     </dt>
     <dd>{{% md %}}Whether or not the key supports derivation, based on key type.
-{{% /md %}}</dd>
-    <dt class="property-"
+{{% /md %}}</dd><dt class="property-"
             title="">
         <span id="supportsencryption_nodejs">
 <a href="#supportsencryption_nodejs" style="color: inherit; text-decoration: inherit;">supports<wbr>Encryption</a>
@@ -982,8 +899,7 @@ All [input](#inputs) properties are implicitly available as output properties. A
         <span class="property-type">boolean</span>
     </dt>
     <dd>{{% md %}}Whether or not the key supports encryption, based on key type.
-{{% /md %}}</dd>
-    <dt class="property-"
+{{% /md %}}</dd><dt class="property-"
             title="">
         <span id="supportssigning_nodejs">
 <a href="#supportssigning_nodejs" style="color: inherit; text-decoration: inherit;">supports<wbr>Signing</a>
@@ -992,14 +908,11 @@ All [input](#inputs) properties are implicitly available as output properties. A
         <span class="property-type">boolean</span>
     </dt>
     <dd>{{% md %}}Whether or not the key supports signing, based on key type.
-{{% /md %}}</dd>
-</dl>
+{{% /md %}}</dd></dl>
 {{% /choosable %}}
 
 {{% choosable language python %}}
-<dl class="resources-properties">
-
-    <dt class="property-"
+<dl class="resources-properties"><dt class="property-"
             title="">
         <span id="id_python">
 <a href="#id_python" style="color: inherit; text-decoration: inherit;">id</a>
@@ -1007,8 +920,7 @@ All [input](#inputs) properties are implicitly available as output properties. A
         <span class="property-indicator"></span>
         <span class="property-type">str</span>
     </dt>
-    <dd>{{% md %}}The provider-assigned unique ID for this managed resource.{{% /md %}}</dd>
-    <dt class="property-"
+    <dd>{{% md %}}The provider-assigned unique ID for this managed resource.{{% /md %}}</dd><dt class="property-"
             title="">
         <span id="keys_python">
 <a href="#keys_python" style="color: inherit; text-decoration: inherit;">keys</a>
@@ -1019,8 +931,7 @@ All [input](#inputs) properties are implicitly available as output properties. A
     <dd>{{% md %}}List of key versions in the keyring. This attribute is zero-indexed and will contain a map of values depending on the `type` of the encryption key.
 * for key types `aes128-gcm96`, `aes256-gcm96` and `chacha20-poly1305`, each key version will be a map of a single value `id` which is just a hash of the key's metadata.
 * for key types `ed25519`, `ecdsa-p256`, `ecdsa-p384`, `ecdsa-p521`, `rsa-2048`, `rsa-3072` and `rsa-4096`, each key version will be a map of the following:
-{{% /md %}}</dd>
-    <dt class="property-"
+{{% /md %}}</dd><dt class="property-"
             title="">
         <span id="latest_version_python">
 <a href="#latest_version_python" style="color: inherit; text-decoration: inherit;">latest_<wbr>version</a>
@@ -1029,8 +940,7 @@ All [input](#inputs) properties are implicitly available as output properties. A
         <span class="property-type">int</span>
     </dt>
     <dd>{{% md %}}Latest key version available. This value is 1-indexed, so if `latest_version` is `1`, then the key's information can be referenced from `keys` by selecting element `0`
-{{% /md %}}</dd>
-    <dt class="property-"
+{{% /md %}}</dd><dt class="property-"
             title="">
         <span id="min_available_version_python">
 <a href="#min_available_version_python" style="color: inherit; text-decoration: inherit;">min_<wbr>available_<wbr>version</a>
@@ -1039,8 +949,7 @@ All [input](#inputs) properties are implicitly available as output properties. A
         <span class="property-type">int</span>
     </dt>
     <dd>{{% md %}}Minimum key version available for use. If keys have been archived by increasing `min_decryption_version`, this attribute will reflect that change.
-{{% /md %}}</dd>
-    <dt class="property-"
+{{% /md %}}</dd><dt class="property-"
             title="">
         <span id="supports_decryption_python">
 <a href="#supports_decryption_python" style="color: inherit; text-decoration: inherit;">supports_<wbr>decryption</a>
@@ -1049,8 +958,7 @@ All [input](#inputs) properties are implicitly available as output properties. A
         <span class="property-type">bool</span>
     </dt>
     <dd>{{% md %}}Whether or not the key supports decryption, based on key type.
-{{% /md %}}</dd>
-    <dt class="property-"
+{{% /md %}}</dd><dt class="property-"
             title="">
         <span id="supports_derivation_python">
 <a href="#supports_derivation_python" style="color: inherit; text-decoration: inherit;">supports_<wbr>derivation</a>
@@ -1059,8 +967,7 @@ All [input](#inputs) properties are implicitly available as output properties. A
         <span class="property-type">bool</span>
     </dt>
     <dd>{{% md %}}Whether or not the key supports derivation, based on key type.
-{{% /md %}}</dd>
-    <dt class="property-"
+{{% /md %}}</dd><dt class="property-"
             title="">
         <span id="supports_encryption_python">
 <a href="#supports_encryption_python" style="color: inherit; text-decoration: inherit;">supports_<wbr>encryption</a>
@@ -1069,8 +976,7 @@ All [input](#inputs) properties are implicitly available as output properties. A
         <span class="property-type">bool</span>
     </dt>
     <dd>{{% md %}}Whether or not the key supports encryption, based on key type.
-{{% /md %}}</dd>
-    <dt class="property-"
+{{% /md %}}</dd><dt class="property-"
             title="">
         <span id="supports_signing_python">
 <a href="#supports_signing_python" style="color: inherit; text-decoration: inherit;">supports_<wbr>signing</a>
@@ -1079,8 +985,7 @@ All [input](#inputs) properties are implicitly available as output properties. A
         <span class="property-type">bool</span>
     </dt>
     <dd>{{% md %}}Whether or not the key supports signing, based on key type.
-{{% /md %}}</dd>
-</dl>
+{{% /md %}}</dd></dl>
 {{% /choosable %}}
 
 
@@ -1207,9 +1112,7 @@ The following state arguments are supported:
 
 
 {{% choosable language csharp %}}
-<dl class="resources-properties">
-
-    <dt class="property-optional"
+<dl class="resources-properties"><dt class="property-optional"
             title="Optional">
         <span id="state_allowplaintextbackup_csharp">
 <a href="#state_allowplaintextbackup_csharp" style="color: inherit; text-decoration: inherit;">Allow<wbr>Plaintext<wbr>Backup</a>
@@ -1219,8 +1122,7 @@ The following state arguments are supported:
     </dt>
     <dd>{{% md %}}Enables taking backup of entire keyring in the plaintext format. Once set, this cannot be disabled.
 * Refer to Vault API documentation on key backups for more information: [Backup Key](https://www.vaultproject.io/api-docs/secret/transit#backup-key)
-{{% /md %}}</dd>
-    <dt class="property-optional"
+{{% /md %}}</dd><dt class="property-optional"
             title="Optional">
         <span id="state_backend_csharp">
 <a href="#state_backend_csharp" style="color: inherit; text-decoration: inherit;">Backend</a>
@@ -1229,8 +1131,7 @@ The following state arguments are supported:
         <span class="property-type">string</span>
     </dt>
     <dd>{{% md %}}The path the transit secret backend is mounted at, with no leading or trailing `/`s.
-{{% /md %}}</dd>
-    <dt class="property-optional"
+{{% /md %}}</dd><dt class="property-optional"
             title="Optional">
         <span id="state_convergentencryption_csharp">
 <a href="#state_convergentencryption_csharp" style="color: inherit; text-decoration: inherit;">Convergent<wbr>Encryption</a>
@@ -1239,8 +1140,7 @@ The following state arguments are supported:
         <span class="property-type">bool</span>
     </dt>
     <dd>{{% md %}}Whether or not to support convergent encryption, where the same plaintext creates the same ciphertext. This requires `derived` to be set to `true`.
-{{% /md %}}</dd>
-    <dt class="property-optional"
+{{% /md %}}</dd><dt class="property-optional"
             title="Optional">
         <span id="state_deletionallowed_csharp">
 <a href="#state_deletionallowed_csharp" style="color: inherit; text-decoration: inherit;">Deletion<wbr>Allowed</a>
@@ -1249,8 +1149,7 @@ The following state arguments are supported:
         <span class="property-type">bool</span>
     </dt>
     <dd>{{% md %}}Specifies if the key is allowed to be deleted.
-{{% /md %}}</dd>
-    <dt class="property-optional"
+{{% /md %}}</dd><dt class="property-optional"
             title="Optional">
         <span id="state_derived_csharp">
 <a href="#state_derived_csharp" style="color: inherit; text-decoration: inherit;">Derived</a>
@@ -1259,8 +1158,7 @@ The following state arguments are supported:
         <span class="property-type">bool</span>
     </dt>
     <dd>{{% md %}}Specifies if key derivation is to be used. If enabled, all encrypt/decrypt requests to this key must provide a context which is used for key derivation.
-{{% /md %}}</dd>
-    <dt class="property-optional"
+{{% /md %}}</dd><dt class="property-optional"
             title="Optional">
         <span id="state_exportable_csharp">
 <a href="#state_exportable_csharp" style="color: inherit; text-decoration: inherit;">Exportable</a>
@@ -1269,8 +1167,7 @@ The following state arguments are supported:
         <span class="property-type">bool</span>
     </dt>
     <dd>{{% md %}}Enables keys to be exportable. This allows for all valid private keys in the keyring to be exported. Once set, this cannot be disabled.
-{{% /md %}}</dd>
-    <dt class="property-optional"
+{{% /md %}}</dd><dt class="property-optional"
             title="Optional">
         <span id="state_keys_csharp">
 <a href="#state_keys_csharp" style="color: inherit; text-decoration: inherit;">Keys</a>
@@ -1281,8 +1178,7 @@ The following state arguments are supported:
     <dd>{{% md %}}List of key versions in the keyring. This attribute is zero-indexed and will contain a map of values depending on the `type` of the encryption key.
 * for key types `aes128-gcm96`, `aes256-gcm96` and `chacha20-poly1305`, each key version will be a map of a single value `id` which is just a hash of the key's metadata.
 * for key types `ed25519`, `ecdsa-p256`, `ecdsa-p384`, `ecdsa-p521`, `rsa-2048`, `rsa-3072` and `rsa-4096`, each key version will be a map of the following:
-{{% /md %}}</dd>
-    <dt class="property-optional"
+{{% /md %}}</dd><dt class="property-optional"
             title="Optional">
         <span id="state_latestversion_csharp">
 <a href="#state_latestversion_csharp" style="color: inherit; text-decoration: inherit;">Latest<wbr>Version</a>
@@ -1291,8 +1187,7 @@ The following state arguments are supported:
         <span class="property-type">int</span>
     </dt>
     <dd>{{% md %}}Latest key version available. This value is 1-indexed, so if `latest_version` is `1`, then the key's information can be referenced from `keys` by selecting element `0`
-{{% /md %}}</dd>
-    <dt class="property-optional"
+{{% /md %}}</dd><dt class="property-optional"
             title="Optional">
         <span id="state_minavailableversion_csharp">
 <a href="#state_minavailableversion_csharp" style="color: inherit; text-decoration: inherit;">Min<wbr>Available<wbr>Version</a>
@@ -1301,8 +1196,7 @@ The following state arguments are supported:
         <span class="property-type">int</span>
     </dt>
     <dd>{{% md %}}Minimum key version available for use. If keys have been archived by increasing `min_decryption_version`, this attribute will reflect that change.
-{{% /md %}}</dd>
-    <dt class="property-optional"
+{{% /md %}}</dd><dt class="property-optional"
             title="Optional">
         <span id="state_mindecryptionversion_csharp">
 <a href="#state_mindecryptionversion_csharp" style="color: inherit; text-decoration: inherit;">Min<wbr>Decryption<wbr>Version</a>
@@ -1311,8 +1205,7 @@ The following state arguments are supported:
         <span class="property-type">int</span>
     </dt>
     <dd>{{% md %}}Minimum key version to use for decryption.
-{{% /md %}}</dd>
-    <dt class="property-optional"
+{{% /md %}}</dd><dt class="property-optional"
             title="Optional">
         <span id="state_minencryptionversion_csharp">
 <a href="#state_minencryptionversion_csharp" style="color: inherit; text-decoration: inherit;">Min<wbr>Encryption<wbr>Version</a>
@@ -1321,8 +1214,7 @@ The following state arguments are supported:
         <span class="property-type">int</span>
     </dt>
     <dd>{{% md %}}Minimum key version to use for encryption
-{{% /md %}}</dd>
-    <dt class="property-optional"
+{{% /md %}}</dd><dt class="property-optional"
             title="Optional">
         <span id="state_name_csharp">
 <a href="#state_name_csharp" style="color: inherit; text-decoration: inherit;">Name</a>
@@ -1331,8 +1223,7 @@ The following state arguments are supported:
         <span class="property-type">string</span>
     </dt>
     <dd>{{% md %}}The name to identify this key within the backend. Must be unique within the backend.
-{{% /md %}}</dd>
-    <dt class="property-optional"
+{{% /md %}}</dd><dt class="property-optional"
             title="Optional">
         <span id="state_supportsdecryption_csharp">
 <a href="#state_supportsdecryption_csharp" style="color: inherit; text-decoration: inherit;">Supports<wbr>Decryption</a>
@@ -1341,8 +1232,7 @@ The following state arguments are supported:
         <span class="property-type">bool</span>
     </dt>
     <dd>{{% md %}}Whether or not the key supports decryption, based on key type.
-{{% /md %}}</dd>
-    <dt class="property-optional"
+{{% /md %}}</dd><dt class="property-optional"
             title="Optional">
         <span id="state_supportsderivation_csharp">
 <a href="#state_supportsderivation_csharp" style="color: inherit; text-decoration: inherit;">Supports<wbr>Derivation</a>
@@ -1351,8 +1241,7 @@ The following state arguments are supported:
         <span class="property-type">bool</span>
     </dt>
     <dd>{{% md %}}Whether or not the key supports derivation, based on key type.
-{{% /md %}}</dd>
-    <dt class="property-optional"
+{{% /md %}}</dd><dt class="property-optional"
             title="Optional">
         <span id="state_supportsencryption_csharp">
 <a href="#state_supportsencryption_csharp" style="color: inherit; text-decoration: inherit;">Supports<wbr>Encryption</a>
@@ -1361,8 +1250,7 @@ The following state arguments are supported:
         <span class="property-type">bool</span>
     </dt>
     <dd>{{% md %}}Whether or not the key supports encryption, based on key type.
-{{% /md %}}</dd>
-    <dt class="property-optional"
+{{% /md %}}</dd><dt class="property-optional"
             title="Optional">
         <span id="state_supportssigning_csharp">
 <a href="#state_supportssigning_csharp" style="color: inherit; text-decoration: inherit;">Supports<wbr>Signing</a>
@@ -1371,8 +1259,7 @@ The following state arguments are supported:
         <span class="property-type">bool</span>
     </dt>
     <dd>{{% md %}}Whether or not the key supports signing, based on key type.
-{{% /md %}}</dd>
-    <dt class="property-optional"
+{{% /md %}}</dd><dt class="property-optional"
             title="Optional">
         <span id="state_type_csharp">
 <a href="#state_type_csharp" style="color: inherit; text-decoration: inherit;">Type</a>
@@ -1382,14 +1269,11 @@ The following state arguments are supported:
     </dt>
     <dd>{{% md %}}Specifies the type of key to create. The currently-supported types are: `aes128-gcm96`, `aes256-gcm96` (default), `chacha20-poly1305`, `ed25519`, `ecdsa-p256`, `ecdsa-p384`, `ecdsa-p521`, `rsa-2048`, `rsa-3072` and `rsa-4096`. 
 * Refer to the Vault documentation on transit key types for more information: [Key Types](https://www.vaultproject.io/docs/secrets/transit#key-types)
-{{% /md %}}</dd>
-</dl>
+{{% /md %}}</dd></dl>
 {{% /choosable %}}
 
 {{% choosable language go %}}
-<dl class="resources-properties">
-
-    <dt class="property-optional"
+<dl class="resources-properties"><dt class="property-optional"
             title="Optional">
         <span id="state_allowplaintextbackup_go">
 <a href="#state_allowplaintextbackup_go" style="color: inherit; text-decoration: inherit;">Allow<wbr>Plaintext<wbr>Backup</a>
@@ -1399,8 +1283,7 @@ The following state arguments are supported:
     </dt>
     <dd>{{% md %}}Enables taking backup of entire keyring in the plaintext format. Once set, this cannot be disabled.
 * Refer to Vault API documentation on key backups for more information: [Backup Key](https://www.vaultproject.io/api-docs/secret/transit#backup-key)
-{{% /md %}}</dd>
-    <dt class="property-optional"
+{{% /md %}}</dd><dt class="property-optional"
             title="Optional">
         <span id="state_backend_go">
 <a href="#state_backend_go" style="color: inherit; text-decoration: inherit;">Backend</a>
@@ -1409,8 +1292,7 @@ The following state arguments are supported:
         <span class="property-type">string</span>
     </dt>
     <dd>{{% md %}}The path the transit secret backend is mounted at, with no leading or trailing `/`s.
-{{% /md %}}</dd>
-    <dt class="property-optional"
+{{% /md %}}</dd><dt class="property-optional"
             title="Optional">
         <span id="state_convergentencryption_go">
 <a href="#state_convergentencryption_go" style="color: inherit; text-decoration: inherit;">Convergent<wbr>Encryption</a>
@@ -1419,8 +1301,7 @@ The following state arguments are supported:
         <span class="property-type">bool</span>
     </dt>
     <dd>{{% md %}}Whether or not to support convergent encryption, where the same plaintext creates the same ciphertext. This requires `derived` to be set to `true`.
-{{% /md %}}</dd>
-    <dt class="property-optional"
+{{% /md %}}</dd><dt class="property-optional"
             title="Optional">
         <span id="state_deletionallowed_go">
 <a href="#state_deletionallowed_go" style="color: inherit; text-decoration: inherit;">Deletion<wbr>Allowed</a>
@@ -1429,8 +1310,7 @@ The following state arguments are supported:
         <span class="property-type">bool</span>
     </dt>
     <dd>{{% md %}}Specifies if the key is allowed to be deleted.
-{{% /md %}}</dd>
-    <dt class="property-optional"
+{{% /md %}}</dd><dt class="property-optional"
             title="Optional">
         <span id="state_derived_go">
 <a href="#state_derived_go" style="color: inherit; text-decoration: inherit;">Derived</a>
@@ -1439,8 +1319,7 @@ The following state arguments are supported:
         <span class="property-type">bool</span>
     </dt>
     <dd>{{% md %}}Specifies if key derivation is to be used. If enabled, all encrypt/decrypt requests to this key must provide a context which is used for key derivation.
-{{% /md %}}</dd>
-    <dt class="property-optional"
+{{% /md %}}</dd><dt class="property-optional"
             title="Optional">
         <span id="state_exportable_go">
 <a href="#state_exportable_go" style="color: inherit; text-decoration: inherit;">Exportable</a>
@@ -1449,8 +1328,7 @@ The following state arguments are supported:
         <span class="property-type">bool</span>
     </dt>
     <dd>{{% md %}}Enables keys to be exportable. This allows for all valid private keys in the keyring to be exported. Once set, this cannot be disabled.
-{{% /md %}}</dd>
-    <dt class="property-optional"
+{{% /md %}}</dd><dt class="property-optional"
             title="Optional">
         <span id="state_keys_go">
 <a href="#state_keys_go" style="color: inherit; text-decoration: inherit;">Keys</a>
@@ -1461,8 +1339,7 @@ The following state arguments are supported:
     <dd>{{% md %}}List of key versions in the keyring. This attribute is zero-indexed and will contain a map of values depending on the `type` of the encryption key.
 * for key types `aes128-gcm96`, `aes256-gcm96` and `chacha20-poly1305`, each key version will be a map of a single value `id` which is just a hash of the key's metadata.
 * for key types `ed25519`, `ecdsa-p256`, `ecdsa-p384`, `ecdsa-p521`, `rsa-2048`, `rsa-3072` and `rsa-4096`, each key version will be a map of the following:
-{{% /md %}}</dd>
-    <dt class="property-optional"
+{{% /md %}}</dd><dt class="property-optional"
             title="Optional">
         <span id="state_latestversion_go">
 <a href="#state_latestversion_go" style="color: inherit; text-decoration: inherit;">Latest<wbr>Version</a>
@@ -1471,8 +1348,7 @@ The following state arguments are supported:
         <span class="property-type">int</span>
     </dt>
     <dd>{{% md %}}Latest key version available. This value is 1-indexed, so if `latest_version` is `1`, then the key's information can be referenced from `keys` by selecting element `0`
-{{% /md %}}</dd>
-    <dt class="property-optional"
+{{% /md %}}</dd><dt class="property-optional"
             title="Optional">
         <span id="state_minavailableversion_go">
 <a href="#state_minavailableversion_go" style="color: inherit; text-decoration: inherit;">Min<wbr>Available<wbr>Version</a>
@@ -1481,8 +1357,7 @@ The following state arguments are supported:
         <span class="property-type">int</span>
     </dt>
     <dd>{{% md %}}Minimum key version available for use. If keys have been archived by increasing `min_decryption_version`, this attribute will reflect that change.
-{{% /md %}}</dd>
-    <dt class="property-optional"
+{{% /md %}}</dd><dt class="property-optional"
             title="Optional">
         <span id="state_mindecryptionversion_go">
 <a href="#state_mindecryptionversion_go" style="color: inherit; text-decoration: inherit;">Min<wbr>Decryption<wbr>Version</a>
@@ -1491,8 +1366,7 @@ The following state arguments are supported:
         <span class="property-type">int</span>
     </dt>
     <dd>{{% md %}}Minimum key version to use for decryption.
-{{% /md %}}</dd>
-    <dt class="property-optional"
+{{% /md %}}</dd><dt class="property-optional"
             title="Optional">
         <span id="state_minencryptionversion_go">
 <a href="#state_minencryptionversion_go" style="color: inherit; text-decoration: inherit;">Min<wbr>Encryption<wbr>Version</a>
@@ -1501,8 +1375,7 @@ The following state arguments are supported:
         <span class="property-type">int</span>
     </dt>
     <dd>{{% md %}}Minimum key version to use for encryption
-{{% /md %}}</dd>
-    <dt class="property-optional"
+{{% /md %}}</dd><dt class="property-optional"
             title="Optional">
         <span id="state_name_go">
 <a href="#state_name_go" style="color: inherit; text-decoration: inherit;">Name</a>
@@ -1511,8 +1384,7 @@ The following state arguments are supported:
         <span class="property-type">string</span>
     </dt>
     <dd>{{% md %}}The name to identify this key within the backend. Must be unique within the backend.
-{{% /md %}}</dd>
-    <dt class="property-optional"
+{{% /md %}}</dd><dt class="property-optional"
             title="Optional">
         <span id="state_supportsdecryption_go">
 <a href="#state_supportsdecryption_go" style="color: inherit; text-decoration: inherit;">Supports<wbr>Decryption</a>
@@ -1521,8 +1393,7 @@ The following state arguments are supported:
         <span class="property-type">bool</span>
     </dt>
     <dd>{{% md %}}Whether or not the key supports decryption, based on key type.
-{{% /md %}}</dd>
-    <dt class="property-optional"
+{{% /md %}}</dd><dt class="property-optional"
             title="Optional">
         <span id="state_supportsderivation_go">
 <a href="#state_supportsderivation_go" style="color: inherit; text-decoration: inherit;">Supports<wbr>Derivation</a>
@@ -1531,8 +1402,7 @@ The following state arguments are supported:
         <span class="property-type">bool</span>
     </dt>
     <dd>{{% md %}}Whether or not the key supports derivation, based on key type.
-{{% /md %}}</dd>
-    <dt class="property-optional"
+{{% /md %}}</dd><dt class="property-optional"
             title="Optional">
         <span id="state_supportsencryption_go">
 <a href="#state_supportsencryption_go" style="color: inherit; text-decoration: inherit;">Supports<wbr>Encryption</a>
@@ -1541,8 +1411,7 @@ The following state arguments are supported:
         <span class="property-type">bool</span>
     </dt>
     <dd>{{% md %}}Whether or not the key supports encryption, based on key type.
-{{% /md %}}</dd>
-    <dt class="property-optional"
+{{% /md %}}</dd><dt class="property-optional"
             title="Optional">
         <span id="state_supportssigning_go">
 <a href="#state_supportssigning_go" style="color: inherit; text-decoration: inherit;">Supports<wbr>Signing</a>
@@ -1551,8 +1420,7 @@ The following state arguments are supported:
         <span class="property-type">bool</span>
     </dt>
     <dd>{{% md %}}Whether or not the key supports signing, based on key type.
-{{% /md %}}</dd>
-    <dt class="property-optional"
+{{% /md %}}</dd><dt class="property-optional"
             title="Optional">
         <span id="state_type_go">
 <a href="#state_type_go" style="color: inherit; text-decoration: inherit;">Type</a>
@@ -1562,14 +1430,11 @@ The following state arguments are supported:
     </dt>
     <dd>{{% md %}}Specifies the type of key to create. The currently-supported types are: `aes128-gcm96`, `aes256-gcm96` (default), `chacha20-poly1305`, `ed25519`, `ecdsa-p256`, `ecdsa-p384`, `ecdsa-p521`, `rsa-2048`, `rsa-3072` and `rsa-4096`. 
 * Refer to the Vault documentation on transit key types for more information: [Key Types](https://www.vaultproject.io/docs/secrets/transit#key-types)
-{{% /md %}}</dd>
-</dl>
+{{% /md %}}</dd></dl>
 {{% /choosable %}}
 
 {{% choosable language nodejs %}}
-<dl class="resources-properties">
-
-    <dt class="property-optional"
+<dl class="resources-properties"><dt class="property-optional"
             title="Optional">
         <span id="state_allowplaintextbackup_nodejs">
 <a href="#state_allowplaintextbackup_nodejs" style="color: inherit; text-decoration: inherit;">allow<wbr>Plaintext<wbr>Backup</a>
@@ -1579,8 +1444,7 @@ The following state arguments are supported:
     </dt>
     <dd>{{% md %}}Enables taking backup of entire keyring in the plaintext format. Once set, this cannot be disabled.
 * Refer to Vault API documentation on key backups for more information: [Backup Key](https://www.vaultproject.io/api-docs/secret/transit#backup-key)
-{{% /md %}}</dd>
-    <dt class="property-optional"
+{{% /md %}}</dd><dt class="property-optional"
             title="Optional">
         <span id="state_backend_nodejs">
 <a href="#state_backend_nodejs" style="color: inherit; text-decoration: inherit;">backend</a>
@@ -1589,8 +1453,7 @@ The following state arguments are supported:
         <span class="property-type">string</span>
     </dt>
     <dd>{{% md %}}The path the transit secret backend is mounted at, with no leading or trailing `/`s.
-{{% /md %}}</dd>
-    <dt class="property-optional"
+{{% /md %}}</dd><dt class="property-optional"
             title="Optional">
         <span id="state_convergentencryption_nodejs">
 <a href="#state_convergentencryption_nodejs" style="color: inherit; text-decoration: inherit;">convergent<wbr>Encryption</a>
@@ -1599,8 +1462,7 @@ The following state arguments are supported:
         <span class="property-type">boolean</span>
     </dt>
     <dd>{{% md %}}Whether or not to support convergent encryption, where the same plaintext creates the same ciphertext. This requires `derived` to be set to `true`.
-{{% /md %}}</dd>
-    <dt class="property-optional"
+{{% /md %}}</dd><dt class="property-optional"
             title="Optional">
         <span id="state_deletionallowed_nodejs">
 <a href="#state_deletionallowed_nodejs" style="color: inherit; text-decoration: inherit;">deletion<wbr>Allowed</a>
@@ -1609,8 +1471,7 @@ The following state arguments are supported:
         <span class="property-type">boolean</span>
     </dt>
     <dd>{{% md %}}Specifies if the key is allowed to be deleted.
-{{% /md %}}</dd>
-    <dt class="property-optional"
+{{% /md %}}</dd><dt class="property-optional"
             title="Optional">
         <span id="state_derived_nodejs">
 <a href="#state_derived_nodejs" style="color: inherit; text-decoration: inherit;">derived</a>
@@ -1619,8 +1480,7 @@ The following state arguments are supported:
         <span class="property-type">boolean</span>
     </dt>
     <dd>{{% md %}}Specifies if key derivation is to be used. If enabled, all encrypt/decrypt requests to this key must provide a context which is used for key derivation.
-{{% /md %}}</dd>
-    <dt class="property-optional"
+{{% /md %}}</dd><dt class="property-optional"
             title="Optional">
         <span id="state_exportable_nodejs">
 <a href="#state_exportable_nodejs" style="color: inherit; text-decoration: inherit;">exportable</a>
@@ -1629,8 +1489,7 @@ The following state arguments are supported:
         <span class="property-type">boolean</span>
     </dt>
     <dd>{{% md %}}Enables keys to be exportable. This allows for all valid private keys in the keyring to be exported. Once set, this cannot be disabled.
-{{% /md %}}</dd>
-    <dt class="property-optional"
+{{% /md %}}</dd><dt class="property-optional"
             title="Optional">
         <span id="state_keys_nodejs">
 <a href="#state_keys_nodejs" style="color: inherit; text-decoration: inherit;">keys</a>
@@ -1641,8 +1500,7 @@ The following state arguments are supported:
     <dd>{{% md %}}List of key versions in the keyring. This attribute is zero-indexed and will contain a map of values depending on the `type` of the encryption key.
 * for key types `aes128-gcm96`, `aes256-gcm96` and `chacha20-poly1305`, each key version will be a map of a single value `id` which is just a hash of the key's metadata.
 * for key types `ed25519`, `ecdsa-p256`, `ecdsa-p384`, `ecdsa-p521`, `rsa-2048`, `rsa-3072` and `rsa-4096`, each key version will be a map of the following:
-{{% /md %}}</dd>
-    <dt class="property-optional"
+{{% /md %}}</dd><dt class="property-optional"
             title="Optional">
         <span id="state_latestversion_nodejs">
 <a href="#state_latestversion_nodejs" style="color: inherit; text-decoration: inherit;">latest<wbr>Version</a>
@@ -1651,8 +1509,7 @@ The following state arguments are supported:
         <span class="property-type">number</span>
     </dt>
     <dd>{{% md %}}Latest key version available. This value is 1-indexed, so if `latest_version` is `1`, then the key's information can be referenced from `keys` by selecting element `0`
-{{% /md %}}</dd>
-    <dt class="property-optional"
+{{% /md %}}</dd><dt class="property-optional"
             title="Optional">
         <span id="state_minavailableversion_nodejs">
 <a href="#state_minavailableversion_nodejs" style="color: inherit; text-decoration: inherit;">min<wbr>Available<wbr>Version</a>
@@ -1661,8 +1518,7 @@ The following state arguments are supported:
         <span class="property-type">number</span>
     </dt>
     <dd>{{% md %}}Minimum key version available for use. If keys have been archived by increasing `min_decryption_version`, this attribute will reflect that change.
-{{% /md %}}</dd>
-    <dt class="property-optional"
+{{% /md %}}</dd><dt class="property-optional"
             title="Optional">
         <span id="state_mindecryptionversion_nodejs">
 <a href="#state_mindecryptionversion_nodejs" style="color: inherit; text-decoration: inherit;">min<wbr>Decryption<wbr>Version</a>
@@ -1671,8 +1527,7 @@ The following state arguments are supported:
         <span class="property-type">number</span>
     </dt>
     <dd>{{% md %}}Minimum key version to use for decryption.
-{{% /md %}}</dd>
-    <dt class="property-optional"
+{{% /md %}}</dd><dt class="property-optional"
             title="Optional">
         <span id="state_minencryptionversion_nodejs">
 <a href="#state_minencryptionversion_nodejs" style="color: inherit; text-decoration: inherit;">min<wbr>Encryption<wbr>Version</a>
@@ -1681,8 +1536,7 @@ The following state arguments are supported:
         <span class="property-type">number</span>
     </dt>
     <dd>{{% md %}}Minimum key version to use for encryption
-{{% /md %}}</dd>
-    <dt class="property-optional"
+{{% /md %}}</dd><dt class="property-optional"
             title="Optional">
         <span id="state_name_nodejs">
 <a href="#state_name_nodejs" style="color: inherit; text-decoration: inherit;">name</a>
@@ -1691,8 +1545,7 @@ The following state arguments are supported:
         <span class="property-type">string</span>
     </dt>
     <dd>{{% md %}}The name to identify this key within the backend. Must be unique within the backend.
-{{% /md %}}</dd>
-    <dt class="property-optional"
+{{% /md %}}</dd><dt class="property-optional"
             title="Optional">
         <span id="state_supportsdecryption_nodejs">
 <a href="#state_supportsdecryption_nodejs" style="color: inherit; text-decoration: inherit;">supports<wbr>Decryption</a>
@@ -1701,8 +1554,7 @@ The following state arguments are supported:
         <span class="property-type">boolean</span>
     </dt>
     <dd>{{% md %}}Whether or not the key supports decryption, based on key type.
-{{% /md %}}</dd>
-    <dt class="property-optional"
+{{% /md %}}</dd><dt class="property-optional"
             title="Optional">
         <span id="state_supportsderivation_nodejs">
 <a href="#state_supportsderivation_nodejs" style="color: inherit; text-decoration: inherit;">supports<wbr>Derivation</a>
@@ -1711,8 +1563,7 @@ The following state arguments are supported:
         <span class="property-type">boolean</span>
     </dt>
     <dd>{{% md %}}Whether or not the key supports derivation, based on key type.
-{{% /md %}}</dd>
-    <dt class="property-optional"
+{{% /md %}}</dd><dt class="property-optional"
             title="Optional">
         <span id="state_supportsencryption_nodejs">
 <a href="#state_supportsencryption_nodejs" style="color: inherit; text-decoration: inherit;">supports<wbr>Encryption</a>
@@ -1721,8 +1572,7 @@ The following state arguments are supported:
         <span class="property-type">boolean</span>
     </dt>
     <dd>{{% md %}}Whether or not the key supports encryption, based on key type.
-{{% /md %}}</dd>
-    <dt class="property-optional"
+{{% /md %}}</dd><dt class="property-optional"
             title="Optional">
         <span id="state_supportssigning_nodejs">
 <a href="#state_supportssigning_nodejs" style="color: inherit; text-decoration: inherit;">supports<wbr>Signing</a>
@@ -1731,8 +1581,7 @@ The following state arguments are supported:
         <span class="property-type">boolean</span>
     </dt>
     <dd>{{% md %}}Whether or not the key supports signing, based on key type.
-{{% /md %}}</dd>
-    <dt class="property-optional"
+{{% /md %}}</dd><dt class="property-optional"
             title="Optional">
         <span id="state_type_nodejs">
 <a href="#state_type_nodejs" style="color: inherit; text-decoration: inherit;">type</a>
@@ -1742,14 +1591,11 @@ The following state arguments are supported:
     </dt>
     <dd>{{% md %}}Specifies the type of key to create. The currently-supported types are: `aes128-gcm96`, `aes256-gcm96` (default), `chacha20-poly1305`, `ed25519`, `ecdsa-p256`, `ecdsa-p384`, `ecdsa-p521`, `rsa-2048`, `rsa-3072` and `rsa-4096`. 
 * Refer to the Vault documentation on transit key types for more information: [Key Types](https://www.vaultproject.io/docs/secrets/transit#key-types)
-{{% /md %}}</dd>
-</dl>
+{{% /md %}}</dd></dl>
 {{% /choosable %}}
 
 {{% choosable language python %}}
-<dl class="resources-properties">
-
-    <dt class="property-optional"
+<dl class="resources-properties"><dt class="property-optional"
             title="Optional">
         <span id="state_allow_plaintext_backup_python">
 <a href="#state_allow_plaintext_backup_python" style="color: inherit; text-decoration: inherit;">allow_<wbr>plaintext_<wbr>backup</a>
@@ -1759,8 +1605,7 @@ The following state arguments are supported:
     </dt>
     <dd>{{% md %}}Enables taking backup of entire keyring in the plaintext format. Once set, this cannot be disabled.
 * Refer to Vault API documentation on key backups for more information: [Backup Key](https://www.vaultproject.io/api-docs/secret/transit#backup-key)
-{{% /md %}}</dd>
-    <dt class="property-optional"
+{{% /md %}}</dd><dt class="property-optional"
             title="Optional">
         <span id="state_backend_python">
 <a href="#state_backend_python" style="color: inherit; text-decoration: inherit;">backend</a>
@@ -1769,8 +1614,7 @@ The following state arguments are supported:
         <span class="property-type">str</span>
     </dt>
     <dd>{{% md %}}The path the transit secret backend is mounted at, with no leading or trailing `/`s.
-{{% /md %}}</dd>
-    <dt class="property-optional"
+{{% /md %}}</dd><dt class="property-optional"
             title="Optional">
         <span id="state_convergent_encryption_python">
 <a href="#state_convergent_encryption_python" style="color: inherit; text-decoration: inherit;">convergent_<wbr>encryption</a>
@@ -1779,8 +1623,7 @@ The following state arguments are supported:
         <span class="property-type">bool</span>
     </dt>
     <dd>{{% md %}}Whether or not to support convergent encryption, where the same plaintext creates the same ciphertext. This requires `derived` to be set to `true`.
-{{% /md %}}</dd>
-    <dt class="property-optional"
+{{% /md %}}</dd><dt class="property-optional"
             title="Optional">
         <span id="state_deletion_allowed_python">
 <a href="#state_deletion_allowed_python" style="color: inherit; text-decoration: inherit;">deletion_<wbr>allowed</a>
@@ -1789,8 +1632,7 @@ The following state arguments are supported:
         <span class="property-type">bool</span>
     </dt>
     <dd>{{% md %}}Specifies if the key is allowed to be deleted.
-{{% /md %}}</dd>
-    <dt class="property-optional"
+{{% /md %}}</dd><dt class="property-optional"
             title="Optional">
         <span id="state_derived_python">
 <a href="#state_derived_python" style="color: inherit; text-decoration: inherit;">derived</a>
@@ -1799,8 +1641,7 @@ The following state arguments are supported:
         <span class="property-type">bool</span>
     </dt>
     <dd>{{% md %}}Specifies if key derivation is to be used. If enabled, all encrypt/decrypt requests to this key must provide a context which is used for key derivation.
-{{% /md %}}</dd>
-    <dt class="property-optional"
+{{% /md %}}</dd><dt class="property-optional"
             title="Optional">
         <span id="state_exportable_python">
 <a href="#state_exportable_python" style="color: inherit; text-decoration: inherit;">exportable</a>
@@ -1809,8 +1650,7 @@ The following state arguments are supported:
         <span class="property-type">bool</span>
     </dt>
     <dd>{{% md %}}Enables keys to be exportable. This allows for all valid private keys in the keyring to be exported. Once set, this cannot be disabled.
-{{% /md %}}</dd>
-    <dt class="property-optional"
+{{% /md %}}</dd><dt class="property-optional"
             title="Optional">
         <span id="state_keys_python">
 <a href="#state_keys_python" style="color: inherit; text-decoration: inherit;">keys</a>
@@ -1821,8 +1661,7 @@ The following state arguments are supported:
     <dd>{{% md %}}List of key versions in the keyring. This attribute is zero-indexed and will contain a map of values depending on the `type` of the encryption key.
 * for key types `aes128-gcm96`, `aes256-gcm96` and `chacha20-poly1305`, each key version will be a map of a single value `id` which is just a hash of the key's metadata.
 * for key types `ed25519`, `ecdsa-p256`, `ecdsa-p384`, `ecdsa-p521`, `rsa-2048`, `rsa-3072` and `rsa-4096`, each key version will be a map of the following:
-{{% /md %}}</dd>
-    <dt class="property-optional"
+{{% /md %}}</dd><dt class="property-optional"
             title="Optional">
         <span id="state_latest_version_python">
 <a href="#state_latest_version_python" style="color: inherit; text-decoration: inherit;">latest_<wbr>version</a>
@@ -1831,8 +1670,7 @@ The following state arguments are supported:
         <span class="property-type">int</span>
     </dt>
     <dd>{{% md %}}Latest key version available. This value is 1-indexed, so if `latest_version` is `1`, then the key's information can be referenced from `keys` by selecting element `0`
-{{% /md %}}</dd>
-    <dt class="property-optional"
+{{% /md %}}</dd><dt class="property-optional"
             title="Optional">
         <span id="state_min_available_version_python">
 <a href="#state_min_available_version_python" style="color: inherit; text-decoration: inherit;">min_<wbr>available_<wbr>version</a>
@@ -1841,8 +1679,7 @@ The following state arguments are supported:
         <span class="property-type">int</span>
     </dt>
     <dd>{{% md %}}Minimum key version available for use. If keys have been archived by increasing `min_decryption_version`, this attribute will reflect that change.
-{{% /md %}}</dd>
-    <dt class="property-optional"
+{{% /md %}}</dd><dt class="property-optional"
             title="Optional">
         <span id="state_min_decryption_version_python">
 <a href="#state_min_decryption_version_python" style="color: inherit; text-decoration: inherit;">min_<wbr>decryption_<wbr>version</a>
@@ -1851,8 +1688,7 @@ The following state arguments are supported:
         <span class="property-type">int</span>
     </dt>
     <dd>{{% md %}}Minimum key version to use for decryption.
-{{% /md %}}</dd>
-    <dt class="property-optional"
+{{% /md %}}</dd><dt class="property-optional"
             title="Optional">
         <span id="state_min_encryption_version_python">
 <a href="#state_min_encryption_version_python" style="color: inherit; text-decoration: inherit;">min_<wbr>encryption_<wbr>version</a>
@@ -1861,8 +1697,7 @@ The following state arguments are supported:
         <span class="property-type">int</span>
     </dt>
     <dd>{{% md %}}Minimum key version to use for encryption
-{{% /md %}}</dd>
-    <dt class="property-optional"
+{{% /md %}}</dd><dt class="property-optional"
             title="Optional">
         <span id="state_name_python">
 <a href="#state_name_python" style="color: inherit; text-decoration: inherit;">name</a>
@@ -1871,8 +1706,7 @@ The following state arguments are supported:
         <span class="property-type">str</span>
     </dt>
     <dd>{{% md %}}The name to identify this key within the backend. Must be unique within the backend.
-{{% /md %}}</dd>
-    <dt class="property-optional"
+{{% /md %}}</dd><dt class="property-optional"
             title="Optional">
         <span id="state_supports_decryption_python">
 <a href="#state_supports_decryption_python" style="color: inherit; text-decoration: inherit;">supports_<wbr>decryption</a>
@@ -1881,8 +1715,7 @@ The following state arguments are supported:
         <span class="property-type">bool</span>
     </dt>
     <dd>{{% md %}}Whether or not the key supports decryption, based on key type.
-{{% /md %}}</dd>
-    <dt class="property-optional"
+{{% /md %}}</dd><dt class="property-optional"
             title="Optional">
         <span id="state_supports_derivation_python">
 <a href="#state_supports_derivation_python" style="color: inherit; text-decoration: inherit;">supports_<wbr>derivation</a>
@@ -1891,8 +1724,7 @@ The following state arguments are supported:
         <span class="property-type">bool</span>
     </dt>
     <dd>{{% md %}}Whether or not the key supports derivation, based on key type.
-{{% /md %}}</dd>
-    <dt class="property-optional"
+{{% /md %}}</dd><dt class="property-optional"
             title="Optional">
         <span id="state_supports_encryption_python">
 <a href="#state_supports_encryption_python" style="color: inherit; text-decoration: inherit;">supports_<wbr>encryption</a>
@@ -1901,8 +1733,7 @@ The following state arguments are supported:
         <span class="property-type">bool</span>
     </dt>
     <dd>{{% md %}}Whether or not the key supports encryption, based on key type.
-{{% /md %}}</dd>
-    <dt class="property-optional"
+{{% /md %}}</dd><dt class="property-optional"
             title="Optional">
         <span id="state_supports_signing_python">
 <a href="#state_supports_signing_python" style="color: inherit; text-decoration: inherit;">supports_<wbr>signing</a>
@@ -1911,8 +1742,7 @@ The following state arguments are supported:
         <span class="property-type">bool</span>
     </dt>
     <dd>{{% md %}}Whether or not the key supports signing, based on key type.
-{{% /md %}}</dd>
-    <dt class="property-optional"
+{{% /md %}}</dd><dt class="property-optional"
             title="Optional">
         <span id="state_type_python">
 <a href="#state_type_python" style="color: inherit; text-decoration: inherit;">type</a>
@@ -1922,8 +1752,7 @@ The following state arguments are supported:
     </dt>
     <dd>{{% md %}}Specifies the type of key to create. The currently-supported types are: `aes128-gcm96`, `aes256-gcm96` (default), `chacha20-poly1305`, `ed25519`, `ecdsa-p256`, `ecdsa-p384`, `ecdsa-p521`, `rsa-2048`, `rsa-3072` and `rsa-4096`. 
 * Refer to the Vault documentation on transit key types for more information: [Key Types](https://www.vaultproject.io/docs/secrets/transit#key-types)
-{{% /md %}}</dd>
-</dl>
+{{% /md %}}</dd></dl>
 {{% /choosable %}}
 
 
@@ -1949,6 +1778,6 @@ Transit secret backend keys can be imported using the `path`, e.g.
 	<dt>License</dt>
 	<dd>Apache-2.0</dd>
 	<dt>Notes</dt>
-	<dd>This Pulumi package is based on the [`vault` Terraform Provider](https://github.com/hashicorp/terraform-provider-vault).</dd>
+	<dd>{{% md %}}This Pulumi package is based on the [`vault` Terraform Provider](https://github.com/hashicorp/terraform-provider-vault).{{% /md %}}</dd>
 </dl>
 

@@ -13,11 +13,17 @@ meta_desc: "Documentation for the aws.s3.AnalyticsConfiguration resource with ex
 Provides a S3 bucket [analytics configuration](https://docs.aws.amazon.com/AmazonS3/latest/dev/analytics-storage-class.html) resource.
 
 {{% examples %}}
+
 ## Example Usage
 
 {{< chooser language "typescript,python,go,csharp" / >}}
+
+
 ### Add analytics configuration for entire S3 bucket and export results to a second S3 bucket
-{{% example csharp %}}
+
+
+{{< example csharp >}}
+
 ```csharp
 using Pulumi;
 using Aws = Pulumi.Aws;
@@ -54,9 +60,12 @@ class MyStack : Stack
 }
 ```
 
-{{% /example %}}
 
-{{% example go %}}
+{{< /example >}}
+
+
+{{< example go >}}
+
 ```go
 package main
 
@@ -95,9 +104,12 @@ func main() {
 }
 ```
 
-{{% /example %}}
 
-{{% example python %}}
+{{< /example >}}
+
+
+{{< example python >}}
+
 ```python
 import pulumi
 import pulumi_aws as aws
@@ -117,9 +129,12 @@ example_entire_bucket = aws.s3.AnalyticsConfiguration("example-entire-bucket",
     ))
 ```
 
-{{% /example %}}
 
-{{% example typescript %}}
+{{< /example >}}
+
+
+{{< example typescript >}}
+
 
 ```typescript
 import * as pulumi from "@pulumi/pulumi";
@@ -141,10 +156,17 @@ const example_entire_bucket = new aws.s3.AnalyticsConfiguration("example-entire-
 });
 ```
 
-{{% /example %}}
+
+{{< /example >}}
+
+
+
 
 ### Add analytics configuration with S3 bucket object filter
-{{% example csharp %}}
+
+
+{{< example csharp >}}
+
 ```csharp
 using Pulumi;
 using Aws = Pulumi.Aws;
@@ -174,9 +196,12 @@ class MyStack : Stack
 }
 ```
 
-{{% /example %}}
 
-{{% example go %}}
+{{< /example >}}
+
+
+{{< example go >}}
+
 ```go
 package main
 
@@ -209,9 +234,12 @@ func main() {
 }
 ```
 
-{{% /example %}}
 
-{{% example python %}}
+{{< /example >}}
+
+
+{{< example python >}}
+
 ```python
 import pulumi
 import pulumi_aws as aws
@@ -228,9 +256,12 @@ example_filtered = aws.s3.AnalyticsConfiguration("example-filtered",
     ))
 ```
 
-{{% /example %}}
 
-{{% example typescript %}}
+{{< /example >}}
+
+
+{{< example typescript >}}
+
 
 ```typescript
 import * as pulumi from "@pulumi/pulumi";
@@ -249,9 +280,16 @@ const example_filtered = new aws.s3.AnalyticsConfiguration("example-filtered", {
 });
 ```
 
-{{% /example %}}
+
+{{< /example >}}
+
+
+
+
 
 {{% /examples %}}
+
+
 
 
 ## Create a AnalyticsConfiguration Resource {#create}
@@ -276,9 +314,7 @@ const example_filtered = new aws.s3.AnalyticsConfiguration("example-filtered", {
 
 {{% choosable language nodejs %}}
 
-<dl class="resources-properties">
-  
-    <dt
+<dl class="resources-properties"><dt
         class="property-required" title="Required">
         <span>name</span>
         <span class="property-indicator"></span>
@@ -286,9 +322,7 @@ const example_filtered = new aws.s3.AnalyticsConfiguration("example-filtered", {
     </dt>
     <dd>
       The unique name of the resource.
-    </dd>
-  
-    <dt
+    </dd><dt
         class="property-required" title="Required">
         <span>args</span>
         <span class="property-indicator"></span>
@@ -296,9 +330,7 @@ const example_filtered = new aws.s3.AnalyticsConfiguration("example-filtered", {
     </dt>
     <dd>
       The arguments to resource properties.
-    </dd>
-  
-    <dt
+    </dd><dt
         class="property-optional" title="Optional">
         <span>opts</span>
         <span class="property-indicator"></span>
@@ -306,10 +338,7 @@ const example_filtered = new aws.s3.AnalyticsConfiguration("example-filtered", {
     </dt>
     <dd>
       Bag of options to control resource&#39;s behavior.
-    </dd>
-  
-
-</dl>
+    </dd></dl>
 
 {{% /choosable %}}
 
@@ -335,9 +364,7 @@ const example_filtered = new aws.s3.AnalyticsConfiguration("example-filtered", {
 
 {{% choosable language go %}}
 
-<dl class="resources-properties">
-  
-    <dt
+<dl class="resources-properties"><dt
         class="property-optional" title="Optional">
         <span>ctx</span>
         <span class="property-indicator"></span>
@@ -345,9 +372,7 @@ const example_filtered = new aws.s3.AnalyticsConfiguration("example-filtered", {
     </dt>
     <dd>
       Context object for the current deployment.
-    </dd>
-  
-    <dt
+    </dd><dt
         class="property-required" title="Required">
         <span>name</span>
         <span class="property-indicator"></span>
@@ -355,9 +380,7 @@ const example_filtered = new aws.s3.AnalyticsConfiguration("example-filtered", {
     </dt>
     <dd>
       The unique name of the resource.
-    </dd>
-  
-    <dt
+    </dd><dt
         class="property-required" title="Required">
         <span>args</span>
         <span class="property-indicator"></span>
@@ -365,9 +388,7 @@ const example_filtered = new aws.s3.AnalyticsConfiguration("example-filtered", {
     </dt>
     <dd>
       The arguments to resource properties.
-    </dd>
-  
-    <dt
+    </dd><dt
         class="property-optional" title="Optional">
         <span>opts</span>
         <span class="property-indicator"></span>
@@ -375,18 +396,13 @@ const example_filtered = new aws.s3.AnalyticsConfiguration("example-filtered", {
     </dt>
     <dd>
       Bag of options to control resource&#39;s behavior.
-    </dd>
-  
-
-</dl>
+    </dd></dl>
 
 {{% /choosable %}}
 
 {{% choosable language csharp %}}
 
-<dl class="resources-properties">
-  
-    <dt
+<dl class="resources-properties"><dt
         class="property-required" title="Required">
         <span>name</span>
         <span class="property-indicator"></span>
@@ -394,9 +410,7 @@ const example_filtered = new aws.s3.AnalyticsConfiguration("example-filtered", {
     </dt>
     <dd>
       The unique name of the resource.
-    </dd>
-  
-    <dt
+    </dd><dt
         class="property-required" title="Required">
         <span>args</span>
         <span class="property-indicator"></span>
@@ -404,9 +418,7 @@ const example_filtered = new aws.s3.AnalyticsConfiguration("example-filtered", {
     </dt>
     <dd>
       The arguments to resource properties.
-    </dd>
-  
-    <dt
+    </dd><dt
         class="property-optional" title="Optional">
         <span>opts</span>
         <span class="property-indicator"></span>
@@ -414,10 +426,7 @@ const example_filtered = new aws.s3.AnalyticsConfiguration("example-filtered", {
     </dt>
     <dd>
       Bag of options to control resource&#39;s behavior.
-    </dd>
-  
-
-</dl>
+    </dd></dl>
 
 {{% /choosable %}}
 
@@ -432,9 +441,7 @@ The AnalyticsConfiguration resource accepts the following [input]({{< relref "/d
 
 
 {{% choosable language csharp %}}
-<dl class="resources-properties">
-
-    <dt class="property-required"
+<dl class="resources-properties"><dt class="property-required"
             title="Required">
         <span id="bucket_csharp">
 <a href="#bucket_csharp" style="color: inherit; text-decoration: inherit;">Bucket</a>
@@ -443,8 +450,7 @@ The AnalyticsConfiguration resource accepts the following [input]({{< relref "/d
         <span class="property-type">string</span>
     </dt>
     <dd>{{% md %}}The name of the bucket this analytics configuration is associated with.
-{{% /md %}}</dd>
-    <dt class="property-optional"
+{{% /md %}}</dd><dt class="property-optional"
             title="Optional">
         <span id="filter_csharp">
 <a href="#filter_csharp" style="color: inherit; text-decoration: inherit;">Filter</a>
@@ -453,8 +459,7 @@ The AnalyticsConfiguration resource accepts the following [input]({{< relref "/d
         <span class="property-type"><a href="#analyticsconfigurationfilter">Analytics<wbr>Configuration<wbr>Filter<wbr>Args</a></span>
     </dt>
     <dd>{{% md %}}Object filtering that accepts a prefix, tags, or a logical AND of prefix and tags (documented below).
-{{% /md %}}</dd>
-    <dt class="property-optional"
+{{% /md %}}</dd><dt class="property-optional"
             title="Optional">
         <span id="name_csharp">
 <a href="#name_csharp" style="color: inherit; text-decoration: inherit;">Name</a>
@@ -463,8 +468,7 @@ The AnalyticsConfiguration resource accepts the following [input]({{< relref "/d
         <span class="property-type">string</span>
     </dt>
     <dd>{{% md %}}Unique identifier of the analytics configuration for the bucket.
-{{% /md %}}</dd>
-    <dt class="property-optional"
+{{% /md %}}</dd><dt class="property-optional"
             title="Optional">
         <span id="storageclassanalysis_csharp">
 <a href="#storageclassanalysis_csharp" style="color: inherit; text-decoration: inherit;">Storage<wbr>Class<wbr>Analysis</a>
@@ -473,14 +477,11 @@ The AnalyticsConfiguration resource accepts the following [input]({{< relref "/d
         <span class="property-type"><a href="#analyticsconfigurationstorageclassanalysis">Analytics<wbr>Configuration<wbr>Storage<wbr>Class<wbr>Analysis<wbr>Args</a></span>
     </dt>
     <dd>{{% md %}}Configuration for the analytics data export (documented below).
-{{% /md %}}</dd>
-</dl>
+{{% /md %}}</dd></dl>
 {{% /choosable %}}
 
 {{% choosable language go %}}
-<dl class="resources-properties">
-
-    <dt class="property-required"
+<dl class="resources-properties"><dt class="property-required"
             title="Required">
         <span id="bucket_go">
 <a href="#bucket_go" style="color: inherit; text-decoration: inherit;">Bucket</a>
@@ -489,8 +490,7 @@ The AnalyticsConfiguration resource accepts the following [input]({{< relref "/d
         <span class="property-type">string</span>
     </dt>
     <dd>{{% md %}}The name of the bucket this analytics configuration is associated with.
-{{% /md %}}</dd>
-    <dt class="property-optional"
+{{% /md %}}</dd><dt class="property-optional"
             title="Optional">
         <span id="filter_go">
 <a href="#filter_go" style="color: inherit; text-decoration: inherit;">Filter</a>
@@ -499,8 +499,7 @@ The AnalyticsConfiguration resource accepts the following [input]({{< relref "/d
         <span class="property-type"><a href="#analyticsconfigurationfilter">Analytics<wbr>Configuration<wbr>Filter</a></span>
     </dt>
     <dd>{{% md %}}Object filtering that accepts a prefix, tags, or a logical AND of prefix and tags (documented below).
-{{% /md %}}</dd>
-    <dt class="property-optional"
+{{% /md %}}</dd><dt class="property-optional"
             title="Optional">
         <span id="name_go">
 <a href="#name_go" style="color: inherit; text-decoration: inherit;">Name</a>
@@ -509,8 +508,7 @@ The AnalyticsConfiguration resource accepts the following [input]({{< relref "/d
         <span class="property-type">string</span>
     </dt>
     <dd>{{% md %}}Unique identifier of the analytics configuration for the bucket.
-{{% /md %}}</dd>
-    <dt class="property-optional"
+{{% /md %}}</dd><dt class="property-optional"
             title="Optional">
         <span id="storageclassanalysis_go">
 <a href="#storageclassanalysis_go" style="color: inherit; text-decoration: inherit;">Storage<wbr>Class<wbr>Analysis</a>
@@ -519,14 +517,11 @@ The AnalyticsConfiguration resource accepts the following [input]({{< relref "/d
         <span class="property-type"><a href="#analyticsconfigurationstorageclassanalysis">Analytics<wbr>Configuration<wbr>Storage<wbr>Class<wbr>Analysis</a></span>
     </dt>
     <dd>{{% md %}}Configuration for the analytics data export (documented below).
-{{% /md %}}</dd>
-</dl>
+{{% /md %}}</dd></dl>
 {{% /choosable %}}
 
 {{% choosable language nodejs %}}
-<dl class="resources-properties">
-
-    <dt class="property-required"
+<dl class="resources-properties"><dt class="property-required"
             title="Required">
         <span id="bucket_nodejs">
 <a href="#bucket_nodejs" style="color: inherit; text-decoration: inherit;">bucket</a>
@@ -535,8 +530,7 @@ The AnalyticsConfiguration resource accepts the following [input]({{< relref "/d
         <span class="property-type">string</span>
     </dt>
     <dd>{{% md %}}The name of the bucket this analytics configuration is associated with.
-{{% /md %}}</dd>
-    <dt class="property-optional"
+{{% /md %}}</dd><dt class="property-optional"
             title="Optional">
         <span id="filter_nodejs">
 <a href="#filter_nodejs" style="color: inherit; text-decoration: inherit;">filter</a>
@@ -545,8 +539,7 @@ The AnalyticsConfiguration resource accepts the following [input]({{< relref "/d
         <span class="property-type"><a href="#analyticsconfigurationfilter">Analytics<wbr>Configuration<wbr>Filter</a></span>
     </dt>
     <dd>{{% md %}}Object filtering that accepts a prefix, tags, or a logical AND of prefix and tags (documented below).
-{{% /md %}}</dd>
-    <dt class="property-optional"
+{{% /md %}}</dd><dt class="property-optional"
             title="Optional">
         <span id="name_nodejs">
 <a href="#name_nodejs" style="color: inherit; text-decoration: inherit;">name</a>
@@ -555,8 +548,7 @@ The AnalyticsConfiguration resource accepts the following [input]({{< relref "/d
         <span class="property-type">string</span>
     </dt>
     <dd>{{% md %}}Unique identifier of the analytics configuration for the bucket.
-{{% /md %}}</dd>
-    <dt class="property-optional"
+{{% /md %}}</dd><dt class="property-optional"
             title="Optional">
         <span id="storageclassanalysis_nodejs">
 <a href="#storageclassanalysis_nodejs" style="color: inherit; text-decoration: inherit;">storage<wbr>Class<wbr>Analysis</a>
@@ -565,14 +557,11 @@ The AnalyticsConfiguration resource accepts the following [input]({{< relref "/d
         <span class="property-type"><a href="#analyticsconfigurationstorageclassanalysis">Analytics<wbr>Configuration<wbr>Storage<wbr>Class<wbr>Analysis</a></span>
     </dt>
     <dd>{{% md %}}Configuration for the analytics data export (documented below).
-{{% /md %}}</dd>
-</dl>
+{{% /md %}}</dd></dl>
 {{% /choosable %}}
 
 {{% choosable language python %}}
-<dl class="resources-properties">
-
-    <dt class="property-required"
+<dl class="resources-properties"><dt class="property-required"
             title="Required">
         <span id="bucket_python">
 <a href="#bucket_python" style="color: inherit; text-decoration: inherit;">bucket</a>
@@ -581,8 +570,7 @@ The AnalyticsConfiguration resource accepts the following [input]({{< relref "/d
         <span class="property-type">str</span>
     </dt>
     <dd>{{% md %}}The name of the bucket this analytics configuration is associated with.
-{{% /md %}}</dd>
-    <dt class="property-optional"
+{{% /md %}}</dd><dt class="property-optional"
             title="Optional">
         <span id="filter_python">
 <a href="#filter_python" style="color: inherit; text-decoration: inherit;">filter</a>
@@ -591,8 +579,7 @@ The AnalyticsConfiguration resource accepts the following [input]({{< relref "/d
         <span class="property-type"><a href="#analyticsconfigurationfilter">Analytics<wbr>Configuration<wbr>Filter<wbr>Args</a></span>
     </dt>
     <dd>{{% md %}}Object filtering that accepts a prefix, tags, or a logical AND of prefix and tags (documented below).
-{{% /md %}}</dd>
-    <dt class="property-optional"
+{{% /md %}}</dd><dt class="property-optional"
             title="Optional">
         <span id="name_python">
 <a href="#name_python" style="color: inherit; text-decoration: inherit;">name</a>
@@ -601,8 +588,7 @@ The AnalyticsConfiguration resource accepts the following [input]({{< relref "/d
         <span class="property-type">str</span>
     </dt>
     <dd>{{% md %}}Unique identifier of the analytics configuration for the bucket.
-{{% /md %}}</dd>
-    <dt class="property-optional"
+{{% /md %}}</dd><dt class="property-optional"
             title="Optional">
         <span id="storage_class_analysis_python">
 <a href="#storage_class_analysis_python" style="color: inherit; text-decoration: inherit;">storage_<wbr>class_<wbr>analysis</a>
@@ -611,8 +597,7 @@ The AnalyticsConfiguration resource accepts the following [input]({{< relref "/d
         <span class="property-type"><a href="#analyticsconfigurationstorageclassanalysis">Analytics<wbr>Configuration<wbr>Storage<wbr>Class<wbr>Analysis<wbr>Args</a></span>
     </dt>
     <dd>{{% md %}}Configuration for the analytics data export (documented below).
-{{% /md %}}</dd>
-</dl>
+{{% /md %}}</dd></dl>
 {{% /choosable %}}
 
 
@@ -623,9 +608,7 @@ All [input](#inputs) properties are implicitly available as output properties. A
 
 
 {{% choosable language csharp %}}
-<dl class="resources-properties">
-
-    <dt class="property-"
+<dl class="resources-properties"><dt class="property-"
             title="">
         <span id="id_csharp">
 <a href="#id_csharp" style="color: inherit; text-decoration: inherit;">Id</a>
@@ -633,14 +616,11 @@ All [input](#inputs) properties are implicitly available as output properties. A
         <span class="property-indicator"></span>
         <span class="property-type">string</span>
     </dt>
-    <dd>{{% md %}}The provider-assigned unique ID for this managed resource.{{% /md %}}</dd>
-</dl>
+    <dd>{{% md %}}The provider-assigned unique ID for this managed resource.{{% /md %}}</dd></dl>
 {{% /choosable %}}
 
 {{% choosable language go %}}
-<dl class="resources-properties">
-
-    <dt class="property-"
+<dl class="resources-properties"><dt class="property-"
             title="">
         <span id="id_go">
 <a href="#id_go" style="color: inherit; text-decoration: inherit;">Id</a>
@@ -648,14 +628,11 @@ All [input](#inputs) properties are implicitly available as output properties. A
         <span class="property-indicator"></span>
         <span class="property-type">string</span>
     </dt>
-    <dd>{{% md %}}The provider-assigned unique ID for this managed resource.{{% /md %}}</dd>
-</dl>
+    <dd>{{% md %}}The provider-assigned unique ID for this managed resource.{{% /md %}}</dd></dl>
 {{% /choosable %}}
 
 {{% choosable language nodejs %}}
-<dl class="resources-properties">
-
-    <dt class="property-"
+<dl class="resources-properties"><dt class="property-"
             title="">
         <span id="id_nodejs">
 <a href="#id_nodejs" style="color: inherit; text-decoration: inherit;">id</a>
@@ -663,14 +640,11 @@ All [input](#inputs) properties are implicitly available as output properties. A
         <span class="property-indicator"></span>
         <span class="property-type">string</span>
     </dt>
-    <dd>{{% md %}}The provider-assigned unique ID for this managed resource.{{% /md %}}</dd>
-</dl>
+    <dd>{{% md %}}The provider-assigned unique ID for this managed resource.{{% /md %}}</dd></dl>
 {{% /choosable %}}
 
 {{% choosable language python %}}
-<dl class="resources-properties">
-
-    <dt class="property-"
+<dl class="resources-properties"><dt class="property-"
             title="">
         <span id="id_python">
 <a href="#id_python" style="color: inherit; text-decoration: inherit;">id</a>
@@ -678,8 +652,7 @@ All [input](#inputs) properties are implicitly available as output properties. A
         <span class="property-indicator"></span>
         <span class="property-type">str</span>
     </dt>
-    <dd>{{% md %}}The provider-assigned unique ID for this managed resource.{{% /md %}}</dd>
-</dl>
+    <dd>{{% md %}}The provider-assigned unique ID for this managed resource.{{% /md %}}</dd></dl>
 {{% /choosable %}}
 
 
@@ -806,9 +779,7 @@ The following state arguments are supported:
 
 
 {{% choosable language csharp %}}
-<dl class="resources-properties">
-
-    <dt class="property-optional"
+<dl class="resources-properties"><dt class="property-optional"
             title="Optional">
         <span id="state_bucket_csharp">
 <a href="#state_bucket_csharp" style="color: inherit; text-decoration: inherit;">Bucket</a>
@@ -817,8 +788,7 @@ The following state arguments are supported:
         <span class="property-type">string</span>
     </dt>
     <dd>{{% md %}}The name of the bucket this analytics configuration is associated with.
-{{% /md %}}</dd>
-    <dt class="property-optional"
+{{% /md %}}</dd><dt class="property-optional"
             title="Optional">
         <span id="state_filter_csharp">
 <a href="#state_filter_csharp" style="color: inherit; text-decoration: inherit;">Filter</a>
@@ -827,8 +797,7 @@ The following state arguments are supported:
         <span class="property-type"><a href="#analyticsconfigurationfilter">Analytics<wbr>Configuration<wbr>Filter<wbr>Args</a></span>
     </dt>
     <dd>{{% md %}}Object filtering that accepts a prefix, tags, or a logical AND of prefix and tags (documented below).
-{{% /md %}}</dd>
-    <dt class="property-optional"
+{{% /md %}}</dd><dt class="property-optional"
             title="Optional">
         <span id="state_name_csharp">
 <a href="#state_name_csharp" style="color: inherit; text-decoration: inherit;">Name</a>
@@ -837,8 +806,7 @@ The following state arguments are supported:
         <span class="property-type">string</span>
     </dt>
     <dd>{{% md %}}Unique identifier of the analytics configuration for the bucket.
-{{% /md %}}</dd>
-    <dt class="property-optional"
+{{% /md %}}</dd><dt class="property-optional"
             title="Optional">
         <span id="state_storageclassanalysis_csharp">
 <a href="#state_storageclassanalysis_csharp" style="color: inherit; text-decoration: inherit;">Storage<wbr>Class<wbr>Analysis</a>
@@ -847,14 +815,11 @@ The following state arguments are supported:
         <span class="property-type"><a href="#analyticsconfigurationstorageclassanalysis">Analytics<wbr>Configuration<wbr>Storage<wbr>Class<wbr>Analysis<wbr>Args</a></span>
     </dt>
     <dd>{{% md %}}Configuration for the analytics data export (documented below).
-{{% /md %}}</dd>
-</dl>
+{{% /md %}}</dd></dl>
 {{% /choosable %}}
 
 {{% choosable language go %}}
-<dl class="resources-properties">
-
-    <dt class="property-optional"
+<dl class="resources-properties"><dt class="property-optional"
             title="Optional">
         <span id="state_bucket_go">
 <a href="#state_bucket_go" style="color: inherit; text-decoration: inherit;">Bucket</a>
@@ -863,8 +828,7 @@ The following state arguments are supported:
         <span class="property-type">string</span>
     </dt>
     <dd>{{% md %}}The name of the bucket this analytics configuration is associated with.
-{{% /md %}}</dd>
-    <dt class="property-optional"
+{{% /md %}}</dd><dt class="property-optional"
             title="Optional">
         <span id="state_filter_go">
 <a href="#state_filter_go" style="color: inherit; text-decoration: inherit;">Filter</a>
@@ -873,8 +837,7 @@ The following state arguments are supported:
         <span class="property-type"><a href="#analyticsconfigurationfilter">Analytics<wbr>Configuration<wbr>Filter</a></span>
     </dt>
     <dd>{{% md %}}Object filtering that accepts a prefix, tags, or a logical AND of prefix and tags (documented below).
-{{% /md %}}</dd>
-    <dt class="property-optional"
+{{% /md %}}</dd><dt class="property-optional"
             title="Optional">
         <span id="state_name_go">
 <a href="#state_name_go" style="color: inherit; text-decoration: inherit;">Name</a>
@@ -883,8 +846,7 @@ The following state arguments are supported:
         <span class="property-type">string</span>
     </dt>
     <dd>{{% md %}}Unique identifier of the analytics configuration for the bucket.
-{{% /md %}}</dd>
-    <dt class="property-optional"
+{{% /md %}}</dd><dt class="property-optional"
             title="Optional">
         <span id="state_storageclassanalysis_go">
 <a href="#state_storageclassanalysis_go" style="color: inherit; text-decoration: inherit;">Storage<wbr>Class<wbr>Analysis</a>
@@ -893,14 +855,11 @@ The following state arguments are supported:
         <span class="property-type"><a href="#analyticsconfigurationstorageclassanalysis">Analytics<wbr>Configuration<wbr>Storage<wbr>Class<wbr>Analysis</a></span>
     </dt>
     <dd>{{% md %}}Configuration for the analytics data export (documented below).
-{{% /md %}}</dd>
-</dl>
+{{% /md %}}</dd></dl>
 {{% /choosable %}}
 
 {{% choosable language nodejs %}}
-<dl class="resources-properties">
-
-    <dt class="property-optional"
+<dl class="resources-properties"><dt class="property-optional"
             title="Optional">
         <span id="state_bucket_nodejs">
 <a href="#state_bucket_nodejs" style="color: inherit; text-decoration: inherit;">bucket</a>
@@ -909,8 +868,7 @@ The following state arguments are supported:
         <span class="property-type">string</span>
     </dt>
     <dd>{{% md %}}The name of the bucket this analytics configuration is associated with.
-{{% /md %}}</dd>
-    <dt class="property-optional"
+{{% /md %}}</dd><dt class="property-optional"
             title="Optional">
         <span id="state_filter_nodejs">
 <a href="#state_filter_nodejs" style="color: inherit; text-decoration: inherit;">filter</a>
@@ -919,8 +877,7 @@ The following state arguments are supported:
         <span class="property-type"><a href="#analyticsconfigurationfilter">Analytics<wbr>Configuration<wbr>Filter</a></span>
     </dt>
     <dd>{{% md %}}Object filtering that accepts a prefix, tags, or a logical AND of prefix and tags (documented below).
-{{% /md %}}</dd>
-    <dt class="property-optional"
+{{% /md %}}</dd><dt class="property-optional"
             title="Optional">
         <span id="state_name_nodejs">
 <a href="#state_name_nodejs" style="color: inherit; text-decoration: inherit;">name</a>
@@ -929,8 +886,7 @@ The following state arguments are supported:
         <span class="property-type">string</span>
     </dt>
     <dd>{{% md %}}Unique identifier of the analytics configuration for the bucket.
-{{% /md %}}</dd>
-    <dt class="property-optional"
+{{% /md %}}</dd><dt class="property-optional"
             title="Optional">
         <span id="state_storageclassanalysis_nodejs">
 <a href="#state_storageclassanalysis_nodejs" style="color: inherit; text-decoration: inherit;">storage<wbr>Class<wbr>Analysis</a>
@@ -939,14 +895,11 @@ The following state arguments are supported:
         <span class="property-type"><a href="#analyticsconfigurationstorageclassanalysis">Analytics<wbr>Configuration<wbr>Storage<wbr>Class<wbr>Analysis</a></span>
     </dt>
     <dd>{{% md %}}Configuration for the analytics data export (documented below).
-{{% /md %}}</dd>
-</dl>
+{{% /md %}}</dd></dl>
 {{% /choosable %}}
 
 {{% choosable language python %}}
-<dl class="resources-properties">
-
-    <dt class="property-optional"
+<dl class="resources-properties"><dt class="property-optional"
             title="Optional">
         <span id="state_bucket_python">
 <a href="#state_bucket_python" style="color: inherit; text-decoration: inherit;">bucket</a>
@@ -955,8 +908,7 @@ The following state arguments are supported:
         <span class="property-type">str</span>
     </dt>
     <dd>{{% md %}}The name of the bucket this analytics configuration is associated with.
-{{% /md %}}</dd>
-    <dt class="property-optional"
+{{% /md %}}</dd><dt class="property-optional"
             title="Optional">
         <span id="state_filter_python">
 <a href="#state_filter_python" style="color: inherit; text-decoration: inherit;">filter</a>
@@ -965,8 +917,7 @@ The following state arguments are supported:
         <span class="property-type"><a href="#analyticsconfigurationfilter">Analytics<wbr>Configuration<wbr>Filter<wbr>Args</a></span>
     </dt>
     <dd>{{% md %}}Object filtering that accepts a prefix, tags, or a logical AND of prefix and tags (documented below).
-{{% /md %}}</dd>
-    <dt class="property-optional"
+{{% /md %}}</dd><dt class="property-optional"
             title="Optional">
         <span id="state_name_python">
 <a href="#state_name_python" style="color: inherit; text-decoration: inherit;">name</a>
@@ -975,8 +926,7 @@ The following state arguments are supported:
         <span class="property-type">str</span>
     </dt>
     <dd>{{% md %}}Unique identifier of the analytics configuration for the bucket.
-{{% /md %}}</dd>
-    <dt class="property-optional"
+{{% /md %}}</dd><dt class="property-optional"
             title="Optional">
         <span id="state_storage_class_analysis_python">
 <a href="#state_storage_class_analysis_python" style="color: inherit; text-decoration: inherit;">storage_<wbr>class_<wbr>analysis</a>
@@ -985,8 +935,7 @@ The following state arguments are supported:
         <span class="property-type"><a href="#analyticsconfigurationstorageclassanalysis">Analytics<wbr>Configuration<wbr>Storage<wbr>Class<wbr>Analysis<wbr>Args</a></span>
     </dt>
     <dd>{{% md %}}Configuration for the analytics data export (documented below).
-{{% /md %}}</dd>
-</dl>
+{{% /md %}}</dd></dl>
 {{% /choosable %}}
 
 
@@ -1001,9 +950,7 @@ The following state arguments are supported:
 <h4 id="analyticsconfigurationfilter">Analytics<wbr>Configuration<wbr>Filter</h4>
 
 {{% choosable language csharp %}}
-<dl class="resources-properties">
-
-    <dt class="property-optional"
+<dl class="resources-properties"><dt class="property-optional"
             title="Optional">
         <span id="prefix_csharp">
 <a href="#prefix_csharp" style="color: inherit; text-decoration: inherit;">Prefix</a>
@@ -1012,8 +959,7 @@ The following state arguments are supported:
         <span class="property-type">string</span>
     </dt>
     <dd>{{% md %}}Object prefix for filtering.
-{{% /md %}}</dd>
-    <dt class="property-optional"
+{{% /md %}}</dd><dt class="property-optional"
             title="Optional">
         <span id="tags_csharp">
 <a href="#tags_csharp" style="color: inherit; text-decoration: inherit;">Tags</a>
@@ -1022,14 +968,11 @@ The following state arguments are supported:
         <span class="property-type">Dictionary&lt;string, string&gt;</span>
     </dt>
     <dd>{{% md %}}Set of object tags for filtering.
-{{% /md %}}</dd>
-</dl>
+{{% /md %}}</dd></dl>
 {{% /choosable %}}
 
 {{% choosable language go %}}
-<dl class="resources-properties">
-
-    <dt class="property-optional"
+<dl class="resources-properties"><dt class="property-optional"
             title="Optional">
         <span id="prefix_go">
 <a href="#prefix_go" style="color: inherit; text-decoration: inherit;">Prefix</a>
@@ -1038,8 +981,7 @@ The following state arguments are supported:
         <span class="property-type">string</span>
     </dt>
     <dd>{{% md %}}Object prefix for filtering.
-{{% /md %}}</dd>
-    <dt class="property-optional"
+{{% /md %}}</dd><dt class="property-optional"
             title="Optional">
         <span id="tags_go">
 <a href="#tags_go" style="color: inherit; text-decoration: inherit;">Tags</a>
@@ -1048,14 +990,11 @@ The following state arguments are supported:
         <span class="property-type">map[string]string</span>
     </dt>
     <dd>{{% md %}}Set of object tags for filtering.
-{{% /md %}}</dd>
-</dl>
+{{% /md %}}</dd></dl>
 {{% /choosable %}}
 
 {{% choosable language nodejs %}}
-<dl class="resources-properties">
-
-    <dt class="property-optional"
+<dl class="resources-properties"><dt class="property-optional"
             title="Optional">
         <span id="prefix_nodejs">
 <a href="#prefix_nodejs" style="color: inherit; text-decoration: inherit;">prefix</a>
@@ -1064,8 +1003,7 @@ The following state arguments are supported:
         <span class="property-type">string</span>
     </dt>
     <dd>{{% md %}}Object prefix for filtering.
-{{% /md %}}</dd>
-    <dt class="property-optional"
+{{% /md %}}</dd><dt class="property-optional"
             title="Optional">
         <span id="tags_nodejs">
 <a href="#tags_nodejs" style="color: inherit; text-decoration: inherit;">tags</a>
@@ -1074,14 +1012,11 @@ The following state arguments are supported:
         <span class="property-type">{[key: string]: string}</span>
     </dt>
     <dd>{{% md %}}Set of object tags for filtering.
-{{% /md %}}</dd>
-</dl>
+{{% /md %}}</dd></dl>
 {{% /choosable %}}
 
 {{% choosable language python %}}
-<dl class="resources-properties">
-
-    <dt class="property-optional"
+<dl class="resources-properties"><dt class="property-optional"
             title="Optional">
         <span id="prefix_python">
 <a href="#prefix_python" style="color: inherit; text-decoration: inherit;">prefix</a>
@@ -1090,8 +1025,7 @@ The following state arguments are supported:
         <span class="property-type">str</span>
     </dt>
     <dd>{{% md %}}Object prefix for filtering.
-{{% /md %}}</dd>
-    <dt class="property-optional"
+{{% /md %}}</dd><dt class="property-optional"
             title="Optional">
         <span id="tags_python">
 <a href="#tags_python" style="color: inherit; text-decoration: inherit;">tags</a>
@@ -1100,16 +1034,13 @@ The following state arguments are supported:
         <span class="property-type">Mapping[str, str]</span>
     </dt>
     <dd>{{% md %}}Set of object tags for filtering.
-{{% /md %}}</dd>
-</dl>
+{{% /md %}}</dd></dl>
 {{% /choosable %}}
 
 <h4 id="analyticsconfigurationstorageclassanalysis">Analytics<wbr>Configuration<wbr>Storage<wbr>Class<wbr>Analysis</h4>
 
 {{% choosable language csharp %}}
-<dl class="resources-properties">
-
-    <dt class="property-required"
+<dl class="resources-properties"><dt class="property-required"
             title="Required">
         <span id="dataexport_csharp">
 <a href="#dataexport_csharp" style="color: inherit; text-decoration: inherit;">Data<wbr>Export</a>
@@ -1118,14 +1049,11 @@ The following state arguments are supported:
         <span class="property-type"><a href="#analyticsconfigurationstorageclassanalysisdataexport">Analytics<wbr>Configuration<wbr>Storage<wbr>Class<wbr>Analysis<wbr>Data<wbr>Export<wbr>Args</a></span>
     </dt>
     <dd>{{% md %}}Data export configuration (documented below).
-{{% /md %}}</dd>
-</dl>
+{{% /md %}}</dd></dl>
 {{% /choosable %}}
 
 {{% choosable language go %}}
-<dl class="resources-properties">
-
-    <dt class="property-required"
+<dl class="resources-properties"><dt class="property-required"
             title="Required">
         <span id="dataexport_go">
 <a href="#dataexport_go" style="color: inherit; text-decoration: inherit;">Data<wbr>Export</a>
@@ -1134,14 +1062,11 @@ The following state arguments are supported:
         <span class="property-type"><a href="#analyticsconfigurationstorageclassanalysisdataexport">Analytics<wbr>Configuration<wbr>Storage<wbr>Class<wbr>Analysis<wbr>Data<wbr>Export</a></span>
     </dt>
     <dd>{{% md %}}Data export configuration (documented below).
-{{% /md %}}</dd>
-</dl>
+{{% /md %}}</dd></dl>
 {{% /choosable %}}
 
 {{% choosable language nodejs %}}
-<dl class="resources-properties">
-
-    <dt class="property-required"
+<dl class="resources-properties"><dt class="property-required"
             title="Required">
         <span id="dataexport_nodejs">
 <a href="#dataexport_nodejs" style="color: inherit; text-decoration: inherit;">data<wbr>Export</a>
@@ -1150,14 +1075,11 @@ The following state arguments are supported:
         <span class="property-type"><a href="#analyticsconfigurationstorageclassanalysisdataexport">Analytics<wbr>Configuration<wbr>Storage<wbr>Class<wbr>Analysis<wbr>Data<wbr>Export</a></span>
     </dt>
     <dd>{{% md %}}Data export configuration (documented below).
-{{% /md %}}</dd>
-</dl>
+{{% /md %}}</dd></dl>
 {{% /choosable %}}
 
 {{% choosable language python %}}
-<dl class="resources-properties">
-
-    <dt class="property-required"
+<dl class="resources-properties"><dt class="property-required"
             title="Required">
         <span id="data_export_python">
 <a href="#data_export_python" style="color: inherit; text-decoration: inherit;">data_<wbr>export</a>
@@ -1166,16 +1088,13 @@ The following state arguments are supported:
         <span class="property-type"><a href="#analyticsconfigurationstorageclassanalysisdataexport">Analytics<wbr>Configuration<wbr>Storage<wbr>Class<wbr>Analysis<wbr>Data<wbr>Export<wbr>Args</a></span>
     </dt>
     <dd>{{% md %}}Data export configuration (documented below).
-{{% /md %}}</dd>
-</dl>
+{{% /md %}}</dd></dl>
 {{% /choosable %}}
 
 <h4 id="analyticsconfigurationstorageclassanalysisdataexport">Analytics<wbr>Configuration<wbr>Storage<wbr>Class<wbr>Analysis<wbr>Data<wbr>Export</h4>
 
 {{% choosable language csharp %}}
-<dl class="resources-properties">
-
-    <dt class="property-required"
+<dl class="resources-properties"><dt class="property-required"
             title="Required">
         <span id="destination_csharp">
 <a href="#destination_csharp" style="color: inherit; text-decoration: inherit;">Destination</a>
@@ -1184,8 +1103,7 @@ The following state arguments are supported:
         <span class="property-type"><a href="#analyticsconfigurationstorageclassanalysisdataexportdestination">Analytics<wbr>Configuration<wbr>Storage<wbr>Class<wbr>Analysis<wbr>Data<wbr>Export<wbr>Destination<wbr>Args</a></span>
     </dt>
     <dd>{{% md %}}Specifies the destination for the exported analytics data (documented below).
-{{% /md %}}</dd>
-    <dt class="property-optional"
+{{% /md %}}</dd><dt class="property-optional"
             title="Optional">
         <span id="outputschemaversion_csharp">
 <a href="#outputschemaversion_csharp" style="color: inherit; text-decoration: inherit;">Output<wbr>Schema<wbr>Version</a>
@@ -1194,14 +1112,11 @@ The following state arguments are supported:
         <span class="property-type">string</span>
     </dt>
     <dd>{{% md %}}The schema version of exported analytics data. Allowed values: `V_1`. Default value: `V_1`.
-{{% /md %}}</dd>
-</dl>
+{{% /md %}}</dd></dl>
 {{% /choosable %}}
 
 {{% choosable language go %}}
-<dl class="resources-properties">
-
-    <dt class="property-required"
+<dl class="resources-properties"><dt class="property-required"
             title="Required">
         <span id="destination_go">
 <a href="#destination_go" style="color: inherit; text-decoration: inherit;">Destination</a>
@@ -1210,8 +1125,7 @@ The following state arguments are supported:
         <span class="property-type"><a href="#analyticsconfigurationstorageclassanalysisdataexportdestination">Analytics<wbr>Configuration<wbr>Storage<wbr>Class<wbr>Analysis<wbr>Data<wbr>Export<wbr>Destination</a></span>
     </dt>
     <dd>{{% md %}}Specifies the destination for the exported analytics data (documented below).
-{{% /md %}}</dd>
-    <dt class="property-optional"
+{{% /md %}}</dd><dt class="property-optional"
             title="Optional">
         <span id="outputschemaversion_go">
 <a href="#outputschemaversion_go" style="color: inherit; text-decoration: inherit;">Output<wbr>Schema<wbr>Version</a>
@@ -1220,14 +1134,11 @@ The following state arguments are supported:
         <span class="property-type">string</span>
     </dt>
     <dd>{{% md %}}The schema version of exported analytics data. Allowed values: `V_1`. Default value: `V_1`.
-{{% /md %}}</dd>
-</dl>
+{{% /md %}}</dd></dl>
 {{% /choosable %}}
 
 {{% choosable language nodejs %}}
-<dl class="resources-properties">
-
-    <dt class="property-required"
+<dl class="resources-properties"><dt class="property-required"
             title="Required">
         <span id="destination_nodejs">
 <a href="#destination_nodejs" style="color: inherit; text-decoration: inherit;">destination</a>
@@ -1236,8 +1147,7 @@ The following state arguments are supported:
         <span class="property-type"><a href="#analyticsconfigurationstorageclassanalysisdataexportdestination">Analytics<wbr>Configuration<wbr>Storage<wbr>Class<wbr>Analysis<wbr>Data<wbr>Export<wbr>Destination</a></span>
     </dt>
     <dd>{{% md %}}Specifies the destination for the exported analytics data (documented below).
-{{% /md %}}</dd>
-    <dt class="property-optional"
+{{% /md %}}</dd><dt class="property-optional"
             title="Optional">
         <span id="outputschemaversion_nodejs">
 <a href="#outputschemaversion_nodejs" style="color: inherit; text-decoration: inherit;">output<wbr>Schema<wbr>Version</a>
@@ -1246,14 +1156,11 @@ The following state arguments are supported:
         <span class="property-type">string</span>
     </dt>
     <dd>{{% md %}}The schema version of exported analytics data. Allowed values: `V_1`. Default value: `V_1`.
-{{% /md %}}</dd>
-</dl>
+{{% /md %}}</dd></dl>
 {{% /choosable %}}
 
 {{% choosable language python %}}
-<dl class="resources-properties">
-
-    <dt class="property-required"
+<dl class="resources-properties"><dt class="property-required"
             title="Required">
         <span id="destination_python">
 <a href="#destination_python" style="color: inherit; text-decoration: inherit;">destination</a>
@@ -1262,8 +1169,7 @@ The following state arguments are supported:
         <span class="property-type"><a href="#analyticsconfigurationstorageclassanalysisdataexportdestination">Analytics<wbr>Configuration<wbr>Storage<wbr>Class<wbr>Analysis<wbr>Data<wbr>Export<wbr>Destination<wbr>Args</a></span>
     </dt>
     <dd>{{% md %}}Specifies the destination for the exported analytics data (documented below).
-{{% /md %}}</dd>
-    <dt class="property-optional"
+{{% /md %}}</dd><dt class="property-optional"
             title="Optional">
         <span id="output_schema_version_python">
 <a href="#output_schema_version_python" style="color: inherit; text-decoration: inherit;">output_<wbr>schema_<wbr>version</a>
@@ -1272,16 +1178,13 @@ The following state arguments are supported:
         <span class="property-type">str</span>
     </dt>
     <dd>{{% md %}}The schema version of exported analytics data. Allowed values: `V_1`. Default value: `V_1`.
-{{% /md %}}</dd>
-</dl>
+{{% /md %}}</dd></dl>
 {{% /choosable %}}
 
 <h4 id="analyticsconfigurationstorageclassanalysisdataexportdestination">Analytics<wbr>Configuration<wbr>Storage<wbr>Class<wbr>Analysis<wbr>Data<wbr>Export<wbr>Destination</h4>
 
 {{% choosable language csharp %}}
-<dl class="resources-properties">
-
-    <dt class="property-required"
+<dl class="resources-properties"><dt class="property-required"
             title="Required">
         <span id="s3bucketdestination_csharp">
 <a href="#s3bucketdestination_csharp" style="color: inherit; text-decoration: inherit;">S3Bucket<wbr>Destination</a>
@@ -1290,14 +1193,11 @@ The following state arguments are supported:
         <span class="property-type"><a href="#analyticsconfigurationstorageclassanalysisdataexportdestinations3bucketdestination">Analytics<wbr>Configuration<wbr>Storage<wbr>Class<wbr>Analysis<wbr>Data<wbr>Export<wbr>Destination<wbr>S3Bucket<wbr>Destination<wbr>Args</a></span>
     </dt>
     <dd>{{% md %}}Analytics data export currently only supports an S3 bucket destination (documented below).
-{{% /md %}}</dd>
-</dl>
+{{% /md %}}</dd></dl>
 {{% /choosable %}}
 
 {{% choosable language go %}}
-<dl class="resources-properties">
-
-    <dt class="property-required"
+<dl class="resources-properties"><dt class="property-required"
             title="Required">
         <span id="s3bucketdestination_go">
 <a href="#s3bucketdestination_go" style="color: inherit; text-decoration: inherit;">S3Bucket<wbr>Destination</a>
@@ -1306,14 +1206,11 @@ The following state arguments are supported:
         <span class="property-type"><a href="#analyticsconfigurationstorageclassanalysisdataexportdestinations3bucketdestination">Analytics<wbr>Configuration<wbr>Storage<wbr>Class<wbr>Analysis<wbr>Data<wbr>Export<wbr>Destination<wbr>S3Bucket<wbr>Destination</a></span>
     </dt>
     <dd>{{% md %}}Analytics data export currently only supports an S3 bucket destination (documented below).
-{{% /md %}}</dd>
-</dl>
+{{% /md %}}</dd></dl>
 {{% /choosable %}}
 
 {{% choosable language nodejs %}}
-<dl class="resources-properties">
-
-    <dt class="property-required"
+<dl class="resources-properties"><dt class="property-required"
             title="Required">
         <span id="s3bucketdestination_nodejs">
 <a href="#s3bucketdestination_nodejs" style="color: inherit; text-decoration: inherit;">s3Bucket<wbr>Destination</a>
@@ -1322,14 +1219,11 @@ The following state arguments are supported:
         <span class="property-type"><a href="#analyticsconfigurationstorageclassanalysisdataexportdestinations3bucketdestination">Analytics<wbr>Configuration<wbr>Storage<wbr>Class<wbr>Analysis<wbr>Data<wbr>Export<wbr>Destination<wbr>S3Bucket<wbr>Destination</a></span>
     </dt>
     <dd>{{% md %}}Analytics data export currently only supports an S3 bucket destination (documented below).
-{{% /md %}}</dd>
-</dl>
+{{% /md %}}</dd></dl>
 {{% /choosable %}}
 
 {{% choosable language python %}}
-<dl class="resources-properties">
-
-    <dt class="property-required"
+<dl class="resources-properties"><dt class="property-required"
             title="Required">
         <span id="s3_bucket_destination_python">
 <a href="#s3_bucket_destination_python" style="color: inherit; text-decoration: inherit;">s3_<wbr>bucket_<wbr>destination</a>
@@ -1338,16 +1232,13 @@ The following state arguments are supported:
         <span class="property-type"><a href="#analyticsconfigurationstorageclassanalysisdataexportdestinations3bucketdestination">Analytics<wbr>Configuration<wbr>Storage<wbr>Class<wbr>Analysis<wbr>Data<wbr>Export<wbr>Destination<wbr>S3Bucket<wbr>Destination<wbr>Args</a></span>
     </dt>
     <dd>{{% md %}}Analytics data export currently only supports an S3 bucket destination (documented below).
-{{% /md %}}</dd>
-</dl>
+{{% /md %}}</dd></dl>
 {{% /choosable %}}
 
 <h4 id="analyticsconfigurationstorageclassanalysisdataexportdestinations3bucketdestination">Analytics<wbr>Configuration<wbr>Storage<wbr>Class<wbr>Analysis<wbr>Data<wbr>Export<wbr>Destination<wbr>S3Bucket<wbr>Destination</h4>
 
 {{% choosable language csharp %}}
-<dl class="resources-properties">
-
-    <dt class="property-required"
+<dl class="resources-properties"><dt class="property-required"
             title="Required">
         <span id="bucketarn_csharp">
 <a href="#bucketarn_csharp" style="color: inherit; text-decoration: inherit;">Bucket<wbr>Arn</a>
@@ -1356,8 +1247,7 @@ The following state arguments are supported:
         <span class="property-type">string</span>
     </dt>
     <dd>{{% md %}}The ARN of the destination bucket.
-{{% /md %}}</dd>
-    <dt class="property-optional"
+{{% /md %}}</dd><dt class="property-optional"
             title="Optional">
         <span id="bucketaccountid_csharp">
 <a href="#bucketaccountid_csharp" style="color: inherit; text-decoration: inherit;">Bucket<wbr>Account<wbr>Id</a>
@@ -1366,8 +1256,7 @@ The following state arguments are supported:
         <span class="property-type">string</span>
     </dt>
     <dd>{{% md %}}The account ID that owns the destination bucket.
-{{% /md %}}</dd>
-    <dt class="property-optional"
+{{% /md %}}</dd><dt class="property-optional"
             title="Optional">
         <span id="format_csharp">
 <a href="#format_csharp" style="color: inherit; text-decoration: inherit;">Format</a>
@@ -1376,8 +1265,7 @@ The following state arguments are supported:
         <span class="property-type">string</span>
     </dt>
     <dd>{{% md %}}The output format of exported analytics data. Allowed values: `CSV`. Default value: `CSV`.
-{{% /md %}}</dd>
-    <dt class="property-optional"
+{{% /md %}}</dd><dt class="property-optional"
             title="Optional">
         <span id="prefix_csharp">
 <a href="#prefix_csharp" style="color: inherit; text-decoration: inherit;">Prefix</a>
@@ -1386,14 +1274,11 @@ The following state arguments are supported:
         <span class="property-type">string</span>
     </dt>
     <dd>{{% md %}}Object prefix for filtering.
-{{% /md %}}</dd>
-</dl>
+{{% /md %}}</dd></dl>
 {{% /choosable %}}
 
 {{% choosable language go %}}
-<dl class="resources-properties">
-
-    <dt class="property-required"
+<dl class="resources-properties"><dt class="property-required"
             title="Required">
         <span id="bucketarn_go">
 <a href="#bucketarn_go" style="color: inherit; text-decoration: inherit;">Bucket<wbr>Arn</a>
@@ -1402,8 +1287,7 @@ The following state arguments are supported:
         <span class="property-type">string</span>
     </dt>
     <dd>{{% md %}}The ARN of the destination bucket.
-{{% /md %}}</dd>
-    <dt class="property-optional"
+{{% /md %}}</dd><dt class="property-optional"
             title="Optional">
         <span id="bucketaccountid_go">
 <a href="#bucketaccountid_go" style="color: inherit; text-decoration: inherit;">Bucket<wbr>Account<wbr>Id</a>
@@ -1412,8 +1296,7 @@ The following state arguments are supported:
         <span class="property-type">string</span>
     </dt>
     <dd>{{% md %}}The account ID that owns the destination bucket.
-{{% /md %}}</dd>
-    <dt class="property-optional"
+{{% /md %}}</dd><dt class="property-optional"
             title="Optional">
         <span id="format_go">
 <a href="#format_go" style="color: inherit; text-decoration: inherit;">Format</a>
@@ -1422,8 +1305,7 @@ The following state arguments are supported:
         <span class="property-type">string</span>
     </dt>
     <dd>{{% md %}}The output format of exported analytics data. Allowed values: `CSV`. Default value: `CSV`.
-{{% /md %}}</dd>
-    <dt class="property-optional"
+{{% /md %}}</dd><dt class="property-optional"
             title="Optional">
         <span id="prefix_go">
 <a href="#prefix_go" style="color: inherit; text-decoration: inherit;">Prefix</a>
@@ -1432,14 +1314,11 @@ The following state arguments are supported:
         <span class="property-type">string</span>
     </dt>
     <dd>{{% md %}}Object prefix for filtering.
-{{% /md %}}</dd>
-</dl>
+{{% /md %}}</dd></dl>
 {{% /choosable %}}
 
 {{% choosable language nodejs %}}
-<dl class="resources-properties">
-
-    <dt class="property-required"
+<dl class="resources-properties"><dt class="property-required"
             title="Required">
         <span id="bucketarn_nodejs">
 <a href="#bucketarn_nodejs" style="color: inherit; text-decoration: inherit;">bucket<wbr>Arn</a>
@@ -1448,8 +1327,7 @@ The following state arguments are supported:
         <span class="property-type">string</span>
     </dt>
     <dd>{{% md %}}The ARN of the destination bucket.
-{{% /md %}}</dd>
-    <dt class="property-optional"
+{{% /md %}}</dd><dt class="property-optional"
             title="Optional">
         <span id="bucketaccountid_nodejs">
 <a href="#bucketaccountid_nodejs" style="color: inherit; text-decoration: inherit;">bucket<wbr>Account<wbr>Id</a>
@@ -1458,8 +1336,7 @@ The following state arguments are supported:
         <span class="property-type">string</span>
     </dt>
     <dd>{{% md %}}The account ID that owns the destination bucket.
-{{% /md %}}</dd>
-    <dt class="property-optional"
+{{% /md %}}</dd><dt class="property-optional"
             title="Optional">
         <span id="format_nodejs">
 <a href="#format_nodejs" style="color: inherit; text-decoration: inherit;">format</a>
@@ -1468,8 +1345,7 @@ The following state arguments are supported:
         <span class="property-type">string</span>
     </dt>
     <dd>{{% md %}}The output format of exported analytics data. Allowed values: `CSV`. Default value: `CSV`.
-{{% /md %}}</dd>
-    <dt class="property-optional"
+{{% /md %}}</dd><dt class="property-optional"
             title="Optional">
         <span id="prefix_nodejs">
 <a href="#prefix_nodejs" style="color: inherit; text-decoration: inherit;">prefix</a>
@@ -1478,14 +1354,11 @@ The following state arguments are supported:
         <span class="property-type">string</span>
     </dt>
     <dd>{{% md %}}Object prefix for filtering.
-{{% /md %}}</dd>
-</dl>
+{{% /md %}}</dd></dl>
 {{% /choosable %}}
 
 {{% choosable language python %}}
-<dl class="resources-properties">
-
-    <dt class="property-required"
+<dl class="resources-properties"><dt class="property-required"
             title="Required">
         <span id="bucket_arn_python">
 <a href="#bucket_arn_python" style="color: inherit; text-decoration: inherit;">bucket_<wbr>arn</a>
@@ -1494,8 +1367,7 @@ The following state arguments are supported:
         <span class="property-type">str</span>
     </dt>
     <dd>{{% md %}}The ARN of the destination bucket.
-{{% /md %}}</dd>
-    <dt class="property-optional"
+{{% /md %}}</dd><dt class="property-optional"
             title="Optional">
         <span id="bucket_account_id_python">
 <a href="#bucket_account_id_python" style="color: inherit; text-decoration: inherit;">bucket_<wbr>account_<wbr>id</a>
@@ -1504,8 +1376,7 @@ The following state arguments are supported:
         <span class="property-type">str</span>
     </dt>
     <dd>{{% md %}}The account ID that owns the destination bucket.
-{{% /md %}}</dd>
-    <dt class="property-optional"
+{{% /md %}}</dd><dt class="property-optional"
             title="Optional">
         <span id="format_python">
 <a href="#format_python" style="color: inherit; text-decoration: inherit;">format</a>
@@ -1514,8 +1385,7 @@ The following state arguments are supported:
         <span class="property-type">str</span>
     </dt>
     <dd>{{% md %}}The output format of exported analytics data. Allowed values: `CSV`. Default value: `CSV`.
-{{% /md %}}</dd>
-    <dt class="property-optional"
+{{% /md %}}</dd><dt class="property-optional"
             title="Optional">
         <span id="prefix_python">
 <a href="#prefix_python" style="color: inherit; text-decoration: inherit;">prefix</a>
@@ -1524,8 +1394,7 @@ The following state arguments are supported:
         <span class="property-type">str</span>
     </dt>
     <dd>{{% md %}}Object prefix for filtering.
-{{% /md %}}</dd>
-</dl>
+{{% /md %}}</dd></dl>
 {{% /choosable %}}
 ## Import
 
@@ -1546,6 +1415,6 @@ S3 bucket analytics configurations can be imported using `bucket:analytics`, e.g
 	<dt>License</dt>
 	<dd>Apache-2.0</dd>
 	<dt>Notes</dt>
-	<dd>This Pulumi package is based on the [`aws` Terraform Provider](https://github.com/terraform-providers/terraform-provider-aws).</dd>
+	<dd>{{% md %}}This Pulumi package is based on the [`aws` Terraform Provider](https://github.com/terraform-providers/terraform-provider-aws).{{% /md %}}</dd>
 </dl>
 

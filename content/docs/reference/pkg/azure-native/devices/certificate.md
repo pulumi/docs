@@ -14,11 +14,17 @@ The X509 Certificate.
 API Version: 2020-08-31.
 
 {{% examples %}}
+
 ## Example Usage
 
 {{< chooser language "typescript,python,go,csharp" / >}}
+
+
 ### Certificates_CreateOrUpdate
-{{% example csharp %}}
+
+
+{{< example csharp >}}
+
 ```csharp
 using Pulumi;
 using AzureNative = Pulumi.AzureNative;
@@ -43,9 +49,12 @@ class MyStack : Stack
 
 ```
 
-{{% /example %}}
 
-{{% example go %}}
+{{< /example >}}
+
+
+{{< example go >}}
+
 
 ```go
 package main
@@ -74,9 +83,12 @@ func main() {
 
 ```
 
-{{% /example %}}
 
-{{% example python %}}
+{{< /example >}}
+
+
+{{< example python >}}
+
 
 ```python
 import pulumi
@@ -92,9 +104,12 @@ certificate = azure_native.devices.Certificate("certificate",
 
 ```
 
-{{% /example %}}
 
-{{% example typescript %}}
+{{< /example >}}
+
+
+{{< example typescript >}}
+
 
 ```typescript
 import * as pulumi from "@pulumi/pulumi";
@@ -111,9 +126,16 @@ const certificate = new azure_native.devices.Certificate("certificate", {
 
 ```
 
-{{% /example %}}
+
+{{< /example >}}
+
+
+
+
 
 {{% /examples %}}
+
+
 
 
 ## Create a Certificate Resource {#create}
@@ -138,9 +160,7 @@ const certificate = new azure_native.devices.Certificate("certificate", {
 
 {{% choosable language nodejs %}}
 
-<dl class="resources-properties">
-  
-    <dt
+<dl class="resources-properties"><dt
         class="property-required" title="Required">
         <span>name</span>
         <span class="property-indicator"></span>
@@ -148,9 +168,7 @@ const certificate = new azure_native.devices.Certificate("certificate", {
     </dt>
     <dd>
       The unique name of the resource.
-    </dd>
-  
-    <dt
+    </dd><dt
         class="property-required" title="Required">
         <span>args</span>
         <span class="property-indicator"></span>
@@ -158,9 +176,7 @@ const certificate = new azure_native.devices.Certificate("certificate", {
     </dt>
     <dd>
       The arguments to resource properties.
-    </dd>
-  
-    <dt
+    </dd><dt
         class="property-optional" title="Optional">
         <span>opts</span>
         <span class="property-indicator"></span>
@@ -168,10 +184,7 @@ const certificate = new azure_native.devices.Certificate("certificate", {
     </dt>
     <dd>
       Bag of options to control resource&#39;s behavior.
-    </dd>
-  
-
-</dl>
+    </dd></dl>
 
 {{% /choosable %}}
 
@@ -197,9 +210,7 @@ const certificate = new azure_native.devices.Certificate("certificate", {
 
 {{% choosable language go %}}
 
-<dl class="resources-properties">
-  
-    <dt
+<dl class="resources-properties"><dt
         class="property-optional" title="Optional">
         <span>ctx</span>
         <span class="property-indicator"></span>
@@ -207,9 +218,7 @@ const certificate = new azure_native.devices.Certificate("certificate", {
     </dt>
     <dd>
       Context object for the current deployment.
-    </dd>
-  
-    <dt
+    </dd><dt
         class="property-required" title="Required">
         <span>name</span>
         <span class="property-indicator"></span>
@@ -217,9 +226,7 @@ const certificate = new azure_native.devices.Certificate("certificate", {
     </dt>
     <dd>
       The unique name of the resource.
-    </dd>
-  
-    <dt
+    </dd><dt
         class="property-required" title="Required">
         <span>args</span>
         <span class="property-indicator"></span>
@@ -227,9 +234,7 @@ const certificate = new azure_native.devices.Certificate("certificate", {
     </dt>
     <dd>
       The arguments to resource properties.
-    </dd>
-  
-    <dt
+    </dd><dt
         class="property-optional" title="Optional">
         <span>opts</span>
         <span class="property-indicator"></span>
@@ -237,18 +242,13 @@ const certificate = new azure_native.devices.Certificate("certificate", {
     </dt>
     <dd>
       Bag of options to control resource&#39;s behavior.
-    </dd>
-  
-
-</dl>
+    </dd></dl>
 
 {{% /choosable %}}
 
 {{% choosable language csharp %}}
 
-<dl class="resources-properties">
-  
-    <dt
+<dl class="resources-properties"><dt
         class="property-required" title="Required">
         <span>name</span>
         <span class="property-indicator"></span>
@@ -256,9 +256,7 @@ const certificate = new azure_native.devices.Certificate("certificate", {
     </dt>
     <dd>
       The unique name of the resource.
-    </dd>
-  
-    <dt
+    </dd><dt
         class="property-required" title="Required">
         <span>args</span>
         <span class="property-indicator"></span>
@@ -266,9 +264,7 @@ const certificate = new azure_native.devices.Certificate("certificate", {
     </dt>
     <dd>
       The arguments to resource properties.
-    </dd>
-  
-    <dt
+    </dd><dt
         class="property-optional" title="Optional">
         <span>opts</span>
         <span class="property-indicator"></span>
@@ -276,10 +272,7 @@ const certificate = new azure_native.devices.Certificate("certificate", {
     </dt>
     <dd>
       Bag of options to control resource&#39;s behavior.
-    </dd>
-  
-
-</dl>
+    </dd></dl>
 
 {{% /choosable %}}
 
@@ -294,9 +287,7 @@ The Certificate resource accepts the following [input]({{< relref "/docs/intro/c
 
 
 {{% choosable language csharp %}}
-<dl class="resources-properties">
-
-    <dt class="property-required"
+<dl class="resources-properties"><dt class="property-required"
             title="Required">
         <span id="resourcegroupname_csharp">
 <a href="#resourcegroupname_csharp" style="color: inherit; text-decoration: inherit;">Resource<wbr>Group<wbr>Name</a>
@@ -304,8 +295,7 @@ The Certificate resource accepts the following [input]({{< relref "/docs/intro/c
         <span class="property-indicator"></span>
         <span class="property-type">string</span>
     </dt>
-    <dd>{{% md %}}The name of the resource group that contains the IoT hub.{{% /md %}}</dd>
-    <dt class="property-required"
+    <dd>{{% md %}}The name of the resource group that contains the IoT hub.{{% /md %}}</dd><dt class="property-required"
             title="Required">
         <span id="resourcename_csharp">
 <a href="#resourcename_csharp" style="color: inherit; text-decoration: inherit;">Resource<wbr>Name</a>
@@ -313,8 +303,7 @@ The Certificate resource accepts the following [input]({{< relref "/docs/intro/c
         <span class="property-indicator"></span>
         <span class="property-type">string</span>
     </dt>
-    <dd>{{% md %}}The name of the IoT hub.{{% /md %}}</dd>
-    <dt class="property-optional"
+    <dd>{{% md %}}The name of the IoT hub.{{% /md %}}</dd><dt class="property-optional"
             title="Optional">
         <span id="certificatename_csharp">
 <a href="#certificatename_csharp" style="color: inherit; text-decoration: inherit;">Certificate<wbr>Name</a>
@@ -322,8 +311,7 @@ The Certificate resource accepts the following [input]({{< relref "/docs/intro/c
         <span class="property-indicator"></span>
         <span class="property-type">string</span>
     </dt>
-    <dd>{{% md %}}The name of the certificate{{% /md %}}</dd>
-    <dt class="property-optional"
+    <dd>{{% md %}}The name of the certificate{{% /md %}}</dd><dt class="property-optional"
             title="Optional">
         <span id="properties_csharp">
 <a href="#properties_csharp" style="color: inherit; text-decoration: inherit;">Properties</a>
@@ -331,14 +319,11 @@ The Certificate resource accepts the following [input]({{< relref "/docs/intro/c
         <span class="property-indicator"></span>
         <span class="property-type"><a href="#certificateproperties">Pulumi.<wbr>Azure<wbr>Native.<wbr>Devices.<wbr>Inputs.<wbr>Certificate<wbr>Properties<wbr>Args</a></span>
     </dt>
-    <dd>{{% md %}}The description of an X509 CA Certificate.{{% /md %}}</dd>
-</dl>
+    <dd>{{% md %}}The description of an X509 CA Certificate.{{% /md %}}</dd></dl>
 {{% /choosable %}}
 
 {{% choosable language go %}}
-<dl class="resources-properties">
-
-    <dt class="property-required"
+<dl class="resources-properties"><dt class="property-required"
             title="Required">
         <span id="resourcegroupname_go">
 <a href="#resourcegroupname_go" style="color: inherit; text-decoration: inherit;">Resource<wbr>Group<wbr>Name</a>
@@ -346,8 +331,7 @@ The Certificate resource accepts the following [input]({{< relref "/docs/intro/c
         <span class="property-indicator"></span>
         <span class="property-type">string</span>
     </dt>
-    <dd>{{% md %}}The name of the resource group that contains the IoT hub.{{% /md %}}</dd>
-    <dt class="property-required"
+    <dd>{{% md %}}The name of the resource group that contains the IoT hub.{{% /md %}}</dd><dt class="property-required"
             title="Required">
         <span id="resourcename_go">
 <a href="#resourcename_go" style="color: inherit; text-decoration: inherit;">Resource<wbr>Name</a>
@@ -355,8 +339,7 @@ The Certificate resource accepts the following [input]({{< relref "/docs/intro/c
         <span class="property-indicator"></span>
         <span class="property-type">string</span>
     </dt>
-    <dd>{{% md %}}The name of the IoT hub.{{% /md %}}</dd>
-    <dt class="property-optional"
+    <dd>{{% md %}}The name of the IoT hub.{{% /md %}}</dd><dt class="property-optional"
             title="Optional">
         <span id="certificatename_go">
 <a href="#certificatename_go" style="color: inherit; text-decoration: inherit;">Certificate<wbr>Name</a>
@@ -364,8 +347,7 @@ The Certificate resource accepts the following [input]({{< relref "/docs/intro/c
         <span class="property-indicator"></span>
         <span class="property-type">string</span>
     </dt>
-    <dd>{{% md %}}The name of the certificate{{% /md %}}</dd>
-    <dt class="property-optional"
+    <dd>{{% md %}}The name of the certificate{{% /md %}}</dd><dt class="property-optional"
             title="Optional">
         <span id="properties_go">
 <a href="#properties_go" style="color: inherit; text-decoration: inherit;">Properties</a>
@@ -373,14 +355,11 @@ The Certificate resource accepts the following [input]({{< relref "/docs/intro/c
         <span class="property-indicator"></span>
         <span class="property-type"><a href="#certificateproperties">Certificate<wbr>Properties</a></span>
     </dt>
-    <dd>{{% md %}}The description of an X509 CA Certificate.{{% /md %}}</dd>
-</dl>
+    <dd>{{% md %}}The description of an X509 CA Certificate.{{% /md %}}</dd></dl>
 {{% /choosable %}}
 
 {{% choosable language nodejs %}}
-<dl class="resources-properties">
-
-    <dt class="property-required"
+<dl class="resources-properties"><dt class="property-required"
             title="Required">
         <span id="resourcegroupname_nodejs">
 <a href="#resourcegroupname_nodejs" style="color: inherit; text-decoration: inherit;">resource<wbr>Group<wbr>Name</a>
@@ -388,8 +367,7 @@ The Certificate resource accepts the following [input]({{< relref "/docs/intro/c
         <span class="property-indicator"></span>
         <span class="property-type">string</span>
     </dt>
-    <dd>{{% md %}}The name of the resource group that contains the IoT hub.{{% /md %}}</dd>
-    <dt class="property-required"
+    <dd>{{% md %}}The name of the resource group that contains the IoT hub.{{% /md %}}</dd><dt class="property-required"
             title="Required">
         <span id="resourcename_nodejs">
 <a href="#resourcename_nodejs" style="color: inherit; text-decoration: inherit;">resource<wbr>Name</a>
@@ -397,8 +375,7 @@ The Certificate resource accepts the following [input]({{< relref "/docs/intro/c
         <span class="property-indicator"></span>
         <span class="property-type">string</span>
     </dt>
-    <dd>{{% md %}}The name of the IoT hub.{{% /md %}}</dd>
-    <dt class="property-optional"
+    <dd>{{% md %}}The name of the IoT hub.{{% /md %}}</dd><dt class="property-optional"
             title="Optional">
         <span id="certificatename_nodejs">
 <a href="#certificatename_nodejs" style="color: inherit; text-decoration: inherit;">certificate<wbr>Name</a>
@@ -406,8 +383,7 @@ The Certificate resource accepts the following [input]({{< relref "/docs/intro/c
         <span class="property-indicator"></span>
         <span class="property-type">string</span>
     </dt>
-    <dd>{{% md %}}The name of the certificate{{% /md %}}</dd>
-    <dt class="property-optional"
+    <dd>{{% md %}}The name of the certificate{{% /md %}}</dd><dt class="property-optional"
             title="Optional">
         <span id="properties_nodejs">
 <a href="#properties_nodejs" style="color: inherit; text-decoration: inherit;">properties</a>
@@ -415,14 +391,11 @@ The Certificate resource accepts the following [input]({{< relref "/docs/intro/c
         <span class="property-indicator"></span>
         <span class="property-type"><a href="#certificateproperties">Certificate<wbr>Properties</a></span>
     </dt>
-    <dd>{{% md %}}The description of an X509 CA Certificate.{{% /md %}}</dd>
-</dl>
+    <dd>{{% md %}}The description of an X509 CA Certificate.{{% /md %}}</dd></dl>
 {{% /choosable %}}
 
 {{% choosable language python %}}
-<dl class="resources-properties">
-
-    <dt class="property-required"
+<dl class="resources-properties"><dt class="property-required"
             title="Required">
         <span id="resource_group_name_python">
 <a href="#resource_group_name_python" style="color: inherit; text-decoration: inherit;">resource_<wbr>group_<wbr>name</a>
@@ -430,8 +403,7 @@ The Certificate resource accepts the following [input]({{< relref "/docs/intro/c
         <span class="property-indicator"></span>
         <span class="property-type">str</span>
     </dt>
-    <dd>{{% md %}}The name of the resource group that contains the IoT hub.{{% /md %}}</dd>
-    <dt class="property-required"
+    <dd>{{% md %}}The name of the resource group that contains the IoT hub.{{% /md %}}</dd><dt class="property-required"
             title="Required">
         <span id="resource_name_python">
 <a href="#resource_name_python" style="color: inherit; text-decoration: inherit;">resource_<wbr>name</a>
@@ -439,8 +411,7 @@ The Certificate resource accepts the following [input]({{< relref "/docs/intro/c
         <span class="property-indicator"></span>
         <span class="property-type">str</span>
     </dt>
-    <dd>{{% md %}}The name of the IoT hub.{{% /md %}}</dd>
-    <dt class="property-optional"
+    <dd>{{% md %}}The name of the IoT hub.{{% /md %}}</dd><dt class="property-optional"
             title="Optional">
         <span id="certificate_name_python">
 <a href="#certificate_name_python" style="color: inherit; text-decoration: inherit;">certificate_<wbr>name</a>
@@ -448,8 +419,7 @@ The Certificate resource accepts the following [input]({{< relref "/docs/intro/c
         <span class="property-indicator"></span>
         <span class="property-type">str</span>
     </dt>
-    <dd>{{% md %}}The name of the certificate{{% /md %}}</dd>
-    <dt class="property-optional"
+    <dd>{{% md %}}The name of the certificate{{% /md %}}</dd><dt class="property-optional"
             title="Optional">
         <span id="properties_python">
 <a href="#properties_python" style="color: inherit; text-decoration: inherit;">properties</a>
@@ -457,8 +427,7 @@ The Certificate resource accepts the following [input]({{< relref "/docs/intro/c
         <span class="property-indicator"></span>
         <span class="property-type"><a href="#certificateproperties">Certificate<wbr>Properties<wbr>Args</a></span>
     </dt>
-    <dd>{{% md %}}The description of an X509 CA Certificate.{{% /md %}}</dd>
-</dl>
+    <dd>{{% md %}}The description of an X509 CA Certificate.{{% /md %}}</dd></dl>
 {{% /choosable %}}
 
 
@@ -469,9 +438,7 @@ All [input](#inputs) properties are implicitly available as output properties. A
 
 
 {{% choosable language csharp %}}
-<dl class="resources-properties">
-
-    <dt class="property-"
+<dl class="resources-properties"><dt class="property-"
             title="">
         <span id="etag_csharp">
 <a href="#etag_csharp" style="color: inherit; text-decoration: inherit;">Etag</a>
@@ -479,8 +446,7 @@ All [input](#inputs) properties are implicitly available as output properties. A
         <span class="property-indicator"></span>
         <span class="property-type">string</span>
     </dt>
-    <dd>{{% md %}}The entity tag.{{% /md %}}</dd>
-    <dt class="property-"
+    <dd>{{% md %}}The entity tag.{{% /md %}}</dd><dt class="property-"
             title="">
         <span id="id_csharp">
 <a href="#id_csharp" style="color: inherit; text-decoration: inherit;">Id</a>
@@ -488,8 +454,7 @@ All [input](#inputs) properties are implicitly available as output properties. A
         <span class="property-indicator"></span>
         <span class="property-type">string</span>
     </dt>
-    <dd>{{% md %}}The provider-assigned unique ID for this managed resource.{{% /md %}}</dd>
-    <dt class="property-"
+    <dd>{{% md %}}The provider-assigned unique ID for this managed resource.{{% /md %}}</dd><dt class="property-"
             title="">
         <span id="name_csharp">
 <a href="#name_csharp" style="color: inherit; text-decoration: inherit;">Name</a>
@@ -497,8 +462,7 @@ All [input](#inputs) properties are implicitly available as output properties. A
         <span class="property-indicator"></span>
         <span class="property-type">string</span>
     </dt>
-    <dd>{{% md %}}The name of the certificate.{{% /md %}}</dd>
-    <dt class="property-"
+    <dd>{{% md %}}The name of the certificate.{{% /md %}}</dd><dt class="property-"
             title="">
         <span id="type_csharp">
 <a href="#type_csharp" style="color: inherit; text-decoration: inherit;">Type</a>
@@ -506,14 +470,11 @@ All [input](#inputs) properties are implicitly available as output properties. A
         <span class="property-indicator"></span>
         <span class="property-type">string</span>
     </dt>
-    <dd>{{% md %}}The resource type.{{% /md %}}</dd>
-</dl>
+    <dd>{{% md %}}The resource type.{{% /md %}}</dd></dl>
 {{% /choosable %}}
 
 {{% choosable language go %}}
-<dl class="resources-properties">
-
-    <dt class="property-"
+<dl class="resources-properties"><dt class="property-"
             title="">
         <span id="etag_go">
 <a href="#etag_go" style="color: inherit; text-decoration: inherit;">Etag</a>
@@ -521,8 +482,7 @@ All [input](#inputs) properties are implicitly available as output properties. A
         <span class="property-indicator"></span>
         <span class="property-type">string</span>
     </dt>
-    <dd>{{% md %}}The entity tag.{{% /md %}}</dd>
-    <dt class="property-"
+    <dd>{{% md %}}The entity tag.{{% /md %}}</dd><dt class="property-"
             title="">
         <span id="id_go">
 <a href="#id_go" style="color: inherit; text-decoration: inherit;">Id</a>
@@ -530,8 +490,7 @@ All [input](#inputs) properties are implicitly available as output properties. A
         <span class="property-indicator"></span>
         <span class="property-type">string</span>
     </dt>
-    <dd>{{% md %}}The provider-assigned unique ID for this managed resource.{{% /md %}}</dd>
-    <dt class="property-"
+    <dd>{{% md %}}The provider-assigned unique ID for this managed resource.{{% /md %}}</dd><dt class="property-"
             title="">
         <span id="name_go">
 <a href="#name_go" style="color: inherit; text-decoration: inherit;">Name</a>
@@ -539,8 +498,7 @@ All [input](#inputs) properties are implicitly available as output properties. A
         <span class="property-indicator"></span>
         <span class="property-type">string</span>
     </dt>
-    <dd>{{% md %}}The name of the certificate.{{% /md %}}</dd>
-    <dt class="property-"
+    <dd>{{% md %}}The name of the certificate.{{% /md %}}</dd><dt class="property-"
             title="">
         <span id="type_go">
 <a href="#type_go" style="color: inherit; text-decoration: inherit;">Type</a>
@@ -548,14 +506,11 @@ All [input](#inputs) properties are implicitly available as output properties. A
         <span class="property-indicator"></span>
         <span class="property-type">string</span>
     </dt>
-    <dd>{{% md %}}The resource type.{{% /md %}}</dd>
-</dl>
+    <dd>{{% md %}}The resource type.{{% /md %}}</dd></dl>
 {{% /choosable %}}
 
 {{% choosable language nodejs %}}
-<dl class="resources-properties">
-
-    <dt class="property-"
+<dl class="resources-properties"><dt class="property-"
             title="">
         <span id="etag_nodejs">
 <a href="#etag_nodejs" style="color: inherit; text-decoration: inherit;">etag</a>
@@ -563,8 +518,7 @@ All [input](#inputs) properties are implicitly available as output properties. A
         <span class="property-indicator"></span>
         <span class="property-type">string</span>
     </dt>
-    <dd>{{% md %}}The entity tag.{{% /md %}}</dd>
-    <dt class="property-"
+    <dd>{{% md %}}The entity tag.{{% /md %}}</dd><dt class="property-"
             title="">
         <span id="id_nodejs">
 <a href="#id_nodejs" style="color: inherit; text-decoration: inherit;">id</a>
@@ -572,8 +526,7 @@ All [input](#inputs) properties are implicitly available as output properties. A
         <span class="property-indicator"></span>
         <span class="property-type">string</span>
     </dt>
-    <dd>{{% md %}}The provider-assigned unique ID for this managed resource.{{% /md %}}</dd>
-    <dt class="property-"
+    <dd>{{% md %}}The provider-assigned unique ID for this managed resource.{{% /md %}}</dd><dt class="property-"
             title="">
         <span id="name_nodejs">
 <a href="#name_nodejs" style="color: inherit; text-decoration: inherit;">name</a>
@@ -581,8 +534,7 @@ All [input](#inputs) properties are implicitly available as output properties. A
         <span class="property-indicator"></span>
         <span class="property-type">string</span>
     </dt>
-    <dd>{{% md %}}The name of the certificate.{{% /md %}}</dd>
-    <dt class="property-"
+    <dd>{{% md %}}The name of the certificate.{{% /md %}}</dd><dt class="property-"
             title="">
         <span id="type_nodejs">
 <a href="#type_nodejs" style="color: inherit; text-decoration: inherit;">type</a>
@@ -590,14 +542,11 @@ All [input](#inputs) properties are implicitly available as output properties. A
         <span class="property-indicator"></span>
         <span class="property-type">string</span>
     </dt>
-    <dd>{{% md %}}The resource type.{{% /md %}}</dd>
-</dl>
+    <dd>{{% md %}}The resource type.{{% /md %}}</dd></dl>
 {{% /choosable %}}
 
 {{% choosable language python %}}
-<dl class="resources-properties">
-
-    <dt class="property-"
+<dl class="resources-properties"><dt class="property-"
             title="">
         <span id="etag_python">
 <a href="#etag_python" style="color: inherit; text-decoration: inherit;">etag</a>
@@ -605,8 +554,7 @@ All [input](#inputs) properties are implicitly available as output properties. A
         <span class="property-indicator"></span>
         <span class="property-type">str</span>
     </dt>
-    <dd>{{% md %}}The entity tag.{{% /md %}}</dd>
-    <dt class="property-"
+    <dd>{{% md %}}The entity tag.{{% /md %}}</dd><dt class="property-"
             title="">
         <span id="id_python">
 <a href="#id_python" style="color: inherit; text-decoration: inherit;">id</a>
@@ -614,8 +562,7 @@ All [input](#inputs) properties are implicitly available as output properties. A
         <span class="property-indicator"></span>
         <span class="property-type">str</span>
     </dt>
-    <dd>{{% md %}}The provider-assigned unique ID for this managed resource.{{% /md %}}</dd>
-    <dt class="property-"
+    <dd>{{% md %}}The provider-assigned unique ID for this managed resource.{{% /md %}}</dd><dt class="property-"
             title="">
         <span id="name_python">
 <a href="#name_python" style="color: inherit; text-decoration: inherit;">name</a>
@@ -623,8 +570,7 @@ All [input](#inputs) properties are implicitly available as output properties. A
         <span class="property-indicator"></span>
         <span class="property-type">str</span>
     </dt>
-    <dd>{{% md %}}The name of the certificate.{{% /md %}}</dd>
-    <dt class="property-"
+    <dd>{{% md %}}The name of the certificate.{{% /md %}}</dd><dt class="property-"
             title="">
         <span id="type_python">
 <a href="#type_python" style="color: inherit; text-decoration: inherit;">type</a>
@@ -632,8 +578,7 @@ All [input](#inputs) properties are implicitly available as output properties. A
         <span class="property-indicator"></span>
         <span class="property-type">str</span>
     </dt>
-    <dd>{{% md %}}The resource type.{{% /md %}}</dd>
-</dl>
+    <dd>{{% md %}}The resource type.{{% /md %}}</dd></dl>
 {{% /choosable %}}
 
 
@@ -649,9 +594,7 @@ All [input](#inputs) properties are implicitly available as output properties. A
 <h4 id="certificateproperties">Certificate<wbr>Properties</h4>
 
 {{% choosable language csharp %}}
-<dl class="resources-properties">
-
-    <dt class="property-optional"
+<dl class="resources-properties"><dt class="property-optional"
             title="Optional">
         <span id="certificate_csharp">
 <a href="#certificate_csharp" style="color: inherit; text-decoration: inherit;">Certificate</a>
@@ -659,14 +602,11 @@ All [input](#inputs) properties are implicitly available as output properties. A
         <span class="property-indicator"></span>
         <span class="property-type">string</span>
     </dt>
-    <dd>{{% md %}}The certificate content{{% /md %}}</dd>
-</dl>
+    <dd>{{% md %}}The certificate content{{% /md %}}</dd></dl>
 {{% /choosable %}}
 
 {{% choosable language go %}}
-<dl class="resources-properties">
-
-    <dt class="property-optional"
+<dl class="resources-properties"><dt class="property-optional"
             title="Optional">
         <span id="certificate_go">
 <a href="#certificate_go" style="color: inherit; text-decoration: inherit;">Certificate</a>
@@ -674,14 +614,11 @@ All [input](#inputs) properties are implicitly available as output properties. A
         <span class="property-indicator"></span>
         <span class="property-type">string</span>
     </dt>
-    <dd>{{% md %}}The certificate content{{% /md %}}</dd>
-</dl>
+    <dd>{{% md %}}The certificate content{{% /md %}}</dd></dl>
 {{% /choosable %}}
 
 {{% choosable language nodejs %}}
-<dl class="resources-properties">
-
-    <dt class="property-optional"
+<dl class="resources-properties"><dt class="property-optional"
             title="Optional">
         <span id="certificate_nodejs">
 <a href="#certificate_nodejs" style="color: inherit; text-decoration: inherit;">certificate</a>
@@ -689,14 +626,11 @@ All [input](#inputs) properties are implicitly available as output properties. A
         <span class="property-indicator"></span>
         <span class="property-type">string</span>
     </dt>
-    <dd>{{% md %}}The certificate content{{% /md %}}</dd>
-</dl>
+    <dd>{{% md %}}The certificate content{{% /md %}}</dd></dl>
 {{% /choosable %}}
 
 {{% choosable language python %}}
-<dl class="resources-properties">
-
-    <dt class="property-optional"
+<dl class="resources-properties"><dt class="property-optional"
             title="Optional">
         <span id="certificate_python">
 <a href="#certificate_python" style="color: inherit; text-decoration: inherit;">certificate</a>
@@ -704,16 +638,13 @@ All [input](#inputs) properties are implicitly available as output properties. A
         <span class="property-indicator"></span>
         <span class="property-type">str</span>
     </dt>
-    <dd>{{% md %}}The certificate content{{% /md %}}</dd>
-</dl>
+    <dd>{{% md %}}The certificate content{{% /md %}}</dd></dl>
 {{% /choosable %}}
 
 <h4 id="certificatepropertiesresponse">Certificate<wbr>Properties<wbr>Response</h4>
 
 {{% choosable language csharp %}}
-<dl class="resources-properties">
-
-    <dt class="property-required"
+<dl class="resources-properties"><dt class="property-required"
             title="Required">
         <span id="created_csharp">
 <a href="#created_csharp" style="color: inherit; text-decoration: inherit;">Created</a>
@@ -721,8 +652,7 @@ All [input](#inputs) properties are implicitly available as output properties. A
         <span class="property-indicator"></span>
         <span class="property-type">string</span>
     </dt>
-    <dd>{{% md %}}The certificate's creation date and time.{{% /md %}}</dd>
-    <dt class="property-required"
+    <dd>{{% md %}}The certificate's creation date and time.{{% /md %}}</dd><dt class="property-required"
             title="Required">
         <span id="expiry_csharp">
 <a href="#expiry_csharp" style="color: inherit; text-decoration: inherit;">Expiry</a>
@@ -730,8 +660,7 @@ All [input](#inputs) properties are implicitly available as output properties. A
         <span class="property-indicator"></span>
         <span class="property-type">string</span>
     </dt>
-    <dd>{{% md %}}The certificate's expiration date and time.{{% /md %}}</dd>
-    <dt class="property-required"
+    <dd>{{% md %}}The certificate's expiration date and time.{{% /md %}}</dd><dt class="property-required"
             title="Required">
         <span id="isverified_csharp">
 <a href="#isverified_csharp" style="color: inherit; text-decoration: inherit;">Is<wbr>Verified</a>
@@ -739,8 +668,7 @@ All [input](#inputs) properties are implicitly available as output properties. A
         <span class="property-indicator"></span>
         <span class="property-type">bool</span>
     </dt>
-    <dd>{{% md %}}Determines whether certificate has been verified.{{% /md %}}</dd>
-    <dt class="property-required"
+    <dd>{{% md %}}Determines whether certificate has been verified.{{% /md %}}</dd><dt class="property-required"
             title="Required">
         <span id="subject_csharp">
 <a href="#subject_csharp" style="color: inherit; text-decoration: inherit;">Subject</a>
@@ -748,8 +676,7 @@ All [input](#inputs) properties are implicitly available as output properties. A
         <span class="property-indicator"></span>
         <span class="property-type">string</span>
     </dt>
-    <dd>{{% md %}}The certificate's subject name.{{% /md %}}</dd>
-    <dt class="property-required"
+    <dd>{{% md %}}The certificate's subject name.{{% /md %}}</dd><dt class="property-required"
             title="Required">
         <span id="thumbprint_csharp">
 <a href="#thumbprint_csharp" style="color: inherit; text-decoration: inherit;">Thumbprint</a>
@@ -757,8 +684,7 @@ All [input](#inputs) properties are implicitly available as output properties. A
         <span class="property-indicator"></span>
         <span class="property-type">string</span>
     </dt>
-    <dd>{{% md %}}The certificate's thumbprint.{{% /md %}}</dd>
-    <dt class="property-required"
+    <dd>{{% md %}}The certificate's thumbprint.{{% /md %}}</dd><dt class="property-required"
             title="Required">
         <span id="updated_csharp">
 <a href="#updated_csharp" style="color: inherit; text-decoration: inherit;">Updated</a>
@@ -766,14 +692,11 @@ All [input](#inputs) properties are implicitly available as output properties. A
         <span class="property-indicator"></span>
         <span class="property-type">string</span>
     </dt>
-    <dd>{{% md %}}The certificate's last update date and time.{{% /md %}}</dd>
-</dl>
+    <dd>{{% md %}}The certificate's last update date and time.{{% /md %}}</dd></dl>
 {{% /choosable %}}
 
 {{% choosable language go %}}
-<dl class="resources-properties">
-
-    <dt class="property-required"
+<dl class="resources-properties"><dt class="property-required"
             title="Required">
         <span id="created_go">
 <a href="#created_go" style="color: inherit; text-decoration: inherit;">Created</a>
@@ -781,8 +704,7 @@ All [input](#inputs) properties are implicitly available as output properties. A
         <span class="property-indicator"></span>
         <span class="property-type">string</span>
     </dt>
-    <dd>{{% md %}}The certificate's creation date and time.{{% /md %}}</dd>
-    <dt class="property-required"
+    <dd>{{% md %}}The certificate's creation date and time.{{% /md %}}</dd><dt class="property-required"
             title="Required">
         <span id="expiry_go">
 <a href="#expiry_go" style="color: inherit; text-decoration: inherit;">Expiry</a>
@@ -790,8 +712,7 @@ All [input](#inputs) properties are implicitly available as output properties. A
         <span class="property-indicator"></span>
         <span class="property-type">string</span>
     </dt>
-    <dd>{{% md %}}The certificate's expiration date and time.{{% /md %}}</dd>
-    <dt class="property-required"
+    <dd>{{% md %}}The certificate's expiration date and time.{{% /md %}}</dd><dt class="property-required"
             title="Required">
         <span id="isverified_go">
 <a href="#isverified_go" style="color: inherit; text-decoration: inherit;">Is<wbr>Verified</a>
@@ -799,8 +720,7 @@ All [input](#inputs) properties are implicitly available as output properties. A
         <span class="property-indicator"></span>
         <span class="property-type">bool</span>
     </dt>
-    <dd>{{% md %}}Determines whether certificate has been verified.{{% /md %}}</dd>
-    <dt class="property-required"
+    <dd>{{% md %}}Determines whether certificate has been verified.{{% /md %}}</dd><dt class="property-required"
             title="Required">
         <span id="subject_go">
 <a href="#subject_go" style="color: inherit; text-decoration: inherit;">Subject</a>
@@ -808,8 +728,7 @@ All [input](#inputs) properties are implicitly available as output properties. A
         <span class="property-indicator"></span>
         <span class="property-type">string</span>
     </dt>
-    <dd>{{% md %}}The certificate's subject name.{{% /md %}}</dd>
-    <dt class="property-required"
+    <dd>{{% md %}}The certificate's subject name.{{% /md %}}</dd><dt class="property-required"
             title="Required">
         <span id="thumbprint_go">
 <a href="#thumbprint_go" style="color: inherit; text-decoration: inherit;">Thumbprint</a>
@@ -817,8 +736,7 @@ All [input](#inputs) properties are implicitly available as output properties. A
         <span class="property-indicator"></span>
         <span class="property-type">string</span>
     </dt>
-    <dd>{{% md %}}The certificate's thumbprint.{{% /md %}}</dd>
-    <dt class="property-required"
+    <dd>{{% md %}}The certificate's thumbprint.{{% /md %}}</dd><dt class="property-required"
             title="Required">
         <span id="updated_go">
 <a href="#updated_go" style="color: inherit; text-decoration: inherit;">Updated</a>
@@ -826,14 +744,11 @@ All [input](#inputs) properties are implicitly available as output properties. A
         <span class="property-indicator"></span>
         <span class="property-type">string</span>
     </dt>
-    <dd>{{% md %}}The certificate's last update date and time.{{% /md %}}</dd>
-</dl>
+    <dd>{{% md %}}The certificate's last update date and time.{{% /md %}}</dd></dl>
 {{% /choosable %}}
 
 {{% choosable language nodejs %}}
-<dl class="resources-properties">
-
-    <dt class="property-required"
+<dl class="resources-properties"><dt class="property-required"
             title="Required">
         <span id="created_nodejs">
 <a href="#created_nodejs" style="color: inherit; text-decoration: inherit;">created</a>
@@ -841,8 +756,7 @@ All [input](#inputs) properties are implicitly available as output properties. A
         <span class="property-indicator"></span>
         <span class="property-type">string</span>
     </dt>
-    <dd>{{% md %}}The certificate's creation date and time.{{% /md %}}</dd>
-    <dt class="property-required"
+    <dd>{{% md %}}The certificate's creation date and time.{{% /md %}}</dd><dt class="property-required"
             title="Required">
         <span id="expiry_nodejs">
 <a href="#expiry_nodejs" style="color: inherit; text-decoration: inherit;">expiry</a>
@@ -850,8 +764,7 @@ All [input](#inputs) properties are implicitly available as output properties. A
         <span class="property-indicator"></span>
         <span class="property-type">string</span>
     </dt>
-    <dd>{{% md %}}The certificate's expiration date and time.{{% /md %}}</dd>
-    <dt class="property-required"
+    <dd>{{% md %}}The certificate's expiration date and time.{{% /md %}}</dd><dt class="property-required"
             title="Required">
         <span id="isverified_nodejs">
 <a href="#isverified_nodejs" style="color: inherit; text-decoration: inherit;">is<wbr>Verified</a>
@@ -859,8 +772,7 @@ All [input](#inputs) properties are implicitly available as output properties. A
         <span class="property-indicator"></span>
         <span class="property-type">boolean</span>
     </dt>
-    <dd>{{% md %}}Determines whether certificate has been verified.{{% /md %}}</dd>
-    <dt class="property-required"
+    <dd>{{% md %}}Determines whether certificate has been verified.{{% /md %}}</dd><dt class="property-required"
             title="Required">
         <span id="subject_nodejs">
 <a href="#subject_nodejs" style="color: inherit; text-decoration: inherit;">subject</a>
@@ -868,8 +780,7 @@ All [input](#inputs) properties are implicitly available as output properties. A
         <span class="property-indicator"></span>
         <span class="property-type">string</span>
     </dt>
-    <dd>{{% md %}}The certificate's subject name.{{% /md %}}</dd>
-    <dt class="property-required"
+    <dd>{{% md %}}The certificate's subject name.{{% /md %}}</dd><dt class="property-required"
             title="Required">
         <span id="thumbprint_nodejs">
 <a href="#thumbprint_nodejs" style="color: inherit; text-decoration: inherit;">thumbprint</a>
@@ -877,8 +788,7 @@ All [input](#inputs) properties are implicitly available as output properties. A
         <span class="property-indicator"></span>
         <span class="property-type">string</span>
     </dt>
-    <dd>{{% md %}}The certificate's thumbprint.{{% /md %}}</dd>
-    <dt class="property-required"
+    <dd>{{% md %}}The certificate's thumbprint.{{% /md %}}</dd><dt class="property-required"
             title="Required">
         <span id="updated_nodejs">
 <a href="#updated_nodejs" style="color: inherit; text-decoration: inherit;">updated</a>
@@ -886,14 +796,11 @@ All [input](#inputs) properties are implicitly available as output properties. A
         <span class="property-indicator"></span>
         <span class="property-type">string</span>
     </dt>
-    <dd>{{% md %}}The certificate's last update date and time.{{% /md %}}</dd>
-</dl>
+    <dd>{{% md %}}The certificate's last update date and time.{{% /md %}}</dd></dl>
 {{% /choosable %}}
 
 {{% choosable language python %}}
-<dl class="resources-properties">
-
-    <dt class="property-required"
+<dl class="resources-properties"><dt class="property-required"
             title="Required">
         <span id="created_python">
 <a href="#created_python" style="color: inherit; text-decoration: inherit;">created</a>
@@ -901,8 +808,7 @@ All [input](#inputs) properties are implicitly available as output properties. A
         <span class="property-indicator"></span>
         <span class="property-type">str</span>
     </dt>
-    <dd>{{% md %}}The certificate's creation date and time.{{% /md %}}</dd>
-    <dt class="property-required"
+    <dd>{{% md %}}The certificate's creation date and time.{{% /md %}}</dd><dt class="property-required"
             title="Required">
         <span id="expiry_python">
 <a href="#expiry_python" style="color: inherit; text-decoration: inherit;">expiry</a>
@@ -910,8 +816,7 @@ All [input](#inputs) properties are implicitly available as output properties. A
         <span class="property-indicator"></span>
         <span class="property-type">str</span>
     </dt>
-    <dd>{{% md %}}The certificate's expiration date and time.{{% /md %}}</dd>
-    <dt class="property-required"
+    <dd>{{% md %}}The certificate's expiration date and time.{{% /md %}}</dd><dt class="property-required"
             title="Required">
         <span id="is_verified_python">
 <a href="#is_verified_python" style="color: inherit; text-decoration: inherit;">is_<wbr>verified</a>
@@ -919,8 +824,7 @@ All [input](#inputs) properties are implicitly available as output properties. A
         <span class="property-indicator"></span>
         <span class="property-type">bool</span>
     </dt>
-    <dd>{{% md %}}Determines whether certificate has been verified.{{% /md %}}</dd>
-    <dt class="property-required"
+    <dd>{{% md %}}Determines whether certificate has been verified.{{% /md %}}</dd><dt class="property-required"
             title="Required">
         <span id="subject_python">
 <a href="#subject_python" style="color: inherit; text-decoration: inherit;">subject</a>
@@ -928,8 +832,7 @@ All [input](#inputs) properties are implicitly available as output properties. A
         <span class="property-indicator"></span>
         <span class="property-type">str</span>
     </dt>
-    <dd>{{% md %}}The certificate's subject name.{{% /md %}}</dd>
-    <dt class="property-required"
+    <dd>{{% md %}}The certificate's subject name.{{% /md %}}</dd><dt class="property-required"
             title="Required">
         <span id="thumbprint_python">
 <a href="#thumbprint_python" style="color: inherit; text-decoration: inherit;">thumbprint</a>
@@ -937,8 +840,7 @@ All [input](#inputs) properties are implicitly available as output properties. A
         <span class="property-indicator"></span>
         <span class="property-type">str</span>
     </dt>
-    <dd>{{% md %}}The certificate's thumbprint.{{% /md %}}</dd>
-    <dt class="property-required"
+    <dd>{{% md %}}The certificate's thumbprint.{{% /md %}}</dd><dt class="property-required"
             title="Required">
         <span id="updated_python">
 <a href="#updated_python" style="color: inherit; text-decoration: inherit;">updated</a>
@@ -946,8 +848,7 @@ All [input](#inputs) properties are implicitly available as output properties. A
         <span class="property-indicator"></span>
         <span class="property-type">str</span>
     </dt>
-    <dd>{{% md %}}The certificate's last update date and time.{{% /md %}}</dd>
-</dl>
+    <dd>{{% md %}}The certificate's last update date and time.{{% /md %}}</dd></dl>
 {{% /choosable %}}
 ## Import
 

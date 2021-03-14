@@ -43,9 +43,7 @@ RabbitMQ secret backend roles can be imported using the `path`, e.g.
 
 {{% choosable language nodejs %}}
 
-<dl class="resources-properties">
-  
-    <dt
+<dl class="resources-properties"><dt
         class="property-required" title="Required">
         <span>name</span>
         <span class="property-indicator"></span>
@@ -53,9 +51,7 @@ RabbitMQ secret backend roles can be imported using the `path`, e.g.
     </dt>
     <dd>
       The unique name of the resource.
-    </dd>
-  
-    <dt
+    </dd><dt
         class="property-required" title="Required">
         <span>args</span>
         <span class="property-indicator"></span>
@@ -63,9 +59,7 @@ RabbitMQ secret backend roles can be imported using the `path`, e.g.
     </dt>
     <dd>
       The arguments to resource properties.
-    </dd>
-  
-    <dt
+    </dd><dt
         class="property-optional" title="Optional">
         <span>opts</span>
         <span class="property-indicator"></span>
@@ -73,10 +67,7 @@ RabbitMQ secret backend roles can be imported using the `path`, e.g.
     </dt>
     <dd>
       Bag of options to control resource&#39;s behavior.
-    </dd>
-  
-
-</dl>
+    </dd></dl>
 
 {{% /choosable %}}
 
@@ -102,9 +93,7 @@ RabbitMQ secret backend roles can be imported using the `path`, e.g.
 
 {{% choosable language go %}}
 
-<dl class="resources-properties">
-  
-    <dt
+<dl class="resources-properties"><dt
         class="property-optional" title="Optional">
         <span>ctx</span>
         <span class="property-indicator"></span>
@@ -112,9 +101,7 @@ RabbitMQ secret backend roles can be imported using the `path`, e.g.
     </dt>
     <dd>
       Context object for the current deployment.
-    </dd>
-  
-    <dt
+    </dd><dt
         class="property-required" title="Required">
         <span>name</span>
         <span class="property-indicator"></span>
@@ -122,9 +109,7 @@ RabbitMQ secret backend roles can be imported using the `path`, e.g.
     </dt>
     <dd>
       The unique name of the resource.
-    </dd>
-  
-    <dt
+    </dd><dt
         class="property-required" title="Required">
         <span>args</span>
         <span class="property-indicator"></span>
@@ -132,9 +117,7 @@ RabbitMQ secret backend roles can be imported using the `path`, e.g.
     </dt>
     <dd>
       The arguments to resource properties.
-    </dd>
-  
-    <dt
+    </dd><dt
         class="property-optional" title="Optional">
         <span>opts</span>
         <span class="property-indicator"></span>
@@ -142,18 +125,13 @@ RabbitMQ secret backend roles can be imported using the `path`, e.g.
     </dt>
     <dd>
       Bag of options to control resource&#39;s behavior.
-    </dd>
-  
-
-</dl>
+    </dd></dl>
 
 {{% /choosable %}}
 
 {{% choosable language csharp %}}
 
-<dl class="resources-properties">
-  
-    <dt
+<dl class="resources-properties"><dt
         class="property-required" title="Required">
         <span>name</span>
         <span class="property-indicator"></span>
@@ -161,9 +139,7 @@ RabbitMQ secret backend roles can be imported using the `path`, e.g.
     </dt>
     <dd>
       The unique name of the resource.
-    </dd>
-  
-    <dt
+    </dd><dt
         class="property-required" title="Required">
         <span>args</span>
         <span class="property-indicator"></span>
@@ -171,9 +147,7 @@ RabbitMQ secret backend roles can be imported using the `path`, e.g.
     </dt>
     <dd>
       The arguments to resource properties.
-    </dd>
-  
-    <dt
+    </dd><dt
         class="property-optional" title="Optional">
         <span>opts</span>
         <span class="property-indicator"></span>
@@ -181,10 +155,7 @@ RabbitMQ secret backend roles can be imported using the `path`, e.g.
     </dt>
     <dd>
       Bag of options to control resource&#39;s behavior.
-    </dd>
-  
-
-</dl>
+    </dd></dl>
 
 {{% /choosable %}}
 
@@ -199,9 +170,7 @@ The SecretBackendRole resource accepts the following [input]({{< relref "/docs/i
 
 
 {{% choosable language csharp %}}
-<dl class="resources-properties">
-
-    <dt class="property-required"
+<dl class="resources-properties"><dt class="property-required"
             title="Required">
         <span id="backend_csharp">
 <a href="#backend_csharp" style="color: inherit; text-decoration: inherit;">Backend</a>
@@ -211,8 +180,7 @@ The SecretBackendRole resource accepts the following [input]({{< relref "/docs/i
     </dt>
     <dd>{{% md %}}The path the RabbitMQ secret backend is mounted at,
 with no leading or trailing `/`s.
-{{% /md %}}</dd>
-    <dt class="property-optional"
+{{% /md %}}</dd><dt class="property-optional"
             title="Optional">
         <span id="name_csharp">
 <a href="#name_csharp" style="color: inherit; text-decoration: inherit;">Name</a>
@@ -222,8 +190,7 @@ with no leading or trailing `/`s.
     </dt>
     <dd>{{% md %}}The name to identify this role within the backend.
 Must be unique within the backend.
-{{% /md %}}</dd>
-    <dt class="property-optional"
+{{% /md %}}</dd><dt class="property-optional"
             title="Optional">
         <span id="tags_csharp">
 <a href="#tags_csharp" style="color: inherit; text-decoration: inherit;">Tags</a>
@@ -232,8 +199,7 @@ Must be unique within the backend.
         <span class="property-type">string</span>
     </dt>
     <dd>{{% md %}}Specifies a comma-separated RabbitMQ management tags.
-{{% /md %}}</dd>
-    <dt class="property-optional"
+{{% /md %}}</dd><dt class="property-optional"
             title="Optional">
         <span id="vhosts_csharp">
 <a href="#vhosts_csharp" style="color: inherit; text-decoration: inherit;">Vhosts</a>
@@ -242,14 +208,11 @@ Must be unique within the backend.
         <span class="property-type"><a href="#secretbackendrolevhost">List&lt;Secret<wbr>Backend<wbr>Role<wbr>Vhost<wbr>Args&gt;</a></span>
     </dt>
     <dd>{{% md %}}Specifies a map of virtual hosts to permissions.
-{{% /md %}}</dd>
-</dl>
+{{% /md %}}</dd></dl>
 {{% /choosable %}}
 
 {{% choosable language go %}}
-<dl class="resources-properties">
-
-    <dt class="property-required"
+<dl class="resources-properties"><dt class="property-required"
             title="Required">
         <span id="backend_go">
 <a href="#backend_go" style="color: inherit; text-decoration: inherit;">Backend</a>
@@ -259,8 +222,7 @@ Must be unique within the backend.
     </dt>
     <dd>{{% md %}}The path the RabbitMQ secret backend is mounted at,
 with no leading or trailing `/`s.
-{{% /md %}}</dd>
-    <dt class="property-optional"
+{{% /md %}}</dd><dt class="property-optional"
             title="Optional">
         <span id="name_go">
 <a href="#name_go" style="color: inherit; text-decoration: inherit;">Name</a>
@@ -270,8 +232,7 @@ with no leading or trailing `/`s.
     </dt>
     <dd>{{% md %}}The name to identify this role within the backend.
 Must be unique within the backend.
-{{% /md %}}</dd>
-    <dt class="property-optional"
+{{% /md %}}</dd><dt class="property-optional"
             title="Optional">
         <span id="tags_go">
 <a href="#tags_go" style="color: inherit; text-decoration: inherit;">Tags</a>
@@ -280,8 +241,7 @@ Must be unique within the backend.
         <span class="property-type">string</span>
     </dt>
     <dd>{{% md %}}Specifies a comma-separated RabbitMQ management tags.
-{{% /md %}}</dd>
-    <dt class="property-optional"
+{{% /md %}}</dd><dt class="property-optional"
             title="Optional">
         <span id="vhosts_go">
 <a href="#vhosts_go" style="color: inherit; text-decoration: inherit;">Vhosts</a>
@@ -290,14 +250,11 @@ Must be unique within the backend.
         <span class="property-type"><a href="#secretbackendrolevhost">[]Secret<wbr>Backend<wbr>Role<wbr>Vhost</a></span>
     </dt>
     <dd>{{% md %}}Specifies a map of virtual hosts to permissions.
-{{% /md %}}</dd>
-</dl>
+{{% /md %}}</dd></dl>
 {{% /choosable %}}
 
 {{% choosable language nodejs %}}
-<dl class="resources-properties">
-
-    <dt class="property-required"
+<dl class="resources-properties"><dt class="property-required"
             title="Required">
         <span id="backend_nodejs">
 <a href="#backend_nodejs" style="color: inherit; text-decoration: inherit;">backend</a>
@@ -307,8 +264,7 @@ Must be unique within the backend.
     </dt>
     <dd>{{% md %}}The path the RabbitMQ secret backend is mounted at,
 with no leading or trailing `/`s.
-{{% /md %}}</dd>
-    <dt class="property-optional"
+{{% /md %}}</dd><dt class="property-optional"
             title="Optional">
         <span id="name_nodejs">
 <a href="#name_nodejs" style="color: inherit; text-decoration: inherit;">name</a>
@@ -318,8 +274,7 @@ with no leading or trailing `/`s.
     </dt>
     <dd>{{% md %}}The name to identify this role within the backend.
 Must be unique within the backend.
-{{% /md %}}</dd>
-    <dt class="property-optional"
+{{% /md %}}</dd><dt class="property-optional"
             title="Optional">
         <span id="tags_nodejs">
 <a href="#tags_nodejs" style="color: inherit; text-decoration: inherit;">tags</a>
@@ -328,8 +283,7 @@ Must be unique within the backend.
         <span class="property-type">string</span>
     </dt>
     <dd>{{% md %}}Specifies a comma-separated RabbitMQ management tags.
-{{% /md %}}</dd>
-    <dt class="property-optional"
+{{% /md %}}</dd><dt class="property-optional"
             title="Optional">
         <span id="vhosts_nodejs">
 <a href="#vhosts_nodejs" style="color: inherit; text-decoration: inherit;">vhosts</a>
@@ -338,14 +292,11 @@ Must be unique within the backend.
         <span class="property-type"><a href="#secretbackendrolevhost">Secret<wbr>Backend<wbr>Role<wbr>Vhost[]</a></span>
     </dt>
     <dd>{{% md %}}Specifies a map of virtual hosts to permissions.
-{{% /md %}}</dd>
-</dl>
+{{% /md %}}</dd></dl>
 {{% /choosable %}}
 
 {{% choosable language python %}}
-<dl class="resources-properties">
-
-    <dt class="property-required"
+<dl class="resources-properties"><dt class="property-required"
             title="Required">
         <span id="backend_python">
 <a href="#backend_python" style="color: inherit; text-decoration: inherit;">backend</a>
@@ -355,8 +306,7 @@ Must be unique within the backend.
     </dt>
     <dd>{{% md %}}The path the RabbitMQ secret backend is mounted at,
 with no leading or trailing `/`s.
-{{% /md %}}</dd>
-    <dt class="property-optional"
+{{% /md %}}</dd><dt class="property-optional"
             title="Optional">
         <span id="name_python">
 <a href="#name_python" style="color: inherit; text-decoration: inherit;">name</a>
@@ -366,8 +316,7 @@ with no leading or trailing `/`s.
     </dt>
     <dd>{{% md %}}The name to identify this role within the backend.
 Must be unique within the backend.
-{{% /md %}}</dd>
-    <dt class="property-optional"
+{{% /md %}}</dd><dt class="property-optional"
             title="Optional">
         <span id="tags_python">
 <a href="#tags_python" style="color: inherit; text-decoration: inherit;">tags</a>
@@ -376,8 +325,7 @@ Must be unique within the backend.
         <span class="property-type">str</span>
     </dt>
     <dd>{{% md %}}Specifies a comma-separated RabbitMQ management tags.
-{{% /md %}}</dd>
-    <dt class="property-optional"
+{{% /md %}}</dd><dt class="property-optional"
             title="Optional">
         <span id="vhosts_python">
 <a href="#vhosts_python" style="color: inherit; text-decoration: inherit;">vhosts</a>
@@ -386,8 +334,7 @@ Must be unique within the backend.
         <span class="property-type"><a href="#secretbackendrolevhost">Secret<wbr>Backend<wbr>Role<wbr>Vhost<wbr>Args]</a></span>
     </dt>
     <dd>{{% md %}}Specifies a map of virtual hosts to permissions.
-{{% /md %}}</dd>
-</dl>
+{{% /md %}}</dd></dl>
 {{% /choosable %}}
 
 
@@ -398,9 +345,7 @@ All [input](#inputs) properties are implicitly available as output properties. A
 
 
 {{% choosable language csharp %}}
-<dl class="resources-properties">
-
-    <dt class="property-"
+<dl class="resources-properties"><dt class="property-"
             title="">
         <span id="id_csharp">
 <a href="#id_csharp" style="color: inherit; text-decoration: inherit;">Id</a>
@@ -408,14 +353,11 @@ All [input](#inputs) properties are implicitly available as output properties. A
         <span class="property-indicator"></span>
         <span class="property-type">string</span>
     </dt>
-    <dd>{{% md %}}The provider-assigned unique ID for this managed resource.{{% /md %}}</dd>
-</dl>
+    <dd>{{% md %}}The provider-assigned unique ID for this managed resource.{{% /md %}}</dd></dl>
 {{% /choosable %}}
 
 {{% choosable language go %}}
-<dl class="resources-properties">
-
-    <dt class="property-"
+<dl class="resources-properties"><dt class="property-"
             title="">
         <span id="id_go">
 <a href="#id_go" style="color: inherit; text-decoration: inherit;">Id</a>
@@ -423,14 +365,11 @@ All [input](#inputs) properties are implicitly available as output properties. A
         <span class="property-indicator"></span>
         <span class="property-type">string</span>
     </dt>
-    <dd>{{% md %}}The provider-assigned unique ID for this managed resource.{{% /md %}}</dd>
-</dl>
+    <dd>{{% md %}}The provider-assigned unique ID for this managed resource.{{% /md %}}</dd></dl>
 {{% /choosable %}}
 
 {{% choosable language nodejs %}}
-<dl class="resources-properties">
-
-    <dt class="property-"
+<dl class="resources-properties"><dt class="property-"
             title="">
         <span id="id_nodejs">
 <a href="#id_nodejs" style="color: inherit; text-decoration: inherit;">id</a>
@@ -438,14 +377,11 @@ All [input](#inputs) properties are implicitly available as output properties. A
         <span class="property-indicator"></span>
         <span class="property-type">string</span>
     </dt>
-    <dd>{{% md %}}The provider-assigned unique ID for this managed resource.{{% /md %}}</dd>
-</dl>
+    <dd>{{% md %}}The provider-assigned unique ID for this managed resource.{{% /md %}}</dd></dl>
 {{% /choosable %}}
 
 {{% choosable language python %}}
-<dl class="resources-properties">
-
-    <dt class="property-"
+<dl class="resources-properties"><dt class="property-"
             title="">
         <span id="id_python">
 <a href="#id_python" style="color: inherit; text-decoration: inherit;">id</a>
@@ -453,8 +389,7 @@ All [input](#inputs) properties are implicitly available as output properties. A
         <span class="property-indicator"></span>
         <span class="property-type">str</span>
     </dt>
-    <dd>{{% md %}}The provider-assigned unique ID for this managed resource.{{% /md %}}</dd>
-</dl>
+    <dd>{{% md %}}The provider-assigned unique ID for this managed resource.{{% /md %}}</dd></dl>
 {{% /choosable %}}
 
 
@@ -581,9 +516,7 @@ The following state arguments are supported:
 
 
 {{% choosable language csharp %}}
-<dl class="resources-properties">
-
-    <dt class="property-optional"
+<dl class="resources-properties"><dt class="property-optional"
             title="Optional">
         <span id="state_backend_csharp">
 <a href="#state_backend_csharp" style="color: inherit; text-decoration: inherit;">Backend</a>
@@ -593,8 +526,7 @@ The following state arguments are supported:
     </dt>
     <dd>{{% md %}}The path the RabbitMQ secret backend is mounted at,
 with no leading or trailing `/`s.
-{{% /md %}}</dd>
-    <dt class="property-optional"
+{{% /md %}}</dd><dt class="property-optional"
             title="Optional">
         <span id="state_name_csharp">
 <a href="#state_name_csharp" style="color: inherit; text-decoration: inherit;">Name</a>
@@ -604,8 +536,7 @@ with no leading or trailing `/`s.
     </dt>
     <dd>{{% md %}}The name to identify this role within the backend.
 Must be unique within the backend.
-{{% /md %}}</dd>
-    <dt class="property-optional"
+{{% /md %}}</dd><dt class="property-optional"
             title="Optional">
         <span id="state_tags_csharp">
 <a href="#state_tags_csharp" style="color: inherit; text-decoration: inherit;">Tags</a>
@@ -614,8 +545,7 @@ Must be unique within the backend.
         <span class="property-type">string</span>
     </dt>
     <dd>{{% md %}}Specifies a comma-separated RabbitMQ management tags.
-{{% /md %}}</dd>
-    <dt class="property-optional"
+{{% /md %}}</dd><dt class="property-optional"
             title="Optional">
         <span id="state_vhosts_csharp">
 <a href="#state_vhosts_csharp" style="color: inherit; text-decoration: inherit;">Vhosts</a>
@@ -624,14 +554,11 @@ Must be unique within the backend.
         <span class="property-type"><a href="#secretbackendrolevhost">List&lt;Secret<wbr>Backend<wbr>Role<wbr>Vhost<wbr>Args&gt;</a></span>
     </dt>
     <dd>{{% md %}}Specifies a map of virtual hosts to permissions.
-{{% /md %}}</dd>
-</dl>
+{{% /md %}}</dd></dl>
 {{% /choosable %}}
 
 {{% choosable language go %}}
-<dl class="resources-properties">
-
-    <dt class="property-optional"
+<dl class="resources-properties"><dt class="property-optional"
             title="Optional">
         <span id="state_backend_go">
 <a href="#state_backend_go" style="color: inherit; text-decoration: inherit;">Backend</a>
@@ -641,8 +568,7 @@ Must be unique within the backend.
     </dt>
     <dd>{{% md %}}The path the RabbitMQ secret backend is mounted at,
 with no leading or trailing `/`s.
-{{% /md %}}</dd>
-    <dt class="property-optional"
+{{% /md %}}</dd><dt class="property-optional"
             title="Optional">
         <span id="state_name_go">
 <a href="#state_name_go" style="color: inherit; text-decoration: inherit;">Name</a>
@@ -652,8 +578,7 @@ with no leading or trailing `/`s.
     </dt>
     <dd>{{% md %}}The name to identify this role within the backend.
 Must be unique within the backend.
-{{% /md %}}</dd>
-    <dt class="property-optional"
+{{% /md %}}</dd><dt class="property-optional"
             title="Optional">
         <span id="state_tags_go">
 <a href="#state_tags_go" style="color: inherit; text-decoration: inherit;">Tags</a>
@@ -662,8 +587,7 @@ Must be unique within the backend.
         <span class="property-type">string</span>
     </dt>
     <dd>{{% md %}}Specifies a comma-separated RabbitMQ management tags.
-{{% /md %}}</dd>
-    <dt class="property-optional"
+{{% /md %}}</dd><dt class="property-optional"
             title="Optional">
         <span id="state_vhosts_go">
 <a href="#state_vhosts_go" style="color: inherit; text-decoration: inherit;">Vhosts</a>
@@ -672,14 +596,11 @@ Must be unique within the backend.
         <span class="property-type"><a href="#secretbackendrolevhost">[]Secret<wbr>Backend<wbr>Role<wbr>Vhost</a></span>
     </dt>
     <dd>{{% md %}}Specifies a map of virtual hosts to permissions.
-{{% /md %}}</dd>
-</dl>
+{{% /md %}}</dd></dl>
 {{% /choosable %}}
 
 {{% choosable language nodejs %}}
-<dl class="resources-properties">
-
-    <dt class="property-optional"
+<dl class="resources-properties"><dt class="property-optional"
             title="Optional">
         <span id="state_backend_nodejs">
 <a href="#state_backend_nodejs" style="color: inherit; text-decoration: inherit;">backend</a>
@@ -689,8 +610,7 @@ Must be unique within the backend.
     </dt>
     <dd>{{% md %}}The path the RabbitMQ secret backend is mounted at,
 with no leading or trailing `/`s.
-{{% /md %}}</dd>
-    <dt class="property-optional"
+{{% /md %}}</dd><dt class="property-optional"
             title="Optional">
         <span id="state_name_nodejs">
 <a href="#state_name_nodejs" style="color: inherit; text-decoration: inherit;">name</a>
@@ -700,8 +620,7 @@ with no leading or trailing `/`s.
     </dt>
     <dd>{{% md %}}The name to identify this role within the backend.
 Must be unique within the backend.
-{{% /md %}}</dd>
-    <dt class="property-optional"
+{{% /md %}}</dd><dt class="property-optional"
             title="Optional">
         <span id="state_tags_nodejs">
 <a href="#state_tags_nodejs" style="color: inherit; text-decoration: inherit;">tags</a>
@@ -710,8 +629,7 @@ Must be unique within the backend.
         <span class="property-type">string</span>
     </dt>
     <dd>{{% md %}}Specifies a comma-separated RabbitMQ management tags.
-{{% /md %}}</dd>
-    <dt class="property-optional"
+{{% /md %}}</dd><dt class="property-optional"
             title="Optional">
         <span id="state_vhosts_nodejs">
 <a href="#state_vhosts_nodejs" style="color: inherit; text-decoration: inherit;">vhosts</a>
@@ -720,14 +638,11 @@ Must be unique within the backend.
         <span class="property-type"><a href="#secretbackendrolevhost">Secret<wbr>Backend<wbr>Role<wbr>Vhost[]</a></span>
     </dt>
     <dd>{{% md %}}Specifies a map of virtual hosts to permissions.
-{{% /md %}}</dd>
-</dl>
+{{% /md %}}</dd></dl>
 {{% /choosable %}}
 
 {{% choosable language python %}}
-<dl class="resources-properties">
-
-    <dt class="property-optional"
+<dl class="resources-properties"><dt class="property-optional"
             title="Optional">
         <span id="state_backend_python">
 <a href="#state_backend_python" style="color: inherit; text-decoration: inherit;">backend</a>
@@ -737,8 +652,7 @@ Must be unique within the backend.
     </dt>
     <dd>{{% md %}}The path the RabbitMQ secret backend is mounted at,
 with no leading or trailing `/`s.
-{{% /md %}}</dd>
-    <dt class="property-optional"
+{{% /md %}}</dd><dt class="property-optional"
             title="Optional">
         <span id="state_name_python">
 <a href="#state_name_python" style="color: inherit; text-decoration: inherit;">name</a>
@@ -748,8 +662,7 @@ with no leading or trailing `/`s.
     </dt>
     <dd>{{% md %}}The name to identify this role within the backend.
 Must be unique within the backend.
-{{% /md %}}</dd>
-    <dt class="property-optional"
+{{% /md %}}</dd><dt class="property-optional"
             title="Optional">
         <span id="state_tags_python">
 <a href="#state_tags_python" style="color: inherit; text-decoration: inherit;">tags</a>
@@ -758,8 +671,7 @@ Must be unique within the backend.
         <span class="property-type">str</span>
     </dt>
     <dd>{{% md %}}Specifies a comma-separated RabbitMQ management tags.
-{{% /md %}}</dd>
-    <dt class="property-optional"
+{{% /md %}}</dd><dt class="property-optional"
             title="Optional">
         <span id="state_vhosts_python">
 <a href="#state_vhosts_python" style="color: inherit; text-decoration: inherit;">vhosts</a>
@@ -768,8 +680,7 @@ Must be unique within the backend.
         <span class="property-type"><a href="#secretbackendrolevhost">Secret<wbr>Backend<wbr>Role<wbr>Vhost<wbr>Args]</a></span>
     </dt>
     <dd>{{% md %}}Specifies a map of virtual hosts to permissions.
-{{% /md %}}</dd>
-</dl>
+{{% /md %}}</dd></dl>
 {{% /choosable %}}
 
 
@@ -784,9 +695,7 @@ Must be unique within the backend.
 <h4 id="secretbackendrolevhost">Secret<wbr>Backend<wbr>Role<wbr>Vhost</h4>
 
 {{% choosable language csharp %}}
-<dl class="resources-properties">
-
-    <dt class="property-required"
+<dl class="resources-properties"><dt class="property-required"
             title="Required">
         <span id="configure_csharp">
 <a href="#configure_csharp" style="color: inherit; text-decoration: inherit;">Configure</a>
@@ -794,8 +703,7 @@ Must be unique within the backend.
         <span class="property-indicator"></span>
         <span class="property-type">string</span>
     </dt>
-    <dd>{{% md %}}{{% /md %}}</dd>
-    <dt class="property-required"
+    <dd>{{% md %}}{{% /md %}}</dd><dt class="property-required"
             title="Required">
         <span id="host_csharp">
 <a href="#host_csharp" style="color: inherit; text-decoration: inherit;">Host</a>
@@ -803,8 +711,7 @@ Must be unique within the backend.
         <span class="property-indicator"></span>
         <span class="property-type">string</span>
     </dt>
-    <dd>{{% md %}}{{% /md %}}</dd>
-    <dt class="property-required"
+    <dd>{{% md %}}{{% /md %}}</dd><dt class="property-required"
             title="Required">
         <span id="read_csharp">
 <a href="#read_csharp" style="color: inherit; text-decoration: inherit;">Read</a>
@@ -812,8 +719,7 @@ Must be unique within the backend.
         <span class="property-indicator"></span>
         <span class="property-type">string</span>
     </dt>
-    <dd>{{% md %}}{{% /md %}}</dd>
-    <dt class="property-required"
+    <dd>{{% md %}}{{% /md %}}</dd><dt class="property-required"
             title="Required">
         <span id="write_csharp">
 <a href="#write_csharp" style="color: inherit; text-decoration: inherit;">Write</a>
@@ -821,14 +727,11 @@ Must be unique within the backend.
         <span class="property-indicator"></span>
         <span class="property-type">string</span>
     </dt>
-    <dd>{{% md %}}{{% /md %}}</dd>
-</dl>
+    <dd>{{% md %}}{{% /md %}}</dd></dl>
 {{% /choosable %}}
 
 {{% choosable language go %}}
-<dl class="resources-properties">
-
-    <dt class="property-required"
+<dl class="resources-properties"><dt class="property-required"
             title="Required">
         <span id="configure_go">
 <a href="#configure_go" style="color: inherit; text-decoration: inherit;">Configure</a>
@@ -836,8 +739,7 @@ Must be unique within the backend.
         <span class="property-indicator"></span>
         <span class="property-type">string</span>
     </dt>
-    <dd>{{% md %}}{{% /md %}}</dd>
-    <dt class="property-required"
+    <dd>{{% md %}}{{% /md %}}</dd><dt class="property-required"
             title="Required">
         <span id="host_go">
 <a href="#host_go" style="color: inherit; text-decoration: inherit;">Host</a>
@@ -845,8 +747,7 @@ Must be unique within the backend.
         <span class="property-indicator"></span>
         <span class="property-type">string</span>
     </dt>
-    <dd>{{% md %}}{{% /md %}}</dd>
-    <dt class="property-required"
+    <dd>{{% md %}}{{% /md %}}</dd><dt class="property-required"
             title="Required">
         <span id="read_go">
 <a href="#read_go" style="color: inherit; text-decoration: inherit;">Read</a>
@@ -854,8 +755,7 @@ Must be unique within the backend.
         <span class="property-indicator"></span>
         <span class="property-type">string</span>
     </dt>
-    <dd>{{% md %}}{{% /md %}}</dd>
-    <dt class="property-required"
+    <dd>{{% md %}}{{% /md %}}</dd><dt class="property-required"
             title="Required">
         <span id="write_go">
 <a href="#write_go" style="color: inherit; text-decoration: inherit;">Write</a>
@@ -863,14 +763,11 @@ Must be unique within the backend.
         <span class="property-indicator"></span>
         <span class="property-type">string</span>
     </dt>
-    <dd>{{% md %}}{{% /md %}}</dd>
-</dl>
+    <dd>{{% md %}}{{% /md %}}</dd></dl>
 {{% /choosable %}}
 
 {{% choosable language nodejs %}}
-<dl class="resources-properties">
-
-    <dt class="property-required"
+<dl class="resources-properties"><dt class="property-required"
             title="Required">
         <span id="configure_nodejs">
 <a href="#configure_nodejs" style="color: inherit; text-decoration: inherit;">configure</a>
@@ -878,8 +775,7 @@ Must be unique within the backend.
         <span class="property-indicator"></span>
         <span class="property-type">string</span>
     </dt>
-    <dd>{{% md %}}{{% /md %}}</dd>
-    <dt class="property-required"
+    <dd>{{% md %}}{{% /md %}}</dd><dt class="property-required"
             title="Required">
         <span id="host_nodejs">
 <a href="#host_nodejs" style="color: inherit; text-decoration: inherit;">host</a>
@@ -887,8 +783,7 @@ Must be unique within the backend.
         <span class="property-indicator"></span>
         <span class="property-type">string</span>
     </dt>
-    <dd>{{% md %}}{{% /md %}}</dd>
-    <dt class="property-required"
+    <dd>{{% md %}}{{% /md %}}</dd><dt class="property-required"
             title="Required">
         <span id="read_nodejs">
 <a href="#read_nodejs" style="color: inherit; text-decoration: inherit;">read</a>
@@ -896,8 +791,7 @@ Must be unique within the backend.
         <span class="property-indicator"></span>
         <span class="property-type">string</span>
     </dt>
-    <dd>{{% md %}}{{% /md %}}</dd>
-    <dt class="property-required"
+    <dd>{{% md %}}{{% /md %}}</dd><dt class="property-required"
             title="Required">
         <span id="write_nodejs">
 <a href="#write_nodejs" style="color: inherit; text-decoration: inherit;">write</a>
@@ -905,14 +799,11 @@ Must be unique within the backend.
         <span class="property-indicator"></span>
         <span class="property-type">string</span>
     </dt>
-    <dd>{{% md %}}{{% /md %}}</dd>
-</dl>
+    <dd>{{% md %}}{{% /md %}}</dd></dl>
 {{% /choosable %}}
 
 {{% choosable language python %}}
-<dl class="resources-properties">
-
-    <dt class="property-required"
+<dl class="resources-properties"><dt class="property-required"
             title="Required">
         <span id="configure_python">
 <a href="#configure_python" style="color: inherit; text-decoration: inherit;">configure</a>
@@ -920,8 +811,7 @@ Must be unique within the backend.
         <span class="property-indicator"></span>
         <span class="property-type">str</span>
     </dt>
-    <dd>{{% md %}}{{% /md %}}</dd>
-    <dt class="property-required"
+    <dd>{{% md %}}{{% /md %}}</dd><dt class="property-required"
             title="Required">
         <span id="host_python">
 <a href="#host_python" style="color: inherit; text-decoration: inherit;">host</a>
@@ -929,8 +819,7 @@ Must be unique within the backend.
         <span class="property-indicator"></span>
         <span class="property-type">str</span>
     </dt>
-    <dd>{{% md %}}{{% /md %}}</dd>
-    <dt class="property-required"
+    <dd>{{% md %}}{{% /md %}}</dd><dt class="property-required"
             title="Required">
         <span id="read_python">
 <a href="#read_python" style="color: inherit; text-decoration: inherit;">read</a>
@@ -938,8 +827,7 @@ Must be unique within the backend.
         <span class="property-indicator"></span>
         <span class="property-type">str</span>
     </dt>
-    <dd>{{% md %}}{{% /md %}}</dd>
-    <dt class="property-required"
+    <dd>{{% md %}}{{% /md %}}</dd><dt class="property-required"
             title="Required">
         <span id="write_python">
 <a href="#write_python" style="color: inherit; text-decoration: inherit;">write</a>
@@ -947,8 +835,7 @@ Must be unique within the backend.
         <span class="property-indicator"></span>
         <span class="property-type">str</span>
     </dt>
-    <dd>{{% md %}}{{% /md %}}</dd>
-</dl>
+    <dd>{{% md %}}{{% /md %}}</dd></dl>
 {{% /choosable %}}
 
 
@@ -959,6 +846,6 @@ Must be unique within the backend.
 	<dt>License</dt>
 	<dd>Apache-2.0</dd>
 	<dt>Notes</dt>
-	<dd>This Pulumi package is based on the [`vault` Terraform Provider](https://github.com/hashicorp/terraform-provider-vault).</dd>
+	<dd>{{% md %}}This Pulumi package is based on the [`vault` Terraform Provider](https://github.com/hashicorp/terraform-provider-vault).{{% /md %}}</dd>
 </dl>
 

@@ -14,11 +14,17 @@ Use this data source to get the ID of an available Shared File System share.
 
 
 {{% examples %}}
+
 ## Example Usage
 
 {{< chooser language "typescript,python,go,csharp" / >}}
 
-{{% example csharp %}}
+
+
+
+
+{{< example csharp >}}
+
 ```csharp
 using Pulumi;
 using OpenStack = Pulumi.OpenStack;
@@ -36,9 +42,12 @@ class MyStack : Stack
 }
 ```
 
-{{% /example %}}
 
-{{% example go %}}
+{{< /example >}}
+
+
+{{< example go >}}
+
 ```go
 package main
 
@@ -61,9 +70,12 @@ func main() {
 }
 ```
 
-{{% /example %}}
 
-{{% example python %}}
+{{< /example >}}
+
+
+{{< example python >}}
+
 ```python
 import pulumi
 import pulumi_openstack as openstack
@@ -71,9 +83,12 @@ import pulumi_openstack as openstack
 share1 = openstack.sharedfilesystem.get_share(name="share_1")
 ```
 
-{{% /example %}}
 
-{{% example typescript %}}
+{{< /example >}}
+
+
+{{< example typescript >}}
+
 
 ```typescript
 import * as pulumi from "@pulumi/pulumi";
@@ -84,9 +99,16 @@ const share1 = pulumi.output(openstack.sharedfilesystem.getShare({
 }, { async: true }));
 ```
 
-{{% /example %}}
+
+{{< /example >}}
+
+
+
+
 
 {{% /examples %}}
+
+
 
 
 ## Using getShare {#using}
@@ -124,9 +146,7 @@ The following arguments are supported:
 
 
 {{% choosable language csharp %}}
-<dl class="resources-properties">
-
-    <dt class="property-optional"
+<dl class="resources-properties"><dt class="property-optional"
             title="Optional">
         <span id="description_csharp">
 <a href="#description_csharp" style="color: inherit; text-decoration: inherit;">Description</a>
@@ -135,8 +155,7 @@ The following arguments are supported:
         <span class="property-type">string</span>
     </dt>
     <dd>{{% md %}}The human-readable description for the share.
-{{% /md %}}</dd>
-    <dt class="property-optional"
+{{% /md %}}</dd><dt class="property-optional"
             title="Optional">
         <span id="exportlocationpath_csharp">
 <a href="#exportlocationpath_csharp" style="color: inherit; text-decoration: inherit;">Export<wbr>Location<wbr>Path</a>
@@ -146,8 +165,7 @@ The following arguments are supported:
     </dt>
     <dd>{{% md %}}The export location path of the share. Available
 since Manila API version 2.35.
-{{% /md %}}</dd>
-    <dt class="property-optional"
+{{% /md %}}</dd><dt class="property-optional"
             title="Optional">
         <span id="ispublic_csharp">
 <a href="#ispublic_csharp" style="color: inherit; text-decoration: inherit;">Is<wbr>Public</a>
@@ -157,8 +175,7 @@ since Manila API version 2.35.
     </dt>
     <dd>{{% md %}}The level of visibility for the share.
 length.
-{{% /md %}}</dd>
-    <dt class="property-optional"
+{{% /md %}}</dd><dt class="property-optional"
             title="Optional">
         <span id="metadata_csharp">
 <a href="#metadata_csharp" style="color: inherit; text-decoration: inherit;">Metadata</a>
@@ -168,8 +185,7 @@ length.
     </dt>
     <dd>{{% md %}}One or more metadata key and value pairs as a dictionary of
 strings.
-{{% /md %}}</dd>
-    <dt class="property-optional"
+{{% /md %}}</dd><dt class="property-optional"
             title="Optional">
         <span id="name_csharp">
 <a href="#name_csharp" style="color: inherit; text-decoration: inherit;">Name</a>
@@ -178,8 +194,7 @@ strings.
         <span class="property-type">string</span>
     </dt>
     <dd>{{% md %}}The name of the share.
-{{% /md %}}</dd>
-    <dt class="property-optional"
+{{% /md %}}</dd><dt class="property-optional"
             title="Optional">
         <span id="region_csharp">
 <a href="#region_csharp" style="color: inherit; text-decoration: inherit;">Region</a>
@@ -188,8 +203,7 @@ strings.
         <span class="property-type">string</span>
     </dt>
     <dd>{{% md %}}The region in which to obtain the V2 Shared File System client.
-{{% /md %}}</dd>
-    <dt class="property-optional"
+{{% /md %}}</dd><dt class="property-optional"
             title="Optional">
         <span id="sharenetworkid_csharp">
 <a href="#sharenetworkid_csharp" style="color: inherit; text-decoration: inherit;">Share<wbr>Network<wbr>Id</a>
@@ -198,8 +212,7 @@ strings.
         <span class="property-type">string</span>
     </dt>
     <dd>{{% md %}}The UUID of the share's share network.
-{{% /md %}}</dd>
-    <dt class="property-optional"
+{{% /md %}}</dd><dt class="property-optional"
             title="Optional">
         <span id="snapshotid_csharp">
 <a href="#snapshotid_csharp" style="color: inherit; text-decoration: inherit;">Snapshot<wbr>Id</a>
@@ -208,8 +221,7 @@ strings.
         <span class="property-type">string</span>
     </dt>
     <dd>{{% md %}}The UUID of the share's base snapshot.
-{{% /md %}}</dd>
-    <dt class="property-optional"
+{{% /md %}}</dd><dt class="property-optional"
             title="Optional">
         <span id="status_csharp">
 <a href="#status_csharp" style="color: inherit; text-decoration: inherit;">Status</a>
@@ -222,14 +234,11 @@ strings.
 `manage_error`, `unmanage_starting`, `unmanage_error`, `unmanaged`,
 `extending`, `extending_error`, `shrinking`, `shrinking_error`, or
 `shrinking_possible_data_loss_error`.
-{{% /md %}}</dd>
-</dl>
+{{% /md %}}</dd></dl>
 {{% /choosable %}}
 
 {{% choosable language go %}}
-<dl class="resources-properties">
-
-    <dt class="property-optional"
+<dl class="resources-properties"><dt class="property-optional"
             title="Optional">
         <span id="description_go">
 <a href="#description_go" style="color: inherit; text-decoration: inherit;">Description</a>
@@ -238,8 +247,7 @@ strings.
         <span class="property-type">string</span>
     </dt>
     <dd>{{% md %}}The human-readable description for the share.
-{{% /md %}}</dd>
-    <dt class="property-optional"
+{{% /md %}}</dd><dt class="property-optional"
             title="Optional">
         <span id="exportlocationpath_go">
 <a href="#exportlocationpath_go" style="color: inherit; text-decoration: inherit;">Export<wbr>Location<wbr>Path</a>
@@ -249,8 +257,7 @@ strings.
     </dt>
     <dd>{{% md %}}The export location path of the share. Available
 since Manila API version 2.35.
-{{% /md %}}</dd>
-    <dt class="property-optional"
+{{% /md %}}</dd><dt class="property-optional"
             title="Optional">
         <span id="ispublic_go">
 <a href="#ispublic_go" style="color: inherit; text-decoration: inherit;">Is<wbr>Public</a>
@@ -260,8 +267,7 @@ since Manila API version 2.35.
     </dt>
     <dd>{{% md %}}The level of visibility for the share.
 length.
-{{% /md %}}</dd>
-    <dt class="property-optional"
+{{% /md %}}</dd><dt class="property-optional"
             title="Optional">
         <span id="metadata_go">
 <a href="#metadata_go" style="color: inherit; text-decoration: inherit;">Metadata</a>
@@ -271,8 +277,7 @@ length.
     </dt>
     <dd>{{% md %}}One or more metadata key and value pairs as a dictionary of
 strings.
-{{% /md %}}</dd>
-    <dt class="property-optional"
+{{% /md %}}</dd><dt class="property-optional"
             title="Optional">
         <span id="name_go">
 <a href="#name_go" style="color: inherit; text-decoration: inherit;">Name</a>
@@ -281,8 +286,7 @@ strings.
         <span class="property-type">string</span>
     </dt>
     <dd>{{% md %}}The name of the share.
-{{% /md %}}</dd>
-    <dt class="property-optional"
+{{% /md %}}</dd><dt class="property-optional"
             title="Optional">
         <span id="region_go">
 <a href="#region_go" style="color: inherit; text-decoration: inherit;">Region</a>
@@ -291,8 +295,7 @@ strings.
         <span class="property-type">string</span>
     </dt>
     <dd>{{% md %}}The region in which to obtain the V2 Shared File System client.
-{{% /md %}}</dd>
-    <dt class="property-optional"
+{{% /md %}}</dd><dt class="property-optional"
             title="Optional">
         <span id="sharenetworkid_go">
 <a href="#sharenetworkid_go" style="color: inherit; text-decoration: inherit;">Share<wbr>Network<wbr>Id</a>
@@ -301,8 +304,7 @@ strings.
         <span class="property-type">string</span>
     </dt>
     <dd>{{% md %}}The UUID of the share's share network.
-{{% /md %}}</dd>
-    <dt class="property-optional"
+{{% /md %}}</dd><dt class="property-optional"
             title="Optional">
         <span id="snapshotid_go">
 <a href="#snapshotid_go" style="color: inherit; text-decoration: inherit;">Snapshot<wbr>Id</a>
@@ -311,8 +313,7 @@ strings.
         <span class="property-type">string</span>
     </dt>
     <dd>{{% md %}}The UUID of the share's base snapshot.
-{{% /md %}}</dd>
-    <dt class="property-optional"
+{{% /md %}}</dd><dt class="property-optional"
             title="Optional">
         <span id="status_go">
 <a href="#status_go" style="color: inherit; text-decoration: inherit;">Status</a>
@@ -325,14 +326,11 @@ strings.
 `manage_error`, `unmanage_starting`, `unmanage_error`, `unmanaged`,
 `extending`, `extending_error`, `shrinking`, `shrinking_error`, or
 `shrinking_possible_data_loss_error`.
-{{% /md %}}</dd>
-</dl>
+{{% /md %}}</dd></dl>
 {{% /choosable %}}
 
 {{% choosable language nodejs %}}
-<dl class="resources-properties">
-
-    <dt class="property-optional"
+<dl class="resources-properties"><dt class="property-optional"
             title="Optional">
         <span id="description_nodejs">
 <a href="#description_nodejs" style="color: inherit; text-decoration: inherit;">description</a>
@@ -341,8 +339,7 @@ strings.
         <span class="property-type">string</span>
     </dt>
     <dd>{{% md %}}The human-readable description for the share.
-{{% /md %}}</dd>
-    <dt class="property-optional"
+{{% /md %}}</dd><dt class="property-optional"
             title="Optional">
         <span id="exportlocationpath_nodejs">
 <a href="#exportlocationpath_nodejs" style="color: inherit; text-decoration: inherit;">export<wbr>Location<wbr>Path</a>
@@ -352,8 +349,7 @@ strings.
     </dt>
     <dd>{{% md %}}The export location path of the share. Available
 since Manila API version 2.35.
-{{% /md %}}</dd>
-    <dt class="property-optional"
+{{% /md %}}</dd><dt class="property-optional"
             title="Optional">
         <span id="ispublic_nodejs">
 <a href="#ispublic_nodejs" style="color: inherit; text-decoration: inherit;">is<wbr>Public</a>
@@ -363,8 +359,7 @@ since Manila API version 2.35.
     </dt>
     <dd>{{% md %}}The level of visibility for the share.
 length.
-{{% /md %}}</dd>
-    <dt class="property-optional"
+{{% /md %}}</dd><dt class="property-optional"
             title="Optional">
         <span id="metadata_nodejs">
 <a href="#metadata_nodejs" style="color: inherit; text-decoration: inherit;">metadata</a>
@@ -374,8 +369,7 @@ length.
     </dt>
     <dd>{{% md %}}One or more metadata key and value pairs as a dictionary of
 strings.
-{{% /md %}}</dd>
-    <dt class="property-optional"
+{{% /md %}}</dd><dt class="property-optional"
             title="Optional">
         <span id="name_nodejs">
 <a href="#name_nodejs" style="color: inherit; text-decoration: inherit;">name</a>
@@ -384,8 +378,7 @@ strings.
         <span class="property-type">string</span>
     </dt>
     <dd>{{% md %}}The name of the share.
-{{% /md %}}</dd>
-    <dt class="property-optional"
+{{% /md %}}</dd><dt class="property-optional"
             title="Optional">
         <span id="region_nodejs">
 <a href="#region_nodejs" style="color: inherit; text-decoration: inherit;">region</a>
@@ -394,8 +387,7 @@ strings.
         <span class="property-type">string</span>
     </dt>
     <dd>{{% md %}}The region in which to obtain the V2 Shared File System client.
-{{% /md %}}</dd>
-    <dt class="property-optional"
+{{% /md %}}</dd><dt class="property-optional"
             title="Optional">
         <span id="sharenetworkid_nodejs">
 <a href="#sharenetworkid_nodejs" style="color: inherit; text-decoration: inherit;">share<wbr>Network<wbr>Id</a>
@@ -404,8 +396,7 @@ strings.
         <span class="property-type">string</span>
     </dt>
     <dd>{{% md %}}The UUID of the share's share network.
-{{% /md %}}</dd>
-    <dt class="property-optional"
+{{% /md %}}</dd><dt class="property-optional"
             title="Optional">
         <span id="snapshotid_nodejs">
 <a href="#snapshotid_nodejs" style="color: inherit; text-decoration: inherit;">snapshot<wbr>Id</a>
@@ -414,8 +405,7 @@ strings.
         <span class="property-type">string</span>
     </dt>
     <dd>{{% md %}}The UUID of the share's base snapshot.
-{{% /md %}}</dd>
-    <dt class="property-optional"
+{{% /md %}}</dd><dt class="property-optional"
             title="Optional">
         <span id="status_nodejs">
 <a href="#status_nodejs" style="color: inherit; text-decoration: inherit;">status</a>
@@ -428,14 +418,11 @@ strings.
 `manage_error`, `unmanage_starting`, `unmanage_error`, `unmanaged`,
 `extending`, `extending_error`, `shrinking`, `shrinking_error`, or
 `shrinking_possible_data_loss_error`.
-{{% /md %}}</dd>
-</dl>
+{{% /md %}}</dd></dl>
 {{% /choosable %}}
 
 {{% choosable language python %}}
-<dl class="resources-properties">
-
-    <dt class="property-optional"
+<dl class="resources-properties"><dt class="property-optional"
             title="Optional">
         <span id="description_python">
 <a href="#description_python" style="color: inherit; text-decoration: inherit;">description</a>
@@ -444,8 +431,7 @@ strings.
         <span class="property-type">str</span>
     </dt>
     <dd>{{% md %}}The human-readable description for the share.
-{{% /md %}}</dd>
-    <dt class="property-optional"
+{{% /md %}}</dd><dt class="property-optional"
             title="Optional">
         <span id="export_location_path_python">
 <a href="#export_location_path_python" style="color: inherit; text-decoration: inherit;">export_<wbr>location_<wbr>path</a>
@@ -455,8 +441,7 @@ strings.
     </dt>
     <dd>{{% md %}}The export location path of the share. Available
 since Manila API version 2.35.
-{{% /md %}}</dd>
-    <dt class="property-optional"
+{{% /md %}}</dd><dt class="property-optional"
             title="Optional">
         <span id="is_public_python">
 <a href="#is_public_python" style="color: inherit; text-decoration: inherit;">is_<wbr>public</a>
@@ -466,8 +451,7 @@ since Manila API version 2.35.
     </dt>
     <dd>{{% md %}}The level of visibility for the share.
 length.
-{{% /md %}}</dd>
-    <dt class="property-optional"
+{{% /md %}}</dd><dt class="property-optional"
             title="Optional">
         <span id="metadata_python">
 <a href="#metadata_python" style="color: inherit; text-decoration: inherit;">metadata</a>
@@ -477,8 +461,7 @@ length.
     </dt>
     <dd>{{% md %}}One or more metadata key and value pairs as a dictionary of
 strings.
-{{% /md %}}</dd>
-    <dt class="property-optional"
+{{% /md %}}</dd><dt class="property-optional"
             title="Optional">
         <span id="name_python">
 <a href="#name_python" style="color: inherit; text-decoration: inherit;">name</a>
@@ -487,8 +470,7 @@ strings.
         <span class="property-type">str</span>
     </dt>
     <dd>{{% md %}}The name of the share.
-{{% /md %}}</dd>
-    <dt class="property-optional"
+{{% /md %}}</dd><dt class="property-optional"
             title="Optional">
         <span id="region_python">
 <a href="#region_python" style="color: inherit; text-decoration: inherit;">region</a>
@@ -497,8 +479,7 @@ strings.
         <span class="property-type">str</span>
     </dt>
     <dd>{{% md %}}The region in which to obtain the V2 Shared File System client.
-{{% /md %}}</dd>
-    <dt class="property-optional"
+{{% /md %}}</dd><dt class="property-optional"
             title="Optional">
         <span id="share_network_id_python">
 <a href="#share_network_id_python" style="color: inherit; text-decoration: inherit;">share_<wbr>network_<wbr>id</a>
@@ -507,8 +488,7 @@ strings.
         <span class="property-type">str</span>
     </dt>
     <dd>{{% md %}}The UUID of the share's share network.
-{{% /md %}}</dd>
-    <dt class="property-optional"
+{{% /md %}}</dd><dt class="property-optional"
             title="Optional">
         <span id="snapshot_id_python">
 <a href="#snapshot_id_python" style="color: inherit; text-decoration: inherit;">snapshot_<wbr>id</a>
@@ -517,8 +497,7 @@ strings.
         <span class="property-type">str</span>
     </dt>
     <dd>{{% md %}}The UUID of the share's base snapshot.
-{{% /md %}}</dd>
-    <dt class="property-optional"
+{{% /md %}}</dd><dt class="property-optional"
             title="Optional">
         <span id="status_python">
 <a href="#status_python" style="color: inherit; text-decoration: inherit;">status</a>
@@ -531,8 +510,7 @@ strings.
 `manage_error`, `unmanage_starting`, `unmanage_error`, `unmanaged`,
 `extending`, `extending_error`, `shrinking`, `shrinking_error`, or
 `shrinking_possible_data_loss_error`.
-{{% /md %}}</dd>
-</dl>
+{{% /md %}}</dd></dl>
 {{% /choosable %}}
 
 
@@ -545,9 +523,7 @@ The following output properties are available:
 
 
 {{% choosable language csharp %}}
-<dl class="resources-properties">
-
-    <dt class="property-"
+<dl class="resources-properties"><dt class="property-"
             title="">
         <span id="availabilityzone_csharp">
 <a href="#availabilityzone_csharp" style="color: inherit; text-decoration: inherit;">Availability<wbr>Zone</a>
@@ -556,8 +532,7 @@ The following output properties are available:
         <span class="property-type">string</span>
     </dt>
     <dd>{{% md %}}The share availability zone.
-{{% /md %}}</dd>
-    <dt class="property-"
+{{% /md %}}</dd><dt class="property-"
             title="">
         <span id="description_csharp">
 <a href="#description_csharp" style="color: inherit; text-decoration: inherit;">Description</a>
@@ -566,8 +541,7 @@ The following output properties are available:
         <span class="property-type">string</span>
     </dt>
     <dd>{{% md %}}See Argument Reference above.
-{{% /md %}}</dd>
-    <dt class="property-"
+{{% /md %}}</dd><dt class="property-"
             title="">
         <span id="exportlocations_csharp">
 <a href="#exportlocations_csharp" style="color: inherit; text-decoration: inherit;">Export<wbr>Locations</a>
@@ -578,8 +552,7 @@ The following output properties are available:
     <dd>{{% md %}}A list of export locations. For example, when a share
 server has more than one network interface, it can have multiple export
 locations.
-{{% /md %}}</dd>
-    <dt class="property-"
+{{% /md %}}</dd><dt class="property-"
             title="">
         <span id="id_csharp">
 <a href="#id_csharp" style="color: inherit; text-decoration: inherit;">Id</a>
@@ -588,8 +561,7 @@ locations.
         <span class="property-type">string</span>
     </dt>
     <dd>{{% md %}}The provider-assigned unique ID for this managed resource.
-{{% /md %}}</dd>
-    <dt class="property-"
+{{% /md %}}</dd><dt class="property-"
             title="">
         <span id="ispublic_csharp">
 <a href="#ispublic_csharp" style="color: inherit; text-decoration: inherit;">Is<wbr>Public</a>
@@ -598,8 +570,7 @@ locations.
         <span class="property-type">bool</span>
     </dt>
     <dd>{{% md %}}See Argument Reference above.
-{{% /md %}}</dd>
-    <dt class="property-"
+{{% /md %}}</dd><dt class="property-"
             title="">
         <span id="metadata_csharp">
 <a href="#metadata_csharp" style="color: inherit; text-decoration: inherit;">Metadata</a>
@@ -608,8 +579,7 @@ locations.
         <span class="property-type">Dictionary&lt;string, object&gt;</span>
     </dt>
     <dd>{{% md %}}See Argument Reference above.
-{{% /md %}}</dd>
-    <dt class="property-"
+{{% /md %}}</dd><dt class="property-"
             title="">
         <span id="name_csharp">
 <a href="#name_csharp" style="color: inherit; text-decoration: inherit;">Name</a>
@@ -618,8 +588,7 @@ locations.
         <span class="property-type">string</span>
     </dt>
     <dd>{{% md %}}See Argument Reference above.
-{{% /md %}}</dd>
-    <dt class="property-"
+{{% /md %}}</dd><dt class="property-"
             title="">
         <span id="projectid_csharp">
 <a href="#projectid_csharp" style="color: inherit; text-decoration: inherit;">Project<wbr>Id</a>
@@ -628,8 +597,7 @@ locations.
         <span class="property-type">string</span>
     </dt>
     <dd>{{% md %}}See Argument Reference above.
-{{% /md %}}</dd>
-    <dt class="property-"
+{{% /md %}}</dd><dt class="property-"
             title="">
         <span id="region_csharp">
 <a href="#region_csharp" style="color: inherit; text-decoration: inherit;">Region</a>
@@ -638,8 +606,7 @@ locations.
         <span class="property-type">string</span>
     </dt>
     <dd>{{% md %}}The region in which to obtain the V2 Shared File System client.
-{{% /md %}}</dd>
-    <dt class="property-"
+{{% /md %}}</dd><dt class="property-"
             title="">
         <span id="sharenetworkid_csharp">
 <a href="#sharenetworkid_csharp" style="color: inherit; text-decoration: inherit;">Share<wbr>Network<wbr>Id</a>
@@ -648,8 +615,7 @@ locations.
         <span class="property-type">string</span>
     </dt>
     <dd>{{% md %}}See Argument Reference above.
-{{% /md %}}</dd>
-    <dt class="property-"
+{{% /md %}}</dd><dt class="property-"
             title="">
         <span id="shareproto_csharp">
 <a href="#shareproto_csharp" style="color: inherit; text-decoration: inherit;">Share<wbr>Proto</a>
@@ -658,8 +624,7 @@ locations.
         <span class="property-type">string</span>
     </dt>
     <dd>{{% md %}}The share protocol.
-{{% /md %}}</dd>
-    <dt class="property-"
+{{% /md %}}</dd><dt class="property-"
             title="">
         <span id="size_csharp">
 <a href="#size_csharp" style="color: inherit; text-decoration: inherit;">Size</a>
@@ -668,8 +633,7 @@ locations.
         <span class="property-type">int</span>
     </dt>
     <dd>{{% md %}}The share size, in GBs.
-{{% /md %}}</dd>
-    <dt class="property-"
+{{% /md %}}</dd><dt class="property-"
             title="">
         <span id="snapshotid_csharp">
 <a href="#snapshotid_csharp" style="color: inherit; text-decoration: inherit;">Snapshot<wbr>Id</a>
@@ -678,8 +642,7 @@ locations.
         <span class="property-type">string</span>
     </dt>
     <dd>{{% md %}}See Argument Reference above.
-{{% /md %}}</dd>
-    <dt class="property-"
+{{% /md %}}</dd><dt class="property-"
             title="">
         <span id="status_csharp">
 <a href="#status_csharp" style="color: inherit; text-decoration: inherit;">Status</a>
@@ -688,8 +651,7 @@ locations.
         <span class="property-type">string</span>
     </dt>
     <dd>{{% md %}}See Argument Reference above.
-{{% /md %}}</dd>
-    <dt class="property-"
+{{% /md %}}</dd><dt class="property-"
             title="">
         <span id="exportlocationpath_csharp">
 <a href="#exportlocationpath_csharp" style="color: inherit; text-decoration: inherit;">Export<wbr>Location<wbr>Path</a>
@@ -698,14 +660,11 @@ locations.
         <span class="property-type">string</span>
     </dt>
     <dd>{{% md %}}See Argument Reference above.
-{{% /md %}}</dd>
-</dl>
+{{% /md %}}</dd></dl>
 {{% /choosable %}}
 
 {{% choosable language go %}}
-<dl class="resources-properties">
-
-    <dt class="property-"
+<dl class="resources-properties"><dt class="property-"
             title="">
         <span id="availabilityzone_go">
 <a href="#availabilityzone_go" style="color: inherit; text-decoration: inherit;">Availability<wbr>Zone</a>
@@ -714,8 +673,7 @@ locations.
         <span class="property-type">string</span>
     </dt>
     <dd>{{% md %}}The share availability zone.
-{{% /md %}}</dd>
-    <dt class="property-"
+{{% /md %}}</dd><dt class="property-"
             title="">
         <span id="description_go">
 <a href="#description_go" style="color: inherit; text-decoration: inherit;">Description</a>
@@ -724,8 +682,7 @@ locations.
         <span class="property-type">string</span>
     </dt>
     <dd>{{% md %}}See Argument Reference above.
-{{% /md %}}</dd>
-    <dt class="property-"
+{{% /md %}}</dd><dt class="property-"
             title="">
         <span id="exportlocations_go">
 <a href="#exportlocations_go" style="color: inherit; text-decoration: inherit;">Export<wbr>Locations</a>
@@ -736,8 +693,7 @@ locations.
     <dd>{{% md %}}A list of export locations. For example, when a share
 server has more than one network interface, it can have multiple export
 locations.
-{{% /md %}}</dd>
-    <dt class="property-"
+{{% /md %}}</dd><dt class="property-"
             title="">
         <span id="id_go">
 <a href="#id_go" style="color: inherit; text-decoration: inherit;">Id</a>
@@ -746,8 +702,7 @@ locations.
         <span class="property-type">string</span>
     </dt>
     <dd>{{% md %}}The provider-assigned unique ID for this managed resource.
-{{% /md %}}</dd>
-    <dt class="property-"
+{{% /md %}}</dd><dt class="property-"
             title="">
         <span id="ispublic_go">
 <a href="#ispublic_go" style="color: inherit; text-decoration: inherit;">Is<wbr>Public</a>
@@ -756,8 +711,7 @@ locations.
         <span class="property-type">bool</span>
     </dt>
     <dd>{{% md %}}See Argument Reference above.
-{{% /md %}}</dd>
-    <dt class="property-"
+{{% /md %}}</dd><dt class="property-"
             title="">
         <span id="metadata_go">
 <a href="#metadata_go" style="color: inherit; text-decoration: inherit;">Metadata</a>
@@ -766,8 +720,7 @@ locations.
         <span class="property-type">map[string]interface{}</span>
     </dt>
     <dd>{{% md %}}See Argument Reference above.
-{{% /md %}}</dd>
-    <dt class="property-"
+{{% /md %}}</dd><dt class="property-"
             title="">
         <span id="name_go">
 <a href="#name_go" style="color: inherit; text-decoration: inherit;">Name</a>
@@ -776,8 +729,7 @@ locations.
         <span class="property-type">string</span>
     </dt>
     <dd>{{% md %}}See Argument Reference above.
-{{% /md %}}</dd>
-    <dt class="property-"
+{{% /md %}}</dd><dt class="property-"
             title="">
         <span id="projectid_go">
 <a href="#projectid_go" style="color: inherit; text-decoration: inherit;">Project<wbr>Id</a>
@@ -786,8 +738,7 @@ locations.
         <span class="property-type">string</span>
     </dt>
     <dd>{{% md %}}See Argument Reference above.
-{{% /md %}}</dd>
-    <dt class="property-"
+{{% /md %}}</dd><dt class="property-"
             title="">
         <span id="region_go">
 <a href="#region_go" style="color: inherit; text-decoration: inherit;">Region</a>
@@ -796,8 +747,7 @@ locations.
         <span class="property-type">string</span>
     </dt>
     <dd>{{% md %}}The region in which to obtain the V2 Shared File System client.
-{{% /md %}}</dd>
-    <dt class="property-"
+{{% /md %}}</dd><dt class="property-"
             title="">
         <span id="sharenetworkid_go">
 <a href="#sharenetworkid_go" style="color: inherit; text-decoration: inherit;">Share<wbr>Network<wbr>Id</a>
@@ -806,8 +756,7 @@ locations.
         <span class="property-type">string</span>
     </dt>
     <dd>{{% md %}}See Argument Reference above.
-{{% /md %}}</dd>
-    <dt class="property-"
+{{% /md %}}</dd><dt class="property-"
             title="">
         <span id="shareproto_go">
 <a href="#shareproto_go" style="color: inherit; text-decoration: inherit;">Share<wbr>Proto</a>
@@ -816,8 +765,7 @@ locations.
         <span class="property-type">string</span>
     </dt>
     <dd>{{% md %}}The share protocol.
-{{% /md %}}</dd>
-    <dt class="property-"
+{{% /md %}}</dd><dt class="property-"
             title="">
         <span id="size_go">
 <a href="#size_go" style="color: inherit; text-decoration: inherit;">Size</a>
@@ -826,8 +774,7 @@ locations.
         <span class="property-type">int</span>
     </dt>
     <dd>{{% md %}}The share size, in GBs.
-{{% /md %}}</dd>
-    <dt class="property-"
+{{% /md %}}</dd><dt class="property-"
             title="">
         <span id="snapshotid_go">
 <a href="#snapshotid_go" style="color: inherit; text-decoration: inherit;">Snapshot<wbr>Id</a>
@@ -836,8 +783,7 @@ locations.
         <span class="property-type">string</span>
     </dt>
     <dd>{{% md %}}See Argument Reference above.
-{{% /md %}}</dd>
-    <dt class="property-"
+{{% /md %}}</dd><dt class="property-"
             title="">
         <span id="status_go">
 <a href="#status_go" style="color: inherit; text-decoration: inherit;">Status</a>
@@ -846,8 +792,7 @@ locations.
         <span class="property-type">string</span>
     </dt>
     <dd>{{% md %}}See Argument Reference above.
-{{% /md %}}</dd>
-    <dt class="property-"
+{{% /md %}}</dd><dt class="property-"
             title="">
         <span id="exportlocationpath_go">
 <a href="#exportlocationpath_go" style="color: inherit; text-decoration: inherit;">Export<wbr>Location<wbr>Path</a>
@@ -856,14 +801,11 @@ locations.
         <span class="property-type">string</span>
     </dt>
     <dd>{{% md %}}See Argument Reference above.
-{{% /md %}}</dd>
-</dl>
+{{% /md %}}</dd></dl>
 {{% /choosable %}}
 
 {{% choosable language nodejs %}}
-<dl class="resources-properties">
-
-    <dt class="property-"
+<dl class="resources-properties"><dt class="property-"
             title="">
         <span id="availabilityzone_nodejs">
 <a href="#availabilityzone_nodejs" style="color: inherit; text-decoration: inherit;">availability<wbr>Zone</a>
@@ -872,8 +814,7 @@ locations.
         <span class="property-type">string</span>
     </dt>
     <dd>{{% md %}}The share availability zone.
-{{% /md %}}</dd>
-    <dt class="property-"
+{{% /md %}}</dd><dt class="property-"
             title="">
         <span id="description_nodejs">
 <a href="#description_nodejs" style="color: inherit; text-decoration: inherit;">description</a>
@@ -882,8 +823,7 @@ locations.
         <span class="property-type">string</span>
     </dt>
     <dd>{{% md %}}See Argument Reference above.
-{{% /md %}}</dd>
-    <dt class="property-"
+{{% /md %}}</dd><dt class="property-"
             title="">
         <span id="exportlocations_nodejs">
 <a href="#exportlocations_nodejs" style="color: inherit; text-decoration: inherit;">export<wbr>Locations</a>
@@ -894,8 +834,7 @@ locations.
     <dd>{{% md %}}A list of export locations. For example, when a share
 server has more than one network interface, it can have multiple export
 locations.
-{{% /md %}}</dd>
-    <dt class="property-"
+{{% /md %}}</dd><dt class="property-"
             title="">
         <span id="id_nodejs">
 <a href="#id_nodejs" style="color: inherit; text-decoration: inherit;">id</a>
@@ -904,8 +843,7 @@ locations.
         <span class="property-type">string</span>
     </dt>
     <dd>{{% md %}}The provider-assigned unique ID for this managed resource.
-{{% /md %}}</dd>
-    <dt class="property-"
+{{% /md %}}</dd><dt class="property-"
             title="">
         <span id="ispublic_nodejs">
 <a href="#ispublic_nodejs" style="color: inherit; text-decoration: inherit;">is<wbr>Public</a>
@@ -914,8 +852,7 @@ locations.
         <span class="property-type">boolean</span>
     </dt>
     <dd>{{% md %}}See Argument Reference above.
-{{% /md %}}</dd>
-    <dt class="property-"
+{{% /md %}}</dd><dt class="property-"
             title="">
         <span id="metadata_nodejs">
 <a href="#metadata_nodejs" style="color: inherit; text-decoration: inherit;">metadata</a>
@@ -924,8 +861,7 @@ locations.
         <span class="property-type">{[key: string]: any}</span>
     </dt>
     <dd>{{% md %}}See Argument Reference above.
-{{% /md %}}</dd>
-    <dt class="property-"
+{{% /md %}}</dd><dt class="property-"
             title="">
         <span id="name_nodejs">
 <a href="#name_nodejs" style="color: inherit; text-decoration: inherit;">name</a>
@@ -934,8 +870,7 @@ locations.
         <span class="property-type">string</span>
     </dt>
     <dd>{{% md %}}See Argument Reference above.
-{{% /md %}}</dd>
-    <dt class="property-"
+{{% /md %}}</dd><dt class="property-"
             title="">
         <span id="projectid_nodejs">
 <a href="#projectid_nodejs" style="color: inherit; text-decoration: inherit;">project<wbr>Id</a>
@@ -944,8 +879,7 @@ locations.
         <span class="property-type">string</span>
     </dt>
     <dd>{{% md %}}See Argument Reference above.
-{{% /md %}}</dd>
-    <dt class="property-"
+{{% /md %}}</dd><dt class="property-"
             title="">
         <span id="region_nodejs">
 <a href="#region_nodejs" style="color: inherit; text-decoration: inherit;">region</a>
@@ -954,8 +888,7 @@ locations.
         <span class="property-type">string</span>
     </dt>
     <dd>{{% md %}}The region in which to obtain the V2 Shared File System client.
-{{% /md %}}</dd>
-    <dt class="property-"
+{{% /md %}}</dd><dt class="property-"
             title="">
         <span id="sharenetworkid_nodejs">
 <a href="#sharenetworkid_nodejs" style="color: inherit; text-decoration: inherit;">share<wbr>Network<wbr>Id</a>
@@ -964,8 +897,7 @@ locations.
         <span class="property-type">string</span>
     </dt>
     <dd>{{% md %}}See Argument Reference above.
-{{% /md %}}</dd>
-    <dt class="property-"
+{{% /md %}}</dd><dt class="property-"
             title="">
         <span id="shareproto_nodejs">
 <a href="#shareproto_nodejs" style="color: inherit; text-decoration: inherit;">share<wbr>Proto</a>
@@ -974,8 +906,7 @@ locations.
         <span class="property-type">string</span>
     </dt>
     <dd>{{% md %}}The share protocol.
-{{% /md %}}</dd>
-    <dt class="property-"
+{{% /md %}}</dd><dt class="property-"
             title="">
         <span id="size_nodejs">
 <a href="#size_nodejs" style="color: inherit; text-decoration: inherit;">size</a>
@@ -984,8 +915,7 @@ locations.
         <span class="property-type">number</span>
     </dt>
     <dd>{{% md %}}The share size, in GBs.
-{{% /md %}}</dd>
-    <dt class="property-"
+{{% /md %}}</dd><dt class="property-"
             title="">
         <span id="snapshotid_nodejs">
 <a href="#snapshotid_nodejs" style="color: inherit; text-decoration: inherit;">snapshot<wbr>Id</a>
@@ -994,8 +924,7 @@ locations.
         <span class="property-type">string</span>
     </dt>
     <dd>{{% md %}}See Argument Reference above.
-{{% /md %}}</dd>
-    <dt class="property-"
+{{% /md %}}</dd><dt class="property-"
             title="">
         <span id="status_nodejs">
 <a href="#status_nodejs" style="color: inherit; text-decoration: inherit;">status</a>
@@ -1004,8 +933,7 @@ locations.
         <span class="property-type">string</span>
     </dt>
     <dd>{{% md %}}See Argument Reference above.
-{{% /md %}}</dd>
-    <dt class="property-"
+{{% /md %}}</dd><dt class="property-"
             title="">
         <span id="exportlocationpath_nodejs">
 <a href="#exportlocationpath_nodejs" style="color: inherit; text-decoration: inherit;">export<wbr>Location<wbr>Path</a>
@@ -1014,14 +942,11 @@ locations.
         <span class="property-type">string</span>
     </dt>
     <dd>{{% md %}}See Argument Reference above.
-{{% /md %}}</dd>
-</dl>
+{{% /md %}}</dd></dl>
 {{% /choosable %}}
 
 {{% choosable language python %}}
-<dl class="resources-properties">
-
-    <dt class="property-"
+<dl class="resources-properties"><dt class="property-"
             title="">
         <span id="availability_zone_python">
 <a href="#availability_zone_python" style="color: inherit; text-decoration: inherit;">availability_<wbr>zone</a>
@@ -1030,8 +955,7 @@ locations.
         <span class="property-type">str</span>
     </dt>
     <dd>{{% md %}}The share availability zone.
-{{% /md %}}</dd>
-    <dt class="property-"
+{{% /md %}}</dd><dt class="property-"
             title="">
         <span id="description_python">
 <a href="#description_python" style="color: inherit; text-decoration: inherit;">description</a>
@@ -1040,8 +964,7 @@ locations.
         <span class="property-type">str</span>
     </dt>
     <dd>{{% md %}}See Argument Reference above.
-{{% /md %}}</dd>
-    <dt class="property-"
+{{% /md %}}</dd><dt class="property-"
             title="">
         <span id="export_locations_python">
 <a href="#export_locations_python" style="color: inherit; text-decoration: inherit;">export_<wbr>locations</a>
@@ -1052,8 +975,7 @@ locations.
     <dd>{{% md %}}A list of export locations. For example, when a share
 server has more than one network interface, it can have multiple export
 locations.
-{{% /md %}}</dd>
-    <dt class="property-"
+{{% /md %}}</dd><dt class="property-"
             title="">
         <span id="id_python">
 <a href="#id_python" style="color: inherit; text-decoration: inherit;">id</a>
@@ -1062,8 +984,7 @@ locations.
         <span class="property-type">str</span>
     </dt>
     <dd>{{% md %}}The provider-assigned unique ID for this managed resource.
-{{% /md %}}</dd>
-    <dt class="property-"
+{{% /md %}}</dd><dt class="property-"
             title="">
         <span id="is_public_python">
 <a href="#is_public_python" style="color: inherit; text-decoration: inherit;">is_<wbr>public</a>
@@ -1072,8 +993,7 @@ locations.
         <span class="property-type">bool</span>
     </dt>
     <dd>{{% md %}}See Argument Reference above.
-{{% /md %}}</dd>
-    <dt class="property-"
+{{% /md %}}</dd><dt class="property-"
             title="">
         <span id="metadata_python">
 <a href="#metadata_python" style="color: inherit; text-decoration: inherit;">metadata</a>
@@ -1082,8 +1002,7 @@ locations.
         <span class="property-type">Mapping[str, Any]</span>
     </dt>
     <dd>{{% md %}}See Argument Reference above.
-{{% /md %}}</dd>
-    <dt class="property-"
+{{% /md %}}</dd><dt class="property-"
             title="">
         <span id="name_python">
 <a href="#name_python" style="color: inherit; text-decoration: inherit;">name</a>
@@ -1092,8 +1011,7 @@ locations.
         <span class="property-type">str</span>
     </dt>
     <dd>{{% md %}}See Argument Reference above.
-{{% /md %}}</dd>
-    <dt class="property-"
+{{% /md %}}</dd><dt class="property-"
             title="">
         <span id="project_id_python">
 <a href="#project_id_python" style="color: inherit; text-decoration: inherit;">project_<wbr>id</a>
@@ -1102,8 +1020,7 @@ locations.
         <span class="property-type">str</span>
     </dt>
     <dd>{{% md %}}See Argument Reference above.
-{{% /md %}}</dd>
-    <dt class="property-"
+{{% /md %}}</dd><dt class="property-"
             title="">
         <span id="region_python">
 <a href="#region_python" style="color: inherit; text-decoration: inherit;">region</a>
@@ -1112,8 +1029,7 @@ locations.
         <span class="property-type">str</span>
     </dt>
     <dd>{{% md %}}The region in which to obtain the V2 Shared File System client.
-{{% /md %}}</dd>
-    <dt class="property-"
+{{% /md %}}</dd><dt class="property-"
             title="">
         <span id="share_network_id_python">
 <a href="#share_network_id_python" style="color: inherit; text-decoration: inherit;">share_<wbr>network_<wbr>id</a>
@@ -1122,8 +1038,7 @@ locations.
         <span class="property-type">str</span>
     </dt>
     <dd>{{% md %}}See Argument Reference above.
-{{% /md %}}</dd>
-    <dt class="property-"
+{{% /md %}}</dd><dt class="property-"
             title="">
         <span id="share_proto_python">
 <a href="#share_proto_python" style="color: inherit; text-decoration: inherit;">share_<wbr>proto</a>
@@ -1132,8 +1047,7 @@ locations.
         <span class="property-type">str</span>
     </dt>
     <dd>{{% md %}}The share protocol.
-{{% /md %}}</dd>
-    <dt class="property-"
+{{% /md %}}</dd><dt class="property-"
             title="">
         <span id="size_python">
 <a href="#size_python" style="color: inherit; text-decoration: inherit;">size</a>
@@ -1142,8 +1056,7 @@ locations.
         <span class="property-type">int</span>
     </dt>
     <dd>{{% md %}}The share size, in GBs.
-{{% /md %}}</dd>
-    <dt class="property-"
+{{% /md %}}</dd><dt class="property-"
             title="">
         <span id="snapshot_id_python">
 <a href="#snapshot_id_python" style="color: inherit; text-decoration: inherit;">snapshot_<wbr>id</a>
@@ -1152,8 +1065,7 @@ locations.
         <span class="property-type">str</span>
     </dt>
     <dd>{{% md %}}See Argument Reference above.
-{{% /md %}}</dd>
-    <dt class="property-"
+{{% /md %}}</dd><dt class="property-"
             title="">
         <span id="status_python">
 <a href="#status_python" style="color: inherit; text-decoration: inherit;">status</a>
@@ -1162,8 +1074,7 @@ locations.
         <span class="property-type">str</span>
     </dt>
     <dd>{{% md %}}See Argument Reference above.
-{{% /md %}}</dd>
-    <dt class="property-"
+{{% /md %}}</dd><dt class="property-"
             title="">
         <span id="export_location_path_python">
 <a href="#export_location_path_python" style="color: inherit; text-decoration: inherit;">export_<wbr>location_<wbr>path</a>
@@ -1172,8 +1083,7 @@ locations.
         <span class="property-type">str</span>
     </dt>
     <dd>{{% md %}}See Argument Reference above.
-{{% /md %}}</dd>
-</dl>
+{{% /md %}}</dd></dl>
 {{% /choosable %}}
 
 
@@ -1187,9 +1097,7 @@ locations.
 
 
 {{% choosable language csharp %}}
-<dl class="resources-properties">
-
-    <dt class="property-required"
+<dl class="resources-properties"><dt class="property-required"
             title="Required">
         <span id="path_csharp">
 <a href="#path_csharp" style="color: inherit; text-decoration: inherit;">Path</a>
@@ -1197,8 +1105,7 @@ locations.
         <span class="property-indicator"></span>
         <span class="property-type">string</span>
     </dt>
-    <dd>{{% md %}}{{% /md %}}</dd>
-    <dt class="property-required"
+    <dd>{{% md %}}{{% /md %}}</dd><dt class="property-required"
             title="Required">
         <span id="preferred_csharp">
 <a href="#preferred_csharp" style="color: inherit; text-decoration: inherit;">Preferred</a>
@@ -1206,14 +1113,11 @@ locations.
         <span class="property-indicator"></span>
         <span class="property-type">string</span>
     </dt>
-    <dd>{{% md %}}{{% /md %}}</dd>
-</dl>
+    <dd>{{% md %}}{{% /md %}}</dd></dl>
 {{% /choosable %}}
 
 {{% choosable language go %}}
-<dl class="resources-properties">
-
-    <dt class="property-required"
+<dl class="resources-properties"><dt class="property-required"
             title="Required">
         <span id="path_go">
 <a href="#path_go" style="color: inherit; text-decoration: inherit;">Path</a>
@@ -1221,8 +1125,7 @@ locations.
         <span class="property-indicator"></span>
         <span class="property-type">string</span>
     </dt>
-    <dd>{{% md %}}{{% /md %}}</dd>
-    <dt class="property-required"
+    <dd>{{% md %}}{{% /md %}}</dd><dt class="property-required"
             title="Required">
         <span id="preferred_go">
 <a href="#preferred_go" style="color: inherit; text-decoration: inherit;">Preferred</a>
@@ -1230,14 +1133,11 @@ locations.
         <span class="property-indicator"></span>
         <span class="property-type">string</span>
     </dt>
-    <dd>{{% md %}}{{% /md %}}</dd>
-</dl>
+    <dd>{{% md %}}{{% /md %}}</dd></dl>
 {{% /choosable %}}
 
 {{% choosable language nodejs %}}
-<dl class="resources-properties">
-
-    <dt class="property-required"
+<dl class="resources-properties"><dt class="property-required"
             title="Required">
         <span id="path_nodejs">
 <a href="#path_nodejs" style="color: inherit; text-decoration: inherit;">path</a>
@@ -1245,8 +1145,7 @@ locations.
         <span class="property-indicator"></span>
         <span class="property-type">string</span>
     </dt>
-    <dd>{{% md %}}{{% /md %}}</dd>
-    <dt class="property-required"
+    <dd>{{% md %}}{{% /md %}}</dd><dt class="property-required"
             title="Required">
         <span id="preferred_nodejs">
 <a href="#preferred_nodejs" style="color: inherit; text-decoration: inherit;">preferred</a>
@@ -1254,14 +1153,11 @@ locations.
         <span class="property-indicator"></span>
         <span class="property-type">string</span>
     </dt>
-    <dd>{{% md %}}{{% /md %}}</dd>
-</dl>
+    <dd>{{% md %}}{{% /md %}}</dd></dl>
 {{% /choosable %}}
 
 {{% choosable language python %}}
-<dl class="resources-properties">
-
-    <dt class="property-required"
+<dl class="resources-properties"><dt class="property-required"
             title="Required">
         <span id="path_python">
 <a href="#path_python" style="color: inherit; text-decoration: inherit;">path</a>
@@ -1269,8 +1165,7 @@ locations.
         <span class="property-indicator"></span>
         <span class="property-type">str</span>
     </dt>
-    <dd>{{% md %}}{{% /md %}}</dd>
-    <dt class="property-required"
+    <dd>{{% md %}}{{% /md %}}</dd><dt class="property-required"
             title="Required">
         <span id="preferred_python">
 <a href="#preferred_python" style="color: inherit; text-decoration: inherit;">preferred</a>
@@ -1278,8 +1173,7 @@ locations.
         <span class="property-indicator"></span>
         <span class="property-type">str</span>
     </dt>
-    <dd>{{% md %}}{{% /md %}}</dd>
-</dl>
+    <dd>{{% md %}}{{% /md %}}</dd></dl>
 {{% /choosable %}}
 
 
@@ -1293,6 +1187,6 @@ locations.
 	<dt>License</dt>
 	<dd>Apache-2.0</dd>
 	<dt>Notes</dt>
-	<dd>This Pulumi package is based on the [`openstack` Terraform Provider](https://github.com/terraform-provider-openstack/terraform-provider-openstack).</dd>
+	<dd>{{% md %}}This Pulumi package is based on the [`openstack` Terraform Provider](https://github.com/terraform-provider-openstack/terraform-provider-openstack).{{% /md %}}</dd>
 </dl>
 

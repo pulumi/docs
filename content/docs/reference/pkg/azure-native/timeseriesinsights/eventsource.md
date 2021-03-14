@@ -14,11 +14,17 @@ An environment receives data from one or more event sources. Each event source h
 API Version: 2020-05-15.
 
 {{% examples %}}
+
 ## Example Usage
 
 {{< chooser language "typescript,python,go,csharp" / >}}
+
+
 ### CreateEventHubEventSource
-{{% example csharp %}}
+
+
+{{< example csharp >}}
+
 ```csharp
 using Pulumi;
 using AzureNative = Pulumi.AzureNative;
@@ -41,9 +47,12 @@ class MyStack : Stack
 
 ```
 
-{{% /example %}}
 
-{{% example go %}}
+{{< /example >}}
+
+
+{{< example go >}}
+
 
 ```go
 package main
@@ -71,9 +80,12 @@ func main() {
 
 ```
 
-{{% /example %}}
 
-{{% example python %}}
+{{< /example >}}
+
+
+{{< example python >}}
+
 
 ```python
 import pulumi
@@ -88,9 +100,12 @@ event_source = azure_native.timeseriesinsights.EventSource("eventSource",
 
 ```
 
-{{% /example %}}
 
-{{% example typescript %}}
+{{< /example >}}
+
+
+{{< example typescript >}}
+
 
 ```typescript
 import * as pulumi from "@pulumi/pulumi";
@@ -106,9 +121,16 @@ const eventSource = new azure_native.timeseriesinsights.EventSource("eventSource
 
 ```
 
-{{% /example %}}
+
+{{< /example >}}
+
+
+
+
 
 {{% /examples %}}
+
+
 
 
 ## Create a EventSource Resource {#create}
@@ -133,9 +155,7 @@ const eventSource = new azure_native.timeseriesinsights.EventSource("eventSource
 
 {{% choosable language nodejs %}}
 
-<dl class="resources-properties">
-  
-    <dt
+<dl class="resources-properties"><dt
         class="property-required" title="Required">
         <span>name</span>
         <span class="property-indicator"></span>
@@ -143,9 +163,7 @@ const eventSource = new azure_native.timeseriesinsights.EventSource("eventSource
     </dt>
     <dd>
       The unique name of the resource.
-    </dd>
-  
-    <dt
+    </dd><dt
         class="property-required" title="Required">
         <span>args</span>
         <span class="property-indicator"></span>
@@ -153,9 +171,7 @@ const eventSource = new azure_native.timeseriesinsights.EventSource("eventSource
     </dt>
     <dd>
       The arguments to resource properties.
-    </dd>
-  
-    <dt
+    </dd><dt
         class="property-optional" title="Optional">
         <span>opts</span>
         <span class="property-indicator"></span>
@@ -163,10 +179,7 @@ const eventSource = new azure_native.timeseriesinsights.EventSource("eventSource
     </dt>
     <dd>
       Bag of options to control resource&#39;s behavior.
-    </dd>
-  
-
-</dl>
+    </dd></dl>
 
 {{% /choosable %}}
 
@@ -192,9 +205,7 @@ const eventSource = new azure_native.timeseriesinsights.EventSource("eventSource
 
 {{% choosable language go %}}
 
-<dl class="resources-properties">
-  
-    <dt
+<dl class="resources-properties"><dt
         class="property-optional" title="Optional">
         <span>ctx</span>
         <span class="property-indicator"></span>
@@ -202,9 +213,7 @@ const eventSource = new azure_native.timeseriesinsights.EventSource("eventSource
     </dt>
     <dd>
       Context object for the current deployment.
-    </dd>
-  
-    <dt
+    </dd><dt
         class="property-required" title="Required">
         <span>name</span>
         <span class="property-indicator"></span>
@@ -212,9 +221,7 @@ const eventSource = new azure_native.timeseriesinsights.EventSource("eventSource
     </dt>
     <dd>
       The unique name of the resource.
-    </dd>
-  
-    <dt
+    </dd><dt
         class="property-required" title="Required">
         <span>args</span>
         <span class="property-indicator"></span>
@@ -222,9 +229,7 @@ const eventSource = new azure_native.timeseriesinsights.EventSource("eventSource
     </dt>
     <dd>
       The arguments to resource properties.
-    </dd>
-  
-    <dt
+    </dd><dt
         class="property-optional" title="Optional">
         <span>opts</span>
         <span class="property-indicator"></span>
@@ -232,18 +237,13 @@ const eventSource = new azure_native.timeseriesinsights.EventSource("eventSource
     </dt>
     <dd>
       Bag of options to control resource&#39;s behavior.
-    </dd>
-  
-
-</dl>
+    </dd></dl>
 
 {{% /choosable %}}
 
 {{% choosable language csharp %}}
 
-<dl class="resources-properties">
-  
-    <dt
+<dl class="resources-properties"><dt
         class="property-required" title="Required">
         <span>name</span>
         <span class="property-indicator"></span>
@@ -251,9 +251,7 @@ const eventSource = new azure_native.timeseriesinsights.EventSource("eventSource
     </dt>
     <dd>
       The unique name of the resource.
-    </dd>
-  
-    <dt
+    </dd><dt
         class="property-required" title="Required">
         <span>args</span>
         <span class="property-indicator"></span>
@@ -261,9 +259,7 @@ const eventSource = new azure_native.timeseriesinsights.EventSource("eventSource
     </dt>
     <dd>
       The arguments to resource properties.
-    </dd>
-  
-    <dt
+    </dd><dt
         class="property-optional" title="Optional">
         <span>opts</span>
         <span class="property-indicator"></span>
@@ -271,10 +267,7 @@ const eventSource = new azure_native.timeseriesinsights.EventSource("eventSource
     </dt>
     <dd>
       Bag of options to control resource&#39;s behavior.
-    </dd>
-  
-
-</dl>
+    </dd></dl>
 
 {{% /choosable %}}
 
@@ -289,9 +282,7 @@ The EventSource resource accepts the following [input]({{< relref "/docs/intro/c
 
 
 {{% choosable language csharp %}}
-<dl class="resources-properties">
-
-    <dt class="property-required"
+<dl class="resources-properties"><dt class="property-required"
             title="Required">
         <span id="environmentname_csharp">
 <a href="#environmentname_csharp" style="color: inherit; text-decoration: inherit;">Environment<wbr>Name</a>
@@ -299,8 +290,7 @@ The EventSource resource accepts the following [input]({{< relref "/docs/intro/c
         <span class="property-indicator"></span>
         <span class="property-type">string</span>
     </dt>
-    <dd>{{% md %}}The name of the Time Series Insights environment associated with the specified resource group.{{% /md %}}</dd>
-    <dt class="property-required"
+    <dd>{{% md %}}The name of the Time Series Insights environment associated with the specified resource group.{{% /md %}}</dd><dt class="property-required"
             title="Required">
         <span id="kind_csharp">
 <a href="#kind_csharp" style="color: inherit; text-decoration: inherit;">Kind</a>
@@ -308,8 +298,7 @@ The EventSource resource accepts the following [input]({{< relref "/docs/intro/c
         <span class="property-indicator"></span>
         <span class="property-type">string | <a href="#eventsourcekind">Pulumi.<wbr>Azure<wbr>Native.<wbr>Time<wbr>Series<wbr>Insights.<wbr>Event<wbr>Source<wbr>Kind</a></span>
     </dt>
-    <dd>{{% md %}}The kind of the event source.{{% /md %}}</dd>
-    <dt class="property-required"
+    <dd>{{% md %}}The kind of the event source.{{% /md %}}</dd><dt class="property-required"
             title="Required">
         <span id="resourcegroupname_csharp">
 <a href="#resourcegroupname_csharp" style="color: inherit; text-decoration: inherit;">Resource<wbr>Group<wbr>Name</a>
@@ -317,8 +306,7 @@ The EventSource resource accepts the following [input]({{< relref "/docs/intro/c
         <span class="property-indicator"></span>
         <span class="property-type">string</span>
     </dt>
-    <dd>{{% md %}}Name of an Azure Resource group.{{% /md %}}</dd>
-    <dt class="property-optional"
+    <dd>{{% md %}}Name of an Azure Resource group.{{% /md %}}</dd><dt class="property-optional"
             title="Optional">
         <span id="eventsourcename_csharp">
 <a href="#eventsourcename_csharp" style="color: inherit; text-decoration: inherit;">Event<wbr>Source<wbr>Name</a>
@@ -326,8 +314,7 @@ The EventSource resource accepts the following [input]({{< relref "/docs/intro/c
         <span class="property-indicator"></span>
         <span class="property-type">string</span>
     </dt>
-    <dd>{{% md %}}Name of the event source.{{% /md %}}</dd>
-    <dt class="property-optional"
+    <dd>{{% md %}}Name of the event source.{{% /md %}}</dd><dt class="property-optional"
             title="Optional">
         <span id="localtimestamp_csharp">
 <a href="#localtimestamp_csharp" style="color: inherit; text-decoration: inherit;">Local<wbr>Timestamp</a>
@@ -335,8 +322,7 @@ The EventSource resource accepts the following [input]({{< relref "/docs/intro/c
         <span class="property-indicator"></span>
         <span class="property-type"><a href="#localtimestamp">Pulumi.<wbr>Azure<wbr>Native.<wbr>Time<wbr>Series<wbr>Insights.<wbr>Inputs.<wbr>Local<wbr>Timestamp<wbr>Args</a></span>
     </dt>
-    <dd>{{% md %}}An object that represents the local timestamp property. It contains the format of local timestamp that needs to be used and the corresponding timezone offset information. If a value isn't specified for localTimestamp, or if null, then the local timestamp will not be ingressed with the events.{{% /md %}}</dd>
-    <dt class="property-optional"
+    <dd>{{% md %}}An object that represents the local timestamp property. It contains the format of local timestamp that needs to be used and the corresponding timezone offset information. If a value isn't specified for localTimestamp, or if null, then the local timestamp will not be ingressed with the events.{{% /md %}}</dd><dt class="property-optional"
             title="Optional">
         <span id="location_csharp">
 <a href="#location_csharp" style="color: inherit; text-decoration: inherit;">Location</a>
@@ -344,8 +330,7 @@ The EventSource resource accepts the following [input]({{< relref "/docs/intro/c
         <span class="property-indicator"></span>
         <span class="property-type">string</span>
     </dt>
-    <dd>{{% md %}}The location of the resource.{{% /md %}}</dd>
-    <dt class="property-optional"
+    <dd>{{% md %}}The location of the resource.{{% /md %}}</dd><dt class="property-optional"
             title="Optional">
         <span id="tags_csharp">
 <a href="#tags_csharp" style="color: inherit; text-decoration: inherit;">Tags</a>
@@ -353,14 +338,11 @@ The EventSource resource accepts the following [input]({{< relref "/docs/intro/c
         <span class="property-indicator"></span>
         <span class="property-type">Dictionary&lt;string, string&gt;</span>
     </dt>
-    <dd>{{% md %}}Key-value pairs of additional properties for the resource.{{% /md %}}</dd>
-</dl>
+    <dd>{{% md %}}Key-value pairs of additional properties for the resource.{{% /md %}}</dd></dl>
 {{% /choosable %}}
 
 {{% choosable language go %}}
-<dl class="resources-properties">
-
-    <dt class="property-required"
+<dl class="resources-properties"><dt class="property-required"
             title="Required">
         <span id="environmentname_go">
 <a href="#environmentname_go" style="color: inherit; text-decoration: inherit;">Environment<wbr>Name</a>
@@ -368,8 +350,7 @@ The EventSource resource accepts the following [input]({{< relref "/docs/intro/c
         <span class="property-indicator"></span>
         <span class="property-type">string</span>
     </dt>
-    <dd>{{% md %}}The name of the Time Series Insights environment associated with the specified resource group.{{% /md %}}</dd>
-    <dt class="property-required"
+    <dd>{{% md %}}The name of the Time Series Insights environment associated with the specified resource group.{{% /md %}}</dd><dt class="property-required"
             title="Required">
         <span id="kind_go">
 <a href="#kind_go" style="color: inherit; text-decoration: inherit;">Kind</a>
@@ -377,8 +358,7 @@ The EventSource resource accepts the following [input]({{< relref "/docs/intro/c
         <span class="property-indicator"></span>
         <span class="property-type">string | <a href="#eventsourcekind">Event<wbr>Source<wbr>Kind</a></span>
     </dt>
-    <dd>{{% md %}}The kind of the event source.{{% /md %}}</dd>
-    <dt class="property-required"
+    <dd>{{% md %}}The kind of the event source.{{% /md %}}</dd><dt class="property-required"
             title="Required">
         <span id="resourcegroupname_go">
 <a href="#resourcegroupname_go" style="color: inherit; text-decoration: inherit;">Resource<wbr>Group<wbr>Name</a>
@@ -386,8 +366,7 @@ The EventSource resource accepts the following [input]({{< relref "/docs/intro/c
         <span class="property-indicator"></span>
         <span class="property-type">string</span>
     </dt>
-    <dd>{{% md %}}Name of an Azure Resource group.{{% /md %}}</dd>
-    <dt class="property-optional"
+    <dd>{{% md %}}Name of an Azure Resource group.{{% /md %}}</dd><dt class="property-optional"
             title="Optional">
         <span id="eventsourcename_go">
 <a href="#eventsourcename_go" style="color: inherit; text-decoration: inherit;">Event<wbr>Source<wbr>Name</a>
@@ -395,8 +374,7 @@ The EventSource resource accepts the following [input]({{< relref "/docs/intro/c
         <span class="property-indicator"></span>
         <span class="property-type">string</span>
     </dt>
-    <dd>{{% md %}}Name of the event source.{{% /md %}}</dd>
-    <dt class="property-optional"
+    <dd>{{% md %}}Name of the event source.{{% /md %}}</dd><dt class="property-optional"
             title="Optional">
         <span id="localtimestamp_go">
 <a href="#localtimestamp_go" style="color: inherit; text-decoration: inherit;">Local<wbr>Timestamp</a>
@@ -404,8 +382,7 @@ The EventSource resource accepts the following [input]({{< relref "/docs/intro/c
         <span class="property-indicator"></span>
         <span class="property-type"><a href="#localtimestamp">Local<wbr>Timestamp</a></span>
     </dt>
-    <dd>{{% md %}}An object that represents the local timestamp property. It contains the format of local timestamp that needs to be used and the corresponding timezone offset information. If a value isn't specified for localTimestamp, or if null, then the local timestamp will not be ingressed with the events.{{% /md %}}</dd>
-    <dt class="property-optional"
+    <dd>{{% md %}}An object that represents the local timestamp property. It contains the format of local timestamp that needs to be used and the corresponding timezone offset information. If a value isn't specified for localTimestamp, or if null, then the local timestamp will not be ingressed with the events.{{% /md %}}</dd><dt class="property-optional"
             title="Optional">
         <span id="location_go">
 <a href="#location_go" style="color: inherit; text-decoration: inherit;">Location</a>
@@ -413,8 +390,7 @@ The EventSource resource accepts the following [input]({{< relref "/docs/intro/c
         <span class="property-indicator"></span>
         <span class="property-type">string</span>
     </dt>
-    <dd>{{% md %}}The location of the resource.{{% /md %}}</dd>
-    <dt class="property-optional"
+    <dd>{{% md %}}The location of the resource.{{% /md %}}</dd><dt class="property-optional"
             title="Optional">
         <span id="tags_go">
 <a href="#tags_go" style="color: inherit; text-decoration: inherit;">Tags</a>
@@ -422,14 +398,11 @@ The EventSource resource accepts the following [input]({{< relref "/docs/intro/c
         <span class="property-indicator"></span>
         <span class="property-type">map[string]string</span>
     </dt>
-    <dd>{{% md %}}Key-value pairs of additional properties for the resource.{{% /md %}}</dd>
-</dl>
+    <dd>{{% md %}}Key-value pairs of additional properties for the resource.{{% /md %}}</dd></dl>
 {{% /choosable %}}
 
 {{% choosable language nodejs %}}
-<dl class="resources-properties">
-
-    <dt class="property-required"
+<dl class="resources-properties"><dt class="property-required"
             title="Required">
         <span id="environmentname_nodejs">
 <a href="#environmentname_nodejs" style="color: inherit; text-decoration: inherit;">environment<wbr>Name</a>
@@ -437,8 +410,7 @@ The EventSource resource accepts the following [input]({{< relref "/docs/intro/c
         <span class="property-indicator"></span>
         <span class="property-type">string</span>
     </dt>
-    <dd>{{% md %}}The name of the Time Series Insights environment associated with the specified resource group.{{% /md %}}</dd>
-    <dt class="property-required"
+    <dd>{{% md %}}The name of the Time Series Insights environment associated with the specified resource group.{{% /md %}}</dd><dt class="property-required"
             title="Required">
         <span id="kind_nodejs">
 <a href="#kind_nodejs" style="color: inherit; text-decoration: inherit;">kind</a>
@@ -446,8 +418,7 @@ The EventSource resource accepts the following [input]({{< relref "/docs/intro/c
         <span class="property-indicator"></span>
         <span class="property-type">string | <a href="#eventsourcekind">Event<wbr>Source<wbr>Kind</a></span>
     </dt>
-    <dd>{{% md %}}The kind of the event source.{{% /md %}}</dd>
-    <dt class="property-required"
+    <dd>{{% md %}}The kind of the event source.{{% /md %}}</dd><dt class="property-required"
             title="Required">
         <span id="resourcegroupname_nodejs">
 <a href="#resourcegroupname_nodejs" style="color: inherit; text-decoration: inherit;">resource<wbr>Group<wbr>Name</a>
@@ -455,8 +426,7 @@ The EventSource resource accepts the following [input]({{< relref "/docs/intro/c
         <span class="property-indicator"></span>
         <span class="property-type">string</span>
     </dt>
-    <dd>{{% md %}}Name of an Azure Resource group.{{% /md %}}</dd>
-    <dt class="property-optional"
+    <dd>{{% md %}}Name of an Azure Resource group.{{% /md %}}</dd><dt class="property-optional"
             title="Optional">
         <span id="eventsourcename_nodejs">
 <a href="#eventsourcename_nodejs" style="color: inherit; text-decoration: inherit;">event<wbr>Source<wbr>Name</a>
@@ -464,8 +434,7 @@ The EventSource resource accepts the following [input]({{< relref "/docs/intro/c
         <span class="property-indicator"></span>
         <span class="property-type">string</span>
     </dt>
-    <dd>{{% md %}}Name of the event source.{{% /md %}}</dd>
-    <dt class="property-optional"
+    <dd>{{% md %}}Name of the event source.{{% /md %}}</dd><dt class="property-optional"
             title="Optional">
         <span id="localtimestamp_nodejs">
 <a href="#localtimestamp_nodejs" style="color: inherit; text-decoration: inherit;">local<wbr>Timestamp</a>
@@ -473,8 +442,7 @@ The EventSource resource accepts the following [input]({{< relref "/docs/intro/c
         <span class="property-indicator"></span>
         <span class="property-type"><a href="#localtimestamp">Local<wbr>Timestamp</a></span>
     </dt>
-    <dd>{{% md %}}An object that represents the local timestamp property. It contains the format of local timestamp that needs to be used and the corresponding timezone offset information. If a value isn't specified for localTimestamp, or if null, then the local timestamp will not be ingressed with the events.{{% /md %}}</dd>
-    <dt class="property-optional"
+    <dd>{{% md %}}An object that represents the local timestamp property. It contains the format of local timestamp that needs to be used and the corresponding timezone offset information. If a value isn't specified for localTimestamp, or if null, then the local timestamp will not be ingressed with the events.{{% /md %}}</dd><dt class="property-optional"
             title="Optional">
         <span id="location_nodejs">
 <a href="#location_nodejs" style="color: inherit; text-decoration: inherit;">location</a>
@@ -482,8 +450,7 @@ The EventSource resource accepts the following [input]({{< relref "/docs/intro/c
         <span class="property-indicator"></span>
         <span class="property-type">string</span>
     </dt>
-    <dd>{{% md %}}The location of the resource.{{% /md %}}</dd>
-    <dt class="property-optional"
+    <dd>{{% md %}}The location of the resource.{{% /md %}}</dd><dt class="property-optional"
             title="Optional">
         <span id="tags_nodejs">
 <a href="#tags_nodejs" style="color: inherit; text-decoration: inherit;">tags</a>
@@ -491,14 +458,11 @@ The EventSource resource accepts the following [input]({{< relref "/docs/intro/c
         <span class="property-indicator"></span>
         <span class="property-type">{[key: string]: string}</span>
     </dt>
-    <dd>{{% md %}}Key-value pairs of additional properties for the resource.{{% /md %}}</dd>
-</dl>
+    <dd>{{% md %}}Key-value pairs of additional properties for the resource.{{% /md %}}</dd></dl>
 {{% /choosable %}}
 
 {{% choosable language python %}}
-<dl class="resources-properties">
-
-    <dt class="property-required"
+<dl class="resources-properties"><dt class="property-required"
             title="Required">
         <span id="environment_name_python">
 <a href="#environment_name_python" style="color: inherit; text-decoration: inherit;">environment_<wbr>name</a>
@@ -506,8 +470,7 @@ The EventSource resource accepts the following [input]({{< relref "/docs/intro/c
         <span class="property-indicator"></span>
         <span class="property-type">str</span>
     </dt>
-    <dd>{{% md %}}The name of the Time Series Insights environment associated with the specified resource group.{{% /md %}}</dd>
-    <dt class="property-required"
+    <dd>{{% md %}}The name of the Time Series Insights environment associated with the specified resource group.{{% /md %}}</dd><dt class="property-required"
             title="Required">
         <span id="kind_python">
 <a href="#kind_python" style="color: inherit; text-decoration: inherit;">kind</a>
@@ -515,8 +478,7 @@ The EventSource resource accepts the following [input]({{< relref "/docs/intro/c
         <span class="property-indicator"></span>
         <span class="property-type">str | <a href="#eventsourcekind">Event<wbr>Source<wbr>Kind</a></span>
     </dt>
-    <dd>{{% md %}}The kind of the event source.{{% /md %}}</dd>
-    <dt class="property-required"
+    <dd>{{% md %}}The kind of the event source.{{% /md %}}</dd><dt class="property-required"
             title="Required">
         <span id="resource_group_name_python">
 <a href="#resource_group_name_python" style="color: inherit; text-decoration: inherit;">resource_<wbr>group_<wbr>name</a>
@@ -524,8 +486,7 @@ The EventSource resource accepts the following [input]({{< relref "/docs/intro/c
         <span class="property-indicator"></span>
         <span class="property-type">str</span>
     </dt>
-    <dd>{{% md %}}Name of an Azure Resource group.{{% /md %}}</dd>
-    <dt class="property-optional"
+    <dd>{{% md %}}Name of an Azure Resource group.{{% /md %}}</dd><dt class="property-optional"
             title="Optional">
         <span id="event_source_name_python">
 <a href="#event_source_name_python" style="color: inherit; text-decoration: inherit;">event_<wbr>source_<wbr>name</a>
@@ -533,8 +494,7 @@ The EventSource resource accepts the following [input]({{< relref "/docs/intro/c
         <span class="property-indicator"></span>
         <span class="property-type">str</span>
     </dt>
-    <dd>{{% md %}}Name of the event source.{{% /md %}}</dd>
-    <dt class="property-optional"
+    <dd>{{% md %}}Name of the event source.{{% /md %}}</dd><dt class="property-optional"
             title="Optional">
         <span id="local_timestamp_python">
 <a href="#local_timestamp_python" style="color: inherit; text-decoration: inherit;">local_<wbr>timestamp</a>
@@ -542,8 +502,7 @@ The EventSource resource accepts the following [input]({{< relref "/docs/intro/c
         <span class="property-indicator"></span>
         <span class="property-type"><a href="#localtimestamp">Local<wbr>Timestamp<wbr>Args</a></span>
     </dt>
-    <dd>{{% md %}}An object that represents the local timestamp property. It contains the format of local timestamp that needs to be used and the corresponding timezone offset information. If a value isn't specified for localTimestamp, or if null, then the local timestamp will not be ingressed with the events.{{% /md %}}</dd>
-    <dt class="property-optional"
+    <dd>{{% md %}}An object that represents the local timestamp property. It contains the format of local timestamp that needs to be used and the corresponding timezone offset information. If a value isn't specified for localTimestamp, or if null, then the local timestamp will not be ingressed with the events.{{% /md %}}</dd><dt class="property-optional"
             title="Optional">
         <span id="location_python">
 <a href="#location_python" style="color: inherit; text-decoration: inherit;">location</a>
@@ -551,8 +510,7 @@ The EventSource resource accepts the following [input]({{< relref "/docs/intro/c
         <span class="property-indicator"></span>
         <span class="property-type">str</span>
     </dt>
-    <dd>{{% md %}}The location of the resource.{{% /md %}}</dd>
-    <dt class="property-optional"
+    <dd>{{% md %}}The location of the resource.{{% /md %}}</dd><dt class="property-optional"
             title="Optional">
         <span id="tags_python">
 <a href="#tags_python" style="color: inherit; text-decoration: inherit;">tags</a>
@@ -560,8 +518,7 @@ The EventSource resource accepts the following [input]({{< relref "/docs/intro/c
         <span class="property-indicator"></span>
         <span class="property-type">Mapping[str, str]</span>
     </dt>
-    <dd>{{% md %}}Key-value pairs of additional properties for the resource.{{% /md %}}</dd>
-</dl>
+    <dd>{{% md %}}Key-value pairs of additional properties for the resource.{{% /md %}}</dd></dl>
 {{% /choosable %}}
 
 
@@ -572,9 +529,7 @@ All [input](#inputs) properties are implicitly available as output properties. A
 
 
 {{% choosable language csharp %}}
-<dl class="resources-properties">
-
-    <dt class="property-"
+<dl class="resources-properties"><dt class="property-"
             title="">
         <span id="id_csharp">
 <a href="#id_csharp" style="color: inherit; text-decoration: inherit;">Id</a>
@@ -582,8 +537,7 @@ All [input](#inputs) properties are implicitly available as output properties. A
         <span class="property-indicator"></span>
         <span class="property-type">string</span>
     </dt>
-    <dd>{{% md %}}The provider-assigned unique ID for this managed resource.{{% /md %}}</dd>
-    <dt class="property-"
+    <dd>{{% md %}}The provider-assigned unique ID for this managed resource.{{% /md %}}</dd><dt class="property-"
             title="">
         <span id="name_csharp">
 <a href="#name_csharp" style="color: inherit; text-decoration: inherit;">Name</a>
@@ -591,8 +545,7 @@ All [input](#inputs) properties are implicitly available as output properties. A
         <span class="property-indicator"></span>
         <span class="property-type">string</span>
     </dt>
-    <dd>{{% md %}}Resource name{{% /md %}}</dd>
-    <dt class="property-"
+    <dd>{{% md %}}Resource name{{% /md %}}</dd><dt class="property-"
             title="">
         <span id="type_csharp">
 <a href="#type_csharp" style="color: inherit; text-decoration: inherit;">Type</a>
@@ -600,14 +553,11 @@ All [input](#inputs) properties are implicitly available as output properties. A
         <span class="property-indicator"></span>
         <span class="property-type">string</span>
     </dt>
-    <dd>{{% md %}}Resource type{{% /md %}}</dd>
-</dl>
+    <dd>{{% md %}}Resource type{{% /md %}}</dd></dl>
 {{% /choosable %}}
 
 {{% choosable language go %}}
-<dl class="resources-properties">
-
-    <dt class="property-"
+<dl class="resources-properties"><dt class="property-"
             title="">
         <span id="id_go">
 <a href="#id_go" style="color: inherit; text-decoration: inherit;">Id</a>
@@ -615,8 +565,7 @@ All [input](#inputs) properties are implicitly available as output properties. A
         <span class="property-indicator"></span>
         <span class="property-type">string</span>
     </dt>
-    <dd>{{% md %}}The provider-assigned unique ID for this managed resource.{{% /md %}}</dd>
-    <dt class="property-"
+    <dd>{{% md %}}The provider-assigned unique ID for this managed resource.{{% /md %}}</dd><dt class="property-"
             title="">
         <span id="name_go">
 <a href="#name_go" style="color: inherit; text-decoration: inherit;">Name</a>
@@ -624,8 +573,7 @@ All [input](#inputs) properties are implicitly available as output properties. A
         <span class="property-indicator"></span>
         <span class="property-type">string</span>
     </dt>
-    <dd>{{% md %}}Resource name{{% /md %}}</dd>
-    <dt class="property-"
+    <dd>{{% md %}}Resource name{{% /md %}}</dd><dt class="property-"
             title="">
         <span id="type_go">
 <a href="#type_go" style="color: inherit; text-decoration: inherit;">Type</a>
@@ -633,14 +581,11 @@ All [input](#inputs) properties are implicitly available as output properties. A
         <span class="property-indicator"></span>
         <span class="property-type">string</span>
     </dt>
-    <dd>{{% md %}}Resource type{{% /md %}}</dd>
-</dl>
+    <dd>{{% md %}}Resource type{{% /md %}}</dd></dl>
 {{% /choosable %}}
 
 {{% choosable language nodejs %}}
-<dl class="resources-properties">
-
-    <dt class="property-"
+<dl class="resources-properties"><dt class="property-"
             title="">
         <span id="id_nodejs">
 <a href="#id_nodejs" style="color: inherit; text-decoration: inherit;">id</a>
@@ -648,8 +593,7 @@ All [input](#inputs) properties are implicitly available as output properties. A
         <span class="property-indicator"></span>
         <span class="property-type">string</span>
     </dt>
-    <dd>{{% md %}}The provider-assigned unique ID for this managed resource.{{% /md %}}</dd>
-    <dt class="property-"
+    <dd>{{% md %}}The provider-assigned unique ID for this managed resource.{{% /md %}}</dd><dt class="property-"
             title="">
         <span id="name_nodejs">
 <a href="#name_nodejs" style="color: inherit; text-decoration: inherit;">name</a>
@@ -657,8 +601,7 @@ All [input](#inputs) properties are implicitly available as output properties. A
         <span class="property-indicator"></span>
         <span class="property-type">string</span>
     </dt>
-    <dd>{{% md %}}Resource name{{% /md %}}</dd>
-    <dt class="property-"
+    <dd>{{% md %}}Resource name{{% /md %}}</dd><dt class="property-"
             title="">
         <span id="type_nodejs">
 <a href="#type_nodejs" style="color: inherit; text-decoration: inherit;">type</a>
@@ -666,14 +609,11 @@ All [input](#inputs) properties are implicitly available as output properties. A
         <span class="property-indicator"></span>
         <span class="property-type">string</span>
     </dt>
-    <dd>{{% md %}}Resource type{{% /md %}}</dd>
-</dl>
+    <dd>{{% md %}}Resource type{{% /md %}}</dd></dl>
 {{% /choosable %}}
 
 {{% choosable language python %}}
-<dl class="resources-properties">
-
-    <dt class="property-"
+<dl class="resources-properties"><dt class="property-"
             title="">
         <span id="id_python">
 <a href="#id_python" style="color: inherit; text-decoration: inherit;">id</a>
@@ -681,8 +621,7 @@ All [input](#inputs) properties are implicitly available as output properties. A
         <span class="property-indicator"></span>
         <span class="property-type">str</span>
     </dt>
-    <dd>{{% md %}}The provider-assigned unique ID for this managed resource.{{% /md %}}</dd>
-    <dt class="property-"
+    <dd>{{% md %}}The provider-assigned unique ID for this managed resource.{{% /md %}}</dd><dt class="property-"
             title="">
         <span id="name_python">
 <a href="#name_python" style="color: inherit; text-decoration: inherit;">name</a>
@@ -690,8 +629,7 @@ All [input](#inputs) properties are implicitly available as output properties. A
         <span class="property-indicator"></span>
         <span class="property-type">str</span>
     </dt>
-    <dd>{{% md %}}Resource name{{% /md %}}</dd>
-    <dt class="property-"
+    <dd>{{% md %}}Resource name{{% /md %}}</dd><dt class="property-"
             title="">
         <span id="type_python">
 <a href="#type_python" style="color: inherit; text-decoration: inherit;">type</a>
@@ -699,8 +637,7 @@ All [input](#inputs) properties are implicitly available as output properties. A
         <span class="property-indicator"></span>
         <span class="property-type">str</span>
     </dt>
-    <dd>{{% md %}}Resource type{{% /md %}}</dd>
-</dl>
+    <dd>{{% md %}}Resource type{{% /md %}}</dd></dl>
 {{% /choosable %}}
 
 
@@ -716,47 +653,33 @@ All [input](#inputs) properties are implicitly available as output properties. A
 <h4 id="eventsourcekind">Event<wbr>Source<wbr>Kind</h4>
 
 {{% choosable language csharp %}}
-<dl class="tabular">
-    <dt>Microsoft_Event<wbr>Hub</dt>
-    <dd>Microsoft.EventHub</dd>
-    <dt>Microsoft_Io<wbr>THub</dt>
-    <dd>Microsoft.IoTHub</dd>
-</dl>
+<dl class="tabular"><dt>Microsoft_Event<wbr>Hub</dt>
+    <dd>Microsoft.EventHub</dd><dt>Microsoft_Io<wbr>THub</dt>
+    <dd>Microsoft.IoTHub</dd></dl>
 {{% /choosable %}}
 
 {{% choosable language go %}}
-<dl class="tabular">
-    <dt>Event<wbr>Source<wbr>Kind_Microsoft_Event<wbr>Hub</dt>
-    <dd>Microsoft.EventHub</dd>
-    <dt>Event<wbr>Source<wbr>Kind_Microsoft_Io<wbr>THub</dt>
-    <dd>Microsoft.IoTHub</dd>
-</dl>
+<dl class="tabular"><dt>Event<wbr>Source<wbr>Kind_Microsoft_Event<wbr>Hub</dt>
+    <dd>Microsoft.EventHub</dd><dt>Event<wbr>Source<wbr>Kind_Microsoft_Io<wbr>THub</dt>
+    <dd>Microsoft.IoTHub</dd></dl>
 {{% /choosable %}}
 
 {{% choosable language nodejs %}}
-<dl class="tabular">
-    <dt>Microsoft_Event<wbr>Hub</dt>
-    <dd>Microsoft.EventHub</dd>
-    <dt>Microsoft_Io<wbr>THub</dt>
-    <dd>Microsoft.IoTHub</dd>
-</dl>
+<dl class="tabular"><dt>Microsoft_Event<wbr>Hub</dt>
+    <dd>Microsoft.EventHub</dd><dt>Microsoft_Io<wbr>THub</dt>
+    <dd>Microsoft.IoTHub</dd></dl>
 {{% /choosable %}}
 
 {{% choosable language python %}}
-<dl class="tabular">
-    <dt>MICROSOFT_EVENT_HUB</dt>
-    <dd>Microsoft.EventHub</dd>
-    <dt>MICROSOFT_IO_T_HUB</dt>
-    <dd>Microsoft.IoTHub</dd>
-</dl>
+<dl class="tabular"><dt>MICROSOFT_EVENT_HUB</dt>
+    <dd>Microsoft.EventHub</dd><dt>MICROSOFT_IO_T_HUB</dt>
+    <dd>Microsoft.IoTHub</dd></dl>
 {{% /choosable %}}
 
 <h4 id="localtimestamp">Local<wbr>Timestamp</h4>
 
 {{% choosable language csharp %}}
-<dl class="resources-properties">
-
-    <dt class="property-optional"
+<dl class="resources-properties"><dt class="property-optional"
             title="Optional">
         <span id="format_csharp">
 <a href="#format_csharp" style="color: inherit; text-decoration: inherit;">Format</a>
@@ -764,8 +687,7 @@ All [input](#inputs) properties are implicitly available as output properties. A
         <span class="property-indicator"></span>
         <span class="property-type">string | <a href="#localtimestampformat">Pulumi.<wbr>Azure<wbr>Native.<wbr>Time<wbr>Series<wbr>Insights.<wbr>Local<wbr>Timestamp<wbr>Format</a></span>
     </dt>
-    <dd>{{% md %}}An enum that represents the format of the local timestamp property that needs to be set.{{% /md %}}</dd>
-    <dt class="property-optional"
+    <dd>{{% md %}}An enum that represents the format of the local timestamp property that needs to be set.{{% /md %}}</dd><dt class="property-optional"
             title="Optional">
         <span id="timezoneoffset_csharp">
 <a href="#timezoneoffset_csharp" style="color: inherit; text-decoration: inherit;">Time<wbr>Zone<wbr>Offset</a>
@@ -773,14 +695,11 @@ All [input](#inputs) properties are implicitly available as output properties. A
         <span class="property-indicator"></span>
         <span class="property-type"><a href="#localtimestamptimezoneoffset">Pulumi.<wbr>Azure<wbr>Native.<wbr>Time<wbr>Series<wbr>Insights.<wbr>Inputs.<wbr>Local<wbr>Timestamp<wbr>Time<wbr>Zone<wbr>Offset<wbr>Args</a></span>
     </dt>
-    <dd>{{% md %}}An object that represents the offset information for the local timestamp format specified. Should not be specified for LocalTimestampFormat - Embedded.{{% /md %}}</dd>
-</dl>
+    <dd>{{% md %}}An object that represents the offset information for the local timestamp format specified. Should not be specified for LocalTimestampFormat - Embedded.{{% /md %}}</dd></dl>
 {{% /choosable %}}
 
 {{% choosable language go %}}
-<dl class="resources-properties">
-
-    <dt class="property-optional"
+<dl class="resources-properties"><dt class="property-optional"
             title="Optional">
         <span id="format_go">
 <a href="#format_go" style="color: inherit; text-decoration: inherit;">Format</a>
@@ -788,8 +707,7 @@ All [input](#inputs) properties are implicitly available as output properties. A
         <span class="property-indicator"></span>
         <span class="property-type">string | <a href="#localtimestampformat">Local<wbr>Timestamp<wbr>Format</a></span>
     </dt>
-    <dd>{{% md %}}An enum that represents the format of the local timestamp property that needs to be set.{{% /md %}}</dd>
-    <dt class="property-optional"
+    <dd>{{% md %}}An enum that represents the format of the local timestamp property that needs to be set.{{% /md %}}</dd><dt class="property-optional"
             title="Optional">
         <span id="timezoneoffset_go">
 <a href="#timezoneoffset_go" style="color: inherit; text-decoration: inherit;">Time<wbr>Zone<wbr>Offset</a>
@@ -797,14 +715,11 @@ All [input](#inputs) properties are implicitly available as output properties. A
         <span class="property-indicator"></span>
         <span class="property-type"><a href="#localtimestamptimezoneoffset">Local<wbr>Timestamp<wbr>Time<wbr>Zone<wbr>Offset</a></span>
     </dt>
-    <dd>{{% md %}}An object that represents the offset information for the local timestamp format specified. Should not be specified for LocalTimestampFormat - Embedded.{{% /md %}}</dd>
-</dl>
+    <dd>{{% md %}}An object that represents the offset information for the local timestamp format specified. Should not be specified for LocalTimestampFormat - Embedded.{{% /md %}}</dd></dl>
 {{% /choosable %}}
 
 {{% choosable language nodejs %}}
-<dl class="resources-properties">
-
-    <dt class="property-optional"
+<dl class="resources-properties"><dt class="property-optional"
             title="Optional">
         <span id="format_nodejs">
 <a href="#format_nodejs" style="color: inherit; text-decoration: inherit;">format</a>
@@ -812,8 +727,7 @@ All [input](#inputs) properties are implicitly available as output properties. A
         <span class="property-indicator"></span>
         <span class="property-type">string | <a href="#localtimestampformat">Local<wbr>Timestamp<wbr>Format</a></span>
     </dt>
-    <dd>{{% md %}}An enum that represents the format of the local timestamp property that needs to be set.{{% /md %}}</dd>
-    <dt class="property-optional"
+    <dd>{{% md %}}An enum that represents the format of the local timestamp property that needs to be set.{{% /md %}}</dd><dt class="property-optional"
             title="Optional">
         <span id="timezoneoffset_nodejs">
 <a href="#timezoneoffset_nodejs" style="color: inherit; text-decoration: inherit;">time<wbr>Zone<wbr>Offset</a>
@@ -821,14 +735,11 @@ All [input](#inputs) properties are implicitly available as output properties. A
         <span class="property-indicator"></span>
         <span class="property-type"><a href="#localtimestamptimezoneoffset">Local<wbr>Timestamp<wbr>Time<wbr>Zone<wbr>Offset</a></span>
     </dt>
-    <dd>{{% md %}}An object that represents the offset information for the local timestamp format specified. Should not be specified for LocalTimestampFormat - Embedded.{{% /md %}}</dd>
-</dl>
+    <dd>{{% md %}}An object that represents the offset information for the local timestamp format specified. Should not be specified for LocalTimestampFormat - Embedded.{{% /md %}}</dd></dl>
 {{% /choosable %}}
 
 {{% choosable language python %}}
-<dl class="resources-properties">
-
-    <dt class="property-optional"
+<dl class="resources-properties"><dt class="property-optional"
             title="Optional">
         <span id="format_python">
 <a href="#format_python" style="color: inherit; text-decoration: inherit;">format</a>
@@ -836,8 +747,7 @@ All [input](#inputs) properties are implicitly available as output properties. A
         <span class="property-indicator"></span>
         <span class="property-type">str | <a href="#localtimestampformat">Local<wbr>Timestamp<wbr>Format</a></span>
     </dt>
-    <dd>{{% md %}}An enum that represents the format of the local timestamp property that needs to be set.{{% /md %}}</dd>
-    <dt class="property-optional"
+    <dd>{{% md %}}An enum that represents the format of the local timestamp property that needs to be set.{{% /md %}}</dd><dt class="property-optional"
             title="Optional">
         <span id="time_zone_offset_python">
 <a href="#time_zone_offset_python" style="color: inherit; text-decoration: inherit;">time_<wbr>zone_<wbr>offset</a>
@@ -845,46 +755,35 @@ All [input](#inputs) properties are implicitly available as output properties. A
         <span class="property-indicator"></span>
         <span class="property-type"><a href="#localtimestamptimezoneoffset">Local<wbr>Timestamp<wbr>Time<wbr>Zone<wbr>Offset<wbr>Args</a></span>
     </dt>
-    <dd>{{% md %}}An object that represents the offset information for the local timestamp format specified. Should not be specified for LocalTimestampFormat - Embedded.{{% /md %}}</dd>
-</dl>
+    <dd>{{% md %}}An object that represents the offset information for the local timestamp format specified. Should not be specified for LocalTimestampFormat - Embedded.{{% /md %}}</dd></dl>
 {{% /choosable %}}
 
 <h4 id="localtimestampformat">Local<wbr>Timestamp<wbr>Format</h4>
 
 {{% choosable language csharp %}}
-<dl class="tabular">
-    <dt>Embedded</dt>
-    <dd>Embedded</dd>
-</dl>
+<dl class="tabular"><dt>Embedded</dt>
+    <dd>Embedded</dd></dl>
 {{% /choosable %}}
 
 {{% choosable language go %}}
-<dl class="tabular">
-    <dt>Local<wbr>Timestamp<wbr>Format<wbr>Embedded</dt>
-    <dd>Embedded</dd>
-</dl>
+<dl class="tabular"><dt>Local<wbr>Timestamp<wbr>Format<wbr>Embedded</dt>
+    <dd>Embedded</dd></dl>
 {{% /choosable %}}
 
 {{% choosable language nodejs %}}
-<dl class="tabular">
-    <dt>Embedded</dt>
-    <dd>Embedded</dd>
-</dl>
+<dl class="tabular"><dt>Embedded</dt>
+    <dd>Embedded</dd></dl>
 {{% /choosable %}}
 
 {{% choosable language python %}}
-<dl class="tabular">
-    <dt>EMBEDDED</dt>
-    <dd>Embedded</dd>
-</dl>
+<dl class="tabular"><dt>EMBEDDED</dt>
+    <dd>Embedded</dd></dl>
 {{% /choosable %}}
 
 <h4 id="localtimestamptimezoneoffset">Local<wbr>Timestamp<wbr>Time<wbr>Zone<wbr>Offset</h4>
 
 {{% choosable language csharp %}}
-<dl class="resources-properties">
-
-    <dt class="property-optional"
+<dl class="resources-properties"><dt class="property-optional"
             title="Optional">
         <span id="propertyname_csharp">
 <a href="#propertyname_csharp" style="color: inherit; text-decoration: inherit;">Property<wbr>Name</a>
@@ -892,14 +791,11 @@ All [input](#inputs) properties are implicitly available as output properties. A
         <span class="property-indicator"></span>
         <span class="property-type">string</span>
     </dt>
-    <dd>{{% md %}}The event property that will be contain the offset information to calculate the local timestamp. When the LocalTimestampFormat is Iana, the property name will contain the name of the column which contains IANA Timezone Name (eg: Americas/Los Angeles). When LocalTimestampFormat is Timespan, it contains the name of property which contains values representing the offset (eg: P1D or 1.00:00:00){{% /md %}}</dd>
-</dl>
+    <dd>{{% md %}}The event property that will be contain the offset information to calculate the local timestamp. When the LocalTimestampFormat is Iana, the property name will contain the name of the column which contains IANA Timezone Name (eg: Americas/Los Angeles). When LocalTimestampFormat is Timespan, it contains the name of property which contains values representing the offset (eg: P1D or 1.00:00:00){{% /md %}}</dd></dl>
 {{% /choosable %}}
 
 {{% choosable language go %}}
-<dl class="resources-properties">
-
-    <dt class="property-optional"
+<dl class="resources-properties"><dt class="property-optional"
             title="Optional">
         <span id="propertyname_go">
 <a href="#propertyname_go" style="color: inherit; text-decoration: inherit;">Property<wbr>Name</a>
@@ -907,14 +803,11 @@ All [input](#inputs) properties are implicitly available as output properties. A
         <span class="property-indicator"></span>
         <span class="property-type">string</span>
     </dt>
-    <dd>{{% md %}}The event property that will be contain the offset information to calculate the local timestamp. When the LocalTimestampFormat is Iana, the property name will contain the name of the column which contains IANA Timezone Name (eg: Americas/Los Angeles). When LocalTimestampFormat is Timespan, it contains the name of property which contains values representing the offset (eg: P1D or 1.00:00:00){{% /md %}}</dd>
-</dl>
+    <dd>{{% md %}}The event property that will be contain the offset information to calculate the local timestamp. When the LocalTimestampFormat is Iana, the property name will contain the name of the column which contains IANA Timezone Name (eg: Americas/Los Angeles). When LocalTimestampFormat is Timespan, it contains the name of property which contains values representing the offset (eg: P1D or 1.00:00:00){{% /md %}}</dd></dl>
 {{% /choosable %}}
 
 {{% choosable language nodejs %}}
-<dl class="resources-properties">
-
-    <dt class="property-optional"
+<dl class="resources-properties"><dt class="property-optional"
             title="Optional">
         <span id="propertyname_nodejs">
 <a href="#propertyname_nodejs" style="color: inherit; text-decoration: inherit;">property<wbr>Name</a>
@@ -922,14 +815,11 @@ All [input](#inputs) properties are implicitly available as output properties. A
         <span class="property-indicator"></span>
         <span class="property-type">string</span>
     </dt>
-    <dd>{{% md %}}The event property that will be contain the offset information to calculate the local timestamp. When the LocalTimestampFormat is Iana, the property name will contain the name of the column which contains IANA Timezone Name (eg: Americas/Los Angeles). When LocalTimestampFormat is Timespan, it contains the name of property which contains values representing the offset (eg: P1D or 1.00:00:00){{% /md %}}</dd>
-</dl>
+    <dd>{{% md %}}The event property that will be contain the offset information to calculate the local timestamp. When the LocalTimestampFormat is Iana, the property name will contain the name of the column which contains IANA Timezone Name (eg: Americas/Los Angeles). When LocalTimestampFormat is Timespan, it contains the name of property which contains values representing the offset (eg: P1D or 1.00:00:00){{% /md %}}</dd></dl>
 {{% /choosable %}}
 
 {{% choosable language python %}}
-<dl class="resources-properties">
-
-    <dt class="property-optional"
+<dl class="resources-properties"><dt class="property-optional"
             title="Optional">
         <span id="property_name_python">
 <a href="#property_name_python" style="color: inherit; text-decoration: inherit;">property_<wbr>name</a>
@@ -937,8 +827,7 @@ All [input](#inputs) properties are implicitly available as output properties. A
         <span class="property-indicator"></span>
         <span class="property-type">str</span>
     </dt>
-    <dd>{{% md %}}The event property that will be contain the offset information to calculate the local timestamp. When the LocalTimestampFormat is Iana, the property name will contain the name of the column which contains IANA Timezone Name (eg: Americas/Los Angeles). When LocalTimestampFormat is Timespan, it contains the name of property which contains values representing the offset (eg: P1D or 1.00:00:00){{% /md %}}</dd>
-</dl>
+    <dd>{{% md %}}The event property that will be contain the offset information to calculate the local timestamp. When the LocalTimestampFormat is Iana, the property name will contain the name of the column which contains IANA Timezone Name (eg: Americas/Los Angeles). When LocalTimestampFormat is Timespan, it contains the name of property which contains values representing the offset (eg: P1D or 1.00:00:00){{% /md %}}</dd></dl>
 {{% /choosable %}}
 ## Import
 

@@ -14,11 +14,17 @@ A sensitivity label.
 API Version: 2020-12-01.
 
 {{% examples %}}
+
 ## Example Usage
 
 {{< chooser language "typescript,python,go,csharp" / >}}
+
+
 ### Updates the sensitivity label of a given column with all parameters
-{{% example csharp %}}
+
+
+{{< example csharp >}}
+
 ```csharp
 using Pulumi;
 using AzureNative = Pulumi.AzureNative;
@@ -47,9 +53,12 @@ class MyStack : Stack
 
 ```
 
-{{% /example %}}
 
-{{% example go %}}
+{{< /example >}}
+
+
+{{< example go >}}
+
 
 ```go
 package main
@@ -83,9 +92,12 @@ func main() {
 
 ```
 
-{{% /example %}}
 
-{{% example python %}}
+{{< /example >}}
+
+
+{{< example python >}}
+
 
 ```python
 import pulumi
@@ -106,9 +118,12 @@ sql_pool_sensitivity_label = azure_native.synapse.SqlPoolSensitivityLabel("sqlPo
 
 ```
 
-{{% /example %}}
 
-{{% example typescript %}}
+{{< /example >}}
+
+
+{{< example typescript >}}
+
 
 ```typescript
 import * as pulumi from "@pulumi/pulumi";
@@ -130,9 +145,16 @@ const sqlPoolSensitivityLabel = new azure_native.synapse.SqlPoolSensitivityLabel
 
 ```
 
-{{% /example %}}
+
+{{< /example >}}
+
+
+
+
 
 {{% /examples %}}
+
+
 
 
 ## Create a SqlPoolSensitivityLabel Resource {#create}
@@ -157,9 +179,7 @@ const sqlPoolSensitivityLabel = new azure_native.synapse.SqlPoolSensitivityLabel
 
 {{% choosable language nodejs %}}
 
-<dl class="resources-properties">
-  
-    <dt
+<dl class="resources-properties"><dt
         class="property-required" title="Required">
         <span>name</span>
         <span class="property-indicator"></span>
@@ -167,9 +187,7 @@ const sqlPoolSensitivityLabel = new azure_native.synapse.SqlPoolSensitivityLabel
     </dt>
     <dd>
       The unique name of the resource.
-    </dd>
-  
-    <dt
+    </dd><dt
         class="property-required" title="Required">
         <span>args</span>
         <span class="property-indicator"></span>
@@ -177,9 +195,7 @@ const sqlPoolSensitivityLabel = new azure_native.synapse.SqlPoolSensitivityLabel
     </dt>
     <dd>
       The arguments to resource properties.
-    </dd>
-  
-    <dt
+    </dd><dt
         class="property-optional" title="Optional">
         <span>opts</span>
         <span class="property-indicator"></span>
@@ -187,10 +203,7 @@ const sqlPoolSensitivityLabel = new azure_native.synapse.SqlPoolSensitivityLabel
     </dt>
     <dd>
       Bag of options to control resource&#39;s behavior.
-    </dd>
-  
-
-</dl>
+    </dd></dl>
 
 {{% /choosable %}}
 
@@ -216,9 +229,7 @@ const sqlPoolSensitivityLabel = new azure_native.synapse.SqlPoolSensitivityLabel
 
 {{% choosable language go %}}
 
-<dl class="resources-properties">
-  
-    <dt
+<dl class="resources-properties"><dt
         class="property-optional" title="Optional">
         <span>ctx</span>
         <span class="property-indicator"></span>
@@ -226,9 +237,7 @@ const sqlPoolSensitivityLabel = new azure_native.synapse.SqlPoolSensitivityLabel
     </dt>
     <dd>
       Context object for the current deployment.
-    </dd>
-  
-    <dt
+    </dd><dt
         class="property-required" title="Required">
         <span>name</span>
         <span class="property-indicator"></span>
@@ -236,9 +245,7 @@ const sqlPoolSensitivityLabel = new azure_native.synapse.SqlPoolSensitivityLabel
     </dt>
     <dd>
       The unique name of the resource.
-    </dd>
-  
-    <dt
+    </dd><dt
         class="property-required" title="Required">
         <span>args</span>
         <span class="property-indicator"></span>
@@ -246,9 +253,7 @@ const sqlPoolSensitivityLabel = new azure_native.synapse.SqlPoolSensitivityLabel
     </dt>
     <dd>
       The arguments to resource properties.
-    </dd>
-  
-    <dt
+    </dd><dt
         class="property-optional" title="Optional">
         <span>opts</span>
         <span class="property-indicator"></span>
@@ -256,18 +261,13 @@ const sqlPoolSensitivityLabel = new azure_native.synapse.SqlPoolSensitivityLabel
     </dt>
     <dd>
       Bag of options to control resource&#39;s behavior.
-    </dd>
-  
-
-</dl>
+    </dd></dl>
 
 {{% /choosable %}}
 
 {{% choosable language csharp %}}
 
-<dl class="resources-properties">
-  
-    <dt
+<dl class="resources-properties"><dt
         class="property-required" title="Required">
         <span>name</span>
         <span class="property-indicator"></span>
@@ -275,9 +275,7 @@ const sqlPoolSensitivityLabel = new azure_native.synapse.SqlPoolSensitivityLabel
     </dt>
     <dd>
       The unique name of the resource.
-    </dd>
-  
-    <dt
+    </dd><dt
         class="property-required" title="Required">
         <span>args</span>
         <span class="property-indicator"></span>
@@ -285,9 +283,7 @@ const sqlPoolSensitivityLabel = new azure_native.synapse.SqlPoolSensitivityLabel
     </dt>
     <dd>
       The arguments to resource properties.
-    </dd>
-  
-    <dt
+    </dd><dt
         class="property-optional" title="Optional">
         <span>opts</span>
         <span class="property-indicator"></span>
@@ -295,10 +291,7 @@ const sqlPoolSensitivityLabel = new azure_native.synapse.SqlPoolSensitivityLabel
     </dt>
     <dd>
       Bag of options to control resource&#39;s behavior.
-    </dd>
-  
-
-</dl>
+    </dd></dl>
 
 {{% /choosable %}}
 
@@ -313,9 +306,7 @@ The SqlPoolSensitivityLabel resource accepts the following [input]({{< relref "/
 
 
 {{% choosable language csharp %}}
-<dl class="resources-properties">
-
-    <dt class="property-required"
+<dl class="resources-properties"><dt class="property-required"
             title="Required">
         <span id="columnname_csharp">
 <a href="#columnname_csharp" style="color: inherit; text-decoration: inherit;">Column<wbr>Name</a>
@@ -323,8 +314,7 @@ The SqlPoolSensitivityLabel resource accepts the following [input]({{< relref "/
         <span class="property-indicator"></span>
         <span class="property-type">string</span>
     </dt>
-    <dd>{{% md %}}The name of the column.{{% /md %}}</dd>
-    <dt class="property-required"
+    <dd>{{% md %}}The name of the column.{{% /md %}}</dd><dt class="property-required"
             title="Required">
         <span id="resourcegroupname_csharp">
 <a href="#resourcegroupname_csharp" style="color: inherit; text-decoration: inherit;">Resource<wbr>Group<wbr>Name</a>
@@ -332,8 +322,7 @@ The SqlPoolSensitivityLabel resource accepts the following [input]({{< relref "/
         <span class="property-indicator"></span>
         <span class="property-type">string</span>
     </dt>
-    <dd>{{% md %}}The name of the resource group. The name is case insensitive.{{% /md %}}</dd>
-    <dt class="property-required"
+    <dd>{{% md %}}The name of the resource group. The name is case insensitive.{{% /md %}}</dd><dt class="property-required"
             title="Required">
         <span id="schemaname_csharp">
 <a href="#schemaname_csharp" style="color: inherit; text-decoration: inherit;">Schema<wbr>Name</a>
@@ -341,8 +330,7 @@ The SqlPoolSensitivityLabel resource accepts the following [input]({{< relref "/
         <span class="property-indicator"></span>
         <span class="property-type">string</span>
     </dt>
-    <dd>{{% md %}}The name of the schema.{{% /md %}}</dd>
-    <dt class="property-required"
+    <dd>{{% md %}}The name of the schema.{{% /md %}}</dd><dt class="property-required"
             title="Required">
         <span id="sqlpoolname_csharp">
 <a href="#sqlpoolname_csharp" style="color: inherit; text-decoration: inherit;">Sql<wbr>Pool<wbr>Name</a>
@@ -350,8 +338,7 @@ The SqlPoolSensitivityLabel resource accepts the following [input]({{< relref "/
         <span class="property-indicator"></span>
         <span class="property-type">string</span>
     </dt>
-    <dd>{{% md %}}SQL pool name{{% /md %}}</dd>
-    <dt class="property-required"
+    <dd>{{% md %}}SQL pool name{{% /md %}}</dd><dt class="property-required"
             title="Required">
         <span id="tablename_csharp">
 <a href="#tablename_csharp" style="color: inherit; text-decoration: inherit;">Table<wbr>Name</a>
@@ -359,8 +346,7 @@ The SqlPoolSensitivityLabel resource accepts the following [input]({{< relref "/
         <span class="property-indicator"></span>
         <span class="property-type">string</span>
     </dt>
-    <dd>{{% md %}}The name of the table.{{% /md %}}</dd>
-    <dt class="property-required"
+    <dd>{{% md %}}The name of the table.{{% /md %}}</dd><dt class="property-required"
             title="Required">
         <span id="workspacename_csharp">
 <a href="#workspacename_csharp" style="color: inherit; text-decoration: inherit;">Workspace<wbr>Name</a>
@@ -368,8 +354,7 @@ The SqlPoolSensitivityLabel resource accepts the following [input]({{< relref "/
         <span class="property-indicator"></span>
         <span class="property-type">string</span>
     </dt>
-    <dd>{{% md %}}The name of the workspace{{% /md %}}</dd>
-    <dt class="property-optional"
+    <dd>{{% md %}}The name of the workspace{{% /md %}}</dd><dt class="property-optional"
             title="Optional">
         <span id="informationtype_csharp">
 <a href="#informationtype_csharp" style="color: inherit; text-decoration: inherit;">Information<wbr>Type</a>
@@ -377,8 +362,7 @@ The SqlPoolSensitivityLabel resource accepts the following [input]({{< relref "/
         <span class="property-indicator"></span>
         <span class="property-type">string</span>
     </dt>
-    <dd>{{% md %}}The information type.{{% /md %}}</dd>
-    <dt class="property-optional"
+    <dd>{{% md %}}The information type.{{% /md %}}</dd><dt class="property-optional"
             title="Optional">
         <span id="informationtypeid_csharp">
 <a href="#informationtypeid_csharp" style="color: inherit; text-decoration: inherit;">Information<wbr>Type<wbr>Id</a>
@@ -386,8 +370,7 @@ The SqlPoolSensitivityLabel resource accepts the following [input]({{< relref "/
         <span class="property-indicator"></span>
         <span class="property-type">string</span>
     </dt>
-    <dd>{{% md %}}The information type ID.{{% /md %}}</dd>
-    <dt class="property-optional"
+    <dd>{{% md %}}The information type ID.{{% /md %}}</dd><dt class="property-optional"
             title="Optional">
         <span id="labelid_csharp">
 <a href="#labelid_csharp" style="color: inherit; text-decoration: inherit;">Label<wbr>Id</a>
@@ -395,8 +378,7 @@ The SqlPoolSensitivityLabel resource accepts the following [input]({{< relref "/
         <span class="property-indicator"></span>
         <span class="property-type">string</span>
     </dt>
-    <dd>{{% md %}}The label ID.{{% /md %}}</dd>
-    <dt class="property-optional"
+    <dd>{{% md %}}The label ID.{{% /md %}}</dd><dt class="property-optional"
             title="Optional">
         <span id="labelname_csharp">
 <a href="#labelname_csharp" style="color: inherit; text-decoration: inherit;">Label<wbr>Name</a>
@@ -404,8 +386,7 @@ The SqlPoolSensitivityLabel resource accepts the following [input]({{< relref "/
         <span class="property-indicator"></span>
         <span class="property-type">string</span>
     </dt>
-    <dd>{{% md %}}The label name.{{% /md %}}</dd>
-    <dt class="property-optional"
+    <dd>{{% md %}}The label name.{{% /md %}}</dd><dt class="property-optional"
             title="Optional">
         <span id="rank_csharp">
 <a href="#rank_csharp" style="color: inherit; text-decoration: inherit;">Rank</a>
@@ -413,8 +394,7 @@ The SqlPoolSensitivityLabel resource accepts the following [input]({{< relref "/
         <span class="property-indicator"></span>
         <span class="property-type"><a href="#sensitivitylabelrank">Pulumi.<wbr>Azure<wbr>Native.<wbr>Synapse.<wbr>Sensitivity<wbr>Label<wbr>Rank</a></span>
     </dt>
-    <dd>{{% md %}}{{% /md %}}</dd>
-    <dt class="property-optional"
+    <dd>{{% md %}}{{% /md %}}</dd><dt class="property-optional"
             title="Optional">
         <span id="sensitivitylabelsource_csharp">
 <a href="#sensitivitylabelsource_csharp" style="color: inherit; text-decoration: inherit;">Sensitivity<wbr>Label<wbr>Source</a>
@@ -422,14 +402,11 @@ The SqlPoolSensitivityLabel resource accepts the following [input]({{< relref "/
         <span class="property-indicator"></span>
         <span class="property-type">string</span>
     </dt>
-    <dd>{{% md %}}The source of the sensitivity label.{{% /md %}}</dd>
-</dl>
+    <dd>{{% md %}}The source of the sensitivity label.{{% /md %}}</dd></dl>
 {{% /choosable %}}
 
 {{% choosable language go %}}
-<dl class="resources-properties">
-
-    <dt class="property-required"
+<dl class="resources-properties"><dt class="property-required"
             title="Required">
         <span id="columnname_go">
 <a href="#columnname_go" style="color: inherit; text-decoration: inherit;">Column<wbr>Name</a>
@@ -437,8 +414,7 @@ The SqlPoolSensitivityLabel resource accepts the following [input]({{< relref "/
         <span class="property-indicator"></span>
         <span class="property-type">string</span>
     </dt>
-    <dd>{{% md %}}The name of the column.{{% /md %}}</dd>
-    <dt class="property-required"
+    <dd>{{% md %}}The name of the column.{{% /md %}}</dd><dt class="property-required"
             title="Required">
         <span id="resourcegroupname_go">
 <a href="#resourcegroupname_go" style="color: inherit; text-decoration: inherit;">Resource<wbr>Group<wbr>Name</a>
@@ -446,8 +422,7 @@ The SqlPoolSensitivityLabel resource accepts the following [input]({{< relref "/
         <span class="property-indicator"></span>
         <span class="property-type">string</span>
     </dt>
-    <dd>{{% md %}}The name of the resource group. The name is case insensitive.{{% /md %}}</dd>
-    <dt class="property-required"
+    <dd>{{% md %}}The name of the resource group. The name is case insensitive.{{% /md %}}</dd><dt class="property-required"
             title="Required">
         <span id="schemaname_go">
 <a href="#schemaname_go" style="color: inherit; text-decoration: inherit;">Schema<wbr>Name</a>
@@ -455,8 +430,7 @@ The SqlPoolSensitivityLabel resource accepts the following [input]({{< relref "/
         <span class="property-indicator"></span>
         <span class="property-type">string</span>
     </dt>
-    <dd>{{% md %}}The name of the schema.{{% /md %}}</dd>
-    <dt class="property-required"
+    <dd>{{% md %}}The name of the schema.{{% /md %}}</dd><dt class="property-required"
             title="Required">
         <span id="sqlpoolname_go">
 <a href="#sqlpoolname_go" style="color: inherit; text-decoration: inherit;">Sql<wbr>Pool<wbr>Name</a>
@@ -464,8 +438,7 @@ The SqlPoolSensitivityLabel resource accepts the following [input]({{< relref "/
         <span class="property-indicator"></span>
         <span class="property-type">string</span>
     </dt>
-    <dd>{{% md %}}SQL pool name{{% /md %}}</dd>
-    <dt class="property-required"
+    <dd>{{% md %}}SQL pool name{{% /md %}}</dd><dt class="property-required"
             title="Required">
         <span id="tablename_go">
 <a href="#tablename_go" style="color: inherit; text-decoration: inherit;">Table<wbr>Name</a>
@@ -473,8 +446,7 @@ The SqlPoolSensitivityLabel resource accepts the following [input]({{< relref "/
         <span class="property-indicator"></span>
         <span class="property-type">string</span>
     </dt>
-    <dd>{{% md %}}The name of the table.{{% /md %}}</dd>
-    <dt class="property-required"
+    <dd>{{% md %}}The name of the table.{{% /md %}}</dd><dt class="property-required"
             title="Required">
         <span id="workspacename_go">
 <a href="#workspacename_go" style="color: inherit; text-decoration: inherit;">Workspace<wbr>Name</a>
@@ -482,8 +454,7 @@ The SqlPoolSensitivityLabel resource accepts the following [input]({{< relref "/
         <span class="property-indicator"></span>
         <span class="property-type">string</span>
     </dt>
-    <dd>{{% md %}}The name of the workspace{{% /md %}}</dd>
-    <dt class="property-optional"
+    <dd>{{% md %}}The name of the workspace{{% /md %}}</dd><dt class="property-optional"
             title="Optional">
         <span id="informationtype_go">
 <a href="#informationtype_go" style="color: inherit; text-decoration: inherit;">Information<wbr>Type</a>
@@ -491,8 +462,7 @@ The SqlPoolSensitivityLabel resource accepts the following [input]({{< relref "/
         <span class="property-indicator"></span>
         <span class="property-type">string</span>
     </dt>
-    <dd>{{% md %}}The information type.{{% /md %}}</dd>
-    <dt class="property-optional"
+    <dd>{{% md %}}The information type.{{% /md %}}</dd><dt class="property-optional"
             title="Optional">
         <span id="informationtypeid_go">
 <a href="#informationtypeid_go" style="color: inherit; text-decoration: inherit;">Information<wbr>Type<wbr>Id</a>
@@ -500,8 +470,7 @@ The SqlPoolSensitivityLabel resource accepts the following [input]({{< relref "/
         <span class="property-indicator"></span>
         <span class="property-type">string</span>
     </dt>
-    <dd>{{% md %}}The information type ID.{{% /md %}}</dd>
-    <dt class="property-optional"
+    <dd>{{% md %}}The information type ID.{{% /md %}}</dd><dt class="property-optional"
             title="Optional">
         <span id="labelid_go">
 <a href="#labelid_go" style="color: inherit; text-decoration: inherit;">Label<wbr>Id</a>
@@ -509,8 +478,7 @@ The SqlPoolSensitivityLabel resource accepts the following [input]({{< relref "/
         <span class="property-indicator"></span>
         <span class="property-type">string</span>
     </dt>
-    <dd>{{% md %}}The label ID.{{% /md %}}</dd>
-    <dt class="property-optional"
+    <dd>{{% md %}}The label ID.{{% /md %}}</dd><dt class="property-optional"
             title="Optional">
         <span id="labelname_go">
 <a href="#labelname_go" style="color: inherit; text-decoration: inherit;">Label<wbr>Name</a>
@@ -518,8 +486,7 @@ The SqlPoolSensitivityLabel resource accepts the following [input]({{< relref "/
         <span class="property-indicator"></span>
         <span class="property-type">string</span>
     </dt>
-    <dd>{{% md %}}The label name.{{% /md %}}</dd>
-    <dt class="property-optional"
+    <dd>{{% md %}}The label name.{{% /md %}}</dd><dt class="property-optional"
             title="Optional">
         <span id="rank_go">
 <a href="#rank_go" style="color: inherit; text-decoration: inherit;">Rank</a>
@@ -527,8 +494,7 @@ The SqlPoolSensitivityLabel resource accepts the following [input]({{< relref "/
         <span class="property-indicator"></span>
         <span class="property-type"><a href="#sensitivitylabelrank">Sensitivity<wbr>Label<wbr>Rank</a></span>
     </dt>
-    <dd>{{% md %}}{{% /md %}}</dd>
-    <dt class="property-optional"
+    <dd>{{% md %}}{{% /md %}}</dd><dt class="property-optional"
             title="Optional">
         <span id="sensitivitylabelsource_go">
 <a href="#sensitivitylabelsource_go" style="color: inherit; text-decoration: inherit;">Sensitivity<wbr>Label<wbr>Source</a>
@@ -536,14 +502,11 @@ The SqlPoolSensitivityLabel resource accepts the following [input]({{< relref "/
         <span class="property-indicator"></span>
         <span class="property-type">string</span>
     </dt>
-    <dd>{{% md %}}The source of the sensitivity label.{{% /md %}}</dd>
-</dl>
+    <dd>{{% md %}}The source of the sensitivity label.{{% /md %}}</dd></dl>
 {{% /choosable %}}
 
 {{% choosable language nodejs %}}
-<dl class="resources-properties">
-
-    <dt class="property-required"
+<dl class="resources-properties"><dt class="property-required"
             title="Required">
         <span id="columnname_nodejs">
 <a href="#columnname_nodejs" style="color: inherit; text-decoration: inherit;">column<wbr>Name</a>
@@ -551,8 +514,7 @@ The SqlPoolSensitivityLabel resource accepts the following [input]({{< relref "/
         <span class="property-indicator"></span>
         <span class="property-type">string</span>
     </dt>
-    <dd>{{% md %}}The name of the column.{{% /md %}}</dd>
-    <dt class="property-required"
+    <dd>{{% md %}}The name of the column.{{% /md %}}</dd><dt class="property-required"
             title="Required">
         <span id="resourcegroupname_nodejs">
 <a href="#resourcegroupname_nodejs" style="color: inherit; text-decoration: inherit;">resource<wbr>Group<wbr>Name</a>
@@ -560,8 +522,7 @@ The SqlPoolSensitivityLabel resource accepts the following [input]({{< relref "/
         <span class="property-indicator"></span>
         <span class="property-type">string</span>
     </dt>
-    <dd>{{% md %}}The name of the resource group. The name is case insensitive.{{% /md %}}</dd>
-    <dt class="property-required"
+    <dd>{{% md %}}The name of the resource group. The name is case insensitive.{{% /md %}}</dd><dt class="property-required"
             title="Required">
         <span id="schemaname_nodejs">
 <a href="#schemaname_nodejs" style="color: inherit; text-decoration: inherit;">schema<wbr>Name</a>
@@ -569,8 +530,7 @@ The SqlPoolSensitivityLabel resource accepts the following [input]({{< relref "/
         <span class="property-indicator"></span>
         <span class="property-type">string</span>
     </dt>
-    <dd>{{% md %}}The name of the schema.{{% /md %}}</dd>
-    <dt class="property-required"
+    <dd>{{% md %}}The name of the schema.{{% /md %}}</dd><dt class="property-required"
             title="Required">
         <span id="sqlpoolname_nodejs">
 <a href="#sqlpoolname_nodejs" style="color: inherit; text-decoration: inherit;">sql<wbr>Pool<wbr>Name</a>
@@ -578,8 +538,7 @@ The SqlPoolSensitivityLabel resource accepts the following [input]({{< relref "/
         <span class="property-indicator"></span>
         <span class="property-type">string</span>
     </dt>
-    <dd>{{% md %}}SQL pool name{{% /md %}}</dd>
-    <dt class="property-required"
+    <dd>{{% md %}}SQL pool name{{% /md %}}</dd><dt class="property-required"
             title="Required">
         <span id="tablename_nodejs">
 <a href="#tablename_nodejs" style="color: inherit; text-decoration: inherit;">table<wbr>Name</a>
@@ -587,8 +546,7 @@ The SqlPoolSensitivityLabel resource accepts the following [input]({{< relref "/
         <span class="property-indicator"></span>
         <span class="property-type">string</span>
     </dt>
-    <dd>{{% md %}}The name of the table.{{% /md %}}</dd>
-    <dt class="property-required"
+    <dd>{{% md %}}The name of the table.{{% /md %}}</dd><dt class="property-required"
             title="Required">
         <span id="workspacename_nodejs">
 <a href="#workspacename_nodejs" style="color: inherit; text-decoration: inherit;">workspace<wbr>Name</a>
@@ -596,8 +554,7 @@ The SqlPoolSensitivityLabel resource accepts the following [input]({{< relref "/
         <span class="property-indicator"></span>
         <span class="property-type">string</span>
     </dt>
-    <dd>{{% md %}}The name of the workspace{{% /md %}}</dd>
-    <dt class="property-optional"
+    <dd>{{% md %}}The name of the workspace{{% /md %}}</dd><dt class="property-optional"
             title="Optional">
         <span id="informationtype_nodejs">
 <a href="#informationtype_nodejs" style="color: inherit; text-decoration: inherit;">information<wbr>Type</a>
@@ -605,8 +562,7 @@ The SqlPoolSensitivityLabel resource accepts the following [input]({{< relref "/
         <span class="property-indicator"></span>
         <span class="property-type">string</span>
     </dt>
-    <dd>{{% md %}}The information type.{{% /md %}}</dd>
-    <dt class="property-optional"
+    <dd>{{% md %}}The information type.{{% /md %}}</dd><dt class="property-optional"
             title="Optional">
         <span id="informationtypeid_nodejs">
 <a href="#informationtypeid_nodejs" style="color: inherit; text-decoration: inherit;">information<wbr>Type<wbr>Id</a>
@@ -614,8 +570,7 @@ The SqlPoolSensitivityLabel resource accepts the following [input]({{< relref "/
         <span class="property-indicator"></span>
         <span class="property-type">string</span>
     </dt>
-    <dd>{{% md %}}The information type ID.{{% /md %}}</dd>
-    <dt class="property-optional"
+    <dd>{{% md %}}The information type ID.{{% /md %}}</dd><dt class="property-optional"
             title="Optional">
         <span id="labelid_nodejs">
 <a href="#labelid_nodejs" style="color: inherit; text-decoration: inherit;">label<wbr>Id</a>
@@ -623,8 +578,7 @@ The SqlPoolSensitivityLabel resource accepts the following [input]({{< relref "/
         <span class="property-indicator"></span>
         <span class="property-type">string</span>
     </dt>
-    <dd>{{% md %}}The label ID.{{% /md %}}</dd>
-    <dt class="property-optional"
+    <dd>{{% md %}}The label ID.{{% /md %}}</dd><dt class="property-optional"
             title="Optional">
         <span id="labelname_nodejs">
 <a href="#labelname_nodejs" style="color: inherit; text-decoration: inherit;">label<wbr>Name</a>
@@ -632,8 +586,7 @@ The SqlPoolSensitivityLabel resource accepts the following [input]({{< relref "/
         <span class="property-indicator"></span>
         <span class="property-type">string</span>
     </dt>
-    <dd>{{% md %}}The label name.{{% /md %}}</dd>
-    <dt class="property-optional"
+    <dd>{{% md %}}The label name.{{% /md %}}</dd><dt class="property-optional"
             title="Optional">
         <span id="rank_nodejs">
 <a href="#rank_nodejs" style="color: inherit; text-decoration: inherit;">rank</a>
@@ -641,8 +594,7 @@ The SqlPoolSensitivityLabel resource accepts the following [input]({{< relref "/
         <span class="property-indicator"></span>
         <span class="property-type"><a href="#sensitivitylabelrank">Sensitivity<wbr>Label<wbr>Rank</a></span>
     </dt>
-    <dd>{{% md %}}{{% /md %}}</dd>
-    <dt class="property-optional"
+    <dd>{{% md %}}{{% /md %}}</dd><dt class="property-optional"
             title="Optional">
         <span id="sensitivitylabelsource_nodejs">
 <a href="#sensitivitylabelsource_nodejs" style="color: inherit; text-decoration: inherit;">sensitivity<wbr>Label<wbr>Source</a>
@@ -650,14 +602,11 @@ The SqlPoolSensitivityLabel resource accepts the following [input]({{< relref "/
         <span class="property-indicator"></span>
         <span class="property-type">string</span>
     </dt>
-    <dd>{{% md %}}The source of the sensitivity label.{{% /md %}}</dd>
-</dl>
+    <dd>{{% md %}}The source of the sensitivity label.{{% /md %}}</dd></dl>
 {{% /choosable %}}
 
 {{% choosable language python %}}
-<dl class="resources-properties">
-
-    <dt class="property-required"
+<dl class="resources-properties"><dt class="property-required"
             title="Required">
         <span id="column_name_python">
 <a href="#column_name_python" style="color: inherit; text-decoration: inherit;">column_<wbr>name</a>
@@ -665,8 +614,7 @@ The SqlPoolSensitivityLabel resource accepts the following [input]({{< relref "/
         <span class="property-indicator"></span>
         <span class="property-type">str</span>
     </dt>
-    <dd>{{% md %}}The name of the column.{{% /md %}}</dd>
-    <dt class="property-required"
+    <dd>{{% md %}}The name of the column.{{% /md %}}</dd><dt class="property-required"
             title="Required">
         <span id="resource_group_name_python">
 <a href="#resource_group_name_python" style="color: inherit; text-decoration: inherit;">resource_<wbr>group_<wbr>name</a>
@@ -674,8 +622,7 @@ The SqlPoolSensitivityLabel resource accepts the following [input]({{< relref "/
         <span class="property-indicator"></span>
         <span class="property-type">str</span>
     </dt>
-    <dd>{{% md %}}The name of the resource group. The name is case insensitive.{{% /md %}}</dd>
-    <dt class="property-required"
+    <dd>{{% md %}}The name of the resource group. The name is case insensitive.{{% /md %}}</dd><dt class="property-required"
             title="Required">
         <span id="schema_name_python">
 <a href="#schema_name_python" style="color: inherit; text-decoration: inherit;">schema_<wbr>name</a>
@@ -683,8 +630,7 @@ The SqlPoolSensitivityLabel resource accepts the following [input]({{< relref "/
         <span class="property-indicator"></span>
         <span class="property-type">str</span>
     </dt>
-    <dd>{{% md %}}The name of the schema.{{% /md %}}</dd>
-    <dt class="property-required"
+    <dd>{{% md %}}The name of the schema.{{% /md %}}</dd><dt class="property-required"
             title="Required">
         <span id="sql_pool_name_python">
 <a href="#sql_pool_name_python" style="color: inherit; text-decoration: inherit;">sql_<wbr>pool_<wbr>name</a>
@@ -692,8 +638,7 @@ The SqlPoolSensitivityLabel resource accepts the following [input]({{< relref "/
         <span class="property-indicator"></span>
         <span class="property-type">str</span>
     </dt>
-    <dd>{{% md %}}SQL pool name{{% /md %}}</dd>
-    <dt class="property-required"
+    <dd>{{% md %}}SQL pool name{{% /md %}}</dd><dt class="property-required"
             title="Required">
         <span id="table_name_python">
 <a href="#table_name_python" style="color: inherit; text-decoration: inherit;">table_<wbr>name</a>
@@ -701,8 +646,7 @@ The SqlPoolSensitivityLabel resource accepts the following [input]({{< relref "/
         <span class="property-indicator"></span>
         <span class="property-type">str</span>
     </dt>
-    <dd>{{% md %}}The name of the table.{{% /md %}}</dd>
-    <dt class="property-required"
+    <dd>{{% md %}}The name of the table.{{% /md %}}</dd><dt class="property-required"
             title="Required">
         <span id="workspace_name_python">
 <a href="#workspace_name_python" style="color: inherit; text-decoration: inherit;">workspace_<wbr>name</a>
@@ -710,8 +654,7 @@ The SqlPoolSensitivityLabel resource accepts the following [input]({{< relref "/
         <span class="property-indicator"></span>
         <span class="property-type">str</span>
     </dt>
-    <dd>{{% md %}}The name of the workspace{{% /md %}}</dd>
-    <dt class="property-optional"
+    <dd>{{% md %}}The name of the workspace{{% /md %}}</dd><dt class="property-optional"
             title="Optional">
         <span id="information_type_python">
 <a href="#information_type_python" style="color: inherit; text-decoration: inherit;">information_<wbr>type</a>
@@ -719,8 +662,7 @@ The SqlPoolSensitivityLabel resource accepts the following [input]({{< relref "/
         <span class="property-indicator"></span>
         <span class="property-type">str</span>
     </dt>
-    <dd>{{% md %}}The information type.{{% /md %}}</dd>
-    <dt class="property-optional"
+    <dd>{{% md %}}The information type.{{% /md %}}</dd><dt class="property-optional"
             title="Optional">
         <span id="information_type_id_python">
 <a href="#information_type_id_python" style="color: inherit; text-decoration: inherit;">information_<wbr>type_<wbr>id</a>
@@ -728,8 +670,7 @@ The SqlPoolSensitivityLabel resource accepts the following [input]({{< relref "/
         <span class="property-indicator"></span>
         <span class="property-type">str</span>
     </dt>
-    <dd>{{% md %}}The information type ID.{{% /md %}}</dd>
-    <dt class="property-optional"
+    <dd>{{% md %}}The information type ID.{{% /md %}}</dd><dt class="property-optional"
             title="Optional">
         <span id="label_id_python">
 <a href="#label_id_python" style="color: inherit; text-decoration: inherit;">label_<wbr>id</a>
@@ -737,8 +678,7 @@ The SqlPoolSensitivityLabel resource accepts the following [input]({{< relref "/
         <span class="property-indicator"></span>
         <span class="property-type">str</span>
     </dt>
-    <dd>{{% md %}}The label ID.{{% /md %}}</dd>
-    <dt class="property-optional"
+    <dd>{{% md %}}The label ID.{{% /md %}}</dd><dt class="property-optional"
             title="Optional">
         <span id="label_name_python">
 <a href="#label_name_python" style="color: inherit; text-decoration: inherit;">label_<wbr>name</a>
@@ -746,8 +686,7 @@ The SqlPoolSensitivityLabel resource accepts the following [input]({{< relref "/
         <span class="property-indicator"></span>
         <span class="property-type">str</span>
     </dt>
-    <dd>{{% md %}}The label name.{{% /md %}}</dd>
-    <dt class="property-optional"
+    <dd>{{% md %}}The label name.{{% /md %}}</dd><dt class="property-optional"
             title="Optional">
         <span id="rank_python">
 <a href="#rank_python" style="color: inherit; text-decoration: inherit;">rank</a>
@@ -755,8 +694,7 @@ The SqlPoolSensitivityLabel resource accepts the following [input]({{< relref "/
         <span class="property-indicator"></span>
         <span class="property-type"><a href="#sensitivitylabelrank">Sensitivity<wbr>Label<wbr>Rank</a></span>
     </dt>
-    <dd>{{% md %}}{{% /md %}}</dd>
-    <dt class="property-optional"
+    <dd>{{% md %}}{{% /md %}}</dd><dt class="property-optional"
             title="Optional">
         <span id="sensitivity_label_source_python">
 <a href="#sensitivity_label_source_python" style="color: inherit; text-decoration: inherit;">sensitivity_<wbr>label_<wbr>source</a>
@@ -764,8 +702,7 @@ The SqlPoolSensitivityLabel resource accepts the following [input]({{< relref "/
         <span class="property-indicator"></span>
         <span class="property-type">str</span>
     </dt>
-    <dd>{{% md %}}The source of the sensitivity label.{{% /md %}}</dd>
-</dl>
+    <dd>{{% md %}}The source of the sensitivity label.{{% /md %}}</dd></dl>
 {{% /choosable %}}
 
 
@@ -776,9 +713,7 @@ All [input](#inputs) properties are implicitly available as output properties. A
 
 
 {{% choosable language csharp %}}
-<dl class="resources-properties">
-
-    <dt class="property-"
+<dl class="resources-properties"><dt class="property-"
             title="">
         <span id="id_csharp">
 <a href="#id_csharp" style="color: inherit; text-decoration: inherit;">Id</a>
@@ -786,8 +721,7 @@ All [input](#inputs) properties are implicitly available as output properties. A
         <span class="property-indicator"></span>
         <span class="property-type">string</span>
     </dt>
-    <dd>{{% md %}}The provider-assigned unique ID for this managed resource.{{% /md %}}</dd>
-    <dt class="property-"
+    <dd>{{% md %}}The provider-assigned unique ID for this managed resource.{{% /md %}}</dd><dt class="property-"
             title="">
         <span id="isdisabled_csharp">
 <a href="#isdisabled_csharp" style="color: inherit; text-decoration: inherit;">Is<wbr>Disabled</a>
@@ -795,8 +729,7 @@ All [input](#inputs) properties are implicitly available as output properties. A
         <span class="property-indicator"></span>
         <span class="property-type">bool</span>
     </dt>
-    <dd>{{% md %}}Is sensitivity recommendation disabled. Applicable for recommended sensitivity label only. Specifies whether the sensitivity recommendation on this column is disabled (dismissed) or not.{{% /md %}}</dd>
-    <dt class="property-"
+    <dd>{{% md %}}Is sensitivity recommendation disabled. Applicable for recommended sensitivity label only. Specifies whether the sensitivity recommendation on this column is disabled (dismissed) or not.{{% /md %}}</dd><dt class="property-"
             title="">
         <span id="managedby_csharp">
 <a href="#managedby_csharp" style="color: inherit; text-decoration: inherit;">Managed<wbr>By</a>
@@ -804,8 +737,7 @@ All [input](#inputs) properties are implicitly available as output properties. A
         <span class="property-indicator"></span>
         <span class="property-type">string</span>
     </dt>
-    <dd>{{% md %}}managed by{{% /md %}}</dd>
-    <dt class="property-"
+    <dd>{{% md %}}managed by{{% /md %}}</dd><dt class="property-"
             title="">
         <span id="name_csharp">
 <a href="#name_csharp" style="color: inherit; text-decoration: inherit;">Name</a>
@@ -813,8 +745,7 @@ All [input](#inputs) properties are implicitly available as output properties. A
         <span class="property-indicator"></span>
         <span class="property-type">string</span>
     </dt>
-    <dd>{{% md %}}The name of the resource{{% /md %}}</dd>
-    <dt class="property-"
+    <dd>{{% md %}}The name of the resource{{% /md %}}</dd><dt class="property-"
             title="">
         <span id="type_csharp">
 <a href="#type_csharp" style="color: inherit; text-decoration: inherit;">Type</a>
@@ -822,14 +753,11 @@ All [input](#inputs) properties are implicitly available as output properties. A
         <span class="property-indicator"></span>
         <span class="property-type">string</span>
     </dt>
-    <dd>{{% md %}}The type of the resource. E.g. "Microsoft.Compute/virtualMachines" or "Microsoft.Storage/storageAccounts"{{% /md %}}</dd>
-</dl>
+    <dd>{{% md %}}The type of the resource. E.g. "Microsoft.Compute/virtualMachines" or "Microsoft.Storage/storageAccounts"{{% /md %}}</dd></dl>
 {{% /choosable %}}
 
 {{% choosable language go %}}
-<dl class="resources-properties">
-
-    <dt class="property-"
+<dl class="resources-properties"><dt class="property-"
             title="">
         <span id="id_go">
 <a href="#id_go" style="color: inherit; text-decoration: inherit;">Id</a>
@@ -837,8 +765,7 @@ All [input](#inputs) properties are implicitly available as output properties. A
         <span class="property-indicator"></span>
         <span class="property-type">string</span>
     </dt>
-    <dd>{{% md %}}The provider-assigned unique ID for this managed resource.{{% /md %}}</dd>
-    <dt class="property-"
+    <dd>{{% md %}}The provider-assigned unique ID for this managed resource.{{% /md %}}</dd><dt class="property-"
             title="">
         <span id="isdisabled_go">
 <a href="#isdisabled_go" style="color: inherit; text-decoration: inherit;">Is<wbr>Disabled</a>
@@ -846,8 +773,7 @@ All [input](#inputs) properties are implicitly available as output properties. A
         <span class="property-indicator"></span>
         <span class="property-type">bool</span>
     </dt>
-    <dd>{{% md %}}Is sensitivity recommendation disabled. Applicable for recommended sensitivity label only. Specifies whether the sensitivity recommendation on this column is disabled (dismissed) or not.{{% /md %}}</dd>
-    <dt class="property-"
+    <dd>{{% md %}}Is sensitivity recommendation disabled. Applicable for recommended sensitivity label only. Specifies whether the sensitivity recommendation on this column is disabled (dismissed) or not.{{% /md %}}</dd><dt class="property-"
             title="">
         <span id="managedby_go">
 <a href="#managedby_go" style="color: inherit; text-decoration: inherit;">Managed<wbr>By</a>
@@ -855,8 +781,7 @@ All [input](#inputs) properties are implicitly available as output properties. A
         <span class="property-indicator"></span>
         <span class="property-type">string</span>
     </dt>
-    <dd>{{% md %}}managed by{{% /md %}}</dd>
-    <dt class="property-"
+    <dd>{{% md %}}managed by{{% /md %}}</dd><dt class="property-"
             title="">
         <span id="name_go">
 <a href="#name_go" style="color: inherit; text-decoration: inherit;">Name</a>
@@ -864,8 +789,7 @@ All [input](#inputs) properties are implicitly available as output properties. A
         <span class="property-indicator"></span>
         <span class="property-type">string</span>
     </dt>
-    <dd>{{% md %}}The name of the resource{{% /md %}}</dd>
-    <dt class="property-"
+    <dd>{{% md %}}The name of the resource{{% /md %}}</dd><dt class="property-"
             title="">
         <span id="type_go">
 <a href="#type_go" style="color: inherit; text-decoration: inherit;">Type</a>
@@ -873,14 +797,11 @@ All [input](#inputs) properties are implicitly available as output properties. A
         <span class="property-indicator"></span>
         <span class="property-type">string</span>
     </dt>
-    <dd>{{% md %}}The type of the resource. E.g. "Microsoft.Compute/virtualMachines" or "Microsoft.Storage/storageAccounts"{{% /md %}}</dd>
-</dl>
+    <dd>{{% md %}}The type of the resource. E.g. "Microsoft.Compute/virtualMachines" or "Microsoft.Storage/storageAccounts"{{% /md %}}</dd></dl>
 {{% /choosable %}}
 
 {{% choosable language nodejs %}}
-<dl class="resources-properties">
-
-    <dt class="property-"
+<dl class="resources-properties"><dt class="property-"
             title="">
         <span id="id_nodejs">
 <a href="#id_nodejs" style="color: inherit; text-decoration: inherit;">id</a>
@@ -888,8 +809,7 @@ All [input](#inputs) properties are implicitly available as output properties. A
         <span class="property-indicator"></span>
         <span class="property-type">string</span>
     </dt>
-    <dd>{{% md %}}The provider-assigned unique ID for this managed resource.{{% /md %}}</dd>
-    <dt class="property-"
+    <dd>{{% md %}}The provider-assigned unique ID for this managed resource.{{% /md %}}</dd><dt class="property-"
             title="">
         <span id="isdisabled_nodejs">
 <a href="#isdisabled_nodejs" style="color: inherit; text-decoration: inherit;">is<wbr>Disabled</a>
@@ -897,8 +817,7 @@ All [input](#inputs) properties are implicitly available as output properties. A
         <span class="property-indicator"></span>
         <span class="property-type">boolean</span>
     </dt>
-    <dd>{{% md %}}Is sensitivity recommendation disabled. Applicable for recommended sensitivity label only. Specifies whether the sensitivity recommendation on this column is disabled (dismissed) or not.{{% /md %}}</dd>
-    <dt class="property-"
+    <dd>{{% md %}}Is sensitivity recommendation disabled. Applicable for recommended sensitivity label only. Specifies whether the sensitivity recommendation on this column is disabled (dismissed) or not.{{% /md %}}</dd><dt class="property-"
             title="">
         <span id="managedby_nodejs">
 <a href="#managedby_nodejs" style="color: inherit; text-decoration: inherit;">managed<wbr>By</a>
@@ -906,8 +825,7 @@ All [input](#inputs) properties are implicitly available as output properties. A
         <span class="property-indicator"></span>
         <span class="property-type">string</span>
     </dt>
-    <dd>{{% md %}}managed by{{% /md %}}</dd>
-    <dt class="property-"
+    <dd>{{% md %}}managed by{{% /md %}}</dd><dt class="property-"
             title="">
         <span id="name_nodejs">
 <a href="#name_nodejs" style="color: inherit; text-decoration: inherit;">name</a>
@@ -915,8 +833,7 @@ All [input](#inputs) properties are implicitly available as output properties. A
         <span class="property-indicator"></span>
         <span class="property-type">string</span>
     </dt>
-    <dd>{{% md %}}The name of the resource{{% /md %}}</dd>
-    <dt class="property-"
+    <dd>{{% md %}}The name of the resource{{% /md %}}</dd><dt class="property-"
             title="">
         <span id="type_nodejs">
 <a href="#type_nodejs" style="color: inherit; text-decoration: inherit;">type</a>
@@ -924,14 +841,11 @@ All [input](#inputs) properties are implicitly available as output properties. A
         <span class="property-indicator"></span>
         <span class="property-type">string</span>
     </dt>
-    <dd>{{% md %}}The type of the resource. E.g. "Microsoft.Compute/virtualMachines" or "Microsoft.Storage/storageAccounts"{{% /md %}}</dd>
-</dl>
+    <dd>{{% md %}}The type of the resource. E.g. "Microsoft.Compute/virtualMachines" or "Microsoft.Storage/storageAccounts"{{% /md %}}</dd></dl>
 {{% /choosable %}}
 
 {{% choosable language python %}}
-<dl class="resources-properties">
-
-    <dt class="property-"
+<dl class="resources-properties"><dt class="property-"
             title="">
         <span id="id_python">
 <a href="#id_python" style="color: inherit; text-decoration: inherit;">id</a>
@@ -939,8 +853,7 @@ All [input](#inputs) properties are implicitly available as output properties. A
         <span class="property-indicator"></span>
         <span class="property-type">str</span>
     </dt>
-    <dd>{{% md %}}The provider-assigned unique ID for this managed resource.{{% /md %}}</dd>
-    <dt class="property-"
+    <dd>{{% md %}}The provider-assigned unique ID for this managed resource.{{% /md %}}</dd><dt class="property-"
             title="">
         <span id="is_disabled_python">
 <a href="#is_disabled_python" style="color: inherit; text-decoration: inherit;">is_<wbr>disabled</a>
@@ -948,8 +861,7 @@ All [input](#inputs) properties are implicitly available as output properties. A
         <span class="property-indicator"></span>
         <span class="property-type">bool</span>
     </dt>
-    <dd>{{% md %}}Is sensitivity recommendation disabled. Applicable for recommended sensitivity label only. Specifies whether the sensitivity recommendation on this column is disabled (dismissed) or not.{{% /md %}}</dd>
-    <dt class="property-"
+    <dd>{{% md %}}Is sensitivity recommendation disabled. Applicable for recommended sensitivity label only. Specifies whether the sensitivity recommendation on this column is disabled (dismissed) or not.{{% /md %}}</dd><dt class="property-"
             title="">
         <span id="managed_by_python">
 <a href="#managed_by_python" style="color: inherit; text-decoration: inherit;">managed_<wbr>by</a>
@@ -957,8 +869,7 @@ All [input](#inputs) properties are implicitly available as output properties. A
         <span class="property-indicator"></span>
         <span class="property-type">str</span>
     </dt>
-    <dd>{{% md %}}managed by{{% /md %}}</dd>
-    <dt class="property-"
+    <dd>{{% md %}}managed by{{% /md %}}</dd><dt class="property-"
             title="">
         <span id="name_python">
 <a href="#name_python" style="color: inherit; text-decoration: inherit;">name</a>
@@ -966,8 +877,7 @@ All [input](#inputs) properties are implicitly available as output properties. A
         <span class="property-indicator"></span>
         <span class="property-type">str</span>
     </dt>
-    <dd>{{% md %}}The name of the resource{{% /md %}}</dd>
-    <dt class="property-"
+    <dd>{{% md %}}The name of the resource{{% /md %}}</dd><dt class="property-"
             title="">
         <span id="type_python">
 <a href="#type_python" style="color: inherit; text-decoration: inherit;">type</a>
@@ -975,8 +885,7 @@ All [input](#inputs) properties are implicitly available as output properties. A
         <span class="property-indicator"></span>
         <span class="property-type">str</span>
     </dt>
-    <dd>{{% md %}}The type of the resource. E.g. "Microsoft.Compute/virtualMachines" or "Microsoft.Storage/storageAccounts"{{% /md %}}</dd>
-</dl>
+    <dd>{{% md %}}The type of the resource. E.g. "Microsoft.Compute/virtualMachines" or "Microsoft.Storage/storageAccounts"{{% /md %}}</dd></dl>
 {{% /choosable %}}
 
 
@@ -992,63 +901,39 @@ All [input](#inputs) properties are implicitly available as output properties. A
 <h4 id="sensitivitylabelrank">Sensitivity<wbr>Label<wbr>Rank</h4>
 
 {{% choosable language csharp %}}
-<dl class="tabular">
-    <dt>None</dt>
-    <dd>None</dd>
-    <dt>Low</dt>
-    <dd>Low</dd>
-    <dt>Medium</dt>
-    <dd>Medium</dd>
-    <dt>High</dt>
-    <dd>High</dd>
-    <dt>Critical</dt>
-    <dd>Critical</dd>
-</dl>
+<dl class="tabular"><dt>None</dt>
+    <dd>None</dd><dt>Low</dt>
+    <dd>Low</dd><dt>Medium</dt>
+    <dd>Medium</dd><dt>High</dt>
+    <dd>High</dd><dt>Critical</dt>
+    <dd>Critical</dd></dl>
 {{% /choosable %}}
 
 {{% choosable language go %}}
-<dl class="tabular">
-    <dt>Sensitivity<wbr>Label<wbr>Rank<wbr>None</dt>
-    <dd>None</dd>
-    <dt>Sensitivity<wbr>Label<wbr>Rank<wbr>Low</dt>
-    <dd>Low</dd>
-    <dt>Sensitivity<wbr>Label<wbr>Rank<wbr>Medium</dt>
-    <dd>Medium</dd>
-    <dt>Sensitivity<wbr>Label<wbr>Rank<wbr>High</dt>
-    <dd>High</dd>
-    <dt>Sensitivity<wbr>Label<wbr>Rank<wbr>Critical</dt>
-    <dd>Critical</dd>
-</dl>
+<dl class="tabular"><dt>Sensitivity<wbr>Label<wbr>Rank<wbr>None</dt>
+    <dd>None</dd><dt>Sensitivity<wbr>Label<wbr>Rank<wbr>Low</dt>
+    <dd>Low</dd><dt>Sensitivity<wbr>Label<wbr>Rank<wbr>Medium</dt>
+    <dd>Medium</dd><dt>Sensitivity<wbr>Label<wbr>Rank<wbr>High</dt>
+    <dd>High</dd><dt>Sensitivity<wbr>Label<wbr>Rank<wbr>Critical</dt>
+    <dd>Critical</dd></dl>
 {{% /choosable %}}
 
 {{% choosable language nodejs %}}
-<dl class="tabular">
-    <dt>None</dt>
-    <dd>None</dd>
-    <dt>Low</dt>
-    <dd>Low</dd>
-    <dt>Medium</dt>
-    <dd>Medium</dd>
-    <dt>High</dt>
-    <dd>High</dd>
-    <dt>Critical</dt>
-    <dd>Critical</dd>
-</dl>
+<dl class="tabular"><dt>None</dt>
+    <dd>None</dd><dt>Low</dt>
+    <dd>Low</dd><dt>Medium</dt>
+    <dd>Medium</dd><dt>High</dt>
+    <dd>High</dd><dt>Critical</dt>
+    <dd>Critical</dd></dl>
 {{% /choosable %}}
 
 {{% choosable language python %}}
-<dl class="tabular">
-    <dt>NONE</dt>
-    <dd>None</dd>
-    <dt>LOW</dt>
-    <dd>Low</dd>
-    <dt>MEDIUM</dt>
-    <dd>Medium</dd>
-    <dt>HIGH</dt>
-    <dd>High</dd>
-    <dt>CRITICAL</dt>
-    <dd>Critical</dd>
-</dl>
+<dl class="tabular"><dt>NONE</dt>
+    <dd>None</dd><dt>LOW</dt>
+    <dd>Low</dd><dt>MEDIUM</dt>
+    <dd>Medium</dd><dt>HIGH</dt>
+    <dd>High</dd><dt>CRITICAL</dt>
+    <dd>Critical</dd></dl>
 {{% /choosable %}}
 ## Import
 

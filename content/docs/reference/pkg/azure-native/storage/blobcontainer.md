@@ -14,11 +14,17 @@ Properties of the blob container, including Id, resource name, resource type, Et
 API Version: 2021-01-01.
 
 {{% examples %}}
+
 ## Example Usage
 
 {{< chooser language "typescript,python,go,csharp" / >}}
+
+
 ### PutContainerWithDefaultEncryptionScope
-{{% example csharp %}}
+
+
+{{< example csharp >}}
+
 ```csharp
 using Pulumi;
 using AzureNative = Pulumi.AzureNative;
@@ -41,9 +47,12 @@ class MyStack : Stack
 
 ```
 
-{{% /example %}}
 
-{{% example go %}}
+{{< /example >}}
+
+
+{{< example go >}}
+
 
 ```go
 package main
@@ -71,9 +80,12 @@ func main() {
 
 ```
 
-{{% /example %}}
 
-{{% example python %}}
+{{< /example >}}
+
+
+{{< example python >}}
+
 
 ```python
 import pulumi
@@ -88,9 +100,12 @@ blob_container = azure_native.storage.BlobContainer("blobContainer",
 
 ```
 
-{{% /example %}}
 
-{{% example typescript %}}
+{{< /example >}}
+
+
+{{< example typescript >}}
+
 
 ```typescript
 import * as pulumi from "@pulumi/pulumi";
@@ -106,10 +121,17 @@ const blobContainer = new azure_native.storage.BlobContainer("blobContainer", {
 
 ```
 
-{{% /example %}}
+
+{{< /example >}}
+
+
+
 
 ### PutContainers
-{{% example csharp %}}
+
+
+{{< example csharp >}}
+
 ```csharp
 using Pulumi;
 using AzureNative = Pulumi.AzureNative;
@@ -130,9 +152,12 @@ class MyStack : Stack
 
 ```
 
-{{% /example %}}
 
-{{% example go %}}
+{{< /example >}}
+
+
+{{< example go >}}
+
 
 ```go
 package main
@@ -158,9 +183,12 @@ func main() {
 
 ```
 
-{{% /example %}}
 
-{{% example python %}}
+{{< /example >}}
+
+
+{{< example python >}}
+
 
 ```python
 import pulumi
@@ -173,9 +201,12 @@ blob_container = azure_native.storage.BlobContainer("blobContainer",
 
 ```
 
-{{% /example %}}
 
-{{% example typescript %}}
+{{< /example >}}
+
+
+{{< example typescript >}}
+
 
 ```typescript
 import * as pulumi from "@pulumi/pulumi";
@@ -189,9 +220,16 @@ const blobContainer = new azure_native.storage.BlobContainer("blobContainer", {
 
 ```
 
-{{% /example %}}
+
+{{< /example >}}
+
+
+
+
 
 {{% /examples %}}
+
+
 
 
 ## Create a BlobContainer Resource {#create}
@@ -216,9 +254,7 @@ const blobContainer = new azure_native.storage.BlobContainer("blobContainer", {
 
 {{% choosable language nodejs %}}
 
-<dl class="resources-properties">
-  
-    <dt
+<dl class="resources-properties"><dt
         class="property-required" title="Required">
         <span>name</span>
         <span class="property-indicator"></span>
@@ -226,9 +262,7 @@ const blobContainer = new azure_native.storage.BlobContainer("blobContainer", {
     </dt>
     <dd>
       The unique name of the resource.
-    </dd>
-  
-    <dt
+    </dd><dt
         class="property-required" title="Required">
         <span>args</span>
         <span class="property-indicator"></span>
@@ -236,9 +270,7 @@ const blobContainer = new azure_native.storage.BlobContainer("blobContainer", {
     </dt>
     <dd>
       The arguments to resource properties.
-    </dd>
-  
-    <dt
+    </dd><dt
         class="property-optional" title="Optional">
         <span>opts</span>
         <span class="property-indicator"></span>
@@ -246,10 +278,7 @@ const blobContainer = new azure_native.storage.BlobContainer("blobContainer", {
     </dt>
     <dd>
       Bag of options to control resource&#39;s behavior.
-    </dd>
-  
-
-</dl>
+    </dd></dl>
 
 {{% /choosable %}}
 
@@ -275,9 +304,7 @@ const blobContainer = new azure_native.storage.BlobContainer("blobContainer", {
 
 {{% choosable language go %}}
 
-<dl class="resources-properties">
-  
-    <dt
+<dl class="resources-properties"><dt
         class="property-optional" title="Optional">
         <span>ctx</span>
         <span class="property-indicator"></span>
@@ -285,9 +312,7 @@ const blobContainer = new azure_native.storage.BlobContainer("blobContainer", {
     </dt>
     <dd>
       Context object for the current deployment.
-    </dd>
-  
-    <dt
+    </dd><dt
         class="property-required" title="Required">
         <span>name</span>
         <span class="property-indicator"></span>
@@ -295,9 +320,7 @@ const blobContainer = new azure_native.storage.BlobContainer("blobContainer", {
     </dt>
     <dd>
       The unique name of the resource.
-    </dd>
-  
-    <dt
+    </dd><dt
         class="property-required" title="Required">
         <span>args</span>
         <span class="property-indicator"></span>
@@ -305,9 +328,7 @@ const blobContainer = new azure_native.storage.BlobContainer("blobContainer", {
     </dt>
     <dd>
       The arguments to resource properties.
-    </dd>
-  
-    <dt
+    </dd><dt
         class="property-optional" title="Optional">
         <span>opts</span>
         <span class="property-indicator"></span>
@@ -315,18 +336,13 @@ const blobContainer = new azure_native.storage.BlobContainer("blobContainer", {
     </dt>
     <dd>
       Bag of options to control resource&#39;s behavior.
-    </dd>
-  
-
-</dl>
+    </dd></dl>
 
 {{% /choosable %}}
 
 {{% choosable language csharp %}}
 
-<dl class="resources-properties">
-  
-    <dt
+<dl class="resources-properties"><dt
         class="property-required" title="Required">
         <span>name</span>
         <span class="property-indicator"></span>
@@ -334,9 +350,7 @@ const blobContainer = new azure_native.storage.BlobContainer("blobContainer", {
     </dt>
     <dd>
       The unique name of the resource.
-    </dd>
-  
-    <dt
+    </dd><dt
         class="property-required" title="Required">
         <span>args</span>
         <span class="property-indicator"></span>
@@ -344,9 +358,7 @@ const blobContainer = new azure_native.storage.BlobContainer("blobContainer", {
     </dt>
     <dd>
       The arguments to resource properties.
-    </dd>
-  
-    <dt
+    </dd><dt
         class="property-optional" title="Optional">
         <span>opts</span>
         <span class="property-indicator"></span>
@@ -354,10 +366,7 @@ const blobContainer = new azure_native.storage.BlobContainer("blobContainer", {
     </dt>
     <dd>
       Bag of options to control resource&#39;s behavior.
-    </dd>
-  
-
-</dl>
+    </dd></dl>
 
 {{% /choosable %}}
 
@@ -372,9 +381,7 @@ The BlobContainer resource accepts the following [input]({{< relref "/docs/intro
 
 
 {{% choosable language csharp %}}
-<dl class="resources-properties">
-
-    <dt class="property-required"
+<dl class="resources-properties"><dt class="property-required"
             title="Required">
         <span id="accountname_csharp">
 <a href="#accountname_csharp" style="color: inherit; text-decoration: inherit;">Account<wbr>Name</a>
@@ -382,8 +389,7 @@ The BlobContainer resource accepts the following [input]({{< relref "/docs/intro
         <span class="property-indicator"></span>
         <span class="property-type">string</span>
     </dt>
-    <dd>{{% md %}}The name of the storage account within the specified resource group. Storage account names must be between 3 and 24 characters in length and use numbers and lower-case letters only.{{% /md %}}</dd>
-    <dt class="property-required"
+    <dd>{{% md %}}The name of the storage account within the specified resource group. Storage account names must be between 3 and 24 characters in length and use numbers and lower-case letters only.{{% /md %}}</dd><dt class="property-required"
             title="Required">
         <span id="resourcegroupname_csharp">
 <a href="#resourcegroupname_csharp" style="color: inherit; text-decoration: inherit;">Resource<wbr>Group<wbr>Name</a>
@@ -391,8 +397,7 @@ The BlobContainer resource accepts the following [input]({{< relref "/docs/intro
         <span class="property-indicator"></span>
         <span class="property-type">string</span>
     </dt>
-    <dd>{{% md %}}The name of the resource group within the user's subscription. The name is case insensitive.{{% /md %}}</dd>
-    <dt class="property-optional"
+    <dd>{{% md %}}The name of the resource group within the user's subscription. The name is case insensitive.{{% /md %}}</dd><dt class="property-optional"
             title="Optional">
         <span id="containername_csharp">
 <a href="#containername_csharp" style="color: inherit; text-decoration: inherit;">Container<wbr>Name</a>
@@ -400,8 +405,7 @@ The BlobContainer resource accepts the following [input]({{< relref "/docs/intro
         <span class="property-indicator"></span>
         <span class="property-type">string</span>
     </dt>
-    <dd>{{% md %}}The name of the blob container within the specified storage account. Blob container names must be between 3 and 63 characters in length and use numbers, lower-case letters and dash (-) only. Every dash (-) character must be immediately preceded and followed by a letter or number.{{% /md %}}</dd>
-    <dt class="property-optional"
+    <dd>{{% md %}}The name of the blob container within the specified storage account. Blob container names must be between 3 and 63 characters in length and use numbers, lower-case letters and dash (-) only. Every dash (-) character must be immediately preceded and followed by a letter or number.{{% /md %}}</dd><dt class="property-optional"
             title="Optional">
         <span id="defaultencryptionscope_csharp">
 <a href="#defaultencryptionscope_csharp" style="color: inherit; text-decoration: inherit;">Default<wbr>Encryption<wbr>Scope</a>
@@ -409,8 +413,7 @@ The BlobContainer resource accepts the following [input]({{< relref "/docs/intro
         <span class="property-indicator"></span>
         <span class="property-type">string</span>
     </dt>
-    <dd>{{% md %}}Default the container to use specified encryption scope for all writes.{{% /md %}}</dd>
-    <dt class="property-optional"
+    <dd>{{% md %}}Default the container to use specified encryption scope for all writes.{{% /md %}}</dd><dt class="property-optional"
             title="Optional">
         <span id="denyencryptionscopeoverride_csharp">
 <a href="#denyencryptionscopeoverride_csharp" style="color: inherit; text-decoration: inherit;">Deny<wbr>Encryption<wbr>Scope<wbr>Override</a>
@@ -418,8 +421,7 @@ The BlobContainer resource accepts the following [input]({{< relref "/docs/intro
         <span class="property-indicator"></span>
         <span class="property-type">bool</span>
     </dt>
-    <dd>{{% md %}}Block override of encryption scope from the container default.{{% /md %}}</dd>
-    <dt class="property-optional"
+    <dd>{{% md %}}Block override of encryption scope from the container default.{{% /md %}}</dd><dt class="property-optional"
             title="Optional">
         <span id="metadata_csharp">
 <a href="#metadata_csharp" style="color: inherit; text-decoration: inherit;">Metadata</a>
@@ -427,8 +429,7 @@ The BlobContainer resource accepts the following [input]({{< relref "/docs/intro
         <span class="property-indicator"></span>
         <span class="property-type">Dictionary&lt;string, string&gt;</span>
     </dt>
-    <dd>{{% md %}}A name-value pair to associate with the container as metadata.{{% /md %}}</dd>
-    <dt class="property-optional"
+    <dd>{{% md %}}A name-value pair to associate with the container as metadata.{{% /md %}}</dd><dt class="property-optional"
             title="Optional">
         <span id="publicaccess_csharp">
 <a href="#publicaccess_csharp" style="color: inherit; text-decoration: inherit;">Public<wbr>Access</a>
@@ -436,14 +437,11 @@ The BlobContainer resource accepts the following [input]({{< relref "/docs/intro
         <span class="property-indicator"></span>
         <span class="property-type"><a href="#publicaccess">Pulumi.<wbr>Azure<wbr>Native.<wbr>Storage.<wbr>Public<wbr>Access</a></span>
     </dt>
-    <dd>{{% md %}}Specifies whether data in the container may be accessed publicly and the level of access.{{% /md %}}</dd>
-</dl>
+    <dd>{{% md %}}Specifies whether data in the container may be accessed publicly and the level of access.{{% /md %}}</dd></dl>
 {{% /choosable %}}
 
 {{% choosable language go %}}
-<dl class="resources-properties">
-
-    <dt class="property-required"
+<dl class="resources-properties"><dt class="property-required"
             title="Required">
         <span id="accountname_go">
 <a href="#accountname_go" style="color: inherit; text-decoration: inherit;">Account<wbr>Name</a>
@@ -451,8 +449,7 @@ The BlobContainer resource accepts the following [input]({{< relref "/docs/intro
         <span class="property-indicator"></span>
         <span class="property-type">string</span>
     </dt>
-    <dd>{{% md %}}The name of the storage account within the specified resource group. Storage account names must be between 3 and 24 characters in length and use numbers and lower-case letters only.{{% /md %}}</dd>
-    <dt class="property-required"
+    <dd>{{% md %}}The name of the storage account within the specified resource group. Storage account names must be between 3 and 24 characters in length and use numbers and lower-case letters only.{{% /md %}}</dd><dt class="property-required"
             title="Required">
         <span id="resourcegroupname_go">
 <a href="#resourcegroupname_go" style="color: inherit; text-decoration: inherit;">Resource<wbr>Group<wbr>Name</a>
@@ -460,8 +457,7 @@ The BlobContainer resource accepts the following [input]({{< relref "/docs/intro
         <span class="property-indicator"></span>
         <span class="property-type">string</span>
     </dt>
-    <dd>{{% md %}}The name of the resource group within the user's subscription. The name is case insensitive.{{% /md %}}</dd>
-    <dt class="property-optional"
+    <dd>{{% md %}}The name of the resource group within the user's subscription. The name is case insensitive.{{% /md %}}</dd><dt class="property-optional"
             title="Optional">
         <span id="containername_go">
 <a href="#containername_go" style="color: inherit; text-decoration: inherit;">Container<wbr>Name</a>
@@ -469,8 +465,7 @@ The BlobContainer resource accepts the following [input]({{< relref "/docs/intro
         <span class="property-indicator"></span>
         <span class="property-type">string</span>
     </dt>
-    <dd>{{% md %}}The name of the blob container within the specified storage account. Blob container names must be between 3 and 63 characters in length and use numbers, lower-case letters and dash (-) only. Every dash (-) character must be immediately preceded and followed by a letter or number.{{% /md %}}</dd>
-    <dt class="property-optional"
+    <dd>{{% md %}}The name of the blob container within the specified storage account. Blob container names must be between 3 and 63 characters in length and use numbers, lower-case letters and dash (-) only. Every dash (-) character must be immediately preceded and followed by a letter or number.{{% /md %}}</dd><dt class="property-optional"
             title="Optional">
         <span id="defaultencryptionscope_go">
 <a href="#defaultencryptionscope_go" style="color: inherit; text-decoration: inherit;">Default<wbr>Encryption<wbr>Scope</a>
@@ -478,8 +473,7 @@ The BlobContainer resource accepts the following [input]({{< relref "/docs/intro
         <span class="property-indicator"></span>
         <span class="property-type">string</span>
     </dt>
-    <dd>{{% md %}}Default the container to use specified encryption scope for all writes.{{% /md %}}</dd>
-    <dt class="property-optional"
+    <dd>{{% md %}}Default the container to use specified encryption scope for all writes.{{% /md %}}</dd><dt class="property-optional"
             title="Optional">
         <span id="denyencryptionscopeoverride_go">
 <a href="#denyencryptionscopeoverride_go" style="color: inherit; text-decoration: inherit;">Deny<wbr>Encryption<wbr>Scope<wbr>Override</a>
@@ -487,8 +481,7 @@ The BlobContainer resource accepts the following [input]({{< relref "/docs/intro
         <span class="property-indicator"></span>
         <span class="property-type">bool</span>
     </dt>
-    <dd>{{% md %}}Block override of encryption scope from the container default.{{% /md %}}</dd>
-    <dt class="property-optional"
+    <dd>{{% md %}}Block override of encryption scope from the container default.{{% /md %}}</dd><dt class="property-optional"
             title="Optional">
         <span id="metadata_go">
 <a href="#metadata_go" style="color: inherit; text-decoration: inherit;">Metadata</a>
@@ -496,8 +489,7 @@ The BlobContainer resource accepts the following [input]({{< relref "/docs/intro
         <span class="property-indicator"></span>
         <span class="property-type">map[string]string</span>
     </dt>
-    <dd>{{% md %}}A name-value pair to associate with the container as metadata.{{% /md %}}</dd>
-    <dt class="property-optional"
+    <dd>{{% md %}}A name-value pair to associate with the container as metadata.{{% /md %}}</dd><dt class="property-optional"
             title="Optional">
         <span id="publicaccess_go">
 <a href="#publicaccess_go" style="color: inherit; text-decoration: inherit;">Public<wbr>Access</a>
@@ -505,14 +497,11 @@ The BlobContainer resource accepts the following [input]({{< relref "/docs/intro
         <span class="property-indicator"></span>
         <span class="property-type"><a href="#publicaccess">Public<wbr>Access</a></span>
     </dt>
-    <dd>{{% md %}}Specifies whether data in the container may be accessed publicly and the level of access.{{% /md %}}</dd>
-</dl>
+    <dd>{{% md %}}Specifies whether data in the container may be accessed publicly and the level of access.{{% /md %}}</dd></dl>
 {{% /choosable %}}
 
 {{% choosable language nodejs %}}
-<dl class="resources-properties">
-
-    <dt class="property-required"
+<dl class="resources-properties"><dt class="property-required"
             title="Required">
         <span id="accountname_nodejs">
 <a href="#accountname_nodejs" style="color: inherit; text-decoration: inherit;">account<wbr>Name</a>
@@ -520,8 +509,7 @@ The BlobContainer resource accepts the following [input]({{< relref "/docs/intro
         <span class="property-indicator"></span>
         <span class="property-type">string</span>
     </dt>
-    <dd>{{% md %}}The name of the storage account within the specified resource group. Storage account names must be between 3 and 24 characters in length and use numbers and lower-case letters only.{{% /md %}}</dd>
-    <dt class="property-required"
+    <dd>{{% md %}}The name of the storage account within the specified resource group. Storage account names must be between 3 and 24 characters in length and use numbers and lower-case letters only.{{% /md %}}</dd><dt class="property-required"
             title="Required">
         <span id="resourcegroupname_nodejs">
 <a href="#resourcegroupname_nodejs" style="color: inherit; text-decoration: inherit;">resource<wbr>Group<wbr>Name</a>
@@ -529,8 +517,7 @@ The BlobContainer resource accepts the following [input]({{< relref "/docs/intro
         <span class="property-indicator"></span>
         <span class="property-type">string</span>
     </dt>
-    <dd>{{% md %}}The name of the resource group within the user's subscription. The name is case insensitive.{{% /md %}}</dd>
-    <dt class="property-optional"
+    <dd>{{% md %}}The name of the resource group within the user's subscription. The name is case insensitive.{{% /md %}}</dd><dt class="property-optional"
             title="Optional">
         <span id="containername_nodejs">
 <a href="#containername_nodejs" style="color: inherit; text-decoration: inherit;">container<wbr>Name</a>
@@ -538,8 +525,7 @@ The BlobContainer resource accepts the following [input]({{< relref "/docs/intro
         <span class="property-indicator"></span>
         <span class="property-type">string</span>
     </dt>
-    <dd>{{% md %}}The name of the blob container within the specified storage account. Blob container names must be between 3 and 63 characters in length and use numbers, lower-case letters and dash (-) only. Every dash (-) character must be immediately preceded and followed by a letter or number.{{% /md %}}</dd>
-    <dt class="property-optional"
+    <dd>{{% md %}}The name of the blob container within the specified storage account. Blob container names must be between 3 and 63 characters in length and use numbers, lower-case letters and dash (-) only. Every dash (-) character must be immediately preceded and followed by a letter or number.{{% /md %}}</dd><dt class="property-optional"
             title="Optional">
         <span id="defaultencryptionscope_nodejs">
 <a href="#defaultencryptionscope_nodejs" style="color: inherit; text-decoration: inherit;">default<wbr>Encryption<wbr>Scope</a>
@@ -547,8 +533,7 @@ The BlobContainer resource accepts the following [input]({{< relref "/docs/intro
         <span class="property-indicator"></span>
         <span class="property-type">string</span>
     </dt>
-    <dd>{{% md %}}Default the container to use specified encryption scope for all writes.{{% /md %}}</dd>
-    <dt class="property-optional"
+    <dd>{{% md %}}Default the container to use specified encryption scope for all writes.{{% /md %}}</dd><dt class="property-optional"
             title="Optional">
         <span id="denyencryptionscopeoverride_nodejs">
 <a href="#denyencryptionscopeoverride_nodejs" style="color: inherit; text-decoration: inherit;">deny<wbr>Encryption<wbr>Scope<wbr>Override</a>
@@ -556,8 +541,7 @@ The BlobContainer resource accepts the following [input]({{< relref "/docs/intro
         <span class="property-indicator"></span>
         <span class="property-type">boolean</span>
     </dt>
-    <dd>{{% md %}}Block override of encryption scope from the container default.{{% /md %}}</dd>
-    <dt class="property-optional"
+    <dd>{{% md %}}Block override of encryption scope from the container default.{{% /md %}}</dd><dt class="property-optional"
             title="Optional">
         <span id="metadata_nodejs">
 <a href="#metadata_nodejs" style="color: inherit; text-decoration: inherit;">metadata</a>
@@ -565,8 +549,7 @@ The BlobContainer resource accepts the following [input]({{< relref "/docs/intro
         <span class="property-indicator"></span>
         <span class="property-type">{[key: string]: string}</span>
     </dt>
-    <dd>{{% md %}}A name-value pair to associate with the container as metadata.{{% /md %}}</dd>
-    <dt class="property-optional"
+    <dd>{{% md %}}A name-value pair to associate with the container as metadata.{{% /md %}}</dd><dt class="property-optional"
             title="Optional">
         <span id="publicaccess_nodejs">
 <a href="#publicaccess_nodejs" style="color: inherit; text-decoration: inherit;">public<wbr>Access</a>
@@ -574,14 +557,11 @@ The BlobContainer resource accepts the following [input]({{< relref "/docs/intro
         <span class="property-indicator"></span>
         <span class="property-type"><a href="#publicaccess">Public<wbr>Access</a></span>
     </dt>
-    <dd>{{% md %}}Specifies whether data in the container may be accessed publicly and the level of access.{{% /md %}}</dd>
-</dl>
+    <dd>{{% md %}}Specifies whether data in the container may be accessed publicly and the level of access.{{% /md %}}</dd></dl>
 {{% /choosable %}}
 
 {{% choosable language python %}}
-<dl class="resources-properties">
-
-    <dt class="property-required"
+<dl class="resources-properties"><dt class="property-required"
             title="Required">
         <span id="account_name_python">
 <a href="#account_name_python" style="color: inherit; text-decoration: inherit;">account_<wbr>name</a>
@@ -589,8 +569,7 @@ The BlobContainer resource accepts the following [input]({{< relref "/docs/intro
         <span class="property-indicator"></span>
         <span class="property-type">str</span>
     </dt>
-    <dd>{{% md %}}The name of the storage account within the specified resource group. Storage account names must be between 3 and 24 characters in length and use numbers and lower-case letters only.{{% /md %}}</dd>
-    <dt class="property-required"
+    <dd>{{% md %}}The name of the storage account within the specified resource group. Storage account names must be between 3 and 24 characters in length and use numbers and lower-case letters only.{{% /md %}}</dd><dt class="property-required"
             title="Required">
         <span id="resource_group_name_python">
 <a href="#resource_group_name_python" style="color: inherit; text-decoration: inherit;">resource_<wbr>group_<wbr>name</a>
@@ -598,8 +577,7 @@ The BlobContainer resource accepts the following [input]({{< relref "/docs/intro
         <span class="property-indicator"></span>
         <span class="property-type">str</span>
     </dt>
-    <dd>{{% md %}}The name of the resource group within the user's subscription. The name is case insensitive.{{% /md %}}</dd>
-    <dt class="property-optional"
+    <dd>{{% md %}}The name of the resource group within the user's subscription. The name is case insensitive.{{% /md %}}</dd><dt class="property-optional"
             title="Optional">
         <span id="container_name_python">
 <a href="#container_name_python" style="color: inherit; text-decoration: inherit;">container_<wbr>name</a>
@@ -607,8 +585,7 @@ The BlobContainer resource accepts the following [input]({{< relref "/docs/intro
         <span class="property-indicator"></span>
         <span class="property-type">str</span>
     </dt>
-    <dd>{{% md %}}The name of the blob container within the specified storage account. Blob container names must be between 3 and 63 characters in length and use numbers, lower-case letters and dash (-) only. Every dash (-) character must be immediately preceded and followed by a letter or number.{{% /md %}}</dd>
-    <dt class="property-optional"
+    <dd>{{% md %}}The name of the blob container within the specified storage account. Blob container names must be between 3 and 63 characters in length and use numbers, lower-case letters and dash (-) only. Every dash (-) character must be immediately preceded and followed by a letter or number.{{% /md %}}</dd><dt class="property-optional"
             title="Optional">
         <span id="default_encryption_scope_python">
 <a href="#default_encryption_scope_python" style="color: inherit; text-decoration: inherit;">default_<wbr>encryption_<wbr>scope</a>
@@ -616,8 +593,7 @@ The BlobContainer resource accepts the following [input]({{< relref "/docs/intro
         <span class="property-indicator"></span>
         <span class="property-type">str</span>
     </dt>
-    <dd>{{% md %}}Default the container to use specified encryption scope for all writes.{{% /md %}}</dd>
-    <dt class="property-optional"
+    <dd>{{% md %}}Default the container to use specified encryption scope for all writes.{{% /md %}}</dd><dt class="property-optional"
             title="Optional">
         <span id="deny_encryption_scope_override_python">
 <a href="#deny_encryption_scope_override_python" style="color: inherit; text-decoration: inherit;">deny_<wbr>encryption_<wbr>scope_<wbr>override</a>
@@ -625,8 +601,7 @@ The BlobContainer resource accepts the following [input]({{< relref "/docs/intro
         <span class="property-indicator"></span>
         <span class="property-type">bool</span>
     </dt>
-    <dd>{{% md %}}Block override of encryption scope from the container default.{{% /md %}}</dd>
-    <dt class="property-optional"
+    <dd>{{% md %}}Block override of encryption scope from the container default.{{% /md %}}</dd><dt class="property-optional"
             title="Optional">
         <span id="metadata_python">
 <a href="#metadata_python" style="color: inherit; text-decoration: inherit;">metadata</a>
@@ -634,8 +609,7 @@ The BlobContainer resource accepts the following [input]({{< relref "/docs/intro
         <span class="property-indicator"></span>
         <span class="property-type">Mapping[str, str]</span>
     </dt>
-    <dd>{{% md %}}A name-value pair to associate with the container as metadata.{{% /md %}}</dd>
-    <dt class="property-optional"
+    <dd>{{% md %}}A name-value pair to associate with the container as metadata.{{% /md %}}</dd><dt class="property-optional"
             title="Optional">
         <span id="public_access_python">
 <a href="#public_access_python" style="color: inherit; text-decoration: inherit;">public_<wbr>access</a>
@@ -643,8 +617,7 @@ The BlobContainer resource accepts the following [input]({{< relref "/docs/intro
         <span class="property-indicator"></span>
         <span class="property-type"><a href="#publicaccess">Public<wbr>Access</a></span>
     </dt>
-    <dd>{{% md %}}Specifies whether data in the container may be accessed publicly and the level of access.{{% /md %}}</dd>
-</dl>
+    <dd>{{% md %}}Specifies whether data in the container may be accessed publicly and the level of access.{{% /md %}}</dd></dl>
 {{% /choosable %}}
 
 
@@ -655,9 +628,7 @@ All [input](#inputs) properties are implicitly available as output properties. A
 
 
 {{% choosable language csharp %}}
-<dl class="resources-properties">
-
-    <dt class="property-"
+<dl class="resources-properties"><dt class="property-"
             title="">
         <span id="deleted_csharp">
 <a href="#deleted_csharp" style="color: inherit; text-decoration: inherit;">Deleted</a>
@@ -665,8 +636,7 @@ All [input](#inputs) properties are implicitly available as output properties. A
         <span class="property-indicator"></span>
         <span class="property-type">bool</span>
     </dt>
-    <dd>{{% md %}}Indicates whether the blob container was deleted.{{% /md %}}</dd>
-    <dt class="property-"
+    <dd>{{% md %}}Indicates whether the blob container was deleted.{{% /md %}}</dd><dt class="property-"
             title="">
         <span id="deletedtime_csharp">
 <a href="#deletedtime_csharp" style="color: inherit; text-decoration: inherit;">Deleted<wbr>Time</a>
@@ -674,8 +644,7 @@ All [input](#inputs) properties are implicitly available as output properties. A
         <span class="property-indicator"></span>
         <span class="property-type">string</span>
     </dt>
-    <dd>{{% md %}}Blob container deletion time.{{% /md %}}</dd>
-    <dt class="property-"
+    <dd>{{% md %}}Blob container deletion time.{{% /md %}}</dd><dt class="property-"
             title="">
         <span id="etag_csharp">
 <a href="#etag_csharp" style="color: inherit; text-decoration: inherit;">Etag</a>
@@ -683,8 +652,7 @@ All [input](#inputs) properties are implicitly available as output properties. A
         <span class="property-indicator"></span>
         <span class="property-type">string</span>
     </dt>
-    <dd>{{% md %}}Resource Etag.{{% /md %}}</dd>
-    <dt class="property-"
+    <dd>{{% md %}}Resource Etag.{{% /md %}}</dd><dt class="property-"
             title="">
         <span id="hasimmutabilitypolicy_csharp">
 <a href="#hasimmutabilitypolicy_csharp" style="color: inherit; text-decoration: inherit;">Has<wbr>Immutability<wbr>Policy</a>
@@ -692,8 +660,7 @@ All [input](#inputs) properties are implicitly available as output properties. A
         <span class="property-indicator"></span>
         <span class="property-type">bool</span>
     </dt>
-    <dd>{{% md %}}The hasImmutabilityPolicy public property is set to true by SRP if ImmutabilityPolicy has been created for this container. The hasImmutabilityPolicy public property is set to false by SRP if ImmutabilityPolicy has not been created for this container.{{% /md %}}</dd>
-    <dt class="property-"
+    <dd>{{% md %}}The hasImmutabilityPolicy public property is set to true by SRP if ImmutabilityPolicy has been created for this container. The hasImmutabilityPolicy public property is set to false by SRP if ImmutabilityPolicy has not been created for this container.{{% /md %}}</dd><dt class="property-"
             title="">
         <span id="haslegalhold_csharp">
 <a href="#haslegalhold_csharp" style="color: inherit; text-decoration: inherit;">Has<wbr>Legal<wbr>Hold</a>
@@ -701,8 +668,7 @@ All [input](#inputs) properties are implicitly available as output properties. A
         <span class="property-indicator"></span>
         <span class="property-type">bool</span>
     </dt>
-    <dd>{{% md %}}The hasLegalHold public property is set to true by SRP if there are at least one existing tag. The hasLegalHold public property is set to false by SRP if all existing legal hold tags are cleared out. There can be a maximum of 1000 blob containers with hasLegalHold=true for a given account.{{% /md %}}</dd>
-    <dt class="property-"
+    <dd>{{% md %}}The hasLegalHold public property is set to true by SRP if there are at least one existing tag. The hasLegalHold public property is set to false by SRP if all existing legal hold tags are cleared out. There can be a maximum of 1000 blob containers with hasLegalHold=true for a given account.{{% /md %}}</dd><dt class="property-"
             title="">
         <span id="id_csharp">
 <a href="#id_csharp" style="color: inherit; text-decoration: inherit;">Id</a>
@@ -710,8 +676,7 @@ All [input](#inputs) properties are implicitly available as output properties. A
         <span class="property-indicator"></span>
         <span class="property-type">string</span>
     </dt>
-    <dd>{{% md %}}The provider-assigned unique ID for this managed resource.{{% /md %}}</dd>
-    <dt class="property-"
+    <dd>{{% md %}}The provider-assigned unique ID for this managed resource.{{% /md %}}</dd><dt class="property-"
             title="">
         <span id="immutabilitypolicy_csharp">
 <a href="#immutabilitypolicy_csharp" style="color: inherit; text-decoration: inherit;">Immutability<wbr>Policy</a>
@@ -719,8 +684,7 @@ All [input](#inputs) properties are implicitly available as output properties. A
         <span class="property-indicator"></span>
         <span class="property-type"><a href="#immutabilitypolicypropertiesresponse">Pulumi.<wbr>Azure<wbr>Native.<wbr>Storage.<wbr>Outputs.<wbr>Immutability<wbr>Policy<wbr>Properties<wbr>Response</a></span>
     </dt>
-    <dd>{{% md %}}The ImmutabilityPolicy property of the container.{{% /md %}}</dd>
-    <dt class="property-"
+    <dd>{{% md %}}The ImmutabilityPolicy property of the container.{{% /md %}}</dd><dt class="property-"
             title="">
         <span id="lastmodifiedtime_csharp">
 <a href="#lastmodifiedtime_csharp" style="color: inherit; text-decoration: inherit;">Last<wbr>Modified<wbr>Time</a>
@@ -728,8 +692,7 @@ All [input](#inputs) properties are implicitly available as output properties. A
         <span class="property-indicator"></span>
         <span class="property-type">string</span>
     </dt>
-    <dd>{{% md %}}Returns the date and time the container was last modified.{{% /md %}}</dd>
-    <dt class="property-"
+    <dd>{{% md %}}Returns the date and time the container was last modified.{{% /md %}}</dd><dt class="property-"
             title="">
         <span id="leaseduration_csharp">
 <a href="#leaseduration_csharp" style="color: inherit; text-decoration: inherit;">Lease<wbr>Duration</a>
@@ -737,8 +700,7 @@ All [input](#inputs) properties are implicitly available as output properties. A
         <span class="property-indicator"></span>
         <span class="property-type">string</span>
     </dt>
-    <dd>{{% md %}}Specifies whether the lease on a container is of infinite or fixed duration, only when the container is leased.{{% /md %}}</dd>
-    <dt class="property-"
+    <dd>{{% md %}}Specifies whether the lease on a container is of infinite or fixed duration, only when the container is leased.{{% /md %}}</dd><dt class="property-"
             title="">
         <span id="leasestate_csharp">
 <a href="#leasestate_csharp" style="color: inherit; text-decoration: inherit;">Lease<wbr>State</a>
@@ -746,8 +708,7 @@ All [input](#inputs) properties are implicitly available as output properties. A
         <span class="property-indicator"></span>
         <span class="property-type">string</span>
     </dt>
-    <dd>{{% md %}}Lease state of the container.{{% /md %}}</dd>
-    <dt class="property-"
+    <dd>{{% md %}}Lease state of the container.{{% /md %}}</dd><dt class="property-"
             title="">
         <span id="leasestatus_csharp">
 <a href="#leasestatus_csharp" style="color: inherit; text-decoration: inherit;">Lease<wbr>Status</a>
@@ -755,8 +716,7 @@ All [input](#inputs) properties are implicitly available as output properties. A
         <span class="property-indicator"></span>
         <span class="property-type">string</span>
     </dt>
-    <dd>{{% md %}}The lease status of the container.{{% /md %}}</dd>
-    <dt class="property-"
+    <dd>{{% md %}}The lease status of the container.{{% /md %}}</dd><dt class="property-"
             title="">
         <span id="legalhold_csharp">
 <a href="#legalhold_csharp" style="color: inherit; text-decoration: inherit;">Legal<wbr>Hold</a>
@@ -764,8 +724,7 @@ All [input](#inputs) properties are implicitly available as output properties. A
         <span class="property-indicator"></span>
         <span class="property-type"><a href="#legalholdpropertiesresponse">Pulumi.<wbr>Azure<wbr>Native.<wbr>Storage.<wbr>Outputs.<wbr>Legal<wbr>Hold<wbr>Properties<wbr>Response</a></span>
     </dt>
-    <dd>{{% md %}}The LegalHold property of the container.{{% /md %}}</dd>
-    <dt class="property-"
+    <dd>{{% md %}}The LegalHold property of the container.{{% /md %}}</dd><dt class="property-"
             title="">
         <span id="name_csharp">
 <a href="#name_csharp" style="color: inherit; text-decoration: inherit;">Name</a>
@@ -773,8 +732,7 @@ All [input](#inputs) properties are implicitly available as output properties. A
         <span class="property-indicator"></span>
         <span class="property-type">string</span>
     </dt>
-    <dd>{{% md %}}The name of the resource{{% /md %}}</dd>
-    <dt class="property-"
+    <dd>{{% md %}}The name of the resource{{% /md %}}</dd><dt class="property-"
             title="">
         <span id="remainingretentiondays_csharp">
 <a href="#remainingretentiondays_csharp" style="color: inherit; text-decoration: inherit;">Remaining<wbr>Retention<wbr>Days</a>
@@ -782,8 +740,7 @@ All [input](#inputs) properties are implicitly available as output properties. A
         <span class="property-indicator"></span>
         <span class="property-type">int</span>
     </dt>
-    <dd>{{% md %}}Remaining retention days for soft deleted blob container.{{% /md %}}</dd>
-    <dt class="property-"
+    <dd>{{% md %}}Remaining retention days for soft deleted blob container.{{% /md %}}</dd><dt class="property-"
             title="">
         <span id="type_csharp">
 <a href="#type_csharp" style="color: inherit; text-decoration: inherit;">Type</a>
@@ -791,8 +748,7 @@ All [input](#inputs) properties are implicitly available as output properties. A
         <span class="property-indicator"></span>
         <span class="property-type">string</span>
     </dt>
-    <dd>{{% md %}}The type of the resource. E.g. "Microsoft.Compute/virtualMachines" or "Microsoft.Storage/storageAccounts"{{% /md %}}</dd>
-    <dt class="property-"
+    <dd>{{% md %}}The type of the resource. E.g. "Microsoft.Compute/virtualMachines" or "Microsoft.Storage/storageAccounts"{{% /md %}}</dd><dt class="property-"
             title="">
         <span id="version_csharp">
 <a href="#version_csharp" style="color: inherit; text-decoration: inherit;">Version</a>
@@ -800,14 +756,11 @@ All [input](#inputs) properties are implicitly available as output properties. A
         <span class="property-indicator"></span>
         <span class="property-type">string</span>
     </dt>
-    <dd>{{% md %}}The version of the deleted blob container.{{% /md %}}</dd>
-</dl>
+    <dd>{{% md %}}The version of the deleted blob container.{{% /md %}}</dd></dl>
 {{% /choosable %}}
 
 {{% choosable language go %}}
-<dl class="resources-properties">
-
-    <dt class="property-"
+<dl class="resources-properties"><dt class="property-"
             title="">
         <span id="deleted_go">
 <a href="#deleted_go" style="color: inherit; text-decoration: inherit;">Deleted</a>
@@ -815,8 +768,7 @@ All [input](#inputs) properties are implicitly available as output properties. A
         <span class="property-indicator"></span>
         <span class="property-type">bool</span>
     </dt>
-    <dd>{{% md %}}Indicates whether the blob container was deleted.{{% /md %}}</dd>
-    <dt class="property-"
+    <dd>{{% md %}}Indicates whether the blob container was deleted.{{% /md %}}</dd><dt class="property-"
             title="">
         <span id="deletedtime_go">
 <a href="#deletedtime_go" style="color: inherit; text-decoration: inherit;">Deleted<wbr>Time</a>
@@ -824,8 +776,7 @@ All [input](#inputs) properties are implicitly available as output properties. A
         <span class="property-indicator"></span>
         <span class="property-type">string</span>
     </dt>
-    <dd>{{% md %}}Blob container deletion time.{{% /md %}}</dd>
-    <dt class="property-"
+    <dd>{{% md %}}Blob container deletion time.{{% /md %}}</dd><dt class="property-"
             title="">
         <span id="etag_go">
 <a href="#etag_go" style="color: inherit; text-decoration: inherit;">Etag</a>
@@ -833,8 +784,7 @@ All [input](#inputs) properties are implicitly available as output properties. A
         <span class="property-indicator"></span>
         <span class="property-type">string</span>
     </dt>
-    <dd>{{% md %}}Resource Etag.{{% /md %}}</dd>
-    <dt class="property-"
+    <dd>{{% md %}}Resource Etag.{{% /md %}}</dd><dt class="property-"
             title="">
         <span id="hasimmutabilitypolicy_go">
 <a href="#hasimmutabilitypolicy_go" style="color: inherit; text-decoration: inherit;">Has<wbr>Immutability<wbr>Policy</a>
@@ -842,8 +792,7 @@ All [input](#inputs) properties are implicitly available as output properties. A
         <span class="property-indicator"></span>
         <span class="property-type">bool</span>
     </dt>
-    <dd>{{% md %}}The hasImmutabilityPolicy public property is set to true by SRP if ImmutabilityPolicy has been created for this container. The hasImmutabilityPolicy public property is set to false by SRP if ImmutabilityPolicy has not been created for this container.{{% /md %}}</dd>
-    <dt class="property-"
+    <dd>{{% md %}}The hasImmutabilityPolicy public property is set to true by SRP if ImmutabilityPolicy has been created for this container. The hasImmutabilityPolicy public property is set to false by SRP if ImmutabilityPolicy has not been created for this container.{{% /md %}}</dd><dt class="property-"
             title="">
         <span id="haslegalhold_go">
 <a href="#haslegalhold_go" style="color: inherit; text-decoration: inherit;">Has<wbr>Legal<wbr>Hold</a>
@@ -851,8 +800,7 @@ All [input](#inputs) properties are implicitly available as output properties. A
         <span class="property-indicator"></span>
         <span class="property-type">bool</span>
     </dt>
-    <dd>{{% md %}}The hasLegalHold public property is set to true by SRP if there are at least one existing tag. The hasLegalHold public property is set to false by SRP if all existing legal hold tags are cleared out. There can be a maximum of 1000 blob containers with hasLegalHold=true for a given account.{{% /md %}}</dd>
-    <dt class="property-"
+    <dd>{{% md %}}The hasLegalHold public property is set to true by SRP if there are at least one existing tag. The hasLegalHold public property is set to false by SRP if all existing legal hold tags are cleared out. There can be a maximum of 1000 blob containers with hasLegalHold=true for a given account.{{% /md %}}</dd><dt class="property-"
             title="">
         <span id="id_go">
 <a href="#id_go" style="color: inherit; text-decoration: inherit;">Id</a>
@@ -860,8 +808,7 @@ All [input](#inputs) properties are implicitly available as output properties. A
         <span class="property-indicator"></span>
         <span class="property-type">string</span>
     </dt>
-    <dd>{{% md %}}The provider-assigned unique ID for this managed resource.{{% /md %}}</dd>
-    <dt class="property-"
+    <dd>{{% md %}}The provider-assigned unique ID for this managed resource.{{% /md %}}</dd><dt class="property-"
             title="">
         <span id="immutabilitypolicy_go">
 <a href="#immutabilitypolicy_go" style="color: inherit; text-decoration: inherit;">Immutability<wbr>Policy</a>
@@ -869,8 +816,7 @@ All [input](#inputs) properties are implicitly available as output properties. A
         <span class="property-indicator"></span>
         <span class="property-type"><a href="#immutabilitypolicypropertiesresponse">Immutability<wbr>Policy<wbr>Properties<wbr>Response</a></span>
     </dt>
-    <dd>{{% md %}}The ImmutabilityPolicy property of the container.{{% /md %}}</dd>
-    <dt class="property-"
+    <dd>{{% md %}}The ImmutabilityPolicy property of the container.{{% /md %}}</dd><dt class="property-"
             title="">
         <span id="lastmodifiedtime_go">
 <a href="#lastmodifiedtime_go" style="color: inherit; text-decoration: inherit;">Last<wbr>Modified<wbr>Time</a>
@@ -878,8 +824,7 @@ All [input](#inputs) properties are implicitly available as output properties. A
         <span class="property-indicator"></span>
         <span class="property-type">string</span>
     </dt>
-    <dd>{{% md %}}Returns the date and time the container was last modified.{{% /md %}}</dd>
-    <dt class="property-"
+    <dd>{{% md %}}Returns the date and time the container was last modified.{{% /md %}}</dd><dt class="property-"
             title="">
         <span id="leaseduration_go">
 <a href="#leaseduration_go" style="color: inherit; text-decoration: inherit;">Lease<wbr>Duration</a>
@@ -887,8 +832,7 @@ All [input](#inputs) properties are implicitly available as output properties. A
         <span class="property-indicator"></span>
         <span class="property-type">string</span>
     </dt>
-    <dd>{{% md %}}Specifies whether the lease on a container is of infinite or fixed duration, only when the container is leased.{{% /md %}}</dd>
-    <dt class="property-"
+    <dd>{{% md %}}Specifies whether the lease on a container is of infinite or fixed duration, only when the container is leased.{{% /md %}}</dd><dt class="property-"
             title="">
         <span id="leasestate_go">
 <a href="#leasestate_go" style="color: inherit; text-decoration: inherit;">Lease<wbr>State</a>
@@ -896,8 +840,7 @@ All [input](#inputs) properties are implicitly available as output properties. A
         <span class="property-indicator"></span>
         <span class="property-type">string</span>
     </dt>
-    <dd>{{% md %}}Lease state of the container.{{% /md %}}</dd>
-    <dt class="property-"
+    <dd>{{% md %}}Lease state of the container.{{% /md %}}</dd><dt class="property-"
             title="">
         <span id="leasestatus_go">
 <a href="#leasestatus_go" style="color: inherit; text-decoration: inherit;">Lease<wbr>Status</a>
@@ -905,8 +848,7 @@ All [input](#inputs) properties are implicitly available as output properties. A
         <span class="property-indicator"></span>
         <span class="property-type">string</span>
     </dt>
-    <dd>{{% md %}}The lease status of the container.{{% /md %}}</dd>
-    <dt class="property-"
+    <dd>{{% md %}}The lease status of the container.{{% /md %}}</dd><dt class="property-"
             title="">
         <span id="legalhold_go">
 <a href="#legalhold_go" style="color: inherit; text-decoration: inherit;">Legal<wbr>Hold</a>
@@ -914,8 +856,7 @@ All [input](#inputs) properties are implicitly available as output properties. A
         <span class="property-indicator"></span>
         <span class="property-type"><a href="#legalholdpropertiesresponse">Legal<wbr>Hold<wbr>Properties<wbr>Response</a></span>
     </dt>
-    <dd>{{% md %}}The LegalHold property of the container.{{% /md %}}</dd>
-    <dt class="property-"
+    <dd>{{% md %}}The LegalHold property of the container.{{% /md %}}</dd><dt class="property-"
             title="">
         <span id="name_go">
 <a href="#name_go" style="color: inherit; text-decoration: inherit;">Name</a>
@@ -923,8 +864,7 @@ All [input](#inputs) properties are implicitly available as output properties. A
         <span class="property-indicator"></span>
         <span class="property-type">string</span>
     </dt>
-    <dd>{{% md %}}The name of the resource{{% /md %}}</dd>
-    <dt class="property-"
+    <dd>{{% md %}}The name of the resource{{% /md %}}</dd><dt class="property-"
             title="">
         <span id="remainingretentiondays_go">
 <a href="#remainingretentiondays_go" style="color: inherit; text-decoration: inherit;">Remaining<wbr>Retention<wbr>Days</a>
@@ -932,8 +872,7 @@ All [input](#inputs) properties are implicitly available as output properties. A
         <span class="property-indicator"></span>
         <span class="property-type">int</span>
     </dt>
-    <dd>{{% md %}}Remaining retention days for soft deleted blob container.{{% /md %}}</dd>
-    <dt class="property-"
+    <dd>{{% md %}}Remaining retention days for soft deleted blob container.{{% /md %}}</dd><dt class="property-"
             title="">
         <span id="type_go">
 <a href="#type_go" style="color: inherit; text-decoration: inherit;">Type</a>
@@ -941,8 +880,7 @@ All [input](#inputs) properties are implicitly available as output properties. A
         <span class="property-indicator"></span>
         <span class="property-type">string</span>
     </dt>
-    <dd>{{% md %}}The type of the resource. E.g. "Microsoft.Compute/virtualMachines" or "Microsoft.Storage/storageAccounts"{{% /md %}}</dd>
-    <dt class="property-"
+    <dd>{{% md %}}The type of the resource. E.g. "Microsoft.Compute/virtualMachines" or "Microsoft.Storage/storageAccounts"{{% /md %}}</dd><dt class="property-"
             title="">
         <span id="version_go">
 <a href="#version_go" style="color: inherit; text-decoration: inherit;">Version</a>
@@ -950,14 +888,11 @@ All [input](#inputs) properties are implicitly available as output properties. A
         <span class="property-indicator"></span>
         <span class="property-type">string</span>
     </dt>
-    <dd>{{% md %}}The version of the deleted blob container.{{% /md %}}</dd>
-</dl>
+    <dd>{{% md %}}The version of the deleted blob container.{{% /md %}}</dd></dl>
 {{% /choosable %}}
 
 {{% choosable language nodejs %}}
-<dl class="resources-properties">
-
-    <dt class="property-"
+<dl class="resources-properties"><dt class="property-"
             title="">
         <span id="deleted_nodejs">
 <a href="#deleted_nodejs" style="color: inherit; text-decoration: inherit;">deleted</a>
@@ -965,8 +900,7 @@ All [input](#inputs) properties are implicitly available as output properties. A
         <span class="property-indicator"></span>
         <span class="property-type">boolean</span>
     </dt>
-    <dd>{{% md %}}Indicates whether the blob container was deleted.{{% /md %}}</dd>
-    <dt class="property-"
+    <dd>{{% md %}}Indicates whether the blob container was deleted.{{% /md %}}</dd><dt class="property-"
             title="">
         <span id="deletedtime_nodejs">
 <a href="#deletedtime_nodejs" style="color: inherit; text-decoration: inherit;">deleted<wbr>Time</a>
@@ -974,8 +908,7 @@ All [input](#inputs) properties are implicitly available as output properties. A
         <span class="property-indicator"></span>
         <span class="property-type">string</span>
     </dt>
-    <dd>{{% md %}}Blob container deletion time.{{% /md %}}</dd>
-    <dt class="property-"
+    <dd>{{% md %}}Blob container deletion time.{{% /md %}}</dd><dt class="property-"
             title="">
         <span id="etag_nodejs">
 <a href="#etag_nodejs" style="color: inherit; text-decoration: inherit;">etag</a>
@@ -983,8 +916,7 @@ All [input](#inputs) properties are implicitly available as output properties. A
         <span class="property-indicator"></span>
         <span class="property-type">string</span>
     </dt>
-    <dd>{{% md %}}Resource Etag.{{% /md %}}</dd>
-    <dt class="property-"
+    <dd>{{% md %}}Resource Etag.{{% /md %}}</dd><dt class="property-"
             title="">
         <span id="hasimmutabilitypolicy_nodejs">
 <a href="#hasimmutabilitypolicy_nodejs" style="color: inherit; text-decoration: inherit;">has<wbr>Immutability<wbr>Policy</a>
@@ -992,8 +924,7 @@ All [input](#inputs) properties are implicitly available as output properties. A
         <span class="property-indicator"></span>
         <span class="property-type">boolean</span>
     </dt>
-    <dd>{{% md %}}The hasImmutabilityPolicy public property is set to true by SRP if ImmutabilityPolicy has been created for this container. The hasImmutabilityPolicy public property is set to false by SRP if ImmutabilityPolicy has not been created for this container.{{% /md %}}</dd>
-    <dt class="property-"
+    <dd>{{% md %}}The hasImmutabilityPolicy public property is set to true by SRP if ImmutabilityPolicy has been created for this container. The hasImmutabilityPolicy public property is set to false by SRP if ImmutabilityPolicy has not been created for this container.{{% /md %}}</dd><dt class="property-"
             title="">
         <span id="haslegalhold_nodejs">
 <a href="#haslegalhold_nodejs" style="color: inherit; text-decoration: inherit;">has<wbr>Legal<wbr>Hold</a>
@@ -1001,8 +932,7 @@ All [input](#inputs) properties are implicitly available as output properties. A
         <span class="property-indicator"></span>
         <span class="property-type">boolean</span>
     </dt>
-    <dd>{{% md %}}The hasLegalHold public property is set to true by SRP if there are at least one existing tag. The hasLegalHold public property is set to false by SRP if all existing legal hold tags are cleared out. There can be a maximum of 1000 blob containers with hasLegalHold=true for a given account.{{% /md %}}</dd>
-    <dt class="property-"
+    <dd>{{% md %}}The hasLegalHold public property is set to true by SRP if there are at least one existing tag. The hasLegalHold public property is set to false by SRP if all existing legal hold tags are cleared out. There can be a maximum of 1000 blob containers with hasLegalHold=true for a given account.{{% /md %}}</dd><dt class="property-"
             title="">
         <span id="id_nodejs">
 <a href="#id_nodejs" style="color: inherit; text-decoration: inherit;">id</a>
@@ -1010,8 +940,7 @@ All [input](#inputs) properties are implicitly available as output properties. A
         <span class="property-indicator"></span>
         <span class="property-type">string</span>
     </dt>
-    <dd>{{% md %}}The provider-assigned unique ID for this managed resource.{{% /md %}}</dd>
-    <dt class="property-"
+    <dd>{{% md %}}The provider-assigned unique ID for this managed resource.{{% /md %}}</dd><dt class="property-"
             title="">
         <span id="immutabilitypolicy_nodejs">
 <a href="#immutabilitypolicy_nodejs" style="color: inherit; text-decoration: inherit;">immutability<wbr>Policy</a>
@@ -1019,8 +948,7 @@ All [input](#inputs) properties are implicitly available as output properties. A
         <span class="property-indicator"></span>
         <span class="property-type"><a href="#immutabilitypolicypropertiesresponse">Immutability<wbr>Policy<wbr>Properties<wbr>Response</a></span>
     </dt>
-    <dd>{{% md %}}The ImmutabilityPolicy property of the container.{{% /md %}}</dd>
-    <dt class="property-"
+    <dd>{{% md %}}The ImmutabilityPolicy property of the container.{{% /md %}}</dd><dt class="property-"
             title="">
         <span id="lastmodifiedtime_nodejs">
 <a href="#lastmodifiedtime_nodejs" style="color: inherit; text-decoration: inherit;">last<wbr>Modified<wbr>Time</a>
@@ -1028,8 +956,7 @@ All [input](#inputs) properties are implicitly available as output properties. A
         <span class="property-indicator"></span>
         <span class="property-type">string</span>
     </dt>
-    <dd>{{% md %}}Returns the date and time the container was last modified.{{% /md %}}</dd>
-    <dt class="property-"
+    <dd>{{% md %}}Returns the date and time the container was last modified.{{% /md %}}</dd><dt class="property-"
             title="">
         <span id="leaseduration_nodejs">
 <a href="#leaseduration_nodejs" style="color: inherit; text-decoration: inherit;">lease<wbr>Duration</a>
@@ -1037,8 +964,7 @@ All [input](#inputs) properties are implicitly available as output properties. A
         <span class="property-indicator"></span>
         <span class="property-type">string</span>
     </dt>
-    <dd>{{% md %}}Specifies whether the lease on a container is of infinite or fixed duration, only when the container is leased.{{% /md %}}</dd>
-    <dt class="property-"
+    <dd>{{% md %}}Specifies whether the lease on a container is of infinite or fixed duration, only when the container is leased.{{% /md %}}</dd><dt class="property-"
             title="">
         <span id="leasestate_nodejs">
 <a href="#leasestate_nodejs" style="color: inherit; text-decoration: inherit;">lease<wbr>State</a>
@@ -1046,8 +972,7 @@ All [input](#inputs) properties are implicitly available as output properties. A
         <span class="property-indicator"></span>
         <span class="property-type">string</span>
     </dt>
-    <dd>{{% md %}}Lease state of the container.{{% /md %}}</dd>
-    <dt class="property-"
+    <dd>{{% md %}}Lease state of the container.{{% /md %}}</dd><dt class="property-"
             title="">
         <span id="leasestatus_nodejs">
 <a href="#leasestatus_nodejs" style="color: inherit; text-decoration: inherit;">lease<wbr>Status</a>
@@ -1055,8 +980,7 @@ All [input](#inputs) properties are implicitly available as output properties. A
         <span class="property-indicator"></span>
         <span class="property-type">string</span>
     </dt>
-    <dd>{{% md %}}The lease status of the container.{{% /md %}}</dd>
-    <dt class="property-"
+    <dd>{{% md %}}The lease status of the container.{{% /md %}}</dd><dt class="property-"
             title="">
         <span id="legalhold_nodejs">
 <a href="#legalhold_nodejs" style="color: inherit; text-decoration: inherit;">legal<wbr>Hold</a>
@@ -1064,8 +988,7 @@ All [input](#inputs) properties are implicitly available as output properties. A
         <span class="property-indicator"></span>
         <span class="property-type"><a href="#legalholdpropertiesresponse">Legal<wbr>Hold<wbr>Properties<wbr>Response</a></span>
     </dt>
-    <dd>{{% md %}}The LegalHold property of the container.{{% /md %}}</dd>
-    <dt class="property-"
+    <dd>{{% md %}}The LegalHold property of the container.{{% /md %}}</dd><dt class="property-"
             title="">
         <span id="name_nodejs">
 <a href="#name_nodejs" style="color: inherit; text-decoration: inherit;">name</a>
@@ -1073,8 +996,7 @@ All [input](#inputs) properties are implicitly available as output properties. A
         <span class="property-indicator"></span>
         <span class="property-type">string</span>
     </dt>
-    <dd>{{% md %}}The name of the resource{{% /md %}}</dd>
-    <dt class="property-"
+    <dd>{{% md %}}The name of the resource{{% /md %}}</dd><dt class="property-"
             title="">
         <span id="remainingretentiondays_nodejs">
 <a href="#remainingretentiondays_nodejs" style="color: inherit; text-decoration: inherit;">remaining<wbr>Retention<wbr>Days</a>
@@ -1082,8 +1004,7 @@ All [input](#inputs) properties are implicitly available as output properties. A
         <span class="property-indicator"></span>
         <span class="property-type">number</span>
     </dt>
-    <dd>{{% md %}}Remaining retention days for soft deleted blob container.{{% /md %}}</dd>
-    <dt class="property-"
+    <dd>{{% md %}}Remaining retention days for soft deleted blob container.{{% /md %}}</dd><dt class="property-"
             title="">
         <span id="type_nodejs">
 <a href="#type_nodejs" style="color: inherit; text-decoration: inherit;">type</a>
@@ -1091,8 +1012,7 @@ All [input](#inputs) properties are implicitly available as output properties. A
         <span class="property-indicator"></span>
         <span class="property-type">string</span>
     </dt>
-    <dd>{{% md %}}The type of the resource. E.g. "Microsoft.Compute/virtualMachines" or "Microsoft.Storage/storageAccounts"{{% /md %}}</dd>
-    <dt class="property-"
+    <dd>{{% md %}}The type of the resource. E.g. "Microsoft.Compute/virtualMachines" or "Microsoft.Storage/storageAccounts"{{% /md %}}</dd><dt class="property-"
             title="">
         <span id="version_nodejs">
 <a href="#version_nodejs" style="color: inherit; text-decoration: inherit;">version</a>
@@ -1100,14 +1020,11 @@ All [input](#inputs) properties are implicitly available as output properties. A
         <span class="property-indicator"></span>
         <span class="property-type">string</span>
     </dt>
-    <dd>{{% md %}}The version of the deleted blob container.{{% /md %}}</dd>
-</dl>
+    <dd>{{% md %}}The version of the deleted blob container.{{% /md %}}</dd></dl>
 {{% /choosable %}}
 
 {{% choosable language python %}}
-<dl class="resources-properties">
-
-    <dt class="property-"
+<dl class="resources-properties"><dt class="property-"
             title="">
         <span id="deleted_python">
 <a href="#deleted_python" style="color: inherit; text-decoration: inherit;">deleted</a>
@@ -1115,8 +1032,7 @@ All [input](#inputs) properties are implicitly available as output properties. A
         <span class="property-indicator"></span>
         <span class="property-type">bool</span>
     </dt>
-    <dd>{{% md %}}Indicates whether the blob container was deleted.{{% /md %}}</dd>
-    <dt class="property-"
+    <dd>{{% md %}}Indicates whether the blob container was deleted.{{% /md %}}</dd><dt class="property-"
             title="">
         <span id="deleted_time_python">
 <a href="#deleted_time_python" style="color: inherit; text-decoration: inherit;">deleted_<wbr>time</a>
@@ -1124,8 +1040,7 @@ All [input](#inputs) properties are implicitly available as output properties. A
         <span class="property-indicator"></span>
         <span class="property-type">str</span>
     </dt>
-    <dd>{{% md %}}Blob container deletion time.{{% /md %}}</dd>
-    <dt class="property-"
+    <dd>{{% md %}}Blob container deletion time.{{% /md %}}</dd><dt class="property-"
             title="">
         <span id="etag_python">
 <a href="#etag_python" style="color: inherit; text-decoration: inherit;">etag</a>
@@ -1133,8 +1048,7 @@ All [input](#inputs) properties are implicitly available as output properties. A
         <span class="property-indicator"></span>
         <span class="property-type">str</span>
     </dt>
-    <dd>{{% md %}}Resource Etag.{{% /md %}}</dd>
-    <dt class="property-"
+    <dd>{{% md %}}Resource Etag.{{% /md %}}</dd><dt class="property-"
             title="">
         <span id="has_immutability_policy_python">
 <a href="#has_immutability_policy_python" style="color: inherit; text-decoration: inherit;">has_<wbr>immutability_<wbr>policy</a>
@@ -1142,8 +1056,7 @@ All [input](#inputs) properties are implicitly available as output properties. A
         <span class="property-indicator"></span>
         <span class="property-type">bool</span>
     </dt>
-    <dd>{{% md %}}The hasImmutabilityPolicy public property is set to true by SRP if ImmutabilityPolicy has been created for this container. The hasImmutabilityPolicy public property is set to false by SRP if ImmutabilityPolicy has not been created for this container.{{% /md %}}</dd>
-    <dt class="property-"
+    <dd>{{% md %}}The hasImmutabilityPolicy public property is set to true by SRP if ImmutabilityPolicy has been created for this container. The hasImmutabilityPolicy public property is set to false by SRP if ImmutabilityPolicy has not been created for this container.{{% /md %}}</dd><dt class="property-"
             title="">
         <span id="has_legal_hold_python">
 <a href="#has_legal_hold_python" style="color: inherit; text-decoration: inherit;">has_<wbr>legal_<wbr>hold</a>
@@ -1151,8 +1064,7 @@ All [input](#inputs) properties are implicitly available as output properties. A
         <span class="property-indicator"></span>
         <span class="property-type">bool</span>
     </dt>
-    <dd>{{% md %}}The hasLegalHold public property is set to true by SRP if there are at least one existing tag. The hasLegalHold public property is set to false by SRP if all existing legal hold tags are cleared out. There can be a maximum of 1000 blob containers with hasLegalHold=true for a given account.{{% /md %}}</dd>
-    <dt class="property-"
+    <dd>{{% md %}}The hasLegalHold public property is set to true by SRP if there are at least one existing tag. The hasLegalHold public property is set to false by SRP if all existing legal hold tags are cleared out. There can be a maximum of 1000 blob containers with hasLegalHold=true for a given account.{{% /md %}}</dd><dt class="property-"
             title="">
         <span id="id_python">
 <a href="#id_python" style="color: inherit; text-decoration: inherit;">id</a>
@@ -1160,8 +1072,7 @@ All [input](#inputs) properties are implicitly available as output properties. A
         <span class="property-indicator"></span>
         <span class="property-type">str</span>
     </dt>
-    <dd>{{% md %}}The provider-assigned unique ID for this managed resource.{{% /md %}}</dd>
-    <dt class="property-"
+    <dd>{{% md %}}The provider-assigned unique ID for this managed resource.{{% /md %}}</dd><dt class="property-"
             title="">
         <span id="immutability_policy_python">
 <a href="#immutability_policy_python" style="color: inherit; text-decoration: inherit;">immutability_<wbr>policy</a>
@@ -1169,8 +1080,7 @@ All [input](#inputs) properties are implicitly available as output properties. A
         <span class="property-indicator"></span>
         <span class="property-type"><a href="#immutabilitypolicypropertiesresponse">Immutability<wbr>Policy<wbr>Properties<wbr>Response</a></span>
     </dt>
-    <dd>{{% md %}}The ImmutabilityPolicy property of the container.{{% /md %}}</dd>
-    <dt class="property-"
+    <dd>{{% md %}}The ImmutabilityPolicy property of the container.{{% /md %}}</dd><dt class="property-"
             title="">
         <span id="last_modified_time_python">
 <a href="#last_modified_time_python" style="color: inherit; text-decoration: inherit;">last_<wbr>modified_<wbr>time</a>
@@ -1178,8 +1088,7 @@ All [input](#inputs) properties are implicitly available as output properties. A
         <span class="property-indicator"></span>
         <span class="property-type">str</span>
     </dt>
-    <dd>{{% md %}}Returns the date and time the container was last modified.{{% /md %}}</dd>
-    <dt class="property-"
+    <dd>{{% md %}}Returns the date and time the container was last modified.{{% /md %}}</dd><dt class="property-"
             title="">
         <span id="lease_duration_python">
 <a href="#lease_duration_python" style="color: inherit; text-decoration: inherit;">lease_<wbr>duration</a>
@@ -1187,8 +1096,7 @@ All [input](#inputs) properties are implicitly available as output properties. A
         <span class="property-indicator"></span>
         <span class="property-type">str</span>
     </dt>
-    <dd>{{% md %}}Specifies whether the lease on a container is of infinite or fixed duration, only when the container is leased.{{% /md %}}</dd>
-    <dt class="property-"
+    <dd>{{% md %}}Specifies whether the lease on a container is of infinite or fixed duration, only when the container is leased.{{% /md %}}</dd><dt class="property-"
             title="">
         <span id="lease_state_python">
 <a href="#lease_state_python" style="color: inherit; text-decoration: inherit;">lease_<wbr>state</a>
@@ -1196,8 +1104,7 @@ All [input](#inputs) properties are implicitly available as output properties. A
         <span class="property-indicator"></span>
         <span class="property-type">str</span>
     </dt>
-    <dd>{{% md %}}Lease state of the container.{{% /md %}}</dd>
-    <dt class="property-"
+    <dd>{{% md %}}Lease state of the container.{{% /md %}}</dd><dt class="property-"
             title="">
         <span id="lease_status_python">
 <a href="#lease_status_python" style="color: inherit; text-decoration: inherit;">lease_<wbr>status</a>
@@ -1205,8 +1112,7 @@ All [input](#inputs) properties are implicitly available as output properties. A
         <span class="property-indicator"></span>
         <span class="property-type">str</span>
     </dt>
-    <dd>{{% md %}}The lease status of the container.{{% /md %}}</dd>
-    <dt class="property-"
+    <dd>{{% md %}}The lease status of the container.{{% /md %}}</dd><dt class="property-"
             title="">
         <span id="legal_hold_python">
 <a href="#legal_hold_python" style="color: inherit; text-decoration: inherit;">legal_<wbr>hold</a>
@@ -1214,8 +1120,7 @@ All [input](#inputs) properties are implicitly available as output properties. A
         <span class="property-indicator"></span>
         <span class="property-type"><a href="#legalholdpropertiesresponse">Legal<wbr>Hold<wbr>Properties<wbr>Response</a></span>
     </dt>
-    <dd>{{% md %}}The LegalHold property of the container.{{% /md %}}</dd>
-    <dt class="property-"
+    <dd>{{% md %}}The LegalHold property of the container.{{% /md %}}</dd><dt class="property-"
             title="">
         <span id="name_python">
 <a href="#name_python" style="color: inherit; text-decoration: inherit;">name</a>
@@ -1223,8 +1128,7 @@ All [input](#inputs) properties are implicitly available as output properties. A
         <span class="property-indicator"></span>
         <span class="property-type">str</span>
     </dt>
-    <dd>{{% md %}}The name of the resource{{% /md %}}</dd>
-    <dt class="property-"
+    <dd>{{% md %}}The name of the resource{{% /md %}}</dd><dt class="property-"
             title="">
         <span id="remaining_retention_days_python">
 <a href="#remaining_retention_days_python" style="color: inherit; text-decoration: inherit;">remaining_<wbr>retention_<wbr>days</a>
@@ -1232,8 +1136,7 @@ All [input](#inputs) properties are implicitly available as output properties. A
         <span class="property-indicator"></span>
         <span class="property-type">int</span>
     </dt>
-    <dd>{{% md %}}Remaining retention days for soft deleted blob container.{{% /md %}}</dd>
-    <dt class="property-"
+    <dd>{{% md %}}Remaining retention days for soft deleted blob container.{{% /md %}}</dd><dt class="property-"
             title="">
         <span id="type_python">
 <a href="#type_python" style="color: inherit; text-decoration: inherit;">type</a>
@@ -1241,8 +1144,7 @@ All [input](#inputs) properties are implicitly available as output properties. A
         <span class="property-indicator"></span>
         <span class="property-type">str</span>
     </dt>
-    <dd>{{% md %}}The type of the resource. E.g. "Microsoft.Compute/virtualMachines" or "Microsoft.Storage/storageAccounts"{{% /md %}}</dd>
-    <dt class="property-"
+    <dd>{{% md %}}The type of the resource. E.g. "Microsoft.Compute/virtualMachines" or "Microsoft.Storage/storageAccounts"{{% /md %}}</dd><dt class="property-"
             title="">
         <span id="version_python">
 <a href="#version_python" style="color: inherit; text-decoration: inherit;">version</a>
@@ -1250,8 +1152,7 @@ All [input](#inputs) properties are implicitly available as output properties. A
         <span class="property-indicator"></span>
         <span class="property-type">str</span>
     </dt>
-    <dd>{{% md %}}The version of the deleted blob container.{{% /md %}}</dd>
-</dl>
+    <dd>{{% md %}}The version of the deleted blob container.{{% /md %}}</dd></dl>
 {{% /choosable %}}
 
 
@@ -1267,9 +1168,7 @@ All [input](#inputs) properties are implicitly available as output properties. A
 <h4 id="immutabilitypolicypropertiesresponse">Immutability<wbr>Policy<wbr>Properties<wbr>Response</h4>
 
 {{% choosable language csharp %}}
-<dl class="resources-properties">
-
-    <dt class="property-required"
+<dl class="resources-properties"><dt class="property-required"
             title="Required">
         <span id="etag_csharp">
 <a href="#etag_csharp" style="color: inherit; text-decoration: inherit;">Etag</a>
@@ -1277,8 +1176,7 @@ All [input](#inputs) properties are implicitly available as output properties. A
         <span class="property-indicator"></span>
         <span class="property-type">string</span>
     </dt>
-    <dd>{{% md %}}ImmutabilityPolicy Etag.{{% /md %}}</dd>
-    <dt class="property-required"
+    <dd>{{% md %}}ImmutabilityPolicy Etag.{{% /md %}}</dd><dt class="property-required"
             title="Required">
         <span id="state_csharp">
 <a href="#state_csharp" style="color: inherit; text-decoration: inherit;">State</a>
@@ -1286,8 +1184,7 @@ All [input](#inputs) properties are implicitly available as output properties. A
         <span class="property-indicator"></span>
         <span class="property-type">string</span>
     </dt>
-    <dd>{{% md %}}The ImmutabilityPolicy state of a blob container, possible values include: Locked and Unlocked.{{% /md %}}</dd>
-    <dt class="property-required"
+    <dd>{{% md %}}The ImmutabilityPolicy state of a blob container, possible values include: Locked and Unlocked.{{% /md %}}</dd><dt class="property-required"
             title="Required">
         <span id="updatehistory_csharp">
 <a href="#updatehistory_csharp" style="color: inherit; text-decoration: inherit;">Update<wbr>History</a>
@@ -1295,8 +1192,7 @@ All [input](#inputs) properties are implicitly available as output properties. A
         <span class="property-indicator"></span>
         <span class="property-type"><a href="#updatehistorypropertyresponse">List&lt;Pulumi.<wbr>Azure<wbr>Native.<wbr>Storage.<wbr>Inputs.<wbr>Update<wbr>History<wbr>Property<wbr>Response<wbr>Args&gt;</a></span>
     </dt>
-    <dd>{{% md %}}The ImmutabilityPolicy update history of the blob container.{{% /md %}}</dd>
-    <dt class="property-optional"
+    <dd>{{% md %}}The ImmutabilityPolicy update history of the blob container.{{% /md %}}</dd><dt class="property-optional"
             title="Optional">
         <span id="allowprotectedappendwrites_csharp">
 <a href="#allowprotectedappendwrites_csharp" style="color: inherit; text-decoration: inherit;">Allow<wbr>Protected<wbr>Append<wbr>Writes</a>
@@ -1304,8 +1200,7 @@ All [input](#inputs) properties are implicitly available as output properties. A
         <span class="property-indicator"></span>
         <span class="property-type">bool</span>
     </dt>
-    <dd>{{% md %}}This property can only be changed for unlocked time-based retention policies. When enabled, new blocks can be written to an append blob while maintaining immutability protection and compliance. Only new blocks can be added and any existing blocks cannot be modified or deleted. This property cannot be changed with ExtendImmutabilityPolicy API{{% /md %}}</dd>
-    <dt class="property-optional"
+    <dd>{{% md %}}This property can only be changed for unlocked time-based retention policies. When enabled, new blocks can be written to an append blob while maintaining immutability protection and compliance. Only new blocks can be added and any existing blocks cannot be modified or deleted. This property cannot be changed with ExtendImmutabilityPolicy API{{% /md %}}</dd><dt class="property-optional"
             title="Optional">
         <span id="immutabilityperiodsincecreationindays_csharp">
 <a href="#immutabilityperiodsincecreationindays_csharp" style="color: inherit; text-decoration: inherit;">Immutability<wbr>Period<wbr>Since<wbr>Creation<wbr>In<wbr>Days</a>
@@ -1313,14 +1208,11 @@ All [input](#inputs) properties are implicitly available as output properties. A
         <span class="property-indicator"></span>
         <span class="property-type">int</span>
     </dt>
-    <dd>{{% md %}}The immutability period for the blobs in the container since the policy creation, in days.{{% /md %}}</dd>
-</dl>
+    <dd>{{% md %}}The immutability period for the blobs in the container since the policy creation, in days.{{% /md %}}</dd></dl>
 {{% /choosable %}}
 
 {{% choosable language go %}}
-<dl class="resources-properties">
-
-    <dt class="property-required"
+<dl class="resources-properties"><dt class="property-required"
             title="Required">
         <span id="etag_go">
 <a href="#etag_go" style="color: inherit; text-decoration: inherit;">Etag</a>
@@ -1328,8 +1220,7 @@ All [input](#inputs) properties are implicitly available as output properties. A
         <span class="property-indicator"></span>
         <span class="property-type">string</span>
     </dt>
-    <dd>{{% md %}}ImmutabilityPolicy Etag.{{% /md %}}</dd>
-    <dt class="property-required"
+    <dd>{{% md %}}ImmutabilityPolicy Etag.{{% /md %}}</dd><dt class="property-required"
             title="Required">
         <span id="state_go">
 <a href="#state_go" style="color: inherit; text-decoration: inherit;">State</a>
@@ -1337,8 +1228,7 @@ All [input](#inputs) properties are implicitly available as output properties. A
         <span class="property-indicator"></span>
         <span class="property-type">string</span>
     </dt>
-    <dd>{{% md %}}The ImmutabilityPolicy state of a blob container, possible values include: Locked and Unlocked.{{% /md %}}</dd>
-    <dt class="property-required"
+    <dd>{{% md %}}The ImmutabilityPolicy state of a blob container, possible values include: Locked and Unlocked.{{% /md %}}</dd><dt class="property-required"
             title="Required">
         <span id="updatehistory_go">
 <a href="#updatehistory_go" style="color: inherit; text-decoration: inherit;">Update<wbr>History</a>
@@ -1346,8 +1236,7 @@ All [input](#inputs) properties are implicitly available as output properties. A
         <span class="property-indicator"></span>
         <span class="property-type"><a href="#updatehistorypropertyresponse">[]Update<wbr>History<wbr>Property<wbr>Response</a></span>
     </dt>
-    <dd>{{% md %}}The ImmutabilityPolicy update history of the blob container.{{% /md %}}</dd>
-    <dt class="property-optional"
+    <dd>{{% md %}}The ImmutabilityPolicy update history of the blob container.{{% /md %}}</dd><dt class="property-optional"
             title="Optional">
         <span id="allowprotectedappendwrites_go">
 <a href="#allowprotectedappendwrites_go" style="color: inherit; text-decoration: inherit;">Allow<wbr>Protected<wbr>Append<wbr>Writes</a>
@@ -1355,8 +1244,7 @@ All [input](#inputs) properties are implicitly available as output properties. A
         <span class="property-indicator"></span>
         <span class="property-type">bool</span>
     </dt>
-    <dd>{{% md %}}This property can only be changed for unlocked time-based retention policies. When enabled, new blocks can be written to an append blob while maintaining immutability protection and compliance. Only new blocks can be added and any existing blocks cannot be modified or deleted. This property cannot be changed with ExtendImmutabilityPolicy API{{% /md %}}</dd>
-    <dt class="property-optional"
+    <dd>{{% md %}}This property can only be changed for unlocked time-based retention policies. When enabled, new blocks can be written to an append blob while maintaining immutability protection and compliance. Only new blocks can be added and any existing blocks cannot be modified or deleted. This property cannot be changed with ExtendImmutabilityPolicy API{{% /md %}}</dd><dt class="property-optional"
             title="Optional">
         <span id="immutabilityperiodsincecreationindays_go">
 <a href="#immutabilityperiodsincecreationindays_go" style="color: inherit; text-decoration: inherit;">Immutability<wbr>Period<wbr>Since<wbr>Creation<wbr>In<wbr>Days</a>
@@ -1364,14 +1252,11 @@ All [input](#inputs) properties are implicitly available as output properties. A
         <span class="property-indicator"></span>
         <span class="property-type">int</span>
     </dt>
-    <dd>{{% md %}}The immutability period for the blobs in the container since the policy creation, in days.{{% /md %}}</dd>
-</dl>
+    <dd>{{% md %}}The immutability period for the blobs in the container since the policy creation, in days.{{% /md %}}</dd></dl>
 {{% /choosable %}}
 
 {{% choosable language nodejs %}}
-<dl class="resources-properties">
-
-    <dt class="property-required"
+<dl class="resources-properties"><dt class="property-required"
             title="Required">
         <span id="etag_nodejs">
 <a href="#etag_nodejs" style="color: inherit; text-decoration: inherit;">etag</a>
@@ -1379,8 +1264,7 @@ All [input](#inputs) properties are implicitly available as output properties. A
         <span class="property-indicator"></span>
         <span class="property-type">string</span>
     </dt>
-    <dd>{{% md %}}ImmutabilityPolicy Etag.{{% /md %}}</dd>
-    <dt class="property-required"
+    <dd>{{% md %}}ImmutabilityPolicy Etag.{{% /md %}}</dd><dt class="property-required"
             title="Required">
         <span id="state_nodejs">
 <a href="#state_nodejs" style="color: inherit; text-decoration: inherit;">state</a>
@@ -1388,8 +1272,7 @@ All [input](#inputs) properties are implicitly available as output properties. A
         <span class="property-indicator"></span>
         <span class="property-type">string</span>
     </dt>
-    <dd>{{% md %}}The ImmutabilityPolicy state of a blob container, possible values include: Locked and Unlocked.{{% /md %}}</dd>
-    <dt class="property-required"
+    <dd>{{% md %}}The ImmutabilityPolicy state of a blob container, possible values include: Locked and Unlocked.{{% /md %}}</dd><dt class="property-required"
             title="Required">
         <span id="updatehistory_nodejs">
 <a href="#updatehistory_nodejs" style="color: inherit; text-decoration: inherit;">update<wbr>History</a>
@@ -1397,8 +1280,7 @@ All [input](#inputs) properties are implicitly available as output properties. A
         <span class="property-indicator"></span>
         <span class="property-type"><a href="#updatehistorypropertyresponse">Update<wbr>History<wbr>Property<wbr>Response[]</a></span>
     </dt>
-    <dd>{{% md %}}The ImmutabilityPolicy update history of the blob container.{{% /md %}}</dd>
-    <dt class="property-optional"
+    <dd>{{% md %}}The ImmutabilityPolicy update history of the blob container.{{% /md %}}</dd><dt class="property-optional"
             title="Optional">
         <span id="allowprotectedappendwrites_nodejs">
 <a href="#allowprotectedappendwrites_nodejs" style="color: inherit; text-decoration: inherit;">allow<wbr>Protected<wbr>Append<wbr>Writes</a>
@@ -1406,8 +1288,7 @@ All [input](#inputs) properties are implicitly available as output properties. A
         <span class="property-indicator"></span>
         <span class="property-type">boolean</span>
     </dt>
-    <dd>{{% md %}}This property can only be changed for unlocked time-based retention policies. When enabled, new blocks can be written to an append blob while maintaining immutability protection and compliance. Only new blocks can be added and any existing blocks cannot be modified or deleted. This property cannot be changed with ExtendImmutabilityPolicy API{{% /md %}}</dd>
-    <dt class="property-optional"
+    <dd>{{% md %}}This property can only be changed for unlocked time-based retention policies. When enabled, new blocks can be written to an append blob while maintaining immutability protection and compliance. Only new blocks can be added and any existing blocks cannot be modified or deleted. This property cannot be changed with ExtendImmutabilityPolicy API{{% /md %}}</dd><dt class="property-optional"
             title="Optional">
         <span id="immutabilityperiodsincecreationindays_nodejs">
 <a href="#immutabilityperiodsincecreationindays_nodejs" style="color: inherit; text-decoration: inherit;">immutability<wbr>Period<wbr>Since<wbr>Creation<wbr>In<wbr>Days</a>
@@ -1415,14 +1296,11 @@ All [input](#inputs) properties are implicitly available as output properties. A
         <span class="property-indicator"></span>
         <span class="property-type">number</span>
     </dt>
-    <dd>{{% md %}}The immutability period for the blobs in the container since the policy creation, in days.{{% /md %}}</dd>
-</dl>
+    <dd>{{% md %}}The immutability period for the blobs in the container since the policy creation, in days.{{% /md %}}</dd></dl>
 {{% /choosable %}}
 
 {{% choosable language python %}}
-<dl class="resources-properties">
-
-    <dt class="property-required"
+<dl class="resources-properties"><dt class="property-required"
             title="Required">
         <span id="etag_python">
 <a href="#etag_python" style="color: inherit; text-decoration: inherit;">etag</a>
@@ -1430,8 +1308,7 @@ All [input](#inputs) properties are implicitly available as output properties. A
         <span class="property-indicator"></span>
         <span class="property-type">str</span>
     </dt>
-    <dd>{{% md %}}ImmutabilityPolicy Etag.{{% /md %}}</dd>
-    <dt class="property-required"
+    <dd>{{% md %}}ImmutabilityPolicy Etag.{{% /md %}}</dd><dt class="property-required"
             title="Required">
         <span id="state_python">
 <a href="#state_python" style="color: inherit; text-decoration: inherit;">state</a>
@@ -1439,8 +1316,7 @@ All [input](#inputs) properties are implicitly available as output properties. A
         <span class="property-indicator"></span>
         <span class="property-type">str</span>
     </dt>
-    <dd>{{% md %}}The ImmutabilityPolicy state of a blob container, possible values include: Locked and Unlocked.{{% /md %}}</dd>
-    <dt class="property-required"
+    <dd>{{% md %}}The ImmutabilityPolicy state of a blob container, possible values include: Locked and Unlocked.{{% /md %}}</dd><dt class="property-required"
             title="Required">
         <span id="update_history_python">
 <a href="#update_history_python" style="color: inherit; text-decoration: inherit;">update_<wbr>history</a>
@@ -1448,8 +1324,7 @@ All [input](#inputs) properties are implicitly available as output properties. A
         <span class="property-indicator"></span>
         <span class="property-type"><a href="#updatehistorypropertyresponse">Sequence[Update<wbr>History<wbr>Property<wbr>Response<wbr>Args]</a></span>
     </dt>
-    <dd>{{% md %}}The ImmutabilityPolicy update history of the blob container.{{% /md %}}</dd>
-    <dt class="property-optional"
+    <dd>{{% md %}}The ImmutabilityPolicy update history of the blob container.{{% /md %}}</dd><dt class="property-optional"
             title="Optional">
         <span id="allow_protected_append_writes_python">
 <a href="#allow_protected_append_writes_python" style="color: inherit; text-decoration: inherit;">allow_<wbr>protected_<wbr>append_<wbr>writes</a>
@@ -1457,8 +1332,7 @@ All [input](#inputs) properties are implicitly available as output properties. A
         <span class="property-indicator"></span>
         <span class="property-type">bool</span>
     </dt>
-    <dd>{{% md %}}This property can only be changed for unlocked time-based retention policies. When enabled, new blocks can be written to an append blob while maintaining immutability protection and compliance. Only new blocks can be added and any existing blocks cannot be modified or deleted. This property cannot be changed with ExtendImmutabilityPolicy API{{% /md %}}</dd>
-    <dt class="property-optional"
+    <dd>{{% md %}}This property can only be changed for unlocked time-based retention policies. When enabled, new blocks can be written to an append blob while maintaining immutability protection and compliance. Only new blocks can be added and any existing blocks cannot be modified or deleted. This property cannot be changed with ExtendImmutabilityPolicy API{{% /md %}}</dd><dt class="property-optional"
             title="Optional">
         <span id="immutability_period_since_creation_in_days_python">
 <a href="#immutability_period_since_creation_in_days_python" style="color: inherit; text-decoration: inherit;">immutability_<wbr>period_<wbr>since_<wbr>creation_<wbr>in_<wbr>days</a>
@@ -1466,16 +1340,13 @@ All [input](#inputs) properties are implicitly available as output properties. A
         <span class="property-indicator"></span>
         <span class="property-type">int</span>
     </dt>
-    <dd>{{% md %}}The immutability period for the blobs in the container since the policy creation, in days.{{% /md %}}</dd>
-</dl>
+    <dd>{{% md %}}The immutability period for the blobs in the container since the policy creation, in days.{{% /md %}}</dd></dl>
 {{% /choosable %}}
 
 <h4 id="legalholdpropertiesresponse">Legal<wbr>Hold<wbr>Properties<wbr>Response</h4>
 
 {{% choosable language csharp %}}
-<dl class="resources-properties">
-
-    <dt class="property-required"
+<dl class="resources-properties"><dt class="property-required"
             title="Required">
         <span id="haslegalhold_csharp">
 <a href="#haslegalhold_csharp" style="color: inherit; text-decoration: inherit;">Has<wbr>Legal<wbr>Hold</a>
@@ -1483,8 +1354,7 @@ All [input](#inputs) properties are implicitly available as output properties. A
         <span class="property-indicator"></span>
         <span class="property-type">bool</span>
     </dt>
-    <dd>{{% md %}}The hasLegalHold public property is set to true by SRP if there are at least one existing tag. The hasLegalHold public property is set to false by SRP if all existing legal hold tags are cleared out. There can be a maximum of 1000 blob containers with hasLegalHold=true for a given account.{{% /md %}}</dd>
-    <dt class="property-optional"
+    <dd>{{% md %}}The hasLegalHold public property is set to true by SRP if there are at least one existing tag. The hasLegalHold public property is set to false by SRP if all existing legal hold tags are cleared out. There can be a maximum of 1000 blob containers with hasLegalHold=true for a given account.{{% /md %}}</dd><dt class="property-optional"
             title="Optional">
         <span id="tags_csharp">
 <a href="#tags_csharp" style="color: inherit; text-decoration: inherit;">Tags</a>
@@ -1492,14 +1362,11 @@ All [input](#inputs) properties are implicitly available as output properties. A
         <span class="property-indicator"></span>
         <span class="property-type"><a href="#tagpropertyresponse">List&lt;Pulumi.<wbr>Azure<wbr>Native.<wbr>Storage.<wbr>Inputs.<wbr>Tag<wbr>Property<wbr>Response<wbr>Args&gt;</a></span>
     </dt>
-    <dd>{{% md %}}The list of LegalHold tags of a blob container.{{% /md %}}</dd>
-</dl>
+    <dd>{{% md %}}The list of LegalHold tags of a blob container.{{% /md %}}</dd></dl>
 {{% /choosable %}}
 
 {{% choosable language go %}}
-<dl class="resources-properties">
-
-    <dt class="property-required"
+<dl class="resources-properties"><dt class="property-required"
             title="Required">
         <span id="haslegalhold_go">
 <a href="#haslegalhold_go" style="color: inherit; text-decoration: inherit;">Has<wbr>Legal<wbr>Hold</a>
@@ -1507,8 +1374,7 @@ All [input](#inputs) properties are implicitly available as output properties. A
         <span class="property-indicator"></span>
         <span class="property-type">bool</span>
     </dt>
-    <dd>{{% md %}}The hasLegalHold public property is set to true by SRP if there are at least one existing tag. The hasLegalHold public property is set to false by SRP if all existing legal hold tags are cleared out. There can be a maximum of 1000 blob containers with hasLegalHold=true for a given account.{{% /md %}}</dd>
-    <dt class="property-optional"
+    <dd>{{% md %}}The hasLegalHold public property is set to true by SRP if there are at least one existing tag. The hasLegalHold public property is set to false by SRP if all existing legal hold tags are cleared out. There can be a maximum of 1000 blob containers with hasLegalHold=true for a given account.{{% /md %}}</dd><dt class="property-optional"
             title="Optional">
         <span id="tags_go">
 <a href="#tags_go" style="color: inherit; text-decoration: inherit;">Tags</a>
@@ -1516,14 +1382,11 @@ All [input](#inputs) properties are implicitly available as output properties. A
         <span class="property-indicator"></span>
         <span class="property-type"><a href="#tagpropertyresponse">[]Tag<wbr>Property<wbr>Response</a></span>
     </dt>
-    <dd>{{% md %}}The list of LegalHold tags of a blob container.{{% /md %}}</dd>
-</dl>
+    <dd>{{% md %}}The list of LegalHold tags of a blob container.{{% /md %}}</dd></dl>
 {{% /choosable %}}
 
 {{% choosable language nodejs %}}
-<dl class="resources-properties">
-
-    <dt class="property-required"
+<dl class="resources-properties"><dt class="property-required"
             title="Required">
         <span id="haslegalhold_nodejs">
 <a href="#haslegalhold_nodejs" style="color: inherit; text-decoration: inherit;">has<wbr>Legal<wbr>Hold</a>
@@ -1531,8 +1394,7 @@ All [input](#inputs) properties are implicitly available as output properties. A
         <span class="property-indicator"></span>
         <span class="property-type">boolean</span>
     </dt>
-    <dd>{{% md %}}The hasLegalHold public property is set to true by SRP if there are at least one existing tag. The hasLegalHold public property is set to false by SRP if all existing legal hold tags are cleared out. There can be a maximum of 1000 blob containers with hasLegalHold=true for a given account.{{% /md %}}</dd>
-    <dt class="property-optional"
+    <dd>{{% md %}}The hasLegalHold public property is set to true by SRP if there are at least one existing tag. The hasLegalHold public property is set to false by SRP if all existing legal hold tags are cleared out. There can be a maximum of 1000 blob containers with hasLegalHold=true for a given account.{{% /md %}}</dd><dt class="property-optional"
             title="Optional">
         <span id="tags_nodejs">
 <a href="#tags_nodejs" style="color: inherit; text-decoration: inherit;">tags</a>
@@ -1540,14 +1402,11 @@ All [input](#inputs) properties are implicitly available as output properties. A
         <span class="property-indicator"></span>
         <span class="property-type"><a href="#tagpropertyresponse">Tag<wbr>Property<wbr>Response[]</a></span>
     </dt>
-    <dd>{{% md %}}The list of LegalHold tags of a blob container.{{% /md %}}</dd>
-</dl>
+    <dd>{{% md %}}The list of LegalHold tags of a blob container.{{% /md %}}</dd></dl>
 {{% /choosable %}}
 
 {{% choosable language python %}}
-<dl class="resources-properties">
-
-    <dt class="property-required"
+<dl class="resources-properties"><dt class="property-required"
             title="Required">
         <span id="has_legal_hold_python">
 <a href="#has_legal_hold_python" style="color: inherit; text-decoration: inherit;">has_<wbr>legal_<wbr>hold</a>
@@ -1555,8 +1414,7 @@ All [input](#inputs) properties are implicitly available as output properties. A
         <span class="property-indicator"></span>
         <span class="property-type">bool</span>
     </dt>
-    <dd>{{% md %}}The hasLegalHold public property is set to true by SRP if there are at least one existing tag. The hasLegalHold public property is set to false by SRP if all existing legal hold tags are cleared out. There can be a maximum of 1000 blob containers with hasLegalHold=true for a given account.{{% /md %}}</dd>
-    <dt class="property-optional"
+    <dd>{{% md %}}The hasLegalHold public property is set to true by SRP if there are at least one existing tag. The hasLegalHold public property is set to false by SRP if all existing legal hold tags are cleared out. There can be a maximum of 1000 blob containers with hasLegalHold=true for a given account.{{% /md %}}</dd><dt class="property-optional"
             title="Optional">
         <span id="tags_python">
 <a href="#tags_python" style="color: inherit; text-decoration: inherit;">tags</a>
@@ -1564,62 +1422,43 @@ All [input](#inputs) properties are implicitly available as output properties. A
         <span class="property-indicator"></span>
         <span class="property-type"><a href="#tagpropertyresponse">Sequence[Tag<wbr>Property<wbr>Response<wbr>Args]</a></span>
     </dt>
-    <dd>{{% md %}}The list of LegalHold tags of a blob container.{{% /md %}}</dd>
-</dl>
+    <dd>{{% md %}}The list of LegalHold tags of a blob container.{{% /md %}}</dd></dl>
 {{% /choosable %}}
 
 <h4 id="publicaccess">Public<wbr>Access</h4>
 
 {{% choosable language csharp %}}
-<dl class="tabular">
-    <dt>Container</dt>
-    <dd>Container</dd>
-    <dt>Blob</dt>
-    <dd>Blob</dd>
-    <dt>None</dt>
-    <dd>None</dd>
-</dl>
+<dl class="tabular"><dt>Container</dt>
+    <dd>Container</dd><dt>Blob</dt>
+    <dd>Blob</dd><dt>None</dt>
+    <dd>None</dd></dl>
 {{% /choosable %}}
 
 {{% choosable language go %}}
-<dl class="tabular">
-    <dt>Public<wbr>Access<wbr>Container</dt>
-    <dd>Container</dd>
-    <dt>Public<wbr>Access<wbr>Blob</dt>
-    <dd>Blob</dd>
-    <dt>Public<wbr>Access<wbr>None</dt>
-    <dd>None</dd>
-</dl>
+<dl class="tabular"><dt>Public<wbr>Access<wbr>Container</dt>
+    <dd>Container</dd><dt>Public<wbr>Access<wbr>Blob</dt>
+    <dd>Blob</dd><dt>Public<wbr>Access<wbr>None</dt>
+    <dd>None</dd></dl>
 {{% /choosable %}}
 
 {{% choosable language nodejs %}}
-<dl class="tabular">
-    <dt>Container</dt>
-    <dd>Container</dd>
-    <dt>Blob</dt>
-    <dd>Blob</dd>
-    <dt>None</dt>
-    <dd>None</dd>
-</dl>
+<dl class="tabular"><dt>Container</dt>
+    <dd>Container</dd><dt>Blob</dt>
+    <dd>Blob</dd><dt>None</dt>
+    <dd>None</dd></dl>
 {{% /choosable %}}
 
 {{% choosable language python %}}
-<dl class="tabular">
-    <dt>CONTAINER</dt>
-    <dd>Container</dd>
-    <dt>BLOB</dt>
-    <dd>Blob</dd>
-    <dt>NONE</dt>
-    <dd>None</dd>
-</dl>
+<dl class="tabular"><dt>CONTAINER</dt>
+    <dd>Container</dd><dt>BLOB</dt>
+    <dd>Blob</dd><dt>NONE</dt>
+    <dd>None</dd></dl>
 {{% /choosable %}}
 
 <h4 id="tagpropertyresponse">Tag<wbr>Property<wbr>Response</h4>
 
 {{% choosable language csharp %}}
-<dl class="resources-properties">
-
-    <dt class="property-required"
+<dl class="resources-properties"><dt class="property-required"
             title="Required">
         <span id="objectidentifier_csharp">
 <a href="#objectidentifier_csharp" style="color: inherit; text-decoration: inherit;">Object<wbr>Identifier</a>
@@ -1627,8 +1466,7 @@ All [input](#inputs) properties are implicitly available as output properties. A
         <span class="property-indicator"></span>
         <span class="property-type">string</span>
     </dt>
-    <dd>{{% md %}}Returns the Object ID of the user who added the tag.{{% /md %}}</dd>
-    <dt class="property-required"
+    <dd>{{% md %}}Returns the Object ID of the user who added the tag.{{% /md %}}</dd><dt class="property-required"
             title="Required">
         <span id="tag_csharp">
 <a href="#tag_csharp" style="color: inherit; text-decoration: inherit;">Tag</a>
@@ -1636,8 +1474,7 @@ All [input](#inputs) properties are implicitly available as output properties. A
         <span class="property-indicator"></span>
         <span class="property-type">string</span>
     </dt>
-    <dd>{{% md %}}The tag value.{{% /md %}}</dd>
-    <dt class="property-required"
+    <dd>{{% md %}}The tag value.{{% /md %}}</dd><dt class="property-required"
             title="Required">
         <span id="tenantid_csharp">
 <a href="#tenantid_csharp" style="color: inherit; text-decoration: inherit;">Tenant<wbr>Id</a>
@@ -1645,8 +1482,7 @@ All [input](#inputs) properties are implicitly available as output properties. A
         <span class="property-indicator"></span>
         <span class="property-type">string</span>
     </dt>
-    <dd>{{% md %}}Returns the Tenant ID that issued the token for the user who added the tag.{{% /md %}}</dd>
-    <dt class="property-required"
+    <dd>{{% md %}}Returns the Tenant ID that issued the token for the user who added the tag.{{% /md %}}</dd><dt class="property-required"
             title="Required">
         <span id="timestamp_csharp">
 <a href="#timestamp_csharp" style="color: inherit; text-decoration: inherit;">Timestamp</a>
@@ -1654,8 +1490,7 @@ All [input](#inputs) properties are implicitly available as output properties. A
         <span class="property-indicator"></span>
         <span class="property-type">string</span>
     </dt>
-    <dd>{{% md %}}Returns the date and time the tag was added.{{% /md %}}</dd>
-    <dt class="property-required"
+    <dd>{{% md %}}Returns the date and time the tag was added.{{% /md %}}</dd><dt class="property-required"
             title="Required">
         <span id="upn_csharp">
 <a href="#upn_csharp" style="color: inherit; text-decoration: inherit;">Upn</a>
@@ -1663,14 +1498,11 @@ All [input](#inputs) properties are implicitly available as output properties. A
         <span class="property-indicator"></span>
         <span class="property-type">string</span>
     </dt>
-    <dd>{{% md %}}Returns the User Principal Name of the user who added the tag.{{% /md %}}</dd>
-</dl>
+    <dd>{{% md %}}Returns the User Principal Name of the user who added the tag.{{% /md %}}</dd></dl>
 {{% /choosable %}}
 
 {{% choosable language go %}}
-<dl class="resources-properties">
-
-    <dt class="property-required"
+<dl class="resources-properties"><dt class="property-required"
             title="Required">
         <span id="objectidentifier_go">
 <a href="#objectidentifier_go" style="color: inherit; text-decoration: inherit;">Object<wbr>Identifier</a>
@@ -1678,8 +1510,7 @@ All [input](#inputs) properties are implicitly available as output properties. A
         <span class="property-indicator"></span>
         <span class="property-type">string</span>
     </dt>
-    <dd>{{% md %}}Returns the Object ID of the user who added the tag.{{% /md %}}</dd>
-    <dt class="property-required"
+    <dd>{{% md %}}Returns the Object ID of the user who added the tag.{{% /md %}}</dd><dt class="property-required"
             title="Required">
         <span id="tag_go">
 <a href="#tag_go" style="color: inherit; text-decoration: inherit;">Tag</a>
@@ -1687,8 +1518,7 @@ All [input](#inputs) properties are implicitly available as output properties. A
         <span class="property-indicator"></span>
         <span class="property-type">string</span>
     </dt>
-    <dd>{{% md %}}The tag value.{{% /md %}}</dd>
-    <dt class="property-required"
+    <dd>{{% md %}}The tag value.{{% /md %}}</dd><dt class="property-required"
             title="Required">
         <span id="tenantid_go">
 <a href="#tenantid_go" style="color: inherit; text-decoration: inherit;">Tenant<wbr>Id</a>
@@ -1696,8 +1526,7 @@ All [input](#inputs) properties are implicitly available as output properties. A
         <span class="property-indicator"></span>
         <span class="property-type">string</span>
     </dt>
-    <dd>{{% md %}}Returns the Tenant ID that issued the token for the user who added the tag.{{% /md %}}</dd>
-    <dt class="property-required"
+    <dd>{{% md %}}Returns the Tenant ID that issued the token for the user who added the tag.{{% /md %}}</dd><dt class="property-required"
             title="Required">
         <span id="timestamp_go">
 <a href="#timestamp_go" style="color: inherit; text-decoration: inherit;">Timestamp</a>
@@ -1705,8 +1534,7 @@ All [input](#inputs) properties are implicitly available as output properties. A
         <span class="property-indicator"></span>
         <span class="property-type">string</span>
     </dt>
-    <dd>{{% md %}}Returns the date and time the tag was added.{{% /md %}}</dd>
-    <dt class="property-required"
+    <dd>{{% md %}}Returns the date and time the tag was added.{{% /md %}}</dd><dt class="property-required"
             title="Required">
         <span id="upn_go">
 <a href="#upn_go" style="color: inherit; text-decoration: inherit;">Upn</a>
@@ -1714,14 +1542,11 @@ All [input](#inputs) properties are implicitly available as output properties. A
         <span class="property-indicator"></span>
         <span class="property-type">string</span>
     </dt>
-    <dd>{{% md %}}Returns the User Principal Name of the user who added the tag.{{% /md %}}</dd>
-</dl>
+    <dd>{{% md %}}Returns the User Principal Name of the user who added the tag.{{% /md %}}</dd></dl>
 {{% /choosable %}}
 
 {{% choosable language nodejs %}}
-<dl class="resources-properties">
-
-    <dt class="property-required"
+<dl class="resources-properties"><dt class="property-required"
             title="Required">
         <span id="objectidentifier_nodejs">
 <a href="#objectidentifier_nodejs" style="color: inherit; text-decoration: inherit;">object<wbr>Identifier</a>
@@ -1729,8 +1554,7 @@ All [input](#inputs) properties are implicitly available as output properties. A
         <span class="property-indicator"></span>
         <span class="property-type">string</span>
     </dt>
-    <dd>{{% md %}}Returns the Object ID of the user who added the tag.{{% /md %}}</dd>
-    <dt class="property-required"
+    <dd>{{% md %}}Returns the Object ID of the user who added the tag.{{% /md %}}</dd><dt class="property-required"
             title="Required">
         <span id="tag_nodejs">
 <a href="#tag_nodejs" style="color: inherit; text-decoration: inherit;">tag</a>
@@ -1738,8 +1562,7 @@ All [input](#inputs) properties are implicitly available as output properties. A
         <span class="property-indicator"></span>
         <span class="property-type">string</span>
     </dt>
-    <dd>{{% md %}}The tag value.{{% /md %}}</dd>
-    <dt class="property-required"
+    <dd>{{% md %}}The tag value.{{% /md %}}</dd><dt class="property-required"
             title="Required">
         <span id="tenantid_nodejs">
 <a href="#tenantid_nodejs" style="color: inherit; text-decoration: inherit;">tenant<wbr>Id</a>
@@ -1747,8 +1570,7 @@ All [input](#inputs) properties are implicitly available as output properties. A
         <span class="property-indicator"></span>
         <span class="property-type">string</span>
     </dt>
-    <dd>{{% md %}}Returns the Tenant ID that issued the token for the user who added the tag.{{% /md %}}</dd>
-    <dt class="property-required"
+    <dd>{{% md %}}Returns the Tenant ID that issued the token for the user who added the tag.{{% /md %}}</dd><dt class="property-required"
             title="Required">
         <span id="timestamp_nodejs">
 <a href="#timestamp_nodejs" style="color: inherit; text-decoration: inherit;">timestamp</a>
@@ -1756,8 +1578,7 @@ All [input](#inputs) properties are implicitly available as output properties. A
         <span class="property-indicator"></span>
         <span class="property-type">string</span>
     </dt>
-    <dd>{{% md %}}Returns the date and time the tag was added.{{% /md %}}</dd>
-    <dt class="property-required"
+    <dd>{{% md %}}Returns the date and time the tag was added.{{% /md %}}</dd><dt class="property-required"
             title="Required">
         <span id="upn_nodejs">
 <a href="#upn_nodejs" style="color: inherit; text-decoration: inherit;">upn</a>
@@ -1765,14 +1586,11 @@ All [input](#inputs) properties are implicitly available as output properties. A
         <span class="property-indicator"></span>
         <span class="property-type">string</span>
     </dt>
-    <dd>{{% md %}}Returns the User Principal Name of the user who added the tag.{{% /md %}}</dd>
-</dl>
+    <dd>{{% md %}}Returns the User Principal Name of the user who added the tag.{{% /md %}}</dd></dl>
 {{% /choosable %}}
 
 {{% choosable language python %}}
-<dl class="resources-properties">
-
-    <dt class="property-required"
+<dl class="resources-properties"><dt class="property-required"
             title="Required">
         <span id="object_identifier_python">
 <a href="#object_identifier_python" style="color: inherit; text-decoration: inherit;">object_<wbr>identifier</a>
@@ -1780,8 +1598,7 @@ All [input](#inputs) properties are implicitly available as output properties. A
         <span class="property-indicator"></span>
         <span class="property-type">str</span>
     </dt>
-    <dd>{{% md %}}Returns the Object ID of the user who added the tag.{{% /md %}}</dd>
-    <dt class="property-required"
+    <dd>{{% md %}}Returns the Object ID of the user who added the tag.{{% /md %}}</dd><dt class="property-required"
             title="Required">
         <span id="tag_python">
 <a href="#tag_python" style="color: inherit; text-decoration: inherit;">tag</a>
@@ -1789,8 +1606,7 @@ All [input](#inputs) properties are implicitly available as output properties. A
         <span class="property-indicator"></span>
         <span class="property-type">str</span>
     </dt>
-    <dd>{{% md %}}The tag value.{{% /md %}}</dd>
-    <dt class="property-required"
+    <dd>{{% md %}}The tag value.{{% /md %}}</dd><dt class="property-required"
             title="Required">
         <span id="tenant_id_python">
 <a href="#tenant_id_python" style="color: inherit; text-decoration: inherit;">tenant_<wbr>id</a>
@@ -1798,8 +1614,7 @@ All [input](#inputs) properties are implicitly available as output properties. A
         <span class="property-indicator"></span>
         <span class="property-type">str</span>
     </dt>
-    <dd>{{% md %}}Returns the Tenant ID that issued the token for the user who added the tag.{{% /md %}}</dd>
-    <dt class="property-required"
+    <dd>{{% md %}}Returns the Tenant ID that issued the token for the user who added the tag.{{% /md %}}</dd><dt class="property-required"
             title="Required">
         <span id="timestamp_python">
 <a href="#timestamp_python" style="color: inherit; text-decoration: inherit;">timestamp</a>
@@ -1807,8 +1622,7 @@ All [input](#inputs) properties are implicitly available as output properties. A
         <span class="property-indicator"></span>
         <span class="property-type">str</span>
     </dt>
-    <dd>{{% md %}}Returns the date and time the tag was added.{{% /md %}}</dd>
-    <dt class="property-required"
+    <dd>{{% md %}}Returns the date and time the tag was added.{{% /md %}}</dd><dt class="property-required"
             title="Required">
         <span id="upn_python">
 <a href="#upn_python" style="color: inherit; text-decoration: inherit;">upn</a>
@@ -1816,16 +1630,13 @@ All [input](#inputs) properties are implicitly available as output properties. A
         <span class="property-indicator"></span>
         <span class="property-type">str</span>
     </dt>
-    <dd>{{% md %}}Returns the User Principal Name of the user who added the tag.{{% /md %}}</dd>
-</dl>
+    <dd>{{% md %}}Returns the User Principal Name of the user who added the tag.{{% /md %}}</dd></dl>
 {{% /choosable %}}
 
 <h4 id="updatehistorypropertyresponse">Update<wbr>History<wbr>Property<wbr>Response</h4>
 
 {{% choosable language csharp %}}
-<dl class="resources-properties">
-
-    <dt class="property-required"
+<dl class="resources-properties"><dt class="property-required"
             title="Required">
         <span id="immutabilityperiodsincecreationindays_csharp">
 <a href="#immutabilityperiodsincecreationindays_csharp" style="color: inherit; text-decoration: inherit;">Immutability<wbr>Period<wbr>Since<wbr>Creation<wbr>In<wbr>Days</a>
@@ -1833,8 +1644,7 @@ All [input](#inputs) properties are implicitly available as output properties. A
         <span class="property-indicator"></span>
         <span class="property-type">int</span>
     </dt>
-    <dd>{{% md %}}The immutability period for the blobs in the container since the policy creation, in days.{{% /md %}}</dd>
-    <dt class="property-required"
+    <dd>{{% md %}}The immutability period for the blobs in the container since the policy creation, in days.{{% /md %}}</dd><dt class="property-required"
             title="Required">
         <span id="objectidentifier_csharp">
 <a href="#objectidentifier_csharp" style="color: inherit; text-decoration: inherit;">Object<wbr>Identifier</a>
@@ -1842,8 +1652,7 @@ All [input](#inputs) properties are implicitly available as output properties. A
         <span class="property-indicator"></span>
         <span class="property-type">string</span>
     </dt>
-    <dd>{{% md %}}Returns the Object ID of the user who updated the ImmutabilityPolicy.{{% /md %}}</dd>
-    <dt class="property-required"
+    <dd>{{% md %}}Returns the Object ID of the user who updated the ImmutabilityPolicy.{{% /md %}}</dd><dt class="property-required"
             title="Required">
         <span id="tenantid_csharp">
 <a href="#tenantid_csharp" style="color: inherit; text-decoration: inherit;">Tenant<wbr>Id</a>
@@ -1851,8 +1660,7 @@ All [input](#inputs) properties are implicitly available as output properties. A
         <span class="property-indicator"></span>
         <span class="property-type">string</span>
     </dt>
-    <dd>{{% md %}}Returns the Tenant ID that issued the token for the user who updated the ImmutabilityPolicy.{{% /md %}}</dd>
-    <dt class="property-required"
+    <dd>{{% md %}}Returns the Tenant ID that issued the token for the user who updated the ImmutabilityPolicy.{{% /md %}}</dd><dt class="property-required"
             title="Required">
         <span id="timestamp_csharp">
 <a href="#timestamp_csharp" style="color: inherit; text-decoration: inherit;">Timestamp</a>
@@ -1860,8 +1668,7 @@ All [input](#inputs) properties are implicitly available as output properties. A
         <span class="property-indicator"></span>
         <span class="property-type">string</span>
     </dt>
-    <dd>{{% md %}}Returns the date and time the ImmutabilityPolicy was updated.{{% /md %}}</dd>
-    <dt class="property-required"
+    <dd>{{% md %}}Returns the date and time the ImmutabilityPolicy was updated.{{% /md %}}</dd><dt class="property-required"
             title="Required">
         <span id="update_csharp">
 <a href="#update_csharp" style="color: inherit; text-decoration: inherit;">Update</a>
@@ -1869,8 +1676,7 @@ All [input](#inputs) properties are implicitly available as output properties. A
         <span class="property-indicator"></span>
         <span class="property-type">string</span>
     </dt>
-    <dd>{{% md %}}The ImmutabilityPolicy update type of a blob container, possible values include: put, lock and extend.{{% /md %}}</dd>
-    <dt class="property-required"
+    <dd>{{% md %}}The ImmutabilityPolicy update type of a blob container, possible values include: put, lock and extend.{{% /md %}}</dd><dt class="property-required"
             title="Required">
         <span id="upn_csharp">
 <a href="#upn_csharp" style="color: inherit; text-decoration: inherit;">Upn</a>
@@ -1878,14 +1684,11 @@ All [input](#inputs) properties are implicitly available as output properties. A
         <span class="property-indicator"></span>
         <span class="property-type">string</span>
     </dt>
-    <dd>{{% md %}}Returns the User Principal Name of the user who updated the ImmutabilityPolicy.{{% /md %}}</dd>
-</dl>
+    <dd>{{% md %}}Returns the User Principal Name of the user who updated the ImmutabilityPolicy.{{% /md %}}</dd></dl>
 {{% /choosable %}}
 
 {{% choosable language go %}}
-<dl class="resources-properties">
-
-    <dt class="property-required"
+<dl class="resources-properties"><dt class="property-required"
             title="Required">
         <span id="immutabilityperiodsincecreationindays_go">
 <a href="#immutabilityperiodsincecreationindays_go" style="color: inherit; text-decoration: inherit;">Immutability<wbr>Period<wbr>Since<wbr>Creation<wbr>In<wbr>Days</a>
@@ -1893,8 +1696,7 @@ All [input](#inputs) properties are implicitly available as output properties. A
         <span class="property-indicator"></span>
         <span class="property-type">int</span>
     </dt>
-    <dd>{{% md %}}The immutability period for the blobs in the container since the policy creation, in days.{{% /md %}}</dd>
-    <dt class="property-required"
+    <dd>{{% md %}}The immutability period for the blobs in the container since the policy creation, in days.{{% /md %}}</dd><dt class="property-required"
             title="Required">
         <span id="objectidentifier_go">
 <a href="#objectidentifier_go" style="color: inherit; text-decoration: inherit;">Object<wbr>Identifier</a>
@@ -1902,8 +1704,7 @@ All [input](#inputs) properties are implicitly available as output properties. A
         <span class="property-indicator"></span>
         <span class="property-type">string</span>
     </dt>
-    <dd>{{% md %}}Returns the Object ID of the user who updated the ImmutabilityPolicy.{{% /md %}}</dd>
-    <dt class="property-required"
+    <dd>{{% md %}}Returns the Object ID of the user who updated the ImmutabilityPolicy.{{% /md %}}</dd><dt class="property-required"
             title="Required">
         <span id="tenantid_go">
 <a href="#tenantid_go" style="color: inherit; text-decoration: inherit;">Tenant<wbr>Id</a>
@@ -1911,8 +1712,7 @@ All [input](#inputs) properties are implicitly available as output properties. A
         <span class="property-indicator"></span>
         <span class="property-type">string</span>
     </dt>
-    <dd>{{% md %}}Returns the Tenant ID that issued the token for the user who updated the ImmutabilityPolicy.{{% /md %}}</dd>
-    <dt class="property-required"
+    <dd>{{% md %}}Returns the Tenant ID that issued the token for the user who updated the ImmutabilityPolicy.{{% /md %}}</dd><dt class="property-required"
             title="Required">
         <span id="timestamp_go">
 <a href="#timestamp_go" style="color: inherit; text-decoration: inherit;">Timestamp</a>
@@ -1920,8 +1720,7 @@ All [input](#inputs) properties are implicitly available as output properties. A
         <span class="property-indicator"></span>
         <span class="property-type">string</span>
     </dt>
-    <dd>{{% md %}}Returns the date and time the ImmutabilityPolicy was updated.{{% /md %}}</dd>
-    <dt class="property-required"
+    <dd>{{% md %}}Returns the date and time the ImmutabilityPolicy was updated.{{% /md %}}</dd><dt class="property-required"
             title="Required">
         <span id="update_go">
 <a href="#update_go" style="color: inherit; text-decoration: inherit;">Update</a>
@@ -1929,8 +1728,7 @@ All [input](#inputs) properties are implicitly available as output properties. A
         <span class="property-indicator"></span>
         <span class="property-type">string</span>
     </dt>
-    <dd>{{% md %}}The ImmutabilityPolicy update type of a blob container, possible values include: put, lock and extend.{{% /md %}}</dd>
-    <dt class="property-required"
+    <dd>{{% md %}}The ImmutabilityPolicy update type of a blob container, possible values include: put, lock and extend.{{% /md %}}</dd><dt class="property-required"
             title="Required">
         <span id="upn_go">
 <a href="#upn_go" style="color: inherit; text-decoration: inherit;">Upn</a>
@@ -1938,14 +1736,11 @@ All [input](#inputs) properties are implicitly available as output properties. A
         <span class="property-indicator"></span>
         <span class="property-type">string</span>
     </dt>
-    <dd>{{% md %}}Returns the User Principal Name of the user who updated the ImmutabilityPolicy.{{% /md %}}</dd>
-</dl>
+    <dd>{{% md %}}Returns the User Principal Name of the user who updated the ImmutabilityPolicy.{{% /md %}}</dd></dl>
 {{% /choosable %}}
 
 {{% choosable language nodejs %}}
-<dl class="resources-properties">
-
-    <dt class="property-required"
+<dl class="resources-properties"><dt class="property-required"
             title="Required">
         <span id="immutabilityperiodsincecreationindays_nodejs">
 <a href="#immutabilityperiodsincecreationindays_nodejs" style="color: inherit; text-decoration: inherit;">immutability<wbr>Period<wbr>Since<wbr>Creation<wbr>In<wbr>Days</a>
@@ -1953,8 +1748,7 @@ All [input](#inputs) properties are implicitly available as output properties. A
         <span class="property-indicator"></span>
         <span class="property-type">number</span>
     </dt>
-    <dd>{{% md %}}The immutability period for the blobs in the container since the policy creation, in days.{{% /md %}}</dd>
-    <dt class="property-required"
+    <dd>{{% md %}}The immutability period for the blobs in the container since the policy creation, in days.{{% /md %}}</dd><dt class="property-required"
             title="Required">
         <span id="objectidentifier_nodejs">
 <a href="#objectidentifier_nodejs" style="color: inherit; text-decoration: inherit;">object<wbr>Identifier</a>
@@ -1962,8 +1756,7 @@ All [input](#inputs) properties are implicitly available as output properties. A
         <span class="property-indicator"></span>
         <span class="property-type">string</span>
     </dt>
-    <dd>{{% md %}}Returns the Object ID of the user who updated the ImmutabilityPolicy.{{% /md %}}</dd>
-    <dt class="property-required"
+    <dd>{{% md %}}Returns the Object ID of the user who updated the ImmutabilityPolicy.{{% /md %}}</dd><dt class="property-required"
             title="Required">
         <span id="tenantid_nodejs">
 <a href="#tenantid_nodejs" style="color: inherit; text-decoration: inherit;">tenant<wbr>Id</a>
@@ -1971,8 +1764,7 @@ All [input](#inputs) properties are implicitly available as output properties. A
         <span class="property-indicator"></span>
         <span class="property-type">string</span>
     </dt>
-    <dd>{{% md %}}Returns the Tenant ID that issued the token for the user who updated the ImmutabilityPolicy.{{% /md %}}</dd>
-    <dt class="property-required"
+    <dd>{{% md %}}Returns the Tenant ID that issued the token for the user who updated the ImmutabilityPolicy.{{% /md %}}</dd><dt class="property-required"
             title="Required">
         <span id="timestamp_nodejs">
 <a href="#timestamp_nodejs" style="color: inherit; text-decoration: inherit;">timestamp</a>
@@ -1980,8 +1772,7 @@ All [input](#inputs) properties are implicitly available as output properties. A
         <span class="property-indicator"></span>
         <span class="property-type">string</span>
     </dt>
-    <dd>{{% md %}}Returns the date and time the ImmutabilityPolicy was updated.{{% /md %}}</dd>
-    <dt class="property-required"
+    <dd>{{% md %}}Returns the date and time the ImmutabilityPolicy was updated.{{% /md %}}</dd><dt class="property-required"
             title="Required">
         <span id="update_nodejs">
 <a href="#update_nodejs" style="color: inherit; text-decoration: inherit;">update</a>
@@ -1989,8 +1780,7 @@ All [input](#inputs) properties are implicitly available as output properties. A
         <span class="property-indicator"></span>
         <span class="property-type">string</span>
     </dt>
-    <dd>{{% md %}}The ImmutabilityPolicy update type of a blob container, possible values include: put, lock and extend.{{% /md %}}</dd>
-    <dt class="property-required"
+    <dd>{{% md %}}The ImmutabilityPolicy update type of a blob container, possible values include: put, lock and extend.{{% /md %}}</dd><dt class="property-required"
             title="Required">
         <span id="upn_nodejs">
 <a href="#upn_nodejs" style="color: inherit; text-decoration: inherit;">upn</a>
@@ -1998,14 +1788,11 @@ All [input](#inputs) properties are implicitly available as output properties. A
         <span class="property-indicator"></span>
         <span class="property-type">string</span>
     </dt>
-    <dd>{{% md %}}Returns the User Principal Name of the user who updated the ImmutabilityPolicy.{{% /md %}}</dd>
-</dl>
+    <dd>{{% md %}}Returns the User Principal Name of the user who updated the ImmutabilityPolicy.{{% /md %}}</dd></dl>
 {{% /choosable %}}
 
 {{% choosable language python %}}
-<dl class="resources-properties">
-
-    <dt class="property-required"
+<dl class="resources-properties"><dt class="property-required"
             title="Required">
         <span id="immutability_period_since_creation_in_days_python">
 <a href="#immutability_period_since_creation_in_days_python" style="color: inherit; text-decoration: inherit;">immutability_<wbr>period_<wbr>since_<wbr>creation_<wbr>in_<wbr>days</a>
@@ -2013,8 +1800,7 @@ All [input](#inputs) properties are implicitly available as output properties. A
         <span class="property-indicator"></span>
         <span class="property-type">int</span>
     </dt>
-    <dd>{{% md %}}The immutability period for the blobs in the container since the policy creation, in days.{{% /md %}}</dd>
-    <dt class="property-required"
+    <dd>{{% md %}}The immutability period for the blobs in the container since the policy creation, in days.{{% /md %}}</dd><dt class="property-required"
             title="Required">
         <span id="object_identifier_python">
 <a href="#object_identifier_python" style="color: inherit; text-decoration: inherit;">object_<wbr>identifier</a>
@@ -2022,8 +1808,7 @@ All [input](#inputs) properties are implicitly available as output properties. A
         <span class="property-indicator"></span>
         <span class="property-type">str</span>
     </dt>
-    <dd>{{% md %}}Returns the Object ID of the user who updated the ImmutabilityPolicy.{{% /md %}}</dd>
-    <dt class="property-required"
+    <dd>{{% md %}}Returns the Object ID of the user who updated the ImmutabilityPolicy.{{% /md %}}</dd><dt class="property-required"
             title="Required">
         <span id="tenant_id_python">
 <a href="#tenant_id_python" style="color: inherit; text-decoration: inherit;">tenant_<wbr>id</a>
@@ -2031,8 +1816,7 @@ All [input](#inputs) properties are implicitly available as output properties. A
         <span class="property-indicator"></span>
         <span class="property-type">str</span>
     </dt>
-    <dd>{{% md %}}Returns the Tenant ID that issued the token for the user who updated the ImmutabilityPolicy.{{% /md %}}</dd>
-    <dt class="property-required"
+    <dd>{{% md %}}Returns the Tenant ID that issued the token for the user who updated the ImmutabilityPolicy.{{% /md %}}</dd><dt class="property-required"
             title="Required">
         <span id="timestamp_python">
 <a href="#timestamp_python" style="color: inherit; text-decoration: inherit;">timestamp</a>
@@ -2040,8 +1824,7 @@ All [input](#inputs) properties are implicitly available as output properties. A
         <span class="property-indicator"></span>
         <span class="property-type">str</span>
     </dt>
-    <dd>{{% md %}}Returns the date and time the ImmutabilityPolicy was updated.{{% /md %}}</dd>
-    <dt class="property-required"
+    <dd>{{% md %}}Returns the date and time the ImmutabilityPolicy was updated.{{% /md %}}</dd><dt class="property-required"
             title="Required">
         <span id="update_python">
 <a href="#update_python" style="color: inherit; text-decoration: inherit;">update</a>
@@ -2049,8 +1832,7 @@ All [input](#inputs) properties are implicitly available as output properties. A
         <span class="property-indicator"></span>
         <span class="property-type">str</span>
     </dt>
-    <dd>{{% md %}}The ImmutabilityPolicy update type of a blob container, possible values include: put, lock and extend.{{% /md %}}</dd>
-    <dt class="property-required"
+    <dd>{{% md %}}The ImmutabilityPolicy update type of a blob container, possible values include: put, lock and extend.{{% /md %}}</dd><dt class="property-required"
             title="Required">
         <span id="upn_python">
 <a href="#upn_python" style="color: inherit; text-decoration: inherit;">upn</a>
@@ -2058,8 +1840,7 @@ All [input](#inputs) properties are implicitly available as output properties. A
         <span class="property-indicator"></span>
         <span class="property-type">str</span>
     </dt>
-    <dd>{{% md %}}Returns the User Principal Name of the user who updated the ImmutabilityPolicy.{{% /md %}}</dd>
-</dl>
+    <dd>{{% md %}}Returns the User Principal Name of the user who updated the ImmutabilityPolicy.{{% /md %}}</dd></dl>
 {{% /choosable %}}
 ## Import
 

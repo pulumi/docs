@@ -17,11 +17,17 @@ legacy Neutron LBaaS v2 extension please use
 openstack.loadbalancer.Member resource.
 
 {{% examples %}}
+
 ## Example Usage
 
 {{< chooser language "typescript,python,go,csharp" / >}}
 
-{{% example csharp %}}
+
+
+
+
+{{< example csharp >}}
+
 ```csharp
 using Pulumi;
 using OpenStack = Pulumi.OpenStack;
@@ -52,9 +58,12 @@ class MyStack : Stack
 }
 ```
 
-{{% /example %}}
 
-{{% example go %}}
+{{< /example >}}
+
+
+{{< example go >}}
+
 ```go
 package main
 
@@ -86,9 +95,12 @@ func main() {
 }
 ```
 
-{{% /example %}}
 
-{{% example python %}}
+{{< /example >}}
+
+
+{{< example python >}}
+
 ```python
 import pulumi
 import pulumi_openstack as openstack
@@ -107,9 +119,12 @@ members1 = openstack.loadbalancer.Members("members1",
     pool_id="935685fb-a896-40f9-9ff4-ae531a3a00fe")
 ```
 
-{{% /example %}}
 
-{{% example typescript %}}
+{{< /example >}}
+
+
+{{< example typescript >}}
+
 
 ```typescript
 import * as pulumi from "@pulumi/pulumi";
@@ -130,9 +145,16 @@ const members1 = new openstack.loadbalancer.Members("members_1", {
 });
 ```
 
-{{% /example %}}
+
+{{< /example >}}
+
+
+
+
 
 {{% /examples %}}
+
+
 
 
 ## Create a Members Resource {#create}
@@ -157,9 +179,7 @@ const members1 = new openstack.loadbalancer.Members("members_1", {
 
 {{% choosable language nodejs %}}
 
-<dl class="resources-properties">
-  
-    <dt
+<dl class="resources-properties"><dt
         class="property-required" title="Required">
         <span>name</span>
         <span class="property-indicator"></span>
@@ -167,9 +187,7 @@ const members1 = new openstack.loadbalancer.Members("members_1", {
     </dt>
     <dd>
       The unique name of the resource.
-    </dd>
-  
-    <dt
+    </dd><dt
         class="property-required" title="Required">
         <span>args</span>
         <span class="property-indicator"></span>
@@ -177,9 +195,7 @@ const members1 = new openstack.loadbalancer.Members("members_1", {
     </dt>
     <dd>
       The arguments to resource properties.
-    </dd>
-  
-    <dt
+    </dd><dt
         class="property-optional" title="Optional">
         <span>opts</span>
         <span class="property-indicator"></span>
@@ -187,10 +203,7 @@ const members1 = new openstack.loadbalancer.Members("members_1", {
     </dt>
     <dd>
       Bag of options to control resource&#39;s behavior.
-    </dd>
-  
-
-</dl>
+    </dd></dl>
 
 {{% /choosable %}}
 
@@ -216,9 +229,7 @@ const members1 = new openstack.loadbalancer.Members("members_1", {
 
 {{% choosable language go %}}
 
-<dl class="resources-properties">
-  
-    <dt
+<dl class="resources-properties"><dt
         class="property-optional" title="Optional">
         <span>ctx</span>
         <span class="property-indicator"></span>
@@ -226,9 +237,7 @@ const members1 = new openstack.loadbalancer.Members("members_1", {
     </dt>
     <dd>
       Context object for the current deployment.
-    </dd>
-  
-    <dt
+    </dd><dt
         class="property-required" title="Required">
         <span>name</span>
         <span class="property-indicator"></span>
@@ -236,9 +245,7 @@ const members1 = new openstack.loadbalancer.Members("members_1", {
     </dt>
     <dd>
       The unique name of the resource.
-    </dd>
-  
-    <dt
+    </dd><dt
         class="property-required" title="Required">
         <span>args</span>
         <span class="property-indicator"></span>
@@ -246,9 +253,7 @@ const members1 = new openstack.loadbalancer.Members("members_1", {
     </dt>
     <dd>
       The arguments to resource properties.
-    </dd>
-  
-    <dt
+    </dd><dt
         class="property-optional" title="Optional">
         <span>opts</span>
         <span class="property-indicator"></span>
@@ -256,18 +261,13 @@ const members1 = new openstack.loadbalancer.Members("members_1", {
     </dt>
     <dd>
       Bag of options to control resource&#39;s behavior.
-    </dd>
-  
-
-</dl>
+    </dd></dl>
 
 {{% /choosable %}}
 
 {{% choosable language csharp %}}
 
-<dl class="resources-properties">
-  
-    <dt
+<dl class="resources-properties"><dt
         class="property-required" title="Required">
         <span>name</span>
         <span class="property-indicator"></span>
@@ -275,9 +275,7 @@ const members1 = new openstack.loadbalancer.Members("members_1", {
     </dt>
     <dd>
       The unique name of the resource.
-    </dd>
-  
-    <dt
+    </dd><dt
         class="property-required" title="Required">
         <span>args</span>
         <span class="property-indicator"></span>
@@ -285,9 +283,7 @@ const members1 = new openstack.loadbalancer.Members("members_1", {
     </dt>
     <dd>
       The arguments to resource properties.
-    </dd>
-  
-    <dt
+    </dd><dt
         class="property-optional" title="Optional">
         <span>opts</span>
         <span class="property-indicator"></span>
@@ -295,10 +291,7 @@ const members1 = new openstack.loadbalancer.Members("members_1", {
     </dt>
     <dd>
       Bag of options to control resource&#39;s behavior.
-    </dd>
-  
-
-</dl>
+    </dd></dl>
 
 {{% /choosable %}}
 
@@ -313,9 +306,7 @@ The Members resource accepts the following [input]({{< relref "/docs/intro/conce
 
 
 {{% choosable language csharp %}}
-<dl class="resources-properties">
-
-    <dt class="property-required"
+<dl class="resources-properties"><dt class="property-required"
             title="Required">
         <span id="poolid_csharp">
 <a href="#poolid_csharp" style="color: inherit; text-decoration: inherit;">Pool<wbr>Id</a>
@@ -325,8 +316,7 @@ The Members resource accepts the following [input]({{< relref "/docs/intro/conce
     </dt>
     <dd>{{% md %}}The id of the pool that members will be assigned to.
 Changing this creates a new members resource.
-{{% /md %}}</dd>
-    <dt class="property-optional"
+{{% /md %}}</dd><dt class="property-optional"
             title="Optional">
         <span id="memberlist_csharp">
 <a href="#memberlist_csharp" style="color: inherit; text-decoration: inherit;">Member<wbr>List</a>
@@ -336,8 +326,7 @@ Changing this creates a new members resource.
     </dt>
     <dd>{{% md %}}A set of dictionaries containing member parameters. The
 structure is described below.
-{{% /md %}}</dd>
-    <dt class="property-optional"
+{{% /md %}}</dd><dt class="property-optional"
             title="Optional">
         <span id="region_csharp">
 <a href="#region_csharp" style="color: inherit; text-decoration: inherit;">Region</a>
@@ -349,14 +338,11 @@ structure is described below.
 A Networking client is needed to create pool members. If omitted, the
 `region` argument of the provider is used. Changing this creates a new
 members resource.
-{{% /md %}}</dd>
-</dl>
+{{% /md %}}</dd></dl>
 {{% /choosable %}}
 
 {{% choosable language go %}}
-<dl class="resources-properties">
-
-    <dt class="property-required"
+<dl class="resources-properties"><dt class="property-required"
             title="Required">
         <span id="poolid_go">
 <a href="#poolid_go" style="color: inherit; text-decoration: inherit;">Pool<wbr>Id</a>
@@ -366,8 +352,7 @@ members resource.
     </dt>
     <dd>{{% md %}}The id of the pool that members will be assigned to.
 Changing this creates a new members resource.
-{{% /md %}}</dd>
-    <dt class="property-optional"
+{{% /md %}}</dd><dt class="property-optional"
             title="Optional">
         <span id="members_go">
 <a href="#members_go" style="color: inherit; text-decoration: inherit;">Members</a>
@@ -377,8 +362,7 @@ Changing this creates a new members resource.
     </dt>
     <dd>{{% md %}}A set of dictionaries containing member parameters. The
 structure is described below.
-{{% /md %}}</dd>
-    <dt class="property-optional"
+{{% /md %}}</dd><dt class="property-optional"
             title="Optional">
         <span id="region_go">
 <a href="#region_go" style="color: inherit; text-decoration: inherit;">Region</a>
@@ -390,14 +374,11 @@ structure is described below.
 A Networking client is needed to create pool members. If omitted, the
 `region` argument of the provider is used. Changing this creates a new
 members resource.
-{{% /md %}}</dd>
-</dl>
+{{% /md %}}</dd></dl>
 {{% /choosable %}}
 
 {{% choosable language nodejs %}}
-<dl class="resources-properties">
-
-    <dt class="property-required"
+<dl class="resources-properties"><dt class="property-required"
             title="Required">
         <span id="poolid_nodejs">
 <a href="#poolid_nodejs" style="color: inherit; text-decoration: inherit;">pool<wbr>Id</a>
@@ -407,8 +388,7 @@ members resource.
     </dt>
     <dd>{{% md %}}The id of the pool that members will be assigned to.
 Changing this creates a new members resource.
-{{% /md %}}</dd>
-    <dt class="property-optional"
+{{% /md %}}</dd><dt class="property-optional"
             title="Optional">
         <span id="members_nodejs">
 <a href="#members_nodejs" style="color: inherit; text-decoration: inherit;">members</a>
@@ -418,8 +398,7 @@ Changing this creates a new members resource.
     </dt>
     <dd>{{% md %}}A set of dictionaries containing member parameters. The
 structure is described below.
-{{% /md %}}</dd>
-    <dt class="property-optional"
+{{% /md %}}</dd><dt class="property-optional"
             title="Optional">
         <span id="region_nodejs">
 <a href="#region_nodejs" style="color: inherit; text-decoration: inherit;">region</a>
@@ -431,14 +410,11 @@ structure is described below.
 A Networking client is needed to create pool members. If omitted, the
 `region` argument of the provider is used. Changing this creates a new
 members resource.
-{{% /md %}}</dd>
-</dl>
+{{% /md %}}</dd></dl>
 {{% /choosable %}}
 
 {{% choosable language python %}}
-<dl class="resources-properties">
-
-    <dt class="property-required"
+<dl class="resources-properties"><dt class="property-required"
             title="Required">
         <span id="pool_id_python">
 <a href="#pool_id_python" style="color: inherit; text-decoration: inherit;">pool_<wbr>id</a>
@@ -448,8 +424,7 @@ members resource.
     </dt>
     <dd>{{% md %}}The id of the pool that members will be assigned to.
 Changing this creates a new members resource.
-{{% /md %}}</dd>
-    <dt class="property-optional"
+{{% /md %}}</dd><dt class="property-optional"
             title="Optional">
         <span id="members_python">
 <a href="#members_python" style="color: inherit; text-decoration: inherit;">members</a>
@@ -459,8 +434,7 @@ Changing this creates a new members resource.
     </dt>
     <dd>{{% md %}}A set of dictionaries containing member parameters. The
 structure is described below.
-{{% /md %}}</dd>
-    <dt class="property-optional"
+{{% /md %}}</dd><dt class="property-optional"
             title="Optional">
         <span id="region_python">
 <a href="#region_python" style="color: inherit; text-decoration: inherit;">region</a>
@@ -472,8 +446,7 @@ structure is described below.
 A Networking client is needed to create pool members. If omitted, the
 `region` argument of the provider is used. Changing this creates a new
 members resource.
-{{% /md %}}</dd>
-</dl>
+{{% /md %}}</dd></dl>
 {{% /choosable %}}
 
 
@@ -484,9 +457,7 @@ All [input](#inputs) properties are implicitly available as output properties. A
 
 
 {{% choosable language csharp %}}
-<dl class="resources-properties">
-
-    <dt class="property-"
+<dl class="resources-properties"><dt class="property-"
             title="">
         <span id="id_csharp">
 <a href="#id_csharp" style="color: inherit; text-decoration: inherit;">Id</a>
@@ -494,14 +465,11 @@ All [input](#inputs) properties are implicitly available as output properties. A
         <span class="property-indicator"></span>
         <span class="property-type">string</span>
     </dt>
-    <dd>{{% md %}}The provider-assigned unique ID for this managed resource.{{% /md %}}</dd>
-</dl>
+    <dd>{{% md %}}The provider-assigned unique ID for this managed resource.{{% /md %}}</dd></dl>
 {{% /choosable %}}
 
 {{% choosable language go %}}
-<dl class="resources-properties">
-
-    <dt class="property-"
+<dl class="resources-properties"><dt class="property-"
             title="">
         <span id="id_go">
 <a href="#id_go" style="color: inherit; text-decoration: inherit;">Id</a>
@@ -509,14 +477,11 @@ All [input](#inputs) properties are implicitly available as output properties. A
         <span class="property-indicator"></span>
         <span class="property-type">string</span>
     </dt>
-    <dd>{{% md %}}The provider-assigned unique ID for this managed resource.{{% /md %}}</dd>
-</dl>
+    <dd>{{% md %}}The provider-assigned unique ID for this managed resource.{{% /md %}}</dd></dl>
 {{% /choosable %}}
 
 {{% choosable language nodejs %}}
-<dl class="resources-properties">
-
-    <dt class="property-"
+<dl class="resources-properties"><dt class="property-"
             title="">
         <span id="id_nodejs">
 <a href="#id_nodejs" style="color: inherit; text-decoration: inherit;">id</a>
@@ -524,14 +489,11 @@ All [input](#inputs) properties are implicitly available as output properties. A
         <span class="property-indicator"></span>
         <span class="property-type">string</span>
     </dt>
-    <dd>{{% md %}}The provider-assigned unique ID for this managed resource.{{% /md %}}</dd>
-</dl>
+    <dd>{{% md %}}The provider-assigned unique ID for this managed resource.{{% /md %}}</dd></dl>
 {{% /choosable %}}
 
 {{% choosable language python %}}
-<dl class="resources-properties">
-
-    <dt class="property-"
+<dl class="resources-properties"><dt class="property-"
             title="">
         <span id="id_python">
 <a href="#id_python" style="color: inherit; text-decoration: inherit;">id</a>
@@ -539,8 +501,7 @@ All [input](#inputs) properties are implicitly available as output properties. A
         <span class="property-indicator"></span>
         <span class="property-type">str</span>
     </dt>
-    <dd>{{% md %}}The provider-assigned unique ID for this managed resource.{{% /md %}}</dd>
-</dl>
+    <dd>{{% md %}}The provider-assigned unique ID for this managed resource.{{% /md %}}</dd></dl>
 {{% /choosable %}}
 
 
@@ -667,9 +628,7 @@ The following state arguments are supported:
 
 
 {{% choosable language csharp %}}
-<dl class="resources-properties">
-
-    <dt class="property-optional"
+<dl class="resources-properties"><dt class="property-optional"
             title="Optional">
         <span id="state_memberlist_csharp">
 <a href="#state_memberlist_csharp" style="color: inherit; text-decoration: inherit;">Member<wbr>List</a>
@@ -679,8 +638,7 @@ The following state arguments are supported:
     </dt>
     <dd>{{% md %}}A set of dictionaries containing member parameters. The
 structure is described below.
-{{% /md %}}</dd>
-    <dt class="property-optional"
+{{% /md %}}</dd><dt class="property-optional"
             title="Optional">
         <span id="state_poolid_csharp">
 <a href="#state_poolid_csharp" style="color: inherit; text-decoration: inherit;">Pool<wbr>Id</a>
@@ -690,8 +648,7 @@ structure is described below.
     </dt>
     <dd>{{% md %}}The id of the pool that members will be assigned to.
 Changing this creates a new members resource.
-{{% /md %}}</dd>
-    <dt class="property-optional"
+{{% /md %}}</dd><dt class="property-optional"
             title="Optional">
         <span id="state_region_csharp">
 <a href="#state_region_csharp" style="color: inherit; text-decoration: inherit;">Region</a>
@@ -703,14 +660,11 @@ Changing this creates a new members resource.
 A Networking client is needed to create pool members. If omitted, the
 `region` argument of the provider is used. Changing this creates a new
 members resource.
-{{% /md %}}</dd>
-</dl>
+{{% /md %}}</dd></dl>
 {{% /choosable %}}
 
 {{% choosable language go %}}
-<dl class="resources-properties">
-
-    <dt class="property-optional"
+<dl class="resources-properties"><dt class="property-optional"
             title="Optional">
         <span id="state_members_go">
 <a href="#state_members_go" style="color: inherit; text-decoration: inherit;">Members</a>
@@ -720,8 +674,7 @@ members resource.
     </dt>
     <dd>{{% md %}}A set of dictionaries containing member parameters. The
 structure is described below.
-{{% /md %}}</dd>
-    <dt class="property-optional"
+{{% /md %}}</dd><dt class="property-optional"
             title="Optional">
         <span id="state_poolid_go">
 <a href="#state_poolid_go" style="color: inherit; text-decoration: inherit;">Pool<wbr>Id</a>
@@ -731,8 +684,7 @@ structure is described below.
     </dt>
     <dd>{{% md %}}The id of the pool that members will be assigned to.
 Changing this creates a new members resource.
-{{% /md %}}</dd>
-    <dt class="property-optional"
+{{% /md %}}</dd><dt class="property-optional"
             title="Optional">
         <span id="state_region_go">
 <a href="#state_region_go" style="color: inherit; text-decoration: inherit;">Region</a>
@@ -744,14 +696,11 @@ Changing this creates a new members resource.
 A Networking client is needed to create pool members. If omitted, the
 `region` argument of the provider is used. Changing this creates a new
 members resource.
-{{% /md %}}</dd>
-</dl>
+{{% /md %}}</dd></dl>
 {{% /choosable %}}
 
 {{% choosable language nodejs %}}
-<dl class="resources-properties">
-
-    <dt class="property-optional"
+<dl class="resources-properties"><dt class="property-optional"
             title="Optional">
         <span id="state_members_nodejs">
 <a href="#state_members_nodejs" style="color: inherit; text-decoration: inherit;">members</a>
@@ -761,8 +710,7 @@ members resource.
     </dt>
     <dd>{{% md %}}A set of dictionaries containing member parameters. The
 structure is described below.
-{{% /md %}}</dd>
-    <dt class="property-optional"
+{{% /md %}}</dd><dt class="property-optional"
             title="Optional">
         <span id="state_poolid_nodejs">
 <a href="#state_poolid_nodejs" style="color: inherit; text-decoration: inherit;">pool<wbr>Id</a>
@@ -772,8 +720,7 @@ structure is described below.
     </dt>
     <dd>{{% md %}}The id of the pool that members will be assigned to.
 Changing this creates a new members resource.
-{{% /md %}}</dd>
-    <dt class="property-optional"
+{{% /md %}}</dd><dt class="property-optional"
             title="Optional">
         <span id="state_region_nodejs">
 <a href="#state_region_nodejs" style="color: inherit; text-decoration: inherit;">region</a>
@@ -785,14 +732,11 @@ Changing this creates a new members resource.
 A Networking client is needed to create pool members. If omitted, the
 `region` argument of the provider is used. Changing this creates a new
 members resource.
-{{% /md %}}</dd>
-</dl>
+{{% /md %}}</dd></dl>
 {{% /choosable %}}
 
 {{% choosable language python %}}
-<dl class="resources-properties">
-
-    <dt class="property-optional"
+<dl class="resources-properties"><dt class="property-optional"
             title="Optional">
         <span id="state_members_python">
 <a href="#state_members_python" style="color: inherit; text-decoration: inherit;">members</a>
@@ -802,8 +746,7 @@ members resource.
     </dt>
     <dd>{{% md %}}A set of dictionaries containing member parameters. The
 structure is described below.
-{{% /md %}}</dd>
-    <dt class="property-optional"
+{{% /md %}}</dd><dt class="property-optional"
             title="Optional">
         <span id="state_pool_id_python">
 <a href="#state_pool_id_python" style="color: inherit; text-decoration: inherit;">pool_<wbr>id</a>
@@ -813,8 +756,7 @@ structure is described below.
     </dt>
     <dd>{{% md %}}The id of the pool that members will be assigned to.
 Changing this creates a new members resource.
-{{% /md %}}</dd>
-    <dt class="property-optional"
+{{% /md %}}</dd><dt class="property-optional"
             title="Optional">
         <span id="state_region_python">
 <a href="#state_region_python" style="color: inherit; text-decoration: inherit;">region</a>
@@ -826,8 +768,7 @@ Changing this creates a new members resource.
 A Networking client is needed to create pool members. If omitted, the
 `region` argument of the provider is used. Changing this creates a new
 members resource.
-{{% /md %}}</dd>
-</dl>
+{{% /md %}}</dd></dl>
 {{% /choosable %}}
 
 
@@ -842,9 +783,7 @@ members resource.
 <h4 id="membersmember">Members<wbr>Member</h4>
 
 {{% choosable language csharp %}}
-<dl class="resources-properties">
-
-    <dt class="property-required"
+<dl class="resources-properties"><dt class="property-required"
             title="Required">
         <span id="address_csharp">
 <a href="#address_csharp" style="color: inherit; text-decoration: inherit;">Address</a>
@@ -854,8 +793,7 @@ members resource.
     </dt>
     <dd>{{% md %}}The IP address of the members to receive traffic from
 the load balancer.
-{{% /md %}}</dd>
-    <dt class="property-required"
+{{% /md %}}</dd><dt class="property-required"
             title="Required">
         <span id="protocolport_csharp">
 <a href="#protocolport_csharp" style="color: inherit; text-decoration: inherit;">Protocol<wbr>Port</a>
@@ -864,8 +802,7 @@ the load balancer.
         <span class="property-type">int</span>
     </dt>
     <dd>{{% md %}}The port on which to listen for client traffic.
-{{% /md %}}</dd>
-    <dt class="property-optional"
+{{% /md %}}</dd><dt class="property-optional"
             title="Optional">
         <span id="adminstateup_csharp">
 <a href="#adminstateup_csharp" style="color: inherit; text-decoration: inherit;">Admin<wbr>State<wbr>Up</a>
@@ -875,8 +812,7 @@ the load balancer.
     </dt>
     <dd>{{% md %}}The administrative state of the member.
 A valid value is true (UP) or false (DOWN). Defaults to true.
-{{% /md %}}</dd>
-    <dt class="property-optional"
+{{% /md %}}</dd><dt class="property-optional"
             title="Optional">
         <span id="id_csharp">
 <a href="#id_csharp" style="color: inherit; text-decoration: inherit;">Id</a>
@@ -885,8 +821,7 @@ A valid value is true (UP) or false (DOWN). Defaults to true.
         <span class="property-type">string</span>
     </dt>
     <dd>{{% md %}}The unique ID for the members.
-{{% /md %}}</dd>
-    <dt class="property-optional"
+{{% /md %}}</dd><dt class="property-optional"
             title="Optional">
         <span id="name_csharp">
 <a href="#name_csharp" style="color: inherit; text-decoration: inherit;">Name</a>
@@ -895,8 +830,7 @@ A valid value is true (UP) or false (DOWN). Defaults to true.
         <span class="property-type">string</span>
     </dt>
     <dd>{{% md %}}Human-readable name for the member.
-{{% /md %}}</dd>
-    <dt class="property-optional"
+{{% /md %}}</dd><dt class="property-optional"
             title="Optional">
         <span id="subnetid_csharp">
 <a href="#subnetid_csharp" style="color: inherit; text-decoration: inherit;">Subnet<wbr>Id</a>
@@ -905,8 +839,7 @@ A valid value is true (UP) or false (DOWN). Defaults to true.
         <span class="property-type">string</span>
     </dt>
     <dd>{{% md %}}The subnet in which to access the member.
-{{% /md %}}</dd>
-    <dt class="property-optional"
+{{% /md %}}</dd><dt class="property-optional"
             title="Optional">
         <span id="weight_csharp">
 <a href="#weight_csharp" style="color: inherit; text-decoration: inherit;">Weight</a>
@@ -918,14 +851,11 @@ A valid value is true (UP) or false (DOWN). Defaults to true.
 portion of traffic that this members should receive from the pool. For
 example, a member with a weight of 10 receives five times as much traffic
 as a member with a weight of 2. Defaults to 1.
-{{% /md %}}</dd>
-</dl>
+{{% /md %}}</dd></dl>
 {{% /choosable %}}
 
 {{% choosable language go %}}
-<dl class="resources-properties">
-
-    <dt class="property-required"
+<dl class="resources-properties"><dt class="property-required"
             title="Required">
         <span id="address_go">
 <a href="#address_go" style="color: inherit; text-decoration: inherit;">Address</a>
@@ -935,8 +865,7 @@ as a member with a weight of 2. Defaults to 1.
     </dt>
     <dd>{{% md %}}The IP address of the members to receive traffic from
 the load balancer.
-{{% /md %}}</dd>
-    <dt class="property-required"
+{{% /md %}}</dd><dt class="property-required"
             title="Required">
         <span id="protocolport_go">
 <a href="#protocolport_go" style="color: inherit; text-decoration: inherit;">Protocol<wbr>Port</a>
@@ -945,8 +874,7 @@ the load balancer.
         <span class="property-type">int</span>
     </dt>
     <dd>{{% md %}}The port on which to listen for client traffic.
-{{% /md %}}</dd>
-    <dt class="property-optional"
+{{% /md %}}</dd><dt class="property-optional"
             title="Optional">
         <span id="adminstateup_go">
 <a href="#adminstateup_go" style="color: inherit; text-decoration: inherit;">Admin<wbr>State<wbr>Up</a>
@@ -956,8 +884,7 @@ the load balancer.
     </dt>
     <dd>{{% md %}}The administrative state of the member.
 A valid value is true (UP) or false (DOWN). Defaults to true.
-{{% /md %}}</dd>
-    <dt class="property-optional"
+{{% /md %}}</dd><dt class="property-optional"
             title="Optional">
         <span id="id_go">
 <a href="#id_go" style="color: inherit; text-decoration: inherit;">Id</a>
@@ -966,8 +893,7 @@ A valid value is true (UP) or false (DOWN). Defaults to true.
         <span class="property-type">string</span>
     </dt>
     <dd>{{% md %}}The unique ID for the members.
-{{% /md %}}</dd>
-    <dt class="property-optional"
+{{% /md %}}</dd><dt class="property-optional"
             title="Optional">
         <span id="name_go">
 <a href="#name_go" style="color: inherit; text-decoration: inherit;">Name</a>
@@ -976,8 +902,7 @@ A valid value is true (UP) or false (DOWN). Defaults to true.
         <span class="property-type">string</span>
     </dt>
     <dd>{{% md %}}Human-readable name for the member.
-{{% /md %}}</dd>
-    <dt class="property-optional"
+{{% /md %}}</dd><dt class="property-optional"
             title="Optional">
         <span id="subnetid_go">
 <a href="#subnetid_go" style="color: inherit; text-decoration: inherit;">Subnet<wbr>Id</a>
@@ -986,8 +911,7 @@ A valid value is true (UP) or false (DOWN). Defaults to true.
         <span class="property-type">string</span>
     </dt>
     <dd>{{% md %}}The subnet in which to access the member.
-{{% /md %}}</dd>
-    <dt class="property-optional"
+{{% /md %}}</dd><dt class="property-optional"
             title="Optional">
         <span id="weight_go">
 <a href="#weight_go" style="color: inherit; text-decoration: inherit;">Weight</a>
@@ -999,14 +923,11 @@ A valid value is true (UP) or false (DOWN). Defaults to true.
 portion of traffic that this members should receive from the pool. For
 example, a member with a weight of 10 receives five times as much traffic
 as a member with a weight of 2. Defaults to 1.
-{{% /md %}}</dd>
-</dl>
+{{% /md %}}</dd></dl>
 {{% /choosable %}}
 
 {{% choosable language nodejs %}}
-<dl class="resources-properties">
-
-    <dt class="property-required"
+<dl class="resources-properties"><dt class="property-required"
             title="Required">
         <span id="address_nodejs">
 <a href="#address_nodejs" style="color: inherit; text-decoration: inherit;">address</a>
@@ -1016,8 +937,7 @@ as a member with a weight of 2. Defaults to 1.
     </dt>
     <dd>{{% md %}}The IP address of the members to receive traffic from
 the load balancer.
-{{% /md %}}</dd>
-    <dt class="property-required"
+{{% /md %}}</dd><dt class="property-required"
             title="Required">
         <span id="protocolport_nodejs">
 <a href="#protocolport_nodejs" style="color: inherit; text-decoration: inherit;">protocol<wbr>Port</a>
@@ -1026,8 +946,7 @@ the load balancer.
         <span class="property-type">number</span>
     </dt>
     <dd>{{% md %}}The port on which to listen for client traffic.
-{{% /md %}}</dd>
-    <dt class="property-optional"
+{{% /md %}}</dd><dt class="property-optional"
             title="Optional">
         <span id="adminstateup_nodejs">
 <a href="#adminstateup_nodejs" style="color: inherit; text-decoration: inherit;">admin<wbr>State<wbr>Up</a>
@@ -1037,8 +956,7 @@ the load balancer.
     </dt>
     <dd>{{% md %}}The administrative state of the member.
 A valid value is true (UP) or false (DOWN). Defaults to true.
-{{% /md %}}</dd>
-    <dt class="property-optional"
+{{% /md %}}</dd><dt class="property-optional"
             title="Optional">
         <span id="id_nodejs">
 <a href="#id_nodejs" style="color: inherit; text-decoration: inherit;">id</a>
@@ -1047,8 +965,7 @@ A valid value is true (UP) or false (DOWN). Defaults to true.
         <span class="property-type">string</span>
     </dt>
     <dd>{{% md %}}The unique ID for the members.
-{{% /md %}}</dd>
-    <dt class="property-optional"
+{{% /md %}}</dd><dt class="property-optional"
             title="Optional">
         <span id="name_nodejs">
 <a href="#name_nodejs" style="color: inherit; text-decoration: inherit;">name</a>
@@ -1057,8 +974,7 @@ A valid value is true (UP) or false (DOWN). Defaults to true.
         <span class="property-type">string</span>
     </dt>
     <dd>{{% md %}}Human-readable name for the member.
-{{% /md %}}</dd>
-    <dt class="property-optional"
+{{% /md %}}</dd><dt class="property-optional"
             title="Optional">
         <span id="subnetid_nodejs">
 <a href="#subnetid_nodejs" style="color: inherit; text-decoration: inherit;">subnet<wbr>Id</a>
@@ -1067,8 +983,7 @@ A valid value is true (UP) or false (DOWN). Defaults to true.
         <span class="property-type">string</span>
     </dt>
     <dd>{{% md %}}The subnet in which to access the member.
-{{% /md %}}</dd>
-    <dt class="property-optional"
+{{% /md %}}</dd><dt class="property-optional"
             title="Optional">
         <span id="weight_nodejs">
 <a href="#weight_nodejs" style="color: inherit; text-decoration: inherit;">weight</a>
@@ -1080,14 +995,11 @@ A valid value is true (UP) or false (DOWN). Defaults to true.
 portion of traffic that this members should receive from the pool. For
 example, a member with a weight of 10 receives five times as much traffic
 as a member with a weight of 2. Defaults to 1.
-{{% /md %}}</dd>
-</dl>
+{{% /md %}}</dd></dl>
 {{% /choosable %}}
 
 {{% choosable language python %}}
-<dl class="resources-properties">
-
-    <dt class="property-required"
+<dl class="resources-properties"><dt class="property-required"
             title="Required">
         <span id="address_python">
 <a href="#address_python" style="color: inherit; text-decoration: inherit;">address</a>
@@ -1097,8 +1009,7 @@ as a member with a weight of 2. Defaults to 1.
     </dt>
     <dd>{{% md %}}The IP address of the members to receive traffic from
 the load balancer.
-{{% /md %}}</dd>
-    <dt class="property-required"
+{{% /md %}}</dd><dt class="property-required"
             title="Required">
         <span id="protocol_port_python">
 <a href="#protocol_port_python" style="color: inherit; text-decoration: inherit;">protocol_<wbr>port</a>
@@ -1107,8 +1018,7 @@ the load balancer.
         <span class="property-type">int</span>
     </dt>
     <dd>{{% md %}}The port on which to listen for client traffic.
-{{% /md %}}</dd>
-    <dt class="property-optional"
+{{% /md %}}</dd><dt class="property-optional"
             title="Optional">
         <span id="admin_state_up_python">
 <a href="#admin_state_up_python" style="color: inherit; text-decoration: inherit;">admin_<wbr>state_<wbr>up</a>
@@ -1118,8 +1028,7 @@ the load balancer.
     </dt>
     <dd>{{% md %}}The administrative state of the member.
 A valid value is true (UP) or false (DOWN). Defaults to true.
-{{% /md %}}</dd>
-    <dt class="property-optional"
+{{% /md %}}</dd><dt class="property-optional"
             title="Optional">
         <span id="id_python">
 <a href="#id_python" style="color: inherit; text-decoration: inherit;">id</a>
@@ -1128,8 +1037,7 @@ A valid value is true (UP) or false (DOWN). Defaults to true.
         <span class="property-type">str</span>
     </dt>
     <dd>{{% md %}}The unique ID for the members.
-{{% /md %}}</dd>
-    <dt class="property-optional"
+{{% /md %}}</dd><dt class="property-optional"
             title="Optional">
         <span id="name_python">
 <a href="#name_python" style="color: inherit; text-decoration: inherit;">name</a>
@@ -1138,8 +1046,7 @@ A valid value is true (UP) or false (DOWN). Defaults to true.
         <span class="property-type">str</span>
     </dt>
     <dd>{{% md %}}Human-readable name for the member.
-{{% /md %}}</dd>
-    <dt class="property-optional"
+{{% /md %}}</dd><dt class="property-optional"
             title="Optional">
         <span id="subnet_id_python">
 <a href="#subnet_id_python" style="color: inherit; text-decoration: inherit;">subnet_<wbr>id</a>
@@ -1148,8 +1055,7 @@ A valid value is true (UP) or false (DOWN). Defaults to true.
         <span class="property-type">str</span>
     </dt>
     <dd>{{% md %}}The subnet in which to access the member.
-{{% /md %}}</dd>
-    <dt class="property-optional"
+{{% /md %}}</dd><dt class="property-optional"
             title="Optional">
         <span id="weight_python">
 <a href="#weight_python" style="color: inherit; text-decoration: inherit;">weight</a>
@@ -1161,8 +1067,7 @@ A valid value is true (UP) or false (DOWN). Defaults to true.
 portion of traffic that this members should receive from the pool. For
 example, a member with a weight of 10 receives five times as much traffic
 as a member with a weight of 2. Defaults to 1.
-{{% /md %}}</dd>
-</dl>
+{{% /md %}}</dd></dl>
 {{% /choosable %}}
 ## Import
 
@@ -1183,6 +1088,6 @@ Load Balancer Pool Members can be imported using the Pool ID, e.g.
 	<dt>License</dt>
 	<dd>Apache-2.0</dd>
 	<dt>Notes</dt>
-	<dd>This Pulumi package is based on the [`openstack` Terraform Provider](https://github.com/terraform-provider-openstack/terraform-provider-openstack).</dd>
+	<dd>{{% md %}}This Pulumi package is based on the [`openstack` Terraform Provider](https://github.com/terraform-provider-openstack/terraform-provider-openstack).{{% /md %}}</dd>
 </dl>
 

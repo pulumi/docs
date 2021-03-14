@@ -14,11 +14,17 @@ A SQL virtual machine group.
 API Version: 2017-03-01-preview.
 
 {{% examples %}}
+
 ## Example Usage
 
 {{< chooser language "typescript,python,go,csharp" / >}}
+
+
 ### Creates or updates a SQL virtual machine group.
-{{% example csharp %}}
+
+
+{{< example csharp >}}
+
 ```csharp
 using Pulumi;
 using AzureNative = Pulumi.AzureNative;
@@ -55,9 +61,12 @@ class MyStack : Stack
 
 ```
 
-{{% /example %}}
 
-{{% example go %}}
+{{< /example >}}
+
+
+{{< example go >}}
+
 
 ```go
 package main
@@ -97,9 +106,12 @@ func main() {
 
 ```
 
-{{% /example %}}
 
-{{% example python %}}
+{{< /example >}}
+
+
+{{< example python >}}
+
 
 ```python
 import pulumi
@@ -126,9 +138,12 @@ sql_virtual_machine_group = azure_native.sqlvirtualmachine.SqlVirtualMachineGrou
 
 ```
 
-{{% /example %}}
 
-{{% example typescript %}}
+{{< /example >}}
+
+
+{{< example typescript >}}
+
 
 ```typescript
 import * as pulumi from "@pulumi/pulumi";
@@ -156,9 +171,16 @@ const sqlVirtualMachineGroup = new azure_native.sqlvirtualmachine.SqlVirtualMach
 
 ```
 
-{{% /example %}}
+
+{{< /example >}}
+
+
+
+
 
 {{% /examples %}}
+
+
 
 
 ## Create a SqlVirtualMachineGroup Resource {#create}
@@ -183,9 +205,7 @@ const sqlVirtualMachineGroup = new azure_native.sqlvirtualmachine.SqlVirtualMach
 
 {{% choosable language nodejs %}}
 
-<dl class="resources-properties">
-  
-    <dt
+<dl class="resources-properties"><dt
         class="property-required" title="Required">
         <span>name</span>
         <span class="property-indicator"></span>
@@ -193,9 +213,7 @@ const sqlVirtualMachineGroup = new azure_native.sqlvirtualmachine.SqlVirtualMach
     </dt>
     <dd>
       The unique name of the resource.
-    </dd>
-  
-    <dt
+    </dd><dt
         class="property-required" title="Required">
         <span>args</span>
         <span class="property-indicator"></span>
@@ -203,9 +221,7 @@ const sqlVirtualMachineGroup = new azure_native.sqlvirtualmachine.SqlVirtualMach
     </dt>
     <dd>
       The arguments to resource properties.
-    </dd>
-  
-    <dt
+    </dd><dt
         class="property-optional" title="Optional">
         <span>opts</span>
         <span class="property-indicator"></span>
@@ -213,10 +229,7 @@ const sqlVirtualMachineGroup = new azure_native.sqlvirtualmachine.SqlVirtualMach
     </dt>
     <dd>
       Bag of options to control resource&#39;s behavior.
-    </dd>
-  
-
-</dl>
+    </dd></dl>
 
 {{% /choosable %}}
 
@@ -242,9 +255,7 @@ const sqlVirtualMachineGroup = new azure_native.sqlvirtualmachine.SqlVirtualMach
 
 {{% choosable language go %}}
 
-<dl class="resources-properties">
-  
-    <dt
+<dl class="resources-properties"><dt
         class="property-optional" title="Optional">
         <span>ctx</span>
         <span class="property-indicator"></span>
@@ -252,9 +263,7 @@ const sqlVirtualMachineGroup = new azure_native.sqlvirtualmachine.SqlVirtualMach
     </dt>
     <dd>
       Context object for the current deployment.
-    </dd>
-  
-    <dt
+    </dd><dt
         class="property-required" title="Required">
         <span>name</span>
         <span class="property-indicator"></span>
@@ -262,9 +271,7 @@ const sqlVirtualMachineGroup = new azure_native.sqlvirtualmachine.SqlVirtualMach
     </dt>
     <dd>
       The unique name of the resource.
-    </dd>
-  
-    <dt
+    </dd><dt
         class="property-required" title="Required">
         <span>args</span>
         <span class="property-indicator"></span>
@@ -272,9 +279,7 @@ const sqlVirtualMachineGroup = new azure_native.sqlvirtualmachine.SqlVirtualMach
     </dt>
     <dd>
       The arguments to resource properties.
-    </dd>
-  
-    <dt
+    </dd><dt
         class="property-optional" title="Optional">
         <span>opts</span>
         <span class="property-indicator"></span>
@@ -282,18 +287,13 @@ const sqlVirtualMachineGroup = new azure_native.sqlvirtualmachine.SqlVirtualMach
     </dt>
     <dd>
       Bag of options to control resource&#39;s behavior.
-    </dd>
-  
-
-</dl>
+    </dd></dl>
 
 {{% /choosable %}}
 
 {{% choosable language csharp %}}
 
-<dl class="resources-properties">
-  
-    <dt
+<dl class="resources-properties"><dt
         class="property-required" title="Required">
         <span>name</span>
         <span class="property-indicator"></span>
@@ -301,9 +301,7 @@ const sqlVirtualMachineGroup = new azure_native.sqlvirtualmachine.SqlVirtualMach
     </dt>
     <dd>
       The unique name of the resource.
-    </dd>
-  
-    <dt
+    </dd><dt
         class="property-required" title="Required">
         <span>args</span>
         <span class="property-indicator"></span>
@@ -311,9 +309,7 @@ const sqlVirtualMachineGroup = new azure_native.sqlvirtualmachine.SqlVirtualMach
     </dt>
     <dd>
       The arguments to resource properties.
-    </dd>
-  
-    <dt
+    </dd><dt
         class="property-optional" title="Optional">
         <span>opts</span>
         <span class="property-indicator"></span>
@@ -321,10 +317,7 @@ const sqlVirtualMachineGroup = new azure_native.sqlvirtualmachine.SqlVirtualMach
     </dt>
     <dd>
       Bag of options to control resource&#39;s behavior.
-    </dd>
-  
-
-</dl>
+    </dd></dl>
 
 {{% /choosable %}}
 
@@ -339,9 +332,7 @@ The SqlVirtualMachineGroup resource accepts the following [input]({{< relref "/d
 
 
 {{% choosable language csharp %}}
-<dl class="resources-properties">
-
-    <dt class="property-required"
+<dl class="resources-properties"><dt class="property-required"
             title="Required">
         <span id="resourcegroupname_csharp">
 <a href="#resourcegroupname_csharp" style="color: inherit; text-decoration: inherit;">Resource<wbr>Group<wbr>Name</a>
@@ -349,8 +340,7 @@ The SqlVirtualMachineGroup resource accepts the following [input]({{< relref "/d
         <span class="property-indicator"></span>
         <span class="property-type">string</span>
     </dt>
-    <dd>{{% md %}}Name of the resource group that contains the resource. You can obtain this value from the Azure Resource Manager API or the portal.{{% /md %}}</dd>
-    <dt class="property-optional"
+    <dd>{{% md %}}Name of the resource group that contains the resource. You can obtain this value from the Azure Resource Manager API or the portal.{{% /md %}}</dd><dt class="property-optional"
             title="Optional">
         <span id="location_csharp">
 <a href="#location_csharp" style="color: inherit; text-decoration: inherit;">Location</a>
@@ -358,8 +348,7 @@ The SqlVirtualMachineGroup resource accepts the following [input]({{< relref "/d
         <span class="property-indicator"></span>
         <span class="property-type">string</span>
     </dt>
-    <dd>{{% md %}}Resource location.{{% /md %}}</dd>
-    <dt class="property-optional"
+    <dd>{{% md %}}Resource location.{{% /md %}}</dd><dt class="property-optional"
             title="Optional">
         <span id="sqlimageoffer_csharp">
 <a href="#sqlimageoffer_csharp" style="color: inherit; text-decoration: inherit;">Sql<wbr>Image<wbr>Offer</a>
@@ -367,8 +356,7 @@ The SqlVirtualMachineGroup resource accepts the following [input]({{< relref "/d
         <span class="property-indicator"></span>
         <span class="property-type">string</span>
     </dt>
-    <dd>{{% md %}}SQL image offer. Examples may include SQL2016-WS2016, SQL2017-WS2016.{{% /md %}}</dd>
-    <dt class="property-optional"
+    <dd>{{% md %}}SQL image offer. Examples may include SQL2016-WS2016, SQL2017-WS2016.{{% /md %}}</dd><dt class="property-optional"
             title="Optional">
         <span id="sqlimagesku_csharp">
 <a href="#sqlimagesku_csharp" style="color: inherit; text-decoration: inherit;">Sql<wbr>Image<wbr>Sku</a>
@@ -376,8 +364,7 @@ The SqlVirtualMachineGroup resource accepts the following [input]({{< relref "/d
         <span class="property-indicator"></span>
         <span class="property-type">string | <a href="#sqlvmgroupimagesku">Pulumi.<wbr>Azure<wbr>Native.<wbr>Sql<wbr>Virtual<wbr>Machine.<wbr>Sql<wbr>Vm<wbr>Group<wbr>Image<wbr>Sku</a></span>
     </dt>
-    <dd>{{% md %}}SQL image sku.{{% /md %}}</dd>
-    <dt class="property-optional"
+    <dd>{{% md %}}SQL image sku.{{% /md %}}</dd><dt class="property-optional"
             title="Optional">
         <span id="sqlvirtualmachinegroupname_csharp">
 <a href="#sqlvirtualmachinegroupname_csharp" style="color: inherit; text-decoration: inherit;">Sql<wbr>Virtual<wbr>Machine<wbr>Group<wbr>Name</a>
@@ -385,8 +372,7 @@ The SqlVirtualMachineGroup resource accepts the following [input]({{< relref "/d
         <span class="property-indicator"></span>
         <span class="property-type">string</span>
     </dt>
-    <dd>{{% md %}}Name of the SQL virtual machine group.{{% /md %}}</dd>
-    <dt class="property-optional"
+    <dd>{{% md %}}Name of the SQL virtual machine group.{{% /md %}}</dd><dt class="property-optional"
             title="Optional">
         <span id="tags_csharp">
 <a href="#tags_csharp" style="color: inherit; text-decoration: inherit;">Tags</a>
@@ -394,8 +380,7 @@ The SqlVirtualMachineGroup resource accepts the following [input]({{< relref "/d
         <span class="property-indicator"></span>
         <span class="property-type">Dictionary&lt;string, string&gt;</span>
     </dt>
-    <dd>{{% md %}}Resource tags.{{% /md %}}</dd>
-    <dt class="property-optional"
+    <dd>{{% md %}}Resource tags.{{% /md %}}</dd><dt class="property-optional"
             title="Optional">
         <span id="wsfcdomainprofile_csharp">
 <a href="#wsfcdomainprofile_csharp" style="color: inherit; text-decoration: inherit;">Wsfc<wbr>Domain<wbr>Profile</a>
@@ -403,14 +388,11 @@ The SqlVirtualMachineGroup resource accepts the following [input]({{< relref "/d
         <span class="property-indicator"></span>
         <span class="property-type"><a href="#wsfcdomainprofile">Pulumi.<wbr>Azure<wbr>Native.<wbr>Sql<wbr>Virtual<wbr>Machine.<wbr>Inputs.<wbr>Wsfc<wbr>Domain<wbr>Profile<wbr>Args</a></span>
     </dt>
-    <dd>{{% md %}}Cluster Active Directory domain profile.{{% /md %}}</dd>
-</dl>
+    <dd>{{% md %}}Cluster Active Directory domain profile.{{% /md %}}</dd></dl>
 {{% /choosable %}}
 
 {{% choosable language go %}}
-<dl class="resources-properties">
-
-    <dt class="property-required"
+<dl class="resources-properties"><dt class="property-required"
             title="Required">
         <span id="resourcegroupname_go">
 <a href="#resourcegroupname_go" style="color: inherit; text-decoration: inherit;">Resource<wbr>Group<wbr>Name</a>
@@ -418,8 +400,7 @@ The SqlVirtualMachineGroup resource accepts the following [input]({{< relref "/d
         <span class="property-indicator"></span>
         <span class="property-type">string</span>
     </dt>
-    <dd>{{% md %}}Name of the resource group that contains the resource. You can obtain this value from the Azure Resource Manager API or the portal.{{% /md %}}</dd>
-    <dt class="property-optional"
+    <dd>{{% md %}}Name of the resource group that contains the resource. You can obtain this value from the Azure Resource Manager API or the portal.{{% /md %}}</dd><dt class="property-optional"
             title="Optional">
         <span id="location_go">
 <a href="#location_go" style="color: inherit; text-decoration: inherit;">Location</a>
@@ -427,8 +408,7 @@ The SqlVirtualMachineGroup resource accepts the following [input]({{< relref "/d
         <span class="property-indicator"></span>
         <span class="property-type">string</span>
     </dt>
-    <dd>{{% md %}}Resource location.{{% /md %}}</dd>
-    <dt class="property-optional"
+    <dd>{{% md %}}Resource location.{{% /md %}}</dd><dt class="property-optional"
             title="Optional">
         <span id="sqlimageoffer_go">
 <a href="#sqlimageoffer_go" style="color: inherit; text-decoration: inherit;">Sql<wbr>Image<wbr>Offer</a>
@@ -436,8 +416,7 @@ The SqlVirtualMachineGroup resource accepts the following [input]({{< relref "/d
         <span class="property-indicator"></span>
         <span class="property-type">string</span>
     </dt>
-    <dd>{{% md %}}SQL image offer. Examples may include SQL2016-WS2016, SQL2017-WS2016.{{% /md %}}</dd>
-    <dt class="property-optional"
+    <dd>{{% md %}}SQL image offer. Examples may include SQL2016-WS2016, SQL2017-WS2016.{{% /md %}}</dd><dt class="property-optional"
             title="Optional">
         <span id="sqlimagesku_go">
 <a href="#sqlimagesku_go" style="color: inherit; text-decoration: inherit;">Sql<wbr>Image<wbr>Sku</a>
@@ -445,8 +424,7 @@ The SqlVirtualMachineGroup resource accepts the following [input]({{< relref "/d
         <span class="property-indicator"></span>
         <span class="property-type">string | <a href="#sqlvmgroupimagesku">Sql<wbr>Vm<wbr>Group<wbr>Image<wbr>Sku</a></span>
     </dt>
-    <dd>{{% md %}}SQL image sku.{{% /md %}}</dd>
-    <dt class="property-optional"
+    <dd>{{% md %}}SQL image sku.{{% /md %}}</dd><dt class="property-optional"
             title="Optional">
         <span id="sqlvirtualmachinegroupname_go">
 <a href="#sqlvirtualmachinegroupname_go" style="color: inherit; text-decoration: inherit;">Sql<wbr>Virtual<wbr>Machine<wbr>Group<wbr>Name</a>
@@ -454,8 +432,7 @@ The SqlVirtualMachineGroup resource accepts the following [input]({{< relref "/d
         <span class="property-indicator"></span>
         <span class="property-type">string</span>
     </dt>
-    <dd>{{% md %}}Name of the SQL virtual machine group.{{% /md %}}</dd>
-    <dt class="property-optional"
+    <dd>{{% md %}}Name of the SQL virtual machine group.{{% /md %}}</dd><dt class="property-optional"
             title="Optional">
         <span id="tags_go">
 <a href="#tags_go" style="color: inherit; text-decoration: inherit;">Tags</a>
@@ -463,8 +440,7 @@ The SqlVirtualMachineGroup resource accepts the following [input]({{< relref "/d
         <span class="property-indicator"></span>
         <span class="property-type">map[string]string</span>
     </dt>
-    <dd>{{% md %}}Resource tags.{{% /md %}}</dd>
-    <dt class="property-optional"
+    <dd>{{% md %}}Resource tags.{{% /md %}}</dd><dt class="property-optional"
             title="Optional">
         <span id="wsfcdomainprofile_go">
 <a href="#wsfcdomainprofile_go" style="color: inherit; text-decoration: inherit;">Wsfc<wbr>Domain<wbr>Profile</a>
@@ -472,14 +448,11 @@ The SqlVirtualMachineGroup resource accepts the following [input]({{< relref "/d
         <span class="property-indicator"></span>
         <span class="property-type"><a href="#wsfcdomainprofile">Wsfc<wbr>Domain<wbr>Profile</a></span>
     </dt>
-    <dd>{{% md %}}Cluster Active Directory domain profile.{{% /md %}}</dd>
-</dl>
+    <dd>{{% md %}}Cluster Active Directory domain profile.{{% /md %}}</dd></dl>
 {{% /choosable %}}
 
 {{% choosable language nodejs %}}
-<dl class="resources-properties">
-
-    <dt class="property-required"
+<dl class="resources-properties"><dt class="property-required"
             title="Required">
         <span id="resourcegroupname_nodejs">
 <a href="#resourcegroupname_nodejs" style="color: inherit; text-decoration: inherit;">resource<wbr>Group<wbr>Name</a>
@@ -487,8 +460,7 @@ The SqlVirtualMachineGroup resource accepts the following [input]({{< relref "/d
         <span class="property-indicator"></span>
         <span class="property-type">string</span>
     </dt>
-    <dd>{{% md %}}Name of the resource group that contains the resource. You can obtain this value from the Azure Resource Manager API or the portal.{{% /md %}}</dd>
-    <dt class="property-optional"
+    <dd>{{% md %}}Name of the resource group that contains the resource. You can obtain this value from the Azure Resource Manager API or the portal.{{% /md %}}</dd><dt class="property-optional"
             title="Optional">
         <span id="location_nodejs">
 <a href="#location_nodejs" style="color: inherit; text-decoration: inherit;">location</a>
@@ -496,8 +468,7 @@ The SqlVirtualMachineGroup resource accepts the following [input]({{< relref "/d
         <span class="property-indicator"></span>
         <span class="property-type">string</span>
     </dt>
-    <dd>{{% md %}}Resource location.{{% /md %}}</dd>
-    <dt class="property-optional"
+    <dd>{{% md %}}Resource location.{{% /md %}}</dd><dt class="property-optional"
             title="Optional">
         <span id="sqlimageoffer_nodejs">
 <a href="#sqlimageoffer_nodejs" style="color: inherit; text-decoration: inherit;">sql<wbr>Image<wbr>Offer</a>
@@ -505,8 +476,7 @@ The SqlVirtualMachineGroup resource accepts the following [input]({{< relref "/d
         <span class="property-indicator"></span>
         <span class="property-type">string</span>
     </dt>
-    <dd>{{% md %}}SQL image offer. Examples may include SQL2016-WS2016, SQL2017-WS2016.{{% /md %}}</dd>
-    <dt class="property-optional"
+    <dd>{{% md %}}SQL image offer. Examples may include SQL2016-WS2016, SQL2017-WS2016.{{% /md %}}</dd><dt class="property-optional"
             title="Optional">
         <span id="sqlimagesku_nodejs">
 <a href="#sqlimagesku_nodejs" style="color: inherit; text-decoration: inherit;">sql<wbr>Image<wbr>Sku</a>
@@ -514,8 +484,7 @@ The SqlVirtualMachineGroup resource accepts the following [input]({{< relref "/d
         <span class="property-indicator"></span>
         <span class="property-type">string | <a href="#sqlvmgroupimagesku">Sql<wbr>Vm<wbr>Group<wbr>Image<wbr>Sku</a></span>
     </dt>
-    <dd>{{% md %}}SQL image sku.{{% /md %}}</dd>
-    <dt class="property-optional"
+    <dd>{{% md %}}SQL image sku.{{% /md %}}</dd><dt class="property-optional"
             title="Optional">
         <span id="sqlvirtualmachinegroupname_nodejs">
 <a href="#sqlvirtualmachinegroupname_nodejs" style="color: inherit; text-decoration: inherit;">sql<wbr>Virtual<wbr>Machine<wbr>Group<wbr>Name</a>
@@ -523,8 +492,7 @@ The SqlVirtualMachineGroup resource accepts the following [input]({{< relref "/d
         <span class="property-indicator"></span>
         <span class="property-type">string</span>
     </dt>
-    <dd>{{% md %}}Name of the SQL virtual machine group.{{% /md %}}</dd>
-    <dt class="property-optional"
+    <dd>{{% md %}}Name of the SQL virtual machine group.{{% /md %}}</dd><dt class="property-optional"
             title="Optional">
         <span id="tags_nodejs">
 <a href="#tags_nodejs" style="color: inherit; text-decoration: inherit;">tags</a>
@@ -532,8 +500,7 @@ The SqlVirtualMachineGroup resource accepts the following [input]({{< relref "/d
         <span class="property-indicator"></span>
         <span class="property-type">{[key: string]: string}</span>
     </dt>
-    <dd>{{% md %}}Resource tags.{{% /md %}}</dd>
-    <dt class="property-optional"
+    <dd>{{% md %}}Resource tags.{{% /md %}}</dd><dt class="property-optional"
             title="Optional">
         <span id="wsfcdomainprofile_nodejs">
 <a href="#wsfcdomainprofile_nodejs" style="color: inherit; text-decoration: inherit;">wsfc<wbr>Domain<wbr>Profile</a>
@@ -541,14 +508,11 @@ The SqlVirtualMachineGroup resource accepts the following [input]({{< relref "/d
         <span class="property-indicator"></span>
         <span class="property-type"><a href="#wsfcdomainprofile">Wsfc<wbr>Domain<wbr>Profile</a></span>
     </dt>
-    <dd>{{% md %}}Cluster Active Directory domain profile.{{% /md %}}</dd>
-</dl>
+    <dd>{{% md %}}Cluster Active Directory domain profile.{{% /md %}}</dd></dl>
 {{% /choosable %}}
 
 {{% choosable language python %}}
-<dl class="resources-properties">
-
-    <dt class="property-required"
+<dl class="resources-properties"><dt class="property-required"
             title="Required">
         <span id="resource_group_name_python">
 <a href="#resource_group_name_python" style="color: inherit; text-decoration: inherit;">resource_<wbr>group_<wbr>name</a>
@@ -556,8 +520,7 @@ The SqlVirtualMachineGroup resource accepts the following [input]({{< relref "/d
         <span class="property-indicator"></span>
         <span class="property-type">str</span>
     </dt>
-    <dd>{{% md %}}Name of the resource group that contains the resource. You can obtain this value from the Azure Resource Manager API or the portal.{{% /md %}}</dd>
-    <dt class="property-optional"
+    <dd>{{% md %}}Name of the resource group that contains the resource. You can obtain this value from the Azure Resource Manager API or the portal.{{% /md %}}</dd><dt class="property-optional"
             title="Optional">
         <span id="location_python">
 <a href="#location_python" style="color: inherit; text-decoration: inherit;">location</a>
@@ -565,8 +528,7 @@ The SqlVirtualMachineGroup resource accepts the following [input]({{< relref "/d
         <span class="property-indicator"></span>
         <span class="property-type">str</span>
     </dt>
-    <dd>{{% md %}}Resource location.{{% /md %}}</dd>
-    <dt class="property-optional"
+    <dd>{{% md %}}Resource location.{{% /md %}}</dd><dt class="property-optional"
             title="Optional">
         <span id="sql_image_offer_python">
 <a href="#sql_image_offer_python" style="color: inherit; text-decoration: inherit;">sql_<wbr>image_<wbr>offer</a>
@@ -574,8 +536,7 @@ The SqlVirtualMachineGroup resource accepts the following [input]({{< relref "/d
         <span class="property-indicator"></span>
         <span class="property-type">str</span>
     </dt>
-    <dd>{{% md %}}SQL image offer. Examples may include SQL2016-WS2016, SQL2017-WS2016.{{% /md %}}</dd>
-    <dt class="property-optional"
+    <dd>{{% md %}}SQL image offer. Examples may include SQL2016-WS2016, SQL2017-WS2016.{{% /md %}}</dd><dt class="property-optional"
             title="Optional">
         <span id="sql_image_sku_python">
 <a href="#sql_image_sku_python" style="color: inherit; text-decoration: inherit;">sql_<wbr>image_<wbr>sku</a>
@@ -583,8 +544,7 @@ The SqlVirtualMachineGroup resource accepts the following [input]({{< relref "/d
         <span class="property-indicator"></span>
         <span class="property-type">str | <a href="#sqlvmgroupimagesku">Sql<wbr>Vm<wbr>Group<wbr>Image<wbr>Sku</a></span>
     </dt>
-    <dd>{{% md %}}SQL image sku.{{% /md %}}</dd>
-    <dt class="property-optional"
+    <dd>{{% md %}}SQL image sku.{{% /md %}}</dd><dt class="property-optional"
             title="Optional">
         <span id="sql_virtual_machine_group_name_python">
 <a href="#sql_virtual_machine_group_name_python" style="color: inherit; text-decoration: inherit;">sql_<wbr>virtual_<wbr>machine_<wbr>group_<wbr>name</a>
@@ -592,8 +552,7 @@ The SqlVirtualMachineGroup resource accepts the following [input]({{< relref "/d
         <span class="property-indicator"></span>
         <span class="property-type">str</span>
     </dt>
-    <dd>{{% md %}}Name of the SQL virtual machine group.{{% /md %}}</dd>
-    <dt class="property-optional"
+    <dd>{{% md %}}Name of the SQL virtual machine group.{{% /md %}}</dd><dt class="property-optional"
             title="Optional">
         <span id="tags_python">
 <a href="#tags_python" style="color: inherit; text-decoration: inherit;">tags</a>
@@ -601,8 +560,7 @@ The SqlVirtualMachineGroup resource accepts the following [input]({{< relref "/d
         <span class="property-indicator"></span>
         <span class="property-type">Mapping[str, str]</span>
     </dt>
-    <dd>{{% md %}}Resource tags.{{% /md %}}</dd>
-    <dt class="property-optional"
+    <dd>{{% md %}}Resource tags.{{% /md %}}</dd><dt class="property-optional"
             title="Optional">
         <span id="wsfc_domain_profile_python">
 <a href="#wsfc_domain_profile_python" style="color: inherit; text-decoration: inherit;">wsfc_<wbr>domain_<wbr>profile</a>
@@ -610,8 +568,7 @@ The SqlVirtualMachineGroup resource accepts the following [input]({{< relref "/d
         <span class="property-indicator"></span>
         <span class="property-type"><a href="#wsfcdomainprofile">Wsfc<wbr>Domain<wbr>Profile<wbr>Args</a></span>
     </dt>
-    <dd>{{% md %}}Cluster Active Directory domain profile.{{% /md %}}</dd>
-</dl>
+    <dd>{{% md %}}Cluster Active Directory domain profile.{{% /md %}}</dd></dl>
 {{% /choosable %}}
 
 
@@ -622,9 +579,7 @@ All [input](#inputs) properties are implicitly available as output properties. A
 
 
 {{% choosable language csharp %}}
-<dl class="resources-properties">
-
-    <dt class="property-"
+<dl class="resources-properties"><dt class="property-"
             title="">
         <span id="clusterconfiguration_csharp">
 <a href="#clusterconfiguration_csharp" style="color: inherit; text-decoration: inherit;">Cluster<wbr>Configuration</a>
@@ -632,8 +587,7 @@ All [input](#inputs) properties are implicitly available as output properties. A
         <span class="property-indicator"></span>
         <span class="property-type">string</span>
     </dt>
-    <dd>{{% md %}}Cluster type.{{% /md %}}</dd>
-    <dt class="property-"
+    <dd>{{% md %}}Cluster type.{{% /md %}}</dd><dt class="property-"
             title="">
         <span id="clustermanagertype_csharp">
 <a href="#clustermanagertype_csharp" style="color: inherit; text-decoration: inherit;">Cluster<wbr>Manager<wbr>Type</a>
@@ -641,8 +595,7 @@ All [input](#inputs) properties are implicitly available as output properties. A
         <span class="property-indicator"></span>
         <span class="property-type">string</span>
     </dt>
-    <dd>{{% md %}}Type of cluster manager: Windows Server Failover Cluster (WSFC), implied by the scale type of the group and the OS type.{{% /md %}}</dd>
-    <dt class="property-"
+    <dd>{{% md %}}Type of cluster manager: Windows Server Failover Cluster (WSFC), implied by the scale type of the group and the OS type.{{% /md %}}</dd><dt class="property-"
             title="">
         <span id="id_csharp">
 <a href="#id_csharp" style="color: inherit; text-decoration: inherit;">Id</a>
@@ -650,8 +603,7 @@ All [input](#inputs) properties are implicitly available as output properties. A
         <span class="property-indicator"></span>
         <span class="property-type">string</span>
     </dt>
-    <dd>{{% md %}}The provider-assigned unique ID for this managed resource.{{% /md %}}</dd>
-    <dt class="property-"
+    <dd>{{% md %}}The provider-assigned unique ID for this managed resource.{{% /md %}}</dd><dt class="property-"
             title="">
         <span id="name_csharp">
 <a href="#name_csharp" style="color: inherit; text-decoration: inherit;">Name</a>
@@ -659,8 +611,7 @@ All [input](#inputs) properties are implicitly available as output properties. A
         <span class="property-indicator"></span>
         <span class="property-type">string</span>
     </dt>
-    <dd>{{% md %}}Resource name.{{% /md %}}</dd>
-    <dt class="property-"
+    <dd>{{% md %}}Resource name.{{% /md %}}</dd><dt class="property-"
             title="">
         <span id="provisioningstate_csharp">
 <a href="#provisioningstate_csharp" style="color: inherit; text-decoration: inherit;">Provisioning<wbr>State</a>
@@ -668,8 +619,7 @@ All [input](#inputs) properties are implicitly available as output properties. A
         <span class="property-indicator"></span>
         <span class="property-type">string</span>
     </dt>
-    <dd>{{% md %}}Provisioning state to track the async operation status.{{% /md %}}</dd>
-    <dt class="property-"
+    <dd>{{% md %}}Provisioning state to track the async operation status.{{% /md %}}</dd><dt class="property-"
             title="">
         <span id="scaletype_csharp">
 <a href="#scaletype_csharp" style="color: inherit; text-decoration: inherit;">Scale<wbr>Type</a>
@@ -677,8 +627,7 @@ All [input](#inputs) properties are implicitly available as output properties. A
         <span class="property-indicator"></span>
         <span class="property-type">string</span>
     </dt>
-    <dd>{{% md %}}Scale type.{{% /md %}}</dd>
-    <dt class="property-"
+    <dd>{{% md %}}Scale type.{{% /md %}}</dd><dt class="property-"
             title="">
         <span id="type_csharp">
 <a href="#type_csharp" style="color: inherit; text-decoration: inherit;">Type</a>
@@ -686,14 +635,11 @@ All [input](#inputs) properties are implicitly available as output properties. A
         <span class="property-indicator"></span>
         <span class="property-type">string</span>
     </dt>
-    <dd>{{% md %}}Resource type.{{% /md %}}</dd>
-</dl>
+    <dd>{{% md %}}Resource type.{{% /md %}}</dd></dl>
 {{% /choosable %}}
 
 {{% choosable language go %}}
-<dl class="resources-properties">
-
-    <dt class="property-"
+<dl class="resources-properties"><dt class="property-"
             title="">
         <span id="clusterconfiguration_go">
 <a href="#clusterconfiguration_go" style="color: inherit; text-decoration: inherit;">Cluster<wbr>Configuration</a>
@@ -701,8 +647,7 @@ All [input](#inputs) properties are implicitly available as output properties. A
         <span class="property-indicator"></span>
         <span class="property-type">string</span>
     </dt>
-    <dd>{{% md %}}Cluster type.{{% /md %}}</dd>
-    <dt class="property-"
+    <dd>{{% md %}}Cluster type.{{% /md %}}</dd><dt class="property-"
             title="">
         <span id="clustermanagertype_go">
 <a href="#clustermanagertype_go" style="color: inherit; text-decoration: inherit;">Cluster<wbr>Manager<wbr>Type</a>
@@ -710,8 +655,7 @@ All [input](#inputs) properties are implicitly available as output properties. A
         <span class="property-indicator"></span>
         <span class="property-type">string</span>
     </dt>
-    <dd>{{% md %}}Type of cluster manager: Windows Server Failover Cluster (WSFC), implied by the scale type of the group and the OS type.{{% /md %}}</dd>
-    <dt class="property-"
+    <dd>{{% md %}}Type of cluster manager: Windows Server Failover Cluster (WSFC), implied by the scale type of the group and the OS type.{{% /md %}}</dd><dt class="property-"
             title="">
         <span id="id_go">
 <a href="#id_go" style="color: inherit; text-decoration: inherit;">Id</a>
@@ -719,8 +663,7 @@ All [input](#inputs) properties are implicitly available as output properties. A
         <span class="property-indicator"></span>
         <span class="property-type">string</span>
     </dt>
-    <dd>{{% md %}}The provider-assigned unique ID for this managed resource.{{% /md %}}</dd>
-    <dt class="property-"
+    <dd>{{% md %}}The provider-assigned unique ID for this managed resource.{{% /md %}}</dd><dt class="property-"
             title="">
         <span id="name_go">
 <a href="#name_go" style="color: inherit; text-decoration: inherit;">Name</a>
@@ -728,8 +671,7 @@ All [input](#inputs) properties are implicitly available as output properties. A
         <span class="property-indicator"></span>
         <span class="property-type">string</span>
     </dt>
-    <dd>{{% md %}}Resource name.{{% /md %}}</dd>
-    <dt class="property-"
+    <dd>{{% md %}}Resource name.{{% /md %}}</dd><dt class="property-"
             title="">
         <span id="provisioningstate_go">
 <a href="#provisioningstate_go" style="color: inherit; text-decoration: inherit;">Provisioning<wbr>State</a>
@@ -737,8 +679,7 @@ All [input](#inputs) properties are implicitly available as output properties. A
         <span class="property-indicator"></span>
         <span class="property-type">string</span>
     </dt>
-    <dd>{{% md %}}Provisioning state to track the async operation status.{{% /md %}}</dd>
-    <dt class="property-"
+    <dd>{{% md %}}Provisioning state to track the async operation status.{{% /md %}}</dd><dt class="property-"
             title="">
         <span id="scaletype_go">
 <a href="#scaletype_go" style="color: inherit; text-decoration: inherit;">Scale<wbr>Type</a>
@@ -746,8 +687,7 @@ All [input](#inputs) properties are implicitly available as output properties. A
         <span class="property-indicator"></span>
         <span class="property-type">string</span>
     </dt>
-    <dd>{{% md %}}Scale type.{{% /md %}}</dd>
-    <dt class="property-"
+    <dd>{{% md %}}Scale type.{{% /md %}}</dd><dt class="property-"
             title="">
         <span id="type_go">
 <a href="#type_go" style="color: inherit; text-decoration: inherit;">Type</a>
@@ -755,14 +695,11 @@ All [input](#inputs) properties are implicitly available as output properties. A
         <span class="property-indicator"></span>
         <span class="property-type">string</span>
     </dt>
-    <dd>{{% md %}}Resource type.{{% /md %}}</dd>
-</dl>
+    <dd>{{% md %}}Resource type.{{% /md %}}</dd></dl>
 {{% /choosable %}}
 
 {{% choosable language nodejs %}}
-<dl class="resources-properties">
-
-    <dt class="property-"
+<dl class="resources-properties"><dt class="property-"
             title="">
         <span id="clusterconfiguration_nodejs">
 <a href="#clusterconfiguration_nodejs" style="color: inherit; text-decoration: inherit;">cluster<wbr>Configuration</a>
@@ -770,8 +707,7 @@ All [input](#inputs) properties are implicitly available as output properties. A
         <span class="property-indicator"></span>
         <span class="property-type">string</span>
     </dt>
-    <dd>{{% md %}}Cluster type.{{% /md %}}</dd>
-    <dt class="property-"
+    <dd>{{% md %}}Cluster type.{{% /md %}}</dd><dt class="property-"
             title="">
         <span id="clustermanagertype_nodejs">
 <a href="#clustermanagertype_nodejs" style="color: inherit; text-decoration: inherit;">cluster<wbr>Manager<wbr>Type</a>
@@ -779,8 +715,7 @@ All [input](#inputs) properties are implicitly available as output properties. A
         <span class="property-indicator"></span>
         <span class="property-type">string</span>
     </dt>
-    <dd>{{% md %}}Type of cluster manager: Windows Server Failover Cluster (WSFC), implied by the scale type of the group and the OS type.{{% /md %}}</dd>
-    <dt class="property-"
+    <dd>{{% md %}}Type of cluster manager: Windows Server Failover Cluster (WSFC), implied by the scale type of the group and the OS type.{{% /md %}}</dd><dt class="property-"
             title="">
         <span id="id_nodejs">
 <a href="#id_nodejs" style="color: inherit; text-decoration: inherit;">id</a>
@@ -788,8 +723,7 @@ All [input](#inputs) properties are implicitly available as output properties. A
         <span class="property-indicator"></span>
         <span class="property-type">string</span>
     </dt>
-    <dd>{{% md %}}The provider-assigned unique ID for this managed resource.{{% /md %}}</dd>
-    <dt class="property-"
+    <dd>{{% md %}}The provider-assigned unique ID for this managed resource.{{% /md %}}</dd><dt class="property-"
             title="">
         <span id="name_nodejs">
 <a href="#name_nodejs" style="color: inherit; text-decoration: inherit;">name</a>
@@ -797,8 +731,7 @@ All [input](#inputs) properties are implicitly available as output properties. A
         <span class="property-indicator"></span>
         <span class="property-type">string</span>
     </dt>
-    <dd>{{% md %}}Resource name.{{% /md %}}</dd>
-    <dt class="property-"
+    <dd>{{% md %}}Resource name.{{% /md %}}</dd><dt class="property-"
             title="">
         <span id="provisioningstate_nodejs">
 <a href="#provisioningstate_nodejs" style="color: inherit; text-decoration: inherit;">provisioning<wbr>State</a>
@@ -806,8 +739,7 @@ All [input](#inputs) properties are implicitly available as output properties. A
         <span class="property-indicator"></span>
         <span class="property-type">string</span>
     </dt>
-    <dd>{{% md %}}Provisioning state to track the async operation status.{{% /md %}}</dd>
-    <dt class="property-"
+    <dd>{{% md %}}Provisioning state to track the async operation status.{{% /md %}}</dd><dt class="property-"
             title="">
         <span id="scaletype_nodejs">
 <a href="#scaletype_nodejs" style="color: inherit; text-decoration: inherit;">scale<wbr>Type</a>
@@ -815,8 +747,7 @@ All [input](#inputs) properties are implicitly available as output properties. A
         <span class="property-indicator"></span>
         <span class="property-type">string</span>
     </dt>
-    <dd>{{% md %}}Scale type.{{% /md %}}</dd>
-    <dt class="property-"
+    <dd>{{% md %}}Scale type.{{% /md %}}</dd><dt class="property-"
             title="">
         <span id="type_nodejs">
 <a href="#type_nodejs" style="color: inherit; text-decoration: inherit;">type</a>
@@ -824,14 +755,11 @@ All [input](#inputs) properties are implicitly available as output properties. A
         <span class="property-indicator"></span>
         <span class="property-type">string</span>
     </dt>
-    <dd>{{% md %}}Resource type.{{% /md %}}</dd>
-</dl>
+    <dd>{{% md %}}Resource type.{{% /md %}}</dd></dl>
 {{% /choosable %}}
 
 {{% choosable language python %}}
-<dl class="resources-properties">
-
-    <dt class="property-"
+<dl class="resources-properties"><dt class="property-"
             title="">
         <span id="cluster_configuration_python">
 <a href="#cluster_configuration_python" style="color: inherit; text-decoration: inherit;">cluster_<wbr>configuration</a>
@@ -839,8 +767,7 @@ All [input](#inputs) properties are implicitly available as output properties. A
         <span class="property-indicator"></span>
         <span class="property-type">str</span>
     </dt>
-    <dd>{{% md %}}Cluster type.{{% /md %}}</dd>
-    <dt class="property-"
+    <dd>{{% md %}}Cluster type.{{% /md %}}</dd><dt class="property-"
             title="">
         <span id="cluster_manager_type_python">
 <a href="#cluster_manager_type_python" style="color: inherit; text-decoration: inherit;">cluster_<wbr>manager_<wbr>type</a>
@@ -848,8 +775,7 @@ All [input](#inputs) properties are implicitly available as output properties. A
         <span class="property-indicator"></span>
         <span class="property-type">str</span>
     </dt>
-    <dd>{{% md %}}Type of cluster manager: Windows Server Failover Cluster (WSFC), implied by the scale type of the group and the OS type.{{% /md %}}</dd>
-    <dt class="property-"
+    <dd>{{% md %}}Type of cluster manager: Windows Server Failover Cluster (WSFC), implied by the scale type of the group and the OS type.{{% /md %}}</dd><dt class="property-"
             title="">
         <span id="id_python">
 <a href="#id_python" style="color: inherit; text-decoration: inherit;">id</a>
@@ -857,8 +783,7 @@ All [input](#inputs) properties are implicitly available as output properties. A
         <span class="property-indicator"></span>
         <span class="property-type">str</span>
     </dt>
-    <dd>{{% md %}}The provider-assigned unique ID for this managed resource.{{% /md %}}</dd>
-    <dt class="property-"
+    <dd>{{% md %}}The provider-assigned unique ID for this managed resource.{{% /md %}}</dd><dt class="property-"
             title="">
         <span id="name_python">
 <a href="#name_python" style="color: inherit; text-decoration: inherit;">name</a>
@@ -866,8 +791,7 @@ All [input](#inputs) properties are implicitly available as output properties. A
         <span class="property-indicator"></span>
         <span class="property-type">str</span>
     </dt>
-    <dd>{{% md %}}Resource name.{{% /md %}}</dd>
-    <dt class="property-"
+    <dd>{{% md %}}Resource name.{{% /md %}}</dd><dt class="property-"
             title="">
         <span id="provisioning_state_python">
 <a href="#provisioning_state_python" style="color: inherit; text-decoration: inherit;">provisioning_<wbr>state</a>
@@ -875,8 +799,7 @@ All [input](#inputs) properties are implicitly available as output properties. A
         <span class="property-indicator"></span>
         <span class="property-type">str</span>
     </dt>
-    <dd>{{% md %}}Provisioning state to track the async operation status.{{% /md %}}</dd>
-    <dt class="property-"
+    <dd>{{% md %}}Provisioning state to track the async operation status.{{% /md %}}</dd><dt class="property-"
             title="">
         <span id="scale_type_python">
 <a href="#scale_type_python" style="color: inherit; text-decoration: inherit;">scale_<wbr>type</a>
@@ -884,8 +807,7 @@ All [input](#inputs) properties are implicitly available as output properties. A
         <span class="property-indicator"></span>
         <span class="property-type">str</span>
     </dt>
-    <dd>{{% md %}}Scale type.{{% /md %}}</dd>
-    <dt class="property-"
+    <dd>{{% md %}}Scale type.{{% /md %}}</dd><dt class="property-"
             title="">
         <span id="type_python">
 <a href="#type_python" style="color: inherit; text-decoration: inherit;">type</a>
@@ -893,8 +815,7 @@ All [input](#inputs) properties are implicitly available as output properties. A
         <span class="property-indicator"></span>
         <span class="property-type">str</span>
     </dt>
-    <dd>{{% md %}}Resource type.{{% /md %}}</dd>
-</dl>
+    <dd>{{% md %}}Resource type.{{% /md %}}</dd></dl>
 {{% /choosable %}}
 
 
@@ -910,47 +831,33 @@ All [input](#inputs) properties are implicitly available as output properties. A
 <h4 id="sqlvmgroupimagesku">Sql<wbr>Vm<wbr>Group<wbr>Image<wbr>Sku</h4>
 
 {{% choosable language csharp %}}
-<dl class="tabular">
-    <dt>Developer</dt>
-    <dd>Developer</dd>
-    <dt>Enterprise</dt>
-    <dd>Enterprise</dd>
-</dl>
+<dl class="tabular"><dt>Developer</dt>
+    <dd>Developer</dd><dt>Enterprise</dt>
+    <dd>Enterprise</dd></dl>
 {{% /choosable %}}
 
 {{% choosable language go %}}
-<dl class="tabular">
-    <dt>Sql<wbr>Vm<wbr>Group<wbr>Image<wbr>Sku<wbr>Developer</dt>
-    <dd>Developer</dd>
-    <dt>Sql<wbr>Vm<wbr>Group<wbr>Image<wbr>Sku<wbr>Enterprise</dt>
-    <dd>Enterprise</dd>
-</dl>
+<dl class="tabular"><dt>Sql<wbr>Vm<wbr>Group<wbr>Image<wbr>Sku<wbr>Developer</dt>
+    <dd>Developer</dd><dt>Sql<wbr>Vm<wbr>Group<wbr>Image<wbr>Sku<wbr>Enterprise</dt>
+    <dd>Enterprise</dd></dl>
 {{% /choosable %}}
 
 {{% choosable language nodejs %}}
-<dl class="tabular">
-    <dt>Developer</dt>
-    <dd>Developer</dd>
-    <dt>Enterprise</dt>
-    <dd>Enterprise</dd>
-</dl>
+<dl class="tabular"><dt>Developer</dt>
+    <dd>Developer</dd><dt>Enterprise</dt>
+    <dd>Enterprise</dd></dl>
 {{% /choosable %}}
 
 {{% choosable language python %}}
-<dl class="tabular">
-    <dt>DEVELOPER</dt>
-    <dd>Developer</dd>
-    <dt>ENTERPRISE</dt>
-    <dd>Enterprise</dd>
-</dl>
+<dl class="tabular"><dt>DEVELOPER</dt>
+    <dd>Developer</dd><dt>ENTERPRISE</dt>
+    <dd>Enterprise</dd></dl>
 {{% /choosable %}}
 
 <h4 id="wsfcdomainprofile">Wsfc<wbr>Domain<wbr>Profile</h4>
 
 {{% choosable language csharp %}}
-<dl class="resources-properties">
-
-    <dt class="property-optional"
+<dl class="resources-properties"><dt class="property-optional"
             title="Optional">
         <span id="clusterbootstrapaccount_csharp">
 <a href="#clusterbootstrapaccount_csharp" style="color: inherit; text-decoration: inherit;">Cluster<wbr>Bootstrap<wbr>Account</a>
@@ -958,8 +865,7 @@ All [input](#inputs) properties are implicitly available as output properties. A
         <span class="property-indicator"></span>
         <span class="property-type">string</span>
     </dt>
-    <dd>{{% md %}}Account name used for creating cluster (at minimum needs permissions to 'Create Computer Objects' in domain).{{% /md %}}</dd>
-    <dt class="property-optional"
+    <dd>{{% md %}}Account name used for creating cluster (at minimum needs permissions to 'Create Computer Objects' in domain).{{% /md %}}</dd><dt class="property-optional"
             title="Optional">
         <span id="clusteroperatoraccount_csharp">
 <a href="#clusteroperatoraccount_csharp" style="color: inherit; text-decoration: inherit;">Cluster<wbr>Operator<wbr>Account</a>
@@ -967,8 +873,7 @@ All [input](#inputs) properties are implicitly available as output properties. A
         <span class="property-indicator"></span>
         <span class="property-type">string</span>
     </dt>
-    <dd>{{% md %}}Account name used for operating cluster i.e. will be part of administrators group on all the participating virtual machines in the cluster.{{% /md %}}</dd>
-    <dt class="property-optional"
+    <dd>{{% md %}}Account name used for operating cluster i.e. will be part of administrators group on all the participating virtual machines in the cluster.{{% /md %}}</dd><dt class="property-optional"
             title="Optional">
         <span id="domainfqdn_csharp">
 <a href="#domainfqdn_csharp" style="color: inherit; text-decoration: inherit;">Domain<wbr>Fqdn</a>
@@ -976,8 +881,7 @@ All [input](#inputs) properties are implicitly available as output properties. A
         <span class="property-indicator"></span>
         <span class="property-type">string</span>
     </dt>
-    <dd>{{% md %}}Fully qualified name of the domain.{{% /md %}}</dd>
-    <dt class="property-optional"
+    <dd>{{% md %}}Fully qualified name of the domain.{{% /md %}}</dd><dt class="property-optional"
             title="Optional">
         <span id="filesharewitnesspath_csharp">
 <a href="#filesharewitnesspath_csharp" style="color: inherit; text-decoration: inherit;">File<wbr>Share<wbr>Witness<wbr>Path</a>
@@ -985,8 +889,7 @@ All [input](#inputs) properties are implicitly available as output properties. A
         <span class="property-indicator"></span>
         <span class="property-type">string</span>
     </dt>
-    <dd>{{% md %}}Optional path for fileshare witness.{{% /md %}}</dd>
-    <dt class="property-optional"
+    <dd>{{% md %}}Optional path for fileshare witness.{{% /md %}}</dd><dt class="property-optional"
             title="Optional">
         <span id="oupath_csharp">
 <a href="#oupath_csharp" style="color: inherit; text-decoration: inherit;">Ou<wbr>Path</a>
@@ -994,8 +897,7 @@ All [input](#inputs) properties are implicitly available as output properties. A
         <span class="property-indicator"></span>
         <span class="property-type">string</span>
     </dt>
-    <dd>{{% md %}}Organizational Unit path in which the nodes and cluster will be present.{{% /md %}}</dd>
-    <dt class="property-optional"
+    <dd>{{% md %}}Organizational Unit path in which the nodes and cluster will be present.{{% /md %}}</dd><dt class="property-optional"
             title="Optional">
         <span id="sqlserviceaccount_csharp">
 <a href="#sqlserviceaccount_csharp" style="color: inherit; text-decoration: inherit;">Sql<wbr>Service<wbr>Account</a>
@@ -1003,8 +905,7 @@ All [input](#inputs) properties are implicitly available as output properties. A
         <span class="property-indicator"></span>
         <span class="property-type">string</span>
     </dt>
-    <dd>{{% md %}}Account name under which SQL service will run on all participating SQL virtual machines in the cluster.{{% /md %}}</dd>
-    <dt class="property-optional"
+    <dd>{{% md %}}Account name under which SQL service will run on all participating SQL virtual machines in the cluster.{{% /md %}}</dd><dt class="property-optional"
             title="Optional">
         <span id="storageaccountprimarykey_csharp">
 <a href="#storageaccountprimarykey_csharp" style="color: inherit; text-decoration: inherit;">Storage<wbr>Account<wbr>Primary<wbr>Key</a>
@@ -1012,8 +913,7 @@ All [input](#inputs) properties are implicitly available as output properties. A
         <span class="property-indicator"></span>
         <span class="property-type">string</span>
     </dt>
-    <dd>{{% md %}}Primary key of the witness storage account.{{% /md %}}</dd>
-    <dt class="property-optional"
+    <dd>{{% md %}}Primary key of the witness storage account.{{% /md %}}</dd><dt class="property-optional"
             title="Optional">
         <span id="storageaccounturl_csharp">
 <a href="#storageaccounturl_csharp" style="color: inherit; text-decoration: inherit;">Storage<wbr>Account<wbr>Url</a>
@@ -1021,14 +921,11 @@ All [input](#inputs) properties are implicitly available as output properties. A
         <span class="property-indicator"></span>
         <span class="property-type">string</span>
     </dt>
-    <dd>{{% md %}}Fully qualified ARM resource id of the witness storage account.{{% /md %}}</dd>
-</dl>
+    <dd>{{% md %}}Fully qualified ARM resource id of the witness storage account.{{% /md %}}</dd></dl>
 {{% /choosable %}}
 
 {{% choosable language go %}}
-<dl class="resources-properties">
-
-    <dt class="property-optional"
+<dl class="resources-properties"><dt class="property-optional"
             title="Optional">
         <span id="clusterbootstrapaccount_go">
 <a href="#clusterbootstrapaccount_go" style="color: inherit; text-decoration: inherit;">Cluster<wbr>Bootstrap<wbr>Account</a>
@@ -1036,8 +933,7 @@ All [input](#inputs) properties are implicitly available as output properties. A
         <span class="property-indicator"></span>
         <span class="property-type">string</span>
     </dt>
-    <dd>{{% md %}}Account name used for creating cluster (at minimum needs permissions to 'Create Computer Objects' in domain).{{% /md %}}</dd>
-    <dt class="property-optional"
+    <dd>{{% md %}}Account name used for creating cluster (at minimum needs permissions to 'Create Computer Objects' in domain).{{% /md %}}</dd><dt class="property-optional"
             title="Optional">
         <span id="clusteroperatoraccount_go">
 <a href="#clusteroperatoraccount_go" style="color: inherit; text-decoration: inherit;">Cluster<wbr>Operator<wbr>Account</a>
@@ -1045,8 +941,7 @@ All [input](#inputs) properties are implicitly available as output properties. A
         <span class="property-indicator"></span>
         <span class="property-type">string</span>
     </dt>
-    <dd>{{% md %}}Account name used for operating cluster i.e. will be part of administrators group on all the participating virtual machines in the cluster.{{% /md %}}</dd>
-    <dt class="property-optional"
+    <dd>{{% md %}}Account name used for operating cluster i.e. will be part of administrators group on all the participating virtual machines in the cluster.{{% /md %}}</dd><dt class="property-optional"
             title="Optional">
         <span id="domainfqdn_go">
 <a href="#domainfqdn_go" style="color: inherit; text-decoration: inherit;">Domain<wbr>Fqdn</a>
@@ -1054,8 +949,7 @@ All [input](#inputs) properties are implicitly available as output properties. A
         <span class="property-indicator"></span>
         <span class="property-type">string</span>
     </dt>
-    <dd>{{% md %}}Fully qualified name of the domain.{{% /md %}}</dd>
-    <dt class="property-optional"
+    <dd>{{% md %}}Fully qualified name of the domain.{{% /md %}}</dd><dt class="property-optional"
             title="Optional">
         <span id="filesharewitnesspath_go">
 <a href="#filesharewitnesspath_go" style="color: inherit; text-decoration: inherit;">File<wbr>Share<wbr>Witness<wbr>Path</a>
@@ -1063,8 +957,7 @@ All [input](#inputs) properties are implicitly available as output properties. A
         <span class="property-indicator"></span>
         <span class="property-type">string</span>
     </dt>
-    <dd>{{% md %}}Optional path for fileshare witness.{{% /md %}}</dd>
-    <dt class="property-optional"
+    <dd>{{% md %}}Optional path for fileshare witness.{{% /md %}}</dd><dt class="property-optional"
             title="Optional">
         <span id="oupath_go">
 <a href="#oupath_go" style="color: inherit; text-decoration: inherit;">Ou<wbr>Path</a>
@@ -1072,8 +965,7 @@ All [input](#inputs) properties are implicitly available as output properties. A
         <span class="property-indicator"></span>
         <span class="property-type">string</span>
     </dt>
-    <dd>{{% md %}}Organizational Unit path in which the nodes and cluster will be present.{{% /md %}}</dd>
-    <dt class="property-optional"
+    <dd>{{% md %}}Organizational Unit path in which the nodes and cluster will be present.{{% /md %}}</dd><dt class="property-optional"
             title="Optional">
         <span id="sqlserviceaccount_go">
 <a href="#sqlserviceaccount_go" style="color: inherit; text-decoration: inherit;">Sql<wbr>Service<wbr>Account</a>
@@ -1081,8 +973,7 @@ All [input](#inputs) properties are implicitly available as output properties. A
         <span class="property-indicator"></span>
         <span class="property-type">string</span>
     </dt>
-    <dd>{{% md %}}Account name under which SQL service will run on all participating SQL virtual machines in the cluster.{{% /md %}}</dd>
-    <dt class="property-optional"
+    <dd>{{% md %}}Account name under which SQL service will run on all participating SQL virtual machines in the cluster.{{% /md %}}</dd><dt class="property-optional"
             title="Optional">
         <span id="storageaccountprimarykey_go">
 <a href="#storageaccountprimarykey_go" style="color: inherit; text-decoration: inherit;">Storage<wbr>Account<wbr>Primary<wbr>Key</a>
@@ -1090,8 +981,7 @@ All [input](#inputs) properties are implicitly available as output properties. A
         <span class="property-indicator"></span>
         <span class="property-type">string</span>
     </dt>
-    <dd>{{% md %}}Primary key of the witness storage account.{{% /md %}}</dd>
-    <dt class="property-optional"
+    <dd>{{% md %}}Primary key of the witness storage account.{{% /md %}}</dd><dt class="property-optional"
             title="Optional">
         <span id="storageaccounturl_go">
 <a href="#storageaccounturl_go" style="color: inherit; text-decoration: inherit;">Storage<wbr>Account<wbr>Url</a>
@@ -1099,14 +989,11 @@ All [input](#inputs) properties are implicitly available as output properties. A
         <span class="property-indicator"></span>
         <span class="property-type">string</span>
     </dt>
-    <dd>{{% md %}}Fully qualified ARM resource id of the witness storage account.{{% /md %}}</dd>
-</dl>
+    <dd>{{% md %}}Fully qualified ARM resource id of the witness storage account.{{% /md %}}</dd></dl>
 {{% /choosable %}}
 
 {{% choosable language nodejs %}}
-<dl class="resources-properties">
-
-    <dt class="property-optional"
+<dl class="resources-properties"><dt class="property-optional"
             title="Optional">
         <span id="clusterbootstrapaccount_nodejs">
 <a href="#clusterbootstrapaccount_nodejs" style="color: inherit; text-decoration: inherit;">cluster<wbr>Bootstrap<wbr>Account</a>
@@ -1114,8 +1001,7 @@ All [input](#inputs) properties are implicitly available as output properties. A
         <span class="property-indicator"></span>
         <span class="property-type">string</span>
     </dt>
-    <dd>{{% md %}}Account name used for creating cluster (at minimum needs permissions to 'Create Computer Objects' in domain).{{% /md %}}</dd>
-    <dt class="property-optional"
+    <dd>{{% md %}}Account name used for creating cluster (at minimum needs permissions to 'Create Computer Objects' in domain).{{% /md %}}</dd><dt class="property-optional"
             title="Optional">
         <span id="clusteroperatoraccount_nodejs">
 <a href="#clusteroperatoraccount_nodejs" style="color: inherit; text-decoration: inherit;">cluster<wbr>Operator<wbr>Account</a>
@@ -1123,8 +1009,7 @@ All [input](#inputs) properties are implicitly available as output properties. A
         <span class="property-indicator"></span>
         <span class="property-type">string</span>
     </dt>
-    <dd>{{% md %}}Account name used for operating cluster i.e. will be part of administrators group on all the participating virtual machines in the cluster.{{% /md %}}</dd>
-    <dt class="property-optional"
+    <dd>{{% md %}}Account name used for operating cluster i.e. will be part of administrators group on all the participating virtual machines in the cluster.{{% /md %}}</dd><dt class="property-optional"
             title="Optional">
         <span id="domainfqdn_nodejs">
 <a href="#domainfqdn_nodejs" style="color: inherit; text-decoration: inherit;">domain<wbr>Fqdn</a>
@@ -1132,8 +1017,7 @@ All [input](#inputs) properties are implicitly available as output properties. A
         <span class="property-indicator"></span>
         <span class="property-type">string</span>
     </dt>
-    <dd>{{% md %}}Fully qualified name of the domain.{{% /md %}}</dd>
-    <dt class="property-optional"
+    <dd>{{% md %}}Fully qualified name of the domain.{{% /md %}}</dd><dt class="property-optional"
             title="Optional">
         <span id="filesharewitnesspath_nodejs">
 <a href="#filesharewitnesspath_nodejs" style="color: inherit; text-decoration: inherit;">file<wbr>Share<wbr>Witness<wbr>Path</a>
@@ -1141,8 +1025,7 @@ All [input](#inputs) properties are implicitly available as output properties. A
         <span class="property-indicator"></span>
         <span class="property-type">string</span>
     </dt>
-    <dd>{{% md %}}Optional path for fileshare witness.{{% /md %}}</dd>
-    <dt class="property-optional"
+    <dd>{{% md %}}Optional path for fileshare witness.{{% /md %}}</dd><dt class="property-optional"
             title="Optional">
         <span id="oupath_nodejs">
 <a href="#oupath_nodejs" style="color: inherit; text-decoration: inherit;">ou<wbr>Path</a>
@@ -1150,8 +1033,7 @@ All [input](#inputs) properties are implicitly available as output properties. A
         <span class="property-indicator"></span>
         <span class="property-type">string</span>
     </dt>
-    <dd>{{% md %}}Organizational Unit path in which the nodes and cluster will be present.{{% /md %}}</dd>
-    <dt class="property-optional"
+    <dd>{{% md %}}Organizational Unit path in which the nodes and cluster will be present.{{% /md %}}</dd><dt class="property-optional"
             title="Optional">
         <span id="sqlserviceaccount_nodejs">
 <a href="#sqlserviceaccount_nodejs" style="color: inherit; text-decoration: inherit;">sql<wbr>Service<wbr>Account</a>
@@ -1159,8 +1041,7 @@ All [input](#inputs) properties are implicitly available as output properties. A
         <span class="property-indicator"></span>
         <span class="property-type">string</span>
     </dt>
-    <dd>{{% md %}}Account name under which SQL service will run on all participating SQL virtual machines in the cluster.{{% /md %}}</dd>
-    <dt class="property-optional"
+    <dd>{{% md %}}Account name under which SQL service will run on all participating SQL virtual machines in the cluster.{{% /md %}}</dd><dt class="property-optional"
             title="Optional">
         <span id="storageaccountprimarykey_nodejs">
 <a href="#storageaccountprimarykey_nodejs" style="color: inherit; text-decoration: inherit;">storage<wbr>Account<wbr>Primary<wbr>Key</a>
@@ -1168,8 +1049,7 @@ All [input](#inputs) properties are implicitly available as output properties. A
         <span class="property-indicator"></span>
         <span class="property-type">string</span>
     </dt>
-    <dd>{{% md %}}Primary key of the witness storage account.{{% /md %}}</dd>
-    <dt class="property-optional"
+    <dd>{{% md %}}Primary key of the witness storage account.{{% /md %}}</dd><dt class="property-optional"
             title="Optional">
         <span id="storageaccounturl_nodejs">
 <a href="#storageaccounturl_nodejs" style="color: inherit; text-decoration: inherit;">storage<wbr>Account<wbr>Url</a>
@@ -1177,14 +1057,11 @@ All [input](#inputs) properties are implicitly available as output properties. A
         <span class="property-indicator"></span>
         <span class="property-type">string</span>
     </dt>
-    <dd>{{% md %}}Fully qualified ARM resource id of the witness storage account.{{% /md %}}</dd>
-</dl>
+    <dd>{{% md %}}Fully qualified ARM resource id of the witness storage account.{{% /md %}}</dd></dl>
 {{% /choosable %}}
 
 {{% choosable language python %}}
-<dl class="resources-properties">
-
-    <dt class="property-optional"
+<dl class="resources-properties"><dt class="property-optional"
             title="Optional">
         <span id="cluster_bootstrap_account_python">
 <a href="#cluster_bootstrap_account_python" style="color: inherit; text-decoration: inherit;">cluster_<wbr>bootstrap_<wbr>account</a>
@@ -1192,8 +1069,7 @@ All [input](#inputs) properties are implicitly available as output properties. A
         <span class="property-indicator"></span>
         <span class="property-type">str</span>
     </dt>
-    <dd>{{% md %}}Account name used for creating cluster (at minimum needs permissions to 'Create Computer Objects' in domain).{{% /md %}}</dd>
-    <dt class="property-optional"
+    <dd>{{% md %}}Account name used for creating cluster (at minimum needs permissions to 'Create Computer Objects' in domain).{{% /md %}}</dd><dt class="property-optional"
             title="Optional">
         <span id="cluster_operator_account_python">
 <a href="#cluster_operator_account_python" style="color: inherit; text-decoration: inherit;">cluster_<wbr>operator_<wbr>account</a>
@@ -1201,8 +1077,7 @@ All [input](#inputs) properties are implicitly available as output properties. A
         <span class="property-indicator"></span>
         <span class="property-type">str</span>
     </dt>
-    <dd>{{% md %}}Account name used for operating cluster i.e. will be part of administrators group on all the participating virtual machines in the cluster.{{% /md %}}</dd>
-    <dt class="property-optional"
+    <dd>{{% md %}}Account name used for operating cluster i.e. will be part of administrators group on all the participating virtual machines in the cluster.{{% /md %}}</dd><dt class="property-optional"
             title="Optional">
         <span id="domain_fqdn_python">
 <a href="#domain_fqdn_python" style="color: inherit; text-decoration: inherit;">domain_<wbr>fqdn</a>
@@ -1210,8 +1085,7 @@ All [input](#inputs) properties are implicitly available as output properties. A
         <span class="property-indicator"></span>
         <span class="property-type">str</span>
     </dt>
-    <dd>{{% md %}}Fully qualified name of the domain.{{% /md %}}</dd>
-    <dt class="property-optional"
+    <dd>{{% md %}}Fully qualified name of the domain.{{% /md %}}</dd><dt class="property-optional"
             title="Optional">
         <span id="file_share_witness_path_python">
 <a href="#file_share_witness_path_python" style="color: inherit; text-decoration: inherit;">file_<wbr>share_<wbr>witness_<wbr>path</a>
@@ -1219,8 +1093,7 @@ All [input](#inputs) properties are implicitly available as output properties. A
         <span class="property-indicator"></span>
         <span class="property-type">str</span>
     </dt>
-    <dd>{{% md %}}Optional path for fileshare witness.{{% /md %}}</dd>
-    <dt class="property-optional"
+    <dd>{{% md %}}Optional path for fileshare witness.{{% /md %}}</dd><dt class="property-optional"
             title="Optional">
         <span id="ou_path_python">
 <a href="#ou_path_python" style="color: inherit; text-decoration: inherit;">ou_<wbr>path</a>
@@ -1228,8 +1101,7 @@ All [input](#inputs) properties are implicitly available as output properties. A
         <span class="property-indicator"></span>
         <span class="property-type">str</span>
     </dt>
-    <dd>{{% md %}}Organizational Unit path in which the nodes and cluster will be present.{{% /md %}}</dd>
-    <dt class="property-optional"
+    <dd>{{% md %}}Organizational Unit path in which the nodes and cluster will be present.{{% /md %}}</dd><dt class="property-optional"
             title="Optional">
         <span id="sql_service_account_python">
 <a href="#sql_service_account_python" style="color: inherit; text-decoration: inherit;">sql_<wbr>service_<wbr>account</a>
@@ -1237,8 +1109,7 @@ All [input](#inputs) properties are implicitly available as output properties. A
         <span class="property-indicator"></span>
         <span class="property-type">str</span>
     </dt>
-    <dd>{{% md %}}Account name under which SQL service will run on all participating SQL virtual machines in the cluster.{{% /md %}}</dd>
-    <dt class="property-optional"
+    <dd>{{% md %}}Account name under which SQL service will run on all participating SQL virtual machines in the cluster.{{% /md %}}</dd><dt class="property-optional"
             title="Optional">
         <span id="storage_account_primary_key_python">
 <a href="#storage_account_primary_key_python" style="color: inherit; text-decoration: inherit;">storage_<wbr>account_<wbr>primary_<wbr>key</a>
@@ -1246,8 +1117,7 @@ All [input](#inputs) properties are implicitly available as output properties. A
         <span class="property-indicator"></span>
         <span class="property-type">str</span>
     </dt>
-    <dd>{{% md %}}Primary key of the witness storage account.{{% /md %}}</dd>
-    <dt class="property-optional"
+    <dd>{{% md %}}Primary key of the witness storage account.{{% /md %}}</dd><dt class="property-optional"
             title="Optional">
         <span id="storage_account_url_python">
 <a href="#storage_account_url_python" style="color: inherit; text-decoration: inherit;">storage_<wbr>account_<wbr>url</a>
@@ -1255,16 +1125,13 @@ All [input](#inputs) properties are implicitly available as output properties. A
         <span class="property-indicator"></span>
         <span class="property-type">str</span>
     </dt>
-    <dd>{{% md %}}Fully qualified ARM resource id of the witness storage account.{{% /md %}}</dd>
-</dl>
+    <dd>{{% md %}}Fully qualified ARM resource id of the witness storage account.{{% /md %}}</dd></dl>
 {{% /choosable %}}
 
 <h4 id="wsfcdomainprofileresponse">Wsfc<wbr>Domain<wbr>Profile<wbr>Response</h4>
 
 {{% choosable language csharp %}}
-<dl class="resources-properties">
-
-    <dt class="property-optional"
+<dl class="resources-properties"><dt class="property-optional"
             title="Optional">
         <span id="clusterbootstrapaccount_csharp">
 <a href="#clusterbootstrapaccount_csharp" style="color: inherit; text-decoration: inherit;">Cluster<wbr>Bootstrap<wbr>Account</a>
@@ -1272,8 +1139,7 @@ All [input](#inputs) properties are implicitly available as output properties. A
         <span class="property-indicator"></span>
         <span class="property-type">string</span>
     </dt>
-    <dd>{{% md %}}Account name used for creating cluster (at minimum needs permissions to 'Create Computer Objects' in domain).{{% /md %}}</dd>
-    <dt class="property-optional"
+    <dd>{{% md %}}Account name used for creating cluster (at minimum needs permissions to 'Create Computer Objects' in domain).{{% /md %}}</dd><dt class="property-optional"
             title="Optional">
         <span id="clusteroperatoraccount_csharp">
 <a href="#clusteroperatoraccount_csharp" style="color: inherit; text-decoration: inherit;">Cluster<wbr>Operator<wbr>Account</a>
@@ -1281,8 +1147,7 @@ All [input](#inputs) properties are implicitly available as output properties. A
         <span class="property-indicator"></span>
         <span class="property-type">string</span>
     </dt>
-    <dd>{{% md %}}Account name used for operating cluster i.e. will be part of administrators group on all the participating virtual machines in the cluster.{{% /md %}}</dd>
-    <dt class="property-optional"
+    <dd>{{% md %}}Account name used for operating cluster i.e. will be part of administrators group on all the participating virtual machines in the cluster.{{% /md %}}</dd><dt class="property-optional"
             title="Optional">
         <span id="domainfqdn_csharp">
 <a href="#domainfqdn_csharp" style="color: inherit; text-decoration: inherit;">Domain<wbr>Fqdn</a>
@@ -1290,8 +1155,7 @@ All [input](#inputs) properties are implicitly available as output properties. A
         <span class="property-indicator"></span>
         <span class="property-type">string</span>
     </dt>
-    <dd>{{% md %}}Fully qualified name of the domain.{{% /md %}}</dd>
-    <dt class="property-optional"
+    <dd>{{% md %}}Fully qualified name of the domain.{{% /md %}}</dd><dt class="property-optional"
             title="Optional">
         <span id="filesharewitnesspath_csharp">
 <a href="#filesharewitnesspath_csharp" style="color: inherit; text-decoration: inherit;">File<wbr>Share<wbr>Witness<wbr>Path</a>
@@ -1299,8 +1163,7 @@ All [input](#inputs) properties are implicitly available as output properties. A
         <span class="property-indicator"></span>
         <span class="property-type">string</span>
     </dt>
-    <dd>{{% md %}}Optional path for fileshare witness.{{% /md %}}</dd>
-    <dt class="property-optional"
+    <dd>{{% md %}}Optional path for fileshare witness.{{% /md %}}</dd><dt class="property-optional"
             title="Optional">
         <span id="oupath_csharp">
 <a href="#oupath_csharp" style="color: inherit; text-decoration: inherit;">Ou<wbr>Path</a>
@@ -1308,8 +1171,7 @@ All [input](#inputs) properties are implicitly available as output properties. A
         <span class="property-indicator"></span>
         <span class="property-type">string</span>
     </dt>
-    <dd>{{% md %}}Organizational Unit path in which the nodes and cluster will be present.{{% /md %}}</dd>
-    <dt class="property-optional"
+    <dd>{{% md %}}Organizational Unit path in which the nodes and cluster will be present.{{% /md %}}</dd><dt class="property-optional"
             title="Optional">
         <span id="sqlserviceaccount_csharp">
 <a href="#sqlserviceaccount_csharp" style="color: inherit; text-decoration: inherit;">Sql<wbr>Service<wbr>Account</a>
@@ -1317,8 +1179,7 @@ All [input](#inputs) properties are implicitly available as output properties. A
         <span class="property-indicator"></span>
         <span class="property-type">string</span>
     </dt>
-    <dd>{{% md %}}Account name under which SQL service will run on all participating SQL virtual machines in the cluster.{{% /md %}}</dd>
-    <dt class="property-optional"
+    <dd>{{% md %}}Account name under which SQL service will run on all participating SQL virtual machines in the cluster.{{% /md %}}</dd><dt class="property-optional"
             title="Optional">
         <span id="storageaccountprimarykey_csharp">
 <a href="#storageaccountprimarykey_csharp" style="color: inherit; text-decoration: inherit;">Storage<wbr>Account<wbr>Primary<wbr>Key</a>
@@ -1326,8 +1187,7 @@ All [input](#inputs) properties are implicitly available as output properties. A
         <span class="property-indicator"></span>
         <span class="property-type">string</span>
     </dt>
-    <dd>{{% md %}}Primary key of the witness storage account.{{% /md %}}</dd>
-    <dt class="property-optional"
+    <dd>{{% md %}}Primary key of the witness storage account.{{% /md %}}</dd><dt class="property-optional"
             title="Optional">
         <span id="storageaccounturl_csharp">
 <a href="#storageaccounturl_csharp" style="color: inherit; text-decoration: inherit;">Storage<wbr>Account<wbr>Url</a>
@@ -1335,14 +1195,11 @@ All [input](#inputs) properties are implicitly available as output properties. A
         <span class="property-indicator"></span>
         <span class="property-type">string</span>
     </dt>
-    <dd>{{% md %}}Fully qualified ARM resource id of the witness storage account.{{% /md %}}</dd>
-</dl>
+    <dd>{{% md %}}Fully qualified ARM resource id of the witness storage account.{{% /md %}}</dd></dl>
 {{% /choosable %}}
 
 {{% choosable language go %}}
-<dl class="resources-properties">
-
-    <dt class="property-optional"
+<dl class="resources-properties"><dt class="property-optional"
             title="Optional">
         <span id="clusterbootstrapaccount_go">
 <a href="#clusterbootstrapaccount_go" style="color: inherit; text-decoration: inherit;">Cluster<wbr>Bootstrap<wbr>Account</a>
@@ -1350,8 +1207,7 @@ All [input](#inputs) properties are implicitly available as output properties. A
         <span class="property-indicator"></span>
         <span class="property-type">string</span>
     </dt>
-    <dd>{{% md %}}Account name used for creating cluster (at minimum needs permissions to 'Create Computer Objects' in domain).{{% /md %}}</dd>
-    <dt class="property-optional"
+    <dd>{{% md %}}Account name used for creating cluster (at minimum needs permissions to 'Create Computer Objects' in domain).{{% /md %}}</dd><dt class="property-optional"
             title="Optional">
         <span id="clusteroperatoraccount_go">
 <a href="#clusteroperatoraccount_go" style="color: inherit; text-decoration: inherit;">Cluster<wbr>Operator<wbr>Account</a>
@@ -1359,8 +1215,7 @@ All [input](#inputs) properties are implicitly available as output properties. A
         <span class="property-indicator"></span>
         <span class="property-type">string</span>
     </dt>
-    <dd>{{% md %}}Account name used for operating cluster i.e. will be part of administrators group on all the participating virtual machines in the cluster.{{% /md %}}</dd>
-    <dt class="property-optional"
+    <dd>{{% md %}}Account name used for operating cluster i.e. will be part of administrators group on all the participating virtual machines in the cluster.{{% /md %}}</dd><dt class="property-optional"
             title="Optional">
         <span id="domainfqdn_go">
 <a href="#domainfqdn_go" style="color: inherit; text-decoration: inherit;">Domain<wbr>Fqdn</a>
@@ -1368,8 +1223,7 @@ All [input](#inputs) properties are implicitly available as output properties. A
         <span class="property-indicator"></span>
         <span class="property-type">string</span>
     </dt>
-    <dd>{{% md %}}Fully qualified name of the domain.{{% /md %}}</dd>
-    <dt class="property-optional"
+    <dd>{{% md %}}Fully qualified name of the domain.{{% /md %}}</dd><dt class="property-optional"
             title="Optional">
         <span id="filesharewitnesspath_go">
 <a href="#filesharewitnesspath_go" style="color: inherit; text-decoration: inherit;">File<wbr>Share<wbr>Witness<wbr>Path</a>
@@ -1377,8 +1231,7 @@ All [input](#inputs) properties are implicitly available as output properties. A
         <span class="property-indicator"></span>
         <span class="property-type">string</span>
     </dt>
-    <dd>{{% md %}}Optional path for fileshare witness.{{% /md %}}</dd>
-    <dt class="property-optional"
+    <dd>{{% md %}}Optional path for fileshare witness.{{% /md %}}</dd><dt class="property-optional"
             title="Optional">
         <span id="oupath_go">
 <a href="#oupath_go" style="color: inherit; text-decoration: inherit;">Ou<wbr>Path</a>
@@ -1386,8 +1239,7 @@ All [input](#inputs) properties are implicitly available as output properties. A
         <span class="property-indicator"></span>
         <span class="property-type">string</span>
     </dt>
-    <dd>{{% md %}}Organizational Unit path in which the nodes and cluster will be present.{{% /md %}}</dd>
-    <dt class="property-optional"
+    <dd>{{% md %}}Organizational Unit path in which the nodes and cluster will be present.{{% /md %}}</dd><dt class="property-optional"
             title="Optional">
         <span id="sqlserviceaccount_go">
 <a href="#sqlserviceaccount_go" style="color: inherit; text-decoration: inherit;">Sql<wbr>Service<wbr>Account</a>
@@ -1395,8 +1247,7 @@ All [input](#inputs) properties are implicitly available as output properties. A
         <span class="property-indicator"></span>
         <span class="property-type">string</span>
     </dt>
-    <dd>{{% md %}}Account name under which SQL service will run on all participating SQL virtual machines in the cluster.{{% /md %}}</dd>
-    <dt class="property-optional"
+    <dd>{{% md %}}Account name under which SQL service will run on all participating SQL virtual machines in the cluster.{{% /md %}}</dd><dt class="property-optional"
             title="Optional">
         <span id="storageaccountprimarykey_go">
 <a href="#storageaccountprimarykey_go" style="color: inherit; text-decoration: inherit;">Storage<wbr>Account<wbr>Primary<wbr>Key</a>
@@ -1404,8 +1255,7 @@ All [input](#inputs) properties are implicitly available as output properties. A
         <span class="property-indicator"></span>
         <span class="property-type">string</span>
     </dt>
-    <dd>{{% md %}}Primary key of the witness storage account.{{% /md %}}</dd>
-    <dt class="property-optional"
+    <dd>{{% md %}}Primary key of the witness storage account.{{% /md %}}</dd><dt class="property-optional"
             title="Optional">
         <span id="storageaccounturl_go">
 <a href="#storageaccounturl_go" style="color: inherit; text-decoration: inherit;">Storage<wbr>Account<wbr>Url</a>
@@ -1413,14 +1263,11 @@ All [input](#inputs) properties are implicitly available as output properties. A
         <span class="property-indicator"></span>
         <span class="property-type">string</span>
     </dt>
-    <dd>{{% md %}}Fully qualified ARM resource id of the witness storage account.{{% /md %}}</dd>
-</dl>
+    <dd>{{% md %}}Fully qualified ARM resource id of the witness storage account.{{% /md %}}</dd></dl>
 {{% /choosable %}}
 
 {{% choosable language nodejs %}}
-<dl class="resources-properties">
-
-    <dt class="property-optional"
+<dl class="resources-properties"><dt class="property-optional"
             title="Optional">
         <span id="clusterbootstrapaccount_nodejs">
 <a href="#clusterbootstrapaccount_nodejs" style="color: inherit; text-decoration: inherit;">cluster<wbr>Bootstrap<wbr>Account</a>
@@ -1428,8 +1275,7 @@ All [input](#inputs) properties are implicitly available as output properties. A
         <span class="property-indicator"></span>
         <span class="property-type">string</span>
     </dt>
-    <dd>{{% md %}}Account name used for creating cluster (at minimum needs permissions to 'Create Computer Objects' in domain).{{% /md %}}</dd>
-    <dt class="property-optional"
+    <dd>{{% md %}}Account name used for creating cluster (at minimum needs permissions to 'Create Computer Objects' in domain).{{% /md %}}</dd><dt class="property-optional"
             title="Optional">
         <span id="clusteroperatoraccount_nodejs">
 <a href="#clusteroperatoraccount_nodejs" style="color: inherit; text-decoration: inherit;">cluster<wbr>Operator<wbr>Account</a>
@@ -1437,8 +1283,7 @@ All [input](#inputs) properties are implicitly available as output properties. A
         <span class="property-indicator"></span>
         <span class="property-type">string</span>
     </dt>
-    <dd>{{% md %}}Account name used for operating cluster i.e. will be part of administrators group on all the participating virtual machines in the cluster.{{% /md %}}</dd>
-    <dt class="property-optional"
+    <dd>{{% md %}}Account name used for operating cluster i.e. will be part of administrators group on all the participating virtual machines in the cluster.{{% /md %}}</dd><dt class="property-optional"
             title="Optional">
         <span id="domainfqdn_nodejs">
 <a href="#domainfqdn_nodejs" style="color: inherit; text-decoration: inherit;">domain<wbr>Fqdn</a>
@@ -1446,8 +1291,7 @@ All [input](#inputs) properties are implicitly available as output properties. A
         <span class="property-indicator"></span>
         <span class="property-type">string</span>
     </dt>
-    <dd>{{% md %}}Fully qualified name of the domain.{{% /md %}}</dd>
-    <dt class="property-optional"
+    <dd>{{% md %}}Fully qualified name of the domain.{{% /md %}}</dd><dt class="property-optional"
             title="Optional">
         <span id="filesharewitnesspath_nodejs">
 <a href="#filesharewitnesspath_nodejs" style="color: inherit; text-decoration: inherit;">file<wbr>Share<wbr>Witness<wbr>Path</a>
@@ -1455,8 +1299,7 @@ All [input](#inputs) properties are implicitly available as output properties. A
         <span class="property-indicator"></span>
         <span class="property-type">string</span>
     </dt>
-    <dd>{{% md %}}Optional path for fileshare witness.{{% /md %}}</dd>
-    <dt class="property-optional"
+    <dd>{{% md %}}Optional path for fileshare witness.{{% /md %}}</dd><dt class="property-optional"
             title="Optional">
         <span id="oupath_nodejs">
 <a href="#oupath_nodejs" style="color: inherit; text-decoration: inherit;">ou<wbr>Path</a>
@@ -1464,8 +1307,7 @@ All [input](#inputs) properties are implicitly available as output properties. A
         <span class="property-indicator"></span>
         <span class="property-type">string</span>
     </dt>
-    <dd>{{% md %}}Organizational Unit path in which the nodes and cluster will be present.{{% /md %}}</dd>
-    <dt class="property-optional"
+    <dd>{{% md %}}Organizational Unit path in which the nodes and cluster will be present.{{% /md %}}</dd><dt class="property-optional"
             title="Optional">
         <span id="sqlserviceaccount_nodejs">
 <a href="#sqlserviceaccount_nodejs" style="color: inherit; text-decoration: inherit;">sql<wbr>Service<wbr>Account</a>
@@ -1473,8 +1315,7 @@ All [input](#inputs) properties are implicitly available as output properties. A
         <span class="property-indicator"></span>
         <span class="property-type">string</span>
     </dt>
-    <dd>{{% md %}}Account name under which SQL service will run on all participating SQL virtual machines in the cluster.{{% /md %}}</dd>
-    <dt class="property-optional"
+    <dd>{{% md %}}Account name under which SQL service will run on all participating SQL virtual machines in the cluster.{{% /md %}}</dd><dt class="property-optional"
             title="Optional">
         <span id="storageaccountprimarykey_nodejs">
 <a href="#storageaccountprimarykey_nodejs" style="color: inherit; text-decoration: inherit;">storage<wbr>Account<wbr>Primary<wbr>Key</a>
@@ -1482,8 +1323,7 @@ All [input](#inputs) properties are implicitly available as output properties. A
         <span class="property-indicator"></span>
         <span class="property-type">string</span>
     </dt>
-    <dd>{{% md %}}Primary key of the witness storage account.{{% /md %}}</dd>
-    <dt class="property-optional"
+    <dd>{{% md %}}Primary key of the witness storage account.{{% /md %}}</dd><dt class="property-optional"
             title="Optional">
         <span id="storageaccounturl_nodejs">
 <a href="#storageaccounturl_nodejs" style="color: inherit; text-decoration: inherit;">storage<wbr>Account<wbr>Url</a>
@@ -1491,14 +1331,11 @@ All [input](#inputs) properties are implicitly available as output properties. A
         <span class="property-indicator"></span>
         <span class="property-type">string</span>
     </dt>
-    <dd>{{% md %}}Fully qualified ARM resource id of the witness storage account.{{% /md %}}</dd>
-</dl>
+    <dd>{{% md %}}Fully qualified ARM resource id of the witness storage account.{{% /md %}}</dd></dl>
 {{% /choosable %}}
 
 {{% choosable language python %}}
-<dl class="resources-properties">
-
-    <dt class="property-optional"
+<dl class="resources-properties"><dt class="property-optional"
             title="Optional">
         <span id="cluster_bootstrap_account_python">
 <a href="#cluster_bootstrap_account_python" style="color: inherit; text-decoration: inherit;">cluster_<wbr>bootstrap_<wbr>account</a>
@@ -1506,8 +1343,7 @@ All [input](#inputs) properties are implicitly available as output properties. A
         <span class="property-indicator"></span>
         <span class="property-type">str</span>
     </dt>
-    <dd>{{% md %}}Account name used for creating cluster (at minimum needs permissions to 'Create Computer Objects' in domain).{{% /md %}}</dd>
-    <dt class="property-optional"
+    <dd>{{% md %}}Account name used for creating cluster (at minimum needs permissions to 'Create Computer Objects' in domain).{{% /md %}}</dd><dt class="property-optional"
             title="Optional">
         <span id="cluster_operator_account_python">
 <a href="#cluster_operator_account_python" style="color: inherit; text-decoration: inherit;">cluster_<wbr>operator_<wbr>account</a>
@@ -1515,8 +1351,7 @@ All [input](#inputs) properties are implicitly available as output properties. A
         <span class="property-indicator"></span>
         <span class="property-type">str</span>
     </dt>
-    <dd>{{% md %}}Account name used for operating cluster i.e. will be part of administrators group on all the participating virtual machines in the cluster.{{% /md %}}</dd>
-    <dt class="property-optional"
+    <dd>{{% md %}}Account name used for operating cluster i.e. will be part of administrators group on all the participating virtual machines in the cluster.{{% /md %}}</dd><dt class="property-optional"
             title="Optional">
         <span id="domain_fqdn_python">
 <a href="#domain_fqdn_python" style="color: inherit; text-decoration: inherit;">domain_<wbr>fqdn</a>
@@ -1524,8 +1359,7 @@ All [input](#inputs) properties are implicitly available as output properties. A
         <span class="property-indicator"></span>
         <span class="property-type">str</span>
     </dt>
-    <dd>{{% md %}}Fully qualified name of the domain.{{% /md %}}</dd>
-    <dt class="property-optional"
+    <dd>{{% md %}}Fully qualified name of the domain.{{% /md %}}</dd><dt class="property-optional"
             title="Optional">
         <span id="file_share_witness_path_python">
 <a href="#file_share_witness_path_python" style="color: inherit; text-decoration: inherit;">file_<wbr>share_<wbr>witness_<wbr>path</a>
@@ -1533,8 +1367,7 @@ All [input](#inputs) properties are implicitly available as output properties. A
         <span class="property-indicator"></span>
         <span class="property-type">str</span>
     </dt>
-    <dd>{{% md %}}Optional path for fileshare witness.{{% /md %}}</dd>
-    <dt class="property-optional"
+    <dd>{{% md %}}Optional path for fileshare witness.{{% /md %}}</dd><dt class="property-optional"
             title="Optional">
         <span id="ou_path_python">
 <a href="#ou_path_python" style="color: inherit; text-decoration: inherit;">ou_<wbr>path</a>
@@ -1542,8 +1375,7 @@ All [input](#inputs) properties are implicitly available as output properties. A
         <span class="property-indicator"></span>
         <span class="property-type">str</span>
     </dt>
-    <dd>{{% md %}}Organizational Unit path in which the nodes and cluster will be present.{{% /md %}}</dd>
-    <dt class="property-optional"
+    <dd>{{% md %}}Organizational Unit path in which the nodes and cluster will be present.{{% /md %}}</dd><dt class="property-optional"
             title="Optional">
         <span id="sql_service_account_python">
 <a href="#sql_service_account_python" style="color: inherit; text-decoration: inherit;">sql_<wbr>service_<wbr>account</a>
@@ -1551,8 +1383,7 @@ All [input](#inputs) properties are implicitly available as output properties. A
         <span class="property-indicator"></span>
         <span class="property-type">str</span>
     </dt>
-    <dd>{{% md %}}Account name under which SQL service will run on all participating SQL virtual machines in the cluster.{{% /md %}}</dd>
-    <dt class="property-optional"
+    <dd>{{% md %}}Account name under which SQL service will run on all participating SQL virtual machines in the cluster.{{% /md %}}</dd><dt class="property-optional"
             title="Optional">
         <span id="storage_account_primary_key_python">
 <a href="#storage_account_primary_key_python" style="color: inherit; text-decoration: inherit;">storage_<wbr>account_<wbr>primary_<wbr>key</a>
@@ -1560,8 +1391,7 @@ All [input](#inputs) properties are implicitly available as output properties. A
         <span class="property-indicator"></span>
         <span class="property-type">str</span>
     </dt>
-    <dd>{{% md %}}Primary key of the witness storage account.{{% /md %}}</dd>
-    <dt class="property-optional"
+    <dd>{{% md %}}Primary key of the witness storage account.{{% /md %}}</dd><dt class="property-optional"
             title="Optional">
         <span id="storage_account_url_python">
 <a href="#storage_account_url_python" style="color: inherit; text-decoration: inherit;">storage_<wbr>account_<wbr>url</a>
@@ -1569,8 +1399,7 @@ All [input](#inputs) properties are implicitly available as output properties. A
         <span class="property-indicator"></span>
         <span class="property-type">str</span>
     </dt>
-    <dd>{{% md %}}Fully qualified ARM resource id of the witness storage account.{{% /md %}}</dd>
-</dl>
+    <dd>{{% md %}}Fully qualified ARM resource id of the witness storage account.{{% /md %}}</dd></dl>
 {{% /choosable %}}
 ## Import
 

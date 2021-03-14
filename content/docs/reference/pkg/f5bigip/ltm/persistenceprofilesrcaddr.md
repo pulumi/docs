@@ -155,9 +155,7 @@ func main() {
 
 {{% choosable language nodejs %}}
 
-<dl class="resources-properties">
-  
-    <dt
+<dl class="resources-properties"><dt
         class="property-required" title="Required">
         <span>name</span>
         <span class="property-indicator"></span>
@@ -165,9 +163,7 @@ func main() {
     </dt>
     <dd>
       The unique name of the resource.
-    </dd>
-  
-    <dt
+    </dd><dt
         class="property-required" title="Required">
         <span>args</span>
         <span class="property-indicator"></span>
@@ -175,9 +171,7 @@ func main() {
     </dt>
     <dd>
       The arguments to resource properties.
-    </dd>
-  
-    <dt
+    </dd><dt
         class="property-optional" title="Optional">
         <span>opts</span>
         <span class="property-indicator"></span>
@@ -185,10 +179,7 @@ func main() {
     </dt>
     <dd>
       Bag of options to control resource&#39;s behavior.
-    </dd>
-  
-
-</dl>
+    </dd></dl>
 
 {{% /choosable %}}
 
@@ -214,9 +205,7 @@ func main() {
 
 {{% choosable language go %}}
 
-<dl class="resources-properties">
-  
-    <dt
+<dl class="resources-properties"><dt
         class="property-optional" title="Optional">
         <span>ctx</span>
         <span class="property-indicator"></span>
@@ -224,9 +213,7 @@ func main() {
     </dt>
     <dd>
       Context object for the current deployment.
-    </dd>
-  
-    <dt
+    </dd><dt
         class="property-required" title="Required">
         <span>name</span>
         <span class="property-indicator"></span>
@@ -234,9 +221,7 @@ func main() {
     </dt>
     <dd>
       The unique name of the resource.
-    </dd>
-  
-    <dt
+    </dd><dt
         class="property-required" title="Required">
         <span>args</span>
         <span class="property-indicator"></span>
@@ -244,9 +229,7 @@ func main() {
     </dt>
     <dd>
       The arguments to resource properties.
-    </dd>
-  
-    <dt
+    </dd><dt
         class="property-optional" title="Optional">
         <span>opts</span>
         <span class="property-indicator"></span>
@@ -254,18 +237,13 @@ func main() {
     </dt>
     <dd>
       Bag of options to control resource&#39;s behavior.
-    </dd>
-  
-
-</dl>
+    </dd></dl>
 
 {{% /choosable %}}
 
 {{% choosable language csharp %}}
 
-<dl class="resources-properties">
-  
-    <dt
+<dl class="resources-properties"><dt
         class="property-required" title="Required">
         <span>name</span>
         <span class="property-indicator"></span>
@@ -273,9 +251,7 @@ func main() {
     </dt>
     <dd>
       The unique name of the resource.
-    </dd>
-  
-    <dt
+    </dd><dt
         class="property-required" title="Required">
         <span>args</span>
         <span class="property-indicator"></span>
@@ -283,9 +259,7 @@ func main() {
     </dt>
     <dd>
       The arguments to resource properties.
-    </dd>
-  
-    <dt
+    </dd><dt
         class="property-optional" title="Optional">
         <span>opts</span>
         <span class="property-indicator"></span>
@@ -293,10 +267,7 @@ func main() {
     </dt>
     <dd>
       Bag of options to control resource&#39;s behavior.
-    </dd>
-  
-
-</dl>
+    </dd></dl>
 
 {{% /choosable %}}
 
@@ -311,9 +282,7 @@ The PersistenceProfileSrcAddr resource accepts the following [input]({{< relref 
 
 
 {{% choosable language csharp %}}
-<dl class="resources-properties">
-
-    <dt class="property-required"
+<dl class="resources-properties"><dt class="property-required"
             title="Required">
         <span id="defaultsfrom_csharp">
 <a href="#defaultsfrom_csharp" style="color: inherit; text-decoration: inherit;">Defaults<wbr>From</a>
@@ -322,8 +291,7 @@ The PersistenceProfileSrcAddr resource accepts the following [input]({{< relref 
         <span class="property-type">string</span>
     </dt>
     <dd>{{% md %}}Inherit defaults from parent profile
-{{% /md %}}</dd>
-    <dt class="property-required"
+{{% /md %}}</dd><dt class="property-required"
             title="Required">
         <span id="name_csharp">
 <a href="#name_csharp" style="color: inherit; text-decoration: inherit;">Name</a>
@@ -332,8 +300,7 @@ The PersistenceProfileSrcAddr resource accepts the following [input]({{< relref 
         <span class="property-type">string</span>
     </dt>
     <dd>{{% md %}}Name of the persistence profile
-{{% /md %}}</dd>
-    <dt class="property-optional"
+{{% /md %}}</dd><dt class="property-optional"
             title="Optional">
         <span id="appservice_csharp">
 <a href="#appservice_csharp" style="color: inherit; text-decoration: inherit;">App<wbr>Service</a>
@@ -341,8 +308,7 @@ The PersistenceProfileSrcAddr resource accepts the following [input]({{< relref 
         <span class="property-indicator"></span>
         <span class="property-type">string</span>
     </dt>
-    <dd>{{% md %}}{{% /md %}}</dd>
-    <dt class="property-optional"
+    <dd>{{% md %}}{{% /md %}}</dd><dt class="property-optional"
             title="Optional">
         <span id="hashalgorithm_csharp">
 <a href="#hashalgorithm_csharp" style="color: inherit; text-decoration: inherit;">Hash<wbr>Algorithm</a>
@@ -351,8 +317,7 @@ The PersistenceProfileSrcAddr resource accepts the following [input]({{< relref 
         <span class="property-type">string</span>
     </dt>
     <dd>{{% md %}}Specify the hash algorithm
-{{% /md %}}</dd>
-    <dt class="property-optional"
+{{% /md %}}</dd><dt class="property-optional"
             title="Optional">
         <span id="mapproxies_csharp">
 <a href="#mapproxies_csharp" style="color: inherit; text-decoration: inherit;">Map<wbr>Proxies</a>
@@ -361,8 +326,7 @@ The PersistenceProfileSrcAddr resource accepts the following [input]({{< relref 
         <span class="property-type">string</span>
     </dt>
     <dd>{{% md %}}To enable _ disable directs all to the same single pool member
-{{% /md %}}</dd>
-    <dt class="property-optional"
+{{% /md %}}</dd><dt class="property-optional"
             title="Optional">
         <span id="mask_csharp">
 <a href="#mask_csharp" style="color: inherit; text-decoration: inherit;">Mask</a>
@@ -372,8 +336,7 @@ The PersistenceProfileSrcAddr resource accepts the following [input]({{< relref 
     </dt>
     <dd>{{% md %}}Identify a range of source IP addresses to manage together as a single source address affinity persistent connection
 when connecting to the pool. Must be a valid IPv4 or IPv6 mask.
-{{% /md %}}</dd>
-    <dt class="property-optional"
+{{% /md %}}</dd><dt class="property-optional"
             title="Optional">
         <span id="matchacrosspools_csharp">
 <a href="#matchacrosspools_csharp" style="color: inherit; text-decoration: inherit;">Match<wbr>Across<wbr>Pools</a>
@@ -382,8 +345,7 @@ when connecting to the pool. Must be a valid IPv4 or IPv6 mask.
         <span class="property-type">string</span>
     </dt>
     <dd>{{% md %}}To enable _ disable match across pools with given persistence record
-{{% /md %}}</dd>
-    <dt class="property-optional"
+{{% /md %}}</dd><dt class="property-optional"
             title="Optional">
         <span id="matchacrossservices_csharp">
 <a href="#matchacrossservices_csharp" style="color: inherit; text-decoration: inherit;">Match<wbr>Across<wbr>Services</a>
@@ -392,8 +354,7 @@ when connecting to the pool. Must be a valid IPv4 or IPv6 mask.
         <span class="property-type">string</span>
     </dt>
     <dd>{{% md %}}To enable _ disable match across services with given persistence record
-{{% /md %}}</dd>
-    <dt class="property-optional"
+{{% /md %}}</dd><dt class="property-optional"
             title="Optional">
         <span id="matchacrossvirtuals_csharp">
 <a href="#matchacrossvirtuals_csharp" style="color: inherit; text-decoration: inherit;">Match<wbr>Across<wbr>Virtuals</a>
@@ -402,8 +363,7 @@ when connecting to the pool. Must be a valid IPv4 or IPv6 mask.
         <span class="property-type">string</span>
     </dt>
     <dd>{{% md %}}To enable _ disable match across services with given persistence record
-{{% /md %}}</dd>
-    <dt class="property-optional"
+{{% /md %}}</dd><dt class="property-optional"
             title="Optional">
         <span id="mirror_csharp">
 <a href="#mirror_csharp" style="color: inherit; text-decoration: inherit;">Mirror</a>
@@ -412,8 +372,7 @@ when connecting to the pool. Must be a valid IPv4 or IPv6 mask.
         <span class="property-type">string</span>
     </dt>
     <dd>{{% md %}}To enable _ disable
-{{% /md %}}</dd>
-    <dt class="property-optional"
+{{% /md %}}</dd><dt class="property-optional"
             title="Optional">
         <span id="overrideconnlimit_csharp">
 <a href="#overrideconnlimit_csharp" style="color: inherit; text-decoration: inherit;">Override<wbr>Conn<wbr>Limit</a>
@@ -423,8 +382,7 @@ when connecting to the pool. Must be a valid IPv4 or IPv6 mask.
     </dt>
     <dd>{{% md %}}To enable _ disable that pool member connection limits are overridden for persisted clients. Per-virtual connection
 limits remain hard limits and are not overridden.
-{{% /md %}}</dd>
-    <dt class="property-optional"
+{{% /md %}}</dd><dt class="property-optional"
             title="Optional">
         <span id="timeout_csharp">
 <a href="#timeout_csharp" style="color: inherit; text-decoration: inherit;">Timeout</a>
@@ -433,14 +391,11 @@ limits remain hard limits and are not overridden.
         <span class="property-type">int</span>
     </dt>
     <dd>{{% md %}}Timeout for persistence of the session
-{{% /md %}}</dd>
-</dl>
+{{% /md %}}</dd></dl>
 {{% /choosable %}}
 
 {{% choosable language go %}}
-<dl class="resources-properties">
-
-    <dt class="property-required"
+<dl class="resources-properties"><dt class="property-required"
             title="Required">
         <span id="defaultsfrom_go">
 <a href="#defaultsfrom_go" style="color: inherit; text-decoration: inherit;">Defaults<wbr>From</a>
@@ -449,8 +404,7 @@ limits remain hard limits and are not overridden.
         <span class="property-type">string</span>
     </dt>
     <dd>{{% md %}}Inherit defaults from parent profile
-{{% /md %}}</dd>
-    <dt class="property-required"
+{{% /md %}}</dd><dt class="property-required"
             title="Required">
         <span id="name_go">
 <a href="#name_go" style="color: inherit; text-decoration: inherit;">Name</a>
@@ -459,8 +413,7 @@ limits remain hard limits and are not overridden.
         <span class="property-type">string</span>
     </dt>
     <dd>{{% md %}}Name of the persistence profile
-{{% /md %}}</dd>
-    <dt class="property-optional"
+{{% /md %}}</dd><dt class="property-optional"
             title="Optional">
         <span id="appservice_go">
 <a href="#appservice_go" style="color: inherit; text-decoration: inherit;">App<wbr>Service</a>
@@ -468,8 +421,7 @@ limits remain hard limits and are not overridden.
         <span class="property-indicator"></span>
         <span class="property-type">string</span>
     </dt>
-    <dd>{{% md %}}{{% /md %}}</dd>
-    <dt class="property-optional"
+    <dd>{{% md %}}{{% /md %}}</dd><dt class="property-optional"
             title="Optional">
         <span id="hashalgorithm_go">
 <a href="#hashalgorithm_go" style="color: inherit; text-decoration: inherit;">Hash<wbr>Algorithm</a>
@@ -478,8 +430,7 @@ limits remain hard limits and are not overridden.
         <span class="property-type">string</span>
     </dt>
     <dd>{{% md %}}Specify the hash algorithm
-{{% /md %}}</dd>
-    <dt class="property-optional"
+{{% /md %}}</dd><dt class="property-optional"
             title="Optional">
         <span id="mapproxies_go">
 <a href="#mapproxies_go" style="color: inherit; text-decoration: inherit;">Map<wbr>Proxies</a>
@@ -488,8 +439,7 @@ limits remain hard limits and are not overridden.
         <span class="property-type">string</span>
     </dt>
     <dd>{{% md %}}To enable _ disable directs all to the same single pool member
-{{% /md %}}</dd>
-    <dt class="property-optional"
+{{% /md %}}</dd><dt class="property-optional"
             title="Optional">
         <span id="mask_go">
 <a href="#mask_go" style="color: inherit; text-decoration: inherit;">Mask</a>
@@ -499,8 +449,7 @@ limits remain hard limits and are not overridden.
     </dt>
     <dd>{{% md %}}Identify a range of source IP addresses to manage together as a single source address affinity persistent connection
 when connecting to the pool. Must be a valid IPv4 or IPv6 mask.
-{{% /md %}}</dd>
-    <dt class="property-optional"
+{{% /md %}}</dd><dt class="property-optional"
             title="Optional">
         <span id="matchacrosspools_go">
 <a href="#matchacrosspools_go" style="color: inherit; text-decoration: inherit;">Match<wbr>Across<wbr>Pools</a>
@@ -509,8 +458,7 @@ when connecting to the pool. Must be a valid IPv4 or IPv6 mask.
         <span class="property-type">string</span>
     </dt>
     <dd>{{% md %}}To enable _ disable match across pools with given persistence record
-{{% /md %}}</dd>
-    <dt class="property-optional"
+{{% /md %}}</dd><dt class="property-optional"
             title="Optional">
         <span id="matchacrossservices_go">
 <a href="#matchacrossservices_go" style="color: inherit; text-decoration: inherit;">Match<wbr>Across<wbr>Services</a>
@@ -519,8 +467,7 @@ when connecting to the pool. Must be a valid IPv4 or IPv6 mask.
         <span class="property-type">string</span>
     </dt>
     <dd>{{% md %}}To enable _ disable match across services with given persistence record
-{{% /md %}}</dd>
-    <dt class="property-optional"
+{{% /md %}}</dd><dt class="property-optional"
             title="Optional">
         <span id="matchacrossvirtuals_go">
 <a href="#matchacrossvirtuals_go" style="color: inherit; text-decoration: inherit;">Match<wbr>Across<wbr>Virtuals</a>
@@ -529,8 +476,7 @@ when connecting to the pool. Must be a valid IPv4 or IPv6 mask.
         <span class="property-type">string</span>
     </dt>
     <dd>{{% md %}}To enable _ disable match across services with given persistence record
-{{% /md %}}</dd>
-    <dt class="property-optional"
+{{% /md %}}</dd><dt class="property-optional"
             title="Optional">
         <span id="mirror_go">
 <a href="#mirror_go" style="color: inherit; text-decoration: inherit;">Mirror</a>
@@ -539,8 +485,7 @@ when connecting to the pool. Must be a valid IPv4 or IPv6 mask.
         <span class="property-type">string</span>
     </dt>
     <dd>{{% md %}}To enable _ disable
-{{% /md %}}</dd>
-    <dt class="property-optional"
+{{% /md %}}</dd><dt class="property-optional"
             title="Optional">
         <span id="overrideconnlimit_go">
 <a href="#overrideconnlimit_go" style="color: inherit; text-decoration: inherit;">Override<wbr>Conn<wbr>Limit</a>
@@ -550,8 +495,7 @@ when connecting to the pool. Must be a valid IPv4 or IPv6 mask.
     </dt>
     <dd>{{% md %}}To enable _ disable that pool member connection limits are overridden for persisted clients. Per-virtual connection
 limits remain hard limits and are not overridden.
-{{% /md %}}</dd>
-    <dt class="property-optional"
+{{% /md %}}</dd><dt class="property-optional"
             title="Optional">
         <span id="timeout_go">
 <a href="#timeout_go" style="color: inherit; text-decoration: inherit;">Timeout</a>
@@ -560,14 +504,11 @@ limits remain hard limits and are not overridden.
         <span class="property-type">int</span>
     </dt>
     <dd>{{% md %}}Timeout for persistence of the session
-{{% /md %}}</dd>
-</dl>
+{{% /md %}}</dd></dl>
 {{% /choosable %}}
 
 {{% choosable language nodejs %}}
-<dl class="resources-properties">
-
-    <dt class="property-required"
+<dl class="resources-properties"><dt class="property-required"
             title="Required">
         <span id="defaultsfrom_nodejs">
 <a href="#defaultsfrom_nodejs" style="color: inherit; text-decoration: inherit;">defaults<wbr>From</a>
@@ -576,8 +517,7 @@ limits remain hard limits and are not overridden.
         <span class="property-type">string</span>
     </dt>
     <dd>{{% md %}}Inherit defaults from parent profile
-{{% /md %}}</dd>
-    <dt class="property-required"
+{{% /md %}}</dd><dt class="property-required"
             title="Required">
         <span id="name_nodejs">
 <a href="#name_nodejs" style="color: inherit; text-decoration: inherit;">name</a>
@@ -586,8 +526,7 @@ limits remain hard limits and are not overridden.
         <span class="property-type">string</span>
     </dt>
     <dd>{{% md %}}Name of the persistence profile
-{{% /md %}}</dd>
-    <dt class="property-optional"
+{{% /md %}}</dd><dt class="property-optional"
             title="Optional">
         <span id="appservice_nodejs">
 <a href="#appservice_nodejs" style="color: inherit; text-decoration: inherit;">app<wbr>Service</a>
@@ -595,8 +534,7 @@ limits remain hard limits and are not overridden.
         <span class="property-indicator"></span>
         <span class="property-type">string</span>
     </dt>
-    <dd>{{% md %}}{{% /md %}}</dd>
-    <dt class="property-optional"
+    <dd>{{% md %}}{{% /md %}}</dd><dt class="property-optional"
             title="Optional">
         <span id="hashalgorithm_nodejs">
 <a href="#hashalgorithm_nodejs" style="color: inherit; text-decoration: inherit;">hash<wbr>Algorithm</a>
@@ -605,8 +543,7 @@ limits remain hard limits and are not overridden.
         <span class="property-type">string</span>
     </dt>
     <dd>{{% md %}}Specify the hash algorithm
-{{% /md %}}</dd>
-    <dt class="property-optional"
+{{% /md %}}</dd><dt class="property-optional"
             title="Optional">
         <span id="mapproxies_nodejs">
 <a href="#mapproxies_nodejs" style="color: inherit; text-decoration: inherit;">map<wbr>Proxies</a>
@@ -615,8 +552,7 @@ limits remain hard limits and are not overridden.
         <span class="property-type">string</span>
     </dt>
     <dd>{{% md %}}To enable _ disable directs all to the same single pool member
-{{% /md %}}</dd>
-    <dt class="property-optional"
+{{% /md %}}</dd><dt class="property-optional"
             title="Optional">
         <span id="mask_nodejs">
 <a href="#mask_nodejs" style="color: inherit; text-decoration: inherit;">mask</a>
@@ -626,8 +562,7 @@ limits remain hard limits and are not overridden.
     </dt>
     <dd>{{% md %}}Identify a range of source IP addresses to manage together as a single source address affinity persistent connection
 when connecting to the pool. Must be a valid IPv4 or IPv6 mask.
-{{% /md %}}</dd>
-    <dt class="property-optional"
+{{% /md %}}</dd><dt class="property-optional"
             title="Optional">
         <span id="matchacrosspools_nodejs">
 <a href="#matchacrosspools_nodejs" style="color: inherit; text-decoration: inherit;">match<wbr>Across<wbr>Pools</a>
@@ -636,8 +571,7 @@ when connecting to the pool. Must be a valid IPv4 or IPv6 mask.
         <span class="property-type">string</span>
     </dt>
     <dd>{{% md %}}To enable _ disable match across pools with given persistence record
-{{% /md %}}</dd>
-    <dt class="property-optional"
+{{% /md %}}</dd><dt class="property-optional"
             title="Optional">
         <span id="matchacrossservices_nodejs">
 <a href="#matchacrossservices_nodejs" style="color: inherit; text-decoration: inherit;">match<wbr>Across<wbr>Services</a>
@@ -646,8 +580,7 @@ when connecting to the pool. Must be a valid IPv4 or IPv6 mask.
         <span class="property-type">string</span>
     </dt>
     <dd>{{% md %}}To enable _ disable match across services with given persistence record
-{{% /md %}}</dd>
-    <dt class="property-optional"
+{{% /md %}}</dd><dt class="property-optional"
             title="Optional">
         <span id="matchacrossvirtuals_nodejs">
 <a href="#matchacrossvirtuals_nodejs" style="color: inherit; text-decoration: inherit;">match<wbr>Across<wbr>Virtuals</a>
@@ -656,8 +589,7 @@ when connecting to the pool. Must be a valid IPv4 or IPv6 mask.
         <span class="property-type">string</span>
     </dt>
     <dd>{{% md %}}To enable _ disable match across services with given persistence record
-{{% /md %}}</dd>
-    <dt class="property-optional"
+{{% /md %}}</dd><dt class="property-optional"
             title="Optional">
         <span id="mirror_nodejs">
 <a href="#mirror_nodejs" style="color: inherit; text-decoration: inherit;">mirror</a>
@@ -666,8 +598,7 @@ when connecting to the pool. Must be a valid IPv4 or IPv6 mask.
         <span class="property-type">string</span>
     </dt>
     <dd>{{% md %}}To enable _ disable
-{{% /md %}}</dd>
-    <dt class="property-optional"
+{{% /md %}}</dd><dt class="property-optional"
             title="Optional">
         <span id="overrideconnlimit_nodejs">
 <a href="#overrideconnlimit_nodejs" style="color: inherit; text-decoration: inherit;">override<wbr>Conn<wbr>Limit</a>
@@ -677,8 +608,7 @@ when connecting to the pool. Must be a valid IPv4 or IPv6 mask.
     </dt>
     <dd>{{% md %}}To enable _ disable that pool member connection limits are overridden for persisted clients. Per-virtual connection
 limits remain hard limits and are not overridden.
-{{% /md %}}</dd>
-    <dt class="property-optional"
+{{% /md %}}</dd><dt class="property-optional"
             title="Optional">
         <span id="timeout_nodejs">
 <a href="#timeout_nodejs" style="color: inherit; text-decoration: inherit;">timeout</a>
@@ -687,14 +617,11 @@ limits remain hard limits and are not overridden.
         <span class="property-type">number</span>
     </dt>
     <dd>{{% md %}}Timeout for persistence of the session
-{{% /md %}}</dd>
-</dl>
+{{% /md %}}</dd></dl>
 {{% /choosable %}}
 
 {{% choosable language python %}}
-<dl class="resources-properties">
-
-    <dt class="property-required"
+<dl class="resources-properties"><dt class="property-required"
             title="Required">
         <span id="defaults_from_python">
 <a href="#defaults_from_python" style="color: inherit; text-decoration: inherit;">defaults_<wbr>from</a>
@@ -703,8 +630,7 @@ limits remain hard limits and are not overridden.
         <span class="property-type">str</span>
     </dt>
     <dd>{{% md %}}Inherit defaults from parent profile
-{{% /md %}}</dd>
-    <dt class="property-required"
+{{% /md %}}</dd><dt class="property-required"
             title="Required">
         <span id="name_python">
 <a href="#name_python" style="color: inherit; text-decoration: inherit;">name</a>
@@ -713,8 +639,7 @@ limits remain hard limits and are not overridden.
         <span class="property-type">str</span>
     </dt>
     <dd>{{% md %}}Name of the persistence profile
-{{% /md %}}</dd>
-    <dt class="property-optional"
+{{% /md %}}</dd><dt class="property-optional"
             title="Optional">
         <span id="app_service_python">
 <a href="#app_service_python" style="color: inherit; text-decoration: inherit;">app_<wbr>service</a>
@@ -722,8 +647,7 @@ limits remain hard limits and are not overridden.
         <span class="property-indicator"></span>
         <span class="property-type">str</span>
     </dt>
-    <dd>{{% md %}}{{% /md %}}</dd>
-    <dt class="property-optional"
+    <dd>{{% md %}}{{% /md %}}</dd><dt class="property-optional"
             title="Optional">
         <span id="hash_algorithm_python">
 <a href="#hash_algorithm_python" style="color: inherit; text-decoration: inherit;">hash_<wbr>algorithm</a>
@@ -732,8 +656,7 @@ limits remain hard limits and are not overridden.
         <span class="property-type">str</span>
     </dt>
     <dd>{{% md %}}Specify the hash algorithm
-{{% /md %}}</dd>
-    <dt class="property-optional"
+{{% /md %}}</dd><dt class="property-optional"
             title="Optional">
         <span id="map_proxies_python">
 <a href="#map_proxies_python" style="color: inherit; text-decoration: inherit;">map_<wbr>proxies</a>
@@ -742,8 +665,7 @@ limits remain hard limits and are not overridden.
         <span class="property-type">str</span>
     </dt>
     <dd>{{% md %}}To enable _ disable directs all to the same single pool member
-{{% /md %}}</dd>
-    <dt class="property-optional"
+{{% /md %}}</dd><dt class="property-optional"
             title="Optional">
         <span id="mask_python">
 <a href="#mask_python" style="color: inherit; text-decoration: inherit;">mask</a>
@@ -753,8 +675,7 @@ limits remain hard limits and are not overridden.
     </dt>
     <dd>{{% md %}}Identify a range of source IP addresses to manage together as a single source address affinity persistent connection
 when connecting to the pool. Must be a valid IPv4 or IPv6 mask.
-{{% /md %}}</dd>
-    <dt class="property-optional"
+{{% /md %}}</dd><dt class="property-optional"
             title="Optional">
         <span id="match_across_pools_python">
 <a href="#match_across_pools_python" style="color: inherit; text-decoration: inherit;">match_<wbr>across_<wbr>pools</a>
@@ -763,8 +684,7 @@ when connecting to the pool. Must be a valid IPv4 or IPv6 mask.
         <span class="property-type">str</span>
     </dt>
     <dd>{{% md %}}To enable _ disable match across pools with given persistence record
-{{% /md %}}</dd>
-    <dt class="property-optional"
+{{% /md %}}</dd><dt class="property-optional"
             title="Optional">
         <span id="match_across_services_python">
 <a href="#match_across_services_python" style="color: inherit; text-decoration: inherit;">match_<wbr>across_<wbr>services</a>
@@ -773,8 +693,7 @@ when connecting to the pool. Must be a valid IPv4 or IPv6 mask.
         <span class="property-type">str</span>
     </dt>
     <dd>{{% md %}}To enable _ disable match across services with given persistence record
-{{% /md %}}</dd>
-    <dt class="property-optional"
+{{% /md %}}</dd><dt class="property-optional"
             title="Optional">
         <span id="match_across_virtuals_python">
 <a href="#match_across_virtuals_python" style="color: inherit; text-decoration: inherit;">match_<wbr>across_<wbr>virtuals</a>
@@ -783,8 +702,7 @@ when connecting to the pool. Must be a valid IPv4 or IPv6 mask.
         <span class="property-type">str</span>
     </dt>
     <dd>{{% md %}}To enable _ disable match across services with given persistence record
-{{% /md %}}</dd>
-    <dt class="property-optional"
+{{% /md %}}</dd><dt class="property-optional"
             title="Optional">
         <span id="mirror_python">
 <a href="#mirror_python" style="color: inherit; text-decoration: inherit;">mirror</a>
@@ -793,8 +711,7 @@ when connecting to the pool. Must be a valid IPv4 or IPv6 mask.
         <span class="property-type">str</span>
     </dt>
     <dd>{{% md %}}To enable _ disable
-{{% /md %}}</dd>
-    <dt class="property-optional"
+{{% /md %}}</dd><dt class="property-optional"
             title="Optional">
         <span id="override_conn_limit_python">
 <a href="#override_conn_limit_python" style="color: inherit; text-decoration: inherit;">override_<wbr>conn_<wbr>limit</a>
@@ -804,8 +721,7 @@ when connecting to the pool. Must be a valid IPv4 or IPv6 mask.
     </dt>
     <dd>{{% md %}}To enable _ disable that pool member connection limits are overridden for persisted clients. Per-virtual connection
 limits remain hard limits and are not overridden.
-{{% /md %}}</dd>
-    <dt class="property-optional"
+{{% /md %}}</dd><dt class="property-optional"
             title="Optional">
         <span id="timeout_python">
 <a href="#timeout_python" style="color: inherit; text-decoration: inherit;">timeout</a>
@@ -814,8 +730,7 @@ limits remain hard limits and are not overridden.
         <span class="property-type">int</span>
     </dt>
     <dd>{{% md %}}Timeout for persistence of the session
-{{% /md %}}</dd>
-</dl>
+{{% /md %}}</dd></dl>
 {{% /choosable %}}
 
 
@@ -826,9 +741,7 @@ All [input](#inputs) properties are implicitly available as output properties. A
 
 
 {{% choosable language csharp %}}
-<dl class="resources-properties">
-
-    <dt class="property-"
+<dl class="resources-properties"><dt class="property-"
             title="">
         <span id="id_csharp">
 <a href="#id_csharp" style="color: inherit; text-decoration: inherit;">Id</a>
@@ -836,14 +749,11 @@ All [input](#inputs) properties are implicitly available as output properties. A
         <span class="property-indicator"></span>
         <span class="property-type">string</span>
     </dt>
-    <dd>{{% md %}}The provider-assigned unique ID for this managed resource.{{% /md %}}</dd>
-</dl>
+    <dd>{{% md %}}The provider-assigned unique ID for this managed resource.{{% /md %}}</dd></dl>
 {{% /choosable %}}
 
 {{% choosable language go %}}
-<dl class="resources-properties">
-
-    <dt class="property-"
+<dl class="resources-properties"><dt class="property-"
             title="">
         <span id="id_go">
 <a href="#id_go" style="color: inherit; text-decoration: inherit;">Id</a>
@@ -851,14 +761,11 @@ All [input](#inputs) properties are implicitly available as output properties. A
         <span class="property-indicator"></span>
         <span class="property-type">string</span>
     </dt>
-    <dd>{{% md %}}The provider-assigned unique ID for this managed resource.{{% /md %}}</dd>
-</dl>
+    <dd>{{% md %}}The provider-assigned unique ID for this managed resource.{{% /md %}}</dd></dl>
 {{% /choosable %}}
 
 {{% choosable language nodejs %}}
-<dl class="resources-properties">
-
-    <dt class="property-"
+<dl class="resources-properties"><dt class="property-"
             title="">
         <span id="id_nodejs">
 <a href="#id_nodejs" style="color: inherit; text-decoration: inherit;">id</a>
@@ -866,14 +773,11 @@ All [input](#inputs) properties are implicitly available as output properties. A
         <span class="property-indicator"></span>
         <span class="property-type">string</span>
     </dt>
-    <dd>{{% md %}}The provider-assigned unique ID for this managed resource.{{% /md %}}</dd>
-</dl>
+    <dd>{{% md %}}The provider-assigned unique ID for this managed resource.{{% /md %}}</dd></dl>
 {{% /choosable %}}
 
 {{% choosable language python %}}
-<dl class="resources-properties">
-
-    <dt class="property-"
+<dl class="resources-properties"><dt class="property-"
             title="">
         <span id="id_python">
 <a href="#id_python" style="color: inherit; text-decoration: inherit;">id</a>
@@ -881,8 +785,7 @@ All [input](#inputs) properties are implicitly available as output properties. A
         <span class="property-indicator"></span>
         <span class="property-type">str</span>
     </dt>
-    <dd>{{% md %}}The provider-assigned unique ID for this managed resource.{{% /md %}}</dd>
-</dl>
+    <dd>{{% md %}}The provider-assigned unique ID for this managed resource.{{% /md %}}</dd></dl>
 {{% /choosable %}}
 
 
@@ -1009,9 +912,7 @@ The following state arguments are supported:
 
 
 {{% choosable language csharp %}}
-<dl class="resources-properties">
-
-    <dt class="property-optional"
+<dl class="resources-properties"><dt class="property-optional"
             title="Optional">
         <span id="state_appservice_csharp">
 <a href="#state_appservice_csharp" style="color: inherit; text-decoration: inherit;">App<wbr>Service</a>
@@ -1019,8 +920,7 @@ The following state arguments are supported:
         <span class="property-indicator"></span>
         <span class="property-type">string</span>
     </dt>
-    <dd>{{% md %}}{{% /md %}}</dd>
-    <dt class="property-optional"
+    <dd>{{% md %}}{{% /md %}}</dd><dt class="property-optional"
             title="Optional">
         <span id="state_defaultsfrom_csharp">
 <a href="#state_defaultsfrom_csharp" style="color: inherit; text-decoration: inherit;">Defaults<wbr>From</a>
@@ -1029,8 +929,7 @@ The following state arguments are supported:
         <span class="property-type">string</span>
     </dt>
     <dd>{{% md %}}Inherit defaults from parent profile
-{{% /md %}}</dd>
-    <dt class="property-optional"
+{{% /md %}}</dd><dt class="property-optional"
             title="Optional">
         <span id="state_hashalgorithm_csharp">
 <a href="#state_hashalgorithm_csharp" style="color: inherit; text-decoration: inherit;">Hash<wbr>Algorithm</a>
@@ -1039,8 +938,7 @@ The following state arguments are supported:
         <span class="property-type">string</span>
     </dt>
     <dd>{{% md %}}Specify the hash algorithm
-{{% /md %}}</dd>
-    <dt class="property-optional"
+{{% /md %}}</dd><dt class="property-optional"
             title="Optional">
         <span id="state_mapproxies_csharp">
 <a href="#state_mapproxies_csharp" style="color: inherit; text-decoration: inherit;">Map<wbr>Proxies</a>
@@ -1049,8 +947,7 @@ The following state arguments are supported:
         <span class="property-type">string</span>
     </dt>
     <dd>{{% md %}}To enable _ disable directs all to the same single pool member
-{{% /md %}}</dd>
-    <dt class="property-optional"
+{{% /md %}}</dd><dt class="property-optional"
             title="Optional">
         <span id="state_mask_csharp">
 <a href="#state_mask_csharp" style="color: inherit; text-decoration: inherit;">Mask</a>
@@ -1060,8 +957,7 @@ The following state arguments are supported:
     </dt>
     <dd>{{% md %}}Identify a range of source IP addresses to manage together as a single source address affinity persistent connection
 when connecting to the pool. Must be a valid IPv4 or IPv6 mask.
-{{% /md %}}</dd>
-    <dt class="property-optional"
+{{% /md %}}</dd><dt class="property-optional"
             title="Optional">
         <span id="state_matchacrosspools_csharp">
 <a href="#state_matchacrosspools_csharp" style="color: inherit; text-decoration: inherit;">Match<wbr>Across<wbr>Pools</a>
@@ -1070,8 +966,7 @@ when connecting to the pool. Must be a valid IPv4 or IPv6 mask.
         <span class="property-type">string</span>
     </dt>
     <dd>{{% md %}}To enable _ disable match across pools with given persistence record
-{{% /md %}}</dd>
-    <dt class="property-optional"
+{{% /md %}}</dd><dt class="property-optional"
             title="Optional">
         <span id="state_matchacrossservices_csharp">
 <a href="#state_matchacrossservices_csharp" style="color: inherit; text-decoration: inherit;">Match<wbr>Across<wbr>Services</a>
@@ -1080,8 +975,7 @@ when connecting to the pool. Must be a valid IPv4 or IPv6 mask.
         <span class="property-type">string</span>
     </dt>
     <dd>{{% md %}}To enable _ disable match across services with given persistence record
-{{% /md %}}</dd>
-    <dt class="property-optional"
+{{% /md %}}</dd><dt class="property-optional"
             title="Optional">
         <span id="state_matchacrossvirtuals_csharp">
 <a href="#state_matchacrossvirtuals_csharp" style="color: inherit; text-decoration: inherit;">Match<wbr>Across<wbr>Virtuals</a>
@@ -1090,8 +984,7 @@ when connecting to the pool. Must be a valid IPv4 or IPv6 mask.
         <span class="property-type">string</span>
     </dt>
     <dd>{{% md %}}To enable _ disable match across services with given persistence record
-{{% /md %}}</dd>
-    <dt class="property-optional"
+{{% /md %}}</dd><dt class="property-optional"
             title="Optional">
         <span id="state_mirror_csharp">
 <a href="#state_mirror_csharp" style="color: inherit; text-decoration: inherit;">Mirror</a>
@@ -1100,8 +993,7 @@ when connecting to the pool. Must be a valid IPv4 or IPv6 mask.
         <span class="property-type">string</span>
     </dt>
     <dd>{{% md %}}To enable _ disable
-{{% /md %}}</dd>
-    <dt class="property-optional"
+{{% /md %}}</dd><dt class="property-optional"
             title="Optional">
         <span id="state_name_csharp">
 <a href="#state_name_csharp" style="color: inherit; text-decoration: inherit;">Name</a>
@@ -1110,8 +1002,7 @@ when connecting to the pool. Must be a valid IPv4 or IPv6 mask.
         <span class="property-type">string</span>
     </dt>
     <dd>{{% md %}}Name of the persistence profile
-{{% /md %}}</dd>
-    <dt class="property-optional"
+{{% /md %}}</dd><dt class="property-optional"
             title="Optional">
         <span id="state_overrideconnlimit_csharp">
 <a href="#state_overrideconnlimit_csharp" style="color: inherit; text-decoration: inherit;">Override<wbr>Conn<wbr>Limit</a>
@@ -1121,8 +1012,7 @@ when connecting to the pool. Must be a valid IPv4 or IPv6 mask.
     </dt>
     <dd>{{% md %}}To enable _ disable that pool member connection limits are overridden for persisted clients. Per-virtual connection
 limits remain hard limits and are not overridden.
-{{% /md %}}</dd>
-    <dt class="property-optional"
+{{% /md %}}</dd><dt class="property-optional"
             title="Optional">
         <span id="state_timeout_csharp">
 <a href="#state_timeout_csharp" style="color: inherit; text-decoration: inherit;">Timeout</a>
@@ -1131,14 +1021,11 @@ limits remain hard limits and are not overridden.
         <span class="property-type">int</span>
     </dt>
     <dd>{{% md %}}Timeout for persistence of the session
-{{% /md %}}</dd>
-</dl>
+{{% /md %}}</dd></dl>
 {{% /choosable %}}
 
 {{% choosable language go %}}
-<dl class="resources-properties">
-
-    <dt class="property-optional"
+<dl class="resources-properties"><dt class="property-optional"
             title="Optional">
         <span id="state_appservice_go">
 <a href="#state_appservice_go" style="color: inherit; text-decoration: inherit;">App<wbr>Service</a>
@@ -1146,8 +1033,7 @@ limits remain hard limits and are not overridden.
         <span class="property-indicator"></span>
         <span class="property-type">string</span>
     </dt>
-    <dd>{{% md %}}{{% /md %}}</dd>
-    <dt class="property-optional"
+    <dd>{{% md %}}{{% /md %}}</dd><dt class="property-optional"
             title="Optional">
         <span id="state_defaultsfrom_go">
 <a href="#state_defaultsfrom_go" style="color: inherit; text-decoration: inherit;">Defaults<wbr>From</a>
@@ -1156,8 +1042,7 @@ limits remain hard limits and are not overridden.
         <span class="property-type">string</span>
     </dt>
     <dd>{{% md %}}Inherit defaults from parent profile
-{{% /md %}}</dd>
-    <dt class="property-optional"
+{{% /md %}}</dd><dt class="property-optional"
             title="Optional">
         <span id="state_hashalgorithm_go">
 <a href="#state_hashalgorithm_go" style="color: inherit; text-decoration: inherit;">Hash<wbr>Algorithm</a>
@@ -1166,8 +1051,7 @@ limits remain hard limits and are not overridden.
         <span class="property-type">string</span>
     </dt>
     <dd>{{% md %}}Specify the hash algorithm
-{{% /md %}}</dd>
-    <dt class="property-optional"
+{{% /md %}}</dd><dt class="property-optional"
             title="Optional">
         <span id="state_mapproxies_go">
 <a href="#state_mapproxies_go" style="color: inherit; text-decoration: inherit;">Map<wbr>Proxies</a>
@@ -1176,8 +1060,7 @@ limits remain hard limits and are not overridden.
         <span class="property-type">string</span>
     </dt>
     <dd>{{% md %}}To enable _ disable directs all to the same single pool member
-{{% /md %}}</dd>
-    <dt class="property-optional"
+{{% /md %}}</dd><dt class="property-optional"
             title="Optional">
         <span id="state_mask_go">
 <a href="#state_mask_go" style="color: inherit; text-decoration: inherit;">Mask</a>
@@ -1187,8 +1070,7 @@ limits remain hard limits and are not overridden.
     </dt>
     <dd>{{% md %}}Identify a range of source IP addresses to manage together as a single source address affinity persistent connection
 when connecting to the pool. Must be a valid IPv4 or IPv6 mask.
-{{% /md %}}</dd>
-    <dt class="property-optional"
+{{% /md %}}</dd><dt class="property-optional"
             title="Optional">
         <span id="state_matchacrosspools_go">
 <a href="#state_matchacrosspools_go" style="color: inherit; text-decoration: inherit;">Match<wbr>Across<wbr>Pools</a>
@@ -1197,8 +1079,7 @@ when connecting to the pool. Must be a valid IPv4 or IPv6 mask.
         <span class="property-type">string</span>
     </dt>
     <dd>{{% md %}}To enable _ disable match across pools with given persistence record
-{{% /md %}}</dd>
-    <dt class="property-optional"
+{{% /md %}}</dd><dt class="property-optional"
             title="Optional">
         <span id="state_matchacrossservices_go">
 <a href="#state_matchacrossservices_go" style="color: inherit; text-decoration: inherit;">Match<wbr>Across<wbr>Services</a>
@@ -1207,8 +1088,7 @@ when connecting to the pool. Must be a valid IPv4 or IPv6 mask.
         <span class="property-type">string</span>
     </dt>
     <dd>{{% md %}}To enable _ disable match across services with given persistence record
-{{% /md %}}</dd>
-    <dt class="property-optional"
+{{% /md %}}</dd><dt class="property-optional"
             title="Optional">
         <span id="state_matchacrossvirtuals_go">
 <a href="#state_matchacrossvirtuals_go" style="color: inherit; text-decoration: inherit;">Match<wbr>Across<wbr>Virtuals</a>
@@ -1217,8 +1097,7 @@ when connecting to the pool. Must be a valid IPv4 or IPv6 mask.
         <span class="property-type">string</span>
     </dt>
     <dd>{{% md %}}To enable _ disable match across services with given persistence record
-{{% /md %}}</dd>
-    <dt class="property-optional"
+{{% /md %}}</dd><dt class="property-optional"
             title="Optional">
         <span id="state_mirror_go">
 <a href="#state_mirror_go" style="color: inherit; text-decoration: inherit;">Mirror</a>
@@ -1227,8 +1106,7 @@ when connecting to the pool. Must be a valid IPv4 or IPv6 mask.
         <span class="property-type">string</span>
     </dt>
     <dd>{{% md %}}To enable _ disable
-{{% /md %}}</dd>
-    <dt class="property-optional"
+{{% /md %}}</dd><dt class="property-optional"
             title="Optional">
         <span id="state_name_go">
 <a href="#state_name_go" style="color: inherit; text-decoration: inherit;">Name</a>
@@ -1237,8 +1115,7 @@ when connecting to the pool. Must be a valid IPv4 or IPv6 mask.
         <span class="property-type">string</span>
     </dt>
     <dd>{{% md %}}Name of the persistence profile
-{{% /md %}}</dd>
-    <dt class="property-optional"
+{{% /md %}}</dd><dt class="property-optional"
             title="Optional">
         <span id="state_overrideconnlimit_go">
 <a href="#state_overrideconnlimit_go" style="color: inherit; text-decoration: inherit;">Override<wbr>Conn<wbr>Limit</a>
@@ -1248,8 +1125,7 @@ when connecting to the pool. Must be a valid IPv4 or IPv6 mask.
     </dt>
     <dd>{{% md %}}To enable _ disable that pool member connection limits are overridden for persisted clients. Per-virtual connection
 limits remain hard limits and are not overridden.
-{{% /md %}}</dd>
-    <dt class="property-optional"
+{{% /md %}}</dd><dt class="property-optional"
             title="Optional">
         <span id="state_timeout_go">
 <a href="#state_timeout_go" style="color: inherit; text-decoration: inherit;">Timeout</a>
@@ -1258,14 +1134,11 @@ limits remain hard limits and are not overridden.
         <span class="property-type">int</span>
     </dt>
     <dd>{{% md %}}Timeout for persistence of the session
-{{% /md %}}</dd>
-</dl>
+{{% /md %}}</dd></dl>
 {{% /choosable %}}
 
 {{% choosable language nodejs %}}
-<dl class="resources-properties">
-
-    <dt class="property-optional"
+<dl class="resources-properties"><dt class="property-optional"
             title="Optional">
         <span id="state_appservice_nodejs">
 <a href="#state_appservice_nodejs" style="color: inherit; text-decoration: inherit;">app<wbr>Service</a>
@@ -1273,8 +1146,7 @@ limits remain hard limits and are not overridden.
         <span class="property-indicator"></span>
         <span class="property-type">string</span>
     </dt>
-    <dd>{{% md %}}{{% /md %}}</dd>
-    <dt class="property-optional"
+    <dd>{{% md %}}{{% /md %}}</dd><dt class="property-optional"
             title="Optional">
         <span id="state_defaultsfrom_nodejs">
 <a href="#state_defaultsfrom_nodejs" style="color: inherit; text-decoration: inherit;">defaults<wbr>From</a>
@@ -1283,8 +1155,7 @@ limits remain hard limits and are not overridden.
         <span class="property-type">string</span>
     </dt>
     <dd>{{% md %}}Inherit defaults from parent profile
-{{% /md %}}</dd>
-    <dt class="property-optional"
+{{% /md %}}</dd><dt class="property-optional"
             title="Optional">
         <span id="state_hashalgorithm_nodejs">
 <a href="#state_hashalgorithm_nodejs" style="color: inherit; text-decoration: inherit;">hash<wbr>Algorithm</a>
@@ -1293,8 +1164,7 @@ limits remain hard limits and are not overridden.
         <span class="property-type">string</span>
     </dt>
     <dd>{{% md %}}Specify the hash algorithm
-{{% /md %}}</dd>
-    <dt class="property-optional"
+{{% /md %}}</dd><dt class="property-optional"
             title="Optional">
         <span id="state_mapproxies_nodejs">
 <a href="#state_mapproxies_nodejs" style="color: inherit; text-decoration: inherit;">map<wbr>Proxies</a>
@@ -1303,8 +1173,7 @@ limits remain hard limits and are not overridden.
         <span class="property-type">string</span>
     </dt>
     <dd>{{% md %}}To enable _ disable directs all to the same single pool member
-{{% /md %}}</dd>
-    <dt class="property-optional"
+{{% /md %}}</dd><dt class="property-optional"
             title="Optional">
         <span id="state_mask_nodejs">
 <a href="#state_mask_nodejs" style="color: inherit; text-decoration: inherit;">mask</a>
@@ -1314,8 +1183,7 @@ limits remain hard limits and are not overridden.
     </dt>
     <dd>{{% md %}}Identify a range of source IP addresses to manage together as a single source address affinity persistent connection
 when connecting to the pool. Must be a valid IPv4 or IPv6 mask.
-{{% /md %}}</dd>
-    <dt class="property-optional"
+{{% /md %}}</dd><dt class="property-optional"
             title="Optional">
         <span id="state_matchacrosspools_nodejs">
 <a href="#state_matchacrosspools_nodejs" style="color: inherit; text-decoration: inherit;">match<wbr>Across<wbr>Pools</a>
@@ -1324,8 +1192,7 @@ when connecting to the pool. Must be a valid IPv4 or IPv6 mask.
         <span class="property-type">string</span>
     </dt>
     <dd>{{% md %}}To enable _ disable match across pools with given persistence record
-{{% /md %}}</dd>
-    <dt class="property-optional"
+{{% /md %}}</dd><dt class="property-optional"
             title="Optional">
         <span id="state_matchacrossservices_nodejs">
 <a href="#state_matchacrossservices_nodejs" style="color: inherit; text-decoration: inherit;">match<wbr>Across<wbr>Services</a>
@@ -1334,8 +1201,7 @@ when connecting to the pool. Must be a valid IPv4 or IPv6 mask.
         <span class="property-type">string</span>
     </dt>
     <dd>{{% md %}}To enable _ disable match across services with given persistence record
-{{% /md %}}</dd>
-    <dt class="property-optional"
+{{% /md %}}</dd><dt class="property-optional"
             title="Optional">
         <span id="state_matchacrossvirtuals_nodejs">
 <a href="#state_matchacrossvirtuals_nodejs" style="color: inherit; text-decoration: inherit;">match<wbr>Across<wbr>Virtuals</a>
@@ -1344,8 +1210,7 @@ when connecting to the pool. Must be a valid IPv4 or IPv6 mask.
         <span class="property-type">string</span>
     </dt>
     <dd>{{% md %}}To enable _ disable match across services with given persistence record
-{{% /md %}}</dd>
-    <dt class="property-optional"
+{{% /md %}}</dd><dt class="property-optional"
             title="Optional">
         <span id="state_mirror_nodejs">
 <a href="#state_mirror_nodejs" style="color: inherit; text-decoration: inherit;">mirror</a>
@@ -1354,8 +1219,7 @@ when connecting to the pool. Must be a valid IPv4 or IPv6 mask.
         <span class="property-type">string</span>
     </dt>
     <dd>{{% md %}}To enable _ disable
-{{% /md %}}</dd>
-    <dt class="property-optional"
+{{% /md %}}</dd><dt class="property-optional"
             title="Optional">
         <span id="state_name_nodejs">
 <a href="#state_name_nodejs" style="color: inherit; text-decoration: inherit;">name</a>
@@ -1364,8 +1228,7 @@ when connecting to the pool. Must be a valid IPv4 or IPv6 mask.
         <span class="property-type">string</span>
     </dt>
     <dd>{{% md %}}Name of the persistence profile
-{{% /md %}}</dd>
-    <dt class="property-optional"
+{{% /md %}}</dd><dt class="property-optional"
             title="Optional">
         <span id="state_overrideconnlimit_nodejs">
 <a href="#state_overrideconnlimit_nodejs" style="color: inherit; text-decoration: inherit;">override<wbr>Conn<wbr>Limit</a>
@@ -1375,8 +1238,7 @@ when connecting to the pool. Must be a valid IPv4 or IPv6 mask.
     </dt>
     <dd>{{% md %}}To enable _ disable that pool member connection limits are overridden for persisted clients. Per-virtual connection
 limits remain hard limits and are not overridden.
-{{% /md %}}</dd>
-    <dt class="property-optional"
+{{% /md %}}</dd><dt class="property-optional"
             title="Optional">
         <span id="state_timeout_nodejs">
 <a href="#state_timeout_nodejs" style="color: inherit; text-decoration: inherit;">timeout</a>
@@ -1385,14 +1247,11 @@ limits remain hard limits and are not overridden.
         <span class="property-type">number</span>
     </dt>
     <dd>{{% md %}}Timeout for persistence of the session
-{{% /md %}}</dd>
-</dl>
+{{% /md %}}</dd></dl>
 {{% /choosable %}}
 
 {{% choosable language python %}}
-<dl class="resources-properties">
-
-    <dt class="property-optional"
+<dl class="resources-properties"><dt class="property-optional"
             title="Optional">
         <span id="state_app_service_python">
 <a href="#state_app_service_python" style="color: inherit; text-decoration: inherit;">app_<wbr>service</a>
@@ -1400,8 +1259,7 @@ limits remain hard limits and are not overridden.
         <span class="property-indicator"></span>
         <span class="property-type">str</span>
     </dt>
-    <dd>{{% md %}}{{% /md %}}</dd>
-    <dt class="property-optional"
+    <dd>{{% md %}}{{% /md %}}</dd><dt class="property-optional"
             title="Optional">
         <span id="state_defaults_from_python">
 <a href="#state_defaults_from_python" style="color: inherit; text-decoration: inherit;">defaults_<wbr>from</a>
@@ -1410,8 +1268,7 @@ limits remain hard limits and are not overridden.
         <span class="property-type">str</span>
     </dt>
     <dd>{{% md %}}Inherit defaults from parent profile
-{{% /md %}}</dd>
-    <dt class="property-optional"
+{{% /md %}}</dd><dt class="property-optional"
             title="Optional">
         <span id="state_hash_algorithm_python">
 <a href="#state_hash_algorithm_python" style="color: inherit; text-decoration: inherit;">hash_<wbr>algorithm</a>
@@ -1420,8 +1277,7 @@ limits remain hard limits and are not overridden.
         <span class="property-type">str</span>
     </dt>
     <dd>{{% md %}}Specify the hash algorithm
-{{% /md %}}</dd>
-    <dt class="property-optional"
+{{% /md %}}</dd><dt class="property-optional"
             title="Optional">
         <span id="state_map_proxies_python">
 <a href="#state_map_proxies_python" style="color: inherit; text-decoration: inherit;">map_<wbr>proxies</a>
@@ -1430,8 +1286,7 @@ limits remain hard limits and are not overridden.
         <span class="property-type">str</span>
     </dt>
     <dd>{{% md %}}To enable _ disable directs all to the same single pool member
-{{% /md %}}</dd>
-    <dt class="property-optional"
+{{% /md %}}</dd><dt class="property-optional"
             title="Optional">
         <span id="state_mask_python">
 <a href="#state_mask_python" style="color: inherit; text-decoration: inherit;">mask</a>
@@ -1441,8 +1296,7 @@ limits remain hard limits and are not overridden.
     </dt>
     <dd>{{% md %}}Identify a range of source IP addresses to manage together as a single source address affinity persistent connection
 when connecting to the pool. Must be a valid IPv4 or IPv6 mask.
-{{% /md %}}</dd>
-    <dt class="property-optional"
+{{% /md %}}</dd><dt class="property-optional"
             title="Optional">
         <span id="state_match_across_pools_python">
 <a href="#state_match_across_pools_python" style="color: inherit; text-decoration: inherit;">match_<wbr>across_<wbr>pools</a>
@@ -1451,8 +1305,7 @@ when connecting to the pool. Must be a valid IPv4 or IPv6 mask.
         <span class="property-type">str</span>
     </dt>
     <dd>{{% md %}}To enable _ disable match across pools with given persistence record
-{{% /md %}}</dd>
-    <dt class="property-optional"
+{{% /md %}}</dd><dt class="property-optional"
             title="Optional">
         <span id="state_match_across_services_python">
 <a href="#state_match_across_services_python" style="color: inherit; text-decoration: inherit;">match_<wbr>across_<wbr>services</a>
@@ -1461,8 +1314,7 @@ when connecting to the pool. Must be a valid IPv4 or IPv6 mask.
         <span class="property-type">str</span>
     </dt>
     <dd>{{% md %}}To enable _ disable match across services with given persistence record
-{{% /md %}}</dd>
-    <dt class="property-optional"
+{{% /md %}}</dd><dt class="property-optional"
             title="Optional">
         <span id="state_match_across_virtuals_python">
 <a href="#state_match_across_virtuals_python" style="color: inherit; text-decoration: inherit;">match_<wbr>across_<wbr>virtuals</a>
@@ -1471,8 +1323,7 @@ when connecting to the pool. Must be a valid IPv4 or IPv6 mask.
         <span class="property-type">str</span>
     </dt>
     <dd>{{% md %}}To enable _ disable match across services with given persistence record
-{{% /md %}}</dd>
-    <dt class="property-optional"
+{{% /md %}}</dd><dt class="property-optional"
             title="Optional">
         <span id="state_mirror_python">
 <a href="#state_mirror_python" style="color: inherit; text-decoration: inherit;">mirror</a>
@@ -1481,8 +1332,7 @@ when connecting to the pool. Must be a valid IPv4 or IPv6 mask.
         <span class="property-type">str</span>
     </dt>
     <dd>{{% md %}}To enable _ disable
-{{% /md %}}</dd>
-    <dt class="property-optional"
+{{% /md %}}</dd><dt class="property-optional"
             title="Optional">
         <span id="state_name_python">
 <a href="#state_name_python" style="color: inherit; text-decoration: inherit;">name</a>
@@ -1491,8 +1341,7 @@ when connecting to the pool. Must be a valid IPv4 or IPv6 mask.
         <span class="property-type">str</span>
     </dt>
     <dd>{{% md %}}Name of the persistence profile
-{{% /md %}}</dd>
-    <dt class="property-optional"
+{{% /md %}}</dd><dt class="property-optional"
             title="Optional">
         <span id="state_override_conn_limit_python">
 <a href="#state_override_conn_limit_python" style="color: inherit; text-decoration: inherit;">override_<wbr>conn_<wbr>limit</a>
@@ -1502,8 +1351,7 @@ when connecting to the pool. Must be a valid IPv4 or IPv6 mask.
     </dt>
     <dd>{{% md %}}To enable _ disable that pool member connection limits are overridden for persisted clients. Per-virtual connection
 limits remain hard limits and are not overridden.
-{{% /md %}}</dd>
-    <dt class="property-optional"
+{{% /md %}}</dd><dt class="property-optional"
             title="Optional">
         <span id="state_timeout_python">
 <a href="#state_timeout_python" style="color: inherit; text-decoration: inherit;">timeout</a>
@@ -1512,8 +1360,7 @@ limits remain hard limits and are not overridden.
         <span class="property-type">int</span>
     </dt>
     <dd>{{% md %}}Timeout for persistence of the session
-{{% /md %}}</dd>
-</dl>
+{{% /md %}}</dd></dl>
 {{% /choosable %}}
 
 
@@ -1529,6 +1376,6 @@ limits remain hard limits and are not overridden.
 	<dt>License</dt>
 	<dd>Apache-2.0</dd>
 	<dt>Notes</dt>
-	<dd>This Pulumi package is based on the [`bigip` Terraform Provider](https://github.com/F5Networks/terraform-provider-bigip).</dd>
+	<dd>{{% md %}}This Pulumi package is based on the [`bigip` Terraform Provider](https://github.com/F5Networks/terraform-provider-bigip).{{% /md %}}</dd>
 </dl>
 

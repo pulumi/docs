@@ -14,11 +14,17 @@ Provides a resource to manage roles in an SSH secret backend
 [SSH secret backend within Vault](https://www.vaultproject.io/docs/secrets/ssh/index.html).
 
 {{% examples %}}
+
 ## Example Usage
 
 {{< chooser language "typescript,python,go,csharp" / >}}
 
-{{% example csharp %}}
+
+
+
+
+{{< example csharp >}}
+
 ```csharp
 using Pulumi;
 using Vault = Pulumi.Vault;
@@ -50,9 +56,12 @@ class MyStack : Stack
 }
 ```
 
-{{% /example %}}
 
-{{% example go %}}
+{{< /example >}}
+
+
+{{< example go >}}
+
 ```go
 package main
 
@@ -93,9 +102,12 @@ func main() {
 }
 ```
 
-{{% /example %}}
 
-{{% example python %}}
+{{< /example >}}
+
+
+{{< example python >}}
+
 ```python
 import pulumi
 import pulumi_vault as vault
@@ -113,9 +125,12 @@ bar = vault.ssh.SecretBackendRole("bar",
     key_type="otp")
 ```
 
-{{% /example %}}
 
-{{% example typescript %}}
+{{< /example >}}
+
+
+{{< example typescript >}}
+
 
 ```typescript
 import * as pulumi from "@pulumi/pulumi";
@@ -138,9 +153,16 @@ const bar = new vault.ssh.SecretBackendRole("bar", {
 });
 ```
 
-{{% /example %}}
+
+{{< /example >}}
+
+
+
+
 
 {{% /examples %}}
+
+
 
 
 ## Create a SecretBackendRole Resource {#create}
@@ -165,9 +187,7 @@ const bar = new vault.ssh.SecretBackendRole("bar", {
 
 {{% choosable language nodejs %}}
 
-<dl class="resources-properties">
-  
-    <dt
+<dl class="resources-properties"><dt
         class="property-required" title="Required">
         <span>name</span>
         <span class="property-indicator"></span>
@@ -175,9 +195,7 @@ const bar = new vault.ssh.SecretBackendRole("bar", {
     </dt>
     <dd>
       The unique name of the resource.
-    </dd>
-  
-    <dt
+    </dd><dt
         class="property-required" title="Required">
         <span>args</span>
         <span class="property-indicator"></span>
@@ -185,9 +203,7 @@ const bar = new vault.ssh.SecretBackendRole("bar", {
     </dt>
     <dd>
       The arguments to resource properties.
-    </dd>
-  
-    <dt
+    </dd><dt
         class="property-optional" title="Optional">
         <span>opts</span>
         <span class="property-indicator"></span>
@@ -195,10 +211,7 @@ const bar = new vault.ssh.SecretBackendRole("bar", {
     </dt>
     <dd>
       Bag of options to control resource&#39;s behavior.
-    </dd>
-  
-
-</dl>
+    </dd></dl>
 
 {{% /choosable %}}
 
@@ -224,9 +237,7 @@ const bar = new vault.ssh.SecretBackendRole("bar", {
 
 {{% choosable language go %}}
 
-<dl class="resources-properties">
-  
-    <dt
+<dl class="resources-properties"><dt
         class="property-optional" title="Optional">
         <span>ctx</span>
         <span class="property-indicator"></span>
@@ -234,9 +245,7 @@ const bar = new vault.ssh.SecretBackendRole("bar", {
     </dt>
     <dd>
       Context object for the current deployment.
-    </dd>
-  
-    <dt
+    </dd><dt
         class="property-required" title="Required">
         <span>name</span>
         <span class="property-indicator"></span>
@@ -244,9 +253,7 @@ const bar = new vault.ssh.SecretBackendRole("bar", {
     </dt>
     <dd>
       The unique name of the resource.
-    </dd>
-  
-    <dt
+    </dd><dt
         class="property-required" title="Required">
         <span>args</span>
         <span class="property-indicator"></span>
@@ -254,9 +261,7 @@ const bar = new vault.ssh.SecretBackendRole("bar", {
     </dt>
     <dd>
       The arguments to resource properties.
-    </dd>
-  
-    <dt
+    </dd><dt
         class="property-optional" title="Optional">
         <span>opts</span>
         <span class="property-indicator"></span>
@@ -264,18 +269,13 @@ const bar = new vault.ssh.SecretBackendRole("bar", {
     </dt>
     <dd>
       Bag of options to control resource&#39;s behavior.
-    </dd>
-  
-
-</dl>
+    </dd></dl>
 
 {{% /choosable %}}
 
 {{% choosable language csharp %}}
 
-<dl class="resources-properties">
-  
-    <dt
+<dl class="resources-properties"><dt
         class="property-required" title="Required">
         <span>name</span>
         <span class="property-indicator"></span>
@@ -283,9 +283,7 @@ const bar = new vault.ssh.SecretBackendRole("bar", {
     </dt>
     <dd>
       The unique name of the resource.
-    </dd>
-  
-    <dt
+    </dd><dt
         class="property-required" title="Required">
         <span>args</span>
         <span class="property-indicator"></span>
@@ -293,9 +291,7 @@ const bar = new vault.ssh.SecretBackendRole("bar", {
     </dt>
     <dd>
       The arguments to resource properties.
-    </dd>
-  
-    <dt
+    </dd><dt
         class="property-optional" title="Optional">
         <span>opts</span>
         <span class="property-indicator"></span>
@@ -303,10 +299,7 @@ const bar = new vault.ssh.SecretBackendRole("bar", {
     </dt>
     <dd>
       Bag of options to control resource&#39;s behavior.
-    </dd>
-  
-
-</dl>
+    </dd></dl>
 
 {{% /choosable %}}
 
@@ -321,9 +314,7 @@ The SecretBackendRole resource accepts the following [input]({{< relref "/docs/i
 
 
 {{% choosable language csharp %}}
-<dl class="resources-properties">
-
-    <dt class="property-required"
+<dl class="resources-properties"><dt class="property-required"
             title="Required">
         <span id="backend_csharp">
 <a href="#backend_csharp" style="color: inherit; text-decoration: inherit;">Backend</a>
@@ -332,8 +323,7 @@ The SecretBackendRole resource accepts the following [input]({{< relref "/docs/i
         <span class="property-type">string</span>
     </dt>
     <dd>{{% md %}}The path where the SSH secret backend is mounted.
-{{% /md %}}</dd>
-    <dt class="property-required"
+{{% /md %}}</dd><dt class="property-required"
             title="Required">
         <span id="keytype_csharp">
 <a href="#keytype_csharp" style="color: inherit; text-decoration: inherit;">Key<wbr>Type</a>
@@ -342,8 +332,7 @@ The SecretBackendRole resource accepts the following [input]({{< relref "/docs/i
         <span class="property-type">string</span>
     </dt>
     <dd>{{% md %}}Specifies the type of credentials generated by this role. This can be either `otp`, `dynamic` or `ca`.
-{{% /md %}}</dd>
-    <dt class="property-optional"
+{{% /md %}}</dd><dt class="property-optional"
             title="Optional">
         <span id="algorithmsigner_csharp">
 <a href="#algorithmsigner_csharp" style="color: inherit; text-decoration: inherit;">Algorithm<wbr>Signer</a>
@@ -352,8 +341,7 @@ The SecretBackendRole resource accepts the following [input]({{< relref "/docs/i
         <span class="property-type">string</span>
     </dt>
     <dd>{{% md %}}When supplied, this value specifies a signing algorithm for the key. Possible values: ssh-rsa, rsa-sha2-256, rsa-sha2-512.
-{{% /md %}}</dd>
-    <dt class="property-optional"
+{{% /md %}}</dd><dt class="property-optional"
             title="Optional">
         <span id="allowbaredomains_csharp">
 <a href="#allowbaredomains_csharp" style="color: inherit; text-decoration: inherit;">Allow<wbr>Bare<wbr>Domains</a>
@@ -362,8 +350,7 @@ The SecretBackendRole resource accepts the following [input]({{< relref "/docs/i
         <span class="property-type">bool</span>
     </dt>
     <dd>{{% md %}}Specifies if host certificates that are requested are allowed to use the base domains listed in `allowed_domains`.
-{{% /md %}}</dd>
-    <dt class="property-optional"
+{{% /md %}}</dd><dt class="property-optional"
             title="Optional">
         <span id="allowhostcertificates_csharp">
 <a href="#allowhostcertificates_csharp" style="color: inherit; text-decoration: inherit;">Allow<wbr>Host<wbr>Certificates</a>
@@ -372,8 +359,7 @@ The SecretBackendRole resource accepts the following [input]({{< relref "/docs/i
         <span class="property-type">bool</span>
     </dt>
     <dd>{{% md %}}Specifies if certificates are allowed to be signed for use as a 'host'.
-{{% /md %}}</dd>
-    <dt class="property-optional"
+{{% /md %}}</dd><dt class="property-optional"
             title="Optional">
         <span id="allowsubdomains_csharp">
 <a href="#allowsubdomains_csharp" style="color: inherit; text-decoration: inherit;">Allow<wbr>Subdomains</a>
@@ -382,8 +368,7 @@ The SecretBackendRole resource accepts the following [input]({{< relref "/docs/i
         <span class="property-type">bool</span>
     </dt>
     <dd>{{% md %}}Specifies if host certificates that are requested are allowed to be subdomains of those listed in `allowed_domains`.
-{{% /md %}}</dd>
-    <dt class="property-optional"
+{{% /md %}}</dd><dt class="property-optional"
             title="Optional">
         <span id="allowusercertificates_csharp">
 <a href="#allowusercertificates_csharp" style="color: inherit; text-decoration: inherit;">Allow<wbr>User<wbr>Certificates</a>
@@ -392,8 +377,7 @@ The SecretBackendRole resource accepts the following [input]({{< relref "/docs/i
         <span class="property-type">bool</span>
     </dt>
     <dd>{{% md %}}Specifies if certificates are allowed to be signed for use as a 'user'.
-{{% /md %}}</dd>
-    <dt class="property-optional"
+{{% /md %}}</dd><dt class="property-optional"
             title="Optional">
         <span id="allowuserkeyids_csharp">
 <a href="#allowuserkeyids_csharp" style="color: inherit; text-decoration: inherit;">Allow<wbr>User<wbr>Key<wbr>Ids</a>
@@ -402,8 +386,7 @@ The SecretBackendRole resource accepts the following [input]({{< relref "/docs/i
         <span class="property-type">bool</span>
     </dt>
     <dd>{{% md %}}Specifies if users can override the key ID for a signed certificate with the `key_id` field.
-{{% /md %}}</dd>
-    <dt class="property-optional"
+{{% /md %}}</dd><dt class="property-optional"
             title="Optional">
         <span id="allowedcriticaloptions_csharp">
 <a href="#allowedcriticaloptions_csharp" style="color: inherit; text-decoration: inherit;">Allowed<wbr>Critical<wbr>Options</a>
@@ -412,8 +395,7 @@ The SecretBackendRole resource accepts the following [input]({{< relref "/docs/i
         <span class="property-type">string</span>
     </dt>
     <dd>{{% md %}}Specifies a comma-separated list of critical options that certificates can have when signed.
-{{% /md %}}</dd>
-    <dt class="property-optional"
+{{% /md %}}</dd><dt class="property-optional"
             title="Optional">
         <span id="alloweddomains_csharp">
 <a href="#alloweddomains_csharp" style="color: inherit; text-decoration: inherit;">Allowed<wbr>Domains</a>
@@ -422,8 +404,7 @@ The SecretBackendRole resource accepts the following [input]({{< relref "/docs/i
         <span class="property-type">string</span>
     </dt>
     <dd>{{% md %}}The list of domains for which a client can request a host certificate.
-{{% /md %}}</dd>
-    <dt class="property-optional"
+{{% /md %}}</dd><dt class="property-optional"
             title="Optional">
         <span id="allowedextensions_csharp">
 <a href="#allowedextensions_csharp" style="color: inherit; text-decoration: inherit;">Allowed<wbr>Extensions</a>
@@ -432,8 +413,7 @@ The SecretBackendRole resource accepts the following [input]({{< relref "/docs/i
         <span class="property-type">string</span>
     </dt>
     <dd>{{% md %}}Specifies a comma-separated list of extensions that certificates can have when signed.
-{{% /md %}}</dd>
-    <dt class="property-optional"
+{{% /md %}}</dd><dt class="property-optional"
             title="Optional">
         <span id="alloweduserkeylengths_csharp">
 <a href="#alloweduserkeylengths_csharp" style="color: inherit; text-decoration: inherit;">Allowed<wbr>User<wbr>Key<wbr>Lengths</a>
@@ -442,8 +422,7 @@ The SecretBackendRole resource accepts the following [input]({{< relref "/docs/i
         <span class="property-type">Dictionary&lt;string, object&gt;</span>
     </dt>
     <dd>{{% md %}}Specifies a map of ssh key types and their expected sizes which are allowed to be signed by the CA type.
-{{% /md %}}</dd>
-    <dt class="property-optional"
+{{% /md %}}</dd><dt class="property-optional"
             title="Optional">
         <span id="allowedusers_csharp">
 <a href="#allowedusers_csharp" style="color: inherit; text-decoration: inherit;">Allowed<wbr>Users</a>
@@ -452,8 +431,7 @@ The SecretBackendRole resource accepts the following [input]({{< relref "/docs/i
         <span class="property-type">string</span>
     </dt>
     <dd>{{% md %}}Specifies a comma-separated list of usernames that are to be allowed, only if certain usernames are to be allowed.
-{{% /md %}}</dd>
-    <dt class="property-optional"
+{{% /md %}}</dd><dt class="property-optional"
             title="Optional">
         <span id="alloweduserstemplate_csharp">
 <a href="#alloweduserstemplate_csharp" style="color: inherit; text-decoration: inherit;">Allowed<wbr>Users<wbr>Template</a>
@@ -462,8 +440,7 @@ The SecretBackendRole resource accepts the following [input]({{< relref "/docs/i
         <span class="property-type">bool</span>
     </dt>
     <dd>{{% md %}}Specifies if `allowed_users` can be declared using identity template policies. Non-templated users are also permitted.
-{{% /md %}}</dd>
-    <dt class="property-optional"
+{{% /md %}}</dd><dt class="property-optional"
             title="Optional">
         <span id="cidrlist_csharp">
 <a href="#cidrlist_csharp" style="color: inherit; text-decoration: inherit;">Cidr<wbr>List</a>
@@ -472,8 +449,7 @@ The SecretBackendRole resource accepts the following [input]({{< relref "/docs/i
         <span class="property-type">string</span>
     </dt>
     <dd>{{% md %}}The comma-separated string of CIDR blocks for which this role is applicable.
-{{% /md %}}</dd>
-    <dt class="property-optional"
+{{% /md %}}</dd><dt class="property-optional"
             title="Optional">
         <span id="defaultcriticaloptions_csharp">
 <a href="#defaultcriticaloptions_csharp" style="color: inherit; text-decoration: inherit;">Default<wbr>Critical<wbr>Options</a>
@@ -482,8 +458,7 @@ The SecretBackendRole resource accepts the following [input]({{< relref "/docs/i
         <span class="property-type">Dictionary&lt;string, object&gt;</span>
     </dt>
     <dd>{{% md %}}Specifies a map of critical options that certificates have when signed.
-{{% /md %}}</dd>
-    <dt class="property-optional"
+{{% /md %}}</dd><dt class="property-optional"
             title="Optional">
         <span id="defaultextensions_csharp">
 <a href="#defaultextensions_csharp" style="color: inherit; text-decoration: inherit;">Default<wbr>Extensions</a>
@@ -492,8 +467,7 @@ The SecretBackendRole resource accepts the following [input]({{< relref "/docs/i
         <span class="property-type">Dictionary&lt;string, object&gt;</span>
     </dt>
     <dd>{{% md %}}Specifies a map of extensions that certificates have when signed.
-{{% /md %}}</dd>
-    <dt class="property-optional"
+{{% /md %}}</dd><dt class="property-optional"
             title="Optional">
         <span id="defaultuser_csharp">
 <a href="#defaultuser_csharp" style="color: inherit; text-decoration: inherit;">Default<wbr>User</a>
@@ -502,8 +476,7 @@ The SecretBackendRole resource accepts the following [input]({{< relref "/docs/i
         <span class="property-type">string</span>
     </dt>
     <dd>{{% md %}}Specifies the default username for which a credential will be generated.
-{{% /md %}}</dd>
-    <dt class="property-optional"
+{{% /md %}}</dd><dt class="property-optional"
             title="Optional">
         <span id="keyidformat_csharp">
 <a href="#keyidformat_csharp" style="color: inherit; text-decoration: inherit;">Key<wbr>Id<wbr>Format</a>
@@ -512,8 +485,7 @@ The SecretBackendRole resource accepts the following [input]({{< relref "/docs/i
         <span class="property-type">string</span>
     </dt>
     <dd>{{% md %}}Specifies a custom format for the key id of a signed certificate.
-{{% /md %}}</dd>
-    <dt class="property-optional"
+{{% /md %}}</dd><dt class="property-optional"
             title="Optional">
         <span id="maxttl_csharp">
 <a href="#maxttl_csharp" style="color: inherit; text-decoration: inherit;">Max<wbr>Ttl</a>
@@ -522,8 +494,7 @@ The SecretBackendRole resource accepts the following [input]({{< relref "/docs/i
         <span class="property-type">string</span>
     </dt>
     <dd>{{% md %}}Specifies the maximum Time To Live value.
-{{% /md %}}</dd>
-    <dt class="property-optional"
+{{% /md %}}</dd><dt class="property-optional"
             title="Optional">
         <span id="name_csharp">
 <a href="#name_csharp" style="color: inherit; text-decoration: inherit;">Name</a>
@@ -532,8 +503,7 @@ The SecretBackendRole resource accepts the following [input]({{< relref "/docs/i
         <span class="property-type">string</span>
     </dt>
     <dd>{{% md %}}Specifies the name of the role to create.
-{{% /md %}}</dd>
-    <dt class="property-optional"
+{{% /md %}}</dd><dt class="property-optional"
             title="Optional">
         <span id="ttl_csharp">
 <a href="#ttl_csharp" style="color: inherit; text-decoration: inherit;">Ttl</a>
@@ -542,14 +512,11 @@ The SecretBackendRole resource accepts the following [input]({{< relref "/docs/i
         <span class="property-type">string</span>
     </dt>
     <dd>{{% md %}}Specifies the Time To Live value.
-{{% /md %}}</dd>
-</dl>
+{{% /md %}}</dd></dl>
 {{% /choosable %}}
 
 {{% choosable language go %}}
-<dl class="resources-properties">
-
-    <dt class="property-required"
+<dl class="resources-properties"><dt class="property-required"
             title="Required">
         <span id="backend_go">
 <a href="#backend_go" style="color: inherit; text-decoration: inherit;">Backend</a>
@@ -558,8 +525,7 @@ The SecretBackendRole resource accepts the following [input]({{< relref "/docs/i
         <span class="property-type">string</span>
     </dt>
     <dd>{{% md %}}The path where the SSH secret backend is mounted.
-{{% /md %}}</dd>
-    <dt class="property-required"
+{{% /md %}}</dd><dt class="property-required"
             title="Required">
         <span id="keytype_go">
 <a href="#keytype_go" style="color: inherit; text-decoration: inherit;">Key<wbr>Type</a>
@@ -568,8 +534,7 @@ The SecretBackendRole resource accepts the following [input]({{< relref "/docs/i
         <span class="property-type">string</span>
     </dt>
     <dd>{{% md %}}Specifies the type of credentials generated by this role. This can be either `otp`, `dynamic` or `ca`.
-{{% /md %}}</dd>
-    <dt class="property-optional"
+{{% /md %}}</dd><dt class="property-optional"
             title="Optional">
         <span id="algorithmsigner_go">
 <a href="#algorithmsigner_go" style="color: inherit; text-decoration: inherit;">Algorithm<wbr>Signer</a>
@@ -578,8 +543,7 @@ The SecretBackendRole resource accepts the following [input]({{< relref "/docs/i
         <span class="property-type">string</span>
     </dt>
     <dd>{{% md %}}When supplied, this value specifies a signing algorithm for the key. Possible values: ssh-rsa, rsa-sha2-256, rsa-sha2-512.
-{{% /md %}}</dd>
-    <dt class="property-optional"
+{{% /md %}}</dd><dt class="property-optional"
             title="Optional">
         <span id="allowbaredomains_go">
 <a href="#allowbaredomains_go" style="color: inherit; text-decoration: inherit;">Allow<wbr>Bare<wbr>Domains</a>
@@ -588,8 +552,7 @@ The SecretBackendRole resource accepts the following [input]({{< relref "/docs/i
         <span class="property-type">bool</span>
     </dt>
     <dd>{{% md %}}Specifies if host certificates that are requested are allowed to use the base domains listed in `allowed_domains`.
-{{% /md %}}</dd>
-    <dt class="property-optional"
+{{% /md %}}</dd><dt class="property-optional"
             title="Optional">
         <span id="allowhostcertificates_go">
 <a href="#allowhostcertificates_go" style="color: inherit; text-decoration: inherit;">Allow<wbr>Host<wbr>Certificates</a>
@@ -598,8 +561,7 @@ The SecretBackendRole resource accepts the following [input]({{< relref "/docs/i
         <span class="property-type">bool</span>
     </dt>
     <dd>{{% md %}}Specifies if certificates are allowed to be signed for use as a 'host'.
-{{% /md %}}</dd>
-    <dt class="property-optional"
+{{% /md %}}</dd><dt class="property-optional"
             title="Optional">
         <span id="allowsubdomains_go">
 <a href="#allowsubdomains_go" style="color: inherit; text-decoration: inherit;">Allow<wbr>Subdomains</a>
@@ -608,8 +570,7 @@ The SecretBackendRole resource accepts the following [input]({{< relref "/docs/i
         <span class="property-type">bool</span>
     </dt>
     <dd>{{% md %}}Specifies if host certificates that are requested are allowed to be subdomains of those listed in `allowed_domains`.
-{{% /md %}}</dd>
-    <dt class="property-optional"
+{{% /md %}}</dd><dt class="property-optional"
             title="Optional">
         <span id="allowusercertificates_go">
 <a href="#allowusercertificates_go" style="color: inherit; text-decoration: inherit;">Allow<wbr>User<wbr>Certificates</a>
@@ -618,8 +579,7 @@ The SecretBackendRole resource accepts the following [input]({{< relref "/docs/i
         <span class="property-type">bool</span>
     </dt>
     <dd>{{% md %}}Specifies if certificates are allowed to be signed for use as a 'user'.
-{{% /md %}}</dd>
-    <dt class="property-optional"
+{{% /md %}}</dd><dt class="property-optional"
             title="Optional">
         <span id="allowuserkeyids_go">
 <a href="#allowuserkeyids_go" style="color: inherit; text-decoration: inherit;">Allow<wbr>User<wbr>Key<wbr>Ids</a>
@@ -628,8 +588,7 @@ The SecretBackendRole resource accepts the following [input]({{< relref "/docs/i
         <span class="property-type">bool</span>
     </dt>
     <dd>{{% md %}}Specifies if users can override the key ID for a signed certificate with the `key_id` field.
-{{% /md %}}</dd>
-    <dt class="property-optional"
+{{% /md %}}</dd><dt class="property-optional"
             title="Optional">
         <span id="allowedcriticaloptions_go">
 <a href="#allowedcriticaloptions_go" style="color: inherit; text-decoration: inherit;">Allowed<wbr>Critical<wbr>Options</a>
@@ -638,8 +597,7 @@ The SecretBackendRole resource accepts the following [input]({{< relref "/docs/i
         <span class="property-type">string</span>
     </dt>
     <dd>{{% md %}}Specifies a comma-separated list of critical options that certificates can have when signed.
-{{% /md %}}</dd>
-    <dt class="property-optional"
+{{% /md %}}</dd><dt class="property-optional"
             title="Optional">
         <span id="alloweddomains_go">
 <a href="#alloweddomains_go" style="color: inherit; text-decoration: inherit;">Allowed<wbr>Domains</a>
@@ -648,8 +606,7 @@ The SecretBackendRole resource accepts the following [input]({{< relref "/docs/i
         <span class="property-type">string</span>
     </dt>
     <dd>{{% md %}}The list of domains for which a client can request a host certificate.
-{{% /md %}}</dd>
-    <dt class="property-optional"
+{{% /md %}}</dd><dt class="property-optional"
             title="Optional">
         <span id="allowedextensions_go">
 <a href="#allowedextensions_go" style="color: inherit; text-decoration: inherit;">Allowed<wbr>Extensions</a>
@@ -658,8 +615,7 @@ The SecretBackendRole resource accepts the following [input]({{< relref "/docs/i
         <span class="property-type">string</span>
     </dt>
     <dd>{{% md %}}Specifies a comma-separated list of extensions that certificates can have when signed.
-{{% /md %}}</dd>
-    <dt class="property-optional"
+{{% /md %}}</dd><dt class="property-optional"
             title="Optional">
         <span id="alloweduserkeylengths_go">
 <a href="#alloweduserkeylengths_go" style="color: inherit; text-decoration: inherit;">Allowed<wbr>User<wbr>Key<wbr>Lengths</a>
@@ -668,8 +624,7 @@ The SecretBackendRole resource accepts the following [input]({{< relref "/docs/i
         <span class="property-type">map[string]interface{}</span>
     </dt>
     <dd>{{% md %}}Specifies a map of ssh key types and their expected sizes which are allowed to be signed by the CA type.
-{{% /md %}}</dd>
-    <dt class="property-optional"
+{{% /md %}}</dd><dt class="property-optional"
             title="Optional">
         <span id="allowedusers_go">
 <a href="#allowedusers_go" style="color: inherit; text-decoration: inherit;">Allowed<wbr>Users</a>
@@ -678,8 +633,7 @@ The SecretBackendRole resource accepts the following [input]({{< relref "/docs/i
         <span class="property-type">string</span>
     </dt>
     <dd>{{% md %}}Specifies a comma-separated list of usernames that are to be allowed, only if certain usernames are to be allowed.
-{{% /md %}}</dd>
-    <dt class="property-optional"
+{{% /md %}}</dd><dt class="property-optional"
             title="Optional">
         <span id="alloweduserstemplate_go">
 <a href="#alloweduserstemplate_go" style="color: inherit; text-decoration: inherit;">Allowed<wbr>Users<wbr>Template</a>
@@ -688,8 +642,7 @@ The SecretBackendRole resource accepts the following [input]({{< relref "/docs/i
         <span class="property-type">bool</span>
     </dt>
     <dd>{{% md %}}Specifies if `allowed_users` can be declared using identity template policies. Non-templated users are also permitted.
-{{% /md %}}</dd>
-    <dt class="property-optional"
+{{% /md %}}</dd><dt class="property-optional"
             title="Optional">
         <span id="cidrlist_go">
 <a href="#cidrlist_go" style="color: inherit; text-decoration: inherit;">Cidr<wbr>List</a>
@@ -698,8 +651,7 @@ The SecretBackendRole resource accepts the following [input]({{< relref "/docs/i
         <span class="property-type">string</span>
     </dt>
     <dd>{{% md %}}The comma-separated string of CIDR blocks for which this role is applicable.
-{{% /md %}}</dd>
-    <dt class="property-optional"
+{{% /md %}}</dd><dt class="property-optional"
             title="Optional">
         <span id="defaultcriticaloptions_go">
 <a href="#defaultcriticaloptions_go" style="color: inherit; text-decoration: inherit;">Default<wbr>Critical<wbr>Options</a>
@@ -708,8 +660,7 @@ The SecretBackendRole resource accepts the following [input]({{< relref "/docs/i
         <span class="property-type">map[string]interface{}</span>
     </dt>
     <dd>{{% md %}}Specifies a map of critical options that certificates have when signed.
-{{% /md %}}</dd>
-    <dt class="property-optional"
+{{% /md %}}</dd><dt class="property-optional"
             title="Optional">
         <span id="defaultextensions_go">
 <a href="#defaultextensions_go" style="color: inherit; text-decoration: inherit;">Default<wbr>Extensions</a>
@@ -718,8 +669,7 @@ The SecretBackendRole resource accepts the following [input]({{< relref "/docs/i
         <span class="property-type">map[string]interface{}</span>
     </dt>
     <dd>{{% md %}}Specifies a map of extensions that certificates have when signed.
-{{% /md %}}</dd>
-    <dt class="property-optional"
+{{% /md %}}</dd><dt class="property-optional"
             title="Optional">
         <span id="defaultuser_go">
 <a href="#defaultuser_go" style="color: inherit; text-decoration: inherit;">Default<wbr>User</a>
@@ -728,8 +678,7 @@ The SecretBackendRole resource accepts the following [input]({{< relref "/docs/i
         <span class="property-type">string</span>
     </dt>
     <dd>{{% md %}}Specifies the default username for which a credential will be generated.
-{{% /md %}}</dd>
-    <dt class="property-optional"
+{{% /md %}}</dd><dt class="property-optional"
             title="Optional">
         <span id="keyidformat_go">
 <a href="#keyidformat_go" style="color: inherit; text-decoration: inherit;">Key<wbr>Id<wbr>Format</a>
@@ -738,8 +687,7 @@ The SecretBackendRole resource accepts the following [input]({{< relref "/docs/i
         <span class="property-type">string</span>
     </dt>
     <dd>{{% md %}}Specifies a custom format for the key id of a signed certificate.
-{{% /md %}}</dd>
-    <dt class="property-optional"
+{{% /md %}}</dd><dt class="property-optional"
             title="Optional">
         <span id="maxttl_go">
 <a href="#maxttl_go" style="color: inherit; text-decoration: inherit;">Max<wbr>Ttl</a>
@@ -748,8 +696,7 @@ The SecretBackendRole resource accepts the following [input]({{< relref "/docs/i
         <span class="property-type">string</span>
     </dt>
     <dd>{{% md %}}Specifies the maximum Time To Live value.
-{{% /md %}}</dd>
-    <dt class="property-optional"
+{{% /md %}}</dd><dt class="property-optional"
             title="Optional">
         <span id="name_go">
 <a href="#name_go" style="color: inherit; text-decoration: inherit;">Name</a>
@@ -758,8 +705,7 @@ The SecretBackendRole resource accepts the following [input]({{< relref "/docs/i
         <span class="property-type">string</span>
     </dt>
     <dd>{{% md %}}Specifies the name of the role to create.
-{{% /md %}}</dd>
-    <dt class="property-optional"
+{{% /md %}}</dd><dt class="property-optional"
             title="Optional">
         <span id="ttl_go">
 <a href="#ttl_go" style="color: inherit; text-decoration: inherit;">Ttl</a>
@@ -768,14 +714,11 @@ The SecretBackendRole resource accepts the following [input]({{< relref "/docs/i
         <span class="property-type">string</span>
     </dt>
     <dd>{{% md %}}Specifies the Time To Live value.
-{{% /md %}}</dd>
-</dl>
+{{% /md %}}</dd></dl>
 {{% /choosable %}}
 
 {{% choosable language nodejs %}}
-<dl class="resources-properties">
-
-    <dt class="property-required"
+<dl class="resources-properties"><dt class="property-required"
             title="Required">
         <span id="backend_nodejs">
 <a href="#backend_nodejs" style="color: inherit; text-decoration: inherit;">backend</a>
@@ -784,8 +727,7 @@ The SecretBackendRole resource accepts the following [input]({{< relref "/docs/i
         <span class="property-type">string</span>
     </dt>
     <dd>{{% md %}}The path where the SSH secret backend is mounted.
-{{% /md %}}</dd>
-    <dt class="property-required"
+{{% /md %}}</dd><dt class="property-required"
             title="Required">
         <span id="keytype_nodejs">
 <a href="#keytype_nodejs" style="color: inherit; text-decoration: inherit;">key<wbr>Type</a>
@@ -794,8 +736,7 @@ The SecretBackendRole resource accepts the following [input]({{< relref "/docs/i
         <span class="property-type">string</span>
     </dt>
     <dd>{{% md %}}Specifies the type of credentials generated by this role. This can be either `otp`, `dynamic` or `ca`.
-{{% /md %}}</dd>
-    <dt class="property-optional"
+{{% /md %}}</dd><dt class="property-optional"
             title="Optional">
         <span id="algorithmsigner_nodejs">
 <a href="#algorithmsigner_nodejs" style="color: inherit; text-decoration: inherit;">algorithm<wbr>Signer</a>
@@ -804,8 +745,7 @@ The SecretBackendRole resource accepts the following [input]({{< relref "/docs/i
         <span class="property-type">string</span>
     </dt>
     <dd>{{% md %}}When supplied, this value specifies a signing algorithm for the key. Possible values: ssh-rsa, rsa-sha2-256, rsa-sha2-512.
-{{% /md %}}</dd>
-    <dt class="property-optional"
+{{% /md %}}</dd><dt class="property-optional"
             title="Optional">
         <span id="allowbaredomains_nodejs">
 <a href="#allowbaredomains_nodejs" style="color: inherit; text-decoration: inherit;">allow<wbr>Bare<wbr>Domains</a>
@@ -814,8 +754,7 @@ The SecretBackendRole resource accepts the following [input]({{< relref "/docs/i
         <span class="property-type">boolean</span>
     </dt>
     <dd>{{% md %}}Specifies if host certificates that are requested are allowed to use the base domains listed in `allowed_domains`.
-{{% /md %}}</dd>
-    <dt class="property-optional"
+{{% /md %}}</dd><dt class="property-optional"
             title="Optional">
         <span id="allowhostcertificates_nodejs">
 <a href="#allowhostcertificates_nodejs" style="color: inherit; text-decoration: inherit;">allow<wbr>Host<wbr>Certificates</a>
@@ -824,8 +763,7 @@ The SecretBackendRole resource accepts the following [input]({{< relref "/docs/i
         <span class="property-type">boolean</span>
     </dt>
     <dd>{{% md %}}Specifies if certificates are allowed to be signed for use as a 'host'.
-{{% /md %}}</dd>
-    <dt class="property-optional"
+{{% /md %}}</dd><dt class="property-optional"
             title="Optional">
         <span id="allowsubdomains_nodejs">
 <a href="#allowsubdomains_nodejs" style="color: inherit; text-decoration: inherit;">allow<wbr>Subdomains</a>
@@ -834,8 +772,7 @@ The SecretBackendRole resource accepts the following [input]({{< relref "/docs/i
         <span class="property-type">boolean</span>
     </dt>
     <dd>{{% md %}}Specifies if host certificates that are requested are allowed to be subdomains of those listed in `allowed_domains`.
-{{% /md %}}</dd>
-    <dt class="property-optional"
+{{% /md %}}</dd><dt class="property-optional"
             title="Optional">
         <span id="allowusercertificates_nodejs">
 <a href="#allowusercertificates_nodejs" style="color: inherit; text-decoration: inherit;">allow<wbr>User<wbr>Certificates</a>
@@ -844,8 +781,7 @@ The SecretBackendRole resource accepts the following [input]({{< relref "/docs/i
         <span class="property-type">boolean</span>
     </dt>
     <dd>{{% md %}}Specifies if certificates are allowed to be signed for use as a 'user'.
-{{% /md %}}</dd>
-    <dt class="property-optional"
+{{% /md %}}</dd><dt class="property-optional"
             title="Optional">
         <span id="allowuserkeyids_nodejs">
 <a href="#allowuserkeyids_nodejs" style="color: inherit; text-decoration: inherit;">allow<wbr>User<wbr>Key<wbr>Ids</a>
@@ -854,8 +790,7 @@ The SecretBackendRole resource accepts the following [input]({{< relref "/docs/i
         <span class="property-type">boolean</span>
     </dt>
     <dd>{{% md %}}Specifies if users can override the key ID for a signed certificate with the `key_id` field.
-{{% /md %}}</dd>
-    <dt class="property-optional"
+{{% /md %}}</dd><dt class="property-optional"
             title="Optional">
         <span id="allowedcriticaloptions_nodejs">
 <a href="#allowedcriticaloptions_nodejs" style="color: inherit; text-decoration: inherit;">allowed<wbr>Critical<wbr>Options</a>
@@ -864,8 +799,7 @@ The SecretBackendRole resource accepts the following [input]({{< relref "/docs/i
         <span class="property-type">string</span>
     </dt>
     <dd>{{% md %}}Specifies a comma-separated list of critical options that certificates can have when signed.
-{{% /md %}}</dd>
-    <dt class="property-optional"
+{{% /md %}}</dd><dt class="property-optional"
             title="Optional">
         <span id="alloweddomains_nodejs">
 <a href="#alloweddomains_nodejs" style="color: inherit; text-decoration: inherit;">allowed<wbr>Domains</a>
@@ -874,8 +808,7 @@ The SecretBackendRole resource accepts the following [input]({{< relref "/docs/i
         <span class="property-type">string</span>
     </dt>
     <dd>{{% md %}}The list of domains for which a client can request a host certificate.
-{{% /md %}}</dd>
-    <dt class="property-optional"
+{{% /md %}}</dd><dt class="property-optional"
             title="Optional">
         <span id="allowedextensions_nodejs">
 <a href="#allowedextensions_nodejs" style="color: inherit; text-decoration: inherit;">allowed<wbr>Extensions</a>
@@ -884,8 +817,7 @@ The SecretBackendRole resource accepts the following [input]({{< relref "/docs/i
         <span class="property-type">string</span>
     </dt>
     <dd>{{% md %}}Specifies a comma-separated list of extensions that certificates can have when signed.
-{{% /md %}}</dd>
-    <dt class="property-optional"
+{{% /md %}}</dd><dt class="property-optional"
             title="Optional">
         <span id="alloweduserkeylengths_nodejs">
 <a href="#alloweduserkeylengths_nodejs" style="color: inherit; text-decoration: inherit;">allowed<wbr>User<wbr>Key<wbr>Lengths</a>
@@ -894,8 +826,7 @@ The SecretBackendRole resource accepts the following [input]({{< relref "/docs/i
         <span class="property-type">{[key: string]: any}</span>
     </dt>
     <dd>{{% md %}}Specifies a map of ssh key types and their expected sizes which are allowed to be signed by the CA type.
-{{% /md %}}</dd>
-    <dt class="property-optional"
+{{% /md %}}</dd><dt class="property-optional"
             title="Optional">
         <span id="allowedusers_nodejs">
 <a href="#allowedusers_nodejs" style="color: inherit; text-decoration: inherit;">allowed<wbr>Users</a>
@@ -904,8 +835,7 @@ The SecretBackendRole resource accepts the following [input]({{< relref "/docs/i
         <span class="property-type">string</span>
     </dt>
     <dd>{{% md %}}Specifies a comma-separated list of usernames that are to be allowed, only if certain usernames are to be allowed.
-{{% /md %}}</dd>
-    <dt class="property-optional"
+{{% /md %}}</dd><dt class="property-optional"
             title="Optional">
         <span id="alloweduserstemplate_nodejs">
 <a href="#alloweduserstemplate_nodejs" style="color: inherit; text-decoration: inherit;">allowed<wbr>Users<wbr>Template</a>
@@ -914,8 +844,7 @@ The SecretBackendRole resource accepts the following [input]({{< relref "/docs/i
         <span class="property-type">boolean</span>
     </dt>
     <dd>{{% md %}}Specifies if `allowed_users` can be declared using identity template policies. Non-templated users are also permitted.
-{{% /md %}}</dd>
-    <dt class="property-optional"
+{{% /md %}}</dd><dt class="property-optional"
             title="Optional">
         <span id="cidrlist_nodejs">
 <a href="#cidrlist_nodejs" style="color: inherit; text-decoration: inherit;">cidr<wbr>List</a>
@@ -924,8 +853,7 @@ The SecretBackendRole resource accepts the following [input]({{< relref "/docs/i
         <span class="property-type">string</span>
     </dt>
     <dd>{{% md %}}The comma-separated string of CIDR blocks for which this role is applicable.
-{{% /md %}}</dd>
-    <dt class="property-optional"
+{{% /md %}}</dd><dt class="property-optional"
             title="Optional">
         <span id="defaultcriticaloptions_nodejs">
 <a href="#defaultcriticaloptions_nodejs" style="color: inherit; text-decoration: inherit;">default<wbr>Critical<wbr>Options</a>
@@ -934,8 +862,7 @@ The SecretBackendRole resource accepts the following [input]({{< relref "/docs/i
         <span class="property-type">{[key: string]: any}</span>
     </dt>
     <dd>{{% md %}}Specifies a map of critical options that certificates have when signed.
-{{% /md %}}</dd>
-    <dt class="property-optional"
+{{% /md %}}</dd><dt class="property-optional"
             title="Optional">
         <span id="defaultextensions_nodejs">
 <a href="#defaultextensions_nodejs" style="color: inherit; text-decoration: inherit;">default<wbr>Extensions</a>
@@ -944,8 +871,7 @@ The SecretBackendRole resource accepts the following [input]({{< relref "/docs/i
         <span class="property-type">{[key: string]: any}</span>
     </dt>
     <dd>{{% md %}}Specifies a map of extensions that certificates have when signed.
-{{% /md %}}</dd>
-    <dt class="property-optional"
+{{% /md %}}</dd><dt class="property-optional"
             title="Optional">
         <span id="defaultuser_nodejs">
 <a href="#defaultuser_nodejs" style="color: inherit; text-decoration: inherit;">default<wbr>User</a>
@@ -954,8 +880,7 @@ The SecretBackendRole resource accepts the following [input]({{< relref "/docs/i
         <span class="property-type">string</span>
     </dt>
     <dd>{{% md %}}Specifies the default username for which a credential will be generated.
-{{% /md %}}</dd>
-    <dt class="property-optional"
+{{% /md %}}</dd><dt class="property-optional"
             title="Optional">
         <span id="keyidformat_nodejs">
 <a href="#keyidformat_nodejs" style="color: inherit; text-decoration: inherit;">key<wbr>Id<wbr>Format</a>
@@ -964,8 +889,7 @@ The SecretBackendRole resource accepts the following [input]({{< relref "/docs/i
         <span class="property-type">string</span>
     </dt>
     <dd>{{% md %}}Specifies a custom format for the key id of a signed certificate.
-{{% /md %}}</dd>
-    <dt class="property-optional"
+{{% /md %}}</dd><dt class="property-optional"
             title="Optional">
         <span id="maxttl_nodejs">
 <a href="#maxttl_nodejs" style="color: inherit; text-decoration: inherit;">max<wbr>Ttl</a>
@@ -974,8 +898,7 @@ The SecretBackendRole resource accepts the following [input]({{< relref "/docs/i
         <span class="property-type">string</span>
     </dt>
     <dd>{{% md %}}Specifies the maximum Time To Live value.
-{{% /md %}}</dd>
-    <dt class="property-optional"
+{{% /md %}}</dd><dt class="property-optional"
             title="Optional">
         <span id="name_nodejs">
 <a href="#name_nodejs" style="color: inherit; text-decoration: inherit;">name</a>
@@ -984,8 +907,7 @@ The SecretBackendRole resource accepts the following [input]({{< relref "/docs/i
         <span class="property-type">string</span>
     </dt>
     <dd>{{% md %}}Specifies the name of the role to create.
-{{% /md %}}</dd>
-    <dt class="property-optional"
+{{% /md %}}</dd><dt class="property-optional"
             title="Optional">
         <span id="ttl_nodejs">
 <a href="#ttl_nodejs" style="color: inherit; text-decoration: inherit;">ttl</a>
@@ -994,14 +916,11 @@ The SecretBackendRole resource accepts the following [input]({{< relref "/docs/i
         <span class="property-type">string</span>
     </dt>
     <dd>{{% md %}}Specifies the Time To Live value.
-{{% /md %}}</dd>
-</dl>
+{{% /md %}}</dd></dl>
 {{% /choosable %}}
 
 {{% choosable language python %}}
-<dl class="resources-properties">
-
-    <dt class="property-required"
+<dl class="resources-properties"><dt class="property-required"
             title="Required">
         <span id="backend_python">
 <a href="#backend_python" style="color: inherit; text-decoration: inherit;">backend</a>
@@ -1010,8 +929,7 @@ The SecretBackendRole resource accepts the following [input]({{< relref "/docs/i
         <span class="property-type">str</span>
     </dt>
     <dd>{{% md %}}The path where the SSH secret backend is mounted.
-{{% /md %}}</dd>
-    <dt class="property-required"
+{{% /md %}}</dd><dt class="property-required"
             title="Required">
         <span id="key_type_python">
 <a href="#key_type_python" style="color: inherit; text-decoration: inherit;">key_<wbr>type</a>
@@ -1020,8 +938,7 @@ The SecretBackendRole resource accepts the following [input]({{< relref "/docs/i
         <span class="property-type">str</span>
     </dt>
     <dd>{{% md %}}Specifies the type of credentials generated by this role. This can be either `otp`, `dynamic` or `ca`.
-{{% /md %}}</dd>
-    <dt class="property-optional"
+{{% /md %}}</dd><dt class="property-optional"
             title="Optional">
         <span id="algorithm_signer_python">
 <a href="#algorithm_signer_python" style="color: inherit; text-decoration: inherit;">algorithm_<wbr>signer</a>
@@ -1030,8 +947,7 @@ The SecretBackendRole resource accepts the following [input]({{< relref "/docs/i
         <span class="property-type">str</span>
     </dt>
     <dd>{{% md %}}When supplied, this value specifies a signing algorithm for the key. Possible values: ssh-rsa, rsa-sha2-256, rsa-sha2-512.
-{{% /md %}}</dd>
-    <dt class="property-optional"
+{{% /md %}}</dd><dt class="property-optional"
             title="Optional">
         <span id="allow_bare_domains_python">
 <a href="#allow_bare_domains_python" style="color: inherit; text-decoration: inherit;">allow_<wbr>bare_<wbr>domains</a>
@@ -1040,8 +956,7 @@ The SecretBackendRole resource accepts the following [input]({{< relref "/docs/i
         <span class="property-type">bool</span>
     </dt>
     <dd>{{% md %}}Specifies if host certificates that are requested are allowed to use the base domains listed in `allowed_domains`.
-{{% /md %}}</dd>
-    <dt class="property-optional"
+{{% /md %}}</dd><dt class="property-optional"
             title="Optional">
         <span id="allow_host_certificates_python">
 <a href="#allow_host_certificates_python" style="color: inherit; text-decoration: inherit;">allow_<wbr>host_<wbr>certificates</a>
@@ -1050,8 +965,7 @@ The SecretBackendRole resource accepts the following [input]({{< relref "/docs/i
         <span class="property-type">bool</span>
     </dt>
     <dd>{{% md %}}Specifies if certificates are allowed to be signed for use as a 'host'.
-{{% /md %}}</dd>
-    <dt class="property-optional"
+{{% /md %}}</dd><dt class="property-optional"
             title="Optional">
         <span id="allow_subdomains_python">
 <a href="#allow_subdomains_python" style="color: inherit; text-decoration: inherit;">allow_<wbr>subdomains</a>
@@ -1060,8 +974,7 @@ The SecretBackendRole resource accepts the following [input]({{< relref "/docs/i
         <span class="property-type">bool</span>
     </dt>
     <dd>{{% md %}}Specifies if host certificates that are requested are allowed to be subdomains of those listed in `allowed_domains`.
-{{% /md %}}</dd>
-    <dt class="property-optional"
+{{% /md %}}</dd><dt class="property-optional"
             title="Optional">
         <span id="allow_user_certificates_python">
 <a href="#allow_user_certificates_python" style="color: inherit; text-decoration: inherit;">allow_<wbr>user_<wbr>certificates</a>
@@ -1070,8 +983,7 @@ The SecretBackendRole resource accepts the following [input]({{< relref "/docs/i
         <span class="property-type">bool</span>
     </dt>
     <dd>{{% md %}}Specifies if certificates are allowed to be signed for use as a 'user'.
-{{% /md %}}</dd>
-    <dt class="property-optional"
+{{% /md %}}</dd><dt class="property-optional"
             title="Optional">
         <span id="allow_user_key_ids_python">
 <a href="#allow_user_key_ids_python" style="color: inherit; text-decoration: inherit;">allow_<wbr>user_<wbr>key_<wbr>ids</a>
@@ -1080,8 +992,7 @@ The SecretBackendRole resource accepts the following [input]({{< relref "/docs/i
         <span class="property-type">bool</span>
     </dt>
     <dd>{{% md %}}Specifies if users can override the key ID for a signed certificate with the `key_id` field.
-{{% /md %}}</dd>
-    <dt class="property-optional"
+{{% /md %}}</dd><dt class="property-optional"
             title="Optional">
         <span id="allowed_critical_options_python">
 <a href="#allowed_critical_options_python" style="color: inherit; text-decoration: inherit;">allowed_<wbr>critical_<wbr>options</a>
@@ -1090,8 +1001,7 @@ The SecretBackendRole resource accepts the following [input]({{< relref "/docs/i
         <span class="property-type">str</span>
     </dt>
     <dd>{{% md %}}Specifies a comma-separated list of critical options that certificates can have when signed.
-{{% /md %}}</dd>
-    <dt class="property-optional"
+{{% /md %}}</dd><dt class="property-optional"
             title="Optional">
         <span id="allowed_domains_python">
 <a href="#allowed_domains_python" style="color: inherit; text-decoration: inherit;">allowed_<wbr>domains</a>
@@ -1100,8 +1010,7 @@ The SecretBackendRole resource accepts the following [input]({{< relref "/docs/i
         <span class="property-type">str</span>
     </dt>
     <dd>{{% md %}}The list of domains for which a client can request a host certificate.
-{{% /md %}}</dd>
-    <dt class="property-optional"
+{{% /md %}}</dd><dt class="property-optional"
             title="Optional">
         <span id="allowed_extensions_python">
 <a href="#allowed_extensions_python" style="color: inherit; text-decoration: inherit;">allowed_<wbr>extensions</a>
@@ -1110,8 +1019,7 @@ The SecretBackendRole resource accepts the following [input]({{< relref "/docs/i
         <span class="property-type">str</span>
     </dt>
     <dd>{{% md %}}Specifies a comma-separated list of extensions that certificates can have when signed.
-{{% /md %}}</dd>
-    <dt class="property-optional"
+{{% /md %}}</dd><dt class="property-optional"
             title="Optional">
         <span id="allowed_user_key_lengths_python">
 <a href="#allowed_user_key_lengths_python" style="color: inherit; text-decoration: inherit;">allowed_<wbr>user_<wbr>key_<wbr>lengths</a>
@@ -1120,8 +1028,7 @@ The SecretBackendRole resource accepts the following [input]({{< relref "/docs/i
         <span class="property-type">Mapping[str, Any]</span>
     </dt>
     <dd>{{% md %}}Specifies a map of ssh key types and their expected sizes which are allowed to be signed by the CA type.
-{{% /md %}}</dd>
-    <dt class="property-optional"
+{{% /md %}}</dd><dt class="property-optional"
             title="Optional">
         <span id="allowed_users_python">
 <a href="#allowed_users_python" style="color: inherit; text-decoration: inherit;">allowed_<wbr>users</a>
@@ -1130,8 +1037,7 @@ The SecretBackendRole resource accepts the following [input]({{< relref "/docs/i
         <span class="property-type">str</span>
     </dt>
     <dd>{{% md %}}Specifies a comma-separated list of usernames that are to be allowed, only if certain usernames are to be allowed.
-{{% /md %}}</dd>
-    <dt class="property-optional"
+{{% /md %}}</dd><dt class="property-optional"
             title="Optional">
         <span id="allowed_users_template_python">
 <a href="#allowed_users_template_python" style="color: inherit; text-decoration: inherit;">allowed_<wbr>users_<wbr>template</a>
@@ -1140,8 +1046,7 @@ The SecretBackendRole resource accepts the following [input]({{< relref "/docs/i
         <span class="property-type">bool</span>
     </dt>
     <dd>{{% md %}}Specifies if `allowed_users` can be declared using identity template policies. Non-templated users are also permitted.
-{{% /md %}}</dd>
-    <dt class="property-optional"
+{{% /md %}}</dd><dt class="property-optional"
             title="Optional">
         <span id="cidr_list_python">
 <a href="#cidr_list_python" style="color: inherit; text-decoration: inherit;">cidr_<wbr>list</a>
@@ -1150,8 +1055,7 @@ The SecretBackendRole resource accepts the following [input]({{< relref "/docs/i
         <span class="property-type">str</span>
     </dt>
     <dd>{{% md %}}The comma-separated string of CIDR blocks for which this role is applicable.
-{{% /md %}}</dd>
-    <dt class="property-optional"
+{{% /md %}}</dd><dt class="property-optional"
             title="Optional">
         <span id="default_critical_options_python">
 <a href="#default_critical_options_python" style="color: inherit; text-decoration: inherit;">default_<wbr>critical_<wbr>options</a>
@@ -1160,8 +1064,7 @@ The SecretBackendRole resource accepts the following [input]({{< relref "/docs/i
         <span class="property-type">Mapping[str, Any]</span>
     </dt>
     <dd>{{% md %}}Specifies a map of critical options that certificates have when signed.
-{{% /md %}}</dd>
-    <dt class="property-optional"
+{{% /md %}}</dd><dt class="property-optional"
             title="Optional">
         <span id="default_extensions_python">
 <a href="#default_extensions_python" style="color: inherit; text-decoration: inherit;">default_<wbr>extensions</a>
@@ -1170,8 +1073,7 @@ The SecretBackendRole resource accepts the following [input]({{< relref "/docs/i
         <span class="property-type">Mapping[str, Any]</span>
     </dt>
     <dd>{{% md %}}Specifies a map of extensions that certificates have when signed.
-{{% /md %}}</dd>
-    <dt class="property-optional"
+{{% /md %}}</dd><dt class="property-optional"
             title="Optional">
         <span id="default_user_python">
 <a href="#default_user_python" style="color: inherit; text-decoration: inherit;">default_<wbr>user</a>
@@ -1180,8 +1082,7 @@ The SecretBackendRole resource accepts the following [input]({{< relref "/docs/i
         <span class="property-type">str</span>
     </dt>
     <dd>{{% md %}}Specifies the default username for which a credential will be generated.
-{{% /md %}}</dd>
-    <dt class="property-optional"
+{{% /md %}}</dd><dt class="property-optional"
             title="Optional">
         <span id="key_id_format_python">
 <a href="#key_id_format_python" style="color: inherit; text-decoration: inherit;">key_<wbr>id_<wbr>format</a>
@@ -1190,8 +1091,7 @@ The SecretBackendRole resource accepts the following [input]({{< relref "/docs/i
         <span class="property-type">str</span>
     </dt>
     <dd>{{% md %}}Specifies a custom format for the key id of a signed certificate.
-{{% /md %}}</dd>
-    <dt class="property-optional"
+{{% /md %}}</dd><dt class="property-optional"
             title="Optional">
         <span id="max_ttl_python">
 <a href="#max_ttl_python" style="color: inherit; text-decoration: inherit;">max_<wbr>ttl</a>
@@ -1200,8 +1100,7 @@ The SecretBackendRole resource accepts the following [input]({{< relref "/docs/i
         <span class="property-type">str</span>
     </dt>
     <dd>{{% md %}}Specifies the maximum Time To Live value.
-{{% /md %}}</dd>
-    <dt class="property-optional"
+{{% /md %}}</dd><dt class="property-optional"
             title="Optional">
         <span id="name_python">
 <a href="#name_python" style="color: inherit; text-decoration: inherit;">name</a>
@@ -1210,8 +1109,7 @@ The SecretBackendRole resource accepts the following [input]({{< relref "/docs/i
         <span class="property-type">str</span>
     </dt>
     <dd>{{% md %}}Specifies the name of the role to create.
-{{% /md %}}</dd>
-    <dt class="property-optional"
+{{% /md %}}</dd><dt class="property-optional"
             title="Optional">
         <span id="ttl_python">
 <a href="#ttl_python" style="color: inherit; text-decoration: inherit;">ttl</a>
@@ -1220,8 +1118,7 @@ The SecretBackendRole resource accepts the following [input]({{< relref "/docs/i
         <span class="property-type">str</span>
     </dt>
     <dd>{{% md %}}Specifies the Time To Live value.
-{{% /md %}}</dd>
-</dl>
+{{% /md %}}</dd></dl>
 {{% /choosable %}}
 
 
@@ -1232,9 +1129,7 @@ All [input](#inputs) properties are implicitly available as output properties. A
 
 
 {{% choosable language csharp %}}
-<dl class="resources-properties">
-
-    <dt class="property-"
+<dl class="resources-properties"><dt class="property-"
             title="">
         <span id="id_csharp">
 <a href="#id_csharp" style="color: inherit; text-decoration: inherit;">Id</a>
@@ -1242,14 +1137,11 @@ All [input](#inputs) properties are implicitly available as output properties. A
         <span class="property-indicator"></span>
         <span class="property-type">string</span>
     </dt>
-    <dd>{{% md %}}The provider-assigned unique ID for this managed resource.{{% /md %}}</dd>
-</dl>
+    <dd>{{% md %}}The provider-assigned unique ID for this managed resource.{{% /md %}}</dd></dl>
 {{% /choosable %}}
 
 {{% choosable language go %}}
-<dl class="resources-properties">
-
-    <dt class="property-"
+<dl class="resources-properties"><dt class="property-"
             title="">
         <span id="id_go">
 <a href="#id_go" style="color: inherit; text-decoration: inherit;">Id</a>
@@ -1257,14 +1149,11 @@ All [input](#inputs) properties are implicitly available as output properties. A
         <span class="property-indicator"></span>
         <span class="property-type">string</span>
     </dt>
-    <dd>{{% md %}}The provider-assigned unique ID for this managed resource.{{% /md %}}</dd>
-</dl>
+    <dd>{{% md %}}The provider-assigned unique ID for this managed resource.{{% /md %}}</dd></dl>
 {{% /choosable %}}
 
 {{% choosable language nodejs %}}
-<dl class="resources-properties">
-
-    <dt class="property-"
+<dl class="resources-properties"><dt class="property-"
             title="">
         <span id="id_nodejs">
 <a href="#id_nodejs" style="color: inherit; text-decoration: inherit;">id</a>
@@ -1272,14 +1161,11 @@ All [input](#inputs) properties are implicitly available as output properties. A
         <span class="property-indicator"></span>
         <span class="property-type">string</span>
     </dt>
-    <dd>{{% md %}}The provider-assigned unique ID for this managed resource.{{% /md %}}</dd>
-</dl>
+    <dd>{{% md %}}The provider-assigned unique ID for this managed resource.{{% /md %}}</dd></dl>
 {{% /choosable %}}
 
 {{% choosable language python %}}
-<dl class="resources-properties">
-
-    <dt class="property-"
+<dl class="resources-properties"><dt class="property-"
             title="">
         <span id="id_python">
 <a href="#id_python" style="color: inherit; text-decoration: inherit;">id</a>
@@ -1287,8 +1173,7 @@ All [input](#inputs) properties are implicitly available as output properties. A
         <span class="property-indicator"></span>
         <span class="property-type">str</span>
     </dt>
-    <dd>{{% md %}}The provider-assigned unique ID for this managed resource.{{% /md %}}</dd>
-</dl>
+    <dd>{{% md %}}The provider-assigned unique ID for this managed resource.{{% /md %}}</dd></dl>
 {{% /choosable %}}
 
 
@@ -1415,9 +1300,7 @@ The following state arguments are supported:
 
 
 {{% choosable language csharp %}}
-<dl class="resources-properties">
-
-    <dt class="property-optional"
+<dl class="resources-properties"><dt class="property-optional"
             title="Optional">
         <span id="state_algorithmsigner_csharp">
 <a href="#state_algorithmsigner_csharp" style="color: inherit; text-decoration: inherit;">Algorithm<wbr>Signer</a>
@@ -1426,8 +1309,7 @@ The following state arguments are supported:
         <span class="property-type">string</span>
     </dt>
     <dd>{{% md %}}When supplied, this value specifies a signing algorithm for the key. Possible values: ssh-rsa, rsa-sha2-256, rsa-sha2-512.
-{{% /md %}}</dd>
-    <dt class="property-optional"
+{{% /md %}}</dd><dt class="property-optional"
             title="Optional">
         <span id="state_allowbaredomains_csharp">
 <a href="#state_allowbaredomains_csharp" style="color: inherit; text-decoration: inherit;">Allow<wbr>Bare<wbr>Domains</a>
@@ -1436,8 +1318,7 @@ The following state arguments are supported:
         <span class="property-type">bool</span>
     </dt>
     <dd>{{% md %}}Specifies if host certificates that are requested are allowed to use the base domains listed in `allowed_domains`.
-{{% /md %}}</dd>
-    <dt class="property-optional"
+{{% /md %}}</dd><dt class="property-optional"
             title="Optional">
         <span id="state_allowhostcertificates_csharp">
 <a href="#state_allowhostcertificates_csharp" style="color: inherit; text-decoration: inherit;">Allow<wbr>Host<wbr>Certificates</a>
@@ -1446,8 +1327,7 @@ The following state arguments are supported:
         <span class="property-type">bool</span>
     </dt>
     <dd>{{% md %}}Specifies if certificates are allowed to be signed for use as a 'host'.
-{{% /md %}}</dd>
-    <dt class="property-optional"
+{{% /md %}}</dd><dt class="property-optional"
             title="Optional">
         <span id="state_allowsubdomains_csharp">
 <a href="#state_allowsubdomains_csharp" style="color: inherit; text-decoration: inherit;">Allow<wbr>Subdomains</a>
@@ -1456,8 +1336,7 @@ The following state arguments are supported:
         <span class="property-type">bool</span>
     </dt>
     <dd>{{% md %}}Specifies if host certificates that are requested are allowed to be subdomains of those listed in `allowed_domains`.
-{{% /md %}}</dd>
-    <dt class="property-optional"
+{{% /md %}}</dd><dt class="property-optional"
             title="Optional">
         <span id="state_allowusercertificates_csharp">
 <a href="#state_allowusercertificates_csharp" style="color: inherit; text-decoration: inherit;">Allow<wbr>User<wbr>Certificates</a>
@@ -1466,8 +1345,7 @@ The following state arguments are supported:
         <span class="property-type">bool</span>
     </dt>
     <dd>{{% md %}}Specifies if certificates are allowed to be signed for use as a 'user'.
-{{% /md %}}</dd>
-    <dt class="property-optional"
+{{% /md %}}</dd><dt class="property-optional"
             title="Optional">
         <span id="state_allowuserkeyids_csharp">
 <a href="#state_allowuserkeyids_csharp" style="color: inherit; text-decoration: inherit;">Allow<wbr>User<wbr>Key<wbr>Ids</a>
@@ -1476,8 +1354,7 @@ The following state arguments are supported:
         <span class="property-type">bool</span>
     </dt>
     <dd>{{% md %}}Specifies if users can override the key ID for a signed certificate with the `key_id` field.
-{{% /md %}}</dd>
-    <dt class="property-optional"
+{{% /md %}}</dd><dt class="property-optional"
             title="Optional">
         <span id="state_allowedcriticaloptions_csharp">
 <a href="#state_allowedcriticaloptions_csharp" style="color: inherit; text-decoration: inherit;">Allowed<wbr>Critical<wbr>Options</a>
@@ -1486,8 +1363,7 @@ The following state arguments are supported:
         <span class="property-type">string</span>
     </dt>
     <dd>{{% md %}}Specifies a comma-separated list of critical options that certificates can have when signed.
-{{% /md %}}</dd>
-    <dt class="property-optional"
+{{% /md %}}</dd><dt class="property-optional"
             title="Optional">
         <span id="state_alloweddomains_csharp">
 <a href="#state_alloweddomains_csharp" style="color: inherit; text-decoration: inherit;">Allowed<wbr>Domains</a>
@@ -1496,8 +1372,7 @@ The following state arguments are supported:
         <span class="property-type">string</span>
     </dt>
     <dd>{{% md %}}The list of domains for which a client can request a host certificate.
-{{% /md %}}</dd>
-    <dt class="property-optional"
+{{% /md %}}</dd><dt class="property-optional"
             title="Optional">
         <span id="state_allowedextensions_csharp">
 <a href="#state_allowedextensions_csharp" style="color: inherit; text-decoration: inherit;">Allowed<wbr>Extensions</a>
@@ -1506,8 +1381,7 @@ The following state arguments are supported:
         <span class="property-type">string</span>
     </dt>
     <dd>{{% md %}}Specifies a comma-separated list of extensions that certificates can have when signed.
-{{% /md %}}</dd>
-    <dt class="property-optional"
+{{% /md %}}</dd><dt class="property-optional"
             title="Optional">
         <span id="state_alloweduserkeylengths_csharp">
 <a href="#state_alloweduserkeylengths_csharp" style="color: inherit; text-decoration: inherit;">Allowed<wbr>User<wbr>Key<wbr>Lengths</a>
@@ -1516,8 +1390,7 @@ The following state arguments are supported:
         <span class="property-type">Dictionary&lt;string, object&gt;</span>
     </dt>
     <dd>{{% md %}}Specifies a map of ssh key types and their expected sizes which are allowed to be signed by the CA type.
-{{% /md %}}</dd>
-    <dt class="property-optional"
+{{% /md %}}</dd><dt class="property-optional"
             title="Optional">
         <span id="state_allowedusers_csharp">
 <a href="#state_allowedusers_csharp" style="color: inherit; text-decoration: inherit;">Allowed<wbr>Users</a>
@@ -1526,8 +1399,7 @@ The following state arguments are supported:
         <span class="property-type">string</span>
     </dt>
     <dd>{{% md %}}Specifies a comma-separated list of usernames that are to be allowed, only if certain usernames are to be allowed.
-{{% /md %}}</dd>
-    <dt class="property-optional"
+{{% /md %}}</dd><dt class="property-optional"
             title="Optional">
         <span id="state_alloweduserstemplate_csharp">
 <a href="#state_alloweduserstemplate_csharp" style="color: inherit; text-decoration: inherit;">Allowed<wbr>Users<wbr>Template</a>
@@ -1536,8 +1408,7 @@ The following state arguments are supported:
         <span class="property-type">bool</span>
     </dt>
     <dd>{{% md %}}Specifies if `allowed_users` can be declared using identity template policies. Non-templated users are also permitted.
-{{% /md %}}</dd>
-    <dt class="property-optional"
+{{% /md %}}</dd><dt class="property-optional"
             title="Optional">
         <span id="state_backend_csharp">
 <a href="#state_backend_csharp" style="color: inherit; text-decoration: inherit;">Backend</a>
@@ -1546,8 +1417,7 @@ The following state arguments are supported:
         <span class="property-type">string</span>
     </dt>
     <dd>{{% md %}}The path where the SSH secret backend is mounted.
-{{% /md %}}</dd>
-    <dt class="property-optional"
+{{% /md %}}</dd><dt class="property-optional"
             title="Optional">
         <span id="state_cidrlist_csharp">
 <a href="#state_cidrlist_csharp" style="color: inherit; text-decoration: inherit;">Cidr<wbr>List</a>
@@ -1556,8 +1426,7 @@ The following state arguments are supported:
         <span class="property-type">string</span>
     </dt>
     <dd>{{% md %}}The comma-separated string of CIDR blocks for which this role is applicable.
-{{% /md %}}</dd>
-    <dt class="property-optional"
+{{% /md %}}</dd><dt class="property-optional"
             title="Optional">
         <span id="state_defaultcriticaloptions_csharp">
 <a href="#state_defaultcriticaloptions_csharp" style="color: inherit; text-decoration: inherit;">Default<wbr>Critical<wbr>Options</a>
@@ -1566,8 +1435,7 @@ The following state arguments are supported:
         <span class="property-type">Dictionary&lt;string, object&gt;</span>
     </dt>
     <dd>{{% md %}}Specifies a map of critical options that certificates have when signed.
-{{% /md %}}</dd>
-    <dt class="property-optional"
+{{% /md %}}</dd><dt class="property-optional"
             title="Optional">
         <span id="state_defaultextensions_csharp">
 <a href="#state_defaultextensions_csharp" style="color: inherit; text-decoration: inherit;">Default<wbr>Extensions</a>
@@ -1576,8 +1444,7 @@ The following state arguments are supported:
         <span class="property-type">Dictionary&lt;string, object&gt;</span>
     </dt>
     <dd>{{% md %}}Specifies a map of extensions that certificates have when signed.
-{{% /md %}}</dd>
-    <dt class="property-optional"
+{{% /md %}}</dd><dt class="property-optional"
             title="Optional">
         <span id="state_defaultuser_csharp">
 <a href="#state_defaultuser_csharp" style="color: inherit; text-decoration: inherit;">Default<wbr>User</a>
@@ -1586,8 +1453,7 @@ The following state arguments are supported:
         <span class="property-type">string</span>
     </dt>
     <dd>{{% md %}}Specifies the default username for which a credential will be generated.
-{{% /md %}}</dd>
-    <dt class="property-optional"
+{{% /md %}}</dd><dt class="property-optional"
             title="Optional">
         <span id="state_keyidformat_csharp">
 <a href="#state_keyidformat_csharp" style="color: inherit; text-decoration: inherit;">Key<wbr>Id<wbr>Format</a>
@@ -1596,8 +1462,7 @@ The following state arguments are supported:
         <span class="property-type">string</span>
     </dt>
     <dd>{{% md %}}Specifies a custom format for the key id of a signed certificate.
-{{% /md %}}</dd>
-    <dt class="property-optional"
+{{% /md %}}</dd><dt class="property-optional"
             title="Optional">
         <span id="state_keytype_csharp">
 <a href="#state_keytype_csharp" style="color: inherit; text-decoration: inherit;">Key<wbr>Type</a>
@@ -1606,8 +1471,7 @@ The following state arguments are supported:
         <span class="property-type">string</span>
     </dt>
     <dd>{{% md %}}Specifies the type of credentials generated by this role. This can be either `otp`, `dynamic` or `ca`.
-{{% /md %}}</dd>
-    <dt class="property-optional"
+{{% /md %}}</dd><dt class="property-optional"
             title="Optional">
         <span id="state_maxttl_csharp">
 <a href="#state_maxttl_csharp" style="color: inherit; text-decoration: inherit;">Max<wbr>Ttl</a>
@@ -1616,8 +1480,7 @@ The following state arguments are supported:
         <span class="property-type">string</span>
     </dt>
     <dd>{{% md %}}Specifies the maximum Time To Live value.
-{{% /md %}}</dd>
-    <dt class="property-optional"
+{{% /md %}}</dd><dt class="property-optional"
             title="Optional">
         <span id="state_name_csharp">
 <a href="#state_name_csharp" style="color: inherit; text-decoration: inherit;">Name</a>
@@ -1626,8 +1489,7 @@ The following state arguments are supported:
         <span class="property-type">string</span>
     </dt>
     <dd>{{% md %}}Specifies the name of the role to create.
-{{% /md %}}</dd>
-    <dt class="property-optional"
+{{% /md %}}</dd><dt class="property-optional"
             title="Optional">
         <span id="state_ttl_csharp">
 <a href="#state_ttl_csharp" style="color: inherit; text-decoration: inherit;">Ttl</a>
@@ -1636,14 +1498,11 @@ The following state arguments are supported:
         <span class="property-type">string</span>
     </dt>
     <dd>{{% md %}}Specifies the Time To Live value.
-{{% /md %}}</dd>
-</dl>
+{{% /md %}}</dd></dl>
 {{% /choosable %}}
 
 {{% choosable language go %}}
-<dl class="resources-properties">
-
-    <dt class="property-optional"
+<dl class="resources-properties"><dt class="property-optional"
             title="Optional">
         <span id="state_algorithmsigner_go">
 <a href="#state_algorithmsigner_go" style="color: inherit; text-decoration: inherit;">Algorithm<wbr>Signer</a>
@@ -1652,8 +1511,7 @@ The following state arguments are supported:
         <span class="property-type">string</span>
     </dt>
     <dd>{{% md %}}When supplied, this value specifies a signing algorithm for the key. Possible values: ssh-rsa, rsa-sha2-256, rsa-sha2-512.
-{{% /md %}}</dd>
-    <dt class="property-optional"
+{{% /md %}}</dd><dt class="property-optional"
             title="Optional">
         <span id="state_allowbaredomains_go">
 <a href="#state_allowbaredomains_go" style="color: inherit; text-decoration: inherit;">Allow<wbr>Bare<wbr>Domains</a>
@@ -1662,8 +1520,7 @@ The following state arguments are supported:
         <span class="property-type">bool</span>
     </dt>
     <dd>{{% md %}}Specifies if host certificates that are requested are allowed to use the base domains listed in `allowed_domains`.
-{{% /md %}}</dd>
-    <dt class="property-optional"
+{{% /md %}}</dd><dt class="property-optional"
             title="Optional">
         <span id="state_allowhostcertificates_go">
 <a href="#state_allowhostcertificates_go" style="color: inherit; text-decoration: inherit;">Allow<wbr>Host<wbr>Certificates</a>
@@ -1672,8 +1529,7 @@ The following state arguments are supported:
         <span class="property-type">bool</span>
     </dt>
     <dd>{{% md %}}Specifies if certificates are allowed to be signed for use as a 'host'.
-{{% /md %}}</dd>
-    <dt class="property-optional"
+{{% /md %}}</dd><dt class="property-optional"
             title="Optional">
         <span id="state_allowsubdomains_go">
 <a href="#state_allowsubdomains_go" style="color: inherit; text-decoration: inherit;">Allow<wbr>Subdomains</a>
@@ -1682,8 +1538,7 @@ The following state arguments are supported:
         <span class="property-type">bool</span>
     </dt>
     <dd>{{% md %}}Specifies if host certificates that are requested are allowed to be subdomains of those listed in `allowed_domains`.
-{{% /md %}}</dd>
-    <dt class="property-optional"
+{{% /md %}}</dd><dt class="property-optional"
             title="Optional">
         <span id="state_allowusercertificates_go">
 <a href="#state_allowusercertificates_go" style="color: inherit; text-decoration: inherit;">Allow<wbr>User<wbr>Certificates</a>
@@ -1692,8 +1547,7 @@ The following state arguments are supported:
         <span class="property-type">bool</span>
     </dt>
     <dd>{{% md %}}Specifies if certificates are allowed to be signed for use as a 'user'.
-{{% /md %}}</dd>
-    <dt class="property-optional"
+{{% /md %}}</dd><dt class="property-optional"
             title="Optional">
         <span id="state_allowuserkeyids_go">
 <a href="#state_allowuserkeyids_go" style="color: inherit; text-decoration: inherit;">Allow<wbr>User<wbr>Key<wbr>Ids</a>
@@ -1702,8 +1556,7 @@ The following state arguments are supported:
         <span class="property-type">bool</span>
     </dt>
     <dd>{{% md %}}Specifies if users can override the key ID for a signed certificate with the `key_id` field.
-{{% /md %}}</dd>
-    <dt class="property-optional"
+{{% /md %}}</dd><dt class="property-optional"
             title="Optional">
         <span id="state_allowedcriticaloptions_go">
 <a href="#state_allowedcriticaloptions_go" style="color: inherit; text-decoration: inherit;">Allowed<wbr>Critical<wbr>Options</a>
@@ -1712,8 +1565,7 @@ The following state arguments are supported:
         <span class="property-type">string</span>
     </dt>
     <dd>{{% md %}}Specifies a comma-separated list of critical options that certificates can have when signed.
-{{% /md %}}</dd>
-    <dt class="property-optional"
+{{% /md %}}</dd><dt class="property-optional"
             title="Optional">
         <span id="state_alloweddomains_go">
 <a href="#state_alloweddomains_go" style="color: inherit; text-decoration: inherit;">Allowed<wbr>Domains</a>
@@ -1722,8 +1574,7 @@ The following state arguments are supported:
         <span class="property-type">string</span>
     </dt>
     <dd>{{% md %}}The list of domains for which a client can request a host certificate.
-{{% /md %}}</dd>
-    <dt class="property-optional"
+{{% /md %}}</dd><dt class="property-optional"
             title="Optional">
         <span id="state_allowedextensions_go">
 <a href="#state_allowedextensions_go" style="color: inherit; text-decoration: inherit;">Allowed<wbr>Extensions</a>
@@ -1732,8 +1583,7 @@ The following state arguments are supported:
         <span class="property-type">string</span>
     </dt>
     <dd>{{% md %}}Specifies a comma-separated list of extensions that certificates can have when signed.
-{{% /md %}}</dd>
-    <dt class="property-optional"
+{{% /md %}}</dd><dt class="property-optional"
             title="Optional">
         <span id="state_alloweduserkeylengths_go">
 <a href="#state_alloweduserkeylengths_go" style="color: inherit; text-decoration: inherit;">Allowed<wbr>User<wbr>Key<wbr>Lengths</a>
@@ -1742,8 +1592,7 @@ The following state arguments are supported:
         <span class="property-type">map[string]interface{}</span>
     </dt>
     <dd>{{% md %}}Specifies a map of ssh key types and their expected sizes which are allowed to be signed by the CA type.
-{{% /md %}}</dd>
-    <dt class="property-optional"
+{{% /md %}}</dd><dt class="property-optional"
             title="Optional">
         <span id="state_allowedusers_go">
 <a href="#state_allowedusers_go" style="color: inherit; text-decoration: inherit;">Allowed<wbr>Users</a>
@@ -1752,8 +1601,7 @@ The following state arguments are supported:
         <span class="property-type">string</span>
     </dt>
     <dd>{{% md %}}Specifies a comma-separated list of usernames that are to be allowed, only if certain usernames are to be allowed.
-{{% /md %}}</dd>
-    <dt class="property-optional"
+{{% /md %}}</dd><dt class="property-optional"
             title="Optional">
         <span id="state_alloweduserstemplate_go">
 <a href="#state_alloweduserstemplate_go" style="color: inherit; text-decoration: inherit;">Allowed<wbr>Users<wbr>Template</a>
@@ -1762,8 +1610,7 @@ The following state arguments are supported:
         <span class="property-type">bool</span>
     </dt>
     <dd>{{% md %}}Specifies if `allowed_users` can be declared using identity template policies. Non-templated users are also permitted.
-{{% /md %}}</dd>
-    <dt class="property-optional"
+{{% /md %}}</dd><dt class="property-optional"
             title="Optional">
         <span id="state_backend_go">
 <a href="#state_backend_go" style="color: inherit; text-decoration: inherit;">Backend</a>
@@ -1772,8 +1619,7 @@ The following state arguments are supported:
         <span class="property-type">string</span>
     </dt>
     <dd>{{% md %}}The path where the SSH secret backend is mounted.
-{{% /md %}}</dd>
-    <dt class="property-optional"
+{{% /md %}}</dd><dt class="property-optional"
             title="Optional">
         <span id="state_cidrlist_go">
 <a href="#state_cidrlist_go" style="color: inherit; text-decoration: inherit;">Cidr<wbr>List</a>
@@ -1782,8 +1628,7 @@ The following state arguments are supported:
         <span class="property-type">string</span>
     </dt>
     <dd>{{% md %}}The comma-separated string of CIDR blocks for which this role is applicable.
-{{% /md %}}</dd>
-    <dt class="property-optional"
+{{% /md %}}</dd><dt class="property-optional"
             title="Optional">
         <span id="state_defaultcriticaloptions_go">
 <a href="#state_defaultcriticaloptions_go" style="color: inherit; text-decoration: inherit;">Default<wbr>Critical<wbr>Options</a>
@@ -1792,8 +1637,7 @@ The following state arguments are supported:
         <span class="property-type">map[string]interface{}</span>
     </dt>
     <dd>{{% md %}}Specifies a map of critical options that certificates have when signed.
-{{% /md %}}</dd>
-    <dt class="property-optional"
+{{% /md %}}</dd><dt class="property-optional"
             title="Optional">
         <span id="state_defaultextensions_go">
 <a href="#state_defaultextensions_go" style="color: inherit; text-decoration: inherit;">Default<wbr>Extensions</a>
@@ -1802,8 +1646,7 @@ The following state arguments are supported:
         <span class="property-type">map[string]interface{}</span>
     </dt>
     <dd>{{% md %}}Specifies a map of extensions that certificates have when signed.
-{{% /md %}}</dd>
-    <dt class="property-optional"
+{{% /md %}}</dd><dt class="property-optional"
             title="Optional">
         <span id="state_defaultuser_go">
 <a href="#state_defaultuser_go" style="color: inherit; text-decoration: inherit;">Default<wbr>User</a>
@@ -1812,8 +1655,7 @@ The following state arguments are supported:
         <span class="property-type">string</span>
     </dt>
     <dd>{{% md %}}Specifies the default username for which a credential will be generated.
-{{% /md %}}</dd>
-    <dt class="property-optional"
+{{% /md %}}</dd><dt class="property-optional"
             title="Optional">
         <span id="state_keyidformat_go">
 <a href="#state_keyidformat_go" style="color: inherit; text-decoration: inherit;">Key<wbr>Id<wbr>Format</a>
@@ -1822,8 +1664,7 @@ The following state arguments are supported:
         <span class="property-type">string</span>
     </dt>
     <dd>{{% md %}}Specifies a custom format for the key id of a signed certificate.
-{{% /md %}}</dd>
-    <dt class="property-optional"
+{{% /md %}}</dd><dt class="property-optional"
             title="Optional">
         <span id="state_keytype_go">
 <a href="#state_keytype_go" style="color: inherit; text-decoration: inherit;">Key<wbr>Type</a>
@@ -1832,8 +1673,7 @@ The following state arguments are supported:
         <span class="property-type">string</span>
     </dt>
     <dd>{{% md %}}Specifies the type of credentials generated by this role. This can be either `otp`, `dynamic` or `ca`.
-{{% /md %}}</dd>
-    <dt class="property-optional"
+{{% /md %}}</dd><dt class="property-optional"
             title="Optional">
         <span id="state_maxttl_go">
 <a href="#state_maxttl_go" style="color: inherit; text-decoration: inherit;">Max<wbr>Ttl</a>
@@ -1842,8 +1682,7 @@ The following state arguments are supported:
         <span class="property-type">string</span>
     </dt>
     <dd>{{% md %}}Specifies the maximum Time To Live value.
-{{% /md %}}</dd>
-    <dt class="property-optional"
+{{% /md %}}</dd><dt class="property-optional"
             title="Optional">
         <span id="state_name_go">
 <a href="#state_name_go" style="color: inherit; text-decoration: inherit;">Name</a>
@@ -1852,8 +1691,7 @@ The following state arguments are supported:
         <span class="property-type">string</span>
     </dt>
     <dd>{{% md %}}Specifies the name of the role to create.
-{{% /md %}}</dd>
-    <dt class="property-optional"
+{{% /md %}}</dd><dt class="property-optional"
             title="Optional">
         <span id="state_ttl_go">
 <a href="#state_ttl_go" style="color: inherit; text-decoration: inherit;">Ttl</a>
@@ -1862,14 +1700,11 @@ The following state arguments are supported:
         <span class="property-type">string</span>
     </dt>
     <dd>{{% md %}}Specifies the Time To Live value.
-{{% /md %}}</dd>
-</dl>
+{{% /md %}}</dd></dl>
 {{% /choosable %}}
 
 {{% choosable language nodejs %}}
-<dl class="resources-properties">
-
-    <dt class="property-optional"
+<dl class="resources-properties"><dt class="property-optional"
             title="Optional">
         <span id="state_algorithmsigner_nodejs">
 <a href="#state_algorithmsigner_nodejs" style="color: inherit; text-decoration: inherit;">algorithm<wbr>Signer</a>
@@ -1878,8 +1713,7 @@ The following state arguments are supported:
         <span class="property-type">string</span>
     </dt>
     <dd>{{% md %}}When supplied, this value specifies a signing algorithm for the key. Possible values: ssh-rsa, rsa-sha2-256, rsa-sha2-512.
-{{% /md %}}</dd>
-    <dt class="property-optional"
+{{% /md %}}</dd><dt class="property-optional"
             title="Optional">
         <span id="state_allowbaredomains_nodejs">
 <a href="#state_allowbaredomains_nodejs" style="color: inherit; text-decoration: inherit;">allow<wbr>Bare<wbr>Domains</a>
@@ -1888,8 +1722,7 @@ The following state arguments are supported:
         <span class="property-type">boolean</span>
     </dt>
     <dd>{{% md %}}Specifies if host certificates that are requested are allowed to use the base domains listed in `allowed_domains`.
-{{% /md %}}</dd>
-    <dt class="property-optional"
+{{% /md %}}</dd><dt class="property-optional"
             title="Optional">
         <span id="state_allowhostcertificates_nodejs">
 <a href="#state_allowhostcertificates_nodejs" style="color: inherit; text-decoration: inherit;">allow<wbr>Host<wbr>Certificates</a>
@@ -1898,8 +1731,7 @@ The following state arguments are supported:
         <span class="property-type">boolean</span>
     </dt>
     <dd>{{% md %}}Specifies if certificates are allowed to be signed for use as a 'host'.
-{{% /md %}}</dd>
-    <dt class="property-optional"
+{{% /md %}}</dd><dt class="property-optional"
             title="Optional">
         <span id="state_allowsubdomains_nodejs">
 <a href="#state_allowsubdomains_nodejs" style="color: inherit; text-decoration: inherit;">allow<wbr>Subdomains</a>
@@ -1908,8 +1740,7 @@ The following state arguments are supported:
         <span class="property-type">boolean</span>
     </dt>
     <dd>{{% md %}}Specifies if host certificates that are requested are allowed to be subdomains of those listed in `allowed_domains`.
-{{% /md %}}</dd>
-    <dt class="property-optional"
+{{% /md %}}</dd><dt class="property-optional"
             title="Optional">
         <span id="state_allowusercertificates_nodejs">
 <a href="#state_allowusercertificates_nodejs" style="color: inherit; text-decoration: inherit;">allow<wbr>User<wbr>Certificates</a>
@@ -1918,8 +1749,7 @@ The following state arguments are supported:
         <span class="property-type">boolean</span>
     </dt>
     <dd>{{% md %}}Specifies if certificates are allowed to be signed for use as a 'user'.
-{{% /md %}}</dd>
-    <dt class="property-optional"
+{{% /md %}}</dd><dt class="property-optional"
             title="Optional">
         <span id="state_allowuserkeyids_nodejs">
 <a href="#state_allowuserkeyids_nodejs" style="color: inherit; text-decoration: inherit;">allow<wbr>User<wbr>Key<wbr>Ids</a>
@@ -1928,8 +1758,7 @@ The following state arguments are supported:
         <span class="property-type">boolean</span>
     </dt>
     <dd>{{% md %}}Specifies if users can override the key ID for a signed certificate with the `key_id` field.
-{{% /md %}}</dd>
-    <dt class="property-optional"
+{{% /md %}}</dd><dt class="property-optional"
             title="Optional">
         <span id="state_allowedcriticaloptions_nodejs">
 <a href="#state_allowedcriticaloptions_nodejs" style="color: inherit; text-decoration: inherit;">allowed<wbr>Critical<wbr>Options</a>
@@ -1938,8 +1767,7 @@ The following state arguments are supported:
         <span class="property-type">string</span>
     </dt>
     <dd>{{% md %}}Specifies a comma-separated list of critical options that certificates can have when signed.
-{{% /md %}}</dd>
-    <dt class="property-optional"
+{{% /md %}}</dd><dt class="property-optional"
             title="Optional">
         <span id="state_alloweddomains_nodejs">
 <a href="#state_alloweddomains_nodejs" style="color: inherit; text-decoration: inherit;">allowed<wbr>Domains</a>
@@ -1948,8 +1776,7 @@ The following state arguments are supported:
         <span class="property-type">string</span>
     </dt>
     <dd>{{% md %}}The list of domains for which a client can request a host certificate.
-{{% /md %}}</dd>
-    <dt class="property-optional"
+{{% /md %}}</dd><dt class="property-optional"
             title="Optional">
         <span id="state_allowedextensions_nodejs">
 <a href="#state_allowedextensions_nodejs" style="color: inherit; text-decoration: inherit;">allowed<wbr>Extensions</a>
@@ -1958,8 +1785,7 @@ The following state arguments are supported:
         <span class="property-type">string</span>
     </dt>
     <dd>{{% md %}}Specifies a comma-separated list of extensions that certificates can have when signed.
-{{% /md %}}</dd>
-    <dt class="property-optional"
+{{% /md %}}</dd><dt class="property-optional"
             title="Optional">
         <span id="state_alloweduserkeylengths_nodejs">
 <a href="#state_alloweduserkeylengths_nodejs" style="color: inherit; text-decoration: inherit;">allowed<wbr>User<wbr>Key<wbr>Lengths</a>
@@ -1968,8 +1794,7 @@ The following state arguments are supported:
         <span class="property-type">{[key: string]: any}</span>
     </dt>
     <dd>{{% md %}}Specifies a map of ssh key types and their expected sizes which are allowed to be signed by the CA type.
-{{% /md %}}</dd>
-    <dt class="property-optional"
+{{% /md %}}</dd><dt class="property-optional"
             title="Optional">
         <span id="state_allowedusers_nodejs">
 <a href="#state_allowedusers_nodejs" style="color: inherit; text-decoration: inherit;">allowed<wbr>Users</a>
@@ -1978,8 +1803,7 @@ The following state arguments are supported:
         <span class="property-type">string</span>
     </dt>
     <dd>{{% md %}}Specifies a comma-separated list of usernames that are to be allowed, only if certain usernames are to be allowed.
-{{% /md %}}</dd>
-    <dt class="property-optional"
+{{% /md %}}</dd><dt class="property-optional"
             title="Optional">
         <span id="state_alloweduserstemplate_nodejs">
 <a href="#state_alloweduserstemplate_nodejs" style="color: inherit; text-decoration: inherit;">allowed<wbr>Users<wbr>Template</a>
@@ -1988,8 +1812,7 @@ The following state arguments are supported:
         <span class="property-type">boolean</span>
     </dt>
     <dd>{{% md %}}Specifies if `allowed_users` can be declared using identity template policies. Non-templated users are also permitted.
-{{% /md %}}</dd>
-    <dt class="property-optional"
+{{% /md %}}</dd><dt class="property-optional"
             title="Optional">
         <span id="state_backend_nodejs">
 <a href="#state_backend_nodejs" style="color: inherit; text-decoration: inherit;">backend</a>
@@ -1998,8 +1821,7 @@ The following state arguments are supported:
         <span class="property-type">string</span>
     </dt>
     <dd>{{% md %}}The path where the SSH secret backend is mounted.
-{{% /md %}}</dd>
-    <dt class="property-optional"
+{{% /md %}}</dd><dt class="property-optional"
             title="Optional">
         <span id="state_cidrlist_nodejs">
 <a href="#state_cidrlist_nodejs" style="color: inherit; text-decoration: inherit;">cidr<wbr>List</a>
@@ -2008,8 +1830,7 @@ The following state arguments are supported:
         <span class="property-type">string</span>
     </dt>
     <dd>{{% md %}}The comma-separated string of CIDR blocks for which this role is applicable.
-{{% /md %}}</dd>
-    <dt class="property-optional"
+{{% /md %}}</dd><dt class="property-optional"
             title="Optional">
         <span id="state_defaultcriticaloptions_nodejs">
 <a href="#state_defaultcriticaloptions_nodejs" style="color: inherit; text-decoration: inherit;">default<wbr>Critical<wbr>Options</a>
@@ -2018,8 +1839,7 @@ The following state arguments are supported:
         <span class="property-type">{[key: string]: any}</span>
     </dt>
     <dd>{{% md %}}Specifies a map of critical options that certificates have when signed.
-{{% /md %}}</dd>
-    <dt class="property-optional"
+{{% /md %}}</dd><dt class="property-optional"
             title="Optional">
         <span id="state_defaultextensions_nodejs">
 <a href="#state_defaultextensions_nodejs" style="color: inherit; text-decoration: inherit;">default<wbr>Extensions</a>
@@ -2028,8 +1848,7 @@ The following state arguments are supported:
         <span class="property-type">{[key: string]: any}</span>
     </dt>
     <dd>{{% md %}}Specifies a map of extensions that certificates have when signed.
-{{% /md %}}</dd>
-    <dt class="property-optional"
+{{% /md %}}</dd><dt class="property-optional"
             title="Optional">
         <span id="state_defaultuser_nodejs">
 <a href="#state_defaultuser_nodejs" style="color: inherit; text-decoration: inherit;">default<wbr>User</a>
@@ -2038,8 +1857,7 @@ The following state arguments are supported:
         <span class="property-type">string</span>
     </dt>
     <dd>{{% md %}}Specifies the default username for which a credential will be generated.
-{{% /md %}}</dd>
-    <dt class="property-optional"
+{{% /md %}}</dd><dt class="property-optional"
             title="Optional">
         <span id="state_keyidformat_nodejs">
 <a href="#state_keyidformat_nodejs" style="color: inherit; text-decoration: inherit;">key<wbr>Id<wbr>Format</a>
@@ -2048,8 +1866,7 @@ The following state arguments are supported:
         <span class="property-type">string</span>
     </dt>
     <dd>{{% md %}}Specifies a custom format for the key id of a signed certificate.
-{{% /md %}}</dd>
-    <dt class="property-optional"
+{{% /md %}}</dd><dt class="property-optional"
             title="Optional">
         <span id="state_keytype_nodejs">
 <a href="#state_keytype_nodejs" style="color: inherit; text-decoration: inherit;">key<wbr>Type</a>
@@ -2058,8 +1875,7 @@ The following state arguments are supported:
         <span class="property-type">string</span>
     </dt>
     <dd>{{% md %}}Specifies the type of credentials generated by this role. This can be either `otp`, `dynamic` or `ca`.
-{{% /md %}}</dd>
-    <dt class="property-optional"
+{{% /md %}}</dd><dt class="property-optional"
             title="Optional">
         <span id="state_maxttl_nodejs">
 <a href="#state_maxttl_nodejs" style="color: inherit; text-decoration: inherit;">max<wbr>Ttl</a>
@@ -2068,8 +1884,7 @@ The following state arguments are supported:
         <span class="property-type">string</span>
     </dt>
     <dd>{{% md %}}Specifies the maximum Time To Live value.
-{{% /md %}}</dd>
-    <dt class="property-optional"
+{{% /md %}}</dd><dt class="property-optional"
             title="Optional">
         <span id="state_name_nodejs">
 <a href="#state_name_nodejs" style="color: inherit; text-decoration: inherit;">name</a>
@@ -2078,8 +1893,7 @@ The following state arguments are supported:
         <span class="property-type">string</span>
     </dt>
     <dd>{{% md %}}Specifies the name of the role to create.
-{{% /md %}}</dd>
-    <dt class="property-optional"
+{{% /md %}}</dd><dt class="property-optional"
             title="Optional">
         <span id="state_ttl_nodejs">
 <a href="#state_ttl_nodejs" style="color: inherit; text-decoration: inherit;">ttl</a>
@@ -2088,14 +1902,11 @@ The following state arguments are supported:
         <span class="property-type">string</span>
     </dt>
     <dd>{{% md %}}Specifies the Time To Live value.
-{{% /md %}}</dd>
-</dl>
+{{% /md %}}</dd></dl>
 {{% /choosable %}}
 
 {{% choosable language python %}}
-<dl class="resources-properties">
-
-    <dt class="property-optional"
+<dl class="resources-properties"><dt class="property-optional"
             title="Optional">
         <span id="state_algorithm_signer_python">
 <a href="#state_algorithm_signer_python" style="color: inherit; text-decoration: inherit;">algorithm_<wbr>signer</a>
@@ -2104,8 +1915,7 @@ The following state arguments are supported:
         <span class="property-type">str</span>
     </dt>
     <dd>{{% md %}}When supplied, this value specifies a signing algorithm for the key. Possible values: ssh-rsa, rsa-sha2-256, rsa-sha2-512.
-{{% /md %}}</dd>
-    <dt class="property-optional"
+{{% /md %}}</dd><dt class="property-optional"
             title="Optional">
         <span id="state_allow_bare_domains_python">
 <a href="#state_allow_bare_domains_python" style="color: inherit; text-decoration: inherit;">allow_<wbr>bare_<wbr>domains</a>
@@ -2114,8 +1924,7 @@ The following state arguments are supported:
         <span class="property-type">bool</span>
     </dt>
     <dd>{{% md %}}Specifies if host certificates that are requested are allowed to use the base domains listed in `allowed_domains`.
-{{% /md %}}</dd>
-    <dt class="property-optional"
+{{% /md %}}</dd><dt class="property-optional"
             title="Optional">
         <span id="state_allow_host_certificates_python">
 <a href="#state_allow_host_certificates_python" style="color: inherit; text-decoration: inherit;">allow_<wbr>host_<wbr>certificates</a>
@@ -2124,8 +1933,7 @@ The following state arguments are supported:
         <span class="property-type">bool</span>
     </dt>
     <dd>{{% md %}}Specifies if certificates are allowed to be signed for use as a 'host'.
-{{% /md %}}</dd>
-    <dt class="property-optional"
+{{% /md %}}</dd><dt class="property-optional"
             title="Optional">
         <span id="state_allow_subdomains_python">
 <a href="#state_allow_subdomains_python" style="color: inherit; text-decoration: inherit;">allow_<wbr>subdomains</a>
@@ -2134,8 +1942,7 @@ The following state arguments are supported:
         <span class="property-type">bool</span>
     </dt>
     <dd>{{% md %}}Specifies if host certificates that are requested are allowed to be subdomains of those listed in `allowed_domains`.
-{{% /md %}}</dd>
-    <dt class="property-optional"
+{{% /md %}}</dd><dt class="property-optional"
             title="Optional">
         <span id="state_allow_user_certificates_python">
 <a href="#state_allow_user_certificates_python" style="color: inherit; text-decoration: inherit;">allow_<wbr>user_<wbr>certificates</a>
@@ -2144,8 +1951,7 @@ The following state arguments are supported:
         <span class="property-type">bool</span>
     </dt>
     <dd>{{% md %}}Specifies if certificates are allowed to be signed for use as a 'user'.
-{{% /md %}}</dd>
-    <dt class="property-optional"
+{{% /md %}}</dd><dt class="property-optional"
             title="Optional">
         <span id="state_allow_user_key_ids_python">
 <a href="#state_allow_user_key_ids_python" style="color: inherit; text-decoration: inherit;">allow_<wbr>user_<wbr>key_<wbr>ids</a>
@@ -2154,8 +1960,7 @@ The following state arguments are supported:
         <span class="property-type">bool</span>
     </dt>
     <dd>{{% md %}}Specifies if users can override the key ID for a signed certificate with the `key_id` field.
-{{% /md %}}</dd>
-    <dt class="property-optional"
+{{% /md %}}</dd><dt class="property-optional"
             title="Optional">
         <span id="state_allowed_critical_options_python">
 <a href="#state_allowed_critical_options_python" style="color: inherit; text-decoration: inherit;">allowed_<wbr>critical_<wbr>options</a>
@@ -2164,8 +1969,7 @@ The following state arguments are supported:
         <span class="property-type">str</span>
     </dt>
     <dd>{{% md %}}Specifies a comma-separated list of critical options that certificates can have when signed.
-{{% /md %}}</dd>
-    <dt class="property-optional"
+{{% /md %}}</dd><dt class="property-optional"
             title="Optional">
         <span id="state_allowed_domains_python">
 <a href="#state_allowed_domains_python" style="color: inherit; text-decoration: inherit;">allowed_<wbr>domains</a>
@@ -2174,8 +1978,7 @@ The following state arguments are supported:
         <span class="property-type">str</span>
     </dt>
     <dd>{{% md %}}The list of domains for which a client can request a host certificate.
-{{% /md %}}</dd>
-    <dt class="property-optional"
+{{% /md %}}</dd><dt class="property-optional"
             title="Optional">
         <span id="state_allowed_extensions_python">
 <a href="#state_allowed_extensions_python" style="color: inherit; text-decoration: inherit;">allowed_<wbr>extensions</a>
@@ -2184,8 +1987,7 @@ The following state arguments are supported:
         <span class="property-type">str</span>
     </dt>
     <dd>{{% md %}}Specifies a comma-separated list of extensions that certificates can have when signed.
-{{% /md %}}</dd>
-    <dt class="property-optional"
+{{% /md %}}</dd><dt class="property-optional"
             title="Optional">
         <span id="state_allowed_user_key_lengths_python">
 <a href="#state_allowed_user_key_lengths_python" style="color: inherit; text-decoration: inherit;">allowed_<wbr>user_<wbr>key_<wbr>lengths</a>
@@ -2194,8 +1996,7 @@ The following state arguments are supported:
         <span class="property-type">Mapping[str, Any]</span>
     </dt>
     <dd>{{% md %}}Specifies a map of ssh key types and their expected sizes which are allowed to be signed by the CA type.
-{{% /md %}}</dd>
-    <dt class="property-optional"
+{{% /md %}}</dd><dt class="property-optional"
             title="Optional">
         <span id="state_allowed_users_python">
 <a href="#state_allowed_users_python" style="color: inherit; text-decoration: inherit;">allowed_<wbr>users</a>
@@ -2204,8 +2005,7 @@ The following state arguments are supported:
         <span class="property-type">str</span>
     </dt>
     <dd>{{% md %}}Specifies a comma-separated list of usernames that are to be allowed, only if certain usernames are to be allowed.
-{{% /md %}}</dd>
-    <dt class="property-optional"
+{{% /md %}}</dd><dt class="property-optional"
             title="Optional">
         <span id="state_allowed_users_template_python">
 <a href="#state_allowed_users_template_python" style="color: inherit; text-decoration: inherit;">allowed_<wbr>users_<wbr>template</a>
@@ -2214,8 +2014,7 @@ The following state arguments are supported:
         <span class="property-type">bool</span>
     </dt>
     <dd>{{% md %}}Specifies if `allowed_users` can be declared using identity template policies. Non-templated users are also permitted.
-{{% /md %}}</dd>
-    <dt class="property-optional"
+{{% /md %}}</dd><dt class="property-optional"
             title="Optional">
         <span id="state_backend_python">
 <a href="#state_backend_python" style="color: inherit; text-decoration: inherit;">backend</a>
@@ -2224,8 +2023,7 @@ The following state arguments are supported:
         <span class="property-type">str</span>
     </dt>
     <dd>{{% md %}}The path where the SSH secret backend is mounted.
-{{% /md %}}</dd>
-    <dt class="property-optional"
+{{% /md %}}</dd><dt class="property-optional"
             title="Optional">
         <span id="state_cidr_list_python">
 <a href="#state_cidr_list_python" style="color: inherit; text-decoration: inherit;">cidr_<wbr>list</a>
@@ -2234,8 +2032,7 @@ The following state arguments are supported:
         <span class="property-type">str</span>
     </dt>
     <dd>{{% md %}}The comma-separated string of CIDR blocks for which this role is applicable.
-{{% /md %}}</dd>
-    <dt class="property-optional"
+{{% /md %}}</dd><dt class="property-optional"
             title="Optional">
         <span id="state_default_critical_options_python">
 <a href="#state_default_critical_options_python" style="color: inherit; text-decoration: inherit;">default_<wbr>critical_<wbr>options</a>
@@ -2244,8 +2041,7 @@ The following state arguments are supported:
         <span class="property-type">Mapping[str, Any]</span>
     </dt>
     <dd>{{% md %}}Specifies a map of critical options that certificates have when signed.
-{{% /md %}}</dd>
-    <dt class="property-optional"
+{{% /md %}}</dd><dt class="property-optional"
             title="Optional">
         <span id="state_default_extensions_python">
 <a href="#state_default_extensions_python" style="color: inherit; text-decoration: inherit;">default_<wbr>extensions</a>
@@ -2254,8 +2050,7 @@ The following state arguments are supported:
         <span class="property-type">Mapping[str, Any]</span>
     </dt>
     <dd>{{% md %}}Specifies a map of extensions that certificates have when signed.
-{{% /md %}}</dd>
-    <dt class="property-optional"
+{{% /md %}}</dd><dt class="property-optional"
             title="Optional">
         <span id="state_default_user_python">
 <a href="#state_default_user_python" style="color: inherit; text-decoration: inherit;">default_<wbr>user</a>
@@ -2264,8 +2059,7 @@ The following state arguments are supported:
         <span class="property-type">str</span>
     </dt>
     <dd>{{% md %}}Specifies the default username for which a credential will be generated.
-{{% /md %}}</dd>
-    <dt class="property-optional"
+{{% /md %}}</dd><dt class="property-optional"
             title="Optional">
         <span id="state_key_id_format_python">
 <a href="#state_key_id_format_python" style="color: inherit; text-decoration: inherit;">key_<wbr>id_<wbr>format</a>
@@ -2274,8 +2068,7 @@ The following state arguments are supported:
         <span class="property-type">str</span>
     </dt>
     <dd>{{% md %}}Specifies a custom format for the key id of a signed certificate.
-{{% /md %}}</dd>
-    <dt class="property-optional"
+{{% /md %}}</dd><dt class="property-optional"
             title="Optional">
         <span id="state_key_type_python">
 <a href="#state_key_type_python" style="color: inherit; text-decoration: inherit;">key_<wbr>type</a>
@@ -2284,8 +2077,7 @@ The following state arguments are supported:
         <span class="property-type">str</span>
     </dt>
     <dd>{{% md %}}Specifies the type of credentials generated by this role. This can be either `otp`, `dynamic` or `ca`.
-{{% /md %}}</dd>
-    <dt class="property-optional"
+{{% /md %}}</dd><dt class="property-optional"
             title="Optional">
         <span id="state_max_ttl_python">
 <a href="#state_max_ttl_python" style="color: inherit; text-decoration: inherit;">max_<wbr>ttl</a>
@@ -2294,8 +2086,7 @@ The following state arguments are supported:
         <span class="property-type">str</span>
     </dt>
     <dd>{{% md %}}Specifies the maximum Time To Live value.
-{{% /md %}}</dd>
-    <dt class="property-optional"
+{{% /md %}}</dd><dt class="property-optional"
             title="Optional">
         <span id="state_name_python">
 <a href="#state_name_python" style="color: inherit; text-decoration: inherit;">name</a>
@@ -2304,8 +2095,7 @@ The following state arguments are supported:
         <span class="property-type">str</span>
     </dt>
     <dd>{{% md %}}Specifies the name of the role to create.
-{{% /md %}}</dd>
-    <dt class="property-optional"
+{{% /md %}}</dd><dt class="property-optional"
             title="Optional">
         <span id="state_ttl_python">
 <a href="#state_ttl_python" style="color: inherit; text-decoration: inherit;">ttl</a>
@@ -2314,8 +2104,7 @@ The following state arguments are supported:
         <span class="property-type">str</span>
     </dt>
     <dd>{{% md %}}Specifies the Time To Live value.
-{{% /md %}}</dd>
-</dl>
+{{% /md %}}</dd></dl>
 {{% /choosable %}}
 
 
@@ -2341,6 +2130,6 @@ SSH secret backend roles can be imported using the `path`, e.g.
 	<dt>License</dt>
 	<dd>Apache-2.0</dd>
 	<dt>Notes</dt>
-	<dd>This Pulumi package is based on the [`vault` Terraform Provider](https://github.com/hashicorp/terraform-provider-vault).</dd>
+	<dd>{{% md %}}This Pulumi package is based on the [`vault` Terraform Provider](https://github.com/hashicorp/terraform-provider-vault).{{% /md %}}</dd>
 </dl>
 

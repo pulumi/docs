@@ -13,11 +13,17 @@ meta_desc: "Documentation for the azure.digitaltwins.EndpointServicebus resource
 Manages a Digital Twins Service Bus Endpoint.
 
 {{% examples %}}
+
 ## Example Usage
 
 {{< chooser language "typescript,python,go,csharp" / >}}
 
-{{% example csharp %}}
+
+
+
+
+{{< example csharp >}}
+
 ```csharp
 using Pulumi;
 using Azure = Pulumi.Azure;
@@ -66,9 +72,12 @@ class MyStack : Stack
 }
 ```
 
-{{% /example %}}
 
-{{% example go %}}
+{{< /example >}}
+
+
+{{< example go >}}
+
 ```go
 package main
 
@@ -133,9 +142,12 @@ func main() {
 }
 ```
 
-{{% /example %}}
 
-{{% example python %}}
+{{< /example >}}
+
+
+{{< example python >}}
+
 ```python
 import pulumi
 import pulumi_azure as azure
@@ -164,9 +176,12 @@ example_endpoint_servicebus = azure.digitaltwins.EndpointServicebus("exampleEndp
     servicebus_secondary_connection_string=example_topic_authorization_rule.secondary_connection_string)
 ```
 
-{{% /example %}}
 
-{{% example typescript %}}
+{{< /example >}}
+
+
+{{< example typescript >}}
+
 
 ```typescript
 import * as pulumi from "@pulumi/pulumi";
@@ -201,9 +216,16 @@ const exampleEndpointServicebus = new azure.digitaltwins.EndpointServicebus("exa
 });
 ```
 
-{{% /example %}}
+
+{{< /example >}}
+
+
+
+
 
 {{% /examples %}}
+
+
 
 
 ## Create a EndpointServicebus Resource {#create}
@@ -228,9 +250,7 @@ const exampleEndpointServicebus = new azure.digitaltwins.EndpointServicebus("exa
 
 {{% choosable language nodejs %}}
 
-<dl class="resources-properties">
-  
-    <dt
+<dl class="resources-properties"><dt
         class="property-required" title="Required">
         <span>name</span>
         <span class="property-indicator"></span>
@@ -238,9 +258,7 @@ const exampleEndpointServicebus = new azure.digitaltwins.EndpointServicebus("exa
     </dt>
     <dd>
       The unique name of the resource.
-    </dd>
-  
-    <dt
+    </dd><dt
         class="property-required" title="Required">
         <span>args</span>
         <span class="property-indicator"></span>
@@ -248,9 +266,7 @@ const exampleEndpointServicebus = new azure.digitaltwins.EndpointServicebus("exa
     </dt>
     <dd>
       The arguments to resource properties.
-    </dd>
-  
-    <dt
+    </dd><dt
         class="property-optional" title="Optional">
         <span>opts</span>
         <span class="property-indicator"></span>
@@ -258,10 +274,7 @@ const exampleEndpointServicebus = new azure.digitaltwins.EndpointServicebus("exa
     </dt>
     <dd>
       Bag of options to control resource&#39;s behavior.
-    </dd>
-  
-
-</dl>
+    </dd></dl>
 
 {{% /choosable %}}
 
@@ -287,9 +300,7 @@ const exampleEndpointServicebus = new azure.digitaltwins.EndpointServicebus("exa
 
 {{% choosable language go %}}
 
-<dl class="resources-properties">
-  
-    <dt
+<dl class="resources-properties"><dt
         class="property-optional" title="Optional">
         <span>ctx</span>
         <span class="property-indicator"></span>
@@ -297,9 +308,7 @@ const exampleEndpointServicebus = new azure.digitaltwins.EndpointServicebus("exa
     </dt>
     <dd>
       Context object for the current deployment.
-    </dd>
-  
-    <dt
+    </dd><dt
         class="property-required" title="Required">
         <span>name</span>
         <span class="property-indicator"></span>
@@ -307,9 +316,7 @@ const exampleEndpointServicebus = new azure.digitaltwins.EndpointServicebus("exa
     </dt>
     <dd>
       The unique name of the resource.
-    </dd>
-  
-    <dt
+    </dd><dt
         class="property-required" title="Required">
         <span>args</span>
         <span class="property-indicator"></span>
@@ -317,9 +324,7 @@ const exampleEndpointServicebus = new azure.digitaltwins.EndpointServicebus("exa
     </dt>
     <dd>
       The arguments to resource properties.
-    </dd>
-  
-    <dt
+    </dd><dt
         class="property-optional" title="Optional">
         <span>opts</span>
         <span class="property-indicator"></span>
@@ -327,18 +332,13 @@ const exampleEndpointServicebus = new azure.digitaltwins.EndpointServicebus("exa
     </dt>
     <dd>
       Bag of options to control resource&#39;s behavior.
-    </dd>
-  
-
-</dl>
+    </dd></dl>
 
 {{% /choosable %}}
 
 {{% choosable language csharp %}}
 
-<dl class="resources-properties">
-  
-    <dt
+<dl class="resources-properties"><dt
         class="property-required" title="Required">
         <span>name</span>
         <span class="property-indicator"></span>
@@ -346,9 +346,7 @@ const exampleEndpointServicebus = new azure.digitaltwins.EndpointServicebus("exa
     </dt>
     <dd>
       The unique name of the resource.
-    </dd>
-  
-    <dt
+    </dd><dt
         class="property-required" title="Required">
         <span>args</span>
         <span class="property-indicator"></span>
@@ -356,9 +354,7 @@ const exampleEndpointServicebus = new azure.digitaltwins.EndpointServicebus("exa
     </dt>
     <dd>
       The arguments to resource properties.
-    </dd>
-  
-    <dt
+    </dd><dt
         class="property-optional" title="Optional">
         <span>opts</span>
         <span class="property-indicator"></span>
@@ -366,10 +362,7 @@ const exampleEndpointServicebus = new azure.digitaltwins.EndpointServicebus("exa
     </dt>
     <dd>
       Bag of options to control resource&#39;s behavior.
-    </dd>
-  
-
-</dl>
+    </dd></dl>
 
 {{% /choosable %}}
 
@@ -384,9 +377,7 @@ The EndpointServicebus resource accepts the following [input]({{< relref "/docs/
 
 
 {{% choosable language csharp %}}
-<dl class="resources-properties">
-
-    <dt class="property-required"
+<dl class="resources-properties"><dt class="property-required"
             title="Required">
         <span id="digitaltwinsid_csharp">
 <a href="#digitaltwinsid_csharp" style="color: inherit; text-decoration: inherit;">Digital<wbr>Twins<wbr>Id</a>
@@ -395,8 +386,7 @@ The EndpointServicebus resource accepts the following [input]({{< relref "/docs/
         <span class="property-type">string</span>
     </dt>
     <dd>{{% md %}}The ID of the Digital Twins Instance. Changing this forces a new Digital Twins Service Bus Endpoint to be created.
-{{% /md %}}</dd>
-    <dt class="property-required"
+{{% /md %}}</dd><dt class="property-required"
             title="Required">
         <span id="servicebusprimaryconnectionstring_csharp">
 <a href="#servicebusprimaryconnectionstring_csharp" style="color: inherit; text-decoration: inherit;">Servicebus<wbr>Primary<wbr>Connection<wbr>String</a>
@@ -405,8 +395,7 @@ The EndpointServicebus resource accepts the following [input]({{< relref "/docs/
         <span class="property-type">string</span>
     </dt>
     <dd>{{% md %}}The primary connection string of the Service Bus Topic Authorization Rule with a minimum of `send` permission. .
-{{% /md %}}</dd>
-    <dt class="property-required"
+{{% /md %}}</dd><dt class="property-required"
             title="Required">
         <span id="servicebussecondaryconnectionstring_csharp">
 <a href="#servicebussecondaryconnectionstring_csharp" style="color: inherit; text-decoration: inherit;">Servicebus<wbr>Secondary<wbr>Connection<wbr>String</a>
@@ -415,8 +404,7 @@ The EndpointServicebus resource accepts the following [input]({{< relref "/docs/
         <span class="property-type">string</span>
     </dt>
     <dd>{{% md %}}The secondary connection string of the Service Bus Topic Authorization Rule with a minimum of `send` permission.
-{{% /md %}}</dd>
-    <dt class="property-optional"
+{{% /md %}}</dd><dt class="property-optional"
             title="Optional">
         <span id="deadletterstoragesecret_csharp">
 <a href="#deadletterstoragesecret_csharp" style="color: inherit; text-decoration: inherit;">Dead<wbr>Letter<wbr>Storage<wbr>Secret</a>
@@ -425,8 +413,7 @@ The EndpointServicebus resource accepts the following [input]({{< relref "/docs/
         <span class="property-type">string</span>
     </dt>
     <dd>{{% md %}}The storage secret of the dead-lettering, whose format is `https://<storageAccountname>.blob.core.windows.net/<containerName>?<SASToken>`. When an endpoint can't deliver an event within a certain time period or after trying to deliver the event a certain number of times, it can send the undelivered event to a storage account.
-{{% /md %}}</dd>
-    <dt class="property-optional"
+{{% /md %}}</dd><dt class="property-optional"
             title="Optional">
         <span id="name_csharp">
 <a href="#name_csharp" style="color: inherit; text-decoration: inherit;">Name</a>
@@ -435,14 +422,11 @@ The EndpointServicebus resource accepts the following [input]({{< relref "/docs/
         <span class="property-type">string</span>
     </dt>
     <dd>{{% md %}}The name which should be used for this Digital Twins Service Bus Endpoint. Changing this forces a new Digital Twins Service Bus Endpoint to be created.
-{{% /md %}}</dd>
-</dl>
+{{% /md %}}</dd></dl>
 {{% /choosable %}}
 
 {{% choosable language go %}}
-<dl class="resources-properties">
-
-    <dt class="property-required"
+<dl class="resources-properties"><dt class="property-required"
             title="Required">
         <span id="digitaltwinsid_go">
 <a href="#digitaltwinsid_go" style="color: inherit; text-decoration: inherit;">Digital<wbr>Twins<wbr>Id</a>
@@ -451,8 +435,7 @@ The EndpointServicebus resource accepts the following [input]({{< relref "/docs/
         <span class="property-type">string</span>
     </dt>
     <dd>{{% md %}}The ID of the Digital Twins Instance. Changing this forces a new Digital Twins Service Bus Endpoint to be created.
-{{% /md %}}</dd>
-    <dt class="property-required"
+{{% /md %}}</dd><dt class="property-required"
             title="Required">
         <span id="servicebusprimaryconnectionstring_go">
 <a href="#servicebusprimaryconnectionstring_go" style="color: inherit; text-decoration: inherit;">Servicebus<wbr>Primary<wbr>Connection<wbr>String</a>
@@ -461,8 +444,7 @@ The EndpointServicebus resource accepts the following [input]({{< relref "/docs/
         <span class="property-type">string</span>
     </dt>
     <dd>{{% md %}}The primary connection string of the Service Bus Topic Authorization Rule with a minimum of `send` permission. .
-{{% /md %}}</dd>
-    <dt class="property-required"
+{{% /md %}}</dd><dt class="property-required"
             title="Required">
         <span id="servicebussecondaryconnectionstring_go">
 <a href="#servicebussecondaryconnectionstring_go" style="color: inherit; text-decoration: inherit;">Servicebus<wbr>Secondary<wbr>Connection<wbr>String</a>
@@ -471,8 +453,7 @@ The EndpointServicebus resource accepts the following [input]({{< relref "/docs/
         <span class="property-type">string</span>
     </dt>
     <dd>{{% md %}}The secondary connection string of the Service Bus Topic Authorization Rule with a minimum of `send` permission.
-{{% /md %}}</dd>
-    <dt class="property-optional"
+{{% /md %}}</dd><dt class="property-optional"
             title="Optional">
         <span id="deadletterstoragesecret_go">
 <a href="#deadletterstoragesecret_go" style="color: inherit; text-decoration: inherit;">Dead<wbr>Letter<wbr>Storage<wbr>Secret</a>
@@ -481,8 +462,7 @@ The EndpointServicebus resource accepts the following [input]({{< relref "/docs/
         <span class="property-type">string</span>
     </dt>
     <dd>{{% md %}}The storage secret of the dead-lettering, whose format is `https://<storageAccountname>.blob.core.windows.net/<containerName>?<SASToken>`. When an endpoint can't deliver an event within a certain time period or after trying to deliver the event a certain number of times, it can send the undelivered event to a storage account.
-{{% /md %}}</dd>
-    <dt class="property-optional"
+{{% /md %}}</dd><dt class="property-optional"
             title="Optional">
         <span id="name_go">
 <a href="#name_go" style="color: inherit; text-decoration: inherit;">Name</a>
@@ -491,14 +471,11 @@ The EndpointServicebus resource accepts the following [input]({{< relref "/docs/
         <span class="property-type">string</span>
     </dt>
     <dd>{{% md %}}The name which should be used for this Digital Twins Service Bus Endpoint. Changing this forces a new Digital Twins Service Bus Endpoint to be created.
-{{% /md %}}</dd>
-</dl>
+{{% /md %}}</dd></dl>
 {{% /choosable %}}
 
 {{% choosable language nodejs %}}
-<dl class="resources-properties">
-
-    <dt class="property-required"
+<dl class="resources-properties"><dt class="property-required"
             title="Required">
         <span id="digitaltwinsid_nodejs">
 <a href="#digitaltwinsid_nodejs" style="color: inherit; text-decoration: inherit;">digital<wbr>Twins<wbr>Id</a>
@@ -507,8 +484,7 @@ The EndpointServicebus resource accepts the following [input]({{< relref "/docs/
         <span class="property-type">string</span>
     </dt>
     <dd>{{% md %}}The ID of the Digital Twins Instance. Changing this forces a new Digital Twins Service Bus Endpoint to be created.
-{{% /md %}}</dd>
-    <dt class="property-required"
+{{% /md %}}</dd><dt class="property-required"
             title="Required">
         <span id="servicebusprimaryconnectionstring_nodejs">
 <a href="#servicebusprimaryconnectionstring_nodejs" style="color: inherit; text-decoration: inherit;">servicebus<wbr>Primary<wbr>Connection<wbr>String</a>
@@ -517,8 +493,7 @@ The EndpointServicebus resource accepts the following [input]({{< relref "/docs/
         <span class="property-type">string</span>
     </dt>
     <dd>{{% md %}}The primary connection string of the Service Bus Topic Authorization Rule with a minimum of `send` permission. .
-{{% /md %}}</dd>
-    <dt class="property-required"
+{{% /md %}}</dd><dt class="property-required"
             title="Required">
         <span id="servicebussecondaryconnectionstring_nodejs">
 <a href="#servicebussecondaryconnectionstring_nodejs" style="color: inherit; text-decoration: inherit;">servicebus<wbr>Secondary<wbr>Connection<wbr>String</a>
@@ -527,8 +502,7 @@ The EndpointServicebus resource accepts the following [input]({{< relref "/docs/
         <span class="property-type">string</span>
     </dt>
     <dd>{{% md %}}The secondary connection string of the Service Bus Topic Authorization Rule with a minimum of `send` permission.
-{{% /md %}}</dd>
-    <dt class="property-optional"
+{{% /md %}}</dd><dt class="property-optional"
             title="Optional">
         <span id="deadletterstoragesecret_nodejs">
 <a href="#deadletterstoragesecret_nodejs" style="color: inherit; text-decoration: inherit;">dead<wbr>Letter<wbr>Storage<wbr>Secret</a>
@@ -537,8 +511,7 @@ The EndpointServicebus resource accepts the following [input]({{< relref "/docs/
         <span class="property-type">string</span>
     </dt>
     <dd>{{% md %}}The storage secret of the dead-lettering, whose format is `https://<storageAccountname>.blob.core.windows.net/<containerName>?<SASToken>`. When an endpoint can't deliver an event within a certain time period or after trying to deliver the event a certain number of times, it can send the undelivered event to a storage account.
-{{% /md %}}</dd>
-    <dt class="property-optional"
+{{% /md %}}</dd><dt class="property-optional"
             title="Optional">
         <span id="name_nodejs">
 <a href="#name_nodejs" style="color: inherit; text-decoration: inherit;">name</a>
@@ -547,14 +520,11 @@ The EndpointServicebus resource accepts the following [input]({{< relref "/docs/
         <span class="property-type">string</span>
     </dt>
     <dd>{{% md %}}The name which should be used for this Digital Twins Service Bus Endpoint. Changing this forces a new Digital Twins Service Bus Endpoint to be created.
-{{% /md %}}</dd>
-</dl>
+{{% /md %}}</dd></dl>
 {{% /choosable %}}
 
 {{% choosable language python %}}
-<dl class="resources-properties">
-
-    <dt class="property-required"
+<dl class="resources-properties"><dt class="property-required"
             title="Required">
         <span id="digital_twins_id_python">
 <a href="#digital_twins_id_python" style="color: inherit; text-decoration: inherit;">digital_<wbr>twins_<wbr>id</a>
@@ -563,8 +533,7 @@ The EndpointServicebus resource accepts the following [input]({{< relref "/docs/
         <span class="property-type">str</span>
     </dt>
     <dd>{{% md %}}The ID of the Digital Twins Instance. Changing this forces a new Digital Twins Service Bus Endpoint to be created.
-{{% /md %}}</dd>
-    <dt class="property-required"
+{{% /md %}}</dd><dt class="property-required"
             title="Required">
         <span id="servicebus_primary_connection_string_python">
 <a href="#servicebus_primary_connection_string_python" style="color: inherit; text-decoration: inherit;">servicebus_<wbr>primary_<wbr>connection_<wbr>string</a>
@@ -573,8 +542,7 @@ The EndpointServicebus resource accepts the following [input]({{< relref "/docs/
         <span class="property-type">str</span>
     </dt>
     <dd>{{% md %}}The primary connection string of the Service Bus Topic Authorization Rule with a minimum of `send` permission. .
-{{% /md %}}</dd>
-    <dt class="property-required"
+{{% /md %}}</dd><dt class="property-required"
             title="Required">
         <span id="servicebus_secondary_connection_string_python">
 <a href="#servicebus_secondary_connection_string_python" style="color: inherit; text-decoration: inherit;">servicebus_<wbr>secondary_<wbr>connection_<wbr>string</a>
@@ -583,8 +551,7 @@ The EndpointServicebus resource accepts the following [input]({{< relref "/docs/
         <span class="property-type">str</span>
     </dt>
     <dd>{{% md %}}The secondary connection string of the Service Bus Topic Authorization Rule with a minimum of `send` permission.
-{{% /md %}}</dd>
-    <dt class="property-optional"
+{{% /md %}}</dd><dt class="property-optional"
             title="Optional">
         <span id="dead_letter_storage_secret_python">
 <a href="#dead_letter_storage_secret_python" style="color: inherit; text-decoration: inherit;">dead_<wbr>letter_<wbr>storage_<wbr>secret</a>
@@ -593,8 +560,7 @@ The EndpointServicebus resource accepts the following [input]({{< relref "/docs/
         <span class="property-type">str</span>
     </dt>
     <dd>{{% md %}}The storage secret of the dead-lettering, whose format is `https://<storageAccountname>.blob.core.windows.net/<containerName>?<SASToken>`. When an endpoint can't deliver an event within a certain time period or after trying to deliver the event a certain number of times, it can send the undelivered event to a storage account.
-{{% /md %}}</dd>
-    <dt class="property-optional"
+{{% /md %}}</dd><dt class="property-optional"
             title="Optional">
         <span id="name_python">
 <a href="#name_python" style="color: inherit; text-decoration: inherit;">name</a>
@@ -603,8 +569,7 @@ The EndpointServicebus resource accepts the following [input]({{< relref "/docs/
         <span class="property-type">str</span>
     </dt>
     <dd>{{% md %}}The name which should be used for this Digital Twins Service Bus Endpoint. Changing this forces a new Digital Twins Service Bus Endpoint to be created.
-{{% /md %}}</dd>
-</dl>
+{{% /md %}}</dd></dl>
 {{% /choosable %}}
 
 
@@ -615,9 +580,7 @@ All [input](#inputs) properties are implicitly available as output properties. A
 
 
 {{% choosable language csharp %}}
-<dl class="resources-properties">
-
-    <dt class="property-"
+<dl class="resources-properties"><dt class="property-"
             title="">
         <span id="id_csharp">
 <a href="#id_csharp" style="color: inherit; text-decoration: inherit;">Id</a>
@@ -625,14 +588,11 @@ All [input](#inputs) properties are implicitly available as output properties. A
         <span class="property-indicator"></span>
         <span class="property-type">string</span>
     </dt>
-    <dd>{{% md %}}The provider-assigned unique ID for this managed resource.{{% /md %}}</dd>
-</dl>
+    <dd>{{% md %}}The provider-assigned unique ID for this managed resource.{{% /md %}}</dd></dl>
 {{% /choosable %}}
 
 {{% choosable language go %}}
-<dl class="resources-properties">
-
-    <dt class="property-"
+<dl class="resources-properties"><dt class="property-"
             title="">
         <span id="id_go">
 <a href="#id_go" style="color: inherit; text-decoration: inherit;">Id</a>
@@ -640,14 +600,11 @@ All [input](#inputs) properties are implicitly available as output properties. A
         <span class="property-indicator"></span>
         <span class="property-type">string</span>
     </dt>
-    <dd>{{% md %}}The provider-assigned unique ID for this managed resource.{{% /md %}}</dd>
-</dl>
+    <dd>{{% md %}}The provider-assigned unique ID for this managed resource.{{% /md %}}</dd></dl>
 {{% /choosable %}}
 
 {{% choosable language nodejs %}}
-<dl class="resources-properties">
-
-    <dt class="property-"
+<dl class="resources-properties"><dt class="property-"
             title="">
         <span id="id_nodejs">
 <a href="#id_nodejs" style="color: inherit; text-decoration: inherit;">id</a>
@@ -655,14 +612,11 @@ All [input](#inputs) properties are implicitly available as output properties. A
         <span class="property-indicator"></span>
         <span class="property-type">string</span>
     </dt>
-    <dd>{{% md %}}The provider-assigned unique ID for this managed resource.{{% /md %}}</dd>
-</dl>
+    <dd>{{% md %}}The provider-assigned unique ID for this managed resource.{{% /md %}}</dd></dl>
 {{% /choosable %}}
 
 {{% choosable language python %}}
-<dl class="resources-properties">
-
-    <dt class="property-"
+<dl class="resources-properties"><dt class="property-"
             title="">
         <span id="id_python">
 <a href="#id_python" style="color: inherit; text-decoration: inherit;">id</a>
@@ -670,8 +624,7 @@ All [input](#inputs) properties are implicitly available as output properties. A
         <span class="property-indicator"></span>
         <span class="property-type">str</span>
     </dt>
-    <dd>{{% md %}}The provider-assigned unique ID for this managed resource.{{% /md %}}</dd>
-</dl>
+    <dd>{{% md %}}The provider-assigned unique ID for this managed resource.{{% /md %}}</dd></dl>
 {{% /choosable %}}
 
 
@@ -798,9 +751,7 @@ The following state arguments are supported:
 
 
 {{% choosable language csharp %}}
-<dl class="resources-properties">
-
-    <dt class="property-optional"
+<dl class="resources-properties"><dt class="property-optional"
             title="Optional">
         <span id="state_deadletterstoragesecret_csharp">
 <a href="#state_deadletterstoragesecret_csharp" style="color: inherit; text-decoration: inherit;">Dead<wbr>Letter<wbr>Storage<wbr>Secret</a>
@@ -809,8 +760,7 @@ The following state arguments are supported:
         <span class="property-type">string</span>
     </dt>
     <dd>{{% md %}}The storage secret of the dead-lettering, whose format is `https://<storageAccountname>.blob.core.windows.net/<containerName>?<SASToken>`. When an endpoint can't deliver an event within a certain time period or after trying to deliver the event a certain number of times, it can send the undelivered event to a storage account.
-{{% /md %}}</dd>
-    <dt class="property-optional"
+{{% /md %}}</dd><dt class="property-optional"
             title="Optional">
         <span id="state_digitaltwinsid_csharp">
 <a href="#state_digitaltwinsid_csharp" style="color: inherit; text-decoration: inherit;">Digital<wbr>Twins<wbr>Id</a>
@@ -819,8 +769,7 @@ The following state arguments are supported:
         <span class="property-type">string</span>
     </dt>
     <dd>{{% md %}}The ID of the Digital Twins Instance. Changing this forces a new Digital Twins Service Bus Endpoint to be created.
-{{% /md %}}</dd>
-    <dt class="property-optional"
+{{% /md %}}</dd><dt class="property-optional"
             title="Optional">
         <span id="state_name_csharp">
 <a href="#state_name_csharp" style="color: inherit; text-decoration: inherit;">Name</a>
@@ -829,8 +778,7 @@ The following state arguments are supported:
         <span class="property-type">string</span>
     </dt>
     <dd>{{% md %}}The name which should be used for this Digital Twins Service Bus Endpoint. Changing this forces a new Digital Twins Service Bus Endpoint to be created.
-{{% /md %}}</dd>
-    <dt class="property-optional"
+{{% /md %}}</dd><dt class="property-optional"
             title="Optional">
         <span id="state_servicebusprimaryconnectionstring_csharp">
 <a href="#state_servicebusprimaryconnectionstring_csharp" style="color: inherit; text-decoration: inherit;">Servicebus<wbr>Primary<wbr>Connection<wbr>String</a>
@@ -839,8 +787,7 @@ The following state arguments are supported:
         <span class="property-type">string</span>
     </dt>
     <dd>{{% md %}}The primary connection string of the Service Bus Topic Authorization Rule with a minimum of `send` permission. .
-{{% /md %}}</dd>
-    <dt class="property-optional"
+{{% /md %}}</dd><dt class="property-optional"
             title="Optional">
         <span id="state_servicebussecondaryconnectionstring_csharp">
 <a href="#state_servicebussecondaryconnectionstring_csharp" style="color: inherit; text-decoration: inherit;">Servicebus<wbr>Secondary<wbr>Connection<wbr>String</a>
@@ -849,14 +796,11 @@ The following state arguments are supported:
         <span class="property-type">string</span>
     </dt>
     <dd>{{% md %}}The secondary connection string of the Service Bus Topic Authorization Rule with a minimum of `send` permission.
-{{% /md %}}</dd>
-</dl>
+{{% /md %}}</dd></dl>
 {{% /choosable %}}
 
 {{% choosable language go %}}
-<dl class="resources-properties">
-
-    <dt class="property-optional"
+<dl class="resources-properties"><dt class="property-optional"
             title="Optional">
         <span id="state_deadletterstoragesecret_go">
 <a href="#state_deadletterstoragesecret_go" style="color: inherit; text-decoration: inherit;">Dead<wbr>Letter<wbr>Storage<wbr>Secret</a>
@@ -865,8 +809,7 @@ The following state arguments are supported:
         <span class="property-type">string</span>
     </dt>
     <dd>{{% md %}}The storage secret of the dead-lettering, whose format is `https://<storageAccountname>.blob.core.windows.net/<containerName>?<SASToken>`. When an endpoint can't deliver an event within a certain time period or after trying to deliver the event a certain number of times, it can send the undelivered event to a storage account.
-{{% /md %}}</dd>
-    <dt class="property-optional"
+{{% /md %}}</dd><dt class="property-optional"
             title="Optional">
         <span id="state_digitaltwinsid_go">
 <a href="#state_digitaltwinsid_go" style="color: inherit; text-decoration: inherit;">Digital<wbr>Twins<wbr>Id</a>
@@ -875,8 +818,7 @@ The following state arguments are supported:
         <span class="property-type">string</span>
     </dt>
     <dd>{{% md %}}The ID of the Digital Twins Instance. Changing this forces a new Digital Twins Service Bus Endpoint to be created.
-{{% /md %}}</dd>
-    <dt class="property-optional"
+{{% /md %}}</dd><dt class="property-optional"
             title="Optional">
         <span id="state_name_go">
 <a href="#state_name_go" style="color: inherit; text-decoration: inherit;">Name</a>
@@ -885,8 +827,7 @@ The following state arguments are supported:
         <span class="property-type">string</span>
     </dt>
     <dd>{{% md %}}The name which should be used for this Digital Twins Service Bus Endpoint. Changing this forces a new Digital Twins Service Bus Endpoint to be created.
-{{% /md %}}</dd>
-    <dt class="property-optional"
+{{% /md %}}</dd><dt class="property-optional"
             title="Optional">
         <span id="state_servicebusprimaryconnectionstring_go">
 <a href="#state_servicebusprimaryconnectionstring_go" style="color: inherit; text-decoration: inherit;">Servicebus<wbr>Primary<wbr>Connection<wbr>String</a>
@@ -895,8 +836,7 @@ The following state arguments are supported:
         <span class="property-type">string</span>
     </dt>
     <dd>{{% md %}}The primary connection string of the Service Bus Topic Authorization Rule with a minimum of `send` permission. .
-{{% /md %}}</dd>
-    <dt class="property-optional"
+{{% /md %}}</dd><dt class="property-optional"
             title="Optional">
         <span id="state_servicebussecondaryconnectionstring_go">
 <a href="#state_servicebussecondaryconnectionstring_go" style="color: inherit; text-decoration: inherit;">Servicebus<wbr>Secondary<wbr>Connection<wbr>String</a>
@@ -905,14 +845,11 @@ The following state arguments are supported:
         <span class="property-type">string</span>
     </dt>
     <dd>{{% md %}}The secondary connection string of the Service Bus Topic Authorization Rule with a minimum of `send` permission.
-{{% /md %}}</dd>
-</dl>
+{{% /md %}}</dd></dl>
 {{% /choosable %}}
 
 {{% choosable language nodejs %}}
-<dl class="resources-properties">
-
-    <dt class="property-optional"
+<dl class="resources-properties"><dt class="property-optional"
             title="Optional">
         <span id="state_deadletterstoragesecret_nodejs">
 <a href="#state_deadletterstoragesecret_nodejs" style="color: inherit; text-decoration: inherit;">dead<wbr>Letter<wbr>Storage<wbr>Secret</a>
@@ -921,8 +858,7 @@ The following state arguments are supported:
         <span class="property-type">string</span>
     </dt>
     <dd>{{% md %}}The storage secret of the dead-lettering, whose format is `https://<storageAccountname>.blob.core.windows.net/<containerName>?<SASToken>`. When an endpoint can't deliver an event within a certain time period or after trying to deliver the event a certain number of times, it can send the undelivered event to a storage account.
-{{% /md %}}</dd>
-    <dt class="property-optional"
+{{% /md %}}</dd><dt class="property-optional"
             title="Optional">
         <span id="state_digitaltwinsid_nodejs">
 <a href="#state_digitaltwinsid_nodejs" style="color: inherit; text-decoration: inherit;">digital<wbr>Twins<wbr>Id</a>
@@ -931,8 +867,7 @@ The following state arguments are supported:
         <span class="property-type">string</span>
     </dt>
     <dd>{{% md %}}The ID of the Digital Twins Instance. Changing this forces a new Digital Twins Service Bus Endpoint to be created.
-{{% /md %}}</dd>
-    <dt class="property-optional"
+{{% /md %}}</dd><dt class="property-optional"
             title="Optional">
         <span id="state_name_nodejs">
 <a href="#state_name_nodejs" style="color: inherit; text-decoration: inherit;">name</a>
@@ -941,8 +876,7 @@ The following state arguments are supported:
         <span class="property-type">string</span>
     </dt>
     <dd>{{% md %}}The name which should be used for this Digital Twins Service Bus Endpoint. Changing this forces a new Digital Twins Service Bus Endpoint to be created.
-{{% /md %}}</dd>
-    <dt class="property-optional"
+{{% /md %}}</dd><dt class="property-optional"
             title="Optional">
         <span id="state_servicebusprimaryconnectionstring_nodejs">
 <a href="#state_servicebusprimaryconnectionstring_nodejs" style="color: inherit; text-decoration: inherit;">servicebus<wbr>Primary<wbr>Connection<wbr>String</a>
@@ -951,8 +885,7 @@ The following state arguments are supported:
         <span class="property-type">string</span>
     </dt>
     <dd>{{% md %}}The primary connection string of the Service Bus Topic Authorization Rule with a minimum of `send` permission. .
-{{% /md %}}</dd>
-    <dt class="property-optional"
+{{% /md %}}</dd><dt class="property-optional"
             title="Optional">
         <span id="state_servicebussecondaryconnectionstring_nodejs">
 <a href="#state_servicebussecondaryconnectionstring_nodejs" style="color: inherit; text-decoration: inherit;">servicebus<wbr>Secondary<wbr>Connection<wbr>String</a>
@@ -961,14 +894,11 @@ The following state arguments are supported:
         <span class="property-type">string</span>
     </dt>
     <dd>{{% md %}}The secondary connection string of the Service Bus Topic Authorization Rule with a minimum of `send` permission.
-{{% /md %}}</dd>
-</dl>
+{{% /md %}}</dd></dl>
 {{% /choosable %}}
 
 {{% choosable language python %}}
-<dl class="resources-properties">
-
-    <dt class="property-optional"
+<dl class="resources-properties"><dt class="property-optional"
             title="Optional">
         <span id="state_dead_letter_storage_secret_python">
 <a href="#state_dead_letter_storage_secret_python" style="color: inherit; text-decoration: inherit;">dead_<wbr>letter_<wbr>storage_<wbr>secret</a>
@@ -977,8 +907,7 @@ The following state arguments are supported:
         <span class="property-type">str</span>
     </dt>
     <dd>{{% md %}}The storage secret of the dead-lettering, whose format is `https://<storageAccountname>.blob.core.windows.net/<containerName>?<SASToken>`. When an endpoint can't deliver an event within a certain time period or after trying to deliver the event a certain number of times, it can send the undelivered event to a storage account.
-{{% /md %}}</dd>
-    <dt class="property-optional"
+{{% /md %}}</dd><dt class="property-optional"
             title="Optional">
         <span id="state_digital_twins_id_python">
 <a href="#state_digital_twins_id_python" style="color: inherit; text-decoration: inherit;">digital_<wbr>twins_<wbr>id</a>
@@ -987,8 +916,7 @@ The following state arguments are supported:
         <span class="property-type">str</span>
     </dt>
     <dd>{{% md %}}The ID of the Digital Twins Instance. Changing this forces a new Digital Twins Service Bus Endpoint to be created.
-{{% /md %}}</dd>
-    <dt class="property-optional"
+{{% /md %}}</dd><dt class="property-optional"
             title="Optional">
         <span id="state_name_python">
 <a href="#state_name_python" style="color: inherit; text-decoration: inherit;">name</a>
@@ -997,8 +925,7 @@ The following state arguments are supported:
         <span class="property-type">str</span>
     </dt>
     <dd>{{% md %}}The name which should be used for this Digital Twins Service Bus Endpoint. Changing this forces a new Digital Twins Service Bus Endpoint to be created.
-{{% /md %}}</dd>
-    <dt class="property-optional"
+{{% /md %}}</dd><dt class="property-optional"
             title="Optional">
         <span id="state_servicebus_primary_connection_string_python">
 <a href="#state_servicebus_primary_connection_string_python" style="color: inherit; text-decoration: inherit;">servicebus_<wbr>primary_<wbr>connection_<wbr>string</a>
@@ -1007,8 +934,7 @@ The following state arguments are supported:
         <span class="property-type">str</span>
     </dt>
     <dd>{{% md %}}The primary connection string of the Service Bus Topic Authorization Rule with a minimum of `send` permission. .
-{{% /md %}}</dd>
-    <dt class="property-optional"
+{{% /md %}}</dd><dt class="property-optional"
             title="Optional">
         <span id="state_servicebus_secondary_connection_string_python">
 <a href="#state_servicebus_secondary_connection_string_python" style="color: inherit; text-decoration: inherit;">servicebus_<wbr>secondary_<wbr>connection_<wbr>string</a>
@@ -1017,8 +943,7 @@ The following state arguments are supported:
         <span class="property-type">str</span>
     </dt>
     <dd>{{% md %}}The secondary connection string of the Service Bus Topic Authorization Rule with a minimum of `send` permission.
-{{% /md %}}</dd>
-</dl>
+{{% /md %}}</dd></dl>
 {{% /choosable %}}
 
 
@@ -1044,6 +969,6 @@ Digital Twins Service Bus Endpoints can be imported using the `resource id`, e.g
 	<dt>License</dt>
 	<dd>Apache-2.0</dd>
 	<dt>Notes</dt>
-	<dd>This Pulumi package is based on the [`azurerm` Terraform Provider](https://github.com/terraform-providers/terraform-provider-azurerm).</dd>
+	<dd>{{% md %}}This Pulumi package is based on the [`azurerm` Terraform Provider](https://github.com/terraform-providers/terraform-provider-azurerm).{{% /md %}}</dd>
 </dl>
 

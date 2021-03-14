@@ -55,9 +55,7 @@ Your account must have the `serviceusage.services.use` permission on the
 
 {{% choosable language nodejs %}}
 
-<dl class="resources-properties">
-  
-    <dt
+<dl class="resources-properties"><dt
         class="property-required" title="Required">
         <span>name</span>
         <span class="property-indicator"></span>
@@ -65,9 +63,7 @@ Your account must have the `serviceusage.services.use` permission on the
     </dt>
     <dd>
       The unique name of the resource.
-    </dd>
-  
-    <dt
+    </dd><dt
         class="property-required" title="Required">
         <span>args</span>
         <span class="property-indicator"></span>
@@ -75,9 +71,7 @@ Your account must have the `serviceusage.services.use` permission on the
     </dt>
     <dd>
       The arguments to resource properties.
-    </dd>
-  
-    <dt
+    </dd><dt
         class="property-optional" title="Optional">
         <span>opts</span>
         <span class="property-indicator"></span>
@@ -85,10 +79,7 @@ Your account must have the `serviceusage.services.use` permission on the
     </dt>
     <dd>
       Bag of options to control resource&#39;s behavior.
-    </dd>
-  
-
-</dl>
+    </dd></dl>
 
 {{% /choosable %}}
 
@@ -114,9 +105,7 @@ Your account must have the `serviceusage.services.use` permission on the
 
 {{% choosable language go %}}
 
-<dl class="resources-properties">
-  
-    <dt
+<dl class="resources-properties"><dt
         class="property-optional" title="Optional">
         <span>ctx</span>
         <span class="property-indicator"></span>
@@ -124,9 +113,7 @@ Your account must have the `serviceusage.services.use` permission on the
     </dt>
     <dd>
       Context object for the current deployment.
-    </dd>
-  
-    <dt
+    </dd><dt
         class="property-required" title="Required">
         <span>name</span>
         <span class="property-indicator"></span>
@@ -134,9 +121,7 @@ Your account must have the `serviceusage.services.use` permission on the
     </dt>
     <dd>
       The unique name of the resource.
-    </dd>
-  
-    <dt
+    </dd><dt
         class="property-required" title="Required">
         <span>args</span>
         <span class="property-indicator"></span>
@@ -144,9 +129,7 @@ Your account must have the `serviceusage.services.use` permission on the
     </dt>
     <dd>
       The arguments to resource properties.
-    </dd>
-  
-    <dt
+    </dd><dt
         class="property-optional" title="Optional">
         <span>opts</span>
         <span class="property-indicator"></span>
@@ -154,18 +137,13 @@ Your account must have the `serviceusage.services.use` permission on the
     </dt>
     <dd>
       Bag of options to control resource&#39;s behavior.
-    </dd>
-  
-
-</dl>
+    </dd></dl>
 
 {{% /choosable %}}
 
 {{% choosable language csharp %}}
 
-<dl class="resources-properties">
-  
-    <dt
+<dl class="resources-properties"><dt
         class="property-required" title="Required">
         <span>name</span>
         <span class="property-indicator"></span>
@@ -173,9 +151,7 @@ Your account must have the `serviceusage.services.use` permission on the
     </dt>
     <dd>
       The unique name of the resource.
-    </dd>
-  
-    <dt
+    </dd><dt
         class="property-required" title="Required">
         <span>args</span>
         <span class="property-indicator"></span>
@@ -183,9 +159,7 @@ Your account must have the `serviceusage.services.use` permission on the
     </dt>
     <dd>
       The arguments to resource properties.
-    </dd>
-  
-    <dt
+    </dd><dt
         class="property-optional" title="Optional">
         <span>opts</span>
         <span class="property-indicator"></span>
@@ -193,10 +167,7 @@ Your account must have the `serviceusage.services.use` permission on the
     </dt>
     <dd>
       Bag of options to control resource&#39;s behavior.
-    </dd>
-  
-
-</dl>
+    </dd></dl>
 
 {{% /choosable %}}
 
@@ -211,9 +182,7 @@ The AccessLevelCondition resource accepts the following [input]({{< relref "/doc
 
 
 {{% choosable language csharp %}}
-<dl class="resources-properties">
-
-    <dt class="property-required"
+<dl class="resources-properties"><dt class="property-required"
             title="Required">
         <span id="accesslevel_csharp">
 <a href="#accesslevel_csharp" style="color: inherit; text-decoration: inherit;">Access<wbr>Level</a>
@@ -222,8 +191,7 @@ The AccessLevelCondition resource accepts the following [input]({{< relref "/doc
         <span class="property-type">string</span>
     </dt>
     <dd>{{% md %}}The name of the Access Level to add this condition to.
-{{% /md %}}</dd>
-    <dt class="property-optional"
+{{% /md %}}</dd><dt class="property-optional"
             title="Optional">
         <span id="devicepolicy_csharp">
 <a href="#devicepolicy_csharp" style="color: inherit; text-decoration: inherit;">Device<wbr>Policy</a>
@@ -235,8 +203,7 @@ The AccessLevelCondition resource accepts the following [input]({{< relref "/doc
 the Condition to be true. If not specified, all devices are
 allowed.
 Structure is documented below.
-{{% /md %}}</dd>
-    <dt class="property-optional"
+{{% /md %}}</dd><dt class="property-optional"
             title="Optional">
         <span id="ipsubnetworks_csharp">
 <a href="#ipsubnetworks_csharp" style="color: inherit; text-decoration: inherit;">Ip<wbr>Subnetworks</a>
@@ -254,8 +221,7 @@ for IPv6, "2001:db8::/32" is accepted whereas "2001:db8::1/32"
 is not. The originating IP of a request must be in one of the
 listed subnets in order for this Condition to be true.
 If empty, all IP addresses are allowed.
-{{% /md %}}</dd>
-    <dt class="property-optional"
+{{% /md %}}</dd><dt class="property-optional"
             title="Optional">
         <span id="members_csharp">
 <a href="#members_csharp" style="color: inherit; text-decoration: inherit;">Members</a>
@@ -270,8 +236,7 @@ of the provided members. If not specified, a request may come
 from any user (logged in/not logged in, not present in any
 groups, etc.).
 Formats: `user:{emailid}`, `serviceAccount:{emailid}`
-{{% /md %}}</dd>
-    <dt class="property-optional"
+{{% /md %}}</dd><dt class="property-optional"
             title="Optional">
         <span id="negate_csharp">
 <a href="#negate_csharp" style="color: inherit; text-decoration: inherit;">Negate</a>
@@ -282,8 +247,7 @@ Formats: `user:{emailid}`, `serviceAccount:{emailid}`
     <dd>{{% md %}}Whether to negate the Condition. If true, the Condition becomes
 a NAND over its non-empty fields, each field must be false for
 the Condition overall to be satisfied. Defaults to false.
-{{% /md %}}</dd>
-    <dt class="property-optional"
+{{% /md %}}</dd><dt class="property-optional"
             title="Optional">
         <span id="regions_csharp">
 <a href="#regions_csharp" style="color: inherit; text-decoration: inherit;">Regions</a>
@@ -294,8 +258,7 @@ the Condition overall to be satisfied. Defaults to false.
     <dd>{{% md %}}The request must originate from one of the provided
 countries/regions.
 Format: A valid ISO 3166-1 alpha-2 code.
-{{% /md %}}</dd>
-    <dt class="property-optional"
+{{% /md %}}</dd><dt class="property-optional"
             title="Optional">
         <span id="requiredaccesslevels_csharp">
 <a href="#requiredaccesslevels_csharp" style="color: inherit; text-decoration: inherit;">Required<wbr>Access<wbr>Levels</a>
@@ -308,14 +271,11 @@ referenced by resource name. Referencing an AccessLevel which
 does not exist is an error. All access levels listed must be
 granted for the Condition to be true.
 Format: accessPolicies/{policy_id}/accessLevels/{short_name}
-{{% /md %}}</dd>
-</dl>
+{{% /md %}}</dd></dl>
 {{% /choosable %}}
 
 {{% choosable language go %}}
-<dl class="resources-properties">
-
-    <dt class="property-required"
+<dl class="resources-properties"><dt class="property-required"
             title="Required">
         <span id="accesslevel_go">
 <a href="#accesslevel_go" style="color: inherit; text-decoration: inherit;">Access<wbr>Level</a>
@@ -324,8 +284,7 @@ Format: accessPolicies/{policy_id}/accessLevels/{short_name}
         <span class="property-type">string</span>
     </dt>
     <dd>{{% md %}}The name of the Access Level to add this condition to.
-{{% /md %}}</dd>
-    <dt class="property-optional"
+{{% /md %}}</dd><dt class="property-optional"
             title="Optional">
         <span id="devicepolicy_go">
 <a href="#devicepolicy_go" style="color: inherit; text-decoration: inherit;">Device<wbr>Policy</a>
@@ -337,8 +296,7 @@ Format: accessPolicies/{policy_id}/accessLevels/{short_name}
 the Condition to be true. If not specified, all devices are
 allowed.
 Structure is documented below.
-{{% /md %}}</dd>
-    <dt class="property-optional"
+{{% /md %}}</dd><dt class="property-optional"
             title="Optional">
         <span id="ipsubnetworks_go">
 <a href="#ipsubnetworks_go" style="color: inherit; text-decoration: inherit;">Ip<wbr>Subnetworks</a>
@@ -356,8 +314,7 @@ for IPv6, "2001:db8::/32" is accepted whereas "2001:db8::1/32"
 is not. The originating IP of a request must be in one of the
 listed subnets in order for this Condition to be true.
 If empty, all IP addresses are allowed.
-{{% /md %}}</dd>
-    <dt class="property-optional"
+{{% /md %}}</dd><dt class="property-optional"
             title="Optional">
         <span id="members_go">
 <a href="#members_go" style="color: inherit; text-decoration: inherit;">Members</a>
@@ -372,8 +329,7 @@ of the provided members. If not specified, a request may come
 from any user (logged in/not logged in, not present in any
 groups, etc.).
 Formats: `user:{emailid}`, `serviceAccount:{emailid}`
-{{% /md %}}</dd>
-    <dt class="property-optional"
+{{% /md %}}</dd><dt class="property-optional"
             title="Optional">
         <span id="negate_go">
 <a href="#negate_go" style="color: inherit; text-decoration: inherit;">Negate</a>
@@ -384,8 +340,7 @@ Formats: `user:{emailid}`, `serviceAccount:{emailid}`
     <dd>{{% md %}}Whether to negate the Condition. If true, the Condition becomes
 a NAND over its non-empty fields, each field must be false for
 the Condition overall to be satisfied. Defaults to false.
-{{% /md %}}</dd>
-    <dt class="property-optional"
+{{% /md %}}</dd><dt class="property-optional"
             title="Optional">
         <span id="regions_go">
 <a href="#regions_go" style="color: inherit; text-decoration: inherit;">Regions</a>
@@ -396,8 +351,7 @@ the Condition overall to be satisfied. Defaults to false.
     <dd>{{% md %}}The request must originate from one of the provided
 countries/regions.
 Format: A valid ISO 3166-1 alpha-2 code.
-{{% /md %}}</dd>
-    <dt class="property-optional"
+{{% /md %}}</dd><dt class="property-optional"
             title="Optional">
         <span id="requiredaccesslevels_go">
 <a href="#requiredaccesslevels_go" style="color: inherit; text-decoration: inherit;">Required<wbr>Access<wbr>Levels</a>
@@ -410,14 +364,11 @@ referenced by resource name. Referencing an AccessLevel which
 does not exist is an error. All access levels listed must be
 granted for the Condition to be true.
 Format: accessPolicies/{policy_id}/accessLevels/{short_name}
-{{% /md %}}</dd>
-</dl>
+{{% /md %}}</dd></dl>
 {{% /choosable %}}
 
 {{% choosable language nodejs %}}
-<dl class="resources-properties">
-
-    <dt class="property-required"
+<dl class="resources-properties"><dt class="property-required"
             title="Required">
         <span id="accesslevel_nodejs">
 <a href="#accesslevel_nodejs" style="color: inherit; text-decoration: inherit;">access<wbr>Level</a>
@@ -426,8 +377,7 @@ Format: accessPolicies/{policy_id}/accessLevels/{short_name}
         <span class="property-type">string</span>
     </dt>
     <dd>{{% md %}}The name of the Access Level to add this condition to.
-{{% /md %}}</dd>
-    <dt class="property-optional"
+{{% /md %}}</dd><dt class="property-optional"
             title="Optional">
         <span id="devicepolicy_nodejs">
 <a href="#devicepolicy_nodejs" style="color: inherit; text-decoration: inherit;">device<wbr>Policy</a>
@@ -439,8 +389,7 @@ Format: accessPolicies/{policy_id}/accessLevels/{short_name}
 the Condition to be true. If not specified, all devices are
 allowed.
 Structure is documented below.
-{{% /md %}}</dd>
-    <dt class="property-optional"
+{{% /md %}}</dd><dt class="property-optional"
             title="Optional">
         <span id="ipsubnetworks_nodejs">
 <a href="#ipsubnetworks_nodejs" style="color: inherit; text-decoration: inherit;">ip<wbr>Subnetworks</a>
@@ -458,8 +407,7 @@ for IPv6, "2001:db8::/32" is accepted whereas "2001:db8::1/32"
 is not. The originating IP of a request must be in one of the
 listed subnets in order for this Condition to be true.
 If empty, all IP addresses are allowed.
-{{% /md %}}</dd>
-    <dt class="property-optional"
+{{% /md %}}</dd><dt class="property-optional"
             title="Optional">
         <span id="members_nodejs">
 <a href="#members_nodejs" style="color: inherit; text-decoration: inherit;">members</a>
@@ -474,8 +422,7 @@ of the provided members. If not specified, a request may come
 from any user (logged in/not logged in, not present in any
 groups, etc.).
 Formats: `user:{emailid}`, `serviceAccount:{emailid}`
-{{% /md %}}</dd>
-    <dt class="property-optional"
+{{% /md %}}</dd><dt class="property-optional"
             title="Optional">
         <span id="negate_nodejs">
 <a href="#negate_nodejs" style="color: inherit; text-decoration: inherit;">negate</a>
@@ -486,8 +433,7 @@ Formats: `user:{emailid}`, `serviceAccount:{emailid}`
     <dd>{{% md %}}Whether to negate the Condition. If true, the Condition becomes
 a NAND over its non-empty fields, each field must be false for
 the Condition overall to be satisfied. Defaults to false.
-{{% /md %}}</dd>
-    <dt class="property-optional"
+{{% /md %}}</dd><dt class="property-optional"
             title="Optional">
         <span id="regions_nodejs">
 <a href="#regions_nodejs" style="color: inherit; text-decoration: inherit;">regions</a>
@@ -498,8 +444,7 @@ the Condition overall to be satisfied. Defaults to false.
     <dd>{{% md %}}The request must originate from one of the provided
 countries/regions.
 Format: A valid ISO 3166-1 alpha-2 code.
-{{% /md %}}</dd>
-    <dt class="property-optional"
+{{% /md %}}</dd><dt class="property-optional"
             title="Optional">
         <span id="requiredaccesslevels_nodejs">
 <a href="#requiredaccesslevels_nodejs" style="color: inherit; text-decoration: inherit;">required<wbr>Access<wbr>Levels</a>
@@ -512,14 +457,11 @@ referenced by resource name. Referencing an AccessLevel which
 does not exist is an error. All access levels listed must be
 granted for the Condition to be true.
 Format: accessPolicies/{policy_id}/accessLevels/{short_name}
-{{% /md %}}</dd>
-</dl>
+{{% /md %}}</dd></dl>
 {{% /choosable %}}
 
 {{% choosable language python %}}
-<dl class="resources-properties">
-
-    <dt class="property-required"
+<dl class="resources-properties"><dt class="property-required"
             title="Required">
         <span id="access_level_python">
 <a href="#access_level_python" style="color: inherit; text-decoration: inherit;">access_<wbr>level</a>
@@ -528,8 +470,7 @@ Format: accessPolicies/{policy_id}/accessLevels/{short_name}
         <span class="property-type">str</span>
     </dt>
     <dd>{{% md %}}The name of the Access Level to add this condition to.
-{{% /md %}}</dd>
-    <dt class="property-optional"
+{{% /md %}}</dd><dt class="property-optional"
             title="Optional">
         <span id="device_policy_python">
 <a href="#device_policy_python" style="color: inherit; text-decoration: inherit;">device_<wbr>policy</a>
@@ -541,8 +482,7 @@ Format: accessPolicies/{policy_id}/accessLevels/{short_name}
 the Condition to be true. If not specified, all devices are
 allowed.
 Structure is documented below.
-{{% /md %}}</dd>
-    <dt class="property-optional"
+{{% /md %}}</dd><dt class="property-optional"
             title="Optional">
         <span id="ip_subnetworks_python">
 <a href="#ip_subnetworks_python" style="color: inherit; text-decoration: inherit;">ip_<wbr>subnetworks</a>
@@ -560,8 +500,7 @@ for IPv6, "2001:db8::/32" is accepted whereas "2001:db8::1/32"
 is not. The originating IP of a request must be in one of the
 listed subnets in order for this Condition to be true.
 If empty, all IP addresses are allowed.
-{{% /md %}}</dd>
-    <dt class="property-optional"
+{{% /md %}}</dd><dt class="property-optional"
             title="Optional">
         <span id="members_python">
 <a href="#members_python" style="color: inherit; text-decoration: inherit;">members</a>
@@ -576,8 +515,7 @@ of the provided members. If not specified, a request may come
 from any user (logged in/not logged in, not present in any
 groups, etc.).
 Formats: `user:{emailid}`, `serviceAccount:{emailid}`
-{{% /md %}}</dd>
-    <dt class="property-optional"
+{{% /md %}}</dd><dt class="property-optional"
             title="Optional">
         <span id="negate_python">
 <a href="#negate_python" style="color: inherit; text-decoration: inherit;">negate</a>
@@ -588,8 +526,7 @@ Formats: `user:{emailid}`, `serviceAccount:{emailid}`
     <dd>{{% md %}}Whether to negate the Condition. If true, the Condition becomes
 a NAND over its non-empty fields, each field must be false for
 the Condition overall to be satisfied. Defaults to false.
-{{% /md %}}</dd>
-    <dt class="property-optional"
+{{% /md %}}</dd><dt class="property-optional"
             title="Optional">
         <span id="regions_python">
 <a href="#regions_python" style="color: inherit; text-decoration: inherit;">regions</a>
@@ -600,8 +537,7 @@ the Condition overall to be satisfied. Defaults to false.
     <dd>{{% md %}}The request must originate from one of the provided
 countries/regions.
 Format: A valid ISO 3166-1 alpha-2 code.
-{{% /md %}}</dd>
-    <dt class="property-optional"
+{{% /md %}}</dd><dt class="property-optional"
             title="Optional">
         <span id="required_access_levels_python">
 <a href="#required_access_levels_python" style="color: inherit; text-decoration: inherit;">required_<wbr>access_<wbr>levels</a>
@@ -614,8 +550,7 @@ referenced by resource name. Referencing an AccessLevel which
 does not exist is an error. All access levels listed must be
 granted for the Condition to be true.
 Format: accessPolicies/{policy_id}/accessLevels/{short_name}
-{{% /md %}}</dd>
-</dl>
+{{% /md %}}</dd></dl>
 {{% /choosable %}}
 
 
@@ -626,9 +561,7 @@ All [input](#inputs) properties are implicitly available as output properties. A
 
 
 {{% choosable language csharp %}}
-<dl class="resources-properties">
-
-    <dt class="property-"
+<dl class="resources-properties"><dt class="property-"
             title="">
         <span id="id_csharp">
 <a href="#id_csharp" style="color: inherit; text-decoration: inherit;">Id</a>
@@ -636,14 +569,11 @@ All [input](#inputs) properties are implicitly available as output properties. A
         <span class="property-indicator"></span>
         <span class="property-type">string</span>
     </dt>
-    <dd>{{% md %}}The provider-assigned unique ID for this managed resource.{{% /md %}}</dd>
-</dl>
+    <dd>{{% md %}}The provider-assigned unique ID for this managed resource.{{% /md %}}</dd></dl>
 {{% /choosable %}}
 
 {{% choosable language go %}}
-<dl class="resources-properties">
-
-    <dt class="property-"
+<dl class="resources-properties"><dt class="property-"
             title="">
         <span id="id_go">
 <a href="#id_go" style="color: inherit; text-decoration: inherit;">Id</a>
@@ -651,14 +581,11 @@ All [input](#inputs) properties are implicitly available as output properties. A
         <span class="property-indicator"></span>
         <span class="property-type">string</span>
     </dt>
-    <dd>{{% md %}}The provider-assigned unique ID for this managed resource.{{% /md %}}</dd>
-</dl>
+    <dd>{{% md %}}The provider-assigned unique ID for this managed resource.{{% /md %}}</dd></dl>
 {{% /choosable %}}
 
 {{% choosable language nodejs %}}
-<dl class="resources-properties">
-
-    <dt class="property-"
+<dl class="resources-properties"><dt class="property-"
             title="">
         <span id="id_nodejs">
 <a href="#id_nodejs" style="color: inherit; text-decoration: inherit;">id</a>
@@ -666,14 +593,11 @@ All [input](#inputs) properties are implicitly available as output properties. A
         <span class="property-indicator"></span>
         <span class="property-type">string</span>
     </dt>
-    <dd>{{% md %}}The provider-assigned unique ID for this managed resource.{{% /md %}}</dd>
-</dl>
+    <dd>{{% md %}}The provider-assigned unique ID for this managed resource.{{% /md %}}</dd></dl>
 {{% /choosable %}}
 
 {{% choosable language python %}}
-<dl class="resources-properties">
-
-    <dt class="property-"
+<dl class="resources-properties"><dt class="property-"
             title="">
         <span id="id_python">
 <a href="#id_python" style="color: inherit; text-decoration: inherit;">id</a>
@@ -681,8 +605,7 @@ All [input](#inputs) properties are implicitly available as output properties. A
         <span class="property-indicator"></span>
         <span class="property-type">str</span>
     </dt>
-    <dd>{{% md %}}The provider-assigned unique ID for this managed resource.{{% /md %}}</dd>
-</dl>
+    <dd>{{% md %}}The provider-assigned unique ID for this managed resource.{{% /md %}}</dd></dl>
 {{% /choosable %}}
 
 
@@ -809,9 +732,7 @@ The following state arguments are supported:
 
 
 {{% choosable language csharp %}}
-<dl class="resources-properties">
-
-    <dt class="property-optional"
+<dl class="resources-properties"><dt class="property-optional"
             title="Optional">
         <span id="state_accesslevel_csharp">
 <a href="#state_accesslevel_csharp" style="color: inherit; text-decoration: inherit;">Access<wbr>Level</a>
@@ -820,8 +741,7 @@ The following state arguments are supported:
         <span class="property-type">string</span>
     </dt>
     <dd>{{% md %}}The name of the Access Level to add this condition to.
-{{% /md %}}</dd>
-    <dt class="property-optional"
+{{% /md %}}</dd><dt class="property-optional"
             title="Optional">
         <span id="state_devicepolicy_csharp">
 <a href="#state_devicepolicy_csharp" style="color: inherit; text-decoration: inherit;">Device<wbr>Policy</a>
@@ -833,8 +753,7 @@ The following state arguments are supported:
 the Condition to be true. If not specified, all devices are
 allowed.
 Structure is documented below.
-{{% /md %}}</dd>
-    <dt class="property-optional"
+{{% /md %}}</dd><dt class="property-optional"
             title="Optional">
         <span id="state_ipsubnetworks_csharp">
 <a href="#state_ipsubnetworks_csharp" style="color: inherit; text-decoration: inherit;">Ip<wbr>Subnetworks</a>
@@ -852,8 +771,7 @@ for IPv6, "2001:db8::/32" is accepted whereas "2001:db8::1/32"
 is not. The originating IP of a request must be in one of the
 listed subnets in order for this Condition to be true.
 If empty, all IP addresses are allowed.
-{{% /md %}}</dd>
-    <dt class="property-optional"
+{{% /md %}}</dd><dt class="property-optional"
             title="Optional">
         <span id="state_members_csharp">
 <a href="#state_members_csharp" style="color: inherit; text-decoration: inherit;">Members</a>
@@ -868,8 +786,7 @@ of the provided members. If not specified, a request may come
 from any user (logged in/not logged in, not present in any
 groups, etc.).
 Formats: `user:{emailid}`, `serviceAccount:{emailid}`
-{{% /md %}}</dd>
-    <dt class="property-optional"
+{{% /md %}}</dd><dt class="property-optional"
             title="Optional">
         <span id="state_negate_csharp">
 <a href="#state_negate_csharp" style="color: inherit; text-decoration: inherit;">Negate</a>
@@ -880,8 +797,7 @@ Formats: `user:{emailid}`, `serviceAccount:{emailid}`
     <dd>{{% md %}}Whether to negate the Condition. If true, the Condition becomes
 a NAND over its non-empty fields, each field must be false for
 the Condition overall to be satisfied. Defaults to false.
-{{% /md %}}</dd>
-    <dt class="property-optional"
+{{% /md %}}</dd><dt class="property-optional"
             title="Optional">
         <span id="state_regions_csharp">
 <a href="#state_regions_csharp" style="color: inherit; text-decoration: inherit;">Regions</a>
@@ -892,8 +808,7 @@ the Condition overall to be satisfied. Defaults to false.
     <dd>{{% md %}}The request must originate from one of the provided
 countries/regions.
 Format: A valid ISO 3166-1 alpha-2 code.
-{{% /md %}}</dd>
-    <dt class="property-optional"
+{{% /md %}}</dd><dt class="property-optional"
             title="Optional">
         <span id="state_requiredaccesslevels_csharp">
 <a href="#state_requiredaccesslevels_csharp" style="color: inherit; text-decoration: inherit;">Required<wbr>Access<wbr>Levels</a>
@@ -906,14 +821,11 @@ referenced by resource name. Referencing an AccessLevel which
 does not exist is an error. All access levels listed must be
 granted for the Condition to be true.
 Format: accessPolicies/{policy_id}/accessLevels/{short_name}
-{{% /md %}}</dd>
-</dl>
+{{% /md %}}</dd></dl>
 {{% /choosable %}}
 
 {{% choosable language go %}}
-<dl class="resources-properties">
-
-    <dt class="property-optional"
+<dl class="resources-properties"><dt class="property-optional"
             title="Optional">
         <span id="state_accesslevel_go">
 <a href="#state_accesslevel_go" style="color: inherit; text-decoration: inherit;">Access<wbr>Level</a>
@@ -922,8 +834,7 @@ Format: accessPolicies/{policy_id}/accessLevels/{short_name}
         <span class="property-type">string</span>
     </dt>
     <dd>{{% md %}}The name of the Access Level to add this condition to.
-{{% /md %}}</dd>
-    <dt class="property-optional"
+{{% /md %}}</dd><dt class="property-optional"
             title="Optional">
         <span id="state_devicepolicy_go">
 <a href="#state_devicepolicy_go" style="color: inherit; text-decoration: inherit;">Device<wbr>Policy</a>
@@ -935,8 +846,7 @@ Format: accessPolicies/{policy_id}/accessLevels/{short_name}
 the Condition to be true. If not specified, all devices are
 allowed.
 Structure is documented below.
-{{% /md %}}</dd>
-    <dt class="property-optional"
+{{% /md %}}</dd><dt class="property-optional"
             title="Optional">
         <span id="state_ipsubnetworks_go">
 <a href="#state_ipsubnetworks_go" style="color: inherit; text-decoration: inherit;">Ip<wbr>Subnetworks</a>
@@ -954,8 +864,7 @@ for IPv6, "2001:db8::/32" is accepted whereas "2001:db8::1/32"
 is not. The originating IP of a request must be in one of the
 listed subnets in order for this Condition to be true.
 If empty, all IP addresses are allowed.
-{{% /md %}}</dd>
-    <dt class="property-optional"
+{{% /md %}}</dd><dt class="property-optional"
             title="Optional">
         <span id="state_members_go">
 <a href="#state_members_go" style="color: inherit; text-decoration: inherit;">Members</a>
@@ -970,8 +879,7 @@ of the provided members. If not specified, a request may come
 from any user (logged in/not logged in, not present in any
 groups, etc.).
 Formats: `user:{emailid}`, `serviceAccount:{emailid}`
-{{% /md %}}</dd>
-    <dt class="property-optional"
+{{% /md %}}</dd><dt class="property-optional"
             title="Optional">
         <span id="state_negate_go">
 <a href="#state_negate_go" style="color: inherit; text-decoration: inherit;">Negate</a>
@@ -982,8 +890,7 @@ Formats: `user:{emailid}`, `serviceAccount:{emailid}`
     <dd>{{% md %}}Whether to negate the Condition. If true, the Condition becomes
 a NAND over its non-empty fields, each field must be false for
 the Condition overall to be satisfied. Defaults to false.
-{{% /md %}}</dd>
-    <dt class="property-optional"
+{{% /md %}}</dd><dt class="property-optional"
             title="Optional">
         <span id="state_regions_go">
 <a href="#state_regions_go" style="color: inherit; text-decoration: inherit;">Regions</a>
@@ -994,8 +901,7 @@ the Condition overall to be satisfied. Defaults to false.
     <dd>{{% md %}}The request must originate from one of the provided
 countries/regions.
 Format: A valid ISO 3166-1 alpha-2 code.
-{{% /md %}}</dd>
-    <dt class="property-optional"
+{{% /md %}}</dd><dt class="property-optional"
             title="Optional">
         <span id="state_requiredaccesslevels_go">
 <a href="#state_requiredaccesslevels_go" style="color: inherit; text-decoration: inherit;">Required<wbr>Access<wbr>Levels</a>
@@ -1008,14 +914,11 @@ referenced by resource name. Referencing an AccessLevel which
 does not exist is an error. All access levels listed must be
 granted for the Condition to be true.
 Format: accessPolicies/{policy_id}/accessLevels/{short_name}
-{{% /md %}}</dd>
-</dl>
+{{% /md %}}</dd></dl>
 {{% /choosable %}}
 
 {{% choosable language nodejs %}}
-<dl class="resources-properties">
-
-    <dt class="property-optional"
+<dl class="resources-properties"><dt class="property-optional"
             title="Optional">
         <span id="state_accesslevel_nodejs">
 <a href="#state_accesslevel_nodejs" style="color: inherit; text-decoration: inherit;">access<wbr>Level</a>
@@ -1024,8 +927,7 @@ Format: accessPolicies/{policy_id}/accessLevels/{short_name}
         <span class="property-type">string</span>
     </dt>
     <dd>{{% md %}}The name of the Access Level to add this condition to.
-{{% /md %}}</dd>
-    <dt class="property-optional"
+{{% /md %}}</dd><dt class="property-optional"
             title="Optional">
         <span id="state_devicepolicy_nodejs">
 <a href="#state_devicepolicy_nodejs" style="color: inherit; text-decoration: inherit;">device<wbr>Policy</a>
@@ -1037,8 +939,7 @@ Format: accessPolicies/{policy_id}/accessLevels/{short_name}
 the Condition to be true. If not specified, all devices are
 allowed.
 Structure is documented below.
-{{% /md %}}</dd>
-    <dt class="property-optional"
+{{% /md %}}</dd><dt class="property-optional"
             title="Optional">
         <span id="state_ipsubnetworks_nodejs">
 <a href="#state_ipsubnetworks_nodejs" style="color: inherit; text-decoration: inherit;">ip<wbr>Subnetworks</a>
@@ -1056,8 +957,7 @@ for IPv6, "2001:db8::/32" is accepted whereas "2001:db8::1/32"
 is not. The originating IP of a request must be in one of the
 listed subnets in order for this Condition to be true.
 If empty, all IP addresses are allowed.
-{{% /md %}}</dd>
-    <dt class="property-optional"
+{{% /md %}}</dd><dt class="property-optional"
             title="Optional">
         <span id="state_members_nodejs">
 <a href="#state_members_nodejs" style="color: inherit; text-decoration: inherit;">members</a>
@@ -1072,8 +972,7 @@ of the provided members. If not specified, a request may come
 from any user (logged in/not logged in, not present in any
 groups, etc.).
 Formats: `user:{emailid}`, `serviceAccount:{emailid}`
-{{% /md %}}</dd>
-    <dt class="property-optional"
+{{% /md %}}</dd><dt class="property-optional"
             title="Optional">
         <span id="state_negate_nodejs">
 <a href="#state_negate_nodejs" style="color: inherit; text-decoration: inherit;">negate</a>
@@ -1084,8 +983,7 @@ Formats: `user:{emailid}`, `serviceAccount:{emailid}`
     <dd>{{% md %}}Whether to negate the Condition. If true, the Condition becomes
 a NAND over its non-empty fields, each field must be false for
 the Condition overall to be satisfied. Defaults to false.
-{{% /md %}}</dd>
-    <dt class="property-optional"
+{{% /md %}}</dd><dt class="property-optional"
             title="Optional">
         <span id="state_regions_nodejs">
 <a href="#state_regions_nodejs" style="color: inherit; text-decoration: inherit;">regions</a>
@@ -1096,8 +994,7 @@ the Condition overall to be satisfied. Defaults to false.
     <dd>{{% md %}}The request must originate from one of the provided
 countries/regions.
 Format: A valid ISO 3166-1 alpha-2 code.
-{{% /md %}}</dd>
-    <dt class="property-optional"
+{{% /md %}}</dd><dt class="property-optional"
             title="Optional">
         <span id="state_requiredaccesslevels_nodejs">
 <a href="#state_requiredaccesslevels_nodejs" style="color: inherit; text-decoration: inherit;">required<wbr>Access<wbr>Levels</a>
@@ -1110,14 +1007,11 @@ referenced by resource name. Referencing an AccessLevel which
 does not exist is an error. All access levels listed must be
 granted for the Condition to be true.
 Format: accessPolicies/{policy_id}/accessLevels/{short_name}
-{{% /md %}}</dd>
-</dl>
+{{% /md %}}</dd></dl>
 {{% /choosable %}}
 
 {{% choosable language python %}}
-<dl class="resources-properties">
-
-    <dt class="property-optional"
+<dl class="resources-properties"><dt class="property-optional"
             title="Optional">
         <span id="state_access_level_python">
 <a href="#state_access_level_python" style="color: inherit; text-decoration: inherit;">access_<wbr>level</a>
@@ -1126,8 +1020,7 @@ Format: accessPolicies/{policy_id}/accessLevels/{short_name}
         <span class="property-type">str</span>
     </dt>
     <dd>{{% md %}}The name of the Access Level to add this condition to.
-{{% /md %}}</dd>
-    <dt class="property-optional"
+{{% /md %}}</dd><dt class="property-optional"
             title="Optional">
         <span id="state_device_policy_python">
 <a href="#state_device_policy_python" style="color: inherit; text-decoration: inherit;">device_<wbr>policy</a>
@@ -1139,8 +1032,7 @@ Format: accessPolicies/{policy_id}/accessLevels/{short_name}
 the Condition to be true. If not specified, all devices are
 allowed.
 Structure is documented below.
-{{% /md %}}</dd>
-    <dt class="property-optional"
+{{% /md %}}</dd><dt class="property-optional"
             title="Optional">
         <span id="state_ip_subnetworks_python">
 <a href="#state_ip_subnetworks_python" style="color: inherit; text-decoration: inherit;">ip_<wbr>subnetworks</a>
@@ -1158,8 +1050,7 @@ for IPv6, "2001:db8::/32" is accepted whereas "2001:db8::1/32"
 is not. The originating IP of a request must be in one of the
 listed subnets in order for this Condition to be true.
 If empty, all IP addresses are allowed.
-{{% /md %}}</dd>
-    <dt class="property-optional"
+{{% /md %}}</dd><dt class="property-optional"
             title="Optional">
         <span id="state_members_python">
 <a href="#state_members_python" style="color: inherit; text-decoration: inherit;">members</a>
@@ -1174,8 +1065,7 @@ of the provided members. If not specified, a request may come
 from any user (logged in/not logged in, not present in any
 groups, etc.).
 Formats: `user:{emailid}`, `serviceAccount:{emailid}`
-{{% /md %}}</dd>
-    <dt class="property-optional"
+{{% /md %}}</dd><dt class="property-optional"
             title="Optional">
         <span id="state_negate_python">
 <a href="#state_negate_python" style="color: inherit; text-decoration: inherit;">negate</a>
@@ -1186,8 +1076,7 @@ Formats: `user:{emailid}`, `serviceAccount:{emailid}`
     <dd>{{% md %}}Whether to negate the Condition. If true, the Condition becomes
 a NAND over its non-empty fields, each field must be false for
 the Condition overall to be satisfied. Defaults to false.
-{{% /md %}}</dd>
-    <dt class="property-optional"
+{{% /md %}}</dd><dt class="property-optional"
             title="Optional">
         <span id="state_regions_python">
 <a href="#state_regions_python" style="color: inherit; text-decoration: inherit;">regions</a>
@@ -1198,8 +1087,7 @@ the Condition overall to be satisfied. Defaults to false.
     <dd>{{% md %}}The request must originate from one of the provided
 countries/regions.
 Format: A valid ISO 3166-1 alpha-2 code.
-{{% /md %}}</dd>
-    <dt class="property-optional"
+{{% /md %}}</dd><dt class="property-optional"
             title="Optional">
         <span id="state_required_access_levels_python">
 <a href="#state_required_access_levels_python" style="color: inherit; text-decoration: inherit;">required_<wbr>access_<wbr>levels</a>
@@ -1212,8 +1100,7 @@ referenced by resource name. Referencing an AccessLevel which
 does not exist is an error. All access levels listed must be
 granted for the Condition to be true.
 Format: accessPolicies/{policy_id}/accessLevels/{short_name}
-{{% /md %}}</dd>
-</dl>
+{{% /md %}}</dd></dl>
 {{% /choosable %}}
 
 
@@ -1228,9 +1115,7 @@ Format: accessPolicies/{policy_id}/accessLevels/{short_name}
 <h4 id="accesslevelconditiondevicepolicy">Access<wbr>Level<wbr>Condition<wbr>Device<wbr>Policy</h4>
 
 {{% choosable language csharp %}}
-<dl class="resources-properties">
-
-    <dt class="property-optional"
+<dl class="resources-properties"><dt class="property-optional"
             title="Optional">
         <span id="alloweddevicemanagementlevels_csharp">
 <a href="#alloweddevicemanagementlevels_csharp" style="color: inherit; text-decoration: inherit;">Allowed<wbr>Device<wbr>Management<wbr>Levels</a>
@@ -1241,8 +1126,7 @@ Format: accessPolicies/{policy_id}/accessLevels/{short_name}
     <dd>{{% md %}}A list of allowed device management levels.
 An empty list allows all management levels.
 Each value may be one of `MANAGEMENT_UNSPECIFIED`, `NONE`, `BASIC`, and `COMPLETE`.
-{{% /md %}}</dd>
-    <dt class="property-optional"
+{{% /md %}}</dd><dt class="property-optional"
             title="Optional">
         <span id="allowedencryptionstatuses_csharp">
 <a href="#allowedencryptionstatuses_csharp" style="color: inherit; text-decoration: inherit;">Allowed<wbr>Encryption<wbr>Statuses</a>
@@ -1253,8 +1137,7 @@ Each value may be one of `MANAGEMENT_UNSPECIFIED`, `NONE`, `BASIC`, and `COMPLET
     <dd>{{% md %}}A list of allowed encryptions statuses.
 An empty list allows all statuses.
 Each value may be one of `ENCRYPTION_UNSPECIFIED`, `ENCRYPTION_UNSUPPORTED`, `UNENCRYPTED`, and `ENCRYPTED`.
-{{% /md %}}</dd>
-    <dt class="property-optional"
+{{% /md %}}</dd><dt class="property-optional"
             title="Optional">
         <span id="osconstraints_csharp">
 <a href="#osconstraints_csharp" style="color: inherit; text-decoration: inherit;">Os<wbr>Constraints</a>
@@ -1265,8 +1148,7 @@ Each value may be one of `ENCRYPTION_UNSPECIFIED`, `ENCRYPTION_UNSUPPORTED`, `UN
     <dd>{{% md %}}A list of allowed OS versions.
 An empty list allows all types and all versions.
 Structure is documented below.
-{{% /md %}}</dd>
-    <dt class="property-optional"
+{{% /md %}}</dd><dt class="property-optional"
             title="Optional">
         <span id="requireadminapproval_csharp">
 <a href="#requireadminapproval_csharp" style="color: inherit; text-decoration: inherit;">Require<wbr>Admin<wbr>Approval</a>
@@ -1275,8 +1157,7 @@ Structure is documented below.
         <span class="property-type">bool</span>
     </dt>
     <dd>{{% md %}}Whether the device needs to be approved by the customer admin.
-{{% /md %}}</dd>
-    <dt class="property-optional"
+{{% /md %}}</dd><dt class="property-optional"
             title="Optional">
         <span id="requirecorpowned_csharp">
 <a href="#requirecorpowned_csharp" style="color: inherit; text-decoration: inherit;">Require<wbr>Corp<wbr>Owned</a>
@@ -1285,8 +1166,7 @@ Structure is documented below.
         <span class="property-type">bool</span>
     </dt>
     <dd>{{% md %}}Whether the device needs to be corp owned.
-{{% /md %}}</dd>
-    <dt class="property-optional"
+{{% /md %}}</dd><dt class="property-optional"
             title="Optional">
         <span id="requirescreenlock_csharp">
 <a href="#requirescreenlock_csharp" style="color: inherit; text-decoration: inherit;">Require<wbr>Screen<wbr>Lock</a>
@@ -1296,14 +1176,11 @@ Structure is documented below.
     </dt>
     <dd>{{% md %}}Whether or not screenlock is required for the DevicePolicy
 to be true. Defaults to false.
-{{% /md %}}</dd>
-</dl>
+{{% /md %}}</dd></dl>
 {{% /choosable %}}
 
 {{% choosable language go %}}
-<dl class="resources-properties">
-
-    <dt class="property-optional"
+<dl class="resources-properties"><dt class="property-optional"
             title="Optional">
         <span id="alloweddevicemanagementlevels_go">
 <a href="#alloweddevicemanagementlevels_go" style="color: inherit; text-decoration: inherit;">Allowed<wbr>Device<wbr>Management<wbr>Levels</a>
@@ -1314,8 +1191,7 @@ to be true. Defaults to false.
     <dd>{{% md %}}A list of allowed device management levels.
 An empty list allows all management levels.
 Each value may be one of `MANAGEMENT_UNSPECIFIED`, `NONE`, `BASIC`, and `COMPLETE`.
-{{% /md %}}</dd>
-    <dt class="property-optional"
+{{% /md %}}</dd><dt class="property-optional"
             title="Optional">
         <span id="allowedencryptionstatuses_go">
 <a href="#allowedencryptionstatuses_go" style="color: inherit; text-decoration: inherit;">Allowed<wbr>Encryption<wbr>Statuses</a>
@@ -1326,8 +1202,7 @@ Each value may be one of `MANAGEMENT_UNSPECIFIED`, `NONE`, `BASIC`, and `COMPLET
     <dd>{{% md %}}A list of allowed encryptions statuses.
 An empty list allows all statuses.
 Each value may be one of `ENCRYPTION_UNSPECIFIED`, `ENCRYPTION_UNSUPPORTED`, `UNENCRYPTED`, and `ENCRYPTED`.
-{{% /md %}}</dd>
-    <dt class="property-optional"
+{{% /md %}}</dd><dt class="property-optional"
             title="Optional">
         <span id="osconstraints_go">
 <a href="#osconstraints_go" style="color: inherit; text-decoration: inherit;">Os<wbr>Constraints</a>
@@ -1338,8 +1213,7 @@ Each value may be one of `ENCRYPTION_UNSPECIFIED`, `ENCRYPTION_UNSUPPORTED`, `UN
     <dd>{{% md %}}A list of allowed OS versions.
 An empty list allows all types and all versions.
 Structure is documented below.
-{{% /md %}}</dd>
-    <dt class="property-optional"
+{{% /md %}}</dd><dt class="property-optional"
             title="Optional">
         <span id="requireadminapproval_go">
 <a href="#requireadminapproval_go" style="color: inherit; text-decoration: inherit;">Require<wbr>Admin<wbr>Approval</a>
@@ -1348,8 +1222,7 @@ Structure is documented below.
         <span class="property-type">bool</span>
     </dt>
     <dd>{{% md %}}Whether the device needs to be approved by the customer admin.
-{{% /md %}}</dd>
-    <dt class="property-optional"
+{{% /md %}}</dd><dt class="property-optional"
             title="Optional">
         <span id="requirecorpowned_go">
 <a href="#requirecorpowned_go" style="color: inherit; text-decoration: inherit;">Require<wbr>Corp<wbr>Owned</a>
@@ -1358,8 +1231,7 @@ Structure is documented below.
         <span class="property-type">bool</span>
     </dt>
     <dd>{{% md %}}Whether the device needs to be corp owned.
-{{% /md %}}</dd>
-    <dt class="property-optional"
+{{% /md %}}</dd><dt class="property-optional"
             title="Optional">
         <span id="requirescreenlock_go">
 <a href="#requirescreenlock_go" style="color: inherit; text-decoration: inherit;">Require<wbr>Screen<wbr>Lock</a>
@@ -1369,14 +1241,11 @@ Structure is documented below.
     </dt>
     <dd>{{% md %}}Whether or not screenlock is required for the DevicePolicy
 to be true. Defaults to false.
-{{% /md %}}</dd>
-</dl>
+{{% /md %}}</dd></dl>
 {{% /choosable %}}
 
 {{% choosable language nodejs %}}
-<dl class="resources-properties">
-
-    <dt class="property-optional"
+<dl class="resources-properties"><dt class="property-optional"
             title="Optional">
         <span id="alloweddevicemanagementlevels_nodejs">
 <a href="#alloweddevicemanagementlevels_nodejs" style="color: inherit; text-decoration: inherit;">allowed<wbr>Device<wbr>Management<wbr>Levels</a>
@@ -1387,8 +1256,7 @@ to be true. Defaults to false.
     <dd>{{% md %}}A list of allowed device management levels.
 An empty list allows all management levels.
 Each value may be one of `MANAGEMENT_UNSPECIFIED`, `NONE`, `BASIC`, and `COMPLETE`.
-{{% /md %}}</dd>
-    <dt class="property-optional"
+{{% /md %}}</dd><dt class="property-optional"
             title="Optional">
         <span id="allowedencryptionstatuses_nodejs">
 <a href="#allowedencryptionstatuses_nodejs" style="color: inherit; text-decoration: inherit;">allowed<wbr>Encryption<wbr>Statuses</a>
@@ -1399,8 +1267,7 @@ Each value may be one of `MANAGEMENT_UNSPECIFIED`, `NONE`, `BASIC`, and `COMPLET
     <dd>{{% md %}}A list of allowed encryptions statuses.
 An empty list allows all statuses.
 Each value may be one of `ENCRYPTION_UNSPECIFIED`, `ENCRYPTION_UNSUPPORTED`, `UNENCRYPTED`, and `ENCRYPTED`.
-{{% /md %}}</dd>
-    <dt class="property-optional"
+{{% /md %}}</dd><dt class="property-optional"
             title="Optional">
         <span id="osconstraints_nodejs">
 <a href="#osconstraints_nodejs" style="color: inherit; text-decoration: inherit;">os<wbr>Constraints</a>
@@ -1411,8 +1278,7 @@ Each value may be one of `ENCRYPTION_UNSPECIFIED`, `ENCRYPTION_UNSUPPORTED`, `UN
     <dd>{{% md %}}A list of allowed OS versions.
 An empty list allows all types and all versions.
 Structure is documented below.
-{{% /md %}}</dd>
-    <dt class="property-optional"
+{{% /md %}}</dd><dt class="property-optional"
             title="Optional">
         <span id="requireadminapproval_nodejs">
 <a href="#requireadminapproval_nodejs" style="color: inherit; text-decoration: inherit;">require<wbr>Admin<wbr>Approval</a>
@@ -1421,8 +1287,7 @@ Structure is documented below.
         <span class="property-type">boolean</span>
     </dt>
     <dd>{{% md %}}Whether the device needs to be approved by the customer admin.
-{{% /md %}}</dd>
-    <dt class="property-optional"
+{{% /md %}}</dd><dt class="property-optional"
             title="Optional">
         <span id="requirecorpowned_nodejs">
 <a href="#requirecorpowned_nodejs" style="color: inherit; text-decoration: inherit;">require<wbr>Corp<wbr>Owned</a>
@@ -1431,8 +1296,7 @@ Structure is documented below.
         <span class="property-type">boolean</span>
     </dt>
     <dd>{{% md %}}Whether the device needs to be corp owned.
-{{% /md %}}</dd>
-    <dt class="property-optional"
+{{% /md %}}</dd><dt class="property-optional"
             title="Optional">
         <span id="requirescreenlock_nodejs">
 <a href="#requirescreenlock_nodejs" style="color: inherit; text-decoration: inherit;">require<wbr>Screen<wbr>Lock</a>
@@ -1442,14 +1306,11 @@ Structure is documented below.
     </dt>
     <dd>{{% md %}}Whether or not screenlock is required for the DevicePolicy
 to be true. Defaults to false.
-{{% /md %}}</dd>
-</dl>
+{{% /md %}}</dd></dl>
 {{% /choosable %}}
 
 {{% choosable language python %}}
-<dl class="resources-properties">
-
-    <dt class="property-optional"
+<dl class="resources-properties"><dt class="property-optional"
             title="Optional">
         <span id="allowed_device_management_levels_python">
 <a href="#allowed_device_management_levels_python" style="color: inherit; text-decoration: inherit;">allowed_<wbr>device_<wbr>management_<wbr>levels</a>
@@ -1460,8 +1321,7 @@ to be true. Defaults to false.
     <dd>{{% md %}}A list of allowed device management levels.
 An empty list allows all management levels.
 Each value may be one of `MANAGEMENT_UNSPECIFIED`, `NONE`, `BASIC`, and `COMPLETE`.
-{{% /md %}}</dd>
-    <dt class="property-optional"
+{{% /md %}}</dd><dt class="property-optional"
             title="Optional">
         <span id="allowed_encryption_statuses_python">
 <a href="#allowed_encryption_statuses_python" style="color: inherit; text-decoration: inherit;">allowed_<wbr>encryption_<wbr>statuses</a>
@@ -1472,8 +1332,7 @@ Each value may be one of `MANAGEMENT_UNSPECIFIED`, `NONE`, `BASIC`, and `COMPLET
     <dd>{{% md %}}A list of allowed encryptions statuses.
 An empty list allows all statuses.
 Each value may be one of `ENCRYPTION_UNSPECIFIED`, `ENCRYPTION_UNSUPPORTED`, `UNENCRYPTED`, and `ENCRYPTED`.
-{{% /md %}}</dd>
-    <dt class="property-optional"
+{{% /md %}}</dd><dt class="property-optional"
             title="Optional">
         <span id="os_constraints_python">
 <a href="#os_constraints_python" style="color: inherit; text-decoration: inherit;">os_<wbr>constraints</a>
@@ -1484,8 +1343,7 @@ Each value may be one of `ENCRYPTION_UNSPECIFIED`, `ENCRYPTION_UNSUPPORTED`, `UN
     <dd>{{% md %}}A list of allowed OS versions.
 An empty list allows all types and all versions.
 Structure is documented below.
-{{% /md %}}</dd>
-    <dt class="property-optional"
+{{% /md %}}</dd><dt class="property-optional"
             title="Optional">
         <span id="require_admin_approval_python">
 <a href="#require_admin_approval_python" style="color: inherit; text-decoration: inherit;">require_<wbr>admin_<wbr>approval</a>
@@ -1494,8 +1352,7 @@ Structure is documented below.
         <span class="property-type">bool</span>
     </dt>
     <dd>{{% md %}}Whether the device needs to be approved by the customer admin.
-{{% /md %}}</dd>
-    <dt class="property-optional"
+{{% /md %}}</dd><dt class="property-optional"
             title="Optional">
         <span id="require_corp_owned_python">
 <a href="#require_corp_owned_python" style="color: inherit; text-decoration: inherit;">require_<wbr>corp_<wbr>owned</a>
@@ -1504,8 +1361,7 @@ Structure is documented below.
         <span class="property-type">bool</span>
     </dt>
     <dd>{{% md %}}Whether the device needs to be corp owned.
-{{% /md %}}</dd>
-    <dt class="property-optional"
+{{% /md %}}</dd><dt class="property-optional"
             title="Optional">
         <span id="require_screen_lock_python">
 <a href="#require_screen_lock_python" style="color: inherit; text-decoration: inherit;">require_<wbr>screen_<wbr>lock</a>
@@ -1515,16 +1371,13 @@ Structure is documented below.
     </dt>
     <dd>{{% md %}}Whether or not screenlock is required for the DevicePolicy
 to be true. Defaults to false.
-{{% /md %}}</dd>
-</dl>
+{{% /md %}}</dd></dl>
 {{% /choosable %}}
 
 <h4 id="accesslevelconditiondevicepolicyosconstraint">Access<wbr>Level<wbr>Condition<wbr>Device<wbr>Policy<wbr>Os<wbr>Constraint</h4>
 
 {{% choosable language csharp %}}
-<dl class="resources-properties">
-
-    <dt class="property-required"
+<dl class="resources-properties"><dt class="property-required"
             title="Required">
         <span id="ostype_csharp">
 <a href="#ostype_csharp" style="color: inherit; text-decoration: inherit;">Os<wbr>Type</a>
@@ -1534,8 +1387,7 @@ to be true. Defaults to false.
     </dt>
     <dd>{{% md %}}The operating system type of the device.
 Possible values are `OS_UNSPECIFIED`, `DESKTOP_MAC`, `DESKTOP_WINDOWS`, `DESKTOP_LINUX`, and `DESKTOP_CHROME_OS`.
-{{% /md %}}</dd>
-    <dt class="property-optional"
+{{% /md %}}</dd><dt class="property-optional"
             title="Optional">
         <span id="minimumversion_csharp">
 <a href="#minimumversion_csharp" style="color: inherit; text-decoration: inherit;">Minimum<wbr>Version</a>
@@ -1546,14 +1398,11 @@ Possible values are `OS_UNSPECIFIED`, `DESKTOP_MAC`, `DESKTOP_WINDOWS`, `DESKTOP
     <dd>{{% md %}}The minimum allowed OS version. If not set, any version
 of this OS satisfies the constraint.
 Format: "major.minor.patch" such as "10.5.301", "9.2.1".
-{{% /md %}}</dd>
-</dl>
+{{% /md %}}</dd></dl>
 {{% /choosable %}}
 
 {{% choosable language go %}}
-<dl class="resources-properties">
-
-    <dt class="property-required"
+<dl class="resources-properties"><dt class="property-required"
             title="Required">
         <span id="ostype_go">
 <a href="#ostype_go" style="color: inherit; text-decoration: inherit;">Os<wbr>Type</a>
@@ -1563,8 +1412,7 @@ Format: "major.minor.patch" such as "10.5.301", "9.2.1".
     </dt>
     <dd>{{% md %}}The operating system type of the device.
 Possible values are `OS_UNSPECIFIED`, `DESKTOP_MAC`, `DESKTOP_WINDOWS`, `DESKTOP_LINUX`, and `DESKTOP_CHROME_OS`.
-{{% /md %}}</dd>
-    <dt class="property-optional"
+{{% /md %}}</dd><dt class="property-optional"
             title="Optional">
         <span id="minimumversion_go">
 <a href="#minimumversion_go" style="color: inherit; text-decoration: inherit;">Minimum<wbr>Version</a>
@@ -1575,14 +1423,11 @@ Possible values are `OS_UNSPECIFIED`, `DESKTOP_MAC`, `DESKTOP_WINDOWS`, `DESKTOP
     <dd>{{% md %}}The minimum allowed OS version. If not set, any version
 of this OS satisfies the constraint.
 Format: "major.minor.patch" such as "10.5.301", "9.2.1".
-{{% /md %}}</dd>
-</dl>
+{{% /md %}}</dd></dl>
 {{% /choosable %}}
 
 {{% choosable language nodejs %}}
-<dl class="resources-properties">
-
-    <dt class="property-required"
+<dl class="resources-properties"><dt class="property-required"
             title="Required">
         <span id="ostype_nodejs">
 <a href="#ostype_nodejs" style="color: inherit; text-decoration: inherit;">os<wbr>Type</a>
@@ -1592,8 +1437,7 @@ Format: "major.minor.patch" such as "10.5.301", "9.2.1".
     </dt>
     <dd>{{% md %}}The operating system type of the device.
 Possible values are `OS_UNSPECIFIED`, `DESKTOP_MAC`, `DESKTOP_WINDOWS`, `DESKTOP_LINUX`, and `DESKTOP_CHROME_OS`.
-{{% /md %}}</dd>
-    <dt class="property-optional"
+{{% /md %}}</dd><dt class="property-optional"
             title="Optional">
         <span id="minimumversion_nodejs">
 <a href="#minimumversion_nodejs" style="color: inherit; text-decoration: inherit;">minimum<wbr>Version</a>
@@ -1604,14 +1448,11 @@ Possible values are `OS_UNSPECIFIED`, `DESKTOP_MAC`, `DESKTOP_WINDOWS`, `DESKTOP
     <dd>{{% md %}}The minimum allowed OS version. If not set, any version
 of this OS satisfies the constraint.
 Format: "major.minor.patch" such as "10.5.301", "9.2.1".
-{{% /md %}}</dd>
-</dl>
+{{% /md %}}</dd></dl>
 {{% /choosable %}}
 
 {{% choosable language python %}}
-<dl class="resources-properties">
-
-    <dt class="property-required"
+<dl class="resources-properties"><dt class="property-required"
             title="Required">
         <span id="os_type_python">
 <a href="#os_type_python" style="color: inherit; text-decoration: inherit;">os_<wbr>type</a>
@@ -1621,8 +1462,7 @@ Format: "major.minor.patch" such as "10.5.301", "9.2.1".
     </dt>
     <dd>{{% md %}}The operating system type of the device.
 Possible values are `OS_UNSPECIFIED`, `DESKTOP_MAC`, `DESKTOP_WINDOWS`, `DESKTOP_LINUX`, and `DESKTOP_CHROME_OS`.
-{{% /md %}}</dd>
-    <dt class="property-optional"
+{{% /md %}}</dd><dt class="property-optional"
             title="Optional">
         <span id="minimum_version_python">
 <a href="#minimum_version_python" style="color: inherit; text-decoration: inherit;">minimum_<wbr>version</a>
@@ -1633,8 +1473,7 @@ Possible values are `OS_UNSPECIFIED`, `DESKTOP_MAC`, `DESKTOP_WINDOWS`, `DESKTOP
     <dd>{{% md %}}The minimum allowed OS version. If not set, any version
 of this OS satisfies the constraint.
 Format: "major.minor.patch" such as "10.5.301", "9.2.1".
-{{% /md %}}</dd>
-</dl>
+{{% /md %}}</dd></dl>
 {{% /choosable %}}
 ## Import
 
@@ -1651,6 +1490,6 @@ This resource does not support import.
 	<dt>License</dt>
 	<dd>Apache-2.0</dd>
 	<dt>Notes</dt>
-	<dd>This Pulumi package is based on the [`google-beta` Terraform Provider](https://github.com/hashicorp/terraform-provider-google-beta).</dd>
+	<dd>{{% md %}}This Pulumi package is based on the [`google-beta` Terraform Provider](https://github.com/hashicorp/terraform-provider-google-beta).{{% /md %}}</dd>
 </dl>
 

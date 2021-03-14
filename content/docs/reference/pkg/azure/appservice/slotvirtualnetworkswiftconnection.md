@@ -13,11 +13,17 @@ meta_desc: "Documentation for the azure.appservice.SlotVirtualNetworkSwiftConnec
 Manages an App Service Slot's Virtual Network Association (this is for the [Regional VNet Integration](https://docs.microsoft.com/en-us/azure/app-service/web-sites-integrate-with-vnet#regional-vnet-integration) which is still in preview).
 
 {{% examples %}}
+
 ## Example Usage
 
 {{< chooser language "typescript,python,go,csharp" / >}}
 
-{{% example csharp %}}
+
+
+
+
+{{< example csharp >}}
+
 ```csharp
 using Pulumi;
 using Azure = Pulumi.Azure;
@@ -97,9 +103,12 @@ class MyStack : Stack
 }
 ```
 
-{{% /example %}}
 
-{{% example go %}}
+{{< /example >}}
+
+
+{{< example go >}}
+
 ```go
 package main
 
@@ -190,9 +199,12 @@ func main() {
 }
 ```
 
-{{% /example %}}
 
-{{% example python %}}
+{{< /example >}}
+
+
+{{< example python >}}
+
 ```python
 import pulumi
 import pulumi_azure as azure
@@ -235,9 +247,12 @@ example_slot_virtual_network_swift_connection = azure.appservice.SlotVirtualNetw
     subnet_id=example_subnet.id)
 ```
 
-{{% /example %}}
 
-{{% example typescript %}}
+{{< /example >}}
+
+
+{{< example typescript >}}
+
 
 ```typescript
 import * as pulumi from "@pulumi/pulumi";
@@ -287,9 +302,16 @@ const exampleSlotVirtualNetworkSwiftConnection = new azure.appservice.SlotVirtua
 });
 ```
 
-{{% /example %}}
+
+{{< /example >}}
+
+
+
+
 
 {{% /examples %}}
+
+
 
 
 ## Create a SlotVirtualNetworkSwiftConnection Resource {#create}
@@ -314,9 +336,7 @@ const exampleSlotVirtualNetworkSwiftConnection = new azure.appservice.SlotVirtua
 
 {{% choosable language nodejs %}}
 
-<dl class="resources-properties">
-  
-    <dt
+<dl class="resources-properties"><dt
         class="property-required" title="Required">
         <span>name</span>
         <span class="property-indicator"></span>
@@ -324,9 +344,7 @@ const exampleSlotVirtualNetworkSwiftConnection = new azure.appservice.SlotVirtua
     </dt>
     <dd>
       The unique name of the resource.
-    </dd>
-  
-    <dt
+    </dd><dt
         class="property-required" title="Required">
         <span>args</span>
         <span class="property-indicator"></span>
@@ -334,9 +352,7 @@ const exampleSlotVirtualNetworkSwiftConnection = new azure.appservice.SlotVirtua
     </dt>
     <dd>
       The arguments to resource properties.
-    </dd>
-  
-    <dt
+    </dd><dt
         class="property-optional" title="Optional">
         <span>opts</span>
         <span class="property-indicator"></span>
@@ -344,10 +360,7 @@ const exampleSlotVirtualNetworkSwiftConnection = new azure.appservice.SlotVirtua
     </dt>
     <dd>
       Bag of options to control resource&#39;s behavior.
-    </dd>
-  
-
-</dl>
+    </dd></dl>
 
 {{% /choosable %}}
 
@@ -373,9 +386,7 @@ const exampleSlotVirtualNetworkSwiftConnection = new azure.appservice.SlotVirtua
 
 {{% choosable language go %}}
 
-<dl class="resources-properties">
-  
-    <dt
+<dl class="resources-properties"><dt
         class="property-optional" title="Optional">
         <span>ctx</span>
         <span class="property-indicator"></span>
@@ -383,9 +394,7 @@ const exampleSlotVirtualNetworkSwiftConnection = new azure.appservice.SlotVirtua
     </dt>
     <dd>
       Context object for the current deployment.
-    </dd>
-  
-    <dt
+    </dd><dt
         class="property-required" title="Required">
         <span>name</span>
         <span class="property-indicator"></span>
@@ -393,9 +402,7 @@ const exampleSlotVirtualNetworkSwiftConnection = new azure.appservice.SlotVirtua
     </dt>
     <dd>
       The unique name of the resource.
-    </dd>
-  
-    <dt
+    </dd><dt
         class="property-required" title="Required">
         <span>args</span>
         <span class="property-indicator"></span>
@@ -403,9 +410,7 @@ const exampleSlotVirtualNetworkSwiftConnection = new azure.appservice.SlotVirtua
     </dt>
     <dd>
       The arguments to resource properties.
-    </dd>
-  
-    <dt
+    </dd><dt
         class="property-optional" title="Optional">
         <span>opts</span>
         <span class="property-indicator"></span>
@@ -413,18 +418,13 @@ const exampleSlotVirtualNetworkSwiftConnection = new azure.appservice.SlotVirtua
     </dt>
     <dd>
       Bag of options to control resource&#39;s behavior.
-    </dd>
-  
-
-</dl>
+    </dd></dl>
 
 {{% /choosable %}}
 
 {{% choosable language csharp %}}
 
-<dl class="resources-properties">
-  
-    <dt
+<dl class="resources-properties"><dt
         class="property-required" title="Required">
         <span>name</span>
         <span class="property-indicator"></span>
@@ -432,9 +432,7 @@ const exampleSlotVirtualNetworkSwiftConnection = new azure.appservice.SlotVirtua
     </dt>
     <dd>
       The unique name of the resource.
-    </dd>
-  
-    <dt
+    </dd><dt
         class="property-required" title="Required">
         <span>args</span>
         <span class="property-indicator"></span>
@@ -442,9 +440,7 @@ const exampleSlotVirtualNetworkSwiftConnection = new azure.appservice.SlotVirtua
     </dt>
     <dd>
       The arguments to resource properties.
-    </dd>
-  
-    <dt
+    </dd><dt
         class="property-optional" title="Optional">
         <span>opts</span>
         <span class="property-indicator"></span>
@@ -452,10 +448,7 @@ const exampleSlotVirtualNetworkSwiftConnection = new azure.appservice.SlotVirtua
     </dt>
     <dd>
       Bag of options to control resource&#39;s behavior.
-    </dd>
-  
-
-</dl>
+    </dd></dl>
 
 {{% /choosable %}}
 
@@ -470,9 +463,7 @@ The SlotVirtualNetworkSwiftConnection resource accepts the following [input]({{<
 
 
 {{% choosable language csharp %}}
-<dl class="resources-properties">
-
-    <dt class="property-required"
+<dl class="resources-properties"><dt class="property-required"
             title="Required">
         <span id="appserviceid_csharp">
 <a href="#appserviceid_csharp" style="color: inherit; text-decoration: inherit;">App<wbr>Service<wbr>Id</a>
@@ -481,8 +472,7 @@ The SlotVirtualNetworkSwiftConnection resource accepts the following [input]({{<
         <span class="property-type">string</span>
     </dt>
     <dd>{{% md %}}The ID of the App Service or Function App to associate to the VNet. Changing this forces a new resource to be created.
-{{% /md %}}</dd>
-    <dt class="property-required"
+{{% /md %}}</dd><dt class="property-required"
             title="Required">
         <span id="slotname_csharp">
 <a href="#slotname_csharp" style="color: inherit; text-decoration: inherit;">Slot<wbr>Name</a>
@@ -491,8 +481,7 @@ The SlotVirtualNetworkSwiftConnection resource accepts the following [input]({{<
         <span class="property-type">string</span>
     </dt>
     <dd>{{% md %}}The name of the App Service Slot or Function App Slot. Changing this forces a new resource to be created.
-{{% /md %}}</dd>
-    <dt class="property-required"
+{{% /md %}}</dd><dt class="property-required"
             title="Required">
         <span id="subnetid_csharp">
 <a href="#subnetid_csharp" style="color: inherit; text-decoration: inherit;">Subnet<wbr>Id</a>
@@ -501,14 +490,11 @@ The SlotVirtualNetworkSwiftConnection resource accepts the following [input]({{<
         <span class="property-type">string</span>
     </dt>
     <dd>{{% md %}}The ID of the subnet the app service will be associated to (the subnet must have a `service_delegation` configured for `Microsoft.Web/serverFarms`).
-{{% /md %}}</dd>
-</dl>
+{{% /md %}}</dd></dl>
 {{% /choosable %}}
 
 {{% choosable language go %}}
-<dl class="resources-properties">
-
-    <dt class="property-required"
+<dl class="resources-properties"><dt class="property-required"
             title="Required">
         <span id="appserviceid_go">
 <a href="#appserviceid_go" style="color: inherit; text-decoration: inherit;">App<wbr>Service<wbr>Id</a>
@@ -517,8 +503,7 @@ The SlotVirtualNetworkSwiftConnection resource accepts the following [input]({{<
         <span class="property-type">string</span>
     </dt>
     <dd>{{% md %}}The ID of the App Service or Function App to associate to the VNet. Changing this forces a new resource to be created.
-{{% /md %}}</dd>
-    <dt class="property-required"
+{{% /md %}}</dd><dt class="property-required"
             title="Required">
         <span id="slotname_go">
 <a href="#slotname_go" style="color: inherit; text-decoration: inherit;">Slot<wbr>Name</a>
@@ -527,8 +512,7 @@ The SlotVirtualNetworkSwiftConnection resource accepts the following [input]({{<
         <span class="property-type">string</span>
     </dt>
     <dd>{{% md %}}The name of the App Service Slot or Function App Slot. Changing this forces a new resource to be created.
-{{% /md %}}</dd>
-    <dt class="property-required"
+{{% /md %}}</dd><dt class="property-required"
             title="Required">
         <span id="subnetid_go">
 <a href="#subnetid_go" style="color: inherit; text-decoration: inherit;">Subnet<wbr>Id</a>
@@ -537,14 +521,11 @@ The SlotVirtualNetworkSwiftConnection resource accepts the following [input]({{<
         <span class="property-type">string</span>
     </dt>
     <dd>{{% md %}}The ID of the subnet the app service will be associated to (the subnet must have a `service_delegation` configured for `Microsoft.Web/serverFarms`).
-{{% /md %}}</dd>
-</dl>
+{{% /md %}}</dd></dl>
 {{% /choosable %}}
 
 {{% choosable language nodejs %}}
-<dl class="resources-properties">
-
-    <dt class="property-required"
+<dl class="resources-properties"><dt class="property-required"
             title="Required">
         <span id="appserviceid_nodejs">
 <a href="#appserviceid_nodejs" style="color: inherit; text-decoration: inherit;">app<wbr>Service<wbr>Id</a>
@@ -553,8 +534,7 @@ The SlotVirtualNetworkSwiftConnection resource accepts the following [input]({{<
         <span class="property-type">string</span>
     </dt>
     <dd>{{% md %}}The ID of the App Service or Function App to associate to the VNet. Changing this forces a new resource to be created.
-{{% /md %}}</dd>
-    <dt class="property-required"
+{{% /md %}}</dd><dt class="property-required"
             title="Required">
         <span id="slotname_nodejs">
 <a href="#slotname_nodejs" style="color: inherit; text-decoration: inherit;">slot<wbr>Name</a>
@@ -563,8 +543,7 @@ The SlotVirtualNetworkSwiftConnection resource accepts the following [input]({{<
         <span class="property-type">string</span>
     </dt>
     <dd>{{% md %}}The name of the App Service Slot or Function App Slot. Changing this forces a new resource to be created.
-{{% /md %}}</dd>
-    <dt class="property-required"
+{{% /md %}}</dd><dt class="property-required"
             title="Required">
         <span id="subnetid_nodejs">
 <a href="#subnetid_nodejs" style="color: inherit; text-decoration: inherit;">subnet<wbr>Id</a>
@@ -573,14 +552,11 @@ The SlotVirtualNetworkSwiftConnection resource accepts the following [input]({{<
         <span class="property-type">string</span>
     </dt>
     <dd>{{% md %}}The ID of the subnet the app service will be associated to (the subnet must have a `service_delegation` configured for `Microsoft.Web/serverFarms`).
-{{% /md %}}</dd>
-</dl>
+{{% /md %}}</dd></dl>
 {{% /choosable %}}
 
 {{% choosable language python %}}
-<dl class="resources-properties">
-
-    <dt class="property-required"
+<dl class="resources-properties"><dt class="property-required"
             title="Required">
         <span id="app_service_id_python">
 <a href="#app_service_id_python" style="color: inherit; text-decoration: inherit;">app_<wbr>service_<wbr>id</a>
@@ -589,8 +565,7 @@ The SlotVirtualNetworkSwiftConnection resource accepts the following [input]({{<
         <span class="property-type">str</span>
     </dt>
     <dd>{{% md %}}The ID of the App Service or Function App to associate to the VNet. Changing this forces a new resource to be created.
-{{% /md %}}</dd>
-    <dt class="property-required"
+{{% /md %}}</dd><dt class="property-required"
             title="Required">
         <span id="slot_name_python">
 <a href="#slot_name_python" style="color: inherit; text-decoration: inherit;">slot_<wbr>name</a>
@@ -599,8 +574,7 @@ The SlotVirtualNetworkSwiftConnection resource accepts the following [input]({{<
         <span class="property-type">str</span>
     </dt>
     <dd>{{% md %}}The name of the App Service Slot or Function App Slot. Changing this forces a new resource to be created.
-{{% /md %}}</dd>
-    <dt class="property-required"
+{{% /md %}}</dd><dt class="property-required"
             title="Required">
         <span id="subnet_id_python">
 <a href="#subnet_id_python" style="color: inherit; text-decoration: inherit;">subnet_<wbr>id</a>
@@ -609,8 +583,7 @@ The SlotVirtualNetworkSwiftConnection resource accepts the following [input]({{<
         <span class="property-type">str</span>
     </dt>
     <dd>{{% md %}}The ID of the subnet the app service will be associated to (the subnet must have a `service_delegation` configured for `Microsoft.Web/serverFarms`).
-{{% /md %}}</dd>
-</dl>
+{{% /md %}}</dd></dl>
 {{% /choosable %}}
 
 
@@ -621,9 +594,7 @@ All [input](#inputs) properties are implicitly available as output properties. A
 
 
 {{% choosable language csharp %}}
-<dl class="resources-properties">
-
-    <dt class="property-"
+<dl class="resources-properties"><dt class="property-"
             title="">
         <span id="id_csharp">
 <a href="#id_csharp" style="color: inherit; text-decoration: inherit;">Id</a>
@@ -631,14 +602,11 @@ All [input](#inputs) properties are implicitly available as output properties. A
         <span class="property-indicator"></span>
         <span class="property-type">string</span>
     </dt>
-    <dd>{{% md %}}The provider-assigned unique ID for this managed resource.{{% /md %}}</dd>
-</dl>
+    <dd>{{% md %}}The provider-assigned unique ID for this managed resource.{{% /md %}}</dd></dl>
 {{% /choosable %}}
 
 {{% choosable language go %}}
-<dl class="resources-properties">
-
-    <dt class="property-"
+<dl class="resources-properties"><dt class="property-"
             title="">
         <span id="id_go">
 <a href="#id_go" style="color: inherit; text-decoration: inherit;">Id</a>
@@ -646,14 +614,11 @@ All [input](#inputs) properties are implicitly available as output properties. A
         <span class="property-indicator"></span>
         <span class="property-type">string</span>
     </dt>
-    <dd>{{% md %}}The provider-assigned unique ID for this managed resource.{{% /md %}}</dd>
-</dl>
+    <dd>{{% md %}}The provider-assigned unique ID for this managed resource.{{% /md %}}</dd></dl>
 {{% /choosable %}}
 
 {{% choosable language nodejs %}}
-<dl class="resources-properties">
-
-    <dt class="property-"
+<dl class="resources-properties"><dt class="property-"
             title="">
         <span id="id_nodejs">
 <a href="#id_nodejs" style="color: inherit; text-decoration: inherit;">id</a>
@@ -661,14 +626,11 @@ All [input](#inputs) properties are implicitly available as output properties. A
         <span class="property-indicator"></span>
         <span class="property-type">string</span>
     </dt>
-    <dd>{{% md %}}The provider-assigned unique ID for this managed resource.{{% /md %}}</dd>
-</dl>
+    <dd>{{% md %}}The provider-assigned unique ID for this managed resource.{{% /md %}}</dd></dl>
 {{% /choosable %}}
 
 {{% choosable language python %}}
-<dl class="resources-properties">
-
-    <dt class="property-"
+<dl class="resources-properties"><dt class="property-"
             title="">
         <span id="id_python">
 <a href="#id_python" style="color: inherit; text-decoration: inherit;">id</a>
@@ -676,8 +638,7 @@ All [input](#inputs) properties are implicitly available as output properties. A
         <span class="property-indicator"></span>
         <span class="property-type">str</span>
     </dt>
-    <dd>{{% md %}}The provider-assigned unique ID for this managed resource.{{% /md %}}</dd>
-</dl>
+    <dd>{{% md %}}The provider-assigned unique ID for this managed resource.{{% /md %}}</dd></dl>
 {{% /choosable %}}
 
 
@@ -804,9 +765,7 @@ The following state arguments are supported:
 
 
 {{% choosable language csharp %}}
-<dl class="resources-properties">
-
-    <dt class="property-optional"
+<dl class="resources-properties"><dt class="property-optional"
             title="Optional">
         <span id="state_appserviceid_csharp">
 <a href="#state_appserviceid_csharp" style="color: inherit; text-decoration: inherit;">App<wbr>Service<wbr>Id</a>
@@ -815,8 +774,7 @@ The following state arguments are supported:
         <span class="property-type">string</span>
     </dt>
     <dd>{{% md %}}The ID of the App Service or Function App to associate to the VNet. Changing this forces a new resource to be created.
-{{% /md %}}</dd>
-    <dt class="property-optional"
+{{% /md %}}</dd><dt class="property-optional"
             title="Optional">
         <span id="state_slotname_csharp">
 <a href="#state_slotname_csharp" style="color: inherit; text-decoration: inherit;">Slot<wbr>Name</a>
@@ -825,8 +783,7 @@ The following state arguments are supported:
         <span class="property-type">string</span>
     </dt>
     <dd>{{% md %}}The name of the App Service Slot or Function App Slot. Changing this forces a new resource to be created.
-{{% /md %}}</dd>
-    <dt class="property-optional"
+{{% /md %}}</dd><dt class="property-optional"
             title="Optional">
         <span id="state_subnetid_csharp">
 <a href="#state_subnetid_csharp" style="color: inherit; text-decoration: inherit;">Subnet<wbr>Id</a>
@@ -835,14 +792,11 @@ The following state arguments are supported:
         <span class="property-type">string</span>
     </dt>
     <dd>{{% md %}}The ID of the subnet the app service will be associated to (the subnet must have a `service_delegation` configured for `Microsoft.Web/serverFarms`).
-{{% /md %}}</dd>
-</dl>
+{{% /md %}}</dd></dl>
 {{% /choosable %}}
 
 {{% choosable language go %}}
-<dl class="resources-properties">
-
-    <dt class="property-optional"
+<dl class="resources-properties"><dt class="property-optional"
             title="Optional">
         <span id="state_appserviceid_go">
 <a href="#state_appserviceid_go" style="color: inherit; text-decoration: inherit;">App<wbr>Service<wbr>Id</a>
@@ -851,8 +805,7 @@ The following state arguments are supported:
         <span class="property-type">string</span>
     </dt>
     <dd>{{% md %}}The ID of the App Service or Function App to associate to the VNet. Changing this forces a new resource to be created.
-{{% /md %}}</dd>
-    <dt class="property-optional"
+{{% /md %}}</dd><dt class="property-optional"
             title="Optional">
         <span id="state_slotname_go">
 <a href="#state_slotname_go" style="color: inherit; text-decoration: inherit;">Slot<wbr>Name</a>
@@ -861,8 +814,7 @@ The following state arguments are supported:
         <span class="property-type">string</span>
     </dt>
     <dd>{{% md %}}The name of the App Service Slot or Function App Slot. Changing this forces a new resource to be created.
-{{% /md %}}</dd>
-    <dt class="property-optional"
+{{% /md %}}</dd><dt class="property-optional"
             title="Optional">
         <span id="state_subnetid_go">
 <a href="#state_subnetid_go" style="color: inherit; text-decoration: inherit;">Subnet<wbr>Id</a>
@@ -871,14 +823,11 @@ The following state arguments are supported:
         <span class="property-type">string</span>
     </dt>
     <dd>{{% md %}}The ID of the subnet the app service will be associated to (the subnet must have a `service_delegation` configured for `Microsoft.Web/serverFarms`).
-{{% /md %}}</dd>
-</dl>
+{{% /md %}}</dd></dl>
 {{% /choosable %}}
 
 {{% choosable language nodejs %}}
-<dl class="resources-properties">
-
-    <dt class="property-optional"
+<dl class="resources-properties"><dt class="property-optional"
             title="Optional">
         <span id="state_appserviceid_nodejs">
 <a href="#state_appserviceid_nodejs" style="color: inherit; text-decoration: inherit;">app<wbr>Service<wbr>Id</a>
@@ -887,8 +836,7 @@ The following state arguments are supported:
         <span class="property-type">string</span>
     </dt>
     <dd>{{% md %}}The ID of the App Service or Function App to associate to the VNet. Changing this forces a new resource to be created.
-{{% /md %}}</dd>
-    <dt class="property-optional"
+{{% /md %}}</dd><dt class="property-optional"
             title="Optional">
         <span id="state_slotname_nodejs">
 <a href="#state_slotname_nodejs" style="color: inherit; text-decoration: inherit;">slot<wbr>Name</a>
@@ -897,8 +845,7 @@ The following state arguments are supported:
         <span class="property-type">string</span>
     </dt>
     <dd>{{% md %}}The name of the App Service Slot or Function App Slot. Changing this forces a new resource to be created.
-{{% /md %}}</dd>
-    <dt class="property-optional"
+{{% /md %}}</dd><dt class="property-optional"
             title="Optional">
         <span id="state_subnetid_nodejs">
 <a href="#state_subnetid_nodejs" style="color: inherit; text-decoration: inherit;">subnet<wbr>Id</a>
@@ -907,14 +854,11 @@ The following state arguments are supported:
         <span class="property-type">string</span>
     </dt>
     <dd>{{% md %}}The ID of the subnet the app service will be associated to (the subnet must have a `service_delegation` configured for `Microsoft.Web/serverFarms`).
-{{% /md %}}</dd>
-</dl>
+{{% /md %}}</dd></dl>
 {{% /choosable %}}
 
 {{% choosable language python %}}
-<dl class="resources-properties">
-
-    <dt class="property-optional"
+<dl class="resources-properties"><dt class="property-optional"
             title="Optional">
         <span id="state_app_service_id_python">
 <a href="#state_app_service_id_python" style="color: inherit; text-decoration: inherit;">app_<wbr>service_<wbr>id</a>
@@ -923,8 +867,7 @@ The following state arguments are supported:
         <span class="property-type">str</span>
     </dt>
     <dd>{{% md %}}The ID of the App Service or Function App to associate to the VNet. Changing this forces a new resource to be created.
-{{% /md %}}</dd>
-    <dt class="property-optional"
+{{% /md %}}</dd><dt class="property-optional"
             title="Optional">
         <span id="state_slot_name_python">
 <a href="#state_slot_name_python" style="color: inherit; text-decoration: inherit;">slot_<wbr>name</a>
@@ -933,8 +876,7 @@ The following state arguments are supported:
         <span class="property-type">str</span>
     </dt>
     <dd>{{% md %}}The name of the App Service Slot or Function App Slot. Changing this forces a new resource to be created.
-{{% /md %}}</dd>
-    <dt class="property-optional"
+{{% /md %}}</dd><dt class="property-optional"
             title="Optional">
         <span id="state_subnet_id_python">
 <a href="#state_subnet_id_python" style="color: inherit; text-decoration: inherit;">subnet_<wbr>id</a>
@@ -943,8 +885,7 @@ The following state arguments are supported:
         <span class="property-type">str</span>
     </dt>
     <dd>{{% md %}}The ID of the subnet the app service will be associated to (the subnet must have a `service_delegation` configured for `Microsoft.Web/serverFarms`).
-{{% /md %}}</dd>
-</dl>
+{{% /md %}}</dd></dl>
 {{% /choosable %}}
 
 
@@ -970,6 +911,6 @@ App Service Slot Virtual Network Associations can be imported using the `resourc
 	<dt>License</dt>
 	<dd>Apache-2.0</dd>
 	<dt>Notes</dt>
-	<dd>This Pulumi package is based on the [`azurerm` Terraform Provider](https://github.com/terraform-providers/terraform-provider-azurerm).</dd>
+	<dd>{{% md %}}This Pulumi package is based on the [`azurerm` Terraform Provider](https://github.com/terraform-providers/terraform-provider-azurerm).{{% /md %}}</dd>
 </dl>
 

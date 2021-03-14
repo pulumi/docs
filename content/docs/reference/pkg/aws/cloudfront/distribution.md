@@ -23,11 +23,17 @@ blocked. If you need to delete a distribution that is enabled and you do not
 want to wait, you need to use the `retain_on_delete` flag.
 
 {{% examples %}}
+
 ## Example Usage
 
 {{< chooser language "typescript,python,go,csharp" / >}}
 
-{{% example csharp %}}
+
+
+
+
+{{< example csharp >}}
+
 ```csharp
 using Pulumi;
 using Aws = Pulumi.Aws;
@@ -200,9 +206,12 @@ class MyStack : Stack
 }
 ```
 
-{{% /example %}}
 
-{{% example go %}}
+{{< /example >}}
+
+
+{{< example go >}}
+
 ```go
 package main
 
@@ -354,9 +363,12 @@ func main() {
 }
 ```
 
-{{% /example %}}
 
-{{% example python %}}
+{{< /example >}}
+
+
+{{< example python >}}
+
 ```python
 import pulumi
 import pulumi_aws as aws
@@ -486,9 +498,12 @@ s3_distribution = aws.cloudfront.Distribution("s3Distribution",
     ))
 ```
 
-{{% /example %}}
 
-{{% example typescript %}}
+{{< /example >}}
+
+
+{{< example typescript >}}
+
 
 ```typescript
 import * as pulumi from "@pulumi/pulumi";
@@ -621,9 +636,16 @@ const s3Distribution = new aws.cloudfront.Distribution("s3Distribution", {
 });
 ```
 
-{{% /example %}}
+
+{{< /example >}}
+
+
+
+
 
 {{% /examples %}}
+
+
 
 
 ## Create a Distribution Resource {#create}
@@ -648,9 +670,7 @@ const s3Distribution = new aws.cloudfront.Distribution("s3Distribution", {
 
 {{% choosable language nodejs %}}
 
-<dl class="resources-properties">
-  
-    <dt
+<dl class="resources-properties"><dt
         class="property-required" title="Required">
         <span>name</span>
         <span class="property-indicator"></span>
@@ -658,9 +678,7 @@ const s3Distribution = new aws.cloudfront.Distribution("s3Distribution", {
     </dt>
     <dd>
       The unique name of the resource.
-    </dd>
-  
-    <dt
+    </dd><dt
         class="property-required" title="Required">
         <span>args</span>
         <span class="property-indicator"></span>
@@ -668,9 +686,7 @@ const s3Distribution = new aws.cloudfront.Distribution("s3Distribution", {
     </dt>
     <dd>
       The arguments to resource properties.
-    </dd>
-  
-    <dt
+    </dd><dt
         class="property-optional" title="Optional">
         <span>opts</span>
         <span class="property-indicator"></span>
@@ -678,10 +694,7 @@ const s3Distribution = new aws.cloudfront.Distribution("s3Distribution", {
     </dt>
     <dd>
       Bag of options to control resource&#39;s behavior.
-    </dd>
-  
-
-</dl>
+    </dd></dl>
 
 {{% /choosable %}}
 
@@ -707,9 +720,7 @@ const s3Distribution = new aws.cloudfront.Distribution("s3Distribution", {
 
 {{% choosable language go %}}
 
-<dl class="resources-properties">
-  
-    <dt
+<dl class="resources-properties"><dt
         class="property-optional" title="Optional">
         <span>ctx</span>
         <span class="property-indicator"></span>
@@ -717,9 +728,7 @@ const s3Distribution = new aws.cloudfront.Distribution("s3Distribution", {
     </dt>
     <dd>
       Context object for the current deployment.
-    </dd>
-  
-    <dt
+    </dd><dt
         class="property-required" title="Required">
         <span>name</span>
         <span class="property-indicator"></span>
@@ -727,9 +736,7 @@ const s3Distribution = new aws.cloudfront.Distribution("s3Distribution", {
     </dt>
     <dd>
       The unique name of the resource.
-    </dd>
-  
-    <dt
+    </dd><dt
         class="property-required" title="Required">
         <span>args</span>
         <span class="property-indicator"></span>
@@ -737,9 +744,7 @@ const s3Distribution = new aws.cloudfront.Distribution("s3Distribution", {
     </dt>
     <dd>
       The arguments to resource properties.
-    </dd>
-  
-    <dt
+    </dd><dt
         class="property-optional" title="Optional">
         <span>opts</span>
         <span class="property-indicator"></span>
@@ -747,18 +752,13 @@ const s3Distribution = new aws.cloudfront.Distribution("s3Distribution", {
     </dt>
     <dd>
       Bag of options to control resource&#39;s behavior.
-    </dd>
-  
-
-</dl>
+    </dd></dl>
 
 {{% /choosable %}}
 
 {{% choosable language csharp %}}
 
-<dl class="resources-properties">
-  
-    <dt
+<dl class="resources-properties"><dt
         class="property-required" title="Required">
         <span>name</span>
         <span class="property-indicator"></span>
@@ -766,9 +766,7 @@ const s3Distribution = new aws.cloudfront.Distribution("s3Distribution", {
     </dt>
     <dd>
       The unique name of the resource.
-    </dd>
-  
-    <dt
+    </dd><dt
         class="property-required" title="Required">
         <span>args</span>
         <span class="property-indicator"></span>
@@ -776,9 +774,7 @@ const s3Distribution = new aws.cloudfront.Distribution("s3Distribution", {
     </dt>
     <dd>
       The arguments to resource properties.
-    </dd>
-  
-    <dt
+    </dd><dt
         class="property-optional" title="Optional">
         <span>opts</span>
         <span class="property-indicator"></span>
@@ -786,10 +782,7 @@ const s3Distribution = new aws.cloudfront.Distribution("s3Distribution", {
     </dt>
     <dd>
       Bag of options to control resource&#39;s behavior.
-    </dd>
-  
-
-</dl>
+    </dd></dl>
 
 {{% /choosable %}}
 
@@ -804,9 +797,7 @@ The Distribution resource accepts the following [input]({{< relref "/docs/intro/
 
 
 {{% choosable language csharp %}}
-<dl class="resources-properties">
-
-    <dt class="property-required"
+<dl class="resources-properties"><dt class="property-required"
             title="Required">
         <span id="defaultcachebehavior_csharp">
 <a href="#defaultcachebehavior_csharp" style="color: inherit; text-decoration: inherit;">Default<wbr>Cache<wbr>Behavior</a>
@@ -816,8 +807,7 @@ The Distribution resource accepts the following [input]({{< relref "/docs/intro/
     </dt>
     <dd>{{% md %}}The default cache behavior for this distribution (maximum
 one).
-{{% /md %}}</dd>
-    <dt class="property-required"
+{{% /md %}}</dd><dt class="property-required"
             title="Required">
         <span id="enabled_csharp">
 <a href="#enabled_csharp" style="color: inherit; text-decoration: inherit;">Enabled</a>
@@ -827,8 +817,7 @@ one).
     </dt>
     <dd>{{% md %}}Whether the distribution is enabled to accept end
 user requests for content.
-{{% /md %}}</dd>
-    <dt class="property-required"
+{{% /md %}}</dd><dt class="property-required"
             title="Required">
         <span id="origins_csharp">
 <a href="#origins_csharp" style="color: inherit; text-decoration: inherit;">Origins</a>
@@ -838,8 +827,7 @@ user requests for content.
     </dt>
     <dd>{{% md %}}One or more origins for this
 distribution (multiples allowed).
-{{% /md %}}</dd>
-    <dt class="property-required"
+{{% /md %}}</dd><dt class="property-required"
             title="Required">
         <span id="restrictions_csharp">
 <a href="#restrictions_csharp" style="color: inherit; text-decoration: inherit;">Restrictions</a>
@@ -849,8 +837,7 @@ distribution (multiples allowed).
     </dt>
     <dd>{{% md %}}The restriction
 configuration for this distribution (maximum one).
-{{% /md %}}</dd>
-    <dt class="property-required"
+{{% /md %}}</dd><dt class="property-required"
             title="Required">
         <span id="viewercertificate_csharp">
 <a href="#viewercertificate_csharp" style="color: inherit; text-decoration: inherit;">Viewer<wbr>Certificate</a>
@@ -861,8 +848,7 @@ configuration for this distribution (maximum one).
     <dd>{{% md %}}The SSL
 configuration for this distribution (maximum
 one).
-{{% /md %}}</dd>
-    <dt class="property-optional"
+{{% /md %}}</dd><dt class="property-optional"
             title="Optional">
         <span id="aliases_csharp">
 <a href="#aliases_csharp" style="color: inherit; text-decoration: inherit;">Aliases</a>
@@ -872,8 +858,7 @@ one).
     </dt>
     <dd>{{% md %}}Extra CNAMEs (alternate domain names), if any, for
 this distribution.
-{{% /md %}}</dd>
-    <dt class="property-optional"
+{{% /md %}}</dd><dt class="property-optional"
             title="Optional">
         <span id="comment_csharp">
 <a href="#comment_csharp" style="color: inherit; text-decoration: inherit;">Comment</a>
@@ -883,8 +868,7 @@ this distribution.
     </dt>
     <dd>{{% md %}}Any comments you want to include about the
 distribution.
-{{% /md %}}</dd>
-    <dt class="property-optional"
+{{% /md %}}</dd><dt class="property-optional"
             title="Optional">
         <span id="customerrorresponses_csharp">
 <a href="#customerrorresponses_csharp" style="color: inherit; text-decoration: inherit;">Custom<wbr>Error<wbr>Responses</a>
@@ -893,8 +877,7 @@ distribution.
         <span class="property-type"><a href="#distributioncustomerrorresponse">List&lt;Distribution<wbr>Custom<wbr>Error<wbr>Response<wbr>Args&gt;</a></span>
     </dt>
     <dd>{{% md %}}One or more custom error response elements (multiples allowed).
-{{% /md %}}</dd>
-    <dt class="property-optional"
+{{% /md %}}</dd><dt class="property-optional"
             title="Optional">
         <span id="defaultrootobject_csharp">
 <a href="#defaultrootobject_csharp" style="color: inherit; text-decoration: inherit;">Default<wbr>Root<wbr>Object</a>
@@ -904,8 +887,7 @@ distribution.
     </dt>
     <dd>{{% md %}}The object that you want CloudFront to
 return (for example, index.html) when an end user requests the root URL.
-{{% /md %}}</dd>
-    <dt class="property-optional"
+{{% /md %}}</dd><dt class="property-optional"
             title="Optional">
         <span id="httpversion_csharp">
 <a href="#httpversion_csharp" style="color: inherit; text-decoration: inherit;">Http<wbr>Version</a>
@@ -916,8 +898,7 @@ return (for example, index.html) when an end user requests the root URL.
     <dd>{{% md %}}The maximum HTTP version to support on the
 distribution. Allowed values are `http1.1` and `http2`. The default is
 `http2`.
-{{% /md %}}</dd>
-    <dt class="property-optional"
+{{% /md %}}</dd><dt class="property-optional"
             title="Optional">
         <span id="isipv6enabled_csharp">
 <a href="#isipv6enabled_csharp" style="color: inherit; text-decoration: inherit;">Is<wbr>Ipv6Enabled</a>
@@ -926,8 +907,7 @@ distribution. Allowed values are `http1.1` and `http2`. The default is
         <span class="property-type">bool</span>
     </dt>
     <dd>{{% md %}}Whether the IPv6 is enabled for the distribution.
-{{% /md %}}</dd>
-    <dt class="property-optional"
+{{% /md %}}</dd><dt class="property-optional"
             title="Optional">
         <span id="loggingconfig_csharp">
 <a href="#loggingconfig_csharp" style="color: inherit; text-decoration: inherit;">Logging<wbr>Config</a>
@@ -938,8 +918,7 @@ distribution. Allowed values are `http1.1` and `http2`. The default is
     <dd>{{% md %}}The logging
 configuration that controls how logs are written
 to your distribution (maximum one).
-{{% /md %}}</dd>
-    <dt class="property-optional"
+{{% /md %}}</dd><dt class="property-optional"
             title="Optional">
         <span id="orderedcachebehaviors_csharp">
 <a href="#orderedcachebehaviors_csharp" style="color: inherit; text-decoration: inherit;">Ordered<wbr>Cache<wbr>Behaviors</a>
@@ -950,8 +929,7 @@ to your distribution (maximum one).
     <dd>{{% md %}}An ordered list of cache behaviors
 resource for this distribution. List from top to bottom
 in order of precedence. The topmost cache behavior will have precedence 0.
-{{% /md %}}</dd>
-    <dt class="property-optional"
+{{% /md %}}</dd><dt class="property-optional"
             title="Optional">
         <span id="origingroups_csharp">
 <a href="#origingroups_csharp" style="color: inherit; text-decoration: inherit;">Origin<wbr>Groups</a>
@@ -961,8 +939,7 @@ in order of precedence. The topmost cache behavior will have precedence 0.
     </dt>
     <dd>{{% md %}}One or more origin_group for this
 distribution (multiples allowed).
-{{% /md %}}</dd>
-    <dt class="property-optional"
+{{% /md %}}</dd><dt class="property-optional"
             title="Optional">
         <span id="priceclass_csharp">
 <a href="#priceclass_csharp" style="color: inherit; text-decoration: inherit;">Price<wbr>Class</a>
@@ -972,8 +949,7 @@ distribution (multiples allowed).
     </dt>
     <dd>{{% md %}}The price class for this distribution. One of
 `PriceClass_All`, `PriceClass_200`, `PriceClass_100`
-{{% /md %}}</dd>
-    <dt class="property-optional"
+{{% /md %}}</dd><dt class="property-optional"
             title="Optional">
         <span id="retainondelete_csharp">
 <a href="#retainondelete_csharp" style="color: inherit; text-decoration: inherit;">Retain<wbr>On<wbr>Delete</a>
@@ -984,8 +960,7 @@ distribution (multiples allowed).
     <dd>{{% md %}}Disables the distribution instead of
 deleting it when destroying the resource. If this is set,
 the distribution needs to be deleted manually afterwards. Default: `false`.
-{{% /md %}}</dd>
-    <dt class="property-optional"
+{{% /md %}}</dd><dt class="property-optional"
             title="Optional">
         <span id="tags_csharp">
 <a href="#tags_csharp" style="color: inherit; text-decoration: inherit;">Tags</a>
@@ -994,8 +969,7 @@ the distribution needs to be deleted manually afterwards. Default: `false`.
         <span class="property-type">Dictionary&lt;string, string&gt;</span>
     </dt>
     <dd>{{% md %}}A map of tags to assign to the resource.
-{{% /md %}}</dd>
-    <dt class="property-optional"
+{{% /md %}}</dd><dt class="property-optional"
             title="Optional">
         <span id="waitfordeployment_csharp">
 <a href="#waitfordeployment_csharp" style="color: inherit; text-decoration: inherit;">Wait<wbr>For<wbr>Deployment</a>
@@ -1006,8 +980,7 @@ the distribution needs to be deleted manually afterwards. Default: `false`.
     <dd>{{% md %}}If enabled, the resource will wait for
 the distribution status to change from `InProgress` to `Deployed`. Setting
 this to`false` will skip the process. Default: `true`.
-{{% /md %}}</dd>
-    <dt class="property-optional"
+{{% /md %}}</dd><dt class="property-optional"
             title="Optional">
         <span id="webaclid_csharp">
 <a href="#webaclid_csharp" style="color: inherit; text-decoration: inherit;">Web<wbr>Acl<wbr>Id</a>
@@ -1022,14 +995,11 @@ for example `aws_wafv2_web_acl.example.arn`. To specify a web
 ACL created using AWS WAF Classic, use the ACL ID, for example `aws_waf_web_acl.example.id`.
 The WAF Web ACL must exist in the WAF Global (CloudFront) region and the
 credentials configuring this argument must have `waf:GetWebACL` permissions assigned.
-{{% /md %}}</dd>
-</dl>
+{{% /md %}}</dd></dl>
 {{% /choosable %}}
 
 {{% choosable language go %}}
-<dl class="resources-properties">
-
-    <dt class="property-required"
+<dl class="resources-properties"><dt class="property-required"
             title="Required">
         <span id="defaultcachebehavior_go">
 <a href="#defaultcachebehavior_go" style="color: inherit; text-decoration: inherit;">Default<wbr>Cache<wbr>Behavior</a>
@@ -1039,8 +1009,7 @@ credentials configuring this argument must have `waf:GetWebACL` permissions assi
     </dt>
     <dd>{{% md %}}The default cache behavior for this distribution (maximum
 one).
-{{% /md %}}</dd>
-    <dt class="property-required"
+{{% /md %}}</dd><dt class="property-required"
             title="Required">
         <span id="enabled_go">
 <a href="#enabled_go" style="color: inherit; text-decoration: inherit;">Enabled</a>
@@ -1050,8 +1019,7 @@ one).
     </dt>
     <dd>{{% md %}}Whether the distribution is enabled to accept end
 user requests for content.
-{{% /md %}}</dd>
-    <dt class="property-required"
+{{% /md %}}</dd><dt class="property-required"
             title="Required">
         <span id="origins_go">
 <a href="#origins_go" style="color: inherit; text-decoration: inherit;">Origins</a>
@@ -1061,8 +1029,7 @@ user requests for content.
     </dt>
     <dd>{{% md %}}One or more origins for this
 distribution (multiples allowed).
-{{% /md %}}</dd>
-    <dt class="property-required"
+{{% /md %}}</dd><dt class="property-required"
             title="Required">
         <span id="restrictions_go">
 <a href="#restrictions_go" style="color: inherit; text-decoration: inherit;">Restrictions</a>
@@ -1072,8 +1039,7 @@ distribution (multiples allowed).
     </dt>
     <dd>{{% md %}}The restriction
 configuration for this distribution (maximum one).
-{{% /md %}}</dd>
-    <dt class="property-required"
+{{% /md %}}</dd><dt class="property-required"
             title="Required">
         <span id="viewercertificate_go">
 <a href="#viewercertificate_go" style="color: inherit; text-decoration: inherit;">Viewer<wbr>Certificate</a>
@@ -1084,8 +1050,7 @@ configuration for this distribution (maximum one).
     <dd>{{% md %}}The SSL
 configuration for this distribution (maximum
 one).
-{{% /md %}}</dd>
-    <dt class="property-optional"
+{{% /md %}}</dd><dt class="property-optional"
             title="Optional">
         <span id="aliases_go">
 <a href="#aliases_go" style="color: inherit; text-decoration: inherit;">Aliases</a>
@@ -1095,8 +1060,7 @@ one).
     </dt>
     <dd>{{% md %}}Extra CNAMEs (alternate domain names), if any, for
 this distribution.
-{{% /md %}}</dd>
-    <dt class="property-optional"
+{{% /md %}}</dd><dt class="property-optional"
             title="Optional">
         <span id="comment_go">
 <a href="#comment_go" style="color: inherit; text-decoration: inherit;">Comment</a>
@@ -1106,8 +1070,7 @@ this distribution.
     </dt>
     <dd>{{% md %}}Any comments you want to include about the
 distribution.
-{{% /md %}}</dd>
-    <dt class="property-optional"
+{{% /md %}}</dd><dt class="property-optional"
             title="Optional">
         <span id="customerrorresponses_go">
 <a href="#customerrorresponses_go" style="color: inherit; text-decoration: inherit;">Custom<wbr>Error<wbr>Responses</a>
@@ -1116,8 +1079,7 @@ distribution.
         <span class="property-type"><a href="#distributioncustomerrorresponse">[]Distribution<wbr>Custom<wbr>Error<wbr>Response</a></span>
     </dt>
     <dd>{{% md %}}One or more custom error response elements (multiples allowed).
-{{% /md %}}</dd>
-    <dt class="property-optional"
+{{% /md %}}</dd><dt class="property-optional"
             title="Optional">
         <span id="defaultrootobject_go">
 <a href="#defaultrootobject_go" style="color: inherit; text-decoration: inherit;">Default<wbr>Root<wbr>Object</a>
@@ -1127,8 +1089,7 @@ distribution.
     </dt>
     <dd>{{% md %}}The object that you want CloudFront to
 return (for example, index.html) when an end user requests the root URL.
-{{% /md %}}</dd>
-    <dt class="property-optional"
+{{% /md %}}</dd><dt class="property-optional"
             title="Optional">
         <span id="httpversion_go">
 <a href="#httpversion_go" style="color: inherit; text-decoration: inherit;">Http<wbr>Version</a>
@@ -1139,8 +1100,7 @@ return (for example, index.html) when an end user requests the root URL.
     <dd>{{% md %}}The maximum HTTP version to support on the
 distribution. Allowed values are `http1.1` and `http2`. The default is
 `http2`.
-{{% /md %}}</dd>
-    <dt class="property-optional"
+{{% /md %}}</dd><dt class="property-optional"
             title="Optional">
         <span id="isipv6enabled_go">
 <a href="#isipv6enabled_go" style="color: inherit; text-decoration: inherit;">Is<wbr>Ipv6Enabled</a>
@@ -1149,8 +1109,7 @@ distribution. Allowed values are `http1.1` and `http2`. The default is
         <span class="property-type">bool</span>
     </dt>
     <dd>{{% md %}}Whether the IPv6 is enabled for the distribution.
-{{% /md %}}</dd>
-    <dt class="property-optional"
+{{% /md %}}</dd><dt class="property-optional"
             title="Optional">
         <span id="loggingconfig_go">
 <a href="#loggingconfig_go" style="color: inherit; text-decoration: inherit;">Logging<wbr>Config</a>
@@ -1161,8 +1120,7 @@ distribution. Allowed values are `http1.1` and `http2`. The default is
     <dd>{{% md %}}The logging
 configuration that controls how logs are written
 to your distribution (maximum one).
-{{% /md %}}</dd>
-    <dt class="property-optional"
+{{% /md %}}</dd><dt class="property-optional"
             title="Optional">
         <span id="orderedcachebehaviors_go">
 <a href="#orderedcachebehaviors_go" style="color: inherit; text-decoration: inherit;">Ordered<wbr>Cache<wbr>Behaviors</a>
@@ -1173,8 +1131,7 @@ to your distribution (maximum one).
     <dd>{{% md %}}An ordered list of cache behaviors
 resource for this distribution. List from top to bottom
 in order of precedence. The topmost cache behavior will have precedence 0.
-{{% /md %}}</dd>
-    <dt class="property-optional"
+{{% /md %}}</dd><dt class="property-optional"
             title="Optional">
         <span id="origingroups_go">
 <a href="#origingroups_go" style="color: inherit; text-decoration: inherit;">Origin<wbr>Groups</a>
@@ -1184,8 +1141,7 @@ in order of precedence. The topmost cache behavior will have precedence 0.
     </dt>
     <dd>{{% md %}}One or more origin_group for this
 distribution (multiples allowed).
-{{% /md %}}</dd>
-    <dt class="property-optional"
+{{% /md %}}</dd><dt class="property-optional"
             title="Optional">
         <span id="priceclass_go">
 <a href="#priceclass_go" style="color: inherit; text-decoration: inherit;">Price<wbr>Class</a>
@@ -1195,8 +1151,7 @@ distribution (multiples allowed).
     </dt>
     <dd>{{% md %}}The price class for this distribution. One of
 `PriceClass_All`, `PriceClass_200`, `PriceClass_100`
-{{% /md %}}</dd>
-    <dt class="property-optional"
+{{% /md %}}</dd><dt class="property-optional"
             title="Optional">
         <span id="retainondelete_go">
 <a href="#retainondelete_go" style="color: inherit; text-decoration: inherit;">Retain<wbr>On<wbr>Delete</a>
@@ -1207,8 +1162,7 @@ distribution (multiples allowed).
     <dd>{{% md %}}Disables the distribution instead of
 deleting it when destroying the resource. If this is set,
 the distribution needs to be deleted manually afterwards. Default: `false`.
-{{% /md %}}</dd>
-    <dt class="property-optional"
+{{% /md %}}</dd><dt class="property-optional"
             title="Optional">
         <span id="tags_go">
 <a href="#tags_go" style="color: inherit; text-decoration: inherit;">Tags</a>
@@ -1217,8 +1171,7 @@ the distribution needs to be deleted manually afterwards. Default: `false`.
         <span class="property-type">map[string]string</span>
     </dt>
     <dd>{{% md %}}A map of tags to assign to the resource.
-{{% /md %}}</dd>
-    <dt class="property-optional"
+{{% /md %}}</dd><dt class="property-optional"
             title="Optional">
         <span id="waitfordeployment_go">
 <a href="#waitfordeployment_go" style="color: inherit; text-decoration: inherit;">Wait<wbr>For<wbr>Deployment</a>
@@ -1229,8 +1182,7 @@ the distribution needs to be deleted manually afterwards. Default: `false`.
     <dd>{{% md %}}If enabled, the resource will wait for
 the distribution status to change from `InProgress` to `Deployed`. Setting
 this to`false` will skip the process. Default: `true`.
-{{% /md %}}</dd>
-    <dt class="property-optional"
+{{% /md %}}</dd><dt class="property-optional"
             title="Optional">
         <span id="webaclid_go">
 <a href="#webaclid_go" style="color: inherit; text-decoration: inherit;">Web<wbr>Acl<wbr>Id</a>
@@ -1245,14 +1197,11 @@ for example `aws_wafv2_web_acl.example.arn`. To specify a web
 ACL created using AWS WAF Classic, use the ACL ID, for example `aws_waf_web_acl.example.id`.
 The WAF Web ACL must exist in the WAF Global (CloudFront) region and the
 credentials configuring this argument must have `waf:GetWebACL` permissions assigned.
-{{% /md %}}</dd>
-</dl>
+{{% /md %}}</dd></dl>
 {{% /choosable %}}
 
 {{% choosable language nodejs %}}
-<dl class="resources-properties">
-
-    <dt class="property-required"
+<dl class="resources-properties"><dt class="property-required"
             title="Required">
         <span id="defaultcachebehavior_nodejs">
 <a href="#defaultcachebehavior_nodejs" style="color: inherit; text-decoration: inherit;">default<wbr>Cache<wbr>Behavior</a>
@@ -1262,8 +1211,7 @@ credentials configuring this argument must have `waf:GetWebACL` permissions assi
     </dt>
     <dd>{{% md %}}The default cache behavior for this distribution (maximum
 one).
-{{% /md %}}</dd>
-    <dt class="property-required"
+{{% /md %}}</dd><dt class="property-required"
             title="Required">
         <span id="enabled_nodejs">
 <a href="#enabled_nodejs" style="color: inherit; text-decoration: inherit;">enabled</a>
@@ -1273,8 +1221,7 @@ one).
     </dt>
     <dd>{{% md %}}Whether the distribution is enabled to accept end
 user requests for content.
-{{% /md %}}</dd>
-    <dt class="property-required"
+{{% /md %}}</dd><dt class="property-required"
             title="Required">
         <span id="origins_nodejs">
 <a href="#origins_nodejs" style="color: inherit; text-decoration: inherit;">origins</a>
@@ -1284,8 +1231,7 @@ user requests for content.
     </dt>
     <dd>{{% md %}}One or more origins for this
 distribution (multiples allowed).
-{{% /md %}}</dd>
-    <dt class="property-required"
+{{% /md %}}</dd><dt class="property-required"
             title="Required">
         <span id="restrictions_nodejs">
 <a href="#restrictions_nodejs" style="color: inherit; text-decoration: inherit;">restrictions</a>
@@ -1295,8 +1241,7 @@ distribution (multiples allowed).
     </dt>
     <dd>{{% md %}}The restriction
 configuration for this distribution (maximum one).
-{{% /md %}}</dd>
-    <dt class="property-required"
+{{% /md %}}</dd><dt class="property-required"
             title="Required">
         <span id="viewercertificate_nodejs">
 <a href="#viewercertificate_nodejs" style="color: inherit; text-decoration: inherit;">viewer<wbr>Certificate</a>
@@ -1307,8 +1252,7 @@ configuration for this distribution (maximum one).
     <dd>{{% md %}}The SSL
 configuration for this distribution (maximum
 one).
-{{% /md %}}</dd>
-    <dt class="property-optional"
+{{% /md %}}</dd><dt class="property-optional"
             title="Optional">
         <span id="aliases_nodejs">
 <a href="#aliases_nodejs" style="color: inherit; text-decoration: inherit;">aliases</a>
@@ -1318,8 +1262,7 @@ one).
     </dt>
     <dd>{{% md %}}Extra CNAMEs (alternate domain names), if any, for
 this distribution.
-{{% /md %}}</dd>
-    <dt class="property-optional"
+{{% /md %}}</dd><dt class="property-optional"
             title="Optional">
         <span id="comment_nodejs">
 <a href="#comment_nodejs" style="color: inherit; text-decoration: inherit;">comment</a>
@@ -1329,8 +1272,7 @@ this distribution.
     </dt>
     <dd>{{% md %}}Any comments you want to include about the
 distribution.
-{{% /md %}}</dd>
-    <dt class="property-optional"
+{{% /md %}}</dd><dt class="property-optional"
             title="Optional">
         <span id="customerrorresponses_nodejs">
 <a href="#customerrorresponses_nodejs" style="color: inherit; text-decoration: inherit;">custom<wbr>Error<wbr>Responses</a>
@@ -1339,8 +1281,7 @@ distribution.
         <span class="property-type"><a href="#distributioncustomerrorresponse">Distribution<wbr>Custom<wbr>Error<wbr>Response[]</a></span>
     </dt>
     <dd>{{% md %}}One or more custom error response elements (multiples allowed).
-{{% /md %}}</dd>
-    <dt class="property-optional"
+{{% /md %}}</dd><dt class="property-optional"
             title="Optional">
         <span id="defaultrootobject_nodejs">
 <a href="#defaultrootobject_nodejs" style="color: inherit; text-decoration: inherit;">default<wbr>Root<wbr>Object</a>
@@ -1350,8 +1291,7 @@ distribution.
     </dt>
     <dd>{{% md %}}The object that you want CloudFront to
 return (for example, index.html) when an end user requests the root URL.
-{{% /md %}}</dd>
-    <dt class="property-optional"
+{{% /md %}}</dd><dt class="property-optional"
             title="Optional">
         <span id="httpversion_nodejs">
 <a href="#httpversion_nodejs" style="color: inherit; text-decoration: inherit;">http<wbr>Version</a>
@@ -1362,8 +1302,7 @@ return (for example, index.html) when an end user requests the root URL.
     <dd>{{% md %}}The maximum HTTP version to support on the
 distribution. Allowed values are `http1.1` and `http2`. The default is
 `http2`.
-{{% /md %}}</dd>
-    <dt class="property-optional"
+{{% /md %}}</dd><dt class="property-optional"
             title="Optional">
         <span id="isipv6enabled_nodejs">
 <a href="#isipv6enabled_nodejs" style="color: inherit; text-decoration: inherit;">is<wbr>Ipv6Enabled</a>
@@ -1372,8 +1311,7 @@ distribution. Allowed values are `http1.1` and `http2`. The default is
         <span class="property-type">boolean</span>
     </dt>
     <dd>{{% md %}}Whether the IPv6 is enabled for the distribution.
-{{% /md %}}</dd>
-    <dt class="property-optional"
+{{% /md %}}</dd><dt class="property-optional"
             title="Optional">
         <span id="loggingconfig_nodejs">
 <a href="#loggingconfig_nodejs" style="color: inherit; text-decoration: inherit;">logging<wbr>Config</a>
@@ -1384,8 +1322,7 @@ distribution. Allowed values are `http1.1` and `http2`. The default is
     <dd>{{% md %}}The logging
 configuration that controls how logs are written
 to your distribution (maximum one).
-{{% /md %}}</dd>
-    <dt class="property-optional"
+{{% /md %}}</dd><dt class="property-optional"
             title="Optional">
         <span id="orderedcachebehaviors_nodejs">
 <a href="#orderedcachebehaviors_nodejs" style="color: inherit; text-decoration: inherit;">ordered<wbr>Cache<wbr>Behaviors</a>
@@ -1396,8 +1333,7 @@ to your distribution (maximum one).
     <dd>{{% md %}}An ordered list of cache behaviors
 resource for this distribution. List from top to bottom
 in order of precedence. The topmost cache behavior will have precedence 0.
-{{% /md %}}</dd>
-    <dt class="property-optional"
+{{% /md %}}</dd><dt class="property-optional"
             title="Optional">
         <span id="origingroups_nodejs">
 <a href="#origingroups_nodejs" style="color: inherit; text-decoration: inherit;">origin<wbr>Groups</a>
@@ -1407,8 +1343,7 @@ in order of precedence. The topmost cache behavior will have precedence 0.
     </dt>
     <dd>{{% md %}}One or more origin_group for this
 distribution (multiples allowed).
-{{% /md %}}</dd>
-    <dt class="property-optional"
+{{% /md %}}</dd><dt class="property-optional"
             title="Optional">
         <span id="priceclass_nodejs">
 <a href="#priceclass_nodejs" style="color: inherit; text-decoration: inherit;">price<wbr>Class</a>
@@ -1418,8 +1353,7 @@ distribution (multiples allowed).
     </dt>
     <dd>{{% md %}}The price class for this distribution. One of
 `PriceClass_All`, `PriceClass_200`, `PriceClass_100`
-{{% /md %}}</dd>
-    <dt class="property-optional"
+{{% /md %}}</dd><dt class="property-optional"
             title="Optional">
         <span id="retainondelete_nodejs">
 <a href="#retainondelete_nodejs" style="color: inherit; text-decoration: inherit;">retain<wbr>On<wbr>Delete</a>
@@ -1430,8 +1364,7 @@ distribution (multiples allowed).
     <dd>{{% md %}}Disables the distribution instead of
 deleting it when destroying the resource. If this is set,
 the distribution needs to be deleted manually afterwards. Default: `false`.
-{{% /md %}}</dd>
-    <dt class="property-optional"
+{{% /md %}}</dd><dt class="property-optional"
             title="Optional">
         <span id="tags_nodejs">
 <a href="#tags_nodejs" style="color: inherit; text-decoration: inherit;">tags</a>
@@ -1440,8 +1373,7 @@ the distribution needs to be deleted manually afterwards. Default: `false`.
         <span class="property-type">{[key: string]: string}</span>
     </dt>
     <dd>{{% md %}}A map of tags to assign to the resource.
-{{% /md %}}</dd>
-    <dt class="property-optional"
+{{% /md %}}</dd><dt class="property-optional"
             title="Optional">
         <span id="waitfordeployment_nodejs">
 <a href="#waitfordeployment_nodejs" style="color: inherit; text-decoration: inherit;">wait<wbr>For<wbr>Deployment</a>
@@ -1452,8 +1384,7 @@ the distribution needs to be deleted manually afterwards. Default: `false`.
     <dd>{{% md %}}If enabled, the resource will wait for
 the distribution status to change from `InProgress` to `Deployed`. Setting
 this to`false` will skip the process. Default: `true`.
-{{% /md %}}</dd>
-    <dt class="property-optional"
+{{% /md %}}</dd><dt class="property-optional"
             title="Optional">
         <span id="webaclid_nodejs">
 <a href="#webaclid_nodejs" style="color: inherit; text-decoration: inherit;">web<wbr>Acl<wbr>Id</a>
@@ -1468,14 +1399,11 @@ for example `aws_wafv2_web_acl.example.arn`. To specify a web
 ACL created using AWS WAF Classic, use the ACL ID, for example `aws_waf_web_acl.example.id`.
 The WAF Web ACL must exist in the WAF Global (CloudFront) region and the
 credentials configuring this argument must have `waf:GetWebACL` permissions assigned.
-{{% /md %}}</dd>
-</dl>
+{{% /md %}}</dd></dl>
 {{% /choosable %}}
 
 {{% choosable language python %}}
-<dl class="resources-properties">
-
-    <dt class="property-required"
+<dl class="resources-properties"><dt class="property-required"
             title="Required">
         <span id="default_cache_behavior_python">
 <a href="#default_cache_behavior_python" style="color: inherit; text-decoration: inherit;">default_<wbr>cache_<wbr>behavior</a>
@@ -1485,8 +1413,7 @@ credentials configuring this argument must have `waf:GetWebACL` permissions assi
     </dt>
     <dd>{{% md %}}The default cache behavior for this distribution (maximum
 one).
-{{% /md %}}</dd>
-    <dt class="property-required"
+{{% /md %}}</dd><dt class="property-required"
             title="Required">
         <span id="enabled_python">
 <a href="#enabled_python" style="color: inherit; text-decoration: inherit;">enabled</a>
@@ -1496,8 +1423,7 @@ one).
     </dt>
     <dd>{{% md %}}Whether the distribution is enabled to accept end
 user requests for content.
-{{% /md %}}</dd>
-    <dt class="property-required"
+{{% /md %}}</dd><dt class="property-required"
             title="Required">
         <span id="origins_python">
 <a href="#origins_python" style="color: inherit; text-decoration: inherit;">origins</a>
@@ -1507,8 +1433,7 @@ user requests for content.
     </dt>
     <dd>{{% md %}}One or more origins for this
 distribution (multiples allowed).
-{{% /md %}}</dd>
-    <dt class="property-required"
+{{% /md %}}</dd><dt class="property-required"
             title="Required">
         <span id="restrictions_python">
 <a href="#restrictions_python" style="color: inherit; text-decoration: inherit;">restrictions</a>
@@ -1518,8 +1443,7 @@ distribution (multiples allowed).
     </dt>
     <dd>{{% md %}}The restriction
 configuration for this distribution (maximum one).
-{{% /md %}}</dd>
-    <dt class="property-required"
+{{% /md %}}</dd><dt class="property-required"
             title="Required">
         <span id="viewer_certificate_python">
 <a href="#viewer_certificate_python" style="color: inherit; text-decoration: inherit;">viewer_<wbr>certificate</a>
@@ -1530,8 +1454,7 @@ configuration for this distribution (maximum one).
     <dd>{{% md %}}The SSL
 configuration for this distribution (maximum
 one).
-{{% /md %}}</dd>
-    <dt class="property-optional"
+{{% /md %}}</dd><dt class="property-optional"
             title="Optional">
         <span id="aliases_python">
 <a href="#aliases_python" style="color: inherit; text-decoration: inherit;">aliases</a>
@@ -1541,8 +1464,7 @@ one).
     </dt>
     <dd>{{% md %}}Extra CNAMEs (alternate domain names), if any, for
 this distribution.
-{{% /md %}}</dd>
-    <dt class="property-optional"
+{{% /md %}}</dd><dt class="property-optional"
             title="Optional">
         <span id="comment_python">
 <a href="#comment_python" style="color: inherit; text-decoration: inherit;">comment</a>
@@ -1552,8 +1474,7 @@ this distribution.
     </dt>
     <dd>{{% md %}}Any comments you want to include about the
 distribution.
-{{% /md %}}</dd>
-    <dt class="property-optional"
+{{% /md %}}</dd><dt class="property-optional"
             title="Optional">
         <span id="custom_error_responses_python">
 <a href="#custom_error_responses_python" style="color: inherit; text-decoration: inherit;">custom_<wbr>error_<wbr>responses</a>
@@ -1562,8 +1483,7 @@ distribution.
         <span class="property-type"><a href="#distributioncustomerrorresponse">Sequence[Distribution<wbr>Custom<wbr>Error<wbr>Response<wbr>Args]</a></span>
     </dt>
     <dd>{{% md %}}One or more custom error response elements (multiples allowed).
-{{% /md %}}</dd>
-    <dt class="property-optional"
+{{% /md %}}</dd><dt class="property-optional"
             title="Optional">
         <span id="default_root_object_python">
 <a href="#default_root_object_python" style="color: inherit; text-decoration: inherit;">default_<wbr>root_<wbr>object</a>
@@ -1573,8 +1493,7 @@ distribution.
     </dt>
     <dd>{{% md %}}The object that you want CloudFront to
 return (for example, index.html) when an end user requests the root URL.
-{{% /md %}}</dd>
-    <dt class="property-optional"
+{{% /md %}}</dd><dt class="property-optional"
             title="Optional">
         <span id="http_version_python">
 <a href="#http_version_python" style="color: inherit; text-decoration: inherit;">http_<wbr>version</a>
@@ -1585,8 +1504,7 @@ return (for example, index.html) when an end user requests the root URL.
     <dd>{{% md %}}The maximum HTTP version to support on the
 distribution. Allowed values are `http1.1` and `http2`. The default is
 `http2`.
-{{% /md %}}</dd>
-    <dt class="property-optional"
+{{% /md %}}</dd><dt class="property-optional"
             title="Optional">
         <span id="is_ipv6_enabled_python">
 <a href="#is_ipv6_enabled_python" style="color: inherit; text-decoration: inherit;">is_<wbr>ipv6_<wbr>enabled</a>
@@ -1595,8 +1513,7 @@ distribution. Allowed values are `http1.1` and `http2`. The default is
         <span class="property-type">bool</span>
     </dt>
     <dd>{{% md %}}Whether the IPv6 is enabled for the distribution.
-{{% /md %}}</dd>
-    <dt class="property-optional"
+{{% /md %}}</dd><dt class="property-optional"
             title="Optional">
         <span id="logging_config_python">
 <a href="#logging_config_python" style="color: inherit; text-decoration: inherit;">logging_<wbr>config</a>
@@ -1607,8 +1524,7 @@ distribution. Allowed values are `http1.1` and `http2`. The default is
     <dd>{{% md %}}The logging
 configuration that controls how logs are written
 to your distribution (maximum one).
-{{% /md %}}</dd>
-    <dt class="property-optional"
+{{% /md %}}</dd><dt class="property-optional"
             title="Optional">
         <span id="ordered_cache_behaviors_python">
 <a href="#ordered_cache_behaviors_python" style="color: inherit; text-decoration: inherit;">ordered_<wbr>cache_<wbr>behaviors</a>
@@ -1619,8 +1535,7 @@ to your distribution (maximum one).
     <dd>{{% md %}}An ordered list of cache behaviors
 resource for this distribution. List from top to bottom
 in order of precedence. The topmost cache behavior will have precedence 0.
-{{% /md %}}</dd>
-    <dt class="property-optional"
+{{% /md %}}</dd><dt class="property-optional"
             title="Optional">
         <span id="origin_groups_python">
 <a href="#origin_groups_python" style="color: inherit; text-decoration: inherit;">origin_<wbr>groups</a>
@@ -1630,8 +1545,7 @@ in order of precedence. The topmost cache behavior will have precedence 0.
     </dt>
     <dd>{{% md %}}One or more origin_group for this
 distribution (multiples allowed).
-{{% /md %}}</dd>
-    <dt class="property-optional"
+{{% /md %}}</dd><dt class="property-optional"
             title="Optional">
         <span id="price_class_python">
 <a href="#price_class_python" style="color: inherit; text-decoration: inherit;">price_<wbr>class</a>
@@ -1641,8 +1555,7 @@ distribution (multiples allowed).
     </dt>
     <dd>{{% md %}}The price class for this distribution. One of
 `PriceClass_All`, `PriceClass_200`, `PriceClass_100`
-{{% /md %}}</dd>
-    <dt class="property-optional"
+{{% /md %}}</dd><dt class="property-optional"
             title="Optional">
         <span id="retain_on_delete_python">
 <a href="#retain_on_delete_python" style="color: inherit; text-decoration: inherit;">retain_<wbr>on_<wbr>delete</a>
@@ -1653,8 +1566,7 @@ distribution (multiples allowed).
     <dd>{{% md %}}Disables the distribution instead of
 deleting it when destroying the resource. If this is set,
 the distribution needs to be deleted manually afterwards. Default: `false`.
-{{% /md %}}</dd>
-    <dt class="property-optional"
+{{% /md %}}</dd><dt class="property-optional"
             title="Optional">
         <span id="tags_python">
 <a href="#tags_python" style="color: inherit; text-decoration: inherit;">tags</a>
@@ -1663,8 +1575,7 @@ the distribution needs to be deleted manually afterwards. Default: `false`.
         <span class="property-type">Mapping[str, str]</span>
     </dt>
     <dd>{{% md %}}A map of tags to assign to the resource.
-{{% /md %}}</dd>
-    <dt class="property-optional"
+{{% /md %}}</dd><dt class="property-optional"
             title="Optional">
         <span id="wait_for_deployment_python">
 <a href="#wait_for_deployment_python" style="color: inherit; text-decoration: inherit;">wait_<wbr>for_<wbr>deployment</a>
@@ -1675,8 +1586,7 @@ the distribution needs to be deleted manually afterwards. Default: `false`.
     <dd>{{% md %}}If enabled, the resource will wait for
 the distribution status to change from `InProgress` to `Deployed`. Setting
 this to`false` will skip the process. Default: `true`.
-{{% /md %}}</dd>
-    <dt class="property-optional"
+{{% /md %}}</dd><dt class="property-optional"
             title="Optional">
         <span id="web_acl_id_python">
 <a href="#web_acl_id_python" style="color: inherit; text-decoration: inherit;">web_<wbr>acl_<wbr>id</a>
@@ -1691,8 +1601,7 @@ for example `aws_wafv2_web_acl.example.arn`. To specify a web
 ACL created using AWS WAF Classic, use the ACL ID, for example `aws_waf_web_acl.example.id`.
 The WAF Web ACL must exist in the WAF Global (CloudFront) region and the
 credentials configuring this argument must have `waf:GetWebACL` permissions assigned.
-{{% /md %}}</dd>
-</dl>
+{{% /md %}}</dd></dl>
 {{% /choosable %}}
 
 
@@ -1703,9 +1612,7 @@ All [input](#inputs) properties are implicitly available as output properties. A
 
 
 {{% choosable language csharp %}}
-<dl class="resources-properties">
-
-    <dt class="property-"
+<dl class="resources-properties"><dt class="property-"
             title="">
         <span id="arn_csharp">
 <a href="#arn_csharp" style="color: inherit; text-decoration: inherit;">Arn</a>
@@ -1714,8 +1621,7 @@ All [input](#inputs) properties are implicitly available as output properties. A
         <span class="property-type">string</span>
     </dt>
     <dd>{{% md %}}The ARN (Amazon Resource Name) for the distribution. For example: `arn:aws:cloudfront::123456789012:distribution/EDFDVBD632BHDS5`, where `123456789012` is your AWS account ID.
-{{% /md %}}</dd>
-    <dt class="property-"
+{{% /md %}}</dd><dt class="property-"
             title="">
         <span id="callerreference_csharp">
 <a href="#callerreference_csharp" style="color: inherit; text-decoration: inherit;">Caller<wbr>Reference</a>
@@ -1725,8 +1631,7 @@ All [input](#inputs) properties are implicitly available as output properties. A
     </dt>
     <dd>{{% md %}}Internal value used by CloudFront to allow future
 updates to the distribution configuration.
-{{% /md %}}</dd>
-    <dt class="property-"
+{{% /md %}}</dd><dt class="property-"
             title="">
         <span id="domainname_csharp">
 <a href="#domainname_csharp" style="color: inherit; text-decoration: inherit;">Domain<wbr>Name</a>
@@ -1736,8 +1641,7 @@ updates to the distribution configuration.
     </dt>
     <dd>{{% md %}}The DNS domain name of either the S3 bucket, or
 web site of your custom origin.
-{{% /md %}}</dd>
-    <dt class="property-"
+{{% /md %}}</dd><dt class="property-"
             title="">
         <span id="etag_csharp">
 <a href="#etag_csharp" style="color: inherit; text-decoration: inherit;">Etag</a>
@@ -1747,8 +1651,7 @@ web site of your custom origin.
     </dt>
     <dd>{{% md %}}The current version of the distribution's information. For example:
 `E2QWRUHAPOMQZL`.
-{{% /md %}}</dd>
-    <dt class="property-"
+{{% /md %}}</dd><dt class="property-"
             title="">
         <span id="hostedzoneid_csharp">
 <a href="#hostedzoneid_csharp" style="color: inherit; text-decoration: inherit;">Hosted<wbr>Zone<wbr>Id</a>
@@ -1759,8 +1662,7 @@ web site of your custom origin.
     <dd>{{% md %}}The CloudFront Route 53 zone ID that can be used to
 route an [Alias Resource Record Set](http://docs.aws.amazon.com/Route53/latest/APIReference/CreateAliasRRSAPI.html) to. This attribute is simply an
 alias for the zone ID `Z2FDTNDATAQYW2`.
-{{% /md %}}</dd>
-    <dt class="property-"
+{{% /md %}}</dd><dt class="property-"
             title="">
         <span id="id_csharp">
 <a href="#id_csharp" style="color: inherit; text-decoration: inherit;">Id</a>
@@ -1768,8 +1670,7 @@ alias for the zone ID `Z2FDTNDATAQYW2`.
         <span class="property-indicator"></span>
         <span class="property-type">string</span>
     </dt>
-    <dd>{{% md %}}The provider-assigned unique ID for this managed resource.{{% /md %}}</dd>
-    <dt class="property-"
+    <dd>{{% md %}}The provider-assigned unique ID for this managed resource.{{% /md %}}</dd><dt class="property-"
             title="">
         <span id="inprogressvalidationbatches_csharp">
 <a href="#inprogressvalidationbatches_csharp" style="color: inherit; text-decoration: inherit;">In<wbr>Progress<wbr>Validation<wbr>Batches</a>
@@ -1779,8 +1680,7 @@ alias for the zone ID `Z2FDTNDATAQYW2`.
     </dt>
     <dd>{{% md %}}The number of invalidation batches
 currently in progress.
-{{% /md %}}</dd>
-    <dt class="property-"
+{{% /md %}}</dd><dt class="property-"
             title="">
         <span id="lastmodifiedtime_csharp">
 <a href="#lastmodifiedtime_csharp" style="color: inherit; text-decoration: inherit;">Last<wbr>Modified<wbr>Time</a>
@@ -1789,8 +1689,7 @@ currently in progress.
         <span class="property-type">string</span>
     </dt>
     <dd>{{% md %}}The date and time the distribution was last modified.
-{{% /md %}}</dd>
-    <dt class="property-"
+{{% /md %}}</dd><dt class="property-"
             title="">
         <span id="status_csharp">
 <a href="#status_csharp" style="color: inherit; text-decoration: inherit;">Status</a>
@@ -1801,8 +1700,7 @@ currently in progress.
     <dd>{{% md %}}The current status of the distribution. `Deployed` if the
 distribution's information is fully propagated throughout the Amazon
 CloudFront system.
-{{% /md %}}</dd>
-    <dt class="property-"
+{{% /md %}}</dd><dt class="property-"
             title="">
         <span id="trustedsigners_csharp">
 <a href="#trustedsigners_csharp" style="color: inherit; text-decoration: inherit;">Trusted<wbr>Signers</a>
@@ -1812,14 +1710,11 @@ CloudFront system.
     </dt>
     <dd>{{% md %}}List of AWS account IDs (or `self`) that you want to allow to create signed URLs for private content.
 See the [CloudFront User Guide](https://docs.aws.amazon.com/AmazonCloudFront/latest/DeveloperGuide/private-content-trusted-signers.html) for more information about this feature.
-{{% /md %}}</dd>
-</dl>
+{{% /md %}}</dd></dl>
 {{% /choosable %}}
 
 {{% choosable language go %}}
-<dl class="resources-properties">
-
-    <dt class="property-"
+<dl class="resources-properties"><dt class="property-"
             title="">
         <span id="arn_go">
 <a href="#arn_go" style="color: inherit; text-decoration: inherit;">Arn</a>
@@ -1828,8 +1723,7 @@ See the [CloudFront User Guide](https://docs.aws.amazon.com/AmazonCloudFront/lat
         <span class="property-type">string</span>
     </dt>
     <dd>{{% md %}}The ARN (Amazon Resource Name) for the distribution. For example: `arn:aws:cloudfront::123456789012:distribution/EDFDVBD632BHDS5`, where `123456789012` is your AWS account ID.
-{{% /md %}}</dd>
-    <dt class="property-"
+{{% /md %}}</dd><dt class="property-"
             title="">
         <span id="callerreference_go">
 <a href="#callerreference_go" style="color: inherit; text-decoration: inherit;">Caller<wbr>Reference</a>
@@ -1839,8 +1733,7 @@ See the [CloudFront User Guide](https://docs.aws.amazon.com/AmazonCloudFront/lat
     </dt>
     <dd>{{% md %}}Internal value used by CloudFront to allow future
 updates to the distribution configuration.
-{{% /md %}}</dd>
-    <dt class="property-"
+{{% /md %}}</dd><dt class="property-"
             title="">
         <span id="domainname_go">
 <a href="#domainname_go" style="color: inherit; text-decoration: inherit;">Domain<wbr>Name</a>
@@ -1850,8 +1743,7 @@ updates to the distribution configuration.
     </dt>
     <dd>{{% md %}}The DNS domain name of either the S3 bucket, or
 web site of your custom origin.
-{{% /md %}}</dd>
-    <dt class="property-"
+{{% /md %}}</dd><dt class="property-"
             title="">
         <span id="etag_go">
 <a href="#etag_go" style="color: inherit; text-decoration: inherit;">Etag</a>
@@ -1861,8 +1753,7 @@ web site of your custom origin.
     </dt>
     <dd>{{% md %}}The current version of the distribution's information. For example:
 `E2QWRUHAPOMQZL`.
-{{% /md %}}</dd>
-    <dt class="property-"
+{{% /md %}}</dd><dt class="property-"
             title="">
         <span id="hostedzoneid_go">
 <a href="#hostedzoneid_go" style="color: inherit; text-decoration: inherit;">Hosted<wbr>Zone<wbr>Id</a>
@@ -1873,8 +1764,7 @@ web site of your custom origin.
     <dd>{{% md %}}The CloudFront Route 53 zone ID that can be used to
 route an [Alias Resource Record Set](http://docs.aws.amazon.com/Route53/latest/APIReference/CreateAliasRRSAPI.html) to. This attribute is simply an
 alias for the zone ID `Z2FDTNDATAQYW2`.
-{{% /md %}}</dd>
-    <dt class="property-"
+{{% /md %}}</dd><dt class="property-"
             title="">
         <span id="id_go">
 <a href="#id_go" style="color: inherit; text-decoration: inherit;">Id</a>
@@ -1882,8 +1772,7 @@ alias for the zone ID `Z2FDTNDATAQYW2`.
         <span class="property-indicator"></span>
         <span class="property-type">string</span>
     </dt>
-    <dd>{{% md %}}The provider-assigned unique ID for this managed resource.{{% /md %}}</dd>
-    <dt class="property-"
+    <dd>{{% md %}}The provider-assigned unique ID for this managed resource.{{% /md %}}</dd><dt class="property-"
             title="">
         <span id="inprogressvalidationbatches_go">
 <a href="#inprogressvalidationbatches_go" style="color: inherit; text-decoration: inherit;">In<wbr>Progress<wbr>Validation<wbr>Batches</a>
@@ -1893,8 +1782,7 @@ alias for the zone ID `Z2FDTNDATAQYW2`.
     </dt>
     <dd>{{% md %}}The number of invalidation batches
 currently in progress.
-{{% /md %}}</dd>
-    <dt class="property-"
+{{% /md %}}</dd><dt class="property-"
             title="">
         <span id="lastmodifiedtime_go">
 <a href="#lastmodifiedtime_go" style="color: inherit; text-decoration: inherit;">Last<wbr>Modified<wbr>Time</a>
@@ -1903,8 +1791,7 @@ currently in progress.
         <span class="property-type">string</span>
     </dt>
     <dd>{{% md %}}The date and time the distribution was last modified.
-{{% /md %}}</dd>
-    <dt class="property-"
+{{% /md %}}</dd><dt class="property-"
             title="">
         <span id="status_go">
 <a href="#status_go" style="color: inherit; text-decoration: inherit;">Status</a>
@@ -1915,8 +1802,7 @@ currently in progress.
     <dd>{{% md %}}The current status of the distribution. `Deployed` if the
 distribution's information is fully propagated throughout the Amazon
 CloudFront system.
-{{% /md %}}</dd>
-    <dt class="property-"
+{{% /md %}}</dd><dt class="property-"
             title="">
         <span id="trustedsigners_go">
 <a href="#trustedsigners_go" style="color: inherit; text-decoration: inherit;">Trusted<wbr>Signers</a>
@@ -1926,14 +1812,11 @@ CloudFront system.
     </dt>
     <dd>{{% md %}}List of AWS account IDs (or `self`) that you want to allow to create signed URLs for private content.
 See the [CloudFront User Guide](https://docs.aws.amazon.com/AmazonCloudFront/latest/DeveloperGuide/private-content-trusted-signers.html) for more information about this feature.
-{{% /md %}}</dd>
-</dl>
+{{% /md %}}</dd></dl>
 {{% /choosable %}}
 
 {{% choosable language nodejs %}}
-<dl class="resources-properties">
-
-    <dt class="property-"
+<dl class="resources-properties"><dt class="property-"
             title="">
         <span id="arn_nodejs">
 <a href="#arn_nodejs" style="color: inherit; text-decoration: inherit;">arn</a>
@@ -1942,8 +1825,7 @@ See the [CloudFront User Guide](https://docs.aws.amazon.com/AmazonCloudFront/lat
         <span class="property-type">string</span>
     </dt>
     <dd>{{% md %}}The ARN (Amazon Resource Name) for the distribution. For example: `arn:aws:cloudfront::123456789012:distribution/EDFDVBD632BHDS5`, where `123456789012` is your AWS account ID.
-{{% /md %}}</dd>
-    <dt class="property-"
+{{% /md %}}</dd><dt class="property-"
             title="">
         <span id="callerreference_nodejs">
 <a href="#callerreference_nodejs" style="color: inherit; text-decoration: inherit;">caller<wbr>Reference</a>
@@ -1953,8 +1835,7 @@ See the [CloudFront User Guide](https://docs.aws.amazon.com/AmazonCloudFront/lat
     </dt>
     <dd>{{% md %}}Internal value used by CloudFront to allow future
 updates to the distribution configuration.
-{{% /md %}}</dd>
-    <dt class="property-"
+{{% /md %}}</dd><dt class="property-"
             title="">
         <span id="domainname_nodejs">
 <a href="#domainname_nodejs" style="color: inherit; text-decoration: inherit;">domain<wbr>Name</a>
@@ -1964,8 +1845,7 @@ updates to the distribution configuration.
     </dt>
     <dd>{{% md %}}The DNS domain name of either the S3 bucket, or
 web site of your custom origin.
-{{% /md %}}</dd>
-    <dt class="property-"
+{{% /md %}}</dd><dt class="property-"
             title="">
         <span id="etag_nodejs">
 <a href="#etag_nodejs" style="color: inherit; text-decoration: inherit;">etag</a>
@@ -1975,8 +1855,7 @@ web site of your custom origin.
     </dt>
     <dd>{{% md %}}The current version of the distribution's information. For example:
 `E2QWRUHAPOMQZL`.
-{{% /md %}}</dd>
-    <dt class="property-"
+{{% /md %}}</dd><dt class="property-"
             title="">
         <span id="hostedzoneid_nodejs">
 <a href="#hostedzoneid_nodejs" style="color: inherit; text-decoration: inherit;">hosted<wbr>Zone<wbr>Id</a>
@@ -1987,8 +1866,7 @@ web site of your custom origin.
     <dd>{{% md %}}The CloudFront Route 53 zone ID that can be used to
 route an [Alias Resource Record Set](http://docs.aws.amazon.com/Route53/latest/APIReference/CreateAliasRRSAPI.html) to. This attribute is simply an
 alias for the zone ID `Z2FDTNDATAQYW2`.
-{{% /md %}}</dd>
-    <dt class="property-"
+{{% /md %}}</dd><dt class="property-"
             title="">
         <span id="id_nodejs">
 <a href="#id_nodejs" style="color: inherit; text-decoration: inherit;">id</a>
@@ -1996,8 +1874,7 @@ alias for the zone ID `Z2FDTNDATAQYW2`.
         <span class="property-indicator"></span>
         <span class="property-type">string</span>
     </dt>
-    <dd>{{% md %}}The provider-assigned unique ID for this managed resource.{{% /md %}}</dd>
-    <dt class="property-"
+    <dd>{{% md %}}The provider-assigned unique ID for this managed resource.{{% /md %}}</dd><dt class="property-"
             title="">
         <span id="inprogressvalidationbatches_nodejs">
 <a href="#inprogressvalidationbatches_nodejs" style="color: inherit; text-decoration: inherit;">in<wbr>Progress<wbr>Validation<wbr>Batches</a>
@@ -2007,8 +1884,7 @@ alias for the zone ID `Z2FDTNDATAQYW2`.
     </dt>
     <dd>{{% md %}}The number of invalidation batches
 currently in progress.
-{{% /md %}}</dd>
-    <dt class="property-"
+{{% /md %}}</dd><dt class="property-"
             title="">
         <span id="lastmodifiedtime_nodejs">
 <a href="#lastmodifiedtime_nodejs" style="color: inherit; text-decoration: inherit;">last<wbr>Modified<wbr>Time</a>
@@ -2017,8 +1893,7 @@ currently in progress.
         <span class="property-type">string</span>
     </dt>
     <dd>{{% md %}}The date and time the distribution was last modified.
-{{% /md %}}</dd>
-    <dt class="property-"
+{{% /md %}}</dd><dt class="property-"
             title="">
         <span id="status_nodejs">
 <a href="#status_nodejs" style="color: inherit; text-decoration: inherit;">status</a>
@@ -2029,8 +1904,7 @@ currently in progress.
     <dd>{{% md %}}The current status of the distribution. `Deployed` if the
 distribution's information is fully propagated throughout the Amazon
 CloudFront system.
-{{% /md %}}</dd>
-    <dt class="property-"
+{{% /md %}}</dd><dt class="property-"
             title="">
         <span id="trustedsigners_nodejs">
 <a href="#trustedsigners_nodejs" style="color: inherit; text-decoration: inherit;">trusted<wbr>Signers</a>
@@ -2040,14 +1914,11 @@ CloudFront system.
     </dt>
     <dd>{{% md %}}List of AWS account IDs (or `self`) that you want to allow to create signed URLs for private content.
 See the [CloudFront User Guide](https://docs.aws.amazon.com/AmazonCloudFront/latest/DeveloperGuide/private-content-trusted-signers.html) for more information about this feature.
-{{% /md %}}</dd>
-</dl>
+{{% /md %}}</dd></dl>
 {{% /choosable %}}
 
 {{% choosable language python %}}
-<dl class="resources-properties">
-
-    <dt class="property-"
+<dl class="resources-properties"><dt class="property-"
             title="">
         <span id="arn_python">
 <a href="#arn_python" style="color: inherit; text-decoration: inherit;">arn</a>
@@ -2056,8 +1927,7 @@ See the [CloudFront User Guide](https://docs.aws.amazon.com/AmazonCloudFront/lat
         <span class="property-type">str</span>
     </dt>
     <dd>{{% md %}}The ARN (Amazon Resource Name) for the distribution. For example: `arn:aws:cloudfront::123456789012:distribution/EDFDVBD632BHDS5`, where `123456789012` is your AWS account ID.
-{{% /md %}}</dd>
-    <dt class="property-"
+{{% /md %}}</dd><dt class="property-"
             title="">
         <span id="caller_reference_python">
 <a href="#caller_reference_python" style="color: inherit; text-decoration: inherit;">caller_<wbr>reference</a>
@@ -2067,8 +1937,7 @@ See the [CloudFront User Guide](https://docs.aws.amazon.com/AmazonCloudFront/lat
     </dt>
     <dd>{{% md %}}Internal value used by CloudFront to allow future
 updates to the distribution configuration.
-{{% /md %}}</dd>
-    <dt class="property-"
+{{% /md %}}</dd><dt class="property-"
             title="">
         <span id="domain_name_python">
 <a href="#domain_name_python" style="color: inherit; text-decoration: inherit;">domain_<wbr>name</a>
@@ -2078,8 +1947,7 @@ updates to the distribution configuration.
     </dt>
     <dd>{{% md %}}The DNS domain name of either the S3 bucket, or
 web site of your custom origin.
-{{% /md %}}</dd>
-    <dt class="property-"
+{{% /md %}}</dd><dt class="property-"
             title="">
         <span id="etag_python">
 <a href="#etag_python" style="color: inherit; text-decoration: inherit;">etag</a>
@@ -2089,8 +1957,7 @@ web site of your custom origin.
     </dt>
     <dd>{{% md %}}The current version of the distribution's information. For example:
 `E2QWRUHAPOMQZL`.
-{{% /md %}}</dd>
-    <dt class="property-"
+{{% /md %}}</dd><dt class="property-"
             title="">
         <span id="hosted_zone_id_python">
 <a href="#hosted_zone_id_python" style="color: inherit; text-decoration: inherit;">hosted_<wbr>zone_<wbr>id</a>
@@ -2101,8 +1968,7 @@ web site of your custom origin.
     <dd>{{% md %}}The CloudFront Route 53 zone ID that can be used to
 route an [Alias Resource Record Set](http://docs.aws.amazon.com/Route53/latest/APIReference/CreateAliasRRSAPI.html) to. This attribute is simply an
 alias for the zone ID `Z2FDTNDATAQYW2`.
-{{% /md %}}</dd>
-    <dt class="property-"
+{{% /md %}}</dd><dt class="property-"
             title="">
         <span id="id_python">
 <a href="#id_python" style="color: inherit; text-decoration: inherit;">id</a>
@@ -2110,8 +1976,7 @@ alias for the zone ID `Z2FDTNDATAQYW2`.
         <span class="property-indicator"></span>
         <span class="property-type">str</span>
     </dt>
-    <dd>{{% md %}}The provider-assigned unique ID for this managed resource.{{% /md %}}</dd>
-    <dt class="property-"
+    <dd>{{% md %}}The provider-assigned unique ID for this managed resource.{{% /md %}}</dd><dt class="property-"
             title="">
         <span id="in_progress_validation_batches_python">
 <a href="#in_progress_validation_batches_python" style="color: inherit; text-decoration: inherit;">in_<wbr>progress_<wbr>validation_<wbr>batches</a>
@@ -2121,8 +1986,7 @@ alias for the zone ID `Z2FDTNDATAQYW2`.
     </dt>
     <dd>{{% md %}}The number of invalidation batches
 currently in progress.
-{{% /md %}}</dd>
-    <dt class="property-"
+{{% /md %}}</dd><dt class="property-"
             title="">
         <span id="last_modified_time_python">
 <a href="#last_modified_time_python" style="color: inherit; text-decoration: inherit;">last_<wbr>modified_<wbr>time</a>
@@ -2131,8 +1995,7 @@ currently in progress.
         <span class="property-type">str</span>
     </dt>
     <dd>{{% md %}}The date and time the distribution was last modified.
-{{% /md %}}</dd>
-    <dt class="property-"
+{{% /md %}}</dd><dt class="property-"
             title="">
         <span id="status_python">
 <a href="#status_python" style="color: inherit; text-decoration: inherit;">status</a>
@@ -2143,8 +2006,7 @@ currently in progress.
     <dd>{{% md %}}The current status of the distribution. `Deployed` if the
 distribution's information is fully propagated throughout the Amazon
 CloudFront system.
-{{% /md %}}</dd>
-    <dt class="property-"
+{{% /md %}}</dd><dt class="property-"
             title="">
         <span id="trusted_signers_python">
 <a href="#trusted_signers_python" style="color: inherit; text-decoration: inherit;">trusted_<wbr>signers</a>
@@ -2154,8 +2016,7 @@ CloudFront system.
     </dt>
     <dd>{{% md %}}List of AWS account IDs (or `self`) that you want to allow to create signed URLs for private content.
 See the [CloudFront User Guide](https://docs.aws.amazon.com/AmazonCloudFront/latest/DeveloperGuide/private-content-trusted-signers.html) for more information about this feature.
-{{% /md %}}</dd>
-</dl>
+{{% /md %}}</dd></dl>
 {{% /choosable %}}
 
 
@@ -2282,9 +2143,7 @@ The following state arguments are supported:
 
 
 {{% choosable language csharp %}}
-<dl class="resources-properties">
-
-    <dt class="property-optional"
+<dl class="resources-properties"><dt class="property-optional"
             title="Optional">
         <span id="state_aliases_csharp">
 <a href="#state_aliases_csharp" style="color: inherit; text-decoration: inherit;">Aliases</a>
@@ -2294,8 +2153,7 @@ The following state arguments are supported:
     </dt>
     <dd>{{% md %}}Extra CNAMEs (alternate domain names), if any, for
 this distribution.
-{{% /md %}}</dd>
-    <dt class="property-optional"
+{{% /md %}}</dd><dt class="property-optional"
             title="Optional">
         <span id="state_arn_csharp">
 <a href="#state_arn_csharp" style="color: inherit; text-decoration: inherit;">Arn</a>
@@ -2304,8 +2162,7 @@ this distribution.
         <span class="property-type">string</span>
     </dt>
     <dd>{{% md %}}The ARN (Amazon Resource Name) for the distribution. For example: `arn:aws:cloudfront::123456789012:distribution/EDFDVBD632BHDS5`, where `123456789012` is your AWS account ID.
-{{% /md %}}</dd>
-    <dt class="property-optional"
+{{% /md %}}</dd><dt class="property-optional"
             title="Optional">
         <span id="state_callerreference_csharp">
 <a href="#state_callerreference_csharp" style="color: inherit; text-decoration: inherit;">Caller<wbr>Reference</a>
@@ -2315,8 +2172,7 @@ this distribution.
     </dt>
     <dd>{{% md %}}Internal value used by CloudFront to allow future
 updates to the distribution configuration.
-{{% /md %}}</dd>
-    <dt class="property-optional"
+{{% /md %}}</dd><dt class="property-optional"
             title="Optional">
         <span id="state_comment_csharp">
 <a href="#state_comment_csharp" style="color: inherit; text-decoration: inherit;">Comment</a>
@@ -2326,8 +2182,7 @@ updates to the distribution configuration.
     </dt>
     <dd>{{% md %}}Any comments you want to include about the
 distribution.
-{{% /md %}}</dd>
-    <dt class="property-optional"
+{{% /md %}}</dd><dt class="property-optional"
             title="Optional">
         <span id="state_customerrorresponses_csharp">
 <a href="#state_customerrorresponses_csharp" style="color: inherit; text-decoration: inherit;">Custom<wbr>Error<wbr>Responses</a>
@@ -2336,8 +2191,7 @@ distribution.
         <span class="property-type"><a href="#distributioncustomerrorresponse">List&lt;Distribution<wbr>Custom<wbr>Error<wbr>Response<wbr>Args&gt;</a></span>
     </dt>
     <dd>{{% md %}}One or more custom error response elements (multiples allowed).
-{{% /md %}}</dd>
-    <dt class="property-optional"
+{{% /md %}}</dd><dt class="property-optional"
             title="Optional">
         <span id="state_defaultcachebehavior_csharp">
 <a href="#state_defaultcachebehavior_csharp" style="color: inherit; text-decoration: inherit;">Default<wbr>Cache<wbr>Behavior</a>
@@ -2347,8 +2201,7 @@ distribution.
     </dt>
     <dd>{{% md %}}The default cache behavior for this distribution (maximum
 one).
-{{% /md %}}</dd>
-    <dt class="property-optional"
+{{% /md %}}</dd><dt class="property-optional"
             title="Optional">
         <span id="state_defaultrootobject_csharp">
 <a href="#state_defaultrootobject_csharp" style="color: inherit; text-decoration: inherit;">Default<wbr>Root<wbr>Object</a>
@@ -2358,8 +2211,7 @@ one).
     </dt>
     <dd>{{% md %}}The object that you want CloudFront to
 return (for example, index.html) when an end user requests the root URL.
-{{% /md %}}</dd>
-    <dt class="property-optional"
+{{% /md %}}</dd><dt class="property-optional"
             title="Optional">
         <span id="state_domainname_csharp">
 <a href="#state_domainname_csharp" style="color: inherit; text-decoration: inherit;">Domain<wbr>Name</a>
@@ -2369,8 +2221,7 @@ return (for example, index.html) when an end user requests the root URL.
     </dt>
     <dd>{{% md %}}The DNS domain name of either the S3 bucket, or
 web site of your custom origin.
-{{% /md %}}</dd>
-    <dt class="property-optional"
+{{% /md %}}</dd><dt class="property-optional"
             title="Optional">
         <span id="state_enabled_csharp">
 <a href="#state_enabled_csharp" style="color: inherit; text-decoration: inherit;">Enabled</a>
@@ -2380,8 +2231,7 @@ web site of your custom origin.
     </dt>
     <dd>{{% md %}}Whether the distribution is enabled to accept end
 user requests for content.
-{{% /md %}}</dd>
-    <dt class="property-optional"
+{{% /md %}}</dd><dt class="property-optional"
             title="Optional">
         <span id="state_etag_csharp">
 <a href="#state_etag_csharp" style="color: inherit; text-decoration: inherit;">Etag</a>
@@ -2391,8 +2241,7 @@ user requests for content.
     </dt>
     <dd>{{% md %}}The current version of the distribution's information. For example:
 `E2QWRUHAPOMQZL`.
-{{% /md %}}</dd>
-    <dt class="property-optional"
+{{% /md %}}</dd><dt class="property-optional"
             title="Optional">
         <span id="state_hostedzoneid_csharp">
 <a href="#state_hostedzoneid_csharp" style="color: inherit; text-decoration: inherit;">Hosted<wbr>Zone<wbr>Id</a>
@@ -2403,8 +2252,7 @@ user requests for content.
     <dd>{{% md %}}The CloudFront Route 53 zone ID that can be used to
 route an [Alias Resource Record Set](http://docs.aws.amazon.com/Route53/latest/APIReference/CreateAliasRRSAPI.html) to. This attribute is simply an
 alias for the zone ID `Z2FDTNDATAQYW2`.
-{{% /md %}}</dd>
-    <dt class="property-optional"
+{{% /md %}}</dd><dt class="property-optional"
             title="Optional">
         <span id="state_httpversion_csharp">
 <a href="#state_httpversion_csharp" style="color: inherit; text-decoration: inherit;">Http<wbr>Version</a>
@@ -2415,8 +2263,7 @@ alias for the zone ID `Z2FDTNDATAQYW2`.
     <dd>{{% md %}}The maximum HTTP version to support on the
 distribution. Allowed values are `http1.1` and `http2`. The default is
 `http2`.
-{{% /md %}}</dd>
-    <dt class="property-optional"
+{{% /md %}}</dd><dt class="property-optional"
             title="Optional">
         <span id="state_inprogressvalidationbatches_csharp">
 <a href="#state_inprogressvalidationbatches_csharp" style="color: inherit; text-decoration: inherit;">In<wbr>Progress<wbr>Validation<wbr>Batches</a>
@@ -2426,8 +2273,7 @@ distribution. Allowed values are `http1.1` and `http2`. The default is
     </dt>
     <dd>{{% md %}}The number of invalidation batches
 currently in progress.
-{{% /md %}}</dd>
-    <dt class="property-optional"
+{{% /md %}}</dd><dt class="property-optional"
             title="Optional">
         <span id="state_isipv6enabled_csharp">
 <a href="#state_isipv6enabled_csharp" style="color: inherit; text-decoration: inherit;">Is<wbr>Ipv6Enabled</a>
@@ -2436,8 +2282,7 @@ currently in progress.
         <span class="property-type">bool</span>
     </dt>
     <dd>{{% md %}}Whether the IPv6 is enabled for the distribution.
-{{% /md %}}</dd>
-    <dt class="property-optional"
+{{% /md %}}</dd><dt class="property-optional"
             title="Optional">
         <span id="state_lastmodifiedtime_csharp">
 <a href="#state_lastmodifiedtime_csharp" style="color: inherit; text-decoration: inherit;">Last<wbr>Modified<wbr>Time</a>
@@ -2446,8 +2291,7 @@ currently in progress.
         <span class="property-type">string</span>
     </dt>
     <dd>{{% md %}}The date and time the distribution was last modified.
-{{% /md %}}</dd>
-    <dt class="property-optional"
+{{% /md %}}</dd><dt class="property-optional"
             title="Optional">
         <span id="state_loggingconfig_csharp">
 <a href="#state_loggingconfig_csharp" style="color: inherit; text-decoration: inherit;">Logging<wbr>Config</a>
@@ -2458,8 +2302,7 @@ currently in progress.
     <dd>{{% md %}}The logging
 configuration that controls how logs are written
 to your distribution (maximum one).
-{{% /md %}}</dd>
-    <dt class="property-optional"
+{{% /md %}}</dd><dt class="property-optional"
             title="Optional">
         <span id="state_orderedcachebehaviors_csharp">
 <a href="#state_orderedcachebehaviors_csharp" style="color: inherit; text-decoration: inherit;">Ordered<wbr>Cache<wbr>Behaviors</a>
@@ -2470,8 +2313,7 @@ to your distribution (maximum one).
     <dd>{{% md %}}An ordered list of cache behaviors
 resource for this distribution. List from top to bottom
 in order of precedence. The topmost cache behavior will have precedence 0.
-{{% /md %}}</dd>
-    <dt class="property-optional"
+{{% /md %}}</dd><dt class="property-optional"
             title="Optional">
         <span id="state_origingroups_csharp">
 <a href="#state_origingroups_csharp" style="color: inherit; text-decoration: inherit;">Origin<wbr>Groups</a>
@@ -2481,8 +2323,7 @@ in order of precedence. The topmost cache behavior will have precedence 0.
     </dt>
     <dd>{{% md %}}One or more origin_group for this
 distribution (multiples allowed).
-{{% /md %}}</dd>
-    <dt class="property-optional"
+{{% /md %}}</dd><dt class="property-optional"
             title="Optional">
         <span id="state_origins_csharp">
 <a href="#state_origins_csharp" style="color: inherit; text-decoration: inherit;">Origins</a>
@@ -2492,8 +2333,7 @@ distribution (multiples allowed).
     </dt>
     <dd>{{% md %}}One or more origins for this
 distribution (multiples allowed).
-{{% /md %}}</dd>
-    <dt class="property-optional"
+{{% /md %}}</dd><dt class="property-optional"
             title="Optional">
         <span id="state_priceclass_csharp">
 <a href="#state_priceclass_csharp" style="color: inherit; text-decoration: inherit;">Price<wbr>Class</a>
@@ -2503,8 +2343,7 @@ distribution (multiples allowed).
     </dt>
     <dd>{{% md %}}The price class for this distribution. One of
 `PriceClass_All`, `PriceClass_200`, `PriceClass_100`
-{{% /md %}}</dd>
-    <dt class="property-optional"
+{{% /md %}}</dd><dt class="property-optional"
             title="Optional">
         <span id="state_restrictions_csharp">
 <a href="#state_restrictions_csharp" style="color: inherit; text-decoration: inherit;">Restrictions</a>
@@ -2514,8 +2353,7 @@ distribution (multiples allowed).
     </dt>
     <dd>{{% md %}}The restriction
 configuration for this distribution (maximum one).
-{{% /md %}}</dd>
-    <dt class="property-optional"
+{{% /md %}}</dd><dt class="property-optional"
             title="Optional">
         <span id="state_retainondelete_csharp">
 <a href="#state_retainondelete_csharp" style="color: inherit; text-decoration: inherit;">Retain<wbr>On<wbr>Delete</a>
@@ -2526,8 +2364,7 @@ configuration for this distribution (maximum one).
     <dd>{{% md %}}Disables the distribution instead of
 deleting it when destroying the resource. If this is set,
 the distribution needs to be deleted manually afterwards. Default: `false`.
-{{% /md %}}</dd>
-    <dt class="property-optional"
+{{% /md %}}</dd><dt class="property-optional"
             title="Optional">
         <span id="state_status_csharp">
 <a href="#state_status_csharp" style="color: inherit; text-decoration: inherit;">Status</a>
@@ -2538,8 +2375,7 @@ the distribution needs to be deleted manually afterwards. Default: `false`.
     <dd>{{% md %}}The current status of the distribution. `Deployed` if the
 distribution's information is fully propagated throughout the Amazon
 CloudFront system.
-{{% /md %}}</dd>
-    <dt class="property-optional"
+{{% /md %}}</dd><dt class="property-optional"
             title="Optional">
         <span id="state_tags_csharp">
 <a href="#state_tags_csharp" style="color: inherit; text-decoration: inherit;">Tags</a>
@@ -2548,8 +2384,7 @@ CloudFront system.
         <span class="property-type">Dictionary&lt;string, string&gt;</span>
     </dt>
     <dd>{{% md %}}A map of tags to assign to the resource.
-{{% /md %}}</dd>
-    <dt class="property-optional"
+{{% /md %}}</dd><dt class="property-optional"
             title="Optional">
         <span id="state_trustedsigners_csharp">
 <a href="#state_trustedsigners_csharp" style="color: inherit; text-decoration: inherit;">Trusted<wbr>Signers</a>
@@ -2559,8 +2394,7 @@ CloudFront system.
     </dt>
     <dd>{{% md %}}List of AWS account IDs (or `self`) that you want to allow to create signed URLs for private content.
 See the [CloudFront User Guide](https://docs.aws.amazon.com/AmazonCloudFront/latest/DeveloperGuide/private-content-trusted-signers.html) for more information about this feature.
-{{% /md %}}</dd>
-    <dt class="property-optional"
+{{% /md %}}</dd><dt class="property-optional"
             title="Optional">
         <span id="state_viewercertificate_csharp">
 <a href="#state_viewercertificate_csharp" style="color: inherit; text-decoration: inherit;">Viewer<wbr>Certificate</a>
@@ -2571,8 +2405,7 @@ See the [CloudFront User Guide](https://docs.aws.amazon.com/AmazonCloudFront/lat
     <dd>{{% md %}}The SSL
 configuration for this distribution (maximum
 one).
-{{% /md %}}</dd>
-    <dt class="property-optional"
+{{% /md %}}</dd><dt class="property-optional"
             title="Optional">
         <span id="state_waitfordeployment_csharp">
 <a href="#state_waitfordeployment_csharp" style="color: inherit; text-decoration: inherit;">Wait<wbr>For<wbr>Deployment</a>
@@ -2583,8 +2416,7 @@ one).
     <dd>{{% md %}}If enabled, the resource will wait for
 the distribution status to change from `InProgress` to `Deployed`. Setting
 this to`false` will skip the process. Default: `true`.
-{{% /md %}}</dd>
-    <dt class="property-optional"
+{{% /md %}}</dd><dt class="property-optional"
             title="Optional">
         <span id="state_webaclid_csharp">
 <a href="#state_webaclid_csharp" style="color: inherit; text-decoration: inherit;">Web<wbr>Acl<wbr>Id</a>
@@ -2599,14 +2431,11 @@ for example `aws_wafv2_web_acl.example.arn`. To specify a web
 ACL created using AWS WAF Classic, use the ACL ID, for example `aws_waf_web_acl.example.id`.
 The WAF Web ACL must exist in the WAF Global (CloudFront) region and the
 credentials configuring this argument must have `waf:GetWebACL` permissions assigned.
-{{% /md %}}</dd>
-</dl>
+{{% /md %}}</dd></dl>
 {{% /choosable %}}
 
 {{% choosable language go %}}
-<dl class="resources-properties">
-
-    <dt class="property-optional"
+<dl class="resources-properties"><dt class="property-optional"
             title="Optional">
         <span id="state_aliases_go">
 <a href="#state_aliases_go" style="color: inherit; text-decoration: inherit;">Aliases</a>
@@ -2616,8 +2445,7 @@ credentials configuring this argument must have `waf:GetWebACL` permissions assi
     </dt>
     <dd>{{% md %}}Extra CNAMEs (alternate domain names), if any, for
 this distribution.
-{{% /md %}}</dd>
-    <dt class="property-optional"
+{{% /md %}}</dd><dt class="property-optional"
             title="Optional">
         <span id="state_arn_go">
 <a href="#state_arn_go" style="color: inherit; text-decoration: inherit;">Arn</a>
@@ -2626,8 +2454,7 @@ this distribution.
         <span class="property-type">string</span>
     </dt>
     <dd>{{% md %}}The ARN (Amazon Resource Name) for the distribution. For example: `arn:aws:cloudfront::123456789012:distribution/EDFDVBD632BHDS5`, where `123456789012` is your AWS account ID.
-{{% /md %}}</dd>
-    <dt class="property-optional"
+{{% /md %}}</dd><dt class="property-optional"
             title="Optional">
         <span id="state_callerreference_go">
 <a href="#state_callerreference_go" style="color: inherit; text-decoration: inherit;">Caller<wbr>Reference</a>
@@ -2637,8 +2464,7 @@ this distribution.
     </dt>
     <dd>{{% md %}}Internal value used by CloudFront to allow future
 updates to the distribution configuration.
-{{% /md %}}</dd>
-    <dt class="property-optional"
+{{% /md %}}</dd><dt class="property-optional"
             title="Optional">
         <span id="state_comment_go">
 <a href="#state_comment_go" style="color: inherit; text-decoration: inherit;">Comment</a>
@@ -2648,8 +2474,7 @@ updates to the distribution configuration.
     </dt>
     <dd>{{% md %}}Any comments you want to include about the
 distribution.
-{{% /md %}}</dd>
-    <dt class="property-optional"
+{{% /md %}}</dd><dt class="property-optional"
             title="Optional">
         <span id="state_customerrorresponses_go">
 <a href="#state_customerrorresponses_go" style="color: inherit; text-decoration: inherit;">Custom<wbr>Error<wbr>Responses</a>
@@ -2658,8 +2483,7 @@ distribution.
         <span class="property-type"><a href="#distributioncustomerrorresponse">[]Distribution<wbr>Custom<wbr>Error<wbr>Response</a></span>
     </dt>
     <dd>{{% md %}}One or more custom error response elements (multiples allowed).
-{{% /md %}}</dd>
-    <dt class="property-optional"
+{{% /md %}}</dd><dt class="property-optional"
             title="Optional">
         <span id="state_defaultcachebehavior_go">
 <a href="#state_defaultcachebehavior_go" style="color: inherit; text-decoration: inherit;">Default<wbr>Cache<wbr>Behavior</a>
@@ -2669,8 +2493,7 @@ distribution.
     </dt>
     <dd>{{% md %}}The default cache behavior for this distribution (maximum
 one).
-{{% /md %}}</dd>
-    <dt class="property-optional"
+{{% /md %}}</dd><dt class="property-optional"
             title="Optional">
         <span id="state_defaultrootobject_go">
 <a href="#state_defaultrootobject_go" style="color: inherit; text-decoration: inherit;">Default<wbr>Root<wbr>Object</a>
@@ -2680,8 +2503,7 @@ one).
     </dt>
     <dd>{{% md %}}The object that you want CloudFront to
 return (for example, index.html) when an end user requests the root URL.
-{{% /md %}}</dd>
-    <dt class="property-optional"
+{{% /md %}}</dd><dt class="property-optional"
             title="Optional">
         <span id="state_domainname_go">
 <a href="#state_domainname_go" style="color: inherit; text-decoration: inherit;">Domain<wbr>Name</a>
@@ -2691,8 +2513,7 @@ return (for example, index.html) when an end user requests the root URL.
     </dt>
     <dd>{{% md %}}The DNS domain name of either the S3 bucket, or
 web site of your custom origin.
-{{% /md %}}</dd>
-    <dt class="property-optional"
+{{% /md %}}</dd><dt class="property-optional"
             title="Optional">
         <span id="state_enabled_go">
 <a href="#state_enabled_go" style="color: inherit; text-decoration: inherit;">Enabled</a>
@@ -2702,8 +2523,7 @@ web site of your custom origin.
     </dt>
     <dd>{{% md %}}Whether the distribution is enabled to accept end
 user requests for content.
-{{% /md %}}</dd>
-    <dt class="property-optional"
+{{% /md %}}</dd><dt class="property-optional"
             title="Optional">
         <span id="state_etag_go">
 <a href="#state_etag_go" style="color: inherit; text-decoration: inherit;">Etag</a>
@@ -2713,8 +2533,7 @@ user requests for content.
     </dt>
     <dd>{{% md %}}The current version of the distribution's information. For example:
 `E2QWRUHAPOMQZL`.
-{{% /md %}}</dd>
-    <dt class="property-optional"
+{{% /md %}}</dd><dt class="property-optional"
             title="Optional">
         <span id="state_hostedzoneid_go">
 <a href="#state_hostedzoneid_go" style="color: inherit; text-decoration: inherit;">Hosted<wbr>Zone<wbr>Id</a>
@@ -2725,8 +2544,7 @@ user requests for content.
     <dd>{{% md %}}The CloudFront Route 53 zone ID that can be used to
 route an [Alias Resource Record Set](http://docs.aws.amazon.com/Route53/latest/APIReference/CreateAliasRRSAPI.html) to. This attribute is simply an
 alias for the zone ID `Z2FDTNDATAQYW2`.
-{{% /md %}}</dd>
-    <dt class="property-optional"
+{{% /md %}}</dd><dt class="property-optional"
             title="Optional">
         <span id="state_httpversion_go">
 <a href="#state_httpversion_go" style="color: inherit; text-decoration: inherit;">Http<wbr>Version</a>
@@ -2737,8 +2555,7 @@ alias for the zone ID `Z2FDTNDATAQYW2`.
     <dd>{{% md %}}The maximum HTTP version to support on the
 distribution. Allowed values are `http1.1` and `http2`. The default is
 `http2`.
-{{% /md %}}</dd>
-    <dt class="property-optional"
+{{% /md %}}</dd><dt class="property-optional"
             title="Optional">
         <span id="state_inprogressvalidationbatches_go">
 <a href="#state_inprogressvalidationbatches_go" style="color: inherit; text-decoration: inherit;">In<wbr>Progress<wbr>Validation<wbr>Batches</a>
@@ -2748,8 +2565,7 @@ distribution. Allowed values are `http1.1` and `http2`. The default is
     </dt>
     <dd>{{% md %}}The number of invalidation batches
 currently in progress.
-{{% /md %}}</dd>
-    <dt class="property-optional"
+{{% /md %}}</dd><dt class="property-optional"
             title="Optional">
         <span id="state_isipv6enabled_go">
 <a href="#state_isipv6enabled_go" style="color: inherit; text-decoration: inherit;">Is<wbr>Ipv6Enabled</a>
@@ -2758,8 +2574,7 @@ currently in progress.
         <span class="property-type">bool</span>
     </dt>
     <dd>{{% md %}}Whether the IPv6 is enabled for the distribution.
-{{% /md %}}</dd>
-    <dt class="property-optional"
+{{% /md %}}</dd><dt class="property-optional"
             title="Optional">
         <span id="state_lastmodifiedtime_go">
 <a href="#state_lastmodifiedtime_go" style="color: inherit; text-decoration: inherit;">Last<wbr>Modified<wbr>Time</a>
@@ -2768,8 +2583,7 @@ currently in progress.
         <span class="property-type">string</span>
     </dt>
     <dd>{{% md %}}The date and time the distribution was last modified.
-{{% /md %}}</dd>
-    <dt class="property-optional"
+{{% /md %}}</dd><dt class="property-optional"
             title="Optional">
         <span id="state_loggingconfig_go">
 <a href="#state_loggingconfig_go" style="color: inherit; text-decoration: inherit;">Logging<wbr>Config</a>
@@ -2780,8 +2594,7 @@ currently in progress.
     <dd>{{% md %}}The logging
 configuration that controls how logs are written
 to your distribution (maximum one).
-{{% /md %}}</dd>
-    <dt class="property-optional"
+{{% /md %}}</dd><dt class="property-optional"
             title="Optional">
         <span id="state_orderedcachebehaviors_go">
 <a href="#state_orderedcachebehaviors_go" style="color: inherit; text-decoration: inherit;">Ordered<wbr>Cache<wbr>Behaviors</a>
@@ -2792,8 +2605,7 @@ to your distribution (maximum one).
     <dd>{{% md %}}An ordered list of cache behaviors
 resource for this distribution. List from top to bottom
 in order of precedence. The topmost cache behavior will have precedence 0.
-{{% /md %}}</dd>
-    <dt class="property-optional"
+{{% /md %}}</dd><dt class="property-optional"
             title="Optional">
         <span id="state_origingroups_go">
 <a href="#state_origingroups_go" style="color: inherit; text-decoration: inherit;">Origin<wbr>Groups</a>
@@ -2803,8 +2615,7 @@ in order of precedence. The topmost cache behavior will have precedence 0.
     </dt>
     <dd>{{% md %}}One or more origin_group for this
 distribution (multiples allowed).
-{{% /md %}}</dd>
-    <dt class="property-optional"
+{{% /md %}}</dd><dt class="property-optional"
             title="Optional">
         <span id="state_origins_go">
 <a href="#state_origins_go" style="color: inherit; text-decoration: inherit;">Origins</a>
@@ -2814,8 +2625,7 @@ distribution (multiples allowed).
     </dt>
     <dd>{{% md %}}One or more origins for this
 distribution (multiples allowed).
-{{% /md %}}</dd>
-    <dt class="property-optional"
+{{% /md %}}</dd><dt class="property-optional"
             title="Optional">
         <span id="state_priceclass_go">
 <a href="#state_priceclass_go" style="color: inherit; text-decoration: inherit;">Price<wbr>Class</a>
@@ -2825,8 +2635,7 @@ distribution (multiples allowed).
     </dt>
     <dd>{{% md %}}The price class for this distribution. One of
 `PriceClass_All`, `PriceClass_200`, `PriceClass_100`
-{{% /md %}}</dd>
-    <dt class="property-optional"
+{{% /md %}}</dd><dt class="property-optional"
             title="Optional">
         <span id="state_restrictions_go">
 <a href="#state_restrictions_go" style="color: inherit; text-decoration: inherit;">Restrictions</a>
@@ -2836,8 +2645,7 @@ distribution (multiples allowed).
     </dt>
     <dd>{{% md %}}The restriction
 configuration for this distribution (maximum one).
-{{% /md %}}</dd>
-    <dt class="property-optional"
+{{% /md %}}</dd><dt class="property-optional"
             title="Optional">
         <span id="state_retainondelete_go">
 <a href="#state_retainondelete_go" style="color: inherit; text-decoration: inherit;">Retain<wbr>On<wbr>Delete</a>
@@ -2848,8 +2656,7 @@ configuration for this distribution (maximum one).
     <dd>{{% md %}}Disables the distribution instead of
 deleting it when destroying the resource. If this is set,
 the distribution needs to be deleted manually afterwards. Default: `false`.
-{{% /md %}}</dd>
-    <dt class="property-optional"
+{{% /md %}}</dd><dt class="property-optional"
             title="Optional">
         <span id="state_status_go">
 <a href="#state_status_go" style="color: inherit; text-decoration: inherit;">Status</a>
@@ -2860,8 +2667,7 @@ the distribution needs to be deleted manually afterwards. Default: `false`.
     <dd>{{% md %}}The current status of the distribution. `Deployed` if the
 distribution's information is fully propagated throughout the Amazon
 CloudFront system.
-{{% /md %}}</dd>
-    <dt class="property-optional"
+{{% /md %}}</dd><dt class="property-optional"
             title="Optional">
         <span id="state_tags_go">
 <a href="#state_tags_go" style="color: inherit; text-decoration: inherit;">Tags</a>
@@ -2870,8 +2676,7 @@ CloudFront system.
         <span class="property-type">map[string]string</span>
     </dt>
     <dd>{{% md %}}A map of tags to assign to the resource.
-{{% /md %}}</dd>
-    <dt class="property-optional"
+{{% /md %}}</dd><dt class="property-optional"
             title="Optional">
         <span id="state_trustedsigners_go">
 <a href="#state_trustedsigners_go" style="color: inherit; text-decoration: inherit;">Trusted<wbr>Signers</a>
@@ -2881,8 +2686,7 @@ CloudFront system.
     </dt>
     <dd>{{% md %}}List of AWS account IDs (or `self`) that you want to allow to create signed URLs for private content.
 See the [CloudFront User Guide](https://docs.aws.amazon.com/AmazonCloudFront/latest/DeveloperGuide/private-content-trusted-signers.html) for more information about this feature.
-{{% /md %}}</dd>
-    <dt class="property-optional"
+{{% /md %}}</dd><dt class="property-optional"
             title="Optional">
         <span id="state_viewercertificate_go">
 <a href="#state_viewercertificate_go" style="color: inherit; text-decoration: inherit;">Viewer<wbr>Certificate</a>
@@ -2893,8 +2697,7 @@ See the [CloudFront User Guide](https://docs.aws.amazon.com/AmazonCloudFront/lat
     <dd>{{% md %}}The SSL
 configuration for this distribution (maximum
 one).
-{{% /md %}}</dd>
-    <dt class="property-optional"
+{{% /md %}}</dd><dt class="property-optional"
             title="Optional">
         <span id="state_waitfordeployment_go">
 <a href="#state_waitfordeployment_go" style="color: inherit; text-decoration: inherit;">Wait<wbr>For<wbr>Deployment</a>
@@ -2905,8 +2708,7 @@ one).
     <dd>{{% md %}}If enabled, the resource will wait for
 the distribution status to change from `InProgress` to `Deployed`. Setting
 this to`false` will skip the process. Default: `true`.
-{{% /md %}}</dd>
-    <dt class="property-optional"
+{{% /md %}}</dd><dt class="property-optional"
             title="Optional">
         <span id="state_webaclid_go">
 <a href="#state_webaclid_go" style="color: inherit; text-decoration: inherit;">Web<wbr>Acl<wbr>Id</a>
@@ -2921,14 +2723,11 @@ for example `aws_wafv2_web_acl.example.arn`. To specify a web
 ACL created using AWS WAF Classic, use the ACL ID, for example `aws_waf_web_acl.example.id`.
 The WAF Web ACL must exist in the WAF Global (CloudFront) region and the
 credentials configuring this argument must have `waf:GetWebACL` permissions assigned.
-{{% /md %}}</dd>
-</dl>
+{{% /md %}}</dd></dl>
 {{% /choosable %}}
 
 {{% choosable language nodejs %}}
-<dl class="resources-properties">
-
-    <dt class="property-optional"
+<dl class="resources-properties"><dt class="property-optional"
             title="Optional">
         <span id="state_aliases_nodejs">
 <a href="#state_aliases_nodejs" style="color: inherit; text-decoration: inherit;">aliases</a>
@@ -2938,8 +2737,7 @@ credentials configuring this argument must have `waf:GetWebACL` permissions assi
     </dt>
     <dd>{{% md %}}Extra CNAMEs (alternate domain names), if any, for
 this distribution.
-{{% /md %}}</dd>
-    <dt class="property-optional"
+{{% /md %}}</dd><dt class="property-optional"
             title="Optional">
         <span id="state_arn_nodejs">
 <a href="#state_arn_nodejs" style="color: inherit; text-decoration: inherit;">arn</a>
@@ -2948,8 +2746,7 @@ this distribution.
         <span class="property-type">string</span>
     </dt>
     <dd>{{% md %}}The ARN (Amazon Resource Name) for the distribution. For example: `arn:aws:cloudfront::123456789012:distribution/EDFDVBD632BHDS5`, where `123456789012` is your AWS account ID.
-{{% /md %}}</dd>
-    <dt class="property-optional"
+{{% /md %}}</dd><dt class="property-optional"
             title="Optional">
         <span id="state_callerreference_nodejs">
 <a href="#state_callerreference_nodejs" style="color: inherit; text-decoration: inherit;">caller<wbr>Reference</a>
@@ -2959,8 +2756,7 @@ this distribution.
     </dt>
     <dd>{{% md %}}Internal value used by CloudFront to allow future
 updates to the distribution configuration.
-{{% /md %}}</dd>
-    <dt class="property-optional"
+{{% /md %}}</dd><dt class="property-optional"
             title="Optional">
         <span id="state_comment_nodejs">
 <a href="#state_comment_nodejs" style="color: inherit; text-decoration: inherit;">comment</a>
@@ -2970,8 +2766,7 @@ updates to the distribution configuration.
     </dt>
     <dd>{{% md %}}Any comments you want to include about the
 distribution.
-{{% /md %}}</dd>
-    <dt class="property-optional"
+{{% /md %}}</dd><dt class="property-optional"
             title="Optional">
         <span id="state_customerrorresponses_nodejs">
 <a href="#state_customerrorresponses_nodejs" style="color: inherit; text-decoration: inherit;">custom<wbr>Error<wbr>Responses</a>
@@ -2980,8 +2775,7 @@ distribution.
         <span class="property-type"><a href="#distributioncustomerrorresponse">Distribution<wbr>Custom<wbr>Error<wbr>Response[]</a></span>
     </dt>
     <dd>{{% md %}}One or more custom error response elements (multiples allowed).
-{{% /md %}}</dd>
-    <dt class="property-optional"
+{{% /md %}}</dd><dt class="property-optional"
             title="Optional">
         <span id="state_defaultcachebehavior_nodejs">
 <a href="#state_defaultcachebehavior_nodejs" style="color: inherit; text-decoration: inherit;">default<wbr>Cache<wbr>Behavior</a>
@@ -2991,8 +2785,7 @@ distribution.
     </dt>
     <dd>{{% md %}}The default cache behavior for this distribution (maximum
 one).
-{{% /md %}}</dd>
-    <dt class="property-optional"
+{{% /md %}}</dd><dt class="property-optional"
             title="Optional">
         <span id="state_defaultrootobject_nodejs">
 <a href="#state_defaultrootobject_nodejs" style="color: inherit; text-decoration: inherit;">default<wbr>Root<wbr>Object</a>
@@ -3002,8 +2795,7 @@ one).
     </dt>
     <dd>{{% md %}}The object that you want CloudFront to
 return (for example, index.html) when an end user requests the root URL.
-{{% /md %}}</dd>
-    <dt class="property-optional"
+{{% /md %}}</dd><dt class="property-optional"
             title="Optional">
         <span id="state_domainname_nodejs">
 <a href="#state_domainname_nodejs" style="color: inherit; text-decoration: inherit;">domain<wbr>Name</a>
@@ -3013,8 +2805,7 @@ return (for example, index.html) when an end user requests the root URL.
     </dt>
     <dd>{{% md %}}The DNS domain name of either the S3 bucket, or
 web site of your custom origin.
-{{% /md %}}</dd>
-    <dt class="property-optional"
+{{% /md %}}</dd><dt class="property-optional"
             title="Optional">
         <span id="state_enabled_nodejs">
 <a href="#state_enabled_nodejs" style="color: inherit; text-decoration: inherit;">enabled</a>
@@ -3024,8 +2815,7 @@ web site of your custom origin.
     </dt>
     <dd>{{% md %}}Whether the distribution is enabled to accept end
 user requests for content.
-{{% /md %}}</dd>
-    <dt class="property-optional"
+{{% /md %}}</dd><dt class="property-optional"
             title="Optional">
         <span id="state_etag_nodejs">
 <a href="#state_etag_nodejs" style="color: inherit; text-decoration: inherit;">etag</a>
@@ -3035,8 +2825,7 @@ user requests for content.
     </dt>
     <dd>{{% md %}}The current version of the distribution's information. For example:
 `E2QWRUHAPOMQZL`.
-{{% /md %}}</dd>
-    <dt class="property-optional"
+{{% /md %}}</dd><dt class="property-optional"
             title="Optional">
         <span id="state_hostedzoneid_nodejs">
 <a href="#state_hostedzoneid_nodejs" style="color: inherit; text-decoration: inherit;">hosted<wbr>Zone<wbr>Id</a>
@@ -3047,8 +2836,7 @@ user requests for content.
     <dd>{{% md %}}The CloudFront Route 53 zone ID that can be used to
 route an [Alias Resource Record Set](http://docs.aws.amazon.com/Route53/latest/APIReference/CreateAliasRRSAPI.html) to. This attribute is simply an
 alias for the zone ID `Z2FDTNDATAQYW2`.
-{{% /md %}}</dd>
-    <dt class="property-optional"
+{{% /md %}}</dd><dt class="property-optional"
             title="Optional">
         <span id="state_httpversion_nodejs">
 <a href="#state_httpversion_nodejs" style="color: inherit; text-decoration: inherit;">http<wbr>Version</a>
@@ -3059,8 +2847,7 @@ alias for the zone ID `Z2FDTNDATAQYW2`.
     <dd>{{% md %}}The maximum HTTP version to support on the
 distribution. Allowed values are `http1.1` and `http2`. The default is
 `http2`.
-{{% /md %}}</dd>
-    <dt class="property-optional"
+{{% /md %}}</dd><dt class="property-optional"
             title="Optional">
         <span id="state_inprogressvalidationbatches_nodejs">
 <a href="#state_inprogressvalidationbatches_nodejs" style="color: inherit; text-decoration: inherit;">in<wbr>Progress<wbr>Validation<wbr>Batches</a>
@@ -3070,8 +2857,7 @@ distribution. Allowed values are `http1.1` and `http2`. The default is
     </dt>
     <dd>{{% md %}}The number of invalidation batches
 currently in progress.
-{{% /md %}}</dd>
-    <dt class="property-optional"
+{{% /md %}}</dd><dt class="property-optional"
             title="Optional">
         <span id="state_isipv6enabled_nodejs">
 <a href="#state_isipv6enabled_nodejs" style="color: inherit; text-decoration: inherit;">is<wbr>Ipv6Enabled</a>
@@ -3080,8 +2866,7 @@ currently in progress.
         <span class="property-type">boolean</span>
     </dt>
     <dd>{{% md %}}Whether the IPv6 is enabled for the distribution.
-{{% /md %}}</dd>
-    <dt class="property-optional"
+{{% /md %}}</dd><dt class="property-optional"
             title="Optional">
         <span id="state_lastmodifiedtime_nodejs">
 <a href="#state_lastmodifiedtime_nodejs" style="color: inherit; text-decoration: inherit;">last<wbr>Modified<wbr>Time</a>
@@ -3090,8 +2875,7 @@ currently in progress.
         <span class="property-type">string</span>
     </dt>
     <dd>{{% md %}}The date and time the distribution was last modified.
-{{% /md %}}</dd>
-    <dt class="property-optional"
+{{% /md %}}</dd><dt class="property-optional"
             title="Optional">
         <span id="state_loggingconfig_nodejs">
 <a href="#state_loggingconfig_nodejs" style="color: inherit; text-decoration: inherit;">logging<wbr>Config</a>
@@ -3102,8 +2886,7 @@ currently in progress.
     <dd>{{% md %}}The logging
 configuration that controls how logs are written
 to your distribution (maximum one).
-{{% /md %}}</dd>
-    <dt class="property-optional"
+{{% /md %}}</dd><dt class="property-optional"
             title="Optional">
         <span id="state_orderedcachebehaviors_nodejs">
 <a href="#state_orderedcachebehaviors_nodejs" style="color: inherit; text-decoration: inherit;">ordered<wbr>Cache<wbr>Behaviors</a>
@@ -3114,8 +2897,7 @@ to your distribution (maximum one).
     <dd>{{% md %}}An ordered list of cache behaviors
 resource for this distribution. List from top to bottom
 in order of precedence. The topmost cache behavior will have precedence 0.
-{{% /md %}}</dd>
-    <dt class="property-optional"
+{{% /md %}}</dd><dt class="property-optional"
             title="Optional">
         <span id="state_origingroups_nodejs">
 <a href="#state_origingroups_nodejs" style="color: inherit; text-decoration: inherit;">origin<wbr>Groups</a>
@@ -3125,8 +2907,7 @@ in order of precedence. The topmost cache behavior will have precedence 0.
     </dt>
     <dd>{{% md %}}One or more origin_group for this
 distribution (multiples allowed).
-{{% /md %}}</dd>
-    <dt class="property-optional"
+{{% /md %}}</dd><dt class="property-optional"
             title="Optional">
         <span id="state_origins_nodejs">
 <a href="#state_origins_nodejs" style="color: inherit; text-decoration: inherit;">origins</a>
@@ -3136,8 +2917,7 @@ distribution (multiples allowed).
     </dt>
     <dd>{{% md %}}One or more origins for this
 distribution (multiples allowed).
-{{% /md %}}</dd>
-    <dt class="property-optional"
+{{% /md %}}</dd><dt class="property-optional"
             title="Optional">
         <span id="state_priceclass_nodejs">
 <a href="#state_priceclass_nodejs" style="color: inherit; text-decoration: inherit;">price<wbr>Class</a>
@@ -3147,8 +2927,7 @@ distribution (multiples allowed).
     </dt>
     <dd>{{% md %}}The price class for this distribution. One of
 `PriceClass_All`, `PriceClass_200`, `PriceClass_100`
-{{% /md %}}</dd>
-    <dt class="property-optional"
+{{% /md %}}</dd><dt class="property-optional"
             title="Optional">
         <span id="state_restrictions_nodejs">
 <a href="#state_restrictions_nodejs" style="color: inherit; text-decoration: inherit;">restrictions</a>
@@ -3158,8 +2937,7 @@ distribution (multiples allowed).
     </dt>
     <dd>{{% md %}}The restriction
 configuration for this distribution (maximum one).
-{{% /md %}}</dd>
-    <dt class="property-optional"
+{{% /md %}}</dd><dt class="property-optional"
             title="Optional">
         <span id="state_retainondelete_nodejs">
 <a href="#state_retainondelete_nodejs" style="color: inherit; text-decoration: inherit;">retain<wbr>On<wbr>Delete</a>
@@ -3170,8 +2948,7 @@ configuration for this distribution (maximum one).
     <dd>{{% md %}}Disables the distribution instead of
 deleting it when destroying the resource. If this is set,
 the distribution needs to be deleted manually afterwards. Default: `false`.
-{{% /md %}}</dd>
-    <dt class="property-optional"
+{{% /md %}}</dd><dt class="property-optional"
             title="Optional">
         <span id="state_status_nodejs">
 <a href="#state_status_nodejs" style="color: inherit; text-decoration: inherit;">status</a>
@@ -3182,8 +2959,7 @@ the distribution needs to be deleted manually afterwards. Default: `false`.
     <dd>{{% md %}}The current status of the distribution. `Deployed` if the
 distribution's information is fully propagated throughout the Amazon
 CloudFront system.
-{{% /md %}}</dd>
-    <dt class="property-optional"
+{{% /md %}}</dd><dt class="property-optional"
             title="Optional">
         <span id="state_tags_nodejs">
 <a href="#state_tags_nodejs" style="color: inherit; text-decoration: inherit;">tags</a>
@@ -3192,8 +2968,7 @@ CloudFront system.
         <span class="property-type">{[key: string]: string}</span>
     </dt>
     <dd>{{% md %}}A map of tags to assign to the resource.
-{{% /md %}}</dd>
-    <dt class="property-optional"
+{{% /md %}}</dd><dt class="property-optional"
             title="Optional">
         <span id="state_trustedsigners_nodejs">
 <a href="#state_trustedsigners_nodejs" style="color: inherit; text-decoration: inherit;">trusted<wbr>Signers</a>
@@ -3203,8 +2978,7 @@ CloudFront system.
     </dt>
     <dd>{{% md %}}List of AWS account IDs (or `self`) that you want to allow to create signed URLs for private content.
 See the [CloudFront User Guide](https://docs.aws.amazon.com/AmazonCloudFront/latest/DeveloperGuide/private-content-trusted-signers.html) for more information about this feature.
-{{% /md %}}</dd>
-    <dt class="property-optional"
+{{% /md %}}</dd><dt class="property-optional"
             title="Optional">
         <span id="state_viewercertificate_nodejs">
 <a href="#state_viewercertificate_nodejs" style="color: inherit; text-decoration: inherit;">viewer<wbr>Certificate</a>
@@ -3215,8 +2989,7 @@ See the [CloudFront User Guide](https://docs.aws.amazon.com/AmazonCloudFront/lat
     <dd>{{% md %}}The SSL
 configuration for this distribution (maximum
 one).
-{{% /md %}}</dd>
-    <dt class="property-optional"
+{{% /md %}}</dd><dt class="property-optional"
             title="Optional">
         <span id="state_waitfordeployment_nodejs">
 <a href="#state_waitfordeployment_nodejs" style="color: inherit; text-decoration: inherit;">wait<wbr>For<wbr>Deployment</a>
@@ -3227,8 +3000,7 @@ one).
     <dd>{{% md %}}If enabled, the resource will wait for
 the distribution status to change from `InProgress` to `Deployed`. Setting
 this to`false` will skip the process. Default: `true`.
-{{% /md %}}</dd>
-    <dt class="property-optional"
+{{% /md %}}</dd><dt class="property-optional"
             title="Optional">
         <span id="state_webaclid_nodejs">
 <a href="#state_webaclid_nodejs" style="color: inherit; text-decoration: inherit;">web<wbr>Acl<wbr>Id</a>
@@ -3243,14 +3015,11 @@ for example `aws_wafv2_web_acl.example.arn`. To specify a web
 ACL created using AWS WAF Classic, use the ACL ID, for example `aws_waf_web_acl.example.id`.
 The WAF Web ACL must exist in the WAF Global (CloudFront) region and the
 credentials configuring this argument must have `waf:GetWebACL` permissions assigned.
-{{% /md %}}</dd>
-</dl>
+{{% /md %}}</dd></dl>
 {{% /choosable %}}
 
 {{% choosable language python %}}
-<dl class="resources-properties">
-
-    <dt class="property-optional"
+<dl class="resources-properties"><dt class="property-optional"
             title="Optional">
         <span id="state_aliases_python">
 <a href="#state_aliases_python" style="color: inherit; text-decoration: inherit;">aliases</a>
@@ -3260,8 +3029,7 @@ credentials configuring this argument must have `waf:GetWebACL` permissions assi
     </dt>
     <dd>{{% md %}}Extra CNAMEs (alternate domain names), if any, for
 this distribution.
-{{% /md %}}</dd>
-    <dt class="property-optional"
+{{% /md %}}</dd><dt class="property-optional"
             title="Optional">
         <span id="state_arn_python">
 <a href="#state_arn_python" style="color: inherit; text-decoration: inherit;">arn</a>
@@ -3270,8 +3038,7 @@ this distribution.
         <span class="property-type">str</span>
     </dt>
     <dd>{{% md %}}The ARN (Amazon Resource Name) for the distribution. For example: `arn:aws:cloudfront::123456789012:distribution/EDFDVBD632BHDS5`, where `123456789012` is your AWS account ID.
-{{% /md %}}</dd>
-    <dt class="property-optional"
+{{% /md %}}</dd><dt class="property-optional"
             title="Optional">
         <span id="state_caller_reference_python">
 <a href="#state_caller_reference_python" style="color: inherit; text-decoration: inherit;">caller_<wbr>reference</a>
@@ -3281,8 +3048,7 @@ this distribution.
     </dt>
     <dd>{{% md %}}Internal value used by CloudFront to allow future
 updates to the distribution configuration.
-{{% /md %}}</dd>
-    <dt class="property-optional"
+{{% /md %}}</dd><dt class="property-optional"
             title="Optional">
         <span id="state_comment_python">
 <a href="#state_comment_python" style="color: inherit; text-decoration: inherit;">comment</a>
@@ -3292,8 +3058,7 @@ updates to the distribution configuration.
     </dt>
     <dd>{{% md %}}Any comments you want to include about the
 distribution.
-{{% /md %}}</dd>
-    <dt class="property-optional"
+{{% /md %}}</dd><dt class="property-optional"
             title="Optional">
         <span id="state_custom_error_responses_python">
 <a href="#state_custom_error_responses_python" style="color: inherit; text-decoration: inherit;">custom_<wbr>error_<wbr>responses</a>
@@ -3302,8 +3067,7 @@ distribution.
         <span class="property-type"><a href="#distributioncustomerrorresponse">Sequence[Distribution<wbr>Custom<wbr>Error<wbr>Response<wbr>Args]</a></span>
     </dt>
     <dd>{{% md %}}One or more custom error response elements (multiples allowed).
-{{% /md %}}</dd>
-    <dt class="property-optional"
+{{% /md %}}</dd><dt class="property-optional"
             title="Optional">
         <span id="state_default_cache_behavior_python">
 <a href="#state_default_cache_behavior_python" style="color: inherit; text-decoration: inherit;">default_<wbr>cache_<wbr>behavior</a>
@@ -3313,8 +3077,7 @@ distribution.
     </dt>
     <dd>{{% md %}}The default cache behavior for this distribution (maximum
 one).
-{{% /md %}}</dd>
-    <dt class="property-optional"
+{{% /md %}}</dd><dt class="property-optional"
             title="Optional">
         <span id="state_default_root_object_python">
 <a href="#state_default_root_object_python" style="color: inherit; text-decoration: inherit;">default_<wbr>root_<wbr>object</a>
@@ -3324,8 +3087,7 @@ one).
     </dt>
     <dd>{{% md %}}The object that you want CloudFront to
 return (for example, index.html) when an end user requests the root URL.
-{{% /md %}}</dd>
-    <dt class="property-optional"
+{{% /md %}}</dd><dt class="property-optional"
             title="Optional">
         <span id="state_domain_name_python">
 <a href="#state_domain_name_python" style="color: inherit; text-decoration: inherit;">domain_<wbr>name</a>
@@ -3335,8 +3097,7 @@ return (for example, index.html) when an end user requests the root URL.
     </dt>
     <dd>{{% md %}}The DNS domain name of either the S3 bucket, or
 web site of your custom origin.
-{{% /md %}}</dd>
-    <dt class="property-optional"
+{{% /md %}}</dd><dt class="property-optional"
             title="Optional">
         <span id="state_enabled_python">
 <a href="#state_enabled_python" style="color: inherit; text-decoration: inherit;">enabled</a>
@@ -3346,8 +3107,7 @@ web site of your custom origin.
     </dt>
     <dd>{{% md %}}Whether the distribution is enabled to accept end
 user requests for content.
-{{% /md %}}</dd>
-    <dt class="property-optional"
+{{% /md %}}</dd><dt class="property-optional"
             title="Optional">
         <span id="state_etag_python">
 <a href="#state_etag_python" style="color: inherit; text-decoration: inherit;">etag</a>
@@ -3357,8 +3117,7 @@ user requests for content.
     </dt>
     <dd>{{% md %}}The current version of the distribution's information. For example:
 `E2QWRUHAPOMQZL`.
-{{% /md %}}</dd>
-    <dt class="property-optional"
+{{% /md %}}</dd><dt class="property-optional"
             title="Optional">
         <span id="state_hosted_zone_id_python">
 <a href="#state_hosted_zone_id_python" style="color: inherit; text-decoration: inherit;">hosted_<wbr>zone_<wbr>id</a>
@@ -3369,8 +3128,7 @@ user requests for content.
     <dd>{{% md %}}The CloudFront Route 53 zone ID that can be used to
 route an [Alias Resource Record Set](http://docs.aws.amazon.com/Route53/latest/APIReference/CreateAliasRRSAPI.html) to. This attribute is simply an
 alias for the zone ID `Z2FDTNDATAQYW2`.
-{{% /md %}}</dd>
-    <dt class="property-optional"
+{{% /md %}}</dd><dt class="property-optional"
             title="Optional">
         <span id="state_http_version_python">
 <a href="#state_http_version_python" style="color: inherit; text-decoration: inherit;">http_<wbr>version</a>
@@ -3381,8 +3139,7 @@ alias for the zone ID `Z2FDTNDATAQYW2`.
     <dd>{{% md %}}The maximum HTTP version to support on the
 distribution. Allowed values are `http1.1` and `http2`. The default is
 `http2`.
-{{% /md %}}</dd>
-    <dt class="property-optional"
+{{% /md %}}</dd><dt class="property-optional"
             title="Optional">
         <span id="state_in_progress_validation_batches_python">
 <a href="#state_in_progress_validation_batches_python" style="color: inherit; text-decoration: inherit;">in_<wbr>progress_<wbr>validation_<wbr>batches</a>
@@ -3392,8 +3149,7 @@ distribution. Allowed values are `http1.1` and `http2`. The default is
     </dt>
     <dd>{{% md %}}The number of invalidation batches
 currently in progress.
-{{% /md %}}</dd>
-    <dt class="property-optional"
+{{% /md %}}</dd><dt class="property-optional"
             title="Optional">
         <span id="state_is_ipv6_enabled_python">
 <a href="#state_is_ipv6_enabled_python" style="color: inherit; text-decoration: inherit;">is_<wbr>ipv6_<wbr>enabled</a>
@@ -3402,8 +3158,7 @@ currently in progress.
         <span class="property-type">bool</span>
     </dt>
     <dd>{{% md %}}Whether the IPv6 is enabled for the distribution.
-{{% /md %}}</dd>
-    <dt class="property-optional"
+{{% /md %}}</dd><dt class="property-optional"
             title="Optional">
         <span id="state_last_modified_time_python">
 <a href="#state_last_modified_time_python" style="color: inherit; text-decoration: inherit;">last_<wbr>modified_<wbr>time</a>
@@ -3412,8 +3167,7 @@ currently in progress.
         <span class="property-type">str</span>
     </dt>
     <dd>{{% md %}}The date and time the distribution was last modified.
-{{% /md %}}</dd>
-    <dt class="property-optional"
+{{% /md %}}</dd><dt class="property-optional"
             title="Optional">
         <span id="state_logging_config_python">
 <a href="#state_logging_config_python" style="color: inherit; text-decoration: inherit;">logging_<wbr>config</a>
@@ -3424,8 +3178,7 @@ currently in progress.
     <dd>{{% md %}}The logging
 configuration that controls how logs are written
 to your distribution (maximum one).
-{{% /md %}}</dd>
-    <dt class="property-optional"
+{{% /md %}}</dd><dt class="property-optional"
             title="Optional">
         <span id="state_ordered_cache_behaviors_python">
 <a href="#state_ordered_cache_behaviors_python" style="color: inherit; text-decoration: inherit;">ordered_<wbr>cache_<wbr>behaviors</a>
@@ -3436,8 +3189,7 @@ to your distribution (maximum one).
     <dd>{{% md %}}An ordered list of cache behaviors
 resource for this distribution. List from top to bottom
 in order of precedence. The topmost cache behavior will have precedence 0.
-{{% /md %}}</dd>
-    <dt class="property-optional"
+{{% /md %}}</dd><dt class="property-optional"
             title="Optional">
         <span id="state_origin_groups_python">
 <a href="#state_origin_groups_python" style="color: inherit; text-decoration: inherit;">origin_<wbr>groups</a>
@@ -3447,8 +3199,7 @@ in order of precedence. The topmost cache behavior will have precedence 0.
     </dt>
     <dd>{{% md %}}One or more origin_group for this
 distribution (multiples allowed).
-{{% /md %}}</dd>
-    <dt class="property-optional"
+{{% /md %}}</dd><dt class="property-optional"
             title="Optional">
         <span id="state_origins_python">
 <a href="#state_origins_python" style="color: inherit; text-decoration: inherit;">origins</a>
@@ -3458,8 +3209,7 @@ distribution (multiples allowed).
     </dt>
     <dd>{{% md %}}One or more origins for this
 distribution (multiples allowed).
-{{% /md %}}</dd>
-    <dt class="property-optional"
+{{% /md %}}</dd><dt class="property-optional"
             title="Optional">
         <span id="state_price_class_python">
 <a href="#state_price_class_python" style="color: inherit; text-decoration: inherit;">price_<wbr>class</a>
@@ -3469,8 +3219,7 @@ distribution (multiples allowed).
     </dt>
     <dd>{{% md %}}The price class for this distribution. One of
 `PriceClass_All`, `PriceClass_200`, `PriceClass_100`
-{{% /md %}}</dd>
-    <dt class="property-optional"
+{{% /md %}}</dd><dt class="property-optional"
             title="Optional">
         <span id="state_restrictions_python">
 <a href="#state_restrictions_python" style="color: inherit; text-decoration: inherit;">restrictions</a>
@@ -3480,8 +3229,7 @@ distribution (multiples allowed).
     </dt>
     <dd>{{% md %}}The restriction
 configuration for this distribution (maximum one).
-{{% /md %}}</dd>
-    <dt class="property-optional"
+{{% /md %}}</dd><dt class="property-optional"
             title="Optional">
         <span id="state_retain_on_delete_python">
 <a href="#state_retain_on_delete_python" style="color: inherit; text-decoration: inherit;">retain_<wbr>on_<wbr>delete</a>
@@ -3492,8 +3240,7 @@ configuration for this distribution (maximum one).
     <dd>{{% md %}}Disables the distribution instead of
 deleting it when destroying the resource. If this is set,
 the distribution needs to be deleted manually afterwards. Default: `false`.
-{{% /md %}}</dd>
-    <dt class="property-optional"
+{{% /md %}}</dd><dt class="property-optional"
             title="Optional">
         <span id="state_status_python">
 <a href="#state_status_python" style="color: inherit; text-decoration: inherit;">status</a>
@@ -3504,8 +3251,7 @@ the distribution needs to be deleted manually afterwards. Default: `false`.
     <dd>{{% md %}}The current status of the distribution. `Deployed` if the
 distribution's information is fully propagated throughout the Amazon
 CloudFront system.
-{{% /md %}}</dd>
-    <dt class="property-optional"
+{{% /md %}}</dd><dt class="property-optional"
             title="Optional">
         <span id="state_tags_python">
 <a href="#state_tags_python" style="color: inherit; text-decoration: inherit;">tags</a>
@@ -3514,8 +3260,7 @@ CloudFront system.
         <span class="property-type">Mapping[str, str]</span>
     </dt>
     <dd>{{% md %}}A map of tags to assign to the resource.
-{{% /md %}}</dd>
-    <dt class="property-optional"
+{{% /md %}}</dd><dt class="property-optional"
             title="Optional">
         <span id="state_trusted_signers_python">
 <a href="#state_trusted_signers_python" style="color: inherit; text-decoration: inherit;">trusted_<wbr>signers</a>
@@ -3525,8 +3270,7 @@ CloudFront system.
     </dt>
     <dd>{{% md %}}List of AWS account IDs (or `self`) that you want to allow to create signed URLs for private content.
 See the [CloudFront User Guide](https://docs.aws.amazon.com/AmazonCloudFront/latest/DeveloperGuide/private-content-trusted-signers.html) for more information about this feature.
-{{% /md %}}</dd>
-    <dt class="property-optional"
+{{% /md %}}</dd><dt class="property-optional"
             title="Optional">
         <span id="state_viewer_certificate_python">
 <a href="#state_viewer_certificate_python" style="color: inherit; text-decoration: inherit;">viewer_<wbr>certificate</a>
@@ -3537,8 +3281,7 @@ See the [CloudFront User Guide](https://docs.aws.amazon.com/AmazonCloudFront/lat
     <dd>{{% md %}}The SSL
 configuration for this distribution (maximum
 one).
-{{% /md %}}</dd>
-    <dt class="property-optional"
+{{% /md %}}</dd><dt class="property-optional"
             title="Optional">
         <span id="state_wait_for_deployment_python">
 <a href="#state_wait_for_deployment_python" style="color: inherit; text-decoration: inherit;">wait_<wbr>for_<wbr>deployment</a>
@@ -3549,8 +3292,7 @@ one).
     <dd>{{% md %}}If enabled, the resource will wait for
 the distribution status to change from `InProgress` to `Deployed`. Setting
 this to`false` will skip the process. Default: `true`.
-{{% /md %}}</dd>
-    <dt class="property-optional"
+{{% /md %}}</dd><dt class="property-optional"
             title="Optional">
         <span id="state_web_acl_id_python">
 <a href="#state_web_acl_id_python" style="color: inherit; text-decoration: inherit;">web_<wbr>acl_<wbr>id</a>
@@ -3565,8 +3307,7 @@ for example `aws_wafv2_web_acl.example.arn`. To specify a web
 ACL created using AWS WAF Classic, use the ACL ID, for example `aws_waf_web_acl.example.id`.
 The WAF Web ACL must exist in the WAF Global (CloudFront) region and the
 credentials configuring this argument must have `waf:GetWebACL` permissions assigned.
-{{% /md %}}</dd>
-</dl>
+{{% /md %}}</dd></dl>
 {{% /choosable %}}
 
 
@@ -3581,9 +3322,7 @@ credentials configuring this argument must have `waf:GetWebACL` permissions assi
 <h4 id="distributioncustomerrorresponse">Distribution<wbr>Custom<wbr>Error<wbr>Response</h4>
 
 {{% choosable language csharp %}}
-<dl class="resources-properties">
-
-    <dt class="property-required"
+<dl class="resources-properties"><dt class="property-required"
             title="Required">
         <span id="errorcode_csharp">
 <a href="#errorcode_csharp" style="color: inherit; text-decoration: inherit;">Error<wbr>Code</a>
@@ -3593,8 +3332,7 @@ credentials configuring this argument must have `waf:GetWebACL` permissions assi
     </dt>
     <dd>{{% md %}}The 4xx or 5xx HTTP status code that you want to
 customize.
-{{% /md %}}</dd>
-    <dt class="property-optional"
+{{% /md %}}</dd><dt class="property-optional"
             title="Optional">
         <span id="errorcachingminttl_csharp">
 <a href="#errorcachingminttl_csharp" style="color: inherit; text-decoration: inherit;">Error<wbr>Caching<wbr>Min<wbr>Ttl</a>
@@ -3605,8 +3343,7 @@ customize.
     <dd>{{% md %}}The minimum amount of time you want
 HTTP error codes to stay in CloudFront caches before CloudFront queries your
 origin to see whether the object has been updated.
-{{% /md %}}</dd>
-    <dt class="property-optional"
+{{% /md %}}</dd><dt class="property-optional"
             title="Optional">
         <span id="responsecode_csharp">
 <a href="#responsecode_csharp" style="color: inherit; text-decoration: inherit;">Response<wbr>Code</a>
@@ -3616,8 +3353,7 @@ origin to see whether the object has been updated.
     </dt>
     <dd>{{% md %}}The HTTP status code that you want CloudFront
 to return with the custom error page to the viewer.
-{{% /md %}}</dd>
-    <dt class="property-optional"
+{{% /md %}}</dd><dt class="property-optional"
             title="Optional">
         <span id="responsepagepath_csharp">
 <a href="#responsepagepath_csharp" style="color: inherit; text-decoration: inherit;">Response<wbr>Page<wbr>Path</a>
@@ -3627,14 +3363,11 @@ to return with the custom error page to the viewer.
     </dt>
     <dd>{{% md %}}The path of the custom error page (for
 example, `/custom_404.html`).
-{{% /md %}}</dd>
-</dl>
+{{% /md %}}</dd></dl>
 {{% /choosable %}}
 
 {{% choosable language go %}}
-<dl class="resources-properties">
-
-    <dt class="property-required"
+<dl class="resources-properties"><dt class="property-required"
             title="Required">
         <span id="errorcode_go">
 <a href="#errorcode_go" style="color: inherit; text-decoration: inherit;">Error<wbr>Code</a>
@@ -3644,8 +3377,7 @@ example, `/custom_404.html`).
     </dt>
     <dd>{{% md %}}The 4xx or 5xx HTTP status code that you want to
 customize.
-{{% /md %}}</dd>
-    <dt class="property-optional"
+{{% /md %}}</dd><dt class="property-optional"
             title="Optional">
         <span id="errorcachingminttl_go">
 <a href="#errorcachingminttl_go" style="color: inherit; text-decoration: inherit;">Error<wbr>Caching<wbr>Min<wbr>Ttl</a>
@@ -3656,8 +3388,7 @@ customize.
     <dd>{{% md %}}The minimum amount of time you want
 HTTP error codes to stay in CloudFront caches before CloudFront queries your
 origin to see whether the object has been updated.
-{{% /md %}}</dd>
-    <dt class="property-optional"
+{{% /md %}}</dd><dt class="property-optional"
             title="Optional">
         <span id="responsecode_go">
 <a href="#responsecode_go" style="color: inherit; text-decoration: inherit;">Response<wbr>Code</a>
@@ -3667,8 +3398,7 @@ origin to see whether the object has been updated.
     </dt>
     <dd>{{% md %}}The HTTP status code that you want CloudFront
 to return with the custom error page to the viewer.
-{{% /md %}}</dd>
-    <dt class="property-optional"
+{{% /md %}}</dd><dt class="property-optional"
             title="Optional">
         <span id="responsepagepath_go">
 <a href="#responsepagepath_go" style="color: inherit; text-decoration: inherit;">Response<wbr>Page<wbr>Path</a>
@@ -3678,14 +3408,11 @@ to return with the custom error page to the viewer.
     </dt>
     <dd>{{% md %}}The path of the custom error page (for
 example, `/custom_404.html`).
-{{% /md %}}</dd>
-</dl>
+{{% /md %}}</dd></dl>
 {{% /choosable %}}
 
 {{% choosable language nodejs %}}
-<dl class="resources-properties">
-
-    <dt class="property-required"
+<dl class="resources-properties"><dt class="property-required"
             title="Required">
         <span id="errorcode_nodejs">
 <a href="#errorcode_nodejs" style="color: inherit; text-decoration: inherit;">error<wbr>Code</a>
@@ -3695,8 +3422,7 @@ example, `/custom_404.html`).
     </dt>
     <dd>{{% md %}}The 4xx or 5xx HTTP status code that you want to
 customize.
-{{% /md %}}</dd>
-    <dt class="property-optional"
+{{% /md %}}</dd><dt class="property-optional"
             title="Optional">
         <span id="errorcachingminttl_nodejs">
 <a href="#errorcachingminttl_nodejs" style="color: inherit; text-decoration: inherit;">error<wbr>Caching<wbr>Min<wbr>Ttl</a>
@@ -3707,8 +3433,7 @@ customize.
     <dd>{{% md %}}The minimum amount of time you want
 HTTP error codes to stay in CloudFront caches before CloudFront queries your
 origin to see whether the object has been updated.
-{{% /md %}}</dd>
-    <dt class="property-optional"
+{{% /md %}}</dd><dt class="property-optional"
             title="Optional">
         <span id="responsecode_nodejs">
 <a href="#responsecode_nodejs" style="color: inherit; text-decoration: inherit;">response<wbr>Code</a>
@@ -3718,8 +3443,7 @@ origin to see whether the object has been updated.
     </dt>
     <dd>{{% md %}}The HTTP status code that you want CloudFront
 to return with the custom error page to the viewer.
-{{% /md %}}</dd>
-    <dt class="property-optional"
+{{% /md %}}</dd><dt class="property-optional"
             title="Optional">
         <span id="responsepagepath_nodejs">
 <a href="#responsepagepath_nodejs" style="color: inherit; text-decoration: inherit;">response<wbr>Page<wbr>Path</a>
@@ -3729,14 +3453,11 @@ to return with the custom error page to the viewer.
     </dt>
     <dd>{{% md %}}The path of the custom error page (for
 example, `/custom_404.html`).
-{{% /md %}}</dd>
-</dl>
+{{% /md %}}</dd></dl>
 {{% /choosable %}}
 
 {{% choosable language python %}}
-<dl class="resources-properties">
-
-    <dt class="property-required"
+<dl class="resources-properties"><dt class="property-required"
             title="Required">
         <span id="error_code_python">
 <a href="#error_code_python" style="color: inherit; text-decoration: inherit;">error_<wbr>code</a>
@@ -3746,8 +3467,7 @@ example, `/custom_404.html`).
     </dt>
     <dd>{{% md %}}The 4xx or 5xx HTTP status code that you want to
 customize.
-{{% /md %}}</dd>
-    <dt class="property-optional"
+{{% /md %}}</dd><dt class="property-optional"
             title="Optional">
         <span id="error_caching_min_ttl_python">
 <a href="#error_caching_min_ttl_python" style="color: inherit; text-decoration: inherit;">error_<wbr>caching_<wbr>min_<wbr>ttl</a>
@@ -3758,8 +3478,7 @@ customize.
     <dd>{{% md %}}The minimum amount of time you want
 HTTP error codes to stay in CloudFront caches before CloudFront queries your
 origin to see whether the object has been updated.
-{{% /md %}}</dd>
-    <dt class="property-optional"
+{{% /md %}}</dd><dt class="property-optional"
             title="Optional">
         <span id="response_code_python">
 <a href="#response_code_python" style="color: inherit; text-decoration: inherit;">response_<wbr>code</a>
@@ -3769,8 +3488,7 @@ origin to see whether the object has been updated.
     </dt>
     <dd>{{% md %}}The HTTP status code that you want CloudFront
 to return with the custom error page to the viewer.
-{{% /md %}}</dd>
-    <dt class="property-optional"
+{{% /md %}}</dd><dt class="property-optional"
             title="Optional">
         <span id="response_page_path_python">
 <a href="#response_page_path_python" style="color: inherit; text-decoration: inherit;">response_<wbr>page_<wbr>path</a>
@@ -3780,16 +3498,13 @@ to return with the custom error page to the viewer.
     </dt>
     <dd>{{% md %}}The path of the custom error page (for
 example, `/custom_404.html`).
-{{% /md %}}</dd>
-</dl>
+{{% /md %}}</dd></dl>
 {{% /choosable %}}
 
 <h4 id="distributiondefaultcachebehavior">Distribution<wbr>Default<wbr>Cache<wbr>Behavior</h4>
 
 {{% choosable language csharp %}}
-<dl class="resources-properties">
-
-    <dt class="property-required"
+<dl class="resources-properties"><dt class="property-required"
             title="Required">
         <span id="allowedmethods_csharp">
 <a href="#allowedmethods_csharp" style="color: inherit; text-decoration: inherit;">Allowed<wbr>Methods</a>
@@ -3799,8 +3514,7 @@ example, `/custom_404.html`).
     </dt>
     <dd>{{% md %}}Controls which HTTP methods CloudFront
 processes and forwards to your Amazon S3 bucket or your custom origin.
-{{% /md %}}</dd>
-    <dt class="property-required"
+{{% /md %}}</dd><dt class="property-required"
             title="Required">
         <span id="cachedmethods_csharp">
 <a href="#cachedmethods_csharp" style="color: inherit; text-decoration: inherit;">Cached<wbr>Methods</a>
@@ -3810,8 +3524,7 @@ processes and forwards to your Amazon S3 bucket or your custom origin.
     </dt>
     <dd>{{% md %}}Controls whether CloudFront caches the
 response to requests using the specified HTTP methods.
-{{% /md %}}</dd>
-    <dt class="property-required"
+{{% /md %}}</dd><dt class="property-required"
             title="Required">
         <span id="targetoriginid_csharp">
 <a href="#targetoriginid_csharp" style="color: inherit; text-decoration: inherit;">Target<wbr>Origin<wbr>Id</a>
@@ -3822,8 +3535,7 @@ response to requests using the specified HTTP methods.
     <dd>{{% md %}}The value of ID for the origin that you want
 CloudFront to route requests to when a request matches the path pattern
 either for a cache behavior or for the default cache behavior.
-{{% /md %}}</dd>
-    <dt class="property-required"
+{{% /md %}}</dd><dt class="property-required"
             title="Required">
         <span id="viewerprotocolpolicy_csharp">
 <a href="#viewerprotocolpolicy_csharp" style="color: inherit; text-decoration: inherit;">Viewer<wbr>Protocol<wbr>Policy</a>
@@ -3835,8 +3547,7 @@ either for a cache behavior or for the default cache behavior.
 protocol that users can use to access the files in the origin specified by
 TargetOriginId when a request matches the path pattern in PathPattern. One
 of `allow-all`, `https-only`, or `redirect-to-https`.
-{{% /md %}}</dd>
-    <dt class="property-optional"
+{{% /md %}}</dd><dt class="property-optional"
             title="Optional">
         <span id="cachepolicyid_csharp">
 <a href="#cachepolicyid_csharp" style="color: inherit; text-decoration: inherit;">Cache<wbr>Policy<wbr>Id</a>
@@ -3846,8 +3557,7 @@ of `allow-all`, `https-only`, or `redirect-to-https`.
     </dt>
     <dd>{{% md %}}The unique identifier of the cache policy that
 is attached to the cache behavior.
-{{% /md %}}</dd>
-    <dt class="property-optional"
+{{% /md %}}</dd><dt class="property-optional"
             title="Optional">
         <span id="compress_csharp">
 <a href="#compress_csharp" style="color: inherit; text-decoration: inherit;">Compress</a>
@@ -3858,8 +3568,7 @@ is attached to the cache behavior.
     <dd>{{% md %}}Whether you want CloudFront to automatically
 compress content for web requests that include `Accept-Encoding: gzip` in
 the request header (default: `false`).
-{{% /md %}}</dd>
-    <dt class="property-optional"
+{{% /md %}}</dd><dt class="property-optional"
             title="Optional">
         <span id="defaultttl_csharp">
 <a href="#defaultttl_csharp" style="color: inherit; text-decoration: inherit;">Default<wbr>Ttl</a>
@@ -3870,8 +3579,7 @@ the request header (default: `false`).
     <dd>{{% md %}}The default amount of time (in seconds) that an
 object is in a CloudFront cache before CloudFront forwards another request
 in the absence of an `Cache-Control max-age` or `Expires` header.
-{{% /md %}}</dd>
-    <dt class="property-optional"
+{{% /md %}}</dd><dt class="property-optional"
             title="Optional">
         <span id="fieldlevelencryptionid_csharp">
 <a href="#fieldlevelencryptionid_csharp" style="color: inherit; text-decoration: inherit;">Field<wbr>Level<wbr>Encryption<wbr>Id</a>
@@ -3880,8 +3588,7 @@ in the absence of an `Cache-Control max-age` or `Expires` header.
         <span class="property-type">string</span>
     </dt>
     <dd>{{% md %}}Field level encryption configuration ID
-{{% /md %}}</dd>
-    <dt class="property-optional"
+{{% /md %}}</dd><dt class="property-optional"
             title="Optional">
         <span id="forwardedvalues_csharp">
 <a href="#forwardedvalues_csharp" style="color: inherit; text-decoration: inherit;">Forwarded<wbr>Values</a>
@@ -3891,8 +3598,7 @@ in the absence of an `Cache-Control max-age` or `Expires` header.
     </dt>
     <dd>{{% md %}}The forwarded values configuration that specifies how CloudFront
 handles query strings, cookies and headers (maximum one).
-{{% /md %}}</dd>
-    <dt class="property-optional"
+{{% /md %}}</dd><dt class="property-optional"
             title="Optional">
         <span id="lambdafunctionassociations_csharp">
 <a href="#lambdafunctionassociations_csharp" style="color: inherit; text-decoration: inherit;">Lambda<wbr>Function<wbr>Associations</a>
@@ -3902,8 +3608,7 @@ handles query strings, cookies and headers (maximum one).
     </dt>
     <dd>{{% md %}}A config block that triggers a lambda
 function with specific actions (maximum 4).
-{{% /md %}}</dd>
-    <dt class="property-optional"
+{{% /md %}}</dd><dt class="property-optional"
             title="Optional">
         <span id="maxttl_csharp">
 <a href="#maxttl_csharp" style="color: inherit; text-decoration: inherit;">Max<wbr>Ttl</a>
@@ -3916,8 +3621,7 @@ object is in a CloudFront cache before CloudFront forwards another request
 to your origin to determine whether the object has been updated. Only
 effective in the presence of `Cache-Control max-age`, `Cache-Control
 s-maxage`, and `Expires` headers.
-{{% /md %}}</dd>
-    <dt class="property-optional"
+{{% /md %}}</dd><dt class="property-optional"
             title="Optional">
         <span id="minttl_csharp">
 <a href="#minttl_csharp" style="color: inherit; text-decoration: inherit;">Min<wbr>Ttl</a>
@@ -3928,8 +3632,7 @@ s-maxage`, and `Expires` headers.
     <dd>{{% md %}}The minimum amount of time that you want objects to
 stay in CloudFront caches before CloudFront queries your origin to see
 whether the object has been updated. Defaults to 0 seconds.
-{{% /md %}}</dd>
-    <dt class="property-optional"
+{{% /md %}}</dd><dt class="property-optional"
             title="Optional">
         <span id="originrequestpolicyid_csharp">
 <a href="#originrequestpolicyid_csharp" style="color: inherit; text-decoration: inherit;">Origin<wbr>Request<wbr>Policy<wbr>Id</a>
@@ -3939,8 +3642,7 @@ whether the object has been updated. Defaults to 0 seconds.
     </dt>
     <dd>{{% md %}}The unique identifier of the origin request policy
 that is attached to the behavior.
-{{% /md %}}</dd>
-    <dt class="property-optional"
+{{% /md %}}</dd><dt class="property-optional"
             title="Optional">
         <span id="realtimelogconfigarn_csharp">
 <a href="#realtimelogconfigarn_csharp" style="color: inherit; text-decoration: inherit;">Realtime<wbr>Log<wbr>Config<wbr>Arn</a>
@@ -3950,8 +3652,7 @@ that is attached to the behavior.
     </dt>
     <dd>{{% md %}}The ARN of the real-time log configuration
 that is attached to this cache behavior.
-{{% /md %}}</dd>
-    <dt class="property-optional"
+{{% /md %}}</dd><dt class="property-optional"
             title="Optional">
         <span id="smoothstreaming_csharp">
 <a href="#smoothstreaming_csharp" style="color: inherit; text-decoration: inherit;">Smooth<wbr>Streaming</a>
@@ -3962,8 +3663,7 @@ that is attached to this cache behavior.
     <dd>{{% md %}}Indicates whether you want to distribute
 media files in Microsoft Smooth Streaming format using the origin that is
 associated with this cache behavior.
-{{% /md %}}</dd>
-    <dt class="property-optional"
+{{% /md %}}</dd><dt class="property-optional"
             title="Optional">
         <span id="trustedsigners_csharp">
 <a href="#trustedsigners_csharp" style="color: inherit; text-decoration: inherit;">Trusted<wbr>Signers</a>
@@ -3973,14 +3673,11 @@ associated with this cache behavior.
     </dt>
     <dd>{{% md %}}List of AWS account IDs (or `self`) that you want to allow to create signed URLs for private content.
 See the [CloudFront User Guide](https://docs.aws.amazon.com/AmazonCloudFront/latest/DeveloperGuide/private-content-trusted-signers.html) for more information about this feature.
-{{% /md %}}</dd>
-</dl>
+{{% /md %}}</dd></dl>
 {{% /choosable %}}
 
 {{% choosable language go %}}
-<dl class="resources-properties">
-
-    <dt class="property-required"
+<dl class="resources-properties"><dt class="property-required"
             title="Required">
         <span id="allowedmethods_go">
 <a href="#allowedmethods_go" style="color: inherit; text-decoration: inherit;">Allowed<wbr>Methods</a>
@@ -3990,8 +3687,7 @@ See the [CloudFront User Guide](https://docs.aws.amazon.com/AmazonCloudFront/lat
     </dt>
     <dd>{{% md %}}Controls which HTTP methods CloudFront
 processes and forwards to your Amazon S3 bucket or your custom origin.
-{{% /md %}}</dd>
-    <dt class="property-required"
+{{% /md %}}</dd><dt class="property-required"
             title="Required">
         <span id="cachedmethods_go">
 <a href="#cachedmethods_go" style="color: inherit; text-decoration: inherit;">Cached<wbr>Methods</a>
@@ -4001,8 +3697,7 @@ processes and forwards to your Amazon S3 bucket or your custom origin.
     </dt>
     <dd>{{% md %}}Controls whether CloudFront caches the
 response to requests using the specified HTTP methods.
-{{% /md %}}</dd>
-    <dt class="property-required"
+{{% /md %}}</dd><dt class="property-required"
             title="Required">
         <span id="targetoriginid_go">
 <a href="#targetoriginid_go" style="color: inherit; text-decoration: inherit;">Target<wbr>Origin<wbr>Id</a>
@@ -4013,8 +3708,7 @@ response to requests using the specified HTTP methods.
     <dd>{{% md %}}The value of ID for the origin that you want
 CloudFront to route requests to when a request matches the path pattern
 either for a cache behavior or for the default cache behavior.
-{{% /md %}}</dd>
-    <dt class="property-required"
+{{% /md %}}</dd><dt class="property-required"
             title="Required">
         <span id="viewerprotocolpolicy_go">
 <a href="#viewerprotocolpolicy_go" style="color: inherit; text-decoration: inherit;">Viewer<wbr>Protocol<wbr>Policy</a>
@@ -4026,8 +3720,7 @@ either for a cache behavior or for the default cache behavior.
 protocol that users can use to access the files in the origin specified by
 TargetOriginId when a request matches the path pattern in PathPattern. One
 of `allow-all`, `https-only`, or `redirect-to-https`.
-{{% /md %}}</dd>
-    <dt class="property-optional"
+{{% /md %}}</dd><dt class="property-optional"
             title="Optional">
         <span id="cachepolicyid_go">
 <a href="#cachepolicyid_go" style="color: inherit; text-decoration: inherit;">Cache<wbr>Policy<wbr>Id</a>
@@ -4037,8 +3730,7 @@ of `allow-all`, `https-only`, or `redirect-to-https`.
     </dt>
     <dd>{{% md %}}The unique identifier of the cache policy that
 is attached to the cache behavior.
-{{% /md %}}</dd>
-    <dt class="property-optional"
+{{% /md %}}</dd><dt class="property-optional"
             title="Optional">
         <span id="compress_go">
 <a href="#compress_go" style="color: inherit; text-decoration: inherit;">Compress</a>
@@ -4049,8 +3741,7 @@ is attached to the cache behavior.
     <dd>{{% md %}}Whether you want CloudFront to automatically
 compress content for web requests that include `Accept-Encoding: gzip` in
 the request header (default: `false`).
-{{% /md %}}</dd>
-    <dt class="property-optional"
+{{% /md %}}</dd><dt class="property-optional"
             title="Optional">
         <span id="defaultttl_go">
 <a href="#defaultttl_go" style="color: inherit; text-decoration: inherit;">Default<wbr>Ttl</a>
@@ -4061,8 +3752,7 @@ the request header (default: `false`).
     <dd>{{% md %}}The default amount of time (in seconds) that an
 object is in a CloudFront cache before CloudFront forwards another request
 in the absence of an `Cache-Control max-age` or `Expires` header.
-{{% /md %}}</dd>
-    <dt class="property-optional"
+{{% /md %}}</dd><dt class="property-optional"
             title="Optional">
         <span id="fieldlevelencryptionid_go">
 <a href="#fieldlevelencryptionid_go" style="color: inherit; text-decoration: inherit;">Field<wbr>Level<wbr>Encryption<wbr>Id</a>
@@ -4071,8 +3761,7 @@ in the absence of an `Cache-Control max-age` or `Expires` header.
         <span class="property-type">string</span>
     </dt>
     <dd>{{% md %}}Field level encryption configuration ID
-{{% /md %}}</dd>
-    <dt class="property-optional"
+{{% /md %}}</dd><dt class="property-optional"
             title="Optional">
         <span id="forwardedvalues_go">
 <a href="#forwardedvalues_go" style="color: inherit; text-decoration: inherit;">Forwarded<wbr>Values</a>
@@ -4082,8 +3771,7 @@ in the absence of an `Cache-Control max-age` or `Expires` header.
     </dt>
     <dd>{{% md %}}The forwarded values configuration that specifies how CloudFront
 handles query strings, cookies and headers (maximum one).
-{{% /md %}}</dd>
-    <dt class="property-optional"
+{{% /md %}}</dd><dt class="property-optional"
             title="Optional">
         <span id="lambdafunctionassociations_go">
 <a href="#lambdafunctionassociations_go" style="color: inherit; text-decoration: inherit;">Lambda<wbr>Function<wbr>Associations</a>
@@ -4093,8 +3781,7 @@ handles query strings, cookies and headers (maximum one).
     </dt>
     <dd>{{% md %}}A config block that triggers a lambda
 function with specific actions (maximum 4).
-{{% /md %}}</dd>
-    <dt class="property-optional"
+{{% /md %}}</dd><dt class="property-optional"
             title="Optional">
         <span id="maxttl_go">
 <a href="#maxttl_go" style="color: inherit; text-decoration: inherit;">Max<wbr>Ttl</a>
@@ -4107,8 +3794,7 @@ object is in a CloudFront cache before CloudFront forwards another request
 to your origin to determine whether the object has been updated. Only
 effective in the presence of `Cache-Control max-age`, `Cache-Control
 s-maxage`, and `Expires` headers.
-{{% /md %}}</dd>
-    <dt class="property-optional"
+{{% /md %}}</dd><dt class="property-optional"
             title="Optional">
         <span id="minttl_go">
 <a href="#minttl_go" style="color: inherit; text-decoration: inherit;">Min<wbr>Ttl</a>
@@ -4119,8 +3805,7 @@ s-maxage`, and `Expires` headers.
     <dd>{{% md %}}The minimum amount of time that you want objects to
 stay in CloudFront caches before CloudFront queries your origin to see
 whether the object has been updated. Defaults to 0 seconds.
-{{% /md %}}</dd>
-    <dt class="property-optional"
+{{% /md %}}</dd><dt class="property-optional"
             title="Optional">
         <span id="originrequestpolicyid_go">
 <a href="#originrequestpolicyid_go" style="color: inherit; text-decoration: inherit;">Origin<wbr>Request<wbr>Policy<wbr>Id</a>
@@ -4130,8 +3815,7 @@ whether the object has been updated. Defaults to 0 seconds.
     </dt>
     <dd>{{% md %}}The unique identifier of the origin request policy
 that is attached to the behavior.
-{{% /md %}}</dd>
-    <dt class="property-optional"
+{{% /md %}}</dd><dt class="property-optional"
             title="Optional">
         <span id="realtimelogconfigarn_go">
 <a href="#realtimelogconfigarn_go" style="color: inherit; text-decoration: inherit;">Realtime<wbr>Log<wbr>Config<wbr>Arn</a>
@@ -4141,8 +3825,7 @@ that is attached to the behavior.
     </dt>
     <dd>{{% md %}}The ARN of the real-time log configuration
 that is attached to this cache behavior.
-{{% /md %}}</dd>
-    <dt class="property-optional"
+{{% /md %}}</dd><dt class="property-optional"
             title="Optional">
         <span id="smoothstreaming_go">
 <a href="#smoothstreaming_go" style="color: inherit; text-decoration: inherit;">Smooth<wbr>Streaming</a>
@@ -4153,8 +3836,7 @@ that is attached to this cache behavior.
     <dd>{{% md %}}Indicates whether you want to distribute
 media files in Microsoft Smooth Streaming format using the origin that is
 associated with this cache behavior.
-{{% /md %}}</dd>
-    <dt class="property-optional"
+{{% /md %}}</dd><dt class="property-optional"
             title="Optional">
         <span id="trustedsigners_go">
 <a href="#trustedsigners_go" style="color: inherit; text-decoration: inherit;">Trusted<wbr>Signers</a>
@@ -4164,14 +3846,11 @@ associated with this cache behavior.
     </dt>
     <dd>{{% md %}}List of AWS account IDs (or `self`) that you want to allow to create signed URLs for private content.
 See the [CloudFront User Guide](https://docs.aws.amazon.com/AmazonCloudFront/latest/DeveloperGuide/private-content-trusted-signers.html) for more information about this feature.
-{{% /md %}}</dd>
-</dl>
+{{% /md %}}</dd></dl>
 {{% /choosable %}}
 
 {{% choosable language nodejs %}}
-<dl class="resources-properties">
-
-    <dt class="property-required"
+<dl class="resources-properties"><dt class="property-required"
             title="Required">
         <span id="allowedmethods_nodejs">
 <a href="#allowedmethods_nodejs" style="color: inherit; text-decoration: inherit;">allowed<wbr>Methods</a>
@@ -4181,8 +3860,7 @@ See the [CloudFront User Guide](https://docs.aws.amazon.com/AmazonCloudFront/lat
     </dt>
     <dd>{{% md %}}Controls which HTTP methods CloudFront
 processes and forwards to your Amazon S3 bucket or your custom origin.
-{{% /md %}}</dd>
-    <dt class="property-required"
+{{% /md %}}</dd><dt class="property-required"
             title="Required">
         <span id="cachedmethods_nodejs">
 <a href="#cachedmethods_nodejs" style="color: inherit; text-decoration: inherit;">cached<wbr>Methods</a>
@@ -4192,8 +3870,7 @@ processes and forwards to your Amazon S3 bucket or your custom origin.
     </dt>
     <dd>{{% md %}}Controls whether CloudFront caches the
 response to requests using the specified HTTP methods.
-{{% /md %}}</dd>
-    <dt class="property-required"
+{{% /md %}}</dd><dt class="property-required"
             title="Required">
         <span id="targetoriginid_nodejs">
 <a href="#targetoriginid_nodejs" style="color: inherit; text-decoration: inherit;">target<wbr>Origin<wbr>Id</a>
@@ -4204,8 +3881,7 @@ response to requests using the specified HTTP methods.
     <dd>{{% md %}}The value of ID for the origin that you want
 CloudFront to route requests to when a request matches the path pattern
 either for a cache behavior or for the default cache behavior.
-{{% /md %}}</dd>
-    <dt class="property-required"
+{{% /md %}}</dd><dt class="property-required"
             title="Required">
         <span id="viewerprotocolpolicy_nodejs">
 <a href="#viewerprotocolpolicy_nodejs" style="color: inherit; text-decoration: inherit;">viewer<wbr>Protocol<wbr>Policy</a>
@@ -4217,8 +3893,7 @@ either for a cache behavior or for the default cache behavior.
 protocol that users can use to access the files in the origin specified by
 TargetOriginId when a request matches the path pattern in PathPattern. One
 of `allow-all`, `https-only`, or `redirect-to-https`.
-{{% /md %}}</dd>
-    <dt class="property-optional"
+{{% /md %}}</dd><dt class="property-optional"
             title="Optional">
         <span id="cachepolicyid_nodejs">
 <a href="#cachepolicyid_nodejs" style="color: inherit; text-decoration: inherit;">cache<wbr>Policy<wbr>Id</a>
@@ -4228,8 +3903,7 @@ of `allow-all`, `https-only`, or `redirect-to-https`.
     </dt>
     <dd>{{% md %}}The unique identifier of the cache policy that
 is attached to the cache behavior.
-{{% /md %}}</dd>
-    <dt class="property-optional"
+{{% /md %}}</dd><dt class="property-optional"
             title="Optional">
         <span id="compress_nodejs">
 <a href="#compress_nodejs" style="color: inherit; text-decoration: inherit;">compress</a>
@@ -4240,8 +3914,7 @@ is attached to the cache behavior.
     <dd>{{% md %}}Whether you want CloudFront to automatically
 compress content for web requests that include `Accept-Encoding: gzip` in
 the request header (default: `false`).
-{{% /md %}}</dd>
-    <dt class="property-optional"
+{{% /md %}}</dd><dt class="property-optional"
             title="Optional">
         <span id="defaultttl_nodejs">
 <a href="#defaultttl_nodejs" style="color: inherit; text-decoration: inherit;">default<wbr>Ttl</a>
@@ -4252,8 +3925,7 @@ the request header (default: `false`).
     <dd>{{% md %}}The default amount of time (in seconds) that an
 object is in a CloudFront cache before CloudFront forwards another request
 in the absence of an `Cache-Control max-age` or `Expires` header.
-{{% /md %}}</dd>
-    <dt class="property-optional"
+{{% /md %}}</dd><dt class="property-optional"
             title="Optional">
         <span id="fieldlevelencryptionid_nodejs">
 <a href="#fieldlevelencryptionid_nodejs" style="color: inherit; text-decoration: inherit;">field<wbr>Level<wbr>Encryption<wbr>Id</a>
@@ -4262,8 +3934,7 @@ in the absence of an `Cache-Control max-age` or `Expires` header.
         <span class="property-type">string</span>
     </dt>
     <dd>{{% md %}}Field level encryption configuration ID
-{{% /md %}}</dd>
-    <dt class="property-optional"
+{{% /md %}}</dd><dt class="property-optional"
             title="Optional">
         <span id="forwardedvalues_nodejs">
 <a href="#forwardedvalues_nodejs" style="color: inherit; text-decoration: inherit;">forwarded<wbr>Values</a>
@@ -4273,8 +3944,7 @@ in the absence of an `Cache-Control max-age` or `Expires` header.
     </dt>
     <dd>{{% md %}}The forwarded values configuration that specifies how CloudFront
 handles query strings, cookies and headers (maximum one).
-{{% /md %}}</dd>
-    <dt class="property-optional"
+{{% /md %}}</dd><dt class="property-optional"
             title="Optional">
         <span id="lambdafunctionassociations_nodejs">
 <a href="#lambdafunctionassociations_nodejs" style="color: inherit; text-decoration: inherit;">lambda<wbr>Function<wbr>Associations</a>
@@ -4284,8 +3954,7 @@ handles query strings, cookies and headers (maximum one).
     </dt>
     <dd>{{% md %}}A config block that triggers a lambda
 function with specific actions (maximum 4).
-{{% /md %}}</dd>
-    <dt class="property-optional"
+{{% /md %}}</dd><dt class="property-optional"
             title="Optional">
         <span id="maxttl_nodejs">
 <a href="#maxttl_nodejs" style="color: inherit; text-decoration: inherit;">max<wbr>Ttl</a>
@@ -4298,8 +3967,7 @@ object is in a CloudFront cache before CloudFront forwards another request
 to your origin to determine whether the object has been updated. Only
 effective in the presence of `Cache-Control max-age`, `Cache-Control
 s-maxage`, and `Expires` headers.
-{{% /md %}}</dd>
-    <dt class="property-optional"
+{{% /md %}}</dd><dt class="property-optional"
             title="Optional">
         <span id="minttl_nodejs">
 <a href="#minttl_nodejs" style="color: inherit; text-decoration: inherit;">min<wbr>Ttl</a>
@@ -4310,8 +3978,7 @@ s-maxage`, and `Expires` headers.
     <dd>{{% md %}}The minimum amount of time that you want objects to
 stay in CloudFront caches before CloudFront queries your origin to see
 whether the object has been updated. Defaults to 0 seconds.
-{{% /md %}}</dd>
-    <dt class="property-optional"
+{{% /md %}}</dd><dt class="property-optional"
             title="Optional">
         <span id="originrequestpolicyid_nodejs">
 <a href="#originrequestpolicyid_nodejs" style="color: inherit; text-decoration: inherit;">origin<wbr>Request<wbr>Policy<wbr>Id</a>
@@ -4321,8 +3988,7 @@ whether the object has been updated. Defaults to 0 seconds.
     </dt>
     <dd>{{% md %}}The unique identifier of the origin request policy
 that is attached to the behavior.
-{{% /md %}}</dd>
-    <dt class="property-optional"
+{{% /md %}}</dd><dt class="property-optional"
             title="Optional">
         <span id="realtimelogconfigarn_nodejs">
 <a href="#realtimelogconfigarn_nodejs" style="color: inherit; text-decoration: inherit;">realtime<wbr>Log<wbr>Config<wbr>Arn</a>
@@ -4332,8 +3998,7 @@ that is attached to the behavior.
     </dt>
     <dd>{{% md %}}The ARN of the real-time log configuration
 that is attached to this cache behavior.
-{{% /md %}}</dd>
-    <dt class="property-optional"
+{{% /md %}}</dd><dt class="property-optional"
             title="Optional">
         <span id="smoothstreaming_nodejs">
 <a href="#smoothstreaming_nodejs" style="color: inherit; text-decoration: inherit;">smooth<wbr>Streaming</a>
@@ -4344,8 +4009,7 @@ that is attached to this cache behavior.
     <dd>{{% md %}}Indicates whether you want to distribute
 media files in Microsoft Smooth Streaming format using the origin that is
 associated with this cache behavior.
-{{% /md %}}</dd>
-    <dt class="property-optional"
+{{% /md %}}</dd><dt class="property-optional"
             title="Optional">
         <span id="trustedsigners_nodejs">
 <a href="#trustedsigners_nodejs" style="color: inherit; text-decoration: inherit;">trusted<wbr>Signers</a>
@@ -4355,14 +4019,11 @@ associated with this cache behavior.
     </dt>
     <dd>{{% md %}}List of AWS account IDs (or `self`) that you want to allow to create signed URLs for private content.
 See the [CloudFront User Guide](https://docs.aws.amazon.com/AmazonCloudFront/latest/DeveloperGuide/private-content-trusted-signers.html) for more information about this feature.
-{{% /md %}}</dd>
-</dl>
+{{% /md %}}</dd></dl>
 {{% /choosable %}}
 
 {{% choosable language python %}}
-<dl class="resources-properties">
-
-    <dt class="property-required"
+<dl class="resources-properties"><dt class="property-required"
             title="Required">
         <span id="allowed_methods_python">
 <a href="#allowed_methods_python" style="color: inherit; text-decoration: inherit;">allowed_<wbr>methods</a>
@@ -4372,8 +4033,7 @@ See the [CloudFront User Guide](https://docs.aws.amazon.com/AmazonCloudFront/lat
     </dt>
     <dd>{{% md %}}Controls which HTTP methods CloudFront
 processes and forwards to your Amazon S3 bucket or your custom origin.
-{{% /md %}}</dd>
-    <dt class="property-required"
+{{% /md %}}</dd><dt class="property-required"
             title="Required">
         <span id="cached_methods_python">
 <a href="#cached_methods_python" style="color: inherit; text-decoration: inherit;">cached_<wbr>methods</a>
@@ -4383,8 +4043,7 @@ processes and forwards to your Amazon S3 bucket or your custom origin.
     </dt>
     <dd>{{% md %}}Controls whether CloudFront caches the
 response to requests using the specified HTTP methods.
-{{% /md %}}</dd>
-    <dt class="property-required"
+{{% /md %}}</dd><dt class="property-required"
             title="Required">
         <span id="target_origin_id_python">
 <a href="#target_origin_id_python" style="color: inherit; text-decoration: inherit;">target_<wbr>origin_<wbr>id</a>
@@ -4395,8 +4054,7 @@ response to requests using the specified HTTP methods.
     <dd>{{% md %}}The value of ID for the origin that you want
 CloudFront to route requests to when a request matches the path pattern
 either for a cache behavior or for the default cache behavior.
-{{% /md %}}</dd>
-    <dt class="property-required"
+{{% /md %}}</dd><dt class="property-required"
             title="Required">
         <span id="viewer_protocol_policy_python">
 <a href="#viewer_protocol_policy_python" style="color: inherit; text-decoration: inherit;">viewer_<wbr>protocol_<wbr>policy</a>
@@ -4408,8 +4066,7 @@ either for a cache behavior or for the default cache behavior.
 protocol that users can use to access the files in the origin specified by
 TargetOriginId when a request matches the path pattern in PathPattern. One
 of `allow-all`, `https-only`, or `redirect-to-https`.
-{{% /md %}}</dd>
-    <dt class="property-optional"
+{{% /md %}}</dd><dt class="property-optional"
             title="Optional">
         <span id="cache_policy_id_python">
 <a href="#cache_policy_id_python" style="color: inherit; text-decoration: inherit;">cache_<wbr>policy_<wbr>id</a>
@@ -4419,8 +4076,7 @@ of `allow-all`, `https-only`, or `redirect-to-https`.
     </dt>
     <dd>{{% md %}}The unique identifier of the cache policy that
 is attached to the cache behavior.
-{{% /md %}}</dd>
-    <dt class="property-optional"
+{{% /md %}}</dd><dt class="property-optional"
             title="Optional">
         <span id="compress_python">
 <a href="#compress_python" style="color: inherit; text-decoration: inherit;">compress</a>
@@ -4431,8 +4087,7 @@ is attached to the cache behavior.
     <dd>{{% md %}}Whether you want CloudFront to automatically
 compress content for web requests that include `Accept-Encoding: gzip` in
 the request header (default: `false`).
-{{% /md %}}</dd>
-    <dt class="property-optional"
+{{% /md %}}</dd><dt class="property-optional"
             title="Optional">
         <span id="default_ttl_python">
 <a href="#default_ttl_python" style="color: inherit; text-decoration: inherit;">default_<wbr>ttl</a>
@@ -4443,8 +4098,7 @@ the request header (default: `false`).
     <dd>{{% md %}}The default amount of time (in seconds) that an
 object is in a CloudFront cache before CloudFront forwards another request
 in the absence of an `Cache-Control max-age` or `Expires` header.
-{{% /md %}}</dd>
-    <dt class="property-optional"
+{{% /md %}}</dd><dt class="property-optional"
             title="Optional">
         <span id="field_level_encryption_id_python">
 <a href="#field_level_encryption_id_python" style="color: inherit; text-decoration: inherit;">field_<wbr>level_<wbr>encryption_<wbr>id</a>
@@ -4453,8 +4107,7 @@ in the absence of an `Cache-Control max-age` or `Expires` header.
         <span class="property-type">str</span>
     </dt>
     <dd>{{% md %}}Field level encryption configuration ID
-{{% /md %}}</dd>
-    <dt class="property-optional"
+{{% /md %}}</dd><dt class="property-optional"
             title="Optional">
         <span id="forwarded_values_python">
 <a href="#forwarded_values_python" style="color: inherit; text-decoration: inherit;">forwarded_<wbr>values</a>
@@ -4464,8 +4117,7 @@ in the absence of an `Cache-Control max-age` or `Expires` header.
     </dt>
     <dd>{{% md %}}The forwarded values configuration that specifies how CloudFront
 handles query strings, cookies and headers (maximum one).
-{{% /md %}}</dd>
-    <dt class="property-optional"
+{{% /md %}}</dd><dt class="property-optional"
             title="Optional">
         <span id="lambda_function_associations_python">
 <a href="#lambda_function_associations_python" style="color: inherit; text-decoration: inherit;">lambda_<wbr>function_<wbr>associations</a>
@@ -4475,8 +4127,7 @@ handles query strings, cookies and headers (maximum one).
     </dt>
     <dd>{{% md %}}A config block that triggers a lambda
 function with specific actions (maximum 4).
-{{% /md %}}</dd>
-    <dt class="property-optional"
+{{% /md %}}</dd><dt class="property-optional"
             title="Optional">
         <span id="max_ttl_python">
 <a href="#max_ttl_python" style="color: inherit; text-decoration: inherit;">max_<wbr>ttl</a>
@@ -4489,8 +4140,7 @@ object is in a CloudFront cache before CloudFront forwards another request
 to your origin to determine whether the object has been updated. Only
 effective in the presence of `Cache-Control max-age`, `Cache-Control
 s-maxage`, and `Expires` headers.
-{{% /md %}}</dd>
-    <dt class="property-optional"
+{{% /md %}}</dd><dt class="property-optional"
             title="Optional">
         <span id="min_ttl_python">
 <a href="#min_ttl_python" style="color: inherit; text-decoration: inherit;">min_<wbr>ttl</a>
@@ -4501,8 +4151,7 @@ s-maxage`, and `Expires` headers.
     <dd>{{% md %}}The minimum amount of time that you want objects to
 stay in CloudFront caches before CloudFront queries your origin to see
 whether the object has been updated. Defaults to 0 seconds.
-{{% /md %}}</dd>
-    <dt class="property-optional"
+{{% /md %}}</dd><dt class="property-optional"
             title="Optional">
         <span id="origin_request_policy_id_python">
 <a href="#origin_request_policy_id_python" style="color: inherit; text-decoration: inherit;">origin_<wbr>request_<wbr>policy_<wbr>id</a>
@@ -4512,8 +4161,7 @@ whether the object has been updated. Defaults to 0 seconds.
     </dt>
     <dd>{{% md %}}The unique identifier of the origin request policy
 that is attached to the behavior.
-{{% /md %}}</dd>
-    <dt class="property-optional"
+{{% /md %}}</dd><dt class="property-optional"
             title="Optional">
         <span id="realtime_log_config_arn_python">
 <a href="#realtime_log_config_arn_python" style="color: inherit; text-decoration: inherit;">realtime_<wbr>log_<wbr>config_<wbr>arn</a>
@@ -4523,8 +4171,7 @@ that is attached to the behavior.
     </dt>
     <dd>{{% md %}}The ARN of the real-time log configuration
 that is attached to this cache behavior.
-{{% /md %}}</dd>
-    <dt class="property-optional"
+{{% /md %}}</dd><dt class="property-optional"
             title="Optional">
         <span id="smooth_streaming_python">
 <a href="#smooth_streaming_python" style="color: inherit; text-decoration: inherit;">smooth_<wbr>streaming</a>
@@ -4535,8 +4182,7 @@ that is attached to this cache behavior.
     <dd>{{% md %}}Indicates whether you want to distribute
 media files in Microsoft Smooth Streaming format using the origin that is
 associated with this cache behavior.
-{{% /md %}}</dd>
-    <dt class="property-optional"
+{{% /md %}}</dd><dt class="property-optional"
             title="Optional">
         <span id="trusted_signers_python">
 <a href="#trusted_signers_python" style="color: inherit; text-decoration: inherit;">trusted_<wbr>signers</a>
@@ -4546,16 +4192,13 @@ associated with this cache behavior.
     </dt>
     <dd>{{% md %}}List of AWS account IDs (or `self`) that you want to allow to create signed URLs for private content.
 See the [CloudFront User Guide](https://docs.aws.amazon.com/AmazonCloudFront/latest/DeveloperGuide/private-content-trusted-signers.html) for more information about this feature.
-{{% /md %}}</dd>
-</dl>
+{{% /md %}}</dd></dl>
 {{% /choosable %}}
 
 <h4 id="distributiondefaultcachebehaviorforwardedvalues">Distribution<wbr>Default<wbr>Cache<wbr>Behavior<wbr>Forwarded<wbr>Values</h4>
 
 {{% choosable language csharp %}}
-<dl class="resources-properties">
-
-    <dt class="property-required"
+<dl class="resources-properties"><dt class="property-required"
             title="Required">
         <span id="cookies_csharp">
 <a href="#cookies_csharp" style="color: inherit; text-decoration: inherit;">Cookies</a>
@@ -4565,8 +4208,7 @@ See the [CloudFront User Guide](https://docs.aws.amazon.com/AmazonCloudFront/lat
     </dt>
     <dd>{{% md %}}The forwarded values cookies
 that specifies how CloudFront handles cookies (maximum one).
-{{% /md %}}</dd>
-    <dt class="property-required"
+{{% /md %}}</dd><dt class="property-required"
             title="Required">
         <span id="querystring_csharp">
 <a href="#querystring_csharp" style="color: inherit; text-decoration: inherit;">Query<wbr>String</a>
@@ -4576,8 +4218,7 @@ that specifies how CloudFront handles cookies (maximum one).
     </dt>
     <dd>{{% md %}}Indicates whether you want CloudFront to forward
 query strings to the origin that is associated with this cache behavior.
-{{% /md %}}</dd>
-    <dt class="property-optional"
+{{% /md %}}</dd><dt class="property-optional"
             title="Optional">
         <span id="headers_csharp">
 <a href="#headers_csharp" style="color: inherit; text-decoration: inherit;">Headers</a>
@@ -4588,8 +4229,7 @@ query strings to the origin that is associated with this cache behavior.
     <dd>{{% md %}}Specifies the Headers, if any, that you want
 CloudFront to vary upon for this cache behavior. Specify `*` to include all
 headers.
-{{% /md %}}</dd>
-    <dt class="property-optional"
+{{% /md %}}</dd><dt class="property-optional"
             title="Optional">
         <span id="querystringcachekeys_csharp">
 <a href="#querystringcachekeys_csharp" style="color: inherit; text-decoration: inherit;">Query<wbr>String<wbr>Cache<wbr>Keys</a>
@@ -4601,14 +4241,11 @@ headers.
 `true` for `query_string`, all query strings are forwarded, however only the
 query string keys listed in this argument are cached. When omitted with a
 value of `true` for `query_string`, all query string keys are cached.
-{{% /md %}}</dd>
-</dl>
+{{% /md %}}</dd></dl>
 {{% /choosable %}}
 
 {{% choosable language go %}}
-<dl class="resources-properties">
-
-    <dt class="property-required"
+<dl class="resources-properties"><dt class="property-required"
             title="Required">
         <span id="cookies_go">
 <a href="#cookies_go" style="color: inherit; text-decoration: inherit;">Cookies</a>
@@ -4618,8 +4255,7 @@ value of `true` for `query_string`, all query string keys are cached.
     </dt>
     <dd>{{% md %}}The forwarded values cookies
 that specifies how CloudFront handles cookies (maximum one).
-{{% /md %}}</dd>
-    <dt class="property-required"
+{{% /md %}}</dd><dt class="property-required"
             title="Required">
         <span id="querystring_go">
 <a href="#querystring_go" style="color: inherit; text-decoration: inherit;">Query<wbr>String</a>
@@ -4629,8 +4265,7 @@ that specifies how CloudFront handles cookies (maximum one).
     </dt>
     <dd>{{% md %}}Indicates whether you want CloudFront to forward
 query strings to the origin that is associated with this cache behavior.
-{{% /md %}}</dd>
-    <dt class="property-optional"
+{{% /md %}}</dd><dt class="property-optional"
             title="Optional">
         <span id="headers_go">
 <a href="#headers_go" style="color: inherit; text-decoration: inherit;">Headers</a>
@@ -4641,8 +4276,7 @@ query strings to the origin that is associated with this cache behavior.
     <dd>{{% md %}}Specifies the Headers, if any, that you want
 CloudFront to vary upon for this cache behavior. Specify `*` to include all
 headers.
-{{% /md %}}</dd>
-    <dt class="property-optional"
+{{% /md %}}</dd><dt class="property-optional"
             title="Optional">
         <span id="querystringcachekeys_go">
 <a href="#querystringcachekeys_go" style="color: inherit; text-decoration: inherit;">Query<wbr>String<wbr>Cache<wbr>Keys</a>
@@ -4654,14 +4288,11 @@ headers.
 `true` for `query_string`, all query strings are forwarded, however only the
 query string keys listed in this argument are cached. When omitted with a
 value of `true` for `query_string`, all query string keys are cached.
-{{% /md %}}</dd>
-</dl>
+{{% /md %}}</dd></dl>
 {{% /choosable %}}
 
 {{% choosable language nodejs %}}
-<dl class="resources-properties">
-
-    <dt class="property-required"
+<dl class="resources-properties"><dt class="property-required"
             title="Required">
         <span id="cookies_nodejs">
 <a href="#cookies_nodejs" style="color: inherit; text-decoration: inherit;">cookies</a>
@@ -4671,8 +4302,7 @@ value of `true` for `query_string`, all query string keys are cached.
     </dt>
     <dd>{{% md %}}The forwarded values cookies
 that specifies how CloudFront handles cookies (maximum one).
-{{% /md %}}</dd>
-    <dt class="property-required"
+{{% /md %}}</dd><dt class="property-required"
             title="Required">
         <span id="querystring_nodejs">
 <a href="#querystring_nodejs" style="color: inherit; text-decoration: inherit;">query<wbr>String</a>
@@ -4682,8 +4312,7 @@ that specifies how CloudFront handles cookies (maximum one).
     </dt>
     <dd>{{% md %}}Indicates whether you want CloudFront to forward
 query strings to the origin that is associated with this cache behavior.
-{{% /md %}}</dd>
-    <dt class="property-optional"
+{{% /md %}}</dd><dt class="property-optional"
             title="Optional">
         <span id="headers_nodejs">
 <a href="#headers_nodejs" style="color: inherit; text-decoration: inherit;">headers</a>
@@ -4694,8 +4323,7 @@ query strings to the origin that is associated with this cache behavior.
     <dd>{{% md %}}Specifies the Headers, if any, that you want
 CloudFront to vary upon for this cache behavior. Specify `*` to include all
 headers.
-{{% /md %}}</dd>
-    <dt class="property-optional"
+{{% /md %}}</dd><dt class="property-optional"
             title="Optional">
         <span id="querystringcachekeys_nodejs">
 <a href="#querystringcachekeys_nodejs" style="color: inherit; text-decoration: inherit;">query<wbr>String<wbr>Cache<wbr>Keys</a>
@@ -4707,14 +4335,11 @@ headers.
 `true` for `query_string`, all query strings are forwarded, however only the
 query string keys listed in this argument are cached. When omitted with a
 value of `true` for `query_string`, all query string keys are cached.
-{{% /md %}}</dd>
-</dl>
+{{% /md %}}</dd></dl>
 {{% /choosable %}}
 
 {{% choosable language python %}}
-<dl class="resources-properties">
-
-    <dt class="property-required"
+<dl class="resources-properties"><dt class="property-required"
             title="Required">
         <span id="cookies_python">
 <a href="#cookies_python" style="color: inherit; text-decoration: inherit;">cookies</a>
@@ -4724,8 +4349,7 @@ value of `true` for `query_string`, all query string keys are cached.
     </dt>
     <dd>{{% md %}}The forwarded values cookies
 that specifies how CloudFront handles cookies (maximum one).
-{{% /md %}}</dd>
-    <dt class="property-required"
+{{% /md %}}</dd><dt class="property-required"
             title="Required">
         <span id="query_string_python">
 <a href="#query_string_python" style="color: inherit; text-decoration: inherit;">query_<wbr>string</a>
@@ -4735,8 +4359,7 @@ that specifies how CloudFront handles cookies (maximum one).
     </dt>
     <dd>{{% md %}}Indicates whether you want CloudFront to forward
 query strings to the origin that is associated with this cache behavior.
-{{% /md %}}</dd>
-    <dt class="property-optional"
+{{% /md %}}</dd><dt class="property-optional"
             title="Optional">
         <span id="headers_python">
 <a href="#headers_python" style="color: inherit; text-decoration: inherit;">headers</a>
@@ -4747,8 +4370,7 @@ query strings to the origin that is associated with this cache behavior.
     <dd>{{% md %}}Specifies the Headers, if any, that you want
 CloudFront to vary upon for this cache behavior. Specify `*` to include all
 headers.
-{{% /md %}}</dd>
-    <dt class="property-optional"
+{{% /md %}}</dd><dt class="property-optional"
             title="Optional">
         <span id="query_string_cache_keys_python">
 <a href="#query_string_cache_keys_python" style="color: inherit; text-decoration: inherit;">query_<wbr>string_<wbr>cache_<wbr>keys</a>
@@ -4760,16 +4382,13 @@ headers.
 `true` for `query_string`, all query strings are forwarded, however only the
 query string keys listed in this argument are cached. When omitted with a
 value of `true` for `query_string`, all query string keys are cached.
-{{% /md %}}</dd>
-</dl>
+{{% /md %}}</dd></dl>
 {{% /choosable %}}
 
 <h4 id="distributiondefaultcachebehaviorforwardedvaluescookies">Distribution<wbr>Default<wbr>Cache<wbr>Behavior<wbr>Forwarded<wbr>Values<wbr>Cookies</h4>
 
 {{% choosable language csharp %}}
-<dl class="resources-properties">
-
-    <dt class="property-required"
+<dl class="resources-properties"><dt class="property-required"
             title="Required">
         <span id="forward_csharp">
 <a href="#forward_csharp" style="color: inherit; text-decoration: inherit;">Forward</a>
@@ -4781,8 +4400,7 @@ value of `true` for `query_string`, all query string keys are cached.
 cookies to the origin that is associated with this cache behavior. You can
 specify `all`, `none` or `whitelist`. If `whitelist`, you must include the
 subsequent `whitelisted_names`
-{{% /md %}}</dd>
-    <dt class="property-optional"
+{{% /md %}}</dd><dt class="property-optional"
             title="Optional">
         <span id="whitelistednames_csharp">
 <a href="#whitelistednames_csharp" style="color: inherit; text-decoration: inherit;">Whitelisted<wbr>Names</a>
@@ -4793,14 +4411,11 @@ subsequent `whitelisted_names`
     <dd>{{% md %}}If you have specified `whitelist` to
 `forward`, the whitelisted cookies that you want CloudFront to forward to
 your origin.
-{{% /md %}}</dd>
-</dl>
+{{% /md %}}</dd></dl>
 {{% /choosable %}}
 
 {{% choosable language go %}}
-<dl class="resources-properties">
-
-    <dt class="property-required"
+<dl class="resources-properties"><dt class="property-required"
             title="Required">
         <span id="forward_go">
 <a href="#forward_go" style="color: inherit; text-decoration: inherit;">Forward</a>
@@ -4812,8 +4427,7 @@ your origin.
 cookies to the origin that is associated with this cache behavior. You can
 specify `all`, `none` or `whitelist`. If `whitelist`, you must include the
 subsequent `whitelisted_names`
-{{% /md %}}</dd>
-    <dt class="property-optional"
+{{% /md %}}</dd><dt class="property-optional"
             title="Optional">
         <span id="whitelistednames_go">
 <a href="#whitelistednames_go" style="color: inherit; text-decoration: inherit;">Whitelisted<wbr>Names</a>
@@ -4824,14 +4438,11 @@ subsequent `whitelisted_names`
     <dd>{{% md %}}If you have specified `whitelist` to
 `forward`, the whitelisted cookies that you want CloudFront to forward to
 your origin.
-{{% /md %}}</dd>
-</dl>
+{{% /md %}}</dd></dl>
 {{% /choosable %}}
 
 {{% choosable language nodejs %}}
-<dl class="resources-properties">
-
-    <dt class="property-required"
+<dl class="resources-properties"><dt class="property-required"
             title="Required">
         <span id="forward_nodejs">
 <a href="#forward_nodejs" style="color: inherit; text-decoration: inherit;">forward</a>
@@ -4843,8 +4454,7 @@ your origin.
 cookies to the origin that is associated with this cache behavior. You can
 specify `all`, `none` or `whitelist`. If `whitelist`, you must include the
 subsequent `whitelisted_names`
-{{% /md %}}</dd>
-    <dt class="property-optional"
+{{% /md %}}</dd><dt class="property-optional"
             title="Optional">
         <span id="whitelistednames_nodejs">
 <a href="#whitelistednames_nodejs" style="color: inherit; text-decoration: inherit;">whitelisted<wbr>Names</a>
@@ -4855,14 +4465,11 @@ subsequent `whitelisted_names`
     <dd>{{% md %}}If you have specified `whitelist` to
 `forward`, the whitelisted cookies that you want CloudFront to forward to
 your origin.
-{{% /md %}}</dd>
-</dl>
+{{% /md %}}</dd></dl>
 {{% /choosable %}}
 
 {{% choosable language python %}}
-<dl class="resources-properties">
-
-    <dt class="property-required"
+<dl class="resources-properties"><dt class="property-required"
             title="Required">
         <span id="forward_python">
 <a href="#forward_python" style="color: inherit; text-decoration: inherit;">forward</a>
@@ -4874,8 +4481,7 @@ your origin.
 cookies to the origin that is associated with this cache behavior. You can
 specify `all`, `none` or `whitelist`. If `whitelist`, you must include the
 subsequent `whitelisted_names`
-{{% /md %}}</dd>
-    <dt class="property-optional"
+{{% /md %}}</dd><dt class="property-optional"
             title="Optional">
         <span id="whitelisted_names_python">
 <a href="#whitelisted_names_python" style="color: inherit; text-decoration: inherit;">whitelisted_<wbr>names</a>
@@ -4886,16 +4492,13 @@ subsequent `whitelisted_names`
     <dd>{{% md %}}If you have specified `whitelist` to
 `forward`, the whitelisted cookies that you want CloudFront to forward to
 your origin.
-{{% /md %}}</dd>
-</dl>
+{{% /md %}}</dd></dl>
 {{% /choosable %}}
 
 <h4 id="distributiondefaultcachebehaviorlambdafunctionassociation">Distribution<wbr>Default<wbr>Cache<wbr>Behavior<wbr>Lambda<wbr>Function<wbr>Association</h4>
 
 {{% choosable language csharp %}}
-<dl class="resources-properties">
-
-    <dt class="property-required"
+<dl class="resources-properties"><dt class="property-required"
             title="Required">
         <span id="eventtype_csharp">
 <a href="#eventtype_csharp" style="color: inherit; text-decoration: inherit;">Event<wbr>Type</a>
@@ -4906,8 +4509,7 @@ your origin.
     <dd>{{% md %}}The specific event to trigger this function.
 Valid values: `viewer-request`, `origin-request`, `viewer-response`,
 `origin-response`
-{{% /md %}}</dd>
-    <dt class="property-required"
+{{% /md %}}</dd><dt class="property-required"
             title="Required">
         <span id="lambdaarn_csharp">
 <a href="#lambdaarn_csharp" style="color: inherit; text-decoration: inherit;">Lambda<wbr>Arn</a>
@@ -4916,8 +4518,7 @@ Valid values: `viewer-request`, `origin-request`, `viewer-response`,
         <span class="property-type">string</span>
     </dt>
     <dd>{{% md %}}ARN of the Lambda function.
-{{% /md %}}</dd>
-    <dt class="property-optional"
+{{% /md %}}</dd><dt class="property-optional"
             title="Optional">
         <span id="includebody_csharp">
 <a href="#includebody_csharp" style="color: inherit; text-decoration: inherit;">Include<wbr>Body</a>
@@ -4926,14 +4527,11 @@ Valid values: `viewer-request`, `origin-request`, `viewer-response`,
         <span class="property-type">bool</span>
     </dt>
     <dd>{{% md %}}When set to true it exposes the request body to the lambda function. Defaults to false. Valid values: `true`, `false`.
-{{% /md %}}</dd>
-</dl>
+{{% /md %}}</dd></dl>
 {{% /choosable %}}
 
 {{% choosable language go %}}
-<dl class="resources-properties">
-
-    <dt class="property-required"
+<dl class="resources-properties"><dt class="property-required"
             title="Required">
         <span id="eventtype_go">
 <a href="#eventtype_go" style="color: inherit; text-decoration: inherit;">Event<wbr>Type</a>
@@ -4944,8 +4542,7 @@ Valid values: `viewer-request`, `origin-request`, `viewer-response`,
     <dd>{{% md %}}The specific event to trigger this function.
 Valid values: `viewer-request`, `origin-request`, `viewer-response`,
 `origin-response`
-{{% /md %}}</dd>
-    <dt class="property-required"
+{{% /md %}}</dd><dt class="property-required"
             title="Required">
         <span id="lambdaarn_go">
 <a href="#lambdaarn_go" style="color: inherit; text-decoration: inherit;">Lambda<wbr>Arn</a>
@@ -4954,8 +4551,7 @@ Valid values: `viewer-request`, `origin-request`, `viewer-response`,
         <span class="property-type">string</span>
     </dt>
     <dd>{{% md %}}ARN of the Lambda function.
-{{% /md %}}</dd>
-    <dt class="property-optional"
+{{% /md %}}</dd><dt class="property-optional"
             title="Optional">
         <span id="includebody_go">
 <a href="#includebody_go" style="color: inherit; text-decoration: inherit;">Include<wbr>Body</a>
@@ -4964,14 +4560,11 @@ Valid values: `viewer-request`, `origin-request`, `viewer-response`,
         <span class="property-type">bool</span>
     </dt>
     <dd>{{% md %}}When set to true it exposes the request body to the lambda function. Defaults to false. Valid values: `true`, `false`.
-{{% /md %}}</dd>
-</dl>
+{{% /md %}}</dd></dl>
 {{% /choosable %}}
 
 {{% choosable language nodejs %}}
-<dl class="resources-properties">
-
-    <dt class="property-required"
+<dl class="resources-properties"><dt class="property-required"
             title="Required">
         <span id="eventtype_nodejs">
 <a href="#eventtype_nodejs" style="color: inherit; text-decoration: inherit;">event<wbr>Type</a>
@@ -4982,8 +4575,7 @@ Valid values: `viewer-request`, `origin-request`, `viewer-response`,
     <dd>{{% md %}}The specific event to trigger this function.
 Valid values: `viewer-request`, `origin-request`, `viewer-response`,
 `origin-response`
-{{% /md %}}</dd>
-    <dt class="property-required"
+{{% /md %}}</dd><dt class="property-required"
             title="Required">
         <span id="lambdaarn_nodejs">
 <a href="#lambdaarn_nodejs" style="color: inherit; text-decoration: inherit;">lambda<wbr>Arn</a>
@@ -4992,8 +4584,7 @@ Valid values: `viewer-request`, `origin-request`, `viewer-response`,
         <span class="property-type">string</span>
     </dt>
     <dd>{{% md %}}ARN of the Lambda function.
-{{% /md %}}</dd>
-    <dt class="property-optional"
+{{% /md %}}</dd><dt class="property-optional"
             title="Optional">
         <span id="includebody_nodejs">
 <a href="#includebody_nodejs" style="color: inherit; text-decoration: inherit;">include<wbr>Body</a>
@@ -5002,14 +4593,11 @@ Valid values: `viewer-request`, `origin-request`, `viewer-response`,
         <span class="property-type">boolean</span>
     </dt>
     <dd>{{% md %}}When set to true it exposes the request body to the lambda function. Defaults to false. Valid values: `true`, `false`.
-{{% /md %}}</dd>
-</dl>
+{{% /md %}}</dd></dl>
 {{% /choosable %}}
 
 {{% choosable language python %}}
-<dl class="resources-properties">
-
-    <dt class="property-required"
+<dl class="resources-properties"><dt class="property-required"
             title="Required">
         <span id="event_type_python">
 <a href="#event_type_python" style="color: inherit; text-decoration: inherit;">event_<wbr>type</a>
@@ -5020,8 +4608,7 @@ Valid values: `viewer-request`, `origin-request`, `viewer-response`,
     <dd>{{% md %}}The specific event to trigger this function.
 Valid values: `viewer-request`, `origin-request`, `viewer-response`,
 `origin-response`
-{{% /md %}}</dd>
-    <dt class="property-required"
+{{% /md %}}</dd><dt class="property-required"
             title="Required">
         <span id="lambda_arn_python">
 <a href="#lambda_arn_python" style="color: inherit; text-decoration: inherit;">lambda_<wbr>arn</a>
@@ -5030,8 +4617,7 @@ Valid values: `viewer-request`, `origin-request`, `viewer-response`,
         <span class="property-type">str</span>
     </dt>
     <dd>{{% md %}}ARN of the Lambda function.
-{{% /md %}}</dd>
-    <dt class="property-optional"
+{{% /md %}}</dd><dt class="property-optional"
             title="Optional">
         <span id="include_body_python">
 <a href="#include_body_python" style="color: inherit; text-decoration: inherit;">include_<wbr>body</a>
@@ -5040,16 +4626,13 @@ Valid values: `viewer-request`, `origin-request`, `viewer-response`,
         <span class="property-type">bool</span>
     </dt>
     <dd>{{% md %}}When set to true it exposes the request body to the lambda function. Defaults to false. Valid values: `true`, `false`.
-{{% /md %}}</dd>
-</dl>
+{{% /md %}}</dd></dl>
 {{% /choosable %}}
 
 <h4 id="distributionloggingconfig">Distribution<wbr>Logging<wbr>Config</h4>
 
 {{% choosable language csharp %}}
-<dl class="resources-properties">
-
-    <dt class="property-required"
+<dl class="resources-properties"><dt class="property-required"
             title="Required">
         <span id="bucket_csharp">
 <a href="#bucket_csharp" style="color: inherit; text-decoration: inherit;">Bucket</a>
@@ -5059,8 +4642,7 @@ Valid values: `viewer-request`, `origin-request`, `viewer-response`,
     </dt>
     <dd>{{% md %}}The Amazon S3 bucket to store the access logs in, for
 example, `myawslogbucket.s3.amazonaws.com`.
-{{% /md %}}</dd>
-    <dt class="property-optional"
+{{% /md %}}</dd><dt class="property-optional"
             title="Optional">
         <span id="includecookies_csharp">
 <a href="#includecookies_csharp" style="color: inherit; text-decoration: inherit;">Include<wbr>Cookies</a>
@@ -5070,8 +4652,7 @@ example, `myawslogbucket.s3.amazonaws.com`.
     </dt>
     <dd>{{% md %}}Specifies whether you want CloudFront to
 include cookies in access logs (default: `false`).
-{{% /md %}}</dd>
-    <dt class="property-optional"
+{{% /md %}}</dd><dt class="property-optional"
             title="Optional">
         <span id="prefix_csharp">
 <a href="#prefix_csharp" style="color: inherit; text-decoration: inherit;">Prefix</a>
@@ -5081,14 +4662,11 @@ include cookies in access logs (default: `false`).
     </dt>
     <dd>{{% md %}}An optional string that you want CloudFront to prefix
 to the access log filenames for this distribution, for example, `myprefix/`.
-{{% /md %}}</dd>
-</dl>
+{{% /md %}}</dd></dl>
 {{% /choosable %}}
 
 {{% choosable language go %}}
-<dl class="resources-properties">
-
-    <dt class="property-required"
+<dl class="resources-properties"><dt class="property-required"
             title="Required">
         <span id="bucket_go">
 <a href="#bucket_go" style="color: inherit; text-decoration: inherit;">Bucket</a>
@@ -5098,8 +4676,7 @@ to the access log filenames for this distribution, for example, `myprefix/`.
     </dt>
     <dd>{{% md %}}The Amazon S3 bucket to store the access logs in, for
 example, `myawslogbucket.s3.amazonaws.com`.
-{{% /md %}}</dd>
-    <dt class="property-optional"
+{{% /md %}}</dd><dt class="property-optional"
             title="Optional">
         <span id="includecookies_go">
 <a href="#includecookies_go" style="color: inherit; text-decoration: inherit;">Include<wbr>Cookies</a>
@@ -5109,8 +4686,7 @@ example, `myawslogbucket.s3.amazonaws.com`.
     </dt>
     <dd>{{% md %}}Specifies whether you want CloudFront to
 include cookies in access logs (default: `false`).
-{{% /md %}}</dd>
-    <dt class="property-optional"
+{{% /md %}}</dd><dt class="property-optional"
             title="Optional">
         <span id="prefix_go">
 <a href="#prefix_go" style="color: inherit; text-decoration: inherit;">Prefix</a>
@@ -5120,14 +4696,11 @@ include cookies in access logs (default: `false`).
     </dt>
     <dd>{{% md %}}An optional string that you want CloudFront to prefix
 to the access log filenames for this distribution, for example, `myprefix/`.
-{{% /md %}}</dd>
-</dl>
+{{% /md %}}</dd></dl>
 {{% /choosable %}}
 
 {{% choosable language nodejs %}}
-<dl class="resources-properties">
-
-    <dt class="property-required"
+<dl class="resources-properties"><dt class="property-required"
             title="Required">
         <span id="bucket_nodejs">
 <a href="#bucket_nodejs" style="color: inherit; text-decoration: inherit;">bucket</a>
@@ -5137,8 +4710,7 @@ to the access log filenames for this distribution, for example, `myprefix/`.
     </dt>
     <dd>{{% md %}}The Amazon S3 bucket to store the access logs in, for
 example, `myawslogbucket.s3.amazonaws.com`.
-{{% /md %}}</dd>
-    <dt class="property-optional"
+{{% /md %}}</dd><dt class="property-optional"
             title="Optional">
         <span id="includecookies_nodejs">
 <a href="#includecookies_nodejs" style="color: inherit; text-decoration: inherit;">include<wbr>Cookies</a>
@@ -5148,8 +4720,7 @@ example, `myawslogbucket.s3.amazonaws.com`.
     </dt>
     <dd>{{% md %}}Specifies whether you want CloudFront to
 include cookies in access logs (default: `false`).
-{{% /md %}}</dd>
-    <dt class="property-optional"
+{{% /md %}}</dd><dt class="property-optional"
             title="Optional">
         <span id="prefix_nodejs">
 <a href="#prefix_nodejs" style="color: inherit; text-decoration: inherit;">prefix</a>
@@ -5159,14 +4730,11 @@ include cookies in access logs (default: `false`).
     </dt>
     <dd>{{% md %}}An optional string that you want CloudFront to prefix
 to the access log filenames for this distribution, for example, `myprefix/`.
-{{% /md %}}</dd>
-</dl>
+{{% /md %}}</dd></dl>
 {{% /choosable %}}
 
 {{% choosable language python %}}
-<dl class="resources-properties">
-
-    <dt class="property-required"
+<dl class="resources-properties"><dt class="property-required"
             title="Required">
         <span id="bucket_python">
 <a href="#bucket_python" style="color: inherit; text-decoration: inherit;">bucket</a>
@@ -5176,8 +4744,7 @@ to the access log filenames for this distribution, for example, `myprefix/`.
     </dt>
     <dd>{{% md %}}The Amazon S3 bucket to store the access logs in, for
 example, `myawslogbucket.s3.amazonaws.com`.
-{{% /md %}}</dd>
-    <dt class="property-optional"
+{{% /md %}}</dd><dt class="property-optional"
             title="Optional">
         <span id="include_cookies_python">
 <a href="#include_cookies_python" style="color: inherit; text-decoration: inherit;">include_<wbr>cookies</a>
@@ -5187,8 +4754,7 @@ example, `myawslogbucket.s3.amazonaws.com`.
     </dt>
     <dd>{{% md %}}Specifies whether you want CloudFront to
 include cookies in access logs (default: `false`).
-{{% /md %}}</dd>
-    <dt class="property-optional"
+{{% /md %}}</dd><dt class="property-optional"
             title="Optional">
         <span id="prefix_python">
 <a href="#prefix_python" style="color: inherit; text-decoration: inherit;">prefix</a>
@@ -5198,16 +4764,13 @@ include cookies in access logs (default: `false`).
     </dt>
     <dd>{{% md %}}An optional string that you want CloudFront to prefix
 to the access log filenames for this distribution, for example, `myprefix/`.
-{{% /md %}}</dd>
-</dl>
+{{% /md %}}</dd></dl>
 {{% /choosable %}}
 
 <h4 id="distributionorderedcachebehavior">Distribution<wbr>Ordered<wbr>Cache<wbr>Behavior</h4>
 
 {{% choosable language csharp %}}
-<dl class="resources-properties">
-
-    <dt class="property-required"
+<dl class="resources-properties"><dt class="property-required"
             title="Required">
         <span id="allowedmethods_csharp">
 <a href="#allowedmethods_csharp" style="color: inherit; text-decoration: inherit;">Allowed<wbr>Methods</a>
@@ -5217,8 +4780,7 @@ to the access log filenames for this distribution, for example, `myprefix/`.
     </dt>
     <dd>{{% md %}}Controls which HTTP methods CloudFront
 processes and forwards to your Amazon S3 bucket or your custom origin.
-{{% /md %}}</dd>
-    <dt class="property-required"
+{{% /md %}}</dd><dt class="property-required"
             title="Required">
         <span id="cachedmethods_csharp">
 <a href="#cachedmethods_csharp" style="color: inherit; text-decoration: inherit;">Cached<wbr>Methods</a>
@@ -5228,8 +4790,7 @@ processes and forwards to your Amazon S3 bucket or your custom origin.
     </dt>
     <dd>{{% md %}}Controls whether CloudFront caches the
 response to requests using the specified HTTP methods.
-{{% /md %}}</dd>
-    <dt class="property-required"
+{{% /md %}}</dd><dt class="property-required"
             title="Required">
         <span id="pathpattern_csharp">
 <a href="#pathpattern_csharp" style="color: inherit; text-decoration: inherit;">Path<wbr>Pattern</a>
@@ -5239,8 +4800,7 @@ response to requests using the specified HTTP methods.
     </dt>
     <dd>{{% md %}}The pattern (for example, `images/*.jpg)` that
 specifies which requests you want this cache behavior to apply to.
-{{% /md %}}</dd>
-    <dt class="property-required"
+{{% /md %}}</dd><dt class="property-required"
             title="Required">
         <span id="targetoriginid_csharp">
 <a href="#targetoriginid_csharp" style="color: inherit; text-decoration: inherit;">Target<wbr>Origin<wbr>Id</a>
@@ -5251,8 +4811,7 @@ specifies which requests you want this cache behavior to apply to.
     <dd>{{% md %}}The value of ID for the origin that you want
 CloudFront to route requests to when a request matches the path pattern
 either for a cache behavior or for the default cache behavior.
-{{% /md %}}</dd>
-    <dt class="property-required"
+{{% /md %}}</dd><dt class="property-required"
             title="Required">
         <span id="viewerprotocolpolicy_csharp">
 <a href="#viewerprotocolpolicy_csharp" style="color: inherit; text-decoration: inherit;">Viewer<wbr>Protocol<wbr>Policy</a>
@@ -5264,8 +4823,7 @@ either for a cache behavior or for the default cache behavior.
 protocol that users can use to access the files in the origin specified by
 TargetOriginId when a request matches the path pattern in PathPattern. One
 of `allow-all`, `https-only`, or `redirect-to-https`.
-{{% /md %}}</dd>
-    <dt class="property-optional"
+{{% /md %}}</dd><dt class="property-optional"
             title="Optional">
         <span id="cachepolicyid_csharp">
 <a href="#cachepolicyid_csharp" style="color: inherit; text-decoration: inherit;">Cache<wbr>Policy<wbr>Id</a>
@@ -5275,8 +4833,7 @@ of `allow-all`, `https-only`, or `redirect-to-https`.
     </dt>
     <dd>{{% md %}}The unique identifier of the cache policy that
 is attached to the cache behavior.
-{{% /md %}}</dd>
-    <dt class="property-optional"
+{{% /md %}}</dd><dt class="property-optional"
             title="Optional">
         <span id="compress_csharp">
 <a href="#compress_csharp" style="color: inherit; text-decoration: inherit;">Compress</a>
@@ -5287,8 +4844,7 @@ is attached to the cache behavior.
     <dd>{{% md %}}Whether you want CloudFront to automatically
 compress content for web requests that include `Accept-Encoding: gzip` in
 the request header (default: `false`).
-{{% /md %}}</dd>
-    <dt class="property-optional"
+{{% /md %}}</dd><dt class="property-optional"
             title="Optional">
         <span id="defaultttl_csharp">
 <a href="#defaultttl_csharp" style="color: inherit; text-decoration: inherit;">Default<wbr>Ttl</a>
@@ -5299,8 +4855,7 @@ the request header (default: `false`).
     <dd>{{% md %}}The default amount of time (in seconds) that an
 object is in a CloudFront cache before CloudFront forwards another request
 in the absence of an `Cache-Control max-age` or `Expires` header.
-{{% /md %}}</dd>
-    <dt class="property-optional"
+{{% /md %}}</dd><dt class="property-optional"
             title="Optional">
         <span id="fieldlevelencryptionid_csharp">
 <a href="#fieldlevelencryptionid_csharp" style="color: inherit; text-decoration: inherit;">Field<wbr>Level<wbr>Encryption<wbr>Id</a>
@@ -5309,8 +4864,7 @@ in the absence of an `Cache-Control max-age` or `Expires` header.
         <span class="property-type">string</span>
     </dt>
     <dd>{{% md %}}Field level encryption configuration ID
-{{% /md %}}</dd>
-    <dt class="property-optional"
+{{% /md %}}</dd><dt class="property-optional"
             title="Optional">
         <span id="forwardedvalues_csharp">
 <a href="#forwardedvalues_csharp" style="color: inherit; text-decoration: inherit;">Forwarded<wbr>Values</a>
@@ -5320,8 +4874,7 @@ in the absence of an `Cache-Control max-age` or `Expires` header.
     </dt>
     <dd>{{% md %}}The forwarded values configuration that specifies how CloudFront
 handles query strings, cookies and headers (maximum one).
-{{% /md %}}</dd>
-    <dt class="property-optional"
+{{% /md %}}</dd><dt class="property-optional"
             title="Optional">
         <span id="lambdafunctionassociations_csharp">
 <a href="#lambdafunctionassociations_csharp" style="color: inherit; text-decoration: inherit;">Lambda<wbr>Function<wbr>Associations</a>
@@ -5331,8 +4884,7 @@ handles query strings, cookies and headers (maximum one).
     </dt>
     <dd>{{% md %}}A config block that triggers a lambda
 function with specific actions (maximum 4).
-{{% /md %}}</dd>
-    <dt class="property-optional"
+{{% /md %}}</dd><dt class="property-optional"
             title="Optional">
         <span id="maxttl_csharp">
 <a href="#maxttl_csharp" style="color: inherit; text-decoration: inherit;">Max<wbr>Ttl</a>
@@ -5345,8 +4897,7 @@ object is in a CloudFront cache before CloudFront forwards another request
 to your origin to determine whether the object has been updated. Only
 effective in the presence of `Cache-Control max-age`, `Cache-Control
 s-maxage`, and `Expires` headers.
-{{% /md %}}</dd>
-    <dt class="property-optional"
+{{% /md %}}</dd><dt class="property-optional"
             title="Optional">
         <span id="minttl_csharp">
 <a href="#minttl_csharp" style="color: inherit; text-decoration: inherit;">Min<wbr>Ttl</a>
@@ -5357,8 +4908,7 @@ s-maxage`, and `Expires` headers.
     <dd>{{% md %}}The minimum amount of time that you want objects to
 stay in CloudFront caches before CloudFront queries your origin to see
 whether the object has been updated. Defaults to 0 seconds.
-{{% /md %}}</dd>
-    <dt class="property-optional"
+{{% /md %}}</dd><dt class="property-optional"
             title="Optional">
         <span id="originrequestpolicyid_csharp">
 <a href="#originrequestpolicyid_csharp" style="color: inherit; text-decoration: inherit;">Origin<wbr>Request<wbr>Policy<wbr>Id</a>
@@ -5368,8 +4918,7 @@ whether the object has been updated. Defaults to 0 seconds.
     </dt>
     <dd>{{% md %}}The unique identifier of the origin request policy
 that is attached to the behavior.
-{{% /md %}}</dd>
-    <dt class="property-optional"
+{{% /md %}}</dd><dt class="property-optional"
             title="Optional">
         <span id="realtimelogconfigarn_csharp">
 <a href="#realtimelogconfigarn_csharp" style="color: inherit; text-decoration: inherit;">Realtime<wbr>Log<wbr>Config<wbr>Arn</a>
@@ -5379,8 +4928,7 @@ that is attached to the behavior.
     </dt>
     <dd>{{% md %}}The ARN of the real-time log configuration
 that is attached to this cache behavior.
-{{% /md %}}</dd>
-    <dt class="property-optional"
+{{% /md %}}</dd><dt class="property-optional"
             title="Optional">
         <span id="smoothstreaming_csharp">
 <a href="#smoothstreaming_csharp" style="color: inherit; text-decoration: inherit;">Smooth<wbr>Streaming</a>
@@ -5391,8 +4939,7 @@ that is attached to this cache behavior.
     <dd>{{% md %}}Indicates whether you want to distribute
 media files in Microsoft Smooth Streaming format using the origin that is
 associated with this cache behavior.
-{{% /md %}}</dd>
-    <dt class="property-optional"
+{{% /md %}}</dd><dt class="property-optional"
             title="Optional">
         <span id="trustedsigners_csharp">
 <a href="#trustedsigners_csharp" style="color: inherit; text-decoration: inherit;">Trusted<wbr>Signers</a>
@@ -5402,14 +4949,11 @@ associated with this cache behavior.
     </dt>
     <dd>{{% md %}}List of AWS account IDs (or `self`) that you want to allow to create signed URLs for private content.
 See the [CloudFront User Guide](https://docs.aws.amazon.com/AmazonCloudFront/latest/DeveloperGuide/private-content-trusted-signers.html) for more information about this feature.
-{{% /md %}}</dd>
-</dl>
+{{% /md %}}</dd></dl>
 {{% /choosable %}}
 
 {{% choosable language go %}}
-<dl class="resources-properties">
-
-    <dt class="property-required"
+<dl class="resources-properties"><dt class="property-required"
             title="Required">
         <span id="allowedmethods_go">
 <a href="#allowedmethods_go" style="color: inherit; text-decoration: inherit;">Allowed<wbr>Methods</a>
@@ -5419,8 +4963,7 @@ See the [CloudFront User Guide](https://docs.aws.amazon.com/AmazonCloudFront/lat
     </dt>
     <dd>{{% md %}}Controls which HTTP methods CloudFront
 processes and forwards to your Amazon S3 bucket or your custom origin.
-{{% /md %}}</dd>
-    <dt class="property-required"
+{{% /md %}}</dd><dt class="property-required"
             title="Required">
         <span id="cachedmethods_go">
 <a href="#cachedmethods_go" style="color: inherit; text-decoration: inherit;">Cached<wbr>Methods</a>
@@ -5430,8 +4973,7 @@ processes and forwards to your Amazon S3 bucket or your custom origin.
     </dt>
     <dd>{{% md %}}Controls whether CloudFront caches the
 response to requests using the specified HTTP methods.
-{{% /md %}}</dd>
-    <dt class="property-required"
+{{% /md %}}</dd><dt class="property-required"
             title="Required">
         <span id="pathpattern_go">
 <a href="#pathpattern_go" style="color: inherit; text-decoration: inherit;">Path<wbr>Pattern</a>
@@ -5441,8 +4983,7 @@ response to requests using the specified HTTP methods.
     </dt>
     <dd>{{% md %}}The pattern (for example, `images/*.jpg)` that
 specifies which requests you want this cache behavior to apply to.
-{{% /md %}}</dd>
-    <dt class="property-required"
+{{% /md %}}</dd><dt class="property-required"
             title="Required">
         <span id="targetoriginid_go">
 <a href="#targetoriginid_go" style="color: inherit; text-decoration: inherit;">Target<wbr>Origin<wbr>Id</a>
@@ -5453,8 +4994,7 @@ specifies which requests you want this cache behavior to apply to.
     <dd>{{% md %}}The value of ID for the origin that you want
 CloudFront to route requests to when a request matches the path pattern
 either for a cache behavior or for the default cache behavior.
-{{% /md %}}</dd>
-    <dt class="property-required"
+{{% /md %}}</dd><dt class="property-required"
             title="Required">
         <span id="viewerprotocolpolicy_go">
 <a href="#viewerprotocolpolicy_go" style="color: inherit; text-decoration: inherit;">Viewer<wbr>Protocol<wbr>Policy</a>
@@ -5466,8 +5006,7 @@ either for a cache behavior or for the default cache behavior.
 protocol that users can use to access the files in the origin specified by
 TargetOriginId when a request matches the path pattern in PathPattern. One
 of `allow-all`, `https-only`, or `redirect-to-https`.
-{{% /md %}}</dd>
-    <dt class="property-optional"
+{{% /md %}}</dd><dt class="property-optional"
             title="Optional">
         <span id="cachepolicyid_go">
 <a href="#cachepolicyid_go" style="color: inherit; text-decoration: inherit;">Cache<wbr>Policy<wbr>Id</a>
@@ -5477,8 +5016,7 @@ of `allow-all`, `https-only`, or `redirect-to-https`.
     </dt>
     <dd>{{% md %}}The unique identifier of the cache policy that
 is attached to the cache behavior.
-{{% /md %}}</dd>
-    <dt class="property-optional"
+{{% /md %}}</dd><dt class="property-optional"
             title="Optional">
         <span id="compress_go">
 <a href="#compress_go" style="color: inherit; text-decoration: inherit;">Compress</a>
@@ -5489,8 +5027,7 @@ is attached to the cache behavior.
     <dd>{{% md %}}Whether you want CloudFront to automatically
 compress content for web requests that include `Accept-Encoding: gzip` in
 the request header (default: `false`).
-{{% /md %}}</dd>
-    <dt class="property-optional"
+{{% /md %}}</dd><dt class="property-optional"
             title="Optional">
         <span id="defaultttl_go">
 <a href="#defaultttl_go" style="color: inherit; text-decoration: inherit;">Default<wbr>Ttl</a>
@@ -5501,8 +5038,7 @@ the request header (default: `false`).
     <dd>{{% md %}}The default amount of time (in seconds) that an
 object is in a CloudFront cache before CloudFront forwards another request
 in the absence of an `Cache-Control max-age` or `Expires` header.
-{{% /md %}}</dd>
-    <dt class="property-optional"
+{{% /md %}}</dd><dt class="property-optional"
             title="Optional">
         <span id="fieldlevelencryptionid_go">
 <a href="#fieldlevelencryptionid_go" style="color: inherit; text-decoration: inherit;">Field<wbr>Level<wbr>Encryption<wbr>Id</a>
@@ -5511,8 +5047,7 @@ in the absence of an `Cache-Control max-age` or `Expires` header.
         <span class="property-type">string</span>
     </dt>
     <dd>{{% md %}}Field level encryption configuration ID
-{{% /md %}}</dd>
-    <dt class="property-optional"
+{{% /md %}}</dd><dt class="property-optional"
             title="Optional">
         <span id="forwardedvalues_go">
 <a href="#forwardedvalues_go" style="color: inherit; text-decoration: inherit;">Forwarded<wbr>Values</a>
@@ -5522,8 +5057,7 @@ in the absence of an `Cache-Control max-age` or `Expires` header.
     </dt>
     <dd>{{% md %}}The forwarded values configuration that specifies how CloudFront
 handles query strings, cookies and headers (maximum one).
-{{% /md %}}</dd>
-    <dt class="property-optional"
+{{% /md %}}</dd><dt class="property-optional"
             title="Optional">
         <span id="lambdafunctionassociations_go">
 <a href="#lambdafunctionassociations_go" style="color: inherit; text-decoration: inherit;">Lambda<wbr>Function<wbr>Associations</a>
@@ -5533,8 +5067,7 @@ handles query strings, cookies and headers (maximum one).
     </dt>
     <dd>{{% md %}}A config block that triggers a lambda
 function with specific actions (maximum 4).
-{{% /md %}}</dd>
-    <dt class="property-optional"
+{{% /md %}}</dd><dt class="property-optional"
             title="Optional">
         <span id="maxttl_go">
 <a href="#maxttl_go" style="color: inherit; text-decoration: inherit;">Max<wbr>Ttl</a>
@@ -5547,8 +5080,7 @@ object is in a CloudFront cache before CloudFront forwards another request
 to your origin to determine whether the object has been updated. Only
 effective in the presence of `Cache-Control max-age`, `Cache-Control
 s-maxage`, and `Expires` headers.
-{{% /md %}}</dd>
-    <dt class="property-optional"
+{{% /md %}}</dd><dt class="property-optional"
             title="Optional">
         <span id="minttl_go">
 <a href="#minttl_go" style="color: inherit; text-decoration: inherit;">Min<wbr>Ttl</a>
@@ -5559,8 +5091,7 @@ s-maxage`, and `Expires` headers.
     <dd>{{% md %}}The minimum amount of time that you want objects to
 stay in CloudFront caches before CloudFront queries your origin to see
 whether the object has been updated. Defaults to 0 seconds.
-{{% /md %}}</dd>
-    <dt class="property-optional"
+{{% /md %}}</dd><dt class="property-optional"
             title="Optional">
         <span id="originrequestpolicyid_go">
 <a href="#originrequestpolicyid_go" style="color: inherit; text-decoration: inherit;">Origin<wbr>Request<wbr>Policy<wbr>Id</a>
@@ -5570,8 +5101,7 @@ whether the object has been updated. Defaults to 0 seconds.
     </dt>
     <dd>{{% md %}}The unique identifier of the origin request policy
 that is attached to the behavior.
-{{% /md %}}</dd>
-    <dt class="property-optional"
+{{% /md %}}</dd><dt class="property-optional"
             title="Optional">
         <span id="realtimelogconfigarn_go">
 <a href="#realtimelogconfigarn_go" style="color: inherit; text-decoration: inherit;">Realtime<wbr>Log<wbr>Config<wbr>Arn</a>
@@ -5581,8 +5111,7 @@ that is attached to the behavior.
     </dt>
     <dd>{{% md %}}The ARN of the real-time log configuration
 that is attached to this cache behavior.
-{{% /md %}}</dd>
-    <dt class="property-optional"
+{{% /md %}}</dd><dt class="property-optional"
             title="Optional">
         <span id="smoothstreaming_go">
 <a href="#smoothstreaming_go" style="color: inherit; text-decoration: inherit;">Smooth<wbr>Streaming</a>
@@ -5593,8 +5122,7 @@ that is attached to this cache behavior.
     <dd>{{% md %}}Indicates whether you want to distribute
 media files in Microsoft Smooth Streaming format using the origin that is
 associated with this cache behavior.
-{{% /md %}}</dd>
-    <dt class="property-optional"
+{{% /md %}}</dd><dt class="property-optional"
             title="Optional">
         <span id="trustedsigners_go">
 <a href="#trustedsigners_go" style="color: inherit; text-decoration: inherit;">Trusted<wbr>Signers</a>
@@ -5604,14 +5132,11 @@ associated with this cache behavior.
     </dt>
     <dd>{{% md %}}List of AWS account IDs (or `self`) that you want to allow to create signed URLs for private content.
 See the [CloudFront User Guide](https://docs.aws.amazon.com/AmazonCloudFront/latest/DeveloperGuide/private-content-trusted-signers.html) for more information about this feature.
-{{% /md %}}</dd>
-</dl>
+{{% /md %}}</dd></dl>
 {{% /choosable %}}
 
 {{% choosable language nodejs %}}
-<dl class="resources-properties">
-
-    <dt class="property-required"
+<dl class="resources-properties"><dt class="property-required"
             title="Required">
         <span id="allowedmethods_nodejs">
 <a href="#allowedmethods_nodejs" style="color: inherit; text-decoration: inherit;">allowed<wbr>Methods</a>
@@ -5621,8 +5146,7 @@ See the [CloudFront User Guide](https://docs.aws.amazon.com/AmazonCloudFront/lat
     </dt>
     <dd>{{% md %}}Controls which HTTP methods CloudFront
 processes and forwards to your Amazon S3 bucket or your custom origin.
-{{% /md %}}</dd>
-    <dt class="property-required"
+{{% /md %}}</dd><dt class="property-required"
             title="Required">
         <span id="cachedmethods_nodejs">
 <a href="#cachedmethods_nodejs" style="color: inherit; text-decoration: inherit;">cached<wbr>Methods</a>
@@ -5632,8 +5156,7 @@ processes and forwards to your Amazon S3 bucket or your custom origin.
     </dt>
     <dd>{{% md %}}Controls whether CloudFront caches the
 response to requests using the specified HTTP methods.
-{{% /md %}}</dd>
-    <dt class="property-required"
+{{% /md %}}</dd><dt class="property-required"
             title="Required">
         <span id="pathpattern_nodejs">
 <a href="#pathpattern_nodejs" style="color: inherit; text-decoration: inherit;">path<wbr>Pattern</a>
@@ -5643,8 +5166,7 @@ response to requests using the specified HTTP methods.
     </dt>
     <dd>{{% md %}}The pattern (for example, `images/*.jpg)` that
 specifies which requests you want this cache behavior to apply to.
-{{% /md %}}</dd>
-    <dt class="property-required"
+{{% /md %}}</dd><dt class="property-required"
             title="Required">
         <span id="targetoriginid_nodejs">
 <a href="#targetoriginid_nodejs" style="color: inherit; text-decoration: inherit;">target<wbr>Origin<wbr>Id</a>
@@ -5655,8 +5177,7 @@ specifies which requests you want this cache behavior to apply to.
     <dd>{{% md %}}The value of ID for the origin that you want
 CloudFront to route requests to when a request matches the path pattern
 either for a cache behavior or for the default cache behavior.
-{{% /md %}}</dd>
-    <dt class="property-required"
+{{% /md %}}</dd><dt class="property-required"
             title="Required">
         <span id="viewerprotocolpolicy_nodejs">
 <a href="#viewerprotocolpolicy_nodejs" style="color: inherit; text-decoration: inherit;">viewer<wbr>Protocol<wbr>Policy</a>
@@ -5668,8 +5189,7 @@ either for a cache behavior or for the default cache behavior.
 protocol that users can use to access the files in the origin specified by
 TargetOriginId when a request matches the path pattern in PathPattern. One
 of `allow-all`, `https-only`, or `redirect-to-https`.
-{{% /md %}}</dd>
-    <dt class="property-optional"
+{{% /md %}}</dd><dt class="property-optional"
             title="Optional">
         <span id="cachepolicyid_nodejs">
 <a href="#cachepolicyid_nodejs" style="color: inherit; text-decoration: inherit;">cache<wbr>Policy<wbr>Id</a>
@@ -5679,8 +5199,7 @@ of `allow-all`, `https-only`, or `redirect-to-https`.
     </dt>
     <dd>{{% md %}}The unique identifier of the cache policy that
 is attached to the cache behavior.
-{{% /md %}}</dd>
-    <dt class="property-optional"
+{{% /md %}}</dd><dt class="property-optional"
             title="Optional">
         <span id="compress_nodejs">
 <a href="#compress_nodejs" style="color: inherit; text-decoration: inherit;">compress</a>
@@ -5691,8 +5210,7 @@ is attached to the cache behavior.
     <dd>{{% md %}}Whether you want CloudFront to automatically
 compress content for web requests that include `Accept-Encoding: gzip` in
 the request header (default: `false`).
-{{% /md %}}</dd>
-    <dt class="property-optional"
+{{% /md %}}</dd><dt class="property-optional"
             title="Optional">
         <span id="defaultttl_nodejs">
 <a href="#defaultttl_nodejs" style="color: inherit; text-decoration: inherit;">default<wbr>Ttl</a>
@@ -5703,8 +5221,7 @@ the request header (default: `false`).
     <dd>{{% md %}}The default amount of time (in seconds) that an
 object is in a CloudFront cache before CloudFront forwards another request
 in the absence of an `Cache-Control max-age` or `Expires` header.
-{{% /md %}}</dd>
-    <dt class="property-optional"
+{{% /md %}}</dd><dt class="property-optional"
             title="Optional">
         <span id="fieldlevelencryptionid_nodejs">
 <a href="#fieldlevelencryptionid_nodejs" style="color: inherit; text-decoration: inherit;">field<wbr>Level<wbr>Encryption<wbr>Id</a>
@@ -5713,8 +5230,7 @@ in the absence of an `Cache-Control max-age` or `Expires` header.
         <span class="property-type">string</span>
     </dt>
     <dd>{{% md %}}Field level encryption configuration ID
-{{% /md %}}</dd>
-    <dt class="property-optional"
+{{% /md %}}</dd><dt class="property-optional"
             title="Optional">
         <span id="forwardedvalues_nodejs">
 <a href="#forwardedvalues_nodejs" style="color: inherit; text-decoration: inherit;">forwarded<wbr>Values</a>
@@ -5724,8 +5240,7 @@ in the absence of an `Cache-Control max-age` or `Expires` header.
     </dt>
     <dd>{{% md %}}The forwarded values configuration that specifies how CloudFront
 handles query strings, cookies and headers (maximum one).
-{{% /md %}}</dd>
-    <dt class="property-optional"
+{{% /md %}}</dd><dt class="property-optional"
             title="Optional">
         <span id="lambdafunctionassociations_nodejs">
 <a href="#lambdafunctionassociations_nodejs" style="color: inherit; text-decoration: inherit;">lambda<wbr>Function<wbr>Associations</a>
@@ -5735,8 +5250,7 @@ handles query strings, cookies and headers (maximum one).
     </dt>
     <dd>{{% md %}}A config block that triggers a lambda
 function with specific actions (maximum 4).
-{{% /md %}}</dd>
-    <dt class="property-optional"
+{{% /md %}}</dd><dt class="property-optional"
             title="Optional">
         <span id="maxttl_nodejs">
 <a href="#maxttl_nodejs" style="color: inherit; text-decoration: inherit;">max<wbr>Ttl</a>
@@ -5749,8 +5263,7 @@ object is in a CloudFront cache before CloudFront forwards another request
 to your origin to determine whether the object has been updated. Only
 effective in the presence of `Cache-Control max-age`, `Cache-Control
 s-maxage`, and `Expires` headers.
-{{% /md %}}</dd>
-    <dt class="property-optional"
+{{% /md %}}</dd><dt class="property-optional"
             title="Optional">
         <span id="minttl_nodejs">
 <a href="#minttl_nodejs" style="color: inherit; text-decoration: inherit;">min<wbr>Ttl</a>
@@ -5761,8 +5274,7 @@ s-maxage`, and `Expires` headers.
     <dd>{{% md %}}The minimum amount of time that you want objects to
 stay in CloudFront caches before CloudFront queries your origin to see
 whether the object has been updated. Defaults to 0 seconds.
-{{% /md %}}</dd>
-    <dt class="property-optional"
+{{% /md %}}</dd><dt class="property-optional"
             title="Optional">
         <span id="originrequestpolicyid_nodejs">
 <a href="#originrequestpolicyid_nodejs" style="color: inherit; text-decoration: inherit;">origin<wbr>Request<wbr>Policy<wbr>Id</a>
@@ -5772,8 +5284,7 @@ whether the object has been updated. Defaults to 0 seconds.
     </dt>
     <dd>{{% md %}}The unique identifier of the origin request policy
 that is attached to the behavior.
-{{% /md %}}</dd>
-    <dt class="property-optional"
+{{% /md %}}</dd><dt class="property-optional"
             title="Optional">
         <span id="realtimelogconfigarn_nodejs">
 <a href="#realtimelogconfigarn_nodejs" style="color: inherit; text-decoration: inherit;">realtime<wbr>Log<wbr>Config<wbr>Arn</a>
@@ -5783,8 +5294,7 @@ that is attached to the behavior.
     </dt>
     <dd>{{% md %}}The ARN of the real-time log configuration
 that is attached to this cache behavior.
-{{% /md %}}</dd>
-    <dt class="property-optional"
+{{% /md %}}</dd><dt class="property-optional"
             title="Optional">
         <span id="smoothstreaming_nodejs">
 <a href="#smoothstreaming_nodejs" style="color: inherit; text-decoration: inherit;">smooth<wbr>Streaming</a>
@@ -5795,8 +5305,7 @@ that is attached to this cache behavior.
     <dd>{{% md %}}Indicates whether you want to distribute
 media files in Microsoft Smooth Streaming format using the origin that is
 associated with this cache behavior.
-{{% /md %}}</dd>
-    <dt class="property-optional"
+{{% /md %}}</dd><dt class="property-optional"
             title="Optional">
         <span id="trustedsigners_nodejs">
 <a href="#trustedsigners_nodejs" style="color: inherit; text-decoration: inherit;">trusted<wbr>Signers</a>
@@ -5806,14 +5315,11 @@ associated with this cache behavior.
     </dt>
     <dd>{{% md %}}List of AWS account IDs (or `self`) that you want to allow to create signed URLs for private content.
 See the [CloudFront User Guide](https://docs.aws.amazon.com/AmazonCloudFront/latest/DeveloperGuide/private-content-trusted-signers.html) for more information about this feature.
-{{% /md %}}</dd>
-</dl>
+{{% /md %}}</dd></dl>
 {{% /choosable %}}
 
 {{% choosable language python %}}
-<dl class="resources-properties">
-
-    <dt class="property-required"
+<dl class="resources-properties"><dt class="property-required"
             title="Required">
         <span id="allowed_methods_python">
 <a href="#allowed_methods_python" style="color: inherit; text-decoration: inherit;">allowed_<wbr>methods</a>
@@ -5823,8 +5329,7 @@ See the [CloudFront User Guide](https://docs.aws.amazon.com/AmazonCloudFront/lat
     </dt>
     <dd>{{% md %}}Controls which HTTP methods CloudFront
 processes and forwards to your Amazon S3 bucket or your custom origin.
-{{% /md %}}</dd>
-    <dt class="property-required"
+{{% /md %}}</dd><dt class="property-required"
             title="Required">
         <span id="cached_methods_python">
 <a href="#cached_methods_python" style="color: inherit; text-decoration: inherit;">cached_<wbr>methods</a>
@@ -5834,8 +5339,7 @@ processes and forwards to your Amazon S3 bucket or your custom origin.
     </dt>
     <dd>{{% md %}}Controls whether CloudFront caches the
 response to requests using the specified HTTP methods.
-{{% /md %}}</dd>
-    <dt class="property-required"
+{{% /md %}}</dd><dt class="property-required"
             title="Required">
         <span id="path_pattern_python">
 <a href="#path_pattern_python" style="color: inherit; text-decoration: inherit;">path_<wbr>pattern</a>
@@ -5845,8 +5349,7 @@ response to requests using the specified HTTP methods.
     </dt>
     <dd>{{% md %}}The pattern (for example, `images/*.jpg)` that
 specifies which requests you want this cache behavior to apply to.
-{{% /md %}}</dd>
-    <dt class="property-required"
+{{% /md %}}</dd><dt class="property-required"
             title="Required">
         <span id="target_origin_id_python">
 <a href="#target_origin_id_python" style="color: inherit; text-decoration: inherit;">target_<wbr>origin_<wbr>id</a>
@@ -5857,8 +5360,7 @@ specifies which requests you want this cache behavior to apply to.
     <dd>{{% md %}}The value of ID for the origin that you want
 CloudFront to route requests to when a request matches the path pattern
 either for a cache behavior or for the default cache behavior.
-{{% /md %}}</dd>
-    <dt class="property-required"
+{{% /md %}}</dd><dt class="property-required"
             title="Required">
         <span id="viewer_protocol_policy_python">
 <a href="#viewer_protocol_policy_python" style="color: inherit; text-decoration: inherit;">viewer_<wbr>protocol_<wbr>policy</a>
@@ -5870,8 +5372,7 @@ either for a cache behavior or for the default cache behavior.
 protocol that users can use to access the files in the origin specified by
 TargetOriginId when a request matches the path pattern in PathPattern. One
 of `allow-all`, `https-only`, or `redirect-to-https`.
-{{% /md %}}</dd>
-    <dt class="property-optional"
+{{% /md %}}</dd><dt class="property-optional"
             title="Optional">
         <span id="cache_policy_id_python">
 <a href="#cache_policy_id_python" style="color: inherit; text-decoration: inherit;">cache_<wbr>policy_<wbr>id</a>
@@ -5881,8 +5382,7 @@ of `allow-all`, `https-only`, or `redirect-to-https`.
     </dt>
     <dd>{{% md %}}The unique identifier of the cache policy that
 is attached to the cache behavior.
-{{% /md %}}</dd>
-    <dt class="property-optional"
+{{% /md %}}</dd><dt class="property-optional"
             title="Optional">
         <span id="compress_python">
 <a href="#compress_python" style="color: inherit; text-decoration: inherit;">compress</a>
@@ -5893,8 +5393,7 @@ is attached to the cache behavior.
     <dd>{{% md %}}Whether you want CloudFront to automatically
 compress content for web requests that include `Accept-Encoding: gzip` in
 the request header (default: `false`).
-{{% /md %}}</dd>
-    <dt class="property-optional"
+{{% /md %}}</dd><dt class="property-optional"
             title="Optional">
         <span id="default_ttl_python">
 <a href="#default_ttl_python" style="color: inherit; text-decoration: inherit;">default_<wbr>ttl</a>
@@ -5905,8 +5404,7 @@ the request header (default: `false`).
     <dd>{{% md %}}The default amount of time (in seconds) that an
 object is in a CloudFront cache before CloudFront forwards another request
 in the absence of an `Cache-Control max-age` or `Expires` header.
-{{% /md %}}</dd>
-    <dt class="property-optional"
+{{% /md %}}</dd><dt class="property-optional"
             title="Optional">
         <span id="field_level_encryption_id_python">
 <a href="#field_level_encryption_id_python" style="color: inherit; text-decoration: inherit;">field_<wbr>level_<wbr>encryption_<wbr>id</a>
@@ -5915,8 +5413,7 @@ in the absence of an `Cache-Control max-age` or `Expires` header.
         <span class="property-type">str</span>
     </dt>
     <dd>{{% md %}}Field level encryption configuration ID
-{{% /md %}}</dd>
-    <dt class="property-optional"
+{{% /md %}}</dd><dt class="property-optional"
             title="Optional">
         <span id="forwarded_values_python">
 <a href="#forwarded_values_python" style="color: inherit; text-decoration: inherit;">forwarded_<wbr>values</a>
@@ -5926,8 +5423,7 @@ in the absence of an `Cache-Control max-age` or `Expires` header.
     </dt>
     <dd>{{% md %}}The forwarded values configuration that specifies how CloudFront
 handles query strings, cookies and headers (maximum one).
-{{% /md %}}</dd>
-    <dt class="property-optional"
+{{% /md %}}</dd><dt class="property-optional"
             title="Optional">
         <span id="lambda_function_associations_python">
 <a href="#lambda_function_associations_python" style="color: inherit; text-decoration: inherit;">lambda_<wbr>function_<wbr>associations</a>
@@ -5937,8 +5433,7 @@ handles query strings, cookies and headers (maximum one).
     </dt>
     <dd>{{% md %}}A config block that triggers a lambda
 function with specific actions (maximum 4).
-{{% /md %}}</dd>
-    <dt class="property-optional"
+{{% /md %}}</dd><dt class="property-optional"
             title="Optional">
         <span id="max_ttl_python">
 <a href="#max_ttl_python" style="color: inherit; text-decoration: inherit;">max_<wbr>ttl</a>
@@ -5951,8 +5446,7 @@ object is in a CloudFront cache before CloudFront forwards another request
 to your origin to determine whether the object has been updated. Only
 effective in the presence of `Cache-Control max-age`, `Cache-Control
 s-maxage`, and `Expires` headers.
-{{% /md %}}</dd>
-    <dt class="property-optional"
+{{% /md %}}</dd><dt class="property-optional"
             title="Optional">
         <span id="min_ttl_python">
 <a href="#min_ttl_python" style="color: inherit; text-decoration: inherit;">min_<wbr>ttl</a>
@@ -5963,8 +5457,7 @@ s-maxage`, and `Expires` headers.
     <dd>{{% md %}}The minimum amount of time that you want objects to
 stay in CloudFront caches before CloudFront queries your origin to see
 whether the object has been updated. Defaults to 0 seconds.
-{{% /md %}}</dd>
-    <dt class="property-optional"
+{{% /md %}}</dd><dt class="property-optional"
             title="Optional">
         <span id="origin_request_policy_id_python">
 <a href="#origin_request_policy_id_python" style="color: inherit; text-decoration: inherit;">origin_<wbr>request_<wbr>policy_<wbr>id</a>
@@ -5974,8 +5467,7 @@ whether the object has been updated. Defaults to 0 seconds.
     </dt>
     <dd>{{% md %}}The unique identifier of the origin request policy
 that is attached to the behavior.
-{{% /md %}}</dd>
-    <dt class="property-optional"
+{{% /md %}}</dd><dt class="property-optional"
             title="Optional">
         <span id="realtime_log_config_arn_python">
 <a href="#realtime_log_config_arn_python" style="color: inherit; text-decoration: inherit;">realtime_<wbr>log_<wbr>config_<wbr>arn</a>
@@ -5985,8 +5477,7 @@ that is attached to the behavior.
     </dt>
     <dd>{{% md %}}The ARN of the real-time log configuration
 that is attached to this cache behavior.
-{{% /md %}}</dd>
-    <dt class="property-optional"
+{{% /md %}}</dd><dt class="property-optional"
             title="Optional">
         <span id="smooth_streaming_python">
 <a href="#smooth_streaming_python" style="color: inherit; text-decoration: inherit;">smooth_<wbr>streaming</a>
@@ -5997,8 +5488,7 @@ that is attached to this cache behavior.
     <dd>{{% md %}}Indicates whether you want to distribute
 media files in Microsoft Smooth Streaming format using the origin that is
 associated with this cache behavior.
-{{% /md %}}</dd>
-    <dt class="property-optional"
+{{% /md %}}</dd><dt class="property-optional"
             title="Optional">
         <span id="trusted_signers_python">
 <a href="#trusted_signers_python" style="color: inherit; text-decoration: inherit;">trusted_<wbr>signers</a>
@@ -6008,16 +5498,13 @@ associated with this cache behavior.
     </dt>
     <dd>{{% md %}}List of AWS account IDs (or `self`) that you want to allow to create signed URLs for private content.
 See the [CloudFront User Guide](https://docs.aws.amazon.com/AmazonCloudFront/latest/DeveloperGuide/private-content-trusted-signers.html) for more information about this feature.
-{{% /md %}}</dd>
-</dl>
+{{% /md %}}</dd></dl>
 {{% /choosable %}}
 
 <h4 id="distributionorderedcachebehaviorforwardedvalues">Distribution<wbr>Ordered<wbr>Cache<wbr>Behavior<wbr>Forwarded<wbr>Values</h4>
 
 {{% choosable language csharp %}}
-<dl class="resources-properties">
-
-    <dt class="property-required"
+<dl class="resources-properties"><dt class="property-required"
             title="Required">
         <span id="cookies_csharp">
 <a href="#cookies_csharp" style="color: inherit; text-decoration: inherit;">Cookies</a>
@@ -6027,8 +5514,7 @@ See the [CloudFront User Guide](https://docs.aws.amazon.com/AmazonCloudFront/lat
     </dt>
     <dd>{{% md %}}The forwarded values cookies
 that specifies how CloudFront handles cookies (maximum one).
-{{% /md %}}</dd>
-    <dt class="property-required"
+{{% /md %}}</dd><dt class="property-required"
             title="Required">
         <span id="querystring_csharp">
 <a href="#querystring_csharp" style="color: inherit; text-decoration: inherit;">Query<wbr>String</a>
@@ -6038,8 +5524,7 @@ that specifies how CloudFront handles cookies (maximum one).
     </dt>
     <dd>{{% md %}}Indicates whether you want CloudFront to forward
 query strings to the origin that is associated with this cache behavior.
-{{% /md %}}</dd>
-    <dt class="property-optional"
+{{% /md %}}</dd><dt class="property-optional"
             title="Optional">
         <span id="headers_csharp">
 <a href="#headers_csharp" style="color: inherit; text-decoration: inherit;">Headers</a>
@@ -6050,8 +5535,7 @@ query strings to the origin that is associated with this cache behavior.
     <dd>{{% md %}}Specifies the Headers, if any, that you want
 CloudFront to vary upon for this cache behavior. Specify `*` to include all
 headers.
-{{% /md %}}</dd>
-    <dt class="property-optional"
+{{% /md %}}</dd><dt class="property-optional"
             title="Optional">
         <span id="querystringcachekeys_csharp">
 <a href="#querystringcachekeys_csharp" style="color: inherit; text-decoration: inherit;">Query<wbr>String<wbr>Cache<wbr>Keys</a>
@@ -6063,14 +5547,11 @@ headers.
 `true` for `query_string`, all query strings are forwarded, however only the
 query string keys listed in this argument are cached. When omitted with a
 value of `true` for `query_string`, all query string keys are cached.
-{{% /md %}}</dd>
-</dl>
+{{% /md %}}</dd></dl>
 {{% /choosable %}}
 
 {{% choosable language go %}}
-<dl class="resources-properties">
-
-    <dt class="property-required"
+<dl class="resources-properties"><dt class="property-required"
             title="Required">
         <span id="cookies_go">
 <a href="#cookies_go" style="color: inherit; text-decoration: inherit;">Cookies</a>
@@ -6080,8 +5561,7 @@ value of `true` for `query_string`, all query string keys are cached.
     </dt>
     <dd>{{% md %}}The forwarded values cookies
 that specifies how CloudFront handles cookies (maximum one).
-{{% /md %}}</dd>
-    <dt class="property-required"
+{{% /md %}}</dd><dt class="property-required"
             title="Required">
         <span id="querystring_go">
 <a href="#querystring_go" style="color: inherit; text-decoration: inherit;">Query<wbr>String</a>
@@ -6091,8 +5571,7 @@ that specifies how CloudFront handles cookies (maximum one).
     </dt>
     <dd>{{% md %}}Indicates whether you want CloudFront to forward
 query strings to the origin that is associated with this cache behavior.
-{{% /md %}}</dd>
-    <dt class="property-optional"
+{{% /md %}}</dd><dt class="property-optional"
             title="Optional">
         <span id="headers_go">
 <a href="#headers_go" style="color: inherit; text-decoration: inherit;">Headers</a>
@@ -6103,8 +5582,7 @@ query strings to the origin that is associated with this cache behavior.
     <dd>{{% md %}}Specifies the Headers, if any, that you want
 CloudFront to vary upon for this cache behavior. Specify `*` to include all
 headers.
-{{% /md %}}</dd>
-    <dt class="property-optional"
+{{% /md %}}</dd><dt class="property-optional"
             title="Optional">
         <span id="querystringcachekeys_go">
 <a href="#querystringcachekeys_go" style="color: inherit; text-decoration: inherit;">Query<wbr>String<wbr>Cache<wbr>Keys</a>
@@ -6116,14 +5594,11 @@ headers.
 `true` for `query_string`, all query strings are forwarded, however only the
 query string keys listed in this argument are cached. When omitted with a
 value of `true` for `query_string`, all query string keys are cached.
-{{% /md %}}</dd>
-</dl>
+{{% /md %}}</dd></dl>
 {{% /choosable %}}
 
 {{% choosable language nodejs %}}
-<dl class="resources-properties">
-
-    <dt class="property-required"
+<dl class="resources-properties"><dt class="property-required"
             title="Required">
         <span id="cookies_nodejs">
 <a href="#cookies_nodejs" style="color: inherit; text-decoration: inherit;">cookies</a>
@@ -6133,8 +5608,7 @@ value of `true` for `query_string`, all query string keys are cached.
     </dt>
     <dd>{{% md %}}The forwarded values cookies
 that specifies how CloudFront handles cookies (maximum one).
-{{% /md %}}</dd>
-    <dt class="property-required"
+{{% /md %}}</dd><dt class="property-required"
             title="Required">
         <span id="querystring_nodejs">
 <a href="#querystring_nodejs" style="color: inherit; text-decoration: inherit;">query<wbr>String</a>
@@ -6144,8 +5618,7 @@ that specifies how CloudFront handles cookies (maximum one).
     </dt>
     <dd>{{% md %}}Indicates whether you want CloudFront to forward
 query strings to the origin that is associated with this cache behavior.
-{{% /md %}}</dd>
-    <dt class="property-optional"
+{{% /md %}}</dd><dt class="property-optional"
             title="Optional">
         <span id="headers_nodejs">
 <a href="#headers_nodejs" style="color: inherit; text-decoration: inherit;">headers</a>
@@ -6156,8 +5629,7 @@ query strings to the origin that is associated with this cache behavior.
     <dd>{{% md %}}Specifies the Headers, if any, that you want
 CloudFront to vary upon for this cache behavior. Specify `*` to include all
 headers.
-{{% /md %}}</dd>
-    <dt class="property-optional"
+{{% /md %}}</dd><dt class="property-optional"
             title="Optional">
         <span id="querystringcachekeys_nodejs">
 <a href="#querystringcachekeys_nodejs" style="color: inherit; text-decoration: inherit;">query<wbr>String<wbr>Cache<wbr>Keys</a>
@@ -6169,14 +5641,11 @@ headers.
 `true` for `query_string`, all query strings are forwarded, however only the
 query string keys listed in this argument are cached. When omitted with a
 value of `true` for `query_string`, all query string keys are cached.
-{{% /md %}}</dd>
-</dl>
+{{% /md %}}</dd></dl>
 {{% /choosable %}}
 
 {{% choosable language python %}}
-<dl class="resources-properties">
-
-    <dt class="property-required"
+<dl class="resources-properties"><dt class="property-required"
             title="Required">
         <span id="cookies_python">
 <a href="#cookies_python" style="color: inherit; text-decoration: inherit;">cookies</a>
@@ -6186,8 +5655,7 @@ value of `true` for `query_string`, all query string keys are cached.
     </dt>
     <dd>{{% md %}}The forwarded values cookies
 that specifies how CloudFront handles cookies (maximum one).
-{{% /md %}}</dd>
-    <dt class="property-required"
+{{% /md %}}</dd><dt class="property-required"
             title="Required">
         <span id="query_string_python">
 <a href="#query_string_python" style="color: inherit; text-decoration: inherit;">query_<wbr>string</a>
@@ -6197,8 +5665,7 @@ that specifies how CloudFront handles cookies (maximum one).
     </dt>
     <dd>{{% md %}}Indicates whether you want CloudFront to forward
 query strings to the origin that is associated with this cache behavior.
-{{% /md %}}</dd>
-    <dt class="property-optional"
+{{% /md %}}</dd><dt class="property-optional"
             title="Optional">
         <span id="headers_python">
 <a href="#headers_python" style="color: inherit; text-decoration: inherit;">headers</a>
@@ -6209,8 +5676,7 @@ query strings to the origin that is associated with this cache behavior.
     <dd>{{% md %}}Specifies the Headers, if any, that you want
 CloudFront to vary upon for this cache behavior. Specify `*` to include all
 headers.
-{{% /md %}}</dd>
-    <dt class="property-optional"
+{{% /md %}}</dd><dt class="property-optional"
             title="Optional">
         <span id="query_string_cache_keys_python">
 <a href="#query_string_cache_keys_python" style="color: inherit; text-decoration: inherit;">query_<wbr>string_<wbr>cache_<wbr>keys</a>
@@ -6222,16 +5688,13 @@ headers.
 `true` for `query_string`, all query strings are forwarded, however only the
 query string keys listed in this argument are cached. When omitted with a
 value of `true` for `query_string`, all query string keys are cached.
-{{% /md %}}</dd>
-</dl>
+{{% /md %}}</dd></dl>
 {{% /choosable %}}
 
 <h4 id="distributionorderedcachebehaviorforwardedvaluescookies">Distribution<wbr>Ordered<wbr>Cache<wbr>Behavior<wbr>Forwarded<wbr>Values<wbr>Cookies</h4>
 
 {{% choosable language csharp %}}
-<dl class="resources-properties">
-
-    <dt class="property-required"
+<dl class="resources-properties"><dt class="property-required"
             title="Required">
         <span id="forward_csharp">
 <a href="#forward_csharp" style="color: inherit; text-decoration: inherit;">Forward</a>
@@ -6243,8 +5706,7 @@ value of `true` for `query_string`, all query string keys are cached.
 cookies to the origin that is associated with this cache behavior. You can
 specify `all`, `none` or `whitelist`. If `whitelist`, you must include the
 subsequent `whitelisted_names`
-{{% /md %}}</dd>
-    <dt class="property-optional"
+{{% /md %}}</dd><dt class="property-optional"
             title="Optional">
         <span id="whitelistednames_csharp">
 <a href="#whitelistednames_csharp" style="color: inherit; text-decoration: inherit;">Whitelisted<wbr>Names</a>
@@ -6255,14 +5717,11 @@ subsequent `whitelisted_names`
     <dd>{{% md %}}If you have specified `whitelist` to
 `forward`, the whitelisted cookies that you want CloudFront to forward to
 your origin.
-{{% /md %}}</dd>
-</dl>
+{{% /md %}}</dd></dl>
 {{% /choosable %}}
 
 {{% choosable language go %}}
-<dl class="resources-properties">
-
-    <dt class="property-required"
+<dl class="resources-properties"><dt class="property-required"
             title="Required">
         <span id="forward_go">
 <a href="#forward_go" style="color: inherit; text-decoration: inherit;">Forward</a>
@@ -6274,8 +5733,7 @@ your origin.
 cookies to the origin that is associated with this cache behavior. You can
 specify `all`, `none` or `whitelist`. If `whitelist`, you must include the
 subsequent `whitelisted_names`
-{{% /md %}}</dd>
-    <dt class="property-optional"
+{{% /md %}}</dd><dt class="property-optional"
             title="Optional">
         <span id="whitelistednames_go">
 <a href="#whitelistednames_go" style="color: inherit; text-decoration: inherit;">Whitelisted<wbr>Names</a>
@@ -6286,14 +5744,11 @@ subsequent `whitelisted_names`
     <dd>{{% md %}}If you have specified `whitelist` to
 `forward`, the whitelisted cookies that you want CloudFront to forward to
 your origin.
-{{% /md %}}</dd>
-</dl>
+{{% /md %}}</dd></dl>
 {{% /choosable %}}
 
 {{% choosable language nodejs %}}
-<dl class="resources-properties">
-
-    <dt class="property-required"
+<dl class="resources-properties"><dt class="property-required"
             title="Required">
         <span id="forward_nodejs">
 <a href="#forward_nodejs" style="color: inherit; text-decoration: inherit;">forward</a>
@@ -6305,8 +5760,7 @@ your origin.
 cookies to the origin that is associated with this cache behavior. You can
 specify `all`, `none` or `whitelist`. If `whitelist`, you must include the
 subsequent `whitelisted_names`
-{{% /md %}}</dd>
-    <dt class="property-optional"
+{{% /md %}}</dd><dt class="property-optional"
             title="Optional">
         <span id="whitelistednames_nodejs">
 <a href="#whitelistednames_nodejs" style="color: inherit; text-decoration: inherit;">whitelisted<wbr>Names</a>
@@ -6317,14 +5771,11 @@ subsequent `whitelisted_names`
     <dd>{{% md %}}If you have specified `whitelist` to
 `forward`, the whitelisted cookies that you want CloudFront to forward to
 your origin.
-{{% /md %}}</dd>
-</dl>
+{{% /md %}}</dd></dl>
 {{% /choosable %}}
 
 {{% choosable language python %}}
-<dl class="resources-properties">
-
-    <dt class="property-required"
+<dl class="resources-properties"><dt class="property-required"
             title="Required">
         <span id="forward_python">
 <a href="#forward_python" style="color: inherit; text-decoration: inherit;">forward</a>
@@ -6336,8 +5787,7 @@ your origin.
 cookies to the origin that is associated with this cache behavior. You can
 specify `all`, `none` or `whitelist`. If `whitelist`, you must include the
 subsequent `whitelisted_names`
-{{% /md %}}</dd>
-    <dt class="property-optional"
+{{% /md %}}</dd><dt class="property-optional"
             title="Optional">
         <span id="whitelisted_names_python">
 <a href="#whitelisted_names_python" style="color: inherit; text-decoration: inherit;">whitelisted_<wbr>names</a>
@@ -6348,16 +5798,13 @@ subsequent `whitelisted_names`
     <dd>{{% md %}}If you have specified `whitelist` to
 `forward`, the whitelisted cookies that you want CloudFront to forward to
 your origin.
-{{% /md %}}</dd>
-</dl>
+{{% /md %}}</dd></dl>
 {{% /choosable %}}
 
 <h4 id="distributionorderedcachebehaviorlambdafunctionassociation">Distribution<wbr>Ordered<wbr>Cache<wbr>Behavior<wbr>Lambda<wbr>Function<wbr>Association</h4>
 
 {{% choosable language csharp %}}
-<dl class="resources-properties">
-
-    <dt class="property-required"
+<dl class="resources-properties"><dt class="property-required"
             title="Required">
         <span id="eventtype_csharp">
 <a href="#eventtype_csharp" style="color: inherit; text-decoration: inherit;">Event<wbr>Type</a>
@@ -6368,8 +5815,7 @@ your origin.
     <dd>{{% md %}}The specific event to trigger this function.
 Valid values: `viewer-request`, `origin-request`, `viewer-response`,
 `origin-response`
-{{% /md %}}</dd>
-    <dt class="property-required"
+{{% /md %}}</dd><dt class="property-required"
             title="Required">
         <span id="lambdaarn_csharp">
 <a href="#lambdaarn_csharp" style="color: inherit; text-decoration: inherit;">Lambda<wbr>Arn</a>
@@ -6378,8 +5824,7 @@ Valid values: `viewer-request`, `origin-request`, `viewer-response`,
         <span class="property-type">string</span>
     </dt>
     <dd>{{% md %}}ARN of the Lambda function.
-{{% /md %}}</dd>
-    <dt class="property-optional"
+{{% /md %}}</dd><dt class="property-optional"
             title="Optional">
         <span id="includebody_csharp">
 <a href="#includebody_csharp" style="color: inherit; text-decoration: inherit;">Include<wbr>Body</a>
@@ -6388,14 +5833,11 @@ Valid values: `viewer-request`, `origin-request`, `viewer-response`,
         <span class="property-type">bool</span>
     </dt>
     <dd>{{% md %}}When set to true it exposes the request body to the lambda function. Defaults to false. Valid values: `true`, `false`.
-{{% /md %}}</dd>
-</dl>
+{{% /md %}}</dd></dl>
 {{% /choosable %}}
 
 {{% choosable language go %}}
-<dl class="resources-properties">
-
-    <dt class="property-required"
+<dl class="resources-properties"><dt class="property-required"
             title="Required">
         <span id="eventtype_go">
 <a href="#eventtype_go" style="color: inherit; text-decoration: inherit;">Event<wbr>Type</a>
@@ -6406,8 +5848,7 @@ Valid values: `viewer-request`, `origin-request`, `viewer-response`,
     <dd>{{% md %}}The specific event to trigger this function.
 Valid values: `viewer-request`, `origin-request`, `viewer-response`,
 `origin-response`
-{{% /md %}}</dd>
-    <dt class="property-required"
+{{% /md %}}</dd><dt class="property-required"
             title="Required">
         <span id="lambdaarn_go">
 <a href="#lambdaarn_go" style="color: inherit; text-decoration: inherit;">Lambda<wbr>Arn</a>
@@ -6416,8 +5857,7 @@ Valid values: `viewer-request`, `origin-request`, `viewer-response`,
         <span class="property-type">string</span>
     </dt>
     <dd>{{% md %}}ARN of the Lambda function.
-{{% /md %}}</dd>
-    <dt class="property-optional"
+{{% /md %}}</dd><dt class="property-optional"
             title="Optional">
         <span id="includebody_go">
 <a href="#includebody_go" style="color: inherit; text-decoration: inherit;">Include<wbr>Body</a>
@@ -6426,14 +5866,11 @@ Valid values: `viewer-request`, `origin-request`, `viewer-response`,
         <span class="property-type">bool</span>
     </dt>
     <dd>{{% md %}}When set to true it exposes the request body to the lambda function. Defaults to false. Valid values: `true`, `false`.
-{{% /md %}}</dd>
-</dl>
+{{% /md %}}</dd></dl>
 {{% /choosable %}}
 
 {{% choosable language nodejs %}}
-<dl class="resources-properties">
-
-    <dt class="property-required"
+<dl class="resources-properties"><dt class="property-required"
             title="Required">
         <span id="eventtype_nodejs">
 <a href="#eventtype_nodejs" style="color: inherit; text-decoration: inherit;">event<wbr>Type</a>
@@ -6444,8 +5881,7 @@ Valid values: `viewer-request`, `origin-request`, `viewer-response`,
     <dd>{{% md %}}The specific event to trigger this function.
 Valid values: `viewer-request`, `origin-request`, `viewer-response`,
 `origin-response`
-{{% /md %}}</dd>
-    <dt class="property-required"
+{{% /md %}}</dd><dt class="property-required"
             title="Required">
         <span id="lambdaarn_nodejs">
 <a href="#lambdaarn_nodejs" style="color: inherit; text-decoration: inherit;">lambda<wbr>Arn</a>
@@ -6454,8 +5890,7 @@ Valid values: `viewer-request`, `origin-request`, `viewer-response`,
         <span class="property-type">string</span>
     </dt>
     <dd>{{% md %}}ARN of the Lambda function.
-{{% /md %}}</dd>
-    <dt class="property-optional"
+{{% /md %}}</dd><dt class="property-optional"
             title="Optional">
         <span id="includebody_nodejs">
 <a href="#includebody_nodejs" style="color: inherit; text-decoration: inherit;">include<wbr>Body</a>
@@ -6464,14 +5899,11 @@ Valid values: `viewer-request`, `origin-request`, `viewer-response`,
         <span class="property-type">boolean</span>
     </dt>
     <dd>{{% md %}}When set to true it exposes the request body to the lambda function. Defaults to false. Valid values: `true`, `false`.
-{{% /md %}}</dd>
-</dl>
+{{% /md %}}</dd></dl>
 {{% /choosable %}}
 
 {{% choosable language python %}}
-<dl class="resources-properties">
-
-    <dt class="property-required"
+<dl class="resources-properties"><dt class="property-required"
             title="Required">
         <span id="event_type_python">
 <a href="#event_type_python" style="color: inherit; text-decoration: inherit;">event_<wbr>type</a>
@@ -6482,8 +5914,7 @@ Valid values: `viewer-request`, `origin-request`, `viewer-response`,
     <dd>{{% md %}}The specific event to trigger this function.
 Valid values: `viewer-request`, `origin-request`, `viewer-response`,
 `origin-response`
-{{% /md %}}</dd>
-    <dt class="property-required"
+{{% /md %}}</dd><dt class="property-required"
             title="Required">
         <span id="lambda_arn_python">
 <a href="#lambda_arn_python" style="color: inherit; text-decoration: inherit;">lambda_<wbr>arn</a>
@@ -6492,8 +5923,7 @@ Valid values: `viewer-request`, `origin-request`, `viewer-response`,
         <span class="property-type">str</span>
     </dt>
     <dd>{{% md %}}ARN of the Lambda function.
-{{% /md %}}</dd>
-    <dt class="property-optional"
+{{% /md %}}</dd><dt class="property-optional"
             title="Optional">
         <span id="include_body_python">
 <a href="#include_body_python" style="color: inherit; text-decoration: inherit;">include_<wbr>body</a>
@@ -6502,16 +5932,13 @@ Valid values: `viewer-request`, `origin-request`, `viewer-response`,
         <span class="property-type">bool</span>
     </dt>
     <dd>{{% md %}}When set to true it exposes the request body to the lambda function. Defaults to false. Valid values: `true`, `false`.
-{{% /md %}}</dd>
-</dl>
+{{% /md %}}</dd></dl>
 {{% /choosable %}}
 
 <h4 id="distributionorigin">Distribution<wbr>Origin</h4>
 
 {{% choosable language csharp %}}
-<dl class="resources-properties">
-
-    <dt class="property-required"
+<dl class="resources-properties"><dt class="property-required"
             title="Required">
         <span id="domainname_csharp">
 <a href="#domainname_csharp" style="color: inherit; text-decoration: inherit;">Domain<wbr>Name</a>
@@ -6521,8 +5948,7 @@ Valid values: `viewer-request`, `origin-request`, `viewer-response`,
     </dt>
     <dd>{{% md %}}The DNS domain name of either the S3 bucket, or
 web site of your custom origin.
-{{% /md %}}</dd>
-    <dt class="property-required"
+{{% /md %}}</dd><dt class="property-required"
             title="Required">
         <span id="originid_csharp">
 <a href="#originid_csharp" style="color: inherit; text-decoration: inherit;">Origin<wbr>Id</a>
@@ -6531,8 +5957,7 @@ web site of your custom origin.
         <span class="property-type">string</span>
     </dt>
     <dd>{{% md %}}The unique identifier of the member origin
-{{% /md %}}</dd>
-    <dt class="property-optional"
+{{% /md %}}</dd><dt class="property-optional"
             title="Optional">
         <span id="customheaders_csharp">
 <a href="#customheaders_csharp" style="color: inherit; text-decoration: inherit;">Custom<wbr>Headers</a>
@@ -6543,8 +5968,7 @@ web site of your custom origin.
     <dd>{{% md %}}One or more sub-resources with `name` and
 `value` parameters that specify header data that will be sent to the origin
 (multiples allowed).
-{{% /md %}}</dd>
-    <dt class="property-optional"
+{{% /md %}}</dd><dt class="property-optional"
             title="Optional">
         <span id="customoriginconfig_csharp">
 <a href="#customoriginconfig_csharp" style="color: inherit; text-decoration: inherit;">Custom<wbr>Origin<wbr>Config</a>
@@ -6555,8 +5979,7 @@ web site of your custom origin.
     <dd>{{% md %}}The CloudFront custom
 origin configuration information. If an S3
 origin is required, use `s3_origin_config` instead.
-{{% /md %}}</dd>
-    <dt class="property-optional"
+{{% /md %}}</dd><dt class="property-optional"
             title="Optional">
         <span id="originpath_csharp">
 <a href="#originpath_csharp" style="color: inherit; text-decoration: inherit;">Origin<wbr>Path</a>
@@ -6567,8 +5990,7 @@ origin is required, use `s3_origin_config` instead.
     <dd>{{% md %}}An optional element that causes CloudFront to
 request your content from a directory in your Amazon S3 bucket or your
 custom origin.
-{{% /md %}}</dd>
-    <dt class="property-optional"
+{{% /md %}}</dd><dt class="property-optional"
             title="Optional">
         <span id="s3originconfig_csharp">
 <a href="#s3originconfig_csharp" style="color: inherit; text-decoration: inherit;">S3Origin<wbr>Config</a>
@@ -6579,14 +6001,11 @@ custom origin.
     <dd>{{% md %}}The CloudFront S3 origin
 configuration information. If a custom origin is required, use
 `custom_origin_config` instead.
-{{% /md %}}</dd>
-</dl>
+{{% /md %}}</dd></dl>
 {{% /choosable %}}
 
 {{% choosable language go %}}
-<dl class="resources-properties">
-
-    <dt class="property-required"
+<dl class="resources-properties"><dt class="property-required"
             title="Required">
         <span id="domainname_go">
 <a href="#domainname_go" style="color: inherit; text-decoration: inherit;">Domain<wbr>Name</a>
@@ -6596,8 +6015,7 @@ configuration information. If a custom origin is required, use
     </dt>
     <dd>{{% md %}}The DNS domain name of either the S3 bucket, or
 web site of your custom origin.
-{{% /md %}}</dd>
-    <dt class="property-required"
+{{% /md %}}</dd><dt class="property-required"
             title="Required">
         <span id="originid_go">
 <a href="#originid_go" style="color: inherit; text-decoration: inherit;">Origin<wbr>Id</a>
@@ -6606,8 +6024,7 @@ web site of your custom origin.
         <span class="property-type">string</span>
     </dt>
     <dd>{{% md %}}The unique identifier of the member origin
-{{% /md %}}</dd>
-    <dt class="property-optional"
+{{% /md %}}</dd><dt class="property-optional"
             title="Optional">
         <span id="customheaders_go">
 <a href="#customheaders_go" style="color: inherit; text-decoration: inherit;">Custom<wbr>Headers</a>
@@ -6618,8 +6035,7 @@ web site of your custom origin.
     <dd>{{% md %}}One or more sub-resources with `name` and
 `value` parameters that specify header data that will be sent to the origin
 (multiples allowed).
-{{% /md %}}</dd>
-    <dt class="property-optional"
+{{% /md %}}</dd><dt class="property-optional"
             title="Optional">
         <span id="customoriginconfig_go">
 <a href="#customoriginconfig_go" style="color: inherit; text-decoration: inherit;">Custom<wbr>Origin<wbr>Config</a>
@@ -6630,8 +6046,7 @@ web site of your custom origin.
     <dd>{{% md %}}The CloudFront custom
 origin configuration information. If an S3
 origin is required, use `s3_origin_config` instead.
-{{% /md %}}</dd>
-    <dt class="property-optional"
+{{% /md %}}</dd><dt class="property-optional"
             title="Optional">
         <span id="originpath_go">
 <a href="#originpath_go" style="color: inherit; text-decoration: inherit;">Origin<wbr>Path</a>
@@ -6642,8 +6057,7 @@ origin is required, use `s3_origin_config` instead.
     <dd>{{% md %}}An optional element that causes CloudFront to
 request your content from a directory in your Amazon S3 bucket or your
 custom origin.
-{{% /md %}}</dd>
-    <dt class="property-optional"
+{{% /md %}}</dd><dt class="property-optional"
             title="Optional">
         <span id="s3originconfig_go">
 <a href="#s3originconfig_go" style="color: inherit; text-decoration: inherit;">S3Origin<wbr>Config</a>
@@ -6654,14 +6068,11 @@ custom origin.
     <dd>{{% md %}}The CloudFront S3 origin
 configuration information. If a custom origin is required, use
 `custom_origin_config` instead.
-{{% /md %}}</dd>
-</dl>
+{{% /md %}}</dd></dl>
 {{% /choosable %}}
 
 {{% choosable language nodejs %}}
-<dl class="resources-properties">
-
-    <dt class="property-required"
+<dl class="resources-properties"><dt class="property-required"
             title="Required">
         <span id="domainname_nodejs">
 <a href="#domainname_nodejs" style="color: inherit; text-decoration: inherit;">domain<wbr>Name</a>
@@ -6671,8 +6082,7 @@ configuration information. If a custom origin is required, use
     </dt>
     <dd>{{% md %}}The DNS domain name of either the S3 bucket, or
 web site of your custom origin.
-{{% /md %}}</dd>
-    <dt class="property-required"
+{{% /md %}}</dd><dt class="property-required"
             title="Required">
         <span id="originid_nodejs">
 <a href="#originid_nodejs" style="color: inherit; text-decoration: inherit;">origin<wbr>Id</a>
@@ -6681,8 +6091,7 @@ web site of your custom origin.
         <span class="property-type">string</span>
     </dt>
     <dd>{{% md %}}The unique identifier of the member origin
-{{% /md %}}</dd>
-    <dt class="property-optional"
+{{% /md %}}</dd><dt class="property-optional"
             title="Optional">
         <span id="customheaders_nodejs">
 <a href="#customheaders_nodejs" style="color: inherit; text-decoration: inherit;">custom<wbr>Headers</a>
@@ -6693,8 +6102,7 @@ web site of your custom origin.
     <dd>{{% md %}}One or more sub-resources with `name` and
 `value` parameters that specify header data that will be sent to the origin
 (multiples allowed).
-{{% /md %}}</dd>
-    <dt class="property-optional"
+{{% /md %}}</dd><dt class="property-optional"
             title="Optional">
         <span id="customoriginconfig_nodejs">
 <a href="#customoriginconfig_nodejs" style="color: inherit; text-decoration: inherit;">custom<wbr>Origin<wbr>Config</a>
@@ -6705,8 +6113,7 @@ web site of your custom origin.
     <dd>{{% md %}}The CloudFront custom
 origin configuration information. If an S3
 origin is required, use `s3_origin_config` instead.
-{{% /md %}}</dd>
-    <dt class="property-optional"
+{{% /md %}}</dd><dt class="property-optional"
             title="Optional">
         <span id="originpath_nodejs">
 <a href="#originpath_nodejs" style="color: inherit; text-decoration: inherit;">origin<wbr>Path</a>
@@ -6717,8 +6124,7 @@ origin is required, use `s3_origin_config` instead.
     <dd>{{% md %}}An optional element that causes CloudFront to
 request your content from a directory in your Amazon S3 bucket or your
 custom origin.
-{{% /md %}}</dd>
-    <dt class="property-optional"
+{{% /md %}}</dd><dt class="property-optional"
             title="Optional">
         <span id="s3originconfig_nodejs">
 <a href="#s3originconfig_nodejs" style="color: inherit; text-decoration: inherit;">s3Origin<wbr>Config</a>
@@ -6729,14 +6135,11 @@ custom origin.
     <dd>{{% md %}}The CloudFront S3 origin
 configuration information. If a custom origin is required, use
 `custom_origin_config` instead.
-{{% /md %}}</dd>
-</dl>
+{{% /md %}}</dd></dl>
 {{% /choosable %}}
 
 {{% choosable language python %}}
-<dl class="resources-properties">
-
-    <dt class="property-required"
+<dl class="resources-properties"><dt class="property-required"
             title="Required">
         <span id="domain_name_python">
 <a href="#domain_name_python" style="color: inherit; text-decoration: inherit;">domain_<wbr>name</a>
@@ -6746,8 +6149,7 @@ configuration information. If a custom origin is required, use
     </dt>
     <dd>{{% md %}}The DNS domain name of either the S3 bucket, or
 web site of your custom origin.
-{{% /md %}}</dd>
-    <dt class="property-required"
+{{% /md %}}</dd><dt class="property-required"
             title="Required">
         <span id="origin_id_python">
 <a href="#origin_id_python" style="color: inherit; text-decoration: inherit;">origin_<wbr>id</a>
@@ -6756,8 +6158,7 @@ web site of your custom origin.
         <span class="property-type">str</span>
     </dt>
     <dd>{{% md %}}The unique identifier of the member origin
-{{% /md %}}</dd>
-    <dt class="property-optional"
+{{% /md %}}</dd><dt class="property-optional"
             title="Optional">
         <span id="custom_headers_python">
 <a href="#custom_headers_python" style="color: inherit; text-decoration: inherit;">custom_<wbr>headers</a>
@@ -6768,8 +6169,7 @@ web site of your custom origin.
     <dd>{{% md %}}One or more sub-resources with `name` and
 `value` parameters that specify header data that will be sent to the origin
 (multiples allowed).
-{{% /md %}}</dd>
-    <dt class="property-optional"
+{{% /md %}}</dd><dt class="property-optional"
             title="Optional">
         <span id="custom_origin_config_python">
 <a href="#custom_origin_config_python" style="color: inherit; text-decoration: inherit;">custom_<wbr>origin_<wbr>config</a>
@@ -6780,8 +6180,7 @@ web site of your custom origin.
     <dd>{{% md %}}The CloudFront custom
 origin configuration information. If an S3
 origin is required, use `s3_origin_config` instead.
-{{% /md %}}</dd>
-    <dt class="property-optional"
+{{% /md %}}</dd><dt class="property-optional"
             title="Optional">
         <span id="origin_path_python">
 <a href="#origin_path_python" style="color: inherit; text-decoration: inherit;">origin_<wbr>path</a>
@@ -6792,8 +6191,7 @@ origin is required, use `s3_origin_config` instead.
     <dd>{{% md %}}An optional element that causes CloudFront to
 request your content from a directory in your Amazon S3 bucket or your
 custom origin.
-{{% /md %}}</dd>
-    <dt class="property-optional"
+{{% /md %}}</dd><dt class="property-optional"
             title="Optional">
         <span id="s3_origin_config_python">
 <a href="#s3_origin_config_python" style="color: inherit; text-decoration: inherit;">s3_<wbr>origin_<wbr>config</a>
@@ -6804,16 +6202,13 @@ custom origin.
     <dd>{{% md %}}The CloudFront S3 origin
 configuration information. If a custom origin is required, use
 `custom_origin_config` instead.
-{{% /md %}}</dd>
-</dl>
+{{% /md %}}</dd></dl>
 {{% /choosable %}}
 
 <h4 id="distributionorigincustomheader">Distribution<wbr>Origin<wbr>Custom<wbr>Header</h4>
 
 {{% choosable language csharp %}}
-<dl class="resources-properties">
-
-    <dt class="property-required"
+<dl class="resources-properties"><dt class="property-required"
             title="Required">
         <span id="name_csharp">
 <a href="#name_csharp" style="color: inherit; text-decoration: inherit;">Name</a>
@@ -6821,8 +6216,7 @@ configuration information. If a custom origin is required, use
         <span class="property-indicator"></span>
         <span class="property-type">string</span>
     </dt>
-    <dd>{{% md %}}{{% /md %}}</dd>
-    <dt class="property-required"
+    <dd>{{% md %}}{{% /md %}}</dd><dt class="property-required"
             title="Required">
         <span id="value_csharp">
 <a href="#value_csharp" style="color: inherit; text-decoration: inherit;">Value</a>
@@ -6830,14 +6224,11 @@ configuration information. If a custom origin is required, use
         <span class="property-indicator"></span>
         <span class="property-type">string</span>
     </dt>
-    <dd>{{% md %}}{{% /md %}}</dd>
-</dl>
+    <dd>{{% md %}}{{% /md %}}</dd></dl>
 {{% /choosable %}}
 
 {{% choosable language go %}}
-<dl class="resources-properties">
-
-    <dt class="property-required"
+<dl class="resources-properties"><dt class="property-required"
             title="Required">
         <span id="name_go">
 <a href="#name_go" style="color: inherit; text-decoration: inherit;">Name</a>
@@ -6845,8 +6236,7 @@ configuration information. If a custom origin is required, use
         <span class="property-indicator"></span>
         <span class="property-type">string</span>
     </dt>
-    <dd>{{% md %}}{{% /md %}}</dd>
-    <dt class="property-required"
+    <dd>{{% md %}}{{% /md %}}</dd><dt class="property-required"
             title="Required">
         <span id="value_go">
 <a href="#value_go" style="color: inherit; text-decoration: inherit;">Value</a>
@@ -6854,14 +6244,11 @@ configuration information. If a custom origin is required, use
         <span class="property-indicator"></span>
         <span class="property-type">string</span>
     </dt>
-    <dd>{{% md %}}{{% /md %}}</dd>
-</dl>
+    <dd>{{% md %}}{{% /md %}}</dd></dl>
 {{% /choosable %}}
 
 {{% choosable language nodejs %}}
-<dl class="resources-properties">
-
-    <dt class="property-required"
+<dl class="resources-properties"><dt class="property-required"
             title="Required">
         <span id="name_nodejs">
 <a href="#name_nodejs" style="color: inherit; text-decoration: inherit;">name</a>
@@ -6869,8 +6256,7 @@ configuration information. If a custom origin is required, use
         <span class="property-indicator"></span>
         <span class="property-type">string</span>
     </dt>
-    <dd>{{% md %}}{{% /md %}}</dd>
-    <dt class="property-required"
+    <dd>{{% md %}}{{% /md %}}</dd><dt class="property-required"
             title="Required">
         <span id="value_nodejs">
 <a href="#value_nodejs" style="color: inherit; text-decoration: inherit;">value</a>
@@ -6878,14 +6264,11 @@ configuration information. If a custom origin is required, use
         <span class="property-indicator"></span>
         <span class="property-type">string</span>
     </dt>
-    <dd>{{% md %}}{{% /md %}}</dd>
-</dl>
+    <dd>{{% md %}}{{% /md %}}</dd></dl>
 {{% /choosable %}}
 
 {{% choosable language python %}}
-<dl class="resources-properties">
-
-    <dt class="property-required"
+<dl class="resources-properties"><dt class="property-required"
             title="Required">
         <span id="name_python">
 <a href="#name_python" style="color: inherit; text-decoration: inherit;">name</a>
@@ -6893,8 +6276,7 @@ configuration information. If a custom origin is required, use
         <span class="property-indicator"></span>
         <span class="property-type">str</span>
     </dt>
-    <dd>{{% md %}}{{% /md %}}</dd>
-    <dt class="property-required"
+    <dd>{{% md %}}{{% /md %}}</dd><dt class="property-required"
             title="Required">
         <span id="value_python">
 <a href="#value_python" style="color: inherit; text-decoration: inherit;">value</a>
@@ -6902,16 +6284,13 @@ configuration information. If a custom origin is required, use
         <span class="property-indicator"></span>
         <span class="property-type">str</span>
     </dt>
-    <dd>{{% md %}}{{% /md %}}</dd>
-</dl>
+    <dd>{{% md %}}{{% /md %}}</dd></dl>
 {{% /choosable %}}
 
 <h4 id="distributionorigincustomoriginconfig">Distribution<wbr>Origin<wbr>Custom<wbr>Origin<wbr>Config</h4>
 
 {{% choosable language csharp %}}
-<dl class="resources-properties">
-
-    <dt class="property-required"
+<dl class="resources-properties"><dt class="property-required"
             title="Required">
         <span id="httpport_csharp">
 <a href="#httpport_csharp" style="color: inherit; text-decoration: inherit;">Http<wbr>Port</a>
@@ -6920,8 +6299,7 @@ configuration information. If a custom origin is required, use
         <span class="property-type">int</span>
     </dt>
     <dd>{{% md %}}The HTTP port the custom origin listens on.
-{{% /md %}}</dd>
-    <dt class="property-required"
+{{% /md %}}</dd><dt class="property-required"
             title="Required">
         <span id="httpsport_csharp">
 <a href="#httpsport_csharp" style="color: inherit; text-decoration: inherit;">Https<wbr>Port</a>
@@ -6930,8 +6308,7 @@ configuration information. If a custom origin is required, use
         <span class="property-type">int</span>
     </dt>
     <dd>{{% md %}}The HTTPS port the custom origin listens on.
-{{% /md %}}</dd>
-    <dt class="property-required"
+{{% /md %}}</dd><dt class="property-required"
             title="Required">
         <span id="originprotocolpolicy_csharp">
 <a href="#originprotocolpolicy_csharp" style="color: inherit; text-decoration: inherit;">Origin<wbr>Protocol<wbr>Policy</a>
@@ -6941,8 +6318,7 @@ configuration information. If a custom origin is required, use
     </dt>
     <dd>{{% md %}}The origin protocol policy to apply to
 your origin. One of `http-only`, `https-only`, or `match-viewer`.
-{{% /md %}}</dd>
-    <dt class="property-required"
+{{% /md %}}</dd><dt class="property-required"
             title="Required">
         <span id="originsslprotocols_csharp">
 <a href="#originsslprotocols_csharp" style="color: inherit; text-decoration: inherit;">Origin<wbr>Ssl<wbr>Protocols</a>
@@ -6953,8 +6329,7 @@ your origin. One of `http-only`, `https-only`, or `match-viewer`.
     <dd>{{% md %}}The SSL/TLS protocols that you want
 CloudFront to use when communicating with your origin over HTTPS. A list of
 one or more of `SSLv3`, `TLSv1`, `TLSv1.1`, and `TLSv1.2`.
-{{% /md %}}</dd>
-    <dt class="property-optional"
+{{% /md %}}</dd><dt class="property-optional"
             title="Optional">
         <span id="originkeepalivetimeout_csharp">
 <a href="#originkeepalivetimeout_csharp" style="color: inherit; text-decoration: inherit;">Origin<wbr>Keepalive<wbr>Timeout</a>
@@ -6963,8 +6338,7 @@ one or more of `SSLv3`, `TLSv1`, `TLSv1.1`, and `TLSv1.2`.
         <span class="property-type">int</span>
     </dt>
     <dd>{{% md %}}The Custom KeepAlive timeout, in seconds. By default, AWS enforces a limit of `60`. But you can request an [increase](http://docs.aws.amazon.com/AmazonCloudFront/latest/DeveloperGuide/RequestAndResponseBehaviorCustomOrigin.html#request-custom-request-timeout).
-{{% /md %}}</dd>
-    <dt class="property-optional"
+{{% /md %}}</dd><dt class="property-optional"
             title="Optional">
         <span id="originreadtimeout_csharp">
 <a href="#originreadtimeout_csharp" style="color: inherit; text-decoration: inherit;">Origin<wbr>Read<wbr>Timeout</a>
@@ -6973,14 +6347,11 @@ one or more of `SSLv3`, `TLSv1`, `TLSv1.1`, and `TLSv1.2`.
         <span class="property-type">int</span>
     </dt>
     <dd>{{% md %}}The Custom Read timeout, in seconds. By default, AWS enforces a limit of `60`. But you can request an [increase](http://docs.aws.amazon.com/AmazonCloudFront/latest/DeveloperGuide/RequestAndResponseBehaviorCustomOrigin.html#request-custom-request-timeout).
-{{% /md %}}</dd>
-</dl>
+{{% /md %}}</dd></dl>
 {{% /choosable %}}
 
 {{% choosable language go %}}
-<dl class="resources-properties">
-
-    <dt class="property-required"
+<dl class="resources-properties"><dt class="property-required"
             title="Required">
         <span id="httpport_go">
 <a href="#httpport_go" style="color: inherit; text-decoration: inherit;">Http<wbr>Port</a>
@@ -6989,8 +6360,7 @@ one or more of `SSLv3`, `TLSv1`, `TLSv1.1`, and `TLSv1.2`.
         <span class="property-type">int</span>
     </dt>
     <dd>{{% md %}}The HTTP port the custom origin listens on.
-{{% /md %}}</dd>
-    <dt class="property-required"
+{{% /md %}}</dd><dt class="property-required"
             title="Required">
         <span id="httpsport_go">
 <a href="#httpsport_go" style="color: inherit; text-decoration: inherit;">Https<wbr>Port</a>
@@ -6999,8 +6369,7 @@ one or more of `SSLv3`, `TLSv1`, `TLSv1.1`, and `TLSv1.2`.
         <span class="property-type">int</span>
     </dt>
     <dd>{{% md %}}The HTTPS port the custom origin listens on.
-{{% /md %}}</dd>
-    <dt class="property-required"
+{{% /md %}}</dd><dt class="property-required"
             title="Required">
         <span id="originprotocolpolicy_go">
 <a href="#originprotocolpolicy_go" style="color: inherit; text-decoration: inherit;">Origin<wbr>Protocol<wbr>Policy</a>
@@ -7010,8 +6379,7 @@ one or more of `SSLv3`, `TLSv1`, `TLSv1.1`, and `TLSv1.2`.
     </dt>
     <dd>{{% md %}}The origin protocol policy to apply to
 your origin. One of `http-only`, `https-only`, or `match-viewer`.
-{{% /md %}}</dd>
-    <dt class="property-required"
+{{% /md %}}</dd><dt class="property-required"
             title="Required">
         <span id="originsslprotocols_go">
 <a href="#originsslprotocols_go" style="color: inherit; text-decoration: inherit;">Origin<wbr>Ssl<wbr>Protocols</a>
@@ -7022,8 +6390,7 @@ your origin. One of `http-only`, `https-only`, or `match-viewer`.
     <dd>{{% md %}}The SSL/TLS protocols that you want
 CloudFront to use when communicating with your origin over HTTPS. A list of
 one or more of `SSLv3`, `TLSv1`, `TLSv1.1`, and `TLSv1.2`.
-{{% /md %}}</dd>
-    <dt class="property-optional"
+{{% /md %}}</dd><dt class="property-optional"
             title="Optional">
         <span id="originkeepalivetimeout_go">
 <a href="#originkeepalivetimeout_go" style="color: inherit; text-decoration: inherit;">Origin<wbr>Keepalive<wbr>Timeout</a>
@@ -7032,8 +6399,7 @@ one or more of `SSLv3`, `TLSv1`, `TLSv1.1`, and `TLSv1.2`.
         <span class="property-type">int</span>
     </dt>
     <dd>{{% md %}}The Custom KeepAlive timeout, in seconds. By default, AWS enforces a limit of `60`. But you can request an [increase](http://docs.aws.amazon.com/AmazonCloudFront/latest/DeveloperGuide/RequestAndResponseBehaviorCustomOrigin.html#request-custom-request-timeout).
-{{% /md %}}</dd>
-    <dt class="property-optional"
+{{% /md %}}</dd><dt class="property-optional"
             title="Optional">
         <span id="originreadtimeout_go">
 <a href="#originreadtimeout_go" style="color: inherit; text-decoration: inherit;">Origin<wbr>Read<wbr>Timeout</a>
@@ -7042,14 +6408,11 @@ one or more of `SSLv3`, `TLSv1`, `TLSv1.1`, and `TLSv1.2`.
         <span class="property-type">int</span>
     </dt>
     <dd>{{% md %}}The Custom Read timeout, in seconds. By default, AWS enforces a limit of `60`. But you can request an [increase](http://docs.aws.amazon.com/AmazonCloudFront/latest/DeveloperGuide/RequestAndResponseBehaviorCustomOrigin.html#request-custom-request-timeout).
-{{% /md %}}</dd>
-</dl>
+{{% /md %}}</dd></dl>
 {{% /choosable %}}
 
 {{% choosable language nodejs %}}
-<dl class="resources-properties">
-
-    <dt class="property-required"
+<dl class="resources-properties"><dt class="property-required"
             title="Required">
         <span id="httpport_nodejs">
 <a href="#httpport_nodejs" style="color: inherit; text-decoration: inherit;">http<wbr>Port</a>
@@ -7058,8 +6421,7 @@ one or more of `SSLv3`, `TLSv1`, `TLSv1.1`, and `TLSv1.2`.
         <span class="property-type">number</span>
     </dt>
     <dd>{{% md %}}The HTTP port the custom origin listens on.
-{{% /md %}}</dd>
-    <dt class="property-required"
+{{% /md %}}</dd><dt class="property-required"
             title="Required">
         <span id="httpsport_nodejs">
 <a href="#httpsport_nodejs" style="color: inherit; text-decoration: inherit;">https<wbr>Port</a>
@@ -7068,8 +6430,7 @@ one or more of `SSLv3`, `TLSv1`, `TLSv1.1`, and `TLSv1.2`.
         <span class="property-type">number</span>
     </dt>
     <dd>{{% md %}}The HTTPS port the custom origin listens on.
-{{% /md %}}</dd>
-    <dt class="property-required"
+{{% /md %}}</dd><dt class="property-required"
             title="Required">
         <span id="originprotocolpolicy_nodejs">
 <a href="#originprotocolpolicy_nodejs" style="color: inherit; text-decoration: inherit;">origin<wbr>Protocol<wbr>Policy</a>
@@ -7079,8 +6440,7 @@ one or more of `SSLv3`, `TLSv1`, `TLSv1.1`, and `TLSv1.2`.
     </dt>
     <dd>{{% md %}}The origin protocol policy to apply to
 your origin. One of `http-only`, `https-only`, or `match-viewer`.
-{{% /md %}}</dd>
-    <dt class="property-required"
+{{% /md %}}</dd><dt class="property-required"
             title="Required">
         <span id="originsslprotocols_nodejs">
 <a href="#originsslprotocols_nodejs" style="color: inherit; text-decoration: inherit;">origin<wbr>Ssl<wbr>Protocols</a>
@@ -7091,8 +6451,7 @@ your origin. One of `http-only`, `https-only`, or `match-viewer`.
     <dd>{{% md %}}The SSL/TLS protocols that you want
 CloudFront to use when communicating with your origin over HTTPS. A list of
 one or more of `SSLv3`, `TLSv1`, `TLSv1.1`, and `TLSv1.2`.
-{{% /md %}}</dd>
-    <dt class="property-optional"
+{{% /md %}}</dd><dt class="property-optional"
             title="Optional">
         <span id="originkeepalivetimeout_nodejs">
 <a href="#originkeepalivetimeout_nodejs" style="color: inherit; text-decoration: inherit;">origin<wbr>Keepalive<wbr>Timeout</a>
@@ -7101,8 +6460,7 @@ one or more of `SSLv3`, `TLSv1`, `TLSv1.1`, and `TLSv1.2`.
         <span class="property-type">number</span>
     </dt>
     <dd>{{% md %}}The Custom KeepAlive timeout, in seconds. By default, AWS enforces a limit of `60`. But you can request an [increase](http://docs.aws.amazon.com/AmazonCloudFront/latest/DeveloperGuide/RequestAndResponseBehaviorCustomOrigin.html#request-custom-request-timeout).
-{{% /md %}}</dd>
-    <dt class="property-optional"
+{{% /md %}}</dd><dt class="property-optional"
             title="Optional">
         <span id="originreadtimeout_nodejs">
 <a href="#originreadtimeout_nodejs" style="color: inherit; text-decoration: inherit;">origin<wbr>Read<wbr>Timeout</a>
@@ -7111,14 +6469,11 @@ one or more of `SSLv3`, `TLSv1`, `TLSv1.1`, and `TLSv1.2`.
         <span class="property-type">number</span>
     </dt>
     <dd>{{% md %}}The Custom Read timeout, in seconds. By default, AWS enforces a limit of `60`. But you can request an [increase](http://docs.aws.amazon.com/AmazonCloudFront/latest/DeveloperGuide/RequestAndResponseBehaviorCustomOrigin.html#request-custom-request-timeout).
-{{% /md %}}</dd>
-</dl>
+{{% /md %}}</dd></dl>
 {{% /choosable %}}
 
 {{% choosable language python %}}
-<dl class="resources-properties">
-
-    <dt class="property-required"
+<dl class="resources-properties"><dt class="property-required"
             title="Required">
         <span id="http_port_python">
 <a href="#http_port_python" style="color: inherit; text-decoration: inherit;">http_<wbr>port</a>
@@ -7127,8 +6482,7 @@ one or more of `SSLv3`, `TLSv1`, `TLSv1.1`, and `TLSv1.2`.
         <span class="property-type">int</span>
     </dt>
     <dd>{{% md %}}The HTTP port the custom origin listens on.
-{{% /md %}}</dd>
-    <dt class="property-required"
+{{% /md %}}</dd><dt class="property-required"
             title="Required">
         <span id="https_port_python">
 <a href="#https_port_python" style="color: inherit; text-decoration: inherit;">https_<wbr>port</a>
@@ -7137,8 +6491,7 @@ one or more of `SSLv3`, `TLSv1`, `TLSv1.1`, and `TLSv1.2`.
         <span class="property-type">int</span>
     </dt>
     <dd>{{% md %}}The HTTPS port the custom origin listens on.
-{{% /md %}}</dd>
-    <dt class="property-required"
+{{% /md %}}</dd><dt class="property-required"
             title="Required">
         <span id="origin_protocol_policy_python">
 <a href="#origin_protocol_policy_python" style="color: inherit; text-decoration: inherit;">origin_<wbr>protocol_<wbr>policy</a>
@@ -7148,8 +6501,7 @@ one or more of `SSLv3`, `TLSv1`, `TLSv1.1`, and `TLSv1.2`.
     </dt>
     <dd>{{% md %}}The origin protocol policy to apply to
 your origin. One of `http-only`, `https-only`, or `match-viewer`.
-{{% /md %}}</dd>
-    <dt class="property-required"
+{{% /md %}}</dd><dt class="property-required"
             title="Required">
         <span id="origin_ssl_protocols_python">
 <a href="#origin_ssl_protocols_python" style="color: inherit; text-decoration: inherit;">origin_<wbr>ssl_<wbr>protocols</a>
@@ -7160,8 +6512,7 @@ your origin. One of `http-only`, `https-only`, or `match-viewer`.
     <dd>{{% md %}}The SSL/TLS protocols that you want
 CloudFront to use when communicating with your origin over HTTPS. A list of
 one or more of `SSLv3`, `TLSv1`, `TLSv1.1`, and `TLSv1.2`.
-{{% /md %}}</dd>
-    <dt class="property-optional"
+{{% /md %}}</dd><dt class="property-optional"
             title="Optional">
         <span id="origin_keepalive_timeout_python">
 <a href="#origin_keepalive_timeout_python" style="color: inherit; text-decoration: inherit;">origin_<wbr>keepalive_<wbr>timeout</a>
@@ -7170,8 +6521,7 @@ one or more of `SSLv3`, `TLSv1`, `TLSv1.1`, and `TLSv1.2`.
         <span class="property-type">int</span>
     </dt>
     <dd>{{% md %}}The Custom KeepAlive timeout, in seconds. By default, AWS enforces a limit of `60`. But you can request an [increase](http://docs.aws.amazon.com/AmazonCloudFront/latest/DeveloperGuide/RequestAndResponseBehaviorCustomOrigin.html#request-custom-request-timeout).
-{{% /md %}}</dd>
-    <dt class="property-optional"
+{{% /md %}}</dd><dt class="property-optional"
             title="Optional">
         <span id="origin_read_timeout_python">
 <a href="#origin_read_timeout_python" style="color: inherit; text-decoration: inherit;">origin_<wbr>read_<wbr>timeout</a>
@@ -7180,16 +6530,13 @@ one or more of `SSLv3`, `TLSv1`, `TLSv1.1`, and `TLSv1.2`.
         <span class="property-type">int</span>
     </dt>
     <dd>{{% md %}}The Custom Read timeout, in seconds. By default, AWS enforces a limit of `60`. But you can request an [increase](http://docs.aws.amazon.com/AmazonCloudFront/latest/DeveloperGuide/RequestAndResponseBehaviorCustomOrigin.html#request-custom-request-timeout).
-{{% /md %}}</dd>
-</dl>
+{{% /md %}}</dd></dl>
 {{% /choosable %}}
 
 <h4 id="distributionorigingroup">Distribution<wbr>Origin<wbr>Group</h4>
 
 {{% choosable language csharp %}}
-<dl class="resources-properties">
-
-    <dt class="property-required"
+<dl class="resources-properties"><dt class="property-required"
             title="Required">
         <span id="failovercriteria_csharp">
 <a href="#failovercriteria_csharp" style="color: inherit; text-decoration: inherit;">Failover<wbr>Criteria</a>
@@ -7198,8 +6545,7 @@ one or more of `SSLv3`, `TLSv1`, `TLSv1.1`, and `TLSv1.2`.
         <span class="property-type"><a href="#distributionorigingroupfailovercriteria">Distribution<wbr>Origin<wbr>Group<wbr>Failover<wbr>Criteria<wbr>Args</a></span>
     </dt>
     <dd>{{% md %}}The failover criteria for when to failover to the secondary origin
-{{% /md %}}</dd>
-    <dt class="property-required"
+{{% /md %}}</dd><dt class="property-required"
             title="Required">
         <span id="members_csharp">
 <a href="#members_csharp" style="color: inherit; text-decoration: inherit;">Members</a>
@@ -7208,8 +6554,7 @@ one or more of `SSLv3`, `TLSv1`, `TLSv1.1`, and `TLSv1.2`.
         <span class="property-type"><a href="#distributionorigingroupmember">List&lt;Distribution<wbr>Origin<wbr>Group<wbr>Member<wbr>Args&gt;</a></span>
     </dt>
     <dd>{{% md %}}Ordered member configuration blocks assigned to the origin group, where the first member is the primary origin. You must specify two members.
-{{% /md %}}</dd>
-    <dt class="property-required"
+{{% /md %}}</dd><dt class="property-required"
             title="Required">
         <span id="originid_csharp">
 <a href="#originid_csharp" style="color: inherit; text-decoration: inherit;">Origin<wbr>Id</a>
@@ -7218,14 +6563,11 @@ one or more of `SSLv3`, `TLSv1`, `TLSv1.1`, and `TLSv1.2`.
         <span class="property-type">string</span>
     </dt>
     <dd>{{% md %}}The unique identifier of the member origin
-{{% /md %}}</dd>
-</dl>
+{{% /md %}}</dd></dl>
 {{% /choosable %}}
 
 {{% choosable language go %}}
-<dl class="resources-properties">
-
-    <dt class="property-required"
+<dl class="resources-properties"><dt class="property-required"
             title="Required">
         <span id="failovercriteria_go">
 <a href="#failovercriteria_go" style="color: inherit; text-decoration: inherit;">Failover<wbr>Criteria</a>
@@ -7234,8 +6576,7 @@ one or more of `SSLv3`, `TLSv1`, `TLSv1.1`, and `TLSv1.2`.
         <span class="property-type"><a href="#distributionorigingroupfailovercriteria">Distribution<wbr>Origin<wbr>Group<wbr>Failover<wbr>Criteria</a></span>
     </dt>
     <dd>{{% md %}}The failover criteria for when to failover to the secondary origin
-{{% /md %}}</dd>
-    <dt class="property-required"
+{{% /md %}}</dd><dt class="property-required"
             title="Required">
         <span id="members_go">
 <a href="#members_go" style="color: inherit; text-decoration: inherit;">Members</a>
@@ -7244,8 +6585,7 @@ one or more of `SSLv3`, `TLSv1`, `TLSv1.1`, and `TLSv1.2`.
         <span class="property-type"><a href="#distributionorigingroupmember">[]Distribution<wbr>Origin<wbr>Group<wbr>Member</a></span>
     </dt>
     <dd>{{% md %}}Ordered member configuration blocks assigned to the origin group, where the first member is the primary origin. You must specify two members.
-{{% /md %}}</dd>
-    <dt class="property-required"
+{{% /md %}}</dd><dt class="property-required"
             title="Required">
         <span id="originid_go">
 <a href="#originid_go" style="color: inherit; text-decoration: inherit;">Origin<wbr>Id</a>
@@ -7254,14 +6594,11 @@ one or more of `SSLv3`, `TLSv1`, `TLSv1.1`, and `TLSv1.2`.
         <span class="property-type">string</span>
     </dt>
     <dd>{{% md %}}The unique identifier of the member origin
-{{% /md %}}</dd>
-</dl>
+{{% /md %}}</dd></dl>
 {{% /choosable %}}
 
 {{% choosable language nodejs %}}
-<dl class="resources-properties">
-
-    <dt class="property-required"
+<dl class="resources-properties"><dt class="property-required"
             title="Required">
         <span id="failovercriteria_nodejs">
 <a href="#failovercriteria_nodejs" style="color: inherit; text-decoration: inherit;">failover<wbr>Criteria</a>
@@ -7270,8 +6607,7 @@ one or more of `SSLv3`, `TLSv1`, `TLSv1.1`, and `TLSv1.2`.
         <span class="property-type"><a href="#distributionorigingroupfailovercriteria">Distribution<wbr>Origin<wbr>Group<wbr>Failover<wbr>Criteria</a></span>
     </dt>
     <dd>{{% md %}}The failover criteria for when to failover to the secondary origin
-{{% /md %}}</dd>
-    <dt class="property-required"
+{{% /md %}}</dd><dt class="property-required"
             title="Required">
         <span id="members_nodejs">
 <a href="#members_nodejs" style="color: inherit; text-decoration: inherit;">members</a>
@@ -7280,8 +6616,7 @@ one or more of `SSLv3`, `TLSv1`, `TLSv1.1`, and `TLSv1.2`.
         <span class="property-type"><a href="#distributionorigingroupmember">Distribution<wbr>Origin<wbr>Group<wbr>Member[]</a></span>
     </dt>
     <dd>{{% md %}}Ordered member configuration blocks assigned to the origin group, where the first member is the primary origin. You must specify two members.
-{{% /md %}}</dd>
-    <dt class="property-required"
+{{% /md %}}</dd><dt class="property-required"
             title="Required">
         <span id="originid_nodejs">
 <a href="#originid_nodejs" style="color: inherit; text-decoration: inherit;">origin<wbr>Id</a>
@@ -7290,14 +6625,11 @@ one or more of `SSLv3`, `TLSv1`, `TLSv1.1`, and `TLSv1.2`.
         <span class="property-type">string</span>
     </dt>
     <dd>{{% md %}}The unique identifier of the member origin
-{{% /md %}}</dd>
-</dl>
+{{% /md %}}</dd></dl>
 {{% /choosable %}}
 
 {{% choosable language python %}}
-<dl class="resources-properties">
-
-    <dt class="property-required"
+<dl class="resources-properties"><dt class="property-required"
             title="Required">
         <span id="failover_criteria_python">
 <a href="#failover_criteria_python" style="color: inherit; text-decoration: inherit;">failover_<wbr>criteria</a>
@@ -7306,8 +6638,7 @@ one or more of `SSLv3`, `TLSv1`, `TLSv1.1`, and `TLSv1.2`.
         <span class="property-type"><a href="#distributionorigingroupfailovercriteria">Distribution<wbr>Origin<wbr>Group<wbr>Failover<wbr>Criteria<wbr>Args</a></span>
     </dt>
     <dd>{{% md %}}The failover criteria for when to failover to the secondary origin
-{{% /md %}}</dd>
-    <dt class="property-required"
+{{% /md %}}</dd><dt class="property-required"
             title="Required">
         <span id="members_python">
 <a href="#members_python" style="color: inherit; text-decoration: inherit;">members</a>
@@ -7316,8 +6647,7 @@ one or more of `SSLv3`, `TLSv1`, `TLSv1.1`, and `TLSv1.2`.
         <span class="property-type"><a href="#distributionorigingroupmember">Sequence[Distribution<wbr>Origin<wbr>Group<wbr>Member<wbr>Args]</a></span>
     </dt>
     <dd>{{% md %}}Ordered member configuration blocks assigned to the origin group, where the first member is the primary origin. You must specify two members.
-{{% /md %}}</dd>
-    <dt class="property-required"
+{{% /md %}}</dd><dt class="property-required"
             title="Required">
         <span id="origin_id_python">
 <a href="#origin_id_python" style="color: inherit; text-decoration: inherit;">origin_<wbr>id</a>
@@ -7326,16 +6656,13 @@ one or more of `SSLv3`, `TLSv1`, `TLSv1.1`, and `TLSv1.2`.
         <span class="property-type">str</span>
     </dt>
     <dd>{{% md %}}The unique identifier of the member origin
-{{% /md %}}</dd>
-</dl>
+{{% /md %}}</dd></dl>
 {{% /choosable %}}
 
 <h4 id="distributionorigingroupfailovercriteria">Distribution<wbr>Origin<wbr>Group<wbr>Failover<wbr>Criteria</h4>
 
 {{% choosable language csharp %}}
-<dl class="resources-properties">
-
-    <dt class="property-required"
+<dl class="resources-properties"><dt class="property-required"
             title="Required">
         <span id="statuscodes_csharp">
 <a href="#statuscodes_csharp" style="color: inherit; text-decoration: inherit;">Status<wbr>Codes</a>
@@ -7344,14 +6671,11 @@ one or more of `SSLv3`, `TLSv1`, `TLSv1.1`, and `TLSv1.2`.
         <span class="property-type">List&lt;int&gt;</span>
     </dt>
     <dd>{{% md %}}A list of HTTP status codes for the origin group
-{{% /md %}}</dd>
-</dl>
+{{% /md %}}</dd></dl>
 {{% /choosable %}}
 
 {{% choosable language go %}}
-<dl class="resources-properties">
-
-    <dt class="property-required"
+<dl class="resources-properties"><dt class="property-required"
             title="Required">
         <span id="statuscodes_go">
 <a href="#statuscodes_go" style="color: inherit; text-decoration: inherit;">Status<wbr>Codes</a>
@@ -7360,14 +6684,11 @@ one or more of `SSLv3`, `TLSv1`, `TLSv1.1`, and `TLSv1.2`.
         <span class="property-type">[]int</span>
     </dt>
     <dd>{{% md %}}A list of HTTP status codes for the origin group
-{{% /md %}}</dd>
-</dl>
+{{% /md %}}</dd></dl>
 {{% /choosable %}}
 
 {{% choosable language nodejs %}}
-<dl class="resources-properties">
-
-    <dt class="property-required"
+<dl class="resources-properties"><dt class="property-required"
             title="Required">
         <span id="statuscodes_nodejs">
 <a href="#statuscodes_nodejs" style="color: inherit; text-decoration: inherit;">status<wbr>Codes</a>
@@ -7376,14 +6697,11 @@ one or more of `SSLv3`, `TLSv1`, `TLSv1.1`, and `TLSv1.2`.
         <span class="property-type">number[]</span>
     </dt>
     <dd>{{% md %}}A list of HTTP status codes for the origin group
-{{% /md %}}</dd>
-</dl>
+{{% /md %}}</dd></dl>
 {{% /choosable %}}
 
 {{% choosable language python %}}
-<dl class="resources-properties">
-
-    <dt class="property-required"
+<dl class="resources-properties"><dt class="property-required"
             title="Required">
         <span id="status_codes_python">
 <a href="#status_codes_python" style="color: inherit; text-decoration: inherit;">status_<wbr>codes</a>
@@ -7392,16 +6710,13 @@ one or more of `SSLv3`, `TLSv1`, `TLSv1.1`, and `TLSv1.2`.
         <span class="property-type">Sequence[int]</span>
     </dt>
     <dd>{{% md %}}A list of HTTP status codes for the origin group
-{{% /md %}}</dd>
-</dl>
+{{% /md %}}</dd></dl>
 {{% /choosable %}}
 
 <h4 id="distributionorigingroupmember">Distribution<wbr>Origin<wbr>Group<wbr>Member</h4>
 
 {{% choosable language csharp %}}
-<dl class="resources-properties">
-
-    <dt class="property-required"
+<dl class="resources-properties"><dt class="property-required"
             title="Required">
         <span id="originid_csharp">
 <a href="#originid_csharp" style="color: inherit; text-decoration: inherit;">Origin<wbr>Id</a>
@@ -7410,14 +6725,11 @@ one or more of `SSLv3`, `TLSv1`, `TLSv1.1`, and `TLSv1.2`.
         <span class="property-type">string</span>
     </dt>
     <dd>{{% md %}}The unique identifier of the member origin
-{{% /md %}}</dd>
-</dl>
+{{% /md %}}</dd></dl>
 {{% /choosable %}}
 
 {{% choosable language go %}}
-<dl class="resources-properties">
-
-    <dt class="property-required"
+<dl class="resources-properties"><dt class="property-required"
             title="Required">
         <span id="originid_go">
 <a href="#originid_go" style="color: inherit; text-decoration: inherit;">Origin<wbr>Id</a>
@@ -7426,14 +6738,11 @@ one or more of `SSLv3`, `TLSv1`, `TLSv1.1`, and `TLSv1.2`.
         <span class="property-type">string</span>
     </dt>
     <dd>{{% md %}}The unique identifier of the member origin
-{{% /md %}}</dd>
-</dl>
+{{% /md %}}</dd></dl>
 {{% /choosable %}}
 
 {{% choosable language nodejs %}}
-<dl class="resources-properties">
-
-    <dt class="property-required"
+<dl class="resources-properties"><dt class="property-required"
             title="Required">
         <span id="originid_nodejs">
 <a href="#originid_nodejs" style="color: inherit; text-decoration: inherit;">origin<wbr>Id</a>
@@ -7442,14 +6751,11 @@ one or more of `SSLv3`, `TLSv1`, `TLSv1.1`, and `TLSv1.2`.
         <span class="property-type">string</span>
     </dt>
     <dd>{{% md %}}The unique identifier of the member origin
-{{% /md %}}</dd>
-</dl>
+{{% /md %}}</dd></dl>
 {{% /choosable %}}
 
 {{% choosable language python %}}
-<dl class="resources-properties">
-
-    <dt class="property-required"
+<dl class="resources-properties"><dt class="property-required"
             title="Required">
         <span id="origin_id_python">
 <a href="#origin_id_python" style="color: inherit; text-decoration: inherit;">origin_<wbr>id</a>
@@ -7458,16 +6764,13 @@ one or more of `SSLv3`, `TLSv1`, `TLSv1.1`, and `TLSv1.2`.
         <span class="property-type">str</span>
     </dt>
     <dd>{{% md %}}The unique identifier of the member origin
-{{% /md %}}</dd>
-</dl>
+{{% /md %}}</dd></dl>
 {{% /choosable %}}
 
 <h4 id="distributionorigins3originconfig">Distribution<wbr>Origin<wbr>S3Origin<wbr>Config</h4>
 
 {{% choosable language csharp %}}
-<dl class="resources-properties">
-
-    <dt class="property-required"
+<dl class="resources-properties"><dt class="property-required"
             title="Required">
         <span id="originaccessidentity_csharp">
 <a href="#originaccessidentity_csharp" style="color: inherit; text-decoration: inherit;">Origin<wbr>Access<wbr>Identity</a>
@@ -7477,14 +6780,11 @@ one or more of `SSLv3`, `TLSv1`, `TLSv1.1`, and `TLSv1.2`.
     </dt>
     <dd>{{% md %}}The [CloudFront origin access
 identity][5] to associate with the origin.
-{{% /md %}}</dd>
-</dl>
+{{% /md %}}</dd></dl>
 {{% /choosable %}}
 
 {{% choosable language go %}}
-<dl class="resources-properties">
-
-    <dt class="property-required"
+<dl class="resources-properties"><dt class="property-required"
             title="Required">
         <span id="originaccessidentity_go">
 <a href="#originaccessidentity_go" style="color: inherit; text-decoration: inherit;">Origin<wbr>Access<wbr>Identity</a>
@@ -7494,14 +6794,11 @@ identity][5] to associate with the origin.
     </dt>
     <dd>{{% md %}}The [CloudFront origin access
 identity][5] to associate with the origin.
-{{% /md %}}</dd>
-</dl>
+{{% /md %}}</dd></dl>
 {{% /choosable %}}
 
 {{% choosable language nodejs %}}
-<dl class="resources-properties">
-
-    <dt class="property-required"
+<dl class="resources-properties"><dt class="property-required"
             title="Required">
         <span id="originaccessidentity_nodejs">
 <a href="#originaccessidentity_nodejs" style="color: inherit; text-decoration: inherit;">origin<wbr>Access<wbr>Identity</a>
@@ -7511,14 +6808,11 @@ identity][5] to associate with the origin.
     </dt>
     <dd>{{% md %}}The [CloudFront origin access
 identity][5] to associate with the origin.
-{{% /md %}}</dd>
-</dl>
+{{% /md %}}</dd></dl>
 {{% /choosable %}}
 
 {{% choosable language python %}}
-<dl class="resources-properties">
-
-    <dt class="property-required"
+<dl class="resources-properties"><dt class="property-required"
             title="Required">
         <span id="origin_access_identity_python">
 <a href="#origin_access_identity_python" style="color: inherit; text-decoration: inherit;">origin_<wbr>access_<wbr>identity</a>
@@ -7528,16 +6822,13 @@ identity][5] to associate with the origin.
     </dt>
     <dd>{{% md %}}The [CloudFront origin access
 identity][5] to associate with the origin.
-{{% /md %}}</dd>
-</dl>
+{{% /md %}}</dd></dl>
 {{% /choosable %}}
 
 <h4 id="distributionrestrictions">Distribution<wbr>Restrictions</h4>
 
 {{% choosable language csharp %}}
-<dl class="resources-properties">
-
-    <dt class="property-required"
+<dl class="resources-properties"><dt class="property-required"
             title="Required">
         <span id="georestriction_csharp">
 <a href="#georestriction_csharp" style="color: inherit; text-decoration: inherit;">Geo<wbr>Restriction</a>
@@ -7545,14 +6836,11 @@ identity][5] to associate with the origin.
         <span class="property-indicator"></span>
         <span class="property-type"><a href="#distributionrestrictionsgeorestriction">Distribution<wbr>Restrictions<wbr>Geo<wbr>Restriction<wbr>Args</a></span>
     </dt>
-    <dd>{{% md %}}{{% /md %}}</dd>
-</dl>
+    <dd>{{% md %}}{{% /md %}}</dd></dl>
 {{% /choosable %}}
 
 {{% choosable language go %}}
-<dl class="resources-properties">
-
-    <dt class="property-required"
+<dl class="resources-properties"><dt class="property-required"
             title="Required">
         <span id="georestriction_go">
 <a href="#georestriction_go" style="color: inherit; text-decoration: inherit;">Geo<wbr>Restriction</a>
@@ -7560,14 +6848,11 @@ identity][5] to associate with the origin.
         <span class="property-indicator"></span>
         <span class="property-type"><a href="#distributionrestrictionsgeorestriction">Distribution<wbr>Restrictions<wbr>Geo<wbr>Restriction</a></span>
     </dt>
-    <dd>{{% md %}}{{% /md %}}</dd>
-</dl>
+    <dd>{{% md %}}{{% /md %}}</dd></dl>
 {{% /choosable %}}
 
 {{% choosable language nodejs %}}
-<dl class="resources-properties">
-
-    <dt class="property-required"
+<dl class="resources-properties"><dt class="property-required"
             title="Required">
         <span id="georestriction_nodejs">
 <a href="#georestriction_nodejs" style="color: inherit; text-decoration: inherit;">geo<wbr>Restriction</a>
@@ -7575,14 +6860,11 @@ identity][5] to associate with the origin.
         <span class="property-indicator"></span>
         <span class="property-type"><a href="#distributionrestrictionsgeorestriction">Distribution<wbr>Restrictions<wbr>Geo<wbr>Restriction</a></span>
     </dt>
-    <dd>{{% md %}}{{% /md %}}</dd>
-</dl>
+    <dd>{{% md %}}{{% /md %}}</dd></dl>
 {{% /choosable %}}
 
 {{% choosable language python %}}
-<dl class="resources-properties">
-
-    <dt class="property-required"
+<dl class="resources-properties"><dt class="property-required"
             title="Required">
         <span id="geo_restriction_python">
 <a href="#geo_restriction_python" style="color: inherit; text-decoration: inherit;">geo_<wbr>restriction</a>
@@ -7590,16 +6872,13 @@ identity][5] to associate with the origin.
         <span class="property-indicator"></span>
         <span class="property-type"><a href="#distributionrestrictionsgeorestriction">Distribution<wbr>Restrictions<wbr>Geo<wbr>Restriction<wbr>Args</a></span>
     </dt>
-    <dd>{{% md %}}{{% /md %}}</dd>
-</dl>
+    <dd>{{% md %}}{{% /md %}}</dd></dl>
 {{% /choosable %}}
 
 <h4 id="distributionrestrictionsgeorestriction">Distribution<wbr>Restrictions<wbr>Geo<wbr>Restriction</h4>
 
 {{% choosable language csharp %}}
-<dl class="resources-properties">
-
-    <dt class="property-required"
+<dl class="resources-properties"><dt class="property-required"
             title="Required">
         <span id="restrictiontype_csharp">
 <a href="#restrictiontype_csharp" style="color: inherit; text-decoration: inherit;">Restriction<wbr>Type</a>
@@ -7610,8 +6889,7 @@ identity][5] to associate with the origin.
     <dd>{{% md %}}The method that you want to use to restrict
 distribution of your content by country: `none`, `whitelist`, or
 `blacklist`.
-{{% /md %}}</dd>
-    <dt class="property-optional"
+{{% /md %}}</dd><dt class="property-optional"
             title="Optional">
         <span id="locations_csharp">
 <a href="#locations_csharp" style="color: inherit; text-decoration: inherit;">Locations</a>
@@ -7622,14 +6900,11 @@ distribution of your content by country: `none`, `whitelist`, or
     <dd>{{% md %}}The [ISO 3166-1-alpha-2 codes][4] for which you
 want CloudFront either to distribute your content (`whitelist`) or not
 distribute your content (`blacklist`).
-{{% /md %}}</dd>
-</dl>
+{{% /md %}}</dd></dl>
 {{% /choosable %}}
 
 {{% choosable language go %}}
-<dl class="resources-properties">
-
-    <dt class="property-required"
+<dl class="resources-properties"><dt class="property-required"
             title="Required">
         <span id="restrictiontype_go">
 <a href="#restrictiontype_go" style="color: inherit; text-decoration: inherit;">Restriction<wbr>Type</a>
@@ -7640,8 +6915,7 @@ distribute your content (`blacklist`).
     <dd>{{% md %}}The method that you want to use to restrict
 distribution of your content by country: `none`, `whitelist`, or
 `blacklist`.
-{{% /md %}}</dd>
-    <dt class="property-optional"
+{{% /md %}}</dd><dt class="property-optional"
             title="Optional">
         <span id="locations_go">
 <a href="#locations_go" style="color: inherit; text-decoration: inherit;">Locations</a>
@@ -7652,14 +6926,11 @@ distribution of your content by country: `none`, `whitelist`, or
     <dd>{{% md %}}The [ISO 3166-1-alpha-2 codes][4] for which you
 want CloudFront either to distribute your content (`whitelist`) or not
 distribute your content (`blacklist`).
-{{% /md %}}</dd>
-</dl>
+{{% /md %}}</dd></dl>
 {{% /choosable %}}
 
 {{% choosable language nodejs %}}
-<dl class="resources-properties">
-
-    <dt class="property-required"
+<dl class="resources-properties"><dt class="property-required"
             title="Required">
         <span id="restrictiontype_nodejs">
 <a href="#restrictiontype_nodejs" style="color: inherit; text-decoration: inherit;">restriction<wbr>Type</a>
@@ -7670,8 +6941,7 @@ distribute your content (`blacklist`).
     <dd>{{% md %}}The method that you want to use to restrict
 distribution of your content by country: `none`, `whitelist`, or
 `blacklist`.
-{{% /md %}}</dd>
-    <dt class="property-optional"
+{{% /md %}}</dd><dt class="property-optional"
             title="Optional">
         <span id="locations_nodejs">
 <a href="#locations_nodejs" style="color: inherit; text-decoration: inherit;">locations</a>
@@ -7682,14 +6952,11 @@ distribution of your content by country: `none`, `whitelist`, or
     <dd>{{% md %}}The [ISO 3166-1-alpha-2 codes][4] for which you
 want CloudFront either to distribute your content (`whitelist`) or not
 distribute your content (`blacklist`).
-{{% /md %}}</dd>
-</dl>
+{{% /md %}}</dd></dl>
 {{% /choosable %}}
 
 {{% choosable language python %}}
-<dl class="resources-properties">
-
-    <dt class="property-required"
+<dl class="resources-properties"><dt class="property-required"
             title="Required">
         <span id="restriction_type_python">
 <a href="#restriction_type_python" style="color: inherit; text-decoration: inherit;">restriction_<wbr>type</a>
@@ -7700,8 +6967,7 @@ distribute your content (`blacklist`).
     <dd>{{% md %}}The method that you want to use to restrict
 distribution of your content by country: `none`, `whitelist`, or
 `blacklist`.
-{{% /md %}}</dd>
-    <dt class="property-optional"
+{{% /md %}}</dd><dt class="property-optional"
             title="Optional">
         <span id="locations_python">
 <a href="#locations_python" style="color: inherit; text-decoration: inherit;">locations</a>
@@ -7712,16 +6978,13 @@ distribution of your content by country: `none`, `whitelist`, or
     <dd>{{% md %}}The [ISO 3166-1-alpha-2 codes][4] for which you
 want CloudFront either to distribute your content (`whitelist`) or not
 distribute your content (`blacklist`).
-{{% /md %}}</dd>
-</dl>
+{{% /md %}}</dd></dl>
 {{% /choosable %}}
 
 <h4 id="distributiontrustedsigner">Distribution<wbr>Trusted<wbr>Signer</h4>
 
 {{% choosable language csharp %}}
-<dl class="resources-properties">
-
-    <dt class="property-optional"
+<dl class="resources-properties"><dt class="property-optional"
             title="Optional">
         <span id="enabled_csharp">
 <a href="#enabled_csharp" style="color: inherit; text-decoration: inherit;">Enabled</a>
@@ -7731,8 +6994,7 @@ distribute your content (`blacklist`).
     </dt>
     <dd>{{% md %}}Whether the distribution is enabled to accept end
 user requests for content.
-{{% /md %}}</dd>
-    <dt class="property-optional"
+{{% /md %}}</dd><dt class="property-optional"
             title="Optional">
         <span id="items_csharp">
 <a href="#items_csharp" style="color: inherit; text-decoration: inherit;">Items</a>
@@ -7741,14 +7003,11 @@ user requests for content.
         <span class="property-type"><a href="#distributiontrustedsigneritem">List&lt;Distribution<wbr>Trusted<wbr>Signer<wbr>Item<wbr>Args&gt;</a></span>
     </dt>
     <dd>{{% md %}}List of nested attributes for each trusted signer
-{{% /md %}}</dd>
-</dl>
+{{% /md %}}</dd></dl>
 {{% /choosable %}}
 
 {{% choosable language go %}}
-<dl class="resources-properties">
-
-    <dt class="property-optional"
+<dl class="resources-properties"><dt class="property-optional"
             title="Optional">
         <span id="enabled_go">
 <a href="#enabled_go" style="color: inherit; text-decoration: inherit;">Enabled</a>
@@ -7758,8 +7017,7 @@ user requests for content.
     </dt>
     <dd>{{% md %}}Whether the distribution is enabled to accept end
 user requests for content.
-{{% /md %}}</dd>
-    <dt class="property-optional"
+{{% /md %}}</dd><dt class="property-optional"
             title="Optional">
         <span id="items_go">
 <a href="#items_go" style="color: inherit; text-decoration: inherit;">Items</a>
@@ -7768,14 +7026,11 @@ user requests for content.
         <span class="property-type"><a href="#distributiontrustedsigneritem">[]Distribution<wbr>Trusted<wbr>Signer<wbr>Item</a></span>
     </dt>
     <dd>{{% md %}}List of nested attributes for each trusted signer
-{{% /md %}}</dd>
-</dl>
+{{% /md %}}</dd></dl>
 {{% /choosable %}}
 
 {{% choosable language nodejs %}}
-<dl class="resources-properties">
-
-    <dt class="property-optional"
+<dl class="resources-properties"><dt class="property-optional"
             title="Optional">
         <span id="enabled_nodejs">
 <a href="#enabled_nodejs" style="color: inherit; text-decoration: inherit;">enabled</a>
@@ -7785,8 +7040,7 @@ user requests for content.
     </dt>
     <dd>{{% md %}}Whether the distribution is enabled to accept end
 user requests for content.
-{{% /md %}}</dd>
-    <dt class="property-optional"
+{{% /md %}}</dd><dt class="property-optional"
             title="Optional">
         <span id="items_nodejs">
 <a href="#items_nodejs" style="color: inherit; text-decoration: inherit;">items</a>
@@ -7795,14 +7049,11 @@ user requests for content.
         <span class="property-type"><a href="#distributiontrustedsigneritem">Distribution<wbr>Trusted<wbr>Signer<wbr>Item[]</a></span>
     </dt>
     <dd>{{% md %}}List of nested attributes for each trusted signer
-{{% /md %}}</dd>
-</dl>
+{{% /md %}}</dd></dl>
 {{% /choosable %}}
 
 {{% choosable language python %}}
-<dl class="resources-properties">
-
-    <dt class="property-optional"
+<dl class="resources-properties"><dt class="property-optional"
             title="Optional">
         <span id="enabled_python">
 <a href="#enabled_python" style="color: inherit; text-decoration: inherit;">enabled</a>
@@ -7812,8 +7063,7 @@ user requests for content.
     </dt>
     <dd>{{% md %}}Whether the distribution is enabled to accept end
 user requests for content.
-{{% /md %}}</dd>
-    <dt class="property-optional"
+{{% /md %}}</dd><dt class="property-optional"
             title="Optional">
         <span id="items_python">
 <a href="#items_python" style="color: inherit; text-decoration: inherit;">items</a>
@@ -7822,16 +7072,13 @@ user requests for content.
         <span class="property-type"><a href="#distributiontrustedsigneritem">Sequence[Distribution<wbr>Trusted<wbr>Signer<wbr>Item<wbr>Args]</a></span>
     </dt>
     <dd>{{% md %}}List of nested attributes for each trusted signer
-{{% /md %}}</dd>
-</dl>
+{{% /md %}}</dd></dl>
 {{% /choosable %}}
 
 <h4 id="distributiontrustedsigneritem">Distribution<wbr>Trusted<wbr>Signer<wbr>Item</h4>
 
 {{% choosable language csharp %}}
-<dl class="resources-properties">
-
-    <dt class="property-optional"
+<dl class="resources-properties"><dt class="property-optional"
             title="Optional">
         <span id="awsaccountnumber_csharp">
 <a href="#awsaccountnumber_csharp" style="color: inherit; text-decoration: inherit;">Aws<wbr>Account<wbr>Number</a>
@@ -7840,8 +7087,7 @@ user requests for content.
         <span class="property-type">string</span>
     </dt>
     <dd>{{% md %}}AWS account ID or `self`
-{{% /md %}}</dd>
-    <dt class="property-optional"
+{{% /md %}}</dd><dt class="property-optional"
             title="Optional">
         <span id="keypairids_csharp">
 <a href="#keypairids_csharp" style="color: inherit; text-decoration: inherit;">Key<wbr>Pair<wbr>Ids</a>
@@ -7850,14 +7096,11 @@ user requests for content.
         <span class="property-type">List&lt;string&gt;</span>
     </dt>
     <dd>{{% md %}}Set of active CloudFront key pairs associated with the signer account
-{{% /md %}}</dd>
-</dl>
+{{% /md %}}</dd></dl>
 {{% /choosable %}}
 
 {{% choosable language go %}}
-<dl class="resources-properties">
-
-    <dt class="property-optional"
+<dl class="resources-properties"><dt class="property-optional"
             title="Optional">
         <span id="awsaccountnumber_go">
 <a href="#awsaccountnumber_go" style="color: inherit; text-decoration: inherit;">Aws<wbr>Account<wbr>Number</a>
@@ -7866,8 +7109,7 @@ user requests for content.
         <span class="property-type">string</span>
     </dt>
     <dd>{{% md %}}AWS account ID or `self`
-{{% /md %}}</dd>
-    <dt class="property-optional"
+{{% /md %}}</dd><dt class="property-optional"
             title="Optional">
         <span id="keypairids_go">
 <a href="#keypairids_go" style="color: inherit; text-decoration: inherit;">Key<wbr>Pair<wbr>Ids</a>
@@ -7876,14 +7118,11 @@ user requests for content.
         <span class="property-type">[]string</span>
     </dt>
     <dd>{{% md %}}Set of active CloudFront key pairs associated with the signer account
-{{% /md %}}</dd>
-</dl>
+{{% /md %}}</dd></dl>
 {{% /choosable %}}
 
 {{% choosable language nodejs %}}
-<dl class="resources-properties">
-
-    <dt class="property-optional"
+<dl class="resources-properties"><dt class="property-optional"
             title="Optional">
         <span id="awsaccountnumber_nodejs">
 <a href="#awsaccountnumber_nodejs" style="color: inherit; text-decoration: inherit;">aws<wbr>Account<wbr>Number</a>
@@ -7892,8 +7131,7 @@ user requests for content.
         <span class="property-type">string</span>
     </dt>
     <dd>{{% md %}}AWS account ID or `self`
-{{% /md %}}</dd>
-    <dt class="property-optional"
+{{% /md %}}</dd><dt class="property-optional"
             title="Optional">
         <span id="keypairids_nodejs">
 <a href="#keypairids_nodejs" style="color: inherit; text-decoration: inherit;">key<wbr>Pair<wbr>Ids</a>
@@ -7902,14 +7140,11 @@ user requests for content.
         <span class="property-type">string[]</span>
     </dt>
     <dd>{{% md %}}Set of active CloudFront key pairs associated with the signer account
-{{% /md %}}</dd>
-</dl>
+{{% /md %}}</dd></dl>
 {{% /choosable %}}
 
 {{% choosable language python %}}
-<dl class="resources-properties">
-
-    <dt class="property-optional"
+<dl class="resources-properties"><dt class="property-optional"
             title="Optional">
         <span id="aws_account_number_python">
 <a href="#aws_account_number_python" style="color: inherit; text-decoration: inherit;">aws_<wbr>account_<wbr>number</a>
@@ -7918,8 +7153,7 @@ user requests for content.
         <span class="property-type">str</span>
     </dt>
     <dd>{{% md %}}AWS account ID or `self`
-{{% /md %}}</dd>
-    <dt class="property-optional"
+{{% /md %}}</dd><dt class="property-optional"
             title="Optional">
         <span id="key_pair_ids_python">
 <a href="#key_pair_ids_python" style="color: inherit; text-decoration: inherit;">key_<wbr>pair_<wbr>ids</a>
@@ -7928,16 +7162,13 @@ user requests for content.
         <span class="property-type">Sequence[str]</span>
     </dt>
     <dd>{{% md %}}Set of active CloudFront key pairs associated with the signer account
-{{% /md %}}</dd>
-</dl>
+{{% /md %}}</dd></dl>
 {{% /choosable %}}
 
 <h4 id="distributionviewercertificate">Distribution<wbr>Viewer<wbr>Certificate</h4>
 
 {{% choosable language csharp %}}
-<dl class="resources-properties">
-
-    <dt class="property-optional"
+<dl class="resources-properties"><dt class="property-optional"
             title="Optional">
         <span id="acmcertificatearn_csharp">
 <a href="#acmcertificatearn_csharp" style="color: inherit; text-decoration: inherit;">Acm<wbr>Certificate<wbr>Arn</a>
@@ -7949,8 +7180,7 @@ user requests for content.
 certificate that you wish to use with this distribution. Specify this,
 `cloudfront_default_certificate`, or `iam_certificate_id`.  The ACM
 certificate must be in  US-EAST-1.
-{{% /md %}}</dd>
-    <dt class="property-optional"
+{{% /md %}}</dd><dt class="property-optional"
             title="Optional">
         <span id="cloudfrontdefaultcertificate_csharp">
 <a href="#cloudfrontdefaultcertificate_csharp" style="color: inherit; text-decoration: inherit;">Cloudfront<wbr>Default<wbr>Certificate</a>
@@ -7961,8 +7191,7 @@ certificate must be in  US-EAST-1.
     <dd>{{% md %}}`true` if you want viewers to use HTTPS
 to request your objects and you're using the CloudFront domain name for your
 distribution. Specify this, `acm_certificate_arn`, or `iam_certificate_id`.
-{{% /md %}}</dd>
-    <dt class="property-optional"
+{{% /md %}}</dd><dt class="property-optional"
             title="Optional">
         <span id="iamcertificateid_csharp">
 <a href="#iamcertificateid_csharp" style="color: inherit; text-decoration: inherit;">Iam<wbr>Certificate<wbr>Id</a>
@@ -7973,8 +7202,7 @@ distribution. Specify this, `acm_certificate_arn`, or `iam_certificate_id`.
     <dd>{{% md %}}The IAM certificate identifier of the custom viewer
 certificate for this distribution if you are using a custom domain. Specify
 this, `acm_certificate_arn`, or `cloudfront_default_certificate`.
-{{% /md %}}</dd>
-    <dt class="property-optional"
+{{% /md %}}</dd><dt class="property-optional"
             title="Optional">
         <span id="minimumprotocolversion_csharp">
 <a href="#minimumprotocolversion_csharp" style="color: inherit; text-decoration: inherit;">Minimum<wbr>Protocol<wbr>Version</a>
@@ -7992,8 +7220,7 @@ or `iam_certificate_id`), and have specified `sni-only` in
 specified `vip` in `ssl_support_method`, only `SSLv3` or `TLSv1` can be
 specified. If you have specified `cloudfront_default_certificate`, `TLSv1`
 must be specified.
-{{% /md %}}</dd>
-    <dt class="property-optional"
+{{% /md %}}</dd><dt class="property-optional"
             title="Optional">
         <span id="sslsupportmethod_csharp">
 <a href="#sslsupportmethod_csharp" style="color: inherit; text-decoration: inherit;">Ssl<wbr>Support<wbr>Method</a>
@@ -8001,14 +7228,11 @@ must be specified.
         <span class="property-indicator"></span>
         <span class="property-type">string</span>
     </dt>
-    <dd>{{% md %}}{{% /md %}}</dd>
-</dl>
+    <dd>{{% md %}}{{% /md %}}</dd></dl>
 {{% /choosable %}}
 
 {{% choosable language go %}}
-<dl class="resources-properties">
-
-    <dt class="property-optional"
+<dl class="resources-properties"><dt class="property-optional"
             title="Optional">
         <span id="acmcertificatearn_go">
 <a href="#acmcertificatearn_go" style="color: inherit; text-decoration: inherit;">Acm<wbr>Certificate<wbr>Arn</a>
@@ -8020,8 +7244,7 @@ must be specified.
 certificate that you wish to use with this distribution. Specify this,
 `cloudfront_default_certificate`, or `iam_certificate_id`.  The ACM
 certificate must be in  US-EAST-1.
-{{% /md %}}</dd>
-    <dt class="property-optional"
+{{% /md %}}</dd><dt class="property-optional"
             title="Optional">
         <span id="cloudfrontdefaultcertificate_go">
 <a href="#cloudfrontdefaultcertificate_go" style="color: inherit; text-decoration: inherit;">Cloudfront<wbr>Default<wbr>Certificate</a>
@@ -8032,8 +7255,7 @@ certificate must be in  US-EAST-1.
     <dd>{{% md %}}`true` if you want viewers to use HTTPS
 to request your objects and you're using the CloudFront domain name for your
 distribution. Specify this, `acm_certificate_arn`, or `iam_certificate_id`.
-{{% /md %}}</dd>
-    <dt class="property-optional"
+{{% /md %}}</dd><dt class="property-optional"
             title="Optional">
         <span id="iamcertificateid_go">
 <a href="#iamcertificateid_go" style="color: inherit; text-decoration: inherit;">Iam<wbr>Certificate<wbr>Id</a>
@@ -8044,8 +7266,7 @@ distribution. Specify this, `acm_certificate_arn`, or `iam_certificate_id`.
     <dd>{{% md %}}The IAM certificate identifier of the custom viewer
 certificate for this distribution if you are using a custom domain. Specify
 this, `acm_certificate_arn`, or `cloudfront_default_certificate`.
-{{% /md %}}</dd>
-    <dt class="property-optional"
+{{% /md %}}</dd><dt class="property-optional"
             title="Optional">
         <span id="minimumprotocolversion_go">
 <a href="#minimumprotocolversion_go" style="color: inherit; text-decoration: inherit;">Minimum<wbr>Protocol<wbr>Version</a>
@@ -8063,8 +7284,7 @@ or `iam_certificate_id`), and have specified `sni-only` in
 specified `vip` in `ssl_support_method`, only `SSLv3` or `TLSv1` can be
 specified. If you have specified `cloudfront_default_certificate`, `TLSv1`
 must be specified.
-{{% /md %}}</dd>
-    <dt class="property-optional"
+{{% /md %}}</dd><dt class="property-optional"
             title="Optional">
         <span id="sslsupportmethod_go">
 <a href="#sslsupportmethod_go" style="color: inherit; text-decoration: inherit;">Ssl<wbr>Support<wbr>Method</a>
@@ -8072,14 +7292,11 @@ must be specified.
         <span class="property-indicator"></span>
         <span class="property-type">string</span>
     </dt>
-    <dd>{{% md %}}{{% /md %}}</dd>
-</dl>
+    <dd>{{% md %}}{{% /md %}}</dd></dl>
 {{% /choosable %}}
 
 {{% choosable language nodejs %}}
-<dl class="resources-properties">
-
-    <dt class="property-optional"
+<dl class="resources-properties"><dt class="property-optional"
             title="Optional">
         <span id="acmcertificatearn_nodejs">
 <a href="#acmcertificatearn_nodejs" style="color: inherit; text-decoration: inherit;">acm<wbr>Certificate<wbr>Arn</a>
@@ -8091,8 +7308,7 @@ must be specified.
 certificate that you wish to use with this distribution. Specify this,
 `cloudfront_default_certificate`, or `iam_certificate_id`.  The ACM
 certificate must be in  US-EAST-1.
-{{% /md %}}</dd>
-    <dt class="property-optional"
+{{% /md %}}</dd><dt class="property-optional"
             title="Optional">
         <span id="cloudfrontdefaultcertificate_nodejs">
 <a href="#cloudfrontdefaultcertificate_nodejs" style="color: inherit; text-decoration: inherit;">cloudfront<wbr>Default<wbr>Certificate</a>
@@ -8103,8 +7319,7 @@ certificate must be in  US-EAST-1.
     <dd>{{% md %}}`true` if you want viewers to use HTTPS
 to request your objects and you're using the CloudFront domain name for your
 distribution. Specify this, `acm_certificate_arn`, or `iam_certificate_id`.
-{{% /md %}}</dd>
-    <dt class="property-optional"
+{{% /md %}}</dd><dt class="property-optional"
             title="Optional">
         <span id="iamcertificateid_nodejs">
 <a href="#iamcertificateid_nodejs" style="color: inherit; text-decoration: inherit;">iam<wbr>Certificate<wbr>Id</a>
@@ -8115,8 +7330,7 @@ distribution. Specify this, `acm_certificate_arn`, or `iam_certificate_id`.
     <dd>{{% md %}}The IAM certificate identifier of the custom viewer
 certificate for this distribution if you are using a custom domain. Specify
 this, `acm_certificate_arn`, or `cloudfront_default_certificate`.
-{{% /md %}}</dd>
-    <dt class="property-optional"
+{{% /md %}}</dd><dt class="property-optional"
             title="Optional">
         <span id="minimumprotocolversion_nodejs">
 <a href="#minimumprotocolversion_nodejs" style="color: inherit; text-decoration: inherit;">minimum<wbr>Protocol<wbr>Version</a>
@@ -8134,8 +7348,7 @@ or `iam_certificate_id`), and have specified `sni-only` in
 specified `vip` in `ssl_support_method`, only `SSLv3` or `TLSv1` can be
 specified. If you have specified `cloudfront_default_certificate`, `TLSv1`
 must be specified.
-{{% /md %}}</dd>
-    <dt class="property-optional"
+{{% /md %}}</dd><dt class="property-optional"
             title="Optional">
         <span id="sslsupportmethod_nodejs">
 <a href="#sslsupportmethod_nodejs" style="color: inherit; text-decoration: inherit;">ssl<wbr>Support<wbr>Method</a>
@@ -8143,14 +7356,11 @@ must be specified.
         <span class="property-indicator"></span>
         <span class="property-type">string</span>
     </dt>
-    <dd>{{% md %}}{{% /md %}}</dd>
-</dl>
+    <dd>{{% md %}}{{% /md %}}</dd></dl>
 {{% /choosable %}}
 
 {{% choosable language python %}}
-<dl class="resources-properties">
-
-    <dt class="property-optional"
+<dl class="resources-properties"><dt class="property-optional"
             title="Optional">
         <span id="acm_certificate_arn_python">
 <a href="#acm_certificate_arn_python" style="color: inherit; text-decoration: inherit;">acm_<wbr>certificate_<wbr>arn</a>
@@ -8162,8 +7372,7 @@ must be specified.
 certificate that you wish to use with this distribution. Specify this,
 `cloudfront_default_certificate`, or `iam_certificate_id`.  The ACM
 certificate must be in  US-EAST-1.
-{{% /md %}}</dd>
-    <dt class="property-optional"
+{{% /md %}}</dd><dt class="property-optional"
             title="Optional">
         <span id="cloudfront_default_certificate_python">
 <a href="#cloudfront_default_certificate_python" style="color: inherit; text-decoration: inherit;">cloudfront_<wbr>default_<wbr>certificate</a>
@@ -8174,8 +7383,7 @@ certificate must be in  US-EAST-1.
     <dd>{{% md %}}`true` if you want viewers to use HTTPS
 to request your objects and you're using the CloudFront domain name for your
 distribution. Specify this, `acm_certificate_arn`, or `iam_certificate_id`.
-{{% /md %}}</dd>
-    <dt class="property-optional"
+{{% /md %}}</dd><dt class="property-optional"
             title="Optional">
         <span id="iam_certificate_id_python">
 <a href="#iam_certificate_id_python" style="color: inherit; text-decoration: inherit;">iam_<wbr>certificate_<wbr>id</a>
@@ -8186,8 +7394,7 @@ distribution. Specify this, `acm_certificate_arn`, or `iam_certificate_id`.
     <dd>{{% md %}}The IAM certificate identifier of the custom viewer
 certificate for this distribution if you are using a custom domain. Specify
 this, `acm_certificate_arn`, or `cloudfront_default_certificate`.
-{{% /md %}}</dd>
-    <dt class="property-optional"
+{{% /md %}}</dd><dt class="property-optional"
             title="Optional">
         <span id="minimum_protocol_version_python">
 <a href="#minimum_protocol_version_python" style="color: inherit; text-decoration: inherit;">minimum_<wbr>protocol_<wbr>version</a>
@@ -8205,8 +7412,7 @@ or `iam_certificate_id`), and have specified `sni-only` in
 specified `vip` in `ssl_support_method`, only `SSLv3` or `TLSv1` can be
 specified. If you have specified `cloudfront_default_certificate`, `TLSv1`
 must be specified.
-{{% /md %}}</dd>
-    <dt class="property-optional"
+{{% /md %}}</dd><dt class="property-optional"
             title="Optional">
         <span id="ssl_support_method_python">
 <a href="#ssl_support_method_python" style="color: inherit; text-decoration: inherit;">ssl_<wbr>support_<wbr>method</a>
@@ -8214,8 +7420,7 @@ must be specified.
         <span class="property-indicator"></span>
         <span class="property-type">str</span>
     </dt>
-    <dd>{{% md %}}{{% /md %}}</dd>
-</dl>
+    <dd>{{% md %}}{{% /md %}}</dd></dl>
 {{% /choosable %}}
 ## Import
 
@@ -8236,6 +7441,6 @@ Cloudfront Distributions can be imported using the `id`, e.g.
 	<dt>License</dt>
 	<dd>Apache-2.0</dd>
 	<dt>Notes</dt>
-	<dd>This Pulumi package is based on the [`aws` Terraform Provider](https://github.com/terraform-providers/terraform-provider-aws).</dd>
+	<dd>{{% md %}}This Pulumi package is based on the [`aws` Terraform Provider](https://github.com/terraform-providers/terraform-provider-aws).{{% /md %}}</dd>
 </dl>
 

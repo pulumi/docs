@@ -51,9 +51,7 @@ The following arguments are supported:
 
 
 {{% choosable language csharp %}}
-<dl class="resources-properties">
-
-    <dt class="property-required"
+<dl class="resources-properties"><dt class="property-required"
             title="Required">
         <span id="accountname_csharp">
 <a href="#accountname_csharp" style="color: inherit; text-decoration: inherit;">Account<wbr>Name</a>
@@ -61,8 +59,7 @@ The following arguments are supported:
         <span class="property-indicator"></span>
         <span class="property-type">string</span>
     </dt>
-    <dd>{{% md %}}Cosmos DB database account name.{{% /md %}}</dd>
-    <dt class="property-required"
+    <dd>{{% md %}}Cosmos DB database account name.{{% /md %}}</dd><dt class="property-required"
             title="Required">
         <span id="notebookworkspacename_csharp">
 <a href="#notebookworkspacename_csharp" style="color: inherit; text-decoration: inherit;">Notebook<wbr>Workspace<wbr>Name</a>
@@ -70,8 +67,7 @@ The following arguments are supported:
         <span class="property-indicator"></span>
         <span class="property-type">string</span>
     </dt>
-    <dd>{{% md %}}The name of the notebook workspace resource.{{% /md %}}</dd>
-    <dt class="property-required"
+    <dd>{{% md %}}The name of the notebook workspace resource.{{% /md %}}</dd><dt class="property-required"
             title="Required">
         <span id="resourcegroupname_csharp">
 <a href="#resourcegroupname_csharp" style="color: inherit; text-decoration: inherit;">Resource<wbr>Group<wbr>Name</a>
@@ -79,14 +75,11 @@ The following arguments are supported:
         <span class="property-indicator"></span>
         <span class="property-type">string</span>
     </dt>
-    <dd>{{% md %}}The name of the resource group. The name is case insensitive.{{% /md %}}</dd>
-</dl>
+    <dd>{{% md %}}The name of the resource group. The name is case insensitive.{{% /md %}}</dd></dl>
 {{% /choosable %}}
 
 {{% choosable language go %}}
-<dl class="resources-properties">
-
-    <dt class="property-required"
+<dl class="resources-properties"><dt class="property-required"
             title="Required">
         <span id="accountname_go">
 <a href="#accountname_go" style="color: inherit; text-decoration: inherit;">Account<wbr>Name</a>
@@ -94,8 +87,7 @@ The following arguments are supported:
         <span class="property-indicator"></span>
         <span class="property-type">string</span>
     </dt>
-    <dd>{{% md %}}Cosmos DB database account name.{{% /md %}}</dd>
-    <dt class="property-required"
+    <dd>{{% md %}}Cosmos DB database account name.{{% /md %}}</dd><dt class="property-required"
             title="Required">
         <span id="notebookworkspacename_go">
 <a href="#notebookworkspacename_go" style="color: inherit; text-decoration: inherit;">Notebook<wbr>Workspace<wbr>Name</a>
@@ -103,8 +95,7 @@ The following arguments are supported:
         <span class="property-indicator"></span>
         <span class="property-type">string</span>
     </dt>
-    <dd>{{% md %}}The name of the notebook workspace resource.{{% /md %}}</dd>
-    <dt class="property-required"
+    <dd>{{% md %}}The name of the notebook workspace resource.{{% /md %}}</dd><dt class="property-required"
             title="Required">
         <span id="resourcegroupname_go">
 <a href="#resourcegroupname_go" style="color: inherit; text-decoration: inherit;">Resource<wbr>Group<wbr>Name</a>
@@ -112,14 +103,11 @@ The following arguments are supported:
         <span class="property-indicator"></span>
         <span class="property-type">string</span>
     </dt>
-    <dd>{{% md %}}The name of the resource group. The name is case insensitive.{{% /md %}}</dd>
-</dl>
+    <dd>{{% md %}}The name of the resource group. The name is case insensitive.{{% /md %}}</dd></dl>
 {{% /choosable %}}
 
 {{% choosable language nodejs %}}
-<dl class="resources-properties">
-
-    <dt class="property-required"
+<dl class="resources-properties"><dt class="property-required"
             title="Required">
         <span id="accountname_nodejs">
 <a href="#accountname_nodejs" style="color: inherit; text-decoration: inherit;">account<wbr>Name</a>
@@ -127,8 +115,7 @@ The following arguments are supported:
         <span class="property-indicator"></span>
         <span class="property-type">string</span>
     </dt>
-    <dd>{{% md %}}Cosmos DB database account name.{{% /md %}}</dd>
-    <dt class="property-required"
+    <dd>{{% md %}}Cosmos DB database account name.{{% /md %}}</dd><dt class="property-required"
             title="Required">
         <span id="notebookworkspacename_nodejs">
 <a href="#notebookworkspacename_nodejs" style="color: inherit; text-decoration: inherit;">notebook<wbr>Workspace<wbr>Name</a>
@@ -136,8 +123,7 @@ The following arguments are supported:
         <span class="property-indicator"></span>
         <span class="property-type">string</span>
     </dt>
-    <dd>{{% md %}}The name of the notebook workspace resource.{{% /md %}}</dd>
-    <dt class="property-required"
+    <dd>{{% md %}}The name of the notebook workspace resource.{{% /md %}}</dd><dt class="property-required"
             title="Required">
         <span id="resourcegroupname_nodejs">
 <a href="#resourcegroupname_nodejs" style="color: inherit; text-decoration: inherit;">resource<wbr>Group<wbr>Name</a>
@@ -145,14 +131,11 @@ The following arguments are supported:
         <span class="property-indicator"></span>
         <span class="property-type">string</span>
     </dt>
-    <dd>{{% md %}}The name of the resource group. The name is case insensitive.{{% /md %}}</dd>
-</dl>
+    <dd>{{% md %}}The name of the resource group. The name is case insensitive.{{% /md %}}</dd></dl>
 {{% /choosable %}}
 
 {{% choosable language python %}}
-<dl class="resources-properties">
-
-    <dt class="property-required"
+<dl class="resources-properties"><dt class="property-required"
             title="Required">
         <span id="account_name_python">
 <a href="#account_name_python" style="color: inherit; text-decoration: inherit;">account_<wbr>name</a>
@@ -160,8 +143,7 @@ The following arguments are supported:
         <span class="property-indicator"></span>
         <span class="property-type">str</span>
     </dt>
-    <dd>{{% md %}}Cosmos DB database account name.{{% /md %}}</dd>
-    <dt class="property-required"
+    <dd>{{% md %}}Cosmos DB database account name.{{% /md %}}</dd><dt class="property-required"
             title="Required">
         <span id="notebook_workspace_name_python">
 <a href="#notebook_workspace_name_python" style="color: inherit; text-decoration: inherit;">notebook_<wbr>workspace_<wbr>name</a>
@@ -169,8 +151,7 @@ The following arguments are supported:
         <span class="property-indicator"></span>
         <span class="property-type">str</span>
     </dt>
-    <dd>{{% md %}}The name of the notebook workspace resource.{{% /md %}}</dd>
-    <dt class="property-required"
+    <dd>{{% md %}}The name of the notebook workspace resource.{{% /md %}}</dd><dt class="property-required"
             title="Required">
         <span id="resource_group_name_python">
 <a href="#resource_group_name_python" style="color: inherit; text-decoration: inherit;">resource_<wbr>group_<wbr>name</a>
@@ -178,8 +159,7 @@ The following arguments are supported:
         <span class="property-indicator"></span>
         <span class="property-type">str</span>
     </dt>
-    <dd>{{% md %}}The name of the resource group. The name is case insensitive.{{% /md %}}</dd>
-</dl>
+    <dd>{{% md %}}The name of the resource group. The name is case insensitive.{{% /md %}}</dd></dl>
 {{% /choosable %}}
 
 
@@ -192,9 +172,7 @@ The following output properties are available:
 
 
 {{% choosable language csharp %}}
-<dl class="resources-properties">
-
-    <dt class="property-"
+<dl class="resources-properties"><dt class="property-"
             title="">
         <span id="authtoken_csharp">
 <a href="#authtoken_csharp" style="color: inherit; text-decoration: inherit;">Auth<wbr>Token</a>
@@ -202,8 +180,7 @@ The following output properties are available:
         <span class="property-indicator"></span>
         <span class="property-type">string</span>
     </dt>
-    <dd>{{% md %}}Specifies auth token used for connecting to Notebook server (uses token-based auth).{{% /md %}}</dd>
-    <dt class="property-"
+    <dd>{{% md %}}Specifies auth token used for connecting to Notebook server (uses token-based auth).{{% /md %}}</dd><dt class="property-"
             title="">
         <span id="notebookserverendpoint_csharp">
 <a href="#notebookserverendpoint_csharp" style="color: inherit; text-decoration: inherit;">Notebook<wbr>Server<wbr>Endpoint</a>
@@ -211,14 +188,11 @@ The following output properties are available:
         <span class="property-indicator"></span>
         <span class="property-type">string</span>
     </dt>
-    <dd>{{% md %}}Specifies the endpoint of Notebook server.{{% /md %}}</dd>
-</dl>
+    <dd>{{% md %}}Specifies the endpoint of Notebook server.{{% /md %}}</dd></dl>
 {{% /choosable %}}
 
 {{% choosable language go %}}
-<dl class="resources-properties">
-
-    <dt class="property-"
+<dl class="resources-properties"><dt class="property-"
             title="">
         <span id="authtoken_go">
 <a href="#authtoken_go" style="color: inherit; text-decoration: inherit;">Auth<wbr>Token</a>
@@ -226,8 +200,7 @@ The following output properties are available:
         <span class="property-indicator"></span>
         <span class="property-type">string</span>
     </dt>
-    <dd>{{% md %}}Specifies auth token used for connecting to Notebook server (uses token-based auth).{{% /md %}}</dd>
-    <dt class="property-"
+    <dd>{{% md %}}Specifies auth token used for connecting to Notebook server (uses token-based auth).{{% /md %}}</dd><dt class="property-"
             title="">
         <span id="notebookserverendpoint_go">
 <a href="#notebookserverendpoint_go" style="color: inherit; text-decoration: inherit;">Notebook<wbr>Server<wbr>Endpoint</a>
@@ -235,14 +208,11 @@ The following output properties are available:
         <span class="property-indicator"></span>
         <span class="property-type">string</span>
     </dt>
-    <dd>{{% md %}}Specifies the endpoint of Notebook server.{{% /md %}}</dd>
-</dl>
+    <dd>{{% md %}}Specifies the endpoint of Notebook server.{{% /md %}}</dd></dl>
 {{% /choosable %}}
 
 {{% choosable language nodejs %}}
-<dl class="resources-properties">
-
-    <dt class="property-"
+<dl class="resources-properties"><dt class="property-"
             title="">
         <span id="authtoken_nodejs">
 <a href="#authtoken_nodejs" style="color: inherit; text-decoration: inherit;">auth<wbr>Token</a>
@@ -250,8 +220,7 @@ The following output properties are available:
         <span class="property-indicator"></span>
         <span class="property-type">string</span>
     </dt>
-    <dd>{{% md %}}Specifies auth token used for connecting to Notebook server (uses token-based auth).{{% /md %}}</dd>
-    <dt class="property-"
+    <dd>{{% md %}}Specifies auth token used for connecting to Notebook server (uses token-based auth).{{% /md %}}</dd><dt class="property-"
             title="">
         <span id="notebookserverendpoint_nodejs">
 <a href="#notebookserverendpoint_nodejs" style="color: inherit; text-decoration: inherit;">notebook<wbr>Server<wbr>Endpoint</a>
@@ -259,14 +228,11 @@ The following output properties are available:
         <span class="property-indicator"></span>
         <span class="property-type">string</span>
     </dt>
-    <dd>{{% md %}}Specifies the endpoint of Notebook server.{{% /md %}}</dd>
-</dl>
+    <dd>{{% md %}}Specifies the endpoint of Notebook server.{{% /md %}}</dd></dl>
 {{% /choosable %}}
 
 {{% choosable language python %}}
-<dl class="resources-properties">
-
-    <dt class="property-"
+<dl class="resources-properties"><dt class="property-"
             title="">
         <span id="auth_token_python">
 <a href="#auth_token_python" style="color: inherit; text-decoration: inherit;">auth_<wbr>token</a>
@@ -274,8 +240,7 @@ The following output properties are available:
         <span class="property-indicator"></span>
         <span class="property-type">str</span>
     </dt>
-    <dd>{{% md %}}Specifies auth token used for connecting to Notebook server (uses token-based auth).{{% /md %}}</dd>
-    <dt class="property-"
+    <dd>{{% md %}}Specifies auth token used for connecting to Notebook server (uses token-based auth).{{% /md %}}</dd><dt class="property-"
             title="">
         <span id="notebook_server_endpoint_python">
 <a href="#notebook_server_endpoint_python" style="color: inherit; text-decoration: inherit;">notebook_<wbr>server_<wbr>endpoint</a>
@@ -283,8 +248,7 @@ The following output properties are available:
         <span class="property-indicator"></span>
         <span class="property-type">str</span>
     </dt>
-    <dd>{{% md %}}Specifies the endpoint of Notebook server.{{% /md %}}</dd>
-</dl>
+    <dd>{{% md %}}Specifies the endpoint of Notebook server.{{% /md %}}</dd></dl>
 {{% /choosable %}}
 
 

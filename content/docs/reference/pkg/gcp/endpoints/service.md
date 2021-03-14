@@ -36,9 +36,7 @@ This resource creates and rolls out a Cloud Endpoints service using OpenAPI or g
 
 {{% choosable language nodejs %}}
 
-<dl class="resources-properties">
-  
-    <dt
+<dl class="resources-properties"><dt
         class="property-required" title="Required">
         <span>name</span>
         <span class="property-indicator"></span>
@@ -46,9 +44,7 @@ This resource creates and rolls out a Cloud Endpoints service using OpenAPI or g
     </dt>
     <dd>
       The unique name of the resource.
-    </dd>
-  
-    <dt
+    </dd><dt
         class="property-required" title="Required">
         <span>args</span>
         <span class="property-indicator"></span>
@@ -56,9 +52,7 @@ This resource creates and rolls out a Cloud Endpoints service using OpenAPI or g
     </dt>
     <dd>
       The arguments to resource properties.
-    </dd>
-  
-    <dt
+    </dd><dt
         class="property-optional" title="Optional">
         <span>opts</span>
         <span class="property-indicator"></span>
@@ -66,10 +60,7 @@ This resource creates and rolls out a Cloud Endpoints service using OpenAPI or g
     </dt>
     <dd>
       Bag of options to control resource&#39;s behavior.
-    </dd>
-  
-
-</dl>
+    </dd></dl>
 
 {{% /choosable %}}
 
@@ -95,9 +86,7 @@ This resource creates and rolls out a Cloud Endpoints service using OpenAPI or g
 
 {{% choosable language go %}}
 
-<dl class="resources-properties">
-  
-    <dt
+<dl class="resources-properties"><dt
         class="property-optional" title="Optional">
         <span>ctx</span>
         <span class="property-indicator"></span>
@@ -105,9 +94,7 @@ This resource creates and rolls out a Cloud Endpoints service using OpenAPI or g
     </dt>
     <dd>
       Context object for the current deployment.
-    </dd>
-  
-    <dt
+    </dd><dt
         class="property-required" title="Required">
         <span>name</span>
         <span class="property-indicator"></span>
@@ -115,9 +102,7 @@ This resource creates and rolls out a Cloud Endpoints service using OpenAPI or g
     </dt>
     <dd>
       The unique name of the resource.
-    </dd>
-  
-    <dt
+    </dd><dt
         class="property-required" title="Required">
         <span>args</span>
         <span class="property-indicator"></span>
@@ -125,9 +110,7 @@ This resource creates and rolls out a Cloud Endpoints service using OpenAPI or g
     </dt>
     <dd>
       The arguments to resource properties.
-    </dd>
-  
-    <dt
+    </dd><dt
         class="property-optional" title="Optional">
         <span>opts</span>
         <span class="property-indicator"></span>
@@ -135,18 +118,13 @@ This resource creates and rolls out a Cloud Endpoints service using OpenAPI or g
     </dt>
     <dd>
       Bag of options to control resource&#39;s behavior.
-    </dd>
-  
-
-</dl>
+    </dd></dl>
 
 {{% /choosable %}}
 
 {{% choosable language csharp %}}
 
-<dl class="resources-properties">
-  
-    <dt
+<dl class="resources-properties"><dt
         class="property-required" title="Required">
         <span>name</span>
         <span class="property-indicator"></span>
@@ -154,9 +132,7 @@ This resource creates and rolls out a Cloud Endpoints service using OpenAPI or g
     </dt>
     <dd>
       The unique name of the resource.
-    </dd>
-  
-    <dt
+    </dd><dt
         class="property-required" title="Required">
         <span>args</span>
         <span class="property-indicator"></span>
@@ -164,9 +140,7 @@ This resource creates and rolls out a Cloud Endpoints service using OpenAPI or g
     </dt>
     <dd>
       The arguments to resource properties.
-    </dd>
-  
-    <dt
+    </dd><dt
         class="property-optional" title="Optional">
         <span>opts</span>
         <span class="property-indicator"></span>
@@ -174,10 +148,7 @@ This resource creates and rolls out a Cloud Endpoints service using OpenAPI or g
     </dt>
     <dd>
       Bag of options to control resource&#39;s behavior.
-    </dd>
-  
-
-</dl>
+    </dd></dl>
 
 {{% /choosable %}}
 
@@ -192,9 +163,7 @@ The Service resource accepts the following [input]({{< relref "/docs/intro/conce
 
 
 {{% choosable language csharp %}}
-<dl class="resources-properties">
-
-    <dt class="property-required"
+<dl class="resources-properties"><dt class="property-required"
             title="Required">
         <span id="servicename_csharp">
 <a href="#servicename_csharp" style="color: inherit; text-decoration: inherit;">Service<wbr>Name</a>
@@ -203,8 +172,7 @@ The Service resource accepts the following [input]({{< relref "/docs/intro/conce
         <span class="property-type">string</span>
     </dt>
     <dd>{{% md %}}The name of the service. Usually of the form $apiname.endpoints.$projectid.cloud.goog.
-{{% /md %}}</dd>
-    <dt class="property-optional"
+{{% /md %}}</dd><dt class="property-optional"
             title="Optional">
         <span id="grpcconfig_csharp">
 <a href="#grpcconfig_csharp" style="color: inherit; text-decoration: inherit;">Grpc<wbr>Config</a>
@@ -214,8 +182,7 @@ The Service resource accepts the following [input]({{< relref "/docs/intro/conce
     </dt>
     <dd>{{% md %}}The full text of the Service Config YAML file (Example located here). If provided, must also provide
 protoc_output_base64. open_api config must not be provided.
-{{% /md %}}</dd>
-    <dt class="property-optional"
+{{% /md %}}</dd><dt class="property-optional"
             title="Optional">
         <span id="openapiconfig_csharp">
 <a href="#openapiconfig_csharp" style="color: inherit; text-decoration: inherit;">Openapi<wbr>Config</a>
@@ -225,8 +192,7 @@ protoc_output_base64. open_api config must not be provided.
     </dt>
     <dd>{{% md %}}The full text of the OpenAPI YAML configuration as described here. Either this, or both of grpc_config and
 protoc_output_base64 must be specified.
-{{% /md %}}</dd>
-    <dt class="property-optional"
+{{% /md %}}</dd><dt class="property-optional"
             title="Optional">
         <span id="project_csharp">
 <a href="#project_csharp" style="color: inherit; text-decoration: inherit;">Project</a>
@@ -235,8 +201,7 @@ protoc_output_base64 must be specified.
         <span class="property-type">string</span>
     </dt>
     <dd>{{% md %}}The project ID that the service belongs to. If not provided, provider project is used.
-{{% /md %}}</dd>
-    <dt class="property-optional"
+{{% /md %}}</dd><dt class="property-optional"
             title="Optional">
         <span id="protocoutputbase64_csharp">
 <a href="#protocoutputbase64_csharp" style="color: inherit; text-decoration: inherit;">Protoc<wbr>Output<wbr>Base64</a>
@@ -246,14 +211,11 @@ protoc_output_base64 must be specified.
     </dt>
     <dd>{{% md %}}The full contents of the Service Descriptor File generated by protoc. This should be a compiled .pb file,
 base64-encoded.
-{{% /md %}}</dd>
-</dl>
+{{% /md %}}</dd></dl>
 {{% /choosable %}}
 
 {{% choosable language go %}}
-<dl class="resources-properties">
-
-    <dt class="property-required"
+<dl class="resources-properties"><dt class="property-required"
             title="Required">
         <span id="servicename_go">
 <a href="#servicename_go" style="color: inherit; text-decoration: inherit;">Service<wbr>Name</a>
@@ -262,8 +224,7 @@ base64-encoded.
         <span class="property-type">string</span>
     </dt>
     <dd>{{% md %}}The name of the service. Usually of the form $apiname.endpoints.$projectid.cloud.goog.
-{{% /md %}}</dd>
-    <dt class="property-optional"
+{{% /md %}}</dd><dt class="property-optional"
             title="Optional">
         <span id="grpcconfig_go">
 <a href="#grpcconfig_go" style="color: inherit; text-decoration: inherit;">Grpc<wbr>Config</a>
@@ -273,8 +234,7 @@ base64-encoded.
     </dt>
     <dd>{{% md %}}The full text of the Service Config YAML file (Example located here). If provided, must also provide
 protoc_output_base64. open_api config must not be provided.
-{{% /md %}}</dd>
-    <dt class="property-optional"
+{{% /md %}}</dd><dt class="property-optional"
             title="Optional">
         <span id="openapiconfig_go">
 <a href="#openapiconfig_go" style="color: inherit; text-decoration: inherit;">Openapi<wbr>Config</a>
@@ -284,8 +244,7 @@ protoc_output_base64. open_api config must not be provided.
     </dt>
     <dd>{{% md %}}The full text of the OpenAPI YAML configuration as described here. Either this, or both of grpc_config and
 protoc_output_base64 must be specified.
-{{% /md %}}</dd>
-    <dt class="property-optional"
+{{% /md %}}</dd><dt class="property-optional"
             title="Optional">
         <span id="project_go">
 <a href="#project_go" style="color: inherit; text-decoration: inherit;">Project</a>
@@ -294,8 +253,7 @@ protoc_output_base64 must be specified.
         <span class="property-type">string</span>
     </dt>
     <dd>{{% md %}}The project ID that the service belongs to. If not provided, provider project is used.
-{{% /md %}}</dd>
-    <dt class="property-optional"
+{{% /md %}}</dd><dt class="property-optional"
             title="Optional">
         <span id="protocoutputbase64_go">
 <a href="#protocoutputbase64_go" style="color: inherit; text-decoration: inherit;">Protoc<wbr>Output<wbr>Base64</a>
@@ -305,14 +263,11 @@ protoc_output_base64 must be specified.
     </dt>
     <dd>{{% md %}}The full contents of the Service Descriptor File generated by protoc. This should be a compiled .pb file,
 base64-encoded.
-{{% /md %}}</dd>
-</dl>
+{{% /md %}}</dd></dl>
 {{% /choosable %}}
 
 {{% choosable language nodejs %}}
-<dl class="resources-properties">
-
-    <dt class="property-required"
+<dl class="resources-properties"><dt class="property-required"
             title="Required">
         <span id="servicename_nodejs">
 <a href="#servicename_nodejs" style="color: inherit; text-decoration: inherit;">service<wbr>Name</a>
@@ -321,8 +276,7 @@ base64-encoded.
         <span class="property-type">string</span>
     </dt>
     <dd>{{% md %}}The name of the service. Usually of the form $apiname.endpoints.$projectid.cloud.goog.
-{{% /md %}}</dd>
-    <dt class="property-optional"
+{{% /md %}}</dd><dt class="property-optional"
             title="Optional">
         <span id="grpcconfig_nodejs">
 <a href="#grpcconfig_nodejs" style="color: inherit; text-decoration: inherit;">grpc<wbr>Config</a>
@@ -332,8 +286,7 @@ base64-encoded.
     </dt>
     <dd>{{% md %}}The full text of the Service Config YAML file (Example located here). If provided, must also provide
 protoc_output_base64. open_api config must not be provided.
-{{% /md %}}</dd>
-    <dt class="property-optional"
+{{% /md %}}</dd><dt class="property-optional"
             title="Optional">
         <span id="openapiconfig_nodejs">
 <a href="#openapiconfig_nodejs" style="color: inherit; text-decoration: inherit;">openapi<wbr>Config</a>
@@ -343,8 +296,7 @@ protoc_output_base64. open_api config must not be provided.
     </dt>
     <dd>{{% md %}}The full text of the OpenAPI YAML configuration as described here. Either this, or both of grpc_config and
 protoc_output_base64 must be specified.
-{{% /md %}}</dd>
-    <dt class="property-optional"
+{{% /md %}}</dd><dt class="property-optional"
             title="Optional">
         <span id="project_nodejs">
 <a href="#project_nodejs" style="color: inherit; text-decoration: inherit;">project</a>
@@ -353,8 +305,7 @@ protoc_output_base64 must be specified.
         <span class="property-type">string</span>
     </dt>
     <dd>{{% md %}}The project ID that the service belongs to. If not provided, provider project is used.
-{{% /md %}}</dd>
-    <dt class="property-optional"
+{{% /md %}}</dd><dt class="property-optional"
             title="Optional">
         <span id="protocoutputbase64_nodejs">
 <a href="#protocoutputbase64_nodejs" style="color: inherit; text-decoration: inherit;">protoc<wbr>Output<wbr>Base64</a>
@@ -364,14 +315,11 @@ protoc_output_base64 must be specified.
     </dt>
     <dd>{{% md %}}The full contents of the Service Descriptor File generated by protoc. This should be a compiled .pb file,
 base64-encoded.
-{{% /md %}}</dd>
-</dl>
+{{% /md %}}</dd></dl>
 {{% /choosable %}}
 
 {{% choosable language python %}}
-<dl class="resources-properties">
-
-    <dt class="property-required"
+<dl class="resources-properties"><dt class="property-required"
             title="Required">
         <span id="service_name_python">
 <a href="#service_name_python" style="color: inherit; text-decoration: inherit;">service_<wbr>name</a>
@@ -380,8 +328,7 @@ base64-encoded.
         <span class="property-type">str</span>
     </dt>
     <dd>{{% md %}}The name of the service. Usually of the form $apiname.endpoints.$projectid.cloud.goog.
-{{% /md %}}</dd>
-    <dt class="property-optional"
+{{% /md %}}</dd><dt class="property-optional"
             title="Optional">
         <span id="grpc_config_python">
 <a href="#grpc_config_python" style="color: inherit; text-decoration: inherit;">grpc_<wbr>config</a>
@@ -391,8 +338,7 @@ base64-encoded.
     </dt>
     <dd>{{% md %}}The full text of the Service Config YAML file (Example located here). If provided, must also provide
 protoc_output_base64. open_api config must not be provided.
-{{% /md %}}</dd>
-    <dt class="property-optional"
+{{% /md %}}</dd><dt class="property-optional"
             title="Optional">
         <span id="openapi_config_python">
 <a href="#openapi_config_python" style="color: inherit; text-decoration: inherit;">openapi_<wbr>config</a>
@@ -402,8 +348,7 @@ protoc_output_base64. open_api config must not be provided.
     </dt>
     <dd>{{% md %}}The full text of the OpenAPI YAML configuration as described here. Either this, or both of grpc_config and
 protoc_output_base64 must be specified.
-{{% /md %}}</dd>
-    <dt class="property-optional"
+{{% /md %}}</dd><dt class="property-optional"
             title="Optional">
         <span id="project_python">
 <a href="#project_python" style="color: inherit; text-decoration: inherit;">project</a>
@@ -412,8 +357,7 @@ protoc_output_base64 must be specified.
         <span class="property-type">str</span>
     </dt>
     <dd>{{% md %}}The project ID that the service belongs to. If not provided, provider project is used.
-{{% /md %}}</dd>
-    <dt class="property-optional"
+{{% /md %}}</dd><dt class="property-optional"
             title="Optional">
         <span id="protoc_output_base64_python">
 <a href="#protoc_output_base64_python" style="color: inherit; text-decoration: inherit;">protoc_<wbr>output_<wbr>base64</a>
@@ -423,8 +367,7 @@ protoc_output_base64 must be specified.
     </dt>
     <dd>{{% md %}}The full contents of the Service Descriptor File generated by protoc. This should be a compiled .pb file,
 base64-encoded.
-{{% /md %}}</dd>
-</dl>
+{{% /md %}}</dd></dl>
 {{% /choosable %}}
 
 
@@ -435,9 +378,7 @@ All [input](#inputs) properties are implicitly available as output properties. A
 
 
 {{% choosable language csharp %}}
-<dl class="resources-properties">
-
-    <dt class="property-"
+<dl class="resources-properties"><dt class="property-"
             title="">
         <span id="apis_csharp">
 <a href="#apis_csharp" style="color: inherit; text-decoration: inherit;">Apis</a>
@@ -446,8 +387,7 @@ All [input](#inputs) properties are implicitly available as output properties. A
         <span class="property-type"><a href="#serviceapi">List&lt;Service<wbr>Api&gt;</a></span>
     </dt>
     <dd>{{% md %}}A list of API objects.
-{{% /md %}}</dd>
-    <dt class="property-"
+{{% /md %}}</dd><dt class="property-"
             title="">
         <span id="configid_csharp">
 <a href="#configid_csharp" style="color: inherit; text-decoration: inherit;">Config<wbr>Id</a>
@@ -457,8 +397,7 @@ All [input](#inputs) properties are implicitly available as output properties. A
     </dt>
     <dd>{{% md %}}The autogenerated ID for the configuration that is rolled out as part of the creation of this resource. Must be provided
 to compute engine instances as a tag.
-{{% /md %}}</dd>
-    <dt class="property-"
+{{% /md %}}</dd><dt class="property-"
             title="">
         <span id="dnsaddress_csharp">
 <a href="#dnsaddress_csharp" style="color: inherit; text-decoration: inherit;">Dns<wbr>Address</a>
@@ -467,8 +406,7 @@ to compute engine instances as a tag.
         <span class="property-type">string</span>
     </dt>
     <dd>{{% md %}}The address at which the service can be found - usually the same as the service name.
-{{% /md %}}</dd>
-    <dt class="property-"
+{{% /md %}}</dd><dt class="property-"
             title="">
         <span id="endpoints_csharp">
 <a href="#endpoints_csharp" style="color: inherit; text-decoration: inherit;">Endpoints</a>
@@ -477,8 +415,7 @@ to compute engine instances as a tag.
         <span class="property-type"><a href="#serviceendpoint">List&lt;Service<wbr>Endpoint&gt;</a></span>
     </dt>
     <dd>{{% md %}}A list of Endpoint objects.
-{{% /md %}}</dd>
-    <dt class="property-"
+{{% /md %}}</dd><dt class="property-"
             title="">
         <span id="id_csharp">
 <a href="#id_csharp" style="color: inherit; text-decoration: inherit;">Id</a>
@@ -486,14 +423,11 @@ to compute engine instances as a tag.
         <span class="property-indicator"></span>
         <span class="property-type">string</span>
     </dt>
-    <dd>{{% md %}}The provider-assigned unique ID for this managed resource.{{% /md %}}</dd>
-</dl>
+    <dd>{{% md %}}The provider-assigned unique ID for this managed resource.{{% /md %}}</dd></dl>
 {{% /choosable %}}
 
 {{% choosable language go %}}
-<dl class="resources-properties">
-
-    <dt class="property-"
+<dl class="resources-properties"><dt class="property-"
             title="">
         <span id="apis_go">
 <a href="#apis_go" style="color: inherit; text-decoration: inherit;">Apis</a>
@@ -502,8 +436,7 @@ to compute engine instances as a tag.
         <span class="property-type"><a href="#serviceapi">[]Service<wbr>Api</a></span>
     </dt>
     <dd>{{% md %}}A list of API objects.
-{{% /md %}}</dd>
-    <dt class="property-"
+{{% /md %}}</dd><dt class="property-"
             title="">
         <span id="configid_go">
 <a href="#configid_go" style="color: inherit; text-decoration: inherit;">Config<wbr>Id</a>
@@ -513,8 +446,7 @@ to compute engine instances as a tag.
     </dt>
     <dd>{{% md %}}The autogenerated ID for the configuration that is rolled out as part of the creation of this resource. Must be provided
 to compute engine instances as a tag.
-{{% /md %}}</dd>
-    <dt class="property-"
+{{% /md %}}</dd><dt class="property-"
             title="">
         <span id="dnsaddress_go">
 <a href="#dnsaddress_go" style="color: inherit; text-decoration: inherit;">Dns<wbr>Address</a>
@@ -523,8 +455,7 @@ to compute engine instances as a tag.
         <span class="property-type">string</span>
     </dt>
     <dd>{{% md %}}The address at which the service can be found - usually the same as the service name.
-{{% /md %}}</dd>
-    <dt class="property-"
+{{% /md %}}</dd><dt class="property-"
             title="">
         <span id="endpoints_go">
 <a href="#endpoints_go" style="color: inherit; text-decoration: inherit;">Endpoints</a>
@@ -533,8 +464,7 @@ to compute engine instances as a tag.
         <span class="property-type"><a href="#serviceendpoint">[]Service<wbr>Endpoint</a></span>
     </dt>
     <dd>{{% md %}}A list of Endpoint objects.
-{{% /md %}}</dd>
-    <dt class="property-"
+{{% /md %}}</dd><dt class="property-"
             title="">
         <span id="id_go">
 <a href="#id_go" style="color: inherit; text-decoration: inherit;">Id</a>
@@ -542,14 +472,11 @@ to compute engine instances as a tag.
         <span class="property-indicator"></span>
         <span class="property-type">string</span>
     </dt>
-    <dd>{{% md %}}The provider-assigned unique ID for this managed resource.{{% /md %}}</dd>
-</dl>
+    <dd>{{% md %}}The provider-assigned unique ID for this managed resource.{{% /md %}}</dd></dl>
 {{% /choosable %}}
 
 {{% choosable language nodejs %}}
-<dl class="resources-properties">
-
-    <dt class="property-"
+<dl class="resources-properties"><dt class="property-"
             title="">
         <span id="apis_nodejs">
 <a href="#apis_nodejs" style="color: inherit; text-decoration: inherit;">apis</a>
@@ -558,8 +485,7 @@ to compute engine instances as a tag.
         <span class="property-type"><a href="#serviceapi">Service<wbr>Api[]</a></span>
     </dt>
     <dd>{{% md %}}A list of API objects.
-{{% /md %}}</dd>
-    <dt class="property-"
+{{% /md %}}</dd><dt class="property-"
             title="">
         <span id="configid_nodejs">
 <a href="#configid_nodejs" style="color: inherit; text-decoration: inherit;">config<wbr>Id</a>
@@ -569,8 +495,7 @@ to compute engine instances as a tag.
     </dt>
     <dd>{{% md %}}The autogenerated ID for the configuration that is rolled out as part of the creation of this resource. Must be provided
 to compute engine instances as a tag.
-{{% /md %}}</dd>
-    <dt class="property-"
+{{% /md %}}</dd><dt class="property-"
             title="">
         <span id="dnsaddress_nodejs">
 <a href="#dnsaddress_nodejs" style="color: inherit; text-decoration: inherit;">dns<wbr>Address</a>
@@ -579,8 +504,7 @@ to compute engine instances as a tag.
         <span class="property-type">string</span>
     </dt>
     <dd>{{% md %}}The address at which the service can be found - usually the same as the service name.
-{{% /md %}}</dd>
-    <dt class="property-"
+{{% /md %}}</dd><dt class="property-"
             title="">
         <span id="endpoints_nodejs">
 <a href="#endpoints_nodejs" style="color: inherit; text-decoration: inherit;">endpoints</a>
@@ -589,8 +513,7 @@ to compute engine instances as a tag.
         <span class="property-type"><a href="#serviceendpoint">Service<wbr>Endpoint[]</a></span>
     </dt>
     <dd>{{% md %}}A list of Endpoint objects.
-{{% /md %}}</dd>
-    <dt class="property-"
+{{% /md %}}</dd><dt class="property-"
             title="">
         <span id="id_nodejs">
 <a href="#id_nodejs" style="color: inherit; text-decoration: inherit;">id</a>
@@ -598,14 +521,11 @@ to compute engine instances as a tag.
         <span class="property-indicator"></span>
         <span class="property-type">string</span>
     </dt>
-    <dd>{{% md %}}The provider-assigned unique ID for this managed resource.{{% /md %}}</dd>
-</dl>
+    <dd>{{% md %}}The provider-assigned unique ID for this managed resource.{{% /md %}}</dd></dl>
 {{% /choosable %}}
 
 {{% choosable language python %}}
-<dl class="resources-properties">
-
-    <dt class="property-"
+<dl class="resources-properties"><dt class="property-"
             title="">
         <span id="apis_python">
 <a href="#apis_python" style="color: inherit; text-decoration: inherit;">apis</a>
@@ -614,8 +534,7 @@ to compute engine instances as a tag.
         <span class="property-type"><a href="#serviceapi">Sequence[Service<wbr>Api]</a></span>
     </dt>
     <dd>{{% md %}}A list of API objects.
-{{% /md %}}</dd>
-    <dt class="property-"
+{{% /md %}}</dd><dt class="property-"
             title="">
         <span id="config_id_python">
 <a href="#config_id_python" style="color: inherit; text-decoration: inherit;">config_<wbr>id</a>
@@ -625,8 +544,7 @@ to compute engine instances as a tag.
     </dt>
     <dd>{{% md %}}The autogenerated ID for the configuration that is rolled out as part of the creation of this resource. Must be provided
 to compute engine instances as a tag.
-{{% /md %}}</dd>
-    <dt class="property-"
+{{% /md %}}</dd><dt class="property-"
             title="">
         <span id="dns_address_python">
 <a href="#dns_address_python" style="color: inherit; text-decoration: inherit;">dns_<wbr>address</a>
@@ -635,8 +553,7 @@ to compute engine instances as a tag.
         <span class="property-type">str</span>
     </dt>
     <dd>{{% md %}}The address at which the service can be found - usually the same as the service name.
-{{% /md %}}</dd>
-    <dt class="property-"
+{{% /md %}}</dd><dt class="property-"
             title="">
         <span id="endpoints_python">
 <a href="#endpoints_python" style="color: inherit; text-decoration: inherit;">endpoints</a>
@@ -645,8 +562,7 @@ to compute engine instances as a tag.
         <span class="property-type"><a href="#serviceendpoint">Sequence[Service<wbr>Endpoint]</a></span>
     </dt>
     <dd>{{% md %}}A list of Endpoint objects.
-{{% /md %}}</dd>
-    <dt class="property-"
+{{% /md %}}</dd><dt class="property-"
             title="">
         <span id="id_python">
 <a href="#id_python" style="color: inherit; text-decoration: inherit;">id</a>
@@ -654,8 +570,7 @@ to compute engine instances as a tag.
         <span class="property-indicator"></span>
         <span class="property-type">str</span>
     </dt>
-    <dd>{{% md %}}The provider-assigned unique ID for this managed resource.{{% /md %}}</dd>
-</dl>
+    <dd>{{% md %}}The provider-assigned unique ID for this managed resource.{{% /md %}}</dd></dl>
 {{% /choosable %}}
 
 
@@ -782,9 +697,7 @@ The following state arguments are supported:
 
 
 {{% choosable language csharp %}}
-<dl class="resources-properties">
-
-    <dt class="property-optional"
+<dl class="resources-properties"><dt class="property-optional"
             title="Optional">
         <span id="state_apis_csharp">
 <a href="#state_apis_csharp" style="color: inherit; text-decoration: inherit;">Apis</a>
@@ -793,8 +706,7 @@ The following state arguments are supported:
         <span class="property-type"><a href="#serviceapi">List&lt;Service<wbr>Api<wbr>Args&gt;</a></span>
     </dt>
     <dd>{{% md %}}A list of API objects.
-{{% /md %}}</dd>
-    <dt class="property-optional"
+{{% /md %}}</dd><dt class="property-optional"
             title="Optional">
         <span id="state_configid_csharp">
 <a href="#state_configid_csharp" style="color: inherit; text-decoration: inherit;">Config<wbr>Id</a>
@@ -804,8 +716,7 @@ The following state arguments are supported:
     </dt>
     <dd>{{% md %}}The autogenerated ID for the configuration that is rolled out as part of the creation of this resource. Must be provided
 to compute engine instances as a tag.
-{{% /md %}}</dd>
-    <dt class="property-optional"
+{{% /md %}}</dd><dt class="property-optional"
             title="Optional">
         <span id="state_dnsaddress_csharp">
 <a href="#state_dnsaddress_csharp" style="color: inherit; text-decoration: inherit;">Dns<wbr>Address</a>
@@ -814,8 +725,7 @@ to compute engine instances as a tag.
         <span class="property-type">string</span>
     </dt>
     <dd>{{% md %}}The address at which the service can be found - usually the same as the service name.
-{{% /md %}}</dd>
-    <dt class="property-optional"
+{{% /md %}}</dd><dt class="property-optional"
             title="Optional">
         <span id="state_endpoints_csharp">
 <a href="#state_endpoints_csharp" style="color: inherit; text-decoration: inherit;">Endpoints</a>
@@ -824,8 +734,7 @@ to compute engine instances as a tag.
         <span class="property-type"><a href="#serviceendpoint">List&lt;Service<wbr>Endpoint<wbr>Args&gt;</a></span>
     </dt>
     <dd>{{% md %}}A list of Endpoint objects.
-{{% /md %}}</dd>
-    <dt class="property-optional"
+{{% /md %}}</dd><dt class="property-optional"
             title="Optional">
         <span id="state_grpcconfig_csharp">
 <a href="#state_grpcconfig_csharp" style="color: inherit; text-decoration: inherit;">Grpc<wbr>Config</a>
@@ -835,8 +744,7 @@ to compute engine instances as a tag.
     </dt>
     <dd>{{% md %}}The full text of the Service Config YAML file (Example located here). If provided, must also provide
 protoc_output_base64. open_api config must not be provided.
-{{% /md %}}</dd>
-    <dt class="property-optional"
+{{% /md %}}</dd><dt class="property-optional"
             title="Optional">
         <span id="state_openapiconfig_csharp">
 <a href="#state_openapiconfig_csharp" style="color: inherit; text-decoration: inherit;">Openapi<wbr>Config</a>
@@ -846,8 +754,7 @@ protoc_output_base64. open_api config must not be provided.
     </dt>
     <dd>{{% md %}}The full text of the OpenAPI YAML configuration as described here. Either this, or both of grpc_config and
 protoc_output_base64 must be specified.
-{{% /md %}}</dd>
-    <dt class="property-optional"
+{{% /md %}}</dd><dt class="property-optional"
             title="Optional">
         <span id="state_project_csharp">
 <a href="#state_project_csharp" style="color: inherit; text-decoration: inherit;">Project</a>
@@ -856,8 +763,7 @@ protoc_output_base64 must be specified.
         <span class="property-type">string</span>
     </dt>
     <dd>{{% md %}}The project ID that the service belongs to. If not provided, provider project is used.
-{{% /md %}}</dd>
-    <dt class="property-optional"
+{{% /md %}}</dd><dt class="property-optional"
             title="Optional">
         <span id="state_protocoutputbase64_csharp">
 <a href="#state_protocoutputbase64_csharp" style="color: inherit; text-decoration: inherit;">Protoc<wbr>Output<wbr>Base64</a>
@@ -867,8 +773,7 @@ protoc_output_base64 must be specified.
     </dt>
     <dd>{{% md %}}The full contents of the Service Descriptor File generated by protoc. This should be a compiled .pb file,
 base64-encoded.
-{{% /md %}}</dd>
-    <dt class="property-optional"
+{{% /md %}}</dd><dt class="property-optional"
             title="Optional">
         <span id="state_servicename_csharp">
 <a href="#state_servicename_csharp" style="color: inherit; text-decoration: inherit;">Service<wbr>Name</a>
@@ -877,14 +782,11 @@ base64-encoded.
         <span class="property-type">string</span>
     </dt>
     <dd>{{% md %}}The name of the service. Usually of the form $apiname.endpoints.$projectid.cloud.goog.
-{{% /md %}}</dd>
-</dl>
+{{% /md %}}</dd></dl>
 {{% /choosable %}}
 
 {{% choosable language go %}}
-<dl class="resources-properties">
-
-    <dt class="property-optional"
+<dl class="resources-properties"><dt class="property-optional"
             title="Optional">
         <span id="state_apis_go">
 <a href="#state_apis_go" style="color: inherit; text-decoration: inherit;">Apis</a>
@@ -893,8 +795,7 @@ base64-encoded.
         <span class="property-type"><a href="#serviceapi">[]Service<wbr>Api</a></span>
     </dt>
     <dd>{{% md %}}A list of API objects.
-{{% /md %}}</dd>
-    <dt class="property-optional"
+{{% /md %}}</dd><dt class="property-optional"
             title="Optional">
         <span id="state_configid_go">
 <a href="#state_configid_go" style="color: inherit; text-decoration: inherit;">Config<wbr>Id</a>
@@ -904,8 +805,7 @@ base64-encoded.
     </dt>
     <dd>{{% md %}}The autogenerated ID for the configuration that is rolled out as part of the creation of this resource. Must be provided
 to compute engine instances as a tag.
-{{% /md %}}</dd>
-    <dt class="property-optional"
+{{% /md %}}</dd><dt class="property-optional"
             title="Optional">
         <span id="state_dnsaddress_go">
 <a href="#state_dnsaddress_go" style="color: inherit; text-decoration: inherit;">Dns<wbr>Address</a>
@@ -914,8 +814,7 @@ to compute engine instances as a tag.
         <span class="property-type">string</span>
     </dt>
     <dd>{{% md %}}The address at which the service can be found - usually the same as the service name.
-{{% /md %}}</dd>
-    <dt class="property-optional"
+{{% /md %}}</dd><dt class="property-optional"
             title="Optional">
         <span id="state_endpoints_go">
 <a href="#state_endpoints_go" style="color: inherit; text-decoration: inherit;">Endpoints</a>
@@ -924,8 +823,7 @@ to compute engine instances as a tag.
         <span class="property-type"><a href="#serviceendpoint">[]Service<wbr>Endpoint</a></span>
     </dt>
     <dd>{{% md %}}A list of Endpoint objects.
-{{% /md %}}</dd>
-    <dt class="property-optional"
+{{% /md %}}</dd><dt class="property-optional"
             title="Optional">
         <span id="state_grpcconfig_go">
 <a href="#state_grpcconfig_go" style="color: inherit; text-decoration: inherit;">Grpc<wbr>Config</a>
@@ -935,8 +833,7 @@ to compute engine instances as a tag.
     </dt>
     <dd>{{% md %}}The full text of the Service Config YAML file (Example located here). If provided, must also provide
 protoc_output_base64. open_api config must not be provided.
-{{% /md %}}</dd>
-    <dt class="property-optional"
+{{% /md %}}</dd><dt class="property-optional"
             title="Optional">
         <span id="state_openapiconfig_go">
 <a href="#state_openapiconfig_go" style="color: inherit; text-decoration: inherit;">Openapi<wbr>Config</a>
@@ -946,8 +843,7 @@ protoc_output_base64. open_api config must not be provided.
     </dt>
     <dd>{{% md %}}The full text of the OpenAPI YAML configuration as described here. Either this, or both of grpc_config and
 protoc_output_base64 must be specified.
-{{% /md %}}</dd>
-    <dt class="property-optional"
+{{% /md %}}</dd><dt class="property-optional"
             title="Optional">
         <span id="state_project_go">
 <a href="#state_project_go" style="color: inherit; text-decoration: inherit;">Project</a>
@@ -956,8 +852,7 @@ protoc_output_base64 must be specified.
         <span class="property-type">string</span>
     </dt>
     <dd>{{% md %}}The project ID that the service belongs to. If not provided, provider project is used.
-{{% /md %}}</dd>
-    <dt class="property-optional"
+{{% /md %}}</dd><dt class="property-optional"
             title="Optional">
         <span id="state_protocoutputbase64_go">
 <a href="#state_protocoutputbase64_go" style="color: inherit; text-decoration: inherit;">Protoc<wbr>Output<wbr>Base64</a>
@@ -967,8 +862,7 @@ protoc_output_base64 must be specified.
     </dt>
     <dd>{{% md %}}The full contents of the Service Descriptor File generated by protoc. This should be a compiled .pb file,
 base64-encoded.
-{{% /md %}}</dd>
-    <dt class="property-optional"
+{{% /md %}}</dd><dt class="property-optional"
             title="Optional">
         <span id="state_servicename_go">
 <a href="#state_servicename_go" style="color: inherit; text-decoration: inherit;">Service<wbr>Name</a>
@@ -977,14 +871,11 @@ base64-encoded.
         <span class="property-type">string</span>
     </dt>
     <dd>{{% md %}}The name of the service. Usually of the form $apiname.endpoints.$projectid.cloud.goog.
-{{% /md %}}</dd>
-</dl>
+{{% /md %}}</dd></dl>
 {{% /choosable %}}
 
 {{% choosable language nodejs %}}
-<dl class="resources-properties">
-
-    <dt class="property-optional"
+<dl class="resources-properties"><dt class="property-optional"
             title="Optional">
         <span id="state_apis_nodejs">
 <a href="#state_apis_nodejs" style="color: inherit; text-decoration: inherit;">apis</a>
@@ -993,8 +884,7 @@ base64-encoded.
         <span class="property-type"><a href="#serviceapi">Service<wbr>Api[]</a></span>
     </dt>
     <dd>{{% md %}}A list of API objects.
-{{% /md %}}</dd>
-    <dt class="property-optional"
+{{% /md %}}</dd><dt class="property-optional"
             title="Optional">
         <span id="state_configid_nodejs">
 <a href="#state_configid_nodejs" style="color: inherit; text-decoration: inherit;">config<wbr>Id</a>
@@ -1004,8 +894,7 @@ base64-encoded.
     </dt>
     <dd>{{% md %}}The autogenerated ID for the configuration that is rolled out as part of the creation of this resource. Must be provided
 to compute engine instances as a tag.
-{{% /md %}}</dd>
-    <dt class="property-optional"
+{{% /md %}}</dd><dt class="property-optional"
             title="Optional">
         <span id="state_dnsaddress_nodejs">
 <a href="#state_dnsaddress_nodejs" style="color: inherit; text-decoration: inherit;">dns<wbr>Address</a>
@@ -1014,8 +903,7 @@ to compute engine instances as a tag.
         <span class="property-type">string</span>
     </dt>
     <dd>{{% md %}}The address at which the service can be found - usually the same as the service name.
-{{% /md %}}</dd>
-    <dt class="property-optional"
+{{% /md %}}</dd><dt class="property-optional"
             title="Optional">
         <span id="state_endpoints_nodejs">
 <a href="#state_endpoints_nodejs" style="color: inherit; text-decoration: inherit;">endpoints</a>
@@ -1024,8 +912,7 @@ to compute engine instances as a tag.
         <span class="property-type"><a href="#serviceendpoint">Service<wbr>Endpoint[]</a></span>
     </dt>
     <dd>{{% md %}}A list of Endpoint objects.
-{{% /md %}}</dd>
-    <dt class="property-optional"
+{{% /md %}}</dd><dt class="property-optional"
             title="Optional">
         <span id="state_grpcconfig_nodejs">
 <a href="#state_grpcconfig_nodejs" style="color: inherit; text-decoration: inherit;">grpc<wbr>Config</a>
@@ -1035,8 +922,7 @@ to compute engine instances as a tag.
     </dt>
     <dd>{{% md %}}The full text of the Service Config YAML file (Example located here). If provided, must also provide
 protoc_output_base64. open_api config must not be provided.
-{{% /md %}}</dd>
-    <dt class="property-optional"
+{{% /md %}}</dd><dt class="property-optional"
             title="Optional">
         <span id="state_openapiconfig_nodejs">
 <a href="#state_openapiconfig_nodejs" style="color: inherit; text-decoration: inherit;">openapi<wbr>Config</a>
@@ -1046,8 +932,7 @@ protoc_output_base64. open_api config must not be provided.
     </dt>
     <dd>{{% md %}}The full text of the OpenAPI YAML configuration as described here. Either this, or both of grpc_config and
 protoc_output_base64 must be specified.
-{{% /md %}}</dd>
-    <dt class="property-optional"
+{{% /md %}}</dd><dt class="property-optional"
             title="Optional">
         <span id="state_project_nodejs">
 <a href="#state_project_nodejs" style="color: inherit; text-decoration: inherit;">project</a>
@@ -1056,8 +941,7 @@ protoc_output_base64 must be specified.
         <span class="property-type">string</span>
     </dt>
     <dd>{{% md %}}The project ID that the service belongs to. If not provided, provider project is used.
-{{% /md %}}</dd>
-    <dt class="property-optional"
+{{% /md %}}</dd><dt class="property-optional"
             title="Optional">
         <span id="state_protocoutputbase64_nodejs">
 <a href="#state_protocoutputbase64_nodejs" style="color: inherit; text-decoration: inherit;">protoc<wbr>Output<wbr>Base64</a>
@@ -1067,8 +951,7 @@ protoc_output_base64 must be specified.
     </dt>
     <dd>{{% md %}}The full contents of the Service Descriptor File generated by protoc. This should be a compiled .pb file,
 base64-encoded.
-{{% /md %}}</dd>
-    <dt class="property-optional"
+{{% /md %}}</dd><dt class="property-optional"
             title="Optional">
         <span id="state_servicename_nodejs">
 <a href="#state_servicename_nodejs" style="color: inherit; text-decoration: inherit;">service<wbr>Name</a>
@@ -1077,14 +960,11 @@ base64-encoded.
         <span class="property-type">string</span>
     </dt>
     <dd>{{% md %}}The name of the service. Usually of the form $apiname.endpoints.$projectid.cloud.goog.
-{{% /md %}}</dd>
-</dl>
+{{% /md %}}</dd></dl>
 {{% /choosable %}}
 
 {{% choosable language python %}}
-<dl class="resources-properties">
-
-    <dt class="property-optional"
+<dl class="resources-properties"><dt class="property-optional"
             title="Optional">
         <span id="state_apis_python">
 <a href="#state_apis_python" style="color: inherit; text-decoration: inherit;">apis</a>
@@ -1093,8 +973,7 @@ base64-encoded.
         <span class="property-type"><a href="#serviceapi">Sequence[Service<wbr>Api<wbr>Args]</a></span>
     </dt>
     <dd>{{% md %}}A list of API objects.
-{{% /md %}}</dd>
-    <dt class="property-optional"
+{{% /md %}}</dd><dt class="property-optional"
             title="Optional">
         <span id="state_config_id_python">
 <a href="#state_config_id_python" style="color: inherit; text-decoration: inherit;">config_<wbr>id</a>
@@ -1104,8 +983,7 @@ base64-encoded.
     </dt>
     <dd>{{% md %}}The autogenerated ID for the configuration that is rolled out as part of the creation of this resource. Must be provided
 to compute engine instances as a tag.
-{{% /md %}}</dd>
-    <dt class="property-optional"
+{{% /md %}}</dd><dt class="property-optional"
             title="Optional">
         <span id="state_dns_address_python">
 <a href="#state_dns_address_python" style="color: inherit; text-decoration: inherit;">dns_<wbr>address</a>
@@ -1114,8 +992,7 @@ to compute engine instances as a tag.
         <span class="property-type">str</span>
     </dt>
     <dd>{{% md %}}The address at which the service can be found - usually the same as the service name.
-{{% /md %}}</dd>
-    <dt class="property-optional"
+{{% /md %}}</dd><dt class="property-optional"
             title="Optional">
         <span id="state_endpoints_python">
 <a href="#state_endpoints_python" style="color: inherit; text-decoration: inherit;">endpoints</a>
@@ -1124,8 +1001,7 @@ to compute engine instances as a tag.
         <span class="property-type"><a href="#serviceendpoint">Sequence[Service<wbr>Endpoint<wbr>Args]</a></span>
     </dt>
     <dd>{{% md %}}A list of Endpoint objects.
-{{% /md %}}</dd>
-    <dt class="property-optional"
+{{% /md %}}</dd><dt class="property-optional"
             title="Optional">
         <span id="state_grpc_config_python">
 <a href="#state_grpc_config_python" style="color: inherit; text-decoration: inherit;">grpc_<wbr>config</a>
@@ -1135,8 +1011,7 @@ to compute engine instances as a tag.
     </dt>
     <dd>{{% md %}}The full text of the Service Config YAML file (Example located here). If provided, must also provide
 protoc_output_base64. open_api config must not be provided.
-{{% /md %}}</dd>
-    <dt class="property-optional"
+{{% /md %}}</dd><dt class="property-optional"
             title="Optional">
         <span id="state_openapi_config_python">
 <a href="#state_openapi_config_python" style="color: inherit; text-decoration: inherit;">openapi_<wbr>config</a>
@@ -1146,8 +1021,7 @@ protoc_output_base64. open_api config must not be provided.
     </dt>
     <dd>{{% md %}}The full text of the OpenAPI YAML configuration as described here. Either this, or both of grpc_config and
 protoc_output_base64 must be specified.
-{{% /md %}}</dd>
-    <dt class="property-optional"
+{{% /md %}}</dd><dt class="property-optional"
             title="Optional">
         <span id="state_project_python">
 <a href="#state_project_python" style="color: inherit; text-decoration: inherit;">project</a>
@@ -1156,8 +1030,7 @@ protoc_output_base64 must be specified.
         <span class="property-type">str</span>
     </dt>
     <dd>{{% md %}}The project ID that the service belongs to. If not provided, provider project is used.
-{{% /md %}}</dd>
-    <dt class="property-optional"
+{{% /md %}}</dd><dt class="property-optional"
             title="Optional">
         <span id="state_protoc_output_base64_python">
 <a href="#state_protoc_output_base64_python" style="color: inherit; text-decoration: inherit;">protoc_<wbr>output_<wbr>base64</a>
@@ -1167,8 +1040,7 @@ protoc_output_base64 must be specified.
     </dt>
     <dd>{{% md %}}The full contents of the Service Descriptor File generated by protoc. This should be a compiled .pb file,
 base64-encoded.
-{{% /md %}}</dd>
-    <dt class="property-optional"
+{{% /md %}}</dd><dt class="property-optional"
             title="Optional">
         <span id="state_service_name_python">
 <a href="#state_service_name_python" style="color: inherit; text-decoration: inherit;">service_<wbr>name</a>
@@ -1177,8 +1049,7 @@ base64-encoded.
         <span class="property-type">str</span>
     </dt>
     <dd>{{% md %}}The name of the service. Usually of the form $apiname.endpoints.$projectid.cloud.goog.
-{{% /md %}}</dd>
-</dl>
+{{% /md %}}</dd></dl>
 {{% /choosable %}}
 
 
@@ -1193,9 +1064,7 @@ base64-encoded.
 <h4 id="serviceapi">Service<wbr>Api</h4>
 
 {{% choosable language csharp %}}
-<dl class="resources-properties">
-
-    <dt class="property-optional"
+<dl class="resources-properties"><dt class="property-optional"
             title="Optional">
         <span id="methods_csharp">
 <a href="#methods_csharp" style="color: inherit; text-decoration: inherit;">Methods</a>
@@ -1203,8 +1072,7 @@ base64-encoded.
         <span class="property-indicator"></span>
         <span class="property-type"><a href="#serviceapimethod">List&lt;Service<wbr>Api<wbr>Method<wbr>Args&gt;</a></span>
     </dt>
-    <dd>{{% md %}}{{% /md %}}</dd>
-    <dt class="property-optional"
+    <dd>{{% md %}}{{% /md %}}</dd><dt class="property-optional"
             title="Optional">
         <span id="name_csharp">
 <a href="#name_csharp" style="color: inherit; text-decoration: inherit;">Name</a>
@@ -1212,8 +1080,7 @@ base64-encoded.
         <span class="property-indicator"></span>
         <span class="property-type">string</span>
     </dt>
-    <dd>{{% md %}}{{% /md %}}</dd>
-    <dt class="property-optional"
+    <dd>{{% md %}}{{% /md %}}</dd><dt class="property-optional"
             title="Optional">
         <span id="syntax_csharp">
 <a href="#syntax_csharp" style="color: inherit; text-decoration: inherit;">Syntax</a>
@@ -1221,8 +1088,7 @@ base64-encoded.
         <span class="property-indicator"></span>
         <span class="property-type">string</span>
     </dt>
-    <dd>{{% md %}}{{% /md %}}</dd>
-    <dt class="property-optional"
+    <dd>{{% md %}}{{% /md %}}</dd><dt class="property-optional"
             title="Optional">
         <span id="version_csharp">
 <a href="#version_csharp" style="color: inherit; text-decoration: inherit;">Version</a>
@@ -1230,14 +1096,11 @@ base64-encoded.
         <span class="property-indicator"></span>
         <span class="property-type">string</span>
     </dt>
-    <dd>{{% md %}}{{% /md %}}</dd>
-</dl>
+    <dd>{{% md %}}{{% /md %}}</dd></dl>
 {{% /choosable %}}
 
 {{% choosable language go %}}
-<dl class="resources-properties">
-
-    <dt class="property-optional"
+<dl class="resources-properties"><dt class="property-optional"
             title="Optional">
         <span id="methods_go">
 <a href="#methods_go" style="color: inherit; text-decoration: inherit;">Methods</a>
@@ -1245,8 +1108,7 @@ base64-encoded.
         <span class="property-indicator"></span>
         <span class="property-type"><a href="#serviceapimethod">[]Service<wbr>Api<wbr>Method</a></span>
     </dt>
-    <dd>{{% md %}}{{% /md %}}</dd>
-    <dt class="property-optional"
+    <dd>{{% md %}}{{% /md %}}</dd><dt class="property-optional"
             title="Optional">
         <span id="name_go">
 <a href="#name_go" style="color: inherit; text-decoration: inherit;">Name</a>
@@ -1254,8 +1116,7 @@ base64-encoded.
         <span class="property-indicator"></span>
         <span class="property-type">string</span>
     </dt>
-    <dd>{{% md %}}{{% /md %}}</dd>
-    <dt class="property-optional"
+    <dd>{{% md %}}{{% /md %}}</dd><dt class="property-optional"
             title="Optional">
         <span id="syntax_go">
 <a href="#syntax_go" style="color: inherit; text-decoration: inherit;">Syntax</a>
@@ -1263,8 +1124,7 @@ base64-encoded.
         <span class="property-indicator"></span>
         <span class="property-type">string</span>
     </dt>
-    <dd>{{% md %}}{{% /md %}}</dd>
-    <dt class="property-optional"
+    <dd>{{% md %}}{{% /md %}}</dd><dt class="property-optional"
             title="Optional">
         <span id="version_go">
 <a href="#version_go" style="color: inherit; text-decoration: inherit;">Version</a>
@@ -1272,14 +1132,11 @@ base64-encoded.
         <span class="property-indicator"></span>
         <span class="property-type">string</span>
     </dt>
-    <dd>{{% md %}}{{% /md %}}</dd>
-</dl>
+    <dd>{{% md %}}{{% /md %}}</dd></dl>
 {{% /choosable %}}
 
 {{% choosable language nodejs %}}
-<dl class="resources-properties">
-
-    <dt class="property-optional"
+<dl class="resources-properties"><dt class="property-optional"
             title="Optional">
         <span id="methods_nodejs">
 <a href="#methods_nodejs" style="color: inherit; text-decoration: inherit;">methods</a>
@@ -1287,8 +1144,7 @@ base64-encoded.
         <span class="property-indicator"></span>
         <span class="property-type"><a href="#serviceapimethod">Service<wbr>Api<wbr>Method[]</a></span>
     </dt>
-    <dd>{{% md %}}{{% /md %}}</dd>
-    <dt class="property-optional"
+    <dd>{{% md %}}{{% /md %}}</dd><dt class="property-optional"
             title="Optional">
         <span id="name_nodejs">
 <a href="#name_nodejs" style="color: inherit; text-decoration: inherit;">name</a>
@@ -1296,8 +1152,7 @@ base64-encoded.
         <span class="property-indicator"></span>
         <span class="property-type">string</span>
     </dt>
-    <dd>{{% md %}}{{% /md %}}</dd>
-    <dt class="property-optional"
+    <dd>{{% md %}}{{% /md %}}</dd><dt class="property-optional"
             title="Optional">
         <span id="syntax_nodejs">
 <a href="#syntax_nodejs" style="color: inherit; text-decoration: inherit;">syntax</a>
@@ -1305,8 +1160,7 @@ base64-encoded.
         <span class="property-indicator"></span>
         <span class="property-type">string</span>
     </dt>
-    <dd>{{% md %}}{{% /md %}}</dd>
-    <dt class="property-optional"
+    <dd>{{% md %}}{{% /md %}}</dd><dt class="property-optional"
             title="Optional">
         <span id="version_nodejs">
 <a href="#version_nodejs" style="color: inherit; text-decoration: inherit;">version</a>
@@ -1314,14 +1168,11 @@ base64-encoded.
         <span class="property-indicator"></span>
         <span class="property-type">string</span>
     </dt>
-    <dd>{{% md %}}{{% /md %}}</dd>
-</dl>
+    <dd>{{% md %}}{{% /md %}}</dd></dl>
 {{% /choosable %}}
 
 {{% choosable language python %}}
-<dl class="resources-properties">
-
-    <dt class="property-optional"
+<dl class="resources-properties"><dt class="property-optional"
             title="Optional">
         <span id="methods_python">
 <a href="#methods_python" style="color: inherit; text-decoration: inherit;">methods</a>
@@ -1329,8 +1180,7 @@ base64-encoded.
         <span class="property-indicator"></span>
         <span class="property-type"><a href="#serviceapimethod">Sequence[Service<wbr>Api<wbr>Method<wbr>Args]</a></span>
     </dt>
-    <dd>{{% md %}}{{% /md %}}</dd>
-    <dt class="property-optional"
+    <dd>{{% md %}}{{% /md %}}</dd><dt class="property-optional"
             title="Optional">
         <span id="name_python">
 <a href="#name_python" style="color: inherit; text-decoration: inherit;">name</a>
@@ -1338,8 +1188,7 @@ base64-encoded.
         <span class="property-indicator"></span>
         <span class="property-type">str</span>
     </dt>
-    <dd>{{% md %}}{{% /md %}}</dd>
-    <dt class="property-optional"
+    <dd>{{% md %}}{{% /md %}}</dd><dt class="property-optional"
             title="Optional">
         <span id="syntax_python">
 <a href="#syntax_python" style="color: inherit; text-decoration: inherit;">syntax</a>
@@ -1347,8 +1196,7 @@ base64-encoded.
         <span class="property-indicator"></span>
         <span class="property-type">str</span>
     </dt>
-    <dd>{{% md %}}{{% /md %}}</dd>
-    <dt class="property-optional"
+    <dd>{{% md %}}{{% /md %}}</dd><dt class="property-optional"
             title="Optional">
         <span id="version_python">
 <a href="#version_python" style="color: inherit; text-decoration: inherit;">version</a>
@@ -1356,16 +1204,13 @@ base64-encoded.
         <span class="property-indicator"></span>
         <span class="property-type">str</span>
     </dt>
-    <dd>{{% md %}}{{% /md %}}</dd>
-</dl>
+    <dd>{{% md %}}{{% /md %}}</dd></dl>
 {{% /choosable %}}
 
 <h4 id="serviceapimethod">Service<wbr>Api<wbr>Method</h4>
 
 {{% choosable language csharp %}}
-<dl class="resources-properties">
-
-    <dt class="property-optional"
+<dl class="resources-properties"><dt class="property-optional"
             title="Optional">
         <span id="name_csharp">
 <a href="#name_csharp" style="color: inherit; text-decoration: inherit;">Name</a>
@@ -1373,8 +1218,7 @@ base64-encoded.
         <span class="property-indicator"></span>
         <span class="property-type">string</span>
     </dt>
-    <dd>{{% md %}}{{% /md %}}</dd>
-    <dt class="property-optional"
+    <dd>{{% md %}}{{% /md %}}</dd><dt class="property-optional"
             title="Optional">
         <span id="requesttype_csharp">
 <a href="#requesttype_csharp" style="color: inherit; text-decoration: inherit;">Request<wbr>Type</a>
@@ -1382,8 +1226,7 @@ base64-encoded.
         <span class="property-indicator"></span>
         <span class="property-type">string</span>
     </dt>
-    <dd>{{% md %}}{{% /md %}}</dd>
-    <dt class="property-optional"
+    <dd>{{% md %}}{{% /md %}}</dd><dt class="property-optional"
             title="Optional">
         <span id="responsetype_csharp">
 <a href="#responsetype_csharp" style="color: inherit; text-decoration: inherit;">Response<wbr>Type</a>
@@ -1391,8 +1234,7 @@ base64-encoded.
         <span class="property-indicator"></span>
         <span class="property-type">string</span>
     </dt>
-    <dd>{{% md %}}{{% /md %}}</dd>
-    <dt class="property-optional"
+    <dd>{{% md %}}{{% /md %}}</dd><dt class="property-optional"
             title="Optional">
         <span id="syntax_csharp">
 <a href="#syntax_csharp" style="color: inherit; text-decoration: inherit;">Syntax</a>
@@ -1400,14 +1242,11 @@ base64-encoded.
         <span class="property-indicator"></span>
         <span class="property-type">string</span>
     </dt>
-    <dd>{{% md %}}{{% /md %}}</dd>
-</dl>
+    <dd>{{% md %}}{{% /md %}}</dd></dl>
 {{% /choosable %}}
 
 {{% choosable language go %}}
-<dl class="resources-properties">
-
-    <dt class="property-optional"
+<dl class="resources-properties"><dt class="property-optional"
             title="Optional">
         <span id="name_go">
 <a href="#name_go" style="color: inherit; text-decoration: inherit;">Name</a>
@@ -1415,8 +1254,7 @@ base64-encoded.
         <span class="property-indicator"></span>
         <span class="property-type">string</span>
     </dt>
-    <dd>{{% md %}}{{% /md %}}</dd>
-    <dt class="property-optional"
+    <dd>{{% md %}}{{% /md %}}</dd><dt class="property-optional"
             title="Optional">
         <span id="requesttype_go">
 <a href="#requesttype_go" style="color: inherit; text-decoration: inherit;">Request<wbr>Type</a>
@@ -1424,8 +1262,7 @@ base64-encoded.
         <span class="property-indicator"></span>
         <span class="property-type">string</span>
     </dt>
-    <dd>{{% md %}}{{% /md %}}</dd>
-    <dt class="property-optional"
+    <dd>{{% md %}}{{% /md %}}</dd><dt class="property-optional"
             title="Optional">
         <span id="responsetype_go">
 <a href="#responsetype_go" style="color: inherit; text-decoration: inherit;">Response<wbr>Type</a>
@@ -1433,8 +1270,7 @@ base64-encoded.
         <span class="property-indicator"></span>
         <span class="property-type">string</span>
     </dt>
-    <dd>{{% md %}}{{% /md %}}</dd>
-    <dt class="property-optional"
+    <dd>{{% md %}}{{% /md %}}</dd><dt class="property-optional"
             title="Optional">
         <span id="syntax_go">
 <a href="#syntax_go" style="color: inherit; text-decoration: inherit;">Syntax</a>
@@ -1442,14 +1278,11 @@ base64-encoded.
         <span class="property-indicator"></span>
         <span class="property-type">string</span>
     </dt>
-    <dd>{{% md %}}{{% /md %}}</dd>
-</dl>
+    <dd>{{% md %}}{{% /md %}}</dd></dl>
 {{% /choosable %}}
 
 {{% choosable language nodejs %}}
-<dl class="resources-properties">
-
-    <dt class="property-optional"
+<dl class="resources-properties"><dt class="property-optional"
             title="Optional">
         <span id="name_nodejs">
 <a href="#name_nodejs" style="color: inherit; text-decoration: inherit;">name</a>
@@ -1457,8 +1290,7 @@ base64-encoded.
         <span class="property-indicator"></span>
         <span class="property-type">string</span>
     </dt>
-    <dd>{{% md %}}{{% /md %}}</dd>
-    <dt class="property-optional"
+    <dd>{{% md %}}{{% /md %}}</dd><dt class="property-optional"
             title="Optional">
         <span id="requesttype_nodejs">
 <a href="#requesttype_nodejs" style="color: inherit; text-decoration: inherit;">request<wbr>Type</a>
@@ -1466,8 +1298,7 @@ base64-encoded.
         <span class="property-indicator"></span>
         <span class="property-type">string</span>
     </dt>
-    <dd>{{% md %}}{{% /md %}}</dd>
-    <dt class="property-optional"
+    <dd>{{% md %}}{{% /md %}}</dd><dt class="property-optional"
             title="Optional">
         <span id="responsetype_nodejs">
 <a href="#responsetype_nodejs" style="color: inherit; text-decoration: inherit;">response<wbr>Type</a>
@@ -1475,8 +1306,7 @@ base64-encoded.
         <span class="property-indicator"></span>
         <span class="property-type">string</span>
     </dt>
-    <dd>{{% md %}}{{% /md %}}</dd>
-    <dt class="property-optional"
+    <dd>{{% md %}}{{% /md %}}</dd><dt class="property-optional"
             title="Optional">
         <span id="syntax_nodejs">
 <a href="#syntax_nodejs" style="color: inherit; text-decoration: inherit;">syntax</a>
@@ -1484,14 +1314,11 @@ base64-encoded.
         <span class="property-indicator"></span>
         <span class="property-type">string</span>
     </dt>
-    <dd>{{% md %}}{{% /md %}}</dd>
-</dl>
+    <dd>{{% md %}}{{% /md %}}</dd></dl>
 {{% /choosable %}}
 
 {{% choosable language python %}}
-<dl class="resources-properties">
-
-    <dt class="property-optional"
+<dl class="resources-properties"><dt class="property-optional"
             title="Optional">
         <span id="name_python">
 <a href="#name_python" style="color: inherit; text-decoration: inherit;">name</a>
@@ -1499,8 +1326,7 @@ base64-encoded.
         <span class="property-indicator"></span>
         <span class="property-type">str</span>
     </dt>
-    <dd>{{% md %}}{{% /md %}}</dd>
-    <dt class="property-optional"
+    <dd>{{% md %}}{{% /md %}}</dd><dt class="property-optional"
             title="Optional">
         <span id="request_type_python">
 <a href="#request_type_python" style="color: inherit; text-decoration: inherit;">request_<wbr>type</a>
@@ -1508,8 +1334,7 @@ base64-encoded.
         <span class="property-indicator"></span>
         <span class="property-type">str</span>
     </dt>
-    <dd>{{% md %}}{{% /md %}}</dd>
-    <dt class="property-optional"
+    <dd>{{% md %}}{{% /md %}}</dd><dt class="property-optional"
             title="Optional">
         <span id="response_type_python">
 <a href="#response_type_python" style="color: inherit; text-decoration: inherit;">response_<wbr>type</a>
@@ -1517,8 +1342,7 @@ base64-encoded.
         <span class="property-indicator"></span>
         <span class="property-type">str</span>
     </dt>
-    <dd>{{% md %}}{{% /md %}}</dd>
-    <dt class="property-optional"
+    <dd>{{% md %}}{{% /md %}}</dd><dt class="property-optional"
             title="Optional">
         <span id="syntax_python">
 <a href="#syntax_python" style="color: inherit; text-decoration: inherit;">syntax</a>
@@ -1526,16 +1350,13 @@ base64-encoded.
         <span class="property-indicator"></span>
         <span class="property-type">str</span>
     </dt>
-    <dd>{{% md %}}{{% /md %}}</dd>
-</dl>
+    <dd>{{% md %}}{{% /md %}}</dd></dl>
 {{% /choosable %}}
 
 <h4 id="serviceendpoint">Service<wbr>Endpoint</h4>
 
 {{% choosable language csharp %}}
-<dl class="resources-properties">
-
-    <dt class="property-optional"
+<dl class="resources-properties"><dt class="property-optional"
             title="Optional">
         <span id="address_csharp">
 <a href="#address_csharp" style="color: inherit; text-decoration: inherit;">Address</a>
@@ -1543,8 +1364,7 @@ base64-encoded.
         <span class="property-indicator"></span>
         <span class="property-type">string</span>
     </dt>
-    <dd>{{% md %}}{{% /md %}}</dd>
-    <dt class="property-optional"
+    <dd>{{% md %}}{{% /md %}}</dd><dt class="property-optional"
             title="Optional">
         <span id="name_csharp">
 <a href="#name_csharp" style="color: inherit; text-decoration: inherit;">Name</a>
@@ -1552,14 +1372,11 @@ base64-encoded.
         <span class="property-indicator"></span>
         <span class="property-type">string</span>
     </dt>
-    <dd>{{% md %}}{{% /md %}}</dd>
-</dl>
+    <dd>{{% md %}}{{% /md %}}</dd></dl>
 {{% /choosable %}}
 
 {{% choosable language go %}}
-<dl class="resources-properties">
-
-    <dt class="property-optional"
+<dl class="resources-properties"><dt class="property-optional"
             title="Optional">
         <span id="address_go">
 <a href="#address_go" style="color: inherit; text-decoration: inherit;">Address</a>
@@ -1567,8 +1384,7 @@ base64-encoded.
         <span class="property-indicator"></span>
         <span class="property-type">string</span>
     </dt>
-    <dd>{{% md %}}{{% /md %}}</dd>
-    <dt class="property-optional"
+    <dd>{{% md %}}{{% /md %}}</dd><dt class="property-optional"
             title="Optional">
         <span id="name_go">
 <a href="#name_go" style="color: inherit; text-decoration: inherit;">Name</a>
@@ -1576,14 +1392,11 @@ base64-encoded.
         <span class="property-indicator"></span>
         <span class="property-type">string</span>
     </dt>
-    <dd>{{% md %}}{{% /md %}}</dd>
-</dl>
+    <dd>{{% md %}}{{% /md %}}</dd></dl>
 {{% /choosable %}}
 
 {{% choosable language nodejs %}}
-<dl class="resources-properties">
-
-    <dt class="property-optional"
+<dl class="resources-properties"><dt class="property-optional"
             title="Optional">
         <span id="address_nodejs">
 <a href="#address_nodejs" style="color: inherit; text-decoration: inherit;">address</a>
@@ -1591,8 +1404,7 @@ base64-encoded.
         <span class="property-indicator"></span>
         <span class="property-type">string</span>
     </dt>
-    <dd>{{% md %}}{{% /md %}}</dd>
-    <dt class="property-optional"
+    <dd>{{% md %}}{{% /md %}}</dd><dt class="property-optional"
             title="Optional">
         <span id="name_nodejs">
 <a href="#name_nodejs" style="color: inherit; text-decoration: inherit;">name</a>
@@ -1600,14 +1412,11 @@ base64-encoded.
         <span class="property-indicator"></span>
         <span class="property-type">string</span>
     </dt>
-    <dd>{{% md %}}{{% /md %}}</dd>
-</dl>
+    <dd>{{% md %}}{{% /md %}}</dd></dl>
 {{% /choosable %}}
 
 {{% choosable language python %}}
-<dl class="resources-properties">
-
-    <dt class="property-optional"
+<dl class="resources-properties"><dt class="property-optional"
             title="Optional">
         <span id="address_python">
 <a href="#address_python" style="color: inherit; text-decoration: inherit;">address</a>
@@ -1615,8 +1424,7 @@ base64-encoded.
         <span class="property-indicator"></span>
         <span class="property-type">str</span>
     </dt>
-    <dd>{{% md %}}{{% /md %}}</dd>
-    <dt class="property-optional"
+    <dd>{{% md %}}{{% /md %}}</dd><dt class="property-optional"
             title="Optional">
         <span id="name_python">
 <a href="#name_python" style="color: inherit; text-decoration: inherit;">name</a>
@@ -1624,8 +1432,7 @@ base64-encoded.
         <span class="property-indicator"></span>
         <span class="property-type">str</span>
     </dt>
-    <dd>{{% md %}}{{% /md %}}</dd>
-</dl>
+    <dd>{{% md %}}{{% /md %}}</dd></dl>
 {{% /choosable %}}
 ## Import
 
@@ -1642,6 +1449,6 @@ This resource does not support import.
 	<dt>License</dt>
 	<dd>Apache-2.0</dd>
 	<dt>Notes</dt>
-	<dd>This Pulumi package is based on the [`google-beta` Terraform Provider](https://github.com/hashicorp/terraform-provider-google-beta).</dd>
+	<dd>{{% md %}}This Pulumi package is based on the [`google-beta` Terraform Provider](https://github.com/hashicorp/terraform-provider-google-beta).{{% /md %}}</dd>
 </dl>
 

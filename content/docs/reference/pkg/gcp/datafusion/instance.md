@@ -19,11 +19,17 @@ To get more information about Instance, see:
     * [Official Documentation](https://cloud.google.com/data-fusion/docs/)
 
 {{% examples %}}
+
 ## Example Usage
 
 {{< chooser language "typescript,python,go,csharp" / >}}
+
+
 ### Data Fusion Instance Basic
-{{% example csharp %}}
+
+
+{{< example csharp >}}
+
 ```csharp
 using Pulumi;
 using Gcp = Pulumi.Gcp;
@@ -45,9 +51,12 @@ class MyStack : Stack
 }
 ```
 
-{{% /example %}}
 
-{{% example go %}}
+{{< /example >}}
+
+
+{{< example go >}}
+
 ```go
 package main
 
@@ -70,9 +79,12 @@ func main() {
 }
 ```
 
-{{% /example %}}
 
-{{% example python %}}
+{{< /example >}}
+
+
+{{< example python >}}
+
 ```python
 import pulumi
 import pulumi_gcp as gcp
@@ -83,9 +95,12 @@ basic_instance = gcp.datafusion.Instance("basicInstance",
     opts=pulumi.ResourceOptions(provider=google_beta))
 ```
 
-{{% /example %}}
 
-{{% example typescript %}}
+{{< /example >}}
+
+
+{{< example typescript >}}
+
 
 ```typescript
 import * as pulumi from "@pulumi/pulumi";
@@ -99,10 +114,17 @@ const basicInstance = new gcp.datafusion.Instance("basicInstance", {
 });
 ```
 
-{{% /example %}}
+
+{{< /example >}}
+
+
+
 
 ### Data Fusion Instance Full
-{{% example csharp %}}
+
+
+{{< example csharp >}}
+
 ```csharp
 using Pulumi;
 using Gcp = Pulumi.Gcp;
@@ -138,9 +160,12 @@ class MyStack : Stack
 }
 ```
 
-{{% /example %}}
 
-{{% example go %}}
+{{< /example >}}
+
+
+{{< example go >}}
+
 ```go
 package main
 
@@ -175,9 +200,12 @@ func main() {
 }
 ```
 
-{{% /example %}}
 
-{{% example python %}}
+{{< /example >}}
+
+
+{{< example python >}}
+
 ```python
 import pulumi
 import pulumi_gcp as gcp
@@ -200,9 +228,12 @@ extended_instance = gcp.datafusion.Instance("extendedInstance",
     opts=pulumi.ResourceOptions(provider=google_beta))
 ```
 
-{{% /example %}}
 
-{{% example typescript %}}
+{{< /example >}}
+
+
+{{< example typescript >}}
+
 
 ```typescript
 import * as pulumi from "@pulumi/pulumi";
@@ -228,9 +259,16 @@ const extendedInstance = new gcp.datafusion.Instance("extendedInstance", {
 });
 ```
 
-{{% /example %}}
+
+{{< /example >}}
+
+
+
+
 
 {{% /examples %}}
+
+
 
 
 ## Create a Instance Resource {#create}
@@ -255,9 +293,7 @@ const extendedInstance = new gcp.datafusion.Instance("extendedInstance", {
 
 {{% choosable language nodejs %}}
 
-<dl class="resources-properties">
-  
-    <dt
+<dl class="resources-properties"><dt
         class="property-required" title="Required">
         <span>name</span>
         <span class="property-indicator"></span>
@@ -265,9 +301,7 @@ const extendedInstance = new gcp.datafusion.Instance("extendedInstance", {
     </dt>
     <dd>
       The unique name of the resource.
-    </dd>
-  
-    <dt
+    </dd><dt
         class="property-required" title="Required">
         <span>args</span>
         <span class="property-indicator"></span>
@@ -275,9 +309,7 @@ const extendedInstance = new gcp.datafusion.Instance("extendedInstance", {
     </dt>
     <dd>
       The arguments to resource properties.
-    </dd>
-  
-    <dt
+    </dd><dt
         class="property-optional" title="Optional">
         <span>opts</span>
         <span class="property-indicator"></span>
@@ -285,10 +317,7 @@ const extendedInstance = new gcp.datafusion.Instance("extendedInstance", {
     </dt>
     <dd>
       Bag of options to control resource&#39;s behavior.
-    </dd>
-  
-
-</dl>
+    </dd></dl>
 
 {{% /choosable %}}
 
@@ -314,9 +343,7 @@ const extendedInstance = new gcp.datafusion.Instance("extendedInstance", {
 
 {{% choosable language go %}}
 
-<dl class="resources-properties">
-  
-    <dt
+<dl class="resources-properties"><dt
         class="property-optional" title="Optional">
         <span>ctx</span>
         <span class="property-indicator"></span>
@@ -324,9 +351,7 @@ const extendedInstance = new gcp.datafusion.Instance("extendedInstance", {
     </dt>
     <dd>
       Context object for the current deployment.
-    </dd>
-  
-    <dt
+    </dd><dt
         class="property-required" title="Required">
         <span>name</span>
         <span class="property-indicator"></span>
@@ -334,9 +359,7 @@ const extendedInstance = new gcp.datafusion.Instance("extendedInstance", {
     </dt>
     <dd>
       The unique name of the resource.
-    </dd>
-  
-    <dt
+    </dd><dt
         class="property-required" title="Required">
         <span>args</span>
         <span class="property-indicator"></span>
@@ -344,9 +367,7 @@ const extendedInstance = new gcp.datafusion.Instance("extendedInstance", {
     </dt>
     <dd>
       The arguments to resource properties.
-    </dd>
-  
-    <dt
+    </dd><dt
         class="property-optional" title="Optional">
         <span>opts</span>
         <span class="property-indicator"></span>
@@ -354,18 +375,13 @@ const extendedInstance = new gcp.datafusion.Instance("extendedInstance", {
     </dt>
     <dd>
       Bag of options to control resource&#39;s behavior.
-    </dd>
-  
-
-</dl>
+    </dd></dl>
 
 {{% /choosable %}}
 
 {{% choosable language csharp %}}
 
-<dl class="resources-properties">
-  
-    <dt
+<dl class="resources-properties"><dt
         class="property-required" title="Required">
         <span>name</span>
         <span class="property-indicator"></span>
@@ -373,9 +389,7 @@ const extendedInstance = new gcp.datafusion.Instance("extendedInstance", {
     </dt>
     <dd>
       The unique name of the resource.
-    </dd>
-  
-    <dt
+    </dd><dt
         class="property-required" title="Required">
         <span>args</span>
         <span class="property-indicator"></span>
@@ -383,9 +397,7 @@ const extendedInstance = new gcp.datafusion.Instance("extendedInstance", {
     </dt>
     <dd>
       The arguments to resource properties.
-    </dd>
-  
-    <dt
+    </dd><dt
         class="property-optional" title="Optional">
         <span>opts</span>
         <span class="property-indicator"></span>
@@ -393,10 +405,7 @@ const extendedInstance = new gcp.datafusion.Instance("extendedInstance", {
     </dt>
     <dd>
       Bag of options to control resource&#39;s behavior.
-    </dd>
-  
-
-</dl>
+    </dd></dl>
 
 {{% /choosable %}}
 
@@ -411,9 +420,7 @@ The Instance resource accepts the following [input]({{< relref "/docs/intro/conc
 
 
 {{% choosable language csharp %}}
-<dl class="resources-properties">
-
-    <dt class="property-required"
+<dl class="resources-properties"><dt class="property-required"
             title="Required">
         <span id="type_csharp">
 <a href="#type_csharp" style="color: inherit; text-decoration: inherit;">Type</a>
@@ -429,8 +436,7 @@ of concurrent pipelines, no support for streaming pipelines, etc.
 - ENTERPRISE: Enterprise Data Fusion instance. In Enterprise type, the user will have more features
 available, such as support for streaming pipelines, higher number of concurrent pipelines, etc.
 Possible values are `BASIC` and `ENTERPRISE`.
-{{% /md %}}</dd>
-    <dt class="property-optional"
+{{% /md %}}</dd><dt class="property-optional"
             title="Optional">
         <span id="description_csharp">
 <a href="#description_csharp" style="color: inherit; text-decoration: inherit;">Description</a>
@@ -439,8 +445,7 @@ Possible values are `BASIC` and `ENTERPRISE`.
         <span class="property-type">string</span>
     </dt>
     <dd>{{% md %}}An optional description of the instance.
-{{% /md %}}</dd>
-    <dt class="property-optional"
+{{% /md %}}</dd><dt class="property-optional"
             title="Optional">
         <span id="enablestackdriverlogging_csharp">
 <a href="#enablestackdriverlogging_csharp" style="color: inherit; text-decoration: inherit;">Enable<wbr>Stackdriver<wbr>Logging</a>
@@ -449,8 +454,7 @@ Possible values are `BASIC` and `ENTERPRISE`.
         <span class="property-type">bool</span>
     </dt>
     <dd>{{% md %}}Option to enable Stackdriver Logging.
-{{% /md %}}</dd>
-    <dt class="property-optional"
+{{% /md %}}</dd><dt class="property-optional"
             title="Optional">
         <span id="enablestackdrivermonitoring_csharp">
 <a href="#enablestackdrivermonitoring_csharp" style="color: inherit; text-decoration: inherit;">Enable<wbr>Stackdriver<wbr>Monitoring</a>
@@ -459,8 +463,7 @@ Possible values are `BASIC` and `ENTERPRISE`.
         <span class="property-type">bool</span>
     </dt>
     <dd>{{% md %}}Option to enable Stackdriver Monitoring.
-{{% /md %}}</dd>
-    <dt class="property-optional"
+{{% /md %}}</dd><dt class="property-optional"
             title="Optional">
         <span id="labels_csharp">
 <a href="#labels_csharp" style="color: inherit; text-decoration: inherit;">Labels</a>
@@ -470,8 +473,7 @@ Possible values are `BASIC` and `ENTERPRISE`.
     </dt>
     <dd>{{% md %}}The resource labels for instance to use to annotate any related underlying resources,
 such as Compute Engine VMs.
-{{% /md %}}</dd>
-    <dt class="property-optional"
+{{% /md %}}</dd><dt class="property-optional"
             title="Optional">
         <span id="name_csharp">
 <a href="#name_csharp" style="color: inherit; text-decoration: inherit;">Name</a>
@@ -480,8 +482,7 @@ such as Compute Engine VMs.
         <span class="property-type">string</span>
     </dt>
     <dd>{{% md %}}The ID of the instance or a fully qualified identifier for the instance.
-{{% /md %}}</dd>
-    <dt class="property-optional"
+{{% /md %}}</dd><dt class="property-optional"
             title="Optional">
         <span id="networkconfig_csharp">
 <a href="#networkconfig_csharp" style="color: inherit; text-decoration: inherit;">Network<wbr>Config</a>
@@ -491,8 +492,7 @@ such as Compute Engine VMs.
     </dt>
     <dd>{{% md %}}Network configuration options. These are required when a private Data Fusion instance is to be created.
 Structure is documented below.
-{{% /md %}}</dd>
-    <dt class="property-optional"
+{{% /md %}}</dd><dt class="property-optional"
             title="Optional">
         <span id="options_csharp">
 <a href="#options_csharp" style="color: inherit; text-decoration: inherit;">Options</a>
@@ -501,8 +501,7 @@ Structure is documented below.
         <span class="property-type">Dictionary&lt;string, string&gt;</span>
     </dt>
     <dd>{{% md %}}Map of additional options used to configure the behavior of Data Fusion instance.
-{{% /md %}}</dd>
-    <dt class="property-optional"
+{{% /md %}}</dd><dt class="property-optional"
             title="Optional">
         <span id="privateinstance_csharp">
 <a href="#privateinstance_csharp" style="color: inherit; text-decoration: inherit;">Private<wbr>Instance</a>
@@ -513,8 +512,7 @@ Structure is documented below.
     <dd>{{% md %}}Specifies whether the Data Fusion instance should be private. If set to
 true, all Data Fusion nodes will have private IP addresses and will not be
 able to access the public internet.
-{{% /md %}}</dd>
-    <dt class="property-optional"
+{{% /md %}}</dd><dt class="property-optional"
             title="Optional">
         <span id="project_csharp">
 <a href="#project_csharp" style="color: inherit; text-decoration: inherit;">Project</a>
@@ -524,8 +522,7 @@ able to access the public internet.
     </dt>
     <dd>{{% md %}}The ID of the project in which the resource belongs.
 If it is not provided, the provider project is used.
-{{% /md %}}</dd>
-    <dt class="property-optional"
+{{% /md %}}</dd><dt class="property-optional"
             title="Optional">
         <span id="region_csharp">
 <a href="#region_csharp" style="color: inherit; text-decoration: inherit;">Region</a>
@@ -534,8 +531,7 @@ If it is not provided, the provider project is used.
         <span class="property-type">string</span>
     </dt>
     <dd>{{% md %}}The region of the Data Fusion instance.
-{{% /md %}}</dd>
-    <dt class="property-optional"
+{{% /md %}}</dd><dt class="property-optional"
             title="Optional">
         <span id="version_csharp">
 <a href="#version_csharp" style="color: inherit; text-decoration: inherit;">Version</a>
@@ -544,14 +540,11 @@ If it is not provided, the provider project is used.
         <span class="property-type">string</span>
     </dt>
     <dd>{{% md %}}Current version of the Data Fusion.
-{{% /md %}}</dd>
-</dl>
+{{% /md %}}</dd></dl>
 {{% /choosable %}}
 
 {{% choosable language go %}}
-<dl class="resources-properties">
-
-    <dt class="property-required"
+<dl class="resources-properties"><dt class="property-required"
             title="Required">
         <span id="type_go">
 <a href="#type_go" style="color: inherit; text-decoration: inherit;">Type</a>
@@ -567,8 +560,7 @@ of concurrent pipelines, no support for streaming pipelines, etc.
 - ENTERPRISE: Enterprise Data Fusion instance. In Enterprise type, the user will have more features
 available, such as support for streaming pipelines, higher number of concurrent pipelines, etc.
 Possible values are `BASIC` and `ENTERPRISE`.
-{{% /md %}}</dd>
-    <dt class="property-optional"
+{{% /md %}}</dd><dt class="property-optional"
             title="Optional">
         <span id="description_go">
 <a href="#description_go" style="color: inherit; text-decoration: inherit;">Description</a>
@@ -577,8 +569,7 @@ Possible values are `BASIC` and `ENTERPRISE`.
         <span class="property-type">string</span>
     </dt>
     <dd>{{% md %}}An optional description of the instance.
-{{% /md %}}</dd>
-    <dt class="property-optional"
+{{% /md %}}</dd><dt class="property-optional"
             title="Optional">
         <span id="enablestackdriverlogging_go">
 <a href="#enablestackdriverlogging_go" style="color: inherit; text-decoration: inherit;">Enable<wbr>Stackdriver<wbr>Logging</a>
@@ -587,8 +578,7 @@ Possible values are `BASIC` and `ENTERPRISE`.
         <span class="property-type">bool</span>
     </dt>
     <dd>{{% md %}}Option to enable Stackdriver Logging.
-{{% /md %}}</dd>
-    <dt class="property-optional"
+{{% /md %}}</dd><dt class="property-optional"
             title="Optional">
         <span id="enablestackdrivermonitoring_go">
 <a href="#enablestackdrivermonitoring_go" style="color: inherit; text-decoration: inherit;">Enable<wbr>Stackdriver<wbr>Monitoring</a>
@@ -597,8 +587,7 @@ Possible values are `BASIC` and `ENTERPRISE`.
         <span class="property-type">bool</span>
     </dt>
     <dd>{{% md %}}Option to enable Stackdriver Monitoring.
-{{% /md %}}</dd>
-    <dt class="property-optional"
+{{% /md %}}</dd><dt class="property-optional"
             title="Optional">
         <span id="labels_go">
 <a href="#labels_go" style="color: inherit; text-decoration: inherit;">Labels</a>
@@ -608,8 +597,7 @@ Possible values are `BASIC` and `ENTERPRISE`.
     </dt>
     <dd>{{% md %}}The resource labels for instance to use to annotate any related underlying resources,
 such as Compute Engine VMs.
-{{% /md %}}</dd>
-    <dt class="property-optional"
+{{% /md %}}</dd><dt class="property-optional"
             title="Optional">
         <span id="name_go">
 <a href="#name_go" style="color: inherit; text-decoration: inherit;">Name</a>
@@ -618,8 +606,7 @@ such as Compute Engine VMs.
         <span class="property-type">string</span>
     </dt>
     <dd>{{% md %}}The ID of the instance or a fully qualified identifier for the instance.
-{{% /md %}}</dd>
-    <dt class="property-optional"
+{{% /md %}}</dd><dt class="property-optional"
             title="Optional">
         <span id="networkconfig_go">
 <a href="#networkconfig_go" style="color: inherit; text-decoration: inherit;">Network<wbr>Config</a>
@@ -629,8 +616,7 @@ such as Compute Engine VMs.
     </dt>
     <dd>{{% md %}}Network configuration options. These are required when a private Data Fusion instance is to be created.
 Structure is documented below.
-{{% /md %}}</dd>
-    <dt class="property-optional"
+{{% /md %}}</dd><dt class="property-optional"
             title="Optional">
         <span id="options_go">
 <a href="#options_go" style="color: inherit; text-decoration: inherit;">Options</a>
@@ -639,8 +625,7 @@ Structure is documented below.
         <span class="property-type">map[string]string</span>
     </dt>
     <dd>{{% md %}}Map of additional options used to configure the behavior of Data Fusion instance.
-{{% /md %}}</dd>
-    <dt class="property-optional"
+{{% /md %}}</dd><dt class="property-optional"
             title="Optional">
         <span id="privateinstance_go">
 <a href="#privateinstance_go" style="color: inherit; text-decoration: inherit;">Private<wbr>Instance</a>
@@ -651,8 +636,7 @@ Structure is documented below.
     <dd>{{% md %}}Specifies whether the Data Fusion instance should be private. If set to
 true, all Data Fusion nodes will have private IP addresses and will not be
 able to access the public internet.
-{{% /md %}}</dd>
-    <dt class="property-optional"
+{{% /md %}}</dd><dt class="property-optional"
             title="Optional">
         <span id="project_go">
 <a href="#project_go" style="color: inherit; text-decoration: inherit;">Project</a>
@@ -662,8 +646,7 @@ able to access the public internet.
     </dt>
     <dd>{{% md %}}The ID of the project in which the resource belongs.
 If it is not provided, the provider project is used.
-{{% /md %}}</dd>
-    <dt class="property-optional"
+{{% /md %}}</dd><dt class="property-optional"
             title="Optional">
         <span id="region_go">
 <a href="#region_go" style="color: inherit; text-decoration: inherit;">Region</a>
@@ -672,8 +655,7 @@ If it is not provided, the provider project is used.
         <span class="property-type">string</span>
     </dt>
     <dd>{{% md %}}The region of the Data Fusion instance.
-{{% /md %}}</dd>
-    <dt class="property-optional"
+{{% /md %}}</dd><dt class="property-optional"
             title="Optional">
         <span id="version_go">
 <a href="#version_go" style="color: inherit; text-decoration: inherit;">Version</a>
@@ -682,14 +664,11 @@ If it is not provided, the provider project is used.
         <span class="property-type">string</span>
     </dt>
     <dd>{{% md %}}Current version of the Data Fusion.
-{{% /md %}}</dd>
-</dl>
+{{% /md %}}</dd></dl>
 {{% /choosable %}}
 
 {{% choosable language nodejs %}}
-<dl class="resources-properties">
-
-    <dt class="property-required"
+<dl class="resources-properties"><dt class="property-required"
             title="Required">
         <span id="type_nodejs">
 <a href="#type_nodejs" style="color: inherit; text-decoration: inherit;">type</a>
@@ -705,8 +684,7 @@ of concurrent pipelines, no support for streaming pipelines, etc.
 - ENTERPRISE: Enterprise Data Fusion instance. In Enterprise type, the user will have more features
 available, such as support for streaming pipelines, higher number of concurrent pipelines, etc.
 Possible values are `BASIC` and `ENTERPRISE`.
-{{% /md %}}</dd>
-    <dt class="property-optional"
+{{% /md %}}</dd><dt class="property-optional"
             title="Optional">
         <span id="description_nodejs">
 <a href="#description_nodejs" style="color: inherit; text-decoration: inherit;">description</a>
@@ -715,8 +693,7 @@ Possible values are `BASIC` and `ENTERPRISE`.
         <span class="property-type">string</span>
     </dt>
     <dd>{{% md %}}An optional description of the instance.
-{{% /md %}}</dd>
-    <dt class="property-optional"
+{{% /md %}}</dd><dt class="property-optional"
             title="Optional">
         <span id="enablestackdriverlogging_nodejs">
 <a href="#enablestackdriverlogging_nodejs" style="color: inherit; text-decoration: inherit;">enable<wbr>Stackdriver<wbr>Logging</a>
@@ -725,8 +702,7 @@ Possible values are `BASIC` and `ENTERPRISE`.
         <span class="property-type">boolean</span>
     </dt>
     <dd>{{% md %}}Option to enable Stackdriver Logging.
-{{% /md %}}</dd>
-    <dt class="property-optional"
+{{% /md %}}</dd><dt class="property-optional"
             title="Optional">
         <span id="enablestackdrivermonitoring_nodejs">
 <a href="#enablestackdrivermonitoring_nodejs" style="color: inherit; text-decoration: inherit;">enable<wbr>Stackdriver<wbr>Monitoring</a>
@@ -735,8 +711,7 @@ Possible values are `BASIC` and `ENTERPRISE`.
         <span class="property-type">boolean</span>
     </dt>
     <dd>{{% md %}}Option to enable Stackdriver Monitoring.
-{{% /md %}}</dd>
-    <dt class="property-optional"
+{{% /md %}}</dd><dt class="property-optional"
             title="Optional">
         <span id="labels_nodejs">
 <a href="#labels_nodejs" style="color: inherit; text-decoration: inherit;">labels</a>
@@ -746,8 +721,7 @@ Possible values are `BASIC` and `ENTERPRISE`.
     </dt>
     <dd>{{% md %}}The resource labels for instance to use to annotate any related underlying resources,
 such as Compute Engine VMs.
-{{% /md %}}</dd>
-    <dt class="property-optional"
+{{% /md %}}</dd><dt class="property-optional"
             title="Optional">
         <span id="name_nodejs">
 <a href="#name_nodejs" style="color: inherit; text-decoration: inherit;">name</a>
@@ -756,8 +730,7 @@ such as Compute Engine VMs.
         <span class="property-type">string</span>
     </dt>
     <dd>{{% md %}}The ID of the instance or a fully qualified identifier for the instance.
-{{% /md %}}</dd>
-    <dt class="property-optional"
+{{% /md %}}</dd><dt class="property-optional"
             title="Optional">
         <span id="networkconfig_nodejs">
 <a href="#networkconfig_nodejs" style="color: inherit; text-decoration: inherit;">network<wbr>Config</a>
@@ -767,8 +740,7 @@ such as Compute Engine VMs.
     </dt>
     <dd>{{% md %}}Network configuration options. These are required when a private Data Fusion instance is to be created.
 Structure is documented below.
-{{% /md %}}</dd>
-    <dt class="property-optional"
+{{% /md %}}</dd><dt class="property-optional"
             title="Optional">
         <span id="options_nodejs">
 <a href="#options_nodejs" style="color: inherit; text-decoration: inherit;">options</a>
@@ -777,8 +749,7 @@ Structure is documented below.
         <span class="property-type">{[key: string]: string}</span>
     </dt>
     <dd>{{% md %}}Map of additional options used to configure the behavior of Data Fusion instance.
-{{% /md %}}</dd>
-    <dt class="property-optional"
+{{% /md %}}</dd><dt class="property-optional"
             title="Optional">
         <span id="privateinstance_nodejs">
 <a href="#privateinstance_nodejs" style="color: inherit; text-decoration: inherit;">private<wbr>Instance</a>
@@ -789,8 +760,7 @@ Structure is documented below.
     <dd>{{% md %}}Specifies whether the Data Fusion instance should be private. If set to
 true, all Data Fusion nodes will have private IP addresses and will not be
 able to access the public internet.
-{{% /md %}}</dd>
-    <dt class="property-optional"
+{{% /md %}}</dd><dt class="property-optional"
             title="Optional">
         <span id="project_nodejs">
 <a href="#project_nodejs" style="color: inherit; text-decoration: inherit;">project</a>
@@ -800,8 +770,7 @@ able to access the public internet.
     </dt>
     <dd>{{% md %}}The ID of the project in which the resource belongs.
 If it is not provided, the provider project is used.
-{{% /md %}}</dd>
-    <dt class="property-optional"
+{{% /md %}}</dd><dt class="property-optional"
             title="Optional">
         <span id="region_nodejs">
 <a href="#region_nodejs" style="color: inherit; text-decoration: inherit;">region</a>
@@ -810,8 +779,7 @@ If it is not provided, the provider project is used.
         <span class="property-type">string</span>
     </dt>
     <dd>{{% md %}}The region of the Data Fusion instance.
-{{% /md %}}</dd>
-    <dt class="property-optional"
+{{% /md %}}</dd><dt class="property-optional"
             title="Optional">
         <span id="version_nodejs">
 <a href="#version_nodejs" style="color: inherit; text-decoration: inherit;">version</a>
@@ -820,14 +788,11 @@ If it is not provided, the provider project is used.
         <span class="property-type">string</span>
     </dt>
     <dd>{{% md %}}Current version of the Data Fusion.
-{{% /md %}}</dd>
-</dl>
+{{% /md %}}</dd></dl>
 {{% /choosable %}}
 
 {{% choosable language python %}}
-<dl class="resources-properties">
-
-    <dt class="property-required"
+<dl class="resources-properties"><dt class="property-required"
             title="Required">
         <span id="type_python">
 <a href="#type_python" style="color: inherit; text-decoration: inherit;">type</a>
@@ -843,8 +808,7 @@ of concurrent pipelines, no support for streaming pipelines, etc.
 - ENTERPRISE: Enterprise Data Fusion instance. In Enterprise type, the user will have more features
 available, such as support for streaming pipelines, higher number of concurrent pipelines, etc.
 Possible values are `BASIC` and `ENTERPRISE`.
-{{% /md %}}</dd>
-    <dt class="property-optional"
+{{% /md %}}</dd><dt class="property-optional"
             title="Optional">
         <span id="description_python">
 <a href="#description_python" style="color: inherit; text-decoration: inherit;">description</a>
@@ -853,8 +817,7 @@ Possible values are `BASIC` and `ENTERPRISE`.
         <span class="property-type">str</span>
     </dt>
     <dd>{{% md %}}An optional description of the instance.
-{{% /md %}}</dd>
-    <dt class="property-optional"
+{{% /md %}}</dd><dt class="property-optional"
             title="Optional">
         <span id="enable_stackdriver_logging_python">
 <a href="#enable_stackdriver_logging_python" style="color: inherit; text-decoration: inherit;">enable_<wbr>stackdriver_<wbr>logging</a>
@@ -863,8 +826,7 @@ Possible values are `BASIC` and `ENTERPRISE`.
         <span class="property-type">bool</span>
     </dt>
     <dd>{{% md %}}Option to enable Stackdriver Logging.
-{{% /md %}}</dd>
-    <dt class="property-optional"
+{{% /md %}}</dd><dt class="property-optional"
             title="Optional">
         <span id="enable_stackdriver_monitoring_python">
 <a href="#enable_stackdriver_monitoring_python" style="color: inherit; text-decoration: inherit;">enable_<wbr>stackdriver_<wbr>monitoring</a>
@@ -873,8 +835,7 @@ Possible values are `BASIC` and `ENTERPRISE`.
         <span class="property-type">bool</span>
     </dt>
     <dd>{{% md %}}Option to enable Stackdriver Monitoring.
-{{% /md %}}</dd>
-    <dt class="property-optional"
+{{% /md %}}</dd><dt class="property-optional"
             title="Optional">
         <span id="labels_python">
 <a href="#labels_python" style="color: inherit; text-decoration: inherit;">labels</a>
@@ -884,8 +845,7 @@ Possible values are `BASIC` and `ENTERPRISE`.
     </dt>
     <dd>{{% md %}}The resource labels for instance to use to annotate any related underlying resources,
 such as Compute Engine VMs.
-{{% /md %}}</dd>
-    <dt class="property-optional"
+{{% /md %}}</dd><dt class="property-optional"
             title="Optional">
         <span id="name_python">
 <a href="#name_python" style="color: inherit; text-decoration: inherit;">name</a>
@@ -894,8 +854,7 @@ such as Compute Engine VMs.
         <span class="property-type">str</span>
     </dt>
     <dd>{{% md %}}The ID of the instance or a fully qualified identifier for the instance.
-{{% /md %}}</dd>
-    <dt class="property-optional"
+{{% /md %}}</dd><dt class="property-optional"
             title="Optional">
         <span id="network_config_python">
 <a href="#network_config_python" style="color: inherit; text-decoration: inherit;">network_<wbr>config</a>
@@ -905,8 +864,7 @@ such as Compute Engine VMs.
     </dt>
     <dd>{{% md %}}Network configuration options. These are required when a private Data Fusion instance is to be created.
 Structure is documented below.
-{{% /md %}}</dd>
-    <dt class="property-optional"
+{{% /md %}}</dd><dt class="property-optional"
             title="Optional">
         <span id="options_python">
 <a href="#options_python" style="color: inherit; text-decoration: inherit;">options</a>
@@ -915,8 +873,7 @@ Structure is documented below.
         <span class="property-type">Mapping[str, str]</span>
     </dt>
     <dd>{{% md %}}Map of additional options used to configure the behavior of Data Fusion instance.
-{{% /md %}}</dd>
-    <dt class="property-optional"
+{{% /md %}}</dd><dt class="property-optional"
             title="Optional">
         <span id="private_instance_python">
 <a href="#private_instance_python" style="color: inherit; text-decoration: inherit;">private_<wbr>instance</a>
@@ -927,8 +884,7 @@ Structure is documented below.
     <dd>{{% md %}}Specifies whether the Data Fusion instance should be private. If set to
 true, all Data Fusion nodes will have private IP addresses and will not be
 able to access the public internet.
-{{% /md %}}</dd>
-    <dt class="property-optional"
+{{% /md %}}</dd><dt class="property-optional"
             title="Optional">
         <span id="project_python">
 <a href="#project_python" style="color: inherit; text-decoration: inherit;">project</a>
@@ -938,8 +894,7 @@ able to access the public internet.
     </dt>
     <dd>{{% md %}}The ID of the project in which the resource belongs.
 If it is not provided, the provider project is used.
-{{% /md %}}</dd>
-    <dt class="property-optional"
+{{% /md %}}</dd><dt class="property-optional"
             title="Optional">
         <span id="region_python">
 <a href="#region_python" style="color: inherit; text-decoration: inherit;">region</a>
@@ -948,8 +903,7 @@ If it is not provided, the provider project is used.
         <span class="property-type">str</span>
     </dt>
     <dd>{{% md %}}The region of the Data Fusion instance.
-{{% /md %}}</dd>
-    <dt class="property-optional"
+{{% /md %}}</dd><dt class="property-optional"
             title="Optional">
         <span id="version_python">
 <a href="#version_python" style="color: inherit; text-decoration: inherit;">version</a>
@@ -958,8 +912,7 @@ If it is not provided, the provider project is used.
         <span class="property-type">str</span>
     </dt>
     <dd>{{% md %}}Current version of the Data Fusion.
-{{% /md %}}</dd>
-</dl>
+{{% /md %}}</dd></dl>
 {{% /choosable %}}
 
 
@@ -970,9 +923,7 @@ All [input](#inputs) properties are implicitly available as output properties. A
 
 
 {{% choosable language csharp %}}
-<dl class="resources-properties">
-
-    <dt class="property-"
+<dl class="resources-properties"><dt class="property-"
             title="">
         <span id="createtime_csharp">
 <a href="#createtime_csharp" style="color: inherit; text-decoration: inherit;">Create<wbr>Time</a>
@@ -981,8 +932,7 @@ All [input](#inputs) properties are implicitly available as output properties. A
         <span class="property-type">string</span>
     </dt>
     <dd>{{% md %}}The time the instance was created in RFC3339 UTC "Zulu" format, accurate to nanoseconds.
-{{% /md %}}</dd>
-    <dt class="property-"
+{{% /md %}}</dd><dt class="property-"
             title="">
         <span id="id_csharp">
 <a href="#id_csharp" style="color: inherit; text-decoration: inherit;">Id</a>
@@ -990,8 +940,7 @@ All [input](#inputs) properties are implicitly available as output properties. A
         <span class="property-indicator"></span>
         <span class="property-type">string</span>
     </dt>
-    <dd>{{% md %}}The provider-assigned unique ID for this managed resource.{{% /md %}}</dd>
-    <dt class="property-"
+    <dd>{{% md %}}The provider-assigned unique ID for this managed resource.{{% /md %}}</dd><dt class="property-"
             title="">
         <span id="serviceaccount_csharp">
 <a href="#serviceaccount_csharp" style="color: inherit; text-decoration: inherit;">Service<wbr>Account</a>
@@ -1000,8 +949,7 @@ All [input](#inputs) properties are implicitly available as output properties. A
         <span class="property-type">string</span>
     </dt>
     <dd>{{% md %}}Service account which will be used to access resources in the customer project.
-{{% /md %}}</dd>
-    <dt class="property-"
+{{% /md %}}</dd><dt class="property-"
             title="">
         <span id="serviceendpoint_csharp">
 <a href="#serviceendpoint_csharp" style="color: inherit; text-decoration: inherit;">Service<wbr>Endpoint</a>
@@ -1010,8 +958,7 @@ All [input](#inputs) properties are implicitly available as output properties. A
         <span class="property-type">string</span>
     </dt>
     <dd>{{% md %}}Endpoint on which the Data Fusion UI and REST APIs are accessible.
-{{% /md %}}</dd>
-    <dt class="property-"
+{{% /md %}}</dd><dt class="property-"
             title="">
         <span id="state_csharp">
 <a href="#state_csharp" style="color: inherit; text-decoration: inherit;">State</a>
@@ -1022,8 +969,7 @@ All [input](#inputs) properties are implicitly available as output properties. A
     <dd>{{% md %}}The current state of this Data Fusion instance. - CREATING: Instance is being created - RUNNING: Instance is running and
 ready for requests - FAILED: Instance creation failed - DELETING: Instance is being deleted - UPGRADING: Instance is
 being upgraded - RESTARTING: Instance is being restarted
-{{% /md %}}</dd>
-    <dt class="property-"
+{{% /md %}}</dd><dt class="property-"
             title="">
         <span id="statemessage_csharp">
 <a href="#statemessage_csharp" style="color: inherit; text-decoration: inherit;">State<wbr>Message</a>
@@ -1032,8 +978,7 @@ being upgraded - RESTARTING: Instance is being restarted
         <span class="property-type">string</span>
     </dt>
     <dd>{{% md %}}Additional information about the current state of this Data Fusion instance if available.
-{{% /md %}}</dd>
-    <dt class="property-"
+{{% /md %}}</dd><dt class="property-"
             title="">
         <span id="updatetime_csharp">
 <a href="#updatetime_csharp" style="color: inherit; text-decoration: inherit;">Update<wbr>Time</a>
@@ -1042,14 +987,11 @@ being upgraded - RESTARTING: Instance is being restarted
         <span class="property-type">string</span>
     </dt>
     <dd>{{% md %}}The time the instance was last updated in RFC3339 UTC "Zulu" format, accurate to nanoseconds.
-{{% /md %}}</dd>
-</dl>
+{{% /md %}}</dd></dl>
 {{% /choosable %}}
 
 {{% choosable language go %}}
-<dl class="resources-properties">
-
-    <dt class="property-"
+<dl class="resources-properties"><dt class="property-"
             title="">
         <span id="createtime_go">
 <a href="#createtime_go" style="color: inherit; text-decoration: inherit;">Create<wbr>Time</a>
@@ -1058,8 +1000,7 @@ being upgraded - RESTARTING: Instance is being restarted
         <span class="property-type">string</span>
     </dt>
     <dd>{{% md %}}The time the instance was created in RFC3339 UTC "Zulu" format, accurate to nanoseconds.
-{{% /md %}}</dd>
-    <dt class="property-"
+{{% /md %}}</dd><dt class="property-"
             title="">
         <span id="id_go">
 <a href="#id_go" style="color: inherit; text-decoration: inherit;">Id</a>
@@ -1067,8 +1008,7 @@ being upgraded - RESTARTING: Instance is being restarted
         <span class="property-indicator"></span>
         <span class="property-type">string</span>
     </dt>
-    <dd>{{% md %}}The provider-assigned unique ID for this managed resource.{{% /md %}}</dd>
-    <dt class="property-"
+    <dd>{{% md %}}The provider-assigned unique ID for this managed resource.{{% /md %}}</dd><dt class="property-"
             title="">
         <span id="serviceaccount_go">
 <a href="#serviceaccount_go" style="color: inherit; text-decoration: inherit;">Service<wbr>Account</a>
@@ -1077,8 +1017,7 @@ being upgraded - RESTARTING: Instance is being restarted
         <span class="property-type">string</span>
     </dt>
     <dd>{{% md %}}Service account which will be used to access resources in the customer project.
-{{% /md %}}</dd>
-    <dt class="property-"
+{{% /md %}}</dd><dt class="property-"
             title="">
         <span id="serviceendpoint_go">
 <a href="#serviceendpoint_go" style="color: inherit; text-decoration: inherit;">Service<wbr>Endpoint</a>
@@ -1087,8 +1026,7 @@ being upgraded - RESTARTING: Instance is being restarted
         <span class="property-type">string</span>
     </dt>
     <dd>{{% md %}}Endpoint on which the Data Fusion UI and REST APIs are accessible.
-{{% /md %}}</dd>
-    <dt class="property-"
+{{% /md %}}</dd><dt class="property-"
             title="">
         <span id="state_go">
 <a href="#state_go" style="color: inherit; text-decoration: inherit;">State</a>
@@ -1099,8 +1037,7 @@ being upgraded - RESTARTING: Instance is being restarted
     <dd>{{% md %}}The current state of this Data Fusion instance. - CREATING: Instance is being created - RUNNING: Instance is running and
 ready for requests - FAILED: Instance creation failed - DELETING: Instance is being deleted - UPGRADING: Instance is
 being upgraded - RESTARTING: Instance is being restarted
-{{% /md %}}</dd>
-    <dt class="property-"
+{{% /md %}}</dd><dt class="property-"
             title="">
         <span id="statemessage_go">
 <a href="#statemessage_go" style="color: inherit; text-decoration: inherit;">State<wbr>Message</a>
@@ -1109,8 +1046,7 @@ being upgraded - RESTARTING: Instance is being restarted
         <span class="property-type">string</span>
     </dt>
     <dd>{{% md %}}Additional information about the current state of this Data Fusion instance if available.
-{{% /md %}}</dd>
-    <dt class="property-"
+{{% /md %}}</dd><dt class="property-"
             title="">
         <span id="updatetime_go">
 <a href="#updatetime_go" style="color: inherit; text-decoration: inherit;">Update<wbr>Time</a>
@@ -1119,14 +1055,11 @@ being upgraded - RESTARTING: Instance is being restarted
         <span class="property-type">string</span>
     </dt>
     <dd>{{% md %}}The time the instance was last updated in RFC3339 UTC "Zulu" format, accurate to nanoseconds.
-{{% /md %}}</dd>
-</dl>
+{{% /md %}}</dd></dl>
 {{% /choosable %}}
 
 {{% choosable language nodejs %}}
-<dl class="resources-properties">
-
-    <dt class="property-"
+<dl class="resources-properties"><dt class="property-"
             title="">
         <span id="createtime_nodejs">
 <a href="#createtime_nodejs" style="color: inherit; text-decoration: inherit;">create<wbr>Time</a>
@@ -1135,8 +1068,7 @@ being upgraded - RESTARTING: Instance is being restarted
         <span class="property-type">string</span>
     </dt>
     <dd>{{% md %}}The time the instance was created in RFC3339 UTC "Zulu" format, accurate to nanoseconds.
-{{% /md %}}</dd>
-    <dt class="property-"
+{{% /md %}}</dd><dt class="property-"
             title="">
         <span id="id_nodejs">
 <a href="#id_nodejs" style="color: inherit; text-decoration: inherit;">id</a>
@@ -1144,8 +1076,7 @@ being upgraded - RESTARTING: Instance is being restarted
         <span class="property-indicator"></span>
         <span class="property-type">string</span>
     </dt>
-    <dd>{{% md %}}The provider-assigned unique ID for this managed resource.{{% /md %}}</dd>
-    <dt class="property-"
+    <dd>{{% md %}}The provider-assigned unique ID for this managed resource.{{% /md %}}</dd><dt class="property-"
             title="">
         <span id="serviceaccount_nodejs">
 <a href="#serviceaccount_nodejs" style="color: inherit; text-decoration: inherit;">service<wbr>Account</a>
@@ -1154,8 +1085,7 @@ being upgraded - RESTARTING: Instance is being restarted
         <span class="property-type">string</span>
     </dt>
     <dd>{{% md %}}Service account which will be used to access resources in the customer project.
-{{% /md %}}</dd>
-    <dt class="property-"
+{{% /md %}}</dd><dt class="property-"
             title="">
         <span id="serviceendpoint_nodejs">
 <a href="#serviceendpoint_nodejs" style="color: inherit; text-decoration: inherit;">service<wbr>Endpoint</a>
@@ -1164,8 +1094,7 @@ being upgraded - RESTARTING: Instance is being restarted
         <span class="property-type">string</span>
     </dt>
     <dd>{{% md %}}Endpoint on which the Data Fusion UI and REST APIs are accessible.
-{{% /md %}}</dd>
-    <dt class="property-"
+{{% /md %}}</dd><dt class="property-"
             title="">
         <span id="state_nodejs">
 <a href="#state_nodejs" style="color: inherit; text-decoration: inherit;">state</a>
@@ -1176,8 +1105,7 @@ being upgraded - RESTARTING: Instance is being restarted
     <dd>{{% md %}}The current state of this Data Fusion instance. - CREATING: Instance is being created - RUNNING: Instance is running and
 ready for requests - FAILED: Instance creation failed - DELETING: Instance is being deleted - UPGRADING: Instance is
 being upgraded - RESTARTING: Instance is being restarted
-{{% /md %}}</dd>
-    <dt class="property-"
+{{% /md %}}</dd><dt class="property-"
             title="">
         <span id="statemessage_nodejs">
 <a href="#statemessage_nodejs" style="color: inherit; text-decoration: inherit;">state<wbr>Message</a>
@@ -1186,8 +1114,7 @@ being upgraded - RESTARTING: Instance is being restarted
         <span class="property-type">string</span>
     </dt>
     <dd>{{% md %}}Additional information about the current state of this Data Fusion instance if available.
-{{% /md %}}</dd>
-    <dt class="property-"
+{{% /md %}}</dd><dt class="property-"
             title="">
         <span id="updatetime_nodejs">
 <a href="#updatetime_nodejs" style="color: inherit; text-decoration: inherit;">update<wbr>Time</a>
@@ -1196,14 +1123,11 @@ being upgraded - RESTARTING: Instance is being restarted
         <span class="property-type">string</span>
     </dt>
     <dd>{{% md %}}The time the instance was last updated in RFC3339 UTC "Zulu" format, accurate to nanoseconds.
-{{% /md %}}</dd>
-</dl>
+{{% /md %}}</dd></dl>
 {{% /choosable %}}
 
 {{% choosable language python %}}
-<dl class="resources-properties">
-
-    <dt class="property-"
+<dl class="resources-properties"><dt class="property-"
             title="">
         <span id="create_time_python">
 <a href="#create_time_python" style="color: inherit; text-decoration: inherit;">create_<wbr>time</a>
@@ -1212,8 +1136,7 @@ being upgraded - RESTARTING: Instance is being restarted
         <span class="property-type">str</span>
     </dt>
     <dd>{{% md %}}The time the instance was created in RFC3339 UTC "Zulu" format, accurate to nanoseconds.
-{{% /md %}}</dd>
-    <dt class="property-"
+{{% /md %}}</dd><dt class="property-"
             title="">
         <span id="id_python">
 <a href="#id_python" style="color: inherit; text-decoration: inherit;">id</a>
@@ -1221,8 +1144,7 @@ being upgraded - RESTARTING: Instance is being restarted
         <span class="property-indicator"></span>
         <span class="property-type">str</span>
     </dt>
-    <dd>{{% md %}}The provider-assigned unique ID for this managed resource.{{% /md %}}</dd>
-    <dt class="property-"
+    <dd>{{% md %}}The provider-assigned unique ID for this managed resource.{{% /md %}}</dd><dt class="property-"
             title="">
         <span id="service_account_python">
 <a href="#service_account_python" style="color: inherit; text-decoration: inherit;">service_<wbr>account</a>
@@ -1231,8 +1153,7 @@ being upgraded - RESTARTING: Instance is being restarted
         <span class="property-type">str</span>
     </dt>
     <dd>{{% md %}}Service account which will be used to access resources in the customer project.
-{{% /md %}}</dd>
-    <dt class="property-"
+{{% /md %}}</dd><dt class="property-"
             title="">
         <span id="service_endpoint_python">
 <a href="#service_endpoint_python" style="color: inherit; text-decoration: inherit;">service_<wbr>endpoint</a>
@@ -1241,8 +1162,7 @@ being upgraded - RESTARTING: Instance is being restarted
         <span class="property-type">str</span>
     </dt>
     <dd>{{% md %}}Endpoint on which the Data Fusion UI and REST APIs are accessible.
-{{% /md %}}</dd>
-    <dt class="property-"
+{{% /md %}}</dd><dt class="property-"
             title="">
         <span id="state_python">
 <a href="#state_python" style="color: inherit; text-decoration: inherit;">state</a>
@@ -1253,8 +1173,7 @@ being upgraded - RESTARTING: Instance is being restarted
     <dd>{{% md %}}The current state of this Data Fusion instance. - CREATING: Instance is being created - RUNNING: Instance is running and
 ready for requests - FAILED: Instance creation failed - DELETING: Instance is being deleted - UPGRADING: Instance is
 being upgraded - RESTARTING: Instance is being restarted
-{{% /md %}}</dd>
-    <dt class="property-"
+{{% /md %}}</dd><dt class="property-"
             title="">
         <span id="state_message_python">
 <a href="#state_message_python" style="color: inherit; text-decoration: inherit;">state_<wbr>message</a>
@@ -1263,8 +1182,7 @@ being upgraded - RESTARTING: Instance is being restarted
         <span class="property-type">str</span>
     </dt>
     <dd>{{% md %}}Additional information about the current state of this Data Fusion instance if available.
-{{% /md %}}</dd>
-    <dt class="property-"
+{{% /md %}}</dd><dt class="property-"
             title="">
         <span id="update_time_python">
 <a href="#update_time_python" style="color: inherit; text-decoration: inherit;">update_<wbr>time</a>
@@ -1273,8 +1191,7 @@ being upgraded - RESTARTING: Instance is being restarted
         <span class="property-type">str</span>
     </dt>
     <dd>{{% md %}}The time the instance was last updated in RFC3339 UTC "Zulu" format, accurate to nanoseconds.
-{{% /md %}}</dd>
-</dl>
+{{% /md %}}</dd></dl>
 {{% /choosable %}}
 
 
@@ -1401,9 +1318,7 @@ The following state arguments are supported:
 
 
 {{% choosable language csharp %}}
-<dl class="resources-properties">
-
-    <dt class="property-optional"
+<dl class="resources-properties"><dt class="property-optional"
             title="Optional">
         <span id="state_createtime_csharp">
 <a href="#state_createtime_csharp" style="color: inherit; text-decoration: inherit;">Create<wbr>Time</a>
@@ -1412,8 +1327,7 @@ The following state arguments are supported:
         <span class="property-type">string</span>
     </dt>
     <dd>{{% md %}}The time the instance was created in RFC3339 UTC "Zulu" format, accurate to nanoseconds.
-{{% /md %}}</dd>
-    <dt class="property-optional"
+{{% /md %}}</dd><dt class="property-optional"
             title="Optional">
         <span id="state_description_csharp">
 <a href="#state_description_csharp" style="color: inherit; text-decoration: inherit;">Description</a>
@@ -1422,8 +1336,7 @@ The following state arguments are supported:
         <span class="property-type">string</span>
     </dt>
     <dd>{{% md %}}An optional description of the instance.
-{{% /md %}}</dd>
-    <dt class="property-optional"
+{{% /md %}}</dd><dt class="property-optional"
             title="Optional">
         <span id="state_enablestackdriverlogging_csharp">
 <a href="#state_enablestackdriverlogging_csharp" style="color: inherit; text-decoration: inherit;">Enable<wbr>Stackdriver<wbr>Logging</a>
@@ -1432,8 +1345,7 @@ The following state arguments are supported:
         <span class="property-type">bool</span>
     </dt>
     <dd>{{% md %}}Option to enable Stackdriver Logging.
-{{% /md %}}</dd>
-    <dt class="property-optional"
+{{% /md %}}</dd><dt class="property-optional"
             title="Optional">
         <span id="state_enablestackdrivermonitoring_csharp">
 <a href="#state_enablestackdrivermonitoring_csharp" style="color: inherit; text-decoration: inherit;">Enable<wbr>Stackdriver<wbr>Monitoring</a>
@@ -1442,8 +1354,7 @@ The following state arguments are supported:
         <span class="property-type">bool</span>
     </dt>
     <dd>{{% md %}}Option to enable Stackdriver Monitoring.
-{{% /md %}}</dd>
-    <dt class="property-optional"
+{{% /md %}}</dd><dt class="property-optional"
             title="Optional">
         <span id="state_labels_csharp">
 <a href="#state_labels_csharp" style="color: inherit; text-decoration: inherit;">Labels</a>
@@ -1453,8 +1364,7 @@ The following state arguments are supported:
     </dt>
     <dd>{{% md %}}The resource labels for instance to use to annotate any related underlying resources,
 such as Compute Engine VMs.
-{{% /md %}}</dd>
-    <dt class="property-optional"
+{{% /md %}}</dd><dt class="property-optional"
             title="Optional">
         <span id="state_name_csharp">
 <a href="#state_name_csharp" style="color: inherit; text-decoration: inherit;">Name</a>
@@ -1463,8 +1373,7 @@ such as Compute Engine VMs.
         <span class="property-type">string</span>
     </dt>
     <dd>{{% md %}}The ID of the instance or a fully qualified identifier for the instance.
-{{% /md %}}</dd>
-    <dt class="property-optional"
+{{% /md %}}</dd><dt class="property-optional"
             title="Optional">
         <span id="state_networkconfig_csharp">
 <a href="#state_networkconfig_csharp" style="color: inherit; text-decoration: inherit;">Network<wbr>Config</a>
@@ -1474,8 +1383,7 @@ such as Compute Engine VMs.
     </dt>
     <dd>{{% md %}}Network configuration options. These are required when a private Data Fusion instance is to be created.
 Structure is documented below.
-{{% /md %}}</dd>
-    <dt class="property-optional"
+{{% /md %}}</dd><dt class="property-optional"
             title="Optional">
         <span id="state_options_csharp">
 <a href="#state_options_csharp" style="color: inherit; text-decoration: inherit;">Options</a>
@@ -1484,8 +1392,7 @@ Structure is documented below.
         <span class="property-type">Dictionary&lt;string, string&gt;</span>
     </dt>
     <dd>{{% md %}}Map of additional options used to configure the behavior of Data Fusion instance.
-{{% /md %}}</dd>
-    <dt class="property-optional"
+{{% /md %}}</dd><dt class="property-optional"
             title="Optional">
         <span id="state_privateinstance_csharp">
 <a href="#state_privateinstance_csharp" style="color: inherit; text-decoration: inherit;">Private<wbr>Instance</a>
@@ -1496,8 +1403,7 @@ Structure is documented below.
     <dd>{{% md %}}Specifies whether the Data Fusion instance should be private. If set to
 true, all Data Fusion nodes will have private IP addresses and will not be
 able to access the public internet.
-{{% /md %}}</dd>
-    <dt class="property-optional"
+{{% /md %}}</dd><dt class="property-optional"
             title="Optional">
         <span id="state_project_csharp">
 <a href="#state_project_csharp" style="color: inherit; text-decoration: inherit;">Project</a>
@@ -1507,8 +1413,7 @@ able to access the public internet.
     </dt>
     <dd>{{% md %}}The ID of the project in which the resource belongs.
 If it is not provided, the provider project is used.
-{{% /md %}}</dd>
-    <dt class="property-optional"
+{{% /md %}}</dd><dt class="property-optional"
             title="Optional">
         <span id="state_region_csharp">
 <a href="#state_region_csharp" style="color: inherit; text-decoration: inherit;">Region</a>
@@ -1517,8 +1422,7 @@ If it is not provided, the provider project is used.
         <span class="property-type">string</span>
     </dt>
     <dd>{{% md %}}The region of the Data Fusion instance.
-{{% /md %}}</dd>
-    <dt class="property-optional"
+{{% /md %}}</dd><dt class="property-optional"
             title="Optional">
         <span id="state_serviceaccount_csharp">
 <a href="#state_serviceaccount_csharp" style="color: inherit; text-decoration: inherit;">Service<wbr>Account</a>
@@ -1527,8 +1431,7 @@ If it is not provided, the provider project is used.
         <span class="property-type">string</span>
     </dt>
     <dd>{{% md %}}Service account which will be used to access resources in the customer project.
-{{% /md %}}</dd>
-    <dt class="property-optional"
+{{% /md %}}</dd><dt class="property-optional"
             title="Optional">
         <span id="state_serviceendpoint_csharp">
 <a href="#state_serviceendpoint_csharp" style="color: inherit; text-decoration: inherit;">Service<wbr>Endpoint</a>
@@ -1537,8 +1440,7 @@ If it is not provided, the provider project is used.
         <span class="property-type">string</span>
     </dt>
     <dd>{{% md %}}Endpoint on which the Data Fusion UI and REST APIs are accessible.
-{{% /md %}}</dd>
-    <dt class="property-optional"
+{{% /md %}}</dd><dt class="property-optional"
             title="Optional">
         <span id="state_state_csharp">
 <a href="#state_state_csharp" style="color: inherit; text-decoration: inherit;">State</a>
@@ -1549,8 +1451,7 @@ If it is not provided, the provider project is used.
     <dd>{{% md %}}The current state of this Data Fusion instance. - CREATING: Instance is being created - RUNNING: Instance is running and
 ready for requests - FAILED: Instance creation failed - DELETING: Instance is being deleted - UPGRADING: Instance is
 being upgraded - RESTARTING: Instance is being restarted
-{{% /md %}}</dd>
-    <dt class="property-optional"
+{{% /md %}}</dd><dt class="property-optional"
             title="Optional">
         <span id="state_statemessage_csharp">
 <a href="#state_statemessage_csharp" style="color: inherit; text-decoration: inherit;">State<wbr>Message</a>
@@ -1559,8 +1460,7 @@ being upgraded - RESTARTING: Instance is being restarted
         <span class="property-type">string</span>
     </dt>
     <dd>{{% md %}}Additional information about the current state of this Data Fusion instance if available.
-{{% /md %}}</dd>
-    <dt class="property-optional"
+{{% /md %}}</dd><dt class="property-optional"
             title="Optional">
         <span id="state_type_csharp">
 <a href="#state_type_csharp" style="color: inherit; text-decoration: inherit;">Type</a>
@@ -1576,8 +1476,7 @@ of concurrent pipelines, no support for streaming pipelines, etc.
 - ENTERPRISE: Enterprise Data Fusion instance. In Enterprise type, the user will have more features
 available, such as support for streaming pipelines, higher number of concurrent pipelines, etc.
 Possible values are `BASIC` and `ENTERPRISE`.
-{{% /md %}}</dd>
-    <dt class="property-optional"
+{{% /md %}}</dd><dt class="property-optional"
             title="Optional">
         <span id="state_updatetime_csharp">
 <a href="#state_updatetime_csharp" style="color: inherit; text-decoration: inherit;">Update<wbr>Time</a>
@@ -1586,8 +1485,7 @@ Possible values are `BASIC` and `ENTERPRISE`.
         <span class="property-type">string</span>
     </dt>
     <dd>{{% md %}}The time the instance was last updated in RFC3339 UTC "Zulu" format, accurate to nanoseconds.
-{{% /md %}}</dd>
-    <dt class="property-optional"
+{{% /md %}}</dd><dt class="property-optional"
             title="Optional">
         <span id="state_version_csharp">
 <a href="#state_version_csharp" style="color: inherit; text-decoration: inherit;">Version</a>
@@ -1596,14 +1494,11 @@ Possible values are `BASIC` and `ENTERPRISE`.
         <span class="property-type">string</span>
     </dt>
     <dd>{{% md %}}Current version of the Data Fusion.
-{{% /md %}}</dd>
-</dl>
+{{% /md %}}</dd></dl>
 {{% /choosable %}}
 
 {{% choosable language go %}}
-<dl class="resources-properties">
-
-    <dt class="property-optional"
+<dl class="resources-properties"><dt class="property-optional"
             title="Optional">
         <span id="state_createtime_go">
 <a href="#state_createtime_go" style="color: inherit; text-decoration: inherit;">Create<wbr>Time</a>
@@ -1612,8 +1507,7 @@ Possible values are `BASIC` and `ENTERPRISE`.
         <span class="property-type">string</span>
     </dt>
     <dd>{{% md %}}The time the instance was created in RFC3339 UTC "Zulu" format, accurate to nanoseconds.
-{{% /md %}}</dd>
-    <dt class="property-optional"
+{{% /md %}}</dd><dt class="property-optional"
             title="Optional">
         <span id="state_description_go">
 <a href="#state_description_go" style="color: inherit; text-decoration: inherit;">Description</a>
@@ -1622,8 +1516,7 @@ Possible values are `BASIC` and `ENTERPRISE`.
         <span class="property-type">string</span>
     </dt>
     <dd>{{% md %}}An optional description of the instance.
-{{% /md %}}</dd>
-    <dt class="property-optional"
+{{% /md %}}</dd><dt class="property-optional"
             title="Optional">
         <span id="state_enablestackdriverlogging_go">
 <a href="#state_enablestackdriverlogging_go" style="color: inherit; text-decoration: inherit;">Enable<wbr>Stackdriver<wbr>Logging</a>
@@ -1632,8 +1525,7 @@ Possible values are `BASIC` and `ENTERPRISE`.
         <span class="property-type">bool</span>
     </dt>
     <dd>{{% md %}}Option to enable Stackdriver Logging.
-{{% /md %}}</dd>
-    <dt class="property-optional"
+{{% /md %}}</dd><dt class="property-optional"
             title="Optional">
         <span id="state_enablestackdrivermonitoring_go">
 <a href="#state_enablestackdrivermonitoring_go" style="color: inherit; text-decoration: inherit;">Enable<wbr>Stackdriver<wbr>Monitoring</a>
@@ -1642,8 +1534,7 @@ Possible values are `BASIC` and `ENTERPRISE`.
         <span class="property-type">bool</span>
     </dt>
     <dd>{{% md %}}Option to enable Stackdriver Monitoring.
-{{% /md %}}</dd>
-    <dt class="property-optional"
+{{% /md %}}</dd><dt class="property-optional"
             title="Optional">
         <span id="state_labels_go">
 <a href="#state_labels_go" style="color: inherit; text-decoration: inherit;">Labels</a>
@@ -1653,8 +1544,7 @@ Possible values are `BASIC` and `ENTERPRISE`.
     </dt>
     <dd>{{% md %}}The resource labels for instance to use to annotate any related underlying resources,
 such as Compute Engine VMs.
-{{% /md %}}</dd>
-    <dt class="property-optional"
+{{% /md %}}</dd><dt class="property-optional"
             title="Optional">
         <span id="state_name_go">
 <a href="#state_name_go" style="color: inherit; text-decoration: inherit;">Name</a>
@@ -1663,8 +1553,7 @@ such as Compute Engine VMs.
         <span class="property-type">string</span>
     </dt>
     <dd>{{% md %}}The ID of the instance or a fully qualified identifier for the instance.
-{{% /md %}}</dd>
-    <dt class="property-optional"
+{{% /md %}}</dd><dt class="property-optional"
             title="Optional">
         <span id="state_networkconfig_go">
 <a href="#state_networkconfig_go" style="color: inherit; text-decoration: inherit;">Network<wbr>Config</a>
@@ -1674,8 +1563,7 @@ such as Compute Engine VMs.
     </dt>
     <dd>{{% md %}}Network configuration options. These are required when a private Data Fusion instance is to be created.
 Structure is documented below.
-{{% /md %}}</dd>
-    <dt class="property-optional"
+{{% /md %}}</dd><dt class="property-optional"
             title="Optional">
         <span id="state_options_go">
 <a href="#state_options_go" style="color: inherit; text-decoration: inherit;">Options</a>
@@ -1684,8 +1572,7 @@ Structure is documented below.
         <span class="property-type">map[string]string</span>
     </dt>
     <dd>{{% md %}}Map of additional options used to configure the behavior of Data Fusion instance.
-{{% /md %}}</dd>
-    <dt class="property-optional"
+{{% /md %}}</dd><dt class="property-optional"
             title="Optional">
         <span id="state_privateinstance_go">
 <a href="#state_privateinstance_go" style="color: inherit; text-decoration: inherit;">Private<wbr>Instance</a>
@@ -1696,8 +1583,7 @@ Structure is documented below.
     <dd>{{% md %}}Specifies whether the Data Fusion instance should be private. If set to
 true, all Data Fusion nodes will have private IP addresses and will not be
 able to access the public internet.
-{{% /md %}}</dd>
-    <dt class="property-optional"
+{{% /md %}}</dd><dt class="property-optional"
             title="Optional">
         <span id="state_project_go">
 <a href="#state_project_go" style="color: inherit; text-decoration: inherit;">Project</a>
@@ -1707,8 +1593,7 @@ able to access the public internet.
     </dt>
     <dd>{{% md %}}The ID of the project in which the resource belongs.
 If it is not provided, the provider project is used.
-{{% /md %}}</dd>
-    <dt class="property-optional"
+{{% /md %}}</dd><dt class="property-optional"
             title="Optional">
         <span id="state_region_go">
 <a href="#state_region_go" style="color: inherit; text-decoration: inherit;">Region</a>
@@ -1717,8 +1602,7 @@ If it is not provided, the provider project is used.
         <span class="property-type">string</span>
     </dt>
     <dd>{{% md %}}The region of the Data Fusion instance.
-{{% /md %}}</dd>
-    <dt class="property-optional"
+{{% /md %}}</dd><dt class="property-optional"
             title="Optional">
         <span id="state_serviceaccount_go">
 <a href="#state_serviceaccount_go" style="color: inherit; text-decoration: inherit;">Service<wbr>Account</a>
@@ -1727,8 +1611,7 @@ If it is not provided, the provider project is used.
         <span class="property-type">string</span>
     </dt>
     <dd>{{% md %}}Service account which will be used to access resources in the customer project.
-{{% /md %}}</dd>
-    <dt class="property-optional"
+{{% /md %}}</dd><dt class="property-optional"
             title="Optional">
         <span id="state_serviceendpoint_go">
 <a href="#state_serviceendpoint_go" style="color: inherit; text-decoration: inherit;">Service<wbr>Endpoint</a>
@@ -1737,8 +1620,7 @@ If it is not provided, the provider project is used.
         <span class="property-type">string</span>
     </dt>
     <dd>{{% md %}}Endpoint on which the Data Fusion UI and REST APIs are accessible.
-{{% /md %}}</dd>
-    <dt class="property-optional"
+{{% /md %}}</dd><dt class="property-optional"
             title="Optional">
         <span id="state_state_go">
 <a href="#state_state_go" style="color: inherit; text-decoration: inherit;">State</a>
@@ -1749,8 +1631,7 @@ If it is not provided, the provider project is used.
     <dd>{{% md %}}The current state of this Data Fusion instance. - CREATING: Instance is being created - RUNNING: Instance is running and
 ready for requests - FAILED: Instance creation failed - DELETING: Instance is being deleted - UPGRADING: Instance is
 being upgraded - RESTARTING: Instance is being restarted
-{{% /md %}}</dd>
-    <dt class="property-optional"
+{{% /md %}}</dd><dt class="property-optional"
             title="Optional">
         <span id="state_statemessage_go">
 <a href="#state_statemessage_go" style="color: inherit; text-decoration: inherit;">State<wbr>Message</a>
@@ -1759,8 +1640,7 @@ being upgraded - RESTARTING: Instance is being restarted
         <span class="property-type">string</span>
     </dt>
     <dd>{{% md %}}Additional information about the current state of this Data Fusion instance if available.
-{{% /md %}}</dd>
-    <dt class="property-optional"
+{{% /md %}}</dd><dt class="property-optional"
             title="Optional">
         <span id="state_type_go">
 <a href="#state_type_go" style="color: inherit; text-decoration: inherit;">Type</a>
@@ -1776,8 +1656,7 @@ of concurrent pipelines, no support for streaming pipelines, etc.
 - ENTERPRISE: Enterprise Data Fusion instance. In Enterprise type, the user will have more features
 available, such as support for streaming pipelines, higher number of concurrent pipelines, etc.
 Possible values are `BASIC` and `ENTERPRISE`.
-{{% /md %}}</dd>
-    <dt class="property-optional"
+{{% /md %}}</dd><dt class="property-optional"
             title="Optional">
         <span id="state_updatetime_go">
 <a href="#state_updatetime_go" style="color: inherit; text-decoration: inherit;">Update<wbr>Time</a>
@@ -1786,8 +1665,7 @@ Possible values are `BASIC` and `ENTERPRISE`.
         <span class="property-type">string</span>
     </dt>
     <dd>{{% md %}}The time the instance was last updated in RFC3339 UTC "Zulu" format, accurate to nanoseconds.
-{{% /md %}}</dd>
-    <dt class="property-optional"
+{{% /md %}}</dd><dt class="property-optional"
             title="Optional">
         <span id="state_version_go">
 <a href="#state_version_go" style="color: inherit; text-decoration: inherit;">Version</a>
@@ -1796,14 +1674,11 @@ Possible values are `BASIC` and `ENTERPRISE`.
         <span class="property-type">string</span>
     </dt>
     <dd>{{% md %}}Current version of the Data Fusion.
-{{% /md %}}</dd>
-</dl>
+{{% /md %}}</dd></dl>
 {{% /choosable %}}
 
 {{% choosable language nodejs %}}
-<dl class="resources-properties">
-
-    <dt class="property-optional"
+<dl class="resources-properties"><dt class="property-optional"
             title="Optional">
         <span id="state_createtime_nodejs">
 <a href="#state_createtime_nodejs" style="color: inherit; text-decoration: inherit;">create<wbr>Time</a>
@@ -1812,8 +1687,7 @@ Possible values are `BASIC` and `ENTERPRISE`.
         <span class="property-type">string</span>
     </dt>
     <dd>{{% md %}}The time the instance was created in RFC3339 UTC "Zulu" format, accurate to nanoseconds.
-{{% /md %}}</dd>
-    <dt class="property-optional"
+{{% /md %}}</dd><dt class="property-optional"
             title="Optional">
         <span id="state_description_nodejs">
 <a href="#state_description_nodejs" style="color: inherit; text-decoration: inherit;">description</a>
@@ -1822,8 +1696,7 @@ Possible values are `BASIC` and `ENTERPRISE`.
         <span class="property-type">string</span>
     </dt>
     <dd>{{% md %}}An optional description of the instance.
-{{% /md %}}</dd>
-    <dt class="property-optional"
+{{% /md %}}</dd><dt class="property-optional"
             title="Optional">
         <span id="state_enablestackdriverlogging_nodejs">
 <a href="#state_enablestackdriverlogging_nodejs" style="color: inherit; text-decoration: inherit;">enable<wbr>Stackdriver<wbr>Logging</a>
@@ -1832,8 +1705,7 @@ Possible values are `BASIC` and `ENTERPRISE`.
         <span class="property-type">boolean</span>
     </dt>
     <dd>{{% md %}}Option to enable Stackdriver Logging.
-{{% /md %}}</dd>
-    <dt class="property-optional"
+{{% /md %}}</dd><dt class="property-optional"
             title="Optional">
         <span id="state_enablestackdrivermonitoring_nodejs">
 <a href="#state_enablestackdrivermonitoring_nodejs" style="color: inherit; text-decoration: inherit;">enable<wbr>Stackdriver<wbr>Monitoring</a>
@@ -1842,8 +1714,7 @@ Possible values are `BASIC` and `ENTERPRISE`.
         <span class="property-type">boolean</span>
     </dt>
     <dd>{{% md %}}Option to enable Stackdriver Monitoring.
-{{% /md %}}</dd>
-    <dt class="property-optional"
+{{% /md %}}</dd><dt class="property-optional"
             title="Optional">
         <span id="state_labels_nodejs">
 <a href="#state_labels_nodejs" style="color: inherit; text-decoration: inherit;">labels</a>
@@ -1853,8 +1724,7 @@ Possible values are `BASIC` and `ENTERPRISE`.
     </dt>
     <dd>{{% md %}}The resource labels for instance to use to annotate any related underlying resources,
 such as Compute Engine VMs.
-{{% /md %}}</dd>
-    <dt class="property-optional"
+{{% /md %}}</dd><dt class="property-optional"
             title="Optional">
         <span id="state_name_nodejs">
 <a href="#state_name_nodejs" style="color: inherit; text-decoration: inherit;">name</a>
@@ -1863,8 +1733,7 @@ such as Compute Engine VMs.
         <span class="property-type">string</span>
     </dt>
     <dd>{{% md %}}The ID of the instance or a fully qualified identifier for the instance.
-{{% /md %}}</dd>
-    <dt class="property-optional"
+{{% /md %}}</dd><dt class="property-optional"
             title="Optional">
         <span id="state_networkconfig_nodejs">
 <a href="#state_networkconfig_nodejs" style="color: inherit; text-decoration: inherit;">network<wbr>Config</a>
@@ -1874,8 +1743,7 @@ such as Compute Engine VMs.
     </dt>
     <dd>{{% md %}}Network configuration options. These are required when a private Data Fusion instance is to be created.
 Structure is documented below.
-{{% /md %}}</dd>
-    <dt class="property-optional"
+{{% /md %}}</dd><dt class="property-optional"
             title="Optional">
         <span id="state_options_nodejs">
 <a href="#state_options_nodejs" style="color: inherit; text-decoration: inherit;">options</a>
@@ -1884,8 +1752,7 @@ Structure is documented below.
         <span class="property-type">{[key: string]: string}</span>
     </dt>
     <dd>{{% md %}}Map of additional options used to configure the behavior of Data Fusion instance.
-{{% /md %}}</dd>
-    <dt class="property-optional"
+{{% /md %}}</dd><dt class="property-optional"
             title="Optional">
         <span id="state_privateinstance_nodejs">
 <a href="#state_privateinstance_nodejs" style="color: inherit; text-decoration: inherit;">private<wbr>Instance</a>
@@ -1896,8 +1763,7 @@ Structure is documented below.
     <dd>{{% md %}}Specifies whether the Data Fusion instance should be private. If set to
 true, all Data Fusion nodes will have private IP addresses and will not be
 able to access the public internet.
-{{% /md %}}</dd>
-    <dt class="property-optional"
+{{% /md %}}</dd><dt class="property-optional"
             title="Optional">
         <span id="state_project_nodejs">
 <a href="#state_project_nodejs" style="color: inherit; text-decoration: inherit;">project</a>
@@ -1907,8 +1773,7 @@ able to access the public internet.
     </dt>
     <dd>{{% md %}}The ID of the project in which the resource belongs.
 If it is not provided, the provider project is used.
-{{% /md %}}</dd>
-    <dt class="property-optional"
+{{% /md %}}</dd><dt class="property-optional"
             title="Optional">
         <span id="state_region_nodejs">
 <a href="#state_region_nodejs" style="color: inherit; text-decoration: inherit;">region</a>
@@ -1917,8 +1782,7 @@ If it is not provided, the provider project is used.
         <span class="property-type">string</span>
     </dt>
     <dd>{{% md %}}The region of the Data Fusion instance.
-{{% /md %}}</dd>
-    <dt class="property-optional"
+{{% /md %}}</dd><dt class="property-optional"
             title="Optional">
         <span id="state_serviceaccount_nodejs">
 <a href="#state_serviceaccount_nodejs" style="color: inherit; text-decoration: inherit;">service<wbr>Account</a>
@@ -1927,8 +1791,7 @@ If it is not provided, the provider project is used.
         <span class="property-type">string</span>
     </dt>
     <dd>{{% md %}}Service account which will be used to access resources in the customer project.
-{{% /md %}}</dd>
-    <dt class="property-optional"
+{{% /md %}}</dd><dt class="property-optional"
             title="Optional">
         <span id="state_serviceendpoint_nodejs">
 <a href="#state_serviceendpoint_nodejs" style="color: inherit; text-decoration: inherit;">service<wbr>Endpoint</a>
@@ -1937,8 +1800,7 @@ If it is not provided, the provider project is used.
         <span class="property-type">string</span>
     </dt>
     <dd>{{% md %}}Endpoint on which the Data Fusion UI and REST APIs are accessible.
-{{% /md %}}</dd>
-    <dt class="property-optional"
+{{% /md %}}</dd><dt class="property-optional"
             title="Optional">
         <span id="state_state_nodejs">
 <a href="#state_state_nodejs" style="color: inherit; text-decoration: inherit;">state</a>
@@ -1949,8 +1811,7 @@ If it is not provided, the provider project is used.
     <dd>{{% md %}}The current state of this Data Fusion instance. - CREATING: Instance is being created - RUNNING: Instance is running and
 ready for requests - FAILED: Instance creation failed - DELETING: Instance is being deleted - UPGRADING: Instance is
 being upgraded - RESTARTING: Instance is being restarted
-{{% /md %}}</dd>
-    <dt class="property-optional"
+{{% /md %}}</dd><dt class="property-optional"
             title="Optional">
         <span id="state_statemessage_nodejs">
 <a href="#state_statemessage_nodejs" style="color: inherit; text-decoration: inherit;">state<wbr>Message</a>
@@ -1959,8 +1820,7 @@ being upgraded - RESTARTING: Instance is being restarted
         <span class="property-type">string</span>
     </dt>
     <dd>{{% md %}}Additional information about the current state of this Data Fusion instance if available.
-{{% /md %}}</dd>
-    <dt class="property-optional"
+{{% /md %}}</dd><dt class="property-optional"
             title="Optional">
         <span id="state_type_nodejs">
 <a href="#state_type_nodejs" style="color: inherit; text-decoration: inherit;">type</a>
@@ -1976,8 +1836,7 @@ of concurrent pipelines, no support for streaming pipelines, etc.
 - ENTERPRISE: Enterprise Data Fusion instance. In Enterprise type, the user will have more features
 available, such as support for streaming pipelines, higher number of concurrent pipelines, etc.
 Possible values are `BASIC` and `ENTERPRISE`.
-{{% /md %}}</dd>
-    <dt class="property-optional"
+{{% /md %}}</dd><dt class="property-optional"
             title="Optional">
         <span id="state_updatetime_nodejs">
 <a href="#state_updatetime_nodejs" style="color: inherit; text-decoration: inherit;">update<wbr>Time</a>
@@ -1986,8 +1845,7 @@ Possible values are `BASIC` and `ENTERPRISE`.
         <span class="property-type">string</span>
     </dt>
     <dd>{{% md %}}The time the instance was last updated in RFC3339 UTC "Zulu" format, accurate to nanoseconds.
-{{% /md %}}</dd>
-    <dt class="property-optional"
+{{% /md %}}</dd><dt class="property-optional"
             title="Optional">
         <span id="state_version_nodejs">
 <a href="#state_version_nodejs" style="color: inherit; text-decoration: inherit;">version</a>
@@ -1996,14 +1854,11 @@ Possible values are `BASIC` and `ENTERPRISE`.
         <span class="property-type">string</span>
     </dt>
     <dd>{{% md %}}Current version of the Data Fusion.
-{{% /md %}}</dd>
-</dl>
+{{% /md %}}</dd></dl>
 {{% /choosable %}}
 
 {{% choosable language python %}}
-<dl class="resources-properties">
-
-    <dt class="property-optional"
+<dl class="resources-properties"><dt class="property-optional"
             title="Optional">
         <span id="state_create_time_python">
 <a href="#state_create_time_python" style="color: inherit; text-decoration: inherit;">create_<wbr>time</a>
@@ -2012,8 +1867,7 @@ Possible values are `BASIC` and `ENTERPRISE`.
         <span class="property-type">str</span>
     </dt>
     <dd>{{% md %}}The time the instance was created in RFC3339 UTC "Zulu" format, accurate to nanoseconds.
-{{% /md %}}</dd>
-    <dt class="property-optional"
+{{% /md %}}</dd><dt class="property-optional"
             title="Optional">
         <span id="state_description_python">
 <a href="#state_description_python" style="color: inherit; text-decoration: inherit;">description</a>
@@ -2022,8 +1876,7 @@ Possible values are `BASIC` and `ENTERPRISE`.
         <span class="property-type">str</span>
     </dt>
     <dd>{{% md %}}An optional description of the instance.
-{{% /md %}}</dd>
-    <dt class="property-optional"
+{{% /md %}}</dd><dt class="property-optional"
             title="Optional">
         <span id="state_enable_stackdriver_logging_python">
 <a href="#state_enable_stackdriver_logging_python" style="color: inherit; text-decoration: inherit;">enable_<wbr>stackdriver_<wbr>logging</a>
@@ -2032,8 +1885,7 @@ Possible values are `BASIC` and `ENTERPRISE`.
         <span class="property-type">bool</span>
     </dt>
     <dd>{{% md %}}Option to enable Stackdriver Logging.
-{{% /md %}}</dd>
-    <dt class="property-optional"
+{{% /md %}}</dd><dt class="property-optional"
             title="Optional">
         <span id="state_enable_stackdriver_monitoring_python">
 <a href="#state_enable_stackdriver_monitoring_python" style="color: inherit; text-decoration: inherit;">enable_<wbr>stackdriver_<wbr>monitoring</a>
@@ -2042,8 +1894,7 @@ Possible values are `BASIC` and `ENTERPRISE`.
         <span class="property-type">bool</span>
     </dt>
     <dd>{{% md %}}Option to enable Stackdriver Monitoring.
-{{% /md %}}</dd>
-    <dt class="property-optional"
+{{% /md %}}</dd><dt class="property-optional"
             title="Optional">
         <span id="state_labels_python">
 <a href="#state_labels_python" style="color: inherit; text-decoration: inherit;">labels</a>
@@ -2053,8 +1904,7 @@ Possible values are `BASIC` and `ENTERPRISE`.
     </dt>
     <dd>{{% md %}}The resource labels for instance to use to annotate any related underlying resources,
 such as Compute Engine VMs.
-{{% /md %}}</dd>
-    <dt class="property-optional"
+{{% /md %}}</dd><dt class="property-optional"
             title="Optional">
         <span id="state_name_python">
 <a href="#state_name_python" style="color: inherit; text-decoration: inherit;">name</a>
@@ -2063,8 +1913,7 @@ such as Compute Engine VMs.
         <span class="property-type">str</span>
     </dt>
     <dd>{{% md %}}The ID of the instance or a fully qualified identifier for the instance.
-{{% /md %}}</dd>
-    <dt class="property-optional"
+{{% /md %}}</dd><dt class="property-optional"
             title="Optional">
         <span id="state_network_config_python">
 <a href="#state_network_config_python" style="color: inherit; text-decoration: inherit;">network_<wbr>config</a>
@@ -2074,8 +1923,7 @@ such as Compute Engine VMs.
     </dt>
     <dd>{{% md %}}Network configuration options. These are required when a private Data Fusion instance is to be created.
 Structure is documented below.
-{{% /md %}}</dd>
-    <dt class="property-optional"
+{{% /md %}}</dd><dt class="property-optional"
             title="Optional">
         <span id="state_options_python">
 <a href="#state_options_python" style="color: inherit; text-decoration: inherit;">options</a>
@@ -2084,8 +1932,7 @@ Structure is documented below.
         <span class="property-type">Mapping[str, str]</span>
     </dt>
     <dd>{{% md %}}Map of additional options used to configure the behavior of Data Fusion instance.
-{{% /md %}}</dd>
-    <dt class="property-optional"
+{{% /md %}}</dd><dt class="property-optional"
             title="Optional">
         <span id="state_private_instance_python">
 <a href="#state_private_instance_python" style="color: inherit; text-decoration: inherit;">private_<wbr>instance</a>
@@ -2096,8 +1943,7 @@ Structure is documented below.
     <dd>{{% md %}}Specifies whether the Data Fusion instance should be private. If set to
 true, all Data Fusion nodes will have private IP addresses and will not be
 able to access the public internet.
-{{% /md %}}</dd>
-    <dt class="property-optional"
+{{% /md %}}</dd><dt class="property-optional"
             title="Optional">
         <span id="state_project_python">
 <a href="#state_project_python" style="color: inherit; text-decoration: inherit;">project</a>
@@ -2107,8 +1953,7 @@ able to access the public internet.
     </dt>
     <dd>{{% md %}}The ID of the project in which the resource belongs.
 If it is not provided, the provider project is used.
-{{% /md %}}</dd>
-    <dt class="property-optional"
+{{% /md %}}</dd><dt class="property-optional"
             title="Optional">
         <span id="state_region_python">
 <a href="#state_region_python" style="color: inherit; text-decoration: inherit;">region</a>
@@ -2117,8 +1962,7 @@ If it is not provided, the provider project is used.
         <span class="property-type">str</span>
     </dt>
     <dd>{{% md %}}The region of the Data Fusion instance.
-{{% /md %}}</dd>
-    <dt class="property-optional"
+{{% /md %}}</dd><dt class="property-optional"
             title="Optional">
         <span id="state_service_account_python">
 <a href="#state_service_account_python" style="color: inherit; text-decoration: inherit;">service_<wbr>account</a>
@@ -2127,8 +1971,7 @@ If it is not provided, the provider project is used.
         <span class="property-type">str</span>
     </dt>
     <dd>{{% md %}}Service account which will be used to access resources in the customer project.
-{{% /md %}}</dd>
-    <dt class="property-optional"
+{{% /md %}}</dd><dt class="property-optional"
             title="Optional">
         <span id="state_service_endpoint_python">
 <a href="#state_service_endpoint_python" style="color: inherit; text-decoration: inherit;">service_<wbr>endpoint</a>
@@ -2137,8 +1980,7 @@ If it is not provided, the provider project is used.
         <span class="property-type">str</span>
     </dt>
     <dd>{{% md %}}Endpoint on which the Data Fusion UI and REST APIs are accessible.
-{{% /md %}}</dd>
-    <dt class="property-optional"
+{{% /md %}}</dd><dt class="property-optional"
             title="Optional">
         <span id="state_state_python">
 <a href="#state_state_python" style="color: inherit; text-decoration: inherit;">state</a>
@@ -2149,8 +1991,7 @@ If it is not provided, the provider project is used.
     <dd>{{% md %}}The current state of this Data Fusion instance. - CREATING: Instance is being created - RUNNING: Instance is running and
 ready for requests - FAILED: Instance creation failed - DELETING: Instance is being deleted - UPGRADING: Instance is
 being upgraded - RESTARTING: Instance is being restarted
-{{% /md %}}</dd>
-    <dt class="property-optional"
+{{% /md %}}</dd><dt class="property-optional"
             title="Optional">
         <span id="state_state_message_python">
 <a href="#state_state_message_python" style="color: inherit; text-decoration: inherit;">state_<wbr>message</a>
@@ -2159,8 +2000,7 @@ being upgraded - RESTARTING: Instance is being restarted
         <span class="property-type">str</span>
     </dt>
     <dd>{{% md %}}Additional information about the current state of this Data Fusion instance if available.
-{{% /md %}}</dd>
-    <dt class="property-optional"
+{{% /md %}}</dd><dt class="property-optional"
             title="Optional">
         <span id="state_type_python">
 <a href="#state_type_python" style="color: inherit; text-decoration: inherit;">type</a>
@@ -2176,8 +2016,7 @@ of concurrent pipelines, no support for streaming pipelines, etc.
 - ENTERPRISE: Enterprise Data Fusion instance. In Enterprise type, the user will have more features
 available, such as support for streaming pipelines, higher number of concurrent pipelines, etc.
 Possible values are `BASIC` and `ENTERPRISE`.
-{{% /md %}}</dd>
-    <dt class="property-optional"
+{{% /md %}}</dd><dt class="property-optional"
             title="Optional">
         <span id="state_update_time_python">
 <a href="#state_update_time_python" style="color: inherit; text-decoration: inherit;">update_<wbr>time</a>
@@ -2186,8 +2025,7 @@ Possible values are `BASIC` and `ENTERPRISE`.
         <span class="property-type">str</span>
     </dt>
     <dd>{{% md %}}The time the instance was last updated in RFC3339 UTC "Zulu" format, accurate to nanoseconds.
-{{% /md %}}</dd>
-    <dt class="property-optional"
+{{% /md %}}</dd><dt class="property-optional"
             title="Optional">
         <span id="state_version_python">
 <a href="#state_version_python" style="color: inherit; text-decoration: inherit;">version</a>
@@ -2196,8 +2034,7 @@ Possible values are `BASIC` and `ENTERPRISE`.
         <span class="property-type">str</span>
     </dt>
     <dd>{{% md %}}Current version of the Data Fusion.
-{{% /md %}}</dd>
-</dl>
+{{% /md %}}</dd></dl>
 {{% /choosable %}}
 
 
@@ -2212,9 +2049,7 @@ Possible values are `BASIC` and `ENTERPRISE`.
 <h4 id="instancenetworkconfig">Instance<wbr>Network<wbr>Config</h4>
 
 {{% choosable language csharp %}}
-<dl class="resources-properties">
-
-    <dt class="property-required"
+<dl class="resources-properties"><dt class="property-required"
             title="Required">
         <span id="ipallocation_csharp">
 <a href="#ipallocation_csharp" style="color: inherit; text-decoration: inherit;">Ip<wbr>Allocation</a>
@@ -2224,8 +2059,7 @@ Possible values are `BASIC` and `ENTERPRISE`.
     </dt>
     <dd>{{% md %}}The IP range in CIDR notation to use for the managed Data Fusion instance
 nodes. This range must not overlap with any other ranges used in the Data Fusion instance network.
-{{% /md %}}</dd>
-    <dt class="property-required"
+{{% /md %}}</dd><dt class="property-required"
             title="Required">
         <span id="network_csharp">
 <a href="#network_csharp" style="color: inherit; text-decoration: inherit;">Network</a>
@@ -2236,14 +2070,11 @@ nodes. This range must not overlap with any other ranges used in the Data Fusion
     <dd>{{% md %}}Name of the network in the project with which the tenant project
 will be peered for executing pipelines. In case of shared VPC where the network resides in another host
 project the network should specified in the form of projects/{host-project-id}/global/networks/{network}
-{{% /md %}}</dd>
-</dl>
+{{% /md %}}</dd></dl>
 {{% /choosable %}}
 
 {{% choosable language go %}}
-<dl class="resources-properties">
-
-    <dt class="property-required"
+<dl class="resources-properties"><dt class="property-required"
             title="Required">
         <span id="ipallocation_go">
 <a href="#ipallocation_go" style="color: inherit; text-decoration: inherit;">Ip<wbr>Allocation</a>
@@ -2253,8 +2084,7 @@ project the network should specified in the form of projects/{host-project-id}/g
     </dt>
     <dd>{{% md %}}The IP range in CIDR notation to use for the managed Data Fusion instance
 nodes. This range must not overlap with any other ranges used in the Data Fusion instance network.
-{{% /md %}}</dd>
-    <dt class="property-required"
+{{% /md %}}</dd><dt class="property-required"
             title="Required">
         <span id="network_go">
 <a href="#network_go" style="color: inherit; text-decoration: inherit;">Network</a>
@@ -2265,14 +2095,11 @@ nodes. This range must not overlap with any other ranges used in the Data Fusion
     <dd>{{% md %}}Name of the network in the project with which the tenant project
 will be peered for executing pipelines. In case of shared VPC where the network resides in another host
 project the network should specified in the form of projects/{host-project-id}/global/networks/{network}
-{{% /md %}}</dd>
-</dl>
+{{% /md %}}</dd></dl>
 {{% /choosable %}}
 
 {{% choosable language nodejs %}}
-<dl class="resources-properties">
-
-    <dt class="property-required"
+<dl class="resources-properties"><dt class="property-required"
             title="Required">
         <span id="ipallocation_nodejs">
 <a href="#ipallocation_nodejs" style="color: inherit; text-decoration: inherit;">ip<wbr>Allocation</a>
@@ -2282,8 +2109,7 @@ project the network should specified in the form of projects/{host-project-id}/g
     </dt>
     <dd>{{% md %}}The IP range in CIDR notation to use for the managed Data Fusion instance
 nodes. This range must not overlap with any other ranges used in the Data Fusion instance network.
-{{% /md %}}</dd>
-    <dt class="property-required"
+{{% /md %}}</dd><dt class="property-required"
             title="Required">
         <span id="network_nodejs">
 <a href="#network_nodejs" style="color: inherit; text-decoration: inherit;">network</a>
@@ -2294,14 +2120,11 @@ nodes. This range must not overlap with any other ranges used in the Data Fusion
     <dd>{{% md %}}Name of the network in the project with which the tenant project
 will be peered for executing pipelines. In case of shared VPC where the network resides in another host
 project the network should specified in the form of projects/{host-project-id}/global/networks/{network}
-{{% /md %}}</dd>
-</dl>
+{{% /md %}}</dd></dl>
 {{% /choosable %}}
 
 {{% choosable language python %}}
-<dl class="resources-properties">
-
-    <dt class="property-required"
+<dl class="resources-properties"><dt class="property-required"
             title="Required">
         <span id="ip_allocation_python">
 <a href="#ip_allocation_python" style="color: inherit; text-decoration: inherit;">ip_<wbr>allocation</a>
@@ -2311,8 +2134,7 @@ project the network should specified in the form of projects/{host-project-id}/g
     </dt>
     <dd>{{% md %}}The IP range in CIDR notation to use for the managed Data Fusion instance
 nodes. This range must not overlap with any other ranges used in the Data Fusion instance network.
-{{% /md %}}</dd>
-    <dt class="property-required"
+{{% /md %}}</dd><dt class="property-required"
             title="Required">
         <span id="network_python">
 <a href="#network_python" style="color: inherit; text-decoration: inherit;">network</a>
@@ -2323,8 +2145,7 @@ nodes. This range must not overlap with any other ranges used in the Data Fusion
     <dd>{{% md %}}Name of the network in the project with which the tenant project
 will be peered for executing pipelines. In case of shared VPC where the network resides in another host
 project the network should specified in the form of projects/{host-project-id}/global/networks/{network}
-{{% /md %}}</dd>
-</dl>
+{{% /md %}}</dd></dl>
 {{% /choosable %}}
 ## Import
 
@@ -2357,6 +2178,6 @@ Instance can be imported using any of these accepted formats
 	<dt>License</dt>
 	<dd>Apache-2.0</dd>
 	<dt>Notes</dt>
-	<dd>This Pulumi package is based on the [`google-beta` Terraform Provider](https://github.com/hashicorp/terraform-provider-google-beta).</dd>
+	<dd>{{% md %}}This Pulumi package is based on the [`google-beta` Terraform Provider](https://github.com/hashicorp/terraform-provider-google-beta).{{% /md %}}</dd>
 </dl>
 

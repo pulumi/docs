@@ -51,9 +51,7 @@ The following arguments are supported:
 
 
 {{% choosable language csharp %}}
-<dl class="resources-properties">
-
-    <dt class="property-required"
+<dl class="resources-properties"><dt class="property-required"
             title="Required">
         <span id="incidentid_csharp">
 <a href="#incidentid_csharp" style="color: inherit; text-decoration: inherit;">Incident<wbr>Id</a>
@@ -61,8 +59,7 @@ The following arguments are supported:
         <span class="property-indicator"></span>
         <span class="property-type">string</span>
     </dt>
-    <dd>{{% md %}}Incident ID{{% /md %}}</dd>
-    <dt class="property-required"
+    <dd>{{% md %}}Incident ID{{% /md %}}</dd><dt class="property-required"
             title="Required">
         <span id="resourcegroupname_csharp">
 <a href="#resourcegroupname_csharp" style="color: inherit; text-decoration: inherit;">Resource<wbr>Group<wbr>Name</a>
@@ -70,8 +67,7 @@ The following arguments are supported:
         <span class="property-indicator"></span>
         <span class="property-type">string</span>
     </dt>
-    <dd>{{% md %}}The name of the resource group within the user's subscription. The name is case insensitive.{{% /md %}}</dd>
-    <dt class="property-required"
+    <dd>{{% md %}}The name of the resource group within the user's subscription. The name is case insensitive.{{% /md %}}</dd><dt class="property-required"
             title="Required">
         <span id="workspacename_csharp">
 <a href="#workspacename_csharp" style="color: inherit; text-decoration: inherit;">Workspace<wbr>Name</a>
@@ -79,14 +75,11 @@ The following arguments are supported:
         <span class="property-indicator"></span>
         <span class="property-type">string</span>
     </dt>
-    <dd>{{% md %}}The name of the workspace.{{% /md %}}</dd>
-</dl>
+    <dd>{{% md %}}The name of the workspace.{{% /md %}}</dd></dl>
 {{% /choosable %}}
 
 {{% choosable language go %}}
-<dl class="resources-properties">
-
-    <dt class="property-required"
+<dl class="resources-properties"><dt class="property-required"
             title="Required">
         <span id="incidentid_go">
 <a href="#incidentid_go" style="color: inherit; text-decoration: inherit;">Incident<wbr>Id</a>
@@ -94,8 +87,7 @@ The following arguments are supported:
         <span class="property-indicator"></span>
         <span class="property-type">string</span>
     </dt>
-    <dd>{{% md %}}Incident ID{{% /md %}}</dd>
-    <dt class="property-required"
+    <dd>{{% md %}}Incident ID{{% /md %}}</dd><dt class="property-required"
             title="Required">
         <span id="resourcegroupname_go">
 <a href="#resourcegroupname_go" style="color: inherit; text-decoration: inherit;">Resource<wbr>Group<wbr>Name</a>
@@ -103,8 +95,7 @@ The following arguments are supported:
         <span class="property-indicator"></span>
         <span class="property-type">string</span>
     </dt>
-    <dd>{{% md %}}The name of the resource group within the user's subscription. The name is case insensitive.{{% /md %}}</dd>
-    <dt class="property-required"
+    <dd>{{% md %}}The name of the resource group within the user's subscription. The name is case insensitive.{{% /md %}}</dd><dt class="property-required"
             title="Required">
         <span id="workspacename_go">
 <a href="#workspacename_go" style="color: inherit; text-decoration: inherit;">Workspace<wbr>Name</a>
@@ -112,14 +103,11 @@ The following arguments are supported:
         <span class="property-indicator"></span>
         <span class="property-type">string</span>
     </dt>
-    <dd>{{% md %}}The name of the workspace.{{% /md %}}</dd>
-</dl>
+    <dd>{{% md %}}The name of the workspace.{{% /md %}}</dd></dl>
 {{% /choosable %}}
 
 {{% choosable language nodejs %}}
-<dl class="resources-properties">
-
-    <dt class="property-required"
+<dl class="resources-properties"><dt class="property-required"
             title="Required">
         <span id="incidentid_nodejs">
 <a href="#incidentid_nodejs" style="color: inherit; text-decoration: inherit;">incident<wbr>Id</a>
@@ -127,8 +115,7 @@ The following arguments are supported:
         <span class="property-indicator"></span>
         <span class="property-type">string</span>
     </dt>
-    <dd>{{% md %}}Incident ID{{% /md %}}</dd>
-    <dt class="property-required"
+    <dd>{{% md %}}Incident ID{{% /md %}}</dd><dt class="property-required"
             title="Required">
         <span id="resourcegroupname_nodejs">
 <a href="#resourcegroupname_nodejs" style="color: inherit; text-decoration: inherit;">resource<wbr>Group<wbr>Name</a>
@@ -136,8 +123,7 @@ The following arguments are supported:
         <span class="property-indicator"></span>
         <span class="property-type">string</span>
     </dt>
-    <dd>{{% md %}}The name of the resource group within the user's subscription. The name is case insensitive.{{% /md %}}</dd>
-    <dt class="property-required"
+    <dd>{{% md %}}The name of the resource group within the user's subscription. The name is case insensitive.{{% /md %}}</dd><dt class="property-required"
             title="Required">
         <span id="workspacename_nodejs">
 <a href="#workspacename_nodejs" style="color: inherit; text-decoration: inherit;">workspace<wbr>Name</a>
@@ -145,14 +131,11 @@ The following arguments are supported:
         <span class="property-indicator"></span>
         <span class="property-type">string</span>
     </dt>
-    <dd>{{% md %}}The name of the workspace.{{% /md %}}</dd>
-</dl>
+    <dd>{{% md %}}The name of the workspace.{{% /md %}}</dd></dl>
 {{% /choosable %}}
 
 {{% choosable language python %}}
-<dl class="resources-properties">
-
-    <dt class="property-required"
+<dl class="resources-properties"><dt class="property-required"
             title="Required">
         <span id="incident_id_python">
 <a href="#incident_id_python" style="color: inherit; text-decoration: inherit;">incident_<wbr>id</a>
@@ -160,8 +143,7 @@ The following arguments are supported:
         <span class="property-indicator"></span>
         <span class="property-type">str</span>
     </dt>
-    <dd>{{% md %}}Incident ID{{% /md %}}</dd>
-    <dt class="property-required"
+    <dd>{{% md %}}Incident ID{{% /md %}}</dd><dt class="property-required"
             title="Required">
         <span id="resource_group_name_python">
 <a href="#resource_group_name_python" style="color: inherit; text-decoration: inherit;">resource_<wbr>group_<wbr>name</a>
@@ -169,8 +151,7 @@ The following arguments are supported:
         <span class="property-indicator"></span>
         <span class="property-type">str</span>
     </dt>
-    <dd>{{% md %}}The name of the resource group within the user's subscription. The name is case insensitive.{{% /md %}}</dd>
-    <dt class="property-required"
+    <dd>{{% md %}}The name of the resource group within the user's subscription. The name is case insensitive.{{% /md %}}</dd><dt class="property-required"
             title="Required">
         <span id="workspace_name_python">
 <a href="#workspace_name_python" style="color: inherit; text-decoration: inherit;">workspace_<wbr>name</a>
@@ -178,8 +159,7 @@ The following arguments are supported:
         <span class="property-indicator"></span>
         <span class="property-type">str</span>
     </dt>
-    <dd>{{% md %}}The name of the workspace.{{% /md %}}</dd>
-</dl>
+    <dd>{{% md %}}The name of the workspace.{{% /md %}}</dd></dl>
 {{% /choosable %}}
 
 
@@ -192,9 +172,7 @@ The following output properties are available:
 
 
 {{% choosable language csharp %}}
-<dl class="resources-properties">
-
-    <dt class="property-"
+<dl class="resources-properties"><dt class="property-"
             title="">
         <span id="additionaldata_csharp">
 <a href="#additionaldata_csharp" style="color: inherit; text-decoration: inherit;">Additional<wbr>Data</a>
@@ -202,8 +180,7 @@ The following output properties are available:
         <span class="property-indicator"></span>
         <span class="property-type"><a href="#incidentadditionaldataresponse">Pulumi.<wbr>Azure<wbr>Native.<wbr>Security<wbr>Insights.<wbr>Outputs.<wbr>Incident<wbr>Additional<wbr>Data<wbr>Response</a></span>
     </dt>
-    <dd>{{% md %}}Additional data on the incident{{% /md %}}</dd>
-    <dt class="property-"
+    <dd>{{% md %}}Additional data on the incident{{% /md %}}</dd><dt class="property-"
             title="">
         <span id="createdtimeutc_csharp">
 <a href="#createdtimeutc_csharp" style="color: inherit; text-decoration: inherit;">Created<wbr>Time<wbr>Utc</a>
@@ -211,8 +188,7 @@ The following output properties are available:
         <span class="property-indicator"></span>
         <span class="property-type">string</span>
     </dt>
-    <dd>{{% md %}}The time the incident was created{{% /md %}}</dd>
-    <dt class="property-"
+    <dd>{{% md %}}The time the incident was created{{% /md %}}</dd><dt class="property-"
             title="">
         <span id="id_csharp">
 <a href="#id_csharp" style="color: inherit; text-decoration: inherit;">Id</a>
@@ -220,8 +196,7 @@ The following output properties are available:
         <span class="property-indicator"></span>
         <span class="property-type">string</span>
     </dt>
-    <dd>{{% md %}}Azure resource Id{{% /md %}}</dd>
-    <dt class="property-"
+    <dd>{{% md %}}Azure resource Id{{% /md %}}</dd><dt class="property-"
             title="">
         <span id="incidentnumber_csharp">
 <a href="#incidentnumber_csharp" style="color: inherit; text-decoration: inherit;">Incident<wbr>Number</a>
@@ -229,8 +204,7 @@ The following output properties are available:
         <span class="property-indicator"></span>
         <span class="property-type">int</span>
     </dt>
-    <dd>{{% md %}}A sequential number{{% /md %}}</dd>
-    <dt class="property-"
+    <dd>{{% md %}}A sequential number{{% /md %}}</dd><dt class="property-"
             title="">
         <span id="incidenturl_csharp">
 <a href="#incidenturl_csharp" style="color: inherit; text-decoration: inherit;">Incident<wbr>Url</a>
@@ -238,8 +212,7 @@ The following output properties are available:
         <span class="property-indicator"></span>
         <span class="property-type">string</span>
     </dt>
-    <dd>{{% md %}}The deep-link url to the incident in Azure portal{{% /md %}}</dd>
-    <dt class="property-"
+    <dd>{{% md %}}The deep-link url to the incident in Azure portal{{% /md %}}</dd><dt class="property-"
             title="">
         <span id="lastmodifiedtimeutc_csharp">
 <a href="#lastmodifiedtimeutc_csharp" style="color: inherit; text-decoration: inherit;">Last<wbr>Modified<wbr>Time<wbr>Utc</a>
@@ -247,8 +220,7 @@ The following output properties are available:
         <span class="property-indicator"></span>
         <span class="property-type">string</span>
     </dt>
-    <dd>{{% md %}}The last time the incident was updated{{% /md %}}</dd>
-    <dt class="property-"
+    <dd>{{% md %}}The last time the incident was updated{{% /md %}}</dd><dt class="property-"
             title="">
         <span id="name_csharp">
 <a href="#name_csharp" style="color: inherit; text-decoration: inherit;">Name</a>
@@ -256,8 +228,7 @@ The following output properties are available:
         <span class="property-indicator"></span>
         <span class="property-type">string</span>
     </dt>
-    <dd>{{% md %}}Azure resource name{{% /md %}}</dd>
-    <dt class="property-"
+    <dd>{{% md %}}Azure resource name{{% /md %}}</dd><dt class="property-"
             title="">
         <span id="relatedanalyticruleids_csharp">
 <a href="#relatedanalyticruleids_csharp" style="color: inherit; text-decoration: inherit;">Related<wbr>Analytic<wbr>Rule<wbr>Ids</a>
@@ -265,8 +236,7 @@ The following output properties are available:
         <span class="property-indicator"></span>
         <span class="property-type">List&lt;string&gt;</span>
     </dt>
-    <dd>{{% md %}}List of resource ids of Analytic rules related to the incident{{% /md %}}</dd>
-    <dt class="property-"
+    <dd>{{% md %}}List of resource ids of Analytic rules related to the incident{{% /md %}}</dd><dt class="property-"
             title="">
         <span id="severity_csharp">
 <a href="#severity_csharp" style="color: inherit; text-decoration: inherit;">Severity</a>
@@ -274,8 +244,7 @@ The following output properties are available:
         <span class="property-indicator"></span>
         <span class="property-type">string</span>
     </dt>
-    <dd>{{% md %}}The severity of the incident{{% /md %}}</dd>
-    <dt class="property-"
+    <dd>{{% md %}}The severity of the incident{{% /md %}}</dd><dt class="property-"
             title="">
         <span id="status_csharp">
 <a href="#status_csharp" style="color: inherit; text-decoration: inherit;">Status</a>
@@ -283,8 +252,7 @@ The following output properties are available:
         <span class="property-indicator"></span>
         <span class="property-type">string</span>
     </dt>
-    <dd>{{% md %}}The status of the incident{{% /md %}}</dd>
-    <dt class="property-"
+    <dd>{{% md %}}The status of the incident{{% /md %}}</dd><dt class="property-"
             title="">
         <span id="title_csharp">
 <a href="#title_csharp" style="color: inherit; text-decoration: inherit;">Title</a>
@@ -292,8 +260,7 @@ The following output properties are available:
         <span class="property-indicator"></span>
         <span class="property-type">string</span>
     </dt>
-    <dd>{{% md %}}The title of the incident{{% /md %}}</dd>
-    <dt class="property-"
+    <dd>{{% md %}}The title of the incident{{% /md %}}</dd><dt class="property-"
             title="">
         <span id="type_csharp">
 <a href="#type_csharp" style="color: inherit; text-decoration: inherit;">Type</a>
@@ -301,8 +268,7 @@ The following output properties are available:
         <span class="property-indicator"></span>
         <span class="property-type">string</span>
     </dt>
-    <dd>{{% md %}}Azure resource type{{% /md %}}</dd>
-    <dt class="property-"
+    <dd>{{% md %}}Azure resource type{{% /md %}}</dd><dt class="property-"
             title="">
         <span id="classification_csharp">
 <a href="#classification_csharp" style="color: inherit; text-decoration: inherit;">Classification</a>
@@ -310,8 +276,7 @@ The following output properties are available:
         <span class="property-indicator"></span>
         <span class="property-type">string</span>
     </dt>
-    <dd>{{% md %}}The reason the incident was closed{{% /md %}}</dd>
-    <dt class="property-"
+    <dd>{{% md %}}The reason the incident was closed{{% /md %}}</dd><dt class="property-"
             title="">
         <span id="classificationcomment_csharp">
 <a href="#classificationcomment_csharp" style="color: inherit; text-decoration: inherit;">Classification<wbr>Comment</a>
@@ -319,8 +284,7 @@ The following output properties are available:
         <span class="property-indicator"></span>
         <span class="property-type">string</span>
     </dt>
-    <dd>{{% md %}}Describes the reason the incident was closed{{% /md %}}</dd>
-    <dt class="property-"
+    <dd>{{% md %}}Describes the reason the incident was closed{{% /md %}}</dd><dt class="property-"
             title="">
         <span id="classificationreason_csharp">
 <a href="#classificationreason_csharp" style="color: inherit; text-decoration: inherit;">Classification<wbr>Reason</a>
@@ -328,8 +292,7 @@ The following output properties are available:
         <span class="property-indicator"></span>
         <span class="property-type">string</span>
     </dt>
-    <dd>{{% md %}}The classification reason the incident was closed with{{% /md %}}</dd>
-    <dt class="property-"
+    <dd>{{% md %}}The classification reason the incident was closed with{{% /md %}}</dd><dt class="property-"
             title="">
         <span id="description_csharp">
 <a href="#description_csharp" style="color: inherit; text-decoration: inherit;">Description</a>
@@ -337,8 +300,7 @@ The following output properties are available:
         <span class="property-indicator"></span>
         <span class="property-type">string</span>
     </dt>
-    <dd>{{% md %}}The description of the incident{{% /md %}}</dd>
-    <dt class="property-"
+    <dd>{{% md %}}The description of the incident{{% /md %}}</dd><dt class="property-"
             title="">
         <span id="etag_csharp">
 <a href="#etag_csharp" style="color: inherit; text-decoration: inherit;">Etag</a>
@@ -346,8 +308,7 @@ The following output properties are available:
         <span class="property-indicator"></span>
         <span class="property-type">string</span>
     </dt>
-    <dd>{{% md %}}Etag of the azure resource{{% /md %}}</dd>
-    <dt class="property-"
+    <dd>{{% md %}}Etag of the azure resource{{% /md %}}</dd><dt class="property-"
             title="">
         <span id="firstactivitytimeutc_csharp">
 <a href="#firstactivitytimeutc_csharp" style="color: inherit; text-decoration: inherit;">First<wbr>Activity<wbr>Time<wbr>Utc</a>
@@ -355,8 +316,7 @@ The following output properties are available:
         <span class="property-indicator"></span>
         <span class="property-type">string</span>
     </dt>
-    <dd>{{% md %}}The time of the first activity in the incident{{% /md %}}</dd>
-    <dt class="property-"
+    <dd>{{% md %}}The time of the first activity in the incident{{% /md %}}</dd><dt class="property-"
             title="">
         <span id="labels_csharp">
 <a href="#labels_csharp" style="color: inherit; text-decoration: inherit;">Labels</a>
@@ -364,8 +324,7 @@ The following output properties are available:
         <span class="property-indicator"></span>
         <span class="property-type"><a href="#incidentlabelresponse">List&lt;Pulumi.<wbr>Azure<wbr>Native.<wbr>Security<wbr>Insights.<wbr>Outputs.<wbr>Incident<wbr>Label<wbr>Response&gt;</a></span>
     </dt>
-    <dd>{{% md %}}List of labels relevant to this incident{{% /md %}}</dd>
-    <dt class="property-"
+    <dd>{{% md %}}List of labels relevant to this incident{{% /md %}}</dd><dt class="property-"
             title="">
         <span id="lastactivitytimeutc_csharp">
 <a href="#lastactivitytimeutc_csharp" style="color: inherit; text-decoration: inherit;">Last<wbr>Activity<wbr>Time<wbr>Utc</a>
@@ -373,8 +332,7 @@ The following output properties are available:
         <span class="property-indicator"></span>
         <span class="property-type">string</span>
     </dt>
-    <dd>{{% md %}}The time of the last activity in the incident{{% /md %}}</dd>
-    <dt class="property-"
+    <dd>{{% md %}}The time of the last activity in the incident{{% /md %}}</dd><dt class="property-"
             title="">
         <span id="owner_csharp">
 <a href="#owner_csharp" style="color: inherit; text-decoration: inherit;">Owner</a>
@@ -382,14 +340,11 @@ The following output properties are available:
         <span class="property-indicator"></span>
         <span class="property-type"><a href="#incidentownerinforesponse">Pulumi.<wbr>Azure<wbr>Native.<wbr>Security<wbr>Insights.<wbr>Outputs.<wbr>Incident<wbr>Owner<wbr>Info<wbr>Response</a></span>
     </dt>
-    <dd>{{% md %}}Describes a user that the incident is assigned to{{% /md %}}</dd>
-</dl>
+    <dd>{{% md %}}Describes a user that the incident is assigned to{{% /md %}}</dd></dl>
 {{% /choosable %}}
 
 {{% choosable language go %}}
-<dl class="resources-properties">
-
-    <dt class="property-"
+<dl class="resources-properties"><dt class="property-"
             title="">
         <span id="additionaldata_go">
 <a href="#additionaldata_go" style="color: inherit; text-decoration: inherit;">Additional<wbr>Data</a>
@@ -397,8 +352,7 @@ The following output properties are available:
         <span class="property-indicator"></span>
         <span class="property-type"><a href="#incidentadditionaldataresponse">Incident<wbr>Additional<wbr>Data<wbr>Response</a></span>
     </dt>
-    <dd>{{% md %}}Additional data on the incident{{% /md %}}</dd>
-    <dt class="property-"
+    <dd>{{% md %}}Additional data on the incident{{% /md %}}</dd><dt class="property-"
             title="">
         <span id="createdtimeutc_go">
 <a href="#createdtimeutc_go" style="color: inherit; text-decoration: inherit;">Created<wbr>Time<wbr>Utc</a>
@@ -406,8 +360,7 @@ The following output properties are available:
         <span class="property-indicator"></span>
         <span class="property-type">string</span>
     </dt>
-    <dd>{{% md %}}The time the incident was created{{% /md %}}</dd>
-    <dt class="property-"
+    <dd>{{% md %}}The time the incident was created{{% /md %}}</dd><dt class="property-"
             title="">
         <span id="id_go">
 <a href="#id_go" style="color: inherit; text-decoration: inherit;">Id</a>
@@ -415,8 +368,7 @@ The following output properties are available:
         <span class="property-indicator"></span>
         <span class="property-type">string</span>
     </dt>
-    <dd>{{% md %}}Azure resource Id{{% /md %}}</dd>
-    <dt class="property-"
+    <dd>{{% md %}}Azure resource Id{{% /md %}}</dd><dt class="property-"
             title="">
         <span id="incidentnumber_go">
 <a href="#incidentnumber_go" style="color: inherit; text-decoration: inherit;">Incident<wbr>Number</a>
@@ -424,8 +376,7 @@ The following output properties are available:
         <span class="property-indicator"></span>
         <span class="property-type">int</span>
     </dt>
-    <dd>{{% md %}}A sequential number{{% /md %}}</dd>
-    <dt class="property-"
+    <dd>{{% md %}}A sequential number{{% /md %}}</dd><dt class="property-"
             title="">
         <span id="incidenturl_go">
 <a href="#incidenturl_go" style="color: inherit; text-decoration: inherit;">Incident<wbr>Url</a>
@@ -433,8 +384,7 @@ The following output properties are available:
         <span class="property-indicator"></span>
         <span class="property-type">string</span>
     </dt>
-    <dd>{{% md %}}The deep-link url to the incident in Azure portal{{% /md %}}</dd>
-    <dt class="property-"
+    <dd>{{% md %}}The deep-link url to the incident in Azure portal{{% /md %}}</dd><dt class="property-"
             title="">
         <span id="lastmodifiedtimeutc_go">
 <a href="#lastmodifiedtimeutc_go" style="color: inherit; text-decoration: inherit;">Last<wbr>Modified<wbr>Time<wbr>Utc</a>
@@ -442,8 +392,7 @@ The following output properties are available:
         <span class="property-indicator"></span>
         <span class="property-type">string</span>
     </dt>
-    <dd>{{% md %}}The last time the incident was updated{{% /md %}}</dd>
-    <dt class="property-"
+    <dd>{{% md %}}The last time the incident was updated{{% /md %}}</dd><dt class="property-"
             title="">
         <span id="name_go">
 <a href="#name_go" style="color: inherit; text-decoration: inherit;">Name</a>
@@ -451,8 +400,7 @@ The following output properties are available:
         <span class="property-indicator"></span>
         <span class="property-type">string</span>
     </dt>
-    <dd>{{% md %}}Azure resource name{{% /md %}}</dd>
-    <dt class="property-"
+    <dd>{{% md %}}Azure resource name{{% /md %}}</dd><dt class="property-"
             title="">
         <span id="relatedanalyticruleids_go">
 <a href="#relatedanalyticruleids_go" style="color: inherit; text-decoration: inherit;">Related<wbr>Analytic<wbr>Rule<wbr>Ids</a>
@@ -460,8 +408,7 @@ The following output properties are available:
         <span class="property-indicator"></span>
         <span class="property-type">[]string</span>
     </dt>
-    <dd>{{% md %}}List of resource ids of Analytic rules related to the incident{{% /md %}}</dd>
-    <dt class="property-"
+    <dd>{{% md %}}List of resource ids of Analytic rules related to the incident{{% /md %}}</dd><dt class="property-"
             title="">
         <span id="severity_go">
 <a href="#severity_go" style="color: inherit; text-decoration: inherit;">Severity</a>
@@ -469,8 +416,7 @@ The following output properties are available:
         <span class="property-indicator"></span>
         <span class="property-type">string</span>
     </dt>
-    <dd>{{% md %}}The severity of the incident{{% /md %}}</dd>
-    <dt class="property-"
+    <dd>{{% md %}}The severity of the incident{{% /md %}}</dd><dt class="property-"
             title="">
         <span id="status_go">
 <a href="#status_go" style="color: inherit; text-decoration: inherit;">Status</a>
@@ -478,8 +424,7 @@ The following output properties are available:
         <span class="property-indicator"></span>
         <span class="property-type">string</span>
     </dt>
-    <dd>{{% md %}}The status of the incident{{% /md %}}</dd>
-    <dt class="property-"
+    <dd>{{% md %}}The status of the incident{{% /md %}}</dd><dt class="property-"
             title="">
         <span id="title_go">
 <a href="#title_go" style="color: inherit; text-decoration: inherit;">Title</a>
@@ -487,8 +432,7 @@ The following output properties are available:
         <span class="property-indicator"></span>
         <span class="property-type">string</span>
     </dt>
-    <dd>{{% md %}}The title of the incident{{% /md %}}</dd>
-    <dt class="property-"
+    <dd>{{% md %}}The title of the incident{{% /md %}}</dd><dt class="property-"
             title="">
         <span id="type_go">
 <a href="#type_go" style="color: inherit; text-decoration: inherit;">Type</a>
@@ -496,8 +440,7 @@ The following output properties are available:
         <span class="property-indicator"></span>
         <span class="property-type">string</span>
     </dt>
-    <dd>{{% md %}}Azure resource type{{% /md %}}</dd>
-    <dt class="property-"
+    <dd>{{% md %}}Azure resource type{{% /md %}}</dd><dt class="property-"
             title="">
         <span id="classification_go">
 <a href="#classification_go" style="color: inherit; text-decoration: inherit;">Classification</a>
@@ -505,8 +448,7 @@ The following output properties are available:
         <span class="property-indicator"></span>
         <span class="property-type">string</span>
     </dt>
-    <dd>{{% md %}}The reason the incident was closed{{% /md %}}</dd>
-    <dt class="property-"
+    <dd>{{% md %}}The reason the incident was closed{{% /md %}}</dd><dt class="property-"
             title="">
         <span id="classificationcomment_go">
 <a href="#classificationcomment_go" style="color: inherit; text-decoration: inherit;">Classification<wbr>Comment</a>
@@ -514,8 +456,7 @@ The following output properties are available:
         <span class="property-indicator"></span>
         <span class="property-type">string</span>
     </dt>
-    <dd>{{% md %}}Describes the reason the incident was closed{{% /md %}}</dd>
-    <dt class="property-"
+    <dd>{{% md %}}Describes the reason the incident was closed{{% /md %}}</dd><dt class="property-"
             title="">
         <span id="classificationreason_go">
 <a href="#classificationreason_go" style="color: inherit; text-decoration: inherit;">Classification<wbr>Reason</a>
@@ -523,8 +464,7 @@ The following output properties are available:
         <span class="property-indicator"></span>
         <span class="property-type">string</span>
     </dt>
-    <dd>{{% md %}}The classification reason the incident was closed with{{% /md %}}</dd>
-    <dt class="property-"
+    <dd>{{% md %}}The classification reason the incident was closed with{{% /md %}}</dd><dt class="property-"
             title="">
         <span id="description_go">
 <a href="#description_go" style="color: inherit; text-decoration: inherit;">Description</a>
@@ -532,8 +472,7 @@ The following output properties are available:
         <span class="property-indicator"></span>
         <span class="property-type">string</span>
     </dt>
-    <dd>{{% md %}}The description of the incident{{% /md %}}</dd>
-    <dt class="property-"
+    <dd>{{% md %}}The description of the incident{{% /md %}}</dd><dt class="property-"
             title="">
         <span id="etag_go">
 <a href="#etag_go" style="color: inherit; text-decoration: inherit;">Etag</a>
@@ -541,8 +480,7 @@ The following output properties are available:
         <span class="property-indicator"></span>
         <span class="property-type">string</span>
     </dt>
-    <dd>{{% md %}}Etag of the azure resource{{% /md %}}</dd>
-    <dt class="property-"
+    <dd>{{% md %}}Etag of the azure resource{{% /md %}}</dd><dt class="property-"
             title="">
         <span id="firstactivitytimeutc_go">
 <a href="#firstactivitytimeutc_go" style="color: inherit; text-decoration: inherit;">First<wbr>Activity<wbr>Time<wbr>Utc</a>
@@ -550,8 +488,7 @@ The following output properties are available:
         <span class="property-indicator"></span>
         <span class="property-type">string</span>
     </dt>
-    <dd>{{% md %}}The time of the first activity in the incident{{% /md %}}</dd>
-    <dt class="property-"
+    <dd>{{% md %}}The time of the first activity in the incident{{% /md %}}</dd><dt class="property-"
             title="">
         <span id="labels_go">
 <a href="#labels_go" style="color: inherit; text-decoration: inherit;">Labels</a>
@@ -559,8 +496,7 @@ The following output properties are available:
         <span class="property-indicator"></span>
         <span class="property-type"><a href="#incidentlabelresponse">[]Incident<wbr>Label<wbr>Response</a></span>
     </dt>
-    <dd>{{% md %}}List of labels relevant to this incident{{% /md %}}</dd>
-    <dt class="property-"
+    <dd>{{% md %}}List of labels relevant to this incident{{% /md %}}</dd><dt class="property-"
             title="">
         <span id="lastactivitytimeutc_go">
 <a href="#lastactivitytimeutc_go" style="color: inherit; text-decoration: inherit;">Last<wbr>Activity<wbr>Time<wbr>Utc</a>
@@ -568,8 +504,7 @@ The following output properties are available:
         <span class="property-indicator"></span>
         <span class="property-type">string</span>
     </dt>
-    <dd>{{% md %}}The time of the last activity in the incident{{% /md %}}</dd>
-    <dt class="property-"
+    <dd>{{% md %}}The time of the last activity in the incident{{% /md %}}</dd><dt class="property-"
             title="">
         <span id="owner_go">
 <a href="#owner_go" style="color: inherit; text-decoration: inherit;">Owner</a>
@@ -577,14 +512,11 @@ The following output properties are available:
         <span class="property-indicator"></span>
         <span class="property-type"><a href="#incidentownerinforesponse">Incident<wbr>Owner<wbr>Info<wbr>Response</a></span>
     </dt>
-    <dd>{{% md %}}Describes a user that the incident is assigned to{{% /md %}}</dd>
-</dl>
+    <dd>{{% md %}}Describes a user that the incident is assigned to{{% /md %}}</dd></dl>
 {{% /choosable %}}
 
 {{% choosable language nodejs %}}
-<dl class="resources-properties">
-
-    <dt class="property-"
+<dl class="resources-properties"><dt class="property-"
             title="">
         <span id="additionaldata_nodejs">
 <a href="#additionaldata_nodejs" style="color: inherit; text-decoration: inherit;">additional<wbr>Data</a>
@@ -592,8 +524,7 @@ The following output properties are available:
         <span class="property-indicator"></span>
         <span class="property-type"><a href="#incidentadditionaldataresponse">Incident<wbr>Additional<wbr>Data<wbr>Response</a></span>
     </dt>
-    <dd>{{% md %}}Additional data on the incident{{% /md %}}</dd>
-    <dt class="property-"
+    <dd>{{% md %}}Additional data on the incident{{% /md %}}</dd><dt class="property-"
             title="">
         <span id="createdtimeutc_nodejs">
 <a href="#createdtimeutc_nodejs" style="color: inherit; text-decoration: inherit;">created<wbr>Time<wbr>Utc</a>
@@ -601,8 +532,7 @@ The following output properties are available:
         <span class="property-indicator"></span>
         <span class="property-type">string</span>
     </dt>
-    <dd>{{% md %}}The time the incident was created{{% /md %}}</dd>
-    <dt class="property-"
+    <dd>{{% md %}}The time the incident was created{{% /md %}}</dd><dt class="property-"
             title="">
         <span id="id_nodejs">
 <a href="#id_nodejs" style="color: inherit; text-decoration: inherit;">id</a>
@@ -610,8 +540,7 @@ The following output properties are available:
         <span class="property-indicator"></span>
         <span class="property-type">string</span>
     </dt>
-    <dd>{{% md %}}Azure resource Id{{% /md %}}</dd>
-    <dt class="property-"
+    <dd>{{% md %}}Azure resource Id{{% /md %}}</dd><dt class="property-"
             title="">
         <span id="incidentnumber_nodejs">
 <a href="#incidentnumber_nodejs" style="color: inherit; text-decoration: inherit;">incident<wbr>Number</a>
@@ -619,8 +548,7 @@ The following output properties are available:
         <span class="property-indicator"></span>
         <span class="property-type">number</span>
     </dt>
-    <dd>{{% md %}}A sequential number{{% /md %}}</dd>
-    <dt class="property-"
+    <dd>{{% md %}}A sequential number{{% /md %}}</dd><dt class="property-"
             title="">
         <span id="incidenturl_nodejs">
 <a href="#incidenturl_nodejs" style="color: inherit; text-decoration: inherit;">incident<wbr>Url</a>
@@ -628,8 +556,7 @@ The following output properties are available:
         <span class="property-indicator"></span>
         <span class="property-type">string</span>
     </dt>
-    <dd>{{% md %}}The deep-link url to the incident in Azure portal{{% /md %}}</dd>
-    <dt class="property-"
+    <dd>{{% md %}}The deep-link url to the incident in Azure portal{{% /md %}}</dd><dt class="property-"
             title="">
         <span id="lastmodifiedtimeutc_nodejs">
 <a href="#lastmodifiedtimeutc_nodejs" style="color: inherit; text-decoration: inherit;">last<wbr>Modified<wbr>Time<wbr>Utc</a>
@@ -637,8 +564,7 @@ The following output properties are available:
         <span class="property-indicator"></span>
         <span class="property-type">string</span>
     </dt>
-    <dd>{{% md %}}The last time the incident was updated{{% /md %}}</dd>
-    <dt class="property-"
+    <dd>{{% md %}}The last time the incident was updated{{% /md %}}</dd><dt class="property-"
             title="">
         <span id="name_nodejs">
 <a href="#name_nodejs" style="color: inherit; text-decoration: inherit;">name</a>
@@ -646,8 +572,7 @@ The following output properties are available:
         <span class="property-indicator"></span>
         <span class="property-type">string</span>
     </dt>
-    <dd>{{% md %}}Azure resource name{{% /md %}}</dd>
-    <dt class="property-"
+    <dd>{{% md %}}Azure resource name{{% /md %}}</dd><dt class="property-"
             title="">
         <span id="relatedanalyticruleids_nodejs">
 <a href="#relatedanalyticruleids_nodejs" style="color: inherit; text-decoration: inherit;">related<wbr>Analytic<wbr>Rule<wbr>Ids</a>
@@ -655,8 +580,7 @@ The following output properties are available:
         <span class="property-indicator"></span>
         <span class="property-type">string[]</span>
     </dt>
-    <dd>{{% md %}}List of resource ids of Analytic rules related to the incident{{% /md %}}</dd>
-    <dt class="property-"
+    <dd>{{% md %}}List of resource ids of Analytic rules related to the incident{{% /md %}}</dd><dt class="property-"
             title="">
         <span id="severity_nodejs">
 <a href="#severity_nodejs" style="color: inherit; text-decoration: inherit;">severity</a>
@@ -664,8 +588,7 @@ The following output properties are available:
         <span class="property-indicator"></span>
         <span class="property-type">string</span>
     </dt>
-    <dd>{{% md %}}The severity of the incident{{% /md %}}</dd>
-    <dt class="property-"
+    <dd>{{% md %}}The severity of the incident{{% /md %}}</dd><dt class="property-"
             title="">
         <span id="status_nodejs">
 <a href="#status_nodejs" style="color: inherit; text-decoration: inherit;">status</a>
@@ -673,8 +596,7 @@ The following output properties are available:
         <span class="property-indicator"></span>
         <span class="property-type">string</span>
     </dt>
-    <dd>{{% md %}}The status of the incident{{% /md %}}</dd>
-    <dt class="property-"
+    <dd>{{% md %}}The status of the incident{{% /md %}}</dd><dt class="property-"
             title="">
         <span id="title_nodejs">
 <a href="#title_nodejs" style="color: inherit; text-decoration: inherit;">title</a>
@@ -682,8 +604,7 @@ The following output properties are available:
         <span class="property-indicator"></span>
         <span class="property-type">string</span>
     </dt>
-    <dd>{{% md %}}The title of the incident{{% /md %}}</dd>
-    <dt class="property-"
+    <dd>{{% md %}}The title of the incident{{% /md %}}</dd><dt class="property-"
             title="">
         <span id="type_nodejs">
 <a href="#type_nodejs" style="color: inherit; text-decoration: inherit;">type</a>
@@ -691,8 +612,7 @@ The following output properties are available:
         <span class="property-indicator"></span>
         <span class="property-type">string</span>
     </dt>
-    <dd>{{% md %}}Azure resource type{{% /md %}}</dd>
-    <dt class="property-"
+    <dd>{{% md %}}Azure resource type{{% /md %}}</dd><dt class="property-"
             title="">
         <span id="classification_nodejs">
 <a href="#classification_nodejs" style="color: inherit; text-decoration: inherit;">classification</a>
@@ -700,8 +620,7 @@ The following output properties are available:
         <span class="property-indicator"></span>
         <span class="property-type">string</span>
     </dt>
-    <dd>{{% md %}}The reason the incident was closed{{% /md %}}</dd>
-    <dt class="property-"
+    <dd>{{% md %}}The reason the incident was closed{{% /md %}}</dd><dt class="property-"
             title="">
         <span id="classificationcomment_nodejs">
 <a href="#classificationcomment_nodejs" style="color: inherit; text-decoration: inherit;">classification<wbr>Comment</a>
@@ -709,8 +628,7 @@ The following output properties are available:
         <span class="property-indicator"></span>
         <span class="property-type">string</span>
     </dt>
-    <dd>{{% md %}}Describes the reason the incident was closed{{% /md %}}</dd>
-    <dt class="property-"
+    <dd>{{% md %}}Describes the reason the incident was closed{{% /md %}}</dd><dt class="property-"
             title="">
         <span id="classificationreason_nodejs">
 <a href="#classificationreason_nodejs" style="color: inherit; text-decoration: inherit;">classification<wbr>Reason</a>
@@ -718,8 +636,7 @@ The following output properties are available:
         <span class="property-indicator"></span>
         <span class="property-type">string</span>
     </dt>
-    <dd>{{% md %}}The classification reason the incident was closed with{{% /md %}}</dd>
-    <dt class="property-"
+    <dd>{{% md %}}The classification reason the incident was closed with{{% /md %}}</dd><dt class="property-"
             title="">
         <span id="description_nodejs">
 <a href="#description_nodejs" style="color: inherit; text-decoration: inherit;">description</a>
@@ -727,8 +644,7 @@ The following output properties are available:
         <span class="property-indicator"></span>
         <span class="property-type">string</span>
     </dt>
-    <dd>{{% md %}}The description of the incident{{% /md %}}</dd>
-    <dt class="property-"
+    <dd>{{% md %}}The description of the incident{{% /md %}}</dd><dt class="property-"
             title="">
         <span id="etag_nodejs">
 <a href="#etag_nodejs" style="color: inherit; text-decoration: inherit;">etag</a>
@@ -736,8 +652,7 @@ The following output properties are available:
         <span class="property-indicator"></span>
         <span class="property-type">string</span>
     </dt>
-    <dd>{{% md %}}Etag of the azure resource{{% /md %}}</dd>
-    <dt class="property-"
+    <dd>{{% md %}}Etag of the azure resource{{% /md %}}</dd><dt class="property-"
             title="">
         <span id="firstactivitytimeutc_nodejs">
 <a href="#firstactivitytimeutc_nodejs" style="color: inherit; text-decoration: inherit;">first<wbr>Activity<wbr>Time<wbr>Utc</a>
@@ -745,8 +660,7 @@ The following output properties are available:
         <span class="property-indicator"></span>
         <span class="property-type">string</span>
     </dt>
-    <dd>{{% md %}}The time of the first activity in the incident{{% /md %}}</dd>
-    <dt class="property-"
+    <dd>{{% md %}}The time of the first activity in the incident{{% /md %}}</dd><dt class="property-"
             title="">
         <span id="labels_nodejs">
 <a href="#labels_nodejs" style="color: inherit; text-decoration: inherit;">labels</a>
@@ -754,8 +668,7 @@ The following output properties are available:
         <span class="property-indicator"></span>
         <span class="property-type"><a href="#incidentlabelresponse">Incident<wbr>Label<wbr>Response[]</a></span>
     </dt>
-    <dd>{{% md %}}List of labels relevant to this incident{{% /md %}}</dd>
-    <dt class="property-"
+    <dd>{{% md %}}List of labels relevant to this incident{{% /md %}}</dd><dt class="property-"
             title="">
         <span id="lastactivitytimeutc_nodejs">
 <a href="#lastactivitytimeutc_nodejs" style="color: inherit; text-decoration: inherit;">last<wbr>Activity<wbr>Time<wbr>Utc</a>
@@ -763,8 +676,7 @@ The following output properties are available:
         <span class="property-indicator"></span>
         <span class="property-type">string</span>
     </dt>
-    <dd>{{% md %}}The time of the last activity in the incident{{% /md %}}</dd>
-    <dt class="property-"
+    <dd>{{% md %}}The time of the last activity in the incident{{% /md %}}</dd><dt class="property-"
             title="">
         <span id="owner_nodejs">
 <a href="#owner_nodejs" style="color: inherit; text-decoration: inherit;">owner</a>
@@ -772,14 +684,11 @@ The following output properties are available:
         <span class="property-indicator"></span>
         <span class="property-type"><a href="#incidentownerinforesponse">Incident<wbr>Owner<wbr>Info<wbr>Response</a></span>
     </dt>
-    <dd>{{% md %}}Describes a user that the incident is assigned to{{% /md %}}</dd>
-</dl>
+    <dd>{{% md %}}Describes a user that the incident is assigned to{{% /md %}}</dd></dl>
 {{% /choosable %}}
 
 {{% choosable language python %}}
-<dl class="resources-properties">
-
-    <dt class="property-"
+<dl class="resources-properties"><dt class="property-"
             title="">
         <span id="additional_data_python">
 <a href="#additional_data_python" style="color: inherit; text-decoration: inherit;">additional_<wbr>data</a>
@@ -787,8 +696,7 @@ The following output properties are available:
         <span class="property-indicator"></span>
         <span class="property-type"><a href="#incidentadditionaldataresponse">Incident<wbr>Additional<wbr>Data<wbr>Response</a></span>
     </dt>
-    <dd>{{% md %}}Additional data on the incident{{% /md %}}</dd>
-    <dt class="property-"
+    <dd>{{% md %}}Additional data on the incident{{% /md %}}</dd><dt class="property-"
             title="">
         <span id="created_time_utc_python">
 <a href="#created_time_utc_python" style="color: inherit; text-decoration: inherit;">created_<wbr>time_<wbr>utc</a>
@@ -796,8 +704,7 @@ The following output properties are available:
         <span class="property-indicator"></span>
         <span class="property-type">str</span>
     </dt>
-    <dd>{{% md %}}The time the incident was created{{% /md %}}</dd>
-    <dt class="property-"
+    <dd>{{% md %}}The time the incident was created{{% /md %}}</dd><dt class="property-"
             title="">
         <span id="id_python">
 <a href="#id_python" style="color: inherit; text-decoration: inherit;">id</a>
@@ -805,8 +712,7 @@ The following output properties are available:
         <span class="property-indicator"></span>
         <span class="property-type">str</span>
     </dt>
-    <dd>{{% md %}}Azure resource Id{{% /md %}}</dd>
-    <dt class="property-"
+    <dd>{{% md %}}Azure resource Id{{% /md %}}</dd><dt class="property-"
             title="">
         <span id="incident_number_python">
 <a href="#incident_number_python" style="color: inherit; text-decoration: inherit;">incident_<wbr>number</a>
@@ -814,8 +720,7 @@ The following output properties are available:
         <span class="property-indicator"></span>
         <span class="property-type">int</span>
     </dt>
-    <dd>{{% md %}}A sequential number{{% /md %}}</dd>
-    <dt class="property-"
+    <dd>{{% md %}}A sequential number{{% /md %}}</dd><dt class="property-"
             title="">
         <span id="incident_url_python">
 <a href="#incident_url_python" style="color: inherit; text-decoration: inherit;">incident_<wbr>url</a>
@@ -823,8 +728,7 @@ The following output properties are available:
         <span class="property-indicator"></span>
         <span class="property-type">str</span>
     </dt>
-    <dd>{{% md %}}The deep-link url to the incident in Azure portal{{% /md %}}</dd>
-    <dt class="property-"
+    <dd>{{% md %}}The deep-link url to the incident in Azure portal{{% /md %}}</dd><dt class="property-"
             title="">
         <span id="last_modified_time_utc_python">
 <a href="#last_modified_time_utc_python" style="color: inherit; text-decoration: inherit;">last_<wbr>modified_<wbr>time_<wbr>utc</a>
@@ -832,8 +736,7 @@ The following output properties are available:
         <span class="property-indicator"></span>
         <span class="property-type">str</span>
     </dt>
-    <dd>{{% md %}}The last time the incident was updated{{% /md %}}</dd>
-    <dt class="property-"
+    <dd>{{% md %}}The last time the incident was updated{{% /md %}}</dd><dt class="property-"
             title="">
         <span id="name_python">
 <a href="#name_python" style="color: inherit; text-decoration: inherit;">name</a>
@@ -841,8 +744,7 @@ The following output properties are available:
         <span class="property-indicator"></span>
         <span class="property-type">str</span>
     </dt>
-    <dd>{{% md %}}Azure resource name{{% /md %}}</dd>
-    <dt class="property-"
+    <dd>{{% md %}}Azure resource name{{% /md %}}</dd><dt class="property-"
             title="">
         <span id="related_analytic_rule_ids_python">
 <a href="#related_analytic_rule_ids_python" style="color: inherit; text-decoration: inherit;">related_<wbr>analytic_<wbr>rule_<wbr>ids</a>
@@ -850,8 +752,7 @@ The following output properties are available:
         <span class="property-indicator"></span>
         <span class="property-type">Sequence[str]</span>
     </dt>
-    <dd>{{% md %}}List of resource ids of Analytic rules related to the incident{{% /md %}}</dd>
-    <dt class="property-"
+    <dd>{{% md %}}List of resource ids of Analytic rules related to the incident{{% /md %}}</dd><dt class="property-"
             title="">
         <span id="severity_python">
 <a href="#severity_python" style="color: inherit; text-decoration: inherit;">severity</a>
@@ -859,8 +760,7 @@ The following output properties are available:
         <span class="property-indicator"></span>
         <span class="property-type">str</span>
     </dt>
-    <dd>{{% md %}}The severity of the incident{{% /md %}}</dd>
-    <dt class="property-"
+    <dd>{{% md %}}The severity of the incident{{% /md %}}</dd><dt class="property-"
             title="">
         <span id="status_python">
 <a href="#status_python" style="color: inherit; text-decoration: inherit;">status</a>
@@ -868,8 +768,7 @@ The following output properties are available:
         <span class="property-indicator"></span>
         <span class="property-type">str</span>
     </dt>
-    <dd>{{% md %}}The status of the incident{{% /md %}}</dd>
-    <dt class="property-"
+    <dd>{{% md %}}The status of the incident{{% /md %}}</dd><dt class="property-"
             title="">
         <span id="title_python">
 <a href="#title_python" style="color: inherit; text-decoration: inherit;">title</a>
@@ -877,8 +776,7 @@ The following output properties are available:
         <span class="property-indicator"></span>
         <span class="property-type">str</span>
     </dt>
-    <dd>{{% md %}}The title of the incident{{% /md %}}</dd>
-    <dt class="property-"
+    <dd>{{% md %}}The title of the incident{{% /md %}}</dd><dt class="property-"
             title="">
         <span id="type_python">
 <a href="#type_python" style="color: inherit; text-decoration: inherit;">type</a>
@@ -886,8 +784,7 @@ The following output properties are available:
         <span class="property-indicator"></span>
         <span class="property-type">str</span>
     </dt>
-    <dd>{{% md %}}Azure resource type{{% /md %}}</dd>
-    <dt class="property-"
+    <dd>{{% md %}}Azure resource type{{% /md %}}</dd><dt class="property-"
             title="">
         <span id="classification_python">
 <a href="#classification_python" style="color: inherit; text-decoration: inherit;">classification</a>
@@ -895,8 +792,7 @@ The following output properties are available:
         <span class="property-indicator"></span>
         <span class="property-type">str</span>
     </dt>
-    <dd>{{% md %}}The reason the incident was closed{{% /md %}}</dd>
-    <dt class="property-"
+    <dd>{{% md %}}The reason the incident was closed{{% /md %}}</dd><dt class="property-"
             title="">
         <span id="classification_comment_python">
 <a href="#classification_comment_python" style="color: inherit; text-decoration: inherit;">classification_<wbr>comment</a>
@@ -904,8 +800,7 @@ The following output properties are available:
         <span class="property-indicator"></span>
         <span class="property-type">str</span>
     </dt>
-    <dd>{{% md %}}Describes the reason the incident was closed{{% /md %}}</dd>
-    <dt class="property-"
+    <dd>{{% md %}}Describes the reason the incident was closed{{% /md %}}</dd><dt class="property-"
             title="">
         <span id="classification_reason_python">
 <a href="#classification_reason_python" style="color: inherit; text-decoration: inherit;">classification_<wbr>reason</a>
@@ -913,8 +808,7 @@ The following output properties are available:
         <span class="property-indicator"></span>
         <span class="property-type">str</span>
     </dt>
-    <dd>{{% md %}}The classification reason the incident was closed with{{% /md %}}</dd>
-    <dt class="property-"
+    <dd>{{% md %}}The classification reason the incident was closed with{{% /md %}}</dd><dt class="property-"
             title="">
         <span id="description_python">
 <a href="#description_python" style="color: inherit; text-decoration: inherit;">description</a>
@@ -922,8 +816,7 @@ The following output properties are available:
         <span class="property-indicator"></span>
         <span class="property-type">str</span>
     </dt>
-    <dd>{{% md %}}The description of the incident{{% /md %}}</dd>
-    <dt class="property-"
+    <dd>{{% md %}}The description of the incident{{% /md %}}</dd><dt class="property-"
             title="">
         <span id="etag_python">
 <a href="#etag_python" style="color: inherit; text-decoration: inherit;">etag</a>
@@ -931,8 +824,7 @@ The following output properties are available:
         <span class="property-indicator"></span>
         <span class="property-type">str</span>
     </dt>
-    <dd>{{% md %}}Etag of the azure resource{{% /md %}}</dd>
-    <dt class="property-"
+    <dd>{{% md %}}Etag of the azure resource{{% /md %}}</dd><dt class="property-"
             title="">
         <span id="first_activity_time_utc_python">
 <a href="#first_activity_time_utc_python" style="color: inherit; text-decoration: inherit;">first_<wbr>activity_<wbr>time_<wbr>utc</a>
@@ -940,8 +832,7 @@ The following output properties are available:
         <span class="property-indicator"></span>
         <span class="property-type">str</span>
     </dt>
-    <dd>{{% md %}}The time of the first activity in the incident{{% /md %}}</dd>
-    <dt class="property-"
+    <dd>{{% md %}}The time of the first activity in the incident{{% /md %}}</dd><dt class="property-"
             title="">
         <span id="labels_python">
 <a href="#labels_python" style="color: inherit; text-decoration: inherit;">labels</a>
@@ -949,8 +840,7 @@ The following output properties are available:
         <span class="property-indicator"></span>
         <span class="property-type"><a href="#incidentlabelresponse">Sequence[Incident<wbr>Label<wbr>Response]</a></span>
     </dt>
-    <dd>{{% md %}}List of labels relevant to this incident{{% /md %}}</dd>
-    <dt class="property-"
+    <dd>{{% md %}}List of labels relevant to this incident{{% /md %}}</dd><dt class="property-"
             title="">
         <span id="last_activity_time_utc_python">
 <a href="#last_activity_time_utc_python" style="color: inherit; text-decoration: inherit;">last_<wbr>activity_<wbr>time_<wbr>utc</a>
@@ -958,8 +848,7 @@ The following output properties are available:
         <span class="property-indicator"></span>
         <span class="property-type">str</span>
     </dt>
-    <dd>{{% md %}}The time of the last activity in the incident{{% /md %}}</dd>
-    <dt class="property-"
+    <dd>{{% md %}}The time of the last activity in the incident{{% /md %}}</dd><dt class="property-"
             title="">
         <span id="owner_python">
 <a href="#owner_python" style="color: inherit; text-decoration: inherit;">owner</a>
@@ -967,8 +856,7 @@ The following output properties are available:
         <span class="property-indicator"></span>
         <span class="property-type"><a href="#incidentownerinforesponse">Incident<wbr>Owner<wbr>Info<wbr>Response</a></span>
     </dt>
-    <dd>{{% md %}}Describes a user that the incident is assigned to{{% /md %}}</dd>
-</dl>
+    <dd>{{% md %}}Describes a user that the incident is assigned to{{% /md %}}</dd></dl>
 {{% /choosable %}}
 
 
@@ -982,9 +870,7 @@ The following output properties are available:
 
 
 {{% choosable language csharp %}}
-<dl class="resources-properties">
-
-    <dt class="property-required"
+<dl class="resources-properties"><dt class="property-required"
             title="Required">
         <span id="alertproductnames_csharp">
 <a href="#alertproductnames_csharp" style="color: inherit; text-decoration: inherit;">Alert<wbr>Product<wbr>Names</a>
@@ -992,8 +878,7 @@ The following output properties are available:
         <span class="property-indicator"></span>
         <span class="property-type">List&lt;string&gt;</span>
     </dt>
-    <dd>{{% md %}}List of product names of alerts in the incident{{% /md %}}</dd>
-    <dt class="property-required"
+    <dd>{{% md %}}List of product names of alerts in the incident{{% /md %}}</dd><dt class="property-required"
             title="Required">
         <span id="alertscount_csharp">
 <a href="#alertscount_csharp" style="color: inherit; text-decoration: inherit;">Alerts<wbr>Count</a>
@@ -1001,8 +886,7 @@ The following output properties are available:
         <span class="property-indicator"></span>
         <span class="property-type">int</span>
     </dt>
-    <dd>{{% md %}}The number of alerts in the incident{{% /md %}}</dd>
-    <dt class="property-required"
+    <dd>{{% md %}}The number of alerts in the incident{{% /md %}}</dd><dt class="property-required"
             title="Required">
         <span id="bookmarkscount_csharp">
 <a href="#bookmarkscount_csharp" style="color: inherit; text-decoration: inherit;">Bookmarks<wbr>Count</a>
@@ -1010,8 +894,7 @@ The following output properties are available:
         <span class="property-indicator"></span>
         <span class="property-type">int</span>
     </dt>
-    <dd>{{% md %}}The number of bookmarks in the incident{{% /md %}}</dd>
-    <dt class="property-required"
+    <dd>{{% md %}}The number of bookmarks in the incident{{% /md %}}</dd><dt class="property-required"
             title="Required">
         <span id="commentscount_csharp">
 <a href="#commentscount_csharp" style="color: inherit; text-decoration: inherit;">Comments<wbr>Count</a>
@@ -1019,8 +902,7 @@ The following output properties are available:
         <span class="property-indicator"></span>
         <span class="property-type">int</span>
     </dt>
-    <dd>{{% md %}}The number of comments in the incident{{% /md %}}</dd>
-    <dt class="property-required"
+    <dd>{{% md %}}The number of comments in the incident{{% /md %}}</dd><dt class="property-required"
             title="Required">
         <span id="tactics_csharp">
 <a href="#tactics_csharp" style="color: inherit; text-decoration: inherit;">Tactics</a>
@@ -1028,14 +910,11 @@ The following output properties are available:
         <span class="property-indicator"></span>
         <span class="property-type">List&lt;string&gt;</span>
     </dt>
-    <dd>{{% md %}}The tactics associated with incident{{% /md %}}</dd>
-</dl>
+    <dd>{{% md %}}The tactics associated with incident{{% /md %}}</dd></dl>
 {{% /choosable %}}
 
 {{% choosable language go %}}
-<dl class="resources-properties">
-
-    <dt class="property-required"
+<dl class="resources-properties"><dt class="property-required"
             title="Required">
         <span id="alertproductnames_go">
 <a href="#alertproductnames_go" style="color: inherit; text-decoration: inherit;">Alert<wbr>Product<wbr>Names</a>
@@ -1043,8 +922,7 @@ The following output properties are available:
         <span class="property-indicator"></span>
         <span class="property-type">[]string</span>
     </dt>
-    <dd>{{% md %}}List of product names of alerts in the incident{{% /md %}}</dd>
-    <dt class="property-required"
+    <dd>{{% md %}}List of product names of alerts in the incident{{% /md %}}</dd><dt class="property-required"
             title="Required">
         <span id="alertscount_go">
 <a href="#alertscount_go" style="color: inherit; text-decoration: inherit;">Alerts<wbr>Count</a>
@@ -1052,8 +930,7 @@ The following output properties are available:
         <span class="property-indicator"></span>
         <span class="property-type">int</span>
     </dt>
-    <dd>{{% md %}}The number of alerts in the incident{{% /md %}}</dd>
-    <dt class="property-required"
+    <dd>{{% md %}}The number of alerts in the incident{{% /md %}}</dd><dt class="property-required"
             title="Required">
         <span id="bookmarkscount_go">
 <a href="#bookmarkscount_go" style="color: inherit; text-decoration: inherit;">Bookmarks<wbr>Count</a>
@@ -1061,8 +938,7 @@ The following output properties are available:
         <span class="property-indicator"></span>
         <span class="property-type">int</span>
     </dt>
-    <dd>{{% md %}}The number of bookmarks in the incident{{% /md %}}</dd>
-    <dt class="property-required"
+    <dd>{{% md %}}The number of bookmarks in the incident{{% /md %}}</dd><dt class="property-required"
             title="Required">
         <span id="commentscount_go">
 <a href="#commentscount_go" style="color: inherit; text-decoration: inherit;">Comments<wbr>Count</a>
@@ -1070,8 +946,7 @@ The following output properties are available:
         <span class="property-indicator"></span>
         <span class="property-type">int</span>
     </dt>
-    <dd>{{% md %}}The number of comments in the incident{{% /md %}}</dd>
-    <dt class="property-required"
+    <dd>{{% md %}}The number of comments in the incident{{% /md %}}</dd><dt class="property-required"
             title="Required">
         <span id="tactics_go">
 <a href="#tactics_go" style="color: inherit; text-decoration: inherit;">Tactics</a>
@@ -1079,14 +954,11 @@ The following output properties are available:
         <span class="property-indicator"></span>
         <span class="property-type">[]string</span>
     </dt>
-    <dd>{{% md %}}The tactics associated with incident{{% /md %}}</dd>
-</dl>
+    <dd>{{% md %}}The tactics associated with incident{{% /md %}}</dd></dl>
 {{% /choosable %}}
 
 {{% choosable language nodejs %}}
-<dl class="resources-properties">
-
-    <dt class="property-required"
+<dl class="resources-properties"><dt class="property-required"
             title="Required">
         <span id="alertproductnames_nodejs">
 <a href="#alertproductnames_nodejs" style="color: inherit; text-decoration: inherit;">alert<wbr>Product<wbr>Names</a>
@@ -1094,8 +966,7 @@ The following output properties are available:
         <span class="property-indicator"></span>
         <span class="property-type">string[]</span>
     </dt>
-    <dd>{{% md %}}List of product names of alerts in the incident{{% /md %}}</dd>
-    <dt class="property-required"
+    <dd>{{% md %}}List of product names of alerts in the incident{{% /md %}}</dd><dt class="property-required"
             title="Required">
         <span id="alertscount_nodejs">
 <a href="#alertscount_nodejs" style="color: inherit; text-decoration: inherit;">alerts<wbr>Count</a>
@@ -1103,8 +974,7 @@ The following output properties are available:
         <span class="property-indicator"></span>
         <span class="property-type">number</span>
     </dt>
-    <dd>{{% md %}}The number of alerts in the incident{{% /md %}}</dd>
-    <dt class="property-required"
+    <dd>{{% md %}}The number of alerts in the incident{{% /md %}}</dd><dt class="property-required"
             title="Required">
         <span id="bookmarkscount_nodejs">
 <a href="#bookmarkscount_nodejs" style="color: inherit; text-decoration: inherit;">bookmarks<wbr>Count</a>
@@ -1112,8 +982,7 @@ The following output properties are available:
         <span class="property-indicator"></span>
         <span class="property-type">number</span>
     </dt>
-    <dd>{{% md %}}The number of bookmarks in the incident{{% /md %}}</dd>
-    <dt class="property-required"
+    <dd>{{% md %}}The number of bookmarks in the incident{{% /md %}}</dd><dt class="property-required"
             title="Required">
         <span id="commentscount_nodejs">
 <a href="#commentscount_nodejs" style="color: inherit; text-decoration: inherit;">comments<wbr>Count</a>
@@ -1121,8 +990,7 @@ The following output properties are available:
         <span class="property-indicator"></span>
         <span class="property-type">number</span>
     </dt>
-    <dd>{{% md %}}The number of comments in the incident{{% /md %}}</dd>
-    <dt class="property-required"
+    <dd>{{% md %}}The number of comments in the incident{{% /md %}}</dd><dt class="property-required"
             title="Required">
         <span id="tactics_nodejs">
 <a href="#tactics_nodejs" style="color: inherit; text-decoration: inherit;">tactics</a>
@@ -1130,14 +998,11 @@ The following output properties are available:
         <span class="property-indicator"></span>
         <span class="property-type">string[]</span>
     </dt>
-    <dd>{{% md %}}The tactics associated with incident{{% /md %}}</dd>
-</dl>
+    <dd>{{% md %}}The tactics associated with incident{{% /md %}}</dd></dl>
 {{% /choosable %}}
 
 {{% choosable language python %}}
-<dl class="resources-properties">
-
-    <dt class="property-required"
+<dl class="resources-properties"><dt class="property-required"
             title="Required">
         <span id="alert_product_names_python">
 <a href="#alert_product_names_python" style="color: inherit; text-decoration: inherit;">alert_<wbr>product_<wbr>names</a>
@@ -1145,8 +1010,7 @@ The following output properties are available:
         <span class="property-indicator"></span>
         <span class="property-type">Sequence[str]</span>
     </dt>
-    <dd>{{% md %}}List of product names of alerts in the incident{{% /md %}}</dd>
-    <dt class="property-required"
+    <dd>{{% md %}}List of product names of alerts in the incident{{% /md %}}</dd><dt class="property-required"
             title="Required">
         <span id="alerts_count_python">
 <a href="#alerts_count_python" style="color: inherit; text-decoration: inherit;">alerts_<wbr>count</a>
@@ -1154,8 +1018,7 @@ The following output properties are available:
         <span class="property-indicator"></span>
         <span class="property-type">int</span>
     </dt>
-    <dd>{{% md %}}The number of alerts in the incident{{% /md %}}</dd>
-    <dt class="property-required"
+    <dd>{{% md %}}The number of alerts in the incident{{% /md %}}</dd><dt class="property-required"
             title="Required">
         <span id="bookmarks_count_python">
 <a href="#bookmarks_count_python" style="color: inherit; text-decoration: inherit;">bookmarks_<wbr>count</a>
@@ -1163,8 +1026,7 @@ The following output properties are available:
         <span class="property-indicator"></span>
         <span class="property-type">int</span>
     </dt>
-    <dd>{{% md %}}The number of bookmarks in the incident{{% /md %}}</dd>
-    <dt class="property-required"
+    <dd>{{% md %}}The number of bookmarks in the incident{{% /md %}}</dd><dt class="property-required"
             title="Required">
         <span id="comments_count_python">
 <a href="#comments_count_python" style="color: inherit; text-decoration: inherit;">comments_<wbr>count</a>
@@ -1172,8 +1034,7 @@ The following output properties are available:
         <span class="property-indicator"></span>
         <span class="property-type">int</span>
     </dt>
-    <dd>{{% md %}}The number of comments in the incident{{% /md %}}</dd>
-    <dt class="property-required"
+    <dd>{{% md %}}The number of comments in the incident{{% /md %}}</dd><dt class="property-required"
             title="Required">
         <span id="tactics_python">
 <a href="#tactics_python" style="color: inherit; text-decoration: inherit;">tactics</a>
@@ -1181,8 +1042,7 @@ The following output properties are available:
         <span class="property-indicator"></span>
         <span class="property-type">Sequence[str]</span>
     </dt>
-    <dd>{{% md %}}The tactics associated with incident{{% /md %}}</dd>
-</dl>
+    <dd>{{% md %}}The tactics associated with incident{{% /md %}}</dd></dl>
 {{% /choosable %}}
 
 <h4 id="incidentlabelresponse">Incident<wbr>Label<wbr>Response</h4>
@@ -1190,9 +1050,7 @@ The following output properties are available:
 
 
 {{% choosable language csharp %}}
-<dl class="resources-properties">
-
-    <dt class="property-required"
+<dl class="resources-properties"><dt class="property-required"
             title="Required">
         <span id="labelname_csharp">
 <a href="#labelname_csharp" style="color: inherit; text-decoration: inherit;">Label<wbr>Name</a>
@@ -1200,8 +1058,7 @@ The following output properties are available:
         <span class="property-indicator"></span>
         <span class="property-type">string</span>
     </dt>
-    <dd>{{% md %}}The name of the label{{% /md %}}</dd>
-    <dt class="property-required"
+    <dd>{{% md %}}The name of the label{{% /md %}}</dd><dt class="property-required"
             title="Required">
         <span id="labeltype_csharp">
 <a href="#labeltype_csharp" style="color: inherit; text-decoration: inherit;">Label<wbr>Type</a>
@@ -1209,14 +1066,11 @@ The following output properties are available:
         <span class="property-indicator"></span>
         <span class="property-type">string</span>
     </dt>
-    <dd>{{% md %}}The type of the label{{% /md %}}</dd>
-</dl>
+    <dd>{{% md %}}The type of the label{{% /md %}}</dd></dl>
 {{% /choosable %}}
 
 {{% choosable language go %}}
-<dl class="resources-properties">
-
-    <dt class="property-required"
+<dl class="resources-properties"><dt class="property-required"
             title="Required">
         <span id="labelname_go">
 <a href="#labelname_go" style="color: inherit; text-decoration: inherit;">Label<wbr>Name</a>
@@ -1224,8 +1078,7 @@ The following output properties are available:
         <span class="property-indicator"></span>
         <span class="property-type">string</span>
     </dt>
-    <dd>{{% md %}}The name of the label{{% /md %}}</dd>
-    <dt class="property-required"
+    <dd>{{% md %}}The name of the label{{% /md %}}</dd><dt class="property-required"
             title="Required">
         <span id="labeltype_go">
 <a href="#labeltype_go" style="color: inherit; text-decoration: inherit;">Label<wbr>Type</a>
@@ -1233,14 +1086,11 @@ The following output properties are available:
         <span class="property-indicator"></span>
         <span class="property-type">string</span>
     </dt>
-    <dd>{{% md %}}The type of the label{{% /md %}}</dd>
-</dl>
+    <dd>{{% md %}}The type of the label{{% /md %}}</dd></dl>
 {{% /choosable %}}
 
 {{% choosable language nodejs %}}
-<dl class="resources-properties">
-
-    <dt class="property-required"
+<dl class="resources-properties"><dt class="property-required"
             title="Required">
         <span id="labelname_nodejs">
 <a href="#labelname_nodejs" style="color: inherit; text-decoration: inherit;">label<wbr>Name</a>
@@ -1248,8 +1098,7 @@ The following output properties are available:
         <span class="property-indicator"></span>
         <span class="property-type">string</span>
     </dt>
-    <dd>{{% md %}}The name of the label{{% /md %}}</dd>
-    <dt class="property-required"
+    <dd>{{% md %}}The name of the label{{% /md %}}</dd><dt class="property-required"
             title="Required">
         <span id="labeltype_nodejs">
 <a href="#labeltype_nodejs" style="color: inherit; text-decoration: inherit;">label<wbr>Type</a>
@@ -1257,14 +1106,11 @@ The following output properties are available:
         <span class="property-indicator"></span>
         <span class="property-type">string</span>
     </dt>
-    <dd>{{% md %}}The type of the label{{% /md %}}</dd>
-</dl>
+    <dd>{{% md %}}The type of the label{{% /md %}}</dd></dl>
 {{% /choosable %}}
 
 {{% choosable language python %}}
-<dl class="resources-properties">
-
-    <dt class="property-required"
+<dl class="resources-properties"><dt class="property-required"
             title="Required">
         <span id="label_name_python">
 <a href="#label_name_python" style="color: inherit; text-decoration: inherit;">label_<wbr>name</a>
@@ -1272,8 +1118,7 @@ The following output properties are available:
         <span class="property-indicator"></span>
         <span class="property-type">str</span>
     </dt>
-    <dd>{{% md %}}The name of the label{{% /md %}}</dd>
-    <dt class="property-required"
+    <dd>{{% md %}}The name of the label{{% /md %}}</dd><dt class="property-required"
             title="Required">
         <span id="label_type_python">
 <a href="#label_type_python" style="color: inherit; text-decoration: inherit;">label_<wbr>type</a>
@@ -1281,8 +1126,7 @@ The following output properties are available:
         <span class="property-indicator"></span>
         <span class="property-type">str</span>
     </dt>
-    <dd>{{% md %}}The type of the label{{% /md %}}</dd>
-</dl>
+    <dd>{{% md %}}The type of the label{{% /md %}}</dd></dl>
 {{% /choosable %}}
 
 <h4 id="incidentownerinforesponse">Incident<wbr>Owner<wbr>Info<wbr>Response</h4>
@@ -1290,9 +1134,7 @@ The following output properties are available:
 
 
 {{% choosable language csharp %}}
-<dl class="resources-properties">
-
-    <dt class="property-optional"
+<dl class="resources-properties"><dt class="property-optional"
             title="Optional">
         <span id="assignedto_csharp">
 <a href="#assignedto_csharp" style="color: inherit; text-decoration: inherit;">Assigned<wbr>To</a>
@@ -1300,8 +1142,7 @@ The following output properties are available:
         <span class="property-indicator"></span>
         <span class="property-type">string</span>
     </dt>
-    <dd>{{% md %}}The name of the user the incident is assigned to.{{% /md %}}</dd>
-    <dt class="property-optional"
+    <dd>{{% md %}}The name of the user the incident is assigned to.{{% /md %}}</dd><dt class="property-optional"
             title="Optional">
         <span id="email_csharp">
 <a href="#email_csharp" style="color: inherit; text-decoration: inherit;">Email</a>
@@ -1309,8 +1150,7 @@ The following output properties are available:
         <span class="property-indicator"></span>
         <span class="property-type">string</span>
     </dt>
-    <dd>{{% md %}}The email of the user the incident is assigned to.{{% /md %}}</dd>
-    <dt class="property-optional"
+    <dd>{{% md %}}The email of the user the incident is assigned to.{{% /md %}}</dd><dt class="property-optional"
             title="Optional">
         <span id="objectid_csharp">
 <a href="#objectid_csharp" style="color: inherit; text-decoration: inherit;">Object<wbr>Id</a>
@@ -1318,8 +1158,7 @@ The following output properties are available:
         <span class="property-indicator"></span>
         <span class="property-type">string</span>
     </dt>
-    <dd>{{% md %}}The object id of the user the incident is assigned to.{{% /md %}}</dd>
-    <dt class="property-optional"
+    <dd>{{% md %}}The object id of the user the incident is assigned to.{{% /md %}}</dd><dt class="property-optional"
             title="Optional">
         <span id="userprincipalname_csharp">
 <a href="#userprincipalname_csharp" style="color: inherit; text-decoration: inherit;">User<wbr>Principal<wbr>Name</a>
@@ -1327,14 +1166,11 @@ The following output properties are available:
         <span class="property-indicator"></span>
         <span class="property-type">string</span>
     </dt>
-    <dd>{{% md %}}The user principal name of the user the incident is assigned to.{{% /md %}}</dd>
-</dl>
+    <dd>{{% md %}}The user principal name of the user the incident is assigned to.{{% /md %}}</dd></dl>
 {{% /choosable %}}
 
 {{% choosable language go %}}
-<dl class="resources-properties">
-
-    <dt class="property-optional"
+<dl class="resources-properties"><dt class="property-optional"
             title="Optional">
         <span id="assignedto_go">
 <a href="#assignedto_go" style="color: inherit; text-decoration: inherit;">Assigned<wbr>To</a>
@@ -1342,8 +1178,7 @@ The following output properties are available:
         <span class="property-indicator"></span>
         <span class="property-type">string</span>
     </dt>
-    <dd>{{% md %}}The name of the user the incident is assigned to.{{% /md %}}</dd>
-    <dt class="property-optional"
+    <dd>{{% md %}}The name of the user the incident is assigned to.{{% /md %}}</dd><dt class="property-optional"
             title="Optional">
         <span id="email_go">
 <a href="#email_go" style="color: inherit; text-decoration: inherit;">Email</a>
@@ -1351,8 +1186,7 @@ The following output properties are available:
         <span class="property-indicator"></span>
         <span class="property-type">string</span>
     </dt>
-    <dd>{{% md %}}The email of the user the incident is assigned to.{{% /md %}}</dd>
-    <dt class="property-optional"
+    <dd>{{% md %}}The email of the user the incident is assigned to.{{% /md %}}</dd><dt class="property-optional"
             title="Optional">
         <span id="objectid_go">
 <a href="#objectid_go" style="color: inherit; text-decoration: inherit;">Object<wbr>Id</a>
@@ -1360,8 +1194,7 @@ The following output properties are available:
         <span class="property-indicator"></span>
         <span class="property-type">string</span>
     </dt>
-    <dd>{{% md %}}The object id of the user the incident is assigned to.{{% /md %}}</dd>
-    <dt class="property-optional"
+    <dd>{{% md %}}The object id of the user the incident is assigned to.{{% /md %}}</dd><dt class="property-optional"
             title="Optional">
         <span id="userprincipalname_go">
 <a href="#userprincipalname_go" style="color: inherit; text-decoration: inherit;">User<wbr>Principal<wbr>Name</a>
@@ -1369,14 +1202,11 @@ The following output properties are available:
         <span class="property-indicator"></span>
         <span class="property-type">string</span>
     </dt>
-    <dd>{{% md %}}The user principal name of the user the incident is assigned to.{{% /md %}}</dd>
-</dl>
+    <dd>{{% md %}}The user principal name of the user the incident is assigned to.{{% /md %}}</dd></dl>
 {{% /choosable %}}
 
 {{% choosable language nodejs %}}
-<dl class="resources-properties">
-
-    <dt class="property-optional"
+<dl class="resources-properties"><dt class="property-optional"
             title="Optional">
         <span id="assignedto_nodejs">
 <a href="#assignedto_nodejs" style="color: inherit; text-decoration: inherit;">assigned<wbr>To</a>
@@ -1384,8 +1214,7 @@ The following output properties are available:
         <span class="property-indicator"></span>
         <span class="property-type">string</span>
     </dt>
-    <dd>{{% md %}}The name of the user the incident is assigned to.{{% /md %}}</dd>
-    <dt class="property-optional"
+    <dd>{{% md %}}The name of the user the incident is assigned to.{{% /md %}}</dd><dt class="property-optional"
             title="Optional">
         <span id="email_nodejs">
 <a href="#email_nodejs" style="color: inherit; text-decoration: inherit;">email</a>
@@ -1393,8 +1222,7 @@ The following output properties are available:
         <span class="property-indicator"></span>
         <span class="property-type">string</span>
     </dt>
-    <dd>{{% md %}}The email of the user the incident is assigned to.{{% /md %}}</dd>
-    <dt class="property-optional"
+    <dd>{{% md %}}The email of the user the incident is assigned to.{{% /md %}}</dd><dt class="property-optional"
             title="Optional">
         <span id="objectid_nodejs">
 <a href="#objectid_nodejs" style="color: inherit; text-decoration: inherit;">object<wbr>Id</a>
@@ -1402,8 +1230,7 @@ The following output properties are available:
         <span class="property-indicator"></span>
         <span class="property-type">string</span>
     </dt>
-    <dd>{{% md %}}The object id of the user the incident is assigned to.{{% /md %}}</dd>
-    <dt class="property-optional"
+    <dd>{{% md %}}The object id of the user the incident is assigned to.{{% /md %}}</dd><dt class="property-optional"
             title="Optional">
         <span id="userprincipalname_nodejs">
 <a href="#userprincipalname_nodejs" style="color: inherit; text-decoration: inherit;">user<wbr>Principal<wbr>Name</a>
@@ -1411,14 +1238,11 @@ The following output properties are available:
         <span class="property-indicator"></span>
         <span class="property-type">string</span>
     </dt>
-    <dd>{{% md %}}The user principal name of the user the incident is assigned to.{{% /md %}}</dd>
-</dl>
+    <dd>{{% md %}}The user principal name of the user the incident is assigned to.{{% /md %}}</dd></dl>
 {{% /choosable %}}
 
 {{% choosable language python %}}
-<dl class="resources-properties">
-
-    <dt class="property-optional"
+<dl class="resources-properties"><dt class="property-optional"
             title="Optional">
         <span id="assigned_to_python">
 <a href="#assigned_to_python" style="color: inherit; text-decoration: inherit;">assigned_<wbr>to</a>
@@ -1426,8 +1250,7 @@ The following output properties are available:
         <span class="property-indicator"></span>
         <span class="property-type">str</span>
     </dt>
-    <dd>{{% md %}}The name of the user the incident is assigned to.{{% /md %}}</dd>
-    <dt class="property-optional"
+    <dd>{{% md %}}The name of the user the incident is assigned to.{{% /md %}}</dd><dt class="property-optional"
             title="Optional">
         <span id="email_python">
 <a href="#email_python" style="color: inherit; text-decoration: inherit;">email</a>
@@ -1435,8 +1258,7 @@ The following output properties are available:
         <span class="property-indicator"></span>
         <span class="property-type">str</span>
     </dt>
-    <dd>{{% md %}}The email of the user the incident is assigned to.{{% /md %}}</dd>
-    <dt class="property-optional"
+    <dd>{{% md %}}The email of the user the incident is assigned to.{{% /md %}}</dd><dt class="property-optional"
             title="Optional">
         <span id="object_id_python">
 <a href="#object_id_python" style="color: inherit; text-decoration: inherit;">object_<wbr>id</a>
@@ -1444,8 +1266,7 @@ The following output properties are available:
         <span class="property-indicator"></span>
         <span class="property-type">str</span>
     </dt>
-    <dd>{{% md %}}The object id of the user the incident is assigned to.{{% /md %}}</dd>
-    <dt class="property-optional"
+    <dd>{{% md %}}The object id of the user the incident is assigned to.{{% /md %}}</dd><dt class="property-optional"
             title="Optional">
         <span id="user_principal_name_python">
 <a href="#user_principal_name_python" style="color: inherit; text-decoration: inherit;">user_<wbr>principal_<wbr>name</a>
@@ -1453,8 +1274,7 @@ The following output properties are available:
         <span class="property-indicator"></span>
         <span class="property-type">str</span>
     </dt>
-    <dd>{{% md %}}The user principal name of the user the incident is assigned to.{{% /md %}}</dd>
-</dl>
+    <dd>{{% md %}}The user principal name of the user the incident is assigned to.{{% /md %}}</dd></dl>
 {{% /choosable %}}
 
 

@@ -45,9 +45,7 @@ $ pulumi import azure-native:labservices:EnvironmentSetting myresource1 /subscri
 
 {{% choosable language nodejs %}}
 
-<dl class="resources-properties">
-  
-    <dt
+<dl class="resources-properties"><dt
         class="property-required" title="Required">
         <span>name</span>
         <span class="property-indicator"></span>
@@ -55,9 +53,7 @@ $ pulumi import azure-native:labservices:EnvironmentSetting myresource1 /subscri
     </dt>
     <dd>
       The unique name of the resource.
-    </dd>
-  
-    <dt
+    </dd><dt
         class="property-required" title="Required">
         <span>args</span>
         <span class="property-indicator"></span>
@@ -65,9 +61,7 @@ $ pulumi import azure-native:labservices:EnvironmentSetting myresource1 /subscri
     </dt>
     <dd>
       The arguments to resource properties.
-    </dd>
-  
-    <dt
+    </dd><dt
         class="property-optional" title="Optional">
         <span>opts</span>
         <span class="property-indicator"></span>
@@ -75,10 +69,7 @@ $ pulumi import azure-native:labservices:EnvironmentSetting myresource1 /subscri
     </dt>
     <dd>
       Bag of options to control resource&#39;s behavior.
-    </dd>
-  
-
-</dl>
+    </dd></dl>
 
 {{% /choosable %}}
 
@@ -104,9 +95,7 @@ $ pulumi import azure-native:labservices:EnvironmentSetting myresource1 /subscri
 
 {{% choosable language go %}}
 
-<dl class="resources-properties">
-  
-    <dt
+<dl class="resources-properties"><dt
         class="property-optional" title="Optional">
         <span>ctx</span>
         <span class="property-indicator"></span>
@@ -114,9 +103,7 @@ $ pulumi import azure-native:labservices:EnvironmentSetting myresource1 /subscri
     </dt>
     <dd>
       Context object for the current deployment.
-    </dd>
-  
-    <dt
+    </dd><dt
         class="property-required" title="Required">
         <span>name</span>
         <span class="property-indicator"></span>
@@ -124,9 +111,7 @@ $ pulumi import azure-native:labservices:EnvironmentSetting myresource1 /subscri
     </dt>
     <dd>
       The unique name of the resource.
-    </dd>
-  
-    <dt
+    </dd><dt
         class="property-required" title="Required">
         <span>args</span>
         <span class="property-indicator"></span>
@@ -134,9 +119,7 @@ $ pulumi import azure-native:labservices:EnvironmentSetting myresource1 /subscri
     </dt>
     <dd>
       The arguments to resource properties.
-    </dd>
-  
-    <dt
+    </dd><dt
         class="property-optional" title="Optional">
         <span>opts</span>
         <span class="property-indicator"></span>
@@ -144,18 +127,13 @@ $ pulumi import azure-native:labservices:EnvironmentSetting myresource1 /subscri
     </dt>
     <dd>
       Bag of options to control resource&#39;s behavior.
-    </dd>
-  
-
-</dl>
+    </dd></dl>
 
 {{% /choosable %}}
 
 {{% choosable language csharp %}}
 
-<dl class="resources-properties">
-  
-    <dt
+<dl class="resources-properties"><dt
         class="property-required" title="Required">
         <span>name</span>
         <span class="property-indicator"></span>
@@ -163,9 +141,7 @@ $ pulumi import azure-native:labservices:EnvironmentSetting myresource1 /subscri
     </dt>
     <dd>
       The unique name of the resource.
-    </dd>
-  
-    <dt
+    </dd><dt
         class="property-required" title="Required">
         <span>args</span>
         <span class="property-indicator"></span>
@@ -173,9 +149,7 @@ $ pulumi import azure-native:labservices:EnvironmentSetting myresource1 /subscri
     </dt>
     <dd>
       The arguments to resource properties.
-    </dd>
-  
-    <dt
+    </dd><dt
         class="property-optional" title="Optional">
         <span>opts</span>
         <span class="property-indicator"></span>
@@ -183,10 +157,7 @@ $ pulumi import azure-native:labservices:EnvironmentSetting myresource1 /subscri
     </dt>
     <dd>
       Bag of options to control resource&#39;s behavior.
-    </dd>
-  
-
-</dl>
+    </dd></dl>
 
 {{% /choosable %}}
 
@@ -201,9 +172,7 @@ The EnvironmentSetting resource accepts the following [input]({{< relref "/docs/
 
 
 {{% choosable language csharp %}}
-<dl class="resources-properties">
-
-    <dt class="property-required"
+<dl class="resources-properties"><dt class="property-required"
             title="Required">
         <span id="labaccountname_csharp">
 <a href="#labaccountname_csharp" style="color: inherit; text-decoration: inherit;">Lab<wbr>Account<wbr>Name</a>
@@ -211,8 +180,7 @@ The EnvironmentSetting resource accepts the following [input]({{< relref "/docs/
         <span class="property-indicator"></span>
         <span class="property-type">string</span>
     </dt>
-    <dd>{{% md %}}The name of the lab Account.{{% /md %}}</dd>
-    <dt class="property-required"
+    <dd>{{% md %}}The name of the lab Account.{{% /md %}}</dd><dt class="property-required"
             title="Required">
         <span id="labname_csharp">
 <a href="#labname_csharp" style="color: inherit; text-decoration: inherit;">Lab<wbr>Name</a>
@@ -220,8 +188,7 @@ The EnvironmentSetting resource accepts the following [input]({{< relref "/docs/
         <span class="property-indicator"></span>
         <span class="property-type">string</span>
     </dt>
-    <dd>{{% md %}}The name of the lab.{{% /md %}}</dd>
-    <dt class="property-required"
+    <dd>{{% md %}}The name of the lab.{{% /md %}}</dd><dt class="property-required"
             title="Required">
         <span id="resourcegroupname_csharp">
 <a href="#resourcegroupname_csharp" style="color: inherit; text-decoration: inherit;">Resource<wbr>Group<wbr>Name</a>
@@ -229,8 +196,7 @@ The EnvironmentSetting resource accepts the following [input]({{< relref "/docs/
         <span class="property-indicator"></span>
         <span class="property-type">string</span>
     </dt>
-    <dd>{{% md %}}The name of the resource group.{{% /md %}}</dd>
-    <dt class="property-required"
+    <dd>{{% md %}}The name of the resource group.{{% /md %}}</dd><dt class="property-required"
             title="Required">
         <span id="resourcesettings_csharp">
 <a href="#resourcesettings_csharp" style="color: inherit; text-decoration: inherit;">Resource<wbr>Settings</a>
@@ -238,8 +204,7 @@ The EnvironmentSetting resource accepts the following [input]({{< relref "/docs/
         <span class="property-indicator"></span>
         <span class="property-type"><a href="#resourcesettings">Pulumi.<wbr>Azure<wbr>Native.<wbr>Lab<wbr>Services.<wbr>Inputs.<wbr>Resource<wbr>Settings<wbr>Args</a></span>
     </dt>
-    <dd>{{% md %}}The resource specific settings{{% /md %}}</dd>
-    <dt class="property-optional"
+    <dd>{{% md %}}The resource specific settings{{% /md %}}</dd><dt class="property-optional"
             title="Optional">
         <span id="configurationstate_csharp">
 <a href="#configurationstate_csharp" style="color: inherit; text-decoration: inherit;">Configuration<wbr>State</a>
@@ -247,8 +212,7 @@ The EnvironmentSetting resource accepts the following [input]({{< relref "/docs/
         <span class="property-indicator"></span>
         <span class="property-type">string | <a href="#configurationstate">Pulumi.<wbr>Azure<wbr>Native.<wbr>Lab<wbr>Services.<wbr>Configuration<wbr>State</a></span>
     </dt>
-    <dd>{{% md %}}Describes the user's progress in configuring their environment setting{{% /md %}}</dd>
-    <dt class="property-optional"
+    <dd>{{% md %}}Describes the user's progress in configuring their environment setting{{% /md %}}</dd><dt class="property-optional"
             title="Optional">
         <span id="description_csharp">
 <a href="#description_csharp" style="color: inherit; text-decoration: inherit;">Description</a>
@@ -256,8 +220,7 @@ The EnvironmentSetting resource accepts the following [input]({{< relref "/docs/
         <span class="property-indicator"></span>
         <span class="property-type">string</span>
     </dt>
-    <dd>{{% md %}}Describes the environment and its resource settings{{% /md %}}</dd>
-    <dt class="property-optional"
+    <dd>{{% md %}}Describes the environment and its resource settings{{% /md %}}</dd><dt class="property-optional"
             title="Optional">
         <span id="environmentsettingname_csharp">
 <a href="#environmentsettingname_csharp" style="color: inherit; text-decoration: inherit;">Environment<wbr>Setting<wbr>Name</a>
@@ -265,8 +228,7 @@ The EnvironmentSetting resource accepts the following [input]({{< relref "/docs/
         <span class="property-indicator"></span>
         <span class="property-type">string</span>
     </dt>
-    <dd>{{% md %}}The name of the environment Setting.{{% /md %}}</dd>
-    <dt class="property-optional"
+    <dd>{{% md %}}The name of the environment Setting.{{% /md %}}</dd><dt class="property-optional"
             title="Optional">
         <span id="location_csharp">
 <a href="#location_csharp" style="color: inherit; text-decoration: inherit;">Location</a>
@@ -274,8 +236,7 @@ The EnvironmentSetting resource accepts the following [input]({{< relref "/docs/
         <span class="property-indicator"></span>
         <span class="property-type">string</span>
     </dt>
-    <dd>{{% md %}}The location of the resource.{{% /md %}}</dd>
-    <dt class="property-optional"
+    <dd>{{% md %}}The location of the resource.{{% /md %}}</dd><dt class="property-optional"
             title="Optional">
         <span id="provisioningstate_csharp">
 <a href="#provisioningstate_csharp" style="color: inherit; text-decoration: inherit;">Provisioning<wbr>State</a>
@@ -283,8 +244,7 @@ The EnvironmentSetting resource accepts the following [input]({{< relref "/docs/
         <span class="property-indicator"></span>
         <span class="property-type">string</span>
     </dt>
-    <dd>{{% md %}}The provisioning status of the resource.{{% /md %}}</dd>
-    <dt class="property-optional"
+    <dd>{{% md %}}The provisioning status of the resource.{{% /md %}}</dd><dt class="property-optional"
             title="Optional">
         <span id="tags_csharp">
 <a href="#tags_csharp" style="color: inherit; text-decoration: inherit;">Tags</a>
@@ -292,8 +252,7 @@ The EnvironmentSetting resource accepts the following [input]({{< relref "/docs/
         <span class="property-indicator"></span>
         <span class="property-type">Dictionary&lt;string, string&gt;</span>
     </dt>
-    <dd>{{% md %}}The tags of the resource.{{% /md %}}</dd>
-    <dt class="property-optional"
+    <dd>{{% md %}}The tags of the resource.{{% /md %}}</dd><dt class="property-optional"
             title="Optional">
         <span id="title_csharp">
 <a href="#title_csharp" style="color: inherit; text-decoration: inherit;">Title</a>
@@ -301,8 +260,7 @@ The EnvironmentSetting resource accepts the following [input]({{< relref "/docs/
         <span class="property-indicator"></span>
         <span class="property-type">string</span>
     </dt>
-    <dd>{{% md %}}Brief title describing the environment and its resource settings{{% /md %}}</dd>
-    <dt class="property-optional"
+    <dd>{{% md %}}Brief title describing the environment and its resource settings{{% /md %}}</dd><dt class="property-optional"
             title="Optional">
         <span id="uniqueidentifier_csharp">
 <a href="#uniqueidentifier_csharp" style="color: inherit; text-decoration: inherit;">Unique<wbr>Identifier</a>
@@ -310,14 +268,11 @@ The EnvironmentSetting resource accepts the following [input]({{< relref "/docs/
         <span class="property-indicator"></span>
         <span class="property-type">string</span>
     </dt>
-    <dd>{{% md %}}The unique immutable identifier of a resource (Guid).{{% /md %}}</dd>
-</dl>
+    <dd>{{% md %}}The unique immutable identifier of a resource (Guid).{{% /md %}}</dd></dl>
 {{% /choosable %}}
 
 {{% choosable language go %}}
-<dl class="resources-properties">
-
-    <dt class="property-required"
+<dl class="resources-properties"><dt class="property-required"
             title="Required">
         <span id="labaccountname_go">
 <a href="#labaccountname_go" style="color: inherit; text-decoration: inherit;">Lab<wbr>Account<wbr>Name</a>
@@ -325,8 +280,7 @@ The EnvironmentSetting resource accepts the following [input]({{< relref "/docs/
         <span class="property-indicator"></span>
         <span class="property-type">string</span>
     </dt>
-    <dd>{{% md %}}The name of the lab Account.{{% /md %}}</dd>
-    <dt class="property-required"
+    <dd>{{% md %}}The name of the lab Account.{{% /md %}}</dd><dt class="property-required"
             title="Required">
         <span id="labname_go">
 <a href="#labname_go" style="color: inherit; text-decoration: inherit;">Lab<wbr>Name</a>
@@ -334,8 +288,7 @@ The EnvironmentSetting resource accepts the following [input]({{< relref "/docs/
         <span class="property-indicator"></span>
         <span class="property-type">string</span>
     </dt>
-    <dd>{{% md %}}The name of the lab.{{% /md %}}</dd>
-    <dt class="property-required"
+    <dd>{{% md %}}The name of the lab.{{% /md %}}</dd><dt class="property-required"
             title="Required">
         <span id="resourcegroupname_go">
 <a href="#resourcegroupname_go" style="color: inherit; text-decoration: inherit;">Resource<wbr>Group<wbr>Name</a>
@@ -343,8 +296,7 @@ The EnvironmentSetting resource accepts the following [input]({{< relref "/docs/
         <span class="property-indicator"></span>
         <span class="property-type">string</span>
     </dt>
-    <dd>{{% md %}}The name of the resource group.{{% /md %}}</dd>
-    <dt class="property-required"
+    <dd>{{% md %}}The name of the resource group.{{% /md %}}</dd><dt class="property-required"
             title="Required">
         <span id="resourcesettings_go">
 <a href="#resourcesettings_go" style="color: inherit; text-decoration: inherit;">Resource<wbr>Settings</a>
@@ -352,8 +304,7 @@ The EnvironmentSetting resource accepts the following [input]({{< relref "/docs/
         <span class="property-indicator"></span>
         <span class="property-type"><a href="#resourcesettings">Resource<wbr>Settings</a></span>
     </dt>
-    <dd>{{% md %}}The resource specific settings{{% /md %}}</dd>
-    <dt class="property-optional"
+    <dd>{{% md %}}The resource specific settings{{% /md %}}</dd><dt class="property-optional"
             title="Optional">
         <span id="configurationstate_go">
 <a href="#configurationstate_go" style="color: inherit; text-decoration: inherit;">Configuration<wbr>State</a>
@@ -361,8 +312,7 @@ The EnvironmentSetting resource accepts the following [input]({{< relref "/docs/
         <span class="property-indicator"></span>
         <span class="property-type">string | <a href="#configurationstate">Configuration<wbr>State</a></span>
     </dt>
-    <dd>{{% md %}}Describes the user's progress in configuring their environment setting{{% /md %}}</dd>
-    <dt class="property-optional"
+    <dd>{{% md %}}Describes the user's progress in configuring their environment setting{{% /md %}}</dd><dt class="property-optional"
             title="Optional">
         <span id="description_go">
 <a href="#description_go" style="color: inherit; text-decoration: inherit;">Description</a>
@@ -370,8 +320,7 @@ The EnvironmentSetting resource accepts the following [input]({{< relref "/docs/
         <span class="property-indicator"></span>
         <span class="property-type">string</span>
     </dt>
-    <dd>{{% md %}}Describes the environment and its resource settings{{% /md %}}</dd>
-    <dt class="property-optional"
+    <dd>{{% md %}}Describes the environment and its resource settings{{% /md %}}</dd><dt class="property-optional"
             title="Optional">
         <span id="environmentsettingname_go">
 <a href="#environmentsettingname_go" style="color: inherit; text-decoration: inherit;">Environment<wbr>Setting<wbr>Name</a>
@@ -379,8 +328,7 @@ The EnvironmentSetting resource accepts the following [input]({{< relref "/docs/
         <span class="property-indicator"></span>
         <span class="property-type">string</span>
     </dt>
-    <dd>{{% md %}}The name of the environment Setting.{{% /md %}}</dd>
-    <dt class="property-optional"
+    <dd>{{% md %}}The name of the environment Setting.{{% /md %}}</dd><dt class="property-optional"
             title="Optional">
         <span id="location_go">
 <a href="#location_go" style="color: inherit; text-decoration: inherit;">Location</a>
@@ -388,8 +336,7 @@ The EnvironmentSetting resource accepts the following [input]({{< relref "/docs/
         <span class="property-indicator"></span>
         <span class="property-type">string</span>
     </dt>
-    <dd>{{% md %}}The location of the resource.{{% /md %}}</dd>
-    <dt class="property-optional"
+    <dd>{{% md %}}The location of the resource.{{% /md %}}</dd><dt class="property-optional"
             title="Optional">
         <span id="provisioningstate_go">
 <a href="#provisioningstate_go" style="color: inherit; text-decoration: inherit;">Provisioning<wbr>State</a>
@@ -397,8 +344,7 @@ The EnvironmentSetting resource accepts the following [input]({{< relref "/docs/
         <span class="property-indicator"></span>
         <span class="property-type">string</span>
     </dt>
-    <dd>{{% md %}}The provisioning status of the resource.{{% /md %}}</dd>
-    <dt class="property-optional"
+    <dd>{{% md %}}The provisioning status of the resource.{{% /md %}}</dd><dt class="property-optional"
             title="Optional">
         <span id="tags_go">
 <a href="#tags_go" style="color: inherit; text-decoration: inherit;">Tags</a>
@@ -406,8 +352,7 @@ The EnvironmentSetting resource accepts the following [input]({{< relref "/docs/
         <span class="property-indicator"></span>
         <span class="property-type">map[string]string</span>
     </dt>
-    <dd>{{% md %}}The tags of the resource.{{% /md %}}</dd>
-    <dt class="property-optional"
+    <dd>{{% md %}}The tags of the resource.{{% /md %}}</dd><dt class="property-optional"
             title="Optional">
         <span id="title_go">
 <a href="#title_go" style="color: inherit; text-decoration: inherit;">Title</a>
@@ -415,8 +360,7 @@ The EnvironmentSetting resource accepts the following [input]({{< relref "/docs/
         <span class="property-indicator"></span>
         <span class="property-type">string</span>
     </dt>
-    <dd>{{% md %}}Brief title describing the environment and its resource settings{{% /md %}}</dd>
-    <dt class="property-optional"
+    <dd>{{% md %}}Brief title describing the environment and its resource settings{{% /md %}}</dd><dt class="property-optional"
             title="Optional">
         <span id="uniqueidentifier_go">
 <a href="#uniqueidentifier_go" style="color: inherit; text-decoration: inherit;">Unique<wbr>Identifier</a>
@@ -424,14 +368,11 @@ The EnvironmentSetting resource accepts the following [input]({{< relref "/docs/
         <span class="property-indicator"></span>
         <span class="property-type">string</span>
     </dt>
-    <dd>{{% md %}}The unique immutable identifier of a resource (Guid).{{% /md %}}</dd>
-</dl>
+    <dd>{{% md %}}The unique immutable identifier of a resource (Guid).{{% /md %}}</dd></dl>
 {{% /choosable %}}
 
 {{% choosable language nodejs %}}
-<dl class="resources-properties">
-
-    <dt class="property-required"
+<dl class="resources-properties"><dt class="property-required"
             title="Required">
         <span id="labaccountname_nodejs">
 <a href="#labaccountname_nodejs" style="color: inherit; text-decoration: inherit;">lab<wbr>Account<wbr>Name</a>
@@ -439,8 +380,7 @@ The EnvironmentSetting resource accepts the following [input]({{< relref "/docs/
         <span class="property-indicator"></span>
         <span class="property-type">string</span>
     </dt>
-    <dd>{{% md %}}The name of the lab Account.{{% /md %}}</dd>
-    <dt class="property-required"
+    <dd>{{% md %}}The name of the lab Account.{{% /md %}}</dd><dt class="property-required"
             title="Required">
         <span id="labname_nodejs">
 <a href="#labname_nodejs" style="color: inherit; text-decoration: inherit;">lab<wbr>Name</a>
@@ -448,8 +388,7 @@ The EnvironmentSetting resource accepts the following [input]({{< relref "/docs/
         <span class="property-indicator"></span>
         <span class="property-type">string</span>
     </dt>
-    <dd>{{% md %}}The name of the lab.{{% /md %}}</dd>
-    <dt class="property-required"
+    <dd>{{% md %}}The name of the lab.{{% /md %}}</dd><dt class="property-required"
             title="Required">
         <span id="resourcegroupname_nodejs">
 <a href="#resourcegroupname_nodejs" style="color: inherit; text-decoration: inherit;">resource<wbr>Group<wbr>Name</a>
@@ -457,8 +396,7 @@ The EnvironmentSetting resource accepts the following [input]({{< relref "/docs/
         <span class="property-indicator"></span>
         <span class="property-type">string</span>
     </dt>
-    <dd>{{% md %}}The name of the resource group.{{% /md %}}</dd>
-    <dt class="property-required"
+    <dd>{{% md %}}The name of the resource group.{{% /md %}}</dd><dt class="property-required"
             title="Required">
         <span id="resourcesettings_nodejs">
 <a href="#resourcesettings_nodejs" style="color: inherit; text-decoration: inherit;">resource<wbr>Settings</a>
@@ -466,8 +404,7 @@ The EnvironmentSetting resource accepts the following [input]({{< relref "/docs/
         <span class="property-indicator"></span>
         <span class="property-type"><a href="#resourcesettings">Resource<wbr>Settings</a></span>
     </dt>
-    <dd>{{% md %}}The resource specific settings{{% /md %}}</dd>
-    <dt class="property-optional"
+    <dd>{{% md %}}The resource specific settings{{% /md %}}</dd><dt class="property-optional"
             title="Optional">
         <span id="configurationstate_nodejs">
 <a href="#configurationstate_nodejs" style="color: inherit; text-decoration: inherit;">configuration<wbr>State</a>
@@ -475,8 +412,7 @@ The EnvironmentSetting resource accepts the following [input]({{< relref "/docs/
         <span class="property-indicator"></span>
         <span class="property-type">string | <a href="#configurationstate">Configuration<wbr>State</a></span>
     </dt>
-    <dd>{{% md %}}Describes the user's progress in configuring their environment setting{{% /md %}}</dd>
-    <dt class="property-optional"
+    <dd>{{% md %}}Describes the user's progress in configuring their environment setting{{% /md %}}</dd><dt class="property-optional"
             title="Optional">
         <span id="description_nodejs">
 <a href="#description_nodejs" style="color: inherit; text-decoration: inherit;">description</a>
@@ -484,8 +420,7 @@ The EnvironmentSetting resource accepts the following [input]({{< relref "/docs/
         <span class="property-indicator"></span>
         <span class="property-type">string</span>
     </dt>
-    <dd>{{% md %}}Describes the environment and its resource settings{{% /md %}}</dd>
-    <dt class="property-optional"
+    <dd>{{% md %}}Describes the environment and its resource settings{{% /md %}}</dd><dt class="property-optional"
             title="Optional">
         <span id="environmentsettingname_nodejs">
 <a href="#environmentsettingname_nodejs" style="color: inherit; text-decoration: inherit;">environment<wbr>Setting<wbr>Name</a>
@@ -493,8 +428,7 @@ The EnvironmentSetting resource accepts the following [input]({{< relref "/docs/
         <span class="property-indicator"></span>
         <span class="property-type">string</span>
     </dt>
-    <dd>{{% md %}}The name of the environment Setting.{{% /md %}}</dd>
-    <dt class="property-optional"
+    <dd>{{% md %}}The name of the environment Setting.{{% /md %}}</dd><dt class="property-optional"
             title="Optional">
         <span id="location_nodejs">
 <a href="#location_nodejs" style="color: inherit; text-decoration: inherit;">location</a>
@@ -502,8 +436,7 @@ The EnvironmentSetting resource accepts the following [input]({{< relref "/docs/
         <span class="property-indicator"></span>
         <span class="property-type">string</span>
     </dt>
-    <dd>{{% md %}}The location of the resource.{{% /md %}}</dd>
-    <dt class="property-optional"
+    <dd>{{% md %}}The location of the resource.{{% /md %}}</dd><dt class="property-optional"
             title="Optional">
         <span id="provisioningstate_nodejs">
 <a href="#provisioningstate_nodejs" style="color: inherit; text-decoration: inherit;">provisioning<wbr>State</a>
@@ -511,8 +444,7 @@ The EnvironmentSetting resource accepts the following [input]({{< relref "/docs/
         <span class="property-indicator"></span>
         <span class="property-type">string</span>
     </dt>
-    <dd>{{% md %}}The provisioning status of the resource.{{% /md %}}</dd>
-    <dt class="property-optional"
+    <dd>{{% md %}}The provisioning status of the resource.{{% /md %}}</dd><dt class="property-optional"
             title="Optional">
         <span id="tags_nodejs">
 <a href="#tags_nodejs" style="color: inherit; text-decoration: inherit;">tags</a>
@@ -520,8 +452,7 @@ The EnvironmentSetting resource accepts the following [input]({{< relref "/docs/
         <span class="property-indicator"></span>
         <span class="property-type">{[key: string]: string}</span>
     </dt>
-    <dd>{{% md %}}The tags of the resource.{{% /md %}}</dd>
-    <dt class="property-optional"
+    <dd>{{% md %}}The tags of the resource.{{% /md %}}</dd><dt class="property-optional"
             title="Optional">
         <span id="title_nodejs">
 <a href="#title_nodejs" style="color: inherit; text-decoration: inherit;">title</a>
@@ -529,8 +460,7 @@ The EnvironmentSetting resource accepts the following [input]({{< relref "/docs/
         <span class="property-indicator"></span>
         <span class="property-type">string</span>
     </dt>
-    <dd>{{% md %}}Brief title describing the environment and its resource settings{{% /md %}}</dd>
-    <dt class="property-optional"
+    <dd>{{% md %}}Brief title describing the environment and its resource settings{{% /md %}}</dd><dt class="property-optional"
             title="Optional">
         <span id="uniqueidentifier_nodejs">
 <a href="#uniqueidentifier_nodejs" style="color: inherit; text-decoration: inherit;">unique<wbr>Identifier</a>
@@ -538,14 +468,11 @@ The EnvironmentSetting resource accepts the following [input]({{< relref "/docs/
         <span class="property-indicator"></span>
         <span class="property-type">string</span>
     </dt>
-    <dd>{{% md %}}The unique immutable identifier of a resource (Guid).{{% /md %}}</dd>
-</dl>
+    <dd>{{% md %}}The unique immutable identifier of a resource (Guid).{{% /md %}}</dd></dl>
 {{% /choosable %}}
 
 {{% choosable language python %}}
-<dl class="resources-properties">
-
-    <dt class="property-required"
+<dl class="resources-properties"><dt class="property-required"
             title="Required">
         <span id="lab_account_name_python">
 <a href="#lab_account_name_python" style="color: inherit; text-decoration: inherit;">lab_<wbr>account_<wbr>name</a>
@@ -553,8 +480,7 @@ The EnvironmentSetting resource accepts the following [input]({{< relref "/docs/
         <span class="property-indicator"></span>
         <span class="property-type">str</span>
     </dt>
-    <dd>{{% md %}}The name of the lab Account.{{% /md %}}</dd>
-    <dt class="property-required"
+    <dd>{{% md %}}The name of the lab Account.{{% /md %}}</dd><dt class="property-required"
             title="Required">
         <span id="lab_name_python">
 <a href="#lab_name_python" style="color: inherit; text-decoration: inherit;">lab_<wbr>name</a>
@@ -562,8 +488,7 @@ The EnvironmentSetting resource accepts the following [input]({{< relref "/docs/
         <span class="property-indicator"></span>
         <span class="property-type">str</span>
     </dt>
-    <dd>{{% md %}}The name of the lab.{{% /md %}}</dd>
-    <dt class="property-required"
+    <dd>{{% md %}}The name of the lab.{{% /md %}}</dd><dt class="property-required"
             title="Required">
         <span id="resource_group_name_python">
 <a href="#resource_group_name_python" style="color: inherit; text-decoration: inherit;">resource_<wbr>group_<wbr>name</a>
@@ -571,8 +496,7 @@ The EnvironmentSetting resource accepts the following [input]({{< relref "/docs/
         <span class="property-indicator"></span>
         <span class="property-type">str</span>
     </dt>
-    <dd>{{% md %}}The name of the resource group.{{% /md %}}</dd>
-    <dt class="property-required"
+    <dd>{{% md %}}The name of the resource group.{{% /md %}}</dd><dt class="property-required"
             title="Required">
         <span id="resource_settings_python">
 <a href="#resource_settings_python" style="color: inherit; text-decoration: inherit;">resource_<wbr>settings</a>
@@ -580,8 +504,7 @@ The EnvironmentSetting resource accepts the following [input]({{< relref "/docs/
         <span class="property-indicator"></span>
         <span class="property-type"><a href="#resourcesettings">Resource<wbr>Settings<wbr>Args</a></span>
     </dt>
-    <dd>{{% md %}}The resource specific settings{{% /md %}}</dd>
-    <dt class="property-optional"
+    <dd>{{% md %}}The resource specific settings{{% /md %}}</dd><dt class="property-optional"
             title="Optional">
         <span id="configuration_state_python">
 <a href="#configuration_state_python" style="color: inherit; text-decoration: inherit;">configuration_<wbr>state</a>
@@ -589,8 +512,7 @@ The EnvironmentSetting resource accepts the following [input]({{< relref "/docs/
         <span class="property-indicator"></span>
         <span class="property-type">str | <a href="#configurationstate">Configuration<wbr>State</a></span>
     </dt>
-    <dd>{{% md %}}Describes the user's progress in configuring their environment setting{{% /md %}}</dd>
-    <dt class="property-optional"
+    <dd>{{% md %}}Describes the user's progress in configuring their environment setting{{% /md %}}</dd><dt class="property-optional"
             title="Optional">
         <span id="description_python">
 <a href="#description_python" style="color: inherit; text-decoration: inherit;">description</a>
@@ -598,8 +520,7 @@ The EnvironmentSetting resource accepts the following [input]({{< relref "/docs/
         <span class="property-indicator"></span>
         <span class="property-type">str</span>
     </dt>
-    <dd>{{% md %}}Describes the environment and its resource settings{{% /md %}}</dd>
-    <dt class="property-optional"
+    <dd>{{% md %}}Describes the environment and its resource settings{{% /md %}}</dd><dt class="property-optional"
             title="Optional">
         <span id="environment_setting_name_python">
 <a href="#environment_setting_name_python" style="color: inherit; text-decoration: inherit;">environment_<wbr>setting_<wbr>name</a>
@@ -607,8 +528,7 @@ The EnvironmentSetting resource accepts the following [input]({{< relref "/docs/
         <span class="property-indicator"></span>
         <span class="property-type">str</span>
     </dt>
-    <dd>{{% md %}}The name of the environment Setting.{{% /md %}}</dd>
-    <dt class="property-optional"
+    <dd>{{% md %}}The name of the environment Setting.{{% /md %}}</dd><dt class="property-optional"
             title="Optional">
         <span id="location_python">
 <a href="#location_python" style="color: inherit; text-decoration: inherit;">location</a>
@@ -616,8 +536,7 @@ The EnvironmentSetting resource accepts the following [input]({{< relref "/docs/
         <span class="property-indicator"></span>
         <span class="property-type">str</span>
     </dt>
-    <dd>{{% md %}}The location of the resource.{{% /md %}}</dd>
-    <dt class="property-optional"
+    <dd>{{% md %}}The location of the resource.{{% /md %}}</dd><dt class="property-optional"
             title="Optional">
         <span id="provisioning_state_python">
 <a href="#provisioning_state_python" style="color: inherit; text-decoration: inherit;">provisioning_<wbr>state</a>
@@ -625,8 +544,7 @@ The EnvironmentSetting resource accepts the following [input]({{< relref "/docs/
         <span class="property-indicator"></span>
         <span class="property-type">str</span>
     </dt>
-    <dd>{{% md %}}The provisioning status of the resource.{{% /md %}}</dd>
-    <dt class="property-optional"
+    <dd>{{% md %}}The provisioning status of the resource.{{% /md %}}</dd><dt class="property-optional"
             title="Optional">
         <span id="tags_python">
 <a href="#tags_python" style="color: inherit; text-decoration: inherit;">tags</a>
@@ -634,8 +552,7 @@ The EnvironmentSetting resource accepts the following [input]({{< relref "/docs/
         <span class="property-indicator"></span>
         <span class="property-type">Mapping[str, str]</span>
     </dt>
-    <dd>{{% md %}}The tags of the resource.{{% /md %}}</dd>
-    <dt class="property-optional"
+    <dd>{{% md %}}The tags of the resource.{{% /md %}}</dd><dt class="property-optional"
             title="Optional">
         <span id="title_python">
 <a href="#title_python" style="color: inherit; text-decoration: inherit;">title</a>
@@ -643,8 +560,7 @@ The EnvironmentSetting resource accepts the following [input]({{< relref "/docs/
         <span class="property-indicator"></span>
         <span class="property-type">str</span>
     </dt>
-    <dd>{{% md %}}Brief title describing the environment and its resource settings{{% /md %}}</dd>
-    <dt class="property-optional"
+    <dd>{{% md %}}Brief title describing the environment and its resource settings{{% /md %}}</dd><dt class="property-optional"
             title="Optional">
         <span id="unique_identifier_python">
 <a href="#unique_identifier_python" style="color: inherit; text-decoration: inherit;">unique_<wbr>identifier</a>
@@ -652,8 +568,7 @@ The EnvironmentSetting resource accepts the following [input]({{< relref "/docs/
         <span class="property-indicator"></span>
         <span class="property-type">str</span>
     </dt>
-    <dd>{{% md %}}The unique immutable identifier of a resource (Guid).{{% /md %}}</dd>
-</dl>
+    <dd>{{% md %}}The unique immutable identifier of a resource (Guid).{{% /md %}}</dd></dl>
 {{% /choosable %}}
 
 
@@ -664,9 +579,7 @@ All [input](#inputs) properties are implicitly available as output properties. A
 
 
 {{% choosable language csharp %}}
-<dl class="resources-properties">
-
-    <dt class="property-"
+<dl class="resources-properties"><dt class="property-"
             title="">
         <span id="id_csharp">
 <a href="#id_csharp" style="color: inherit; text-decoration: inherit;">Id</a>
@@ -674,8 +587,7 @@ All [input](#inputs) properties are implicitly available as output properties. A
         <span class="property-indicator"></span>
         <span class="property-type">string</span>
     </dt>
-    <dd>{{% md %}}The provider-assigned unique ID for this managed resource.{{% /md %}}</dd>
-    <dt class="property-"
+    <dd>{{% md %}}The provider-assigned unique ID for this managed resource.{{% /md %}}</dd><dt class="property-"
             title="">
         <span id="lastchanged_csharp">
 <a href="#lastchanged_csharp" style="color: inherit; text-decoration: inherit;">Last<wbr>Changed</a>
@@ -683,8 +595,7 @@ All [input](#inputs) properties are implicitly available as output properties. A
         <span class="property-indicator"></span>
         <span class="property-type">string</span>
     </dt>
-    <dd>{{% md %}}Time when the template VM was last changed.{{% /md %}}</dd>
-    <dt class="property-"
+    <dd>{{% md %}}Time when the template VM was last changed.{{% /md %}}</dd><dt class="property-"
             title="">
         <span id="lastpublished_csharp">
 <a href="#lastpublished_csharp" style="color: inherit; text-decoration: inherit;">Last<wbr>Published</a>
@@ -692,8 +603,7 @@ All [input](#inputs) properties are implicitly available as output properties. A
         <span class="property-indicator"></span>
         <span class="property-type">string</span>
     </dt>
-    <dd>{{% md %}}Time when the template VM was last sent for publishing.{{% /md %}}</dd>
-    <dt class="property-"
+    <dd>{{% md %}}Time when the template VM was last sent for publishing.{{% /md %}}</dd><dt class="property-"
             title="">
         <span id="latestoperationresult_csharp">
 <a href="#latestoperationresult_csharp" style="color: inherit; text-decoration: inherit;">Latest<wbr>Operation<wbr>Result</a>
@@ -701,8 +611,7 @@ All [input](#inputs) properties are implicitly available as output properties. A
         <span class="property-indicator"></span>
         <span class="property-type"><a href="#latestoperationresultresponse">Pulumi.<wbr>Azure<wbr>Native.<wbr>Lab<wbr>Services.<wbr>Outputs.<wbr>Latest<wbr>Operation<wbr>Result<wbr>Response</a></span>
     </dt>
-    <dd>{{% md %}}The details of the latest operation. ex: status, error{{% /md %}}</dd>
-    <dt class="property-"
+    <dd>{{% md %}}The details of the latest operation. ex: status, error{{% /md %}}</dd><dt class="property-"
             title="">
         <span id="name_csharp">
 <a href="#name_csharp" style="color: inherit; text-decoration: inherit;">Name</a>
@@ -710,8 +619,7 @@ All [input](#inputs) properties are implicitly available as output properties. A
         <span class="property-indicator"></span>
         <span class="property-type">string</span>
     </dt>
-    <dd>{{% md %}}The name of the resource.{{% /md %}}</dd>
-    <dt class="property-"
+    <dd>{{% md %}}The name of the resource.{{% /md %}}</dd><dt class="property-"
             title="">
         <span id="publishingstate_csharp">
 <a href="#publishingstate_csharp" style="color: inherit; text-decoration: inherit;">Publishing<wbr>State</a>
@@ -719,8 +627,7 @@ All [input](#inputs) properties are implicitly available as output properties. A
         <span class="property-indicator"></span>
         <span class="property-type">string</span>
     </dt>
-    <dd>{{% md %}}Describes the readiness of this environment setting{{% /md %}}</dd>
-    <dt class="property-"
+    <dd>{{% md %}}Describes the readiness of this environment setting{{% /md %}}</dd><dt class="property-"
             title="">
         <span id="type_csharp">
 <a href="#type_csharp" style="color: inherit; text-decoration: inherit;">Type</a>
@@ -728,14 +635,11 @@ All [input](#inputs) properties are implicitly available as output properties. A
         <span class="property-indicator"></span>
         <span class="property-type">string</span>
     </dt>
-    <dd>{{% md %}}The type of the resource.{{% /md %}}</dd>
-</dl>
+    <dd>{{% md %}}The type of the resource.{{% /md %}}</dd></dl>
 {{% /choosable %}}
 
 {{% choosable language go %}}
-<dl class="resources-properties">
-
-    <dt class="property-"
+<dl class="resources-properties"><dt class="property-"
             title="">
         <span id="id_go">
 <a href="#id_go" style="color: inherit; text-decoration: inherit;">Id</a>
@@ -743,8 +647,7 @@ All [input](#inputs) properties are implicitly available as output properties. A
         <span class="property-indicator"></span>
         <span class="property-type">string</span>
     </dt>
-    <dd>{{% md %}}The provider-assigned unique ID for this managed resource.{{% /md %}}</dd>
-    <dt class="property-"
+    <dd>{{% md %}}The provider-assigned unique ID for this managed resource.{{% /md %}}</dd><dt class="property-"
             title="">
         <span id="lastchanged_go">
 <a href="#lastchanged_go" style="color: inherit; text-decoration: inherit;">Last<wbr>Changed</a>
@@ -752,8 +655,7 @@ All [input](#inputs) properties are implicitly available as output properties. A
         <span class="property-indicator"></span>
         <span class="property-type">string</span>
     </dt>
-    <dd>{{% md %}}Time when the template VM was last changed.{{% /md %}}</dd>
-    <dt class="property-"
+    <dd>{{% md %}}Time when the template VM was last changed.{{% /md %}}</dd><dt class="property-"
             title="">
         <span id="lastpublished_go">
 <a href="#lastpublished_go" style="color: inherit; text-decoration: inherit;">Last<wbr>Published</a>
@@ -761,8 +663,7 @@ All [input](#inputs) properties are implicitly available as output properties. A
         <span class="property-indicator"></span>
         <span class="property-type">string</span>
     </dt>
-    <dd>{{% md %}}Time when the template VM was last sent for publishing.{{% /md %}}</dd>
-    <dt class="property-"
+    <dd>{{% md %}}Time when the template VM was last sent for publishing.{{% /md %}}</dd><dt class="property-"
             title="">
         <span id="latestoperationresult_go">
 <a href="#latestoperationresult_go" style="color: inherit; text-decoration: inherit;">Latest<wbr>Operation<wbr>Result</a>
@@ -770,8 +671,7 @@ All [input](#inputs) properties are implicitly available as output properties. A
         <span class="property-indicator"></span>
         <span class="property-type"><a href="#latestoperationresultresponse">Latest<wbr>Operation<wbr>Result<wbr>Response</a></span>
     </dt>
-    <dd>{{% md %}}The details of the latest operation. ex: status, error{{% /md %}}</dd>
-    <dt class="property-"
+    <dd>{{% md %}}The details of the latest operation. ex: status, error{{% /md %}}</dd><dt class="property-"
             title="">
         <span id="name_go">
 <a href="#name_go" style="color: inherit; text-decoration: inherit;">Name</a>
@@ -779,8 +679,7 @@ All [input](#inputs) properties are implicitly available as output properties. A
         <span class="property-indicator"></span>
         <span class="property-type">string</span>
     </dt>
-    <dd>{{% md %}}The name of the resource.{{% /md %}}</dd>
-    <dt class="property-"
+    <dd>{{% md %}}The name of the resource.{{% /md %}}</dd><dt class="property-"
             title="">
         <span id="publishingstate_go">
 <a href="#publishingstate_go" style="color: inherit; text-decoration: inherit;">Publishing<wbr>State</a>
@@ -788,8 +687,7 @@ All [input](#inputs) properties are implicitly available as output properties. A
         <span class="property-indicator"></span>
         <span class="property-type">string</span>
     </dt>
-    <dd>{{% md %}}Describes the readiness of this environment setting{{% /md %}}</dd>
-    <dt class="property-"
+    <dd>{{% md %}}Describes the readiness of this environment setting{{% /md %}}</dd><dt class="property-"
             title="">
         <span id="type_go">
 <a href="#type_go" style="color: inherit; text-decoration: inherit;">Type</a>
@@ -797,14 +695,11 @@ All [input](#inputs) properties are implicitly available as output properties. A
         <span class="property-indicator"></span>
         <span class="property-type">string</span>
     </dt>
-    <dd>{{% md %}}The type of the resource.{{% /md %}}</dd>
-</dl>
+    <dd>{{% md %}}The type of the resource.{{% /md %}}</dd></dl>
 {{% /choosable %}}
 
 {{% choosable language nodejs %}}
-<dl class="resources-properties">
-
-    <dt class="property-"
+<dl class="resources-properties"><dt class="property-"
             title="">
         <span id="id_nodejs">
 <a href="#id_nodejs" style="color: inherit; text-decoration: inherit;">id</a>
@@ -812,8 +707,7 @@ All [input](#inputs) properties are implicitly available as output properties. A
         <span class="property-indicator"></span>
         <span class="property-type">string</span>
     </dt>
-    <dd>{{% md %}}The provider-assigned unique ID for this managed resource.{{% /md %}}</dd>
-    <dt class="property-"
+    <dd>{{% md %}}The provider-assigned unique ID for this managed resource.{{% /md %}}</dd><dt class="property-"
             title="">
         <span id="lastchanged_nodejs">
 <a href="#lastchanged_nodejs" style="color: inherit; text-decoration: inherit;">last<wbr>Changed</a>
@@ -821,8 +715,7 @@ All [input](#inputs) properties are implicitly available as output properties. A
         <span class="property-indicator"></span>
         <span class="property-type">string</span>
     </dt>
-    <dd>{{% md %}}Time when the template VM was last changed.{{% /md %}}</dd>
-    <dt class="property-"
+    <dd>{{% md %}}Time when the template VM was last changed.{{% /md %}}</dd><dt class="property-"
             title="">
         <span id="lastpublished_nodejs">
 <a href="#lastpublished_nodejs" style="color: inherit; text-decoration: inherit;">last<wbr>Published</a>
@@ -830,8 +723,7 @@ All [input](#inputs) properties are implicitly available as output properties. A
         <span class="property-indicator"></span>
         <span class="property-type">string</span>
     </dt>
-    <dd>{{% md %}}Time when the template VM was last sent for publishing.{{% /md %}}</dd>
-    <dt class="property-"
+    <dd>{{% md %}}Time when the template VM was last sent for publishing.{{% /md %}}</dd><dt class="property-"
             title="">
         <span id="latestoperationresult_nodejs">
 <a href="#latestoperationresult_nodejs" style="color: inherit; text-decoration: inherit;">latest<wbr>Operation<wbr>Result</a>
@@ -839,8 +731,7 @@ All [input](#inputs) properties are implicitly available as output properties. A
         <span class="property-indicator"></span>
         <span class="property-type"><a href="#latestoperationresultresponse">Latest<wbr>Operation<wbr>Result<wbr>Response</a></span>
     </dt>
-    <dd>{{% md %}}The details of the latest operation. ex: status, error{{% /md %}}</dd>
-    <dt class="property-"
+    <dd>{{% md %}}The details of the latest operation. ex: status, error{{% /md %}}</dd><dt class="property-"
             title="">
         <span id="name_nodejs">
 <a href="#name_nodejs" style="color: inherit; text-decoration: inherit;">name</a>
@@ -848,8 +739,7 @@ All [input](#inputs) properties are implicitly available as output properties. A
         <span class="property-indicator"></span>
         <span class="property-type">string</span>
     </dt>
-    <dd>{{% md %}}The name of the resource.{{% /md %}}</dd>
-    <dt class="property-"
+    <dd>{{% md %}}The name of the resource.{{% /md %}}</dd><dt class="property-"
             title="">
         <span id="publishingstate_nodejs">
 <a href="#publishingstate_nodejs" style="color: inherit; text-decoration: inherit;">publishing<wbr>State</a>
@@ -857,8 +747,7 @@ All [input](#inputs) properties are implicitly available as output properties. A
         <span class="property-indicator"></span>
         <span class="property-type">string</span>
     </dt>
-    <dd>{{% md %}}Describes the readiness of this environment setting{{% /md %}}</dd>
-    <dt class="property-"
+    <dd>{{% md %}}Describes the readiness of this environment setting{{% /md %}}</dd><dt class="property-"
             title="">
         <span id="type_nodejs">
 <a href="#type_nodejs" style="color: inherit; text-decoration: inherit;">type</a>
@@ -866,14 +755,11 @@ All [input](#inputs) properties are implicitly available as output properties. A
         <span class="property-indicator"></span>
         <span class="property-type">string</span>
     </dt>
-    <dd>{{% md %}}The type of the resource.{{% /md %}}</dd>
-</dl>
+    <dd>{{% md %}}The type of the resource.{{% /md %}}</dd></dl>
 {{% /choosable %}}
 
 {{% choosable language python %}}
-<dl class="resources-properties">
-
-    <dt class="property-"
+<dl class="resources-properties"><dt class="property-"
             title="">
         <span id="id_python">
 <a href="#id_python" style="color: inherit; text-decoration: inherit;">id</a>
@@ -881,8 +767,7 @@ All [input](#inputs) properties are implicitly available as output properties. A
         <span class="property-indicator"></span>
         <span class="property-type">str</span>
     </dt>
-    <dd>{{% md %}}The provider-assigned unique ID for this managed resource.{{% /md %}}</dd>
-    <dt class="property-"
+    <dd>{{% md %}}The provider-assigned unique ID for this managed resource.{{% /md %}}</dd><dt class="property-"
             title="">
         <span id="last_changed_python">
 <a href="#last_changed_python" style="color: inherit; text-decoration: inherit;">last_<wbr>changed</a>
@@ -890,8 +775,7 @@ All [input](#inputs) properties are implicitly available as output properties. A
         <span class="property-indicator"></span>
         <span class="property-type">str</span>
     </dt>
-    <dd>{{% md %}}Time when the template VM was last changed.{{% /md %}}</dd>
-    <dt class="property-"
+    <dd>{{% md %}}Time when the template VM was last changed.{{% /md %}}</dd><dt class="property-"
             title="">
         <span id="last_published_python">
 <a href="#last_published_python" style="color: inherit; text-decoration: inherit;">last_<wbr>published</a>
@@ -899,8 +783,7 @@ All [input](#inputs) properties are implicitly available as output properties. A
         <span class="property-indicator"></span>
         <span class="property-type">str</span>
     </dt>
-    <dd>{{% md %}}Time when the template VM was last sent for publishing.{{% /md %}}</dd>
-    <dt class="property-"
+    <dd>{{% md %}}Time when the template VM was last sent for publishing.{{% /md %}}</dd><dt class="property-"
             title="">
         <span id="latest_operation_result_python">
 <a href="#latest_operation_result_python" style="color: inherit; text-decoration: inherit;">latest_<wbr>operation_<wbr>result</a>
@@ -908,8 +791,7 @@ All [input](#inputs) properties are implicitly available as output properties. A
         <span class="property-indicator"></span>
         <span class="property-type"><a href="#latestoperationresultresponse">Latest<wbr>Operation<wbr>Result<wbr>Response</a></span>
     </dt>
-    <dd>{{% md %}}The details of the latest operation. ex: status, error{{% /md %}}</dd>
-    <dt class="property-"
+    <dd>{{% md %}}The details of the latest operation. ex: status, error{{% /md %}}</dd><dt class="property-"
             title="">
         <span id="name_python">
 <a href="#name_python" style="color: inherit; text-decoration: inherit;">name</a>
@@ -917,8 +799,7 @@ All [input](#inputs) properties are implicitly available as output properties. A
         <span class="property-indicator"></span>
         <span class="property-type">str</span>
     </dt>
-    <dd>{{% md %}}The name of the resource.{{% /md %}}</dd>
-    <dt class="property-"
+    <dd>{{% md %}}The name of the resource.{{% /md %}}</dd><dt class="property-"
             title="">
         <span id="publishing_state_python">
 <a href="#publishing_state_python" style="color: inherit; text-decoration: inherit;">publishing_<wbr>state</a>
@@ -926,8 +807,7 @@ All [input](#inputs) properties are implicitly available as output properties. A
         <span class="property-indicator"></span>
         <span class="property-type">str</span>
     </dt>
-    <dd>{{% md %}}Describes the readiness of this environment setting{{% /md %}}</dd>
-    <dt class="property-"
+    <dd>{{% md %}}Describes the readiness of this environment setting{{% /md %}}</dd><dt class="property-"
             title="">
         <span id="type_python">
 <a href="#type_python" style="color: inherit; text-decoration: inherit;">type</a>
@@ -935,8 +815,7 @@ All [input](#inputs) properties are implicitly available as output properties. A
         <span class="property-indicator"></span>
         <span class="property-type">str</span>
     </dt>
-    <dd>{{% md %}}The type of the resource.{{% /md %}}</dd>
-</dl>
+    <dd>{{% md %}}The type of the resource.{{% /md %}}</dd></dl>
 {{% /choosable %}}
 
 
@@ -952,51 +831,37 @@ All [input](#inputs) properties are implicitly available as output properties. A
 <h4 id="configurationstate">Configuration<wbr>State</h4>
 
 {{% choosable language csharp %}}
-<dl class="tabular">
-    <dt>Not<wbr>Applicable</dt>
+<dl class="tabular"><dt>Not<wbr>Applicable</dt>
     <dd>NotApplicable{{% md %}}User either hasn't started configuring their template
-or they haven't started the configuration process.{{% /md %}}</dd>
-    <dt>Completed</dt>
-    <dd>Completed{{% md %}}User is finished modifying the template.{{% /md %}}</dd>
-</dl>
+or they haven't started the configuration process.{{% /md %}}</dd><dt>Completed</dt>
+    <dd>Completed{{% md %}}User is finished modifying the template.{{% /md %}}</dd></dl>
 {{% /choosable %}}
 
 {{% choosable language go %}}
-<dl class="tabular">
-    <dt>Configuration<wbr>State<wbr>Not<wbr>Applicable</dt>
+<dl class="tabular"><dt>Configuration<wbr>State<wbr>Not<wbr>Applicable</dt>
     <dd>NotApplicable{{% md %}}User either hasn't started configuring their template
-or they haven't started the configuration process.{{% /md %}}</dd>
-    <dt>Configuration<wbr>State<wbr>Completed</dt>
-    <dd>Completed{{% md %}}User is finished modifying the template.{{% /md %}}</dd>
-</dl>
+or they haven't started the configuration process.{{% /md %}}</dd><dt>Configuration<wbr>State<wbr>Completed</dt>
+    <dd>Completed{{% md %}}User is finished modifying the template.{{% /md %}}</dd></dl>
 {{% /choosable %}}
 
 {{% choosable language nodejs %}}
-<dl class="tabular">
-    <dt>Not<wbr>Applicable</dt>
+<dl class="tabular"><dt>Not<wbr>Applicable</dt>
     <dd>NotApplicable{{% md %}}User either hasn't started configuring their template
-or they haven't started the configuration process.{{% /md %}}</dd>
-    <dt>Completed</dt>
-    <dd>Completed{{% md %}}User is finished modifying the template.{{% /md %}}</dd>
-</dl>
+or they haven't started the configuration process.{{% /md %}}</dd><dt>Completed</dt>
+    <dd>Completed{{% md %}}User is finished modifying the template.{{% /md %}}</dd></dl>
 {{% /choosable %}}
 
 {{% choosable language python %}}
-<dl class="tabular">
-    <dt>NOT_APPLICABLE</dt>
+<dl class="tabular"><dt>NOT_APPLICABLE</dt>
     <dd>NotApplicable{{% md %}}User either hasn't started configuring their template
-or they haven't started the configuration process.{{% /md %}}</dd>
-    <dt>COMPLETED</dt>
-    <dd>Completed{{% md %}}User is finished modifying the template.{{% /md %}}</dd>
-</dl>
+or they haven't started the configuration process.{{% /md %}}</dd><dt>COMPLETED</dt>
+    <dd>Completed{{% md %}}User is finished modifying the template.{{% /md %}}</dd></dl>
 {{% /choosable %}}
 
 <h4 id="latestoperationresultresponse">Latest<wbr>Operation<wbr>Result<wbr>Response</h4>
 
 {{% choosable language csharp %}}
-<dl class="resources-properties">
-
-    <dt class="property-required"
+<dl class="resources-properties"><dt class="property-required"
             title="Required">
         <span id="errorcode_csharp">
 <a href="#errorcode_csharp" style="color: inherit; text-decoration: inherit;">Error<wbr>Code</a>
@@ -1004,8 +869,7 @@ or they haven't started the configuration process.{{% /md %}}</dd>
         <span class="property-indicator"></span>
         <span class="property-type">string</span>
     </dt>
-    <dd>{{% md %}}Error code on failure.{{% /md %}}</dd>
-    <dt class="property-required"
+    <dd>{{% md %}}Error code on failure.{{% /md %}}</dd><dt class="property-required"
             title="Required">
         <span id="errormessage_csharp">
 <a href="#errormessage_csharp" style="color: inherit; text-decoration: inherit;">Error<wbr>Message</a>
@@ -1013,8 +877,7 @@ or they haven't started the configuration process.{{% /md %}}</dd>
         <span class="property-indicator"></span>
         <span class="property-type">string</span>
     </dt>
-    <dd>{{% md %}}The error message.{{% /md %}}</dd>
-    <dt class="property-required"
+    <dd>{{% md %}}The error message.{{% /md %}}</dd><dt class="property-required"
             title="Required">
         <span id="httpmethod_csharp">
 <a href="#httpmethod_csharp" style="color: inherit; text-decoration: inherit;">Http<wbr>Method</a>
@@ -1022,8 +885,7 @@ or they haven't started the configuration process.{{% /md %}}</dd>
         <span class="property-indicator"></span>
         <span class="property-type">string</span>
     </dt>
-    <dd>{{% md %}}The HttpMethod - PUT/POST/DELETE for the operation.{{% /md %}}</dd>
-    <dt class="property-required"
+    <dd>{{% md %}}The HttpMethod - PUT/POST/DELETE for the operation.{{% /md %}}</dd><dt class="property-required"
             title="Required">
         <span id="operationurl_csharp">
 <a href="#operationurl_csharp" style="color: inherit; text-decoration: inherit;">Operation<wbr>Url</a>
@@ -1031,8 +893,7 @@ or they haven't started the configuration process.{{% /md %}}</dd>
         <span class="property-indicator"></span>
         <span class="property-type">string</span>
     </dt>
-    <dd>{{% md %}}The URL to use to check long-running operation status{{% /md %}}</dd>
-    <dt class="property-required"
+    <dd>{{% md %}}The URL to use to check long-running operation status{{% /md %}}</dd><dt class="property-required"
             title="Required">
         <span id="requesturi_csharp">
 <a href="#requesturi_csharp" style="color: inherit; text-decoration: inherit;">Request<wbr>Uri</a>
@@ -1040,8 +901,7 @@ or they haven't started the configuration process.{{% /md %}}</dd>
         <span class="property-indicator"></span>
         <span class="property-type">string</span>
     </dt>
-    <dd>{{% md %}}Request URI of the operation.{{% /md %}}</dd>
-    <dt class="property-required"
+    <dd>{{% md %}}Request URI of the operation.{{% /md %}}</dd><dt class="property-required"
             title="Required">
         <span id="status_csharp">
 <a href="#status_csharp" style="color: inherit; text-decoration: inherit;">Status</a>
@@ -1049,14 +909,11 @@ or they haven't started the configuration process.{{% /md %}}</dd>
         <span class="property-indicator"></span>
         <span class="property-type">string</span>
     </dt>
-    <dd>{{% md %}}The current status of the operation.{{% /md %}}</dd>
-</dl>
+    <dd>{{% md %}}The current status of the operation.{{% /md %}}</dd></dl>
 {{% /choosable %}}
 
 {{% choosable language go %}}
-<dl class="resources-properties">
-
-    <dt class="property-required"
+<dl class="resources-properties"><dt class="property-required"
             title="Required">
         <span id="errorcode_go">
 <a href="#errorcode_go" style="color: inherit; text-decoration: inherit;">Error<wbr>Code</a>
@@ -1064,8 +921,7 @@ or they haven't started the configuration process.{{% /md %}}</dd>
         <span class="property-indicator"></span>
         <span class="property-type">string</span>
     </dt>
-    <dd>{{% md %}}Error code on failure.{{% /md %}}</dd>
-    <dt class="property-required"
+    <dd>{{% md %}}Error code on failure.{{% /md %}}</dd><dt class="property-required"
             title="Required">
         <span id="errormessage_go">
 <a href="#errormessage_go" style="color: inherit; text-decoration: inherit;">Error<wbr>Message</a>
@@ -1073,8 +929,7 @@ or they haven't started the configuration process.{{% /md %}}</dd>
         <span class="property-indicator"></span>
         <span class="property-type">string</span>
     </dt>
-    <dd>{{% md %}}The error message.{{% /md %}}</dd>
-    <dt class="property-required"
+    <dd>{{% md %}}The error message.{{% /md %}}</dd><dt class="property-required"
             title="Required">
         <span id="httpmethod_go">
 <a href="#httpmethod_go" style="color: inherit; text-decoration: inherit;">Http<wbr>Method</a>
@@ -1082,8 +937,7 @@ or they haven't started the configuration process.{{% /md %}}</dd>
         <span class="property-indicator"></span>
         <span class="property-type">string</span>
     </dt>
-    <dd>{{% md %}}The HttpMethod - PUT/POST/DELETE for the operation.{{% /md %}}</dd>
-    <dt class="property-required"
+    <dd>{{% md %}}The HttpMethod - PUT/POST/DELETE for the operation.{{% /md %}}</dd><dt class="property-required"
             title="Required">
         <span id="operationurl_go">
 <a href="#operationurl_go" style="color: inherit; text-decoration: inherit;">Operation<wbr>Url</a>
@@ -1091,8 +945,7 @@ or they haven't started the configuration process.{{% /md %}}</dd>
         <span class="property-indicator"></span>
         <span class="property-type">string</span>
     </dt>
-    <dd>{{% md %}}The URL to use to check long-running operation status{{% /md %}}</dd>
-    <dt class="property-required"
+    <dd>{{% md %}}The URL to use to check long-running operation status{{% /md %}}</dd><dt class="property-required"
             title="Required">
         <span id="requesturi_go">
 <a href="#requesturi_go" style="color: inherit; text-decoration: inherit;">Request<wbr>Uri</a>
@@ -1100,8 +953,7 @@ or they haven't started the configuration process.{{% /md %}}</dd>
         <span class="property-indicator"></span>
         <span class="property-type">string</span>
     </dt>
-    <dd>{{% md %}}Request URI of the operation.{{% /md %}}</dd>
-    <dt class="property-required"
+    <dd>{{% md %}}Request URI of the operation.{{% /md %}}</dd><dt class="property-required"
             title="Required">
         <span id="status_go">
 <a href="#status_go" style="color: inherit; text-decoration: inherit;">Status</a>
@@ -1109,14 +961,11 @@ or they haven't started the configuration process.{{% /md %}}</dd>
         <span class="property-indicator"></span>
         <span class="property-type">string</span>
     </dt>
-    <dd>{{% md %}}The current status of the operation.{{% /md %}}</dd>
-</dl>
+    <dd>{{% md %}}The current status of the operation.{{% /md %}}</dd></dl>
 {{% /choosable %}}
 
 {{% choosable language nodejs %}}
-<dl class="resources-properties">
-
-    <dt class="property-required"
+<dl class="resources-properties"><dt class="property-required"
             title="Required">
         <span id="errorcode_nodejs">
 <a href="#errorcode_nodejs" style="color: inherit; text-decoration: inherit;">error<wbr>Code</a>
@@ -1124,8 +973,7 @@ or they haven't started the configuration process.{{% /md %}}</dd>
         <span class="property-indicator"></span>
         <span class="property-type">string</span>
     </dt>
-    <dd>{{% md %}}Error code on failure.{{% /md %}}</dd>
-    <dt class="property-required"
+    <dd>{{% md %}}Error code on failure.{{% /md %}}</dd><dt class="property-required"
             title="Required">
         <span id="errormessage_nodejs">
 <a href="#errormessage_nodejs" style="color: inherit; text-decoration: inherit;">error<wbr>Message</a>
@@ -1133,8 +981,7 @@ or they haven't started the configuration process.{{% /md %}}</dd>
         <span class="property-indicator"></span>
         <span class="property-type">string</span>
     </dt>
-    <dd>{{% md %}}The error message.{{% /md %}}</dd>
-    <dt class="property-required"
+    <dd>{{% md %}}The error message.{{% /md %}}</dd><dt class="property-required"
             title="Required">
         <span id="httpmethod_nodejs">
 <a href="#httpmethod_nodejs" style="color: inherit; text-decoration: inherit;">http<wbr>Method</a>
@@ -1142,8 +989,7 @@ or they haven't started the configuration process.{{% /md %}}</dd>
         <span class="property-indicator"></span>
         <span class="property-type">string</span>
     </dt>
-    <dd>{{% md %}}The HttpMethod - PUT/POST/DELETE for the operation.{{% /md %}}</dd>
-    <dt class="property-required"
+    <dd>{{% md %}}The HttpMethod - PUT/POST/DELETE for the operation.{{% /md %}}</dd><dt class="property-required"
             title="Required">
         <span id="operationurl_nodejs">
 <a href="#operationurl_nodejs" style="color: inherit; text-decoration: inherit;">operation<wbr>Url</a>
@@ -1151,8 +997,7 @@ or they haven't started the configuration process.{{% /md %}}</dd>
         <span class="property-indicator"></span>
         <span class="property-type">string</span>
     </dt>
-    <dd>{{% md %}}The URL to use to check long-running operation status{{% /md %}}</dd>
-    <dt class="property-required"
+    <dd>{{% md %}}The URL to use to check long-running operation status{{% /md %}}</dd><dt class="property-required"
             title="Required">
         <span id="requesturi_nodejs">
 <a href="#requesturi_nodejs" style="color: inherit; text-decoration: inherit;">request<wbr>Uri</a>
@@ -1160,8 +1005,7 @@ or they haven't started the configuration process.{{% /md %}}</dd>
         <span class="property-indicator"></span>
         <span class="property-type">string</span>
     </dt>
-    <dd>{{% md %}}Request URI of the operation.{{% /md %}}</dd>
-    <dt class="property-required"
+    <dd>{{% md %}}Request URI of the operation.{{% /md %}}</dd><dt class="property-required"
             title="Required">
         <span id="status_nodejs">
 <a href="#status_nodejs" style="color: inherit; text-decoration: inherit;">status</a>
@@ -1169,14 +1013,11 @@ or they haven't started the configuration process.{{% /md %}}</dd>
         <span class="property-indicator"></span>
         <span class="property-type">string</span>
     </dt>
-    <dd>{{% md %}}The current status of the operation.{{% /md %}}</dd>
-</dl>
+    <dd>{{% md %}}The current status of the operation.{{% /md %}}</dd></dl>
 {{% /choosable %}}
 
 {{% choosable language python %}}
-<dl class="resources-properties">
-
-    <dt class="property-required"
+<dl class="resources-properties"><dt class="property-required"
             title="Required">
         <span id="error_code_python">
 <a href="#error_code_python" style="color: inherit; text-decoration: inherit;">error_<wbr>code</a>
@@ -1184,8 +1025,7 @@ or they haven't started the configuration process.{{% /md %}}</dd>
         <span class="property-indicator"></span>
         <span class="property-type">str</span>
     </dt>
-    <dd>{{% md %}}Error code on failure.{{% /md %}}</dd>
-    <dt class="property-required"
+    <dd>{{% md %}}Error code on failure.{{% /md %}}</dd><dt class="property-required"
             title="Required">
         <span id="error_message_python">
 <a href="#error_message_python" style="color: inherit; text-decoration: inherit;">error_<wbr>message</a>
@@ -1193,8 +1033,7 @@ or they haven't started the configuration process.{{% /md %}}</dd>
         <span class="property-indicator"></span>
         <span class="property-type">str</span>
     </dt>
-    <dd>{{% md %}}The error message.{{% /md %}}</dd>
-    <dt class="property-required"
+    <dd>{{% md %}}The error message.{{% /md %}}</dd><dt class="property-required"
             title="Required">
         <span id="http_method_python">
 <a href="#http_method_python" style="color: inherit; text-decoration: inherit;">http_<wbr>method</a>
@@ -1202,8 +1041,7 @@ or they haven't started the configuration process.{{% /md %}}</dd>
         <span class="property-indicator"></span>
         <span class="property-type">str</span>
     </dt>
-    <dd>{{% md %}}The HttpMethod - PUT/POST/DELETE for the operation.{{% /md %}}</dd>
-    <dt class="property-required"
+    <dd>{{% md %}}The HttpMethod - PUT/POST/DELETE for the operation.{{% /md %}}</dd><dt class="property-required"
             title="Required">
         <span id="operation_url_python">
 <a href="#operation_url_python" style="color: inherit; text-decoration: inherit;">operation_<wbr>url</a>
@@ -1211,8 +1049,7 @@ or they haven't started the configuration process.{{% /md %}}</dd>
         <span class="property-indicator"></span>
         <span class="property-type">str</span>
     </dt>
-    <dd>{{% md %}}The URL to use to check long-running operation status{{% /md %}}</dd>
-    <dt class="property-required"
+    <dd>{{% md %}}The URL to use to check long-running operation status{{% /md %}}</dd><dt class="property-required"
             title="Required">
         <span id="request_uri_python">
 <a href="#request_uri_python" style="color: inherit; text-decoration: inherit;">request_<wbr>uri</a>
@@ -1220,8 +1057,7 @@ or they haven't started the configuration process.{{% /md %}}</dd>
         <span class="property-indicator"></span>
         <span class="property-type">str</span>
     </dt>
-    <dd>{{% md %}}Request URI of the operation.{{% /md %}}</dd>
-    <dt class="property-required"
+    <dd>{{% md %}}Request URI of the operation.{{% /md %}}</dd><dt class="property-required"
             title="Required">
         <span id="status_python">
 <a href="#status_python" style="color: inherit; text-decoration: inherit;">status</a>
@@ -1229,62 +1065,43 @@ or they haven't started the configuration process.{{% /md %}}</dd>
         <span class="property-indicator"></span>
         <span class="property-type">str</span>
     </dt>
-    <dd>{{% md %}}The current status of the operation.{{% /md %}}</dd>
-</dl>
+    <dd>{{% md %}}The current status of the operation.{{% /md %}}</dd></dl>
 {{% /choosable %}}
 
 <h4 id="managedlabvmsize">Managed<wbr>Lab<wbr>Vm<wbr>Size</h4>
 
 {{% choosable language csharp %}}
-<dl class="tabular">
-    <dt>Basic</dt>
-    <dd>Basic{{% md %}}The base VM size{{% /md %}}</dd>
-    <dt>Standard</dt>
-    <dd>Standard{{% md %}}The standard or default VM size{{% /md %}}</dd>
-    <dt>Performance</dt>
-    <dd>Performance{{% md %}}The most performant VM size{{% /md %}}</dd>
-</dl>
+<dl class="tabular"><dt>Basic</dt>
+    <dd>Basic{{% md %}}The base VM size{{% /md %}}</dd><dt>Standard</dt>
+    <dd>Standard{{% md %}}The standard or default VM size{{% /md %}}</dd><dt>Performance</dt>
+    <dd>Performance{{% md %}}The most performant VM size{{% /md %}}</dd></dl>
 {{% /choosable %}}
 
 {{% choosable language go %}}
-<dl class="tabular">
-    <dt>Managed<wbr>Lab<wbr>Vm<wbr>Size<wbr>Basic</dt>
-    <dd>Basic{{% md %}}The base VM size{{% /md %}}</dd>
-    <dt>Managed<wbr>Lab<wbr>Vm<wbr>Size<wbr>Standard</dt>
-    <dd>Standard{{% md %}}The standard or default VM size{{% /md %}}</dd>
-    <dt>Managed<wbr>Lab<wbr>Vm<wbr>Size<wbr>Performance</dt>
-    <dd>Performance{{% md %}}The most performant VM size{{% /md %}}</dd>
-</dl>
+<dl class="tabular"><dt>Managed<wbr>Lab<wbr>Vm<wbr>Size<wbr>Basic</dt>
+    <dd>Basic{{% md %}}The base VM size{{% /md %}}</dd><dt>Managed<wbr>Lab<wbr>Vm<wbr>Size<wbr>Standard</dt>
+    <dd>Standard{{% md %}}The standard or default VM size{{% /md %}}</dd><dt>Managed<wbr>Lab<wbr>Vm<wbr>Size<wbr>Performance</dt>
+    <dd>Performance{{% md %}}The most performant VM size{{% /md %}}</dd></dl>
 {{% /choosable %}}
 
 {{% choosable language nodejs %}}
-<dl class="tabular">
-    <dt>Basic</dt>
-    <dd>Basic{{% md %}}The base VM size{{% /md %}}</dd>
-    <dt>Standard</dt>
-    <dd>Standard{{% md %}}The standard or default VM size{{% /md %}}</dd>
-    <dt>Performance</dt>
-    <dd>Performance{{% md %}}The most performant VM size{{% /md %}}</dd>
-</dl>
+<dl class="tabular"><dt>Basic</dt>
+    <dd>Basic{{% md %}}The base VM size{{% /md %}}</dd><dt>Standard</dt>
+    <dd>Standard{{% md %}}The standard or default VM size{{% /md %}}</dd><dt>Performance</dt>
+    <dd>Performance{{% md %}}The most performant VM size{{% /md %}}</dd></dl>
 {{% /choosable %}}
 
 {{% choosable language python %}}
-<dl class="tabular">
-    <dt>BASIC</dt>
-    <dd>Basic{{% md %}}The base VM size{{% /md %}}</dd>
-    <dt>STANDARD</dt>
-    <dd>Standard{{% md %}}The standard or default VM size{{% /md %}}</dd>
-    <dt>PERFORMANCE</dt>
-    <dd>Performance{{% md %}}The most performant VM size{{% /md %}}</dd>
-</dl>
+<dl class="tabular"><dt>BASIC</dt>
+    <dd>Basic{{% md %}}The base VM size{{% /md %}}</dd><dt>STANDARD</dt>
+    <dd>Standard{{% md %}}The standard or default VM size{{% /md %}}</dd><dt>PERFORMANCE</dt>
+    <dd>Performance{{% md %}}The most performant VM size{{% /md %}}</dd></dl>
 {{% /choosable %}}
 
 <h4 id="referencevm">Reference<wbr>Vm</h4>
 
 {{% choosable language csharp %}}
-<dl class="resources-properties">
-
-    <dt class="property-required"
+<dl class="resources-properties"><dt class="property-required"
             title="Required">
         <span id="username_csharp">
 <a href="#username_csharp" style="color: inherit; text-decoration: inherit;">User<wbr>Name</a>
@@ -1292,8 +1109,7 @@ or they haven't started the configuration process.{{% /md %}}</dd>
         <span class="property-indicator"></span>
         <span class="property-type">string</span>
     </dt>
-    <dd>{{% md %}}The username of the virtual machine{{% /md %}}</dd>
-    <dt class="property-optional"
+    <dd>{{% md %}}The username of the virtual machine{{% /md %}}</dd><dt class="property-optional"
             title="Optional">
         <span id="password_csharp">
 <a href="#password_csharp" style="color: inherit; text-decoration: inherit;">Password</a>
@@ -1301,14 +1117,11 @@ or they haven't started the configuration process.{{% /md %}}</dd>
         <span class="property-indicator"></span>
         <span class="property-type">string</span>
     </dt>
-    <dd>{{% md %}}The password of the virtual machine. This will be set to null in GET resource API{{% /md %}}</dd>
-</dl>
+    <dd>{{% md %}}The password of the virtual machine. This will be set to null in GET resource API{{% /md %}}</dd></dl>
 {{% /choosable %}}
 
 {{% choosable language go %}}
-<dl class="resources-properties">
-
-    <dt class="property-required"
+<dl class="resources-properties"><dt class="property-required"
             title="Required">
         <span id="username_go">
 <a href="#username_go" style="color: inherit; text-decoration: inherit;">User<wbr>Name</a>
@@ -1316,8 +1129,7 @@ or they haven't started the configuration process.{{% /md %}}</dd>
         <span class="property-indicator"></span>
         <span class="property-type">string</span>
     </dt>
-    <dd>{{% md %}}The username of the virtual machine{{% /md %}}</dd>
-    <dt class="property-optional"
+    <dd>{{% md %}}The username of the virtual machine{{% /md %}}</dd><dt class="property-optional"
             title="Optional">
         <span id="password_go">
 <a href="#password_go" style="color: inherit; text-decoration: inherit;">Password</a>
@@ -1325,14 +1137,11 @@ or they haven't started the configuration process.{{% /md %}}</dd>
         <span class="property-indicator"></span>
         <span class="property-type">string</span>
     </dt>
-    <dd>{{% md %}}The password of the virtual machine. This will be set to null in GET resource API{{% /md %}}</dd>
-</dl>
+    <dd>{{% md %}}The password of the virtual machine. This will be set to null in GET resource API{{% /md %}}</dd></dl>
 {{% /choosable %}}
 
 {{% choosable language nodejs %}}
-<dl class="resources-properties">
-
-    <dt class="property-required"
+<dl class="resources-properties"><dt class="property-required"
             title="Required">
         <span id="username_nodejs">
 <a href="#username_nodejs" style="color: inherit; text-decoration: inherit;">user<wbr>Name</a>
@@ -1340,8 +1149,7 @@ or they haven't started the configuration process.{{% /md %}}</dd>
         <span class="property-indicator"></span>
         <span class="property-type">string</span>
     </dt>
-    <dd>{{% md %}}The username of the virtual machine{{% /md %}}</dd>
-    <dt class="property-optional"
+    <dd>{{% md %}}The username of the virtual machine{{% /md %}}</dd><dt class="property-optional"
             title="Optional">
         <span id="password_nodejs">
 <a href="#password_nodejs" style="color: inherit; text-decoration: inherit;">password</a>
@@ -1349,14 +1157,11 @@ or they haven't started the configuration process.{{% /md %}}</dd>
         <span class="property-indicator"></span>
         <span class="property-type">string</span>
     </dt>
-    <dd>{{% md %}}The password of the virtual machine. This will be set to null in GET resource API{{% /md %}}</dd>
-</dl>
+    <dd>{{% md %}}The password of the virtual machine. This will be set to null in GET resource API{{% /md %}}</dd></dl>
 {{% /choosable %}}
 
 {{% choosable language python %}}
-<dl class="resources-properties">
-
-    <dt class="property-required"
+<dl class="resources-properties"><dt class="property-required"
             title="Required">
         <span id="user_name_python">
 <a href="#user_name_python" style="color: inherit; text-decoration: inherit;">user_<wbr>name</a>
@@ -1364,8 +1169,7 @@ or they haven't started the configuration process.{{% /md %}}</dd>
         <span class="property-indicator"></span>
         <span class="property-type">str</span>
     </dt>
-    <dd>{{% md %}}The username of the virtual machine{{% /md %}}</dd>
-    <dt class="property-optional"
+    <dd>{{% md %}}The username of the virtual machine{{% /md %}}</dd><dt class="property-optional"
             title="Optional">
         <span id="password_python">
 <a href="#password_python" style="color: inherit; text-decoration: inherit;">password</a>
@@ -1373,16 +1177,13 @@ or they haven't started the configuration process.{{% /md %}}</dd>
         <span class="property-indicator"></span>
         <span class="property-type">str</span>
     </dt>
-    <dd>{{% md %}}The password of the virtual machine. This will be set to null in GET resource API{{% /md %}}</dd>
-</dl>
+    <dd>{{% md %}}The password of the virtual machine. This will be set to null in GET resource API{{% /md %}}</dd></dl>
 {{% /choosable %}}
 
 <h4 id="referencevmresponse">Reference<wbr>Vm<wbr>Response</h4>
 
 {{% choosable language csharp %}}
-<dl class="resources-properties">
-
-    <dt class="property-required"
+<dl class="resources-properties"><dt class="property-required"
             title="Required">
         <span id="username_csharp">
 <a href="#username_csharp" style="color: inherit; text-decoration: inherit;">User<wbr>Name</a>
@@ -1390,8 +1191,7 @@ or they haven't started the configuration process.{{% /md %}}</dd>
         <span class="property-indicator"></span>
         <span class="property-type">string</span>
     </dt>
-    <dd>{{% md %}}The username of the virtual machine{{% /md %}}</dd>
-    <dt class="property-required"
+    <dd>{{% md %}}The username of the virtual machine{{% /md %}}</dd><dt class="property-required"
             title="Required">
         <span id="vmresourceid_csharp">
 <a href="#vmresourceid_csharp" style="color: inherit; text-decoration: inherit;">Vm<wbr>Resource<wbr>Id</a>
@@ -1399,8 +1199,7 @@ or they haven't started the configuration process.{{% /md %}}</dd>
         <span class="property-indicator"></span>
         <span class="property-type">string</span>
     </dt>
-    <dd>{{% md %}}VM resource Id for the environment{{% /md %}}</dd>
-    <dt class="property-required"
+    <dd>{{% md %}}VM resource Id for the environment{{% /md %}}</dd><dt class="property-required"
             title="Required">
         <span id="vmstatedetails_csharp">
 <a href="#vmstatedetails_csharp" style="color: inherit; text-decoration: inherit;">Vm<wbr>State<wbr>Details</a>
@@ -1408,8 +1207,7 @@ or they haven't started the configuration process.{{% /md %}}</dd>
         <span class="property-indicator"></span>
         <span class="property-type"><a href="#vmstatedetailsresponse">Pulumi.<wbr>Azure<wbr>Native.<wbr>Lab<wbr>Services.<wbr>Inputs.<wbr>Vm<wbr>State<wbr>Details<wbr>Response<wbr>Args</a></span>
     </dt>
-    <dd>{{% md %}}The state details for the reference virtual machine.{{% /md %}}</dd>
-    <dt class="property-optional"
+    <dd>{{% md %}}The state details for the reference virtual machine.{{% /md %}}</dd><dt class="property-optional"
             title="Optional">
         <span id="password_csharp">
 <a href="#password_csharp" style="color: inherit; text-decoration: inherit;">Password</a>
@@ -1417,14 +1215,11 @@ or they haven't started the configuration process.{{% /md %}}</dd>
         <span class="property-indicator"></span>
         <span class="property-type">string</span>
     </dt>
-    <dd>{{% md %}}The password of the virtual machine. This will be set to null in GET resource API{{% /md %}}</dd>
-</dl>
+    <dd>{{% md %}}The password of the virtual machine. This will be set to null in GET resource API{{% /md %}}</dd></dl>
 {{% /choosable %}}
 
 {{% choosable language go %}}
-<dl class="resources-properties">
-
-    <dt class="property-required"
+<dl class="resources-properties"><dt class="property-required"
             title="Required">
         <span id="username_go">
 <a href="#username_go" style="color: inherit; text-decoration: inherit;">User<wbr>Name</a>
@@ -1432,8 +1227,7 @@ or they haven't started the configuration process.{{% /md %}}</dd>
         <span class="property-indicator"></span>
         <span class="property-type">string</span>
     </dt>
-    <dd>{{% md %}}The username of the virtual machine{{% /md %}}</dd>
-    <dt class="property-required"
+    <dd>{{% md %}}The username of the virtual machine{{% /md %}}</dd><dt class="property-required"
             title="Required">
         <span id="vmresourceid_go">
 <a href="#vmresourceid_go" style="color: inherit; text-decoration: inherit;">Vm<wbr>Resource<wbr>Id</a>
@@ -1441,8 +1235,7 @@ or they haven't started the configuration process.{{% /md %}}</dd>
         <span class="property-indicator"></span>
         <span class="property-type">string</span>
     </dt>
-    <dd>{{% md %}}VM resource Id for the environment{{% /md %}}</dd>
-    <dt class="property-required"
+    <dd>{{% md %}}VM resource Id for the environment{{% /md %}}</dd><dt class="property-required"
             title="Required">
         <span id="vmstatedetails_go">
 <a href="#vmstatedetails_go" style="color: inherit; text-decoration: inherit;">Vm<wbr>State<wbr>Details</a>
@@ -1450,8 +1243,7 @@ or they haven't started the configuration process.{{% /md %}}</dd>
         <span class="property-indicator"></span>
         <span class="property-type"><a href="#vmstatedetailsresponse">Vm<wbr>State<wbr>Details<wbr>Response</a></span>
     </dt>
-    <dd>{{% md %}}The state details for the reference virtual machine.{{% /md %}}</dd>
-    <dt class="property-optional"
+    <dd>{{% md %}}The state details for the reference virtual machine.{{% /md %}}</dd><dt class="property-optional"
             title="Optional">
         <span id="password_go">
 <a href="#password_go" style="color: inherit; text-decoration: inherit;">Password</a>
@@ -1459,14 +1251,11 @@ or they haven't started the configuration process.{{% /md %}}</dd>
         <span class="property-indicator"></span>
         <span class="property-type">string</span>
     </dt>
-    <dd>{{% md %}}The password of the virtual machine. This will be set to null in GET resource API{{% /md %}}</dd>
-</dl>
+    <dd>{{% md %}}The password of the virtual machine. This will be set to null in GET resource API{{% /md %}}</dd></dl>
 {{% /choosable %}}
 
 {{% choosable language nodejs %}}
-<dl class="resources-properties">
-
-    <dt class="property-required"
+<dl class="resources-properties"><dt class="property-required"
             title="Required">
         <span id="username_nodejs">
 <a href="#username_nodejs" style="color: inherit; text-decoration: inherit;">user<wbr>Name</a>
@@ -1474,8 +1263,7 @@ or they haven't started the configuration process.{{% /md %}}</dd>
         <span class="property-indicator"></span>
         <span class="property-type">string</span>
     </dt>
-    <dd>{{% md %}}The username of the virtual machine{{% /md %}}</dd>
-    <dt class="property-required"
+    <dd>{{% md %}}The username of the virtual machine{{% /md %}}</dd><dt class="property-required"
             title="Required">
         <span id="vmresourceid_nodejs">
 <a href="#vmresourceid_nodejs" style="color: inherit; text-decoration: inherit;">vm<wbr>Resource<wbr>Id</a>
@@ -1483,8 +1271,7 @@ or they haven't started the configuration process.{{% /md %}}</dd>
         <span class="property-indicator"></span>
         <span class="property-type">string</span>
     </dt>
-    <dd>{{% md %}}VM resource Id for the environment{{% /md %}}</dd>
-    <dt class="property-required"
+    <dd>{{% md %}}VM resource Id for the environment{{% /md %}}</dd><dt class="property-required"
             title="Required">
         <span id="vmstatedetails_nodejs">
 <a href="#vmstatedetails_nodejs" style="color: inherit; text-decoration: inherit;">vm<wbr>State<wbr>Details</a>
@@ -1492,8 +1279,7 @@ or they haven't started the configuration process.{{% /md %}}</dd>
         <span class="property-indicator"></span>
         <span class="property-type"><a href="#vmstatedetailsresponse">Vm<wbr>State<wbr>Details<wbr>Response</a></span>
     </dt>
-    <dd>{{% md %}}The state details for the reference virtual machine.{{% /md %}}</dd>
-    <dt class="property-optional"
+    <dd>{{% md %}}The state details for the reference virtual machine.{{% /md %}}</dd><dt class="property-optional"
             title="Optional">
         <span id="password_nodejs">
 <a href="#password_nodejs" style="color: inherit; text-decoration: inherit;">password</a>
@@ -1501,14 +1287,11 @@ or they haven't started the configuration process.{{% /md %}}</dd>
         <span class="property-indicator"></span>
         <span class="property-type">string</span>
     </dt>
-    <dd>{{% md %}}The password of the virtual machine. This will be set to null in GET resource API{{% /md %}}</dd>
-</dl>
+    <dd>{{% md %}}The password of the virtual machine. This will be set to null in GET resource API{{% /md %}}</dd></dl>
 {{% /choosable %}}
 
 {{% choosable language python %}}
-<dl class="resources-properties">
-
-    <dt class="property-required"
+<dl class="resources-properties"><dt class="property-required"
             title="Required">
         <span id="user_name_python">
 <a href="#user_name_python" style="color: inherit; text-decoration: inherit;">user_<wbr>name</a>
@@ -1516,8 +1299,7 @@ or they haven't started the configuration process.{{% /md %}}</dd>
         <span class="property-indicator"></span>
         <span class="property-type">str</span>
     </dt>
-    <dd>{{% md %}}The username of the virtual machine{{% /md %}}</dd>
-    <dt class="property-required"
+    <dd>{{% md %}}The username of the virtual machine{{% /md %}}</dd><dt class="property-required"
             title="Required">
         <span id="vm_resource_id_python">
 <a href="#vm_resource_id_python" style="color: inherit; text-decoration: inherit;">vm_<wbr>resource_<wbr>id</a>
@@ -1525,8 +1307,7 @@ or they haven't started the configuration process.{{% /md %}}</dd>
         <span class="property-indicator"></span>
         <span class="property-type">str</span>
     </dt>
-    <dd>{{% md %}}VM resource Id for the environment{{% /md %}}</dd>
-    <dt class="property-required"
+    <dd>{{% md %}}VM resource Id for the environment{{% /md %}}</dd><dt class="property-required"
             title="Required">
         <span id="vm_state_details_python">
 <a href="#vm_state_details_python" style="color: inherit; text-decoration: inherit;">vm_<wbr>state_<wbr>details</a>
@@ -1534,8 +1315,7 @@ or they haven't started the configuration process.{{% /md %}}</dd>
         <span class="property-indicator"></span>
         <span class="property-type"><a href="#vmstatedetailsresponse">Vm<wbr>State<wbr>Details<wbr>Response<wbr>Args</a></span>
     </dt>
-    <dd>{{% md %}}The state details for the reference virtual machine.{{% /md %}}</dd>
-    <dt class="property-optional"
+    <dd>{{% md %}}The state details for the reference virtual machine.{{% /md %}}</dd><dt class="property-optional"
             title="Optional">
         <span id="password_python">
 <a href="#password_python" style="color: inherit; text-decoration: inherit;">password</a>
@@ -1543,16 +1323,13 @@ or they haven't started the configuration process.{{% /md %}}</dd>
         <span class="property-indicator"></span>
         <span class="property-type">str</span>
     </dt>
-    <dd>{{% md %}}The password of the virtual machine. This will be set to null in GET resource API{{% /md %}}</dd>
-</dl>
+    <dd>{{% md %}}The password of the virtual machine. This will be set to null in GET resource API{{% /md %}}</dd></dl>
 {{% /choosable %}}
 
 <h4 id="resourcesettings">Resource<wbr>Settings</h4>
 
 {{% choosable language csharp %}}
-<dl class="resources-properties">
-
-    <dt class="property-required"
+<dl class="resources-properties"><dt class="property-required"
             title="Required">
         <span id="referencevm_csharp">
 <a href="#referencevm_csharp" style="color: inherit; text-decoration: inherit;">Reference<wbr>Vm</a>
@@ -1560,8 +1337,7 @@ or they haven't started the configuration process.{{% /md %}}</dd>
         <span class="property-indicator"></span>
         <span class="property-type"><a href="#referencevm">Pulumi.<wbr>Azure<wbr>Native.<wbr>Lab<wbr>Services.<wbr>Inputs.<wbr>Reference<wbr>Vm<wbr>Args</a></span>
     </dt>
-    <dd>{{% md %}}Details specific to Reference Vm{{% /md %}}</dd>
-    <dt class="property-optional"
+    <dd>{{% md %}}Details specific to Reference Vm{{% /md %}}</dd><dt class="property-optional"
             title="Optional">
         <span id="galleryimageresourceid_csharp">
 <a href="#galleryimageresourceid_csharp" style="color: inherit; text-decoration: inherit;">Gallery<wbr>Image<wbr>Resource<wbr>Id</a>
@@ -1569,8 +1345,7 @@ or they haven't started the configuration process.{{% /md %}}</dd>
         <span class="property-indicator"></span>
         <span class="property-type">string</span>
     </dt>
-    <dd>{{% md %}}The resource id of the gallery image used for creating the virtual machine{{% /md %}}</dd>
-    <dt class="property-optional"
+    <dd>{{% md %}}The resource id of the gallery image used for creating the virtual machine{{% /md %}}</dd><dt class="property-optional"
             title="Optional">
         <span id="size_csharp">
 <a href="#size_csharp" style="color: inherit; text-decoration: inherit;">Size</a>
@@ -1578,14 +1353,11 @@ or they haven't started the configuration process.{{% /md %}}</dd>
         <span class="property-indicator"></span>
         <span class="property-type">string | <a href="#managedlabvmsize">Pulumi.<wbr>Azure<wbr>Native.<wbr>Lab<wbr>Services.<wbr>Managed<wbr>Lab<wbr>Vm<wbr>Size</a></span>
     </dt>
-    <dd>{{% md %}}The size of the virtual machine{{% /md %}}</dd>
-</dl>
+    <dd>{{% md %}}The size of the virtual machine{{% /md %}}</dd></dl>
 {{% /choosable %}}
 
 {{% choosable language go %}}
-<dl class="resources-properties">
-
-    <dt class="property-required"
+<dl class="resources-properties"><dt class="property-required"
             title="Required">
         <span id="referencevm_go">
 <a href="#referencevm_go" style="color: inherit; text-decoration: inherit;">Reference<wbr>Vm</a>
@@ -1593,8 +1365,7 @@ or they haven't started the configuration process.{{% /md %}}</dd>
         <span class="property-indicator"></span>
         <span class="property-type"><a href="#referencevm">Reference<wbr>Vm</a></span>
     </dt>
-    <dd>{{% md %}}Details specific to Reference Vm{{% /md %}}</dd>
-    <dt class="property-optional"
+    <dd>{{% md %}}Details specific to Reference Vm{{% /md %}}</dd><dt class="property-optional"
             title="Optional">
         <span id="galleryimageresourceid_go">
 <a href="#galleryimageresourceid_go" style="color: inherit; text-decoration: inherit;">Gallery<wbr>Image<wbr>Resource<wbr>Id</a>
@@ -1602,8 +1373,7 @@ or they haven't started the configuration process.{{% /md %}}</dd>
         <span class="property-indicator"></span>
         <span class="property-type">string</span>
     </dt>
-    <dd>{{% md %}}The resource id of the gallery image used for creating the virtual machine{{% /md %}}</dd>
-    <dt class="property-optional"
+    <dd>{{% md %}}The resource id of the gallery image used for creating the virtual machine{{% /md %}}</dd><dt class="property-optional"
             title="Optional">
         <span id="size_go">
 <a href="#size_go" style="color: inherit; text-decoration: inherit;">Size</a>
@@ -1611,14 +1381,11 @@ or they haven't started the configuration process.{{% /md %}}</dd>
         <span class="property-indicator"></span>
         <span class="property-type">string | <a href="#managedlabvmsize">Managed<wbr>Lab<wbr>Vm<wbr>Size</a></span>
     </dt>
-    <dd>{{% md %}}The size of the virtual machine{{% /md %}}</dd>
-</dl>
+    <dd>{{% md %}}The size of the virtual machine{{% /md %}}</dd></dl>
 {{% /choosable %}}
 
 {{% choosable language nodejs %}}
-<dl class="resources-properties">
-
-    <dt class="property-required"
+<dl class="resources-properties"><dt class="property-required"
             title="Required">
         <span id="referencevm_nodejs">
 <a href="#referencevm_nodejs" style="color: inherit; text-decoration: inherit;">reference<wbr>Vm</a>
@@ -1626,8 +1393,7 @@ or they haven't started the configuration process.{{% /md %}}</dd>
         <span class="property-indicator"></span>
         <span class="property-type"><a href="#referencevm">Reference<wbr>Vm</a></span>
     </dt>
-    <dd>{{% md %}}Details specific to Reference Vm{{% /md %}}</dd>
-    <dt class="property-optional"
+    <dd>{{% md %}}Details specific to Reference Vm{{% /md %}}</dd><dt class="property-optional"
             title="Optional">
         <span id="galleryimageresourceid_nodejs">
 <a href="#galleryimageresourceid_nodejs" style="color: inherit; text-decoration: inherit;">gallery<wbr>Image<wbr>Resource<wbr>Id</a>
@@ -1635,8 +1401,7 @@ or they haven't started the configuration process.{{% /md %}}</dd>
         <span class="property-indicator"></span>
         <span class="property-type">string</span>
     </dt>
-    <dd>{{% md %}}The resource id of the gallery image used for creating the virtual machine{{% /md %}}</dd>
-    <dt class="property-optional"
+    <dd>{{% md %}}The resource id of the gallery image used for creating the virtual machine{{% /md %}}</dd><dt class="property-optional"
             title="Optional">
         <span id="size_nodejs">
 <a href="#size_nodejs" style="color: inherit; text-decoration: inherit;">size</a>
@@ -1644,14 +1409,11 @@ or they haven't started the configuration process.{{% /md %}}</dd>
         <span class="property-indicator"></span>
         <span class="property-type">string | <a href="#managedlabvmsize">Managed<wbr>Lab<wbr>Vm<wbr>Size</a></span>
     </dt>
-    <dd>{{% md %}}The size of the virtual machine{{% /md %}}</dd>
-</dl>
+    <dd>{{% md %}}The size of the virtual machine{{% /md %}}</dd></dl>
 {{% /choosable %}}
 
 {{% choosable language python %}}
-<dl class="resources-properties">
-
-    <dt class="property-required"
+<dl class="resources-properties"><dt class="property-required"
             title="Required">
         <span id="reference_vm_python">
 <a href="#reference_vm_python" style="color: inherit; text-decoration: inherit;">reference_<wbr>vm</a>
@@ -1659,8 +1421,7 @@ or they haven't started the configuration process.{{% /md %}}</dd>
         <span class="property-indicator"></span>
         <span class="property-type"><a href="#referencevm">Reference<wbr>Vm<wbr>Args</a></span>
     </dt>
-    <dd>{{% md %}}Details specific to Reference Vm{{% /md %}}</dd>
-    <dt class="property-optional"
+    <dd>{{% md %}}Details specific to Reference Vm{{% /md %}}</dd><dt class="property-optional"
             title="Optional">
         <span id="gallery_image_resource_id_python">
 <a href="#gallery_image_resource_id_python" style="color: inherit; text-decoration: inherit;">gallery_<wbr>image_<wbr>resource_<wbr>id</a>
@@ -1668,8 +1429,7 @@ or they haven't started the configuration process.{{% /md %}}</dd>
         <span class="property-indicator"></span>
         <span class="property-type">str</span>
     </dt>
-    <dd>{{% md %}}The resource id of the gallery image used for creating the virtual machine{{% /md %}}</dd>
-    <dt class="property-optional"
+    <dd>{{% md %}}The resource id of the gallery image used for creating the virtual machine{{% /md %}}</dd><dt class="property-optional"
             title="Optional">
         <span id="size_python">
 <a href="#size_python" style="color: inherit; text-decoration: inherit;">size</a>
@@ -1677,16 +1437,13 @@ or they haven't started the configuration process.{{% /md %}}</dd>
         <span class="property-indicator"></span>
         <span class="property-type">str | <a href="#managedlabvmsize">Managed<wbr>Lab<wbr>Vm<wbr>Size</a></span>
     </dt>
-    <dd>{{% md %}}The size of the virtual machine{{% /md %}}</dd>
-</dl>
+    <dd>{{% md %}}The size of the virtual machine{{% /md %}}</dd></dl>
 {{% /choosable %}}
 
 <h4 id="resourcesettingsresponse">Resource<wbr>Settings<wbr>Response</h4>
 
 {{% choosable language csharp %}}
-<dl class="resources-properties">
-
-    <dt class="property-required"
+<dl class="resources-properties"><dt class="property-required"
             title="Required">
         <span id="cores_csharp">
 <a href="#cores_csharp" style="color: inherit; text-decoration: inherit;">Cores</a>
@@ -1694,8 +1451,7 @@ or they haven't started the configuration process.{{% /md %}}</dd>
         <span class="property-indicator"></span>
         <span class="property-type">int</span>
     </dt>
-    <dd>{{% md %}}The translated compute cores of the virtual machine{{% /md %}}</dd>
-    <dt class="property-required"
+    <dd>{{% md %}}The translated compute cores of the virtual machine{{% /md %}}</dd><dt class="property-required"
             title="Required">
         <span id="id_csharp">
 <a href="#id_csharp" style="color: inherit; text-decoration: inherit;">Id</a>
@@ -1703,8 +1459,7 @@ or they haven't started the configuration process.{{% /md %}}</dd>
         <span class="property-indicator"></span>
         <span class="property-type">string</span>
     </dt>
-    <dd>{{% md %}}The unique id of the resource setting{{% /md %}}</dd>
-    <dt class="property-required"
+    <dd>{{% md %}}The unique id of the resource setting{{% /md %}}</dd><dt class="property-required"
             title="Required">
         <span id="imagename_csharp">
 <a href="#imagename_csharp" style="color: inherit; text-decoration: inherit;">Image<wbr>Name</a>
@@ -1712,8 +1467,7 @@ or they haven't started the configuration process.{{% /md %}}</dd>
         <span class="property-indicator"></span>
         <span class="property-type">string</span>
     </dt>
-    <dd>{{% md %}}The name of the image used to created the environment setting{{% /md %}}</dd>
-    <dt class="property-required"
+    <dd>{{% md %}}The name of the image used to created the environment setting{{% /md %}}</dd><dt class="property-required"
             title="Required">
         <span id="referencevm_csharp">
 <a href="#referencevm_csharp" style="color: inherit; text-decoration: inherit;">Reference<wbr>Vm</a>
@@ -1721,8 +1475,7 @@ or they haven't started the configuration process.{{% /md %}}</dd>
         <span class="property-indicator"></span>
         <span class="property-type"><a href="#referencevmresponse">Pulumi.<wbr>Azure<wbr>Native.<wbr>Lab<wbr>Services.<wbr>Inputs.<wbr>Reference<wbr>Vm<wbr>Response<wbr>Args</a></span>
     </dt>
-    <dd>{{% md %}}Details specific to Reference Vm{{% /md %}}</dd>
-    <dt class="property-optional"
+    <dd>{{% md %}}Details specific to Reference Vm{{% /md %}}</dd><dt class="property-optional"
             title="Optional">
         <span id="galleryimageresourceid_csharp">
 <a href="#galleryimageresourceid_csharp" style="color: inherit; text-decoration: inherit;">Gallery<wbr>Image<wbr>Resource<wbr>Id</a>
@@ -1730,8 +1483,7 @@ or they haven't started the configuration process.{{% /md %}}</dd>
         <span class="property-indicator"></span>
         <span class="property-type">string</span>
     </dt>
-    <dd>{{% md %}}The resource id of the gallery image used for creating the virtual machine{{% /md %}}</dd>
-    <dt class="property-optional"
+    <dd>{{% md %}}The resource id of the gallery image used for creating the virtual machine{{% /md %}}</dd><dt class="property-optional"
             title="Optional">
         <span id="size_csharp">
 <a href="#size_csharp" style="color: inherit; text-decoration: inherit;">Size</a>
@@ -1739,14 +1491,11 @@ or they haven't started the configuration process.{{% /md %}}</dd>
         <span class="property-indicator"></span>
         <span class="property-type">string</span>
     </dt>
-    <dd>{{% md %}}The size of the virtual machine{{% /md %}}</dd>
-</dl>
+    <dd>{{% md %}}The size of the virtual machine{{% /md %}}</dd></dl>
 {{% /choosable %}}
 
 {{% choosable language go %}}
-<dl class="resources-properties">
-
-    <dt class="property-required"
+<dl class="resources-properties"><dt class="property-required"
             title="Required">
         <span id="cores_go">
 <a href="#cores_go" style="color: inherit; text-decoration: inherit;">Cores</a>
@@ -1754,8 +1503,7 @@ or they haven't started the configuration process.{{% /md %}}</dd>
         <span class="property-indicator"></span>
         <span class="property-type">int</span>
     </dt>
-    <dd>{{% md %}}The translated compute cores of the virtual machine{{% /md %}}</dd>
-    <dt class="property-required"
+    <dd>{{% md %}}The translated compute cores of the virtual machine{{% /md %}}</dd><dt class="property-required"
             title="Required">
         <span id="id_go">
 <a href="#id_go" style="color: inherit; text-decoration: inherit;">Id</a>
@@ -1763,8 +1511,7 @@ or they haven't started the configuration process.{{% /md %}}</dd>
         <span class="property-indicator"></span>
         <span class="property-type">string</span>
     </dt>
-    <dd>{{% md %}}The unique id of the resource setting{{% /md %}}</dd>
-    <dt class="property-required"
+    <dd>{{% md %}}The unique id of the resource setting{{% /md %}}</dd><dt class="property-required"
             title="Required">
         <span id="imagename_go">
 <a href="#imagename_go" style="color: inherit; text-decoration: inherit;">Image<wbr>Name</a>
@@ -1772,8 +1519,7 @@ or they haven't started the configuration process.{{% /md %}}</dd>
         <span class="property-indicator"></span>
         <span class="property-type">string</span>
     </dt>
-    <dd>{{% md %}}The name of the image used to created the environment setting{{% /md %}}</dd>
-    <dt class="property-required"
+    <dd>{{% md %}}The name of the image used to created the environment setting{{% /md %}}</dd><dt class="property-required"
             title="Required">
         <span id="referencevm_go">
 <a href="#referencevm_go" style="color: inherit; text-decoration: inherit;">Reference<wbr>Vm</a>
@@ -1781,8 +1527,7 @@ or they haven't started the configuration process.{{% /md %}}</dd>
         <span class="property-indicator"></span>
         <span class="property-type"><a href="#referencevmresponse">Reference<wbr>Vm<wbr>Response</a></span>
     </dt>
-    <dd>{{% md %}}Details specific to Reference Vm{{% /md %}}</dd>
-    <dt class="property-optional"
+    <dd>{{% md %}}Details specific to Reference Vm{{% /md %}}</dd><dt class="property-optional"
             title="Optional">
         <span id="galleryimageresourceid_go">
 <a href="#galleryimageresourceid_go" style="color: inherit; text-decoration: inherit;">Gallery<wbr>Image<wbr>Resource<wbr>Id</a>
@@ -1790,8 +1535,7 @@ or they haven't started the configuration process.{{% /md %}}</dd>
         <span class="property-indicator"></span>
         <span class="property-type">string</span>
     </dt>
-    <dd>{{% md %}}The resource id of the gallery image used for creating the virtual machine{{% /md %}}</dd>
-    <dt class="property-optional"
+    <dd>{{% md %}}The resource id of the gallery image used for creating the virtual machine{{% /md %}}</dd><dt class="property-optional"
             title="Optional">
         <span id="size_go">
 <a href="#size_go" style="color: inherit; text-decoration: inherit;">Size</a>
@@ -1799,14 +1543,11 @@ or they haven't started the configuration process.{{% /md %}}</dd>
         <span class="property-indicator"></span>
         <span class="property-type">string</span>
     </dt>
-    <dd>{{% md %}}The size of the virtual machine{{% /md %}}</dd>
-</dl>
+    <dd>{{% md %}}The size of the virtual machine{{% /md %}}</dd></dl>
 {{% /choosable %}}
 
 {{% choosable language nodejs %}}
-<dl class="resources-properties">
-
-    <dt class="property-required"
+<dl class="resources-properties"><dt class="property-required"
             title="Required">
         <span id="cores_nodejs">
 <a href="#cores_nodejs" style="color: inherit; text-decoration: inherit;">cores</a>
@@ -1814,8 +1555,7 @@ or they haven't started the configuration process.{{% /md %}}</dd>
         <span class="property-indicator"></span>
         <span class="property-type">number</span>
     </dt>
-    <dd>{{% md %}}The translated compute cores of the virtual machine{{% /md %}}</dd>
-    <dt class="property-required"
+    <dd>{{% md %}}The translated compute cores of the virtual machine{{% /md %}}</dd><dt class="property-required"
             title="Required">
         <span id="id_nodejs">
 <a href="#id_nodejs" style="color: inherit; text-decoration: inherit;">id</a>
@@ -1823,8 +1563,7 @@ or they haven't started the configuration process.{{% /md %}}</dd>
         <span class="property-indicator"></span>
         <span class="property-type">string</span>
     </dt>
-    <dd>{{% md %}}The unique id of the resource setting{{% /md %}}</dd>
-    <dt class="property-required"
+    <dd>{{% md %}}The unique id of the resource setting{{% /md %}}</dd><dt class="property-required"
             title="Required">
         <span id="imagename_nodejs">
 <a href="#imagename_nodejs" style="color: inherit; text-decoration: inherit;">image<wbr>Name</a>
@@ -1832,8 +1571,7 @@ or they haven't started the configuration process.{{% /md %}}</dd>
         <span class="property-indicator"></span>
         <span class="property-type">string</span>
     </dt>
-    <dd>{{% md %}}The name of the image used to created the environment setting{{% /md %}}</dd>
-    <dt class="property-required"
+    <dd>{{% md %}}The name of the image used to created the environment setting{{% /md %}}</dd><dt class="property-required"
             title="Required">
         <span id="referencevm_nodejs">
 <a href="#referencevm_nodejs" style="color: inherit; text-decoration: inherit;">reference<wbr>Vm</a>
@@ -1841,8 +1579,7 @@ or they haven't started the configuration process.{{% /md %}}</dd>
         <span class="property-indicator"></span>
         <span class="property-type"><a href="#referencevmresponse">Reference<wbr>Vm<wbr>Response</a></span>
     </dt>
-    <dd>{{% md %}}Details specific to Reference Vm{{% /md %}}</dd>
-    <dt class="property-optional"
+    <dd>{{% md %}}Details specific to Reference Vm{{% /md %}}</dd><dt class="property-optional"
             title="Optional">
         <span id="galleryimageresourceid_nodejs">
 <a href="#galleryimageresourceid_nodejs" style="color: inherit; text-decoration: inherit;">gallery<wbr>Image<wbr>Resource<wbr>Id</a>
@@ -1850,8 +1587,7 @@ or they haven't started the configuration process.{{% /md %}}</dd>
         <span class="property-indicator"></span>
         <span class="property-type">string</span>
     </dt>
-    <dd>{{% md %}}The resource id of the gallery image used for creating the virtual machine{{% /md %}}</dd>
-    <dt class="property-optional"
+    <dd>{{% md %}}The resource id of the gallery image used for creating the virtual machine{{% /md %}}</dd><dt class="property-optional"
             title="Optional">
         <span id="size_nodejs">
 <a href="#size_nodejs" style="color: inherit; text-decoration: inherit;">size</a>
@@ -1859,14 +1595,11 @@ or they haven't started the configuration process.{{% /md %}}</dd>
         <span class="property-indicator"></span>
         <span class="property-type">string</span>
     </dt>
-    <dd>{{% md %}}The size of the virtual machine{{% /md %}}</dd>
-</dl>
+    <dd>{{% md %}}The size of the virtual machine{{% /md %}}</dd></dl>
 {{% /choosable %}}
 
 {{% choosable language python %}}
-<dl class="resources-properties">
-
-    <dt class="property-required"
+<dl class="resources-properties"><dt class="property-required"
             title="Required">
         <span id="cores_python">
 <a href="#cores_python" style="color: inherit; text-decoration: inherit;">cores</a>
@@ -1874,8 +1607,7 @@ or they haven't started the configuration process.{{% /md %}}</dd>
         <span class="property-indicator"></span>
         <span class="property-type">int</span>
     </dt>
-    <dd>{{% md %}}The translated compute cores of the virtual machine{{% /md %}}</dd>
-    <dt class="property-required"
+    <dd>{{% md %}}The translated compute cores of the virtual machine{{% /md %}}</dd><dt class="property-required"
             title="Required">
         <span id="id_python">
 <a href="#id_python" style="color: inherit; text-decoration: inherit;">id</a>
@@ -1883,8 +1615,7 @@ or they haven't started the configuration process.{{% /md %}}</dd>
         <span class="property-indicator"></span>
         <span class="property-type">str</span>
     </dt>
-    <dd>{{% md %}}The unique id of the resource setting{{% /md %}}</dd>
-    <dt class="property-required"
+    <dd>{{% md %}}The unique id of the resource setting{{% /md %}}</dd><dt class="property-required"
             title="Required">
         <span id="image_name_python">
 <a href="#image_name_python" style="color: inherit; text-decoration: inherit;">image_<wbr>name</a>
@@ -1892,8 +1623,7 @@ or they haven't started the configuration process.{{% /md %}}</dd>
         <span class="property-indicator"></span>
         <span class="property-type">str</span>
     </dt>
-    <dd>{{% md %}}The name of the image used to created the environment setting{{% /md %}}</dd>
-    <dt class="property-required"
+    <dd>{{% md %}}The name of the image used to created the environment setting{{% /md %}}</dd><dt class="property-required"
             title="Required">
         <span id="reference_vm_python">
 <a href="#reference_vm_python" style="color: inherit; text-decoration: inherit;">reference_<wbr>vm</a>
@@ -1901,8 +1631,7 @@ or they haven't started the configuration process.{{% /md %}}</dd>
         <span class="property-indicator"></span>
         <span class="property-type"><a href="#referencevmresponse">Reference<wbr>Vm<wbr>Response<wbr>Args</a></span>
     </dt>
-    <dd>{{% md %}}Details specific to Reference Vm{{% /md %}}</dd>
-    <dt class="property-optional"
+    <dd>{{% md %}}Details specific to Reference Vm{{% /md %}}</dd><dt class="property-optional"
             title="Optional">
         <span id="gallery_image_resource_id_python">
 <a href="#gallery_image_resource_id_python" style="color: inherit; text-decoration: inherit;">gallery_<wbr>image_<wbr>resource_<wbr>id</a>
@@ -1910,8 +1639,7 @@ or they haven't started the configuration process.{{% /md %}}</dd>
         <span class="property-indicator"></span>
         <span class="property-type">str</span>
     </dt>
-    <dd>{{% md %}}The resource id of the gallery image used for creating the virtual machine{{% /md %}}</dd>
-    <dt class="property-optional"
+    <dd>{{% md %}}The resource id of the gallery image used for creating the virtual machine{{% /md %}}</dd><dt class="property-optional"
             title="Optional">
         <span id="size_python">
 <a href="#size_python" style="color: inherit; text-decoration: inherit;">size</a>
@@ -1919,16 +1647,13 @@ or they haven't started the configuration process.{{% /md %}}</dd>
         <span class="property-indicator"></span>
         <span class="property-type">str</span>
     </dt>
-    <dd>{{% md %}}The size of the virtual machine{{% /md %}}</dd>
-</dl>
+    <dd>{{% md %}}The size of the virtual machine{{% /md %}}</dd></dl>
 {{% /choosable %}}
 
 <h4 id="vmstatedetailsresponse">Vm<wbr>State<wbr>Details<wbr>Response</h4>
 
 {{% choosable language csharp %}}
-<dl class="resources-properties">
-
-    <dt class="property-required"
+<dl class="resources-properties"><dt class="property-required"
             title="Required">
         <span id="lastknownpowerstate_csharp">
 <a href="#lastknownpowerstate_csharp" style="color: inherit; text-decoration: inherit;">Last<wbr>Known<wbr>Power<wbr>State</a>
@@ -1936,8 +1661,7 @@ or they haven't started the configuration process.{{% /md %}}</dd>
         <span class="property-indicator"></span>
         <span class="property-type">string</span>
     </dt>
-    <dd>{{% md %}}Last known compute power state captured in DTL{{% /md %}}</dd>
-    <dt class="property-required"
+    <dd>{{% md %}}Last known compute power state captured in DTL{{% /md %}}</dd><dt class="property-required"
             title="Required">
         <span id="powerstate_csharp">
 <a href="#powerstate_csharp" style="color: inherit; text-decoration: inherit;">Power<wbr>State</a>
@@ -1945,8 +1669,7 @@ or they haven't started the configuration process.{{% /md %}}</dd>
         <span class="property-indicator"></span>
         <span class="property-type">string</span>
     </dt>
-    <dd>{{% md %}}The power state of the reference virtual machine.{{% /md %}}</dd>
-    <dt class="property-required"
+    <dd>{{% md %}}The power state of the reference virtual machine.{{% /md %}}</dd><dt class="property-required"
             title="Required">
         <span id="rdpauthority_csharp">
 <a href="#rdpauthority_csharp" style="color: inherit; text-decoration: inherit;">Rdp<wbr>Authority</a>
@@ -1954,8 +1677,7 @@ or they haven't started the configuration process.{{% /md %}}</dd>
         <span class="property-indicator"></span>
         <span class="property-type">string</span>
     </dt>
-    <dd>{{% md %}}The RdpAuthority property is a server DNS host name or IP address followed by the service port number for RDP (Remote Desktop Protocol).{{% /md %}}</dd>
-    <dt class="property-required"
+    <dd>{{% md %}}The RdpAuthority property is a server DNS host name or IP address followed by the service port number for RDP (Remote Desktop Protocol).{{% /md %}}</dd><dt class="property-required"
             title="Required">
         <span id="sshauthority_csharp">
 <a href="#sshauthority_csharp" style="color: inherit; text-decoration: inherit;">Ssh<wbr>Authority</a>
@@ -1963,14 +1685,11 @@ or they haven't started the configuration process.{{% /md %}}</dd>
         <span class="property-indicator"></span>
         <span class="property-type">string</span>
     </dt>
-    <dd>{{% md %}}The SshAuthority property is a server DNS host name or IP address followed by the service port number for SSH.{{% /md %}}</dd>
-</dl>
+    <dd>{{% md %}}The SshAuthority property is a server DNS host name or IP address followed by the service port number for SSH.{{% /md %}}</dd></dl>
 {{% /choosable %}}
 
 {{% choosable language go %}}
-<dl class="resources-properties">
-
-    <dt class="property-required"
+<dl class="resources-properties"><dt class="property-required"
             title="Required">
         <span id="lastknownpowerstate_go">
 <a href="#lastknownpowerstate_go" style="color: inherit; text-decoration: inherit;">Last<wbr>Known<wbr>Power<wbr>State</a>
@@ -1978,8 +1697,7 @@ or they haven't started the configuration process.{{% /md %}}</dd>
         <span class="property-indicator"></span>
         <span class="property-type">string</span>
     </dt>
-    <dd>{{% md %}}Last known compute power state captured in DTL{{% /md %}}</dd>
-    <dt class="property-required"
+    <dd>{{% md %}}Last known compute power state captured in DTL{{% /md %}}</dd><dt class="property-required"
             title="Required">
         <span id="powerstate_go">
 <a href="#powerstate_go" style="color: inherit; text-decoration: inherit;">Power<wbr>State</a>
@@ -1987,8 +1705,7 @@ or they haven't started the configuration process.{{% /md %}}</dd>
         <span class="property-indicator"></span>
         <span class="property-type">string</span>
     </dt>
-    <dd>{{% md %}}The power state of the reference virtual machine.{{% /md %}}</dd>
-    <dt class="property-required"
+    <dd>{{% md %}}The power state of the reference virtual machine.{{% /md %}}</dd><dt class="property-required"
             title="Required">
         <span id="rdpauthority_go">
 <a href="#rdpauthority_go" style="color: inherit; text-decoration: inherit;">Rdp<wbr>Authority</a>
@@ -1996,8 +1713,7 @@ or they haven't started the configuration process.{{% /md %}}</dd>
         <span class="property-indicator"></span>
         <span class="property-type">string</span>
     </dt>
-    <dd>{{% md %}}The RdpAuthority property is a server DNS host name or IP address followed by the service port number for RDP (Remote Desktop Protocol).{{% /md %}}</dd>
-    <dt class="property-required"
+    <dd>{{% md %}}The RdpAuthority property is a server DNS host name or IP address followed by the service port number for RDP (Remote Desktop Protocol).{{% /md %}}</dd><dt class="property-required"
             title="Required">
         <span id="sshauthority_go">
 <a href="#sshauthority_go" style="color: inherit; text-decoration: inherit;">Ssh<wbr>Authority</a>
@@ -2005,14 +1721,11 @@ or they haven't started the configuration process.{{% /md %}}</dd>
         <span class="property-indicator"></span>
         <span class="property-type">string</span>
     </dt>
-    <dd>{{% md %}}The SshAuthority property is a server DNS host name or IP address followed by the service port number for SSH.{{% /md %}}</dd>
-</dl>
+    <dd>{{% md %}}The SshAuthority property is a server DNS host name or IP address followed by the service port number for SSH.{{% /md %}}</dd></dl>
 {{% /choosable %}}
 
 {{% choosable language nodejs %}}
-<dl class="resources-properties">
-
-    <dt class="property-required"
+<dl class="resources-properties"><dt class="property-required"
             title="Required">
         <span id="lastknownpowerstate_nodejs">
 <a href="#lastknownpowerstate_nodejs" style="color: inherit; text-decoration: inherit;">last<wbr>Known<wbr>Power<wbr>State</a>
@@ -2020,8 +1733,7 @@ or they haven't started the configuration process.{{% /md %}}</dd>
         <span class="property-indicator"></span>
         <span class="property-type">string</span>
     </dt>
-    <dd>{{% md %}}Last known compute power state captured in DTL{{% /md %}}</dd>
-    <dt class="property-required"
+    <dd>{{% md %}}Last known compute power state captured in DTL{{% /md %}}</dd><dt class="property-required"
             title="Required">
         <span id="powerstate_nodejs">
 <a href="#powerstate_nodejs" style="color: inherit; text-decoration: inherit;">power<wbr>State</a>
@@ -2029,8 +1741,7 @@ or they haven't started the configuration process.{{% /md %}}</dd>
         <span class="property-indicator"></span>
         <span class="property-type">string</span>
     </dt>
-    <dd>{{% md %}}The power state of the reference virtual machine.{{% /md %}}</dd>
-    <dt class="property-required"
+    <dd>{{% md %}}The power state of the reference virtual machine.{{% /md %}}</dd><dt class="property-required"
             title="Required">
         <span id="rdpauthority_nodejs">
 <a href="#rdpauthority_nodejs" style="color: inherit; text-decoration: inherit;">rdp<wbr>Authority</a>
@@ -2038,8 +1749,7 @@ or they haven't started the configuration process.{{% /md %}}</dd>
         <span class="property-indicator"></span>
         <span class="property-type">string</span>
     </dt>
-    <dd>{{% md %}}The RdpAuthority property is a server DNS host name or IP address followed by the service port number for RDP (Remote Desktop Protocol).{{% /md %}}</dd>
-    <dt class="property-required"
+    <dd>{{% md %}}The RdpAuthority property is a server DNS host name or IP address followed by the service port number for RDP (Remote Desktop Protocol).{{% /md %}}</dd><dt class="property-required"
             title="Required">
         <span id="sshauthority_nodejs">
 <a href="#sshauthority_nodejs" style="color: inherit; text-decoration: inherit;">ssh<wbr>Authority</a>
@@ -2047,14 +1757,11 @@ or they haven't started the configuration process.{{% /md %}}</dd>
         <span class="property-indicator"></span>
         <span class="property-type">string</span>
     </dt>
-    <dd>{{% md %}}The SshAuthority property is a server DNS host name or IP address followed by the service port number for SSH.{{% /md %}}</dd>
-</dl>
+    <dd>{{% md %}}The SshAuthority property is a server DNS host name or IP address followed by the service port number for SSH.{{% /md %}}</dd></dl>
 {{% /choosable %}}
 
 {{% choosable language python %}}
-<dl class="resources-properties">
-
-    <dt class="property-required"
+<dl class="resources-properties"><dt class="property-required"
             title="Required">
         <span id="last_known_power_state_python">
 <a href="#last_known_power_state_python" style="color: inherit; text-decoration: inherit;">last_<wbr>known_<wbr>power_<wbr>state</a>
@@ -2062,8 +1769,7 @@ or they haven't started the configuration process.{{% /md %}}</dd>
         <span class="property-indicator"></span>
         <span class="property-type">str</span>
     </dt>
-    <dd>{{% md %}}Last known compute power state captured in DTL{{% /md %}}</dd>
-    <dt class="property-required"
+    <dd>{{% md %}}Last known compute power state captured in DTL{{% /md %}}</dd><dt class="property-required"
             title="Required">
         <span id="power_state_python">
 <a href="#power_state_python" style="color: inherit; text-decoration: inherit;">power_<wbr>state</a>
@@ -2071,8 +1777,7 @@ or they haven't started the configuration process.{{% /md %}}</dd>
         <span class="property-indicator"></span>
         <span class="property-type">str</span>
     </dt>
-    <dd>{{% md %}}The power state of the reference virtual machine.{{% /md %}}</dd>
-    <dt class="property-required"
+    <dd>{{% md %}}The power state of the reference virtual machine.{{% /md %}}</dd><dt class="property-required"
             title="Required">
         <span id="rdp_authority_python">
 <a href="#rdp_authority_python" style="color: inherit; text-decoration: inherit;">rdp_<wbr>authority</a>
@@ -2080,8 +1785,7 @@ or they haven't started the configuration process.{{% /md %}}</dd>
         <span class="property-indicator"></span>
         <span class="property-type">str</span>
     </dt>
-    <dd>{{% md %}}The RdpAuthority property is a server DNS host name or IP address followed by the service port number for RDP (Remote Desktop Protocol).{{% /md %}}</dd>
-    <dt class="property-required"
+    <dd>{{% md %}}The RdpAuthority property is a server DNS host name or IP address followed by the service port number for RDP (Remote Desktop Protocol).{{% /md %}}</dd><dt class="property-required"
             title="Required">
         <span id="ssh_authority_python">
 <a href="#ssh_authority_python" style="color: inherit; text-decoration: inherit;">ssh_<wbr>authority</a>
@@ -2089,8 +1793,7 @@ or they haven't started the configuration process.{{% /md %}}</dd>
         <span class="property-indicator"></span>
         <span class="property-type">str</span>
     </dt>
-    <dd>{{% md %}}The SshAuthority property is a server DNS host name or IP address followed by the service port number for SSH.{{% /md %}}</dd>
-</dl>
+    <dd>{{% md %}}The SshAuthority property is a server DNS host name or IP address followed by the service port number for SSH.{{% /md %}}</dd></dl>
 {{% /choosable %}}
 
 

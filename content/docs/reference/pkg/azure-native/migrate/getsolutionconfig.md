@@ -51,9 +51,7 @@ The following arguments are supported:
 
 
 {{% choosable language csharp %}}
-<dl class="resources-properties">
-
-    <dt class="property-required"
+<dl class="resources-properties"><dt class="property-required"
             title="Required">
         <span id="migrateprojectname_csharp">
 <a href="#migrateprojectname_csharp" style="color: inherit; text-decoration: inherit;">Migrate<wbr>Project<wbr>Name</a>
@@ -61,8 +59,7 @@ The following arguments are supported:
         <span class="property-indicator"></span>
         <span class="property-type">string</span>
     </dt>
-    <dd>{{% md %}}Name of the Azure Migrate project.{{% /md %}}</dd>
-    <dt class="property-required"
+    <dd>{{% md %}}Name of the Azure Migrate project.{{% /md %}}</dd><dt class="property-required"
             title="Required">
         <span id="resourcegroupname_csharp">
 <a href="#resourcegroupname_csharp" style="color: inherit; text-decoration: inherit;">Resource<wbr>Group<wbr>Name</a>
@@ -70,8 +67,7 @@ The following arguments are supported:
         <span class="property-indicator"></span>
         <span class="property-type">string</span>
     </dt>
-    <dd>{{% md %}}Name of the Azure Resource Group that migrate project is part of.{{% /md %}}</dd>
-    <dt class="property-required"
+    <dd>{{% md %}}Name of the Azure Resource Group that migrate project is part of.{{% /md %}}</dd><dt class="property-required"
             title="Required">
         <span id="solutionname_csharp">
 <a href="#solutionname_csharp" style="color: inherit; text-decoration: inherit;">Solution<wbr>Name</a>
@@ -79,14 +75,11 @@ The following arguments are supported:
         <span class="property-indicator"></span>
         <span class="property-type">string</span>
     </dt>
-    <dd>{{% md %}}Unique name of a migration solution within a migrate project.{{% /md %}}</dd>
-</dl>
+    <dd>{{% md %}}Unique name of a migration solution within a migrate project.{{% /md %}}</dd></dl>
 {{% /choosable %}}
 
 {{% choosable language go %}}
-<dl class="resources-properties">
-
-    <dt class="property-required"
+<dl class="resources-properties"><dt class="property-required"
             title="Required">
         <span id="migrateprojectname_go">
 <a href="#migrateprojectname_go" style="color: inherit; text-decoration: inherit;">Migrate<wbr>Project<wbr>Name</a>
@@ -94,8 +87,7 @@ The following arguments are supported:
         <span class="property-indicator"></span>
         <span class="property-type">string</span>
     </dt>
-    <dd>{{% md %}}Name of the Azure Migrate project.{{% /md %}}</dd>
-    <dt class="property-required"
+    <dd>{{% md %}}Name of the Azure Migrate project.{{% /md %}}</dd><dt class="property-required"
             title="Required">
         <span id="resourcegroupname_go">
 <a href="#resourcegroupname_go" style="color: inherit; text-decoration: inherit;">Resource<wbr>Group<wbr>Name</a>
@@ -103,8 +95,7 @@ The following arguments are supported:
         <span class="property-indicator"></span>
         <span class="property-type">string</span>
     </dt>
-    <dd>{{% md %}}Name of the Azure Resource Group that migrate project is part of.{{% /md %}}</dd>
-    <dt class="property-required"
+    <dd>{{% md %}}Name of the Azure Resource Group that migrate project is part of.{{% /md %}}</dd><dt class="property-required"
             title="Required">
         <span id="solutionname_go">
 <a href="#solutionname_go" style="color: inherit; text-decoration: inherit;">Solution<wbr>Name</a>
@@ -112,14 +103,11 @@ The following arguments are supported:
         <span class="property-indicator"></span>
         <span class="property-type">string</span>
     </dt>
-    <dd>{{% md %}}Unique name of a migration solution within a migrate project.{{% /md %}}</dd>
-</dl>
+    <dd>{{% md %}}Unique name of a migration solution within a migrate project.{{% /md %}}</dd></dl>
 {{% /choosable %}}
 
 {{% choosable language nodejs %}}
-<dl class="resources-properties">
-
-    <dt class="property-required"
+<dl class="resources-properties"><dt class="property-required"
             title="Required">
         <span id="migrateprojectname_nodejs">
 <a href="#migrateprojectname_nodejs" style="color: inherit; text-decoration: inherit;">migrate<wbr>Project<wbr>Name</a>
@@ -127,8 +115,7 @@ The following arguments are supported:
         <span class="property-indicator"></span>
         <span class="property-type">string</span>
     </dt>
-    <dd>{{% md %}}Name of the Azure Migrate project.{{% /md %}}</dd>
-    <dt class="property-required"
+    <dd>{{% md %}}Name of the Azure Migrate project.{{% /md %}}</dd><dt class="property-required"
             title="Required">
         <span id="resourcegroupname_nodejs">
 <a href="#resourcegroupname_nodejs" style="color: inherit; text-decoration: inherit;">resource<wbr>Group<wbr>Name</a>
@@ -136,8 +123,7 @@ The following arguments are supported:
         <span class="property-indicator"></span>
         <span class="property-type">string</span>
     </dt>
-    <dd>{{% md %}}Name of the Azure Resource Group that migrate project is part of.{{% /md %}}</dd>
-    <dt class="property-required"
+    <dd>{{% md %}}Name of the Azure Resource Group that migrate project is part of.{{% /md %}}</dd><dt class="property-required"
             title="Required">
         <span id="solutionname_nodejs">
 <a href="#solutionname_nodejs" style="color: inherit; text-decoration: inherit;">solution<wbr>Name</a>
@@ -145,14 +131,11 @@ The following arguments are supported:
         <span class="property-indicator"></span>
         <span class="property-type">string</span>
     </dt>
-    <dd>{{% md %}}Unique name of a migration solution within a migrate project.{{% /md %}}</dd>
-</dl>
+    <dd>{{% md %}}Unique name of a migration solution within a migrate project.{{% /md %}}</dd></dl>
 {{% /choosable %}}
 
 {{% choosable language python %}}
-<dl class="resources-properties">
-
-    <dt class="property-required"
+<dl class="resources-properties"><dt class="property-required"
             title="Required">
         <span id="migrate_project_name_python">
 <a href="#migrate_project_name_python" style="color: inherit; text-decoration: inherit;">migrate_<wbr>project_<wbr>name</a>
@@ -160,8 +143,7 @@ The following arguments are supported:
         <span class="property-indicator"></span>
         <span class="property-type">str</span>
     </dt>
-    <dd>{{% md %}}Name of the Azure Migrate project.{{% /md %}}</dd>
-    <dt class="property-required"
+    <dd>{{% md %}}Name of the Azure Migrate project.{{% /md %}}</dd><dt class="property-required"
             title="Required">
         <span id="resource_group_name_python">
 <a href="#resource_group_name_python" style="color: inherit; text-decoration: inherit;">resource_<wbr>group_<wbr>name</a>
@@ -169,8 +151,7 @@ The following arguments are supported:
         <span class="property-indicator"></span>
         <span class="property-type">str</span>
     </dt>
-    <dd>{{% md %}}Name of the Azure Resource Group that migrate project is part of.{{% /md %}}</dd>
-    <dt class="property-required"
+    <dd>{{% md %}}Name of the Azure Resource Group that migrate project is part of.{{% /md %}}</dd><dt class="property-required"
             title="Required">
         <span id="solution_name_python">
 <a href="#solution_name_python" style="color: inherit; text-decoration: inherit;">solution_<wbr>name</a>
@@ -178,8 +159,7 @@ The following arguments are supported:
         <span class="property-indicator"></span>
         <span class="property-type">str</span>
     </dt>
-    <dd>{{% md %}}Unique name of a migration solution within a migrate project.{{% /md %}}</dd>
-</dl>
+    <dd>{{% md %}}Unique name of a migration solution within a migrate project.{{% /md %}}</dd></dl>
 {{% /choosable %}}
 
 
@@ -192,9 +172,7 @@ The following output properties are available:
 
 
 {{% choosable language csharp %}}
-<dl class="resources-properties">
-
-    <dt class="property-"
+<dl class="resources-properties"><dt class="property-"
             title="">
         <span id="publishersasuri_csharp">
 <a href="#publishersasuri_csharp" style="color: inherit; text-decoration: inherit;">Publisher<wbr>Sas<wbr>Uri</a>
@@ -202,14 +180,11 @@ The following output properties are available:
         <span class="property-indicator"></span>
         <span class="property-type">string</span>
     </dt>
-    <dd>{{% md %}}Gets or sets the publisher sas uri for the solution.{{% /md %}}</dd>
-</dl>
+    <dd>{{% md %}}Gets or sets the publisher sas uri for the solution.{{% /md %}}</dd></dl>
 {{% /choosable %}}
 
 {{% choosable language go %}}
-<dl class="resources-properties">
-
-    <dt class="property-"
+<dl class="resources-properties"><dt class="property-"
             title="">
         <span id="publishersasuri_go">
 <a href="#publishersasuri_go" style="color: inherit; text-decoration: inherit;">Publisher<wbr>Sas<wbr>Uri</a>
@@ -217,14 +192,11 @@ The following output properties are available:
         <span class="property-indicator"></span>
         <span class="property-type">string</span>
     </dt>
-    <dd>{{% md %}}Gets or sets the publisher sas uri for the solution.{{% /md %}}</dd>
-</dl>
+    <dd>{{% md %}}Gets or sets the publisher sas uri for the solution.{{% /md %}}</dd></dl>
 {{% /choosable %}}
 
 {{% choosable language nodejs %}}
-<dl class="resources-properties">
-
-    <dt class="property-"
+<dl class="resources-properties"><dt class="property-"
             title="">
         <span id="publishersasuri_nodejs">
 <a href="#publishersasuri_nodejs" style="color: inherit; text-decoration: inherit;">publisher<wbr>Sas<wbr>Uri</a>
@@ -232,14 +204,11 @@ The following output properties are available:
         <span class="property-indicator"></span>
         <span class="property-type">string</span>
     </dt>
-    <dd>{{% md %}}Gets or sets the publisher sas uri for the solution.{{% /md %}}</dd>
-</dl>
+    <dd>{{% md %}}Gets or sets the publisher sas uri for the solution.{{% /md %}}</dd></dl>
 {{% /choosable %}}
 
 {{% choosable language python %}}
-<dl class="resources-properties">
-
-    <dt class="property-"
+<dl class="resources-properties"><dt class="property-"
             title="">
         <span id="publisher_sas_uri_python">
 <a href="#publisher_sas_uri_python" style="color: inherit; text-decoration: inherit;">publisher_<wbr>sas_<wbr>uri</a>
@@ -247,8 +216,7 @@ The following output properties are available:
         <span class="property-indicator"></span>
         <span class="property-type">str</span>
     </dt>
-    <dd>{{% md %}}Gets or sets the publisher sas uri for the solution.{{% /md %}}</dd>
-</dl>
+    <dd>{{% md %}}Gets or sets the publisher sas uri for the solution.{{% /md %}}</dd></dl>
 {{% /choosable %}}
 
 

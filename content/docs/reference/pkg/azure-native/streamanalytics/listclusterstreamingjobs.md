@@ -51,9 +51,7 @@ The following arguments are supported:
 
 
 {{% choosable language csharp %}}
-<dl class="resources-properties">
-
-    <dt class="property-required"
+<dl class="resources-properties"><dt class="property-required"
             title="Required">
         <span id="clustername_csharp">
 <a href="#clustername_csharp" style="color: inherit; text-decoration: inherit;">Cluster<wbr>Name</a>
@@ -61,8 +59,7 @@ The following arguments are supported:
         <span class="property-indicator"></span>
         <span class="property-type">string</span>
     </dt>
-    <dd>{{% md %}}The name of the cluster.{{% /md %}}</dd>
-    <dt class="property-required"
+    <dd>{{% md %}}The name of the cluster.{{% /md %}}</dd><dt class="property-required"
             title="Required">
         <span id="resourcegroupname_csharp">
 <a href="#resourcegroupname_csharp" style="color: inherit; text-decoration: inherit;">Resource<wbr>Group<wbr>Name</a>
@@ -70,14 +67,11 @@ The following arguments are supported:
         <span class="property-indicator"></span>
         <span class="property-type">string</span>
     </dt>
-    <dd>{{% md %}}The name of the resource group. The name is case insensitive.{{% /md %}}</dd>
-</dl>
+    <dd>{{% md %}}The name of the resource group. The name is case insensitive.{{% /md %}}</dd></dl>
 {{% /choosable %}}
 
 {{% choosable language go %}}
-<dl class="resources-properties">
-
-    <dt class="property-required"
+<dl class="resources-properties"><dt class="property-required"
             title="Required">
         <span id="clustername_go">
 <a href="#clustername_go" style="color: inherit; text-decoration: inherit;">Cluster<wbr>Name</a>
@@ -85,8 +79,7 @@ The following arguments are supported:
         <span class="property-indicator"></span>
         <span class="property-type">string</span>
     </dt>
-    <dd>{{% md %}}The name of the cluster.{{% /md %}}</dd>
-    <dt class="property-required"
+    <dd>{{% md %}}The name of the cluster.{{% /md %}}</dd><dt class="property-required"
             title="Required">
         <span id="resourcegroupname_go">
 <a href="#resourcegroupname_go" style="color: inherit; text-decoration: inherit;">Resource<wbr>Group<wbr>Name</a>
@@ -94,14 +87,11 @@ The following arguments are supported:
         <span class="property-indicator"></span>
         <span class="property-type">string</span>
     </dt>
-    <dd>{{% md %}}The name of the resource group. The name is case insensitive.{{% /md %}}</dd>
-</dl>
+    <dd>{{% md %}}The name of the resource group. The name is case insensitive.{{% /md %}}</dd></dl>
 {{% /choosable %}}
 
 {{% choosable language nodejs %}}
-<dl class="resources-properties">
-
-    <dt class="property-required"
+<dl class="resources-properties"><dt class="property-required"
             title="Required">
         <span id="clustername_nodejs">
 <a href="#clustername_nodejs" style="color: inherit; text-decoration: inherit;">cluster<wbr>Name</a>
@@ -109,8 +99,7 @@ The following arguments are supported:
         <span class="property-indicator"></span>
         <span class="property-type">string</span>
     </dt>
-    <dd>{{% md %}}The name of the cluster.{{% /md %}}</dd>
-    <dt class="property-required"
+    <dd>{{% md %}}The name of the cluster.{{% /md %}}</dd><dt class="property-required"
             title="Required">
         <span id="resourcegroupname_nodejs">
 <a href="#resourcegroupname_nodejs" style="color: inherit; text-decoration: inherit;">resource<wbr>Group<wbr>Name</a>
@@ -118,14 +107,11 @@ The following arguments are supported:
         <span class="property-indicator"></span>
         <span class="property-type">string</span>
     </dt>
-    <dd>{{% md %}}The name of the resource group. The name is case insensitive.{{% /md %}}</dd>
-</dl>
+    <dd>{{% md %}}The name of the resource group. The name is case insensitive.{{% /md %}}</dd></dl>
 {{% /choosable %}}
 
 {{% choosable language python %}}
-<dl class="resources-properties">
-
-    <dt class="property-required"
+<dl class="resources-properties"><dt class="property-required"
             title="Required">
         <span id="cluster_name_python">
 <a href="#cluster_name_python" style="color: inherit; text-decoration: inherit;">cluster_<wbr>name</a>
@@ -133,8 +119,7 @@ The following arguments are supported:
         <span class="property-indicator"></span>
         <span class="property-type">str</span>
     </dt>
-    <dd>{{% md %}}The name of the cluster.{{% /md %}}</dd>
-    <dt class="property-required"
+    <dd>{{% md %}}The name of the cluster.{{% /md %}}</dd><dt class="property-required"
             title="Required">
         <span id="resource_group_name_python">
 <a href="#resource_group_name_python" style="color: inherit; text-decoration: inherit;">resource_<wbr>group_<wbr>name</a>
@@ -142,8 +127,7 @@ The following arguments are supported:
         <span class="property-indicator"></span>
         <span class="property-type">str</span>
     </dt>
-    <dd>{{% md %}}The name of the resource group. The name is case insensitive.{{% /md %}}</dd>
-</dl>
+    <dd>{{% md %}}The name of the resource group. The name is case insensitive.{{% /md %}}</dd></dl>
 {{% /choosable %}}
 
 
@@ -156,9 +140,7 @@ The following output properties are available:
 
 
 {{% choosable language csharp %}}
-<dl class="resources-properties">
-
-    <dt class="property-"
+<dl class="resources-properties"><dt class="property-"
             title="">
         <span id="nextlink_csharp">
 <a href="#nextlink_csharp" style="color: inherit; text-decoration: inherit;">Next<wbr>Link</a>
@@ -166,8 +148,7 @@ The following output properties are available:
         <span class="property-indicator"></span>
         <span class="property-type">string</span>
     </dt>
-    <dd>{{% md %}}The URL to fetch the next set of streaming jobs.{{% /md %}}</dd>
-    <dt class="property-"
+    <dd>{{% md %}}The URL to fetch the next set of streaming jobs.{{% /md %}}</dd><dt class="property-"
             title="">
         <span id="value_csharp">
 <a href="#value_csharp" style="color: inherit; text-decoration: inherit;">Value</a>
@@ -175,14 +156,11 @@ The following output properties are available:
         <span class="property-indicator"></span>
         <span class="property-type"><a href="#clusterjobresponse">List&lt;Pulumi.<wbr>Azure<wbr>Native.<wbr>Stream<wbr>Analytics.<wbr>Outputs.<wbr>Cluster<wbr>Job<wbr>Response&gt;</a></span>
     </dt>
-    <dd>{{% md %}}A list of streaming jobs.{{% /md %}}</dd>
-</dl>
+    <dd>{{% md %}}A list of streaming jobs.{{% /md %}}</dd></dl>
 {{% /choosable %}}
 
 {{% choosable language go %}}
-<dl class="resources-properties">
-
-    <dt class="property-"
+<dl class="resources-properties"><dt class="property-"
             title="">
         <span id="nextlink_go">
 <a href="#nextlink_go" style="color: inherit; text-decoration: inherit;">Next<wbr>Link</a>
@@ -190,8 +168,7 @@ The following output properties are available:
         <span class="property-indicator"></span>
         <span class="property-type">string</span>
     </dt>
-    <dd>{{% md %}}The URL to fetch the next set of streaming jobs.{{% /md %}}</dd>
-    <dt class="property-"
+    <dd>{{% md %}}The URL to fetch the next set of streaming jobs.{{% /md %}}</dd><dt class="property-"
             title="">
         <span id="value_go">
 <a href="#value_go" style="color: inherit; text-decoration: inherit;">Value</a>
@@ -199,14 +176,11 @@ The following output properties are available:
         <span class="property-indicator"></span>
         <span class="property-type"><a href="#clusterjobresponse">[]Cluster<wbr>Job<wbr>Response</a></span>
     </dt>
-    <dd>{{% md %}}A list of streaming jobs.{{% /md %}}</dd>
-</dl>
+    <dd>{{% md %}}A list of streaming jobs.{{% /md %}}</dd></dl>
 {{% /choosable %}}
 
 {{% choosable language nodejs %}}
-<dl class="resources-properties">
-
-    <dt class="property-"
+<dl class="resources-properties"><dt class="property-"
             title="">
         <span id="nextlink_nodejs">
 <a href="#nextlink_nodejs" style="color: inherit; text-decoration: inherit;">next<wbr>Link</a>
@@ -214,8 +188,7 @@ The following output properties are available:
         <span class="property-indicator"></span>
         <span class="property-type">string</span>
     </dt>
-    <dd>{{% md %}}The URL to fetch the next set of streaming jobs.{{% /md %}}</dd>
-    <dt class="property-"
+    <dd>{{% md %}}The URL to fetch the next set of streaming jobs.{{% /md %}}</dd><dt class="property-"
             title="">
         <span id="value_nodejs">
 <a href="#value_nodejs" style="color: inherit; text-decoration: inherit;">value</a>
@@ -223,14 +196,11 @@ The following output properties are available:
         <span class="property-indicator"></span>
         <span class="property-type"><a href="#clusterjobresponse">Cluster<wbr>Job<wbr>Response[]</a></span>
     </dt>
-    <dd>{{% md %}}A list of streaming jobs.{{% /md %}}</dd>
-</dl>
+    <dd>{{% md %}}A list of streaming jobs.{{% /md %}}</dd></dl>
 {{% /choosable %}}
 
 {{% choosable language python %}}
-<dl class="resources-properties">
-
-    <dt class="property-"
+<dl class="resources-properties"><dt class="property-"
             title="">
         <span id="next_link_python">
 <a href="#next_link_python" style="color: inherit; text-decoration: inherit;">next_<wbr>link</a>
@@ -238,8 +208,7 @@ The following output properties are available:
         <span class="property-indicator"></span>
         <span class="property-type">str</span>
     </dt>
-    <dd>{{% md %}}The URL to fetch the next set of streaming jobs.{{% /md %}}</dd>
-    <dt class="property-"
+    <dd>{{% md %}}The URL to fetch the next set of streaming jobs.{{% /md %}}</dd><dt class="property-"
             title="">
         <span id="value_python">
 <a href="#value_python" style="color: inherit; text-decoration: inherit;">value</a>
@@ -247,8 +216,7 @@ The following output properties are available:
         <span class="property-indicator"></span>
         <span class="property-type"><a href="#clusterjobresponse">Sequence[Cluster<wbr>Job<wbr>Response]</a></span>
     </dt>
-    <dd>{{% md %}}A list of streaming jobs.{{% /md %}}</dd>
-</dl>
+    <dd>{{% md %}}A list of streaming jobs.{{% /md %}}</dd></dl>
 {{% /choosable %}}
 
 
@@ -262,9 +230,7 @@ The following output properties are available:
 
 
 {{% choosable language csharp %}}
-<dl class="resources-properties">
-
-    <dt class="property-required"
+<dl class="resources-properties"><dt class="property-required"
             title="Required">
         <span id="id_csharp">
 <a href="#id_csharp" style="color: inherit; text-decoration: inherit;">Id</a>
@@ -272,8 +238,7 @@ The following output properties are available:
         <span class="property-indicator"></span>
         <span class="property-type">string</span>
     </dt>
-    <dd>{{% md %}}Resource ID of the streaming job.{{% /md %}}</dd>
-    <dt class="property-required"
+    <dd>{{% md %}}Resource ID of the streaming job.{{% /md %}}</dd><dt class="property-required"
             title="Required">
         <span id="jobstate_csharp">
 <a href="#jobstate_csharp" style="color: inherit; text-decoration: inherit;">Job<wbr>State</a>
@@ -281,8 +246,7 @@ The following output properties are available:
         <span class="property-indicator"></span>
         <span class="property-type">string</span>
     </dt>
-    <dd>{{% md %}}The current execution state of the streaming job.{{% /md %}}</dd>
-    <dt class="property-required"
+    <dd>{{% md %}}The current execution state of the streaming job.{{% /md %}}</dd><dt class="property-required"
             title="Required">
         <span id="streamingunits_csharp">
 <a href="#streamingunits_csharp" style="color: inherit; text-decoration: inherit;">Streaming<wbr>Units</a>
@@ -290,14 +254,11 @@ The following output properties are available:
         <span class="property-indicator"></span>
         <span class="property-type">int</span>
     </dt>
-    <dd>{{% md %}}The number of streaming units that are used by the streaming job.{{% /md %}}</dd>
-</dl>
+    <dd>{{% md %}}The number of streaming units that are used by the streaming job.{{% /md %}}</dd></dl>
 {{% /choosable %}}
 
 {{% choosable language go %}}
-<dl class="resources-properties">
-
-    <dt class="property-required"
+<dl class="resources-properties"><dt class="property-required"
             title="Required">
         <span id="id_go">
 <a href="#id_go" style="color: inherit; text-decoration: inherit;">Id</a>
@@ -305,8 +266,7 @@ The following output properties are available:
         <span class="property-indicator"></span>
         <span class="property-type">string</span>
     </dt>
-    <dd>{{% md %}}Resource ID of the streaming job.{{% /md %}}</dd>
-    <dt class="property-required"
+    <dd>{{% md %}}Resource ID of the streaming job.{{% /md %}}</dd><dt class="property-required"
             title="Required">
         <span id="jobstate_go">
 <a href="#jobstate_go" style="color: inherit; text-decoration: inherit;">Job<wbr>State</a>
@@ -314,8 +274,7 @@ The following output properties are available:
         <span class="property-indicator"></span>
         <span class="property-type">string</span>
     </dt>
-    <dd>{{% md %}}The current execution state of the streaming job.{{% /md %}}</dd>
-    <dt class="property-required"
+    <dd>{{% md %}}The current execution state of the streaming job.{{% /md %}}</dd><dt class="property-required"
             title="Required">
         <span id="streamingunits_go">
 <a href="#streamingunits_go" style="color: inherit; text-decoration: inherit;">Streaming<wbr>Units</a>
@@ -323,14 +282,11 @@ The following output properties are available:
         <span class="property-indicator"></span>
         <span class="property-type">int</span>
     </dt>
-    <dd>{{% md %}}The number of streaming units that are used by the streaming job.{{% /md %}}</dd>
-</dl>
+    <dd>{{% md %}}The number of streaming units that are used by the streaming job.{{% /md %}}</dd></dl>
 {{% /choosable %}}
 
 {{% choosable language nodejs %}}
-<dl class="resources-properties">
-
-    <dt class="property-required"
+<dl class="resources-properties"><dt class="property-required"
             title="Required">
         <span id="id_nodejs">
 <a href="#id_nodejs" style="color: inherit; text-decoration: inherit;">id</a>
@@ -338,8 +294,7 @@ The following output properties are available:
         <span class="property-indicator"></span>
         <span class="property-type">string</span>
     </dt>
-    <dd>{{% md %}}Resource ID of the streaming job.{{% /md %}}</dd>
-    <dt class="property-required"
+    <dd>{{% md %}}Resource ID of the streaming job.{{% /md %}}</dd><dt class="property-required"
             title="Required">
         <span id="jobstate_nodejs">
 <a href="#jobstate_nodejs" style="color: inherit; text-decoration: inherit;">job<wbr>State</a>
@@ -347,8 +302,7 @@ The following output properties are available:
         <span class="property-indicator"></span>
         <span class="property-type">string</span>
     </dt>
-    <dd>{{% md %}}The current execution state of the streaming job.{{% /md %}}</dd>
-    <dt class="property-required"
+    <dd>{{% md %}}The current execution state of the streaming job.{{% /md %}}</dd><dt class="property-required"
             title="Required">
         <span id="streamingunits_nodejs">
 <a href="#streamingunits_nodejs" style="color: inherit; text-decoration: inherit;">streaming<wbr>Units</a>
@@ -356,14 +310,11 @@ The following output properties are available:
         <span class="property-indicator"></span>
         <span class="property-type">number</span>
     </dt>
-    <dd>{{% md %}}The number of streaming units that are used by the streaming job.{{% /md %}}</dd>
-</dl>
+    <dd>{{% md %}}The number of streaming units that are used by the streaming job.{{% /md %}}</dd></dl>
 {{% /choosable %}}
 
 {{% choosable language python %}}
-<dl class="resources-properties">
-
-    <dt class="property-required"
+<dl class="resources-properties"><dt class="property-required"
             title="Required">
         <span id="id_python">
 <a href="#id_python" style="color: inherit; text-decoration: inherit;">id</a>
@@ -371,8 +322,7 @@ The following output properties are available:
         <span class="property-indicator"></span>
         <span class="property-type">str</span>
     </dt>
-    <dd>{{% md %}}Resource ID of the streaming job.{{% /md %}}</dd>
-    <dt class="property-required"
+    <dd>{{% md %}}Resource ID of the streaming job.{{% /md %}}</dd><dt class="property-required"
             title="Required">
         <span id="job_state_python">
 <a href="#job_state_python" style="color: inherit; text-decoration: inherit;">job_<wbr>state</a>
@@ -380,8 +330,7 @@ The following output properties are available:
         <span class="property-indicator"></span>
         <span class="property-type">str</span>
     </dt>
-    <dd>{{% md %}}The current execution state of the streaming job.{{% /md %}}</dd>
-    <dt class="property-required"
+    <dd>{{% md %}}The current execution state of the streaming job.{{% /md %}}</dd><dt class="property-required"
             title="Required">
         <span id="streaming_units_python">
 <a href="#streaming_units_python" style="color: inherit; text-decoration: inherit;">streaming_<wbr>units</a>
@@ -389,8 +338,7 @@ The following output properties are available:
         <span class="property-indicator"></span>
         <span class="property-type">int</span>
     </dt>
-    <dd>{{% md %}}The number of streaming units that are used by the streaming job.{{% /md %}}</dd>
-</dl>
+    <dd>{{% md %}}The number of streaming units that are used by the streaming job.{{% /md %}}</dd></dl>
 {{% /choosable %}}
 
 

@@ -16,11 +16,17 @@ Gets Object IDs or UPNs for multiple Azure Active Directory users.
 
 
 {{% examples %}}
+
 ## Example Usage
 
 {{< chooser language "typescript,python,go,csharp" / >}}
 
-{{% example csharp %}}
+
+
+
+
+{{< example csharp >}}
+
 ```csharp
 using Pulumi;
 using AzureAD = Pulumi.AzureAD;
@@ -42,9 +48,12 @@ class MyStack : Stack
 }
 ```
 
-{{% /example %}}
 
-{{% example go %}}
+{{< /example >}}
+
+
+{{< example go >}}
+
 ```go
 package main
 
@@ -69,9 +78,12 @@ func main() {
 }
 ```
 
-{{% /example %}}
 
-{{% example python %}}
+{{< /example >}}
+
+
+{{< example python >}}
+
 ```python
 import pulumi
 import pulumi_azuread as azuread
@@ -82,9 +94,12 @@ users = azuread.get_users(user_principal_names=[
 ])
 ```
 
-{{% /example %}}
 
-{{% example typescript %}}
+{{< /example >}}
+
+
+{{< example typescript >}}
+
 
 ```typescript
 import * as pulumi from "@pulumi/pulumi";
@@ -98,9 +113,16 @@ const users = pulumi.output(azuread.getUsers({
 }, { async: true }));
 ```
 
-{{% /example %}}
+
+{{< /example >}}
+
+
+
+
 
 {{% /examples %}}
+
+
 
 
 ## Using getUsers {#using}
@@ -138,9 +160,7 @@ The following arguments are supported:
 
 
 {{% choosable language csharp %}}
-<dl class="resources-properties">
-
-    <dt class="property-optional"
+<dl class="resources-properties"><dt class="property-optional"
             title="Optional">
         <span id="ignoremissing_csharp">
 <a href="#ignoremissing_csharp" style="color: inherit; text-decoration: inherit;">Ignore<wbr>Missing</a>
@@ -149,8 +169,7 @@ The following arguments are supported:
         <span class="property-type">bool</span>
     </dt>
     <dd>{{% md %}}Ignore missing users and return users that were found. The data source will still fail if no users are found. Defaults to false.
-{{% /md %}}</dd>
-    <dt class="property-optional"
+{{% /md %}}</dd><dt class="property-optional"
             title="Optional">
         <span id="mailnicknames_csharp">
 <a href="#mailnicknames_csharp" style="color: inherit; text-decoration: inherit;">Mail<wbr>Nicknames</a>
@@ -159,8 +178,7 @@ The following arguments are supported:
         <span class="property-type">List&lt;string&gt;</span>
     </dt>
     <dd>{{% md %}}The email aliases of the Azure AD Users.
-{{% /md %}}</dd>
-    <dt class="property-optional"
+{{% /md %}}</dd><dt class="property-optional"
             title="Optional">
         <span id="objectids_csharp">
 <a href="#objectids_csharp" style="color: inherit; text-decoration: inherit;">Object<wbr>Ids</a>
@@ -169,8 +187,7 @@ The following arguments are supported:
         <span class="property-type">List&lt;string&gt;</span>
     </dt>
     <dd>{{% md %}}The Object IDs of the Azure AD Users.
-{{% /md %}}</dd>
-    <dt class="property-optional"
+{{% /md %}}</dd><dt class="property-optional"
             title="Optional">
         <span id="userprincipalnames_csharp">
 <a href="#userprincipalnames_csharp" style="color: inherit; text-decoration: inherit;">User<wbr>Principal<wbr>Names</a>
@@ -179,14 +196,11 @@ The following arguments are supported:
         <span class="property-type">List&lt;string&gt;</span>
     </dt>
     <dd>{{% md %}}The User Principal Names of the Azure AD Users.
-{{% /md %}}</dd>
-</dl>
+{{% /md %}}</dd></dl>
 {{% /choosable %}}
 
 {{% choosable language go %}}
-<dl class="resources-properties">
-
-    <dt class="property-optional"
+<dl class="resources-properties"><dt class="property-optional"
             title="Optional">
         <span id="ignoremissing_go">
 <a href="#ignoremissing_go" style="color: inherit; text-decoration: inherit;">Ignore<wbr>Missing</a>
@@ -195,8 +209,7 @@ The following arguments are supported:
         <span class="property-type">bool</span>
     </dt>
     <dd>{{% md %}}Ignore missing users and return users that were found. The data source will still fail if no users are found. Defaults to false.
-{{% /md %}}</dd>
-    <dt class="property-optional"
+{{% /md %}}</dd><dt class="property-optional"
             title="Optional">
         <span id="mailnicknames_go">
 <a href="#mailnicknames_go" style="color: inherit; text-decoration: inherit;">Mail<wbr>Nicknames</a>
@@ -205,8 +218,7 @@ The following arguments are supported:
         <span class="property-type">[]string</span>
     </dt>
     <dd>{{% md %}}The email aliases of the Azure AD Users.
-{{% /md %}}</dd>
-    <dt class="property-optional"
+{{% /md %}}</dd><dt class="property-optional"
             title="Optional">
         <span id="objectids_go">
 <a href="#objectids_go" style="color: inherit; text-decoration: inherit;">Object<wbr>Ids</a>
@@ -215,8 +227,7 @@ The following arguments are supported:
         <span class="property-type">[]string</span>
     </dt>
     <dd>{{% md %}}The Object IDs of the Azure AD Users.
-{{% /md %}}</dd>
-    <dt class="property-optional"
+{{% /md %}}</dd><dt class="property-optional"
             title="Optional">
         <span id="userprincipalnames_go">
 <a href="#userprincipalnames_go" style="color: inherit; text-decoration: inherit;">User<wbr>Principal<wbr>Names</a>
@@ -225,14 +236,11 @@ The following arguments are supported:
         <span class="property-type">[]string</span>
     </dt>
     <dd>{{% md %}}The User Principal Names of the Azure AD Users.
-{{% /md %}}</dd>
-</dl>
+{{% /md %}}</dd></dl>
 {{% /choosable %}}
 
 {{% choosable language nodejs %}}
-<dl class="resources-properties">
-
-    <dt class="property-optional"
+<dl class="resources-properties"><dt class="property-optional"
             title="Optional">
         <span id="ignoremissing_nodejs">
 <a href="#ignoremissing_nodejs" style="color: inherit; text-decoration: inherit;">ignore<wbr>Missing</a>
@@ -241,8 +249,7 @@ The following arguments are supported:
         <span class="property-type">boolean</span>
     </dt>
     <dd>{{% md %}}Ignore missing users and return users that were found. The data source will still fail if no users are found. Defaults to false.
-{{% /md %}}</dd>
-    <dt class="property-optional"
+{{% /md %}}</dd><dt class="property-optional"
             title="Optional">
         <span id="mailnicknames_nodejs">
 <a href="#mailnicknames_nodejs" style="color: inherit; text-decoration: inherit;">mail<wbr>Nicknames</a>
@@ -251,8 +258,7 @@ The following arguments are supported:
         <span class="property-type">string[]</span>
     </dt>
     <dd>{{% md %}}The email aliases of the Azure AD Users.
-{{% /md %}}</dd>
-    <dt class="property-optional"
+{{% /md %}}</dd><dt class="property-optional"
             title="Optional">
         <span id="objectids_nodejs">
 <a href="#objectids_nodejs" style="color: inherit; text-decoration: inherit;">object<wbr>Ids</a>
@@ -261,8 +267,7 @@ The following arguments are supported:
         <span class="property-type">string[]</span>
     </dt>
     <dd>{{% md %}}The Object IDs of the Azure AD Users.
-{{% /md %}}</dd>
-    <dt class="property-optional"
+{{% /md %}}</dd><dt class="property-optional"
             title="Optional">
         <span id="userprincipalnames_nodejs">
 <a href="#userprincipalnames_nodejs" style="color: inherit; text-decoration: inherit;">user<wbr>Principal<wbr>Names</a>
@@ -271,14 +276,11 @@ The following arguments are supported:
         <span class="property-type">string[]</span>
     </dt>
     <dd>{{% md %}}The User Principal Names of the Azure AD Users.
-{{% /md %}}</dd>
-</dl>
+{{% /md %}}</dd></dl>
 {{% /choosable %}}
 
 {{% choosable language python %}}
-<dl class="resources-properties">
-
-    <dt class="property-optional"
+<dl class="resources-properties"><dt class="property-optional"
             title="Optional">
         <span id="ignore_missing_python">
 <a href="#ignore_missing_python" style="color: inherit; text-decoration: inherit;">ignore_<wbr>missing</a>
@@ -287,8 +289,7 @@ The following arguments are supported:
         <span class="property-type">bool</span>
     </dt>
     <dd>{{% md %}}Ignore missing users and return users that were found. The data source will still fail if no users are found. Defaults to false.
-{{% /md %}}</dd>
-    <dt class="property-optional"
+{{% /md %}}</dd><dt class="property-optional"
             title="Optional">
         <span id="mail_nicknames_python">
 <a href="#mail_nicknames_python" style="color: inherit; text-decoration: inherit;">mail_<wbr>nicknames</a>
@@ -297,8 +298,7 @@ The following arguments are supported:
         <span class="property-type">Sequence[str]</span>
     </dt>
     <dd>{{% md %}}The email aliases of the Azure AD Users.
-{{% /md %}}</dd>
-    <dt class="property-optional"
+{{% /md %}}</dd><dt class="property-optional"
             title="Optional">
         <span id="object_ids_python">
 <a href="#object_ids_python" style="color: inherit; text-decoration: inherit;">object_<wbr>ids</a>
@@ -307,8 +307,7 @@ The following arguments are supported:
         <span class="property-type">Sequence[str]</span>
     </dt>
     <dd>{{% md %}}The Object IDs of the Azure AD Users.
-{{% /md %}}</dd>
-    <dt class="property-optional"
+{{% /md %}}</dd><dt class="property-optional"
             title="Optional">
         <span id="user_principal_names_python">
 <a href="#user_principal_names_python" style="color: inherit; text-decoration: inherit;">user_<wbr>principal_<wbr>names</a>
@@ -317,8 +316,7 @@ The following arguments are supported:
         <span class="property-type">Sequence[str]</span>
     </dt>
     <dd>{{% md %}}The User Principal Names of the Azure AD Users.
-{{% /md %}}</dd>
-</dl>
+{{% /md %}}</dd></dl>
 {{% /choosable %}}
 
 
@@ -331,9 +329,7 @@ The following output properties are available:
 
 
 {{% choosable language csharp %}}
-<dl class="resources-properties">
-
-    <dt class="property-"
+<dl class="resources-properties"><dt class="property-"
             title="">
         <span id="id_csharp">
 <a href="#id_csharp" style="color: inherit; text-decoration: inherit;">Id</a>
@@ -342,8 +338,7 @@ The following output properties are available:
         <span class="property-type">string</span>
     </dt>
     <dd>{{% md %}}The provider-assigned unique ID for this managed resource.
-{{% /md %}}</dd>
-    <dt class="property-"
+{{% /md %}}</dd><dt class="property-"
             title="">
         <span id="mailnicknames_csharp">
 <a href="#mailnicknames_csharp" style="color: inherit; text-decoration: inherit;">Mail<wbr>Nicknames</a>
@@ -352,8 +347,7 @@ The following output properties are available:
         <span class="property-type">List&lt;string&gt;</span>
     </dt>
     <dd>{{% md %}}The email aliases of the Azure AD Users.
-{{% /md %}}</dd>
-    <dt class="property-"
+{{% /md %}}</dd><dt class="property-"
             title="">
         <span id="objectids_csharp">
 <a href="#objectids_csharp" style="color: inherit; text-decoration: inherit;">Object<wbr>Ids</a>
@@ -362,8 +356,7 @@ The following output properties are available:
         <span class="property-type">List&lt;string&gt;</span>
     </dt>
     <dd>{{% md %}}The Object IDs of the Azure AD Users.
-{{% /md %}}</dd>
-    <dt class="property-"
+{{% /md %}}</dd><dt class="property-"
             title="">
         <span id="userprincipalnames_csharp">
 <a href="#userprincipalnames_csharp" style="color: inherit; text-decoration: inherit;">User<wbr>Principal<wbr>Names</a>
@@ -372,8 +365,7 @@ The following output properties are available:
         <span class="property-type">List&lt;string&gt;</span>
     </dt>
     <dd>{{% md %}}The User Principal Names of the Azure AD Users.
-{{% /md %}}</dd>
-    <dt class="property-"
+{{% /md %}}</dd><dt class="property-"
             title="">
         <span id="users_csharp">
 <a href="#users_csharp" style="color: inherit; text-decoration: inherit;">Users</a>
@@ -382,8 +374,7 @@ The following output properties are available:
         <span class="property-type"><a href="#getusersuser">List&lt;Pulumi.<wbr>Azure<wbr>AD.<wbr>Outputs.<wbr>Get<wbr>Users<wbr>User&gt;</a></span>
     </dt>
     <dd>{{% md %}}A list of Azure AD Users. Each `user` object provides the attributes documented below.
-{{% /md %}}</dd>
-    <dt class="property-"
+{{% /md %}}</dd><dt class="property-"
             title="">
         <span id="ignoremissing_csharp">
 <a href="#ignoremissing_csharp" style="color: inherit; text-decoration: inherit;">Ignore<wbr>Missing</a>
@@ -391,14 +382,11 @@ The following output properties are available:
         <span class="property-indicator"></span>
         <span class="property-type">bool</span>
     </dt>
-    <dd>{{% md %}}{{% /md %}}</dd>
-</dl>
+    <dd>{{% md %}}{{% /md %}}</dd></dl>
 {{% /choosable %}}
 
 {{% choosable language go %}}
-<dl class="resources-properties">
-
-    <dt class="property-"
+<dl class="resources-properties"><dt class="property-"
             title="">
         <span id="id_go">
 <a href="#id_go" style="color: inherit; text-decoration: inherit;">Id</a>
@@ -407,8 +395,7 @@ The following output properties are available:
         <span class="property-type">string</span>
     </dt>
     <dd>{{% md %}}The provider-assigned unique ID for this managed resource.
-{{% /md %}}</dd>
-    <dt class="property-"
+{{% /md %}}</dd><dt class="property-"
             title="">
         <span id="mailnicknames_go">
 <a href="#mailnicknames_go" style="color: inherit; text-decoration: inherit;">Mail<wbr>Nicknames</a>
@@ -417,8 +404,7 @@ The following output properties are available:
         <span class="property-type">[]string</span>
     </dt>
     <dd>{{% md %}}The email aliases of the Azure AD Users.
-{{% /md %}}</dd>
-    <dt class="property-"
+{{% /md %}}</dd><dt class="property-"
             title="">
         <span id="objectids_go">
 <a href="#objectids_go" style="color: inherit; text-decoration: inherit;">Object<wbr>Ids</a>
@@ -427,8 +413,7 @@ The following output properties are available:
         <span class="property-type">[]string</span>
     </dt>
     <dd>{{% md %}}The Object IDs of the Azure AD Users.
-{{% /md %}}</dd>
-    <dt class="property-"
+{{% /md %}}</dd><dt class="property-"
             title="">
         <span id="userprincipalnames_go">
 <a href="#userprincipalnames_go" style="color: inherit; text-decoration: inherit;">User<wbr>Principal<wbr>Names</a>
@@ -437,8 +422,7 @@ The following output properties are available:
         <span class="property-type">[]string</span>
     </dt>
     <dd>{{% md %}}The User Principal Names of the Azure AD Users.
-{{% /md %}}</dd>
-    <dt class="property-"
+{{% /md %}}</dd><dt class="property-"
             title="">
         <span id="users_go">
 <a href="#users_go" style="color: inherit; text-decoration: inherit;">Users</a>
@@ -447,8 +431,7 @@ The following output properties are available:
         <span class="property-type"><a href="#getusersuser">[]Get<wbr>Users<wbr>User</a></span>
     </dt>
     <dd>{{% md %}}A list of Azure AD Users. Each `user` object provides the attributes documented below.
-{{% /md %}}</dd>
-    <dt class="property-"
+{{% /md %}}</dd><dt class="property-"
             title="">
         <span id="ignoremissing_go">
 <a href="#ignoremissing_go" style="color: inherit; text-decoration: inherit;">Ignore<wbr>Missing</a>
@@ -456,14 +439,11 @@ The following output properties are available:
         <span class="property-indicator"></span>
         <span class="property-type">bool</span>
     </dt>
-    <dd>{{% md %}}{{% /md %}}</dd>
-</dl>
+    <dd>{{% md %}}{{% /md %}}</dd></dl>
 {{% /choosable %}}
 
 {{% choosable language nodejs %}}
-<dl class="resources-properties">
-
-    <dt class="property-"
+<dl class="resources-properties"><dt class="property-"
             title="">
         <span id="id_nodejs">
 <a href="#id_nodejs" style="color: inherit; text-decoration: inherit;">id</a>
@@ -472,8 +452,7 @@ The following output properties are available:
         <span class="property-type">string</span>
     </dt>
     <dd>{{% md %}}The provider-assigned unique ID for this managed resource.
-{{% /md %}}</dd>
-    <dt class="property-"
+{{% /md %}}</dd><dt class="property-"
             title="">
         <span id="mailnicknames_nodejs">
 <a href="#mailnicknames_nodejs" style="color: inherit; text-decoration: inherit;">mail<wbr>Nicknames</a>
@@ -482,8 +461,7 @@ The following output properties are available:
         <span class="property-type">string[]</span>
     </dt>
     <dd>{{% md %}}The email aliases of the Azure AD Users.
-{{% /md %}}</dd>
-    <dt class="property-"
+{{% /md %}}</dd><dt class="property-"
             title="">
         <span id="objectids_nodejs">
 <a href="#objectids_nodejs" style="color: inherit; text-decoration: inherit;">object<wbr>Ids</a>
@@ -492,8 +470,7 @@ The following output properties are available:
         <span class="property-type">string[]</span>
     </dt>
     <dd>{{% md %}}The Object IDs of the Azure AD Users.
-{{% /md %}}</dd>
-    <dt class="property-"
+{{% /md %}}</dd><dt class="property-"
             title="">
         <span id="userprincipalnames_nodejs">
 <a href="#userprincipalnames_nodejs" style="color: inherit; text-decoration: inherit;">user<wbr>Principal<wbr>Names</a>
@@ -502,8 +479,7 @@ The following output properties are available:
         <span class="property-type">string[]</span>
     </dt>
     <dd>{{% md %}}The User Principal Names of the Azure AD Users.
-{{% /md %}}</dd>
-    <dt class="property-"
+{{% /md %}}</dd><dt class="property-"
             title="">
         <span id="users_nodejs">
 <a href="#users_nodejs" style="color: inherit; text-decoration: inherit;">users</a>
@@ -512,8 +488,7 @@ The following output properties are available:
         <span class="property-type"><a href="#getusersuser">Get<wbr>Users<wbr>User[]</a></span>
     </dt>
     <dd>{{% md %}}A list of Azure AD Users. Each `user` object provides the attributes documented below.
-{{% /md %}}</dd>
-    <dt class="property-"
+{{% /md %}}</dd><dt class="property-"
             title="">
         <span id="ignoremissing_nodejs">
 <a href="#ignoremissing_nodejs" style="color: inherit; text-decoration: inherit;">ignore<wbr>Missing</a>
@@ -521,14 +496,11 @@ The following output properties are available:
         <span class="property-indicator"></span>
         <span class="property-type">boolean</span>
     </dt>
-    <dd>{{% md %}}{{% /md %}}</dd>
-</dl>
+    <dd>{{% md %}}{{% /md %}}</dd></dl>
 {{% /choosable %}}
 
 {{% choosable language python %}}
-<dl class="resources-properties">
-
-    <dt class="property-"
+<dl class="resources-properties"><dt class="property-"
             title="">
         <span id="id_python">
 <a href="#id_python" style="color: inherit; text-decoration: inherit;">id</a>
@@ -537,8 +509,7 @@ The following output properties are available:
         <span class="property-type">str</span>
     </dt>
     <dd>{{% md %}}The provider-assigned unique ID for this managed resource.
-{{% /md %}}</dd>
-    <dt class="property-"
+{{% /md %}}</dd><dt class="property-"
             title="">
         <span id="mail_nicknames_python">
 <a href="#mail_nicknames_python" style="color: inherit; text-decoration: inherit;">mail_<wbr>nicknames</a>
@@ -547,8 +518,7 @@ The following output properties are available:
         <span class="property-type">Sequence[str]</span>
     </dt>
     <dd>{{% md %}}The email aliases of the Azure AD Users.
-{{% /md %}}</dd>
-    <dt class="property-"
+{{% /md %}}</dd><dt class="property-"
             title="">
         <span id="object_ids_python">
 <a href="#object_ids_python" style="color: inherit; text-decoration: inherit;">object_<wbr>ids</a>
@@ -557,8 +527,7 @@ The following output properties are available:
         <span class="property-type">Sequence[str]</span>
     </dt>
     <dd>{{% md %}}The Object IDs of the Azure AD Users.
-{{% /md %}}</dd>
-    <dt class="property-"
+{{% /md %}}</dd><dt class="property-"
             title="">
         <span id="user_principal_names_python">
 <a href="#user_principal_names_python" style="color: inherit; text-decoration: inherit;">user_<wbr>principal_<wbr>names</a>
@@ -567,8 +536,7 @@ The following output properties are available:
         <span class="property-type">Sequence[str]</span>
     </dt>
     <dd>{{% md %}}The User Principal Names of the Azure AD Users.
-{{% /md %}}</dd>
-    <dt class="property-"
+{{% /md %}}</dd><dt class="property-"
             title="">
         <span id="users_python">
 <a href="#users_python" style="color: inherit; text-decoration: inherit;">users</a>
@@ -577,8 +545,7 @@ The following output properties are available:
         <span class="property-type"><a href="#getusersuser">Sequence[Get<wbr>Users<wbr>User]</a></span>
     </dt>
     <dd>{{% md %}}A list of Azure AD Users. Each `user` object provides the attributes documented below.
-{{% /md %}}</dd>
-    <dt class="property-"
+{{% /md %}}</dd><dt class="property-"
             title="">
         <span id="ignore_missing_python">
 <a href="#ignore_missing_python" style="color: inherit; text-decoration: inherit;">ignore_<wbr>missing</a>
@@ -586,8 +553,7 @@ The following output properties are available:
         <span class="property-indicator"></span>
         <span class="property-type">bool</span>
     </dt>
-    <dd>{{% md %}}{{% /md %}}</dd>
-</dl>
+    <dd>{{% md %}}{{% /md %}}</dd></dl>
 {{% /choosable %}}
 
 
@@ -601,9 +567,7 @@ The following output properties are available:
 
 
 {{% choosable language csharp %}}
-<dl class="resources-properties">
-
-    <dt class="property-required"
+<dl class="resources-properties"><dt class="property-required"
             title="Required">
         <span id="accountenabled_csharp">
 <a href="#accountenabled_csharp" style="color: inherit; text-decoration: inherit;">Account<wbr>Enabled</a>
@@ -612,8 +576,7 @@ The following output properties are available:
         <span class="property-type">bool</span>
     </dt>
     <dd>{{% md %}}`True` if the account is enabled; otherwise `False`.
-{{% /md %}}</dd>
-    <dt class="property-required"
+{{% /md %}}</dd><dt class="property-required"
             title="Required">
         <span id="displayname_csharp">
 <a href="#displayname_csharp" style="color: inherit; text-decoration: inherit;">Display<wbr>Name</a>
@@ -622,8 +585,7 @@ The following output properties are available:
         <span class="property-type">string</span>
     </dt>
     <dd>{{% md %}}The Display Name of the Azure AD User.
-{{% /md %}}</dd>
-    <dt class="property-required"
+{{% /md %}}</dd><dt class="property-required"
             title="Required">
         <span id="immutableid_csharp">
 <a href="#immutableid_csharp" style="color: inherit; text-decoration: inherit;">Immutable<wbr>Id</a>
@@ -632,8 +594,7 @@ The following output properties are available:
         <span class="property-type">string</span>
     </dt>
     <dd>{{% md %}}The value used to associate an on-premises Active Directory user account with their Azure AD user object.
-{{% /md %}}</dd>
-    <dt class="property-required"
+{{% /md %}}</dd><dt class="property-required"
             title="Required">
         <span id="mail_csharp">
 <a href="#mail_csharp" style="color: inherit; text-decoration: inherit;">Mail</a>
@@ -642,8 +603,7 @@ The following output properties are available:
         <span class="property-type">string</span>
     </dt>
     <dd>{{% md %}}The primary email address of the Azure AD User.
-{{% /md %}}</dd>
-    <dt class="property-required"
+{{% /md %}}</dd><dt class="property-required"
             title="Required">
         <span id="mailnickname_csharp">
 <a href="#mailnickname_csharp" style="color: inherit; text-decoration: inherit;">Mail<wbr>Nickname</a>
@@ -652,8 +612,7 @@ The following output properties are available:
         <span class="property-type">string</span>
     </dt>
     <dd>{{% md %}}The email alias of the Azure AD User.
-{{% /md %}}</dd>
-    <dt class="property-required"
+{{% /md %}}</dd><dt class="property-required"
             title="Required">
         <span id="objectid_csharp">
 <a href="#objectid_csharp" style="color: inherit; text-decoration: inherit;">Object<wbr>Id</a>
@@ -662,8 +621,7 @@ The following output properties are available:
         <span class="property-type">string</span>
     </dt>
     <dd>{{% md %}}The Object ID of the Azure AD User.
-{{% /md %}}</dd>
-    <dt class="property-required"
+{{% /md %}}</dd><dt class="property-required"
             title="Required">
         <span id="onpremisessamaccountname_csharp">
 <a href="#onpremisessamaccountname_csharp" style="color: inherit; text-decoration: inherit;">Onpremises<wbr>Sam<wbr>Account<wbr>Name</a>
@@ -672,8 +630,7 @@ The following output properties are available:
         <span class="property-type">string</span>
     </dt>
     <dd>{{% md %}}The on-premise SAM account name of the Azure AD User.
-{{% /md %}}</dd>
-    <dt class="property-required"
+{{% /md %}}</dd><dt class="property-required"
             title="Required">
         <span id="onpremisesuserprincipalname_csharp">
 <a href="#onpremisesuserprincipalname_csharp" style="color: inherit; text-decoration: inherit;">Onpremises<wbr>User<wbr>Principal<wbr>Name</a>
@@ -682,8 +639,7 @@ The following output properties are available:
         <span class="property-type">string</span>
     </dt>
     <dd>{{% md %}}The on-premise user principal name of the Azure AD User.
-{{% /md %}}</dd>
-    <dt class="property-required"
+{{% /md %}}</dd><dt class="property-required"
             title="Required">
         <span id="usagelocation_csharp">
 <a href="#usagelocation_csharp" style="color: inherit; text-decoration: inherit;">Usage<wbr>Location</a>
@@ -692,8 +648,7 @@ The following output properties are available:
         <span class="property-type">string</span>
     </dt>
     <dd>{{% md %}}The usage location of the Azure AD User.
-{{% /md %}}</dd>
-    <dt class="property-required"
+{{% /md %}}</dd><dt class="property-required"
             title="Required">
         <span id="userprincipalname_csharp">
 <a href="#userprincipalname_csharp" style="color: inherit; text-decoration: inherit;">User<wbr>Principal<wbr>Name</a>
@@ -702,14 +657,11 @@ The following output properties are available:
         <span class="property-type">string</span>
     </dt>
     <dd>{{% md %}}The User Principal Name of the Azure AD User.
-{{% /md %}}</dd>
-</dl>
+{{% /md %}}</dd></dl>
 {{% /choosable %}}
 
 {{% choosable language go %}}
-<dl class="resources-properties">
-
-    <dt class="property-required"
+<dl class="resources-properties"><dt class="property-required"
             title="Required">
         <span id="accountenabled_go">
 <a href="#accountenabled_go" style="color: inherit; text-decoration: inherit;">Account<wbr>Enabled</a>
@@ -718,8 +670,7 @@ The following output properties are available:
         <span class="property-type">bool</span>
     </dt>
     <dd>{{% md %}}`True` if the account is enabled; otherwise `False`.
-{{% /md %}}</dd>
-    <dt class="property-required"
+{{% /md %}}</dd><dt class="property-required"
             title="Required">
         <span id="displayname_go">
 <a href="#displayname_go" style="color: inherit; text-decoration: inherit;">Display<wbr>Name</a>
@@ -728,8 +679,7 @@ The following output properties are available:
         <span class="property-type">string</span>
     </dt>
     <dd>{{% md %}}The Display Name of the Azure AD User.
-{{% /md %}}</dd>
-    <dt class="property-required"
+{{% /md %}}</dd><dt class="property-required"
             title="Required">
         <span id="immutableid_go">
 <a href="#immutableid_go" style="color: inherit; text-decoration: inherit;">Immutable<wbr>Id</a>
@@ -738,8 +688,7 @@ The following output properties are available:
         <span class="property-type">string</span>
     </dt>
     <dd>{{% md %}}The value used to associate an on-premises Active Directory user account with their Azure AD user object.
-{{% /md %}}</dd>
-    <dt class="property-required"
+{{% /md %}}</dd><dt class="property-required"
             title="Required">
         <span id="mail_go">
 <a href="#mail_go" style="color: inherit; text-decoration: inherit;">Mail</a>
@@ -748,8 +697,7 @@ The following output properties are available:
         <span class="property-type">string</span>
     </dt>
     <dd>{{% md %}}The primary email address of the Azure AD User.
-{{% /md %}}</dd>
-    <dt class="property-required"
+{{% /md %}}</dd><dt class="property-required"
             title="Required">
         <span id="mailnickname_go">
 <a href="#mailnickname_go" style="color: inherit; text-decoration: inherit;">Mail<wbr>Nickname</a>
@@ -758,8 +706,7 @@ The following output properties are available:
         <span class="property-type">string</span>
     </dt>
     <dd>{{% md %}}The email alias of the Azure AD User.
-{{% /md %}}</dd>
-    <dt class="property-required"
+{{% /md %}}</dd><dt class="property-required"
             title="Required">
         <span id="objectid_go">
 <a href="#objectid_go" style="color: inherit; text-decoration: inherit;">Object<wbr>Id</a>
@@ -768,8 +715,7 @@ The following output properties are available:
         <span class="property-type">string</span>
     </dt>
     <dd>{{% md %}}The Object ID of the Azure AD User.
-{{% /md %}}</dd>
-    <dt class="property-required"
+{{% /md %}}</dd><dt class="property-required"
             title="Required">
         <span id="onpremisessamaccountname_go">
 <a href="#onpremisessamaccountname_go" style="color: inherit; text-decoration: inherit;">Onpremises<wbr>Sam<wbr>Account<wbr>Name</a>
@@ -778,8 +724,7 @@ The following output properties are available:
         <span class="property-type">string</span>
     </dt>
     <dd>{{% md %}}The on-premise SAM account name of the Azure AD User.
-{{% /md %}}</dd>
-    <dt class="property-required"
+{{% /md %}}</dd><dt class="property-required"
             title="Required">
         <span id="onpremisesuserprincipalname_go">
 <a href="#onpremisesuserprincipalname_go" style="color: inherit; text-decoration: inherit;">Onpremises<wbr>User<wbr>Principal<wbr>Name</a>
@@ -788,8 +733,7 @@ The following output properties are available:
         <span class="property-type">string</span>
     </dt>
     <dd>{{% md %}}The on-premise user principal name of the Azure AD User.
-{{% /md %}}</dd>
-    <dt class="property-required"
+{{% /md %}}</dd><dt class="property-required"
             title="Required">
         <span id="usagelocation_go">
 <a href="#usagelocation_go" style="color: inherit; text-decoration: inherit;">Usage<wbr>Location</a>
@@ -798,8 +742,7 @@ The following output properties are available:
         <span class="property-type">string</span>
     </dt>
     <dd>{{% md %}}The usage location of the Azure AD User.
-{{% /md %}}</dd>
-    <dt class="property-required"
+{{% /md %}}</dd><dt class="property-required"
             title="Required">
         <span id="userprincipalname_go">
 <a href="#userprincipalname_go" style="color: inherit; text-decoration: inherit;">User<wbr>Principal<wbr>Name</a>
@@ -808,14 +751,11 @@ The following output properties are available:
         <span class="property-type">string</span>
     </dt>
     <dd>{{% md %}}The User Principal Name of the Azure AD User.
-{{% /md %}}</dd>
-</dl>
+{{% /md %}}</dd></dl>
 {{% /choosable %}}
 
 {{% choosable language nodejs %}}
-<dl class="resources-properties">
-
-    <dt class="property-required"
+<dl class="resources-properties"><dt class="property-required"
             title="Required">
         <span id="accountenabled_nodejs">
 <a href="#accountenabled_nodejs" style="color: inherit; text-decoration: inherit;">account<wbr>Enabled</a>
@@ -824,8 +764,7 @@ The following output properties are available:
         <span class="property-type">boolean</span>
     </dt>
     <dd>{{% md %}}`True` if the account is enabled; otherwise `False`.
-{{% /md %}}</dd>
-    <dt class="property-required"
+{{% /md %}}</dd><dt class="property-required"
             title="Required">
         <span id="displayname_nodejs">
 <a href="#displayname_nodejs" style="color: inherit; text-decoration: inherit;">display<wbr>Name</a>
@@ -834,8 +773,7 @@ The following output properties are available:
         <span class="property-type">string</span>
     </dt>
     <dd>{{% md %}}The Display Name of the Azure AD User.
-{{% /md %}}</dd>
-    <dt class="property-required"
+{{% /md %}}</dd><dt class="property-required"
             title="Required">
         <span id="immutableid_nodejs">
 <a href="#immutableid_nodejs" style="color: inherit; text-decoration: inherit;">immutable<wbr>Id</a>
@@ -844,8 +782,7 @@ The following output properties are available:
         <span class="property-type">string</span>
     </dt>
     <dd>{{% md %}}The value used to associate an on-premises Active Directory user account with their Azure AD user object.
-{{% /md %}}</dd>
-    <dt class="property-required"
+{{% /md %}}</dd><dt class="property-required"
             title="Required">
         <span id="mail_nodejs">
 <a href="#mail_nodejs" style="color: inherit; text-decoration: inherit;">mail</a>
@@ -854,8 +791,7 @@ The following output properties are available:
         <span class="property-type">string</span>
     </dt>
     <dd>{{% md %}}The primary email address of the Azure AD User.
-{{% /md %}}</dd>
-    <dt class="property-required"
+{{% /md %}}</dd><dt class="property-required"
             title="Required">
         <span id="mailnickname_nodejs">
 <a href="#mailnickname_nodejs" style="color: inherit; text-decoration: inherit;">mail<wbr>Nickname</a>
@@ -864,8 +800,7 @@ The following output properties are available:
         <span class="property-type">string</span>
     </dt>
     <dd>{{% md %}}The email alias of the Azure AD User.
-{{% /md %}}</dd>
-    <dt class="property-required"
+{{% /md %}}</dd><dt class="property-required"
             title="Required">
         <span id="objectid_nodejs">
 <a href="#objectid_nodejs" style="color: inherit; text-decoration: inherit;">object<wbr>Id</a>
@@ -874,8 +809,7 @@ The following output properties are available:
         <span class="property-type">string</span>
     </dt>
     <dd>{{% md %}}The Object ID of the Azure AD User.
-{{% /md %}}</dd>
-    <dt class="property-required"
+{{% /md %}}</dd><dt class="property-required"
             title="Required">
         <span id="onpremisessamaccountname_nodejs">
 <a href="#onpremisessamaccountname_nodejs" style="color: inherit; text-decoration: inherit;">onpremises<wbr>Sam<wbr>Account<wbr>Name</a>
@@ -884,8 +818,7 @@ The following output properties are available:
         <span class="property-type">string</span>
     </dt>
     <dd>{{% md %}}The on-premise SAM account name of the Azure AD User.
-{{% /md %}}</dd>
-    <dt class="property-required"
+{{% /md %}}</dd><dt class="property-required"
             title="Required">
         <span id="onpremisesuserprincipalname_nodejs">
 <a href="#onpremisesuserprincipalname_nodejs" style="color: inherit; text-decoration: inherit;">onpremises<wbr>User<wbr>Principal<wbr>Name</a>
@@ -894,8 +827,7 @@ The following output properties are available:
         <span class="property-type">string</span>
     </dt>
     <dd>{{% md %}}The on-premise user principal name of the Azure AD User.
-{{% /md %}}</dd>
-    <dt class="property-required"
+{{% /md %}}</dd><dt class="property-required"
             title="Required">
         <span id="usagelocation_nodejs">
 <a href="#usagelocation_nodejs" style="color: inherit; text-decoration: inherit;">usage<wbr>Location</a>
@@ -904,8 +836,7 @@ The following output properties are available:
         <span class="property-type">string</span>
     </dt>
     <dd>{{% md %}}The usage location of the Azure AD User.
-{{% /md %}}</dd>
-    <dt class="property-required"
+{{% /md %}}</dd><dt class="property-required"
             title="Required">
         <span id="userprincipalname_nodejs">
 <a href="#userprincipalname_nodejs" style="color: inherit; text-decoration: inherit;">user<wbr>Principal<wbr>Name</a>
@@ -914,14 +845,11 @@ The following output properties are available:
         <span class="property-type">string</span>
     </dt>
     <dd>{{% md %}}The User Principal Name of the Azure AD User.
-{{% /md %}}</dd>
-</dl>
+{{% /md %}}</dd></dl>
 {{% /choosable %}}
 
 {{% choosable language python %}}
-<dl class="resources-properties">
-
-    <dt class="property-required"
+<dl class="resources-properties"><dt class="property-required"
             title="Required">
         <span id="account_enabled_python">
 <a href="#account_enabled_python" style="color: inherit; text-decoration: inherit;">account_<wbr>enabled</a>
@@ -930,8 +858,7 @@ The following output properties are available:
         <span class="property-type">bool</span>
     </dt>
     <dd>{{% md %}}`True` if the account is enabled; otherwise `False`.
-{{% /md %}}</dd>
-    <dt class="property-required"
+{{% /md %}}</dd><dt class="property-required"
             title="Required">
         <span id="display_name_python">
 <a href="#display_name_python" style="color: inherit; text-decoration: inherit;">display_<wbr>name</a>
@@ -940,8 +867,7 @@ The following output properties are available:
         <span class="property-type">str</span>
     </dt>
     <dd>{{% md %}}The Display Name of the Azure AD User.
-{{% /md %}}</dd>
-    <dt class="property-required"
+{{% /md %}}</dd><dt class="property-required"
             title="Required">
         <span id="immutable_id_python">
 <a href="#immutable_id_python" style="color: inherit; text-decoration: inherit;">immutable_<wbr>id</a>
@@ -950,8 +876,7 @@ The following output properties are available:
         <span class="property-type">str</span>
     </dt>
     <dd>{{% md %}}The value used to associate an on-premises Active Directory user account with their Azure AD user object.
-{{% /md %}}</dd>
-    <dt class="property-required"
+{{% /md %}}</dd><dt class="property-required"
             title="Required">
         <span id="mail_python">
 <a href="#mail_python" style="color: inherit; text-decoration: inherit;">mail</a>
@@ -960,8 +885,7 @@ The following output properties are available:
         <span class="property-type">str</span>
     </dt>
     <dd>{{% md %}}The primary email address of the Azure AD User.
-{{% /md %}}</dd>
-    <dt class="property-required"
+{{% /md %}}</dd><dt class="property-required"
             title="Required">
         <span id="mail_nickname_python">
 <a href="#mail_nickname_python" style="color: inherit; text-decoration: inherit;">mail_<wbr>nickname</a>
@@ -970,8 +894,7 @@ The following output properties are available:
         <span class="property-type">str</span>
     </dt>
     <dd>{{% md %}}The email alias of the Azure AD User.
-{{% /md %}}</dd>
-    <dt class="property-required"
+{{% /md %}}</dd><dt class="property-required"
             title="Required">
         <span id="object_id_python">
 <a href="#object_id_python" style="color: inherit; text-decoration: inherit;">object_<wbr>id</a>
@@ -980,8 +903,7 @@ The following output properties are available:
         <span class="property-type">str</span>
     </dt>
     <dd>{{% md %}}The Object ID of the Azure AD User.
-{{% /md %}}</dd>
-    <dt class="property-required"
+{{% /md %}}</dd><dt class="property-required"
             title="Required">
         <span id="onpremises_sam_account_name_python">
 <a href="#onpremises_sam_account_name_python" style="color: inherit; text-decoration: inherit;">onpremises_<wbr>sam_<wbr>account_<wbr>name</a>
@@ -990,8 +912,7 @@ The following output properties are available:
         <span class="property-type">str</span>
     </dt>
     <dd>{{% md %}}The on-premise SAM account name of the Azure AD User.
-{{% /md %}}</dd>
-    <dt class="property-required"
+{{% /md %}}</dd><dt class="property-required"
             title="Required">
         <span id="onpremises_user_principal_name_python">
 <a href="#onpremises_user_principal_name_python" style="color: inherit; text-decoration: inherit;">onpremises_<wbr>user_<wbr>principal_<wbr>name</a>
@@ -1000,8 +921,7 @@ The following output properties are available:
         <span class="property-type">str</span>
     </dt>
     <dd>{{% md %}}The on-premise user principal name of the Azure AD User.
-{{% /md %}}</dd>
-    <dt class="property-required"
+{{% /md %}}</dd><dt class="property-required"
             title="Required">
         <span id="usage_location_python">
 <a href="#usage_location_python" style="color: inherit; text-decoration: inherit;">usage_<wbr>location</a>
@@ -1010,8 +930,7 @@ The following output properties are available:
         <span class="property-type">str</span>
     </dt>
     <dd>{{% md %}}The usage location of the Azure AD User.
-{{% /md %}}</dd>
-    <dt class="property-required"
+{{% /md %}}</dd><dt class="property-required"
             title="Required">
         <span id="user_principal_name_python">
 <a href="#user_principal_name_python" style="color: inherit; text-decoration: inherit;">user_<wbr>principal_<wbr>name</a>
@@ -1020,8 +939,7 @@ The following output properties are available:
         <span class="property-type">str</span>
     </dt>
     <dd>{{% md %}}The User Principal Name of the Azure AD User.
-{{% /md %}}</dd>
-</dl>
+{{% /md %}}</dd></dl>
 {{% /choosable %}}
 
 
@@ -1035,6 +953,6 @@ The following output properties are available:
 	<dt>License</dt>
 	<dd>Apache-2.0</dd>
 	<dt>Notes</dt>
-	<dd>This Pulumi package is based on the [`azuread` Terraform Provider](https://github.com/terraform-providers/terraform-provider-azuread).</dd>
+	<dd>{{% md %}}This Pulumi package is based on the [`azuread` Terraform Provider](https://github.com/terraform-providers/terraform-provider-azuread).{{% /md %}}</dd>
 </dl>
 

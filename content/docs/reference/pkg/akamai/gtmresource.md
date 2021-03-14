@@ -1,8 +1,8 @@
 
 ---
 title: "GtmResource"
-title_tag: "Resource GtmResource | Package Akamai"
-meta_desc: "Explore the GtmResource resource of the Akamai package, including examples, input properties, output properties, lookup functions, and supporting types. `akamai.GtmResource` provides the resource for creating, configuring and importing a gtm resource to integrate easily with your existing GTM infrastructure to provide a secure, high performance, highly available and scalable solution for Global Traffic Management. Note: Import requires an ID of the format: `existing_domain_name`:`existing_resource_name`"
+title_tag: "akamai.GtmResource"
+meta_desc: "Documentation for the akamai.GtmResource resource with examples, input properties, output properties, lookup functions, and supporting types."
 ---
 
 
@@ -14,11 +14,17 @@ meta_desc: "Explore the GtmResource resource of the Akamai package, including ex
 
 
 {{% examples %}}
+
 ## Example Usage
 
 {{< chooser language "typescript,python,go,csharp" / >}}
 
-{{% example csharp %}}
+
+
+
+
+{{< example csharp >}}
+
 ```csharp
 using Pulumi;
 using Akamai = Pulumi.Akamai;
@@ -38,9 +44,12 @@ class MyStack : Stack
 }
 ```
 
-{{% /example %}}
 
-{{% example go %}}
+{{< /example >}}
+
+
+{{< example go >}}
+
 ```go
 package main
 
@@ -64,9 +73,12 @@ func main() {
 }
 ```
 
-{{% /example %}}
 
-{{% example python %}}
+{{< /example >}}
+
+
+{{< example python >}}
+
 ```python
 import pulumi
 import pulumi_akamai as akamai
@@ -77,9 +89,12 @@ demo_resource = akamai.GtmResource("demoResource",
     type="XML load object via HTTP")
 ```
 
-{{% /example %}}
 
-{{% example typescript %}}
+{{< /example >}}
+
+
+{{< example typescript >}}
+
 
 ```typescript
 import * as pulumi from "@pulumi/pulumi";
@@ -92,9 +107,16 @@ const demoResource = new akamai.GtmResource("demo_resource", {
 });
 ```
 
-{{% /example %}}
+
+{{< /example >}}
+
+
+
+
 
 {{% /examples %}}
+
+
 
 
 ## Create a GtmResource Resource {#create}
@@ -119,9 +141,7 @@ const demoResource = new akamai.GtmResource("demo_resource", {
 
 {{% choosable language nodejs %}}
 
-<dl class="resources-properties">
-  
-    <dt
+<dl class="resources-properties"><dt
         class="property-required" title="Required">
         <span>name</span>
         <span class="property-indicator"></span>
@@ -129,9 +149,7 @@ const demoResource = new akamai.GtmResource("demo_resource", {
     </dt>
     <dd>
       The unique name of the resource.
-    </dd>
-  
-    <dt
+    </dd><dt
         class="property-required" title="Required">
         <span>args</span>
         <span class="property-indicator"></span>
@@ -139,9 +157,7 @@ const demoResource = new akamai.GtmResource("demo_resource", {
     </dt>
     <dd>
       The arguments to resource properties.
-    </dd>
-  
-    <dt
+    </dd><dt
         class="property-optional" title="Optional">
         <span>opts</span>
         <span class="property-indicator"></span>
@@ -149,10 +165,7 @@ const demoResource = new akamai.GtmResource("demo_resource", {
     </dt>
     <dd>
       Bag of options to control resource&#39;s behavior.
-    </dd>
-  
-
-</dl>
+    </dd></dl>
 
 {{% /choosable %}}
 
@@ -178,9 +191,7 @@ const demoResource = new akamai.GtmResource("demo_resource", {
 
 {{% choosable language go %}}
 
-<dl class="resources-properties">
-  
-    <dt
+<dl class="resources-properties"><dt
         class="property-optional" title="Optional">
         <span>ctx</span>
         <span class="property-indicator"></span>
@@ -188,9 +199,7 @@ const demoResource = new akamai.GtmResource("demo_resource", {
     </dt>
     <dd>
       Context object for the current deployment.
-    </dd>
-  
-    <dt
+    </dd><dt
         class="property-required" title="Required">
         <span>name</span>
         <span class="property-indicator"></span>
@@ -198,9 +207,7 @@ const demoResource = new akamai.GtmResource("demo_resource", {
     </dt>
     <dd>
       The unique name of the resource.
-    </dd>
-  
-    <dt
+    </dd><dt
         class="property-required" title="Required">
         <span>args</span>
         <span class="property-indicator"></span>
@@ -208,9 +215,7 @@ const demoResource = new akamai.GtmResource("demo_resource", {
     </dt>
     <dd>
       The arguments to resource properties.
-    </dd>
-  
-    <dt
+    </dd><dt
         class="property-optional" title="Optional">
         <span>opts</span>
         <span class="property-indicator"></span>
@@ -218,18 +223,13 @@ const demoResource = new akamai.GtmResource("demo_resource", {
     </dt>
     <dd>
       Bag of options to control resource&#39;s behavior.
-    </dd>
-  
-
-</dl>
+    </dd></dl>
 
 {{% /choosable %}}
 
 {{% choosable language csharp %}}
 
-<dl class="resources-properties">
-  
-    <dt
+<dl class="resources-properties"><dt
         class="property-required" title="Required">
         <span>name</span>
         <span class="property-indicator"></span>
@@ -237,9 +237,7 @@ const demoResource = new akamai.GtmResource("demo_resource", {
     </dt>
     <dd>
       The unique name of the resource.
-    </dd>
-  
-    <dt
+    </dd><dt
         class="property-required" title="Required">
         <span>args</span>
         <span class="property-indicator"></span>
@@ -247,9 +245,7 @@ const demoResource = new akamai.GtmResource("demo_resource", {
     </dt>
     <dd>
       The arguments to resource properties.
-    </dd>
-  
-    <dt
+    </dd><dt
         class="property-optional" title="Optional">
         <span>opts</span>
         <span class="property-indicator"></span>
@@ -257,10 +253,7 @@ const demoResource = new akamai.GtmResource("demo_resource", {
     </dt>
     <dd>
       Bag of options to control resource&#39;s behavior.
-    </dd>
-  
-
-</dl>
+    </dd></dl>
 
 {{% /choosable %}}
 
@@ -275,9 +268,7 @@ The GtmResource resource accepts the following [input]({{< relref "/docs/intro/c
 
 
 {{% choosable language csharp %}}
-<dl class="resources-properties">
-
-    <dt class="property-required"
+<dl class="resources-properties"><dt class="property-required"
             title="Required">
         <span id="aggregationtype_csharp">
 <a href="#aggregationtype_csharp" style="color: inherit; text-decoration: inherit;">Aggregation<wbr>Type</a>
@@ -285,8 +276,7 @@ The GtmResource resource accepts the following [input]({{< relref "/docs/intro/c
         <span class="property-indicator"></span>
         <span class="property-type">string</span>
     </dt>
-    <dd>{{% md %}}{{% /md %}}</dd>
-    <dt class="property-required"
+    <dd>{{% md %}}{{% /md %}}</dd><dt class="property-required"
             title="Required">
         <span id="domain_csharp">
 <a href="#domain_csharp" style="color: inherit; text-decoration: inherit;">Domain</a>
@@ -295,8 +285,7 @@ The GtmResource resource accepts the following [input]({{< relref "/docs/intro/c
         <span class="property-type">string</span>
     </dt>
     <dd>{{% md %}}Domain name
-{{% /md %}}</dd>
-    <dt class="property-required"
+{{% /md %}}</dd><dt class="property-required"
             title="Required">
         <span id="type_csharp">
 <a href="#type_csharp" style="color: inherit; text-decoration: inherit;">Type</a>
@@ -305,8 +294,7 @@ The GtmResource resource accepts the following [input]({{< relref "/docs/intro/c
         <span class="property-type">string</span>
     </dt>
     <dd>{{% md %}}Resource type
-{{% /md %}}</dd>
-    <dt class="property-optional"
+{{% /md %}}</dd><dt class="property-optional"
             title="Optional">
         <span id="constrainedproperty_csharp">
 <a href="#constrainedproperty_csharp" style="color: inherit; text-decoration: inherit;">Constrained<wbr>Property</a>
@@ -314,8 +302,7 @@ The GtmResource resource accepts the following [input]({{< relref "/docs/intro/c
         <span class="property-indicator"></span>
         <span class="property-type">string</span>
     </dt>
-    <dd>{{% md %}}{{% /md %}}</dd>
-    <dt class="property-optional"
+    <dd>{{% md %}}{{% /md %}}</dd><dt class="property-optional"
             title="Optional">
         <span id="decayrate_csharp">
 <a href="#decayrate_csharp" style="color: inherit; text-decoration: inherit;">Decay<wbr>Rate</a>
@@ -323,8 +310,7 @@ The GtmResource resource accepts the following [input]({{< relref "/docs/intro/c
         <span class="property-indicator"></span>
         <span class="property-type">double</span>
     </dt>
-    <dd>{{% md %}}{{% /md %}}</dd>
-    <dt class="property-optional"
+    <dd>{{% md %}}{{% /md %}}</dd><dt class="property-optional"
             title="Optional">
         <span id="description_csharp">
 <a href="#description_csharp" style="color: inherit; text-decoration: inherit;">Description</a>
@@ -332,8 +318,7 @@ The GtmResource resource accepts the following [input]({{< relref "/docs/intro/c
         <span class="property-indicator"></span>
         <span class="property-type">string</span>
     </dt>
-    <dd>{{% md %}}{{% /md %}}</dd>
-    <dt class="property-optional"
+    <dd>{{% md %}}{{% /md %}}</dd><dt class="property-optional"
             title="Optional">
         <span id="hostheader_csharp">
 <a href="#hostheader_csharp" style="color: inherit; text-decoration: inherit;">Host<wbr>Header</a>
@@ -341,8 +326,7 @@ The GtmResource resource accepts the following [input]({{< relref "/docs/intro/c
         <span class="property-indicator"></span>
         <span class="property-type">string</span>
     </dt>
-    <dd>{{% md %}}{{% /md %}}</dd>
-    <dt class="property-optional"
+    <dd>{{% md %}}{{% /md %}}</dd><dt class="property-optional"
             title="Optional">
         <span id="leaderstring_csharp">
 <a href="#leaderstring_csharp" style="color: inherit; text-decoration: inherit;">Leader<wbr>String</a>
@@ -350,8 +334,7 @@ The GtmResource resource accepts the following [input]({{< relref "/docs/intro/c
         <span class="property-indicator"></span>
         <span class="property-type">string</span>
     </dt>
-    <dd>{{% md %}}{{% /md %}}</dd>
-    <dt class="property-optional"
+    <dd>{{% md %}}{{% /md %}}</dd><dt class="property-optional"
             title="Optional">
         <span id="leastsquaresdecay_csharp">
 <a href="#leastsquaresdecay_csharp" style="color: inherit; text-decoration: inherit;">Least<wbr>Squares<wbr>Decay</a>
@@ -359,8 +342,7 @@ The GtmResource resource accepts the following [input]({{< relref "/docs/intro/c
         <span class="property-indicator"></span>
         <span class="property-type">double</span>
     </dt>
-    <dd>{{% md %}}{{% /md %}}</dd>
-    <dt class="property-optional"
+    <dd>{{% md %}}{{% /md %}}</dd><dt class="property-optional"
             title="Optional">
         <span id="loadimbalancepercentage_csharp">
 <a href="#loadimbalancepercentage_csharp" style="color: inherit; text-decoration: inherit;">Load<wbr>Imbalance<wbr>Percentage</a>
@@ -368,8 +350,7 @@ The GtmResource resource accepts the following [input]({{< relref "/docs/intro/c
         <span class="property-indicator"></span>
         <span class="property-type">double</span>
     </dt>
-    <dd>{{% md %}}{{% /md %}}</dd>
-    <dt class="property-optional"
+    <dd>{{% md %}}{{% /md %}}</dd><dt class="property-optional"
             title="Optional">
         <span id="maxumultiplicativeincrement_csharp">
 <a href="#maxumultiplicativeincrement_csharp" style="color: inherit; text-decoration: inherit;">Max<wbr>UMultiplicative<wbr>Increment</a>
@@ -377,8 +358,7 @@ The GtmResource resource accepts the following [input]({{< relref "/docs/intro/c
         <span class="property-indicator"></span>
         <span class="property-type">double</span>
     </dt>
-    <dd>{{% md %}}{{% /md %}}</dd>
-    <dt class="property-optional"
+    <dd>{{% md %}}{{% /md %}}</dd><dt class="property-optional"
             title="Optional">
         <span id="name_csharp">
 <a href="#name_csharp" style="color: inherit; text-decoration: inherit;">Name</a>
@@ -388,8 +368,7 @@ The GtmResource resource accepts the following [input]({{< relref "/docs/intro/c
     </dt>
     <dd>{{% md %}}Resource name
 * `aggregation_type`
-{{% /md %}}</dd>
-    <dt class="property-optional"
+{{% /md %}}</dd><dt class="property-optional"
             title="Optional">
         <span id="resourceinstances_csharp">
 <a href="#resourceinstances_csharp" style="color: inherit; text-decoration: inherit;">Resource<wbr>Instances</a>
@@ -400,8 +379,7 @@ The GtmResource resource accepts the following [input]({{< relref "/docs/intro/c
     <dd>{{% md %}}* `datacenter_id`
 * `load_object`
 * `load_object_port`
-{{% /md %}}</dd>
-    <dt class="property-optional"
+{{% /md %}}</dd><dt class="property-optional"
             title="Optional">
         <span id="upperbound_csharp">
 <a href="#upperbound_csharp" style="color: inherit; text-decoration: inherit;">Upper<wbr>Bound</a>
@@ -409,8 +387,7 @@ The GtmResource resource accepts the following [input]({{< relref "/docs/intro/c
         <span class="property-indicator"></span>
         <span class="property-type">int</span>
     </dt>
-    <dd>{{% md %}}{{% /md %}}</dd>
-    <dt class="property-optional"
+    <dd>{{% md %}}{{% /md %}}</dd><dt class="property-optional"
             title="Optional">
         <span id="waitoncomplete_csharp">
 <a href="#waitoncomplete_csharp" style="color: inherit; text-decoration: inherit;">Wait<wbr>On<wbr>Complete</a>
@@ -419,14 +396,11 @@ The GtmResource resource accepts the following [input]({{< relref "/docs/intro/c
         <span class="property-type">bool</span>
     </dt>
     <dd>{{% md %}}Wait for transaction to complete
-{{% /md %}}</dd>
-</dl>
+{{% /md %}}</dd></dl>
 {{% /choosable %}}
 
 {{% choosable language go %}}
-<dl class="resources-properties">
-
-    <dt class="property-required"
+<dl class="resources-properties"><dt class="property-required"
             title="Required">
         <span id="aggregationtype_go">
 <a href="#aggregationtype_go" style="color: inherit; text-decoration: inherit;">Aggregation<wbr>Type</a>
@@ -434,8 +408,7 @@ The GtmResource resource accepts the following [input]({{< relref "/docs/intro/c
         <span class="property-indicator"></span>
         <span class="property-type">string</span>
     </dt>
-    <dd>{{% md %}}{{% /md %}}</dd>
-    <dt class="property-required"
+    <dd>{{% md %}}{{% /md %}}</dd><dt class="property-required"
             title="Required">
         <span id="domain_go">
 <a href="#domain_go" style="color: inherit; text-decoration: inherit;">Domain</a>
@@ -444,8 +417,7 @@ The GtmResource resource accepts the following [input]({{< relref "/docs/intro/c
         <span class="property-type">string</span>
     </dt>
     <dd>{{% md %}}Domain name
-{{% /md %}}</dd>
-    <dt class="property-required"
+{{% /md %}}</dd><dt class="property-required"
             title="Required">
         <span id="type_go">
 <a href="#type_go" style="color: inherit; text-decoration: inherit;">Type</a>
@@ -454,8 +426,7 @@ The GtmResource resource accepts the following [input]({{< relref "/docs/intro/c
         <span class="property-type">string</span>
     </dt>
     <dd>{{% md %}}Resource type
-{{% /md %}}</dd>
-    <dt class="property-optional"
+{{% /md %}}</dd><dt class="property-optional"
             title="Optional">
         <span id="constrainedproperty_go">
 <a href="#constrainedproperty_go" style="color: inherit; text-decoration: inherit;">Constrained<wbr>Property</a>
@@ -463,8 +434,7 @@ The GtmResource resource accepts the following [input]({{< relref "/docs/intro/c
         <span class="property-indicator"></span>
         <span class="property-type">string</span>
     </dt>
-    <dd>{{% md %}}{{% /md %}}</dd>
-    <dt class="property-optional"
+    <dd>{{% md %}}{{% /md %}}</dd><dt class="property-optional"
             title="Optional">
         <span id="decayrate_go">
 <a href="#decayrate_go" style="color: inherit; text-decoration: inherit;">Decay<wbr>Rate</a>
@@ -472,8 +442,7 @@ The GtmResource resource accepts the following [input]({{< relref "/docs/intro/c
         <span class="property-indicator"></span>
         <span class="property-type">float64</span>
     </dt>
-    <dd>{{% md %}}{{% /md %}}</dd>
-    <dt class="property-optional"
+    <dd>{{% md %}}{{% /md %}}</dd><dt class="property-optional"
             title="Optional">
         <span id="description_go">
 <a href="#description_go" style="color: inherit; text-decoration: inherit;">Description</a>
@@ -481,8 +450,7 @@ The GtmResource resource accepts the following [input]({{< relref "/docs/intro/c
         <span class="property-indicator"></span>
         <span class="property-type">string</span>
     </dt>
-    <dd>{{% md %}}{{% /md %}}</dd>
-    <dt class="property-optional"
+    <dd>{{% md %}}{{% /md %}}</dd><dt class="property-optional"
             title="Optional">
         <span id="hostheader_go">
 <a href="#hostheader_go" style="color: inherit; text-decoration: inherit;">Host<wbr>Header</a>
@@ -490,8 +458,7 @@ The GtmResource resource accepts the following [input]({{< relref "/docs/intro/c
         <span class="property-indicator"></span>
         <span class="property-type">string</span>
     </dt>
-    <dd>{{% md %}}{{% /md %}}</dd>
-    <dt class="property-optional"
+    <dd>{{% md %}}{{% /md %}}</dd><dt class="property-optional"
             title="Optional">
         <span id="leaderstring_go">
 <a href="#leaderstring_go" style="color: inherit; text-decoration: inherit;">Leader<wbr>String</a>
@@ -499,8 +466,7 @@ The GtmResource resource accepts the following [input]({{< relref "/docs/intro/c
         <span class="property-indicator"></span>
         <span class="property-type">string</span>
     </dt>
-    <dd>{{% md %}}{{% /md %}}</dd>
-    <dt class="property-optional"
+    <dd>{{% md %}}{{% /md %}}</dd><dt class="property-optional"
             title="Optional">
         <span id="leastsquaresdecay_go">
 <a href="#leastsquaresdecay_go" style="color: inherit; text-decoration: inherit;">Least<wbr>Squares<wbr>Decay</a>
@@ -508,8 +474,7 @@ The GtmResource resource accepts the following [input]({{< relref "/docs/intro/c
         <span class="property-indicator"></span>
         <span class="property-type">float64</span>
     </dt>
-    <dd>{{% md %}}{{% /md %}}</dd>
-    <dt class="property-optional"
+    <dd>{{% md %}}{{% /md %}}</dd><dt class="property-optional"
             title="Optional">
         <span id="loadimbalancepercentage_go">
 <a href="#loadimbalancepercentage_go" style="color: inherit; text-decoration: inherit;">Load<wbr>Imbalance<wbr>Percentage</a>
@@ -517,8 +482,7 @@ The GtmResource resource accepts the following [input]({{< relref "/docs/intro/c
         <span class="property-indicator"></span>
         <span class="property-type">float64</span>
     </dt>
-    <dd>{{% md %}}{{% /md %}}</dd>
-    <dt class="property-optional"
+    <dd>{{% md %}}{{% /md %}}</dd><dt class="property-optional"
             title="Optional">
         <span id="maxumultiplicativeincrement_go">
 <a href="#maxumultiplicativeincrement_go" style="color: inherit; text-decoration: inherit;">Max<wbr>UMultiplicative<wbr>Increment</a>
@@ -526,8 +490,7 @@ The GtmResource resource accepts the following [input]({{< relref "/docs/intro/c
         <span class="property-indicator"></span>
         <span class="property-type">float64</span>
     </dt>
-    <dd>{{% md %}}{{% /md %}}</dd>
-    <dt class="property-optional"
+    <dd>{{% md %}}{{% /md %}}</dd><dt class="property-optional"
             title="Optional">
         <span id="name_go">
 <a href="#name_go" style="color: inherit; text-decoration: inherit;">Name</a>
@@ -537,8 +500,7 @@ The GtmResource resource accepts the following [input]({{< relref "/docs/intro/c
     </dt>
     <dd>{{% md %}}Resource name
 * `aggregation_type`
-{{% /md %}}</dd>
-    <dt class="property-optional"
+{{% /md %}}</dd><dt class="property-optional"
             title="Optional">
         <span id="resourceinstances_go">
 <a href="#resourceinstances_go" style="color: inherit; text-decoration: inherit;">Resource<wbr>Instances</a>
@@ -549,8 +511,7 @@ The GtmResource resource accepts the following [input]({{< relref "/docs/intro/c
     <dd>{{% md %}}* `datacenter_id`
 * `load_object`
 * `load_object_port`
-{{% /md %}}</dd>
-    <dt class="property-optional"
+{{% /md %}}</dd><dt class="property-optional"
             title="Optional">
         <span id="upperbound_go">
 <a href="#upperbound_go" style="color: inherit; text-decoration: inherit;">Upper<wbr>Bound</a>
@@ -558,8 +519,7 @@ The GtmResource resource accepts the following [input]({{< relref "/docs/intro/c
         <span class="property-indicator"></span>
         <span class="property-type">int</span>
     </dt>
-    <dd>{{% md %}}{{% /md %}}</dd>
-    <dt class="property-optional"
+    <dd>{{% md %}}{{% /md %}}</dd><dt class="property-optional"
             title="Optional">
         <span id="waitoncomplete_go">
 <a href="#waitoncomplete_go" style="color: inherit; text-decoration: inherit;">Wait<wbr>On<wbr>Complete</a>
@@ -568,14 +528,11 @@ The GtmResource resource accepts the following [input]({{< relref "/docs/intro/c
         <span class="property-type">bool</span>
     </dt>
     <dd>{{% md %}}Wait for transaction to complete
-{{% /md %}}</dd>
-</dl>
+{{% /md %}}</dd></dl>
 {{% /choosable %}}
 
 {{% choosable language nodejs %}}
-<dl class="resources-properties">
-
-    <dt class="property-required"
+<dl class="resources-properties"><dt class="property-required"
             title="Required">
         <span id="aggregationtype_nodejs">
 <a href="#aggregationtype_nodejs" style="color: inherit; text-decoration: inherit;">aggregation<wbr>Type</a>
@@ -583,8 +540,7 @@ The GtmResource resource accepts the following [input]({{< relref "/docs/intro/c
         <span class="property-indicator"></span>
         <span class="property-type">string</span>
     </dt>
-    <dd>{{% md %}}{{% /md %}}</dd>
-    <dt class="property-required"
+    <dd>{{% md %}}{{% /md %}}</dd><dt class="property-required"
             title="Required">
         <span id="domain_nodejs">
 <a href="#domain_nodejs" style="color: inherit; text-decoration: inherit;">domain</a>
@@ -593,8 +549,7 @@ The GtmResource resource accepts the following [input]({{< relref "/docs/intro/c
         <span class="property-type">string</span>
     </dt>
     <dd>{{% md %}}Domain name
-{{% /md %}}</dd>
-    <dt class="property-required"
+{{% /md %}}</dd><dt class="property-required"
             title="Required">
         <span id="type_nodejs">
 <a href="#type_nodejs" style="color: inherit; text-decoration: inherit;">type</a>
@@ -603,8 +558,7 @@ The GtmResource resource accepts the following [input]({{< relref "/docs/intro/c
         <span class="property-type">string</span>
     </dt>
     <dd>{{% md %}}Resource type
-{{% /md %}}</dd>
-    <dt class="property-optional"
+{{% /md %}}</dd><dt class="property-optional"
             title="Optional">
         <span id="constrainedproperty_nodejs">
 <a href="#constrainedproperty_nodejs" style="color: inherit; text-decoration: inherit;">constrained<wbr>Property</a>
@@ -612,8 +566,7 @@ The GtmResource resource accepts the following [input]({{< relref "/docs/intro/c
         <span class="property-indicator"></span>
         <span class="property-type">string</span>
     </dt>
-    <dd>{{% md %}}{{% /md %}}</dd>
-    <dt class="property-optional"
+    <dd>{{% md %}}{{% /md %}}</dd><dt class="property-optional"
             title="Optional">
         <span id="decayrate_nodejs">
 <a href="#decayrate_nodejs" style="color: inherit; text-decoration: inherit;">decay<wbr>Rate</a>
@@ -621,8 +574,7 @@ The GtmResource resource accepts the following [input]({{< relref "/docs/intro/c
         <span class="property-indicator"></span>
         <span class="property-type">number</span>
     </dt>
-    <dd>{{% md %}}{{% /md %}}</dd>
-    <dt class="property-optional"
+    <dd>{{% md %}}{{% /md %}}</dd><dt class="property-optional"
             title="Optional">
         <span id="description_nodejs">
 <a href="#description_nodejs" style="color: inherit; text-decoration: inherit;">description</a>
@@ -630,8 +582,7 @@ The GtmResource resource accepts the following [input]({{< relref "/docs/intro/c
         <span class="property-indicator"></span>
         <span class="property-type">string</span>
     </dt>
-    <dd>{{% md %}}{{% /md %}}</dd>
-    <dt class="property-optional"
+    <dd>{{% md %}}{{% /md %}}</dd><dt class="property-optional"
             title="Optional">
         <span id="hostheader_nodejs">
 <a href="#hostheader_nodejs" style="color: inherit; text-decoration: inherit;">host<wbr>Header</a>
@@ -639,8 +590,7 @@ The GtmResource resource accepts the following [input]({{< relref "/docs/intro/c
         <span class="property-indicator"></span>
         <span class="property-type">string</span>
     </dt>
-    <dd>{{% md %}}{{% /md %}}</dd>
-    <dt class="property-optional"
+    <dd>{{% md %}}{{% /md %}}</dd><dt class="property-optional"
             title="Optional">
         <span id="leaderstring_nodejs">
 <a href="#leaderstring_nodejs" style="color: inherit; text-decoration: inherit;">leader<wbr>String</a>
@@ -648,8 +598,7 @@ The GtmResource resource accepts the following [input]({{< relref "/docs/intro/c
         <span class="property-indicator"></span>
         <span class="property-type">string</span>
     </dt>
-    <dd>{{% md %}}{{% /md %}}</dd>
-    <dt class="property-optional"
+    <dd>{{% md %}}{{% /md %}}</dd><dt class="property-optional"
             title="Optional">
         <span id="leastsquaresdecay_nodejs">
 <a href="#leastsquaresdecay_nodejs" style="color: inherit; text-decoration: inherit;">least<wbr>Squares<wbr>Decay</a>
@@ -657,8 +606,7 @@ The GtmResource resource accepts the following [input]({{< relref "/docs/intro/c
         <span class="property-indicator"></span>
         <span class="property-type">number</span>
     </dt>
-    <dd>{{% md %}}{{% /md %}}</dd>
-    <dt class="property-optional"
+    <dd>{{% md %}}{{% /md %}}</dd><dt class="property-optional"
             title="Optional">
         <span id="loadimbalancepercentage_nodejs">
 <a href="#loadimbalancepercentage_nodejs" style="color: inherit; text-decoration: inherit;">load<wbr>Imbalance<wbr>Percentage</a>
@@ -666,8 +614,7 @@ The GtmResource resource accepts the following [input]({{< relref "/docs/intro/c
         <span class="property-indicator"></span>
         <span class="property-type">number</span>
     </dt>
-    <dd>{{% md %}}{{% /md %}}</dd>
-    <dt class="property-optional"
+    <dd>{{% md %}}{{% /md %}}</dd><dt class="property-optional"
             title="Optional">
         <span id="maxumultiplicativeincrement_nodejs">
 <a href="#maxumultiplicativeincrement_nodejs" style="color: inherit; text-decoration: inherit;">max<wbr>UMultiplicative<wbr>Increment</a>
@@ -675,8 +622,7 @@ The GtmResource resource accepts the following [input]({{< relref "/docs/intro/c
         <span class="property-indicator"></span>
         <span class="property-type">number</span>
     </dt>
-    <dd>{{% md %}}{{% /md %}}</dd>
-    <dt class="property-optional"
+    <dd>{{% md %}}{{% /md %}}</dd><dt class="property-optional"
             title="Optional">
         <span id="name_nodejs">
 <a href="#name_nodejs" style="color: inherit; text-decoration: inherit;">name</a>
@@ -686,8 +632,7 @@ The GtmResource resource accepts the following [input]({{< relref "/docs/intro/c
     </dt>
     <dd>{{% md %}}Resource name
 * `aggregation_type`
-{{% /md %}}</dd>
-    <dt class="property-optional"
+{{% /md %}}</dd><dt class="property-optional"
             title="Optional">
         <span id="resourceinstances_nodejs">
 <a href="#resourceinstances_nodejs" style="color: inherit; text-decoration: inherit;">resource<wbr>Instances</a>
@@ -698,8 +643,7 @@ The GtmResource resource accepts the following [input]({{< relref "/docs/intro/c
     <dd>{{% md %}}* `datacenter_id`
 * `load_object`
 * `load_object_port`
-{{% /md %}}</dd>
-    <dt class="property-optional"
+{{% /md %}}</dd><dt class="property-optional"
             title="Optional">
         <span id="upperbound_nodejs">
 <a href="#upperbound_nodejs" style="color: inherit; text-decoration: inherit;">upper<wbr>Bound</a>
@@ -707,8 +651,7 @@ The GtmResource resource accepts the following [input]({{< relref "/docs/intro/c
         <span class="property-indicator"></span>
         <span class="property-type">number</span>
     </dt>
-    <dd>{{% md %}}{{% /md %}}</dd>
-    <dt class="property-optional"
+    <dd>{{% md %}}{{% /md %}}</dd><dt class="property-optional"
             title="Optional">
         <span id="waitoncomplete_nodejs">
 <a href="#waitoncomplete_nodejs" style="color: inherit; text-decoration: inherit;">wait<wbr>On<wbr>Complete</a>
@@ -717,14 +660,11 @@ The GtmResource resource accepts the following [input]({{< relref "/docs/intro/c
         <span class="property-type">boolean</span>
     </dt>
     <dd>{{% md %}}Wait for transaction to complete
-{{% /md %}}</dd>
-</dl>
+{{% /md %}}</dd></dl>
 {{% /choosable %}}
 
 {{% choosable language python %}}
-<dl class="resources-properties">
-
-    <dt class="property-required"
+<dl class="resources-properties"><dt class="property-required"
             title="Required">
         <span id="aggregation_type_python">
 <a href="#aggregation_type_python" style="color: inherit; text-decoration: inherit;">aggregation_<wbr>type</a>
@@ -732,8 +672,7 @@ The GtmResource resource accepts the following [input]({{< relref "/docs/intro/c
         <span class="property-indicator"></span>
         <span class="property-type">str</span>
     </dt>
-    <dd>{{% md %}}{{% /md %}}</dd>
-    <dt class="property-required"
+    <dd>{{% md %}}{{% /md %}}</dd><dt class="property-required"
             title="Required">
         <span id="domain_python">
 <a href="#domain_python" style="color: inherit; text-decoration: inherit;">domain</a>
@@ -742,8 +681,7 @@ The GtmResource resource accepts the following [input]({{< relref "/docs/intro/c
         <span class="property-type">str</span>
     </dt>
     <dd>{{% md %}}Domain name
-{{% /md %}}</dd>
-    <dt class="property-required"
+{{% /md %}}</dd><dt class="property-required"
             title="Required">
         <span id="type_python">
 <a href="#type_python" style="color: inherit; text-decoration: inherit;">type</a>
@@ -752,8 +690,7 @@ The GtmResource resource accepts the following [input]({{< relref "/docs/intro/c
         <span class="property-type">str</span>
     </dt>
     <dd>{{% md %}}Resource type
-{{% /md %}}</dd>
-    <dt class="property-optional"
+{{% /md %}}</dd><dt class="property-optional"
             title="Optional">
         <span id="constrained_property_python">
 <a href="#constrained_property_python" style="color: inherit; text-decoration: inherit;">constrained_<wbr>property</a>
@@ -761,8 +698,7 @@ The GtmResource resource accepts the following [input]({{< relref "/docs/intro/c
         <span class="property-indicator"></span>
         <span class="property-type">str</span>
     </dt>
-    <dd>{{% md %}}{{% /md %}}</dd>
-    <dt class="property-optional"
+    <dd>{{% md %}}{{% /md %}}</dd><dt class="property-optional"
             title="Optional">
         <span id="decay_rate_python">
 <a href="#decay_rate_python" style="color: inherit; text-decoration: inherit;">decay_<wbr>rate</a>
@@ -770,8 +706,7 @@ The GtmResource resource accepts the following [input]({{< relref "/docs/intro/c
         <span class="property-indicator"></span>
         <span class="property-type">float</span>
     </dt>
-    <dd>{{% md %}}{{% /md %}}</dd>
-    <dt class="property-optional"
+    <dd>{{% md %}}{{% /md %}}</dd><dt class="property-optional"
             title="Optional">
         <span id="description_python">
 <a href="#description_python" style="color: inherit; text-decoration: inherit;">description</a>
@@ -779,8 +714,7 @@ The GtmResource resource accepts the following [input]({{< relref "/docs/intro/c
         <span class="property-indicator"></span>
         <span class="property-type">str</span>
     </dt>
-    <dd>{{% md %}}{{% /md %}}</dd>
-    <dt class="property-optional"
+    <dd>{{% md %}}{{% /md %}}</dd><dt class="property-optional"
             title="Optional">
         <span id="host_header_python">
 <a href="#host_header_python" style="color: inherit; text-decoration: inherit;">host_<wbr>header</a>
@@ -788,8 +722,7 @@ The GtmResource resource accepts the following [input]({{< relref "/docs/intro/c
         <span class="property-indicator"></span>
         <span class="property-type">str</span>
     </dt>
-    <dd>{{% md %}}{{% /md %}}</dd>
-    <dt class="property-optional"
+    <dd>{{% md %}}{{% /md %}}</dd><dt class="property-optional"
             title="Optional">
         <span id="leader_string_python">
 <a href="#leader_string_python" style="color: inherit; text-decoration: inherit;">leader_<wbr>string</a>
@@ -797,8 +730,7 @@ The GtmResource resource accepts the following [input]({{< relref "/docs/intro/c
         <span class="property-indicator"></span>
         <span class="property-type">str</span>
     </dt>
-    <dd>{{% md %}}{{% /md %}}</dd>
-    <dt class="property-optional"
+    <dd>{{% md %}}{{% /md %}}</dd><dt class="property-optional"
             title="Optional">
         <span id="least_squares_decay_python">
 <a href="#least_squares_decay_python" style="color: inherit; text-decoration: inherit;">least_<wbr>squares_<wbr>decay</a>
@@ -806,8 +738,7 @@ The GtmResource resource accepts the following [input]({{< relref "/docs/intro/c
         <span class="property-indicator"></span>
         <span class="property-type">float</span>
     </dt>
-    <dd>{{% md %}}{{% /md %}}</dd>
-    <dt class="property-optional"
+    <dd>{{% md %}}{{% /md %}}</dd><dt class="property-optional"
             title="Optional">
         <span id="load_imbalance_percentage_python">
 <a href="#load_imbalance_percentage_python" style="color: inherit; text-decoration: inherit;">load_<wbr>imbalance_<wbr>percentage</a>
@@ -815,8 +746,7 @@ The GtmResource resource accepts the following [input]({{< relref "/docs/intro/c
         <span class="property-indicator"></span>
         <span class="property-type">float</span>
     </dt>
-    <dd>{{% md %}}{{% /md %}}</dd>
-    <dt class="property-optional"
+    <dd>{{% md %}}{{% /md %}}</dd><dt class="property-optional"
             title="Optional">
         <span id="max_u_multiplicative_increment_python">
 <a href="#max_u_multiplicative_increment_python" style="color: inherit; text-decoration: inherit;">max_<wbr>u_<wbr>multiplicative_<wbr>increment</a>
@@ -824,8 +754,7 @@ The GtmResource resource accepts the following [input]({{< relref "/docs/intro/c
         <span class="property-indicator"></span>
         <span class="property-type">float</span>
     </dt>
-    <dd>{{% md %}}{{% /md %}}</dd>
-    <dt class="property-optional"
+    <dd>{{% md %}}{{% /md %}}</dd><dt class="property-optional"
             title="Optional">
         <span id="name_python">
 <a href="#name_python" style="color: inherit; text-decoration: inherit;">name</a>
@@ -835,8 +764,7 @@ The GtmResource resource accepts the following [input]({{< relref "/docs/intro/c
     </dt>
     <dd>{{% md %}}Resource name
 * `aggregation_type`
-{{% /md %}}</dd>
-    <dt class="property-optional"
+{{% /md %}}</dd><dt class="property-optional"
             title="Optional">
         <span id="resource_instances_python">
 <a href="#resource_instances_python" style="color: inherit; text-decoration: inherit;">resource_<wbr>instances</a>
@@ -847,8 +775,7 @@ The GtmResource resource accepts the following [input]({{< relref "/docs/intro/c
     <dd>{{% md %}}* `datacenter_id`
 * `load_object`
 * `load_object_port`
-{{% /md %}}</dd>
-    <dt class="property-optional"
+{{% /md %}}</dd><dt class="property-optional"
             title="Optional">
         <span id="upper_bound_python">
 <a href="#upper_bound_python" style="color: inherit; text-decoration: inherit;">upper_<wbr>bound</a>
@@ -856,8 +783,7 @@ The GtmResource resource accepts the following [input]({{< relref "/docs/intro/c
         <span class="property-indicator"></span>
         <span class="property-type">int</span>
     </dt>
-    <dd>{{% md %}}{{% /md %}}</dd>
-    <dt class="property-optional"
+    <dd>{{% md %}}{{% /md %}}</dd><dt class="property-optional"
             title="Optional">
         <span id="wait_on_complete_python">
 <a href="#wait_on_complete_python" style="color: inherit; text-decoration: inherit;">wait_<wbr>on_<wbr>complete</a>
@@ -866,8 +792,7 @@ The GtmResource resource accepts the following [input]({{< relref "/docs/intro/c
         <span class="property-type">bool</span>
     </dt>
     <dd>{{% md %}}Wait for transaction to complete
-{{% /md %}}</dd>
-</dl>
+{{% /md %}}</dd></dl>
 {{% /choosable %}}
 
 
@@ -878,9 +803,7 @@ All [input](#inputs) properties are implicitly available as output properties. A
 
 
 {{% choosable language csharp %}}
-<dl class="resources-properties">
-
-    <dt class="property-"
+<dl class="resources-properties"><dt class="property-"
             title="">
         <span id="id_csharp">
 <a href="#id_csharp" style="color: inherit; text-decoration: inherit;">Id</a>
@@ -888,14 +811,11 @@ All [input](#inputs) properties are implicitly available as output properties. A
         <span class="property-indicator"></span>
         <span class="property-type">string</span>
     </dt>
-    <dd>{{% md %}}The provider-assigned unique ID for this managed resource.{{% /md %}}</dd>
-</dl>
+    <dd>{{% md %}}The provider-assigned unique ID for this managed resource.{{% /md %}}</dd></dl>
 {{% /choosable %}}
 
 {{% choosable language go %}}
-<dl class="resources-properties">
-
-    <dt class="property-"
+<dl class="resources-properties"><dt class="property-"
             title="">
         <span id="id_go">
 <a href="#id_go" style="color: inherit; text-decoration: inherit;">Id</a>
@@ -903,14 +823,11 @@ All [input](#inputs) properties are implicitly available as output properties. A
         <span class="property-indicator"></span>
         <span class="property-type">string</span>
     </dt>
-    <dd>{{% md %}}The provider-assigned unique ID for this managed resource.{{% /md %}}</dd>
-</dl>
+    <dd>{{% md %}}The provider-assigned unique ID for this managed resource.{{% /md %}}</dd></dl>
 {{% /choosable %}}
 
 {{% choosable language nodejs %}}
-<dl class="resources-properties">
-
-    <dt class="property-"
+<dl class="resources-properties"><dt class="property-"
             title="">
         <span id="id_nodejs">
 <a href="#id_nodejs" style="color: inherit; text-decoration: inherit;">id</a>
@@ -918,14 +835,11 @@ All [input](#inputs) properties are implicitly available as output properties. A
         <span class="property-indicator"></span>
         <span class="property-type">string</span>
     </dt>
-    <dd>{{% md %}}The provider-assigned unique ID for this managed resource.{{% /md %}}</dd>
-</dl>
+    <dd>{{% md %}}The provider-assigned unique ID for this managed resource.{{% /md %}}</dd></dl>
 {{% /choosable %}}
 
 {{% choosable language python %}}
-<dl class="resources-properties">
-
-    <dt class="property-"
+<dl class="resources-properties"><dt class="property-"
             title="">
         <span id="id_python">
 <a href="#id_python" style="color: inherit; text-decoration: inherit;">id</a>
@@ -933,8 +847,7 @@ All [input](#inputs) properties are implicitly available as output properties. A
         <span class="property-indicator"></span>
         <span class="property-type">str</span>
     </dt>
-    <dd>{{% md %}}The provider-assigned unique ID for this managed resource.{{% /md %}}</dd>
-</dl>
+    <dd>{{% md %}}The provider-assigned unique ID for this managed resource.{{% /md %}}</dd></dl>
 {{% /choosable %}}
 
 
@@ -1061,9 +974,7 @@ The following state arguments are supported:
 
 
 {{% choosable language csharp %}}
-<dl class="resources-properties">
-
-    <dt class="property-optional"
+<dl class="resources-properties"><dt class="property-optional"
             title="Optional">
         <span id="state_aggregationtype_csharp">
 <a href="#state_aggregationtype_csharp" style="color: inherit; text-decoration: inherit;">Aggregation<wbr>Type</a>
@@ -1071,8 +982,7 @@ The following state arguments are supported:
         <span class="property-indicator"></span>
         <span class="property-type">string</span>
     </dt>
-    <dd>{{% md %}}{{% /md %}}</dd>
-    <dt class="property-optional"
+    <dd>{{% md %}}{{% /md %}}</dd><dt class="property-optional"
             title="Optional">
         <span id="state_constrainedproperty_csharp">
 <a href="#state_constrainedproperty_csharp" style="color: inherit; text-decoration: inherit;">Constrained<wbr>Property</a>
@@ -1080,8 +990,7 @@ The following state arguments are supported:
         <span class="property-indicator"></span>
         <span class="property-type">string</span>
     </dt>
-    <dd>{{% md %}}{{% /md %}}</dd>
-    <dt class="property-optional"
+    <dd>{{% md %}}{{% /md %}}</dd><dt class="property-optional"
             title="Optional">
         <span id="state_decayrate_csharp">
 <a href="#state_decayrate_csharp" style="color: inherit; text-decoration: inherit;">Decay<wbr>Rate</a>
@@ -1089,8 +998,7 @@ The following state arguments are supported:
         <span class="property-indicator"></span>
         <span class="property-type">double</span>
     </dt>
-    <dd>{{% md %}}{{% /md %}}</dd>
-    <dt class="property-optional"
+    <dd>{{% md %}}{{% /md %}}</dd><dt class="property-optional"
             title="Optional">
         <span id="state_description_csharp">
 <a href="#state_description_csharp" style="color: inherit; text-decoration: inherit;">Description</a>
@@ -1098,8 +1006,7 @@ The following state arguments are supported:
         <span class="property-indicator"></span>
         <span class="property-type">string</span>
     </dt>
-    <dd>{{% md %}}{{% /md %}}</dd>
-    <dt class="property-optional"
+    <dd>{{% md %}}{{% /md %}}</dd><dt class="property-optional"
             title="Optional">
         <span id="state_domain_csharp">
 <a href="#state_domain_csharp" style="color: inherit; text-decoration: inherit;">Domain</a>
@@ -1108,8 +1015,7 @@ The following state arguments are supported:
         <span class="property-type">string</span>
     </dt>
     <dd>{{% md %}}Domain name
-{{% /md %}}</dd>
-    <dt class="property-optional"
+{{% /md %}}</dd><dt class="property-optional"
             title="Optional">
         <span id="state_hostheader_csharp">
 <a href="#state_hostheader_csharp" style="color: inherit; text-decoration: inherit;">Host<wbr>Header</a>
@@ -1117,8 +1023,7 @@ The following state arguments are supported:
         <span class="property-indicator"></span>
         <span class="property-type">string</span>
     </dt>
-    <dd>{{% md %}}{{% /md %}}</dd>
-    <dt class="property-optional"
+    <dd>{{% md %}}{{% /md %}}</dd><dt class="property-optional"
             title="Optional">
         <span id="state_leaderstring_csharp">
 <a href="#state_leaderstring_csharp" style="color: inherit; text-decoration: inherit;">Leader<wbr>String</a>
@@ -1126,8 +1031,7 @@ The following state arguments are supported:
         <span class="property-indicator"></span>
         <span class="property-type">string</span>
     </dt>
-    <dd>{{% md %}}{{% /md %}}</dd>
-    <dt class="property-optional"
+    <dd>{{% md %}}{{% /md %}}</dd><dt class="property-optional"
             title="Optional">
         <span id="state_leastsquaresdecay_csharp">
 <a href="#state_leastsquaresdecay_csharp" style="color: inherit; text-decoration: inherit;">Least<wbr>Squares<wbr>Decay</a>
@@ -1135,8 +1039,7 @@ The following state arguments are supported:
         <span class="property-indicator"></span>
         <span class="property-type">double</span>
     </dt>
-    <dd>{{% md %}}{{% /md %}}</dd>
-    <dt class="property-optional"
+    <dd>{{% md %}}{{% /md %}}</dd><dt class="property-optional"
             title="Optional">
         <span id="state_loadimbalancepercentage_csharp">
 <a href="#state_loadimbalancepercentage_csharp" style="color: inherit; text-decoration: inherit;">Load<wbr>Imbalance<wbr>Percentage</a>
@@ -1144,8 +1047,7 @@ The following state arguments are supported:
         <span class="property-indicator"></span>
         <span class="property-type">double</span>
     </dt>
-    <dd>{{% md %}}{{% /md %}}</dd>
-    <dt class="property-optional"
+    <dd>{{% md %}}{{% /md %}}</dd><dt class="property-optional"
             title="Optional">
         <span id="state_maxumultiplicativeincrement_csharp">
 <a href="#state_maxumultiplicativeincrement_csharp" style="color: inherit; text-decoration: inherit;">Max<wbr>UMultiplicative<wbr>Increment</a>
@@ -1153,8 +1055,7 @@ The following state arguments are supported:
         <span class="property-indicator"></span>
         <span class="property-type">double</span>
     </dt>
-    <dd>{{% md %}}{{% /md %}}</dd>
-    <dt class="property-optional"
+    <dd>{{% md %}}{{% /md %}}</dd><dt class="property-optional"
             title="Optional">
         <span id="state_name_csharp">
 <a href="#state_name_csharp" style="color: inherit; text-decoration: inherit;">Name</a>
@@ -1164,8 +1065,7 @@ The following state arguments are supported:
     </dt>
     <dd>{{% md %}}Resource name
 * `aggregation_type`
-{{% /md %}}</dd>
-    <dt class="property-optional"
+{{% /md %}}</dd><dt class="property-optional"
             title="Optional">
         <span id="state_resourceinstances_csharp">
 <a href="#state_resourceinstances_csharp" style="color: inherit; text-decoration: inherit;">Resource<wbr>Instances</a>
@@ -1176,8 +1076,7 @@ The following state arguments are supported:
     <dd>{{% md %}}* `datacenter_id`
 * `load_object`
 * `load_object_port`
-{{% /md %}}</dd>
-    <dt class="property-optional"
+{{% /md %}}</dd><dt class="property-optional"
             title="Optional">
         <span id="state_type_csharp">
 <a href="#state_type_csharp" style="color: inherit; text-decoration: inherit;">Type</a>
@@ -1186,8 +1085,7 @@ The following state arguments are supported:
         <span class="property-type">string</span>
     </dt>
     <dd>{{% md %}}Resource type
-{{% /md %}}</dd>
-    <dt class="property-optional"
+{{% /md %}}</dd><dt class="property-optional"
             title="Optional">
         <span id="state_upperbound_csharp">
 <a href="#state_upperbound_csharp" style="color: inherit; text-decoration: inherit;">Upper<wbr>Bound</a>
@@ -1195,8 +1093,7 @@ The following state arguments are supported:
         <span class="property-indicator"></span>
         <span class="property-type">int</span>
     </dt>
-    <dd>{{% md %}}{{% /md %}}</dd>
-    <dt class="property-optional"
+    <dd>{{% md %}}{{% /md %}}</dd><dt class="property-optional"
             title="Optional">
         <span id="state_waitoncomplete_csharp">
 <a href="#state_waitoncomplete_csharp" style="color: inherit; text-decoration: inherit;">Wait<wbr>On<wbr>Complete</a>
@@ -1205,14 +1102,11 @@ The following state arguments are supported:
         <span class="property-type">bool</span>
     </dt>
     <dd>{{% md %}}Wait for transaction to complete
-{{% /md %}}</dd>
-</dl>
+{{% /md %}}</dd></dl>
 {{% /choosable %}}
 
 {{% choosable language go %}}
-<dl class="resources-properties">
-
-    <dt class="property-optional"
+<dl class="resources-properties"><dt class="property-optional"
             title="Optional">
         <span id="state_aggregationtype_go">
 <a href="#state_aggregationtype_go" style="color: inherit; text-decoration: inherit;">Aggregation<wbr>Type</a>
@@ -1220,8 +1114,7 @@ The following state arguments are supported:
         <span class="property-indicator"></span>
         <span class="property-type">string</span>
     </dt>
-    <dd>{{% md %}}{{% /md %}}</dd>
-    <dt class="property-optional"
+    <dd>{{% md %}}{{% /md %}}</dd><dt class="property-optional"
             title="Optional">
         <span id="state_constrainedproperty_go">
 <a href="#state_constrainedproperty_go" style="color: inherit; text-decoration: inherit;">Constrained<wbr>Property</a>
@@ -1229,8 +1122,7 @@ The following state arguments are supported:
         <span class="property-indicator"></span>
         <span class="property-type">string</span>
     </dt>
-    <dd>{{% md %}}{{% /md %}}</dd>
-    <dt class="property-optional"
+    <dd>{{% md %}}{{% /md %}}</dd><dt class="property-optional"
             title="Optional">
         <span id="state_decayrate_go">
 <a href="#state_decayrate_go" style="color: inherit; text-decoration: inherit;">Decay<wbr>Rate</a>
@@ -1238,8 +1130,7 @@ The following state arguments are supported:
         <span class="property-indicator"></span>
         <span class="property-type">float64</span>
     </dt>
-    <dd>{{% md %}}{{% /md %}}</dd>
-    <dt class="property-optional"
+    <dd>{{% md %}}{{% /md %}}</dd><dt class="property-optional"
             title="Optional">
         <span id="state_description_go">
 <a href="#state_description_go" style="color: inherit; text-decoration: inherit;">Description</a>
@@ -1247,8 +1138,7 @@ The following state arguments are supported:
         <span class="property-indicator"></span>
         <span class="property-type">string</span>
     </dt>
-    <dd>{{% md %}}{{% /md %}}</dd>
-    <dt class="property-optional"
+    <dd>{{% md %}}{{% /md %}}</dd><dt class="property-optional"
             title="Optional">
         <span id="state_domain_go">
 <a href="#state_domain_go" style="color: inherit; text-decoration: inherit;">Domain</a>
@@ -1257,8 +1147,7 @@ The following state arguments are supported:
         <span class="property-type">string</span>
     </dt>
     <dd>{{% md %}}Domain name
-{{% /md %}}</dd>
-    <dt class="property-optional"
+{{% /md %}}</dd><dt class="property-optional"
             title="Optional">
         <span id="state_hostheader_go">
 <a href="#state_hostheader_go" style="color: inherit; text-decoration: inherit;">Host<wbr>Header</a>
@@ -1266,8 +1155,7 @@ The following state arguments are supported:
         <span class="property-indicator"></span>
         <span class="property-type">string</span>
     </dt>
-    <dd>{{% md %}}{{% /md %}}</dd>
-    <dt class="property-optional"
+    <dd>{{% md %}}{{% /md %}}</dd><dt class="property-optional"
             title="Optional">
         <span id="state_leaderstring_go">
 <a href="#state_leaderstring_go" style="color: inherit; text-decoration: inherit;">Leader<wbr>String</a>
@@ -1275,8 +1163,7 @@ The following state arguments are supported:
         <span class="property-indicator"></span>
         <span class="property-type">string</span>
     </dt>
-    <dd>{{% md %}}{{% /md %}}</dd>
-    <dt class="property-optional"
+    <dd>{{% md %}}{{% /md %}}</dd><dt class="property-optional"
             title="Optional">
         <span id="state_leastsquaresdecay_go">
 <a href="#state_leastsquaresdecay_go" style="color: inherit; text-decoration: inherit;">Least<wbr>Squares<wbr>Decay</a>
@@ -1284,8 +1171,7 @@ The following state arguments are supported:
         <span class="property-indicator"></span>
         <span class="property-type">float64</span>
     </dt>
-    <dd>{{% md %}}{{% /md %}}</dd>
-    <dt class="property-optional"
+    <dd>{{% md %}}{{% /md %}}</dd><dt class="property-optional"
             title="Optional">
         <span id="state_loadimbalancepercentage_go">
 <a href="#state_loadimbalancepercentage_go" style="color: inherit; text-decoration: inherit;">Load<wbr>Imbalance<wbr>Percentage</a>
@@ -1293,8 +1179,7 @@ The following state arguments are supported:
         <span class="property-indicator"></span>
         <span class="property-type">float64</span>
     </dt>
-    <dd>{{% md %}}{{% /md %}}</dd>
-    <dt class="property-optional"
+    <dd>{{% md %}}{{% /md %}}</dd><dt class="property-optional"
             title="Optional">
         <span id="state_maxumultiplicativeincrement_go">
 <a href="#state_maxumultiplicativeincrement_go" style="color: inherit; text-decoration: inherit;">Max<wbr>UMultiplicative<wbr>Increment</a>
@@ -1302,8 +1187,7 @@ The following state arguments are supported:
         <span class="property-indicator"></span>
         <span class="property-type">float64</span>
     </dt>
-    <dd>{{% md %}}{{% /md %}}</dd>
-    <dt class="property-optional"
+    <dd>{{% md %}}{{% /md %}}</dd><dt class="property-optional"
             title="Optional">
         <span id="state_name_go">
 <a href="#state_name_go" style="color: inherit; text-decoration: inherit;">Name</a>
@@ -1313,8 +1197,7 @@ The following state arguments are supported:
     </dt>
     <dd>{{% md %}}Resource name
 * `aggregation_type`
-{{% /md %}}</dd>
-    <dt class="property-optional"
+{{% /md %}}</dd><dt class="property-optional"
             title="Optional">
         <span id="state_resourceinstances_go">
 <a href="#state_resourceinstances_go" style="color: inherit; text-decoration: inherit;">Resource<wbr>Instances</a>
@@ -1325,8 +1208,7 @@ The following state arguments are supported:
     <dd>{{% md %}}* `datacenter_id`
 * `load_object`
 * `load_object_port`
-{{% /md %}}</dd>
-    <dt class="property-optional"
+{{% /md %}}</dd><dt class="property-optional"
             title="Optional">
         <span id="state_type_go">
 <a href="#state_type_go" style="color: inherit; text-decoration: inherit;">Type</a>
@@ -1335,8 +1217,7 @@ The following state arguments are supported:
         <span class="property-type">string</span>
     </dt>
     <dd>{{% md %}}Resource type
-{{% /md %}}</dd>
-    <dt class="property-optional"
+{{% /md %}}</dd><dt class="property-optional"
             title="Optional">
         <span id="state_upperbound_go">
 <a href="#state_upperbound_go" style="color: inherit; text-decoration: inherit;">Upper<wbr>Bound</a>
@@ -1344,8 +1225,7 @@ The following state arguments are supported:
         <span class="property-indicator"></span>
         <span class="property-type">int</span>
     </dt>
-    <dd>{{% md %}}{{% /md %}}</dd>
-    <dt class="property-optional"
+    <dd>{{% md %}}{{% /md %}}</dd><dt class="property-optional"
             title="Optional">
         <span id="state_waitoncomplete_go">
 <a href="#state_waitoncomplete_go" style="color: inherit; text-decoration: inherit;">Wait<wbr>On<wbr>Complete</a>
@@ -1354,14 +1234,11 @@ The following state arguments are supported:
         <span class="property-type">bool</span>
     </dt>
     <dd>{{% md %}}Wait for transaction to complete
-{{% /md %}}</dd>
-</dl>
+{{% /md %}}</dd></dl>
 {{% /choosable %}}
 
 {{% choosable language nodejs %}}
-<dl class="resources-properties">
-
-    <dt class="property-optional"
+<dl class="resources-properties"><dt class="property-optional"
             title="Optional">
         <span id="state_aggregationtype_nodejs">
 <a href="#state_aggregationtype_nodejs" style="color: inherit; text-decoration: inherit;">aggregation<wbr>Type</a>
@@ -1369,8 +1246,7 @@ The following state arguments are supported:
         <span class="property-indicator"></span>
         <span class="property-type">string</span>
     </dt>
-    <dd>{{% md %}}{{% /md %}}</dd>
-    <dt class="property-optional"
+    <dd>{{% md %}}{{% /md %}}</dd><dt class="property-optional"
             title="Optional">
         <span id="state_constrainedproperty_nodejs">
 <a href="#state_constrainedproperty_nodejs" style="color: inherit; text-decoration: inherit;">constrained<wbr>Property</a>
@@ -1378,8 +1254,7 @@ The following state arguments are supported:
         <span class="property-indicator"></span>
         <span class="property-type">string</span>
     </dt>
-    <dd>{{% md %}}{{% /md %}}</dd>
-    <dt class="property-optional"
+    <dd>{{% md %}}{{% /md %}}</dd><dt class="property-optional"
             title="Optional">
         <span id="state_decayrate_nodejs">
 <a href="#state_decayrate_nodejs" style="color: inherit; text-decoration: inherit;">decay<wbr>Rate</a>
@@ -1387,8 +1262,7 @@ The following state arguments are supported:
         <span class="property-indicator"></span>
         <span class="property-type">number</span>
     </dt>
-    <dd>{{% md %}}{{% /md %}}</dd>
-    <dt class="property-optional"
+    <dd>{{% md %}}{{% /md %}}</dd><dt class="property-optional"
             title="Optional">
         <span id="state_description_nodejs">
 <a href="#state_description_nodejs" style="color: inherit; text-decoration: inherit;">description</a>
@@ -1396,8 +1270,7 @@ The following state arguments are supported:
         <span class="property-indicator"></span>
         <span class="property-type">string</span>
     </dt>
-    <dd>{{% md %}}{{% /md %}}</dd>
-    <dt class="property-optional"
+    <dd>{{% md %}}{{% /md %}}</dd><dt class="property-optional"
             title="Optional">
         <span id="state_domain_nodejs">
 <a href="#state_domain_nodejs" style="color: inherit; text-decoration: inherit;">domain</a>
@@ -1406,8 +1279,7 @@ The following state arguments are supported:
         <span class="property-type">string</span>
     </dt>
     <dd>{{% md %}}Domain name
-{{% /md %}}</dd>
-    <dt class="property-optional"
+{{% /md %}}</dd><dt class="property-optional"
             title="Optional">
         <span id="state_hostheader_nodejs">
 <a href="#state_hostheader_nodejs" style="color: inherit; text-decoration: inherit;">host<wbr>Header</a>
@@ -1415,8 +1287,7 @@ The following state arguments are supported:
         <span class="property-indicator"></span>
         <span class="property-type">string</span>
     </dt>
-    <dd>{{% md %}}{{% /md %}}</dd>
-    <dt class="property-optional"
+    <dd>{{% md %}}{{% /md %}}</dd><dt class="property-optional"
             title="Optional">
         <span id="state_leaderstring_nodejs">
 <a href="#state_leaderstring_nodejs" style="color: inherit; text-decoration: inherit;">leader<wbr>String</a>
@@ -1424,8 +1295,7 @@ The following state arguments are supported:
         <span class="property-indicator"></span>
         <span class="property-type">string</span>
     </dt>
-    <dd>{{% md %}}{{% /md %}}</dd>
-    <dt class="property-optional"
+    <dd>{{% md %}}{{% /md %}}</dd><dt class="property-optional"
             title="Optional">
         <span id="state_leastsquaresdecay_nodejs">
 <a href="#state_leastsquaresdecay_nodejs" style="color: inherit; text-decoration: inherit;">least<wbr>Squares<wbr>Decay</a>
@@ -1433,8 +1303,7 @@ The following state arguments are supported:
         <span class="property-indicator"></span>
         <span class="property-type">number</span>
     </dt>
-    <dd>{{% md %}}{{% /md %}}</dd>
-    <dt class="property-optional"
+    <dd>{{% md %}}{{% /md %}}</dd><dt class="property-optional"
             title="Optional">
         <span id="state_loadimbalancepercentage_nodejs">
 <a href="#state_loadimbalancepercentage_nodejs" style="color: inherit; text-decoration: inherit;">load<wbr>Imbalance<wbr>Percentage</a>
@@ -1442,8 +1311,7 @@ The following state arguments are supported:
         <span class="property-indicator"></span>
         <span class="property-type">number</span>
     </dt>
-    <dd>{{% md %}}{{% /md %}}</dd>
-    <dt class="property-optional"
+    <dd>{{% md %}}{{% /md %}}</dd><dt class="property-optional"
             title="Optional">
         <span id="state_maxumultiplicativeincrement_nodejs">
 <a href="#state_maxumultiplicativeincrement_nodejs" style="color: inherit; text-decoration: inherit;">max<wbr>UMultiplicative<wbr>Increment</a>
@@ -1451,8 +1319,7 @@ The following state arguments are supported:
         <span class="property-indicator"></span>
         <span class="property-type">number</span>
     </dt>
-    <dd>{{% md %}}{{% /md %}}</dd>
-    <dt class="property-optional"
+    <dd>{{% md %}}{{% /md %}}</dd><dt class="property-optional"
             title="Optional">
         <span id="state_name_nodejs">
 <a href="#state_name_nodejs" style="color: inherit; text-decoration: inherit;">name</a>
@@ -1462,8 +1329,7 @@ The following state arguments are supported:
     </dt>
     <dd>{{% md %}}Resource name
 * `aggregation_type`
-{{% /md %}}</dd>
-    <dt class="property-optional"
+{{% /md %}}</dd><dt class="property-optional"
             title="Optional">
         <span id="state_resourceinstances_nodejs">
 <a href="#state_resourceinstances_nodejs" style="color: inherit; text-decoration: inherit;">resource<wbr>Instances</a>
@@ -1474,8 +1340,7 @@ The following state arguments are supported:
     <dd>{{% md %}}* `datacenter_id`
 * `load_object`
 * `load_object_port`
-{{% /md %}}</dd>
-    <dt class="property-optional"
+{{% /md %}}</dd><dt class="property-optional"
             title="Optional">
         <span id="state_type_nodejs">
 <a href="#state_type_nodejs" style="color: inherit; text-decoration: inherit;">type</a>
@@ -1484,8 +1349,7 @@ The following state arguments are supported:
         <span class="property-type">string</span>
     </dt>
     <dd>{{% md %}}Resource type
-{{% /md %}}</dd>
-    <dt class="property-optional"
+{{% /md %}}</dd><dt class="property-optional"
             title="Optional">
         <span id="state_upperbound_nodejs">
 <a href="#state_upperbound_nodejs" style="color: inherit; text-decoration: inherit;">upper<wbr>Bound</a>
@@ -1493,8 +1357,7 @@ The following state arguments are supported:
         <span class="property-indicator"></span>
         <span class="property-type">number</span>
     </dt>
-    <dd>{{% md %}}{{% /md %}}</dd>
-    <dt class="property-optional"
+    <dd>{{% md %}}{{% /md %}}</dd><dt class="property-optional"
             title="Optional">
         <span id="state_waitoncomplete_nodejs">
 <a href="#state_waitoncomplete_nodejs" style="color: inherit; text-decoration: inherit;">wait<wbr>On<wbr>Complete</a>
@@ -1503,14 +1366,11 @@ The following state arguments are supported:
         <span class="property-type">boolean</span>
     </dt>
     <dd>{{% md %}}Wait for transaction to complete
-{{% /md %}}</dd>
-</dl>
+{{% /md %}}</dd></dl>
 {{% /choosable %}}
 
 {{% choosable language python %}}
-<dl class="resources-properties">
-
-    <dt class="property-optional"
+<dl class="resources-properties"><dt class="property-optional"
             title="Optional">
         <span id="state_aggregation_type_python">
 <a href="#state_aggregation_type_python" style="color: inherit; text-decoration: inherit;">aggregation_<wbr>type</a>
@@ -1518,8 +1378,7 @@ The following state arguments are supported:
         <span class="property-indicator"></span>
         <span class="property-type">str</span>
     </dt>
-    <dd>{{% md %}}{{% /md %}}</dd>
-    <dt class="property-optional"
+    <dd>{{% md %}}{{% /md %}}</dd><dt class="property-optional"
             title="Optional">
         <span id="state_constrained_property_python">
 <a href="#state_constrained_property_python" style="color: inherit; text-decoration: inherit;">constrained_<wbr>property</a>
@@ -1527,8 +1386,7 @@ The following state arguments are supported:
         <span class="property-indicator"></span>
         <span class="property-type">str</span>
     </dt>
-    <dd>{{% md %}}{{% /md %}}</dd>
-    <dt class="property-optional"
+    <dd>{{% md %}}{{% /md %}}</dd><dt class="property-optional"
             title="Optional">
         <span id="state_decay_rate_python">
 <a href="#state_decay_rate_python" style="color: inherit; text-decoration: inherit;">decay_<wbr>rate</a>
@@ -1536,8 +1394,7 @@ The following state arguments are supported:
         <span class="property-indicator"></span>
         <span class="property-type">float</span>
     </dt>
-    <dd>{{% md %}}{{% /md %}}</dd>
-    <dt class="property-optional"
+    <dd>{{% md %}}{{% /md %}}</dd><dt class="property-optional"
             title="Optional">
         <span id="state_description_python">
 <a href="#state_description_python" style="color: inherit; text-decoration: inherit;">description</a>
@@ -1545,8 +1402,7 @@ The following state arguments are supported:
         <span class="property-indicator"></span>
         <span class="property-type">str</span>
     </dt>
-    <dd>{{% md %}}{{% /md %}}</dd>
-    <dt class="property-optional"
+    <dd>{{% md %}}{{% /md %}}</dd><dt class="property-optional"
             title="Optional">
         <span id="state_domain_python">
 <a href="#state_domain_python" style="color: inherit; text-decoration: inherit;">domain</a>
@@ -1555,8 +1411,7 @@ The following state arguments are supported:
         <span class="property-type">str</span>
     </dt>
     <dd>{{% md %}}Domain name
-{{% /md %}}</dd>
-    <dt class="property-optional"
+{{% /md %}}</dd><dt class="property-optional"
             title="Optional">
         <span id="state_host_header_python">
 <a href="#state_host_header_python" style="color: inherit; text-decoration: inherit;">host_<wbr>header</a>
@@ -1564,8 +1419,7 @@ The following state arguments are supported:
         <span class="property-indicator"></span>
         <span class="property-type">str</span>
     </dt>
-    <dd>{{% md %}}{{% /md %}}</dd>
-    <dt class="property-optional"
+    <dd>{{% md %}}{{% /md %}}</dd><dt class="property-optional"
             title="Optional">
         <span id="state_leader_string_python">
 <a href="#state_leader_string_python" style="color: inherit; text-decoration: inherit;">leader_<wbr>string</a>
@@ -1573,8 +1427,7 @@ The following state arguments are supported:
         <span class="property-indicator"></span>
         <span class="property-type">str</span>
     </dt>
-    <dd>{{% md %}}{{% /md %}}</dd>
-    <dt class="property-optional"
+    <dd>{{% md %}}{{% /md %}}</dd><dt class="property-optional"
             title="Optional">
         <span id="state_least_squares_decay_python">
 <a href="#state_least_squares_decay_python" style="color: inherit; text-decoration: inherit;">least_<wbr>squares_<wbr>decay</a>
@@ -1582,8 +1435,7 @@ The following state arguments are supported:
         <span class="property-indicator"></span>
         <span class="property-type">float</span>
     </dt>
-    <dd>{{% md %}}{{% /md %}}</dd>
-    <dt class="property-optional"
+    <dd>{{% md %}}{{% /md %}}</dd><dt class="property-optional"
             title="Optional">
         <span id="state_load_imbalance_percentage_python">
 <a href="#state_load_imbalance_percentage_python" style="color: inherit; text-decoration: inherit;">load_<wbr>imbalance_<wbr>percentage</a>
@@ -1591,8 +1443,7 @@ The following state arguments are supported:
         <span class="property-indicator"></span>
         <span class="property-type">float</span>
     </dt>
-    <dd>{{% md %}}{{% /md %}}</dd>
-    <dt class="property-optional"
+    <dd>{{% md %}}{{% /md %}}</dd><dt class="property-optional"
             title="Optional">
         <span id="state_max_u_multiplicative_increment_python">
 <a href="#state_max_u_multiplicative_increment_python" style="color: inherit; text-decoration: inherit;">max_<wbr>u_<wbr>multiplicative_<wbr>increment</a>
@@ -1600,8 +1451,7 @@ The following state arguments are supported:
         <span class="property-indicator"></span>
         <span class="property-type">float</span>
     </dt>
-    <dd>{{% md %}}{{% /md %}}</dd>
-    <dt class="property-optional"
+    <dd>{{% md %}}{{% /md %}}</dd><dt class="property-optional"
             title="Optional">
         <span id="state_name_python">
 <a href="#state_name_python" style="color: inherit; text-decoration: inherit;">name</a>
@@ -1611,8 +1461,7 @@ The following state arguments are supported:
     </dt>
     <dd>{{% md %}}Resource name
 * `aggregation_type`
-{{% /md %}}</dd>
-    <dt class="property-optional"
+{{% /md %}}</dd><dt class="property-optional"
             title="Optional">
         <span id="state_resource_instances_python">
 <a href="#state_resource_instances_python" style="color: inherit; text-decoration: inherit;">resource_<wbr>instances</a>
@@ -1623,8 +1472,7 @@ The following state arguments are supported:
     <dd>{{% md %}}* `datacenter_id`
 * `load_object`
 * `load_object_port`
-{{% /md %}}</dd>
-    <dt class="property-optional"
+{{% /md %}}</dd><dt class="property-optional"
             title="Optional">
         <span id="state_type_python">
 <a href="#state_type_python" style="color: inherit; text-decoration: inherit;">type</a>
@@ -1633,8 +1481,7 @@ The following state arguments are supported:
         <span class="property-type">str</span>
     </dt>
     <dd>{{% md %}}Resource type
-{{% /md %}}</dd>
-    <dt class="property-optional"
+{{% /md %}}</dd><dt class="property-optional"
             title="Optional">
         <span id="state_upper_bound_python">
 <a href="#state_upper_bound_python" style="color: inherit; text-decoration: inherit;">upper_<wbr>bound</a>
@@ -1642,8 +1489,7 @@ The following state arguments are supported:
         <span class="property-indicator"></span>
         <span class="property-type">int</span>
     </dt>
-    <dd>{{% md %}}{{% /md %}}</dd>
-    <dt class="property-optional"
+    <dd>{{% md %}}{{% /md %}}</dd><dt class="property-optional"
             title="Optional">
         <span id="state_wait_on_complete_python">
 <a href="#state_wait_on_complete_python" style="color: inherit; text-decoration: inherit;">wait_<wbr>on_<wbr>complete</a>
@@ -1652,8 +1498,7 @@ The following state arguments are supported:
         <span class="property-type">bool</span>
     </dt>
     <dd>{{% md %}}Wait for transaction to complete
-{{% /md %}}</dd>
-</dl>
+{{% /md %}}</dd></dl>
 {{% /choosable %}}
 
 
@@ -1668,9 +1513,7 @@ The following state arguments are supported:
 <h4 id="gtmresourceresourceinstance">Gtm<wbr>Resource<wbr>Resource<wbr>Instance</h4>
 
 {{% choosable language csharp %}}
-<dl class="resources-properties">
-
-    <dt class="property-required"
+<dl class="resources-properties"><dt class="property-required"
             title="Required">
         <span id="datacenterid_csharp">
 <a href="#datacenterid_csharp" style="color: inherit; text-decoration: inherit;">Datacenter<wbr>Id</a>
@@ -1678,8 +1521,7 @@ The following state arguments are supported:
         <span class="property-indicator"></span>
         <span class="property-type">int</span>
     </dt>
-    <dd>{{% md %}}{{% /md %}}</dd>
-    <dt class="property-optional"
+    <dd>{{% md %}}{{% /md %}}</dd><dt class="property-optional"
             title="Optional">
         <span id="loadobject_csharp">
 <a href="#loadobject_csharp" style="color: inherit; text-decoration: inherit;">Load<wbr>Object</a>
@@ -1687,8 +1529,7 @@ The following state arguments are supported:
         <span class="property-indicator"></span>
         <span class="property-type">string</span>
     </dt>
-    <dd>{{% md %}}{{% /md %}}</dd>
-    <dt class="property-optional"
+    <dd>{{% md %}}{{% /md %}}</dd><dt class="property-optional"
             title="Optional">
         <span id="loadobjectport_csharp">
 <a href="#loadobjectport_csharp" style="color: inherit; text-decoration: inherit;">Load<wbr>Object<wbr>Port</a>
@@ -1696,8 +1537,7 @@ The following state arguments are supported:
         <span class="property-indicator"></span>
         <span class="property-type">int</span>
     </dt>
-    <dd>{{% md %}}{{% /md %}}</dd>
-    <dt class="property-optional"
+    <dd>{{% md %}}{{% /md %}}</dd><dt class="property-optional"
             title="Optional">
         <span id="loadservers_csharp">
 <a href="#loadservers_csharp" style="color: inherit; text-decoration: inherit;">Load<wbr>Servers</a>
@@ -1705,8 +1545,7 @@ The following state arguments are supported:
         <span class="property-indicator"></span>
         <span class="property-type">List&lt;string&gt;</span>
     </dt>
-    <dd>{{% md %}}{{% /md %}}</dd>
-    <dt class="property-optional"
+    <dd>{{% md %}}{{% /md %}}</dd><dt class="property-optional"
             title="Optional">
         <span id="usedefaultloadobject_csharp">
 <a href="#usedefaultloadobject_csharp" style="color: inherit; text-decoration: inherit;">Use<wbr>Default<wbr>Load<wbr>Object</a>
@@ -1723,14 +1562,11 @@ The following state arguments are supported:
 * `load_imbalance_percent`
 * `max_u_multiplicative_increment`
 * `decay_rate`
-{{% /md %}}</dd>
-</dl>
+{{% /md %}}</dd></dl>
 {{% /choosable %}}
 
 {{% choosable language go %}}
-<dl class="resources-properties">
-
-    <dt class="property-required"
+<dl class="resources-properties"><dt class="property-required"
             title="Required">
         <span id="datacenterid_go">
 <a href="#datacenterid_go" style="color: inherit; text-decoration: inherit;">Datacenter<wbr>Id</a>
@@ -1738,8 +1574,7 @@ The following state arguments are supported:
         <span class="property-indicator"></span>
         <span class="property-type">int</span>
     </dt>
-    <dd>{{% md %}}{{% /md %}}</dd>
-    <dt class="property-optional"
+    <dd>{{% md %}}{{% /md %}}</dd><dt class="property-optional"
             title="Optional">
         <span id="loadobject_go">
 <a href="#loadobject_go" style="color: inherit; text-decoration: inherit;">Load<wbr>Object</a>
@@ -1747,8 +1582,7 @@ The following state arguments are supported:
         <span class="property-indicator"></span>
         <span class="property-type">string</span>
     </dt>
-    <dd>{{% md %}}{{% /md %}}</dd>
-    <dt class="property-optional"
+    <dd>{{% md %}}{{% /md %}}</dd><dt class="property-optional"
             title="Optional">
         <span id="loadobjectport_go">
 <a href="#loadobjectport_go" style="color: inherit; text-decoration: inherit;">Load<wbr>Object<wbr>Port</a>
@@ -1756,8 +1590,7 @@ The following state arguments are supported:
         <span class="property-indicator"></span>
         <span class="property-type">int</span>
     </dt>
-    <dd>{{% md %}}{{% /md %}}</dd>
-    <dt class="property-optional"
+    <dd>{{% md %}}{{% /md %}}</dd><dt class="property-optional"
             title="Optional">
         <span id="loadservers_go">
 <a href="#loadservers_go" style="color: inherit; text-decoration: inherit;">Load<wbr>Servers</a>
@@ -1765,8 +1598,7 @@ The following state arguments are supported:
         <span class="property-indicator"></span>
         <span class="property-type">[]string</span>
     </dt>
-    <dd>{{% md %}}{{% /md %}}</dd>
-    <dt class="property-optional"
+    <dd>{{% md %}}{{% /md %}}</dd><dt class="property-optional"
             title="Optional">
         <span id="usedefaultloadobject_go">
 <a href="#usedefaultloadobject_go" style="color: inherit; text-decoration: inherit;">Use<wbr>Default<wbr>Load<wbr>Object</a>
@@ -1783,14 +1615,11 @@ The following state arguments are supported:
 * `load_imbalance_percent`
 * `max_u_multiplicative_increment`
 * `decay_rate`
-{{% /md %}}</dd>
-</dl>
+{{% /md %}}</dd></dl>
 {{% /choosable %}}
 
 {{% choosable language nodejs %}}
-<dl class="resources-properties">
-
-    <dt class="property-required"
+<dl class="resources-properties"><dt class="property-required"
             title="Required">
         <span id="datacenterid_nodejs">
 <a href="#datacenterid_nodejs" style="color: inherit; text-decoration: inherit;">datacenter<wbr>Id</a>
@@ -1798,8 +1627,7 @@ The following state arguments are supported:
         <span class="property-indicator"></span>
         <span class="property-type">number</span>
     </dt>
-    <dd>{{% md %}}{{% /md %}}</dd>
-    <dt class="property-optional"
+    <dd>{{% md %}}{{% /md %}}</dd><dt class="property-optional"
             title="Optional">
         <span id="loadobject_nodejs">
 <a href="#loadobject_nodejs" style="color: inherit; text-decoration: inherit;">load<wbr>Object</a>
@@ -1807,8 +1635,7 @@ The following state arguments are supported:
         <span class="property-indicator"></span>
         <span class="property-type">string</span>
     </dt>
-    <dd>{{% md %}}{{% /md %}}</dd>
-    <dt class="property-optional"
+    <dd>{{% md %}}{{% /md %}}</dd><dt class="property-optional"
             title="Optional">
         <span id="loadobjectport_nodejs">
 <a href="#loadobjectport_nodejs" style="color: inherit; text-decoration: inherit;">load<wbr>Object<wbr>Port</a>
@@ -1816,8 +1643,7 @@ The following state arguments are supported:
         <span class="property-indicator"></span>
         <span class="property-type">number</span>
     </dt>
-    <dd>{{% md %}}{{% /md %}}</dd>
-    <dt class="property-optional"
+    <dd>{{% md %}}{{% /md %}}</dd><dt class="property-optional"
             title="Optional">
         <span id="loadservers_nodejs">
 <a href="#loadservers_nodejs" style="color: inherit; text-decoration: inherit;">load<wbr>Servers</a>
@@ -1825,8 +1651,7 @@ The following state arguments are supported:
         <span class="property-indicator"></span>
         <span class="property-type">string[]</span>
     </dt>
-    <dd>{{% md %}}{{% /md %}}</dd>
-    <dt class="property-optional"
+    <dd>{{% md %}}{{% /md %}}</dd><dt class="property-optional"
             title="Optional">
         <span id="usedefaultloadobject_nodejs">
 <a href="#usedefaultloadobject_nodejs" style="color: inherit; text-decoration: inherit;">use<wbr>Default<wbr>Load<wbr>Object</a>
@@ -1843,14 +1668,11 @@ The following state arguments are supported:
 * `load_imbalance_percent`
 * `max_u_multiplicative_increment`
 * `decay_rate`
-{{% /md %}}</dd>
-</dl>
+{{% /md %}}</dd></dl>
 {{% /choosable %}}
 
 {{% choosable language python %}}
-<dl class="resources-properties">
-
-    <dt class="property-required"
+<dl class="resources-properties"><dt class="property-required"
             title="Required">
         <span id="datacenter_id_python">
 <a href="#datacenter_id_python" style="color: inherit; text-decoration: inherit;">datacenter_<wbr>id</a>
@@ -1858,8 +1680,7 @@ The following state arguments are supported:
         <span class="property-indicator"></span>
         <span class="property-type">int</span>
     </dt>
-    <dd>{{% md %}}{{% /md %}}</dd>
-    <dt class="property-optional"
+    <dd>{{% md %}}{{% /md %}}</dd><dt class="property-optional"
             title="Optional">
         <span id="load_object_python">
 <a href="#load_object_python" style="color: inherit; text-decoration: inherit;">load_<wbr>object</a>
@@ -1867,8 +1688,7 @@ The following state arguments are supported:
         <span class="property-indicator"></span>
         <span class="property-type">str</span>
     </dt>
-    <dd>{{% md %}}{{% /md %}}</dd>
-    <dt class="property-optional"
+    <dd>{{% md %}}{{% /md %}}</dd><dt class="property-optional"
             title="Optional">
         <span id="load_object_port_python">
 <a href="#load_object_port_python" style="color: inherit; text-decoration: inherit;">load_<wbr>object_<wbr>port</a>
@@ -1876,8 +1696,7 @@ The following state arguments are supported:
         <span class="property-indicator"></span>
         <span class="property-type">int</span>
     </dt>
-    <dd>{{% md %}}{{% /md %}}</dd>
-    <dt class="property-optional"
+    <dd>{{% md %}}{{% /md %}}</dd><dt class="property-optional"
             title="Optional">
         <span id="load_servers_python">
 <a href="#load_servers_python" style="color: inherit; text-decoration: inherit;">load_<wbr>servers</a>
@@ -1885,8 +1704,7 @@ The following state arguments are supported:
         <span class="property-indicator"></span>
         <span class="property-type">Sequence[str]</span>
     </dt>
-    <dd>{{% md %}}{{% /md %}}</dd>
-    <dt class="property-optional"
+    <dd>{{% md %}}{{% /md %}}</dd><dt class="property-optional"
             title="Optional">
         <span id="use_default_load_object_python">
 <a href="#use_default_load_object_python" style="color: inherit; text-decoration: inherit;">use_<wbr>default_<wbr>load_<wbr>object</a>
@@ -1903,8 +1721,7 @@ The following state arguments are supported:
 * `load_imbalance_percent`
 * `max_u_multiplicative_increment`
 * `decay_rate`
-{{% /md %}}</dd>
-</dl>
+{{% /md %}}</dd></dl>
 {{% /choosable %}}
 
 
@@ -1915,6 +1732,6 @@ The following state arguments are supported:
 	<dt>License</dt>
 	<dd>Apache-2.0</dd>
 	<dt>Notes</dt>
-	<dd>This Pulumi package is based on the [`akamai` Terraform Provider](https://github.com/akamai/terraform-provider-akamai).</dd>
+	<dd>{{% md %}}This Pulumi package is based on the [`akamai` Terraform Provider](https://github.com/akamai/terraform-provider-akamai).{{% /md %}}</dd>
 </dl>
 

@@ -1,6 +1,6 @@
 ---
 title: "Hetzner Cloud"
-title_tag: "Module Hetzner Cloud | Package Hetzner Cloud"
+title_tag: "hcloud.Hetzner Cloud"
 meta_desc: "A Pulumi package for creating and managing hcloud cloud resources."
 menu:
     reference:
@@ -59,7 +59,7 @@ A Pulumi package for creating and managing hcloud cloud resources.
 	<dt>License</dt>
 	<dd>Apache-2.0</dd>
 	<dt>Notes</dt>
-	<dd>This Pulumi package is based on the [`hcloud` Terraform Provider](https://github.com/hetznercloud/terraform-provider-hcloud).</dd>
+	<dd>{{% md %}}This Pulumi package is based on the [`hcloud` Terraform Provider](https://github.com/hetznercloud/terraform-provider-hcloud).{{% /md %}}</dd>
 	<dt>Version</dt>
 	<dd>0.6.2</dd>
 </dl>

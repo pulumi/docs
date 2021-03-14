@@ -17,11 +17,17 @@ for an Aiven Elasticsearch service.
 
 
 {{% examples %}}
+
 ## Example Usage
 
 {{< chooser language "typescript,python,go,csharp" / >}}
 
-{{% example csharp %}}
+
+
+
+
+{{< example csharp >}}
+
 ```csharp
 using Pulumi;
 using Aiven = Pulumi.Aiven;
@@ -79,9 +85,12 @@ class MyStack : Stack
 }
 ```
 
-{{% /example %}}
 
-{{% example go %}}
+{{< /example >}}
+
+
+{{< example go >}}
+
 ```go
 package main
 
@@ -134,9 +143,12 @@ func main() {
 }
 ```
 
-{{% /example %}}
 
-{{% example python %}}
+{{< /example >}}
+
+
+{{< example python >}}
+
 ```python
 import pulumi
 import pulumi_aiven as aiven
@@ -176,9 +188,12 @@ es_acls = aiven.ElasticSearchAcl("es-acls",
     ])
 ```
 
-{{% /example %}}
 
-{{% example typescript %}}
+{{< /example >}}
+
+
+{{< example typescript >}}
+
 
 ```typescript
 import * as pulumi from "@pulumi/pulumi";
@@ -220,9 +235,16 @@ const es_acls = new aiven.ElasticSearchAcl("es-acls", {
 });
 ```
 
-{{% /example %}}
+
+{{< /example >}}
+
+
+
+
 
 {{% /examples %}}
+
+
 
 
 ## Create a ElasticSearchAcl Resource {#create}
@@ -247,9 +269,7 @@ const es_acls = new aiven.ElasticSearchAcl("es-acls", {
 
 {{% choosable language nodejs %}}
 
-<dl class="resources-properties">
-  
-    <dt
+<dl class="resources-properties"><dt
         class="property-required" title="Required">
         <span>name</span>
         <span class="property-indicator"></span>
@@ -257,9 +277,7 @@ const es_acls = new aiven.ElasticSearchAcl("es-acls", {
     </dt>
     <dd>
       The unique name of the resource.
-    </dd>
-  
-    <dt
+    </dd><dt
         class="property-required" title="Required">
         <span>args</span>
         <span class="property-indicator"></span>
@@ -267,9 +285,7 @@ const es_acls = new aiven.ElasticSearchAcl("es-acls", {
     </dt>
     <dd>
       The arguments to resource properties.
-    </dd>
-  
-    <dt
+    </dd><dt
         class="property-optional" title="Optional">
         <span>opts</span>
         <span class="property-indicator"></span>
@@ -277,10 +293,7 @@ const es_acls = new aiven.ElasticSearchAcl("es-acls", {
     </dt>
     <dd>
       Bag of options to control resource&#39;s behavior.
-    </dd>
-  
-
-</dl>
+    </dd></dl>
 
 {{% /choosable %}}
 
@@ -306,9 +319,7 @@ const es_acls = new aiven.ElasticSearchAcl("es-acls", {
 
 {{% choosable language go %}}
 
-<dl class="resources-properties">
-  
-    <dt
+<dl class="resources-properties"><dt
         class="property-optional" title="Optional">
         <span>ctx</span>
         <span class="property-indicator"></span>
@@ -316,9 +327,7 @@ const es_acls = new aiven.ElasticSearchAcl("es-acls", {
     </dt>
     <dd>
       Context object for the current deployment.
-    </dd>
-  
-    <dt
+    </dd><dt
         class="property-required" title="Required">
         <span>name</span>
         <span class="property-indicator"></span>
@@ -326,9 +335,7 @@ const es_acls = new aiven.ElasticSearchAcl("es-acls", {
     </dt>
     <dd>
       The unique name of the resource.
-    </dd>
-  
-    <dt
+    </dd><dt
         class="property-required" title="Required">
         <span>args</span>
         <span class="property-indicator"></span>
@@ -336,9 +343,7 @@ const es_acls = new aiven.ElasticSearchAcl("es-acls", {
     </dt>
     <dd>
       The arguments to resource properties.
-    </dd>
-  
-    <dt
+    </dd><dt
         class="property-optional" title="Optional">
         <span>opts</span>
         <span class="property-indicator"></span>
@@ -346,18 +351,13 @@ const es_acls = new aiven.ElasticSearchAcl("es-acls", {
     </dt>
     <dd>
       Bag of options to control resource&#39;s behavior.
-    </dd>
-  
-
-</dl>
+    </dd></dl>
 
 {{% /choosable %}}
 
 {{% choosable language csharp %}}
 
-<dl class="resources-properties">
-  
-    <dt
+<dl class="resources-properties"><dt
         class="property-required" title="Required">
         <span>name</span>
         <span class="property-indicator"></span>
@@ -365,9 +365,7 @@ const es_acls = new aiven.ElasticSearchAcl("es-acls", {
     </dt>
     <dd>
       The unique name of the resource.
-    </dd>
-  
-    <dt
+    </dd><dt
         class="property-required" title="Required">
         <span>args</span>
         <span class="property-indicator"></span>
@@ -375,9 +373,7 @@ const es_acls = new aiven.ElasticSearchAcl("es-acls", {
     </dt>
     <dd>
       The arguments to resource properties.
-    </dd>
-  
-    <dt
+    </dd><dt
         class="property-optional" title="Optional">
         <span>opts</span>
         <span class="property-indicator"></span>
@@ -385,10 +381,7 @@ const es_acls = new aiven.ElasticSearchAcl("es-acls", {
     </dt>
     <dd>
       Bag of options to control resource&#39;s behavior.
-    </dd>
-  
-
-</dl>
+    </dd></dl>
 
 {{% /choosable %}}
 
@@ -403,9 +396,7 @@ The ElasticSearchAcl resource accepts the following [input]({{< relref "/docs/in
 
 
 {{% choosable language csharp %}}
-<dl class="resources-properties">
-
-    <dt class="property-required"
+<dl class="resources-properties"><dt class="property-required"
             title="Required">
         <span id="project_csharp">
 <a href="#project_csharp" style="color: inherit; text-decoration: inherit;">Project</a>
@@ -415,8 +406,7 @@ The ElasticSearchAcl resource accepts the following [input]({{< relref "/docs/in
     </dt>
     <dd>{{% md %}}and `service_name` - (Required) define the project and service the ACL belongs to. 
 They should be defined using reference as shown above to set up dependencies correctly.
-{{% /md %}}</dd>
-    <dt class="property-required"
+{{% /md %}}</dd><dt class="property-required"
             title="Required">
         <span id="servicename_csharp">
 <a href="#servicename_csharp" style="color: inherit; text-decoration: inherit;">Service<wbr>Name</a>
@@ -425,8 +415,7 @@ They should be defined using reference as shown above to set up dependencies cor
         <span class="property-type">string</span>
     </dt>
     <dd>{{% md %}}Service to link the Elasticsearch ACLs to
-{{% /md %}}</dd>
-    <dt class="property-optional"
+{{% /md %}}</dd><dt class="property-optional"
             title="Optional">
         <span id="acls_csharp">
 <a href="#acls_csharp" style="color: inherit; text-decoration: inherit;">Acls</a>
@@ -435,8 +424,7 @@ They should be defined using reference as shown above to set up dependencies cor
         <span class="property-type"><a href="#elasticsearchaclacl">List&lt;Elastic<wbr>Search<wbr>Acl<wbr>Acl<wbr>Args&gt;</a></span>
     </dt>
     <dd>{{% md %}}List of Elasticsearch ACLs
-{{% /md %}}</dd>
-    <dt class="property-optional"
+{{% /md %}}</dd><dt class="property-optional"
             title="Optional">
         <span id="enabled_csharp">
 <a href="#enabled_csharp" style="color: inherit; text-decoration: inherit;">Enabled</a>
@@ -445,8 +433,7 @@ They should be defined using reference as shown above to set up dependencies cor
         <span class="property-type">bool</span>
     </dt>
     <dd>{{% md %}}enables of disables Elasticsearch ACL's.
-{{% /md %}}</dd>
-    <dt class="property-optional"
+{{% /md %}}</dd><dt class="property-optional"
             title="Optional">
         <span id="extendedacl_csharp">
 <a href="#extendedacl_csharp" style="color: inherit; text-decoration: inherit;">Extended<wbr>Acl</a>
@@ -457,14 +444,11 @@ They should be defined using reference as shown above to set up dependencies cor
     <dd>{{% md %}}Index rules can be applied in a limited fashion to the _mget, _msearch and _bulk APIs 
 (and only those) by enabling the ExtendedAcl option for the service. When it is enabled, users can use
 these APIs as long as all operations only target indexes they have been granted access to.
-{{% /md %}}</dd>
-</dl>
+{{% /md %}}</dd></dl>
 {{% /choosable %}}
 
 {{% choosable language go %}}
-<dl class="resources-properties">
-
-    <dt class="property-required"
+<dl class="resources-properties"><dt class="property-required"
             title="Required">
         <span id="project_go">
 <a href="#project_go" style="color: inherit; text-decoration: inherit;">Project</a>
@@ -474,8 +458,7 @@ these APIs as long as all operations only target indexes they have been granted 
     </dt>
     <dd>{{% md %}}and `service_name` - (Required) define the project and service the ACL belongs to. 
 They should be defined using reference as shown above to set up dependencies correctly.
-{{% /md %}}</dd>
-    <dt class="property-required"
+{{% /md %}}</dd><dt class="property-required"
             title="Required">
         <span id="servicename_go">
 <a href="#servicename_go" style="color: inherit; text-decoration: inherit;">Service<wbr>Name</a>
@@ -484,8 +467,7 @@ They should be defined using reference as shown above to set up dependencies cor
         <span class="property-type">string</span>
     </dt>
     <dd>{{% md %}}Service to link the Elasticsearch ACLs to
-{{% /md %}}</dd>
-    <dt class="property-optional"
+{{% /md %}}</dd><dt class="property-optional"
             title="Optional">
         <span id="acls_go">
 <a href="#acls_go" style="color: inherit; text-decoration: inherit;">Acls</a>
@@ -494,8 +476,7 @@ They should be defined using reference as shown above to set up dependencies cor
         <span class="property-type"><a href="#elasticsearchaclacl">[]Elastic<wbr>Search<wbr>Acl<wbr>Acl</a></span>
     </dt>
     <dd>{{% md %}}List of Elasticsearch ACLs
-{{% /md %}}</dd>
-    <dt class="property-optional"
+{{% /md %}}</dd><dt class="property-optional"
             title="Optional">
         <span id="enabled_go">
 <a href="#enabled_go" style="color: inherit; text-decoration: inherit;">Enabled</a>
@@ -504,8 +485,7 @@ They should be defined using reference as shown above to set up dependencies cor
         <span class="property-type">bool</span>
     </dt>
     <dd>{{% md %}}enables of disables Elasticsearch ACL's.
-{{% /md %}}</dd>
-    <dt class="property-optional"
+{{% /md %}}</dd><dt class="property-optional"
             title="Optional">
         <span id="extendedacl_go">
 <a href="#extendedacl_go" style="color: inherit; text-decoration: inherit;">Extended<wbr>Acl</a>
@@ -516,14 +496,11 @@ They should be defined using reference as shown above to set up dependencies cor
     <dd>{{% md %}}Index rules can be applied in a limited fashion to the _mget, _msearch and _bulk APIs 
 (and only those) by enabling the ExtendedAcl option for the service. When it is enabled, users can use
 these APIs as long as all operations only target indexes they have been granted access to.
-{{% /md %}}</dd>
-</dl>
+{{% /md %}}</dd></dl>
 {{% /choosable %}}
 
 {{% choosable language nodejs %}}
-<dl class="resources-properties">
-
-    <dt class="property-required"
+<dl class="resources-properties"><dt class="property-required"
             title="Required">
         <span id="project_nodejs">
 <a href="#project_nodejs" style="color: inherit; text-decoration: inherit;">project</a>
@@ -533,8 +510,7 @@ these APIs as long as all operations only target indexes they have been granted 
     </dt>
     <dd>{{% md %}}and `service_name` - (Required) define the project and service the ACL belongs to. 
 They should be defined using reference as shown above to set up dependencies correctly.
-{{% /md %}}</dd>
-    <dt class="property-required"
+{{% /md %}}</dd><dt class="property-required"
             title="Required">
         <span id="servicename_nodejs">
 <a href="#servicename_nodejs" style="color: inherit; text-decoration: inherit;">service<wbr>Name</a>
@@ -543,8 +519,7 @@ They should be defined using reference as shown above to set up dependencies cor
         <span class="property-type">string</span>
     </dt>
     <dd>{{% md %}}Service to link the Elasticsearch ACLs to
-{{% /md %}}</dd>
-    <dt class="property-optional"
+{{% /md %}}</dd><dt class="property-optional"
             title="Optional">
         <span id="acls_nodejs">
 <a href="#acls_nodejs" style="color: inherit; text-decoration: inherit;">acls</a>
@@ -553,8 +528,7 @@ They should be defined using reference as shown above to set up dependencies cor
         <span class="property-type"><a href="#elasticsearchaclacl">Elastic<wbr>Search<wbr>Acl<wbr>Acl[]</a></span>
     </dt>
     <dd>{{% md %}}List of Elasticsearch ACLs
-{{% /md %}}</dd>
-    <dt class="property-optional"
+{{% /md %}}</dd><dt class="property-optional"
             title="Optional">
         <span id="enabled_nodejs">
 <a href="#enabled_nodejs" style="color: inherit; text-decoration: inherit;">enabled</a>
@@ -563,8 +537,7 @@ They should be defined using reference as shown above to set up dependencies cor
         <span class="property-type">boolean</span>
     </dt>
     <dd>{{% md %}}enables of disables Elasticsearch ACL's.
-{{% /md %}}</dd>
-    <dt class="property-optional"
+{{% /md %}}</dd><dt class="property-optional"
             title="Optional">
         <span id="extendedacl_nodejs">
 <a href="#extendedacl_nodejs" style="color: inherit; text-decoration: inherit;">extended<wbr>Acl</a>
@@ -575,14 +548,11 @@ They should be defined using reference as shown above to set up dependencies cor
     <dd>{{% md %}}Index rules can be applied in a limited fashion to the _mget, _msearch and _bulk APIs 
 (and only those) by enabling the ExtendedAcl option for the service. When it is enabled, users can use
 these APIs as long as all operations only target indexes they have been granted access to.
-{{% /md %}}</dd>
-</dl>
+{{% /md %}}</dd></dl>
 {{% /choosable %}}
 
 {{% choosable language python %}}
-<dl class="resources-properties">
-
-    <dt class="property-required"
+<dl class="resources-properties"><dt class="property-required"
             title="Required">
         <span id="project_python">
 <a href="#project_python" style="color: inherit; text-decoration: inherit;">project</a>
@@ -592,8 +562,7 @@ these APIs as long as all operations only target indexes they have been granted 
     </dt>
     <dd>{{% md %}}and `service_name` - (Required) define the project and service the ACL belongs to. 
 They should be defined using reference as shown above to set up dependencies correctly.
-{{% /md %}}</dd>
-    <dt class="property-required"
+{{% /md %}}</dd><dt class="property-required"
             title="Required">
         <span id="service_name_python">
 <a href="#service_name_python" style="color: inherit; text-decoration: inherit;">service_<wbr>name</a>
@@ -602,8 +571,7 @@ They should be defined using reference as shown above to set up dependencies cor
         <span class="property-type">str</span>
     </dt>
     <dd>{{% md %}}Service to link the Elasticsearch ACLs to
-{{% /md %}}</dd>
-    <dt class="property-optional"
+{{% /md %}}</dd><dt class="property-optional"
             title="Optional">
         <span id="acls_python">
 <a href="#acls_python" style="color: inherit; text-decoration: inherit;">acls</a>
@@ -612,8 +580,7 @@ They should be defined using reference as shown above to set up dependencies cor
         <span class="property-type"><a href="#elasticsearchaclacl">Sequence[Elastic<wbr>Search<wbr>Acl<wbr>Acl<wbr>Args]</a></span>
     </dt>
     <dd>{{% md %}}List of Elasticsearch ACLs
-{{% /md %}}</dd>
-    <dt class="property-optional"
+{{% /md %}}</dd><dt class="property-optional"
             title="Optional">
         <span id="enabled_python">
 <a href="#enabled_python" style="color: inherit; text-decoration: inherit;">enabled</a>
@@ -622,8 +589,7 @@ They should be defined using reference as shown above to set up dependencies cor
         <span class="property-type">bool</span>
     </dt>
     <dd>{{% md %}}enables of disables Elasticsearch ACL's.
-{{% /md %}}</dd>
-    <dt class="property-optional"
+{{% /md %}}</dd><dt class="property-optional"
             title="Optional">
         <span id="extended_acl_python">
 <a href="#extended_acl_python" style="color: inherit; text-decoration: inherit;">extended_<wbr>acl</a>
@@ -634,8 +600,7 @@ They should be defined using reference as shown above to set up dependencies cor
     <dd>{{% md %}}Index rules can be applied in a limited fashion to the _mget, _msearch and _bulk APIs 
 (and only those) by enabling the ExtendedAcl option for the service. When it is enabled, users can use
 these APIs as long as all operations only target indexes they have been granted access to.
-{{% /md %}}</dd>
-</dl>
+{{% /md %}}</dd></dl>
 {{% /choosable %}}
 
 
@@ -646,9 +611,7 @@ All [input](#inputs) properties are implicitly available as output properties. A
 
 
 {{% choosable language csharp %}}
-<dl class="resources-properties">
-
-    <dt class="property-"
+<dl class="resources-properties"><dt class="property-"
             title="">
         <span id="id_csharp">
 <a href="#id_csharp" style="color: inherit; text-decoration: inherit;">Id</a>
@@ -656,14 +619,11 @@ All [input](#inputs) properties are implicitly available as output properties. A
         <span class="property-indicator"></span>
         <span class="property-type">string</span>
     </dt>
-    <dd>{{% md %}}The provider-assigned unique ID for this managed resource.{{% /md %}}</dd>
-</dl>
+    <dd>{{% md %}}The provider-assigned unique ID for this managed resource.{{% /md %}}</dd></dl>
 {{% /choosable %}}
 
 {{% choosable language go %}}
-<dl class="resources-properties">
-
-    <dt class="property-"
+<dl class="resources-properties"><dt class="property-"
             title="">
         <span id="id_go">
 <a href="#id_go" style="color: inherit; text-decoration: inherit;">Id</a>
@@ -671,14 +631,11 @@ All [input](#inputs) properties are implicitly available as output properties. A
         <span class="property-indicator"></span>
         <span class="property-type">string</span>
     </dt>
-    <dd>{{% md %}}The provider-assigned unique ID for this managed resource.{{% /md %}}</dd>
-</dl>
+    <dd>{{% md %}}The provider-assigned unique ID for this managed resource.{{% /md %}}</dd></dl>
 {{% /choosable %}}
 
 {{% choosable language nodejs %}}
-<dl class="resources-properties">
-
-    <dt class="property-"
+<dl class="resources-properties"><dt class="property-"
             title="">
         <span id="id_nodejs">
 <a href="#id_nodejs" style="color: inherit; text-decoration: inherit;">id</a>
@@ -686,14 +643,11 @@ All [input](#inputs) properties are implicitly available as output properties. A
         <span class="property-indicator"></span>
         <span class="property-type">string</span>
     </dt>
-    <dd>{{% md %}}The provider-assigned unique ID for this managed resource.{{% /md %}}</dd>
-</dl>
+    <dd>{{% md %}}The provider-assigned unique ID for this managed resource.{{% /md %}}</dd></dl>
 {{% /choosable %}}
 
 {{% choosable language python %}}
-<dl class="resources-properties">
-
-    <dt class="property-"
+<dl class="resources-properties"><dt class="property-"
             title="">
         <span id="id_python">
 <a href="#id_python" style="color: inherit; text-decoration: inherit;">id</a>
@@ -701,8 +655,7 @@ All [input](#inputs) properties are implicitly available as output properties. A
         <span class="property-indicator"></span>
         <span class="property-type">str</span>
     </dt>
-    <dd>{{% md %}}The provider-assigned unique ID for this managed resource.{{% /md %}}</dd>
-</dl>
+    <dd>{{% md %}}The provider-assigned unique ID for this managed resource.{{% /md %}}</dd></dl>
 {{% /choosable %}}
 
 
@@ -829,9 +782,7 @@ The following state arguments are supported:
 
 
 {{% choosable language csharp %}}
-<dl class="resources-properties">
-
-    <dt class="property-optional"
+<dl class="resources-properties"><dt class="property-optional"
             title="Optional">
         <span id="state_acls_csharp">
 <a href="#state_acls_csharp" style="color: inherit; text-decoration: inherit;">Acls</a>
@@ -840,8 +791,7 @@ The following state arguments are supported:
         <span class="property-type"><a href="#elasticsearchaclacl">List&lt;Elastic<wbr>Search<wbr>Acl<wbr>Acl<wbr>Args&gt;</a></span>
     </dt>
     <dd>{{% md %}}List of Elasticsearch ACLs
-{{% /md %}}</dd>
-    <dt class="property-optional"
+{{% /md %}}</dd><dt class="property-optional"
             title="Optional">
         <span id="state_enabled_csharp">
 <a href="#state_enabled_csharp" style="color: inherit; text-decoration: inherit;">Enabled</a>
@@ -850,8 +800,7 @@ The following state arguments are supported:
         <span class="property-type">bool</span>
     </dt>
     <dd>{{% md %}}enables of disables Elasticsearch ACL's.
-{{% /md %}}</dd>
-    <dt class="property-optional"
+{{% /md %}}</dd><dt class="property-optional"
             title="Optional">
         <span id="state_extendedacl_csharp">
 <a href="#state_extendedacl_csharp" style="color: inherit; text-decoration: inherit;">Extended<wbr>Acl</a>
@@ -862,8 +811,7 @@ The following state arguments are supported:
     <dd>{{% md %}}Index rules can be applied in a limited fashion to the _mget, _msearch and _bulk APIs 
 (and only those) by enabling the ExtendedAcl option for the service. When it is enabled, users can use
 these APIs as long as all operations only target indexes they have been granted access to.
-{{% /md %}}</dd>
-    <dt class="property-optional"
+{{% /md %}}</dd><dt class="property-optional"
             title="Optional">
         <span id="state_project_csharp">
 <a href="#state_project_csharp" style="color: inherit; text-decoration: inherit;">Project</a>
@@ -873,8 +821,7 @@ these APIs as long as all operations only target indexes they have been granted 
     </dt>
     <dd>{{% md %}}and `service_name` - (Required) define the project and service the ACL belongs to. 
 They should be defined using reference as shown above to set up dependencies correctly.
-{{% /md %}}</dd>
-    <dt class="property-optional"
+{{% /md %}}</dd><dt class="property-optional"
             title="Optional">
         <span id="state_servicename_csharp">
 <a href="#state_servicename_csharp" style="color: inherit; text-decoration: inherit;">Service<wbr>Name</a>
@@ -883,14 +830,11 @@ They should be defined using reference as shown above to set up dependencies cor
         <span class="property-type">string</span>
     </dt>
     <dd>{{% md %}}Service to link the Elasticsearch ACLs to
-{{% /md %}}</dd>
-</dl>
+{{% /md %}}</dd></dl>
 {{% /choosable %}}
 
 {{% choosable language go %}}
-<dl class="resources-properties">
-
-    <dt class="property-optional"
+<dl class="resources-properties"><dt class="property-optional"
             title="Optional">
         <span id="state_acls_go">
 <a href="#state_acls_go" style="color: inherit; text-decoration: inherit;">Acls</a>
@@ -899,8 +843,7 @@ They should be defined using reference as shown above to set up dependencies cor
         <span class="property-type"><a href="#elasticsearchaclacl">[]Elastic<wbr>Search<wbr>Acl<wbr>Acl</a></span>
     </dt>
     <dd>{{% md %}}List of Elasticsearch ACLs
-{{% /md %}}</dd>
-    <dt class="property-optional"
+{{% /md %}}</dd><dt class="property-optional"
             title="Optional">
         <span id="state_enabled_go">
 <a href="#state_enabled_go" style="color: inherit; text-decoration: inherit;">Enabled</a>
@@ -909,8 +852,7 @@ They should be defined using reference as shown above to set up dependencies cor
         <span class="property-type">bool</span>
     </dt>
     <dd>{{% md %}}enables of disables Elasticsearch ACL's.
-{{% /md %}}</dd>
-    <dt class="property-optional"
+{{% /md %}}</dd><dt class="property-optional"
             title="Optional">
         <span id="state_extendedacl_go">
 <a href="#state_extendedacl_go" style="color: inherit; text-decoration: inherit;">Extended<wbr>Acl</a>
@@ -921,8 +863,7 @@ They should be defined using reference as shown above to set up dependencies cor
     <dd>{{% md %}}Index rules can be applied in a limited fashion to the _mget, _msearch and _bulk APIs 
 (and only those) by enabling the ExtendedAcl option for the service. When it is enabled, users can use
 these APIs as long as all operations only target indexes they have been granted access to.
-{{% /md %}}</dd>
-    <dt class="property-optional"
+{{% /md %}}</dd><dt class="property-optional"
             title="Optional">
         <span id="state_project_go">
 <a href="#state_project_go" style="color: inherit; text-decoration: inherit;">Project</a>
@@ -932,8 +873,7 @@ these APIs as long as all operations only target indexes they have been granted 
     </dt>
     <dd>{{% md %}}and `service_name` - (Required) define the project and service the ACL belongs to. 
 They should be defined using reference as shown above to set up dependencies correctly.
-{{% /md %}}</dd>
-    <dt class="property-optional"
+{{% /md %}}</dd><dt class="property-optional"
             title="Optional">
         <span id="state_servicename_go">
 <a href="#state_servicename_go" style="color: inherit; text-decoration: inherit;">Service<wbr>Name</a>
@@ -942,14 +882,11 @@ They should be defined using reference as shown above to set up dependencies cor
         <span class="property-type">string</span>
     </dt>
     <dd>{{% md %}}Service to link the Elasticsearch ACLs to
-{{% /md %}}</dd>
-</dl>
+{{% /md %}}</dd></dl>
 {{% /choosable %}}
 
 {{% choosable language nodejs %}}
-<dl class="resources-properties">
-
-    <dt class="property-optional"
+<dl class="resources-properties"><dt class="property-optional"
             title="Optional">
         <span id="state_acls_nodejs">
 <a href="#state_acls_nodejs" style="color: inherit; text-decoration: inherit;">acls</a>
@@ -958,8 +895,7 @@ They should be defined using reference as shown above to set up dependencies cor
         <span class="property-type"><a href="#elasticsearchaclacl">Elastic<wbr>Search<wbr>Acl<wbr>Acl[]</a></span>
     </dt>
     <dd>{{% md %}}List of Elasticsearch ACLs
-{{% /md %}}</dd>
-    <dt class="property-optional"
+{{% /md %}}</dd><dt class="property-optional"
             title="Optional">
         <span id="state_enabled_nodejs">
 <a href="#state_enabled_nodejs" style="color: inherit; text-decoration: inherit;">enabled</a>
@@ -968,8 +904,7 @@ They should be defined using reference as shown above to set up dependencies cor
         <span class="property-type">boolean</span>
     </dt>
     <dd>{{% md %}}enables of disables Elasticsearch ACL's.
-{{% /md %}}</dd>
-    <dt class="property-optional"
+{{% /md %}}</dd><dt class="property-optional"
             title="Optional">
         <span id="state_extendedacl_nodejs">
 <a href="#state_extendedacl_nodejs" style="color: inherit; text-decoration: inherit;">extended<wbr>Acl</a>
@@ -980,8 +915,7 @@ They should be defined using reference as shown above to set up dependencies cor
     <dd>{{% md %}}Index rules can be applied in a limited fashion to the _mget, _msearch and _bulk APIs 
 (and only those) by enabling the ExtendedAcl option for the service. When it is enabled, users can use
 these APIs as long as all operations only target indexes they have been granted access to.
-{{% /md %}}</dd>
-    <dt class="property-optional"
+{{% /md %}}</dd><dt class="property-optional"
             title="Optional">
         <span id="state_project_nodejs">
 <a href="#state_project_nodejs" style="color: inherit; text-decoration: inherit;">project</a>
@@ -991,8 +925,7 @@ these APIs as long as all operations only target indexes they have been granted 
     </dt>
     <dd>{{% md %}}and `service_name` - (Required) define the project and service the ACL belongs to. 
 They should be defined using reference as shown above to set up dependencies correctly.
-{{% /md %}}</dd>
-    <dt class="property-optional"
+{{% /md %}}</dd><dt class="property-optional"
             title="Optional">
         <span id="state_servicename_nodejs">
 <a href="#state_servicename_nodejs" style="color: inherit; text-decoration: inherit;">service<wbr>Name</a>
@@ -1001,14 +934,11 @@ They should be defined using reference as shown above to set up dependencies cor
         <span class="property-type">string</span>
     </dt>
     <dd>{{% md %}}Service to link the Elasticsearch ACLs to
-{{% /md %}}</dd>
-</dl>
+{{% /md %}}</dd></dl>
 {{% /choosable %}}
 
 {{% choosable language python %}}
-<dl class="resources-properties">
-
-    <dt class="property-optional"
+<dl class="resources-properties"><dt class="property-optional"
             title="Optional">
         <span id="state_acls_python">
 <a href="#state_acls_python" style="color: inherit; text-decoration: inherit;">acls</a>
@@ -1017,8 +947,7 @@ They should be defined using reference as shown above to set up dependencies cor
         <span class="property-type"><a href="#elasticsearchaclacl">Sequence[Elastic<wbr>Search<wbr>Acl<wbr>Acl<wbr>Args]</a></span>
     </dt>
     <dd>{{% md %}}List of Elasticsearch ACLs
-{{% /md %}}</dd>
-    <dt class="property-optional"
+{{% /md %}}</dd><dt class="property-optional"
             title="Optional">
         <span id="state_enabled_python">
 <a href="#state_enabled_python" style="color: inherit; text-decoration: inherit;">enabled</a>
@@ -1027,8 +956,7 @@ They should be defined using reference as shown above to set up dependencies cor
         <span class="property-type">bool</span>
     </dt>
     <dd>{{% md %}}enables of disables Elasticsearch ACL's.
-{{% /md %}}</dd>
-    <dt class="property-optional"
+{{% /md %}}</dd><dt class="property-optional"
             title="Optional">
         <span id="state_extended_acl_python">
 <a href="#state_extended_acl_python" style="color: inherit; text-decoration: inherit;">extended_<wbr>acl</a>
@@ -1039,8 +967,7 @@ They should be defined using reference as shown above to set up dependencies cor
     <dd>{{% md %}}Index rules can be applied in a limited fashion to the _mget, _msearch and _bulk APIs 
 (and only those) by enabling the ExtendedAcl option for the service. When it is enabled, users can use
 these APIs as long as all operations only target indexes they have been granted access to.
-{{% /md %}}</dd>
-    <dt class="property-optional"
+{{% /md %}}</dd><dt class="property-optional"
             title="Optional">
         <span id="state_project_python">
 <a href="#state_project_python" style="color: inherit; text-decoration: inherit;">project</a>
@@ -1050,8 +977,7 @@ these APIs as long as all operations only target indexes they have been granted 
     </dt>
     <dd>{{% md %}}and `service_name` - (Required) define the project and service the ACL belongs to. 
 They should be defined using reference as shown above to set up dependencies correctly.
-{{% /md %}}</dd>
-    <dt class="property-optional"
+{{% /md %}}</dd><dt class="property-optional"
             title="Optional">
         <span id="state_service_name_python">
 <a href="#state_service_name_python" style="color: inherit; text-decoration: inherit;">service_<wbr>name</a>
@@ -1060,8 +986,7 @@ They should be defined using reference as shown above to set up dependencies cor
         <span class="property-type">str</span>
     </dt>
     <dd>{{% md %}}Service to link the Elasticsearch ACLs to
-{{% /md %}}</dd>
-</dl>
+{{% /md %}}</dd></dl>
 {{% /choosable %}}
 
 
@@ -1076,9 +1001,7 @@ They should be defined using reference as shown above to set up dependencies cor
 <h4 id="elasticsearchaclacl">Elastic<wbr>Search<wbr>Acl<wbr>Acl</h4>
 
 {{% choosable language csharp %}}
-<dl class="resources-properties">
-
-    <dt class="property-required"
+<dl class="resources-properties"><dt class="property-required"
             title="Required">
         <span id="rules_csharp">
 <a href="#rules_csharp" style="color: inherit; text-decoration: inherit;">Rules</a>
@@ -1086,8 +1009,7 @@ They should be defined using reference as shown above to set up dependencies cor
         <span class="property-indicator"></span>
         <span class="property-type"><a href="#elasticsearchaclaclrule">List&lt;Elastic<wbr>Search<wbr>Acl<wbr>Acl<wbr>Rule<wbr>Args&gt;</a></span>
     </dt>
-    <dd>{{% md %}}{{% /md %}}</dd>
-    <dt class="property-required"
+    <dd>{{% md %}}{{% /md %}}</dd><dt class="property-required"
             title="Required">
         <span id="username_csharp">
 <a href="#username_csharp" style="color: inherit; text-decoration: inherit;">Username</a>
@@ -1095,14 +1017,11 @@ They should be defined using reference as shown above to set up dependencies cor
         <span class="property-indicator"></span>
         <span class="property-type">string</span>
     </dt>
-    <dd>{{% md %}}{{% /md %}}</dd>
-</dl>
+    <dd>{{% md %}}{{% /md %}}</dd></dl>
 {{% /choosable %}}
 
 {{% choosable language go %}}
-<dl class="resources-properties">
-
-    <dt class="property-required"
+<dl class="resources-properties"><dt class="property-required"
             title="Required">
         <span id="rules_go">
 <a href="#rules_go" style="color: inherit; text-decoration: inherit;">Rules</a>
@@ -1110,8 +1029,7 @@ They should be defined using reference as shown above to set up dependencies cor
         <span class="property-indicator"></span>
         <span class="property-type"><a href="#elasticsearchaclaclrule">[]Elastic<wbr>Search<wbr>Acl<wbr>Acl<wbr>Rule</a></span>
     </dt>
-    <dd>{{% md %}}{{% /md %}}</dd>
-    <dt class="property-required"
+    <dd>{{% md %}}{{% /md %}}</dd><dt class="property-required"
             title="Required">
         <span id="username_go">
 <a href="#username_go" style="color: inherit; text-decoration: inherit;">Username</a>
@@ -1119,14 +1037,11 @@ They should be defined using reference as shown above to set up dependencies cor
         <span class="property-indicator"></span>
         <span class="property-type">string</span>
     </dt>
-    <dd>{{% md %}}{{% /md %}}</dd>
-</dl>
+    <dd>{{% md %}}{{% /md %}}</dd></dl>
 {{% /choosable %}}
 
 {{% choosable language nodejs %}}
-<dl class="resources-properties">
-
-    <dt class="property-required"
+<dl class="resources-properties"><dt class="property-required"
             title="Required">
         <span id="rules_nodejs">
 <a href="#rules_nodejs" style="color: inherit; text-decoration: inherit;">rules</a>
@@ -1134,8 +1049,7 @@ They should be defined using reference as shown above to set up dependencies cor
         <span class="property-indicator"></span>
         <span class="property-type"><a href="#elasticsearchaclaclrule">Elastic<wbr>Search<wbr>Acl<wbr>Acl<wbr>Rule[]</a></span>
     </dt>
-    <dd>{{% md %}}{{% /md %}}</dd>
-    <dt class="property-required"
+    <dd>{{% md %}}{{% /md %}}</dd><dt class="property-required"
             title="Required">
         <span id="username_nodejs">
 <a href="#username_nodejs" style="color: inherit; text-decoration: inherit;">username</a>
@@ -1143,14 +1057,11 @@ They should be defined using reference as shown above to set up dependencies cor
         <span class="property-indicator"></span>
         <span class="property-type">string</span>
     </dt>
-    <dd>{{% md %}}{{% /md %}}</dd>
-</dl>
+    <dd>{{% md %}}{{% /md %}}</dd></dl>
 {{% /choosable %}}
 
 {{% choosable language python %}}
-<dl class="resources-properties">
-
-    <dt class="property-required"
+<dl class="resources-properties"><dt class="property-required"
             title="Required">
         <span id="rules_python">
 <a href="#rules_python" style="color: inherit; text-decoration: inherit;">rules</a>
@@ -1158,8 +1069,7 @@ They should be defined using reference as shown above to set up dependencies cor
         <span class="property-indicator"></span>
         <span class="property-type"><a href="#elasticsearchaclaclrule">Sequence[Elastic<wbr>Search<wbr>Acl<wbr>Acl<wbr>Rule<wbr>Args]</a></span>
     </dt>
-    <dd>{{% md %}}{{% /md %}}</dd>
-    <dt class="property-required"
+    <dd>{{% md %}}{{% /md %}}</dd><dt class="property-required"
             title="Required">
         <span id="username_python">
 <a href="#username_python" style="color: inherit; text-decoration: inherit;">username</a>
@@ -1167,16 +1077,13 @@ They should be defined using reference as shown above to set up dependencies cor
         <span class="property-indicator"></span>
         <span class="property-type">str</span>
     </dt>
-    <dd>{{% md %}}{{% /md %}}</dd>
-</dl>
+    <dd>{{% md %}}{{% /md %}}</dd></dl>
 {{% /choosable %}}
 
 <h4 id="elasticsearchaclaclrule">Elastic<wbr>Search<wbr>Acl<wbr>Acl<wbr>Rule</h4>
 
 {{% choosable language csharp %}}
-<dl class="resources-properties">
-
-    <dt class="property-required"
+<dl class="resources-properties"><dt class="property-required"
             title="Required">
         <span id="index_csharp">
 <a href="#index_csharp" style="color: inherit; text-decoration: inherit;">Index</a>
@@ -1184,8 +1091,7 @@ They should be defined using reference as shown above to set up dependencies cor
         <span class="property-indicator"></span>
         <span class="property-type">string</span>
     </dt>
-    <dd>{{% md %}}{{% /md %}}</dd>
-    <dt class="property-required"
+    <dd>{{% md %}}{{% /md %}}</dd><dt class="property-required"
             title="Required">
         <span id="permission_csharp">
 <a href="#permission_csharp" style="color: inherit; text-decoration: inherit;">Permission</a>
@@ -1193,14 +1099,11 @@ They should be defined using reference as shown above to set up dependencies cor
         <span class="property-indicator"></span>
         <span class="property-type">string</span>
     </dt>
-    <dd>{{% md %}}{{% /md %}}</dd>
-</dl>
+    <dd>{{% md %}}{{% /md %}}</dd></dl>
 {{% /choosable %}}
 
 {{% choosable language go %}}
-<dl class="resources-properties">
-
-    <dt class="property-required"
+<dl class="resources-properties"><dt class="property-required"
             title="Required">
         <span id="index_go">
 <a href="#index_go" style="color: inherit; text-decoration: inherit;">Index</a>
@@ -1208,8 +1111,7 @@ They should be defined using reference as shown above to set up dependencies cor
         <span class="property-indicator"></span>
         <span class="property-type">string</span>
     </dt>
-    <dd>{{% md %}}{{% /md %}}</dd>
-    <dt class="property-required"
+    <dd>{{% md %}}{{% /md %}}</dd><dt class="property-required"
             title="Required">
         <span id="permission_go">
 <a href="#permission_go" style="color: inherit; text-decoration: inherit;">Permission</a>
@@ -1217,14 +1119,11 @@ They should be defined using reference as shown above to set up dependencies cor
         <span class="property-indicator"></span>
         <span class="property-type">string</span>
     </dt>
-    <dd>{{% md %}}{{% /md %}}</dd>
-</dl>
+    <dd>{{% md %}}{{% /md %}}</dd></dl>
 {{% /choosable %}}
 
 {{% choosable language nodejs %}}
-<dl class="resources-properties">
-
-    <dt class="property-required"
+<dl class="resources-properties"><dt class="property-required"
             title="Required">
         <span id="index_nodejs">
 <a href="#index_nodejs" style="color: inherit; text-decoration: inherit;">index</a>
@@ -1232,8 +1131,7 @@ They should be defined using reference as shown above to set up dependencies cor
         <span class="property-indicator"></span>
         <span class="property-type">string</span>
     </dt>
-    <dd>{{% md %}}{{% /md %}}</dd>
-    <dt class="property-required"
+    <dd>{{% md %}}{{% /md %}}</dd><dt class="property-required"
             title="Required">
         <span id="permission_nodejs">
 <a href="#permission_nodejs" style="color: inherit; text-decoration: inherit;">permission</a>
@@ -1241,14 +1139,11 @@ They should be defined using reference as shown above to set up dependencies cor
         <span class="property-indicator"></span>
         <span class="property-type">string</span>
     </dt>
-    <dd>{{% md %}}{{% /md %}}</dd>
-</dl>
+    <dd>{{% md %}}{{% /md %}}</dd></dl>
 {{% /choosable %}}
 
 {{% choosable language python %}}
-<dl class="resources-properties">
-
-    <dt class="property-required"
+<dl class="resources-properties"><dt class="property-required"
             title="Required">
         <span id="index_python">
 <a href="#index_python" style="color: inherit; text-decoration: inherit;">index</a>
@@ -1256,8 +1151,7 @@ They should be defined using reference as shown above to set up dependencies cor
         <span class="property-indicator"></span>
         <span class="property-type">str</span>
     </dt>
-    <dd>{{% md %}}{{% /md %}}</dd>
-    <dt class="property-required"
+    <dd>{{% md %}}{{% /md %}}</dd><dt class="property-required"
             title="Required">
         <span id="permission_python">
 <a href="#permission_python" style="color: inherit; text-decoration: inherit;">permission</a>
@@ -1265,8 +1159,7 @@ They should be defined using reference as shown above to set up dependencies cor
         <span class="property-indicator"></span>
         <span class="property-type">str</span>
     </dt>
-    <dd>{{% md %}}{{% /md %}}</dd>
-</dl>
+    <dd>{{% md %}}{{% /md %}}</dd></dl>
 {{% /choosable %}}
 
 
@@ -1277,6 +1170,6 @@ They should be defined using reference as shown above to set up dependencies cor
 	<dt>License</dt>
 	<dd>Apache-2.0</dd>
 	<dt>Notes</dt>
-	<dd>This Pulumi package is based on the [`aiven` Terraform Provider](https://github.com/aiven/terraform-provider-aiven).</dd>
+	<dd>{{% md %}}This Pulumi package is based on the [`aiven` Terraform Provider](https://github.com/aiven/terraform-provider-aiven).{{% /md %}}</dd>
 </dl>
 

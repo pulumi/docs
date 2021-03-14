@@ -16,11 +16,17 @@ The Redis data source provides information about the existing Aiven Redis servic
 
 
 {{% examples %}}
+
 ## Example Usage
 
 {{< chooser language "typescript,python,go,csharp" / >}}
 
-{{% example csharp %}}
+
+
+
+
+{{< example csharp >}}
+
 ```csharp
 using Pulumi;
 using Aiven = Pulumi.Aiven;
@@ -39,9 +45,12 @@ class MyStack : Stack
 }
 ```
 
-{{% /example %}}
 
-{{% example go %}}
+{{< /example >}}
+
+
+{{< example go >}}
+
 ```go
 package main
 
@@ -64,9 +73,12 @@ func main() {
 }
 ```
 
-{{% /example %}}
 
-{{% example python %}}
+{{< /example >}}
+
+
+{{< example python >}}
+
 ```python
 import pulumi
 import pulumi_aiven as aiven
@@ -75,9 +87,12 @@ redis1 = aiven.get_redis(project=data["aiven_project"]["pr1"]["project"],
     service_name="my-redis1")
 ```
 
-{{% /example %}}
 
-{{% example typescript %}}
+{{< /example >}}
+
+
+{{< example typescript >}}
+
 
 ```typescript
 import * as pulumi from "@pulumi/pulumi";
@@ -89,9 +104,16 @@ const redis1 = aiven.getRedis({
 });
 ```
 
-{{% /example %}}
+
+{{< /example >}}
+
+
+
+
 
 {{% /examples %}}
+
+
 
 
 ## Using getRedis {#using}
@@ -129,9 +151,7 @@ The following arguments are supported:
 
 
 {{% choosable language csharp %}}
-<dl class="resources-properties">
-
-    <dt class="property-required"
+<dl class="resources-properties"><dt class="property-required"
             title="Required">
         <span id="project_csharp">
 <a href="#project_csharp" style="color: inherit; text-decoration: inherit;">Project</a>
@@ -142,8 +162,7 @@ The following arguments are supported:
     <dd>{{% md %}}identifies the project the service belongs to. To set up proper dependency
 between the project and the service, refer to the project as shown in the above example.
 Project cannot be changed later without destroying and re-creating the service.
-{{% /md %}}</dd>
-    <dt class="property-required"
+{{% /md %}}</dd><dt class="property-required"
             title="Required">
         <span id="servicename_csharp">
 <a href="#servicename_csharp" style="color: inherit; text-decoration: inherit;">Service<wbr>Name</a>
@@ -154,8 +173,7 @@ Project cannot be changed later without destroying and re-creating the service.
     <dd>{{% md %}}specifies the actual name of the service. The name cannot be changed
 later without destroying and re-creating the service so name should be picked based on
 intended service usage rather than current attributes.
-{{% /md %}}</dd>
-    <dt class="property-optional"
+{{% /md %}}</dd><dt class="property-optional"
             title="Optional">
         <span id="cloudname_csharp">
 <a href="#cloudname_csharp" style="color: inherit; text-decoration: inherit;">Cloud<wbr>Name</a>
@@ -170,8 +188,7 @@ a potentially lengthy migration process for the service. Format is cloud provide
 specific region name. These are documented on each Cloud provider's own support articles,
 like [here for Google](https://cloud.google.com/compute/docs/regions-zones/) and
 [here for AWS](https://docs.aws.amazon.com/AmazonRDS/latest/UserGuide/Concepts.RegionsAndAvailabilityZones.html).
-{{% /md %}}</dd>
-    <dt class="property-optional"
+{{% /md %}}</dd><dt class="property-optional"
             title="Optional">
         <span id="components_csharp">
 <a href="#components_csharp" style="color: inherit; text-decoration: inherit;">Components</a>
@@ -179,8 +196,7 @@ like [here for Google](https://cloud.google.com/compute/docs/regions-zones/) and
         <span class="property-indicator"></span>
         <span class="property-type"><a href="#getrediscomponent">List&lt;Get<wbr>Redis<wbr>Component<wbr>Args&gt;</a></span>
     </dt>
-    <dd>{{% md %}}{{% /md %}}</dd>
-    <dt class="property-optional"
+    <dd>{{% md %}}{{% /md %}}</dd><dt class="property-optional"
             title="Optional">
         <span id="maintenancewindowdow_csharp">
 <a href="#maintenancewindowdow_csharp" style="color: inherit; text-decoration: inherit;">Maintenance<wbr>Window<wbr>Dow</a>
@@ -190,8 +206,7 @@ like [here for Google](https://cloud.google.com/compute/docs/regions-zones/) and
     </dt>
     <dd>{{% md %}}day of week when maintenance operations should be performed. 
 On monday, tuesday, wednesday, etc.
-{{% /md %}}</dd>
-    <dt class="property-optional"
+{{% /md %}}</dd><dt class="property-optional"
             title="Optional">
         <span id="maintenancewindowtime_csharp">
 <a href="#maintenancewindowtime_csharp" style="color: inherit; text-decoration: inherit;">Maintenance<wbr>Window<wbr>Time</a>
@@ -201,8 +216,7 @@ On monday, tuesday, wednesday, etc.
     </dt>
     <dd>{{% md %}}time of day when maintenance operations should be performed. 
 UTC time in HH:mm:ss format.
-{{% /md %}}</dd>
-    <dt class="property-optional"
+{{% /md %}}</dd><dt class="property-optional"
             title="Optional">
         <span id="plan_csharp">
 <a href="#plan_csharp" style="color: inherit; text-decoration: inherit;">Plan</a>
@@ -218,8 +232,7 @@ names are `hobbyist`, `startup-x`, `business-x` and `premium-x` where `x` is
 (roughly) the amount of memory on each node (also other attributes like number of CPUs
 and amount of disk space varies but naming is based on memory). The exact options can be
 seen from the Aiven web console's Create Service dialog.
-{{% /md %}}</dd>
-    <dt class="property-optional"
+{{% /md %}}</dd><dt class="property-optional"
             title="Optional">
         <span id="projectvpcid_csharp">
 <a href="#projectvpcid_csharp" style="color: inherit; text-decoration: inherit;">Project<wbr>Vpc<wbr>Id</a>
@@ -233,8 +246,7 @@ reference as shown above to set up dependencies correctly and the VPC must be in
 cloud and region as the service itself. Project can be freely moved to and from VPC after
 creation but doing so triggers migration to new servers so the operation can take
 significant amount of time to complete if the service has a lot of data.
-{{% /md %}}</dd>
-    <dt class="property-optional"
+{{% /md %}}</dd><dt class="property-optional"
             title="Optional">
         <span id="redis_csharp">
 <a href="#redis_csharp" style="color: inherit; text-decoration: inherit;">Redis</a>
@@ -243,8 +255,7 @@ significant amount of time to complete if the service has a lot of data.
         <span class="property-type"><a href="#getredisredis">Get<wbr>Redis<wbr>Redis<wbr>Args</a></span>
     </dt>
     <dd>{{% md %}}Redis specific server provided values.
-{{% /md %}}</dd>
-    <dt class="property-optional"
+{{% /md %}}</dd><dt class="property-optional"
             title="Optional">
         <span id="redisuserconfig_csharp">
 <a href="#redisuserconfig_csharp" style="color: inherit; text-decoration: inherit;">Redis<wbr>User<wbr>Config</a>
@@ -254,8 +265,7 @@ significant amount of time to complete if the service has a lot of data.
     </dt>
     <dd>{{% md %}}defines Redis specific additional configuration options. The following 
 configuration options available:
-{{% /md %}}</dd>
-    <dt class="property-optional"
+{{% /md %}}</dd><dt class="property-optional"
             title="Optional">
         <span id="servicehost_csharp">
 <a href="#servicehost_csharp" style="color: inherit; text-decoration: inherit;">Service<wbr>Host</a>
@@ -264,8 +274,7 @@ configuration options available:
         <span class="property-type">string</span>
     </dt>
     <dd>{{% md %}}Redis hostname.
-{{% /md %}}</dd>
-    <dt class="property-optional"
+{{% /md %}}</dd><dt class="property-optional"
             title="Optional">
         <span id="serviceintegrations_csharp">
 <a href="#serviceintegrations_csharp" style="color: inherit; text-decoration: inherit;">Service<wbr>Integrations</a>
@@ -273,8 +282,7 @@ configuration options available:
         <span class="property-indicator"></span>
         <span class="property-type"><a href="#getredisserviceintegration">List&lt;Get<wbr>Redis<wbr>Service<wbr>Integration<wbr>Args&gt;</a></span>
     </dt>
-    <dd>{{% md %}}{{% /md %}}</dd>
-    <dt class="property-optional"
+    <dd>{{% md %}}{{% /md %}}</dd><dt class="property-optional"
             title="Optional">
         <span id="servicepassword_csharp">
 <a href="#servicepassword_csharp" style="color: inherit; text-decoration: inherit;">Service<wbr>Password</a>
@@ -283,8 +291,7 @@ configuration options available:
         <span class="property-type">string</span>
     </dt>
     <dd>{{% md %}}Password used for connecting to the Redis service, if applicable.
-{{% /md %}}</dd>
-    <dt class="property-optional"
+{{% /md %}}</dd><dt class="property-optional"
             title="Optional">
         <span id="serviceport_csharp">
 <a href="#serviceport_csharp" style="color: inherit; text-decoration: inherit;">Service<wbr>Port</a>
@@ -293,8 +300,7 @@ configuration options available:
         <span class="property-type">int</span>
     </dt>
     <dd>{{% md %}}Redis port.
-{{% /md %}}</dd>
-    <dt class="property-optional"
+{{% /md %}}</dd><dt class="property-optional"
             title="Optional">
         <span id="servicetype_csharp">
 <a href="#servicetype_csharp" style="color: inherit; text-decoration: inherit;">Service<wbr>Type</a>
@@ -302,8 +308,7 @@ configuration options available:
         <span class="property-indicator"></span>
         <span class="property-type">string</span>
     </dt>
-    <dd>{{% md %}}{{% /md %}}</dd>
-    <dt class="property-optional"
+    <dd>{{% md %}}{{% /md %}}</dd><dt class="property-optional"
             title="Optional">
         <span id="serviceuri_csharp">
 <a href="#serviceuri_csharp" style="color: inherit; text-decoration: inherit;">Service<wbr>Uri</a>
@@ -312,8 +317,7 @@ configuration options available:
         <span class="property-type">string</span>
     </dt>
     <dd>{{% md %}}URI for connecting to the Redis service.
-{{% /md %}}</dd>
-    <dt class="property-optional"
+{{% /md %}}</dd><dt class="property-optional"
             title="Optional">
         <span id="serviceusername_csharp">
 <a href="#serviceusername_csharp" style="color: inherit; text-decoration: inherit;">Service<wbr>Username</a>
@@ -322,8 +326,7 @@ configuration options available:
         <span class="property-type">string</span>
     </dt>
     <dd>{{% md %}}Username used for connecting to the Redis service, if applicable.
-{{% /md %}}</dd>
-    <dt class="property-optional"
+{{% /md %}}</dd><dt class="property-optional"
             title="Optional">
         <span id="state_csharp">
 <a href="#state_csharp" style="color: inherit; text-decoration: inherit;">State</a>
@@ -332,8 +335,7 @@ configuration options available:
         <span class="property-type">string</span>
     </dt>
     <dd>{{% md %}}Service state.
-{{% /md %}}</dd>
-    <dt class="property-optional"
+{{% /md %}}</dd><dt class="property-optional"
             title="Optional">
         <span id="terminationprotection_csharp">
 <a href="#terminationprotection_csharp" style="color: inherit; text-decoration: inherit;">Termination<wbr>Protection</a>
@@ -346,14 +348,11 @@ set this to `true` for all production services to prevent unintentional service
 deletion. This does not shield against deleting databases or topics but for services
 with backups much of the content can at least be restored from backup in case accidental
 deletion is done.
-{{% /md %}}</dd>
-</dl>
+{{% /md %}}</dd></dl>
 {{% /choosable %}}
 
 {{% choosable language go %}}
-<dl class="resources-properties">
-
-    <dt class="property-required"
+<dl class="resources-properties"><dt class="property-required"
             title="Required">
         <span id="project_go">
 <a href="#project_go" style="color: inherit; text-decoration: inherit;">Project</a>
@@ -364,8 +363,7 @@ deletion is done.
     <dd>{{% md %}}identifies the project the service belongs to. To set up proper dependency
 between the project and the service, refer to the project as shown in the above example.
 Project cannot be changed later without destroying and re-creating the service.
-{{% /md %}}</dd>
-    <dt class="property-required"
+{{% /md %}}</dd><dt class="property-required"
             title="Required">
         <span id="servicename_go">
 <a href="#servicename_go" style="color: inherit; text-decoration: inherit;">Service<wbr>Name</a>
@@ -376,8 +374,7 @@ Project cannot be changed later without destroying and re-creating the service.
     <dd>{{% md %}}specifies the actual name of the service. The name cannot be changed
 later without destroying and re-creating the service so name should be picked based on
 intended service usage rather than current attributes.
-{{% /md %}}</dd>
-    <dt class="property-optional"
+{{% /md %}}</dd><dt class="property-optional"
             title="Optional">
         <span id="cloudname_go">
 <a href="#cloudname_go" style="color: inherit; text-decoration: inherit;">Cloud<wbr>Name</a>
@@ -392,8 +389,7 @@ a potentially lengthy migration process for the service. Format is cloud provide
 specific region name. These are documented on each Cloud provider's own support articles,
 like [here for Google](https://cloud.google.com/compute/docs/regions-zones/) and
 [here for AWS](https://docs.aws.amazon.com/AmazonRDS/latest/UserGuide/Concepts.RegionsAndAvailabilityZones.html).
-{{% /md %}}</dd>
-    <dt class="property-optional"
+{{% /md %}}</dd><dt class="property-optional"
             title="Optional">
         <span id="components_go">
 <a href="#components_go" style="color: inherit; text-decoration: inherit;">Components</a>
@@ -401,8 +397,7 @@ like [here for Google](https://cloud.google.com/compute/docs/regions-zones/) and
         <span class="property-indicator"></span>
         <span class="property-type"><a href="#getrediscomponent">[]Get<wbr>Redis<wbr>Component</a></span>
     </dt>
-    <dd>{{% md %}}{{% /md %}}</dd>
-    <dt class="property-optional"
+    <dd>{{% md %}}{{% /md %}}</dd><dt class="property-optional"
             title="Optional">
         <span id="maintenancewindowdow_go">
 <a href="#maintenancewindowdow_go" style="color: inherit; text-decoration: inherit;">Maintenance<wbr>Window<wbr>Dow</a>
@@ -412,8 +407,7 @@ like [here for Google](https://cloud.google.com/compute/docs/regions-zones/) and
     </dt>
     <dd>{{% md %}}day of week when maintenance operations should be performed. 
 On monday, tuesday, wednesday, etc.
-{{% /md %}}</dd>
-    <dt class="property-optional"
+{{% /md %}}</dd><dt class="property-optional"
             title="Optional">
         <span id="maintenancewindowtime_go">
 <a href="#maintenancewindowtime_go" style="color: inherit; text-decoration: inherit;">Maintenance<wbr>Window<wbr>Time</a>
@@ -423,8 +417,7 @@ On monday, tuesday, wednesday, etc.
     </dt>
     <dd>{{% md %}}time of day when maintenance operations should be performed. 
 UTC time in HH:mm:ss format.
-{{% /md %}}</dd>
-    <dt class="property-optional"
+{{% /md %}}</dd><dt class="property-optional"
             title="Optional">
         <span id="plan_go">
 <a href="#plan_go" style="color: inherit; text-decoration: inherit;">Plan</a>
@@ -440,8 +433,7 @@ names are `hobbyist`, `startup-x`, `business-x` and `premium-x` where `x` is
 (roughly) the amount of memory on each node (also other attributes like number of CPUs
 and amount of disk space varies but naming is based on memory). The exact options can be
 seen from the Aiven web console's Create Service dialog.
-{{% /md %}}</dd>
-    <dt class="property-optional"
+{{% /md %}}</dd><dt class="property-optional"
             title="Optional">
         <span id="projectvpcid_go">
 <a href="#projectvpcid_go" style="color: inherit; text-decoration: inherit;">Project<wbr>Vpc<wbr>Id</a>
@@ -455,8 +447,7 @@ reference as shown above to set up dependencies correctly and the VPC must be in
 cloud and region as the service itself. Project can be freely moved to and from VPC after
 creation but doing so triggers migration to new servers so the operation can take
 significant amount of time to complete if the service has a lot of data.
-{{% /md %}}</dd>
-    <dt class="property-optional"
+{{% /md %}}</dd><dt class="property-optional"
             title="Optional">
         <span id="redis_go">
 <a href="#redis_go" style="color: inherit; text-decoration: inherit;">Redis</a>
@@ -465,8 +456,7 @@ significant amount of time to complete if the service has a lot of data.
         <span class="property-type"><a href="#getredisredis">Get<wbr>Redis<wbr>Redis</a></span>
     </dt>
     <dd>{{% md %}}Redis specific server provided values.
-{{% /md %}}</dd>
-    <dt class="property-optional"
+{{% /md %}}</dd><dt class="property-optional"
             title="Optional">
         <span id="redisuserconfig_go">
 <a href="#redisuserconfig_go" style="color: inherit; text-decoration: inherit;">Redis<wbr>User<wbr>Config</a>
@@ -476,8 +466,7 @@ significant amount of time to complete if the service has a lot of data.
     </dt>
     <dd>{{% md %}}defines Redis specific additional configuration options. The following 
 configuration options available:
-{{% /md %}}</dd>
-    <dt class="property-optional"
+{{% /md %}}</dd><dt class="property-optional"
             title="Optional">
         <span id="servicehost_go">
 <a href="#servicehost_go" style="color: inherit; text-decoration: inherit;">Service<wbr>Host</a>
@@ -486,8 +475,7 @@ configuration options available:
         <span class="property-type">string</span>
     </dt>
     <dd>{{% md %}}Redis hostname.
-{{% /md %}}</dd>
-    <dt class="property-optional"
+{{% /md %}}</dd><dt class="property-optional"
             title="Optional">
         <span id="serviceintegrations_go">
 <a href="#serviceintegrations_go" style="color: inherit; text-decoration: inherit;">Service<wbr>Integrations</a>
@@ -495,8 +483,7 @@ configuration options available:
         <span class="property-indicator"></span>
         <span class="property-type"><a href="#getredisserviceintegration">[]Get<wbr>Redis<wbr>Service<wbr>Integration</a></span>
     </dt>
-    <dd>{{% md %}}{{% /md %}}</dd>
-    <dt class="property-optional"
+    <dd>{{% md %}}{{% /md %}}</dd><dt class="property-optional"
             title="Optional">
         <span id="servicepassword_go">
 <a href="#servicepassword_go" style="color: inherit; text-decoration: inherit;">Service<wbr>Password</a>
@@ -505,8 +492,7 @@ configuration options available:
         <span class="property-type">string</span>
     </dt>
     <dd>{{% md %}}Password used for connecting to the Redis service, if applicable.
-{{% /md %}}</dd>
-    <dt class="property-optional"
+{{% /md %}}</dd><dt class="property-optional"
             title="Optional">
         <span id="serviceport_go">
 <a href="#serviceport_go" style="color: inherit; text-decoration: inherit;">Service<wbr>Port</a>
@@ -515,8 +501,7 @@ configuration options available:
         <span class="property-type">int</span>
     </dt>
     <dd>{{% md %}}Redis port.
-{{% /md %}}</dd>
-    <dt class="property-optional"
+{{% /md %}}</dd><dt class="property-optional"
             title="Optional">
         <span id="servicetype_go">
 <a href="#servicetype_go" style="color: inherit; text-decoration: inherit;">Service<wbr>Type</a>
@@ -524,8 +509,7 @@ configuration options available:
         <span class="property-indicator"></span>
         <span class="property-type">string</span>
     </dt>
-    <dd>{{% md %}}{{% /md %}}</dd>
-    <dt class="property-optional"
+    <dd>{{% md %}}{{% /md %}}</dd><dt class="property-optional"
             title="Optional">
         <span id="serviceuri_go">
 <a href="#serviceuri_go" style="color: inherit; text-decoration: inherit;">Service<wbr>Uri</a>
@@ -534,8 +518,7 @@ configuration options available:
         <span class="property-type">string</span>
     </dt>
     <dd>{{% md %}}URI for connecting to the Redis service.
-{{% /md %}}</dd>
-    <dt class="property-optional"
+{{% /md %}}</dd><dt class="property-optional"
             title="Optional">
         <span id="serviceusername_go">
 <a href="#serviceusername_go" style="color: inherit; text-decoration: inherit;">Service<wbr>Username</a>
@@ -544,8 +527,7 @@ configuration options available:
         <span class="property-type">string</span>
     </dt>
     <dd>{{% md %}}Username used for connecting to the Redis service, if applicable.
-{{% /md %}}</dd>
-    <dt class="property-optional"
+{{% /md %}}</dd><dt class="property-optional"
             title="Optional">
         <span id="state_go">
 <a href="#state_go" style="color: inherit; text-decoration: inherit;">State</a>
@@ -554,8 +536,7 @@ configuration options available:
         <span class="property-type">string</span>
     </dt>
     <dd>{{% md %}}Service state.
-{{% /md %}}</dd>
-    <dt class="property-optional"
+{{% /md %}}</dd><dt class="property-optional"
             title="Optional">
         <span id="terminationprotection_go">
 <a href="#terminationprotection_go" style="color: inherit; text-decoration: inherit;">Termination<wbr>Protection</a>
@@ -568,14 +549,11 @@ set this to `true` for all production services to prevent unintentional service
 deletion. This does not shield against deleting databases or topics but for services
 with backups much of the content can at least be restored from backup in case accidental
 deletion is done.
-{{% /md %}}</dd>
-</dl>
+{{% /md %}}</dd></dl>
 {{% /choosable %}}
 
 {{% choosable language nodejs %}}
-<dl class="resources-properties">
-
-    <dt class="property-required"
+<dl class="resources-properties"><dt class="property-required"
             title="Required">
         <span id="project_nodejs">
 <a href="#project_nodejs" style="color: inherit; text-decoration: inherit;">project</a>
@@ -586,8 +564,7 @@ deletion is done.
     <dd>{{% md %}}identifies the project the service belongs to. To set up proper dependency
 between the project and the service, refer to the project as shown in the above example.
 Project cannot be changed later without destroying and re-creating the service.
-{{% /md %}}</dd>
-    <dt class="property-required"
+{{% /md %}}</dd><dt class="property-required"
             title="Required">
         <span id="servicename_nodejs">
 <a href="#servicename_nodejs" style="color: inherit; text-decoration: inherit;">service<wbr>Name</a>
@@ -598,8 +575,7 @@ Project cannot be changed later without destroying and re-creating the service.
     <dd>{{% md %}}specifies the actual name of the service. The name cannot be changed
 later without destroying and re-creating the service so name should be picked based on
 intended service usage rather than current attributes.
-{{% /md %}}</dd>
-    <dt class="property-optional"
+{{% /md %}}</dd><dt class="property-optional"
             title="Optional">
         <span id="cloudname_nodejs">
 <a href="#cloudname_nodejs" style="color: inherit; text-decoration: inherit;">cloud<wbr>Name</a>
@@ -614,8 +590,7 @@ a potentially lengthy migration process for the service. Format is cloud provide
 specific region name. These are documented on each Cloud provider's own support articles,
 like [here for Google](https://cloud.google.com/compute/docs/regions-zones/) and
 [here for AWS](https://docs.aws.amazon.com/AmazonRDS/latest/UserGuide/Concepts.RegionsAndAvailabilityZones.html).
-{{% /md %}}</dd>
-    <dt class="property-optional"
+{{% /md %}}</dd><dt class="property-optional"
             title="Optional">
         <span id="components_nodejs">
 <a href="#components_nodejs" style="color: inherit; text-decoration: inherit;">components</a>
@@ -623,8 +598,7 @@ like [here for Google](https://cloud.google.com/compute/docs/regions-zones/) and
         <span class="property-indicator"></span>
         <span class="property-type"><a href="#getrediscomponent">Get<wbr>Redis<wbr>Component[]</a></span>
     </dt>
-    <dd>{{% md %}}{{% /md %}}</dd>
-    <dt class="property-optional"
+    <dd>{{% md %}}{{% /md %}}</dd><dt class="property-optional"
             title="Optional">
         <span id="maintenancewindowdow_nodejs">
 <a href="#maintenancewindowdow_nodejs" style="color: inherit; text-decoration: inherit;">maintenance<wbr>Window<wbr>Dow</a>
@@ -634,8 +608,7 @@ like [here for Google](https://cloud.google.com/compute/docs/regions-zones/) and
     </dt>
     <dd>{{% md %}}day of week when maintenance operations should be performed. 
 On monday, tuesday, wednesday, etc.
-{{% /md %}}</dd>
-    <dt class="property-optional"
+{{% /md %}}</dd><dt class="property-optional"
             title="Optional">
         <span id="maintenancewindowtime_nodejs">
 <a href="#maintenancewindowtime_nodejs" style="color: inherit; text-decoration: inherit;">maintenance<wbr>Window<wbr>Time</a>
@@ -645,8 +618,7 @@ On monday, tuesday, wednesday, etc.
     </dt>
     <dd>{{% md %}}time of day when maintenance operations should be performed. 
 UTC time in HH:mm:ss format.
-{{% /md %}}</dd>
-    <dt class="property-optional"
+{{% /md %}}</dd><dt class="property-optional"
             title="Optional">
         <span id="plan_nodejs">
 <a href="#plan_nodejs" style="color: inherit; text-decoration: inherit;">plan</a>
@@ -662,8 +634,7 @@ names are `hobbyist`, `startup-x`, `business-x` and `premium-x` where `x` is
 (roughly) the amount of memory on each node (also other attributes like number of CPUs
 and amount of disk space varies but naming is based on memory). The exact options can be
 seen from the Aiven web console's Create Service dialog.
-{{% /md %}}</dd>
-    <dt class="property-optional"
+{{% /md %}}</dd><dt class="property-optional"
             title="Optional">
         <span id="projectvpcid_nodejs">
 <a href="#projectvpcid_nodejs" style="color: inherit; text-decoration: inherit;">project<wbr>Vpc<wbr>Id</a>
@@ -677,8 +648,7 @@ reference as shown above to set up dependencies correctly and the VPC must be in
 cloud and region as the service itself. Project can be freely moved to and from VPC after
 creation but doing so triggers migration to new servers so the operation can take
 significant amount of time to complete if the service has a lot of data.
-{{% /md %}}</dd>
-    <dt class="property-optional"
+{{% /md %}}</dd><dt class="property-optional"
             title="Optional">
         <span id="redis_nodejs">
 <a href="#redis_nodejs" style="color: inherit; text-decoration: inherit;">redis</a>
@@ -687,8 +657,7 @@ significant amount of time to complete if the service has a lot of data.
         <span class="property-type"><a href="#getredisredis">Get<wbr>Redis<wbr>Redis</a></span>
     </dt>
     <dd>{{% md %}}Redis specific server provided values.
-{{% /md %}}</dd>
-    <dt class="property-optional"
+{{% /md %}}</dd><dt class="property-optional"
             title="Optional">
         <span id="redisuserconfig_nodejs">
 <a href="#redisuserconfig_nodejs" style="color: inherit; text-decoration: inherit;">redis<wbr>User<wbr>Config</a>
@@ -698,8 +667,7 @@ significant amount of time to complete if the service has a lot of data.
     </dt>
     <dd>{{% md %}}defines Redis specific additional configuration options. The following 
 configuration options available:
-{{% /md %}}</dd>
-    <dt class="property-optional"
+{{% /md %}}</dd><dt class="property-optional"
             title="Optional">
         <span id="servicehost_nodejs">
 <a href="#servicehost_nodejs" style="color: inherit; text-decoration: inherit;">service<wbr>Host</a>
@@ -708,8 +676,7 @@ configuration options available:
         <span class="property-type">string</span>
     </dt>
     <dd>{{% md %}}Redis hostname.
-{{% /md %}}</dd>
-    <dt class="property-optional"
+{{% /md %}}</dd><dt class="property-optional"
             title="Optional">
         <span id="serviceintegrations_nodejs">
 <a href="#serviceintegrations_nodejs" style="color: inherit; text-decoration: inherit;">service<wbr>Integrations</a>
@@ -717,8 +684,7 @@ configuration options available:
         <span class="property-indicator"></span>
         <span class="property-type"><a href="#getredisserviceintegration">Get<wbr>Redis<wbr>Service<wbr>Integration[]</a></span>
     </dt>
-    <dd>{{% md %}}{{% /md %}}</dd>
-    <dt class="property-optional"
+    <dd>{{% md %}}{{% /md %}}</dd><dt class="property-optional"
             title="Optional">
         <span id="servicepassword_nodejs">
 <a href="#servicepassword_nodejs" style="color: inherit; text-decoration: inherit;">service<wbr>Password</a>
@@ -727,8 +693,7 @@ configuration options available:
         <span class="property-type">string</span>
     </dt>
     <dd>{{% md %}}Password used for connecting to the Redis service, if applicable.
-{{% /md %}}</dd>
-    <dt class="property-optional"
+{{% /md %}}</dd><dt class="property-optional"
             title="Optional">
         <span id="serviceport_nodejs">
 <a href="#serviceport_nodejs" style="color: inherit; text-decoration: inherit;">service<wbr>Port</a>
@@ -737,8 +702,7 @@ configuration options available:
         <span class="property-type">number</span>
     </dt>
     <dd>{{% md %}}Redis port.
-{{% /md %}}</dd>
-    <dt class="property-optional"
+{{% /md %}}</dd><dt class="property-optional"
             title="Optional">
         <span id="servicetype_nodejs">
 <a href="#servicetype_nodejs" style="color: inherit; text-decoration: inherit;">service<wbr>Type</a>
@@ -746,8 +710,7 @@ configuration options available:
         <span class="property-indicator"></span>
         <span class="property-type">string</span>
     </dt>
-    <dd>{{% md %}}{{% /md %}}</dd>
-    <dt class="property-optional"
+    <dd>{{% md %}}{{% /md %}}</dd><dt class="property-optional"
             title="Optional">
         <span id="serviceuri_nodejs">
 <a href="#serviceuri_nodejs" style="color: inherit; text-decoration: inherit;">service<wbr>Uri</a>
@@ -756,8 +719,7 @@ configuration options available:
         <span class="property-type">string</span>
     </dt>
     <dd>{{% md %}}URI for connecting to the Redis service.
-{{% /md %}}</dd>
-    <dt class="property-optional"
+{{% /md %}}</dd><dt class="property-optional"
             title="Optional">
         <span id="serviceusername_nodejs">
 <a href="#serviceusername_nodejs" style="color: inherit; text-decoration: inherit;">service<wbr>Username</a>
@@ -766,8 +728,7 @@ configuration options available:
         <span class="property-type">string</span>
     </dt>
     <dd>{{% md %}}Username used for connecting to the Redis service, if applicable.
-{{% /md %}}</dd>
-    <dt class="property-optional"
+{{% /md %}}</dd><dt class="property-optional"
             title="Optional">
         <span id="state_nodejs">
 <a href="#state_nodejs" style="color: inherit; text-decoration: inherit;">state</a>
@@ -776,8 +737,7 @@ configuration options available:
         <span class="property-type">string</span>
     </dt>
     <dd>{{% md %}}Service state.
-{{% /md %}}</dd>
-    <dt class="property-optional"
+{{% /md %}}</dd><dt class="property-optional"
             title="Optional">
         <span id="terminationprotection_nodejs">
 <a href="#terminationprotection_nodejs" style="color: inherit; text-decoration: inherit;">termination<wbr>Protection</a>
@@ -790,14 +750,11 @@ set this to `true` for all production services to prevent unintentional service
 deletion. This does not shield against deleting databases or topics but for services
 with backups much of the content can at least be restored from backup in case accidental
 deletion is done.
-{{% /md %}}</dd>
-</dl>
+{{% /md %}}</dd></dl>
 {{% /choosable %}}
 
 {{% choosable language python %}}
-<dl class="resources-properties">
-
-    <dt class="property-required"
+<dl class="resources-properties"><dt class="property-required"
             title="Required">
         <span id="project_python">
 <a href="#project_python" style="color: inherit; text-decoration: inherit;">project</a>
@@ -808,8 +765,7 @@ deletion is done.
     <dd>{{% md %}}identifies the project the service belongs to. To set up proper dependency
 between the project and the service, refer to the project as shown in the above example.
 Project cannot be changed later without destroying and re-creating the service.
-{{% /md %}}</dd>
-    <dt class="property-required"
+{{% /md %}}</dd><dt class="property-required"
             title="Required">
         <span id="service_name_python">
 <a href="#service_name_python" style="color: inherit; text-decoration: inherit;">service_<wbr>name</a>
@@ -820,8 +776,7 @@ Project cannot be changed later without destroying and re-creating the service.
     <dd>{{% md %}}specifies the actual name of the service. The name cannot be changed
 later without destroying and re-creating the service so name should be picked based on
 intended service usage rather than current attributes.
-{{% /md %}}</dd>
-    <dt class="property-optional"
+{{% /md %}}</dd><dt class="property-optional"
             title="Optional">
         <span id="cloud_name_python">
 <a href="#cloud_name_python" style="color: inherit; text-decoration: inherit;">cloud_<wbr>name</a>
@@ -836,8 +791,7 @@ a potentially lengthy migration process for the service. Format is cloud provide
 specific region name. These are documented on each Cloud provider's own support articles,
 like [here for Google](https://cloud.google.com/compute/docs/regions-zones/) and
 [here for AWS](https://docs.aws.amazon.com/AmazonRDS/latest/UserGuide/Concepts.RegionsAndAvailabilityZones.html).
-{{% /md %}}</dd>
-    <dt class="property-optional"
+{{% /md %}}</dd><dt class="property-optional"
             title="Optional">
         <span id="components_python">
 <a href="#components_python" style="color: inherit; text-decoration: inherit;">components</a>
@@ -845,8 +799,7 @@ like [here for Google](https://cloud.google.com/compute/docs/regions-zones/) and
         <span class="property-indicator"></span>
         <span class="property-type"><a href="#getrediscomponent">Sequence[Get<wbr>Redis<wbr>Component<wbr>Args]</a></span>
     </dt>
-    <dd>{{% md %}}{{% /md %}}</dd>
-    <dt class="property-optional"
+    <dd>{{% md %}}{{% /md %}}</dd><dt class="property-optional"
             title="Optional">
         <span id="maintenance_window_dow_python">
 <a href="#maintenance_window_dow_python" style="color: inherit; text-decoration: inherit;">maintenance_<wbr>window_<wbr>dow</a>
@@ -856,8 +809,7 @@ like [here for Google](https://cloud.google.com/compute/docs/regions-zones/) and
     </dt>
     <dd>{{% md %}}day of week when maintenance operations should be performed. 
 On monday, tuesday, wednesday, etc.
-{{% /md %}}</dd>
-    <dt class="property-optional"
+{{% /md %}}</dd><dt class="property-optional"
             title="Optional">
         <span id="maintenance_window_time_python">
 <a href="#maintenance_window_time_python" style="color: inherit; text-decoration: inherit;">maintenance_<wbr>window_<wbr>time</a>
@@ -867,8 +819,7 @@ On monday, tuesday, wednesday, etc.
     </dt>
     <dd>{{% md %}}time of day when maintenance operations should be performed. 
 UTC time in HH:mm:ss format.
-{{% /md %}}</dd>
-    <dt class="property-optional"
+{{% /md %}}</dd><dt class="property-optional"
             title="Optional">
         <span id="plan_python">
 <a href="#plan_python" style="color: inherit; text-decoration: inherit;">plan</a>
@@ -884,8 +835,7 @@ names are `hobbyist`, `startup-x`, `business-x` and `premium-x` where `x` is
 (roughly) the amount of memory on each node (also other attributes like number of CPUs
 and amount of disk space varies but naming is based on memory). The exact options can be
 seen from the Aiven web console's Create Service dialog.
-{{% /md %}}</dd>
-    <dt class="property-optional"
+{{% /md %}}</dd><dt class="property-optional"
             title="Optional">
         <span id="project_vpc_id_python">
 <a href="#project_vpc_id_python" style="color: inherit; text-decoration: inherit;">project_<wbr>vpc_<wbr>id</a>
@@ -899,8 +849,7 @@ reference as shown above to set up dependencies correctly and the VPC must be in
 cloud and region as the service itself. Project can be freely moved to and from VPC after
 creation but doing so triggers migration to new servers so the operation can take
 significant amount of time to complete if the service has a lot of data.
-{{% /md %}}</dd>
-    <dt class="property-optional"
+{{% /md %}}</dd><dt class="property-optional"
             title="Optional">
         <span id="redis_python">
 <a href="#redis_python" style="color: inherit; text-decoration: inherit;">redis</a>
@@ -909,8 +858,7 @@ significant amount of time to complete if the service has a lot of data.
         <span class="property-type"><a href="#getredisredis">Get<wbr>Redis<wbr>Redis<wbr>Args</a></span>
     </dt>
     <dd>{{% md %}}Redis specific server provided values.
-{{% /md %}}</dd>
-    <dt class="property-optional"
+{{% /md %}}</dd><dt class="property-optional"
             title="Optional">
         <span id="redis_user_config_python">
 <a href="#redis_user_config_python" style="color: inherit; text-decoration: inherit;">redis_<wbr>user_<wbr>config</a>
@@ -920,8 +868,7 @@ significant amount of time to complete if the service has a lot of data.
     </dt>
     <dd>{{% md %}}defines Redis specific additional configuration options. The following 
 configuration options available:
-{{% /md %}}</dd>
-    <dt class="property-optional"
+{{% /md %}}</dd><dt class="property-optional"
             title="Optional">
         <span id="service_host_python">
 <a href="#service_host_python" style="color: inherit; text-decoration: inherit;">service_<wbr>host</a>
@@ -930,8 +877,7 @@ configuration options available:
         <span class="property-type">str</span>
     </dt>
     <dd>{{% md %}}Redis hostname.
-{{% /md %}}</dd>
-    <dt class="property-optional"
+{{% /md %}}</dd><dt class="property-optional"
             title="Optional">
         <span id="service_integrations_python">
 <a href="#service_integrations_python" style="color: inherit; text-decoration: inherit;">service_<wbr>integrations</a>
@@ -939,8 +885,7 @@ configuration options available:
         <span class="property-indicator"></span>
         <span class="property-type"><a href="#getredisserviceintegration">Sequence[Get<wbr>Redis<wbr>Service<wbr>Integration<wbr>Args]</a></span>
     </dt>
-    <dd>{{% md %}}{{% /md %}}</dd>
-    <dt class="property-optional"
+    <dd>{{% md %}}{{% /md %}}</dd><dt class="property-optional"
             title="Optional">
         <span id="service_password_python">
 <a href="#service_password_python" style="color: inherit; text-decoration: inherit;">service_<wbr>password</a>
@@ -949,8 +894,7 @@ configuration options available:
         <span class="property-type">str</span>
     </dt>
     <dd>{{% md %}}Password used for connecting to the Redis service, if applicable.
-{{% /md %}}</dd>
-    <dt class="property-optional"
+{{% /md %}}</dd><dt class="property-optional"
             title="Optional">
         <span id="service_port_python">
 <a href="#service_port_python" style="color: inherit; text-decoration: inherit;">service_<wbr>port</a>
@@ -959,8 +903,7 @@ configuration options available:
         <span class="property-type">int</span>
     </dt>
     <dd>{{% md %}}Redis port.
-{{% /md %}}</dd>
-    <dt class="property-optional"
+{{% /md %}}</dd><dt class="property-optional"
             title="Optional">
         <span id="service_type_python">
 <a href="#service_type_python" style="color: inherit; text-decoration: inherit;">service_<wbr>type</a>
@@ -968,8 +911,7 @@ configuration options available:
         <span class="property-indicator"></span>
         <span class="property-type">str</span>
     </dt>
-    <dd>{{% md %}}{{% /md %}}</dd>
-    <dt class="property-optional"
+    <dd>{{% md %}}{{% /md %}}</dd><dt class="property-optional"
             title="Optional">
         <span id="service_uri_python">
 <a href="#service_uri_python" style="color: inherit; text-decoration: inherit;">service_<wbr>uri</a>
@@ -978,8 +920,7 @@ configuration options available:
         <span class="property-type">str</span>
     </dt>
     <dd>{{% md %}}URI for connecting to the Redis service.
-{{% /md %}}</dd>
-    <dt class="property-optional"
+{{% /md %}}</dd><dt class="property-optional"
             title="Optional">
         <span id="service_username_python">
 <a href="#service_username_python" style="color: inherit; text-decoration: inherit;">service_<wbr>username</a>
@@ -988,8 +929,7 @@ configuration options available:
         <span class="property-type">str</span>
     </dt>
     <dd>{{% md %}}Username used for connecting to the Redis service, if applicable.
-{{% /md %}}</dd>
-    <dt class="property-optional"
+{{% /md %}}</dd><dt class="property-optional"
             title="Optional">
         <span id="state_python">
 <a href="#state_python" style="color: inherit; text-decoration: inherit;">state</a>
@@ -998,8 +938,7 @@ configuration options available:
         <span class="property-type">str</span>
     </dt>
     <dd>{{% md %}}Service state.
-{{% /md %}}</dd>
-    <dt class="property-optional"
+{{% /md %}}</dd><dt class="property-optional"
             title="Optional">
         <span id="termination_protection_python">
 <a href="#termination_protection_python" style="color: inherit; text-decoration: inherit;">termination_<wbr>protection</a>
@@ -1012,8 +951,7 @@ set this to `true` for all production services to prevent unintentional service
 deletion. This does not shield against deleting databases or topics but for services
 with backups much of the content can at least be restored from backup in case accidental
 deletion is done.
-{{% /md %}}</dd>
-</dl>
+{{% /md %}}</dd></dl>
 {{% /choosable %}}
 
 
@@ -1026,9 +964,7 @@ The following output properties are available:
 
 
 {{% choosable language csharp %}}
-<dl class="resources-properties">
-
-    <dt class="property-"
+<dl class="resources-properties"><dt class="property-"
             title="">
         <span id="components_csharp">
 <a href="#components_csharp" style="color: inherit; text-decoration: inherit;">Components</a>
@@ -1036,8 +972,7 @@ The following output properties are available:
         <span class="property-indicator"></span>
         <span class="property-type"><a href="#getrediscomponent">List&lt;Get<wbr>Redis<wbr>Component&gt;</a></span>
     </dt>
-    <dd>{{% md %}}{{% /md %}}</dd>
-    <dt class="property-"
+    <dd>{{% md %}}{{% /md %}}</dd><dt class="property-"
             title="">
         <span id="id_csharp">
 <a href="#id_csharp" style="color: inherit; text-decoration: inherit;">Id</a>
@@ -1046,8 +981,7 @@ The following output properties are available:
         <span class="property-type">string</span>
     </dt>
     <dd>{{% md %}}The provider-assigned unique ID for this managed resource.
-{{% /md %}}</dd>
-    <dt class="property-"
+{{% /md %}}</dd><dt class="property-"
             title="">
         <span id="project_csharp">
 <a href="#project_csharp" style="color: inherit; text-decoration: inherit;">Project</a>
@@ -1055,8 +989,7 @@ The following output properties are available:
         <span class="property-indicator"></span>
         <span class="property-type">string</span>
     </dt>
-    <dd>{{% md %}}{{% /md %}}</dd>
-    <dt class="property-"
+    <dd>{{% md %}}{{% /md %}}</dd><dt class="property-"
             title="">
         <span id="redis_csharp">
 <a href="#redis_csharp" style="color: inherit; text-decoration: inherit;">Redis</a>
@@ -1065,8 +998,7 @@ The following output properties are available:
         <span class="property-type"><a href="#getredisredis">Get<wbr>Redis<wbr>Redis</a></span>
     </dt>
     <dd>{{% md %}}Redis specific server provided values.
-{{% /md %}}</dd>
-    <dt class="property-"
+{{% /md %}}</dd><dt class="property-"
             title="">
         <span id="servicehost_csharp">
 <a href="#servicehost_csharp" style="color: inherit; text-decoration: inherit;">Service<wbr>Host</a>
@@ -1075,8 +1007,7 @@ The following output properties are available:
         <span class="property-type">string</span>
     </dt>
     <dd>{{% md %}}Redis hostname.
-{{% /md %}}</dd>
-    <dt class="property-"
+{{% /md %}}</dd><dt class="property-"
             title="">
         <span id="servicename_csharp">
 <a href="#servicename_csharp" style="color: inherit; text-decoration: inherit;">Service<wbr>Name</a>
@@ -1084,8 +1015,7 @@ The following output properties are available:
         <span class="property-indicator"></span>
         <span class="property-type">string</span>
     </dt>
-    <dd>{{% md %}}{{% /md %}}</dd>
-    <dt class="property-"
+    <dd>{{% md %}}{{% /md %}}</dd><dt class="property-"
             title="">
         <span id="servicepassword_csharp">
 <a href="#servicepassword_csharp" style="color: inherit; text-decoration: inherit;">Service<wbr>Password</a>
@@ -1094,8 +1024,7 @@ The following output properties are available:
         <span class="property-type">string</span>
     </dt>
     <dd>{{% md %}}Password used for connecting to the Redis service, if applicable.
-{{% /md %}}</dd>
-    <dt class="property-"
+{{% /md %}}</dd><dt class="property-"
             title="">
         <span id="serviceport_csharp">
 <a href="#serviceport_csharp" style="color: inherit; text-decoration: inherit;">Service<wbr>Port</a>
@@ -1104,8 +1033,7 @@ The following output properties are available:
         <span class="property-type">int</span>
     </dt>
     <dd>{{% md %}}Redis port.
-{{% /md %}}</dd>
-    <dt class="property-"
+{{% /md %}}</dd><dt class="property-"
             title="">
         <span id="servicetype_csharp">
 <a href="#servicetype_csharp" style="color: inherit; text-decoration: inherit;">Service<wbr>Type</a>
@@ -1113,8 +1041,7 @@ The following output properties are available:
         <span class="property-indicator"></span>
         <span class="property-type">string</span>
     </dt>
-    <dd>{{% md %}}{{% /md %}}</dd>
-    <dt class="property-"
+    <dd>{{% md %}}{{% /md %}}</dd><dt class="property-"
             title="">
         <span id="serviceuri_csharp">
 <a href="#serviceuri_csharp" style="color: inherit; text-decoration: inherit;">Service<wbr>Uri</a>
@@ -1123,8 +1050,7 @@ The following output properties are available:
         <span class="property-type">string</span>
     </dt>
     <dd>{{% md %}}URI for connecting to the Redis service.
-{{% /md %}}</dd>
-    <dt class="property-"
+{{% /md %}}</dd><dt class="property-"
             title="">
         <span id="serviceusername_csharp">
 <a href="#serviceusername_csharp" style="color: inherit; text-decoration: inherit;">Service<wbr>Username</a>
@@ -1133,8 +1059,7 @@ The following output properties are available:
         <span class="property-type">string</span>
     </dt>
     <dd>{{% md %}}Username used for connecting to the Redis service, if applicable.
-{{% /md %}}</dd>
-    <dt class="property-"
+{{% /md %}}</dd><dt class="property-"
             title="">
         <span id="state_csharp">
 <a href="#state_csharp" style="color: inherit; text-decoration: inherit;">State</a>
@@ -1143,8 +1068,7 @@ The following output properties are available:
         <span class="property-type">string</span>
     </dt>
     <dd>{{% md %}}Service state.
-{{% /md %}}</dd>
-    <dt class="property-"
+{{% /md %}}</dd><dt class="property-"
             title="">
         <span id="cloudname_csharp">
 <a href="#cloudname_csharp" style="color: inherit; text-decoration: inherit;">Cloud<wbr>Name</a>
@@ -1159,8 +1083,7 @@ a potentially lengthy migration process for the service. Format is cloud provide
 specific region name. These are documented on each Cloud provider's own support articles,
 like [here for Google](https://cloud.google.com/compute/docs/regions-zones/) and
 [here for AWS](https://docs.aws.amazon.com/AmazonRDS/latest/UserGuide/Concepts.RegionsAndAvailabilityZones.html).
-{{% /md %}}</dd>
-    <dt class="property-"
+{{% /md %}}</dd><dt class="property-"
             title="">
         <span id="maintenancewindowdow_csharp">
 <a href="#maintenancewindowdow_csharp" style="color: inherit; text-decoration: inherit;">Maintenance<wbr>Window<wbr>Dow</a>
@@ -1170,8 +1093,7 @@ like [here for Google](https://cloud.google.com/compute/docs/regions-zones/) and
     </dt>
     <dd>{{% md %}}day of week when maintenance operations should be performed. 
 On monday, tuesday, wednesday, etc.
-{{% /md %}}</dd>
-    <dt class="property-"
+{{% /md %}}</dd><dt class="property-"
             title="">
         <span id="maintenancewindowtime_csharp">
 <a href="#maintenancewindowtime_csharp" style="color: inherit; text-decoration: inherit;">Maintenance<wbr>Window<wbr>Time</a>
@@ -1181,8 +1103,7 @@ On monday, tuesday, wednesday, etc.
     </dt>
     <dd>{{% md %}}time of day when maintenance operations should be performed. 
 UTC time in HH:mm:ss format.
-{{% /md %}}</dd>
-    <dt class="property-"
+{{% /md %}}</dd><dt class="property-"
             title="">
         <span id="plan_csharp">
 <a href="#plan_csharp" style="color: inherit; text-decoration: inherit;">Plan</a>
@@ -1198,8 +1119,7 @@ names are `hobbyist`, `startup-x`, `business-x` and `premium-x` where `x` is
 (roughly) the amount of memory on each node (also other attributes like number of CPUs
 and amount of disk space varies but naming is based on memory). The exact options can be
 seen from the Aiven web console's Create Service dialog.
-{{% /md %}}</dd>
-    <dt class="property-"
+{{% /md %}}</dd><dt class="property-"
             title="">
         <span id="projectvpcid_csharp">
 <a href="#projectvpcid_csharp" style="color: inherit; text-decoration: inherit;">Project<wbr>Vpc<wbr>Id</a>
@@ -1213,8 +1133,7 @@ reference as shown above to set up dependencies correctly and the VPC must be in
 cloud and region as the service itself. Project can be freely moved to and from VPC after
 creation but doing so triggers migration to new servers so the operation can take
 significant amount of time to complete if the service has a lot of data.
-{{% /md %}}</dd>
-    <dt class="property-"
+{{% /md %}}</dd><dt class="property-"
             title="">
         <span id="redisuserconfig_csharp">
 <a href="#redisuserconfig_csharp" style="color: inherit; text-decoration: inherit;">Redis<wbr>User<wbr>Config</a>
@@ -1224,8 +1143,7 @@ significant amount of time to complete if the service has a lot of data.
     </dt>
     <dd>{{% md %}}defines Redis specific additional configuration options. The following 
 configuration options available:
-{{% /md %}}</dd>
-    <dt class="property-"
+{{% /md %}}</dd><dt class="property-"
             title="">
         <span id="serviceintegrations_csharp">
 <a href="#serviceintegrations_csharp" style="color: inherit; text-decoration: inherit;">Service<wbr>Integrations</a>
@@ -1233,8 +1151,7 @@ configuration options available:
         <span class="property-indicator"></span>
         <span class="property-type"><a href="#getredisserviceintegration">List&lt;Get<wbr>Redis<wbr>Service<wbr>Integration&gt;</a></span>
     </dt>
-    <dd>{{% md %}}{{% /md %}}</dd>
-    <dt class="property-"
+    <dd>{{% md %}}{{% /md %}}</dd><dt class="property-"
             title="">
         <span id="terminationprotection_csharp">
 <a href="#terminationprotection_csharp" style="color: inherit; text-decoration: inherit;">Termination<wbr>Protection</a>
@@ -1247,14 +1164,11 @@ set this to `true` for all production services to prevent unintentional service
 deletion. This does not shield against deleting databases or topics but for services
 with backups much of the content can at least be restored from backup in case accidental
 deletion is done.
-{{% /md %}}</dd>
-</dl>
+{{% /md %}}</dd></dl>
 {{% /choosable %}}
 
 {{% choosable language go %}}
-<dl class="resources-properties">
-
-    <dt class="property-"
+<dl class="resources-properties"><dt class="property-"
             title="">
         <span id="components_go">
 <a href="#components_go" style="color: inherit; text-decoration: inherit;">Components</a>
@@ -1262,8 +1176,7 @@ deletion is done.
         <span class="property-indicator"></span>
         <span class="property-type"><a href="#getrediscomponent">[]Get<wbr>Redis<wbr>Component</a></span>
     </dt>
-    <dd>{{% md %}}{{% /md %}}</dd>
-    <dt class="property-"
+    <dd>{{% md %}}{{% /md %}}</dd><dt class="property-"
             title="">
         <span id="id_go">
 <a href="#id_go" style="color: inherit; text-decoration: inherit;">Id</a>
@@ -1272,8 +1185,7 @@ deletion is done.
         <span class="property-type">string</span>
     </dt>
     <dd>{{% md %}}The provider-assigned unique ID for this managed resource.
-{{% /md %}}</dd>
-    <dt class="property-"
+{{% /md %}}</dd><dt class="property-"
             title="">
         <span id="project_go">
 <a href="#project_go" style="color: inherit; text-decoration: inherit;">Project</a>
@@ -1281,8 +1193,7 @@ deletion is done.
         <span class="property-indicator"></span>
         <span class="property-type">string</span>
     </dt>
-    <dd>{{% md %}}{{% /md %}}</dd>
-    <dt class="property-"
+    <dd>{{% md %}}{{% /md %}}</dd><dt class="property-"
             title="">
         <span id="redis_go">
 <a href="#redis_go" style="color: inherit; text-decoration: inherit;">Redis</a>
@@ -1291,8 +1202,7 @@ deletion is done.
         <span class="property-type"><a href="#getredisredis">Get<wbr>Redis<wbr>Redis</a></span>
     </dt>
     <dd>{{% md %}}Redis specific server provided values.
-{{% /md %}}</dd>
-    <dt class="property-"
+{{% /md %}}</dd><dt class="property-"
             title="">
         <span id="servicehost_go">
 <a href="#servicehost_go" style="color: inherit; text-decoration: inherit;">Service<wbr>Host</a>
@@ -1301,8 +1211,7 @@ deletion is done.
         <span class="property-type">string</span>
     </dt>
     <dd>{{% md %}}Redis hostname.
-{{% /md %}}</dd>
-    <dt class="property-"
+{{% /md %}}</dd><dt class="property-"
             title="">
         <span id="servicename_go">
 <a href="#servicename_go" style="color: inherit; text-decoration: inherit;">Service<wbr>Name</a>
@@ -1310,8 +1219,7 @@ deletion is done.
         <span class="property-indicator"></span>
         <span class="property-type">string</span>
     </dt>
-    <dd>{{% md %}}{{% /md %}}</dd>
-    <dt class="property-"
+    <dd>{{% md %}}{{% /md %}}</dd><dt class="property-"
             title="">
         <span id="servicepassword_go">
 <a href="#servicepassword_go" style="color: inherit; text-decoration: inherit;">Service<wbr>Password</a>
@@ -1320,8 +1228,7 @@ deletion is done.
         <span class="property-type">string</span>
     </dt>
     <dd>{{% md %}}Password used for connecting to the Redis service, if applicable.
-{{% /md %}}</dd>
-    <dt class="property-"
+{{% /md %}}</dd><dt class="property-"
             title="">
         <span id="serviceport_go">
 <a href="#serviceport_go" style="color: inherit; text-decoration: inherit;">Service<wbr>Port</a>
@@ -1330,8 +1237,7 @@ deletion is done.
         <span class="property-type">int</span>
     </dt>
     <dd>{{% md %}}Redis port.
-{{% /md %}}</dd>
-    <dt class="property-"
+{{% /md %}}</dd><dt class="property-"
             title="">
         <span id="servicetype_go">
 <a href="#servicetype_go" style="color: inherit; text-decoration: inherit;">Service<wbr>Type</a>
@@ -1339,8 +1245,7 @@ deletion is done.
         <span class="property-indicator"></span>
         <span class="property-type">string</span>
     </dt>
-    <dd>{{% md %}}{{% /md %}}</dd>
-    <dt class="property-"
+    <dd>{{% md %}}{{% /md %}}</dd><dt class="property-"
             title="">
         <span id="serviceuri_go">
 <a href="#serviceuri_go" style="color: inherit; text-decoration: inherit;">Service<wbr>Uri</a>
@@ -1349,8 +1254,7 @@ deletion is done.
         <span class="property-type">string</span>
     </dt>
     <dd>{{% md %}}URI for connecting to the Redis service.
-{{% /md %}}</dd>
-    <dt class="property-"
+{{% /md %}}</dd><dt class="property-"
             title="">
         <span id="serviceusername_go">
 <a href="#serviceusername_go" style="color: inherit; text-decoration: inherit;">Service<wbr>Username</a>
@@ -1359,8 +1263,7 @@ deletion is done.
         <span class="property-type">string</span>
     </dt>
     <dd>{{% md %}}Username used for connecting to the Redis service, if applicable.
-{{% /md %}}</dd>
-    <dt class="property-"
+{{% /md %}}</dd><dt class="property-"
             title="">
         <span id="state_go">
 <a href="#state_go" style="color: inherit; text-decoration: inherit;">State</a>
@@ -1369,8 +1272,7 @@ deletion is done.
         <span class="property-type">string</span>
     </dt>
     <dd>{{% md %}}Service state.
-{{% /md %}}</dd>
-    <dt class="property-"
+{{% /md %}}</dd><dt class="property-"
             title="">
         <span id="cloudname_go">
 <a href="#cloudname_go" style="color: inherit; text-decoration: inherit;">Cloud<wbr>Name</a>
@@ -1385,8 +1287,7 @@ a potentially lengthy migration process for the service. Format is cloud provide
 specific region name. These are documented on each Cloud provider's own support articles,
 like [here for Google](https://cloud.google.com/compute/docs/regions-zones/) and
 [here for AWS](https://docs.aws.amazon.com/AmazonRDS/latest/UserGuide/Concepts.RegionsAndAvailabilityZones.html).
-{{% /md %}}</dd>
-    <dt class="property-"
+{{% /md %}}</dd><dt class="property-"
             title="">
         <span id="maintenancewindowdow_go">
 <a href="#maintenancewindowdow_go" style="color: inherit; text-decoration: inherit;">Maintenance<wbr>Window<wbr>Dow</a>
@@ -1396,8 +1297,7 @@ like [here for Google](https://cloud.google.com/compute/docs/regions-zones/) and
     </dt>
     <dd>{{% md %}}day of week when maintenance operations should be performed. 
 On monday, tuesday, wednesday, etc.
-{{% /md %}}</dd>
-    <dt class="property-"
+{{% /md %}}</dd><dt class="property-"
             title="">
         <span id="maintenancewindowtime_go">
 <a href="#maintenancewindowtime_go" style="color: inherit; text-decoration: inherit;">Maintenance<wbr>Window<wbr>Time</a>
@@ -1407,8 +1307,7 @@ On monday, tuesday, wednesday, etc.
     </dt>
     <dd>{{% md %}}time of day when maintenance operations should be performed. 
 UTC time in HH:mm:ss format.
-{{% /md %}}</dd>
-    <dt class="property-"
+{{% /md %}}</dd><dt class="property-"
             title="">
         <span id="plan_go">
 <a href="#plan_go" style="color: inherit; text-decoration: inherit;">Plan</a>
@@ -1424,8 +1323,7 @@ names are `hobbyist`, `startup-x`, `business-x` and `premium-x` where `x` is
 (roughly) the amount of memory on each node (also other attributes like number of CPUs
 and amount of disk space varies but naming is based on memory). The exact options can be
 seen from the Aiven web console's Create Service dialog.
-{{% /md %}}</dd>
-    <dt class="property-"
+{{% /md %}}</dd><dt class="property-"
             title="">
         <span id="projectvpcid_go">
 <a href="#projectvpcid_go" style="color: inherit; text-decoration: inherit;">Project<wbr>Vpc<wbr>Id</a>
@@ -1439,8 +1337,7 @@ reference as shown above to set up dependencies correctly and the VPC must be in
 cloud and region as the service itself. Project can be freely moved to and from VPC after
 creation but doing so triggers migration to new servers so the operation can take
 significant amount of time to complete if the service has a lot of data.
-{{% /md %}}</dd>
-    <dt class="property-"
+{{% /md %}}</dd><dt class="property-"
             title="">
         <span id="redisuserconfig_go">
 <a href="#redisuserconfig_go" style="color: inherit; text-decoration: inherit;">Redis<wbr>User<wbr>Config</a>
@@ -1450,8 +1347,7 @@ significant amount of time to complete if the service has a lot of data.
     </dt>
     <dd>{{% md %}}defines Redis specific additional configuration options. The following 
 configuration options available:
-{{% /md %}}</dd>
-    <dt class="property-"
+{{% /md %}}</dd><dt class="property-"
             title="">
         <span id="serviceintegrations_go">
 <a href="#serviceintegrations_go" style="color: inherit; text-decoration: inherit;">Service<wbr>Integrations</a>
@@ -1459,8 +1355,7 @@ configuration options available:
         <span class="property-indicator"></span>
         <span class="property-type"><a href="#getredisserviceintegration">[]Get<wbr>Redis<wbr>Service<wbr>Integration</a></span>
     </dt>
-    <dd>{{% md %}}{{% /md %}}</dd>
-    <dt class="property-"
+    <dd>{{% md %}}{{% /md %}}</dd><dt class="property-"
             title="">
         <span id="terminationprotection_go">
 <a href="#terminationprotection_go" style="color: inherit; text-decoration: inherit;">Termination<wbr>Protection</a>
@@ -1473,14 +1368,11 @@ set this to `true` for all production services to prevent unintentional service
 deletion. This does not shield against deleting databases or topics but for services
 with backups much of the content can at least be restored from backup in case accidental
 deletion is done.
-{{% /md %}}</dd>
-</dl>
+{{% /md %}}</dd></dl>
 {{% /choosable %}}
 
 {{% choosable language nodejs %}}
-<dl class="resources-properties">
-
-    <dt class="property-"
+<dl class="resources-properties"><dt class="property-"
             title="">
         <span id="components_nodejs">
 <a href="#components_nodejs" style="color: inherit; text-decoration: inherit;">components</a>
@@ -1488,8 +1380,7 @@ deletion is done.
         <span class="property-indicator"></span>
         <span class="property-type"><a href="#getrediscomponent">Get<wbr>Redis<wbr>Component[]</a></span>
     </dt>
-    <dd>{{% md %}}{{% /md %}}</dd>
-    <dt class="property-"
+    <dd>{{% md %}}{{% /md %}}</dd><dt class="property-"
             title="">
         <span id="id_nodejs">
 <a href="#id_nodejs" style="color: inherit; text-decoration: inherit;">id</a>
@@ -1498,8 +1389,7 @@ deletion is done.
         <span class="property-type">string</span>
     </dt>
     <dd>{{% md %}}The provider-assigned unique ID for this managed resource.
-{{% /md %}}</dd>
-    <dt class="property-"
+{{% /md %}}</dd><dt class="property-"
             title="">
         <span id="project_nodejs">
 <a href="#project_nodejs" style="color: inherit; text-decoration: inherit;">project</a>
@@ -1507,8 +1397,7 @@ deletion is done.
         <span class="property-indicator"></span>
         <span class="property-type">string</span>
     </dt>
-    <dd>{{% md %}}{{% /md %}}</dd>
-    <dt class="property-"
+    <dd>{{% md %}}{{% /md %}}</dd><dt class="property-"
             title="">
         <span id="redis_nodejs">
 <a href="#redis_nodejs" style="color: inherit; text-decoration: inherit;">redis</a>
@@ -1517,8 +1406,7 @@ deletion is done.
         <span class="property-type"><a href="#getredisredis">Get<wbr>Redis<wbr>Redis</a></span>
     </dt>
     <dd>{{% md %}}Redis specific server provided values.
-{{% /md %}}</dd>
-    <dt class="property-"
+{{% /md %}}</dd><dt class="property-"
             title="">
         <span id="servicehost_nodejs">
 <a href="#servicehost_nodejs" style="color: inherit; text-decoration: inherit;">service<wbr>Host</a>
@@ -1527,8 +1415,7 @@ deletion is done.
         <span class="property-type">string</span>
     </dt>
     <dd>{{% md %}}Redis hostname.
-{{% /md %}}</dd>
-    <dt class="property-"
+{{% /md %}}</dd><dt class="property-"
             title="">
         <span id="servicename_nodejs">
 <a href="#servicename_nodejs" style="color: inherit; text-decoration: inherit;">service<wbr>Name</a>
@@ -1536,8 +1423,7 @@ deletion is done.
         <span class="property-indicator"></span>
         <span class="property-type">string</span>
     </dt>
-    <dd>{{% md %}}{{% /md %}}</dd>
-    <dt class="property-"
+    <dd>{{% md %}}{{% /md %}}</dd><dt class="property-"
             title="">
         <span id="servicepassword_nodejs">
 <a href="#servicepassword_nodejs" style="color: inherit; text-decoration: inherit;">service<wbr>Password</a>
@@ -1546,8 +1432,7 @@ deletion is done.
         <span class="property-type">string</span>
     </dt>
     <dd>{{% md %}}Password used for connecting to the Redis service, if applicable.
-{{% /md %}}</dd>
-    <dt class="property-"
+{{% /md %}}</dd><dt class="property-"
             title="">
         <span id="serviceport_nodejs">
 <a href="#serviceport_nodejs" style="color: inherit; text-decoration: inherit;">service<wbr>Port</a>
@@ -1556,8 +1441,7 @@ deletion is done.
         <span class="property-type">number</span>
     </dt>
     <dd>{{% md %}}Redis port.
-{{% /md %}}</dd>
-    <dt class="property-"
+{{% /md %}}</dd><dt class="property-"
             title="">
         <span id="servicetype_nodejs">
 <a href="#servicetype_nodejs" style="color: inherit; text-decoration: inherit;">service<wbr>Type</a>
@@ -1565,8 +1449,7 @@ deletion is done.
         <span class="property-indicator"></span>
         <span class="property-type">string</span>
     </dt>
-    <dd>{{% md %}}{{% /md %}}</dd>
-    <dt class="property-"
+    <dd>{{% md %}}{{% /md %}}</dd><dt class="property-"
             title="">
         <span id="serviceuri_nodejs">
 <a href="#serviceuri_nodejs" style="color: inherit; text-decoration: inherit;">service<wbr>Uri</a>
@@ -1575,8 +1458,7 @@ deletion is done.
         <span class="property-type">string</span>
     </dt>
     <dd>{{% md %}}URI for connecting to the Redis service.
-{{% /md %}}</dd>
-    <dt class="property-"
+{{% /md %}}</dd><dt class="property-"
             title="">
         <span id="serviceusername_nodejs">
 <a href="#serviceusername_nodejs" style="color: inherit; text-decoration: inherit;">service<wbr>Username</a>
@@ -1585,8 +1467,7 @@ deletion is done.
         <span class="property-type">string</span>
     </dt>
     <dd>{{% md %}}Username used for connecting to the Redis service, if applicable.
-{{% /md %}}</dd>
-    <dt class="property-"
+{{% /md %}}</dd><dt class="property-"
             title="">
         <span id="state_nodejs">
 <a href="#state_nodejs" style="color: inherit; text-decoration: inherit;">state</a>
@@ -1595,8 +1476,7 @@ deletion is done.
         <span class="property-type">string</span>
     </dt>
     <dd>{{% md %}}Service state.
-{{% /md %}}</dd>
-    <dt class="property-"
+{{% /md %}}</dd><dt class="property-"
             title="">
         <span id="cloudname_nodejs">
 <a href="#cloudname_nodejs" style="color: inherit; text-decoration: inherit;">cloud<wbr>Name</a>
@@ -1611,8 +1491,7 @@ a potentially lengthy migration process for the service. Format is cloud provide
 specific region name. These are documented on each Cloud provider's own support articles,
 like [here for Google](https://cloud.google.com/compute/docs/regions-zones/) and
 [here for AWS](https://docs.aws.amazon.com/AmazonRDS/latest/UserGuide/Concepts.RegionsAndAvailabilityZones.html).
-{{% /md %}}</dd>
-    <dt class="property-"
+{{% /md %}}</dd><dt class="property-"
             title="">
         <span id="maintenancewindowdow_nodejs">
 <a href="#maintenancewindowdow_nodejs" style="color: inherit; text-decoration: inherit;">maintenance<wbr>Window<wbr>Dow</a>
@@ -1622,8 +1501,7 @@ like [here for Google](https://cloud.google.com/compute/docs/regions-zones/) and
     </dt>
     <dd>{{% md %}}day of week when maintenance operations should be performed. 
 On monday, tuesday, wednesday, etc.
-{{% /md %}}</dd>
-    <dt class="property-"
+{{% /md %}}</dd><dt class="property-"
             title="">
         <span id="maintenancewindowtime_nodejs">
 <a href="#maintenancewindowtime_nodejs" style="color: inherit; text-decoration: inherit;">maintenance<wbr>Window<wbr>Time</a>
@@ -1633,8 +1511,7 @@ On monday, tuesday, wednesday, etc.
     </dt>
     <dd>{{% md %}}time of day when maintenance operations should be performed. 
 UTC time in HH:mm:ss format.
-{{% /md %}}</dd>
-    <dt class="property-"
+{{% /md %}}</dd><dt class="property-"
             title="">
         <span id="plan_nodejs">
 <a href="#plan_nodejs" style="color: inherit; text-decoration: inherit;">plan</a>
@@ -1650,8 +1527,7 @@ names are `hobbyist`, `startup-x`, `business-x` and `premium-x` where `x` is
 (roughly) the amount of memory on each node (also other attributes like number of CPUs
 and amount of disk space varies but naming is based on memory). The exact options can be
 seen from the Aiven web console's Create Service dialog.
-{{% /md %}}</dd>
-    <dt class="property-"
+{{% /md %}}</dd><dt class="property-"
             title="">
         <span id="projectvpcid_nodejs">
 <a href="#projectvpcid_nodejs" style="color: inherit; text-decoration: inherit;">project<wbr>Vpc<wbr>Id</a>
@@ -1665,8 +1541,7 @@ reference as shown above to set up dependencies correctly and the VPC must be in
 cloud and region as the service itself. Project can be freely moved to and from VPC after
 creation but doing so triggers migration to new servers so the operation can take
 significant amount of time to complete if the service has a lot of data.
-{{% /md %}}</dd>
-    <dt class="property-"
+{{% /md %}}</dd><dt class="property-"
             title="">
         <span id="redisuserconfig_nodejs">
 <a href="#redisuserconfig_nodejs" style="color: inherit; text-decoration: inherit;">redis<wbr>User<wbr>Config</a>
@@ -1676,8 +1551,7 @@ significant amount of time to complete if the service has a lot of data.
     </dt>
     <dd>{{% md %}}defines Redis specific additional configuration options. The following 
 configuration options available:
-{{% /md %}}</dd>
-    <dt class="property-"
+{{% /md %}}</dd><dt class="property-"
             title="">
         <span id="serviceintegrations_nodejs">
 <a href="#serviceintegrations_nodejs" style="color: inherit; text-decoration: inherit;">service<wbr>Integrations</a>
@@ -1685,8 +1559,7 @@ configuration options available:
         <span class="property-indicator"></span>
         <span class="property-type"><a href="#getredisserviceintegration">Get<wbr>Redis<wbr>Service<wbr>Integration[]</a></span>
     </dt>
-    <dd>{{% md %}}{{% /md %}}</dd>
-    <dt class="property-"
+    <dd>{{% md %}}{{% /md %}}</dd><dt class="property-"
             title="">
         <span id="terminationprotection_nodejs">
 <a href="#terminationprotection_nodejs" style="color: inherit; text-decoration: inherit;">termination<wbr>Protection</a>
@@ -1699,14 +1572,11 @@ set this to `true` for all production services to prevent unintentional service
 deletion. This does not shield against deleting databases or topics but for services
 with backups much of the content can at least be restored from backup in case accidental
 deletion is done.
-{{% /md %}}</dd>
-</dl>
+{{% /md %}}</dd></dl>
 {{% /choosable %}}
 
 {{% choosable language python %}}
-<dl class="resources-properties">
-
-    <dt class="property-"
+<dl class="resources-properties"><dt class="property-"
             title="">
         <span id="components_python">
 <a href="#components_python" style="color: inherit; text-decoration: inherit;">components</a>
@@ -1714,8 +1584,7 @@ deletion is done.
         <span class="property-indicator"></span>
         <span class="property-type"><a href="#getrediscomponent">Sequence[Get<wbr>Redis<wbr>Component]</a></span>
     </dt>
-    <dd>{{% md %}}{{% /md %}}</dd>
-    <dt class="property-"
+    <dd>{{% md %}}{{% /md %}}</dd><dt class="property-"
             title="">
         <span id="id_python">
 <a href="#id_python" style="color: inherit; text-decoration: inherit;">id</a>
@@ -1724,8 +1593,7 @@ deletion is done.
         <span class="property-type">str</span>
     </dt>
     <dd>{{% md %}}The provider-assigned unique ID for this managed resource.
-{{% /md %}}</dd>
-    <dt class="property-"
+{{% /md %}}</dd><dt class="property-"
             title="">
         <span id="project_python">
 <a href="#project_python" style="color: inherit; text-decoration: inherit;">project</a>
@@ -1733,8 +1601,7 @@ deletion is done.
         <span class="property-indicator"></span>
         <span class="property-type">str</span>
     </dt>
-    <dd>{{% md %}}{{% /md %}}</dd>
-    <dt class="property-"
+    <dd>{{% md %}}{{% /md %}}</dd><dt class="property-"
             title="">
         <span id="redis_python">
 <a href="#redis_python" style="color: inherit; text-decoration: inherit;">redis</a>
@@ -1743,8 +1610,7 @@ deletion is done.
         <span class="property-type"><a href="#getredisredis">Get<wbr>Redis<wbr>Redis</a></span>
     </dt>
     <dd>{{% md %}}Redis specific server provided values.
-{{% /md %}}</dd>
-    <dt class="property-"
+{{% /md %}}</dd><dt class="property-"
             title="">
         <span id="service_host_python">
 <a href="#service_host_python" style="color: inherit; text-decoration: inherit;">service_<wbr>host</a>
@@ -1753,8 +1619,7 @@ deletion is done.
         <span class="property-type">str</span>
     </dt>
     <dd>{{% md %}}Redis hostname.
-{{% /md %}}</dd>
-    <dt class="property-"
+{{% /md %}}</dd><dt class="property-"
             title="">
         <span id="service_name_python">
 <a href="#service_name_python" style="color: inherit; text-decoration: inherit;">service_<wbr>name</a>
@@ -1762,8 +1627,7 @@ deletion is done.
         <span class="property-indicator"></span>
         <span class="property-type">str</span>
     </dt>
-    <dd>{{% md %}}{{% /md %}}</dd>
-    <dt class="property-"
+    <dd>{{% md %}}{{% /md %}}</dd><dt class="property-"
             title="">
         <span id="service_password_python">
 <a href="#service_password_python" style="color: inherit; text-decoration: inherit;">service_<wbr>password</a>
@@ -1772,8 +1636,7 @@ deletion is done.
         <span class="property-type">str</span>
     </dt>
     <dd>{{% md %}}Password used for connecting to the Redis service, if applicable.
-{{% /md %}}</dd>
-    <dt class="property-"
+{{% /md %}}</dd><dt class="property-"
             title="">
         <span id="service_port_python">
 <a href="#service_port_python" style="color: inherit; text-decoration: inherit;">service_<wbr>port</a>
@@ -1782,8 +1645,7 @@ deletion is done.
         <span class="property-type">int</span>
     </dt>
     <dd>{{% md %}}Redis port.
-{{% /md %}}</dd>
-    <dt class="property-"
+{{% /md %}}</dd><dt class="property-"
             title="">
         <span id="service_type_python">
 <a href="#service_type_python" style="color: inherit; text-decoration: inherit;">service_<wbr>type</a>
@@ -1791,8 +1653,7 @@ deletion is done.
         <span class="property-indicator"></span>
         <span class="property-type">str</span>
     </dt>
-    <dd>{{% md %}}{{% /md %}}</dd>
-    <dt class="property-"
+    <dd>{{% md %}}{{% /md %}}</dd><dt class="property-"
             title="">
         <span id="service_uri_python">
 <a href="#service_uri_python" style="color: inherit; text-decoration: inherit;">service_<wbr>uri</a>
@@ -1801,8 +1662,7 @@ deletion is done.
         <span class="property-type">str</span>
     </dt>
     <dd>{{% md %}}URI for connecting to the Redis service.
-{{% /md %}}</dd>
-    <dt class="property-"
+{{% /md %}}</dd><dt class="property-"
             title="">
         <span id="service_username_python">
 <a href="#service_username_python" style="color: inherit; text-decoration: inherit;">service_<wbr>username</a>
@@ -1811,8 +1671,7 @@ deletion is done.
         <span class="property-type">str</span>
     </dt>
     <dd>{{% md %}}Username used for connecting to the Redis service, if applicable.
-{{% /md %}}</dd>
-    <dt class="property-"
+{{% /md %}}</dd><dt class="property-"
             title="">
         <span id="state_python">
 <a href="#state_python" style="color: inherit; text-decoration: inherit;">state</a>
@@ -1821,8 +1680,7 @@ deletion is done.
         <span class="property-type">str</span>
     </dt>
     <dd>{{% md %}}Service state.
-{{% /md %}}</dd>
-    <dt class="property-"
+{{% /md %}}</dd><dt class="property-"
             title="">
         <span id="cloud_name_python">
 <a href="#cloud_name_python" style="color: inherit; text-decoration: inherit;">cloud_<wbr>name</a>
@@ -1837,8 +1695,7 @@ a potentially lengthy migration process for the service. Format is cloud provide
 specific region name. These are documented on each Cloud provider's own support articles,
 like [here for Google](https://cloud.google.com/compute/docs/regions-zones/) and
 [here for AWS](https://docs.aws.amazon.com/AmazonRDS/latest/UserGuide/Concepts.RegionsAndAvailabilityZones.html).
-{{% /md %}}</dd>
-    <dt class="property-"
+{{% /md %}}</dd><dt class="property-"
             title="">
         <span id="maintenance_window_dow_python">
 <a href="#maintenance_window_dow_python" style="color: inherit; text-decoration: inherit;">maintenance_<wbr>window_<wbr>dow</a>
@@ -1848,8 +1705,7 @@ like [here for Google](https://cloud.google.com/compute/docs/regions-zones/) and
     </dt>
     <dd>{{% md %}}day of week when maintenance operations should be performed. 
 On monday, tuesday, wednesday, etc.
-{{% /md %}}</dd>
-    <dt class="property-"
+{{% /md %}}</dd><dt class="property-"
             title="">
         <span id="maintenance_window_time_python">
 <a href="#maintenance_window_time_python" style="color: inherit; text-decoration: inherit;">maintenance_<wbr>window_<wbr>time</a>
@@ -1859,8 +1715,7 @@ On monday, tuesday, wednesday, etc.
     </dt>
     <dd>{{% md %}}time of day when maintenance operations should be performed. 
 UTC time in HH:mm:ss format.
-{{% /md %}}</dd>
-    <dt class="property-"
+{{% /md %}}</dd><dt class="property-"
             title="">
         <span id="plan_python">
 <a href="#plan_python" style="color: inherit; text-decoration: inherit;">plan</a>
@@ -1876,8 +1731,7 @@ names are `hobbyist`, `startup-x`, `business-x` and `premium-x` where `x` is
 (roughly) the amount of memory on each node (also other attributes like number of CPUs
 and amount of disk space varies but naming is based on memory). The exact options can be
 seen from the Aiven web console's Create Service dialog.
-{{% /md %}}</dd>
-    <dt class="property-"
+{{% /md %}}</dd><dt class="property-"
             title="">
         <span id="project_vpc_id_python">
 <a href="#project_vpc_id_python" style="color: inherit; text-decoration: inherit;">project_<wbr>vpc_<wbr>id</a>
@@ -1891,8 +1745,7 @@ reference as shown above to set up dependencies correctly and the VPC must be in
 cloud and region as the service itself. Project can be freely moved to and from VPC after
 creation but doing so triggers migration to new servers so the operation can take
 significant amount of time to complete if the service has a lot of data.
-{{% /md %}}</dd>
-    <dt class="property-"
+{{% /md %}}</dd><dt class="property-"
             title="">
         <span id="redis_user_config_python">
 <a href="#redis_user_config_python" style="color: inherit; text-decoration: inherit;">redis_<wbr>user_<wbr>config</a>
@@ -1902,8 +1755,7 @@ significant amount of time to complete if the service has a lot of data.
     </dt>
     <dd>{{% md %}}defines Redis specific additional configuration options. The following 
 configuration options available:
-{{% /md %}}</dd>
-    <dt class="property-"
+{{% /md %}}</dd><dt class="property-"
             title="">
         <span id="service_integrations_python">
 <a href="#service_integrations_python" style="color: inherit; text-decoration: inherit;">service_<wbr>integrations</a>
@@ -1911,8 +1763,7 @@ configuration options available:
         <span class="property-indicator"></span>
         <span class="property-type"><a href="#getredisserviceintegration">Sequence[Get<wbr>Redis<wbr>Service<wbr>Integration]</a></span>
     </dt>
-    <dd>{{% md %}}{{% /md %}}</dd>
-    <dt class="property-"
+    <dd>{{% md %}}{{% /md %}}</dd><dt class="property-"
             title="">
         <span id="termination_protection_python">
 <a href="#termination_protection_python" style="color: inherit; text-decoration: inherit;">termination_<wbr>protection</a>
@@ -1925,8 +1776,7 @@ set this to `true` for all production services to prevent unintentional service
 deletion. This does not shield against deleting databases or topics but for services
 with backups much of the content can at least be restored from backup in case accidental
 deletion is done.
-{{% /md %}}</dd>
-</dl>
+{{% /md %}}</dd></dl>
 {{% /choosable %}}
 
 
@@ -1940,9 +1790,7 @@ deletion is done.
 
 
 {{% choosable language csharp %}}
-<dl class="resources-properties">
-
-    <dt class="property-required"
+<dl class="resources-properties"><dt class="property-required"
             title="Required">
         <span id="component_csharp">
 <a href="#component_csharp" style="color: inherit; text-decoration: inherit;">Component</a>
@@ -1950,8 +1798,7 @@ deletion is done.
         <span class="property-indicator"></span>
         <span class="property-type">string</span>
     </dt>
-    <dd>{{% md %}}{{% /md %}}</dd>
-    <dt class="property-required"
+    <dd>{{% md %}}{{% /md %}}</dd><dt class="property-required"
             title="Required">
         <span id="host_csharp">
 <a href="#host_csharp" style="color: inherit; text-decoration: inherit;">Host</a>
@@ -1960,8 +1807,7 @@ deletion is done.
         <span class="property-type">string</span>
     </dt>
     <dd>{{% md %}}(Required) Hostname or IP address of the server where to migrate data from
-{{% /md %}}</dd>
-    <dt class="property-required"
+{{% /md %}}</dd><dt class="property-required"
             title="Required">
         <span id="kafkaauthenticationmethod_csharp">
 <a href="#kafkaauthenticationmethod_csharp" style="color: inherit; text-decoration: inherit;">Kafka<wbr>Authentication<wbr>Method</a>
@@ -1969,8 +1815,7 @@ deletion is done.
         <span class="property-indicator"></span>
         <span class="property-type">string</span>
     </dt>
-    <dd>{{% md %}}{{% /md %}}</dd>
-    <dt class="property-required"
+    <dd>{{% md %}}{{% /md %}}</dd><dt class="property-required"
             title="Required">
         <span id="port_csharp">
 <a href="#port_csharp" style="color: inherit; text-decoration: inherit;">Port</a>
@@ -1979,8 +1824,7 @@ deletion is done.
         <span class="property-type">int</span>
     </dt>
     <dd>{{% md %}}(Required) Port number of the server where to migrate data from
-{{% /md %}}</dd>
-    <dt class="property-required"
+{{% /md %}}</dd><dt class="property-required"
             title="Required">
         <span id="route_csharp">
 <a href="#route_csharp" style="color: inherit; text-decoration: inherit;">Route</a>
@@ -1988,8 +1832,7 @@ deletion is done.
         <span class="property-indicator"></span>
         <span class="property-type">string</span>
     </dt>
-    <dd>{{% md %}}{{% /md %}}</dd>
-    <dt class="property-required"
+    <dd>{{% md %}}{{% /md %}}</dd><dt class="property-required"
             title="Required">
         <span id="ssl_csharp">
 <a href="#ssl_csharp" style="color: inherit; text-decoration: inherit;">Ssl</a>
@@ -1998,8 +1841,7 @@ deletion is done.
         <span class="property-type">bool</span>
     </dt>
     <dd>{{% md %}}The server where to migrate data from is secured with SSL
-{{% /md %}}</dd>
-    <dt class="property-required"
+{{% /md %}}</dd><dt class="property-required"
             title="Required">
         <span id="usage_csharp">
 <a href="#usage_csharp" style="color: inherit; text-decoration: inherit;">Usage</a>
@@ -2007,14 +1849,11 @@ deletion is done.
         <span class="property-indicator"></span>
         <span class="property-type">string</span>
     </dt>
-    <dd>{{% md %}}{{% /md %}}</dd>
-</dl>
+    <dd>{{% md %}}{{% /md %}}</dd></dl>
 {{% /choosable %}}
 
 {{% choosable language go %}}
-<dl class="resources-properties">
-
-    <dt class="property-required"
+<dl class="resources-properties"><dt class="property-required"
             title="Required">
         <span id="component_go">
 <a href="#component_go" style="color: inherit; text-decoration: inherit;">Component</a>
@@ -2022,8 +1861,7 @@ deletion is done.
         <span class="property-indicator"></span>
         <span class="property-type">string</span>
     </dt>
-    <dd>{{% md %}}{{% /md %}}</dd>
-    <dt class="property-required"
+    <dd>{{% md %}}{{% /md %}}</dd><dt class="property-required"
             title="Required">
         <span id="host_go">
 <a href="#host_go" style="color: inherit; text-decoration: inherit;">Host</a>
@@ -2032,8 +1870,7 @@ deletion is done.
         <span class="property-type">string</span>
     </dt>
     <dd>{{% md %}}(Required) Hostname or IP address of the server where to migrate data from
-{{% /md %}}</dd>
-    <dt class="property-required"
+{{% /md %}}</dd><dt class="property-required"
             title="Required">
         <span id="kafkaauthenticationmethod_go">
 <a href="#kafkaauthenticationmethod_go" style="color: inherit; text-decoration: inherit;">Kafka<wbr>Authentication<wbr>Method</a>
@@ -2041,8 +1878,7 @@ deletion is done.
         <span class="property-indicator"></span>
         <span class="property-type">string</span>
     </dt>
-    <dd>{{% md %}}{{% /md %}}</dd>
-    <dt class="property-required"
+    <dd>{{% md %}}{{% /md %}}</dd><dt class="property-required"
             title="Required">
         <span id="port_go">
 <a href="#port_go" style="color: inherit; text-decoration: inherit;">Port</a>
@@ -2051,8 +1887,7 @@ deletion is done.
         <span class="property-type">int</span>
     </dt>
     <dd>{{% md %}}(Required) Port number of the server where to migrate data from
-{{% /md %}}</dd>
-    <dt class="property-required"
+{{% /md %}}</dd><dt class="property-required"
             title="Required">
         <span id="route_go">
 <a href="#route_go" style="color: inherit; text-decoration: inherit;">Route</a>
@@ -2060,8 +1895,7 @@ deletion is done.
         <span class="property-indicator"></span>
         <span class="property-type">string</span>
     </dt>
-    <dd>{{% md %}}{{% /md %}}</dd>
-    <dt class="property-required"
+    <dd>{{% md %}}{{% /md %}}</dd><dt class="property-required"
             title="Required">
         <span id="ssl_go">
 <a href="#ssl_go" style="color: inherit; text-decoration: inherit;">Ssl</a>
@@ -2070,8 +1904,7 @@ deletion is done.
         <span class="property-type">bool</span>
     </dt>
     <dd>{{% md %}}The server where to migrate data from is secured with SSL
-{{% /md %}}</dd>
-    <dt class="property-required"
+{{% /md %}}</dd><dt class="property-required"
             title="Required">
         <span id="usage_go">
 <a href="#usage_go" style="color: inherit; text-decoration: inherit;">Usage</a>
@@ -2079,14 +1912,11 @@ deletion is done.
         <span class="property-indicator"></span>
         <span class="property-type">string</span>
     </dt>
-    <dd>{{% md %}}{{% /md %}}</dd>
-</dl>
+    <dd>{{% md %}}{{% /md %}}</dd></dl>
 {{% /choosable %}}
 
 {{% choosable language nodejs %}}
-<dl class="resources-properties">
-
-    <dt class="property-required"
+<dl class="resources-properties"><dt class="property-required"
             title="Required">
         <span id="component_nodejs">
 <a href="#component_nodejs" style="color: inherit; text-decoration: inherit;">component</a>
@@ -2094,8 +1924,7 @@ deletion is done.
         <span class="property-indicator"></span>
         <span class="property-type">string</span>
     </dt>
-    <dd>{{% md %}}{{% /md %}}</dd>
-    <dt class="property-required"
+    <dd>{{% md %}}{{% /md %}}</dd><dt class="property-required"
             title="Required">
         <span id="host_nodejs">
 <a href="#host_nodejs" style="color: inherit; text-decoration: inherit;">host</a>
@@ -2104,8 +1933,7 @@ deletion is done.
         <span class="property-type">string</span>
     </dt>
     <dd>{{% md %}}(Required) Hostname or IP address of the server where to migrate data from
-{{% /md %}}</dd>
-    <dt class="property-required"
+{{% /md %}}</dd><dt class="property-required"
             title="Required">
         <span id="kafkaauthenticationmethod_nodejs">
 <a href="#kafkaauthenticationmethod_nodejs" style="color: inherit; text-decoration: inherit;">kafka<wbr>Authentication<wbr>Method</a>
@@ -2113,8 +1941,7 @@ deletion is done.
         <span class="property-indicator"></span>
         <span class="property-type">string</span>
     </dt>
-    <dd>{{% md %}}{{% /md %}}</dd>
-    <dt class="property-required"
+    <dd>{{% md %}}{{% /md %}}</dd><dt class="property-required"
             title="Required">
         <span id="port_nodejs">
 <a href="#port_nodejs" style="color: inherit; text-decoration: inherit;">port</a>
@@ -2123,8 +1950,7 @@ deletion is done.
         <span class="property-type">number</span>
     </dt>
     <dd>{{% md %}}(Required) Port number of the server where to migrate data from
-{{% /md %}}</dd>
-    <dt class="property-required"
+{{% /md %}}</dd><dt class="property-required"
             title="Required">
         <span id="route_nodejs">
 <a href="#route_nodejs" style="color: inherit; text-decoration: inherit;">route</a>
@@ -2132,8 +1958,7 @@ deletion is done.
         <span class="property-indicator"></span>
         <span class="property-type">string</span>
     </dt>
-    <dd>{{% md %}}{{% /md %}}</dd>
-    <dt class="property-required"
+    <dd>{{% md %}}{{% /md %}}</dd><dt class="property-required"
             title="Required">
         <span id="ssl_nodejs">
 <a href="#ssl_nodejs" style="color: inherit; text-decoration: inherit;">ssl</a>
@@ -2142,8 +1967,7 @@ deletion is done.
         <span class="property-type">boolean</span>
     </dt>
     <dd>{{% md %}}The server where to migrate data from is secured with SSL
-{{% /md %}}</dd>
-    <dt class="property-required"
+{{% /md %}}</dd><dt class="property-required"
             title="Required">
         <span id="usage_nodejs">
 <a href="#usage_nodejs" style="color: inherit; text-decoration: inherit;">usage</a>
@@ -2151,14 +1975,11 @@ deletion is done.
         <span class="property-indicator"></span>
         <span class="property-type">string</span>
     </dt>
-    <dd>{{% md %}}{{% /md %}}</dd>
-</dl>
+    <dd>{{% md %}}{{% /md %}}</dd></dl>
 {{% /choosable %}}
 
 {{% choosable language python %}}
-<dl class="resources-properties">
-
-    <dt class="property-required"
+<dl class="resources-properties"><dt class="property-required"
             title="Required">
         <span id="component_python">
 <a href="#component_python" style="color: inherit; text-decoration: inherit;">component</a>
@@ -2166,8 +1987,7 @@ deletion is done.
         <span class="property-indicator"></span>
         <span class="property-type">str</span>
     </dt>
-    <dd>{{% md %}}{{% /md %}}</dd>
-    <dt class="property-required"
+    <dd>{{% md %}}{{% /md %}}</dd><dt class="property-required"
             title="Required">
         <span id="host_python">
 <a href="#host_python" style="color: inherit; text-decoration: inherit;">host</a>
@@ -2176,8 +1996,7 @@ deletion is done.
         <span class="property-type">str</span>
     </dt>
     <dd>{{% md %}}(Required) Hostname or IP address of the server where to migrate data from
-{{% /md %}}</dd>
-    <dt class="property-required"
+{{% /md %}}</dd><dt class="property-required"
             title="Required">
         <span id="kafka_authentication_method_python">
 <a href="#kafka_authentication_method_python" style="color: inherit; text-decoration: inherit;">kafka_<wbr>authentication_<wbr>method</a>
@@ -2185,8 +2004,7 @@ deletion is done.
         <span class="property-indicator"></span>
         <span class="property-type">str</span>
     </dt>
-    <dd>{{% md %}}{{% /md %}}</dd>
-    <dt class="property-required"
+    <dd>{{% md %}}{{% /md %}}</dd><dt class="property-required"
             title="Required">
         <span id="port_python">
 <a href="#port_python" style="color: inherit; text-decoration: inherit;">port</a>
@@ -2195,8 +2013,7 @@ deletion is done.
         <span class="property-type">int</span>
     </dt>
     <dd>{{% md %}}(Required) Port number of the server where to migrate data from
-{{% /md %}}</dd>
-    <dt class="property-required"
+{{% /md %}}</dd><dt class="property-required"
             title="Required">
         <span id="route_python">
 <a href="#route_python" style="color: inherit; text-decoration: inherit;">route</a>
@@ -2204,8 +2021,7 @@ deletion is done.
         <span class="property-indicator"></span>
         <span class="property-type">str</span>
     </dt>
-    <dd>{{% md %}}{{% /md %}}</dd>
-    <dt class="property-required"
+    <dd>{{% md %}}{{% /md %}}</dd><dt class="property-required"
             title="Required">
         <span id="ssl_python">
 <a href="#ssl_python" style="color: inherit; text-decoration: inherit;">ssl</a>
@@ -2214,8 +2030,7 @@ deletion is done.
         <span class="property-type">bool</span>
     </dt>
     <dd>{{% md %}}The server where to migrate data from is secured with SSL
-{{% /md %}}</dd>
-    <dt class="property-required"
+{{% /md %}}</dd><dt class="property-required"
             title="Required">
         <span id="usage_python">
 <a href="#usage_python" style="color: inherit; text-decoration: inherit;">usage</a>
@@ -2223,8 +2038,7 @@ deletion is done.
         <span class="property-indicator"></span>
         <span class="property-type">str</span>
     </dt>
-    <dd>{{% md %}}{{% /md %}}</dd>
-</dl>
+    <dd>{{% md %}}{{% /md %}}</dd></dl>
 {{% /choosable %}}
 
 <h4 id="getredisredisuserconfig">Get<wbr>Redis<wbr>Redis<wbr>User<wbr>Config</h4>
@@ -2232,9 +2046,7 @@ deletion is done.
 
 
 {{% choosable language csharp %}}
-<dl class="resources-properties">
-
-    <dt class="property-optional"
+<dl class="resources-properties"><dt class="property-optional"
             title="Optional">
         <span id="ipfilters_csharp">
 <a href="#ipfilters_csharp" style="color: inherit; text-decoration: inherit;">Ip<wbr>Filters</a>
@@ -2243,8 +2055,7 @@ deletion is done.
         <span class="property-type">List&lt;string&gt;</span>
     </dt>
     <dd>{{% md %}}Allow incoming connections from CIDR address block, e.g. `10.20.0.0/16`
-{{% /md %}}</dd>
-    <dt class="property-optional"
+{{% /md %}}</dd><dt class="property-optional"
             title="Optional">
         <span id="migration_csharp">
 <a href="#migration_csharp" style="color: inherit; text-decoration: inherit;">Migration</a>
@@ -2253,8 +2064,7 @@ deletion is done.
         <span class="property-type"><a href="#getredisredisuserconfigmigration">Get<wbr>Redis<wbr>Redis<wbr>User<wbr>Config<wbr>Migration<wbr>Args</a></span>
     </dt>
     <dd>{{% md %}}Migrate data from existing server
-{{% /md %}}</dd>
-    <dt class="property-optional"
+{{% /md %}}</dd><dt class="property-optional"
             title="Optional">
         <span id="privateaccess_csharp">
 <a href="#privateaccess_csharp" style="color: inherit; text-decoration: inherit;">Private<wbr>Access</a>
@@ -2263,8 +2073,7 @@ deletion is done.
         <span class="property-type"><a href="#getredisredisuserconfigprivateaccess">Get<wbr>Redis<wbr>Redis<wbr>User<wbr>Config<wbr>Private<wbr>Access<wbr>Args</a></span>
     </dt>
     <dd>{{% md %}}Allow access to selected service ports from private networks
-{{% /md %}}</dd>
-    <dt class="property-optional"
+{{% /md %}}</dd><dt class="property-optional"
             title="Optional">
         <span id="privatelinkaccess_csharp">
 <a href="#privatelinkaccess_csharp" style="color: inherit; text-decoration: inherit;">Privatelink<wbr>Access</a>
@@ -2273,8 +2082,7 @@ deletion is done.
         <span class="property-type"><a href="#getredisredisuserconfigprivatelinkaccess">Get<wbr>Redis<wbr>Redis<wbr>User<wbr>Config<wbr>Privatelink<wbr>Access<wbr>Args</a></span>
     </dt>
     <dd>{{% md %}}Allow access to selected service components through Privatelink
-{{% /md %}}</dd>
-    <dt class="property-optional"
+{{% /md %}}</dd><dt class="property-optional"
             title="Optional">
         <span id="projecttoforkfrom_csharp">
 <a href="#projecttoforkfrom_csharp" style="color: inherit; text-decoration: inherit;">Project<wbr>To<wbr>Fork<wbr>From</a>
@@ -2284,8 +2092,7 @@ deletion is done.
     </dt>
     <dd>{{% md %}}Name of another project to fork a service from. This has
 effect only when a new service is being created.
-{{% /md %}}</dd>
-    <dt class="property-optional"
+{{% /md %}}</dd><dt class="property-optional"
             title="Optional">
         <span id="publicaccess_csharp">
 <a href="#publicaccess_csharp" style="color: inherit; text-decoration: inherit;">Public<wbr>Access</a>
@@ -2294,8 +2101,7 @@ effect only when a new service is being created.
         <span class="property-type"><a href="#getredisredisuserconfigpublicaccess">Get<wbr>Redis<wbr>Redis<wbr>User<wbr>Config<wbr>Public<wbr>Access<wbr>Args</a></span>
     </dt>
     <dd>{{% md %}}Allow access to selected service ports from the public Internet
-{{% /md %}}</dd>
-    <dt class="property-optional"
+{{% /md %}}</dd><dt class="property-optional"
             title="Optional">
         <span id="recoverybasebackupname_csharp">
 <a href="#recoverybasebackupname_csharp" style="color: inherit; text-decoration: inherit;">Recovery<wbr>Basebackup<wbr>Name</a>
@@ -2304,8 +2110,7 @@ effect only when a new service is being created.
         <span class="property-type">string</span>
     </dt>
     <dd>{{% md %}}Name of the basebackup to restore in forked service
-{{% /md %}}</dd>
-    <dt class="property-optional"
+{{% /md %}}</dd><dt class="property-optional"
             title="Optional">
         <span id="redisiothreads_csharp">
 <a href="#redisiothreads_csharp" style="color: inherit; text-decoration: inherit;">Redis<wbr>Io<wbr>Threads</a>
@@ -2315,8 +2120,7 @@ effect only when a new service is being created.
     </dt>
     <dd>{{% md %}}Redis IO thread count
 * `redis_lfu_decay_time"` - LFU maxmemory-policy counter decay time in minutes
-{{% /md %}}</dd>
-    <dt class="property-optional"
+{{% /md %}}</dd><dt class="property-optional"
             title="Optional">
         <span id="redislfudecaytime_csharp">
 <a href="#redislfudecaytime_csharp" style="color: inherit; text-decoration: inherit;">Redis<wbr>Lfu<wbr>Decay<wbr>Time</a>
@@ -2324,8 +2128,7 @@ effect only when a new service is being created.
         <span class="property-indicator"></span>
         <span class="property-type">string</span>
     </dt>
-    <dd>{{% md %}}{{% /md %}}</dd>
-    <dt class="property-optional"
+    <dd>{{% md %}}{{% /md %}}</dd><dt class="property-optional"
             title="Optional">
         <span id="redislfulogfactor_csharp">
 <a href="#redislfulogfactor_csharp" style="color: inherit; text-decoration: inherit;">Redis<wbr>Lfu<wbr>Log<wbr>Factor</a>
@@ -2335,8 +2138,7 @@ effect only when a new service is being created.
     </dt>
     <dd>{{% md %}}Counter logarithm factor for volatile-lfu and allkeys-lfu 
 maxmemory-policies
-{{% /md %}}</dd>
-    <dt class="property-optional"
+{{% /md %}}</dd><dt class="property-optional"
             title="Optional">
         <span id="redismaxmemorypolicy_csharp">
 <a href="#redismaxmemorypolicy_csharp" style="color: inherit; text-decoration: inherit;">Redis<wbr>Maxmemory<wbr>Policy</a>
@@ -2345,8 +2147,7 @@ maxmemory-policies
         <span class="property-type">string</span>
     </dt>
     <dd>{{% md %}}Redis maxmemory-policy
-{{% /md %}}</dd>
-    <dt class="property-optional"
+{{% /md %}}</dd><dt class="property-optional"
             title="Optional">
         <span id="redisnotifykeyspaceevents_csharp">
 <a href="#redisnotifykeyspaceevents_csharp" style="color: inherit; text-decoration: inherit;">Redis<wbr>Notify<wbr>Keyspace<wbr>Events</a>
@@ -2355,8 +2156,7 @@ maxmemory-policies
         <span class="property-type">string</span>
     </dt>
     <dd>{{% md %}}Set notify-keyspace-events option
-{{% /md %}}</dd>
-    <dt class="property-optional"
+{{% /md %}}</dd><dt class="property-optional"
             title="Optional">
         <span id="redisssl_csharp">
 <a href="#redisssl_csharp" style="color: inherit; text-decoration: inherit;">Redis<wbr>Ssl</a>
@@ -2365,8 +2165,7 @@ maxmemory-policies
         <span class="property-type">string</span>
     </dt>
     <dd>{{% md %}}Require SSL to access Redis
-{{% /md %}}</dd>
-    <dt class="property-optional"
+{{% /md %}}</dd><dt class="property-optional"
             title="Optional">
         <span id="redistimeout_csharp">
 <a href="#redistimeout_csharp" style="color: inherit; text-decoration: inherit;">Redis<wbr>Timeout</a>
@@ -2377,8 +2176,7 @@ maxmemory-policies
     <dd>{{% md %}}Redis idle connection timeout
 * `service_to_fork_from"` - Name of another service to fork from. This has effect only
 when a new service is being created.
-{{% /md %}}</dd>
-    <dt class="property-optional"
+{{% /md %}}</dd><dt class="property-optional"
             title="Optional">
         <span id="servicetoforkfrom_csharp">
 <a href="#servicetoforkfrom_csharp" style="color: inherit; text-decoration: inherit;">Service<wbr>To<wbr>Fork<wbr>From</a>
@@ -2386,14 +2184,11 @@ when a new service is being created.
         <span class="property-indicator"></span>
         <span class="property-type">string</span>
     </dt>
-    <dd>{{% md %}}{{% /md %}}</dd>
-</dl>
+    <dd>{{% md %}}{{% /md %}}</dd></dl>
 {{% /choosable %}}
 
 {{% choosable language go %}}
-<dl class="resources-properties">
-
-    <dt class="property-optional"
+<dl class="resources-properties"><dt class="property-optional"
             title="Optional">
         <span id="ipfilters_go">
 <a href="#ipfilters_go" style="color: inherit; text-decoration: inherit;">Ip<wbr>Filters</a>
@@ -2402,8 +2197,7 @@ when a new service is being created.
         <span class="property-type">[]string</span>
     </dt>
     <dd>{{% md %}}Allow incoming connections from CIDR address block, e.g. `10.20.0.0/16`
-{{% /md %}}</dd>
-    <dt class="property-optional"
+{{% /md %}}</dd><dt class="property-optional"
             title="Optional">
         <span id="migration_go">
 <a href="#migration_go" style="color: inherit; text-decoration: inherit;">Migration</a>
@@ -2412,8 +2206,7 @@ when a new service is being created.
         <span class="property-type"><a href="#getredisredisuserconfigmigration">Get<wbr>Redis<wbr>Redis<wbr>User<wbr>Config<wbr>Migration</a></span>
     </dt>
     <dd>{{% md %}}Migrate data from existing server
-{{% /md %}}</dd>
-    <dt class="property-optional"
+{{% /md %}}</dd><dt class="property-optional"
             title="Optional">
         <span id="privateaccess_go">
 <a href="#privateaccess_go" style="color: inherit; text-decoration: inherit;">Private<wbr>Access</a>
@@ -2422,8 +2215,7 @@ when a new service is being created.
         <span class="property-type"><a href="#getredisredisuserconfigprivateaccess">Get<wbr>Redis<wbr>Redis<wbr>User<wbr>Config<wbr>Private<wbr>Access</a></span>
     </dt>
     <dd>{{% md %}}Allow access to selected service ports from private networks
-{{% /md %}}</dd>
-    <dt class="property-optional"
+{{% /md %}}</dd><dt class="property-optional"
             title="Optional">
         <span id="privatelinkaccess_go">
 <a href="#privatelinkaccess_go" style="color: inherit; text-decoration: inherit;">Privatelink<wbr>Access</a>
@@ -2432,8 +2224,7 @@ when a new service is being created.
         <span class="property-type"><a href="#getredisredisuserconfigprivatelinkaccess">Get<wbr>Redis<wbr>Redis<wbr>User<wbr>Config<wbr>Privatelink<wbr>Access</a></span>
     </dt>
     <dd>{{% md %}}Allow access to selected service components through Privatelink
-{{% /md %}}</dd>
-    <dt class="property-optional"
+{{% /md %}}</dd><dt class="property-optional"
             title="Optional">
         <span id="projecttoforkfrom_go">
 <a href="#projecttoforkfrom_go" style="color: inherit; text-decoration: inherit;">Project<wbr>To<wbr>Fork<wbr>From</a>
@@ -2443,8 +2234,7 @@ when a new service is being created.
     </dt>
     <dd>{{% md %}}Name of another project to fork a service from. This has
 effect only when a new service is being created.
-{{% /md %}}</dd>
-    <dt class="property-optional"
+{{% /md %}}</dd><dt class="property-optional"
             title="Optional">
         <span id="publicaccess_go">
 <a href="#publicaccess_go" style="color: inherit; text-decoration: inherit;">Public<wbr>Access</a>
@@ -2453,8 +2243,7 @@ effect only when a new service is being created.
         <span class="property-type"><a href="#getredisredisuserconfigpublicaccess">Get<wbr>Redis<wbr>Redis<wbr>User<wbr>Config<wbr>Public<wbr>Access</a></span>
     </dt>
     <dd>{{% md %}}Allow access to selected service ports from the public Internet
-{{% /md %}}</dd>
-    <dt class="property-optional"
+{{% /md %}}</dd><dt class="property-optional"
             title="Optional">
         <span id="recoverybasebackupname_go">
 <a href="#recoverybasebackupname_go" style="color: inherit; text-decoration: inherit;">Recovery<wbr>Basebackup<wbr>Name</a>
@@ -2463,8 +2252,7 @@ effect only when a new service is being created.
         <span class="property-type">string</span>
     </dt>
     <dd>{{% md %}}Name of the basebackup to restore in forked service
-{{% /md %}}</dd>
-    <dt class="property-optional"
+{{% /md %}}</dd><dt class="property-optional"
             title="Optional">
         <span id="redisiothreads_go">
 <a href="#redisiothreads_go" style="color: inherit; text-decoration: inherit;">Redis<wbr>Io<wbr>Threads</a>
@@ -2474,8 +2262,7 @@ effect only when a new service is being created.
     </dt>
     <dd>{{% md %}}Redis IO thread count
 * `redis_lfu_decay_time"` - LFU maxmemory-policy counter decay time in minutes
-{{% /md %}}</dd>
-    <dt class="property-optional"
+{{% /md %}}</dd><dt class="property-optional"
             title="Optional">
         <span id="redislfudecaytime_go">
 <a href="#redislfudecaytime_go" style="color: inherit; text-decoration: inherit;">Redis<wbr>Lfu<wbr>Decay<wbr>Time</a>
@@ -2483,8 +2270,7 @@ effect only when a new service is being created.
         <span class="property-indicator"></span>
         <span class="property-type">string</span>
     </dt>
-    <dd>{{% md %}}{{% /md %}}</dd>
-    <dt class="property-optional"
+    <dd>{{% md %}}{{% /md %}}</dd><dt class="property-optional"
             title="Optional">
         <span id="redislfulogfactor_go">
 <a href="#redislfulogfactor_go" style="color: inherit; text-decoration: inherit;">Redis<wbr>Lfu<wbr>Log<wbr>Factor</a>
@@ -2494,8 +2280,7 @@ effect only when a new service is being created.
     </dt>
     <dd>{{% md %}}Counter logarithm factor for volatile-lfu and allkeys-lfu 
 maxmemory-policies
-{{% /md %}}</dd>
-    <dt class="property-optional"
+{{% /md %}}</dd><dt class="property-optional"
             title="Optional">
         <span id="redismaxmemorypolicy_go">
 <a href="#redismaxmemorypolicy_go" style="color: inherit; text-decoration: inherit;">Redis<wbr>Maxmemory<wbr>Policy</a>
@@ -2504,8 +2289,7 @@ maxmemory-policies
         <span class="property-type">string</span>
     </dt>
     <dd>{{% md %}}Redis maxmemory-policy
-{{% /md %}}</dd>
-    <dt class="property-optional"
+{{% /md %}}</dd><dt class="property-optional"
             title="Optional">
         <span id="redisnotifykeyspaceevents_go">
 <a href="#redisnotifykeyspaceevents_go" style="color: inherit; text-decoration: inherit;">Redis<wbr>Notify<wbr>Keyspace<wbr>Events</a>
@@ -2514,8 +2298,7 @@ maxmemory-policies
         <span class="property-type">string</span>
     </dt>
     <dd>{{% md %}}Set notify-keyspace-events option
-{{% /md %}}</dd>
-    <dt class="property-optional"
+{{% /md %}}</dd><dt class="property-optional"
             title="Optional">
         <span id="redisssl_go">
 <a href="#redisssl_go" style="color: inherit; text-decoration: inherit;">Redis<wbr>Ssl</a>
@@ -2524,8 +2307,7 @@ maxmemory-policies
         <span class="property-type">string</span>
     </dt>
     <dd>{{% md %}}Require SSL to access Redis
-{{% /md %}}</dd>
-    <dt class="property-optional"
+{{% /md %}}</dd><dt class="property-optional"
             title="Optional">
         <span id="redistimeout_go">
 <a href="#redistimeout_go" style="color: inherit; text-decoration: inherit;">Redis<wbr>Timeout</a>
@@ -2536,8 +2318,7 @@ maxmemory-policies
     <dd>{{% md %}}Redis idle connection timeout
 * `service_to_fork_from"` - Name of another service to fork from. This has effect only
 when a new service is being created.
-{{% /md %}}</dd>
-    <dt class="property-optional"
+{{% /md %}}</dd><dt class="property-optional"
             title="Optional">
         <span id="servicetoforkfrom_go">
 <a href="#servicetoforkfrom_go" style="color: inherit; text-decoration: inherit;">Service<wbr>To<wbr>Fork<wbr>From</a>
@@ -2545,14 +2326,11 @@ when a new service is being created.
         <span class="property-indicator"></span>
         <span class="property-type">string</span>
     </dt>
-    <dd>{{% md %}}{{% /md %}}</dd>
-</dl>
+    <dd>{{% md %}}{{% /md %}}</dd></dl>
 {{% /choosable %}}
 
 {{% choosable language nodejs %}}
-<dl class="resources-properties">
-
-    <dt class="property-optional"
+<dl class="resources-properties"><dt class="property-optional"
             title="Optional">
         <span id="ipfilters_nodejs">
 <a href="#ipfilters_nodejs" style="color: inherit; text-decoration: inherit;">ip<wbr>Filters</a>
@@ -2561,8 +2339,7 @@ when a new service is being created.
         <span class="property-type">string[]</span>
     </dt>
     <dd>{{% md %}}Allow incoming connections from CIDR address block, e.g. `10.20.0.0/16`
-{{% /md %}}</dd>
-    <dt class="property-optional"
+{{% /md %}}</dd><dt class="property-optional"
             title="Optional">
         <span id="migration_nodejs">
 <a href="#migration_nodejs" style="color: inherit; text-decoration: inherit;">migration</a>
@@ -2571,8 +2348,7 @@ when a new service is being created.
         <span class="property-type"><a href="#getredisredisuserconfigmigration">Get<wbr>Redis<wbr>Redis<wbr>User<wbr>Config<wbr>Migration</a></span>
     </dt>
     <dd>{{% md %}}Migrate data from existing server
-{{% /md %}}</dd>
-    <dt class="property-optional"
+{{% /md %}}</dd><dt class="property-optional"
             title="Optional">
         <span id="privateaccess_nodejs">
 <a href="#privateaccess_nodejs" style="color: inherit; text-decoration: inherit;">private<wbr>Access</a>
@@ -2581,8 +2357,7 @@ when a new service is being created.
         <span class="property-type"><a href="#getredisredisuserconfigprivateaccess">Get<wbr>Redis<wbr>Redis<wbr>User<wbr>Config<wbr>Private<wbr>Access</a></span>
     </dt>
     <dd>{{% md %}}Allow access to selected service ports from private networks
-{{% /md %}}</dd>
-    <dt class="property-optional"
+{{% /md %}}</dd><dt class="property-optional"
             title="Optional">
         <span id="privatelinkaccess_nodejs">
 <a href="#privatelinkaccess_nodejs" style="color: inherit; text-decoration: inherit;">privatelink<wbr>Access</a>
@@ -2591,8 +2366,7 @@ when a new service is being created.
         <span class="property-type"><a href="#getredisredisuserconfigprivatelinkaccess">Get<wbr>Redis<wbr>Redis<wbr>User<wbr>Config<wbr>Privatelink<wbr>Access</a></span>
     </dt>
     <dd>{{% md %}}Allow access to selected service components through Privatelink
-{{% /md %}}</dd>
-    <dt class="property-optional"
+{{% /md %}}</dd><dt class="property-optional"
             title="Optional">
         <span id="projecttoforkfrom_nodejs">
 <a href="#projecttoforkfrom_nodejs" style="color: inherit; text-decoration: inherit;">project<wbr>To<wbr>Fork<wbr>From</a>
@@ -2602,8 +2376,7 @@ when a new service is being created.
     </dt>
     <dd>{{% md %}}Name of another project to fork a service from. This has
 effect only when a new service is being created.
-{{% /md %}}</dd>
-    <dt class="property-optional"
+{{% /md %}}</dd><dt class="property-optional"
             title="Optional">
         <span id="publicaccess_nodejs">
 <a href="#publicaccess_nodejs" style="color: inherit; text-decoration: inherit;">public<wbr>Access</a>
@@ -2612,8 +2385,7 @@ effect only when a new service is being created.
         <span class="property-type"><a href="#getredisredisuserconfigpublicaccess">Get<wbr>Redis<wbr>Redis<wbr>User<wbr>Config<wbr>Public<wbr>Access</a></span>
     </dt>
     <dd>{{% md %}}Allow access to selected service ports from the public Internet
-{{% /md %}}</dd>
-    <dt class="property-optional"
+{{% /md %}}</dd><dt class="property-optional"
             title="Optional">
         <span id="recoverybasebackupname_nodejs">
 <a href="#recoverybasebackupname_nodejs" style="color: inherit; text-decoration: inherit;">recovery<wbr>Basebackup<wbr>Name</a>
@@ -2622,8 +2394,7 @@ effect only when a new service is being created.
         <span class="property-type">string</span>
     </dt>
     <dd>{{% md %}}Name of the basebackup to restore in forked service
-{{% /md %}}</dd>
-    <dt class="property-optional"
+{{% /md %}}</dd><dt class="property-optional"
             title="Optional">
         <span id="redisiothreads_nodejs">
 <a href="#redisiothreads_nodejs" style="color: inherit; text-decoration: inherit;">redis<wbr>Io<wbr>Threads</a>
@@ -2633,8 +2404,7 @@ effect only when a new service is being created.
     </dt>
     <dd>{{% md %}}Redis IO thread count
 * `redis_lfu_decay_time"` - LFU maxmemory-policy counter decay time in minutes
-{{% /md %}}</dd>
-    <dt class="property-optional"
+{{% /md %}}</dd><dt class="property-optional"
             title="Optional">
         <span id="redislfudecaytime_nodejs">
 <a href="#redislfudecaytime_nodejs" style="color: inherit; text-decoration: inherit;">redis<wbr>Lfu<wbr>Decay<wbr>Time</a>
@@ -2642,8 +2412,7 @@ effect only when a new service is being created.
         <span class="property-indicator"></span>
         <span class="property-type">string</span>
     </dt>
-    <dd>{{% md %}}{{% /md %}}</dd>
-    <dt class="property-optional"
+    <dd>{{% md %}}{{% /md %}}</dd><dt class="property-optional"
             title="Optional">
         <span id="redislfulogfactor_nodejs">
 <a href="#redislfulogfactor_nodejs" style="color: inherit; text-decoration: inherit;">redis<wbr>Lfu<wbr>Log<wbr>Factor</a>
@@ -2653,8 +2422,7 @@ effect only when a new service is being created.
     </dt>
     <dd>{{% md %}}Counter logarithm factor for volatile-lfu and allkeys-lfu 
 maxmemory-policies
-{{% /md %}}</dd>
-    <dt class="property-optional"
+{{% /md %}}</dd><dt class="property-optional"
             title="Optional">
         <span id="redismaxmemorypolicy_nodejs">
 <a href="#redismaxmemorypolicy_nodejs" style="color: inherit; text-decoration: inherit;">redis<wbr>Maxmemory<wbr>Policy</a>
@@ -2663,8 +2431,7 @@ maxmemory-policies
         <span class="property-type">string</span>
     </dt>
     <dd>{{% md %}}Redis maxmemory-policy
-{{% /md %}}</dd>
-    <dt class="property-optional"
+{{% /md %}}</dd><dt class="property-optional"
             title="Optional">
         <span id="redisnotifykeyspaceevents_nodejs">
 <a href="#redisnotifykeyspaceevents_nodejs" style="color: inherit; text-decoration: inherit;">redis<wbr>Notify<wbr>Keyspace<wbr>Events</a>
@@ -2673,8 +2440,7 @@ maxmemory-policies
         <span class="property-type">string</span>
     </dt>
     <dd>{{% md %}}Set notify-keyspace-events option
-{{% /md %}}</dd>
-    <dt class="property-optional"
+{{% /md %}}</dd><dt class="property-optional"
             title="Optional">
         <span id="redisssl_nodejs">
 <a href="#redisssl_nodejs" style="color: inherit; text-decoration: inherit;">redis<wbr>Ssl</a>
@@ -2683,8 +2449,7 @@ maxmemory-policies
         <span class="property-type">string</span>
     </dt>
     <dd>{{% md %}}Require SSL to access Redis
-{{% /md %}}</dd>
-    <dt class="property-optional"
+{{% /md %}}</dd><dt class="property-optional"
             title="Optional">
         <span id="redistimeout_nodejs">
 <a href="#redistimeout_nodejs" style="color: inherit; text-decoration: inherit;">redis<wbr>Timeout</a>
@@ -2695,8 +2460,7 @@ maxmemory-policies
     <dd>{{% md %}}Redis idle connection timeout
 * `service_to_fork_from"` - Name of another service to fork from. This has effect only
 when a new service is being created.
-{{% /md %}}</dd>
-    <dt class="property-optional"
+{{% /md %}}</dd><dt class="property-optional"
             title="Optional">
         <span id="servicetoforkfrom_nodejs">
 <a href="#servicetoforkfrom_nodejs" style="color: inherit; text-decoration: inherit;">service<wbr>To<wbr>Fork<wbr>From</a>
@@ -2704,14 +2468,11 @@ when a new service is being created.
         <span class="property-indicator"></span>
         <span class="property-type">string</span>
     </dt>
-    <dd>{{% md %}}{{% /md %}}</dd>
-</dl>
+    <dd>{{% md %}}{{% /md %}}</dd></dl>
 {{% /choosable %}}
 
 {{% choosable language python %}}
-<dl class="resources-properties">
-
-    <dt class="property-optional"
+<dl class="resources-properties"><dt class="property-optional"
             title="Optional">
         <span id="ip_filters_python">
 <a href="#ip_filters_python" style="color: inherit; text-decoration: inherit;">ip_<wbr>filters</a>
@@ -2720,8 +2481,7 @@ when a new service is being created.
         <span class="property-type">Sequence[str]</span>
     </dt>
     <dd>{{% md %}}Allow incoming connections from CIDR address block, e.g. `10.20.0.0/16`
-{{% /md %}}</dd>
-    <dt class="property-optional"
+{{% /md %}}</dd><dt class="property-optional"
             title="Optional">
         <span id="migration_python">
 <a href="#migration_python" style="color: inherit; text-decoration: inherit;">migration</a>
@@ -2730,8 +2490,7 @@ when a new service is being created.
         <span class="property-type"><a href="#getredisredisuserconfigmigration">Get<wbr>Redis<wbr>Redis<wbr>User<wbr>Config<wbr>Migration<wbr>Args</a></span>
     </dt>
     <dd>{{% md %}}Migrate data from existing server
-{{% /md %}}</dd>
-    <dt class="property-optional"
+{{% /md %}}</dd><dt class="property-optional"
             title="Optional">
         <span id="private_access_python">
 <a href="#private_access_python" style="color: inherit; text-decoration: inherit;">private_<wbr>access</a>
@@ -2740,8 +2499,7 @@ when a new service is being created.
         <span class="property-type"><a href="#getredisredisuserconfigprivateaccess">Get<wbr>Redis<wbr>Redis<wbr>User<wbr>Config<wbr>Private<wbr>Access<wbr>Args</a></span>
     </dt>
     <dd>{{% md %}}Allow access to selected service ports from private networks
-{{% /md %}}</dd>
-    <dt class="property-optional"
+{{% /md %}}</dd><dt class="property-optional"
             title="Optional">
         <span id="privatelink_access_python">
 <a href="#privatelink_access_python" style="color: inherit; text-decoration: inherit;">privatelink_<wbr>access</a>
@@ -2750,8 +2508,7 @@ when a new service is being created.
         <span class="property-type"><a href="#getredisredisuserconfigprivatelinkaccess">Get<wbr>Redis<wbr>Redis<wbr>User<wbr>Config<wbr>Privatelink<wbr>Access<wbr>Args</a></span>
     </dt>
     <dd>{{% md %}}Allow access to selected service components through Privatelink
-{{% /md %}}</dd>
-    <dt class="property-optional"
+{{% /md %}}</dd><dt class="property-optional"
             title="Optional">
         <span id="project_to_fork_from_python">
 <a href="#project_to_fork_from_python" style="color: inherit; text-decoration: inherit;">project_<wbr>to_<wbr>fork_<wbr>from</a>
@@ -2761,8 +2518,7 @@ when a new service is being created.
     </dt>
     <dd>{{% md %}}Name of another project to fork a service from. This has
 effect only when a new service is being created.
-{{% /md %}}</dd>
-    <dt class="property-optional"
+{{% /md %}}</dd><dt class="property-optional"
             title="Optional">
         <span id="public_access_python">
 <a href="#public_access_python" style="color: inherit; text-decoration: inherit;">public_<wbr>access</a>
@@ -2771,8 +2527,7 @@ effect only when a new service is being created.
         <span class="property-type"><a href="#getredisredisuserconfigpublicaccess">Get<wbr>Redis<wbr>Redis<wbr>User<wbr>Config<wbr>Public<wbr>Access<wbr>Args</a></span>
     </dt>
     <dd>{{% md %}}Allow access to selected service ports from the public Internet
-{{% /md %}}</dd>
-    <dt class="property-optional"
+{{% /md %}}</dd><dt class="property-optional"
             title="Optional">
         <span id="recovery_basebackup_name_python">
 <a href="#recovery_basebackup_name_python" style="color: inherit; text-decoration: inherit;">recovery_<wbr>basebackup_<wbr>name</a>
@@ -2781,8 +2536,7 @@ effect only when a new service is being created.
         <span class="property-type">str</span>
     </dt>
     <dd>{{% md %}}Name of the basebackup to restore in forked service
-{{% /md %}}</dd>
-    <dt class="property-optional"
+{{% /md %}}</dd><dt class="property-optional"
             title="Optional">
         <span id="redis_io_threads_python">
 <a href="#redis_io_threads_python" style="color: inherit; text-decoration: inherit;">redis_<wbr>io_<wbr>threads</a>
@@ -2792,8 +2546,7 @@ effect only when a new service is being created.
     </dt>
     <dd>{{% md %}}Redis IO thread count
 * `redis_lfu_decay_time"` - LFU maxmemory-policy counter decay time in minutes
-{{% /md %}}</dd>
-    <dt class="property-optional"
+{{% /md %}}</dd><dt class="property-optional"
             title="Optional">
         <span id="redis_lfu_decay_time_python">
 <a href="#redis_lfu_decay_time_python" style="color: inherit; text-decoration: inherit;">redis_<wbr>lfu_<wbr>decay_<wbr>time</a>
@@ -2801,8 +2554,7 @@ effect only when a new service is being created.
         <span class="property-indicator"></span>
         <span class="property-type">str</span>
     </dt>
-    <dd>{{% md %}}{{% /md %}}</dd>
-    <dt class="property-optional"
+    <dd>{{% md %}}{{% /md %}}</dd><dt class="property-optional"
             title="Optional">
         <span id="redis_lfu_log_factor_python">
 <a href="#redis_lfu_log_factor_python" style="color: inherit; text-decoration: inherit;">redis_<wbr>lfu_<wbr>log_<wbr>factor</a>
@@ -2812,8 +2564,7 @@ effect only when a new service is being created.
     </dt>
     <dd>{{% md %}}Counter logarithm factor for volatile-lfu and allkeys-lfu 
 maxmemory-policies
-{{% /md %}}</dd>
-    <dt class="property-optional"
+{{% /md %}}</dd><dt class="property-optional"
             title="Optional">
         <span id="redis_maxmemory_policy_python">
 <a href="#redis_maxmemory_policy_python" style="color: inherit; text-decoration: inherit;">redis_<wbr>maxmemory_<wbr>policy</a>
@@ -2822,8 +2573,7 @@ maxmemory-policies
         <span class="property-type">str</span>
     </dt>
     <dd>{{% md %}}Redis maxmemory-policy
-{{% /md %}}</dd>
-    <dt class="property-optional"
+{{% /md %}}</dd><dt class="property-optional"
             title="Optional">
         <span id="redis_notify_keyspace_events_python">
 <a href="#redis_notify_keyspace_events_python" style="color: inherit; text-decoration: inherit;">redis_<wbr>notify_<wbr>keyspace_<wbr>events</a>
@@ -2832,8 +2582,7 @@ maxmemory-policies
         <span class="property-type">str</span>
     </dt>
     <dd>{{% md %}}Set notify-keyspace-events option
-{{% /md %}}</dd>
-    <dt class="property-optional"
+{{% /md %}}</dd><dt class="property-optional"
             title="Optional">
         <span id="redis_ssl_python">
 <a href="#redis_ssl_python" style="color: inherit; text-decoration: inherit;">redis_<wbr>ssl</a>
@@ -2842,8 +2591,7 @@ maxmemory-policies
         <span class="property-type">str</span>
     </dt>
     <dd>{{% md %}}Require SSL to access Redis
-{{% /md %}}</dd>
-    <dt class="property-optional"
+{{% /md %}}</dd><dt class="property-optional"
             title="Optional">
         <span id="redis_timeout_python">
 <a href="#redis_timeout_python" style="color: inherit; text-decoration: inherit;">redis_<wbr>timeout</a>
@@ -2854,8 +2602,7 @@ maxmemory-policies
     <dd>{{% md %}}Redis idle connection timeout
 * `service_to_fork_from"` - Name of another service to fork from. This has effect only
 when a new service is being created.
-{{% /md %}}</dd>
-    <dt class="property-optional"
+{{% /md %}}</dd><dt class="property-optional"
             title="Optional">
         <span id="service_to_fork_from_python">
 <a href="#service_to_fork_from_python" style="color: inherit; text-decoration: inherit;">service_<wbr>to_<wbr>fork_<wbr>from</a>
@@ -2863,8 +2610,7 @@ when a new service is being created.
         <span class="property-indicator"></span>
         <span class="property-type">str</span>
     </dt>
-    <dd>{{% md %}}{{% /md %}}</dd>
-</dl>
+    <dd>{{% md %}}{{% /md %}}</dd></dl>
 {{% /choosable %}}
 
 <h4 id="getredisredisuserconfigmigration">Get<wbr>Redis<wbr>Redis<wbr>User<wbr>Config<wbr>Migration</h4>
@@ -2872,9 +2618,7 @@ when a new service is being created.
 
 
 {{% choosable language csharp %}}
-<dl class="resources-properties">
-
-    <dt class="property-optional"
+<dl class="resources-properties"><dt class="property-optional"
             title="Optional">
         <span id="dbname_csharp">
 <a href="#dbname_csharp" style="color: inherit; text-decoration: inherit;">Dbname</a>
@@ -2883,8 +2627,7 @@ when a new service is being created.
         <span class="property-type">string</span>
     </dt>
     <dd>{{% md %}}Database name for bootstrapping the initial connection
-{{% /md %}}</dd>
-    <dt class="property-optional"
+{{% /md %}}</dd><dt class="property-optional"
             title="Optional">
         <span id="host_csharp">
 <a href="#host_csharp" style="color: inherit; text-decoration: inherit;">Host</a>
@@ -2893,8 +2636,7 @@ when a new service is being created.
         <span class="property-type">string</span>
     </dt>
     <dd>{{% md %}}(Required) Hostname or IP address of the server where to migrate data from
-{{% /md %}}</dd>
-    <dt class="property-optional"
+{{% /md %}}</dd><dt class="property-optional"
             title="Optional">
         <span id="ignoredbs_csharp">
 <a href="#ignoredbs_csharp" style="color: inherit; text-decoration: inherit;">Ignore<wbr>Dbs</a>
@@ -2904,8 +2646,7 @@ when a new service is being created.
     </dt>
     <dd>{{% md %}}Comma-separated list of databases, which should be ignored during
 migration (supported by MySQL only at the moment)
-{{% /md %}}</dd>
-    <dt class="property-optional"
+{{% /md %}}</dd><dt class="property-optional"
             title="Optional">
         <span id="password_csharp">
 <a href="#password_csharp" style="color: inherit; text-decoration: inherit;">Password</a>
@@ -2914,8 +2655,7 @@ migration (supported by MySQL only at the moment)
         <span class="property-type">string</span>
     </dt>
     <dd>{{% md %}}Password for authentication with the server where to migrate data from
-{{% /md %}}</dd>
-    <dt class="property-optional"
+{{% /md %}}</dd><dt class="property-optional"
             title="Optional">
         <span id="port_csharp">
 <a href="#port_csharp" style="color: inherit; text-decoration: inherit;">Port</a>
@@ -2924,8 +2664,7 @@ migration (supported by MySQL only at the moment)
         <span class="property-type">string</span>
     </dt>
     <dd>{{% md %}}(Required) Port number of the server where to migrate data from
-{{% /md %}}</dd>
-    <dt class="property-optional"
+{{% /md %}}</dd><dt class="property-optional"
             title="Optional">
         <span id="ssl_csharp">
 <a href="#ssl_csharp" style="color: inherit; text-decoration: inherit;">Ssl</a>
@@ -2934,8 +2673,7 @@ migration (supported by MySQL only at the moment)
         <span class="property-type">string</span>
     </dt>
     <dd>{{% md %}}The server where to migrate data from is secured with SSL
-{{% /md %}}</dd>
-    <dt class="property-optional"
+{{% /md %}}</dd><dt class="property-optional"
             title="Optional">
         <span id="username_csharp">
 <a href="#username_csharp" style="color: inherit; text-decoration: inherit;">Username</a>
@@ -2944,14 +2682,11 @@ migration (supported by MySQL only at the moment)
         <span class="property-type">string</span>
     </dt>
     <dd>{{% md %}}User name for authentication with the server where to migrate data from
-{{% /md %}}</dd>
-</dl>
+{{% /md %}}</dd></dl>
 {{% /choosable %}}
 
 {{% choosable language go %}}
-<dl class="resources-properties">
-
-    <dt class="property-optional"
+<dl class="resources-properties"><dt class="property-optional"
             title="Optional">
         <span id="dbname_go">
 <a href="#dbname_go" style="color: inherit; text-decoration: inherit;">Dbname</a>
@@ -2960,8 +2695,7 @@ migration (supported by MySQL only at the moment)
         <span class="property-type">string</span>
     </dt>
     <dd>{{% md %}}Database name for bootstrapping the initial connection
-{{% /md %}}</dd>
-    <dt class="property-optional"
+{{% /md %}}</dd><dt class="property-optional"
             title="Optional">
         <span id="host_go">
 <a href="#host_go" style="color: inherit; text-decoration: inherit;">Host</a>
@@ -2970,8 +2704,7 @@ migration (supported by MySQL only at the moment)
         <span class="property-type">string</span>
     </dt>
     <dd>{{% md %}}(Required) Hostname or IP address of the server where to migrate data from
-{{% /md %}}</dd>
-    <dt class="property-optional"
+{{% /md %}}</dd><dt class="property-optional"
             title="Optional">
         <span id="ignoredbs_go">
 <a href="#ignoredbs_go" style="color: inherit; text-decoration: inherit;">Ignore<wbr>Dbs</a>
@@ -2981,8 +2714,7 @@ migration (supported by MySQL only at the moment)
     </dt>
     <dd>{{% md %}}Comma-separated list of databases, which should be ignored during
 migration (supported by MySQL only at the moment)
-{{% /md %}}</dd>
-    <dt class="property-optional"
+{{% /md %}}</dd><dt class="property-optional"
             title="Optional">
         <span id="password_go">
 <a href="#password_go" style="color: inherit; text-decoration: inherit;">Password</a>
@@ -2991,8 +2723,7 @@ migration (supported by MySQL only at the moment)
         <span class="property-type">string</span>
     </dt>
     <dd>{{% md %}}Password for authentication with the server where to migrate data from
-{{% /md %}}</dd>
-    <dt class="property-optional"
+{{% /md %}}</dd><dt class="property-optional"
             title="Optional">
         <span id="port_go">
 <a href="#port_go" style="color: inherit; text-decoration: inherit;">Port</a>
@@ -3001,8 +2732,7 @@ migration (supported by MySQL only at the moment)
         <span class="property-type">string</span>
     </dt>
     <dd>{{% md %}}(Required) Port number of the server where to migrate data from
-{{% /md %}}</dd>
-    <dt class="property-optional"
+{{% /md %}}</dd><dt class="property-optional"
             title="Optional">
         <span id="ssl_go">
 <a href="#ssl_go" style="color: inherit; text-decoration: inherit;">Ssl</a>
@@ -3011,8 +2741,7 @@ migration (supported by MySQL only at the moment)
         <span class="property-type">string</span>
     </dt>
     <dd>{{% md %}}The server where to migrate data from is secured with SSL
-{{% /md %}}</dd>
-    <dt class="property-optional"
+{{% /md %}}</dd><dt class="property-optional"
             title="Optional">
         <span id="username_go">
 <a href="#username_go" style="color: inherit; text-decoration: inherit;">Username</a>
@@ -3021,14 +2750,11 @@ migration (supported by MySQL only at the moment)
         <span class="property-type">string</span>
     </dt>
     <dd>{{% md %}}User name for authentication with the server where to migrate data from
-{{% /md %}}</dd>
-</dl>
+{{% /md %}}</dd></dl>
 {{% /choosable %}}
 
 {{% choosable language nodejs %}}
-<dl class="resources-properties">
-
-    <dt class="property-optional"
+<dl class="resources-properties"><dt class="property-optional"
             title="Optional">
         <span id="dbname_nodejs">
 <a href="#dbname_nodejs" style="color: inherit; text-decoration: inherit;">dbname</a>
@@ -3037,8 +2763,7 @@ migration (supported by MySQL only at the moment)
         <span class="property-type">string</span>
     </dt>
     <dd>{{% md %}}Database name for bootstrapping the initial connection
-{{% /md %}}</dd>
-    <dt class="property-optional"
+{{% /md %}}</dd><dt class="property-optional"
             title="Optional">
         <span id="host_nodejs">
 <a href="#host_nodejs" style="color: inherit; text-decoration: inherit;">host</a>
@@ -3047,8 +2772,7 @@ migration (supported by MySQL only at the moment)
         <span class="property-type">string</span>
     </dt>
     <dd>{{% md %}}(Required) Hostname or IP address of the server where to migrate data from
-{{% /md %}}</dd>
-    <dt class="property-optional"
+{{% /md %}}</dd><dt class="property-optional"
             title="Optional">
         <span id="ignoredbs_nodejs">
 <a href="#ignoredbs_nodejs" style="color: inherit; text-decoration: inherit;">ignore<wbr>Dbs</a>
@@ -3058,8 +2782,7 @@ migration (supported by MySQL only at the moment)
     </dt>
     <dd>{{% md %}}Comma-separated list of databases, which should be ignored during
 migration (supported by MySQL only at the moment)
-{{% /md %}}</dd>
-    <dt class="property-optional"
+{{% /md %}}</dd><dt class="property-optional"
             title="Optional">
         <span id="password_nodejs">
 <a href="#password_nodejs" style="color: inherit; text-decoration: inherit;">password</a>
@@ -3068,8 +2791,7 @@ migration (supported by MySQL only at the moment)
         <span class="property-type">string</span>
     </dt>
     <dd>{{% md %}}Password for authentication with the server where to migrate data from
-{{% /md %}}</dd>
-    <dt class="property-optional"
+{{% /md %}}</dd><dt class="property-optional"
             title="Optional">
         <span id="port_nodejs">
 <a href="#port_nodejs" style="color: inherit; text-decoration: inherit;">port</a>
@@ -3078,8 +2800,7 @@ migration (supported by MySQL only at the moment)
         <span class="property-type">string</span>
     </dt>
     <dd>{{% md %}}(Required) Port number of the server where to migrate data from
-{{% /md %}}</dd>
-    <dt class="property-optional"
+{{% /md %}}</dd><dt class="property-optional"
             title="Optional">
         <span id="ssl_nodejs">
 <a href="#ssl_nodejs" style="color: inherit; text-decoration: inherit;">ssl</a>
@@ -3088,8 +2809,7 @@ migration (supported by MySQL only at the moment)
         <span class="property-type">string</span>
     </dt>
     <dd>{{% md %}}The server where to migrate data from is secured with SSL
-{{% /md %}}</dd>
-    <dt class="property-optional"
+{{% /md %}}</dd><dt class="property-optional"
             title="Optional">
         <span id="username_nodejs">
 <a href="#username_nodejs" style="color: inherit; text-decoration: inherit;">username</a>
@@ -3098,14 +2818,11 @@ migration (supported by MySQL only at the moment)
         <span class="property-type">string</span>
     </dt>
     <dd>{{% md %}}User name for authentication with the server where to migrate data from
-{{% /md %}}</dd>
-</dl>
+{{% /md %}}</dd></dl>
 {{% /choosable %}}
 
 {{% choosable language python %}}
-<dl class="resources-properties">
-
-    <dt class="property-optional"
+<dl class="resources-properties"><dt class="property-optional"
             title="Optional">
         <span id="dbname_python">
 <a href="#dbname_python" style="color: inherit; text-decoration: inherit;">dbname</a>
@@ -3114,8 +2831,7 @@ migration (supported by MySQL only at the moment)
         <span class="property-type">str</span>
     </dt>
     <dd>{{% md %}}Database name for bootstrapping the initial connection
-{{% /md %}}</dd>
-    <dt class="property-optional"
+{{% /md %}}</dd><dt class="property-optional"
             title="Optional">
         <span id="host_python">
 <a href="#host_python" style="color: inherit; text-decoration: inherit;">host</a>
@@ -3124,8 +2840,7 @@ migration (supported by MySQL only at the moment)
         <span class="property-type">str</span>
     </dt>
     <dd>{{% md %}}(Required) Hostname or IP address of the server where to migrate data from
-{{% /md %}}</dd>
-    <dt class="property-optional"
+{{% /md %}}</dd><dt class="property-optional"
             title="Optional">
         <span id="ignore_dbs_python">
 <a href="#ignore_dbs_python" style="color: inherit; text-decoration: inherit;">ignore_<wbr>dbs</a>
@@ -3135,8 +2850,7 @@ migration (supported by MySQL only at the moment)
     </dt>
     <dd>{{% md %}}Comma-separated list of databases, which should be ignored during
 migration (supported by MySQL only at the moment)
-{{% /md %}}</dd>
-    <dt class="property-optional"
+{{% /md %}}</dd><dt class="property-optional"
             title="Optional">
         <span id="password_python">
 <a href="#password_python" style="color: inherit; text-decoration: inherit;">password</a>
@@ -3145,8 +2859,7 @@ migration (supported by MySQL only at the moment)
         <span class="property-type">str</span>
     </dt>
     <dd>{{% md %}}Password for authentication with the server where to migrate data from
-{{% /md %}}</dd>
-    <dt class="property-optional"
+{{% /md %}}</dd><dt class="property-optional"
             title="Optional">
         <span id="port_python">
 <a href="#port_python" style="color: inherit; text-decoration: inherit;">port</a>
@@ -3155,8 +2868,7 @@ migration (supported by MySQL only at the moment)
         <span class="property-type">str</span>
     </dt>
     <dd>{{% md %}}(Required) Port number of the server where to migrate data from
-{{% /md %}}</dd>
-    <dt class="property-optional"
+{{% /md %}}</dd><dt class="property-optional"
             title="Optional">
         <span id="ssl_python">
 <a href="#ssl_python" style="color: inherit; text-decoration: inherit;">ssl</a>
@@ -3165,8 +2877,7 @@ migration (supported by MySQL only at the moment)
         <span class="property-type">str</span>
     </dt>
     <dd>{{% md %}}The server where to migrate data from is secured with SSL
-{{% /md %}}</dd>
-    <dt class="property-optional"
+{{% /md %}}</dd><dt class="property-optional"
             title="Optional">
         <span id="username_python">
 <a href="#username_python" style="color: inherit; text-decoration: inherit;">username</a>
@@ -3175,8 +2886,7 @@ migration (supported by MySQL only at the moment)
         <span class="property-type">str</span>
     </dt>
     <dd>{{% md %}}User name for authentication with the server where to migrate data from
-{{% /md %}}</dd>
-</dl>
+{{% /md %}}</dd></dl>
 {{% /choosable %}}
 
 <h4 id="getredisredisuserconfigprivateaccess">Get<wbr>Redis<wbr>Redis<wbr>User<wbr>Config<wbr>Private<wbr>Access</h4>
@@ -3184,9 +2894,7 @@ migration (supported by MySQL only at the moment)
 
 
 {{% choosable language csharp %}}
-<dl class="resources-properties">
-
-    <dt class="property-optional"
+<dl class="resources-properties"><dt class="property-optional"
             title="Optional">
         <span id="prometheus_csharp">
 <a href="#prometheus_csharp" style="color: inherit; text-decoration: inherit;">Prometheus</a>
@@ -3196,8 +2904,7 @@ migration (supported by MySQL only at the moment)
     </dt>
     <dd>{{% md %}}Allow clients to connect to prometheus from the public internet 
 for service nodes that are in a project VPC or another type of private network
-{{% /md %}}</dd>
-    <dt class="property-optional"
+{{% /md %}}</dd><dt class="property-optional"
             title="Optional">
         <span id="redis_csharp">
 <a href="#redis_csharp" style="color: inherit; text-decoration: inherit;">Redis</a>
@@ -3206,14 +2913,11 @@ for service nodes that are in a project VPC or another type of private network
         <span class="property-type">string</span>
     </dt>
     <dd>{{% md %}}Redis specific server provided values.
-{{% /md %}}</dd>
-</dl>
+{{% /md %}}</dd></dl>
 {{% /choosable %}}
 
 {{% choosable language go %}}
-<dl class="resources-properties">
-
-    <dt class="property-optional"
+<dl class="resources-properties"><dt class="property-optional"
             title="Optional">
         <span id="prometheus_go">
 <a href="#prometheus_go" style="color: inherit; text-decoration: inherit;">Prometheus</a>
@@ -3223,8 +2927,7 @@ for service nodes that are in a project VPC or another type of private network
     </dt>
     <dd>{{% md %}}Allow clients to connect to prometheus from the public internet 
 for service nodes that are in a project VPC or another type of private network
-{{% /md %}}</dd>
-    <dt class="property-optional"
+{{% /md %}}</dd><dt class="property-optional"
             title="Optional">
         <span id="redis_go">
 <a href="#redis_go" style="color: inherit; text-decoration: inherit;">Redis</a>
@@ -3233,14 +2936,11 @@ for service nodes that are in a project VPC or another type of private network
         <span class="property-type">string</span>
     </dt>
     <dd>{{% md %}}Redis specific server provided values.
-{{% /md %}}</dd>
-</dl>
+{{% /md %}}</dd></dl>
 {{% /choosable %}}
 
 {{% choosable language nodejs %}}
-<dl class="resources-properties">
-
-    <dt class="property-optional"
+<dl class="resources-properties"><dt class="property-optional"
             title="Optional">
         <span id="prometheus_nodejs">
 <a href="#prometheus_nodejs" style="color: inherit; text-decoration: inherit;">prometheus</a>
@@ -3250,8 +2950,7 @@ for service nodes that are in a project VPC or another type of private network
     </dt>
     <dd>{{% md %}}Allow clients to connect to prometheus from the public internet 
 for service nodes that are in a project VPC or another type of private network
-{{% /md %}}</dd>
-    <dt class="property-optional"
+{{% /md %}}</dd><dt class="property-optional"
             title="Optional">
         <span id="redis_nodejs">
 <a href="#redis_nodejs" style="color: inherit; text-decoration: inherit;">redis</a>
@@ -3260,14 +2959,11 @@ for service nodes that are in a project VPC or another type of private network
         <span class="property-type">string</span>
     </dt>
     <dd>{{% md %}}Redis specific server provided values.
-{{% /md %}}</dd>
-</dl>
+{{% /md %}}</dd></dl>
 {{% /choosable %}}
 
 {{% choosable language python %}}
-<dl class="resources-properties">
-
-    <dt class="property-optional"
+<dl class="resources-properties"><dt class="property-optional"
             title="Optional">
         <span id="prometheus_python">
 <a href="#prometheus_python" style="color: inherit; text-decoration: inherit;">prometheus</a>
@@ -3277,8 +2973,7 @@ for service nodes that are in a project VPC or another type of private network
     </dt>
     <dd>{{% md %}}Allow clients to connect to prometheus from the public internet 
 for service nodes that are in a project VPC or another type of private network
-{{% /md %}}</dd>
-    <dt class="property-optional"
+{{% /md %}}</dd><dt class="property-optional"
             title="Optional">
         <span id="redis_python">
 <a href="#redis_python" style="color: inherit; text-decoration: inherit;">redis</a>
@@ -3287,8 +2982,7 @@ for service nodes that are in a project VPC or another type of private network
         <span class="property-type">str</span>
     </dt>
     <dd>{{% md %}}Redis specific server provided values.
-{{% /md %}}</dd>
-</dl>
+{{% /md %}}</dd></dl>
 {{% /choosable %}}
 
 <h4 id="getredisredisuserconfigprivatelinkaccess">Get<wbr>Redis<wbr>Redis<wbr>User<wbr>Config<wbr>Privatelink<wbr>Access</h4>
@@ -3296,9 +2990,7 @@ for service nodes that are in a project VPC or another type of private network
 
 
 {{% choosable language csharp %}}
-<dl class="resources-properties">
-
-    <dt class="property-optional"
+<dl class="resources-properties"><dt class="property-optional"
             title="Optional">
         <span id="redis_csharp">
 <a href="#redis_csharp" style="color: inherit; text-decoration: inherit;">Redis</a>
@@ -3307,14 +2999,11 @@ for service nodes that are in a project VPC or another type of private network
         <span class="property-type">string</span>
     </dt>
     <dd>{{% md %}}Redis specific server provided values.
-{{% /md %}}</dd>
-</dl>
+{{% /md %}}</dd></dl>
 {{% /choosable %}}
 
 {{% choosable language go %}}
-<dl class="resources-properties">
-
-    <dt class="property-optional"
+<dl class="resources-properties"><dt class="property-optional"
             title="Optional">
         <span id="redis_go">
 <a href="#redis_go" style="color: inherit; text-decoration: inherit;">Redis</a>
@@ -3323,14 +3012,11 @@ for service nodes that are in a project VPC or another type of private network
         <span class="property-type">string</span>
     </dt>
     <dd>{{% md %}}Redis specific server provided values.
-{{% /md %}}</dd>
-</dl>
+{{% /md %}}</dd></dl>
 {{% /choosable %}}
 
 {{% choosable language nodejs %}}
-<dl class="resources-properties">
-
-    <dt class="property-optional"
+<dl class="resources-properties"><dt class="property-optional"
             title="Optional">
         <span id="redis_nodejs">
 <a href="#redis_nodejs" style="color: inherit; text-decoration: inherit;">redis</a>
@@ -3339,14 +3025,11 @@ for service nodes that are in a project VPC or another type of private network
         <span class="property-type">string</span>
     </dt>
     <dd>{{% md %}}Redis specific server provided values.
-{{% /md %}}</dd>
-</dl>
+{{% /md %}}</dd></dl>
 {{% /choosable %}}
 
 {{% choosable language python %}}
-<dl class="resources-properties">
-
-    <dt class="property-optional"
+<dl class="resources-properties"><dt class="property-optional"
             title="Optional">
         <span id="redis_python">
 <a href="#redis_python" style="color: inherit; text-decoration: inherit;">redis</a>
@@ -3355,8 +3038,7 @@ for service nodes that are in a project VPC or another type of private network
         <span class="property-type">str</span>
     </dt>
     <dd>{{% md %}}Redis specific server provided values.
-{{% /md %}}</dd>
-</dl>
+{{% /md %}}</dd></dl>
 {{% /choosable %}}
 
 <h4 id="getredisredisuserconfigpublicaccess">Get<wbr>Redis<wbr>Redis<wbr>User<wbr>Config<wbr>Public<wbr>Access</h4>
@@ -3364,9 +3046,7 @@ for service nodes that are in a project VPC or another type of private network
 
 
 {{% choosable language csharp %}}
-<dl class="resources-properties">
-
-    <dt class="property-optional"
+<dl class="resources-properties"><dt class="property-optional"
             title="Optional">
         <span id="prometheus_csharp">
 <a href="#prometheus_csharp" style="color: inherit; text-decoration: inherit;">Prometheus</a>
@@ -3376,8 +3056,7 @@ for service nodes that are in a project VPC or another type of private network
     </dt>
     <dd>{{% md %}}Allow clients to connect to prometheus from the public internet 
 for service nodes that are in a project VPC or another type of private network
-{{% /md %}}</dd>
-    <dt class="property-optional"
+{{% /md %}}</dd><dt class="property-optional"
             title="Optional">
         <span id="redis_csharp">
 <a href="#redis_csharp" style="color: inherit; text-decoration: inherit;">Redis</a>
@@ -3386,14 +3065,11 @@ for service nodes that are in a project VPC or another type of private network
         <span class="property-type">string</span>
     </dt>
     <dd>{{% md %}}Redis specific server provided values.
-{{% /md %}}</dd>
-</dl>
+{{% /md %}}</dd></dl>
 {{% /choosable %}}
 
 {{% choosable language go %}}
-<dl class="resources-properties">
-
-    <dt class="property-optional"
+<dl class="resources-properties"><dt class="property-optional"
             title="Optional">
         <span id="prometheus_go">
 <a href="#prometheus_go" style="color: inherit; text-decoration: inherit;">Prometheus</a>
@@ -3403,8 +3079,7 @@ for service nodes that are in a project VPC or another type of private network
     </dt>
     <dd>{{% md %}}Allow clients to connect to prometheus from the public internet 
 for service nodes that are in a project VPC or another type of private network
-{{% /md %}}</dd>
-    <dt class="property-optional"
+{{% /md %}}</dd><dt class="property-optional"
             title="Optional">
         <span id="redis_go">
 <a href="#redis_go" style="color: inherit; text-decoration: inherit;">Redis</a>
@@ -3413,14 +3088,11 @@ for service nodes that are in a project VPC or another type of private network
         <span class="property-type">string</span>
     </dt>
     <dd>{{% md %}}Redis specific server provided values.
-{{% /md %}}</dd>
-</dl>
+{{% /md %}}</dd></dl>
 {{% /choosable %}}
 
 {{% choosable language nodejs %}}
-<dl class="resources-properties">
-
-    <dt class="property-optional"
+<dl class="resources-properties"><dt class="property-optional"
             title="Optional">
         <span id="prometheus_nodejs">
 <a href="#prometheus_nodejs" style="color: inherit; text-decoration: inherit;">prometheus</a>
@@ -3430,8 +3102,7 @@ for service nodes that are in a project VPC or another type of private network
     </dt>
     <dd>{{% md %}}Allow clients to connect to prometheus from the public internet 
 for service nodes that are in a project VPC or another type of private network
-{{% /md %}}</dd>
-    <dt class="property-optional"
+{{% /md %}}</dd><dt class="property-optional"
             title="Optional">
         <span id="redis_nodejs">
 <a href="#redis_nodejs" style="color: inherit; text-decoration: inherit;">redis</a>
@@ -3440,14 +3111,11 @@ for service nodes that are in a project VPC or another type of private network
         <span class="property-type">string</span>
     </dt>
     <dd>{{% md %}}Redis specific server provided values.
-{{% /md %}}</dd>
-</dl>
+{{% /md %}}</dd></dl>
 {{% /choosable %}}
 
 {{% choosable language python %}}
-<dl class="resources-properties">
-
-    <dt class="property-optional"
+<dl class="resources-properties"><dt class="property-optional"
             title="Optional">
         <span id="prometheus_python">
 <a href="#prometheus_python" style="color: inherit; text-decoration: inherit;">prometheus</a>
@@ -3457,8 +3125,7 @@ for service nodes that are in a project VPC or another type of private network
     </dt>
     <dd>{{% md %}}Allow clients to connect to prometheus from the public internet 
 for service nodes that are in a project VPC or another type of private network
-{{% /md %}}</dd>
-    <dt class="property-optional"
+{{% /md %}}</dd><dt class="property-optional"
             title="Optional">
         <span id="redis_python">
 <a href="#redis_python" style="color: inherit; text-decoration: inherit;">redis</a>
@@ -3467,8 +3134,7 @@ for service nodes that are in a project VPC or another type of private network
         <span class="property-type">str</span>
     </dt>
     <dd>{{% md %}}Redis specific server provided values.
-{{% /md %}}</dd>
-</dl>
+{{% /md %}}</dd></dl>
 {{% /choosable %}}
 
 <h4 id="getredisserviceintegration">Get<wbr>Redis<wbr>Service<wbr>Integration</h4>
@@ -3476,9 +3142,7 @@ for service nodes that are in a project VPC or another type of private network
 
 
 {{% choosable language csharp %}}
-<dl class="resources-properties">
-
-    <dt class="property-required"
+<dl class="resources-properties"><dt class="property-required"
             title="Required">
         <span id="integrationtype_csharp">
 <a href="#integrationtype_csharp" style="color: inherit; text-decoration: inherit;">Integration<wbr>Type</a>
@@ -3486,8 +3150,7 @@ for service nodes that are in a project VPC or another type of private network
         <span class="property-indicator"></span>
         <span class="property-type">string</span>
     </dt>
-    <dd>{{% md %}}{{% /md %}}</dd>
-    <dt class="property-required"
+    <dd>{{% md %}}{{% /md %}}</dd><dt class="property-required"
             title="Required">
         <span id="sourceservicename_csharp">
 <a href="#sourceservicename_csharp" style="color: inherit; text-decoration: inherit;">Source<wbr>Service<wbr>Name</a>
@@ -3495,14 +3158,11 @@ for service nodes that are in a project VPC or another type of private network
         <span class="property-indicator"></span>
         <span class="property-type">string</span>
     </dt>
-    <dd>{{% md %}}{{% /md %}}</dd>
-</dl>
+    <dd>{{% md %}}{{% /md %}}</dd></dl>
 {{% /choosable %}}
 
 {{% choosable language go %}}
-<dl class="resources-properties">
-
-    <dt class="property-required"
+<dl class="resources-properties"><dt class="property-required"
             title="Required">
         <span id="integrationtype_go">
 <a href="#integrationtype_go" style="color: inherit; text-decoration: inherit;">Integration<wbr>Type</a>
@@ -3510,8 +3170,7 @@ for service nodes that are in a project VPC or another type of private network
         <span class="property-indicator"></span>
         <span class="property-type">string</span>
     </dt>
-    <dd>{{% md %}}{{% /md %}}</dd>
-    <dt class="property-required"
+    <dd>{{% md %}}{{% /md %}}</dd><dt class="property-required"
             title="Required">
         <span id="sourceservicename_go">
 <a href="#sourceservicename_go" style="color: inherit; text-decoration: inherit;">Source<wbr>Service<wbr>Name</a>
@@ -3519,14 +3178,11 @@ for service nodes that are in a project VPC or another type of private network
         <span class="property-indicator"></span>
         <span class="property-type">string</span>
     </dt>
-    <dd>{{% md %}}{{% /md %}}</dd>
-</dl>
+    <dd>{{% md %}}{{% /md %}}</dd></dl>
 {{% /choosable %}}
 
 {{% choosable language nodejs %}}
-<dl class="resources-properties">
-
-    <dt class="property-required"
+<dl class="resources-properties"><dt class="property-required"
             title="Required">
         <span id="integrationtype_nodejs">
 <a href="#integrationtype_nodejs" style="color: inherit; text-decoration: inherit;">integration<wbr>Type</a>
@@ -3534,8 +3190,7 @@ for service nodes that are in a project VPC or another type of private network
         <span class="property-indicator"></span>
         <span class="property-type">string</span>
     </dt>
-    <dd>{{% md %}}{{% /md %}}</dd>
-    <dt class="property-required"
+    <dd>{{% md %}}{{% /md %}}</dd><dt class="property-required"
             title="Required">
         <span id="sourceservicename_nodejs">
 <a href="#sourceservicename_nodejs" style="color: inherit; text-decoration: inherit;">source<wbr>Service<wbr>Name</a>
@@ -3543,14 +3198,11 @@ for service nodes that are in a project VPC or another type of private network
         <span class="property-indicator"></span>
         <span class="property-type">string</span>
     </dt>
-    <dd>{{% md %}}{{% /md %}}</dd>
-</dl>
+    <dd>{{% md %}}{{% /md %}}</dd></dl>
 {{% /choosable %}}
 
 {{% choosable language python %}}
-<dl class="resources-properties">
-
-    <dt class="property-required"
+<dl class="resources-properties"><dt class="property-required"
             title="Required">
         <span id="integration_type_python">
 <a href="#integration_type_python" style="color: inherit; text-decoration: inherit;">integration_<wbr>type</a>
@@ -3558,8 +3210,7 @@ for service nodes that are in a project VPC or another type of private network
         <span class="property-indicator"></span>
         <span class="property-type">str</span>
     </dt>
-    <dd>{{% md %}}{{% /md %}}</dd>
-    <dt class="property-required"
+    <dd>{{% md %}}{{% /md %}}</dd><dt class="property-required"
             title="Required">
         <span id="source_service_name_python">
 <a href="#source_service_name_python" style="color: inherit; text-decoration: inherit;">source_<wbr>service_<wbr>name</a>
@@ -3567,8 +3218,7 @@ for service nodes that are in a project VPC or another type of private network
         <span class="property-indicator"></span>
         <span class="property-type">str</span>
     </dt>
-    <dd>{{% md %}}{{% /md %}}</dd>
-</dl>
+    <dd>{{% md %}}{{% /md %}}</dd></dl>
 {{% /choosable %}}
 
 
@@ -3582,6 +3232,6 @@ for service nodes that are in a project VPC or another type of private network
 	<dt>License</dt>
 	<dd>Apache-2.0</dd>
 	<dt>Notes</dt>
-	<dd>This Pulumi package is based on the [`aiven` Terraform Provider](https://github.com/aiven/terraform-provider-aiven).</dd>
+	<dd>{{% md %}}This Pulumi package is based on the [`aiven` Terraform Provider](https://github.com/aiven/terraform-provider-aiven).{{% /md %}}</dd>
 </dl>
 

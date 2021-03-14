@@ -20,11 +20,17 @@ Ports. Please see the `openstack.compute.Instance` documentation for further
 documentation.
 
 {{% examples %}}
+
 ## Example Usage
 
 {{< chooser language "typescript,python,go,csharp" / >}}
+
+
 ### Simple port
-{{% example csharp %}}
+
+
+{{< example csharp >}}
+
 ```csharp
 using Pulumi;
 using OpenStack = Pulumi.OpenStack;
@@ -47,9 +53,12 @@ class MyStack : Stack
 }
 ```
 
-{{% /example %}}
 
-{{% example go %}}
+{{< /example >}}
+
+
+{{< example go >}}
+
 ```go
 package main
 
@@ -78,9 +87,12 @@ func main() {
 }
 ```
 
-{{% /example %}}
 
-{{% example python %}}
+{{< /example >}}
+
+
+{{< example python >}}
+
 ```python
 import pulumi
 import pulumi_openstack as openstack
@@ -91,9 +103,12 @@ port1 = openstack.networking.Port("port1",
     network_id=network1.id)
 ```
 
-{{% /example %}}
 
-{{% example typescript %}}
+{{< /example >}}
+
+
+{{< example typescript >}}
+
 
 ```typescript
 import * as pulumi from "@pulumi/pulumi";
@@ -108,10 +123,17 @@ const port1 = new openstack.networking.Port("port_1", {
 });
 ```
 
-{{% /example %}}
+
+{{< /example >}}
+
+
+
 
 ### Port with physical binding information
-{{% example csharp %}}
+
+
+{{< example csharp >}}
+
 ```csharp
 using Pulumi;
 using OpenStack = Pulumi.OpenStack;
@@ -158,9 +180,12 @@ class MyStack : Stack
 }
 ```
 
-{{% /example %}}
 
-{{% example go %}}
+{{< /example >}}
+
+
+{{< example go >}}
+
 ```go
 package main
 
@@ -198,9 +223,12 @@ func main() {
 }
 ```
 
-{{% /example %}}
 
-{{% example python %}}
+{{< /example >}}
+
+
+{{< example python >}}
+
 ```python
 import pulumi
 import pulumi_openstack as openstack
@@ -234,9 +262,12 @@ port1 = openstack.networking.Port("port1",
     network_id=network1.id)
 ```
 
-{{% /example %}}
 
-{{% example typescript %}}
+{{< /example >}}
+
+
+{{< example typescript >}}
+
 
 ```typescript
 import * as pulumi from "@pulumi/pulumi";
@@ -273,9 +304,16 @@ const port1 = new openstack.networking.Port("port_1", {
 });
 ```
 
-{{% /example %}}
+
+{{< /example >}}
+
+
+
+
 
 {{% /examples %}}
+
+
 
 
 ## Create a Port Resource {#create}
@@ -300,9 +338,7 @@ const port1 = new openstack.networking.Port("port_1", {
 
 {{% choosable language nodejs %}}
 
-<dl class="resources-properties">
-  
-    <dt
+<dl class="resources-properties"><dt
         class="property-required" title="Required">
         <span>name</span>
         <span class="property-indicator"></span>
@@ -310,9 +346,7 @@ const port1 = new openstack.networking.Port("port_1", {
     </dt>
     <dd>
       The unique name of the resource.
-    </dd>
-  
-    <dt
+    </dd><dt
         class="property-required" title="Required">
         <span>args</span>
         <span class="property-indicator"></span>
@@ -320,9 +354,7 @@ const port1 = new openstack.networking.Port("port_1", {
     </dt>
     <dd>
       The arguments to resource properties.
-    </dd>
-  
-    <dt
+    </dd><dt
         class="property-optional" title="Optional">
         <span>opts</span>
         <span class="property-indicator"></span>
@@ -330,10 +362,7 @@ const port1 = new openstack.networking.Port("port_1", {
     </dt>
     <dd>
       Bag of options to control resource&#39;s behavior.
-    </dd>
-  
-
-</dl>
+    </dd></dl>
 
 {{% /choosable %}}
 
@@ -359,9 +388,7 @@ const port1 = new openstack.networking.Port("port_1", {
 
 {{% choosable language go %}}
 
-<dl class="resources-properties">
-  
-    <dt
+<dl class="resources-properties"><dt
         class="property-optional" title="Optional">
         <span>ctx</span>
         <span class="property-indicator"></span>
@@ -369,9 +396,7 @@ const port1 = new openstack.networking.Port("port_1", {
     </dt>
     <dd>
       Context object for the current deployment.
-    </dd>
-  
-    <dt
+    </dd><dt
         class="property-required" title="Required">
         <span>name</span>
         <span class="property-indicator"></span>
@@ -379,9 +404,7 @@ const port1 = new openstack.networking.Port("port_1", {
     </dt>
     <dd>
       The unique name of the resource.
-    </dd>
-  
-    <dt
+    </dd><dt
         class="property-required" title="Required">
         <span>args</span>
         <span class="property-indicator"></span>
@@ -389,9 +412,7 @@ const port1 = new openstack.networking.Port("port_1", {
     </dt>
     <dd>
       The arguments to resource properties.
-    </dd>
-  
-    <dt
+    </dd><dt
         class="property-optional" title="Optional">
         <span>opts</span>
         <span class="property-indicator"></span>
@@ -399,18 +420,13 @@ const port1 = new openstack.networking.Port("port_1", {
     </dt>
     <dd>
       Bag of options to control resource&#39;s behavior.
-    </dd>
-  
-
-</dl>
+    </dd></dl>
 
 {{% /choosable %}}
 
 {{% choosable language csharp %}}
 
-<dl class="resources-properties">
-  
-    <dt
+<dl class="resources-properties"><dt
         class="property-required" title="Required">
         <span>name</span>
         <span class="property-indicator"></span>
@@ -418,9 +434,7 @@ const port1 = new openstack.networking.Port("port_1", {
     </dt>
     <dd>
       The unique name of the resource.
-    </dd>
-  
-    <dt
+    </dd><dt
         class="property-required" title="Required">
         <span>args</span>
         <span class="property-indicator"></span>
@@ -428,9 +442,7 @@ const port1 = new openstack.networking.Port("port_1", {
     </dt>
     <dd>
       The arguments to resource properties.
-    </dd>
-  
-    <dt
+    </dd><dt
         class="property-optional" title="Optional">
         <span>opts</span>
         <span class="property-indicator"></span>
@@ -438,10 +450,7 @@ const port1 = new openstack.networking.Port("port_1", {
     </dt>
     <dd>
       Bag of options to control resource&#39;s behavior.
-    </dd>
-  
-
-</dl>
+    </dd></dl>
 
 {{% /choosable %}}
 
@@ -456,9 +465,7 @@ The Port resource accepts the following [input]({{< relref "/docs/intro/concepts
 
 
 {{% choosable language csharp %}}
-<dl class="resources-properties">
-
-    <dt class="property-required"
+<dl class="resources-properties"><dt class="property-required"
             title="Required">
         <span id="networkid_csharp">
 <a href="#networkid_csharp" style="color: inherit; text-decoration: inherit;">Network<wbr>Id</a>
@@ -468,8 +475,7 @@ The Port resource accepts the following [input]({{< relref "/docs/intro/concepts
     </dt>
     <dd>{{% md %}}The ID of the network to attach the port to. Changing
 this creates a new port.
-{{% /md %}}</dd>
-    <dt class="property-optional"
+{{% /md %}}</dd><dt class="property-optional"
             title="Optional">
         <span id="adminstateup_csharp">
 <a href="#adminstateup_csharp" style="color: inherit; text-decoration: inherit;">Admin<wbr>State<wbr>Up</a>
@@ -480,8 +486,7 @@ this creates a new port.
     <dd>{{% md %}}Administrative up/down status for the port
 (must be `true` or `false` if provided). Changing this updates the
 `admin_state_up` of an existing port.
-{{% /md %}}</dd>
-    <dt class="property-optional"
+{{% /md %}}</dd><dt class="property-optional"
             title="Optional">
         <span id="allowedaddresspairs_csharp">
 <a href="#allowedaddresspairs_csharp" style="color: inherit; text-decoration: inherit;">Allowed<wbr>Address<wbr>Pairs</a>
@@ -492,8 +497,7 @@ this creates a new port.
     <dd>{{% md %}}An IP/MAC Address pair of additional IP
 addresses that can be active on this port. The structure is described
 below.
-{{% /md %}}</dd>
-    <dt class="property-optional"
+{{% /md %}}</dd><dt class="property-optional"
             title="Optional">
         <span id="binding_csharp">
 <a href="#binding_csharp" style="color: inherit; text-decoration: inherit;">Binding</a>
@@ -503,8 +507,7 @@ below.
     </dt>
     <dd>{{% md %}}The port binding allows to specify binding information
 for the port. The structure is described below.
-{{% /md %}}</dd>
-    <dt class="property-optional"
+{{% /md %}}</dd><dt class="property-optional"
             title="Optional">
         <span id="description_csharp">
 <a href="#description_csharp" style="color: inherit; text-decoration: inherit;">Description</a>
@@ -514,8 +517,7 @@ for the port. The structure is described below.
     </dt>
     <dd>{{% md %}}Human-readable description of the port. Changing
 this updates the `description` of an existing port.
-{{% /md %}}</dd>
-    <dt class="property-optional"
+{{% /md %}}</dd><dt class="property-optional"
             title="Optional">
         <span id="deviceid_csharp">
 <a href="#deviceid_csharp" style="color: inherit; text-decoration: inherit;">Device<wbr>Id</a>
@@ -525,8 +527,7 @@ this updates the `description` of an existing port.
     </dt>
     <dd>{{% md %}}The ID of the device attached to the port. Changing this
 creates a new port.
-{{% /md %}}</dd>
-    <dt class="property-optional"
+{{% /md %}}</dd><dt class="property-optional"
             title="Optional">
         <span id="deviceowner_csharp">
 <a href="#deviceowner_csharp" style="color: inherit; text-decoration: inherit;">Device<wbr>Owner</a>
@@ -536,8 +537,7 @@ creates a new port.
     </dt>
     <dd>{{% md %}}The device owner of the port. Changing this creates
 a new port.
-{{% /md %}}</dd>
-    <dt class="property-optional"
+{{% /md %}}</dd><dt class="property-optional"
             title="Optional">
         <span id="dnsname_csharp">
 <a href="#dnsname_csharp" style="color: inherit; text-decoration: inherit;">Dns<wbr>Name</a>
@@ -547,8 +547,7 @@ a new port.
     </dt>
     <dd>{{% md %}}The port DNS name. Available, when Neutron DNS extension
 is enabled.
-{{% /md %}}</dd>
-    <dt class="property-optional"
+{{% /md %}}</dd><dt class="property-optional"
             title="Optional">
         <span id="extradhcpoptions_csharp">
 <a href="#extradhcpoptions_csharp" style="color: inherit; text-decoration: inherit;">Extra<wbr>Dhcp<wbr>Options</a>
@@ -559,8 +558,7 @@ is enabled.
     <dd>{{% md %}}An extra DHCP option that needs to be configured
 on the port. The structure is described below. Can be specified multiple
 times.
-{{% /md %}}</dd>
-    <dt class="property-optional"
+{{% /md %}}</dd><dt class="property-optional"
             title="Optional">
         <span id="fixedips_csharp">
 <a href="#fixedips_csharp" style="color: inherit; text-decoration: inherit;">Fixed<wbr>Ips</a>
@@ -570,8 +568,7 @@ times.
     </dt>
     <dd>{{% md %}}An array of desired IPs for
 this port. The structure is described below.
-{{% /md %}}</dd>
-    <dt class="property-optional"
+{{% /md %}}</dd><dt class="property-optional"
             title="Optional">
         <span id="macaddress_csharp">
 <a href="#macaddress_csharp" style="color: inherit; text-decoration: inherit;">Mac<wbr>Address</a>
@@ -580,8 +577,7 @@ this port. The structure is described below.
         <span class="property-type">string</span>
     </dt>
     <dd>{{% md %}}The additional MAC address.
-{{% /md %}}</dd>
-    <dt class="property-optional"
+{{% /md %}}</dd><dt class="property-optional"
             title="Optional">
         <span id="name_csharp">
 <a href="#name_csharp" style="color: inherit; text-decoration: inherit;">Name</a>
@@ -590,8 +586,7 @@ this port. The structure is described below.
         <span class="property-type">string</span>
     </dt>
     <dd>{{% md %}}Name of the DHCP option.
-{{% /md %}}</dd>
-    <dt class="property-optional"
+{{% /md %}}</dd><dt class="property-optional"
             title="Optional">
         <span id="nofixedip_csharp">
 <a href="#nofixedip_csharp" style="color: inherit; text-decoration: inherit;">No<wbr>Fixed<wbr>Ip</a>
@@ -602,8 +597,7 @@ this port. The structure is described below.
     <dd>{{% md %}}Create a port with no fixed
 IP address. This will also remove any fixed IPs previously set on a port. `true`
 is the only valid value for this argument.
-{{% /md %}}</dd>
-    <dt class="property-optional"
+{{% /md %}}</dd><dt class="property-optional"
             title="Optional">
         <span id="nosecuritygroups_csharp">
 <a href="#nosecuritygroups_csharp" style="color: inherit; text-decoration: inherit;">No<wbr>Security<wbr>Groups</a>
@@ -616,8 +610,7 @@ is the only valid value for this argument.
 no `security_group_ids` are specified, then the port will yield to the default
 behavior of the Networking service, which is to usually apply the "default"
 security group.
-{{% /md %}}</dd>
-    <dt class="property-optional"
+{{% /md %}}</dd><dt class="property-optional"
             title="Optional">
         <span id="portsecurityenabled_csharp">
 <a href="#portsecurityenabled_csharp" style="color: inherit; text-decoration: inherit;">Port<wbr>Security<wbr>Enabled</a>
@@ -631,8 +624,7 @@ omitting argument will usually result in a value of `true`. Setting this
 explicitly to `false` will disable port security. In order to disable port
 security, the port must not have any security groups. Valid values are `true`
 and `false`.
-{{% /md %}}</dd>
-    <dt class="property-optional"
+{{% /md %}}</dd><dt class="property-optional"
             title="Optional">
         <span id="qospolicyid_csharp">
 <a href="#qospolicyid_csharp" style="color: inherit; text-decoration: inherit;">Qos<wbr>Policy<wbr>Id</a>
@@ -641,8 +633,7 @@ and `false`.
         <span class="property-type">string</span>
     </dt>
     <dd>{{% md %}}Reference to the associated QoS policy.
-{{% /md %}}</dd>
-    <dt class="property-optional"
+{{% /md %}}</dd><dt class="property-optional"
             title="Optional">
         <span id="region_csharp">
 <a href="#region_csharp" style="color: inherit; text-decoration: inherit;">Region</a>
@@ -654,8 +645,7 @@ and `false`.
 A Networking client is needed to create a port. If omitted, the
 `region` argument of the provider is used. Changing this creates a new
 port.
-{{% /md %}}</dd>
-    <dt class="property-optional"
+{{% /md %}}</dd><dt class="property-optional"
             title="Optional">
         <span id="securitygroupids_csharp">
 <a href="#securitygroupids_csharp" style="color: inherit; text-decoration: inherit;">Security<wbr>Group<wbr>Ids</a>
@@ -667,8 +657,7 @@ port.
 of security group IDs to apply to the port. The security groups must be
 specified by ID and not name (as opposed to how they are configured with
 the Compute Instance).
-{{% /md %}}</dd>
-    <dt class="property-optional"
+{{% /md %}}</dd><dt class="property-optional"
             title="Optional">
         <span id="tags_csharp">
 <a href="#tags_csharp" style="color: inherit; text-decoration: inherit;">Tags</a>
@@ -677,8 +666,7 @@ the Compute Instance).
         <span class="property-type">List&lt;string&gt;</span>
     </dt>
     <dd>{{% md %}}A set of string tags for the port.
-{{% /md %}}</dd>
-    <dt class="property-optional"
+{{% /md %}}</dd><dt class="property-optional"
             title="Optional">
         <span id="tenantid_csharp">
 <a href="#tenantid_csharp" style="color: inherit; text-decoration: inherit;">Tenant<wbr>Id</a>
@@ -688,8 +676,7 @@ the Compute Instance).
     </dt>
     <dd>{{% md %}}The owner of the port. Required if admin wants
 to create a port for another tenant. Changing this creates a new port.
-{{% /md %}}</dd>
-    <dt class="property-optional"
+{{% /md %}}</dd><dt class="property-optional"
             title="Optional">
         <span id="valuespecs_csharp">
 <a href="#valuespecs_csharp" style="color: inherit; text-decoration: inherit;">Value<wbr>Specs</a>
@@ -698,14 +685,11 @@ to create a port for another tenant. Changing this creates a new port.
         <span class="property-type">Dictionary&lt;string, object&gt;</span>
     </dt>
     <dd>{{% md %}}Map of additional options.
-{{% /md %}}</dd>
-</dl>
+{{% /md %}}</dd></dl>
 {{% /choosable %}}
 
 {{% choosable language go %}}
-<dl class="resources-properties">
-
-    <dt class="property-required"
+<dl class="resources-properties"><dt class="property-required"
             title="Required">
         <span id="networkid_go">
 <a href="#networkid_go" style="color: inherit; text-decoration: inherit;">Network<wbr>Id</a>
@@ -715,8 +699,7 @@ to create a port for another tenant. Changing this creates a new port.
     </dt>
     <dd>{{% md %}}The ID of the network to attach the port to. Changing
 this creates a new port.
-{{% /md %}}</dd>
-    <dt class="property-optional"
+{{% /md %}}</dd><dt class="property-optional"
             title="Optional">
         <span id="adminstateup_go">
 <a href="#adminstateup_go" style="color: inherit; text-decoration: inherit;">Admin<wbr>State<wbr>Up</a>
@@ -727,8 +710,7 @@ this creates a new port.
     <dd>{{% md %}}Administrative up/down status for the port
 (must be `true` or `false` if provided). Changing this updates the
 `admin_state_up` of an existing port.
-{{% /md %}}</dd>
-    <dt class="property-optional"
+{{% /md %}}</dd><dt class="property-optional"
             title="Optional">
         <span id="allowedaddresspairs_go">
 <a href="#allowedaddresspairs_go" style="color: inherit; text-decoration: inherit;">Allowed<wbr>Address<wbr>Pairs</a>
@@ -739,8 +721,7 @@ this creates a new port.
     <dd>{{% md %}}An IP/MAC Address pair of additional IP
 addresses that can be active on this port. The structure is described
 below.
-{{% /md %}}</dd>
-    <dt class="property-optional"
+{{% /md %}}</dd><dt class="property-optional"
             title="Optional">
         <span id="binding_go">
 <a href="#binding_go" style="color: inherit; text-decoration: inherit;">Binding</a>
@@ -750,8 +731,7 @@ below.
     </dt>
     <dd>{{% md %}}The port binding allows to specify binding information
 for the port. The structure is described below.
-{{% /md %}}</dd>
-    <dt class="property-optional"
+{{% /md %}}</dd><dt class="property-optional"
             title="Optional">
         <span id="description_go">
 <a href="#description_go" style="color: inherit; text-decoration: inherit;">Description</a>
@@ -761,8 +741,7 @@ for the port. The structure is described below.
     </dt>
     <dd>{{% md %}}Human-readable description of the port. Changing
 this updates the `description` of an existing port.
-{{% /md %}}</dd>
-    <dt class="property-optional"
+{{% /md %}}</dd><dt class="property-optional"
             title="Optional">
         <span id="deviceid_go">
 <a href="#deviceid_go" style="color: inherit; text-decoration: inherit;">Device<wbr>Id</a>
@@ -772,8 +751,7 @@ this updates the `description` of an existing port.
     </dt>
     <dd>{{% md %}}The ID of the device attached to the port. Changing this
 creates a new port.
-{{% /md %}}</dd>
-    <dt class="property-optional"
+{{% /md %}}</dd><dt class="property-optional"
             title="Optional">
         <span id="deviceowner_go">
 <a href="#deviceowner_go" style="color: inherit; text-decoration: inherit;">Device<wbr>Owner</a>
@@ -783,8 +761,7 @@ creates a new port.
     </dt>
     <dd>{{% md %}}The device owner of the port. Changing this creates
 a new port.
-{{% /md %}}</dd>
-    <dt class="property-optional"
+{{% /md %}}</dd><dt class="property-optional"
             title="Optional">
         <span id="dnsname_go">
 <a href="#dnsname_go" style="color: inherit; text-decoration: inherit;">Dns<wbr>Name</a>
@@ -794,8 +771,7 @@ a new port.
     </dt>
     <dd>{{% md %}}The port DNS name. Available, when Neutron DNS extension
 is enabled.
-{{% /md %}}</dd>
-    <dt class="property-optional"
+{{% /md %}}</dd><dt class="property-optional"
             title="Optional">
         <span id="extradhcpoptions_go">
 <a href="#extradhcpoptions_go" style="color: inherit; text-decoration: inherit;">Extra<wbr>Dhcp<wbr>Options</a>
@@ -806,8 +782,7 @@ is enabled.
     <dd>{{% md %}}An extra DHCP option that needs to be configured
 on the port. The structure is described below. Can be specified multiple
 times.
-{{% /md %}}</dd>
-    <dt class="property-optional"
+{{% /md %}}</dd><dt class="property-optional"
             title="Optional">
         <span id="fixedips_go">
 <a href="#fixedips_go" style="color: inherit; text-decoration: inherit;">Fixed<wbr>Ips</a>
@@ -817,8 +792,7 @@ times.
     </dt>
     <dd>{{% md %}}An array of desired IPs for
 this port. The structure is described below.
-{{% /md %}}</dd>
-    <dt class="property-optional"
+{{% /md %}}</dd><dt class="property-optional"
             title="Optional">
         <span id="macaddress_go">
 <a href="#macaddress_go" style="color: inherit; text-decoration: inherit;">Mac<wbr>Address</a>
@@ -827,8 +801,7 @@ this port. The structure is described below.
         <span class="property-type">string</span>
     </dt>
     <dd>{{% md %}}The additional MAC address.
-{{% /md %}}</dd>
-    <dt class="property-optional"
+{{% /md %}}</dd><dt class="property-optional"
             title="Optional">
         <span id="name_go">
 <a href="#name_go" style="color: inherit; text-decoration: inherit;">Name</a>
@@ -837,8 +810,7 @@ this port. The structure is described below.
         <span class="property-type">string</span>
     </dt>
     <dd>{{% md %}}Name of the DHCP option.
-{{% /md %}}</dd>
-    <dt class="property-optional"
+{{% /md %}}</dd><dt class="property-optional"
             title="Optional">
         <span id="nofixedip_go">
 <a href="#nofixedip_go" style="color: inherit; text-decoration: inherit;">No<wbr>Fixed<wbr>Ip</a>
@@ -849,8 +821,7 @@ this port. The structure is described below.
     <dd>{{% md %}}Create a port with no fixed
 IP address. This will also remove any fixed IPs previously set on a port. `true`
 is the only valid value for this argument.
-{{% /md %}}</dd>
-    <dt class="property-optional"
+{{% /md %}}</dd><dt class="property-optional"
             title="Optional">
         <span id="nosecuritygroups_go">
 <a href="#nosecuritygroups_go" style="color: inherit; text-decoration: inherit;">No<wbr>Security<wbr>Groups</a>
@@ -863,8 +834,7 @@ is the only valid value for this argument.
 no `security_group_ids` are specified, then the port will yield to the default
 behavior of the Networking service, which is to usually apply the "default"
 security group.
-{{% /md %}}</dd>
-    <dt class="property-optional"
+{{% /md %}}</dd><dt class="property-optional"
             title="Optional">
         <span id="portsecurityenabled_go">
 <a href="#portsecurityenabled_go" style="color: inherit; text-decoration: inherit;">Port<wbr>Security<wbr>Enabled</a>
@@ -878,8 +848,7 @@ omitting argument will usually result in a value of `true`. Setting this
 explicitly to `false` will disable port security. In order to disable port
 security, the port must not have any security groups. Valid values are `true`
 and `false`.
-{{% /md %}}</dd>
-    <dt class="property-optional"
+{{% /md %}}</dd><dt class="property-optional"
             title="Optional">
         <span id="qospolicyid_go">
 <a href="#qospolicyid_go" style="color: inherit; text-decoration: inherit;">Qos<wbr>Policy<wbr>Id</a>
@@ -888,8 +857,7 @@ and `false`.
         <span class="property-type">string</span>
     </dt>
     <dd>{{% md %}}Reference to the associated QoS policy.
-{{% /md %}}</dd>
-    <dt class="property-optional"
+{{% /md %}}</dd><dt class="property-optional"
             title="Optional">
         <span id="region_go">
 <a href="#region_go" style="color: inherit; text-decoration: inherit;">Region</a>
@@ -901,8 +869,7 @@ and `false`.
 A Networking client is needed to create a port. If omitted, the
 `region` argument of the provider is used. Changing this creates a new
 port.
-{{% /md %}}</dd>
-    <dt class="property-optional"
+{{% /md %}}</dd><dt class="property-optional"
             title="Optional">
         <span id="securitygroupids_go">
 <a href="#securitygroupids_go" style="color: inherit; text-decoration: inherit;">Security<wbr>Group<wbr>Ids</a>
@@ -914,8 +881,7 @@ port.
 of security group IDs to apply to the port. The security groups must be
 specified by ID and not name (as opposed to how they are configured with
 the Compute Instance).
-{{% /md %}}</dd>
-    <dt class="property-optional"
+{{% /md %}}</dd><dt class="property-optional"
             title="Optional">
         <span id="tags_go">
 <a href="#tags_go" style="color: inherit; text-decoration: inherit;">Tags</a>
@@ -924,8 +890,7 @@ the Compute Instance).
         <span class="property-type">[]string</span>
     </dt>
     <dd>{{% md %}}A set of string tags for the port.
-{{% /md %}}</dd>
-    <dt class="property-optional"
+{{% /md %}}</dd><dt class="property-optional"
             title="Optional">
         <span id="tenantid_go">
 <a href="#tenantid_go" style="color: inherit; text-decoration: inherit;">Tenant<wbr>Id</a>
@@ -935,8 +900,7 @@ the Compute Instance).
     </dt>
     <dd>{{% md %}}The owner of the port. Required if admin wants
 to create a port for another tenant. Changing this creates a new port.
-{{% /md %}}</dd>
-    <dt class="property-optional"
+{{% /md %}}</dd><dt class="property-optional"
             title="Optional">
         <span id="valuespecs_go">
 <a href="#valuespecs_go" style="color: inherit; text-decoration: inherit;">Value<wbr>Specs</a>
@@ -945,14 +909,11 @@ to create a port for another tenant. Changing this creates a new port.
         <span class="property-type">map[string]interface{}</span>
     </dt>
     <dd>{{% md %}}Map of additional options.
-{{% /md %}}</dd>
-</dl>
+{{% /md %}}</dd></dl>
 {{% /choosable %}}
 
 {{% choosable language nodejs %}}
-<dl class="resources-properties">
-
-    <dt class="property-required"
+<dl class="resources-properties"><dt class="property-required"
             title="Required">
         <span id="networkid_nodejs">
 <a href="#networkid_nodejs" style="color: inherit; text-decoration: inherit;">network<wbr>Id</a>
@@ -962,8 +923,7 @@ to create a port for another tenant. Changing this creates a new port.
     </dt>
     <dd>{{% md %}}The ID of the network to attach the port to. Changing
 this creates a new port.
-{{% /md %}}</dd>
-    <dt class="property-optional"
+{{% /md %}}</dd><dt class="property-optional"
             title="Optional">
         <span id="adminstateup_nodejs">
 <a href="#adminstateup_nodejs" style="color: inherit; text-decoration: inherit;">admin<wbr>State<wbr>Up</a>
@@ -974,8 +934,7 @@ this creates a new port.
     <dd>{{% md %}}Administrative up/down status for the port
 (must be `true` or `false` if provided). Changing this updates the
 `admin_state_up` of an existing port.
-{{% /md %}}</dd>
-    <dt class="property-optional"
+{{% /md %}}</dd><dt class="property-optional"
             title="Optional">
         <span id="allowedaddresspairs_nodejs">
 <a href="#allowedaddresspairs_nodejs" style="color: inherit; text-decoration: inherit;">allowed<wbr>Address<wbr>Pairs</a>
@@ -986,8 +945,7 @@ this creates a new port.
     <dd>{{% md %}}An IP/MAC Address pair of additional IP
 addresses that can be active on this port. The structure is described
 below.
-{{% /md %}}</dd>
-    <dt class="property-optional"
+{{% /md %}}</dd><dt class="property-optional"
             title="Optional">
         <span id="binding_nodejs">
 <a href="#binding_nodejs" style="color: inherit; text-decoration: inherit;">binding</a>
@@ -997,8 +955,7 @@ below.
     </dt>
     <dd>{{% md %}}The port binding allows to specify binding information
 for the port. The structure is described below.
-{{% /md %}}</dd>
-    <dt class="property-optional"
+{{% /md %}}</dd><dt class="property-optional"
             title="Optional">
         <span id="description_nodejs">
 <a href="#description_nodejs" style="color: inherit; text-decoration: inherit;">description</a>
@@ -1008,8 +965,7 @@ for the port. The structure is described below.
     </dt>
     <dd>{{% md %}}Human-readable description of the port. Changing
 this updates the `description` of an existing port.
-{{% /md %}}</dd>
-    <dt class="property-optional"
+{{% /md %}}</dd><dt class="property-optional"
             title="Optional">
         <span id="deviceid_nodejs">
 <a href="#deviceid_nodejs" style="color: inherit; text-decoration: inherit;">device<wbr>Id</a>
@@ -1019,8 +975,7 @@ this updates the `description` of an existing port.
     </dt>
     <dd>{{% md %}}The ID of the device attached to the port. Changing this
 creates a new port.
-{{% /md %}}</dd>
-    <dt class="property-optional"
+{{% /md %}}</dd><dt class="property-optional"
             title="Optional">
         <span id="deviceowner_nodejs">
 <a href="#deviceowner_nodejs" style="color: inherit; text-decoration: inherit;">device<wbr>Owner</a>
@@ -1030,8 +985,7 @@ creates a new port.
     </dt>
     <dd>{{% md %}}The device owner of the port. Changing this creates
 a new port.
-{{% /md %}}</dd>
-    <dt class="property-optional"
+{{% /md %}}</dd><dt class="property-optional"
             title="Optional">
         <span id="dnsname_nodejs">
 <a href="#dnsname_nodejs" style="color: inherit; text-decoration: inherit;">dns<wbr>Name</a>
@@ -1041,8 +995,7 @@ a new port.
     </dt>
     <dd>{{% md %}}The port DNS name. Available, when Neutron DNS extension
 is enabled.
-{{% /md %}}</dd>
-    <dt class="property-optional"
+{{% /md %}}</dd><dt class="property-optional"
             title="Optional">
         <span id="extradhcpoptions_nodejs">
 <a href="#extradhcpoptions_nodejs" style="color: inherit; text-decoration: inherit;">extra<wbr>Dhcp<wbr>Options</a>
@@ -1053,8 +1006,7 @@ is enabled.
     <dd>{{% md %}}An extra DHCP option that needs to be configured
 on the port. The structure is described below. Can be specified multiple
 times.
-{{% /md %}}</dd>
-    <dt class="property-optional"
+{{% /md %}}</dd><dt class="property-optional"
             title="Optional">
         <span id="fixedips_nodejs">
 <a href="#fixedips_nodejs" style="color: inherit; text-decoration: inherit;">fixed<wbr>Ips</a>
@@ -1064,8 +1016,7 @@ times.
     </dt>
     <dd>{{% md %}}An array of desired IPs for
 this port. The structure is described below.
-{{% /md %}}</dd>
-    <dt class="property-optional"
+{{% /md %}}</dd><dt class="property-optional"
             title="Optional">
         <span id="macaddress_nodejs">
 <a href="#macaddress_nodejs" style="color: inherit; text-decoration: inherit;">mac<wbr>Address</a>
@@ -1074,8 +1025,7 @@ this port. The structure is described below.
         <span class="property-type">string</span>
     </dt>
     <dd>{{% md %}}The additional MAC address.
-{{% /md %}}</dd>
-    <dt class="property-optional"
+{{% /md %}}</dd><dt class="property-optional"
             title="Optional">
         <span id="name_nodejs">
 <a href="#name_nodejs" style="color: inherit; text-decoration: inherit;">name</a>
@@ -1084,8 +1034,7 @@ this port. The structure is described below.
         <span class="property-type">string</span>
     </dt>
     <dd>{{% md %}}Name of the DHCP option.
-{{% /md %}}</dd>
-    <dt class="property-optional"
+{{% /md %}}</dd><dt class="property-optional"
             title="Optional">
         <span id="nofixedip_nodejs">
 <a href="#nofixedip_nodejs" style="color: inherit; text-decoration: inherit;">no<wbr>Fixed<wbr>Ip</a>
@@ -1096,8 +1045,7 @@ this port. The structure is described below.
     <dd>{{% md %}}Create a port with no fixed
 IP address. This will also remove any fixed IPs previously set on a port. `true`
 is the only valid value for this argument.
-{{% /md %}}</dd>
-    <dt class="property-optional"
+{{% /md %}}</dd><dt class="property-optional"
             title="Optional">
         <span id="nosecuritygroups_nodejs">
 <a href="#nosecuritygroups_nodejs" style="color: inherit; text-decoration: inherit;">no<wbr>Security<wbr>Groups</a>
@@ -1110,8 +1058,7 @@ is the only valid value for this argument.
 no `security_group_ids` are specified, then the port will yield to the default
 behavior of the Networking service, which is to usually apply the "default"
 security group.
-{{% /md %}}</dd>
-    <dt class="property-optional"
+{{% /md %}}</dd><dt class="property-optional"
             title="Optional">
         <span id="portsecurityenabled_nodejs">
 <a href="#portsecurityenabled_nodejs" style="color: inherit; text-decoration: inherit;">port<wbr>Security<wbr>Enabled</a>
@@ -1125,8 +1072,7 @@ omitting argument will usually result in a value of `true`. Setting this
 explicitly to `false` will disable port security. In order to disable port
 security, the port must not have any security groups. Valid values are `true`
 and `false`.
-{{% /md %}}</dd>
-    <dt class="property-optional"
+{{% /md %}}</dd><dt class="property-optional"
             title="Optional">
         <span id="qospolicyid_nodejs">
 <a href="#qospolicyid_nodejs" style="color: inherit; text-decoration: inherit;">qos<wbr>Policy<wbr>Id</a>
@@ -1135,8 +1081,7 @@ and `false`.
         <span class="property-type">string</span>
     </dt>
     <dd>{{% md %}}Reference to the associated QoS policy.
-{{% /md %}}</dd>
-    <dt class="property-optional"
+{{% /md %}}</dd><dt class="property-optional"
             title="Optional">
         <span id="region_nodejs">
 <a href="#region_nodejs" style="color: inherit; text-decoration: inherit;">region</a>
@@ -1148,8 +1093,7 @@ and `false`.
 A Networking client is needed to create a port. If omitted, the
 `region` argument of the provider is used. Changing this creates a new
 port.
-{{% /md %}}</dd>
-    <dt class="property-optional"
+{{% /md %}}</dd><dt class="property-optional"
             title="Optional">
         <span id="securitygroupids_nodejs">
 <a href="#securitygroupids_nodejs" style="color: inherit; text-decoration: inherit;">security<wbr>Group<wbr>Ids</a>
@@ -1161,8 +1105,7 @@ port.
 of security group IDs to apply to the port. The security groups must be
 specified by ID and not name (as opposed to how they are configured with
 the Compute Instance).
-{{% /md %}}</dd>
-    <dt class="property-optional"
+{{% /md %}}</dd><dt class="property-optional"
             title="Optional">
         <span id="tags_nodejs">
 <a href="#tags_nodejs" style="color: inherit; text-decoration: inherit;">tags</a>
@@ -1171,8 +1114,7 @@ the Compute Instance).
         <span class="property-type">string[]</span>
     </dt>
     <dd>{{% md %}}A set of string tags for the port.
-{{% /md %}}</dd>
-    <dt class="property-optional"
+{{% /md %}}</dd><dt class="property-optional"
             title="Optional">
         <span id="tenantid_nodejs">
 <a href="#tenantid_nodejs" style="color: inherit; text-decoration: inherit;">tenant<wbr>Id</a>
@@ -1182,8 +1124,7 @@ the Compute Instance).
     </dt>
     <dd>{{% md %}}The owner of the port. Required if admin wants
 to create a port for another tenant. Changing this creates a new port.
-{{% /md %}}</dd>
-    <dt class="property-optional"
+{{% /md %}}</dd><dt class="property-optional"
             title="Optional">
         <span id="valuespecs_nodejs">
 <a href="#valuespecs_nodejs" style="color: inherit; text-decoration: inherit;">value<wbr>Specs</a>
@@ -1192,14 +1133,11 @@ to create a port for another tenant. Changing this creates a new port.
         <span class="property-type">{[key: string]: any}</span>
     </dt>
     <dd>{{% md %}}Map of additional options.
-{{% /md %}}</dd>
-</dl>
+{{% /md %}}</dd></dl>
 {{% /choosable %}}
 
 {{% choosable language python %}}
-<dl class="resources-properties">
-
-    <dt class="property-required"
+<dl class="resources-properties"><dt class="property-required"
             title="Required">
         <span id="network_id_python">
 <a href="#network_id_python" style="color: inherit; text-decoration: inherit;">network_<wbr>id</a>
@@ -1209,8 +1147,7 @@ to create a port for another tenant. Changing this creates a new port.
     </dt>
     <dd>{{% md %}}The ID of the network to attach the port to. Changing
 this creates a new port.
-{{% /md %}}</dd>
-    <dt class="property-optional"
+{{% /md %}}</dd><dt class="property-optional"
             title="Optional">
         <span id="admin_state_up_python">
 <a href="#admin_state_up_python" style="color: inherit; text-decoration: inherit;">admin_<wbr>state_<wbr>up</a>
@@ -1221,8 +1158,7 @@ this creates a new port.
     <dd>{{% md %}}Administrative up/down status for the port
 (must be `true` or `false` if provided). Changing this updates the
 `admin_state_up` of an existing port.
-{{% /md %}}</dd>
-    <dt class="property-optional"
+{{% /md %}}</dd><dt class="property-optional"
             title="Optional">
         <span id="allowed_address_pairs_python">
 <a href="#allowed_address_pairs_python" style="color: inherit; text-decoration: inherit;">allowed_<wbr>address_<wbr>pairs</a>
@@ -1233,8 +1169,7 @@ this creates a new port.
     <dd>{{% md %}}An IP/MAC Address pair of additional IP
 addresses that can be active on this port. The structure is described
 below.
-{{% /md %}}</dd>
-    <dt class="property-optional"
+{{% /md %}}</dd><dt class="property-optional"
             title="Optional">
         <span id="binding_python">
 <a href="#binding_python" style="color: inherit; text-decoration: inherit;">binding</a>
@@ -1244,8 +1179,7 @@ below.
     </dt>
     <dd>{{% md %}}The port binding allows to specify binding information
 for the port. The structure is described below.
-{{% /md %}}</dd>
-    <dt class="property-optional"
+{{% /md %}}</dd><dt class="property-optional"
             title="Optional">
         <span id="description_python">
 <a href="#description_python" style="color: inherit; text-decoration: inherit;">description</a>
@@ -1255,8 +1189,7 @@ for the port. The structure is described below.
     </dt>
     <dd>{{% md %}}Human-readable description of the port. Changing
 this updates the `description` of an existing port.
-{{% /md %}}</dd>
-    <dt class="property-optional"
+{{% /md %}}</dd><dt class="property-optional"
             title="Optional">
         <span id="device_id_python">
 <a href="#device_id_python" style="color: inherit; text-decoration: inherit;">device_<wbr>id</a>
@@ -1266,8 +1199,7 @@ this updates the `description` of an existing port.
     </dt>
     <dd>{{% md %}}The ID of the device attached to the port. Changing this
 creates a new port.
-{{% /md %}}</dd>
-    <dt class="property-optional"
+{{% /md %}}</dd><dt class="property-optional"
             title="Optional">
         <span id="device_owner_python">
 <a href="#device_owner_python" style="color: inherit; text-decoration: inherit;">device_<wbr>owner</a>
@@ -1277,8 +1209,7 @@ creates a new port.
     </dt>
     <dd>{{% md %}}The device owner of the port. Changing this creates
 a new port.
-{{% /md %}}</dd>
-    <dt class="property-optional"
+{{% /md %}}</dd><dt class="property-optional"
             title="Optional">
         <span id="dns_name_python">
 <a href="#dns_name_python" style="color: inherit; text-decoration: inherit;">dns_<wbr>name</a>
@@ -1288,8 +1219,7 @@ a new port.
     </dt>
     <dd>{{% md %}}The port DNS name. Available, when Neutron DNS extension
 is enabled.
-{{% /md %}}</dd>
-    <dt class="property-optional"
+{{% /md %}}</dd><dt class="property-optional"
             title="Optional">
         <span id="extra_dhcp_options_python">
 <a href="#extra_dhcp_options_python" style="color: inherit; text-decoration: inherit;">extra_<wbr>dhcp_<wbr>options</a>
@@ -1300,8 +1230,7 @@ is enabled.
     <dd>{{% md %}}An extra DHCP option that needs to be configured
 on the port. The structure is described below. Can be specified multiple
 times.
-{{% /md %}}</dd>
-    <dt class="property-optional"
+{{% /md %}}</dd><dt class="property-optional"
             title="Optional">
         <span id="fixed_ips_python">
 <a href="#fixed_ips_python" style="color: inherit; text-decoration: inherit;">fixed_<wbr>ips</a>
@@ -1311,8 +1240,7 @@ times.
     </dt>
     <dd>{{% md %}}An array of desired IPs for
 this port. The structure is described below.
-{{% /md %}}</dd>
-    <dt class="property-optional"
+{{% /md %}}</dd><dt class="property-optional"
             title="Optional">
         <span id="mac_address_python">
 <a href="#mac_address_python" style="color: inherit; text-decoration: inherit;">mac_<wbr>address</a>
@@ -1321,8 +1249,7 @@ this port. The structure is described below.
         <span class="property-type">str</span>
     </dt>
     <dd>{{% md %}}The additional MAC address.
-{{% /md %}}</dd>
-    <dt class="property-optional"
+{{% /md %}}</dd><dt class="property-optional"
             title="Optional">
         <span id="name_python">
 <a href="#name_python" style="color: inherit; text-decoration: inherit;">name</a>
@@ -1331,8 +1258,7 @@ this port. The structure is described below.
         <span class="property-type">str</span>
     </dt>
     <dd>{{% md %}}Name of the DHCP option.
-{{% /md %}}</dd>
-    <dt class="property-optional"
+{{% /md %}}</dd><dt class="property-optional"
             title="Optional">
         <span id="no_fixed_ip_python">
 <a href="#no_fixed_ip_python" style="color: inherit; text-decoration: inherit;">no_<wbr>fixed_<wbr>ip</a>
@@ -1343,8 +1269,7 @@ this port. The structure is described below.
     <dd>{{% md %}}Create a port with no fixed
 IP address. This will also remove any fixed IPs previously set on a port. `true`
 is the only valid value for this argument.
-{{% /md %}}</dd>
-    <dt class="property-optional"
+{{% /md %}}</dd><dt class="property-optional"
             title="Optional">
         <span id="no_security_groups_python">
 <a href="#no_security_groups_python" style="color: inherit; text-decoration: inherit;">no_<wbr>security_<wbr>groups</a>
@@ -1357,8 +1282,7 @@ is the only valid value for this argument.
 no `security_group_ids` are specified, then the port will yield to the default
 behavior of the Networking service, which is to usually apply the "default"
 security group.
-{{% /md %}}</dd>
-    <dt class="property-optional"
+{{% /md %}}</dd><dt class="property-optional"
             title="Optional">
         <span id="port_security_enabled_python">
 <a href="#port_security_enabled_python" style="color: inherit; text-decoration: inherit;">port_<wbr>security_<wbr>enabled</a>
@@ -1372,8 +1296,7 @@ omitting argument will usually result in a value of `true`. Setting this
 explicitly to `false` will disable port security. In order to disable port
 security, the port must not have any security groups. Valid values are `true`
 and `false`.
-{{% /md %}}</dd>
-    <dt class="property-optional"
+{{% /md %}}</dd><dt class="property-optional"
             title="Optional">
         <span id="qos_policy_id_python">
 <a href="#qos_policy_id_python" style="color: inherit; text-decoration: inherit;">qos_<wbr>policy_<wbr>id</a>
@@ -1382,8 +1305,7 @@ and `false`.
         <span class="property-type">str</span>
     </dt>
     <dd>{{% md %}}Reference to the associated QoS policy.
-{{% /md %}}</dd>
-    <dt class="property-optional"
+{{% /md %}}</dd><dt class="property-optional"
             title="Optional">
         <span id="region_python">
 <a href="#region_python" style="color: inherit; text-decoration: inherit;">region</a>
@@ -1395,8 +1317,7 @@ and `false`.
 A Networking client is needed to create a port. If omitted, the
 `region` argument of the provider is used. Changing this creates a new
 port.
-{{% /md %}}</dd>
-    <dt class="property-optional"
+{{% /md %}}</dd><dt class="property-optional"
             title="Optional">
         <span id="security_group_ids_python">
 <a href="#security_group_ids_python" style="color: inherit; text-decoration: inherit;">security_<wbr>group_<wbr>ids</a>
@@ -1408,8 +1329,7 @@ port.
 of security group IDs to apply to the port. The security groups must be
 specified by ID and not name (as opposed to how they are configured with
 the Compute Instance).
-{{% /md %}}</dd>
-    <dt class="property-optional"
+{{% /md %}}</dd><dt class="property-optional"
             title="Optional">
         <span id="tags_python">
 <a href="#tags_python" style="color: inherit; text-decoration: inherit;">tags</a>
@@ -1418,8 +1338,7 @@ the Compute Instance).
         <span class="property-type">Sequence[str]</span>
     </dt>
     <dd>{{% md %}}A set of string tags for the port.
-{{% /md %}}</dd>
-    <dt class="property-optional"
+{{% /md %}}</dd><dt class="property-optional"
             title="Optional">
         <span id="tenant_id_python">
 <a href="#tenant_id_python" style="color: inherit; text-decoration: inherit;">tenant_<wbr>id</a>
@@ -1429,8 +1348,7 @@ the Compute Instance).
     </dt>
     <dd>{{% md %}}The owner of the port. Required if admin wants
 to create a port for another tenant. Changing this creates a new port.
-{{% /md %}}</dd>
-    <dt class="property-optional"
+{{% /md %}}</dd><dt class="property-optional"
             title="Optional">
         <span id="value_specs_python">
 <a href="#value_specs_python" style="color: inherit; text-decoration: inherit;">value_<wbr>specs</a>
@@ -1439,8 +1357,7 @@ to create a port for another tenant. Changing this creates a new port.
         <span class="property-type">Mapping[str, Any]</span>
     </dt>
     <dd>{{% md %}}Map of additional options.
-{{% /md %}}</dd>
-</dl>
+{{% /md %}}</dd></dl>
 {{% /choosable %}}
 
 
@@ -1451,9 +1368,7 @@ All [input](#inputs) properties are implicitly available as output properties. A
 
 
 {{% choosable language csharp %}}
-<dl class="resources-properties">
-
-    <dt class="property-"
+<dl class="resources-properties"><dt class="property-"
             title="">
         <span id="allfixedips_csharp">
 <a href="#allfixedips_csharp" style="color: inherit; text-decoration: inherit;">All<wbr>Fixed<wbr>Ips</a>
@@ -1463,8 +1378,7 @@ All [input](#inputs) properties are implicitly available as output properties. A
     </dt>
     <dd>{{% md %}}The collection of Fixed IP addresses on the port in the
 order returned by the Network v2 API.
-{{% /md %}}</dd>
-    <dt class="property-"
+{{% /md %}}</dd><dt class="property-"
             title="">
         <span id="allsecuritygroupids_csharp">
 <a href="#allsecuritygroupids_csharp" style="color: inherit; text-decoration: inherit;">All<wbr>Security<wbr>Group<wbr>Ids</a>
@@ -1474,8 +1388,7 @@ order returned by the Network v2 API.
     </dt>
     <dd>{{% md %}}The collection of Security Group IDs on the port
 which have been explicitly and implicitly added.
-{{% /md %}}</dd>
-    <dt class="property-"
+{{% /md %}}</dd><dt class="property-"
             title="">
         <span id="alltags_csharp">
 <a href="#alltags_csharp" style="color: inherit; text-decoration: inherit;">All<wbr>Tags</a>
@@ -1485,8 +1398,7 @@ which have been explicitly and implicitly added.
     </dt>
     <dd>{{% md %}}The collection of tags assigned on the port, which have been
 explicitly and implicitly added.
-{{% /md %}}</dd>
-    <dt class="property-"
+{{% /md %}}</dd><dt class="property-"
             title="">
         <span id="dnsassignments_csharp">
 <a href="#dnsassignments_csharp" style="color: inherit; text-decoration: inherit;">Dns<wbr>Assignments</a>
@@ -1495,8 +1407,7 @@ explicitly and implicitly added.
         <span class="property-type">List&lt;Immutable<wbr>Dictionary&lt;string, object&gt;&gt;</span>
     </dt>
     <dd>{{% md %}}The list of maps representing port DNS assignments.
-{{% /md %}}</dd>
-    <dt class="property-"
+{{% /md %}}</dd><dt class="property-"
             title="">
         <span id="id_csharp">
 <a href="#id_csharp" style="color: inherit; text-decoration: inherit;">Id</a>
@@ -1504,14 +1415,11 @@ explicitly and implicitly added.
         <span class="property-indicator"></span>
         <span class="property-type">string</span>
     </dt>
-    <dd>{{% md %}}The provider-assigned unique ID for this managed resource.{{% /md %}}</dd>
-</dl>
+    <dd>{{% md %}}The provider-assigned unique ID for this managed resource.{{% /md %}}</dd></dl>
 {{% /choosable %}}
 
 {{% choosable language go %}}
-<dl class="resources-properties">
-
-    <dt class="property-"
+<dl class="resources-properties"><dt class="property-"
             title="">
         <span id="allfixedips_go">
 <a href="#allfixedips_go" style="color: inherit; text-decoration: inherit;">All<wbr>Fixed<wbr>Ips</a>
@@ -1521,8 +1429,7 @@ explicitly and implicitly added.
     </dt>
     <dd>{{% md %}}The collection of Fixed IP addresses on the port in the
 order returned by the Network v2 API.
-{{% /md %}}</dd>
-    <dt class="property-"
+{{% /md %}}</dd><dt class="property-"
             title="">
         <span id="allsecuritygroupids_go">
 <a href="#allsecuritygroupids_go" style="color: inherit; text-decoration: inherit;">All<wbr>Security<wbr>Group<wbr>Ids</a>
@@ -1532,8 +1439,7 @@ order returned by the Network v2 API.
     </dt>
     <dd>{{% md %}}The collection of Security Group IDs on the port
 which have been explicitly and implicitly added.
-{{% /md %}}</dd>
-    <dt class="property-"
+{{% /md %}}</dd><dt class="property-"
             title="">
         <span id="alltags_go">
 <a href="#alltags_go" style="color: inherit; text-decoration: inherit;">All<wbr>Tags</a>
@@ -1543,8 +1449,7 @@ which have been explicitly and implicitly added.
     </dt>
     <dd>{{% md %}}The collection of tags assigned on the port, which have been
 explicitly and implicitly added.
-{{% /md %}}</dd>
-    <dt class="property-"
+{{% /md %}}</dd><dt class="property-"
             title="">
         <span id="dnsassignments_go">
 <a href="#dnsassignments_go" style="color: inherit; text-decoration: inherit;">Dns<wbr>Assignments</a>
@@ -1553,8 +1458,7 @@ explicitly and implicitly added.
         <span class="property-type">[]map[string]interface{}</span>
     </dt>
     <dd>{{% md %}}The list of maps representing port DNS assignments.
-{{% /md %}}</dd>
-    <dt class="property-"
+{{% /md %}}</dd><dt class="property-"
             title="">
         <span id="id_go">
 <a href="#id_go" style="color: inherit; text-decoration: inherit;">Id</a>
@@ -1562,14 +1466,11 @@ explicitly and implicitly added.
         <span class="property-indicator"></span>
         <span class="property-type">string</span>
     </dt>
-    <dd>{{% md %}}The provider-assigned unique ID for this managed resource.{{% /md %}}</dd>
-</dl>
+    <dd>{{% md %}}The provider-assigned unique ID for this managed resource.{{% /md %}}</dd></dl>
 {{% /choosable %}}
 
 {{% choosable language nodejs %}}
-<dl class="resources-properties">
-
-    <dt class="property-"
+<dl class="resources-properties"><dt class="property-"
             title="">
         <span id="allfixedips_nodejs">
 <a href="#allfixedips_nodejs" style="color: inherit; text-decoration: inherit;">all<wbr>Fixed<wbr>Ips</a>
@@ -1579,8 +1480,7 @@ explicitly and implicitly added.
     </dt>
     <dd>{{% md %}}The collection of Fixed IP addresses on the port in the
 order returned by the Network v2 API.
-{{% /md %}}</dd>
-    <dt class="property-"
+{{% /md %}}</dd><dt class="property-"
             title="">
         <span id="allsecuritygroupids_nodejs">
 <a href="#allsecuritygroupids_nodejs" style="color: inherit; text-decoration: inherit;">all<wbr>Security<wbr>Group<wbr>Ids</a>
@@ -1590,8 +1490,7 @@ order returned by the Network v2 API.
     </dt>
     <dd>{{% md %}}The collection of Security Group IDs on the port
 which have been explicitly and implicitly added.
-{{% /md %}}</dd>
-    <dt class="property-"
+{{% /md %}}</dd><dt class="property-"
             title="">
         <span id="alltags_nodejs">
 <a href="#alltags_nodejs" style="color: inherit; text-decoration: inherit;">all<wbr>Tags</a>
@@ -1601,8 +1500,7 @@ which have been explicitly and implicitly added.
     </dt>
     <dd>{{% md %}}The collection of tags assigned on the port, which have been
 explicitly and implicitly added.
-{{% /md %}}</dd>
-    <dt class="property-"
+{{% /md %}}</dd><dt class="property-"
             title="">
         <span id="dnsassignments_nodejs">
 <a href="#dnsassignments_nodejs" style="color: inherit; text-decoration: inherit;">dns<wbr>Assignments</a>
@@ -1611,8 +1509,7 @@ explicitly and implicitly added.
         <span class="property-type">{[key: string]: any}[]</span>
     </dt>
     <dd>{{% md %}}The list of maps representing port DNS assignments.
-{{% /md %}}</dd>
-    <dt class="property-"
+{{% /md %}}</dd><dt class="property-"
             title="">
         <span id="id_nodejs">
 <a href="#id_nodejs" style="color: inherit; text-decoration: inherit;">id</a>
@@ -1620,14 +1517,11 @@ explicitly and implicitly added.
         <span class="property-indicator"></span>
         <span class="property-type">string</span>
     </dt>
-    <dd>{{% md %}}The provider-assigned unique ID for this managed resource.{{% /md %}}</dd>
-</dl>
+    <dd>{{% md %}}The provider-assigned unique ID for this managed resource.{{% /md %}}</dd></dl>
 {{% /choosable %}}
 
 {{% choosable language python %}}
-<dl class="resources-properties">
-
-    <dt class="property-"
+<dl class="resources-properties"><dt class="property-"
             title="">
         <span id="all_fixed_ips_python">
 <a href="#all_fixed_ips_python" style="color: inherit; text-decoration: inherit;">all_<wbr>fixed_<wbr>ips</a>
@@ -1637,8 +1531,7 @@ explicitly and implicitly added.
     </dt>
     <dd>{{% md %}}The collection of Fixed IP addresses on the port in the
 order returned by the Network v2 API.
-{{% /md %}}</dd>
-    <dt class="property-"
+{{% /md %}}</dd><dt class="property-"
             title="">
         <span id="all_security_group_ids_python">
 <a href="#all_security_group_ids_python" style="color: inherit; text-decoration: inherit;">all_<wbr>security_<wbr>group_<wbr>ids</a>
@@ -1648,8 +1541,7 @@ order returned by the Network v2 API.
     </dt>
     <dd>{{% md %}}The collection of Security Group IDs on the port
 which have been explicitly and implicitly added.
-{{% /md %}}</dd>
-    <dt class="property-"
+{{% /md %}}</dd><dt class="property-"
             title="">
         <span id="all_tags_python">
 <a href="#all_tags_python" style="color: inherit; text-decoration: inherit;">all_<wbr>tags</a>
@@ -1659,8 +1551,7 @@ which have been explicitly and implicitly added.
     </dt>
     <dd>{{% md %}}The collection of tags assigned on the port, which have been
 explicitly and implicitly added.
-{{% /md %}}</dd>
-    <dt class="property-"
+{{% /md %}}</dd><dt class="property-"
             title="">
         <span id="dns_assignments_python">
 <a href="#dns_assignments_python" style="color: inherit; text-decoration: inherit;">dns_<wbr>assignments</a>
@@ -1669,8 +1560,7 @@ explicitly and implicitly added.
         <span class="property-type">Sequence[Mapping[str, Any]]</span>
     </dt>
     <dd>{{% md %}}The list of maps representing port DNS assignments.
-{{% /md %}}</dd>
-    <dt class="property-"
+{{% /md %}}</dd><dt class="property-"
             title="">
         <span id="id_python">
 <a href="#id_python" style="color: inherit; text-decoration: inherit;">id</a>
@@ -1678,8 +1568,7 @@ explicitly and implicitly added.
         <span class="property-indicator"></span>
         <span class="property-type">str</span>
     </dt>
-    <dd>{{% md %}}The provider-assigned unique ID for this managed resource.{{% /md %}}</dd>
-</dl>
+    <dd>{{% md %}}The provider-assigned unique ID for this managed resource.{{% /md %}}</dd></dl>
 {{% /choosable %}}
 
 
@@ -1806,9 +1695,7 @@ The following state arguments are supported:
 
 
 {{% choosable language csharp %}}
-<dl class="resources-properties">
-
-    <dt class="property-optional"
+<dl class="resources-properties"><dt class="property-optional"
             title="Optional">
         <span id="state_adminstateup_csharp">
 <a href="#state_adminstateup_csharp" style="color: inherit; text-decoration: inherit;">Admin<wbr>State<wbr>Up</a>
@@ -1819,8 +1706,7 @@ The following state arguments are supported:
     <dd>{{% md %}}Administrative up/down status for the port
 (must be `true` or `false` if provided). Changing this updates the
 `admin_state_up` of an existing port.
-{{% /md %}}</dd>
-    <dt class="property-optional"
+{{% /md %}}</dd><dt class="property-optional"
             title="Optional">
         <span id="state_allfixedips_csharp">
 <a href="#state_allfixedips_csharp" style="color: inherit; text-decoration: inherit;">All<wbr>Fixed<wbr>Ips</a>
@@ -1830,8 +1716,7 @@ The following state arguments are supported:
     </dt>
     <dd>{{% md %}}The collection of Fixed IP addresses on the port in the
 order returned by the Network v2 API.
-{{% /md %}}</dd>
-    <dt class="property-optional"
+{{% /md %}}</dd><dt class="property-optional"
             title="Optional">
         <span id="state_allsecuritygroupids_csharp">
 <a href="#state_allsecuritygroupids_csharp" style="color: inherit; text-decoration: inherit;">All<wbr>Security<wbr>Group<wbr>Ids</a>
@@ -1841,8 +1726,7 @@ order returned by the Network v2 API.
     </dt>
     <dd>{{% md %}}The collection of Security Group IDs on the port
 which have been explicitly and implicitly added.
-{{% /md %}}</dd>
-    <dt class="property-optional"
+{{% /md %}}</dd><dt class="property-optional"
             title="Optional">
         <span id="state_alltags_csharp">
 <a href="#state_alltags_csharp" style="color: inherit; text-decoration: inherit;">All<wbr>Tags</a>
@@ -1852,8 +1736,7 @@ which have been explicitly and implicitly added.
     </dt>
     <dd>{{% md %}}The collection of tags assigned on the port, which have been
 explicitly and implicitly added.
-{{% /md %}}</dd>
-    <dt class="property-optional"
+{{% /md %}}</dd><dt class="property-optional"
             title="Optional">
         <span id="state_allowedaddresspairs_csharp">
 <a href="#state_allowedaddresspairs_csharp" style="color: inherit; text-decoration: inherit;">Allowed<wbr>Address<wbr>Pairs</a>
@@ -1864,8 +1747,7 @@ explicitly and implicitly added.
     <dd>{{% md %}}An IP/MAC Address pair of additional IP
 addresses that can be active on this port. The structure is described
 below.
-{{% /md %}}</dd>
-    <dt class="property-optional"
+{{% /md %}}</dd><dt class="property-optional"
             title="Optional">
         <span id="state_binding_csharp">
 <a href="#state_binding_csharp" style="color: inherit; text-decoration: inherit;">Binding</a>
@@ -1875,8 +1757,7 @@ below.
     </dt>
     <dd>{{% md %}}The port binding allows to specify binding information
 for the port. The structure is described below.
-{{% /md %}}</dd>
-    <dt class="property-optional"
+{{% /md %}}</dd><dt class="property-optional"
             title="Optional">
         <span id="state_description_csharp">
 <a href="#state_description_csharp" style="color: inherit; text-decoration: inherit;">Description</a>
@@ -1886,8 +1767,7 @@ for the port. The structure is described below.
     </dt>
     <dd>{{% md %}}Human-readable description of the port. Changing
 this updates the `description` of an existing port.
-{{% /md %}}</dd>
-    <dt class="property-optional"
+{{% /md %}}</dd><dt class="property-optional"
             title="Optional">
         <span id="state_deviceid_csharp">
 <a href="#state_deviceid_csharp" style="color: inherit; text-decoration: inherit;">Device<wbr>Id</a>
@@ -1897,8 +1777,7 @@ this updates the `description` of an existing port.
     </dt>
     <dd>{{% md %}}The ID of the device attached to the port. Changing this
 creates a new port.
-{{% /md %}}</dd>
-    <dt class="property-optional"
+{{% /md %}}</dd><dt class="property-optional"
             title="Optional">
         <span id="state_deviceowner_csharp">
 <a href="#state_deviceowner_csharp" style="color: inherit; text-decoration: inherit;">Device<wbr>Owner</a>
@@ -1908,8 +1787,7 @@ creates a new port.
     </dt>
     <dd>{{% md %}}The device owner of the port. Changing this creates
 a new port.
-{{% /md %}}</dd>
-    <dt class="property-optional"
+{{% /md %}}</dd><dt class="property-optional"
             title="Optional">
         <span id="state_dnsassignments_csharp">
 <a href="#state_dnsassignments_csharp" style="color: inherit; text-decoration: inherit;">Dns<wbr>Assignments</a>
@@ -1918,8 +1796,7 @@ a new port.
         <span class="property-type">List&lt;Immutable<wbr>Dictionary&lt;string, object&gt;&gt;</span>
     </dt>
     <dd>{{% md %}}The list of maps representing port DNS assignments.
-{{% /md %}}</dd>
-    <dt class="property-optional"
+{{% /md %}}</dd><dt class="property-optional"
             title="Optional">
         <span id="state_dnsname_csharp">
 <a href="#state_dnsname_csharp" style="color: inherit; text-decoration: inherit;">Dns<wbr>Name</a>
@@ -1929,8 +1806,7 @@ a new port.
     </dt>
     <dd>{{% md %}}The port DNS name. Available, when Neutron DNS extension
 is enabled.
-{{% /md %}}</dd>
-    <dt class="property-optional"
+{{% /md %}}</dd><dt class="property-optional"
             title="Optional">
         <span id="state_extradhcpoptions_csharp">
 <a href="#state_extradhcpoptions_csharp" style="color: inherit; text-decoration: inherit;">Extra<wbr>Dhcp<wbr>Options</a>
@@ -1941,8 +1817,7 @@ is enabled.
     <dd>{{% md %}}An extra DHCP option that needs to be configured
 on the port. The structure is described below. Can be specified multiple
 times.
-{{% /md %}}</dd>
-    <dt class="property-optional"
+{{% /md %}}</dd><dt class="property-optional"
             title="Optional">
         <span id="state_fixedips_csharp">
 <a href="#state_fixedips_csharp" style="color: inherit; text-decoration: inherit;">Fixed<wbr>Ips</a>
@@ -1952,8 +1827,7 @@ times.
     </dt>
     <dd>{{% md %}}An array of desired IPs for
 this port. The structure is described below.
-{{% /md %}}</dd>
-    <dt class="property-optional"
+{{% /md %}}</dd><dt class="property-optional"
             title="Optional">
         <span id="state_macaddress_csharp">
 <a href="#state_macaddress_csharp" style="color: inherit; text-decoration: inherit;">Mac<wbr>Address</a>
@@ -1962,8 +1836,7 @@ this port. The structure is described below.
         <span class="property-type">string</span>
     </dt>
     <dd>{{% md %}}The additional MAC address.
-{{% /md %}}</dd>
-    <dt class="property-optional"
+{{% /md %}}</dd><dt class="property-optional"
             title="Optional">
         <span id="state_name_csharp">
 <a href="#state_name_csharp" style="color: inherit; text-decoration: inherit;">Name</a>
@@ -1972,8 +1845,7 @@ this port. The structure is described below.
         <span class="property-type">string</span>
     </dt>
     <dd>{{% md %}}Name of the DHCP option.
-{{% /md %}}</dd>
-    <dt class="property-optional"
+{{% /md %}}</dd><dt class="property-optional"
             title="Optional">
         <span id="state_networkid_csharp">
 <a href="#state_networkid_csharp" style="color: inherit; text-decoration: inherit;">Network<wbr>Id</a>
@@ -1983,8 +1855,7 @@ this port. The structure is described below.
     </dt>
     <dd>{{% md %}}The ID of the network to attach the port to. Changing
 this creates a new port.
-{{% /md %}}</dd>
-    <dt class="property-optional"
+{{% /md %}}</dd><dt class="property-optional"
             title="Optional">
         <span id="state_nofixedip_csharp">
 <a href="#state_nofixedip_csharp" style="color: inherit; text-decoration: inherit;">No<wbr>Fixed<wbr>Ip</a>
@@ -1995,8 +1866,7 @@ this creates a new port.
     <dd>{{% md %}}Create a port with no fixed
 IP address. This will also remove any fixed IPs previously set on a port. `true`
 is the only valid value for this argument.
-{{% /md %}}</dd>
-    <dt class="property-optional"
+{{% /md %}}</dd><dt class="property-optional"
             title="Optional">
         <span id="state_nosecuritygroups_csharp">
 <a href="#state_nosecuritygroups_csharp" style="color: inherit; text-decoration: inherit;">No<wbr>Security<wbr>Groups</a>
@@ -2009,8 +1879,7 @@ is the only valid value for this argument.
 no `security_group_ids` are specified, then the port will yield to the default
 behavior of the Networking service, which is to usually apply the "default"
 security group.
-{{% /md %}}</dd>
-    <dt class="property-optional"
+{{% /md %}}</dd><dt class="property-optional"
             title="Optional">
         <span id="state_portsecurityenabled_csharp">
 <a href="#state_portsecurityenabled_csharp" style="color: inherit; text-decoration: inherit;">Port<wbr>Security<wbr>Enabled</a>
@@ -2024,8 +1893,7 @@ omitting argument will usually result in a value of `true`. Setting this
 explicitly to `false` will disable port security. In order to disable port
 security, the port must not have any security groups. Valid values are `true`
 and `false`.
-{{% /md %}}</dd>
-    <dt class="property-optional"
+{{% /md %}}</dd><dt class="property-optional"
             title="Optional">
         <span id="state_qospolicyid_csharp">
 <a href="#state_qospolicyid_csharp" style="color: inherit; text-decoration: inherit;">Qos<wbr>Policy<wbr>Id</a>
@@ -2034,8 +1902,7 @@ and `false`.
         <span class="property-type">string</span>
     </dt>
     <dd>{{% md %}}Reference to the associated QoS policy.
-{{% /md %}}</dd>
-    <dt class="property-optional"
+{{% /md %}}</dd><dt class="property-optional"
             title="Optional">
         <span id="state_region_csharp">
 <a href="#state_region_csharp" style="color: inherit; text-decoration: inherit;">Region</a>
@@ -2047,8 +1914,7 @@ and `false`.
 A Networking client is needed to create a port. If omitted, the
 `region` argument of the provider is used. Changing this creates a new
 port.
-{{% /md %}}</dd>
-    <dt class="property-optional"
+{{% /md %}}</dd><dt class="property-optional"
             title="Optional">
         <span id="state_securitygroupids_csharp">
 <a href="#state_securitygroupids_csharp" style="color: inherit; text-decoration: inherit;">Security<wbr>Group<wbr>Ids</a>
@@ -2060,8 +1926,7 @@ port.
 of security group IDs to apply to the port. The security groups must be
 specified by ID and not name (as opposed to how they are configured with
 the Compute Instance).
-{{% /md %}}</dd>
-    <dt class="property-optional"
+{{% /md %}}</dd><dt class="property-optional"
             title="Optional">
         <span id="state_tags_csharp">
 <a href="#state_tags_csharp" style="color: inherit; text-decoration: inherit;">Tags</a>
@@ -2070,8 +1935,7 @@ the Compute Instance).
         <span class="property-type">List&lt;string&gt;</span>
     </dt>
     <dd>{{% md %}}A set of string tags for the port.
-{{% /md %}}</dd>
-    <dt class="property-optional"
+{{% /md %}}</dd><dt class="property-optional"
             title="Optional">
         <span id="state_tenantid_csharp">
 <a href="#state_tenantid_csharp" style="color: inherit; text-decoration: inherit;">Tenant<wbr>Id</a>
@@ -2081,8 +1945,7 @@ the Compute Instance).
     </dt>
     <dd>{{% md %}}The owner of the port. Required if admin wants
 to create a port for another tenant. Changing this creates a new port.
-{{% /md %}}</dd>
-    <dt class="property-optional"
+{{% /md %}}</dd><dt class="property-optional"
             title="Optional">
         <span id="state_valuespecs_csharp">
 <a href="#state_valuespecs_csharp" style="color: inherit; text-decoration: inherit;">Value<wbr>Specs</a>
@@ -2091,14 +1954,11 @@ to create a port for another tenant. Changing this creates a new port.
         <span class="property-type">Dictionary&lt;string, object&gt;</span>
     </dt>
     <dd>{{% md %}}Map of additional options.
-{{% /md %}}</dd>
-</dl>
+{{% /md %}}</dd></dl>
 {{% /choosable %}}
 
 {{% choosable language go %}}
-<dl class="resources-properties">
-
-    <dt class="property-optional"
+<dl class="resources-properties"><dt class="property-optional"
             title="Optional">
         <span id="state_adminstateup_go">
 <a href="#state_adminstateup_go" style="color: inherit; text-decoration: inherit;">Admin<wbr>State<wbr>Up</a>
@@ -2109,8 +1969,7 @@ to create a port for another tenant. Changing this creates a new port.
     <dd>{{% md %}}Administrative up/down status for the port
 (must be `true` or `false` if provided). Changing this updates the
 `admin_state_up` of an existing port.
-{{% /md %}}</dd>
-    <dt class="property-optional"
+{{% /md %}}</dd><dt class="property-optional"
             title="Optional">
         <span id="state_allfixedips_go">
 <a href="#state_allfixedips_go" style="color: inherit; text-decoration: inherit;">All<wbr>Fixed<wbr>Ips</a>
@@ -2120,8 +1979,7 @@ to create a port for another tenant. Changing this creates a new port.
     </dt>
     <dd>{{% md %}}The collection of Fixed IP addresses on the port in the
 order returned by the Network v2 API.
-{{% /md %}}</dd>
-    <dt class="property-optional"
+{{% /md %}}</dd><dt class="property-optional"
             title="Optional">
         <span id="state_allsecuritygroupids_go">
 <a href="#state_allsecuritygroupids_go" style="color: inherit; text-decoration: inherit;">All<wbr>Security<wbr>Group<wbr>Ids</a>
@@ -2131,8 +1989,7 @@ order returned by the Network v2 API.
     </dt>
     <dd>{{% md %}}The collection of Security Group IDs on the port
 which have been explicitly and implicitly added.
-{{% /md %}}</dd>
-    <dt class="property-optional"
+{{% /md %}}</dd><dt class="property-optional"
             title="Optional">
         <span id="state_alltags_go">
 <a href="#state_alltags_go" style="color: inherit; text-decoration: inherit;">All<wbr>Tags</a>
@@ -2142,8 +1999,7 @@ which have been explicitly and implicitly added.
     </dt>
     <dd>{{% md %}}The collection of tags assigned on the port, which have been
 explicitly and implicitly added.
-{{% /md %}}</dd>
-    <dt class="property-optional"
+{{% /md %}}</dd><dt class="property-optional"
             title="Optional">
         <span id="state_allowedaddresspairs_go">
 <a href="#state_allowedaddresspairs_go" style="color: inherit; text-decoration: inherit;">Allowed<wbr>Address<wbr>Pairs</a>
@@ -2154,8 +2010,7 @@ explicitly and implicitly added.
     <dd>{{% md %}}An IP/MAC Address pair of additional IP
 addresses that can be active on this port. The structure is described
 below.
-{{% /md %}}</dd>
-    <dt class="property-optional"
+{{% /md %}}</dd><dt class="property-optional"
             title="Optional">
         <span id="state_binding_go">
 <a href="#state_binding_go" style="color: inherit; text-decoration: inherit;">Binding</a>
@@ -2165,8 +2020,7 @@ below.
     </dt>
     <dd>{{% md %}}The port binding allows to specify binding information
 for the port. The structure is described below.
-{{% /md %}}</dd>
-    <dt class="property-optional"
+{{% /md %}}</dd><dt class="property-optional"
             title="Optional">
         <span id="state_description_go">
 <a href="#state_description_go" style="color: inherit; text-decoration: inherit;">Description</a>
@@ -2176,8 +2030,7 @@ for the port. The structure is described below.
     </dt>
     <dd>{{% md %}}Human-readable description of the port. Changing
 this updates the `description` of an existing port.
-{{% /md %}}</dd>
-    <dt class="property-optional"
+{{% /md %}}</dd><dt class="property-optional"
             title="Optional">
         <span id="state_deviceid_go">
 <a href="#state_deviceid_go" style="color: inherit; text-decoration: inherit;">Device<wbr>Id</a>
@@ -2187,8 +2040,7 @@ this updates the `description` of an existing port.
     </dt>
     <dd>{{% md %}}The ID of the device attached to the port. Changing this
 creates a new port.
-{{% /md %}}</dd>
-    <dt class="property-optional"
+{{% /md %}}</dd><dt class="property-optional"
             title="Optional">
         <span id="state_deviceowner_go">
 <a href="#state_deviceowner_go" style="color: inherit; text-decoration: inherit;">Device<wbr>Owner</a>
@@ -2198,8 +2050,7 @@ creates a new port.
     </dt>
     <dd>{{% md %}}The device owner of the port. Changing this creates
 a new port.
-{{% /md %}}</dd>
-    <dt class="property-optional"
+{{% /md %}}</dd><dt class="property-optional"
             title="Optional">
         <span id="state_dnsassignments_go">
 <a href="#state_dnsassignments_go" style="color: inherit; text-decoration: inherit;">Dns<wbr>Assignments</a>
@@ -2208,8 +2059,7 @@ a new port.
         <span class="property-type">[]map[string]interface{}</span>
     </dt>
     <dd>{{% md %}}The list of maps representing port DNS assignments.
-{{% /md %}}</dd>
-    <dt class="property-optional"
+{{% /md %}}</dd><dt class="property-optional"
             title="Optional">
         <span id="state_dnsname_go">
 <a href="#state_dnsname_go" style="color: inherit; text-decoration: inherit;">Dns<wbr>Name</a>
@@ -2219,8 +2069,7 @@ a new port.
     </dt>
     <dd>{{% md %}}The port DNS name. Available, when Neutron DNS extension
 is enabled.
-{{% /md %}}</dd>
-    <dt class="property-optional"
+{{% /md %}}</dd><dt class="property-optional"
             title="Optional">
         <span id="state_extradhcpoptions_go">
 <a href="#state_extradhcpoptions_go" style="color: inherit; text-decoration: inherit;">Extra<wbr>Dhcp<wbr>Options</a>
@@ -2231,8 +2080,7 @@ is enabled.
     <dd>{{% md %}}An extra DHCP option that needs to be configured
 on the port. The structure is described below. Can be specified multiple
 times.
-{{% /md %}}</dd>
-    <dt class="property-optional"
+{{% /md %}}</dd><dt class="property-optional"
             title="Optional">
         <span id="state_fixedips_go">
 <a href="#state_fixedips_go" style="color: inherit; text-decoration: inherit;">Fixed<wbr>Ips</a>
@@ -2242,8 +2090,7 @@ times.
     </dt>
     <dd>{{% md %}}An array of desired IPs for
 this port. The structure is described below.
-{{% /md %}}</dd>
-    <dt class="property-optional"
+{{% /md %}}</dd><dt class="property-optional"
             title="Optional">
         <span id="state_macaddress_go">
 <a href="#state_macaddress_go" style="color: inherit; text-decoration: inherit;">Mac<wbr>Address</a>
@@ -2252,8 +2099,7 @@ this port. The structure is described below.
         <span class="property-type">string</span>
     </dt>
     <dd>{{% md %}}The additional MAC address.
-{{% /md %}}</dd>
-    <dt class="property-optional"
+{{% /md %}}</dd><dt class="property-optional"
             title="Optional">
         <span id="state_name_go">
 <a href="#state_name_go" style="color: inherit; text-decoration: inherit;">Name</a>
@@ -2262,8 +2108,7 @@ this port. The structure is described below.
         <span class="property-type">string</span>
     </dt>
     <dd>{{% md %}}Name of the DHCP option.
-{{% /md %}}</dd>
-    <dt class="property-optional"
+{{% /md %}}</dd><dt class="property-optional"
             title="Optional">
         <span id="state_networkid_go">
 <a href="#state_networkid_go" style="color: inherit; text-decoration: inherit;">Network<wbr>Id</a>
@@ -2273,8 +2118,7 @@ this port. The structure is described below.
     </dt>
     <dd>{{% md %}}The ID of the network to attach the port to. Changing
 this creates a new port.
-{{% /md %}}</dd>
-    <dt class="property-optional"
+{{% /md %}}</dd><dt class="property-optional"
             title="Optional">
         <span id="state_nofixedip_go">
 <a href="#state_nofixedip_go" style="color: inherit; text-decoration: inherit;">No<wbr>Fixed<wbr>Ip</a>
@@ -2285,8 +2129,7 @@ this creates a new port.
     <dd>{{% md %}}Create a port with no fixed
 IP address. This will also remove any fixed IPs previously set on a port. `true`
 is the only valid value for this argument.
-{{% /md %}}</dd>
-    <dt class="property-optional"
+{{% /md %}}</dd><dt class="property-optional"
             title="Optional">
         <span id="state_nosecuritygroups_go">
 <a href="#state_nosecuritygroups_go" style="color: inherit; text-decoration: inherit;">No<wbr>Security<wbr>Groups</a>
@@ -2299,8 +2142,7 @@ is the only valid value for this argument.
 no `security_group_ids` are specified, then the port will yield to the default
 behavior of the Networking service, which is to usually apply the "default"
 security group.
-{{% /md %}}</dd>
-    <dt class="property-optional"
+{{% /md %}}</dd><dt class="property-optional"
             title="Optional">
         <span id="state_portsecurityenabled_go">
 <a href="#state_portsecurityenabled_go" style="color: inherit; text-decoration: inherit;">Port<wbr>Security<wbr>Enabled</a>
@@ -2314,8 +2156,7 @@ omitting argument will usually result in a value of `true`. Setting this
 explicitly to `false` will disable port security. In order to disable port
 security, the port must not have any security groups. Valid values are `true`
 and `false`.
-{{% /md %}}</dd>
-    <dt class="property-optional"
+{{% /md %}}</dd><dt class="property-optional"
             title="Optional">
         <span id="state_qospolicyid_go">
 <a href="#state_qospolicyid_go" style="color: inherit; text-decoration: inherit;">Qos<wbr>Policy<wbr>Id</a>
@@ -2324,8 +2165,7 @@ and `false`.
         <span class="property-type">string</span>
     </dt>
     <dd>{{% md %}}Reference to the associated QoS policy.
-{{% /md %}}</dd>
-    <dt class="property-optional"
+{{% /md %}}</dd><dt class="property-optional"
             title="Optional">
         <span id="state_region_go">
 <a href="#state_region_go" style="color: inherit; text-decoration: inherit;">Region</a>
@@ -2337,8 +2177,7 @@ and `false`.
 A Networking client is needed to create a port. If omitted, the
 `region` argument of the provider is used. Changing this creates a new
 port.
-{{% /md %}}</dd>
-    <dt class="property-optional"
+{{% /md %}}</dd><dt class="property-optional"
             title="Optional">
         <span id="state_securitygroupids_go">
 <a href="#state_securitygroupids_go" style="color: inherit; text-decoration: inherit;">Security<wbr>Group<wbr>Ids</a>
@@ -2350,8 +2189,7 @@ port.
 of security group IDs to apply to the port. The security groups must be
 specified by ID and not name (as opposed to how they are configured with
 the Compute Instance).
-{{% /md %}}</dd>
-    <dt class="property-optional"
+{{% /md %}}</dd><dt class="property-optional"
             title="Optional">
         <span id="state_tags_go">
 <a href="#state_tags_go" style="color: inherit; text-decoration: inherit;">Tags</a>
@@ -2360,8 +2198,7 @@ the Compute Instance).
         <span class="property-type">[]string</span>
     </dt>
     <dd>{{% md %}}A set of string tags for the port.
-{{% /md %}}</dd>
-    <dt class="property-optional"
+{{% /md %}}</dd><dt class="property-optional"
             title="Optional">
         <span id="state_tenantid_go">
 <a href="#state_tenantid_go" style="color: inherit; text-decoration: inherit;">Tenant<wbr>Id</a>
@@ -2371,8 +2208,7 @@ the Compute Instance).
     </dt>
     <dd>{{% md %}}The owner of the port. Required if admin wants
 to create a port for another tenant. Changing this creates a new port.
-{{% /md %}}</dd>
-    <dt class="property-optional"
+{{% /md %}}</dd><dt class="property-optional"
             title="Optional">
         <span id="state_valuespecs_go">
 <a href="#state_valuespecs_go" style="color: inherit; text-decoration: inherit;">Value<wbr>Specs</a>
@@ -2381,14 +2217,11 @@ to create a port for another tenant. Changing this creates a new port.
         <span class="property-type">map[string]interface{}</span>
     </dt>
     <dd>{{% md %}}Map of additional options.
-{{% /md %}}</dd>
-</dl>
+{{% /md %}}</dd></dl>
 {{% /choosable %}}
 
 {{% choosable language nodejs %}}
-<dl class="resources-properties">
-
-    <dt class="property-optional"
+<dl class="resources-properties"><dt class="property-optional"
             title="Optional">
         <span id="state_adminstateup_nodejs">
 <a href="#state_adminstateup_nodejs" style="color: inherit; text-decoration: inherit;">admin<wbr>State<wbr>Up</a>
@@ -2399,8 +2232,7 @@ to create a port for another tenant. Changing this creates a new port.
     <dd>{{% md %}}Administrative up/down status for the port
 (must be `true` or `false` if provided). Changing this updates the
 `admin_state_up` of an existing port.
-{{% /md %}}</dd>
-    <dt class="property-optional"
+{{% /md %}}</dd><dt class="property-optional"
             title="Optional">
         <span id="state_allfixedips_nodejs">
 <a href="#state_allfixedips_nodejs" style="color: inherit; text-decoration: inherit;">all<wbr>Fixed<wbr>Ips</a>
@@ -2410,8 +2242,7 @@ to create a port for another tenant. Changing this creates a new port.
     </dt>
     <dd>{{% md %}}The collection of Fixed IP addresses on the port in the
 order returned by the Network v2 API.
-{{% /md %}}</dd>
-    <dt class="property-optional"
+{{% /md %}}</dd><dt class="property-optional"
             title="Optional">
         <span id="state_allsecuritygroupids_nodejs">
 <a href="#state_allsecuritygroupids_nodejs" style="color: inherit; text-decoration: inherit;">all<wbr>Security<wbr>Group<wbr>Ids</a>
@@ -2421,8 +2252,7 @@ order returned by the Network v2 API.
     </dt>
     <dd>{{% md %}}The collection of Security Group IDs on the port
 which have been explicitly and implicitly added.
-{{% /md %}}</dd>
-    <dt class="property-optional"
+{{% /md %}}</dd><dt class="property-optional"
             title="Optional">
         <span id="state_alltags_nodejs">
 <a href="#state_alltags_nodejs" style="color: inherit; text-decoration: inherit;">all<wbr>Tags</a>
@@ -2432,8 +2262,7 @@ which have been explicitly and implicitly added.
     </dt>
     <dd>{{% md %}}The collection of tags assigned on the port, which have been
 explicitly and implicitly added.
-{{% /md %}}</dd>
-    <dt class="property-optional"
+{{% /md %}}</dd><dt class="property-optional"
             title="Optional">
         <span id="state_allowedaddresspairs_nodejs">
 <a href="#state_allowedaddresspairs_nodejs" style="color: inherit; text-decoration: inherit;">allowed<wbr>Address<wbr>Pairs</a>
@@ -2444,8 +2273,7 @@ explicitly and implicitly added.
     <dd>{{% md %}}An IP/MAC Address pair of additional IP
 addresses that can be active on this port. The structure is described
 below.
-{{% /md %}}</dd>
-    <dt class="property-optional"
+{{% /md %}}</dd><dt class="property-optional"
             title="Optional">
         <span id="state_binding_nodejs">
 <a href="#state_binding_nodejs" style="color: inherit; text-decoration: inherit;">binding</a>
@@ -2455,8 +2283,7 @@ below.
     </dt>
     <dd>{{% md %}}The port binding allows to specify binding information
 for the port. The structure is described below.
-{{% /md %}}</dd>
-    <dt class="property-optional"
+{{% /md %}}</dd><dt class="property-optional"
             title="Optional">
         <span id="state_description_nodejs">
 <a href="#state_description_nodejs" style="color: inherit; text-decoration: inherit;">description</a>
@@ -2466,8 +2293,7 @@ for the port. The structure is described below.
     </dt>
     <dd>{{% md %}}Human-readable description of the port. Changing
 this updates the `description` of an existing port.
-{{% /md %}}</dd>
-    <dt class="property-optional"
+{{% /md %}}</dd><dt class="property-optional"
             title="Optional">
         <span id="state_deviceid_nodejs">
 <a href="#state_deviceid_nodejs" style="color: inherit; text-decoration: inherit;">device<wbr>Id</a>
@@ -2477,8 +2303,7 @@ this updates the `description` of an existing port.
     </dt>
     <dd>{{% md %}}The ID of the device attached to the port. Changing this
 creates a new port.
-{{% /md %}}</dd>
-    <dt class="property-optional"
+{{% /md %}}</dd><dt class="property-optional"
             title="Optional">
         <span id="state_deviceowner_nodejs">
 <a href="#state_deviceowner_nodejs" style="color: inherit; text-decoration: inherit;">device<wbr>Owner</a>
@@ -2488,8 +2313,7 @@ creates a new port.
     </dt>
     <dd>{{% md %}}The device owner of the port. Changing this creates
 a new port.
-{{% /md %}}</dd>
-    <dt class="property-optional"
+{{% /md %}}</dd><dt class="property-optional"
             title="Optional">
         <span id="state_dnsassignments_nodejs">
 <a href="#state_dnsassignments_nodejs" style="color: inherit; text-decoration: inherit;">dns<wbr>Assignments</a>
@@ -2498,8 +2322,7 @@ a new port.
         <span class="property-type">{[key: string]: any}[]</span>
     </dt>
     <dd>{{% md %}}The list of maps representing port DNS assignments.
-{{% /md %}}</dd>
-    <dt class="property-optional"
+{{% /md %}}</dd><dt class="property-optional"
             title="Optional">
         <span id="state_dnsname_nodejs">
 <a href="#state_dnsname_nodejs" style="color: inherit; text-decoration: inherit;">dns<wbr>Name</a>
@@ -2509,8 +2332,7 @@ a new port.
     </dt>
     <dd>{{% md %}}The port DNS name. Available, when Neutron DNS extension
 is enabled.
-{{% /md %}}</dd>
-    <dt class="property-optional"
+{{% /md %}}</dd><dt class="property-optional"
             title="Optional">
         <span id="state_extradhcpoptions_nodejs">
 <a href="#state_extradhcpoptions_nodejs" style="color: inherit; text-decoration: inherit;">extra<wbr>Dhcp<wbr>Options</a>
@@ -2521,8 +2343,7 @@ is enabled.
     <dd>{{% md %}}An extra DHCP option that needs to be configured
 on the port. The structure is described below. Can be specified multiple
 times.
-{{% /md %}}</dd>
-    <dt class="property-optional"
+{{% /md %}}</dd><dt class="property-optional"
             title="Optional">
         <span id="state_fixedips_nodejs">
 <a href="#state_fixedips_nodejs" style="color: inherit; text-decoration: inherit;">fixed<wbr>Ips</a>
@@ -2532,8 +2353,7 @@ times.
     </dt>
     <dd>{{% md %}}An array of desired IPs for
 this port. The structure is described below.
-{{% /md %}}</dd>
-    <dt class="property-optional"
+{{% /md %}}</dd><dt class="property-optional"
             title="Optional">
         <span id="state_macaddress_nodejs">
 <a href="#state_macaddress_nodejs" style="color: inherit; text-decoration: inherit;">mac<wbr>Address</a>
@@ -2542,8 +2362,7 @@ this port. The structure is described below.
         <span class="property-type">string</span>
     </dt>
     <dd>{{% md %}}The additional MAC address.
-{{% /md %}}</dd>
-    <dt class="property-optional"
+{{% /md %}}</dd><dt class="property-optional"
             title="Optional">
         <span id="state_name_nodejs">
 <a href="#state_name_nodejs" style="color: inherit; text-decoration: inherit;">name</a>
@@ -2552,8 +2371,7 @@ this port. The structure is described below.
         <span class="property-type">string</span>
     </dt>
     <dd>{{% md %}}Name of the DHCP option.
-{{% /md %}}</dd>
-    <dt class="property-optional"
+{{% /md %}}</dd><dt class="property-optional"
             title="Optional">
         <span id="state_networkid_nodejs">
 <a href="#state_networkid_nodejs" style="color: inherit; text-decoration: inherit;">network<wbr>Id</a>
@@ -2563,8 +2381,7 @@ this port. The structure is described below.
     </dt>
     <dd>{{% md %}}The ID of the network to attach the port to. Changing
 this creates a new port.
-{{% /md %}}</dd>
-    <dt class="property-optional"
+{{% /md %}}</dd><dt class="property-optional"
             title="Optional">
         <span id="state_nofixedip_nodejs">
 <a href="#state_nofixedip_nodejs" style="color: inherit; text-decoration: inherit;">no<wbr>Fixed<wbr>Ip</a>
@@ -2575,8 +2392,7 @@ this creates a new port.
     <dd>{{% md %}}Create a port with no fixed
 IP address. This will also remove any fixed IPs previously set on a port. `true`
 is the only valid value for this argument.
-{{% /md %}}</dd>
-    <dt class="property-optional"
+{{% /md %}}</dd><dt class="property-optional"
             title="Optional">
         <span id="state_nosecuritygroups_nodejs">
 <a href="#state_nosecuritygroups_nodejs" style="color: inherit; text-decoration: inherit;">no<wbr>Security<wbr>Groups</a>
@@ -2589,8 +2405,7 @@ is the only valid value for this argument.
 no `security_group_ids` are specified, then the port will yield to the default
 behavior of the Networking service, which is to usually apply the "default"
 security group.
-{{% /md %}}</dd>
-    <dt class="property-optional"
+{{% /md %}}</dd><dt class="property-optional"
             title="Optional">
         <span id="state_portsecurityenabled_nodejs">
 <a href="#state_portsecurityenabled_nodejs" style="color: inherit; text-decoration: inherit;">port<wbr>Security<wbr>Enabled</a>
@@ -2604,8 +2419,7 @@ omitting argument will usually result in a value of `true`. Setting this
 explicitly to `false` will disable port security. In order to disable port
 security, the port must not have any security groups. Valid values are `true`
 and `false`.
-{{% /md %}}</dd>
-    <dt class="property-optional"
+{{% /md %}}</dd><dt class="property-optional"
             title="Optional">
         <span id="state_qospolicyid_nodejs">
 <a href="#state_qospolicyid_nodejs" style="color: inherit; text-decoration: inherit;">qos<wbr>Policy<wbr>Id</a>
@@ -2614,8 +2428,7 @@ and `false`.
         <span class="property-type">string</span>
     </dt>
     <dd>{{% md %}}Reference to the associated QoS policy.
-{{% /md %}}</dd>
-    <dt class="property-optional"
+{{% /md %}}</dd><dt class="property-optional"
             title="Optional">
         <span id="state_region_nodejs">
 <a href="#state_region_nodejs" style="color: inherit; text-decoration: inherit;">region</a>
@@ -2627,8 +2440,7 @@ and `false`.
 A Networking client is needed to create a port. If omitted, the
 `region` argument of the provider is used. Changing this creates a new
 port.
-{{% /md %}}</dd>
-    <dt class="property-optional"
+{{% /md %}}</dd><dt class="property-optional"
             title="Optional">
         <span id="state_securitygroupids_nodejs">
 <a href="#state_securitygroupids_nodejs" style="color: inherit; text-decoration: inherit;">security<wbr>Group<wbr>Ids</a>
@@ -2640,8 +2452,7 @@ port.
 of security group IDs to apply to the port. The security groups must be
 specified by ID and not name (as opposed to how they are configured with
 the Compute Instance).
-{{% /md %}}</dd>
-    <dt class="property-optional"
+{{% /md %}}</dd><dt class="property-optional"
             title="Optional">
         <span id="state_tags_nodejs">
 <a href="#state_tags_nodejs" style="color: inherit; text-decoration: inherit;">tags</a>
@@ -2650,8 +2461,7 @@ the Compute Instance).
         <span class="property-type">string[]</span>
     </dt>
     <dd>{{% md %}}A set of string tags for the port.
-{{% /md %}}</dd>
-    <dt class="property-optional"
+{{% /md %}}</dd><dt class="property-optional"
             title="Optional">
         <span id="state_tenantid_nodejs">
 <a href="#state_tenantid_nodejs" style="color: inherit; text-decoration: inherit;">tenant<wbr>Id</a>
@@ -2661,8 +2471,7 @@ the Compute Instance).
     </dt>
     <dd>{{% md %}}The owner of the port. Required if admin wants
 to create a port for another tenant. Changing this creates a new port.
-{{% /md %}}</dd>
-    <dt class="property-optional"
+{{% /md %}}</dd><dt class="property-optional"
             title="Optional">
         <span id="state_valuespecs_nodejs">
 <a href="#state_valuespecs_nodejs" style="color: inherit; text-decoration: inherit;">value<wbr>Specs</a>
@@ -2671,14 +2480,11 @@ to create a port for another tenant. Changing this creates a new port.
         <span class="property-type">{[key: string]: any}</span>
     </dt>
     <dd>{{% md %}}Map of additional options.
-{{% /md %}}</dd>
-</dl>
+{{% /md %}}</dd></dl>
 {{% /choosable %}}
 
 {{% choosable language python %}}
-<dl class="resources-properties">
-
-    <dt class="property-optional"
+<dl class="resources-properties"><dt class="property-optional"
             title="Optional">
         <span id="state_admin_state_up_python">
 <a href="#state_admin_state_up_python" style="color: inherit; text-decoration: inherit;">admin_<wbr>state_<wbr>up</a>
@@ -2689,8 +2495,7 @@ to create a port for another tenant. Changing this creates a new port.
     <dd>{{% md %}}Administrative up/down status for the port
 (must be `true` or `false` if provided). Changing this updates the
 `admin_state_up` of an existing port.
-{{% /md %}}</dd>
-    <dt class="property-optional"
+{{% /md %}}</dd><dt class="property-optional"
             title="Optional">
         <span id="state_all_fixed_ips_python">
 <a href="#state_all_fixed_ips_python" style="color: inherit; text-decoration: inherit;">all_<wbr>fixed_<wbr>ips</a>
@@ -2700,8 +2505,7 @@ to create a port for another tenant. Changing this creates a new port.
     </dt>
     <dd>{{% md %}}The collection of Fixed IP addresses on the port in the
 order returned by the Network v2 API.
-{{% /md %}}</dd>
-    <dt class="property-optional"
+{{% /md %}}</dd><dt class="property-optional"
             title="Optional">
         <span id="state_all_security_group_ids_python">
 <a href="#state_all_security_group_ids_python" style="color: inherit; text-decoration: inherit;">all_<wbr>security_<wbr>group_<wbr>ids</a>
@@ -2711,8 +2515,7 @@ order returned by the Network v2 API.
     </dt>
     <dd>{{% md %}}The collection of Security Group IDs on the port
 which have been explicitly and implicitly added.
-{{% /md %}}</dd>
-    <dt class="property-optional"
+{{% /md %}}</dd><dt class="property-optional"
             title="Optional">
         <span id="state_all_tags_python">
 <a href="#state_all_tags_python" style="color: inherit; text-decoration: inherit;">all_<wbr>tags</a>
@@ -2722,8 +2525,7 @@ which have been explicitly and implicitly added.
     </dt>
     <dd>{{% md %}}The collection of tags assigned on the port, which have been
 explicitly and implicitly added.
-{{% /md %}}</dd>
-    <dt class="property-optional"
+{{% /md %}}</dd><dt class="property-optional"
             title="Optional">
         <span id="state_allowed_address_pairs_python">
 <a href="#state_allowed_address_pairs_python" style="color: inherit; text-decoration: inherit;">allowed_<wbr>address_<wbr>pairs</a>
@@ -2734,8 +2536,7 @@ explicitly and implicitly added.
     <dd>{{% md %}}An IP/MAC Address pair of additional IP
 addresses that can be active on this port. The structure is described
 below.
-{{% /md %}}</dd>
-    <dt class="property-optional"
+{{% /md %}}</dd><dt class="property-optional"
             title="Optional">
         <span id="state_binding_python">
 <a href="#state_binding_python" style="color: inherit; text-decoration: inherit;">binding</a>
@@ -2745,8 +2546,7 @@ below.
     </dt>
     <dd>{{% md %}}The port binding allows to specify binding information
 for the port. The structure is described below.
-{{% /md %}}</dd>
-    <dt class="property-optional"
+{{% /md %}}</dd><dt class="property-optional"
             title="Optional">
         <span id="state_description_python">
 <a href="#state_description_python" style="color: inherit; text-decoration: inherit;">description</a>
@@ -2756,8 +2556,7 @@ for the port. The structure is described below.
     </dt>
     <dd>{{% md %}}Human-readable description of the port. Changing
 this updates the `description` of an existing port.
-{{% /md %}}</dd>
-    <dt class="property-optional"
+{{% /md %}}</dd><dt class="property-optional"
             title="Optional">
         <span id="state_device_id_python">
 <a href="#state_device_id_python" style="color: inherit; text-decoration: inherit;">device_<wbr>id</a>
@@ -2767,8 +2566,7 @@ this updates the `description` of an existing port.
     </dt>
     <dd>{{% md %}}The ID of the device attached to the port. Changing this
 creates a new port.
-{{% /md %}}</dd>
-    <dt class="property-optional"
+{{% /md %}}</dd><dt class="property-optional"
             title="Optional">
         <span id="state_device_owner_python">
 <a href="#state_device_owner_python" style="color: inherit; text-decoration: inherit;">device_<wbr>owner</a>
@@ -2778,8 +2576,7 @@ creates a new port.
     </dt>
     <dd>{{% md %}}The device owner of the port. Changing this creates
 a new port.
-{{% /md %}}</dd>
-    <dt class="property-optional"
+{{% /md %}}</dd><dt class="property-optional"
             title="Optional">
         <span id="state_dns_assignments_python">
 <a href="#state_dns_assignments_python" style="color: inherit; text-decoration: inherit;">dns_<wbr>assignments</a>
@@ -2788,8 +2585,7 @@ a new port.
         <span class="property-type">Sequence[Mapping[str, Any]]</span>
     </dt>
     <dd>{{% md %}}The list of maps representing port DNS assignments.
-{{% /md %}}</dd>
-    <dt class="property-optional"
+{{% /md %}}</dd><dt class="property-optional"
             title="Optional">
         <span id="state_dns_name_python">
 <a href="#state_dns_name_python" style="color: inherit; text-decoration: inherit;">dns_<wbr>name</a>
@@ -2799,8 +2595,7 @@ a new port.
     </dt>
     <dd>{{% md %}}The port DNS name. Available, when Neutron DNS extension
 is enabled.
-{{% /md %}}</dd>
-    <dt class="property-optional"
+{{% /md %}}</dd><dt class="property-optional"
             title="Optional">
         <span id="state_extra_dhcp_options_python">
 <a href="#state_extra_dhcp_options_python" style="color: inherit; text-decoration: inherit;">extra_<wbr>dhcp_<wbr>options</a>
@@ -2811,8 +2606,7 @@ is enabled.
     <dd>{{% md %}}An extra DHCP option that needs to be configured
 on the port. The structure is described below. Can be specified multiple
 times.
-{{% /md %}}</dd>
-    <dt class="property-optional"
+{{% /md %}}</dd><dt class="property-optional"
             title="Optional">
         <span id="state_fixed_ips_python">
 <a href="#state_fixed_ips_python" style="color: inherit; text-decoration: inherit;">fixed_<wbr>ips</a>
@@ -2822,8 +2616,7 @@ times.
     </dt>
     <dd>{{% md %}}An array of desired IPs for
 this port. The structure is described below.
-{{% /md %}}</dd>
-    <dt class="property-optional"
+{{% /md %}}</dd><dt class="property-optional"
             title="Optional">
         <span id="state_mac_address_python">
 <a href="#state_mac_address_python" style="color: inherit; text-decoration: inherit;">mac_<wbr>address</a>
@@ -2832,8 +2625,7 @@ this port. The structure is described below.
         <span class="property-type">str</span>
     </dt>
     <dd>{{% md %}}The additional MAC address.
-{{% /md %}}</dd>
-    <dt class="property-optional"
+{{% /md %}}</dd><dt class="property-optional"
             title="Optional">
         <span id="state_name_python">
 <a href="#state_name_python" style="color: inherit; text-decoration: inherit;">name</a>
@@ -2842,8 +2634,7 @@ this port. The structure is described below.
         <span class="property-type">str</span>
     </dt>
     <dd>{{% md %}}Name of the DHCP option.
-{{% /md %}}</dd>
-    <dt class="property-optional"
+{{% /md %}}</dd><dt class="property-optional"
             title="Optional">
         <span id="state_network_id_python">
 <a href="#state_network_id_python" style="color: inherit; text-decoration: inherit;">network_<wbr>id</a>
@@ -2853,8 +2644,7 @@ this port. The structure is described below.
     </dt>
     <dd>{{% md %}}The ID of the network to attach the port to. Changing
 this creates a new port.
-{{% /md %}}</dd>
-    <dt class="property-optional"
+{{% /md %}}</dd><dt class="property-optional"
             title="Optional">
         <span id="state_no_fixed_ip_python">
 <a href="#state_no_fixed_ip_python" style="color: inherit; text-decoration: inherit;">no_<wbr>fixed_<wbr>ip</a>
@@ -2865,8 +2655,7 @@ this creates a new port.
     <dd>{{% md %}}Create a port with no fixed
 IP address. This will also remove any fixed IPs previously set on a port. `true`
 is the only valid value for this argument.
-{{% /md %}}</dd>
-    <dt class="property-optional"
+{{% /md %}}</dd><dt class="property-optional"
             title="Optional">
         <span id="state_no_security_groups_python">
 <a href="#state_no_security_groups_python" style="color: inherit; text-decoration: inherit;">no_<wbr>security_<wbr>groups</a>
@@ -2879,8 +2668,7 @@ is the only valid value for this argument.
 no `security_group_ids` are specified, then the port will yield to the default
 behavior of the Networking service, which is to usually apply the "default"
 security group.
-{{% /md %}}</dd>
-    <dt class="property-optional"
+{{% /md %}}</dd><dt class="property-optional"
             title="Optional">
         <span id="state_port_security_enabled_python">
 <a href="#state_port_security_enabled_python" style="color: inherit; text-decoration: inherit;">port_<wbr>security_<wbr>enabled</a>
@@ -2894,8 +2682,7 @@ omitting argument will usually result in a value of `true`. Setting this
 explicitly to `false` will disable port security. In order to disable port
 security, the port must not have any security groups. Valid values are `true`
 and `false`.
-{{% /md %}}</dd>
-    <dt class="property-optional"
+{{% /md %}}</dd><dt class="property-optional"
             title="Optional">
         <span id="state_qos_policy_id_python">
 <a href="#state_qos_policy_id_python" style="color: inherit; text-decoration: inherit;">qos_<wbr>policy_<wbr>id</a>
@@ -2904,8 +2691,7 @@ and `false`.
         <span class="property-type">str</span>
     </dt>
     <dd>{{% md %}}Reference to the associated QoS policy.
-{{% /md %}}</dd>
-    <dt class="property-optional"
+{{% /md %}}</dd><dt class="property-optional"
             title="Optional">
         <span id="state_region_python">
 <a href="#state_region_python" style="color: inherit; text-decoration: inherit;">region</a>
@@ -2917,8 +2703,7 @@ and `false`.
 A Networking client is needed to create a port. If omitted, the
 `region` argument of the provider is used. Changing this creates a new
 port.
-{{% /md %}}</dd>
-    <dt class="property-optional"
+{{% /md %}}</dd><dt class="property-optional"
             title="Optional">
         <span id="state_security_group_ids_python">
 <a href="#state_security_group_ids_python" style="color: inherit; text-decoration: inherit;">security_<wbr>group_<wbr>ids</a>
@@ -2930,8 +2715,7 @@ port.
 of security group IDs to apply to the port. The security groups must be
 specified by ID and not name (as opposed to how they are configured with
 the Compute Instance).
-{{% /md %}}</dd>
-    <dt class="property-optional"
+{{% /md %}}</dd><dt class="property-optional"
             title="Optional">
         <span id="state_tags_python">
 <a href="#state_tags_python" style="color: inherit; text-decoration: inherit;">tags</a>
@@ -2940,8 +2724,7 @@ the Compute Instance).
         <span class="property-type">Sequence[str]</span>
     </dt>
     <dd>{{% md %}}A set of string tags for the port.
-{{% /md %}}</dd>
-    <dt class="property-optional"
+{{% /md %}}</dd><dt class="property-optional"
             title="Optional">
         <span id="state_tenant_id_python">
 <a href="#state_tenant_id_python" style="color: inherit; text-decoration: inherit;">tenant_<wbr>id</a>
@@ -2951,8 +2734,7 @@ the Compute Instance).
     </dt>
     <dd>{{% md %}}The owner of the port. Required if admin wants
 to create a port for another tenant. Changing this creates a new port.
-{{% /md %}}</dd>
-    <dt class="property-optional"
+{{% /md %}}</dd><dt class="property-optional"
             title="Optional">
         <span id="state_value_specs_python">
 <a href="#state_value_specs_python" style="color: inherit; text-decoration: inherit;">value_<wbr>specs</a>
@@ -2961,8 +2743,7 @@ to create a port for another tenant. Changing this creates a new port.
         <span class="property-type">Mapping[str, Any]</span>
     </dt>
     <dd>{{% md %}}Map of additional options.
-{{% /md %}}</dd>
-</dl>
+{{% /md %}}</dd></dl>
 {{% /choosable %}}
 
 
@@ -2977,9 +2758,7 @@ to create a port for another tenant. Changing this creates a new port.
 <h4 id="portallowedaddresspair">Port<wbr>Allowed<wbr>Address<wbr>Pair</h4>
 
 {{% choosable language csharp %}}
-<dl class="resources-properties">
-
-    <dt class="property-required"
+<dl class="resources-properties"><dt class="property-required"
             title="Required">
         <span id="ipaddress_csharp">
 <a href="#ipaddress_csharp" style="color: inherit; text-decoration: inherit;">Ip<wbr>Address</a>
@@ -2988,8 +2767,7 @@ to create a port for another tenant. Changing this creates a new port.
         <span class="property-type">string</span>
     </dt>
     <dd>{{% md %}}The additional IP address.
-{{% /md %}}</dd>
-    <dt class="property-optional"
+{{% /md %}}</dd><dt class="property-optional"
             title="Optional">
         <span id="macaddress_csharp">
 <a href="#macaddress_csharp" style="color: inherit; text-decoration: inherit;">Mac<wbr>Address</a>
@@ -2998,14 +2776,11 @@ to create a port for another tenant. Changing this creates a new port.
         <span class="property-type">string</span>
     </dt>
     <dd>{{% md %}}The additional MAC address.
-{{% /md %}}</dd>
-</dl>
+{{% /md %}}</dd></dl>
 {{% /choosable %}}
 
 {{% choosable language go %}}
-<dl class="resources-properties">
-
-    <dt class="property-required"
+<dl class="resources-properties"><dt class="property-required"
             title="Required">
         <span id="ipaddress_go">
 <a href="#ipaddress_go" style="color: inherit; text-decoration: inherit;">Ip<wbr>Address</a>
@@ -3014,8 +2789,7 @@ to create a port for another tenant. Changing this creates a new port.
         <span class="property-type">string</span>
     </dt>
     <dd>{{% md %}}The additional IP address.
-{{% /md %}}</dd>
-    <dt class="property-optional"
+{{% /md %}}</dd><dt class="property-optional"
             title="Optional">
         <span id="macaddress_go">
 <a href="#macaddress_go" style="color: inherit; text-decoration: inherit;">Mac<wbr>Address</a>
@@ -3024,14 +2798,11 @@ to create a port for another tenant. Changing this creates a new port.
         <span class="property-type">string</span>
     </dt>
     <dd>{{% md %}}The additional MAC address.
-{{% /md %}}</dd>
-</dl>
+{{% /md %}}</dd></dl>
 {{% /choosable %}}
 
 {{% choosable language nodejs %}}
-<dl class="resources-properties">
-
-    <dt class="property-required"
+<dl class="resources-properties"><dt class="property-required"
             title="Required">
         <span id="ipaddress_nodejs">
 <a href="#ipaddress_nodejs" style="color: inherit; text-decoration: inherit;">ip<wbr>Address</a>
@@ -3040,8 +2811,7 @@ to create a port for another tenant. Changing this creates a new port.
         <span class="property-type">string</span>
     </dt>
     <dd>{{% md %}}The additional IP address.
-{{% /md %}}</dd>
-    <dt class="property-optional"
+{{% /md %}}</dd><dt class="property-optional"
             title="Optional">
         <span id="macaddress_nodejs">
 <a href="#macaddress_nodejs" style="color: inherit; text-decoration: inherit;">mac<wbr>Address</a>
@@ -3050,14 +2820,11 @@ to create a port for another tenant. Changing this creates a new port.
         <span class="property-type">string</span>
     </dt>
     <dd>{{% md %}}The additional MAC address.
-{{% /md %}}</dd>
-</dl>
+{{% /md %}}</dd></dl>
 {{% /choosable %}}
 
 {{% choosable language python %}}
-<dl class="resources-properties">
-
-    <dt class="property-required"
+<dl class="resources-properties"><dt class="property-required"
             title="Required">
         <span id="ip_address_python">
 <a href="#ip_address_python" style="color: inherit; text-decoration: inherit;">ip_<wbr>address</a>
@@ -3066,8 +2833,7 @@ to create a port for another tenant. Changing this creates a new port.
         <span class="property-type">str</span>
     </dt>
     <dd>{{% md %}}The additional IP address.
-{{% /md %}}</dd>
-    <dt class="property-optional"
+{{% /md %}}</dd><dt class="property-optional"
             title="Optional">
         <span id="mac_address_python">
 <a href="#mac_address_python" style="color: inherit; text-decoration: inherit;">mac_<wbr>address</a>
@@ -3076,16 +2842,13 @@ to create a port for another tenant. Changing this creates a new port.
         <span class="property-type">str</span>
     </dt>
     <dd>{{% md %}}The additional MAC address.
-{{% /md %}}</dd>
-</dl>
+{{% /md %}}</dd></dl>
 {{% /choosable %}}
 
 <h4 id="portbinding">Port<wbr>Binding</h4>
 
 {{% choosable language csharp %}}
-<dl class="resources-properties">
-
-    <dt class="property-optional"
+<dl class="resources-properties"><dt class="property-optional"
             title="Optional">
         <span id="hostid_csharp">
 <a href="#hostid_csharp" style="color: inherit; text-decoration: inherit;">Host<wbr>Id</a>
@@ -3094,8 +2857,7 @@ to create a port for another tenant. Changing this creates a new port.
         <span class="property-type">string</span>
     </dt>
     <dd>{{% md %}}The ID of the host to allocate port on.
-{{% /md %}}</dd>
-    <dt class="property-optional"
+{{% /md %}}</dd><dt class="property-optional"
             title="Optional">
         <span id="profile_csharp">
 <a href="#profile_csharp" style="color: inherit; text-decoration: inherit;">Profile</a>
@@ -3105,8 +2867,7 @@ to create a port for another tenant. Changing this creates a new port.
     </dt>
     <dd>{{% md %}}Custom data to be passed as `binding:profile`. Data
 must be passed as JSON.
-{{% /md %}}</dd>
-    <dt class="property-optional"
+{{% /md %}}</dd><dt class="property-optional"
             title="Optional">
         <span id="vifdetails_csharp">
 <a href="#vifdetails_csharp" style="color: inherit; text-decoration: inherit;">Vif<wbr>Details</a>
@@ -3116,8 +2877,7 @@ must be passed as JSON.
     </dt>
     <dd>{{% md %}}A map of JSON strings containing additional
 details for this specific binding.
-{{% /md %}}</dd>
-    <dt class="property-optional"
+{{% /md %}}</dd><dt class="property-optional"
             title="Optional">
         <span id="viftype_csharp">
 <a href="#viftype_csharp" style="color: inherit; text-decoration: inherit;">Vif<wbr>Type</a>
@@ -3126,8 +2886,7 @@ details for this specific binding.
         <span class="property-type">string</span>
     </dt>
     <dd>{{% md %}}The VNIC type of the port binding.
-{{% /md %}}</dd>
-    <dt class="property-optional"
+{{% /md %}}</dd><dt class="property-optional"
             title="Optional">
         <span id="vnictype_csharp">
 <a href="#vnictype_csharp" style="color: inherit; text-decoration: inherit;">Vnic<wbr>Type</a>
@@ -3138,14 +2897,11 @@ details for this specific binding.
     <dd>{{% md %}}VNIC type for the port. Can either be `direct`,
 `direct-physical`, `macvtap`, `normal`, `baremetal` or `virtio-forwarder`.
 Default value is `normal`.
-{{% /md %}}</dd>
-</dl>
+{{% /md %}}</dd></dl>
 {{% /choosable %}}
 
 {{% choosable language go %}}
-<dl class="resources-properties">
-
-    <dt class="property-optional"
+<dl class="resources-properties"><dt class="property-optional"
             title="Optional">
         <span id="hostid_go">
 <a href="#hostid_go" style="color: inherit; text-decoration: inherit;">Host<wbr>Id</a>
@@ -3154,8 +2910,7 @@ Default value is `normal`.
         <span class="property-type">string</span>
     </dt>
     <dd>{{% md %}}The ID of the host to allocate port on.
-{{% /md %}}</dd>
-    <dt class="property-optional"
+{{% /md %}}</dd><dt class="property-optional"
             title="Optional">
         <span id="profile_go">
 <a href="#profile_go" style="color: inherit; text-decoration: inherit;">Profile</a>
@@ -3165,8 +2920,7 @@ Default value is `normal`.
     </dt>
     <dd>{{% md %}}Custom data to be passed as `binding:profile`. Data
 must be passed as JSON.
-{{% /md %}}</dd>
-    <dt class="property-optional"
+{{% /md %}}</dd><dt class="property-optional"
             title="Optional">
         <span id="vifdetails_go">
 <a href="#vifdetails_go" style="color: inherit; text-decoration: inherit;">Vif<wbr>Details</a>
@@ -3176,8 +2930,7 @@ must be passed as JSON.
     </dt>
     <dd>{{% md %}}A map of JSON strings containing additional
 details for this specific binding.
-{{% /md %}}</dd>
-    <dt class="property-optional"
+{{% /md %}}</dd><dt class="property-optional"
             title="Optional">
         <span id="viftype_go">
 <a href="#viftype_go" style="color: inherit; text-decoration: inherit;">Vif<wbr>Type</a>
@@ -3186,8 +2939,7 @@ details for this specific binding.
         <span class="property-type">string</span>
     </dt>
     <dd>{{% md %}}The VNIC type of the port binding.
-{{% /md %}}</dd>
-    <dt class="property-optional"
+{{% /md %}}</dd><dt class="property-optional"
             title="Optional">
         <span id="vnictype_go">
 <a href="#vnictype_go" style="color: inherit; text-decoration: inherit;">Vnic<wbr>Type</a>
@@ -3198,14 +2950,11 @@ details for this specific binding.
     <dd>{{% md %}}VNIC type for the port. Can either be `direct`,
 `direct-physical`, `macvtap`, `normal`, `baremetal` or `virtio-forwarder`.
 Default value is `normal`.
-{{% /md %}}</dd>
-</dl>
+{{% /md %}}</dd></dl>
 {{% /choosable %}}
 
 {{% choosable language nodejs %}}
-<dl class="resources-properties">
-
-    <dt class="property-optional"
+<dl class="resources-properties"><dt class="property-optional"
             title="Optional">
         <span id="hostid_nodejs">
 <a href="#hostid_nodejs" style="color: inherit; text-decoration: inherit;">host<wbr>Id</a>
@@ -3214,8 +2963,7 @@ Default value is `normal`.
         <span class="property-type">string</span>
     </dt>
     <dd>{{% md %}}The ID of the host to allocate port on.
-{{% /md %}}</dd>
-    <dt class="property-optional"
+{{% /md %}}</dd><dt class="property-optional"
             title="Optional">
         <span id="profile_nodejs">
 <a href="#profile_nodejs" style="color: inherit; text-decoration: inherit;">profile</a>
@@ -3225,8 +2973,7 @@ Default value is `normal`.
     </dt>
     <dd>{{% md %}}Custom data to be passed as `binding:profile`. Data
 must be passed as JSON.
-{{% /md %}}</dd>
-    <dt class="property-optional"
+{{% /md %}}</dd><dt class="property-optional"
             title="Optional">
         <span id="vifdetails_nodejs">
 <a href="#vifdetails_nodejs" style="color: inherit; text-decoration: inherit;">vif<wbr>Details</a>
@@ -3236,8 +2983,7 @@ must be passed as JSON.
     </dt>
     <dd>{{% md %}}A map of JSON strings containing additional
 details for this specific binding.
-{{% /md %}}</dd>
-    <dt class="property-optional"
+{{% /md %}}</dd><dt class="property-optional"
             title="Optional">
         <span id="viftype_nodejs">
 <a href="#viftype_nodejs" style="color: inherit; text-decoration: inherit;">vif<wbr>Type</a>
@@ -3246,8 +2992,7 @@ details for this specific binding.
         <span class="property-type">string</span>
     </dt>
     <dd>{{% md %}}The VNIC type of the port binding.
-{{% /md %}}</dd>
-    <dt class="property-optional"
+{{% /md %}}</dd><dt class="property-optional"
             title="Optional">
         <span id="vnictype_nodejs">
 <a href="#vnictype_nodejs" style="color: inherit; text-decoration: inherit;">vnic<wbr>Type</a>
@@ -3258,14 +3003,11 @@ details for this specific binding.
     <dd>{{% md %}}VNIC type for the port. Can either be `direct`,
 `direct-physical`, `macvtap`, `normal`, `baremetal` or `virtio-forwarder`.
 Default value is `normal`.
-{{% /md %}}</dd>
-</dl>
+{{% /md %}}</dd></dl>
 {{% /choosable %}}
 
 {{% choosable language python %}}
-<dl class="resources-properties">
-
-    <dt class="property-optional"
+<dl class="resources-properties"><dt class="property-optional"
             title="Optional">
         <span id="host_id_python">
 <a href="#host_id_python" style="color: inherit; text-decoration: inherit;">host_<wbr>id</a>
@@ -3274,8 +3016,7 @@ Default value is `normal`.
         <span class="property-type">str</span>
     </dt>
     <dd>{{% md %}}The ID of the host to allocate port on.
-{{% /md %}}</dd>
-    <dt class="property-optional"
+{{% /md %}}</dd><dt class="property-optional"
             title="Optional">
         <span id="profile_python">
 <a href="#profile_python" style="color: inherit; text-decoration: inherit;">profile</a>
@@ -3285,8 +3026,7 @@ Default value is `normal`.
     </dt>
     <dd>{{% md %}}Custom data to be passed as `binding:profile`. Data
 must be passed as JSON.
-{{% /md %}}</dd>
-    <dt class="property-optional"
+{{% /md %}}</dd><dt class="property-optional"
             title="Optional">
         <span id="vif_details_python">
 <a href="#vif_details_python" style="color: inherit; text-decoration: inherit;">vif_<wbr>details</a>
@@ -3296,8 +3036,7 @@ must be passed as JSON.
     </dt>
     <dd>{{% md %}}A map of JSON strings containing additional
 details for this specific binding.
-{{% /md %}}</dd>
-    <dt class="property-optional"
+{{% /md %}}</dd><dt class="property-optional"
             title="Optional">
         <span id="vif_type_python">
 <a href="#vif_type_python" style="color: inherit; text-decoration: inherit;">vif_<wbr>type</a>
@@ -3306,8 +3045,7 @@ details for this specific binding.
         <span class="property-type">str</span>
     </dt>
     <dd>{{% md %}}The VNIC type of the port binding.
-{{% /md %}}</dd>
-    <dt class="property-optional"
+{{% /md %}}</dd><dt class="property-optional"
             title="Optional">
         <span id="vnic_type_python">
 <a href="#vnic_type_python" style="color: inherit; text-decoration: inherit;">vnic_<wbr>type</a>
@@ -3318,16 +3056,13 @@ details for this specific binding.
     <dd>{{% md %}}VNIC type for the port. Can either be `direct`,
 `direct-physical`, `macvtap`, `normal`, `baremetal` or `virtio-forwarder`.
 Default value is `normal`.
-{{% /md %}}</dd>
-</dl>
+{{% /md %}}</dd></dl>
 {{% /choosable %}}
 
 <h4 id="portextradhcpoption">Port<wbr>Extra<wbr>Dhcp<wbr>Option</h4>
 
 {{% choosable language csharp %}}
-<dl class="resources-properties">
-
-    <dt class="property-required"
+<dl class="resources-properties"><dt class="property-required"
             title="Required">
         <span id="name_csharp">
 <a href="#name_csharp" style="color: inherit; text-decoration: inherit;">Name</a>
@@ -3336,8 +3071,7 @@ Default value is `normal`.
         <span class="property-type">string</span>
     </dt>
     <dd>{{% md %}}Name of the DHCP option.
-{{% /md %}}</dd>
-    <dt class="property-required"
+{{% /md %}}</dd><dt class="property-required"
             title="Required">
         <span id="value_csharp">
 <a href="#value_csharp" style="color: inherit; text-decoration: inherit;">Value</a>
@@ -3346,8 +3080,7 @@ Default value is `normal`.
         <span class="property-type">string</span>
     </dt>
     <dd>{{% md %}}Value of the DHCP option.
-{{% /md %}}</dd>
-    <dt class="property-optional"
+{{% /md %}}</dd><dt class="property-optional"
             title="Optional">
         <span id="ipversion_csharp">
 <a href="#ipversion_csharp" style="color: inherit; text-decoration: inherit;">Ip<wbr>Version</a>
@@ -3356,14 +3089,11 @@ Default value is `normal`.
         <span class="property-type">int</span>
     </dt>
     <dd>{{% md %}}IP protocol version. Defaults to 4.
-{{% /md %}}</dd>
-</dl>
+{{% /md %}}</dd></dl>
 {{% /choosable %}}
 
 {{% choosable language go %}}
-<dl class="resources-properties">
-
-    <dt class="property-required"
+<dl class="resources-properties"><dt class="property-required"
             title="Required">
         <span id="name_go">
 <a href="#name_go" style="color: inherit; text-decoration: inherit;">Name</a>
@@ -3372,8 +3102,7 @@ Default value is `normal`.
         <span class="property-type">string</span>
     </dt>
     <dd>{{% md %}}Name of the DHCP option.
-{{% /md %}}</dd>
-    <dt class="property-required"
+{{% /md %}}</dd><dt class="property-required"
             title="Required">
         <span id="value_go">
 <a href="#value_go" style="color: inherit; text-decoration: inherit;">Value</a>
@@ -3382,8 +3111,7 @@ Default value is `normal`.
         <span class="property-type">string</span>
     </dt>
     <dd>{{% md %}}Value of the DHCP option.
-{{% /md %}}</dd>
-    <dt class="property-optional"
+{{% /md %}}</dd><dt class="property-optional"
             title="Optional">
         <span id="ipversion_go">
 <a href="#ipversion_go" style="color: inherit; text-decoration: inherit;">Ip<wbr>Version</a>
@@ -3392,14 +3120,11 @@ Default value is `normal`.
         <span class="property-type">int</span>
     </dt>
     <dd>{{% md %}}IP protocol version. Defaults to 4.
-{{% /md %}}</dd>
-</dl>
+{{% /md %}}</dd></dl>
 {{% /choosable %}}
 
 {{% choosable language nodejs %}}
-<dl class="resources-properties">
-
-    <dt class="property-required"
+<dl class="resources-properties"><dt class="property-required"
             title="Required">
         <span id="name_nodejs">
 <a href="#name_nodejs" style="color: inherit; text-decoration: inherit;">name</a>
@@ -3408,8 +3133,7 @@ Default value is `normal`.
         <span class="property-type">string</span>
     </dt>
     <dd>{{% md %}}Name of the DHCP option.
-{{% /md %}}</dd>
-    <dt class="property-required"
+{{% /md %}}</dd><dt class="property-required"
             title="Required">
         <span id="value_nodejs">
 <a href="#value_nodejs" style="color: inherit; text-decoration: inherit;">value</a>
@@ -3418,8 +3142,7 @@ Default value is `normal`.
         <span class="property-type">string</span>
     </dt>
     <dd>{{% md %}}Value of the DHCP option.
-{{% /md %}}</dd>
-    <dt class="property-optional"
+{{% /md %}}</dd><dt class="property-optional"
             title="Optional">
         <span id="ipversion_nodejs">
 <a href="#ipversion_nodejs" style="color: inherit; text-decoration: inherit;">ip<wbr>Version</a>
@@ -3428,14 +3151,11 @@ Default value is `normal`.
         <span class="property-type">number</span>
     </dt>
     <dd>{{% md %}}IP protocol version. Defaults to 4.
-{{% /md %}}</dd>
-</dl>
+{{% /md %}}</dd></dl>
 {{% /choosable %}}
 
 {{% choosable language python %}}
-<dl class="resources-properties">
-
-    <dt class="property-required"
+<dl class="resources-properties"><dt class="property-required"
             title="Required">
         <span id="name_python">
 <a href="#name_python" style="color: inherit; text-decoration: inherit;">name</a>
@@ -3444,8 +3164,7 @@ Default value is `normal`.
         <span class="property-type">str</span>
     </dt>
     <dd>{{% md %}}Name of the DHCP option.
-{{% /md %}}</dd>
-    <dt class="property-required"
+{{% /md %}}</dd><dt class="property-required"
             title="Required">
         <span id="value_python">
 <a href="#value_python" style="color: inherit; text-decoration: inherit;">value</a>
@@ -3454,8 +3173,7 @@ Default value is `normal`.
         <span class="property-type">str</span>
     </dt>
     <dd>{{% md %}}Value of the DHCP option.
-{{% /md %}}</dd>
-    <dt class="property-optional"
+{{% /md %}}</dd><dt class="property-optional"
             title="Optional">
         <span id="ip_version_python">
 <a href="#ip_version_python" style="color: inherit; text-decoration: inherit;">ip_<wbr>version</a>
@@ -3464,16 +3182,13 @@ Default value is `normal`.
         <span class="property-type">int</span>
     </dt>
     <dd>{{% md %}}IP protocol version. Defaults to 4.
-{{% /md %}}</dd>
-</dl>
+{{% /md %}}</dd></dl>
 {{% /choosable %}}
 
 <h4 id="portfixedip">Port<wbr>Fixed<wbr>Ip</h4>
 
 {{% choosable language csharp %}}
-<dl class="resources-properties">
-
-    <dt class="property-required"
+<dl class="resources-properties"><dt class="property-required"
             title="Required">
         <span id="subnetid_csharp">
 <a href="#subnetid_csharp" style="color: inherit; text-decoration: inherit;">Subnet<wbr>Id</a>
@@ -3483,8 +3198,7 @@ Default value is `normal`.
     </dt>
     <dd>{{% md %}}Subnet in which to allocate IP address for
 this port.
-{{% /md %}}</dd>
-    <dt class="property-optional"
+{{% /md %}}</dd><dt class="property-optional"
             title="Optional">
         <span id="ipaddress_csharp">
 <a href="#ipaddress_csharp" style="color: inherit; text-decoration: inherit;">Ip<wbr>Address</a>
@@ -3493,14 +3207,11 @@ this port.
         <span class="property-type">string</span>
     </dt>
     <dd>{{% md %}}The additional IP address.
-{{% /md %}}</dd>
-</dl>
+{{% /md %}}</dd></dl>
 {{% /choosable %}}
 
 {{% choosable language go %}}
-<dl class="resources-properties">
-
-    <dt class="property-required"
+<dl class="resources-properties"><dt class="property-required"
             title="Required">
         <span id="subnetid_go">
 <a href="#subnetid_go" style="color: inherit; text-decoration: inherit;">Subnet<wbr>Id</a>
@@ -3510,8 +3221,7 @@ this port.
     </dt>
     <dd>{{% md %}}Subnet in which to allocate IP address for
 this port.
-{{% /md %}}</dd>
-    <dt class="property-optional"
+{{% /md %}}</dd><dt class="property-optional"
             title="Optional">
         <span id="ipaddress_go">
 <a href="#ipaddress_go" style="color: inherit; text-decoration: inherit;">Ip<wbr>Address</a>
@@ -3520,14 +3230,11 @@ this port.
         <span class="property-type">string</span>
     </dt>
     <dd>{{% md %}}The additional IP address.
-{{% /md %}}</dd>
-</dl>
+{{% /md %}}</dd></dl>
 {{% /choosable %}}
 
 {{% choosable language nodejs %}}
-<dl class="resources-properties">
-
-    <dt class="property-required"
+<dl class="resources-properties"><dt class="property-required"
             title="Required">
         <span id="subnetid_nodejs">
 <a href="#subnetid_nodejs" style="color: inherit; text-decoration: inherit;">subnet<wbr>Id</a>
@@ -3537,8 +3244,7 @@ this port.
     </dt>
     <dd>{{% md %}}Subnet in which to allocate IP address for
 this port.
-{{% /md %}}</dd>
-    <dt class="property-optional"
+{{% /md %}}</dd><dt class="property-optional"
             title="Optional">
         <span id="ipaddress_nodejs">
 <a href="#ipaddress_nodejs" style="color: inherit; text-decoration: inherit;">ip<wbr>Address</a>
@@ -3547,14 +3253,11 @@ this port.
         <span class="property-type">string</span>
     </dt>
     <dd>{{% md %}}The additional IP address.
-{{% /md %}}</dd>
-</dl>
+{{% /md %}}</dd></dl>
 {{% /choosable %}}
 
 {{% choosable language python %}}
-<dl class="resources-properties">
-
-    <dt class="property-required"
+<dl class="resources-properties"><dt class="property-required"
             title="Required">
         <span id="subnet_id_python">
 <a href="#subnet_id_python" style="color: inherit; text-decoration: inherit;">subnet_<wbr>id</a>
@@ -3564,8 +3267,7 @@ this port.
     </dt>
     <dd>{{% md %}}Subnet in which to allocate IP address for
 this port.
-{{% /md %}}</dd>
-    <dt class="property-optional"
+{{% /md %}}</dd><dt class="property-optional"
             title="Optional">
         <span id="ip_address_python">
 <a href="#ip_address_python" style="color: inherit; text-decoration: inherit;">ip_<wbr>address</a>
@@ -3574,8 +3276,7 @@ this port.
         <span class="property-type">str</span>
     </dt>
     <dd>{{% md %}}The additional IP address.
-{{% /md %}}</dd>
-</dl>
+{{% /md %}}</dd></dl>
 {{% /choosable %}}
 ## Import
 
@@ -3596,6 +3297,6 @@ Ports can be imported using the `id`, e.g.
 	<dt>License</dt>
 	<dd>Apache-2.0</dd>
 	<dt>Notes</dt>
-	<dd>This Pulumi package is based on the [`openstack` Terraform Provider](https://github.com/terraform-provider-openstack/terraform-provider-openstack).</dd>
+	<dd>{{% md %}}This Pulumi package is based on the [`openstack` Terraform Provider](https://github.com/terraform-provider-openstack/terraform-provider-openstack).{{% /md %}}</dd>
 </dl>
 

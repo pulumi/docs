@@ -51,9 +51,7 @@ The following arguments are supported:
 
 
 {{% choosable language csharp %}}
-<dl class="resources-properties">
-
-    <dt class="property-required"
+<dl class="resources-properties"><dt class="property-required"
             title="Required">
         <span id="resourcegroupname_csharp">
 <a href="#resourcegroupname_csharp" style="color: inherit; text-decoration: inherit;">Resource<wbr>Group<wbr>Name</a>
@@ -61,8 +59,7 @@ The following arguments are supported:
         <span class="property-indicator"></span>
         <span class="property-type">string</span>
     </dt>
-    <dd>{{% md %}}The name of the resource group to which the machine learning workspace belongs.{{% /md %}}</dd>
-    <dt class="property-required"
+    <dd>{{% md %}}The name of the resource group to which the machine learning workspace belongs.{{% /md %}}</dd><dt class="property-required"
             title="Required">
         <span id="workspacename_csharp">
 <a href="#workspacename_csharp" style="color: inherit; text-decoration: inherit;">Workspace<wbr>Name</a>
@@ -70,14 +67,11 @@ The following arguments are supported:
         <span class="property-indicator"></span>
         <span class="property-type">string</span>
     </dt>
-    <dd>{{% md %}}The name of the machine learning workspace.{{% /md %}}</dd>
-</dl>
+    <dd>{{% md %}}The name of the machine learning workspace.{{% /md %}}</dd></dl>
 {{% /choosable %}}
 
 {{% choosable language go %}}
-<dl class="resources-properties">
-
-    <dt class="property-required"
+<dl class="resources-properties"><dt class="property-required"
             title="Required">
         <span id="resourcegroupname_go">
 <a href="#resourcegroupname_go" style="color: inherit; text-decoration: inherit;">Resource<wbr>Group<wbr>Name</a>
@@ -85,8 +79,7 @@ The following arguments are supported:
         <span class="property-indicator"></span>
         <span class="property-type">string</span>
     </dt>
-    <dd>{{% md %}}The name of the resource group to which the machine learning workspace belongs.{{% /md %}}</dd>
-    <dt class="property-required"
+    <dd>{{% md %}}The name of the resource group to which the machine learning workspace belongs.{{% /md %}}</dd><dt class="property-required"
             title="Required">
         <span id="workspacename_go">
 <a href="#workspacename_go" style="color: inherit; text-decoration: inherit;">Workspace<wbr>Name</a>
@@ -94,14 +87,11 @@ The following arguments are supported:
         <span class="property-indicator"></span>
         <span class="property-type">string</span>
     </dt>
-    <dd>{{% md %}}The name of the machine learning workspace.{{% /md %}}</dd>
-</dl>
+    <dd>{{% md %}}The name of the machine learning workspace.{{% /md %}}</dd></dl>
 {{% /choosable %}}
 
 {{% choosable language nodejs %}}
-<dl class="resources-properties">
-
-    <dt class="property-required"
+<dl class="resources-properties"><dt class="property-required"
             title="Required">
         <span id="resourcegroupname_nodejs">
 <a href="#resourcegroupname_nodejs" style="color: inherit; text-decoration: inherit;">resource<wbr>Group<wbr>Name</a>
@@ -109,8 +99,7 @@ The following arguments are supported:
         <span class="property-indicator"></span>
         <span class="property-type">string</span>
     </dt>
-    <dd>{{% md %}}The name of the resource group to which the machine learning workspace belongs.{{% /md %}}</dd>
-    <dt class="property-required"
+    <dd>{{% md %}}The name of the resource group to which the machine learning workspace belongs.{{% /md %}}</dd><dt class="property-required"
             title="Required">
         <span id="workspacename_nodejs">
 <a href="#workspacename_nodejs" style="color: inherit; text-decoration: inherit;">workspace<wbr>Name</a>
@@ -118,14 +107,11 @@ The following arguments are supported:
         <span class="property-indicator"></span>
         <span class="property-type">string</span>
     </dt>
-    <dd>{{% md %}}The name of the machine learning workspace.{{% /md %}}</dd>
-</dl>
+    <dd>{{% md %}}The name of the machine learning workspace.{{% /md %}}</dd></dl>
 {{% /choosable %}}
 
 {{% choosable language python %}}
-<dl class="resources-properties">
-
-    <dt class="property-required"
+<dl class="resources-properties"><dt class="property-required"
             title="Required">
         <span id="resource_group_name_python">
 <a href="#resource_group_name_python" style="color: inherit; text-decoration: inherit;">resource_<wbr>group_<wbr>name</a>
@@ -133,8 +119,7 @@ The following arguments are supported:
         <span class="property-indicator"></span>
         <span class="property-type">str</span>
     </dt>
-    <dd>{{% md %}}The name of the resource group to which the machine learning workspace belongs.{{% /md %}}</dd>
-    <dt class="property-required"
+    <dd>{{% md %}}The name of the resource group to which the machine learning workspace belongs.{{% /md %}}</dd><dt class="property-required"
             title="Required">
         <span id="workspace_name_python">
 <a href="#workspace_name_python" style="color: inherit; text-decoration: inherit;">workspace_<wbr>name</a>
@@ -142,8 +127,7 @@ The following arguments are supported:
         <span class="property-indicator"></span>
         <span class="property-type">str</span>
     </dt>
-    <dd>{{% md %}}The name of the machine learning workspace.{{% /md %}}</dd>
-</dl>
+    <dd>{{% md %}}The name of the machine learning workspace.{{% /md %}}</dd></dl>
 {{% /choosable %}}
 
 
@@ -156,9 +140,7 @@ The following output properties are available:
 
 
 {{% choosable language csharp %}}
-<dl class="resources-properties">
-
-    <dt class="property-"
+<dl class="resources-properties"><dt class="property-"
             title="">
         <span id="primarytoken_csharp">
 <a href="#primarytoken_csharp" style="color: inherit; text-decoration: inherit;">Primary<wbr>Token</a>
@@ -166,8 +148,7 @@ The following output properties are available:
         <span class="property-indicator"></span>
         <span class="property-type">string</span>
     </dt>
-    <dd>{{% md %}}Primary authorization key for this workspace.{{% /md %}}</dd>
-    <dt class="property-"
+    <dd>{{% md %}}Primary authorization key for this workspace.{{% /md %}}</dd><dt class="property-"
             title="">
         <span id="secondarytoken_csharp">
 <a href="#secondarytoken_csharp" style="color: inherit; text-decoration: inherit;">Secondary<wbr>Token</a>
@@ -175,14 +156,11 @@ The following output properties are available:
         <span class="property-indicator"></span>
         <span class="property-type">string</span>
     </dt>
-    <dd>{{% md %}}Secondary authorization key for this workspace.{{% /md %}}</dd>
-</dl>
+    <dd>{{% md %}}Secondary authorization key for this workspace.{{% /md %}}</dd></dl>
 {{% /choosable %}}
 
 {{% choosable language go %}}
-<dl class="resources-properties">
-
-    <dt class="property-"
+<dl class="resources-properties"><dt class="property-"
             title="">
         <span id="primarytoken_go">
 <a href="#primarytoken_go" style="color: inherit; text-decoration: inherit;">Primary<wbr>Token</a>
@@ -190,8 +168,7 @@ The following output properties are available:
         <span class="property-indicator"></span>
         <span class="property-type">string</span>
     </dt>
-    <dd>{{% md %}}Primary authorization key for this workspace.{{% /md %}}</dd>
-    <dt class="property-"
+    <dd>{{% md %}}Primary authorization key for this workspace.{{% /md %}}</dd><dt class="property-"
             title="">
         <span id="secondarytoken_go">
 <a href="#secondarytoken_go" style="color: inherit; text-decoration: inherit;">Secondary<wbr>Token</a>
@@ -199,14 +176,11 @@ The following output properties are available:
         <span class="property-indicator"></span>
         <span class="property-type">string</span>
     </dt>
-    <dd>{{% md %}}Secondary authorization key for this workspace.{{% /md %}}</dd>
-</dl>
+    <dd>{{% md %}}Secondary authorization key for this workspace.{{% /md %}}</dd></dl>
 {{% /choosable %}}
 
 {{% choosable language nodejs %}}
-<dl class="resources-properties">
-
-    <dt class="property-"
+<dl class="resources-properties"><dt class="property-"
             title="">
         <span id="primarytoken_nodejs">
 <a href="#primarytoken_nodejs" style="color: inherit; text-decoration: inherit;">primary<wbr>Token</a>
@@ -214,8 +188,7 @@ The following output properties are available:
         <span class="property-indicator"></span>
         <span class="property-type">string</span>
     </dt>
-    <dd>{{% md %}}Primary authorization key for this workspace.{{% /md %}}</dd>
-    <dt class="property-"
+    <dd>{{% md %}}Primary authorization key for this workspace.{{% /md %}}</dd><dt class="property-"
             title="">
         <span id="secondarytoken_nodejs">
 <a href="#secondarytoken_nodejs" style="color: inherit; text-decoration: inherit;">secondary<wbr>Token</a>
@@ -223,14 +196,11 @@ The following output properties are available:
         <span class="property-indicator"></span>
         <span class="property-type">string</span>
     </dt>
-    <dd>{{% md %}}Secondary authorization key for this workspace.{{% /md %}}</dd>
-</dl>
+    <dd>{{% md %}}Secondary authorization key for this workspace.{{% /md %}}</dd></dl>
 {{% /choosable %}}
 
 {{% choosable language python %}}
-<dl class="resources-properties">
-
-    <dt class="property-"
+<dl class="resources-properties"><dt class="property-"
             title="">
         <span id="primary_token_python">
 <a href="#primary_token_python" style="color: inherit; text-decoration: inherit;">primary_<wbr>token</a>
@@ -238,8 +208,7 @@ The following output properties are available:
         <span class="property-indicator"></span>
         <span class="property-type">str</span>
     </dt>
-    <dd>{{% md %}}Primary authorization key for this workspace.{{% /md %}}</dd>
-    <dt class="property-"
+    <dd>{{% md %}}Primary authorization key for this workspace.{{% /md %}}</dd><dt class="property-"
             title="">
         <span id="secondary_token_python">
 <a href="#secondary_token_python" style="color: inherit; text-decoration: inherit;">secondary_<wbr>token</a>
@@ -247,8 +216,7 @@ The following output properties are available:
         <span class="property-indicator"></span>
         <span class="property-type">str</span>
     </dt>
-    <dd>{{% md %}}Secondary authorization key for this workspace.{{% /md %}}</dd>
-</dl>
+    <dd>{{% md %}}Secondary authorization key for this workspace.{{% /md %}}</dd></dl>
 {{% /choosable %}}
 
 

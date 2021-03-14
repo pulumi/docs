@@ -14,11 +14,17 @@ A SQL Analytics pool
 API Version: 2020-12-01.
 
 {{% examples %}}
+
 ## Example Usage
 
 {{< chooser language "typescript,python,go,csharp" / >}}
+
+
 ### Create a SQL Analytics pool
-{{% example csharp %}}
+
+
+{{< example csharp >}}
+
 ```csharp
 using Pulumi;
 using AzureNative = Pulumi.AzureNative;
@@ -52,9 +58,12 @@ class MyStack : Stack
 
 ```
 
-{{% /example %}}
 
-{{% example go %}}
+{{< /example >}}
+
+
+{{< example go >}}
+
 
 ```go
 package main
@@ -92,9 +101,12 @@ func main() {
 
 ```
 
-{{% /example %}}
 
-{{% example python %}}
+{{< /example >}}
+
+
+{{< example python >}}
+
 
 ```python
 import pulumi
@@ -119,9 +131,12 @@ sql_pool = azure_native.synapse.SqlPool("sqlPool",
 
 ```
 
-{{% /example %}}
 
-{{% example typescript %}}
+{{< /example >}}
+
+
+{{< example typescript >}}
+
 
 ```typescript
 import * as pulumi from "@pulumi/pulumi";
@@ -147,9 +162,16 @@ const sqlPool = new azure_native.synapse.SqlPool("sqlPool", {
 
 ```
 
-{{% /example %}}
+
+{{< /example >}}
+
+
+
+
 
 {{% /examples %}}
+
+
 
 
 ## Create a SqlPool Resource {#create}
@@ -174,9 +196,7 @@ const sqlPool = new azure_native.synapse.SqlPool("sqlPool", {
 
 {{% choosable language nodejs %}}
 
-<dl class="resources-properties">
-  
-    <dt
+<dl class="resources-properties"><dt
         class="property-required" title="Required">
         <span>name</span>
         <span class="property-indicator"></span>
@@ -184,9 +204,7 @@ const sqlPool = new azure_native.synapse.SqlPool("sqlPool", {
     </dt>
     <dd>
       The unique name of the resource.
-    </dd>
-  
-    <dt
+    </dd><dt
         class="property-required" title="Required">
         <span>args</span>
         <span class="property-indicator"></span>
@@ -194,9 +212,7 @@ const sqlPool = new azure_native.synapse.SqlPool("sqlPool", {
     </dt>
     <dd>
       The arguments to resource properties.
-    </dd>
-  
-    <dt
+    </dd><dt
         class="property-optional" title="Optional">
         <span>opts</span>
         <span class="property-indicator"></span>
@@ -204,10 +220,7 @@ const sqlPool = new azure_native.synapse.SqlPool("sqlPool", {
     </dt>
     <dd>
       Bag of options to control resource&#39;s behavior.
-    </dd>
-  
-
-</dl>
+    </dd></dl>
 
 {{% /choosable %}}
 
@@ -233,9 +246,7 @@ const sqlPool = new azure_native.synapse.SqlPool("sqlPool", {
 
 {{% choosable language go %}}
 
-<dl class="resources-properties">
-  
-    <dt
+<dl class="resources-properties"><dt
         class="property-optional" title="Optional">
         <span>ctx</span>
         <span class="property-indicator"></span>
@@ -243,9 +254,7 @@ const sqlPool = new azure_native.synapse.SqlPool("sqlPool", {
     </dt>
     <dd>
       Context object for the current deployment.
-    </dd>
-  
-    <dt
+    </dd><dt
         class="property-required" title="Required">
         <span>name</span>
         <span class="property-indicator"></span>
@@ -253,9 +262,7 @@ const sqlPool = new azure_native.synapse.SqlPool("sqlPool", {
     </dt>
     <dd>
       The unique name of the resource.
-    </dd>
-  
-    <dt
+    </dd><dt
         class="property-required" title="Required">
         <span>args</span>
         <span class="property-indicator"></span>
@@ -263,9 +270,7 @@ const sqlPool = new azure_native.synapse.SqlPool("sqlPool", {
     </dt>
     <dd>
       The arguments to resource properties.
-    </dd>
-  
-    <dt
+    </dd><dt
         class="property-optional" title="Optional">
         <span>opts</span>
         <span class="property-indicator"></span>
@@ -273,18 +278,13 @@ const sqlPool = new azure_native.synapse.SqlPool("sqlPool", {
     </dt>
     <dd>
       Bag of options to control resource&#39;s behavior.
-    </dd>
-  
-
-</dl>
+    </dd></dl>
 
 {{% /choosable %}}
 
 {{% choosable language csharp %}}
 
-<dl class="resources-properties">
-  
-    <dt
+<dl class="resources-properties"><dt
         class="property-required" title="Required">
         <span>name</span>
         <span class="property-indicator"></span>
@@ -292,9 +292,7 @@ const sqlPool = new azure_native.synapse.SqlPool("sqlPool", {
     </dt>
     <dd>
       The unique name of the resource.
-    </dd>
-  
-    <dt
+    </dd><dt
         class="property-required" title="Required">
         <span>args</span>
         <span class="property-indicator"></span>
@@ -302,9 +300,7 @@ const sqlPool = new azure_native.synapse.SqlPool("sqlPool", {
     </dt>
     <dd>
       The arguments to resource properties.
-    </dd>
-  
-    <dt
+    </dd><dt
         class="property-optional" title="Optional">
         <span>opts</span>
         <span class="property-indicator"></span>
@@ -312,10 +308,7 @@ const sqlPool = new azure_native.synapse.SqlPool("sqlPool", {
     </dt>
     <dd>
       Bag of options to control resource&#39;s behavior.
-    </dd>
-  
-
-</dl>
+    </dd></dl>
 
 {{% /choosable %}}
 
@@ -330,9 +323,7 @@ The SqlPool resource accepts the following [input]({{< relref "/docs/intro/conce
 
 
 {{% choosable language csharp %}}
-<dl class="resources-properties">
-
-    <dt class="property-required"
+<dl class="resources-properties"><dt class="property-required"
             title="Required">
         <span id="resourcegroupname_csharp">
 <a href="#resourcegroupname_csharp" style="color: inherit; text-decoration: inherit;">Resource<wbr>Group<wbr>Name</a>
@@ -340,8 +331,7 @@ The SqlPool resource accepts the following [input]({{< relref "/docs/intro/conce
         <span class="property-indicator"></span>
         <span class="property-type">string</span>
     </dt>
-    <dd>{{% md %}}The name of the resource group. The name is case insensitive.{{% /md %}}</dd>
-    <dt class="property-required"
+    <dd>{{% md %}}The name of the resource group. The name is case insensitive.{{% /md %}}</dd><dt class="property-required"
             title="Required">
         <span id="workspacename_csharp">
 <a href="#workspacename_csharp" style="color: inherit; text-decoration: inherit;">Workspace<wbr>Name</a>
@@ -349,8 +339,7 @@ The SqlPool resource accepts the following [input]({{< relref "/docs/intro/conce
         <span class="property-indicator"></span>
         <span class="property-type">string</span>
     </dt>
-    <dd>{{% md %}}The name of the workspace{{% /md %}}</dd>
-    <dt class="property-optional"
+    <dd>{{% md %}}The name of the workspace{{% /md %}}</dd><dt class="property-optional"
             title="Optional">
         <span id="collation_csharp">
 <a href="#collation_csharp" style="color: inherit; text-decoration: inherit;">Collation</a>
@@ -358,8 +347,7 @@ The SqlPool resource accepts the following [input]({{< relref "/docs/intro/conce
         <span class="property-indicator"></span>
         <span class="property-type">string</span>
     </dt>
-    <dd>{{% md %}}Collation mode{{% /md %}}</dd>
-    <dt class="property-optional"
+    <dd>{{% md %}}Collation mode{{% /md %}}</dd><dt class="property-optional"
             title="Optional">
         <span id="createmode_csharp">
 <a href="#createmode_csharp" style="color: inherit; text-decoration: inherit;">Create<wbr>Mode</a>
@@ -367,8 +355,7 @@ The SqlPool resource accepts the following [input]({{< relref "/docs/intro/conce
         <span class="property-indicator"></span>
         <span class="property-type">string</span>
     </dt>
-    <dd>{{% md %}}What is this?{{% /md %}}</dd>
-    <dt class="property-optional"
+    <dd>{{% md %}}What is this?{{% /md %}}</dd><dt class="property-optional"
             title="Optional">
         <span id="creationdate_csharp">
 <a href="#creationdate_csharp" style="color: inherit; text-decoration: inherit;">Creation<wbr>Date</a>
@@ -376,8 +363,7 @@ The SqlPool resource accepts the following [input]({{< relref "/docs/intro/conce
         <span class="property-indicator"></span>
         <span class="property-type">string</span>
     </dt>
-    <dd>{{% md %}}Date the SQL pool was created{{% /md %}}</dd>
-    <dt class="property-optional"
+    <dd>{{% md %}}Date the SQL pool was created{{% /md %}}</dd><dt class="property-optional"
             title="Optional">
         <span id="location_csharp">
 <a href="#location_csharp" style="color: inherit; text-decoration: inherit;">Location</a>
@@ -385,8 +371,7 @@ The SqlPool resource accepts the following [input]({{< relref "/docs/intro/conce
         <span class="property-indicator"></span>
         <span class="property-type">string</span>
     </dt>
-    <dd>{{% md %}}The geo-location where the resource lives{{% /md %}}</dd>
-    <dt class="property-optional"
+    <dd>{{% md %}}The geo-location where the resource lives{{% /md %}}</dd><dt class="property-optional"
             title="Optional">
         <span id="maxsizebytes_csharp">
 <a href="#maxsizebytes_csharp" style="color: inherit; text-decoration: inherit;">Max<wbr>Size<wbr>Bytes</a>
@@ -394,8 +379,7 @@ The SqlPool resource accepts the following [input]({{< relref "/docs/intro/conce
         <span class="property-indicator"></span>
         <span class="property-type">double</span>
     </dt>
-    <dd>{{% md %}}Maximum size in bytes{{% /md %}}</dd>
-    <dt class="property-optional"
+    <dd>{{% md %}}Maximum size in bytes{{% /md %}}</dd><dt class="property-optional"
             title="Optional">
         <span id="provisioningstate_csharp">
 <a href="#provisioningstate_csharp" style="color: inherit; text-decoration: inherit;">Provisioning<wbr>State</a>
@@ -403,8 +387,7 @@ The SqlPool resource accepts the following [input]({{< relref "/docs/intro/conce
         <span class="property-indicator"></span>
         <span class="property-type">string</span>
     </dt>
-    <dd>{{% md %}}Resource state{{% /md %}}</dd>
-    <dt class="property-optional"
+    <dd>{{% md %}}Resource state{{% /md %}}</dd><dt class="property-optional"
             title="Optional">
         <span id="recoverabledatabaseid_csharp">
 <a href="#recoverabledatabaseid_csharp" style="color: inherit; text-decoration: inherit;">Recoverable<wbr>Database<wbr>Id</a>
@@ -412,8 +395,7 @@ The SqlPool resource accepts the following [input]({{< relref "/docs/intro/conce
         <span class="property-indicator"></span>
         <span class="property-type">string</span>
     </dt>
-    <dd>{{% md %}}Backup database to restore from{{% /md %}}</dd>
-    <dt class="property-optional"
+    <dd>{{% md %}}Backup database to restore from{{% /md %}}</dd><dt class="property-optional"
             title="Optional">
         <span id="restorepointintime_csharp">
 <a href="#restorepointintime_csharp" style="color: inherit; text-decoration: inherit;">Restore<wbr>Point<wbr>In<wbr>Time</a>
@@ -421,8 +403,7 @@ The SqlPool resource accepts the following [input]({{< relref "/docs/intro/conce
         <span class="property-indicator"></span>
         <span class="property-type">string</span>
     </dt>
-    <dd>{{% md %}}Snapshot time to restore{{% /md %}}</dd>
-    <dt class="property-optional"
+    <dd>{{% md %}}Snapshot time to restore{{% /md %}}</dd><dt class="property-optional"
             title="Optional">
         <span id="sku_csharp">
 <a href="#sku_csharp" style="color: inherit; text-decoration: inherit;">Sku</a>
@@ -430,8 +411,7 @@ The SqlPool resource accepts the following [input]({{< relref "/docs/intro/conce
         <span class="property-indicator"></span>
         <span class="property-type"><a href="#sku">Pulumi.<wbr>Azure<wbr>Native.<wbr>Synapse.<wbr>Inputs.<wbr>Sku<wbr>Args</a></span>
     </dt>
-    <dd>{{% md %}}SQL pool SKU{{% /md %}}</dd>
-    <dt class="property-optional"
+    <dd>{{% md %}}SQL pool SKU{{% /md %}}</dd><dt class="property-optional"
             title="Optional">
         <span id="sourcedatabaseid_csharp">
 <a href="#sourcedatabaseid_csharp" style="color: inherit; text-decoration: inherit;">Source<wbr>Database<wbr>Id</a>
@@ -439,8 +419,7 @@ The SqlPool resource accepts the following [input]({{< relref "/docs/intro/conce
         <span class="property-indicator"></span>
         <span class="property-type">string</span>
     </dt>
-    <dd>{{% md %}}Source database to create from{{% /md %}}</dd>
-    <dt class="property-optional"
+    <dd>{{% md %}}Source database to create from{{% /md %}}</dd><dt class="property-optional"
             title="Optional">
         <span id="sqlpoolname_csharp">
 <a href="#sqlpoolname_csharp" style="color: inherit; text-decoration: inherit;">Sql<wbr>Pool<wbr>Name</a>
@@ -448,8 +427,7 @@ The SqlPool resource accepts the following [input]({{< relref "/docs/intro/conce
         <span class="property-indicator"></span>
         <span class="property-type">string</span>
     </dt>
-    <dd>{{% md %}}SQL pool name{{% /md %}}</dd>
-    <dt class="property-optional"
+    <dd>{{% md %}}SQL pool name{{% /md %}}</dd><dt class="property-optional"
             title="Optional">
         <span id="status_csharp">
 <a href="#status_csharp" style="color: inherit; text-decoration: inherit;">Status</a>
@@ -457,8 +435,7 @@ The SqlPool resource accepts the following [input]({{< relref "/docs/intro/conce
         <span class="property-indicator"></span>
         <span class="property-type">string</span>
     </dt>
-    <dd>{{% md %}}Resource status{{% /md %}}</dd>
-    <dt class="property-optional"
+    <dd>{{% md %}}Resource status{{% /md %}}</dd><dt class="property-optional"
             title="Optional">
         <span id="storageaccounttype_csharp">
 <a href="#storageaccounttype_csharp" style="color: inherit; text-decoration: inherit;">Storage<wbr>Account<wbr>Type</a>
@@ -466,8 +443,7 @@ The SqlPool resource accepts the following [input]({{< relref "/docs/intro/conce
         <span class="property-indicator"></span>
         <span class="property-type">string | <a href="#storageaccounttype">Pulumi.<wbr>Azure<wbr>Native.<wbr>Synapse.<wbr>Storage<wbr>Account<wbr>Type</a></span>
     </dt>
-    <dd>{{% md %}}The storage account type used to store backups for this sql pool.{{% /md %}}</dd>
-    <dt class="property-optional"
+    <dd>{{% md %}}The storage account type used to store backups for this sql pool.{{% /md %}}</dd><dt class="property-optional"
             title="Optional">
         <span id="tags_csharp">
 <a href="#tags_csharp" style="color: inherit; text-decoration: inherit;">Tags</a>
@@ -475,14 +451,11 @@ The SqlPool resource accepts the following [input]({{< relref "/docs/intro/conce
         <span class="property-indicator"></span>
         <span class="property-type">Dictionary&lt;string, string&gt;</span>
     </dt>
-    <dd>{{% md %}}Resource tags.{{% /md %}}</dd>
-</dl>
+    <dd>{{% md %}}Resource tags.{{% /md %}}</dd></dl>
 {{% /choosable %}}
 
 {{% choosable language go %}}
-<dl class="resources-properties">
-
-    <dt class="property-required"
+<dl class="resources-properties"><dt class="property-required"
             title="Required">
         <span id="resourcegroupname_go">
 <a href="#resourcegroupname_go" style="color: inherit; text-decoration: inherit;">Resource<wbr>Group<wbr>Name</a>
@@ -490,8 +463,7 @@ The SqlPool resource accepts the following [input]({{< relref "/docs/intro/conce
         <span class="property-indicator"></span>
         <span class="property-type">string</span>
     </dt>
-    <dd>{{% md %}}The name of the resource group. The name is case insensitive.{{% /md %}}</dd>
-    <dt class="property-required"
+    <dd>{{% md %}}The name of the resource group. The name is case insensitive.{{% /md %}}</dd><dt class="property-required"
             title="Required">
         <span id="workspacename_go">
 <a href="#workspacename_go" style="color: inherit; text-decoration: inherit;">Workspace<wbr>Name</a>
@@ -499,8 +471,7 @@ The SqlPool resource accepts the following [input]({{< relref "/docs/intro/conce
         <span class="property-indicator"></span>
         <span class="property-type">string</span>
     </dt>
-    <dd>{{% md %}}The name of the workspace{{% /md %}}</dd>
-    <dt class="property-optional"
+    <dd>{{% md %}}The name of the workspace{{% /md %}}</dd><dt class="property-optional"
             title="Optional">
         <span id="collation_go">
 <a href="#collation_go" style="color: inherit; text-decoration: inherit;">Collation</a>
@@ -508,8 +479,7 @@ The SqlPool resource accepts the following [input]({{< relref "/docs/intro/conce
         <span class="property-indicator"></span>
         <span class="property-type">string</span>
     </dt>
-    <dd>{{% md %}}Collation mode{{% /md %}}</dd>
-    <dt class="property-optional"
+    <dd>{{% md %}}Collation mode{{% /md %}}</dd><dt class="property-optional"
             title="Optional">
         <span id="createmode_go">
 <a href="#createmode_go" style="color: inherit; text-decoration: inherit;">Create<wbr>Mode</a>
@@ -517,8 +487,7 @@ The SqlPool resource accepts the following [input]({{< relref "/docs/intro/conce
         <span class="property-indicator"></span>
         <span class="property-type">string</span>
     </dt>
-    <dd>{{% md %}}What is this?{{% /md %}}</dd>
-    <dt class="property-optional"
+    <dd>{{% md %}}What is this?{{% /md %}}</dd><dt class="property-optional"
             title="Optional">
         <span id="creationdate_go">
 <a href="#creationdate_go" style="color: inherit; text-decoration: inherit;">Creation<wbr>Date</a>
@@ -526,8 +495,7 @@ The SqlPool resource accepts the following [input]({{< relref "/docs/intro/conce
         <span class="property-indicator"></span>
         <span class="property-type">string</span>
     </dt>
-    <dd>{{% md %}}Date the SQL pool was created{{% /md %}}</dd>
-    <dt class="property-optional"
+    <dd>{{% md %}}Date the SQL pool was created{{% /md %}}</dd><dt class="property-optional"
             title="Optional">
         <span id="location_go">
 <a href="#location_go" style="color: inherit; text-decoration: inherit;">Location</a>
@@ -535,8 +503,7 @@ The SqlPool resource accepts the following [input]({{< relref "/docs/intro/conce
         <span class="property-indicator"></span>
         <span class="property-type">string</span>
     </dt>
-    <dd>{{% md %}}The geo-location where the resource lives{{% /md %}}</dd>
-    <dt class="property-optional"
+    <dd>{{% md %}}The geo-location where the resource lives{{% /md %}}</dd><dt class="property-optional"
             title="Optional">
         <span id="maxsizebytes_go">
 <a href="#maxsizebytes_go" style="color: inherit; text-decoration: inherit;">Max<wbr>Size<wbr>Bytes</a>
@@ -544,8 +511,7 @@ The SqlPool resource accepts the following [input]({{< relref "/docs/intro/conce
         <span class="property-indicator"></span>
         <span class="property-type">float64</span>
     </dt>
-    <dd>{{% md %}}Maximum size in bytes{{% /md %}}</dd>
-    <dt class="property-optional"
+    <dd>{{% md %}}Maximum size in bytes{{% /md %}}</dd><dt class="property-optional"
             title="Optional">
         <span id="provisioningstate_go">
 <a href="#provisioningstate_go" style="color: inherit; text-decoration: inherit;">Provisioning<wbr>State</a>
@@ -553,8 +519,7 @@ The SqlPool resource accepts the following [input]({{< relref "/docs/intro/conce
         <span class="property-indicator"></span>
         <span class="property-type">string</span>
     </dt>
-    <dd>{{% md %}}Resource state{{% /md %}}</dd>
-    <dt class="property-optional"
+    <dd>{{% md %}}Resource state{{% /md %}}</dd><dt class="property-optional"
             title="Optional">
         <span id="recoverabledatabaseid_go">
 <a href="#recoverabledatabaseid_go" style="color: inherit; text-decoration: inherit;">Recoverable<wbr>Database<wbr>Id</a>
@@ -562,8 +527,7 @@ The SqlPool resource accepts the following [input]({{< relref "/docs/intro/conce
         <span class="property-indicator"></span>
         <span class="property-type">string</span>
     </dt>
-    <dd>{{% md %}}Backup database to restore from{{% /md %}}</dd>
-    <dt class="property-optional"
+    <dd>{{% md %}}Backup database to restore from{{% /md %}}</dd><dt class="property-optional"
             title="Optional">
         <span id="restorepointintime_go">
 <a href="#restorepointintime_go" style="color: inherit; text-decoration: inherit;">Restore<wbr>Point<wbr>In<wbr>Time</a>
@@ -571,8 +535,7 @@ The SqlPool resource accepts the following [input]({{< relref "/docs/intro/conce
         <span class="property-indicator"></span>
         <span class="property-type">string</span>
     </dt>
-    <dd>{{% md %}}Snapshot time to restore{{% /md %}}</dd>
-    <dt class="property-optional"
+    <dd>{{% md %}}Snapshot time to restore{{% /md %}}</dd><dt class="property-optional"
             title="Optional">
         <span id="sku_go">
 <a href="#sku_go" style="color: inherit; text-decoration: inherit;">Sku</a>
@@ -580,8 +543,7 @@ The SqlPool resource accepts the following [input]({{< relref "/docs/intro/conce
         <span class="property-indicator"></span>
         <span class="property-type"><a href="#sku">Sku</a></span>
     </dt>
-    <dd>{{% md %}}SQL pool SKU{{% /md %}}</dd>
-    <dt class="property-optional"
+    <dd>{{% md %}}SQL pool SKU{{% /md %}}</dd><dt class="property-optional"
             title="Optional">
         <span id="sourcedatabaseid_go">
 <a href="#sourcedatabaseid_go" style="color: inherit; text-decoration: inherit;">Source<wbr>Database<wbr>Id</a>
@@ -589,8 +551,7 @@ The SqlPool resource accepts the following [input]({{< relref "/docs/intro/conce
         <span class="property-indicator"></span>
         <span class="property-type">string</span>
     </dt>
-    <dd>{{% md %}}Source database to create from{{% /md %}}</dd>
-    <dt class="property-optional"
+    <dd>{{% md %}}Source database to create from{{% /md %}}</dd><dt class="property-optional"
             title="Optional">
         <span id="sqlpoolname_go">
 <a href="#sqlpoolname_go" style="color: inherit; text-decoration: inherit;">Sql<wbr>Pool<wbr>Name</a>
@@ -598,8 +559,7 @@ The SqlPool resource accepts the following [input]({{< relref "/docs/intro/conce
         <span class="property-indicator"></span>
         <span class="property-type">string</span>
     </dt>
-    <dd>{{% md %}}SQL pool name{{% /md %}}</dd>
-    <dt class="property-optional"
+    <dd>{{% md %}}SQL pool name{{% /md %}}</dd><dt class="property-optional"
             title="Optional">
         <span id="status_go">
 <a href="#status_go" style="color: inherit; text-decoration: inherit;">Status</a>
@@ -607,8 +567,7 @@ The SqlPool resource accepts the following [input]({{< relref "/docs/intro/conce
         <span class="property-indicator"></span>
         <span class="property-type">string</span>
     </dt>
-    <dd>{{% md %}}Resource status{{% /md %}}</dd>
-    <dt class="property-optional"
+    <dd>{{% md %}}Resource status{{% /md %}}</dd><dt class="property-optional"
             title="Optional">
         <span id="storageaccounttype_go">
 <a href="#storageaccounttype_go" style="color: inherit; text-decoration: inherit;">Storage<wbr>Account<wbr>Type</a>
@@ -616,8 +575,7 @@ The SqlPool resource accepts the following [input]({{< relref "/docs/intro/conce
         <span class="property-indicator"></span>
         <span class="property-type">string | <a href="#storageaccounttype">Storage<wbr>Account<wbr>Type</a></span>
     </dt>
-    <dd>{{% md %}}The storage account type used to store backups for this sql pool.{{% /md %}}</dd>
-    <dt class="property-optional"
+    <dd>{{% md %}}The storage account type used to store backups for this sql pool.{{% /md %}}</dd><dt class="property-optional"
             title="Optional">
         <span id="tags_go">
 <a href="#tags_go" style="color: inherit; text-decoration: inherit;">Tags</a>
@@ -625,14 +583,11 @@ The SqlPool resource accepts the following [input]({{< relref "/docs/intro/conce
         <span class="property-indicator"></span>
         <span class="property-type">map[string]string</span>
     </dt>
-    <dd>{{% md %}}Resource tags.{{% /md %}}</dd>
-</dl>
+    <dd>{{% md %}}Resource tags.{{% /md %}}</dd></dl>
 {{% /choosable %}}
 
 {{% choosable language nodejs %}}
-<dl class="resources-properties">
-
-    <dt class="property-required"
+<dl class="resources-properties"><dt class="property-required"
             title="Required">
         <span id="resourcegroupname_nodejs">
 <a href="#resourcegroupname_nodejs" style="color: inherit; text-decoration: inherit;">resource<wbr>Group<wbr>Name</a>
@@ -640,8 +595,7 @@ The SqlPool resource accepts the following [input]({{< relref "/docs/intro/conce
         <span class="property-indicator"></span>
         <span class="property-type">string</span>
     </dt>
-    <dd>{{% md %}}The name of the resource group. The name is case insensitive.{{% /md %}}</dd>
-    <dt class="property-required"
+    <dd>{{% md %}}The name of the resource group. The name is case insensitive.{{% /md %}}</dd><dt class="property-required"
             title="Required">
         <span id="workspacename_nodejs">
 <a href="#workspacename_nodejs" style="color: inherit; text-decoration: inherit;">workspace<wbr>Name</a>
@@ -649,8 +603,7 @@ The SqlPool resource accepts the following [input]({{< relref "/docs/intro/conce
         <span class="property-indicator"></span>
         <span class="property-type">string</span>
     </dt>
-    <dd>{{% md %}}The name of the workspace{{% /md %}}</dd>
-    <dt class="property-optional"
+    <dd>{{% md %}}The name of the workspace{{% /md %}}</dd><dt class="property-optional"
             title="Optional">
         <span id="collation_nodejs">
 <a href="#collation_nodejs" style="color: inherit; text-decoration: inherit;">collation</a>
@@ -658,8 +611,7 @@ The SqlPool resource accepts the following [input]({{< relref "/docs/intro/conce
         <span class="property-indicator"></span>
         <span class="property-type">string</span>
     </dt>
-    <dd>{{% md %}}Collation mode{{% /md %}}</dd>
-    <dt class="property-optional"
+    <dd>{{% md %}}Collation mode{{% /md %}}</dd><dt class="property-optional"
             title="Optional">
         <span id="createmode_nodejs">
 <a href="#createmode_nodejs" style="color: inherit; text-decoration: inherit;">create<wbr>Mode</a>
@@ -667,8 +619,7 @@ The SqlPool resource accepts the following [input]({{< relref "/docs/intro/conce
         <span class="property-indicator"></span>
         <span class="property-type">string</span>
     </dt>
-    <dd>{{% md %}}What is this?{{% /md %}}</dd>
-    <dt class="property-optional"
+    <dd>{{% md %}}What is this?{{% /md %}}</dd><dt class="property-optional"
             title="Optional">
         <span id="creationdate_nodejs">
 <a href="#creationdate_nodejs" style="color: inherit; text-decoration: inherit;">creation<wbr>Date</a>
@@ -676,8 +627,7 @@ The SqlPool resource accepts the following [input]({{< relref "/docs/intro/conce
         <span class="property-indicator"></span>
         <span class="property-type">string</span>
     </dt>
-    <dd>{{% md %}}Date the SQL pool was created{{% /md %}}</dd>
-    <dt class="property-optional"
+    <dd>{{% md %}}Date the SQL pool was created{{% /md %}}</dd><dt class="property-optional"
             title="Optional">
         <span id="location_nodejs">
 <a href="#location_nodejs" style="color: inherit; text-decoration: inherit;">location</a>
@@ -685,8 +635,7 @@ The SqlPool resource accepts the following [input]({{< relref "/docs/intro/conce
         <span class="property-indicator"></span>
         <span class="property-type">string</span>
     </dt>
-    <dd>{{% md %}}The geo-location where the resource lives{{% /md %}}</dd>
-    <dt class="property-optional"
+    <dd>{{% md %}}The geo-location where the resource lives{{% /md %}}</dd><dt class="property-optional"
             title="Optional">
         <span id="maxsizebytes_nodejs">
 <a href="#maxsizebytes_nodejs" style="color: inherit; text-decoration: inherit;">max<wbr>Size<wbr>Bytes</a>
@@ -694,8 +643,7 @@ The SqlPool resource accepts the following [input]({{< relref "/docs/intro/conce
         <span class="property-indicator"></span>
         <span class="property-type">number</span>
     </dt>
-    <dd>{{% md %}}Maximum size in bytes{{% /md %}}</dd>
-    <dt class="property-optional"
+    <dd>{{% md %}}Maximum size in bytes{{% /md %}}</dd><dt class="property-optional"
             title="Optional">
         <span id="provisioningstate_nodejs">
 <a href="#provisioningstate_nodejs" style="color: inherit; text-decoration: inherit;">provisioning<wbr>State</a>
@@ -703,8 +651,7 @@ The SqlPool resource accepts the following [input]({{< relref "/docs/intro/conce
         <span class="property-indicator"></span>
         <span class="property-type">string</span>
     </dt>
-    <dd>{{% md %}}Resource state{{% /md %}}</dd>
-    <dt class="property-optional"
+    <dd>{{% md %}}Resource state{{% /md %}}</dd><dt class="property-optional"
             title="Optional">
         <span id="recoverabledatabaseid_nodejs">
 <a href="#recoverabledatabaseid_nodejs" style="color: inherit; text-decoration: inherit;">recoverable<wbr>Database<wbr>Id</a>
@@ -712,8 +659,7 @@ The SqlPool resource accepts the following [input]({{< relref "/docs/intro/conce
         <span class="property-indicator"></span>
         <span class="property-type">string</span>
     </dt>
-    <dd>{{% md %}}Backup database to restore from{{% /md %}}</dd>
-    <dt class="property-optional"
+    <dd>{{% md %}}Backup database to restore from{{% /md %}}</dd><dt class="property-optional"
             title="Optional">
         <span id="restorepointintime_nodejs">
 <a href="#restorepointintime_nodejs" style="color: inherit; text-decoration: inherit;">restore<wbr>Point<wbr>In<wbr>Time</a>
@@ -721,8 +667,7 @@ The SqlPool resource accepts the following [input]({{< relref "/docs/intro/conce
         <span class="property-indicator"></span>
         <span class="property-type">string</span>
     </dt>
-    <dd>{{% md %}}Snapshot time to restore{{% /md %}}</dd>
-    <dt class="property-optional"
+    <dd>{{% md %}}Snapshot time to restore{{% /md %}}</dd><dt class="property-optional"
             title="Optional">
         <span id="sku_nodejs">
 <a href="#sku_nodejs" style="color: inherit; text-decoration: inherit;">sku</a>
@@ -730,8 +675,7 @@ The SqlPool resource accepts the following [input]({{< relref "/docs/intro/conce
         <span class="property-indicator"></span>
         <span class="property-type"><a href="#sku">Sku</a></span>
     </dt>
-    <dd>{{% md %}}SQL pool SKU{{% /md %}}</dd>
-    <dt class="property-optional"
+    <dd>{{% md %}}SQL pool SKU{{% /md %}}</dd><dt class="property-optional"
             title="Optional">
         <span id="sourcedatabaseid_nodejs">
 <a href="#sourcedatabaseid_nodejs" style="color: inherit; text-decoration: inherit;">source<wbr>Database<wbr>Id</a>
@@ -739,8 +683,7 @@ The SqlPool resource accepts the following [input]({{< relref "/docs/intro/conce
         <span class="property-indicator"></span>
         <span class="property-type">string</span>
     </dt>
-    <dd>{{% md %}}Source database to create from{{% /md %}}</dd>
-    <dt class="property-optional"
+    <dd>{{% md %}}Source database to create from{{% /md %}}</dd><dt class="property-optional"
             title="Optional">
         <span id="sqlpoolname_nodejs">
 <a href="#sqlpoolname_nodejs" style="color: inherit; text-decoration: inherit;">sql<wbr>Pool<wbr>Name</a>
@@ -748,8 +691,7 @@ The SqlPool resource accepts the following [input]({{< relref "/docs/intro/conce
         <span class="property-indicator"></span>
         <span class="property-type">string</span>
     </dt>
-    <dd>{{% md %}}SQL pool name{{% /md %}}</dd>
-    <dt class="property-optional"
+    <dd>{{% md %}}SQL pool name{{% /md %}}</dd><dt class="property-optional"
             title="Optional">
         <span id="status_nodejs">
 <a href="#status_nodejs" style="color: inherit; text-decoration: inherit;">status</a>
@@ -757,8 +699,7 @@ The SqlPool resource accepts the following [input]({{< relref "/docs/intro/conce
         <span class="property-indicator"></span>
         <span class="property-type">string</span>
     </dt>
-    <dd>{{% md %}}Resource status{{% /md %}}</dd>
-    <dt class="property-optional"
+    <dd>{{% md %}}Resource status{{% /md %}}</dd><dt class="property-optional"
             title="Optional">
         <span id="storageaccounttype_nodejs">
 <a href="#storageaccounttype_nodejs" style="color: inherit; text-decoration: inherit;">storage<wbr>Account<wbr>Type</a>
@@ -766,8 +707,7 @@ The SqlPool resource accepts the following [input]({{< relref "/docs/intro/conce
         <span class="property-indicator"></span>
         <span class="property-type">string | <a href="#storageaccounttype">Storage<wbr>Account<wbr>Type</a></span>
     </dt>
-    <dd>{{% md %}}The storage account type used to store backups for this sql pool.{{% /md %}}</dd>
-    <dt class="property-optional"
+    <dd>{{% md %}}The storage account type used to store backups for this sql pool.{{% /md %}}</dd><dt class="property-optional"
             title="Optional">
         <span id="tags_nodejs">
 <a href="#tags_nodejs" style="color: inherit; text-decoration: inherit;">tags</a>
@@ -775,14 +715,11 @@ The SqlPool resource accepts the following [input]({{< relref "/docs/intro/conce
         <span class="property-indicator"></span>
         <span class="property-type">{[key: string]: string}</span>
     </dt>
-    <dd>{{% md %}}Resource tags.{{% /md %}}</dd>
-</dl>
+    <dd>{{% md %}}Resource tags.{{% /md %}}</dd></dl>
 {{% /choosable %}}
 
 {{% choosable language python %}}
-<dl class="resources-properties">
-
-    <dt class="property-required"
+<dl class="resources-properties"><dt class="property-required"
             title="Required">
         <span id="resource_group_name_python">
 <a href="#resource_group_name_python" style="color: inherit; text-decoration: inherit;">resource_<wbr>group_<wbr>name</a>
@@ -790,8 +727,7 @@ The SqlPool resource accepts the following [input]({{< relref "/docs/intro/conce
         <span class="property-indicator"></span>
         <span class="property-type">str</span>
     </dt>
-    <dd>{{% md %}}The name of the resource group. The name is case insensitive.{{% /md %}}</dd>
-    <dt class="property-required"
+    <dd>{{% md %}}The name of the resource group. The name is case insensitive.{{% /md %}}</dd><dt class="property-required"
             title="Required">
         <span id="workspace_name_python">
 <a href="#workspace_name_python" style="color: inherit; text-decoration: inherit;">workspace_<wbr>name</a>
@@ -799,8 +735,7 @@ The SqlPool resource accepts the following [input]({{< relref "/docs/intro/conce
         <span class="property-indicator"></span>
         <span class="property-type">str</span>
     </dt>
-    <dd>{{% md %}}The name of the workspace{{% /md %}}</dd>
-    <dt class="property-optional"
+    <dd>{{% md %}}The name of the workspace{{% /md %}}</dd><dt class="property-optional"
             title="Optional">
         <span id="collation_python">
 <a href="#collation_python" style="color: inherit; text-decoration: inherit;">collation</a>
@@ -808,8 +743,7 @@ The SqlPool resource accepts the following [input]({{< relref "/docs/intro/conce
         <span class="property-indicator"></span>
         <span class="property-type">str</span>
     </dt>
-    <dd>{{% md %}}Collation mode{{% /md %}}</dd>
-    <dt class="property-optional"
+    <dd>{{% md %}}Collation mode{{% /md %}}</dd><dt class="property-optional"
             title="Optional">
         <span id="create_mode_python">
 <a href="#create_mode_python" style="color: inherit; text-decoration: inherit;">create_<wbr>mode</a>
@@ -817,8 +751,7 @@ The SqlPool resource accepts the following [input]({{< relref "/docs/intro/conce
         <span class="property-indicator"></span>
         <span class="property-type">str</span>
     </dt>
-    <dd>{{% md %}}What is this?{{% /md %}}</dd>
-    <dt class="property-optional"
+    <dd>{{% md %}}What is this?{{% /md %}}</dd><dt class="property-optional"
             title="Optional">
         <span id="creation_date_python">
 <a href="#creation_date_python" style="color: inherit; text-decoration: inherit;">creation_<wbr>date</a>
@@ -826,8 +759,7 @@ The SqlPool resource accepts the following [input]({{< relref "/docs/intro/conce
         <span class="property-indicator"></span>
         <span class="property-type">str</span>
     </dt>
-    <dd>{{% md %}}Date the SQL pool was created{{% /md %}}</dd>
-    <dt class="property-optional"
+    <dd>{{% md %}}Date the SQL pool was created{{% /md %}}</dd><dt class="property-optional"
             title="Optional">
         <span id="location_python">
 <a href="#location_python" style="color: inherit; text-decoration: inherit;">location</a>
@@ -835,8 +767,7 @@ The SqlPool resource accepts the following [input]({{< relref "/docs/intro/conce
         <span class="property-indicator"></span>
         <span class="property-type">str</span>
     </dt>
-    <dd>{{% md %}}The geo-location where the resource lives{{% /md %}}</dd>
-    <dt class="property-optional"
+    <dd>{{% md %}}The geo-location where the resource lives{{% /md %}}</dd><dt class="property-optional"
             title="Optional">
         <span id="max_size_bytes_python">
 <a href="#max_size_bytes_python" style="color: inherit; text-decoration: inherit;">max_<wbr>size_<wbr>bytes</a>
@@ -844,8 +775,7 @@ The SqlPool resource accepts the following [input]({{< relref "/docs/intro/conce
         <span class="property-indicator"></span>
         <span class="property-type">float</span>
     </dt>
-    <dd>{{% md %}}Maximum size in bytes{{% /md %}}</dd>
-    <dt class="property-optional"
+    <dd>{{% md %}}Maximum size in bytes{{% /md %}}</dd><dt class="property-optional"
             title="Optional">
         <span id="provisioning_state_python">
 <a href="#provisioning_state_python" style="color: inherit; text-decoration: inherit;">provisioning_<wbr>state</a>
@@ -853,8 +783,7 @@ The SqlPool resource accepts the following [input]({{< relref "/docs/intro/conce
         <span class="property-indicator"></span>
         <span class="property-type">str</span>
     </dt>
-    <dd>{{% md %}}Resource state{{% /md %}}</dd>
-    <dt class="property-optional"
+    <dd>{{% md %}}Resource state{{% /md %}}</dd><dt class="property-optional"
             title="Optional">
         <span id="recoverable_database_id_python">
 <a href="#recoverable_database_id_python" style="color: inherit; text-decoration: inherit;">recoverable_<wbr>database_<wbr>id</a>
@@ -862,8 +791,7 @@ The SqlPool resource accepts the following [input]({{< relref "/docs/intro/conce
         <span class="property-indicator"></span>
         <span class="property-type">str</span>
     </dt>
-    <dd>{{% md %}}Backup database to restore from{{% /md %}}</dd>
-    <dt class="property-optional"
+    <dd>{{% md %}}Backup database to restore from{{% /md %}}</dd><dt class="property-optional"
             title="Optional">
         <span id="restore_point_in_time_python">
 <a href="#restore_point_in_time_python" style="color: inherit; text-decoration: inherit;">restore_<wbr>point_<wbr>in_<wbr>time</a>
@@ -871,8 +799,7 @@ The SqlPool resource accepts the following [input]({{< relref "/docs/intro/conce
         <span class="property-indicator"></span>
         <span class="property-type">str</span>
     </dt>
-    <dd>{{% md %}}Snapshot time to restore{{% /md %}}</dd>
-    <dt class="property-optional"
+    <dd>{{% md %}}Snapshot time to restore{{% /md %}}</dd><dt class="property-optional"
             title="Optional">
         <span id="sku_python">
 <a href="#sku_python" style="color: inherit; text-decoration: inherit;">sku</a>
@@ -880,8 +807,7 @@ The SqlPool resource accepts the following [input]({{< relref "/docs/intro/conce
         <span class="property-indicator"></span>
         <span class="property-type"><a href="#sku">Sku<wbr>Args</a></span>
     </dt>
-    <dd>{{% md %}}SQL pool SKU{{% /md %}}</dd>
-    <dt class="property-optional"
+    <dd>{{% md %}}SQL pool SKU{{% /md %}}</dd><dt class="property-optional"
             title="Optional">
         <span id="source_database_id_python">
 <a href="#source_database_id_python" style="color: inherit; text-decoration: inherit;">source_<wbr>database_<wbr>id</a>
@@ -889,8 +815,7 @@ The SqlPool resource accepts the following [input]({{< relref "/docs/intro/conce
         <span class="property-indicator"></span>
         <span class="property-type">str</span>
     </dt>
-    <dd>{{% md %}}Source database to create from{{% /md %}}</dd>
-    <dt class="property-optional"
+    <dd>{{% md %}}Source database to create from{{% /md %}}</dd><dt class="property-optional"
             title="Optional">
         <span id="sql_pool_name_python">
 <a href="#sql_pool_name_python" style="color: inherit; text-decoration: inherit;">sql_<wbr>pool_<wbr>name</a>
@@ -898,8 +823,7 @@ The SqlPool resource accepts the following [input]({{< relref "/docs/intro/conce
         <span class="property-indicator"></span>
         <span class="property-type">str</span>
     </dt>
-    <dd>{{% md %}}SQL pool name{{% /md %}}</dd>
-    <dt class="property-optional"
+    <dd>{{% md %}}SQL pool name{{% /md %}}</dd><dt class="property-optional"
             title="Optional">
         <span id="status_python">
 <a href="#status_python" style="color: inherit; text-decoration: inherit;">status</a>
@@ -907,8 +831,7 @@ The SqlPool resource accepts the following [input]({{< relref "/docs/intro/conce
         <span class="property-indicator"></span>
         <span class="property-type">str</span>
     </dt>
-    <dd>{{% md %}}Resource status{{% /md %}}</dd>
-    <dt class="property-optional"
+    <dd>{{% md %}}Resource status{{% /md %}}</dd><dt class="property-optional"
             title="Optional">
         <span id="storage_account_type_python">
 <a href="#storage_account_type_python" style="color: inherit; text-decoration: inherit;">storage_<wbr>account_<wbr>type</a>
@@ -916,8 +839,7 @@ The SqlPool resource accepts the following [input]({{< relref "/docs/intro/conce
         <span class="property-indicator"></span>
         <span class="property-type">str | <a href="#storageaccounttype">Storage<wbr>Account<wbr>Type</a></span>
     </dt>
-    <dd>{{% md %}}The storage account type used to store backups for this sql pool.{{% /md %}}</dd>
-    <dt class="property-optional"
+    <dd>{{% md %}}The storage account type used to store backups for this sql pool.{{% /md %}}</dd><dt class="property-optional"
             title="Optional">
         <span id="tags_python">
 <a href="#tags_python" style="color: inherit; text-decoration: inherit;">tags</a>
@@ -925,8 +847,7 @@ The SqlPool resource accepts the following [input]({{< relref "/docs/intro/conce
         <span class="property-indicator"></span>
         <span class="property-type">Mapping[str, str]</span>
     </dt>
-    <dd>{{% md %}}Resource tags.{{% /md %}}</dd>
-</dl>
+    <dd>{{% md %}}Resource tags.{{% /md %}}</dd></dl>
 {{% /choosable %}}
 
 
@@ -937,9 +858,7 @@ All [input](#inputs) properties are implicitly available as output properties. A
 
 
 {{% choosable language csharp %}}
-<dl class="resources-properties">
-
-    <dt class="property-"
+<dl class="resources-properties"><dt class="property-"
             title="">
         <span id="id_csharp">
 <a href="#id_csharp" style="color: inherit; text-decoration: inherit;">Id</a>
@@ -947,8 +866,7 @@ All [input](#inputs) properties are implicitly available as output properties. A
         <span class="property-indicator"></span>
         <span class="property-type">string</span>
     </dt>
-    <dd>{{% md %}}The provider-assigned unique ID for this managed resource.{{% /md %}}</dd>
-    <dt class="property-"
+    <dd>{{% md %}}The provider-assigned unique ID for this managed resource.{{% /md %}}</dd><dt class="property-"
             title="">
         <span id="name_csharp">
 <a href="#name_csharp" style="color: inherit; text-decoration: inherit;">Name</a>
@@ -956,8 +874,7 @@ All [input](#inputs) properties are implicitly available as output properties. A
         <span class="property-indicator"></span>
         <span class="property-type">string</span>
     </dt>
-    <dd>{{% md %}}The name of the resource{{% /md %}}</dd>
-    <dt class="property-"
+    <dd>{{% md %}}The name of the resource{{% /md %}}</dd><dt class="property-"
             title="">
         <span id="type_csharp">
 <a href="#type_csharp" style="color: inherit; text-decoration: inherit;">Type</a>
@@ -965,14 +882,11 @@ All [input](#inputs) properties are implicitly available as output properties. A
         <span class="property-indicator"></span>
         <span class="property-type">string</span>
     </dt>
-    <dd>{{% md %}}The type of the resource. E.g. "Microsoft.Compute/virtualMachines" or "Microsoft.Storage/storageAccounts"{{% /md %}}</dd>
-</dl>
+    <dd>{{% md %}}The type of the resource. E.g. "Microsoft.Compute/virtualMachines" or "Microsoft.Storage/storageAccounts"{{% /md %}}</dd></dl>
 {{% /choosable %}}
 
 {{% choosable language go %}}
-<dl class="resources-properties">
-
-    <dt class="property-"
+<dl class="resources-properties"><dt class="property-"
             title="">
         <span id="id_go">
 <a href="#id_go" style="color: inherit; text-decoration: inherit;">Id</a>
@@ -980,8 +894,7 @@ All [input](#inputs) properties are implicitly available as output properties. A
         <span class="property-indicator"></span>
         <span class="property-type">string</span>
     </dt>
-    <dd>{{% md %}}The provider-assigned unique ID for this managed resource.{{% /md %}}</dd>
-    <dt class="property-"
+    <dd>{{% md %}}The provider-assigned unique ID for this managed resource.{{% /md %}}</dd><dt class="property-"
             title="">
         <span id="name_go">
 <a href="#name_go" style="color: inherit; text-decoration: inherit;">Name</a>
@@ -989,8 +902,7 @@ All [input](#inputs) properties are implicitly available as output properties. A
         <span class="property-indicator"></span>
         <span class="property-type">string</span>
     </dt>
-    <dd>{{% md %}}The name of the resource{{% /md %}}</dd>
-    <dt class="property-"
+    <dd>{{% md %}}The name of the resource{{% /md %}}</dd><dt class="property-"
             title="">
         <span id="type_go">
 <a href="#type_go" style="color: inherit; text-decoration: inherit;">Type</a>
@@ -998,14 +910,11 @@ All [input](#inputs) properties are implicitly available as output properties. A
         <span class="property-indicator"></span>
         <span class="property-type">string</span>
     </dt>
-    <dd>{{% md %}}The type of the resource. E.g. "Microsoft.Compute/virtualMachines" or "Microsoft.Storage/storageAccounts"{{% /md %}}</dd>
-</dl>
+    <dd>{{% md %}}The type of the resource. E.g. "Microsoft.Compute/virtualMachines" or "Microsoft.Storage/storageAccounts"{{% /md %}}</dd></dl>
 {{% /choosable %}}
 
 {{% choosable language nodejs %}}
-<dl class="resources-properties">
-
-    <dt class="property-"
+<dl class="resources-properties"><dt class="property-"
             title="">
         <span id="id_nodejs">
 <a href="#id_nodejs" style="color: inherit; text-decoration: inherit;">id</a>
@@ -1013,8 +922,7 @@ All [input](#inputs) properties are implicitly available as output properties. A
         <span class="property-indicator"></span>
         <span class="property-type">string</span>
     </dt>
-    <dd>{{% md %}}The provider-assigned unique ID for this managed resource.{{% /md %}}</dd>
-    <dt class="property-"
+    <dd>{{% md %}}The provider-assigned unique ID for this managed resource.{{% /md %}}</dd><dt class="property-"
             title="">
         <span id="name_nodejs">
 <a href="#name_nodejs" style="color: inherit; text-decoration: inherit;">name</a>
@@ -1022,8 +930,7 @@ All [input](#inputs) properties are implicitly available as output properties. A
         <span class="property-indicator"></span>
         <span class="property-type">string</span>
     </dt>
-    <dd>{{% md %}}The name of the resource{{% /md %}}</dd>
-    <dt class="property-"
+    <dd>{{% md %}}The name of the resource{{% /md %}}</dd><dt class="property-"
             title="">
         <span id="type_nodejs">
 <a href="#type_nodejs" style="color: inherit; text-decoration: inherit;">type</a>
@@ -1031,14 +938,11 @@ All [input](#inputs) properties are implicitly available as output properties. A
         <span class="property-indicator"></span>
         <span class="property-type">string</span>
     </dt>
-    <dd>{{% md %}}The type of the resource. E.g. "Microsoft.Compute/virtualMachines" or "Microsoft.Storage/storageAccounts"{{% /md %}}</dd>
-</dl>
+    <dd>{{% md %}}The type of the resource. E.g. "Microsoft.Compute/virtualMachines" or "Microsoft.Storage/storageAccounts"{{% /md %}}</dd></dl>
 {{% /choosable %}}
 
 {{% choosable language python %}}
-<dl class="resources-properties">
-
-    <dt class="property-"
+<dl class="resources-properties"><dt class="property-"
             title="">
         <span id="id_python">
 <a href="#id_python" style="color: inherit; text-decoration: inherit;">id</a>
@@ -1046,8 +950,7 @@ All [input](#inputs) properties are implicitly available as output properties. A
         <span class="property-indicator"></span>
         <span class="property-type">str</span>
     </dt>
-    <dd>{{% md %}}The provider-assigned unique ID for this managed resource.{{% /md %}}</dd>
-    <dt class="property-"
+    <dd>{{% md %}}The provider-assigned unique ID for this managed resource.{{% /md %}}</dd><dt class="property-"
             title="">
         <span id="name_python">
 <a href="#name_python" style="color: inherit; text-decoration: inherit;">name</a>
@@ -1055,8 +958,7 @@ All [input](#inputs) properties are implicitly available as output properties. A
         <span class="property-indicator"></span>
         <span class="property-type">str</span>
     </dt>
-    <dd>{{% md %}}The name of the resource{{% /md %}}</dd>
-    <dt class="property-"
+    <dd>{{% md %}}The name of the resource{{% /md %}}</dd><dt class="property-"
             title="">
         <span id="type_python">
 <a href="#type_python" style="color: inherit; text-decoration: inherit;">type</a>
@@ -1064,8 +966,7 @@ All [input](#inputs) properties are implicitly available as output properties. A
         <span class="property-indicator"></span>
         <span class="property-type">str</span>
     </dt>
-    <dd>{{% md %}}The type of the resource. E.g. "Microsoft.Compute/virtualMachines" or "Microsoft.Storage/storageAccounts"{{% /md %}}</dd>
-</dl>
+    <dd>{{% md %}}The type of the resource. E.g. "Microsoft.Compute/virtualMachines" or "Microsoft.Storage/storageAccounts"{{% /md %}}</dd></dl>
 {{% /choosable %}}
 
 
@@ -1081,9 +982,7 @@ All [input](#inputs) properties are implicitly available as output properties. A
 <h4 id="sku">Sku</h4>
 
 {{% choosable language csharp %}}
-<dl class="resources-properties">
-
-    <dt class="property-optional"
+<dl class="resources-properties"><dt class="property-optional"
             title="Optional">
         <span id="capacity_csharp">
 <a href="#capacity_csharp" style="color: inherit; text-decoration: inherit;">Capacity</a>
@@ -1091,8 +990,7 @@ All [input](#inputs) properties are implicitly available as output properties. A
         <span class="property-indicator"></span>
         <span class="property-type">int</span>
     </dt>
-    <dd>{{% md %}}If the SKU supports scale out/in then the capacity integer should be included. If scale out/in is not possible for the resource this may be omitted.{{% /md %}}</dd>
-    <dt class="property-optional"
+    <dd>{{% md %}}If the SKU supports scale out/in then the capacity integer should be included. If scale out/in is not possible for the resource this may be omitted.{{% /md %}}</dd><dt class="property-optional"
             title="Optional">
         <span id="name_csharp">
 <a href="#name_csharp" style="color: inherit; text-decoration: inherit;">Name</a>
@@ -1100,8 +998,7 @@ All [input](#inputs) properties are implicitly available as output properties. A
         <span class="property-indicator"></span>
         <span class="property-type">string</span>
     </dt>
-    <dd>{{% md %}}The SKU name{{% /md %}}</dd>
-    <dt class="property-optional"
+    <dd>{{% md %}}The SKU name{{% /md %}}</dd><dt class="property-optional"
             title="Optional">
         <span id="tier_csharp">
 <a href="#tier_csharp" style="color: inherit; text-decoration: inherit;">Tier</a>
@@ -1109,14 +1006,11 @@ All [input](#inputs) properties are implicitly available as output properties. A
         <span class="property-indicator"></span>
         <span class="property-type">string</span>
     </dt>
-    <dd>{{% md %}}The service tier{{% /md %}}</dd>
-</dl>
+    <dd>{{% md %}}The service tier{{% /md %}}</dd></dl>
 {{% /choosable %}}
 
 {{% choosable language go %}}
-<dl class="resources-properties">
-
-    <dt class="property-optional"
+<dl class="resources-properties"><dt class="property-optional"
             title="Optional">
         <span id="capacity_go">
 <a href="#capacity_go" style="color: inherit; text-decoration: inherit;">Capacity</a>
@@ -1124,8 +1018,7 @@ All [input](#inputs) properties are implicitly available as output properties. A
         <span class="property-indicator"></span>
         <span class="property-type">int</span>
     </dt>
-    <dd>{{% md %}}If the SKU supports scale out/in then the capacity integer should be included. If scale out/in is not possible for the resource this may be omitted.{{% /md %}}</dd>
-    <dt class="property-optional"
+    <dd>{{% md %}}If the SKU supports scale out/in then the capacity integer should be included. If scale out/in is not possible for the resource this may be omitted.{{% /md %}}</dd><dt class="property-optional"
             title="Optional">
         <span id="name_go">
 <a href="#name_go" style="color: inherit; text-decoration: inherit;">Name</a>
@@ -1133,8 +1026,7 @@ All [input](#inputs) properties are implicitly available as output properties. A
         <span class="property-indicator"></span>
         <span class="property-type">string</span>
     </dt>
-    <dd>{{% md %}}The SKU name{{% /md %}}</dd>
-    <dt class="property-optional"
+    <dd>{{% md %}}The SKU name{{% /md %}}</dd><dt class="property-optional"
             title="Optional">
         <span id="tier_go">
 <a href="#tier_go" style="color: inherit; text-decoration: inherit;">Tier</a>
@@ -1142,14 +1034,11 @@ All [input](#inputs) properties are implicitly available as output properties. A
         <span class="property-indicator"></span>
         <span class="property-type">string</span>
     </dt>
-    <dd>{{% md %}}The service tier{{% /md %}}</dd>
-</dl>
+    <dd>{{% md %}}The service tier{{% /md %}}</dd></dl>
 {{% /choosable %}}
 
 {{% choosable language nodejs %}}
-<dl class="resources-properties">
-
-    <dt class="property-optional"
+<dl class="resources-properties"><dt class="property-optional"
             title="Optional">
         <span id="capacity_nodejs">
 <a href="#capacity_nodejs" style="color: inherit; text-decoration: inherit;">capacity</a>
@@ -1157,8 +1046,7 @@ All [input](#inputs) properties are implicitly available as output properties. A
         <span class="property-indicator"></span>
         <span class="property-type">number</span>
     </dt>
-    <dd>{{% md %}}If the SKU supports scale out/in then the capacity integer should be included. If scale out/in is not possible for the resource this may be omitted.{{% /md %}}</dd>
-    <dt class="property-optional"
+    <dd>{{% md %}}If the SKU supports scale out/in then the capacity integer should be included. If scale out/in is not possible for the resource this may be omitted.{{% /md %}}</dd><dt class="property-optional"
             title="Optional">
         <span id="name_nodejs">
 <a href="#name_nodejs" style="color: inherit; text-decoration: inherit;">name</a>
@@ -1166,8 +1054,7 @@ All [input](#inputs) properties are implicitly available as output properties. A
         <span class="property-indicator"></span>
         <span class="property-type">string</span>
     </dt>
-    <dd>{{% md %}}The SKU name{{% /md %}}</dd>
-    <dt class="property-optional"
+    <dd>{{% md %}}The SKU name{{% /md %}}</dd><dt class="property-optional"
             title="Optional">
         <span id="tier_nodejs">
 <a href="#tier_nodejs" style="color: inherit; text-decoration: inherit;">tier</a>
@@ -1175,14 +1062,11 @@ All [input](#inputs) properties are implicitly available as output properties. A
         <span class="property-indicator"></span>
         <span class="property-type">string</span>
     </dt>
-    <dd>{{% md %}}The service tier{{% /md %}}</dd>
-</dl>
+    <dd>{{% md %}}The service tier{{% /md %}}</dd></dl>
 {{% /choosable %}}
 
 {{% choosable language python %}}
-<dl class="resources-properties">
-
-    <dt class="property-optional"
+<dl class="resources-properties"><dt class="property-optional"
             title="Optional">
         <span id="capacity_python">
 <a href="#capacity_python" style="color: inherit; text-decoration: inherit;">capacity</a>
@@ -1190,8 +1074,7 @@ All [input](#inputs) properties are implicitly available as output properties. A
         <span class="property-indicator"></span>
         <span class="property-type">int</span>
     </dt>
-    <dd>{{% md %}}If the SKU supports scale out/in then the capacity integer should be included. If scale out/in is not possible for the resource this may be omitted.{{% /md %}}</dd>
-    <dt class="property-optional"
+    <dd>{{% md %}}If the SKU supports scale out/in then the capacity integer should be included. If scale out/in is not possible for the resource this may be omitted.{{% /md %}}</dd><dt class="property-optional"
             title="Optional">
         <span id="name_python">
 <a href="#name_python" style="color: inherit; text-decoration: inherit;">name</a>
@@ -1199,8 +1082,7 @@ All [input](#inputs) properties are implicitly available as output properties. A
         <span class="property-indicator"></span>
         <span class="property-type">str</span>
     </dt>
-    <dd>{{% md %}}The SKU name{{% /md %}}</dd>
-    <dt class="property-optional"
+    <dd>{{% md %}}The SKU name{{% /md %}}</dd><dt class="property-optional"
             title="Optional">
         <span id="tier_python">
 <a href="#tier_python" style="color: inherit; text-decoration: inherit;">tier</a>
@@ -1208,16 +1090,13 @@ All [input](#inputs) properties are implicitly available as output properties. A
         <span class="property-indicator"></span>
         <span class="property-type">str</span>
     </dt>
-    <dd>{{% md %}}The service tier{{% /md %}}</dd>
-</dl>
+    <dd>{{% md %}}The service tier{{% /md %}}</dd></dl>
 {{% /choosable %}}
 
 <h4 id="skuresponse">Sku<wbr>Response</h4>
 
 {{% choosable language csharp %}}
-<dl class="resources-properties">
-
-    <dt class="property-optional"
+<dl class="resources-properties"><dt class="property-optional"
             title="Optional">
         <span id="capacity_csharp">
 <a href="#capacity_csharp" style="color: inherit; text-decoration: inherit;">Capacity</a>
@@ -1225,8 +1104,7 @@ All [input](#inputs) properties are implicitly available as output properties. A
         <span class="property-indicator"></span>
         <span class="property-type">int</span>
     </dt>
-    <dd>{{% md %}}If the SKU supports scale out/in then the capacity integer should be included. If scale out/in is not possible for the resource this may be omitted.{{% /md %}}</dd>
-    <dt class="property-optional"
+    <dd>{{% md %}}If the SKU supports scale out/in then the capacity integer should be included. If scale out/in is not possible for the resource this may be omitted.{{% /md %}}</dd><dt class="property-optional"
             title="Optional">
         <span id="name_csharp">
 <a href="#name_csharp" style="color: inherit; text-decoration: inherit;">Name</a>
@@ -1234,8 +1112,7 @@ All [input](#inputs) properties are implicitly available as output properties. A
         <span class="property-indicator"></span>
         <span class="property-type">string</span>
     </dt>
-    <dd>{{% md %}}The SKU name{{% /md %}}</dd>
-    <dt class="property-optional"
+    <dd>{{% md %}}The SKU name{{% /md %}}</dd><dt class="property-optional"
             title="Optional">
         <span id="tier_csharp">
 <a href="#tier_csharp" style="color: inherit; text-decoration: inherit;">Tier</a>
@@ -1243,14 +1120,11 @@ All [input](#inputs) properties are implicitly available as output properties. A
         <span class="property-indicator"></span>
         <span class="property-type">string</span>
     </dt>
-    <dd>{{% md %}}The service tier{{% /md %}}</dd>
-</dl>
+    <dd>{{% md %}}The service tier{{% /md %}}</dd></dl>
 {{% /choosable %}}
 
 {{% choosable language go %}}
-<dl class="resources-properties">
-
-    <dt class="property-optional"
+<dl class="resources-properties"><dt class="property-optional"
             title="Optional">
         <span id="capacity_go">
 <a href="#capacity_go" style="color: inherit; text-decoration: inherit;">Capacity</a>
@@ -1258,8 +1132,7 @@ All [input](#inputs) properties are implicitly available as output properties. A
         <span class="property-indicator"></span>
         <span class="property-type">int</span>
     </dt>
-    <dd>{{% md %}}If the SKU supports scale out/in then the capacity integer should be included. If scale out/in is not possible for the resource this may be omitted.{{% /md %}}</dd>
-    <dt class="property-optional"
+    <dd>{{% md %}}If the SKU supports scale out/in then the capacity integer should be included. If scale out/in is not possible for the resource this may be omitted.{{% /md %}}</dd><dt class="property-optional"
             title="Optional">
         <span id="name_go">
 <a href="#name_go" style="color: inherit; text-decoration: inherit;">Name</a>
@@ -1267,8 +1140,7 @@ All [input](#inputs) properties are implicitly available as output properties. A
         <span class="property-indicator"></span>
         <span class="property-type">string</span>
     </dt>
-    <dd>{{% md %}}The SKU name{{% /md %}}</dd>
-    <dt class="property-optional"
+    <dd>{{% md %}}The SKU name{{% /md %}}</dd><dt class="property-optional"
             title="Optional">
         <span id="tier_go">
 <a href="#tier_go" style="color: inherit; text-decoration: inherit;">Tier</a>
@@ -1276,14 +1148,11 @@ All [input](#inputs) properties are implicitly available as output properties. A
         <span class="property-indicator"></span>
         <span class="property-type">string</span>
     </dt>
-    <dd>{{% md %}}The service tier{{% /md %}}</dd>
-</dl>
+    <dd>{{% md %}}The service tier{{% /md %}}</dd></dl>
 {{% /choosable %}}
 
 {{% choosable language nodejs %}}
-<dl class="resources-properties">
-
-    <dt class="property-optional"
+<dl class="resources-properties"><dt class="property-optional"
             title="Optional">
         <span id="capacity_nodejs">
 <a href="#capacity_nodejs" style="color: inherit; text-decoration: inherit;">capacity</a>
@@ -1291,8 +1160,7 @@ All [input](#inputs) properties are implicitly available as output properties. A
         <span class="property-indicator"></span>
         <span class="property-type">number</span>
     </dt>
-    <dd>{{% md %}}If the SKU supports scale out/in then the capacity integer should be included. If scale out/in is not possible for the resource this may be omitted.{{% /md %}}</dd>
-    <dt class="property-optional"
+    <dd>{{% md %}}If the SKU supports scale out/in then the capacity integer should be included. If scale out/in is not possible for the resource this may be omitted.{{% /md %}}</dd><dt class="property-optional"
             title="Optional">
         <span id="name_nodejs">
 <a href="#name_nodejs" style="color: inherit; text-decoration: inherit;">name</a>
@@ -1300,8 +1168,7 @@ All [input](#inputs) properties are implicitly available as output properties. A
         <span class="property-indicator"></span>
         <span class="property-type">string</span>
     </dt>
-    <dd>{{% md %}}The SKU name{{% /md %}}</dd>
-    <dt class="property-optional"
+    <dd>{{% md %}}The SKU name{{% /md %}}</dd><dt class="property-optional"
             title="Optional">
         <span id="tier_nodejs">
 <a href="#tier_nodejs" style="color: inherit; text-decoration: inherit;">tier</a>
@@ -1309,14 +1176,11 @@ All [input](#inputs) properties are implicitly available as output properties. A
         <span class="property-indicator"></span>
         <span class="property-type">string</span>
     </dt>
-    <dd>{{% md %}}The service tier{{% /md %}}</dd>
-</dl>
+    <dd>{{% md %}}The service tier{{% /md %}}</dd></dl>
 {{% /choosable %}}
 
 {{% choosable language python %}}
-<dl class="resources-properties">
-
-    <dt class="property-optional"
+<dl class="resources-properties"><dt class="property-optional"
             title="Optional">
         <span id="capacity_python">
 <a href="#capacity_python" style="color: inherit; text-decoration: inherit;">capacity</a>
@@ -1324,8 +1188,7 @@ All [input](#inputs) properties are implicitly available as output properties. A
         <span class="property-indicator"></span>
         <span class="property-type">int</span>
     </dt>
-    <dd>{{% md %}}If the SKU supports scale out/in then the capacity integer should be included. If scale out/in is not possible for the resource this may be omitted.{{% /md %}}</dd>
-    <dt class="property-optional"
+    <dd>{{% md %}}If the SKU supports scale out/in then the capacity integer should be included. If scale out/in is not possible for the resource this may be omitted.{{% /md %}}</dd><dt class="property-optional"
             title="Optional">
         <span id="name_python">
 <a href="#name_python" style="color: inherit; text-decoration: inherit;">name</a>
@@ -1333,8 +1196,7 @@ All [input](#inputs) properties are implicitly available as output properties. A
         <span class="property-indicator"></span>
         <span class="property-type">str</span>
     </dt>
-    <dd>{{% md %}}The SKU name{{% /md %}}</dd>
-    <dt class="property-optional"
+    <dd>{{% md %}}The SKU name{{% /md %}}</dd><dt class="property-optional"
             title="Optional">
         <span id="tier_python">
 <a href="#tier_python" style="color: inherit; text-decoration: inherit;">tier</a>
@@ -1342,54 +1204,37 @@ All [input](#inputs) properties are implicitly available as output properties. A
         <span class="property-indicator"></span>
         <span class="property-type">str</span>
     </dt>
-    <dd>{{% md %}}The service tier{{% /md %}}</dd>
-</dl>
+    <dd>{{% md %}}The service tier{{% /md %}}</dd></dl>
 {{% /choosable %}}
 
 <h4 id="storageaccounttype">Storage<wbr>Account<wbr>Type</h4>
 
 {{% choosable language csharp %}}
-<dl class="tabular">
-    <dt>GRS</dt>
-    <dd>GRS</dd>
-    <dt>LRS</dt>
-    <dd>LRS</dd>
-    <dt>ZRS</dt>
-    <dd>ZRS</dd>
-</dl>
+<dl class="tabular"><dt>GRS</dt>
+    <dd>GRS</dd><dt>LRS</dt>
+    <dd>LRS</dd><dt>ZRS</dt>
+    <dd>ZRS</dd></dl>
 {{% /choosable %}}
 
 {{% choosable language go %}}
-<dl class="tabular">
-    <dt>Storage<wbr>Account<wbr>Type<wbr>GRS</dt>
-    <dd>GRS</dd>
-    <dt>Storage<wbr>Account<wbr>Type<wbr>LRS</dt>
-    <dd>LRS</dd>
-    <dt>Storage<wbr>Account<wbr>Type<wbr>ZRS</dt>
-    <dd>ZRS</dd>
-</dl>
+<dl class="tabular"><dt>Storage<wbr>Account<wbr>Type<wbr>GRS</dt>
+    <dd>GRS</dd><dt>Storage<wbr>Account<wbr>Type<wbr>LRS</dt>
+    <dd>LRS</dd><dt>Storage<wbr>Account<wbr>Type<wbr>ZRS</dt>
+    <dd>ZRS</dd></dl>
 {{% /choosable %}}
 
 {{% choosable language nodejs %}}
-<dl class="tabular">
-    <dt>GRS</dt>
-    <dd>GRS</dd>
-    <dt>LRS</dt>
-    <dd>LRS</dd>
-    <dt>ZRS</dt>
-    <dd>ZRS</dd>
-</dl>
+<dl class="tabular"><dt>GRS</dt>
+    <dd>GRS</dd><dt>LRS</dt>
+    <dd>LRS</dd><dt>ZRS</dt>
+    <dd>ZRS</dd></dl>
 {{% /choosable %}}
 
 {{% choosable language python %}}
-<dl class="tabular">
-    <dt>GRS</dt>
-    <dd>GRS</dd>
-    <dt>LRS</dt>
-    <dd>LRS</dd>
-    <dt>ZRS</dt>
-    <dd>ZRS</dd>
-</dl>
+<dl class="tabular"><dt>GRS</dt>
+    <dd>GRS</dd><dt>LRS</dt>
+    <dd>LRS</dd><dt>ZRS</dt>
+    <dd>ZRS</dd></dl>
 {{% /choosable %}}
 ## Import
 

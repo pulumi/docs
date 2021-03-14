@@ -51,9 +51,7 @@ The following arguments are supported:
 
 
 {{% choosable language csharp %}}
-<dl class="resources-properties">
-
-    <dt class="property-required"
+<dl class="resources-properties"><dt class="property-required"
             title="Required">
         <span id="resourcegroupname_csharp">
 <a href="#resourcegroupname_csharp" style="color: inherit; text-decoration: inherit;">Resource<wbr>Group<wbr>Name</a>
@@ -61,8 +59,7 @@ The following arguments are supported:
         <span class="property-indicator"></span>
         <span class="property-type">string</span>
     </dt>
-    <dd>{{% md %}}Azure resource group name{{% /md %}}</dd>
-    <dt class="property-required"
+    <dd>{{% md %}}Azure resource group name{{% /md %}}</dd><dt class="property-required"
             title="Required">
         <span id="secretresourcename_csharp">
 <a href="#secretresourcename_csharp" style="color: inherit; text-decoration: inherit;">Secret<wbr>Resource<wbr>Name</a>
@@ -70,8 +67,7 @@ The following arguments are supported:
         <span class="property-indicator"></span>
         <span class="property-type">string</span>
     </dt>
-    <dd>{{% md %}}The name of the secret resource.{{% /md %}}</dd>
-    <dt class="property-required"
+    <dd>{{% md %}}The name of the secret resource.{{% /md %}}</dd><dt class="property-required"
             title="Required">
         <span id="secretvalueresourcename_csharp">
 <a href="#secretvalueresourcename_csharp" style="color: inherit; text-decoration: inherit;">Secret<wbr>Value<wbr>Resource<wbr>Name</a>
@@ -79,14 +75,11 @@ The following arguments are supported:
         <span class="property-indicator"></span>
         <span class="property-type">string</span>
     </dt>
-    <dd>{{% md %}}The name of the secret resource value which is typically the version identifier for the value.{{% /md %}}</dd>
-</dl>
+    <dd>{{% md %}}The name of the secret resource value which is typically the version identifier for the value.{{% /md %}}</dd></dl>
 {{% /choosable %}}
 
 {{% choosable language go %}}
-<dl class="resources-properties">
-
-    <dt class="property-required"
+<dl class="resources-properties"><dt class="property-required"
             title="Required">
         <span id="resourcegroupname_go">
 <a href="#resourcegroupname_go" style="color: inherit; text-decoration: inherit;">Resource<wbr>Group<wbr>Name</a>
@@ -94,8 +87,7 @@ The following arguments are supported:
         <span class="property-indicator"></span>
         <span class="property-type">string</span>
     </dt>
-    <dd>{{% md %}}Azure resource group name{{% /md %}}</dd>
-    <dt class="property-required"
+    <dd>{{% md %}}Azure resource group name{{% /md %}}</dd><dt class="property-required"
             title="Required">
         <span id="secretresourcename_go">
 <a href="#secretresourcename_go" style="color: inherit; text-decoration: inherit;">Secret<wbr>Resource<wbr>Name</a>
@@ -103,8 +95,7 @@ The following arguments are supported:
         <span class="property-indicator"></span>
         <span class="property-type">string</span>
     </dt>
-    <dd>{{% md %}}The name of the secret resource.{{% /md %}}</dd>
-    <dt class="property-required"
+    <dd>{{% md %}}The name of the secret resource.{{% /md %}}</dd><dt class="property-required"
             title="Required">
         <span id="secretvalueresourcename_go">
 <a href="#secretvalueresourcename_go" style="color: inherit; text-decoration: inherit;">Secret<wbr>Value<wbr>Resource<wbr>Name</a>
@@ -112,14 +103,11 @@ The following arguments are supported:
         <span class="property-indicator"></span>
         <span class="property-type">string</span>
     </dt>
-    <dd>{{% md %}}The name of the secret resource value which is typically the version identifier for the value.{{% /md %}}</dd>
-</dl>
+    <dd>{{% md %}}The name of the secret resource value which is typically the version identifier for the value.{{% /md %}}</dd></dl>
 {{% /choosable %}}
 
 {{% choosable language nodejs %}}
-<dl class="resources-properties">
-
-    <dt class="property-required"
+<dl class="resources-properties"><dt class="property-required"
             title="Required">
         <span id="resourcegroupname_nodejs">
 <a href="#resourcegroupname_nodejs" style="color: inherit; text-decoration: inherit;">resource<wbr>Group<wbr>Name</a>
@@ -127,8 +115,7 @@ The following arguments are supported:
         <span class="property-indicator"></span>
         <span class="property-type">string</span>
     </dt>
-    <dd>{{% md %}}Azure resource group name{{% /md %}}</dd>
-    <dt class="property-required"
+    <dd>{{% md %}}Azure resource group name{{% /md %}}</dd><dt class="property-required"
             title="Required">
         <span id="secretresourcename_nodejs">
 <a href="#secretresourcename_nodejs" style="color: inherit; text-decoration: inherit;">secret<wbr>Resource<wbr>Name</a>
@@ -136,8 +123,7 @@ The following arguments are supported:
         <span class="property-indicator"></span>
         <span class="property-type">string</span>
     </dt>
-    <dd>{{% md %}}The name of the secret resource.{{% /md %}}</dd>
-    <dt class="property-required"
+    <dd>{{% md %}}The name of the secret resource.{{% /md %}}</dd><dt class="property-required"
             title="Required">
         <span id="secretvalueresourcename_nodejs">
 <a href="#secretvalueresourcename_nodejs" style="color: inherit; text-decoration: inherit;">secret<wbr>Value<wbr>Resource<wbr>Name</a>
@@ -145,14 +131,11 @@ The following arguments are supported:
         <span class="property-indicator"></span>
         <span class="property-type">string</span>
     </dt>
-    <dd>{{% md %}}The name of the secret resource value which is typically the version identifier for the value.{{% /md %}}</dd>
-</dl>
+    <dd>{{% md %}}The name of the secret resource value which is typically the version identifier for the value.{{% /md %}}</dd></dl>
 {{% /choosable %}}
 
 {{% choosable language python %}}
-<dl class="resources-properties">
-
-    <dt class="property-required"
+<dl class="resources-properties"><dt class="property-required"
             title="Required">
         <span id="resource_group_name_python">
 <a href="#resource_group_name_python" style="color: inherit; text-decoration: inherit;">resource_<wbr>group_<wbr>name</a>
@@ -160,8 +143,7 @@ The following arguments are supported:
         <span class="property-indicator"></span>
         <span class="property-type">str</span>
     </dt>
-    <dd>{{% md %}}Azure resource group name{{% /md %}}</dd>
-    <dt class="property-required"
+    <dd>{{% md %}}Azure resource group name{{% /md %}}</dd><dt class="property-required"
             title="Required">
         <span id="secret_resource_name_python">
 <a href="#secret_resource_name_python" style="color: inherit; text-decoration: inherit;">secret_<wbr>resource_<wbr>name</a>
@@ -169,8 +151,7 @@ The following arguments are supported:
         <span class="property-indicator"></span>
         <span class="property-type">str</span>
     </dt>
-    <dd>{{% md %}}The name of the secret resource.{{% /md %}}</dd>
-    <dt class="property-required"
+    <dd>{{% md %}}The name of the secret resource.{{% /md %}}</dd><dt class="property-required"
             title="Required">
         <span id="secret_value_resource_name_python">
 <a href="#secret_value_resource_name_python" style="color: inherit; text-decoration: inherit;">secret_<wbr>value_<wbr>resource_<wbr>name</a>
@@ -178,8 +159,7 @@ The following arguments are supported:
         <span class="property-indicator"></span>
         <span class="property-type">str</span>
     </dt>
-    <dd>{{% md %}}The name of the secret resource value which is typically the version identifier for the value.{{% /md %}}</dd>
-</dl>
+    <dd>{{% md %}}The name of the secret resource value which is typically the version identifier for the value.{{% /md %}}</dd></dl>
 {{% /choosable %}}
 
 
@@ -192,9 +172,7 @@ The following output properties are available:
 
 
 {{% choosable language csharp %}}
-<dl class="resources-properties">
-
-    <dt class="property-"
+<dl class="resources-properties"><dt class="property-"
             title="">
         <span id="value_csharp">
 <a href="#value_csharp" style="color: inherit; text-decoration: inherit;">Value</a>
@@ -202,14 +180,11 @@ The following output properties are available:
         <span class="property-indicator"></span>
         <span class="property-type">string</span>
     </dt>
-    <dd>{{% md %}}The actual value of the secret.{{% /md %}}</dd>
-</dl>
+    <dd>{{% md %}}The actual value of the secret.{{% /md %}}</dd></dl>
 {{% /choosable %}}
 
 {{% choosable language go %}}
-<dl class="resources-properties">
-
-    <dt class="property-"
+<dl class="resources-properties"><dt class="property-"
             title="">
         <span id="value_go">
 <a href="#value_go" style="color: inherit; text-decoration: inherit;">Value</a>
@@ -217,14 +192,11 @@ The following output properties are available:
         <span class="property-indicator"></span>
         <span class="property-type">string</span>
     </dt>
-    <dd>{{% md %}}The actual value of the secret.{{% /md %}}</dd>
-</dl>
+    <dd>{{% md %}}The actual value of the secret.{{% /md %}}</dd></dl>
 {{% /choosable %}}
 
 {{% choosable language nodejs %}}
-<dl class="resources-properties">
-
-    <dt class="property-"
+<dl class="resources-properties"><dt class="property-"
             title="">
         <span id="value_nodejs">
 <a href="#value_nodejs" style="color: inherit; text-decoration: inherit;">value</a>
@@ -232,14 +204,11 @@ The following output properties are available:
         <span class="property-indicator"></span>
         <span class="property-type">string</span>
     </dt>
-    <dd>{{% md %}}The actual value of the secret.{{% /md %}}</dd>
-</dl>
+    <dd>{{% md %}}The actual value of the secret.{{% /md %}}</dd></dl>
 {{% /choosable %}}
 
 {{% choosable language python %}}
-<dl class="resources-properties">
-
-    <dt class="property-"
+<dl class="resources-properties"><dt class="property-"
             title="">
         <span id="value_python">
 <a href="#value_python" style="color: inherit; text-decoration: inherit;">value</a>
@@ -247,8 +216,7 @@ The following output properties are available:
         <span class="property-indicator"></span>
         <span class="property-type">str</span>
     </dt>
-    <dd>{{% md %}}The actual value of the secret.{{% /md %}}</dd>
-</dl>
+    <dd>{{% md %}}The actual value of the secret.{{% /md %}}</dd></dl>
 {{% /choosable %}}
 
 

@@ -13,11 +13,17 @@ meta_desc: "Documentation for the azure.media.ContentKeyPolicy resource with exa
 Manages a Content Key Policy.
 
 {{% examples %}}
+
 ## Example Usage
 
 {{< chooser language "typescript,python,go,csharp" / >}}
 
-{{% example csharp %}}
+
+
+
+
+{{< example csharp >}}
+
 ```csharp
 using System.Collections.Generic;
 using System.Text.Json;
@@ -146,13 +152,19 @@ class MyStack : Stack
 }
 ```
 
-{{% /example %}}
 
-{{% example go %}}
+{{< /example >}}
+
+
+{{< example go >}}
+
 Coming soon!
-{{% /example %}}
 
-{{% example python %}}
+{{< /example >}}
+
+
+{{< example python >}}
+
 ```python
 import pulumi
 import json
@@ -240,9 +252,12 @@ example_content_key_policy = azure.media.ContentKeyPolicy("exampleContentKeyPoli
     ])
 ```
 
-{{% /example %}}
 
-{{% example typescript %}}
+{{< /example >}}
+
+
+{{< example typescript >}}
+
 
 ```typescript
 import * as pulumi from "@pulumi/pulumi";
@@ -333,9 +348,16 @@ const exampleContentKeyPolicy = new azure.media.ContentKeyPolicy("exampleContent
 });
 ```
 
-{{% /example %}}
+
+{{< /example >}}
+
+
+
+
 
 {{% /examples %}}
+
+
 
 
 ## Create a ContentKeyPolicy Resource {#create}
@@ -360,9 +382,7 @@ const exampleContentKeyPolicy = new azure.media.ContentKeyPolicy("exampleContent
 
 {{% choosable language nodejs %}}
 
-<dl class="resources-properties">
-  
-    <dt
+<dl class="resources-properties"><dt
         class="property-required" title="Required">
         <span>name</span>
         <span class="property-indicator"></span>
@@ -370,9 +390,7 @@ const exampleContentKeyPolicy = new azure.media.ContentKeyPolicy("exampleContent
     </dt>
     <dd>
       The unique name of the resource.
-    </dd>
-  
-    <dt
+    </dd><dt
         class="property-required" title="Required">
         <span>args</span>
         <span class="property-indicator"></span>
@@ -380,9 +398,7 @@ const exampleContentKeyPolicy = new azure.media.ContentKeyPolicy("exampleContent
     </dt>
     <dd>
       The arguments to resource properties.
-    </dd>
-  
-    <dt
+    </dd><dt
         class="property-optional" title="Optional">
         <span>opts</span>
         <span class="property-indicator"></span>
@@ -390,10 +406,7 @@ const exampleContentKeyPolicy = new azure.media.ContentKeyPolicy("exampleContent
     </dt>
     <dd>
       Bag of options to control resource&#39;s behavior.
-    </dd>
-  
-
-</dl>
+    </dd></dl>
 
 {{% /choosable %}}
 
@@ -419,9 +432,7 @@ const exampleContentKeyPolicy = new azure.media.ContentKeyPolicy("exampleContent
 
 {{% choosable language go %}}
 
-<dl class="resources-properties">
-  
-    <dt
+<dl class="resources-properties"><dt
         class="property-optional" title="Optional">
         <span>ctx</span>
         <span class="property-indicator"></span>
@@ -429,9 +440,7 @@ const exampleContentKeyPolicy = new azure.media.ContentKeyPolicy("exampleContent
     </dt>
     <dd>
       Context object for the current deployment.
-    </dd>
-  
-    <dt
+    </dd><dt
         class="property-required" title="Required">
         <span>name</span>
         <span class="property-indicator"></span>
@@ -439,9 +448,7 @@ const exampleContentKeyPolicy = new azure.media.ContentKeyPolicy("exampleContent
     </dt>
     <dd>
       The unique name of the resource.
-    </dd>
-  
-    <dt
+    </dd><dt
         class="property-required" title="Required">
         <span>args</span>
         <span class="property-indicator"></span>
@@ -449,9 +456,7 @@ const exampleContentKeyPolicy = new azure.media.ContentKeyPolicy("exampleContent
     </dt>
     <dd>
       The arguments to resource properties.
-    </dd>
-  
-    <dt
+    </dd><dt
         class="property-optional" title="Optional">
         <span>opts</span>
         <span class="property-indicator"></span>
@@ -459,18 +464,13 @@ const exampleContentKeyPolicy = new azure.media.ContentKeyPolicy("exampleContent
     </dt>
     <dd>
       Bag of options to control resource&#39;s behavior.
-    </dd>
-  
-
-</dl>
+    </dd></dl>
 
 {{% /choosable %}}
 
 {{% choosable language csharp %}}
 
-<dl class="resources-properties">
-  
-    <dt
+<dl class="resources-properties"><dt
         class="property-required" title="Required">
         <span>name</span>
         <span class="property-indicator"></span>
@@ -478,9 +478,7 @@ const exampleContentKeyPolicy = new azure.media.ContentKeyPolicy("exampleContent
     </dt>
     <dd>
       The unique name of the resource.
-    </dd>
-  
-    <dt
+    </dd><dt
         class="property-required" title="Required">
         <span>args</span>
         <span class="property-indicator"></span>
@@ -488,9 +486,7 @@ const exampleContentKeyPolicy = new azure.media.ContentKeyPolicy("exampleContent
     </dt>
     <dd>
       The arguments to resource properties.
-    </dd>
-  
-    <dt
+    </dd><dt
         class="property-optional" title="Optional">
         <span>opts</span>
         <span class="property-indicator"></span>
@@ -498,10 +494,7 @@ const exampleContentKeyPolicy = new azure.media.ContentKeyPolicy("exampleContent
     </dt>
     <dd>
       Bag of options to control resource&#39;s behavior.
-    </dd>
-  
-
-</dl>
+    </dd></dl>
 
 {{% /choosable %}}
 
@@ -516,9 +509,7 @@ The ContentKeyPolicy resource accepts the following [input]({{< relref "/docs/in
 
 
 {{% choosable language csharp %}}
-<dl class="resources-properties">
-
-    <dt class="property-required"
+<dl class="resources-properties"><dt class="property-required"
             title="Required">
         <span id="mediaservicesaccountname_csharp">
 <a href="#mediaservicesaccountname_csharp" style="color: inherit; text-decoration: inherit;">Media<wbr>Services<wbr>Account<wbr>Name</a>
@@ -527,8 +518,7 @@ The ContentKeyPolicy resource accepts the following [input]({{< relref "/docs/in
         <span class="property-type">string</span>
     </dt>
     <dd>{{% md %}}The Media Services account name. Changing this forces a new Content Key Policy to be created.
-{{% /md %}}</dd>
-    <dt class="property-required"
+{{% /md %}}</dd><dt class="property-required"
             title="Required">
         <span id="policyoptions_csharp">
 <a href="#policyoptions_csharp" style="color: inherit; text-decoration: inherit;">Policy<wbr>Options</a>
@@ -537,8 +527,7 @@ The ContentKeyPolicy resource accepts the following [input]({{< relref "/docs/in
         <span class="property-type"><a href="#contentkeypolicypolicyoption">List&lt;Content<wbr>Key<wbr>Policy<wbr>Policy<wbr>Option<wbr>Args&gt;</a></span>
     </dt>
     <dd>{{% md %}}One or more `policy_option` blocks as defined below.
-{{% /md %}}</dd>
-    <dt class="property-required"
+{{% /md %}}</dd><dt class="property-required"
             title="Required">
         <span id="resourcegroupname_csharp">
 <a href="#resourcegroupname_csharp" style="color: inherit; text-decoration: inherit;">Resource<wbr>Group<wbr>Name</a>
@@ -547,8 +536,7 @@ The ContentKeyPolicy resource accepts the following [input]({{< relref "/docs/in
         <span class="property-type">string</span>
     </dt>
     <dd>{{% md %}}The name of the Resource Group where the Content Key Policy should exist. Changing this forces a new Content Key Policy to be created.
-{{% /md %}}</dd>
-    <dt class="property-optional"
+{{% /md %}}</dd><dt class="property-optional"
             title="Optional">
         <span id="description_csharp">
 <a href="#description_csharp" style="color: inherit; text-decoration: inherit;">Description</a>
@@ -557,8 +545,7 @@ The ContentKeyPolicy resource accepts the following [input]({{< relref "/docs/in
         <span class="property-type">string</span>
     </dt>
     <dd>{{% md %}}A description for the Policy.
-{{% /md %}}</dd>
-    <dt class="property-optional"
+{{% /md %}}</dd><dt class="property-optional"
             title="Optional">
         <span id="name_csharp">
 <a href="#name_csharp" style="color: inherit; text-decoration: inherit;">Name</a>
@@ -567,14 +554,11 @@ The ContentKeyPolicy resource accepts the following [input]({{< relref "/docs/in
         <span class="property-type">string</span>
     </dt>
     <dd>{{% md %}}The name which should be used for this Content Key Policy. Changing this forces a new Content Key Policy to be created.
-{{% /md %}}</dd>
-</dl>
+{{% /md %}}</dd></dl>
 {{% /choosable %}}
 
 {{% choosable language go %}}
-<dl class="resources-properties">
-
-    <dt class="property-required"
+<dl class="resources-properties"><dt class="property-required"
             title="Required">
         <span id="mediaservicesaccountname_go">
 <a href="#mediaservicesaccountname_go" style="color: inherit; text-decoration: inherit;">Media<wbr>Services<wbr>Account<wbr>Name</a>
@@ -583,8 +567,7 @@ The ContentKeyPolicy resource accepts the following [input]({{< relref "/docs/in
         <span class="property-type">string</span>
     </dt>
     <dd>{{% md %}}The Media Services account name. Changing this forces a new Content Key Policy to be created.
-{{% /md %}}</dd>
-    <dt class="property-required"
+{{% /md %}}</dd><dt class="property-required"
             title="Required">
         <span id="policyoptions_go">
 <a href="#policyoptions_go" style="color: inherit; text-decoration: inherit;">Policy<wbr>Options</a>
@@ -593,8 +576,7 @@ The ContentKeyPolicy resource accepts the following [input]({{< relref "/docs/in
         <span class="property-type"><a href="#contentkeypolicypolicyoption">[]Content<wbr>Key<wbr>Policy<wbr>Policy<wbr>Option</a></span>
     </dt>
     <dd>{{% md %}}One or more `policy_option` blocks as defined below.
-{{% /md %}}</dd>
-    <dt class="property-required"
+{{% /md %}}</dd><dt class="property-required"
             title="Required">
         <span id="resourcegroupname_go">
 <a href="#resourcegroupname_go" style="color: inherit; text-decoration: inherit;">Resource<wbr>Group<wbr>Name</a>
@@ -603,8 +585,7 @@ The ContentKeyPolicy resource accepts the following [input]({{< relref "/docs/in
         <span class="property-type">string</span>
     </dt>
     <dd>{{% md %}}The name of the Resource Group where the Content Key Policy should exist. Changing this forces a new Content Key Policy to be created.
-{{% /md %}}</dd>
-    <dt class="property-optional"
+{{% /md %}}</dd><dt class="property-optional"
             title="Optional">
         <span id="description_go">
 <a href="#description_go" style="color: inherit; text-decoration: inherit;">Description</a>
@@ -613,8 +594,7 @@ The ContentKeyPolicy resource accepts the following [input]({{< relref "/docs/in
         <span class="property-type">string</span>
     </dt>
     <dd>{{% md %}}A description for the Policy.
-{{% /md %}}</dd>
-    <dt class="property-optional"
+{{% /md %}}</dd><dt class="property-optional"
             title="Optional">
         <span id="name_go">
 <a href="#name_go" style="color: inherit; text-decoration: inherit;">Name</a>
@@ -623,14 +603,11 @@ The ContentKeyPolicy resource accepts the following [input]({{< relref "/docs/in
         <span class="property-type">string</span>
     </dt>
     <dd>{{% md %}}The name which should be used for this Content Key Policy. Changing this forces a new Content Key Policy to be created.
-{{% /md %}}</dd>
-</dl>
+{{% /md %}}</dd></dl>
 {{% /choosable %}}
 
 {{% choosable language nodejs %}}
-<dl class="resources-properties">
-
-    <dt class="property-required"
+<dl class="resources-properties"><dt class="property-required"
             title="Required">
         <span id="mediaservicesaccountname_nodejs">
 <a href="#mediaservicesaccountname_nodejs" style="color: inherit; text-decoration: inherit;">media<wbr>Services<wbr>Account<wbr>Name</a>
@@ -639,8 +616,7 @@ The ContentKeyPolicy resource accepts the following [input]({{< relref "/docs/in
         <span class="property-type">string</span>
     </dt>
     <dd>{{% md %}}The Media Services account name. Changing this forces a new Content Key Policy to be created.
-{{% /md %}}</dd>
-    <dt class="property-required"
+{{% /md %}}</dd><dt class="property-required"
             title="Required">
         <span id="policyoptions_nodejs">
 <a href="#policyoptions_nodejs" style="color: inherit; text-decoration: inherit;">policy<wbr>Options</a>
@@ -649,8 +625,7 @@ The ContentKeyPolicy resource accepts the following [input]({{< relref "/docs/in
         <span class="property-type"><a href="#contentkeypolicypolicyoption">Content<wbr>Key<wbr>Policy<wbr>Policy<wbr>Option[]</a></span>
     </dt>
     <dd>{{% md %}}One or more `policy_option` blocks as defined below.
-{{% /md %}}</dd>
-    <dt class="property-required"
+{{% /md %}}</dd><dt class="property-required"
             title="Required">
         <span id="resourcegroupname_nodejs">
 <a href="#resourcegroupname_nodejs" style="color: inherit; text-decoration: inherit;">resource<wbr>Group<wbr>Name</a>
@@ -659,8 +634,7 @@ The ContentKeyPolicy resource accepts the following [input]({{< relref "/docs/in
         <span class="property-type">string</span>
     </dt>
     <dd>{{% md %}}The name of the Resource Group where the Content Key Policy should exist. Changing this forces a new Content Key Policy to be created.
-{{% /md %}}</dd>
-    <dt class="property-optional"
+{{% /md %}}</dd><dt class="property-optional"
             title="Optional">
         <span id="description_nodejs">
 <a href="#description_nodejs" style="color: inherit; text-decoration: inherit;">description</a>
@@ -669,8 +643,7 @@ The ContentKeyPolicy resource accepts the following [input]({{< relref "/docs/in
         <span class="property-type">string</span>
     </dt>
     <dd>{{% md %}}A description for the Policy.
-{{% /md %}}</dd>
-    <dt class="property-optional"
+{{% /md %}}</dd><dt class="property-optional"
             title="Optional">
         <span id="name_nodejs">
 <a href="#name_nodejs" style="color: inherit; text-decoration: inherit;">name</a>
@@ -679,14 +652,11 @@ The ContentKeyPolicy resource accepts the following [input]({{< relref "/docs/in
         <span class="property-type">string</span>
     </dt>
     <dd>{{% md %}}The name which should be used for this Content Key Policy. Changing this forces a new Content Key Policy to be created.
-{{% /md %}}</dd>
-</dl>
+{{% /md %}}</dd></dl>
 {{% /choosable %}}
 
 {{% choosable language python %}}
-<dl class="resources-properties">
-
-    <dt class="property-required"
+<dl class="resources-properties"><dt class="property-required"
             title="Required">
         <span id="media_services_account_name_python">
 <a href="#media_services_account_name_python" style="color: inherit; text-decoration: inherit;">media_<wbr>services_<wbr>account_<wbr>name</a>
@@ -695,8 +665,7 @@ The ContentKeyPolicy resource accepts the following [input]({{< relref "/docs/in
         <span class="property-type">str</span>
     </dt>
     <dd>{{% md %}}The Media Services account name. Changing this forces a new Content Key Policy to be created.
-{{% /md %}}</dd>
-    <dt class="property-required"
+{{% /md %}}</dd><dt class="property-required"
             title="Required">
         <span id="policy_options_python">
 <a href="#policy_options_python" style="color: inherit; text-decoration: inherit;">policy_<wbr>options</a>
@@ -705,8 +674,7 @@ The ContentKeyPolicy resource accepts the following [input]({{< relref "/docs/in
         <span class="property-type"><a href="#contentkeypolicypolicyoption">Sequence[Content<wbr>Key<wbr>Policy<wbr>Policy<wbr>Option<wbr>Args]</a></span>
     </dt>
     <dd>{{% md %}}One or more `policy_option` blocks as defined below.
-{{% /md %}}</dd>
-    <dt class="property-required"
+{{% /md %}}</dd><dt class="property-required"
             title="Required">
         <span id="resource_group_name_python">
 <a href="#resource_group_name_python" style="color: inherit; text-decoration: inherit;">resource_<wbr>group_<wbr>name</a>
@@ -715,8 +683,7 @@ The ContentKeyPolicy resource accepts the following [input]({{< relref "/docs/in
         <span class="property-type">str</span>
     </dt>
     <dd>{{% md %}}The name of the Resource Group where the Content Key Policy should exist. Changing this forces a new Content Key Policy to be created.
-{{% /md %}}</dd>
-    <dt class="property-optional"
+{{% /md %}}</dd><dt class="property-optional"
             title="Optional">
         <span id="description_python">
 <a href="#description_python" style="color: inherit; text-decoration: inherit;">description</a>
@@ -725,8 +692,7 @@ The ContentKeyPolicy resource accepts the following [input]({{< relref "/docs/in
         <span class="property-type">str</span>
     </dt>
     <dd>{{% md %}}A description for the Policy.
-{{% /md %}}</dd>
-    <dt class="property-optional"
+{{% /md %}}</dd><dt class="property-optional"
             title="Optional">
         <span id="name_python">
 <a href="#name_python" style="color: inherit; text-decoration: inherit;">name</a>
@@ -735,8 +701,7 @@ The ContentKeyPolicy resource accepts the following [input]({{< relref "/docs/in
         <span class="property-type">str</span>
     </dt>
     <dd>{{% md %}}The name which should be used for this Content Key Policy. Changing this forces a new Content Key Policy to be created.
-{{% /md %}}</dd>
-</dl>
+{{% /md %}}</dd></dl>
 {{% /choosable %}}
 
 
@@ -747,9 +712,7 @@ All [input](#inputs) properties are implicitly available as output properties. A
 
 
 {{% choosable language csharp %}}
-<dl class="resources-properties">
-
-    <dt class="property-"
+<dl class="resources-properties"><dt class="property-"
             title="">
         <span id="id_csharp">
 <a href="#id_csharp" style="color: inherit; text-decoration: inherit;">Id</a>
@@ -757,14 +720,11 @@ All [input](#inputs) properties are implicitly available as output properties. A
         <span class="property-indicator"></span>
         <span class="property-type">string</span>
     </dt>
-    <dd>{{% md %}}The provider-assigned unique ID for this managed resource.{{% /md %}}</dd>
-</dl>
+    <dd>{{% md %}}The provider-assigned unique ID for this managed resource.{{% /md %}}</dd></dl>
 {{% /choosable %}}
 
 {{% choosable language go %}}
-<dl class="resources-properties">
-
-    <dt class="property-"
+<dl class="resources-properties"><dt class="property-"
             title="">
         <span id="id_go">
 <a href="#id_go" style="color: inherit; text-decoration: inherit;">Id</a>
@@ -772,14 +732,11 @@ All [input](#inputs) properties are implicitly available as output properties. A
         <span class="property-indicator"></span>
         <span class="property-type">string</span>
     </dt>
-    <dd>{{% md %}}The provider-assigned unique ID for this managed resource.{{% /md %}}</dd>
-</dl>
+    <dd>{{% md %}}The provider-assigned unique ID for this managed resource.{{% /md %}}</dd></dl>
 {{% /choosable %}}
 
 {{% choosable language nodejs %}}
-<dl class="resources-properties">
-
-    <dt class="property-"
+<dl class="resources-properties"><dt class="property-"
             title="">
         <span id="id_nodejs">
 <a href="#id_nodejs" style="color: inherit; text-decoration: inherit;">id</a>
@@ -787,14 +744,11 @@ All [input](#inputs) properties are implicitly available as output properties. A
         <span class="property-indicator"></span>
         <span class="property-type">string</span>
     </dt>
-    <dd>{{% md %}}The provider-assigned unique ID for this managed resource.{{% /md %}}</dd>
-</dl>
+    <dd>{{% md %}}The provider-assigned unique ID for this managed resource.{{% /md %}}</dd></dl>
 {{% /choosable %}}
 
 {{% choosable language python %}}
-<dl class="resources-properties">
-
-    <dt class="property-"
+<dl class="resources-properties"><dt class="property-"
             title="">
         <span id="id_python">
 <a href="#id_python" style="color: inherit; text-decoration: inherit;">id</a>
@@ -802,8 +756,7 @@ All [input](#inputs) properties are implicitly available as output properties. A
         <span class="property-indicator"></span>
         <span class="property-type">str</span>
     </dt>
-    <dd>{{% md %}}The provider-assigned unique ID for this managed resource.{{% /md %}}</dd>
-</dl>
+    <dd>{{% md %}}The provider-assigned unique ID for this managed resource.{{% /md %}}</dd></dl>
 {{% /choosable %}}
 
 
@@ -930,9 +883,7 @@ The following state arguments are supported:
 
 
 {{% choosable language csharp %}}
-<dl class="resources-properties">
-
-    <dt class="property-optional"
+<dl class="resources-properties"><dt class="property-optional"
             title="Optional">
         <span id="state_description_csharp">
 <a href="#state_description_csharp" style="color: inherit; text-decoration: inherit;">Description</a>
@@ -941,8 +892,7 @@ The following state arguments are supported:
         <span class="property-type">string</span>
     </dt>
     <dd>{{% md %}}A description for the Policy.
-{{% /md %}}</dd>
-    <dt class="property-optional"
+{{% /md %}}</dd><dt class="property-optional"
             title="Optional">
         <span id="state_mediaservicesaccountname_csharp">
 <a href="#state_mediaservicesaccountname_csharp" style="color: inherit; text-decoration: inherit;">Media<wbr>Services<wbr>Account<wbr>Name</a>
@@ -951,8 +901,7 @@ The following state arguments are supported:
         <span class="property-type">string</span>
     </dt>
     <dd>{{% md %}}The Media Services account name. Changing this forces a new Content Key Policy to be created.
-{{% /md %}}</dd>
-    <dt class="property-optional"
+{{% /md %}}</dd><dt class="property-optional"
             title="Optional">
         <span id="state_name_csharp">
 <a href="#state_name_csharp" style="color: inherit; text-decoration: inherit;">Name</a>
@@ -961,8 +910,7 @@ The following state arguments are supported:
         <span class="property-type">string</span>
     </dt>
     <dd>{{% md %}}The name which should be used for this Content Key Policy. Changing this forces a new Content Key Policy to be created.
-{{% /md %}}</dd>
-    <dt class="property-optional"
+{{% /md %}}</dd><dt class="property-optional"
             title="Optional">
         <span id="state_policyoptions_csharp">
 <a href="#state_policyoptions_csharp" style="color: inherit; text-decoration: inherit;">Policy<wbr>Options</a>
@@ -971,8 +919,7 @@ The following state arguments are supported:
         <span class="property-type"><a href="#contentkeypolicypolicyoption">List&lt;Content<wbr>Key<wbr>Policy<wbr>Policy<wbr>Option<wbr>Args&gt;</a></span>
     </dt>
     <dd>{{% md %}}One or more `policy_option` blocks as defined below.
-{{% /md %}}</dd>
-    <dt class="property-optional"
+{{% /md %}}</dd><dt class="property-optional"
             title="Optional">
         <span id="state_resourcegroupname_csharp">
 <a href="#state_resourcegroupname_csharp" style="color: inherit; text-decoration: inherit;">Resource<wbr>Group<wbr>Name</a>
@@ -981,14 +928,11 @@ The following state arguments are supported:
         <span class="property-type">string</span>
     </dt>
     <dd>{{% md %}}The name of the Resource Group where the Content Key Policy should exist. Changing this forces a new Content Key Policy to be created.
-{{% /md %}}</dd>
-</dl>
+{{% /md %}}</dd></dl>
 {{% /choosable %}}
 
 {{% choosable language go %}}
-<dl class="resources-properties">
-
-    <dt class="property-optional"
+<dl class="resources-properties"><dt class="property-optional"
             title="Optional">
         <span id="state_description_go">
 <a href="#state_description_go" style="color: inherit; text-decoration: inherit;">Description</a>
@@ -997,8 +941,7 @@ The following state arguments are supported:
         <span class="property-type">string</span>
     </dt>
     <dd>{{% md %}}A description for the Policy.
-{{% /md %}}</dd>
-    <dt class="property-optional"
+{{% /md %}}</dd><dt class="property-optional"
             title="Optional">
         <span id="state_mediaservicesaccountname_go">
 <a href="#state_mediaservicesaccountname_go" style="color: inherit; text-decoration: inherit;">Media<wbr>Services<wbr>Account<wbr>Name</a>
@@ -1007,8 +950,7 @@ The following state arguments are supported:
         <span class="property-type">string</span>
     </dt>
     <dd>{{% md %}}The Media Services account name. Changing this forces a new Content Key Policy to be created.
-{{% /md %}}</dd>
-    <dt class="property-optional"
+{{% /md %}}</dd><dt class="property-optional"
             title="Optional">
         <span id="state_name_go">
 <a href="#state_name_go" style="color: inherit; text-decoration: inherit;">Name</a>
@@ -1017,8 +959,7 @@ The following state arguments are supported:
         <span class="property-type">string</span>
     </dt>
     <dd>{{% md %}}The name which should be used for this Content Key Policy. Changing this forces a new Content Key Policy to be created.
-{{% /md %}}</dd>
-    <dt class="property-optional"
+{{% /md %}}</dd><dt class="property-optional"
             title="Optional">
         <span id="state_policyoptions_go">
 <a href="#state_policyoptions_go" style="color: inherit; text-decoration: inherit;">Policy<wbr>Options</a>
@@ -1027,8 +968,7 @@ The following state arguments are supported:
         <span class="property-type"><a href="#contentkeypolicypolicyoption">[]Content<wbr>Key<wbr>Policy<wbr>Policy<wbr>Option</a></span>
     </dt>
     <dd>{{% md %}}One or more `policy_option` blocks as defined below.
-{{% /md %}}</dd>
-    <dt class="property-optional"
+{{% /md %}}</dd><dt class="property-optional"
             title="Optional">
         <span id="state_resourcegroupname_go">
 <a href="#state_resourcegroupname_go" style="color: inherit; text-decoration: inherit;">Resource<wbr>Group<wbr>Name</a>
@@ -1037,14 +977,11 @@ The following state arguments are supported:
         <span class="property-type">string</span>
     </dt>
     <dd>{{% md %}}The name of the Resource Group where the Content Key Policy should exist. Changing this forces a new Content Key Policy to be created.
-{{% /md %}}</dd>
-</dl>
+{{% /md %}}</dd></dl>
 {{% /choosable %}}
 
 {{% choosable language nodejs %}}
-<dl class="resources-properties">
-
-    <dt class="property-optional"
+<dl class="resources-properties"><dt class="property-optional"
             title="Optional">
         <span id="state_description_nodejs">
 <a href="#state_description_nodejs" style="color: inherit; text-decoration: inherit;">description</a>
@@ -1053,8 +990,7 @@ The following state arguments are supported:
         <span class="property-type">string</span>
     </dt>
     <dd>{{% md %}}A description for the Policy.
-{{% /md %}}</dd>
-    <dt class="property-optional"
+{{% /md %}}</dd><dt class="property-optional"
             title="Optional">
         <span id="state_mediaservicesaccountname_nodejs">
 <a href="#state_mediaservicesaccountname_nodejs" style="color: inherit; text-decoration: inherit;">media<wbr>Services<wbr>Account<wbr>Name</a>
@@ -1063,8 +999,7 @@ The following state arguments are supported:
         <span class="property-type">string</span>
     </dt>
     <dd>{{% md %}}The Media Services account name. Changing this forces a new Content Key Policy to be created.
-{{% /md %}}</dd>
-    <dt class="property-optional"
+{{% /md %}}</dd><dt class="property-optional"
             title="Optional">
         <span id="state_name_nodejs">
 <a href="#state_name_nodejs" style="color: inherit; text-decoration: inherit;">name</a>
@@ -1073,8 +1008,7 @@ The following state arguments are supported:
         <span class="property-type">string</span>
     </dt>
     <dd>{{% md %}}The name which should be used for this Content Key Policy. Changing this forces a new Content Key Policy to be created.
-{{% /md %}}</dd>
-    <dt class="property-optional"
+{{% /md %}}</dd><dt class="property-optional"
             title="Optional">
         <span id="state_policyoptions_nodejs">
 <a href="#state_policyoptions_nodejs" style="color: inherit; text-decoration: inherit;">policy<wbr>Options</a>
@@ -1083,8 +1017,7 @@ The following state arguments are supported:
         <span class="property-type"><a href="#contentkeypolicypolicyoption">Content<wbr>Key<wbr>Policy<wbr>Policy<wbr>Option[]</a></span>
     </dt>
     <dd>{{% md %}}One or more `policy_option` blocks as defined below.
-{{% /md %}}</dd>
-    <dt class="property-optional"
+{{% /md %}}</dd><dt class="property-optional"
             title="Optional">
         <span id="state_resourcegroupname_nodejs">
 <a href="#state_resourcegroupname_nodejs" style="color: inherit; text-decoration: inherit;">resource<wbr>Group<wbr>Name</a>
@@ -1093,14 +1026,11 @@ The following state arguments are supported:
         <span class="property-type">string</span>
     </dt>
     <dd>{{% md %}}The name of the Resource Group where the Content Key Policy should exist. Changing this forces a new Content Key Policy to be created.
-{{% /md %}}</dd>
-</dl>
+{{% /md %}}</dd></dl>
 {{% /choosable %}}
 
 {{% choosable language python %}}
-<dl class="resources-properties">
-
-    <dt class="property-optional"
+<dl class="resources-properties"><dt class="property-optional"
             title="Optional">
         <span id="state_description_python">
 <a href="#state_description_python" style="color: inherit; text-decoration: inherit;">description</a>
@@ -1109,8 +1039,7 @@ The following state arguments are supported:
         <span class="property-type">str</span>
     </dt>
     <dd>{{% md %}}A description for the Policy.
-{{% /md %}}</dd>
-    <dt class="property-optional"
+{{% /md %}}</dd><dt class="property-optional"
             title="Optional">
         <span id="state_media_services_account_name_python">
 <a href="#state_media_services_account_name_python" style="color: inherit; text-decoration: inherit;">media_<wbr>services_<wbr>account_<wbr>name</a>
@@ -1119,8 +1048,7 @@ The following state arguments are supported:
         <span class="property-type">str</span>
     </dt>
     <dd>{{% md %}}The Media Services account name. Changing this forces a new Content Key Policy to be created.
-{{% /md %}}</dd>
-    <dt class="property-optional"
+{{% /md %}}</dd><dt class="property-optional"
             title="Optional">
         <span id="state_name_python">
 <a href="#state_name_python" style="color: inherit; text-decoration: inherit;">name</a>
@@ -1129,8 +1057,7 @@ The following state arguments are supported:
         <span class="property-type">str</span>
     </dt>
     <dd>{{% md %}}The name which should be used for this Content Key Policy. Changing this forces a new Content Key Policy to be created.
-{{% /md %}}</dd>
-    <dt class="property-optional"
+{{% /md %}}</dd><dt class="property-optional"
             title="Optional">
         <span id="state_policy_options_python">
 <a href="#state_policy_options_python" style="color: inherit; text-decoration: inherit;">policy_<wbr>options</a>
@@ -1139,8 +1066,7 @@ The following state arguments are supported:
         <span class="property-type"><a href="#contentkeypolicypolicyoption">Sequence[Content<wbr>Key<wbr>Policy<wbr>Policy<wbr>Option<wbr>Args]</a></span>
     </dt>
     <dd>{{% md %}}One or more `policy_option` blocks as defined below.
-{{% /md %}}</dd>
-    <dt class="property-optional"
+{{% /md %}}</dd><dt class="property-optional"
             title="Optional">
         <span id="state_resource_group_name_python">
 <a href="#state_resource_group_name_python" style="color: inherit; text-decoration: inherit;">resource_<wbr>group_<wbr>name</a>
@@ -1149,8 +1075,7 @@ The following state arguments are supported:
         <span class="property-type">str</span>
     </dt>
     <dd>{{% md %}}The name of the Resource Group where the Content Key Policy should exist. Changing this forces a new Content Key Policy to be created.
-{{% /md %}}</dd>
-</dl>
+{{% /md %}}</dd></dl>
 {{% /choosable %}}
 
 
@@ -1165,9 +1090,7 @@ The following state arguments are supported:
 <h4 id="contentkeypolicypolicyoption">Content<wbr>Key<wbr>Policy<wbr>Policy<wbr>Option</h4>
 
 {{% choosable language csharp %}}
-<dl class="resources-properties">
-
-    <dt class="property-required"
+<dl class="resources-properties"><dt class="property-required"
             title="Required">
         <span id="name_csharp">
 <a href="#name_csharp" style="color: inherit; text-decoration: inherit;">Name</a>
@@ -1176,8 +1099,7 @@ The following state arguments are supported:
         <span class="property-type">string</span>
     </dt>
     <dd>{{% md %}}The name which should be used for this Policy Option.
-{{% /md %}}</dd>
-    <dt class="property-optional"
+{{% /md %}}</dd><dt class="property-optional"
             title="Optional">
         <span id="clearkeyconfigurationenabled_csharp">
 <a href="#clearkeyconfigurationenabled_csharp" style="color: inherit; text-decoration: inherit;">Clear<wbr>Key<wbr>Configuration<wbr>Enabled</a>
@@ -1186,8 +1108,7 @@ The following state arguments are supported:
         <span class="property-type">bool</span>
     </dt>
     <dd>{{% md %}}Enable a configuration for non-DRM keys.
-{{% /md %}}</dd>
-    <dt class="property-optional"
+{{% /md %}}</dd><dt class="property-optional"
             title="Optional">
         <span id="fairplayconfiguration_csharp">
 <a href="#fairplayconfiguration_csharp" style="color: inherit; text-decoration: inherit;">Fairplay<wbr>Configuration</a>
@@ -1196,8 +1117,7 @@ The following state arguments are supported:
         <span class="property-type"><a href="#contentkeypolicypolicyoptionfairplayconfiguration">Content<wbr>Key<wbr>Policy<wbr>Policy<wbr>Option<wbr>Fairplay<wbr>Configuration<wbr>Args</a></span>
     </dt>
     <dd>{{% md %}}A `fairplay_configuration` block as defined above. Check license requirements here https://docs.microsoft.com/en-us/azure/media-services/latest/fairplay-license-overview.
-{{% /md %}}</dd>
-    <dt class="property-optional"
+{{% /md %}}</dd><dt class="property-optional"
             title="Optional">
         <span id="openrestrictionenabled_csharp">
 <a href="#openrestrictionenabled_csharp" style="color: inherit; text-decoration: inherit;">Open<wbr>Restriction<wbr>Enabled</a>
@@ -1206,8 +1126,7 @@ The following state arguments are supported:
         <span class="property-type">bool</span>
     </dt>
     <dd>{{% md %}}Enable an open restriction. License or key will be delivered on every request.
-{{% /md %}}</dd>
-    <dt class="property-optional"
+{{% /md %}}</dd><dt class="property-optional"
             title="Optional">
         <span id="playreadyconfigurationlicenses_csharp">
 <a href="#playreadyconfigurationlicenses_csharp" style="color: inherit; text-decoration: inherit;">Playready<wbr>Configuration<wbr>Licenses</a>
@@ -1216,8 +1135,7 @@ The following state arguments are supported:
         <span class="property-type"><a href="#contentkeypolicypolicyoptionplayreadyconfigurationlicense">List&lt;Content<wbr>Key<wbr>Policy<wbr>Policy<wbr>Option<wbr>Playready<wbr>Configuration<wbr>License<wbr>Args&gt;</a></span>
     </dt>
     <dd>{{% md %}}One or more `playready_configuration_license` blocks as defined above.
-{{% /md %}}</dd>
-    <dt class="property-optional"
+{{% /md %}}</dd><dt class="property-optional"
             title="Optional">
         <span id="tokenrestriction_csharp">
 <a href="#tokenrestriction_csharp" style="color: inherit; text-decoration: inherit;">Token<wbr>Restriction</a>
@@ -1226,8 +1144,7 @@ The following state arguments are supported:
         <span class="property-type"><a href="#contentkeypolicypolicyoptiontokenrestriction">Content<wbr>Key<wbr>Policy<wbr>Policy<wbr>Option<wbr>Token<wbr>Restriction<wbr>Args</a></span>
     </dt>
     <dd>{{% md %}}A `token_restriction` block as defined below.
-{{% /md %}}</dd>
-    <dt class="property-optional"
+{{% /md %}}</dd><dt class="property-optional"
             title="Optional">
         <span id="widevineconfigurationtemplate_csharp">
 <a href="#widevineconfigurationtemplate_csharp" style="color: inherit; text-decoration: inherit;">Widevine<wbr>Configuration<wbr>Template</a>
@@ -1236,14 +1153,11 @@ The following state arguments are supported:
         <span class="property-type">string</span>
     </dt>
     <dd>{{% md %}}The Widevine template.
-{{% /md %}}</dd>
-</dl>
+{{% /md %}}</dd></dl>
 {{% /choosable %}}
 
 {{% choosable language go %}}
-<dl class="resources-properties">
-
-    <dt class="property-required"
+<dl class="resources-properties"><dt class="property-required"
             title="Required">
         <span id="name_go">
 <a href="#name_go" style="color: inherit; text-decoration: inherit;">Name</a>
@@ -1252,8 +1166,7 @@ The following state arguments are supported:
         <span class="property-type">string</span>
     </dt>
     <dd>{{% md %}}The name which should be used for this Policy Option.
-{{% /md %}}</dd>
-    <dt class="property-optional"
+{{% /md %}}</dd><dt class="property-optional"
             title="Optional">
         <span id="clearkeyconfigurationenabled_go">
 <a href="#clearkeyconfigurationenabled_go" style="color: inherit; text-decoration: inherit;">Clear<wbr>Key<wbr>Configuration<wbr>Enabled</a>
@@ -1262,8 +1175,7 @@ The following state arguments are supported:
         <span class="property-type">bool</span>
     </dt>
     <dd>{{% md %}}Enable a configuration for non-DRM keys.
-{{% /md %}}</dd>
-    <dt class="property-optional"
+{{% /md %}}</dd><dt class="property-optional"
             title="Optional">
         <span id="fairplayconfiguration_go">
 <a href="#fairplayconfiguration_go" style="color: inherit; text-decoration: inherit;">Fairplay<wbr>Configuration</a>
@@ -1272,8 +1184,7 @@ The following state arguments are supported:
         <span class="property-type"><a href="#contentkeypolicypolicyoptionfairplayconfiguration">Content<wbr>Key<wbr>Policy<wbr>Policy<wbr>Option<wbr>Fairplay<wbr>Configuration</a></span>
     </dt>
     <dd>{{% md %}}A `fairplay_configuration` block as defined above. Check license requirements here https://docs.microsoft.com/en-us/azure/media-services/latest/fairplay-license-overview.
-{{% /md %}}</dd>
-    <dt class="property-optional"
+{{% /md %}}</dd><dt class="property-optional"
             title="Optional">
         <span id="openrestrictionenabled_go">
 <a href="#openrestrictionenabled_go" style="color: inherit; text-decoration: inherit;">Open<wbr>Restriction<wbr>Enabled</a>
@@ -1282,8 +1193,7 @@ The following state arguments are supported:
         <span class="property-type">bool</span>
     </dt>
     <dd>{{% md %}}Enable an open restriction. License or key will be delivered on every request.
-{{% /md %}}</dd>
-    <dt class="property-optional"
+{{% /md %}}</dd><dt class="property-optional"
             title="Optional">
         <span id="playreadyconfigurationlicenses_go">
 <a href="#playreadyconfigurationlicenses_go" style="color: inherit; text-decoration: inherit;">Playready<wbr>Configuration<wbr>Licenses</a>
@@ -1292,8 +1202,7 @@ The following state arguments are supported:
         <span class="property-type"><a href="#contentkeypolicypolicyoptionplayreadyconfigurationlicense">[]Content<wbr>Key<wbr>Policy<wbr>Policy<wbr>Option<wbr>Playready<wbr>Configuration<wbr>License</a></span>
     </dt>
     <dd>{{% md %}}One or more `playready_configuration_license` blocks as defined above.
-{{% /md %}}</dd>
-    <dt class="property-optional"
+{{% /md %}}</dd><dt class="property-optional"
             title="Optional">
         <span id="tokenrestriction_go">
 <a href="#tokenrestriction_go" style="color: inherit; text-decoration: inherit;">Token<wbr>Restriction</a>
@@ -1302,8 +1211,7 @@ The following state arguments are supported:
         <span class="property-type"><a href="#contentkeypolicypolicyoptiontokenrestriction">Content<wbr>Key<wbr>Policy<wbr>Policy<wbr>Option<wbr>Token<wbr>Restriction</a></span>
     </dt>
     <dd>{{% md %}}A `token_restriction` block as defined below.
-{{% /md %}}</dd>
-    <dt class="property-optional"
+{{% /md %}}</dd><dt class="property-optional"
             title="Optional">
         <span id="widevineconfigurationtemplate_go">
 <a href="#widevineconfigurationtemplate_go" style="color: inherit; text-decoration: inherit;">Widevine<wbr>Configuration<wbr>Template</a>
@@ -1312,14 +1220,11 @@ The following state arguments are supported:
         <span class="property-type">string</span>
     </dt>
     <dd>{{% md %}}The Widevine template.
-{{% /md %}}</dd>
-</dl>
+{{% /md %}}</dd></dl>
 {{% /choosable %}}
 
 {{% choosable language nodejs %}}
-<dl class="resources-properties">
-
-    <dt class="property-required"
+<dl class="resources-properties"><dt class="property-required"
             title="Required">
         <span id="name_nodejs">
 <a href="#name_nodejs" style="color: inherit; text-decoration: inherit;">name</a>
@@ -1328,8 +1233,7 @@ The following state arguments are supported:
         <span class="property-type">string</span>
     </dt>
     <dd>{{% md %}}The name which should be used for this Policy Option.
-{{% /md %}}</dd>
-    <dt class="property-optional"
+{{% /md %}}</dd><dt class="property-optional"
             title="Optional">
         <span id="clearkeyconfigurationenabled_nodejs">
 <a href="#clearkeyconfigurationenabled_nodejs" style="color: inherit; text-decoration: inherit;">clear<wbr>Key<wbr>Configuration<wbr>Enabled</a>
@@ -1338,8 +1242,7 @@ The following state arguments are supported:
         <span class="property-type">boolean</span>
     </dt>
     <dd>{{% md %}}Enable a configuration for non-DRM keys.
-{{% /md %}}</dd>
-    <dt class="property-optional"
+{{% /md %}}</dd><dt class="property-optional"
             title="Optional">
         <span id="fairplayconfiguration_nodejs">
 <a href="#fairplayconfiguration_nodejs" style="color: inherit; text-decoration: inherit;">fairplay<wbr>Configuration</a>
@@ -1348,8 +1251,7 @@ The following state arguments are supported:
         <span class="property-type"><a href="#contentkeypolicypolicyoptionfairplayconfiguration">Content<wbr>Key<wbr>Policy<wbr>Policy<wbr>Option<wbr>Fairplay<wbr>Configuration</a></span>
     </dt>
     <dd>{{% md %}}A `fairplay_configuration` block as defined above. Check license requirements here https://docs.microsoft.com/en-us/azure/media-services/latest/fairplay-license-overview.
-{{% /md %}}</dd>
-    <dt class="property-optional"
+{{% /md %}}</dd><dt class="property-optional"
             title="Optional">
         <span id="openrestrictionenabled_nodejs">
 <a href="#openrestrictionenabled_nodejs" style="color: inherit; text-decoration: inherit;">open<wbr>Restriction<wbr>Enabled</a>
@@ -1358,8 +1260,7 @@ The following state arguments are supported:
         <span class="property-type">boolean</span>
     </dt>
     <dd>{{% md %}}Enable an open restriction. License or key will be delivered on every request.
-{{% /md %}}</dd>
-    <dt class="property-optional"
+{{% /md %}}</dd><dt class="property-optional"
             title="Optional">
         <span id="playreadyconfigurationlicenses_nodejs">
 <a href="#playreadyconfigurationlicenses_nodejs" style="color: inherit; text-decoration: inherit;">playready<wbr>Configuration<wbr>Licenses</a>
@@ -1368,8 +1269,7 @@ The following state arguments are supported:
         <span class="property-type"><a href="#contentkeypolicypolicyoptionplayreadyconfigurationlicense">Content<wbr>Key<wbr>Policy<wbr>Policy<wbr>Option<wbr>Playready<wbr>Configuration<wbr>License[]</a></span>
     </dt>
     <dd>{{% md %}}One or more `playready_configuration_license` blocks as defined above.
-{{% /md %}}</dd>
-    <dt class="property-optional"
+{{% /md %}}</dd><dt class="property-optional"
             title="Optional">
         <span id="tokenrestriction_nodejs">
 <a href="#tokenrestriction_nodejs" style="color: inherit; text-decoration: inherit;">token<wbr>Restriction</a>
@@ -1378,8 +1278,7 @@ The following state arguments are supported:
         <span class="property-type"><a href="#contentkeypolicypolicyoptiontokenrestriction">Content<wbr>Key<wbr>Policy<wbr>Policy<wbr>Option<wbr>Token<wbr>Restriction</a></span>
     </dt>
     <dd>{{% md %}}A `token_restriction` block as defined below.
-{{% /md %}}</dd>
-    <dt class="property-optional"
+{{% /md %}}</dd><dt class="property-optional"
             title="Optional">
         <span id="widevineconfigurationtemplate_nodejs">
 <a href="#widevineconfigurationtemplate_nodejs" style="color: inherit; text-decoration: inherit;">widevine<wbr>Configuration<wbr>Template</a>
@@ -1388,14 +1287,11 @@ The following state arguments are supported:
         <span class="property-type">string</span>
     </dt>
     <dd>{{% md %}}The Widevine template.
-{{% /md %}}</dd>
-</dl>
+{{% /md %}}</dd></dl>
 {{% /choosable %}}
 
 {{% choosable language python %}}
-<dl class="resources-properties">
-
-    <dt class="property-required"
+<dl class="resources-properties"><dt class="property-required"
             title="Required">
         <span id="name_python">
 <a href="#name_python" style="color: inherit; text-decoration: inherit;">name</a>
@@ -1404,8 +1300,7 @@ The following state arguments are supported:
         <span class="property-type">str</span>
     </dt>
     <dd>{{% md %}}The name which should be used for this Policy Option.
-{{% /md %}}</dd>
-    <dt class="property-optional"
+{{% /md %}}</dd><dt class="property-optional"
             title="Optional">
         <span id="clear_key_configuration_enabled_python">
 <a href="#clear_key_configuration_enabled_python" style="color: inherit; text-decoration: inherit;">clear_<wbr>key_<wbr>configuration_<wbr>enabled</a>
@@ -1414,8 +1309,7 @@ The following state arguments are supported:
         <span class="property-type">bool</span>
     </dt>
     <dd>{{% md %}}Enable a configuration for non-DRM keys.
-{{% /md %}}</dd>
-    <dt class="property-optional"
+{{% /md %}}</dd><dt class="property-optional"
             title="Optional">
         <span id="fairplay_configuration_python">
 <a href="#fairplay_configuration_python" style="color: inherit; text-decoration: inherit;">fairplay_<wbr>configuration</a>
@@ -1424,8 +1318,7 @@ The following state arguments are supported:
         <span class="property-type"><a href="#contentkeypolicypolicyoptionfairplayconfiguration">Content<wbr>Key<wbr>Policy<wbr>Policy<wbr>Option<wbr>Fairplay<wbr>Configuration<wbr>Args</a></span>
     </dt>
     <dd>{{% md %}}A `fairplay_configuration` block as defined above. Check license requirements here https://docs.microsoft.com/en-us/azure/media-services/latest/fairplay-license-overview.
-{{% /md %}}</dd>
-    <dt class="property-optional"
+{{% /md %}}</dd><dt class="property-optional"
             title="Optional">
         <span id="open_restriction_enabled_python">
 <a href="#open_restriction_enabled_python" style="color: inherit; text-decoration: inherit;">open_<wbr>restriction_<wbr>enabled</a>
@@ -1434,8 +1327,7 @@ The following state arguments are supported:
         <span class="property-type">bool</span>
     </dt>
     <dd>{{% md %}}Enable an open restriction. License or key will be delivered on every request.
-{{% /md %}}</dd>
-    <dt class="property-optional"
+{{% /md %}}</dd><dt class="property-optional"
             title="Optional">
         <span id="playready_configuration_licenses_python">
 <a href="#playready_configuration_licenses_python" style="color: inherit; text-decoration: inherit;">playready_<wbr>configuration_<wbr>licenses</a>
@@ -1444,8 +1336,7 @@ The following state arguments are supported:
         <span class="property-type"><a href="#contentkeypolicypolicyoptionplayreadyconfigurationlicense">Sequence[Content<wbr>Key<wbr>Policy<wbr>Policy<wbr>Option<wbr>Playready<wbr>Configuration<wbr>License<wbr>Args]</a></span>
     </dt>
     <dd>{{% md %}}One or more `playready_configuration_license` blocks as defined above.
-{{% /md %}}</dd>
-    <dt class="property-optional"
+{{% /md %}}</dd><dt class="property-optional"
             title="Optional">
         <span id="token_restriction_python">
 <a href="#token_restriction_python" style="color: inherit; text-decoration: inherit;">token_<wbr>restriction</a>
@@ -1454,8 +1345,7 @@ The following state arguments are supported:
         <span class="property-type"><a href="#contentkeypolicypolicyoptiontokenrestriction">Content<wbr>Key<wbr>Policy<wbr>Policy<wbr>Option<wbr>Token<wbr>Restriction<wbr>Args</a></span>
     </dt>
     <dd>{{% md %}}A `token_restriction` block as defined below.
-{{% /md %}}</dd>
-    <dt class="property-optional"
+{{% /md %}}</dd><dt class="property-optional"
             title="Optional">
         <span id="widevine_configuration_template_python">
 <a href="#widevine_configuration_template_python" style="color: inherit; text-decoration: inherit;">widevine_<wbr>configuration_<wbr>template</a>
@@ -1464,16 +1354,13 @@ The following state arguments are supported:
         <span class="property-type">str</span>
     </dt>
     <dd>{{% md %}}The Widevine template.
-{{% /md %}}</dd>
-</dl>
+{{% /md %}}</dd></dl>
 {{% /choosable %}}
 
 <h4 id="contentkeypolicypolicyoptionfairplayconfiguration">Content<wbr>Key<wbr>Policy<wbr>Policy<wbr>Option<wbr>Fairplay<wbr>Configuration</h4>
 
 {{% choosable language csharp %}}
-<dl class="resources-properties">
-
-    <dt class="property-optional"
+<dl class="resources-properties"><dt class="property-optional"
             title="Optional">
         <span id="ask_csharp">
 <a href="#ask_csharp" style="color: inherit; text-decoration: inherit;">Ask</a>
@@ -1482,8 +1369,7 @@ The following state arguments are supported:
         <span class="property-type">string</span>
     </dt>
     <dd>{{% md %}}The key that must be used as FairPlay Application Secret key.
-{{% /md %}}</dd>
-    <dt class="property-optional"
+{{% /md %}}</dd><dt class="property-optional"
             title="Optional">
         <span id="offlinerentalconfiguration_csharp">
 <a href="#offlinerentalconfiguration_csharp" style="color: inherit; text-decoration: inherit;">Offline<wbr>Rental<wbr>Configuration</a>
@@ -1492,8 +1378,7 @@ The following state arguments are supported:
         <span class="property-type"><a href="#contentkeypolicypolicyoptionfairplayconfigurationofflinerentalconfiguration">Content<wbr>Key<wbr>Policy<wbr>Policy<wbr>Option<wbr>Fairplay<wbr>Configuration<wbr>Offline<wbr>Rental<wbr>Configuration<wbr>Args</a></span>
     </dt>
     <dd>{{% md %}}A `offline_rental_configuration` block as defined below.
-{{% /md %}}</dd>
-    <dt class="property-optional"
+{{% /md %}}</dd><dt class="property-optional"
             title="Optional">
         <span id="pfx_csharp">
 <a href="#pfx_csharp" style="color: inherit; text-decoration: inherit;">Pfx</a>
@@ -1502,8 +1387,7 @@ The following state arguments are supported:
         <span class="property-type">string</span>
     </dt>
     <dd>{{% md %}}The Base64 representation of FairPlay certificate in PKCS 12 (pfx) format (including private key).
-{{% /md %}}</dd>
-    <dt class="property-optional"
+{{% /md %}}</dd><dt class="property-optional"
             title="Optional">
         <span id="pfxpassword_csharp">
 <a href="#pfxpassword_csharp" style="color: inherit; text-decoration: inherit;">Pfx<wbr>Password</a>
@@ -1512,8 +1396,7 @@ The following state arguments are supported:
         <span class="property-type">string</span>
     </dt>
     <dd>{{% md %}}The password encrypting FairPlay certificate in PKCS 12 (pfx) format.
-{{% /md %}}</dd>
-    <dt class="property-optional"
+{{% /md %}}</dd><dt class="property-optional"
             title="Optional">
         <span id="rentalandleasekeytype_csharp">
 <a href="#rentalandleasekeytype_csharp" style="color: inherit; text-decoration: inherit;">Rental<wbr>And<wbr>Lease<wbr>Key<wbr>Type</a>
@@ -1522,8 +1405,7 @@ The following state arguments are supported:
         <span class="property-type">string</span>
     </dt>
     <dd>{{% md %}}The rental and lease key type. Supported values are `DualExpiry`, `PersistentLimited`, `PersistentUnlimited` or `Undefined`.
-{{% /md %}}</dd>
-    <dt class="property-optional"
+{{% /md %}}</dd><dt class="property-optional"
             title="Optional">
         <span id="rentaldurationseconds_csharp">
 <a href="#rentaldurationseconds_csharp" style="color: inherit; text-decoration: inherit;">Rental<wbr>Duration<wbr>Seconds</a>
@@ -1532,14 +1414,11 @@ The following state arguments are supported:
         <span class="property-type">int</span>
     </dt>
     <dd>{{% md %}}The rental duration. Must be greater than 0.
-{{% /md %}}</dd>
-</dl>
+{{% /md %}}</dd></dl>
 {{% /choosable %}}
 
 {{% choosable language go %}}
-<dl class="resources-properties">
-
-    <dt class="property-optional"
+<dl class="resources-properties"><dt class="property-optional"
             title="Optional">
         <span id="ask_go">
 <a href="#ask_go" style="color: inherit; text-decoration: inherit;">Ask</a>
@@ -1548,8 +1427,7 @@ The following state arguments are supported:
         <span class="property-type">string</span>
     </dt>
     <dd>{{% md %}}The key that must be used as FairPlay Application Secret key.
-{{% /md %}}</dd>
-    <dt class="property-optional"
+{{% /md %}}</dd><dt class="property-optional"
             title="Optional">
         <span id="offlinerentalconfiguration_go">
 <a href="#offlinerentalconfiguration_go" style="color: inherit; text-decoration: inherit;">Offline<wbr>Rental<wbr>Configuration</a>
@@ -1558,8 +1436,7 @@ The following state arguments are supported:
         <span class="property-type"><a href="#contentkeypolicypolicyoptionfairplayconfigurationofflinerentalconfiguration">Content<wbr>Key<wbr>Policy<wbr>Policy<wbr>Option<wbr>Fairplay<wbr>Configuration<wbr>Offline<wbr>Rental<wbr>Configuration</a></span>
     </dt>
     <dd>{{% md %}}A `offline_rental_configuration` block as defined below.
-{{% /md %}}</dd>
-    <dt class="property-optional"
+{{% /md %}}</dd><dt class="property-optional"
             title="Optional">
         <span id="pfx_go">
 <a href="#pfx_go" style="color: inherit; text-decoration: inherit;">Pfx</a>
@@ -1568,8 +1445,7 @@ The following state arguments are supported:
         <span class="property-type">string</span>
     </dt>
     <dd>{{% md %}}The Base64 representation of FairPlay certificate in PKCS 12 (pfx) format (including private key).
-{{% /md %}}</dd>
-    <dt class="property-optional"
+{{% /md %}}</dd><dt class="property-optional"
             title="Optional">
         <span id="pfxpassword_go">
 <a href="#pfxpassword_go" style="color: inherit; text-decoration: inherit;">Pfx<wbr>Password</a>
@@ -1578,8 +1454,7 @@ The following state arguments are supported:
         <span class="property-type">string</span>
     </dt>
     <dd>{{% md %}}The password encrypting FairPlay certificate in PKCS 12 (pfx) format.
-{{% /md %}}</dd>
-    <dt class="property-optional"
+{{% /md %}}</dd><dt class="property-optional"
             title="Optional">
         <span id="rentalandleasekeytype_go">
 <a href="#rentalandleasekeytype_go" style="color: inherit; text-decoration: inherit;">Rental<wbr>And<wbr>Lease<wbr>Key<wbr>Type</a>
@@ -1588,8 +1463,7 @@ The following state arguments are supported:
         <span class="property-type">string</span>
     </dt>
     <dd>{{% md %}}The rental and lease key type. Supported values are `DualExpiry`, `PersistentLimited`, `PersistentUnlimited` or `Undefined`.
-{{% /md %}}</dd>
-    <dt class="property-optional"
+{{% /md %}}</dd><dt class="property-optional"
             title="Optional">
         <span id="rentaldurationseconds_go">
 <a href="#rentaldurationseconds_go" style="color: inherit; text-decoration: inherit;">Rental<wbr>Duration<wbr>Seconds</a>
@@ -1598,14 +1472,11 @@ The following state arguments are supported:
         <span class="property-type">int</span>
     </dt>
     <dd>{{% md %}}The rental duration. Must be greater than 0.
-{{% /md %}}</dd>
-</dl>
+{{% /md %}}</dd></dl>
 {{% /choosable %}}
 
 {{% choosable language nodejs %}}
-<dl class="resources-properties">
-
-    <dt class="property-optional"
+<dl class="resources-properties"><dt class="property-optional"
             title="Optional">
         <span id="ask_nodejs">
 <a href="#ask_nodejs" style="color: inherit; text-decoration: inherit;">ask</a>
@@ -1614,8 +1485,7 @@ The following state arguments are supported:
         <span class="property-type">string</span>
     </dt>
     <dd>{{% md %}}The key that must be used as FairPlay Application Secret key.
-{{% /md %}}</dd>
-    <dt class="property-optional"
+{{% /md %}}</dd><dt class="property-optional"
             title="Optional">
         <span id="offlinerentalconfiguration_nodejs">
 <a href="#offlinerentalconfiguration_nodejs" style="color: inherit; text-decoration: inherit;">offline<wbr>Rental<wbr>Configuration</a>
@@ -1624,8 +1494,7 @@ The following state arguments are supported:
         <span class="property-type"><a href="#contentkeypolicypolicyoptionfairplayconfigurationofflinerentalconfiguration">Content<wbr>Key<wbr>Policy<wbr>Policy<wbr>Option<wbr>Fairplay<wbr>Configuration<wbr>Offline<wbr>Rental<wbr>Configuration</a></span>
     </dt>
     <dd>{{% md %}}A `offline_rental_configuration` block as defined below.
-{{% /md %}}</dd>
-    <dt class="property-optional"
+{{% /md %}}</dd><dt class="property-optional"
             title="Optional">
         <span id="pfx_nodejs">
 <a href="#pfx_nodejs" style="color: inherit; text-decoration: inherit;">pfx</a>
@@ -1634,8 +1503,7 @@ The following state arguments are supported:
         <span class="property-type">string</span>
     </dt>
     <dd>{{% md %}}The Base64 representation of FairPlay certificate in PKCS 12 (pfx) format (including private key).
-{{% /md %}}</dd>
-    <dt class="property-optional"
+{{% /md %}}</dd><dt class="property-optional"
             title="Optional">
         <span id="pfxpassword_nodejs">
 <a href="#pfxpassword_nodejs" style="color: inherit; text-decoration: inherit;">pfx<wbr>Password</a>
@@ -1644,8 +1512,7 @@ The following state arguments are supported:
         <span class="property-type">string</span>
     </dt>
     <dd>{{% md %}}The password encrypting FairPlay certificate in PKCS 12 (pfx) format.
-{{% /md %}}</dd>
-    <dt class="property-optional"
+{{% /md %}}</dd><dt class="property-optional"
             title="Optional">
         <span id="rentalandleasekeytype_nodejs">
 <a href="#rentalandleasekeytype_nodejs" style="color: inherit; text-decoration: inherit;">rental<wbr>And<wbr>Lease<wbr>Key<wbr>Type</a>
@@ -1654,8 +1521,7 @@ The following state arguments are supported:
         <span class="property-type">string</span>
     </dt>
     <dd>{{% md %}}The rental and lease key type. Supported values are `DualExpiry`, `PersistentLimited`, `PersistentUnlimited` or `Undefined`.
-{{% /md %}}</dd>
-    <dt class="property-optional"
+{{% /md %}}</dd><dt class="property-optional"
             title="Optional">
         <span id="rentaldurationseconds_nodejs">
 <a href="#rentaldurationseconds_nodejs" style="color: inherit; text-decoration: inherit;">rental<wbr>Duration<wbr>Seconds</a>
@@ -1664,14 +1530,11 @@ The following state arguments are supported:
         <span class="property-type">number</span>
     </dt>
     <dd>{{% md %}}The rental duration. Must be greater than 0.
-{{% /md %}}</dd>
-</dl>
+{{% /md %}}</dd></dl>
 {{% /choosable %}}
 
 {{% choosable language python %}}
-<dl class="resources-properties">
-
-    <dt class="property-optional"
+<dl class="resources-properties"><dt class="property-optional"
             title="Optional">
         <span id="ask_python">
 <a href="#ask_python" style="color: inherit; text-decoration: inherit;">ask</a>
@@ -1680,8 +1543,7 @@ The following state arguments are supported:
         <span class="property-type">str</span>
     </dt>
     <dd>{{% md %}}The key that must be used as FairPlay Application Secret key.
-{{% /md %}}</dd>
-    <dt class="property-optional"
+{{% /md %}}</dd><dt class="property-optional"
             title="Optional">
         <span id="offline_rental_configuration_python">
 <a href="#offline_rental_configuration_python" style="color: inherit; text-decoration: inherit;">offline_<wbr>rental_<wbr>configuration</a>
@@ -1690,8 +1552,7 @@ The following state arguments are supported:
         <span class="property-type"><a href="#contentkeypolicypolicyoptionfairplayconfigurationofflinerentalconfiguration">Content<wbr>Key<wbr>Policy<wbr>Policy<wbr>Option<wbr>Fairplay<wbr>Configuration<wbr>Offline<wbr>Rental<wbr>Configuration<wbr>Args</a></span>
     </dt>
     <dd>{{% md %}}A `offline_rental_configuration` block as defined below.
-{{% /md %}}</dd>
-    <dt class="property-optional"
+{{% /md %}}</dd><dt class="property-optional"
             title="Optional">
         <span id="pfx_python">
 <a href="#pfx_python" style="color: inherit; text-decoration: inherit;">pfx</a>
@@ -1700,8 +1561,7 @@ The following state arguments are supported:
         <span class="property-type">str</span>
     </dt>
     <dd>{{% md %}}The Base64 representation of FairPlay certificate in PKCS 12 (pfx) format (including private key).
-{{% /md %}}</dd>
-    <dt class="property-optional"
+{{% /md %}}</dd><dt class="property-optional"
             title="Optional">
         <span id="pfx_password_python">
 <a href="#pfx_password_python" style="color: inherit; text-decoration: inherit;">pfx_<wbr>password</a>
@@ -1710,8 +1570,7 @@ The following state arguments are supported:
         <span class="property-type">str</span>
     </dt>
     <dd>{{% md %}}The password encrypting FairPlay certificate in PKCS 12 (pfx) format.
-{{% /md %}}</dd>
-    <dt class="property-optional"
+{{% /md %}}</dd><dt class="property-optional"
             title="Optional">
         <span id="rental_and_lease_key_type_python">
 <a href="#rental_and_lease_key_type_python" style="color: inherit; text-decoration: inherit;">rental_<wbr>and_<wbr>lease_<wbr>key_<wbr>type</a>
@@ -1720,8 +1579,7 @@ The following state arguments are supported:
         <span class="property-type">str</span>
     </dt>
     <dd>{{% md %}}The rental and lease key type. Supported values are `DualExpiry`, `PersistentLimited`, `PersistentUnlimited` or `Undefined`.
-{{% /md %}}</dd>
-    <dt class="property-optional"
+{{% /md %}}</dd><dt class="property-optional"
             title="Optional">
         <span id="rental_duration_seconds_python">
 <a href="#rental_duration_seconds_python" style="color: inherit; text-decoration: inherit;">rental_<wbr>duration_<wbr>seconds</a>
@@ -1730,16 +1588,13 @@ The following state arguments are supported:
         <span class="property-type">int</span>
     </dt>
     <dd>{{% md %}}The rental duration. Must be greater than 0.
-{{% /md %}}</dd>
-</dl>
+{{% /md %}}</dd></dl>
 {{% /choosable %}}
 
 <h4 id="contentkeypolicypolicyoptionfairplayconfigurationofflinerentalconfiguration">Content<wbr>Key<wbr>Policy<wbr>Policy<wbr>Option<wbr>Fairplay<wbr>Configuration<wbr>Offline<wbr>Rental<wbr>Configuration</h4>
 
 {{% choosable language csharp %}}
-<dl class="resources-properties">
-
-    <dt class="property-optional"
+<dl class="resources-properties"><dt class="property-optional"
             title="Optional">
         <span id="playbackdurationseconds_csharp">
 <a href="#playbackdurationseconds_csharp" style="color: inherit; text-decoration: inherit;">Playback<wbr>Duration<wbr>Seconds</a>
@@ -1748,8 +1603,7 @@ The following state arguments are supported:
         <span class="property-type">int</span>
     </dt>
     <dd>{{% md %}}Playback duration.
-{{% /md %}}</dd>
-    <dt class="property-optional"
+{{% /md %}}</dd><dt class="property-optional"
             title="Optional">
         <span id="storagedurationseconds_csharp">
 <a href="#storagedurationseconds_csharp" style="color: inherit; text-decoration: inherit;">Storage<wbr>Duration<wbr>Seconds</a>
@@ -1758,14 +1612,11 @@ The following state arguments are supported:
         <span class="property-type">int</span>
     </dt>
     <dd>{{% md %}}Storage duration.
-{{% /md %}}</dd>
-</dl>
+{{% /md %}}</dd></dl>
 {{% /choosable %}}
 
 {{% choosable language go %}}
-<dl class="resources-properties">
-
-    <dt class="property-optional"
+<dl class="resources-properties"><dt class="property-optional"
             title="Optional">
         <span id="playbackdurationseconds_go">
 <a href="#playbackdurationseconds_go" style="color: inherit; text-decoration: inherit;">Playback<wbr>Duration<wbr>Seconds</a>
@@ -1774,8 +1625,7 @@ The following state arguments are supported:
         <span class="property-type">int</span>
     </dt>
     <dd>{{% md %}}Playback duration.
-{{% /md %}}</dd>
-    <dt class="property-optional"
+{{% /md %}}</dd><dt class="property-optional"
             title="Optional">
         <span id="storagedurationseconds_go">
 <a href="#storagedurationseconds_go" style="color: inherit; text-decoration: inherit;">Storage<wbr>Duration<wbr>Seconds</a>
@@ -1784,14 +1634,11 @@ The following state arguments are supported:
         <span class="property-type">int</span>
     </dt>
     <dd>{{% md %}}Storage duration.
-{{% /md %}}</dd>
-</dl>
+{{% /md %}}</dd></dl>
 {{% /choosable %}}
 
 {{% choosable language nodejs %}}
-<dl class="resources-properties">
-
-    <dt class="property-optional"
+<dl class="resources-properties"><dt class="property-optional"
             title="Optional">
         <span id="playbackdurationseconds_nodejs">
 <a href="#playbackdurationseconds_nodejs" style="color: inherit; text-decoration: inherit;">playback<wbr>Duration<wbr>Seconds</a>
@@ -1800,8 +1647,7 @@ The following state arguments are supported:
         <span class="property-type">number</span>
     </dt>
     <dd>{{% md %}}Playback duration.
-{{% /md %}}</dd>
-    <dt class="property-optional"
+{{% /md %}}</dd><dt class="property-optional"
             title="Optional">
         <span id="storagedurationseconds_nodejs">
 <a href="#storagedurationseconds_nodejs" style="color: inherit; text-decoration: inherit;">storage<wbr>Duration<wbr>Seconds</a>
@@ -1810,14 +1656,11 @@ The following state arguments are supported:
         <span class="property-type">number</span>
     </dt>
     <dd>{{% md %}}Storage duration.
-{{% /md %}}</dd>
-</dl>
+{{% /md %}}</dd></dl>
 {{% /choosable %}}
 
 {{% choosable language python %}}
-<dl class="resources-properties">
-
-    <dt class="property-optional"
+<dl class="resources-properties"><dt class="property-optional"
             title="Optional">
         <span id="playback_duration_seconds_python">
 <a href="#playback_duration_seconds_python" style="color: inherit; text-decoration: inherit;">playback_<wbr>duration_<wbr>seconds</a>
@@ -1826,8 +1669,7 @@ The following state arguments are supported:
         <span class="property-type">int</span>
     </dt>
     <dd>{{% md %}}Playback duration.
-{{% /md %}}</dd>
-    <dt class="property-optional"
+{{% /md %}}</dd><dt class="property-optional"
             title="Optional">
         <span id="storage_duration_seconds_python">
 <a href="#storage_duration_seconds_python" style="color: inherit; text-decoration: inherit;">storage_<wbr>duration_<wbr>seconds</a>
@@ -1836,16 +1678,13 @@ The following state arguments are supported:
         <span class="property-type">int</span>
     </dt>
     <dd>{{% md %}}Storage duration.
-{{% /md %}}</dd>
-</dl>
+{{% /md %}}</dd></dl>
 {{% /choosable %}}
 
 <h4 id="contentkeypolicypolicyoptionplayreadyconfigurationlicense">Content<wbr>Key<wbr>Policy<wbr>Policy<wbr>Option<wbr>Playready<wbr>Configuration<wbr>License</h4>
 
 {{% choosable language csharp %}}
-<dl class="resources-properties">
-
-    <dt class="property-optional"
+<dl class="resources-properties"><dt class="property-optional"
             title="Optional">
         <span id="allowtestdevices_csharp">
 <a href="#allowtestdevices_csharp" style="color: inherit; text-decoration: inherit;">Allow<wbr>Test<wbr>Devices</a>
@@ -1854,8 +1693,7 @@ The following state arguments are supported:
         <span class="property-type">bool</span>
     </dt>
     <dd>{{% md %}}A flag indicating whether test devices can use the license.
-{{% /md %}}</dd>
-    <dt class="property-optional"
+{{% /md %}}</dd><dt class="property-optional"
             title="Optional">
         <span id="begindate_csharp">
 <a href="#begindate_csharp" style="color: inherit; text-decoration: inherit;">Begin<wbr>Date</a>
@@ -1864,8 +1702,7 @@ The following state arguments are supported:
         <span class="property-type">string</span>
     </dt>
     <dd>{{% md %}}The begin date of license.
-{{% /md %}}</dd>
-    <dt class="property-optional"
+{{% /md %}}</dd><dt class="property-optional"
             title="Optional">
         <span id="contentkeylocationfromheaderenabled_csharp">
 <a href="#contentkeylocationfromheaderenabled_csharp" style="color: inherit; text-decoration: inherit;">Content<wbr>Key<wbr>Location<wbr>From<wbr>Header<wbr>Enabled</a>
@@ -1874,8 +1711,7 @@ The following state arguments are supported:
         <span class="property-type">bool</span>
     </dt>
     <dd>{{% md %}}Specifies that the content key ID is in the PlayReady header.
-{{% /md %}}</dd>
-    <dt class="property-optional"
+{{% /md %}}</dd><dt class="property-optional"
             title="Optional">
         <span id="contentkeylocationfromkeyid_csharp">
 <a href="#contentkeylocationfromkeyid_csharp" style="color: inherit; text-decoration: inherit;">Content<wbr>Key<wbr>Location<wbr>From<wbr>Key<wbr>Id</a>
@@ -1884,8 +1720,7 @@ The following state arguments are supported:
         <span class="property-type">string</span>
     </dt>
     <dd>{{% md %}}The content key ID. Specifies that the content key ID is specified in the PlayReady configuration.
-{{% /md %}}</dd>
-    <dt class="property-optional"
+{{% /md %}}</dd><dt class="property-optional"
             title="Optional">
         <span id="contenttype_csharp">
 <a href="#contenttype_csharp" style="color: inherit; text-decoration: inherit;">Content<wbr>Type</a>
@@ -1894,8 +1729,7 @@ The following state arguments are supported:
         <span class="property-type">string</span>
     </dt>
     <dd>{{% md %}}The PlayReady content type. Supported values are `UltraVioletDownload`, `UltraVioletStreaming` or `Unspecified`.
-{{% /md %}}</dd>
-    <dt class="property-optional"
+{{% /md %}}</dd><dt class="property-optional"
             title="Optional">
         <span id="expirationdate_csharp">
 <a href="#expirationdate_csharp" style="color: inherit; text-decoration: inherit;">Expiration<wbr>Date</a>
@@ -1904,8 +1738,7 @@ The following state arguments are supported:
         <span class="property-type">string</span>
     </dt>
     <dd>{{% md %}}The expiration date of license.
-{{% /md %}}</dd>
-    <dt class="property-optional"
+{{% /md %}}</dd><dt class="property-optional"
             title="Optional">
         <span id="graceperiod_csharp">
 <a href="#graceperiod_csharp" style="color: inherit; text-decoration: inherit;">Grace<wbr>Period</a>
@@ -1914,8 +1747,7 @@ The following state arguments are supported:
         <span class="property-type">string</span>
     </dt>
     <dd>{{% md %}}The grace period of license.
-{{% /md %}}</dd>
-    <dt class="property-optional"
+{{% /md %}}</dd><dt class="property-optional"
             title="Optional">
         <span id="licensetype_csharp">
 <a href="#licensetype_csharp" style="color: inherit; text-decoration: inherit;">License<wbr>Type</a>
@@ -1924,8 +1756,7 @@ The following state arguments are supported:
         <span class="property-type">string</span>
     </dt>
     <dd>{{% md %}}The license type. Supported values are `NonPersistent` or `Persistent`.
-{{% /md %}}</dd>
-    <dt class="property-optional"
+{{% /md %}}</dd><dt class="property-optional"
             title="Optional">
         <span id="playright_csharp">
 <a href="#playright_csharp" style="color: inherit; text-decoration: inherit;">Play<wbr>Right</a>
@@ -1934,8 +1765,7 @@ The following state arguments are supported:
         <span class="property-type"><a href="#contentkeypolicypolicyoptionplayreadyconfigurationlicenseplayright">Content<wbr>Key<wbr>Policy<wbr>Policy<wbr>Option<wbr>Playready<wbr>Configuration<wbr>License<wbr>Play<wbr>Right<wbr>Args</a></span>
     </dt>
     <dd>{{% md %}}A `play_right` block as defined above.
-{{% /md %}}</dd>
-    <dt class="property-optional"
+{{% /md %}}</dd><dt class="property-optional"
             title="Optional">
         <span id="relativebegindate_csharp">
 <a href="#relativebegindate_csharp" style="color: inherit; text-decoration: inherit;">Relative<wbr>Begin<wbr>Date</a>
@@ -1944,8 +1774,7 @@ The following state arguments are supported:
         <span class="property-type">string</span>
     </dt>
     <dd>{{% md %}}The relative begin date of license.
-{{% /md %}}</dd>
-    <dt class="property-optional"
+{{% /md %}}</dd><dt class="property-optional"
             title="Optional">
         <span id="relativeexpirationdate_csharp">
 <a href="#relativeexpirationdate_csharp" style="color: inherit; text-decoration: inherit;">Relative<wbr>Expiration<wbr>Date</a>
@@ -1954,14 +1783,11 @@ The following state arguments are supported:
         <span class="property-type">string</span>
     </dt>
     <dd>{{% md %}}The relative expiration date of license.
-{{% /md %}}</dd>
-</dl>
+{{% /md %}}</dd></dl>
 {{% /choosable %}}
 
 {{% choosable language go %}}
-<dl class="resources-properties">
-
-    <dt class="property-optional"
+<dl class="resources-properties"><dt class="property-optional"
             title="Optional">
         <span id="allowtestdevices_go">
 <a href="#allowtestdevices_go" style="color: inherit; text-decoration: inherit;">Allow<wbr>Test<wbr>Devices</a>
@@ -1970,8 +1796,7 @@ The following state arguments are supported:
         <span class="property-type">bool</span>
     </dt>
     <dd>{{% md %}}A flag indicating whether test devices can use the license.
-{{% /md %}}</dd>
-    <dt class="property-optional"
+{{% /md %}}</dd><dt class="property-optional"
             title="Optional">
         <span id="begindate_go">
 <a href="#begindate_go" style="color: inherit; text-decoration: inherit;">Begin<wbr>Date</a>
@@ -1980,8 +1805,7 @@ The following state arguments are supported:
         <span class="property-type">string</span>
     </dt>
     <dd>{{% md %}}The begin date of license.
-{{% /md %}}</dd>
-    <dt class="property-optional"
+{{% /md %}}</dd><dt class="property-optional"
             title="Optional">
         <span id="contentkeylocationfromheaderenabled_go">
 <a href="#contentkeylocationfromheaderenabled_go" style="color: inherit; text-decoration: inherit;">Content<wbr>Key<wbr>Location<wbr>From<wbr>Header<wbr>Enabled</a>
@@ -1990,8 +1814,7 @@ The following state arguments are supported:
         <span class="property-type">bool</span>
     </dt>
     <dd>{{% md %}}Specifies that the content key ID is in the PlayReady header.
-{{% /md %}}</dd>
-    <dt class="property-optional"
+{{% /md %}}</dd><dt class="property-optional"
             title="Optional">
         <span id="contentkeylocationfromkeyid_go">
 <a href="#contentkeylocationfromkeyid_go" style="color: inherit; text-decoration: inherit;">Content<wbr>Key<wbr>Location<wbr>From<wbr>Key<wbr>Id</a>
@@ -2000,8 +1823,7 @@ The following state arguments are supported:
         <span class="property-type">string</span>
     </dt>
     <dd>{{% md %}}The content key ID. Specifies that the content key ID is specified in the PlayReady configuration.
-{{% /md %}}</dd>
-    <dt class="property-optional"
+{{% /md %}}</dd><dt class="property-optional"
             title="Optional">
         <span id="contenttype_go">
 <a href="#contenttype_go" style="color: inherit; text-decoration: inherit;">Content<wbr>Type</a>
@@ -2010,8 +1832,7 @@ The following state arguments are supported:
         <span class="property-type">string</span>
     </dt>
     <dd>{{% md %}}The PlayReady content type. Supported values are `UltraVioletDownload`, `UltraVioletStreaming` or `Unspecified`.
-{{% /md %}}</dd>
-    <dt class="property-optional"
+{{% /md %}}</dd><dt class="property-optional"
             title="Optional">
         <span id="expirationdate_go">
 <a href="#expirationdate_go" style="color: inherit; text-decoration: inherit;">Expiration<wbr>Date</a>
@@ -2020,8 +1841,7 @@ The following state arguments are supported:
         <span class="property-type">string</span>
     </dt>
     <dd>{{% md %}}The expiration date of license.
-{{% /md %}}</dd>
-    <dt class="property-optional"
+{{% /md %}}</dd><dt class="property-optional"
             title="Optional">
         <span id="graceperiod_go">
 <a href="#graceperiod_go" style="color: inherit; text-decoration: inherit;">Grace<wbr>Period</a>
@@ -2030,8 +1850,7 @@ The following state arguments are supported:
         <span class="property-type">string</span>
     </dt>
     <dd>{{% md %}}The grace period of license.
-{{% /md %}}</dd>
-    <dt class="property-optional"
+{{% /md %}}</dd><dt class="property-optional"
             title="Optional">
         <span id="licensetype_go">
 <a href="#licensetype_go" style="color: inherit; text-decoration: inherit;">License<wbr>Type</a>
@@ -2040,8 +1859,7 @@ The following state arguments are supported:
         <span class="property-type">string</span>
     </dt>
     <dd>{{% md %}}The license type. Supported values are `NonPersistent` or `Persistent`.
-{{% /md %}}</dd>
-    <dt class="property-optional"
+{{% /md %}}</dd><dt class="property-optional"
             title="Optional">
         <span id="playright_go">
 <a href="#playright_go" style="color: inherit; text-decoration: inherit;">Play<wbr>Right</a>
@@ -2050,8 +1868,7 @@ The following state arguments are supported:
         <span class="property-type"><a href="#contentkeypolicypolicyoptionplayreadyconfigurationlicenseplayright">Content<wbr>Key<wbr>Policy<wbr>Policy<wbr>Option<wbr>Playready<wbr>Configuration<wbr>License<wbr>Play<wbr>Right</a></span>
     </dt>
     <dd>{{% md %}}A `play_right` block as defined above.
-{{% /md %}}</dd>
-    <dt class="property-optional"
+{{% /md %}}</dd><dt class="property-optional"
             title="Optional">
         <span id="relativebegindate_go">
 <a href="#relativebegindate_go" style="color: inherit; text-decoration: inherit;">Relative<wbr>Begin<wbr>Date</a>
@@ -2060,8 +1877,7 @@ The following state arguments are supported:
         <span class="property-type">string</span>
     </dt>
     <dd>{{% md %}}The relative begin date of license.
-{{% /md %}}</dd>
-    <dt class="property-optional"
+{{% /md %}}</dd><dt class="property-optional"
             title="Optional">
         <span id="relativeexpirationdate_go">
 <a href="#relativeexpirationdate_go" style="color: inherit; text-decoration: inherit;">Relative<wbr>Expiration<wbr>Date</a>
@@ -2070,14 +1886,11 @@ The following state arguments are supported:
         <span class="property-type">string</span>
     </dt>
     <dd>{{% md %}}The relative expiration date of license.
-{{% /md %}}</dd>
-</dl>
+{{% /md %}}</dd></dl>
 {{% /choosable %}}
 
 {{% choosable language nodejs %}}
-<dl class="resources-properties">
-
-    <dt class="property-optional"
+<dl class="resources-properties"><dt class="property-optional"
             title="Optional">
         <span id="allowtestdevices_nodejs">
 <a href="#allowtestdevices_nodejs" style="color: inherit; text-decoration: inherit;">allow<wbr>Test<wbr>Devices</a>
@@ -2086,8 +1899,7 @@ The following state arguments are supported:
         <span class="property-type">boolean</span>
     </dt>
     <dd>{{% md %}}A flag indicating whether test devices can use the license.
-{{% /md %}}</dd>
-    <dt class="property-optional"
+{{% /md %}}</dd><dt class="property-optional"
             title="Optional">
         <span id="begindate_nodejs">
 <a href="#begindate_nodejs" style="color: inherit; text-decoration: inherit;">begin<wbr>Date</a>
@@ -2096,8 +1908,7 @@ The following state arguments are supported:
         <span class="property-type">string</span>
     </dt>
     <dd>{{% md %}}The begin date of license.
-{{% /md %}}</dd>
-    <dt class="property-optional"
+{{% /md %}}</dd><dt class="property-optional"
             title="Optional">
         <span id="contentkeylocationfromheaderenabled_nodejs">
 <a href="#contentkeylocationfromheaderenabled_nodejs" style="color: inherit; text-decoration: inherit;">content<wbr>Key<wbr>Location<wbr>From<wbr>Header<wbr>Enabled</a>
@@ -2106,8 +1917,7 @@ The following state arguments are supported:
         <span class="property-type">boolean</span>
     </dt>
     <dd>{{% md %}}Specifies that the content key ID is in the PlayReady header.
-{{% /md %}}</dd>
-    <dt class="property-optional"
+{{% /md %}}</dd><dt class="property-optional"
             title="Optional">
         <span id="contentkeylocationfromkeyid_nodejs">
 <a href="#contentkeylocationfromkeyid_nodejs" style="color: inherit; text-decoration: inherit;">content<wbr>Key<wbr>Location<wbr>From<wbr>Key<wbr>Id</a>
@@ -2116,8 +1926,7 @@ The following state arguments are supported:
         <span class="property-type">string</span>
     </dt>
     <dd>{{% md %}}The content key ID. Specifies that the content key ID is specified in the PlayReady configuration.
-{{% /md %}}</dd>
-    <dt class="property-optional"
+{{% /md %}}</dd><dt class="property-optional"
             title="Optional">
         <span id="contenttype_nodejs">
 <a href="#contenttype_nodejs" style="color: inherit; text-decoration: inherit;">content<wbr>Type</a>
@@ -2126,8 +1935,7 @@ The following state arguments are supported:
         <span class="property-type">string</span>
     </dt>
     <dd>{{% md %}}The PlayReady content type. Supported values are `UltraVioletDownload`, `UltraVioletStreaming` or `Unspecified`.
-{{% /md %}}</dd>
-    <dt class="property-optional"
+{{% /md %}}</dd><dt class="property-optional"
             title="Optional">
         <span id="expirationdate_nodejs">
 <a href="#expirationdate_nodejs" style="color: inherit; text-decoration: inherit;">expiration<wbr>Date</a>
@@ -2136,8 +1944,7 @@ The following state arguments are supported:
         <span class="property-type">string</span>
     </dt>
     <dd>{{% md %}}The expiration date of license.
-{{% /md %}}</dd>
-    <dt class="property-optional"
+{{% /md %}}</dd><dt class="property-optional"
             title="Optional">
         <span id="graceperiod_nodejs">
 <a href="#graceperiod_nodejs" style="color: inherit; text-decoration: inherit;">grace<wbr>Period</a>
@@ -2146,8 +1953,7 @@ The following state arguments are supported:
         <span class="property-type">string</span>
     </dt>
     <dd>{{% md %}}The grace period of license.
-{{% /md %}}</dd>
-    <dt class="property-optional"
+{{% /md %}}</dd><dt class="property-optional"
             title="Optional">
         <span id="licensetype_nodejs">
 <a href="#licensetype_nodejs" style="color: inherit; text-decoration: inherit;">license<wbr>Type</a>
@@ -2156,8 +1962,7 @@ The following state arguments are supported:
         <span class="property-type">string</span>
     </dt>
     <dd>{{% md %}}The license type. Supported values are `NonPersistent` or `Persistent`.
-{{% /md %}}</dd>
-    <dt class="property-optional"
+{{% /md %}}</dd><dt class="property-optional"
             title="Optional">
         <span id="playright_nodejs">
 <a href="#playright_nodejs" style="color: inherit; text-decoration: inherit;">play<wbr>Right</a>
@@ -2166,8 +1971,7 @@ The following state arguments are supported:
         <span class="property-type"><a href="#contentkeypolicypolicyoptionplayreadyconfigurationlicenseplayright">Content<wbr>Key<wbr>Policy<wbr>Policy<wbr>Option<wbr>Playready<wbr>Configuration<wbr>License<wbr>Play<wbr>Right</a></span>
     </dt>
     <dd>{{% md %}}A `play_right` block as defined above.
-{{% /md %}}</dd>
-    <dt class="property-optional"
+{{% /md %}}</dd><dt class="property-optional"
             title="Optional">
         <span id="relativebegindate_nodejs">
 <a href="#relativebegindate_nodejs" style="color: inherit; text-decoration: inherit;">relative<wbr>Begin<wbr>Date</a>
@@ -2176,8 +1980,7 @@ The following state arguments are supported:
         <span class="property-type">string</span>
     </dt>
     <dd>{{% md %}}The relative begin date of license.
-{{% /md %}}</dd>
-    <dt class="property-optional"
+{{% /md %}}</dd><dt class="property-optional"
             title="Optional">
         <span id="relativeexpirationdate_nodejs">
 <a href="#relativeexpirationdate_nodejs" style="color: inherit; text-decoration: inherit;">relative<wbr>Expiration<wbr>Date</a>
@@ -2186,14 +1989,11 @@ The following state arguments are supported:
         <span class="property-type">string</span>
     </dt>
     <dd>{{% md %}}The relative expiration date of license.
-{{% /md %}}</dd>
-</dl>
+{{% /md %}}</dd></dl>
 {{% /choosable %}}
 
 {{% choosable language python %}}
-<dl class="resources-properties">
-
-    <dt class="property-optional"
+<dl class="resources-properties"><dt class="property-optional"
             title="Optional">
         <span id="allow_test_devices_python">
 <a href="#allow_test_devices_python" style="color: inherit; text-decoration: inherit;">allow_<wbr>test_<wbr>devices</a>
@@ -2202,8 +2002,7 @@ The following state arguments are supported:
         <span class="property-type">bool</span>
     </dt>
     <dd>{{% md %}}A flag indicating whether test devices can use the license.
-{{% /md %}}</dd>
-    <dt class="property-optional"
+{{% /md %}}</dd><dt class="property-optional"
             title="Optional">
         <span id="begin_date_python">
 <a href="#begin_date_python" style="color: inherit; text-decoration: inherit;">begin_<wbr>date</a>
@@ -2212,8 +2011,7 @@ The following state arguments are supported:
         <span class="property-type">str</span>
     </dt>
     <dd>{{% md %}}The begin date of license.
-{{% /md %}}</dd>
-    <dt class="property-optional"
+{{% /md %}}</dd><dt class="property-optional"
             title="Optional">
         <span id="content_key_location_from_header_enabled_python">
 <a href="#content_key_location_from_header_enabled_python" style="color: inherit; text-decoration: inherit;">content_<wbr>key_<wbr>location_<wbr>from_<wbr>header_<wbr>enabled</a>
@@ -2222,8 +2020,7 @@ The following state arguments are supported:
         <span class="property-type">bool</span>
     </dt>
     <dd>{{% md %}}Specifies that the content key ID is in the PlayReady header.
-{{% /md %}}</dd>
-    <dt class="property-optional"
+{{% /md %}}</dd><dt class="property-optional"
             title="Optional">
         <span id="content_key_location_from_key_id_python">
 <a href="#content_key_location_from_key_id_python" style="color: inherit; text-decoration: inherit;">content_<wbr>key_<wbr>location_<wbr>from_<wbr>key_<wbr>id</a>
@@ -2232,8 +2029,7 @@ The following state arguments are supported:
         <span class="property-type">str</span>
     </dt>
     <dd>{{% md %}}The content key ID. Specifies that the content key ID is specified in the PlayReady configuration.
-{{% /md %}}</dd>
-    <dt class="property-optional"
+{{% /md %}}</dd><dt class="property-optional"
             title="Optional">
         <span id="content_type_python">
 <a href="#content_type_python" style="color: inherit; text-decoration: inherit;">content_<wbr>type</a>
@@ -2242,8 +2038,7 @@ The following state arguments are supported:
         <span class="property-type">str</span>
     </dt>
     <dd>{{% md %}}The PlayReady content type. Supported values are `UltraVioletDownload`, `UltraVioletStreaming` or `Unspecified`.
-{{% /md %}}</dd>
-    <dt class="property-optional"
+{{% /md %}}</dd><dt class="property-optional"
             title="Optional">
         <span id="expiration_date_python">
 <a href="#expiration_date_python" style="color: inherit; text-decoration: inherit;">expiration_<wbr>date</a>
@@ -2252,8 +2047,7 @@ The following state arguments are supported:
         <span class="property-type">str</span>
     </dt>
     <dd>{{% md %}}The expiration date of license.
-{{% /md %}}</dd>
-    <dt class="property-optional"
+{{% /md %}}</dd><dt class="property-optional"
             title="Optional">
         <span id="grace_period_python">
 <a href="#grace_period_python" style="color: inherit; text-decoration: inherit;">grace_<wbr>period</a>
@@ -2262,8 +2056,7 @@ The following state arguments are supported:
         <span class="property-type">str</span>
     </dt>
     <dd>{{% md %}}The grace period of license.
-{{% /md %}}</dd>
-    <dt class="property-optional"
+{{% /md %}}</dd><dt class="property-optional"
             title="Optional">
         <span id="license_type_python">
 <a href="#license_type_python" style="color: inherit; text-decoration: inherit;">license_<wbr>type</a>
@@ -2272,8 +2065,7 @@ The following state arguments are supported:
         <span class="property-type">str</span>
     </dt>
     <dd>{{% md %}}The license type. Supported values are `NonPersistent` or `Persistent`.
-{{% /md %}}</dd>
-    <dt class="property-optional"
+{{% /md %}}</dd><dt class="property-optional"
             title="Optional">
         <span id="play_right_python">
 <a href="#play_right_python" style="color: inherit; text-decoration: inherit;">play_<wbr>right</a>
@@ -2282,8 +2074,7 @@ The following state arguments are supported:
         <span class="property-type"><a href="#contentkeypolicypolicyoptionplayreadyconfigurationlicenseplayright">Content<wbr>Key<wbr>Policy<wbr>Policy<wbr>Option<wbr>Playready<wbr>Configuration<wbr>License<wbr>Play<wbr>Right<wbr>Args</a></span>
     </dt>
     <dd>{{% md %}}A `play_right` block as defined above.
-{{% /md %}}</dd>
-    <dt class="property-optional"
+{{% /md %}}</dd><dt class="property-optional"
             title="Optional">
         <span id="relative_begin_date_python">
 <a href="#relative_begin_date_python" style="color: inherit; text-decoration: inherit;">relative_<wbr>begin_<wbr>date</a>
@@ -2292,8 +2083,7 @@ The following state arguments are supported:
         <span class="property-type">str</span>
     </dt>
     <dd>{{% md %}}The relative begin date of license.
-{{% /md %}}</dd>
-    <dt class="property-optional"
+{{% /md %}}</dd><dt class="property-optional"
             title="Optional">
         <span id="relative_expiration_date_python">
 <a href="#relative_expiration_date_python" style="color: inherit; text-decoration: inherit;">relative_<wbr>expiration_<wbr>date</a>
@@ -2302,16 +2092,13 @@ The following state arguments are supported:
         <span class="property-type">str</span>
     </dt>
     <dd>{{% md %}}The relative expiration date of license.
-{{% /md %}}</dd>
-</dl>
+{{% /md %}}</dd></dl>
 {{% /choosable %}}
 
 <h4 id="contentkeypolicypolicyoptionplayreadyconfigurationlicenseplayright">Content<wbr>Key<wbr>Policy<wbr>Policy<wbr>Option<wbr>Playready<wbr>Configuration<wbr>License<wbr>Play<wbr>Right</h4>
 
 {{% choosable language csharp %}}
-<dl class="resources-properties">
-
-    <dt class="property-optional"
+<dl class="resources-properties"><dt class="property-optional"
             title="Optional">
         <span id="agcandcolorstriperestriction_csharp">
 <a href="#agcandcolorstriperestriction_csharp" style="color: inherit; text-decoration: inherit;">Agc<wbr>And<wbr>Color<wbr>Stripe<wbr>Restriction</a>
@@ -2320,8 +2107,7 @@ The following state arguments are supported:
         <span class="property-type">int</span>
     </dt>
     <dd>{{% md %}}Configures Automatic Gain Control (AGC) and Color Stripe in the license. Must be between 0 and 3 inclusive.
-{{% /md %}}</dd>
-    <dt class="property-optional"
+{{% /md %}}</dd><dt class="property-optional"
             title="Optional">
         <span id="allowpassingvideocontenttounknownoutput_csharp">
 <a href="#allowpassingvideocontenttounknownoutput_csharp" style="color: inherit; text-decoration: inherit;">Allow<wbr>Passing<wbr>Video<wbr>Content<wbr>To<wbr>Unknown<wbr>Output</a>
@@ -2330,8 +2116,7 @@ The following state arguments are supported:
         <span class="property-type">string</span>
     </dt>
     <dd>{{% md %}}Configures Unknown output handling settings of the license. Supported values are `Allowed`, `AllowedWithVideoConstriction` or `NotAllowed`.
-{{% /md %}}</dd>
-    <dt class="property-optional"
+{{% /md %}}</dd><dt class="property-optional"
             title="Optional">
         <span id="analogvideoopl_csharp">
 <a href="#analogvideoopl_csharp" style="color: inherit; text-decoration: inherit;">Analog<wbr>Video<wbr>Opl</a>
@@ -2340,8 +2125,7 @@ The following state arguments are supported:
         <span class="property-type">int</span>
     </dt>
     <dd>{{% md %}}Specifies the output protection level for compressed digital audio. Supported values are 100, 150 or 200.
-{{% /md %}}</dd>
-    <dt class="property-optional"
+{{% /md %}}</dd><dt class="property-optional"
             title="Optional">
         <span id="compresseddigitalaudioopl_csharp">
 <a href="#compresseddigitalaudioopl_csharp" style="color: inherit; text-decoration: inherit;">Compressed<wbr>Digital<wbr>Audio<wbr>Opl</a>
@@ -2350,8 +2134,7 @@ The following state arguments are supported:
         <span class="property-type">int</span>
     </dt>
     <dd>{{% md %}}Specifies the output protection level for compressed digital audio.Supported values are 100, 150 or 200.
-{{% /md %}}</dd>
-    <dt class="property-optional"
+{{% /md %}}</dd><dt class="property-optional"
             title="Optional">
         <span id="digitalvideoonlycontentrestriction_csharp">
 <a href="#digitalvideoonlycontentrestriction_csharp" style="color: inherit; text-decoration: inherit;">Digital<wbr>Video<wbr>Only<wbr>Content<wbr>Restriction</a>
@@ -2360,8 +2143,7 @@ The following state arguments are supported:
         <span class="property-type">bool</span>
     </dt>
     <dd>{{% md %}}Enables the Image Constraint For Analog Component Video Restriction in the license.
-{{% /md %}}</dd>
-    <dt class="property-optional"
+{{% /md %}}</dd><dt class="property-optional"
             title="Optional">
         <span id="firstplayexpiration_csharp">
 <a href="#firstplayexpiration_csharp" style="color: inherit; text-decoration: inherit;">First<wbr>Play<wbr>Expiration</a>
@@ -2370,8 +2152,7 @@ The following state arguments are supported:
         <span class="property-type">string</span>
     </dt>
     <dd>{{% md %}}The amount of time that the license is valid after the license is first used to play content.
-{{% /md %}}</dd>
-    <dt class="property-optional"
+{{% /md %}}</dd><dt class="property-optional"
             title="Optional">
         <span id="imageconstraintforanalogcomponentvideorestriction_csharp">
 <a href="#imageconstraintforanalogcomponentvideorestriction_csharp" style="color: inherit; text-decoration: inherit;">Image<wbr>Constraint<wbr>For<wbr>Analog<wbr>Component<wbr>Video<wbr>Restriction</a>
@@ -2380,8 +2161,7 @@ The following state arguments are supported:
         <span class="property-type">bool</span>
     </dt>
     <dd>{{% md %}}Enables the Image Constraint For Analog Component Video Restriction in the license.
-{{% /md %}}</dd>
-    <dt class="property-optional"
+{{% /md %}}</dd><dt class="property-optional"
             title="Optional">
         <span id="imageconstraintforanalogcomputermonitorrestriction_csharp">
 <a href="#imageconstraintforanalogcomputermonitorrestriction_csharp" style="color: inherit; text-decoration: inherit;">Image<wbr>Constraint<wbr>For<wbr>Analog<wbr>Computer<wbr>Monitor<wbr>Restriction</a>
@@ -2390,8 +2170,7 @@ The following state arguments are supported:
         <span class="property-type">bool</span>
     </dt>
     <dd>{{% md %}}Enables the Image Constraint For Analog Component Video Restriction in the license.
-{{% /md %}}</dd>
-    <dt class="property-optional"
+{{% /md %}}</dd><dt class="property-optional"
             title="Optional">
         <span id="scmsrestriction_csharp">
 <a href="#scmsrestriction_csharp" style="color: inherit; text-decoration: inherit;">Scms<wbr>Restriction</a>
@@ -2400,8 +2179,7 @@ The following state arguments are supported:
         <span class="property-type">int</span>
     </dt>
     <dd>{{% md %}}Configures the Serial Copy Management System (SCMS) in the license. Must be between 0 and 3 inclusive.
-{{% /md %}}</dd>
-    <dt class="property-optional"
+{{% /md %}}</dd><dt class="property-optional"
             title="Optional">
         <span id="uncompresseddigitalaudioopl_csharp">
 <a href="#uncompresseddigitalaudioopl_csharp" style="color: inherit; text-decoration: inherit;">Uncompressed<wbr>Digital<wbr>Audio<wbr>Opl</a>
@@ -2410,8 +2188,7 @@ The following state arguments are supported:
         <span class="property-type">int</span>
     </dt>
     <dd>{{% md %}}Specifies the output protection level for uncompressed digital audio. Supported values are 100, 150, 250 or 300.
-{{% /md %}}</dd>
-    <dt class="property-optional"
+{{% /md %}}</dd><dt class="property-optional"
             title="Optional">
         <span id="uncompresseddigitalvideoopl_csharp">
 <a href="#uncompresseddigitalvideoopl_csharp" style="color: inherit; text-decoration: inherit;">Uncompressed<wbr>Digital<wbr>Video<wbr>Opl</a>
@@ -2420,14 +2197,11 @@ The following state arguments are supported:
         <span class="property-type">int</span>
     </dt>
     <dd>{{% md %}}Specifies the output protection level for uncompressed digital video. Supported values are 100, 150, 250 or 300.
-{{% /md %}}</dd>
-</dl>
+{{% /md %}}</dd></dl>
 {{% /choosable %}}
 
 {{% choosable language go %}}
-<dl class="resources-properties">
-
-    <dt class="property-optional"
+<dl class="resources-properties"><dt class="property-optional"
             title="Optional">
         <span id="agcandcolorstriperestriction_go">
 <a href="#agcandcolorstriperestriction_go" style="color: inherit; text-decoration: inherit;">Agc<wbr>And<wbr>Color<wbr>Stripe<wbr>Restriction</a>
@@ -2436,8 +2210,7 @@ The following state arguments are supported:
         <span class="property-type">int</span>
     </dt>
     <dd>{{% md %}}Configures Automatic Gain Control (AGC) and Color Stripe in the license. Must be between 0 and 3 inclusive.
-{{% /md %}}</dd>
-    <dt class="property-optional"
+{{% /md %}}</dd><dt class="property-optional"
             title="Optional">
         <span id="allowpassingvideocontenttounknownoutput_go">
 <a href="#allowpassingvideocontenttounknownoutput_go" style="color: inherit; text-decoration: inherit;">Allow<wbr>Passing<wbr>Video<wbr>Content<wbr>To<wbr>Unknown<wbr>Output</a>
@@ -2446,8 +2219,7 @@ The following state arguments are supported:
         <span class="property-type">string</span>
     </dt>
     <dd>{{% md %}}Configures Unknown output handling settings of the license. Supported values are `Allowed`, `AllowedWithVideoConstriction` or `NotAllowed`.
-{{% /md %}}</dd>
-    <dt class="property-optional"
+{{% /md %}}</dd><dt class="property-optional"
             title="Optional">
         <span id="analogvideoopl_go">
 <a href="#analogvideoopl_go" style="color: inherit; text-decoration: inherit;">Analog<wbr>Video<wbr>Opl</a>
@@ -2456,8 +2228,7 @@ The following state arguments are supported:
         <span class="property-type">int</span>
     </dt>
     <dd>{{% md %}}Specifies the output protection level for compressed digital audio. Supported values are 100, 150 or 200.
-{{% /md %}}</dd>
-    <dt class="property-optional"
+{{% /md %}}</dd><dt class="property-optional"
             title="Optional">
         <span id="compresseddigitalaudioopl_go">
 <a href="#compresseddigitalaudioopl_go" style="color: inherit; text-decoration: inherit;">Compressed<wbr>Digital<wbr>Audio<wbr>Opl</a>
@@ -2466,8 +2237,7 @@ The following state arguments are supported:
         <span class="property-type">int</span>
     </dt>
     <dd>{{% md %}}Specifies the output protection level for compressed digital audio.Supported values are 100, 150 or 200.
-{{% /md %}}</dd>
-    <dt class="property-optional"
+{{% /md %}}</dd><dt class="property-optional"
             title="Optional">
         <span id="digitalvideoonlycontentrestriction_go">
 <a href="#digitalvideoonlycontentrestriction_go" style="color: inherit; text-decoration: inherit;">Digital<wbr>Video<wbr>Only<wbr>Content<wbr>Restriction</a>
@@ -2476,8 +2246,7 @@ The following state arguments are supported:
         <span class="property-type">bool</span>
     </dt>
     <dd>{{% md %}}Enables the Image Constraint For Analog Component Video Restriction in the license.
-{{% /md %}}</dd>
-    <dt class="property-optional"
+{{% /md %}}</dd><dt class="property-optional"
             title="Optional">
         <span id="firstplayexpiration_go">
 <a href="#firstplayexpiration_go" style="color: inherit; text-decoration: inherit;">First<wbr>Play<wbr>Expiration</a>
@@ -2486,8 +2255,7 @@ The following state arguments are supported:
         <span class="property-type">string</span>
     </dt>
     <dd>{{% md %}}The amount of time that the license is valid after the license is first used to play content.
-{{% /md %}}</dd>
-    <dt class="property-optional"
+{{% /md %}}</dd><dt class="property-optional"
             title="Optional">
         <span id="imageconstraintforanalogcomponentvideorestriction_go">
 <a href="#imageconstraintforanalogcomponentvideorestriction_go" style="color: inherit; text-decoration: inherit;">Image<wbr>Constraint<wbr>For<wbr>Analog<wbr>Component<wbr>Video<wbr>Restriction</a>
@@ -2496,8 +2264,7 @@ The following state arguments are supported:
         <span class="property-type">bool</span>
     </dt>
     <dd>{{% md %}}Enables the Image Constraint For Analog Component Video Restriction in the license.
-{{% /md %}}</dd>
-    <dt class="property-optional"
+{{% /md %}}</dd><dt class="property-optional"
             title="Optional">
         <span id="imageconstraintforanalogcomputermonitorrestriction_go">
 <a href="#imageconstraintforanalogcomputermonitorrestriction_go" style="color: inherit; text-decoration: inherit;">Image<wbr>Constraint<wbr>For<wbr>Analog<wbr>Computer<wbr>Monitor<wbr>Restriction</a>
@@ -2506,8 +2273,7 @@ The following state arguments are supported:
         <span class="property-type">bool</span>
     </dt>
     <dd>{{% md %}}Enables the Image Constraint For Analog Component Video Restriction in the license.
-{{% /md %}}</dd>
-    <dt class="property-optional"
+{{% /md %}}</dd><dt class="property-optional"
             title="Optional">
         <span id="scmsrestriction_go">
 <a href="#scmsrestriction_go" style="color: inherit; text-decoration: inherit;">Scms<wbr>Restriction</a>
@@ -2516,8 +2282,7 @@ The following state arguments are supported:
         <span class="property-type">int</span>
     </dt>
     <dd>{{% md %}}Configures the Serial Copy Management System (SCMS) in the license. Must be between 0 and 3 inclusive.
-{{% /md %}}</dd>
-    <dt class="property-optional"
+{{% /md %}}</dd><dt class="property-optional"
             title="Optional">
         <span id="uncompresseddigitalaudioopl_go">
 <a href="#uncompresseddigitalaudioopl_go" style="color: inherit; text-decoration: inherit;">Uncompressed<wbr>Digital<wbr>Audio<wbr>Opl</a>
@@ -2526,8 +2291,7 @@ The following state arguments are supported:
         <span class="property-type">int</span>
     </dt>
     <dd>{{% md %}}Specifies the output protection level for uncompressed digital audio. Supported values are 100, 150, 250 or 300.
-{{% /md %}}</dd>
-    <dt class="property-optional"
+{{% /md %}}</dd><dt class="property-optional"
             title="Optional">
         <span id="uncompresseddigitalvideoopl_go">
 <a href="#uncompresseddigitalvideoopl_go" style="color: inherit; text-decoration: inherit;">Uncompressed<wbr>Digital<wbr>Video<wbr>Opl</a>
@@ -2536,14 +2300,11 @@ The following state arguments are supported:
         <span class="property-type">int</span>
     </dt>
     <dd>{{% md %}}Specifies the output protection level for uncompressed digital video. Supported values are 100, 150, 250 or 300.
-{{% /md %}}</dd>
-</dl>
+{{% /md %}}</dd></dl>
 {{% /choosable %}}
 
 {{% choosable language nodejs %}}
-<dl class="resources-properties">
-
-    <dt class="property-optional"
+<dl class="resources-properties"><dt class="property-optional"
             title="Optional">
         <span id="agcandcolorstriperestriction_nodejs">
 <a href="#agcandcolorstriperestriction_nodejs" style="color: inherit; text-decoration: inherit;">agc<wbr>And<wbr>Color<wbr>Stripe<wbr>Restriction</a>
@@ -2552,8 +2313,7 @@ The following state arguments are supported:
         <span class="property-type">number</span>
     </dt>
     <dd>{{% md %}}Configures Automatic Gain Control (AGC) and Color Stripe in the license. Must be between 0 and 3 inclusive.
-{{% /md %}}</dd>
-    <dt class="property-optional"
+{{% /md %}}</dd><dt class="property-optional"
             title="Optional">
         <span id="allowpassingvideocontenttounknownoutput_nodejs">
 <a href="#allowpassingvideocontenttounknownoutput_nodejs" style="color: inherit; text-decoration: inherit;">allow<wbr>Passing<wbr>Video<wbr>Content<wbr>To<wbr>Unknown<wbr>Output</a>
@@ -2562,8 +2322,7 @@ The following state arguments are supported:
         <span class="property-type">string</span>
     </dt>
     <dd>{{% md %}}Configures Unknown output handling settings of the license. Supported values are `Allowed`, `AllowedWithVideoConstriction` or `NotAllowed`.
-{{% /md %}}</dd>
-    <dt class="property-optional"
+{{% /md %}}</dd><dt class="property-optional"
             title="Optional">
         <span id="analogvideoopl_nodejs">
 <a href="#analogvideoopl_nodejs" style="color: inherit; text-decoration: inherit;">analog<wbr>Video<wbr>Opl</a>
@@ -2572,8 +2331,7 @@ The following state arguments are supported:
         <span class="property-type">number</span>
     </dt>
     <dd>{{% md %}}Specifies the output protection level for compressed digital audio. Supported values are 100, 150 or 200.
-{{% /md %}}</dd>
-    <dt class="property-optional"
+{{% /md %}}</dd><dt class="property-optional"
             title="Optional">
         <span id="compresseddigitalaudioopl_nodejs">
 <a href="#compresseddigitalaudioopl_nodejs" style="color: inherit; text-decoration: inherit;">compressed<wbr>Digital<wbr>Audio<wbr>Opl</a>
@@ -2582,8 +2340,7 @@ The following state arguments are supported:
         <span class="property-type">number</span>
     </dt>
     <dd>{{% md %}}Specifies the output protection level for compressed digital audio.Supported values are 100, 150 or 200.
-{{% /md %}}</dd>
-    <dt class="property-optional"
+{{% /md %}}</dd><dt class="property-optional"
             title="Optional">
         <span id="digitalvideoonlycontentrestriction_nodejs">
 <a href="#digitalvideoonlycontentrestriction_nodejs" style="color: inherit; text-decoration: inherit;">digital<wbr>Video<wbr>Only<wbr>Content<wbr>Restriction</a>
@@ -2592,8 +2349,7 @@ The following state arguments are supported:
         <span class="property-type">boolean</span>
     </dt>
     <dd>{{% md %}}Enables the Image Constraint For Analog Component Video Restriction in the license.
-{{% /md %}}</dd>
-    <dt class="property-optional"
+{{% /md %}}</dd><dt class="property-optional"
             title="Optional">
         <span id="firstplayexpiration_nodejs">
 <a href="#firstplayexpiration_nodejs" style="color: inherit; text-decoration: inherit;">first<wbr>Play<wbr>Expiration</a>
@@ -2602,8 +2358,7 @@ The following state arguments are supported:
         <span class="property-type">string</span>
     </dt>
     <dd>{{% md %}}The amount of time that the license is valid after the license is first used to play content.
-{{% /md %}}</dd>
-    <dt class="property-optional"
+{{% /md %}}</dd><dt class="property-optional"
             title="Optional">
         <span id="imageconstraintforanalogcomponentvideorestriction_nodejs">
 <a href="#imageconstraintforanalogcomponentvideorestriction_nodejs" style="color: inherit; text-decoration: inherit;">image<wbr>Constraint<wbr>For<wbr>Analog<wbr>Component<wbr>Video<wbr>Restriction</a>
@@ -2612,8 +2367,7 @@ The following state arguments are supported:
         <span class="property-type">boolean</span>
     </dt>
     <dd>{{% md %}}Enables the Image Constraint For Analog Component Video Restriction in the license.
-{{% /md %}}</dd>
-    <dt class="property-optional"
+{{% /md %}}</dd><dt class="property-optional"
             title="Optional">
         <span id="imageconstraintforanalogcomputermonitorrestriction_nodejs">
 <a href="#imageconstraintforanalogcomputermonitorrestriction_nodejs" style="color: inherit; text-decoration: inherit;">image<wbr>Constraint<wbr>For<wbr>Analog<wbr>Computer<wbr>Monitor<wbr>Restriction</a>
@@ -2622,8 +2376,7 @@ The following state arguments are supported:
         <span class="property-type">boolean</span>
     </dt>
     <dd>{{% md %}}Enables the Image Constraint For Analog Component Video Restriction in the license.
-{{% /md %}}</dd>
-    <dt class="property-optional"
+{{% /md %}}</dd><dt class="property-optional"
             title="Optional">
         <span id="scmsrestriction_nodejs">
 <a href="#scmsrestriction_nodejs" style="color: inherit; text-decoration: inherit;">scms<wbr>Restriction</a>
@@ -2632,8 +2385,7 @@ The following state arguments are supported:
         <span class="property-type">number</span>
     </dt>
     <dd>{{% md %}}Configures the Serial Copy Management System (SCMS) in the license. Must be between 0 and 3 inclusive.
-{{% /md %}}</dd>
-    <dt class="property-optional"
+{{% /md %}}</dd><dt class="property-optional"
             title="Optional">
         <span id="uncompresseddigitalaudioopl_nodejs">
 <a href="#uncompresseddigitalaudioopl_nodejs" style="color: inherit; text-decoration: inherit;">uncompressed<wbr>Digital<wbr>Audio<wbr>Opl</a>
@@ -2642,8 +2394,7 @@ The following state arguments are supported:
         <span class="property-type">number</span>
     </dt>
     <dd>{{% md %}}Specifies the output protection level for uncompressed digital audio. Supported values are 100, 150, 250 or 300.
-{{% /md %}}</dd>
-    <dt class="property-optional"
+{{% /md %}}</dd><dt class="property-optional"
             title="Optional">
         <span id="uncompresseddigitalvideoopl_nodejs">
 <a href="#uncompresseddigitalvideoopl_nodejs" style="color: inherit; text-decoration: inherit;">uncompressed<wbr>Digital<wbr>Video<wbr>Opl</a>
@@ -2652,14 +2403,11 @@ The following state arguments are supported:
         <span class="property-type">number</span>
     </dt>
     <dd>{{% md %}}Specifies the output protection level for uncompressed digital video. Supported values are 100, 150, 250 or 300.
-{{% /md %}}</dd>
-</dl>
+{{% /md %}}</dd></dl>
 {{% /choosable %}}
 
 {{% choosable language python %}}
-<dl class="resources-properties">
-
-    <dt class="property-optional"
+<dl class="resources-properties"><dt class="property-optional"
             title="Optional">
         <span id="agc_and_color_stripe_restriction_python">
 <a href="#agc_and_color_stripe_restriction_python" style="color: inherit; text-decoration: inherit;">agc_<wbr>and_<wbr>color_<wbr>stripe_<wbr>restriction</a>
@@ -2668,8 +2416,7 @@ The following state arguments are supported:
         <span class="property-type">int</span>
     </dt>
     <dd>{{% md %}}Configures Automatic Gain Control (AGC) and Color Stripe in the license. Must be between 0 and 3 inclusive.
-{{% /md %}}</dd>
-    <dt class="property-optional"
+{{% /md %}}</dd><dt class="property-optional"
             title="Optional">
         <span id="allow_passing_video_content_to_unknown_output_python">
 <a href="#allow_passing_video_content_to_unknown_output_python" style="color: inherit; text-decoration: inherit;">allow_<wbr>passing_<wbr>video_<wbr>content_<wbr>to_<wbr>unknown_<wbr>output</a>
@@ -2678,8 +2425,7 @@ The following state arguments are supported:
         <span class="property-type">str</span>
     </dt>
     <dd>{{% md %}}Configures Unknown output handling settings of the license. Supported values are `Allowed`, `AllowedWithVideoConstriction` or `NotAllowed`.
-{{% /md %}}</dd>
-    <dt class="property-optional"
+{{% /md %}}</dd><dt class="property-optional"
             title="Optional">
         <span id="analog_video_opl_python">
 <a href="#analog_video_opl_python" style="color: inherit; text-decoration: inherit;">analog_<wbr>video_<wbr>opl</a>
@@ -2688,8 +2434,7 @@ The following state arguments are supported:
         <span class="property-type">int</span>
     </dt>
     <dd>{{% md %}}Specifies the output protection level for compressed digital audio. Supported values are 100, 150 or 200.
-{{% /md %}}</dd>
-    <dt class="property-optional"
+{{% /md %}}</dd><dt class="property-optional"
             title="Optional">
         <span id="compressed_digital_audio_opl_python">
 <a href="#compressed_digital_audio_opl_python" style="color: inherit; text-decoration: inherit;">compressed_<wbr>digital_<wbr>audio_<wbr>opl</a>
@@ -2698,8 +2443,7 @@ The following state arguments are supported:
         <span class="property-type">int</span>
     </dt>
     <dd>{{% md %}}Specifies the output protection level for compressed digital audio.Supported values are 100, 150 or 200.
-{{% /md %}}</dd>
-    <dt class="property-optional"
+{{% /md %}}</dd><dt class="property-optional"
             title="Optional">
         <span id="digital_video_only_content_restriction_python">
 <a href="#digital_video_only_content_restriction_python" style="color: inherit; text-decoration: inherit;">digital_<wbr>video_<wbr>only_<wbr>content_<wbr>restriction</a>
@@ -2708,8 +2452,7 @@ The following state arguments are supported:
         <span class="property-type">bool</span>
     </dt>
     <dd>{{% md %}}Enables the Image Constraint For Analog Component Video Restriction in the license.
-{{% /md %}}</dd>
-    <dt class="property-optional"
+{{% /md %}}</dd><dt class="property-optional"
             title="Optional">
         <span id="first_play_expiration_python">
 <a href="#first_play_expiration_python" style="color: inherit; text-decoration: inherit;">first_<wbr>play_<wbr>expiration</a>
@@ -2718,8 +2461,7 @@ The following state arguments are supported:
         <span class="property-type">str</span>
     </dt>
     <dd>{{% md %}}The amount of time that the license is valid after the license is first used to play content.
-{{% /md %}}</dd>
-    <dt class="property-optional"
+{{% /md %}}</dd><dt class="property-optional"
             title="Optional">
         <span id="image_constraint_for_analog_component_video_restriction_python">
 <a href="#image_constraint_for_analog_component_video_restriction_python" style="color: inherit; text-decoration: inherit;">image_<wbr>constraint_<wbr>for_<wbr>analog_<wbr>component_<wbr>video_<wbr>restriction</a>
@@ -2728,8 +2470,7 @@ The following state arguments are supported:
         <span class="property-type">bool</span>
     </dt>
     <dd>{{% md %}}Enables the Image Constraint For Analog Component Video Restriction in the license.
-{{% /md %}}</dd>
-    <dt class="property-optional"
+{{% /md %}}</dd><dt class="property-optional"
             title="Optional">
         <span id="image_constraint_for_analog_computer_monitor_restriction_python">
 <a href="#image_constraint_for_analog_computer_monitor_restriction_python" style="color: inherit; text-decoration: inherit;">image_<wbr>constraint_<wbr>for_<wbr>analog_<wbr>computer_<wbr>monitor_<wbr>restriction</a>
@@ -2738,8 +2479,7 @@ The following state arguments are supported:
         <span class="property-type">bool</span>
     </dt>
     <dd>{{% md %}}Enables the Image Constraint For Analog Component Video Restriction in the license.
-{{% /md %}}</dd>
-    <dt class="property-optional"
+{{% /md %}}</dd><dt class="property-optional"
             title="Optional">
         <span id="scms_restriction_python">
 <a href="#scms_restriction_python" style="color: inherit; text-decoration: inherit;">scms_<wbr>restriction</a>
@@ -2748,8 +2488,7 @@ The following state arguments are supported:
         <span class="property-type">int</span>
     </dt>
     <dd>{{% md %}}Configures the Serial Copy Management System (SCMS) in the license. Must be between 0 and 3 inclusive.
-{{% /md %}}</dd>
-    <dt class="property-optional"
+{{% /md %}}</dd><dt class="property-optional"
             title="Optional">
         <span id="uncompressed_digital_audio_opl_python">
 <a href="#uncompressed_digital_audio_opl_python" style="color: inherit; text-decoration: inherit;">uncompressed_<wbr>digital_<wbr>audio_<wbr>opl</a>
@@ -2758,8 +2497,7 @@ The following state arguments are supported:
         <span class="property-type">int</span>
     </dt>
     <dd>{{% md %}}Specifies the output protection level for uncompressed digital audio. Supported values are 100, 150, 250 or 300.
-{{% /md %}}</dd>
-    <dt class="property-optional"
+{{% /md %}}</dd><dt class="property-optional"
             title="Optional">
         <span id="uncompressed_digital_video_opl_python">
 <a href="#uncompressed_digital_video_opl_python" style="color: inherit; text-decoration: inherit;">uncompressed_<wbr>digital_<wbr>video_<wbr>opl</a>
@@ -2768,16 +2506,13 @@ The following state arguments are supported:
         <span class="property-type">int</span>
     </dt>
     <dd>{{% md %}}Specifies the output protection level for uncompressed digital video. Supported values are 100, 150, 250 or 300.
-{{% /md %}}</dd>
-</dl>
+{{% /md %}}</dd></dl>
 {{% /choosable %}}
 
 <h4 id="contentkeypolicypolicyoptiontokenrestriction">Content<wbr>Key<wbr>Policy<wbr>Policy<wbr>Option<wbr>Token<wbr>Restriction</h4>
 
 {{% choosable language csharp %}}
-<dl class="resources-properties">
-
-    <dt class="property-optional"
+<dl class="resources-properties"><dt class="property-optional"
             title="Optional">
         <span id="audience_csharp">
 <a href="#audience_csharp" style="color: inherit; text-decoration: inherit;">Audience</a>
@@ -2786,8 +2521,7 @@ The following state arguments are supported:
         <span class="property-type">string</span>
     </dt>
     <dd>{{% md %}}The audience for the token.
-{{% /md %}}</dd>
-    <dt class="property-optional"
+{{% /md %}}</dd><dt class="property-optional"
             title="Optional">
         <span id="issuer_csharp">
 <a href="#issuer_csharp" style="color: inherit; text-decoration: inherit;">Issuer</a>
@@ -2796,8 +2530,7 @@ The following state arguments are supported:
         <span class="property-type">string</span>
     </dt>
     <dd>{{% md %}}The token issuer.
-{{% /md %}}</dd>
-    <dt class="property-optional"
+{{% /md %}}</dd><dt class="property-optional"
             title="Optional">
         <span id="openidconnectdiscoverydocument_csharp">
 <a href="#openidconnectdiscoverydocument_csharp" style="color: inherit; text-decoration: inherit;">Open<wbr>Id<wbr>Connect<wbr>Discovery<wbr>Document</a>
@@ -2806,8 +2539,7 @@ The following state arguments are supported:
         <span class="property-type">string</span>
     </dt>
     <dd>{{% md %}}The OpenID connect discovery document.
-{{% /md %}}</dd>
-    <dt class="property-optional"
+{{% /md %}}</dd><dt class="property-optional"
             title="Optional">
         <span id="primaryrsatokenkeyexponent_csharp">
 <a href="#primaryrsatokenkeyexponent_csharp" style="color: inherit; text-decoration: inherit;">Primary<wbr>Rsa<wbr>Token<wbr>Key<wbr>Exponent</a>
@@ -2816,8 +2548,7 @@ The following state arguments are supported:
         <span class="property-type">string</span>
     </dt>
     <dd>{{% md %}}The RSA Parameter exponent.
-{{% /md %}}</dd>
-    <dt class="property-optional"
+{{% /md %}}</dd><dt class="property-optional"
             title="Optional">
         <span id="primaryrsatokenkeymodulus_csharp">
 <a href="#primaryrsatokenkeymodulus_csharp" style="color: inherit; text-decoration: inherit;">Primary<wbr>Rsa<wbr>Token<wbr>Key<wbr>Modulus</a>
@@ -2826,8 +2557,7 @@ The following state arguments are supported:
         <span class="property-type">string</span>
     </dt>
     <dd>{{% md %}}The RSA Parameter modulus.
-{{% /md %}}</dd>
-    <dt class="property-optional"
+{{% /md %}}</dd><dt class="property-optional"
             title="Optional">
         <span id="primarysymmetrictokenkey_csharp">
 <a href="#primarysymmetrictokenkey_csharp" style="color: inherit; text-decoration: inherit;">Primary<wbr>Symmetric<wbr>Token<wbr>Key</a>
@@ -2836,8 +2566,7 @@ The following state arguments are supported:
         <span class="property-type">string</span>
     </dt>
     <dd>{{% md %}}The key value of the key. Specifies a symmetric key for token validation.
-{{% /md %}}</dd>
-    <dt class="property-optional"
+{{% /md %}}</dd><dt class="property-optional"
             title="Optional">
         <span id="primaryx509tokenkeyraw_csharp">
 <a href="#primaryx509tokenkeyraw_csharp" style="color: inherit; text-decoration: inherit;">Primary<wbr>X509Token<wbr>Key<wbr>Raw</a>
@@ -2846,8 +2575,7 @@ The following state arguments are supported:
         <span class="property-type">string</span>
     </dt>
     <dd>{{% md %}}The raw data field of a certificate in PKCS 12 format (X509Certificate2 in .NET). Specifies a certificate for token validation.
-{{% /md %}}</dd>
-    <dt class="property-optional"
+{{% /md %}}</dd><dt class="property-optional"
             title="Optional">
         <span id="requiredclaims_csharp">
 <a href="#requiredclaims_csharp" style="color: inherit; text-decoration: inherit;">Required<wbr>Claims</a>
@@ -2856,8 +2584,7 @@ The following state arguments are supported:
         <span class="property-type"><a href="#contentkeypolicypolicyoptiontokenrestrictionrequiredclaim">List&lt;Content<wbr>Key<wbr>Policy<wbr>Policy<wbr>Option<wbr>Token<wbr>Restriction<wbr>Required<wbr>Claim<wbr>Args&gt;</a></span>
     </dt>
     <dd>{{% md %}}One or more `required_claim` blocks as defined above.
-{{% /md %}}</dd>
-    <dt class="property-optional"
+{{% /md %}}</dd><dt class="property-optional"
             title="Optional">
         <span id="tokentype_csharp">
 <a href="#tokentype_csharp" style="color: inherit; text-decoration: inherit;">Token<wbr>Type</a>
@@ -2866,14 +2593,11 @@ The following state arguments are supported:
         <span class="property-type">string</span>
     </dt>
     <dd>{{% md %}}The type of token. Supported values are `Jwt` or `Swt`.
-{{% /md %}}</dd>
-</dl>
+{{% /md %}}</dd></dl>
 {{% /choosable %}}
 
 {{% choosable language go %}}
-<dl class="resources-properties">
-
-    <dt class="property-optional"
+<dl class="resources-properties"><dt class="property-optional"
             title="Optional">
         <span id="audience_go">
 <a href="#audience_go" style="color: inherit; text-decoration: inherit;">Audience</a>
@@ -2882,8 +2606,7 @@ The following state arguments are supported:
         <span class="property-type">string</span>
     </dt>
     <dd>{{% md %}}The audience for the token.
-{{% /md %}}</dd>
-    <dt class="property-optional"
+{{% /md %}}</dd><dt class="property-optional"
             title="Optional">
         <span id="issuer_go">
 <a href="#issuer_go" style="color: inherit; text-decoration: inherit;">Issuer</a>
@@ -2892,8 +2615,7 @@ The following state arguments are supported:
         <span class="property-type">string</span>
     </dt>
     <dd>{{% md %}}The token issuer.
-{{% /md %}}</dd>
-    <dt class="property-optional"
+{{% /md %}}</dd><dt class="property-optional"
             title="Optional">
         <span id="openidconnectdiscoverydocument_go">
 <a href="#openidconnectdiscoverydocument_go" style="color: inherit; text-decoration: inherit;">Open<wbr>Id<wbr>Connect<wbr>Discovery<wbr>Document</a>
@@ -2902,8 +2624,7 @@ The following state arguments are supported:
         <span class="property-type">string</span>
     </dt>
     <dd>{{% md %}}The OpenID connect discovery document.
-{{% /md %}}</dd>
-    <dt class="property-optional"
+{{% /md %}}</dd><dt class="property-optional"
             title="Optional">
         <span id="primaryrsatokenkeyexponent_go">
 <a href="#primaryrsatokenkeyexponent_go" style="color: inherit; text-decoration: inherit;">Primary<wbr>Rsa<wbr>Token<wbr>Key<wbr>Exponent</a>
@@ -2912,8 +2633,7 @@ The following state arguments are supported:
         <span class="property-type">string</span>
     </dt>
     <dd>{{% md %}}The RSA Parameter exponent.
-{{% /md %}}</dd>
-    <dt class="property-optional"
+{{% /md %}}</dd><dt class="property-optional"
             title="Optional">
         <span id="primaryrsatokenkeymodulus_go">
 <a href="#primaryrsatokenkeymodulus_go" style="color: inherit; text-decoration: inherit;">Primary<wbr>Rsa<wbr>Token<wbr>Key<wbr>Modulus</a>
@@ -2922,8 +2642,7 @@ The following state arguments are supported:
         <span class="property-type">string</span>
     </dt>
     <dd>{{% md %}}The RSA Parameter modulus.
-{{% /md %}}</dd>
-    <dt class="property-optional"
+{{% /md %}}</dd><dt class="property-optional"
             title="Optional">
         <span id="primarysymmetrictokenkey_go">
 <a href="#primarysymmetrictokenkey_go" style="color: inherit; text-decoration: inherit;">Primary<wbr>Symmetric<wbr>Token<wbr>Key</a>
@@ -2932,8 +2651,7 @@ The following state arguments are supported:
         <span class="property-type">string</span>
     </dt>
     <dd>{{% md %}}The key value of the key. Specifies a symmetric key for token validation.
-{{% /md %}}</dd>
-    <dt class="property-optional"
+{{% /md %}}</dd><dt class="property-optional"
             title="Optional">
         <span id="primaryx509tokenkeyraw_go">
 <a href="#primaryx509tokenkeyraw_go" style="color: inherit; text-decoration: inherit;">Primary<wbr>X509Token<wbr>Key<wbr>Raw</a>
@@ -2942,8 +2660,7 @@ The following state arguments are supported:
         <span class="property-type">string</span>
     </dt>
     <dd>{{% md %}}The raw data field of a certificate in PKCS 12 format (X509Certificate2 in .NET). Specifies a certificate for token validation.
-{{% /md %}}</dd>
-    <dt class="property-optional"
+{{% /md %}}</dd><dt class="property-optional"
             title="Optional">
         <span id="requiredclaims_go">
 <a href="#requiredclaims_go" style="color: inherit; text-decoration: inherit;">Required<wbr>Claims</a>
@@ -2952,8 +2669,7 @@ The following state arguments are supported:
         <span class="property-type"><a href="#contentkeypolicypolicyoptiontokenrestrictionrequiredclaim">[]Content<wbr>Key<wbr>Policy<wbr>Policy<wbr>Option<wbr>Token<wbr>Restriction<wbr>Required<wbr>Claim</a></span>
     </dt>
     <dd>{{% md %}}One or more `required_claim` blocks as defined above.
-{{% /md %}}</dd>
-    <dt class="property-optional"
+{{% /md %}}</dd><dt class="property-optional"
             title="Optional">
         <span id="tokentype_go">
 <a href="#tokentype_go" style="color: inherit; text-decoration: inherit;">Token<wbr>Type</a>
@@ -2962,14 +2678,11 @@ The following state arguments are supported:
         <span class="property-type">string</span>
     </dt>
     <dd>{{% md %}}The type of token. Supported values are `Jwt` or `Swt`.
-{{% /md %}}</dd>
-</dl>
+{{% /md %}}</dd></dl>
 {{% /choosable %}}
 
 {{% choosable language nodejs %}}
-<dl class="resources-properties">
-
-    <dt class="property-optional"
+<dl class="resources-properties"><dt class="property-optional"
             title="Optional">
         <span id="audience_nodejs">
 <a href="#audience_nodejs" style="color: inherit; text-decoration: inherit;">audience</a>
@@ -2978,8 +2691,7 @@ The following state arguments are supported:
         <span class="property-type">string</span>
     </dt>
     <dd>{{% md %}}The audience for the token.
-{{% /md %}}</dd>
-    <dt class="property-optional"
+{{% /md %}}</dd><dt class="property-optional"
             title="Optional">
         <span id="issuer_nodejs">
 <a href="#issuer_nodejs" style="color: inherit; text-decoration: inherit;">issuer</a>
@@ -2988,8 +2700,7 @@ The following state arguments are supported:
         <span class="property-type">string</span>
     </dt>
     <dd>{{% md %}}The token issuer.
-{{% /md %}}</dd>
-    <dt class="property-optional"
+{{% /md %}}</dd><dt class="property-optional"
             title="Optional">
         <span id="openidconnectdiscoverydocument_nodejs">
 <a href="#openidconnectdiscoverydocument_nodejs" style="color: inherit; text-decoration: inherit;">open<wbr>Id<wbr>Connect<wbr>Discovery<wbr>Document</a>
@@ -2998,8 +2709,7 @@ The following state arguments are supported:
         <span class="property-type">string</span>
     </dt>
     <dd>{{% md %}}The OpenID connect discovery document.
-{{% /md %}}</dd>
-    <dt class="property-optional"
+{{% /md %}}</dd><dt class="property-optional"
             title="Optional">
         <span id="primaryrsatokenkeyexponent_nodejs">
 <a href="#primaryrsatokenkeyexponent_nodejs" style="color: inherit; text-decoration: inherit;">primary<wbr>Rsa<wbr>Token<wbr>Key<wbr>Exponent</a>
@@ -3008,8 +2718,7 @@ The following state arguments are supported:
         <span class="property-type">string</span>
     </dt>
     <dd>{{% md %}}The RSA Parameter exponent.
-{{% /md %}}</dd>
-    <dt class="property-optional"
+{{% /md %}}</dd><dt class="property-optional"
             title="Optional">
         <span id="primaryrsatokenkeymodulus_nodejs">
 <a href="#primaryrsatokenkeymodulus_nodejs" style="color: inherit; text-decoration: inherit;">primary<wbr>Rsa<wbr>Token<wbr>Key<wbr>Modulus</a>
@@ -3018,8 +2727,7 @@ The following state arguments are supported:
         <span class="property-type">string</span>
     </dt>
     <dd>{{% md %}}The RSA Parameter modulus.
-{{% /md %}}</dd>
-    <dt class="property-optional"
+{{% /md %}}</dd><dt class="property-optional"
             title="Optional">
         <span id="primarysymmetrictokenkey_nodejs">
 <a href="#primarysymmetrictokenkey_nodejs" style="color: inherit; text-decoration: inherit;">primary<wbr>Symmetric<wbr>Token<wbr>Key</a>
@@ -3028,8 +2736,7 @@ The following state arguments are supported:
         <span class="property-type">string</span>
     </dt>
     <dd>{{% md %}}The key value of the key. Specifies a symmetric key for token validation.
-{{% /md %}}</dd>
-    <dt class="property-optional"
+{{% /md %}}</dd><dt class="property-optional"
             title="Optional">
         <span id="primaryx509tokenkeyraw_nodejs">
 <a href="#primaryx509tokenkeyraw_nodejs" style="color: inherit; text-decoration: inherit;">primary<wbr>X509Token<wbr>Key<wbr>Raw</a>
@@ -3038,8 +2745,7 @@ The following state arguments are supported:
         <span class="property-type">string</span>
     </dt>
     <dd>{{% md %}}The raw data field of a certificate in PKCS 12 format (X509Certificate2 in .NET). Specifies a certificate for token validation.
-{{% /md %}}</dd>
-    <dt class="property-optional"
+{{% /md %}}</dd><dt class="property-optional"
             title="Optional">
         <span id="requiredclaims_nodejs">
 <a href="#requiredclaims_nodejs" style="color: inherit; text-decoration: inherit;">required<wbr>Claims</a>
@@ -3048,8 +2754,7 @@ The following state arguments are supported:
         <span class="property-type"><a href="#contentkeypolicypolicyoptiontokenrestrictionrequiredclaim">Content<wbr>Key<wbr>Policy<wbr>Policy<wbr>Option<wbr>Token<wbr>Restriction<wbr>Required<wbr>Claim[]</a></span>
     </dt>
     <dd>{{% md %}}One or more `required_claim` blocks as defined above.
-{{% /md %}}</dd>
-    <dt class="property-optional"
+{{% /md %}}</dd><dt class="property-optional"
             title="Optional">
         <span id="tokentype_nodejs">
 <a href="#tokentype_nodejs" style="color: inherit; text-decoration: inherit;">token<wbr>Type</a>
@@ -3058,14 +2763,11 @@ The following state arguments are supported:
         <span class="property-type">string</span>
     </dt>
     <dd>{{% md %}}The type of token. Supported values are `Jwt` or `Swt`.
-{{% /md %}}</dd>
-</dl>
+{{% /md %}}</dd></dl>
 {{% /choosable %}}
 
 {{% choosable language python %}}
-<dl class="resources-properties">
-
-    <dt class="property-optional"
+<dl class="resources-properties"><dt class="property-optional"
             title="Optional">
         <span id="audience_python">
 <a href="#audience_python" style="color: inherit; text-decoration: inherit;">audience</a>
@@ -3074,8 +2776,7 @@ The following state arguments are supported:
         <span class="property-type">str</span>
     </dt>
     <dd>{{% md %}}The audience for the token.
-{{% /md %}}</dd>
-    <dt class="property-optional"
+{{% /md %}}</dd><dt class="property-optional"
             title="Optional">
         <span id="issuer_python">
 <a href="#issuer_python" style="color: inherit; text-decoration: inherit;">issuer</a>
@@ -3084,8 +2785,7 @@ The following state arguments are supported:
         <span class="property-type">str</span>
     </dt>
     <dd>{{% md %}}The token issuer.
-{{% /md %}}</dd>
-    <dt class="property-optional"
+{{% /md %}}</dd><dt class="property-optional"
             title="Optional">
         <span id="open_id_connect_discovery_document_python">
 <a href="#open_id_connect_discovery_document_python" style="color: inherit; text-decoration: inherit;">open_<wbr>id_<wbr>connect_<wbr>discovery_<wbr>document</a>
@@ -3094,8 +2794,7 @@ The following state arguments are supported:
         <span class="property-type">str</span>
     </dt>
     <dd>{{% md %}}The OpenID connect discovery document.
-{{% /md %}}</dd>
-    <dt class="property-optional"
+{{% /md %}}</dd><dt class="property-optional"
             title="Optional">
         <span id="primary_rsa_token_key_exponent_python">
 <a href="#primary_rsa_token_key_exponent_python" style="color: inherit; text-decoration: inherit;">primary_<wbr>rsa_<wbr>token_<wbr>key_<wbr>exponent</a>
@@ -3104,8 +2803,7 @@ The following state arguments are supported:
         <span class="property-type">str</span>
     </dt>
     <dd>{{% md %}}The RSA Parameter exponent.
-{{% /md %}}</dd>
-    <dt class="property-optional"
+{{% /md %}}</dd><dt class="property-optional"
             title="Optional">
         <span id="primary_rsa_token_key_modulus_python">
 <a href="#primary_rsa_token_key_modulus_python" style="color: inherit; text-decoration: inherit;">primary_<wbr>rsa_<wbr>token_<wbr>key_<wbr>modulus</a>
@@ -3114,8 +2812,7 @@ The following state arguments are supported:
         <span class="property-type">str</span>
     </dt>
     <dd>{{% md %}}The RSA Parameter modulus.
-{{% /md %}}</dd>
-    <dt class="property-optional"
+{{% /md %}}</dd><dt class="property-optional"
             title="Optional">
         <span id="primary_symmetric_token_key_python">
 <a href="#primary_symmetric_token_key_python" style="color: inherit; text-decoration: inherit;">primary_<wbr>symmetric_<wbr>token_<wbr>key</a>
@@ -3124,8 +2821,7 @@ The following state arguments are supported:
         <span class="property-type">str</span>
     </dt>
     <dd>{{% md %}}The key value of the key. Specifies a symmetric key for token validation.
-{{% /md %}}</dd>
-    <dt class="property-optional"
+{{% /md %}}</dd><dt class="property-optional"
             title="Optional">
         <span id="primary_x509_token_key_raw_python">
 <a href="#primary_x509_token_key_raw_python" style="color: inherit; text-decoration: inherit;">primary_<wbr>x509_<wbr>token_<wbr>key_<wbr>raw</a>
@@ -3134,8 +2830,7 @@ The following state arguments are supported:
         <span class="property-type">str</span>
     </dt>
     <dd>{{% md %}}The raw data field of a certificate in PKCS 12 format (X509Certificate2 in .NET). Specifies a certificate for token validation.
-{{% /md %}}</dd>
-    <dt class="property-optional"
+{{% /md %}}</dd><dt class="property-optional"
             title="Optional">
         <span id="required_claims_python">
 <a href="#required_claims_python" style="color: inherit; text-decoration: inherit;">required_<wbr>claims</a>
@@ -3144,8 +2839,7 @@ The following state arguments are supported:
         <span class="property-type"><a href="#contentkeypolicypolicyoptiontokenrestrictionrequiredclaim">Sequence[Content<wbr>Key<wbr>Policy<wbr>Policy<wbr>Option<wbr>Token<wbr>Restriction<wbr>Required<wbr>Claim<wbr>Args]</a></span>
     </dt>
     <dd>{{% md %}}One or more `required_claim` blocks as defined above.
-{{% /md %}}</dd>
-    <dt class="property-optional"
+{{% /md %}}</dd><dt class="property-optional"
             title="Optional">
         <span id="token_type_python">
 <a href="#token_type_python" style="color: inherit; text-decoration: inherit;">token_<wbr>type</a>
@@ -3154,16 +2848,13 @@ The following state arguments are supported:
         <span class="property-type">str</span>
     </dt>
     <dd>{{% md %}}The type of token. Supported values are `Jwt` or `Swt`.
-{{% /md %}}</dd>
-</dl>
+{{% /md %}}</dd></dl>
 {{% /choosable %}}
 
 <h4 id="contentkeypolicypolicyoptiontokenrestrictionrequiredclaim">Content<wbr>Key<wbr>Policy<wbr>Policy<wbr>Option<wbr>Token<wbr>Restriction<wbr>Required<wbr>Claim</h4>
 
 {{% choosable language csharp %}}
-<dl class="resources-properties">
-
-    <dt class="property-optional"
+<dl class="resources-properties"><dt class="property-optional"
             title="Optional">
         <span id="type_csharp">
 <a href="#type_csharp" style="color: inherit; text-decoration: inherit;">Type</a>
@@ -3172,8 +2863,7 @@ The following state arguments are supported:
         <span class="property-type">string</span>
     </dt>
     <dd>{{% md %}}Token claim type.
-{{% /md %}}</dd>
-    <dt class="property-optional"
+{{% /md %}}</dd><dt class="property-optional"
             title="Optional">
         <span id="value_csharp">
 <a href="#value_csharp" style="color: inherit; text-decoration: inherit;">Value</a>
@@ -3182,14 +2872,11 @@ The following state arguments are supported:
         <span class="property-type">string</span>
     </dt>
     <dd>{{% md %}}Token claim value.
-{{% /md %}}</dd>
-</dl>
+{{% /md %}}</dd></dl>
 {{% /choosable %}}
 
 {{% choosable language go %}}
-<dl class="resources-properties">
-
-    <dt class="property-optional"
+<dl class="resources-properties"><dt class="property-optional"
             title="Optional">
         <span id="type_go">
 <a href="#type_go" style="color: inherit; text-decoration: inherit;">Type</a>
@@ -3198,8 +2885,7 @@ The following state arguments are supported:
         <span class="property-type">string</span>
     </dt>
     <dd>{{% md %}}Token claim type.
-{{% /md %}}</dd>
-    <dt class="property-optional"
+{{% /md %}}</dd><dt class="property-optional"
             title="Optional">
         <span id="value_go">
 <a href="#value_go" style="color: inherit; text-decoration: inherit;">Value</a>
@@ -3208,14 +2894,11 @@ The following state arguments are supported:
         <span class="property-type">string</span>
     </dt>
     <dd>{{% md %}}Token claim value.
-{{% /md %}}</dd>
-</dl>
+{{% /md %}}</dd></dl>
 {{% /choosable %}}
 
 {{% choosable language nodejs %}}
-<dl class="resources-properties">
-
-    <dt class="property-optional"
+<dl class="resources-properties"><dt class="property-optional"
             title="Optional">
         <span id="type_nodejs">
 <a href="#type_nodejs" style="color: inherit; text-decoration: inherit;">type</a>
@@ -3224,8 +2907,7 @@ The following state arguments are supported:
         <span class="property-type">string</span>
     </dt>
     <dd>{{% md %}}Token claim type.
-{{% /md %}}</dd>
-    <dt class="property-optional"
+{{% /md %}}</dd><dt class="property-optional"
             title="Optional">
         <span id="value_nodejs">
 <a href="#value_nodejs" style="color: inherit; text-decoration: inherit;">value</a>
@@ -3234,14 +2916,11 @@ The following state arguments are supported:
         <span class="property-type">string</span>
     </dt>
     <dd>{{% md %}}Token claim value.
-{{% /md %}}</dd>
-</dl>
+{{% /md %}}</dd></dl>
 {{% /choosable %}}
 
 {{% choosable language python %}}
-<dl class="resources-properties">
-
-    <dt class="property-optional"
+<dl class="resources-properties"><dt class="property-optional"
             title="Optional">
         <span id="type_python">
 <a href="#type_python" style="color: inherit; text-decoration: inherit;">type</a>
@@ -3250,8 +2929,7 @@ The following state arguments are supported:
         <span class="property-type">str</span>
     </dt>
     <dd>{{% md %}}Token claim type.
-{{% /md %}}</dd>
-    <dt class="property-optional"
+{{% /md %}}</dd><dt class="property-optional"
             title="Optional">
         <span id="value_python">
 <a href="#value_python" style="color: inherit; text-decoration: inherit;">value</a>
@@ -3260,8 +2938,7 @@ The following state arguments are supported:
         <span class="property-type">str</span>
     </dt>
     <dd>{{% md %}}Token claim value.
-{{% /md %}}</dd>
-</dl>
+{{% /md %}}</dd></dl>
 {{% /choosable %}}
 ## Import
 
@@ -3282,6 +2959,6 @@ Resource Groups can be imported using the `resource id`, e.g.
 	<dt>License</dt>
 	<dd>Apache-2.0</dd>
 	<dt>Notes</dt>
-	<dd>This Pulumi package is based on the [`azurerm` Terraform Provider](https://github.com/terraform-providers/terraform-provider-azurerm).</dd>
+	<dd>{{% md %}}This Pulumi package is based on the [`azurerm` Terraform Provider](https://github.com/terraform-providers/terraform-provider-azurerm).{{% /md %}}</dd>
 </dl>
 

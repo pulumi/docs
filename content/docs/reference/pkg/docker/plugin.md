@@ -13,11 +13,17 @@ meta_desc: "Documentation for the docker.Plugin resource with examples, input pr
 Manages the lifecycle of a Docker plugin.
 
 {{% examples %}}
+
 ## Example Usage
 
 {{< chooser language "typescript,python,go,csharp" / >}}
 
-{{% example csharp %}}
+
+
+
+
+{{< example csharp >}}
+
 ```csharp
 using Pulumi;
 using Docker = Pulumi.Docker;
@@ -34,9 +40,12 @@ class MyStack : Stack
 }
 ```
 
-{{% /example %}}
 
-{{% example go %}}
+{{< /example >}}
+
+
+{{< example go >}}
+
 ```go
 package main
 
@@ -56,9 +65,12 @@ func main() {
 }
 ```
 
-{{% /example %}}
 
-{{% example python %}}
+{{< /example >}}
+
+
+{{< example python >}}
+
 ```python
 import pulumi
 import pulumi_docker as docker
@@ -66,9 +78,12 @@ import pulumi_docker as docker
 sample_volume_plugin = docker.Plugin("sample-volume-plugin")
 ```
 
-{{% /example %}}
 
-{{% example typescript %}}
+{{< /example >}}
+
+
+{{< example typescript >}}
+
 
 ```typescript
 import * as pulumi from "@pulumi/pulumi";
@@ -77,9 +92,16 @@ import * as docker from "@pulumi/docker";
 const sample_volume_plugin = new docker.Plugin("sample-volume-plugin", {});
 ```
 
-{{% /example %}}
+
+{{< /example >}}
+
+
+
+
 
 {{% /examples %}}
+
+
 
 
 ## Create a Plugin Resource {#create}
@@ -104,9 +126,7 @@ const sample_volume_plugin = new docker.Plugin("sample-volume-plugin", {});
 
 {{% choosable language nodejs %}}
 
-<dl class="resources-properties">
-  
-    <dt
+<dl class="resources-properties"><dt
         class="property-required" title="Required">
         <span>name</span>
         <span class="property-indicator"></span>
@@ -114,9 +134,7 @@ const sample_volume_plugin = new docker.Plugin("sample-volume-plugin", {});
     </dt>
     <dd>
       The unique name of the resource.
-    </dd>
-  
-    <dt
+    </dd><dt
         class="property-optional" title="Optional">
         <span>args</span>
         <span class="property-indicator"></span>
@@ -124,9 +142,7 @@ const sample_volume_plugin = new docker.Plugin("sample-volume-plugin", {});
     </dt>
     <dd>
       The arguments to resource properties.
-    </dd>
-  
-    <dt
+    </dd><dt
         class="property-optional" title="Optional">
         <span>opts</span>
         <span class="property-indicator"></span>
@@ -134,10 +150,7 @@ const sample_volume_plugin = new docker.Plugin("sample-volume-plugin", {});
     </dt>
     <dd>
       Bag of options to control resource&#39;s behavior.
-    </dd>
-  
-
-</dl>
+    </dd></dl>
 
 {{% /choosable %}}
 
@@ -163,9 +176,7 @@ const sample_volume_plugin = new docker.Plugin("sample-volume-plugin", {});
 
 {{% choosable language go %}}
 
-<dl class="resources-properties">
-  
-    <dt
+<dl class="resources-properties"><dt
         class="property-optional" title="Optional">
         <span>ctx</span>
         <span class="property-indicator"></span>
@@ -173,9 +184,7 @@ const sample_volume_plugin = new docker.Plugin("sample-volume-plugin", {});
     </dt>
     <dd>
       Context object for the current deployment.
-    </dd>
-  
-    <dt
+    </dd><dt
         class="property-required" title="Required">
         <span>name</span>
         <span class="property-indicator"></span>
@@ -183,9 +192,7 @@ const sample_volume_plugin = new docker.Plugin("sample-volume-plugin", {});
     </dt>
     <dd>
       The unique name of the resource.
-    </dd>
-  
-    <dt
+    </dd><dt
         class="property-optional" title="Optional">
         <span>args</span>
         <span class="property-indicator"></span>
@@ -193,9 +200,7 @@ const sample_volume_plugin = new docker.Plugin("sample-volume-plugin", {});
     </dt>
     <dd>
       The arguments to resource properties.
-    </dd>
-  
-    <dt
+    </dd><dt
         class="property-optional" title="Optional">
         <span>opts</span>
         <span class="property-indicator"></span>
@@ -203,18 +208,13 @@ const sample_volume_plugin = new docker.Plugin("sample-volume-plugin", {});
     </dt>
     <dd>
       Bag of options to control resource&#39;s behavior.
-    </dd>
-  
-
-</dl>
+    </dd></dl>
 
 {{% /choosable %}}
 
 {{% choosable language csharp %}}
 
-<dl class="resources-properties">
-  
-    <dt
+<dl class="resources-properties"><dt
         class="property-required" title="Required">
         <span>name</span>
         <span class="property-indicator"></span>
@@ -222,9 +222,7 @@ const sample_volume_plugin = new docker.Plugin("sample-volume-plugin", {});
     </dt>
     <dd>
       The unique name of the resource.
-    </dd>
-  
-    <dt
+    </dd><dt
         class="property-optional" title="Optional">
         <span>args</span>
         <span class="property-indicator"></span>
@@ -232,9 +230,7 @@ const sample_volume_plugin = new docker.Plugin("sample-volume-plugin", {});
     </dt>
     <dd>
       The arguments to resource properties.
-    </dd>
-  
-    <dt
+    </dd><dt
         class="property-optional" title="Optional">
         <span>opts</span>
         <span class="property-indicator"></span>
@@ -242,10 +238,7 @@ const sample_volume_plugin = new docker.Plugin("sample-volume-plugin", {});
     </dt>
     <dd>
       Bag of options to control resource&#39;s behavior.
-    </dd>
-  
-
-</dl>
+    </dd></dl>
 
 {{% /choosable %}}
 
@@ -260,9 +253,7 @@ The Plugin resource accepts the following [input]({{< relref "/docs/intro/concep
 
 
 {{% choosable language csharp %}}
-<dl class="resources-properties">
-
-    <dt class="property-optional"
+<dl class="resources-properties"><dt class="property-optional"
             title="Optional">
         <span id="alias_csharp">
 <a href="#alias_csharp" style="color: inherit; text-decoration: inherit;">Alias</a>
@@ -271,8 +262,7 @@ The Plugin resource accepts the following [input]({{< relref "/docs/intro/concep
         <span class="property-type">string</span>
     </dt>
     <dd>{{% md %}}The alias of the Docker plugin. If the tag is omitted, `:latest` is complemented to the attribute value.
-{{% /md %}}</dd>
-    <dt class="property-optional"
+{{% /md %}}</dd><dt class="property-optional"
             title="Optional">
         <span id="enabletimeout_csharp">
 <a href="#enabletimeout_csharp" style="color: inherit; text-decoration: inherit;">Enable<wbr>Timeout</a>
@@ -281,8 +271,7 @@ The Plugin resource accepts the following [input]({{< relref "/docs/intro/concep
         <span class="property-type">int</span>
     </dt>
     <dd>{{% md %}}HTTP client timeout to enable the plugin.
-{{% /md %}}</dd>
-    <dt class="property-optional"
+{{% /md %}}</dd><dt class="property-optional"
             title="Optional">
         <span id="enabled_csharp">
 <a href="#enabled_csharp" style="color: inherit; text-decoration: inherit;">Enabled</a>
@@ -291,8 +280,7 @@ The Plugin resource accepts the following [input]({{< relref "/docs/intro/concep
         <span class="property-type">bool</span>
     </dt>
     <dd>{{% md %}}If true, the plugin is enabled. The default value is `true`.
-{{% /md %}}</dd>
-    <dt class="property-optional"
+{{% /md %}}</dd><dt class="property-optional"
             title="Optional">
         <span id="envs_csharp">
 <a href="#envs_csharp" style="color: inherit; text-decoration: inherit;">Envs</a>
@@ -301,8 +289,7 @@ The Plugin resource accepts the following [input]({{< relref "/docs/intro/concep
         <span class="property-type">List&lt;string&gt;</span>
     </dt>
     <dd>{{% md %}}. The environment variables.
-{{% /md %}}</dd>
-    <dt class="property-optional"
+{{% /md %}}</dd><dt class="property-optional"
             title="Optional">
         <span id="forcedestroy_csharp">
 <a href="#forcedestroy_csharp" style="color: inherit; text-decoration: inherit;">Force<wbr>Destroy</a>
@@ -311,8 +298,7 @@ The Plugin resource accepts the following [input]({{< relref "/docs/intro/concep
         <span class="property-type">bool</span>
     </dt>
     <dd>{{% md %}}If true, the plugin is removed forcibly when the plugin is removed.
-{{% /md %}}</dd>
-    <dt class="property-optional"
+{{% /md %}}</dd><dt class="property-optional"
             title="Optional">
         <span id="forcedisable_csharp">
 <a href="#forcedisable_csharp" style="color: inherit; text-decoration: inherit;">Force<wbr>Disable</a>
@@ -321,8 +307,7 @@ The Plugin resource accepts the following [input]({{< relref "/docs/intro/concep
         <span class="property-type">bool</span>
     </dt>
     <dd>{{% md %}}If true, then the plugin is disabled forcibly when the plugin is disabled.
-{{% /md %}}</dd>
-    <dt class="property-optional"
+{{% /md %}}</dd><dt class="property-optional"
             title="Optional">
         <span id="grantallpermissions_csharp">
 <a href="#grantallpermissions_csharp" style="color: inherit; text-decoration: inherit;">Grant<wbr>All<wbr>Permissions</a>
@@ -331,8 +316,7 @@ The Plugin resource accepts the following [input]({{< relref "/docs/intro/concep
         <span class="property-type">bool</span>
     </dt>
     <dd>{{% md %}}If true, grant all permissions necessary to run the plugin. This attribute conflicts with `grant_permissions`.
-{{% /md %}}</dd>
-    <dt class="property-optional"
+{{% /md %}}</dd><dt class="property-optional"
             title="Optional">
         <span id="grantpermissions_csharp">
 <a href="#grantpermissions_csharp" style="color: inherit; text-decoration: inherit;">Grant<wbr>Permissions</a>
@@ -341,8 +325,7 @@ The Plugin resource accepts the following [input]({{< relref "/docs/intro/concep
         <span class="property-type"><a href="#plugingrantpermission">List&lt;Plugin<wbr>Grant<wbr>Permission<wbr>Args&gt;</a></span>
     </dt>
     <dd>{{% md %}}grant permissions necessary to run the plugin. This attribute conflicts with `grant_all_permissions`. See grant_permissions below for details.
-{{% /md %}}</dd>
-    <dt class="property-optional"
+{{% /md %}}</dd><dt class="property-optional"
             title="Optional">
         <span id="name_csharp">
 <a href="#name_csharp" style="color: inherit; text-decoration: inherit;">Name</a>
@@ -351,14 +334,11 @@ The Plugin resource accepts the following [input]({{< relref "/docs/intro/concep
         <span class="property-type">string</span>
     </dt>
     <dd>{{% md %}}Docker Plugin name
-{{% /md %}}</dd>
-</dl>
+{{% /md %}}</dd></dl>
 {{% /choosable %}}
 
 {{% choosable language go %}}
-<dl class="resources-properties">
-
-    <dt class="property-optional"
+<dl class="resources-properties"><dt class="property-optional"
             title="Optional">
         <span id="alias_go">
 <a href="#alias_go" style="color: inherit; text-decoration: inherit;">Alias</a>
@@ -367,8 +347,7 @@ The Plugin resource accepts the following [input]({{< relref "/docs/intro/concep
         <span class="property-type">string</span>
     </dt>
     <dd>{{% md %}}The alias of the Docker plugin. If the tag is omitted, `:latest` is complemented to the attribute value.
-{{% /md %}}</dd>
-    <dt class="property-optional"
+{{% /md %}}</dd><dt class="property-optional"
             title="Optional">
         <span id="enabletimeout_go">
 <a href="#enabletimeout_go" style="color: inherit; text-decoration: inherit;">Enable<wbr>Timeout</a>
@@ -377,8 +356,7 @@ The Plugin resource accepts the following [input]({{< relref "/docs/intro/concep
         <span class="property-type">int</span>
     </dt>
     <dd>{{% md %}}HTTP client timeout to enable the plugin.
-{{% /md %}}</dd>
-    <dt class="property-optional"
+{{% /md %}}</dd><dt class="property-optional"
             title="Optional">
         <span id="enabled_go">
 <a href="#enabled_go" style="color: inherit; text-decoration: inherit;">Enabled</a>
@@ -387,8 +365,7 @@ The Plugin resource accepts the following [input]({{< relref "/docs/intro/concep
         <span class="property-type">bool</span>
     </dt>
     <dd>{{% md %}}If true, the plugin is enabled. The default value is `true`.
-{{% /md %}}</dd>
-    <dt class="property-optional"
+{{% /md %}}</dd><dt class="property-optional"
             title="Optional">
         <span id="envs_go">
 <a href="#envs_go" style="color: inherit; text-decoration: inherit;">Envs</a>
@@ -397,8 +374,7 @@ The Plugin resource accepts the following [input]({{< relref "/docs/intro/concep
         <span class="property-type">[]string</span>
     </dt>
     <dd>{{% md %}}. The environment variables.
-{{% /md %}}</dd>
-    <dt class="property-optional"
+{{% /md %}}</dd><dt class="property-optional"
             title="Optional">
         <span id="forcedestroy_go">
 <a href="#forcedestroy_go" style="color: inherit; text-decoration: inherit;">Force<wbr>Destroy</a>
@@ -407,8 +383,7 @@ The Plugin resource accepts the following [input]({{< relref "/docs/intro/concep
         <span class="property-type">bool</span>
     </dt>
     <dd>{{% md %}}If true, the plugin is removed forcibly when the plugin is removed.
-{{% /md %}}</dd>
-    <dt class="property-optional"
+{{% /md %}}</dd><dt class="property-optional"
             title="Optional">
         <span id="forcedisable_go">
 <a href="#forcedisable_go" style="color: inherit; text-decoration: inherit;">Force<wbr>Disable</a>
@@ -417,8 +392,7 @@ The Plugin resource accepts the following [input]({{< relref "/docs/intro/concep
         <span class="property-type">bool</span>
     </dt>
     <dd>{{% md %}}If true, then the plugin is disabled forcibly when the plugin is disabled.
-{{% /md %}}</dd>
-    <dt class="property-optional"
+{{% /md %}}</dd><dt class="property-optional"
             title="Optional">
         <span id="grantallpermissions_go">
 <a href="#grantallpermissions_go" style="color: inherit; text-decoration: inherit;">Grant<wbr>All<wbr>Permissions</a>
@@ -427,8 +401,7 @@ The Plugin resource accepts the following [input]({{< relref "/docs/intro/concep
         <span class="property-type">bool</span>
     </dt>
     <dd>{{% md %}}If true, grant all permissions necessary to run the plugin. This attribute conflicts with `grant_permissions`.
-{{% /md %}}</dd>
-    <dt class="property-optional"
+{{% /md %}}</dd><dt class="property-optional"
             title="Optional">
         <span id="grantpermissions_go">
 <a href="#grantpermissions_go" style="color: inherit; text-decoration: inherit;">Grant<wbr>Permissions</a>
@@ -437,8 +410,7 @@ The Plugin resource accepts the following [input]({{< relref "/docs/intro/concep
         <span class="property-type"><a href="#plugingrantpermission">[]Plugin<wbr>Grant<wbr>Permission</a></span>
     </dt>
     <dd>{{% md %}}grant permissions necessary to run the plugin. This attribute conflicts with `grant_all_permissions`. See grant_permissions below for details.
-{{% /md %}}</dd>
-    <dt class="property-optional"
+{{% /md %}}</dd><dt class="property-optional"
             title="Optional">
         <span id="name_go">
 <a href="#name_go" style="color: inherit; text-decoration: inherit;">Name</a>
@@ -447,14 +419,11 @@ The Plugin resource accepts the following [input]({{< relref "/docs/intro/concep
         <span class="property-type">string</span>
     </dt>
     <dd>{{% md %}}Docker Plugin name
-{{% /md %}}</dd>
-</dl>
+{{% /md %}}</dd></dl>
 {{% /choosable %}}
 
 {{% choosable language nodejs %}}
-<dl class="resources-properties">
-
-    <dt class="property-optional"
+<dl class="resources-properties"><dt class="property-optional"
             title="Optional">
         <span id="alias_nodejs">
 <a href="#alias_nodejs" style="color: inherit; text-decoration: inherit;">alias</a>
@@ -463,8 +432,7 @@ The Plugin resource accepts the following [input]({{< relref "/docs/intro/concep
         <span class="property-type">string</span>
     </dt>
     <dd>{{% md %}}The alias of the Docker plugin. If the tag is omitted, `:latest` is complemented to the attribute value.
-{{% /md %}}</dd>
-    <dt class="property-optional"
+{{% /md %}}</dd><dt class="property-optional"
             title="Optional">
         <span id="enabletimeout_nodejs">
 <a href="#enabletimeout_nodejs" style="color: inherit; text-decoration: inherit;">enable<wbr>Timeout</a>
@@ -473,8 +441,7 @@ The Plugin resource accepts the following [input]({{< relref "/docs/intro/concep
         <span class="property-type">number</span>
     </dt>
     <dd>{{% md %}}HTTP client timeout to enable the plugin.
-{{% /md %}}</dd>
-    <dt class="property-optional"
+{{% /md %}}</dd><dt class="property-optional"
             title="Optional">
         <span id="enabled_nodejs">
 <a href="#enabled_nodejs" style="color: inherit; text-decoration: inherit;">enabled</a>
@@ -483,8 +450,7 @@ The Plugin resource accepts the following [input]({{< relref "/docs/intro/concep
         <span class="property-type">boolean</span>
     </dt>
     <dd>{{% md %}}If true, the plugin is enabled. The default value is `true`.
-{{% /md %}}</dd>
-    <dt class="property-optional"
+{{% /md %}}</dd><dt class="property-optional"
             title="Optional">
         <span id="envs_nodejs">
 <a href="#envs_nodejs" style="color: inherit; text-decoration: inherit;">envs</a>
@@ -493,8 +459,7 @@ The Plugin resource accepts the following [input]({{< relref "/docs/intro/concep
         <span class="property-type">string[]</span>
     </dt>
     <dd>{{% md %}}. The environment variables.
-{{% /md %}}</dd>
-    <dt class="property-optional"
+{{% /md %}}</dd><dt class="property-optional"
             title="Optional">
         <span id="forcedestroy_nodejs">
 <a href="#forcedestroy_nodejs" style="color: inherit; text-decoration: inherit;">force<wbr>Destroy</a>
@@ -503,8 +468,7 @@ The Plugin resource accepts the following [input]({{< relref "/docs/intro/concep
         <span class="property-type">boolean</span>
     </dt>
     <dd>{{% md %}}If true, the plugin is removed forcibly when the plugin is removed.
-{{% /md %}}</dd>
-    <dt class="property-optional"
+{{% /md %}}</dd><dt class="property-optional"
             title="Optional">
         <span id="forcedisable_nodejs">
 <a href="#forcedisable_nodejs" style="color: inherit; text-decoration: inherit;">force<wbr>Disable</a>
@@ -513,8 +477,7 @@ The Plugin resource accepts the following [input]({{< relref "/docs/intro/concep
         <span class="property-type">boolean</span>
     </dt>
     <dd>{{% md %}}If true, then the plugin is disabled forcibly when the plugin is disabled.
-{{% /md %}}</dd>
-    <dt class="property-optional"
+{{% /md %}}</dd><dt class="property-optional"
             title="Optional">
         <span id="grantallpermissions_nodejs">
 <a href="#grantallpermissions_nodejs" style="color: inherit; text-decoration: inherit;">grant<wbr>All<wbr>Permissions</a>
@@ -523,8 +486,7 @@ The Plugin resource accepts the following [input]({{< relref "/docs/intro/concep
         <span class="property-type">boolean</span>
     </dt>
     <dd>{{% md %}}If true, grant all permissions necessary to run the plugin. This attribute conflicts with `grant_permissions`.
-{{% /md %}}</dd>
-    <dt class="property-optional"
+{{% /md %}}</dd><dt class="property-optional"
             title="Optional">
         <span id="grantpermissions_nodejs">
 <a href="#grantpermissions_nodejs" style="color: inherit; text-decoration: inherit;">grant<wbr>Permissions</a>
@@ -533,8 +495,7 @@ The Plugin resource accepts the following [input]({{< relref "/docs/intro/concep
         <span class="property-type"><a href="#plugingrantpermission">Plugin<wbr>Grant<wbr>Permission[]</a></span>
     </dt>
     <dd>{{% md %}}grant permissions necessary to run the plugin. This attribute conflicts with `grant_all_permissions`. See grant_permissions below for details.
-{{% /md %}}</dd>
-    <dt class="property-optional"
+{{% /md %}}</dd><dt class="property-optional"
             title="Optional">
         <span id="name_nodejs">
 <a href="#name_nodejs" style="color: inherit; text-decoration: inherit;">name</a>
@@ -543,14 +504,11 @@ The Plugin resource accepts the following [input]({{< relref "/docs/intro/concep
         <span class="property-type">string</span>
     </dt>
     <dd>{{% md %}}Docker Plugin name
-{{% /md %}}</dd>
-</dl>
+{{% /md %}}</dd></dl>
 {{% /choosable %}}
 
 {{% choosable language python %}}
-<dl class="resources-properties">
-
-    <dt class="property-optional"
+<dl class="resources-properties"><dt class="property-optional"
             title="Optional">
         <span id="alias_python">
 <a href="#alias_python" style="color: inherit; text-decoration: inherit;">alias</a>
@@ -559,8 +517,7 @@ The Plugin resource accepts the following [input]({{< relref "/docs/intro/concep
         <span class="property-type">str</span>
     </dt>
     <dd>{{% md %}}The alias of the Docker plugin. If the tag is omitted, `:latest` is complemented to the attribute value.
-{{% /md %}}</dd>
-    <dt class="property-optional"
+{{% /md %}}</dd><dt class="property-optional"
             title="Optional">
         <span id="enable_timeout_python">
 <a href="#enable_timeout_python" style="color: inherit; text-decoration: inherit;">enable_<wbr>timeout</a>
@@ -569,8 +526,7 @@ The Plugin resource accepts the following [input]({{< relref "/docs/intro/concep
         <span class="property-type">int</span>
     </dt>
     <dd>{{% md %}}HTTP client timeout to enable the plugin.
-{{% /md %}}</dd>
-    <dt class="property-optional"
+{{% /md %}}</dd><dt class="property-optional"
             title="Optional">
         <span id="enabled_python">
 <a href="#enabled_python" style="color: inherit; text-decoration: inherit;">enabled</a>
@@ -579,8 +535,7 @@ The Plugin resource accepts the following [input]({{< relref "/docs/intro/concep
         <span class="property-type">bool</span>
     </dt>
     <dd>{{% md %}}If true, the plugin is enabled. The default value is `true`.
-{{% /md %}}</dd>
-    <dt class="property-optional"
+{{% /md %}}</dd><dt class="property-optional"
             title="Optional">
         <span id="envs_python">
 <a href="#envs_python" style="color: inherit; text-decoration: inherit;">envs</a>
@@ -589,8 +544,7 @@ The Plugin resource accepts the following [input]({{< relref "/docs/intro/concep
         <span class="property-type">Sequence[str]</span>
     </dt>
     <dd>{{% md %}}. The environment variables.
-{{% /md %}}</dd>
-    <dt class="property-optional"
+{{% /md %}}</dd><dt class="property-optional"
             title="Optional">
         <span id="force_destroy_python">
 <a href="#force_destroy_python" style="color: inherit; text-decoration: inherit;">force_<wbr>destroy</a>
@@ -599,8 +553,7 @@ The Plugin resource accepts the following [input]({{< relref "/docs/intro/concep
         <span class="property-type">bool</span>
     </dt>
     <dd>{{% md %}}If true, the plugin is removed forcibly when the plugin is removed.
-{{% /md %}}</dd>
-    <dt class="property-optional"
+{{% /md %}}</dd><dt class="property-optional"
             title="Optional">
         <span id="force_disable_python">
 <a href="#force_disable_python" style="color: inherit; text-decoration: inherit;">force_<wbr>disable</a>
@@ -609,8 +562,7 @@ The Plugin resource accepts the following [input]({{< relref "/docs/intro/concep
         <span class="property-type">bool</span>
     </dt>
     <dd>{{% md %}}If true, then the plugin is disabled forcibly when the plugin is disabled.
-{{% /md %}}</dd>
-    <dt class="property-optional"
+{{% /md %}}</dd><dt class="property-optional"
             title="Optional">
         <span id="grant_all_permissions_python">
 <a href="#grant_all_permissions_python" style="color: inherit; text-decoration: inherit;">grant_<wbr>all_<wbr>permissions</a>
@@ -619,8 +571,7 @@ The Plugin resource accepts the following [input]({{< relref "/docs/intro/concep
         <span class="property-type">bool</span>
     </dt>
     <dd>{{% md %}}If true, grant all permissions necessary to run the plugin. This attribute conflicts with `grant_permissions`.
-{{% /md %}}</dd>
-    <dt class="property-optional"
+{{% /md %}}</dd><dt class="property-optional"
             title="Optional">
         <span id="grant_permissions_python">
 <a href="#grant_permissions_python" style="color: inherit; text-decoration: inherit;">grant_<wbr>permissions</a>
@@ -629,8 +580,7 @@ The Plugin resource accepts the following [input]({{< relref "/docs/intro/concep
         <span class="property-type"><a href="#plugingrantpermission">Sequence[Plugin<wbr>Grant<wbr>Permission<wbr>Args]</a></span>
     </dt>
     <dd>{{% md %}}grant permissions necessary to run the plugin. This attribute conflicts with `grant_all_permissions`. See grant_permissions below for details.
-{{% /md %}}</dd>
-    <dt class="property-optional"
+{{% /md %}}</dd><dt class="property-optional"
             title="Optional">
         <span id="name_python">
 <a href="#name_python" style="color: inherit; text-decoration: inherit;">name</a>
@@ -639,8 +589,7 @@ The Plugin resource accepts the following [input]({{< relref "/docs/intro/concep
         <span class="property-type">str</span>
     </dt>
     <dd>{{% md %}}Docker Plugin name
-{{% /md %}}</dd>
-</dl>
+{{% /md %}}</dd></dl>
 {{% /choosable %}}
 
 
@@ -651,9 +600,7 @@ All [input](#inputs) properties are implicitly available as output properties. A
 
 
 {{% choosable language csharp %}}
-<dl class="resources-properties">
-
-    <dt class="property-"
+<dl class="resources-properties"><dt class="property-"
             title="">
         <span id="id_csharp">
 <a href="#id_csharp" style="color: inherit; text-decoration: inherit;">Id</a>
@@ -661,8 +608,7 @@ All [input](#inputs) properties are implicitly available as output properties. A
         <span class="property-indicator"></span>
         <span class="property-type">string</span>
     </dt>
-    <dd>{{% md %}}The provider-assigned unique ID for this managed resource.{{% /md %}}</dd>
-    <dt class="property-"
+    <dd>{{% md %}}The provider-assigned unique ID for this managed resource.{{% /md %}}</dd><dt class="property-"
             title="">
         <span id="pluginreference_csharp">
 <a href="#pluginreference_csharp" style="color: inherit; text-decoration: inherit;">Plugin<wbr>Reference</a>
@@ -671,14 +617,11 @@ All [input](#inputs) properties are implicitly available as output properties. A
         <span class="property-type">string</span>
     </dt>
     <dd>{{% md %}}(string) The plugin reference.
-{{% /md %}}</dd>
-</dl>
+{{% /md %}}</dd></dl>
 {{% /choosable %}}
 
 {{% choosable language go %}}
-<dl class="resources-properties">
-
-    <dt class="property-"
+<dl class="resources-properties"><dt class="property-"
             title="">
         <span id="id_go">
 <a href="#id_go" style="color: inherit; text-decoration: inherit;">Id</a>
@@ -686,8 +629,7 @@ All [input](#inputs) properties are implicitly available as output properties. A
         <span class="property-indicator"></span>
         <span class="property-type">string</span>
     </dt>
-    <dd>{{% md %}}The provider-assigned unique ID for this managed resource.{{% /md %}}</dd>
-    <dt class="property-"
+    <dd>{{% md %}}The provider-assigned unique ID for this managed resource.{{% /md %}}</dd><dt class="property-"
             title="">
         <span id="pluginreference_go">
 <a href="#pluginreference_go" style="color: inherit; text-decoration: inherit;">Plugin<wbr>Reference</a>
@@ -696,14 +638,11 @@ All [input](#inputs) properties are implicitly available as output properties. A
         <span class="property-type">string</span>
     </dt>
     <dd>{{% md %}}(string) The plugin reference.
-{{% /md %}}</dd>
-</dl>
+{{% /md %}}</dd></dl>
 {{% /choosable %}}
 
 {{% choosable language nodejs %}}
-<dl class="resources-properties">
-
-    <dt class="property-"
+<dl class="resources-properties"><dt class="property-"
             title="">
         <span id="id_nodejs">
 <a href="#id_nodejs" style="color: inherit; text-decoration: inherit;">id</a>
@@ -711,8 +650,7 @@ All [input](#inputs) properties are implicitly available as output properties. A
         <span class="property-indicator"></span>
         <span class="property-type">string</span>
     </dt>
-    <dd>{{% md %}}The provider-assigned unique ID for this managed resource.{{% /md %}}</dd>
-    <dt class="property-"
+    <dd>{{% md %}}The provider-assigned unique ID for this managed resource.{{% /md %}}</dd><dt class="property-"
             title="">
         <span id="pluginreference_nodejs">
 <a href="#pluginreference_nodejs" style="color: inherit; text-decoration: inherit;">plugin<wbr>Reference</a>
@@ -721,14 +659,11 @@ All [input](#inputs) properties are implicitly available as output properties. A
         <span class="property-type">string</span>
     </dt>
     <dd>{{% md %}}(string) The plugin reference.
-{{% /md %}}</dd>
-</dl>
+{{% /md %}}</dd></dl>
 {{% /choosable %}}
 
 {{% choosable language python %}}
-<dl class="resources-properties">
-
-    <dt class="property-"
+<dl class="resources-properties"><dt class="property-"
             title="">
         <span id="id_python">
 <a href="#id_python" style="color: inherit; text-decoration: inherit;">id</a>
@@ -736,8 +671,7 @@ All [input](#inputs) properties are implicitly available as output properties. A
         <span class="property-indicator"></span>
         <span class="property-type">str</span>
     </dt>
-    <dd>{{% md %}}The provider-assigned unique ID for this managed resource.{{% /md %}}</dd>
-    <dt class="property-"
+    <dd>{{% md %}}The provider-assigned unique ID for this managed resource.{{% /md %}}</dd><dt class="property-"
             title="">
         <span id="plugin_reference_python">
 <a href="#plugin_reference_python" style="color: inherit; text-decoration: inherit;">plugin_<wbr>reference</a>
@@ -746,8 +680,7 @@ All [input](#inputs) properties are implicitly available as output properties. A
         <span class="property-type">str</span>
     </dt>
     <dd>{{% md %}}(string) The plugin reference.
-{{% /md %}}</dd>
-</dl>
+{{% /md %}}</dd></dl>
 {{% /choosable %}}
 
 
@@ -874,9 +807,7 @@ The following state arguments are supported:
 
 
 {{% choosable language csharp %}}
-<dl class="resources-properties">
-
-    <dt class="property-optional"
+<dl class="resources-properties"><dt class="property-optional"
             title="Optional">
         <span id="state_alias_csharp">
 <a href="#state_alias_csharp" style="color: inherit; text-decoration: inherit;">Alias</a>
@@ -885,8 +816,7 @@ The following state arguments are supported:
         <span class="property-type">string</span>
     </dt>
     <dd>{{% md %}}The alias of the Docker plugin. If the tag is omitted, `:latest` is complemented to the attribute value.
-{{% /md %}}</dd>
-    <dt class="property-optional"
+{{% /md %}}</dd><dt class="property-optional"
             title="Optional">
         <span id="state_enabletimeout_csharp">
 <a href="#state_enabletimeout_csharp" style="color: inherit; text-decoration: inherit;">Enable<wbr>Timeout</a>
@@ -895,8 +825,7 @@ The following state arguments are supported:
         <span class="property-type">int</span>
     </dt>
     <dd>{{% md %}}HTTP client timeout to enable the plugin.
-{{% /md %}}</dd>
-    <dt class="property-optional"
+{{% /md %}}</dd><dt class="property-optional"
             title="Optional">
         <span id="state_enabled_csharp">
 <a href="#state_enabled_csharp" style="color: inherit; text-decoration: inherit;">Enabled</a>
@@ -905,8 +834,7 @@ The following state arguments are supported:
         <span class="property-type">bool</span>
     </dt>
     <dd>{{% md %}}If true, the plugin is enabled. The default value is `true`.
-{{% /md %}}</dd>
-    <dt class="property-optional"
+{{% /md %}}</dd><dt class="property-optional"
             title="Optional">
         <span id="state_envs_csharp">
 <a href="#state_envs_csharp" style="color: inherit; text-decoration: inherit;">Envs</a>
@@ -915,8 +843,7 @@ The following state arguments are supported:
         <span class="property-type">List&lt;string&gt;</span>
     </dt>
     <dd>{{% md %}}. The environment variables.
-{{% /md %}}</dd>
-    <dt class="property-optional"
+{{% /md %}}</dd><dt class="property-optional"
             title="Optional">
         <span id="state_forcedestroy_csharp">
 <a href="#state_forcedestroy_csharp" style="color: inherit; text-decoration: inherit;">Force<wbr>Destroy</a>
@@ -925,8 +852,7 @@ The following state arguments are supported:
         <span class="property-type">bool</span>
     </dt>
     <dd>{{% md %}}If true, the plugin is removed forcibly when the plugin is removed.
-{{% /md %}}</dd>
-    <dt class="property-optional"
+{{% /md %}}</dd><dt class="property-optional"
             title="Optional">
         <span id="state_forcedisable_csharp">
 <a href="#state_forcedisable_csharp" style="color: inherit; text-decoration: inherit;">Force<wbr>Disable</a>
@@ -935,8 +861,7 @@ The following state arguments are supported:
         <span class="property-type">bool</span>
     </dt>
     <dd>{{% md %}}If true, then the plugin is disabled forcibly when the plugin is disabled.
-{{% /md %}}</dd>
-    <dt class="property-optional"
+{{% /md %}}</dd><dt class="property-optional"
             title="Optional">
         <span id="state_grantallpermissions_csharp">
 <a href="#state_grantallpermissions_csharp" style="color: inherit; text-decoration: inherit;">Grant<wbr>All<wbr>Permissions</a>
@@ -945,8 +870,7 @@ The following state arguments are supported:
         <span class="property-type">bool</span>
     </dt>
     <dd>{{% md %}}If true, grant all permissions necessary to run the plugin. This attribute conflicts with `grant_permissions`.
-{{% /md %}}</dd>
-    <dt class="property-optional"
+{{% /md %}}</dd><dt class="property-optional"
             title="Optional">
         <span id="state_grantpermissions_csharp">
 <a href="#state_grantpermissions_csharp" style="color: inherit; text-decoration: inherit;">Grant<wbr>Permissions</a>
@@ -955,8 +879,7 @@ The following state arguments are supported:
         <span class="property-type"><a href="#plugingrantpermission">List&lt;Plugin<wbr>Grant<wbr>Permission<wbr>Args&gt;</a></span>
     </dt>
     <dd>{{% md %}}grant permissions necessary to run the plugin. This attribute conflicts with `grant_all_permissions`. See grant_permissions below for details.
-{{% /md %}}</dd>
-    <dt class="property-optional"
+{{% /md %}}</dd><dt class="property-optional"
             title="Optional">
         <span id="state_name_csharp">
 <a href="#state_name_csharp" style="color: inherit; text-decoration: inherit;">Name</a>
@@ -965,8 +888,7 @@ The following state arguments are supported:
         <span class="property-type">string</span>
     </dt>
     <dd>{{% md %}}Docker Plugin name
-{{% /md %}}</dd>
-    <dt class="property-optional"
+{{% /md %}}</dd><dt class="property-optional"
             title="Optional">
         <span id="state_pluginreference_csharp">
 <a href="#state_pluginreference_csharp" style="color: inherit; text-decoration: inherit;">Plugin<wbr>Reference</a>
@@ -975,14 +897,11 @@ The following state arguments are supported:
         <span class="property-type">string</span>
     </dt>
     <dd>{{% md %}}(string) The plugin reference.
-{{% /md %}}</dd>
-</dl>
+{{% /md %}}</dd></dl>
 {{% /choosable %}}
 
 {{% choosable language go %}}
-<dl class="resources-properties">
-
-    <dt class="property-optional"
+<dl class="resources-properties"><dt class="property-optional"
             title="Optional">
         <span id="state_alias_go">
 <a href="#state_alias_go" style="color: inherit; text-decoration: inherit;">Alias</a>
@@ -991,8 +910,7 @@ The following state arguments are supported:
         <span class="property-type">string</span>
     </dt>
     <dd>{{% md %}}The alias of the Docker plugin. If the tag is omitted, `:latest` is complemented to the attribute value.
-{{% /md %}}</dd>
-    <dt class="property-optional"
+{{% /md %}}</dd><dt class="property-optional"
             title="Optional">
         <span id="state_enabletimeout_go">
 <a href="#state_enabletimeout_go" style="color: inherit; text-decoration: inherit;">Enable<wbr>Timeout</a>
@@ -1001,8 +919,7 @@ The following state arguments are supported:
         <span class="property-type">int</span>
     </dt>
     <dd>{{% md %}}HTTP client timeout to enable the plugin.
-{{% /md %}}</dd>
-    <dt class="property-optional"
+{{% /md %}}</dd><dt class="property-optional"
             title="Optional">
         <span id="state_enabled_go">
 <a href="#state_enabled_go" style="color: inherit; text-decoration: inherit;">Enabled</a>
@@ -1011,8 +928,7 @@ The following state arguments are supported:
         <span class="property-type">bool</span>
     </dt>
     <dd>{{% md %}}If true, the plugin is enabled. The default value is `true`.
-{{% /md %}}</dd>
-    <dt class="property-optional"
+{{% /md %}}</dd><dt class="property-optional"
             title="Optional">
         <span id="state_envs_go">
 <a href="#state_envs_go" style="color: inherit; text-decoration: inherit;">Envs</a>
@@ -1021,8 +937,7 @@ The following state arguments are supported:
         <span class="property-type">[]string</span>
     </dt>
     <dd>{{% md %}}. The environment variables.
-{{% /md %}}</dd>
-    <dt class="property-optional"
+{{% /md %}}</dd><dt class="property-optional"
             title="Optional">
         <span id="state_forcedestroy_go">
 <a href="#state_forcedestroy_go" style="color: inherit; text-decoration: inherit;">Force<wbr>Destroy</a>
@@ -1031,8 +946,7 @@ The following state arguments are supported:
         <span class="property-type">bool</span>
     </dt>
     <dd>{{% md %}}If true, the plugin is removed forcibly when the plugin is removed.
-{{% /md %}}</dd>
-    <dt class="property-optional"
+{{% /md %}}</dd><dt class="property-optional"
             title="Optional">
         <span id="state_forcedisable_go">
 <a href="#state_forcedisable_go" style="color: inherit; text-decoration: inherit;">Force<wbr>Disable</a>
@@ -1041,8 +955,7 @@ The following state arguments are supported:
         <span class="property-type">bool</span>
     </dt>
     <dd>{{% md %}}If true, then the plugin is disabled forcibly when the plugin is disabled.
-{{% /md %}}</dd>
-    <dt class="property-optional"
+{{% /md %}}</dd><dt class="property-optional"
             title="Optional">
         <span id="state_grantallpermissions_go">
 <a href="#state_grantallpermissions_go" style="color: inherit; text-decoration: inherit;">Grant<wbr>All<wbr>Permissions</a>
@@ -1051,8 +964,7 @@ The following state arguments are supported:
         <span class="property-type">bool</span>
     </dt>
     <dd>{{% md %}}If true, grant all permissions necessary to run the plugin. This attribute conflicts with `grant_permissions`.
-{{% /md %}}</dd>
-    <dt class="property-optional"
+{{% /md %}}</dd><dt class="property-optional"
             title="Optional">
         <span id="state_grantpermissions_go">
 <a href="#state_grantpermissions_go" style="color: inherit; text-decoration: inherit;">Grant<wbr>Permissions</a>
@@ -1061,8 +973,7 @@ The following state arguments are supported:
         <span class="property-type"><a href="#plugingrantpermission">[]Plugin<wbr>Grant<wbr>Permission</a></span>
     </dt>
     <dd>{{% md %}}grant permissions necessary to run the plugin. This attribute conflicts with `grant_all_permissions`. See grant_permissions below for details.
-{{% /md %}}</dd>
-    <dt class="property-optional"
+{{% /md %}}</dd><dt class="property-optional"
             title="Optional">
         <span id="state_name_go">
 <a href="#state_name_go" style="color: inherit; text-decoration: inherit;">Name</a>
@@ -1071,8 +982,7 @@ The following state arguments are supported:
         <span class="property-type">string</span>
     </dt>
     <dd>{{% md %}}Docker Plugin name
-{{% /md %}}</dd>
-    <dt class="property-optional"
+{{% /md %}}</dd><dt class="property-optional"
             title="Optional">
         <span id="state_pluginreference_go">
 <a href="#state_pluginreference_go" style="color: inherit; text-decoration: inherit;">Plugin<wbr>Reference</a>
@@ -1081,14 +991,11 @@ The following state arguments are supported:
         <span class="property-type">string</span>
     </dt>
     <dd>{{% md %}}(string) The plugin reference.
-{{% /md %}}</dd>
-</dl>
+{{% /md %}}</dd></dl>
 {{% /choosable %}}
 
 {{% choosable language nodejs %}}
-<dl class="resources-properties">
-
-    <dt class="property-optional"
+<dl class="resources-properties"><dt class="property-optional"
             title="Optional">
         <span id="state_alias_nodejs">
 <a href="#state_alias_nodejs" style="color: inherit; text-decoration: inherit;">alias</a>
@@ -1097,8 +1004,7 @@ The following state arguments are supported:
         <span class="property-type">string</span>
     </dt>
     <dd>{{% md %}}The alias of the Docker plugin. If the tag is omitted, `:latest` is complemented to the attribute value.
-{{% /md %}}</dd>
-    <dt class="property-optional"
+{{% /md %}}</dd><dt class="property-optional"
             title="Optional">
         <span id="state_enabletimeout_nodejs">
 <a href="#state_enabletimeout_nodejs" style="color: inherit; text-decoration: inherit;">enable<wbr>Timeout</a>
@@ -1107,8 +1013,7 @@ The following state arguments are supported:
         <span class="property-type">number</span>
     </dt>
     <dd>{{% md %}}HTTP client timeout to enable the plugin.
-{{% /md %}}</dd>
-    <dt class="property-optional"
+{{% /md %}}</dd><dt class="property-optional"
             title="Optional">
         <span id="state_enabled_nodejs">
 <a href="#state_enabled_nodejs" style="color: inherit; text-decoration: inherit;">enabled</a>
@@ -1117,8 +1022,7 @@ The following state arguments are supported:
         <span class="property-type">boolean</span>
     </dt>
     <dd>{{% md %}}If true, the plugin is enabled. The default value is `true`.
-{{% /md %}}</dd>
-    <dt class="property-optional"
+{{% /md %}}</dd><dt class="property-optional"
             title="Optional">
         <span id="state_envs_nodejs">
 <a href="#state_envs_nodejs" style="color: inherit; text-decoration: inherit;">envs</a>
@@ -1127,8 +1031,7 @@ The following state arguments are supported:
         <span class="property-type">string[]</span>
     </dt>
     <dd>{{% md %}}. The environment variables.
-{{% /md %}}</dd>
-    <dt class="property-optional"
+{{% /md %}}</dd><dt class="property-optional"
             title="Optional">
         <span id="state_forcedestroy_nodejs">
 <a href="#state_forcedestroy_nodejs" style="color: inherit; text-decoration: inherit;">force<wbr>Destroy</a>
@@ -1137,8 +1040,7 @@ The following state arguments are supported:
         <span class="property-type">boolean</span>
     </dt>
     <dd>{{% md %}}If true, the plugin is removed forcibly when the plugin is removed.
-{{% /md %}}</dd>
-    <dt class="property-optional"
+{{% /md %}}</dd><dt class="property-optional"
             title="Optional">
         <span id="state_forcedisable_nodejs">
 <a href="#state_forcedisable_nodejs" style="color: inherit; text-decoration: inherit;">force<wbr>Disable</a>
@@ -1147,8 +1049,7 @@ The following state arguments are supported:
         <span class="property-type">boolean</span>
     </dt>
     <dd>{{% md %}}If true, then the plugin is disabled forcibly when the plugin is disabled.
-{{% /md %}}</dd>
-    <dt class="property-optional"
+{{% /md %}}</dd><dt class="property-optional"
             title="Optional">
         <span id="state_grantallpermissions_nodejs">
 <a href="#state_grantallpermissions_nodejs" style="color: inherit; text-decoration: inherit;">grant<wbr>All<wbr>Permissions</a>
@@ -1157,8 +1058,7 @@ The following state arguments are supported:
         <span class="property-type">boolean</span>
     </dt>
     <dd>{{% md %}}If true, grant all permissions necessary to run the plugin. This attribute conflicts with `grant_permissions`.
-{{% /md %}}</dd>
-    <dt class="property-optional"
+{{% /md %}}</dd><dt class="property-optional"
             title="Optional">
         <span id="state_grantpermissions_nodejs">
 <a href="#state_grantpermissions_nodejs" style="color: inherit; text-decoration: inherit;">grant<wbr>Permissions</a>
@@ -1167,8 +1067,7 @@ The following state arguments are supported:
         <span class="property-type"><a href="#plugingrantpermission">Plugin<wbr>Grant<wbr>Permission[]</a></span>
     </dt>
     <dd>{{% md %}}grant permissions necessary to run the plugin. This attribute conflicts with `grant_all_permissions`. See grant_permissions below for details.
-{{% /md %}}</dd>
-    <dt class="property-optional"
+{{% /md %}}</dd><dt class="property-optional"
             title="Optional">
         <span id="state_name_nodejs">
 <a href="#state_name_nodejs" style="color: inherit; text-decoration: inherit;">name</a>
@@ -1177,8 +1076,7 @@ The following state arguments are supported:
         <span class="property-type">string</span>
     </dt>
     <dd>{{% md %}}Docker Plugin name
-{{% /md %}}</dd>
-    <dt class="property-optional"
+{{% /md %}}</dd><dt class="property-optional"
             title="Optional">
         <span id="state_pluginreference_nodejs">
 <a href="#state_pluginreference_nodejs" style="color: inherit; text-decoration: inherit;">plugin<wbr>Reference</a>
@@ -1187,14 +1085,11 @@ The following state arguments are supported:
         <span class="property-type">string</span>
     </dt>
     <dd>{{% md %}}(string) The plugin reference.
-{{% /md %}}</dd>
-</dl>
+{{% /md %}}</dd></dl>
 {{% /choosable %}}
 
 {{% choosable language python %}}
-<dl class="resources-properties">
-
-    <dt class="property-optional"
+<dl class="resources-properties"><dt class="property-optional"
             title="Optional">
         <span id="state_alias_python">
 <a href="#state_alias_python" style="color: inherit; text-decoration: inherit;">alias</a>
@@ -1203,8 +1098,7 @@ The following state arguments are supported:
         <span class="property-type">str</span>
     </dt>
     <dd>{{% md %}}The alias of the Docker plugin. If the tag is omitted, `:latest` is complemented to the attribute value.
-{{% /md %}}</dd>
-    <dt class="property-optional"
+{{% /md %}}</dd><dt class="property-optional"
             title="Optional">
         <span id="state_enable_timeout_python">
 <a href="#state_enable_timeout_python" style="color: inherit; text-decoration: inherit;">enable_<wbr>timeout</a>
@@ -1213,8 +1107,7 @@ The following state arguments are supported:
         <span class="property-type">int</span>
     </dt>
     <dd>{{% md %}}HTTP client timeout to enable the plugin.
-{{% /md %}}</dd>
-    <dt class="property-optional"
+{{% /md %}}</dd><dt class="property-optional"
             title="Optional">
         <span id="state_enabled_python">
 <a href="#state_enabled_python" style="color: inherit; text-decoration: inherit;">enabled</a>
@@ -1223,8 +1116,7 @@ The following state arguments are supported:
         <span class="property-type">bool</span>
     </dt>
     <dd>{{% md %}}If true, the plugin is enabled. The default value is `true`.
-{{% /md %}}</dd>
-    <dt class="property-optional"
+{{% /md %}}</dd><dt class="property-optional"
             title="Optional">
         <span id="state_envs_python">
 <a href="#state_envs_python" style="color: inherit; text-decoration: inherit;">envs</a>
@@ -1233,8 +1125,7 @@ The following state arguments are supported:
         <span class="property-type">Sequence[str]</span>
     </dt>
     <dd>{{% md %}}. The environment variables.
-{{% /md %}}</dd>
-    <dt class="property-optional"
+{{% /md %}}</dd><dt class="property-optional"
             title="Optional">
         <span id="state_force_destroy_python">
 <a href="#state_force_destroy_python" style="color: inherit; text-decoration: inherit;">force_<wbr>destroy</a>
@@ -1243,8 +1134,7 @@ The following state arguments are supported:
         <span class="property-type">bool</span>
     </dt>
     <dd>{{% md %}}If true, the plugin is removed forcibly when the plugin is removed.
-{{% /md %}}</dd>
-    <dt class="property-optional"
+{{% /md %}}</dd><dt class="property-optional"
             title="Optional">
         <span id="state_force_disable_python">
 <a href="#state_force_disable_python" style="color: inherit; text-decoration: inherit;">force_<wbr>disable</a>
@@ -1253,8 +1143,7 @@ The following state arguments are supported:
         <span class="property-type">bool</span>
     </dt>
     <dd>{{% md %}}If true, then the plugin is disabled forcibly when the plugin is disabled.
-{{% /md %}}</dd>
-    <dt class="property-optional"
+{{% /md %}}</dd><dt class="property-optional"
             title="Optional">
         <span id="state_grant_all_permissions_python">
 <a href="#state_grant_all_permissions_python" style="color: inherit; text-decoration: inherit;">grant_<wbr>all_<wbr>permissions</a>
@@ -1263,8 +1152,7 @@ The following state arguments are supported:
         <span class="property-type">bool</span>
     </dt>
     <dd>{{% md %}}If true, grant all permissions necessary to run the plugin. This attribute conflicts with `grant_permissions`.
-{{% /md %}}</dd>
-    <dt class="property-optional"
+{{% /md %}}</dd><dt class="property-optional"
             title="Optional">
         <span id="state_grant_permissions_python">
 <a href="#state_grant_permissions_python" style="color: inherit; text-decoration: inherit;">grant_<wbr>permissions</a>
@@ -1273,8 +1161,7 @@ The following state arguments are supported:
         <span class="property-type"><a href="#plugingrantpermission">Sequence[Plugin<wbr>Grant<wbr>Permission<wbr>Args]</a></span>
     </dt>
     <dd>{{% md %}}grant permissions necessary to run the plugin. This attribute conflicts with `grant_all_permissions`. See grant_permissions below for details.
-{{% /md %}}</dd>
-    <dt class="property-optional"
+{{% /md %}}</dd><dt class="property-optional"
             title="Optional">
         <span id="state_name_python">
 <a href="#state_name_python" style="color: inherit; text-decoration: inherit;">name</a>
@@ -1283,8 +1170,7 @@ The following state arguments are supported:
         <span class="property-type">str</span>
     </dt>
     <dd>{{% md %}}Docker Plugin name
-{{% /md %}}</dd>
-    <dt class="property-optional"
+{{% /md %}}</dd><dt class="property-optional"
             title="Optional">
         <span id="state_plugin_reference_python">
 <a href="#state_plugin_reference_python" style="color: inherit; text-decoration: inherit;">plugin_<wbr>reference</a>
@@ -1293,8 +1179,7 @@ The following state arguments are supported:
         <span class="property-type">str</span>
     </dt>
     <dd>{{% md %}}(string) The plugin reference.
-{{% /md %}}</dd>
-</dl>
+{{% /md %}}</dd></dl>
 {{% /choosable %}}
 
 
@@ -1309,9 +1194,7 @@ The following state arguments are supported:
 <h4 id="plugingrantpermission">Plugin<wbr>Grant<wbr>Permission</h4>
 
 {{% choosable language csharp %}}
-<dl class="resources-properties">
-
-    <dt class="property-required"
+<dl class="resources-properties"><dt class="property-required"
             title="Required">
         <span id="name_csharp">
 <a href="#name_csharp" style="color: inherit; text-decoration: inherit;">Name</a>
@@ -1319,8 +1202,7 @@ The following state arguments are supported:
         <span class="property-indicator"></span>
         <span class="property-type">string</span>
     </dt>
-    <dd>{{% md %}}{{% /md %}}</dd>
-    <dt class="property-required"
+    <dd>{{% md %}}{{% /md %}}</dd><dt class="property-required"
             title="Required">
         <span id="values_csharp">
 <a href="#values_csharp" style="color: inherit; text-decoration: inherit;">Values</a>
@@ -1328,14 +1210,11 @@ The following state arguments are supported:
         <span class="property-indicator"></span>
         <span class="property-type">List&lt;string&gt;</span>
     </dt>
-    <dd>{{% md %}}{{% /md %}}</dd>
-</dl>
+    <dd>{{% md %}}{{% /md %}}</dd></dl>
 {{% /choosable %}}
 
 {{% choosable language go %}}
-<dl class="resources-properties">
-
-    <dt class="property-required"
+<dl class="resources-properties"><dt class="property-required"
             title="Required">
         <span id="name_go">
 <a href="#name_go" style="color: inherit; text-decoration: inherit;">Name</a>
@@ -1343,8 +1222,7 @@ The following state arguments are supported:
         <span class="property-indicator"></span>
         <span class="property-type">string</span>
     </dt>
-    <dd>{{% md %}}{{% /md %}}</dd>
-    <dt class="property-required"
+    <dd>{{% md %}}{{% /md %}}</dd><dt class="property-required"
             title="Required">
         <span id="values_go">
 <a href="#values_go" style="color: inherit; text-decoration: inherit;">Values</a>
@@ -1352,14 +1230,11 @@ The following state arguments are supported:
         <span class="property-indicator"></span>
         <span class="property-type">[]string</span>
     </dt>
-    <dd>{{% md %}}{{% /md %}}</dd>
-</dl>
+    <dd>{{% md %}}{{% /md %}}</dd></dl>
 {{% /choosable %}}
 
 {{% choosable language nodejs %}}
-<dl class="resources-properties">
-
-    <dt class="property-required"
+<dl class="resources-properties"><dt class="property-required"
             title="Required">
         <span id="name_nodejs">
 <a href="#name_nodejs" style="color: inherit; text-decoration: inherit;">name</a>
@@ -1367,8 +1242,7 @@ The following state arguments are supported:
         <span class="property-indicator"></span>
         <span class="property-type">string</span>
     </dt>
-    <dd>{{% md %}}{{% /md %}}</dd>
-    <dt class="property-required"
+    <dd>{{% md %}}{{% /md %}}</dd><dt class="property-required"
             title="Required">
         <span id="values_nodejs">
 <a href="#values_nodejs" style="color: inherit; text-decoration: inherit;">values</a>
@@ -1376,14 +1250,11 @@ The following state arguments are supported:
         <span class="property-indicator"></span>
         <span class="property-type">string[]</span>
     </dt>
-    <dd>{{% md %}}{{% /md %}}</dd>
-</dl>
+    <dd>{{% md %}}{{% /md %}}</dd></dl>
 {{% /choosable %}}
 
 {{% choosable language python %}}
-<dl class="resources-properties">
-
-    <dt class="property-required"
+<dl class="resources-properties"><dt class="property-required"
             title="Required">
         <span id="name_python">
 <a href="#name_python" style="color: inherit; text-decoration: inherit;">name</a>
@@ -1391,8 +1262,7 @@ The following state arguments are supported:
         <span class="property-indicator"></span>
         <span class="property-type">str</span>
     </dt>
-    <dd>{{% md %}}{{% /md %}}</dd>
-    <dt class="property-required"
+    <dd>{{% md %}}{{% /md %}}</dd><dt class="property-required"
             title="Required">
         <span id="values_python">
 <a href="#values_python" style="color: inherit; text-decoration: inherit;">values</a>
@@ -1400,8 +1270,7 @@ The following state arguments are supported:
         <span class="property-indicator"></span>
         <span class="property-type">Sequence[str]</span>
     </dt>
-    <dd>{{% md %}}{{% /md %}}</dd>
-</dl>
+    <dd>{{% md %}}{{% /md %}}</dd></dl>
 {{% /choosable %}}
 ## Import
 
@@ -1422,6 +1291,6 @@ Docker plugins can be imported using the long id, e.g. for a plugin `tiborvass/s
 	<dt>License</dt>
 	<dd>Apache-2.0</dd>
 	<dt>Notes</dt>
-	<dd>This Pulumi package is based on the [`docker` Terraform Provider](https://github.com/terraform-providers/terraform-provider-docker).</dd>
+	<dd>{{% md %}}This Pulumi package is based on the [`docker` Terraform Provider](https://github.com/terraform-providers/terraform-provider-docker).{{% /md %}}</dd>
 </dl>
 

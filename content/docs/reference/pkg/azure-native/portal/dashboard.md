@@ -14,11 +14,17 @@ The shared dashboard resource definition.
 API Version: 2020-09-01-preview.
 
 {{% examples %}}
+
 ## Example Usage
 
 {{< chooser language "typescript,python,go,csharp" / >}}
+
+
 ### Create or update a Dashboard
-{{% example csharp %}}
+
+
+{{< example csharp >}}
+
 ```csharp
 using Pulumi;
 using AzureNative = Pulumi.AzureNative;
@@ -89,13 +95,19 @@ class MyStack : Stack
 
 ```
 
-{{% /example %}}
 
-{{% example go %}}
+{{< /example >}}
+
+
+{{< example go >}}
+
 Coming soon!
-{{% /example %}}
 
-{{% example python %}}
+{{< /example >}}
+
+
+{{< example python >}}
+
 
 ```python
 import pulumi
@@ -147,9 +159,12 @@ dashboard = azure_native.portal.Dashboard("dashboard",
 
 ```
 
-{{% /example %}}
 
-{{% example typescript %}}
+{{< /example >}}
+
+
+{{< example typescript >}}
+
 
 ```typescript
 import * as pulumi from "@pulumi/pulumi";
@@ -202,9 +217,16 @@ const dashboard = new azure_native.portal.Dashboard("dashboard", {
 
 ```
 
-{{% /example %}}
+
+{{< /example >}}
+
+
+
+
 
 {{% /examples %}}
+
+
 
 
 ## Create a Dashboard Resource {#create}
@@ -229,9 +251,7 @@ const dashboard = new azure_native.portal.Dashboard("dashboard", {
 
 {{% choosable language nodejs %}}
 
-<dl class="resources-properties">
-  
-    <dt
+<dl class="resources-properties"><dt
         class="property-required" title="Required">
         <span>name</span>
         <span class="property-indicator"></span>
@@ -239,9 +259,7 @@ const dashboard = new azure_native.portal.Dashboard("dashboard", {
     </dt>
     <dd>
       The unique name of the resource.
-    </dd>
-  
-    <dt
+    </dd><dt
         class="property-required" title="Required">
         <span>args</span>
         <span class="property-indicator"></span>
@@ -249,9 +267,7 @@ const dashboard = new azure_native.portal.Dashboard("dashboard", {
     </dt>
     <dd>
       The arguments to resource properties.
-    </dd>
-  
-    <dt
+    </dd><dt
         class="property-optional" title="Optional">
         <span>opts</span>
         <span class="property-indicator"></span>
@@ -259,10 +275,7 @@ const dashboard = new azure_native.portal.Dashboard("dashboard", {
     </dt>
     <dd>
       Bag of options to control resource&#39;s behavior.
-    </dd>
-  
-
-</dl>
+    </dd></dl>
 
 {{% /choosable %}}
 
@@ -288,9 +301,7 @@ const dashboard = new azure_native.portal.Dashboard("dashboard", {
 
 {{% choosable language go %}}
 
-<dl class="resources-properties">
-  
-    <dt
+<dl class="resources-properties"><dt
         class="property-optional" title="Optional">
         <span>ctx</span>
         <span class="property-indicator"></span>
@@ -298,9 +309,7 @@ const dashboard = new azure_native.portal.Dashboard("dashboard", {
     </dt>
     <dd>
       Context object for the current deployment.
-    </dd>
-  
-    <dt
+    </dd><dt
         class="property-required" title="Required">
         <span>name</span>
         <span class="property-indicator"></span>
@@ -308,9 +317,7 @@ const dashboard = new azure_native.portal.Dashboard("dashboard", {
     </dt>
     <dd>
       The unique name of the resource.
-    </dd>
-  
-    <dt
+    </dd><dt
         class="property-required" title="Required">
         <span>args</span>
         <span class="property-indicator"></span>
@@ -318,9 +325,7 @@ const dashboard = new azure_native.portal.Dashboard("dashboard", {
     </dt>
     <dd>
       The arguments to resource properties.
-    </dd>
-  
-    <dt
+    </dd><dt
         class="property-optional" title="Optional">
         <span>opts</span>
         <span class="property-indicator"></span>
@@ -328,18 +333,13 @@ const dashboard = new azure_native.portal.Dashboard("dashboard", {
     </dt>
     <dd>
       Bag of options to control resource&#39;s behavior.
-    </dd>
-  
-
-</dl>
+    </dd></dl>
 
 {{% /choosable %}}
 
 {{% choosable language csharp %}}
 
-<dl class="resources-properties">
-  
-    <dt
+<dl class="resources-properties"><dt
         class="property-required" title="Required">
         <span>name</span>
         <span class="property-indicator"></span>
@@ -347,9 +347,7 @@ const dashboard = new azure_native.portal.Dashboard("dashboard", {
     </dt>
     <dd>
       The unique name of the resource.
-    </dd>
-  
-    <dt
+    </dd><dt
         class="property-required" title="Required">
         <span>args</span>
         <span class="property-indicator"></span>
@@ -357,9 +355,7 @@ const dashboard = new azure_native.portal.Dashboard("dashboard", {
     </dt>
     <dd>
       The arguments to resource properties.
-    </dd>
-  
-    <dt
+    </dd><dt
         class="property-optional" title="Optional">
         <span>opts</span>
         <span class="property-indicator"></span>
@@ -367,10 +363,7 @@ const dashboard = new azure_native.portal.Dashboard("dashboard", {
     </dt>
     <dd>
       Bag of options to control resource&#39;s behavior.
-    </dd>
-  
-
-</dl>
+    </dd></dl>
 
 {{% /choosable %}}
 
@@ -385,9 +378,7 @@ The Dashboard resource accepts the following [input]({{< relref "/docs/intro/con
 
 
 {{% choosable language csharp %}}
-<dl class="resources-properties">
-
-    <dt class="property-required"
+<dl class="resources-properties"><dt class="property-required"
             title="Required">
         <span id="resourcegroupname_csharp">
 <a href="#resourcegroupname_csharp" style="color: inherit; text-decoration: inherit;">Resource<wbr>Group<wbr>Name</a>
@@ -395,8 +386,7 @@ The Dashboard resource accepts the following [input]({{< relref "/docs/intro/con
         <span class="property-indicator"></span>
         <span class="property-type">string</span>
     </dt>
-    <dd>{{% md %}}The name of the resource group.{{% /md %}}</dd>
-    <dt class="property-optional"
+    <dd>{{% md %}}The name of the resource group.{{% /md %}}</dd><dt class="property-optional"
             title="Optional">
         <span id="dashboardname_csharp">
 <a href="#dashboardname_csharp" style="color: inherit; text-decoration: inherit;">Dashboard<wbr>Name</a>
@@ -404,8 +394,7 @@ The Dashboard resource accepts the following [input]({{< relref "/docs/intro/con
         <span class="property-indicator"></span>
         <span class="property-type">string</span>
     </dt>
-    <dd>{{% md %}}The name of the dashboard.{{% /md %}}</dd>
-    <dt class="property-optional"
+    <dd>{{% md %}}The name of the dashboard.{{% /md %}}</dd><dt class="property-optional"
             title="Optional">
         <span id="lenses_csharp">
 <a href="#lenses_csharp" style="color: inherit; text-decoration: inherit;">Lenses</a>
@@ -413,8 +402,7 @@ The Dashboard resource accepts the following [input]({{< relref "/docs/intro/con
         <span class="property-indicator"></span>
         <span class="property-type"><a href="#dashboardlens">List&lt;Pulumi.<wbr>Azure<wbr>Native.<wbr>Portal.<wbr>Inputs.<wbr>Dashboard<wbr>Lens<wbr>Args&gt;</a></span>
     </dt>
-    <dd>{{% md %}}The dashboard lenses.{{% /md %}}</dd>
-    <dt class="property-optional"
+    <dd>{{% md %}}The dashboard lenses.{{% /md %}}</dd><dt class="property-optional"
             title="Optional">
         <span id="location_csharp">
 <a href="#location_csharp" style="color: inherit; text-decoration: inherit;">Location</a>
@@ -422,8 +410,7 @@ The Dashboard resource accepts the following [input]({{< relref "/docs/intro/con
         <span class="property-indicator"></span>
         <span class="property-type">string</span>
     </dt>
-    <dd>{{% md %}}Resource location{{% /md %}}</dd>
-    <dt class="property-optional"
+    <dd>{{% md %}}Resource location{{% /md %}}</dd><dt class="property-optional"
             title="Optional">
         <span id="metadata_csharp">
 <a href="#metadata_csharp" style="color: inherit; text-decoration: inherit;">Metadata</a>
@@ -431,8 +418,7 @@ The Dashboard resource accepts the following [input]({{< relref "/docs/intro/con
         <span class="property-indicator"></span>
         <span class="property-type">Dictionary&lt;string, object&gt;</span>
     </dt>
-    <dd>{{% md %}}The dashboard metadata.{{% /md %}}</dd>
-    <dt class="property-optional"
+    <dd>{{% md %}}The dashboard metadata.{{% /md %}}</dd><dt class="property-optional"
             title="Optional">
         <span id="tags_csharp">
 <a href="#tags_csharp" style="color: inherit; text-decoration: inherit;">Tags</a>
@@ -440,14 +426,11 @@ The Dashboard resource accepts the following [input]({{< relref "/docs/intro/con
         <span class="property-indicator"></span>
         <span class="property-type">Dictionary&lt;string, string&gt;</span>
     </dt>
-    <dd>{{% md %}}Resource tags{{% /md %}}</dd>
-</dl>
+    <dd>{{% md %}}Resource tags{{% /md %}}</dd></dl>
 {{% /choosable %}}
 
 {{% choosable language go %}}
-<dl class="resources-properties">
-
-    <dt class="property-required"
+<dl class="resources-properties"><dt class="property-required"
             title="Required">
         <span id="resourcegroupname_go">
 <a href="#resourcegroupname_go" style="color: inherit; text-decoration: inherit;">Resource<wbr>Group<wbr>Name</a>
@@ -455,8 +438,7 @@ The Dashboard resource accepts the following [input]({{< relref "/docs/intro/con
         <span class="property-indicator"></span>
         <span class="property-type">string</span>
     </dt>
-    <dd>{{% md %}}The name of the resource group.{{% /md %}}</dd>
-    <dt class="property-optional"
+    <dd>{{% md %}}The name of the resource group.{{% /md %}}</dd><dt class="property-optional"
             title="Optional">
         <span id="dashboardname_go">
 <a href="#dashboardname_go" style="color: inherit; text-decoration: inherit;">Dashboard<wbr>Name</a>
@@ -464,8 +446,7 @@ The Dashboard resource accepts the following [input]({{< relref "/docs/intro/con
         <span class="property-indicator"></span>
         <span class="property-type">string</span>
     </dt>
-    <dd>{{% md %}}The name of the dashboard.{{% /md %}}</dd>
-    <dt class="property-optional"
+    <dd>{{% md %}}The name of the dashboard.{{% /md %}}</dd><dt class="property-optional"
             title="Optional">
         <span id="lenses_go">
 <a href="#lenses_go" style="color: inherit; text-decoration: inherit;">Lenses</a>
@@ -473,8 +454,7 @@ The Dashboard resource accepts the following [input]({{< relref "/docs/intro/con
         <span class="property-indicator"></span>
         <span class="property-type"><a href="#dashboardlens">[]Dashboard<wbr>Lens</a></span>
     </dt>
-    <dd>{{% md %}}The dashboard lenses.{{% /md %}}</dd>
-    <dt class="property-optional"
+    <dd>{{% md %}}The dashboard lenses.{{% /md %}}</dd><dt class="property-optional"
             title="Optional">
         <span id="location_go">
 <a href="#location_go" style="color: inherit; text-decoration: inherit;">Location</a>
@@ -482,8 +462,7 @@ The Dashboard resource accepts the following [input]({{< relref "/docs/intro/con
         <span class="property-indicator"></span>
         <span class="property-type">string</span>
     </dt>
-    <dd>{{% md %}}Resource location{{% /md %}}</dd>
-    <dt class="property-optional"
+    <dd>{{% md %}}Resource location{{% /md %}}</dd><dt class="property-optional"
             title="Optional">
         <span id="metadata_go">
 <a href="#metadata_go" style="color: inherit; text-decoration: inherit;">Metadata</a>
@@ -491,8 +470,7 @@ The Dashboard resource accepts the following [input]({{< relref "/docs/intro/con
         <span class="property-indicator"></span>
         <span class="property-type">map[string]interface{}</span>
     </dt>
-    <dd>{{% md %}}The dashboard metadata.{{% /md %}}</dd>
-    <dt class="property-optional"
+    <dd>{{% md %}}The dashboard metadata.{{% /md %}}</dd><dt class="property-optional"
             title="Optional">
         <span id="tags_go">
 <a href="#tags_go" style="color: inherit; text-decoration: inherit;">Tags</a>
@@ -500,14 +478,11 @@ The Dashboard resource accepts the following [input]({{< relref "/docs/intro/con
         <span class="property-indicator"></span>
         <span class="property-type">map[string]string</span>
     </dt>
-    <dd>{{% md %}}Resource tags{{% /md %}}</dd>
-</dl>
+    <dd>{{% md %}}Resource tags{{% /md %}}</dd></dl>
 {{% /choosable %}}
 
 {{% choosable language nodejs %}}
-<dl class="resources-properties">
-
-    <dt class="property-required"
+<dl class="resources-properties"><dt class="property-required"
             title="Required">
         <span id="resourcegroupname_nodejs">
 <a href="#resourcegroupname_nodejs" style="color: inherit; text-decoration: inherit;">resource<wbr>Group<wbr>Name</a>
@@ -515,8 +490,7 @@ The Dashboard resource accepts the following [input]({{< relref "/docs/intro/con
         <span class="property-indicator"></span>
         <span class="property-type">string</span>
     </dt>
-    <dd>{{% md %}}The name of the resource group.{{% /md %}}</dd>
-    <dt class="property-optional"
+    <dd>{{% md %}}The name of the resource group.{{% /md %}}</dd><dt class="property-optional"
             title="Optional">
         <span id="dashboardname_nodejs">
 <a href="#dashboardname_nodejs" style="color: inherit; text-decoration: inherit;">dashboard<wbr>Name</a>
@@ -524,8 +498,7 @@ The Dashboard resource accepts the following [input]({{< relref "/docs/intro/con
         <span class="property-indicator"></span>
         <span class="property-type">string</span>
     </dt>
-    <dd>{{% md %}}The name of the dashboard.{{% /md %}}</dd>
-    <dt class="property-optional"
+    <dd>{{% md %}}The name of the dashboard.{{% /md %}}</dd><dt class="property-optional"
             title="Optional">
         <span id="lenses_nodejs">
 <a href="#lenses_nodejs" style="color: inherit; text-decoration: inherit;">lenses</a>
@@ -533,8 +506,7 @@ The Dashboard resource accepts the following [input]({{< relref "/docs/intro/con
         <span class="property-indicator"></span>
         <span class="property-type"><a href="#dashboardlens">Dashboard<wbr>Lens[]</a></span>
     </dt>
-    <dd>{{% md %}}The dashboard lenses.{{% /md %}}</dd>
-    <dt class="property-optional"
+    <dd>{{% md %}}The dashboard lenses.{{% /md %}}</dd><dt class="property-optional"
             title="Optional">
         <span id="location_nodejs">
 <a href="#location_nodejs" style="color: inherit; text-decoration: inherit;">location</a>
@@ -542,8 +514,7 @@ The Dashboard resource accepts the following [input]({{< relref "/docs/intro/con
         <span class="property-indicator"></span>
         <span class="property-type">string</span>
     </dt>
-    <dd>{{% md %}}Resource location{{% /md %}}</dd>
-    <dt class="property-optional"
+    <dd>{{% md %}}Resource location{{% /md %}}</dd><dt class="property-optional"
             title="Optional">
         <span id="metadata_nodejs">
 <a href="#metadata_nodejs" style="color: inherit; text-decoration: inherit;">metadata</a>
@@ -551,8 +522,7 @@ The Dashboard resource accepts the following [input]({{< relref "/docs/intro/con
         <span class="property-indicator"></span>
         <span class="property-type">{[key: string]: any}</span>
     </dt>
-    <dd>{{% md %}}The dashboard metadata.{{% /md %}}</dd>
-    <dt class="property-optional"
+    <dd>{{% md %}}The dashboard metadata.{{% /md %}}</dd><dt class="property-optional"
             title="Optional">
         <span id="tags_nodejs">
 <a href="#tags_nodejs" style="color: inherit; text-decoration: inherit;">tags</a>
@@ -560,14 +530,11 @@ The Dashboard resource accepts the following [input]({{< relref "/docs/intro/con
         <span class="property-indicator"></span>
         <span class="property-type">{[key: string]: string}</span>
     </dt>
-    <dd>{{% md %}}Resource tags{{% /md %}}</dd>
-</dl>
+    <dd>{{% md %}}Resource tags{{% /md %}}</dd></dl>
 {{% /choosable %}}
 
 {{% choosable language python %}}
-<dl class="resources-properties">
-
-    <dt class="property-required"
+<dl class="resources-properties"><dt class="property-required"
             title="Required">
         <span id="resource_group_name_python">
 <a href="#resource_group_name_python" style="color: inherit; text-decoration: inherit;">resource_<wbr>group_<wbr>name</a>
@@ -575,8 +542,7 @@ The Dashboard resource accepts the following [input]({{< relref "/docs/intro/con
         <span class="property-indicator"></span>
         <span class="property-type">str</span>
     </dt>
-    <dd>{{% md %}}The name of the resource group.{{% /md %}}</dd>
-    <dt class="property-optional"
+    <dd>{{% md %}}The name of the resource group.{{% /md %}}</dd><dt class="property-optional"
             title="Optional">
         <span id="dashboard_name_python">
 <a href="#dashboard_name_python" style="color: inherit; text-decoration: inherit;">dashboard_<wbr>name</a>
@@ -584,8 +550,7 @@ The Dashboard resource accepts the following [input]({{< relref "/docs/intro/con
         <span class="property-indicator"></span>
         <span class="property-type">str</span>
     </dt>
-    <dd>{{% md %}}The name of the dashboard.{{% /md %}}</dd>
-    <dt class="property-optional"
+    <dd>{{% md %}}The name of the dashboard.{{% /md %}}</dd><dt class="property-optional"
             title="Optional">
         <span id="lenses_python">
 <a href="#lenses_python" style="color: inherit; text-decoration: inherit;">lenses</a>
@@ -593,8 +558,7 @@ The Dashboard resource accepts the following [input]({{< relref "/docs/intro/con
         <span class="property-indicator"></span>
         <span class="property-type"><a href="#dashboardlens">Sequence[Dashboard<wbr>Lens<wbr>Args]</a></span>
     </dt>
-    <dd>{{% md %}}The dashboard lenses.{{% /md %}}</dd>
-    <dt class="property-optional"
+    <dd>{{% md %}}The dashboard lenses.{{% /md %}}</dd><dt class="property-optional"
             title="Optional">
         <span id="location_python">
 <a href="#location_python" style="color: inherit; text-decoration: inherit;">location</a>
@@ -602,8 +566,7 @@ The Dashboard resource accepts the following [input]({{< relref "/docs/intro/con
         <span class="property-indicator"></span>
         <span class="property-type">str</span>
     </dt>
-    <dd>{{% md %}}Resource location{{% /md %}}</dd>
-    <dt class="property-optional"
+    <dd>{{% md %}}Resource location{{% /md %}}</dd><dt class="property-optional"
             title="Optional">
         <span id="metadata_python">
 <a href="#metadata_python" style="color: inherit; text-decoration: inherit;">metadata</a>
@@ -611,8 +574,7 @@ The Dashboard resource accepts the following [input]({{< relref "/docs/intro/con
         <span class="property-indicator"></span>
         <span class="property-type">Mapping[str, Any]</span>
     </dt>
-    <dd>{{% md %}}The dashboard metadata.{{% /md %}}</dd>
-    <dt class="property-optional"
+    <dd>{{% md %}}The dashboard metadata.{{% /md %}}</dd><dt class="property-optional"
             title="Optional">
         <span id="tags_python">
 <a href="#tags_python" style="color: inherit; text-decoration: inherit;">tags</a>
@@ -620,8 +582,7 @@ The Dashboard resource accepts the following [input]({{< relref "/docs/intro/con
         <span class="property-indicator"></span>
         <span class="property-type">Mapping[str, str]</span>
     </dt>
-    <dd>{{% md %}}Resource tags{{% /md %}}</dd>
-</dl>
+    <dd>{{% md %}}Resource tags{{% /md %}}</dd></dl>
 {{% /choosable %}}
 
 
@@ -632,9 +593,7 @@ All [input](#inputs) properties are implicitly available as output properties. A
 
 
 {{% choosable language csharp %}}
-<dl class="resources-properties">
-
-    <dt class="property-"
+<dl class="resources-properties"><dt class="property-"
             title="">
         <span id="id_csharp">
 <a href="#id_csharp" style="color: inherit; text-decoration: inherit;">Id</a>
@@ -642,8 +601,7 @@ All [input](#inputs) properties are implicitly available as output properties. A
         <span class="property-indicator"></span>
         <span class="property-type">string</span>
     </dt>
-    <dd>{{% md %}}The provider-assigned unique ID for this managed resource.{{% /md %}}</dd>
-    <dt class="property-"
+    <dd>{{% md %}}The provider-assigned unique ID for this managed resource.{{% /md %}}</dd><dt class="property-"
             title="">
         <span id="name_csharp">
 <a href="#name_csharp" style="color: inherit; text-decoration: inherit;">Name</a>
@@ -651,8 +609,7 @@ All [input](#inputs) properties are implicitly available as output properties. A
         <span class="property-indicator"></span>
         <span class="property-type">string</span>
     </dt>
-    <dd>{{% md %}}Resource name{{% /md %}}</dd>
-    <dt class="property-"
+    <dd>{{% md %}}Resource name{{% /md %}}</dd><dt class="property-"
             title="">
         <span id="type_csharp">
 <a href="#type_csharp" style="color: inherit; text-decoration: inherit;">Type</a>
@@ -660,14 +617,11 @@ All [input](#inputs) properties are implicitly available as output properties. A
         <span class="property-indicator"></span>
         <span class="property-type">string</span>
     </dt>
-    <dd>{{% md %}}Resource type{{% /md %}}</dd>
-</dl>
+    <dd>{{% md %}}Resource type{{% /md %}}</dd></dl>
 {{% /choosable %}}
 
 {{% choosable language go %}}
-<dl class="resources-properties">
-
-    <dt class="property-"
+<dl class="resources-properties"><dt class="property-"
             title="">
         <span id="id_go">
 <a href="#id_go" style="color: inherit; text-decoration: inherit;">Id</a>
@@ -675,8 +629,7 @@ All [input](#inputs) properties are implicitly available as output properties. A
         <span class="property-indicator"></span>
         <span class="property-type">string</span>
     </dt>
-    <dd>{{% md %}}The provider-assigned unique ID for this managed resource.{{% /md %}}</dd>
-    <dt class="property-"
+    <dd>{{% md %}}The provider-assigned unique ID for this managed resource.{{% /md %}}</dd><dt class="property-"
             title="">
         <span id="name_go">
 <a href="#name_go" style="color: inherit; text-decoration: inherit;">Name</a>
@@ -684,8 +637,7 @@ All [input](#inputs) properties are implicitly available as output properties. A
         <span class="property-indicator"></span>
         <span class="property-type">string</span>
     </dt>
-    <dd>{{% md %}}Resource name{{% /md %}}</dd>
-    <dt class="property-"
+    <dd>{{% md %}}Resource name{{% /md %}}</dd><dt class="property-"
             title="">
         <span id="type_go">
 <a href="#type_go" style="color: inherit; text-decoration: inherit;">Type</a>
@@ -693,14 +645,11 @@ All [input](#inputs) properties are implicitly available as output properties. A
         <span class="property-indicator"></span>
         <span class="property-type">string</span>
     </dt>
-    <dd>{{% md %}}Resource type{{% /md %}}</dd>
-</dl>
+    <dd>{{% md %}}Resource type{{% /md %}}</dd></dl>
 {{% /choosable %}}
 
 {{% choosable language nodejs %}}
-<dl class="resources-properties">
-
-    <dt class="property-"
+<dl class="resources-properties"><dt class="property-"
             title="">
         <span id="id_nodejs">
 <a href="#id_nodejs" style="color: inherit; text-decoration: inherit;">id</a>
@@ -708,8 +657,7 @@ All [input](#inputs) properties are implicitly available as output properties. A
         <span class="property-indicator"></span>
         <span class="property-type">string</span>
     </dt>
-    <dd>{{% md %}}The provider-assigned unique ID for this managed resource.{{% /md %}}</dd>
-    <dt class="property-"
+    <dd>{{% md %}}The provider-assigned unique ID for this managed resource.{{% /md %}}</dd><dt class="property-"
             title="">
         <span id="name_nodejs">
 <a href="#name_nodejs" style="color: inherit; text-decoration: inherit;">name</a>
@@ -717,8 +665,7 @@ All [input](#inputs) properties are implicitly available as output properties. A
         <span class="property-indicator"></span>
         <span class="property-type">string</span>
     </dt>
-    <dd>{{% md %}}Resource name{{% /md %}}</dd>
-    <dt class="property-"
+    <dd>{{% md %}}Resource name{{% /md %}}</dd><dt class="property-"
             title="">
         <span id="type_nodejs">
 <a href="#type_nodejs" style="color: inherit; text-decoration: inherit;">type</a>
@@ -726,14 +673,11 @@ All [input](#inputs) properties are implicitly available as output properties. A
         <span class="property-indicator"></span>
         <span class="property-type">string</span>
     </dt>
-    <dd>{{% md %}}Resource type{{% /md %}}</dd>
-</dl>
+    <dd>{{% md %}}Resource type{{% /md %}}</dd></dl>
 {{% /choosable %}}
 
 {{% choosable language python %}}
-<dl class="resources-properties">
-
-    <dt class="property-"
+<dl class="resources-properties"><dt class="property-"
             title="">
         <span id="id_python">
 <a href="#id_python" style="color: inherit; text-decoration: inherit;">id</a>
@@ -741,8 +685,7 @@ All [input](#inputs) properties are implicitly available as output properties. A
         <span class="property-indicator"></span>
         <span class="property-type">str</span>
     </dt>
-    <dd>{{% md %}}The provider-assigned unique ID for this managed resource.{{% /md %}}</dd>
-    <dt class="property-"
+    <dd>{{% md %}}The provider-assigned unique ID for this managed resource.{{% /md %}}</dd><dt class="property-"
             title="">
         <span id="name_python">
 <a href="#name_python" style="color: inherit; text-decoration: inherit;">name</a>
@@ -750,8 +693,7 @@ All [input](#inputs) properties are implicitly available as output properties. A
         <span class="property-indicator"></span>
         <span class="property-type">str</span>
     </dt>
-    <dd>{{% md %}}Resource name{{% /md %}}</dd>
-    <dt class="property-"
+    <dd>{{% md %}}Resource name{{% /md %}}</dd><dt class="property-"
             title="">
         <span id="type_python">
 <a href="#type_python" style="color: inherit; text-decoration: inherit;">type</a>
@@ -759,8 +701,7 @@ All [input](#inputs) properties are implicitly available as output properties. A
         <span class="property-indicator"></span>
         <span class="property-type">str</span>
     </dt>
-    <dd>{{% md %}}Resource type{{% /md %}}</dd>
-</dl>
+    <dd>{{% md %}}Resource type{{% /md %}}</dd></dl>
 {{% /choosable %}}
 
 
@@ -776,9 +717,7 @@ All [input](#inputs) properties are implicitly available as output properties. A
 <h4 id="dashboardlens">Dashboard<wbr>Lens</h4>
 
 {{% choosable language csharp %}}
-<dl class="resources-properties">
-
-    <dt class="property-required"
+<dl class="resources-properties"><dt class="property-required"
             title="Required">
         <span id="order_csharp">
 <a href="#order_csharp" style="color: inherit; text-decoration: inherit;">Order</a>
@@ -786,8 +725,7 @@ All [input](#inputs) properties are implicitly available as output properties. A
         <span class="property-indicator"></span>
         <span class="property-type">int</span>
     </dt>
-    <dd>{{% md %}}The lens order.{{% /md %}}</dd>
-    <dt class="property-required"
+    <dd>{{% md %}}The lens order.{{% /md %}}</dd><dt class="property-required"
             title="Required">
         <span id="parts_csharp">
 <a href="#parts_csharp" style="color: inherit; text-decoration: inherit;">Parts</a>
@@ -795,8 +733,7 @@ All [input](#inputs) properties are implicitly available as output properties. A
         <span class="property-indicator"></span>
         <span class="property-type"><a href="#dashboardparts">List&lt;Pulumi.<wbr>Azure<wbr>Native.<wbr>Portal.<wbr>Inputs.<wbr>Dashboard<wbr>Parts<wbr>Args&gt;</a></span>
     </dt>
-    <dd>{{% md %}}The dashboard parts.{{% /md %}}</dd>
-    <dt class="property-optional"
+    <dd>{{% md %}}The dashboard parts.{{% /md %}}</dd><dt class="property-optional"
             title="Optional">
         <span id="metadata_csharp">
 <a href="#metadata_csharp" style="color: inherit; text-decoration: inherit;">Metadata</a>
@@ -804,14 +741,11 @@ All [input](#inputs) properties are implicitly available as output properties. A
         <span class="property-indicator"></span>
         <span class="property-type">Dictionary&lt;string, object&gt;</span>
     </dt>
-    <dd>{{% md %}}The dashboard len's metadata.{{% /md %}}</dd>
-</dl>
+    <dd>{{% md %}}The dashboard len's metadata.{{% /md %}}</dd></dl>
 {{% /choosable %}}
 
 {{% choosable language go %}}
-<dl class="resources-properties">
-
-    <dt class="property-required"
+<dl class="resources-properties"><dt class="property-required"
             title="Required">
         <span id="order_go">
 <a href="#order_go" style="color: inherit; text-decoration: inherit;">Order</a>
@@ -819,8 +753,7 @@ All [input](#inputs) properties are implicitly available as output properties. A
         <span class="property-indicator"></span>
         <span class="property-type">int</span>
     </dt>
-    <dd>{{% md %}}The lens order.{{% /md %}}</dd>
-    <dt class="property-required"
+    <dd>{{% md %}}The lens order.{{% /md %}}</dd><dt class="property-required"
             title="Required">
         <span id="parts_go">
 <a href="#parts_go" style="color: inherit; text-decoration: inherit;">Parts</a>
@@ -828,8 +761,7 @@ All [input](#inputs) properties are implicitly available as output properties. A
         <span class="property-indicator"></span>
         <span class="property-type"><a href="#dashboardparts">[]Dashboard<wbr>Parts</a></span>
     </dt>
-    <dd>{{% md %}}The dashboard parts.{{% /md %}}</dd>
-    <dt class="property-optional"
+    <dd>{{% md %}}The dashboard parts.{{% /md %}}</dd><dt class="property-optional"
             title="Optional">
         <span id="metadata_go">
 <a href="#metadata_go" style="color: inherit; text-decoration: inherit;">Metadata</a>
@@ -837,14 +769,11 @@ All [input](#inputs) properties are implicitly available as output properties. A
         <span class="property-indicator"></span>
         <span class="property-type">map[string]interface{}</span>
     </dt>
-    <dd>{{% md %}}The dashboard len's metadata.{{% /md %}}</dd>
-</dl>
+    <dd>{{% md %}}The dashboard len's metadata.{{% /md %}}</dd></dl>
 {{% /choosable %}}
 
 {{% choosable language nodejs %}}
-<dl class="resources-properties">
-
-    <dt class="property-required"
+<dl class="resources-properties"><dt class="property-required"
             title="Required">
         <span id="order_nodejs">
 <a href="#order_nodejs" style="color: inherit; text-decoration: inherit;">order</a>
@@ -852,8 +781,7 @@ All [input](#inputs) properties are implicitly available as output properties. A
         <span class="property-indicator"></span>
         <span class="property-type">number</span>
     </dt>
-    <dd>{{% md %}}The lens order.{{% /md %}}</dd>
-    <dt class="property-required"
+    <dd>{{% md %}}The lens order.{{% /md %}}</dd><dt class="property-required"
             title="Required">
         <span id="parts_nodejs">
 <a href="#parts_nodejs" style="color: inherit; text-decoration: inherit;">parts</a>
@@ -861,8 +789,7 @@ All [input](#inputs) properties are implicitly available as output properties. A
         <span class="property-indicator"></span>
         <span class="property-type"><a href="#dashboardparts">Dashboard<wbr>Parts[]</a></span>
     </dt>
-    <dd>{{% md %}}The dashboard parts.{{% /md %}}</dd>
-    <dt class="property-optional"
+    <dd>{{% md %}}The dashboard parts.{{% /md %}}</dd><dt class="property-optional"
             title="Optional">
         <span id="metadata_nodejs">
 <a href="#metadata_nodejs" style="color: inherit; text-decoration: inherit;">metadata</a>
@@ -870,14 +797,11 @@ All [input](#inputs) properties are implicitly available as output properties. A
         <span class="property-indicator"></span>
         <span class="property-type">{[key: string]: any}</span>
     </dt>
-    <dd>{{% md %}}The dashboard len's metadata.{{% /md %}}</dd>
-</dl>
+    <dd>{{% md %}}The dashboard len's metadata.{{% /md %}}</dd></dl>
 {{% /choosable %}}
 
 {{% choosable language python %}}
-<dl class="resources-properties">
-
-    <dt class="property-required"
+<dl class="resources-properties"><dt class="property-required"
             title="Required">
         <span id="order_python">
 <a href="#order_python" style="color: inherit; text-decoration: inherit;">order</a>
@@ -885,8 +809,7 @@ All [input](#inputs) properties are implicitly available as output properties. A
         <span class="property-indicator"></span>
         <span class="property-type">int</span>
     </dt>
-    <dd>{{% md %}}The lens order.{{% /md %}}</dd>
-    <dt class="property-required"
+    <dd>{{% md %}}The lens order.{{% /md %}}</dd><dt class="property-required"
             title="Required">
         <span id="parts_python">
 <a href="#parts_python" style="color: inherit; text-decoration: inherit;">parts</a>
@@ -894,8 +817,7 @@ All [input](#inputs) properties are implicitly available as output properties. A
         <span class="property-indicator"></span>
         <span class="property-type"><a href="#dashboardparts">Sequence[Dashboard<wbr>Parts<wbr>Args]</a></span>
     </dt>
-    <dd>{{% md %}}The dashboard parts.{{% /md %}}</dd>
-    <dt class="property-optional"
+    <dd>{{% md %}}The dashboard parts.{{% /md %}}</dd><dt class="property-optional"
             title="Optional">
         <span id="metadata_python">
 <a href="#metadata_python" style="color: inherit; text-decoration: inherit;">metadata</a>
@@ -903,16 +825,13 @@ All [input](#inputs) properties are implicitly available as output properties. A
         <span class="property-indicator"></span>
         <span class="property-type">Mapping[str, Any]</span>
     </dt>
-    <dd>{{% md %}}The dashboard len's metadata.{{% /md %}}</dd>
-</dl>
+    <dd>{{% md %}}The dashboard len's metadata.{{% /md %}}</dd></dl>
 {{% /choosable %}}
 
 <h4 id="dashboardlensresponse">Dashboard<wbr>Lens<wbr>Response</h4>
 
 {{% choosable language csharp %}}
-<dl class="resources-properties">
-
-    <dt class="property-required"
+<dl class="resources-properties"><dt class="property-required"
             title="Required">
         <span id="order_csharp">
 <a href="#order_csharp" style="color: inherit; text-decoration: inherit;">Order</a>
@@ -920,8 +839,7 @@ All [input](#inputs) properties are implicitly available as output properties. A
         <span class="property-indicator"></span>
         <span class="property-type">int</span>
     </dt>
-    <dd>{{% md %}}The lens order.{{% /md %}}</dd>
-    <dt class="property-required"
+    <dd>{{% md %}}The lens order.{{% /md %}}</dd><dt class="property-required"
             title="Required">
         <span id="parts_csharp">
 <a href="#parts_csharp" style="color: inherit; text-decoration: inherit;">Parts</a>
@@ -929,8 +847,7 @@ All [input](#inputs) properties are implicitly available as output properties. A
         <span class="property-indicator"></span>
         <span class="property-type"><a href="#dashboardpartsresponse">List&lt;Pulumi.<wbr>Azure<wbr>Native.<wbr>Portal.<wbr>Inputs.<wbr>Dashboard<wbr>Parts<wbr>Response<wbr>Args&gt;</a></span>
     </dt>
-    <dd>{{% md %}}The dashboard parts.{{% /md %}}</dd>
-    <dt class="property-optional"
+    <dd>{{% md %}}The dashboard parts.{{% /md %}}</dd><dt class="property-optional"
             title="Optional">
         <span id="metadata_csharp">
 <a href="#metadata_csharp" style="color: inherit; text-decoration: inherit;">Metadata</a>
@@ -938,14 +855,11 @@ All [input](#inputs) properties are implicitly available as output properties. A
         <span class="property-indicator"></span>
         <span class="property-type">Dictionary&lt;string, object&gt;</span>
     </dt>
-    <dd>{{% md %}}The dashboard len's metadata.{{% /md %}}</dd>
-</dl>
+    <dd>{{% md %}}The dashboard len's metadata.{{% /md %}}</dd></dl>
 {{% /choosable %}}
 
 {{% choosable language go %}}
-<dl class="resources-properties">
-
-    <dt class="property-required"
+<dl class="resources-properties"><dt class="property-required"
             title="Required">
         <span id="order_go">
 <a href="#order_go" style="color: inherit; text-decoration: inherit;">Order</a>
@@ -953,8 +867,7 @@ All [input](#inputs) properties are implicitly available as output properties. A
         <span class="property-indicator"></span>
         <span class="property-type">int</span>
     </dt>
-    <dd>{{% md %}}The lens order.{{% /md %}}</dd>
-    <dt class="property-required"
+    <dd>{{% md %}}The lens order.{{% /md %}}</dd><dt class="property-required"
             title="Required">
         <span id="parts_go">
 <a href="#parts_go" style="color: inherit; text-decoration: inherit;">Parts</a>
@@ -962,8 +875,7 @@ All [input](#inputs) properties are implicitly available as output properties. A
         <span class="property-indicator"></span>
         <span class="property-type"><a href="#dashboardpartsresponse">[]Dashboard<wbr>Parts<wbr>Response</a></span>
     </dt>
-    <dd>{{% md %}}The dashboard parts.{{% /md %}}</dd>
-    <dt class="property-optional"
+    <dd>{{% md %}}The dashboard parts.{{% /md %}}</dd><dt class="property-optional"
             title="Optional">
         <span id="metadata_go">
 <a href="#metadata_go" style="color: inherit; text-decoration: inherit;">Metadata</a>
@@ -971,14 +883,11 @@ All [input](#inputs) properties are implicitly available as output properties. A
         <span class="property-indicator"></span>
         <span class="property-type">map[string]interface{}</span>
     </dt>
-    <dd>{{% md %}}The dashboard len's metadata.{{% /md %}}</dd>
-</dl>
+    <dd>{{% md %}}The dashboard len's metadata.{{% /md %}}</dd></dl>
 {{% /choosable %}}
 
 {{% choosable language nodejs %}}
-<dl class="resources-properties">
-
-    <dt class="property-required"
+<dl class="resources-properties"><dt class="property-required"
             title="Required">
         <span id="order_nodejs">
 <a href="#order_nodejs" style="color: inherit; text-decoration: inherit;">order</a>
@@ -986,8 +895,7 @@ All [input](#inputs) properties are implicitly available as output properties. A
         <span class="property-indicator"></span>
         <span class="property-type">number</span>
     </dt>
-    <dd>{{% md %}}The lens order.{{% /md %}}</dd>
-    <dt class="property-required"
+    <dd>{{% md %}}The lens order.{{% /md %}}</dd><dt class="property-required"
             title="Required">
         <span id="parts_nodejs">
 <a href="#parts_nodejs" style="color: inherit; text-decoration: inherit;">parts</a>
@@ -995,8 +903,7 @@ All [input](#inputs) properties are implicitly available as output properties. A
         <span class="property-indicator"></span>
         <span class="property-type"><a href="#dashboardpartsresponse">Dashboard<wbr>Parts<wbr>Response[]</a></span>
     </dt>
-    <dd>{{% md %}}The dashboard parts.{{% /md %}}</dd>
-    <dt class="property-optional"
+    <dd>{{% md %}}The dashboard parts.{{% /md %}}</dd><dt class="property-optional"
             title="Optional">
         <span id="metadata_nodejs">
 <a href="#metadata_nodejs" style="color: inherit; text-decoration: inherit;">metadata</a>
@@ -1004,14 +911,11 @@ All [input](#inputs) properties are implicitly available as output properties. A
         <span class="property-indicator"></span>
         <span class="property-type">{[key: string]: any}</span>
     </dt>
-    <dd>{{% md %}}The dashboard len's metadata.{{% /md %}}</dd>
-</dl>
+    <dd>{{% md %}}The dashboard len's metadata.{{% /md %}}</dd></dl>
 {{% /choosable %}}
 
 {{% choosable language python %}}
-<dl class="resources-properties">
-
-    <dt class="property-required"
+<dl class="resources-properties"><dt class="property-required"
             title="Required">
         <span id="order_python">
 <a href="#order_python" style="color: inherit; text-decoration: inherit;">order</a>
@@ -1019,8 +923,7 @@ All [input](#inputs) properties are implicitly available as output properties. A
         <span class="property-indicator"></span>
         <span class="property-type">int</span>
     </dt>
-    <dd>{{% md %}}The lens order.{{% /md %}}</dd>
-    <dt class="property-required"
+    <dd>{{% md %}}The lens order.{{% /md %}}</dd><dt class="property-required"
             title="Required">
         <span id="parts_python">
 <a href="#parts_python" style="color: inherit; text-decoration: inherit;">parts</a>
@@ -1028,8 +931,7 @@ All [input](#inputs) properties are implicitly available as output properties. A
         <span class="property-indicator"></span>
         <span class="property-type"><a href="#dashboardpartsresponse">Sequence[Dashboard<wbr>Parts<wbr>Response<wbr>Args]</a></span>
     </dt>
-    <dd>{{% md %}}The dashboard parts.{{% /md %}}</dd>
-    <dt class="property-optional"
+    <dd>{{% md %}}The dashboard parts.{{% /md %}}</dd><dt class="property-optional"
             title="Optional">
         <span id="metadata_python">
 <a href="#metadata_python" style="color: inherit; text-decoration: inherit;">metadata</a>
@@ -1037,16 +939,13 @@ All [input](#inputs) properties are implicitly available as output properties. A
         <span class="property-indicator"></span>
         <span class="property-type">Mapping[str, Any]</span>
     </dt>
-    <dd>{{% md %}}The dashboard len's metadata.{{% /md %}}</dd>
-</dl>
+    <dd>{{% md %}}The dashboard len's metadata.{{% /md %}}</dd></dl>
 {{% /choosable %}}
 
 <h4 id="dashboardparts">Dashboard<wbr>Parts</h4>
 
 {{% choosable language csharp %}}
-<dl class="resources-properties">
-
-    <dt class="property-required"
+<dl class="resources-properties"><dt class="property-required"
             title="Required">
         <span id="position_csharp">
 <a href="#position_csharp" style="color: inherit; text-decoration: inherit;">Position</a>
@@ -1054,8 +953,7 @@ All [input](#inputs) properties are implicitly available as output properties. A
         <span class="property-indicator"></span>
         <span class="property-type"><a href="#dashboardpartsposition">Pulumi.<wbr>Azure<wbr>Native.<wbr>Portal.<wbr>Inputs.<wbr>Dashboard<wbr>Parts<wbr>Position<wbr>Args</a></span>
     </dt>
-    <dd>{{% md %}}The dashboard's part position.{{% /md %}}</dd>
-    <dt class="property-optional"
+    <dd>{{% md %}}The dashboard's part position.{{% /md %}}</dd><dt class="property-optional"
             title="Optional">
         <span id="metadata_csharp">
 <a href="#metadata_csharp" style="color: inherit; text-decoration: inherit;">Metadata</a>
@@ -1063,14 +961,11 @@ All [input](#inputs) properties are implicitly available as output properties. A
         <span class="property-indicator"></span>
         <span class="property-type"><a href="#markdownpartmetadata">Pulumi.<wbr>Azure<wbr>Native.<wbr>Portal.<wbr>Inputs.<wbr>Markdown<wbr>Part<wbr>Metadata<wbr>Args</a></span>
     </dt>
-    <dd>{{% md %}}The dashboard part's metadata.{{% /md %}}</dd>
-</dl>
+    <dd>{{% md %}}The dashboard part's metadata.{{% /md %}}</dd></dl>
 {{% /choosable %}}
 
 {{% choosable language go %}}
-<dl class="resources-properties">
-
-    <dt class="property-required"
+<dl class="resources-properties"><dt class="property-required"
             title="Required">
         <span id="position_go">
 <a href="#position_go" style="color: inherit; text-decoration: inherit;">Position</a>
@@ -1078,8 +973,7 @@ All [input](#inputs) properties are implicitly available as output properties. A
         <span class="property-indicator"></span>
         <span class="property-type"><a href="#dashboardpartsposition">Dashboard<wbr>Parts<wbr>Position</a></span>
     </dt>
-    <dd>{{% md %}}The dashboard's part position.{{% /md %}}</dd>
-    <dt class="property-optional"
+    <dd>{{% md %}}The dashboard's part position.{{% /md %}}</dd><dt class="property-optional"
             title="Optional">
         <span id="metadata_go">
 <a href="#metadata_go" style="color: inherit; text-decoration: inherit;">Metadata</a>
@@ -1087,14 +981,11 @@ All [input](#inputs) properties are implicitly available as output properties. A
         <span class="property-indicator"></span>
         <span class="property-type"><a href="#markdownpartmetadata">Markdown<wbr>Part<wbr>Metadata</a></span>
     </dt>
-    <dd>{{% md %}}The dashboard part's metadata.{{% /md %}}</dd>
-</dl>
+    <dd>{{% md %}}The dashboard part's metadata.{{% /md %}}</dd></dl>
 {{% /choosable %}}
 
 {{% choosable language nodejs %}}
-<dl class="resources-properties">
-
-    <dt class="property-required"
+<dl class="resources-properties"><dt class="property-required"
             title="Required">
         <span id="position_nodejs">
 <a href="#position_nodejs" style="color: inherit; text-decoration: inherit;">position</a>
@@ -1102,8 +993,7 @@ All [input](#inputs) properties are implicitly available as output properties. A
         <span class="property-indicator"></span>
         <span class="property-type"><a href="#dashboardpartsposition">Dashboard<wbr>Parts<wbr>Position</a></span>
     </dt>
-    <dd>{{% md %}}The dashboard's part position.{{% /md %}}</dd>
-    <dt class="property-optional"
+    <dd>{{% md %}}The dashboard's part position.{{% /md %}}</dd><dt class="property-optional"
             title="Optional">
         <span id="metadata_nodejs">
 <a href="#metadata_nodejs" style="color: inherit; text-decoration: inherit;">metadata</a>
@@ -1111,14 +1001,11 @@ All [input](#inputs) properties are implicitly available as output properties. A
         <span class="property-indicator"></span>
         <span class="property-type"><a href="#markdownpartmetadata">Markdown<wbr>Part<wbr>Metadata</a></span>
     </dt>
-    <dd>{{% md %}}The dashboard part's metadata.{{% /md %}}</dd>
-</dl>
+    <dd>{{% md %}}The dashboard part's metadata.{{% /md %}}</dd></dl>
 {{% /choosable %}}
 
 {{% choosable language python %}}
-<dl class="resources-properties">
-
-    <dt class="property-required"
+<dl class="resources-properties"><dt class="property-required"
             title="Required">
         <span id="position_python">
 <a href="#position_python" style="color: inherit; text-decoration: inherit;">position</a>
@@ -1126,8 +1013,7 @@ All [input](#inputs) properties are implicitly available as output properties. A
         <span class="property-indicator"></span>
         <span class="property-type"><a href="#dashboardpartsposition">Dashboard<wbr>Parts<wbr>Position<wbr>Args</a></span>
     </dt>
-    <dd>{{% md %}}The dashboard's part position.{{% /md %}}</dd>
-    <dt class="property-optional"
+    <dd>{{% md %}}The dashboard's part position.{{% /md %}}</dd><dt class="property-optional"
             title="Optional">
         <span id="metadata_python">
 <a href="#metadata_python" style="color: inherit; text-decoration: inherit;">metadata</a>
@@ -1135,16 +1021,13 @@ All [input](#inputs) properties are implicitly available as output properties. A
         <span class="property-indicator"></span>
         <span class="property-type"><a href="#markdownpartmetadata">Markdown<wbr>Part<wbr>Metadata<wbr>Args</a></span>
     </dt>
-    <dd>{{% md %}}The dashboard part's metadata.{{% /md %}}</dd>
-</dl>
+    <dd>{{% md %}}The dashboard part's metadata.{{% /md %}}</dd></dl>
 {{% /choosable %}}
 
 <h4 id="dashboardpartsposition">Dashboard<wbr>Parts<wbr>Position</h4>
 
 {{% choosable language csharp %}}
-<dl class="resources-properties">
-
-    <dt class="property-required"
+<dl class="resources-properties"><dt class="property-required"
             title="Required">
         <span id="colspan_csharp">
 <a href="#colspan_csharp" style="color: inherit; text-decoration: inherit;">Col<wbr>Span</a>
@@ -1152,8 +1035,7 @@ All [input](#inputs) properties are implicitly available as output properties. A
         <span class="property-indicator"></span>
         <span class="property-type">int</span>
     </dt>
-    <dd>{{% md %}}The dashboard's part column span.{{% /md %}}</dd>
-    <dt class="property-required"
+    <dd>{{% md %}}The dashboard's part column span.{{% /md %}}</dd><dt class="property-required"
             title="Required">
         <span id="rowspan_csharp">
 <a href="#rowspan_csharp" style="color: inherit; text-decoration: inherit;">Row<wbr>Span</a>
@@ -1161,8 +1043,7 @@ All [input](#inputs) properties are implicitly available as output properties. A
         <span class="property-indicator"></span>
         <span class="property-type">int</span>
     </dt>
-    <dd>{{% md %}}The dashboard's part row span.{{% /md %}}</dd>
-    <dt class="property-required"
+    <dd>{{% md %}}The dashboard's part row span.{{% /md %}}</dd><dt class="property-required"
             title="Required">
         <span id="x_csharp">
 <a href="#x_csharp" style="color: inherit; text-decoration: inherit;">X</a>
@@ -1170,8 +1051,7 @@ All [input](#inputs) properties are implicitly available as output properties. A
         <span class="property-indicator"></span>
         <span class="property-type">int</span>
     </dt>
-    <dd>{{% md %}}The dashboard's part x coordinate.{{% /md %}}</dd>
-    <dt class="property-required"
+    <dd>{{% md %}}The dashboard's part x coordinate.{{% /md %}}</dd><dt class="property-required"
             title="Required">
         <span id="y_csharp">
 <a href="#y_csharp" style="color: inherit; text-decoration: inherit;">Y</a>
@@ -1179,8 +1059,7 @@ All [input](#inputs) properties are implicitly available as output properties. A
         <span class="property-indicator"></span>
         <span class="property-type">int</span>
     </dt>
-    <dd>{{% md %}}The dashboard's part y coordinate.{{% /md %}}</dd>
-    <dt class="property-optional"
+    <dd>{{% md %}}The dashboard's part y coordinate.{{% /md %}}</dd><dt class="property-optional"
             title="Optional">
         <span id="metadata_csharp">
 <a href="#metadata_csharp" style="color: inherit; text-decoration: inherit;">Metadata</a>
@@ -1188,14 +1067,11 @@ All [input](#inputs) properties are implicitly available as output properties. A
         <span class="property-indicator"></span>
         <span class="property-type">Dictionary&lt;string, object&gt;</span>
     </dt>
-    <dd>{{% md %}}The dashboard part's metadata.{{% /md %}}</dd>
-</dl>
+    <dd>{{% md %}}The dashboard part's metadata.{{% /md %}}</dd></dl>
 {{% /choosable %}}
 
 {{% choosable language go %}}
-<dl class="resources-properties">
-
-    <dt class="property-required"
+<dl class="resources-properties"><dt class="property-required"
             title="Required">
         <span id="colspan_go">
 <a href="#colspan_go" style="color: inherit; text-decoration: inherit;">Col<wbr>Span</a>
@@ -1203,8 +1079,7 @@ All [input](#inputs) properties are implicitly available as output properties. A
         <span class="property-indicator"></span>
         <span class="property-type">int</span>
     </dt>
-    <dd>{{% md %}}The dashboard's part column span.{{% /md %}}</dd>
-    <dt class="property-required"
+    <dd>{{% md %}}The dashboard's part column span.{{% /md %}}</dd><dt class="property-required"
             title="Required">
         <span id="rowspan_go">
 <a href="#rowspan_go" style="color: inherit; text-decoration: inherit;">Row<wbr>Span</a>
@@ -1212,8 +1087,7 @@ All [input](#inputs) properties are implicitly available as output properties. A
         <span class="property-indicator"></span>
         <span class="property-type">int</span>
     </dt>
-    <dd>{{% md %}}The dashboard's part row span.{{% /md %}}</dd>
-    <dt class="property-required"
+    <dd>{{% md %}}The dashboard's part row span.{{% /md %}}</dd><dt class="property-required"
             title="Required">
         <span id="x_go">
 <a href="#x_go" style="color: inherit; text-decoration: inherit;">X</a>
@@ -1221,8 +1095,7 @@ All [input](#inputs) properties are implicitly available as output properties. A
         <span class="property-indicator"></span>
         <span class="property-type">int</span>
     </dt>
-    <dd>{{% md %}}The dashboard's part x coordinate.{{% /md %}}</dd>
-    <dt class="property-required"
+    <dd>{{% md %}}The dashboard's part x coordinate.{{% /md %}}</dd><dt class="property-required"
             title="Required">
         <span id="y_go">
 <a href="#y_go" style="color: inherit; text-decoration: inherit;">Y</a>
@@ -1230,8 +1103,7 @@ All [input](#inputs) properties are implicitly available as output properties. A
         <span class="property-indicator"></span>
         <span class="property-type">int</span>
     </dt>
-    <dd>{{% md %}}The dashboard's part y coordinate.{{% /md %}}</dd>
-    <dt class="property-optional"
+    <dd>{{% md %}}The dashboard's part y coordinate.{{% /md %}}</dd><dt class="property-optional"
             title="Optional">
         <span id="metadata_go">
 <a href="#metadata_go" style="color: inherit; text-decoration: inherit;">Metadata</a>
@@ -1239,14 +1111,11 @@ All [input](#inputs) properties are implicitly available as output properties. A
         <span class="property-indicator"></span>
         <span class="property-type">map[string]interface{}</span>
     </dt>
-    <dd>{{% md %}}The dashboard part's metadata.{{% /md %}}</dd>
-</dl>
+    <dd>{{% md %}}The dashboard part's metadata.{{% /md %}}</dd></dl>
 {{% /choosable %}}
 
 {{% choosable language nodejs %}}
-<dl class="resources-properties">
-
-    <dt class="property-required"
+<dl class="resources-properties"><dt class="property-required"
             title="Required">
         <span id="colspan_nodejs">
 <a href="#colspan_nodejs" style="color: inherit; text-decoration: inherit;">col<wbr>Span</a>
@@ -1254,8 +1123,7 @@ All [input](#inputs) properties are implicitly available as output properties. A
         <span class="property-indicator"></span>
         <span class="property-type">number</span>
     </dt>
-    <dd>{{% md %}}The dashboard's part column span.{{% /md %}}</dd>
-    <dt class="property-required"
+    <dd>{{% md %}}The dashboard's part column span.{{% /md %}}</dd><dt class="property-required"
             title="Required">
         <span id="rowspan_nodejs">
 <a href="#rowspan_nodejs" style="color: inherit; text-decoration: inherit;">row<wbr>Span</a>
@@ -1263,8 +1131,7 @@ All [input](#inputs) properties are implicitly available as output properties. A
         <span class="property-indicator"></span>
         <span class="property-type">number</span>
     </dt>
-    <dd>{{% md %}}The dashboard's part row span.{{% /md %}}</dd>
-    <dt class="property-required"
+    <dd>{{% md %}}The dashboard's part row span.{{% /md %}}</dd><dt class="property-required"
             title="Required">
         <span id="x_nodejs">
 <a href="#x_nodejs" style="color: inherit; text-decoration: inherit;">x</a>
@@ -1272,8 +1139,7 @@ All [input](#inputs) properties are implicitly available as output properties. A
         <span class="property-indicator"></span>
         <span class="property-type">number</span>
     </dt>
-    <dd>{{% md %}}The dashboard's part x coordinate.{{% /md %}}</dd>
-    <dt class="property-required"
+    <dd>{{% md %}}The dashboard's part x coordinate.{{% /md %}}</dd><dt class="property-required"
             title="Required">
         <span id="y_nodejs">
 <a href="#y_nodejs" style="color: inherit; text-decoration: inherit;">y</a>
@@ -1281,8 +1147,7 @@ All [input](#inputs) properties are implicitly available as output properties. A
         <span class="property-indicator"></span>
         <span class="property-type">number</span>
     </dt>
-    <dd>{{% md %}}The dashboard's part y coordinate.{{% /md %}}</dd>
-    <dt class="property-optional"
+    <dd>{{% md %}}The dashboard's part y coordinate.{{% /md %}}</dd><dt class="property-optional"
             title="Optional">
         <span id="metadata_nodejs">
 <a href="#metadata_nodejs" style="color: inherit; text-decoration: inherit;">metadata</a>
@@ -1290,14 +1155,11 @@ All [input](#inputs) properties are implicitly available as output properties. A
         <span class="property-indicator"></span>
         <span class="property-type">{[key: string]: any}</span>
     </dt>
-    <dd>{{% md %}}The dashboard part's metadata.{{% /md %}}</dd>
-</dl>
+    <dd>{{% md %}}The dashboard part's metadata.{{% /md %}}</dd></dl>
 {{% /choosable %}}
 
 {{% choosable language python %}}
-<dl class="resources-properties">
-
-    <dt class="property-required"
+<dl class="resources-properties"><dt class="property-required"
             title="Required">
         <span id="col_span_python">
 <a href="#col_span_python" style="color: inherit; text-decoration: inherit;">col_<wbr>span</a>
@@ -1305,8 +1167,7 @@ All [input](#inputs) properties are implicitly available as output properties. A
         <span class="property-indicator"></span>
         <span class="property-type">int</span>
     </dt>
-    <dd>{{% md %}}The dashboard's part column span.{{% /md %}}</dd>
-    <dt class="property-required"
+    <dd>{{% md %}}The dashboard's part column span.{{% /md %}}</dd><dt class="property-required"
             title="Required">
         <span id="row_span_python">
 <a href="#row_span_python" style="color: inherit; text-decoration: inherit;">row_<wbr>span</a>
@@ -1314,8 +1175,7 @@ All [input](#inputs) properties are implicitly available as output properties. A
         <span class="property-indicator"></span>
         <span class="property-type">int</span>
     </dt>
-    <dd>{{% md %}}The dashboard's part row span.{{% /md %}}</dd>
-    <dt class="property-required"
+    <dd>{{% md %}}The dashboard's part row span.{{% /md %}}</dd><dt class="property-required"
             title="Required">
         <span id="x_python">
 <a href="#x_python" style="color: inherit; text-decoration: inherit;">x</a>
@@ -1323,8 +1183,7 @@ All [input](#inputs) properties are implicitly available as output properties. A
         <span class="property-indicator"></span>
         <span class="property-type">int</span>
     </dt>
-    <dd>{{% md %}}The dashboard's part x coordinate.{{% /md %}}</dd>
-    <dt class="property-required"
+    <dd>{{% md %}}The dashboard's part x coordinate.{{% /md %}}</dd><dt class="property-required"
             title="Required">
         <span id="y_python">
 <a href="#y_python" style="color: inherit; text-decoration: inherit;">y</a>
@@ -1332,8 +1191,7 @@ All [input](#inputs) properties are implicitly available as output properties. A
         <span class="property-indicator"></span>
         <span class="property-type">int</span>
     </dt>
-    <dd>{{% md %}}The dashboard's part y coordinate.{{% /md %}}</dd>
-    <dt class="property-optional"
+    <dd>{{% md %}}The dashboard's part y coordinate.{{% /md %}}</dd><dt class="property-optional"
             title="Optional">
         <span id="metadata_python">
 <a href="#metadata_python" style="color: inherit; text-decoration: inherit;">metadata</a>
@@ -1341,16 +1199,13 @@ All [input](#inputs) properties are implicitly available as output properties. A
         <span class="property-indicator"></span>
         <span class="property-type">Mapping[str, Any]</span>
     </dt>
-    <dd>{{% md %}}The dashboard part's metadata.{{% /md %}}</dd>
-</dl>
+    <dd>{{% md %}}The dashboard part's metadata.{{% /md %}}</dd></dl>
 {{% /choosable %}}
 
 <h4 id="dashboardpartsresponse">Dashboard<wbr>Parts<wbr>Response</h4>
 
 {{% choosable language csharp %}}
-<dl class="resources-properties">
-
-    <dt class="property-required"
+<dl class="resources-properties"><dt class="property-required"
             title="Required">
         <span id="position_csharp">
 <a href="#position_csharp" style="color: inherit; text-decoration: inherit;">Position</a>
@@ -1358,8 +1213,7 @@ All [input](#inputs) properties are implicitly available as output properties. A
         <span class="property-indicator"></span>
         <span class="property-type"><a href="#dashboardpartsresponseposition">Pulumi.<wbr>Azure<wbr>Native.<wbr>Portal.<wbr>Inputs.<wbr>Dashboard<wbr>Parts<wbr>Response<wbr>Position<wbr>Args</a></span>
     </dt>
-    <dd>{{% md %}}The dashboard's part position.{{% /md %}}</dd>
-    <dt class="property-optional"
+    <dd>{{% md %}}The dashboard's part position.{{% /md %}}</dd><dt class="property-optional"
             title="Optional">
         <span id="metadata_csharp">
 <a href="#metadata_csharp" style="color: inherit; text-decoration: inherit;">Metadata</a>
@@ -1367,14 +1221,11 @@ All [input](#inputs) properties are implicitly available as output properties. A
         <span class="property-indicator"></span>
         <span class="property-type"><a href="#markdownpartmetadataresponse">Pulumi.<wbr>Azure<wbr>Native.<wbr>Portal.<wbr>Inputs.<wbr>Markdown<wbr>Part<wbr>Metadata<wbr>Response<wbr>Args</a></span>
     </dt>
-    <dd>{{% md %}}The dashboard part's metadata.{{% /md %}}</dd>
-</dl>
+    <dd>{{% md %}}The dashboard part's metadata.{{% /md %}}</dd></dl>
 {{% /choosable %}}
 
 {{% choosable language go %}}
-<dl class="resources-properties">
-
-    <dt class="property-required"
+<dl class="resources-properties"><dt class="property-required"
             title="Required">
         <span id="position_go">
 <a href="#position_go" style="color: inherit; text-decoration: inherit;">Position</a>
@@ -1382,8 +1233,7 @@ All [input](#inputs) properties are implicitly available as output properties. A
         <span class="property-indicator"></span>
         <span class="property-type"><a href="#dashboardpartsresponseposition">Dashboard<wbr>Parts<wbr>Response<wbr>Position</a></span>
     </dt>
-    <dd>{{% md %}}The dashboard's part position.{{% /md %}}</dd>
-    <dt class="property-optional"
+    <dd>{{% md %}}The dashboard's part position.{{% /md %}}</dd><dt class="property-optional"
             title="Optional">
         <span id="metadata_go">
 <a href="#metadata_go" style="color: inherit; text-decoration: inherit;">Metadata</a>
@@ -1391,14 +1241,11 @@ All [input](#inputs) properties are implicitly available as output properties. A
         <span class="property-indicator"></span>
         <span class="property-type"><a href="#markdownpartmetadataresponse">Markdown<wbr>Part<wbr>Metadata<wbr>Response</a></span>
     </dt>
-    <dd>{{% md %}}The dashboard part's metadata.{{% /md %}}</dd>
-</dl>
+    <dd>{{% md %}}The dashboard part's metadata.{{% /md %}}</dd></dl>
 {{% /choosable %}}
 
 {{% choosable language nodejs %}}
-<dl class="resources-properties">
-
-    <dt class="property-required"
+<dl class="resources-properties"><dt class="property-required"
             title="Required">
         <span id="position_nodejs">
 <a href="#position_nodejs" style="color: inherit; text-decoration: inherit;">position</a>
@@ -1406,8 +1253,7 @@ All [input](#inputs) properties are implicitly available as output properties. A
         <span class="property-indicator"></span>
         <span class="property-type"><a href="#dashboardpartsresponseposition">Dashboard<wbr>Parts<wbr>Response<wbr>Position</a></span>
     </dt>
-    <dd>{{% md %}}The dashboard's part position.{{% /md %}}</dd>
-    <dt class="property-optional"
+    <dd>{{% md %}}The dashboard's part position.{{% /md %}}</dd><dt class="property-optional"
             title="Optional">
         <span id="metadata_nodejs">
 <a href="#metadata_nodejs" style="color: inherit; text-decoration: inherit;">metadata</a>
@@ -1415,14 +1261,11 @@ All [input](#inputs) properties are implicitly available as output properties. A
         <span class="property-indicator"></span>
         <span class="property-type"><a href="#markdownpartmetadataresponse">Markdown<wbr>Part<wbr>Metadata<wbr>Response</a></span>
     </dt>
-    <dd>{{% md %}}The dashboard part's metadata.{{% /md %}}</dd>
-</dl>
+    <dd>{{% md %}}The dashboard part's metadata.{{% /md %}}</dd></dl>
 {{% /choosable %}}
 
 {{% choosable language python %}}
-<dl class="resources-properties">
-
-    <dt class="property-required"
+<dl class="resources-properties"><dt class="property-required"
             title="Required">
         <span id="position_python">
 <a href="#position_python" style="color: inherit; text-decoration: inherit;">position</a>
@@ -1430,8 +1273,7 @@ All [input](#inputs) properties are implicitly available as output properties. A
         <span class="property-indicator"></span>
         <span class="property-type"><a href="#dashboardpartsresponseposition">Dashboard<wbr>Parts<wbr>Response<wbr>Position<wbr>Args</a></span>
     </dt>
-    <dd>{{% md %}}The dashboard's part position.{{% /md %}}</dd>
-    <dt class="property-optional"
+    <dd>{{% md %}}The dashboard's part position.{{% /md %}}</dd><dt class="property-optional"
             title="Optional">
         <span id="metadata_python">
 <a href="#metadata_python" style="color: inherit; text-decoration: inherit;">metadata</a>
@@ -1439,16 +1281,13 @@ All [input](#inputs) properties are implicitly available as output properties. A
         <span class="property-indicator"></span>
         <span class="property-type"><a href="#markdownpartmetadataresponse">Markdown<wbr>Part<wbr>Metadata<wbr>Response<wbr>Args</a></span>
     </dt>
-    <dd>{{% md %}}The dashboard part's metadata.{{% /md %}}</dd>
-</dl>
+    <dd>{{% md %}}The dashboard part's metadata.{{% /md %}}</dd></dl>
 {{% /choosable %}}
 
 <h4 id="dashboardpartsresponseposition">Dashboard<wbr>Parts<wbr>Response<wbr>Position</h4>
 
 {{% choosable language csharp %}}
-<dl class="resources-properties">
-
-    <dt class="property-required"
+<dl class="resources-properties"><dt class="property-required"
             title="Required">
         <span id="colspan_csharp">
 <a href="#colspan_csharp" style="color: inherit; text-decoration: inherit;">Col<wbr>Span</a>
@@ -1456,8 +1295,7 @@ All [input](#inputs) properties are implicitly available as output properties. A
         <span class="property-indicator"></span>
         <span class="property-type">int</span>
     </dt>
-    <dd>{{% md %}}The dashboard's part column span.{{% /md %}}</dd>
-    <dt class="property-required"
+    <dd>{{% md %}}The dashboard's part column span.{{% /md %}}</dd><dt class="property-required"
             title="Required">
         <span id="rowspan_csharp">
 <a href="#rowspan_csharp" style="color: inherit; text-decoration: inherit;">Row<wbr>Span</a>
@@ -1465,8 +1303,7 @@ All [input](#inputs) properties are implicitly available as output properties. A
         <span class="property-indicator"></span>
         <span class="property-type">int</span>
     </dt>
-    <dd>{{% md %}}The dashboard's part row span.{{% /md %}}</dd>
-    <dt class="property-required"
+    <dd>{{% md %}}The dashboard's part row span.{{% /md %}}</dd><dt class="property-required"
             title="Required">
         <span id="x_csharp">
 <a href="#x_csharp" style="color: inherit; text-decoration: inherit;">X</a>
@@ -1474,8 +1311,7 @@ All [input](#inputs) properties are implicitly available as output properties. A
         <span class="property-indicator"></span>
         <span class="property-type">int</span>
     </dt>
-    <dd>{{% md %}}The dashboard's part x coordinate.{{% /md %}}</dd>
-    <dt class="property-required"
+    <dd>{{% md %}}The dashboard's part x coordinate.{{% /md %}}</dd><dt class="property-required"
             title="Required">
         <span id="y_csharp">
 <a href="#y_csharp" style="color: inherit; text-decoration: inherit;">Y</a>
@@ -1483,8 +1319,7 @@ All [input](#inputs) properties are implicitly available as output properties. A
         <span class="property-indicator"></span>
         <span class="property-type">int</span>
     </dt>
-    <dd>{{% md %}}The dashboard's part y coordinate.{{% /md %}}</dd>
-    <dt class="property-optional"
+    <dd>{{% md %}}The dashboard's part y coordinate.{{% /md %}}</dd><dt class="property-optional"
             title="Optional">
         <span id="metadata_csharp">
 <a href="#metadata_csharp" style="color: inherit; text-decoration: inherit;">Metadata</a>
@@ -1492,14 +1327,11 @@ All [input](#inputs) properties are implicitly available as output properties. A
         <span class="property-indicator"></span>
         <span class="property-type">Dictionary&lt;string, object&gt;</span>
     </dt>
-    <dd>{{% md %}}The dashboard part's metadata.{{% /md %}}</dd>
-</dl>
+    <dd>{{% md %}}The dashboard part's metadata.{{% /md %}}</dd></dl>
 {{% /choosable %}}
 
 {{% choosable language go %}}
-<dl class="resources-properties">
-
-    <dt class="property-required"
+<dl class="resources-properties"><dt class="property-required"
             title="Required">
         <span id="colspan_go">
 <a href="#colspan_go" style="color: inherit; text-decoration: inherit;">Col<wbr>Span</a>
@@ -1507,8 +1339,7 @@ All [input](#inputs) properties are implicitly available as output properties. A
         <span class="property-indicator"></span>
         <span class="property-type">int</span>
     </dt>
-    <dd>{{% md %}}The dashboard's part column span.{{% /md %}}</dd>
-    <dt class="property-required"
+    <dd>{{% md %}}The dashboard's part column span.{{% /md %}}</dd><dt class="property-required"
             title="Required">
         <span id="rowspan_go">
 <a href="#rowspan_go" style="color: inherit; text-decoration: inherit;">Row<wbr>Span</a>
@@ -1516,8 +1347,7 @@ All [input](#inputs) properties are implicitly available as output properties. A
         <span class="property-indicator"></span>
         <span class="property-type">int</span>
     </dt>
-    <dd>{{% md %}}The dashboard's part row span.{{% /md %}}</dd>
-    <dt class="property-required"
+    <dd>{{% md %}}The dashboard's part row span.{{% /md %}}</dd><dt class="property-required"
             title="Required">
         <span id="x_go">
 <a href="#x_go" style="color: inherit; text-decoration: inherit;">X</a>
@@ -1525,8 +1355,7 @@ All [input](#inputs) properties are implicitly available as output properties. A
         <span class="property-indicator"></span>
         <span class="property-type">int</span>
     </dt>
-    <dd>{{% md %}}The dashboard's part x coordinate.{{% /md %}}</dd>
-    <dt class="property-required"
+    <dd>{{% md %}}The dashboard's part x coordinate.{{% /md %}}</dd><dt class="property-required"
             title="Required">
         <span id="y_go">
 <a href="#y_go" style="color: inherit; text-decoration: inherit;">Y</a>
@@ -1534,8 +1363,7 @@ All [input](#inputs) properties are implicitly available as output properties. A
         <span class="property-indicator"></span>
         <span class="property-type">int</span>
     </dt>
-    <dd>{{% md %}}The dashboard's part y coordinate.{{% /md %}}</dd>
-    <dt class="property-optional"
+    <dd>{{% md %}}The dashboard's part y coordinate.{{% /md %}}</dd><dt class="property-optional"
             title="Optional">
         <span id="metadata_go">
 <a href="#metadata_go" style="color: inherit; text-decoration: inherit;">Metadata</a>
@@ -1543,14 +1371,11 @@ All [input](#inputs) properties are implicitly available as output properties. A
         <span class="property-indicator"></span>
         <span class="property-type">map[string]interface{}</span>
     </dt>
-    <dd>{{% md %}}The dashboard part's metadata.{{% /md %}}</dd>
-</dl>
+    <dd>{{% md %}}The dashboard part's metadata.{{% /md %}}</dd></dl>
 {{% /choosable %}}
 
 {{% choosable language nodejs %}}
-<dl class="resources-properties">
-
-    <dt class="property-required"
+<dl class="resources-properties"><dt class="property-required"
             title="Required">
         <span id="colspan_nodejs">
 <a href="#colspan_nodejs" style="color: inherit; text-decoration: inherit;">col<wbr>Span</a>
@@ -1558,8 +1383,7 @@ All [input](#inputs) properties are implicitly available as output properties. A
         <span class="property-indicator"></span>
         <span class="property-type">number</span>
     </dt>
-    <dd>{{% md %}}The dashboard's part column span.{{% /md %}}</dd>
-    <dt class="property-required"
+    <dd>{{% md %}}The dashboard's part column span.{{% /md %}}</dd><dt class="property-required"
             title="Required">
         <span id="rowspan_nodejs">
 <a href="#rowspan_nodejs" style="color: inherit; text-decoration: inherit;">row<wbr>Span</a>
@@ -1567,8 +1391,7 @@ All [input](#inputs) properties are implicitly available as output properties. A
         <span class="property-indicator"></span>
         <span class="property-type">number</span>
     </dt>
-    <dd>{{% md %}}The dashboard's part row span.{{% /md %}}</dd>
-    <dt class="property-required"
+    <dd>{{% md %}}The dashboard's part row span.{{% /md %}}</dd><dt class="property-required"
             title="Required">
         <span id="x_nodejs">
 <a href="#x_nodejs" style="color: inherit; text-decoration: inherit;">x</a>
@@ -1576,8 +1399,7 @@ All [input](#inputs) properties are implicitly available as output properties. A
         <span class="property-indicator"></span>
         <span class="property-type">number</span>
     </dt>
-    <dd>{{% md %}}The dashboard's part x coordinate.{{% /md %}}</dd>
-    <dt class="property-required"
+    <dd>{{% md %}}The dashboard's part x coordinate.{{% /md %}}</dd><dt class="property-required"
             title="Required">
         <span id="y_nodejs">
 <a href="#y_nodejs" style="color: inherit; text-decoration: inherit;">y</a>
@@ -1585,8 +1407,7 @@ All [input](#inputs) properties are implicitly available as output properties. A
         <span class="property-indicator"></span>
         <span class="property-type">number</span>
     </dt>
-    <dd>{{% md %}}The dashboard's part y coordinate.{{% /md %}}</dd>
-    <dt class="property-optional"
+    <dd>{{% md %}}The dashboard's part y coordinate.{{% /md %}}</dd><dt class="property-optional"
             title="Optional">
         <span id="metadata_nodejs">
 <a href="#metadata_nodejs" style="color: inherit; text-decoration: inherit;">metadata</a>
@@ -1594,14 +1415,11 @@ All [input](#inputs) properties are implicitly available as output properties. A
         <span class="property-indicator"></span>
         <span class="property-type">{[key: string]: any}</span>
     </dt>
-    <dd>{{% md %}}The dashboard part's metadata.{{% /md %}}</dd>
-</dl>
+    <dd>{{% md %}}The dashboard part's metadata.{{% /md %}}</dd></dl>
 {{% /choosable %}}
 
 {{% choosable language python %}}
-<dl class="resources-properties">
-
-    <dt class="property-required"
+<dl class="resources-properties"><dt class="property-required"
             title="Required">
         <span id="col_span_python">
 <a href="#col_span_python" style="color: inherit; text-decoration: inherit;">col_<wbr>span</a>
@@ -1609,8 +1427,7 @@ All [input](#inputs) properties are implicitly available as output properties. A
         <span class="property-indicator"></span>
         <span class="property-type">int</span>
     </dt>
-    <dd>{{% md %}}The dashboard's part column span.{{% /md %}}</dd>
-    <dt class="property-required"
+    <dd>{{% md %}}The dashboard's part column span.{{% /md %}}</dd><dt class="property-required"
             title="Required">
         <span id="row_span_python">
 <a href="#row_span_python" style="color: inherit; text-decoration: inherit;">row_<wbr>span</a>
@@ -1618,8 +1435,7 @@ All [input](#inputs) properties are implicitly available as output properties. A
         <span class="property-indicator"></span>
         <span class="property-type">int</span>
     </dt>
-    <dd>{{% md %}}The dashboard's part row span.{{% /md %}}</dd>
-    <dt class="property-required"
+    <dd>{{% md %}}The dashboard's part row span.{{% /md %}}</dd><dt class="property-required"
             title="Required">
         <span id="x_python">
 <a href="#x_python" style="color: inherit; text-decoration: inherit;">x</a>
@@ -1627,8 +1443,7 @@ All [input](#inputs) properties are implicitly available as output properties. A
         <span class="property-indicator"></span>
         <span class="property-type">int</span>
     </dt>
-    <dd>{{% md %}}The dashboard's part x coordinate.{{% /md %}}</dd>
-    <dt class="property-required"
+    <dd>{{% md %}}The dashboard's part x coordinate.{{% /md %}}</dd><dt class="property-required"
             title="Required">
         <span id="y_python">
 <a href="#y_python" style="color: inherit; text-decoration: inherit;">y</a>
@@ -1636,8 +1451,7 @@ All [input](#inputs) properties are implicitly available as output properties. A
         <span class="property-indicator"></span>
         <span class="property-type">int</span>
     </dt>
-    <dd>{{% md %}}The dashboard's part y coordinate.{{% /md %}}</dd>
-    <dt class="property-optional"
+    <dd>{{% md %}}The dashboard's part y coordinate.{{% /md %}}</dd><dt class="property-optional"
             title="Optional">
         <span id="metadata_python">
 <a href="#metadata_python" style="color: inherit; text-decoration: inherit;">metadata</a>
@@ -1645,16 +1459,13 @@ All [input](#inputs) properties are implicitly available as output properties. A
         <span class="property-indicator"></span>
         <span class="property-type">Mapping[str, Any]</span>
     </dt>
-    <dd>{{% md %}}The dashboard part's metadata.{{% /md %}}</dd>
-</dl>
+    <dd>{{% md %}}The dashboard part's metadata.{{% /md %}}</dd></dl>
 {{% /choosable %}}
 
 <h4 id="markdownpartmetadata">Markdown<wbr>Part<wbr>Metadata</h4>
 
 {{% choosable language csharp %}}
-<dl class="resources-properties">
-
-    <dt class="property-optional"
+<dl class="resources-properties"><dt class="property-optional"
             title="Optional">
         <span id="inputs_csharp">
 <a href="#inputs_csharp" style="color: inherit; text-decoration: inherit;">Inputs</a>
@@ -1662,8 +1473,7 @@ All [input](#inputs) properties are implicitly available as output properties. A
         <span class="property-indicator"></span>
         <span class="property-type">List&lt;object&gt;</span>
     </dt>
-    <dd>{{% md %}}Input to dashboard part.{{% /md %}}</dd>
-    <dt class="property-optional"
+    <dd>{{% md %}}Input to dashboard part.{{% /md %}}</dd><dt class="property-optional"
             title="Optional">
         <span id="settings_csharp">
 <a href="#settings_csharp" style="color: inherit; text-decoration: inherit;">Settings</a>
@@ -1671,14 +1481,11 @@ All [input](#inputs) properties are implicitly available as output properties. A
         <span class="property-indicator"></span>
         <span class="property-type"><a href="#markdownpartmetadatasettings">Pulumi.<wbr>Azure<wbr>Native.<wbr>Portal.<wbr>Inputs.<wbr>Markdown<wbr>Part<wbr>Metadata<wbr>Settings<wbr>Args</a></span>
     </dt>
-    <dd>{{% md %}}Markdown part settings.{{% /md %}}</dd>
-</dl>
+    <dd>{{% md %}}Markdown part settings.{{% /md %}}</dd></dl>
 {{% /choosable %}}
 
 {{% choosable language go %}}
-<dl class="resources-properties">
-
-    <dt class="property-optional"
+<dl class="resources-properties"><dt class="property-optional"
             title="Optional">
         <span id="inputs_go">
 <a href="#inputs_go" style="color: inherit; text-decoration: inherit;">Inputs</a>
@@ -1686,8 +1493,7 @@ All [input](#inputs) properties are implicitly available as output properties. A
         <span class="property-indicator"></span>
         <span class="property-type">[]interface{}</span>
     </dt>
-    <dd>{{% md %}}Input to dashboard part.{{% /md %}}</dd>
-    <dt class="property-optional"
+    <dd>{{% md %}}Input to dashboard part.{{% /md %}}</dd><dt class="property-optional"
             title="Optional">
         <span id="settings_go">
 <a href="#settings_go" style="color: inherit; text-decoration: inherit;">Settings</a>
@@ -1695,14 +1501,11 @@ All [input](#inputs) properties are implicitly available as output properties. A
         <span class="property-indicator"></span>
         <span class="property-type"><a href="#markdownpartmetadatasettings">Markdown<wbr>Part<wbr>Metadata<wbr>Settings</a></span>
     </dt>
-    <dd>{{% md %}}Markdown part settings.{{% /md %}}</dd>
-</dl>
+    <dd>{{% md %}}Markdown part settings.{{% /md %}}</dd></dl>
 {{% /choosable %}}
 
 {{% choosable language nodejs %}}
-<dl class="resources-properties">
-
-    <dt class="property-optional"
+<dl class="resources-properties"><dt class="property-optional"
             title="Optional">
         <span id="inputs_nodejs">
 <a href="#inputs_nodejs" style="color: inherit; text-decoration: inherit;">inputs</a>
@@ -1710,8 +1513,7 @@ All [input](#inputs) properties are implicitly available as output properties. A
         <span class="property-indicator"></span>
         <span class="property-type">any[]</span>
     </dt>
-    <dd>{{% md %}}Input to dashboard part.{{% /md %}}</dd>
-    <dt class="property-optional"
+    <dd>{{% md %}}Input to dashboard part.{{% /md %}}</dd><dt class="property-optional"
             title="Optional">
         <span id="settings_nodejs">
 <a href="#settings_nodejs" style="color: inherit; text-decoration: inherit;">settings</a>
@@ -1719,14 +1521,11 @@ All [input](#inputs) properties are implicitly available as output properties. A
         <span class="property-indicator"></span>
         <span class="property-type"><a href="#markdownpartmetadatasettings">Markdown<wbr>Part<wbr>Metadata<wbr>Settings</a></span>
     </dt>
-    <dd>{{% md %}}Markdown part settings.{{% /md %}}</dd>
-</dl>
+    <dd>{{% md %}}Markdown part settings.{{% /md %}}</dd></dl>
 {{% /choosable %}}
 
 {{% choosable language python %}}
-<dl class="resources-properties">
-
-    <dt class="property-optional"
+<dl class="resources-properties"><dt class="property-optional"
             title="Optional">
         <span id="inputs_python">
 <a href="#inputs_python" style="color: inherit; text-decoration: inherit;">inputs</a>
@@ -1734,8 +1533,7 @@ All [input](#inputs) properties are implicitly available as output properties. A
         <span class="property-indicator"></span>
         <span class="property-type">Sequence[Any]</span>
     </dt>
-    <dd>{{% md %}}Input to dashboard part.{{% /md %}}</dd>
-    <dt class="property-optional"
+    <dd>{{% md %}}Input to dashboard part.{{% /md %}}</dd><dt class="property-optional"
             title="Optional">
         <span id="settings_python">
 <a href="#settings_python" style="color: inherit; text-decoration: inherit;">settings</a>
@@ -1743,16 +1541,13 @@ All [input](#inputs) properties are implicitly available as output properties. A
         <span class="property-indicator"></span>
         <span class="property-type"><a href="#markdownpartmetadatasettings">Markdown<wbr>Part<wbr>Metadata<wbr>Settings<wbr>Args</a></span>
     </dt>
-    <dd>{{% md %}}Markdown part settings.{{% /md %}}</dd>
-</dl>
+    <dd>{{% md %}}Markdown part settings.{{% /md %}}</dd></dl>
 {{% /choosable %}}
 
 <h4 id="markdownpartmetadatacontent">Markdown<wbr>Part<wbr>Metadata<wbr>Content</h4>
 
 {{% choosable language csharp %}}
-<dl class="resources-properties">
-
-    <dt class="property-optional"
+<dl class="resources-properties"><dt class="property-optional"
             title="Optional">
         <span id="settings_csharp">
 <a href="#settings_csharp" style="color: inherit; text-decoration: inherit;">Settings</a>
@@ -1760,14 +1555,11 @@ All [input](#inputs) properties are implicitly available as output properties. A
         <span class="property-indicator"></span>
         <span class="property-type"><a href="#markdownpartmetadatasettings">Pulumi.<wbr>Azure<wbr>Native.<wbr>Portal.<wbr>Inputs.<wbr>Markdown<wbr>Part<wbr>Metadata<wbr>Settings<wbr>Args</a></span>
     </dt>
-    <dd>{{% md %}}The setting of the content of markdown part.{{% /md %}}</dd>
-</dl>
+    <dd>{{% md %}}The setting of the content of markdown part.{{% /md %}}</dd></dl>
 {{% /choosable %}}
 
 {{% choosable language go %}}
-<dl class="resources-properties">
-
-    <dt class="property-optional"
+<dl class="resources-properties"><dt class="property-optional"
             title="Optional">
         <span id="settings_go">
 <a href="#settings_go" style="color: inherit; text-decoration: inherit;">Settings</a>
@@ -1775,14 +1567,11 @@ All [input](#inputs) properties are implicitly available as output properties. A
         <span class="property-indicator"></span>
         <span class="property-type"><a href="#markdownpartmetadatasettings">Markdown<wbr>Part<wbr>Metadata<wbr>Settings</a></span>
     </dt>
-    <dd>{{% md %}}The setting of the content of markdown part.{{% /md %}}</dd>
-</dl>
+    <dd>{{% md %}}The setting of the content of markdown part.{{% /md %}}</dd></dl>
 {{% /choosable %}}
 
 {{% choosable language nodejs %}}
-<dl class="resources-properties">
-
-    <dt class="property-optional"
+<dl class="resources-properties"><dt class="property-optional"
             title="Optional">
         <span id="settings_nodejs">
 <a href="#settings_nodejs" style="color: inherit; text-decoration: inherit;">settings</a>
@@ -1790,14 +1579,11 @@ All [input](#inputs) properties are implicitly available as output properties. A
         <span class="property-indicator"></span>
         <span class="property-type"><a href="#markdownpartmetadatasettings">Markdown<wbr>Part<wbr>Metadata<wbr>Settings</a></span>
     </dt>
-    <dd>{{% md %}}The setting of the content of markdown part.{{% /md %}}</dd>
-</dl>
+    <dd>{{% md %}}The setting of the content of markdown part.{{% /md %}}</dd></dl>
 {{% /choosable %}}
 
 {{% choosable language python %}}
-<dl class="resources-properties">
-
-    <dt class="property-optional"
+<dl class="resources-properties"><dt class="property-optional"
             title="Optional">
         <span id="settings_python">
 <a href="#settings_python" style="color: inherit; text-decoration: inherit;">settings</a>
@@ -1805,16 +1591,13 @@ All [input](#inputs) properties are implicitly available as output properties. A
         <span class="property-indicator"></span>
         <span class="property-type"><a href="#markdownpartmetadatasettings">Markdown<wbr>Part<wbr>Metadata<wbr>Settings<wbr>Args</a></span>
     </dt>
-    <dd>{{% md %}}The setting of the content of markdown part.{{% /md %}}</dd>
-</dl>
+    <dd>{{% md %}}The setting of the content of markdown part.{{% /md %}}</dd></dl>
 {{% /choosable %}}
 
 <h4 id="markdownpartmetadataresponse">Markdown<wbr>Part<wbr>Metadata<wbr>Response</h4>
 
 {{% choosable language csharp %}}
-<dl class="resources-properties">
-
-    <dt class="property-optional"
+<dl class="resources-properties"><dt class="property-optional"
             title="Optional">
         <span id="inputs_csharp">
 <a href="#inputs_csharp" style="color: inherit; text-decoration: inherit;">Inputs</a>
@@ -1822,8 +1605,7 @@ All [input](#inputs) properties are implicitly available as output properties. A
         <span class="property-indicator"></span>
         <span class="property-type">List&lt;object&gt;</span>
     </dt>
-    <dd>{{% md %}}Input to dashboard part.{{% /md %}}</dd>
-    <dt class="property-optional"
+    <dd>{{% md %}}Input to dashboard part.{{% /md %}}</dd><dt class="property-optional"
             title="Optional">
         <span id="settings_csharp">
 <a href="#settings_csharp" style="color: inherit; text-decoration: inherit;">Settings</a>
@@ -1831,14 +1613,11 @@ All [input](#inputs) properties are implicitly available as output properties. A
         <span class="property-indicator"></span>
         <span class="property-type"><a href="#markdownpartmetadataresponsesettings">Pulumi.<wbr>Azure<wbr>Native.<wbr>Portal.<wbr>Inputs.<wbr>Markdown<wbr>Part<wbr>Metadata<wbr>Response<wbr>Settings<wbr>Args</a></span>
     </dt>
-    <dd>{{% md %}}Markdown part settings.{{% /md %}}</dd>
-</dl>
+    <dd>{{% md %}}Markdown part settings.{{% /md %}}</dd></dl>
 {{% /choosable %}}
 
 {{% choosable language go %}}
-<dl class="resources-properties">
-
-    <dt class="property-optional"
+<dl class="resources-properties"><dt class="property-optional"
             title="Optional">
         <span id="inputs_go">
 <a href="#inputs_go" style="color: inherit; text-decoration: inherit;">Inputs</a>
@@ -1846,8 +1625,7 @@ All [input](#inputs) properties are implicitly available as output properties. A
         <span class="property-indicator"></span>
         <span class="property-type">[]interface{}</span>
     </dt>
-    <dd>{{% md %}}Input to dashboard part.{{% /md %}}</dd>
-    <dt class="property-optional"
+    <dd>{{% md %}}Input to dashboard part.{{% /md %}}</dd><dt class="property-optional"
             title="Optional">
         <span id="settings_go">
 <a href="#settings_go" style="color: inherit; text-decoration: inherit;">Settings</a>
@@ -1855,14 +1633,11 @@ All [input](#inputs) properties are implicitly available as output properties. A
         <span class="property-indicator"></span>
         <span class="property-type"><a href="#markdownpartmetadataresponsesettings">Markdown<wbr>Part<wbr>Metadata<wbr>Response<wbr>Settings</a></span>
     </dt>
-    <dd>{{% md %}}Markdown part settings.{{% /md %}}</dd>
-</dl>
+    <dd>{{% md %}}Markdown part settings.{{% /md %}}</dd></dl>
 {{% /choosable %}}
 
 {{% choosable language nodejs %}}
-<dl class="resources-properties">
-
-    <dt class="property-optional"
+<dl class="resources-properties"><dt class="property-optional"
             title="Optional">
         <span id="inputs_nodejs">
 <a href="#inputs_nodejs" style="color: inherit; text-decoration: inherit;">inputs</a>
@@ -1870,8 +1645,7 @@ All [input](#inputs) properties are implicitly available as output properties. A
         <span class="property-indicator"></span>
         <span class="property-type">any[]</span>
     </dt>
-    <dd>{{% md %}}Input to dashboard part.{{% /md %}}</dd>
-    <dt class="property-optional"
+    <dd>{{% md %}}Input to dashboard part.{{% /md %}}</dd><dt class="property-optional"
             title="Optional">
         <span id="settings_nodejs">
 <a href="#settings_nodejs" style="color: inherit; text-decoration: inherit;">settings</a>
@@ -1879,14 +1653,11 @@ All [input](#inputs) properties are implicitly available as output properties. A
         <span class="property-indicator"></span>
         <span class="property-type"><a href="#markdownpartmetadataresponsesettings">Markdown<wbr>Part<wbr>Metadata<wbr>Response<wbr>Settings</a></span>
     </dt>
-    <dd>{{% md %}}Markdown part settings.{{% /md %}}</dd>
-</dl>
+    <dd>{{% md %}}Markdown part settings.{{% /md %}}</dd></dl>
 {{% /choosable %}}
 
 {{% choosable language python %}}
-<dl class="resources-properties">
-
-    <dt class="property-optional"
+<dl class="resources-properties"><dt class="property-optional"
             title="Optional">
         <span id="inputs_python">
 <a href="#inputs_python" style="color: inherit; text-decoration: inherit;">inputs</a>
@@ -1894,8 +1665,7 @@ All [input](#inputs) properties are implicitly available as output properties. A
         <span class="property-indicator"></span>
         <span class="property-type">Sequence[Any]</span>
     </dt>
-    <dd>{{% md %}}Input to dashboard part.{{% /md %}}</dd>
-    <dt class="property-optional"
+    <dd>{{% md %}}Input to dashboard part.{{% /md %}}</dd><dt class="property-optional"
             title="Optional">
         <span id="settings_python">
 <a href="#settings_python" style="color: inherit; text-decoration: inherit;">settings</a>
@@ -1903,16 +1673,13 @@ All [input](#inputs) properties are implicitly available as output properties. A
         <span class="property-indicator"></span>
         <span class="property-type"><a href="#markdownpartmetadataresponsesettings">Markdown<wbr>Part<wbr>Metadata<wbr>Response<wbr>Settings<wbr>Args</a></span>
     </dt>
-    <dd>{{% md %}}Markdown part settings.{{% /md %}}</dd>
-</dl>
+    <dd>{{% md %}}Markdown part settings.{{% /md %}}</dd></dl>
 {{% /choosable %}}
 
 <h4 id="markdownpartmetadataresponsecontent">Markdown<wbr>Part<wbr>Metadata<wbr>Response<wbr>Content</h4>
 
 {{% choosable language csharp %}}
-<dl class="resources-properties">
-
-    <dt class="property-optional"
+<dl class="resources-properties"><dt class="property-optional"
             title="Optional">
         <span id="settings_csharp">
 <a href="#settings_csharp" style="color: inherit; text-decoration: inherit;">Settings</a>
@@ -1920,14 +1687,11 @@ All [input](#inputs) properties are implicitly available as output properties. A
         <span class="property-indicator"></span>
         <span class="property-type"><a href="#markdownpartmetadataresponsesettings">Pulumi.<wbr>Azure<wbr>Native.<wbr>Portal.<wbr>Inputs.<wbr>Markdown<wbr>Part<wbr>Metadata<wbr>Response<wbr>Settings<wbr>Args</a></span>
     </dt>
-    <dd>{{% md %}}The setting of the content of markdown part.{{% /md %}}</dd>
-</dl>
+    <dd>{{% md %}}The setting of the content of markdown part.{{% /md %}}</dd></dl>
 {{% /choosable %}}
 
 {{% choosable language go %}}
-<dl class="resources-properties">
-
-    <dt class="property-optional"
+<dl class="resources-properties"><dt class="property-optional"
             title="Optional">
         <span id="settings_go">
 <a href="#settings_go" style="color: inherit; text-decoration: inherit;">Settings</a>
@@ -1935,14 +1699,11 @@ All [input](#inputs) properties are implicitly available as output properties. A
         <span class="property-indicator"></span>
         <span class="property-type"><a href="#markdownpartmetadataresponsesettings">Markdown<wbr>Part<wbr>Metadata<wbr>Response<wbr>Settings</a></span>
     </dt>
-    <dd>{{% md %}}The setting of the content of markdown part.{{% /md %}}</dd>
-</dl>
+    <dd>{{% md %}}The setting of the content of markdown part.{{% /md %}}</dd></dl>
 {{% /choosable %}}
 
 {{% choosable language nodejs %}}
-<dl class="resources-properties">
-
-    <dt class="property-optional"
+<dl class="resources-properties"><dt class="property-optional"
             title="Optional">
         <span id="settings_nodejs">
 <a href="#settings_nodejs" style="color: inherit; text-decoration: inherit;">settings</a>
@@ -1950,14 +1711,11 @@ All [input](#inputs) properties are implicitly available as output properties. A
         <span class="property-indicator"></span>
         <span class="property-type"><a href="#markdownpartmetadataresponsesettings">Markdown<wbr>Part<wbr>Metadata<wbr>Response<wbr>Settings</a></span>
     </dt>
-    <dd>{{% md %}}The setting of the content of markdown part.{{% /md %}}</dd>
-</dl>
+    <dd>{{% md %}}The setting of the content of markdown part.{{% /md %}}</dd></dl>
 {{% /choosable %}}
 
 {{% choosable language python %}}
-<dl class="resources-properties">
-
-    <dt class="property-optional"
+<dl class="resources-properties"><dt class="property-optional"
             title="Optional">
         <span id="settings_python">
 <a href="#settings_python" style="color: inherit; text-decoration: inherit;">settings</a>
@@ -1965,16 +1723,13 @@ All [input](#inputs) properties are implicitly available as output properties. A
         <span class="property-indicator"></span>
         <span class="property-type"><a href="#markdownpartmetadataresponsesettings">Markdown<wbr>Part<wbr>Metadata<wbr>Response<wbr>Settings<wbr>Args</a></span>
     </dt>
-    <dd>{{% md %}}The setting of the content of markdown part.{{% /md %}}</dd>
-</dl>
+    <dd>{{% md %}}The setting of the content of markdown part.{{% /md %}}</dd></dl>
 {{% /choosable %}}
 
 <h4 id="markdownpartmetadataresponsesettings">Markdown<wbr>Part<wbr>Metadata<wbr>Response<wbr>Settings</h4>
 
 {{% choosable language csharp %}}
-<dl class="resources-properties">
-
-    <dt class="property-optional"
+<dl class="resources-properties"><dt class="property-optional"
             title="Optional">
         <span id="content_csharp">
 <a href="#content_csharp" style="color: inherit; text-decoration: inherit;">Content</a>
@@ -1982,14 +1737,11 @@ All [input](#inputs) properties are implicitly available as output properties. A
         <span class="property-indicator"></span>
         <span class="property-type"><a href="#markdownpartmetadataresponsecontent">Pulumi.<wbr>Azure<wbr>Native.<wbr>Portal.<wbr>Inputs.<wbr>Markdown<wbr>Part<wbr>Metadata<wbr>Response<wbr>Content<wbr>Args</a></span>
     </dt>
-    <dd>{{% md %}}The content of markdown part.{{% /md %}}</dd>
-</dl>
+    <dd>{{% md %}}The content of markdown part.{{% /md %}}</dd></dl>
 {{% /choosable %}}
 
 {{% choosable language go %}}
-<dl class="resources-properties">
-
-    <dt class="property-optional"
+<dl class="resources-properties"><dt class="property-optional"
             title="Optional">
         <span id="content_go">
 <a href="#content_go" style="color: inherit; text-decoration: inherit;">Content</a>
@@ -1997,14 +1749,11 @@ All [input](#inputs) properties are implicitly available as output properties. A
         <span class="property-indicator"></span>
         <span class="property-type"><a href="#markdownpartmetadataresponsecontent">Markdown<wbr>Part<wbr>Metadata<wbr>Response<wbr>Content</a></span>
     </dt>
-    <dd>{{% md %}}The content of markdown part.{{% /md %}}</dd>
-</dl>
+    <dd>{{% md %}}The content of markdown part.{{% /md %}}</dd></dl>
 {{% /choosable %}}
 
 {{% choosable language nodejs %}}
-<dl class="resources-properties">
-
-    <dt class="property-optional"
+<dl class="resources-properties"><dt class="property-optional"
             title="Optional">
         <span id="content_nodejs">
 <a href="#content_nodejs" style="color: inherit; text-decoration: inherit;">content</a>
@@ -2012,14 +1761,11 @@ All [input](#inputs) properties are implicitly available as output properties. A
         <span class="property-indicator"></span>
         <span class="property-type"><a href="#markdownpartmetadataresponsecontent">Markdown<wbr>Part<wbr>Metadata<wbr>Response<wbr>Content</a></span>
     </dt>
-    <dd>{{% md %}}The content of markdown part.{{% /md %}}</dd>
-</dl>
+    <dd>{{% md %}}The content of markdown part.{{% /md %}}</dd></dl>
 {{% /choosable %}}
 
 {{% choosable language python %}}
-<dl class="resources-properties">
-
-    <dt class="property-optional"
+<dl class="resources-properties"><dt class="property-optional"
             title="Optional">
         <span id="content_python">
 <a href="#content_python" style="color: inherit; text-decoration: inherit;">content</a>
@@ -2027,16 +1773,13 @@ All [input](#inputs) properties are implicitly available as output properties. A
         <span class="property-indicator"></span>
         <span class="property-type"><a href="#markdownpartmetadataresponsecontent">Markdown<wbr>Part<wbr>Metadata<wbr>Response<wbr>Content<wbr>Args</a></span>
     </dt>
-    <dd>{{% md %}}The content of markdown part.{{% /md %}}</dd>
-</dl>
+    <dd>{{% md %}}The content of markdown part.{{% /md %}}</dd></dl>
 {{% /choosable %}}
 
 <h4 id="markdownpartmetadatasettings">Markdown<wbr>Part<wbr>Metadata<wbr>Settings</h4>
 
 {{% choosable language csharp %}}
-<dl class="resources-properties">
-
-    <dt class="property-optional"
+<dl class="resources-properties"><dt class="property-optional"
             title="Optional">
         <span id="content_csharp">
 <a href="#content_csharp" style="color: inherit; text-decoration: inherit;">Content</a>
@@ -2044,14 +1787,11 @@ All [input](#inputs) properties are implicitly available as output properties. A
         <span class="property-indicator"></span>
         <span class="property-type"><a href="#markdownpartmetadatacontent">Pulumi.<wbr>Azure<wbr>Native.<wbr>Portal.<wbr>Inputs.<wbr>Markdown<wbr>Part<wbr>Metadata<wbr>Content<wbr>Args</a></span>
     </dt>
-    <dd>{{% md %}}The content of markdown part.{{% /md %}}</dd>
-</dl>
+    <dd>{{% md %}}The content of markdown part.{{% /md %}}</dd></dl>
 {{% /choosable %}}
 
 {{% choosable language go %}}
-<dl class="resources-properties">
-
-    <dt class="property-optional"
+<dl class="resources-properties"><dt class="property-optional"
             title="Optional">
         <span id="content_go">
 <a href="#content_go" style="color: inherit; text-decoration: inherit;">Content</a>
@@ -2059,14 +1799,11 @@ All [input](#inputs) properties are implicitly available as output properties. A
         <span class="property-indicator"></span>
         <span class="property-type"><a href="#markdownpartmetadatacontent">Markdown<wbr>Part<wbr>Metadata<wbr>Content</a></span>
     </dt>
-    <dd>{{% md %}}The content of markdown part.{{% /md %}}</dd>
-</dl>
+    <dd>{{% md %}}The content of markdown part.{{% /md %}}</dd></dl>
 {{% /choosable %}}
 
 {{% choosable language nodejs %}}
-<dl class="resources-properties">
-
-    <dt class="property-optional"
+<dl class="resources-properties"><dt class="property-optional"
             title="Optional">
         <span id="content_nodejs">
 <a href="#content_nodejs" style="color: inherit; text-decoration: inherit;">content</a>
@@ -2074,14 +1811,11 @@ All [input](#inputs) properties are implicitly available as output properties. A
         <span class="property-indicator"></span>
         <span class="property-type"><a href="#markdownpartmetadatacontent">Markdown<wbr>Part<wbr>Metadata<wbr>Content</a></span>
     </dt>
-    <dd>{{% md %}}The content of markdown part.{{% /md %}}</dd>
-</dl>
+    <dd>{{% md %}}The content of markdown part.{{% /md %}}</dd></dl>
 {{% /choosable %}}
 
 {{% choosable language python %}}
-<dl class="resources-properties">
-
-    <dt class="property-optional"
+<dl class="resources-properties"><dt class="property-optional"
             title="Optional">
         <span id="content_python">
 <a href="#content_python" style="color: inherit; text-decoration: inherit;">content</a>
@@ -2089,8 +1823,7 @@ All [input](#inputs) properties are implicitly available as output properties. A
         <span class="property-indicator"></span>
         <span class="property-type"><a href="#markdownpartmetadatacontent">Markdown<wbr>Part<wbr>Metadata<wbr>Content<wbr>Args</a></span>
     </dt>
-    <dd>{{% md %}}The content of markdown part.{{% /md %}}</dd>
-</dl>
+    <dd>{{% md %}}The content of markdown part.{{% /md %}}</dd></dl>
 {{% /choosable %}}
 ## Import
 

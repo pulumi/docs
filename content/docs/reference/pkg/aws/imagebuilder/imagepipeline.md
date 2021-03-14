@@ -13,11 +13,17 @@ meta_desc: "Documentation for the aws.imagebuilder.ImagePipeline resource with e
 Manages an Image Builder Image Pipeline.
 
 {{% examples %}}
+
 ## Example Usage
 
 {{< chooser language "typescript,python,go,csharp" / >}}
 
-{{% example csharp %}}
+
+
+
+
+{{< example csharp >}}
+
 ```csharp
 using Pulumi;
 using Aws = Pulumi.Aws;
@@ -40,9 +46,12 @@ class MyStack : Stack
 }
 ```
 
-{{% /example %}}
 
-{{% example go %}}
+{{< /example >}}
+
+
+{{< example go >}}
+
 ```go
 package main
 
@@ -68,9 +77,12 @@ func main() {
 }
 ```
 
-{{% /example %}}
 
-{{% example python %}}
+{{< /example >}}
+
+
+{{< example python >}}
+
 ```python
 import pulumi
 import pulumi_aws as aws
@@ -83,9 +95,12 @@ example = aws.imagebuilder.ImagePipeline("example",
     ))
 ```
 
-{{% /example %}}
 
-{{% example typescript %}}
+{{< /example >}}
+
+
+{{< example typescript >}}
+
 
 ```typescript
 import * as pulumi from "@pulumi/pulumi";
@@ -100,9 +115,16 @@ const example = new aws.imagebuilder.ImagePipeline("example", {
 });
 ```
 
-{{% /example %}}
+
+{{< /example >}}
+
+
+
+
 
 {{% /examples %}}
+
+
 
 
 ## Create a ImagePipeline Resource {#create}
@@ -127,9 +149,7 @@ const example = new aws.imagebuilder.ImagePipeline("example", {
 
 {{% choosable language nodejs %}}
 
-<dl class="resources-properties">
-  
-    <dt
+<dl class="resources-properties"><dt
         class="property-required" title="Required">
         <span>name</span>
         <span class="property-indicator"></span>
@@ -137,9 +157,7 @@ const example = new aws.imagebuilder.ImagePipeline("example", {
     </dt>
     <dd>
       The unique name of the resource.
-    </dd>
-  
-    <dt
+    </dd><dt
         class="property-required" title="Required">
         <span>args</span>
         <span class="property-indicator"></span>
@@ -147,9 +165,7 @@ const example = new aws.imagebuilder.ImagePipeline("example", {
     </dt>
     <dd>
       The arguments to resource properties.
-    </dd>
-  
-    <dt
+    </dd><dt
         class="property-optional" title="Optional">
         <span>opts</span>
         <span class="property-indicator"></span>
@@ -157,10 +173,7 @@ const example = new aws.imagebuilder.ImagePipeline("example", {
     </dt>
     <dd>
       Bag of options to control resource&#39;s behavior.
-    </dd>
-  
-
-</dl>
+    </dd></dl>
 
 {{% /choosable %}}
 
@@ -186,9 +199,7 @@ const example = new aws.imagebuilder.ImagePipeline("example", {
 
 {{% choosable language go %}}
 
-<dl class="resources-properties">
-  
-    <dt
+<dl class="resources-properties"><dt
         class="property-optional" title="Optional">
         <span>ctx</span>
         <span class="property-indicator"></span>
@@ -196,9 +207,7 @@ const example = new aws.imagebuilder.ImagePipeline("example", {
     </dt>
     <dd>
       Context object for the current deployment.
-    </dd>
-  
-    <dt
+    </dd><dt
         class="property-required" title="Required">
         <span>name</span>
         <span class="property-indicator"></span>
@@ -206,9 +215,7 @@ const example = new aws.imagebuilder.ImagePipeline("example", {
     </dt>
     <dd>
       The unique name of the resource.
-    </dd>
-  
-    <dt
+    </dd><dt
         class="property-required" title="Required">
         <span>args</span>
         <span class="property-indicator"></span>
@@ -216,9 +223,7 @@ const example = new aws.imagebuilder.ImagePipeline("example", {
     </dt>
     <dd>
       The arguments to resource properties.
-    </dd>
-  
-    <dt
+    </dd><dt
         class="property-optional" title="Optional">
         <span>opts</span>
         <span class="property-indicator"></span>
@@ -226,18 +231,13 @@ const example = new aws.imagebuilder.ImagePipeline("example", {
     </dt>
     <dd>
       Bag of options to control resource&#39;s behavior.
-    </dd>
-  
-
-</dl>
+    </dd></dl>
 
 {{% /choosable %}}
 
 {{% choosable language csharp %}}
 
-<dl class="resources-properties">
-  
-    <dt
+<dl class="resources-properties"><dt
         class="property-required" title="Required">
         <span>name</span>
         <span class="property-indicator"></span>
@@ -245,9 +245,7 @@ const example = new aws.imagebuilder.ImagePipeline("example", {
     </dt>
     <dd>
       The unique name of the resource.
-    </dd>
-  
-    <dt
+    </dd><dt
         class="property-required" title="Required">
         <span>args</span>
         <span class="property-indicator"></span>
@@ -255,9 +253,7 @@ const example = new aws.imagebuilder.ImagePipeline("example", {
     </dt>
     <dd>
       The arguments to resource properties.
-    </dd>
-  
-    <dt
+    </dd><dt
         class="property-optional" title="Optional">
         <span>opts</span>
         <span class="property-indicator"></span>
@@ -265,10 +261,7 @@ const example = new aws.imagebuilder.ImagePipeline("example", {
     </dt>
     <dd>
       Bag of options to control resource&#39;s behavior.
-    </dd>
-  
-
-</dl>
+    </dd></dl>
 
 {{% /choosable %}}
 
@@ -283,9 +276,7 @@ The ImagePipeline resource accepts the following [input]({{< relref "/docs/intro
 
 
 {{% choosable language csharp %}}
-<dl class="resources-properties">
-
-    <dt class="property-required"
+<dl class="resources-properties"><dt class="property-required"
             title="Required">
         <span id="imagerecipearn_csharp">
 <a href="#imagerecipearn_csharp" style="color: inherit; text-decoration: inherit;">Image<wbr>Recipe<wbr>Arn</a>
@@ -294,8 +285,7 @@ The ImagePipeline resource accepts the following [input]({{< relref "/docs/intro
         <span class="property-type">string</span>
     </dt>
     <dd>{{% md %}}Amazon Resource Name (ARN) of the Image Builder Infrastructure Recipe.
-{{% /md %}}</dd>
-    <dt class="property-required"
+{{% /md %}}</dd><dt class="property-required"
             title="Required">
         <span id="infrastructureconfigurationarn_csharp">
 <a href="#infrastructureconfigurationarn_csharp" style="color: inherit; text-decoration: inherit;">Infrastructure<wbr>Configuration<wbr>Arn</a>
@@ -304,8 +294,7 @@ The ImagePipeline resource accepts the following [input]({{< relref "/docs/intro
         <span class="property-type">string</span>
     </dt>
     <dd>{{% md %}}Amazon Resource Name (ARN) of the Image Builder Infrastructure Configuration.
-{{% /md %}}</dd>
-    <dt class="property-optional"
+{{% /md %}}</dd><dt class="property-optional"
             title="Optional">
         <span id="description_csharp">
 <a href="#description_csharp" style="color: inherit; text-decoration: inherit;">Description</a>
@@ -314,8 +303,7 @@ The ImagePipeline resource accepts the following [input]({{< relref "/docs/intro
         <span class="property-type">string</span>
     </dt>
     <dd>{{% md %}}Description of the image pipeline.
-{{% /md %}}</dd>
-    <dt class="property-optional"
+{{% /md %}}</dd><dt class="property-optional"
             title="Optional">
         <span id="distributionconfigurationarn_csharp">
 <a href="#distributionconfigurationarn_csharp" style="color: inherit; text-decoration: inherit;">Distribution<wbr>Configuration<wbr>Arn</a>
@@ -324,8 +312,7 @@ The ImagePipeline resource accepts the following [input]({{< relref "/docs/intro
         <span class="property-type">string</span>
     </dt>
     <dd>{{% md %}}Amazon Resource Name (ARN) of the Image Builder Distribution Configuration.
-{{% /md %}}</dd>
-    <dt class="property-optional"
+{{% /md %}}</dd><dt class="property-optional"
             title="Optional">
         <span id="enhancedimagemetadataenabled_csharp">
 <a href="#enhancedimagemetadataenabled_csharp" style="color: inherit; text-decoration: inherit;">Enhanced<wbr>Image<wbr>Metadata<wbr>Enabled</a>
@@ -334,8 +321,7 @@ The ImagePipeline resource accepts the following [input]({{< relref "/docs/intro
         <span class="property-type">bool</span>
     </dt>
     <dd>{{% md %}}Whether additional information about the image being created is collected. Defaults to `true`.
-{{% /md %}}</dd>
-    <dt class="property-optional"
+{{% /md %}}</dd><dt class="property-optional"
             title="Optional">
         <span id="imagetestsconfiguration_csharp">
 <a href="#imagetestsconfiguration_csharp" style="color: inherit; text-decoration: inherit;">Image<wbr>Tests<wbr>Configuration</a>
@@ -344,8 +330,7 @@ The ImagePipeline resource accepts the following [input]({{< relref "/docs/intro
         <span class="property-type"><a href="#imagepipelineimagetestsconfiguration">Image<wbr>Pipeline<wbr>Image<wbr>Tests<wbr>Configuration<wbr>Args</a></span>
     </dt>
     <dd>{{% md %}}Configuration block with image tests configuration. Detailed below.
-{{% /md %}}</dd>
-    <dt class="property-optional"
+{{% /md %}}</dd><dt class="property-optional"
             title="Optional">
         <span id="name_csharp">
 <a href="#name_csharp" style="color: inherit; text-decoration: inherit;">Name</a>
@@ -354,8 +339,7 @@ The ImagePipeline resource accepts the following [input]({{< relref "/docs/intro
         <span class="property-type">string</span>
     </dt>
     <dd>{{% md %}}Name of the image pipeline.
-{{% /md %}}</dd>
-    <dt class="property-optional"
+{{% /md %}}</dd><dt class="property-optional"
             title="Optional">
         <span id="schedule_csharp">
 <a href="#schedule_csharp" style="color: inherit; text-decoration: inherit;">Schedule</a>
@@ -364,8 +348,7 @@ The ImagePipeline resource accepts the following [input]({{< relref "/docs/intro
         <span class="property-type"><a href="#imagepipelineschedule">Image<wbr>Pipeline<wbr>Schedule<wbr>Args</a></span>
     </dt>
     <dd>{{% md %}}Configuration block with schedule settings. Detailed below.
-{{% /md %}}</dd>
-    <dt class="property-optional"
+{{% /md %}}</dd><dt class="property-optional"
             title="Optional">
         <span id="status_csharp">
 <a href="#status_csharp" style="color: inherit; text-decoration: inherit;">Status</a>
@@ -374,8 +357,7 @@ The ImagePipeline resource accepts the following [input]({{< relref "/docs/intro
         <span class="property-type">string</span>
     </dt>
     <dd>{{% md %}}Status of the image pipeline. Valid values are `DISABLED` and `ENABLED`. Defaults to `ENABLED`.
-{{% /md %}}</dd>
-    <dt class="property-optional"
+{{% /md %}}</dd><dt class="property-optional"
             title="Optional">
         <span id="tags_csharp">
 <a href="#tags_csharp" style="color: inherit; text-decoration: inherit;">Tags</a>
@@ -384,14 +366,11 @@ The ImagePipeline resource accepts the following [input]({{< relref "/docs/intro
         <span class="property-type">Dictionary&lt;string, string&gt;</span>
     </dt>
     <dd>{{% md %}}Key-value map of resource tags for the image pipeline.
-{{% /md %}}</dd>
-</dl>
+{{% /md %}}</dd></dl>
 {{% /choosable %}}
 
 {{% choosable language go %}}
-<dl class="resources-properties">
-
-    <dt class="property-required"
+<dl class="resources-properties"><dt class="property-required"
             title="Required">
         <span id="imagerecipearn_go">
 <a href="#imagerecipearn_go" style="color: inherit; text-decoration: inherit;">Image<wbr>Recipe<wbr>Arn</a>
@@ -400,8 +379,7 @@ The ImagePipeline resource accepts the following [input]({{< relref "/docs/intro
         <span class="property-type">string</span>
     </dt>
     <dd>{{% md %}}Amazon Resource Name (ARN) of the Image Builder Infrastructure Recipe.
-{{% /md %}}</dd>
-    <dt class="property-required"
+{{% /md %}}</dd><dt class="property-required"
             title="Required">
         <span id="infrastructureconfigurationarn_go">
 <a href="#infrastructureconfigurationarn_go" style="color: inherit; text-decoration: inherit;">Infrastructure<wbr>Configuration<wbr>Arn</a>
@@ -410,8 +388,7 @@ The ImagePipeline resource accepts the following [input]({{< relref "/docs/intro
         <span class="property-type">string</span>
     </dt>
     <dd>{{% md %}}Amazon Resource Name (ARN) of the Image Builder Infrastructure Configuration.
-{{% /md %}}</dd>
-    <dt class="property-optional"
+{{% /md %}}</dd><dt class="property-optional"
             title="Optional">
         <span id="description_go">
 <a href="#description_go" style="color: inherit; text-decoration: inherit;">Description</a>
@@ -420,8 +397,7 @@ The ImagePipeline resource accepts the following [input]({{< relref "/docs/intro
         <span class="property-type">string</span>
     </dt>
     <dd>{{% md %}}Description of the image pipeline.
-{{% /md %}}</dd>
-    <dt class="property-optional"
+{{% /md %}}</dd><dt class="property-optional"
             title="Optional">
         <span id="distributionconfigurationarn_go">
 <a href="#distributionconfigurationarn_go" style="color: inherit; text-decoration: inherit;">Distribution<wbr>Configuration<wbr>Arn</a>
@@ -430,8 +406,7 @@ The ImagePipeline resource accepts the following [input]({{< relref "/docs/intro
         <span class="property-type">string</span>
     </dt>
     <dd>{{% md %}}Amazon Resource Name (ARN) of the Image Builder Distribution Configuration.
-{{% /md %}}</dd>
-    <dt class="property-optional"
+{{% /md %}}</dd><dt class="property-optional"
             title="Optional">
         <span id="enhancedimagemetadataenabled_go">
 <a href="#enhancedimagemetadataenabled_go" style="color: inherit; text-decoration: inherit;">Enhanced<wbr>Image<wbr>Metadata<wbr>Enabled</a>
@@ -440,8 +415,7 @@ The ImagePipeline resource accepts the following [input]({{< relref "/docs/intro
         <span class="property-type">bool</span>
     </dt>
     <dd>{{% md %}}Whether additional information about the image being created is collected. Defaults to `true`.
-{{% /md %}}</dd>
-    <dt class="property-optional"
+{{% /md %}}</dd><dt class="property-optional"
             title="Optional">
         <span id="imagetestsconfiguration_go">
 <a href="#imagetestsconfiguration_go" style="color: inherit; text-decoration: inherit;">Image<wbr>Tests<wbr>Configuration</a>
@@ -450,8 +424,7 @@ The ImagePipeline resource accepts the following [input]({{< relref "/docs/intro
         <span class="property-type"><a href="#imagepipelineimagetestsconfiguration">Image<wbr>Pipeline<wbr>Image<wbr>Tests<wbr>Configuration</a></span>
     </dt>
     <dd>{{% md %}}Configuration block with image tests configuration. Detailed below.
-{{% /md %}}</dd>
-    <dt class="property-optional"
+{{% /md %}}</dd><dt class="property-optional"
             title="Optional">
         <span id="name_go">
 <a href="#name_go" style="color: inherit; text-decoration: inherit;">Name</a>
@@ -460,8 +433,7 @@ The ImagePipeline resource accepts the following [input]({{< relref "/docs/intro
         <span class="property-type">string</span>
     </dt>
     <dd>{{% md %}}Name of the image pipeline.
-{{% /md %}}</dd>
-    <dt class="property-optional"
+{{% /md %}}</dd><dt class="property-optional"
             title="Optional">
         <span id="schedule_go">
 <a href="#schedule_go" style="color: inherit; text-decoration: inherit;">Schedule</a>
@@ -470,8 +442,7 @@ The ImagePipeline resource accepts the following [input]({{< relref "/docs/intro
         <span class="property-type"><a href="#imagepipelineschedule">Image<wbr>Pipeline<wbr>Schedule</a></span>
     </dt>
     <dd>{{% md %}}Configuration block with schedule settings. Detailed below.
-{{% /md %}}</dd>
-    <dt class="property-optional"
+{{% /md %}}</dd><dt class="property-optional"
             title="Optional">
         <span id="status_go">
 <a href="#status_go" style="color: inherit; text-decoration: inherit;">Status</a>
@@ -480,8 +451,7 @@ The ImagePipeline resource accepts the following [input]({{< relref "/docs/intro
         <span class="property-type">string</span>
     </dt>
     <dd>{{% md %}}Status of the image pipeline. Valid values are `DISABLED` and `ENABLED`. Defaults to `ENABLED`.
-{{% /md %}}</dd>
-    <dt class="property-optional"
+{{% /md %}}</dd><dt class="property-optional"
             title="Optional">
         <span id="tags_go">
 <a href="#tags_go" style="color: inherit; text-decoration: inherit;">Tags</a>
@@ -490,14 +460,11 @@ The ImagePipeline resource accepts the following [input]({{< relref "/docs/intro
         <span class="property-type">map[string]string</span>
     </dt>
     <dd>{{% md %}}Key-value map of resource tags for the image pipeline.
-{{% /md %}}</dd>
-</dl>
+{{% /md %}}</dd></dl>
 {{% /choosable %}}
 
 {{% choosable language nodejs %}}
-<dl class="resources-properties">
-
-    <dt class="property-required"
+<dl class="resources-properties"><dt class="property-required"
             title="Required">
         <span id="imagerecipearn_nodejs">
 <a href="#imagerecipearn_nodejs" style="color: inherit; text-decoration: inherit;">image<wbr>Recipe<wbr>Arn</a>
@@ -506,8 +473,7 @@ The ImagePipeline resource accepts the following [input]({{< relref "/docs/intro
         <span class="property-type">string</span>
     </dt>
     <dd>{{% md %}}Amazon Resource Name (ARN) of the Image Builder Infrastructure Recipe.
-{{% /md %}}</dd>
-    <dt class="property-required"
+{{% /md %}}</dd><dt class="property-required"
             title="Required">
         <span id="infrastructureconfigurationarn_nodejs">
 <a href="#infrastructureconfigurationarn_nodejs" style="color: inherit; text-decoration: inherit;">infrastructure<wbr>Configuration<wbr>Arn</a>
@@ -516,8 +482,7 @@ The ImagePipeline resource accepts the following [input]({{< relref "/docs/intro
         <span class="property-type">string</span>
     </dt>
     <dd>{{% md %}}Amazon Resource Name (ARN) of the Image Builder Infrastructure Configuration.
-{{% /md %}}</dd>
-    <dt class="property-optional"
+{{% /md %}}</dd><dt class="property-optional"
             title="Optional">
         <span id="description_nodejs">
 <a href="#description_nodejs" style="color: inherit; text-decoration: inherit;">description</a>
@@ -526,8 +491,7 @@ The ImagePipeline resource accepts the following [input]({{< relref "/docs/intro
         <span class="property-type">string</span>
     </dt>
     <dd>{{% md %}}Description of the image pipeline.
-{{% /md %}}</dd>
-    <dt class="property-optional"
+{{% /md %}}</dd><dt class="property-optional"
             title="Optional">
         <span id="distributionconfigurationarn_nodejs">
 <a href="#distributionconfigurationarn_nodejs" style="color: inherit; text-decoration: inherit;">distribution<wbr>Configuration<wbr>Arn</a>
@@ -536,8 +500,7 @@ The ImagePipeline resource accepts the following [input]({{< relref "/docs/intro
         <span class="property-type">string</span>
     </dt>
     <dd>{{% md %}}Amazon Resource Name (ARN) of the Image Builder Distribution Configuration.
-{{% /md %}}</dd>
-    <dt class="property-optional"
+{{% /md %}}</dd><dt class="property-optional"
             title="Optional">
         <span id="enhancedimagemetadataenabled_nodejs">
 <a href="#enhancedimagemetadataenabled_nodejs" style="color: inherit; text-decoration: inherit;">enhanced<wbr>Image<wbr>Metadata<wbr>Enabled</a>
@@ -546,8 +509,7 @@ The ImagePipeline resource accepts the following [input]({{< relref "/docs/intro
         <span class="property-type">boolean</span>
     </dt>
     <dd>{{% md %}}Whether additional information about the image being created is collected. Defaults to `true`.
-{{% /md %}}</dd>
-    <dt class="property-optional"
+{{% /md %}}</dd><dt class="property-optional"
             title="Optional">
         <span id="imagetestsconfiguration_nodejs">
 <a href="#imagetestsconfiguration_nodejs" style="color: inherit; text-decoration: inherit;">image<wbr>Tests<wbr>Configuration</a>
@@ -556,8 +518,7 @@ The ImagePipeline resource accepts the following [input]({{< relref "/docs/intro
         <span class="property-type"><a href="#imagepipelineimagetestsconfiguration">Image<wbr>Pipeline<wbr>Image<wbr>Tests<wbr>Configuration</a></span>
     </dt>
     <dd>{{% md %}}Configuration block with image tests configuration. Detailed below.
-{{% /md %}}</dd>
-    <dt class="property-optional"
+{{% /md %}}</dd><dt class="property-optional"
             title="Optional">
         <span id="name_nodejs">
 <a href="#name_nodejs" style="color: inherit; text-decoration: inherit;">name</a>
@@ -566,8 +527,7 @@ The ImagePipeline resource accepts the following [input]({{< relref "/docs/intro
         <span class="property-type">string</span>
     </dt>
     <dd>{{% md %}}Name of the image pipeline.
-{{% /md %}}</dd>
-    <dt class="property-optional"
+{{% /md %}}</dd><dt class="property-optional"
             title="Optional">
         <span id="schedule_nodejs">
 <a href="#schedule_nodejs" style="color: inherit; text-decoration: inherit;">schedule</a>
@@ -576,8 +536,7 @@ The ImagePipeline resource accepts the following [input]({{< relref "/docs/intro
         <span class="property-type"><a href="#imagepipelineschedule">Image<wbr>Pipeline<wbr>Schedule</a></span>
     </dt>
     <dd>{{% md %}}Configuration block with schedule settings. Detailed below.
-{{% /md %}}</dd>
-    <dt class="property-optional"
+{{% /md %}}</dd><dt class="property-optional"
             title="Optional">
         <span id="status_nodejs">
 <a href="#status_nodejs" style="color: inherit; text-decoration: inherit;">status</a>
@@ -586,8 +545,7 @@ The ImagePipeline resource accepts the following [input]({{< relref "/docs/intro
         <span class="property-type">string</span>
     </dt>
     <dd>{{% md %}}Status of the image pipeline. Valid values are `DISABLED` and `ENABLED`. Defaults to `ENABLED`.
-{{% /md %}}</dd>
-    <dt class="property-optional"
+{{% /md %}}</dd><dt class="property-optional"
             title="Optional">
         <span id="tags_nodejs">
 <a href="#tags_nodejs" style="color: inherit; text-decoration: inherit;">tags</a>
@@ -596,14 +554,11 @@ The ImagePipeline resource accepts the following [input]({{< relref "/docs/intro
         <span class="property-type">{[key: string]: string}</span>
     </dt>
     <dd>{{% md %}}Key-value map of resource tags for the image pipeline.
-{{% /md %}}</dd>
-</dl>
+{{% /md %}}</dd></dl>
 {{% /choosable %}}
 
 {{% choosable language python %}}
-<dl class="resources-properties">
-
-    <dt class="property-required"
+<dl class="resources-properties"><dt class="property-required"
             title="Required">
         <span id="image_recipe_arn_python">
 <a href="#image_recipe_arn_python" style="color: inherit; text-decoration: inherit;">image_<wbr>recipe_<wbr>arn</a>
@@ -612,8 +567,7 @@ The ImagePipeline resource accepts the following [input]({{< relref "/docs/intro
         <span class="property-type">str</span>
     </dt>
     <dd>{{% md %}}Amazon Resource Name (ARN) of the Image Builder Infrastructure Recipe.
-{{% /md %}}</dd>
-    <dt class="property-required"
+{{% /md %}}</dd><dt class="property-required"
             title="Required">
         <span id="infrastructure_configuration_arn_python">
 <a href="#infrastructure_configuration_arn_python" style="color: inherit; text-decoration: inherit;">infrastructure_<wbr>configuration_<wbr>arn</a>
@@ -622,8 +576,7 @@ The ImagePipeline resource accepts the following [input]({{< relref "/docs/intro
         <span class="property-type">str</span>
     </dt>
     <dd>{{% md %}}Amazon Resource Name (ARN) of the Image Builder Infrastructure Configuration.
-{{% /md %}}</dd>
-    <dt class="property-optional"
+{{% /md %}}</dd><dt class="property-optional"
             title="Optional">
         <span id="description_python">
 <a href="#description_python" style="color: inherit; text-decoration: inherit;">description</a>
@@ -632,8 +585,7 @@ The ImagePipeline resource accepts the following [input]({{< relref "/docs/intro
         <span class="property-type">str</span>
     </dt>
     <dd>{{% md %}}Description of the image pipeline.
-{{% /md %}}</dd>
-    <dt class="property-optional"
+{{% /md %}}</dd><dt class="property-optional"
             title="Optional">
         <span id="distribution_configuration_arn_python">
 <a href="#distribution_configuration_arn_python" style="color: inherit; text-decoration: inherit;">distribution_<wbr>configuration_<wbr>arn</a>
@@ -642,8 +594,7 @@ The ImagePipeline resource accepts the following [input]({{< relref "/docs/intro
         <span class="property-type">str</span>
     </dt>
     <dd>{{% md %}}Amazon Resource Name (ARN) of the Image Builder Distribution Configuration.
-{{% /md %}}</dd>
-    <dt class="property-optional"
+{{% /md %}}</dd><dt class="property-optional"
             title="Optional">
         <span id="enhanced_image_metadata_enabled_python">
 <a href="#enhanced_image_metadata_enabled_python" style="color: inherit; text-decoration: inherit;">enhanced_<wbr>image_<wbr>metadata_<wbr>enabled</a>
@@ -652,8 +603,7 @@ The ImagePipeline resource accepts the following [input]({{< relref "/docs/intro
         <span class="property-type">bool</span>
     </dt>
     <dd>{{% md %}}Whether additional information about the image being created is collected. Defaults to `true`.
-{{% /md %}}</dd>
-    <dt class="property-optional"
+{{% /md %}}</dd><dt class="property-optional"
             title="Optional">
         <span id="image_tests_configuration_python">
 <a href="#image_tests_configuration_python" style="color: inherit; text-decoration: inherit;">image_<wbr>tests_<wbr>configuration</a>
@@ -662,8 +612,7 @@ The ImagePipeline resource accepts the following [input]({{< relref "/docs/intro
         <span class="property-type"><a href="#imagepipelineimagetestsconfiguration">Image<wbr>Pipeline<wbr>Image<wbr>Tests<wbr>Configuration<wbr>Args</a></span>
     </dt>
     <dd>{{% md %}}Configuration block with image tests configuration. Detailed below.
-{{% /md %}}</dd>
-    <dt class="property-optional"
+{{% /md %}}</dd><dt class="property-optional"
             title="Optional">
         <span id="name_python">
 <a href="#name_python" style="color: inherit; text-decoration: inherit;">name</a>
@@ -672,8 +621,7 @@ The ImagePipeline resource accepts the following [input]({{< relref "/docs/intro
         <span class="property-type">str</span>
     </dt>
     <dd>{{% md %}}Name of the image pipeline.
-{{% /md %}}</dd>
-    <dt class="property-optional"
+{{% /md %}}</dd><dt class="property-optional"
             title="Optional">
         <span id="schedule_python">
 <a href="#schedule_python" style="color: inherit; text-decoration: inherit;">schedule</a>
@@ -682,8 +630,7 @@ The ImagePipeline resource accepts the following [input]({{< relref "/docs/intro
         <span class="property-type"><a href="#imagepipelineschedule">Image<wbr>Pipeline<wbr>Schedule<wbr>Args</a></span>
     </dt>
     <dd>{{% md %}}Configuration block with schedule settings. Detailed below.
-{{% /md %}}</dd>
-    <dt class="property-optional"
+{{% /md %}}</dd><dt class="property-optional"
             title="Optional">
         <span id="status_python">
 <a href="#status_python" style="color: inherit; text-decoration: inherit;">status</a>
@@ -692,8 +639,7 @@ The ImagePipeline resource accepts the following [input]({{< relref "/docs/intro
         <span class="property-type">str</span>
     </dt>
     <dd>{{% md %}}Status of the image pipeline. Valid values are `DISABLED` and `ENABLED`. Defaults to `ENABLED`.
-{{% /md %}}</dd>
-    <dt class="property-optional"
+{{% /md %}}</dd><dt class="property-optional"
             title="Optional">
         <span id="tags_python">
 <a href="#tags_python" style="color: inherit; text-decoration: inherit;">tags</a>
@@ -702,8 +648,7 @@ The ImagePipeline resource accepts the following [input]({{< relref "/docs/intro
         <span class="property-type">Mapping[str, str]</span>
     </dt>
     <dd>{{% md %}}Key-value map of resource tags for the image pipeline.
-{{% /md %}}</dd>
-</dl>
+{{% /md %}}</dd></dl>
 {{% /choosable %}}
 
 
@@ -714,9 +659,7 @@ All [input](#inputs) properties are implicitly available as output properties. A
 
 
 {{% choosable language csharp %}}
-<dl class="resources-properties">
-
-    <dt class="property-"
+<dl class="resources-properties"><dt class="property-"
             title="">
         <span id="arn_csharp">
 <a href="#arn_csharp" style="color: inherit; text-decoration: inherit;">Arn</a>
@@ -725,8 +668,7 @@ All [input](#inputs) properties are implicitly available as output properties. A
         <span class="property-type">string</span>
     </dt>
     <dd>{{% md %}}Amazon Resource Name (ARN) of the image pipeline.
-{{% /md %}}</dd>
-    <dt class="property-"
+{{% /md %}}</dd><dt class="property-"
             title="">
         <span id="datecreated_csharp">
 <a href="#datecreated_csharp" style="color: inherit; text-decoration: inherit;">Date<wbr>Created</a>
@@ -735,8 +677,7 @@ All [input](#inputs) properties are implicitly available as output properties. A
         <span class="property-type">string</span>
     </dt>
     <dd>{{% md %}}Date the image pipeline was created.
-{{% /md %}}</dd>
-    <dt class="property-"
+{{% /md %}}</dd><dt class="property-"
             title="">
         <span id="datelastrun_csharp">
 <a href="#datelastrun_csharp" style="color: inherit; text-decoration: inherit;">Date<wbr>Last<wbr>Run</a>
@@ -745,8 +686,7 @@ All [input](#inputs) properties are implicitly available as output properties. A
         <span class="property-type">string</span>
     </dt>
     <dd>{{% md %}}Date the image pipeline was last run.
-{{% /md %}}</dd>
-    <dt class="property-"
+{{% /md %}}</dd><dt class="property-"
             title="">
         <span id="datenextrun_csharp">
 <a href="#datenextrun_csharp" style="color: inherit; text-decoration: inherit;">Date<wbr>Next<wbr>Run</a>
@@ -755,8 +695,7 @@ All [input](#inputs) properties are implicitly available as output properties. A
         <span class="property-type">string</span>
     </dt>
     <dd>{{% md %}}Date the image pipeline will run next.
-{{% /md %}}</dd>
-    <dt class="property-"
+{{% /md %}}</dd><dt class="property-"
             title="">
         <span id="dateupdated_csharp">
 <a href="#dateupdated_csharp" style="color: inherit; text-decoration: inherit;">Date<wbr>Updated</a>
@@ -765,8 +704,7 @@ All [input](#inputs) properties are implicitly available as output properties. A
         <span class="property-type">string</span>
     </dt>
     <dd>{{% md %}}Date the image pipeline was updated.
-{{% /md %}}</dd>
-    <dt class="property-"
+{{% /md %}}</dd><dt class="property-"
             title="">
         <span id="id_csharp">
 <a href="#id_csharp" style="color: inherit; text-decoration: inherit;">Id</a>
@@ -774,8 +712,7 @@ All [input](#inputs) properties are implicitly available as output properties. A
         <span class="property-indicator"></span>
         <span class="property-type">string</span>
     </dt>
-    <dd>{{% md %}}The provider-assigned unique ID for this managed resource.{{% /md %}}</dd>
-    <dt class="property-"
+    <dd>{{% md %}}The provider-assigned unique ID for this managed resource.{{% /md %}}</dd><dt class="property-"
             title="">
         <span id="platform_csharp">
 <a href="#platform_csharp" style="color: inherit; text-decoration: inherit;">Platform</a>
@@ -784,14 +721,11 @@ All [input](#inputs) properties are implicitly available as output properties. A
         <span class="property-type">string</span>
     </dt>
     <dd>{{% md %}}Platform of the image pipeline.
-{{% /md %}}</dd>
-</dl>
+{{% /md %}}</dd></dl>
 {{% /choosable %}}
 
 {{% choosable language go %}}
-<dl class="resources-properties">
-
-    <dt class="property-"
+<dl class="resources-properties"><dt class="property-"
             title="">
         <span id="arn_go">
 <a href="#arn_go" style="color: inherit; text-decoration: inherit;">Arn</a>
@@ -800,8 +734,7 @@ All [input](#inputs) properties are implicitly available as output properties. A
         <span class="property-type">string</span>
     </dt>
     <dd>{{% md %}}Amazon Resource Name (ARN) of the image pipeline.
-{{% /md %}}</dd>
-    <dt class="property-"
+{{% /md %}}</dd><dt class="property-"
             title="">
         <span id="datecreated_go">
 <a href="#datecreated_go" style="color: inherit; text-decoration: inherit;">Date<wbr>Created</a>
@@ -810,8 +743,7 @@ All [input](#inputs) properties are implicitly available as output properties. A
         <span class="property-type">string</span>
     </dt>
     <dd>{{% md %}}Date the image pipeline was created.
-{{% /md %}}</dd>
-    <dt class="property-"
+{{% /md %}}</dd><dt class="property-"
             title="">
         <span id="datelastrun_go">
 <a href="#datelastrun_go" style="color: inherit; text-decoration: inherit;">Date<wbr>Last<wbr>Run</a>
@@ -820,8 +752,7 @@ All [input](#inputs) properties are implicitly available as output properties. A
         <span class="property-type">string</span>
     </dt>
     <dd>{{% md %}}Date the image pipeline was last run.
-{{% /md %}}</dd>
-    <dt class="property-"
+{{% /md %}}</dd><dt class="property-"
             title="">
         <span id="datenextrun_go">
 <a href="#datenextrun_go" style="color: inherit; text-decoration: inherit;">Date<wbr>Next<wbr>Run</a>
@@ -830,8 +761,7 @@ All [input](#inputs) properties are implicitly available as output properties. A
         <span class="property-type">string</span>
     </dt>
     <dd>{{% md %}}Date the image pipeline will run next.
-{{% /md %}}</dd>
-    <dt class="property-"
+{{% /md %}}</dd><dt class="property-"
             title="">
         <span id="dateupdated_go">
 <a href="#dateupdated_go" style="color: inherit; text-decoration: inherit;">Date<wbr>Updated</a>
@@ -840,8 +770,7 @@ All [input](#inputs) properties are implicitly available as output properties. A
         <span class="property-type">string</span>
     </dt>
     <dd>{{% md %}}Date the image pipeline was updated.
-{{% /md %}}</dd>
-    <dt class="property-"
+{{% /md %}}</dd><dt class="property-"
             title="">
         <span id="id_go">
 <a href="#id_go" style="color: inherit; text-decoration: inherit;">Id</a>
@@ -849,8 +778,7 @@ All [input](#inputs) properties are implicitly available as output properties. A
         <span class="property-indicator"></span>
         <span class="property-type">string</span>
     </dt>
-    <dd>{{% md %}}The provider-assigned unique ID for this managed resource.{{% /md %}}</dd>
-    <dt class="property-"
+    <dd>{{% md %}}The provider-assigned unique ID for this managed resource.{{% /md %}}</dd><dt class="property-"
             title="">
         <span id="platform_go">
 <a href="#platform_go" style="color: inherit; text-decoration: inherit;">Platform</a>
@@ -859,14 +787,11 @@ All [input](#inputs) properties are implicitly available as output properties. A
         <span class="property-type">string</span>
     </dt>
     <dd>{{% md %}}Platform of the image pipeline.
-{{% /md %}}</dd>
-</dl>
+{{% /md %}}</dd></dl>
 {{% /choosable %}}
 
 {{% choosable language nodejs %}}
-<dl class="resources-properties">
-
-    <dt class="property-"
+<dl class="resources-properties"><dt class="property-"
             title="">
         <span id="arn_nodejs">
 <a href="#arn_nodejs" style="color: inherit; text-decoration: inherit;">arn</a>
@@ -875,8 +800,7 @@ All [input](#inputs) properties are implicitly available as output properties. A
         <span class="property-type">string</span>
     </dt>
     <dd>{{% md %}}Amazon Resource Name (ARN) of the image pipeline.
-{{% /md %}}</dd>
-    <dt class="property-"
+{{% /md %}}</dd><dt class="property-"
             title="">
         <span id="datecreated_nodejs">
 <a href="#datecreated_nodejs" style="color: inherit; text-decoration: inherit;">date<wbr>Created</a>
@@ -885,8 +809,7 @@ All [input](#inputs) properties are implicitly available as output properties. A
         <span class="property-type">string</span>
     </dt>
     <dd>{{% md %}}Date the image pipeline was created.
-{{% /md %}}</dd>
-    <dt class="property-"
+{{% /md %}}</dd><dt class="property-"
             title="">
         <span id="datelastrun_nodejs">
 <a href="#datelastrun_nodejs" style="color: inherit; text-decoration: inherit;">date<wbr>Last<wbr>Run</a>
@@ -895,8 +818,7 @@ All [input](#inputs) properties are implicitly available as output properties. A
         <span class="property-type">string</span>
     </dt>
     <dd>{{% md %}}Date the image pipeline was last run.
-{{% /md %}}</dd>
-    <dt class="property-"
+{{% /md %}}</dd><dt class="property-"
             title="">
         <span id="datenextrun_nodejs">
 <a href="#datenextrun_nodejs" style="color: inherit; text-decoration: inherit;">date<wbr>Next<wbr>Run</a>
@@ -905,8 +827,7 @@ All [input](#inputs) properties are implicitly available as output properties. A
         <span class="property-type">string</span>
     </dt>
     <dd>{{% md %}}Date the image pipeline will run next.
-{{% /md %}}</dd>
-    <dt class="property-"
+{{% /md %}}</dd><dt class="property-"
             title="">
         <span id="dateupdated_nodejs">
 <a href="#dateupdated_nodejs" style="color: inherit; text-decoration: inherit;">date<wbr>Updated</a>
@@ -915,8 +836,7 @@ All [input](#inputs) properties are implicitly available as output properties. A
         <span class="property-type">string</span>
     </dt>
     <dd>{{% md %}}Date the image pipeline was updated.
-{{% /md %}}</dd>
-    <dt class="property-"
+{{% /md %}}</dd><dt class="property-"
             title="">
         <span id="id_nodejs">
 <a href="#id_nodejs" style="color: inherit; text-decoration: inherit;">id</a>
@@ -924,8 +844,7 @@ All [input](#inputs) properties are implicitly available as output properties. A
         <span class="property-indicator"></span>
         <span class="property-type">string</span>
     </dt>
-    <dd>{{% md %}}The provider-assigned unique ID for this managed resource.{{% /md %}}</dd>
-    <dt class="property-"
+    <dd>{{% md %}}The provider-assigned unique ID for this managed resource.{{% /md %}}</dd><dt class="property-"
             title="">
         <span id="platform_nodejs">
 <a href="#platform_nodejs" style="color: inherit; text-decoration: inherit;">platform</a>
@@ -934,14 +853,11 @@ All [input](#inputs) properties are implicitly available as output properties. A
         <span class="property-type">string</span>
     </dt>
     <dd>{{% md %}}Platform of the image pipeline.
-{{% /md %}}</dd>
-</dl>
+{{% /md %}}</dd></dl>
 {{% /choosable %}}
 
 {{% choosable language python %}}
-<dl class="resources-properties">
-
-    <dt class="property-"
+<dl class="resources-properties"><dt class="property-"
             title="">
         <span id="arn_python">
 <a href="#arn_python" style="color: inherit; text-decoration: inherit;">arn</a>
@@ -950,8 +866,7 @@ All [input](#inputs) properties are implicitly available as output properties. A
         <span class="property-type">str</span>
     </dt>
     <dd>{{% md %}}Amazon Resource Name (ARN) of the image pipeline.
-{{% /md %}}</dd>
-    <dt class="property-"
+{{% /md %}}</dd><dt class="property-"
             title="">
         <span id="date_created_python">
 <a href="#date_created_python" style="color: inherit; text-decoration: inherit;">date_<wbr>created</a>
@@ -960,8 +875,7 @@ All [input](#inputs) properties are implicitly available as output properties. A
         <span class="property-type">str</span>
     </dt>
     <dd>{{% md %}}Date the image pipeline was created.
-{{% /md %}}</dd>
-    <dt class="property-"
+{{% /md %}}</dd><dt class="property-"
             title="">
         <span id="date_last_run_python">
 <a href="#date_last_run_python" style="color: inherit; text-decoration: inherit;">date_<wbr>last_<wbr>run</a>
@@ -970,8 +884,7 @@ All [input](#inputs) properties are implicitly available as output properties. A
         <span class="property-type">str</span>
     </dt>
     <dd>{{% md %}}Date the image pipeline was last run.
-{{% /md %}}</dd>
-    <dt class="property-"
+{{% /md %}}</dd><dt class="property-"
             title="">
         <span id="date_next_run_python">
 <a href="#date_next_run_python" style="color: inherit; text-decoration: inherit;">date_<wbr>next_<wbr>run</a>
@@ -980,8 +893,7 @@ All [input](#inputs) properties are implicitly available as output properties. A
         <span class="property-type">str</span>
     </dt>
     <dd>{{% md %}}Date the image pipeline will run next.
-{{% /md %}}</dd>
-    <dt class="property-"
+{{% /md %}}</dd><dt class="property-"
             title="">
         <span id="date_updated_python">
 <a href="#date_updated_python" style="color: inherit; text-decoration: inherit;">date_<wbr>updated</a>
@@ -990,8 +902,7 @@ All [input](#inputs) properties are implicitly available as output properties. A
         <span class="property-type">str</span>
     </dt>
     <dd>{{% md %}}Date the image pipeline was updated.
-{{% /md %}}</dd>
-    <dt class="property-"
+{{% /md %}}</dd><dt class="property-"
             title="">
         <span id="id_python">
 <a href="#id_python" style="color: inherit; text-decoration: inherit;">id</a>
@@ -999,8 +910,7 @@ All [input](#inputs) properties are implicitly available as output properties. A
         <span class="property-indicator"></span>
         <span class="property-type">str</span>
     </dt>
-    <dd>{{% md %}}The provider-assigned unique ID for this managed resource.{{% /md %}}</dd>
-    <dt class="property-"
+    <dd>{{% md %}}The provider-assigned unique ID for this managed resource.{{% /md %}}</dd><dt class="property-"
             title="">
         <span id="platform_python">
 <a href="#platform_python" style="color: inherit; text-decoration: inherit;">platform</a>
@@ -1009,8 +919,7 @@ All [input](#inputs) properties are implicitly available as output properties. A
         <span class="property-type">str</span>
     </dt>
     <dd>{{% md %}}Platform of the image pipeline.
-{{% /md %}}</dd>
-</dl>
+{{% /md %}}</dd></dl>
 {{% /choosable %}}
 
 
@@ -1137,9 +1046,7 @@ The following state arguments are supported:
 
 
 {{% choosable language csharp %}}
-<dl class="resources-properties">
-
-    <dt class="property-optional"
+<dl class="resources-properties"><dt class="property-optional"
             title="Optional">
         <span id="state_arn_csharp">
 <a href="#state_arn_csharp" style="color: inherit; text-decoration: inherit;">Arn</a>
@@ -1148,8 +1055,7 @@ The following state arguments are supported:
         <span class="property-type">string</span>
     </dt>
     <dd>{{% md %}}Amazon Resource Name (ARN) of the image pipeline.
-{{% /md %}}</dd>
-    <dt class="property-optional"
+{{% /md %}}</dd><dt class="property-optional"
             title="Optional">
         <span id="state_datecreated_csharp">
 <a href="#state_datecreated_csharp" style="color: inherit; text-decoration: inherit;">Date<wbr>Created</a>
@@ -1158,8 +1064,7 @@ The following state arguments are supported:
         <span class="property-type">string</span>
     </dt>
     <dd>{{% md %}}Date the image pipeline was created.
-{{% /md %}}</dd>
-    <dt class="property-optional"
+{{% /md %}}</dd><dt class="property-optional"
             title="Optional">
         <span id="state_datelastrun_csharp">
 <a href="#state_datelastrun_csharp" style="color: inherit; text-decoration: inherit;">Date<wbr>Last<wbr>Run</a>
@@ -1168,8 +1073,7 @@ The following state arguments are supported:
         <span class="property-type">string</span>
     </dt>
     <dd>{{% md %}}Date the image pipeline was last run.
-{{% /md %}}</dd>
-    <dt class="property-optional"
+{{% /md %}}</dd><dt class="property-optional"
             title="Optional">
         <span id="state_datenextrun_csharp">
 <a href="#state_datenextrun_csharp" style="color: inherit; text-decoration: inherit;">Date<wbr>Next<wbr>Run</a>
@@ -1178,8 +1082,7 @@ The following state arguments are supported:
         <span class="property-type">string</span>
     </dt>
     <dd>{{% md %}}Date the image pipeline will run next.
-{{% /md %}}</dd>
-    <dt class="property-optional"
+{{% /md %}}</dd><dt class="property-optional"
             title="Optional">
         <span id="state_dateupdated_csharp">
 <a href="#state_dateupdated_csharp" style="color: inherit; text-decoration: inherit;">Date<wbr>Updated</a>
@@ -1188,8 +1091,7 @@ The following state arguments are supported:
         <span class="property-type">string</span>
     </dt>
     <dd>{{% md %}}Date the image pipeline was updated.
-{{% /md %}}</dd>
-    <dt class="property-optional"
+{{% /md %}}</dd><dt class="property-optional"
             title="Optional">
         <span id="state_description_csharp">
 <a href="#state_description_csharp" style="color: inherit; text-decoration: inherit;">Description</a>
@@ -1198,8 +1100,7 @@ The following state arguments are supported:
         <span class="property-type">string</span>
     </dt>
     <dd>{{% md %}}Description of the image pipeline.
-{{% /md %}}</dd>
-    <dt class="property-optional"
+{{% /md %}}</dd><dt class="property-optional"
             title="Optional">
         <span id="state_distributionconfigurationarn_csharp">
 <a href="#state_distributionconfigurationarn_csharp" style="color: inherit; text-decoration: inherit;">Distribution<wbr>Configuration<wbr>Arn</a>
@@ -1208,8 +1109,7 @@ The following state arguments are supported:
         <span class="property-type">string</span>
     </dt>
     <dd>{{% md %}}Amazon Resource Name (ARN) of the Image Builder Distribution Configuration.
-{{% /md %}}</dd>
-    <dt class="property-optional"
+{{% /md %}}</dd><dt class="property-optional"
             title="Optional">
         <span id="state_enhancedimagemetadataenabled_csharp">
 <a href="#state_enhancedimagemetadataenabled_csharp" style="color: inherit; text-decoration: inherit;">Enhanced<wbr>Image<wbr>Metadata<wbr>Enabled</a>
@@ -1218,8 +1118,7 @@ The following state arguments are supported:
         <span class="property-type">bool</span>
     </dt>
     <dd>{{% md %}}Whether additional information about the image being created is collected. Defaults to `true`.
-{{% /md %}}</dd>
-    <dt class="property-optional"
+{{% /md %}}</dd><dt class="property-optional"
             title="Optional">
         <span id="state_imagerecipearn_csharp">
 <a href="#state_imagerecipearn_csharp" style="color: inherit; text-decoration: inherit;">Image<wbr>Recipe<wbr>Arn</a>
@@ -1228,8 +1127,7 @@ The following state arguments are supported:
         <span class="property-type">string</span>
     </dt>
     <dd>{{% md %}}Amazon Resource Name (ARN) of the Image Builder Infrastructure Recipe.
-{{% /md %}}</dd>
-    <dt class="property-optional"
+{{% /md %}}</dd><dt class="property-optional"
             title="Optional">
         <span id="state_imagetestsconfiguration_csharp">
 <a href="#state_imagetestsconfiguration_csharp" style="color: inherit; text-decoration: inherit;">Image<wbr>Tests<wbr>Configuration</a>
@@ -1238,8 +1136,7 @@ The following state arguments are supported:
         <span class="property-type"><a href="#imagepipelineimagetestsconfiguration">Image<wbr>Pipeline<wbr>Image<wbr>Tests<wbr>Configuration<wbr>Args</a></span>
     </dt>
     <dd>{{% md %}}Configuration block with image tests configuration. Detailed below.
-{{% /md %}}</dd>
-    <dt class="property-optional"
+{{% /md %}}</dd><dt class="property-optional"
             title="Optional">
         <span id="state_infrastructureconfigurationarn_csharp">
 <a href="#state_infrastructureconfigurationarn_csharp" style="color: inherit; text-decoration: inherit;">Infrastructure<wbr>Configuration<wbr>Arn</a>
@@ -1248,8 +1145,7 @@ The following state arguments are supported:
         <span class="property-type">string</span>
     </dt>
     <dd>{{% md %}}Amazon Resource Name (ARN) of the Image Builder Infrastructure Configuration.
-{{% /md %}}</dd>
-    <dt class="property-optional"
+{{% /md %}}</dd><dt class="property-optional"
             title="Optional">
         <span id="state_name_csharp">
 <a href="#state_name_csharp" style="color: inherit; text-decoration: inherit;">Name</a>
@@ -1258,8 +1154,7 @@ The following state arguments are supported:
         <span class="property-type">string</span>
     </dt>
     <dd>{{% md %}}Name of the image pipeline.
-{{% /md %}}</dd>
-    <dt class="property-optional"
+{{% /md %}}</dd><dt class="property-optional"
             title="Optional">
         <span id="state_platform_csharp">
 <a href="#state_platform_csharp" style="color: inherit; text-decoration: inherit;">Platform</a>
@@ -1268,8 +1163,7 @@ The following state arguments are supported:
         <span class="property-type">string</span>
     </dt>
     <dd>{{% md %}}Platform of the image pipeline.
-{{% /md %}}</dd>
-    <dt class="property-optional"
+{{% /md %}}</dd><dt class="property-optional"
             title="Optional">
         <span id="state_schedule_csharp">
 <a href="#state_schedule_csharp" style="color: inherit; text-decoration: inherit;">Schedule</a>
@@ -1278,8 +1172,7 @@ The following state arguments are supported:
         <span class="property-type"><a href="#imagepipelineschedule">Image<wbr>Pipeline<wbr>Schedule<wbr>Args</a></span>
     </dt>
     <dd>{{% md %}}Configuration block with schedule settings. Detailed below.
-{{% /md %}}</dd>
-    <dt class="property-optional"
+{{% /md %}}</dd><dt class="property-optional"
             title="Optional">
         <span id="state_status_csharp">
 <a href="#state_status_csharp" style="color: inherit; text-decoration: inherit;">Status</a>
@@ -1288,8 +1181,7 @@ The following state arguments are supported:
         <span class="property-type">string</span>
     </dt>
     <dd>{{% md %}}Status of the image pipeline. Valid values are `DISABLED` and `ENABLED`. Defaults to `ENABLED`.
-{{% /md %}}</dd>
-    <dt class="property-optional"
+{{% /md %}}</dd><dt class="property-optional"
             title="Optional">
         <span id="state_tags_csharp">
 <a href="#state_tags_csharp" style="color: inherit; text-decoration: inherit;">Tags</a>
@@ -1298,14 +1190,11 @@ The following state arguments are supported:
         <span class="property-type">Dictionary&lt;string, string&gt;</span>
     </dt>
     <dd>{{% md %}}Key-value map of resource tags for the image pipeline.
-{{% /md %}}</dd>
-</dl>
+{{% /md %}}</dd></dl>
 {{% /choosable %}}
 
 {{% choosable language go %}}
-<dl class="resources-properties">
-
-    <dt class="property-optional"
+<dl class="resources-properties"><dt class="property-optional"
             title="Optional">
         <span id="state_arn_go">
 <a href="#state_arn_go" style="color: inherit; text-decoration: inherit;">Arn</a>
@@ -1314,8 +1203,7 @@ The following state arguments are supported:
         <span class="property-type">string</span>
     </dt>
     <dd>{{% md %}}Amazon Resource Name (ARN) of the image pipeline.
-{{% /md %}}</dd>
-    <dt class="property-optional"
+{{% /md %}}</dd><dt class="property-optional"
             title="Optional">
         <span id="state_datecreated_go">
 <a href="#state_datecreated_go" style="color: inherit; text-decoration: inherit;">Date<wbr>Created</a>
@@ -1324,8 +1212,7 @@ The following state arguments are supported:
         <span class="property-type">string</span>
     </dt>
     <dd>{{% md %}}Date the image pipeline was created.
-{{% /md %}}</dd>
-    <dt class="property-optional"
+{{% /md %}}</dd><dt class="property-optional"
             title="Optional">
         <span id="state_datelastrun_go">
 <a href="#state_datelastrun_go" style="color: inherit; text-decoration: inherit;">Date<wbr>Last<wbr>Run</a>
@@ -1334,8 +1221,7 @@ The following state arguments are supported:
         <span class="property-type">string</span>
     </dt>
     <dd>{{% md %}}Date the image pipeline was last run.
-{{% /md %}}</dd>
-    <dt class="property-optional"
+{{% /md %}}</dd><dt class="property-optional"
             title="Optional">
         <span id="state_datenextrun_go">
 <a href="#state_datenextrun_go" style="color: inherit; text-decoration: inherit;">Date<wbr>Next<wbr>Run</a>
@@ -1344,8 +1230,7 @@ The following state arguments are supported:
         <span class="property-type">string</span>
     </dt>
     <dd>{{% md %}}Date the image pipeline will run next.
-{{% /md %}}</dd>
-    <dt class="property-optional"
+{{% /md %}}</dd><dt class="property-optional"
             title="Optional">
         <span id="state_dateupdated_go">
 <a href="#state_dateupdated_go" style="color: inherit; text-decoration: inherit;">Date<wbr>Updated</a>
@@ -1354,8 +1239,7 @@ The following state arguments are supported:
         <span class="property-type">string</span>
     </dt>
     <dd>{{% md %}}Date the image pipeline was updated.
-{{% /md %}}</dd>
-    <dt class="property-optional"
+{{% /md %}}</dd><dt class="property-optional"
             title="Optional">
         <span id="state_description_go">
 <a href="#state_description_go" style="color: inherit; text-decoration: inherit;">Description</a>
@@ -1364,8 +1248,7 @@ The following state arguments are supported:
         <span class="property-type">string</span>
     </dt>
     <dd>{{% md %}}Description of the image pipeline.
-{{% /md %}}</dd>
-    <dt class="property-optional"
+{{% /md %}}</dd><dt class="property-optional"
             title="Optional">
         <span id="state_distributionconfigurationarn_go">
 <a href="#state_distributionconfigurationarn_go" style="color: inherit; text-decoration: inherit;">Distribution<wbr>Configuration<wbr>Arn</a>
@@ -1374,8 +1257,7 @@ The following state arguments are supported:
         <span class="property-type">string</span>
     </dt>
     <dd>{{% md %}}Amazon Resource Name (ARN) of the Image Builder Distribution Configuration.
-{{% /md %}}</dd>
-    <dt class="property-optional"
+{{% /md %}}</dd><dt class="property-optional"
             title="Optional">
         <span id="state_enhancedimagemetadataenabled_go">
 <a href="#state_enhancedimagemetadataenabled_go" style="color: inherit; text-decoration: inherit;">Enhanced<wbr>Image<wbr>Metadata<wbr>Enabled</a>
@@ -1384,8 +1266,7 @@ The following state arguments are supported:
         <span class="property-type">bool</span>
     </dt>
     <dd>{{% md %}}Whether additional information about the image being created is collected. Defaults to `true`.
-{{% /md %}}</dd>
-    <dt class="property-optional"
+{{% /md %}}</dd><dt class="property-optional"
             title="Optional">
         <span id="state_imagerecipearn_go">
 <a href="#state_imagerecipearn_go" style="color: inherit; text-decoration: inherit;">Image<wbr>Recipe<wbr>Arn</a>
@@ -1394,8 +1275,7 @@ The following state arguments are supported:
         <span class="property-type">string</span>
     </dt>
     <dd>{{% md %}}Amazon Resource Name (ARN) of the Image Builder Infrastructure Recipe.
-{{% /md %}}</dd>
-    <dt class="property-optional"
+{{% /md %}}</dd><dt class="property-optional"
             title="Optional">
         <span id="state_imagetestsconfiguration_go">
 <a href="#state_imagetestsconfiguration_go" style="color: inherit; text-decoration: inherit;">Image<wbr>Tests<wbr>Configuration</a>
@@ -1404,8 +1284,7 @@ The following state arguments are supported:
         <span class="property-type"><a href="#imagepipelineimagetestsconfiguration">Image<wbr>Pipeline<wbr>Image<wbr>Tests<wbr>Configuration</a></span>
     </dt>
     <dd>{{% md %}}Configuration block with image tests configuration. Detailed below.
-{{% /md %}}</dd>
-    <dt class="property-optional"
+{{% /md %}}</dd><dt class="property-optional"
             title="Optional">
         <span id="state_infrastructureconfigurationarn_go">
 <a href="#state_infrastructureconfigurationarn_go" style="color: inherit; text-decoration: inherit;">Infrastructure<wbr>Configuration<wbr>Arn</a>
@@ -1414,8 +1293,7 @@ The following state arguments are supported:
         <span class="property-type">string</span>
     </dt>
     <dd>{{% md %}}Amazon Resource Name (ARN) of the Image Builder Infrastructure Configuration.
-{{% /md %}}</dd>
-    <dt class="property-optional"
+{{% /md %}}</dd><dt class="property-optional"
             title="Optional">
         <span id="state_name_go">
 <a href="#state_name_go" style="color: inherit; text-decoration: inherit;">Name</a>
@@ -1424,8 +1302,7 @@ The following state arguments are supported:
         <span class="property-type">string</span>
     </dt>
     <dd>{{% md %}}Name of the image pipeline.
-{{% /md %}}</dd>
-    <dt class="property-optional"
+{{% /md %}}</dd><dt class="property-optional"
             title="Optional">
         <span id="state_platform_go">
 <a href="#state_platform_go" style="color: inherit; text-decoration: inherit;">Platform</a>
@@ -1434,8 +1311,7 @@ The following state arguments are supported:
         <span class="property-type">string</span>
     </dt>
     <dd>{{% md %}}Platform of the image pipeline.
-{{% /md %}}</dd>
-    <dt class="property-optional"
+{{% /md %}}</dd><dt class="property-optional"
             title="Optional">
         <span id="state_schedule_go">
 <a href="#state_schedule_go" style="color: inherit; text-decoration: inherit;">Schedule</a>
@@ -1444,8 +1320,7 @@ The following state arguments are supported:
         <span class="property-type"><a href="#imagepipelineschedule">Image<wbr>Pipeline<wbr>Schedule</a></span>
     </dt>
     <dd>{{% md %}}Configuration block with schedule settings. Detailed below.
-{{% /md %}}</dd>
-    <dt class="property-optional"
+{{% /md %}}</dd><dt class="property-optional"
             title="Optional">
         <span id="state_status_go">
 <a href="#state_status_go" style="color: inherit; text-decoration: inherit;">Status</a>
@@ -1454,8 +1329,7 @@ The following state arguments are supported:
         <span class="property-type">string</span>
     </dt>
     <dd>{{% md %}}Status of the image pipeline. Valid values are `DISABLED` and `ENABLED`. Defaults to `ENABLED`.
-{{% /md %}}</dd>
-    <dt class="property-optional"
+{{% /md %}}</dd><dt class="property-optional"
             title="Optional">
         <span id="state_tags_go">
 <a href="#state_tags_go" style="color: inherit; text-decoration: inherit;">Tags</a>
@@ -1464,14 +1338,11 @@ The following state arguments are supported:
         <span class="property-type">map[string]string</span>
     </dt>
     <dd>{{% md %}}Key-value map of resource tags for the image pipeline.
-{{% /md %}}</dd>
-</dl>
+{{% /md %}}</dd></dl>
 {{% /choosable %}}
 
 {{% choosable language nodejs %}}
-<dl class="resources-properties">
-
-    <dt class="property-optional"
+<dl class="resources-properties"><dt class="property-optional"
             title="Optional">
         <span id="state_arn_nodejs">
 <a href="#state_arn_nodejs" style="color: inherit; text-decoration: inherit;">arn</a>
@@ -1480,8 +1351,7 @@ The following state arguments are supported:
         <span class="property-type">string</span>
     </dt>
     <dd>{{% md %}}Amazon Resource Name (ARN) of the image pipeline.
-{{% /md %}}</dd>
-    <dt class="property-optional"
+{{% /md %}}</dd><dt class="property-optional"
             title="Optional">
         <span id="state_datecreated_nodejs">
 <a href="#state_datecreated_nodejs" style="color: inherit; text-decoration: inherit;">date<wbr>Created</a>
@@ -1490,8 +1360,7 @@ The following state arguments are supported:
         <span class="property-type">string</span>
     </dt>
     <dd>{{% md %}}Date the image pipeline was created.
-{{% /md %}}</dd>
-    <dt class="property-optional"
+{{% /md %}}</dd><dt class="property-optional"
             title="Optional">
         <span id="state_datelastrun_nodejs">
 <a href="#state_datelastrun_nodejs" style="color: inherit; text-decoration: inherit;">date<wbr>Last<wbr>Run</a>
@@ -1500,8 +1369,7 @@ The following state arguments are supported:
         <span class="property-type">string</span>
     </dt>
     <dd>{{% md %}}Date the image pipeline was last run.
-{{% /md %}}</dd>
-    <dt class="property-optional"
+{{% /md %}}</dd><dt class="property-optional"
             title="Optional">
         <span id="state_datenextrun_nodejs">
 <a href="#state_datenextrun_nodejs" style="color: inherit; text-decoration: inherit;">date<wbr>Next<wbr>Run</a>
@@ -1510,8 +1378,7 @@ The following state arguments are supported:
         <span class="property-type">string</span>
     </dt>
     <dd>{{% md %}}Date the image pipeline will run next.
-{{% /md %}}</dd>
-    <dt class="property-optional"
+{{% /md %}}</dd><dt class="property-optional"
             title="Optional">
         <span id="state_dateupdated_nodejs">
 <a href="#state_dateupdated_nodejs" style="color: inherit; text-decoration: inherit;">date<wbr>Updated</a>
@@ -1520,8 +1387,7 @@ The following state arguments are supported:
         <span class="property-type">string</span>
     </dt>
     <dd>{{% md %}}Date the image pipeline was updated.
-{{% /md %}}</dd>
-    <dt class="property-optional"
+{{% /md %}}</dd><dt class="property-optional"
             title="Optional">
         <span id="state_description_nodejs">
 <a href="#state_description_nodejs" style="color: inherit; text-decoration: inherit;">description</a>
@@ -1530,8 +1396,7 @@ The following state arguments are supported:
         <span class="property-type">string</span>
     </dt>
     <dd>{{% md %}}Description of the image pipeline.
-{{% /md %}}</dd>
-    <dt class="property-optional"
+{{% /md %}}</dd><dt class="property-optional"
             title="Optional">
         <span id="state_distributionconfigurationarn_nodejs">
 <a href="#state_distributionconfigurationarn_nodejs" style="color: inherit; text-decoration: inherit;">distribution<wbr>Configuration<wbr>Arn</a>
@@ -1540,8 +1405,7 @@ The following state arguments are supported:
         <span class="property-type">string</span>
     </dt>
     <dd>{{% md %}}Amazon Resource Name (ARN) of the Image Builder Distribution Configuration.
-{{% /md %}}</dd>
-    <dt class="property-optional"
+{{% /md %}}</dd><dt class="property-optional"
             title="Optional">
         <span id="state_enhancedimagemetadataenabled_nodejs">
 <a href="#state_enhancedimagemetadataenabled_nodejs" style="color: inherit; text-decoration: inherit;">enhanced<wbr>Image<wbr>Metadata<wbr>Enabled</a>
@@ -1550,8 +1414,7 @@ The following state arguments are supported:
         <span class="property-type">boolean</span>
     </dt>
     <dd>{{% md %}}Whether additional information about the image being created is collected. Defaults to `true`.
-{{% /md %}}</dd>
-    <dt class="property-optional"
+{{% /md %}}</dd><dt class="property-optional"
             title="Optional">
         <span id="state_imagerecipearn_nodejs">
 <a href="#state_imagerecipearn_nodejs" style="color: inherit; text-decoration: inherit;">image<wbr>Recipe<wbr>Arn</a>
@@ -1560,8 +1423,7 @@ The following state arguments are supported:
         <span class="property-type">string</span>
     </dt>
     <dd>{{% md %}}Amazon Resource Name (ARN) of the Image Builder Infrastructure Recipe.
-{{% /md %}}</dd>
-    <dt class="property-optional"
+{{% /md %}}</dd><dt class="property-optional"
             title="Optional">
         <span id="state_imagetestsconfiguration_nodejs">
 <a href="#state_imagetestsconfiguration_nodejs" style="color: inherit; text-decoration: inherit;">image<wbr>Tests<wbr>Configuration</a>
@@ -1570,8 +1432,7 @@ The following state arguments are supported:
         <span class="property-type"><a href="#imagepipelineimagetestsconfiguration">Image<wbr>Pipeline<wbr>Image<wbr>Tests<wbr>Configuration</a></span>
     </dt>
     <dd>{{% md %}}Configuration block with image tests configuration. Detailed below.
-{{% /md %}}</dd>
-    <dt class="property-optional"
+{{% /md %}}</dd><dt class="property-optional"
             title="Optional">
         <span id="state_infrastructureconfigurationarn_nodejs">
 <a href="#state_infrastructureconfigurationarn_nodejs" style="color: inherit; text-decoration: inherit;">infrastructure<wbr>Configuration<wbr>Arn</a>
@@ -1580,8 +1441,7 @@ The following state arguments are supported:
         <span class="property-type">string</span>
     </dt>
     <dd>{{% md %}}Amazon Resource Name (ARN) of the Image Builder Infrastructure Configuration.
-{{% /md %}}</dd>
-    <dt class="property-optional"
+{{% /md %}}</dd><dt class="property-optional"
             title="Optional">
         <span id="state_name_nodejs">
 <a href="#state_name_nodejs" style="color: inherit; text-decoration: inherit;">name</a>
@@ -1590,8 +1450,7 @@ The following state arguments are supported:
         <span class="property-type">string</span>
     </dt>
     <dd>{{% md %}}Name of the image pipeline.
-{{% /md %}}</dd>
-    <dt class="property-optional"
+{{% /md %}}</dd><dt class="property-optional"
             title="Optional">
         <span id="state_platform_nodejs">
 <a href="#state_platform_nodejs" style="color: inherit; text-decoration: inherit;">platform</a>
@@ -1600,8 +1459,7 @@ The following state arguments are supported:
         <span class="property-type">string</span>
     </dt>
     <dd>{{% md %}}Platform of the image pipeline.
-{{% /md %}}</dd>
-    <dt class="property-optional"
+{{% /md %}}</dd><dt class="property-optional"
             title="Optional">
         <span id="state_schedule_nodejs">
 <a href="#state_schedule_nodejs" style="color: inherit; text-decoration: inherit;">schedule</a>
@@ -1610,8 +1468,7 @@ The following state arguments are supported:
         <span class="property-type"><a href="#imagepipelineschedule">Image<wbr>Pipeline<wbr>Schedule</a></span>
     </dt>
     <dd>{{% md %}}Configuration block with schedule settings. Detailed below.
-{{% /md %}}</dd>
-    <dt class="property-optional"
+{{% /md %}}</dd><dt class="property-optional"
             title="Optional">
         <span id="state_status_nodejs">
 <a href="#state_status_nodejs" style="color: inherit; text-decoration: inherit;">status</a>
@@ -1620,8 +1477,7 @@ The following state arguments are supported:
         <span class="property-type">string</span>
     </dt>
     <dd>{{% md %}}Status of the image pipeline. Valid values are `DISABLED` and `ENABLED`. Defaults to `ENABLED`.
-{{% /md %}}</dd>
-    <dt class="property-optional"
+{{% /md %}}</dd><dt class="property-optional"
             title="Optional">
         <span id="state_tags_nodejs">
 <a href="#state_tags_nodejs" style="color: inherit; text-decoration: inherit;">tags</a>
@@ -1630,14 +1486,11 @@ The following state arguments are supported:
         <span class="property-type">{[key: string]: string}</span>
     </dt>
     <dd>{{% md %}}Key-value map of resource tags for the image pipeline.
-{{% /md %}}</dd>
-</dl>
+{{% /md %}}</dd></dl>
 {{% /choosable %}}
 
 {{% choosable language python %}}
-<dl class="resources-properties">
-
-    <dt class="property-optional"
+<dl class="resources-properties"><dt class="property-optional"
             title="Optional">
         <span id="state_arn_python">
 <a href="#state_arn_python" style="color: inherit; text-decoration: inherit;">arn</a>
@@ -1646,8 +1499,7 @@ The following state arguments are supported:
         <span class="property-type">str</span>
     </dt>
     <dd>{{% md %}}Amazon Resource Name (ARN) of the image pipeline.
-{{% /md %}}</dd>
-    <dt class="property-optional"
+{{% /md %}}</dd><dt class="property-optional"
             title="Optional">
         <span id="state_date_created_python">
 <a href="#state_date_created_python" style="color: inherit; text-decoration: inherit;">date_<wbr>created</a>
@@ -1656,8 +1508,7 @@ The following state arguments are supported:
         <span class="property-type">str</span>
     </dt>
     <dd>{{% md %}}Date the image pipeline was created.
-{{% /md %}}</dd>
-    <dt class="property-optional"
+{{% /md %}}</dd><dt class="property-optional"
             title="Optional">
         <span id="state_date_last_run_python">
 <a href="#state_date_last_run_python" style="color: inherit; text-decoration: inherit;">date_<wbr>last_<wbr>run</a>
@@ -1666,8 +1517,7 @@ The following state arguments are supported:
         <span class="property-type">str</span>
     </dt>
     <dd>{{% md %}}Date the image pipeline was last run.
-{{% /md %}}</dd>
-    <dt class="property-optional"
+{{% /md %}}</dd><dt class="property-optional"
             title="Optional">
         <span id="state_date_next_run_python">
 <a href="#state_date_next_run_python" style="color: inherit; text-decoration: inherit;">date_<wbr>next_<wbr>run</a>
@@ -1676,8 +1526,7 @@ The following state arguments are supported:
         <span class="property-type">str</span>
     </dt>
     <dd>{{% md %}}Date the image pipeline will run next.
-{{% /md %}}</dd>
-    <dt class="property-optional"
+{{% /md %}}</dd><dt class="property-optional"
             title="Optional">
         <span id="state_date_updated_python">
 <a href="#state_date_updated_python" style="color: inherit; text-decoration: inherit;">date_<wbr>updated</a>
@@ -1686,8 +1535,7 @@ The following state arguments are supported:
         <span class="property-type">str</span>
     </dt>
     <dd>{{% md %}}Date the image pipeline was updated.
-{{% /md %}}</dd>
-    <dt class="property-optional"
+{{% /md %}}</dd><dt class="property-optional"
             title="Optional">
         <span id="state_description_python">
 <a href="#state_description_python" style="color: inherit; text-decoration: inherit;">description</a>
@@ -1696,8 +1544,7 @@ The following state arguments are supported:
         <span class="property-type">str</span>
     </dt>
     <dd>{{% md %}}Description of the image pipeline.
-{{% /md %}}</dd>
-    <dt class="property-optional"
+{{% /md %}}</dd><dt class="property-optional"
             title="Optional">
         <span id="state_distribution_configuration_arn_python">
 <a href="#state_distribution_configuration_arn_python" style="color: inherit; text-decoration: inherit;">distribution_<wbr>configuration_<wbr>arn</a>
@@ -1706,8 +1553,7 @@ The following state arguments are supported:
         <span class="property-type">str</span>
     </dt>
     <dd>{{% md %}}Amazon Resource Name (ARN) of the Image Builder Distribution Configuration.
-{{% /md %}}</dd>
-    <dt class="property-optional"
+{{% /md %}}</dd><dt class="property-optional"
             title="Optional">
         <span id="state_enhanced_image_metadata_enabled_python">
 <a href="#state_enhanced_image_metadata_enabled_python" style="color: inherit; text-decoration: inherit;">enhanced_<wbr>image_<wbr>metadata_<wbr>enabled</a>
@@ -1716,8 +1562,7 @@ The following state arguments are supported:
         <span class="property-type">bool</span>
     </dt>
     <dd>{{% md %}}Whether additional information about the image being created is collected. Defaults to `true`.
-{{% /md %}}</dd>
-    <dt class="property-optional"
+{{% /md %}}</dd><dt class="property-optional"
             title="Optional">
         <span id="state_image_recipe_arn_python">
 <a href="#state_image_recipe_arn_python" style="color: inherit; text-decoration: inherit;">image_<wbr>recipe_<wbr>arn</a>
@@ -1726,8 +1571,7 @@ The following state arguments are supported:
         <span class="property-type">str</span>
     </dt>
     <dd>{{% md %}}Amazon Resource Name (ARN) of the Image Builder Infrastructure Recipe.
-{{% /md %}}</dd>
-    <dt class="property-optional"
+{{% /md %}}</dd><dt class="property-optional"
             title="Optional">
         <span id="state_image_tests_configuration_python">
 <a href="#state_image_tests_configuration_python" style="color: inherit; text-decoration: inherit;">image_<wbr>tests_<wbr>configuration</a>
@@ -1736,8 +1580,7 @@ The following state arguments are supported:
         <span class="property-type"><a href="#imagepipelineimagetestsconfiguration">Image<wbr>Pipeline<wbr>Image<wbr>Tests<wbr>Configuration<wbr>Args</a></span>
     </dt>
     <dd>{{% md %}}Configuration block with image tests configuration. Detailed below.
-{{% /md %}}</dd>
-    <dt class="property-optional"
+{{% /md %}}</dd><dt class="property-optional"
             title="Optional">
         <span id="state_infrastructure_configuration_arn_python">
 <a href="#state_infrastructure_configuration_arn_python" style="color: inherit; text-decoration: inherit;">infrastructure_<wbr>configuration_<wbr>arn</a>
@@ -1746,8 +1589,7 @@ The following state arguments are supported:
         <span class="property-type">str</span>
     </dt>
     <dd>{{% md %}}Amazon Resource Name (ARN) of the Image Builder Infrastructure Configuration.
-{{% /md %}}</dd>
-    <dt class="property-optional"
+{{% /md %}}</dd><dt class="property-optional"
             title="Optional">
         <span id="state_name_python">
 <a href="#state_name_python" style="color: inherit; text-decoration: inherit;">name</a>
@@ -1756,8 +1598,7 @@ The following state arguments are supported:
         <span class="property-type">str</span>
     </dt>
     <dd>{{% md %}}Name of the image pipeline.
-{{% /md %}}</dd>
-    <dt class="property-optional"
+{{% /md %}}</dd><dt class="property-optional"
             title="Optional">
         <span id="state_platform_python">
 <a href="#state_platform_python" style="color: inherit; text-decoration: inherit;">platform</a>
@@ -1766,8 +1607,7 @@ The following state arguments are supported:
         <span class="property-type">str</span>
     </dt>
     <dd>{{% md %}}Platform of the image pipeline.
-{{% /md %}}</dd>
-    <dt class="property-optional"
+{{% /md %}}</dd><dt class="property-optional"
             title="Optional">
         <span id="state_schedule_python">
 <a href="#state_schedule_python" style="color: inherit; text-decoration: inherit;">schedule</a>
@@ -1776,8 +1616,7 @@ The following state arguments are supported:
         <span class="property-type"><a href="#imagepipelineschedule">Image<wbr>Pipeline<wbr>Schedule<wbr>Args</a></span>
     </dt>
     <dd>{{% md %}}Configuration block with schedule settings. Detailed below.
-{{% /md %}}</dd>
-    <dt class="property-optional"
+{{% /md %}}</dd><dt class="property-optional"
             title="Optional">
         <span id="state_status_python">
 <a href="#state_status_python" style="color: inherit; text-decoration: inherit;">status</a>
@@ -1786,8 +1625,7 @@ The following state arguments are supported:
         <span class="property-type">str</span>
     </dt>
     <dd>{{% md %}}Status of the image pipeline. Valid values are `DISABLED` and `ENABLED`. Defaults to `ENABLED`.
-{{% /md %}}</dd>
-    <dt class="property-optional"
+{{% /md %}}</dd><dt class="property-optional"
             title="Optional">
         <span id="state_tags_python">
 <a href="#state_tags_python" style="color: inherit; text-decoration: inherit;">tags</a>
@@ -1796,8 +1634,7 @@ The following state arguments are supported:
         <span class="property-type">Mapping[str, str]</span>
     </dt>
     <dd>{{% md %}}Key-value map of resource tags for the image pipeline.
-{{% /md %}}</dd>
-</dl>
+{{% /md %}}</dd></dl>
 {{% /choosable %}}
 
 
@@ -1812,9 +1649,7 @@ The following state arguments are supported:
 <h4 id="imagepipelineimagetestsconfiguration">Image<wbr>Pipeline<wbr>Image<wbr>Tests<wbr>Configuration</h4>
 
 {{% choosable language csharp %}}
-<dl class="resources-properties">
-
-    <dt class="property-optional"
+<dl class="resources-properties"><dt class="property-optional"
             title="Optional">
         <span id="imagetestsenabled_csharp">
 <a href="#imagetestsenabled_csharp" style="color: inherit; text-decoration: inherit;">Image<wbr>Tests<wbr>Enabled</a>
@@ -1823,8 +1658,7 @@ The following state arguments are supported:
         <span class="property-type">bool</span>
     </dt>
     <dd>{{% md %}}Whether image tests are enabled. Defaults to `true`.
-{{% /md %}}</dd>
-    <dt class="property-optional"
+{{% /md %}}</dd><dt class="property-optional"
             title="Optional">
         <span id="timeoutminutes_csharp">
 <a href="#timeoutminutes_csharp" style="color: inherit; text-decoration: inherit;">Timeout<wbr>Minutes</a>
@@ -1833,14 +1667,11 @@ The following state arguments are supported:
         <span class="property-type">int</span>
     </dt>
     <dd>{{% md %}}Number of minutes before image tests time out. Valid values are between `60` and `1440`. Defaults to `720`.
-{{% /md %}}</dd>
-</dl>
+{{% /md %}}</dd></dl>
 {{% /choosable %}}
 
 {{% choosable language go %}}
-<dl class="resources-properties">
-
-    <dt class="property-optional"
+<dl class="resources-properties"><dt class="property-optional"
             title="Optional">
         <span id="imagetestsenabled_go">
 <a href="#imagetestsenabled_go" style="color: inherit; text-decoration: inherit;">Image<wbr>Tests<wbr>Enabled</a>
@@ -1849,8 +1680,7 @@ The following state arguments are supported:
         <span class="property-type">bool</span>
     </dt>
     <dd>{{% md %}}Whether image tests are enabled. Defaults to `true`.
-{{% /md %}}</dd>
-    <dt class="property-optional"
+{{% /md %}}</dd><dt class="property-optional"
             title="Optional">
         <span id="timeoutminutes_go">
 <a href="#timeoutminutes_go" style="color: inherit; text-decoration: inherit;">Timeout<wbr>Minutes</a>
@@ -1859,14 +1689,11 @@ The following state arguments are supported:
         <span class="property-type">int</span>
     </dt>
     <dd>{{% md %}}Number of minutes before image tests time out. Valid values are between `60` and `1440`. Defaults to `720`.
-{{% /md %}}</dd>
-</dl>
+{{% /md %}}</dd></dl>
 {{% /choosable %}}
 
 {{% choosable language nodejs %}}
-<dl class="resources-properties">
-
-    <dt class="property-optional"
+<dl class="resources-properties"><dt class="property-optional"
             title="Optional">
         <span id="imagetestsenabled_nodejs">
 <a href="#imagetestsenabled_nodejs" style="color: inherit; text-decoration: inherit;">image<wbr>Tests<wbr>Enabled</a>
@@ -1875,8 +1702,7 @@ The following state arguments are supported:
         <span class="property-type">boolean</span>
     </dt>
     <dd>{{% md %}}Whether image tests are enabled. Defaults to `true`.
-{{% /md %}}</dd>
-    <dt class="property-optional"
+{{% /md %}}</dd><dt class="property-optional"
             title="Optional">
         <span id="timeoutminutes_nodejs">
 <a href="#timeoutminutes_nodejs" style="color: inherit; text-decoration: inherit;">timeout<wbr>Minutes</a>
@@ -1885,14 +1711,11 @@ The following state arguments are supported:
         <span class="property-type">number</span>
     </dt>
     <dd>{{% md %}}Number of minutes before image tests time out. Valid values are between `60` and `1440`. Defaults to `720`.
-{{% /md %}}</dd>
-</dl>
+{{% /md %}}</dd></dl>
 {{% /choosable %}}
 
 {{% choosable language python %}}
-<dl class="resources-properties">
-
-    <dt class="property-optional"
+<dl class="resources-properties"><dt class="property-optional"
             title="Optional">
         <span id="image_tests_enabled_python">
 <a href="#image_tests_enabled_python" style="color: inherit; text-decoration: inherit;">image_<wbr>tests_<wbr>enabled</a>
@@ -1901,8 +1724,7 @@ The following state arguments are supported:
         <span class="property-type">bool</span>
     </dt>
     <dd>{{% md %}}Whether image tests are enabled. Defaults to `true`.
-{{% /md %}}</dd>
-    <dt class="property-optional"
+{{% /md %}}</dd><dt class="property-optional"
             title="Optional">
         <span id="timeout_minutes_python">
 <a href="#timeout_minutes_python" style="color: inherit; text-decoration: inherit;">timeout_<wbr>minutes</a>
@@ -1911,16 +1733,13 @@ The following state arguments are supported:
         <span class="property-type">int</span>
     </dt>
     <dd>{{% md %}}Number of minutes before image tests time out. Valid values are between `60` and `1440`. Defaults to `720`.
-{{% /md %}}</dd>
-</dl>
+{{% /md %}}</dd></dl>
 {{% /choosable %}}
 
 <h4 id="imagepipelineschedule">Image<wbr>Pipeline<wbr>Schedule</h4>
 
 {{% choosable language csharp %}}
-<dl class="resources-properties">
-
-    <dt class="property-required"
+<dl class="resources-properties"><dt class="property-required"
             title="Required">
         <span id="scheduleexpression_csharp">
 <a href="#scheduleexpression_csharp" style="color: inherit; text-decoration: inherit;">Schedule<wbr>Expression</a>
@@ -1929,8 +1748,7 @@ The following state arguments are supported:
         <span class="property-type">string</span>
     </dt>
     <dd>{{% md %}}Cron expression of how often the pipeline start condition is evaluated. For example, `cron(0 0 * * ? *)` is evaluated every day at midnight UTC. Configurations using the five field syntax that was previously accepted by the API, such as `cron(0 0 * * *)`, must be updated to the six field syntax. For more information, see the [Image Builder User Guide](https://docs.aws.amazon.com/imagebuilder/latest/userguide/cron-expressions.html).
-{{% /md %}}</dd>
-    <dt class="property-optional"
+{{% /md %}}</dd><dt class="property-optional"
             title="Optional">
         <span id="pipelineexecutionstartcondition_csharp">
 <a href="#pipelineexecutionstartcondition_csharp" style="color: inherit; text-decoration: inherit;">Pipeline<wbr>Execution<wbr>Start<wbr>Condition</a>
@@ -1939,14 +1757,11 @@ The following state arguments are supported:
         <span class="property-type">string</span>
     </dt>
     <dd>{{% md %}}Condition when the pipeline should trigger a new image build. Valid values are `EXPRESSION_MATCH_AND_DEPENDENCY_UPDATES_AVAILABLE` and `EXPRESSION_MATCH_ONLY`. Defaults to `EXPRESSION_MATCH_AND_DEPENDENCY_UPDATES_AVAILABLE`.
-{{% /md %}}</dd>
-</dl>
+{{% /md %}}</dd></dl>
 {{% /choosable %}}
 
 {{% choosable language go %}}
-<dl class="resources-properties">
-
-    <dt class="property-required"
+<dl class="resources-properties"><dt class="property-required"
             title="Required">
         <span id="scheduleexpression_go">
 <a href="#scheduleexpression_go" style="color: inherit; text-decoration: inherit;">Schedule<wbr>Expression</a>
@@ -1955,8 +1770,7 @@ The following state arguments are supported:
         <span class="property-type">string</span>
     </dt>
     <dd>{{% md %}}Cron expression of how often the pipeline start condition is evaluated. For example, `cron(0 0 * * ? *)` is evaluated every day at midnight UTC. Configurations using the five field syntax that was previously accepted by the API, such as `cron(0 0 * * *)`, must be updated to the six field syntax. For more information, see the [Image Builder User Guide](https://docs.aws.amazon.com/imagebuilder/latest/userguide/cron-expressions.html).
-{{% /md %}}</dd>
-    <dt class="property-optional"
+{{% /md %}}</dd><dt class="property-optional"
             title="Optional">
         <span id="pipelineexecutionstartcondition_go">
 <a href="#pipelineexecutionstartcondition_go" style="color: inherit; text-decoration: inherit;">Pipeline<wbr>Execution<wbr>Start<wbr>Condition</a>
@@ -1965,14 +1779,11 @@ The following state arguments are supported:
         <span class="property-type">string</span>
     </dt>
     <dd>{{% md %}}Condition when the pipeline should trigger a new image build. Valid values are `EXPRESSION_MATCH_AND_DEPENDENCY_UPDATES_AVAILABLE` and `EXPRESSION_MATCH_ONLY`. Defaults to `EXPRESSION_MATCH_AND_DEPENDENCY_UPDATES_AVAILABLE`.
-{{% /md %}}</dd>
-</dl>
+{{% /md %}}</dd></dl>
 {{% /choosable %}}
 
 {{% choosable language nodejs %}}
-<dl class="resources-properties">
-
-    <dt class="property-required"
+<dl class="resources-properties"><dt class="property-required"
             title="Required">
         <span id="scheduleexpression_nodejs">
 <a href="#scheduleexpression_nodejs" style="color: inherit; text-decoration: inherit;">schedule<wbr>Expression</a>
@@ -1981,8 +1792,7 @@ The following state arguments are supported:
         <span class="property-type">string</span>
     </dt>
     <dd>{{% md %}}Cron expression of how often the pipeline start condition is evaluated. For example, `cron(0 0 * * ? *)` is evaluated every day at midnight UTC. Configurations using the five field syntax that was previously accepted by the API, such as `cron(0 0 * * *)`, must be updated to the six field syntax. For more information, see the [Image Builder User Guide](https://docs.aws.amazon.com/imagebuilder/latest/userguide/cron-expressions.html).
-{{% /md %}}</dd>
-    <dt class="property-optional"
+{{% /md %}}</dd><dt class="property-optional"
             title="Optional">
         <span id="pipelineexecutionstartcondition_nodejs">
 <a href="#pipelineexecutionstartcondition_nodejs" style="color: inherit; text-decoration: inherit;">pipeline<wbr>Execution<wbr>Start<wbr>Condition</a>
@@ -1991,14 +1801,11 @@ The following state arguments are supported:
         <span class="property-type">string</span>
     </dt>
     <dd>{{% md %}}Condition when the pipeline should trigger a new image build. Valid values are `EXPRESSION_MATCH_AND_DEPENDENCY_UPDATES_AVAILABLE` and `EXPRESSION_MATCH_ONLY`. Defaults to `EXPRESSION_MATCH_AND_DEPENDENCY_UPDATES_AVAILABLE`.
-{{% /md %}}</dd>
-</dl>
+{{% /md %}}</dd></dl>
 {{% /choosable %}}
 
 {{% choosable language python %}}
-<dl class="resources-properties">
-
-    <dt class="property-required"
+<dl class="resources-properties"><dt class="property-required"
             title="Required">
         <span id="schedule_expression_python">
 <a href="#schedule_expression_python" style="color: inherit; text-decoration: inherit;">schedule_<wbr>expression</a>
@@ -2007,8 +1814,7 @@ The following state arguments are supported:
         <span class="property-type">str</span>
     </dt>
     <dd>{{% md %}}Cron expression of how often the pipeline start condition is evaluated. For example, `cron(0 0 * * ? *)` is evaluated every day at midnight UTC. Configurations using the five field syntax that was previously accepted by the API, such as `cron(0 0 * * *)`, must be updated to the six field syntax. For more information, see the [Image Builder User Guide](https://docs.aws.amazon.com/imagebuilder/latest/userguide/cron-expressions.html).
-{{% /md %}}</dd>
-    <dt class="property-optional"
+{{% /md %}}</dd><dt class="property-optional"
             title="Optional">
         <span id="pipeline_execution_start_condition_python">
 <a href="#pipeline_execution_start_condition_python" style="color: inherit; text-decoration: inherit;">pipeline_<wbr>execution_<wbr>start_<wbr>condition</a>
@@ -2017,8 +1823,7 @@ The following state arguments are supported:
         <span class="property-type">str</span>
     </dt>
     <dd>{{% md %}}Condition when the pipeline should trigger a new image build. Valid values are `EXPRESSION_MATCH_AND_DEPENDENCY_UPDATES_AVAILABLE` and `EXPRESSION_MATCH_ONLY`. Defaults to `EXPRESSION_MATCH_AND_DEPENDENCY_UPDATES_AVAILABLE`.
-{{% /md %}}</dd>
-</dl>
+{{% /md %}}</dd></dl>
 {{% /choosable %}}
 ## Import
 
@@ -2039,6 +1844,6 @@ The following state arguments are supported:
 	<dt>License</dt>
 	<dd>Apache-2.0</dd>
 	<dt>Notes</dt>
-	<dd>This Pulumi package is based on the [`aws` Terraform Provider](https://github.com/terraform-providers/terraform-provider-aws).</dd>
+	<dd>{{% md %}}This Pulumi package is based on the [`aws` Terraform Provider](https://github.com/terraform-providers/terraform-provider-aws).{{% /md %}}</dd>
 </dl>
 

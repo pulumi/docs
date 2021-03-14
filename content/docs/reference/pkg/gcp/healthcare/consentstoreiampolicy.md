@@ -59,9 +59,7 @@ full name of the custom role, e.g. `[projects/my-project|organizations/my-org]/r
 
 {{% choosable language nodejs %}}
 
-<dl class="resources-properties">
-  
-    <dt
+<dl class="resources-properties"><dt
         class="property-required" title="Required">
         <span>name</span>
         <span class="property-indicator"></span>
@@ -69,9 +67,7 @@ full name of the custom role, e.g. `[projects/my-project|organizations/my-org]/r
     </dt>
     <dd>
       The unique name of the resource.
-    </dd>
-  
-    <dt
+    </dd><dt
         class="property-required" title="Required">
         <span>args</span>
         <span class="property-indicator"></span>
@@ -79,9 +75,7 @@ full name of the custom role, e.g. `[projects/my-project|organizations/my-org]/r
     </dt>
     <dd>
       The arguments to resource properties.
-    </dd>
-  
-    <dt
+    </dd><dt
         class="property-optional" title="Optional">
         <span>opts</span>
         <span class="property-indicator"></span>
@@ -89,10 +83,7 @@ full name of the custom role, e.g. `[projects/my-project|organizations/my-org]/r
     </dt>
     <dd>
       Bag of options to control resource&#39;s behavior.
-    </dd>
-  
-
-</dl>
+    </dd></dl>
 
 {{% /choosable %}}
 
@@ -118,9 +109,7 @@ full name of the custom role, e.g. `[projects/my-project|organizations/my-org]/r
 
 {{% choosable language go %}}
 
-<dl class="resources-properties">
-  
-    <dt
+<dl class="resources-properties"><dt
         class="property-optional" title="Optional">
         <span>ctx</span>
         <span class="property-indicator"></span>
@@ -128,9 +117,7 @@ full name of the custom role, e.g. `[projects/my-project|organizations/my-org]/r
     </dt>
     <dd>
       Context object for the current deployment.
-    </dd>
-  
-    <dt
+    </dd><dt
         class="property-required" title="Required">
         <span>name</span>
         <span class="property-indicator"></span>
@@ -138,9 +125,7 @@ full name of the custom role, e.g. `[projects/my-project|organizations/my-org]/r
     </dt>
     <dd>
       The unique name of the resource.
-    </dd>
-  
-    <dt
+    </dd><dt
         class="property-required" title="Required">
         <span>args</span>
         <span class="property-indicator"></span>
@@ -148,9 +133,7 @@ full name of the custom role, e.g. `[projects/my-project|organizations/my-org]/r
     </dt>
     <dd>
       The arguments to resource properties.
-    </dd>
-  
-    <dt
+    </dd><dt
         class="property-optional" title="Optional">
         <span>opts</span>
         <span class="property-indicator"></span>
@@ -158,18 +141,13 @@ full name of the custom role, e.g. `[projects/my-project|organizations/my-org]/r
     </dt>
     <dd>
       Bag of options to control resource&#39;s behavior.
-    </dd>
-  
-
-</dl>
+    </dd></dl>
 
 {{% /choosable %}}
 
 {{% choosable language csharp %}}
 
-<dl class="resources-properties">
-  
-    <dt
+<dl class="resources-properties"><dt
         class="property-required" title="Required">
         <span>name</span>
         <span class="property-indicator"></span>
@@ -177,9 +155,7 @@ full name of the custom role, e.g. `[projects/my-project|organizations/my-org]/r
     </dt>
     <dd>
       The unique name of the resource.
-    </dd>
-  
-    <dt
+    </dd><dt
         class="property-required" title="Required">
         <span>args</span>
         <span class="property-indicator"></span>
@@ -187,9 +163,7 @@ full name of the custom role, e.g. `[projects/my-project|organizations/my-org]/r
     </dt>
     <dd>
       The arguments to resource properties.
-    </dd>
-  
-    <dt
+    </dd><dt
         class="property-optional" title="Optional">
         <span>opts</span>
         <span class="property-indicator"></span>
@@ -197,10 +171,7 @@ full name of the custom role, e.g. `[projects/my-project|organizations/my-org]/r
     </dt>
     <dd>
       Bag of options to control resource&#39;s behavior.
-    </dd>
-  
-
-</dl>
+    </dd></dl>
 
 {{% /choosable %}}
 
@@ -215,9 +186,7 @@ The ConsentStoreIamPolicy resource accepts the following [input]({{< relref "/do
 
 
 {{% choosable language csharp %}}
-<dl class="resources-properties">
-
-    <dt class="property-required"
+<dl class="resources-properties"><dt class="property-required"
             title="Required">
         <span id="consentstoreid_csharp">
 <a href="#consentstoreid_csharp" style="color: inherit; text-decoration: inherit;">Consent<wbr>Store<wbr>Id</a>
@@ -226,8 +195,7 @@ The ConsentStoreIamPolicy resource accepts the following [input]({{< relref "/do
         <span class="property-type">string</span>
     </dt>
     <dd>{{% md %}}Used to find the parent resource to bind the IAM policy to
-{{% /md %}}</dd>
-    <dt class="property-required"
+{{% /md %}}</dd><dt class="property-required"
             title="Required">
         <span id="dataset_csharp">
 <a href="#dataset_csharp" style="color: inherit; text-decoration: inherit;">Dataset</a>
@@ -238,8 +206,7 @@ The ConsentStoreIamPolicy resource accepts the following [input]({{< relref "/do
     <dd>{{% md %}}Identifies the dataset addressed by this request. Must be in the format
 'projects/{project}/locations/{location}/datasets/{dataset}'
 Used to find the parent resource to bind the IAM policy to
-{{% /md %}}</dd>
-    <dt class="property-required"
+{{% /md %}}</dd><dt class="property-required"
             title="Required">
         <span id="policydata_csharp">
 <a href="#policydata_csharp" style="color: inherit; text-decoration: inherit;">Policy<wbr>Data</a>
@@ -249,14 +216,11 @@ Used to find the parent resource to bind the IAM policy to
     </dt>
     <dd>{{% md %}}The policy data generated by
 a `gcp.organizations.getIAMPolicy` data source.
-{{% /md %}}</dd>
-</dl>
+{{% /md %}}</dd></dl>
 {{% /choosable %}}
 
 {{% choosable language go %}}
-<dl class="resources-properties">
-
-    <dt class="property-required"
+<dl class="resources-properties"><dt class="property-required"
             title="Required">
         <span id="consentstoreid_go">
 <a href="#consentstoreid_go" style="color: inherit; text-decoration: inherit;">Consent<wbr>Store<wbr>Id</a>
@@ -265,8 +229,7 @@ a `gcp.organizations.getIAMPolicy` data source.
         <span class="property-type">string</span>
     </dt>
     <dd>{{% md %}}Used to find the parent resource to bind the IAM policy to
-{{% /md %}}</dd>
-    <dt class="property-required"
+{{% /md %}}</dd><dt class="property-required"
             title="Required">
         <span id="dataset_go">
 <a href="#dataset_go" style="color: inherit; text-decoration: inherit;">Dataset</a>
@@ -277,8 +240,7 @@ a `gcp.organizations.getIAMPolicy` data source.
     <dd>{{% md %}}Identifies the dataset addressed by this request. Must be in the format
 'projects/{project}/locations/{location}/datasets/{dataset}'
 Used to find the parent resource to bind the IAM policy to
-{{% /md %}}</dd>
-    <dt class="property-required"
+{{% /md %}}</dd><dt class="property-required"
             title="Required">
         <span id="policydata_go">
 <a href="#policydata_go" style="color: inherit; text-decoration: inherit;">Policy<wbr>Data</a>
@@ -288,14 +250,11 @@ Used to find the parent resource to bind the IAM policy to
     </dt>
     <dd>{{% md %}}The policy data generated by
 a `gcp.organizations.getIAMPolicy` data source.
-{{% /md %}}</dd>
-</dl>
+{{% /md %}}</dd></dl>
 {{% /choosable %}}
 
 {{% choosable language nodejs %}}
-<dl class="resources-properties">
-
-    <dt class="property-required"
+<dl class="resources-properties"><dt class="property-required"
             title="Required">
         <span id="consentstoreid_nodejs">
 <a href="#consentstoreid_nodejs" style="color: inherit; text-decoration: inherit;">consent<wbr>Store<wbr>Id</a>
@@ -304,8 +263,7 @@ a `gcp.organizations.getIAMPolicy` data source.
         <span class="property-type">string</span>
     </dt>
     <dd>{{% md %}}Used to find the parent resource to bind the IAM policy to
-{{% /md %}}</dd>
-    <dt class="property-required"
+{{% /md %}}</dd><dt class="property-required"
             title="Required">
         <span id="dataset_nodejs">
 <a href="#dataset_nodejs" style="color: inherit; text-decoration: inherit;">dataset</a>
@@ -316,8 +274,7 @@ a `gcp.organizations.getIAMPolicy` data source.
     <dd>{{% md %}}Identifies the dataset addressed by this request. Must be in the format
 'projects/{project}/locations/{location}/datasets/{dataset}'
 Used to find the parent resource to bind the IAM policy to
-{{% /md %}}</dd>
-    <dt class="property-required"
+{{% /md %}}</dd><dt class="property-required"
             title="Required">
         <span id="policydata_nodejs">
 <a href="#policydata_nodejs" style="color: inherit; text-decoration: inherit;">policy<wbr>Data</a>
@@ -327,14 +284,11 @@ Used to find the parent resource to bind the IAM policy to
     </dt>
     <dd>{{% md %}}The policy data generated by
 a `gcp.organizations.getIAMPolicy` data source.
-{{% /md %}}</dd>
-</dl>
+{{% /md %}}</dd></dl>
 {{% /choosable %}}
 
 {{% choosable language python %}}
-<dl class="resources-properties">
-
-    <dt class="property-required"
+<dl class="resources-properties"><dt class="property-required"
             title="Required">
         <span id="consent_store_id_python">
 <a href="#consent_store_id_python" style="color: inherit; text-decoration: inherit;">consent_<wbr>store_<wbr>id</a>
@@ -343,8 +297,7 @@ a `gcp.organizations.getIAMPolicy` data source.
         <span class="property-type">str</span>
     </dt>
     <dd>{{% md %}}Used to find the parent resource to bind the IAM policy to
-{{% /md %}}</dd>
-    <dt class="property-required"
+{{% /md %}}</dd><dt class="property-required"
             title="Required">
         <span id="dataset_python">
 <a href="#dataset_python" style="color: inherit; text-decoration: inherit;">dataset</a>
@@ -355,8 +308,7 @@ a `gcp.organizations.getIAMPolicy` data source.
     <dd>{{% md %}}Identifies the dataset addressed by this request. Must be in the format
 'projects/{project}/locations/{location}/datasets/{dataset}'
 Used to find the parent resource to bind the IAM policy to
-{{% /md %}}</dd>
-    <dt class="property-required"
+{{% /md %}}</dd><dt class="property-required"
             title="Required">
         <span id="policy_data_python">
 <a href="#policy_data_python" style="color: inherit; text-decoration: inherit;">policy_<wbr>data</a>
@@ -366,8 +318,7 @@ Used to find the parent resource to bind the IAM policy to
     </dt>
     <dd>{{% md %}}The policy data generated by
 a `gcp.organizations.getIAMPolicy` data source.
-{{% /md %}}</dd>
-</dl>
+{{% /md %}}</dd></dl>
 {{% /choosable %}}
 
 
@@ -378,9 +329,7 @@ All [input](#inputs) properties are implicitly available as output properties. A
 
 
 {{% choosable language csharp %}}
-<dl class="resources-properties">
-
-    <dt class="property-"
+<dl class="resources-properties"><dt class="property-"
             title="">
         <span id="etag_csharp">
 <a href="#etag_csharp" style="color: inherit; text-decoration: inherit;">Etag</a>
@@ -389,8 +338,7 @@ All [input](#inputs) properties are implicitly available as output properties. A
         <span class="property-type">string</span>
     </dt>
     <dd>{{% md %}}(Computed) The etag of the IAM policy.
-{{% /md %}}</dd>
-    <dt class="property-"
+{{% /md %}}</dd><dt class="property-"
             title="">
         <span id="id_csharp">
 <a href="#id_csharp" style="color: inherit; text-decoration: inherit;">Id</a>
@@ -398,14 +346,11 @@ All [input](#inputs) properties are implicitly available as output properties. A
         <span class="property-indicator"></span>
         <span class="property-type">string</span>
     </dt>
-    <dd>{{% md %}}The provider-assigned unique ID for this managed resource.{{% /md %}}</dd>
-</dl>
+    <dd>{{% md %}}The provider-assigned unique ID for this managed resource.{{% /md %}}</dd></dl>
 {{% /choosable %}}
 
 {{% choosable language go %}}
-<dl class="resources-properties">
-
-    <dt class="property-"
+<dl class="resources-properties"><dt class="property-"
             title="">
         <span id="etag_go">
 <a href="#etag_go" style="color: inherit; text-decoration: inherit;">Etag</a>
@@ -414,8 +359,7 @@ All [input](#inputs) properties are implicitly available as output properties. A
         <span class="property-type">string</span>
     </dt>
     <dd>{{% md %}}(Computed) The etag of the IAM policy.
-{{% /md %}}</dd>
-    <dt class="property-"
+{{% /md %}}</dd><dt class="property-"
             title="">
         <span id="id_go">
 <a href="#id_go" style="color: inherit; text-decoration: inherit;">Id</a>
@@ -423,14 +367,11 @@ All [input](#inputs) properties are implicitly available as output properties. A
         <span class="property-indicator"></span>
         <span class="property-type">string</span>
     </dt>
-    <dd>{{% md %}}The provider-assigned unique ID for this managed resource.{{% /md %}}</dd>
-</dl>
+    <dd>{{% md %}}The provider-assigned unique ID for this managed resource.{{% /md %}}</dd></dl>
 {{% /choosable %}}
 
 {{% choosable language nodejs %}}
-<dl class="resources-properties">
-
-    <dt class="property-"
+<dl class="resources-properties"><dt class="property-"
             title="">
         <span id="etag_nodejs">
 <a href="#etag_nodejs" style="color: inherit; text-decoration: inherit;">etag</a>
@@ -439,8 +380,7 @@ All [input](#inputs) properties are implicitly available as output properties. A
         <span class="property-type">string</span>
     </dt>
     <dd>{{% md %}}(Computed) The etag of the IAM policy.
-{{% /md %}}</dd>
-    <dt class="property-"
+{{% /md %}}</dd><dt class="property-"
             title="">
         <span id="id_nodejs">
 <a href="#id_nodejs" style="color: inherit; text-decoration: inherit;">id</a>
@@ -448,14 +388,11 @@ All [input](#inputs) properties are implicitly available as output properties. A
         <span class="property-indicator"></span>
         <span class="property-type">string</span>
     </dt>
-    <dd>{{% md %}}The provider-assigned unique ID for this managed resource.{{% /md %}}</dd>
-</dl>
+    <dd>{{% md %}}The provider-assigned unique ID for this managed resource.{{% /md %}}</dd></dl>
 {{% /choosable %}}
 
 {{% choosable language python %}}
-<dl class="resources-properties">
-
-    <dt class="property-"
+<dl class="resources-properties"><dt class="property-"
             title="">
         <span id="etag_python">
 <a href="#etag_python" style="color: inherit; text-decoration: inherit;">etag</a>
@@ -464,8 +401,7 @@ All [input](#inputs) properties are implicitly available as output properties. A
         <span class="property-type">str</span>
     </dt>
     <dd>{{% md %}}(Computed) The etag of the IAM policy.
-{{% /md %}}</dd>
-    <dt class="property-"
+{{% /md %}}</dd><dt class="property-"
             title="">
         <span id="id_python">
 <a href="#id_python" style="color: inherit; text-decoration: inherit;">id</a>
@@ -473,8 +409,7 @@ All [input](#inputs) properties are implicitly available as output properties. A
         <span class="property-indicator"></span>
         <span class="property-type">str</span>
     </dt>
-    <dd>{{% md %}}The provider-assigned unique ID for this managed resource.{{% /md %}}</dd>
-</dl>
+    <dd>{{% md %}}The provider-assigned unique ID for this managed resource.{{% /md %}}</dd></dl>
 {{% /choosable %}}
 
 
@@ -601,9 +536,7 @@ The following state arguments are supported:
 
 
 {{% choosable language csharp %}}
-<dl class="resources-properties">
-
-    <dt class="property-optional"
+<dl class="resources-properties"><dt class="property-optional"
             title="Optional">
         <span id="state_consentstoreid_csharp">
 <a href="#state_consentstoreid_csharp" style="color: inherit; text-decoration: inherit;">Consent<wbr>Store<wbr>Id</a>
@@ -612,8 +545,7 @@ The following state arguments are supported:
         <span class="property-type">string</span>
     </dt>
     <dd>{{% md %}}Used to find the parent resource to bind the IAM policy to
-{{% /md %}}</dd>
-    <dt class="property-optional"
+{{% /md %}}</dd><dt class="property-optional"
             title="Optional">
         <span id="state_dataset_csharp">
 <a href="#state_dataset_csharp" style="color: inherit; text-decoration: inherit;">Dataset</a>
@@ -624,8 +556,7 @@ The following state arguments are supported:
     <dd>{{% md %}}Identifies the dataset addressed by this request. Must be in the format
 'projects/{project}/locations/{location}/datasets/{dataset}'
 Used to find the parent resource to bind the IAM policy to
-{{% /md %}}</dd>
-    <dt class="property-optional"
+{{% /md %}}</dd><dt class="property-optional"
             title="Optional">
         <span id="state_etag_csharp">
 <a href="#state_etag_csharp" style="color: inherit; text-decoration: inherit;">Etag</a>
@@ -634,8 +565,7 @@ Used to find the parent resource to bind the IAM policy to
         <span class="property-type">string</span>
     </dt>
     <dd>{{% md %}}(Computed) The etag of the IAM policy.
-{{% /md %}}</dd>
-    <dt class="property-optional"
+{{% /md %}}</dd><dt class="property-optional"
             title="Optional">
         <span id="state_policydata_csharp">
 <a href="#state_policydata_csharp" style="color: inherit; text-decoration: inherit;">Policy<wbr>Data</a>
@@ -645,14 +575,11 @@ Used to find the parent resource to bind the IAM policy to
     </dt>
     <dd>{{% md %}}The policy data generated by
 a `gcp.organizations.getIAMPolicy` data source.
-{{% /md %}}</dd>
-</dl>
+{{% /md %}}</dd></dl>
 {{% /choosable %}}
 
 {{% choosable language go %}}
-<dl class="resources-properties">
-
-    <dt class="property-optional"
+<dl class="resources-properties"><dt class="property-optional"
             title="Optional">
         <span id="state_consentstoreid_go">
 <a href="#state_consentstoreid_go" style="color: inherit; text-decoration: inherit;">Consent<wbr>Store<wbr>Id</a>
@@ -661,8 +588,7 @@ a `gcp.organizations.getIAMPolicy` data source.
         <span class="property-type">string</span>
     </dt>
     <dd>{{% md %}}Used to find the parent resource to bind the IAM policy to
-{{% /md %}}</dd>
-    <dt class="property-optional"
+{{% /md %}}</dd><dt class="property-optional"
             title="Optional">
         <span id="state_dataset_go">
 <a href="#state_dataset_go" style="color: inherit; text-decoration: inherit;">Dataset</a>
@@ -673,8 +599,7 @@ a `gcp.organizations.getIAMPolicy` data source.
     <dd>{{% md %}}Identifies the dataset addressed by this request. Must be in the format
 'projects/{project}/locations/{location}/datasets/{dataset}'
 Used to find the parent resource to bind the IAM policy to
-{{% /md %}}</dd>
-    <dt class="property-optional"
+{{% /md %}}</dd><dt class="property-optional"
             title="Optional">
         <span id="state_etag_go">
 <a href="#state_etag_go" style="color: inherit; text-decoration: inherit;">Etag</a>
@@ -683,8 +608,7 @@ Used to find the parent resource to bind the IAM policy to
         <span class="property-type">string</span>
     </dt>
     <dd>{{% md %}}(Computed) The etag of the IAM policy.
-{{% /md %}}</dd>
-    <dt class="property-optional"
+{{% /md %}}</dd><dt class="property-optional"
             title="Optional">
         <span id="state_policydata_go">
 <a href="#state_policydata_go" style="color: inherit; text-decoration: inherit;">Policy<wbr>Data</a>
@@ -694,14 +618,11 @@ Used to find the parent resource to bind the IAM policy to
     </dt>
     <dd>{{% md %}}The policy data generated by
 a `gcp.organizations.getIAMPolicy` data source.
-{{% /md %}}</dd>
-</dl>
+{{% /md %}}</dd></dl>
 {{% /choosable %}}
 
 {{% choosable language nodejs %}}
-<dl class="resources-properties">
-
-    <dt class="property-optional"
+<dl class="resources-properties"><dt class="property-optional"
             title="Optional">
         <span id="state_consentstoreid_nodejs">
 <a href="#state_consentstoreid_nodejs" style="color: inherit; text-decoration: inherit;">consent<wbr>Store<wbr>Id</a>
@@ -710,8 +631,7 @@ a `gcp.organizations.getIAMPolicy` data source.
         <span class="property-type">string</span>
     </dt>
     <dd>{{% md %}}Used to find the parent resource to bind the IAM policy to
-{{% /md %}}</dd>
-    <dt class="property-optional"
+{{% /md %}}</dd><dt class="property-optional"
             title="Optional">
         <span id="state_dataset_nodejs">
 <a href="#state_dataset_nodejs" style="color: inherit; text-decoration: inherit;">dataset</a>
@@ -722,8 +642,7 @@ a `gcp.organizations.getIAMPolicy` data source.
     <dd>{{% md %}}Identifies the dataset addressed by this request. Must be in the format
 'projects/{project}/locations/{location}/datasets/{dataset}'
 Used to find the parent resource to bind the IAM policy to
-{{% /md %}}</dd>
-    <dt class="property-optional"
+{{% /md %}}</dd><dt class="property-optional"
             title="Optional">
         <span id="state_etag_nodejs">
 <a href="#state_etag_nodejs" style="color: inherit; text-decoration: inherit;">etag</a>
@@ -732,8 +651,7 @@ Used to find the parent resource to bind the IAM policy to
         <span class="property-type">string</span>
     </dt>
     <dd>{{% md %}}(Computed) The etag of the IAM policy.
-{{% /md %}}</dd>
-    <dt class="property-optional"
+{{% /md %}}</dd><dt class="property-optional"
             title="Optional">
         <span id="state_policydata_nodejs">
 <a href="#state_policydata_nodejs" style="color: inherit; text-decoration: inherit;">policy<wbr>Data</a>
@@ -743,14 +661,11 @@ Used to find the parent resource to bind the IAM policy to
     </dt>
     <dd>{{% md %}}The policy data generated by
 a `gcp.organizations.getIAMPolicy` data source.
-{{% /md %}}</dd>
-</dl>
+{{% /md %}}</dd></dl>
 {{% /choosable %}}
 
 {{% choosable language python %}}
-<dl class="resources-properties">
-
-    <dt class="property-optional"
+<dl class="resources-properties"><dt class="property-optional"
             title="Optional">
         <span id="state_consent_store_id_python">
 <a href="#state_consent_store_id_python" style="color: inherit; text-decoration: inherit;">consent_<wbr>store_<wbr>id</a>
@@ -759,8 +674,7 @@ a `gcp.organizations.getIAMPolicy` data source.
         <span class="property-type">str</span>
     </dt>
     <dd>{{% md %}}Used to find the parent resource to bind the IAM policy to
-{{% /md %}}</dd>
-    <dt class="property-optional"
+{{% /md %}}</dd><dt class="property-optional"
             title="Optional">
         <span id="state_dataset_python">
 <a href="#state_dataset_python" style="color: inherit; text-decoration: inherit;">dataset</a>
@@ -771,8 +685,7 @@ a `gcp.organizations.getIAMPolicy` data source.
     <dd>{{% md %}}Identifies the dataset addressed by this request. Must be in the format
 'projects/{project}/locations/{location}/datasets/{dataset}'
 Used to find the parent resource to bind the IAM policy to
-{{% /md %}}</dd>
-    <dt class="property-optional"
+{{% /md %}}</dd><dt class="property-optional"
             title="Optional">
         <span id="state_etag_python">
 <a href="#state_etag_python" style="color: inherit; text-decoration: inherit;">etag</a>
@@ -781,8 +694,7 @@ Used to find the parent resource to bind the IAM policy to
         <span class="property-type">str</span>
     </dt>
     <dd>{{% md %}}(Computed) The etag of the IAM policy.
-{{% /md %}}</dd>
-    <dt class="property-optional"
+{{% /md %}}</dd><dt class="property-optional"
             title="Optional">
         <span id="state_policy_data_python">
 <a href="#state_policy_data_python" style="color: inherit; text-decoration: inherit;">policy_<wbr>data</a>
@@ -792,8 +704,7 @@ Used to find the parent resource to bind the IAM policy to
     </dt>
     <dd>{{% md %}}The policy data generated by
 a `gcp.organizations.getIAMPolicy` data source.
-{{% /md %}}</dd>
-</dl>
+{{% /md %}}</dd></dl>
 {{% /choosable %}}
 
 
@@ -809,6 +720,6 @@ a `gcp.organizations.getIAMPolicy` data source.
 	<dt>License</dt>
 	<dd>Apache-2.0</dd>
 	<dt>Notes</dt>
-	<dd>This Pulumi package is based on the [`google-beta` Terraform Provider](https://github.com/hashicorp/terraform-provider-google-beta).</dd>
+	<dd>{{% md %}}This Pulumi package is based on the [`google-beta` Terraform Provider](https://github.com/hashicorp/terraform-provider-google-beta).{{% /md %}}</dd>
 </dl>
 

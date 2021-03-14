@@ -51,9 +51,7 @@ The following arguments are supported:
 
 
 {{% choosable language csharp %}}
-<dl class="resources-properties">
-
-    <dt class="property-required"
+<dl class="resources-properties"><dt class="property-required"
             title="Required">
         <span id="flowlogname_csharp">
 <a href="#flowlogname_csharp" style="color: inherit; text-decoration: inherit;">Flow<wbr>Log<wbr>Name</a>
@@ -61,8 +59,7 @@ The following arguments are supported:
         <span class="property-indicator"></span>
         <span class="property-type">string</span>
     </dt>
-    <dd>{{% md %}}The name of the flow log resource.{{% /md %}}</dd>
-    <dt class="property-required"
+    <dd>{{% md %}}The name of the flow log resource.{{% /md %}}</dd><dt class="property-required"
             title="Required">
         <span id="networkwatchername_csharp">
 <a href="#networkwatchername_csharp" style="color: inherit; text-decoration: inherit;">Network<wbr>Watcher<wbr>Name</a>
@@ -70,8 +67,7 @@ The following arguments are supported:
         <span class="property-indicator"></span>
         <span class="property-type">string</span>
     </dt>
-    <dd>{{% md %}}The name of the network watcher.{{% /md %}}</dd>
-    <dt class="property-required"
+    <dd>{{% md %}}The name of the network watcher.{{% /md %}}</dd><dt class="property-required"
             title="Required">
         <span id="resourcegroupname_csharp">
 <a href="#resourcegroupname_csharp" style="color: inherit; text-decoration: inherit;">Resource<wbr>Group<wbr>Name</a>
@@ -79,14 +75,11 @@ The following arguments are supported:
         <span class="property-indicator"></span>
         <span class="property-type">string</span>
     </dt>
-    <dd>{{% md %}}The name of the resource group.{{% /md %}}</dd>
-</dl>
+    <dd>{{% md %}}The name of the resource group.{{% /md %}}</dd></dl>
 {{% /choosable %}}
 
 {{% choosable language go %}}
-<dl class="resources-properties">
-
-    <dt class="property-required"
+<dl class="resources-properties"><dt class="property-required"
             title="Required">
         <span id="flowlogname_go">
 <a href="#flowlogname_go" style="color: inherit; text-decoration: inherit;">Flow<wbr>Log<wbr>Name</a>
@@ -94,8 +87,7 @@ The following arguments are supported:
         <span class="property-indicator"></span>
         <span class="property-type">string</span>
     </dt>
-    <dd>{{% md %}}The name of the flow log resource.{{% /md %}}</dd>
-    <dt class="property-required"
+    <dd>{{% md %}}The name of the flow log resource.{{% /md %}}</dd><dt class="property-required"
             title="Required">
         <span id="networkwatchername_go">
 <a href="#networkwatchername_go" style="color: inherit; text-decoration: inherit;">Network<wbr>Watcher<wbr>Name</a>
@@ -103,8 +95,7 @@ The following arguments are supported:
         <span class="property-indicator"></span>
         <span class="property-type">string</span>
     </dt>
-    <dd>{{% md %}}The name of the network watcher.{{% /md %}}</dd>
-    <dt class="property-required"
+    <dd>{{% md %}}The name of the network watcher.{{% /md %}}</dd><dt class="property-required"
             title="Required">
         <span id="resourcegroupname_go">
 <a href="#resourcegroupname_go" style="color: inherit; text-decoration: inherit;">Resource<wbr>Group<wbr>Name</a>
@@ -112,14 +103,11 @@ The following arguments are supported:
         <span class="property-indicator"></span>
         <span class="property-type">string</span>
     </dt>
-    <dd>{{% md %}}The name of the resource group.{{% /md %}}</dd>
-</dl>
+    <dd>{{% md %}}The name of the resource group.{{% /md %}}</dd></dl>
 {{% /choosable %}}
 
 {{% choosable language nodejs %}}
-<dl class="resources-properties">
-
-    <dt class="property-required"
+<dl class="resources-properties"><dt class="property-required"
             title="Required">
         <span id="flowlogname_nodejs">
 <a href="#flowlogname_nodejs" style="color: inherit; text-decoration: inherit;">flow<wbr>Log<wbr>Name</a>
@@ -127,8 +115,7 @@ The following arguments are supported:
         <span class="property-indicator"></span>
         <span class="property-type">string</span>
     </dt>
-    <dd>{{% md %}}The name of the flow log resource.{{% /md %}}</dd>
-    <dt class="property-required"
+    <dd>{{% md %}}The name of the flow log resource.{{% /md %}}</dd><dt class="property-required"
             title="Required">
         <span id="networkwatchername_nodejs">
 <a href="#networkwatchername_nodejs" style="color: inherit; text-decoration: inherit;">network<wbr>Watcher<wbr>Name</a>
@@ -136,8 +123,7 @@ The following arguments are supported:
         <span class="property-indicator"></span>
         <span class="property-type">string</span>
     </dt>
-    <dd>{{% md %}}The name of the network watcher.{{% /md %}}</dd>
-    <dt class="property-required"
+    <dd>{{% md %}}The name of the network watcher.{{% /md %}}</dd><dt class="property-required"
             title="Required">
         <span id="resourcegroupname_nodejs">
 <a href="#resourcegroupname_nodejs" style="color: inherit; text-decoration: inherit;">resource<wbr>Group<wbr>Name</a>
@@ -145,14 +131,11 @@ The following arguments are supported:
         <span class="property-indicator"></span>
         <span class="property-type">string</span>
     </dt>
-    <dd>{{% md %}}The name of the resource group.{{% /md %}}</dd>
-</dl>
+    <dd>{{% md %}}The name of the resource group.{{% /md %}}</dd></dl>
 {{% /choosable %}}
 
 {{% choosable language python %}}
-<dl class="resources-properties">
-
-    <dt class="property-required"
+<dl class="resources-properties"><dt class="property-required"
             title="Required">
         <span id="flow_log_name_python">
 <a href="#flow_log_name_python" style="color: inherit; text-decoration: inherit;">flow_<wbr>log_<wbr>name</a>
@@ -160,8 +143,7 @@ The following arguments are supported:
         <span class="property-indicator"></span>
         <span class="property-type">str</span>
     </dt>
-    <dd>{{% md %}}The name of the flow log resource.{{% /md %}}</dd>
-    <dt class="property-required"
+    <dd>{{% md %}}The name of the flow log resource.{{% /md %}}</dd><dt class="property-required"
             title="Required">
         <span id="network_watcher_name_python">
 <a href="#network_watcher_name_python" style="color: inherit; text-decoration: inherit;">network_<wbr>watcher_<wbr>name</a>
@@ -169,8 +151,7 @@ The following arguments are supported:
         <span class="property-indicator"></span>
         <span class="property-type">str</span>
     </dt>
-    <dd>{{% md %}}The name of the network watcher.{{% /md %}}</dd>
-    <dt class="property-required"
+    <dd>{{% md %}}The name of the network watcher.{{% /md %}}</dd><dt class="property-required"
             title="Required">
         <span id="resource_group_name_python">
 <a href="#resource_group_name_python" style="color: inherit; text-decoration: inherit;">resource_<wbr>group_<wbr>name</a>
@@ -178,8 +159,7 @@ The following arguments are supported:
         <span class="property-indicator"></span>
         <span class="property-type">str</span>
     </dt>
-    <dd>{{% md %}}The name of the resource group.{{% /md %}}</dd>
-</dl>
+    <dd>{{% md %}}The name of the resource group.{{% /md %}}</dd></dl>
 {{% /choosable %}}
 
 
@@ -192,9 +172,7 @@ The following output properties are available:
 
 
 {{% choosable language csharp %}}
-<dl class="resources-properties">
-
-    <dt class="property-"
+<dl class="resources-properties"><dt class="property-"
             title="">
         <span id="etag_csharp">
 <a href="#etag_csharp" style="color: inherit; text-decoration: inherit;">Etag</a>
@@ -202,8 +180,7 @@ The following output properties are available:
         <span class="property-indicator"></span>
         <span class="property-type">string</span>
     </dt>
-    <dd>{{% md %}}A unique read-only string that changes whenever the resource is updated.{{% /md %}}</dd>
-    <dt class="property-"
+    <dd>{{% md %}}A unique read-only string that changes whenever the resource is updated.{{% /md %}}</dd><dt class="property-"
             title="">
         <span id="name_csharp">
 <a href="#name_csharp" style="color: inherit; text-decoration: inherit;">Name</a>
@@ -211,8 +188,7 @@ The following output properties are available:
         <span class="property-indicator"></span>
         <span class="property-type">string</span>
     </dt>
-    <dd>{{% md %}}Resource name.{{% /md %}}</dd>
-    <dt class="property-"
+    <dd>{{% md %}}Resource name.{{% /md %}}</dd><dt class="property-"
             title="">
         <span id="provisioningstate_csharp">
 <a href="#provisioningstate_csharp" style="color: inherit; text-decoration: inherit;">Provisioning<wbr>State</a>
@@ -220,8 +196,7 @@ The following output properties are available:
         <span class="property-indicator"></span>
         <span class="property-type">string</span>
     </dt>
-    <dd>{{% md %}}The provisioning state of the flow log.{{% /md %}}</dd>
-    <dt class="property-"
+    <dd>{{% md %}}The provisioning state of the flow log.{{% /md %}}</dd><dt class="property-"
             title="">
         <span id="storageid_csharp">
 <a href="#storageid_csharp" style="color: inherit; text-decoration: inherit;">Storage<wbr>Id</a>
@@ -229,8 +204,7 @@ The following output properties are available:
         <span class="property-indicator"></span>
         <span class="property-type">string</span>
     </dt>
-    <dd>{{% md %}}ID of the storage account which is used to store the flow log.{{% /md %}}</dd>
-    <dt class="property-"
+    <dd>{{% md %}}ID of the storage account which is used to store the flow log.{{% /md %}}</dd><dt class="property-"
             title="">
         <span id="targetresourceguid_csharp">
 <a href="#targetresourceguid_csharp" style="color: inherit; text-decoration: inherit;">Target<wbr>Resource<wbr>Guid</a>
@@ -238,8 +212,7 @@ The following output properties are available:
         <span class="property-indicator"></span>
         <span class="property-type">string</span>
     </dt>
-    <dd>{{% md %}}Guid of network security group to which flow log will be applied.{{% /md %}}</dd>
-    <dt class="property-"
+    <dd>{{% md %}}Guid of network security group to which flow log will be applied.{{% /md %}}</dd><dt class="property-"
             title="">
         <span id="targetresourceid_csharp">
 <a href="#targetresourceid_csharp" style="color: inherit; text-decoration: inherit;">Target<wbr>Resource<wbr>Id</a>
@@ -247,8 +220,7 @@ The following output properties are available:
         <span class="property-indicator"></span>
         <span class="property-type">string</span>
     </dt>
-    <dd>{{% md %}}ID of network security group to which flow log will be applied.{{% /md %}}</dd>
-    <dt class="property-"
+    <dd>{{% md %}}ID of network security group to which flow log will be applied.{{% /md %}}</dd><dt class="property-"
             title="">
         <span id="type_csharp">
 <a href="#type_csharp" style="color: inherit; text-decoration: inherit;">Type</a>
@@ -256,8 +228,7 @@ The following output properties are available:
         <span class="property-indicator"></span>
         <span class="property-type">string</span>
     </dt>
-    <dd>{{% md %}}Resource type.{{% /md %}}</dd>
-    <dt class="property-"
+    <dd>{{% md %}}Resource type.{{% /md %}}</dd><dt class="property-"
             title="">
         <span id="enabled_csharp">
 <a href="#enabled_csharp" style="color: inherit; text-decoration: inherit;">Enabled</a>
@@ -265,8 +236,7 @@ The following output properties are available:
         <span class="property-indicator"></span>
         <span class="property-type">bool</span>
     </dt>
-    <dd>{{% md %}}Flag to enable/disable flow logging.{{% /md %}}</dd>
-    <dt class="property-"
+    <dd>{{% md %}}Flag to enable/disable flow logging.{{% /md %}}</dd><dt class="property-"
             title="">
         <span id="flowanalyticsconfiguration_csharp">
 <a href="#flowanalyticsconfiguration_csharp" style="color: inherit; text-decoration: inherit;">Flow<wbr>Analytics<wbr>Configuration</a>
@@ -274,8 +244,7 @@ The following output properties are available:
         <span class="property-indicator"></span>
         <span class="property-type"><a href="#trafficanalyticspropertiesresponse">Pulumi.<wbr>Azure<wbr>Native.<wbr>Network.<wbr>Outputs.<wbr>Traffic<wbr>Analytics<wbr>Properties<wbr>Response</a></span>
     </dt>
-    <dd>{{% md %}}Parameters that define the configuration of traffic analytics.{{% /md %}}</dd>
-    <dt class="property-"
+    <dd>{{% md %}}Parameters that define the configuration of traffic analytics.{{% /md %}}</dd><dt class="property-"
             title="">
         <span id="format_csharp">
 <a href="#format_csharp" style="color: inherit; text-decoration: inherit;">Format</a>
@@ -283,8 +252,7 @@ The following output properties are available:
         <span class="property-indicator"></span>
         <span class="property-type"><a href="#flowlogformatparametersresponse">Pulumi.<wbr>Azure<wbr>Native.<wbr>Network.<wbr>Outputs.<wbr>Flow<wbr>Log<wbr>Format<wbr>Parameters<wbr>Response</a></span>
     </dt>
-    <dd>{{% md %}}Parameters that define the flow log format.{{% /md %}}</dd>
-    <dt class="property-"
+    <dd>{{% md %}}Parameters that define the flow log format.{{% /md %}}</dd><dt class="property-"
             title="">
         <span id="id_csharp">
 <a href="#id_csharp" style="color: inherit; text-decoration: inherit;">Id</a>
@@ -292,8 +260,7 @@ The following output properties are available:
         <span class="property-indicator"></span>
         <span class="property-type">string</span>
     </dt>
-    <dd>{{% md %}}Resource ID.{{% /md %}}</dd>
-    <dt class="property-"
+    <dd>{{% md %}}Resource ID.{{% /md %}}</dd><dt class="property-"
             title="">
         <span id="location_csharp">
 <a href="#location_csharp" style="color: inherit; text-decoration: inherit;">Location</a>
@@ -301,8 +268,7 @@ The following output properties are available:
         <span class="property-indicator"></span>
         <span class="property-type">string</span>
     </dt>
-    <dd>{{% md %}}Resource location.{{% /md %}}</dd>
-    <dt class="property-"
+    <dd>{{% md %}}Resource location.{{% /md %}}</dd><dt class="property-"
             title="">
         <span id="retentionpolicy_csharp">
 <a href="#retentionpolicy_csharp" style="color: inherit; text-decoration: inherit;">Retention<wbr>Policy</a>
@@ -310,8 +276,7 @@ The following output properties are available:
         <span class="property-indicator"></span>
         <span class="property-type"><a href="#retentionpolicyparametersresponse">Pulumi.<wbr>Azure<wbr>Native.<wbr>Network.<wbr>Outputs.<wbr>Retention<wbr>Policy<wbr>Parameters<wbr>Response</a></span>
     </dt>
-    <dd>{{% md %}}Parameters that define the retention policy for flow log.{{% /md %}}</dd>
-    <dt class="property-"
+    <dd>{{% md %}}Parameters that define the retention policy for flow log.{{% /md %}}</dd><dt class="property-"
             title="">
         <span id="tags_csharp">
 <a href="#tags_csharp" style="color: inherit; text-decoration: inherit;">Tags</a>
@@ -319,14 +284,11 @@ The following output properties are available:
         <span class="property-indicator"></span>
         <span class="property-type">Dictionary&lt;string, string&gt;</span>
     </dt>
-    <dd>{{% md %}}Resource tags.{{% /md %}}</dd>
-</dl>
+    <dd>{{% md %}}Resource tags.{{% /md %}}</dd></dl>
 {{% /choosable %}}
 
 {{% choosable language go %}}
-<dl class="resources-properties">
-
-    <dt class="property-"
+<dl class="resources-properties"><dt class="property-"
             title="">
         <span id="etag_go">
 <a href="#etag_go" style="color: inherit; text-decoration: inherit;">Etag</a>
@@ -334,8 +296,7 @@ The following output properties are available:
         <span class="property-indicator"></span>
         <span class="property-type">string</span>
     </dt>
-    <dd>{{% md %}}A unique read-only string that changes whenever the resource is updated.{{% /md %}}</dd>
-    <dt class="property-"
+    <dd>{{% md %}}A unique read-only string that changes whenever the resource is updated.{{% /md %}}</dd><dt class="property-"
             title="">
         <span id="name_go">
 <a href="#name_go" style="color: inherit; text-decoration: inherit;">Name</a>
@@ -343,8 +304,7 @@ The following output properties are available:
         <span class="property-indicator"></span>
         <span class="property-type">string</span>
     </dt>
-    <dd>{{% md %}}Resource name.{{% /md %}}</dd>
-    <dt class="property-"
+    <dd>{{% md %}}Resource name.{{% /md %}}</dd><dt class="property-"
             title="">
         <span id="provisioningstate_go">
 <a href="#provisioningstate_go" style="color: inherit; text-decoration: inherit;">Provisioning<wbr>State</a>
@@ -352,8 +312,7 @@ The following output properties are available:
         <span class="property-indicator"></span>
         <span class="property-type">string</span>
     </dt>
-    <dd>{{% md %}}The provisioning state of the flow log.{{% /md %}}</dd>
-    <dt class="property-"
+    <dd>{{% md %}}The provisioning state of the flow log.{{% /md %}}</dd><dt class="property-"
             title="">
         <span id="storageid_go">
 <a href="#storageid_go" style="color: inherit; text-decoration: inherit;">Storage<wbr>Id</a>
@@ -361,8 +320,7 @@ The following output properties are available:
         <span class="property-indicator"></span>
         <span class="property-type">string</span>
     </dt>
-    <dd>{{% md %}}ID of the storage account which is used to store the flow log.{{% /md %}}</dd>
-    <dt class="property-"
+    <dd>{{% md %}}ID of the storage account which is used to store the flow log.{{% /md %}}</dd><dt class="property-"
             title="">
         <span id="targetresourceguid_go">
 <a href="#targetresourceguid_go" style="color: inherit; text-decoration: inherit;">Target<wbr>Resource<wbr>Guid</a>
@@ -370,8 +328,7 @@ The following output properties are available:
         <span class="property-indicator"></span>
         <span class="property-type">string</span>
     </dt>
-    <dd>{{% md %}}Guid of network security group to which flow log will be applied.{{% /md %}}</dd>
-    <dt class="property-"
+    <dd>{{% md %}}Guid of network security group to which flow log will be applied.{{% /md %}}</dd><dt class="property-"
             title="">
         <span id="targetresourceid_go">
 <a href="#targetresourceid_go" style="color: inherit; text-decoration: inherit;">Target<wbr>Resource<wbr>Id</a>
@@ -379,8 +336,7 @@ The following output properties are available:
         <span class="property-indicator"></span>
         <span class="property-type">string</span>
     </dt>
-    <dd>{{% md %}}ID of network security group to which flow log will be applied.{{% /md %}}</dd>
-    <dt class="property-"
+    <dd>{{% md %}}ID of network security group to which flow log will be applied.{{% /md %}}</dd><dt class="property-"
             title="">
         <span id="type_go">
 <a href="#type_go" style="color: inherit; text-decoration: inherit;">Type</a>
@@ -388,8 +344,7 @@ The following output properties are available:
         <span class="property-indicator"></span>
         <span class="property-type">string</span>
     </dt>
-    <dd>{{% md %}}Resource type.{{% /md %}}</dd>
-    <dt class="property-"
+    <dd>{{% md %}}Resource type.{{% /md %}}</dd><dt class="property-"
             title="">
         <span id="enabled_go">
 <a href="#enabled_go" style="color: inherit; text-decoration: inherit;">Enabled</a>
@@ -397,8 +352,7 @@ The following output properties are available:
         <span class="property-indicator"></span>
         <span class="property-type">bool</span>
     </dt>
-    <dd>{{% md %}}Flag to enable/disable flow logging.{{% /md %}}</dd>
-    <dt class="property-"
+    <dd>{{% md %}}Flag to enable/disable flow logging.{{% /md %}}</dd><dt class="property-"
             title="">
         <span id="flowanalyticsconfiguration_go">
 <a href="#flowanalyticsconfiguration_go" style="color: inherit; text-decoration: inherit;">Flow<wbr>Analytics<wbr>Configuration</a>
@@ -406,8 +360,7 @@ The following output properties are available:
         <span class="property-indicator"></span>
         <span class="property-type"><a href="#trafficanalyticspropertiesresponse">Traffic<wbr>Analytics<wbr>Properties<wbr>Response</a></span>
     </dt>
-    <dd>{{% md %}}Parameters that define the configuration of traffic analytics.{{% /md %}}</dd>
-    <dt class="property-"
+    <dd>{{% md %}}Parameters that define the configuration of traffic analytics.{{% /md %}}</dd><dt class="property-"
             title="">
         <span id="format_go">
 <a href="#format_go" style="color: inherit; text-decoration: inherit;">Format</a>
@@ -415,8 +368,7 @@ The following output properties are available:
         <span class="property-indicator"></span>
         <span class="property-type"><a href="#flowlogformatparametersresponse">Flow<wbr>Log<wbr>Format<wbr>Parameters<wbr>Response</a></span>
     </dt>
-    <dd>{{% md %}}Parameters that define the flow log format.{{% /md %}}</dd>
-    <dt class="property-"
+    <dd>{{% md %}}Parameters that define the flow log format.{{% /md %}}</dd><dt class="property-"
             title="">
         <span id="id_go">
 <a href="#id_go" style="color: inherit; text-decoration: inherit;">Id</a>
@@ -424,8 +376,7 @@ The following output properties are available:
         <span class="property-indicator"></span>
         <span class="property-type">string</span>
     </dt>
-    <dd>{{% md %}}Resource ID.{{% /md %}}</dd>
-    <dt class="property-"
+    <dd>{{% md %}}Resource ID.{{% /md %}}</dd><dt class="property-"
             title="">
         <span id="location_go">
 <a href="#location_go" style="color: inherit; text-decoration: inherit;">Location</a>
@@ -433,8 +384,7 @@ The following output properties are available:
         <span class="property-indicator"></span>
         <span class="property-type">string</span>
     </dt>
-    <dd>{{% md %}}Resource location.{{% /md %}}</dd>
-    <dt class="property-"
+    <dd>{{% md %}}Resource location.{{% /md %}}</dd><dt class="property-"
             title="">
         <span id="retentionpolicy_go">
 <a href="#retentionpolicy_go" style="color: inherit; text-decoration: inherit;">Retention<wbr>Policy</a>
@@ -442,8 +392,7 @@ The following output properties are available:
         <span class="property-indicator"></span>
         <span class="property-type"><a href="#retentionpolicyparametersresponse">Retention<wbr>Policy<wbr>Parameters<wbr>Response</a></span>
     </dt>
-    <dd>{{% md %}}Parameters that define the retention policy for flow log.{{% /md %}}</dd>
-    <dt class="property-"
+    <dd>{{% md %}}Parameters that define the retention policy for flow log.{{% /md %}}</dd><dt class="property-"
             title="">
         <span id="tags_go">
 <a href="#tags_go" style="color: inherit; text-decoration: inherit;">Tags</a>
@@ -451,14 +400,11 @@ The following output properties are available:
         <span class="property-indicator"></span>
         <span class="property-type">map[string]string</span>
     </dt>
-    <dd>{{% md %}}Resource tags.{{% /md %}}</dd>
-</dl>
+    <dd>{{% md %}}Resource tags.{{% /md %}}</dd></dl>
 {{% /choosable %}}
 
 {{% choosable language nodejs %}}
-<dl class="resources-properties">
-
-    <dt class="property-"
+<dl class="resources-properties"><dt class="property-"
             title="">
         <span id="etag_nodejs">
 <a href="#etag_nodejs" style="color: inherit; text-decoration: inherit;">etag</a>
@@ -466,8 +412,7 @@ The following output properties are available:
         <span class="property-indicator"></span>
         <span class="property-type">string</span>
     </dt>
-    <dd>{{% md %}}A unique read-only string that changes whenever the resource is updated.{{% /md %}}</dd>
-    <dt class="property-"
+    <dd>{{% md %}}A unique read-only string that changes whenever the resource is updated.{{% /md %}}</dd><dt class="property-"
             title="">
         <span id="name_nodejs">
 <a href="#name_nodejs" style="color: inherit; text-decoration: inherit;">name</a>
@@ -475,8 +420,7 @@ The following output properties are available:
         <span class="property-indicator"></span>
         <span class="property-type">string</span>
     </dt>
-    <dd>{{% md %}}Resource name.{{% /md %}}</dd>
-    <dt class="property-"
+    <dd>{{% md %}}Resource name.{{% /md %}}</dd><dt class="property-"
             title="">
         <span id="provisioningstate_nodejs">
 <a href="#provisioningstate_nodejs" style="color: inherit; text-decoration: inherit;">provisioning<wbr>State</a>
@@ -484,8 +428,7 @@ The following output properties are available:
         <span class="property-indicator"></span>
         <span class="property-type">string</span>
     </dt>
-    <dd>{{% md %}}The provisioning state of the flow log.{{% /md %}}</dd>
-    <dt class="property-"
+    <dd>{{% md %}}The provisioning state of the flow log.{{% /md %}}</dd><dt class="property-"
             title="">
         <span id="storageid_nodejs">
 <a href="#storageid_nodejs" style="color: inherit; text-decoration: inherit;">storage<wbr>Id</a>
@@ -493,8 +436,7 @@ The following output properties are available:
         <span class="property-indicator"></span>
         <span class="property-type">string</span>
     </dt>
-    <dd>{{% md %}}ID of the storage account which is used to store the flow log.{{% /md %}}</dd>
-    <dt class="property-"
+    <dd>{{% md %}}ID of the storage account which is used to store the flow log.{{% /md %}}</dd><dt class="property-"
             title="">
         <span id="targetresourceguid_nodejs">
 <a href="#targetresourceguid_nodejs" style="color: inherit; text-decoration: inherit;">target<wbr>Resource<wbr>Guid</a>
@@ -502,8 +444,7 @@ The following output properties are available:
         <span class="property-indicator"></span>
         <span class="property-type">string</span>
     </dt>
-    <dd>{{% md %}}Guid of network security group to which flow log will be applied.{{% /md %}}</dd>
-    <dt class="property-"
+    <dd>{{% md %}}Guid of network security group to which flow log will be applied.{{% /md %}}</dd><dt class="property-"
             title="">
         <span id="targetresourceid_nodejs">
 <a href="#targetresourceid_nodejs" style="color: inherit; text-decoration: inherit;">target<wbr>Resource<wbr>Id</a>
@@ -511,8 +452,7 @@ The following output properties are available:
         <span class="property-indicator"></span>
         <span class="property-type">string</span>
     </dt>
-    <dd>{{% md %}}ID of network security group to which flow log will be applied.{{% /md %}}</dd>
-    <dt class="property-"
+    <dd>{{% md %}}ID of network security group to which flow log will be applied.{{% /md %}}</dd><dt class="property-"
             title="">
         <span id="type_nodejs">
 <a href="#type_nodejs" style="color: inherit; text-decoration: inherit;">type</a>
@@ -520,8 +460,7 @@ The following output properties are available:
         <span class="property-indicator"></span>
         <span class="property-type">string</span>
     </dt>
-    <dd>{{% md %}}Resource type.{{% /md %}}</dd>
-    <dt class="property-"
+    <dd>{{% md %}}Resource type.{{% /md %}}</dd><dt class="property-"
             title="">
         <span id="enabled_nodejs">
 <a href="#enabled_nodejs" style="color: inherit; text-decoration: inherit;">enabled</a>
@@ -529,8 +468,7 @@ The following output properties are available:
         <span class="property-indicator"></span>
         <span class="property-type">boolean</span>
     </dt>
-    <dd>{{% md %}}Flag to enable/disable flow logging.{{% /md %}}</dd>
-    <dt class="property-"
+    <dd>{{% md %}}Flag to enable/disable flow logging.{{% /md %}}</dd><dt class="property-"
             title="">
         <span id="flowanalyticsconfiguration_nodejs">
 <a href="#flowanalyticsconfiguration_nodejs" style="color: inherit; text-decoration: inherit;">flow<wbr>Analytics<wbr>Configuration</a>
@@ -538,8 +476,7 @@ The following output properties are available:
         <span class="property-indicator"></span>
         <span class="property-type"><a href="#trafficanalyticspropertiesresponse">Traffic<wbr>Analytics<wbr>Properties<wbr>Response</a></span>
     </dt>
-    <dd>{{% md %}}Parameters that define the configuration of traffic analytics.{{% /md %}}</dd>
-    <dt class="property-"
+    <dd>{{% md %}}Parameters that define the configuration of traffic analytics.{{% /md %}}</dd><dt class="property-"
             title="">
         <span id="format_nodejs">
 <a href="#format_nodejs" style="color: inherit; text-decoration: inherit;">format</a>
@@ -547,8 +484,7 @@ The following output properties are available:
         <span class="property-indicator"></span>
         <span class="property-type"><a href="#flowlogformatparametersresponse">Flow<wbr>Log<wbr>Format<wbr>Parameters<wbr>Response</a></span>
     </dt>
-    <dd>{{% md %}}Parameters that define the flow log format.{{% /md %}}</dd>
-    <dt class="property-"
+    <dd>{{% md %}}Parameters that define the flow log format.{{% /md %}}</dd><dt class="property-"
             title="">
         <span id="id_nodejs">
 <a href="#id_nodejs" style="color: inherit; text-decoration: inherit;">id</a>
@@ -556,8 +492,7 @@ The following output properties are available:
         <span class="property-indicator"></span>
         <span class="property-type">string</span>
     </dt>
-    <dd>{{% md %}}Resource ID.{{% /md %}}</dd>
-    <dt class="property-"
+    <dd>{{% md %}}Resource ID.{{% /md %}}</dd><dt class="property-"
             title="">
         <span id="location_nodejs">
 <a href="#location_nodejs" style="color: inherit; text-decoration: inherit;">location</a>
@@ -565,8 +500,7 @@ The following output properties are available:
         <span class="property-indicator"></span>
         <span class="property-type">string</span>
     </dt>
-    <dd>{{% md %}}Resource location.{{% /md %}}</dd>
-    <dt class="property-"
+    <dd>{{% md %}}Resource location.{{% /md %}}</dd><dt class="property-"
             title="">
         <span id="retentionpolicy_nodejs">
 <a href="#retentionpolicy_nodejs" style="color: inherit; text-decoration: inherit;">retention<wbr>Policy</a>
@@ -574,8 +508,7 @@ The following output properties are available:
         <span class="property-indicator"></span>
         <span class="property-type"><a href="#retentionpolicyparametersresponse">Retention<wbr>Policy<wbr>Parameters<wbr>Response</a></span>
     </dt>
-    <dd>{{% md %}}Parameters that define the retention policy for flow log.{{% /md %}}</dd>
-    <dt class="property-"
+    <dd>{{% md %}}Parameters that define the retention policy for flow log.{{% /md %}}</dd><dt class="property-"
             title="">
         <span id="tags_nodejs">
 <a href="#tags_nodejs" style="color: inherit; text-decoration: inherit;">tags</a>
@@ -583,14 +516,11 @@ The following output properties are available:
         <span class="property-indicator"></span>
         <span class="property-type">{[key: string]: string}</span>
     </dt>
-    <dd>{{% md %}}Resource tags.{{% /md %}}</dd>
-</dl>
+    <dd>{{% md %}}Resource tags.{{% /md %}}</dd></dl>
 {{% /choosable %}}
 
 {{% choosable language python %}}
-<dl class="resources-properties">
-
-    <dt class="property-"
+<dl class="resources-properties"><dt class="property-"
             title="">
         <span id="etag_python">
 <a href="#etag_python" style="color: inherit; text-decoration: inherit;">etag</a>
@@ -598,8 +528,7 @@ The following output properties are available:
         <span class="property-indicator"></span>
         <span class="property-type">str</span>
     </dt>
-    <dd>{{% md %}}A unique read-only string that changes whenever the resource is updated.{{% /md %}}</dd>
-    <dt class="property-"
+    <dd>{{% md %}}A unique read-only string that changes whenever the resource is updated.{{% /md %}}</dd><dt class="property-"
             title="">
         <span id="name_python">
 <a href="#name_python" style="color: inherit; text-decoration: inherit;">name</a>
@@ -607,8 +536,7 @@ The following output properties are available:
         <span class="property-indicator"></span>
         <span class="property-type">str</span>
     </dt>
-    <dd>{{% md %}}Resource name.{{% /md %}}</dd>
-    <dt class="property-"
+    <dd>{{% md %}}Resource name.{{% /md %}}</dd><dt class="property-"
             title="">
         <span id="provisioning_state_python">
 <a href="#provisioning_state_python" style="color: inherit; text-decoration: inherit;">provisioning_<wbr>state</a>
@@ -616,8 +544,7 @@ The following output properties are available:
         <span class="property-indicator"></span>
         <span class="property-type">str</span>
     </dt>
-    <dd>{{% md %}}The provisioning state of the flow log.{{% /md %}}</dd>
-    <dt class="property-"
+    <dd>{{% md %}}The provisioning state of the flow log.{{% /md %}}</dd><dt class="property-"
             title="">
         <span id="storage_id_python">
 <a href="#storage_id_python" style="color: inherit; text-decoration: inherit;">storage_<wbr>id</a>
@@ -625,8 +552,7 @@ The following output properties are available:
         <span class="property-indicator"></span>
         <span class="property-type">str</span>
     </dt>
-    <dd>{{% md %}}ID of the storage account which is used to store the flow log.{{% /md %}}</dd>
-    <dt class="property-"
+    <dd>{{% md %}}ID of the storage account which is used to store the flow log.{{% /md %}}</dd><dt class="property-"
             title="">
         <span id="target_resource_guid_python">
 <a href="#target_resource_guid_python" style="color: inherit; text-decoration: inherit;">target_<wbr>resource_<wbr>guid</a>
@@ -634,8 +560,7 @@ The following output properties are available:
         <span class="property-indicator"></span>
         <span class="property-type">str</span>
     </dt>
-    <dd>{{% md %}}Guid of network security group to which flow log will be applied.{{% /md %}}</dd>
-    <dt class="property-"
+    <dd>{{% md %}}Guid of network security group to which flow log will be applied.{{% /md %}}</dd><dt class="property-"
             title="">
         <span id="target_resource_id_python">
 <a href="#target_resource_id_python" style="color: inherit; text-decoration: inherit;">target_<wbr>resource_<wbr>id</a>
@@ -643,8 +568,7 @@ The following output properties are available:
         <span class="property-indicator"></span>
         <span class="property-type">str</span>
     </dt>
-    <dd>{{% md %}}ID of network security group to which flow log will be applied.{{% /md %}}</dd>
-    <dt class="property-"
+    <dd>{{% md %}}ID of network security group to which flow log will be applied.{{% /md %}}</dd><dt class="property-"
             title="">
         <span id="type_python">
 <a href="#type_python" style="color: inherit; text-decoration: inherit;">type</a>
@@ -652,8 +576,7 @@ The following output properties are available:
         <span class="property-indicator"></span>
         <span class="property-type">str</span>
     </dt>
-    <dd>{{% md %}}Resource type.{{% /md %}}</dd>
-    <dt class="property-"
+    <dd>{{% md %}}Resource type.{{% /md %}}</dd><dt class="property-"
             title="">
         <span id="enabled_python">
 <a href="#enabled_python" style="color: inherit; text-decoration: inherit;">enabled</a>
@@ -661,8 +584,7 @@ The following output properties are available:
         <span class="property-indicator"></span>
         <span class="property-type">bool</span>
     </dt>
-    <dd>{{% md %}}Flag to enable/disable flow logging.{{% /md %}}</dd>
-    <dt class="property-"
+    <dd>{{% md %}}Flag to enable/disable flow logging.{{% /md %}}</dd><dt class="property-"
             title="">
         <span id="flow_analytics_configuration_python">
 <a href="#flow_analytics_configuration_python" style="color: inherit; text-decoration: inherit;">flow_<wbr>analytics_<wbr>configuration</a>
@@ -670,8 +592,7 @@ The following output properties are available:
         <span class="property-indicator"></span>
         <span class="property-type"><a href="#trafficanalyticspropertiesresponse">Traffic<wbr>Analytics<wbr>Properties<wbr>Response</a></span>
     </dt>
-    <dd>{{% md %}}Parameters that define the configuration of traffic analytics.{{% /md %}}</dd>
-    <dt class="property-"
+    <dd>{{% md %}}Parameters that define the configuration of traffic analytics.{{% /md %}}</dd><dt class="property-"
             title="">
         <span id="format_python">
 <a href="#format_python" style="color: inherit; text-decoration: inherit;">format</a>
@@ -679,8 +600,7 @@ The following output properties are available:
         <span class="property-indicator"></span>
         <span class="property-type"><a href="#flowlogformatparametersresponse">Flow<wbr>Log<wbr>Format<wbr>Parameters<wbr>Response</a></span>
     </dt>
-    <dd>{{% md %}}Parameters that define the flow log format.{{% /md %}}</dd>
-    <dt class="property-"
+    <dd>{{% md %}}Parameters that define the flow log format.{{% /md %}}</dd><dt class="property-"
             title="">
         <span id="id_python">
 <a href="#id_python" style="color: inherit; text-decoration: inherit;">id</a>
@@ -688,8 +608,7 @@ The following output properties are available:
         <span class="property-indicator"></span>
         <span class="property-type">str</span>
     </dt>
-    <dd>{{% md %}}Resource ID.{{% /md %}}</dd>
-    <dt class="property-"
+    <dd>{{% md %}}Resource ID.{{% /md %}}</dd><dt class="property-"
             title="">
         <span id="location_python">
 <a href="#location_python" style="color: inherit; text-decoration: inherit;">location</a>
@@ -697,8 +616,7 @@ The following output properties are available:
         <span class="property-indicator"></span>
         <span class="property-type">str</span>
     </dt>
-    <dd>{{% md %}}Resource location.{{% /md %}}</dd>
-    <dt class="property-"
+    <dd>{{% md %}}Resource location.{{% /md %}}</dd><dt class="property-"
             title="">
         <span id="retention_policy_python">
 <a href="#retention_policy_python" style="color: inherit; text-decoration: inherit;">retention_<wbr>policy</a>
@@ -706,8 +624,7 @@ The following output properties are available:
         <span class="property-indicator"></span>
         <span class="property-type"><a href="#retentionpolicyparametersresponse">Retention<wbr>Policy<wbr>Parameters<wbr>Response</a></span>
     </dt>
-    <dd>{{% md %}}Parameters that define the retention policy for flow log.{{% /md %}}</dd>
-    <dt class="property-"
+    <dd>{{% md %}}Parameters that define the retention policy for flow log.{{% /md %}}</dd><dt class="property-"
             title="">
         <span id="tags_python">
 <a href="#tags_python" style="color: inherit; text-decoration: inherit;">tags</a>
@@ -715,8 +632,7 @@ The following output properties are available:
         <span class="property-indicator"></span>
         <span class="property-type">Mapping[str, str]</span>
     </dt>
-    <dd>{{% md %}}Resource tags.{{% /md %}}</dd>
-</dl>
+    <dd>{{% md %}}Resource tags.{{% /md %}}</dd></dl>
 {{% /choosable %}}
 
 
@@ -730,9 +646,7 @@ The following output properties are available:
 
 
 {{% choosable language csharp %}}
-<dl class="resources-properties">
-
-    <dt class="property-optional"
+<dl class="resources-properties"><dt class="property-optional"
             title="Optional">
         <span id="type_csharp">
 <a href="#type_csharp" style="color: inherit; text-decoration: inherit;">Type</a>
@@ -740,8 +654,7 @@ The following output properties are available:
         <span class="property-indicator"></span>
         <span class="property-type">string</span>
     </dt>
-    <dd>{{% md %}}The file type of flow log.{{% /md %}}</dd>
-    <dt class="property-optional"
+    <dd>{{% md %}}The file type of flow log.{{% /md %}}</dd><dt class="property-optional"
             title="Optional">
         <span id="version_csharp">
 <a href="#version_csharp" style="color: inherit; text-decoration: inherit;">Version</a>
@@ -749,14 +662,11 @@ The following output properties are available:
         <span class="property-indicator"></span>
         <span class="property-type">int</span>
     </dt>
-    <dd>{{% md %}}The version (revision) of the flow log.{{% /md %}}</dd>
-</dl>
+    <dd>{{% md %}}The version (revision) of the flow log.{{% /md %}}</dd></dl>
 {{% /choosable %}}
 
 {{% choosable language go %}}
-<dl class="resources-properties">
-
-    <dt class="property-optional"
+<dl class="resources-properties"><dt class="property-optional"
             title="Optional">
         <span id="type_go">
 <a href="#type_go" style="color: inherit; text-decoration: inherit;">Type</a>
@@ -764,8 +674,7 @@ The following output properties are available:
         <span class="property-indicator"></span>
         <span class="property-type">string</span>
     </dt>
-    <dd>{{% md %}}The file type of flow log.{{% /md %}}</dd>
-    <dt class="property-optional"
+    <dd>{{% md %}}The file type of flow log.{{% /md %}}</dd><dt class="property-optional"
             title="Optional">
         <span id="version_go">
 <a href="#version_go" style="color: inherit; text-decoration: inherit;">Version</a>
@@ -773,14 +682,11 @@ The following output properties are available:
         <span class="property-indicator"></span>
         <span class="property-type">int</span>
     </dt>
-    <dd>{{% md %}}The version (revision) of the flow log.{{% /md %}}</dd>
-</dl>
+    <dd>{{% md %}}The version (revision) of the flow log.{{% /md %}}</dd></dl>
 {{% /choosable %}}
 
 {{% choosable language nodejs %}}
-<dl class="resources-properties">
-
-    <dt class="property-optional"
+<dl class="resources-properties"><dt class="property-optional"
             title="Optional">
         <span id="type_nodejs">
 <a href="#type_nodejs" style="color: inherit; text-decoration: inherit;">type</a>
@@ -788,8 +694,7 @@ The following output properties are available:
         <span class="property-indicator"></span>
         <span class="property-type">string</span>
     </dt>
-    <dd>{{% md %}}The file type of flow log.{{% /md %}}</dd>
-    <dt class="property-optional"
+    <dd>{{% md %}}The file type of flow log.{{% /md %}}</dd><dt class="property-optional"
             title="Optional">
         <span id="version_nodejs">
 <a href="#version_nodejs" style="color: inherit; text-decoration: inherit;">version</a>
@@ -797,14 +702,11 @@ The following output properties are available:
         <span class="property-indicator"></span>
         <span class="property-type">number</span>
     </dt>
-    <dd>{{% md %}}The version (revision) of the flow log.{{% /md %}}</dd>
-</dl>
+    <dd>{{% md %}}The version (revision) of the flow log.{{% /md %}}</dd></dl>
 {{% /choosable %}}
 
 {{% choosable language python %}}
-<dl class="resources-properties">
-
-    <dt class="property-optional"
+<dl class="resources-properties"><dt class="property-optional"
             title="Optional">
         <span id="type_python">
 <a href="#type_python" style="color: inherit; text-decoration: inherit;">type</a>
@@ -812,8 +714,7 @@ The following output properties are available:
         <span class="property-indicator"></span>
         <span class="property-type">str</span>
     </dt>
-    <dd>{{% md %}}The file type of flow log.{{% /md %}}</dd>
-    <dt class="property-optional"
+    <dd>{{% md %}}The file type of flow log.{{% /md %}}</dd><dt class="property-optional"
             title="Optional">
         <span id="version_python">
 <a href="#version_python" style="color: inherit; text-decoration: inherit;">version</a>
@@ -821,8 +722,7 @@ The following output properties are available:
         <span class="property-indicator"></span>
         <span class="property-type">int</span>
     </dt>
-    <dd>{{% md %}}The version (revision) of the flow log.{{% /md %}}</dd>
-</dl>
+    <dd>{{% md %}}The version (revision) of the flow log.{{% /md %}}</dd></dl>
 {{% /choosable %}}
 
 <h4 id="retentionpolicyparametersresponse">Retention<wbr>Policy<wbr>Parameters<wbr>Response</h4>
@@ -830,9 +730,7 @@ The following output properties are available:
 
 
 {{% choosable language csharp %}}
-<dl class="resources-properties">
-
-    <dt class="property-optional"
+<dl class="resources-properties"><dt class="property-optional"
             title="Optional">
         <span id="days_csharp">
 <a href="#days_csharp" style="color: inherit; text-decoration: inherit;">Days</a>
@@ -840,8 +738,7 @@ The following output properties are available:
         <span class="property-indicator"></span>
         <span class="property-type">int</span>
     </dt>
-    <dd>{{% md %}}Number of days to retain flow log records.{{% /md %}}</dd>
-    <dt class="property-optional"
+    <dd>{{% md %}}Number of days to retain flow log records.{{% /md %}}</dd><dt class="property-optional"
             title="Optional">
         <span id="enabled_csharp">
 <a href="#enabled_csharp" style="color: inherit; text-decoration: inherit;">Enabled</a>
@@ -849,14 +746,11 @@ The following output properties are available:
         <span class="property-indicator"></span>
         <span class="property-type">bool</span>
     </dt>
-    <dd>{{% md %}}Flag to enable/disable retention.{{% /md %}}</dd>
-</dl>
+    <dd>{{% md %}}Flag to enable/disable retention.{{% /md %}}</dd></dl>
 {{% /choosable %}}
 
 {{% choosable language go %}}
-<dl class="resources-properties">
-
-    <dt class="property-optional"
+<dl class="resources-properties"><dt class="property-optional"
             title="Optional">
         <span id="days_go">
 <a href="#days_go" style="color: inherit; text-decoration: inherit;">Days</a>
@@ -864,8 +758,7 @@ The following output properties are available:
         <span class="property-indicator"></span>
         <span class="property-type">int</span>
     </dt>
-    <dd>{{% md %}}Number of days to retain flow log records.{{% /md %}}</dd>
-    <dt class="property-optional"
+    <dd>{{% md %}}Number of days to retain flow log records.{{% /md %}}</dd><dt class="property-optional"
             title="Optional">
         <span id="enabled_go">
 <a href="#enabled_go" style="color: inherit; text-decoration: inherit;">Enabled</a>
@@ -873,14 +766,11 @@ The following output properties are available:
         <span class="property-indicator"></span>
         <span class="property-type">bool</span>
     </dt>
-    <dd>{{% md %}}Flag to enable/disable retention.{{% /md %}}</dd>
-</dl>
+    <dd>{{% md %}}Flag to enable/disable retention.{{% /md %}}</dd></dl>
 {{% /choosable %}}
 
 {{% choosable language nodejs %}}
-<dl class="resources-properties">
-
-    <dt class="property-optional"
+<dl class="resources-properties"><dt class="property-optional"
             title="Optional">
         <span id="days_nodejs">
 <a href="#days_nodejs" style="color: inherit; text-decoration: inherit;">days</a>
@@ -888,8 +778,7 @@ The following output properties are available:
         <span class="property-indicator"></span>
         <span class="property-type">number</span>
     </dt>
-    <dd>{{% md %}}Number of days to retain flow log records.{{% /md %}}</dd>
-    <dt class="property-optional"
+    <dd>{{% md %}}Number of days to retain flow log records.{{% /md %}}</dd><dt class="property-optional"
             title="Optional">
         <span id="enabled_nodejs">
 <a href="#enabled_nodejs" style="color: inherit; text-decoration: inherit;">enabled</a>
@@ -897,14 +786,11 @@ The following output properties are available:
         <span class="property-indicator"></span>
         <span class="property-type">boolean</span>
     </dt>
-    <dd>{{% md %}}Flag to enable/disable retention.{{% /md %}}</dd>
-</dl>
+    <dd>{{% md %}}Flag to enable/disable retention.{{% /md %}}</dd></dl>
 {{% /choosable %}}
 
 {{% choosable language python %}}
-<dl class="resources-properties">
-
-    <dt class="property-optional"
+<dl class="resources-properties"><dt class="property-optional"
             title="Optional">
         <span id="days_python">
 <a href="#days_python" style="color: inherit; text-decoration: inherit;">days</a>
@@ -912,8 +798,7 @@ The following output properties are available:
         <span class="property-indicator"></span>
         <span class="property-type">int</span>
     </dt>
-    <dd>{{% md %}}Number of days to retain flow log records.{{% /md %}}</dd>
-    <dt class="property-optional"
+    <dd>{{% md %}}Number of days to retain flow log records.{{% /md %}}</dd><dt class="property-optional"
             title="Optional">
         <span id="enabled_python">
 <a href="#enabled_python" style="color: inherit; text-decoration: inherit;">enabled</a>
@@ -921,8 +806,7 @@ The following output properties are available:
         <span class="property-indicator"></span>
         <span class="property-type">bool</span>
     </dt>
-    <dd>{{% md %}}Flag to enable/disable retention.{{% /md %}}</dd>
-</dl>
+    <dd>{{% md %}}Flag to enable/disable retention.{{% /md %}}</dd></dl>
 {{% /choosable %}}
 
 <h4 id="trafficanalyticsconfigurationpropertiesresponse">Traffic<wbr>Analytics<wbr>Configuration<wbr>Properties<wbr>Response</h4>
@@ -930,9 +814,7 @@ The following output properties are available:
 
 
 {{% choosable language csharp %}}
-<dl class="resources-properties">
-
-    <dt class="property-optional"
+<dl class="resources-properties"><dt class="property-optional"
             title="Optional">
         <span id="enabled_csharp">
 <a href="#enabled_csharp" style="color: inherit; text-decoration: inherit;">Enabled</a>
@@ -940,8 +822,7 @@ The following output properties are available:
         <span class="property-indicator"></span>
         <span class="property-type">bool</span>
     </dt>
-    <dd>{{% md %}}Flag to enable/disable traffic analytics.{{% /md %}}</dd>
-    <dt class="property-optional"
+    <dd>{{% md %}}Flag to enable/disable traffic analytics.{{% /md %}}</dd><dt class="property-optional"
             title="Optional">
         <span id="trafficanalyticsinterval_csharp">
 <a href="#trafficanalyticsinterval_csharp" style="color: inherit; text-decoration: inherit;">Traffic<wbr>Analytics<wbr>Interval</a>
@@ -949,8 +830,7 @@ The following output properties are available:
         <span class="property-indicator"></span>
         <span class="property-type">int</span>
     </dt>
-    <dd>{{% md %}}The interval in minutes which would decide how frequently TA service should do flow analytics.{{% /md %}}</dd>
-    <dt class="property-optional"
+    <dd>{{% md %}}The interval in minutes which would decide how frequently TA service should do flow analytics.{{% /md %}}</dd><dt class="property-optional"
             title="Optional">
         <span id="workspaceid_csharp">
 <a href="#workspaceid_csharp" style="color: inherit; text-decoration: inherit;">Workspace<wbr>Id</a>
@@ -958,8 +838,7 @@ The following output properties are available:
         <span class="property-indicator"></span>
         <span class="property-type">string</span>
     </dt>
-    <dd>{{% md %}}The resource guid of the attached workspace.{{% /md %}}</dd>
-    <dt class="property-optional"
+    <dd>{{% md %}}The resource guid of the attached workspace.{{% /md %}}</dd><dt class="property-optional"
             title="Optional">
         <span id="workspaceregion_csharp">
 <a href="#workspaceregion_csharp" style="color: inherit; text-decoration: inherit;">Workspace<wbr>Region</a>
@@ -967,8 +846,7 @@ The following output properties are available:
         <span class="property-indicator"></span>
         <span class="property-type">string</span>
     </dt>
-    <dd>{{% md %}}The location of the attached workspace.{{% /md %}}</dd>
-    <dt class="property-optional"
+    <dd>{{% md %}}The location of the attached workspace.{{% /md %}}</dd><dt class="property-optional"
             title="Optional">
         <span id="workspaceresourceid_csharp">
 <a href="#workspaceresourceid_csharp" style="color: inherit; text-decoration: inherit;">Workspace<wbr>Resource<wbr>Id</a>
@@ -976,14 +854,11 @@ The following output properties are available:
         <span class="property-indicator"></span>
         <span class="property-type">string</span>
     </dt>
-    <dd>{{% md %}}Resource Id of the attached workspace.{{% /md %}}</dd>
-</dl>
+    <dd>{{% md %}}Resource Id of the attached workspace.{{% /md %}}</dd></dl>
 {{% /choosable %}}
 
 {{% choosable language go %}}
-<dl class="resources-properties">
-
-    <dt class="property-optional"
+<dl class="resources-properties"><dt class="property-optional"
             title="Optional">
         <span id="enabled_go">
 <a href="#enabled_go" style="color: inherit; text-decoration: inherit;">Enabled</a>
@@ -991,8 +866,7 @@ The following output properties are available:
         <span class="property-indicator"></span>
         <span class="property-type">bool</span>
     </dt>
-    <dd>{{% md %}}Flag to enable/disable traffic analytics.{{% /md %}}</dd>
-    <dt class="property-optional"
+    <dd>{{% md %}}Flag to enable/disable traffic analytics.{{% /md %}}</dd><dt class="property-optional"
             title="Optional">
         <span id="trafficanalyticsinterval_go">
 <a href="#trafficanalyticsinterval_go" style="color: inherit; text-decoration: inherit;">Traffic<wbr>Analytics<wbr>Interval</a>
@@ -1000,8 +874,7 @@ The following output properties are available:
         <span class="property-indicator"></span>
         <span class="property-type">int</span>
     </dt>
-    <dd>{{% md %}}The interval in minutes which would decide how frequently TA service should do flow analytics.{{% /md %}}</dd>
-    <dt class="property-optional"
+    <dd>{{% md %}}The interval in minutes which would decide how frequently TA service should do flow analytics.{{% /md %}}</dd><dt class="property-optional"
             title="Optional">
         <span id="workspaceid_go">
 <a href="#workspaceid_go" style="color: inherit; text-decoration: inherit;">Workspace<wbr>Id</a>
@@ -1009,8 +882,7 @@ The following output properties are available:
         <span class="property-indicator"></span>
         <span class="property-type">string</span>
     </dt>
-    <dd>{{% md %}}The resource guid of the attached workspace.{{% /md %}}</dd>
-    <dt class="property-optional"
+    <dd>{{% md %}}The resource guid of the attached workspace.{{% /md %}}</dd><dt class="property-optional"
             title="Optional">
         <span id="workspaceregion_go">
 <a href="#workspaceregion_go" style="color: inherit; text-decoration: inherit;">Workspace<wbr>Region</a>
@@ -1018,8 +890,7 @@ The following output properties are available:
         <span class="property-indicator"></span>
         <span class="property-type">string</span>
     </dt>
-    <dd>{{% md %}}The location of the attached workspace.{{% /md %}}</dd>
-    <dt class="property-optional"
+    <dd>{{% md %}}The location of the attached workspace.{{% /md %}}</dd><dt class="property-optional"
             title="Optional">
         <span id="workspaceresourceid_go">
 <a href="#workspaceresourceid_go" style="color: inherit; text-decoration: inherit;">Workspace<wbr>Resource<wbr>Id</a>
@@ -1027,14 +898,11 @@ The following output properties are available:
         <span class="property-indicator"></span>
         <span class="property-type">string</span>
     </dt>
-    <dd>{{% md %}}Resource Id of the attached workspace.{{% /md %}}</dd>
-</dl>
+    <dd>{{% md %}}Resource Id of the attached workspace.{{% /md %}}</dd></dl>
 {{% /choosable %}}
 
 {{% choosable language nodejs %}}
-<dl class="resources-properties">
-
-    <dt class="property-optional"
+<dl class="resources-properties"><dt class="property-optional"
             title="Optional">
         <span id="enabled_nodejs">
 <a href="#enabled_nodejs" style="color: inherit; text-decoration: inherit;">enabled</a>
@@ -1042,8 +910,7 @@ The following output properties are available:
         <span class="property-indicator"></span>
         <span class="property-type">boolean</span>
     </dt>
-    <dd>{{% md %}}Flag to enable/disable traffic analytics.{{% /md %}}</dd>
-    <dt class="property-optional"
+    <dd>{{% md %}}Flag to enable/disable traffic analytics.{{% /md %}}</dd><dt class="property-optional"
             title="Optional">
         <span id="trafficanalyticsinterval_nodejs">
 <a href="#trafficanalyticsinterval_nodejs" style="color: inherit; text-decoration: inherit;">traffic<wbr>Analytics<wbr>Interval</a>
@@ -1051,8 +918,7 @@ The following output properties are available:
         <span class="property-indicator"></span>
         <span class="property-type">number</span>
     </dt>
-    <dd>{{% md %}}The interval in minutes which would decide how frequently TA service should do flow analytics.{{% /md %}}</dd>
-    <dt class="property-optional"
+    <dd>{{% md %}}The interval in minutes which would decide how frequently TA service should do flow analytics.{{% /md %}}</dd><dt class="property-optional"
             title="Optional">
         <span id="workspaceid_nodejs">
 <a href="#workspaceid_nodejs" style="color: inherit; text-decoration: inherit;">workspace<wbr>Id</a>
@@ -1060,8 +926,7 @@ The following output properties are available:
         <span class="property-indicator"></span>
         <span class="property-type">string</span>
     </dt>
-    <dd>{{% md %}}The resource guid of the attached workspace.{{% /md %}}</dd>
-    <dt class="property-optional"
+    <dd>{{% md %}}The resource guid of the attached workspace.{{% /md %}}</dd><dt class="property-optional"
             title="Optional">
         <span id="workspaceregion_nodejs">
 <a href="#workspaceregion_nodejs" style="color: inherit; text-decoration: inherit;">workspace<wbr>Region</a>
@@ -1069,8 +934,7 @@ The following output properties are available:
         <span class="property-indicator"></span>
         <span class="property-type">string</span>
     </dt>
-    <dd>{{% md %}}The location of the attached workspace.{{% /md %}}</dd>
-    <dt class="property-optional"
+    <dd>{{% md %}}The location of the attached workspace.{{% /md %}}</dd><dt class="property-optional"
             title="Optional">
         <span id="workspaceresourceid_nodejs">
 <a href="#workspaceresourceid_nodejs" style="color: inherit; text-decoration: inherit;">workspace<wbr>Resource<wbr>Id</a>
@@ -1078,14 +942,11 @@ The following output properties are available:
         <span class="property-indicator"></span>
         <span class="property-type">string</span>
     </dt>
-    <dd>{{% md %}}Resource Id of the attached workspace.{{% /md %}}</dd>
-</dl>
+    <dd>{{% md %}}Resource Id of the attached workspace.{{% /md %}}</dd></dl>
 {{% /choosable %}}
 
 {{% choosable language python %}}
-<dl class="resources-properties">
-
-    <dt class="property-optional"
+<dl class="resources-properties"><dt class="property-optional"
             title="Optional">
         <span id="enabled_python">
 <a href="#enabled_python" style="color: inherit; text-decoration: inherit;">enabled</a>
@@ -1093,8 +954,7 @@ The following output properties are available:
         <span class="property-indicator"></span>
         <span class="property-type">bool</span>
     </dt>
-    <dd>{{% md %}}Flag to enable/disable traffic analytics.{{% /md %}}</dd>
-    <dt class="property-optional"
+    <dd>{{% md %}}Flag to enable/disable traffic analytics.{{% /md %}}</dd><dt class="property-optional"
             title="Optional">
         <span id="traffic_analytics_interval_python">
 <a href="#traffic_analytics_interval_python" style="color: inherit; text-decoration: inherit;">traffic_<wbr>analytics_<wbr>interval</a>
@@ -1102,8 +962,7 @@ The following output properties are available:
         <span class="property-indicator"></span>
         <span class="property-type">int</span>
     </dt>
-    <dd>{{% md %}}The interval in minutes which would decide how frequently TA service should do flow analytics.{{% /md %}}</dd>
-    <dt class="property-optional"
+    <dd>{{% md %}}The interval in minutes which would decide how frequently TA service should do flow analytics.{{% /md %}}</dd><dt class="property-optional"
             title="Optional">
         <span id="workspace_id_python">
 <a href="#workspace_id_python" style="color: inherit; text-decoration: inherit;">workspace_<wbr>id</a>
@@ -1111,8 +970,7 @@ The following output properties are available:
         <span class="property-indicator"></span>
         <span class="property-type">str</span>
     </dt>
-    <dd>{{% md %}}The resource guid of the attached workspace.{{% /md %}}</dd>
-    <dt class="property-optional"
+    <dd>{{% md %}}The resource guid of the attached workspace.{{% /md %}}</dd><dt class="property-optional"
             title="Optional">
         <span id="workspace_region_python">
 <a href="#workspace_region_python" style="color: inherit; text-decoration: inherit;">workspace_<wbr>region</a>
@@ -1120,8 +978,7 @@ The following output properties are available:
         <span class="property-indicator"></span>
         <span class="property-type">str</span>
     </dt>
-    <dd>{{% md %}}The location of the attached workspace.{{% /md %}}</dd>
-    <dt class="property-optional"
+    <dd>{{% md %}}The location of the attached workspace.{{% /md %}}</dd><dt class="property-optional"
             title="Optional">
         <span id="workspace_resource_id_python">
 <a href="#workspace_resource_id_python" style="color: inherit; text-decoration: inherit;">workspace_<wbr>resource_<wbr>id</a>
@@ -1129,8 +986,7 @@ The following output properties are available:
         <span class="property-indicator"></span>
         <span class="property-type">str</span>
     </dt>
-    <dd>{{% md %}}Resource Id of the attached workspace.{{% /md %}}</dd>
-</dl>
+    <dd>{{% md %}}Resource Id of the attached workspace.{{% /md %}}</dd></dl>
 {{% /choosable %}}
 
 <h4 id="trafficanalyticspropertiesresponse">Traffic<wbr>Analytics<wbr>Properties<wbr>Response</h4>
@@ -1138,9 +994,7 @@ The following output properties are available:
 
 
 {{% choosable language csharp %}}
-<dl class="resources-properties">
-
-    <dt class="property-optional"
+<dl class="resources-properties"><dt class="property-optional"
             title="Optional">
         <span id="networkwatcherflowanalyticsconfiguration_csharp">
 <a href="#networkwatcherflowanalyticsconfiguration_csharp" style="color: inherit; text-decoration: inherit;">Network<wbr>Watcher<wbr>Flow<wbr>Analytics<wbr>Configuration</a>
@@ -1148,14 +1002,11 @@ The following output properties are available:
         <span class="property-indicator"></span>
         <span class="property-type"><a href="#trafficanalyticsconfigurationpropertiesresponse">Pulumi.<wbr>Azure<wbr>Native.<wbr>Network.<wbr>Inputs.<wbr>Traffic<wbr>Analytics<wbr>Configuration<wbr>Properties<wbr>Response<wbr>Args</a></span>
     </dt>
-    <dd>{{% md %}}Parameters that define the configuration of traffic analytics.{{% /md %}}</dd>
-</dl>
+    <dd>{{% md %}}Parameters that define the configuration of traffic analytics.{{% /md %}}</dd></dl>
 {{% /choosable %}}
 
 {{% choosable language go %}}
-<dl class="resources-properties">
-
-    <dt class="property-optional"
+<dl class="resources-properties"><dt class="property-optional"
             title="Optional">
         <span id="networkwatcherflowanalyticsconfiguration_go">
 <a href="#networkwatcherflowanalyticsconfiguration_go" style="color: inherit; text-decoration: inherit;">Network<wbr>Watcher<wbr>Flow<wbr>Analytics<wbr>Configuration</a>
@@ -1163,14 +1014,11 @@ The following output properties are available:
         <span class="property-indicator"></span>
         <span class="property-type"><a href="#trafficanalyticsconfigurationpropertiesresponse">Traffic<wbr>Analytics<wbr>Configuration<wbr>Properties<wbr>Response</a></span>
     </dt>
-    <dd>{{% md %}}Parameters that define the configuration of traffic analytics.{{% /md %}}</dd>
-</dl>
+    <dd>{{% md %}}Parameters that define the configuration of traffic analytics.{{% /md %}}</dd></dl>
 {{% /choosable %}}
 
 {{% choosable language nodejs %}}
-<dl class="resources-properties">
-
-    <dt class="property-optional"
+<dl class="resources-properties"><dt class="property-optional"
             title="Optional">
         <span id="networkwatcherflowanalyticsconfiguration_nodejs">
 <a href="#networkwatcherflowanalyticsconfiguration_nodejs" style="color: inherit; text-decoration: inherit;">network<wbr>Watcher<wbr>Flow<wbr>Analytics<wbr>Configuration</a>
@@ -1178,14 +1026,11 @@ The following output properties are available:
         <span class="property-indicator"></span>
         <span class="property-type"><a href="#trafficanalyticsconfigurationpropertiesresponse">Traffic<wbr>Analytics<wbr>Configuration<wbr>Properties<wbr>Response</a></span>
     </dt>
-    <dd>{{% md %}}Parameters that define the configuration of traffic analytics.{{% /md %}}</dd>
-</dl>
+    <dd>{{% md %}}Parameters that define the configuration of traffic analytics.{{% /md %}}</dd></dl>
 {{% /choosable %}}
 
 {{% choosable language python %}}
-<dl class="resources-properties">
-
-    <dt class="property-optional"
+<dl class="resources-properties"><dt class="property-optional"
             title="Optional">
         <span id="network_watcher_flow_analytics_configuration_python">
 <a href="#network_watcher_flow_analytics_configuration_python" style="color: inherit; text-decoration: inherit;">network_<wbr>watcher_<wbr>flow_<wbr>analytics_<wbr>configuration</a>
@@ -1193,8 +1038,7 @@ The following output properties are available:
         <span class="property-indicator"></span>
         <span class="property-type"><a href="#trafficanalyticsconfigurationpropertiesresponse">Traffic<wbr>Analytics<wbr>Configuration<wbr>Properties<wbr>Response<wbr>Args</a></span>
     </dt>
-    <dd>{{% md %}}Parameters that define the configuration of traffic analytics.{{% /md %}}</dd>
-</dl>
+    <dd>{{% md %}}Parameters that define the configuration of traffic analytics.{{% /md %}}</dd></dl>
 {{% /choosable %}}
 
 

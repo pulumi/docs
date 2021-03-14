@@ -43,9 +43,7 @@ AWS auth backend certificates can be imported using `auth/`, the `backend` path,
 
 {{% choosable language nodejs %}}
 
-<dl class="resources-properties">
-  
-    <dt
+<dl class="resources-properties"><dt
         class="property-required" title="Required">
         <span>name</span>
         <span class="property-indicator"></span>
@@ -53,9 +51,7 @@ AWS auth backend certificates can be imported using `auth/`, the `backend` path,
     </dt>
     <dd>
       The unique name of the resource.
-    </dd>
-  
-    <dt
+    </dd><dt
         class="property-required" title="Required">
         <span>args</span>
         <span class="property-indicator"></span>
@@ -63,9 +59,7 @@ AWS auth backend certificates can be imported using `auth/`, the `backend` path,
     </dt>
     <dd>
       The arguments to resource properties.
-    </dd>
-  
-    <dt
+    </dd><dt
         class="property-optional" title="Optional">
         <span>opts</span>
         <span class="property-indicator"></span>
@@ -73,10 +67,7 @@ AWS auth backend certificates can be imported using `auth/`, the `backend` path,
     </dt>
     <dd>
       Bag of options to control resource&#39;s behavior.
-    </dd>
-  
-
-</dl>
+    </dd></dl>
 
 {{% /choosable %}}
 
@@ -102,9 +93,7 @@ AWS auth backend certificates can be imported using `auth/`, the `backend` path,
 
 {{% choosable language go %}}
 
-<dl class="resources-properties">
-  
-    <dt
+<dl class="resources-properties"><dt
         class="property-optional" title="Optional">
         <span>ctx</span>
         <span class="property-indicator"></span>
@@ -112,9 +101,7 @@ AWS auth backend certificates can be imported using `auth/`, the `backend` path,
     </dt>
     <dd>
       Context object for the current deployment.
-    </dd>
-  
-    <dt
+    </dd><dt
         class="property-required" title="Required">
         <span>name</span>
         <span class="property-indicator"></span>
@@ -122,9 +109,7 @@ AWS auth backend certificates can be imported using `auth/`, the `backend` path,
     </dt>
     <dd>
       The unique name of the resource.
-    </dd>
-  
-    <dt
+    </dd><dt
         class="property-required" title="Required">
         <span>args</span>
         <span class="property-indicator"></span>
@@ -132,9 +117,7 @@ AWS auth backend certificates can be imported using `auth/`, the `backend` path,
     </dt>
     <dd>
       The arguments to resource properties.
-    </dd>
-  
-    <dt
+    </dd><dt
         class="property-optional" title="Optional">
         <span>opts</span>
         <span class="property-indicator"></span>
@@ -142,18 +125,13 @@ AWS auth backend certificates can be imported using `auth/`, the `backend` path,
     </dt>
     <dd>
       Bag of options to control resource&#39;s behavior.
-    </dd>
-  
-
-</dl>
+    </dd></dl>
 
 {{% /choosable %}}
 
 {{% choosable language csharp %}}
 
-<dl class="resources-properties">
-  
-    <dt
+<dl class="resources-properties"><dt
         class="property-required" title="Required">
         <span>name</span>
         <span class="property-indicator"></span>
@@ -161,9 +139,7 @@ AWS auth backend certificates can be imported using `auth/`, the `backend` path,
     </dt>
     <dd>
       The unique name of the resource.
-    </dd>
-  
-    <dt
+    </dd><dt
         class="property-required" title="Required">
         <span>args</span>
         <span class="property-indicator"></span>
@@ -171,9 +147,7 @@ AWS auth backend certificates can be imported using `auth/`, the `backend` path,
     </dt>
     <dd>
       The arguments to resource properties.
-    </dd>
-  
-    <dt
+    </dd><dt
         class="property-optional" title="Optional">
         <span>opts</span>
         <span class="property-indicator"></span>
@@ -181,10 +155,7 @@ AWS auth backend certificates can be imported using `auth/`, the `backend` path,
     </dt>
     <dd>
       Bag of options to control resource&#39;s behavior.
-    </dd>
-  
-
-</dl>
+    </dd></dl>
 
 {{% /choosable %}}
 
@@ -199,9 +170,7 @@ The AuthBackendCert resource accepts the following [input]({{< relref "/docs/int
 
 
 {{% choosable language csharp %}}
-<dl class="resources-properties">
-
-    <dt class="property-required"
+<dl class="resources-properties"><dt class="property-required"
             title="Required">
         <span id="awspubliccert_csharp">
 <a href="#awspubliccert_csharp" style="color: inherit; text-decoration: inherit;">Aws<wbr>Public<wbr>Cert</a>
@@ -213,8 +182,7 @@ The AuthBackendCert resource accepts the following [input]({{< relref "/docs/int
 verify PKCS7 signature of the EC2 instance metadata. You can find this key in
 the [AWS
 documentation](http://docs.aws.amazon.com/AWSEC2/latest/UserGuide/instance-identity-documents.html).
-{{% /md %}}</dd>
-    <dt class="property-required"
+{{% /md %}}</dd><dt class="property-required"
             title="Required">
         <span id="certname_csharp">
 <a href="#certname_csharp" style="color: inherit; text-decoration: inherit;">Cert<wbr>Name</a>
@@ -223,8 +191,7 @@ documentation](http://docs.aws.amazon.com/AWSEC2/latest/UserGuide/instance-ident
         <span class="property-type">string</span>
     </dt>
     <dd>{{% md %}}The name of the certificate.
-{{% /md %}}</dd>
-    <dt class="property-optional"
+{{% /md %}}</dd><dt class="property-optional"
             title="Optional">
         <span id="backend_csharp">
 <a href="#backend_csharp" style="color: inherit; text-decoration: inherit;">Backend</a>
@@ -234,8 +201,7 @@ documentation](http://docs.aws.amazon.com/AWSEC2/latest/UserGuide/instance-ident
     </dt>
     <dd>{{% md %}}The path the AWS auth backend being configured was
 mounted at.  Defaults to `aws`.
-{{% /md %}}</dd>
-    <dt class="property-optional"
+{{% /md %}}</dd><dt class="property-optional"
             title="Optional">
         <span id="type_csharp">
 <a href="#type_csharp" style="color: inherit; text-decoration: inherit;">Type</a>
@@ -246,14 +212,11 @@ mounted at.  Defaults to `aws`.
     <dd>{{% md %}}Either "pkcs7" or "identity", indicating the type of
 document which can be verified using the given certificate. Defaults to
 "pkcs7".
-{{% /md %}}</dd>
-</dl>
+{{% /md %}}</dd></dl>
 {{% /choosable %}}
 
 {{% choosable language go %}}
-<dl class="resources-properties">
-
-    <dt class="property-required"
+<dl class="resources-properties"><dt class="property-required"
             title="Required">
         <span id="awspubliccert_go">
 <a href="#awspubliccert_go" style="color: inherit; text-decoration: inherit;">Aws<wbr>Public<wbr>Cert</a>
@@ -265,8 +228,7 @@ document which can be verified using the given certificate. Defaults to
 verify PKCS7 signature of the EC2 instance metadata. You can find this key in
 the [AWS
 documentation](http://docs.aws.amazon.com/AWSEC2/latest/UserGuide/instance-identity-documents.html).
-{{% /md %}}</dd>
-    <dt class="property-required"
+{{% /md %}}</dd><dt class="property-required"
             title="Required">
         <span id="certname_go">
 <a href="#certname_go" style="color: inherit; text-decoration: inherit;">Cert<wbr>Name</a>
@@ -275,8 +237,7 @@ documentation](http://docs.aws.amazon.com/AWSEC2/latest/UserGuide/instance-ident
         <span class="property-type">string</span>
     </dt>
     <dd>{{% md %}}The name of the certificate.
-{{% /md %}}</dd>
-    <dt class="property-optional"
+{{% /md %}}</dd><dt class="property-optional"
             title="Optional">
         <span id="backend_go">
 <a href="#backend_go" style="color: inherit; text-decoration: inherit;">Backend</a>
@@ -286,8 +247,7 @@ documentation](http://docs.aws.amazon.com/AWSEC2/latest/UserGuide/instance-ident
     </dt>
     <dd>{{% md %}}The path the AWS auth backend being configured was
 mounted at.  Defaults to `aws`.
-{{% /md %}}</dd>
-    <dt class="property-optional"
+{{% /md %}}</dd><dt class="property-optional"
             title="Optional">
         <span id="type_go">
 <a href="#type_go" style="color: inherit; text-decoration: inherit;">Type</a>
@@ -298,14 +258,11 @@ mounted at.  Defaults to `aws`.
     <dd>{{% md %}}Either "pkcs7" or "identity", indicating the type of
 document which can be verified using the given certificate. Defaults to
 "pkcs7".
-{{% /md %}}</dd>
-</dl>
+{{% /md %}}</dd></dl>
 {{% /choosable %}}
 
 {{% choosable language nodejs %}}
-<dl class="resources-properties">
-
-    <dt class="property-required"
+<dl class="resources-properties"><dt class="property-required"
             title="Required">
         <span id="awspubliccert_nodejs">
 <a href="#awspubliccert_nodejs" style="color: inherit; text-decoration: inherit;">aws<wbr>Public<wbr>Cert</a>
@@ -317,8 +274,7 @@ document which can be verified using the given certificate. Defaults to
 verify PKCS7 signature of the EC2 instance metadata. You can find this key in
 the [AWS
 documentation](http://docs.aws.amazon.com/AWSEC2/latest/UserGuide/instance-identity-documents.html).
-{{% /md %}}</dd>
-    <dt class="property-required"
+{{% /md %}}</dd><dt class="property-required"
             title="Required">
         <span id="certname_nodejs">
 <a href="#certname_nodejs" style="color: inherit; text-decoration: inherit;">cert<wbr>Name</a>
@@ -327,8 +283,7 @@ documentation](http://docs.aws.amazon.com/AWSEC2/latest/UserGuide/instance-ident
         <span class="property-type">string</span>
     </dt>
     <dd>{{% md %}}The name of the certificate.
-{{% /md %}}</dd>
-    <dt class="property-optional"
+{{% /md %}}</dd><dt class="property-optional"
             title="Optional">
         <span id="backend_nodejs">
 <a href="#backend_nodejs" style="color: inherit; text-decoration: inherit;">backend</a>
@@ -338,8 +293,7 @@ documentation](http://docs.aws.amazon.com/AWSEC2/latest/UserGuide/instance-ident
     </dt>
     <dd>{{% md %}}The path the AWS auth backend being configured was
 mounted at.  Defaults to `aws`.
-{{% /md %}}</dd>
-    <dt class="property-optional"
+{{% /md %}}</dd><dt class="property-optional"
             title="Optional">
         <span id="type_nodejs">
 <a href="#type_nodejs" style="color: inherit; text-decoration: inherit;">type</a>
@@ -350,14 +304,11 @@ mounted at.  Defaults to `aws`.
     <dd>{{% md %}}Either "pkcs7" or "identity", indicating the type of
 document which can be verified using the given certificate. Defaults to
 "pkcs7".
-{{% /md %}}</dd>
-</dl>
+{{% /md %}}</dd></dl>
 {{% /choosable %}}
 
 {{% choosable language python %}}
-<dl class="resources-properties">
-
-    <dt class="property-required"
+<dl class="resources-properties"><dt class="property-required"
             title="Required">
         <span id="aws_public_cert_python">
 <a href="#aws_public_cert_python" style="color: inherit; text-decoration: inherit;">aws_<wbr>public_<wbr>cert</a>
@@ -369,8 +320,7 @@ document which can be verified using the given certificate. Defaults to
 verify PKCS7 signature of the EC2 instance metadata. You can find this key in
 the [AWS
 documentation](http://docs.aws.amazon.com/AWSEC2/latest/UserGuide/instance-identity-documents.html).
-{{% /md %}}</dd>
-    <dt class="property-required"
+{{% /md %}}</dd><dt class="property-required"
             title="Required">
         <span id="cert_name_python">
 <a href="#cert_name_python" style="color: inherit; text-decoration: inherit;">cert_<wbr>name</a>
@@ -379,8 +329,7 @@ documentation](http://docs.aws.amazon.com/AWSEC2/latest/UserGuide/instance-ident
         <span class="property-type">str</span>
     </dt>
     <dd>{{% md %}}The name of the certificate.
-{{% /md %}}</dd>
-    <dt class="property-optional"
+{{% /md %}}</dd><dt class="property-optional"
             title="Optional">
         <span id="backend_python">
 <a href="#backend_python" style="color: inherit; text-decoration: inherit;">backend</a>
@@ -390,8 +339,7 @@ documentation](http://docs.aws.amazon.com/AWSEC2/latest/UserGuide/instance-ident
     </dt>
     <dd>{{% md %}}The path the AWS auth backend being configured was
 mounted at.  Defaults to `aws`.
-{{% /md %}}</dd>
-    <dt class="property-optional"
+{{% /md %}}</dd><dt class="property-optional"
             title="Optional">
         <span id="type_python">
 <a href="#type_python" style="color: inherit; text-decoration: inherit;">type</a>
@@ -402,8 +350,7 @@ mounted at.  Defaults to `aws`.
     <dd>{{% md %}}Either "pkcs7" or "identity", indicating the type of
 document which can be verified using the given certificate. Defaults to
 "pkcs7".
-{{% /md %}}</dd>
-</dl>
+{{% /md %}}</dd></dl>
 {{% /choosable %}}
 
 
@@ -414,9 +361,7 @@ All [input](#inputs) properties are implicitly available as output properties. A
 
 
 {{% choosable language csharp %}}
-<dl class="resources-properties">
-
-    <dt class="property-"
+<dl class="resources-properties"><dt class="property-"
             title="">
         <span id="id_csharp">
 <a href="#id_csharp" style="color: inherit; text-decoration: inherit;">Id</a>
@@ -424,14 +369,11 @@ All [input](#inputs) properties are implicitly available as output properties. A
         <span class="property-indicator"></span>
         <span class="property-type">string</span>
     </dt>
-    <dd>{{% md %}}The provider-assigned unique ID for this managed resource.{{% /md %}}</dd>
-</dl>
+    <dd>{{% md %}}The provider-assigned unique ID for this managed resource.{{% /md %}}</dd></dl>
 {{% /choosable %}}
 
 {{% choosable language go %}}
-<dl class="resources-properties">
-
-    <dt class="property-"
+<dl class="resources-properties"><dt class="property-"
             title="">
         <span id="id_go">
 <a href="#id_go" style="color: inherit; text-decoration: inherit;">Id</a>
@@ -439,14 +381,11 @@ All [input](#inputs) properties are implicitly available as output properties. A
         <span class="property-indicator"></span>
         <span class="property-type">string</span>
     </dt>
-    <dd>{{% md %}}The provider-assigned unique ID for this managed resource.{{% /md %}}</dd>
-</dl>
+    <dd>{{% md %}}The provider-assigned unique ID for this managed resource.{{% /md %}}</dd></dl>
 {{% /choosable %}}
 
 {{% choosable language nodejs %}}
-<dl class="resources-properties">
-
-    <dt class="property-"
+<dl class="resources-properties"><dt class="property-"
             title="">
         <span id="id_nodejs">
 <a href="#id_nodejs" style="color: inherit; text-decoration: inherit;">id</a>
@@ -454,14 +393,11 @@ All [input](#inputs) properties are implicitly available as output properties. A
         <span class="property-indicator"></span>
         <span class="property-type">string</span>
     </dt>
-    <dd>{{% md %}}The provider-assigned unique ID for this managed resource.{{% /md %}}</dd>
-</dl>
+    <dd>{{% md %}}The provider-assigned unique ID for this managed resource.{{% /md %}}</dd></dl>
 {{% /choosable %}}
 
 {{% choosable language python %}}
-<dl class="resources-properties">
-
-    <dt class="property-"
+<dl class="resources-properties"><dt class="property-"
             title="">
         <span id="id_python">
 <a href="#id_python" style="color: inherit; text-decoration: inherit;">id</a>
@@ -469,8 +405,7 @@ All [input](#inputs) properties are implicitly available as output properties. A
         <span class="property-indicator"></span>
         <span class="property-type">str</span>
     </dt>
-    <dd>{{% md %}}The provider-assigned unique ID for this managed resource.{{% /md %}}</dd>
-</dl>
+    <dd>{{% md %}}The provider-assigned unique ID for this managed resource.{{% /md %}}</dd></dl>
 {{% /choosable %}}
 
 
@@ -597,9 +532,7 @@ The following state arguments are supported:
 
 
 {{% choosable language csharp %}}
-<dl class="resources-properties">
-
-    <dt class="property-optional"
+<dl class="resources-properties"><dt class="property-optional"
             title="Optional">
         <span id="state_awspubliccert_csharp">
 <a href="#state_awspubliccert_csharp" style="color: inherit; text-decoration: inherit;">Aws<wbr>Public<wbr>Cert</a>
@@ -611,8 +544,7 @@ The following state arguments are supported:
 verify PKCS7 signature of the EC2 instance metadata. You can find this key in
 the [AWS
 documentation](http://docs.aws.amazon.com/AWSEC2/latest/UserGuide/instance-identity-documents.html).
-{{% /md %}}</dd>
-    <dt class="property-optional"
+{{% /md %}}</dd><dt class="property-optional"
             title="Optional">
         <span id="state_backend_csharp">
 <a href="#state_backend_csharp" style="color: inherit; text-decoration: inherit;">Backend</a>
@@ -622,8 +554,7 @@ documentation](http://docs.aws.amazon.com/AWSEC2/latest/UserGuide/instance-ident
     </dt>
     <dd>{{% md %}}The path the AWS auth backend being configured was
 mounted at.  Defaults to `aws`.
-{{% /md %}}</dd>
-    <dt class="property-optional"
+{{% /md %}}</dd><dt class="property-optional"
             title="Optional">
         <span id="state_certname_csharp">
 <a href="#state_certname_csharp" style="color: inherit; text-decoration: inherit;">Cert<wbr>Name</a>
@@ -632,8 +563,7 @@ mounted at.  Defaults to `aws`.
         <span class="property-type">string</span>
     </dt>
     <dd>{{% md %}}The name of the certificate.
-{{% /md %}}</dd>
-    <dt class="property-optional"
+{{% /md %}}</dd><dt class="property-optional"
             title="Optional">
         <span id="state_type_csharp">
 <a href="#state_type_csharp" style="color: inherit; text-decoration: inherit;">Type</a>
@@ -644,14 +574,11 @@ mounted at.  Defaults to `aws`.
     <dd>{{% md %}}Either "pkcs7" or "identity", indicating the type of
 document which can be verified using the given certificate. Defaults to
 "pkcs7".
-{{% /md %}}</dd>
-</dl>
+{{% /md %}}</dd></dl>
 {{% /choosable %}}
 
 {{% choosable language go %}}
-<dl class="resources-properties">
-
-    <dt class="property-optional"
+<dl class="resources-properties"><dt class="property-optional"
             title="Optional">
         <span id="state_awspubliccert_go">
 <a href="#state_awspubliccert_go" style="color: inherit; text-decoration: inherit;">Aws<wbr>Public<wbr>Cert</a>
@@ -663,8 +590,7 @@ document which can be verified using the given certificate. Defaults to
 verify PKCS7 signature of the EC2 instance metadata. You can find this key in
 the [AWS
 documentation](http://docs.aws.amazon.com/AWSEC2/latest/UserGuide/instance-identity-documents.html).
-{{% /md %}}</dd>
-    <dt class="property-optional"
+{{% /md %}}</dd><dt class="property-optional"
             title="Optional">
         <span id="state_backend_go">
 <a href="#state_backend_go" style="color: inherit; text-decoration: inherit;">Backend</a>
@@ -674,8 +600,7 @@ documentation](http://docs.aws.amazon.com/AWSEC2/latest/UserGuide/instance-ident
     </dt>
     <dd>{{% md %}}The path the AWS auth backend being configured was
 mounted at.  Defaults to `aws`.
-{{% /md %}}</dd>
-    <dt class="property-optional"
+{{% /md %}}</dd><dt class="property-optional"
             title="Optional">
         <span id="state_certname_go">
 <a href="#state_certname_go" style="color: inherit; text-decoration: inherit;">Cert<wbr>Name</a>
@@ -684,8 +609,7 @@ mounted at.  Defaults to `aws`.
         <span class="property-type">string</span>
     </dt>
     <dd>{{% md %}}The name of the certificate.
-{{% /md %}}</dd>
-    <dt class="property-optional"
+{{% /md %}}</dd><dt class="property-optional"
             title="Optional">
         <span id="state_type_go">
 <a href="#state_type_go" style="color: inherit; text-decoration: inherit;">Type</a>
@@ -696,14 +620,11 @@ mounted at.  Defaults to `aws`.
     <dd>{{% md %}}Either "pkcs7" or "identity", indicating the type of
 document which can be verified using the given certificate. Defaults to
 "pkcs7".
-{{% /md %}}</dd>
-</dl>
+{{% /md %}}</dd></dl>
 {{% /choosable %}}
 
 {{% choosable language nodejs %}}
-<dl class="resources-properties">
-
-    <dt class="property-optional"
+<dl class="resources-properties"><dt class="property-optional"
             title="Optional">
         <span id="state_awspubliccert_nodejs">
 <a href="#state_awspubliccert_nodejs" style="color: inherit; text-decoration: inherit;">aws<wbr>Public<wbr>Cert</a>
@@ -715,8 +636,7 @@ document which can be verified using the given certificate. Defaults to
 verify PKCS7 signature of the EC2 instance metadata. You can find this key in
 the [AWS
 documentation](http://docs.aws.amazon.com/AWSEC2/latest/UserGuide/instance-identity-documents.html).
-{{% /md %}}</dd>
-    <dt class="property-optional"
+{{% /md %}}</dd><dt class="property-optional"
             title="Optional">
         <span id="state_backend_nodejs">
 <a href="#state_backend_nodejs" style="color: inherit; text-decoration: inherit;">backend</a>
@@ -726,8 +646,7 @@ documentation](http://docs.aws.amazon.com/AWSEC2/latest/UserGuide/instance-ident
     </dt>
     <dd>{{% md %}}The path the AWS auth backend being configured was
 mounted at.  Defaults to `aws`.
-{{% /md %}}</dd>
-    <dt class="property-optional"
+{{% /md %}}</dd><dt class="property-optional"
             title="Optional">
         <span id="state_certname_nodejs">
 <a href="#state_certname_nodejs" style="color: inherit; text-decoration: inherit;">cert<wbr>Name</a>
@@ -736,8 +655,7 @@ mounted at.  Defaults to `aws`.
         <span class="property-type">string</span>
     </dt>
     <dd>{{% md %}}The name of the certificate.
-{{% /md %}}</dd>
-    <dt class="property-optional"
+{{% /md %}}</dd><dt class="property-optional"
             title="Optional">
         <span id="state_type_nodejs">
 <a href="#state_type_nodejs" style="color: inherit; text-decoration: inherit;">type</a>
@@ -748,14 +666,11 @@ mounted at.  Defaults to `aws`.
     <dd>{{% md %}}Either "pkcs7" or "identity", indicating the type of
 document which can be verified using the given certificate. Defaults to
 "pkcs7".
-{{% /md %}}</dd>
-</dl>
+{{% /md %}}</dd></dl>
 {{% /choosable %}}
 
 {{% choosable language python %}}
-<dl class="resources-properties">
-
-    <dt class="property-optional"
+<dl class="resources-properties"><dt class="property-optional"
             title="Optional">
         <span id="state_aws_public_cert_python">
 <a href="#state_aws_public_cert_python" style="color: inherit; text-decoration: inherit;">aws_<wbr>public_<wbr>cert</a>
@@ -767,8 +682,7 @@ document which can be verified using the given certificate. Defaults to
 verify PKCS7 signature of the EC2 instance metadata. You can find this key in
 the [AWS
 documentation](http://docs.aws.amazon.com/AWSEC2/latest/UserGuide/instance-identity-documents.html).
-{{% /md %}}</dd>
-    <dt class="property-optional"
+{{% /md %}}</dd><dt class="property-optional"
             title="Optional">
         <span id="state_backend_python">
 <a href="#state_backend_python" style="color: inherit; text-decoration: inherit;">backend</a>
@@ -778,8 +692,7 @@ documentation](http://docs.aws.amazon.com/AWSEC2/latest/UserGuide/instance-ident
     </dt>
     <dd>{{% md %}}The path the AWS auth backend being configured was
 mounted at.  Defaults to `aws`.
-{{% /md %}}</dd>
-    <dt class="property-optional"
+{{% /md %}}</dd><dt class="property-optional"
             title="Optional">
         <span id="state_cert_name_python">
 <a href="#state_cert_name_python" style="color: inherit; text-decoration: inherit;">cert_<wbr>name</a>
@@ -788,8 +701,7 @@ mounted at.  Defaults to `aws`.
         <span class="property-type">str</span>
     </dt>
     <dd>{{% md %}}The name of the certificate.
-{{% /md %}}</dd>
-    <dt class="property-optional"
+{{% /md %}}</dd><dt class="property-optional"
             title="Optional">
         <span id="state_type_python">
 <a href="#state_type_python" style="color: inherit; text-decoration: inherit;">type</a>
@@ -800,8 +712,7 @@ mounted at.  Defaults to `aws`.
     <dd>{{% md %}}Either "pkcs7" or "identity", indicating the type of
 document which can be verified using the given certificate. Defaults to
 "pkcs7".
-{{% /md %}}</dd>
-</dl>
+{{% /md %}}</dd></dl>
 {{% /choosable %}}
 
 
@@ -817,6 +728,6 @@ document which can be verified using the given certificate. Defaults to
 	<dt>License</dt>
 	<dd>Apache-2.0</dd>
 	<dt>Notes</dt>
-	<dd>This Pulumi package is based on the [`vault` Terraform Provider](https://github.com/hashicorp/terraform-provider-vault).</dd>
+	<dd>{{% md %}}This Pulumi package is based on the [`vault` Terraform Provider](https://github.com/hashicorp/terraform-provider-vault).{{% /md %}}</dd>
 </dl>
 

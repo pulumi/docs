@@ -13,11 +13,17 @@ meta_desc: "Documentation for the keycloak.RealmEvents resource with examples, i
 Allows for managing Realm Events settings within Keycloak.
 
 {{% examples %}}
+
 ## Example Usage
 
 {{< chooser language "typescript,python,go,csharp" / >}}
 
-{{% example csharp %}}
+
+
+
+
+{{< example csharp >}}
+
 ```csharp
 using Pulumi;
 using Keycloak = Pulumi.Keycloak;
@@ -53,9 +59,12 @@ class MyStack : Stack
 }
 ```
 
-{{% /example %}}
 
-{{% example go %}}
+{{< /example >}}
+
+
+{{< example go >}}
+
 ```go
 package main
 
@@ -95,9 +104,12 @@ func main() {
 }
 ```
 
-{{% /example %}}
 
-{{% example python %}}
+{{< /example >}}
+
+
+{{< example python >}}
+
 ```python
 import pulumi
 import pulumi_keycloak as keycloak
@@ -118,9 +130,12 @@ realm_events = keycloak.RealmEvents("realmEvents",
     events_listeners=["jboss-logging"])
 ```
 
-{{% /example %}}
 
-{{% example typescript %}}
+{{< /example >}}
+
+
+{{< example typescript >}}
+
 
 ```typescript
 import * as pulumi from "@pulumi/pulumi";
@@ -144,9 +159,16 @@ const realmEvents = new keycloak.RealmEvents("realmEvents", {
 });
 ```
 
-{{% /example %}}
+
+{{< /example >}}
+
+
+
+
 
 {{% /examples %}}
+
+
 
 
 ## Create a RealmEvents Resource {#create}
@@ -171,9 +193,7 @@ const realmEvents = new keycloak.RealmEvents("realmEvents", {
 
 {{% choosable language nodejs %}}
 
-<dl class="resources-properties">
-  
-    <dt
+<dl class="resources-properties"><dt
         class="property-required" title="Required">
         <span>name</span>
         <span class="property-indicator"></span>
@@ -181,9 +201,7 @@ const realmEvents = new keycloak.RealmEvents("realmEvents", {
     </dt>
     <dd>
       The unique name of the resource.
-    </dd>
-  
-    <dt
+    </dd><dt
         class="property-required" title="Required">
         <span>args</span>
         <span class="property-indicator"></span>
@@ -191,9 +209,7 @@ const realmEvents = new keycloak.RealmEvents("realmEvents", {
     </dt>
     <dd>
       The arguments to resource properties.
-    </dd>
-  
-    <dt
+    </dd><dt
         class="property-optional" title="Optional">
         <span>opts</span>
         <span class="property-indicator"></span>
@@ -201,10 +217,7 @@ const realmEvents = new keycloak.RealmEvents("realmEvents", {
     </dt>
     <dd>
       Bag of options to control resource&#39;s behavior.
-    </dd>
-  
-
-</dl>
+    </dd></dl>
 
 {{% /choosable %}}
 
@@ -230,9 +243,7 @@ const realmEvents = new keycloak.RealmEvents("realmEvents", {
 
 {{% choosable language go %}}
 
-<dl class="resources-properties">
-  
-    <dt
+<dl class="resources-properties"><dt
         class="property-optional" title="Optional">
         <span>ctx</span>
         <span class="property-indicator"></span>
@@ -240,9 +251,7 @@ const realmEvents = new keycloak.RealmEvents("realmEvents", {
     </dt>
     <dd>
       Context object for the current deployment.
-    </dd>
-  
-    <dt
+    </dd><dt
         class="property-required" title="Required">
         <span>name</span>
         <span class="property-indicator"></span>
@@ -250,9 +259,7 @@ const realmEvents = new keycloak.RealmEvents("realmEvents", {
     </dt>
     <dd>
       The unique name of the resource.
-    </dd>
-  
-    <dt
+    </dd><dt
         class="property-required" title="Required">
         <span>args</span>
         <span class="property-indicator"></span>
@@ -260,9 +267,7 @@ const realmEvents = new keycloak.RealmEvents("realmEvents", {
     </dt>
     <dd>
       The arguments to resource properties.
-    </dd>
-  
-    <dt
+    </dd><dt
         class="property-optional" title="Optional">
         <span>opts</span>
         <span class="property-indicator"></span>
@@ -270,18 +275,13 @@ const realmEvents = new keycloak.RealmEvents("realmEvents", {
     </dt>
     <dd>
       Bag of options to control resource&#39;s behavior.
-    </dd>
-  
-
-</dl>
+    </dd></dl>
 
 {{% /choosable %}}
 
 {{% choosable language csharp %}}
 
-<dl class="resources-properties">
-  
-    <dt
+<dl class="resources-properties"><dt
         class="property-required" title="Required">
         <span>name</span>
         <span class="property-indicator"></span>
@@ -289,9 +289,7 @@ const realmEvents = new keycloak.RealmEvents("realmEvents", {
     </dt>
     <dd>
       The unique name of the resource.
-    </dd>
-  
-    <dt
+    </dd><dt
         class="property-required" title="Required">
         <span>args</span>
         <span class="property-indicator"></span>
@@ -299,9 +297,7 @@ const realmEvents = new keycloak.RealmEvents("realmEvents", {
     </dt>
     <dd>
       The arguments to resource properties.
-    </dd>
-  
-    <dt
+    </dd><dt
         class="property-optional" title="Optional">
         <span>opts</span>
         <span class="property-indicator"></span>
@@ -309,10 +305,7 @@ const realmEvents = new keycloak.RealmEvents("realmEvents", {
     </dt>
     <dd>
       Bag of options to control resource&#39;s behavior.
-    </dd>
-  
-
-</dl>
+    </dd></dl>
 
 {{% /choosable %}}
 
@@ -327,9 +320,7 @@ The RealmEvents resource accepts the following [input]({{< relref "/docs/intro/c
 
 
 {{% choosable language csharp %}}
-<dl class="resources-properties">
-
-    <dt class="property-required"
+<dl class="resources-properties"><dt class="property-required"
             title="Required">
         <span id="realmid_csharp">
 <a href="#realmid_csharp" style="color: inherit; text-decoration: inherit;">Realm<wbr>Id</a>
@@ -338,8 +329,7 @@ The RealmEvents resource accepts the following [input]({{< relref "/docs/intro/c
         <span class="property-type">string</span>
     </dt>
     <dd>{{% md %}}The name of the realm the event settings apply to.
-{{% /md %}}</dd>
-    <dt class="property-optional"
+{{% /md %}}</dd><dt class="property-optional"
             title="Optional">
         <span id="admineventsdetailsenabled_csharp">
 <a href="#admineventsdetailsenabled_csharp" style="color: inherit; text-decoration: inherit;">Admin<wbr>Events<wbr>Details<wbr>Enabled</a>
@@ -348,8 +338,7 @@ The RealmEvents resource accepts the following [input]({{< relref "/docs/intro/c
         <span class="property-type">bool</span>
     </dt>
     <dd>{{% md %}}When `true`, saved admin events will included detailed information for create/update requests. Defaults to `false`.
-{{% /md %}}</dd>
-    <dt class="property-optional"
+{{% /md %}}</dd><dt class="property-optional"
             title="Optional">
         <span id="admineventsenabled_csharp">
 <a href="#admineventsenabled_csharp" style="color: inherit; text-decoration: inherit;">Admin<wbr>Events<wbr>Enabled</a>
@@ -358,8 +347,7 @@ The RealmEvents resource accepts the following [input]({{< relref "/docs/intro/c
         <span class="property-type">bool</span>
     </dt>
     <dd>{{% md %}}When `true`, admin events are saved to the database, making them available through the admin console. Defaults to `false`.
-{{% /md %}}</dd>
-    <dt class="property-optional"
+{{% /md %}}</dd><dt class="property-optional"
             title="Optional">
         <span id="enabledeventtypes_csharp">
 <a href="#enabledeventtypes_csharp" style="color: inherit; text-decoration: inherit;">Enabled<wbr>Event<wbr>Types</a>
@@ -368,8 +356,7 @@ The RealmEvents resource accepts the following [input]({{< relref "/docs/intro/c
         <span class="property-type">List&lt;string&gt;</span>
     </dt>
     <dd>{{% md %}}The event types that will be saved to the database. Omitting this field enables all event types. Defaults to `[]` or all event types.
-{{% /md %}}</dd>
-    <dt class="property-optional"
+{{% /md %}}</dd><dt class="property-optional"
             title="Optional">
         <span id="eventsenabled_csharp">
 <a href="#eventsenabled_csharp" style="color: inherit; text-decoration: inherit;">Events<wbr>Enabled</a>
@@ -378,8 +365,7 @@ The RealmEvents resource accepts the following [input]({{< relref "/docs/intro/c
         <span class="property-type">bool</span>
     </dt>
     <dd>{{% md %}}When `true`, events from `enabled_event_types` are saved to the database, making them available through the admin console. Defaults to `false`.
-{{% /md %}}</dd>
-    <dt class="property-optional"
+{{% /md %}}</dd><dt class="property-optional"
             title="Optional">
         <span id="eventsexpiration_csharp">
 <a href="#eventsexpiration_csharp" style="color: inherit; text-decoration: inherit;">Events<wbr>Expiration</a>
@@ -388,8 +374,7 @@ The RealmEvents resource accepts the following [input]({{< relref "/docs/intro/c
         <span class="property-type">int</span>
     </dt>
     <dd>{{% md %}}The amount of time in seconds events will be saved in the database. Defaults to `0` or never.
-{{% /md %}}</dd>
-    <dt class="property-optional"
+{{% /md %}}</dd><dt class="property-optional"
             title="Optional">
         <span id="eventslisteners_csharp">
 <a href="#eventslisteners_csharp" style="color: inherit; text-decoration: inherit;">Events<wbr>Listeners</a>
@@ -398,14 +383,11 @@ The RealmEvents resource accepts the following [input]({{< relref "/docs/intro/c
         <span class="property-type">List&lt;string&gt;</span>
     </dt>
     <dd>{{% md %}}The event listeners that events should be sent to. Defaults to `[]` or none. Note that new realms enable the `jboss-logging` listener by default, and this resource will remove that unless it is specified.
-{{% /md %}}</dd>
-</dl>
+{{% /md %}}</dd></dl>
 {{% /choosable %}}
 
 {{% choosable language go %}}
-<dl class="resources-properties">
-
-    <dt class="property-required"
+<dl class="resources-properties"><dt class="property-required"
             title="Required">
         <span id="realmid_go">
 <a href="#realmid_go" style="color: inherit; text-decoration: inherit;">Realm<wbr>Id</a>
@@ -414,8 +396,7 @@ The RealmEvents resource accepts the following [input]({{< relref "/docs/intro/c
         <span class="property-type">string</span>
     </dt>
     <dd>{{% md %}}The name of the realm the event settings apply to.
-{{% /md %}}</dd>
-    <dt class="property-optional"
+{{% /md %}}</dd><dt class="property-optional"
             title="Optional">
         <span id="admineventsdetailsenabled_go">
 <a href="#admineventsdetailsenabled_go" style="color: inherit; text-decoration: inherit;">Admin<wbr>Events<wbr>Details<wbr>Enabled</a>
@@ -424,8 +405,7 @@ The RealmEvents resource accepts the following [input]({{< relref "/docs/intro/c
         <span class="property-type">bool</span>
     </dt>
     <dd>{{% md %}}When `true`, saved admin events will included detailed information for create/update requests. Defaults to `false`.
-{{% /md %}}</dd>
-    <dt class="property-optional"
+{{% /md %}}</dd><dt class="property-optional"
             title="Optional">
         <span id="admineventsenabled_go">
 <a href="#admineventsenabled_go" style="color: inherit; text-decoration: inherit;">Admin<wbr>Events<wbr>Enabled</a>
@@ -434,8 +414,7 @@ The RealmEvents resource accepts the following [input]({{< relref "/docs/intro/c
         <span class="property-type">bool</span>
     </dt>
     <dd>{{% md %}}When `true`, admin events are saved to the database, making them available through the admin console. Defaults to `false`.
-{{% /md %}}</dd>
-    <dt class="property-optional"
+{{% /md %}}</dd><dt class="property-optional"
             title="Optional">
         <span id="enabledeventtypes_go">
 <a href="#enabledeventtypes_go" style="color: inherit; text-decoration: inherit;">Enabled<wbr>Event<wbr>Types</a>
@@ -444,8 +423,7 @@ The RealmEvents resource accepts the following [input]({{< relref "/docs/intro/c
         <span class="property-type">[]string</span>
     </dt>
     <dd>{{% md %}}The event types that will be saved to the database. Omitting this field enables all event types. Defaults to `[]` or all event types.
-{{% /md %}}</dd>
-    <dt class="property-optional"
+{{% /md %}}</dd><dt class="property-optional"
             title="Optional">
         <span id="eventsenabled_go">
 <a href="#eventsenabled_go" style="color: inherit; text-decoration: inherit;">Events<wbr>Enabled</a>
@@ -454,8 +432,7 @@ The RealmEvents resource accepts the following [input]({{< relref "/docs/intro/c
         <span class="property-type">bool</span>
     </dt>
     <dd>{{% md %}}When `true`, events from `enabled_event_types` are saved to the database, making them available through the admin console. Defaults to `false`.
-{{% /md %}}</dd>
-    <dt class="property-optional"
+{{% /md %}}</dd><dt class="property-optional"
             title="Optional">
         <span id="eventsexpiration_go">
 <a href="#eventsexpiration_go" style="color: inherit; text-decoration: inherit;">Events<wbr>Expiration</a>
@@ -464,8 +441,7 @@ The RealmEvents resource accepts the following [input]({{< relref "/docs/intro/c
         <span class="property-type">int</span>
     </dt>
     <dd>{{% md %}}The amount of time in seconds events will be saved in the database. Defaults to `0` or never.
-{{% /md %}}</dd>
-    <dt class="property-optional"
+{{% /md %}}</dd><dt class="property-optional"
             title="Optional">
         <span id="eventslisteners_go">
 <a href="#eventslisteners_go" style="color: inherit; text-decoration: inherit;">Events<wbr>Listeners</a>
@@ -474,14 +450,11 @@ The RealmEvents resource accepts the following [input]({{< relref "/docs/intro/c
         <span class="property-type">[]string</span>
     </dt>
     <dd>{{% md %}}The event listeners that events should be sent to. Defaults to `[]` or none. Note that new realms enable the `jboss-logging` listener by default, and this resource will remove that unless it is specified.
-{{% /md %}}</dd>
-</dl>
+{{% /md %}}</dd></dl>
 {{% /choosable %}}
 
 {{% choosable language nodejs %}}
-<dl class="resources-properties">
-
-    <dt class="property-required"
+<dl class="resources-properties"><dt class="property-required"
             title="Required">
         <span id="realmid_nodejs">
 <a href="#realmid_nodejs" style="color: inherit; text-decoration: inherit;">realm<wbr>Id</a>
@@ -490,8 +463,7 @@ The RealmEvents resource accepts the following [input]({{< relref "/docs/intro/c
         <span class="property-type">string</span>
     </dt>
     <dd>{{% md %}}The name of the realm the event settings apply to.
-{{% /md %}}</dd>
-    <dt class="property-optional"
+{{% /md %}}</dd><dt class="property-optional"
             title="Optional">
         <span id="admineventsdetailsenabled_nodejs">
 <a href="#admineventsdetailsenabled_nodejs" style="color: inherit; text-decoration: inherit;">admin<wbr>Events<wbr>Details<wbr>Enabled</a>
@@ -500,8 +472,7 @@ The RealmEvents resource accepts the following [input]({{< relref "/docs/intro/c
         <span class="property-type">boolean</span>
     </dt>
     <dd>{{% md %}}When `true`, saved admin events will included detailed information for create/update requests. Defaults to `false`.
-{{% /md %}}</dd>
-    <dt class="property-optional"
+{{% /md %}}</dd><dt class="property-optional"
             title="Optional">
         <span id="admineventsenabled_nodejs">
 <a href="#admineventsenabled_nodejs" style="color: inherit; text-decoration: inherit;">admin<wbr>Events<wbr>Enabled</a>
@@ -510,8 +481,7 @@ The RealmEvents resource accepts the following [input]({{< relref "/docs/intro/c
         <span class="property-type">boolean</span>
     </dt>
     <dd>{{% md %}}When `true`, admin events are saved to the database, making them available through the admin console. Defaults to `false`.
-{{% /md %}}</dd>
-    <dt class="property-optional"
+{{% /md %}}</dd><dt class="property-optional"
             title="Optional">
         <span id="enabledeventtypes_nodejs">
 <a href="#enabledeventtypes_nodejs" style="color: inherit; text-decoration: inherit;">enabled<wbr>Event<wbr>Types</a>
@@ -520,8 +490,7 @@ The RealmEvents resource accepts the following [input]({{< relref "/docs/intro/c
         <span class="property-type">string[]</span>
     </dt>
     <dd>{{% md %}}The event types that will be saved to the database. Omitting this field enables all event types. Defaults to `[]` or all event types.
-{{% /md %}}</dd>
-    <dt class="property-optional"
+{{% /md %}}</dd><dt class="property-optional"
             title="Optional">
         <span id="eventsenabled_nodejs">
 <a href="#eventsenabled_nodejs" style="color: inherit; text-decoration: inherit;">events<wbr>Enabled</a>
@@ -530,8 +499,7 @@ The RealmEvents resource accepts the following [input]({{< relref "/docs/intro/c
         <span class="property-type">boolean</span>
     </dt>
     <dd>{{% md %}}When `true`, events from `enabled_event_types` are saved to the database, making them available through the admin console. Defaults to `false`.
-{{% /md %}}</dd>
-    <dt class="property-optional"
+{{% /md %}}</dd><dt class="property-optional"
             title="Optional">
         <span id="eventsexpiration_nodejs">
 <a href="#eventsexpiration_nodejs" style="color: inherit; text-decoration: inherit;">events<wbr>Expiration</a>
@@ -540,8 +508,7 @@ The RealmEvents resource accepts the following [input]({{< relref "/docs/intro/c
         <span class="property-type">number</span>
     </dt>
     <dd>{{% md %}}The amount of time in seconds events will be saved in the database. Defaults to `0` or never.
-{{% /md %}}</dd>
-    <dt class="property-optional"
+{{% /md %}}</dd><dt class="property-optional"
             title="Optional">
         <span id="eventslisteners_nodejs">
 <a href="#eventslisteners_nodejs" style="color: inherit; text-decoration: inherit;">events<wbr>Listeners</a>
@@ -550,14 +517,11 @@ The RealmEvents resource accepts the following [input]({{< relref "/docs/intro/c
         <span class="property-type">string[]</span>
     </dt>
     <dd>{{% md %}}The event listeners that events should be sent to. Defaults to `[]` or none. Note that new realms enable the `jboss-logging` listener by default, and this resource will remove that unless it is specified.
-{{% /md %}}</dd>
-</dl>
+{{% /md %}}</dd></dl>
 {{% /choosable %}}
 
 {{% choosable language python %}}
-<dl class="resources-properties">
-
-    <dt class="property-required"
+<dl class="resources-properties"><dt class="property-required"
             title="Required">
         <span id="realm_id_python">
 <a href="#realm_id_python" style="color: inherit; text-decoration: inherit;">realm_<wbr>id</a>
@@ -566,8 +530,7 @@ The RealmEvents resource accepts the following [input]({{< relref "/docs/intro/c
         <span class="property-type">str</span>
     </dt>
     <dd>{{% md %}}The name of the realm the event settings apply to.
-{{% /md %}}</dd>
-    <dt class="property-optional"
+{{% /md %}}</dd><dt class="property-optional"
             title="Optional">
         <span id="admin_events_details_enabled_python">
 <a href="#admin_events_details_enabled_python" style="color: inherit; text-decoration: inherit;">admin_<wbr>events_<wbr>details_<wbr>enabled</a>
@@ -576,8 +539,7 @@ The RealmEvents resource accepts the following [input]({{< relref "/docs/intro/c
         <span class="property-type">bool</span>
     </dt>
     <dd>{{% md %}}When `true`, saved admin events will included detailed information for create/update requests. Defaults to `false`.
-{{% /md %}}</dd>
-    <dt class="property-optional"
+{{% /md %}}</dd><dt class="property-optional"
             title="Optional">
         <span id="admin_events_enabled_python">
 <a href="#admin_events_enabled_python" style="color: inherit; text-decoration: inherit;">admin_<wbr>events_<wbr>enabled</a>
@@ -586,8 +548,7 @@ The RealmEvents resource accepts the following [input]({{< relref "/docs/intro/c
         <span class="property-type">bool</span>
     </dt>
     <dd>{{% md %}}When `true`, admin events are saved to the database, making them available through the admin console. Defaults to `false`.
-{{% /md %}}</dd>
-    <dt class="property-optional"
+{{% /md %}}</dd><dt class="property-optional"
             title="Optional">
         <span id="enabled_event_types_python">
 <a href="#enabled_event_types_python" style="color: inherit; text-decoration: inherit;">enabled_<wbr>event_<wbr>types</a>
@@ -596,8 +557,7 @@ The RealmEvents resource accepts the following [input]({{< relref "/docs/intro/c
         <span class="property-type">Sequence[str]</span>
     </dt>
     <dd>{{% md %}}The event types that will be saved to the database. Omitting this field enables all event types. Defaults to `[]` or all event types.
-{{% /md %}}</dd>
-    <dt class="property-optional"
+{{% /md %}}</dd><dt class="property-optional"
             title="Optional">
         <span id="events_enabled_python">
 <a href="#events_enabled_python" style="color: inherit; text-decoration: inherit;">events_<wbr>enabled</a>
@@ -606,8 +566,7 @@ The RealmEvents resource accepts the following [input]({{< relref "/docs/intro/c
         <span class="property-type">bool</span>
     </dt>
     <dd>{{% md %}}When `true`, events from `enabled_event_types` are saved to the database, making them available through the admin console. Defaults to `false`.
-{{% /md %}}</dd>
-    <dt class="property-optional"
+{{% /md %}}</dd><dt class="property-optional"
             title="Optional">
         <span id="events_expiration_python">
 <a href="#events_expiration_python" style="color: inherit; text-decoration: inherit;">events_<wbr>expiration</a>
@@ -616,8 +575,7 @@ The RealmEvents resource accepts the following [input]({{< relref "/docs/intro/c
         <span class="property-type">int</span>
     </dt>
     <dd>{{% md %}}The amount of time in seconds events will be saved in the database. Defaults to `0` or never.
-{{% /md %}}</dd>
-    <dt class="property-optional"
+{{% /md %}}</dd><dt class="property-optional"
             title="Optional">
         <span id="events_listeners_python">
 <a href="#events_listeners_python" style="color: inherit; text-decoration: inherit;">events_<wbr>listeners</a>
@@ -626,8 +584,7 @@ The RealmEvents resource accepts the following [input]({{< relref "/docs/intro/c
         <span class="property-type">Sequence[str]</span>
     </dt>
     <dd>{{% md %}}The event listeners that events should be sent to. Defaults to `[]` or none. Note that new realms enable the `jboss-logging` listener by default, and this resource will remove that unless it is specified.
-{{% /md %}}</dd>
-</dl>
+{{% /md %}}</dd></dl>
 {{% /choosable %}}
 
 
@@ -638,9 +595,7 @@ All [input](#inputs) properties are implicitly available as output properties. A
 
 
 {{% choosable language csharp %}}
-<dl class="resources-properties">
-
-    <dt class="property-"
+<dl class="resources-properties"><dt class="property-"
             title="">
         <span id="id_csharp">
 <a href="#id_csharp" style="color: inherit; text-decoration: inherit;">Id</a>
@@ -648,14 +603,11 @@ All [input](#inputs) properties are implicitly available as output properties. A
         <span class="property-indicator"></span>
         <span class="property-type">string</span>
     </dt>
-    <dd>{{% md %}}The provider-assigned unique ID for this managed resource.{{% /md %}}</dd>
-</dl>
+    <dd>{{% md %}}The provider-assigned unique ID for this managed resource.{{% /md %}}</dd></dl>
 {{% /choosable %}}
 
 {{% choosable language go %}}
-<dl class="resources-properties">
-
-    <dt class="property-"
+<dl class="resources-properties"><dt class="property-"
             title="">
         <span id="id_go">
 <a href="#id_go" style="color: inherit; text-decoration: inherit;">Id</a>
@@ -663,14 +615,11 @@ All [input](#inputs) properties are implicitly available as output properties. A
         <span class="property-indicator"></span>
         <span class="property-type">string</span>
     </dt>
-    <dd>{{% md %}}The provider-assigned unique ID for this managed resource.{{% /md %}}</dd>
-</dl>
+    <dd>{{% md %}}The provider-assigned unique ID for this managed resource.{{% /md %}}</dd></dl>
 {{% /choosable %}}
 
 {{% choosable language nodejs %}}
-<dl class="resources-properties">
-
-    <dt class="property-"
+<dl class="resources-properties"><dt class="property-"
             title="">
         <span id="id_nodejs">
 <a href="#id_nodejs" style="color: inherit; text-decoration: inherit;">id</a>
@@ -678,14 +627,11 @@ All [input](#inputs) properties are implicitly available as output properties. A
         <span class="property-indicator"></span>
         <span class="property-type">string</span>
     </dt>
-    <dd>{{% md %}}The provider-assigned unique ID for this managed resource.{{% /md %}}</dd>
-</dl>
+    <dd>{{% md %}}The provider-assigned unique ID for this managed resource.{{% /md %}}</dd></dl>
 {{% /choosable %}}
 
 {{% choosable language python %}}
-<dl class="resources-properties">
-
-    <dt class="property-"
+<dl class="resources-properties"><dt class="property-"
             title="">
         <span id="id_python">
 <a href="#id_python" style="color: inherit; text-decoration: inherit;">id</a>
@@ -693,8 +639,7 @@ All [input](#inputs) properties are implicitly available as output properties. A
         <span class="property-indicator"></span>
         <span class="property-type">str</span>
     </dt>
-    <dd>{{% md %}}The provider-assigned unique ID for this managed resource.{{% /md %}}</dd>
-</dl>
+    <dd>{{% md %}}The provider-assigned unique ID for this managed resource.{{% /md %}}</dd></dl>
 {{% /choosable %}}
 
 
@@ -821,9 +766,7 @@ The following state arguments are supported:
 
 
 {{% choosable language csharp %}}
-<dl class="resources-properties">
-
-    <dt class="property-optional"
+<dl class="resources-properties"><dt class="property-optional"
             title="Optional">
         <span id="state_admineventsdetailsenabled_csharp">
 <a href="#state_admineventsdetailsenabled_csharp" style="color: inherit; text-decoration: inherit;">Admin<wbr>Events<wbr>Details<wbr>Enabled</a>
@@ -832,8 +775,7 @@ The following state arguments are supported:
         <span class="property-type">bool</span>
     </dt>
     <dd>{{% md %}}When `true`, saved admin events will included detailed information for create/update requests. Defaults to `false`.
-{{% /md %}}</dd>
-    <dt class="property-optional"
+{{% /md %}}</dd><dt class="property-optional"
             title="Optional">
         <span id="state_admineventsenabled_csharp">
 <a href="#state_admineventsenabled_csharp" style="color: inherit; text-decoration: inherit;">Admin<wbr>Events<wbr>Enabled</a>
@@ -842,8 +784,7 @@ The following state arguments are supported:
         <span class="property-type">bool</span>
     </dt>
     <dd>{{% md %}}When `true`, admin events are saved to the database, making them available through the admin console. Defaults to `false`.
-{{% /md %}}</dd>
-    <dt class="property-optional"
+{{% /md %}}</dd><dt class="property-optional"
             title="Optional">
         <span id="state_enabledeventtypes_csharp">
 <a href="#state_enabledeventtypes_csharp" style="color: inherit; text-decoration: inherit;">Enabled<wbr>Event<wbr>Types</a>
@@ -852,8 +793,7 @@ The following state arguments are supported:
         <span class="property-type">List&lt;string&gt;</span>
     </dt>
     <dd>{{% md %}}The event types that will be saved to the database. Omitting this field enables all event types. Defaults to `[]` or all event types.
-{{% /md %}}</dd>
-    <dt class="property-optional"
+{{% /md %}}</dd><dt class="property-optional"
             title="Optional">
         <span id="state_eventsenabled_csharp">
 <a href="#state_eventsenabled_csharp" style="color: inherit; text-decoration: inherit;">Events<wbr>Enabled</a>
@@ -862,8 +802,7 @@ The following state arguments are supported:
         <span class="property-type">bool</span>
     </dt>
     <dd>{{% md %}}When `true`, events from `enabled_event_types` are saved to the database, making them available through the admin console. Defaults to `false`.
-{{% /md %}}</dd>
-    <dt class="property-optional"
+{{% /md %}}</dd><dt class="property-optional"
             title="Optional">
         <span id="state_eventsexpiration_csharp">
 <a href="#state_eventsexpiration_csharp" style="color: inherit; text-decoration: inherit;">Events<wbr>Expiration</a>
@@ -872,8 +811,7 @@ The following state arguments are supported:
         <span class="property-type">int</span>
     </dt>
     <dd>{{% md %}}The amount of time in seconds events will be saved in the database. Defaults to `0` or never.
-{{% /md %}}</dd>
-    <dt class="property-optional"
+{{% /md %}}</dd><dt class="property-optional"
             title="Optional">
         <span id="state_eventslisteners_csharp">
 <a href="#state_eventslisteners_csharp" style="color: inherit; text-decoration: inherit;">Events<wbr>Listeners</a>
@@ -882,8 +820,7 @@ The following state arguments are supported:
         <span class="property-type">List&lt;string&gt;</span>
     </dt>
     <dd>{{% md %}}The event listeners that events should be sent to. Defaults to `[]` or none. Note that new realms enable the `jboss-logging` listener by default, and this resource will remove that unless it is specified.
-{{% /md %}}</dd>
-    <dt class="property-optional"
+{{% /md %}}</dd><dt class="property-optional"
             title="Optional">
         <span id="state_realmid_csharp">
 <a href="#state_realmid_csharp" style="color: inherit; text-decoration: inherit;">Realm<wbr>Id</a>
@@ -892,14 +829,11 @@ The following state arguments are supported:
         <span class="property-type">string</span>
     </dt>
     <dd>{{% md %}}The name of the realm the event settings apply to.
-{{% /md %}}</dd>
-</dl>
+{{% /md %}}</dd></dl>
 {{% /choosable %}}
 
 {{% choosable language go %}}
-<dl class="resources-properties">
-
-    <dt class="property-optional"
+<dl class="resources-properties"><dt class="property-optional"
             title="Optional">
         <span id="state_admineventsdetailsenabled_go">
 <a href="#state_admineventsdetailsenabled_go" style="color: inherit; text-decoration: inherit;">Admin<wbr>Events<wbr>Details<wbr>Enabled</a>
@@ -908,8 +842,7 @@ The following state arguments are supported:
         <span class="property-type">bool</span>
     </dt>
     <dd>{{% md %}}When `true`, saved admin events will included detailed information for create/update requests. Defaults to `false`.
-{{% /md %}}</dd>
-    <dt class="property-optional"
+{{% /md %}}</dd><dt class="property-optional"
             title="Optional">
         <span id="state_admineventsenabled_go">
 <a href="#state_admineventsenabled_go" style="color: inherit; text-decoration: inherit;">Admin<wbr>Events<wbr>Enabled</a>
@@ -918,8 +851,7 @@ The following state arguments are supported:
         <span class="property-type">bool</span>
     </dt>
     <dd>{{% md %}}When `true`, admin events are saved to the database, making them available through the admin console. Defaults to `false`.
-{{% /md %}}</dd>
-    <dt class="property-optional"
+{{% /md %}}</dd><dt class="property-optional"
             title="Optional">
         <span id="state_enabledeventtypes_go">
 <a href="#state_enabledeventtypes_go" style="color: inherit; text-decoration: inherit;">Enabled<wbr>Event<wbr>Types</a>
@@ -928,8 +860,7 @@ The following state arguments are supported:
         <span class="property-type">[]string</span>
     </dt>
     <dd>{{% md %}}The event types that will be saved to the database. Omitting this field enables all event types. Defaults to `[]` or all event types.
-{{% /md %}}</dd>
-    <dt class="property-optional"
+{{% /md %}}</dd><dt class="property-optional"
             title="Optional">
         <span id="state_eventsenabled_go">
 <a href="#state_eventsenabled_go" style="color: inherit; text-decoration: inherit;">Events<wbr>Enabled</a>
@@ -938,8 +869,7 @@ The following state arguments are supported:
         <span class="property-type">bool</span>
     </dt>
     <dd>{{% md %}}When `true`, events from `enabled_event_types` are saved to the database, making them available through the admin console. Defaults to `false`.
-{{% /md %}}</dd>
-    <dt class="property-optional"
+{{% /md %}}</dd><dt class="property-optional"
             title="Optional">
         <span id="state_eventsexpiration_go">
 <a href="#state_eventsexpiration_go" style="color: inherit; text-decoration: inherit;">Events<wbr>Expiration</a>
@@ -948,8 +878,7 @@ The following state arguments are supported:
         <span class="property-type">int</span>
     </dt>
     <dd>{{% md %}}The amount of time in seconds events will be saved in the database. Defaults to `0` or never.
-{{% /md %}}</dd>
-    <dt class="property-optional"
+{{% /md %}}</dd><dt class="property-optional"
             title="Optional">
         <span id="state_eventslisteners_go">
 <a href="#state_eventslisteners_go" style="color: inherit; text-decoration: inherit;">Events<wbr>Listeners</a>
@@ -958,8 +887,7 @@ The following state arguments are supported:
         <span class="property-type">[]string</span>
     </dt>
     <dd>{{% md %}}The event listeners that events should be sent to. Defaults to `[]` or none. Note that new realms enable the `jboss-logging` listener by default, and this resource will remove that unless it is specified.
-{{% /md %}}</dd>
-    <dt class="property-optional"
+{{% /md %}}</dd><dt class="property-optional"
             title="Optional">
         <span id="state_realmid_go">
 <a href="#state_realmid_go" style="color: inherit; text-decoration: inherit;">Realm<wbr>Id</a>
@@ -968,14 +896,11 @@ The following state arguments are supported:
         <span class="property-type">string</span>
     </dt>
     <dd>{{% md %}}The name of the realm the event settings apply to.
-{{% /md %}}</dd>
-</dl>
+{{% /md %}}</dd></dl>
 {{% /choosable %}}
 
 {{% choosable language nodejs %}}
-<dl class="resources-properties">
-
-    <dt class="property-optional"
+<dl class="resources-properties"><dt class="property-optional"
             title="Optional">
         <span id="state_admineventsdetailsenabled_nodejs">
 <a href="#state_admineventsdetailsenabled_nodejs" style="color: inherit; text-decoration: inherit;">admin<wbr>Events<wbr>Details<wbr>Enabled</a>
@@ -984,8 +909,7 @@ The following state arguments are supported:
         <span class="property-type">boolean</span>
     </dt>
     <dd>{{% md %}}When `true`, saved admin events will included detailed information for create/update requests. Defaults to `false`.
-{{% /md %}}</dd>
-    <dt class="property-optional"
+{{% /md %}}</dd><dt class="property-optional"
             title="Optional">
         <span id="state_admineventsenabled_nodejs">
 <a href="#state_admineventsenabled_nodejs" style="color: inherit; text-decoration: inherit;">admin<wbr>Events<wbr>Enabled</a>
@@ -994,8 +918,7 @@ The following state arguments are supported:
         <span class="property-type">boolean</span>
     </dt>
     <dd>{{% md %}}When `true`, admin events are saved to the database, making them available through the admin console. Defaults to `false`.
-{{% /md %}}</dd>
-    <dt class="property-optional"
+{{% /md %}}</dd><dt class="property-optional"
             title="Optional">
         <span id="state_enabledeventtypes_nodejs">
 <a href="#state_enabledeventtypes_nodejs" style="color: inherit; text-decoration: inherit;">enabled<wbr>Event<wbr>Types</a>
@@ -1004,8 +927,7 @@ The following state arguments are supported:
         <span class="property-type">string[]</span>
     </dt>
     <dd>{{% md %}}The event types that will be saved to the database. Omitting this field enables all event types. Defaults to `[]` or all event types.
-{{% /md %}}</dd>
-    <dt class="property-optional"
+{{% /md %}}</dd><dt class="property-optional"
             title="Optional">
         <span id="state_eventsenabled_nodejs">
 <a href="#state_eventsenabled_nodejs" style="color: inherit; text-decoration: inherit;">events<wbr>Enabled</a>
@@ -1014,8 +936,7 @@ The following state arguments are supported:
         <span class="property-type">boolean</span>
     </dt>
     <dd>{{% md %}}When `true`, events from `enabled_event_types` are saved to the database, making them available through the admin console. Defaults to `false`.
-{{% /md %}}</dd>
-    <dt class="property-optional"
+{{% /md %}}</dd><dt class="property-optional"
             title="Optional">
         <span id="state_eventsexpiration_nodejs">
 <a href="#state_eventsexpiration_nodejs" style="color: inherit; text-decoration: inherit;">events<wbr>Expiration</a>
@@ -1024,8 +945,7 @@ The following state arguments are supported:
         <span class="property-type">number</span>
     </dt>
     <dd>{{% md %}}The amount of time in seconds events will be saved in the database. Defaults to `0` or never.
-{{% /md %}}</dd>
-    <dt class="property-optional"
+{{% /md %}}</dd><dt class="property-optional"
             title="Optional">
         <span id="state_eventslisteners_nodejs">
 <a href="#state_eventslisteners_nodejs" style="color: inherit; text-decoration: inherit;">events<wbr>Listeners</a>
@@ -1034,8 +954,7 @@ The following state arguments are supported:
         <span class="property-type">string[]</span>
     </dt>
     <dd>{{% md %}}The event listeners that events should be sent to. Defaults to `[]` or none. Note that new realms enable the `jboss-logging` listener by default, and this resource will remove that unless it is specified.
-{{% /md %}}</dd>
-    <dt class="property-optional"
+{{% /md %}}</dd><dt class="property-optional"
             title="Optional">
         <span id="state_realmid_nodejs">
 <a href="#state_realmid_nodejs" style="color: inherit; text-decoration: inherit;">realm<wbr>Id</a>
@@ -1044,14 +963,11 @@ The following state arguments are supported:
         <span class="property-type">string</span>
     </dt>
     <dd>{{% md %}}The name of the realm the event settings apply to.
-{{% /md %}}</dd>
-</dl>
+{{% /md %}}</dd></dl>
 {{% /choosable %}}
 
 {{% choosable language python %}}
-<dl class="resources-properties">
-
-    <dt class="property-optional"
+<dl class="resources-properties"><dt class="property-optional"
             title="Optional">
         <span id="state_admin_events_details_enabled_python">
 <a href="#state_admin_events_details_enabled_python" style="color: inherit; text-decoration: inherit;">admin_<wbr>events_<wbr>details_<wbr>enabled</a>
@@ -1060,8 +976,7 @@ The following state arguments are supported:
         <span class="property-type">bool</span>
     </dt>
     <dd>{{% md %}}When `true`, saved admin events will included detailed information for create/update requests. Defaults to `false`.
-{{% /md %}}</dd>
-    <dt class="property-optional"
+{{% /md %}}</dd><dt class="property-optional"
             title="Optional">
         <span id="state_admin_events_enabled_python">
 <a href="#state_admin_events_enabled_python" style="color: inherit; text-decoration: inherit;">admin_<wbr>events_<wbr>enabled</a>
@@ -1070,8 +985,7 @@ The following state arguments are supported:
         <span class="property-type">bool</span>
     </dt>
     <dd>{{% md %}}When `true`, admin events are saved to the database, making them available through the admin console. Defaults to `false`.
-{{% /md %}}</dd>
-    <dt class="property-optional"
+{{% /md %}}</dd><dt class="property-optional"
             title="Optional">
         <span id="state_enabled_event_types_python">
 <a href="#state_enabled_event_types_python" style="color: inherit; text-decoration: inherit;">enabled_<wbr>event_<wbr>types</a>
@@ -1080,8 +994,7 @@ The following state arguments are supported:
         <span class="property-type">Sequence[str]</span>
     </dt>
     <dd>{{% md %}}The event types that will be saved to the database. Omitting this field enables all event types. Defaults to `[]` or all event types.
-{{% /md %}}</dd>
-    <dt class="property-optional"
+{{% /md %}}</dd><dt class="property-optional"
             title="Optional">
         <span id="state_events_enabled_python">
 <a href="#state_events_enabled_python" style="color: inherit; text-decoration: inherit;">events_<wbr>enabled</a>
@@ -1090,8 +1003,7 @@ The following state arguments are supported:
         <span class="property-type">bool</span>
     </dt>
     <dd>{{% md %}}When `true`, events from `enabled_event_types` are saved to the database, making them available through the admin console. Defaults to `false`.
-{{% /md %}}</dd>
-    <dt class="property-optional"
+{{% /md %}}</dd><dt class="property-optional"
             title="Optional">
         <span id="state_events_expiration_python">
 <a href="#state_events_expiration_python" style="color: inherit; text-decoration: inherit;">events_<wbr>expiration</a>
@@ -1100,8 +1012,7 @@ The following state arguments are supported:
         <span class="property-type">int</span>
     </dt>
     <dd>{{% md %}}The amount of time in seconds events will be saved in the database. Defaults to `0` or never.
-{{% /md %}}</dd>
-    <dt class="property-optional"
+{{% /md %}}</dd><dt class="property-optional"
             title="Optional">
         <span id="state_events_listeners_python">
 <a href="#state_events_listeners_python" style="color: inherit; text-decoration: inherit;">events_<wbr>listeners</a>
@@ -1110,8 +1021,7 @@ The following state arguments are supported:
         <span class="property-type">Sequence[str]</span>
     </dt>
     <dd>{{% md %}}The event listeners that events should be sent to. Defaults to `[]` or none. Note that new realms enable the `jboss-logging` listener by default, and this resource will remove that unless it is specified.
-{{% /md %}}</dd>
-    <dt class="property-optional"
+{{% /md %}}</dd><dt class="property-optional"
             title="Optional">
         <span id="state_realm_id_python">
 <a href="#state_realm_id_python" style="color: inherit; text-decoration: inherit;">realm_<wbr>id</a>
@@ -1120,8 +1030,7 @@ The following state arguments are supported:
         <span class="property-type">str</span>
     </dt>
     <dd>{{% md %}}The name of the realm the event settings apply to.
-{{% /md %}}</dd>
-</dl>
+{{% /md %}}</dd></dl>
 {{% /choosable %}}
 
 
@@ -1143,6 +1052,6 @@ This resource currently does not support importing.
 	<dt>License</dt>
 	<dd>Apache-2.0</dd>
 	<dt>Notes</dt>
-	<dd>This Pulumi package is based on the [`keycloak` Terraform Provider](https://github.com/mrparkers/terraform-provider-keycloak).</dd>
+	<dd>{{% md %}}This Pulumi package is based on the [`keycloak` Terraform Provider](https://github.com/mrparkers/terraform-provider-keycloak).{{% /md %}}</dd>
 </dl>
 

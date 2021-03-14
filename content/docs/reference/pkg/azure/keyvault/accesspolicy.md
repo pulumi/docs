@@ -17,11 +17,17 @@ Manages a Key Vault Access Policy.
 > **NOTE:** Azure permits a maximum of 1024 Access Policies per Key Vault - [more information can be found in this document](https://docs.microsoft.com/en-us/azure/key-vault/key-vault-secure-your-key-vault#data-plane-access-control).
 
 {{% examples %}}
+
 ## Example Usage
 
 {{< chooser language "typescript,python,go,csharp" / >}}
 
-{{% example csharp %}}
+
+
+
+
+{{< example csharp >}}
+
 ```csharp
 using Pulumi;
 using Azure = Pulumi.Azure;
@@ -61,9 +67,12 @@ class MyStack : Stack
 }
 ```
 
-{{% /example %}}
 
-{{% example go %}}
+{{< /example >}}
+
+
+{{< example go >}}
+
 ```go
 package main
 
@@ -113,9 +122,12 @@ func main() {
 }
 ```
 
-{{% /example %}}
 
-{{% example python %}}
+{{< /example >}}
+
+
+{{< example python >}}
+
 ```python
 import pulumi
 import pulumi_azure as azure
@@ -135,9 +147,12 @@ example_access_policy = azure.keyvault.AccessPolicy("exampleAccessPolicy",
     secret_permissions=["Get"])
 ```
 
-{{% /example %}}
 
-{{% example typescript %}}
+{{< /example >}}
+
+
+{{< example typescript >}}
+
 
 ```typescript
 import * as pulumi from "@pulumi/pulumi";
@@ -160,9 +175,16 @@ const exampleAccessPolicy = new azure.keyvault.AccessPolicy("exampleAccessPolicy
 });
 ```
 
-{{% /example %}}
+
+{{< /example >}}
+
+
+
+
 
 {{% /examples %}}
+
+
 
 
 ## Create a AccessPolicy Resource {#create}
@@ -187,9 +209,7 @@ const exampleAccessPolicy = new azure.keyvault.AccessPolicy("exampleAccessPolicy
 
 {{% choosable language nodejs %}}
 
-<dl class="resources-properties">
-  
-    <dt
+<dl class="resources-properties"><dt
         class="property-required" title="Required">
         <span>name</span>
         <span class="property-indicator"></span>
@@ -197,9 +217,7 @@ const exampleAccessPolicy = new azure.keyvault.AccessPolicy("exampleAccessPolicy
     </dt>
     <dd>
       The unique name of the resource.
-    </dd>
-  
-    <dt
+    </dd><dt
         class="property-required" title="Required">
         <span>args</span>
         <span class="property-indicator"></span>
@@ -207,9 +225,7 @@ const exampleAccessPolicy = new azure.keyvault.AccessPolicy("exampleAccessPolicy
     </dt>
     <dd>
       The arguments to resource properties.
-    </dd>
-  
-    <dt
+    </dd><dt
         class="property-optional" title="Optional">
         <span>opts</span>
         <span class="property-indicator"></span>
@@ -217,10 +233,7 @@ const exampleAccessPolicy = new azure.keyvault.AccessPolicy("exampleAccessPolicy
     </dt>
     <dd>
       Bag of options to control resource&#39;s behavior.
-    </dd>
-  
-
-</dl>
+    </dd></dl>
 
 {{% /choosable %}}
 
@@ -246,9 +259,7 @@ const exampleAccessPolicy = new azure.keyvault.AccessPolicy("exampleAccessPolicy
 
 {{% choosable language go %}}
 
-<dl class="resources-properties">
-  
-    <dt
+<dl class="resources-properties"><dt
         class="property-optional" title="Optional">
         <span>ctx</span>
         <span class="property-indicator"></span>
@@ -256,9 +267,7 @@ const exampleAccessPolicy = new azure.keyvault.AccessPolicy("exampleAccessPolicy
     </dt>
     <dd>
       Context object for the current deployment.
-    </dd>
-  
-    <dt
+    </dd><dt
         class="property-required" title="Required">
         <span>name</span>
         <span class="property-indicator"></span>
@@ -266,9 +275,7 @@ const exampleAccessPolicy = new azure.keyvault.AccessPolicy("exampleAccessPolicy
     </dt>
     <dd>
       The unique name of the resource.
-    </dd>
-  
-    <dt
+    </dd><dt
         class="property-required" title="Required">
         <span>args</span>
         <span class="property-indicator"></span>
@@ -276,9 +283,7 @@ const exampleAccessPolicy = new azure.keyvault.AccessPolicy("exampleAccessPolicy
     </dt>
     <dd>
       The arguments to resource properties.
-    </dd>
-  
-    <dt
+    </dd><dt
         class="property-optional" title="Optional">
         <span>opts</span>
         <span class="property-indicator"></span>
@@ -286,18 +291,13 @@ const exampleAccessPolicy = new azure.keyvault.AccessPolicy("exampleAccessPolicy
     </dt>
     <dd>
       Bag of options to control resource&#39;s behavior.
-    </dd>
-  
-
-</dl>
+    </dd></dl>
 
 {{% /choosable %}}
 
 {{% choosable language csharp %}}
 
-<dl class="resources-properties">
-  
-    <dt
+<dl class="resources-properties"><dt
         class="property-required" title="Required">
         <span>name</span>
         <span class="property-indicator"></span>
@@ -305,9 +305,7 @@ const exampleAccessPolicy = new azure.keyvault.AccessPolicy("exampleAccessPolicy
     </dt>
     <dd>
       The unique name of the resource.
-    </dd>
-  
-    <dt
+    </dd><dt
         class="property-required" title="Required">
         <span>args</span>
         <span class="property-indicator"></span>
@@ -315,9 +313,7 @@ const exampleAccessPolicy = new azure.keyvault.AccessPolicy("exampleAccessPolicy
     </dt>
     <dd>
       The arguments to resource properties.
-    </dd>
-  
-    <dt
+    </dd><dt
         class="property-optional" title="Optional">
         <span>opts</span>
         <span class="property-indicator"></span>
@@ -325,10 +321,7 @@ const exampleAccessPolicy = new azure.keyvault.AccessPolicy("exampleAccessPolicy
     </dt>
     <dd>
       Bag of options to control resource&#39;s behavior.
-    </dd>
-  
-
-</dl>
+    </dd></dl>
 
 {{% /choosable %}}
 
@@ -343,9 +336,7 @@ The AccessPolicy resource accepts the following [input]({{< relref "/docs/intro/
 
 
 {{% choosable language csharp %}}
-<dl class="resources-properties">
-
-    <dt class="property-required"
+<dl class="resources-properties"><dt class="property-required"
             title="Required">
         <span id="keyvaultid_csharp">
 <a href="#keyvaultid_csharp" style="color: inherit; text-decoration: inherit;">Key<wbr>Vault<wbr>Id</a>
@@ -355,8 +346,7 @@ The AccessPolicy resource accepts the following [input]({{< relref "/docs/intro/
     </dt>
     <dd>{{% md %}}Specifies the id of the Key Vault resource. Changing this
 forces a new resource to be created.
-{{% /md %}}</dd>
-    <dt class="property-required"
+{{% /md %}}</dd><dt class="property-required"
             title="Required">
         <span id="objectid_csharp">
 <a href="#objectid_csharp" style="color: inherit; text-decoration: inherit;">Object<wbr>Id</a>
@@ -368,8 +358,7 @@ forces a new resource to be created.
 group in the Azure Active Directory tenant for the vault. The object ID must
 be unique for the list of access policies. Changing this forces a new resource
 to be created.
-{{% /md %}}</dd>
-    <dt class="property-required"
+{{% /md %}}</dd><dt class="property-required"
             title="Required">
         <span id="tenantid_csharp">
 <a href="#tenantid_csharp" style="color: inherit; text-decoration: inherit;">Tenant<wbr>Id</a>
@@ -380,8 +369,7 @@ to be created.
     <dd>{{% md %}}The Azure Active Directory tenant ID that should be used
 for authenticating requests to the key vault. Changing this forces a new resource
 to be created.
-{{% /md %}}</dd>
-    <dt class="property-optional"
+{{% /md %}}</dd><dt class="property-optional"
             title="Optional">
         <span id="applicationid_csharp">
 <a href="#applicationid_csharp" style="color: inherit; text-decoration: inherit;">Application<wbr>Id</a>
@@ -390,8 +378,7 @@ to be created.
         <span class="property-type">string</span>
     </dt>
     <dd>{{% md %}}The object ID of an Application in Azure Active Directory.
-{{% /md %}}</dd>
-    <dt class="property-optional"
+{{% /md %}}</dd><dt class="property-optional"
             title="Optional">
         <span id="certificatepermissions_csharp">
 <a href="#certificatepermissions_csharp" style="color: inherit; text-decoration: inherit;">Certificate<wbr>Permissions</a>
@@ -400,8 +387,7 @@ to be created.
         <span class="property-type">List&lt;string&gt;</span>
     </dt>
     <dd>{{% md %}}List of certificate permissions, must be one or more from the following: `Backup`, `Create`, `Delete`, `DeleteIssuers`, `Get`, `GetIssuers`, `Import`, `List`, `ListIssuers`, `ManageContacts`, `ManageIssuers`, `Purge`, `Recover`, `Restore`, `SetIssuers` and `Update`.
-{{% /md %}}</dd>
-    <dt class="property-optional"
+{{% /md %}}</dd><dt class="property-optional"
             title="Optional">
         <span id="keypermissions_csharp">
 <a href="#keypermissions_csharp" style="color: inherit; text-decoration: inherit;">Key<wbr>Permissions</a>
@@ -410,8 +396,7 @@ to be created.
         <span class="property-type">List&lt;string&gt;</span>
     </dt>
     <dd>{{% md %}}List of key permissions, must be one or more from the following: `Backup`, `Create`, `Decrypt`, `Delete`, `Encrypt`, `Get`, `Import`, `List`, `Purge`, `Recover`, `Restore`, `Sign`, `UnwrapKey`, `Update`, `Verify` and `WrapKey`.
-{{% /md %}}</dd>
-    <dt class="property-optional"
+{{% /md %}}</dd><dt class="property-optional"
             title="Optional">
         <span id="secretpermissions_csharp">
 <a href="#secretpermissions_csharp" style="color: inherit; text-decoration: inherit;">Secret<wbr>Permissions</a>
@@ -420,8 +405,7 @@ to be created.
         <span class="property-type">List&lt;string&gt;</span>
     </dt>
     <dd>{{% md %}}List of secret permissions, must be one or more from the following: `Backup`, `Delete`, `get`, `list`, `purge`, `recover`, `restore` and `set`.
-{{% /md %}}</dd>
-    <dt class="property-optional"
+{{% /md %}}</dd><dt class="property-optional"
             title="Optional">
         <span id="storagepermissions_csharp">
 <a href="#storagepermissions_csharp" style="color: inherit; text-decoration: inherit;">Storage<wbr>Permissions</a>
@@ -430,14 +414,11 @@ to be created.
         <span class="property-type">List&lt;string&gt;</span>
     </dt>
     <dd>{{% md %}}List of storage permissions, must be one or more from the following: `Backup`, `Delete`, `DeleteSAS`, `Get`, `GetSAS`, `List`, `ListSAS`, `Purge`, `Recover`, `RegenerateKey`, `Restore`, `Set`, `SetSAS` and `Update`.
-{{% /md %}}</dd>
-</dl>
+{{% /md %}}</dd></dl>
 {{% /choosable %}}
 
 {{% choosable language go %}}
-<dl class="resources-properties">
-
-    <dt class="property-required"
+<dl class="resources-properties"><dt class="property-required"
             title="Required">
         <span id="keyvaultid_go">
 <a href="#keyvaultid_go" style="color: inherit; text-decoration: inherit;">Key<wbr>Vault<wbr>Id</a>
@@ -447,8 +428,7 @@ to be created.
     </dt>
     <dd>{{% md %}}Specifies the id of the Key Vault resource. Changing this
 forces a new resource to be created.
-{{% /md %}}</dd>
-    <dt class="property-required"
+{{% /md %}}</dd><dt class="property-required"
             title="Required">
         <span id="objectid_go">
 <a href="#objectid_go" style="color: inherit; text-decoration: inherit;">Object<wbr>Id</a>
@@ -460,8 +440,7 @@ forces a new resource to be created.
 group in the Azure Active Directory tenant for the vault. The object ID must
 be unique for the list of access policies. Changing this forces a new resource
 to be created.
-{{% /md %}}</dd>
-    <dt class="property-required"
+{{% /md %}}</dd><dt class="property-required"
             title="Required">
         <span id="tenantid_go">
 <a href="#tenantid_go" style="color: inherit; text-decoration: inherit;">Tenant<wbr>Id</a>
@@ -472,8 +451,7 @@ to be created.
     <dd>{{% md %}}The Azure Active Directory tenant ID that should be used
 for authenticating requests to the key vault. Changing this forces a new resource
 to be created.
-{{% /md %}}</dd>
-    <dt class="property-optional"
+{{% /md %}}</dd><dt class="property-optional"
             title="Optional">
         <span id="applicationid_go">
 <a href="#applicationid_go" style="color: inherit; text-decoration: inherit;">Application<wbr>Id</a>
@@ -482,8 +460,7 @@ to be created.
         <span class="property-type">string</span>
     </dt>
     <dd>{{% md %}}The object ID of an Application in Azure Active Directory.
-{{% /md %}}</dd>
-    <dt class="property-optional"
+{{% /md %}}</dd><dt class="property-optional"
             title="Optional">
         <span id="certificatepermissions_go">
 <a href="#certificatepermissions_go" style="color: inherit; text-decoration: inherit;">Certificate<wbr>Permissions</a>
@@ -492,8 +469,7 @@ to be created.
         <span class="property-type">[]string</span>
     </dt>
     <dd>{{% md %}}List of certificate permissions, must be one or more from the following: `Backup`, `Create`, `Delete`, `DeleteIssuers`, `Get`, `GetIssuers`, `Import`, `List`, `ListIssuers`, `ManageContacts`, `ManageIssuers`, `Purge`, `Recover`, `Restore`, `SetIssuers` and `Update`.
-{{% /md %}}</dd>
-    <dt class="property-optional"
+{{% /md %}}</dd><dt class="property-optional"
             title="Optional">
         <span id="keypermissions_go">
 <a href="#keypermissions_go" style="color: inherit; text-decoration: inherit;">Key<wbr>Permissions</a>
@@ -502,8 +478,7 @@ to be created.
         <span class="property-type">[]string</span>
     </dt>
     <dd>{{% md %}}List of key permissions, must be one or more from the following: `Backup`, `Create`, `Decrypt`, `Delete`, `Encrypt`, `Get`, `Import`, `List`, `Purge`, `Recover`, `Restore`, `Sign`, `UnwrapKey`, `Update`, `Verify` and `WrapKey`.
-{{% /md %}}</dd>
-    <dt class="property-optional"
+{{% /md %}}</dd><dt class="property-optional"
             title="Optional">
         <span id="secretpermissions_go">
 <a href="#secretpermissions_go" style="color: inherit; text-decoration: inherit;">Secret<wbr>Permissions</a>
@@ -512,8 +487,7 @@ to be created.
         <span class="property-type">[]string</span>
     </dt>
     <dd>{{% md %}}List of secret permissions, must be one or more from the following: `Backup`, `Delete`, `get`, `list`, `purge`, `recover`, `restore` and `set`.
-{{% /md %}}</dd>
-    <dt class="property-optional"
+{{% /md %}}</dd><dt class="property-optional"
             title="Optional">
         <span id="storagepermissions_go">
 <a href="#storagepermissions_go" style="color: inherit; text-decoration: inherit;">Storage<wbr>Permissions</a>
@@ -522,14 +496,11 @@ to be created.
         <span class="property-type">[]string</span>
     </dt>
     <dd>{{% md %}}List of storage permissions, must be one or more from the following: `Backup`, `Delete`, `DeleteSAS`, `Get`, `GetSAS`, `List`, `ListSAS`, `Purge`, `Recover`, `RegenerateKey`, `Restore`, `Set`, `SetSAS` and `Update`.
-{{% /md %}}</dd>
-</dl>
+{{% /md %}}</dd></dl>
 {{% /choosable %}}
 
 {{% choosable language nodejs %}}
-<dl class="resources-properties">
-
-    <dt class="property-required"
+<dl class="resources-properties"><dt class="property-required"
             title="Required">
         <span id="keyvaultid_nodejs">
 <a href="#keyvaultid_nodejs" style="color: inherit; text-decoration: inherit;">key<wbr>Vault<wbr>Id</a>
@@ -539,8 +510,7 @@ to be created.
     </dt>
     <dd>{{% md %}}Specifies the id of the Key Vault resource. Changing this
 forces a new resource to be created.
-{{% /md %}}</dd>
-    <dt class="property-required"
+{{% /md %}}</dd><dt class="property-required"
             title="Required">
         <span id="objectid_nodejs">
 <a href="#objectid_nodejs" style="color: inherit; text-decoration: inherit;">object<wbr>Id</a>
@@ -552,8 +522,7 @@ forces a new resource to be created.
 group in the Azure Active Directory tenant for the vault. The object ID must
 be unique for the list of access policies. Changing this forces a new resource
 to be created.
-{{% /md %}}</dd>
-    <dt class="property-required"
+{{% /md %}}</dd><dt class="property-required"
             title="Required">
         <span id="tenantid_nodejs">
 <a href="#tenantid_nodejs" style="color: inherit; text-decoration: inherit;">tenant<wbr>Id</a>
@@ -564,8 +533,7 @@ to be created.
     <dd>{{% md %}}The Azure Active Directory tenant ID that should be used
 for authenticating requests to the key vault. Changing this forces a new resource
 to be created.
-{{% /md %}}</dd>
-    <dt class="property-optional"
+{{% /md %}}</dd><dt class="property-optional"
             title="Optional">
         <span id="applicationid_nodejs">
 <a href="#applicationid_nodejs" style="color: inherit; text-decoration: inherit;">application<wbr>Id</a>
@@ -574,8 +542,7 @@ to be created.
         <span class="property-type">string</span>
     </dt>
     <dd>{{% md %}}The object ID of an Application in Azure Active Directory.
-{{% /md %}}</dd>
-    <dt class="property-optional"
+{{% /md %}}</dd><dt class="property-optional"
             title="Optional">
         <span id="certificatepermissions_nodejs">
 <a href="#certificatepermissions_nodejs" style="color: inherit; text-decoration: inherit;">certificate<wbr>Permissions</a>
@@ -584,8 +551,7 @@ to be created.
         <span class="property-type">string[]</span>
     </dt>
     <dd>{{% md %}}List of certificate permissions, must be one or more from the following: `Backup`, `Create`, `Delete`, `DeleteIssuers`, `Get`, `GetIssuers`, `Import`, `List`, `ListIssuers`, `ManageContacts`, `ManageIssuers`, `Purge`, `Recover`, `Restore`, `SetIssuers` and `Update`.
-{{% /md %}}</dd>
-    <dt class="property-optional"
+{{% /md %}}</dd><dt class="property-optional"
             title="Optional">
         <span id="keypermissions_nodejs">
 <a href="#keypermissions_nodejs" style="color: inherit; text-decoration: inherit;">key<wbr>Permissions</a>
@@ -594,8 +560,7 @@ to be created.
         <span class="property-type">string[]</span>
     </dt>
     <dd>{{% md %}}List of key permissions, must be one or more from the following: `Backup`, `Create`, `Decrypt`, `Delete`, `Encrypt`, `Get`, `Import`, `List`, `Purge`, `Recover`, `Restore`, `Sign`, `UnwrapKey`, `Update`, `Verify` and `WrapKey`.
-{{% /md %}}</dd>
-    <dt class="property-optional"
+{{% /md %}}</dd><dt class="property-optional"
             title="Optional">
         <span id="secretpermissions_nodejs">
 <a href="#secretpermissions_nodejs" style="color: inherit; text-decoration: inherit;">secret<wbr>Permissions</a>
@@ -604,8 +569,7 @@ to be created.
         <span class="property-type">string[]</span>
     </dt>
     <dd>{{% md %}}List of secret permissions, must be one or more from the following: `Backup`, `Delete`, `get`, `list`, `purge`, `recover`, `restore` and `set`.
-{{% /md %}}</dd>
-    <dt class="property-optional"
+{{% /md %}}</dd><dt class="property-optional"
             title="Optional">
         <span id="storagepermissions_nodejs">
 <a href="#storagepermissions_nodejs" style="color: inherit; text-decoration: inherit;">storage<wbr>Permissions</a>
@@ -614,14 +578,11 @@ to be created.
         <span class="property-type">string[]</span>
     </dt>
     <dd>{{% md %}}List of storage permissions, must be one or more from the following: `Backup`, `Delete`, `DeleteSAS`, `Get`, `GetSAS`, `List`, `ListSAS`, `Purge`, `Recover`, `RegenerateKey`, `Restore`, `Set`, `SetSAS` and `Update`.
-{{% /md %}}</dd>
-</dl>
+{{% /md %}}</dd></dl>
 {{% /choosable %}}
 
 {{% choosable language python %}}
-<dl class="resources-properties">
-
-    <dt class="property-required"
+<dl class="resources-properties"><dt class="property-required"
             title="Required">
         <span id="key_vault_id_python">
 <a href="#key_vault_id_python" style="color: inherit; text-decoration: inherit;">key_<wbr>vault_<wbr>id</a>
@@ -631,8 +592,7 @@ to be created.
     </dt>
     <dd>{{% md %}}Specifies the id of the Key Vault resource. Changing this
 forces a new resource to be created.
-{{% /md %}}</dd>
-    <dt class="property-required"
+{{% /md %}}</dd><dt class="property-required"
             title="Required">
         <span id="object_id_python">
 <a href="#object_id_python" style="color: inherit; text-decoration: inherit;">object_<wbr>id</a>
@@ -644,8 +604,7 @@ forces a new resource to be created.
 group in the Azure Active Directory tenant for the vault. The object ID must
 be unique for the list of access policies. Changing this forces a new resource
 to be created.
-{{% /md %}}</dd>
-    <dt class="property-required"
+{{% /md %}}</dd><dt class="property-required"
             title="Required">
         <span id="tenant_id_python">
 <a href="#tenant_id_python" style="color: inherit; text-decoration: inherit;">tenant_<wbr>id</a>
@@ -656,8 +615,7 @@ to be created.
     <dd>{{% md %}}The Azure Active Directory tenant ID that should be used
 for authenticating requests to the key vault. Changing this forces a new resource
 to be created.
-{{% /md %}}</dd>
-    <dt class="property-optional"
+{{% /md %}}</dd><dt class="property-optional"
             title="Optional">
         <span id="application_id_python">
 <a href="#application_id_python" style="color: inherit; text-decoration: inherit;">application_<wbr>id</a>
@@ -666,8 +624,7 @@ to be created.
         <span class="property-type">str</span>
     </dt>
     <dd>{{% md %}}The object ID of an Application in Azure Active Directory.
-{{% /md %}}</dd>
-    <dt class="property-optional"
+{{% /md %}}</dd><dt class="property-optional"
             title="Optional">
         <span id="certificate_permissions_python">
 <a href="#certificate_permissions_python" style="color: inherit; text-decoration: inherit;">certificate_<wbr>permissions</a>
@@ -676,8 +633,7 @@ to be created.
         <span class="property-type">Sequence[str]</span>
     </dt>
     <dd>{{% md %}}List of certificate permissions, must be one or more from the following: `Backup`, `Create`, `Delete`, `DeleteIssuers`, `Get`, `GetIssuers`, `Import`, `List`, `ListIssuers`, `ManageContacts`, `ManageIssuers`, `Purge`, `Recover`, `Restore`, `SetIssuers` and `Update`.
-{{% /md %}}</dd>
-    <dt class="property-optional"
+{{% /md %}}</dd><dt class="property-optional"
             title="Optional">
         <span id="key_permissions_python">
 <a href="#key_permissions_python" style="color: inherit; text-decoration: inherit;">key_<wbr>permissions</a>
@@ -686,8 +642,7 @@ to be created.
         <span class="property-type">Sequence[str]</span>
     </dt>
     <dd>{{% md %}}List of key permissions, must be one or more from the following: `Backup`, `Create`, `Decrypt`, `Delete`, `Encrypt`, `Get`, `Import`, `List`, `Purge`, `Recover`, `Restore`, `Sign`, `UnwrapKey`, `Update`, `Verify` and `WrapKey`.
-{{% /md %}}</dd>
-    <dt class="property-optional"
+{{% /md %}}</dd><dt class="property-optional"
             title="Optional">
         <span id="secret_permissions_python">
 <a href="#secret_permissions_python" style="color: inherit; text-decoration: inherit;">secret_<wbr>permissions</a>
@@ -696,8 +651,7 @@ to be created.
         <span class="property-type">Sequence[str]</span>
     </dt>
     <dd>{{% md %}}List of secret permissions, must be one or more from the following: `Backup`, `Delete`, `get`, `list`, `purge`, `recover`, `restore` and `set`.
-{{% /md %}}</dd>
-    <dt class="property-optional"
+{{% /md %}}</dd><dt class="property-optional"
             title="Optional">
         <span id="storage_permissions_python">
 <a href="#storage_permissions_python" style="color: inherit; text-decoration: inherit;">storage_<wbr>permissions</a>
@@ -706,8 +660,7 @@ to be created.
         <span class="property-type">Sequence[str]</span>
     </dt>
     <dd>{{% md %}}List of storage permissions, must be one or more from the following: `Backup`, `Delete`, `DeleteSAS`, `Get`, `GetSAS`, `List`, `ListSAS`, `Purge`, `Recover`, `RegenerateKey`, `Restore`, `Set`, `SetSAS` and `Update`.
-{{% /md %}}</dd>
-</dl>
+{{% /md %}}</dd></dl>
 {{% /choosable %}}
 
 
@@ -718,9 +671,7 @@ All [input](#inputs) properties are implicitly available as output properties. A
 
 
 {{% choosable language csharp %}}
-<dl class="resources-properties">
-
-    <dt class="property-"
+<dl class="resources-properties"><dt class="property-"
             title="">
         <span id="id_csharp">
 <a href="#id_csharp" style="color: inherit; text-decoration: inherit;">Id</a>
@@ -728,14 +679,11 @@ All [input](#inputs) properties are implicitly available as output properties. A
         <span class="property-indicator"></span>
         <span class="property-type">string</span>
     </dt>
-    <dd>{{% md %}}The provider-assigned unique ID for this managed resource.{{% /md %}}</dd>
-</dl>
+    <dd>{{% md %}}The provider-assigned unique ID for this managed resource.{{% /md %}}</dd></dl>
 {{% /choosable %}}
 
 {{% choosable language go %}}
-<dl class="resources-properties">
-
-    <dt class="property-"
+<dl class="resources-properties"><dt class="property-"
             title="">
         <span id="id_go">
 <a href="#id_go" style="color: inherit; text-decoration: inherit;">Id</a>
@@ -743,14 +691,11 @@ All [input](#inputs) properties are implicitly available as output properties. A
         <span class="property-indicator"></span>
         <span class="property-type">string</span>
     </dt>
-    <dd>{{% md %}}The provider-assigned unique ID for this managed resource.{{% /md %}}</dd>
-</dl>
+    <dd>{{% md %}}The provider-assigned unique ID for this managed resource.{{% /md %}}</dd></dl>
 {{% /choosable %}}
 
 {{% choosable language nodejs %}}
-<dl class="resources-properties">
-
-    <dt class="property-"
+<dl class="resources-properties"><dt class="property-"
             title="">
         <span id="id_nodejs">
 <a href="#id_nodejs" style="color: inherit; text-decoration: inherit;">id</a>
@@ -758,14 +703,11 @@ All [input](#inputs) properties are implicitly available as output properties. A
         <span class="property-indicator"></span>
         <span class="property-type">string</span>
     </dt>
-    <dd>{{% md %}}The provider-assigned unique ID for this managed resource.{{% /md %}}</dd>
-</dl>
+    <dd>{{% md %}}The provider-assigned unique ID for this managed resource.{{% /md %}}</dd></dl>
 {{% /choosable %}}
 
 {{% choosable language python %}}
-<dl class="resources-properties">
-
-    <dt class="property-"
+<dl class="resources-properties"><dt class="property-"
             title="">
         <span id="id_python">
 <a href="#id_python" style="color: inherit; text-decoration: inherit;">id</a>
@@ -773,8 +715,7 @@ All [input](#inputs) properties are implicitly available as output properties. A
         <span class="property-indicator"></span>
         <span class="property-type">str</span>
     </dt>
-    <dd>{{% md %}}The provider-assigned unique ID for this managed resource.{{% /md %}}</dd>
-</dl>
+    <dd>{{% md %}}The provider-assigned unique ID for this managed resource.{{% /md %}}</dd></dl>
 {{% /choosable %}}
 
 
@@ -901,9 +842,7 @@ The following state arguments are supported:
 
 
 {{% choosable language csharp %}}
-<dl class="resources-properties">
-
-    <dt class="property-optional"
+<dl class="resources-properties"><dt class="property-optional"
             title="Optional">
         <span id="state_applicationid_csharp">
 <a href="#state_applicationid_csharp" style="color: inherit; text-decoration: inherit;">Application<wbr>Id</a>
@@ -912,8 +851,7 @@ The following state arguments are supported:
         <span class="property-type">string</span>
     </dt>
     <dd>{{% md %}}The object ID of an Application in Azure Active Directory.
-{{% /md %}}</dd>
-    <dt class="property-optional"
+{{% /md %}}</dd><dt class="property-optional"
             title="Optional">
         <span id="state_certificatepermissions_csharp">
 <a href="#state_certificatepermissions_csharp" style="color: inherit; text-decoration: inherit;">Certificate<wbr>Permissions</a>
@@ -922,8 +860,7 @@ The following state arguments are supported:
         <span class="property-type">List&lt;string&gt;</span>
     </dt>
     <dd>{{% md %}}List of certificate permissions, must be one or more from the following: `Backup`, `Create`, `Delete`, `DeleteIssuers`, `Get`, `GetIssuers`, `Import`, `List`, `ListIssuers`, `ManageContacts`, `ManageIssuers`, `Purge`, `Recover`, `Restore`, `SetIssuers` and `Update`.
-{{% /md %}}</dd>
-    <dt class="property-optional"
+{{% /md %}}</dd><dt class="property-optional"
             title="Optional">
         <span id="state_keypermissions_csharp">
 <a href="#state_keypermissions_csharp" style="color: inherit; text-decoration: inherit;">Key<wbr>Permissions</a>
@@ -932,8 +869,7 @@ The following state arguments are supported:
         <span class="property-type">List&lt;string&gt;</span>
     </dt>
     <dd>{{% md %}}List of key permissions, must be one or more from the following: `Backup`, `Create`, `Decrypt`, `Delete`, `Encrypt`, `Get`, `Import`, `List`, `Purge`, `Recover`, `Restore`, `Sign`, `UnwrapKey`, `Update`, `Verify` and `WrapKey`.
-{{% /md %}}</dd>
-    <dt class="property-optional"
+{{% /md %}}</dd><dt class="property-optional"
             title="Optional">
         <span id="state_keyvaultid_csharp">
 <a href="#state_keyvaultid_csharp" style="color: inherit; text-decoration: inherit;">Key<wbr>Vault<wbr>Id</a>
@@ -943,8 +879,7 @@ The following state arguments are supported:
     </dt>
     <dd>{{% md %}}Specifies the id of the Key Vault resource. Changing this
 forces a new resource to be created.
-{{% /md %}}</dd>
-    <dt class="property-optional"
+{{% /md %}}</dd><dt class="property-optional"
             title="Optional">
         <span id="state_objectid_csharp">
 <a href="#state_objectid_csharp" style="color: inherit; text-decoration: inherit;">Object<wbr>Id</a>
@@ -956,8 +891,7 @@ forces a new resource to be created.
 group in the Azure Active Directory tenant for the vault. The object ID must
 be unique for the list of access policies. Changing this forces a new resource
 to be created.
-{{% /md %}}</dd>
-    <dt class="property-optional"
+{{% /md %}}</dd><dt class="property-optional"
             title="Optional">
         <span id="state_secretpermissions_csharp">
 <a href="#state_secretpermissions_csharp" style="color: inherit; text-decoration: inherit;">Secret<wbr>Permissions</a>
@@ -966,8 +900,7 @@ to be created.
         <span class="property-type">List&lt;string&gt;</span>
     </dt>
     <dd>{{% md %}}List of secret permissions, must be one or more from the following: `Backup`, `Delete`, `get`, `list`, `purge`, `recover`, `restore` and `set`.
-{{% /md %}}</dd>
-    <dt class="property-optional"
+{{% /md %}}</dd><dt class="property-optional"
             title="Optional">
         <span id="state_storagepermissions_csharp">
 <a href="#state_storagepermissions_csharp" style="color: inherit; text-decoration: inherit;">Storage<wbr>Permissions</a>
@@ -976,8 +909,7 @@ to be created.
         <span class="property-type">List&lt;string&gt;</span>
     </dt>
     <dd>{{% md %}}List of storage permissions, must be one or more from the following: `Backup`, `Delete`, `DeleteSAS`, `Get`, `GetSAS`, `List`, `ListSAS`, `Purge`, `Recover`, `RegenerateKey`, `Restore`, `Set`, `SetSAS` and `Update`.
-{{% /md %}}</dd>
-    <dt class="property-optional"
+{{% /md %}}</dd><dt class="property-optional"
             title="Optional">
         <span id="state_tenantid_csharp">
 <a href="#state_tenantid_csharp" style="color: inherit; text-decoration: inherit;">Tenant<wbr>Id</a>
@@ -988,14 +920,11 @@ to be created.
     <dd>{{% md %}}The Azure Active Directory tenant ID that should be used
 for authenticating requests to the key vault. Changing this forces a new resource
 to be created.
-{{% /md %}}</dd>
-</dl>
+{{% /md %}}</dd></dl>
 {{% /choosable %}}
 
 {{% choosable language go %}}
-<dl class="resources-properties">
-
-    <dt class="property-optional"
+<dl class="resources-properties"><dt class="property-optional"
             title="Optional">
         <span id="state_applicationid_go">
 <a href="#state_applicationid_go" style="color: inherit; text-decoration: inherit;">Application<wbr>Id</a>
@@ -1004,8 +933,7 @@ to be created.
         <span class="property-type">string</span>
     </dt>
     <dd>{{% md %}}The object ID of an Application in Azure Active Directory.
-{{% /md %}}</dd>
-    <dt class="property-optional"
+{{% /md %}}</dd><dt class="property-optional"
             title="Optional">
         <span id="state_certificatepermissions_go">
 <a href="#state_certificatepermissions_go" style="color: inherit; text-decoration: inherit;">Certificate<wbr>Permissions</a>
@@ -1014,8 +942,7 @@ to be created.
         <span class="property-type">[]string</span>
     </dt>
     <dd>{{% md %}}List of certificate permissions, must be one or more from the following: `Backup`, `Create`, `Delete`, `DeleteIssuers`, `Get`, `GetIssuers`, `Import`, `List`, `ListIssuers`, `ManageContacts`, `ManageIssuers`, `Purge`, `Recover`, `Restore`, `SetIssuers` and `Update`.
-{{% /md %}}</dd>
-    <dt class="property-optional"
+{{% /md %}}</dd><dt class="property-optional"
             title="Optional">
         <span id="state_keypermissions_go">
 <a href="#state_keypermissions_go" style="color: inherit; text-decoration: inherit;">Key<wbr>Permissions</a>
@@ -1024,8 +951,7 @@ to be created.
         <span class="property-type">[]string</span>
     </dt>
     <dd>{{% md %}}List of key permissions, must be one or more from the following: `Backup`, `Create`, `Decrypt`, `Delete`, `Encrypt`, `Get`, `Import`, `List`, `Purge`, `Recover`, `Restore`, `Sign`, `UnwrapKey`, `Update`, `Verify` and `WrapKey`.
-{{% /md %}}</dd>
-    <dt class="property-optional"
+{{% /md %}}</dd><dt class="property-optional"
             title="Optional">
         <span id="state_keyvaultid_go">
 <a href="#state_keyvaultid_go" style="color: inherit; text-decoration: inherit;">Key<wbr>Vault<wbr>Id</a>
@@ -1035,8 +961,7 @@ to be created.
     </dt>
     <dd>{{% md %}}Specifies the id of the Key Vault resource. Changing this
 forces a new resource to be created.
-{{% /md %}}</dd>
-    <dt class="property-optional"
+{{% /md %}}</dd><dt class="property-optional"
             title="Optional">
         <span id="state_objectid_go">
 <a href="#state_objectid_go" style="color: inherit; text-decoration: inherit;">Object<wbr>Id</a>
@@ -1048,8 +973,7 @@ forces a new resource to be created.
 group in the Azure Active Directory tenant for the vault. The object ID must
 be unique for the list of access policies. Changing this forces a new resource
 to be created.
-{{% /md %}}</dd>
-    <dt class="property-optional"
+{{% /md %}}</dd><dt class="property-optional"
             title="Optional">
         <span id="state_secretpermissions_go">
 <a href="#state_secretpermissions_go" style="color: inherit; text-decoration: inherit;">Secret<wbr>Permissions</a>
@@ -1058,8 +982,7 @@ to be created.
         <span class="property-type">[]string</span>
     </dt>
     <dd>{{% md %}}List of secret permissions, must be one or more from the following: `Backup`, `Delete`, `get`, `list`, `purge`, `recover`, `restore` and `set`.
-{{% /md %}}</dd>
-    <dt class="property-optional"
+{{% /md %}}</dd><dt class="property-optional"
             title="Optional">
         <span id="state_storagepermissions_go">
 <a href="#state_storagepermissions_go" style="color: inherit; text-decoration: inherit;">Storage<wbr>Permissions</a>
@@ -1068,8 +991,7 @@ to be created.
         <span class="property-type">[]string</span>
     </dt>
     <dd>{{% md %}}List of storage permissions, must be one or more from the following: `Backup`, `Delete`, `DeleteSAS`, `Get`, `GetSAS`, `List`, `ListSAS`, `Purge`, `Recover`, `RegenerateKey`, `Restore`, `Set`, `SetSAS` and `Update`.
-{{% /md %}}</dd>
-    <dt class="property-optional"
+{{% /md %}}</dd><dt class="property-optional"
             title="Optional">
         <span id="state_tenantid_go">
 <a href="#state_tenantid_go" style="color: inherit; text-decoration: inherit;">Tenant<wbr>Id</a>
@@ -1080,14 +1002,11 @@ to be created.
     <dd>{{% md %}}The Azure Active Directory tenant ID that should be used
 for authenticating requests to the key vault. Changing this forces a new resource
 to be created.
-{{% /md %}}</dd>
-</dl>
+{{% /md %}}</dd></dl>
 {{% /choosable %}}
 
 {{% choosable language nodejs %}}
-<dl class="resources-properties">
-
-    <dt class="property-optional"
+<dl class="resources-properties"><dt class="property-optional"
             title="Optional">
         <span id="state_applicationid_nodejs">
 <a href="#state_applicationid_nodejs" style="color: inherit; text-decoration: inherit;">application<wbr>Id</a>
@@ -1096,8 +1015,7 @@ to be created.
         <span class="property-type">string</span>
     </dt>
     <dd>{{% md %}}The object ID of an Application in Azure Active Directory.
-{{% /md %}}</dd>
-    <dt class="property-optional"
+{{% /md %}}</dd><dt class="property-optional"
             title="Optional">
         <span id="state_certificatepermissions_nodejs">
 <a href="#state_certificatepermissions_nodejs" style="color: inherit; text-decoration: inherit;">certificate<wbr>Permissions</a>
@@ -1106,8 +1024,7 @@ to be created.
         <span class="property-type">string[]</span>
     </dt>
     <dd>{{% md %}}List of certificate permissions, must be one or more from the following: `Backup`, `Create`, `Delete`, `DeleteIssuers`, `Get`, `GetIssuers`, `Import`, `List`, `ListIssuers`, `ManageContacts`, `ManageIssuers`, `Purge`, `Recover`, `Restore`, `SetIssuers` and `Update`.
-{{% /md %}}</dd>
-    <dt class="property-optional"
+{{% /md %}}</dd><dt class="property-optional"
             title="Optional">
         <span id="state_keypermissions_nodejs">
 <a href="#state_keypermissions_nodejs" style="color: inherit; text-decoration: inherit;">key<wbr>Permissions</a>
@@ -1116,8 +1033,7 @@ to be created.
         <span class="property-type">string[]</span>
     </dt>
     <dd>{{% md %}}List of key permissions, must be one or more from the following: `Backup`, `Create`, `Decrypt`, `Delete`, `Encrypt`, `Get`, `Import`, `List`, `Purge`, `Recover`, `Restore`, `Sign`, `UnwrapKey`, `Update`, `Verify` and `WrapKey`.
-{{% /md %}}</dd>
-    <dt class="property-optional"
+{{% /md %}}</dd><dt class="property-optional"
             title="Optional">
         <span id="state_keyvaultid_nodejs">
 <a href="#state_keyvaultid_nodejs" style="color: inherit; text-decoration: inherit;">key<wbr>Vault<wbr>Id</a>
@@ -1127,8 +1043,7 @@ to be created.
     </dt>
     <dd>{{% md %}}Specifies the id of the Key Vault resource. Changing this
 forces a new resource to be created.
-{{% /md %}}</dd>
-    <dt class="property-optional"
+{{% /md %}}</dd><dt class="property-optional"
             title="Optional">
         <span id="state_objectid_nodejs">
 <a href="#state_objectid_nodejs" style="color: inherit; text-decoration: inherit;">object<wbr>Id</a>
@@ -1140,8 +1055,7 @@ forces a new resource to be created.
 group in the Azure Active Directory tenant for the vault. The object ID must
 be unique for the list of access policies. Changing this forces a new resource
 to be created.
-{{% /md %}}</dd>
-    <dt class="property-optional"
+{{% /md %}}</dd><dt class="property-optional"
             title="Optional">
         <span id="state_secretpermissions_nodejs">
 <a href="#state_secretpermissions_nodejs" style="color: inherit; text-decoration: inherit;">secret<wbr>Permissions</a>
@@ -1150,8 +1064,7 @@ to be created.
         <span class="property-type">string[]</span>
     </dt>
     <dd>{{% md %}}List of secret permissions, must be one or more from the following: `Backup`, `Delete`, `get`, `list`, `purge`, `recover`, `restore` and `set`.
-{{% /md %}}</dd>
-    <dt class="property-optional"
+{{% /md %}}</dd><dt class="property-optional"
             title="Optional">
         <span id="state_storagepermissions_nodejs">
 <a href="#state_storagepermissions_nodejs" style="color: inherit; text-decoration: inherit;">storage<wbr>Permissions</a>
@@ -1160,8 +1073,7 @@ to be created.
         <span class="property-type">string[]</span>
     </dt>
     <dd>{{% md %}}List of storage permissions, must be one or more from the following: `Backup`, `Delete`, `DeleteSAS`, `Get`, `GetSAS`, `List`, `ListSAS`, `Purge`, `Recover`, `RegenerateKey`, `Restore`, `Set`, `SetSAS` and `Update`.
-{{% /md %}}</dd>
-    <dt class="property-optional"
+{{% /md %}}</dd><dt class="property-optional"
             title="Optional">
         <span id="state_tenantid_nodejs">
 <a href="#state_tenantid_nodejs" style="color: inherit; text-decoration: inherit;">tenant<wbr>Id</a>
@@ -1172,14 +1084,11 @@ to be created.
     <dd>{{% md %}}The Azure Active Directory tenant ID that should be used
 for authenticating requests to the key vault. Changing this forces a new resource
 to be created.
-{{% /md %}}</dd>
-</dl>
+{{% /md %}}</dd></dl>
 {{% /choosable %}}
 
 {{% choosable language python %}}
-<dl class="resources-properties">
-
-    <dt class="property-optional"
+<dl class="resources-properties"><dt class="property-optional"
             title="Optional">
         <span id="state_application_id_python">
 <a href="#state_application_id_python" style="color: inherit; text-decoration: inherit;">application_<wbr>id</a>
@@ -1188,8 +1097,7 @@ to be created.
         <span class="property-type">str</span>
     </dt>
     <dd>{{% md %}}The object ID of an Application in Azure Active Directory.
-{{% /md %}}</dd>
-    <dt class="property-optional"
+{{% /md %}}</dd><dt class="property-optional"
             title="Optional">
         <span id="state_certificate_permissions_python">
 <a href="#state_certificate_permissions_python" style="color: inherit; text-decoration: inherit;">certificate_<wbr>permissions</a>
@@ -1198,8 +1106,7 @@ to be created.
         <span class="property-type">Sequence[str]</span>
     </dt>
     <dd>{{% md %}}List of certificate permissions, must be one or more from the following: `Backup`, `Create`, `Delete`, `DeleteIssuers`, `Get`, `GetIssuers`, `Import`, `List`, `ListIssuers`, `ManageContacts`, `ManageIssuers`, `Purge`, `Recover`, `Restore`, `SetIssuers` and `Update`.
-{{% /md %}}</dd>
-    <dt class="property-optional"
+{{% /md %}}</dd><dt class="property-optional"
             title="Optional">
         <span id="state_key_permissions_python">
 <a href="#state_key_permissions_python" style="color: inherit; text-decoration: inherit;">key_<wbr>permissions</a>
@@ -1208,8 +1115,7 @@ to be created.
         <span class="property-type">Sequence[str]</span>
     </dt>
     <dd>{{% md %}}List of key permissions, must be one or more from the following: `Backup`, `Create`, `Decrypt`, `Delete`, `Encrypt`, `Get`, `Import`, `List`, `Purge`, `Recover`, `Restore`, `Sign`, `UnwrapKey`, `Update`, `Verify` and `WrapKey`.
-{{% /md %}}</dd>
-    <dt class="property-optional"
+{{% /md %}}</dd><dt class="property-optional"
             title="Optional">
         <span id="state_key_vault_id_python">
 <a href="#state_key_vault_id_python" style="color: inherit; text-decoration: inherit;">key_<wbr>vault_<wbr>id</a>
@@ -1219,8 +1125,7 @@ to be created.
     </dt>
     <dd>{{% md %}}Specifies the id of the Key Vault resource. Changing this
 forces a new resource to be created.
-{{% /md %}}</dd>
-    <dt class="property-optional"
+{{% /md %}}</dd><dt class="property-optional"
             title="Optional">
         <span id="state_object_id_python">
 <a href="#state_object_id_python" style="color: inherit; text-decoration: inherit;">object_<wbr>id</a>
@@ -1232,8 +1137,7 @@ forces a new resource to be created.
 group in the Azure Active Directory tenant for the vault. The object ID must
 be unique for the list of access policies. Changing this forces a new resource
 to be created.
-{{% /md %}}</dd>
-    <dt class="property-optional"
+{{% /md %}}</dd><dt class="property-optional"
             title="Optional">
         <span id="state_secret_permissions_python">
 <a href="#state_secret_permissions_python" style="color: inherit; text-decoration: inherit;">secret_<wbr>permissions</a>
@@ -1242,8 +1146,7 @@ to be created.
         <span class="property-type">Sequence[str]</span>
     </dt>
     <dd>{{% md %}}List of secret permissions, must be one or more from the following: `Backup`, `Delete`, `get`, `list`, `purge`, `recover`, `restore` and `set`.
-{{% /md %}}</dd>
-    <dt class="property-optional"
+{{% /md %}}</dd><dt class="property-optional"
             title="Optional">
         <span id="state_storage_permissions_python">
 <a href="#state_storage_permissions_python" style="color: inherit; text-decoration: inherit;">storage_<wbr>permissions</a>
@@ -1252,8 +1155,7 @@ to be created.
         <span class="property-type">Sequence[str]</span>
     </dt>
     <dd>{{% md %}}List of storage permissions, must be one or more from the following: `Backup`, `Delete`, `DeleteSAS`, `Get`, `GetSAS`, `List`, `ListSAS`, `Purge`, `Recover`, `RegenerateKey`, `Restore`, `Set`, `SetSAS` and `Update`.
-{{% /md %}}</dd>
-    <dt class="property-optional"
+{{% /md %}}</dd><dt class="property-optional"
             title="Optional">
         <span id="state_tenant_id_python">
 <a href="#state_tenant_id_python" style="color: inherit; text-decoration: inherit;">tenant_<wbr>id</a>
@@ -1264,8 +1166,7 @@ to be created.
     <dd>{{% md %}}The Azure Active Directory tenant ID that should be used
 for authenticating requests to the key vault. Changing this forces a new resource
 to be created.
-{{% /md %}}</dd>
-</dl>
+{{% /md %}}</dd></dl>
 {{% /choosable %}}
 
 
@@ -1299,6 +1200,6 @@ Key Vault Access Policies can be imported using the Resource ID of the Key Vault
 	<dt>License</dt>
 	<dd>Apache-2.0</dd>
 	<dt>Notes</dt>
-	<dd>This Pulumi package is based on the [`azurerm` Terraform Provider](https://github.com/terraform-providers/terraform-provider-azurerm).</dd>
+	<dd>{{% md %}}This Pulumi package is based on the [`azurerm` Terraform Provider](https://github.com/terraform-providers/terraform-provider-azurerm).{{% /md %}}</dd>
 </dl>
 

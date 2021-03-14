@@ -13,11 +13,17 @@ meta_desc: "Documentation for the azure.sentinel.AlertRuleScheduled resource wit
 Manages a Sentinel Scheduled Alert Rule.
 
 {{% examples %}}
+
 ## Example Usage
 
 {{< chooser language "typescript,python,go,csharp" / >}}
 
-{{% example csharp %}}
+
+
+
+
+{{< example csharp >}}
+
 ```csharp
 using Pulumi;
 using Azure = Pulumi.Azure;
@@ -52,9 +58,12 @@ class MyStack : Stack
 }
 ```
 
-{{% /example %}}
 
-{{% example go %}}
+{{< /example >}}
+
+
+{{< example go >}}
+
 ```go
 package main
 
@@ -97,9 +106,12 @@ func main() {
 }
 ```
 
-{{% /example %}}
 
-{{% example python %}}
+{{< /example >}}
+
+
+{{< example python >}}
+
 ```python
 import pulumi
 import pulumi_azure as azure
@@ -120,9 +132,12 @@ example_alert_rule_scheduled = azure.sentinel.AlertRuleScheduled("exampleAlertRu
 """)
 ```
 
-{{% /example %}}
 
-{{% example typescript %}}
+{{< /example >}}
+
+
+{{< example typescript >}}
+
 
 ```typescript
 import * as pulumi from "@pulumi/pulumi";
@@ -146,9 +161,16 @@ const exampleAlertRuleScheduled = new azure.sentinel.AlertRuleScheduled("example
 });
 ```
 
-{{% /example %}}
+
+{{< /example >}}
+
+
+
+
 
 {{% /examples %}}
+
+
 
 
 ## Create a AlertRuleScheduled Resource {#create}
@@ -173,9 +195,7 @@ const exampleAlertRuleScheduled = new azure.sentinel.AlertRuleScheduled("example
 
 {{% choosable language nodejs %}}
 
-<dl class="resources-properties">
-  
-    <dt
+<dl class="resources-properties"><dt
         class="property-required" title="Required">
         <span>name</span>
         <span class="property-indicator"></span>
@@ -183,9 +203,7 @@ const exampleAlertRuleScheduled = new azure.sentinel.AlertRuleScheduled("example
     </dt>
     <dd>
       The unique name of the resource.
-    </dd>
-  
-    <dt
+    </dd><dt
         class="property-required" title="Required">
         <span>args</span>
         <span class="property-indicator"></span>
@@ -193,9 +211,7 @@ const exampleAlertRuleScheduled = new azure.sentinel.AlertRuleScheduled("example
     </dt>
     <dd>
       The arguments to resource properties.
-    </dd>
-  
-    <dt
+    </dd><dt
         class="property-optional" title="Optional">
         <span>opts</span>
         <span class="property-indicator"></span>
@@ -203,10 +219,7 @@ const exampleAlertRuleScheduled = new azure.sentinel.AlertRuleScheduled("example
     </dt>
     <dd>
       Bag of options to control resource&#39;s behavior.
-    </dd>
-  
-
-</dl>
+    </dd></dl>
 
 {{% /choosable %}}
 
@@ -232,9 +245,7 @@ const exampleAlertRuleScheduled = new azure.sentinel.AlertRuleScheduled("example
 
 {{% choosable language go %}}
 
-<dl class="resources-properties">
-  
-    <dt
+<dl class="resources-properties"><dt
         class="property-optional" title="Optional">
         <span>ctx</span>
         <span class="property-indicator"></span>
@@ -242,9 +253,7 @@ const exampleAlertRuleScheduled = new azure.sentinel.AlertRuleScheduled("example
     </dt>
     <dd>
       Context object for the current deployment.
-    </dd>
-  
-    <dt
+    </dd><dt
         class="property-required" title="Required">
         <span>name</span>
         <span class="property-indicator"></span>
@@ -252,9 +261,7 @@ const exampleAlertRuleScheduled = new azure.sentinel.AlertRuleScheduled("example
     </dt>
     <dd>
       The unique name of the resource.
-    </dd>
-  
-    <dt
+    </dd><dt
         class="property-required" title="Required">
         <span>args</span>
         <span class="property-indicator"></span>
@@ -262,9 +269,7 @@ const exampleAlertRuleScheduled = new azure.sentinel.AlertRuleScheduled("example
     </dt>
     <dd>
       The arguments to resource properties.
-    </dd>
-  
-    <dt
+    </dd><dt
         class="property-optional" title="Optional">
         <span>opts</span>
         <span class="property-indicator"></span>
@@ -272,18 +277,13 @@ const exampleAlertRuleScheduled = new azure.sentinel.AlertRuleScheduled("example
     </dt>
     <dd>
       Bag of options to control resource&#39;s behavior.
-    </dd>
-  
-
-</dl>
+    </dd></dl>
 
 {{% /choosable %}}
 
 {{% choosable language csharp %}}
 
-<dl class="resources-properties">
-  
-    <dt
+<dl class="resources-properties"><dt
         class="property-required" title="Required">
         <span>name</span>
         <span class="property-indicator"></span>
@@ -291,9 +291,7 @@ const exampleAlertRuleScheduled = new azure.sentinel.AlertRuleScheduled("example
     </dt>
     <dd>
       The unique name of the resource.
-    </dd>
-  
-    <dt
+    </dd><dt
         class="property-required" title="Required">
         <span>args</span>
         <span class="property-indicator"></span>
@@ -301,9 +299,7 @@ const exampleAlertRuleScheduled = new azure.sentinel.AlertRuleScheduled("example
     </dt>
     <dd>
       The arguments to resource properties.
-    </dd>
-  
-    <dt
+    </dd><dt
         class="property-optional" title="Optional">
         <span>opts</span>
         <span class="property-indicator"></span>
@@ -311,10 +307,7 @@ const exampleAlertRuleScheduled = new azure.sentinel.AlertRuleScheduled("example
     </dt>
     <dd>
       Bag of options to control resource&#39;s behavior.
-    </dd>
-  
-
-</dl>
+    </dd></dl>
 
 {{% /choosable %}}
 
@@ -329,9 +322,7 @@ The AlertRuleScheduled resource accepts the following [input]({{< relref "/docs/
 
 
 {{% choosable language csharp %}}
-<dl class="resources-properties">
-
-    <dt class="property-required"
+<dl class="resources-properties"><dt class="property-required"
             title="Required">
         <span id="displayname_csharp">
 <a href="#displayname_csharp" style="color: inherit; text-decoration: inherit;">Display<wbr>Name</a>
@@ -340,8 +331,7 @@ The AlertRuleScheduled resource accepts the following [input]({{< relref "/docs/
         <span class="property-type">string</span>
     </dt>
     <dd>{{% md %}}The friendly name of this Sentinel Scheduled Alert Rule.
-{{% /md %}}</dd>
-    <dt class="property-required"
+{{% /md %}}</dd><dt class="property-required"
             title="Required">
         <span id="loganalyticsworkspaceid_csharp">
 <a href="#loganalyticsworkspaceid_csharp" style="color: inherit; text-decoration: inherit;">Log<wbr>Analytics<wbr>Workspace<wbr>Id</a>
@@ -350,8 +340,7 @@ The AlertRuleScheduled resource accepts the following [input]({{< relref "/docs/
         <span class="property-type">string</span>
     </dt>
     <dd>{{% md %}}The ID of the Log Analytics Workspace this Sentinel Scheduled Alert Rule belongs to. Changing this forces a new Sentinel Scheduled Alert Rule to be created.
-{{% /md %}}</dd>
-    <dt class="property-required"
+{{% /md %}}</dd><dt class="property-required"
             title="Required">
         <span id="query_csharp">
 <a href="#query_csharp" style="color: inherit; text-decoration: inherit;">Query</a>
@@ -360,8 +349,7 @@ The AlertRuleScheduled resource accepts the following [input]({{< relref "/docs/
         <span class="property-type">string</span>
     </dt>
     <dd>{{% md %}}The query of this Sentinel Scheduled Alert Rule.
-{{% /md %}}</dd>
-    <dt class="property-required"
+{{% /md %}}</dd><dt class="property-required"
             title="Required">
         <span id="severity_csharp">
 <a href="#severity_csharp" style="color: inherit; text-decoration: inherit;">Severity</a>
@@ -370,8 +358,7 @@ The AlertRuleScheduled resource accepts the following [input]({{< relref "/docs/
         <span class="property-type">string</span>
     </dt>
     <dd>{{% md %}}The alert severity of this Sentinel Scheduled Alert Rule. Possible values are `High`, `Medium`, `Low` and `Informational`.
-{{% /md %}}</dd>
-    <dt class="property-optional"
+{{% /md %}}</dd><dt class="property-optional"
             title="Optional">
         <span id="alertruletemplateguid_csharp">
 <a href="#alertruletemplateguid_csharp" style="color: inherit; text-decoration: inherit;">Alert<wbr>Rule<wbr>Template<wbr>Guid</a>
@@ -380,8 +367,7 @@ The AlertRuleScheduled resource accepts the following [input]({{< relref "/docs/
         <span class="property-type">string</span>
     </dt>
     <dd>{{% md %}}The GUID of the alert rule template which is used for this Sentinel Scheduled Alert Rule. Changing this forces a new Sentinel Scheduled Alert Rule to be created.
-{{% /md %}}</dd>
-    <dt class="property-optional"
+{{% /md %}}</dd><dt class="property-optional"
             title="Optional">
         <span id="description_csharp">
 <a href="#description_csharp" style="color: inherit; text-decoration: inherit;">Description</a>
@@ -390,8 +376,7 @@ The AlertRuleScheduled resource accepts the following [input]({{< relref "/docs/
         <span class="property-type">string</span>
     </dt>
     <dd>{{% md %}}The description of this Sentinel Scheduled Alert Rule.
-{{% /md %}}</dd>
-    <dt class="property-optional"
+{{% /md %}}</dd><dt class="property-optional"
             title="Optional">
         <span id="enabled_csharp">
 <a href="#enabled_csharp" style="color: inherit; text-decoration: inherit;">Enabled</a>
@@ -400,8 +385,7 @@ The AlertRuleScheduled resource accepts the following [input]({{< relref "/docs/
         <span class="property-type">bool</span>
     </dt>
     <dd>{{% md %}}Should the Sentinel Scheduled Alert Rule be enabled? Defaults to `true`.
-{{% /md %}}</dd>
-    <dt class="property-optional"
+{{% /md %}}</dd><dt class="property-optional"
             title="Optional">
         <span id="eventgrouping_csharp">
 <a href="#eventgrouping_csharp" style="color: inherit; text-decoration: inherit;">Event<wbr>Grouping</a>
@@ -410,8 +394,7 @@ The AlertRuleScheduled resource accepts the following [input]({{< relref "/docs/
         <span class="property-type"><a href="#alertrulescheduledeventgrouping">Alert<wbr>Rule<wbr>Scheduled<wbr>Event<wbr>Grouping<wbr>Args</a></span>
     </dt>
     <dd>{{% md %}}A `event_grouping` block as defined below.
-{{% /md %}}</dd>
-    <dt class="property-optional"
+{{% /md %}}</dd><dt class="property-optional"
             title="Optional">
         <span id="incidentconfiguration_csharp">
 <a href="#incidentconfiguration_csharp" style="color: inherit; text-decoration: inherit;">Incident<wbr>Configuration</a>
@@ -420,8 +403,7 @@ The AlertRuleScheduled resource accepts the following [input]({{< relref "/docs/
         <span class="property-type"><a href="#alertrulescheduledincidentconfiguration">Alert<wbr>Rule<wbr>Scheduled<wbr>Incident<wbr>Configuration<wbr>Args</a></span>
     </dt>
     <dd>{{% md %}}A `incident_configuration` block as defined below.
-{{% /md %}}</dd>
-    <dt class="property-optional"
+{{% /md %}}</dd><dt class="property-optional"
             title="Optional">
         <span id="name_csharp">
 <a href="#name_csharp" style="color: inherit; text-decoration: inherit;">Name</a>
@@ -430,8 +412,7 @@ The AlertRuleScheduled resource accepts the following [input]({{< relref "/docs/
         <span class="property-type">string</span>
     </dt>
     <dd>{{% md %}}The name which should be used for this Sentinel Scheduled Alert Rule. Changing this forces a new Sentinel Scheduled Alert Rule to be created.
-{{% /md %}}</dd>
-    <dt class="property-optional"
+{{% /md %}}</dd><dt class="property-optional"
             title="Optional">
         <span id="queryfrequency_csharp">
 <a href="#queryfrequency_csharp" style="color: inherit; text-decoration: inherit;">Query<wbr>Frequency</a>
@@ -440,8 +421,7 @@ The AlertRuleScheduled resource accepts the following [input]({{< relref "/docs/
         <span class="property-type">string</span>
     </dt>
     <dd>{{% md %}}The ISO 8601 timespan duration between two consecutive queries. Defaults to `PT5H`.
-{{% /md %}}</dd>
-    <dt class="property-optional"
+{{% /md %}}</dd><dt class="property-optional"
             title="Optional">
         <span id="queryperiod_csharp">
 <a href="#queryperiod_csharp" style="color: inherit; text-decoration: inherit;">Query<wbr>Period</a>
@@ -450,8 +430,7 @@ The AlertRuleScheduled resource accepts the following [input]({{< relref "/docs/
         <span class="property-type">string</span>
     </dt>
     <dd>{{% md %}}The ISO 8601 timespan duration, which determine the time period of the data covered by the query. For example, it can query the past 10 minutes of data, or the past 6 hours of data. Defaults to `PT5H`.
-{{% /md %}}</dd>
-    <dt class="property-optional"
+{{% /md %}}</dd><dt class="property-optional"
             title="Optional">
         <span id="suppressionduration_csharp">
 <a href="#suppressionduration_csharp" style="color: inherit; text-decoration: inherit;">Suppression<wbr>Duration</a>
@@ -460,8 +439,7 @@ The AlertRuleScheduled resource accepts the following [input]({{< relref "/docs/
         <span class="property-type">string</span>
     </dt>
     <dd>{{% md %}}If `suppression_enabled` is `true`, this is ISO 8601 timespan duration, which specifies the amount of time the query should stop running after alert is generated. Defaults to `PT5H`.
-{{% /md %}}</dd>
-    <dt class="property-optional"
+{{% /md %}}</dd><dt class="property-optional"
             title="Optional">
         <span id="suppressionenabled_csharp">
 <a href="#suppressionenabled_csharp" style="color: inherit; text-decoration: inherit;">Suppression<wbr>Enabled</a>
@@ -470,8 +448,7 @@ The AlertRuleScheduled resource accepts the following [input]({{< relref "/docs/
         <span class="property-type">bool</span>
     </dt>
     <dd>{{% md %}}Should the Sentinel Scheduled Alert Rulea stop running query after alert is generated? Defaults to `false`.
-{{% /md %}}</dd>
-    <dt class="property-optional"
+{{% /md %}}</dd><dt class="property-optional"
             title="Optional">
         <span id="tactics_csharp">
 <a href="#tactics_csharp" style="color: inherit; text-decoration: inherit;">Tactics</a>
@@ -480,8 +457,7 @@ The AlertRuleScheduled resource accepts the following [input]({{< relref "/docs/
         <span class="property-type">List&lt;string&gt;</span>
     </dt>
     <dd>{{% md %}}A list of categories of attacks by which to classify the rule. Possible values are `Collection`, `CommandAndControl`, `CredentialAccess`, `DefenseEvasion`, `Discovery`, `Execution`, `Exfiltration`, `Impact`, `InitialAccess`, `LateralMovement`, `Persistence` and `PrivilegeEscalation`.
-{{% /md %}}</dd>
-    <dt class="property-optional"
+{{% /md %}}</dd><dt class="property-optional"
             title="Optional">
         <span id="triggeroperator_csharp">
 <a href="#triggeroperator_csharp" style="color: inherit; text-decoration: inherit;">Trigger<wbr>Operator</a>
@@ -490,8 +466,7 @@ The AlertRuleScheduled resource accepts the following [input]({{< relref "/docs/
         <span class="property-type">string</span>
     </dt>
     <dd>{{% md %}}The alert trigger operator, combined with `trigger_threshold`, setting alert threshold of this Sentinel Scheduled Alert Rule. Possible values are `Equal`, `GreaterThan`, `LessThan`, `NotEqual`.
-{{% /md %}}</dd>
-    <dt class="property-optional"
+{{% /md %}}</dd><dt class="property-optional"
             title="Optional">
         <span id="triggerthreshold_csharp">
 <a href="#triggerthreshold_csharp" style="color: inherit; text-decoration: inherit;">Trigger<wbr>Threshold</a>
@@ -500,14 +475,11 @@ The AlertRuleScheduled resource accepts the following [input]({{< relref "/docs/
         <span class="property-type">int</span>
     </dt>
     <dd>{{% md %}}The baseline number of query results generated, combined with `trigger_operator`, setting alert threshold of this Sentinel Scheduled Alert Rule.
-{{% /md %}}</dd>
-</dl>
+{{% /md %}}</dd></dl>
 {{% /choosable %}}
 
 {{% choosable language go %}}
-<dl class="resources-properties">
-
-    <dt class="property-required"
+<dl class="resources-properties"><dt class="property-required"
             title="Required">
         <span id="displayname_go">
 <a href="#displayname_go" style="color: inherit; text-decoration: inherit;">Display<wbr>Name</a>
@@ -516,8 +488,7 @@ The AlertRuleScheduled resource accepts the following [input]({{< relref "/docs/
         <span class="property-type">string</span>
     </dt>
     <dd>{{% md %}}The friendly name of this Sentinel Scheduled Alert Rule.
-{{% /md %}}</dd>
-    <dt class="property-required"
+{{% /md %}}</dd><dt class="property-required"
             title="Required">
         <span id="loganalyticsworkspaceid_go">
 <a href="#loganalyticsworkspaceid_go" style="color: inherit; text-decoration: inherit;">Log<wbr>Analytics<wbr>Workspace<wbr>Id</a>
@@ -526,8 +497,7 @@ The AlertRuleScheduled resource accepts the following [input]({{< relref "/docs/
         <span class="property-type">string</span>
     </dt>
     <dd>{{% md %}}The ID of the Log Analytics Workspace this Sentinel Scheduled Alert Rule belongs to. Changing this forces a new Sentinel Scheduled Alert Rule to be created.
-{{% /md %}}</dd>
-    <dt class="property-required"
+{{% /md %}}</dd><dt class="property-required"
             title="Required">
         <span id="query_go">
 <a href="#query_go" style="color: inherit; text-decoration: inherit;">Query</a>
@@ -536,8 +506,7 @@ The AlertRuleScheduled resource accepts the following [input]({{< relref "/docs/
         <span class="property-type">string</span>
     </dt>
     <dd>{{% md %}}The query of this Sentinel Scheduled Alert Rule.
-{{% /md %}}</dd>
-    <dt class="property-required"
+{{% /md %}}</dd><dt class="property-required"
             title="Required">
         <span id="severity_go">
 <a href="#severity_go" style="color: inherit; text-decoration: inherit;">Severity</a>
@@ -546,8 +515,7 @@ The AlertRuleScheduled resource accepts the following [input]({{< relref "/docs/
         <span class="property-type">string</span>
     </dt>
     <dd>{{% md %}}The alert severity of this Sentinel Scheduled Alert Rule. Possible values are `High`, `Medium`, `Low` and `Informational`.
-{{% /md %}}</dd>
-    <dt class="property-optional"
+{{% /md %}}</dd><dt class="property-optional"
             title="Optional">
         <span id="alertruletemplateguid_go">
 <a href="#alertruletemplateguid_go" style="color: inherit; text-decoration: inherit;">Alert<wbr>Rule<wbr>Template<wbr>Guid</a>
@@ -556,8 +524,7 @@ The AlertRuleScheduled resource accepts the following [input]({{< relref "/docs/
         <span class="property-type">string</span>
     </dt>
     <dd>{{% md %}}The GUID of the alert rule template which is used for this Sentinel Scheduled Alert Rule. Changing this forces a new Sentinel Scheduled Alert Rule to be created.
-{{% /md %}}</dd>
-    <dt class="property-optional"
+{{% /md %}}</dd><dt class="property-optional"
             title="Optional">
         <span id="description_go">
 <a href="#description_go" style="color: inherit; text-decoration: inherit;">Description</a>
@@ -566,8 +533,7 @@ The AlertRuleScheduled resource accepts the following [input]({{< relref "/docs/
         <span class="property-type">string</span>
     </dt>
     <dd>{{% md %}}The description of this Sentinel Scheduled Alert Rule.
-{{% /md %}}</dd>
-    <dt class="property-optional"
+{{% /md %}}</dd><dt class="property-optional"
             title="Optional">
         <span id="enabled_go">
 <a href="#enabled_go" style="color: inherit; text-decoration: inherit;">Enabled</a>
@@ -576,8 +542,7 @@ The AlertRuleScheduled resource accepts the following [input]({{< relref "/docs/
         <span class="property-type">bool</span>
     </dt>
     <dd>{{% md %}}Should the Sentinel Scheduled Alert Rule be enabled? Defaults to `true`.
-{{% /md %}}</dd>
-    <dt class="property-optional"
+{{% /md %}}</dd><dt class="property-optional"
             title="Optional">
         <span id="eventgrouping_go">
 <a href="#eventgrouping_go" style="color: inherit; text-decoration: inherit;">Event<wbr>Grouping</a>
@@ -586,8 +551,7 @@ The AlertRuleScheduled resource accepts the following [input]({{< relref "/docs/
         <span class="property-type"><a href="#alertrulescheduledeventgrouping">Alert<wbr>Rule<wbr>Scheduled<wbr>Event<wbr>Grouping</a></span>
     </dt>
     <dd>{{% md %}}A `event_grouping` block as defined below.
-{{% /md %}}</dd>
-    <dt class="property-optional"
+{{% /md %}}</dd><dt class="property-optional"
             title="Optional">
         <span id="incidentconfiguration_go">
 <a href="#incidentconfiguration_go" style="color: inherit; text-decoration: inherit;">Incident<wbr>Configuration</a>
@@ -596,8 +560,7 @@ The AlertRuleScheduled resource accepts the following [input]({{< relref "/docs/
         <span class="property-type"><a href="#alertrulescheduledincidentconfiguration">Alert<wbr>Rule<wbr>Scheduled<wbr>Incident<wbr>Configuration</a></span>
     </dt>
     <dd>{{% md %}}A `incident_configuration` block as defined below.
-{{% /md %}}</dd>
-    <dt class="property-optional"
+{{% /md %}}</dd><dt class="property-optional"
             title="Optional">
         <span id="name_go">
 <a href="#name_go" style="color: inherit; text-decoration: inherit;">Name</a>
@@ -606,8 +569,7 @@ The AlertRuleScheduled resource accepts the following [input]({{< relref "/docs/
         <span class="property-type">string</span>
     </dt>
     <dd>{{% md %}}The name which should be used for this Sentinel Scheduled Alert Rule. Changing this forces a new Sentinel Scheduled Alert Rule to be created.
-{{% /md %}}</dd>
-    <dt class="property-optional"
+{{% /md %}}</dd><dt class="property-optional"
             title="Optional">
         <span id="queryfrequency_go">
 <a href="#queryfrequency_go" style="color: inherit; text-decoration: inherit;">Query<wbr>Frequency</a>
@@ -616,8 +578,7 @@ The AlertRuleScheduled resource accepts the following [input]({{< relref "/docs/
         <span class="property-type">string</span>
     </dt>
     <dd>{{% md %}}The ISO 8601 timespan duration between two consecutive queries. Defaults to `PT5H`.
-{{% /md %}}</dd>
-    <dt class="property-optional"
+{{% /md %}}</dd><dt class="property-optional"
             title="Optional">
         <span id="queryperiod_go">
 <a href="#queryperiod_go" style="color: inherit; text-decoration: inherit;">Query<wbr>Period</a>
@@ -626,8 +587,7 @@ The AlertRuleScheduled resource accepts the following [input]({{< relref "/docs/
         <span class="property-type">string</span>
     </dt>
     <dd>{{% md %}}The ISO 8601 timespan duration, which determine the time period of the data covered by the query. For example, it can query the past 10 minutes of data, or the past 6 hours of data. Defaults to `PT5H`.
-{{% /md %}}</dd>
-    <dt class="property-optional"
+{{% /md %}}</dd><dt class="property-optional"
             title="Optional">
         <span id="suppressionduration_go">
 <a href="#suppressionduration_go" style="color: inherit; text-decoration: inherit;">Suppression<wbr>Duration</a>
@@ -636,8 +596,7 @@ The AlertRuleScheduled resource accepts the following [input]({{< relref "/docs/
         <span class="property-type">string</span>
     </dt>
     <dd>{{% md %}}If `suppression_enabled` is `true`, this is ISO 8601 timespan duration, which specifies the amount of time the query should stop running after alert is generated. Defaults to `PT5H`.
-{{% /md %}}</dd>
-    <dt class="property-optional"
+{{% /md %}}</dd><dt class="property-optional"
             title="Optional">
         <span id="suppressionenabled_go">
 <a href="#suppressionenabled_go" style="color: inherit; text-decoration: inherit;">Suppression<wbr>Enabled</a>
@@ -646,8 +605,7 @@ The AlertRuleScheduled resource accepts the following [input]({{< relref "/docs/
         <span class="property-type">bool</span>
     </dt>
     <dd>{{% md %}}Should the Sentinel Scheduled Alert Rulea stop running query after alert is generated? Defaults to `false`.
-{{% /md %}}</dd>
-    <dt class="property-optional"
+{{% /md %}}</dd><dt class="property-optional"
             title="Optional">
         <span id="tactics_go">
 <a href="#tactics_go" style="color: inherit; text-decoration: inherit;">Tactics</a>
@@ -656,8 +614,7 @@ The AlertRuleScheduled resource accepts the following [input]({{< relref "/docs/
         <span class="property-type">[]string</span>
     </dt>
     <dd>{{% md %}}A list of categories of attacks by which to classify the rule. Possible values are `Collection`, `CommandAndControl`, `CredentialAccess`, `DefenseEvasion`, `Discovery`, `Execution`, `Exfiltration`, `Impact`, `InitialAccess`, `LateralMovement`, `Persistence` and `PrivilegeEscalation`.
-{{% /md %}}</dd>
-    <dt class="property-optional"
+{{% /md %}}</dd><dt class="property-optional"
             title="Optional">
         <span id="triggeroperator_go">
 <a href="#triggeroperator_go" style="color: inherit; text-decoration: inherit;">Trigger<wbr>Operator</a>
@@ -666,8 +623,7 @@ The AlertRuleScheduled resource accepts the following [input]({{< relref "/docs/
         <span class="property-type">string</span>
     </dt>
     <dd>{{% md %}}The alert trigger operator, combined with `trigger_threshold`, setting alert threshold of this Sentinel Scheduled Alert Rule. Possible values are `Equal`, `GreaterThan`, `LessThan`, `NotEqual`.
-{{% /md %}}</dd>
-    <dt class="property-optional"
+{{% /md %}}</dd><dt class="property-optional"
             title="Optional">
         <span id="triggerthreshold_go">
 <a href="#triggerthreshold_go" style="color: inherit; text-decoration: inherit;">Trigger<wbr>Threshold</a>
@@ -676,14 +632,11 @@ The AlertRuleScheduled resource accepts the following [input]({{< relref "/docs/
         <span class="property-type">int</span>
     </dt>
     <dd>{{% md %}}The baseline number of query results generated, combined with `trigger_operator`, setting alert threshold of this Sentinel Scheduled Alert Rule.
-{{% /md %}}</dd>
-</dl>
+{{% /md %}}</dd></dl>
 {{% /choosable %}}
 
 {{% choosable language nodejs %}}
-<dl class="resources-properties">
-
-    <dt class="property-required"
+<dl class="resources-properties"><dt class="property-required"
             title="Required">
         <span id="displayname_nodejs">
 <a href="#displayname_nodejs" style="color: inherit; text-decoration: inherit;">display<wbr>Name</a>
@@ -692,8 +645,7 @@ The AlertRuleScheduled resource accepts the following [input]({{< relref "/docs/
         <span class="property-type">string</span>
     </dt>
     <dd>{{% md %}}The friendly name of this Sentinel Scheduled Alert Rule.
-{{% /md %}}</dd>
-    <dt class="property-required"
+{{% /md %}}</dd><dt class="property-required"
             title="Required">
         <span id="loganalyticsworkspaceid_nodejs">
 <a href="#loganalyticsworkspaceid_nodejs" style="color: inherit; text-decoration: inherit;">log<wbr>Analytics<wbr>Workspace<wbr>Id</a>
@@ -702,8 +654,7 @@ The AlertRuleScheduled resource accepts the following [input]({{< relref "/docs/
         <span class="property-type">string</span>
     </dt>
     <dd>{{% md %}}The ID of the Log Analytics Workspace this Sentinel Scheduled Alert Rule belongs to. Changing this forces a new Sentinel Scheduled Alert Rule to be created.
-{{% /md %}}</dd>
-    <dt class="property-required"
+{{% /md %}}</dd><dt class="property-required"
             title="Required">
         <span id="query_nodejs">
 <a href="#query_nodejs" style="color: inherit; text-decoration: inherit;">query</a>
@@ -712,8 +663,7 @@ The AlertRuleScheduled resource accepts the following [input]({{< relref "/docs/
         <span class="property-type">string</span>
     </dt>
     <dd>{{% md %}}The query of this Sentinel Scheduled Alert Rule.
-{{% /md %}}</dd>
-    <dt class="property-required"
+{{% /md %}}</dd><dt class="property-required"
             title="Required">
         <span id="severity_nodejs">
 <a href="#severity_nodejs" style="color: inherit; text-decoration: inherit;">severity</a>
@@ -722,8 +672,7 @@ The AlertRuleScheduled resource accepts the following [input]({{< relref "/docs/
         <span class="property-type">string</span>
     </dt>
     <dd>{{% md %}}The alert severity of this Sentinel Scheduled Alert Rule. Possible values are `High`, `Medium`, `Low` and `Informational`.
-{{% /md %}}</dd>
-    <dt class="property-optional"
+{{% /md %}}</dd><dt class="property-optional"
             title="Optional">
         <span id="alertruletemplateguid_nodejs">
 <a href="#alertruletemplateguid_nodejs" style="color: inherit; text-decoration: inherit;">alert<wbr>Rule<wbr>Template<wbr>Guid</a>
@@ -732,8 +681,7 @@ The AlertRuleScheduled resource accepts the following [input]({{< relref "/docs/
         <span class="property-type">string</span>
     </dt>
     <dd>{{% md %}}The GUID of the alert rule template which is used for this Sentinel Scheduled Alert Rule. Changing this forces a new Sentinel Scheduled Alert Rule to be created.
-{{% /md %}}</dd>
-    <dt class="property-optional"
+{{% /md %}}</dd><dt class="property-optional"
             title="Optional">
         <span id="description_nodejs">
 <a href="#description_nodejs" style="color: inherit; text-decoration: inherit;">description</a>
@@ -742,8 +690,7 @@ The AlertRuleScheduled resource accepts the following [input]({{< relref "/docs/
         <span class="property-type">string</span>
     </dt>
     <dd>{{% md %}}The description of this Sentinel Scheduled Alert Rule.
-{{% /md %}}</dd>
-    <dt class="property-optional"
+{{% /md %}}</dd><dt class="property-optional"
             title="Optional">
         <span id="enabled_nodejs">
 <a href="#enabled_nodejs" style="color: inherit; text-decoration: inherit;">enabled</a>
@@ -752,8 +699,7 @@ The AlertRuleScheduled resource accepts the following [input]({{< relref "/docs/
         <span class="property-type">boolean</span>
     </dt>
     <dd>{{% md %}}Should the Sentinel Scheduled Alert Rule be enabled? Defaults to `true`.
-{{% /md %}}</dd>
-    <dt class="property-optional"
+{{% /md %}}</dd><dt class="property-optional"
             title="Optional">
         <span id="eventgrouping_nodejs">
 <a href="#eventgrouping_nodejs" style="color: inherit; text-decoration: inherit;">event<wbr>Grouping</a>
@@ -762,8 +708,7 @@ The AlertRuleScheduled resource accepts the following [input]({{< relref "/docs/
         <span class="property-type"><a href="#alertrulescheduledeventgrouping">Alert<wbr>Rule<wbr>Scheduled<wbr>Event<wbr>Grouping</a></span>
     </dt>
     <dd>{{% md %}}A `event_grouping` block as defined below.
-{{% /md %}}</dd>
-    <dt class="property-optional"
+{{% /md %}}</dd><dt class="property-optional"
             title="Optional">
         <span id="incidentconfiguration_nodejs">
 <a href="#incidentconfiguration_nodejs" style="color: inherit; text-decoration: inherit;">incident<wbr>Configuration</a>
@@ -772,8 +717,7 @@ The AlertRuleScheduled resource accepts the following [input]({{< relref "/docs/
         <span class="property-type"><a href="#alertrulescheduledincidentconfiguration">Alert<wbr>Rule<wbr>Scheduled<wbr>Incident<wbr>Configuration</a></span>
     </dt>
     <dd>{{% md %}}A `incident_configuration` block as defined below.
-{{% /md %}}</dd>
-    <dt class="property-optional"
+{{% /md %}}</dd><dt class="property-optional"
             title="Optional">
         <span id="name_nodejs">
 <a href="#name_nodejs" style="color: inherit; text-decoration: inherit;">name</a>
@@ -782,8 +726,7 @@ The AlertRuleScheduled resource accepts the following [input]({{< relref "/docs/
         <span class="property-type">string</span>
     </dt>
     <dd>{{% md %}}The name which should be used for this Sentinel Scheduled Alert Rule. Changing this forces a new Sentinel Scheduled Alert Rule to be created.
-{{% /md %}}</dd>
-    <dt class="property-optional"
+{{% /md %}}</dd><dt class="property-optional"
             title="Optional">
         <span id="queryfrequency_nodejs">
 <a href="#queryfrequency_nodejs" style="color: inherit; text-decoration: inherit;">query<wbr>Frequency</a>
@@ -792,8 +735,7 @@ The AlertRuleScheduled resource accepts the following [input]({{< relref "/docs/
         <span class="property-type">string</span>
     </dt>
     <dd>{{% md %}}The ISO 8601 timespan duration between two consecutive queries. Defaults to `PT5H`.
-{{% /md %}}</dd>
-    <dt class="property-optional"
+{{% /md %}}</dd><dt class="property-optional"
             title="Optional">
         <span id="queryperiod_nodejs">
 <a href="#queryperiod_nodejs" style="color: inherit; text-decoration: inherit;">query<wbr>Period</a>
@@ -802,8 +744,7 @@ The AlertRuleScheduled resource accepts the following [input]({{< relref "/docs/
         <span class="property-type">string</span>
     </dt>
     <dd>{{% md %}}The ISO 8601 timespan duration, which determine the time period of the data covered by the query. For example, it can query the past 10 minutes of data, or the past 6 hours of data. Defaults to `PT5H`.
-{{% /md %}}</dd>
-    <dt class="property-optional"
+{{% /md %}}</dd><dt class="property-optional"
             title="Optional">
         <span id="suppressionduration_nodejs">
 <a href="#suppressionduration_nodejs" style="color: inherit; text-decoration: inherit;">suppression<wbr>Duration</a>
@@ -812,8 +753,7 @@ The AlertRuleScheduled resource accepts the following [input]({{< relref "/docs/
         <span class="property-type">string</span>
     </dt>
     <dd>{{% md %}}If `suppression_enabled` is `true`, this is ISO 8601 timespan duration, which specifies the amount of time the query should stop running after alert is generated. Defaults to `PT5H`.
-{{% /md %}}</dd>
-    <dt class="property-optional"
+{{% /md %}}</dd><dt class="property-optional"
             title="Optional">
         <span id="suppressionenabled_nodejs">
 <a href="#suppressionenabled_nodejs" style="color: inherit; text-decoration: inherit;">suppression<wbr>Enabled</a>
@@ -822,8 +762,7 @@ The AlertRuleScheduled resource accepts the following [input]({{< relref "/docs/
         <span class="property-type">boolean</span>
     </dt>
     <dd>{{% md %}}Should the Sentinel Scheduled Alert Rulea stop running query after alert is generated? Defaults to `false`.
-{{% /md %}}</dd>
-    <dt class="property-optional"
+{{% /md %}}</dd><dt class="property-optional"
             title="Optional">
         <span id="tactics_nodejs">
 <a href="#tactics_nodejs" style="color: inherit; text-decoration: inherit;">tactics</a>
@@ -832,8 +771,7 @@ The AlertRuleScheduled resource accepts the following [input]({{< relref "/docs/
         <span class="property-type">string[]</span>
     </dt>
     <dd>{{% md %}}A list of categories of attacks by which to classify the rule. Possible values are `Collection`, `CommandAndControl`, `CredentialAccess`, `DefenseEvasion`, `Discovery`, `Execution`, `Exfiltration`, `Impact`, `InitialAccess`, `LateralMovement`, `Persistence` and `PrivilegeEscalation`.
-{{% /md %}}</dd>
-    <dt class="property-optional"
+{{% /md %}}</dd><dt class="property-optional"
             title="Optional">
         <span id="triggeroperator_nodejs">
 <a href="#triggeroperator_nodejs" style="color: inherit; text-decoration: inherit;">trigger<wbr>Operator</a>
@@ -842,8 +780,7 @@ The AlertRuleScheduled resource accepts the following [input]({{< relref "/docs/
         <span class="property-type">string</span>
     </dt>
     <dd>{{% md %}}The alert trigger operator, combined with `trigger_threshold`, setting alert threshold of this Sentinel Scheduled Alert Rule. Possible values are `Equal`, `GreaterThan`, `LessThan`, `NotEqual`.
-{{% /md %}}</dd>
-    <dt class="property-optional"
+{{% /md %}}</dd><dt class="property-optional"
             title="Optional">
         <span id="triggerthreshold_nodejs">
 <a href="#triggerthreshold_nodejs" style="color: inherit; text-decoration: inherit;">trigger<wbr>Threshold</a>
@@ -852,14 +789,11 @@ The AlertRuleScheduled resource accepts the following [input]({{< relref "/docs/
         <span class="property-type">number</span>
     </dt>
     <dd>{{% md %}}The baseline number of query results generated, combined with `trigger_operator`, setting alert threshold of this Sentinel Scheduled Alert Rule.
-{{% /md %}}</dd>
-</dl>
+{{% /md %}}</dd></dl>
 {{% /choosable %}}
 
 {{% choosable language python %}}
-<dl class="resources-properties">
-
-    <dt class="property-required"
+<dl class="resources-properties"><dt class="property-required"
             title="Required">
         <span id="display_name_python">
 <a href="#display_name_python" style="color: inherit; text-decoration: inherit;">display_<wbr>name</a>
@@ -868,8 +802,7 @@ The AlertRuleScheduled resource accepts the following [input]({{< relref "/docs/
         <span class="property-type">str</span>
     </dt>
     <dd>{{% md %}}The friendly name of this Sentinel Scheduled Alert Rule.
-{{% /md %}}</dd>
-    <dt class="property-required"
+{{% /md %}}</dd><dt class="property-required"
             title="Required">
         <span id="log_analytics_workspace_id_python">
 <a href="#log_analytics_workspace_id_python" style="color: inherit; text-decoration: inherit;">log_<wbr>analytics_<wbr>workspace_<wbr>id</a>
@@ -878,8 +811,7 @@ The AlertRuleScheduled resource accepts the following [input]({{< relref "/docs/
         <span class="property-type">str</span>
     </dt>
     <dd>{{% md %}}The ID of the Log Analytics Workspace this Sentinel Scheduled Alert Rule belongs to. Changing this forces a new Sentinel Scheduled Alert Rule to be created.
-{{% /md %}}</dd>
-    <dt class="property-required"
+{{% /md %}}</dd><dt class="property-required"
             title="Required">
         <span id="query_python">
 <a href="#query_python" style="color: inherit; text-decoration: inherit;">query</a>
@@ -888,8 +820,7 @@ The AlertRuleScheduled resource accepts the following [input]({{< relref "/docs/
         <span class="property-type">str</span>
     </dt>
     <dd>{{% md %}}The query of this Sentinel Scheduled Alert Rule.
-{{% /md %}}</dd>
-    <dt class="property-required"
+{{% /md %}}</dd><dt class="property-required"
             title="Required">
         <span id="severity_python">
 <a href="#severity_python" style="color: inherit; text-decoration: inherit;">severity</a>
@@ -898,8 +829,7 @@ The AlertRuleScheduled resource accepts the following [input]({{< relref "/docs/
         <span class="property-type">str</span>
     </dt>
     <dd>{{% md %}}The alert severity of this Sentinel Scheduled Alert Rule. Possible values are `High`, `Medium`, `Low` and `Informational`.
-{{% /md %}}</dd>
-    <dt class="property-optional"
+{{% /md %}}</dd><dt class="property-optional"
             title="Optional">
         <span id="alert_rule_template_guid_python">
 <a href="#alert_rule_template_guid_python" style="color: inherit; text-decoration: inherit;">alert_<wbr>rule_<wbr>template_<wbr>guid</a>
@@ -908,8 +838,7 @@ The AlertRuleScheduled resource accepts the following [input]({{< relref "/docs/
         <span class="property-type">str</span>
     </dt>
     <dd>{{% md %}}The GUID of the alert rule template which is used for this Sentinel Scheduled Alert Rule. Changing this forces a new Sentinel Scheduled Alert Rule to be created.
-{{% /md %}}</dd>
-    <dt class="property-optional"
+{{% /md %}}</dd><dt class="property-optional"
             title="Optional">
         <span id="description_python">
 <a href="#description_python" style="color: inherit; text-decoration: inherit;">description</a>
@@ -918,8 +847,7 @@ The AlertRuleScheduled resource accepts the following [input]({{< relref "/docs/
         <span class="property-type">str</span>
     </dt>
     <dd>{{% md %}}The description of this Sentinel Scheduled Alert Rule.
-{{% /md %}}</dd>
-    <dt class="property-optional"
+{{% /md %}}</dd><dt class="property-optional"
             title="Optional">
         <span id="enabled_python">
 <a href="#enabled_python" style="color: inherit; text-decoration: inherit;">enabled</a>
@@ -928,8 +856,7 @@ The AlertRuleScheduled resource accepts the following [input]({{< relref "/docs/
         <span class="property-type">bool</span>
     </dt>
     <dd>{{% md %}}Should the Sentinel Scheduled Alert Rule be enabled? Defaults to `true`.
-{{% /md %}}</dd>
-    <dt class="property-optional"
+{{% /md %}}</dd><dt class="property-optional"
             title="Optional">
         <span id="event_grouping_python">
 <a href="#event_grouping_python" style="color: inherit; text-decoration: inherit;">event_<wbr>grouping</a>
@@ -938,8 +865,7 @@ The AlertRuleScheduled resource accepts the following [input]({{< relref "/docs/
         <span class="property-type"><a href="#alertrulescheduledeventgrouping">Alert<wbr>Rule<wbr>Scheduled<wbr>Event<wbr>Grouping<wbr>Args</a></span>
     </dt>
     <dd>{{% md %}}A `event_grouping` block as defined below.
-{{% /md %}}</dd>
-    <dt class="property-optional"
+{{% /md %}}</dd><dt class="property-optional"
             title="Optional">
         <span id="incident_configuration_python">
 <a href="#incident_configuration_python" style="color: inherit; text-decoration: inherit;">incident_<wbr>configuration</a>
@@ -948,8 +874,7 @@ The AlertRuleScheduled resource accepts the following [input]({{< relref "/docs/
         <span class="property-type"><a href="#alertrulescheduledincidentconfiguration">Alert<wbr>Rule<wbr>Scheduled<wbr>Incident<wbr>Configuration<wbr>Args</a></span>
     </dt>
     <dd>{{% md %}}A `incident_configuration` block as defined below.
-{{% /md %}}</dd>
-    <dt class="property-optional"
+{{% /md %}}</dd><dt class="property-optional"
             title="Optional">
         <span id="name_python">
 <a href="#name_python" style="color: inherit; text-decoration: inherit;">name</a>
@@ -958,8 +883,7 @@ The AlertRuleScheduled resource accepts the following [input]({{< relref "/docs/
         <span class="property-type">str</span>
     </dt>
     <dd>{{% md %}}The name which should be used for this Sentinel Scheduled Alert Rule. Changing this forces a new Sentinel Scheduled Alert Rule to be created.
-{{% /md %}}</dd>
-    <dt class="property-optional"
+{{% /md %}}</dd><dt class="property-optional"
             title="Optional">
         <span id="query_frequency_python">
 <a href="#query_frequency_python" style="color: inherit; text-decoration: inherit;">query_<wbr>frequency</a>
@@ -968,8 +892,7 @@ The AlertRuleScheduled resource accepts the following [input]({{< relref "/docs/
         <span class="property-type">str</span>
     </dt>
     <dd>{{% md %}}The ISO 8601 timespan duration between two consecutive queries. Defaults to `PT5H`.
-{{% /md %}}</dd>
-    <dt class="property-optional"
+{{% /md %}}</dd><dt class="property-optional"
             title="Optional">
         <span id="query_period_python">
 <a href="#query_period_python" style="color: inherit; text-decoration: inherit;">query_<wbr>period</a>
@@ -978,8 +901,7 @@ The AlertRuleScheduled resource accepts the following [input]({{< relref "/docs/
         <span class="property-type">str</span>
     </dt>
     <dd>{{% md %}}The ISO 8601 timespan duration, which determine the time period of the data covered by the query. For example, it can query the past 10 minutes of data, or the past 6 hours of data. Defaults to `PT5H`.
-{{% /md %}}</dd>
-    <dt class="property-optional"
+{{% /md %}}</dd><dt class="property-optional"
             title="Optional">
         <span id="suppression_duration_python">
 <a href="#suppression_duration_python" style="color: inherit; text-decoration: inherit;">suppression_<wbr>duration</a>
@@ -988,8 +910,7 @@ The AlertRuleScheduled resource accepts the following [input]({{< relref "/docs/
         <span class="property-type">str</span>
     </dt>
     <dd>{{% md %}}If `suppression_enabled` is `true`, this is ISO 8601 timespan duration, which specifies the amount of time the query should stop running after alert is generated. Defaults to `PT5H`.
-{{% /md %}}</dd>
-    <dt class="property-optional"
+{{% /md %}}</dd><dt class="property-optional"
             title="Optional">
         <span id="suppression_enabled_python">
 <a href="#suppression_enabled_python" style="color: inherit; text-decoration: inherit;">suppression_<wbr>enabled</a>
@@ -998,8 +919,7 @@ The AlertRuleScheduled resource accepts the following [input]({{< relref "/docs/
         <span class="property-type">bool</span>
     </dt>
     <dd>{{% md %}}Should the Sentinel Scheduled Alert Rulea stop running query after alert is generated? Defaults to `false`.
-{{% /md %}}</dd>
-    <dt class="property-optional"
+{{% /md %}}</dd><dt class="property-optional"
             title="Optional">
         <span id="tactics_python">
 <a href="#tactics_python" style="color: inherit; text-decoration: inherit;">tactics</a>
@@ -1008,8 +928,7 @@ The AlertRuleScheduled resource accepts the following [input]({{< relref "/docs/
         <span class="property-type">Sequence[str]</span>
     </dt>
     <dd>{{% md %}}A list of categories of attacks by which to classify the rule. Possible values are `Collection`, `CommandAndControl`, `CredentialAccess`, `DefenseEvasion`, `Discovery`, `Execution`, `Exfiltration`, `Impact`, `InitialAccess`, `LateralMovement`, `Persistence` and `PrivilegeEscalation`.
-{{% /md %}}</dd>
-    <dt class="property-optional"
+{{% /md %}}</dd><dt class="property-optional"
             title="Optional">
         <span id="trigger_operator_python">
 <a href="#trigger_operator_python" style="color: inherit; text-decoration: inherit;">trigger_<wbr>operator</a>
@@ -1018,8 +937,7 @@ The AlertRuleScheduled resource accepts the following [input]({{< relref "/docs/
         <span class="property-type">str</span>
     </dt>
     <dd>{{% md %}}The alert trigger operator, combined with `trigger_threshold`, setting alert threshold of this Sentinel Scheduled Alert Rule. Possible values are `Equal`, `GreaterThan`, `LessThan`, `NotEqual`.
-{{% /md %}}</dd>
-    <dt class="property-optional"
+{{% /md %}}</dd><dt class="property-optional"
             title="Optional">
         <span id="trigger_threshold_python">
 <a href="#trigger_threshold_python" style="color: inherit; text-decoration: inherit;">trigger_<wbr>threshold</a>
@@ -1028,8 +946,7 @@ The AlertRuleScheduled resource accepts the following [input]({{< relref "/docs/
         <span class="property-type">int</span>
     </dt>
     <dd>{{% md %}}The baseline number of query results generated, combined with `trigger_operator`, setting alert threshold of this Sentinel Scheduled Alert Rule.
-{{% /md %}}</dd>
-</dl>
+{{% /md %}}</dd></dl>
 {{% /choosable %}}
 
 
@@ -1040,9 +957,7 @@ All [input](#inputs) properties are implicitly available as output properties. A
 
 
 {{% choosable language csharp %}}
-<dl class="resources-properties">
-
-    <dt class="property-"
+<dl class="resources-properties"><dt class="property-"
             title="">
         <span id="id_csharp">
 <a href="#id_csharp" style="color: inherit; text-decoration: inherit;">Id</a>
@@ -1050,14 +965,11 @@ All [input](#inputs) properties are implicitly available as output properties. A
         <span class="property-indicator"></span>
         <span class="property-type">string</span>
     </dt>
-    <dd>{{% md %}}The provider-assigned unique ID for this managed resource.{{% /md %}}</dd>
-</dl>
+    <dd>{{% md %}}The provider-assigned unique ID for this managed resource.{{% /md %}}</dd></dl>
 {{% /choosable %}}
 
 {{% choosable language go %}}
-<dl class="resources-properties">
-
-    <dt class="property-"
+<dl class="resources-properties"><dt class="property-"
             title="">
         <span id="id_go">
 <a href="#id_go" style="color: inherit; text-decoration: inherit;">Id</a>
@@ -1065,14 +977,11 @@ All [input](#inputs) properties are implicitly available as output properties. A
         <span class="property-indicator"></span>
         <span class="property-type">string</span>
     </dt>
-    <dd>{{% md %}}The provider-assigned unique ID for this managed resource.{{% /md %}}</dd>
-</dl>
+    <dd>{{% md %}}The provider-assigned unique ID for this managed resource.{{% /md %}}</dd></dl>
 {{% /choosable %}}
 
 {{% choosable language nodejs %}}
-<dl class="resources-properties">
-
-    <dt class="property-"
+<dl class="resources-properties"><dt class="property-"
             title="">
         <span id="id_nodejs">
 <a href="#id_nodejs" style="color: inherit; text-decoration: inherit;">id</a>
@@ -1080,14 +989,11 @@ All [input](#inputs) properties are implicitly available as output properties. A
         <span class="property-indicator"></span>
         <span class="property-type">string</span>
     </dt>
-    <dd>{{% md %}}The provider-assigned unique ID for this managed resource.{{% /md %}}</dd>
-</dl>
+    <dd>{{% md %}}The provider-assigned unique ID for this managed resource.{{% /md %}}</dd></dl>
 {{% /choosable %}}
 
 {{% choosable language python %}}
-<dl class="resources-properties">
-
-    <dt class="property-"
+<dl class="resources-properties"><dt class="property-"
             title="">
         <span id="id_python">
 <a href="#id_python" style="color: inherit; text-decoration: inherit;">id</a>
@@ -1095,8 +1001,7 @@ All [input](#inputs) properties are implicitly available as output properties. A
         <span class="property-indicator"></span>
         <span class="property-type">str</span>
     </dt>
-    <dd>{{% md %}}The provider-assigned unique ID for this managed resource.{{% /md %}}</dd>
-</dl>
+    <dd>{{% md %}}The provider-assigned unique ID for this managed resource.{{% /md %}}</dd></dl>
 {{% /choosable %}}
 
 
@@ -1223,9 +1128,7 @@ The following state arguments are supported:
 
 
 {{% choosable language csharp %}}
-<dl class="resources-properties">
-
-    <dt class="property-optional"
+<dl class="resources-properties"><dt class="property-optional"
             title="Optional">
         <span id="state_alertruletemplateguid_csharp">
 <a href="#state_alertruletemplateguid_csharp" style="color: inherit; text-decoration: inherit;">Alert<wbr>Rule<wbr>Template<wbr>Guid</a>
@@ -1234,8 +1137,7 @@ The following state arguments are supported:
         <span class="property-type">string</span>
     </dt>
     <dd>{{% md %}}The GUID of the alert rule template which is used for this Sentinel Scheduled Alert Rule. Changing this forces a new Sentinel Scheduled Alert Rule to be created.
-{{% /md %}}</dd>
-    <dt class="property-optional"
+{{% /md %}}</dd><dt class="property-optional"
             title="Optional">
         <span id="state_description_csharp">
 <a href="#state_description_csharp" style="color: inherit; text-decoration: inherit;">Description</a>
@@ -1244,8 +1146,7 @@ The following state arguments are supported:
         <span class="property-type">string</span>
     </dt>
     <dd>{{% md %}}The description of this Sentinel Scheduled Alert Rule.
-{{% /md %}}</dd>
-    <dt class="property-optional"
+{{% /md %}}</dd><dt class="property-optional"
             title="Optional">
         <span id="state_displayname_csharp">
 <a href="#state_displayname_csharp" style="color: inherit; text-decoration: inherit;">Display<wbr>Name</a>
@@ -1254,8 +1155,7 @@ The following state arguments are supported:
         <span class="property-type">string</span>
     </dt>
     <dd>{{% md %}}The friendly name of this Sentinel Scheduled Alert Rule.
-{{% /md %}}</dd>
-    <dt class="property-optional"
+{{% /md %}}</dd><dt class="property-optional"
             title="Optional">
         <span id="state_enabled_csharp">
 <a href="#state_enabled_csharp" style="color: inherit; text-decoration: inherit;">Enabled</a>
@@ -1264,8 +1164,7 @@ The following state arguments are supported:
         <span class="property-type">bool</span>
     </dt>
     <dd>{{% md %}}Should the Sentinel Scheduled Alert Rule be enabled? Defaults to `true`.
-{{% /md %}}</dd>
-    <dt class="property-optional"
+{{% /md %}}</dd><dt class="property-optional"
             title="Optional">
         <span id="state_eventgrouping_csharp">
 <a href="#state_eventgrouping_csharp" style="color: inherit; text-decoration: inherit;">Event<wbr>Grouping</a>
@@ -1274,8 +1173,7 @@ The following state arguments are supported:
         <span class="property-type"><a href="#alertrulescheduledeventgrouping">Alert<wbr>Rule<wbr>Scheduled<wbr>Event<wbr>Grouping<wbr>Args</a></span>
     </dt>
     <dd>{{% md %}}A `event_grouping` block as defined below.
-{{% /md %}}</dd>
-    <dt class="property-optional"
+{{% /md %}}</dd><dt class="property-optional"
             title="Optional">
         <span id="state_incidentconfiguration_csharp">
 <a href="#state_incidentconfiguration_csharp" style="color: inherit; text-decoration: inherit;">Incident<wbr>Configuration</a>
@@ -1284,8 +1182,7 @@ The following state arguments are supported:
         <span class="property-type"><a href="#alertrulescheduledincidentconfiguration">Alert<wbr>Rule<wbr>Scheduled<wbr>Incident<wbr>Configuration<wbr>Args</a></span>
     </dt>
     <dd>{{% md %}}A `incident_configuration` block as defined below.
-{{% /md %}}</dd>
-    <dt class="property-optional"
+{{% /md %}}</dd><dt class="property-optional"
             title="Optional">
         <span id="state_loganalyticsworkspaceid_csharp">
 <a href="#state_loganalyticsworkspaceid_csharp" style="color: inherit; text-decoration: inherit;">Log<wbr>Analytics<wbr>Workspace<wbr>Id</a>
@@ -1294,8 +1191,7 @@ The following state arguments are supported:
         <span class="property-type">string</span>
     </dt>
     <dd>{{% md %}}The ID of the Log Analytics Workspace this Sentinel Scheduled Alert Rule belongs to. Changing this forces a new Sentinel Scheduled Alert Rule to be created.
-{{% /md %}}</dd>
-    <dt class="property-optional"
+{{% /md %}}</dd><dt class="property-optional"
             title="Optional">
         <span id="state_name_csharp">
 <a href="#state_name_csharp" style="color: inherit; text-decoration: inherit;">Name</a>
@@ -1304,8 +1200,7 @@ The following state arguments are supported:
         <span class="property-type">string</span>
     </dt>
     <dd>{{% md %}}The name which should be used for this Sentinel Scheduled Alert Rule. Changing this forces a new Sentinel Scheduled Alert Rule to be created.
-{{% /md %}}</dd>
-    <dt class="property-optional"
+{{% /md %}}</dd><dt class="property-optional"
             title="Optional">
         <span id="state_query_csharp">
 <a href="#state_query_csharp" style="color: inherit; text-decoration: inherit;">Query</a>
@@ -1314,8 +1209,7 @@ The following state arguments are supported:
         <span class="property-type">string</span>
     </dt>
     <dd>{{% md %}}The query of this Sentinel Scheduled Alert Rule.
-{{% /md %}}</dd>
-    <dt class="property-optional"
+{{% /md %}}</dd><dt class="property-optional"
             title="Optional">
         <span id="state_queryfrequency_csharp">
 <a href="#state_queryfrequency_csharp" style="color: inherit; text-decoration: inherit;">Query<wbr>Frequency</a>
@@ -1324,8 +1218,7 @@ The following state arguments are supported:
         <span class="property-type">string</span>
     </dt>
     <dd>{{% md %}}The ISO 8601 timespan duration between two consecutive queries. Defaults to `PT5H`.
-{{% /md %}}</dd>
-    <dt class="property-optional"
+{{% /md %}}</dd><dt class="property-optional"
             title="Optional">
         <span id="state_queryperiod_csharp">
 <a href="#state_queryperiod_csharp" style="color: inherit; text-decoration: inherit;">Query<wbr>Period</a>
@@ -1334,8 +1227,7 @@ The following state arguments are supported:
         <span class="property-type">string</span>
     </dt>
     <dd>{{% md %}}The ISO 8601 timespan duration, which determine the time period of the data covered by the query. For example, it can query the past 10 minutes of data, or the past 6 hours of data. Defaults to `PT5H`.
-{{% /md %}}</dd>
-    <dt class="property-optional"
+{{% /md %}}</dd><dt class="property-optional"
             title="Optional">
         <span id="state_severity_csharp">
 <a href="#state_severity_csharp" style="color: inherit; text-decoration: inherit;">Severity</a>
@@ -1344,8 +1236,7 @@ The following state arguments are supported:
         <span class="property-type">string</span>
     </dt>
     <dd>{{% md %}}The alert severity of this Sentinel Scheduled Alert Rule. Possible values are `High`, `Medium`, `Low` and `Informational`.
-{{% /md %}}</dd>
-    <dt class="property-optional"
+{{% /md %}}</dd><dt class="property-optional"
             title="Optional">
         <span id="state_suppressionduration_csharp">
 <a href="#state_suppressionduration_csharp" style="color: inherit; text-decoration: inherit;">Suppression<wbr>Duration</a>
@@ -1354,8 +1245,7 @@ The following state arguments are supported:
         <span class="property-type">string</span>
     </dt>
     <dd>{{% md %}}If `suppression_enabled` is `true`, this is ISO 8601 timespan duration, which specifies the amount of time the query should stop running after alert is generated. Defaults to `PT5H`.
-{{% /md %}}</dd>
-    <dt class="property-optional"
+{{% /md %}}</dd><dt class="property-optional"
             title="Optional">
         <span id="state_suppressionenabled_csharp">
 <a href="#state_suppressionenabled_csharp" style="color: inherit; text-decoration: inherit;">Suppression<wbr>Enabled</a>
@@ -1364,8 +1254,7 @@ The following state arguments are supported:
         <span class="property-type">bool</span>
     </dt>
     <dd>{{% md %}}Should the Sentinel Scheduled Alert Rulea stop running query after alert is generated? Defaults to `false`.
-{{% /md %}}</dd>
-    <dt class="property-optional"
+{{% /md %}}</dd><dt class="property-optional"
             title="Optional">
         <span id="state_tactics_csharp">
 <a href="#state_tactics_csharp" style="color: inherit; text-decoration: inherit;">Tactics</a>
@@ -1374,8 +1263,7 @@ The following state arguments are supported:
         <span class="property-type">List&lt;string&gt;</span>
     </dt>
     <dd>{{% md %}}A list of categories of attacks by which to classify the rule. Possible values are `Collection`, `CommandAndControl`, `CredentialAccess`, `DefenseEvasion`, `Discovery`, `Execution`, `Exfiltration`, `Impact`, `InitialAccess`, `LateralMovement`, `Persistence` and `PrivilegeEscalation`.
-{{% /md %}}</dd>
-    <dt class="property-optional"
+{{% /md %}}</dd><dt class="property-optional"
             title="Optional">
         <span id="state_triggeroperator_csharp">
 <a href="#state_triggeroperator_csharp" style="color: inherit; text-decoration: inherit;">Trigger<wbr>Operator</a>
@@ -1384,8 +1272,7 @@ The following state arguments are supported:
         <span class="property-type">string</span>
     </dt>
     <dd>{{% md %}}The alert trigger operator, combined with `trigger_threshold`, setting alert threshold of this Sentinel Scheduled Alert Rule. Possible values are `Equal`, `GreaterThan`, `LessThan`, `NotEqual`.
-{{% /md %}}</dd>
-    <dt class="property-optional"
+{{% /md %}}</dd><dt class="property-optional"
             title="Optional">
         <span id="state_triggerthreshold_csharp">
 <a href="#state_triggerthreshold_csharp" style="color: inherit; text-decoration: inherit;">Trigger<wbr>Threshold</a>
@@ -1394,14 +1281,11 @@ The following state arguments are supported:
         <span class="property-type">int</span>
     </dt>
     <dd>{{% md %}}The baseline number of query results generated, combined with `trigger_operator`, setting alert threshold of this Sentinel Scheduled Alert Rule.
-{{% /md %}}</dd>
-</dl>
+{{% /md %}}</dd></dl>
 {{% /choosable %}}
 
 {{% choosable language go %}}
-<dl class="resources-properties">
-
-    <dt class="property-optional"
+<dl class="resources-properties"><dt class="property-optional"
             title="Optional">
         <span id="state_alertruletemplateguid_go">
 <a href="#state_alertruletemplateguid_go" style="color: inherit; text-decoration: inherit;">Alert<wbr>Rule<wbr>Template<wbr>Guid</a>
@@ -1410,8 +1294,7 @@ The following state arguments are supported:
         <span class="property-type">string</span>
     </dt>
     <dd>{{% md %}}The GUID of the alert rule template which is used for this Sentinel Scheduled Alert Rule. Changing this forces a new Sentinel Scheduled Alert Rule to be created.
-{{% /md %}}</dd>
-    <dt class="property-optional"
+{{% /md %}}</dd><dt class="property-optional"
             title="Optional">
         <span id="state_description_go">
 <a href="#state_description_go" style="color: inherit; text-decoration: inherit;">Description</a>
@@ -1420,8 +1303,7 @@ The following state arguments are supported:
         <span class="property-type">string</span>
     </dt>
     <dd>{{% md %}}The description of this Sentinel Scheduled Alert Rule.
-{{% /md %}}</dd>
-    <dt class="property-optional"
+{{% /md %}}</dd><dt class="property-optional"
             title="Optional">
         <span id="state_displayname_go">
 <a href="#state_displayname_go" style="color: inherit; text-decoration: inherit;">Display<wbr>Name</a>
@@ -1430,8 +1312,7 @@ The following state arguments are supported:
         <span class="property-type">string</span>
     </dt>
     <dd>{{% md %}}The friendly name of this Sentinel Scheduled Alert Rule.
-{{% /md %}}</dd>
-    <dt class="property-optional"
+{{% /md %}}</dd><dt class="property-optional"
             title="Optional">
         <span id="state_enabled_go">
 <a href="#state_enabled_go" style="color: inherit; text-decoration: inherit;">Enabled</a>
@@ -1440,8 +1321,7 @@ The following state arguments are supported:
         <span class="property-type">bool</span>
     </dt>
     <dd>{{% md %}}Should the Sentinel Scheduled Alert Rule be enabled? Defaults to `true`.
-{{% /md %}}</dd>
-    <dt class="property-optional"
+{{% /md %}}</dd><dt class="property-optional"
             title="Optional">
         <span id="state_eventgrouping_go">
 <a href="#state_eventgrouping_go" style="color: inherit; text-decoration: inherit;">Event<wbr>Grouping</a>
@@ -1450,8 +1330,7 @@ The following state arguments are supported:
         <span class="property-type"><a href="#alertrulescheduledeventgrouping">Alert<wbr>Rule<wbr>Scheduled<wbr>Event<wbr>Grouping</a></span>
     </dt>
     <dd>{{% md %}}A `event_grouping` block as defined below.
-{{% /md %}}</dd>
-    <dt class="property-optional"
+{{% /md %}}</dd><dt class="property-optional"
             title="Optional">
         <span id="state_incidentconfiguration_go">
 <a href="#state_incidentconfiguration_go" style="color: inherit; text-decoration: inherit;">Incident<wbr>Configuration</a>
@@ -1460,8 +1339,7 @@ The following state arguments are supported:
         <span class="property-type"><a href="#alertrulescheduledincidentconfiguration">Alert<wbr>Rule<wbr>Scheduled<wbr>Incident<wbr>Configuration</a></span>
     </dt>
     <dd>{{% md %}}A `incident_configuration` block as defined below.
-{{% /md %}}</dd>
-    <dt class="property-optional"
+{{% /md %}}</dd><dt class="property-optional"
             title="Optional">
         <span id="state_loganalyticsworkspaceid_go">
 <a href="#state_loganalyticsworkspaceid_go" style="color: inherit; text-decoration: inherit;">Log<wbr>Analytics<wbr>Workspace<wbr>Id</a>
@@ -1470,8 +1348,7 @@ The following state arguments are supported:
         <span class="property-type">string</span>
     </dt>
     <dd>{{% md %}}The ID of the Log Analytics Workspace this Sentinel Scheduled Alert Rule belongs to. Changing this forces a new Sentinel Scheduled Alert Rule to be created.
-{{% /md %}}</dd>
-    <dt class="property-optional"
+{{% /md %}}</dd><dt class="property-optional"
             title="Optional">
         <span id="state_name_go">
 <a href="#state_name_go" style="color: inherit; text-decoration: inherit;">Name</a>
@@ -1480,8 +1357,7 @@ The following state arguments are supported:
         <span class="property-type">string</span>
     </dt>
     <dd>{{% md %}}The name which should be used for this Sentinel Scheduled Alert Rule. Changing this forces a new Sentinel Scheduled Alert Rule to be created.
-{{% /md %}}</dd>
-    <dt class="property-optional"
+{{% /md %}}</dd><dt class="property-optional"
             title="Optional">
         <span id="state_query_go">
 <a href="#state_query_go" style="color: inherit; text-decoration: inherit;">Query</a>
@@ -1490,8 +1366,7 @@ The following state arguments are supported:
         <span class="property-type">string</span>
     </dt>
     <dd>{{% md %}}The query of this Sentinel Scheduled Alert Rule.
-{{% /md %}}</dd>
-    <dt class="property-optional"
+{{% /md %}}</dd><dt class="property-optional"
             title="Optional">
         <span id="state_queryfrequency_go">
 <a href="#state_queryfrequency_go" style="color: inherit; text-decoration: inherit;">Query<wbr>Frequency</a>
@@ -1500,8 +1375,7 @@ The following state arguments are supported:
         <span class="property-type">string</span>
     </dt>
     <dd>{{% md %}}The ISO 8601 timespan duration between two consecutive queries. Defaults to `PT5H`.
-{{% /md %}}</dd>
-    <dt class="property-optional"
+{{% /md %}}</dd><dt class="property-optional"
             title="Optional">
         <span id="state_queryperiod_go">
 <a href="#state_queryperiod_go" style="color: inherit; text-decoration: inherit;">Query<wbr>Period</a>
@@ -1510,8 +1384,7 @@ The following state arguments are supported:
         <span class="property-type">string</span>
     </dt>
     <dd>{{% md %}}The ISO 8601 timespan duration, which determine the time period of the data covered by the query. For example, it can query the past 10 minutes of data, or the past 6 hours of data. Defaults to `PT5H`.
-{{% /md %}}</dd>
-    <dt class="property-optional"
+{{% /md %}}</dd><dt class="property-optional"
             title="Optional">
         <span id="state_severity_go">
 <a href="#state_severity_go" style="color: inherit; text-decoration: inherit;">Severity</a>
@@ -1520,8 +1393,7 @@ The following state arguments are supported:
         <span class="property-type">string</span>
     </dt>
     <dd>{{% md %}}The alert severity of this Sentinel Scheduled Alert Rule. Possible values are `High`, `Medium`, `Low` and `Informational`.
-{{% /md %}}</dd>
-    <dt class="property-optional"
+{{% /md %}}</dd><dt class="property-optional"
             title="Optional">
         <span id="state_suppressionduration_go">
 <a href="#state_suppressionduration_go" style="color: inherit; text-decoration: inherit;">Suppression<wbr>Duration</a>
@@ -1530,8 +1402,7 @@ The following state arguments are supported:
         <span class="property-type">string</span>
     </dt>
     <dd>{{% md %}}If `suppression_enabled` is `true`, this is ISO 8601 timespan duration, which specifies the amount of time the query should stop running after alert is generated. Defaults to `PT5H`.
-{{% /md %}}</dd>
-    <dt class="property-optional"
+{{% /md %}}</dd><dt class="property-optional"
             title="Optional">
         <span id="state_suppressionenabled_go">
 <a href="#state_suppressionenabled_go" style="color: inherit; text-decoration: inherit;">Suppression<wbr>Enabled</a>
@@ -1540,8 +1411,7 @@ The following state arguments are supported:
         <span class="property-type">bool</span>
     </dt>
     <dd>{{% md %}}Should the Sentinel Scheduled Alert Rulea stop running query after alert is generated? Defaults to `false`.
-{{% /md %}}</dd>
-    <dt class="property-optional"
+{{% /md %}}</dd><dt class="property-optional"
             title="Optional">
         <span id="state_tactics_go">
 <a href="#state_tactics_go" style="color: inherit; text-decoration: inherit;">Tactics</a>
@@ -1550,8 +1420,7 @@ The following state arguments are supported:
         <span class="property-type">[]string</span>
     </dt>
     <dd>{{% md %}}A list of categories of attacks by which to classify the rule. Possible values are `Collection`, `CommandAndControl`, `CredentialAccess`, `DefenseEvasion`, `Discovery`, `Execution`, `Exfiltration`, `Impact`, `InitialAccess`, `LateralMovement`, `Persistence` and `PrivilegeEscalation`.
-{{% /md %}}</dd>
-    <dt class="property-optional"
+{{% /md %}}</dd><dt class="property-optional"
             title="Optional">
         <span id="state_triggeroperator_go">
 <a href="#state_triggeroperator_go" style="color: inherit; text-decoration: inherit;">Trigger<wbr>Operator</a>
@@ -1560,8 +1429,7 @@ The following state arguments are supported:
         <span class="property-type">string</span>
     </dt>
     <dd>{{% md %}}The alert trigger operator, combined with `trigger_threshold`, setting alert threshold of this Sentinel Scheduled Alert Rule. Possible values are `Equal`, `GreaterThan`, `LessThan`, `NotEqual`.
-{{% /md %}}</dd>
-    <dt class="property-optional"
+{{% /md %}}</dd><dt class="property-optional"
             title="Optional">
         <span id="state_triggerthreshold_go">
 <a href="#state_triggerthreshold_go" style="color: inherit; text-decoration: inherit;">Trigger<wbr>Threshold</a>
@@ -1570,14 +1438,11 @@ The following state arguments are supported:
         <span class="property-type">int</span>
     </dt>
     <dd>{{% md %}}The baseline number of query results generated, combined with `trigger_operator`, setting alert threshold of this Sentinel Scheduled Alert Rule.
-{{% /md %}}</dd>
-</dl>
+{{% /md %}}</dd></dl>
 {{% /choosable %}}
 
 {{% choosable language nodejs %}}
-<dl class="resources-properties">
-
-    <dt class="property-optional"
+<dl class="resources-properties"><dt class="property-optional"
             title="Optional">
         <span id="state_alertruletemplateguid_nodejs">
 <a href="#state_alertruletemplateguid_nodejs" style="color: inherit; text-decoration: inherit;">alert<wbr>Rule<wbr>Template<wbr>Guid</a>
@@ -1586,8 +1451,7 @@ The following state arguments are supported:
         <span class="property-type">string</span>
     </dt>
     <dd>{{% md %}}The GUID of the alert rule template which is used for this Sentinel Scheduled Alert Rule. Changing this forces a new Sentinel Scheduled Alert Rule to be created.
-{{% /md %}}</dd>
-    <dt class="property-optional"
+{{% /md %}}</dd><dt class="property-optional"
             title="Optional">
         <span id="state_description_nodejs">
 <a href="#state_description_nodejs" style="color: inherit; text-decoration: inherit;">description</a>
@@ -1596,8 +1460,7 @@ The following state arguments are supported:
         <span class="property-type">string</span>
     </dt>
     <dd>{{% md %}}The description of this Sentinel Scheduled Alert Rule.
-{{% /md %}}</dd>
-    <dt class="property-optional"
+{{% /md %}}</dd><dt class="property-optional"
             title="Optional">
         <span id="state_displayname_nodejs">
 <a href="#state_displayname_nodejs" style="color: inherit; text-decoration: inherit;">display<wbr>Name</a>
@@ -1606,8 +1469,7 @@ The following state arguments are supported:
         <span class="property-type">string</span>
     </dt>
     <dd>{{% md %}}The friendly name of this Sentinel Scheduled Alert Rule.
-{{% /md %}}</dd>
-    <dt class="property-optional"
+{{% /md %}}</dd><dt class="property-optional"
             title="Optional">
         <span id="state_enabled_nodejs">
 <a href="#state_enabled_nodejs" style="color: inherit; text-decoration: inherit;">enabled</a>
@@ -1616,8 +1478,7 @@ The following state arguments are supported:
         <span class="property-type">boolean</span>
     </dt>
     <dd>{{% md %}}Should the Sentinel Scheduled Alert Rule be enabled? Defaults to `true`.
-{{% /md %}}</dd>
-    <dt class="property-optional"
+{{% /md %}}</dd><dt class="property-optional"
             title="Optional">
         <span id="state_eventgrouping_nodejs">
 <a href="#state_eventgrouping_nodejs" style="color: inherit; text-decoration: inherit;">event<wbr>Grouping</a>
@@ -1626,8 +1487,7 @@ The following state arguments are supported:
         <span class="property-type"><a href="#alertrulescheduledeventgrouping">Alert<wbr>Rule<wbr>Scheduled<wbr>Event<wbr>Grouping</a></span>
     </dt>
     <dd>{{% md %}}A `event_grouping` block as defined below.
-{{% /md %}}</dd>
-    <dt class="property-optional"
+{{% /md %}}</dd><dt class="property-optional"
             title="Optional">
         <span id="state_incidentconfiguration_nodejs">
 <a href="#state_incidentconfiguration_nodejs" style="color: inherit; text-decoration: inherit;">incident<wbr>Configuration</a>
@@ -1636,8 +1496,7 @@ The following state arguments are supported:
         <span class="property-type"><a href="#alertrulescheduledincidentconfiguration">Alert<wbr>Rule<wbr>Scheduled<wbr>Incident<wbr>Configuration</a></span>
     </dt>
     <dd>{{% md %}}A `incident_configuration` block as defined below.
-{{% /md %}}</dd>
-    <dt class="property-optional"
+{{% /md %}}</dd><dt class="property-optional"
             title="Optional">
         <span id="state_loganalyticsworkspaceid_nodejs">
 <a href="#state_loganalyticsworkspaceid_nodejs" style="color: inherit; text-decoration: inherit;">log<wbr>Analytics<wbr>Workspace<wbr>Id</a>
@@ -1646,8 +1505,7 @@ The following state arguments are supported:
         <span class="property-type">string</span>
     </dt>
     <dd>{{% md %}}The ID of the Log Analytics Workspace this Sentinel Scheduled Alert Rule belongs to. Changing this forces a new Sentinel Scheduled Alert Rule to be created.
-{{% /md %}}</dd>
-    <dt class="property-optional"
+{{% /md %}}</dd><dt class="property-optional"
             title="Optional">
         <span id="state_name_nodejs">
 <a href="#state_name_nodejs" style="color: inherit; text-decoration: inherit;">name</a>
@@ -1656,8 +1514,7 @@ The following state arguments are supported:
         <span class="property-type">string</span>
     </dt>
     <dd>{{% md %}}The name which should be used for this Sentinel Scheduled Alert Rule. Changing this forces a new Sentinel Scheduled Alert Rule to be created.
-{{% /md %}}</dd>
-    <dt class="property-optional"
+{{% /md %}}</dd><dt class="property-optional"
             title="Optional">
         <span id="state_query_nodejs">
 <a href="#state_query_nodejs" style="color: inherit; text-decoration: inherit;">query</a>
@@ -1666,8 +1523,7 @@ The following state arguments are supported:
         <span class="property-type">string</span>
     </dt>
     <dd>{{% md %}}The query of this Sentinel Scheduled Alert Rule.
-{{% /md %}}</dd>
-    <dt class="property-optional"
+{{% /md %}}</dd><dt class="property-optional"
             title="Optional">
         <span id="state_queryfrequency_nodejs">
 <a href="#state_queryfrequency_nodejs" style="color: inherit; text-decoration: inherit;">query<wbr>Frequency</a>
@@ -1676,8 +1532,7 @@ The following state arguments are supported:
         <span class="property-type">string</span>
     </dt>
     <dd>{{% md %}}The ISO 8601 timespan duration between two consecutive queries. Defaults to `PT5H`.
-{{% /md %}}</dd>
-    <dt class="property-optional"
+{{% /md %}}</dd><dt class="property-optional"
             title="Optional">
         <span id="state_queryperiod_nodejs">
 <a href="#state_queryperiod_nodejs" style="color: inherit; text-decoration: inherit;">query<wbr>Period</a>
@@ -1686,8 +1541,7 @@ The following state arguments are supported:
         <span class="property-type">string</span>
     </dt>
     <dd>{{% md %}}The ISO 8601 timespan duration, which determine the time period of the data covered by the query. For example, it can query the past 10 minutes of data, or the past 6 hours of data. Defaults to `PT5H`.
-{{% /md %}}</dd>
-    <dt class="property-optional"
+{{% /md %}}</dd><dt class="property-optional"
             title="Optional">
         <span id="state_severity_nodejs">
 <a href="#state_severity_nodejs" style="color: inherit; text-decoration: inherit;">severity</a>
@@ -1696,8 +1550,7 @@ The following state arguments are supported:
         <span class="property-type">string</span>
     </dt>
     <dd>{{% md %}}The alert severity of this Sentinel Scheduled Alert Rule. Possible values are `High`, `Medium`, `Low` and `Informational`.
-{{% /md %}}</dd>
-    <dt class="property-optional"
+{{% /md %}}</dd><dt class="property-optional"
             title="Optional">
         <span id="state_suppressionduration_nodejs">
 <a href="#state_suppressionduration_nodejs" style="color: inherit; text-decoration: inherit;">suppression<wbr>Duration</a>
@@ -1706,8 +1559,7 @@ The following state arguments are supported:
         <span class="property-type">string</span>
     </dt>
     <dd>{{% md %}}If `suppression_enabled` is `true`, this is ISO 8601 timespan duration, which specifies the amount of time the query should stop running after alert is generated. Defaults to `PT5H`.
-{{% /md %}}</dd>
-    <dt class="property-optional"
+{{% /md %}}</dd><dt class="property-optional"
             title="Optional">
         <span id="state_suppressionenabled_nodejs">
 <a href="#state_suppressionenabled_nodejs" style="color: inherit; text-decoration: inherit;">suppression<wbr>Enabled</a>
@@ -1716,8 +1568,7 @@ The following state arguments are supported:
         <span class="property-type">boolean</span>
     </dt>
     <dd>{{% md %}}Should the Sentinel Scheduled Alert Rulea stop running query after alert is generated? Defaults to `false`.
-{{% /md %}}</dd>
-    <dt class="property-optional"
+{{% /md %}}</dd><dt class="property-optional"
             title="Optional">
         <span id="state_tactics_nodejs">
 <a href="#state_tactics_nodejs" style="color: inherit; text-decoration: inherit;">tactics</a>
@@ -1726,8 +1577,7 @@ The following state arguments are supported:
         <span class="property-type">string[]</span>
     </dt>
     <dd>{{% md %}}A list of categories of attacks by which to classify the rule. Possible values are `Collection`, `CommandAndControl`, `CredentialAccess`, `DefenseEvasion`, `Discovery`, `Execution`, `Exfiltration`, `Impact`, `InitialAccess`, `LateralMovement`, `Persistence` and `PrivilegeEscalation`.
-{{% /md %}}</dd>
-    <dt class="property-optional"
+{{% /md %}}</dd><dt class="property-optional"
             title="Optional">
         <span id="state_triggeroperator_nodejs">
 <a href="#state_triggeroperator_nodejs" style="color: inherit; text-decoration: inherit;">trigger<wbr>Operator</a>
@@ -1736,8 +1586,7 @@ The following state arguments are supported:
         <span class="property-type">string</span>
     </dt>
     <dd>{{% md %}}The alert trigger operator, combined with `trigger_threshold`, setting alert threshold of this Sentinel Scheduled Alert Rule. Possible values are `Equal`, `GreaterThan`, `LessThan`, `NotEqual`.
-{{% /md %}}</dd>
-    <dt class="property-optional"
+{{% /md %}}</dd><dt class="property-optional"
             title="Optional">
         <span id="state_triggerthreshold_nodejs">
 <a href="#state_triggerthreshold_nodejs" style="color: inherit; text-decoration: inherit;">trigger<wbr>Threshold</a>
@@ -1746,14 +1595,11 @@ The following state arguments are supported:
         <span class="property-type">number</span>
     </dt>
     <dd>{{% md %}}The baseline number of query results generated, combined with `trigger_operator`, setting alert threshold of this Sentinel Scheduled Alert Rule.
-{{% /md %}}</dd>
-</dl>
+{{% /md %}}</dd></dl>
 {{% /choosable %}}
 
 {{% choosable language python %}}
-<dl class="resources-properties">
-
-    <dt class="property-optional"
+<dl class="resources-properties"><dt class="property-optional"
             title="Optional">
         <span id="state_alert_rule_template_guid_python">
 <a href="#state_alert_rule_template_guid_python" style="color: inherit; text-decoration: inherit;">alert_<wbr>rule_<wbr>template_<wbr>guid</a>
@@ -1762,8 +1608,7 @@ The following state arguments are supported:
         <span class="property-type">str</span>
     </dt>
     <dd>{{% md %}}The GUID of the alert rule template which is used for this Sentinel Scheduled Alert Rule. Changing this forces a new Sentinel Scheduled Alert Rule to be created.
-{{% /md %}}</dd>
-    <dt class="property-optional"
+{{% /md %}}</dd><dt class="property-optional"
             title="Optional">
         <span id="state_description_python">
 <a href="#state_description_python" style="color: inherit; text-decoration: inherit;">description</a>
@@ -1772,8 +1617,7 @@ The following state arguments are supported:
         <span class="property-type">str</span>
     </dt>
     <dd>{{% md %}}The description of this Sentinel Scheduled Alert Rule.
-{{% /md %}}</dd>
-    <dt class="property-optional"
+{{% /md %}}</dd><dt class="property-optional"
             title="Optional">
         <span id="state_display_name_python">
 <a href="#state_display_name_python" style="color: inherit; text-decoration: inherit;">display_<wbr>name</a>
@@ -1782,8 +1626,7 @@ The following state arguments are supported:
         <span class="property-type">str</span>
     </dt>
     <dd>{{% md %}}The friendly name of this Sentinel Scheduled Alert Rule.
-{{% /md %}}</dd>
-    <dt class="property-optional"
+{{% /md %}}</dd><dt class="property-optional"
             title="Optional">
         <span id="state_enabled_python">
 <a href="#state_enabled_python" style="color: inherit; text-decoration: inherit;">enabled</a>
@@ -1792,8 +1635,7 @@ The following state arguments are supported:
         <span class="property-type">bool</span>
     </dt>
     <dd>{{% md %}}Should the Sentinel Scheduled Alert Rule be enabled? Defaults to `true`.
-{{% /md %}}</dd>
-    <dt class="property-optional"
+{{% /md %}}</dd><dt class="property-optional"
             title="Optional">
         <span id="state_event_grouping_python">
 <a href="#state_event_grouping_python" style="color: inherit; text-decoration: inherit;">event_<wbr>grouping</a>
@@ -1802,8 +1644,7 @@ The following state arguments are supported:
         <span class="property-type"><a href="#alertrulescheduledeventgrouping">Alert<wbr>Rule<wbr>Scheduled<wbr>Event<wbr>Grouping<wbr>Args</a></span>
     </dt>
     <dd>{{% md %}}A `event_grouping` block as defined below.
-{{% /md %}}</dd>
-    <dt class="property-optional"
+{{% /md %}}</dd><dt class="property-optional"
             title="Optional">
         <span id="state_incident_configuration_python">
 <a href="#state_incident_configuration_python" style="color: inherit; text-decoration: inherit;">incident_<wbr>configuration</a>
@@ -1812,8 +1653,7 @@ The following state arguments are supported:
         <span class="property-type"><a href="#alertrulescheduledincidentconfiguration">Alert<wbr>Rule<wbr>Scheduled<wbr>Incident<wbr>Configuration<wbr>Args</a></span>
     </dt>
     <dd>{{% md %}}A `incident_configuration` block as defined below.
-{{% /md %}}</dd>
-    <dt class="property-optional"
+{{% /md %}}</dd><dt class="property-optional"
             title="Optional">
         <span id="state_log_analytics_workspace_id_python">
 <a href="#state_log_analytics_workspace_id_python" style="color: inherit; text-decoration: inherit;">log_<wbr>analytics_<wbr>workspace_<wbr>id</a>
@@ -1822,8 +1662,7 @@ The following state arguments are supported:
         <span class="property-type">str</span>
     </dt>
     <dd>{{% md %}}The ID of the Log Analytics Workspace this Sentinel Scheduled Alert Rule belongs to. Changing this forces a new Sentinel Scheduled Alert Rule to be created.
-{{% /md %}}</dd>
-    <dt class="property-optional"
+{{% /md %}}</dd><dt class="property-optional"
             title="Optional">
         <span id="state_name_python">
 <a href="#state_name_python" style="color: inherit; text-decoration: inherit;">name</a>
@@ -1832,8 +1671,7 @@ The following state arguments are supported:
         <span class="property-type">str</span>
     </dt>
     <dd>{{% md %}}The name which should be used for this Sentinel Scheduled Alert Rule. Changing this forces a new Sentinel Scheduled Alert Rule to be created.
-{{% /md %}}</dd>
-    <dt class="property-optional"
+{{% /md %}}</dd><dt class="property-optional"
             title="Optional">
         <span id="state_query_python">
 <a href="#state_query_python" style="color: inherit; text-decoration: inherit;">query</a>
@@ -1842,8 +1680,7 @@ The following state arguments are supported:
         <span class="property-type">str</span>
     </dt>
     <dd>{{% md %}}The query of this Sentinel Scheduled Alert Rule.
-{{% /md %}}</dd>
-    <dt class="property-optional"
+{{% /md %}}</dd><dt class="property-optional"
             title="Optional">
         <span id="state_query_frequency_python">
 <a href="#state_query_frequency_python" style="color: inherit; text-decoration: inherit;">query_<wbr>frequency</a>
@@ -1852,8 +1689,7 @@ The following state arguments are supported:
         <span class="property-type">str</span>
     </dt>
     <dd>{{% md %}}The ISO 8601 timespan duration between two consecutive queries. Defaults to `PT5H`.
-{{% /md %}}</dd>
-    <dt class="property-optional"
+{{% /md %}}</dd><dt class="property-optional"
             title="Optional">
         <span id="state_query_period_python">
 <a href="#state_query_period_python" style="color: inherit; text-decoration: inherit;">query_<wbr>period</a>
@@ -1862,8 +1698,7 @@ The following state arguments are supported:
         <span class="property-type">str</span>
     </dt>
     <dd>{{% md %}}The ISO 8601 timespan duration, which determine the time period of the data covered by the query. For example, it can query the past 10 minutes of data, or the past 6 hours of data. Defaults to `PT5H`.
-{{% /md %}}</dd>
-    <dt class="property-optional"
+{{% /md %}}</dd><dt class="property-optional"
             title="Optional">
         <span id="state_severity_python">
 <a href="#state_severity_python" style="color: inherit; text-decoration: inherit;">severity</a>
@@ -1872,8 +1707,7 @@ The following state arguments are supported:
         <span class="property-type">str</span>
     </dt>
     <dd>{{% md %}}The alert severity of this Sentinel Scheduled Alert Rule. Possible values are `High`, `Medium`, `Low` and `Informational`.
-{{% /md %}}</dd>
-    <dt class="property-optional"
+{{% /md %}}</dd><dt class="property-optional"
             title="Optional">
         <span id="state_suppression_duration_python">
 <a href="#state_suppression_duration_python" style="color: inherit; text-decoration: inherit;">suppression_<wbr>duration</a>
@@ -1882,8 +1716,7 @@ The following state arguments are supported:
         <span class="property-type">str</span>
     </dt>
     <dd>{{% md %}}If `suppression_enabled` is `true`, this is ISO 8601 timespan duration, which specifies the amount of time the query should stop running after alert is generated. Defaults to `PT5H`.
-{{% /md %}}</dd>
-    <dt class="property-optional"
+{{% /md %}}</dd><dt class="property-optional"
             title="Optional">
         <span id="state_suppression_enabled_python">
 <a href="#state_suppression_enabled_python" style="color: inherit; text-decoration: inherit;">suppression_<wbr>enabled</a>
@@ -1892,8 +1725,7 @@ The following state arguments are supported:
         <span class="property-type">bool</span>
     </dt>
     <dd>{{% md %}}Should the Sentinel Scheduled Alert Rulea stop running query after alert is generated? Defaults to `false`.
-{{% /md %}}</dd>
-    <dt class="property-optional"
+{{% /md %}}</dd><dt class="property-optional"
             title="Optional">
         <span id="state_tactics_python">
 <a href="#state_tactics_python" style="color: inherit; text-decoration: inherit;">tactics</a>
@@ -1902,8 +1734,7 @@ The following state arguments are supported:
         <span class="property-type">Sequence[str]</span>
     </dt>
     <dd>{{% md %}}A list of categories of attacks by which to classify the rule. Possible values are `Collection`, `CommandAndControl`, `CredentialAccess`, `DefenseEvasion`, `Discovery`, `Execution`, `Exfiltration`, `Impact`, `InitialAccess`, `LateralMovement`, `Persistence` and `PrivilegeEscalation`.
-{{% /md %}}</dd>
-    <dt class="property-optional"
+{{% /md %}}</dd><dt class="property-optional"
             title="Optional">
         <span id="state_trigger_operator_python">
 <a href="#state_trigger_operator_python" style="color: inherit; text-decoration: inherit;">trigger_<wbr>operator</a>
@@ -1912,8 +1743,7 @@ The following state arguments are supported:
         <span class="property-type">str</span>
     </dt>
     <dd>{{% md %}}The alert trigger operator, combined with `trigger_threshold`, setting alert threshold of this Sentinel Scheduled Alert Rule. Possible values are `Equal`, `GreaterThan`, `LessThan`, `NotEqual`.
-{{% /md %}}</dd>
-    <dt class="property-optional"
+{{% /md %}}</dd><dt class="property-optional"
             title="Optional">
         <span id="state_trigger_threshold_python">
 <a href="#state_trigger_threshold_python" style="color: inherit; text-decoration: inherit;">trigger_<wbr>threshold</a>
@@ -1922,8 +1752,7 @@ The following state arguments are supported:
         <span class="property-type">int</span>
     </dt>
     <dd>{{% md %}}The baseline number of query results generated, combined with `trigger_operator`, setting alert threshold of this Sentinel Scheduled Alert Rule.
-{{% /md %}}</dd>
-</dl>
+{{% /md %}}</dd></dl>
 {{% /choosable %}}
 
 
@@ -1938,9 +1767,7 @@ The following state arguments are supported:
 <h4 id="alertrulescheduledeventgrouping">Alert<wbr>Rule<wbr>Scheduled<wbr>Event<wbr>Grouping</h4>
 
 {{% choosable language csharp %}}
-<dl class="resources-properties">
-
-    <dt class="property-required"
+<dl class="resources-properties"><dt class="property-required"
             title="Required">
         <span id="aggregationmethod_csharp">
 <a href="#aggregationmethod_csharp" style="color: inherit; text-decoration: inherit;">Aggregation<wbr>Method</a>
@@ -1949,14 +1776,11 @@ The following state arguments are supported:
         <span class="property-type">string</span>
     </dt>
     <dd>{{% md %}}The aggregation type of grouping the events.
-{{% /md %}}</dd>
-</dl>
+{{% /md %}}</dd></dl>
 {{% /choosable %}}
 
 {{% choosable language go %}}
-<dl class="resources-properties">
-
-    <dt class="property-required"
+<dl class="resources-properties"><dt class="property-required"
             title="Required">
         <span id="aggregationmethod_go">
 <a href="#aggregationmethod_go" style="color: inherit; text-decoration: inherit;">Aggregation<wbr>Method</a>
@@ -1965,14 +1789,11 @@ The following state arguments are supported:
         <span class="property-type">string</span>
     </dt>
     <dd>{{% md %}}The aggregation type of grouping the events.
-{{% /md %}}</dd>
-</dl>
+{{% /md %}}</dd></dl>
 {{% /choosable %}}
 
 {{% choosable language nodejs %}}
-<dl class="resources-properties">
-
-    <dt class="property-required"
+<dl class="resources-properties"><dt class="property-required"
             title="Required">
         <span id="aggregationmethod_nodejs">
 <a href="#aggregationmethod_nodejs" style="color: inherit; text-decoration: inherit;">aggregation<wbr>Method</a>
@@ -1981,14 +1802,11 @@ The following state arguments are supported:
         <span class="property-type">string</span>
     </dt>
     <dd>{{% md %}}The aggregation type of grouping the events.
-{{% /md %}}</dd>
-</dl>
+{{% /md %}}</dd></dl>
 {{% /choosable %}}
 
 {{% choosable language python %}}
-<dl class="resources-properties">
-
-    <dt class="property-required"
+<dl class="resources-properties"><dt class="property-required"
             title="Required">
         <span id="aggregation_method_python">
 <a href="#aggregation_method_python" style="color: inherit; text-decoration: inherit;">aggregation_<wbr>method</a>
@@ -1997,16 +1815,13 @@ The following state arguments are supported:
         <span class="property-type">str</span>
     </dt>
     <dd>{{% md %}}The aggregation type of grouping the events.
-{{% /md %}}</dd>
-</dl>
+{{% /md %}}</dd></dl>
 {{% /choosable %}}
 
 <h4 id="alertrulescheduledincidentconfiguration">Alert<wbr>Rule<wbr>Scheduled<wbr>Incident<wbr>Configuration</h4>
 
 {{% choosable language csharp %}}
-<dl class="resources-properties">
-
-    <dt class="property-required"
+<dl class="resources-properties"><dt class="property-required"
             title="Required">
         <span id="createincident_csharp">
 <a href="#createincident_csharp" style="color: inherit; text-decoration: inherit;">Create<wbr>Incident</a>
@@ -2015,8 +1830,7 @@ The following state arguments are supported:
         <span class="property-type">bool</span>
     </dt>
     <dd>{{% md %}}Whether to create an incident from alerts triggered by this Sentinel Scheduled Alert Rule?
-{{% /md %}}</dd>
-    <dt class="property-required"
+{{% /md %}}</dd><dt class="property-required"
             title="Required">
         <span id="grouping_csharp">
 <a href="#grouping_csharp" style="color: inherit; text-decoration: inherit;">Grouping</a>
@@ -2025,14 +1839,11 @@ The following state arguments are supported:
         <span class="property-type"><a href="#alertrulescheduledincidentconfigurationgrouping">Alert<wbr>Rule<wbr>Scheduled<wbr>Incident<wbr>Configuration<wbr>Grouping<wbr>Args</a></span>
     </dt>
     <dd>{{% md %}}A `grouping` block as defined below.
-{{% /md %}}</dd>
-</dl>
+{{% /md %}}</dd></dl>
 {{% /choosable %}}
 
 {{% choosable language go %}}
-<dl class="resources-properties">
-
-    <dt class="property-required"
+<dl class="resources-properties"><dt class="property-required"
             title="Required">
         <span id="createincident_go">
 <a href="#createincident_go" style="color: inherit; text-decoration: inherit;">Create<wbr>Incident</a>
@@ -2041,8 +1852,7 @@ The following state arguments are supported:
         <span class="property-type">bool</span>
     </dt>
     <dd>{{% md %}}Whether to create an incident from alerts triggered by this Sentinel Scheduled Alert Rule?
-{{% /md %}}</dd>
-    <dt class="property-required"
+{{% /md %}}</dd><dt class="property-required"
             title="Required">
         <span id="grouping_go">
 <a href="#grouping_go" style="color: inherit; text-decoration: inherit;">Grouping</a>
@@ -2051,14 +1861,11 @@ The following state arguments are supported:
         <span class="property-type"><a href="#alertrulescheduledincidentconfigurationgrouping">Alert<wbr>Rule<wbr>Scheduled<wbr>Incident<wbr>Configuration<wbr>Grouping</a></span>
     </dt>
     <dd>{{% md %}}A `grouping` block as defined below.
-{{% /md %}}</dd>
-</dl>
+{{% /md %}}</dd></dl>
 {{% /choosable %}}
 
 {{% choosable language nodejs %}}
-<dl class="resources-properties">
-
-    <dt class="property-required"
+<dl class="resources-properties"><dt class="property-required"
             title="Required">
         <span id="createincident_nodejs">
 <a href="#createincident_nodejs" style="color: inherit; text-decoration: inherit;">create<wbr>Incident</a>
@@ -2067,8 +1874,7 @@ The following state arguments are supported:
         <span class="property-type">boolean</span>
     </dt>
     <dd>{{% md %}}Whether to create an incident from alerts triggered by this Sentinel Scheduled Alert Rule?
-{{% /md %}}</dd>
-    <dt class="property-required"
+{{% /md %}}</dd><dt class="property-required"
             title="Required">
         <span id="grouping_nodejs">
 <a href="#grouping_nodejs" style="color: inherit; text-decoration: inherit;">grouping</a>
@@ -2077,14 +1883,11 @@ The following state arguments are supported:
         <span class="property-type"><a href="#alertrulescheduledincidentconfigurationgrouping">Alert<wbr>Rule<wbr>Scheduled<wbr>Incident<wbr>Configuration<wbr>Grouping</a></span>
     </dt>
     <dd>{{% md %}}A `grouping` block as defined below.
-{{% /md %}}</dd>
-</dl>
+{{% /md %}}</dd></dl>
 {{% /choosable %}}
 
 {{% choosable language python %}}
-<dl class="resources-properties">
-
-    <dt class="property-required"
+<dl class="resources-properties"><dt class="property-required"
             title="Required">
         <span id="create_incident_python">
 <a href="#create_incident_python" style="color: inherit; text-decoration: inherit;">create_<wbr>incident</a>
@@ -2093,8 +1896,7 @@ The following state arguments are supported:
         <span class="property-type">bool</span>
     </dt>
     <dd>{{% md %}}Whether to create an incident from alerts triggered by this Sentinel Scheduled Alert Rule?
-{{% /md %}}</dd>
-    <dt class="property-required"
+{{% /md %}}</dd><dt class="property-required"
             title="Required">
         <span id="grouping_python">
 <a href="#grouping_python" style="color: inherit; text-decoration: inherit;">grouping</a>
@@ -2103,16 +1905,13 @@ The following state arguments are supported:
         <span class="property-type"><a href="#alertrulescheduledincidentconfigurationgrouping">Alert<wbr>Rule<wbr>Scheduled<wbr>Incident<wbr>Configuration<wbr>Grouping<wbr>Args</a></span>
     </dt>
     <dd>{{% md %}}A `grouping` block as defined below.
-{{% /md %}}</dd>
-</dl>
+{{% /md %}}</dd></dl>
 {{% /choosable %}}
 
 <h4 id="alertrulescheduledincidentconfigurationgrouping">Alert<wbr>Rule<wbr>Scheduled<wbr>Incident<wbr>Configuration<wbr>Grouping</h4>
 
 {{% choosable language csharp %}}
-<dl class="resources-properties">
-
-    <dt class="property-optional"
+<dl class="resources-properties"><dt class="property-optional"
             title="Optional">
         <span id="enabled_csharp">
 <a href="#enabled_csharp" style="color: inherit; text-decoration: inherit;">Enabled</a>
@@ -2121,8 +1920,7 @@ The following state arguments are supported:
         <span class="property-type">bool</span>
     </dt>
     <dd>{{% md %}}Enable grouping incidents created from alerts triggered by this Sentinel Scheduled Alert Rule. Defaults to `true`.
-{{% /md %}}</dd>
-    <dt class="property-optional"
+{{% /md %}}</dd><dt class="property-optional"
             title="Optional">
         <span id="entitymatchingmethod_csharp">
 <a href="#entitymatchingmethod_csharp" style="color: inherit; text-decoration: inherit;">Entity<wbr>Matching<wbr>Method</a>
@@ -2131,8 +1929,7 @@ The following state arguments are supported:
         <span class="property-type">string</span>
     </dt>
     <dd>{{% md %}}The method used to group incidents. Possible values are `All`, `Custom` and `None`. Defaults to `None`.
-{{% /md %}}</dd>
-    <dt class="property-optional"
+{{% /md %}}</dd><dt class="property-optional"
             title="Optional">
         <span id="groupbies_csharp">
 <a href="#groupbies_csharp" style="color: inherit; text-decoration: inherit;">Group<wbr>Bies</a>
@@ -2141,8 +1938,7 @@ The following state arguments are supported:
         <span class="property-type">List&lt;string&gt;</span>
     </dt>
     <dd>{{% md %}}A list of entity types to group by, only when the `entity_matching_method` is `Custom`. Possible values are `Account`, `Host`, `Url`, `Ip`.
-{{% /md %}}</dd>
-    <dt class="property-optional"
+{{% /md %}}</dd><dt class="property-optional"
             title="Optional">
         <span id="lookbackduration_csharp">
 <a href="#lookbackduration_csharp" style="color: inherit; text-decoration: inherit;">Lookback<wbr>Duration</a>
@@ -2151,8 +1947,7 @@ The following state arguments are supported:
         <span class="property-type">string</span>
     </dt>
     <dd>{{% md %}}Limit the group to alerts created within the lookback duration (in ISO 8601 duration format). Defaults to `PT5M`.
-{{% /md %}}</dd>
-    <dt class="property-optional"
+{{% /md %}}</dd><dt class="property-optional"
             title="Optional">
         <span id="reopenclosedincidents_csharp">
 <a href="#reopenclosedincidents_csharp" style="color: inherit; text-decoration: inherit;">Reopen<wbr>Closed<wbr>Incidents</a>
@@ -2161,14 +1956,11 @@ The following state arguments are supported:
         <span class="property-type">bool</span>
     </dt>
     <dd>{{% md %}}Whether to re-open closed matching incidents? Defaults to `false`.
-{{% /md %}}</dd>
-</dl>
+{{% /md %}}</dd></dl>
 {{% /choosable %}}
 
 {{% choosable language go %}}
-<dl class="resources-properties">
-
-    <dt class="property-optional"
+<dl class="resources-properties"><dt class="property-optional"
             title="Optional">
         <span id="enabled_go">
 <a href="#enabled_go" style="color: inherit; text-decoration: inherit;">Enabled</a>
@@ -2177,8 +1969,7 @@ The following state arguments are supported:
         <span class="property-type">bool</span>
     </dt>
     <dd>{{% md %}}Enable grouping incidents created from alerts triggered by this Sentinel Scheduled Alert Rule. Defaults to `true`.
-{{% /md %}}</dd>
-    <dt class="property-optional"
+{{% /md %}}</dd><dt class="property-optional"
             title="Optional">
         <span id="entitymatchingmethod_go">
 <a href="#entitymatchingmethod_go" style="color: inherit; text-decoration: inherit;">Entity<wbr>Matching<wbr>Method</a>
@@ -2187,8 +1978,7 @@ The following state arguments are supported:
         <span class="property-type">string</span>
     </dt>
     <dd>{{% md %}}The method used to group incidents. Possible values are `All`, `Custom` and `None`. Defaults to `None`.
-{{% /md %}}</dd>
-    <dt class="property-optional"
+{{% /md %}}</dd><dt class="property-optional"
             title="Optional">
         <span id="groupbies_go">
 <a href="#groupbies_go" style="color: inherit; text-decoration: inherit;">Group<wbr>Bies</a>
@@ -2197,8 +1987,7 @@ The following state arguments are supported:
         <span class="property-type">[]string</span>
     </dt>
     <dd>{{% md %}}A list of entity types to group by, only when the `entity_matching_method` is `Custom`. Possible values are `Account`, `Host`, `Url`, `Ip`.
-{{% /md %}}</dd>
-    <dt class="property-optional"
+{{% /md %}}</dd><dt class="property-optional"
             title="Optional">
         <span id="lookbackduration_go">
 <a href="#lookbackduration_go" style="color: inherit; text-decoration: inherit;">Lookback<wbr>Duration</a>
@@ -2207,8 +1996,7 @@ The following state arguments are supported:
         <span class="property-type">string</span>
     </dt>
     <dd>{{% md %}}Limit the group to alerts created within the lookback duration (in ISO 8601 duration format). Defaults to `PT5M`.
-{{% /md %}}</dd>
-    <dt class="property-optional"
+{{% /md %}}</dd><dt class="property-optional"
             title="Optional">
         <span id="reopenclosedincidents_go">
 <a href="#reopenclosedincidents_go" style="color: inherit; text-decoration: inherit;">Reopen<wbr>Closed<wbr>Incidents</a>
@@ -2217,14 +2005,11 @@ The following state arguments are supported:
         <span class="property-type">bool</span>
     </dt>
     <dd>{{% md %}}Whether to re-open closed matching incidents? Defaults to `false`.
-{{% /md %}}</dd>
-</dl>
+{{% /md %}}</dd></dl>
 {{% /choosable %}}
 
 {{% choosable language nodejs %}}
-<dl class="resources-properties">
-
-    <dt class="property-optional"
+<dl class="resources-properties"><dt class="property-optional"
             title="Optional">
         <span id="enabled_nodejs">
 <a href="#enabled_nodejs" style="color: inherit; text-decoration: inherit;">enabled</a>
@@ -2233,8 +2018,7 @@ The following state arguments are supported:
         <span class="property-type">boolean</span>
     </dt>
     <dd>{{% md %}}Enable grouping incidents created from alerts triggered by this Sentinel Scheduled Alert Rule. Defaults to `true`.
-{{% /md %}}</dd>
-    <dt class="property-optional"
+{{% /md %}}</dd><dt class="property-optional"
             title="Optional">
         <span id="entitymatchingmethod_nodejs">
 <a href="#entitymatchingmethod_nodejs" style="color: inherit; text-decoration: inherit;">entity<wbr>Matching<wbr>Method</a>
@@ -2243,8 +2027,7 @@ The following state arguments are supported:
         <span class="property-type">string</span>
     </dt>
     <dd>{{% md %}}The method used to group incidents. Possible values are `All`, `Custom` and `None`. Defaults to `None`.
-{{% /md %}}</dd>
-    <dt class="property-optional"
+{{% /md %}}</dd><dt class="property-optional"
             title="Optional">
         <span id="groupbies_nodejs">
 <a href="#groupbies_nodejs" style="color: inherit; text-decoration: inherit;">group<wbr>Bies</a>
@@ -2253,8 +2036,7 @@ The following state arguments are supported:
         <span class="property-type">string[]</span>
     </dt>
     <dd>{{% md %}}A list of entity types to group by, only when the `entity_matching_method` is `Custom`. Possible values are `Account`, `Host`, `Url`, `Ip`.
-{{% /md %}}</dd>
-    <dt class="property-optional"
+{{% /md %}}</dd><dt class="property-optional"
             title="Optional">
         <span id="lookbackduration_nodejs">
 <a href="#lookbackduration_nodejs" style="color: inherit; text-decoration: inherit;">lookback<wbr>Duration</a>
@@ -2263,8 +2045,7 @@ The following state arguments are supported:
         <span class="property-type">string</span>
     </dt>
     <dd>{{% md %}}Limit the group to alerts created within the lookback duration (in ISO 8601 duration format). Defaults to `PT5M`.
-{{% /md %}}</dd>
-    <dt class="property-optional"
+{{% /md %}}</dd><dt class="property-optional"
             title="Optional">
         <span id="reopenclosedincidents_nodejs">
 <a href="#reopenclosedincidents_nodejs" style="color: inherit; text-decoration: inherit;">reopen<wbr>Closed<wbr>Incidents</a>
@@ -2273,14 +2054,11 @@ The following state arguments are supported:
         <span class="property-type">boolean</span>
     </dt>
     <dd>{{% md %}}Whether to re-open closed matching incidents? Defaults to `false`.
-{{% /md %}}</dd>
-</dl>
+{{% /md %}}</dd></dl>
 {{% /choosable %}}
 
 {{% choosable language python %}}
-<dl class="resources-properties">
-
-    <dt class="property-optional"
+<dl class="resources-properties"><dt class="property-optional"
             title="Optional">
         <span id="enabled_python">
 <a href="#enabled_python" style="color: inherit; text-decoration: inherit;">enabled</a>
@@ -2289,8 +2067,7 @@ The following state arguments are supported:
         <span class="property-type">bool</span>
     </dt>
     <dd>{{% md %}}Enable grouping incidents created from alerts triggered by this Sentinel Scheduled Alert Rule. Defaults to `true`.
-{{% /md %}}</dd>
-    <dt class="property-optional"
+{{% /md %}}</dd><dt class="property-optional"
             title="Optional">
         <span id="entity_matching_method_python">
 <a href="#entity_matching_method_python" style="color: inherit; text-decoration: inherit;">entity_<wbr>matching_<wbr>method</a>
@@ -2299,8 +2076,7 @@ The following state arguments are supported:
         <span class="property-type">str</span>
     </dt>
     <dd>{{% md %}}The method used to group incidents. Possible values are `All`, `Custom` and `None`. Defaults to `None`.
-{{% /md %}}</dd>
-    <dt class="property-optional"
+{{% /md %}}</dd><dt class="property-optional"
             title="Optional">
         <span id="group_bies_python">
 <a href="#group_bies_python" style="color: inherit; text-decoration: inherit;">group_<wbr>bies</a>
@@ -2309,8 +2085,7 @@ The following state arguments are supported:
         <span class="property-type">Sequence[str]</span>
     </dt>
     <dd>{{% md %}}A list of entity types to group by, only when the `entity_matching_method` is `Custom`. Possible values are `Account`, `Host`, `Url`, `Ip`.
-{{% /md %}}</dd>
-    <dt class="property-optional"
+{{% /md %}}</dd><dt class="property-optional"
             title="Optional">
         <span id="lookback_duration_python">
 <a href="#lookback_duration_python" style="color: inherit; text-decoration: inherit;">lookback_<wbr>duration</a>
@@ -2319,8 +2094,7 @@ The following state arguments are supported:
         <span class="property-type">str</span>
     </dt>
     <dd>{{% md %}}Limit the group to alerts created within the lookback duration (in ISO 8601 duration format). Defaults to `PT5M`.
-{{% /md %}}</dd>
-    <dt class="property-optional"
+{{% /md %}}</dd><dt class="property-optional"
             title="Optional">
         <span id="reopen_closed_incidents_python">
 <a href="#reopen_closed_incidents_python" style="color: inherit; text-decoration: inherit;">reopen_<wbr>closed_<wbr>incidents</a>
@@ -2329,8 +2103,7 @@ The following state arguments are supported:
         <span class="property-type">bool</span>
     </dt>
     <dd>{{% md %}}Whether to re-open closed matching incidents? Defaults to `false`.
-{{% /md %}}</dd>
-</dl>
+{{% /md %}}</dd></dl>
 {{% /choosable %}}
 ## Import
 
@@ -2351,6 +2124,6 @@ Sentinel Scheduled Alert Rules can be imported using the `resource id`, e.g.
 	<dt>License</dt>
 	<dd>Apache-2.0</dd>
 	<dt>Notes</dt>
-	<dd>This Pulumi package is based on the [`azurerm` Terraform Provider](https://github.com/terraform-providers/terraform-provider-azurerm).</dd>
+	<dd>{{% md %}}This Pulumi package is based on the [`azurerm` Terraform Provider](https://github.com/terraform-providers/terraform-provider-azurerm).{{% /md %}}</dd>
 </dl>
 

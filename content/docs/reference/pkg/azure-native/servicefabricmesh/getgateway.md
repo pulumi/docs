@@ -51,9 +51,7 @@ The following arguments are supported:
 
 
 {{% choosable language csharp %}}
-<dl class="resources-properties">
-
-    <dt class="property-required"
+<dl class="resources-properties"><dt class="property-required"
             title="Required">
         <span id="gatewayresourcename_csharp">
 <a href="#gatewayresourcename_csharp" style="color: inherit; text-decoration: inherit;">Gateway<wbr>Resource<wbr>Name</a>
@@ -61,8 +59,7 @@ The following arguments are supported:
         <span class="property-indicator"></span>
         <span class="property-type">string</span>
     </dt>
-    <dd>{{% md %}}The identity of the gateway.{{% /md %}}</dd>
-    <dt class="property-required"
+    <dd>{{% md %}}The identity of the gateway.{{% /md %}}</dd><dt class="property-required"
             title="Required">
         <span id="resourcegroupname_csharp">
 <a href="#resourcegroupname_csharp" style="color: inherit; text-decoration: inherit;">Resource<wbr>Group<wbr>Name</a>
@@ -70,14 +67,11 @@ The following arguments are supported:
         <span class="property-indicator"></span>
         <span class="property-type">string</span>
     </dt>
-    <dd>{{% md %}}Azure resource group name{{% /md %}}</dd>
-</dl>
+    <dd>{{% md %}}Azure resource group name{{% /md %}}</dd></dl>
 {{% /choosable %}}
 
 {{% choosable language go %}}
-<dl class="resources-properties">
-
-    <dt class="property-required"
+<dl class="resources-properties"><dt class="property-required"
             title="Required">
         <span id="gatewayresourcename_go">
 <a href="#gatewayresourcename_go" style="color: inherit; text-decoration: inherit;">Gateway<wbr>Resource<wbr>Name</a>
@@ -85,8 +79,7 @@ The following arguments are supported:
         <span class="property-indicator"></span>
         <span class="property-type">string</span>
     </dt>
-    <dd>{{% md %}}The identity of the gateway.{{% /md %}}</dd>
-    <dt class="property-required"
+    <dd>{{% md %}}The identity of the gateway.{{% /md %}}</dd><dt class="property-required"
             title="Required">
         <span id="resourcegroupname_go">
 <a href="#resourcegroupname_go" style="color: inherit; text-decoration: inherit;">Resource<wbr>Group<wbr>Name</a>
@@ -94,14 +87,11 @@ The following arguments are supported:
         <span class="property-indicator"></span>
         <span class="property-type">string</span>
     </dt>
-    <dd>{{% md %}}Azure resource group name{{% /md %}}</dd>
-</dl>
+    <dd>{{% md %}}Azure resource group name{{% /md %}}</dd></dl>
 {{% /choosable %}}
 
 {{% choosable language nodejs %}}
-<dl class="resources-properties">
-
-    <dt class="property-required"
+<dl class="resources-properties"><dt class="property-required"
             title="Required">
         <span id="gatewayresourcename_nodejs">
 <a href="#gatewayresourcename_nodejs" style="color: inherit; text-decoration: inherit;">gateway<wbr>Resource<wbr>Name</a>
@@ -109,8 +99,7 @@ The following arguments are supported:
         <span class="property-indicator"></span>
         <span class="property-type">string</span>
     </dt>
-    <dd>{{% md %}}The identity of the gateway.{{% /md %}}</dd>
-    <dt class="property-required"
+    <dd>{{% md %}}The identity of the gateway.{{% /md %}}</dd><dt class="property-required"
             title="Required">
         <span id="resourcegroupname_nodejs">
 <a href="#resourcegroupname_nodejs" style="color: inherit; text-decoration: inherit;">resource<wbr>Group<wbr>Name</a>
@@ -118,14 +107,11 @@ The following arguments are supported:
         <span class="property-indicator"></span>
         <span class="property-type">string</span>
     </dt>
-    <dd>{{% md %}}Azure resource group name{{% /md %}}</dd>
-</dl>
+    <dd>{{% md %}}Azure resource group name{{% /md %}}</dd></dl>
 {{% /choosable %}}
 
 {{% choosable language python %}}
-<dl class="resources-properties">
-
-    <dt class="property-required"
+<dl class="resources-properties"><dt class="property-required"
             title="Required">
         <span id="gateway_resource_name_python">
 <a href="#gateway_resource_name_python" style="color: inherit; text-decoration: inherit;">gateway_<wbr>resource_<wbr>name</a>
@@ -133,8 +119,7 @@ The following arguments are supported:
         <span class="property-indicator"></span>
         <span class="property-type">str</span>
     </dt>
-    <dd>{{% md %}}The identity of the gateway.{{% /md %}}</dd>
-    <dt class="property-required"
+    <dd>{{% md %}}The identity of the gateway.{{% /md %}}</dd><dt class="property-required"
             title="Required">
         <span id="resource_group_name_python">
 <a href="#resource_group_name_python" style="color: inherit; text-decoration: inherit;">resource_<wbr>group_<wbr>name</a>
@@ -142,8 +127,7 @@ The following arguments are supported:
         <span class="property-indicator"></span>
         <span class="property-type">str</span>
     </dt>
-    <dd>{{% md %}}Azure resource group name{{% /md %}}</dd>
-</dl>
+    <dd>{{% md %}}Azure resource group name{{% /md %}}</dd></dl>
 {{% /choosable %}}
 
 
@@ -156,9 +140,7 @@ The following output properties are available:
 
 
 {{% choosable language csharp %}}
-<dl class="resources-properties">
-
-    <dt class="property-"
+<dl class="resources-properties"><dt class="property-"
             title="">
         <span id="destinationnetwork_csharp">
 <a href="#destinationnetwork_csharp" style="color: inherit; text-decoration: inherit;">Destination<wbr>Network</a>
@@ -166,8 +148,7 @@ The following output properties are available:
         <span class="property-indicator"></span>
         <span class="property-type"><a href="#networkrefresponse">Pulumi.<wbr>Azure<wbr>Native.<wbr>Service<wbr>Fabric<wbr>Mesh.<wbr>Outputs.<wbr>Network<wbr>Ref<wbr>Response</a></span>
     </dt>
-    <dd>{{% md %}}Network that the Application is using.{{% /md %}}</dd>
-    <dt class="property-"
+    <dd>{{% md %}}Network that the Application is using.{{% /md %}}</dd><dt class="property-"
             title="">
         <span id="id_csharp">
 <a href="#id_csharp" style="color: inherit; text-decoration: inherit;">Id</a>
@@ -175,8 +156,7 @@ The following output properties are available:
         <span class="property-indicator"></span>
         <span class="property-type">string</span>
     </dt>
-    <dd>{{% md %}}Fully qualified identifier for the resource. Ex - /subscriptions/{subscriptionId}/resourceGroups/{resourceGroupName}/providers/{resourceProviderNamespace}/{resourceType}/{resourceName}{{% /md %}}</dd>
-    <dt class="property-"
+    <dd>{{% md %}}Fully qualified identifier for the resource. Ex - /subscriptions/{subscriptionId}/resourceGroups/{resourceGroupName}/providers/{resourceProviderNamespace}/{resourceType}/{resourceName}{{% /md %}}</dd><dt class="property-"
             title="">
         <span id="ipaddress_csharp">
 <a href="#ipaddress_csharp" style="color: inherit; text-decoration: inherit;">Ip<wbr>Address</a>
@@ -184,8 +164,7 @@ The following output properties are available:
         <span class="property-indicator"></span>
         <span class="property-type">string</span>
     </dt>
-    <dd>{{% md %}}IP address of the gateway. This is populated in the response and is ignored for incoming requests.{{% /md %}}</dd>
-    <dt class="property-"
+    <dd>{{% md %}}IP address of the gateway. This is populated in the response and is ignored for incoming requests.{{% /md %}}</dd><dt class="property-"
             title="">
         <span id="location_csharp">
 <a href="#location_csharp" style="color: inherit; text-decoration: inherit;">Location</a>
@@ -193,8 +172,7 @@ The following output properties are available:
         <span class="property-indicator"></span>
         <span class="property-type">string</span>
     </dt>
-    <dd>{{% md %}}The geo-location where the resource lives{{% /md %}}</dd>
-    <dt class="property-"
+    <dd>{{% md %}}The geo-location where the resource lives{{% /md %}}</dd><dt class="property-"
             title="">
         <span id="name_csharp">
 <a href="#name_csharp" style="color: inherit; text-decoration: inherit;">Name</a>
@@ -202,8 +180,7 @@ The following output properties are available:
         <span class="property-indicator"></span>
         <span class="property-type">string</span>
     </dt>
-    <dd>{{% md %}}The name of the resource{{% /md %}}</dd>
-    <dt class="property-"
+    <dd>{{% md %}}The name of the resource{{% /md %}}</dd><dt class="property-"
             title="">
         <span id="provisioningstate_csharp">
 <a href="#provisioningstate_csharp" style="color: inherit; text-decoration: inherit;">Provisioning<wbr>State</a>
@@ -211,8 +188,7 @@ The following output properties are available:
         <span class="property-indicator"></span>
         <span class="property-type">string</span>
     </dt>
-    <dd>{{% md %}}State of the resource.{{% /md %}}</dd>
-    <dt class="property-"
+    <dd>{{% md %}}State of the resource.{{% /md %}}</dd><dt class="property-"
             title="">
         <span id="sourcenetwork_csharp">
 <a href="#sourcenetwork_csharp" style="color: inherit; text-decoration: inherit;">Source<wbr>Network</a>
@@ -220,8 +196,7 @@ The following output properties are available:
         <span class="property-indicator"></span>
         <span class="property-type"><a href="#networkrefresponse">Pulumi.<wbr>Azure<wbr>Native.<wbr>Service<wbr>Fabric<wbr>Mesh.<wbr>Outputs.<wbr>Network<wbr>Ref<wbr>Response</a></span>
     </dt>
-    <dd>{{% md %}}Network the gateway should listen on for requests.{{% /md %}}</dd>
-    <dt class="property-"
+    <dd>{{% md %}}Network the gateway should listen on for requests.{{% /md %}}</dd><dt class="property-"
             title="">
         <span id="status_csharp">
 <a href="#status_csharp" style="color: inherit; text-decoration: inherit;">Status</a>
@@ -229,8 +204,7 @@ The following output properties are available:
         <span class="property-indicator"></span>
         <span class="property-type">string</span>
     </dt>
-    <dd>{{% md %}}Status of the resource.{{% /md %}}</dd>
-    <dt class="property-"
+    <dd>{{% md %}}Status of the resource.{{% /md %}}</dd><dt class="property-"
             title="">
         <span id="statusdetails_csharp">
 <a href="#statusdetails_csharp" style="color: inherit; text-decoration: inherit;">Status<wbr>Details</a>
@@ -238,8 +212,7 @@ The following output properties are available:
         <span class="property-indicator"></span>
         <span class="property-type">string</span>
     </dt>
-    <dd>{{% md %}}Gives additional information about the current status of the gateway.{{% /md %}}</dd>
-    <dt class="property-"
+    <dd>{{% md %}}Gives additional information about the current status of the gateway.{{% /md %}}</dd><dt class="property-"
             title="">
         <span id="type_csharp">
 <a href="#type_csharp" style="color: inherit; text-decoration: inherit;">Type</a>
@@ -247,8 +220,7 @@ The following output properties are available:
         <span class="property-indicator"></span>
         <span class="property-type">string</span>
     </dt>
-    <dd>{{% md %}}The type of the resource. Ex- Microsoft.Compute/virtualMachines or Microsoft.Storage/storageAccounts.{{% /md %}}</dd>
-    <dt class="property-"
+    <dd>{{% md %}}The type of the resource. Ex- Microsoft.Compute/virtualMachines or Microsoft.Storage/storageAccounts.{{% /md %}}</dd><dt class="property-"
             title="">
         <span id="description_csharp">
 <a href="#description_csharp" style="color: inherit; text-decoration: inherit;">Description</a>
@@ -256,8 +228,7 @@ The following output properties are available:
         <span class="property-indicator"></span>
         <span class="property-type">string</span>
     </dt>
-    <dd>{{% md %}}User readable description of the gateway.{{% /md %}}</dd>
-    <dt class="property-"
+    <dd>{{% md %}}User readable description of the gateway.{{% /md %}}</dd><dt class="property-"
             title="">
         <span id="http_csharp">
 <a href="#http_csharp" style="color: inherit; text-decoration: inherit;">Http</a>
@@ -265,8 +236,7 @@ The following output properties are available:
         <span class="property-indicator"></span>
         <span class="property-type"><a href="#httpconfigresponse">List&lt;Pulumi.<wbr>Azure<wbr>Native.<wbr>Service<wbr>Fabric<wbr>Mesh.<wbr>Outputs.<wbr>Http<wbr>Config<wbr>Response&gt;</a></span>
     </dt>
-    <dd>{{% md %}}Configuration for http connectivity for this gateway.{{% /md %}}</dd>
-    <dt class="property-"
+    <dd>{{% md %}}Configuration for http connectivity for this gateway.{{% /md %}}</dd><dt class="property-"
             title="">
         <span id="tags_csharp">
 <a href="#tags_csharp" style="color: inherit; text-decoration: inherit;">Tags</a>
@@ -274,8 +244,7 @@ The following output properties are available:
         <span class="property-indicator"></span>
         <span class="property-type">Dictionary&lt;string, string&gt;</span>
     </dt>
-    <dd>{{% md %}}Resource tags.{{% /md %}}</dd>
-    <dt class="property-"
+    <dd>{{% md %}}Resource tags.{{% /md %}}</dd><dt class="property-"
             title="">
         <span id="tcp_csharp">
 <a href="#tcp_csharp" style="color: inherit; text-decoration: inherit;">Tcp</a>
@@ -283,14 +252,11 @@ The following output properties are available:
         <span class="property-indicator"></span>
         <span class="property-type"><a href="#tcpconfigresponse">List&lt;Pulumi.<wbr>Azure<wbr>Native.<wbr>Service<wbr>Fabric<wbr>Mesh.<wbr>Outputs.<wbr>Tcp<wbr>Config<wbr>Response&gt;</a></span>
     </dt>
-    <dd>{{% md %}}Configuration for tcp connectivity for this gateway.{{% /md %}}</dd>
-</dl>
+    <dd>{{% md %}}Configuration for tcp connectivity for this gateway.{{% /md %}}</dd></dl>
 {{% /choosable %}}
 
 {{% choosable language go %}}
-<dl class="resources-properties">
-
-    <dt class="property-"
+<dl class="resources-properties"><dt class="property-"
             title="">
         <span id="destinationnetwork_go">
 <a href="#destinationnetwork_go" style="color: inherit; text-decoration: inherit;">Destination<wbr>Network</a>
@@ -298,8 +264,7 @@ The following output properties are available:
         <span class="property-indicator"></span>
         <span class="property-type"><a href="#networkrefresponse">Network<wbr>Ref<wbr>Response</a></span>
     </dt>
-    <dd>{{% md %}}Network that the Application is using.{{% /md %}}</dd>
-    <dt class="property-"
+    <dd>{{% md %}}Network that the Application is using.{{% /md %}}</dd><dt class="property-"
             title="">
         <span id="id_go">
 <a href="#id_go" style="color: inherit; text-decoration: inherit;">Id</a>
@@ -307,8 +272,7 @@ The following output properties are available:
         <span class="property-indicator"></span>
         <span class="property-type">string</span>
     </dt>
-    <dd>{{% md %}}Fully qualified identifier for the resource. Ex - /subscriptions/{subscriptionId}/resourceGroups/{resourceGroupName}/providers/{resourceProviderNamespace}/{resourceType}/{resourceName}{{% /md %}}</dd>
-    <dt class="property-"
+    <dd>{{% md %}}Fully qualified identifier for the resource. Ex - /subscriptions/{subscriptionId}/resourceGroups/{resourceGroupName}/providers/{resourceProviderNamespace}/{resourceType}/{resourceName}{{% /md %}}</dd><dt class="property-"
             title="">
         <span id="ipaddress_go">
 <a href="#ipaddress_go" style="color: inherit; text-decoration: inherit;">Ip<wbr>Address</a>
@@ -316,8 +280,7 @@ The following output properties are available:
         <span class="property-indicator"></span>
         <span class="property-type">string</span>
     </dt>
-    <dd>{{% md %}}IP address of the gateway. This is populated in the response and is ignored for incoming requests.{{% /md %}}</dd>
-    <dt class="property-"
+    <dd>{{% md %}}IP address of the gateway. This is populated in the response and is ignored for incoming requests.{{% /md %}}</dd><dt class="property-"
             title="">
         <span id="location_go">
 <a href="#location_go" style="color: inherit; text-decoration: inherit;">Location</a>
@@ -325,8 +288,7 @@ The following output properties are available:
         <span class="property-indicator"></span>
         <span class="property-type">string</span>
     </dt>
-    <dd>{{% md %}}The geo-location where the resource lives{{% /md %}}</dd>
-    <dt class="property-"
+    <dd>{{% md %}}The geo-location where the resource lives{{% /md %}}</dd><dt class="property-"
             title="">
         <span id="name_go">
 <a href="#name_go" style="color: inherit; text-decoration: inherit;">Name</a>
@@ -334,8 +296,7 @@ The following output properties are available:
         <span class="property-indicator"></span>
         <span class="property-type">string</span>
     </dt>
-    <dd>{{% md %}}The name of the resource{{% /md %}}</dd>
-    <dt class="property-"
+    <dd>{{% md %}}The name of the resource{{% /md %}}</dd><dt class="property-"
             title="">
         <span id="provisioningstate_go">
 <a href="#provisioningstate_go" style="color: inherit; text-decoration: inherit;">Provisioning<wbr>State</a>
@@ -343,8 +304,7 @@ The following output properties are available:
         <span class="property-indicator"></span>
         <span class="property-type">string</span>
     </dt>
-    <dd>{{% md %}}State of the resource.{{% /md %}}</dd>
-    <dt class="property-"
+    <dd>{{% md %}}State of the resource.{{% /md %}}</dd><dt class="property-"
             title="">
         <span id="sourcenetwork_go">
 <a href="#sourcenetwork_go" style="color: inherit; text-decoration: inherit;">Source<wbr>Network</a>
@@ -352,8 +312,7 @@ The following output properties are available:
         <span class="property-indicator"></span>
         <span class="property-type"><a href="#networkrefresponse">Network<wbr>Ref<wbr>Response</a></span>
     </dt>
-    <dd>{{% md %}}Network the gateway should listen on for requests.{{% /md %}}</dd>
-    <dt class="property-"
+    <dd>{{% md %}}Network the gateway should listen on for requests.{{% /md %}}</dd><dt class="property-"
             title="">
         <span id="status_go">
 <a href="#status_go" style="color: inherit; text-decoration: inherit;">Status</a>
@@ -361,8 +320,7 @@ The following output properties are available:
         <span class="property-indicator"></span>
         <span class="property-type">string</span>
     </dt>
-    <dd>{{% md %}}Status of the resource.{{% /md %}}</dd>
-    <dt class="property-"
+    <dd>{{% md %}}Status of the resource.{{% /md %}}</dd><dt class="property-"
             title="">
         <span id="statusdetails_go">
 <a href="#statusdetails_go" style="color: inherit; text-decoration: inherit;">Status<wbr>Details</a>
@@ -370,8 +328,7 @@ The following output properties are available:
         <span class="property-indicator"></span>
         <span class="property-type">string</span>
     </dt>
-    <dd>{{% md %}}Gives additional information about the current status of the gateway.{{% /md %}}</dd>
-    <dt class="property-"
+    <dd>{{% md %}}Gives additional information about the current status of the gateway.{{% /md %}}</dd><dt class="property-"
             title="">
         <span id="type_go">
 <a href="#type_go" style="color: inherit; text-decoration: inherit;">Type</a>
@@ -379,8 +336,7 @@ The following output properties are available:
         <span class="property-indicator"></span>
         <span class="property-type">string</span>
     </dt>
-    <dd>{{% md %}}The type of the resource. Ex- Microsoft.Compute/virtualMachines or Microsoft.Storage/storageAccounts.{{% /md %}}</dd>
-    <dt class="property-"
+    <dd>{{% md %}}The type of the resource. Ex- Microsoft.Compute/virtualMachines or Microsoft.Storage/storageAccounts.{{% /md %}}</dd><dt class="property-"
             title="">
         <span id="description_go">
 <a href="#description_go" style="color: inherit; text-decoration: inherit;">Description</a>
@@ -388,8 +344,7 @@ The following output properties are available:
         <span class="property-indicator"></span>
         <span class="property-type">string</span>
     </dt>
-    <dd>{{% md %}}User readable description of the gateway.{{% /md %}}</dd>
-    <dt class="property-"
+    <dd>{{% md %}}User readable description of the gateway.{{% /md %}}</dd><dt class="property-"
             title="">
         <span id="http_go">
 <a href="#http_go" style="color: inherit; text-decoration: inherit;">Http</a>
@@ -397,8 +352,7 @@ The following output properties are available:
         <span class="property-indicator"></span>
         <span class="property-type"><a href="#httpconfigresponse">[]Http<wbr>Config<wbr>Response</a></span>
     </dt>
-    <dd>{{% md %}}Configuration for http connectivity for this gateway.{{% /md %}}</dd>
-    <dt class="property-"
+    <dd>{{% md %}}Configuration for http connectivity for this gateway.{{% /md %}}</dd><dt class="property-"
             title="">
         <span id="tags_go">
 <a href="#tags_go" style="color: inherit; text-decoration: inherit;">Tags</a>
@@ -406,8 +360,7 @@ The following output properties are available:
         <span class="property-indicator"></span>
         <span class="property-type">map[string]string</span>
     </dt>
-    <dd>{{% md %}}Resource tags.{{% /md %}}</dd>
-    <dt class="property-"
+    <dd>{{% md %}}Resource tags.{{% /md %}}</dd><dt class="property-"
             title="">
         <span id="tcp_go">
 <a href="#tcp_go" style="color: inherit; text-decoration: inherit;">Tcp</a>
@@ -415,14 +368,11 @@ The following output properties are available:
         <span class="property-indicator"></span>
         <span class="property-type"><a href="#tcpconfigresponse">[]Tcp<wbr>Config<wbr>Response</a></span>
     </dt>
-    <dd>{{% md %}}Configuration for tcp connectivity for this gateway.{{% /md %}}</dd>
-</dl>
+    <dd>{{% md %}}Configuration for tcp connectivity for this gateway.{{% /md %}}</dd></dl>
 {{% /choosable %}}
 
 {{% choosable language nodejs %}}
-<dl class="resources-properties">
-
-    <dt class="property-"
+<dl class="resources-properties"><dt class="property-"
             title="">
         <span id="destinationnetwork_nodejs">
 <a href="#destinationnetwork_nodejs" style="color: inherit; text-decoration: inherit;">destination<wbr>Network</a>
@@ -430,8 +380,7 @@ The following output properties are available:
         <span class="property-indicator"></span>
         <span class="property-type"><a href="#networkrefresponse">Network<wbr>Ref<wbr>Response</a></span>
     </dt>
-    <dd>{{% md %}}Network that the Application is using.{{% /md %}}</dd>
-    <dt class="property-"
+    <dd>{{% md %}}Network that the Application is using.{{% /md %}}</dd><dt class="property-"
             title="">
         <span id="id_nodejs">
 <a href="#id_nodejs" style="color: inherit; text-decoration: inherit;">id</a>
@@ -439,8 +388,7 @@ The following output properties are available:
         <span class="property-indicator"></span>
         <span class="property-type">string</span>
     </dt>
-    <dd>{{% md %}}Fully qualified identifier for the resource. Ex - /subscriptions/{subscriptionId}/resourceGroups/{resourceGroupName}/providers/{resourceProviderNamespace}/{resourceType}/{resourceName}{{% /md %}}</dd>
-    <dt class="property-"
+    <dd>{{% md %}}Fully qualified identifier for the resource. Ex - /subscriptions/{subscriptionId}/resourceGroups/{resourceGroupName}/providers/{resourceProviderNamespace}/{resourceType}/{resourceName}{{% /md %}}</dd><dt class="property-"
             title="">
         <span id="ipaddress_nodejs">
 <a href="#ipaddress_nodejs" style="color: inherit; text-decoration: inherit;">ip<wbr>Address</a>
@@ -448,8 +396,7 @@ The following output properties are available:
         <span class="property-indicator"></span>
         <span class="property-type">string</span>
     </dt>
-    <dd>{{% md %}}IP address of the gateway. This is populated in the response and is ignored for incoming requests.{{% /md %}}</dd>
-    <dt class="property-"
+    <dd>{{% md %}}IP address of the gateway. This is populated in the response and is ignored for incoming requests.{{% /md %}}</dd><dt class="property-"
             title="">
         <span id="location_nodejs">
 <a href="#location_nodejs" style="color: inherit; text-decoration: inherit;">location</a>
@@ -457,8 +404,7 @@ The following output properties are available:
         <span class="property-indicator"></span>
         <span class="property-type">string</span>
     </dt>
-    <dd>{{% md %}}The geo-location where the resource lives{{% /md %}}</dd>
-    <dt class="property-"
+    <dd>{{% md %}}The geo-location where the resource lives{{% /md %}}</dd><dt class="property-"
             title="">
         <span id="name_nodejs">
 <a href="#name_nodejs" style="color: inherit; text-decoration: inherit;">name</a>
@@ -466,8 +412,7 @@ The following output properties are available:
         <span class="property-indicator"></span>
         <span class="property-type">string</span>
     </dt>
-    <dd>{{% md %}}The name of the resource{{% /md %}}</dd>
-    <dt class="property-"
+    <dd>{{% md %}}The name of the resource{{% /md %}}</dd><dt class="property-"
             title="">
         <span id="provisioningstate_nodejs">
 <a href="#provisioningstate_nodejs" style="color: inherit; text-decoration: inherit;">provisioning<wbr>State</a>
@@ -475,8 +420,7 @@ The following output properties are available:
         <span class="property-indicator"></span>
         <span class="property-type">string</span>
     </dt>
-    <dd>{{% md %}}State of the resource.{{% /md %}}</dd>
-    <dt class="property-"
+    <dd>{{% md %}}State of the resource.{{% /md %}}</dd><dt class="property-"
             title="">
         <span id="sourcenetwork_nodejs">
 <a href="#sourcenetwork_nodejs" style="color: inherit; text-decoration: inherit;">source<wbr>Network</a>
@@ -484,8 +428,7 @@ The following output properties are available:
         <span class="property-indicator"></span>
         <span class="property-type"><a href="#networkrefresponse">Network<wbr>Ref<wbr>Response</a></span>
     </dt>
-    <dd>{{% md %}}Network the gateway should listen on for requests.{{% /md %}}</dd>
-    <dt class="property-"
+    <dd>{{% md %}}Network the gateway should listen on for requests.{{% /md %}}</dd><dt class="property-"
             title="">
         <span id="status_nodejs">
 <a href="#status_nodejs" style="color: inherit; text-decoration: inherit;">status</a>
@@ -493,8 +436,7 @@ The following output properties are available:
         <span class="property-indicator"></span>
         <span class="property-type">string</span>
     </dt>
-    <dd>{{% md %}}Status of the resource.{{% /md %}}</dd>
-    <dt class="property-"
+    <dd>{{% md %}}Status of the resource.{{% /md %}}</dd><dt class="property-"
             title="">
         <span id="statusdetails_nodejs">
 <a href="#statusdetails_nodejs" style="color: inherit; text-decoration: inherit;">status<wbr>Details</a>
@@ -502,8 +444,7 @@ The following output properties are available:
         <span class="property-indicator"></span>
         <span class="property-type">string</span>
     </dt>
-    <dd>{{% md %}}Gives additional information about the current status of the gateway.{{% /md %}}</dd>
-    <dt class="property-"
+    <dd>{{% md %}}Gives additional information about the current status of the gateway.{{% /md %}}</dd><dt class="property-"
             title="">
         <span id="type_nodejs">
 <a href="#type_nodejs" style="color: inherit; text-decoration: inherit;">type</a>
@@ -511,8 +452,7 @@ The following output properties are available:
         <span class="property-indicator"></span>
         <span class="property-type">string</span>
     </dt>
-    <dd>{{% md %}}The type of the resource. Ex- Microsoft.Compute/virtualMachines or Microsoft.Storage/storageAccounts.{{% /md %}}</dd>
-    <dt class="property-"
+    <dd>{{% md %}}The type of the resource. Ex- Microsoft.Compute/virtualMachines or Microsoft.Storage/storageAccounts.{{% /md %}}</dd><dt class="property-"
             title="">
         <span id="description_nodejs">
 <a href="#description_nodejs" style="color: inherit; text-decoration: inherit;">description</a>
@@ -520,8 +460,7 @@ The following output properties are available:
         <span class="property-indicator"></span>
         <span class="property-type">string</span>
     </dt>
-    <dd>{{% md %}}User readable description of the gateway.{{% /md %}}</dd>
-    <dt class="property-"
+    <dd>{{% md %}}User readable description of the gateway.{{% /md %}}</dd><dt class="property-"
             title="">
         <span id="http_nodejs">
 <a href="#http_nodejs" style="color: inherit; text-decoration: inherit;">http</a>
@@ -529,8 +468,7 @@ The following output properties are available:
         <span class="property-indicator"></span>
         <span class="property-type"><a href="#httpconfigresponse">Http<wbr>Config<wbr>Response[]</a></span>
     </dt>
-    <dd>{{% md %}}Configuration for http connectivity for this gateway.{{% /md %}}</dd>
-    <dt class="property-"
+    <dd>{{% md %}}Configuration for http connectivity for this gateway.{{% /md %}}</dd><dt class="property-"
             title="">
         <span id="tags_nodejs">
 <a href="#tags_nodejs" style="color: inherit; text-decoration: inherit;">tags</a>
@@ -538,8 +476,7 @@ The following output properties are available:
         <span class="property-indicator"></span>
         <span class="property-type">{[key: string]: string}</span>
     </dt>
-    <dd>{{% md %}}Resource tags.{{% /md %}}</dd>
-    <dt class="property-"
+    <dd>{{% md %}}Resource tags.{{% /md %}}</dd><dt class="property-"
             title="">
         <span id="tcp_nodejs">
 <a href="#tcp_nodejs" style="color: inherit; text-decoration: inherit;">tcp</a>
@@ -547,14 +484,11 @@ The following output properties are available:
         <span class="property-indicator"></span>
         <span class="property-type"><a href="#tcpconfigresponse">Tcp<wbr>Config<wbr>Response[]</a></span>
     </dt>
-    <dd>{{% md %}}Configuration for tcp connectivity for this gateway.{{% /md %}}</dd>
-</dl>
+    <dd>{{% md %}}Configuration for tcp connectivity for this gateway.{{% /md %}}</dd></dl>
 {{% /choosable %}}
 
 {{% choosable language python %}}
-<dl class="resources-properties">
-
-    <dt class="property-"
+<dl class="resources-properties"><dt class="property-"
             title="">
         <span id="destination_network_python">
 <a href="#destination_network_python" style="color: inherit; text-decoration: inherit;">destination_<wbr>network</a>
@@ -562,8 +496,7 @@ The following output properties are available:
         <span class="property-indicator"></span>
         <span class="property-type"><a href="#networkrefresponse">Network<wbr>Ref<wbr>Response</a></span>
     </dt>
-    <dd>{{% md %}}Network that the Application is using.{{% /md %}}</dd>
-    <dt class="property-"
+    <dd>{{% md %}}Network that the Application is using.{{% /md %}}</dd><dt class="property-"
             title="">
         <span id="id_python">
 <a href="#id_python" style="color: inherit; text-decoration: inherit;">id</a>
@@ -571,8 +504,7 @@ The following output properties are available:
         <span class="property-indicator"></span>
         <span class="property-type">str</span>
     </dt>
-    <dd>{{% md %}}Fully qualified identifier for the resource. Ex - /subscriptions/{subscriptionId}/resourceGroups/{resourceGroupName}/providers/{resourceProviderNamespace}/{resourceType}/{resourceName}{{% /md %}}</dd>
-    <dt class="property-"
+    <dd>{{% md %}}Fully qualified identifier for the resource. Ex - /subscriptions/{subscriptionId}/resourceGroups/{resourceGroupName}/providers/{resourceProviderNamespace}/{resourceType}/{resourceName}{{% /md %}}</dd><dt class="property-"
             title="">
         <span id="ip_address_python">
 <a href="#ip_address_python" style="color: inherit; text-decoration: inherit;">ip_<wbr>address</a>
@@ -580,8 +512,7 @@ The following output properties are available:
         <span class="property-indicator"></span>
         <span class="property-type">str</span>
     </dt>
-    <dd>{{% md %}}IP address of the gateway. This is populated in the response and is ignored for incoming requests.{{% /md %}}</dd>
-    <dt class="property-"
+    <dd>{{% md %}}IP address of the gateway. This is populated in the response and is ignored for incoming requests.{{% /md %}}</dd><dt class="property-"
             title="">
         <span id="location_python">
 <a href="#location_python" style="color: inherit; text-decoration: inherit;">location</a>
@@ -589,8 +520,7 @@ The following output properties are available:
         <span class="property-indicator"></span>
         <span class="property-type">str</span>
     </dt>
-    <dd>{{% md %}}The geo-location where the resource lives{{% /md %}}</dd>
-    <dt class="property-"
+    <dd>{{% md %}}The geo-location where the resource lives{{% /md %}}</dd><dt class="property-"
             title="">
         <span id="name_python">
 <a href="#name_python" style="color: inherit; text-decoration: inherit;">name</a>
@@ -598,8 +528,7 @@ The following output properties are available:
         <span class="property-indicator"></span>
         <span class="property-type">str</span>
     </dt>
-    <dd>{{% md %}}The name of the resource{{% /md %}}</dd>
-    <dt class="property-"
+    <dd>{{% md %}}The name of the resource{{% /md %}}</dd><dt class="property-"
             title="">
         <span id="provisioning_state_python">
 <a href="#provisioning_state_python" style="color: inherit; text-decoration: inherit;">provisioning_<wbr>state</a>
@@ -607,8 +536,7 @@ The following output properties are available:
         <span class="property-indicator"></span>
         <span class="property-type">str</span>
     </dt>
-    <dd>{{% md %}}State of the resource.{{% /md %}}</dd>
-    <dt class="property-"
+    <dd>{{% md %}}State of the resource.{{% /md %}}</dd><dt class="property-"
             title="">
         <span id="source_network_python">
 <a href="#source_network_python" style="color: inherit; text-decoration: inherit;">source_<wbr>network</a>
@@ -616,8 +544,7 @@ The following output properties are available:
         <span class="property-indicator"></span>
         <span class="property-type"><a href="#networkrefresponse">Network<wbr>Ref<wbr>Response</a></span>
     </dt>
-    <dd>{{% md %}}Network the gateway should listen on for requests.{{% /md %}}</dd>
-    <dt class="property-"
+    <dd>{{% md %}}Network the gateway should listen on for requests.{{% /md %}}</dd><dt class="property-"
             title="">
         <span id="status_python">
 <a href="#status_python" style="color: inherit; text-decoration: inherit;">status</a>
@@ -625,8 +552,7 @@ The following output properties are available:
         <span class="property-indicator"></span>
         <span class="property-type">str</span>
     </dt>
-    <dd>{{% md %}}Status of the resource.{{% /md %}}</dd>
-    <dt class="property-"
+    <dd>{{% md %}}Status of the resource.{{% /md %}}</dd><dt class="property-"
             title="">
         <span id="status_details_python">
 <a href="#status_details_python" style="color: inherit; text-decoration: inherit;">status_<wbr>details</a>
@@ -634,8 +560,7 @@ The following output properties are available:
         <span class="property-indicator"></span>
         <span class="property-type">str</span>
     </dt>
-    <dd>{{% md %}}Gives additional information about the current status of the gateway.{{% /md %}}</dd>
-    <dt class="property-"
+    <dd>{{% md %}}Gives additional information about the current status of the gateway.{{% /md %}}</dd><dt class="property-"
             title="">
         <span id="type_python">
 <a href="#type_python" style="color: inherit; text-decoration: inherit;">type</a>
@@ -643,8 +568,7 @@ The following output properties are available:
         <span class="property-indicator"></span>
         <span class="property-type">str</span>
     </dt>
-    <dd>{{% md %}}The type of the resource. Ex- Microsoft.Compute/virtualMachines or Microsoft.Storage/storageAccounts.{{% /md %}}</dd>
-    <dt class="property-"
+    <dd>{{% md %}}The type of the resource. Ex- Microsoft.Compute/virtualMachines or Microsoft.Storage/storageAccounts.{{% /md %}}</dd><dt class="property-"
             title="">
         <span id="description_python">
 <a href="#description_python" style="color: inherit; text-decoration: inherit;">description</a>
@@ -652,8 +576,7 @@ The following output properties are available:
         <span class="property-indicator"></span>
         <span class="property-type">str</span>
     </dt>
-    <dd>{{% md %}}User readable description of the gateway.{{% /md %}}</dd>
-    <dt class="property-"
+    <dd>{{% md %}}User readable description of the gateway.{{% /md %}}</dd><dt class="property-"
             title="">
         <span id="http_python">
 <a href="#http_python" style="color: inherit; text-decoration: inherit;">http</a>
@@ -661,8 +584,7 @@ The following output properties are available:
         <span class="property-indicator"></span>
         <span class="property-type"><a href="#httpconfigresponse">Sequence[Http<wbr>Config<wbr>Response]</a></span>
     </dt>
-    <dd>{{% md %}}Configuration for http connectivity for this gateway.{{% /md %}}</dd>
-    <dt class="property-"
+    <dd>{{% md %}}Configuration for http connectivity for this gateway.{{% /md %}}</dd><dt class="property-"
             title="">
         <span id="tags_python">
 <a href="#tags_python" style="color: inherit; text-decoration: inherit;">tags</a>
@@ -670,8 +592,7 @@ The following output properties are available:
         <span class="property-indicator"></span>
         <span class="property-type">Mapping[str, str]</span>
     </dt>
-    <dd>{{% md %}}Resource tags.{{% /md %}}</dd>
-    <dt class="property-"
+    <dd>{{% md %}}Resource tags.{{% /md %}}</dd><dt class="property-"
             title="">
         <span id="tcp_python">
 <a href="#tcp_python" style="color: inherit; text-decoration: inherit;">tcp</a>
@@ -679,8 +600,7 @@ The following output properties are available:
         <span class="property-indicator"></span>
         <span class="property-type"><a href="#tcpconfigresponse">Sequence[Tcp<wbr>Config<wbr>Response]</a></span>
     </dt>
-    <dd>{{% md %}}Configuration for tcp connectivity for this gateway.{{% /md %}}</dd>
-</dl>
+    <dd>{{% md %}}Configuration for tcp connectivity for this gateway.{{% /md %}}</dd></dl>
 {{% /choosable %}}
 
 
@@ -694,9 +614,7 @@ The following output properties are available:
 
 
 {{% choosable language csharp %}}
-<dl class="resources-properties">
-
-    <dt class="property-optional"
+<dl class="resources-properties"><dt class="property-optional"
             title="Optional">
         <span id="name_csharp">
 <a href="#name_csharp" style="color: inherit; text-decoration: inherit;">Name</a>
@@ -704,14 +622,11 @@ The following output properties are available:
         <span class="property-indicator"></span>
         <span class="property-type">string</span>
     </dt>
-    <dd>{{% md %}}Name of the endpoint.{{% /md %}}</dd>
-</dl>
+    <dd>{{% md %}}Name of the endpoint.{{% /md %}}</dd></dl>
 {{% /choosable %}}
 
 {{% choosable language go %}}
-<dl class="resources-properties">
-
-    <dt class="property-optional"
+<dl class="resources-properties"><dt class="property-optional"
             title="Optional">
         <span id="name_go">
 <a href="#name_go" style="color: inherit; text-decoration: inherit;">Name</a>
@@ -719,14 +634,11 @@ The following output properties are available:
         <span class="property-indicator"></span>
         <span class="property-type">string</span>
     </dt>
-    <dd>{{% md %}}Name of the endpoint.{{% /md %}}</dd>
-</dl>
+    <dd>{{% md %}}Name of the endpoint.{{% /md %}}</dd></dl>
 {{% /choosable %}}
 
 {{% choosable language nodejs %}}
-<dl class="resources-properties">
-
-    <dt class="property-optional"
+<dl class="resources-properties"><dt class="property-optional"
             title="Optional">
         <span id="name_nodejs">
 <a href="#name_nodejs" style="color: inherit; text-decoration: inherit;">name</a>
@@ -734,14 +646,11 @@ The following output properties are available:
         <span class="property-indicator"></span>
         <span class="property-type">string</span>
     </dt>
-    <dd>{{% md %}}Name of the endpoint.{{% /md %}}</dd>
-</dl>
+    <dd>{{% md %}}Name of the endpoint.{{% /md %}}</dd></dl>
 {{% /choosable %}}
 
 {{% choosable language python %}}
-<dl class="resources-properties">
-
-    <dt class="property-optional"
+<dl class="resources-properties"><dt class="property-optional"
             title="Optional">
         <span id="name_python">
 <a href="#name_python" style="color: inherit; text-decoration: inherit;">name</a>
@@ -749,8 +658,7 @@ The following output properties are available:
         <span class="property-indicator"></span>
         <span class="property-type">str</span>
     </dt>
-    <dd>{{% md %}}Name of the endpoint.{{% /md %}}</dd>
-</dl>
+    <dd>{{% md %}}Name of the endpoint.{{% /md %}}</dd></dl>
 {{% /choosable %}}
 
 <h4 id="gatewaydestinationresponse">Gateway<wbr>Destination<wbr>Response</h4>
@@ -758,9 +666,7 @@ The following output properties are available:
 
 
 {{% choosable language csharp %}}
-<dl class="resources-properties">
-
-    <dt class="property-required"
+<dl class="resources-properties"><dt class="property-required"
             title="Required">
         <span id="applicationname_csharp">
 <a href="#applicationname_csharp" style="color: inherit; text-decoration: inherit;">Application<wbr>Name</a>
@@ -768,8 +674,7 @@ The following output properties are available:
         <span class="property-indicator"></span>
         <span class="property-type">string</span>
     </dt>
-    <dd>{{% md %}}Name of the service fabric Mesh application.{{% /md %}}</dd>
-    <dt class="property-required"
+    <dd>{{% md %}}Name of the service fabric Mesh application.{{% /md %}}</dd><dt class="property-required"
             title="Required">
         <span id="endpointname_csharp">
 <a href="#endpointname_csharp" style="color: inherit; text-decoration: inherit;">Endpoint<wbr>Name</a>
@@ -777,8 +682,7 @@ The following output properties are available:
         <span class="property-indicator"></span>
         <span class="property-type">string</span>
     </dt>
-    <dd>{{% md %}}name of the endpoint in the service.{{% /md %}}</dd>
-    <dt class="property-required"
+    <dd>{{% md %}}name of the endpoint in the service.{{% /md %}}</dd><dt class="property-required"
             title="Required">
         <span id="servicename_csharp">
 <a href="#servicename_csharp" style="color: inherit; text-decoration: inherit;">Service<wbr>Name</a>
@@ -786,14 +690,11 @@ The following output properties are available:
         <span class="property-indicator"></span>
         <span class="property-type">string</span>
     </dt>
-    <dd>{{% md %}}service that contains the endpoint.{{% /md %}}</dd>
-</dl>
+    <dd>{{% md %}}service that contains the endpoint.{{% /md %}}</dd></dl>
 {{% /choosable %}}
 
 {{% choosable language go %}}
-<dl class="resources-properties">
-
-    <dt class="property-required"
+<dl class="resources-properties"><dt class="property-required"
             title="Required">
         <span id="applicationname_go">
 <a href="#applicationname_go" style="color: inherit; text-decoration: inherit;">Application<wbr>Name</a>
@@ -801,8 +702,7 @@ The following output properties are available:
         <span class="property-indicator"></span>
         <span class="property-type">string</span>
     </dt>
-    <dd>{{% md %}}Name of the service fabric Mesh application.{{% /md %}}</dd>
-    <dt class="property-required"
+    <dd>{{% md %}}Name of the service fabric Mesh application.{{% /md %}}</dd><dt class="property-required"
             title="Required">
         <span id="endpointname_go">
 <a href="#endpointname_go" style="color: inherit; text-decoration: inherit;">Endpoint<wbr>Name</a>
@@ -810,8 +710,7 @@ The following output properties are available:
         <span class="property-indicator"></span>
         <span class="property-type">string</span>
     </dt>
-    <dd>{{% md %}}name of the endpoint in the service.{{% /md %}}</dd>
-    <dt class="property-required"
+    <dd>{{% md %}}name of the endpoint in the service.{{% /md %}}</dd><dt class="property-required"
             title="Required">
         <span id="servicename_go">
 <a href="#servicename_go" style="color: inherit; text-decoration: inherit;">Service<wbr>Name</a>
@@ -819,14 +718,11 @@ The following output properties are available:
         <span class="property-indicator"></span>
         <span class="property-type">string</span>
     </dt>
-    <dd>{{% md %}}service that contains the endpoint.{{% /md %}}</dd>
-</dl>
+    <dd>{{% md %}}service that contains the endpoint.{{% /md %}}</dd></dl>
 {{% /choosable %}}
 
 {{% choosable language nodejs %}}
-<dl class="resources-properties">
-
-    <dt class="property-required"
+<dl class="resources-properties"><dt class="property-required"
             title="Required">
         <span id="applicationname_nodejs">
 <a href="#applicationname_nodejs" style="color: inherit; text-decoration: inherit;">application<wbr>Name</a>
@@ -834,8 +730,7 @@ The following output properties are available:
         <span class="property-indicator"></span>
         <span class="property-type">string</span>
     </dt>
-    <dd>{{% md %}}Name of the service fabric Mesh application.{{% /md %}}</dd>
-    <dt class="property-required"
+    <dd>{{% md %}}Name of the service fabric Mesh application.{{% /md %}}</dd><dt class="property-required"
             title="Required">
         <span id="endpointname_nodejs">
 <a href="#endpointname_nodejs" style="color: inherit; text-decoration: inherit;">endpoint<wbr>Name</a>
@@ -843,8 +738,7 @@ The following output properties are available:
         <span class="property-indicator"></span>
         <span class="property-type">string</span>
     </dt>
-    <dd>{{% md %}}name of the endpoint in the service.{{% /md %}}</dd>
-    <dt class="property-required"
+    <dd>{{% md %}}name of the endpoint in the service.{{% /md %}}</dd><dt class="property-required"
             title="Required">
         <span id="servicename_nodejs">
 <a href="#servicename_nodejs" style="color: inherit; text-decoration: inherit;">service<wbr>Name</a>
@@ -852,14 +746,11 @@ The following output properties are available:
         <span class="property-indicator"></span>
         <span class="property-type">string</span>
     </dt>
-    <dd>{{% md %}}service that contains the endpoint.{{% /md %}}</dd>
-</dl>
+    <dd>{{% md %}}service that contains the endpoint.{{% /md %}}</dd></dl>
 {{% /choosable %}}
 
 {{% choosable language python %}}
-<dl class="resources-properties">
-
-    <dt class="property-required"
+<dl class="resources-properties"><dt class="property-required"
             title="Required">
         <span id="application_name_python">
 <a href="#application_name_python" style="color: inherit; text-decoration: inherit;">application_<wbr>name</a>
@@ -867,8 +758,7 @@ The following output properties are available:
         <span class="property-indicator"></span>
         <span class="property-type">str</span>
     </dt>
-    <dd>{{% md %}}Name of the service fabric Mesh application.{{% /md %}}</dd>
-    <dt class="property-required"
+    <dd>{{% md %}}Name of the service fabric Mesh application.{{% /md %}}</dd><dt class="property-required"
             title="Required">
         <span id="endpoint_name_python">
 <a href="#endpoint_name_python" style="color: inherit; text-decoration: inherit;">endpoint_<wbr>name</a>
@@ -876,8 +766,7 @@ The following output properties are available:
         <span class="property-indicator"></span>
         <span class="property-type">str</span>
     </dt>
-    <dd>{{% md %}}name of the endpoint in the service.{{% /md %}}</dd>
-    <dt class="property-required"
+    <dd>{{% md %}}name of the endpoint in the service.{{% /md %}}</dd><dt class="property-required"
             title="Required">
         <span id="service_name_python">
 <a href="#service_name_python" style="color: inherit; text-decoration: inherit;">service_<wbr>name</a>
@@ -885,8 +774,7 @@ The following output properties are available:
         <span class="property-indicator"></span>
         <span class="property-type">str</span>
     </dt>
-    <dd>{{% md %}}service that contains the endpoint.{{% /md %}}</dd>
-</dl>
+    <dd>{{% md %}}service that contains the endpoint.{{% /md %}}</dd></dl>
 {{% /choosable %}}
 
 <h4 id="httpconfigresponse">Http<wbr>Config<wbr>Response</h4>
@@ -894,9 +782,7 @@ The following output properties are available:
 
 
 {{% choosable language csharp %}}
-<dl class="resources-properties">
-
-    <dt class="property-required"
+<dl class="resources-properties"><dt class="property-required"
             title="Required">
         <span id="hosts_csharp">
 <a href="#hosts_csharp" style="color: inherit; text-decoration: inherit;">Hosts</a>
@@ -904,8 +790,7 @@ The following output properties are available:
         <span class="property-indicator"></span>
         <span class="property-type"><a href="#httphostconfigresponse">List&lt;Pulumi.<wbr>Azure<wbr>Native.<wbr>Service<wbr>Fabric<wbr>Mesh.<wbr>Inputs.<wbr>Http<wbr>Host<wbr>Config<wbr>Response<wbr>Args&gt;</a></span>
     </dt>
-    <dd>{{% md %}}description for routing.{{% /md %}}</dd>
-    <dt class="property-required"
+    <dd>{{% md %}}description for routing.{{% /md %}}</dd><dt class="property-required"
             title="Required">
         <span id="name_csharp">
 <a href="#name_csharp" style="color: inherit; text-decoration: inherit;">Name</a>
@@ -913,8 +798,7 @@ The following output properties are available:
         <span class="property-indicator"></span>
         <span class="property-type">string</span>
     </dt>
-    <dd>{{% md %}}http gateway config name.{{% /md %}}</dd>
-    <dt class="property-required"
+    <dd>{{% md %}}http gateway config name.{{% /md %}}</dd><dt class="property-required"
             title="Required">
         <span id="port_csharp">
 <a href="#port_csharp" style="color: inherit; text-decoration: inherit;">Port</a>
@@ -922,14 +806,11 @@ The following output properties are available:
         <span class="property-indicator"></span>
         <span class="property-type">int</span>
     </dt>
-    <dd>{{% md %}}Specifies the port at which the service endpoint below needs to be exposed.{{% /md %}}</dd>
-</dl>
+    <dd>{{% md %}}Specifies the port at which the service endpoint below needs to be exposed.{{% /md %}}</dd></dl>
 {{% /choosable %}}
 
 {{% choosable language go %}}
-<dl class="resources-properties">
-
-    <dt class="property-required"
+<dl class="resources-properties"><dt class="property-required"
             title="Required">
         <span id="hosts_go">
 <a href="#hosts_go" style="color: inherit; text-decoration: inherit;">Hosts</a>
@@ -937,8 +818,7 @@ The following output properties are available:
         <span class="property-indicator"></span>
         <span class="property-type"><a href="#httphostconfigresponse">[]Http<wbr>Host<wbr>Config<wbr>Response</a></span>
     </dt>
-    <dd>{{% md %}}description for routing.{{% /md %}}</dd>
-    <dt class="property-required"
+    <dd>{{% md %}}description for routing.{{% /md %}}</dd><dt class="property-required"
             title="Required">
         <span id="name_go">
 <a href="#name_go" style="color: inherit; text-decoration: inherit;">Name</a>
@@ -946,8 +826,7 @@ The following output properties are available:
         <span class="property-indicator"></span>
         <span class="property-type">string</span>
     </dt>
-    <dd>{{% md %}}http gateway config name.{{% /md %}}</dd>
-    <dt class="property-required"
+    <dd>{{% md %}}http gateway config name.{{% /md %}}</dd><dt class="property-required"
             title="Required">
         <span id="port_go">
 <a href="#port_go" style="color: inherit; text-decoration: inherit;">Port</a>
@@ -955,14 +834,11 @@ The following output properties are available:
         <span class="property-indicator"></span>
         <span class="property-type">int</span>
     </dt>
-    <dd>{{% md %}}Specifies the port at which the service endpoint below needs to be exposed.{{% /md %}}</dd>
-</dl>
+    <dd>{{% md %}}Specifies the port at which the service endpoint below needs to be exposed.{{% /md %}}</dd></dl>
 {{% /choosable %}}
 
 {{% choosable language nodejs %}}
-<dl class="resources-properties">
-
-    <dt class="property-required"
+<dl class="resources-properties"><dt class="property-required"
             title="Required">
         <span id="hosts_nodejs">
 <a href="#hosts_nodejs" style="color: inherit; text-decoration: inherit;">hosts</a>
@@ -970,8 +846,7 @@ The following output properties are available:
         <span class="property-indicator"></span>
         <span class="property-type"><a href="#httphostconfigresponse">Http<wbr>Host<wbr>Config<wbr>Response[]</a></span>
     </dt>
-    <dd>{{% md %}}description for routing.{{% /md %}}</dd>
-    <dt class="property-required"
+    <dd>{{% md %}}description for routing.{{% /md %}}</dd><dt class="property-required"
             title="Required">
         <span id="name_nodejs">
 <a href="#name_nodejs" style="color: inherit; text-decoration: inherit;">name</a>
@@ -979,8 +854,7 @@ The following output properties are available:
         <span class="property-indicator"></span>
         <span class="property-type">string</span>
     </dt>
-    <dd>{{% md %}}http gateway config name.{{% /md %}}</dd>
-    <dt class="property-required"
+    <dd>{{% md %}}http gateway config name.{{% /md %}}</dd><dt class="property-required"
             title="Required">
         <span id="port_nodejs">
 <a href="#port_nodejs" style="color: inherit; text-decoration: inherit;">port</a>
@@ -988,14 +862,11 @@ The following output properties are available:
         <span class="property-indicator"></span>
         <span class="property-type">number</span>
     </dt>
-    <dd>{{% md %}}Specifies the port at which the service endpoint below needs to be exposed.{{% /md %}}</dd>
-</dl>
+    <dd>{{% md %}}Specifies the port at which the service endpoint below needs to be exposed.{{% /md %}}</dd></dl>
 {{% /choosable %}}
 
 {{% choosable language python %}}
-<dl class="resources-properties">
-
-    <dt class="property-required"
+<dl class="resources-properties"><dt class="property-required"
             title="Required">
         <span id="hosts_python">
 <a href="#hosts_python" style="color: inherit; text-decoration: inherit;">hosts</a>
@@ -1003,8 +874,7 @@ The following output properties are available:
         <span class="property-indicator"></span>
         <span class="property-type"><a href="#httphostconfigresponse">Sequence[Http<wbr>Host<wbr>Config<wbr>Response<wbr>Args]</a></span>
     </dt>
-    <dd>{{% md %}}description for routing.{{% /md %}}</dd>
-    <dt class="property-required"
+    <dd>{{% md %}}description for routing.{{% /md %}}</dd><dt class="property-required"
             title="Required">
         <span id="name_python">
 <a href="#name_python" style="color: inherit; text-decoration: inherit;">name</a>
@@ -1012,8 +882,7 @@ The following output properties are available:
         <span class="property-indicator"></span>
         <span class="property-type">str</span>
     </dt>
-    <dd>{{% md %}}http gateway config name.{{% /md %}}</dd>
-    <dt class="property-required"
+    <dd>{{% md %}}http gateway config name.{{% /md %}}</dd><dt class="property-required"
             title="Required">
         <span id="port_python">
 <a href="#port_python" style="color: inherit; text-decoration: inherit;">port</a>
@@ -1021,8 +890,7 @@ The following output properties are available:
         <span class="property-indicator"></span>
         <span class="property-type">int</span>
     </dt>
-    <dd>{{% md %}}Specifies the port at which the service endpoint below needs to be exposed.{{% /md %}}</dd>
-</dl>
+    <dd>{{% md %}}Specifies the port at which the service endpoint below needs to be exposed.{{% /md %}}</dd></dl>
 {{% /choosable %}}
 
 <h4 id="httphostconfigresponse">Http<wbr>Host<wbr>Config<wbr>Response</h4>
@@ -1030,9 +898,7 @@ The following output properties are available:
 
 
 {{% choosable language csharp %}}
-<dl class="resources-properties">
-
-    <dt class="property-required"
+<dl class="resources-properties"><dt class="property-required"
             title="Required">
         <span id="name_csharp">
 <a href="#name_csharp" style="color: inherit; text-decoration: inherit;">Name</a>
@@ -1040,8 +906,7 @@ The following output properties are available:
         <span class="property-indicator"></span>
         <span class="property-type">string</span>
     </dt>
-    <dd>{{% md %}}http hostname config name.{{% /md %}}</dd>
-    <dt class="property-required"
+    <dd>{{% md %}}http hostname config name.{{% /md %}}</dd><dt class="property-required"
             title="Required">
         <span id="routes_csharp">
 <a href="#routes_csharp" style="color: inherit; text-decoration: inherit;">Routes</a>
@@ -1049,14 +914,11 @@ The following output properties are available:
         <span class="property-indicator"></span>
         <span class="property-type"><a href="#httprouteconfigresponse">List&lt;Pulumi.<wbr>Azure<wbr>Native.<wbr>Service<wbr>Fabric<wbr>Mesh.<wbr>Inputs.<wbr>Http<wbr>Route<wbr>Config<wbr>Response<wbr>Args&gt;</a></span>
     </dt>
-    <dd>{{% md %}}Route information to use for routing. Routes are processed in the order they are specified. Specify routes that are more specific before routes that can handle general cases.{{% /md %}}</dd>
-</dl>
+    <dd>{{% md %}}Route information to use for routing. Routes are processed in the order they are specified. Specify routes that are more specific before routes that can handle general cases.{{% /md %}}</dd></dl>
 {{% /choosable %}}
 
 {{% choosable language go %}}
-<dl class="resources-properties">
-
-    <dt class="property-required"
+<dl class="resources-properties"><dt class="property-required"
             title="Required">
         <span id="name_go">
 <a href="#name_go" style="color: inherit; text-decoration: inherit;">Name</a>
@@ -1064,8 +926,7 @@ The following output properties are available:
         <span class="property-indicator"></span>
         <span class="property-type">string</span>
     </dt>
-    <dd>{{% md %}}http hostname config name.{{% /md %}}</dd>
-    <dt class="property-required"
+    <dd>{{% md %}}http hostname config name.{{% /md %}}</dd><dt class="property-required"
             title="Required">
         <span id="routes_go">
 <a href="#routes_go" style="color: inherit; text-decoration: inherit;">Routes</a>
@@ -1073,14 +934,11 @@ The following output properties are available:
         <span class="property-indicator"></span>
         <span class="property-type"><a href="#httprouteconfigresponse">[]Http<wbr>Route<wbr>Config<wbr>Response</a></span>
     </dt>
-    <dd>{{% md %}}Route information to use for routing. Routes are processed in the order they are specified. Specify routes that are more specific before routes that can handle general cases.{{% /md %}}</dd>
-</dl>
+    <dd>{{% md %}}Route information to use for routing. Routes are processed in the order they are specified. Specify routes that are more specific before routes that can handle general cases.{{% /md %}}</dd></dl>
 {{% /choosable %}}
 
 {{% choosable language nodejs %}}
-<dl class="resources-properties">
-
-    <dt class="property-required"
+<dl class="resources-properties"><dt class="property-required"
             title="Required">
         <span id="name_nodejs">
 <a href="#name_nodejs" style="color: inherit; text-decoration: inherit;">name</a>
@@ -1088,8 +946,7 @@ The following output properties are available:
         <span class="property-indicator"></span>
         <span class="property-type">string</span>
     </dt>
-    <dd>{{% md %}}http hostname config name.{{% /md %}}</dd>
-    <dt class="property-required"
+    <dd>{{% md %}}http hostname config name.{{% /md %}}</dd><dt class="property-required"
             title="Required">
         <span id="routes_nodejs">
 <a href="#routes_nodejs" style="color: inherit; text-decoration: inherit;">routes</a>
@@ -1097,14 +954,11 @@ The following output properties are available:
         <span class="property-indicator"></span>
         <span class="property-type"><a href="#httprouteconfigresponse">Http<wbr>Route<wbr>Config<wbr>Response[]</a></span>
     </dt>
-    <dd>{{% md %}}Route information to use for routing. Routes are processed in the order they are specified. Specify routes that are more specific before routes that can handle general cases.{{% /md %}}</dd>
-</dl>
+    <dd>{{% md %}}Route information to use for routing. Routes are processed in the order they are specified. Specify routes that are more specific before routes that can handle general cases.{{% /md %}}</dd></dl>
 {{% /choosable %}}
 
 {{% choosable language python %}}
-<dl class="resources-properties">
-
-    <dt class="property-required"
+<dl class="resources-properties"><dt class="property-required"
             title="Required">
         <span id="name_python">
 <a href="#name_python" style="color: inherit; text-decoration: inherit;">name</a>
@@ -1112,8 +966,7 @@ The following output properties are available:
         <span class="property-indicator"></span>
         <span class="property-type">str</span>
     </dt>
-    <dd>{{% md %}}http hostname config name.{{% /md %}}</dd>
-    <dt class="property-required"
+    <dd>{{% md %}}http hostname config name.{{% /md %}}</dd><dt class="property-required"
             title="Required">
         <span id="routes_python">
 <a href="#routes_python" style="color: inherit; text-decoration: inherit;">routes</a>
@@ -1121,8 +974,7 @@ The following output properties are available:
         <span class="property-indicator"></span>
         <span class="property-type"><a href="#httprouteconfigresponse">Sequence[Http<wbr>Route<wbr>Config<wbr>Response<wbr>Args]</a></span>
     </dt>
-    <dd>{{% md %}}Route information to use for routing. Routes are processed in the order they are specified. Specify routes that are more specific before routes that can handle general cases.{{% /md %}}</dd>
-</dl>
+    <dd>{{% md %}}Route information to use for routing. Routes are processed in the order they are specified. Specify routes that are more specific before routes that can handle general cases.{{% /md %}}</dd></dl>
 {{% /choosable %}}
 
 <h4 id="httprouteconfigresponse">Http<wbr>Route<wbr>Config<wbr>Response</h4>
@@ -1130,9 +982,7 @@ The following output properties are available:
 
 
 {{% choosable language csharp %}}
-<dl class="resources-properties">
-
-    <dt class="property-required"
+<dl class="resources-properties"><dt class="property-required"
             title="Required">
         <span id="destination_csharp">
 <a href="#destination_csharp" style="color: inherit; text-decoration: inherit;">Destination</a>
@@ -1140,8 +990,7 @@ The following output properties are available:
         <span class="property-indicator"></span>
         <span class="property-type"><a href="#gatewaydestinationresponse">Pulumi.<wbr>Azure<wbr>Native.<wbr>Service<wbr>Fabric<wbr>Mesh.<wbr>Inputs.<wbr>Gateway<wbr>Destination<wbr>Response<wbr>Args</a></span>
     </dt>
-    <dd>{{% md %}}Describes destination endpoint for routing traffic.{{% /md %}}</dd>
-    <dt class="property-required"
+    <dd>{{% md %}}Describes destination endpoint for routing traffic.{{% /md %}}</dd><dt class="property-required"
             title="Required">
         <span id="match_csharp">
 <a href="#match_csharp" style="color: inherit; text-decoration: inherit;">Match</a>
@@ -1149,8 +998,7 @@ The following output properties are available:
         <span class="property-indicator"></span>
         <span class="property-type"><a href="#httproutematchruleresponse">Pulumi.<wbr>Azure<wbr>Native.<wbr>Service<wbr>Fabric<wbr>Mesh.<wbr>Inputs.<wbr>Http<wbr>Route<wbr>Match<wbr>Rule<wbr>Response<wbr>Args</a></span>
     </dt>
-    <dd>{{% md %}}Describes a rule for http route matching.{{% /md %}}</dd>
-    <dt class="property-required"
+    <dd>{{% md %}}Describes a rule for http route matching.{{% /md %}}</dd><dt class="property-required"
             title="Required">
         <span id="name_csharp">
 <a href="#name_csharp" style="color: inherit; text-decoration: inherit;">Name</a>
@@ -1158,14 +1006,11 @@ The following output properties are available:
         <span class="property-indicator"></span>
         <span class="property-type">string</span>
     </dt>
-    <dd>{{% md %}}http route name.{{% /md %}}</dd>
-</dl>
+    <dd>{{% md %}}http route name.{{% /md %}}</dd></dl>
 {{% /choosable %}}
 
 {{% choosable language go %}}
-<dl class="resources-properties">
-
-    <dt class="property-required"
+<dl class="resources-properties"><dt class="property-required"
             title="Required">
         <span id="destination_go">
 <a href="#destination_go" style="color: inherit; text-decoration: inherit;">Destination</a>
@@ -1173,8 +1018,7 @@ The following output properties are available:
         <span class="property-indicator"></span>
         <span class="property-type"><a href="#gatewaydestinationresponse">Gateway<wbr>Destination<wbr>Response</a></span>
     </dt>
-    <dd>{{% md %}}Describes destination endpoint for routing traffic.{{% /md %}}</dd>
-    <dt class="property-required"
+    <dd>{{% md %}}Describes destination endpoint for routing traffic.{{% /md %}}</dd><dt class="property-required"
             title="Required">
         <span id="match_go">
 <a href="#match_go" style="color: inherit; text-decoration: inherit;">Match</a>
@@ -1182,8 +1026,7 @@ The following output properties are available:
         <span class="property-indicator"></span>
         <span class="property-type"><a href="#httproutematchruleresponse">Http<wbr>Route<wbr>Match<wbr>Rule<wbr>Response</a></span>
     </dt>
-    <dd>{{% md %}}Describes a rule for http route matching.{{% /md %}}</dd>
-    <dt class="property-required"
+    <dd>{{% md %}}Describes a rule for http route matching.{{% /md %}}</dd><dt class="property-required"
             title="Required">
         <span id="name_go">
 <a href="#name_go" style="color: inherit; text-decoration: inherit;">Name</a>
@@ -1191,14 +1034,11 @@ The following output properties are available:
         <span class="property-indicator"></span>
         <span class="property-type">string</span>
     </dt>
-    <dd>{{% md %}}http route name.{{% /md %}}</dd>
-</dl>
+    <dd>{{% md %}}http route name.{{% /md %}}</dd></dl>
 {{% /choosable %}}
 
 {{% choosable language nodejs %}}
-<dl class="resources-properties">
-
-    <dt class="property-required"
+<dl class="resources-properties"><dt class="property-required"
             title="Required">
         <span id="destination_nodejs">
 <a href="#destination_nodejs" style="color: inherit; text-decoration: inherit;">destination</a>
@@ -1206,8 +1046,7 @@ The following output properties are available:
         <span class="property-indicator"></span>
         <span class="property-type"><a href="#gatewaydestinationresponse">Gateway<wbr>Destination<wbr>Response</a></span>
     </dt>
-    <dd>{{% md %}}Describes destination endpoint for routing traffic.{{% /md %}}</dd>
-    <dt class="property-required"
+    <dd>{{% md %}}Describes destination endpoint for routing traffic.{{% /md %}}</dd><dt class="property-required"
             title="Required">
         <span id="match_nodejs">
 <a href="#match_nodejs" style="color: inherit; text-decoration: inherit;">match</a>
@@ -1215,8 +1054,7 @@ The following output properties are available:
         <span class="property-indicator"></span>
         <span class="property-type"><a href="#httproutematchruleresponse">Http<wbr>Route<wbr>Match<wbr>Rule<wbr>Response</a></span>
     </dt>
-    <dd>{{% md %}}Describes a rule for http route matching.{{% /md %}}</dd>
-    <dt class="property-required"
+    <dd>{{% md %}}Describes a rule for http route matching.{{% /md %}}</dd><dt class="property-required"
             title="Required">
         <span id="name_nodejs">
 <a href="#name_nodejs" style="color: inherit; text-decoration: inherit;">name</a>
@@ -1224,14 +1062,11 @@ The following output properties are available:
         <span class="property-indicator"></span>
         <span class="property-type">string</span>
     </dt>
-    <dd>{{% md %}}http route name.{{% /md %}}</dd>
-</dl>
+    <dd>{{% md %}}http route name.{{% /md %}}</dd></dl>
 {{% /choosable %}}
 
 {{% choosable language python %}}
-<dl class="resources-properties">
-
-    <dt class="property-required"
+<dl class="resources-properties"><dt class="property-required"
             title="Required">
         <span id="destination_python">
 <a href="#destination_python" style="color: inherit; text-decoration: inherit;">destination</a>
@@ -1239,8 +1074,7 @@ The following output properties are available:
         <span class="property-indicator"></span>
         <span class="property-type"><a href="#gatewaydestinationresponse">Gateway<wbr>Destination<wbr>Response<wbr>Args</a></span>
     </dt>
-    <dd>{{% md %}}Describes destination endpoint for routing traffic.{{% /md %}}</dd>
-    <dt class="property-required"
+    <dd>{{% md %}}Describes destination endpoint for routing traffic.{{% /md %}}</dd><dt class="property-required"
             title="Required">
         <span id="match_python">
 <a href="#match_python" style="color: inherit; text-decoration: inherit;">match</a>
@@ -1248,8 +1082,7 @@ The following output properties are available:
         <span class="property-indicator"></span>
         <span class="property-type"><a href="#httproutematchruleresponse">Http<wbr>Route<wbr>Match<wbr>Rule<wbr>Response<wbr>Args</a></span>
     </dt>
-    <dd>{{% md %}}Describes a rule for http route matching.{{% /md %}}</dd>
-    <dt class="property-required"
+    <dd>{{% md %}}Describes a rule for http route matching.{{% /md %}}</dd><dt class="property-required"
             title="Required">
         <span id="name_python">
 <a href="#name_python" style="color: inherit; text-decoration: inherit;">name</a>
@@ -1257,8 +1090,7 @@ The following output properties are available:
         <span class="property-indicator"></span>
         <span class="property-type">str</span>
     </dt>
-    <dd>{{% md %}}http route name.{{% /md %}}</dd>
-</dl>
+    <dd>{{% md %}}http route name.{{% /md %}}</dd></dl>
 {{% /choosable %}}
 
 <h4 id="httproutematchheaderresponse">Http<wbr>Route<wbr>Match<wbr>Header<wbr>Response</h4>
@@ -1266,9 +1098,7 @@ The following output properties are available:
 
 
 {{% choosable language csharp %}}
-<dl class="resources-properties">
-
-    <dt class="property-required"
+<dl class="resources-properties"><dt class="property-required"
             title="Required">
         <span id="name_csharp">
 <a href="#name_csharp" style="color: inherit; text-decoration: inherit;">Name</a>
@@ -1276,8 +1106,7 @@ The following output properties are available:
         <span class="property-indicator"></span>
         <span class="property-type">string</span>
     </dt>
-    <dd>{{% md %}}Name of header to match in request.{{% /md %}}</dd>
-    <dt class="property-optional"
+    <dd>{{% md %}}Name of header to match in request.{{% /md %}}</dd><dt class="property-optional"
             title="Optional">
         <span id="type_csharp">
 <a href="#type_csharp" style="color: inherit; text-decoration: inherit;">Type</a>
@@ -1285,8 +1114,7 @@ The following output properties are available:
         <span class="property-indicator"></span>
         <span class="property-type">string</span>
     </dt>
-    <dd>{{% md %}}how to match header value{{% /md %}}</dd>
-    <dt class="property-optional"
+    <dd>{{% md %}}how to match header value{{% /md %}}</dd><dt class="property-optional"
             title="Optional">
         <span id="value_csharp">
 <a href="#value_csharp" style="color: inherit; text-decoration: inherit;">Value</a>
@@ -1294,14 +1122,11 @@ The following output properties are available:
         <span class="property-indicator"></span>
         <span class="property-type">string</span>
     </dt>
-    <dd>{{% md %}}Value of header to match in request.{{% /md %}}</dd>
-</dl>
+    <dd>{{% md %}}Value of header to match in request.{{% /md %}}</dd></dl>
 {{% /choosable %}}
 
 {{% choosable language go %}}
-<dl class="resources-properties">
-
-    <dt class="property-required"
+<dl class="resources-properties"><dt class="property-required"
             title="Required">
         <span id="name_go">
 <a href="#name_go" style="color: inherit; text-decoration: inherit;">Name</a>
@@ -1309,8 +1134,7 @@ The following output properties are available:
         <span class="property-indicator"></span>
         <span class="property-type">string</span>
     </dt>
-    <dd>{{% md %}}Name of header to match in request.{{% /md %}}</dd>
-    <dt class="property-optional"
+    <dd>{{% md %}}Name of header to match in request.{{% /md %}}</dd><dt class="property-optional"
             title="Optional">
         <span id="type_go">
 <a href="#type_go" style="color: inherit; text-decoration: inherit;">Type</a>
@@ -1318,8 +1142,7 @@ The following output properties are available:
         <span class="property-indicator"></span>
         <span class="property-type">string</span>
     </dt>
-    <dd>{{% md %}}how to match header value{{% /md %}}</dd>
-    <dt class="property-optional"
+    <dd>{{% md %}}how to match header value{{% /md %}}</dd><dt class="property-optional"
             title="Optional">
         <span id="value_go">
 <a href="#value_go" style="color: inherit; text-decoration: inherit;">Value</a>
@@ -1327,14 +1150,11 @@ The following output properties are available:
         <span class="property-indicator"></span>
         <span class="property-type">string</span>
     </dt>
-    <dd>{{% md %}}Value of header to match in request.{{% /md %}}</dd>
-</dl>
+    <dd>{{% md %}}Value of header to match in request.{{% /md %}}</dd></dl>
 {{% /choosable %}}
 
 {{% choosable language nodejs %}}
-<dl class="resources-properties">
-
-    <dt class="property-required"
+<dl class="resources-properties"><dt class="property-required"
             title="Required">
         <span id="name_nodejs">
 <a href="#name_nodejs" style="color: inherit; text-decoration: inherit;">name</a>
@@ -1342,8 +1162,7 @@ The following output properties are available:
         <span class="property-indicator"></span>
         <span class="property-type">string</span>
     </dt>
-    <dd>{{% md %}}Name of header to match in request.{{% /md %}}</dd>
-    <dt class="property-optional"
+    <dd>{{% md %}}Name of header to match in request.{{% /md %}}</dd><dt class="property-optional"
             title="Optional">
         <span id="type_nodejs">
 <a href="#type_nodejs" style="color: inherit; text-decoration: inherit;">type</a>
@@ -1351,8 +1170,7 @@ The following output properties are available:
         <span class="property-indicator"></span>
         <span class="property-type">string</span>
     </dt>
-    <dd>{{% md %}}how to match header value{{% /md %}}</dd>
-    <dt class="property-optional"
+    <dd>{{% md %}}how to match header value{{% /md %}}</dd><dt class="property-optional"
             title="Optional">
         <span id="value_nodejs">
 <a href="#value_nodejs" style="color: inherit; text-decoration: inherit;">value</a>
@@ -1360,14 +1178,11 @@ The following output properties are available:
         <span class="property-indicator"></span>
         <span class="property-type">string</span>
     </dt>
-    <dd>{{% md %}}Value of header to match in request.{{% /md %}}</dd>
-</dl>
+    <dd>{{% md %}}Value of header to match in request.{{% /md %}}</dd></dl>
 {{% /choosable %}}
 
 {{% choosable language python %}}
-<dl class="resources-properties">
-
-    <dt class="property-required"
+<dl class="resources-properties"><dt class="property-required"
             title="Required">
         <span id="name_python">
 <a href="#name_python" style="color: inherit; text-decoration: inherit;">name</a>
@@ -1375,8 +1190,7 @@ The following output properties are available:
         <span class="property-indicator"></span>
         <span class="property-type">str</span>
     </dt>
-    <dd>{{% md %}}Name of header to match in request.{{% /md %}}</dd>
-    <dt class="property-optional"
+    <dd>{{% md %}}Name of header to match in request.{{% /md %}}</dd><dt class="property-optional"
             title="Optional">
         <span id="type_python">
 <a href="#type_python" style="color: inherit; text-decoration: inherit;">type</a>
@@ -1384,8 +1198,7 @@ The following output properties are available:
         <span class="property-indicator"></span>
         <span class="property-type">str</span>
     </dt>
-    <dd>{{% md %}}how to match header value{{% /md %}}</dd>
-    <dt class="property-optional"
+    <dd>{{% md %}}how to match header value{{% /md %}}</dd><dt class="property-optional"
             title="Optional">
         <span id="value_python">
 <a href="#value_python" style="color: inherit; text-decoration: inherit;">value</a>
@@ -1393,8 +1206,7 @@ The following output properties are available:
         <span class="property-indicator"></span>
         <span class="property-type">str</span>
     </dt>
-    <dd>{{% md %}}Value of header to match in request.{{% /md %}}</dd>
-</dl>
+    <dd>{{% md %}}Value of header to match in request.{{% /md %}}</dd></dl>
 {{% /choosable %}}
 
 <h4 id="httproutematchpathresponse">Http<wbr>Route<wbr>Match<wbr>Path<wbr>Response</h4>
@@ -1402,9 +1214,7 @@ The following output properties are available:
 
 
 {{% choosable language csharp %}}
-<dl class="resources-properties">
-
-    <dt class="property-required"
+<dl class="resources-properties"><dt class="property-required"
             title="Required">
         <span id="type_csharp">
 <a href="#type_csharp" style="color: inherit; text-decoration: inherit;">Type</a>
@@ -1412,8 +1222,7 @@ The following output properties are available:
         <span class="property-indicator"></span>
         <span class="property-type">string</span>
     </dt>
-    <dd>{{% md %}}how to match value in the Uri{{% /md %}}</dd>
-    <dt class="property-required"
+    <dd>{{% md %}}how to match value in the Uri{{% /md %}}</dd><dt class="property-required"
             title="Required">
         <span id="value_csharp">
 <a href="#value_csharp" style="color: inherit; text-decoration: inherit;">Value</a>
@@ -1421,8 +1230,7 @@ The following output properties are available:
         <span class="property-indicator"></span>
         <span class="property-type">string</span>
     </dt>
-    <dd>{{% md %}}Uri path to match for request.{{% /md %}}</dd>
-    <dt class="property-optional"
+    <dd>{{% md %}}Uri path to match for request.{{% /md %}}</dd><dt class="property-optional"
             title="Optional">
         <span id="rewrite_csharp">
 <a href="#rewrite_csharp" style="color: inherit; text-decoration: inherit;">Rewrite</a>
@@ -1430,14 +1238,11 @@ The following output properties are available:
         <span class="property-indicator"></span>
         <span class="property-type">string</span>
     </dt>
-    <dd>{{% md %}}replacement string for matched part of the Uri.{{% /md %}}</dd>
-</dl>
+    <dd>{{% md %}}replacement string for matched part of the Uri.{{% /md %}}</dd></dl>
 {{% /choosable %}}
 
 {{% choosable language go %}}
-<dl class="resources-properties">
-
-    <dt class="property-required"
+<dl class="resources-properties"><dt class="property-required"
             title="Required">
         <span id="type_go">
 <a href="#type_go" style="color: inherit; text-decoration: inherit;">Type</a>
@@ -1445,8 +1250,7 @@ The following output properties are available:
         <span class="property-indicator"></span>
         <span class="property-type">string</span>
     </dt>
-    <dd>{{% md %}}how to match value in the Uri{{% /md %}}</dd>
-    <dt class="property-required"
+    <dd>{{% md %}}how to match value in the Uri{{% /md %}}</dd><dt class="property-required"
             title="Required">
         <span id="value_go">
 <a href="#value_go" style="color: inherit; text-decoration: inherit;">Value</a>
@@ -1454,8 +1258,7 @@ The following output properties are available:
         <span class="property-indicator"></span>
         <span class="property-type">string</span>
     </dt>
-    <dd>{{% md %}}Uri path to match for request.{{% /md %}}</dd>
-    <dt class="property-optional"
+    <dd>{{% md %}}Uri path to match for request.{{% /md %}}</dd><dt class="property-optional"
             title="Optional">
         <span id="rewrite_go">
 <a href="#rewrite_go" style="color: inherit; text-decoration: inherit;">Rewrite</a>
@@ -1463,14 +1266,11 @@ The following output properties are available:
         <span class="property-indicator"></span>
         <span class="property-type">string</span>
     </dt>
-    <dd>{{% md %}}replacement string for matched part of the Uri.{{% /md %}}</dd>
-</dl>
+    <dd>{{% md %}}replacement string for matched part of the Uri.{{% /md %}}</dd></dl>
 {{% /choosable %}}
 
 {{% choosable language nodejs %}}
-<dl class="resources-properties">
-
-    <dt class="property-required"
+<dl class="resources-properties"><dt class="property-required"
             title="Required">
         <span id="type_nodejs">
 <a href="#type_nodejs" style="color: inherit; text-decoration: inherit;">type</a>
@@ -1478,8 +1278,7 @@ The following output properties are available:
         <span class="property-indicator"></span>
         <span class="property-type">string</span>
     </dt>
-    <dd>{{% md %}}how to match value in the Uri{{% /md %}}</dd>
-    <dt class="property-required"
+    <dd>{{% md %}}how to match value in the Uri{{% /md %}}</dd><dt class="property-required"
             title="Required">
         <span id="value_nodejs">
 <a href="#value_nodejs" style="color: inherit; text-decoration: inherit;">value</a>
@@ -1487,8 +1286,7 @@ The following output properties are available:
         <span class="property-indicator"></span>
         <span class="property-type">string</span>
     </dt>
-    <dd>{{% md %}}Uri path to match for request.{{% /md %}}</dd>
-    <dt class="property-optional"
+    <dd>{{% md %}}Uri path to match for request.{{% /md %}}</dd><dt class="property-optional"
             title="Optional">
         <span id="rewrite_nodejs">
 <a href="#rewrite_nodejs" style="color: inherit; text-decoration: inherit;">rewrite</a>
@@ -1496,14 +1294,11 @@ The following output properties are available:
         <span class="property-indicator"></span>
         <span class="property-type">string</span>
     </dt>
-    <dd>{{% md %}}replacement string for matched part of the Uri.{{% /md %}}</dd>
-</dl>
+    <dd>{{% md %}}replacement string for matched part of the Uri.{{% /md %}}</dd></dl>
 {{% /choosable %}}
 
 {{% choosable language python %}}
-<dl class="resources-properties">
-
-    <dt class="property-required"
+<dl class="resources-properties"><dt class="property-required"
             title="Required">
         <span id="type_python">
 <a href="#type_python" style="color: inherit; text-decoration: inherit;">type</a>
@@ -1511,8 +1306,7 @@ The following output properties are available:
         <span class="property-indicator"></span>
         <span class="property-type">str</span>
     </dt>
-    <dd>{{% md %}}how to match value in the Uri{{% /md %}}</dd>
-    <dt class="property-required"
+    <dd>{{% md %}}how to match value in the Uri{{% /md %}}</dd><dt class="property-required"
             title="Required">
         <span id="value_python">
 <a href="#value_python" style="color: inherit; text-decoration: inherit;">value</a>
@@ -1520,8 +1314,7 @@ The following output properties are available:
         <span class="property-indicator"></span>
         <span class="property-type">str</span>
     </dt>
-    <dd>{{% md %}}Uri path to match for request.{{% /md %}}</dd>
-    <dt class="property-optional"
+    <dd>{{% md %}}Uri path to match for request.{{% /md %}}</dd><dt class="property-optional"
             title="Optional">
         <span id="rewrite_python">
 <a href="#rewrite_python" style="color: inherit; text-decoration: inherit;">rewrite</a>
@@ -1529,8 +1322,7 @@ The following output properties are available:
         <span class="property-indicator"></span>
         <span class="property-type">str</span>
     </dt>
-    <dd>{{% md %}}replacement string for matched part of the Uri.{{% /md %}}</dd>
-</dl>
+    <dd>{{% md %}}replacement string for matched part of the Uri.{{% /md %}}</dd></dl>
 {{% /choosable %}}
 
 <h4 id="httproutematchruleresponse">Http<wbr>Route<wbr>Match<wbr>Rule<wbr>Response</h4>
@@ -1538,9 +1330,7 @@ The following output properties are available:
 
 
 {{% choosable language csharp %}}
-<dl class="resources-properties">
-
-    <dt class="property-required"
+<dl class="resources-properties"><dt class="property-required"
             title="Required">
         <span id="path_csharp">
 <a href="#path_csharp" style="color: inherit; text-decoration: inherit;">Path</a>
@@ -1548,8 +1338,7 @@ The following output properties are available:
         <span class="property-indicator"></span>
         <span class="property-type"><a href="#httproutematchpathresponse">Pulumi.<wbr>Azure<wbr>Native.<wbr>Service<wbr>Fabric<wbr>Mesh.<wbr>Inputs.<wbr>Http<wbr>Route<wbr>Match<wbr>Path<wbr>Response<wbr>Args</a></span>
     </dt>
-    <dd>{{% md %}}Path to match for routing.{{% /md %}}</dd>
-    <dt class="property-optional"
+    <dd>{{% md %}}Path to match for routing.{{% /md %}}</dd><dt class="property-optional"
             title="Optional">
         <span id="headers_csharp">
 <a href="#headers_csharp" style="color: inherit; text-decoration: inherit;">Headers</a>
@@ -1557,14 +1346,11 @@ The following output properties are available:
         <span class="property-indicator"></span>
         <span class="property-type"><a href="#httproutematchheaderresponse">List&lt;Pulumi.<wbr>Azure<wbr>Native.<wbr>Service<wbr>Fabric<wbr>Mesh.<wbr>Inputs.<wbr>Http<wbr>Route<wbr>Match<wbr>Header<wbr>Response<wbr>Args&gt;</a></span>
     </dt>
-    <dd>{{% md %}}headers and their values to match in request.{{% /md %}}</dd>
-</dl>
+    <dd>{{% md %}}headers and their values to match in request.{{% /md %}}</dd></dl>
 {{% /choosable %}}
 
 {{% choosable language go %}}
-<dl class="resources-properties">
-
-    <dt class="property-required"
+<dl class="resources-properties"><dt class="property-required"
             title="Required">
         <span id="path_go">
 <a href="#path_go" style="color: inherit; text-decoration: inherit;">Path</a>
@@ -1572,8 +1358,7 @@ The following output properties are available:
         <span class="property-indicator"></span>
         <span class="property-type"><a href="#httproutematchpathresponse">Http<wbr>Route<wbr>Match<wbr>Path<wbr>Response</a></span>
     </dt>
-    <dd>{{% md %}}Path to match for routing.{{% /md %}}</dd>
-    <dt class="property-optional"
+    <dd>{{% md %}}Path to match for routing.{{% /md %}}</dd><dt class="property-optional"
             title="Optional">
         <span id="headers_go">
 <a href="#headers_go" style="color: inherit; text-decoration: inherit;">Headers</a>
@@ -1581,14 +1366,11 @@ The following output properties are available:
         <span class="property-indicator"></span>
         <span class="property-type"><a href="#httproutematchheaderresponse">[]Http<wbr>Route<wbr>Match<wbr>Header<wbr>Response</a></span>
     </dt>
-    <dd>{{% md %}}headers and their values to match in request.{{% /md %}}</dd>
-</dl>
+    <dd>{{% md %}}headers and their values to match in request.{{% /md %}}</dd></dl>
 {{% /choosable %}}
 
 {{% choosable language nodejs %}}
-<dl class="resources-properties">
-
-    <dt class="property-required"
+<dl class="resources-properties"><dt class="property-required"
             title="Required">
         <span id="path_nodejs">
 <a href="#path_nodejs" style="color: inherit; text-decoration: inherit;">path</a>
@@ -1596,8 +1378,7 @@ The following output properties are available:
         <span class="property-indicator"></span>
         <span class="property-type"><a href="#httproutematchpathresponse">Http<wbr>Route<wbr>Match<wbr>Path<wbr>Response</a></span>
     </dt>
-    <dd>{{% md %}}Path to match for routing.{{% /md %}}</dd>
-    <dt class="property-optional"
+    <dd>{{% md %}}Path to match for routing.{{% /md %}}</dd><dt class="property-optional"
             title="Optional">
         <span id="headers_nodejs">
 <a href="#headers_nodejs" style="color: inherit; text-decoration: inherit;">headers</a>
@@ -1605,14 +1386,11 @@ The following output properties are available:
         <span class="property-indicator"></span>
         <span class="property-type"><a href="#httproutematchheaderresponse">Http<wbr>Route<wbr>Match<wbr>Header<wbr>Response[]</a></span>
     </dt>
-    <dd>{{% md %}}headers and their values to match in request.{{% /md %}}</dd>
-</dl>
+    <dd>{{% md %}}headers and their values to match in request.{{% /md %}}</dd></dl>
 {{% /choosable %}}
 
 {{% choosable language python %}}
-<dl class="resources-properties">
-
-    <dt class="property-required"
+<dl class="resources-properties"><dt class="property-required"
             title="Required">
         <span id="path_python">
 <a href="#path_python" style="color: inherit; text-decoration: inherit;">path</a>
@@ -1620,8 +1398,7 @@ The following output properties are available:
         <span class="property-indicator"></span>
         <span class="property-type"><a href="#httproutematchpathresponse">Http<wbr>Route<wbr>Match<wbr>Path<wbr>Response<wbr>Args</a></span>
     </dt>
-    <dd>{{% md %}}Path to match for routing.{{% /md %}}</dd>
-    <dt class="property-optional"
+    <dd>{{% md %}}Path to match for routing.{{% /md %}}</dd><dt class="property-optional"
             title="Optional">
         <span id="headers_python">
 <a href="#headers_python" style="color: inherit; text-decoration: inherit;">headers</a>
@@ -1629,8 +1406,7 @@ The following output properties are available:
         <span class="property-indicator"></span>
         <span class="property-type"><a href="#httproutematchheaderresponse">Sequence[Http<wbr>Route<wbr>Match<wbr>Header<wbr>Response<wbr>Args]</a></span>
     </dt>
-    <dd>{{% md %}}headers and their values to match in request.{{% /md %}}</dd>
-</dl>
+    <dd>{{% md %}}headers and their values to match in request.{{% /md %}}</dd></dl>
 {{% /choosable %}}
 
 <h4 id="networkrefresponse">Network<wbr>Ref<wbr>Response</h4>
@@ -1638,9 +1414,7 @@ The following output properties are available:
 
 
 {{% choosable language csharp %}}
-<dl class="resources-properties">
-
-    <dt class="property-optional"
+<dl class="resources-properties"><dt class="property-optional"
             title="Optional">
         <span id="endpointrefs_csharp">
 <a href="#endpointrefs_csharp" style="color: inherit; text-decoration: inherit;">Endpoint<wbr>Refs</a>
@@ -1648,8 +1422,7 @@ The following output properties are available:
         <span class="property-indicator"></span>
         <span class="property-type"><a href="#endpointrefresponse">List&lt;Pulumi.<wbr>Azure<wbr>Native.<wbr>Service<wbr>Fabric<wbr>Mesh.<wbr>Inputs.<wbr>Endpoint<wbr>Ref<wbr>Response<wbr>Args&gt;</a></span>
     </dt>
-    <dd>{{% md %}}A list of endpoints that are exposed on this network.{{% /md %}}</dd>
-    <dt class="property-optional"
+    <dd>{{% md %}}A list of endpoints that are exposed on this network.{{% /md %}}</dd><dt class="property-optional"
             title="Optional">
         <span id="name_csharp">
 <a href="#name_csharp" style="color: inherit; text-decoration: inherit;">Name</a>
@@ -1657,14 +1430,11 @@ The following output properties are available:
         <span class="property-indicator"></span>
         <span class="property-type">string</span>
     </dt>
-    <dd>{{% md %}}Name of the network{{% /md %}}</dd>
-</dl>
+    <dd>{{% md %}}Name of the network{{% /md %}}</dd></dl>
 {{% /choosable %}}
 
 {{% choosable language go %}}
-<dl class="resources-properties">
-
-    <dt class="property-optional"
+<dl class="resources-properties"><dt class="property-optional"
             title="Optional">
         <span id="endpointrefs_go">
 <a href="#endpointrefs_go" style="color: inherit; text-decoration: inherit;">Endpoint<wbr>Refs</a>
@@ -1672,8 +1442,7 @@ The following output properties are available:
         <span class="property-indicator"></span>
         <span class="property-type"><a href="#endpointrefresponse">[]Endpoint<wbr>Ref<wbr>Response</a></span>
     </dt>
-    <dd>{{% md %}}A list of endpoints that are exposed on this network.{{% /md %}}</dd>
-    <dt class="property-optional"
+    <dd>{{% md %}}A list of endpoints that are exposed on this network.{{% /md %}}</dd><dt class="property-optional"
             title="Optional">
         <span id="name_go">
 <a href="#name_go" style="color: inherit; text-decoration: inherit;">Name</a>
@@ -1681,14 +1450,11 @@ The following output properties are available:
         <span class="property-indicator"></span>
         <span class="property-type">string</span>
     </dt>
-    <dd>{{% md %}}Name of the network{{% /md %}}</dd>
-</dl>
+    <dd>{{% md %}}Name of the network{{% /md %}}</dd></dl>
 {{% /choosable %}}
 
 {{% choosable language nodejs %}}
-<dl class="resources-properties">
-
-    <dt class="property-optional"
+<dl class="resources-properties"><dt class="property-optional"
             title="Optional">
         <span id="endpointrefs_nodejs">
 <a href="#endpointrefs_nodejs" style="color: inherit; text-decoration: inherit;">endpoint<wbr>Refs</a>
@@ -1696,8 +1462,7 @@ The following output properties are available:
         <span class="property-indicator"></span>
         <span class="property-type"><a href="#endpointrefresponse">Endpoint<wbr>Ref<wbr>Response[]</a></span>
     </dt>
-    <dd>{{% md %}}A list of endpoints that are exposed on this network.{{% /md %}}</dd>
-    <dt class="property-optional"
+    <dd>{{% md %}}A list of endpoints that are exposed on this network.{{% /md %}}</dd><dt class="property-optional"
             title="Optional">
         <span id="name_nodejs">
 <a href="#name_nodejs" style="color: inherit; text-decoration: inherit;">name</a>
@@ -1705,14 +1470,11 @@ The following output properties are available:
         <span class="property-indicator"></span>
         <span class="property-type">string</span>
     </dt>
-    <dd>{{% md %}}Name of the network{{% /md %}}</dd>
-</dl>
+    <dd>{{% md %}}Name of the network{{% /md %}}</dd></dl>
 {{% /choosable %}}
 
 {{% choosable language python %}}
-<dl class="resources-properties">
-
-    <dt class="property-optional"
+<dl class="resources-properties"><dt class="property-optional"
             title="Optional">
         <span id="endpoint_refs_python">
 <a href="#endpoint_refs_python" style="color: inherit; text-decoration: inherit;">endpoint_<wbr>refs</a>
@@ -1720,8 +1482,7 @@ The following output properties are available:
         <span class="property-indicator"></span>
         <span class="property-type"><a href="#endpointrefresponse">Sequence[Endpoint<wbr>Ref<wbr>Response<wbr>Args]</a></span>
     </dt>
-    <dd>{{% md %}}A list of endpoints that are exposed on this network.{{% /md %}}</dd>
-    <dt class="property-optional"
+    <dd>{{% md %}}A list of endpoints that are exposed on this network.{{% /md %}}</dd><dt class="property-optional"
             title="Optional">
         <span id="name_python">
 <a href="#name_python" style="color: inherit; text-decoration: inherit;">name</a>
@@ -1729,8 +1490,7 @@ The following output properties are available:
         <span class="property-indicator"></span>
         <span class="property-type">str</span>
     </dt>
-    <dd>{{% md %}}Name of the network{{% /md %}}</dd>
-</dl>
+    <dd>{{% md %}}Name of the network{{% /md %}}</dd></dl>
 {{% /choosable %}}
 
 <h4 id="tcpconfigresponse">Tcp<wbr>Config<wbr>Response</h4>
@@ -1738,9 +1498,7 @@ The following output properties are available:
 
 
 {{% choosable language csharp %}}
-<dl class="resources-properties">
-
-    <dt class="property-required"
+<dl class="resources-properties"><dt class="property-required"
             title="Required">
         <span id="destination_csharp">
 <a href="#destination_csharp" style="color: inherit; text-decoration: inherit;">Destination</a>
@@ -1748,8 +1506,7 @@ The following output properties are available:
         <span class="property-indicator"></span>
         <span class="property-type"><a href="#gatewaydestinationresponse">Pulumi.<wbr>Azure<wbr>Native.<wbr>Service<wbr>Fabric<wbr>Mesh.<wbr>Inputs.<wbr>Gateway<wbr>Destination<wbr>Response<wbr>Args</a></span>
     </dt>
-    <dd>{{% md %}}Describes destination endpoint for routing traffic.{{% /md %}}</dd>
-    <dt class="property-required"
+    <dd>{{% md %}}Describes destination endpoint for routing traffic.{{% /md %}}</dd><dt class="property-required"
             title="Required">
         <span id="name_csharp">
 <a href="#name_csharp" style="color: inherit; text-decoration: inherit;">Name</a>
@@ -1757,8 +1514,7 @@ The following output properties are available:
         <span class="property-indicator"></span>
         <span class="property-type">string</span>
     </dt>
-    <dd>{{% md %}}tcp gateway config name.{{% /md %}}</dd>
-    <dt class="property-required"
+    <dd>{{% md %}}tcp gateway config name.{{% /md %}}</dd><dt class="property-required"
             title="Required">
         <span id="port_csharp">
 <a href="#port_csharp" style="color: inherit; text-decoration: inherit;">Port</a>
@@ -1766,14 +1522,11 @@ The following output properties are available:
         <span class="property-indicator"></span>
         <span class="property-type">int</span>
     </dt>
-    <dd>{{% md %}}Specifies the port at which the service endpoint below needs to be exposed.{{% /md %}}</dd>
-</dl>
+    <dd>{{% md %}}Specifies the port at which the service endpoint below needs to be exposed.{{% /md %}}</dd></dl>
 {{% /choosable %}}
 
 {{% choosable language go %}}
-<dl class="resources-properties">
-
-    <dt class="property-required"
+<dl class="resources-properties"><dt class="property-required"
             title="Required">
         <span id="destination_go">
 <a href="#destination_go" style="color: inherit; text-decoration: inherit;">Destination</a>
@@ -1781,8 +1534,7 @@ The following output properties are available:
         <span class="property-indicator"></span>
         <span class="property-type"><a href="#gatewaydestinationresponse">Gateway<wbr>Destination<wbr>Response</a></span>
     </dt>
-    <dd>{{% md %}}Describes destination endpoint for routing traffic.{{% /md %}}</dd>
-    <dt class="property-required"
+    <dd>{{% md %}}Describes destination endpoint for routing traffic.{{% /md %}}</dd><dt class="property-required"
             title="Required">
         <span id="name_go">
 <a href="#name_go" style="color: inherit; text-decoration: inherit;">Name</a>
@@ -1790,8 +1542,7 @@ The following output properties are available:
         <span class="property-indicator"></span>
         <span class="property-type">string</span>
     </dt>
-    <dd>{{% md %}}tcp gateway config name.{{% /md %}}</dd>
-    <dt class="property-required"
+    <dd>{{% md %}}tcp gateway config name.{{% /md %}}</dd><dt class="property-required"
             title="Required">
         <span id="port_go">
 <a href="#port_go" style="color: inherit; text-decoration: inherit;">Port</a>
@@ -1799,14 +1550,11 @@ The following output properties are available:
         <span class="property-indicator"></span>
         <span class="property-type">int</span>
     </dt>
-    <dd>{{% md %}}Specifies the port at which the service endpoint below needs to be exposed.{{% /md %}}</dd>
-</dl>
+    <dd>{{% md %}}Specifies the port at which the service endpoint below needs to be exposed.{{% /md %}}</dd></dl>
 {{% /choosable %}}
 
 {{% choosable language nodejs %}}
-<dl class="resources-properties">
-
-    <dt class="property-required"
+<dl class="resources-properties"><dt class="property-required"
             title="Required">
         <span id="destination_nodejs">
 <a href="#destination_nodejs" style="color: inherit; text-decoration: inherit;">destination</a>
@@ -1814,8 +1562,7 @@ The following output properties are available:
         <span class="property-indicator"></span>
         <span class="property-type"><a href="#gatewaydestinationresponse">Gateway<wbr>Destination<wbr>Response</a></span>
     </dt>
-    <dd>{{% md %}}Describes destination endpoint for routing traffic.{{% /md %}}</dd>
-    <dt class="property-required"
+    <dd>{{% md %}}Describes destination endpoint for routing traffic.{{% /md %}}</dd><dt class="property-required"
             title="Required">
         <span id="name_nodejs">
 <a href="#name_nodejs" style="color: inherit; text-decoration: inherit;">name</a>
@@ -1823,8 +1570,7 @@ The following output properties are available:
         <span class="property-indicator"></span>
         <span class="property-type">string</span>
     </dt>
-    <dd>{{% md %}}tcp gateway config name.{{% /md %}}</dd>
-    <dt class="property-required"
+    <dd>{{% md %}}tcp gateway config name.{{% /md %}}</dd><dt class="property-required"
             title="Required">
         <span id="port_nodejs">
 <a href="#port_nodejs" style="color: inherit; text-decoration: inherit;">port</a>
@@ -1832,14 +1578,11 @@ The following output properties are available:
         <span class="property-indicator"></span>
         <span class="property-type">number</span>
     </dt>
-    <dd>{{% md %}}Specifies the port at which the service endpoint below needs to be exposed.{{% /md %}}</dd>
-</dl>
+    <dd>{{% md %}}Specifies the port at which the service endpoint below needs to be exposed.{{% /md %}}</dd></dl>
 {{% /choosable %}}
 
 {{% choosable language python %}}
-<dl class="resources-properties">
-
-    <dt class="property-required"
+<dl class="resources-properties"><dt class="property-required"
             title="Required">
         <span id="destination_python">
 <a href="#destination_python" style="color: inherit; text-decoration: inherit;">destination</a>
@@ -1847,8 +1590,7 @@ The following output properties are available:
         <span class="property-indicator"></span>
         <span class="property-type"><a href="#gatewaydestinationresponse">Gateway<wbr>Destination<wbr>Response<wbr>Args</a></span>
     </dt>
-    <dd>{{% md %}}Describes destination endpoint for routing traffic.{{% /md %}}</dd>
-    <dt class="property-required"
+    <dd>{{% md %}}Describes destination endpoint for routing traffic.{{% /md %}}</dd><dt class="property-required"
             title="Required">
         <span id="name_python">
 <a href="#name_python" style="color: inherit; text-decoration: inherit;">name</a>
@@ -1856,8 +1598,7 @@ The following output properties are available:
         <span class="property-indicator"></span>
         <span class="property-type">str</span>
     </dt>
-    <dd>{{% md %}}tcp gateway config name.{{% /md %}}</dd>
-    <dt class="property-required"
+    <dd>{{% md %}}tcp gateway config name.{{% /md %}}</dd><dt class="property-required"
             title="Required">
         <span id="port_python">
 <a href="#port_python" style="color: inherit; text-decoration: inherit;">port</a>
@@ -1865,8 +1606,7 @@ The following output properties are available:
         <span class="property-indicator"></span>
         <span class="property-type">int</span>
     </dt>
-    <dd>{{% md %}}Specifies the port at which the service endpoint below needs to be exposed.{{% /md %}}</dd>
-</dl>
+    <dd>{{% md %}}Specifies the port at which the service endpoint below needs to be exposed.{{% /md %}}</dd></dl>
 {{% /choosable %}}
 
 

@@ -13,11 +13,17 @@ meta_desc: "Documentation for the azure.datafactory.IntegrationRuntimeSsis resou
 Manages a Data Factory Azure-SSIS Integration Runtime.
 
 {{% examples %}}
+
 ## Example Usage
 
 {{< chooser language "typescript,python,go,csharp" / >}}
 
-{{% example csharp %}}
+
+
+
+
+{{< example csharp >}}
+
 ```csharp
 using Pulumi;
 using Azure = Pulumi.Azure;
@@ -47,9 +53,12 @@ class MyStack : Stack
 }
 ```
 
-{{% /example %}}
 
-{{% example go %}}
+{{< /example >}}
+
+
+{{< example go >}}
+
 ```go
 package main
 
@@ -88,9 +97,12 @@ func main() {
 }
 ```
 
-{{% /example %}}
 
-{{% example python %}}
+{{< /example >}}
+
+
+{{< example python >}}
+
 ```python
 import pulumi
 import pulumi_azure as azure
@@ -106,9 +118,12 @@ example_integration_runtime_ssis = azure.datafactory.IntegrationRuntimeSsis("exa
     node_size="Standard_D8_v3")
 ```
 
-{{% /example %}}
 
-{{% example typescript %}}
+{{< /example >}}
+
+
+{{< example typescript >}}
+
 
 ```typescript
 import * as pulumi from "@pulumi/pulumi";
@@ -127,9 +142,16 @@ const exampleIntegrationRuntimeSsis = new azure.datafactory.IntegrationRuntimeSs
 });
 ```
 
-{{% /example %}}
+
+{{< /example >}}
+
+
+
+
 
 {{% /examples %}}
+
+
 
 
 ## Create a IntegrationRuntimeSsis Resource {#create}
@@ -154,9 +176,7 @@ const exampleIntegrationRuntimeSsis = new azure.datafactory.IntegrationRuntimeSs
 
 {{% choosable language nodejs %}}
 
-<dl class="resources-properties">
-  
-    <dt
+<dl class="resources-properties"><dt
         class="property-required" title="Required">
         <span>name</span>
         <span class="property-indicator"></span>
@@ -164,9 +184,7 @@ const exampleIntegrationRuntimeSsis = new azure.datafactory.IntegrationRuntimeSs
     </dt>
     <dd>
       The unique name of the resource.
-    </dd>
-  
-    <dt
+    </dd><dt
         class="property-required" title="Required">
         <span>args</span>
         <span class="property-indicator"></span>
@@ -174,9 +192,7 @@ const exampleIntegrationRuntimeSsis = new azure.datafactory.IntegrationRuntimeSs
     </dt>
     <dd>
       The arguments to resource properties.
-    </dd>
-  
-    <dt
+    </dd><dt
         class="property-optional" title="Optional">
         <span>opts</span>
         <span class="property-indicator"></span>
@@ -184,10 +200,7 @@ const exampleIntegrationRuntimeSsis = new azure.datafactory.IntegrationRuntimeSs
     </dt>
     <dd>
       Bag of options to control resource&#39;s behavior.
-    </dd>
-  
-
-</dl>
+    </dd></dl>
 
 {{% /choosable %}}
 
@@ -213,9 +226,7 @@ const exampleIntegrationRuntimeSsis = new azure.datafactory.IntegrationRuntimeSs
 
 {{% choosable language go %}}
 
-<dl class="resources-properties">
-  
-    <dt
+<dl class="resources-properties"><dt
         class="property-optional" title="Optional">
         <span>ctx</span>
         <span class="property-indicator"></span>
@@ -223,9 +234,7 @@ const exampleIntegrationRuntimeSsis = new azure.datafactory.IntegrationRuntimeSs
     </dt>
     <dd>
       Context object for the current deployment.
-    </dd>
-  
-    <dt
+    </dd><dt
         class="property-required" title="Required">
         <span>name</span>
         <span class="property-indicator"></span>
@@ -233,9 +242,7 @@ const exampleIntegrationRuntimeSsis = new azure.datafactory.IntegrationRuntimeSs
     </dt>
     <dd>
       The unique name of the resource.
-    </dd>
-  
-    <dt
+    </dd><dt
         class="property-required" title="Required">
         <span>args</span>
         <span class="property-indicator"></span>
@@ -243,9 +250,7 @@ const exampleIntegrationRuntimeSsis = new azure.datafactory.IntegrationRuntimeSs
     </dt>
     <dd>
       The arguments to resource properties.
-    </dd>
-  
-    <dt
+    </dd><dt
         class="property-optional" title="Optional">
         <span>opts</span>
         <span class="property-indicator"></span>
@@ -253,18 +258,13 @@ const exampleIntegrationRuntimeSsis = new azure.datafactory.IntegrationRuntimeSs
     </dt>
     <dd>
       Bag of options to control resource&#39;s behavior.
-    </dd>
-  
-
-</dl>
+    </dd></dl>
 
 {{% /choosable %}}
 
 {{% choosable language csharp %}}
 
-<dl class="resources-properties">
-  
-    <dt
+<dl class="resources-properties"><dt
         class="property-required" title="Required">
         <span>name</span>
         <span class="property-indicator"></span>
@@ -272,9 +272,7 @@ const exampleIntegrationRuntimeSsis = new azure.datafactory.IntegrationRuntimeSs
     </dt>
     <dd>
       The unique name of the resource.
-    </dd>
-  
-    <dt
+    </dd><dt
         class="property-required" title="Required">
         <span>args</span>
         <span class="property-indicator"></span>
@@ -282,9 +280,7 @@ const exampleIntegrationRuntimeSsis = new azure.datafactory.IntegrationRuntimeSs
     </dt>
     <dd>
       The arguments to resource properties.
-    </dd>
-  
-    <dt
+    </dd><dt
         class="property-optional" title="Optional">
         <span>opts</span>
         <span class="property-indicator"></span>
@@ -292,10 +288,7 @@ const exampleIntegrationRuntimeSsis = new azure.datafactory.IntegrationRuntimeSs
     </dt>
     <dd>
       Bag of options to control resource&#39;s behavior.
-    </dd>
-  
-
-</dl>
+    </dd></dl>
 
 {{% /choosable %}}
 
@@ -310,9 +303,7 @@ The IntegrationRuntimeSsis resource accepts the following [input]({{< relref "/d
 
 
 {{% choosable language csharp %}}
-<dl class="resources-properties">
-
-    <dt class="property-required"
+<dl class="resources-properties"><dt class="property-required"
             title="Required">
         <span id="datafactoryname_csharp">
 <a href="#datafactoryname_csharp" style="color: inherit; text-decoration: inherit;">Data<wbr>Factory<wbr>Name</a>
@@ -321,8 +312,7 @@ The IntegrationRuntimeSsis resource accepts the following [input]({{< relref "/d
         <span class="property-type">string</span>
     </dt>
     <dd>{{% md %}}Specifies the name of the Data Factory the Azure-SSIS Integration Runtime belongs to. Changing this forces a new resource to be created.
-{{% /md %}}</dd>
-    <dt class="property-required"
+{{% /md %}}</dd><dt class="property-required"
             title="Required">
         <span id="nodesize_csharp">
 <a href="#nodesize_csharp" style="color: inherit; text-decoration: inherit;">Node<wbr>Size</a>
@@ -331,8 +321,7 @@ The IntegrationRuntimeSsis resource accepts the following [input]({{< relref "/d
         <span class="property-type">string</span>
     </dt>
     <dd>{{% md %}}The size of the nodes on which the Azure-SSIS Integration Runtime runs. Valid values are: `Standard_D2_v3`, `Standard_D4_v3`, `Standard_D8_v3`, `Standard_D16_v3`, `Standard_D32_v3`, `Standard_D64_v3`, `Standard_E2_v3`, `Standard_E4_v3`, `Standard_E8_v3`, `Standard_E16_v3`, `Standard_E32_v3`, `Standard_E64_v3`, `Standard_D1_v2`, `Standard_D2_v2`, `Standard_D3_v2`, `Standard_D4_v2`, `Standard_A4_v2` and `Standard_A8_v2`
-{{% /md %}}</dd>
-    <dt class="property-required"
+{{% /md %}}</dd><dt class="property-required"
             title="Required">
         <span id="resourcegroupname_csharp">
 <a href="#resourcegroupname_csharp" style="color: inherit; text-decoration: inherit;">Resource<wbr>Group<wbr>Name</a>
@@ -341,8 +330,7 @@ The IntegrationRuntimeSsis resource accepts the following [input]({{< relref "/d
         <span class="property-type">string</span>
     </dt>
     <dd>{{% md %}}The name of the resource group in which to create the Azure-SSIS Integration Runtime. Changing this forces a new resource to be created.
-{{% /md %}}</dd>
-    <dt class="property-optional"
+{{% /md %}}</dd><dt class="property-optional"
             title="Optional">
         <span id="cataloginfo_csharp">
 <a href="#cataloginfo_csharp" style="color: inherit; text-decoration: inherit;">Catalog<wbr>Info</a>
@@ -351,8 +339,7 @@ The IntegrationRuntimeSsis resource accepts the following [input]({{< relref "/d
         <span class="property-type"><a href="#integrationruntimessiscataloginfo">Integration<wbr>Runtime<wbr>Ssis<wbr>Catalog<wbr>Info<wbr>Args</a></span>
     </dt>
     <dd>{{% md %}}A `catalog_info` block as defined below.
-{{% /md %}}</dd>
-    <dt class="property-optional"
+{{% /md %}}</dd><dt class="property-optional"
             title="Optional">
         <span id="customsetupscript_csharp">
 <a href="#customsetupscript_csharp" style="color: inherit; text-decoration: inherit;">Custom<wbr>Setup<wbr>Script</a>
@@ -361,8 +348,7 @@ The IntegrationRuntimeSsis resource accepts the following [input]({{< relref "/d
         <span class="property-type"><a href="#integrationruntimessiscustomsetupscript">Integration<wbr>Runtime<wbr>Ssis<wbr>Custom<wbr>Setup<wbr>Script<wbr>Args</a></span>
     </dt>
     <dd>{{% md %}}A `custom_setup_script` block as defined below.
-{{% /md %}}</dd>
-    <dt class="property-optional"
+{{% /md %}}</dd><dt class="property-optional"
             title="Optional">
         <span id="description_csharp">
 <a href="#description_csharp" style="color: inherit; text-decoration: inherit;">Description</a>
@@ -371,8 +357,7 @@ The IntegrationRuntimeSsis resource accepts the following [input]({{< relref "/d
         <span class="property-type">string</span>
     </dt>
     <dd>{{% md %}}Integration runtime description.
-{{% /md %}}</dd>
-    <dt class="property-optional"
+{{% /md %}}</dd><dt class="property-optional"
             title="Optional">
         <span id="edition_csharp">
 <a href="#edition_csharp" style="color: inherit; text-decoration: inherit;">Edition</a>
@@ -381,8 +366,7 @@ The IntegrationRuntimeSsis resource accepts the following [input]({{< relref "/d
         <span class="property-type">string</span>
     </dt>
     <dd>{{% md %}}The Azure-SSIS Integration Runtime edition. Valid values are `Standard` and `Enterprise`. Defaults to `Standard`.
-{{% /md %}}</dd>
-    <dt class="property-optional"
+{{% /md %}}</dd><dt class="property-optional"
             title="Optional">
         <span id="licensetype_csharp">
 <a href="#licensetype_csharp" style="color: inherit; text-decoration: inherit;">License<wbr>Type</a>
@@ -391,8 +375,7 @@ The IntegrationRuntimeSsis resource accepts the following [input]({{< relref "/d
         <span class="property-type">string</span>
     </dt>
     <dd>{{% md %}}The type of the license that is used. Valid values are `LicenseIncluded` and `BasePrize`. Defaults to `LicenseIncluded`.
-{{% /md %}}</dd>
-    <dt class="property-optional"
+{{% /md %}}</dd><dt class="property-optional"
             title="Optional">
         <span id="location_csharp">
 <a href="#location_csharp" style="color: inherit; text-decoration: inherit;">Location</a>
@@ -401,8 +384,7 @@ The IntegrationRuntimeSsis resource accepts the following [input]({{< relref "/d
         <span class="property-type">string</span>
     </dt>
     <dd>{{% md %}}Specifies the supported Azure location where the resource exists. Changing this forces a new resource to be created.
-{{% /md %}}</dd>
-    <dt class="property-optional"
+{{% /md %}}</dd><dt class="property-optional"
             title="Optional">
         <span id="maxparallelexecutionspernode_csharp">
 <a href="#maxparallelexecutionspernode_csharp" style="color: inherit; text-decoration: inherit;">Max<wbr>Parallel<wbr>Executions<wbr>Per<wbr>Node</a>
@@ -411,8 +393,7 @@ The IntegrationRuntimeSsis resource accepts the following [input]({{< relref "/d
         <span class="property-type">int</span>
     </dt>
     <dd>{{% md %}}Defines the maximum parallel executions per node. Defaults to `1`. Max is `16`.
-{{% /md %}}</dd>
-    <dt class="property-optional"
+{{% /md %}}</dd><dt class="property-optional"
             title="Optional">
         <span id="name_csharp">
 <a href="#name_csharp" style="color: inherit; text-decoration: inherit;">Name</a>
@@ -421,8 +402,7 @@ The IntegrationRuntimeSsis resource accepts the following [input]({{< relref "/d
         <span class="property-type">string</span>
     </dt>
     <dd>{{% md %}}Specifies the name of the Azure-SSIS Integration Runtime. Changing this forces a new resource to be created. Must be globally unique. See the [Microsoft documentation](https://docs.microsoft.com/en-us/azure/data-factory/naming-rules) for all restrictions.
-{{% /md %}}</dd>
-    <dt class="property-optional"
+{{% /md %}}</dd><dt class="property-optional"
             title="Optional">
         <span id="numberofnodes_csharp">
 <a href="#numberofnodes_csharp" style="color: inherit; text-decoration: inherit;">Number<wbr>Of<wbr>Nodes</a>
@@ -431,8 +411,7 @@ The IntegrationRuntimeSsis resource accepts the following [input]({{< relref "/d
         <span class="property-type">int</span>
     </dt>
     <dd>{{% md %}}Number of nodes for the Azure-SSIS Integration Runtime. Max is `10`. Defaults to `1`.
-{{% /md %}}</dd>
-    <dt class="property-optional"
+{{% /md %}}</dd><dt class="property-optional"
             title="Optional">
         <span id="vnetintegration_csharp">
 <a href="#vnetintegration_csharp" style="color: inherit; text-decoration: inherit;">Vnet<wbr>Integration</a>
@@ -441,14 +420,11 @@ The IntegrationRuntimeSsis resource accepts the following [input]({{< relref "/d
         <span class="property-type"><a href="#integrationruntimessisvnetintegration">Integration<wbr>Runtime<wbr>Ssis<wbr>Vnet<wbr>Integration<wbr>Args</a></span>
     </dt>
     <dd>{{% md %}}A `vnet_integration` block as defined below.
-{{% /md %}}</dd>
-</dl>
+{{% /md %}}</dd></dl>
 {{% /choosable %}}
 
 {{% choosable language go %}}
-<dl class="resources-properties">
-
-    <dt class="property-required"
+<dl class="resources-properties"><dt class="property-required"
             title="Required">
         <span id="datafactoryname_go">
 <a href="#datafactoryname_go" style="color: inherit; text-decoration: inherit;">Data<wbr>Factory<wbr>Name</a>
@@ -457,8 +433,7 @@ The IntegrationRuntimeSsis resource accepts the following [input]({{< relref "/d
         <span class="property-type">string</span>
     </dt>
     <dd>{{% md %}}Specifies the name of the Data Factory the Azure-SSIS Integration Runtime belongs to. Changing this forces a new resource to be created.
-{{% /md %}}</dd>
-    <dt class="property-required"
+{{% /md %}}</dd><dt class="property-required"
             title="Required">
         <span id="nodesize_go">
 <a href="#nodesize_go" style="color: inherit; text-decoration: inherit;">Node<wbr>Size</a>
@@ -467,8 +442,7 @@ The IntegrationRuntimeSsis resource accepts the following [input]({{< relref "/d
         <span class="property-type">string</span>
     </dt>
     <dd>{{% md %}}The size of the nodes on which the Azure-SSIS Integration Runtime runs. Valid values are: `Standard_D2_v3`, `Standard_D4_v3`, `Standard_D8_v3`, `Standard_D16_v3`, `Standard_D32_v3`, `Standard_D64_v3`, `Standard_E2_v3`, `Standard_E4_v3`, `Standard_E8_v3`, `Standard_E16_v3`, `Standard_E32_v3`, `Standard_E64_v3`, `Standard_D1_v2`, `Standard_D2_v2`, `Standard_D3_v2`, `Standard_D4_v2`, `Standard_A4_v2` and `Standard_A8_v2`
-{{% /md %}}</dd>
-    <dt class="property-required"
+{{% /md %}}</dd><dt class="property-required"
             title="Required">
         <span id="resourcegroupname_go">
 <a href="#resourcegroupname_go" style="color: inherit; text-decoration: inherit;">Resource<wbr>Group<wbr>Name</a>
@@ -477,8 +451,7 @@ The IntegrationRuntimeSsis resource accepts the following [input]({{< relref "/d
         <span class="property-type">string</span>
     </dt>
     <dd>{{% md %}}The name of the resource group in which to create the Azure-SSIS Integration Runtime. Changing this forces a new resource to be created.
-{{% /md %}}</dd>
-    <dt class="property-optional"
+{{% /md %}}</dd><dt class="property-optional"
             title="Optional">
         <span id="cataloginfo_go">
 <a href="#cataloginfo_go" style="color: inherit; text-decoration: inherit;">Catalog<wbr>Info</a>
@@ -487,8 +460,7 @@ The IntegrationRuntimeSsis resource accepts the following [input]({{< relref "/d
         <span class="property-type"><a href="#integrationruntimessiscataloginfo">Integration<wbr>Runtime<wbr>Ssis<wbr>Catalog<wbr>Info</a></span>
     </dt>
     <dd>{{% md %}}A `catalog_info` block as defined below.
-{{% /md %}}</dd>
-    <dt class="property-optional"
+{{% /md %}}</dd><dt class="property-optional"
             title="Optional">
         <span id="customsetupscript_go">
 <a href="#customsetupscript_go" style="color: inherit; text-decoration: inherit;">Custom<wbr>Setup<wbr>Script</a>
@@ -497,8 +469,7 @@ The IntegrationRuntimeSsis resource accepts the following [input]({{< relref "/d
         <span class="property-type"><a href="#integrationruntimessiscustomsetupscript">Integration<wbr>Runtime<wbr>Ssis<wbr>Custom<wbr>Setup<wbr>Script</a></span>
     </dt>
     <dd>{{% md %}}A `custom_setup_script` block as defined below.
-{{% /md %}}</dd>
-    <dt class="property-optional"
+{{% /md %}}</dd><dt class="property-optional"
             title="Optional">
         <span id="description_go">
 <a href="#description_go" style="color: inherit; text-decoration: inherit;">Description</a>
@@ -507,8 +478,7 @@ The IntegrationRuntimeSsis resource accepts the following [input]({{< relref "/d
         <span class="property-type">string</span>
     </dt>
     <dd>{{% md %}}Integration runtime description.
-{{% /md %}}</dd>
-    <dt class="property-optional"
+{{% /md %}}</dd><dt class="property-optional"
             title="Optional">
         <span id="edition_go">
 <a href="#edition_go" style="color: inherit; text-decoration: inherit;">Edition</a>
@@ -517,8 +487,7 @@ The IntegrationRuntimeSsis resource accepts the following [input]({{< relref "/d
         <span class="property-type">string</span>
     </dt>
     <dd>{{% md %}}The Azure-SSIS Integration Runtime edition. Valid values are `Standard` and `Enterprise`. Defaults to `Standard`.
-{{% /md %}}</dd>
-    <dt class="property-optional"
+{{% /md %}}</dd><dt class="property-optional"
             title="Optional">
         <span id="licensetype_go">
 <a href="#licensetype_go" style="color: inherit; text-decoration: inherit;">License<wbr>Type</a>
@@ -527,8 +496,7 @@ The IntegrationRuntimeSsis resource accepts the following [input]({{< relref "/d
         <span class="property-type">string</span>
     </dt>
     <dd>{{% md %}}The type of the license that is used. Valid values are `LicenseIncluded` and `BasePrize`. Defaults to `LicenseIncluded`.
-{{% /md %}}</dd>
-    <dt class="property-optional"
+{{% /md %}}</dd><dt class="property-optional"
             title="Optional">
         <span id="location_go">
 <a href="#location_go" style="color: inherit; text-decoration: inherit;">Location</a>
@@ -537,8 +505,7 @@ The IntegrationRuntimeSsis resource accepts the following [input]({{< relref "/d
         <span class="property-type">string</span>
     </dt>
     <dd>{{% md %}}Specifies the supported Azure location where the resource exists. Changing this forces a new resource to be created.
-{{% /md %}}</dd>
-    <dt class="property-optional"
+{{% /md %}}</dd><dt class="property-optional"
             title="Optional">
         <span id="maxparallelexecutionspernode_go">
 <a href="#maxparallelexecutionspernode_go" style="color: inherit; text-decoration: inherit;">Max<wbr>Parallel<wbr>Executions<wbr>Per<wbr>Node</a>
@@ -547,8 +514,7 @@ The IntegrationRuntimeSsis resource accepts the following [input]({{< relref "/d
         <span class="property-type">int</span>
     </dt>
     <dd>{{% md %}}Defines the maximum parallel executions per node. Defaults to `1`. Max is `16`.
-{{% /md %}}</dd>
-    <dt class="property-optional"
+{{% /md %}}</dd><dt class="property-optional"
             title="Optional">
         <span id="name_go">
 <a href="#name_go" style="color: inherit; text-decoration: inherit;">Name</a>
@@ -557,8 +523,7 @@ The IntegrationRuntimeSsis resource accepts the following [input]({{< relref "/d
         <span class="property-type">string</span>
     </dt>
     <dd>{{% md %}}Specifies the name of the Azure-SSIS Integration Runtime. Changing this forces a new resource to be created. Must be globally unique. See the [Microsoft documentation](https://docs.microsoft.com/en-us/azure/data-factory/naming-rules) for all restrictions.
-{{% /md %}}</dd>
-    <dt class="property-optional"
+{{% /md %}}</dd><dt class="property-optional"
             title="Optional">
         <span id="numberofnodes_go">
 <a href="#numberofnodes_go" style="color: inherit; text-decoration: inherit;">Number<wbr>Of<wbr>Nodes</a>
@@ -567,8 +532,7 @@ The IntegrationRuntimeSsis resource accepts the following [input]({{< relref "/d
         <span class="property-type">int</span>
     </dt>
     <dd>{{% md %}}Number of nodes for the Azure-SSIS Integration Runtime. Max is `10`. Defaults to `1`.
-{{% /md %}}</dd>
-    <dt class="property-optional"
+{{% /md %}}</dd><dt class="property-optional"
             title="Optional">
         <span id="vnetintegration_go">
 <a href="#vnetintegration_go" style="color: inherit; text-decoration: inherit;">Vnet<wbr>Integration</a>
@@ -577,14 +541,11 @@ The IntegrationRuntimeSsis resource accepts the following [input]({{< relref "/d
         <span class="property-type"><a href="#integrationruntimessisvnetintegration">Integration<wbr>Runtime<wbr>Ssis<wbr>Vnet<wbr>Integration</a></span>
     </dt>
     <dd>{{% md %}}A `vnet_integration` block as defined below.
-{{% /md %}}</dd>
-</dl>
+{{% /md %}}</dd></dl>
 {{% /choosable %}}
 
 {{% choosable language nodejs %}}
-<dl class="resources-properties">
-
-    <dt class="property-required"
+<dl class="resources-properties"><dt class="property-required"
             title="Required">
         <span id="datafactoryname_nodejs">
 <a href="#datafactoryname_nodejs" style="color: inherit; text-decoration: inherit;">data<wbr>Factory<wbr>Name</a>
@@ -593,8 +554,7 @@ The IntegrationRuntimeSsis resource accepts the following [input]({{< relref "/d
         <span class="property-type">string</span>
     </dt>
     <dd>{{% md %}}Specifies the name of the Data Factory the Azure-SSIS Integration Runtime belongs to. Changing this forces a new resource to be created.
-{{% /md %}}</dd>
-    <dt class="property-required"
+{{% /md %}}</dd><dt class="property-required"
             title="Required">
         <span id="nodesize_nodejs">
 <a href="#nodesize_nodejs" style="color: inherit; text-decoration: inherit;">node<wbr>Size</a>
@@ -603,8 +563,7 @@ The IntegrationRuntimeSsis resource accepts the following [input]({{< relref "/d
         <span class="property-type">string</span>
     </dt>
     <dd>{{% md %}}The size of the nodes on which the Azure-SSIS Integration Runtime runs. Valid values are: `Standard_D2_v3`, `Standard_D4_v3`, `Standard_D8_v3`, `Standard_D16_v3`, `Standard_D32_v3`, `Standard_D64_v3`, `Standard_E2_v3`, `Standard_E4_v3`, `Standard_E8_v3`, `Standard_E16_v3`, `Standard_E32_v3`, `Standard_E64_v3`, `Standard_D1_v2`, `Standard_D2_v2`, `Standard_D3_v2`, `Standard_D4_v2`, `Standard_A4_v2` and `Standard_A8_v2`
-{{% /md %}}</dd>
-    <dt class="property-required"
+{{% /md %}}</dd><dt class="property-required"
             title="Required">
         <span id="resourcegroupname_nodejs">
 <a href="#resourcegroupname_nodejs" style="color: inherit; text-decoration: inherit;">resource<wbr>Group<wbr>Name</a>
@@ -613,8 +572,7 @@ The IntegrationRuntimeSsis resource accepts the following [input]({{< relref "/d
         <span class="property-type">string</span>
     </dt>
     <dd>{{% md %}}The name of the resource group in which to create the Azure-SSIS Integration Runtime. Changing this forces a new resource to be created.
-{{% /md %}}</dd>
-    <dt class="property-optional"
+{{% /md %}}</dd><dt class="property-optional"
             title="Optional">
         <span id="cataloginfo_nodejs">
 <a href="#cataloginfo_nodejs" style="color: inherit; text-decoration: inherit;">catalog<wbr>Info</a>
@@ -623,8 +581,7 @@ The IntegrationRuntimeSsis resource accepts the following [input]({{< relref "/d
         <span class="property-type"><a href="#integrationruntimessiscataloginfo">Integration<wbr>Runtime<wbr>Ssis<wbr>Catalog<wbr>Info</a></span>
     </dt>
     <dd>{{% md %}}A `catalog_info` block as defined below.
-{{% /md %}}</dd>
-    <dt class="property-optional"
+{{% /md %}}</dd><dt class="property-optional"
             title="Optional">
         <span id="customsetupscript_nodejs">
 <a href="#customsetupscript_nodejs" style="color: inherit; text-decoration: inherit;">custom<wbr>Setup<wbr>Script</a>
@@ -633,8 +590,7 @@ The IntegrationRuntimeSsis resource accepts the following [input]({{< relref "/d
         <span class="property-type"><a href="#integrationruntimessiscustomsetupscript">Integration<wbr>Runtime<wbr>Ssis<wbr>Custom<wbr>Setup<wbr>Script</a></span>
     </dt>
     <dd>{{% md %}}A `custom_setup_script` block as defined below.
-{{% /md %}}</dd>
-    <dt class="property-optional"
+{{% /md %}}</dd><dt class="property-optional"
             title="Optional">
         <span id="description_nodejs">
 <a href="#description_nodejs" style="color: inherit; text-decoration: inherit;">description</a>
@@ -643,8 +599,7 @@ The IntegrationRuntimeSsis resource accepts the following [input]({{< relref "/d
         <span class="property-type">string</span>
     </dt>
     <dd>{{% md %}}Integration runtime description.
-{{% /md %}}</dd>
-    <dt class="property-optional"
+{{% /md %}}</dd><dt class="property-optional"
             title="Optional">
         <span id="edition_nodejs">
 <a href="#edition_nodejs" style="color: inherit; text-decoration: inherit;">edition</a>
@@ -653,8 +608,7 @@ The IntegrationRuntimeSsis resource accepts the following [input]({{< relref "/d
         <span class="property-type">string</span>
     </dt>
     <dd>{{% md %}}The Azure-SSIS Integration Runtime edition. Valid values are `Standard` and `Enterprise`. Defaults to `Standard`.
-{{% /md %}}</dd>
-    <dt class="property-optional"
+{{% /md %}}</dd><dt class="property-optional"
             title="Optional">
         <span id="licensetype_nodejs">
 <a href="#licensetype_nodejs" style="color: inherit; text-decoration: inherit;">license<wbr>Type</a>
@@ -663,8 +617,7 @@ The IntegrationRuntimeSsis resource accepts the following [input]({{< relref "/d
         <span class="property-type">string</span>
     </dt>
     <dd>{{% md %}}The type of the license that is used. Valid values are `LicenseIncluded` and `BasePrize`. Defaults to `LicenseIncluded`.
-{{% /md %}}</dd>
-    <dt class="property-optional"
+{{% /md %}}</dd><dt class="property-optional"
             title="Optional">
         <span id="location_nodejs">
 <a href="#location_nodejs" style="color: inherit; text-decoration: inherit;">location</a>
@@ -673,8 +626,7 @@ The IntegrationRuntimeSsis resource accepts the following [input]({{< relref "/d
         <span class="property-type">string</span>
     </dt>
     <dd>{{% md %}}Specifies the supported Azure location where the resource exists. Changing this forces a new resource to be created.
-{{% /md %}}</dd>
-    <dt class="property-optional"
+{{% /md %}}</dd><dt class="property-optional"
             title="Optional">
         <span id="maxparallelexecutionspernode_nodejs">
 <a href="#maxparallelexecutionspernode_nodejs" style="color: inherit; text-decoration: inherit;">max<wbr>Parallel<wbr>Executions<wbr>Per<wbr>Node</a>
@@ -683,8 +635,7 @@ The IntegrationRuntimeSsis resource accepts the following [input]({{< relref "/d
         <span class="property-type">number</span>
     </dt>
     <dd>{{% md %}}Defines the maximum parallel executions per node. Defaults to `1`. Max is `16`.
-{{% /md %}}</dd>
-    <dt class="property-optional"
+{{% /md %}}</dd><dt class="property-optional"
             title="Optional">
         <span id="name_nodejs">
 <a href="#name_nodejs" style="color: inherit; text-decoration: inherit;">name</a>
@@ -693,8 +644,7 @@ The IntegrationRuntimeSsis resource accepts the following [input]({{< relref "/d
         <span class="property-type">string</span>
     </dt>
     <dd>{{% md %}}Specifies the name of the Azure-SSIS Integration Runtime. Changing this forces a new resource to be created. Must be globally unique. See the [Microsoft documentation](https://docs.microsoft.com/en-us/azure/data-factory/naming-rules) for all restrictions.
-{{% /md %}}</dd>
-    <dt class="property-optional"
+{{% /md %}}</dd><dt class="property-optional"
             title="Optional">
         <span id="numberofnodes_nodejs">
 <a href="#numberofnodes_nodejs" style="color: inherit; text-decoration: inherit;">number<wbr>Of<wbr>Nodes</a>
@@ -703,8 +653,7 @@ The IntegrationRuntimeSsis resource accepts the following [input]({{< relref "/d
         <span class="property-type">number</span>
     </dt>
     <dd>{{% md %}}Number of nodes for the Azure-SSIS Integration Runtime. Max is `10`. Defaults to `1`.
-{{% /md %}}</dd>
-    <dt class="property-optional"
+{{% /md %}}</dd><dt class="property-optional"
             title="Optional">
         <span id="vnetintegration_nodejs">
 <a href="#vnetintegration_nodejs" style="color: inherit; text-decoration: inherit;">vnet<wbr>Integration</a>
@@ -713,14 +662,11 @@ The IntegrationRuntimeSsis resource accepts the following [input]({{< relref "/d
         <span class="property-type"><a href="#integrationruntimessisvnetintegration">Integration<wbr>Runtime<wbr>Ssis<wbr>Vnet<wbr>Integration</a></span>
     </dt>
     <dd>{{% md %}}A `vnet_integration` block as defined below.
-{{% /md %}}</dd>
-</dl>
+{{% /md %}}</dd></dl>
 {{% /choosable %}}
 
 {{% choosable language python %}}
-<dl class="resources-properties">
-
-    <dt class="property-required"
+<dl class="resources-properties"><dt class="property-required"
             title="Required">
         <span id="data_factory_name_python">
 <a href="#data_factory_name_python" style="color: inherit; text-decoration: inherit;">data_<wbr>factory_<wbr>name</a>
@@ -729,8 +675,7 @@ The IntegrationRuntimeSsis resource accepts the following [input]({{< relref "/d
         <span class="property-type">str</span>
     </dt>
     <dd>{{% md %}}Specifies the name of the Data Factory the Azure-SSIS Integration Runtime belongs to. Changing this forces a new resource to be created.
-{{% /md %}}</dd>
-    <dt class="property-required"
+{{% /md %}}</dd><dt class="property-required"
             title="Required">
         <span id="node_size_python">
 <a href="#node_size_python" style="color: inherit; text-decoration: inherit;">node_<wbr>size</a>
@@ -739,8 +684,7 @@ The IntegrationRuntimeSsis resource accepts the following [input]({{< relref "/d
         <span class="property-type">str</span>
     </dt>
     <dd>{{% md %}}The size of the nodes on which the Azure-SSIS Integration Runtime runs. Valid values are: `Standard_D2_v3`, `Standard_D4_v3`, `Standard_D8_v3`, `Standard_D16_v3`, `Standard_D32_v3`, `Standard_D64_v3`, `Standard_E2_v3`, `Standard_E4_v3`, `Standard_E8_v3`, `Standard_E16_v3`, `Standard_E32_v3`, `Standard_E64_v3`, `Standard_D1_v2`, `Standard_D2_v2`, `Standard_D3_v2`, `Standard_D4_v2`, `Standard_A4_v2` and `Standard_A8_v2`
-{{% /md %}}</dd>
-    <dt class="property-required"
+{{% /md %}}</dd><dt class="property-required"
             title="Required">
         <span id="resource_group_name_python">
 <a href="#resource_group_name_python" style="color: inherit; text-decoration: inherit;">resource_<wbr>group_<wbr>name</a>
@@ -749,8 +693,7 @@ The IntegrationRuntimeSsis resource accepts the following [input]({{< relref "/d
         <span class="property-type">str</span>
     </dt>
     <dd>{{% md %}}The name of the resource group in which to create the Azure-SSIS Integration Runtime. Changing this forces a new resource to be created.
-{{% /md %}}</dd>
-    <dt class="property-optional"
+{{% /md %}}</dd><dt class="property-optional"
             title="Optional">
         <span id="catalog_info_python">
 <a href="#catalog_info_python" style="color: inherit; text-decoration: inherit;">catalog_<wbr>info</a>
@@ -759,8 +702,7 @@ The IntegrationRuntimeSsis resource accepts the following [input]({{< relref "/d
         <span class="property-type"><a href="#integrationruntimessiscataloginfo">Integration<wbr>Runtime<wbr>Ssis<wbr>Catalog<wbr>Info<wbr>Args</a></span>
     </dt>
     <dd>{{% md %}}A `catalog_info` block as defined below.
-{{% /md %}}</dd>
-    <dt class="property-optional"
+{{% /md %}}</dd><dt class="property-optional"
             title="Optional">
         <span id="custom_setup_script_python">
 <a href="#custom_setup_script_python" style="color: inherit; text-decoration: inherit;">custom_<wbr>setup_<wbr>script</a>
@@ -769,8 +711,7 @@ The IntegrationRuntimeSsis resource accepts the following [input]({{< relref "/d
         <span class="property-type"><a href="#integrationruntimessiscustomsetupscript">Integration<wbr>Runtime<wbr>Ssis<wbr>Custom<wbr>Setup<wbr>Script<wbr>Args</a></span>
     </dt>
     <dd>{{% md %}}A `custom_setup_script` block as defined below.
-{{% /md %}}</dd>
-    <dt class="property-optional"
+{{% /md %}}</dd><dt class="property-optional"
             title="Optional">
         <span id="description_python">
 <a href="#description_python" style="color: inherit; text-decoration: inherit;">description</a>
@@ -779,8 +720,7 @@ The IntegrationRuntimeSsis resource accepts the following [input]({{< relref "/d
         <span class="property-type">str</span>
     </dt>
     <dd>{{% md %}}Integration runtime description.
-{{% /md %}}</dd>
-    <dt class="property-optional"
+{{% /md %}}</dd><dt class="property-optional"
             title="Optional">
         <span id="edition_python">
 <a href="#edition_python" style="color: inherit; text-decoration: inherit;">edition</a>
@@ -789,8 +729,7 @@ The IntegrationRuntimeSsis resource accepts the following [input]({{< relref "/d
         <span class="property-type">str</span>
     </dt>
     <dd>{{% md %}}The Azure-SSIS Integration Runtime edition. Valid values are `Standard` and `Enterprise`. Defaults to `Standard`.
-{{% /md %}}</dd>
-    <dt class="property-optional"
+{{% /md %}}</dd><dt class="property-optional"
             title="Optional">
         <span id="license_type_python">
 <a href="#license_type_python" style="color: inherit; text-decoration: inherit;">license_<wbr>type</a>
@@ -799,8 +738,7 @@ The IntegrationRuntimeSsis resource accepts the following [input]({{< relref "/d
         <span class="property-type">str</span>
     </dt>
     <dd>{{% md %}}The type of the license that is used. Valid values are `LicenseIncluded` and `BasePrize`. Defaults to `LicenseIncluded`.
-{{% /md %}}</dd>
-    <dt class="property-optional"
+{{% /md %}}</dd><dt class="property-optional"
             title="Optional">
         <span id="location_python">
 <a href="#location_python" style="color: inherit; text-decoration: inherit;">location</a>
@@ -809,8 +747,7 @@ The IntegrationRuntimeSsis resource accepts the following [input]({{< relref "/d
         <span class="property-type">str</span>
     </dt>
     <dd>{{% md %}}Specifies the supported Azure location where the resource exists. Changing this forces a new resource to be created.
-{{% /md %}}</dd>
-    <dt class="property-optional"
+{{% /md %}}</dd><dt class="property-optional"
             title="Optional">
         <span id="max_parallel_executions_per_node_python">
 <a href="#max_parallel_executions_per_node_python" style="color: inherit; text-decoration: inherit;">max_<wbr>parallel_<wbr>executions_<wbr>per_<wbr>node</a>
@@ -819,8 +756,7 @@ The IntegrationRuntimeSsis resource accepts the following [input]({{< relref "/d
         <span class="property-type">int</span>
     </dt>
     <dd>{{% md %}}Defines the maximum parallel executions per node. Defaults to `1`. Max is `16`.
-{{% /md %}}</dd>
-    <dt class="property-optional"
+{{% /md %}}</dd><dt class="property-optional"
             title="Optional">
         <span id="name_python">
 <a href="#name_python" style="color: inherit; text-decoration: inherit;">name</a>
@@ -829,8 +765,7 @@ The IntegrationRuntimeSsis resource accepts the following [input]({{< relref "/d
         <span class="property-type">str</span>
     </dt>
     <dd>{{% md %}}Specifies the name of the Azure-SSIS Integration Runtime. Changing this forces a new resource to be created. Must be globally unique. See the [Microsoft documentation](https://docs.microsoft.com/en-us/azure/data-factory/naming-rules) for all restrictions.
-{{% /md %}}</dd>
-    <dt class="property-optional"
+{{% /md %}}</dd><dt class="property-optional"
             title="Optional">
         <span id="number_of_nodes_python">
 <a href="#number_of_nodes_python" style="color: inherit; text-decoration: inherit;">number_<wbr>of_<wbr>nodes</a>
@@ -839,8 +774,7 @@ The IntegrationRuntimeSsis resource accepts the following [input]({{< relref "/d
         <span class="property-type">int</span>
     </dt>
     <dd>{{% md %}}Number of nodes for the Azure-SSIS Integration Runtime. Max is `10`. Defaults to `1`.
-{{% /md %}}</dd>
-    <dt class="property-optional"
+{{% /md %}}</dd><dt class="property-optional"
             title="Optional">
         <span id="vnet_integration_python">
 <a href="#vnet_integration_python" style="color: inherit; text-decoration: inherit;">vnet_<wbr>integration</a>
@@ -849,8 +783,7 @@ The IntegrationRuntimeSsis resource accepts the following [input]({{< relref "/d
         <span class="property-type"><a href="#integrationruntimessisvnetintegration">Integration<wbr>Runtime<wbr>Ssis<wbr>Vnet<wbr>Integration<wbr>Args</a></span>
     </dt>
     <dd>{{% md %}}A `vnet_integration` block as defined below.
-{{% /md %}}</dd>
-</dl>
+{{% /md %}}</dd></dl>
 {{% /choosable %}}
 
 
@@ -861,9 +794,7 @@ All [input](#inputs) properties are implicitly available as output properties. A
 
 
 {{% choosable language csharp %}}
-<dl class="resources-properties">
-
-    <dt class="property-"
+<dl class="resources-properties"><dt class="property-"
             title="">
         <span id="id_csharp">
 <a href="#id_csharp" style="color: inherit; text-decoration: inherit;">Id</a>
@@ -871,14 +802,11 @@ All [input](#inputs) properties are implicitly available as output properties. A
         <span class="property-indicator"></span>
         <span class="property-type">string</span>
     </dt>
-    <dd>{{% md %}}The provider-assigned unique ID for this managed resource.{{% /md %}}</dd>
-</dl>
+    <dd>{{% md %}}The provider-assigned unique ID for this managed resource.{{% /md %}}</dd></dl>
 {{% /choosable %}}
 
 {{% choosable language go %}}
-<dl class="resources-properties">
-
-    <dt class="property-"
+<dl class="resources-properties"><dt class="property-"
             title="">
         <span id="id_go">
 <a href="#id_go" style="color: inherit; text-decoration: inherit;">Id</a>
@@ -886,14 +814,11 @@ All [input](#inputs) properties are implicitly available as output properties. A
         <span class="property-indicator"></span>
         <span class="property-type">string</span>
     </dt>
-    <dd>{{% md %}}The provider-assigned unique ID for this managed resource.{{% /md %}}</dd>
-</dl>
+    <dd>{{% md %}}The provider-assigned unique ID for this managed resource.{{% /md %}}</dd></dl>
 {{% /choosable %}}
 
 {{% choosable language nodejs %}}
-<dl class="resources-properties">
-
-    <dt class="property-"
+<dl class="resources-properties"><dt class="property-"
             title="">
         <span id="id_nodejs">
 <a href="#id_nodejs" style="color: inherit; text-decoration: inherit;">id</a>
@@ -901,14 +826,11 @@ All [input](#inputs) properties are implicitly available as output properties. A
         <span class="property-indicator"></span>
         <span class="property-type">string</span>
     </dt>
-    <dd>{{% md %}}The provider-assigned unique ID for this managed resource.{{% /md %}}</dd>
-</dl>
+    <dd>{{% md %}}The provider-assigned unique ID for this managed resource.{{% /md %}}</dd></dl>
 {{% /choosable %}}
 
 {{% choosable language python %}}
-<dl class="resources-properties">
-
-    <dt class="property-"
+<dl class="resources-properties"><dt class="property-"
             title="">
         <span id="id_python">
 <a href="#id_python" style="color: inherit; text-decoration: inherit;">id</a>
@@ -916,8 +838,7 @@ All [input](#inputs) properties are implicitly available as output properties. A
         <span class="property-indicator"></span>
         <span class="property-type">str</span>
     </dt>
-    <dd>{{% md %}}The provider-assigned unique ID for this managed resource.{{% /md %}}</dd>
-</dl>
+    <dd>{{% md %}}The provider-assigned unique ID for this managed resource.{{% /md %}}</dd></dl>
 {{% /choosable %}}
 
 
@@ -1044,9 +965,7 @@ The following state arguments are supported:
 
 
 {{% choosable language csharp %}}
-<dl class="resources-properties">
-
-    <dt class="property-optional"
+<dl class="resources-properties"><dt class="property-optional"
             title="Optional">
         <span id="state_cataloginfo_csharp">
 <a href="#state_cataloginfo_csharp" style="color: inherit; text-decoration: inherit;">Catalog<wbr>Info</a>
@@ -1055,8 +974,7 @@ The following state arguments are supported:
         <span class="property-type"><a href="#integrationruntimessiscataloginfo">Integration<wbr>Runtime<wbr>Ssis<wbr>Catalog<wbr>Info<wbr>Args</a></span>
     </dt>
     <dd>{{% md %}}A `catalog_info` block as defined below.
-{{% /md %}}</dd>
-    <dt class="property-optional"
+{{% /md %}}</dd><dt class="property-optional"
             title="Optional">
         <span id="state_customsetupscript_csharp">
 <a href="#state_customsetupscript_csharp" style="color: inherit; text-decoration: inherit;">Custom<wbr>Setup<wbr>Script</a>
@@ -1065,8 +983,7 @@ The following state arguments are supported:
         <span class="property-type"><a href="#integrationruntimessiscustomsetupscript">Integration<wbr>Runtime<wbr>Ssis<wbr>Custom<wbr>Setup<wbr>Script<wbr>Args</a></span>
     </dt>
     <dd>{{% md %}}A `custom_setup_script` block as defined below.
-{{% /md %}}</dd>
-    <dt class="property-optional"
+{{% /md %}}</dd><dt class="property-optional"
             title="Optional">
         <span id="state_datafactoryname_csharp">
 <a href="#state_datafactoryname_csharp" style="color: inherit; text-decoration: inherit;">Data<wbr>Factory<wbr>Name</a>
@@ -1075,8 +992,7 @@ The following state arguments are supported:
         <span class="property-type">string</span>
     </dt>
     <dd>{{% md %}}Specifies the name of the Data Factory the Azure-SSIS Integration Runtime belongs to. Changing this forces a new resource to be created.
-{{% /md %}}</dd>
-    <dt class="property-optional"
+{{% /md %}}</dd><dt class="property-optional"
             title="Optional">
         <span id="state_description_csharp">
 <a href="#state_description_csharp" style="color: inherit; text-decoration: inherit;">Description</a>
@@ -1085,8 +1001,7 @@ The following state arguments are supported:
         <span class="property-type">string</span>
     </dt>
     <dd>{{% md %}}Integration runtime description.
-{{% /md %}}</dd>
-    <dt class="property-optional"
+{{% /md %}}</dd><dt class="property-optional"
             title="Optional">
         <span id="state_edition_csharp">
 <a href="#state_edition_csharp" style="color: inherit; text-decoration: inherit;">Edition</a>
@@ -1095,8 +1010,7 @@ The following state arguments are supported:
         <span class="property-type">string</span>
     </dt>
     <dd>{{% md %}}The Azure-SSIS Integration Runtime edition. Valid values are `Standard` and `Enterprise`. Defaults to `Standard`.
-{{% /md %}}</dd>
-    <dt class="property-optional"
+{{% /md %}}</dd><dt class="property-optional"
             title="Optional">
         <span id="state_licensetype_csharp">
 <a href="#state_licensetype_csharp" style="color: inherit; text-decoration: inherit;">License<wbr>Type</a>
@@ -1105,8 +1019,7 @@ The following state arguments are supported:
         <span class="property-type">string</span>
     </dt>
     <dd>{{% md %}}The type of the license that is used. Valid values are `LicenseIncluded` and `BasePrize`. Defaults to `LicenseIncluded`.
-{{% /md %}}</dd>
-    <dt class="property-optional"
+{{% /md %}}</dd><dt class="property-optional"
             title="Optional">
         <span id="state_location_csharp">
 <a href="#state_location_csharp" style="color: inherit; text-decoration: inherit;">Location</a>
@@ -1115,8 +1028,7 @@ The following state arguments are supported:
         <span class="property-type">string</span>
     </dt>
     <dd>{{% md %}}Specifies the supported Azure location where the resource exists. Changing this forces a new resource to be created.
-{{% /md %}}</dd>
-    <dt class="property-optional"
+{{% /md %}}</dd><dt class="property-optional"
             title="Optional">
         <span id="state_maxparallelexecutionspernode_csharp">
 <a href="#state_maxparallelexecutionspernode_csharp" style="color: inherit; text-decoration: inherit;">Max<wbr>Parallel<wbr>Executions<wbr>Per<wbr>Node</a>
@@ -1125,8 +1037,7 @@ The following state arguments are supported:
         <span class="property-type">int</span>
     </dt>
     <dd>{{% md %}}Defines the maximum parallel executions per node. Defaults to `1`. Max is `16`.
-{{% /md %}}</dd>
-    <dt class="property-optional"
+{{% /md %}}</dd><dt class="property-optional"
             title="Optional">
         <span id="state_name_csharp">
 <a href="#state_name_csharp" style="color: inherit; text-decoration: inherit;">Name</a>
@@ -1135,8 +1046,7 @@ The following state arguments are supported:
         <span class="property-type">string</span>
     </dt>
     <dd>{{% md %}}Specifies the name of the Azure-SSIS Integration Runtime. Changing this forces a new resource to be created. Must be globally unique. See the [Microsoft documentation](https://docs.microsoft.com/en-us/azure/data-factory/naming-rules) for all restrictions.
-{{% /md %}}</dd>
-    <dt class="property-optional"
+{{% /md %}}</dd><dt class="property-optional"
             title="Optional">
         <span id="state_nodesize_csharp">
 <a href="#state_nodesize_csharp" style="color: inherit; text-decoration: inherit;">Node<wbr>Size</a>
@@ -1145,8 +1055,7 @@ The following state arguments are supported:
         <span class="property-type">string</span>
     </dt>
     <dd>{{% md %}}The size of the nodes on which the Azure-SSIS Integration Runtime runs. Valid values are: `Standard_D2_v3`, `Standard_D4_v3`, `Standard_D8_v3`, `Standard_D16_v3`, `Standard_D32_v3`, `Standard_D64_v3`, `Standard_E2_v3`, `Standard_E4_v3`, `Standard_E8_v3`, `Standard_E16_v3`, `Standard_E32_v3`, `Standard_E64_v3`, `Standard_D1_v2`, `Standard_D2_v2`, `Standard_D3_v2`, `Standard_D4_v2`, `Standard_A4_v2` and `Standard_A8_v2`
-{{% /md %}}</dd>
-    <dt class="property-optional"
+{{% /md %}}</dd><dt class="property-optional"
             title="Optional">
         <span id="state_numberofnodes_csharp">
 <a href="#state_numberofnodes_csharp" style="color: inherit; text-decoration: inherit;">Number<wbr>Of<wbr>Nodes</a>
@@ -1155,8 +1064,7 @@ The following state arguments are supported:
         <span class="property-type">int</span>
     </dt>
     <dd>{{% md %}}Number of nodes for the Azure-SSIS Integration Runtime. Max is `10`. Defaults to `1`.
-{{% /md %}}</dd>
-    <dt class="property-optional"
+{{% /md %}}</dd><dt class="property-optional"
             title="Optional">
         <span id="state_resourcegroupname_csharp">
 <a href="#state_resourcegroupname_csharp" style="color: inherit; text-decoration: inherit;">Resource<wbr>Group<wbr>Name</a>
@@ -1165,8 +1073,7 @@ The following state arguments are supported:
         <span class="property-type">string</span>
     </dt>
     <dd>{{% md %}}The name of the resource group in which to create the Azure-SSIS Integration Runtime. Changing this forces a new resource to be created.
-{{% /md %}}</dd>
-    <dt class="property-optional"
+{{% /md %}}</dd><dt class="property-optional"
             title="Optional">
         <span id="state_vnetintegration_csharp">
 <a href="#state_vnetintegration_csharp" style="color: inherit; text-decoration: inherit;">Vnet<wbr>Integration</a>
@@ -1175,14 +1082,11 @@ The following state arguments are supported:
         <span class="property-type"><a href="#integrationruntimessisvnetintegration">Integration<wbr>Runtime<wbr>Ssis<wbr>Vnet<wbr>Integration<wbr>Args</a></span>
     </dt>
     <dd>{{% md %}}A `vnet_integration` block as defined below.
-{{% /md %}}</dd>
-</dl>
+{{% /md %}}</dd></dl>
 {{% /choosable %}}
 
 {{% choosable language go %}}
-<dl class="resources-properties">
-
-    <dt class="property-optional"
+<dl class="resources-properties"><dt class="property-optional"
             title="Optional">
         <span id="state_cataloginfo_go">
 <a href="#state_cataloginfo_go" style="color: inherit; text-decoration: inherit;">Catalog<wbr>Info</a>
@@ -1191,8 +1095,7 @@ The following state arguments are supported:
         <span class="property-type"><a href="#integrationruntimessiscataloginfo">Integration<wbr>Runtime<wbr>Ssis<wbr>Catalog<wbr>Info</a></span>
     </dt>
     <dd>{{% md %}}A `catalog_info` block as defined below.
-{{% /md %}}</dd>
-    <dt class="property-optional"
+{{% /md %}}</dd><dt class="property-optional"
             title="Optional">
         <span id="state_customsetupscript_go">
 <a href="#state_customsetupscript_go" style="color: inherit; text-decoration: inherit;">Custom<wbr>Setup<wbr>Script</a>
@@ -1201,8 +1104,7 @@ The following state arguments are supported:
         <span class="property-type"><a href="#integrationruntimessiscustomsetupscript">Integration<wbr>Runtime<wbr>Ssis<wbr>Custom<wbr>Setup<wbr>Script</a></span>
     </dt>
     <dd>{{% md %}}A `custom_setup_script` block as defined below.
-{{% /md %}}</dd>
-    <dt class="property-optional"
+{{% /md %}}</dd><dt class="property-optional"
             title="Optional">
         <span id="state_datafactoryname_go">
 <a href="#state_datafactoryname_go" style="color: inherit; text-decoration: inherit;">Data<wbr>Factory<wbr>Name</a>
@@ -1211,8 +1113,7 @@ The following state arguments are supported:
         <span class="property-type">string</span>
     </dt>
     <dd>{{% md %}}Specifies the name of the Data Factory the Azure-SSIS Integration Runtime belongs to. Changing this forces a new resource to be created.
-{{% /md %}}</dd>
-    <dt class="property-optional"
+{{% /md %}}</dd><dt class="property-optional"
             title="Optional">
         <span id="state_description_go">
 <a href="#state_description_go" style="color: inherit; text-decoration: inherit;">Description</a>
@@ -1221,8 +1122,7 @@ The following state arguments are supported:
         <span class="property-type">string</span>
     </dt>
     <dd>{{% md %}}Integration runtime description.
-{{% /md %}}</dd>
-    <dt class="property-optional"
+{{% /md %}}</dd><dt class="property-optional"
             title="Optional">
         <span id="state_edition_go">
 <a href="#state_edition_go" style="color: inherit; text-decoration: inherit;">Edition</a>
@@ -1231,8 +1131,7 @@ The following state arguments are supported:
         <span class="property-type">string</span>
     </dt>
     <dd>{{% md %}}The Azure-SSIS Integration Runtime edition. Valid values are `Standard` and `Enterprise`. Defaults to `Standard`.
-{{% /md %}}</dd>
-    <dt class="property-optional"
+{{% /md %}}</dd><dt class="property-optional"
             title="Optional">
         <span id="state_licensetype_go">
 <a href="#state_licensetype_go" style="color: inherit; text-decoration: inherit;">License<wbr>Type</a>
@@ -1241,8 +1140,7 @@ The following state arguments are supported:
         <span class="property-type">string</span>
     </dt>
     <dd>{{% md %}}The type of the license that is used. Valid values are `LicenseIncluded` and `BasePrize`. Defaults to `LicenseIncluded`.
-{{% /md %}}</dd>
-    <dt class="property-optional"
+{{% /md %}}</dd><dt class="property-optional"
             title="Optional">
         <span id="state_location_go">
 <a href="#state_location_go" style="color: inherit; text-decoration: inherit;">Location</a>
@@ -1251,8 +1149,7 @@ The following state arguments are supported:
         <span class="property-type">string</span>
     </dt>
     <dd>{{% md %}}Specifies the supported Azure location where the resource exists. Changing this forces a new resource to be created.
-{{% /md %}}</dd>
-    <dt class="property-optional"
+{{% /md %}}</dd><dt class="property-optional"
             title="Optional">
         <span id="state_maxparallelexecutionspernode_go">
 <a href="#state_maxparallelexecutionspernode_go" style="color: inherit; text-decoration: inherit;">Max<wbr>Parallel<wbr>Executions<wbr>Per<wbr>Node</a>
@@ -1261,8 +1158,7 @@ The following state arguments are supported:
         <span class="property-type">int</span>
     </dt>
     <dd>{{% md %}}Defines the maximum parallel executions per node. Defaults to `1`. Max is `16`.
-{{% /md %}}</dd>
-    <dt class="property-optional"
+{{% /md %}}</dd><dt class="property-optional"
             title="Optional">
         <span id="state_name_go">
 <a href="#state_name_go" style="color: inherit; text-decoration: inherit;">Name</a>
@@ -1271,8 +1167,7 @@ The following state arguments are supported:
         <span class="property-type">string</span>
     </dt>
     <dd>{{% md %}}Specifies the name of the Azure-SSIS Integration Runtime. Changing this forces a new resource to be created. Must be globally unique. See the [Microsoft documentation](https://docs.microsoft.com/en-us/azure/data-factory/naming-rules) for all restrictions.
-{{% /md %}}</dd>
-    <dt class="property-optional"
+{{% /md %}}</dd><dt class="property-optional"
             title="Optional">
         <span id="state_nodesize_go">
 <a href="#state_nodesize_go" style="color: inherit; text-decoration: inherit;">Node<wbr>Size</a>
@@ -1281,8 +1176,7 @@ The following state arguments are supported:
         <span class="property-type">string</span>
     </dt>
     <dd>{{% md %}}The size of the nodes on which the Azure-SSIS Integration Runtime runs. Valid values are: `Standard_D2_v3`, `Standard_D4_v3`, `Standard_D8_v3`, `Standard_D16_v3`, `Standard_D32_v3`, `Standard_D64_v3`, `Standard_E2_v3`, `Standard_E4_v3`, `Standard_E8_v3`, `Standard_E16_v3`, `Standard_E32_v3`, `Standard_E64_v3`, `Standard_D1_v2`, `Standard_D2_v2`, `Standard_D3_v2`, `Standard_D4_v2`, `Standard_A4_v2` and `Standard_A8_v2`
-{{% /md %}}</dd>
-    <dt class="property-optional"
+{{% /md %}}</dd><dt class="property-optional"
             title="Optional">
         <span id="state_numberofnodes_go">
 <a href="#state_numberofnodes_go" style="color: inherit; text-decoration: inherit;">Number<wbr>Of<wbr>Nodes</a>
@@ -1291,8 +1185,7 @@ The following state arguments are supported:
         <span class="property-type">int</span>
     </dt>
     <dd>{{% md %}}Number of nodes for the Azure-SSIS Integration Runtime. Max is `10`. Defaults to `1`.
-{{% /md %}}</dd>
-    <dt class="property-optional"
+{{% /md %}}</dd><dt class="property-optional"
             title="Optional">
         <span id="state_resourcegroupname_go">
 <a href="#state_resourcegroupname_go" style="color: inherit; text-decoration: inherit;">Resource<wbr>Group<wbr>Name</a>
@@ -1301,8 +1194,7 @@ The following state arguments are supported:
         <span class="property-type">string</span>
     </dt>
     <dd>{{% md %}}The name of the resource group in which to create the Azure-SSIS Integration Runtime. Changing this forces a new resource to be created.
-{{% /md %}}</dd>
-    <dt class="property-optional"
+{{% /md %}}</dd><dt class="property-optional"
             title="Optional">
         <span id="state_vnetintegration_go">
 <a href="#state_vnetintegration_go" style="color: inherit; text-decoration: inherit;">Vnet<wbr>Integration</a>
@@ -1311,14 +1203,11 @@ The following state arguments are supported:
         <span class="property-type"><a href="#integrationruntimessisvnetintegration">Integration<wbr>Runtime<wbr>Ssis<wbr>Vnet<wbr>Integration</a></span>
     </dt>
     <dd>{{% md %}}A `vnet_integration` block as defined below.
-{{% /md %}}</dd>
-</dl>
+{{% /md %}}</dd></dl>
 {{% /choosable %}}
 
 {{% choosable language nodejs %}}
-<dl class="resources-properties">
-
-    <dt class="property-optional"
+<dl class="resources-properties"><dt class="property-optional"
             title="Optional">
         <span id="state_cataloginfo_nodejs">
 <a href="#state_cataloginfo_nodejs" style="color: inherit; text-decoration: inherit;">catalog<wbr>Info</a>
@@ -1327,8 +1216,7 @@ The following state arguments are supported:
         <span class="property-type"><a href="#integrationruntimessiscataloginfo">Integration<wbr>Runtime<wbr>Ssis<wbr>Catalog<wbr>Info</a></span>
     </dt>
     <dd>{{% md %}}A `catalog_info` block as defined below.
-{{% /md %}}</dd>
-    <dt class="property-optional"
+{{% /md %}}</dd><dt class="property-optional"
             title="Optional">
         <span id="state_customsetupscript_nodejs">
 <a href="#state_customsetupscript_nodejs" style="color: inherit; text-decoration: inherit;">custom<wbr>Setup<wbr>Script</a>
@@ -1337,8 +1225,7 @@ The following state arguments are supported:
         <span class="property-type"><a href="#integrationruntimessiscustomsetupscript">Integration<wbr>Runtime<wbr>Ssis<wbr>Custom<wbr>Setup<wbr>Script</a></span>
     </dt>
     <dd>{{% md %}}A `custom_setup_script` block as defined below.
-{{% /md %}}</dd>
-    <dt class="property-optional"
+{{% /md %}}</dd><dt class="property-optional"
             title="Optional">
         <span id="state_datafactoryname_nodejs">
 <a href="#state_datafactoryname_nodejs" style="color: inherit; text-decoration: inherit;">data<wbr>Factory<wbr>Name</a>
@@ -1347,8 +1234,7 @@ The following state arguments are supported:
         <span class="property-type">string</span>
     </dt>
     <dd>{{% md %}}Specifies the name of the Data Factory the Azure-SSIS Integration Runtime belongs to. Changing this forces a new resource to be created.
-{{% /md %}}</dd>
-    <dt class="property-optional"
+{{% /md %}}</dd><dt class="property-optional"
             title="Optional">
         <span id="state_description_nodejs">
 <a href="#state_description_nodejs" style="color: inherit; text-decoration: inherit;">description</a>
@@ -1357,8 +1243,7 @@ The following state arguments are supported:
         <span class="property-type">string</span>
     </dt>
     <dd>{{% md %}}Integration runtime description.
-{{% /md %}}</dd>
-    <dt class="property-optional"
+{{% /md %}}</dd><dt class="property-optional"
             title="Optional">
         <span id="state_edition_nodejs">
 <a href="#state_edition_nodejs" style="color: inherit; text-decoration: inherit;">edition</a>
@@ -1367,8 +1252,7 @@ The following state arguments are supported:
         <span class="property-type">string</span>
     </dt>
     <dd>{{% md %}}The Azure-SSIS Integration Runtime edition. Valid values are `Standard` and `Enterprise`. Defaults to `Standard`.
-{{% /md %}}</dd>
-    <dt class="property-optional"
+{{% /md %}}</dd><dt class="property-optional"
             title="Optional">
         <span id="state_licensetype_nodejs">
 <a href="#state_licensetype_nodejs" style="color: inherit; text-decoration: inherit;">license<wbr>Type</a>
@@ -1377,8 +1261,7 @@ The following state arguments are supported:
         <span class="property-type">string</span>
     </dt>
     <dd>{{% md %}}The type of the license that is used. Valid values are `LicenseIncluded` and `BasePrize`. Defaults to `LicenseIncluded`.
-{{% /md %}}</dd>
-    <dt class="property-optional"
+{{% /md %}}</dd><dt class="property-optional"
             title="Optional">
         <span id="state_location_nodejs">
 <a href="#state_location_nodejs" style="color: inherit; text-decoration: inherit;">location</a>
@@ -1387,8 +1270,7 @@ The following state arguments are supported:
         <span class="property-type">string</span>
     </dt>
     <dd>{{% md %}}Specifies the supported Azure location where the resource exists. Changing this forces a new resource to be created.
-{{% /md %}}</dd>
-    <dt class="property-optional"
+{{% /md %}}</dd><dt class="property-optional"
             title="Optional">
         <span id="state_maxparallelexecutionspernode_nodejs">
 <a href="#state_maxparallelexecutionspernode_nodejs" style="color: inherit; text-decoration: inherit;">max<wbr>Parallel<wbr>Executions<wbr>Per<wbr>Node</a>
@@ -1397,8 +1279,7 @@ The following state arguments are supported:
         <span class="property-type">number</span>
     </dt>
     <dd>{{% md %}}Defines the maximum parallel executions per node. Defaults to `1`. Max is `16`.
-{{% /md %}}</dd>
-    <dt class="property-optional"
+{{% /md %}}</dd><dt class="property-optional"
             title="Optional">
         <span id="state_name_nodejs">
 <a href="#state_name_nodejs" style="color: inherit; text-decoration: inherit;">name</a>
@@ -1407,8 +1288,7 @@ The following state arguments are supported:
         <span class="property-type">string</span>
     </dt>
     <dd>{{% md %}}Specifies the name of the Azure-SSIS Integration Runtime. Changing this forces a new resource to be created. Must be globally unique. See the [Microsoft documentation](https://docs.microsoft.com/en-us/azure/data-factory/naming-rules) for all restrictions.
-{{% /md %}}</dd>
-    <dt class="property-optional"
+{{% /md %}}</dd><dt class="property-optional"
             title="Optional">
         <span id="state_nodesize_nodejs">
 <a href="#state_nodesize_nodejs" style="color: inherit; text-decoration: inherit;">node<wbr>Size</a>
@@ -1417,8 +1297,7 @@ The following state arguments are supported:
         <span class="property-type">string</span>
     </dt>
     <dd>{{% md %}}The size of the nodes on which the Azure-SSIS Integration Runtime runs. Valid values are: `Standard_D2_v3`, `Standard_D4_v3`, `Standard_D8_v3`, `Standard_D16_v3`, `Standard_D32_v3`, `Standard_D64_v3`, `Standard_E2_v3`, `Standard_E4_v3`, `Standard_E8_v3`, `Standard_E16_v3`, `Standard_E32_v3`, `Standard_E64_v3`, `Standard_D1_v2`, `Standard_D2_v2`, `Standard_D3_v2`, `Standard_D4_v2`, `Standard_A4_v2` and `Standard_A8_v2`
-{{% /md %}}</dd>
-    <dt class="property-optional"
+{{% /md %}}</dd><dt class="property-optional"
             title="Optional">
         <span id="state_numberofnodes_nodejs">
 <a href="#state_numberofnodes_nodejs" style="color: inherit; text-decoration: inherit;">number<wbr>Of<wbr>Nodes</a>
@@ -1427,8 +1306,7 @@ The following state arguments are supported:
         <span class="property-type">number</span>
     </dt>
     <dd>{{% md %}}Number of nodes for the Azure-SSIS Integration Runtime. Max is `10`. Defaults to `1`.
-{{% /md %}}</dd>
-    <dt class="property-optional"
+{{% /md %}}</dd><dt class="property-optional"
             title="Optional">
         <span id="state_resourcegroupname_nodejs">
 <a href="#state_resourcegroupname_nodejs" style="color: inherit; text-decoration: inherit;">resource<wbr>Group<wbr>Name</a>
@@ -1437,8 +1315,7 @@ The following state arguments are supported:
         <span class="property-type">string</span>
     </dt>
     <dd>{{% md %}}The name of the resource group in which to create the Azure-SSIS Integration Runtime. Changing this forces a new resource to be created.
-{{% /md %}}</dd>
-    <dt class="property-optional"
+{{% /md %}}</dd><dt class="property-optional"
             title="Optional">
         <span id="state_vnetintegration_nodejs">
 <a href="#state_vnetintegration_nodejs" style="color: inherit; text-decoration: inherit;">vnet<wbr>Integration</a>
@@ -1447,14 +1324,11 @@ The following state arguments are supported:
         <span class="property-type"><a href="#integrationruntimessisvnetintegration">Integration<wbr>Runtime<wbr>Ssis<wbr>Vnet<wbr>Integration</a></span>
     </dt>
     <dd>{{% md %}}A `vnet_integration` block as defined below.
-{{% /md %}}</dd>
-</dl>
+{{% /md %}}</dd></dl>
 {{% /choosable %}}
 
 {{% choosable language python %}}
-<dl class="resources-properties">
-
-    <dt class="property-optional"
+<dl class="resources-properties"><dt class="property-optional"
             title="Optional">
         <span id="state_catalog_info_python">
 <a href="#state_catalog_info_python" style="color: inherit; text-decoration: inherit;">catalog_<wbr>info</a>
@@ -1463,8 +1337,7 @@ The following state arguments are supported:
         <span class="property-type"><a href="#integrationruntimessiscataloginfo">Integration<wbr>Runtime<wbr>Ssis<wbr>Catalog<wbr>Info<wbr>Args</a></span>
     </dt>
     <dd>{{% md %}}A `catalog_info` block as defined below.
-{{% /md %}}</dd>
-    <dt class="property-optional"
+{{% /md %}}</dd><dt class="property-optional"
             title="Optional">
         <span id="state_custom_setup_script_python">
 <a href="#state_custom_setup_script_python" style="color: inherit; text-decoration: inherit;">custom_<wbr>setup_<wbr>script</a>
@@ -1473,8 +1346,7 @@ The following state arguments are supported:
         <span class="property-type"><a href="#integrationruntimessiscustomsetupscript">Integration<wbr>Runtime<wbr>Ssis<wbr>Custom<wbr>Setup<wbr>Script<wbr>Args</a></span>
     </dt>
     <dd>{{% md %}}A `custom_setup_script` block as defined below.
-{{% /md %}}</dd>
-    <dt class="property-optional"
+{{% /md %}}</dd><dt class="property-optional"
             title="Optional">
         <span id="state_data_factory_name_python">
 <a href="#state_data_factory_name_python" style="color: inherit; text-decoration: inherit;">data_<wbr>factory_<wbr>name</a>
@@ -1483,8 +1355,7 @@ The following state arguments are supported:
         <span class="property-type">str</span>
     </dt>
     <dd>{{% md %}}Specifies the name of the Data Factory the Azure-SSIS Integration Runtime belongs to. Changing this forces a new resource to be created.
-{{% /md %}}</dd>
-    <dt class="property-optional"
+{{% /md %}}</dd><dt class="property-optional"
             title="Optional">
         <span id="state_description_python">
 <a href="#state_description_python" style="color: inherit; text-decoration: inherit;">description</a>
@@ -1493,8 +1364,7 @@ The following state arguments are supported:
         <span class="property-type">str</span>
     </dt>
     <dd>{{% md %}}Integration runtime description.
-{{% /md %}}</dd>
-    <dt class="property-optional"
+{{% /md %}}</dd><dt class="property-optional"
             title="Optional">
         <span id="state_edition_python">
 <a href="#state_edition_python" style="color: inherit; text-decoration: inherit;">edition</a>
@@ -1503,8 +1373,7 @@ The following state arguments are supported:
         <span class="property-type">str</span>
     </dt>
     <dd>{{% md %}}The Azure-SSIS Integration Runtime edition. Valid values are `Standard` and `Enterprise`. Defaults to `Standard`.
-{{% /md %}}</dd>
-    <dt class="property-optional"
+{{% /md %}}</dd><dt class="property-optional"
             title="Optional">
         <span id="state_license_type_python">
 <a href="#state_license_type_python" style="color: inherit; text-decoration: inherit;">license_<wbr>type</a>
@@ -1513,8 +1382,7 @@ The following state arguments are supported:
         <span class="property-type">str</span>
     </dt>
     <dd>{{% md %}}The type of the license that is used. Valid values are `LicenseIncluded` and `BasePrize`. Defaults to `LicenseIncluded`.
-{{% /md %}}</dd>
-    <dt class="property-optional"
+{{% /md %}}</dd><dt class="property-optional"
             title="Optional">
         <span id="state_location_python">
 <a href="#state_location_python" style="color: inherit; text-decoration: inherit;">location</a>
@@ -1523,8 +1391,7 @@ The following state arguments are supported:
         <span class="property-type">str</span>
     </dt>
     <dd>{{% md %}}Specifies the supported Azure location where the resource exists. Changing this forces a new resource to be created.
-{{% /md %}}</dd>
-    <dt class="property-optional"
+{{% /md %}}</dd><dt class="property-optional"
             title="Optional">
         <span id="state_max_parallel_executions_per_node_python">
 <a href="#state_max_parallel_executions_per_node_python" style="color: inherit; text-decoration: inherit;">max_<wbr>parallel_<wbr>executions_<wbr>per_<wbr>node</a>
@@ -1533,8 +1400,7 @@ The following state arguments are supported:
         <span class="property-type">int</span>
     </dt>
     <dd>{{% md %}}Defines the maximum parallel executions per node. Defaults to `1`. Max is `16`.
-{{% /md %}}</dd>
-    <dt class="property-optional"
+{{% /md %}}</dd><dt class="property-optional"
             title="Optional">
         <span id="state_name_python">
 <a href="#state_name_python" style="color: inherit; text-decoration: inherit;">name</a>
@@ -1543,8 +1409,7 @@ The following state arguments are supported:
         <span class="property-type">str</span>
     </dt>
     <dd>{{% md %}}Specifies the name of the Azure-SSIS Integration Runtime. Changing this forces a new resource to be created. Must be globally unique. See the [Microsoft documentation](https://docs.microsoft.com/en-us/azure/data-factory/naming-rules) for all restrictions.
-{{% /md %}}</dd>
-    <dt class="property-optional"
+{{% /md %}}</dd><dt class="property-optional"
             title="Optional">
         <span id="state_node_size_python">
 <a href="#state_node_size_python" style="color: inherit; text-decoration: inherit;">node_<wbr>size</a>
@@ -1553,8 +1418,7 @@ The following state arguments are supported:
         <span class="property-type">str</span>
     </dt>
     <dd>{{% md %}}The size of the nodes on which the Azure-SSIS Integration Runtime runs. Valid values are: `Standard_D2_v3`, `Standard_D4_v3`, `Standard_D8_v3`, `Standard_D16_v3`, `Standard_D32_v3`, `Standard_D64_v3`, `Standard_E2_v3`, `Standard_E4_v3`, `Standard_E8_v3`, `Standard_E16_v3`, `Standard_E32_v3`, `Standard_E64_v3`, `Standard_D1_v2`, `Standard_D2_v2`, `Standard_D3_v2`, `Standard_D4_v2`, `Standard_A4_v2` and `Standard_A8_v2`
-{{% /md %}}</dd>
-    <dt class="property-optional"
+{{% /md %}}</dd><dt class="property-optional"
             title="Optional">
         <span id="state_number_of_nodes_python">
 <a href="#state_number_of_nodes_python" style="color: inherit; text-decoration: inherit;">number_<wbr>of_<wbr>nodes</a>
@@ -1563,8 +1427,7 @@ The following state arguments are supported:
         <span class="property-type">int</span>
     </dt>
     <dd>{{% md %}}Number of nodes for the Azure-SSIS Integration Runtime. Max is `10`. Defaults to `1`.
-{{% /md %}}</dd>
-    <dt class="property-optional"
+{{% /md %}}</dd><dt class="property-optional"
             title="Optional">
         <span id="state_resource_group_name_python">
 <a href="#state_resource_group_name_python" style="color: inherit; text-decoration: inherit;">resource_<wbr>group_<wbr>name</a>
@@ -1573,8 +1436,7 @@ The following state arguments are supported:
         <span class="property-type">str</span>
     </dt>
     <dd>{{% md %}}The name of the resource group in which to create the Azure-SSIS Integration Runtime. Changing this forces a new resource to be created.
-{{% /md %}}</dd>
-    <dt class="property-optional"
+{{% /md %}}</dd><dt class="property-optional"
             title="Optional">
         <span id="state_vnet_integration_python">
 <a href="#state_vnet_integration_python" style="color: inherit; text-decoration: inherit;">vnet_<wbr>integration</a>
@@ -1583,8 +1445,7 @@ The following state arguments are supported:
         <span class="property-type"><a href="#integrationruntimessisvnetintegration">Integration<wbr>Runtime<wbr>Ssis<wbr>Vnet<wbr>Integration<wbr>Args</a></span>
     </dt>
     <dd>{{% md %}}A `vnet_integration` block as defined below.
-{{% /md %}}</dd>
-</dl>
+{{% /md %}}</dd></dl>
 {{% /choosable %}}
 
 
@@ -1599,9 +1460,7 @@ The following state arguments are supported:
 <h4 id="integrationruntimessiscataloginfo">Integration<wbr>Runtime<wbr>Ssis<wbr>Catalog<wbr>Info</h4>
 
 {{% choosable language csharp %}}
-<dl class="resources-properties">
-
-    <dt class="property-required"
+<dl class="resources-properties"><dt class="property-required"
             title="Required">
         <span id="serverendpoint_csharp">
 <a href="#serverendpoint_csharp" style="color: inherit; text-decoration: inherit;">Server<wbr>Endpoint</a>
@@ -1610,8 +1469,7 @@ The following state arguments are supported:
         <span class="property-type">string</span>
     </dt>
     <dd>{{% md %}}The endpoint of an Azure SQL Server that will be used to host the SSIS catalog.
-{{% /md %}}</dd>
-    <dt class="property-optional"
+{{% /md %}}</dd><dt class="property-optional"
             title="Optional">
         <span id="administratorlogin_csharp">
 <a href="#administratorlogin_csharp" style="color: inherit; text-decoration: inherit;">Administrator<wbr>Login</a>
@@ -1620,8 +1478,7 @@ The following state arguments are supported:
         <span class="property-type">string</span>
     </dt>
     <dd>{{% md %}}Administrator login name for the SQL Server.
-{{% /md %}}</dd>
-    <dt class="property-optional"
+{{% /md %}}</dd><dt class="property-optional"
             title="Optional">
         <span id="administratorpassword_csharp">
 <a href="#administratorpassword_csharp" style="color: inherit; text-decoration: inherit;">Administrator<wbr>Password</a>
@@ -1630,8 +1487,7 @@ The following state arguments are supported:
         <span class="property-type">string</span>
     </dt>
     <dd>{{% md %}}Administrator login password for the SQL Server.
-{{% /md %}}</dd>
-    <dt class="property-optional"
+{{% /md %}}</dd><dt class="property-optional"
             title="Optional">
         <span id="pricingtier_csharp">
 <a href="#pricingtier_csharp" style="color: inherit; text-decoration: inherit;">Pricing<wbr>Tier</a>
@@ -1640,14 +1496,11 @@ The following state arguments are supported:
         <span class="property-type">string</span>
     </dt>
     <dd>{{% md %}}Pricing tier for the database that will be created for the SSIS catalog. Valid values are: `Basic`, `Standard`, `Premium` and `PremiumRS`.
-{{% /md %}}</dd>
-</dl>
+{{% /md %}}</dd></dl>
 {{% /choosable %}}
 
 {{% choosable language go %}}
-<dl class="resources-properties">
-
-    <dt class="property-required"
+<dl class="resources-properties"><dt class="property-required"
             title="Required">
         <span id="serverendpoint_go">
 <a href="#serverendpoint_go" style="color: inherit; text-decoration: inherit;">Server<wbr>Endpoint</a>
@@ -1656,8 +1509,7 @@ The following state arguments are supported:
         <span class="property-type">string</span>
     </dt>
     <dd>{{% md %}}The endpoint of an Azure SQL Server that will be used to host the SSIS catalog.
-{{% /md %}}</dd>
-    <dt class="property-optional"
+{{% /md %}}</dd><dt class="property-optional"
             title="Optional">
         <span id="administratorlogin_go">
 <a href="#administratorlogin_go" style="color: inherit; text-decoration: inherit;">Administrator<wbr>Login</a>
@@ -1666,8 +1518,7 @@ The following state arguments are supported:
         <span class="property-type">string</span>
     </dt>
     <dd>{{% md %}}Administrator login name for the SQL Server.
-{{% /md %}}</dd>
-    <dt class="property-optional"
+{{% /md %}}</dd><dt class="property-optional"
             title="Optional">
         <span id="administratorpassword_go">
 <a href="#administratorpassword_go" style="color: inherit; text-decoration: inherit;">Administrator<wbr>Password</a>
@@ -1676,8 +1527,7 @@ The following state arguments are supported:
         <span class="property-type">string</span>
     </dt>
     <dd>{{% md %}}Administrator login password for the SQL Server.
-{{% /md %}}</dd>
-    <dt class="property-optional"
+{{% /md %}}</dd><dt class="property-optional"
             title="Optional">
         <span id="pricingtier_go">
 <a href="#pricingtier_go" style="color: inherit; text-decoration: inherit;">Pricing<wbr>Tier</a>
@@ -1686,14 +1536,11 @@ The following state arguments are supported:
         <span class="property-type">string</span>
     </dt>
     <dd>{{% md %}}Pricing tier for the database that will be created for the SSIS catalog. Valid values are: `Basic`, `Standard`, `Premium` and `PremiumRS`.
-{{% /md %}}</dd>
-</dl>
+{{% /md %}}</dd></dl>
 {{% /choosable %}}
 
 {{% choosable language nodejs %}}
-<dl class="resources-properties">
-
-    <dt class="property-required"
+<dl class="resources-properties"><dt class="property-required"
             title="Required">
         <span id="serverendpoint_nodejs">
 <a href="#serverendpoint_nodejs" style="color: inherit; text-decoration: inherit;">server<wbr>Endpoint</a>
@@ -1702,8 +1549,7 @@ The following state arguments are supported:
         <span class="property-type">string</span>
     </dt>
     <dd>{{% md %}}The endpoint of an Azure SQL Server that will be used to host the SSIS catalog.
-{{% /md %}}</dd>
-    <dt class="property-optional"
+{{% /md %}}</dd><dt class="property-optional"
             title="Optional">
         <span id="administratorlogin_nodejs">
 <a href="#administratorlogin_nodejs" style="color: inherit; text-decoration: inherit;">administrator<wbr>Login</a>
@@ -1712,8 +1558,7 @@ The following state arguments are supported:
         <span class="property-type">string</span>
     </dt>
     <dd>{{% md %}}Administrator login name for the SQL Server.
-{{% /md %}}</dd>
-    <dt class="property-optional"
+{{% /md %}}</dd><dt class="property-optional"
             title="Optional">
         <span id="administratorpassword_nodejs">
 <a href="#administratorpassword_nodejs" style="color: inherit; text-decoration: inherit;">administrator<wbr>Password</a>
@@ -1722,8 +1567,7 @@ The following state arguments are supported:
         <span class="property-type">string</span>
     </dt>
     <dd>{{% md %}}Administrator login password for the SQL Server.
-{{% /md %}}</dd>
-    <dt class="property-optional"
+{{% /md %}}</dd><dt class="property-optional"
             title="Optional">
         <span id="pricingtier_nodejs">
 <a href="#pricingtier_nodejs" style="color: inherit; text-decoration: inherit;">pricing<wbr>Tier</a>
@@ -1732,14 +1576,11 @@ The following state arguments are supported:
         <span class="property-type">string</span>
     </dt>
     <dd>{{% md %}}Pricing tier for the database that will be created for the SSIS catalog. Valid values are: `Basic`, `Standard`, `Premium` and `PremiumRS`.
-{{% /md %}}</dd>
-</dl>
+{{% /md %}}</dd></dl>
 {{% /choosable %}}
 
 {{% choosable language python %}}
-<dl class="resources-properties">
-
-    <dt class="property-required"
+<dl class="resources-properties"><dt class="property-required"
             title="Required">
         <span id="server_endpoint_python">
 <a href="#server_endpoint_python" style="color: inherit; text-decoration: inherit;">server_<wbr>endpoint</a>
@@ -1748,8 +1589,7 @@ The following state arguments are supported:
         <span class="property-type">str</span>
     </dt>
     <dd>{{% md %}}The endpoint of an Azure SQL Server that will be used to host the SSIS catalog.
-{{% /md %}}</dd>
-    <dt class="property-optional"
+{{% /md %}}</dd><dt class="property-optional"
             title="Optional">
         <span id="administrator_login_python">
 <a href="#administrator_login_python" style="color: inherit; text-decoration: inherit;">administrator_<wbr>login</a>
@@ -1758,8 +1598,7 @@ The following state arguments are supported:
         <span class="property-type">str</span>
     </dt>
     <dd>{{% md %}}Administrator login name for the SQL Server.
-{{% /md %}}</dd>
-    <dt class="property-optional"
+{{% /md %}}</dd><dt class="property-optional"
             title="Optional">
         <span id="administrator_password_python">
 <a href="#administrator_password_python" style="color: inherit; text-decoration: inherit;">administrator_<wbr>password</a>
@@ -1768,8 +1607,7 @@ The following state arguments are supported:
         <span class="property-type">str</span>
     </dt>
     <dd>{{% md %}}Administrator login password for the SQL Server.
-{{% /md %}}</dd>
-    <dt class="property-optional"
+{{% /md %}}</dd><dt class="property-optional"
             title="Optional">
         <span id="pricing_tier_python">
 <a href="#pricing_tier_python" style="color: inherit; text-decoration: inherit;">pricing_<wbr>tier</a>
@@ -1778,16 +1616,13 @@ The following state arguments are supported:
         <span class="property-type">str</span>
     </dt>
     <dd>{{% md %}}Pricing tier for the database that will be created for the SSIS catalog. Valid values are: `Basic`, `Standard`, `Premium` and `PremiumRS`.
-{{% /md %}}</dd>
-</dl>
+{{% /md %}}</dd></dl>
 {{% /choosable %}}
 
 <h4 id="integrationruntimessiscustomsetupscript">Integration<wbr>Runtime<wbr>Ssis<wbr>Custom<wbr>Setup<wbr>Script</h4>
 
 {{% choosable language csharp %}}
-<dl class="resources-properties">
-
-    <dt class="property-required"
+<dl class="resources-properties"><dt class="property-required"
             title="Required">
         <span id="blobcontaineruri_csharp">
 <a href="#blobcontaineruri_csharp" style="color: inherit; text-decoration: inherit;">Blob<wbr>Container<wbr>Uri</a>
@@ -1796,8 +1631,7 @@ The following state arguments are supported:
         <span class="property-type">string</span>
     </dt>
     <dd>{{% md %}}The blob endpoint for the container which contains a custom setup script that will be run on every node on startup. See [https://docs.microsoft.com/en-us/azure/data-factory/how-to-configure-azure-ssis-ir-custom-setup](https://docs.microsoft.com/en-us/azure/data-factory/how-to-configure-azure-ssis-ir-custom-setup) for more information.
-{{% /md %}}</dd>
-    <dt class="property-required"
+{{% /md %}}</dd><dt class="property-required"
             title="Required">
         <span id="sastoken_csharp">
 <a href="#sastoken_csharp" style="color: inherit; text-decoration: inherit;">Sas<wbr>Token</a>
@@ -1806,14 +1640,11 @@ The following state arguments are supported:
         <span class="property-type">string</span>
     </dt>
     <dd>{{% md %}}A container SAS token that gives access to the files. See [https://docs.microsoft.com/en-us/azure/data-factory/how-to-configure-azure-ssis-ir-custom-setup](https://docs.microsoft.com/en-us/azure/data-factory/how-to-configure-azure-ssis-ir-custom-setup) for more information.
-{{% /md %}}</dd>
-</dl>
+{{% /md %}}</dd></dl>
 {{% /choosable %}}
 
 {{% choosable language go %}}
-<dl class="resources-properties">
-
-    <dt class="property-required"
+<dl class="resources-properties"><dt class="property-required"
             title="Required">
         <span id="blobcontaineruri_go">
 <a href="#blobcontaineruri_go" style="color: inherit; text-decoration: inherit;">Blob<wbr>Container<wbr>Uri</a>
@@ -1822,8 +1653,7 @@ The following state arguments are supported:
         <span class="property-type">string</span>
     </dt>
     <dd>{{% md %}}The blob endpoint for the container which contains a custom setup script that will be run on every node on startup. See [https://docs.microsoft.com/en-us/azure/data-factory/how-to-configure-azure-ssis-ir-custom-setup](https://docs.microsoft.com/en-us/azure/data-factory/how-to-configure-azure-ssis-ir-custom-setup) for more information.
-{{% /md %}}</dd>
-    <dt class="property-required"
+{{% /md %}}</dd><dt class="property-required"
             title="Required">
         <span id="sastoken_go">
 <a href="#sastoken_go" style="color: inherit; text-decoration: inherit;">Sas<wbr>Token</a>
@@ -1832,14 +1662,11 @@ The following state arguments are supported:
         <span class="property-type">string</span>
     </dt>
     <dd>{{% md %}}A container SAS token that gives access to the files. See [https://docs.microsoft.com/en-us/azure/data-factory/how-to-configure-azure-ssis-ir-custom-setup](https://docs.microsoft.com/en-us/azure/data-factory/how-to-configure-azure-ssis-ir-custom-setup) for more information.
-{{% /md %}}</dd>
-</dl>
+{{% /md %}}</dd></dl>
 {{% /choosable %}}
 
 {{% choosable language nodejs %}}
-<dl class="resources-properties">
-
-    <dt class="property-required"
+<dl class="resources-properties"><dt class="property-required"
             title="Required">
         <span id="blobcontaineruri_nodejs">
 <a href="#blobcontaineruri_nodejs" style="color: inherit; text-decoration: inherit;">blob<wbr>Container<wbr>Uri</a>
@@ -1848,8 +1675,7 @@ The following state arguments are supported:
         <span class="property-type">string</span>
     </dt>
     <dd>{{% md %}}The blob endpoint for the container which contains a custom setup script that will be run on every node on startup. See [https://docs.microsoft.com/en-us/azure/data-factory/how-to-configure-azure-ssis-ir-custom-setup](https://docs.microsoft.com/en-us/azure/data-factory/how-to-configure-azure-ssis-ir-custom-setup) for more information.
-{{% /md %}}</dd>
-    <dt class="property-required"
+{{% /md %}}</dd><dt class="property-required"
             title="Required">
         <span id="sastoken_nodejs">
 <a href="#sastoken_nodejs" style="color: inherit; text-decoration: inherit;">sas<wbr>Token</a>
@@ -1858,14 +1684,11 @@ The following state arguments are supported:
         <span class="property-type">string</span>
     </dt>
     <dd>{{% md %}}A container SAS token that gives access to the files. See [https://docs.microsoft.com/en-us/azure/data-factory/how-to-configure-azure-ssis-ir-custom-setup](https://docs.microsoft.com/en-us/azure/data-factory/how-to-configure-azure-ssis-ir-custom-setup) for more information.
-{{% /md %}}</dd>
-</dl>
+{{% /md %}}</dd></dl>
 {{% /choosable %}}
 
 {{% choosable language python %}}
-<dl class="resources-properties">
-
-    <dt class="property-required"
+<dl class="resources-properties"><dt class="property-required"
             title="Required">
         <span id="blob_container_uri_python">
 <a href="#blob_container_uri_python" style="color: inherit; text-decoration: inherit;">blob_<wbr>container_<wbr>uri</a>
@@ -1874,8 +1697,7 @@ The following state arguments are supported:
         <span class="property-type">str</span>
     </dt>
     <dd>{{% md %}}The blob endpoint for the container which contains a custom setup script that will be run on every node on startup. See [https://docs.microsoft.com/en-us/azure/data-factory/how-to-configure-azure-ssis-ir-custom-setup](https://docs.microsoft.com/en-us/azure/data-factory/how-to-configure-azure-ssis-ir-custom-setup) for more information.
-{{% /md %}}</dd>
-    <dt class="property-required"
+{{% /md %}}</dd><dt class="property-required"
             title="Required">
         <span id="sas_token_python">
 <a href="#sas_token_python" style="color: inherit; text-decoration: inherit;">sas_<wbr>token</a>
@@ -1884,16 +1706,13 @@ The following state arguments are supported:
         <span class="property-type">str</span>
     </dt>
     <dd>{{% md %}}A container SAS token that gives access to the files. See [https://docs.microsoft.com/en-us/azure/data-factory/how-to-configure-azure-ssis-ir-custom-setup](https://docs.microsoft.com/en-us/azure/data-factory/how-to-configure-azure-ssis-ir-custom-setup) for more information.
-{{% /md %}}</dd>
-</dl>
+{{% /md %}}</dd></dl>
 {{% /choosable %}}
 
 <h4 id="integrationruntimessisvnetintegration">Integration<wbr>Runtime<wbr>Ssis<wbr>Vnet<wbr>Integration</h4>
 
 {{% choosable language csharp %}}
-<dl class="resources-properties">
-
-    <dt class="property-required"
+<dl class="resources-properties"><dt class="property-required"
             title="Required">
         <span id="subnetname_csharp">
 <a href="#subnetname_csharp" style="color: inherit; text-decoration: inherit;">Subnet<wbr>Name</a>
@@ -1902,8 +1721,7 @@ The following state arguments are supported:
         <span class="property-type">string</span>
     </dt>
     <dd>{{% md %}}Name of the subnet to which the nodes of the Azure-SSIS Integration Runtime will be added.
-{{% /md %}}</dd>
-    <dt class="property-required"
+{{% /md %}}</dd><dt class="property-required"
             title="Required">
         <span id="vnetid_csharp">
 <a href="#vnetid_csharp" style="color: inherit; text-decoration: inherit;">Vnet<wbr>Id</a>
@@ -1912,14 +1730,11 @@ The following state arguments are supported:
         <span class="property-type">string</span>
     </dt>
     <dd>{{% md %}}ID of the virtual network to which the nodes of the Azure-SSIS Integration Runtime will be added.
-{{% /md %}}</dd>
-</dl>
+{{% /md %}}</dd></dl>
 {{% /choosable %}}
 
 {{% choosable language go %}}
-<dl class="resources-properties">
-
-    <dt class="property-required"
+<dl class="resources-properties"><dt class="property-required"
             title="Required">
         <span id="subnetname_go">
 <a href="#subnetname_go" style="color: inherit; text-decoration: inherit;">Subnet<wbr>Name</a>
@@ -1928,8 +1743,7 @@ The following state arguments are supported:
         <span class="property-type">string</span>
     </dt>
     <dd>{{% md %}}Name of the subnet to which the nodes of the Azure-SSIS Integration Runtime will be added.
-{{% /md %}}</dd>
-    <dt class="property-required"
+{{% /md %}}</dd><dt class="property-required"
             title="Required">
         <span id="vnetid_go">
 <a href="#vnetid_go" style="color: inherit; text-decoration: inherit;">Vnet<wbr>Id</a>
@@ -1938,14 +1752,11 @@ The following state arguments are supported:
         <span class="property-type">string</span>
     </dt>
     <dd>{{% md %}}ID of the virtual network to which the nodes of the Azure-SSIS Integration Runtime will be added.
-{{% /md %}}</dd>
-</dl>
+{{% /md %}}</dd></dl>
 {{% /choosable %}}
 
 {{% choosable language nodejs %}}
-<dl class="resources-properties">
-
-    <dt class="property-required"
+<dl class="resources-properties"><dt class="property-required"
             title="Required">
         <span id="subnetname_nodejs">
 <a href="#subnetname_nodejs" style="color: inherit; text-decoration: inherit;">subnet<wbr>Name</a>
@@ -1954,8 +1765,7 @@ The following state arguments are supported:
         <span class="property-type">string</span>
     </dt>
     <dd>{{% md %}}Name of the subnet to which the nodes of the Azure-SSIS Integration Runtime will be added.
-{{% /md %}}</dd>
-    <dt class="property-required"
+{{% /md %}}</dd><dt class="property-required"
             title="Required">
         <span id="vnetid_nodejs">
 <a href="#vnetid_nodejs" style="color: inherit; text-decoration: inherit;">vnet<wbr>Id</a>
@@ -1964,14 +1774,11 @@ The following state arguments are supported:
         <span class="property-type">string</span>
     </dt>
     <dd>{{% md %}}ID of the virtual network to which the nodes of the Azure-SSIS Integration Runtime will be added.
-{{% /md %}}</dd>
-</dl>
+{{% /md %}}</dd></dl>
 {{% /choosable %}}
 
 {{% choosable language python %}}
-<dl class="resources-properties">
-
-    <dt class="property-required"
+<dl class="resources-properties"><dt class="property-required"
             title="Required">
         <span id="subnet_name_python">
 <a href="#subnet_name_python" style="color: inherit; text-decoration: inherit;">subnet_<wbr>name</a>
@@ -1980,8 +1787,7 @@ The following state arguments are supported:
         <span class="property-type">str</span>
     </dt>
     <dd>{{% md %}}Name of the subnet to which the nodes of the Azure-SSIS Integration Runtime will be added.
-{{% /md %}}</dd>
-    <dt class="property-required"
+{{% /md %}}</dd><dt class="property-required"
             title="Required">
         <span id="vnet_id_python">
 <a href="#vnet_id_python" style="color: inherit; text-decoration: inherit;">vnet_<wbr>id</a>
@@ -1990,8 +1796,7 @@ The following state arguments are supported:
         <span class="property-type">str</span>
     </dt>
     <dd>{{% md %}}ID of the virtual network to which the nodes of the Azure-SSIS Integration Runtime will be added.
-{{% /md %}}</dd>
-</dl>
+{{% /md %}}</dd></dl>
 {{% /choosable %}}
 ## Import
 
@@ -2012,6 +1817,6 @@ Data Factory Azure-SSIS Integration Runtimes can be imported using the `resource
 	<dt>License</dt>
 	<dd>Apache-2.0</dd>
 	<dt>Notes</dt>
-	<dd>This Pulumi package is based on the [`azurerm` Terraform Provider](https://github.com/terraform-providers/terraform-provider-azurerm).</dd>
+	<dd>{{% md %}}This Pulumi package is based on the [`azurerm` Terraform Provider](https://github.com/terraform-providers/terraform-provider-azurerm).{{% /md %}}</dd>
 </dl>
 

@@ -14,11 +14,17 @@ The health alert resource.
 API Version: 2020-08-04-preview.
 
 {{% examples %}}
+
 ## Example Usage
 
 {{< chooser language "typescript,python,go,csharp" / >}}
+
+
 ### CreateResourceHealthAlertRule
-{{% example csharp %}}
+
+
+{{< example csharp >}}
+
 ```csharp
 using Pulumi;
 using AzureNative = Pulumi.AzureNative;
@@ -82,9 +88,12 @@ class MyStack : Stack
 
 ```
 
-{{% /example %}}
 
-{{% example go %}}
+{{< /example >}}
+
+
+{{< example go >}}
+
 
 ```go
 package main
@@ -142,9 +151,12 @@ func main() {
 
 ```
 
-{{% /example %}}
 
-{{% example python %}}
+{{< /example >}}
+
+
+{{< example python >}}
+
 
 ```python
 import pulumi
@@ -181,9 +193,12 @@ health_alert = azure_native.alertsmanagement.HealthAlert("healthAlert",
 
 ```
 
-{{% /example %}}
 
-{{% example typescript %}}
+{{< /example >}}
+
+
+{{< example typescript >}}
+
 
 ```typescript
 import * as pulumi from "@pulumi/pulumi";
@@ -221,9 +236,16 @@ const healthAlert = new azure_native.alertsmanagement.HealthAlert("healthAlert",
 
 ```
 
-{{% /example %}}
+
+{{< /example >}}
+
+
+
+
 
 {{% /examples %}}
+
+
 
 
 ## Create a HealthAlert Resource {#create}
@@ -248,9 +270,7 @@ const healthAlert = new azure_native.alertsmanagement.HealthAlert("healthAlert",
 
 {{% choosable language nodejs %}}
 
-<dl class="resources-properties">
-  
-    <dt
+<dl class="resources-properties"><dt
         class="property-required" title="Required">
         <span>name</span>
         <span class="property-indicator"></span>
@@ -258,9 +278,7 @@ const healthAlert = new azure_native.alertsmanagement.HealthAlert("healthAlert",
     </dt>
     <dd>
       The unique name of the resource.
-    </dd>
-  
-    <dt
+    </dd><dt
         class="property-required" title="Required">
         <span>args</span>
         <span class="property-indicator"></span>
@@ -268,9 +286,7 @@ const healthAlert = new azure_native.alertsmanagement.HealthAlert("healthAlert",
     </dt>
     <dd>
       The arguments to resource properties.
-    </dd>
-  
-    <dt
+    </dd><dt
         class="property-optional" title="Optional">
         <span>opts</span>
         <span class="property-indicator"></span>
@@ -278,10 +294,7 @@ const healthAlert = new azure_native.alertsmanagement.HealthAlert("healthAlert",
     </dt>
     <dd>
       Bag of options to control resource&#39;s behavior.
-    </dd>
-  
-
-</dl>
+    </dd></dl>
 
 {{% /choosable %}}
 
@@ -307,9 +320,7 @@ const healthAlert = new azure_native.alertsmanagement.HealthAlert("healthAlert",
 
 {{% choosable language go %}}
 
-<dl class="resources-properties">
-  
-    <dt
+<dl class="resources-properties"><dt
         class="property-optional" title="Optional">
         <span>ctx</span>
         <span class="property-indicator"></span>
@@ -317,9 +328,7 @@ const healthAlert = new azure_native.alertsmanagement.HealthAlert("healthAlert",
     </dt>
     <dd>
       Context object for the current deployment.
-    </dd>
-  
-    <dt
+    </dd><dt
         class="property-required" title="Required">
         <span>name</span>
         <span class="property-indicator"></span>
@@ -327,9 +336,7 @@ const healthAlert = new azure_native.alertsmanagement.HealthAlert("healthAlert",
     </dt>
     <dd>
       The unique name of the resource.
-    </dd>
-  
-    <dt
+    </dd><dt
         class="property-required" title="Required">
         <span>args</span>
         <span class="property-indicator"></span>
@@ -337,9 +344,7 @@ const healthAlert = new azure_native.alertsmanagement.HealthAlert("healthAlert",
     </dt>
     <dd>
       The arguments to resource properties.
-    </dd>
-  
-    <dt
+    </dd><dt
         class="property-optional" title="Optional">
         <span>opts</span>
         <span class="property-indicator"></span>
@@ -347,18 +352,13 @@ const healthAlert = new azure_native.alertsmanagement.HealthAlert("healthAlert",
     </dt>
     <dd>
       Bag of options to control resource&#39;s behavior.
-    </dd>
-  
-
-</dl>
+    </dd></dl>
 
 {{% /choosable %}}
 
 {{% choosable language csharp %}}
 
-<dl class="resources-properties">
-  
-    <dt
+<dl class="resources-properties"><dt
         class="property-required" title="Required">
         <span>name</span>
         <span class="property-indicator"></span>
@@ -366,9 +366,7 @@ const healthAlert = new azure_native.alertsmanagement.HealthAlert("healthAlert",
     </dt>
     <dd>
       The unique name of the resource.
-    </dd>
-  
-    <dt
+    </dd><dt
         class="property-required" title="Required">
         <span>args</span>
         <span class="property-indicator"></span>
@@ -376,9 +374,7 @@ const healthAlert = new azure_native.alertsmanagement.HealthAlert("healthAlert",
     </dt>
     <dd>
       The arguments to resource properties.
-    </dd>
-  
-    <dt
+    </dd><dt
         class="property-optional" title="Optional">
         <span>opts</span>
         <span class="property-indicator"></span>
@@ -386,10 +382,7 @@ const healthAlert = new azure_native.alertsmanagement.HealthAlert("healthAlert",
     </dt>
     <dd>
       Bag of options to control resource&#39;s behavior.
-    </dd>
-  
-
-</dl>
+    </dd></dl>
 
 {{% /choosable %}}
 
@@ -404,9 +397,7 @@ The HealthAlert resource accepts the following [input]({{< relref "/docs/intro/c
 
 
 {{% choosable language csharp %}}
-<dl class="resources-properties">
-
-    <dt class="property-required"
+<dl class="resources-properties"><dt class="property-required"
             title="Required">
         <span id="criteria_csharp">
 <a href="#criteria_csharp" style="color: inherit; text-decoration: inherit;">Criteria</a>
@@ -414,8 +405,7 @@ The HealthAlert resource accepts the following [input]({{< relref "/docs/intro/c
         <span class="property-indicator"></span>
         <span class="property-type"><a href="#healthalertcriteria">Pulumi.<wbr>Azure<wbr>Native.<wbr>Alerts<wbr>Management.<wbr>Inputs.<wbr>Health<wbr>Alert<wbr>Criteria<wbr>Args</a></span>
     </dt>
-    <dd>{{% md %}}defines the specific alert criteria information.{{% /md %}}</dd>
-    <dt class="property-required"
+    <dd>{{% md %}}defines the specific alert criteria information.{{% /md %}}</dd><dt class="property-required"
             title="Required">
         <span id="description_csharp">
 <a href="#description_csharp" style="color: inherit; text-decoration: inherit;">Description</a>
@@ -423,8 +413,7 @@ The HealthAlert resource accepts the following [input]({{< relref "/docs/intro/c
         <span class="property-indicator"></span>
         <span class="property-type">string</span>
     </dt>
-    <dd>{{% md %}}the description of the health alert that will be included in the alert email.{{% /md %}}</dd>
-    <dt class="property-required"
+    <dd>{{% md %}}the description of the health alert that will be included in the alert email.{{% /md %}}</dd><dt class="property-required"
             title="Required">
         <span id="enabled_csharp">
 <a href="#enabled_csharp" style="color: inherit; text-decoration: inherit;">Enabled</a>
@@ -432,8 +421,7 @@ The HealthAlert resource accepts the following [input]({{< relref "/docs/intro/c
         <span class="property-indicator"></span>
         <span class="property-type">bool</span>
     </dt>
-    <dd>{{% md %}}the flag that indicates whether the health alert is enabled.{{% /md %}}</dd>
-    <dt class="property-required"
+    <dd>{{% md %}}the flag that indicates whether the health alert is enabled.{{% /md %}}</dd><dt class="property-required"
             title="Required">
         <span id="resourcegroupname_csharp">
 <a href="#resourcegroupname_csharp" style="color: inherit; text-decoration: inherit;">Resource<wbr>Group<wbr>Name</a>
@@ -441,8 +429,7 @@ The HealthAlert resource accepts the following [input]({{< relref "/docs/intro/c
         <span class="property-indicator"></span>
         <span class="property-type">string</span>
     </dt>
-    <dd>{{% md %}}The name of the resource group.{{% /md %}}</dd>
-    <dt class="property-optional"
+    <dd>{{% md %}}The name of the resource group.{{% /md %}}</dd><dt class="property-optional"
             title="Optional">
         <span id="actions_csharp">
 <a href="#actions_csharp" style="color: inherit; text-decoration: inherit;">Actions</a>
@@ -450,8 +437,7 @@ The HealthAlert resource accepts the following [input]({{< relref "/docs/intro/c
         <span class="property-indicator"></span>
         <span class="property-type"><a href="#healthalertaction">List&lt;Pulumi.<wbr>Azure<wbr>Native.<wbr>Alerts<wbr>Management.<wbr>Inputs.<wbr>Health<wbr>Alert<wbr>Action<wbr>Args&gt;</a></span>
     </dt>
-    <dd>{{% md %}}the array of actions that are performed when the alert rule becomes active, and when an alert condition is resolved.{{% /md %}}</dd>
-    <dt class="property-optional"
+    <dd>{{% md %}}the array of actions that are performed when the alert rule becomes active, and when an alert condition is resolved.{{% /md %}}</dd><dt class="property-optional"
             title="Optional">
         <span id="location_csharp">
 <a href="#location_csharp" style="color: inherit; text-decoration: inherit;">Location</a>
@@ -459,8 +445,7 @@ The HealthAlert resource accepts the following [input]({{< relref "/docs/intro/c
         <span class="property-indicator"></span>
         <span class="property-type">string</span>
     </dt>
-    <dd>{{% md %}}Resource location{{% /md %}}</dd>
-    <dt class="property-optional"
+    <dd>{{% md %}}Resource location{{% /md %}}</dd><dt class="property-optional"
             title="Optional">
         <span id="rulename_csharp">
 <a href="#rulename_csharp" style="color: inherit; text-decoration: inherit;">Rule<wbr>Name</a>
@@ -468,8 +453,7 @@ The HealthAlert resource accepts the following [input]({{< relref "/docs/intro/c
         <span class="property-indicator"></span>
         <span class="property-type">string</span>
     </dt>
-    <dd>{{% md %}}The name of the rule.{{% /md %}}</dd>
-    <dt class="property-optional"
+    <dd>{{% md %}}The name of the rule.{{% /md %}}</dd><dt class="property-optional"
             title="Optional">
         <span id="scopes_csharp">
 <a href="#scopes_csharp" style="color: inherit; text-decoration: inherit;">Scopes</a>
@@ -477,8 +461,7 @@ The HealthAlert resource accepts the following [input]({{< relref "/docs/intro/c
         <span class="property-indicator"></span>
         <span class="property-type">List&lt;string&gt;</span>
     </dt>
-    <dd>{{% md %}}the list of resource id's that this health alert is scoped to.{{% /md %}}</dd>
-    <dt class="property-optional"
+    <dd>{{% md %}}the list of resource id's that this health alert is scoped to.{{% /md %}}</dd><dt class="property-optional"
             title="Optional">
         <span id="tags_csharp">
 <a href="#tags_csharp" style="color: inherit; text-decoration: inherit;">Tags</a>
@@ -486,14 +469,11 @@ The HealthAlert resource accepts the following [input]({{< relref "/docs/intro/c
         <span class="property-indicator"></span>
         <span class="property-type">Dictionary&lt;string, string&gt;</span>
     </dt>
-    <dd>{{% md %}}Resource tags{{% /md %}}</dd>
-</dl>
+    <dd>{{% md %}}Resource tags{{% /md %}}</dd></dl>
 {{% /choosable %}}
 
 {{% choosable language go %}}
-<dl class="resources-properties">
-
-    <dt class="property-required"
+<dl class="resources-properties"><dt class="property-required"
             title="Required">
         <span id="criteria_go">
 <a href="#criteria_go" style="color: inherit; text-decoration: inherit;">Criteria</a>
@@ -501,8 +481,7 @@ The HealthAlert resource accepts the following [input]({{< relref "/docs/intro/c
         <span class="property-indicator"></span>
         <span class="property-type"><a href="#healthalertcriteria">Health<wbr>Alert<wbr>Criteria</a></span>
     </dt>
-    <dd>{{% md %}}defines the specific alert criteria information.{{% /md %}}</dd>
-    <dt class="property-required"
+    <dd>{{% md %}}defines the specific alert criteria information.{{% /md %}}</dd><dt class="property-required"
             title="Required">
         <span id="description_go">
 <a href="#description_go" style="color: inherit; text-decoration: inherit;">Description</a>
@@ -510,8 +489,7 @@ The HealthAlert resource accepts the following [input]({{< relref "/docs/intro/c
         <span class="property-indicator"></span>
         <span class="property-type">string</span>
     </dt>
-    <dd>{{% md %}}the description of the health alert that will be included in the alert email.{{% /md %}}</dd>
-    <dt class="property-required"
+    <dd>{{% md %}}the description of the health alert that will be included in the alert email.{{% /md %}}</dd><dt class="property-required"
             title="Required">
         <span id="enabled_go">
 <a href="#enabled_go" style="color: inherit; text-decoration: inherit;">Enabled</a>
@@ -519,8 +497,7 @@ The HealthAlert resource accepts the following [input]({{< relref "/docs/intro/c
         <span class="property-indicator"></span>
         <span class="property-type">bool</span>
     </dt>
-    <dd>{{% md %}}the flag that indicates whether the health alert is enabled.{{% /md %}}</dd>
-    <dt class="property-required"
+    <dd>{{% md %}}the flag that indicates whether the health alert is enabled.{{% /md %}}</dd><dt class="property-required"
             title="Required">
         <span id="resourcegroupname_go">
 <a href="#resourcegroupname_go" style="color: inherit; text-decoration: inherit;">Resource<wbr>Group<wbr>Name</a>
@@ -528,8 +505,7 @@ The HealthAlert resource accepts the following [input]({{< relref "/docs/intro/c
         <span class="property-indicator"></span>
         <span class="property-type">string</span>
     </dt>
-    <dd>{{% md %}}The name of the resource group.{{% /md %}}</dd>
-    <dt class="property-optional"
+    <dd>{{% md %}}The name of the resource group.{{% /md %}}</dd><dt class="property-optional"
             title="Optional">
         <span id="actions_go">
 <a href="#actions_go" style="color: inherit; text-decoration: inherit;">Actions</a>
@@ -537,8 +513,7 @@ The HealthAlert resource accepts the following [input]({{< relref "/docs/intro/c
         <span class="property-indicator"></span>
         <span class="property-type"><a href="#healthalertaction">[]Health<wbr>Alert<wbr>Action</a></span>
     </dt>
-    <dd>{{% md %}}the array of actions that are performed when the alert rule becomes active, and when an alert condition is resolved.{{% /md %}}</dd>
-    <dt class="property-optional"
+    <dd>{{% md %}}the array of actions that are performed when the alert rule becomes active, and when an alert condition is resolved.{{% /md %}}</dd><dt class="property-optional"
             title="Optional">
         <span id="location_go">
 <a href="#location_go" style="color: inherit; text-decoration: inherit;">Location</a>
@@ -546,8 +521,7 @@ The HealthAlert resource accepts the following [input]({{< relref "/docs/intro/c
         <span class="property-indicator"></span>
         <span class="property-type">string</span>
     </dt>
-    <dd>{{% md %}}Resource location{{% /md %}}</dd>
-    <dt class="property-optional"
+    <dd>{{% md %}}Resource location{{% /md %}}</dd><dt class="property-optional"
             title="Optional">
         <span id="rulename_go">
 <a href="#rulename_go" style="color: inherit; text-decoration: inherit;">Rule<wbr>Name</a>
@@ -555,8 +529,7 @@ The HealthAlert resource accepts the following [input]({{< relref "/docs/intro/c
         <span class="property-indicator"></span>
         <span class="property-type">string</span>
     </dt>
-    <dd>{{% md %}}The name of the rule.{{% /md %}}</dd>
-    <dt class="property-optional"
+    <dd>{{% md %}}The name of the rule.{{% /md %}}</dd><dt class="property-optional"
             title="Optional">
         <span id="scopes_go">
 <a href="#scopes_go" style="color: inherit; text-decoration: inherit;">Scopes</a>
@@ -564,8 +537,7 @@ The HealthAlert resource accepts the following [input]({{< relref "/docs/intro/c
         <span class="property-indicator"></span>
         <span class="property-type">[]string</span>
     </dt>
-    <dd>{{% md %}}the list of resource id's that this health alert is scoped to.{{% /md %}}</dd>
-    <dt class="property-optional"
+    <dd>{{% md %}}the list of resource id's that this health alert is scoped to.{{% /md %}}</dd><dt class="property-optional"
             title="Optional">
         <span id="tags_go">
 <a href="#tags_go" style="color: inherit; text-decoration: inherit;">Tags</a>
@@ -573,14 +545,11 @@ The HealthAlert resource accepts the following [input]({{< relref "/docs/intro/c
         <span class="property-indicator"></span>
         <span class="property-type">map[string]string</span>
     </dt>
-    <dd>{{% md %}}Resource tags{{% /md %}}</dd>
-</dl>
+    <dd>{{% md %}}Resource tags{{% /md %}}</dd></dl>
 {{% /choosable %}}
 
 {{% choosable language nodejs %}}
-<dl class="resources-properties">
-
-    <dt class="property-required"
+<dl class="resources-properties"><dt class="property-required"
             title="Required">
         <span id="criteria_nodejs">
 <a href="#criteria_nodejs" style="color: inherit; text-decoration: inherit;">criteria</a>
@@ -588,8 +557,7 @@ The HealthAlert resource accepts the following [input]({{< relref "/docs/intro/c
         <span class="property-indicator"></span>
         <span class="property-type"><a href="#healthalertcriteria">Health<wbr>Alert<wbr>Criteria</a></span>
     </dt>
-    <dd>{{% md %}}defines the specific alert criteria information.{{% /md %}}</dd>
-    <dt class="property-required"
+    <dd>{{% md %}}defines the specific alert criteria information.{{% /md %}}</dd><dt class="property-required"
             title="Required">
         <span id="description_nodejs">
 <a href="#description_nodejs" style="color: inherit; text-decoration: inherit;">description</a>
@@ -597,8 +565,7 @@ The HealthAlert resource accepts the following [input]({{< relref "/docs/intro/c
         <span class="property-indicator"></span>
         <span class="property-type">string</span>
     </dt>
-    <dd>{{% md %}}the description of the health alert that will be included in the alert email.{{% /md %}}</dd>
-    <dt class="property-required"
+    <dd>{{% md %}}the description of the health alert that will be included in the alert email.{{% /md %}}</dd><dt class="property-required"
             title="Required">
         <span id="enabled_nodejs">
 <a href="#enabled_nodejs" style="color: inherit; text-decoration: inherit;">enabled</a>
@@ -606,8 +573,7 @@ The HealthAlert resource accepts the following [input]({{< relref "/docs/intro/c
         <span class="property-indicator"></span>
         <span class="property-type">boolean</span>
     </dt>
-    <dd>{{% md %}}the flag that indicates whether the health alert is enabled.{{% /md %}}</dd>
-    <dt class="property-required"
+    <dd>{{% md %}}the flag that indicates whether the health alert is enabled.{{% /md %}}</dd><dt class="property-required"
             title="Required">
         <span id="resourcegroupname_nodejs">
 <a href="#resourcegroupname_nodejs" style="color: inherit; text-decoration: inherit;">resource<wbr>Group<wbr>Name</a>
@@ -615,8 +581,7 @@ The HealthAlert resource accepts the following [input]({{< relref "/docs/intro/c
         <span class="property-indicator"></span>
         <span class="property-type">string</span>
     </dt>
-    <dd>{{% md %}}The name of the resource group.{{% /md %}}</dd>
-    <dt class="property-optional"
+    <dd>{{% md %}}The name of the resource group.{{% /md %}}</dd><dt class="property-optional"
             title="Optional">
         <span id="actions_nodejs">
 <a href="#actions_nodejs" style="color: inherit; text-decoration: inherit;">actions</a>
@@ -624,8 +589,7 @@ The HealthAlert resource accepts the following [input]({{< relref "/docs/intro/c
         <span class="property-indicator"></span>
         <span class="property-type"><a href="#healthalertaction">Health<wbr>Alert<wbr>Action[]</a></span>
     </dt>
-    <dd>{{% md %}}the array of actions that are performed when the alert rule becomes active, and when an alert condition is resolved.{{% /md %}}</dd>
-    <dt class="property-optional"
+    <dd>{{% md %}}the array of actions that are performed when the alert rule becomes active, and when an alert condition is resolved.{{% /md %}}</dd><dt class="property-optional"
             title="Optional">
         <span id="location_nodejs">
 <a href="#location_nodejs" style="color: inherit; text-decoration: inherit;">location</a>
@@ -633,8 +597,7 @@ The HealthAlert resource accepts the following [input]({{< relref "/docs/intro/c
         <span class="property-indicator"></span>
         <span class="property-type">string</span>
     </dt>
-    <dd>{{% md %}}Resource location{{% /md %}}</dd>
-    <dt class="property-optional"
+    <dd>{{% md %}}Resource location{{% /md %}}</dd><dt class="property-optional"
             title="Optional">
         <span id="rulename_nodejs">
 <a href="#rulename_nodejs" style="color: inherit; text-decoration: inherit;">rule<wbr>Name</a>
@@ -642,8 +605,7 @@ The HealthAlert resource accepts the following [input]({{< relref "/docs/intro/c
         <span class="property-indicator"></span>
         <span class="property-type">string</span>
     </dt>
-    <dd>{{% md %}}The name of the rule.{{% /md %}}</dd>
-    <dt class="property-optional"
+    <dd>{{% md %}}The name of the rule.{{% /md %}}</dd><dt class="property-optional"
             title="Optional">
         <span id="scopes_nodejs">
 <a href="#scopes_nodejs" style="color: inherit; text-decoration: inherit;">scopes</a>
@@ -651,8 +613,7 @@ The HealthAlert resource accepts the following [input]({{< relref "/docs/intro/c
         <span class="property-indicator"></span>
         <span class="property-type">string[]</span>
     </dt>
-    <dd>{{% md %}}the list of resource id's that this health alert is scoped to.{{% /md %}}</dd>
-    <dt class="property-optional"
+    <dd>{{% md %}}the list of resource id's that this health alert is scoped to.{{% /md %}}</dd><dt class="property-optional"
             title="Optional">
         <span id="tags_nodejs">
 <a href="#tags_nodejs" style="color: inherit; text-decoration: inherit;">tags</a>
@@ -660,14 +621,11 @@ The HealthAlert resource accepts the following [input]({{< relref "/docs/intro/c
         <span class="property-indicator"></span>
         <span class="property-type">{[key: string]: string}</span>
     </dt>
-    <dd>{{% md %}}Resource tags{{% /md %}}</dd>
-</dl>
+    <dd>{{% md %}}Resource tags{{% /md %}}</dd></dl>
 {{% /choosable %}}
 
 {{% choosable language python %}}
-<dl class="resources-properties">
-
-    <dt class="property-required"
+<dl class="resources-properties"><dt class="property-required"
             title="Required">
         <span id="criteria_python">
 <a href="#criteria_python" style="color: inherit; text-decoration: inherit;">criteria</a>
@@ -675,8 +633,7 @@ The HealthAlert resource accepts the following [input]({{< relref "/docs/intro/c
         <span class="property-indicator"></span>
         <span class="property-type"><a href="#healthalertcriteria">Health<wbr>Alert<wbr>Criteria<wbr>Args</a></span>
     </dt>
-    <dd>{{% md %}}defines the specific alert criteria information.{{% /md %}}</dd>
-    <dt class="property-required"
+    <dd>{{% md %}}defines the specific alert criteria information.{{% /md %}}</dd><dt class="property-required"
             title="Required">
         <span id="description_python">
 <a href="#description_python" style="color: inherit; text-decoration: inherit;">description</a>
@@ -684,8 +641,7 @@ The HealthAlert resource accepts the following [input]({{< relref "/docs/intro/c
         <span class="property-indicator"></span>
         <span class="property-type">str</span>
     </dt>
-    <dd>{{% md %}}the description of the health alert that will be included in the alert email.{{% /md %}}</dd>
-    <dt class="property-required"
+    <dd>{{% md %}}the description of the health alert that will be included in the alert email.{{% /md %}}</dd><dt class="property-required"
             title="Required">
         <span id="enabled_python">
 <a href="#enabled_python" style="color: inherit; text-decoration: inherit;">enabled</a>
@@ -693,8 +649,7 @@ The HealthAlert resource accepts the following [input]({{< relref "/docs/intro/c
         <span class="property-indicator"></span>
         <span class="property-type">bool</span>
     </dt>
-    <dd>{{% md %}}the flag that indicates whether the health alert is enabled.{{% /md %}}</dd>
-    <dt class="property-required"
+    <dd>{{% md %}}the flag that indicates whether the health alert is enabled.{{% /md %}}</dd><dt class="property-required"
             title="Required">
         <span id="resource_group_name_python">
 <a href="#resource_group_name_python" style="color: inherit; text-decoration: inherit;">resource_<wbr>group_<wbr>name</a>
@@ -702,8 +657,7 @@ The HealthAlert resource accepts the following [input]({{< relref "/docs/intro/c
         <span class="property-indicator"></span>
         <span class="property-type">str</span>
     </dt>
-    <dd>{{% md %}}The name of the resource group.{{% /md %}}</dd>
-    <dt class="property-optional"
+    <dd>{{% md %}}The name of the resource group.{{% /md %}}</dd><dt class="property-optional"
             title="Optional">
         <span id="actions_python">
 <a href="#actions_python" style="color: inherit; text-decoration: inherit;">actions</a>
@@ -711,8 +665,7 @@ The HealthAlert resource accepts the following [input]({{< relref "/docs/intro/c
         <span class="property-indicator"></span>
         <span class="property-type"><a href="#healthalertaction">Sequence[Health<wbr>Alert<wbr>Action<wbr>Args]</a></span>
     </dt>
-    <dd>{{% md %}}the array of actions that are performed when the alert rule becomes active, and when an alert condition is resolved.{{% /md %}}</dd>
-    <dt class="property-optional"
+    <dd>{{% md %}}the array of actions that are performed when the alert rule becomes active, and when an alert condition is resolved.{{% /md %}}</dd><dt class="property-optional"
             title="Optional">
         <span id="location_python">
 <a href="#location_python" style="color: inherit; text-decoration: inherit;">location</a>
@@ -720,8 +673,7 @@ The HealthAlert resource accepts the following [input]({{< relref "/docs/intro/c
         <span class="property-indicator"></span>
         <span class="property-type">str</span>
     </dt>
-    <dd>{{% md %}}Resource location{{% /md %}}</dd>
-    <dt class="property-optional"
+    <dd>{{% md %}}Resource location{{% /md %}}</dd><dt class="property-optional"
             title="Optional">
         <span id="rule_name_python">
 <a href="#rule_name_python" style="color: inherit; text-decoration: inherit;">rule_<wbr>name</a>
@@ -729,8 +681,7 @@ The HealthAlert resource accepts the following [input]({{< relref "/docs/intro/c
         <span class="property-indicator"></span>
         <span class="property-type">str</span>
     </dt>
-    <dd>{{% md %}}The name of the rule.{{% /md %}}</dd>
-    <dt class="property-optional"
+    <dd>{{% md %}}The name of the rule.{{% /md %}}</dd><dt class="property-optional"
             title="Optional">
         <span id="scopes_python">
 <a href="#scopes_python" style="color: inherit; text-decoration: inherit;">scopes</a>
@@ -738,8 +689,7 @@ The HealthAlert resource accepts the following [input]({{< relref "/docs/intro/c
         <span class="property-indicator"></span>
         <span class="property-type">Sequence[str]</span>
     </dt>
-    <dd>{{% md %}}the list of resource id's that this health alert is scoped to.{{% /md %}}</dd>
-    <dt class="property-optional"
+    <dd>{{% md %}}the list of resource id's that this health alert is scoped to.{{% /md %}}</dd><dt class="property-optional"
             title="Optional">
         <span id="tags_python">
 <a href="#tags_python" style="color: inherit; text-decoration: inherit;">tags</a>
@@ -747,8 +697,7 @@ The HealthAlert resource accepts the following [input]({{< relref "/docs/intro/c
         <span class="property-indicator"></span>
         <span class="property-type">Mapping[str, str]</span>
     </dt>
-    <dd>{{% md %}}Resource tags{{% /md %}}</dd>
-</dl>
+    <dd>{{% md %}}Resource tags{{% /md %}}</dd></dl>
 {{% /choosable %}}
 
 
@@ -759,9 +708,7 @@ All [input](#inputs) properties are implicitly available as output properties. A
 
 
 {{% choosable language csharp %}}
-<dl class="resources-properties">
-
-    <dt class="property-"
+<dl class="resources-properties"><dt class="property-"
             title="">
         <span id="id_csharp">
 <a href="#id_csharp" style="color: inherit; text-decoration: inherit;">Id</a>
@@ -769,8 +716,7 @@ All [input](#inputs) properties are implicitly available as output properties. A
         <span class="property-indicator"></span>
         <span class="property-type">string</span>
     </dt>
-    <dd>{{% md %}}The provider-assigned unique ID for this managed resource.{{% /md %}}</dd>
-    <dt class="property-"
+    <dd>{{% md %}}The provider-assigned unique ID for this managed resource.{{% /md %}}</dd><dt class="property-"
             title="">
         <span id="lastupdatedtime_csharp">
 <a href="#lastupdatedtime_csharp" style="color: inherit; text-decoration: inherit;">Last<wbr>Updated<wbr>Time</a>
@@ -778,8 +724,7 @@ All [input](#inputs) properties are implicitly available as output properties. A
         <span class="property-indicator"></span>
         <span class="property-type">string</span>
     </dt>
-    <dd>{{% md %}}Last time the rule was updated in ISO8601 format.{{% /md %}}</dd>
-    <dt class="property-"
+    <dd>{{% md %}}Last time the rule was updated in ISO8601 format.{{% /md %}}</dd><dt class="property-"
             title="">
         <span id="name_csharp">
 <a href="#name_csharp" style="color: inherit; text-decoration: inherit;">Name</a>
@@ -787,8 +732,7 @@ All [input](#inputs) properties are implicitly available as output properties. A
         <span class="property-indicator"></span>
         <span class="property-type">string</span>
     </dt>
-    <dd>{{% md %}}Azure resource name{{% /md %}}</dd>
-    <dt class="property-"
+    <dd>{{% md %}}Azure resource name{{% /md %}}</dd><dt class="property-"
             title="">
         <span id="type_csharp">
 <a href="#type_csharp" style="color: inherit; text-decoration: inherit;">Type</a>
@@ -796,14 +740,11 @@ All [input](#inputs) properties are implicitly available as output properties. A
         <span class="property-indicator"></span>
         <span class="property-type">string</span>
     </dt>
-    <dd>{{% md %}}Azure resource type{{% /md %}}</dd>
-</dl>
+    <dd>{{% md %}}Azure resource type{{% /md %}}</dd></dl>
 {{% /choosable %}}
 
 {{% choosable language go %}}
-<dl class="resources-properties">
-
-    <dt class="property-"
+<dl class="resources-properties"><dt class="property-"
             title="">
         <span id="id_go">
 <a href="#id_go" style="color: inherit; text-decoration: inherit;">Id</a>
@@ -811,8 +752,7 @@ All [input](#inputs) properties are implicitly available as output properties. A
         <span class="property-indicator"></span>
         <span class="property-type">string</span>
     </dt>
-    <dd>{{% md %}}The provider-assigned unique ID for this managed resource.{{% /md %}}</dd>
-    <dt class="property-"
+    <dd>{{% md %}}The provider-assigned unique ID for this managed resource.{{% /md %}}</dd><dt class="property-"
             title="">
         <span id="lastupdatedtime_go">
 <a href="#lastupdatedtime_go" style="color: inherit; text-decoration: inherit;">Last<wbr>Updated<wbr>Time</a>
@@ -820,8 +760,7 @@ All [input](#inputs) properties are implicitly available as output properties. A
         <span class="property-indicator"></span>
         <span class="property-type">string</span>
     </dt>
-    <dd>{{% md %}}Last time the rule was updated in ISO8601 format.{{% /md %}}</dd>
-    <dt class="property-"
+    <dd>{{% md %}}Last time the rule was updated in ISO8601 format.{{% /md %}}</dd><dt class="property-"
             title="">
         <span id="name_go">
 <a href="#name_go" style="color: inherit; text-decoration: inherit;">Name</a>
@@ -829,8 +768,7 @@ All [input](#inputs) properties are implicitly available as output properties. A
         <span class="property-indicator"></span>
         <span class="property-type">string</span>
     </dt>
-    <dd>{{% md %}}Azure resource name{{% /md %}}</dd>
-    <dt class="property-"
+    <dd>{{% md %}}Azure resource name{{% /md %}}</dd><dt class="property-"
             title="">
         <span id="type_go">
 <a href="#type_go" style="color: inherit; text-decoration: inherit;">Type</a>
@@ -838,14 +776,11 @@ All [input](#inputs) properties are implicitly available as output properties. A
         <span class="property-indicator"></span>
         <span class="property-type">string</span>
     </dt>
-    <dd>{{% md %}}Azure resource type{{% /md %}}</dd>
-</dl>
+    <dd>{{% md %}}Azure resource type{{% /md %}}</dd></dl>
 {{% /choosable %}}
 
 {{% choosable language nodejs %}}
-<dl class="resources-properties">
-
-    <dt class="property-"
+<dl class="resources-properties"><dt class="property-"
             title="">
         <span id="id_nodejs">
 <a href="#id_nodejs" style="color: inherit; text-decoration: inherit;">id</a>
@@ -853,8 +788,7 @@ All [input](#inputs) properties are implicitly available as output properties. A
         <span class="property-indicator"></span>
         <span class="property-type">string</span>
     </dt>
-    <dd>{{% md %}}The provider-assigned unique ID for this managed resource.{{% /md %}}</dd>
-    <dt class="property-"
+    <dd>{{% md %}}The provider-assigned unique ID for this managed resource.{{% /md %}}</dd><dt class="property-"
             title="">
         <span id="lastupdatedtime_nodejs">
 <a href="#lastupdatedtime_nodejs" style="color: inherit; text-decoration: inherit;">last<wbr>Updated<wbr>Time</a>
@@ -862,8 +796,7 @@ All [input](#inputs) properties are implicitly available as output properties. A
         <span class="property-indicator"></span>
         <span class="property-type">string</span>
     </dt>
-    <dd>{{% md %}}Last time the rule was updated in ISO8601 format.{{% /md %}}</dd>
-    <dt class="property-"
+    <dd>{{% md %}}Last time the rule was updated in ISO8601 format.{{% /md %}}</dd><dt class="property-"
             title="">
         <span id="name_nodejs">
 <a href="#name_nodejs" style="color: inherit; text-decoration: inherit;">name</a>
@@ -871,8 +804,7 @@ All [input](#inputs) properties are implicitly available as output properties. A
         <span class="property-indicator"></span>
         <span class="property-type">string</span>
     </dt>
-    <dd>{{% md %}}Azure resource name{{% /md %}}</dd>
-    <dt class="property-"
+    <dd>{{% md %}}Azure resource name{{% /md %}}</dd><dt class="property-"
             title="">
         <span id="type_nodejs">
 <a href="#type_nodejs" style="color: inherit; text-decoration: inherit;">type</a>
@@ -880,14 +812,11 @@ All [input](#inputs) properties are implicitly available as output properties. A
         <span class="property-indicator"></span>
         <span class="property-type">string</span>
     </dt>
-    <dd>{{% md %}}Azure resource type{{% /md %}}</dd>
-</dl>
+    <dd>{{% md %}}Azure resource type{{% /md %}}</dd></dl>
 {{% /choosable %}}
 
 {{% choosable language python %}}
-<dl class="resources-properties">
-
-    <dt class="property-"
+<dl class="resources-properties"><dt class="property-"
             title="">
         <span id="id_python">
 <a href="#id_python" style="color: inherit; text-decoration: inherit;">id</a>
@@ -895,8 +824,7 @@ All [input](#inputs) properties are implicitly available as output properties. A
         <span class="property-indicator"></span>
         <span class="property-type">str</span>
     </dt>
-    <dd>{{% md %}}The provider-assigned unique ID for this managed resource.{{% /md %}}</dd>
-    <dt class="property-"
+    <dd>{{% md %}}The provider-assigned unique ID for this managed resource.{{% /md %}}</dd><dt class="property-"
             title="">
         <span id="last_updated_time_python">
 <a href="#last_updated_time_python" style="color: inherit; text-decoration: inherit;">last_<wbr>updated_<wbr>time</a>
@@ -904,8 +832,7 @@ All [input](#inputs) properties are implicitly available as output properties. A
         <span class="property-indicator"></span>
         <span class="property-type">str</span>
     </dt>
-    <dd>{{% md %}}Last time the rule was updated in ISO8601 format.{{% /md %}}</dd>
-    <dt class="property-"
+    <dd>{{% md %}}Last time the rule was updated in ISO8601 format.{{% /md %}}</dd><dt class="property-"
             title="">
         <span id="name_python">
 <a href="#name_python" style="color: inherit; text-decoration: inherit;">name</a>
@@ -913,8 +840,7 @@ All [input](#inputs) properties are implicitly available as output properties. A
         <span class="property-indicator"></span>
         <span class="property-type">str</span>
     </dt>
-    <dd>{{% md %}}Azure resource name{{% /md %}}</dd>
-    <dt class="property-"
+    <dd>{{% md %}}Azure resource name{{% /md %}}</dd><dt class="property-"
             title="">
         <span id="type_python">
 <a href="#type_python" style="color: inherit; text-decoration: inherit;">type</a>
@@ -922,8 +848,7 @@ All [input](#inputs) properties are implicitly available as output properties. A
         <span class="property-indicator"></span>
         <span class="property-type">str</span>
     </dt>
-    <dd>{{% md %}}Azure resource type{{% /md %}}</dd>
-</dl>
+    <dd>{{% md %}}Azure resource type{{% /md %}}</dd></dl>
 {{% /choosable %}}
 
 
@@ -939,9 +864,7 @@ All [input](#inputs) properties are implicitly available as output properties. A
 <h4 id="healthalertaction">Health<wbr>Alert<wbr>Action</h4>
 
 {{% choosable language csharp %}}
-<dl class="resources-properties">
-
-    <dt class="property-optional"
+<dl class="resources-properties"><dt class="property-optional"
             title="Optional">
         <span id="actiongroupid_csharp">
 <a href="#actiongroupid_csharp" style="color: inherit; text-decoration: inherit;">Action<wbr>Group<wbr>Id</a>
@@ -949,8 +872,7 @@ All [input](#inputs) properties are implicitly available as output properties. A
         <span class="property-indicator"></span>
         <span class="property-type">string</span>
     </dt>
-    <dd>{{% md %}}the id of the action group to use.{{% /md %}}</dd>
-    <dt class="property-optional"
+    <dd>{{% md %}}the id of the action group to use.{{% /md %}}</dd><dt class="property-optional"
             title="Optional">
         <span id="webhookproperties_csharp">
 <a href="#webhookproperties_csharp" style="color: inherit; text-decoration: inherit;">Web<wbr>Hook<wbr>Properties</a>
@@ -958,14 +880,11 @@ All [input](#inputs) properties are implicitly available as output properties. A
         <span class="property-indicator"></span>
         <span class="property-type">Dictionary&lt;string, string&gt;</span>
     </dt>
-    <dd>{{% md %}}The properties of a webhook object.{{% /md %}}</dd>
-</dl>
+    <dd>{{% md %}}The properties of a webhook object.{{% /md %}}</dd></dl>
 {{% /choosable %}}
 
 {{% choosable language go %}}
-<dl class="resources-properties">
-
-    <dt class="property-optional"
+<dl class="resources-properties"><dt class="property-optional"
             title="Optional">
         <span id="actiongroupid_go">
 <a href="#actiongroupid_go" style="color: inherit; text-decoration: inherit;">Action<wbr>Group<wbr>Id</a>
@@ -973,8 +892,7 @@ All [input](#inputs) properties are implicitly available as output properties. A
         <span class="property-indicator"></span>
         <span class="property-type">string</span>
     </dt>
-    <dd>{{% md %}}the id of the action group to use.{{% /md %}}</dd>
-    <dt class="property-optional"
+    <dd>{{% md %}}the id of the action group to use.{{% /md %}}</dd><dt class="property-optional"
             title="Optional">
         <span id="webhookproperties_go">
 <a href="#webhookproperties_go" style="color: inherit; text-decoration: inherit;">Web<wbr>Hook<wbr>Properties</a>
@@ -982,14 +900,11 @@ All [input](#inputs) properties are implicitly available as output properties. A
         <span class="property-indicator"></span>
         <span class="property-type">map[string]string</span>
     </dt>
-    <dd>{{% md %}}The properties of a webhook object.{{% /md %}}</dd>
-</dl>
+    <dd>{{% md %}}The properties of a webhook object.{{% /md %}}</dd></dl>
 {{% /choosable %}}
 
 {{% choosable language nodejs %}}
-<dl class="resources-properties">
-
-    <dt class="property-optional"
+<dl class="resources-properties"><dt class="property-optional"
             title="Optional">
         <span id="actiongroupid_nodejs">
 <a href="#actiongroupid_nodejs" style="color: inherit; text-decoration: inherit;">action<wbr>Group<wbr>Id</a>
@@ -997,8 +912,7 @@ All [input](#inputs) properties are implicitly available as output properties. A
         <span class="property-indicator"></span>
         <span class="property-type">string</span>
     </dt>
-    <dd>{{% md %}}the id of the action group to use.{{% /md %}}</dd>
-    <dt class="property-optional"
+    <dd>{{% md %}}the id of the action group to use.{{% /md %}}</dd><dt class="property-optional"
             title="Optional">
         <span id="webhookproperties_nodejs">
 <a href="#webhookproperties_nodejs" style="color: inherit; text-decoration: inherit;">web<wbr>Hook<wbr>Properties</a>
@@ -1006,14 +920,11 @@ All [input](#inputs) properties are implicitly available as output properties. A
         <span class="property-indicator"></span>
         <span class="property-type">{[key: string]: string}</span>
     </dt>
-    <dd>{{% md %}}The properties of a webhook object.{{% /md %}}</dd>
-</dl>
+    <dd>{{% md %}}The properties of a webhook object.{{% /md %}}</dd></dl>
 {{% /choosable %}}
 
 {{% choosable language python %}}
-<dl class="resources-properties">
-
-    <dt class="property-optional"
+<dl class="resources-properties"><dt class="property-optional"
             title="Optional">
         <span id="action_group_id_python">
 <a href="#action_group_id_python" style="color: inherit; text-decoration: inherit;">action_<wbr>group_<wbr>id</a>
@@ -1021,8 +932,7 @@ All [input](#inputs) properties are implicitly available as output properties. A
         <span class="property-indicator"></span>
         <span class="property-type">str</span>
     </dt>
-    <dd>{{% md %}}the id of the action group to use.{{% /md %}}</dd>
-    <dt class="property-optional"
+    <dd>{{% md %}}the id of the action group to use.{{% /md %}}</dd><dt class="property-optional"
             title="Optional">
         <span id="web_hook_properties_python">
 <a href="#web_hook_properties_python" style="color: inherit; text-decoration: inherit;">web_<wbr>hook_<wbr>properties</a>
@@ -1030,16 +940,13 @@ All [input](#inputs) properties are implicitly available as output properties. A
         <span class="property-indicator"></span>
         <span class="property-type">Mapping[str, str]</span>
     </dt>
-    <dd>{{% md %}}The properties of a webhook object.{{% /md %}}</dd>
-</dl>
+    <dd>{{% md %}}The properties of a webhook object.{{% /md %}}</dd></dl>
 {{% /choosable %}}
 
 <h4 id="healthalertactionresponse">Health<wbr>Alert<wbr>Action<wbr>Response</h4>
 
 {{% choosable language csharp %}}
-<dl class="resources-properties">
-
-    <dt class="property-optional"
+<dl class="resources-properties"><dt class="property-optional"
             title="Optional">
         <span id="actiongroupid_csharp">
 <a href="#actiongroupid_csharp" style="color: inherit; text-decoration: inherit;">Action<wbr>Group<wbr>Id</a>
@@ -1047,8 +954,7 @@ All [input](#inputs) properties are implicitly available as output properties. A
         <span class="property-indicator"></span>
         <span class="property-type">string</span>
     </dt>
-    <dd>{{% md %}}the id of the action group to use.{{% /md %}}</dd>
-    <dt class="property-optional"
+    <dd>{{% md %}}the id of the action group to use.{{% /md %}}</dd><dt class="property-optional"
             title="Optional">
         <span id="webhookproperties_csharp">
 <a href="#webhookproperties_csharp" style="color: inherit; text-decoration: inherit;">Web<wbr>Hook<wbr>Properties</a>
@@ -1056,14 +962,11 @@ All [input](#inputs) properties are implicitly available as output properties. A
         <span class="property-indicator"></span>
         <span class="property-type">Dictionary&lt;string, string&gt;</span>
     </dt>
-    <dd>{{% md %}}The properties of a webhook object.{{% /md %}}</dd>
-</dl>
+    <dd>{{% md %}}The properties of a webhook object.{{% /md %}}</dd></dl>
 {{% /choosable %}}
 
 {{% choosable language go %}}
-<dl class="resources-properties">
-
-    <dt class="property-optional"
+<dl class="resources-properties"><dt class="property-optional"
             title="Optional">
         <span id="actiongroupid_go">
 <a href="#actiongroupid_go" style="color: inherit; text-decoration: inherit;">Action<wbr>Group<wbr>Id</a>
@@ -1071,8 +974,7 @@ All [input](#inputs) properties are implicitly available as output properties. A
         <span class="property-indicator"></span>
         <span class="property-type">string</span>
     </dt>
-    <dd>{{% md %}}the id of the action group to use.{{% /md %}}</dd>
-    <dt class="property-optional"
+    <dd>{{% md %}}the id of the action group to use.{{% /md %}}</dd><dt class="property-optional"
             title="Optional">
         <span id="webhookproperties_go">
 <a href="#webhookproperties_go" style="color: inherit; text-decoration: inherit;">Web<wbr>Hook<wbr>Properties</a>
@@ -1080,14 +982,11 @@ All [input](#inputs) properties are implicitly available as output properties. A
         <span class="property-indicator"></span>
         <span class="property-type">map[string]string</span>
     </dt>
-    <dd>{{% md %}}The properties of a webhook object.{{% /md %}}</dd>
-</dl>
+    <dd>{{% md %}}The properties of a webhook object.{{% /md %}}</dd></dl>
 {{% /choosable %}}
 
 {{% choosable language nodejs %}}
-<dl class="resources-properties">
-
-    <dt class="property-optional"
+<dl class="resources-properties"><dt class="property-optional"
             title="Optional">
         <span id="actiongroupid_nodejs">
 <a href="#actiongroupid_nodejs" style="color: inherit; text-decoration: inherit;">action<wbr>Group<wbr>Id</a>
@@ -1095,8 +994,7 @@ All [input](#inputs) properties are implicitly available as output properties. A
         <span class="property-indicator"></span>
         <span class="property-type">string</span>
     </dt>
-    <dd>{{% md %}}the id of the action group to use.{{% /md %}}</dd>
-    <dt class="property-optional"
+    <dd>{{% md %}}the id of the action group to use.{{% /md %}}</dd><dt class="property-optional"
             title="Optional">
         <span id="webhookproperties_nodejs">
 <a href="#webhookproperties_nodejs" style="color: inherit; text-decoration: inherit;">web<wbr>Hook<wbr>Properties</a>
@@ -1104,14 +1002,11 @@ All [input](#inputs) properties are implicitly available as output properties. A
         <span class="property-indicator"></span>
         <span class="property-type">{[key: string]: string}</span>
     </dt>
-    <dd>{{% md %}}The properties of a webhook object.{{% /md %}}</dd>
-</dl>
+    <dd>{{% md %}}The properties of a webhook object.{{% /md %}}</dd></dl>
 {{% /choosable %}}
 
 {{% choosable language python %}}
-<dl class="resources-properties">
-
-    <dt class="property-optional"
+<dl class="resources-properties"><dt class="property-optional"
             title="Optional">
         <span id="action_group_id_python">
 <a href="#action_group_id_python" style="color: inherit; text-decoration: inherit;">action_<wbr>group_<wbr>id</a>
@@ -1119,8 +1014,7 @@ All [input](#inputs) properties are implicitly available as output properties. A
         <span class="property-indicator"></span>
         <span class="property-type">str</span>
     </dt>
-    <dd>{{% md %}}the id of the action group to use.{{% /md %}}</dd>
-    <dt class="property-optional"
+    <dd>{{% md %}}the id of the action group to use.{{% /md %}}</dd><dt class="property-optional"
             title="Optional">
         <span id="web_hook_properties_python">
 <a href="#web_hook_properties_python" style="color: inherit; text-decoration: inherit;">web_<wbr>hook_<wbr>properties</a>
@@ -1128,16 +1022,13 @@ All [input](#inputs) properties are implicitly available as output properties. A
         <span class="property-indicator"></span>
         <span class="property-type">Mapping[str, str]</span>
     </dt>
-    <dd>{{% md %}}The properties of a webhook object.{{% /md %}}</dd>
-</dl>
+    <dd>{{% md %}}The properties of a webhook object.{{% /md %}}</dd></dl>
 {{% /choosable %}}
 
 <h4 id="healthalertcriteria">Health<wbr>Alert<wbr>Criteria</h4>
 
 {{% choosable language csharp %}}
-<dl class="resources-properties">
-
-    <dt class="property-optional"
+<dl class="resources-properties"><dt class="property-optional"
             title="Optional">
         <span id="allof_csharp">
 <a href="#allof_csharp" style="color: inherit; text-decoration: inherit;">All<wbr>Of</a>
@@ -1145,14 +1036,11 @@ All [input](#inputs) properties are implicitly available as output properties. A
         <span class="property-indicator"></span>
         <span class="property-type"><a href="#vmguesthealthalertcriterion">List&lt;Pulumi.<wbr>Azure<wbr>Native.<wbr>Alerts<wbr>Management.<wbr>Inputs.<wbr>Vm<wbr>Guest<wbr>Health<wbr>Alert<wbr>Criterion<wbr>Args&gt;</a></span>
     </dt>
-    <dd>{{% md %}}The list of metric criteria for this 'all of' operation. {{% /md %}}</dd>
-</dl>
+    <dd>{{% md %}}The list of metric criteria for this 'all of' operation. {{% /md %}}</dd></dl>
 {{% /choosable %}}
 
 {{% choosable language go %}}
-<dl class="resources-properties">
-
-    <dt class="property-optional"
+<dl class="resources-properties"><dt class="property-optional"
             title="Optional">
         <span id="allof_go">
 <a href="#allof_go" style="color: inherit; text-decoration: inherit;">All<wbr>Of</a>
@@ -1160,14 +1048,11 @@ All [input](#inputs) properties are implicitly available as output properties. A
         <span class="property-indicator"></span>
         <span class="property-type"><a href="#vmguesthealthalertcriterion">[]Vm<wbr>Guest<wbr>Health<wbr>Alert<wbr>Criterion</a></span>
     </dt>
-    <dd>{{% md %}}The list of metric criteria for this 'all of' operation. {{% /md %}}</dd>
-</dl>
+    <dd>{{% md %}}The list of metric criteria for this 'all of' operation. {{% /md %}}</dd></dl>
 {{% /choosable %}}
 
 {{% choosable language nodejs %}}
-<dl class="resources-properties">
-
-    <dt class="property-optional"
+<dl class="resources-properties"><dt class="property-optional"
             title="Optional">
         <span id="allof_nodejs">
 <a href="#allof_nodejs" style="color: inherit; text-decoration: inherit;">all<wbr>Of</a>
@@ -1175,14 +1060,11 @@ All [input](#inputs) properties are implicitly available as output properties. A
         <span class="property-indicator"></span>
         <span class="property-type"><a href="#vmguesthealthalertcriterion">Vm<wbr>Guest<wbr>Health<wbr>Alert<wbr>Criterion[]</a></span>
     </dt>
-    <dd>{{% md %}}The list of metric criteria for this 'all of' operation. {{% /md %}}</dd>
-</dl>
+    <dd>{{% md %}}The list of metric criteria for this 'all of' operation. {{% /md %}}</dd></dl>
 {{% /choosable %}}
 
 {{% choosable language python %}}
-<dl class="resources-properties">
-
-    <dt class="property-optional"
+<dl class="resources-properties"><dt class="property-optional"
             title="Optional">
         <span id="all_of_python">
 <a href="#all_of_python" style="color: inherit; text-decoration: inherit;">all_<wbr>of</a>
@@ -1190,16 +1072,13 @@ All [input](#inputs) properties are implicitly available as output properties. A
         <span class="property-indicator"></span>
         <span class="property-type"><a href="#vmguesthealthalertcriterion">Sequence[Vm<wbr>Guest<wbr>Health<wbr>Alert<wbr>Criterion<wbr>Args]</a></span>
     </dt>
-    <dd>{{% md %}}The list of metric criteria for this 'all of' operation. {{% /md %}}</dd>
-</dl>
+    <dd>{{% md %}}The list of metric criteria for this 'all of' operation. {{% /md %}}</dd></dl>
 {{% /choosable %}}
 
 <h4 id="healthalertcriteriaresponse">Health<wbr>Alert<wbr>Criteria<wbr>Response</h4>
 
 {{% choosable language csharp %}}
-<dl class="resources-properties">
-
-    <dt class="property-optional"
+<dl class="resources-properties"><dt class="property-optional"
             title="Optional">
         <span id="allof_csharp">
 <a href="#allof_csharp" style="color: inherit; text-decoration: inherit;">All<wbr>Of</a>
@@ -1207,14 +1086,11 @@ All [input](#inputs) properties are implicitly available as output properties. A
         <span class="property-indicator"></span>
         <span class="property-type"><a href="#vmguesthealthalertcriterionresponse">List&lt;Pulumi.<wbr>Azure<wbr>Native.<wbr>Alerts<wbr>Management.<wbr>Inputs.<wbr>Vm<wbr>Guest<wbr>Health<wbr>Alert<wbr>Criterion<wbr>Response<wbr>Args&gt;</a></span>
     </dt>
-    <dd>{{% md %}}The list of metric criteria for this 'all of' operation. {{% /md %}}</dd>
-</dl>
+    <dd>{{% md %}}The list of metric criteria for this 'all of' operation. {{% /md %}}</dd></dl>
 {{% /choosable %}}
 
 {{% choosable language go %}}
-<dl class="resources-properties">
-
-    <dt class="property-optional"
+<dl class="resources-properties"><dt class="property-optional"
             title="Optional">
         <span id="allof_go">
 <a href="#allof_go" style="color: inherit; text-decoration: inherit;">All<wbr>Of</a>
@@ -1222,14 +1098,11 @@ All [input](#inputs) properties are implicitly available as output properties. A
         <span class="property-indicator"></span>
         <span class="property-type"><a href="#vmguesthealthalertcriterionresponse">[]Vm<wbr>Guest<wbr>Health<wbr>Alert<wbr>Criterion<wbr>Response</a></span>
     </dt>
-    <dd>{{% md %}}The list of metric criteria for this 'all of' operation. {{% /md %}}</dd>
-</dl>
+    <dd>{{% md %}}The list of metric criteria for this 'all of' operation. {{% /md %}}</dd></dl>
 {{% /choosable %}}
 
 {{% choosable language nodejs %}}
-<dl class="resources-properties">
-
-    <dt class="property-optional"
+<dl class="resources-properties"><dt class="property-optional"
             title="Optional">
         <span id="allof_nodejs">
 <a href="#allof_nodejs" style="color: inherit; text-decoration: inherit;">all<wbr>Of</a>
@@ -1237,14 +1110,11 @@ All [input](#inputs) properties are implicitly available as output properties. A
         <span class="property-indicator"></span>
         <span class="property-type"><a href="#vmguesthealthalertcriterionresponse">Vm<wbr>Guest<wbr>Health<wbr>Alert<wbr>Criterion<wbr>Response[]</a></span>
     </dt>
-    <dd>{{% md %}}The list of metric criteria for this 'all of' operation. {{% /md %}}</dd>
-</dl>
+    <dd>{{% md %}}The list of metric criteria for this 'all of' operation. {{% /md %}}</dd></dl>
 {{% /choosable %}}
 
 {{% choosable language python %}}
-<dl class="resources-properties">
-
-    <dt class="property-optional"
+<dl class="resources-properties"><dt class="property-optional"
             title="Optional">
         <span id="all_of_python">
 <a href="#all_of_python" style="color: inherit; text-decoration: inherit;">all_<wbr>of</a>
@@ -1252,16 +1122,13 @@ All [input](#inputs) properties are implicitly available as output properties. A
         <span class="property-indicator"></span>
         <span class="property-type"><a href="#vmguesthealthalertcriterionresponse">Sequence[Vm<wbr>Guest<wbr>Health<wbr>Alert<wbr>Criterion<wbr>Response<wbr>Args]</a></span>
     </dt>
-    <dd>{{% md %}}The list of metric criteria for this 'all of' operation. {{% /md %}}</dd>
-</dl>
+    <dd>{{% md %}}The list of metric criteria for this 'all of' operation. {{% /md %}}</dd></dl>
 {{% /choosable %}}
 
 <h4 id="healthstate">Health<wbr>State</h4>
 
 {{% choosable language csharp %}}
-<dl class="resources-properties">
-
-    <dt class="property-required"
+<dl class="resources-properties"><dt class="property-required"
             title="Required">
         <span id="healthstatename_csharp">
 <a href="#healthstatename_csharp" style="color: inherit; text-decoration: inherit;">Health<wbr>State<wbr>Name</a>
@@ -1269,8 +1136,7 @@ All [input](#inputs) properties are implicitly available as output properties. A
         <span class="property-indicator"></span>
         <span class="property-type">string | <a href="#healthstatename">Pulumi.<wbr>Azure<wbr>Native.<wbr>Alerts<wbr>Management.<wbr>Health<wbr>State<wbr>Name</a></span>
     </dt>
-    <dd>{{% md %}}Health state name{{% /md %}}</dd>
-    <dt class="property-required"
+    <dd>{{% md %}}Health state name{{% /md %}}</dd><dt class="property-required"
             title="Required">
         <span id="severity_csharp">
 <a href="#severity_csharp" style="color: inherit; text-decoration: inherit;">Severity</a>
@@ -1278,14 +1144,11 @@ All [input](#inputs) properties are implicitly available as output properties. A
         <span class="property-indicator"></span>
         <span class="property-type">double</span>
     </dt>
-    <dd>{{% md %}}Severity of alert fired{{% /md %}}</dd>
-</dl>
+    <dd>{{% md %}}Severity of alert fired{{% /md %}}</dd></dl>
 {{% /choosable %}}
 
 {{% choosable language go %}}
-<dl class="resources-properties">
-
-    <dt class="property-required"
+<dl class="resources-properties"><dt class="property-required"
             title="Required">
         <span id="healthstatename_go">
 <a href="#healthstatename_go" style="color: inherit; text-decoration: inherit;">Health<wbr>State<wbr>Name</a>
@@ -1293,8 +1156,7 @@ All [input](#inputs) properties are implicitly available as output properties. A
         <span class="property-indicator"></span>
         <span class="property-type">string | <a href="#healthstatename">Health<wbr>State<wbr>Name</a></span>
     </dt>
-    <dd>{{% md %}}Health state name{{% /md %}}</dd>
-    <dt class="property-required"
+    <dd>{{% md %}}Health state name{{% /md %}}</dd><dt class="property-required"
             title="Required">
         <span id="severity_go">
 <a href="#severity_go" style="color: inherit; text-decoration: inherit;">Severity</a>
@@ -1302,14 +1164,11 @@ All [input](#inputs) properties are implicitly available as output properties. A
         <span class="property-indicator"></span>
         <span class="property-type">float64</span>
     </dt>
-    <dd>{{% md %}}Severity of alert fired{{% /md %}}</dd>
-</dl>
+    <dd>{{% md %}}Severity of alert fired{{% /md %}}</dd></dl>
 {{% /choosable %}}
 
 {{% choosable language nodejs %}}
-<dl class="resources-properties">
-
-    <dt class="property-required"
+<dl class="resources-properties"><dt class="property-required"
             title="Required">
         <span id="healthstatename_nodejs">
 <a href="#healthstatename_nodejs" style="color: inherit; text-decoration: inherit;">health<wbr>State<wbr>Name</a>
@@ -1317,8 +1176,7 @@ All [input](#inputs) properties are implicitly available as output properties. A
         <span class="property-indicator"></span>
         <span class="property-type">string | <a href="#healthstatename">Health<wbr>State<wbr>Name</a></span>
     </dt>
-    <dd>{{% md %}}Health state name{{% /md %}}</dd>
-    <dt class="property-required"
+    <dd>{{% md %}}Health state name{{% /md %}}</dd><dt class="property-required"
             title="Required">
         <span id="severity_nodejs">
 <a href="#severity_nodejs" style="color: inherit; text-decoration: inherit;">severity</a>
@@ -1326,14 +1184,11 @@ All [input](#inputs) properties are implicitly available as output properties. A
         <span class="property-indicator"></span>
         <span class="property-type">number</span>
     </dt>
-    <dd>{{% md %}}Severity of alert fired{{% /md %}}</dd>
-</dl>
+    <dd>{{% md %}}Severity of alert fired{{% /md %}}</dd></dl>
 {{% /choosable %}}
 
 {{% choosable language python %}}
-<dl class="resources-properties">
-
-    <dt class="property-required"
+<dl class="resources-properties"><dt class="property-required"
             title="Required">
         <span id="health_state_name_python">
 <a href="#health_state_name_python" style="color: inherit; text-decoration: inherit;">health_<wbr>state_<wbr>name</a>
@@ -1341,8 +1196,7 @@ All [input](#inputs) properties are implicitly available as output properties. A
         <span class="property-indicator"></span>
         <span class="property-type">str | <a href="#healthstatename">Health<wbr>State<wbr>Name</a></span>
     </dt>
-    <dd>{{% md %}}Health state name{{% /md %}}</dd>
-    <dt class="property-required"
+    <dd>{{% md %}}Health state name{{% /md %}}</dd><dt class="property-required"
             title="Required">
         <span id="severity_python">
 <a href="#severity_python" style="color: inherit; text-decoration: inherit;">severity</a>
@@ -1350,54 +1204,39 @@ All [input](#inputs) properties are implicitly available as output properties. A
         <span class="property-indicator"></span>
         <span class="property-type">float</span>
     </dt>
-    <dd>{{% md %}}Severity of alert fired{{% /md %}}</dd>
-</dl>
+    <dd>{{% md %}}Severity of alert fired{{% /md %}}</dd></dl>
 {{% /choosable %}}
 
 <h4 id="healthstatename">Health<wbr>State<wbr>Name</h4>
 
 {{% choosable language csharp %}}
-<dl class="tabular">
-    <dt>Warning</dt>
-    <dd>Warning</dd>
-    <dt>Critical</dt>
-    <dd>Critical</dd>
-</dl>
+<dl class="tabular"><dt>Warning</dt>
+    <dd>Warning</dd><dt>Critical</dt>
+    <dd>Critical</dd></dl>
 {{% /choosable %}}
 
 {{% choosable language go %}}
-<dl class="tabular">
-    <dt>Health<wbr>State<wbr>Name<wbr>Warning</dt>
-    <dd>Warning</dd>
-    <dt>Health<wbr>State<wbr>Name<wbr>Critical</dt>
-    <dd>Critical</dd>
-</dl>
+<dl class="tabular"><dt>Health<wbr>State<wbr>Name<wbr>Warning</dt>
+    <dd>Warning</dd><dt>Health<wbr>State<wbr>Name<wbr>Critical</dt>
+    <dd>Critical</dd></dl>
 {{% /choosable %}}
 
 {{% choosable language nodejs %}}
-<dl class="tabular">
-    <dt>Warning</dt>
-    <dd>Warning</dd>
-    <dt>Critical</dt>
-    <dd>Critical</dd>
-</dl>
+<dl class="tabular"><dt>Warning</dt>
+    <dd>Warning</dd><dt>Critical</dt>
+    <dd>Critical</dd></dl>
 {{% /choosable %}}
 
 {{% choosable language python %}}
-<dl class="tabular">
-    <dt>WARNING</dt>
-    <dd>Warning</dd>
-    <dt>CRITICAL</dt>
-    <dd>Critical</dd>
-</dl>
+<dl class="tabular"><dt>WARNING</dt>
+    <dd>Warning</dd><dt>CRITICAL</dt>
+    <dd>Critical</dd></dl>
 {{% /choosable %}}
 
 <h4 id="healthstateresponse">Health<wbr>State<wbr>Response</h4>
 
 {{% choosable language csharp %}}
-<dl class="resources-properties">
-
-    <dt class="property-required"
+<dl class="resources-properties"><dt class="property-required"
             title="Required">
         <span id="healthstatename_csharp">
 <a href="#healthstatename_csharp" style="color: inherit; text-decoration: inherit;">Health<wbr>State<wbr>Name</a>
@@ -1405,8 +1244,7 @@ All [input](#inputs) properties are implicitly available as output properties. A
         <span class="property-indicator"></span>
         <span class="property-type">string</span>
     </dt>
-    <dd>{{% md %}}Health state name{{% /md %}}</dd>
-    <dt class="property-required"
+    <dd>{{% md %}}Health state name{{% /md %}}</dd><dt class="property-required"
             title="Required">
         <span id="severity_csharp">
 <a href="#severity_csharp" style="color: inherit; text-decoration: inherit;">Severity</a>
@@ -1414,14 +1252,11 @@ All [input](#inputs) properties are implicitly available as output properties. A
         <span class="property-indicator"></span>
         <span class="property-type">double</span>
     </dt>
-    <dd>{{% md %}}Severity of alert fired{{% /md %}}</dd>
-</dl>
+    <dd>{{% md %}}Severity of alert fired{{% /md %}}</dd></dl>
 {{% /choosable %}}
 
 {{% choosable language go %}}
-<dl class="resources-properties">
-
-    <dt class="property-required"
+<dl class="resources-properties"><dt class="property-required"
             title="Required">
         <span id="healthstatename_go">
 <a href="#healthstatename_go" style="color: inherit; text-decoration: inherit;">Health<wbr>State<wbr>Name</a>
@@ -1429,8 +1264,7 @@ All [input](#inputs) properties are implicitly available as output properties. A
         <span class="property-indicator"></span>
         <span class="property-type">string</span>
     </dt>
-    <dd>{{% md %}}Health state name{{% /md %}}</dd>
-    <dt class="property-required"
+    <dd>{{% md %}}Health state name{{% /md %}}</dd><dt class="property-required"
             title="Required">
         <span id="severity_go">
 <a href="#severity_go" style="color: inherit; text-decoration: inherit;">Severity</a>
@@ -1438,14 +1272,11 @@ All [input](#inputs) properties are implicitly available as output properties. A
         <span class="property-indicator"></span>
         <span class="property-type">float64</span>
     </dt>
-    <dd>{{% md %}}Severity of alert fired{{% /md %}}</dd>
-</dl>
+    <dd>{{% md %}}Severity of alert fired{{% /md %}}</dd></dl>
 {{% /choosable %}}
 
 {{% choosable language nodejs %}}
-<dl class="resources-properties">
-
-    <dt class="property-required"
+<dl class="resources-properties"><dt class="property-required"
             title="Required">
         <span id="healthstatename_nodejs">
 <a href="#healthstatename_nodejs" style="color: inherit; text-decoration: inherit;">health<wbr>State<wbr>Name</a>
@@ -1453,8 +1284,7 @@ All [input](#inputs) properties are implicitly available as output properties. A
         <span class="property-indicator"></span>
         <span class="property-type">string</span>
     </dt>
-    <dd>{{% md %}}Health state name{{% /md %}}</dd>
-    <dt class="property-required"
+    <dd>{{% md %}}Health state name{{% /md %}}</dd><dt class="property-required"
             title="Required">
         <span id="severity_nodejs">
 <a href="#severity_nodejs" style="color: inherit; text-decoration: inherit;">severity</a>
@@ -1462,14 +1292,11 @@ All [input](#inputs) properties are implicitly available as output properties. A
         <span class="property-indicator"></span>
         <span class="property-type">number</span>
     </dt>
-    <dd>{{% md %}}Severity of alert fired{{% /md %}}</dd>
-</dl>
+    <dd>{{% md %}}Severity of alert fired{{% /md %}}</dd></dl>
 {{% /choosable %}}
 
 {{% choosable language python %}}
-<dl class="resources-properties">
-
-    <dt class="property-required"
+<dl class="resources-properties"><dt class="property-required"
             title="Required">
         <span id="health_state_name_python">
 <a href="#health_state_name_python" style="color: inherit; text-decoration: inherit;">health_<wbr>state_<wbr>name</a>
@@ -1477,8 +1304,7 @@ All [input](#inputs) properties are implicitly available as output properties. A
         <span class="property-indicator"></span>
         <span class="property-type">str</span>
     </dt>
-    <dd>{{% md %}}Health state name{{% /md %}}</dd>
-    <dt class="property-required"
+    <dd>{{% md %}}Health state name{{% /md %}}</dd><dt class="property-required"
             title="Required">
         <span id="severity_python">
 <a href="#severity_python" style="color: inherit; text-decoration: inherit;">severity</a>
@@ -1486,16 +1312,13 @@ All [input](#inputs) properties are implicitly available as output properties. A
         <span class="property-indicator"></span>
         <span class="property-type">float</span>
     </dt>
-    <dd>{{% md %}}Severity of alert fired{{% /md %}}</dd>
-</dl>
+    <dd>{{% md %}}Severity of alert fired{{% /md %}}</dd></dl>
 {{% /choosable %}}
 
 <h4 id="vmguesthealthalertcriterion">Vm<wbr>Guest<wbr>Health<wbr>Alert<wbr>Criterion</h4>
 
 {{% choosable language csharp %}}
-<dl class="resources-properties">
-
-    <dt class="property-required"
+<dl class="resources-properties"><dt class="property-required"
             title="Required">
         <span id="healthstates_csharp">
 <a href="#healthstates_csharp" style="color: inherit; text-decoration: inherit;">Health<wbr>States</a>
@@ -1503,8 +1326,7 @@ All [input](#inputs) properties are implicitly available as output properties. A
         <span class="property-indicator"></span>
         <span class="property-type"><a href="#healthstate">List&lt;Pulumi.<wbr>Azure<wbr>Native.<wbr>Alerts<wbr>Management.<wbr>Inputs.<wbr>Health<wbr>State<wbr>Args&gt;</a></span>
     </dt>
-    <dd>{{% md %}}Health states to alert on{{% /md %}}</dd>
-    <dt class="property-optional"
+    <dd>{{% md %}}Health states to alert on{{% /md %}}</dd><dt class="property-optional"
             title="Optional">
         <span id="monitornames_csharp">
 <a href="#monitornames_csharp" style="color: inherit; text-decoration: inherit;">Monitor<wbr>Names</a>
@@ -1512,8 +1334,7 @@ All [input](#inputs) properties are implicitly available as output properties. A
         <span class="property-indicator"></span>
         <span class="property-type">List&lt;string&gt;</span>
     </dt>
-    <dd>{{% md %}}Names of health monitor on which to define alert{{% /md %}}</dd>
-    <dt class="property-optional"
+    <dd>{{% md %}}Names of health monitor on which to define alert{{% /md %}}</dd><dt class="property-optional"
             title="Optional">
         <span id="monitortypes_csharp">
 <a href="#monitortypes_csharp" style="color: inherit; text-decoration: inherit;">Monitor<wbr>Types</a>
@@ -1521,14 +1342,11 @@ All [input](#inputs) properties are implicitly available as output properties. A
         <span class="property-indicator"></span>
         <span class="property-type">List&lt;string&gt;</span>
     </dt>
-    <dd>{{% md %}}Names of health monitor type on which to define alert{{% /md %}}</dd>
-</dl>
+    <dd>{{% md %}}Names of health monitor type on which to define alert{{% /md %}}</dd></dl>
 {{% /choosable %}}
 
 {{% choosable language go %}}
-<dl class="resources-properties">
-
-    <dt class="property-required"
+<dl class="resources-properties"><dt class="property-required"
             title="Required">
         <span id="healthstates_go">
 <a href="#healthstates_go" style="color: inherit; text-decoration: inherit;">Health<wbr>States</a>
@@ -1536,8 +1354,7 @@ All [input](#inputs) properties are implicitly available as output properties. A
         <span class="property-indicator"></span>
         <span class="property-type"><a href="#healthstate">[]Health<wbr>State</a></span>
     </dt>
-    <dd>{{% md %}}Health states to alert on{{% /md %}}</dd>
-    <dt class="property-optional"
+    <dd>{{% md %}}Health states to alert on{{% /md %}}</dd><dt class="property-optional"
             title="Optional">
         <span id="monitornames_go">
 <a href="#monitornames_go" style="color: inherit; text-decoration: inherit;">Monitor<wbr>Names</a>
@@ -1545,8 +1362,7 @@ All [input](#inputs) properties are implicitly available as output properties. A
         <span class="property-indicator"></span>
         <span class="property-type">[]string</span>
     </dt>
-    <dd>{{% md %}}Names of health monitor on which to define alert{{% /md %}}</dd>
-    <dt class="property-optional"
+    <dd>{{% md %}}Names of health monitor on which to define alert{{% /md %}}</dd><dt class="property-optional"
             title="Optional">
         <span id="monitortypes_go">
 <a href="#monitortypes_go" style="color: inherit; text-decoration: inherit;">Monitor<wbr>Types</a>
@@ -1554,14 +1370,11 @@ All [input](#inputs) properties are implicitly available as output properties. A
         <span class="property-indicator"></span>
         <span class="property-type">[]string</span>
     </dt>
-    <dd>{{% md %}}Names of health monitor type on which to define alert{{% /md %}}</dd>
-</dl>
+    <dd>{{% md %}}Names of health monitor type on which to define alert{{% /md %}}</dd></dl>
 {{% /choosable %}}
 
 {{% choosable language nodejs %}}
-<dl class="resources-properties">
-
-    <dt class="property-required"
+<dl class="resources-properties"><dt class="property-required"
             title="Required">
         <span id="healthstates_nodejs">
 <a href="#healthstates_nodejs" style="color: inherit; text-decoration: inherit;">health<wbr>States</a>
@@ -1569,8 +1382,7 @@ All [input](#inputs) properties are implicitly available as output properties. A
         <span class="property-indicator"></span>
         <span class="property-type"><a href="#healthstate">Health<wbr>State[]</a></span>
     </dt>
-    <dd>{{% md %}}Health states to alert on{{% /md %}}</dd>
-    <dt class="property-optional"
+    <dd>{{% md %}}Health states to alert on{{% /md %}}</dd><dt class="property-optional"
             title="Optional">
         <span id="monitornames_nodejs">
 <a href="#monitornames_nodejs" style="color: inherit; text-decoration: inherit;">monitor<wbr>Names</a>
@@ -1578,8 +1390,7 @@ All [input](#inputs) properties are implicitly available as output properties. A
         <span class="property-indicator"></span>
         <span class="property-type">string[]</span>
     </dt>
-    <dd>{{% md %}}Names of health monitor on which to define alert{{% /md %}}</dd>
-    <dt class="property-optional"
+    <dd>{{% md %}}Names of health monitor on which to define alert{{% /md %}}</dd><dt class="property-optional"
             title="Optional">
         <span id="monitortypes_nodejs">
 <a href="#monitortypes_nodejs" style="color: inherit; text-decoration: inherit;">monitor<wbr>Types</a>
@@ -1587,14 +1398,11 @@ All [input](#inputs) properties are implicitly available as output properties. A
         <span class="property-indicator"></span>
         <span class="property-type">string[]</span>
     </dt>
-    <dd>{{% md %}}Names of health monitor type on which to define alert{{% /md %}}</dd>
-</dl>
+    <dd>{{% md %}}Names of health monitor type on which to define alert{{% /md %}}</dd></dl>
 {{% /choosable %}}
 
 {{% choosable language python %}}
-<dl class="resources-properties">
-
-    <dt class="property-required"
+<dl class="resources-properties"><dt class="property-required"
             title="Required">
         <span id="health_states_python">
 <a href="#health_states_python" style="color: inherit; text-decoration: inherit;">health_<wbr>states</a>
@@ -1602,8 +1410,7 @@ All [input](#inputs) properties are implicitly available as output properties. A
         <span class="property-indicator"></span>
         <span class="property-type"><a href="#healthstate">Sequence[Health<wbr>State<wbr>Args]</a></span>
     </dt>
-    <dd>{{% md %}}Health states to alert on{{% /md %}}</dd>
-    <dt class="property-optional"
+    <dd>{{% md %}}Health states to alert on{{% /md %}}</dd><dt class="property-optional"
             title="Optional">
         <span id="monitor_names_python">
 <a href="#monitor_names_python" style="color: inherit; text-decoration: inherit;">monitor_<wbr>names</a>
@@ -1611,8 +1418,7 @@ All [input](#inputs) properties are implicitly available as output properties. A
         <span class="property-indicator"></span>
         <span class="property-type">Sequence[str]</span>
     </dt>
-    <dd>{{% md %}}Names of health monitor on which to define alert{{% /md %}}</dd>
-    <dt class="property-optional"
+    <dd>{{% md %}}Names of health monitor on which to define alert{{% /md %}}</dd><dt class="property-optional"
             title="Optional">
         <span id="monitor_types_python">
 <a href="#monitor_types_python" style="color: inherit; text-decoration: inherit;">monitor_<wbr>types</a>
@@ -1620,16 +1426,13 @@ All [input](#inputs) properties are implicitly available as output properties. A
         <span class="property-indicator"></span>
         <span class="property-type">Sequence[str]</span>
     </dt>
-    <dd>{{% md %}}Names of health monitor type on which to define alert{{% /md %}}</dd>
-</dl>
+    <dd>{{% md %}}Names of health monitor type on which to define alert{{% /md %}}</dd></dl>
 {{% /choosable %}}
 
 <h4 id="vmguesthealthalertcriterionresponse">Vm<wbr>Guest<wbr>Health<wbr>Alert<wbr>Criterion<wbr>Response</h4>
 
 {{% choosable language csharp %}}
-<dl class="resources-properties">
-
-    <dt class="property-required"
+<dl class="resources-properties"><dt class="property-required"
             title="Required">
         <span id="healthstates_csharp">
 <a href="#healthstates_csharp" style="color: inherit; text-decoration: inherit;">Health<wbr>States</a>
@@ -1637,8 +1440,7 @@ All [input](#inputs) properties are implicitly available as output properties. A
         <span class="property-indicator"></span>
         <span class="property-type"><a href="#healthstateresponse">List&lt;Pulumi.<wbr>Azure<wbr>Native.<wbr>Alerts<wbr>Management.<wbr>Inputs.<wbr>Health<wbr>State<wbr>Response<wbr>Args&gt;</a></span>
     </dt>
-    <dd>{{% md %}}Health states to alert on{{% /md %}}</dd>
-    <dt class="property-optional"
+    <dd>{{% md %}}Health states to alert on{{% /md %}}</dd><dt class="property-optional"
             title="Optional">
         <span id="monitornames_csharp">
 <a href="#monitornames_csharp" style="color: inherit; text-decoration: inherit;">Monitor<wbr>Names</a>
@@ -1646,8 +1448,7 @@ All [input](#inputs) properties are implicitly available as output properties. A
         <span class="property-indicator"></span>
         <span class="property-type">List&lt;string&gt;</span>
     </dt>
-    <dd>{{% md %}}Names of health monitor on which to define alert{{% /md %}}</dd>
-    <dt class="property-optional"
+    <dd>{{% md %}}Names of health monitor on which to define alert{{% /md %}}</dd><dt class="property-optional"
             title="Optional">
         <span id="monitortypes_csharp">
 <a href="#monitortypes_csharp" style="color: inherit; text-decoration: inherit;">Monitor<wbr>Types</a>
@@ -1655,14 +1456,11 @@ All [input](#inputs) properties are implicitly available as output properties. A
         <span class="property-indicator"></span>
         <span class="property-type">List&lt;string&gt;</span>
     </dt>
-    <dd>{{% md %}}Names of health monitor type on which to define alert{{% /md %}}</dd>
-</dl>
+    <dd>{{% md %}}Names of health monitor type on which to define alert{{% /md %}}</dd></dl>
 {{% /choosable %}}
 
 {{% choosable language go %}}
-<dl class="resources-properties">
-
-    <dt class="property-required"
+<dl class="resources-properties"><dt class="property-required"
             title="Required">
         <span id="healthstates_go">
 <a href="#healthstates_go" style="color: inherit; text-decoration: inherit;">Health<wbr>States</a>
@@ -1670,8 +1468,7 @@ All [input](#inputs) properties are implicitly available as output properties. A
         <span class="property-indicator"></span>
         <span class="property-type"><a href="#healthstateresponse">[]Health<wbr>State<wbr>Response</a></span>
     </dt>
-    <dd>{{% md %}}Health states to alert on{{% /md %}}</dd>
-    <dt class="property-optional"
+    <dd>{{% md %}}Health states to alert on{{% /md %}}</dd><dt class="property-optional"
             title="Optional">
         <span id="monitornames_go">
 <a href="#monitornames_go" style="color: inherit; text-decoration: inherit;">Monitor<wbr>Names</a>
@@ -1679,8 +1476,7 @@ All [input](#inputs) properties are implicitly available as output properties. A
         <span class="property-indicator"></span>
         <span class="property-type">[]string</span>
     </dt>
-    <dd>{{% md %}}Names of health monitor on which to define alert{{% /md %}}</dd>
-    <dt class="property-optional"
+    <dd>{{% md %}}Names of health monitor on which to define alert{{% /md %}}</dd><dt class="property-optional"
             title="Optional">
         <span id="monitortypes_go">
 <a href="#monitortypes_go" style="color: inherit; text-decoration: inherit;">Monitor<wbr>Types</a>
@@ -1688,14 +1484,11 @@ All [input](#inputs) properties are implicitly available as output properties. A
         <span class="property-indicator"></span>
         <span class="property-type">[]string</span>
     </dt>
-    <dd>{{% md %}}Names of health monitor type on which to define alert{{% /md %}}</dd>
-</dl>
+    <dd>{{% md %}}Names of health monitor type on which to define alert{{% /md %}}</dd></dl>
 {{% /choosable %}}
 
 {{% choosable language nodejs %}}
-<dl class="resources-properties">
-
-    <dt class="property-required"
+<dl class="resources-properties"><dt class="property-required"
             title="Required">
         <span id="healthstates_nodejs">
 <a href="#healthstates_nodejs" style="color: inherit; text-decoration: inherit;">health<wbr>States</a>
@@ -1703,8 +1496,7 @@ All [input](#inputs) properties are implicitly available as output properties. A
         <span class="property-indicator"></span>
         <span class="property-type"><a href="#healthstateresponse">Health<wbr>State<wbr>Response[]</a></span>
     </dt>
-    <dd>{{% md %}}Health states to alert on{{% /md %}}</dd>
-    <dt class="property-optional"
+    <dd>{{% md %}}Health states to alert on{{% /md %}}</dd><dt class="property-optional"
             title="Optional">
         <span id="monitornames_nodejs">
 <a href="#monitornames_nodejs" style="color: inherit; text-decoration: inherit;">monitor<wbr>Names</a>
@@ -1712,8 +1504,7 @@ All [input](#inputs) properties are implicitly available as output properties. A
         <span class="property-indicator"></span>
         <span class="property-type">string[]</span>
     </dt>
-    <dd>{{% md %}}Names of health monitor on which to define alert{{% /md %}}</dd>
-    <dt class="property-optional"
+    <dd>{{% md %}}Names of health monitor on which to define alert{{% /md %}}</dd><dt class="property-optional"
             title="Optional">
         <span id="monitortypes_nodejs">
 <a href="#monitortypes_nodejs" style="color: inherit; text-decoration: inherit;">monitor<wbr>Types</a>
@@ -1721,14 +1512,11 @@ All [input](#inputs) properties are implicitly available as output properties. A
         <span class="property-indicator"></span>
         <span class="property-type">string[]</span>
     </dt>
-    <dd>{{% md %}}Names of health monitor type on which to define alert{{% /md %}}</dd>
-</dl>
+    <dd>{{% md %}}Names of health monitor type on which to define alert{{% /md %}}</dd></dl>
 {{% /choosable %}}
 
 {{% choosable language python %}}
-<dl class="resources-properties">
-
-    <dt class="property-required"
+<dl class="resources-properties"><dt class="property-required"
             title="Required">
         <span id="health_states_python">
 <a href="#health_states_python" style="color: inherit; text-decoration: inherit;">health_<wbr>states</a>
@@ -1736,8 +1524,7 @@ All [input](#inputs) properties are implicitly available as output properties. A
         <span class="property-indicator"></span>
         <span class="property-type"><a href="#healthstateresponse">Sequence[Health<wbr>State<wbr>Response<wbr>Args]</a></span>
     </dt>
-    <dd>{{% md %}}Health states to alert on{{% /md %}}</dd>
-    <dt class="property-optional"
+    <dd>{{% md %}}Health states to alert on{{% /md %}}</dd><dt class="property-optional"
             title="Optional">
         <span id="monitor_names_python">
 <a href="#monitor_names_python" style="color: inherit; text-decoration: inherit;">monitor_<wbr>names</a>
@@ -1745,8 +1532,7 @@ All [input](#inputs) properties are implicitly available as output properties. A
         <span class="property-indicator"></span>
         <span class="property-type">Sequence[str]</span>
     </dt>
-    <dd>{{% md %}}Names of health monitor on which to define alert{{% /md %}}</dd>
-    <dt class="property-optional"
+    <dd>{{% md %}}Names of health monitor on which to define alert{{% /md %}}</dd><dt class="property-optional"
             title="Optional">
         <span id="monitor_types_python">
 <a href="#monitor_types_python" style="color: inherit; text-decoration: inherit;">monitor_<wbr>types</a>
@@ -1754,8 +1540,7 @@ All [input](#inputs) properties are implicitly available as output properties. A
         <span class="property-indicator"></span>
         <span class="property-type">Sequence[str]</span>
     </dt>
-    <dd>{{% md %}}Names of health monitor type on which to define alert{{% /md %}}</dd>
-</dl>
+    <dd>{{% md %}}Names of health monitor type on which to define alert{{% /md %}}</dd></dl>
 {{% /choosable %}}
 ## Import
 

@@ -13,11 +13,17 @@ meta_desc: "Documentation for the azure.network.VirtualNetworkGatewayConnection 
 Manages a connection in an existing Virtual Network Gateway.
 
 {{% examples %}}
+
 ## Example Usage
 
 {{< chooser language "typescript,python,go,csharp" / >}}
+
+
 ### Site-to-Site connection
-{{% example csharp %}}
+
+
+{{< example csharp >}}
+
 ```csharp
 using Pulumi;
 using Azure = Pulumi.Azure;
@@ -97,9 +103,12 @@ class MyStack : Stack
 }
 ```
 
-{{% /example %}}
 
-{{% example go %}}
+{{< /example >}}
+
+
+{{< example go >}}
+
 ```go
 package main
 
@@ -191,9 +200,12 @@ func main() {
 }
 ```
 
-{{% /example %}}
 
-{{% example python %}}
+{{< /example >}}
+
+
+{{< example python >}}
+
 ```python
 import pulumi
 import pulumi_azure as azure
@@ -238,9 +250,12 @@ onpremise_virtual_network_gateway_connection = azure.network.VirtualNetworkGatew
     shared_key="4-v3ry-53cr37-1p53c-5h4r3d-k3y")
 ```
 
-{{% /example %}}
 
-{{% example typescript %}}
+{{< /example >}}
+
+
+{{< example typescript >}}
+
 
 ```typescript
 import * as pulumi from "@pulumi/pulumi";
@@ -292,10 +307,17 @@ const onpremiseVirtualNetworkGatewayConnection = new azure.network.VirtualNetwor
 });
 ```
 
-{{% /example %}}
+
+{{< /example >}}
+
+
+
 
 ### VNet-to-VNet connection
-{{% example csharp %}}
+
+
+{{< example csharp >}}
+
 ```csharp
 using Pulumi;
 using Azure = Pulumi.Azure;
@@ -417,9 +439,12 @@ class MyStack : Stack
 }
 ```
 
-{{% /example %}}
 
-{{% example go %}}
+{{< /example >}}
+
+
+{{< example go >}}
+
 ```go
 package main
 
@@ -560,9 +585,12 @@ func main() {
 }
 ```
 
-{{% /example %}}
 
-{{% example python %}}
+{{< /example >}}
+
+
+{{< example python >}}
+
 ```python
 import pulumi
 import pulumi_azure as azure
@@ -631,9 +659,12 @@ europe_to_us = azure.network.VirtualNetworkGatewayConnection("europeToUs",
     shared_key="4-v3ry-53cr37-1p53c-5h4r3d-k3y")
 ```
 
-{{% /example %}}
 
-{{% example typescript %}}
+{{< /example >}}
+
+
+{{< example typescript >}}
+
 
 ```typescript
 import * as pulumi from "@pulumi/pulumi";
@@ -713,9 +744,16 @@ const europeToUs = new azure.network.VirtualNetworkGatewayConnection("europeToUs
 });
 ```
 
-{{% /example %}}
+
+{{< /example >}}
+
+
+
+
 
 {{% /examples %}}
+
+
 
 
 ## Create a VirtualNetworkGatewayConnection Resource {#create}
@@ -740,9 +778,7 @@ const europeToUs = new azure.network.VirtualNetworkGatewayConnection("europeToUs
 
 {{% choosable language nodejs %}}
 
-<dl class="resources-properties">
-  
-    <dt
+<dl class="resources-properties"><dt
         class="property-required" title="Required">
         <span>name</span>
         <span class="property-indicator"></span>
@@ -750,9 +786,7 @@ const europeToUs = new azure.network.VirtualNetworkGatewayConnection("europeToUs
     </dt>
     <dd>
       The unique name of the resource.
-    </dd>
-  
-    <dt
+    </dd><dt
         class="property-required" title="Required">
         <span>args</span>
         <span class="property-indicator"></span>
@@ -760,9 +794,7 @@ const europeToUs = new azure.network.VirtualNetworkGatewayConnection("europeToUs
     </dt>
     <dd>
       The arguments to resource properties.
-    </dd>
-  
-    <dt
+    </dd><dt
         class="property-optional" title="Optional">
         <span>opts</span>
         <span class="property-indicator"></span>
@@ -770,10 +802,7 @@ const europeToUs = new azure.network.VirtualNetworkGatewayConnection("europeToUs
     </dt>
     <dd>
       Bag of options to control resource&#39;s behavior.
-    </dd>
-  
-
-</dl>
+    </dd></dl>
 
 {{% /choosable %}}
 
@@ -799,9 +828,7 @@ const europeToUs = new azure.network.VirtualNetworkGatewayConnection("europeToUs
 
 {{% choosable language go %}}
 
-<dl class="resources-properties">
-  
-    <dt
+<dl class="resources-properties"><dt
         class="property-optional" title="Optional">
         <span>ctx</span>
         <span class="property-indicator"></span>
@@ -809,9 +836,7 @@ const europeToUs = new azure.network.VirtualNetworkGatewayConnection("europeToUs
     </dt>
     <dd>
       Context object for the current deployment.
-    </dd>
-  
-    <dt
+    </dd><dt
         class="property-required" title="Required">
         <span>name</span>
         <span class="property-indicator"></span>
@@ -819,9 +844,7 @@ const europeToUs = new azure.network.VirtualNetworkGatewayConnection("europeToUs
     </dt>
     <dd>
       The unique name of the resource.
-    </dd>
-  
-    <dt
+    </dd><dt
         class="property-required" title="Required">
         <span>args</span>
         <span class="property-indicator"></span>
@@ -829,9 +852,7 @@ const europeToUs = new azure.network.VirtualNetworkGatewayConnection("europeToUs
     </dt>
     <dd>
       The arguments to resource properties.
-    </dd>
-  
-    <dt
+    </dd><dt
         class="property-optional" title="Optional">
         <span>opts</span>
         <span class="property-indicator"></span>
@@ -839,18 +860,13 @@ const europeToUs = new azure.network.VirtualNetworkGatewayConnection("europeToUs
     </dt>
     <dd>
       Bag of options to control resource&#39;s behavior.
-    </dd>
-  
-
-</dl>
+    </dd></dl>
 
 {{% /choosable %}}
 
 {{% choosable language csharp %}}
 
-<dl class="resources-properties">
-  
-    <dt
+<dl class="resources-properties"><dt
         class="property-required" title="Required">
         <span>name</span>
         <span class="property-indicator"></span>
@@ -858,9 +874,7 @@ const europeToUs = new azure.network.VirtualNetworkGatewayConnection("europeToUs
     </dt>
     <dd>
       The unique name of the resource.
-    </dd>
-  
-    <dt
+    </dd><dt
         class="property-required" title="Required">
         <span>args</span>
         <span class="property-indicator"></span>
@@ -868,9 +882,7 @@ const europeToUs = new azure.network.VirtualNetworkGatewayConnection("europeToUs
     </dt>
     <dd>
       The arguments to resource properties.
-    </dd>
-  
-    <dt
+    </dd><dt
         class="property-optional" title="Optional">
         <span>opts</span>
         <span class="property-indicator"></span>
@@ -878,10 +890,7 @@ const europeToUs = new azure.network.VirtualNetworkGatewayConnection("europeToUs
     </dt>
     <dd>
       Bag of options to control resource&#39;s behavior.
-    </dd>
-  
-
-</dl>
+    </dd></dl>
 
 {{% /choosable %}}
 
@@ -896,9 +905,7 @@ The VirtualNetworkGatewayConnection resource accepts the following [input]({{< r
 
 
 {{% choosable language csharp %}}
-<dl class="resources-properties">
-
-    <dt class="property-required"
+<dl class="resources-properties"><dt class="property-required"
             title="Required">
         <span id="resourcegroupname_csharp">
 <a href="#resourcegroupname_csharp" style="color: inherit; text-decoration: inherit;">Resource<wbr>Group<wbr>Name</a>
@@ -908,8 +915,7 @@ The VirtualNetworkGatewayConnection resource accepts the following [input]({{< r
     </dt>
     <dd>{{% md %}}The name of the resource group in which to
 create the connection Changing the name forces a new resource to be created.
-{{% /md %}}</dd>
-    <dt class="property-required"
+{{% /md %}}</dd><dt class="property-required"
             title="Required">
         <span id="type_csharp">
 <a href="#type_csharp" style="color: inherit; text-decoration: inherit;">Type</a>
@@ -922,8 +928,7 @@ create the connection Changing the name forces a new resource to be created.
 Each connection type requires different mandatory arguments (refer to the
 examples above). Changing the connection type will force a new connection
 to be created.
-{{% /md %}}</dd>
-    <dt class="property-required"
+{{% /md %}}</dd><dt class="property-required"
             title="Required">
         <span id="virtualnetworkgatewayid_csharp">
 <a href="#virtualnetworkgatewayid_csharp" style="color: inherit; text-decoration: inherit;">Virtual<wbr>Network<wbr>Gateway<wbr>Id</a>
@@ -934,8 +939,7 @@ to be created.
     <dd>{{% md %}}The ID of the Virtual Network Gateway
 in which the connection will be created. Changing the gateway forces a new
 resource to be created.
-{{% /md %}}</dd>
-    <dt class="property-optional"
+{{% /md %}}</dd><dt class="property-optional"
             title="Optional">
         <span id="authorizationkey_csharp">
 <a href="#authorizationkey_csharp" style="color: inherit; text-decoration: inherit;">Authorization<wbr>Key</a>
@@ -946,8 +950,7 @@ resource to be created.
     <dd>{{% md %}}The authorization key associated with the
 Express Route Circuit. This field is required only if the type is an
 ExpressRoute connection.
-{{% /md %}}</dd>
-    <dt class="property-optional"
+{{% /md %}}</dd><dt class="property-optional"
             title="Optional">
         <span id="connectionprotocol_csharp">
 <a href="#connectionprotocol_csharp" style="color: inherit; text-decoration: inherit;">Connection<wbr>Protocol</a>
@@ -959,8 +962,7 @@ ExpressRoute connection.
 values are `IKEv1` and `IKEv2`. Defaults to `IKEv2`.
 Changing this value will force a resource to be created.
 > **Note**: Only valid for `IPSec` connections on virtual network gateways with SKU `VpnGw1`, `VpnGw2`, `VpnGw3`, `VpnGw1AZ`, `VpnGw2AZ` or `VpnGw3AZ`.
-{{% /md %}}</dd>
-    <dt class="property-optional"
+{{% /md %}}</dd><dt class="property-optional"
             title="Optional">
         <span id="dpdtimeoutseconds_csharp">
 <a href="#dpdtimeoutseconds_csharp" style="color: inherit; text-decoration: inherit;">Dpd<wbr>Timeout<wbr>Seconds</a>
@@ -969,8 +971,7 @@ Changing this value will force a resource to be created.
         <span class="property-type">int</span>
     </dt>
     <dd>{{% md %}}The dead peer detection timeout of this connection in seconds. Changing this forces a new resource to be created.
-{{% /md %}}</dd>
-    <dt class="property-optional"
+{{% /md %}}</dd><dt class="property-optional"
             title="Optional">
         <span id="enablebgp_csharp">
 <a href="#enablebgp_csharp" style="color: inherit; text-decoration: inherit;">Enable<wbr>Bgp</a>
@@ -980,8 +981,7 @@ Changing this value will force a resource to be created.
     </dt>
     <dd>{{% md %}}If `true`, BGP (Border Gateway Protocol) is enabled
 for this connection. Defaults to `false`.
-{{% /md %}}</dd>
-    <dt class="property-optional"
+{{% /md %}}</dd><dt class="property-optional"
             title="Optional">
         <span id="expressroutecircuitid_csharp">
 <a href="#expressroutecircuitid_csharp" style="color: inherit; text-decoration: inherit;">Express<wbr>Route<wbr>Circuit<wbr>Id</a>
@@ -992,8 +992,7 @@ for this connection. Defaults to `false`.
     <dd>{{% md %}}The ID of the Express Route Circuit
 when creating an ExpressRoute connection (i.e. when `type` is `ExpressRoute`).
 The Express Route Circuit can be in the same or in a different subscription.
-{{% /md %}}</dd>
-    <dt class="property-optional"
+{{% /md %}}</dd><dt class="property-optional"
             title="Optional">
         <span id="expressroutegatewaybypass_csharp">
 <a href="#expressroutegatewaybypass_csharp" style="color: inherit; text-decoration: inherit;">Express<wbr>Route<wbr>Gateway<wbr>Bypass</a>
@@ -1002,8 +1001,7 @@ The Express Route Circuit can be in the same or in a different subscription.
         <span class="property-type">bool</span>
     </dt>
     <dd>{{% md %}}If `true`, data packets will bypass ExpressRoute Gateway for data forwarding This is only valid for ExpressRoute connections.
-{{% /md %}}</dd>
-    <dt class="property-optional"
+{{% /md %}}</dd><dt class="property-optional"
             title="Optional">
         <span id="ipsecpolicy_csharp">
 <a href="#ipsecpolicy_csharp" style="color: inherit; text-decoration: inherit;">Ipsec<wbr>Policy</a>
@@ -1014,8 +1012,7 @@ The Express Route Circuit can be in the same or in a different subscription.
     <dd>{{% md %}}A `ipsec_policy` block which is documented below.
 Only a single policy can be defined for a connection. For details on
 custom policies refer to [the relevant section in the Azure documentation](https://docs.microsoft.com/en-us/azure/vpn-gateway/vpn-gateway-ipsecikepolicy-rm-powershell).
-{{% /md %}}</dd>
-    <dt class="property-optional"
+{{% /md %}}</dd><dt class="property-optional"
             title="Optional">
         <span id="localazureipaddressenabled_csharp">
 <a href="#localazureipaddressenabled_csharp" style="color: inherit; text-decoration: inherit;">Local<wbr>Azure<wbr>Ip<wbr>Address<wbr>Enabled</a>
@@ -1024,8 +1021,7 @@ custom policies refer to [the relevant section in the Azure documentation](https
         <span class="property-type">bool</span>
     </dt>
     <dd>{{% md %}}Use private local Azure IP for the connection. Changing this forces a new resource to be created.
-{{% /md %}}</dd>
-    <dt class="property-optional"
+{{% /md %}}</dd><dt class="property-optional"
             title="Optional">
         <span id="localnetworkgatewayid_csharp">
 <a href="#localnetworkgatewayid_csharp" style="color: inherit; text-decoration: inherit;">Local<wbr>Network<wbr>Gateway<wbr>Id</a>
@@ -1035,8 +1031,7 @@ custom policies refer to [the relevant section in the Azure documentation](https
     </dt>
     <dd>{{% md %}}The ID of the local network gateway
 when creating Site-to-Site connection (i.e. when `type` is `IPsec`).
-{{% /md %}}</dd>
-    <dt class="property-optional"
+{{% /md %}}</dd><dt class="property-optional"
             title="Optional">
         <span id="location_csharp">
 <a href="#location_csharp" style="color: inherit; text-decoration: inherit;">Location</a>
@@ -1046,8 +1041,7 @@ when creating Site-to-Site connection (i.e. when `type` is `IPsec`).
     </dt>
     <dd>{{% md %}}The location/region where the connection is
 located. Changing this forces a new resource to be created.
-{{% /md %}}</dd>
-    <dt class="property-optional"
+{{% /md %}}</dd><dt class="property-optional"
             title="Optional">
         <span id="name_csharp">
 <a href="#name_csharp" style="color: inherit; text-decoration: inherit;">Name</a>
@@ -1057,8 +1051,7 @@ located. Changing this forces a new resource to be created.
     </dt>
     <dd>{{% md %}}The name of the connection. Changing the name forces a
 new resource to be created.
-{{% /md %}}</dd>
-    <dt class="property-optional"
+{{% /md %}}</dd><dt class="property-optional"
             title="Optional">
         <span id="peervirtualnetworkgatewayid_csharp">
 <a href="#peervirtualnetworkgatewayid_csharp" style="color: inherit; text-decoration: inherit;">Peer<wbr>Virtual<wbr>Network<wbr>Gateway<wbr>Id</a>
@@ -1070,8 +1063,7 @@ new resource to be created.
 network gateway when creating a VNet-to-VNet connection (i.e. when `type`
 is `Vnet2Vnet`). The peer Virtual Network Gateway can be in the same or
 in a different subscription.
-{{% /md %}}</dd>
-    <dt class="property-optional"
+{{% /md %}}</dd><dt class="property-optional"
             title="Optional">
         <span id="routingweight_csharp">
 <a href="#routingweight_csharp" style="color: inherit; text-decoration: inherit;">Routing<wbr>Weight</a>
@@ -1080,8 +1072,7 @@ in a different subscription.
         <span class="property-type">int</span>
     </dt>
     <dd>{{% md %}}The routing weight. Defaults to `10`.
-{{% /md %}}</dd>
-    <dt class="property-optional"
+{{% /md %}}</dd><dt class="property-optional"
             title="Optional">
         <span id="sharedkey_csharp">
 <a href="#sharedkey_csharp" style="color: inherit; text-decoration: inherit;">Shared<wbr>Key</a>
@@ -1091,8 +1082,7 @@ in a different subscription.
     </dt>
     <dd>{{% md %}}The shared IPSec key. A key could be provided if a
 Site-to-Site, VNet-to-VNet or ExpressRoute connection is created.
-{{% /md %}}</dd>
-    <dt class="property-optional"
+{{% /md %}}</dd><dt class="property-optional"
             title="Optional">
         <span id="tags_csharp">
 <a href="#tags_csharp" style="color: inherit; text-decoration: inherit;">Tags</a>
@@ -1101,8 +1091,7 @@ Site-to-Site, VNet-to-VNet or ExpressRoute connection is created.
         <span class="property-type">Dictionary&lt;string, string&gt;</span>
     </dt>
     <dd>{{% md %}}A mapping of tags to assign to the resource.
-{{% /md %}}</dd>
-    <dt class="property-optional"
+{{% /md %}}</dd><dt class="property-optional"
             title="Optional">
         <span id="trafficselectorpolicy_csharp">
 <a href="#trafficselectorpolicy_csharp" style="color: inherit; text-decoration: inherit;">Traffic<wbr>Selector<wbr>Policy</a>
@@ -1113,8 +1102,7 @@ Site-to-Site, VNet-to-VNet or ExpressRoute connection is created.
     <dd>{{% md %}}A `traffic_selector_policy` which allows to specify traffic selector policy proposal to be used in a virtual network gateway connection.
 Only one block can be defined for a connection.
 For details about traffic selectors refer to [the relevant section in the Azure documentation](https://docs.microsoft.com/en-us/azure/vpn-gateway/vpn-gateway-connect-multiple-policybased-rm-ps).
-{{% /md %}}</dd>
-    <dt class="property-optional"
+{{% /md %}}</dd><dt class="property-optional"
             title="Optional">
         <span id="usepolicybasedtrafficselectors_csharp">
 <a href="#usepolicybasedtrafficselectors_csharp" style="color: inherit; text-decoration: inherit;">Use<wbr>Policy<wbr>Based<wbr>Traffic<wbr>Selectors</a>
@@ -1125,14 +1113,11 @@ For details about traffic selectors refer to [the relevant section in the Azure 
     <dd>{{% md %}}If `true`, policy-based traffic
 selectors are enabled for this connection. Enabling policy-based traffic
 selectors requires an `ipsec_policy` block. Defaults to `false`.
-{{% /md %}}</dd>
-</dl>
+{{% /md %}}</dd></dl>
 {{% /choosable %}}
 
 {{% choosable language go %}}
-<dl class="resources-properties">
-
-    <dt class="property-required"
+<dl class="resources-properties"><dt class="property-required"
             title="Required">
         <span id="resourcegroupname_go">
 <a href="#resourcegroupname_go" style="color: inherit; text-decoration: inherit;">Resource<wbr>Group<wbr>Name</a>
@@ -1142,8 +1127,7 @@ selectors requires an `ipsec_policy` block. Defaults to `false`.
     </dt>
     <dd>{{% md %}}The name of the resource group in which to
 create the connection Changing the name forces a new resource to be created.
-{{% /md %}}</dd>
-    <dt class="property-required"
+{{% /md %}}</dd><dt class="property-required"
             title="Required">
         <span id="type_go">
 <a href="#type_go" style="color: inherit; text-decoration: inherit;">Type</a>
@@ -1156,8 +1140,7 @@ create the connection Changing the name forces a new resource to be created.
 Each connection type requires different mandatory arguments (refer to the
 examples above). Changing the connection type will force a new connection
 to be created.
-{{% /md %}}</dd>
-    <dt class="property-required"
+{{% /md %}}</dd><dt class="property-required"
             title="Required">
         <span id="virtualnetworkgatewayid_go">
 <a href="#virtualnetworkgatewayid_go" style="color: inherit; text-decoration: inherit;">Virtual<wbr>Network<wbr>Gateway<wbr>Id</a>
@@ -1168,8 +1151,7 @@ to be created.
     <dd>{{% md %}}The ID of the Virtual Network Gateway
 in which the connection will be created. Changing the gateway forces a new
 resource to be created.
-{{% /md %}}</dd>
-    <dt class="property-optional"
+{{% /md %}}</dd><dt class="property-optional"
             title="Optional">
         <span id="authorizationkey_go">
 <a href="#authorizationkey_go" style="color: inherit; text-decoration: inherit;">Authorization<wbr>Key</a>
@@ -1180,8 +1162,7 @@ resource to be created.
     <dd>{{% md %}}The authorization key associated with the
 Express Route Circuit. This field is required only if the type is an
 ExpressRoute connection.
-{{% /md %}}</dd>
-    <dt class="property-optional"
+{{% /md %}}</dd><dt class="property-optional"
             title="Optional">
         <span id="connectionprotocol_go">
 <a href="#connectionprotocol_go" style="color: inherit; text-decoration: inherit;">Connection<wbr>Protocol</a>
@@ -1193,8 +1174,7 @@ ExpressRoute connection.
 values are `IKEv1` and `IKEv2`. Defaults to `IKEv2`.
 Changing this value will force a resource to be created.
 > **Note**: Only valid for `IPSec` connections on virtual network gateways with SKU `VpnGw1`, `VpnGw2`, `VpnGw3`, `VpnGw1AZ`, `VpnGw2AZ` or `VpnGw3AZ`.
-{{% /md %}}</dd>
-    <dt class="property-optional"
+{{% /md %}}</dd><dt class="property-optional"
             title="Optional">
         <span id="dpdtimeoutseconds_go">
 <a href="#dpdtimeoutseconds_go" style="color: inherit; text-decoration: inherit;">Dpd<wbr>Timeout<wbr>Seconds</a>
@@ -1203,8 +1183,7 @@ Changing this value will force a resource to be created.
         <span class="property-type">int</span>
     </dt>
     <dd>{{% md %}}The dead peer detection timeout of this connection in seconds. Changing this forces a new resource to be created.
-{{% /md %}}</dd>
-    <dt class="property-optional"
+{{% /md %}}</dd><dt class="property-optional"
             title="Optional">
         <span id="enablebgp_go">
 <a href="#enablebgp_go" style="color: inherit; text-decoration: inherit;">Enable<wbr>Bgp</a>
@@ -1214,8 +1193,7 @@ Changing this value will force a resource to be created.
     </dt>
     <dd>{{% md %}}If `true`, BGP (Border Gateway Protocol) is enabled
 for this connection. Defaults to `false`.
-{{% /md %}}</dd>
-    <dt class="property-optional"
+{{% /md %}}</dd><dt class="property-optional"
             title="Optional">
         <span id="expressroutecircuitid_go">
 <a href="#expressroutecircuitid_go" style="color: inherit; text-decoration: inherit;">Express<wbr>Route<wbr>Circuit<wbr>Id</a>
@@ -1226,8 +1204,7 @@ for this connection. Defaults to `false`.
     <dd>{{% md %}}The ID of the Express Route Circuit
 when creating an ExpressRoute connection (i.e. when `type` is `ExpressRoute`).
 The Express Route Circuit can be in the same or in a different subscription.
-{{% /md %}}</dd>
-    <dt class="property-optional"
+{{% /md %}}</dd><dt class="property-optional"
             title="Optional">
         <span id="expressroutegatewaybypass_go">
 <a href="#expressroutegatewaybypass_go" style="color: inherit; text-decoration: inherit;">Express<wbr>Route<wbr>Gateway<wbr>Bypass</a>
@@ -1236,8 +1213,7 @@ The Express Route Circuit can be in the same or in a different subscription.
         <span class="property-type">bool</span>
     </dt>
     <dd>{{% md %}}If `true`, data packets will bypass ExpressRoute Gateway for data forwarding This is only valid for ExpressRoute connections.
-{{% /md %}}</dd>
-    <dt class="property-optional"
+{{% /md %}}</dd><dt class="property-optional"
             title="Optional">
         <span id="ipsecpolicy_go">
 <a href="#ipsecpolicy_go" style="color: inherit; text-decoration: inherit;">Ipsec<wbr>Policy</a>
@@ -1248,8 +1224,7 @@ The Express Route Circuit can be in the same or in a different subscription.
     <dd>{{% md %}}A `ipsec_policy` block which is documented below.
 Only a single policy can be defined for a connection. For details on
 custom policies refer to [the relevant section in the Azure documentation](https://docs.microsoft.com/en-us/azure/vpn-gateway/vpn-gateway-ipsecikepolicy-rm-powershell).
-{{% /md %}}</dd>
-    <dt class="property-optional"
+{{% /md %}}</dd><dt class="property-optional"
             title="Optional">
         <span id="localazureipaddressenabled_go">
 <a href="#localazureipaddressenabled_go" style="color: inherit; text-decoration: inherit;">Local<wbr>Azure<wbr>Ip<wbr>Address<wbr>Enabled</a>
@@ -1258,8 +1233,7 @@ custom policies refer to [the relevant section in the Azure documentation](https
         <span class="property-type">bool</span>
     </dt>
     <dd>{{% md %}}Use private local Azure IP for the connection. Changing this forces a new resource to be created.
-{{% /md %}}</dd>
-    <dt class="property-optional"
+{{% /md %}}</dd><dt class="property-optional"
             title="Optional">
         <span id="localnetworkgatewayid_go">
 <a href="#localnetworkgatewayid_go" style="color: inherit; text-decoration: inherit;">Local<wbr>Network<wbr>Gateway<wbr>Id</a>
@@ -1269,8 +1243,7 @@ custom policies refer to [the relevant section in the Azure documentation](https
     </dt>
     <dd>{{% md %}}The ID of the local network gateway
 when creating Site-to-Site connection (i.e. when `type` is `IPsec`).
-{{% /md %}}</dd>
-    <dt class="property-optional"
+{{% /md %}}</dd><dt class="property-optional"
             title="Optional">
         <span id="location_go">
 <a href="#location_go" style="color: inherit; text-decoration: inherit;">Location</a>
@@ -1280,8 +1253,7 @@ when creating Site-to-Site connection (i.e. when `type` is `IPsec`).
     </dt>
     <dd>{{% md %}}The location/region where the connection is
 located. Changing this forces a new resource to be created.
-{{% /md %}}</dd>
-    <dt class="property-optional"
+{{% /md %}}</dd><dt class="property-optional"
             title="Optional">
         <span id="name_go">
 <a href="#name_go" style="color: inherit; text-decoration: inherit;">Name</a>
@@ -1291,8 +1263,7 @@ located. Changing this forces a new resource to be created.
     </dt>
     <dd>{{% md %}}The name of the connection. Changing the name forces a
 new resource to be created.
-{{% /md %}}</dd>
-    <dt class="property-optional"
+{{% /md %}}</dd><dt class="property-optional"
             title="Optional">
         <span id="peervirtualnetworkgatewayid_go">
 <a href="#peervirtualnetworkgatewayid_go" style="color: inherit; text-decoration: inherit;">Peer<wbr>Virtual<wbr>Network<wbr>Gateway<wbr>Id</a>
@@ -1304,8 +1275,7 @@ new resource to be created.
 network gateway when creating a VNet-to-VNet connection (i.e. when `type`
 is `Vnet2Vnet`). The peer Virtual Network Gateway can be in the same or
 in a different subscription.
-{{% /md %}}</dd>
-    <dt class="property-optional"
+{{% /md %}}</dd><dt class="property-optional"
             title="Optional">
         <span id="routingweight_go">
 <a href="#routingweight_go" style="color: inherit; text-decoration: inherit;">Routing<wbr>Weight</a>
@@ -1314,8 +1284,7 @@ in a different subscription.
         <span class="property-type">int</span>
     </dt>
     <dd>{{% md %}}The routing weight. Defaults to `10`.
-{{% /md %}}</dd>
-    <dt class="property-optional"
+{{% /md %}}</dd><dt class="property-optional"
             title="Optional">
         <span id="sharedkey_go">
 <a href="#sharedkey_go" style="color: inherit; text-decoration: inherit;">Shared<wbr>Key</a>
@@ -1325,8 +1294,7 @@ in a different subscription.
     </dt>
     <dd>{{% md %}}The shared IPSec key. A key could be provided if a
 Site-to-Site, VNet-to-VNet or ExpressRoute connection is created.
-{{% /md %}}</dd>
-    <dt class="property-optional"
+{{% /md %}}</dd><dt class="property-optional"
             title="Optional">
         <span id="tags_go">
 <a href="#tags_go" style="color: inherit; text-decoration: inherit;">Tags</a>
@@ -1335,8 +1303,7 @@ Site-to-Site, VNet-to-VNet or ExpressRoute connection is created.
         <span class="property-type">map[string]string</span>
     </dt>
     <dd>{{% md %}}A mapping of tags to assign to the resource.
-{{% /md %}}</dd>
-    <dt class="property-optional"
+{{% /md %}}</dd><dt class="property-optional"
             title="Optional">
         <span id="trafficselectorpolicy_go">
 <a href="#trafficselectorpolicy_go" style="color: inherit; text-decoration: inherit;">Traffic<wbr>Selector<wbr>Policy</a>
@@ -1347,8 +1314,7 @@ Site-to-Site, VNet-to-VNet or ExpressRoute connection is created.
     <dd>{{% md %}}A `traffic_selector_policy` which allows to specify traffic selector policy proposal to be used in a virtual network gateway connection.
 Only one block can be defined for a connection.
 For details about traffic selectors refer to [the relevant section in the Azure documentation](https://docs.microsoft.com/en-us/azure/vpn-gateway/vpn-gateway-connect-multiple-policybased-rm-ps).
-{{% /md %}}</dd>
-    <dt class="property-optional"
+{{% /md %}}</dd><dt class="property-optional"
             title="Optional">
         <span id="usepolicybasedtrafficselectors_go">
 <a href="#usepolicybasedtrafficselectors_go" style="color: inherit; text-decoration: inherit;">Use<wbr>Policy<wbr>Based<wbr>Traffic<wbr>Selectors</a>
@@ -1359,14 +1325,11 @@ For details about traffic selectors refer to [the relevant section in the Azure 
     <dd>{{% md %}}If `true`, policy-based traffic
 selectors are enabled for this connection. Enabling policy-based traffic
 selectors requires an `ipsec_policy` block. Defaults to `false`.
-{{% /md %}}</dd>
-</dl>
+{{% /md %}}</dd></dl>
 {{% /choosable %}}
 
 {{% choosable language nodejs %}}
-<dl class="resources-properties">
-
-    <dt class="property-required"
+<dl class="resources-properties"><dt class="property-required"
             title="Required">
         <span id="resourcegroupname_nodejs">
 <a href="#resourcegroupname_nodejs" style="color: inherit; text-decoration: inherit;">resource<wbr>Group<wbr>Name</a>
@@ -1376,8 +1339,7 @@ selectors requires an `ipsec_policy` block. Defaults to `false`.
     </dt>
     <dd>{{% md %}}The name of the resource group in which to
 create the connection Changing the name forces a new resource to be created.
-{{% /md %}}</dd>
-    <dt class="property-required"
+{{% /md %}}</dd><dt class="property-required"
             title="Required">
         <span id="type_nodejs">
 <a href="#type_nodejs" style="color: inherit; text-decoration: inherit;">type</a>
@@ -1390,8 +1352,7 @@ create the connection Changing the name forces a new resource to be created.
 Each connection type requires different mandatory arguments (refer to the
 examples above). Changing the connection type will force a new connection
 to be created.
-{{% /md %}}</dd>
-    <dt class="property-required"
+{{% /md %}}</dd><dt class="property-required"
             title="Required">
         <span id="virtualnetworkgatewayid_nodejs">
 <a href="#virtualnetworkgatewayid_nodejs" style="color: inherit; text-decoration: inherit;">virtual<wbr>Network<wbr>Gateway<wbr>Id</a>
@@ -1402,8 +1363,7 @@ to be created.
     <dd>{{% md %}}The ID of the Virtual Network Gateway
 in which the connection will be created. Changing the gateway forces a new
 resource to be created.
-{{% /md %}}</dd>
-    <dt class="property-optional"
+{{% /md %}}</dd><dt class="property-optional"
             title="Optional">
         <span id="authorizationkey_nodejs">
 <a href="#authorizationkey_nodejs" style="color: inherit; text-decoration: inherit;">authorization<wbr>Key</a>
@@ -1414,8 +1374,7 @@ resource to be created.
     <dd>{{% md %}}The authorization key associated with the
 Express Route Circuit. This field is required only if the type is an
 ExpressRoute connection.
-{{% /md %}}</dd>
-    <dt class="property-optional"
+{{% /md %}}</dd><dt class="property-optional"
             title="Optional">
         <span id="connectionprotocol_nodejs">
 <a href="#connectionprotocol_nodejs" style="color: inherit; text-decoration: inherit;">connection<wbr>Protocol</a>
@@ -1427,8 +1386,7 @@ ExpressRoute connection.
 values are `IKEv1` and `IKEv2`. Defaults to `IKEv2`.
 Changing this value will force a resource to be created.
 > **Note**: Only valid for `IPSec` connections on virtual network gateways with SKU `VpnGw1`, `VpnGw2`, `VpnGw3`, `VpnGw1AZ`, `VpnGw2AZ` or `VpnGw3AZ`.
-{{% /md %}}</dd>
-    <dt class="property-optional"
+{{% /md %}}</dd><dt class="property-optional"
             title="Optional">
         <span id="dpdtimeoutseconds_nodejs">
 <a href="#dpdtimeoutseconds_nodejs" style="color: inherit; text-decoration: inherit;">dpd<wbr>Timeout<wbr>Seconds</a>
@@ -1437,8 +1395,7 @@ Changing this value will force a resource to be created.
         <span class="property-type">number</span>
     </dt>
     <dd>{{% md %}}The dead peer detection timeout of this connection in seconds. Changing this forces a new resource to be created.
-{{% /md %}}</dd>
-    <dt class="property-optional"
+{{% /md %}}</dd><dt class="property-optional"
             title="Optional">
         <span id="enablebgp_nodejs">
 <a href="#enablebgp_nodejs" style="color: inherit; text-decoration: inherit;">enable<wbr>Bgp</a>
@@ -1448,8 +1405,7 @@ Changing this value will force a resource to be created.
     </dt>
     <dd>{{% md %}}If `true`, BGP (Border Gateway Protocol) is enabled
 for this connection. Defaults to `false`.
-{{% /md %}}</dd>
-    <dt class="property-optional"
+{{% /md %}}</dd><dt class="property-optional"
             title="Optional">
         <span id="expressroutecircuitid_nodejs">
 <a href="#expressroutecircuitid_nodejs" style="color: inherit; text-decoration: inherit;">express<wbr>Route<wbr>Circuit<wbr>Id</a>
@@ -1460,8 +1416,7 @@ for this connection. Defaults to `false`.
     <dd>{{% md %}}The ID of the Express Route Circuit
 when creating an ExpressRoute connection (i.e. when `type` is `ExpressRoute`).
 The Express Route Circuit can be in the same or in a different subscription.
-{{% /md %}}</dd>
-    <dt class="property-optional"
+{{% /md %}}</dd><dt class="property-optional"
             title="Optional">
         <span id="expressroutegatewaybypass_nodejs">
 <a href="#expressroutegatewaybypass_nodejs" style="color: inherit; text-decoration: inherit;">express<wbr>Route<wbr>Gateway<wbr>Bypass</a>
@@ -1470,8 +1425,7 @@ The Express Route Circuit can be in the same or in a different subscription.
         <span class="property-type">boolean</span>
     </dt>
     <dd>{{% md %}}If `true`, data packets will bypass ExpressRoute Gateway for data forwarding This is only valid for ExpressRoute connections.
-{{% /md %}}</dd>
-    <dt class="property-optional"
+{{% /md %}}</dd><dt class="property-optional"
             title="Optional">
         <span id="ipsecpolicy_nodejs">
 <a href="#ipsecpolicy_nodejs" style="color: inherit; text-decoration: inherit;">ipsec<wbr>Policy</a>
@@ -1482,8 +1436,7 @@ The Express Route Circuit can be in the same or in a different subscription.
     <dd>{{% md %}}A `ipsec_policy` block which is documented below.
 Only a single policy can be defined for a connection. For details on
 custom policies refer to [the relevant section in the Azure documentation](https://docs.microsoft.com/en-us/azure/vpn-gateway/vpn-gateway-ipsecikepolicy-rm-powershell).
-{{% /md %}}</dd>
-    <dt class="property-optional"
+{{% /md %}}</dd><dt class="property-optional"
             title="Optional">
         <span id="localazureipaddressenabled_nodejs">
 <a href="#localazureipaddressenabled_nodejs" style="color: inherit; text-decoration: inherit;">local<wbr>Azure<wbr>Ip<wbr>Address<wbr>Enabled</a>
@@ -1492,8 +1445,7 @@ custom policies refer to [the relevant section in the Azure documentation](https
         <span class="property-type">boolean</span>
     </dt>
     <dd>{{% md %}}Use private local Azure IP for the connection. Changing this forces a new resource to be created.
-{{% /md %}}</dd>
-    <dt class="property-optional"
+{{% /md %}}</dd><dt class="property-optional"
             title="Optional">
         <span id="localnetworkgatewayid_nodejs">
 <a href="#localnetworkgatewayid_nodejs" style="color: inherit; text-decoration: inherit;">local<wbr>Network<wbr>Gateway<wbr>Id</a>
@@ -1503,8 +1455,7 @@ custom policies refer to [the relevant section in the Azure documentation](https
     </dt>
     <dd>{{% md %}}The ID of the local network gateway
 when creating Site-to-Site connection (i.e. when `type` is `IPsec`).
-{{% /md %}}</dd>
-    <dt class="property-optional"
+{{% /md %}}</dd><dt class="property-optional"
             title="Optional">
         <span id="location_nodejs">
 <a href="#location_nodejs" style="color: inherit; text-decoration: inherit;">location</a>
@@ -1514,8 +1465,7 @@ when creating Site-to-Site connection (i.e. when `type` is `IPsec`).
     </dt>
     <dd>{{% md %}}The location/region where the connection is
 located. Changing this forces a new resource to be created.
-{{% /md %}}</dd>
-    <dt class="property-optional"
+{{% /md %}}</dd><dt class="property-optional"
             title="Optional">
         <span id="name_nodejs">
 <a href="#name_nodejs" style="color: inherit; text-decoration: inherit;">name</a>
@@ -1525,8 +1475,7 @@ located. Changing this forces a new resource to be created.
     </dt>
     <dd>{{% md %}}The name of the connection. Changing the name forces a
 new resource to be created.
-{{% /md %}}</dd>
-    <dt class="property-optional"
+{{% /md %}}</dd><dt class="property-optional"
             title="Optional">
         <span id="peervirtualnetworkgatewayid_nodejs">
 <a href="#peervirtualnetworkgatewayid_nodejs" style="color: inherit; text-decoration: inherit;">peer<wbr>Virtual<wbr>Network<wbr>Gateway<wbr>Id</a>
@@ -1538,8 +1487,7 @@ new resource to be created.
 network gateway when creating a VNet-to-VNet connection (i.e. when `type`
 is `Vnet2Vnet`). The peer Virtual Network Gateway can be in the same or
 in a different subscription.
-{{% /md %}}</dd>
-    <dt class="property-optional"
+{{% /md %}}</dd><dt class="property-optional"
             title="Optional">
         <span id="routingweight_nodejs">
 <a href="#routingweight_nodejs" style="color: inherit; text-decoration: inherit;">routing<wbr>Weight</a>
@@ -1548,8 +1496,7 @@ in a different subscription.
         <span class="property-type">number</span>
     </dt>
     <dd>{{% md %}}The routing weight. Defaults to `10`.
-{{% /md %}}</dd>
-    <dt class="property-optional"
+{{% /md %}}</dd><dt class="property-optional"
             title="Optional">
         <span id="sharedkey_nodejs">
 <a href="#sharedkey_nodejs" style="color: inherit; text-decoration: inherit;">shared<wbr>Key</a>
@@ -1559,8 +1506,7 @@ in a different subscription.
     </dt>
     <dd>{{% md %}}The shared IPSec key. A key could be provided if a
 Site-to-Site, VNet-to-VNet or ExpressRoute connection is created.
-{{% /md %}}</dd>
-    <dt class="property-optional"
+{{% /md %}}</dd><dt class="property-optional"
             title="Optional">
         <span id="tags_nodejs">
 <a href="#tags_nodejs" style="color: inherit; text-decoration: inherit;">tags</a>
@@ -1569,8 +1515,7 @@ Site-to-Site, VNet-to-VNet or ExpressRoute connection is created.
         <span class="property-type">{[key: string]: string}</span>
     </dt>
     <dd>{{% md %}}A mapping of tags to assign to the resource.
-{{% /md %}}</dd>
-    <dt class="property-optional"
+{{% /md %}}</dd><dt class="property-optional"
             title="Optional">
         <span id="trafficselectorpolicy_nodejs">
 <a href="#trafficselectorpolicy_nodejs" style="color: inherit; text-decoration: inherit;">traffic<wbr>Selector<wbr>Policy</a>
@@ -1581,8 +1526,7 @@ Site-to-Site, VNet-to-VNet or ExpressRoute connection is created.
     <dd>{{% md %}}A `traffic_selector_policy` which allows to specify traffic selector policy proposal to be used in a virtual network gateway connection.
 Only one block can be defined for a connection.
 For details about traffic selectors refer to [the relevant section in the Azure documentation](https://docs.microsoft.com/en-us/azure/vpn-gateway/vpn-gateway-connect-multiple-policybased-rm-ps).
-{{% /md %}}</dd>
-    <dt class="property-optional"
+{{% /md %}}</dd><dt class="property-optional"
             title="Optional">
         <span id="usepolicybasedtrafficselectors_nodejs">
 <a href="#usepolicybasedtrafficselectors_nodejs" style="color: inherit; text-decoration: inherit;">use<wbr>Policy<wbr>Based<wbr>Traffic<wbr>Selectors</a>
@@ -1593,14 +1537,11 @@ For details about traffic selectors refer to [the relevant section in the Azure 
     <dd>{{% md %}}If `true`, policy-based traffic
 selectors are enabled for this connection. Enabling policy-based traffic
 selectors requires an `ipsec_policy` block. Defaults to `false`.
-{{% /md %}}</dd>
-</dl>
+{{% /md %}}</dd></dl>
 {{% /choosable %}}
 
 {{% choosable language python %}}
-<dl class="resources-properties">
-
-    <dt class="property-required"
+<dl class="resources-properties"><dt class="property-required"
             title="Required">
         <span id="resource_group_name_python">
 <a href="#resource_group_name_python" style="color: inherit; text-decoration: inherit;">resource_<wbr>group_<wbr>name</a>
@@ -1610,8 +1551,7 @@ selectors requires an `ipsec_policy` block. Defaults to `false`.
     </dt>
     <dd>{{% md %}}The name of the resource group in which to
 create the connection Changing the name forces a new resource to be created.
-{{% /md %}}</dd>
-    <dt class="property-required"
+{{% /md %}}</dd><dt class="property-required"
             title="Required">
         <span id="type_python">
 <a href="#type_python" style="color: inherit; text-decoration: inherit;">type</a>
@@ -1624,8 +1564,7 @@ create the connection Changing the name forces a new resource to be created.
 Each connection type requires different mandatory arguments (refer to the
 examples above). Changing the connection type will force a new connection
 to be created.
-{{% /md %}}</dd>
-    <dt class="property-required"
+{{% /md %}}</dd><dt class="property-required"
             title="Required">
         <span id="virtual_network_gateway_id_python">
 <a href="#virtual_network_gateway_id_python" style="color: inherit; text-decoration: inherit;">virtual_<wbr>network_<wbr>gateway_<wbr>id</a>
@@ -1636,8 +1575,7 @@ to be created.
     <dd>{{% md %}}The ID of the Virtual Network Gateway
 in which the connection will be created. Changing the gateway forces a new
 resource to be created.
-{{% /md %}}</dd>
-    <dt class="property-optional"
+{{% /md %}}</dd><dt class="property-optional"
             title="Optional">
         <span id="authorization_key_python">
 <a href="#authorization_key_python" style="color: inherit; text-decoration: inherit;">authorization_<wbr>key</a>
@@ -1648,8 +1586,7 @@ resource to be created.
     <dd>{{% md %}}The authorization key associated with the
 Express Route Circuit. This field is required only if the type is an
 ExpressRoute connection.
-{{% /md %}}</dd>
-    <dt class="property-optional"
+{{% /md %}}</dd><dt class="property-optional"
             title="Optional">
         <span id="connection_protocol_python">
 <a href="#connection_protocol_python" style="color: inherit; text-decoration: inherit;">connection_<wbr>protocol</a>
@@ -1661,8 +1598,7 @@ ExpressRoute connection.
 values are `IKEv1` and `IKEv2`. Defaults to `IKEv2`.
 Changing this value will force a resource to be created.
 > **Note**: Only valid for `IPSec` connections on virtual network gateways with SKU `VpnGw1`, `VpnGw2`, `VpnGw3`, `VpnGw1AZ`, `VpnGw2AZ` or `VpnGw3AZ`.
-{{% /md %}}</dd>
-    <dt class="property-optional"
+{{% /md %}}</dd><dt class="property-optional"
             title="Optional">
         <span id="dpd_timeout_seconds_python">
 <a href="#dpd_timeout_seconds_python" style="color: inherit; text-decoration: inherit;">dpd_<wbr>timeout_<wbr>seconds</a>
@@ -1671,8 +1607,7 @@ Changing this value will force a resource to be created.
         <span class="property-type">int</span>
     </dt>
     <dd>{{% md %}}The dead peer detection timeout of this connection in seconds. Changing this forces a new resource to be created.
-{{% /md %}}</dd>
-    <dt class="property-optional"
+{{% /md %}}</dd><dt class="property-optional"
             title="Optional">
         <span id="enable_bgp_python">
 <a href="#enable_bgp_python" style="color: inherit; text-decoration: inherit;">enable_<wbr>bgp</a>
@@ -1682,8 +1617,7 @@ Changing this value will force a resource to be created.
     </dt>
     <dd>{{% md %}}If `true`, BGP (Border Gateway Protocol) is enabled
 for this connection. Defaults to `false`.
-{{% /md %}}</dd>
-    <dt class="property-optional"
+{{% /md %}}</dd><dt class="property-optional"
             title="Optional">
         <span id="express_route_circuit_id_python">
 <a href="#express_route_circuit_id_python" style="color: inherit; text-decoration: inherit;">express_<wbr>route_<wbr>circuit_<wbr>id</a>
@@ -1694,8 +1628,7 @@ for this connection. Defaults to `false`.
     <dd>{{% md %}}The ID of the Express Route Circuit
 when creating an ExpressRoute connection (i.e. when `type` is `ExpressRoute`).
 The Express Route Circuit can be in the same or in a different subscription.
-{{% /md %}}</dd>
-    <dt class="property-optional"
+{{% /md %}}</dd><dt class="property-optional"
             title="Optional">
         <span id="express_route_gateway_bypass_python">
 <a href="#express_route_gateway_bypass_python" style="color: inherit; text-decoration: inherit;">express_<wbr>route_<wbr>gateway_<wbr>bypass</a>
@@ -1704,8 +1637,7 @@ The Express Route Circuit can be in the same or in a different subscription.
         <span class="property-type">bool</span>
     </dt>
     <dd>{{% md %}}If `true`, data packets will bypass ExpressRoute Gateway for data forwarding This is only valid for ExpressRoute connections.
-{{% /md %}}</dd>
-    <dt class="property-optional"
+{{% /md %}}</dd><dt class="property-optional"
             title="Optional">
         <span id="ipsec_policy_python">
 <a href="#ipsec_policy_python" style="color: inherit; text-decoration: inherit;">ipsec_<wbr>policy</a>
@@ -1716,8 +1648,7 @@ The Express Route Circuit can be in the same or in a different subscription.
     <dd>{{% md %}}A `ipsec_policy` block which is documented below.
 Only a single policy can be defined for a connection. For details on
 custom policies refer to [the relevant section in the Azure documentation](https://docs.microsoft.com/en-us/azure/vpn-gateway/vpn-gateway-ipsecikepolicy-rm-powershell).
-{{% /md %}}</dd>
-    <dt class="property-optional"
+{{% /md %}}</dd><dt class="property-optional"
             title="Optional">
         <span id="local_azure_ip_address_enabled_python">
 <a href="#local_azure_ip_address_enabled_python" style="color: inherit; text-decoration: inherit;">local_<wbr>azure_<wbr>ip_<wbr>address_<wbr>enabled</a>
@@ -1726,8 +1657,7 @@ custom policies refer to [the relevant section in the Azure documentation](https
         <span class="property-type">bool</span>
     </dt>
     <dd>{{% md %}}Use private local Azure IP for the connection. Changing this forces a new resource to be created.
-{{% /md %}}</dd>
-    <dt class="property-optional"
+{{% /md %}}</dd><dt class="property-optional"
             title="Optional">
         <span id="local_network_gateway_id_python">
 <a href="#local_network_gateway_id_python" style="color: inherit; text-decoration: inherit;">local_<wbr>network_<wbr>gateway_<wbr>id</a>
@@ -1737,8 +1667,7 @@ custom policies refer to [the relevant section in the Azure documentation](https
     </dt>
     <dd>{{% md %}}The ID of the local network gateway
 when creating Site-to-Site connection (i.e. when `type` is `IPsec`).
-{{% /md %}}</dd>
-    <dt class="property-optional"
+{{% /md %}}</dd><dt class="property-optional"
             title="Optional">
         <span id="location_python">
 <a href="#location_python" style="color: inherit; text-decoration: inherit;">location</a>
@@ -1748,8 +1677,7 @@ when creating Site-to-Site connection (i.e. when `type` is `IPsec`).
     </dt>
     <dd>{{% md %}}The location/region where the connection is
 located. Changing this forces a new resource to be created.
-{{% /md %}}</dd>
-    <dt class="property-optional"
+{{% /md %}}</dd><dt class="property-optional"
             title="Optional">
         <span id="name_python">
 <a href="#name_python" style="color: inherit; text-decoration: inherit;">name</a>
@@ -1759,8 +1687,7 @@ located. Changing this forces a new resource to be created.
     </dt>
     <dd>{{% md %}}The name of the connection. Changing the name forces a
 new resource to be created.
-{{% /md %}}</dd>
-    <dt class="property-optional"
+{{% /md %}}</dd><dt class="property-optional"
             title="Optional">
         <span id="peer_virtual_network_gateway_id_python">
 <a href="#peer_virtual_network_gateway_id_python" style="color: inherit; text-decoration: inherit;">peer_<wbr>virtual_<wbr>network_<wbr>gateway_<wbr>id</a>
@@ -1772,8 +1699,7 @@ new resource to be created.
 network gateway when creating a VNet-to-VNet connection (i.e. when `type`
 is `Vnet2Vnet`). The peer Virtual Network Gateway can be in the same or
 in a different subscription.
-{{% /md %}}</dd>
-    <dt class="property-optional"
+{{% /md %}}</dd><dt class="property-optional"
             title="Optional">
         <span id="routing_weight_python">
 <a href="#routing_weight_python" style="color: inherit; text-decoration: inherit;">routing_<wbr>weight</a>
@@ -1782,8 +1708,7 @@ in a different subscription.
         <span class="property-type">int</span>
     </dt>
     <dd>{{% md %}}The routing weight. Defaults to `10`.
-{{% /md %}}</dd>
-    <dt class="property-optional"
+{{% /md %}}</dd><dt class="property-optional"
             title="Optional">
         <span id="shared_key_python">
 <a href="#shared_key_python" style="color: inherit; text-decoration: inherit;">shared_<wbr>key</a>
@@ -1793,8 +1718,7 @@ in a different subscription.
     </dt>
     <dd>{{% md %}}The shared IPSec key. A key could be provided if a
 Site-to-Site, VNet-to-VNet or ExpressRoute connection is created.
-{{% /md %}}</dd>
-    <dt class="property-optional"
+{{% /md %}}</dd><dt class="property-optional"
             title="Optional">
         <span id="tags_python">
 <a href="#tags_python" style="color: inherit; text-decoration: inherit;">tags</a>
@@ -1803,8 +1727,7 @@ Site-to-Site, VNet-to-VNet or ExpressRoute connection is created.
         <span class="property-type">Mapping[str, str]</span>
     </dt>
     <dd>{{% md %}}A mapping of tags to assign to the resource.
-{{% /md %}}</dd>
-    <dt class="property-optional"
+{{% /md %}}</dd><dt class="property-optional"
             title="Optional">
         <span id="traffic_selector_policy_python">
 <a href="#traffic_selector_policy_python" style="color: inherit; text-decoration: inherit;">traffic_<wbr>selector_<wbr>policy</a>
@@ -1815,8 +1738,7 @@ Site-to-Site, VNet-to-VNet or ExpressRoute connection is created.
     <dd>{{% md %}}A `traffic_selector_policy` which allows to specify traffic selector policy proposal to be used in a virtual network gateway connection.
 Only one block can be defined for a connection.
 For details about traffic selectors refer to [the relevant section in the Azure documentation](https://docs.microsoft.com/en-us/azure/vpn-gateway/vpn-gateway-connect-multiple-policybased-rm-ps).
-{{% /md %}}</dd>
-    <dt class="property-optional"
+{{% /md %}}</dd><dt class="property-optional"
             title="Optional">
         <span id="use_policy_based_traffic_selectors_python">
 <a href="#use_policy_based_traffic_selectors_python" style="color: inherit; text-decoration: inherit;">use_<wbr>policy_<wbr>based_<wbr>traffic_<wbr>selectors</a>
@@ -1827,8 +1749,7 @@ For details about traffic selectors refer to [the relevant section in the Azure 
     <dd>{{% md %}}If `true`, policy-based traffic
 selectors are enabled for this connection. Enabling policy-based traffic
 selectors requires an `ipsec_policy` block. Defaults to `false`.
-{{% /md %}}</dd>
-</dl>
+{{% /md %}}</dd></dl>
 {{% /choosable %}}
 
 
@@ -1839,9 +1760,7 @@ All [input](#inputs) properties are implicitly available as output properties. A
 
 
 {{% choosable language csharp %}}
-<dl class="resources-properties">
-
-    <dt class="property-"
+<dl class="resources-properties"><dt class="property-"
             title="">
         <span id="id_csharp">
 <a href="#id_csharp" style="color: inherit; text-decoration: inherit;">Id</a>
@@ -1849,14 +1768,11 @@ All [input](#inputs) properties are implicitly available as output properties. A
         <span class="property-indicator"></span>
         <span class="property-type">string</span>
     </dt>
-    <dd>{{% md %}}The provider-assigned unique ID for this managed resource.{{% /md %}}</dd>
-</dl>
+    <dd>{{% md %}}The provider-assigned unique ID for this managed resource.{{% /md %}}</dd></dl>
 {{% /choosable %}}
 
 {{% choosable language go %}}
-<dl class="resources-properties">
-
-    <dt class="property-"
+<dl class="resources-properties"><dt class="property-"
             title="">
         <span id="id_go">
 <a href="#id_go" style="color: inherit; text-decoration: inherit;">Id</a>
@@ -1864,14 +1780,11 @@ All [input](#inputs) properties are implicitly available as output properties. A
         <span class="property-indicator"></span>
         <span class="property-type">string</span>
     </dt>
-    <dd>{{% md %}}The provider-assigned unique ID for this managed resource.{{% /md %}}</dd>
-</dl>
+    <dd>{{% md %}}The provider-assigned unique ID for this managed resource.{{% /md %}}</dd></dl>
 {{% /choosable %}}
 
 {{% choosable language nodejs %}}
-<dl class="resources-properties">
-
-    <dt class="property-"
+<dl class="resources-properties"><dt class="property-"
             title="">
         <span id="id_nodejs">
 <a href="#id_nodejs" style="color: inherit; text-decoration: inherit;">id</a>
@@ -1879,14 +1792,11 @@ All [input](#inputs) properties are implicitly available as output properties. A
         <span class="property-indicator"></span>
         <span class="property-type">string</span>
     </dt>
-    <dd>{{% md %}}The provider-assigned unique ID for this managed resource.{{% /md %}}</dd>
-</dl>
+    <dd>{{% md %}}The provider-assigned unique ID for this managed resource.{{% /md %}}</dd></dl>
 {{% /choosable %}}
 
 {{% choosable language python %}}
-<dl class="resources-properties">
-
-    <dt class="property-"
+<dl class="resources-properties"><dt class="property-"
             title="">
         <span id="id_python">
 <a href="#id_python" style="color: inherit; text-decoration: inherit;">id</a>
@@ -1894,8 +1804,7 @@ All [input](#inputs) properties are implicitly available as output properties. A
         <span class="property-indicator"></span>
         <span class="property-type">str</span>
     </dt>
-    <dd>{{% md %}}The provider-assigned unique ID for this managed resource.{{% /md %}}</dd>
-</dl>
+    <dd>{{% md %}}The provider-assigned unique ID for this managed resource.{{% /md %}}</dd></dl>
 {{% /choosable %}}
 
 
@@ -2022,9 +1931,7 @@ The following state arguments are supported:
 
 
 {{% choosable language csharp %}}
-<dl class="resources-properties">
-
-    <dt class="property-optional"
+<dl class="resources-properties"><dt class="property-optional"
             title="Optional">
         <span id="state_authorizationkey_csharp">
 <a href="#state_authorizationkey_csharp" style="color: inherit; text-decoration: inherit;">Authorization<wbr>Key</a>
@@ -2035,8 +1942,7 @@ The following state arguments are supported:
     <dd>{{% md %}}The authorization key associated with the
 Express Route Circuit. This field is required only if the type is an
 ExpressRoute connection.
-{{% /md %}}</dd>
-    <dt class="property-optional"
+{{% /md %}}</dd><dt class="property-optional"
             title="Optional">
         <span id="state_connectionprotocol_csharp">
 <a href="#state_connectionprotocol_csharp" style="color: inherit; text-decoration: inherit;">Connection<wbr>Protocol</a>
@@ -2048,8 +1954,7 @@ ExpressRoute connection.
 values are `IKEv1` and `IKEv2`. Defaults to `IKEv2`.
 Changing this value will force a resource to be created.
 > **Note**: Only valid for `IPSec` connections on virtual network gateways with SKU `VpnGw1`, `VpnGw2`, `VpnGw3`, `VpnGw1AZ`, `VpnGw2AZ` or `VpnGw3AZ`.
-{{% /md %}}</dd>
-    <dt class="property-optional"
+{{% /md %}}</dd><dt class="property-optional"
             title="Optional">
         <span id="state_dpdtimeoutseconds_csharp">
 <a href="#state_dpdtimeoutseconds_csharp" style="color: inherit; text-decoration: inherit;">Dpd<wbr>Timeout<wbr>Seconds</a>
@@ -2058,8 +1963,7 @@ Changing this value will force a resource to be created.
         <span class="property-type">int</span>
     </dt>
     <dd>{{% md %}}The dead peer detection timeout of this connection in seconds. Changing this forces a new resource to be created.
-{{% /md %}}</dd>
-    <dt class="property-optional"
+{{% /md %}}</dd><dt class="property-optional"
             title="Optional">
         <span id="state_enablebgp_csharp">
 <a href="#state_enablebgp_csharp" style="color: inherit; text-decoration: inherit;">Enable<wbr>Bgp</a>
@@ -2069,8 +1973,7 @@ Changing this value will force a resource to be created.
     </dt>
     <dd>{{% md %}}If `true`, BGP (Border Gateway Protocol) is enabled
 for this connection. Defaults to `false`.
-{{% /md %}}</dd>
-    <dt class="property-optional"
+{{% /md %}}</dd><dt class="property-optional"
             title="Optional">
         <span id="state_expressroutecircuitid_csharp">
 <a href="#state_expressroutecircuitid_csharp" style="color: inherit; text-decoration: inherit;">Express<wbr>Route<wbr>Circuit<wbr>Id</a>
@@ -2081,8 +1984,7 @@ for this connection. Defaults to `false`.
     <dd>{{% md %}}The ID of the Express Route Circuit
 when creating an ExpressRoute connection (i.e. when `type` is `ExpressRoute`).
 The Express Route Circuit can be in the same or in a different subscription.
-{{% /md %}}</dd>
-    <dt class="property-optional"
+{{% /md %}}</dd><dt class="property-optional"
             title="Optional">
         <span id="state_expressroutegatewaybypass_csharp">
 <a href="#state_expressroutegatewaybypass_csharp" style="color: inherit; text-decoration: inherit;">Express<wbr>Route<wbr>Gateway<wbr>Bypass</a>
@@ -2091,8 +1993,7 @@ The Express Route Circuit can be in the same or in a different subscription.
         <span class="property-type">bool</span>
     </dt>
     <dd>{{% md %}}If `true`, data packets will bypass ExpressRoute Gateway for data forwarding This is only valid for ExpressRoute connections.
-{{% /md %}}</dd>
-    <dt class="property-optional"
+{{% /md %}}</dd><dt class="property-optional"
             title="Optional">
         <span id="state_ipsecpolicy_csharp">
 <a href="#state_ipsecpolicy_csharp" style="color: inherit; text-decoration: inherit;">Ipsec<wbr>Policy</a>
@@ -2103,8 +2004,7 @@ The Express Route Circuit can be in the same or in a different subscription.
     <dd>{{% md %}}A `ipsec_policy` block which is documented below.
 Only a single policy can be defined for a connection. For details on
 custom policies refer to [the relevant section in the Azure documentation](https://docs.microsoft.com/en-us/azure/vpn-gateway/vpn-gateway-ipsecikepolicy-rm-powershell).
-{{% /md %}}</dd>
-    <dt class="property-optional"
+{{% /md %}}</dd><dt class="property-optional"
             title="Optional">
         <span id="state_localazureipaddressenabled_csharp">
 <a href="#state_localazureipaddressenabled_csharp" style="color: inherit; text-decoration: inherit;">Local<wbr>Azure<wbr>Ip<wbr>Address<wbr>Enabled</a>
@@ -2113,8 +2013,7 @@ custom policies refer to [the relevant section in the Azure documentation](https
         <span class="property-type">bool</span>
     </dt>
     <dd>{{% md %}}Use private local Azure IP for the connection. Changing this forces a new resource to be created.
-{{% /md %}}</dd>
-    <dt class="property-optional"
+{{% /md %}}</dd><dt class="property-optional"
             title="Optional">
         <span id="state_localnetworkgatewayid_csharp">
 <a href="#state_localnetworkgatewayid_csharp" style="color: inherit; text-decoration: inherit;">Local<wbr>Network<wbr>Gateway<wbr>Id</a>
@@ -2124,8 +2023,7 @@ custom policies refer to [the relevant section in the Azure documentation](https
     </dt>
     <dd>{{% md %}}The ID of the local network gateway
 when creating Site-to-Site connection (i.e. when `type` is `IPsec`).
-{{% /md %}}</dd>
-    <dt class="property-optional"
+{{% /md %}}</dd><dt class="property-optional"
             title="Optional">
         <span id="state_location_csharp">
 <a href="#state_location_csharp" style="color: inherit; text-decoration: inherit;">Location</a>
@@ -2135,8 +2033,7 @@ when creating Site-to-Site connection (i.e. when `type` is `IPsec`).
     </dt>
     <dd>{{% md %}}The location/region where the connection is
 located. Changing this forces a new resource to be created.
-{{% /md %}}</dd>
-    <dt class="property-optional"
+{{% /md %}}</dd><dt class="property-optional"
             title="Optional">
         <span id="state_name_csharp">
 <a href="#state_name_csharp" style="color: inherit; text-decoration: inherit;">Name</a>
@@ -2146,8 +2043,7 @@ located. Changing this forces a new resource to be created.
     </dt>
     <dd>{{% md %}}The name of the connection. Changing the name forces a
 new resource to be created.
-{{% /md %}}</dd>
-    <dt class="property-optional"
+{{% /md %}}</dd><dt class="property-optional"
             title="Optional">
         <span id="state_peervirtualnetworkgatewayid_csharp">
 <a href="#state_peervirtualnetworkgatewayid_csharp" style="color: inherit; text-decoration: inherit;">Peer<wbr>Virtual<wbr>Network<wbr>Gateway<wbr>Id</a>
@@ -2159,8 +2055,7 @@ new resource to be created.
 network gateway when creating a VNet-to-VNet connection (i.e. when `type`
 is `Vnet2Vnet`). The peer Virtual Network Gateway can be in the same or
 in a different subscription.
-{{% /md %}}</dd>
-    <dt class="property-optional"
+{{% /md %}}</dd><dt class="property-optional"
             title="Optional">
         <span id="state_resourcegroupname_csharp">
 <a href="#state_resourcegroupname_csharp" style="color: inherit; text-decoration: inherit;">Resource<wbr>Group<wbr>Name</a>
@@ -2170,8 +2065,7 @@ in a different subscription.
     </dt>
     <dd>{{% md %}}The name of the resource group in which to
 create the connection Changing the name forces a new resource to be created.
-{{% /md %}}</dd>
-    <dt class="property-optional"
+{{% /md %}}</dd><dt class="property-optional"
             title="Optional">
         <span id="state_routingweight_csharp">
 <a href="#state_routingweight_csharp" style="color: inherit; text-decoration: inherit;">Routing<wbr>Weight</a>
@@ -2180,8 +2074,7 @@ create the connection Changing the name forces a new resource to be created.
         <span class="property-type">int</span>
     </dt>
     <dd>{{% md %}}The routing weight. Defaults to `10`.
-{{% /md %}}</dd>
-    <dt class="property-optional"
+{{% /md %}}</dd><dt class="property-optional"
             title="Optional">
         <span id="state_sharedkey_csharp">
 <a href="#state_sharedkey_csharp" style="color: inherit; text-decoration: inherit;">Shared<wbr>Key</a>
@@ -2191,8 +2084,7 @@ create the connection Changing the name forces a new resource to be created.
     </dt>
     <dd>{{% md %}}The shared IPSec key. A key could be provided if a
 Site-to-Site, VNet-to-VNet or ExpressRoute connection is created.
-{{% /md %}}</dd>
-    <dt class="property-optional"
+{{% /md %}}</dd><dt class="property-optional"
             title="Optional">
         <span id="state_tags_csharp">
 <a href="#state_tags_csharp" style="color: inherit; text-decoration: inherit;">Tags</a>
@@ -2201,8 +2093,7 @@ Site-to-Site, VNet-to-VNet or ExpressRoute connection is created.
         <span class="property-type">Dictionary&lt;string, string&gt;</span>
     </dt>
     <dd>{{% md %}}A mapping of tags to assign to the resource.
-{{% /md %}}</dd>
-    <dt class="property-optional"
+{{% /md %}}</dd><dt class="property-optional"
             title="Optional">
         <span id="state_trafficselectorpolicy_csharp">
 <a href="#state_trafficselectorpolicy_csharp" style="color: inherit; text-decoration: inherit;">Traffic<wbr>Selector<wbr>Policy</a>
@@ -2213,8 +2104,7 @@ Site-to-Site, VNet-to-VNet or ExpressRoute connection is created.
     <dd>{{% md %}}A `traffic_selector_policy` which allows to specify traffic selector policy proposal to be used in a virtual network gateway connection.
 Only one block can be defined for a connection.
 For details about traffic selectors refer to [the relevant section in the Azure documentation](https://docs.microsoft.com/en-us/azure/vpn-gateway/vpn-gateway-connect-multiple-policybased-rm-ps).
-{{% /md %}}</dd>
-    <dt class="property-optional"
+{{% /md %}}</dd><dt class="property-optional"
             title="Optional">
         <span id="state_type_csharp">
 <a href="#state_type_csharp" style="color: inherit; text-decoration: inherit;">Type</a>
@@ -2227,8 +2117,7 @@ For details about traffic selectors refer to [the relevant section in the Azure 
 Each connection type requires different mandatory arguments (refer to the
 examples above). Changing the connection type will force a new connection
 to be created.
-{{% /md %}}</dd>
-    <dt class="property-optional"
+{{% /md %}}</dd><dt class="property-optional"
             title="Optional">
         <span id="state_usepolicybasedtrafficselectors_csharp">
 <a href="#state_usepolicybasedtrafficselectors_csharp" style="color: inherit; text-decoration: inherit;">Use<wbr>Policy<wbr>Based<wbr>Traffic<wbr>Selectors</a>
@@ -2239,8 +2128,7 @@ to be created.
     <dd>{{% md %}}If `true`, policy-based traffic
 selectors are enabled for this connection. Enabling policy-based traffic
 selectors requires an `ipsec_policy` block. Defaults to `false`.
-{{% /md %}}</dd>
-    <dt class="property-optional"
+{{% /md %}}</dd><dt class="property-optional"
             title="Optional">
         <span id="state_virtualnetworkgatewayid_csharp">
 <a href="#state_virtualnetworkgatewayid_csharp" style="color: inherit; text-decoration: inherit;">Virtual<wbr>Network<wbr>Gateway<wbr>Id</a>
@@ -2251,14 +2139,11 @@ selectors requires an `ipsec_policy` block. Defaults to `false`.
     <dd>{{% md %}}The ID of the Virtual Network Gateway
 in which the connection will be created. Changing the gateway forces a new
 resource to be created.
-{{% /md %}}</dd>
-</dl>
+{{% /md %}}</dd></dl>
 {{% /choosable %}}
 
 {{% choosable language go %}}
-<dl class="resources-properties">
-
-    <dt class="property-optional"
+<dl class="resources-properties"><dt class="property-optional"
             title="Optional">
         <span id="state_authorizationkey_go">
 <a href="#state_authorizationkey_go" style="color: inherit; text-decoration: inherit;">Authorization<wbr>Key</a>
@@ -2269,8 +2154,7 @@ resource to be created.
     <dd>{{% md %}}The authorization key associated with the
 Express Route Circuit. This field is required only if the type is an
 ExpressRoute connection.
-{{% /md %}}</dd>
-    <dt class="property-optional"
+{{% /md %}}</dd><dt class="property-optional"
             title="Optional">
         <span id="state_connectionprotocol_go">
 <a href="#state_connectionprotocol_go" style="color: inherit; text-decoration: inherit;">Connection<wbr>Protocol</a>
@@ -2282,8 +2166,7 @@ ExpressRoute connection.
 values are `IKEv1` and `IKEv2`. Defaults to `IKEv2`.
 Changing this value will force a resource to be created.
 > **Note**: Only valid for `IPSec` connections on virtual network gateways with SKU `VpnGw1`, `VpnGw2`, `VpnGw3`, `VpnGw1AZ`, `VpnGw2AZ` or `VpnGw3AZ`.
-{{% /md %}}</dd>
-    <dt class="property-optional"
+{{% /md %}}</dd><dt class="property-optional"
             title="Optional">
         <span id="state_dpdtimeoutseconds_go">
 <a href="#state_dpdtimeoutseconds_go" style="color: inherit; text-decoration: inherit;">Dpd<wbr>Timeout<wbr>Seconds</a>
@@ -2292,8 +2175,7 @@ Changing this value will force a resource to be created.
         <span class="property-type">int</span>
     </dt>
     <dd>{{% md %}}The dead peer detection timeout of this connection in seconds. Changing this forces a new resource to be created.
-{{% /md %}}</dd>
-    <dt class="property-optional"
+{{% /md %}}</dd><dt class="property-optional"
             title="Optional">
         <span id="state_enablebgp_go">
 <a href="#state_enablebgp_go" style="color: inherit; text-decoration: inherit;">Enable<wbr>Bgp</a>
@@ -2303,8 +2185,7 @@ Changing this value will force a resource to be created.
     </dt>
     <dd>{{% md %}}If `true`, BGP (Border Gateway Protocol) is enabled
 for this connection. Defaults to `false`.
-{{% /md %}}</dd>
-    <dt class="property-optional"
+{{% /md %}}</dd><dt class="property-optional"
             title="Optional">
         <span id="state_expressroutecircuitid_go">
 <a href="#state_expressroutecircuitid_go" style="color: inherit; text-decoration: inherit;">Express<wbr>Route<wbr>Circuit<wbr>Id</a>
@@ -2315,8 +2196,7 @@ for this connection. Defaults to `false`.
     <dd>{{% md %}}The ID of the Express Route Circuit
 when creating an ExpressRoute connection (i.e. when `type` is `ExpressRoute`).
 The Express Route Circuit can be in the same or in a different subscription.
-{{% /md %}}</dd>
-    <dt class="property-optional"
+{{% /md %}}</dd><dt class="property-optional"
             title="Optional">
         <span id="state_expressroutegatewaybypass_go">
 <a href="#state_expressroutegatewaybypass_go" style="color: inherit; text-decoration: inherit;">Express<wbr>Route<wbr>Gateway<wbr>Bypass</a>
@@ -2325,8 +2205,7 @@ The Express Route Circuit can be in the same or in a different subscription.
         <span class="property-type">bool</span>
     </dt>
     <dd>{{% md %}}If `true`, data packets will bypass ExpressRoute Gateway for data forwarding This is only valid for ExpressRoute connections.
-{{% /md %}}</dd>
-    <dt class="property-optional"
+{{% /md %}}</dd><dt class="property-optional"
             title="Optional">
         <span id="state_ipsecpolicy_go">
 <a href="#state_ipsecpolicy_go" style="color: inherit; text-decoration: inherit;">Ipsec<wbr>Policy</a>
@@ -2337,8 +2216,7 @@ The Express Route Circuit can be in the same or in a different subscription.
     <dd>{{% md %}}A `ipsec_policy` block which is documented below.
 Only a single policy can be defined for a connection. For details on
 custom policies refer to [the relevant section in the Azure documentation](https://docs.microsoft.com/en-us/azure/vpn-gateway/vpn-gateway-ipsecikepolicy-rm-powershell).
-{{% /md %}}</dd>
-    <dt class="property-optional"
+{{% /md %}}</dd><dt class="property-optional"
             title="Optional">
         <span id="state_localazureipaddressenabled_go">
 <a href="#state_localazureipaddressenabled_go" style="color: inherit; text-decoration: inherit;">Local<wbr>Azure<wbr>Ip<wbr>Address<wbr>Enabled</a>
@@ -2347,8 +2225,7 @@ custom policies refer to [the relevant section in the Azure documentation](https
         <span class="property-type">bool</span>
     </dt>
     <dd>{{% md %}}Use private local Azure IP for the connection. Changing this forces a new resource to be created.
-{{% /md %}}</dd>
-    <dt class="property-optional"
+{{% /md %}}</dd><dt class="property-optional"
             title="Optional">
         <span id="state_localnetworkgatewayid_go">
 <a href="#state_localnetworkgatewayid_go" style="color: inherit; text-decoration: inherit;">Local<wbr>Network<wbr>Gateway<wbr>Id</a>
@@ -2358,8 +2235,7 @@ custom policies refer to [the relevant section in the Azure documentation](https
     </dt>
     <dd>{{% md %}}The ID of the local network gateway
 when creating Site-to-Site connection (i.e. when `type` is `IPsec`).
-{{% /md %}}</dd>
-    <dt class="property-optional"
+{{% /md %}}</dd><dt class="property-optional"
             title="Optional">
         <span id="state_location_go">
 <a href="#state_location_go" style="color: inherit; text-decoration: inherit;">Location</a>
@@ -2369,8 +2245,7 @@ when creating Site-to-Site connection (i.e. when `type` is `IPsec`).
     </dt>
     <dd>{{% md %}}The location/region where the connection is
 located. Changing this forces a new resource to be created.
-{{% /md %}}</dd>
-    <dt class="property-optional"
+{{% /md %}}</dd><dt class="property-optional"
             title="Optional">
         <span id="state_name_go">
 <a href="#state_name_go" style="color: inherit; text-decoration: inherit;">Name</a>
@@ -2380,8 +2255,7 @@ located. Changing this forces a new resource to be created.
     </dt>
     <dd>{{% md %}}The name of the connection. Changing the name forces a
 new resource to be created.
-{{% /md %}}</dd>
-    <dt class="property-optional"
+{{% /md %}}</dd><dt class="property-optional"
             title="Optional">
         <span id="state_peervirtualnetworkgatewayid_go">
 <a href="#state_peervirtualnetworkgatewayid_go" style="color: inherit; text-decoration: inherit;">Peer<wbr>Virtual<wbr>Network<wbr>Gateway<wbr>Id</a>
@@ -2393,8 +2267,7 @@ new resource to be created.
 network gateway when creating a VNet-to-VNet connection (i.e. when `type`
 is `Vnet2Vnet`). The peer Virtual Network Gateway can be in the same or
 in a different subscription.
-{{% /md %}}</dd>
-    <dt class="property-optional"
+{{% /md %}}</dd><dt class="property-optional"
             title="Optional">
         <span id="state_resourcegroupname_go">
 <a href="#state_resourcegroupname_go" style="color: inherit; text-decoration: inherit;">Resource<wbr>Group<wbr>Name</a>
@@ -2404,8 +2277,7 @@ in a different subscription.
     </dt>
     <dd>{{% md %}}The name of the resource group in which to
 create the connection Changing the name forces a new resource to be created.
-{{% /md %}}</dd>
-    <dt class="property-optional"
+{{% /md %}}</dd><dt class="property-optional"
             title="Optional">
         <span id="state_routingweight_go">
 <a href="#state_routingweight_go" style="color: inherit; text-decoration: inherit;">Routing<wbr>Weight</a>
@@ -2414,8 +2286,7 @@ create the connection Changing the name forces a new resource to be created.
         <span class="property-type">int</span>
     </dt>
     <dd>{{% md %}}The routing weight. Defaults to `10`.
-{{% /md %}}</dd>
-    <dt class="property-optional"
+{{% /md %}}</dd><dt class="property-optional"
             title="Optional">
         <span id="state_sharedkey_go">
 <a href="#state_sharedkey_go" style="color: inherit; text-decoration: inherit;">Shared<wbr>Key</a>
@@ -2425,8 +2296,7 @@ create the connection Changing the name forces a new resource to be created.
     </dt>
     <dd>{{% md %}}The shared IPSec key. A key could be provided if a
 Site-to-Site, VNet-to-VNet or ExpressRoute connection is created.
-{{% /md %}}</dd>
-    <dt class="property-optional"
+{{% /md %}}</dd><dt class="property-optional"
             title="Optional">
         <span id="state_tags_go">
 <a href="#state_tags_go" style="color: inherit; text-decoration: inherit;">Tags</a>
@@ -2435,8 +2305,7 @@ Site-to-Site, VNet-to-VNet or ExpressRoute connection is created.
         <span class="property-type">map[string]string</span>
     </dt>
     <dd>{{% md %}}A mapping of tags to assign to the resource.
-{{% /md %}}</dd>
-    <dt class="property-optional"
+{{% /md %}}</dd><dt class="property-optional"
             title="Optional">
         <span id="state_trafficselectorpolicy_go">
 <a href="#state_trafficselectorpolicy_go" style="color: inherit; text-decoration: inherit;">Traffic<wbr>Selector<wbr>Policy</a>
@@ -2447,8 +2316,7 @@ Site-to-Site, VNet-to-VNet or ExpressRoute connection is created.
     <dd>{{% md %}}A `traffic_selector_policy` which allows to specify traffic selector policy proposal to be used in a virtual network gateway connection.
 Only one block can be defined for a connection.
 For details about traffic selectors refer to [the relevant section in the Azure documentation](https://docs.microsoft.com/en-us/azure/vpn-gateway/vpn-gateway-connect-multiple-policybased-rm-ps).
-{{% /md %}}</dd>
-    <dt class="property-optional"
+{{% /md %}}</dd><dt class="property-optional"
             title="Optional">
         <span id="state_type_go">
 <a href="#state_type_go" style="color: inherit; text-decoration: inherit;">Type</a>
@@ -2461,8 +2329,7 @@ For details about traffic selectors refer to [the relevant section in the Azure 
 Each connection type requires different mandatory arguments (refer to the
 examples above). Changing the connection type will force a new connection
 to be created.
-{{% /md %}}</dd>
-    <dt class="property-optional"
+{{% /md %}}</dd><dt class="property-optional"
             title="Optional">
         <span id="state_usepolicybasedtrafficselectors_go">
 <a href="#state_usepolicybasedtrafficselectors_go" style="color: inherit; text-decoration: inherit;">Use<wbr>Policy<wbr>Based<wbr>Traffic<wbr>Selectors</a>
@@ -2473,8 +2340,7 @@ to be created.
     <dd>{{% md %}}If `true`, policy-based traffic
 selectors are enabled for this connection. Enabling policy-based traffic
 selectors requires an `ipsec_policy` block. Defaults to `false`.
-{{% /md %}}</dd>
-    <dt class="property-optional"
+{{% /md %}}</dd><dt class="property-optional"
             title="Optional">
         <span id="state_virtualnetworkgatewayid_go">
 <a href="#state_virtualnetworkgatewayid_go" style="color: inherit; text-decoration: inherit;">Virtual<wbr>Network<wbr>Gateway<wbr>Id</a>
@@ -2485,14 +2351,11 @@ selectors requires an `ipsec_policy` block. Defaults to `false`.
     <dd>{{% md %}}The ID of the Virtual Network Gateway
 in which the connection will be created. Changing the gateway forces a new
 resource to be created.
-{{% /md %}}</dd>
-</dl>
+{{% /md %}}</dd></dl>
 {{% /choosable %}}
 
 {{% choosable language nodejs %}}
-<dl class="resources-properties">
-
-    <dt class="property-optional"
+<dl class="resources-properties"><dt class="property-optional"
             title="Optional">
         <span id="state_authorizationkey_nodejs">
 <a href="#state_authorizationkey_nodejs" style="color: inherit; text-decoration: inherit;">authorization<wbr>Key</a>
@@ -2503,8 +2366,7 @@ resource to be created.
     <dd>{{% md %}}The authorization key associated with the
 Express Route Circuit. This field is required only if the type is an
 ExpressRoute connection.
-{{% /md %}}</dd>
-    <dt class="property-optional"
+{{% /md %}}</dd><dt class="property-optional"
             title="Optional">
         <span id="state_connectionprotocol_nodejs">
 <a href="#state_connectionprotocol_nodejs" style="color: inherit; text-decoration: inherit;">connection<wbr>Protocol</a>
@@ -2516,8 +2378,7 @@ ExpressRoute connection.
 values are `IKEv1` and `IKEv2`. Defaults to `IKEv2`.
 Changing this value will force a resource to be created.
 > **Note**: Only valid for `IPSec` connections on virtual network gateways with SKU `VpnGw1`, `VpnGw2`, `VpnGw3`, `VpnGw1AZ`, `VpnGw2AZ` or `VpnGw3AZ`.
-{{% /md %}}</dd>
-    <dt class="property-optional"
+{{% /md %}}</dd><dt class="property-optional"
             title="Optional">
         <span id="state_dpdtimeoutseconds_nodejs">
 <a href="#state_dpdtimeoutseconds_nodejs" style="color: inherit; text-decoration: inherit;">dpd<wbr>Timeout<wbr>Seconds</a>
@@ -2526,8 +2387,7 @@ Changing this value will force a resource to be created.
         <span class="property-type">number</span>
     </dt>
     <dd>{{% md %}}The dead peer detection timeout of this connection in seconds. Changing this forces a new resource to be created.
-{{% /md %}}</dd>
-    <dt class="property-optional"
+{{% /md %}}</dd><dt class="property-optional"
             title="Optional">
         <span id="state_enablebgp_nodejs">
 <a href="#state_enablebgp_nodejs" style="color: inherit; text-decoration: inherit;">enable<wbr>Bgp</a>
@@ -2537,8 +2397,7 @@ Changing this value will force a resource to be created.
     </dt>
     <dd>{{% md %}}If `true`, BGP (Border Gateway Protocol) is enabled
 for this connection. Defaults to `false`.
-{{% /md %}}</dd>
-    <dt class="property-optional"
+{{% /md %}}</dd><dt class="property-optional"
             title="Optional">
         <span id="state_expressroutecircuitid_nodejs">
 <a href="#state_expressroutecircuitid_nodejs" style="color: inherit; text-decoration: inherit;">express<wbr>Route<wbr>Circuit<wbr>Id</a>
@@ -2549,8 +2408,7 @@ for this connection. Defaults to `false`.
     <dd>{{% md %}}The ID of the Express Route Circuit
 when creating an ExpressRoute connection (i.e. when `type` is `ExpressRoute`).
 The Express Route Circuit can be in the same or in a different subscription.
-{{% /md %}}</dd>
-    <dt class="property-optional"
+{{% /md %}}</dd><dt class="property-optional"
             title="Optional">
         <span id="state_expressroutegatewaybypass_nodejs">
 <a href="#state_expressroutegatewaybypass_nodejs" style="color: inherit; text-decoration: inherit;">express<wbr>Route<wbr>Gateway<wbr>Bypass</a>
@@ -2559,8 +2417,7 @@ The Express Route Circuit can be in the same or in a different subscription.
         <span class="property-type">boolean</span>
     </dt>
     <dd>{{% md %}}If `true`, data packets will bypass ExpressRoute Gateway for data forwarding This is only valid for ExpressRoute connections.
-{{% /md %}}</dd>
-    <dt class="property-optional"
+{{% /md %}}</dd><dt class="property-optional"
             title="Optional">
         <span id="state_ipsecpolicy_nodejs">
 <a href="#state_ipsecpolicy_nodejs" style="color: inherit; text-decoration: inherit;">ipsec<wbr>Policy</a>
@@ -2571,8 +2428,7 @@ The Express Route Circuit can be in the same or in a different subscription.
     <dd>{{% md %}}A `ipsec_policy` block which is documented below.
 Only a single policy can be defined for a connection. For details on
 custom policies refer to [the relevant section in the Azure documentation](https://docs.microsoft.com/en-us/azure/vpn-gateway/vpn-gateway-ipsecikepolicy-rm-powershell).
-{{% /md %}}</dd>
-    <dt class="property-optional"
+{{% /md %}}</dd><dt class="property-optional"
             title="Optional">
         <span id="state_localazureipaddressenabled_nodejs">
 <a href="#state_localazureipaddressenabled_nodejs" style="color: inherit; text-decoration: inherit;">local<wbr>Azure<wbr>Ip<wbr>Address<wbr>Enabled</a>
@@ -2581,8 +2437,7 @@ custom policies refer to [the relevant section in the Azure documentation](https
         <span class="property-type">boolean</span>
     </dt>
     <dd>{{% md %}}Use private local Azure IP for the connection. Changing this forces a new resource to be created.
-{{% /md %}}</dd>
-    <dt class="property-optional"
+{{% /md %}}</dd><dt class="property-optional"
             title="Optional">
         <span id="state_localnetworkgatewayid_nodejs">
 <a href="#state_localnetworkgatewayid_nodejs" style="color: inherit; text-decoration: inherit;">local<wbr>Network<wbr>Gateway<wbr>Id</a>
@@ -2592,8 +2447,7 @@ custom policies refer to [the relevant section in the Azure documentation](https
     </dt>
     <dd>{{% md %}}The ID of the local network gateway
 when creating Site-to-Site connection (i.e. when `type` is `IPsec`).
-{{% /md %}}</dd>
-    <dt class="property-optional"
+{{% /md %}}</dd><dt class="property-optional"
             title="Optional">
         <span id="state_location_nodejs">
 <a href="#state_location_nodejs" style="color: inherit; text-decoration: inherit;">location</a>
@@ -2603,8 +2457,7 @@ when creating Site-to-Site connection (i.e. when `type` is `IPsec`).
     </dt>
     <dd>{{% md %}}The location/region where the connection is
 located. Changing this forces a new resource to be created.
-{{% /md %}}</dd>
-    <dt class="property-optional"
+{{% /md %}}</dd><dt class="property-optional"
             title="Optional">
         <span id="state_name_nodejs">
 <a href="#state_name_nodejs" style="color: inherit; text-decoration: inherit;">name</a>
@@ -2614,8 +2467,7 @@ located. Changing this forces a new resource to be created.
     </dt>
     <dd>{{% md %}}The name of the connection. Changing the name forces a
 new resource to be created.
-{{% /md %}}</dd>
-    <dt class="property-optional"
+{{% /md %}}</dd><dt class="property-optional"
             title="Optional">
         <span id="state_peervirtualnetworkgatewayid_nodejs">
 <a href="#state_peervirtualnetworkgatewayid_nodejs" style="color: inherit; text-decoration: inherit;">peer<wbr>Virtual<wbr>Network<wbr>Gateway<wbr>Id</a>
@@ -2627,8 +2479,7 @@ new resource to be created.
 network gateway when creating a VNet-to-VNet connection (i.e. when `type`
 is `Vnet2Vnet`). The peer Virtual Network Gateway can be in the same or
 in a different subscription.
-{{% /md %}}</dd>
-    <dt class="property-optional"
+{{% /md %}}</dd><dt class="property-optional"
             title="Optional">
         <span id="state_resourcegroupname_nodejs">
 <a href="#state_resourcegroupname_nodejs" style="color: inherit; text-decoration: inherit;">resource<wbr>Group<wbr>Name</a>
@@ -2638,8 +2489,7 @@ in a different subscription.
     </dt>
     <dd>{{% md %}}The name of the resource group in which to
 create the connection Changing the name forces a new resource to be created.
-{{% /md %}}</dd>
-    <dt class="property-optional"
+{{% /md %}}</dd><dt class="property-optional"
             title="Optional">
         <span id="state_routingweight_nodejs">
 <a href="#state_routingweight_nodejs" style="color: inherit; text-decoration: inherit;">routing<wbr>Weight</a>
@@ -2648,8 +2498,7 @@ create the connection Changing the name forces a new resource to be created.
         <span class="property-type">number</span>
     </dt>
     <dd>{{% md %}}The routing weight. Defaults to `10`.
-{{% /md %}}</dd>
-    <dt class="property-optional"
+{{% /md %}}</dd><dt class="property-optional"
             title="Optional">
         <span id="state_sharedkey_nodejs">
 <a href="#state_sharedkey_nodejs" style="color: inherit; text-decoration: inherit;">shared<wbr>Key</a>
@@ -2659,8 +2508,7 @@ create the connection Changing the name forces a new resource to be created.
     </dt>
     <dd>{{% md %}}The shared IPSec key. A key could be provided if a
 Site-to-Site, VNet-to-VNet or ExpressRoute connection is created.
-{{% /md %}}</dd>
-    <dt class="property-optional"
+{{% /md %}}</dd><dt class="property-optional"
             title="Optional">
         <span id="state_tags_nodejs">
 <a href="#state_tags_nodejs" style="color: inherit; text-decoration: inherit;">tags</a>
@@ -2669,8 +2517,7 @@ Site-to-Site, VNet-to-VNet or ExpressRoute connection is created.
         <span class="property-type">{[key: string]: string}</span>
     </dt>
     <dd>{{% md %}}A mapping of tags to assign to the resource.
-{{% /md %}}</dd>
-    <dt class="property-optional"
+{{% /md %}}</dd><dt class="property-optional"
             title="Optional">
         <span id="state_trafficselectorpolicy_nodejs">
 <a href="#state_trafficselectorpolicy_nodejs" style="color: inherit; text-decoration: inherit;">traffic<wbr>Selector<wbr>Policy</a>
@@ -2681,8 +2528,7 @@ Site-to-Site, VNet-to-VNet or ExpressRoute connection is created.
     <dd>{{% md %}}A `traffic_selector_policy` which allows to specify traffic selector policy proposal to be used in a virtual network gateway connection.
 Only one block can be defined for a connection.
 For details about traffic selectors refer to [the relevant section in the Azure documentation](https://docs.microsoft.com/en-us/azure/vpn-gateway/vpn-gateway-connect-multiple-policybased-rm-ps).
-{{% /md %}}</dd>
-    <dt class="property-optional"
+{{% /md %}}</dd><dt class="property-optional"
             title="Optional">
         <span id="state_type_nodejs">
 <a href="#state_type_nodejs" style="color: inherit; text-decoration: inherit;">type</a>
@@ -2695,8 +2541,7 @@ For details about traffic selectors refer to [the relevant section in the Azure 
 Each connection type requires different mandatory arguments (refer to the
 examples above). Changing the connection type will force a new connection
 to be created.
-{{% /md %}}</dd>
-    <dt class="property-optional"
+{{% /md %}}</dd><dt class="property-optional"
             title="Optional">
         <span id="state_usepolicybasedtrafficselectors_nodejs">
 <a href="#state_usepolicybasedtrafficselectors_nodejs" style="color: inherit; text-decoration: inherit;">use<wbr>Policy<wbr>Based<wbr>Traffic<wbr>Selectors</a>
@@ -2707,8 +2552,7 @@ to be created.
     <dd>{{% md %}}If `true`, policy-based traffic
 selectors are enabled for this connection. Enabling policy-based traffic
 selectors requires an `ipsec_policy` block. Defaults to `false`.
-{{% /md %}}</dd>
-    <dt class="property-optional"
+{{% /md %}}</dd><dt class="property-optional"
             title="Optional">
         <span id="state_virtualnetworkgatewayid_nodejs">
 <a href="#state_virtualnetworkgatewayid_nodejs" style="color: inherit; text-decoration: inherit;">virtual<wbr>Network<wbr>Gateway<wbr>Id</a>
@@ -2719,14 +2563,11 @@ selectors requires an `ipsec_policy` block. Defaults to `false`.
     <dd>{{% md %}}The ID of the Virtual Network Gateway
 in which the connection will be created. Changing the gateway forces a new
 resource to be created.
-{{% /md %}}</dd>
-</dl>
+{{% /md %}}</dd></dl>
 {{% /choosable %}}
 
 {{% choosable language python %}}
-<dl class="resources-properties">
-
-    <dt class="property-optional"
+<dl class="resources-properties"><dt class="property-optional"
             title="Optional">
         <span id="state_authorization_key_python">
 <a href="#state_authorization_key_python" style="color: inherit; text-decoration: inherit;">authorization_<wbr>key</a>
@@ -2737,8 +2578,7 @@ resource to be created.
     <dd>{{% md %}}The authorization key associated with the
 Express Route Circuit. This field is required only if the type is an
 ExpressRoute connection.
-{{% /md %}}</dd>
-    <dt class="property-optional"
+{{% /md %}}</dd><dt class="property-optional"
             title="Optional">
         <span id="state_connection_protocol_python">
 <a href="#state_connection_protocol_python" style="color: inherit; text-decoration: inherit;">connection_<wbr>protocol</a>
@@ -2750,8 +2590,7 @@ ExpressRoute connection.
 values are `IKEv1` and `IKEv2`. Defaults to `IKEv2`.
 Changing this value will force a resource to be created.
 > **Note**: Only valid for `IPSec` connections on virtual network gateways with SKU `VpnGw1`, `VpnGw2`, `VpnGw3`, `VpnGw1AZ`, `VpnGw2AZ` or `VpnGw3AZ`.
-{{% /md %}}</dd>
-    <dt class="property-optional"
+{{% /md %}}</dd><dt class="property-optional"
             title="Optional">
         <span id="state_dpd_timeout_seconds_python">
 <a href="#state_dpd_timeout_seconds_python" style="color: inherit; text-decoration: inherit;">dpd_<wbr>timeout_<wbr>seconds</a>
@@ -2760,8 +2599,7 @@ Changing this value will force a resource to be created.
         <span class="property-type">int</span>
     </dt>
     <dd>{{% md %}}The dead peer detection timeout of this connection in seconds. Changing this forces a new resource to be created.
-{{% /md %}}</dd>
-    <dt class="property-optional"
+{{% /md %}}</dd><dt class="property-optional"
             title="Optional">
         <span id="state_enable_bgp_python">
 <a href="#state_enable_bgp_python" style="color: inherit; text-decoration: inherit;">enable_<wbr>bgp</a>
@@ -2771,8 +2609,7 @@ Changing this value will force a resource to be created.
     </dt>
     <dd>{{% md %}}If `true`, BGP (Border Gateway Protocol) is enabled
 for this connection. Defaults to `false`.
-{{% /md %}}</dd>
-    <dt class="property-optional"
+{{% /md %}}</dd><dt class="property-optional"
             title="Optional">
         <span id="state_express_route_circuit_id_python">
 <a href="#state_express_route_circuit_id_python" style="color: inherit; text-decoration: inherit;">express_<wbr>route_<wbr>circuit_<wbr>id</a>
@@ -2783,8 +2620,7 @@ for this connection. Defaults to `false`.
     <dd>{{% md %}}The ID of the Express Route Circuit
 when creating an ExpressRoute connection (i.e. when `type` is `ExpressRoute`).
 The Express Route Circuit can be in the same or in a different subscription.
-{{% /md %}}</dd>
-    <dt class="property-optional"
+{{% /md %}}</dd><dt class="property-optional"
             title="Optional">
         <span id="state_express_route_gateway_bypass_python">
 <a href="#state_express_route_gateway_bypass_python" style="color: inherit; text-decoration: inherit;">express_<wbr>route_<wbr>gateway_<wbr>bypass</a>
@@ -2793,8 +2629,7 @@ The Express Route Circuit can be in the same or in a different subscription.
         <span class="property-type">bool</span>
     </dt>
     <dd>{{% md %}}If `true`, data packets will bypass ExpressRoute Gateway for data forwarding This is only valid for ExpressRoute connections.
-{{% /md %}}</dd>
-    <dt class="property-optional"
+{{% /md %}}</dd><dt class="property-optional"
             title="Optional">
         <span id="state_ipsec_policy_python">
 <a href="#state_ipsec_policy_python" style="color: inherit; text-decoration: inherit;">ipsec_<wbr>policy</a>
@@ -2805,8 +2640,7 @@ The Express Route Circuit can be in the same or in a different subscription.
     <dd>{{% md %}}A `ipsec_policy` block which is documented below.
 Only a single policy can be defined for a connection. For details on
 custom policies refer to [the relevant section in the Azure documentation](https://docs.microsoft.com/en-us/azure/vpn-gateway/vpn-gateway-ipsecikepolicy-rm-powershell).
-{{% /md %}}</dd>
-    <dt class="property-optional"
+{{% /md %}}</dd><dt class="property-optional"
             title="Optional">
         <span id="state_local_azure_ip_address_enabled_python">
 <a href="#state_local_azure_ip_address_enabled_python" style="color: inherit; text-decoration: inherit;">local_<wbr>azure_<wbr>ip_<wbr>address_<wbr>enabled</a>
@@ -2815,8 +2649,7 @@ custom policies refer to [the relevant section in the Azure documentation](https
         <span class="property-type">bool</span>
     </dt>
     <dd>{{% md %}}Use private local Azure IP for the connection. Changing this forces a new resource to be created.
-{{% /md %}}</dd>
-    <dt class="property-optional"
+{{% /md %}}</dd><dt class="property-optional"
             title="Optional">
         <span id="state_local_network_gateway_id_python">
 <a href="#state_local_network_gateway_id_python" style="color: inherit; text-decoration: inherit;">local_<wbr>network_<wbr>gateway_<wbr>id</a>
@@ -2826,8 +2659,7 @@ custom policies refer to [the relevant section in the Azure documentation](https
     </dt>
     <dd>{{% md %}}The ID of the local network gateway
 when creating Site-to-Site connection (i.e. when `type` is `IPsec`).
-{{% /md %}}</dd>
-    <dt class="property-optional"
+{{% /md %}}</dd><dt class="property-optional"
             title="Optional">
         <span id="state_location_python">
 <a href="#state_location_python" style="color: inherit; text-decoration: inherit;">location</a>
@@ -2837,8 +2669,7 @@ when creating Site-to-Site connection (i.e. when `type` is `IPsec`).
     </dt>
     <dd>{{% md %}}The location/region where the connection is
 located. Changing this forces a new resource to be created.
-{{% /md %}}</dd>
-    <dt class="property-optional"
+{{% /md %}}</dd><dt class="property-optional"
             title="Optional">
         <span id="state_name_python">
 <a href="#state_name_python" style="color: inherit; text-decoration: inherit;">name</a>
@@ -2848,8 +2679,7 @@ located. Changing this forces a new resource to be created.
     </dt>
     <dd>{{% md %}}The name of the connection. Changing the name forces a
 new resource to be created.
-{{% /md %}}</dd>
-    <dt class="property-optional"
+{{% /md %}}</dd><dt class="property-optional"
             title="Optional">
         <span id="state_peer_virtual_network_gateway_id_python">
 <a href="#state_peer_virtual_network_gateway_id_python" style="color: inherit; text-decoration: inherit;">peer_<wbr>virtual_<wbr>network_<wbr>gateway_<wbr>id</a>
@@ -2861,8 +2691,7 @@ new resource to be created.
 network gateway when creating a VNet-to-VNet connection (i.e. when `type`
 is `Vnet2Vnet`). The peer Virtual Network Gateway can be in the same or
 in a different subscription.
-{{% /md %}}</dd>
-    <dt class="property-optional"
+{{% /md %}}</dd><dt class="property-optional"
             title="Optional">
         <span id="state_resource_group_name_python">
 <a href="#state_resource_group_name_python" style="color: inherit; text-decoration: inherit;">resource_<wbr>group_<wbr>name</a>
@@ -2872,8 +2701,7 @@ in a different subscription.
     </dt>
     <dd>{{% md %}}The name of the resource group in which to
 create the connection Changing the name forces a new resource to be created.
-{{% /md %}}</dd>
-    <dt class="property-optional"
+{{% /md %}}</dd><dt class="property-optional"
             title="Optional">
         <span id="state_routing_weight_python">
 <a href="#state_routing_weight_python" style="color: inherit; text-decoration: inherit;">routing_<wbr>weight</a>
@@ -2882,8 +2710,7 @@ create the connection Changing the name forces a new resource to be created.
         <span class="property-type">int</span>
     </dt>
     <dd>{{% md %}}The routing weight. Defaults to `10`.
-{{% /md %}}</dd>
-    <dt class="property-optional"
+{{% /md %}}</dd><dt class="property-optional"
             title="Optional">
         <span id="state_shared_key_python">
 <a href="#state_shared_key_python" style="color: inherit; text-decoration: inherit;">shared_<wbr>key</a>
@@ -2893,8 +2720,7 @@ create the connection Changing the name forces a new resource to be created.
     </dt>
     <dd>{{% md %}}The shared IPSec key. A key could be provided if a
 Site-to-Site, VNet-to-VNet or ExpressRoute connection is created.
-{{% /md %}}</dd>
-    <dt class="property-optional"
+{{% /md %}}</dd><dt class="property-optional"
             title="Optional">
         <span id="state_tags_python">
 <a href="#state_tags_python" style="color: inherit; text-decoration: inherit;">tags</a>
@@ -2903,8 +2729,7 @@ Site-to-Site, VNet-to-VNet or ExpressRoute connection is created.
         <span class="property-type">Mapping[str, str]</span>
     </dt>
     <dd>{{% md %}}A mapping of tags to assign to the resource.
-{{% /md %}}</dd>
-    <dt class="property-optional"
+{{% /md %}}</dd><dt class="property-optional"
             title="Optional">
         <span id="state_traffic_selector_policy_python">
 <a href="#state_traffic_selector_policy_python" style="color: inherit; text-decoration: inherit;">traffic_<wbr>selector_<wbr>policy</a>
@@ -2915,8 +2740,7 @@ Site-to-Site, VNet-to-VNet or ExpressRoute connection is created.
     <dd>{{% md %}}A `traffic_selector_policy` which allows to specify traffic selector policy proposal to be used in a virtual network gateway connection.
 Only one block can be defined for a connection.
 For details about traffic selectors refer to [the relevant section in the Azure documentation](https://docs.microsoft.com/en-us/azure/vpn-gateway/vpn-gateway-connect-multiple-policybased-rm-ps).
-{{% /md %}}</dd>
-    <dt class="property-optional"
+{{% /md %}}</dd><dt class="property-optional"
             title="Optional">
         <span id="state_type_python">
 <a href="#state_type_python" style="color: inherit; text-decoration: inherit;">type</a>
@@ -2929,8 +2753,7 @@ For details about traffic selectors refer to [the relevant section in the Azure 
 Each connection type requires different mandatory arguments (refer to the
 examples above). Changing the connection type will force a new connection
 to be created.
-{{% /md %}}</dd>
-    <dt class="property-optional"
+{{% /md %}}</dd><dt class="property-optional"
             title="Optional">
         <span id="state_use_policy_based_traffic_selectors_python">
 <a href="#state_use_policy_based_traffic_selectors_python" style="color: inherit; text-decoration: inherit;">use_<wbr>policy_<wbr>based_<wbr>traffic_<wbr>selectors</a>
@@ -2941,8 +2764,7 @@ to be created.
     <dd>{{% md %}}If `true`, policy-based traffic
 selectors are enabled for this connection. Enabling policy-based traffic
 selectors requires an `ipsec_policy` block. Defaults to `false`.
-{{% /md %}}</dd>
-    <dt class="property-optional"
+{{% /md %}}</dd><dt class="property-optional"
             title="Optional">
         <span id="state_virtual_network_gateway_id_python">
 <a href="#state_virtual_network_gateway_id_python" style="color: inherit; text-decoration: inherit;">virtual_<wbr>network_<wbr>gateway_<wbr>id</a>
@@ -2953,8 +2775,7 @@ selectors requires an `ipsec_policy` block. Defaults to `false`.
     <dd>{{% md %}}The ID of the Virtual Network Gateway
 in which the connection will be created. Changing the gateway forces a new
 resource to be created.
-{{% /md %}}</dd>
-</dl>
+{{% /md %}}</dd></dl>
 {{% /choosable %}}
 
 
@@ -2969,9 +2790,7 @@ resource to be created.
 <h4 id="virtualnetworkgatewayconnectionipsecpolicy">Virtual<wbr>Network<wbr>Gateway<wbr>Connection<wbr>Ipsec<wbr>Policy</h4>
 
 {{% choosable language csharp %}}
-<dl class="resources-properties">
-
-    <dt class="property-required"
+<dl class="resources-properties"><dt class="property-required"
             title="Required">
         <span id="dhgroup_csharp">
 <a href="#dhgroup_csharp" style="color: inherit; text-decoration: inherit;">Dh<wbr>Group</a>
@@ -2982,8 +2801,7 @@ resource to be created.
     <dd>{{% md %}}The DH group used in IKE phase 1 for initial SA. Valid
 options are `DHGroup1`, `DHGroup14`, `DHGroup2`, `DHGroup2048`, `DHGroup24`,
 `ECP256`, `ECP384`, or `None`.
-{{% /md %}}</dd>
-    <dt class="property-required"
+{{% /md %}}</dd><dt class="property-required"
             title="Required">
         <span id="ikeencryption_csharp">
 <a href="#ikeencryption_csharp" style="color: inherit; text-decoration: inherit;">Ike<wbr>Encryption</a>
@@ -2993,8 +2811,7 @@ options are `DHGroup1`, `DHGroup14`, `DHGroup2`, `DHGroup2048`, `DHGroup24`,
     </dt>
     <dd>{{% md %}}The IKE encryption algorithm. Valid
 options are `AES128`, `AES192`, `AES256`, `DES`, or `DES3`.
-{{% /md %}}</dd>
-    <dt class="property-required"
+{{% /md %}}</dd><dt class="property-required"
             title="Required">
         <span id="ikeintegrity_csharp">
 <a href="#ikeintegrity_csharp" style="color: inherit; text-decoration: inherit;">Ike<wbr>Integrity</a>
@@ -3004,8 +2821,7 @@ options are `AES128`, `AES192`, `AES256`, `DES`, or `DES3`.
     </dt>
     <dd>{{% md %}}The IKE integrity algorithm. Valid
 options are `MD5`, `SHA1`, `SHA256`, or `SHA384`.
-{{% /md %}}</dd>
-    <dt class="property-required"
+{{% /md %}}</dd><dt class="property-required"
             title="Required">
         <span id="ipsecencryption_csharp">
 <a href="#ipsecencryption_csharp" style="color: inherit; text-decoration: inherit;">Ipsec<wbr>Encryption</a>
@@ -3015,8 +2831,7 @@ options are `MD5`, `SHA1`, `SHA256`, or `SHA384`.
     </dt>
     <dd>{{% md %}}The IPSec encryption algorithm. Valid
 options are `AES128`, `AES192`, `AES256`, `DES`, `DES3`, `GCMAES128`, `GCMAES192`, `GCMAES256`, or `None`.
-{{% /md %}}</dd>
-    <dt class="property-required"
+{{% /md %}}</dd><dt class="property-required"
             title="Required">
         <span id="ipsecintegrity_csharp">
 <a href="#ipsecintegrity_csharp" style="color: inherit; text-decoration: inherit;">Ipsec<wbr>Integrity</a>
@@ -3026,8 +2841,7 @@ options are `AES128`, `AES192`, `AES256`, `DES`, `DES3`, `GCMAES128`, `GCMAES192
     </dt>
     <dd>{{% md %}}The IPSec integrity algorithm. Valid
 options are `GCMAES128`, `GCMAES192`, `GCMAES256`, `MD5`, `SHA1`, or `SHA256`.
-{{% /md %}}</dd>
-    <dt class="property-required"
+{{% /md %}}</dd><dt class="property-required"
             title="Required">
         <span id="pfsgroup_csharp">
 <a href="#pfsgroup_csharp" style="color: inherit; text-decoration: inherit;">Pfs<wbr>Group</a>
@@ -3038,8 +2852,7 @@ options are `GCMAES128`, `GCMAES192`, `GCMAES256`, `MD5`, `SHA1`, or `SHA256`.
     <dd>{{% md %}}The DH group used in IKE phase 2 for new child SA.
 Valid options are `ECP256`, `ECP384`, `PFS1`, `PFS2`, `PFS2048`, `PFS24`,
 or `None`.
-{{% /md %}}</dd>
-    <dt class="property-optional"
+{{% /md %}}</dd><dt class="property-optional"
             title="Optional">
         <span id="sadatasize_csharp">
 <a href="#sadatasize_csharp" style="color: inherit; text-decoration: inherit;">Sa<wbr>Datasize</a>
@@ -3049,8 +2862,7 @@ or `None`.
     </dt>
     <dd>{{% md %}}The IPSec SA payload size in KB. Must be at least
 `1024` KB. Defaults to `102400000` KB.
-{{% /md %}}</dd>
-    <dt class="property-optional"
+{{% /md %}}</dd><dt class="property-optional"
             title="Optional">
         <span id="salifetime_csharp">
 <a href="#salifetime_csharp" style="color: inherit; text-decoration: inherit;">Sa<wbr>Lifetime</a>
@@ -3060,14 +2872,11 @@ or `None`.
     </dt>
     <dd>{{% md %}}The IPSec SA lifetime in seconds. Must be at least
 `300` seconds. Defaults to `27000` seconds.
-{{% /md %}}</dd>
-</dl>
+{{% /md %}}</dd></dl>
 {{% /choosable %}}
 
 {{% choosable language go %}}
-<dl class="resources-properties">
-
-    <dt class="property-required"
+<dl class="resources-properties"><dt class="property-required"
             title="Required">
         <span id="dhgroup_go">
 <a href="#dhgroup_go" style="color: inherit; text-decoration: inherit;">Dh<wbr>Group</a>
@@ -3078,8 +2887,7 @@ or `None`.
     <dd>{{% md %}}The DH group used in IKE phase 1 for initial SA. Valid
 options are `DHGroup1`, `DHGroup14`, `DHGroup2`, `DHGroup2048`, `DHGroup24`,
 `ECP256`, `ECP384`, or `None`.
-{{% /md %}}</dd>
-    <dt class="property-required"
+{{% /md %}}</dd><dt class="property-required"
             title="Required">
         <span id="ikeencryption_go">
 <a href="#ikeencryption_go" style="color: inherit; text-decoration: inherit;">Ike<wbr>Encryption</a>
@@ -3089,8 +2897,7 @@ options are `DHGroup1`, `DHGroup14`, `DHGroup2`, `DHGroup2048`, `DHGroup24`,
     </dt>
     <dd>{{% md %}}The IKE encryption algorithm. Valid
 options are `AES128`, `AES192`, `AES256`, `DES`, or `DES3`.
-{{% /md %}}</dd>
-    <dt class="property-required"
+{{% /md %}}</dd><dt class="property-required"
             title="Required">
         <span id="ikeintegrity_go">
 <a href="#ikeintegrity_go" style="color: inherit; text-decoration: inherit;">Ike<wbr>Integrity</a>
@@ -3100,8 +2907,7 @@ options are `AES128`, `AES192`, `AES256`, `DES`, or `DES3`.
     </dt>
     <dd>{{% md %}}The IKE integrity algorithm. Valid
 options are `MD5`, `SHA1`, `SHA256`, or `SHA384`.
-{{% /md %}}</dd>
-    <dt class="property-required"
+{{% /md %}}</dd><dt class="property-required"
             title="Required">
         <span id="ipsecencryption_go">
 <a href="#ipsecencryption_go" style="color: inherit; text-decoration: inherit;">Ipsec<wbr>Encryption</a>
@@ -3111,8 +2917,7 @@ options are `MD5`, `SHA1`, `SHA256`, or `SHA384`.
     </dt>
     <dd>{{% md %}}The IPSec encryption algorithm. Valid
 options are `AES128`, `AES192`, `AES256`, `DES`, `DES3`, `GCMAES128`, `GCMAES192`, `GCMAES256`, or `None`.
-{{% /md %}}</dd>
-    <dt class="property-required"
+{{% /md %}}</dd><dt class="property-required"
             title="Required">
         <span id="ipsecintegrity_go">
 <a href="#ipsecintegrity_go" style="color: inherit; text-decoration: inherit;">Ipsec<wbr>Integrity</a>
@@ -3122,8 +2927,7 @@ options are `AES128`, `AES192`, `AES256`, `DES`, `DES3`, `GCMAES128`, `GCMAES192
     </dt>
     <dd>{{% md %}}The IPSec integrity algorithm. Valid
 options are `GCMAES128`, `GCMAES192`, `GCMAES256`, `MD5`, `SHA1`, or `SHA256`.
-{{% /md %}}</dd>
-    <dt class="property-required"
+{{% /md %}}</dd><dt class="property-required"
             title="Required">
         <span id="pfsgroup_go">
 <a href="#pfsgroup_go" style="color: inherit; text-decoration: inherit;">Pfs<wbr>Group</a>
@@ -3134,8 +2938,7 @@ options are `GCMAES128`, `GCMAES192`, `GCMAES256`, `MD5`, `SHA1`, or `SHA256`.
     <dd>{{% md %}}The DH group used in IKE phase 2 for new child SA.
 Valid options are `ECP256`, `ECP384`, `PFS1`, `PFS2`, `PFS2048`, `PFS24`,
 or `None`.
-{{% /md %}}</dd>
-    <dt class="property-optional"
+{{% /md %}}</dd><dt class="property-optional"
             title="Optional">
         <span id="sadatasize_go">
 <a href="#sadatasize_go" style="color: inherit; text-decoration: inherit;">Sa<wbr>Datasize</a>
@@ -3145,8 +2948,7 @@ or `None`.
     </dt>
     <dd>{{% md %}}The IPSec SA payload size in KB. Must be at least
 `1024` KB. Defaults to `102400000` KB.
-{{% /md %}}</dd>
-    <dt class="property-optional"
+{{% /md %}}</dd><dt class="property-optional"
             title="Optional">
         <span id="salifetime_go">
 <a href="#salifetime_go" style="color: inherit; text-decoration: inherit;">Sa<wbr>Lifetime</a>
@@ -3156,14 +2958,11 @@ or `None`.
     </dt>
     <dd>{{% md %}}The IPSec SA lifetime in seconds. Must be at least
 `300` seconds. Defaults to `27000` seconds.
-{{% /md %}}</dd>
-</dl>
+{{% /md %}}</dd></dl>
 {{% /choosable %}}
 
 {{% choosable language nodejs %}}
-<dl class="resources-properties">
-
-    <dt class="property-required"
+<dl class="resources-properties"><dt class="property-required"
             title="Required">
         <span id="dhgroup_nodejs">
 <a href="#dhgroup_nodejs" style="color: inherit; text-decoration: inherit;">dh<wbr>Group</a>
@@ -3174,8 +2973,7 @@ or `None`.
     <dd>{{% md %}}The DH group used in IKE phase 1 for initial SA. Valid
 options are `DHGroup1`, `DHGroup14`, `DHGroup2`, `DHGroup2048`, `DHGroup24`,
 `ECP256`, `ECP384`, or `None`.
-{{% /md %}}</dd>
-    <dt class="property-required"
+{{% /md %}}</dd><dt class="property-required"
             title="Required">
         <span id="ikeencryption_nodejs">
 <a href="#ikeencryption_nodejs" style="color: inherit; text-decoration: inherit;">ike<wbr>Encryption</a>
@@ -3185,8 +2983,7 @@ options are `DHGroup1`, `DHGroup14`, `DHGroup2`, `DHGroup2048`, `DHGroup24`,
     </dt>
     <dd>{{% md %}}The IKE encryption algorithm. Valid
 options are `AES128`, `AES192`, `AES256`, `DES`, or `DES3`.
-{{% /md %}}</dd>
-    <dt class="property-required"
+{{% /md %}}</dd><dt class="property-required"
             title="Required">
         <span id="ikeintegrity_nodejs">
 <a href="#ikeintegrity_nodejs" style="color: inherit; text-decoration: inherit;">ike<wbr>Integrity</a>
@@ -3196,8 +2993,7 @@ options are `AES128`, `AES192`, `AES256`, `DES`, or `DES3`.
     </dt>
     <dd>{{% md %}}The IKE integrity algorithm. Valid
 options are `MD5`, `SHA1`, `SHA256`, or `SHA384`.
-{{% /md %}}</dd>
-    <dt class="property-required"
+{{% /md %}}</dd><dt class="property-required"
             title="Required">
         <span id="ipsecencryption_nodejs">
 <a href="#ipsecencryption_nodejs" style="color: inherit; text-decoration: inherit;">ipsec<wbr>Encryption</a>
@@ -3207,8 +3003,7 @@ options are `MD5`, `SHA1`, `SHA256`, or `SHA384`.
     </dt>
     <dd>{{% md %}}The IPSec encryption algorithm. Valid
 options are `AES128`, `AES192`, `AES256`, `DES`, `DES3`, `GCMAES128`, `GCMAES192`, `GCMAES256`, or `None`.
-{{% /md %}}</dd>
-    <dt class="property-required"
+{{% /md %}}</dd><dt class="property-required"
             title="Required">
         <span id="ipsecintegrity_nodejs">
 <a href="#ipsecintegrity_nodejs" style="color: inherit; text-decoration: inherit;">ipsec<wbr>Integrity</a>
@@ -3218,8 +3013,7 @@ options are `AES128`, `AES192`, `AES256`, `DES`, `DES3`, `GCMAES128`, `GCMAES192
     </dt>
     <dd>{{% md %}}The IPSec integrity algorithm. Valid
 options are `GCMAES128`, `GCMAES192`, `GCMAES256`, `MD5`, `SHA1`, or `SHA256`.
-{{% /md %}}</dd>
-    <dt class="property-required"
+{{% /md %}}</dd><dt class="property-required"
             title="Required">
         <span id="pfsgroup_nodejs">
 <a href="#pfsgroup_nodejs" style="color: inherit; text-decoration: inherit;">pfs<wbr>Group</a>
@@ -3230,8 +3024,7 @@ options are `GCMAES128`, `GCMAES192`, `GCMAES256`, `MD5`, `SHA1`, or `SHA256`.
     <dd>{{% md %}}The DH group used in IKE phase 2 for new child SA.
 Valid options are `ECP256`, `ECP384`, `PFS1`, `PFS2`, `PFS2048`, `PFS24`,
 or `None`.
-{{% /md %}}</dd>
-    <dt class="property-optional"
+{{% /md %}}</dd><dt class="property-optional"
             title="Optional">
         <span id="sadatasize_nodejs">
 <a href="#sadatasize_nodejs" style="color: inherit; text-decoration: inherit;">sa<wbr>Datasize</a>
@@ -3241,8 +3034,7 @@ or `None`.
     </dt>
     <dd>{{% md %}}The IPSec SA payload size in KB. Must be at least
 `1024` KB. Defaults to `102400000` KB.
-{{% /md %}}</dd>
-    <dt class="property-optional"
+{{% /md %}}</dd><dt class="property-optional"
             title="Optional">
         <span id="salifetime_nodejs">
 <a href="#salifetime_nodejs" style="color: inherit; text-decoration: inherit;">sa<wbr>Lifetime</a>
@@ -3252,14 +3044,11 @@ or `None`.
     </dt>
     <dd>{{% md %}}The IPSec SA lifetime in seconds. Must be at least
 `300` seconds. Defaults to `27000` seconds.
-{{% /md %}}</dd>
-</dl>
+{{% /md %}}</dd></dl>
 {{% /choosable %}}
 
 {{% choosable language python %}}
-<dl class="resources-properties">
-
-    <dt class="property-required"
+<dl class="resources-properties"><dt class="property-required"
             title="Required">
         <span id="dh_group_python">
 <a href="#dh_group_python" style="color: inherit; text-decoration: inherit;">dh_<wbr>group</a>
@@ -3270,8 +3059,7 @@ or `None`.
     <dd>{{% md %}}The DH group used in IKE phase 1 for initial SA. Valid
 options are `DHGroup1`, `DHGroup14`, `DHGroup2`, `DHGroup2048`, `DHGroup24`,
 `ECP256`, `ECP384`, or `None`.
-{{% /md %}}</dd>
-    <dt class="property-required"
+{{% /md %}}</dd><dt class="property-required"
             title="Required">
         <span id="ike_encryption_python">
 <a href="#ike_encryption_python" style="color: inherit; text-decoration: inherit;">ike_<wbr>encryption</a>
@@ -3281,8 +3069,7 @@ options are `DHGroup1`, `DHGroup14`, `DHGroup2`, `DHGroup2048`, `DHGroup24`,
     </dt>
     <dd>{{% md %}}The IKE encryption algorithm. Valid
 options are `AES128`, `AES192`, `AES256`, `DES`, or `DES3`.
-{{% /md %}}</dd>
-    <dt class="property-required"
+{{% /md %}}</dd><dt class="property-required"
             title="Required">
         <span id="ike_integrity_python">
 <a href="#ike_integrity_python" style="color: inherit; text-decoration: inherit;">ike_<wbr>integrity</a>
@@ -3292,8 +3079,7 @@ options are `AES128`, `AES192`, `AES256`, `DES`, or `DES3`.
     </dt>
     <dd>{{% md %}}The IKE integrity algorithm. Valid
 options are `MD5`, `SHA1`, `SHA256`, or `SHA384`.
-{{% /md %}}</dd>
-    <dt class="property-required"
+{{% /md %}}</dd><dt class="property-required"
             title="Required">
         <span id="ipsec_encryption_python">
 <a href="#ipsec_encryption_python" style="color: inherit; text-decoration: inherit;">ipsec_<wbr>encryption</a>
@@ -3303,8 +3089,7 @@ options are `MD5`, `SHA1`, `SHA256`, or `SHA384`.
     </dt>
     <dd>{{% md %}}The IPSec encryption algorithm. Valid
 options are `AES128`, `AES192`, `AES256`, `DES`, `DES3`, `GCMAES128`, `GCMAES192`, `GCMAES256`, or `None`.
-{{% /md %}}</dd>
-    <dt class="property-required"
+{{% /md %}}</dd><dt class="property-required"
             title="Required">
         <span id="ipsec_integrity_python">
 <a href="#ipsec_integrity_python" style="color: inherit; text-decoration: inherit;">ipsec_<wbr>integrity</a>
@@ -3314,8 +3099,7 @@ options are `AES128`, `AES192`, `AES256`, `DES`, `DES3`, `GCMAES128`, `GCMAES192
     </dt>
     <dd>{{% md %}}The IPSec integrity algorithm. Valid
 options are `GCMAES128`, `GCMAES192`, `GCMAES256`, `MD5`, `SHA1`, or `SHA256`.
-{{% /md %}}</dd>
-    <dt class="property-required"
+{{% /md %}}</dd><dt class="property-required"
             title="Required">
         <span id="pfs_group_python">
 <a href="#pfs_group_python" style="color: inherit; text-decoration: inherit;">pfs_<wbr>group</a>
@@ -3326,8 +3110,7 @@ options are `GCMAES128`, `GCMAES192`, `GCMAES256`, `MD5`, `SHA1`, or `SHA256`.
     <dd>{{% md %}}The DH group used in IKE phase 2 for new child SA.
 Valid options are `ECP256`, `ECP384`, `PFS1`, `PFS2`, `PFS2048`, `PFS24`,
 or `None`.
-{{% /md %}}</dd>
-    <dt class="property-optional"
+{{% /md %}}</dd><dt class="property-optional"
             title="Optional">
         <span id="sa_datasize_python">
 <a href="#sa_datasize_python" style="color: inherit; text-decoration: inherit;">sa_<wbr>datasize</a>
@@ -3337,8 +3120,7 @@ or `None`.
     </dt>
     <dd>{{% md %}}The IPSec SA payload size in KB. Must be at least
 `1024` KB. Defaults to `102400000` KB.
-{{% /md %}}</dd>
-    <dt class="property-optional"
+{{% /md %}}</dd><dt class="property-optional"
             title="Optional">
         <span id="sa_lifetime_python">
 <a href="#sa_lifetime_python" style="color: inherit; text-decoration: inherit;">sa_<wbr>lifetime</a>
@@ -3348,16 +3130,13 @@ or `None`.
     </dt>
     <dd>{{% md %}}The IPSec SA lifetime in seconds. Must be at least
 `300` seconds. Defaults to `27000` seconds.
-{{% /md %}}</dd>
-</dl>
+{{% /md %}}</dd></dl>
 {{% /choosable %}}
 
 <h4 id="virtualnetworkgatewayconnectiontrafficselectorpolicy">Virtual<wbr>Network<wbr>Gateway<wbr>Connection<wbr>Traffic<wbr>Selector<wbr>Policy</h4>
 
 {{% choosable language csharp %}}
-<dl class="resources-properties">
-
-    <dt class="property-required"
+<dl class="resources-properties"><dt class="property-required"
             title="Required">
         <span id="localaddresscidrs_csharp">
 <a href="#localaddresscidrs_csharp" style="color: inherit; text-decoration: inherit;">Local<wbr>Address<wbr>Cidrs</a>
@@ -3365,8 +3144,7 @@ or `None`.
         <span class="property-indicator"></span>
         <span class="property-type">List&lt;string&gt;</span>
     </dt>
-    <dd>{{% md %}}{{% /md %}}</dd>
-    <dt class="property-required"
+    <dd>{{% md %}}{{% /md %}}</dd><dt class="property-required"
             title="Required">
         <span id="remoteaddresscidrs_csharp">
 <a href="#remoteaddresscidrs_csharp" style="color: inherit; text-decoration: inherit;">Remote<wbr>Address<wbr>Cidrs</a>
@@ -3374,14 +3152,11 @@ or `None`.
         <span class="property-indicator"></span>
         <span class="property-type">List&lt;string&gt;</span>
     </dt>
-    <dd>{{% md %}}{{% /md %}}</dd>
-</dl>
+    <dd>{{% md %}}{{% /md %}}</dd></dl>
 {{% /choosable %}}
 
 {{% choosable language go %}}
-<dl class="resources-properties">
-
-    <dt class="property-required"
+<dl class="resources-properties"><dt class="property-required"
             title="Required">
         <span id="localaddresscidrs_go">
 <a href="#localaddresscidrs_go" style="color: inherit; text-decoration: inherit;">Local<wbr>Address<wbr>Cidrs</a>
@@ -3389,8 +3164,7 @@ or `None`.
         <span class="property-indicator"></span>
         <span class="property-type">[]string</span>
     </dt>
-    <dd>{{% md %}}{{% /md %}}</dd>
-    <dt class="property-required"
+    <dd>{{% md %}}{{% /md %}}</dd><dt class="property-required"
             title="Required">
         <span id="remoteaddresscidrs_go">
 <a href="#remoteaddresscidrs_go" style="color: inherit; text-decoration: inherit;">Remote<wbr>Address<wbr>Cidrs</a>
@@ -3398,14 +3172,11 @@ or `None`.
         <span class="property-indicator"></span>
         <span class="property-type">[]string</span>
     </dt>
-    <dd>{{% md %}}{{% /md %}}</dd>
-</dl>
+    <dd>{{% md %}}{{% /md %}}</dd></dl>
 {{% /choosable %}}
 
 {{% choosable language nodejs %}}
-<dl class="resources-properties">
-
-    <dt class="property-required"
+<dl class="resources-properties"><dt class="property-required"
             title="Required">
         <span id="localaddresscidrs_nodejs">
 <a href="#localaddresscidrs_nodejs" style="color: inherit; text-decoration: inherit;">local<wbr>Address<wbr>Cidrs</a>
@@ -3413,8 +3184,7 @@ or `None`.
         <span class="property-indicator"></span>
         <span class="property-type">string[]</span>
     </dt>
-    <dd>{{% md %}}{{% /md %}}</dd>
-    <dt class="property-required"
+    <dd>{{% md %}}{{% /md %}}</dd><dt class="property-required"
             title="Required">
         <span id="remoteaddresscidrs_nodejs">
 <a href="#remoteaddresscidrs_nodejs" style="color: inherit; text-decoration: inherit;">remote<wbr>Address<wbr>Cidrs</a>
@@ -3422,14 +3192,11 @@ or `None`.
         <span class="property-indicator"></span>
         <span class="property-type">string[]</span>
     </dt>
-    <dd>{{% md %}}{{% /md %}}</dd>
-</dl>
+    <dd>{{% md %}}{{% /md %}}</dd></dl>
 {{% /choosable %}}
 
 {{% choosable language python %}}
-<dl class="resources-properties">
-
-    <dt class="property-required"
+<dl class="resources-properties"><dt class="property-required"
             title="Required">
         <span id="local_address_cidrs_python">
 <a href="#local_address_cidrs_python" style="color: inherit; text-decoration: inherit;">local_<wbr>address_<wbr>cidrs</a>
@@ -3437,8 +3204,7 @@ or `None`.
         <span class="property-indicator"></span>
         <span class="property-type">Sequence[str]</span>
     </dt>
-    <dd>{{% md %}}{{% /md %}}</dd>
-    <dt class="property-required"
+    <dd>{{% md %}}{{% /md %}}</dd><dt class="property-required"
             title="Required">
         <span id="remote_address_cidrs_python">
 <a href="#remote_address_cidrs_python" style="color: inherit; text-decoration: inherit;">remote_<wbr>address_<wbr>cidrs</a>
@@ -3446,8 +3212,7 @@ or `None`.
         <span class="property-indicator"></span>
         <span class="property-type">Sequence[str]</span>
     </dt>
-    <dd>{{% md %}}{{% /md %}}</dd>
-</dl>
+    <dd>{{% md %}}{{% /md %}}</dd></dl>
 {{% /choosable %}}
 ## Import
 
@@ -3468,6 +3233,6 @@ Virtual Network Gateway Connections can be imported using their `resource id`, e
 	<dt>License</dt>
 	<dd>Apache-2.0</dd>
 	<dt>Notes</dt>
-	<dd>This Pulumi package is based on the [`azurerm` Terraform Provider](https://github.com/terraform-providers/terraform-provider-azurerm).</dd>
+	<dd>{{% md %}}This Pulumi package is based on the [`azurerm` Terraform Provider](https://github.com/terraform-providers/terraform-provider-azurerm).{{% /md %}}</dd>
 </dl>
 

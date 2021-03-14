@@ -51,9 +51,7 @@ The following arguments are supported:
 
 
 {{% choosable language csharp %}}
-<dl class="resources-properties">
-
-    <dt class="property-required"
+<dl class="resources-properties"><dt class="property-required"
             title="Required">
         <span id="partnerregistrationname_csharp">
 <a href="#partnerregistrationname_csharp" style="color: inherit; text-decoration: inherit;">Partner<wbr>Registration<wbr>Name</a>
@@ -61,8 +59,7 @@ The following arguments are supported:
         <span class="property-indicator"></span>
         <span class="property-type">string</span>
     </dt>
-    <dd>{{% md %}}Name of the partner registration.{{% /md %}}</dd>
-    <dt class="property-required"
+    <dd>{{% md %}}Name of the partner registration.{{% /md %}}</dd><dt class="property-required"
             title="Required">
         <span id="resourcegroupname_csharp">
 <a href="#resourcegroupname_csharp" style="color: inherit; text-decoration: inherit;">Resource<wbr>Group<wbr>Name</a>
@@ -70,14 +67,11 @@ The following arguments are supported:
         <span class="property-indicator"></span>
         <span class="property-type">string</span>
     </dt>
-    <dd>{{% md %}}The name of the resource group within the user's subscription.{{% /md %}}</dd>
-</dl>
+    <dd>{{% md %}}The name of the resource group within the user's subscription.{{% /md %}}</dd></dl>
 {{% /choosable %}}
 
 {{% choosable language go %}}
-<dl class="resources-properties">
-
-    <dt class="property-required"
+<dl class="resources-properties"><dt class="property-required"
             title="Required">
         <span id="partnerregistrationname_go">
 <a href="#partnerregistrationname_go" style="color: inherit; text-decoration: inherit;">Partner<wbr>Registration<wbr>Name</a>
@@ -85,8 +79,7 @@ The following arguments are supported:
         <span class="property-indicator"></span>
         <span class="property-type">string</span>
     </dt>
-    <dd>{{% md %}}Name of the partner registration.{{% /md %}}</dd>
-    <dt class="property-required"
+    <dd>{{% md %}}Name of the partner registration.{{% /md %}}</dd><dt class="property-required"
             title="Required">
         <span id="resourcegroupname_go">
 <a href="#resourcegroupname_go" style="color: inherit; text-decoration: inherit;">Resource<wbr>Group<wbr>Name</a>
@@ -94,14 +87,11 @@ The following arguments are supported:
         <span class="property-indicator"></span>
         <span class="property-type">string</span>
     </dt>
-    <dd>{{% md %}}The name of the resource group within the user's subscription.{{% /md %}}</dd>
-</dl>
+    <dd>{{% md %}}The name of the resource group within the user's subscription.{{% /md %}}</dd></dl>
 {{% /choosable %}}
 
 {{% choosable language nodejs %}}
-<dl class="resources-properties">
-
-    <dt class="property-required"
+<dl class="resources-properties"><dt class="property-required"
             title="Required">
         <span id="partnerregistrationname_nodejs">
 <a href="#partnerregistrationname_nodejs" style="color: inherit; text-decoration: inherit;">partner<wbr>Registration<wbr>Name</a>
@@ -109,8 +99,7 @@ The following arguments are supported:
         <span class="property-indicator"></span>
         <span class="property-type">string</span>
     </dt>
-    <dd>{{% md %}}Name of the partner registration.{{% /md %}}</dd>
-    <dt class="property-required"
+    <dd>{{% md %}}Name of the partner registration.{{% /md %}}</dd><dt class="property-required"
             title="Required">
         <span id="resourcegroupname_nodejs">
 <a href="#resourcegroupname_nodejs" style="color: inherit; text-decoration: inherit;">resource<wbr>Group<wbr>Name</a>
@@ -118,14 +107,11 @@ The following arguments are supported:
         <span class="property-indicator"></span>
         <span class="property-type">string</span>
     </dt>
-    <dd>{{% md %}}The name of the resource group within the user's subscription.{{% /md %}}</dd>
-</dl>
+    <dd>{{% md %}}The name of the resource group within the user's subscription.{{% /md %}}</dd></dl>
 {{% /choosable %}}
 
 {{% choosable language python %}}
-<dl class="resources-properties">
-
-    <dt class="property-required"
+<dl class="resources-properties"><dt class="property-required"
             title="Required">
         <span id="partner_registration_name_python">
 <a href="#partner_registration_name_python" style="color: inherit; text-decoration: inherit;">partner_<wbr>registration_<wbr>name</a>
@@ -133,8 +119,7 @@ The following arguments are supported:
         <span class="property-indicator"></span>
         <span class="property-type">str</span>
     </dt>
-    <dd>{{% md %}}Name of the partner registration.{{% /md %}}</dd>
-    <dt class="property-required"
+    <dd>{{% md %}}Name of the partner registration.{{% /md %}}</dd><dt class="property-required"
             title="Required">
         <span id="resource_group_name_python">
 <a href="#resource_group_name_python" style="color: inherit; text-decoration: inherit;">resource_<wbr>group_<wbr>name</a>
@@ -142,8 +127,7 @@ The following arguments are supported:
         <span class="property-indicator"></span>
         <span class="property-type">str</span>
     </dt>
-    <dd>{{% md %}}The name of the resource group within the user's subscription.{{% /md %}}</dd>
-</dl>
+    <dd>{{% md %}}The name of the resource group within the user's subscription.{{% /md %}}</dd></dl>
 {{% /choosable %}}
 
 
@@ -156,9 +140,7 @@ The following output properties are available:
 
 
 {{% choosable language csharp %}}
-<dl class="resources-properties">
-
-    <dt class="property-"
+<dl class="resources-properties"><dt class="property-"
             title="">
         <span id="id_csharp">
 <a href="#id_csharp" style="color: inherit; text-decoration: inherit;">Id</a>
@@ -166,8 +148,7 @@ The following output properties are available:
         <span class="property-indicator"></span>
         <span class="property-type">string</span>
     </dt>
-    <dd>{{% md %}}Fully qualified identifier of the resource.{{% /md %}}</dd>
-    <dt class="property-"
+    <dd>{{% md %}}Fully qualified identifier of the resource.{{% /md %}}</dd><dt class="property-"
             title="">
         <span id="location_csharp">
 <a href="#location_csharp" style="color: inherit; text-decoration: inherit;">Location</a>
@@ -175,8 +156,7 @@ The following output properties are available:
         <span class="property-indicator"></span>
         <span class="property-type">string</span>
     </dt>
-    <dd>{{% md %}}Location of the resource.{{% /md %}}</dd>
-    <dt class="property-"
+    <dd>{{% md %}}Location of the resource.{{% /md %}}</dd><dt class="property-"
             title="">
         <span id="name_csharp">
 <a href="#name_csharp" style="color: inherit; text-decoration: inherit;">Name</a>
@@ -184,8 +164,7 @@ The following output properties are available:
         <span class="property-indicator"></span>
         <span class="property-type">string</span>
     </dt>
-    <dd>{{% md %}}Name of the resource.{{% /md %}}</dd>
-    <dt class="property-"
+    <dd>{{% md %}}Name of the resource.{{% /md %}}</dd><dt class="property-"
             title="">
         <span id="provisioningstate_csharp">
 <a href="#provisioningstate_csharp" style="color: inherit; text-decoration: inherit;">Provisioning<wbr>State</a>
@@ -193,8 +172,7 @@ The following output properties are available:
         <span class="property-indicator"></span>
         <span class="property-type">string</span>
     </dt>
-    <dd>{{% md %}}Provisioning state of the partner registration.{{% /md %}}</dd>
-    <dt class="property-"
+    <dd>{{% md %}}Provisioning state of the partner registration.{{% /md %}}</dd><dt class="property-"
             title="">
         <span id="systemdata_csharp">
 <a href="#systemdata_csharp" style="color: inherit; text-decoration: inherit;">System<wbr>Data</a>
@@ -202,8 +180,7 @@ The following output properties are available:
         <span class="property-indicator"></span>
         <span class="property-type"><a href="#systemdataresponse">Pulumi.<wbr>Azure<wbr>Native.<wbr>Event<wbr>Grid.<wbr>Outputs.<wbr>System<wbr>Data<wbr>Response</a></span>
     </dt>
-    <dd>{{% md %}}The system metadata relating to Partner Registration resource.{{% /md %}}</dd>
-    <dt class="property-"
+    <dd>{{% md %}}The system metadata relating to Partner Registration resource.{{% /md %}}</dd><dt class="property-"
             title="">
         <span id="type_csharp">
 <a href="#type_csharp" style="color: inherit; text-decoration: inherit;">Type</a>
@@ -211,8 +188,7 @@ The following output properties are available:
         <span class="property-indicator"></span>
         <span class="property-type">string</span>
     </dt>
-    <dd>{{% md %}}Type of the resource.{{% /md %}}</dd>
-    <dt class="property-"
+    <dd>{{% md %}}Type of the resource.{{% /md %}}</dd><dt class="property-"
             title="">
         <span id="authorizedazuresubscriptionids_csharp">
 <a href="#authorizedazuresubscriptionids_csharp" style="color: inherit; text-decoration: inherit;">Authorized<wbr>Azure<wbr>Subscription<wbr>Ids</a>
@@ -223,8 +199,7 @@ The following output properties are available:
     <dd>{{% md %}}List of Azure subscription Ids that are authorized to create a partner namespace
 associated with this partner registration. This is an optional property. Creating
 partner namespaces is always permitted under the same Azure subscription as the one used
-for creating the partner registration.{{% /md %}}</dd>
-    <dt class="property-"
+for creating the partner registration.{{% /md %}}</dd><dt class="property-"
             title="">
         <span id="customerserviceuri_csharp">
 <a href="#customerserviceuri_csharp" style="color: inherit; text-decoration: inherit;">Customer<wbr>Service<wbr>Uri</a>
@@ -232,8 +207,7 @@ for creating the partner registration.{{% /md %}}</dd>
         <span class="property-indicator"></span>
         <span class="property-type">string</span>
     </dt>
-    <dd>{{% md %}}The extension of the customer service URI of the publisher.{{% /md %}}</dd>
-    <dt class="property-"
+    <dd>{{% md %}}The extension of the customer service URI of the publisher.{{% /md %}}</dd><dt class="property-"
             title="">
         <span id="logouri_csharp">
 <a href="#logouri_csharp" style="color: inherit; text-decoration: inherit;">Logo<wbr>Uri</a>
@@ -241,8 +215,7 @@ for creating the partner registration.{{% /md %}}</dd>
         <span class="property-indicator"></span>
         <span class="property-type">string</span>
     </dt>
-    <dd>{{% md %}}URI of the logo.{{% /md %}}</dd>
-    <dt class="property-"
+    <dd>{{% md %}}URI of the logo.{{% /md %}}</dd><dt class="property-"
             title="">
         <span id="longdescription_csharp">
 <a href="#longdescription_csharp" style="color: inherit; text-decoration: inherit;">Long<wbr>Description</a>
@@ -251,8 +224,7 @@ for creating the partner registration.{{% /md %}}</dd>
         <span class="property-type">string</span>
     </dt>
     <dd>{{% md %}}Long description for the custom scenarios and integration to be displayed in the portal if needed.
-Length of this description should not exceed 2048 characters.{{% /md %}}</dd>
-    <dt class="property-"
+Length of this description should not exceed 2048 characters.{{% /md %}}</dd><dt class="property-"
             title="">
         <span id="partnercustomerserviceextension_csharp">
 <a href="#partnercustomerserviceextension_csharp" style="color: inherit; text-decoration: inherit;">Partner<wbr>Customer<wbr>Service<wbr>Extension</a>
@@ -260,8 +232,7 @@ Length of this description should not exceed 2048 characters.{{% /md %}}</dd>
         <span class="property-indicator"></span>
         <span class="property-type">string</span>
     </dt>
-    <dd>{{% md %}}The extension of the customer service number of the publisher. Only digits are allowed and number of digits should not exceed 10.{{% /md %}}</dd>
-    <dt class="property-"
+    <dd>{{% md %}}The extension of the customer service number of the publisher. Only digits are allowed and number of digits should not exceed 10.{{% /md %}}</dd><dt class="property-"
             title="">
         <span id="partnercustomerservicenumber_csharp">
 <a href="#partnercustomerservicenumber_csharp" style="color: inherit; text-decoration: inherit;">Partner<wbr>Customer<wbr>Service<wbr>Number</a>
@@ -272,8 +243,7 @@ Length of this description should not exceed 2048 characters.{{% /md %}}</dd>
     <dd>{{% md %}}The customer service number of the publisher. The expected phone format should start with a '+' sign 
 followed by the country code. The remaining digits are then followed. Only digits and spaces are allowed and its
 length cannot exceed 16 digits including country code. Examples of valid phone numbers are: +1 515 123 4567 and
-+966 7 5115 2471. Examples of invalid phone numbers are: +1 (515) 123-4567, 1 515 123 4567 and +966 121 5115 24 7 551 1234 43{{% /md %}}</dd>
-    <dt class="property-"
++966 7 5115 2471. Examples of invalid phone numbers are: +1 (515) 123-4567, 1 515 123 4567 and +966 121 5115 24 7 551 1234 43{{% /md %}}</dd><dt class="property-"
             title="">
         <span id="partnername_csharp">
 <a href="#partnername_csharp" style="color: inherit; text-decoration: inherit;">Partner<wbr>Name</a>
@@ -281,8 +251,7 @@ length cannot exceed 16 digits including country code. Examples of valid phone n
         <span class="property-indicator"></span>
         <span class="property-type">string</span>
     </dt>
-    <dd>{{% md %}}Official name of the partner name. For example: "Contoso".{{% /md %}}</dd>
-    <dt class="property-"
+    <dd>{{% md %}}Official name of the partner name. For example: "Contoso".{{% /md %}}</dd><dt class="property-"
             title="">
         <span id="partnerresourcetypedescription_csharp">
 <a href="#partnerresourcetypedescription_csharp" style="color: inherit; text-decoration: inherit;">Partner<wbr>Resource<wbr>Type<wbr>Description</a>
@@ -290,8 +259,7 @@ length cannot exceed 16 digits including country code. Examples of valid phone n
         <span class="property-indicator"></span>
         <span class="property-type">string</span>
     </dt>
-    <dd>{{% md %}}Short description of the partner resource type. The length of this description should not exceed 256 characters.{{% /md %}}</dd>
-    <dt class="property-"
+    <dd>{{% md %}}Short description of the partner resource type. The length of this description should not exceed 256 characters.{{% /md %}}</dd><dt class="property-"
             title="">
         <span id="partnerresourcetypedisplayname_csharp">
 <a href="#partnerresourcetypedisplayname_csharp" style="color: inherit; text-decoration: inherit;">Partner<wbr>Resource<wbr>Type<wbr>Display<wbr>Name</a>
@@ -299,8 +267,7 @@ length cannot exceed 16 digits including country code. Examples of valid phone n
         <span class="property-indicator"></span>
         <span class="property-type">string</span>
     </dt>
-    <dd>{{% md %}}Display name of the partner resource type.{{% /md %}}</dd>
-    <dt class="property-"
+    <dd>{{% md %}}Display name of the partner resource type.{{% /md %}}</dd><dt class="property-"
             title="">
         <span id="partnerresourcetypename_csharp">
 <a href="#partnerresourcetypename_csharp" style="color: inherit; text-decoration: inherit;">Partner<wbr>Resource<wbr>Type<wbr>Name</a>
@@ -308,8 +275,7 @@ length cannot exceed 16 digits including country code. Examples of valid phone n
         <span class="property-indicator"></span>
         <span class="property-type">string</span>
     </dt>
-    <dd>{{% md %}}Name of the partner resource type.{{% /md %}}</dd>
-    <dt class="property-"
+    <dd>{{% md %}}Name of the partner resource type.{{% /md %}}</dd><dt class="property-"
             title="">
         <span id="setupuri_csharp">
 <a href="#setupuri_csharp" style="color: inherit; text-decoration: inherit;">Setup<wbr>Uri</a>
@@ -318,8 +284,7 @@ length cannot exceed 16 digits including country code. Examples of valid phone n
         <span class="property-type">string</span>
     </dt>
     <dd>{{% md %}}URI of the partner website that can be used by Azure customers to setup Event Grid
-integration on an event source.{{% /md %}}</dd>
-    <dt class="property-"
+integration on an event source.{{% /md %}}</dd><dt class="property-"
             title="">
         <span id="tags_csharp">
 <a href="#tags_csharp" style="color: inherit; text-decoration: inherit;">Tags</a>
@@ -327,8 +292,7 @@ integration on an event source.{{% /md %}}</dd>
         <span class="property-indicator"></span>
         <span class="property-type">Dictionary&lt;string, string&gt;</span>
     </dt>
-    <dd>{{% md %}}Tags of the resource.{{% /md %}}</dd>
-    <dt class="property-"
+    <dd>{{% md %}}Tags of the resource.{{% /md %}}</dd><dt class="property-"
             title="">
         <span id="visibilitystate_csharp">
 <a href="#visibilitystate_csharp" style="color: inherit; text-decoration: inherit;">Visibility<wbr>State</a>
@@ -336,14 +300,11 @@ integration on an event source.{{% /md %}}</dd>
         <span class="property-indicator"></span>
         <span class="property-type">string</span>
     </dt>
-    <dd>{{% md %}}Visibility state of the partner registration.{{% /md %}}</dd>
-</dl>
+    <dd>{{% md %}}Visibility state of the partner registration.{{% /md %}}</dd></dl>
 {{% /choosable %}}
 
 {{% choosable language go %}}
-<dl class="resources-properties">
-
-    <dt class="property-"
+<dl class="resources-properties"><dt class="property-"
             title="">
         <span id="id_go">
 <a href="#id_go" style="color: inherit; text-decoration: inherit;">Id</a>
@@ -351,8 +312,7 @@ integration on an event source.{{% /md %}}</dd>
         <span class="property-indicator"></span>
         <span class="property-type">string</span>
     </dt>
-    <dd>{{% md %}}Fully qualified identifier of the resource.{{% /md %}}</dd>
-    <dt class="property-"
+    <dd>{{% md %}}Fully qualified identifier of the resource.{{% /md %}}</dd><dt class="property-"
             title="">
         <span id="location_go">
 <a href="#location_go" style="color: inherit; text-decoration: inherit;">Location</a>
@@ -360,8 +320,7 @@ integration on an event source.{{% /md %}}</dd>
         <span class="property-indicator"></span>
         <span class="property-type">string</span>
     </dt>
-    <dd>{{% md %}}Location of the resource.{{% /md %}}</dd>
-    <dt class="property-"
+    <dd>{{% md %}}Location of the resource.{{% /md %}}</dd><dt class="property-"
             title="">
         <span id="name_go">
 <a href="#name_go" style="color: inherit; text-decoration: inherit;">Name</a>
@@ -369,8 +328,7 @@ integration on an event source.{{% /md %}}</dd>
         <span class="property-indicator"></span>
         <span class="property-type">string</span>
     </dt>
-    <dd>{{% md %}}Name of the resource.{{% /md %}}</dd>
-    <dt class="property-"
+    <dd>{{% md %}}Name of the resource.{{% /md %}}</dd><dt class="property-"
             title="">
         <span id="provisioningstate_go">
 <a href="#provisioningstate_go" style="color: inherit; text-decoration: inherit;">Provisioning<wbr>State</a>
@@ -378,8 +336,7 @@ integration on an event source.{{% /md %}}</dd>
         <span class="property-indicator"></span>
         <span class="property-type">string</span>
     </dt>
-    <dd>{{% md %}}Provisioning state of the partner registration.{{% /md %}}</dd>
-    <dt class="property-"
+    <dd>{{% md %}}Provisioning state of the partner registration.{{% /md %}}</dd><dt class="property-"
             title="">
         <span id="systemdata_go">
 <a href="#systemdata_go" style="color: inherit; text-decoration: inherit;">System<wbr>Data</a>
@@ -387,8 +344,7 @@ integration on an event source.{{% /md %}}</dd>
         <span class="property-indicator"></span>
         <span class="property-type"><a href="#systemdataresponse">System<wbr>Data<wbr>Response</a></span>
     </dt>
-    <dd>{{% md %}}The system metadata relating to Partner Registration resource.{{% /md %}}</dd>
-    <dt class="property-"
+    <dd>{{% md %}}The system metadata relating to Partner Registration resource.{{% /md %}}</dd><dt class="property-"
             title="">
         <span id="type_go">
 <a href="#type_go" style="color: inherit; text-decoration: inherit;">Type</a>
@@ -396,8 +352,7 @@ integration on an event source.{{% /md %}}</dd>
         <span class="property-indicator"></span>
         <span class="property-type">string</span>
     </dt>
-    <dd>{{% md %}}Type of the resource.{{% /md %}}</dd>
-    <dt class="property-"
+    <dd>{{% md %}}Type of the resource.{{% /md %}}</dd><dt class="property-"
             title="">
         <span id="authorizedazuresubscriptionids_go">
 <a href="#authorizedazuresubscriptionids_go" style="color: inherit; text-decoration: inherit;">Authorized<wbr>Azure<wbr>Subscription<wbr>Ids</a>
@@ -408,8 +363,7 @@ integration on an event source.{{% /md %}}</dd>
     <dd>{{% md %}}List of Azure subscription Ids that are authorized to create a partner namespace
 associated with this partner registration. This is an optional property. Creating
 partner namespaces is always permitted under the same Azure subscription as the one used
-for creating the partner registration.{{% /md %}}</dd>
-    <dt class="property-"
+for creating the partner registration.{{% /md %}}</dd><dt class="property-"
             title="">
         <span id="customerserviceuri_go">
 <a href="#customerserviceuri_go" style="color: inherit; text-decoration: inherit;">Customer<wbr>Service<wbr>Uri</a>
@@ -417,8 +371,7 @@ for creating the partner registration.{{% /md %}}</dd>
         <span class="property-indicator"></span>
         <span class="property-type">string</span>
     </dt>
-    <dd>{{% md %}}The extension of the customer service URI of the publisher.{{% /md %}}</dd>
-    <dt class="property-"
+    <dd>{{% md %}}The extension of the customer service URI of the publisher.{{% /md %}}</dd><dt class="property-"
             title="">
         <span id="logouri_go">
 <a href="#logouri_go" style="color: inherit; text-decoration: inherit;">Logo<wbr>Uri</a>
@@ -426,8 +379,7 @@ for creating the partner registration.{{% /md %}}</dd>
         <span class="property-indicator"></span>
         <span class="property-type">string</span>
     </dt>
-    <dd>{{% md %}}URI of the logo.{{% /md %}}</dd>
-    <dt class="property-"
+    <dd>{{% md %}}URI of the logo.{{% /md %}}</dd><dt class="property-"
             title="">
         <span id="longdescription_go">
 <a href="#longdescription_go" style="color: inherit; text-decoration: inherit;">Long<wbr>Description</a>
@@ -436,8 +388,7 @@ for creating the partner registration.{{% /md %}}</dd>
         <span class="property-type">string</span>
     </dt>
     <dd>{{% md %}}Long description for the custom scenarios and integration to be displayed in the portal if needed.
-Length of this description should not exceed 2048 characters.{{% /md %}}</dd>
-    <dt class="property-"
+Length of this description should not exceed 2048 characters.{{% /md %}}</dd><dt class="property-"
             title="">
         <span id="partnercustomerserviceextension_go">
 <a href="#partnercustomerserviceextension_go" style="color: inherit; text-decoration: inherit;">Partner<wbr>Customer<wbr>Service<wbr>Extension</a>
@@ -445,8 +396,7 @@ Length of this description should not exceed 2048 characters.{{% /md %}}</dd>
         <span class="property-indicator"></span>
         <span class="property-type">string</span>
     </dt>
-    <dd>{{% md %}}The extension of the customer service number of the publisher. Only digits are allowed and number of digits should not exceed 10.{{% /md %}}</dd>
-    <dt class="property-"
+    <dd>{{% md %}}The extension of the customer service number of the publisher. Only digits are allowed and number of digits should not exceed 10.{{% /md %}}</dd><dt class="property-"
             title="">
         <span id="partnercustomerservicenumber_go">
 <a href="#partnercustomerservicenumber_go" style="color: inherit; text-decoration: inherit;">Partner<wbr>Customer<wbr>Service<wbr>Number</a>
@@ -457,8 +407,7 @@ Length of this description should not exceed 2048 characters.{{% /md %}}</dd>
     <dd>{{% md %}}The customer service number of the publisher. The expected phone format should start with a '+' sign 
 followed by the country code. The remaining digits are then followed. Only digits and spaces are allowed and its
 length cannot exceed 16 digits including country code. Examples of valid phone numbers are: +1 515 123 4567 and
-+966 7 5115 2471. Examples of invalid phone numbers are: +1 (515) 123-4567, 1 515 123 4567 and +966 121 5115 24 7 551 1234 43{{% /md %}}</dd>
-    <dt class="property-"
++966 7 5115 2471. Examples of invalid phone numbers are: +1 (515) 123-4567, 1 515 123 4567 and +966 121 5115 24 7 551 1234 43{{% /md %}}</dd><dt class="property-"
             title="">
         <span id="partnername_go">
 <a href="#partnername_go" style="color: inherit; text-decoration: inherit;">Partner<wbr>Name</a>
@@ -466,8 +415,7 @@ length cannot exceed 16 digits including country code. Examples of valid phone n
         <span class="property-indicator"></span>
         <span class="property-type">string</span>
     </dt>
-    <dd>{{% md %}}Official name of the partner name. For example: "Contoso".{{% /md %}}</dd>
-    <dt class="property-"
+    <dd>{{% md %}}Official name of the partner name. For example: "Contoso".{{% /md %}}</dd><dt class="property-"
             title="">
         <span id="partnerresourcetypedescription_go">
 <a href="#partnerresourcetypedescription_go" style="color: inherit; text-decoration: inherit;">Partner<wbr>Resource<wbr>Type<wbr>Description</a>
@@ -475,8 +423,7 @@ length cannot exceed 16 digits including country code. Examples of valid phone n
         <span class="property-indicator"></span>
         <span class="property-type">string</span>
     </dt>
-    <dd>{{% md %}}Short description of the partner resource type. The length of this description should not exceed 256 characters.{{% /md %}}</dd>
-    <dt class="property-"
+    <dd>{{% md %}}Short description of the partner resource type. The length of this description should not exceed 256 characters.{{% /md %}}</dd><dt class="property-"
             title="">
         <span id="partnerresourcetypedisplayname_go">
 <a href="#partnerresourcetypedisplayname_go" style="color: inherit; text-decoration: inherit;">Partner<wbr>Resource<wbr>Type<wbr>Display<wbr>Name</a>
@@ -484,8 +431,7 @@ length cannot exceed 16 digits including country code. Examples of valid phone n
         <span class="property-indicator"></span>
         <span class="property-type">string</span>
     </dt>
-    <dd>{{% md %}}Display name of the partner resource type.{{% /md %}}</dd>
-    <dt class="property-"
+    <dd>{{% md %}}Display name of the partner resource type.{{% /md %}}</dd><dt class="property-"
             title="">
         <span id="partnerresourcetypename_go">
 <a href="#partnerresourcetypename_go" style="color: inherit; text-decoration: inherit;">Partner<wbr>Resource<wbr>Type<wbr>Name</a>
@@ -493,8 +439,7 @@ length cannot exceed 16 digits including country code. Examples of valid phone n
         <span class="property-indicator"></span>
         <span class="property-type">string</span>
     </dt>
-    <dd>{{% md %}}Name of the partner resource type.{{% /md %}}</dd>
-    <dt class="property-"
+    <dd>{{% md %}}Name of the partner resource type.{{% /md %}}</dd><dt class="property-"
             title="">
         <span id="setupuri_go">
 <a href="#setupuri_go" style="color: inherit; text-decoration: inherit;">Setup<wbr>Uri</a>
@@ -503,8 +448,7 @@ length cannot exceed 16 digits including country code. Examples of valid phone n
         <span class="property-type">string</span>
     </dt>
     <dd>{{% md %}}URI of the partner website that can be used by Azure customers to setup Event Grid
-integration on an event source.{{% /md %}}</dd>
-    <dt class="property-"
+integration on an event source.{{% /md %}}</dd><dt class="property-"
             title="">
         <span id="tags_go">
 <a href="#tags_go" style="color: inherit; text-decoration: inherit;">Tags</a>
@@ -512,8 +456,7 @@ integration on an event source.{{% /md %}}</dd>
         <span class="property-indicator"></span>
         <span class="property-type">map[string]string</span>
     </dt>
-    <dd>{{% md %}}Tags of the resource.{{% /md %}}</dd>
-    <dt class="property-"
+    <dd>{{% md %}}Tags of the resource.{{% /md %}}</dd><dt class="property-"
             title="">
         <span id="visibilitystate_go">
 <a href="#visibilitystate_go" style="color: inherit; text-decoration: inherit;">Visibility<wbr>State</a>
@@ -521,14 +464,11 @@ integration on an event source.{{% /md %}}</dd>
         <span class="property-indicator"></span>
         <span class="property-type">string</span>
     </dt>
-    <dd>{{% md %}}Visibility state of the partner registration.{{% /md %}}</dd>
-</dl>
+    <dd>{{% md %}}Visibility state of the partner registration.{{% /md %}}</dd></dl>
 {{% /choosable %}}
 
 {{% choosable language nodejs %}}
-<dl class="resources-properties">
-
-    <dt class="property-"
+<dl class="resources-properties"><dt class="property-"
             title="">
         <span id="id_nodejs">
 <a href="#id_nodejs" style="color: inherit; text-decoration: inherit;">id</a>
@@ -536,8 +476,7 @@ integration on an event source.{{% /md %}}</dd>
         <span class="property-indicator"></span>
         <span class="property-type">string</span>
     </dt>
-    <dd>{{% md %}}Fully qualified identifier of the resource.{{% /md %}}</dd>
-    <dt class="property-"
+    <dd>{{% md %}}Fully qualified identifier of the resource.{{% /md %}}</dd><dt class="property-"
             title="">
         <span id="location_nodejs">
 <a href="#location_nodejs" style="color: inherit; text-decoration: inherit;">location</a>
@@ -545,8 +484,7 @@ integration on an event source.{{% /md %}}</dd>
         <span class="property-indicator"></span>
         <span class="property-type">string</span>
     </dt>
-    <dd>{{% md %}}Location of the resource.{{% /md %}}</dd>
-    <dt class="property-"
+    <dd>{{% md %}}Location of the resource.{{% /md %}}</dd><dt class="property-"
             title="">
         <span id="name_nodejs">
 <a href="#name_nodejs" style="color: inherit; text-decoration: inherit;">name</a>
@@ -554,8 +492,7 @@ integration on an event source.{{% /md %}}</dd>
         <span class="property-indicator"></span>
         <span class="property-type">string</span>
     </dt>
-    <dd>{{% md %}}Name of the resource.{{% /md %}}</dd>
-    <dt class="property-"
+    <dd>{{% md %}}Name of the resource.{{% /md %}}</dd><dt class="property-"
             title="">
         <span id="provisioningstate_nodejs">
 <a href="#provisioningstate_nodejs" style="color: inherit; text-decoration: inherit;">provisioning<wbr>State</a>
@@ -563,8 +500,7 @@ integration on an event source.{{% /md %}}</dd>
         <span class="property-indicator"></span>
         <span class="property-type">string</span>
     </dt>
-    <dd>{{% md %}}Provisioning state of the partner registration.{{% /md %}}</dd>
-    <dt class="property-"
+    <dd>{{% md %}}Provisioning state of the partner registration.{{% /md %}}</dd><dt class="property-"
             title="">
         <span id="systemdata_nodejs">
 <a href="#systemdata_nodejs" style="color: inherit; text-decoration: inherit;">system<wbr>Data</a>
@@ -572,8 +508,7 @@ integration on an event source.{{% /md %}}</dd>
         <span class="property-indicator"></span>
         <span class="property-type"><a href="#systemdataresponse">System<wbr>Data<wbr>Response</a></span>
     </dt>
-    <dd>{{% md %}}The system metadata relating to Partner Registration resource.{{% /md %}}</dd>
-    <dt class="property-"
+    <dd>{{% md %}}The system metadata relating to Partner Registration resource.{{% /md %}}</dd><dt class="property-"
             title="">
         <span id="type_nodejs">
 <a href="#type_nodejs" style="color: inherit; text-decoration: inherit;">type</a>
@@ -581,8 +516,7 @@ integration on an event source.{{% /md %}}</dd>
         <span class="property-indicator"></span>
         <span class="property-type">string</span>
     </dt>
-    <dd>{{% md %}}Type of the resource.{{% /md %}}</dd>
-    <dt class="property-"
+    <dd>{{% md %}}Type of the resource.{{% /md %}}</dd><dt class="property-"
             title="">
         <span id="authorizedazuresubscriptionids_nodejs">
 <a href="#authorizedazuresubscriptionids_nodejs" style="color: inherit; text-decoration: inherit;">authorized<wbr>Azure<wbr>Subscription<wbr>Ids</a>
@@ -593,8 +527,7 @@ integration on an event source.{{% /md %}}</dd>
     <dd>{{% md %}}List of Azure subscription Ids that are authorized to create a partner namespace
 associated with this partner registration. This is an optional property. Creating
 partner namespaces is always permitted under the same Azure subscription as the one used
-for creating the partner registration.{{% /md %}}</dd>
-    <dt class="property-"
+for creating the partner registration.{{% /md %}}</dd><dt class="property-"
             title="">
         <span id="customerserviceuri_nodejs">
 <a href="#customerserviceuri_nodejs" style="color: inherit; text-decoration: inherit;">customer<wbr>Service<wbr>Uri</a>
@@ -602,8 +535,7 @@ for creating the partner registration.{{% /md %}}</dd>
         <span class="property-indicator"></span>
         <span class="property-type">string</span>
     </dt>
-    <dd>{{% md %}}The extension of the customer service URI of the publisher.{{% /md %}}</dd>
-    <dt class="property-"
+    <dd>{{% md %}}The extension of the customer service URI of the publisher.{{% /md %}}</dd><dt class="property-"
             title="">
         <span id="logouri_nodejs">
 <a href="#logouri_nodejs" style="color: inherit; text-decoration: inherit;">logo<wbr>Uri</a>
@@ -611,8 +543,7 @@ for creating the partner registration.{{% /md %}}</dd>
         <span class="property-indicator"></span>
         <span class="property-type">string</span>
     </dt>
-    <dd>{{% md %}}URI of the logo.{{% /md %}}</dd>
-    <dt class="property-"
+    <dd>{{% md %}}URI of the logo.{{% /md %}}</dd><dt class="property-"
             title="">
         <span id="longdescription_nodejs">
 <a href="#longdescription_nodejs" style="color: inherit; text-decoration: inherit;">long<wbr>Description</a>
@@ -621,8 +552,7 @@ for creating the partner registration.{{% /md %}}</dd>
         <span class="property-type">string</span>
     </dt>
     <dd>{{% md %}}Long description for the custom scenarios and integration to be displayed in the portal if needed.
-Length of this description should not exceed 2048 characters.{{% /md %}}</dd>
-    <dt class="property-"
+Length of this description should not exceed 2048 characters.{{% /md %}}</dd><dt class="property-"
             title="">
         <span id="partnercustomerserviceextension_nodejs">
 <a href="#partnercustomerserviceextension_nodejs" style="color: inherit; text-decoration: inherit;">partner<wbr>Customer<wbr>Service<wbr>Extension</a>
@@ -630,8 +560,7 @@ Length of this description should not exceed 2048 characters.{{% /md %}}</dd>
         <span class="property-indicator"></span>
         <span class="property-type">string</span>
     </dt>
-    <dd>{{% md %}}The extension of the customer service number of the publisher. Only digits are allowed and number of digits should not exceed 10.{{% /md %}}</dd>
-    <dt class="property-"
+    <dd>{{% md %}}The extension of the customer service number of the publisher. Only digits are allowed and number of digits should not exceed 10.{{% /md %}}</dd><dt class="property-"
             title="">
         <span id="partnercustomerservicenumber_nodejs">
 <a href="#partnercustomerservicenumber_nodejs" style="color: inherit; text-decoration: inherit;">partner<wbr>Customer<wbr>Service<wbr>Number</a>
@@ -642,8 +571,7 @@ Length of this description should not exceed 2048 characters.{{% /md %}}</dd>
     <dd>{{% md %}}The customer service number of the publisher. The expected phone format should start with a '+' sign 
 followed by the country code. The remaining digits are then followed. Only digits and spaces are allowed and its
 length cannot exceed 16 digits including country code. Examples of valid phone numbers are: +1 515 123 4567 and
-+966 7 5115 2471. Examples of invalid phone numbers are: +1 (515) 123-4567, 1 515 123 4567 and +966 121 5115 24 7 551 1234 43{{% /md %}}</dd>
-    <dt class="property-"
++966 7 5115 2471. Examples of invalid phone numbers are: +1 (515) 123-4567, 1 515 123 4567 and +966 121 5115 24 7 551 1234 43{{% /md %}}</dd><dt class="property-"
             title="">
         <span id="partnername_nodejs">
 <a href="#partnername_nodejs" style="color: inherit; text-decoration: inherit;">partner<wbr>Name</a>
@@ -651,8 +579,7 @@ length cannot exceed 16 digits including country code. Examples of valid phone n
         <span class="property-indicator"></span>
         <span class="property-type">string</span>
     </dt>
-    <dd>{{% md %}}Official name of the partner name. For example: "Contoso".{{% /md %}}</dd>
-    <dt class="property-"
+    <dd>{{% md %}}Official name of the partner name. For example: "Contoso".{{% /md %}}</dd><dt class="property-"
             title="">
         <span id="partnerresourcetypedescription_nodejs">
 <a href="#partnerresourcetypedescription_nodejs" style="color: inherit; text-decoration: inherit;">partner<wbr>Resource<wbr>Type<wbr>Description</a>
@@ -660,8 +587,7 @@ length cannot exceed 16 digits including country code. Examples of valid phone n
         <span class="property-indicator"></span>
         <span class="property-type">string</span>
     </dt>
-    <dd>{{% md %}}Short description of the partner resource type. The length of this description should not exceed 256 characters.{{% /md %}}</dd>
-    <dt class="property-"
+    <dd>{{% md %}}Short description of the partner resource type. The length of this description should not exceed 256 characters.{{% /md %}}</dd><dt class="property-"
             title="">
         <span id="partnerresourcetypedisplayname_nodejs">
 <a href="#partnerresourcetypedisplayname_nodejs" style="color: inherit; text-decoration: inherit;">partner<wbr>Resource<wbr>Type<wbr>Display<wbr>Name</a>
@@ -669,8 +595,7 @@ length cannot exceed 16 digits including country code. Examples of valid phone n
         <span class="property-indicator"></span>
         <span class="property-type">string</span>
     </dt>
-    <dd>{{% md %}}Display name of the partner resource type.{{% /md %}}</dd>
-    <dt class="property-"
+    <dd>{{% md %}}Display name of the partner resource type.{{% /md %}}</dd><dt class="property-"
             title="">
         <span id="partnerresourcetypename_nodejs">
 <a href="#partnerresourcetypename_nodejs" style="color: inherit; text-decoration: inherit;">partner<wbr>Resource<wbr>Type<wbr>Name</a>
@@ -678,8 +603,7 @@ length cannot exceed 16 digits including country code. Examples of valid phone n
         <span class="property-indicator"></span>
         <span class="property-type">string</span>
     </dt>
-    <dd>{{% md %}}Name of the partner resource type.{{% /md %}}</dd>
-    <dt class="property-"
+    <dd>{{% md %}}Name of the partner resource type.{{% /md %}}</dd><dt class="property-"
             title="">
         <span id="setupuri_nodejs">
 <a href="#setupuri_nodejs" style="color: inherit; text-decoration: inherit;">setup<wbr>Uri</a>
@@ -688,8 +612,7 @@ length cannot exceed 16 digits including country code. Examples of valid phone n
         <span class="property-type">string</span>
     </dt>
     <dd>{{% md %}}URI of the partner website that can be used by Azure customers to setup Event Grid
-integration on an event source.{{% /md %}}</dd>
-    <dt class="property-"
+integration on an event source.{{% /md %}}</dd><dt class="property-"
             title="">
         <span id="tags_nodejs">
 <a href="#tags_nodejs" style="color: inherit; text-decoration: inherit;">tags</a>
@@ -697,8 +620,7 @@ integration on an event source.{{% /md %}}</dd>
         <span class="property-indicator"></span>
         <span class="property-type">{[key: string]: string}</span>
     </dt>
-    <dd>{{% md %}}Tags of the resource.{{% /md %}}</dd>
-    <dt class="property-"
+    <dd>{{% md %}}Tags of the resource.{{% /md %}}</dd><dt class="property-"
             title="">
         <span id="visibilitystate_nodejs">
 <a href="#visibilitystate_nodejs" style="color: inherit; text-decoration: inherit;">visibility<wbr>State</a>
@@ -706,14 +628,11 @@ integration on an event source.{{% /md %}}</dd>
         <span class="property-indicator"></span>
         <span class="property-type">string</span>
     </dt>
-    <dd>{{% md %}}Visibility state of the partner registration.{{% /md %}}</dd>
-</dl>
+    <dd>{{% md %}}Visibility state of the partner registration.{{% /md %}}</dd></dl>
 {{% /choosable %}}
 
 {{% choosable language python %}}
-<dl class="resources-properties">
-
-    <dt class="property-"
+<dl class="resources-properties"><dt class="property-"
             title="">
         <span id="id_python">
 <a href="#id_python" style="color: inherit; text-decoration: inherit;">id</a>
@@ -721,8 +640,7 @@ integration on an event source.{{% /md %}}</dd>
         <span class="property-indicator"></span>
         <span class="property-type">str</span>
     </dt>
-    <dd>{{% md %}}Fully qualified identifier of the resource.{{% /md %}}</dd>
-    <dt class="property-"
+    <dd>{{% md %}}Fully qualified identifier of the resource.{{% /md %}}</dd><dt class="property-"
             title="">
         <span id="location_python">
 <a href="#location_python" style="color: inherit; text-decoration: inherit;">location</a>
@@ -730,8 +648,7 @@ integration on an event source.{{% /md %}}</dd>
         <span class="property-indicator"></span>
         <span class="property-type">str</span>
     </dt>
-    <dd>{{% md %}}Location of the resource.{{% /md %}}</dd>
-    <dt class="property-"
+    <dd>{{% md %}}Location of the resource.{{% /md %}}</dd><dt class="property-"
             title="">
         <span id="name_python">
 <a href="#name_python" style="color: inherit; text-decoration: inherit;">name</a>
@@ -739,8 +656,7 @@ integration on an event source.{{% /md %}}</dd>
         <span class="property-indicator"></span>
         <span class="property-type">str</span>
     </dt>
-    <dd>{{% md %}}Name of the resource.{{% /md %}}</dd>
-    <dt class="property-"
+    <dd>{{% md %}}Name of the resource.{{% /md %}}</dd><dt class="property-"
             title="">
         <span id="provisioning_state_python">
 <a href="#provisioning_state_python" style="color: inherit; text-decoration: inherit;">provisioning_<wbr>state</a>
@@ -748,8 +664,7 @@ integration on an event source.{{% /md %}}</dd>
         <span class="property-indicator"></span>
         <span class="property-type">str</span>
     </dt>
-    <dd>{{% md %}}Provisioning state of the partner registration.{{% /md %}}</dd>
-    <dt class="property-"
+    <dd>{{% md %}}Provisioning state of the partner registration.{{% /md %}}</dd><dt class="property-"
             title="">
         <span id="system_data_python">
 <a href="#system_data_python" style="color: inherit; text-decoration: inherit;">system_<wbr>data</a>
@@ -757,8 +672,7 @@ integration on an event source.{{% /md %}}</dd>
         <span class="property-indicator"></span>
         <span class="property-type"><a href="#systemdataresponse">System<wbr>Data<wbr>Response</a></span>
     </dt>
-    <dd>{{% md %}}The system metadata relating to Partner Registration resource.{{% /md %}}</dd>
-    <dt class="property-"
+    <dd>{{% md %}}The system metadata relating to Partner Registration resource.{{% /md %}}</dd><dt class="property-"
             title="">
         <span id="type_python">
 <a href="#type_python" style="color: inherit; text-decoration: inherit;">type</a>
@@ -766,8 +680,7 @@ integration on an event source.{{% /md %}}</dd>
         <span class="property-indicator"></span>
         <span class="property-type">str</span>
     </dt>
-    <dd>{{% md %}}Type of the resource.{{% /md %}}</dd>
-    <dt class="property-"
+    <dd>{{% md %}}Type of the resource.{{% /md %}}</dd><dt class="property-"
             title="">
         <span id="authorized_azure_subscription_ids_python">
 <a href="#authorized_azure_subscription_ids_python" style="color: inherit; text-decoration: inherit;">authorized_<wbr>azure_<wbr>subscription_<wbr>ids</a>
@@ -778,8 +691,7 @@ integration on an event source.{{% /md %}}</dd>
     <dd>{{% md %}}List of Azure subscription Ids that are authorized to create a partner namespace
 associated with this partner registration. This is an optional property. Creating
 partner namespaces is always permitted under the same Azure subscription as the one used
-for creating the partner registration.{{% /md %}}</dd>
-    <dt class="property-"
+for creating the partner registration.{{% /md %}}</dd><dt class="property-"
             title="">
         <span id="customer_service_uri_python">
 <a href="#customer_service_uri_python" style="color: inherit; text-decoration: inherit;">customer_<wbr>service_<wbr>uri</a>
@@ -787,8 +699,7 @@ for creating the partner registration.{{% /md %}}</dd>
         <span class="property-indicator"></span>
         <span class="property-type">str</span>
     </dt>
-    <dd>{{% md %}}The extension of the customer service URI of the publisher.{{% /md %}}</dd>
-    <dt class="property-"
+    <dd>{{% md %}}The extension of the customer service URI of the publisher.{{% /md %}}</dd><dt class="property-"
             title="">
         <span id="logo_uri_python">
 <a href="#logo_uri_python" style="color: inherit; text-decoration: inherit;">logo_<wbr>uri</a>
@@ -796,8 +707,7 @@ for creating the partner registration.{{% /md %}}</dd>
         <span class="property-indicator"></span>
         <span class="property-type">str</span>
     </dt>
-    <dd>{{% md %}}URI of the logo.{{% /md %}}</dd>
-    <dt class="property-"
+    <dd>{{% md %}}URI of the logo.{{% /md %}}</dd><dt class="property-"
             title="">
         <span id="long_description_python">
 <a href="#long_description_python" style="color: inherit; text-decoration: inherit;">long_<wbr>description</a>
@@ -806,8 +716,7 @@ for creating the partner registration.{{% /md %}}</dd>
         <span class="property-type">str</span>
     </dt>
     <dd>{{% md %}}Long description for the custom scenarios and integration to be displayed in the portal if needed.
-Length of this description should not exceed 2048 characters.{{% /md %}}</dd>
-    <dt class="property-"
+Length of this description should not exceed 2048 characters.{{% /md %}}</dd><dt class="property-"
             title="">
         <span id="partner_customer_service_extension_python">
 <a href="#partner_customer_service_extension_python" style="color: inherit; text-decoration: inherit;">partner_<wbr>customer_<wbr>service_<wbr>extension</a>
@@ -815,8 +724,7 @@ Length of this description should not exceed 2048 characters.{{% /md %}}</dd>
         <span class="property-indicator"></span>
         <span class="property-type">str</span>
     </dt>
-    <dd>{{% md %}}The extension of the customer service number of the publisher. Only digits are allowed and number of digits should not exceed 10.{{% /md %}}</dd>
-    <dt class="property-"
+    <dd>{{% md %}}The extension of the customer service number of the publisher. Only digits are allowed and number of digits should not exceed 10.{{% /md %}}</dd><dt class="property-"
             title="">
         <span id="partner_customer_service_number_python">
 <a href="#partner_customer_service_number_python" style="color: inherit; text-decoration: inherit;">partner_<wbr>customer_<wbr>service_<wbr>number</a>
@@ -827,8 +735,7 @@ Length of this description should not exceed 2048 characters.{{% /md %}}</dd>
     <dd>{{% md %}}The customer service number of the publisher. The expected phone format should start with a '+' sign 
 followed by the country code. The remaining digits are then followed. Only digits and spaces are allowed and its
 length cannot exceed 16 digits including country code. Examples of valid phone numbers are: +1 515 123 4567 and
-+966 7 5115 2471. Examples of invalid phone numbers are: +1 (515) 123-4567, 1 515 123 4567 and +966 121 5115 24 7 551 1234 43{{% /md %}}</dd>
-    <dt class="property-"
++966 7 5115 2471. Examples of invalid phone numbers are: +1 (515) 123-4567, 1 515 123 4567 and +966 121 5115 24 7 551 1234 43{{% /md %}}</dd><dt class="property-"
             title="">
         <span id="partner_name_python">
 <a href="#partner_name_python" style="color: inherit; text-decoration: inherit;">partner_<wbr>name</a>
@@ -836,8 +743,7 @@ length cannot exceed 16 digits including country code. Examples of valid phone n
         <span class="property-indicator"></span>
         <span class="property-type">str</span>
     </dt>
-    <dd>{{% md %}}Official name of the partner name. For example: "Contoso".{{% /md %}}</dd>
-    <dt class="property-"
+    <dd>{{% md %}}Official name of the partner name. For example: "Contoso".{{% /md %}}</dd><dt class="property-"
             title="">
         <span id="partner_resource_type_description_python">
 <a href="#partner_resource_type_description_python" style="color: inherit; text-decoration: inherit;">partner_<wbr>resource_<wbr>type_<wbr>description</a>
@@ -845,8 +751,7 @@ length cannot exceed 16 digits including country code. Examples of valid phone n
         <span class="property-indicator"></span>
         <span class="property-type">str</span>
     </dt>
-    <dd>{{% md %}}Short description of the partner resource type. The length of this description should not exceed 256 characters.{{% /md %}}</dd>
-    <dt class="property-"
+    <dd>{{% md %}}Short description of the partner resource type. The length of this description should not exceed 256 characters.{{% /md %}}</dd><dt class="property-"
             title="">
         <span id="partner_resource_type_display_name_python">
 <a href="#partner_resource_type_display_name_python" style="color: inherit; text-decoration: inherit;">partner_<wbr>resource_<wbr>type_<wbr>display_<wbr>name</a>
@@ -854,8 +759,7 @@ length cannot exceed 16 digits including country code. Examples of valid phone n
         <span class="property-indicator"></span>
         <span class="property-type">str</span>
     </dt>
-    <dd>{{% md %}}Display name of the partner resource type.{{% /md %}}</dd>
-    <dt class="property-"
+    <dd>{{% md %}}Display name of the partner resource type.{{% /md %}}</dd><dt class="property-"
             title="">
         <span id="partner_resource_type_name_python">
 <a href="#partner_resource_type_name_python" style="color: inherit; text-decoration: inherit;">partner_<wbr>resource_<wbr>type_<wbr>name</a>
@@ -863,8 +767,7 @@ length cannot exceed 16 digits including country code. Examples of valid phone n
         <span class="property-indicator"></span>
         <span class="property-type">str</span>
     </dt>
-    <dd>{{% md %}}Name of the partner resource type.{{% /md %}}</dd>
-    <dt class="property-"
+    <dd>{{% md %}}Name of the partner resource type.{{% /md %}}</dd><dt class="property-"
             title="">
         <span id="setup_uri_python">
 <a href="#setup_uri_python" style="color: inherit; text-decoration: inherit;">setup_<wbr>uri</a>
@@ -873,8 +776,7 @@ length cannot exceed 16 digits including country code. Examples of valid phone n
         <span class="property-type">str</span>
     </dt>
     <dd>{{% md %}}URI of the partner website that can be used by Azure customers to setup Event Grid
-integration on an event source.{{% /md %}}</dd>
-    <dt class="property-"
+integration on an event source.{{% /md %}}</dd><dt class="property-"
             title="">
         <span id="tags_python">
 <a href="#tags_python" style="color: inherit; text-decoration: inherit;">tags</a>
@@ -882,8 +784,7 @@ integration on an event source.{{% /md %}}</dd>
         <span class="property-indicator"></span>
         <span class="property-type">Mapping[str, str]</span>
     </dt>
-    <dd>{{% md %}}Tags of the resource.{{% /md %}}</dd>
-    <dt class="property-"
+    <dd>{{% md %}}Tags of the resource.{{% /md %}}</dd><dt class="property-"
             title="">
         <span id="visibility_state_python">
 <a href="#visibility_state_python" style="color: inherit; text-decoration: inherit;">visibility_<wbr>state</a>
@@ -891,8 +792,7 @@ integration on an event source.{{% /md %}}</dd>
         <span class="property-indicator"></span>
         <span class="property-type">str</span>
     </dt>
-    <dd>{{% md %}}Visibility state of the partner registration.{{% /md %}}</dd>
-</dl>
+    <dd>{{% md %}}Visibility state of the partner registration.{{% /md %}}</dd></dl>
 {{% /choosable %}}
 
 
@@ -906,9 +806,7 @@ integration on an event source.{{% /md %}}</dd>
 
 
 {{% choosable language csharp %}}
-<dl class="resources-properties">
-
-    <dt class="property-optional"
+<dl class="resources-properties"><dt class="property-optional"
             title="Optional">
         <span id="createdat_csharp">
 <a href="#createdat_csharp" style="color: inherit; text-decoration: inherit;">Created<wbr>At</a>
@@ -916,8 +814,7 @@ integration on an event source.{{% /md %}}</dd>
         <span class="property-indicator"></span>
         <span class="property-type">string</span>
     </dt>
-    <dd>{{% md %}}The timestamp of resource creation (UTC).{{% /md %}}</dd>
-    <dt class="property-optional"
+    <dd>{{% md %}}The timestamp of resource creation (UTC).{{% /md %}}</dd><dt class="property-optional"
             title="Optional">
         <span id="createdby_csharp">
 <a href="#createdby_csharp" style="color: inherit; text-decoration: inherit;">Created<wbr>By</a>
@@ -925,8 +822,7 @@ integration on an event source.{{% /md %}}</dd>
         <span class="property-indicator"></span>
         <span class="property-type">string</span>
     </dt>
-    <dd>{{% md %}}The identity that created the resource.{{% /md %}}</dd>
-    <dt class="property-optional"
+    <dd>{{% md %}}The identity that created the resource.{{% /md %}}</dd><dt class="property-optional"
             title="Optional">
         <span id="createdbytype_csharp">
 <a href="#createdbytype_csharp" style="color: inherit; text-decoration: inherit;">Created<wbr>By<wbr>Type</a>
@@ -934,8 +830,7 @@ integration on an event source.{{% /md %}}</dd>
         <span class="property-indicator"></span>
         <span class="property-type">string</span>
     </dt>
-    <dd>{{% md %}}The type of identity that created the resource.{{% /md %}}</dd>
-    <dt class="property-optional"
+    <dd>{{% md %}}The type of identity that created the resource.{{% /md %}}</dd><dt class="property-optional"
             title="Optional">
         <span id="lastmodifiedat_csharp">
 <a href="#lastmodifiedat_csharp" style="color: inherit; text-decoration: inherit;">Last<wbr>Modified<wbr>At</a>
@@ -943,8 +838,7 @@ integration on an event source.{{% /md %}}</dd>
         <span class="property-indicator"></span>
         <span class="property-type">string</span>
     </dt>
-    <dd>{{% md %}}The timestamp of resource last modification (UTC){{% /md %}}</dd>
-    <dt class="property-optional"
+    <dd>{{% md %}}The timestamp of resource last modification (UTC){{% /md %}}</dd><dt class="property-optional"
             title="Optional">
         <span id="lastmodifiedby_csharp">
 <a href="#lastmodifiedby_csharp" style="color: inherit; text-decoration: inherit;">Last<wbr>Modified<wbr>By</a>
@@ -952,8 +846,7 @@ integration on an event source.{{% /md %}}</dd>
         <span class="property-indicator"></span>
         <span class="property-type">string</span>
     </dt>
-    <dd>{{% md %}}The identity that last modified the resource.{{% /md %}}</dd>
-    <dt class="property-optional"
+    <dd>{{% md %}}The identity that last modified the resource.{{% /md %}}</dd><dt class="property-optional"
             title="Optional">
         <span id="lastmodifiedbytype_csharp">
 <a href="#lastmodifiedbytype_csharp" style="color: inherit; text-decoration: inherit;">Last<wbr>Modified<wbr>By<wbr>Type</a>
@@ -961,14 +854,11 @@ integration on an event source.{{% /md %}}</dd>
         <span class="property-indicator"></span>
         <span class="property-type">string</span>
     </dt>
-    <dd>{{% md %}}The type of identity that last modified the resource.{{% /md %}}</dd>
-</dl>
+    <dd>{{% md %}}The type of identity that last modified the resource.{{% /md %}}</dd></dl>
 {{% /choosable %}}
 
 {{% choosable language go %}}
-<dl class="resources-properties">
-
-    <dt class="property-optional"
+<dl class="resources-properties"><dt class="property-optional"
             title="Optional">
         <span id="createdat_go">
 <a href="#createdat_go" style="color: inherit; text-decoration: inherit;">Created<wbr>At</a>
@@ -976,8 +866,7 @@ integration on an event source.{{% /md %}}</dd>
         <span class="property-indicator"></span>
         <span class="property-type">string</span>
     </dt>
-    <dd>{{% md %}}The timestamp of resource creation (UTC).{{% /md %}}</dd>
-    <dt class="property-optional"
+    <dd>{{% md %}}The timestamp of resource creation (UTC).{{% /md %}}</dd><dt class="property-optional"
             title="Optional">
         <span id="createdby_go">
 <a href="#createdby_go" style="color: inherit; text-decoration: inherit;">Created<wbr>By</a>
@@ -985,8 +874,7 @@ integration on an event source.{{% /md %}}</dd>
         <span class="property-indicator"></span>
         <span class="property-type">string</span>
     </dt>
-    <dd>{{% md %}}The identity that created the resource.{{% /md %}}</dd>
-    <dt class="property-optional"
+    <dd>{{% md %}}The identity that created the resource.{{% /md %}}</dd><dt class="property-optional"
             title="Optional">
         <span id="createdbytype_go">
 <a href="#createdbytype_go" style="color: inherit; text-decoration: inherit;">Created<wbr>By<wbr>Type</a>
@@ -994,8 +882,7 @@ integration on an event source.{{% /md %}}</dd>
         <span class="property-indicator"></span>
         <span class="property-type">string</span>
     </dt>
-    <dd>{{% md %}}The type of identity that created the resource.{{% /md %}}</dd>
-    <dt class="property-optional"
+    <dd>{{% md %}}The type of identity that created the resource.{{% /md %}}</dd><dt class="property-optional"
             title="Optional">
         <span id="lastmodifiedat_go">
 <a href="#lastmodifiedat_go" style="color: inherit; text-decoration: inherit;">Last<wbr>Modified<wbr>At</a>
@@ -1003,8 +890,7 @@ integration on an event source.{{% /md %}}</dd>
         <span class="property-indicator"></span>
         <span class="property-type">string</span>
     </dt>
-    <dd>{{% md %}}The timestamp of resource last modification (UTC){{% /md %}}</dd>
-    <dt class="property-optional"
+    <dd>{{% md %}}The timestamp of resource last modification (UTC){{% /md %}}</dd><dt class="property-optional"
             title="Optional">
         <span id="lastmodifiedby_go">
 <a href="#lastmodifiedby_go" style="color: inherit; text-decoration: inherit;">Last<wbr>Modified<wbr>By</a>
@@ -1012,8 +898,7 @@ integration on an event source.{{% /md %}}</dd>
         <span class="property-indicator"></span>
         <span class="property-type">string</span>
     </dt>
-    <dd>{{% md %}}The identity that last modified the resource.{{% /md %}}</dd>
-    <dt class="property-optional"
+    <dd>{{% md %}}The identity that last modified the resource.{{% /md %}}</dd><dt class="property-optional"
             title="Optional">
         <span id="lastmodifiedbytype_go">
 <a href="#lastmodifiedbytype_go" style="color: inherit; text-decoration: inherit;">Last<wbr>Modified<wbr>By<wbr>Type</a>
@@ -1021,14 +906,11 @@ integration on an event source.{{% /md %}}</dd>
         <span class="property-indicator"></span>
         <span class="property-type">string</span>
     </dt>
-    <dd>{{% md %}}The type of identity that last modified the resource.{{% /md %}}</dd>
-</dl>
+    <dd>{{% md %}}The type of identity that last modified the resource.{{% /md %}}</dd></dl>
 {{% /choosable %}}
 
 {{% choosable language nodejs %}}
-<dl class="resources-properties">
-
-    <dt class="property-optional"
+<dl class="resources-properties"><dt class="property-optional"
             title="Optional">
         <span id="createdat_nodejs">
 <a href="#createdat_nodejs" style="color: inherit; text-decoration: inherit;">created<wbr>At</a>
@@ -1036,8 +918,7 @@ integration on an event source.{{% /md %}}</dd>
         <span class="property-indicator"></span>
         <span class="property-type">string</span>
     </dt>
-    <dd>{{% md %}}The timestamp of resource creation (UTC).{{% /md %}}</dd>
-    <dt class="property-optional"
+    <dd>{{% md %}}The timestamp of resource creation (UTC).{{% /md %}}</dd><dt class="property-optional"
             title="Optional">
         <span id="createdby_nodejs">
 <a href="#createdby_nodejs" style="color: inherit; text-decoration: inherit;">created<wbr>By</a>
@@ -1045,8 +926,7 @@ integration on an event source.{{% /md %}}</dd>
         <span class="property-indicator"></span>
         <span class="property-type">string</span>
     </dt>
-    <dd>{{% md %}}The identity that created the resource.{{% /md %}}</dd>
-    <dt class="property-optional"
+    <dd>{{% md %}}The identity that created the resource.{{% /md %}}</dd><dt class="property-optional"
             title="Optional">
         <span id="createdbytype_nodejs">
 <a href="#createdbytype_nodejs" style="color: inherit; text-decoration: inherit;">created<wbr>By<wbr>Type</a>
@@ -1054,8 +934,7 @@ integration on an event source.{{% /md %}}</dd>
         <span class="property-indicator"></span>
         <span class="property-type">string</span>
     </dt>
-    <dd>{{% md %}}The type of identity that created the resource.{{% /md %}}</dd>
-    <dt class="property-optional"
+    <dd>{{% md %}}The type of identity that created the resource.{{% /md %}}</dd><dt class="property-optional"
             title="Optional">
         <span id="lastmodifiedat_nodejs">
 <a href="#lastmodifiedat_nodejs" style="color: inherit; text-decoration: inherit;">last<wbr>Modified<wbr>At</a>
@@ -1063,8 +942,7 @@ integration on an event source.{{% /md %}}</dd>
         <span class="property-indicator"></span>
         <span class="property-type">string</span>
     </dt>
-    <dd>{{% md %}}The timestamp of resource last modification (UTC){{% /md %}}</dd>
-    <dt class="property-optional"
+    <dd>{{% md %}}The timestamp of resource last modification (UTC){{% /md %}}</dd><dt class="property-optional"
             title="Optional">
         <span id="lastmodifiedby_nodejs">
 <a href="#lastmodifiedby_nodejs" style="color: inherit; text-decoration: inherit;">last<wbr>Modified<wbr>By</a>
@@ -1072,8 +950,7 @@ integration on an event source.{{% /md %}}</dd>
         <span class="property-indicator"></span>
         <span class="property-type">string</span>
     </dt>
-    <dd>{{% md %}}The identity that last modified the resource.{{% /md %}}</dd>
-    <dt class="property-optional"
+    <dd>{{% md %}}The identity that last modified the resource.{{% /md %}}</dd><dt class="property-optional"
             title="Optional">
         <span id="lastmodifiedbytype_nodejs">
 <a href="#lastmodifiedbytype_nodejs" style="color: inherit; text-decoration: inherit;">last<wbr>Modified<wbr>By<wbr>Type</a>
@@ -1081,14 +958,11 @@ integration on an event source.{{% /md %}}</dd>
         <span class="property-indicator"></span>
         <span class="property-type">string</span>
     </dt>
-    <dd>{{% md %}}The type of identity that last modified the resource.{{% /md %}}</dd>
-</dl>
+    <dd>{{% md %}}The type of identity that last modified the resource.{{% /md %}}</dd></dl>
 {{% /choosable %}}
 
 {{% choosable language python %}}
-<dl class="resources-properties">
-
-    <dt class="property-optional"
+<dl class="resources-properties"><dt class="property-optional"
             title="Optional">
         <span id="created_at_python">
 <a href="#created_at_python" style="color: inherit; text-decoration: inherit;">created_<wbr>at</a>
@@ -1096,8 +970,7 @@ integration on an event source.{{% /md %}}</dd>
         <span class="property-indicator"></span>
         <span class="property-type">str</span>
     </dt>
-    <dd>{{% md %}}The timestamp of resource creation (UTC).{{% /md %}}</dd>
-    <dt class="property-optional"
+    <dd>{{% md %}}The timestamp of resource creation (UTC).{{% /md %}}</dd><dt class="property-optional"
             title="Optional">
         <span id="created_by_python">
 <a href="#created_by_python" style="color: inherit; text-decoration: inherit;">created_<wbr>by</a>
@@ -1105,8 +978,7 @@ integration on an event source.{{% /md %}}</dd>
         <span class="property-indicator"></span>
         <span class="property-type">str</span>
     </dt>
-    <dd>{{% md %}}The identity that created the resource.{{% /md %}}</dd>
-    <dt class="property-optional"
+    <dd>{{% md %}}The identity that created the resource.{{% /md %}}</dd><dt class="property-optional"
             title="Optional">
         <span id="created_by_type_python">
 <a href="#created_by_type_python" style="color: inherit; text-decoration: inherit;">created_<wbr>by_<wbr>type</a>
@@ -1114,8 +986,7 @@ integration on an event source.{{% /md %}}</dd>
         <span class="property-indicator"></span>
         <span class="property-type">str</span>
     </dt>
-    <dd>{{% md %}}The type of identity that created the resource.{{% /md %}}</dd>
-    <dt class="property-optional"
+    <dd>{{% md %}}The type of identity that created the resource.{{% /md %}}</dd><dt class="property-optional"
             title="Optional">
         <span id="last_modified_at_python">
 <a href="#last_modified_at_python" style="color: inherit; text-decoration: inherit;">last_<wbr>modified_<wbr>at</a>
@@ -1123,8 +994,7 @@ integration on an event source.{{% /md %}}</dd>
         <span class="property-indicator"></span>
         <span class="property-type">str</span>
     </dt>
-    <dd>{{% md %}}The timestamp of resource last modification (UTC){{% /md %}}</dd>
-    <dt class="property-optional"
+    <dd>{{% md %}}The timestamp of resource last modification (UTC){{% /md %}}</dd><dt class="property-optional"
             title="Optional">
         <span id="last_modified_by_python">
 <a href="#last_modified_by_python" style="color: inherit; text-decoration: inherit;">last_<wbr>modified_<wbr>by</a>
@@ -1132,8 +1002,7 @@ integration on an event source.{{% /md %}}</dd>
         <span class="property-indicator"></span>
         <span class="property-type">str</span>
     </dt>
-    <dd>{{% md %}}The identity that last modified the resource.{{% /md %}}</dd>
-    <dt class="property-optional"
+    <dd>{{% md %}}The identity that last modified the resource.{{% /md %}}</dd><dt class="property-optional"
             title="Optional">
         <span id="last_modified_by_type_python">
 <a href="#last_modified_by_type_python" style="color: inherit; text-decoration: inherit;">last_<wbr>modified_<wbr>by_<wbr>type</a>
@@ -1141,8 +1010,7 @@ integration on an event source.{{% /md %}}</dd>
         <span class="property-indicator"></span>
         <span class="property-type">str</span>
     </dt>
-    <dd>{{% md %}}The type of identity that last modified the resource.{{% /md %}}</dd>
-</dl>
+    <dd>{{% md %}}The type of identity that last modified the resource.{{% /md %}}</dd></dl>
 {{% /choosable %}}
 
 

@@ -20,11 +20,17 @@ meta_desc: "Documentation for the mongodbatlas.X509AuthenticationDatabaseUser re
 > **NOTE:** Groups and projects are synonymous terms. You may find group_id in the official documentation.
 
 {{% examples %}}
+
 ## Example Usage
 
 {{< chooser language "typescript,python,go,csharp" / >}}
+
+
 ### Example Usage: Generate an Atlas-managed X.509 certificate for a MongoDB user
-{{% example csharp %}}
+
+
+{{< example csharp >}}
+
 ```csharp
 using Pulumi;
 using Mongodbatlas = Pulumi.Mongodbatlas;
@@ -67,9 +73,12 @@ class MyStack : Stack
 }
 ```
 
-{{% /example %}}
 
-{{% example go %}}
+{{< /example >}}
+
+
+{{< example go >}}
+
 ```go
 package main
 
@@ -116,9 +125,12 @@ func main() {
 }
 ```
 
-{{% /example %}}
 
-{{% example python %}}
+{{< /example >}}
+
+
+{{< example python >}}
+
 ```python
 import pulumi
 import pulumi_mongodbatlas as mongodbatlas
@@ -142,9 +154,12 @@ test = mongodbatlas.X509AuthenticationDatabaseUser("test",
     username=user.username)
 ```
 
-{{% /example %}}
 
-{{% example typescript %}}
+{{< /example >}}
+
+
+{{< example typescript >}}
+
 ```typescript
 import * as pulumi from "@pulumi/pulumi";
 import * as mongodbatlas from "@pulumi/mongodbatlas";
@@ -170,10 +185,17 @@ const test = new mongodbatlas.X509AuthenticationDatabaseUser("test", {
 });
 ```
 
-{{% /example %}}
+
+{{< /example >}}
+
+
+
 
 ### Example Usage: Save a customer-managed X.509 configuration for an Atlas project
-{{% example csharp %}}
+
+
+{{< example csharp >}}
+
 ```csharp
 using Pulumi;
 using Mongodbatlas = Pulumi.Mongodbatlas;
@@ -209,9 +231,12 @@ class MyStack : Stack
 }
 ```
 
-{{% /example %}}
 
-{{% example go %}}
+{{< /example >}}
+
+
+{{< example go >}}
+
 ```go
 package main
 
@@ -236,9 +261,12 @@ func main() {
 }
 ```
 
-{{% /example %}}
 
-{{% example python %}}
+{{< /example >}}
+
+
+{{< example python >}}
+
 ```python
 import pulumi
 import pulumi_mongodbatlas as mongodbatlas
@@ -265,9 +293,12 @@ test = mongodbatlas.X509AuthenticationDatabaseUser("test",
     project_id="<PROJECT-ID>")
 ```
 
-{{% /example %}}
 
-{{% example typescript %}}
+{{< /example >}}
+
+
+{{< example typescript >}}
+
 ```typescript
 import * as pulumi from "@pulumi/pulumi";
 import * as mongodbatlas from "@pulumi/mongodbatlas";
@@ -294,9 +325,16 @@ const test = new mongodbatlas.X509AuthenticationDatabaseUser("test", {
 });
 ```
 
-{{% /example %}}
+
+{{< /example >}}
+
+
+
+
 
 {{% /examples %}}
+
+
 
 
 ## Create a X509AuthenticationDatabaseUser Resource {#create}
@@ -321,9 +359,7 @@ const test = new mongodbatlas.X509AuthenticationDatabaseUser("test", {
 
 {{% choosable language nodejs %}}
 
-<dl class="resources-properties">
-  
-    <dt
+<dl class="resources-properties"><dt
         class="property-required" title="Required">
         <span>name</span>
         <span class="property-indicator"></span>
@@ -331,9 +367,7 @@ const test = new mongodbatlas.X509AuthenticationDatabaseUser("test", {
     </dt>
     <dd>
       The unique name of the resource.
-    </dd>
-  
-    <dt
+    </dd><dt
         class="property-required" title="Required">
         <span>args</span>
         <span class="property-indicator"></span>
@@ -341,9 +375,7 @@ const test = new mongodbatlas.X509AuthenticationDatabaseUser("test", {
     </dt>
     <dd>
       The arguments to resource properties.
-    </dd>
-  
-    <dt
+    </dd><dt
         class="property-optional" title="Optional">
         <span>opts</span>
         <span class="property-indicator"></span>
@@ -351,10 +383,7 @@ const test = new mongodbatlas.X509AuthenticationDatabaseUser("test", {
     </dt>
     <dd>
       Bag of options to control resource&#39;s behavior.
-    </dd>
-  
-
-</dl>
+    </dd></dl>
 
 {{% /choosable %}}
 
@@ -380,9 +409,7 @@ const test = new mongodbatlas.X509AuthenticationDatabaseUser("test", {
 
 {{% choosable language go %}}
 
-<dl class="resources-properties">
-  
-    <dt
+<dl class="resources-properties"><dt
         class="property-optional" title="Optional">
         <span>ctx</span>
         <span class="property-indicator"></span>
@@ -390,9 +417,7 @@ const test = new mongodbatlas.X509AuthenticationDatabaseUser("test", {
     </dt>
     <dd>
       Context object for the current deployment.
-    </dd>
-  
-    <dt
+    </dd><dt
         class="property-required" title="Required">
         <span>name</span>
         <span class="property-indicator"></span>
@@ -400,9 +425,7 @@ const test = new mongodbatlas.X509AuthenticationDatabaseUser("test", {
     </dt>
     <dd>
       The unique name of the resource.
-    </dd>
-  
-    <dt
+    </dd><dt
         class="property-required" title="Required">
         <span>args</span>
         <span class="property-indicator"></span>
@@ -410,9 +433,7 @@ const test = new mongodbatlas.X509AuthenticationDatabaseUser("test", {
     </dt>
     <dd>
       The arguments to resource properties.
-    </dd>
-  
-    <dt
+    </dd><dt
         class="property-optional" title="Optional">
         <span>opts</span>
         <span class="property-indicator"></span>
@@ -420,18 +441,13 @@ const test = new mongodbatlas.X509AuthenticationDatabaseUser("test", {
     </dt>
     <dd>
       Bag of options to control resource&#39;s behavior.
-    </dd>
-  
-
-</dl>
+    </dd></dl>
 
 {{% /choosable %}}
 
 {{% choosable language csharp %}}
 
-<dl class="resources-properties">
-  
-    <dt
+<dl class="resources-properties"><dt
         class="property-required" title="Required">
         <span>name</span>
         <span class="property-indicator"></span>
@@ -439,9 +455,7 @@ const test = new mongodbatlas.X509AuthenticationDatabaseUser("test", {
     </dt>
     <dd>
       The unique name of the resource.
-    </dd>
-  
-    <dt
+    </dd><dt
         class="property-required" title="Required">
         <span>args</span>
         <span class="property-indicator"></span>
@@ -449,9 +463,7 @@ const test = new mongodbatlas.X509AuthenticationDatabaseUser("test", {
     </dt>
     <dd>
       The arguments to resource properties.
-    </dd>
-  
-    <dt
+    </dd><dt
         class="property-optional" title="Optional">
         <span>opts</span>
         <span class="property-indicator"></span>
@@ -459,10 +471,7 @@ const test = new mongodbatlas.X509AuthenticationDatabaseUser("test", {
     </dt>
     <dd>
       Bag of options to control resource&#39;s behavior.
-    </dd>
-  
-
-</dl>
+    </dd></dl>
 
 {{% /choosable %}}
 
@@ -477,9 +486,7 @@ The X509AuthenticationDatabaseUser resource accepts the following [input]({{< re
 
 
 {{% choosable language csharp %}}
-<dl class="resources-properties">
-
-    <dt class="property-required"
+<dl class="resources-properties"><dt class="property-required"
             title="Required">
         <span id="projectid_csharp">
 <a href="#projectid_csharp" style="color: inherit; text-decoration: inherit;">Project<wbr>Id</a>
@@ -488,8 +495,7 @@ The X509AuthenticationDatabaseUser resource accepts the following [input]({{< re
         <span class="property-type">string</span>
     </dt>
     <dd>{{% md %}}Identifier for the Atlas project associated with the X.509 configuration.
-{{% /md %}}</dd>
-    <dt class="property-optional"
+{{% /md %}}</dd><dt class="property-optional"
             title="Optional">
         <span id="customerx509cas_csharp">
 <a href="#customerx509cas_csharp" style="color: inherit; text-decoration: inherit;">Customer<wbr>X509Cas</a>
@@ -498,8 +504,7 @@ The X509AuthenticationDatabaseUser resource accepts the following [input]({{< re
         <span class="property-type">string</span>
     </dt>
     <dd>{{% md %}}PEM string containing one or more customer CAs for database user authentication.
-{{% /md %}}</dd>
-    <dt class="property-optional"
+{{% /md %}}</dd><dt class="property-optional"
             title="Optional">
         <span id="monthsuntilexpiration_csharp">
 <a href="#monthsuntilexpiration_csharp" style="color: inherit; text-decoration: inherit;">Months<wbr>Until<wbr>Expiration</a>
@@ -508,8 +513,7 @@ The X509AuthenticationDatabaseUser resource accepts the following [input]({{< re
         <span class="property-type">int</span>
     </dt>
     <dd>{{% md %}}A number of months that the created certificate is valid for before expiry, up to 24 months. By default is 3.
-{{% /md %}}</dd>
-    <dt class="property-optional"
+{{% /md %}}</dd><dt class="property-optional"
             title="Optional">
         <span id="username_csharp">
 <a href="#username_csharp" style="color: inherit; text-decoration: inherit;">Username</a>
@@ -518,14 +522,11 @@ The X509AuthenticationDatabaseUser resource accepts the following [input]({{< re
         <span class="property-type">string</span>
     </dt>
     <dd>{{% md %}}Username of the database user to create a certificate for.
-{{% /md %}}</dd>
-</dl>
+{{% /md %}}</dd></dl>
 {{% /choosable %}}
 
 {{% choosable language go %}}
-<dl class="resources-properties">
-
-    <dt class="property-required"
+<dl class="resources-properties"><dt class="property-required"
             title="Required">
         <span id="projectid_go">
 <a href="#projectid_go" style="color: inherit; text-decoration: inherit;">Project<wbr>Id</a>
@@ -534,8 +535,7 @@ The X509AuthenticationDatabaseUser resource accepts the following [input]({{< re
         <span class="property-type">string</span>
     </dt>
     <dd>{{% md %}}Identifier for the Atlas project associated with the X.509 configuration.
-{{% /md %}}</dd>
-    <dt class="property-optional"
+{{% /md %}}</dd><dt class="property-optional"
             title="Optional">
         <span id="customerx509cas_go">
 <a href="#customerx509cas_go" style="color: inherit; text-decoration: inherit;">Customer<wbr>X509Cas</a>
@@ -544,8 +544,7 @@ The X509AuthenticationDatabaseUser resource accepts the following [input]({{< re
         <span class="property-type">string</span>
     </dt>
     <dd>{{% md %}}PEM string containing one or more customer CAs for database user authentication.
-{{% /md %}}</dd>
-    <dt class="property-optional"
+{{% /md %}}</dd><dt class="property-optional"
             title="Optional">
         <span id="monthsuntilexpiration_go">
 <a href="#monthsuntilexpiration_go" style="color: inherit; text-decoration: inherit;">Months<wbr>Until<wbr>Expiration</a>
@@ -554,8 +553,7 @@ The X509AuthenticationDatabaseUser resource accepts the following [input]({{< re
         <span class="property-type">int</span>
     </dt>
     <dd>{{% md %}}A number of months that the created certificate is valid for before expiry, up to 24 months. By default is 3.
-{{% /md %}}</dd>
-    <dt class="property-optional"
+{{% /md %}}</dd><dt class="property-optional"
             title="Optional">
         <span id="username_go">
 <a href="#username_go" style="color: inherit; text-decoration: inherit;">Username</a>
@@ -564,14 +562,11 @@ The X509AuthenticationDatabaseUser resource accepts the following [input]({{< re
         <span class="property-type">string</span>
     </dt>
     <dd>{{% md %}}Username of the database user to create a certificate for.
-{{% /md %}}</dd>
-</dl>
+{{% /md %}}</dd></dl>
 {{% /choosable %}}
 
 {{% choosable language nodejs %}}
-<dl class="resources-properties">
-
-    <dt class="property-required"
+<dl class="resources-properties"><dt class="property-required"
             title="Required">
         <span id="projectid_nodejs">
 <a href="#projectid_nodejs" style="color: inherit; text-decoration: inherit;">project<wbr>Id</a>
@@ -580,8 +575,7 @@ The X509AuthenticationDatabaseUser resource accepts the following [input]({{< re
         <span class="property-type">string</span>
     </dt>
     <dd>{{% md %}}Identifier for the Atlas project associated with the X.509 configuration.
-{{% /md %}}</dd>
-    <dt class="property-optional"
+{{% /md %}}</dd><dt class="property-optional"
             title="Optional">
         <span id="customerx509cas_nodejs">
 <a href="#customerx509cas_nodejs" style="color: inherit; text-decoration: inherit;">customer<wbr>X509Cas</a>
@@ -590,8 +584,7 @@ The X509AuthenticationDatabaseUser resource accepts the following [input]({{< re
         <span class="property-type">string</span>
     </dt>
     <dd>{{% md %}}PEM string containing one or more customer CAs for database user authentication.
-{{% /md %}}</dd>
-    <dt class="property-optional"
+{{% /md %}}</dd><dt class="property-optional"
             title="Optional">
         <span id="monthsuntilexpiration_nodejs">
 <a href="#monthsuntilexpiration_nodejs" style="color: inherit; text-decoration: inherit;">months<wbr>Until<wbr>Expiration</a>
@@ -600,8 +593,7 @@ The X509AuthenticationDatabaseUser resource accepts the following [input]({{< re
         <span class="property-type">number</span>
     </dt>
     <dd>{{% md %}}A number of months that the created certificate is valid for before expiry, up to 24 months. By default is 3.
-{{% /md %}}</dd>
-    <dt class="property-optional"
+{{% /md %}}</dd><dt class="property-optional"
             title="Optional">
         <span id="username_nodejs">
 <a href="#username_nodejs" style="color: inherit; text-decoration: inherit;">username</a>
@@ -610,14 +602,11 @@ The X509AuthenticationDatabaseUser resource accepts the following [input]({{< re
         <span class="property-type">string</span>
     </dt>
     <dd>{{% md %}}Username of the database user to create a certificate for.
-{{% /md %}}</dd>
-</dl>
+{{% /md %}}</dd></dl>
 {{% /choosable %}}
 
 {{% choosable language python %}}
-<dl class="resources-properties">
-
-    <dt class="property-required"
+<dl class="resources-properties"><dt class="property-required"
             title="Required">
         <span id="project_id_python">
 <a href="#project_id_python" style="color: inherit; text-decoration: inherit;">project_<wbr>id</a>
@@ -626,8 +615,7 @@ The X509AuthenticationDatabaseUser resource accepts the following [input]({{< re
         <span class="property-type">str</span>
     </dt>
     <dd>{{% md %}}Identifier for the Atlas project associated with the X.509 configuration.
-{{% /md %}}</dd>
-    <dt class="property-optional"
+{{% /md %}}</dd><dt class="property-optional"
             title="Optional">
         <span id="customer_x509_cas_python">
 <a href="#customer_x509_cas_python" style="color: inherit; text-decoration: inherit;">customer_<wbr>x509_<wbr>cas</a>
@@ -636,8 +624,7 @@ The X509AuthenticationDatabaseUser resource accepts the following [input]({{< re
         <span class="property-type">str</span>
     </dt>
     <dd>{{% md %}}PEM string containing one or more customer CAs for database user authentication.
-{{% /md %}}</dd>
-    <dt class="property-optional"
+{{% /md %}}</dd><dt class="property-optional"
             title="Optional">
         <span id="months_until_expiration_python">
 <a href="#months_until_expiration_python" style="color: inherit; text-decoration: inherit;">months_<wbr>until_<wbr>expiration</a>
@@ -646,8 +633,7 @@ The X509AuthenticationDatabaseUser resource accepts the following [input]({{< re
         <span class="property-type">int</span>
     </dt>
     <dd>{{% md %}}A number of months that the created certificate is valid for before expiry, up to 24 months. By default is 3.
-{{% /md %}}</dd>
-    <dt class="property-optional"
+{{% /md %}}</dd><dt class="property-optional"
             title="Optional">
         <span id="username_python">
 <a href="#username_python" style="color: inherit; text-decoration: inherit;">username</a>
@@ -656,8 +642,7 @@ The X509AuthenticationDatabaseUser resource accepts the following [input]({{< re
         <span class="property-type">str</span>
     </dt>
     <dd>{{% md %}}Username of the database user to create a certificate for.
-{{% /md %}}</dd>
-</dl>
+{{% /md %}}</dd></dl>
 {{% /choosable %}}
 
 
@@ -668,9 +653,7 @@ All [input](#inputs) properties are implicitly available as output properties. A
 
 
 {{% choosable language csharp %}}
-<dl class="resources-properties">
-
-    <dt class="property-"
+<dl class="resources-properties"><dt class="property-"
             title="">
         <span id="certificates_csharp">
 <a href="#certificates_csharp" style="color: inherit; text-decoration: inherit;">Certificates</a>
@@ -679,8 +662,7 @@ All [input](#inputs) properties are implicitly available as output properties. A
         <span class="property-type"><a href="#x509authenticationdatabaseusercertificate">List&lt;X509Authentication<wbr>Database<wbr>User<wbr>Certificate&gt;</a></span>
     </dt>
     <dd>{{% md %}}Array of objects where each details one unexpired database user certificate.
-{{% /md %}}</dd>
-    <dt class="property-"
+{{% /md %}}</dd><dt class="property-"
             title="">
         <span id="currentcertificate_csharp">
 <a href="#currentcertificate_csharp" style="color: inherit; text-decoration: inherit;">Current<wbr>Certificate</a>
@@ -689,8 +671,7 @@ All [input](#inputs) properties are implicitly available as output properties. A
         <span class="property-type">string</span>
     </dt>
     <dd>{{% md %}}Contains the last X.509 certificate and private key created for a database user.
-{{% /md %}}</dd>
-    <dt class="property-"
+{{% /md %}}</dd><dt class="property-"
             title="">
         <span id="id_csharp">
 <a href="#id_csharp" style="color: inherit; text-decoration: inherit;">Id</a>
@@ -698,14 +679,11 @@ All [input](#inputs) properties are implicitly available as output properties. A
         <span class="property-indicator"></span>
         <span class="property-type">string</span>
     </dt>
-    <dd>{{% md %}}The provider-assigned unique ID for this managed resource.{{% /md %}}</dd>
-</dl>
+    <dd>{{% md %}}The provider-assigned unique ID for this managed resource.{{% /md %}}</dd></dl>
 {{% /choosable %}}
 
 {{% choosable language go %}}
-<dl class="resources-properties">
-
-    <dt class="property-"
+<dl class="resources-properties"><dt class="property-"
             title="">
         <span id="certificates_go">
 <a href="#certificates_go" style="color: inherit; text-decoration: inherit;">Certificates</a>
@@ -714,8 +692,7 @@ All [input](#inputs) properties are implicitly available as output properties. A
         <span class="property-type"><a href="#x509authenticationdatabaseusercertificate">[]X509Authentication<wbr>Database<wbr>User<wbr>Certificate</a></span>
     </dt>
     <dd>{{% md %}}Array of objects where each details one unexpired database user certificate.
-{{% /md %}}</dd>
-    <dt class="property-"
+{{% /md %}}</dd><dt class="property-"
             title="">
         <span id="currentcertificate_go">
 <a href="#currentcertificate_go" style="color: inherit; text-decoration: inherit;">Current<wbr>Certificate</a>
@@ -724,8 +701,7 @@ All [input](#inputs) properties are implicitly available as output properties. A
         <span class="property-type">string</span>
     </dt>
     <dd>{{% md %}}Contains the last X.509 certificate and private key created for a database user.
-{{% /md %}}</dd>
-    <dt class="property-"
+{{% /md %}}</dd><dt class="property-"
             title="">
         <span id="id_go">
 <a href="#id_go" style="color: inherit; text-decoration: inherit;">Id</a>
@@ -733,14 +709,11 @@ All [input](#inputs) properties are implicitly available as output properties. A
         <span class="property-indicator"></span>
         <span class="property-type">string</span>
     </dt>
-    <dd>{{% md %}}The provider-assigned unique ID for this managed resource.{{% /md %}}</dd>
-</dl>
+    <dd>{{% md %}}The provider-assigned unique ID for this managed resource.{{% /md %}}</dd></dl>
 {{% /choosable %}}
 
 {{% choosable language nodejs %}}
-<dl class="resources-properties">
-
-    <dt class="property-"
+<dl class="resources-properties"><dt class="property-"
             title="">
         <span id="certificates_nodejs">
 <a href="#certificates_nodejs" style="color: inherit; text-decoration: inherit;">certificates</a>
@@ -749,8 +722,7 @@ All [input](#inputs) properties are implicitly available as output properties. A
         <span class="property-type"><a href="#x509authenticationdatabaseusercertificate">X509Authentication<wbr>Database<wbr>User<wbr>Certificate[]</a></span>
     </dt>
     <dd>{{% md %}}Array of objects where each details one unexpired database user certificate.
-{{% /md %}}</dd>
-    <dt class="property-"
+{{% /md %}}</dd><dt class="property-"
             title="">
         <span id="currentcertificate_nodejs">
 <a href="#currentcertificate_nodejs" style="color: inherit; text-decoration: inherit;">current<wbr>Certificate</a>
@@ -759,8 +731,7 @@ All [input](#inputs) properties are implicitly available as output properties. A
         <span class="property-type">string</span>
     </dt>
     <dd>{{% md %}}Contains the last X.509 certificate and private key created for a database user.
-{{% /md %}}</dd>
-    <dt class="property-"
+{{% /md %}}</dd><dt class="property-"
             title="">
         <span id="id_nodejs">
 <a href="#id_nodejs" style="color: inherit; text-decoration: inherit;">id</a>
@@ -768,14 +739,11 @@ All [input](#inputs) properties are implicitly available as output properties. A
         <span class="property-indicator"></span>
         <span class="property-type">string</span>
     </dt>
-    <dd>{{% md %}}The provider-assigned unique ID for this managed resource.{{% /md %}}</dd>
-</dl>
+    <dd>{{% md %}}The provider-assigned unique ID for this managed resource.{{% /md %}}</dd></dl>
 {{% /choosable %}}
 
 {{% choosable language python %}}
-<dl class="resources-properties">
-
-    <dt class="property-"
+<dl class="resources-properties"><dt class="property-"
             title="">
         <span id="certificates_python">
 <a href="#certificates_python" style="color: inherit; text-decoration: inherit;">certificates</a>
@@ -784,8 +752,7 @@ All [input](#inputs) properties are implicitly available as output properties. A
         <span class="property-type"><a href="#x509authenticationdatabaseusercertificate">Sequence[X509Authentication<wbr>Database<wbr>User<wbr>Certificate]</a></span>
     </dt>
     <dd>{{% md %}}Array of objects where each details one unexpired database user certificate.
-{{% /md %}}</dd>
-    <dt class="property-"
+{{% /md %}}</dd><dt class="property-"
             title="">
         <span id="current_certificate_python">
 <a href="#current_certificate_python" style="color: inherit; text-decoration: inherit;">current_<wbr>certificate</a>
@@ -794,8 +761,7 @@ All [input](#inputs) properties are implicitly available as output properties. A
         <span class="property-type">str</span>
     </dt>
     <dd>{{% md %}}Contains the last X.509 certificate and private key created for a database user.
-{{% /md %}}</dd>
-    <dt class="property-"
+{{% /md %}}</dd><dt class="property-"
             title="">
         <span id="id_python">
 <a href="#id_python" style="color: inherit; text-decoration: inherit;">id</a>
@@ -803,8 +769,7 @@ All [input](#inputs) properties are implicitly available as output properties. A
         <span class="property-indicator"></span>
         <span class="property-type">str</span>
     </dt>
-    <dd>{{% md %}}The provider-assigned unique ID for this managed resource.{{% /md %}}</dd>
-</dl>
+    <dd>{{% md %}}The provider-assigned unique ID for this managed resource.{{% /md %}}</dd></dl>
 {{% /choosable %}}
 
 
@@ -931,9 +896,7 @@ The following state arguments are supported:
 
 
 {{% choosable language csharp %}}
-<dl class="resources-properties">
-
-    <dt class="property-optional"
+<dl class="resources-properties"><dt class="property-optional"
             title="Optional">
         <span id="state_certificates_csharp">
 <a href="#state_certificates_csharp" style="color: inherit; text-decoration: inherit;">Certificates</a>
@@ -942,8 +905,7 @@ The following state arguments are supported:
         <span class="property-type"><a href="#x509authenticationdatabaseusercertificate">List&lt;X509Authentication<wbr>Database<wbr>User<wbr>Certificate<wbr>Args&gt;</a></span>
     </dt>
     <dd>{{% md %}}Array of objects where each details one unexpired database user certificate.
-{{% /md %}}</dd>
-    <dt class="property-optional"
+{{% /md %}}</dd><dt class="property-optional"
             title="Optional">
         <span id="state_currentcertificate_csharp">
 <a href="#state_currentcertificate_csharp" style="color: inherit; text-decoration: inherit;">Current<wbr>Certificate</a>
@@ -952,8 +914,7 @@ The following state arguments are supported:
         <span class="property-type">string</span>
     </dt>
     <dd>{{% md %}}Contains the last X.509 certificate and private key created for a database user.
-{{% /md %}}</dd>
-    <dt class="property-optional"
+{{% /md %}}</dd><dt class="property-optional"
             title="Optional">
         <span id="state_customerx509cas_csharp">
 <a href="#state_customerx509cas_csharp" style="color: inherit; text-decoration: inherit;">Customer<wbr>X509Cas</a>
@@ -962,8 +923,7 @@ The following state arguments are supported:
         <span class="property-type">string</span>
     </dt>
     <dd>{{% md %}}PEM string containing one or more customer CAs for database user authentication.
-{{% /md %}}</dd>
-    <dt class="property-optional"
+{{% /md %}}</dd><dt class="property-optional"
             title="Optional">
         <span id="state_monthsuntilexpiration_csharp">
 <a href="#state_monthsuntilexpiration_csharp" style="color: inherit; text-decoration: inherit;">Months<wbr>Until<wbr>Expiration</a>
@@ -972,8 +932,7 @@ The following state arguments are supported:
         <span class="property-type">int</span>
     </dt>
     <dd>{{% md %}}A number of months that the created certificate is valid for before expiry, up to 24 months. By default is 3.
-{{% /md %}}</dd>
-    <dt class="property-optional"
+{{% /md %}}</dd><dt class="property-optional"
             title="Optional">
         <span id="state_projectid_csharp">
 <a href="#state_projectid_csharp" style="color: inherit; text-decoration: inherit;">Project<wbr>Id</a>
@@ -982,8 +941,7 @@ The following state arguments are supported:
         <span class="property-type">string</span>
     </dt>
     <dd>{{% md %}}Identifier for the Atlas project associated with the X.509 configuration.
-{{% /md %}}</dd>
-    <dt class="property-optional"
+{{% /md %}}</dd><dt class="property-optional"
             title="Optional">
         <span id="state_username_csharp">
 <a href="#state_username_csharp" style="color: inherit; text-decoration: inherit;">Username</a>
@@ -992,14 +950,11 @@ The following state arguments are supported:
         <span class="property-type">string</span>
     </dt>
     <dd>{{% md %}}Username of the database user to create a certificate for.
-{{% /md %}}</dd>
-</dl>
+{{% /md %}}</dd></dl>
 {{% /choosable %}}
 
 {{% choosable language go %}}
-<dl class="resources-properties">
-
-    <dt class="property-optional"
+<dl class="resources-properties"><dt class="property-optional"
             title="Optional">
         <span id="state_certificates_go">
 <a href="#state_certificates_go" style="color: inherit; text-decoration: inherit;">Certificates</a>
@@ -1008,8 +963,7 @@ The following state arguments are supported:
         <span class="property-type"><a href="#x509authenticationdatabaseusercertificate">[]X509Authentication<wbr>Database<wbr>User<wbr>Certificate</a></span>
     </dt>
     <dd>{{% md %}}Array of objects where each details one unexpired database user certificate.
-{{% /md %}}</dd>
-    <dt class="property-optional"
+{{% /md %}}</dd><dt class="property-optional"
             title="Optional">
         <span id="state_currentcertificate_go">
 <a href="#state_currentcertificate_go" style="color: inherit; text-decoration: inherit;">Current<wbr>Certificate</a>
@@ -1018,8 +972,7 @@ The following state arguments are supported:
         <span class="property-type">string</span>
     </dt>
     <dd>{{% md %}}Contains the last X.509 certificate and private key created for a database user.
-{{% /md %}}</dd>
-    <dt class="property-optional"
+{{% /md %}}</dd><dt class="property-optional"
             title="Optional">
         <span id="state_customerx509cas_go">
 <a href="#state_customerx509cas_go" style="color: inherit; text-decoration: inherit;">Customer<wbr>X509Cas</a>
@@ -1028,8 +981,7 @@ The following state arguments are supported:
         <span class="property-type">string</span>
     </dt>
     <dd>{{% md %}}PEM string containing one or more customer CAs for database user authentication.
-{{% /md %}}</dd>
-    <dt class="property-optional"
+{{% /md %}}</dd><dt class="property-optional"
             title="Optional">
         <span id="state_monthsuntilexpiration_go">
 <a href="#state_monthsuntilexpiration_go" style="color: inherit; text-decoration: inherit;">Months<wbr>Until<wbr>Expiration</a>
@@ -1038,8 +990,7 @@ The following state arguments are supported:
         <span class="property-type">int</span>
     </dt>
     <dd>{{% md %}}A number of months that the created certificate is valid for before expiry, up to 24 months. By default is 3.
-{{% /md %}}</dd>
-    <dt class="property-optional"
+{{% /md %}}</dd><dt class="property-optional"
             title="Optional">
         <span id="state_projectid_go">
 <a href="#state_projectid_go" style="color: inherit; text-decoration: inherit;">Project<wbr>Id</a>
@@ -1048,8 +999,7 @@ The following state arguments are supported:
         <span class="property-type">string</span>
     </dt>
     <dd>{{% md %}}Identifier for the Atlas project associated with the X.509 configuration.
-{{% /md %}}</dd>
-    <dt class="property-optional"
+{{% /md %}}</dd><dt class="property-optional"
             title="Optional">
         <span id="state_username_go">
 <a href="#state_username_go" style="color: inherit; text-decoration: inherit;">Username</a>
@@ -1058,14 +1008,11 @@ The following state arguments are supported:
         <span class="property-type">string</span>
     </dt>
     <dd>{{% md %}}Username of the database user to create a certificate for.
-{{% /md %}}</dd>
-</dl>
+{{% /md %}}</dd></dl>
 {{% /choosable %}}
 
 {{% choosable language nodejs %}}
-<dl class="resources-properties">
-
-    <dt class="property-optional"
+<dl class="resources-properties"><dt class="property-optional"
             title="Optional">
         <span id="state_certificates_nodejs">
 <a href="#state_certificates_nodejs" style="color: inherit; text-decoration: inherit;">certificates</a>
@@ -1074,8 +1021,7 @@ The following state arguments are supported:
         <span class="property-type"><a href="#x509authenticationdatabaseusercertificate">X509Authentication<wbr>Database<wbr>User<wbr>Certificate[]</a></span>
     </dt>
     <dd>{{% md %}}Array of objects where each details one unexpired database user certificate.
-{{% /md %}}</dd>
-    <dt class="property-optional"
+{{% /md %}}</dd><dt class="property-optional"
             title="Optional">
         <span id="state_currentcertificate_nodejs">
 <a href="#state_currentcertificate_nodejs" style="color: inherit; text-decoration: inherit;">current<wbr>Certificate</a>
@@ -1084,8 +1030,7 @@ The following state arguments are supported:
         <span class="property-type">string</span>
     </dt>
     <dd>{{% md %}}Contains the last X.509 certificate and private key created for a database user.
-{{% /md %}}</dd>
-    <dt class="property-optional"
+{{% /md %}}</dd><dt class="property-optional"
             title="Optional">
         <span id="state_customerx509cas_nodejs">
 <a href="#state_customerx509cas_nodejs" style="color: inherit; text-decoration: inherit;">customer<wbr>X509Cas</a>
@@ -1094,8 +1039,7 @@ The following state arguments are supported:
         <span class="property-type">string</span>
     </dt>
     <dd>{{% md %}}PEM string containing one or more customer CAs for database user authentication.
-{{% /md %}}</dd>
-    <dt class="property-optional"
+{{% /md %}}</dd><dt class="property-optional"
             title="Optional">
         <span id="state_monthsuntilexpiration_nodejs">
 <a href="#state_monthsuntilexpiration_nodejs" style="color: inherit; text-decoration: inherit;">months<wbr>Until<wbr>Expiration</a>
@@ -1104,8 +1048,7 @@ The following state arguments are supported:
         <span class="property-type">number</span>
     </dt>
     <dd>{{% md %}}A number of months that the created certificate is valid for before expiry, up to 24 months. By default is 3.
-{{% /md %}}</dd>
-    <dt class="property-optional"
+{{% /md %}}</dd><dt class="property-optional"
             title="Optional">
         <span id="state_projectid_nodejs">
 <a href="#state_projectid_nodejs" style="color: inherit; text-decoration: inherit;">project<wbr>Id</a>
@@ -1114,8 +1057,7 @@ The following state arguments are supported:
         <span class="property-type">string</span>
     </dt>
     <dd>{{% md %}}Identifier for the Atlas project associated with the X.509 configuration.
-{{% /md %}}</dd>
-    <dt class="property-optional"
+{{% /md %}}</dd><dt class="property-optional"
             title="Optional">
         <span id="state_username_nodejs">
 <a href="#state_username_nodejs" style="color: inherit; text-decoration: inherit;">username</a>
@@ -1124,14 +1066,11 @@ The following state arguments are supported:
         <span class="property-type">string</span>
     </dt>
     <dd>{{% md %}}Username of the database user to create a certificate for.
-{{% /md %}}</dd>
-</dl>
+{{% /md %}}</dd></dl>
 {{% /choosable %}}
 
 {{% choosable language python %}}
-<dl class="resources-properties">
-
-    <dt class="property-optional"
+<dl class="resources-properties"><dt class="property-optional"
             title="Optional">
         <span id="state_certificates_python">
 <a href="#state_certificates_python" style="color: inherit; text-decoration: inherit;">certificates</a>
@@ -1140,8 +1079,7 @@ The following state arguments are supported:
         <span class="property-type"><a href="#x509authenticationdatabaseusercertificate">Sequence[X509Authentication<wbr>Database<wbr>User<wbr>Certificate<wbr>Args]</a></span>
     </dt>
     <dd>{{% md %}}Array of objects where each details one unexpired database user certificate.
-{{% /md %}}</dd>
-    <dt class="property-optional"
+{{% /md %}}</dd><dt class="property-optional"
             title="Optional">
         <span id="state_current_certificate_python">
 <a href="#state_current_certificate_python" style="color: inherit; text-decoration: inherit;">current_<wbr>certificate</a>
@@ -1150,8 +1088,7 @@ The following state arguments are supported:
         <span class="property-type">str</span>
     </dt>
     <dd>{{% md %}}Contains the last X.509 certificate and private key created for a database user.
-{{% /md %}}</dd>
-    <dt class="property-optional"
+{{% /md %}}</dd><dt class="property-optional"
             title="Optional">
         <span id="state_customer_x509_cas_python">
 <a href="#state_customer_x509_cas_python" style="color: inherit; text-decoration: inherit;">customer_<wbr>x509_<wbr>cas</a>
@@ -1160,8 +1097,7 @@ The following state arguments are supported:
         <span class="property-type">str</span>
     </dt>
     <dd>{{% md %}}PEM string containing one or more customer CAs for database user authentication.
-{{% /md %}}</dd>
-    <dt class="property-optional"
+{{% /md %}}</dd><dt class="property-optional"
             title="Optional">
         <span id="state_months_until_expiration_python">
 <a href="#state_months_until_expiration_python" style="color: inherit; text-decoration: inherit;">months_<wbr>until_<wbr>expiration</a>
@@ -1170,8 +1106,7 @@ The following state arguments are supported:
         <span class="property-type">int</span>
     </dt>
     <dd>{{% md %}}A number of months that the created certificate is valid for before expiry, up to 24 months. By default is 3.
-{{% /md %}}</dd>
-    <dt class="property-optional"
+{{% /md %}}</dd><dt class="property-optional"
             title="Optional">
         <span id="state_project_id_python">
 <a href="#state_project_id_python" style="color: inherit; text-decoration: inherit;">project_<wbr>id</a>
@@ -1180,8 +1115,7 @@ The following state arguments are supported:
         <span class="property-type">str</span>
     </dt>
     <dd>{{% md %}}Identifier for the Atlas project associated with the X.509 configuration.
-{{% /md %}}</dd>
-    <dt class="property-optional"
+{{% /md %}}</dd><dt class="property-optional"
             title="Optional">
         <span id="state_username_python">
 <a href="#state_username_python" style="color: inherit; text-decoration: inherit;">username</a>
@@ -1190,8 +1124,7 @@ The following state arguments are supported:
         <span class="property-type">str</span>
     </dt>
     <dd>{{% md %}}Username of the database user to create a certificate for.
-{{% /md %}}</dd>
-</dl>
+{{% /md %}}</dd></dl>
 {{% /choosable %}}
 
 
@@ -1206,9 +1139,7 @@ The following state arguments are supported:
 <h4 id="x509authenticationdatabaseusercertificate">X509Authentication<wbr>Database<wbr>User<wbr>Certificate</h4>
 
 {{% choosable language csharp %}}
-<dl class="resources-properties">
-
-    <dt class="property-optional"
+<dl class="resources-properties"><dt class="property-optional"
             title="Optional">
         <span id="createdat_csharp">
 <a href="#createdat_csharp" style="color: inherit; text-decoration: inherit;">Created<wbr>At</a>
@@ -1216,8 +1147,7 @@ The following state arguments are supported:
         <span class="property-indicator"></span>
         <span class="property-type">string</span>
     </dt>
-    <dd>{{% md %}}{{% /md %}}</dd>
-    <dt class="property-optional"
+    <dd>{{% md %}}{{% /md %}}</dd><dt class="property-optional"
             title="Optional">
         <span id="groupid_csharp">
 <a href="#groupid_csharp" style="color: inherit; text-decoration: inherit;">Group<wbr>Id</a>
@@ -1225,8 +1155,7 @@ The following state arguments are supported:
         <span class="property-indicator"></span>
         <span class="property-type">string</span>
     </dt>
-    <dd>{{% md %}}{{% /md %}}</dd>
-    <dt class="property-optional"
+    <dd>{{% md %}}{{% /md %}}</dd><dt class="property-optional"
             title="Optional">
         <span id="id_csharp">
 <a href="#id_csharp" style="color: inherit; text-decoration: inherit;">Id</a>
@@ -1234,8 +1163,7 @@ The following state arguments are supported:
         <span class="property-indicator"></span>
         <span class="property-type">int</span>
     </dt>
-    <dd>{{% md %}}{{% /md %}}</dd>
-    <dt class="property-optional"
+    <dd>{{% md %}}{{% /md %}}</dd><dt class="property-optional"
             title="Optional">
         <span id="notafter_csharp">
 <a href="#notafter_csharp" style="color: inherit; text-decoration: inherit;">Not<wbr>After</a>
@@ -1243,8 +1171,7 @@ The following state arguments are supported:
         <span class="property-indicator"></span>
         <span class="property-type">string</span>
     </dt>
-    <dd>{{% md %}}{{% /md %}}</dd>
-    <dt class="property-optional"
+    <dd>{{% md %}}{{% /md %}}</dd><dt class="property-optional"
             title="Optional">
         <span id="subject_csharp">
 <a href="#subject_csharp" style="color: inherit; text-decoration: inherit;">Subject</a>
@@ -1252,14 +1179,11 @@ The following state arguments are supported:
         <span class="property-indicator"></span>
         <span class="property-type">string</span>
     </dt>
-    <dd>{{% md %}}{{% /md %}}</dd>
-</dl>
+    <dd>{{% md %}}{{% /md %}}</dd></dl>
 {{% /choosable %}}
 
 {{% choosable language go %}}
-<dl class="resources-properties">
-
-    <dt class="property-optional"
+<dl class="resources-properties"><dt class="property-optional"
             title="Optional">
         <span id="createdat_go">
 <a href="#createdat_go" style="color: inherit; text-decoration: inherit;">Created<wbr>At</a>
@@ -1267,8 +1191,7 @@ The following state arguments are supported:
         <span class="property-indicator"></span>
         <span class="property-type">string</span>
     </dt>
-    <dd>{{% md %}}{{% /md %}}</dd>
-    <dt class="property-optional"
+    <dd>{{% md %}}{{% /md %}}</dd><dt class="property-optional"
             title="Optional">
         <span id="groupid_go">
 <a href="#groupid_go" style="color: inherit; text-decoration: inherit;">Group<wbr>Id</a>
@@ -1276,8 +1199,7 @@ The following state arguments are supported:
         <span class="property-indicator"></span>
         <span class="property-type">string</span>
     </dt>
-    <dd>{{% md %}}{{% /md %}}</dd>
-    <dt class="property-optional"
+    <dd>{{% md %}}{{% /md %}}</dd><dt class="property-optional"
             title="Optional">
         <span id="id_go">
 <a href="#id_go" style="color: inherit; text-decoration: inherit;">Id</a>
@@ -1285,8 +1207,7 @@ The following state arguments are supported:
         <span class="property-indicator"></span>
         <span class="property-type">int</span>
     </dt>
-    <dd>{{% md %}}{{% /md %}}</dd>
-    <dt class="property-optional"
+    <dd>{{% md %}}{{% /md %}}</dd><dt class="property-optional"
             title="Optional">
         <span id="notafter_go">
 <a href="#notafter_go" style="color: inherit; text-decoration: inherit;">Not<wbr>After</a>
@@ -1294,8 +1215,7 @@ The following state arguments are supported:
         <span class="property-indicator"></span>
         <span class="property-type">string</span>
     </dt>
-    <dd>{{% md %}}{{% /md %}}</dd>
-    <dt class="property-optional"
+    <dd>{{% md %}}{{% /md %}}</dd><dt class="property-optional"
             title="Optional">
         <span id="subject_go">
 <a href="#subject_go" style="color: inherit; text-decoration: inherit;">Subject</a>
@@ -1303,14 +1223,11 @@ The following state arguments are supported:
         <span class="property-indicator"></span>
         <span class="property-type">string</span>
     </dt>
-    <dd>{{% md %}}{{% /md %}}</dd>
-</dl>
+    <dd>{{% md %}}{{% /md %}}</dd></dl>
 {{% /choosable %}}
 
 {{% choosable language nodejs %}}
-<dl class="resources-properties">
-
-    <dt class="property-optional"
+<dl class="resources-properties"><dt class="property-optional"
             title="Optional">
         <span id="createdat_nodejs">
 <a href="#createdat_nodejs" style="color: inherit; text-decoration: inherit;">created<wbr>At</a>
@@ -1318,8 +1235,7 @@ The following state arguments are supported:
         <span class="property-indicator"></span>
         <span class="property-type">string</span>
     </dt>
-    <dd>{{% md %}}{{% /md %}}</dd>
-    <dt class="property-optional"
+    <dd>{{% md %}}{{% /md %}}</dd><dt class="property-optional"
             title="Optional">
         <span id="groupid_nodejs">
 <a href="#groupid_nodejs" style="color: inherit; text-decoration: inherit;">group<wbr>Id</a>
@@ -1327,8 +1243,7 @@ The following state arguments are supported:
         <span class="property-indicator"></span>
         <span class="property-type">string</span>
     </dt>
-    <dd>{{% md %}}{{% /md %}}</dd>
-    <dt class="property-optional"
+    <dd>{{% md %}}{{% /md %}}</dd><dt class="property-optional"
             title="Optional">
         <span id="id_nodejs">
 <a href="#id_nodejs" style="color: inherit; text-decoration: inherit;">id</a>
@@ -1336,8 +1251,7 @@ The following state arguments are supported:
         <span class="property-indicator"></span>
         <span class="property-type">number</span>
     </dt>
-    <dd>{{% md %}}{{% /md %}}</dd>
-    <dt class="property-optional"
+    <dd>{{% md %}}{{% /md %}}</dd><dt class="property-optional"
             title="Optional">
         <span id="notafter_nodejs">
 <a href="#notafter_nodejs" style="color: inherit; text-decoration: inherit;">not<wbr>After</a>
@@ -1345,8 +1259,7 @@ The following state arguments are supported:
         <span class="property-indicator"></span>
         <span class="property-type">string</span>
     </dt>
-    <dd>{{% md %}}{{% /md %}}</dd>
-    <dt class="property-optional"
+    <dd>{{% md %}}{{% /md %}}</dd><dt class="property-optional"
             title="Optional">
         <span id="subject_nodejs">
 <a href="#subject_nodejs" style="color: inherit; text-decoration: inherit;">subject</a>
@@ -1354,14 +1267,11 @@ The following state arguments are supported:
         <span class="property-indicator"></span>
         <span class="property-type">string</span>
     </dt>
-    <dd>{{% md %}}{{% /md %}}</dd>
-</dl>
+    <dd>{{% md %}}{{% /md %}}</dd></dl>
 {{% /choosable %}}
 
 {{% choosable language python %}}
-<dl class="resources-properties">
-
-    <dt class="property-optional"
+<dl class="resources-properties"><dt class="property-optional"
             title="Optional">
         <span id="created_at_python">
 <a href="#created_at_python" style="color: inherit; text-decoration: inherit;">created_<wbr>at</a>
@@ -1369,8 +1279,7 @@ The following state arguments are supported:
         <span class="property-indicator"></span>
         <span class="property-type">str</span>
     </dt>
-    <dd>{{% md %}}{{% /md %}}</dd>
-    <dt class="property-optional"
+    <dd>{{% md %}}{{% /md %}}</dd><dt class="property-optional"
             title="Optional">
         <span id="group_id_python">
 <a href="#group_id_python" style="color: inherit; text-decoration: inherit;">group_<wbr>id</a>
@@ -1378,8 +1287,7 @@ The following state arguments are supported:
         <span class="property-indicator"></span>
         <span class="property-type">str</span>
     </dt>
-    <dd>{{% md %}}{{% /md %}}</dd>
-    <dt class="property-optional"
+    <dd>{{% md %}}{{% /md %}}</dd><dt class="property-optional"
             title="Optional">
         <span id="id_python">
 <a href="#id_python" style="color: inherit; text-decoration: inherit;">id</a>
@@ -1387,8 +1295,7 @@ The following state arguments are supported:
         <span class="property-indicator"></span>
         <span class="property-type">int</span>
     </dt>
-    <dd>{{% md %}}{{% /md %}}</dd>
-    <dt class="property-optional"
+    <dd>{{% md %}}{{% /md %}}</dd><dt class="property-optional"
             title="Optional">
         <span id="not_after_python">
 <a href="#not_after_python" style="color: inherit; text-decoration: inherit;">not_<wbr>after</a>
@@ -1396,8 +1303,7 @@ The following state arguments are supported:
         <span class="property-indicator"></span>
         <span class="property-type">str</span>
     </dt>
-    <dd>{{% md %}}{{% /md %}}</dd>
-    <dt class="property-optional"
+    <dd>{{% md %}}{{% /md %}}</dd><dt class="property-optional"
             title="Optional">
         <span id="subject_python">
 <a href="#subject_python" style="color: inherit; text-decoration: inherit;">subject</a>
@@ -1405,8 +1311,7 @@ The following state arguments are supported:
         <span class="property-indicator"></span>
         <span class="property-type">str</span>
     </dt>
-    <dd>{{% md %}}{{% /md %}}</dd>
-</dl>
+    <dd>{{% md %}}{{% /md %}}</dd></dl>
 {{% /choosable %}}
 ## Import
 
@@ -1435,6 +1340,6 @@ X.509 Certificates for a User can be imported using project ID and username, in 
 	<dt>License</dt>
 	<dd>Apache-2.0</dd>
 	<dt>Notes</dt>
-	<dd>This Pulumi package is based on the [`mongodbatlas` Terraform Provider](https://github.com/mongodb/terraform-provider-mongodbatlas).</dd>
+	<dd>{{% md %}}This Pulumi package is based on the [`mongodbatlas` Terraform Provider](https://github.com/mongodb/terraform-provider-mongodbatlas).{{% /md %}}</dd>
 </dl>
 

@@ -51,9 +51,7 @@ The following arguments are supported:
 
 
 {{% choosable language csharp %}}
-<dl class="resources-properties">
-
-    <dt class="property-required"
+<dl class="resources-properties"><dt class="property-required"
             title="Required">
         <span id="billingaccountname_csharp">
 <a href="#billingaccountname_csharp" style="color: inherit; text-decoration: inherit;">Billing<wbr>Account<wbr>Name</a>
@@ -61,14 +59,11 @@ The following arguments are supported:
         <span class="property-indicator"></span>
         <span class="property-type">string</span>
     </dt>
-    <dd>{{% md %}}The ID that uniquely identifies a billing account.{{% /md %}}</dd>
-</dl>
+    <dd>{{% md %}}The ID that uniquely identifies a billing account.{{% /md %}}</dd></dl>
 {{% /choosable %}}
 
 {{% choosable language go %}}
-<dl class="resources-properties">
-
-    <dt class="property-required"
+<dl class="resources-properties"><dt class="property-required"
             title="Required">
         <span id="billingaccountname_go">
 <a href="#billingaccountname_go" style="color: inherit; text-decoration: inherit;">Billing<wbr>Account<wbr>Name</a>
@@ -76,14 +71,11 @@ The following arguments are supported:
         <span class="property-indicator"></span>
         <span class="property-type">string</span>
     </dt>
-    <dd>{{% md %}}The ID that uniquely identifies a billing account.{{% /md %}}</dd>
-</dl>
+    <dd>{{% md %}}The ID that uniquely identifies a billing account.{{% /md %}}</dd></dl>
 {{% /choosable %}}
 
 {{% choosable language nodejs %}}
-<dl class="resources-properties">
-
-    <dt class="property-required"
+<dl class="resources-properties"><dt class="property-required"
             title="Required">
         <span id="billingaccountname_nodejs">
 <a href="#billingaccountname_nodejs" style="color: inherit; text-decoration: inherit;">billing<wbr>Account<wbr>Name</a>
@@ -91,14 +83,11 @@ The following arguments are supported:
         <span class="property-indicator"></span>
         <span class="property-type">string</span>
     </dt>
-    <dd>{{% md %}}The ID that uniquely identifies a billing account.{{% /md %}}</dd>
-</dl>
+    <dd>{{% md %}}The ID that uniquely identifies a billing account.{{% /md %}}</dd></dl>
 {{% /choosable %}}
 
 {{% choosable language python %}}
-<dl class="resources-properties">
-
-    <dt class="property-required"
+<dl class="resources-properties"><dt class="property-required"
             title="Required">
         <span id="billing_account_name_python">
 <a href="#billing_account_name_python" style="color: inherit; text-decoration: inherit;">billing_<wbr>account_<wbr>name</a>
@@ -106,8 +95,7 @@ The following arguments are supported:
         <span class="property-indicator"></span>
         <span class="property-type">str</span>
     </dt>
-    <dd>{{% md %}}The ID that uniquely identifies a billing account.{{% /md %}}</dd>
-</dl>
+    <dd>{{% md %}}The ID that uniquely identifies a billing account.{{% /md %}}</dd></dl>
 {{% /choosable %}}
 
 
@@ -120,9 +108,7 @@ The following output properties are available:
 
 
 {{% choosable language csharp %}}
-<dl class="resources-properties">
-
-    <dt class="property-"
+<dl class="resources-properties"><dt class="property-"
             title="">
         <span id="nextlink_csharp">
 <a href="#nextlink_csharp" style="color: inherit; text-decoration: inherit;">Next<wbr>Link</a>
@@ -130,8 +116,7 @@ The following output properties are available:
         <span class="property-indicator"></span>
         <span class="property-type">string</span>
     </dt>
-    <dd>{{% md %}}The link (url) to the next page of results.{{% /md %}}</dd>
-    <dt class="property-"
+    <dd>{{% md %}}The link (url) to the next page of results.{{% /md %}}</dd><dt class="property-"
             title="">
         <span id="value_csharp">
 <a href="#value_csharp" style="color: inherit; text-decoration: inherit;">Value</a>
@@ -139,14 +124,11 @@ The following output properties are available:
         <span class="property-indicator"></span>
         <span class="property-type"><a href="#invoicesectionwithcreatesubpermissionresponse">List&lt;Pulumi.<wbr>Azure<wbr>Native.<wbr>Billing.<wbr>Outputs.<wbr>Invoice<wbr>Section<wbr>With<wbr>Create<wbr>Sub<wbr>Permission<wbr>Response&gt;</a></span>
     </dt>
-    <dd>{{% md %}}The list of invoice section properties with create subscription permission.{{% /md %}}</dd>
-</dl>
+    <dd>{{% md %}}The list of invoice section properties with create subscription permission.{{% /md %}}</dd></dl>
 {{% /choosable %}}
 
 {{% choosable language go %}}
-<dl class="resources-properties">
-
-    <dt class="property-"
+<dl class="resources-properties"><dt class="property-"
             title="">
         <span id="nextlink_go">
 <a href="#nextlink_go" style="color: inherit; text-decoration: inherit;">Next<wbr>Link</a>
@@ -154,8 +136,7 @@ The following output properties are available:
         <span class="property-indicator"></span>
         <span class="property-type">string</span>
     </dt>
-    <dd>{{% md %}}The link (url) to the next page of results.{{% /md %}}</dd>
-    <dt class="property-"
+    <dd>{{% md %}}The link (url) to the next page of results.{{% /md %}}</dd><dt class="property-"
             title="">
         <span id="value_go">
 <a href="#value_go" style="color: inherit; text-decoration: inherit;">Value</a>
@@ -163,14 +144,11 @@ The following output properties are available:
         <span class="property-indicator"></span>
         <span class="property-type"><a href="#invoicesectionwithcreatesubpermissionresponse">[]Invoice<wbr>Section<wbr>With<wbr>Create<wbr>Sub<wbr>Permission<wbr>Response</a></span>
     </dt>
-    <dd>{{% md %}}The list of invoice section properties with create subscription permission.{{% /md %}}</dd>
-</dl>
+    <dd>{{% md %}}The list of invoice section properties with create subscription permission.{{% /md %}}</dd></dl>
 {{% /choosable %}}
 
 {{% choosable language nodejs %}}
-<dl class="resources-properties">
-
-    <dt class="property-"
+<dl class="resources-properties"><dt class="property-"
             title="">
         <span id="nextlink_nodejs">
 <a href="#nextlink_nodejs" style="color: inherit; text-decoration: inherit;">next<wbr>Link</a>
@@ -178,8 +156,7 @@ The following output properties are available:
         <span class="property-indicator"></span>
         <span class="property-type">string</span>
     </dt>
-    <dd>{{% md %}}The link (url) to the next page of results.{{% /md %}}</dd>
-    <dt class="property-"
+    <dd>{{% md %}}The link (url) to the next page of results.{{% /md %}}</dd><dt class="property-"
             title="">
         <span id="value_nodejs">
 <a href="#value_nodejs" style="color: inherit; text-decoration: inherit;">value</a>
@@ -187,14 +164,11 @@ The following output properties are available:
         <span class="property-indicator"></span>
         <span class="property-type"><a href="#invoicesectionwithcreatesubpermissionresponse">Invoice<wbr>Section<wbr>With<wbr>Create<wbr>Sub<wbr>Permission<wbr>Response[]</a></span>
     </dt>
-    <dd>{{% md %}}The list of invoice section properties with create subscription permission.{{% /md %}}</dd>
-</dl>
+    <dd>{{% md %}}The list of invoice section properties with create subscription permission.{{% /md %}}</dd></dl>
 {{% /choosable %}}
 
 {{% choosable language python %}}
-<dl class="resources-properties">
-
-    <dt class="property-"
+<dl class="resources-properties"><dt class="property-"
             title="">
         <span id="next_link_python">
 <a href="#next_link_python" style="color: inherit; text-decoration: inherit;">next_<wbr>link</a>
@@ -202,8 +176,7 @@ The following output properties are available:
         <span class="property-indicator"></span>
         <span class="property-type">str</span>
     </dt>
-    <dd>{{% md %}}The link (url) to the next page of results.{{% /md %}}</dd>
-    <dt class="property-"
+    <dd>{{% md %}}The link (url) to the next page of results.{{% /md %}}</dd><dt class="property-"
             title="">
         <span id="value_python">
 <a href="#value_python" style="color: inherit; text-decoration: inherit;">value</a>
@@ -211,8 +184,7 @@ The following output properties are available:
         <span class="property-indicator"></span>
         <span class="property-type"><a href="#invoicesectionwithcreatesubpermissionresponse">Sequence[Invoice<wbr>Section<wbr>With<wbr>Create<wbr>Sub<wbr>Permission<wbr>Response]</a></span>
     </dt>
-    <dd>{{% md %}}The list of invoice section properties with create subscription permission.{{% /md %}}</dd>
-</dl>
+    <dd>{{% md %}}The list of invoice section properties with create subscription permission.{{% /md %}}</dd></dl>
 {{% /choosable %}}
 
 
@@ -226,9 +198,7 @@ The following output properties are available:
 
 
 {{% choosable language csharp %}}
-<dl class="resources-properties">
-
-    <dt class="property-required"
+<dl class="resources-properties"><dt class="property-required"
             title="Required">
         <span id="skudescription_csharp">
 <a href="#skudescription_csharp" style="color: inherit; text-decoration: inherit;">Sku<wbr>Description</a>
@@ -236,8 +206,7 @@ The following output properties are available:
         <span class="property-indicator"></span>
         <span class="property-type">string</span>
     </dt>
-    <dd>{{% md %}}The sku description.{{% /md %}}</dd>
-    <dt class="property-optional"
+    <dd>{{% md %}}The sku description.{{% /md %}}</dd><dt class="property-optional"
             title="Optional">
         <span id="skuid_csharp">
 <a href="#skuid_csharp" style="color: inherit; text-decoration: inherit;">Sku<wbr>Id</a>
@@ -245,14 +214,11 @@ The following output properties are available:
         <span class="property-indicator"></span>
         <span class="property-type">string</span>
     </dt>
-    <dd>{{% md %}}The sku id.{{% /md %}}</dd>
-</dl>
+    <dd>{{% md %}}The sku id.{{% /md %}}</dd></dl>
 {{% /choosable %}}
 
 {{% choosable language go %}}
-<dl class="resources-properties">
-
-    <dt class="property-required"
+<dl class="resources-properties"><dt class="property-required"
             title="Required">
         <span id="skudescription_go">
 <a href="#skudescription_go" style="color: inherit; text-decoration: inherit;">Sku<wbr>Description</a>
@@ -260,8 +226,7 @@ The following output properties are available:
         <span class="property-indicator"></span>
         <span class="property-type">string</span>
     </dt>
-    <dd>{{% md %}}The sku description.{{% /md %}}</dd>
-    <dt class="property-optional"
+    <dd>{{% md %}}The sku description.{{% /md %}}</dd><dt class="property-optional"
             title="Optional">
         <span id="skuid_go">
 <a href="#skuid_go" style="color: inherit; text-decoration: inherit;">Sku<wbr>Id</a>
@@ -269,14 +234,11 @@ The following output properties are available:
         <span class="property-indicator"></span>
         <span class="property-type">string</span>
     </dt>
-    <dd>{{% md %}}The sku id.{{% /md %}}</dd>
-</dl>
+    <dd>{{% md %}}The sku id.{{% /md %}}</dd></dl>
 {{% /choosable %}}
 
 {{% choosable language nodejs %}}
-<dl class="resources-properties">
-
-    <dt class="property-required"
+<dl class="resources-properties"><dt class="property-required"
             title="Required">
         <span id="skudescription_nodejs">
 <a href="#skudescription_nodejs" style="color: inherit; text-decoration: inherit;">sku<wbr>Description</a>
@@ -284,8 +246,7 @@ The following output properties are available:
         <span class="property-indicator"></span>
         <span class="property-type">string</span>
     </dt>
-    <dd>{{% md %}}The sku description.{{% /md %}}</dd>
-    <dt class="property-optional"
+    <dd>{{% md %}}The sku description.{{% /md %}}</dd><dt class="property-optional"
             title="Optional">
         <span id="skuid_nodejs">
 <a href="#skuid_nodejs" style="color: inherit; text-decoration: inherit;">sku<wbr>Id</a>
@@ -293,14 +254,11 @@ The following output properties are available:
         <span class="property-indicator"></span>
         <span class="property-type">string</span>
     </dt>
-    <dd>{{% md %}}The sku id.{{% /md %}}</dd>
-</dl>
+    <dd>{{% md %}}The sku id.{{% /md %}}</dd></dl>
 {{% /choosable %}}
 
 {{% choosable language python %}}
-<dl class="resources-properties">
-
-    <dt class="property-required"
+<dl class="resources-properties"><dt class="property-required"
             title="Required">
         <span id="sku_description_python">
 <a href="#sku_description_python" style="color: inherit; text-decoration: inherit;">sku_<wbr>description</a>
@@ -308,8 +266,7 @@ The following output properties are available:
         <span class="property-indicator"></span>
         <span class="property-type">str</span>
     </dt>
-    <dd>{{% md %}}The sku description.{{% /md %}}</dd>
-    <dt class="property-optional"
+    <dd>{{% md %}}The sku description.{{% /md %}}</dd><dt class="property-optional"
             title="Optional">
         <span id="sku_id_python">
 <a href="#sku_id_python" style="color: inherit; text-decoration: inherit;">sku_<wbr>id</a>
@@ -317,8 +274,7 @@ The following output properties are available:
         <span class="property-indicator"></span>
         <span class="property-type">str</span>
     </dt>
-    <dd>{{% md %}}The sku id.{{% /md %}}</dd>
-</dl>
+    <dd>{{% md %}}The sku id.{{% /md %}}</dd></dl>
 {{% /choosable %}}
 
 <h4 id="invoicesectionwithcreatesubpermissionresponse">Invoice<wbr>Section<wbr>With<wbr>Create<wbr>Sub<wbr>Permission<wbr>Response</h4>
@@ -326,9 +282,7 @@ The following output properties are available:
 
 
 {{% choosable language csharp %}}
-<dl class="resources-properties">
-
-    <dt class="property-required"
+<dl class="resources-properties"><dt class="property-required"
             title="Required">
         <span id="billingprofiledisplayname_csharp">
 <a href="#billingprofiledisplayname_csharp" style="color: inherit; text-decoration: inherit;">Billing<wbr>Profile<wbr>Display<wbr>Name</a>
@@ -336,8 +290,7 @@ The following output properties are available:
         <span class="property-indicator"></span>
         <span class="property-type">string</span>
     </dt>
-    <dd>{{% md %}}The name of the billing profile for the invoice section.{{% /md %}}</dd>
-    <dt class="property-required"
+    <dd>{{% md %}}The name of the billing profile for the invoice section.{{% /md %}}</dd><dt class="property-required"
             title="Required">
         <span id="billingprofileid_csharp">
 <a href="#billingprofileid_csharp" style="color: inherit; text-decoration: inherit;">Billing<wbr>Profile<wbr>Id</a>
@@ -345,8 +298,7 @@ The following output properties are available:
         <span class="property-indicator"></span>
         <span class="property-type">string</span>
     </dt>
-    <dd>{{% md %}}The ID of the billing profile for the invoice section.{{% /md %}}</dd>
-    <dt class="property-required"
+    <dd>{{% md %}}The ID of the billing profile for the invoice section.{{% /md %}}</dd><dt class="property-required"
             title="Required">
         <span id="billingprofilespendinglimit_csharp">
 <a href="#billingprofilespendinglimit_csharp" style="color: inherit; text-decoration: inherit;">Billing<wbr>Profile<wbr>Spending<wbr>Limit</a>
@@ -354,8 +306,7 @@ The following output properties are available:
         <span class="property-indicator"></span>
         <span class="property-type">string</span>
     </dt>
-    <dd>{{% md %}}The billing profile spending limit.{{% /md %}}</dd>
-    <dt class="property-required"
+    <dd>{{% md %}}The billing profile spending limit.{{% /md %}}</dd><dt class="property-required"
             title="Required">
         <span id="billingprofilestatus_csharp">
 <a href="#billingprofilestatus_csharp" style="color: inherit; text-decoration: inherit;">Billing<wbr>Profile<wbr>Status</a>
@@ -363,8 +314,7 @@ The following output properties are available:
         <span class="property-indicator"></span>
         <span class="property-type">string</span>
     </dt>
-    <dd>{{% md %}}The status of the billing profile.{{% /md %}}</dd>
-    <dt class="property-required"
+    <dd>{{% md %}}The status of the billing profile.{{% /md %}}</dd><dt class="property-required"
             title="Required">
         <span id="billingprofilestatusreasoncode_csharp">
 <a href="#billingprofilestatusreasoncode_csharp" style="color: inherit; text-decoration: inherit;">Billing<wbr>Profile<wbr>Status<wbr>Reason<wbr>Code</a>
@@ -372,8 +322,7 @@ The following output properties are available:
         <span class="property-indicator"></span>
         <span class="property-type">string</span>
     </dt>
-    <dd>{{% md %}}Reason for the specified billing profile status.{{% /md %}}</dd>
-    <dt class="property-required"
+    <dd>{{% md %}}Reason for the specified billing profile status.{{% /md %}}</dd><dt class="property-required"
             title="Required">
         <span id="billingprofilesystemid_csharp">
 <a href="#billingprofilesystemid_csharp" style="color: inherit; text-decoration: inherit;">Billing<wbr>Profile<wbr>System<wbr>Id</a>
@@ -381,8 +330,7 @@ The following output properties are available:
         <span class="property-indicator"></span>
         <span class="property-type">string</span>
     </dt>
-    <dd>{{% md %}}The system generated unique identifier for a billing profile.{{% /md %}}</dd>
-    <dt class="property-required"
+    <dd>{{% md %}}The system generated unique identifier for a billing profile.{{% /md %}}</dd><dt class="property-required"
             title="Required">
         <span id="invoicesectiondisplayname_csharp">
 <a href="#invoicesectiondisplayname_csharp" style="color: inherit; text-decoration: inherit;">Invoice<wbr>Section<wbr>Display<wbr>Name</a>
@@ -390,8 +338,7 @@ The following output properties are available:
         <span class="property-indicator"></span>
         <span class="property-type">string</span>
     </dt>
-    <dd>{{% md %}}The name of the invoice section.{{% /md %}}</dd>
-    <dt class="property-required"
+    <dd>{{% md %}}The name of the invoice section.{{% /md %}}</dd><dt class="property-required"
             title="Required">
         <span id="invoicesectionid_csharp">
 <a href="#invoicesectionid_csharp" style="color: inherit; text-decoration: inherit;">Invoice<wbr>Section<wbr>Id</a>
@@ -399,8 +346,7 @@ The following output properties are available:
         <span class="property-indicator"></span>
         <span class="property-type">string</span>
     </dt>
-    <dd>{{% md %}}The ID of the invoice section.{{% /md %}}</dd>
-    <dt class="property-required"
+    <dd>{{% md %}}The ID of the invoice section.{{% /md %}}</dd><dt class="property-required"
             title="Required">
         <span id="invoicesectionsystemid_csharp">
 <a href="#invoicesectionsystemid_csharp" style="color: inherit; text-decoration: inherit;">Invoice<wbr>Section<wbr>System<wbr>Id</a>
@@ -408,8 +354,7 @@ The following output properties are available:
         <span class="property-indicator"></span>
         <span class="property-type">string</span>
     </dt>
-    <dd>{{% md %}}The system generated unique identifier for an invoice section.{{% /md %}}</dd>
-    <dt class="property-optional"
+    <dd>{{% md %}}The system generated unique identifier for an invoice section.{{% /md %}}</dd><dt class="property-optional"
             title="Optional">
         <span id="enabledazureplans_csharp">
 <a href="#enabledazureplans_csharp" style="color: inherit; text-decoration: inherit;">Enabled<wbr>Azure<wbr>Plans</a>
@@ -417,14 +362,11 @@ The following output properties are available:
         <span class="property-indicator"></span>
         <span class="property-type"><a href="#azureplanresponse">List&lt;Pulumi.<wbr>Azure<wbr>Native.<wbr>Billing.<wbr>Inputs.<wbr>Azure<wbr>Plan<wbr>Response<wbr>Args&gt;</a></span>
     </dt>
-    <dd>{{% md %}}Enabled azure plans for the associated billing profile.{{% /md %}}</dd>
-</dl>
+    <dd>{{% md %}}Enabled azure plans for the associated billing profile.{{% /md %}}</dd></dl>
 {{% /choosable %}}
 
 {{% choosable language go %}}
-<dl class="resources-properties">
-
-    <dt class="property-required"
+<dl class="resources-properties"><dt class="property-required"
             title="Required">
         <span id="billingprofiledisplayname_go">
 <a href="#billingprofiledisplayname_go" style="color: inherit; text-decoration: inherit;">Billing<wbr>Profile<wbr>Display<wbr>Name</a>
@@ -432,8 +374,7 @@ The following output properties are available:
         <span class="property-indicator"></span>
         <span class="property-type">string</span>
     </dt>
-    <dd>{{% md %}}The name of the billing profile for the invoice section.{{% /md %}}</dd>
-    <dt class="property-required"
+    <dd>{{% md %}}The name of the billing profile for the invoice section.{{% /md %}}</dd><dt class="property-required"
             title="Required">
         <span id="billingprofileid_go">
 <a href="#billingprofileid_go" style="color: inherit; text-decoration: inherit;">Billing<wbr>Profile<wbr>Id</a>
@@ -441,8 +382,7 @@ The following output properties are available:
         <span class="property-indicator"></span>
         <span class="property-type">string</span>
     </dt>
-    <dd>{{% md %}}The ID of the billing profile for the invoice section.{{% /md %}}</dd>
-    <dt class="property-required"
+    <dd>{{% md %}}The ID of the billing profile for the invoice section.{{% /md %}}</dd><dt class="property-required"
             title="Required">
         <span id="billingprofilespendinglimit_go">
 <a href="#billingprofilespendinglimit_go" style="color: inherit; text-decoration: inherit;">Billing<wbr>Profile<wbr>Spending<wbr>Limit</a>
@@ -450,8 +390,7 @@ The following output properties are available:
         <span class="property-indicator"></span>
         <span class="property-type">string</span>
     </dt>
-    <dd>{{% md %}}The billing profile spending limit.{{% /md %}}</dd>
-    <dt class="property-required"
+    <dd>{{% md %}}The billing profile spending limit.{{% /md %}}</dd><dt class="property-required"
             title="Required">
         <span id="billingprofilestatus_go">
 <a href="#billingprofilestatus_go" style="color: inherit; text-decoration: inherit;">Billing<wbr>Profile<wbr>Status</a>
@@ -459,8 +398,7 @@ The following output properties are available:
         <span class="property-indicator"></span>
         <span class="property-type">string</span>
     </dt>
-    <dd>{{% md %}}The status of the billing profile.{{% /md %}}</dd>
-    <dt class="property-required"
+    <dd>{{% md %}}The status of the billing profile.{{% /md %}}</dd><dt class="property-required"
             title="Required">
         <span id="billingprofilestatusreasoncode_go">
 <a href="#billingprofilestatusreasoncode_go" style="color: inherit; text-decoration: inherit;">Billing<wbr>Profile<wbr>Status<wbr>Reason<wbr>Code</a>
@@ -468,8 +406,7 @@ The following output properties are available:
         <span class="property-indicator"></span>
         <span class="property-type">string</span>
     </dt>
-    <dd>{{% md %}}Reason for the specified billing profile status.{{% /md %}}</dd>
-    <dt class="property-required"
+    <dd>{{% md %}}Reason for the specified billing profile status.{{% /md %}}</dd><dt class="property-required"
             title="Required">
         <span id="billingprofilesystemid_go">
 <a href="#billingprofilesystemid_go" style="color: inherit; text-decoration: inherit;">Billing<wbr>Profile<wbr>System<wbr>Id</a>
@@ -477,8 +414,7 @@ The following output properties are available:
         <span class="property-indicator"></span>
         <span class="property-type">string</span>
     </dt>
-    <dd>{{% md %}}The system generated unique identifier for a billing profile.{{% /md %}}</dd>
-    <dt class="property-required"
+    <dd>{{% md %}}The system generated unique identifier for a billing profile.{{% /md %}}</dd><dt class="property-required"
             title="Required">
         <span id="invoicesectiondisplayname_go">
 <a href="#invoicesectiondisplayname_go" style="color: inherit; text-decoration: inherit;">Invoice<wbr>Section<wbr>Display<wbr>Name</a>
@@ -486,8 +422,7 @@ The following output properties are available:
         <span class="property-indicator"></span>
         <span class="property-type">string</span>
     </dt>
-    <dd>{{% md %}}The name of the invoice section.{{% /md %}}</dd>
-    <dt class="property-required"
+    <dd>{{% md %}}The name of the invoice section.{{% /md %}}</dd><dt class="property-required"
             title="Required">
         <span id="invoicesectionid_go">
 <a href="#invoicesectionid_go" style="color: inherit; text-decoration: inherit;">Invoice<wbr>Section<wbr>Id</a>
@@ -495,8 +430,7 @@ The following output properties are available:
         <span class="property-indicator"></span>
         <span class="property-type">string</span>
     </dt>
-    <dd>{{% md %}}The ID of the invoice section.{{% /md %}}</dd>
-    <dt class="property-required"
+    <dd>{{% md %}}The ID of the invoice section.{{% /md %}}</dd><dt class="property-required"
             title="Required">
         <span id="invoicesectionsystemid_go">
 <a href="#invoicesectionsystemid_go" style="color: inherit; text-decoration: inherit;">Invoice<wbr>Section<wbr>System<wbr>Id</a>
@@ -504,8 +438,7 @@ The following output properties are available:
         <span class="property-indicator"></span>
         <span class="property-type">string</span>
     </dt>
-    <dd>{{% md %}}The system generated unique identifier for an invoice section.{{% /md %}}</dd>
-    <dt class="property-optional"
+    <dd>{{% md %}}The system generated unique identifier for an invoice section.{{% /md %}}</dd><dt class="property-optional"
             title="Optional">
         <span id="enabledazureplans_go">
 <a href="#enabledazureplans_go" style="color: inherit; text-decoration: inherit;">Enabled<wbr>Azure<wbr>Plans</a>
@@ -513,14 +446,11 @@ The following output properties are available:
         <span class="property-indicator"></span>
         <span class="property-type"><a href="#azureplanresponse">[]Azure<wbr>Plan<wbr>Response</a></span>
     </dt>
-    <dd>{{% md %}}Enabled azure plans for the associated billing profile.{{% /md %}}</dd>
-</dl>
+    <dd>{{% md %}}Enabled azure plans for the associated billing profile.{{% /md %}}</dd></dl>
 {{% /choosable %}}
 
 {{% choosable language nodejs %}}
-<dl class="resources-properties">
-
-    <dt class="property-required"
+<dl class="resources-properties"><dt class="property-required"
             title="Required">
         <span id="billingprofiledisplayname_nodejs">
 <a href="#billingprofiledisplayname_nodejs" style="color: inherit; text-decoration: inherit;">billing<wbr>Profile<wbr>Display<wbr>Name</a>
@@ -528,8 +458,7 @@ The following output properties are available:
         <span class="property-indicator"></span>
         <span class="property-type">string</span>
     </dt>
-    <dd>{{% md %}}The name of the billing profile for the invoice section.{{% /md %}}</dd>
-    <dt class="property-required"
+    <dd>{{% md %}}The name of the billing profile for the invoice section.{{% /md %}}</dd><dt class="property-required"
             title="Required">
         <span id="billingprofileid_nodejs">
 <a href="#billingprofileid_nodejs" style="color: inherit; text-decoration: inherit;">billing<wbr>Profile<wbr>Id</a>
@@ -537,8 +466,7 @@ The following output properties are available:
         <span class="property-indicator"></span>
         <span class="property-type">string</span>
     </dt>
-    <dd>{{% md %}}The ID of the billing profile for the invoice section.{{% /md %}}</dd>
-    <dt class="property-required"
+    <dd>{{% md %}}The ID of the billing profile for the invoice section.{{% /md %}}</dd><dt class="property-required"
             title="Required">
         <span id="billingprofilespendinglimit_nodejs">
 <a href="#billingprofilespendinglimit_nodejs" style="color: inherit; text-decoration: inherit;">billing<wbr>Profile<wbr>Spending<wbr>Limit</a>
@@ -546,8 +474,7 @@ The following output properties are available:
         <span class="property-indicator"></span>
         <span class="property-type">string</span>
     </dt>
-    <dd>{{% md %}}The billing profile spending limit.{{% /md %}}</dd>
-    <dt class="property-required"
+    <dd>{{% md %}}The billing profile spending limit.{{% /md %}}</dd><dt class="property-required"
             title="Required">
         <span id="billingprofilestatus_nodejs">
 <a href="#billingprofilestatus_nodejs" style="color: inherit; text-decoration: inherit;">billing<wbr>Profile<wbr>Status</a>
@@ -555,8 +482,7 @@ The following output properties are available:
         <span class="property-indicator"></span>
         <span class="property-type">string</span>
     </dt>
-    <dd>{{% md %}}The status of the billing profile.{{% /md %}}</dd>
-    <dt class="property-required"
+    <dd>{{% md %}}The status of the billing profile.{{% /md %}}</dd><dt class="property-required"
             title="Required">
         <span id="billingprofilestatusreasoncode_nodejs">
 <a href="#billingprofilestatusreasoncode_nodejs" style="color: inherit; text-decoration: inherit;">billing<wbr>Profile<wbr>Status<wbr>Reason<wbr>Code</a>
@@ -564,8 +490,7 @@ The following output properties are available:
         <span class="property-indicator"></span>
         <span class="property-type">string</span>
     </dt>
-    <dd>{{% md %}}Reason for the specified billing profile status.{{% /md %}}</dd>
-    <dt class="property-required"
+    <dd>{{% md %}}Reason for the specified billing profile status.{{% /md %}}</dd><dt class="property-required"
             title="Required">
         <span id="billingprofilesystemid_nodejs">
 <a href="#billingprofilesystemid_nodejs" style="color: inherit; text-decoration: inherit;">billing<wbr>Profile<wbr>System<wbr>Id</a>
@@ -573,8 +498,7 @@ The following output properties are available:
         <span class="property-indicator"></span>
         <span class="property-type">string</span>
     </dt>
-    <dd>{{% md %}}The system generated unique identifier for a billing profile.{{% /md %}}</dd>
-    <dt class="property-required"
+    <dd>{{% md %}}The system generated unique identifier for a billing profile.{{% /md %}}</dd><dt class="property-required"
             title="Required">
         <span id="invoicesectiondisplayname_nodejs">
 <a href="#invoicesectiondisplayname_nodejs" style="color: inherit; text-decoration: inherit;">invoice<wbr>Section<wbr>Display<wbr>Name</a>
@@ -582,8 +506,7 @@ The following output properties are available:
         <span class="property-indicator"></span>
         <span class="property-type">string</span>
     </dt>
-    <dd>{{% md %}}The name of the invoice section.{{% /md %}}</dd>
-    <dt class="property-required"
+    <dd>{{% md %}}The name of the invoice section.{{% /md %}}</dd><dt class="property-required"
             title="Required">
         <span id="invoicesectionid_nodejs">
 <a href="#invoicesectionid_nodejs" style="color: inherit; text-decoration: inherit;">invoice<wbr>Section<wbr>Id</a>
@@ -591,8 +514,7 @@ The following output properties are available:
         <span class="property-indicator"></span>
         <span class="property-type">string</span>
     </dt>
-    <dd>{{% md %}}The ID of the invoice section.{{% /md %}}</dd>
-    <dt class="property-required"
+    <dd>{{% md %}}The ID of the invoice section.{{% /md %}}</dd><dt class="property-required"
             title="Required">
         <span id="invoicesectionsystemid_nodejs">
 <a href="#invoicesectionsystemid_nodejs" style="color: inherit; text-decoration: inherit;">invoice<wbr>Section<wbr>System<wbr>Id</a>
@@ -600,8 +522,7 @@ The following output properties are available:
         <span class="property-indicator"></span>
         <span class="property-type">string</span>
     </dt>
-    <dd>{{% md %}}The system generated unique identifier for an invoice section.{{% /md %}}</dd>
-    <dt class="property-optional"
+    <dd>{{% md %}}The system generated unique identifier for an invoice section.{{% /md %}}</dd><dt class="property-optional"
             title="Optional">
         <span id="enabledazureplans_nodejs">
 <a href="#enabledazureplans_nodejs" style="color: inherit; text-decoration: inherit;">enabled<wbr>Azure<wbr>Plans</a>
@@ -609,14 +530,11 @@ The following output properties are available:
         <span class="property-indicator"></span>
         <span class="property-type"><a href="#azureplanresponse">Azure<wbr>Plan<wbr>Response[]</a></span>
     </dt>
-    <dd>{{% md %}}Enabled azure plans for the associated billing profile.{{% /md %}}</dd>
-</dl>
+    <dd>{{% md %}}Enabled azure plans for the associated billing profile.{{% /md %}}</dd></dl>
 {{% /choosable %}}
 
 {{% choosable language python %}}
-<dl class="resources-properties">
-
-    <dt class="property-required"
+<dl class="resources-properties"><dt class="property-required"
             title="Required">
         <span id="billing_profile_display_name_python">
 <a href="#billing_profile_display_name_python" style="color: inherit; text-decoration: inherit;">billing_<wbr>profile_<wbr>display_<wbr>name</a>
@@ -624,8 +542,7 @@ The following output properties are available:
         <span class="property-indicator"></span>
         <span class="property-type">str</span>
     </dt>
-    <dd>{{% md %}}The name of the billing profile for the invoice section.{{% /md %}}</dd>
-    <dt class="property-required"
+    <dd>{{% md %}}The name of the billing profile for the invoice section.{{% /md %}}</dd><dt class="property-required"
             title="Required">
         <span id="billing_profile_id_python">
 <a href="#billing_profile_id_python" style="color: inherit; text-decoration: inherit;">billing_<wbr>profile_<wbr>id</a>
@@ -633,8 +550,7 @@ The following output properties are available:
         <span class="property-indicator"></span>
         <span class="property-type">str</span>
     </dt>
-    <dd>{{% md %}}The ID of the billing profile for the invoice section.{{% /md %}}</dd>
-    <dt class="property-required"
+    <dd>{{% md %}}The ID of the billing profile for the invoice section.{{% /md %}}</dd><dt class="property-required"
             title="Required">
         <span id="billing_profile_spending_limit_python">
 <a href="#billing_profile_spending_limit_python" style="color: inherit; text-decoration: inherit;">billing_<wbr>profile_<wbr>spending_<wbr>limit</a>
@@ -642,8 +558,7 @@ The following output properties are available:
         <span class="property-indicator"></span>
         <span class="property-type">str</span>
     </dt>
-    <dd>{{% md %}}The billing profile spending limit.{{% /md %}}</dd>
-    <dt class="property-required"
+    <dd>{{% md %}}The billing profile spending limit.{{% /md %}}</dd><dt class="property-required"
             title="Required">
         <span id="billing_profile_status_python">
 <a href="#billing_profile_status_python" style="color: inherit; text-decoration: inherit;">billing_<wbr>profile_<wbr>status</a>
@@ -651,8 +566,7 @@ The following output properties are available:
         <span class="property-indicator"></span>
         <span class="property-type">str</span>
     </dt>
-    <dd>{{% md %}}The status of the billing profile.{{% /md %}}</dd>
-    <dt class="property-required"
+    <dd>{{% md %}}The status of the billing profile.{{% /md %}}</dd><dt class="property-required"
             title="Required">
         <span id="billing_profile_status_reason_code_python">
 <a href="#billing_profile_status_reason_code_python" style="color: inherit; text-decoration: inherit;">billing_<wbr>profile_<wbr>status_<wbr>reason_<wbr>code</a>
@@ -660,8 +574,7 @@ The following output properties are available:
         <span class="property-indicator"></span>
         <span class="property-type">str</span>
     </dt>
-    <dd>{{% md %}}Reason for the specified billing profile status.{{% /md %}}</dd>
-    <dt class="property-required"
+    <dd>{{% md %}}Reason for the specified billing profile status.{{% /md %}}</dd><dt class="property-required"
             title="Required">
         <span id="billing_profile_system_id_python">
 <a href="#billing_profile_system_id_python" style="color: inherit; text-decoration: inherit;">billing_<wbr>profile_<wbr>system_<wbr>id</a>
@@ -669,8 +582,7 @@ The following output properties are available:
         <span class="property-indicator"></span>
         <span class="property-type">str</span>
     </dt>
-    <dd>{{% md %}}The system generated unique identifier for a billing profile.{{% /md %}}</dd>
-    <dt class="property-required"
+    <dd>{{% md %}}The system generated unique identifier for a billing profile.{{% /md %}}</dd><dt class="property-required"
             title="Required">
         <span id="invoice_section_display_name_python">
 <a href="#invoice_section_display_name_python" style="color: inherit; text-decoration: inherit;">invoice_<wbr>section_<wbr>display_<wbr>name</a>
@@ -678,8 +590,7 @@ The following output properties are available:
         <span class="property-indicator"></span>
         <span class="property-type">str</span>
     </dt>
-    <dd>{{% md %}}The name of the invoice section.{{% /md %}}</dd>
-    <dt class="property-required"
+    <dd>{{% md %}}The name of the invoice section.{{% /md %}}</dd><dt class="property-required"
             title="Required">
         <span id="invoice_section_id_python">
 <a href="#invoice_section_id_python" style="color: inherit; text-decoration: inherit;">invoice_<wbr>section_<wbr>id</a>
@@ -687,8 +598,7 @@ The following output properties are available:
         <span class="property-indicator"></span>
         <span class="property-type">str</span>
     </dt>
-    <dd>{{% md %}}The ID of the invoice section.{{% /md %}}</dd>
-    <dt class="property-required"
+    <dd>{{% md %}}The ID of the invoice section.{{% /md %}}</dd><dt class="property-required"
             title="Required">
         <span id="invoice_section_system_id_python">
 <a href="#invoice_section_system_id_python" style="color: inherit; text-decoration: inherit;">invoice_<wbr>section_<wbr>system_<wbr>id</a>
@@ -696,8 +606,7 @@ The following output properties are available:
         <span class="property-indicator"></span>
         <span class="property-type">str</span>
     </dt>
-    <dd>{{% md %}}The system generated unique identifier for an invoice section.{{% /md %}}</dd>
-    <dt class="property-optional"
+    <dd>{{% md %}}The system generated unique identifier for an invoice section.{{% /md %}}</dd><dt class="property-optional"
             title="Optional">
         <span id="enabled_azure_plans_python">
 <a href="#enabled_azure_plans_python" style="color: inherit; text-decoration: inherit;">enabled_<wbr>azure_<wbr>plans</a>
@@ -705,8 +614,7 @@ The following output properties are available:
         <span class="property-indicator"></span>
         <span class="property-type"><a href="#azureplanresponse">Sequence[Azure<wbr>Plan<wbr>Response<wbr>Args]</a></span>
     </dt>
-    <dd>{{% md %}}Enabled azure plans for the associated billing profile.{{% /md %}}</dd>
-</dl>
+    <dd>{{% md %}}Enabled azure plans for the associated billing profile.{{% /md %}}</dd></dl>
 {{% /choosable %}}
 
 

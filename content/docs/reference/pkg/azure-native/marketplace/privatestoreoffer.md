@@ -14,11 +14,17 @@ The privateStore offer data structure.
 API Version: 2020-01-01.
 
 {{% examples %}}
+
 ## Example Usage
 
 {{< chooser language "typescript,python,go,csharp" / >}}
+
+
 ### PrivateStoreOffer_update
-{{% example csharp %}}
+
+
+{{< example csharp >}}
+
 ```csharp
 using Pulumi;
 using AzureNative = Pulumi.AzureNative;
@@ -44,9 +50,12 @@ class MyStack : Stack
 
 ```
 
-{{% /example %}}
 
-{{% example go %}}
+{{< /example >}}
+
+
+{{< example go >}}
+
 
 ```go
 package main
@@ -76,9 +85,12 @@ func main() {
 
 ```
 
-{{% /example %}}
 
-{{% example python %}}
+{{< /example >}}
+
+
+{{< example python >}}
+
 
 ```python
 import pulumi
@@ -95,9 +107,12 @@ private_store_offer = azure_native.marketplace.PrivateStoreOffer("privateStoreOf
 
 ```
 
-{{% /example %}}
 
-{{% example typescript %}}
+{{< /example >}}
+
+
+{{< example typescript >}}
+
 
 ```typescript
 import * as pulumi from "@pulumi/pulumi";
@@ -115,9 +130,16 @@ const privateStoreOffer = new azure_native.marketplace.PrivateStoreOffer("privat
 
 ```
 
-{{% /example %}}
+
+{{< /example >}}
+
+
+
+
 
 {{% /examples %}}
+
+
 
 
 ## Create a PrivateStoreOffer Resource {#create}
@@ -142,9 +164,7 @@ const privateStoreOffer = new azure_native.marketplace.PrivateStoreOffer("privat
 
 {{% choosable language nodejs %}}
 
-<dl class="resources-properties">
-  
-    <dt
+<dl class="resources-properties"><dt
         class="property-required" title="Required">
         <span>name</span>
         <span class="property-indicator"></span>
@@ -152,9 +172,7 @@ const privateStoreOffer = new azure_native.marketplace.PrivateStoreOffer("privat
     </dt>
     <dd>
       The unique name of the resource.
-    </dd>
-  
-    <dt
+    </dd><dt
         class="property-required" title="Required">
         <span>args</span>
         <span class="property-indicator"></span>
@@ -162,9 +180,7 @@ const privateStoreOffer = new azure_native.marketplace.PrivateStoreOffer("privat
     </dt>
     <dd>
       The arguments to resource properties.
-    </dd>
-  
-    <dt
+    </dd><dt
         class="property-optional" title="Optional">
         <span>opts</span>
         <span class="property-indicator"></span>
@@ -172,10 +188,7 @@ const privateStoreOffer = new azure_native.marketplace.PrivateStoreOffer("privat
     </dt>
     <dd>
       Bag of options to control resource&#39;s behavior.
-    </dd>
-  
-
-</dl>
+    </dd></dl>
 
 {{% /choosable %}}
 
@@ -201,9 +214,7 @@ const privateStoreOffer = new azure_native.marketplace.PrivateStoreOffer("privat
 
 {{% choosable language go %}}
 
-<dl class="resources-properties">
-  
-    <dt
+<dl class="resources-properties"><dt
         class="property-optional" title="Optional">
         <span>ctx</span>
         <span class="property-indicator"></span>
@@ -211,9 +222,7 @@ const privateStoreOffer = new azure_native.marketplace.PrivateStoreOffer("privat
     </dt>
     <dd>
       Context object for the current deployment.
-    </dd>
-  
-    <dt
+    </dd><dt
         class="property-required" title="Required">
         <span>name</span>
         <span class="property-indicator"></span>
@@ -221,9 +230,7 @@ const privateStoreOffer = new azure_native.marketplace.PrivateStoreOffer("privat
     </dt>
     <dd>
       The unique name of the resource.
-    </dd>
-  
-    <dt
+    </dd><dt
         class="property-required" title="Required">
         <span>args</span>
         <span class="property-indicator"></span>
@@ -231,9 +238,7 @@ const privateStoreOffer = new azure_native.marketplace.PrivateStoreOffer("privat
     </dt>
     <dd>
       The arguments to resource properties.
-    </dd>
-  
-    <dt
+    </dd><dt
         class="property-optional" title="Optional">
         <span>opts</span>
         <span class="property-indicator"></span>
@@ -241,18 +246,13 @@ const privateStoreOffer = new azure_native.marketplace.PrivateStoreOffer("privat
     </dt>
     <dd>
       Bag of options to control resource&#39;s behavior.
-    </dd>
-  
-
-</dl>
+    </dd></dl>
 
 {{% /choosable %}}
 
 {{% choosable language csharp %}}
 
-<dl class="resources-properties">
-  
-    <dt
+<dl class="resources-properties"><dt
         class="property-required" title="Required">
         <span>name</span>
         <span class="property-indicator"></span>
@@ -260,9 +260,7 @@ const privateStoreOffer = new azure_native.marketplace.PrivateStoreOffer("privat
     </dt>
     <dd>
       The unique name of the resource.
-    </dd>
-  
-    <dt
+    </dd><dt
         class="property-required" title="Required">
         <span>args</span>
         <span class="property-indicator"></span>
@@ -270,9 +268,7 @@ const privateStoreOffer = new azure_native.marketplace.PrivateStoreOffer("privat
     </dt>
     <dd>
       The arguments to resource properties.
-    </dd>
-  
-    <dt
+    </dd><dt
         class="property-optional" title="Optional">
         <span>opts</span>
         <span class="property-indicator"></span>
@@ -280,10 +276,7 @@ const privateStoreOffer = new azure_native.marketplace.PrivateStoreOffer("privat
     </dt>
     <dd>
       Bag of options to control resource&#39;s behavior.
-    </dd>
-  
-
-</dl>
+    </dd></dl>
 
 {{% /choosable %}}
 
@@ -298,9 +291,7 @@ The PrivateStoreOffer resource accepts the following [input]({{< relref "/docs/i
 
 
 {{% choosable language csharp %}}
-<dl class="resources-properties">
-
-    <dt class="property-required"
+<dl class="resources-properties"><dt class="property-required"
             title="Required">
         <span id="privatestoreid_csharp">
 <a href="#privatestoreid_csharp" style="color: inherit; text-decoration: inherit;">Private<wbr>Store<wbr>Id</a>
@@ -308,8 +299,7 @@ The PrivateStoreOffer resource accepts the following [input]({{< relref "/docs/i
         <span class="property-indicator"></span>
         <span class="property-type">string</span>
     </dt>
-    <dd>{{% md %}}The store ID - must use the tenant ID{{% /md %}}</dd>
-    <dt class="property-optional"
+    <dd>{{% md %}}The store ID - must use the tenant ID{{% /md %}}</dd><dt class="property-optional"
             title="Optional">
         <span id="etag_csharp">
 <a href="#etag_csharp" style="color: inherit; text-decoration: inherit;">ETag</a>
@@ -317,8 +307,7 @@ The PrivateStoreOffer resource accepts the following [input]({{< relref "/docs/i
         <span class="property-indicator"></span>
         <span class="property-type">string</span>
     </dt>
-    <dd>{{% md %}}Identifier for purposes of race condition{{% /md %}}</dd>
-    <dt class="property-optional"
+    <dd>{{% md %}}Identifier for purposes of race condition{{% /md %}}</dd><dt class="property-optional"
             title="Optional">
         <span id="iconfileuris_csharp">
 <a href="#iconfileuris_csharp" style="color: inherit; text-decoration: inherit;">Icon<wbr>File<wbr>Uris</a>
@@ -326,8 +315,7 @@ The PrivateStoreOffer resource accepts the following [input]({{< relref "/docs/i
         <span class="property-indicator"></span>
         <span class="property-type">Dictionary&lt;string, string&gt;</span>
     </dt>
-    <dd>{{% md %}}Icon File Uris{{% /md %}}</dd>
-    <dt class="property-optional"
+    <dd>{{% md %}}Icon File Uris{{% /md %}}</dd><dt class="property-optional"
             title="Optional">
         <span id="offerid_csharp">
 <a href="#offerid_csharp" style="color: inherit; text-decoration: inherit;">Offer<wbr>Id</a>
@@ -335,8 +323,7 @@ The PrivateStoreOffer resource accepts the following [input]({{< relref "/docs/i
         <span class="property-indicator"></span>
         <span class="property-type">string</span>
     </dt>
-    <dd>{{% md %}}The offer ID to update or delete{{% /md %}}</dd>
-    <dt class="property-optional"
+    <dd>{{% md %}}The offer ID to update or delete{{% /md %}}</dd><dt class="property-optional"
             title="Optional">
         <span id="plans_csharp">
 <a href="#plans_csharp" style="color: inherit; text-decoration: inherit;">Plans</a>
@@ -344,8 +331,7 @@ The PrivateStoreOffer resource accepts the following [input]({{< relref "/docs/i
         <span class="property-indicator"></span>
         <span class="property-type"><a href="#plan">List&lt;Pulumi.<wbr>Azure<wbr>Native.<wbr>Marketplace.<wbr>Inputs.<wbr>Plan<wbr>Args&gt;</a></span>
     </dt>
-    <dd>{{% md %}}Offer plans{{% /md %}}</dd>
-    <dt class="property-optional"
+    <dd>{{% md %}}Offer plans{{% /md %}}</dd><dt class="property-optional"
             title="Optional">
         <span id="specificplanidslimitation_csharp">
 <a href="#specificplanidslimitation_csharp" style="color: inherit; text-decoration: inherit;">Specific<wbr>Plan<wbr>Ids<wbr>Limitation</a>
@@ -353,8 +339,7 @@ The PrivateStoreOffer resource accepts the following [input]({{< relref "/docs/i
         <span class="property-indicator"></span>
         <span class="property-type">List&lt;string&gt;</span>
     </dt>
-    <dd>{{% md %}}Plan ids limitation for this offer{{% /md %}}</dd>
-    <dt class="property-optional"
+    <dd>{{% md %}}Plan ids limitation for this offer{{% /md %}}</dd><dt class="property-optional"
             title="Optional">
         <span id="updatesuppresseddueidempotence_csharp">
 <a href="#updatesuppresseddueidempotence_csharp" style="color: inherit; text-decoration: inherit;">Update<wbr>Suppressed<wbr>Due<wbr>Idempotence</a>
@@ -362,14 +347,11 @@ The PrivateStoreOffer resource accepts the following [input]({{< relref "/docs/i
         <span class="property-indicator"></span>
         <span class="property-type">bool</span>
     </dt>
-    <dd>{{% md %}}Indicating whether the offer was not updated to db (true = not updated). If the allow list is identical to the existed one in db, the offer would not be updated.{{% /md %}}</dd>
-</dl>
+    <dd>{{% md %}}Indicating whether the offer was not updated to db (true = not updated). If the allow list is identical to the existed one in db, the offer would not be updated.{{% /md %}}</dd></dl>
 {{% /choosable %}}
 
 {{% choosable language go %}}
-<dl class="resources-properties">
-
-    <dt class="property-required"
+<dl class="resources-properties"><dt class="property-required"
             title="Required">
         <span id="privatestoreid_go">
 <a href="#privatestoreid_go" style="color: inherit; text-decoration: inherit;">Private<wbr>Store<wbr>Id</a>
@@ -377,8 +359,7 @@ The PrivateStoreOffer resource accepts the following [input]({{< relref "/docs/i
         <span class="property-indicator"></span>
         <span class="property-type">string</span>
     </dt>
-    <dd>{{% md %}}The store ID - must use the tenant ID{{% /md %}}</dd>
-    <dt class="property-optional"
+    <dd>{{% md %}}The store ID - must use the tenant ID{{% /md %}}</dd><dt class="property-optional"
             title="Optional">
         <span id="etag_go">
 <a href="#etag_go" style="color: inherit; text-decoration: inherit;">ETag</a>
@@ -386,8 +367,7 @@ The PrivateStoreOffer resource accepts the following [input]({{< relref "/docs/i
         <span class="property-indicator"></span>
         <span class="property-type">string</span>
     </dt>
-    <dd>{{% md %}}Identifier for purposes of race condition{{% /md %}}</dd>
-    <dt class="property-optional"
+    <dd>{{% md %}}Identifier for purposes of race condition{{% /md %}}</dd><dt class="property-optional"
             title="Optional">
         <span id="iconfileuris_go">
 <a href="#iconfileuris_go" style="color: inherit; text-decoration: inherit;">Icon<wbr>File<wbr>Uris</a>
@@ -395,8 +375,7 @@ The PrivateStoreOffer resource accepts the following [input]({{< relref "/docs/i
         <span class="property-indicator"></span>
         <span class="property-type">map[string]string</span>
     </dt>
-    <dd>{{% md %}}Icon File Uris{{% /md %}}</dd>
-    <dt class="property-optional"
+    <dd>{{% md %}}Icon File Uris{{% /md %}}</dd><dt class="property-optional"
             title="Optional">
         <span id="offerid_go">
 <a href="#offerid_go" style="color: inherit; text-decoration: inherit;">Offer<wbr>Id</a>
@@ -404,8 +383,7 @@ The PrivateStoreOffer resource accepts the following [input]({{< relref "/docs/i
         <span class="property-indicator"></span>
         <span class="property-type">string</span>
     </dt>
-    <dd>{{% md %}}The offer ID to update or delete{{% /md %}}</dd>
-    <dt class="property-optional"
+    <dd>{{% md %}}The offer ID to update or delete{{% /md %}}</dd><dt class="property-optional"
             title="Optional">
         <span id="plans_go">
 <a href="#plans_go" style="color: inherit; text-decoration: inherit;">Plans</a>
@@ -413,8 +391,7 @@ The PrivateStoreOffer resource accepts the following [input]({{< relref "/docs/i
         <span class="property-indicator"></span>
         <span class="property-type"><a href="#plan">[]Plan</a></span>
     </dt>
-    <dd>{{% md %}}Offer plans{{% /md %}}</dd>
-    <dt class="property-optional"
+    <dd>{{% md %}}Offer plans{{% /md %}}</dd><dt class="property-optional"
             title="Optional">
         <span id="specificplanidslimitation_go">
 <a href="#specificplanidslimitation_go" style="color: inherit; text-decoration: inherit;">Specific<wbr>Plan<wbr>Ids<wbr>Limitation</a>
@@ -422,8 +399,7 @@ The PrivateStoreOffer resource accepts the following [input]({{< relref "/docs/i
         <span class="property-indicator"></span>
         <span class="property-type">[]string</span>
     </dt>
-    <dd>{{% md %}}Plan ids limitation for this offer{{% /md %}}</dd>
-    <dt class="property-optional"
+    <dd>{{% md %}}Plan ids limitation for this offer{{% /md %}}</dd><dt class="property-optional"
             title="Optional">
         <span id="updatesuppresseddueidempotence_go">
 <a href="#updatesuppresseddueidempotence_go" style="color: inherit; text-decoration: inherit;">Update<wbr>Suppressed<wbr>Due<wbr>Idempotence</a>
@@ -431,14 +407,11 @@ The PrivateStoreOffer resource accepts the following [input]({{< relref "/docs/i
         <span class="property-indicator"></span>
         <span class="property-type">bool</span>
     </dt>
-    <dd>{{% md %}}Indicating whether the offer was not updated to db (true = not updated). If the allow list is identical to the existed one in db, the offer would not be updated.{{% /md %}}</dd>
-</dl>
+    <dd>{{% md %}}Indicating whether the offer was not updated to db (true = not updated). If the allow list is identical to the existed one in db, the offer would not be updated.{{% /md %}}</dd></dl>
 {{% /choosable %}}
 
 {{% choosable language nodejs %}}
-<dl class="resources-properties">
-
-    <dt class="property-required"
+<dl class="resources-properties"><dt class="property-required"
             title="Required">
         <span id="privatestoreid_nodejs">
 <a href="#privatestoreid_nodejs" style="color: inherit; text-decoration: inherit;">private<wbr>Store<wbr>Id</a>
@@ -446,8 +419,7 @@ The PrivateStoreOffer resource accepts the following [input]({{< relref "/docs/i
         <span class="property-indicator"></span>
         <span class="property-type">string</span>
     </dt>
-    <dd>{{% md %}}The store ID - must use the tenant ID{{% /md %}}</dd>
-    <dt class="property-optional"
+    <dd>{{% md %}}The store ID - must use the tenant ID{{% /md %}}</dd><dt class="property-optional"
             title="Optional">
         <span id="etag_nodejs">
 <a href="#etag_nodejs" style="color: inherit; text-decoration: inherit;">e<wbr>Tag</a>
@@ -455,8 +427,7 @@ The PrivateStoreOffer resource accepts the following [input]({{< relref "/docs/i
         <span class="property-indicator"></span>
         <span class="property-type">string</span>
     </dt>
-    <dd>{{% md %}}Identifier for purposes of race condition{{% /md %}}</dd>
-    <dt class="property-optional"
+    <dd>{{% md %}}Identifier for purposes of race condition{{% /md %}}</dd><dt class="property-optional"
             title="Optional">
         <span id="iconfileuris_nodejs">
 <a href="#iconfileuris_nodejs" style="color: inherit; text-decoration: inherit;">icon<wbr>File<wbr>Uris</a>
@@ -464,8 +435,7 @@ The PrivateStoreOffer resource accepts the following [input]({{< relref "/docs/i
         <span class="property-indicator"></span>
         <span class="property-type">{[key: string]: string}</span>
     </dt>
-    <dd>{{% md %}}Icon File Uris{{% /md %}}</dd>
-    <dt class="property-optional"
+    <dd>{{% md %}}Icon File Uris{{% /md %}}</dd><dt class="property-optional"
             title="Optional">
         <span id="offerid_nodejs">
 <a href="#offerid_nodejs" style="color: inherit; text-decoration: inherit;">offer<wbr>Id</a>
@@ -473,8 +443,7 @@ The PrivateStoreOffer resource accepts the following [input]({{< relref "/docs/i
         <span class="property-indicator"></span>
         <span class="property-type">string</span>
     </dt>
-    <dd>{{% md %}}The offer ID to update or delete{{% /md %}}</dd>
-    <dt class="property-optional"
+    <dd>{{% md %}}The offer ID to update or delete{{% /md %}}</dd><dt class="property-optional"
             title="Optional">
         <span id="plans_nodejs">
 <a href="#plans_nodejs" style="color: inherit; text-decoration: inherit;">plans</a>
@@ -482,8 +451,7 @@ The PrivateStoreOffer resource accepts the following [input]({{< relref "/docs/i
         <span class="property-indicator"></span>
         <span class="property-type"><a href="#plan">Plan[]</a></span>
     </dt>
-    <dd>{{% md %}}Offer plans{{% /md %}}</dd>
-    <dt class="property-optional"
+    <dd>{{% md %}}Offer plans{{% /md %}}</dd><dt class="property-optional"
             title="Optional">
         <span id="specificplanidslimitation_nodejs">
 <a href="#specificplanidslimitation_nodejs" style="color: inherit; text-decoration: inherit;">specific<wbr>Plan<wbr>Ids<wbr>Limitation</a>
@@ -491,8 +459,7 @@ The PrivateStoreOffer resource accepts the following [input]({{< relref "/docs/i
         <span class="property-indicator"></span>
         <span class="property-type">string[]</span>
     </dt>
-    <dd>{{% md %}}Plan ids limitation for this offer{{% /md %}}</dd>
-    <dt class="property-optional"
+    <dd>{{% md %}}Plan ids limitation for this offer{{% /md %}}</dd><dt class="property-optional"
             title="Optional">
         <span id="updatesuppresseddueidempotence_nodejs">
 <a href="#updatesuppresseddueidempotence_nodejs" style="color: inherit; text-decoration: inherit;">update<wbr>Suppressed<wbr>Due<wbr>Idempotence</a>
@@ -500,14 +467,11 @@ The PrivateStoreOffer resource accepts the following [input]({{< relref "/docs/i
         <span class="property-indicator"></span>
         <span class="property-type">boolean</span>
     </dt>
-    <dd>{{% md %}}Indicating whether the offer was not updated to db (true = not updated). If the allow list is identical to the existed one in db, the offer would not be updated.{{% /md %}}</dd>
-</dl>
+    <dd>{{% md %}}Indicating whether the offer was not updated to db (true = not updated). If the allow list is identical to the existed one in db, the offer would not be updated.{{% /md %}}</dd></dl>
 {{% /choosable %}}
 
 {{% choosable language python %}}
-<dl class="resources-properties">
-
-    <dt class="property-required"
+<dl class="resources-properties"><dt class="property-required"
             title="Required">
         <span id="private_store_id_python">
 <a href="#private_store_id_python" style="color: inherit; text-decoration: inherit;">private_<wbr>store_<wbr>id</a>
@@ -515,8 +479,7 @@ The PrivateStoreOffer resource accepts the following [input]({{< relref "/docs/i
         <span class="property-indicator"></span>
         <span class="property-type">str</span>
     </dt>
-    <dd>{{% md %}}The store ID - must use the tenant ID{{% /md %}}</dd>
-    <dt class="property-optional"
+    <dd>{{% md %}}The store ID - must use the tenant ID{{% /md %}}</dd><dt class="property-optional"
             title="Optional">
         <span id="e_tag_python">
 <a href="#e_tag_python" style="color: inherit; text-decoration: inherit;">e_<wbr>tag</a>
@@ -524,8 +487,7 @@ The PrivateStoreOffer resource accepts the following [input]({{< relref "/docs/i
         <span class="property-indicator"></span>
         <span class="property-type">str</span>
     </dt>
-    <dd>{{% md %}}Identifier for purposes of race condition{{% /md %}}</dd>
-    <dt class="property-optional"
+    <dd>{{% md %}}Identifier for purposes of race condition{{% /md %}}</dd><dt class="property-optional"
             title="Optional">
         <span id="icon_file_uris_python">
 <a href="#icon_file_uris_python" style="color: inherit; text-decoration: inherit;">icon_<wbr>file_<wbr>uris</a>
@@ -533,8 +495,7 @@ The PrivateStoreOffer resource accepts the following [input]({{< relref "/docs/i
         <span class="property-indicator"></span>
         <span class="property-type">Mapping[str, str]</span>
     </dt>
-    <dd>{{% md %}}Icon File Uris{{% /md %}}</dd>
-    <dt class="property-optional"
+    <dd>{{% md %}}Icon File Uris{{% /md %}}</dd><dt class="property-optional"
             title="Optional">
         <span id="offer_id_python">
 <a href="#offer_id_python" style="color: inherit; text-decoration: inherit;">offer_<wbr>id</a>
@@ -542,8 +503,7 @@ The PrivateStoreOffer resource accepts the following [input]({{< relref "/docs/i
         <span class="property-indicator"></span>
         <span class="property-type">str</span>
     </dt>
-    <dd>{{% md %}}The offer ID to update or delete{{% /md %}}</dd>
-    <dt class="property-optional"
+    <dd>{{% md %}}The offer ID to update or delete{{% /md %}}</dd><dt class="property-optional"
             title="Optional">
         <span id="plans_python">
 <a href="#plans_python" style="color: inherit; text-decoration: inherit;">plans</a>
@@ -551,8 +511,7 @@ The PrivateStoreOffer resource accepts the following [input]({{< relref "/docs/i
         <span class="property-indicator"></span>
         <span class="property-type"><a href="#plan">Sequence[Plan<wbr>Args]</a></span>
     </dt>
-    <dd>{{% md %}}Offer plans{{% /md %}}</dd>
-    <dt class="property-optional"
+    <dd>{{% md %}}Offer plans{{% /md %}}</dd><dt class="property-optional"
             title="Optional">
         <span id="specific_plan_ids_limitation_python">
 <a href="#specific_plan_ids_limitation_python" style="color: inherit; text-decoration: inherit;">specific_<wbr>plan_<wbr>ids_<wbr>limitation</a>
@@ -560,8 +519,7 @@ The PrivateStoreOffer resource accepts the following [input]({{< relref "/docs/i
         <span class="property-indicator"></span>
         <span class="property-type">Sequence[str]</span>
     </dt>
-    <dd>{{% md %}}Plan ids limitation for this offer{{% /md %}}</dd>
-    <dt class="property-optional"
+    <dd>{{% md %}}Plan ids limitation for this offer{{% /md %}}</dd><dt class="property-optional"
             title="Optional">
         <span id="update_suppressed_due_idempotence_python">
 <a href="#update_suppressed_due_idempotence_python" style="color: inherit; text-decoration: inherit;">update_<wbr>suppressed_<wbr>due_<wbr>idempotence</a>
@@ -569,8 +527,7 @@ The PrivateStoreOffer resource accepts the following [input]({{< relref "/docs/i
         <span class="property-indicator"></span>
         <span class="property-type">bool</span>
     </dt>
-    <dd>{{% md %}}Indicating whether the offer was not updated to db (true = not updated). If the allow list is identical to the existed one in db, the offer would not be updated.{{% /md %}}</dd>
-</dl>
+    <dd>{{% md %}}Indicating whether the offer was not updated to db (true = not updated). If the allow list is identical to the existed one in db, the offer would not be updated.{{% /md %}}</dd></dl>
 {{% /choosable %}}
 
 
@@ -581,9 +538,7 @@ All [input](#inputs) properties are implicitly available as output properties. A
 
 
 {{% choosable language csharp %}}
-<dl class="resources-properties">
-
-    <dt class="property-"
+<dl class="resources-properties"><dt class="property-"
             title="">
         <span id="createdat_csharp">
 <a href="#createdat_csharp" style="color: inherit; text-decoration: inherit;">Created<wbr>At</a>
@@ -591,8 +546,7 @@ All [input](#inputs) properties are implicitly available as output properties. A
         <span class="property-indicator"></span>
         <span class="property-type">string</span>
     </dt>
-    <dd>{{% md %}}Private store offer creation date{{% /md %}}</dd>
-    <dt class="property-"
+    <dd>{{% md %}}Private store offer creation date{{% /md %}}</dd><dt class="property-"
             title="">
         <span id="id_csharp">
 <a href="#id_csharp" style="color: inherit; text-decoration: inherit;">Id</a>
@@ -600,8 +554,7 @@ All [input](#inputs) properties are implicitly available as output properties. A
         <span class="property-indicator"></span>
         <span class="property-type">string</span>
     </dt>
-    <dd>{{% md %}}The provider-assigned unique ID for this managed resource.{{% /md %}}</dd>
-    <dt class="property-"
+    <dd>{{% md %}}The provider-assigned unique ID for this managed resource.{{% /md %}}</dd><dt class="property-"
             title="">
         <span id="modifiedat_csharp">
 <a href="#modifiedat_csharp" style="color: inherit; text-decoration: inherit;">Modified<wbr>At</a>
@@ -609,8 +562,7 @@ All [input](#inputs) properties are implicitly available as output properties. A
         <span class="property-indicator"></span>
         <span class="property-type">string</span>
     </dt>
-    <dd>{{% md %}}Private store offer modification date{{% /md %}}</dd>
-    <dt class="property-"
+    <dd>{{% md %}}Private store offer modification date{{% /md %}}</dd><dt class="property-"
             title="">
         <span id="name_csharp">
 <a href="#name_csharp" style="color: inherit; text-decoration: inherit;">Name</a>
@@ -618,8 +570,7 @@ All [input](#inputs) properties are implicitly available as output properties. A
         <span class="property-indicator"></span>
         <span class="property-type">string</span>
     </dt>
-    <dd>{{% md %}}The name of the resource.{{% /md %}}</dd>
-    <dt class="property-"
+    <dd>{{% md %}}The name of the resource.{{% /md %}}</dd><dt class="property-"
             title="">
         <span id="offerdisplayname_csharp">
 <a href="#offerdisplayname_csharp" style="color: inherit; text-decoration: inherit;">Offer<wbr>Display<wbr>Name</a>
@@ -627,8 +578,7 @@ All [input](#inputs) properties are implicitly available as output properties. A
         <span class="property-indicator"></span>
         <span class="property-type">string</span>
     </dt>
-    <dd>{{% md %}}It will be displayed prominently in the marketplace{{% /md %}}</dd>
-    <dt class="property-"
+    <dd>{{% md %}}It will be displayed prominently in the marketplace{{% /md %}}</dd><dt class="property-"
             title="">
         <span id="publisherdisplayname_csharp">
 <a href="#publisherdisplayname_csharp" style="color: inherit; text-decoration: inherit;">Publisher<wbr>Display<wbr>Name</a>
@@ -636,8 +586,7 @@ All [input](#inputs) properties are implicitly available as output properties. A
         <span class="property-indicator"></span>
         <span class="property-type">string</span>
     </dt>
-    <dd>{{% md %}}Publisher name that will be displayed prominently in the marketplace{{% /md %}}</dd>
-    <dt class="property-"
+    <dd>{{% md %}}Publisher name that will be displayed prominently in the marketplace{{% /md %}}</dd><dt class="property-"
             title="">
         <span id="type_csharp">
 <a href="#type_csharp" style="color: inherit; text-decoration: inherit;">Type</a>
@@ -645,8 +594,7 @@ All [input](#inputs) properties are implicitly available as output properties. A
         <span class="property-indicator"></span>
         <span class="property-type">string</span>
     </dt>
-    <dd>{{% md %}}The type of the resource.{{% /md %}}</dd>
-    <dt class="property-"
+    <dd>{{% md %}}The type of the resource.{{% /md %}}</dd><dt class="property-"
             title="">
         <span id="uniqueofferid_csharp">
 <a href="#uniqueofferid_csharp" style="color: inherit; text-decoration: inherit;">Unique<wbr>Offer<wbr>Id</a>
@@ -654,14 +602,11 @@ All [input](#inputs) properties are implicitly available as output properties. A
         <span class="property-indicator"></span>
         <span class="property-type">string</span>
     </dt>
-    <dd>{{% md %}}Offers unique id{{% /md %}}</dd>
-</dl>
+    <dd>{{% md %}}Offers unique id{{% /md %}}</dd></dl>
 {{% /choosable %}}
 
 {{% choosable language go %}}
-<dl class="resources-properties">
-
-    <dt class="property-"
+<dl class="resources-properties"><dt class="property-"
             title="">
         <span id="createdat_go">
 <a href="#createdat_go" style="color: inherit; text-decoration: inherit;">Created<wbr>At</a>
@@ -669,8 +614,7 @@ All [input](#inputs) properties are implicitly available as output properties. A
         <span class="property-indicator"></span>
         <span class="property-type">string</span>
     </dt>
-    <dd>{{% md %}}Private store offer creation date{{% /md %}}</dd>
-    <dt class="property-"
+    <dd>{{% md %}}Private store offer creation date{{% /md %}}</dd><dt class="property-"
             title="">
         <span id="id_go">
 <a href="#id_go" style="color: inherit; text-decoration: inherit;">Id</a>
@@ -678,8 +622,7 @@ All [input](#inputs) properties are implicitly available as output properties. A
         <span class="property-indicator"></span>
         <span class="property-type">string</span>
     </dt>
-    <dd>{{% md %}}The provider-assigned unique ID for this managed resource.{{% /md %}}</dd>
-    <dt class="property-"
+    <dd>{{% md %}}The provider-assigned unique ID for this managed resource.{{% /md %}}</dd><dt class="property-"
             title="">
         <span id="modifiedat_go">
 <a href="#modifiedat_go" style="color: inherit; text-decoration: inherit;">Modified<wbr>At</a>
@@ -687,8 +630,7 @@ All [input](#inputs) properties are implicitly available as output properties. A
         <span class="property-indicator"></span>
         <span class="property-type">string</span>
     </dt>
-    <dd>{{% md %}}Private store offer modification date{{% /md %}}</dd>
-    <dt class="property-"
+    <dd>{{% md %}}Private store offer modification date{{% /md %}}</dd><dt class="property-"
             title="">
         <span id="name_go">
 <a href="#name_go" style="color: inherit; text-decoration: inherit;">Name</a>
@@ -696,8 +638,7 @@ All [input](#inputs) properties are implicitly available as output properties. A
         <span class="property-indicator"></span>
         <span class="property-type">string</span>
     </dt>
-    <dd>{{% md %}}The name of the resource.{{% /md %}}</dd>
-    <dt class="property-"
+    <dd>{{% md %}}The name of the resource.{{% /md %}}</dd><dt class="property-"
             title="">
         <span id="offerdisplayname_go">
 <a href="#offerdisplayname_go" style="color: inherit; text-decoration: inherit;">Offer<wbr>Display<wbr>Name</a>
@@ -705,8 +646,7 @@ All [input](#inputs) properties are implicitly available as output properties. A
         <span class="property-indicator"></span>
         <span class="property-type">string</span>
     </dt>
-    <dd>{{% md %}}It will be displayed prominently in the marketplace{{% /md %}}</dd>
-    <dt class="property-"
+    <dd>{{% md %}}It will be displayed prominently in the marketplace{{% /md %}}</dd><dt class="property-"
             title="">
         <span id="publisherdisplayname_go">
 <a href="#publisherdisplayname_go" style="color: inherit; text-decoration: inherit;">Publisher<wbr>Display<wbr>Name</a>
@@ -714,8 +654,7 @@ All [input](#inputs) properties are implicitly available as output properties. A
         <span class="property-indicator"></span>
         <span class="property-type">string</span>
     </dt>
-    <dd>{{% md %}}Publisher name that will be displayed prominently in the marketplace{{% /md %}}</dd>
-    <dt class="property-"
+    <dd>{{% md %}}Publisher name that will be displayed prominently in the marketplace{{% /md %}}</dd><dt class="property-"
             title="">
         <span id="type_go">
 <a href="#type_go" style="color: inherit; text-decoration: inherit;">Type</a>
@@ -723,8 +662,7 @@ All [input](#inputs) properties are implicitly available as output properties. A
         <span class="property-indicator"></span>
         <span class="property-type">string</span>
     </dt>
-    <dd>{{% md %}}The type of the resource.{{% /md %}}</dd>
-    <dt class="property-"
+    <dd>{{% md %}}The type of the resource.{{% /md %}}</dd><dt class="property-"
             title="">
         <span id="uniqueofferid_go">
 <a href="#uniqueofferid_go" style="color: inherit; text-decoration: inherit;">Unique<wbr>Offer<wbr>Id</a>
@@ -732,14 +670,11 @@ All [input](#inputs) properties are implicitly available as output properties. A
         <span class="property-indicator"></span>
         <span class="property-type">string</span>
     </dt>
-    <dd>{{% md %}}Offers unique id{{% /md %}}</dd>
-</dl>
+    <dd>{{% md %}}Offers unique id{{% /md %}}</dd></dl>
 {{% /choosable %}}
 
 {{% choosable language nodejs %}}
-<dl class="resources-properties">
-
-    <dt class="property-"
+<dl class="resources-properties"><dt class="property-"
             title="">
         <span id="createdat_nodejs">
 <a href="#createdat_nodejs" style="color: inherit; text-decoration: inherit;">created<wbr>At</a>
@@ -747,8 +682,7 @@ All [input](#inputs) properties are implicitly available as output properties. A
         <span class="property-indicator"></span>
         <span class="property-type">string</span>
     </dt>
-    <dd>{{% md %}}Private store offer creation date{{% /md %}}</dd>
-    <dt class="property-"
+    <dd>{{% md %}}Private store offer creation date{{% /md %}}</dd><dt class="property-"
             title="">
         <span id="id_nodejs">
 <a href="#id_nodejs" style="color: inherit; text-decoration: inherit;">id</a>
@@ -756,8 +690,7 @@ All [input](#inputs) properties are implicitly available as output properties. A
         <span class="property-indicator"></span>
         <span class="property-type">string</span>
     </dt>
-    <dd>{{% md %}}The provider-assigned unique ID for this managed resource.{{% /md %}}</dd>
-    <dt class="property-"
+    <dd>{{% md %}}The provider-assigned unique ID for this managed resource.{{% /md %}}</dd><dt class="property-"
             title="">
         <span id="modifiedat_nodejs">
 <a href="#modifiedat_nodejs" style="color: inherit; text-decoration: inherit;">modified<wbr>At</a>
@@ -765,8 +698,7 @@ All [input](#inputs) properties are implicitly available as output properties. A
         <span class="property-indicator"></span>
         <span class="property-type">string</span>
     </dt>
-    <dd>{{% md %}}Private store offer modification date{{% /md %}}</dd>
-    <dt class="property-"
+    <dd>{{% md %}}Private store offer modification date{{% /md %}}</dd><dt class="property-"
             title="">
         <span id="name_nodejs">
 <a href="#name_nodejs" style="color: inherit; text-decoration: inherit;">name</a>
@@ -774,8 +706,7 @@ All [input](#inputs) properties are implicitly available as output properties. A
         <span class="property-indicator"></span>
         <span class="property-type">string</span>
     </dt>
-    <dd>{{% md %}}The name of the resource.{{% /md %}}</dd>
-    <dt class="property-"
+    <dd>{{% md %}}The name of the resource.{{% /md %}}</dd><dt class="property-"
             title="">
         <span id="offerdisplayname_nodejs">
 <a href="#offerdisplayname_nodejs" style="color: inherit; text-decoration: inherit;">offer<wbr>Display<wbr>Name</a>
@@ -783,8 +714,7 @@ All [input](#inputs) properties are implicitly available as output properties. A
         <span class="property-indicator"></span>
         <span class="property-type">string</span>
     </dt>
-    <dd>{{% md %}}It will be displayed prominently in the marketplace{{% /md %}}</dd>
-    <dt class="property-"
+    <dd>{{% md %}}It will be displayed prominently in the marketplace{{% /md %}}</dd><dt class="property-"
             title="">
         <span id="publisherdisplayname_nodejs">
 <a href="#publisherdisplayname_nodejs" style="color: inherit; text-decoration: inherit;">publisher<wbr>Display<wbr>Name</a>
@@ -792,8 +722,7 @@ All [input](#inputs) properties are implicitly available as output properties. A
         <span class="property-indicator"></span>
         <span class="property-type">string</span>
     </dt>
-    <dd>{{% md %}}Publisher name that will be displayed prominently in the marketplace{{% /md %}}</dd>
-    <dt class="property-"
+    <dd>{{% md %}}Publisher name that will be displayed prominently in the marketplace{{% /md %}}</dd><dt class="property-"
             title="">
         <span id="type_nodejs">
 <a href="#type_nodejs" style="color: inherit; text-decoration: inherit;">type</a>
@@ -801,8 +730,7 @@ All [input](#inputs) properties are implicitly available as output properties. A
         <span class="property-indicator"></span>
         <span class="property-type">string</span>
     </dt>
-    <dd>{{% md %}}The type of the resource.{{% /md %}}</dd>
-    <dt class="property-"
+    <dd>{{% md %}}The type of the resource.{{% /md %}}</dd><dt class="property-"
             title="">
         <span id="uniqueofferid_nodejs">
 <a href="#uniqueofferid_nodejs" style="color: inherit; text-decoration: inherit;">unique<wbr>Offer<wbr>Id</a>
@@ -810,14 +738,11 @@ All [input](#inputs) properties are implicitly available as output properties. A
         <span class="property-indicator"></span>
         <span class="property-type">string</span>
     </dt>
-    <dd>{{% md %}}Offers unique id{{% /md %}}</dd>
-</dl>
+    <dd>{{% md %}}Offers unique id{{% /md %}}</dd></dl>
 {{% /choosable %}}
 
 {{% choosable language python %}}
-<dl class="resources-properties">
-
-    <dt class="property-"
+<dl class="resources-properties"><dt class="property-"
             title="">
         <span id="created_at_python">
 <a href="#created_at_python" style="color: inherit; text-decoration: inherit;">created_<wbr>at</a>
@@ -825,8 +750,7 @@ All [input](#inputs) properties are implicitly available as output properties. A
         <span class="property-indicator"></span>
         <span class="property-type">str</span>
     </dt>
-    <dd>{{% md %}}Private store offer creation date{{% /md %}}</dd>
-    <dt class="property-"
+    <dd>{{% md %}}Private store offer creation date{{% /md %}}</dd><dt class="property-"
             title="">
         <span id="id_python">
 <a href="#id_python" style="color: inherit; text-decoration: inherit;">id</a>
@@ -834,8 +758,7 @@ All [input](#inputs) properties are implicitly available as output properties. A
         <span class="property-indicator"></span>
         <span class="property-type">str</span>
     </dt>
-    <dd>{{% md %}}The provider-assigned unique ID for this managed resource.{{% /md %}}</dd>
-    <dt class="property-"
+    <dd>{{% md %}}The provider-assigned unique ID for this managed resource.{{% /md %}}</dd><dt class="property-"
             title="">
         <span id="modified_at_python">
 <a href="#modified_at_python" style="color: inherit; text-decoration: inherit;">modified_<wbr>at</a>
@@ -843,8 +766,7 @@ All [input](#inputs) properties are implicitly available as output properties. A
         <span class="property-indicator"></span>
         <span class="property-type">str</span>
     </dt>
-    <dd>{{% md %}}Private store offer modification date{{% /md %}}</dd>
-    <dt class="property-"
+    <dd>{{% md %}}Private store offer modification date{{% /md %}}</dd><dt class="property-"
             title="">
         <span id="name_python">
 <a href="#name_python" style="color: inherit; text-decoration: inherit;">name</a>
@@ -852,8 +774,7 @@ All [input](#inputs) properties are implicitly available as output properties. A
         <span class="property-indicator"></span>
         <span class="property-type">str</span>
     </dt>
-    <dd>{{% md %}}The name of the resource.{{% /md %}}</dd>
-    <dt class="property-"
+    <dd>{{% md %}}The name of the resource.{{% /md %}}</dd><dt class="property-"
             title="">
         <span id="offer_display_name_python">
 <a href="#offer_display_name_python" style="color: inherit; text-decoration: inherit;">offer_<wbr>display_<wbr>name</a>
@@ -861,8 +782,7 @@ All [input](#inputs) properties are implicitly available as output properties. A
         <span class="property-indicator"></span>
         <span class="property-type">str</span>
     </dt>
-    <dd>{{% md %}}It will be displayed prominently in the marketplace{{% /md %}}</dd>
-    <dt class="property-"
+    <dd>{{% md %}}It will be displayed prominently in the marketplace{{% /md %}}</dd><dt class="property-"
             title="">
         <span id="publisher_display_name_python">
 <a href="#publisher_display_name_python" style="color: inherit; text-decoration: inherit;">publisher_<wbr>display_<wbr>name</a>
@@ -870,8 +790,7 @@ All [input](#inputs) properties are implicitly available as output properties. A
         <span class="property-indicator"></span>
         <span class="property-type">str</span>
     </dt>
-    <dd>{{% md %}}Publisher name that will be displayed prominently in the marketplace{{% /md %}}</dd>
-    <dt class="property-"
+    <dd>{{% md %}}Publisher name that will be displayed prominently in the marketplace{{% /md %}}</dd><dt class="property-"
             title="">
         <span id="type_python">
 <a href="#type_python" style="color: inherit; text-decoration: inherit;">type</a>
@@ -879,8 +798,7 @@ All [input](#inputs) properties are implicitly available as output properties. A
         <span class="property-indicator"></span>
         <span class="property-type">str</span>
     </dt>
-    <dd>{{% md %}}The type of the resource.{{% /md %}}</dd>
-    <dt class="property-"
+    <dd>{{% md %}}The type of the resource.{{% /md %}}</dd><dt class="property-"
             title="">
         <span id="unique_offer_id_python">
 <a href="#unique_offer_id_python" style="color: inherit; text-decoration: inherit;">unique_<wbr>offer_<wbr>id</a>
@@ -888,8 +806,7 @@ All [input](#inputs) properties are implicitly available as output properties. A
         <span class="property-indicator"></span>
         <span class="property-type">str</span>
     </dt>
-    <dd>{{% md %}}Offers unique id{{% /md %}}</dd>
-</dl>
+    <dd>{{% md %}}Offers unique id{{% /md %}}</dd></dl>
 {{% /choosable %}}
 
 
@@ -905,63 +822,41 @@ All [input](#inputs) properties are implicitly available as output properties. A
 <h4 id="accessibility">Accessibility</h4>
 
 {{% choosable language csharp %}}
-<dl class="tabular">
-    <dt>Unknown</dt>
-    <dd>Unknown</dd>
-    <dt>Public</dt>
-    <dd>Public</dd>
-    <dt>Private<wbr>Tenant<wbr>On<wbr>Level</dt>
-    <dd>PrivateTenantOnLevel</dd>
-    <dt>Private<wbr>Subscription<wbr>On<wbr>Level</dt>
-    <dd>PrivateSubscriptionOnLevel</dd>
-</dl>
+<dl class="tabular"><dt>Unknown</dt>
+    <dd>Unknown</dd><dt>Public</dt>
+    <dd>Public</dd><dt>Private<wbr>Tenant<wbr>On<wbr>Level</dt>
+    <dd>PrivateTenantOnLevel</dd><dt>Private<wbr>Subscription<wbr>On<wbr>Level</dt>
+    <dd>PrivateSubscriptionOnLevel</dd></dl>
 {{% /choosable %}}
 
 {{% choosable language go %}}
-<dl class="tabular">
-    <dt>Accessibility<wbr>Unknown</dt>
-    <dd>Unknown</dd>
-    <dt>Accessibility<wbr>Public</dt>
-    <dd>Public</dd>
-    <dt>Accessibility<wbr>Private<wbr>Tenant<wbr>On<wbr>Level</dt>
-    <dd>PrivateTenantOnLevel</dd>
-    <dt>Accessibility<wbr>Private<wbr>Subscription<wbr>On<wbr>Level</dt>
-    <dd>PrivateSubscriptionOnLevel</dd>
-</dl>
+<dl class="tabular"><dt>Accessibility<wbr>Unknown</dt>
+    <dd>Unknown</dd><dt>Accessibility<wbr>Public</dt>
+    <dd>Public</dd><dt>Accessibility<wbr>Private<wbr>Tenant<wbr>On<wbr>Level</dt>
+    <dd>PrivateTenantOnLevel</dd><dt>Accessibility<wbr>Private<wbr>Subscription<wbr>On<wbr>Level</dt>
+    <dd>PrivateSubscriptionOnLevel</dd></dl>
 {{% /choosable %}}
 
 {{% choosable language nodejs %}}
-<dl class="tabular">
-    <dt>Unknown</dt>
-    <dd>Unknown</dd>
-    <dt>Public</dt>
-    <dd>Public</dd>
-    <dt>Private<wbr>Tenant<wbr>On<wbr>Level</dt>
-    <dd>PrivateTenantOnLevel</dd>
-    <dt>Private<wbr>Subscription<wbr>On<wbr>Level</dt>
-    <dd>PrivateSubscriptionOnLevel</dd>
-</dl>
+<dl class="tabular"><dt>Unknown</dt>
+    <dd>Unknown</dd><dt>Public</dt>
+    <dd>Public</dd><dt>Private<wbr>Tenant<wbr>On<wbr>Level</dt>
+    <dd>PrivateTenantOnLevel</dd><dt>Private<wbr>Subscription<wbr>On<wbr>Level</dt>
+    <dd>PrivateSubscriptionOnLevel</dd></dl>
 {{% /choosable %}}
 
 {{% choosable language python %}}
-<dl class="tabular">
-    <dt>UNKNOWN</dt>
-    <dd>Unknown</dd>
-    <dt>PUBLIC</dt>
-    <dd>Public</dd>
-    <dt>PRIVATE_TENANT_ON_LEVEL</dt>
-    <dd>PrivateTenantOnLevel</dd>
-    <dt>PRIVATE_SUBSCRIPTION_ON_LEVEL</dt>
-    <dd>PrivateSubscriptionOnLevel</dd>
-</dl>
+<dl class="tabular"><dt>UNKNOWN</dt>
+    <dd>Unknown</dd><dt>PUBLIC</dt>
+    <dd>Public</dd><dt>PRIVATE_TENANT_ON_LEVEL</dt>
+    <dd>PrivateTenantOnLevel</dd><dt>PRIVATE_SUBSCRIPTION_ON_LEVEL</dt>
+    <dd>PrivateSubscriptionOnLevel</dd></dl>
 {{% /choosable %}}
 
 <h4 id="plan">Plan</h4>
 
 {{% choosable language csharp %}}
-<dl class="resources-properties">
-
-    <dt class="property-optional"
+<dl class="resources-properties"><dt class="property-optional"
             title="Optional">
         <span id="accessibility_csharp">
 <a href="#accessibility_csharp" style="color: inherit; text-decoration: inherit;">Accessibility</a>
@@ -969,14 +864,11 @@ All [input](#inputs) properties are implicitly available as output properties. A
         <span class="property-indicator"></span>
         <span class="property-type">string | <a href="#accessibility">Pulumi.<wbr>Azure<wbr>Native.<wbr>Marketplace.<wbr>Accessibility</a></span>
     </dt>
-    <dd>{{% md %}}Plan accessibility{{% /md %}}</dd>
-</dl>
+    <dd>{{% md %}}Plan accessibility{{% /md %}}</dd></dl>
 {{% /choosable %}}
 
 {{% choosable language go %}}
-<dl class="resources-properties">
-
-    <dt class="property-optional"
+<dl class="resources-properties"><dt class="property-optional"
             title="Optional">
         <span id="accessibility_go">
 <a href="#accessibility_go" style="color: inherit; text-decoration: inherit;">Accessibility</a>
@@ -984,14 +876,11 @@ All [input](#inputs) properties are implicitly available as output properties. A
         <span class="property-indicator"></span>
         <span class="property-type">string | <a href="#accessibility">Accessibility</a></span>
     </dt>
-    <dd>{{% md %}}Plan accessibility{{% /md %}}</dd>
-</dl>
+    <dd>{{% md %}}Plan accessibility{{% /md %}}</dd></dl>
 {{% /choosable %}}
 
 {{% choosable language nodejs %}}
-<dl class="resources-properties">
-
-    <dt class="property-optional"
+<dl class="resources-properties"><dt class="property-optional"
             title="Optional">
         <span id="accessibility_nodejs">
 <a href="#accessibility_nodejs" style="color: inherit; text-decoration: inherit;">accessibility</a>
@@ -999,14 +888,11 @@ All [input](#inputs) properties are implicitly available as output properties. A
         <span class="property-indicator"></span>
         <span class="property-type">string | <a href="#accessibility">Accessibility</a></span>
     </dt>
-    <dd>{{% md %}}Plan accessibility{{% /md %}}</dd>
-</dl>
+    <dd>{{% md %}}Plan accessibility{{% /md %}}</dd></dl>
 {{% /choosable %}}
 
 {{% choosable language python %}}
-<dl class="resources-properties">
-
-    <dt class="property-optional"
+<dl class="resources-properties"><dt class="property-optional"
             title="Optional">
         <span id="accessibility_python">
 <a href="#accessibility_python" style="color: inherit; text-decoration: inherit;">accessibility</a>
@@ -1014,16 +900,13 @@ All [input](#inputs) properties are implicitly available as output properties. A
         <span class="property-indicator"></span>
         <span class="property-type">str | <a href="#accessibility">Accessibility</a></span>
     </dt>
-    <dd>{{% md %}}Plan accessibility{{% /md %}}</dd>
-</dl>
+    <dd>{{% md %}}Plan accessibility{{% /md %}}</dd></dl>
 {{% /choosable %}}
 
 <h4 id="planresponse">Plan<wbr>Response</h4>
 
 {{% choosable language csharp %}}
-<dl class="resources-properties">
-
-    <dt class="property-required"
+<dl class="resources-properties"><dt class="property-required"
             title="Required">
         <span id="altstackreference_csharp">
 <a href="#altstackreference_csharp" style="color: inherit; text-decoration: inherit;">Alt<wbr>Stack<wbr>Reference</a>
@@ -1031,8 +914,7 @@ All [input](#inputs) properties are implicitly available as output properties. A
         <span class="property-indicator"></span>
         <span class="property-type">string</span>
     </dt>
-    <dd>{{% md %}}Alternative stack type{{% /md %}}</dd>
-    <dt class="property-required"
+    <dd>{{% md %}}Alternative stack type{{% /md %}}</dd><dt class="property-required"
             title="Required">
         <span id="plandisplayname_csharp">
 <a href="#plandisplayname_csharp" style="color: inherit; text-decoration: inherit;">Plan<wbr>Display<wbr>Name</a>
@@ -1040,8 +922,7 @@ All [input](#inputs) properties are implicitly available as output properties. A
         <span class="property-indicator"></span>
         <span class="property-type">string</span>
     </dt>
-    <dd>{{% md %}}Friendly name for the plan for display in the marketplace{{% /md %}}</dd>
-    <dt class="property-required"
+    <dd>{{% md %}}Friendly name for the plan for display in the marketplace{{% /md %}}</dd><dt class="property-required"
             title="Required">
         <span id="planid_csharp">
 <a href="#planid_csharp" style="color: inherit; text-decoration: inherit;">Plan<wbr>Id</a>
@@ -1049,8 +930,7 @@ All [input](#inputs) properties are implicitly available as output properties. A
         <span class="property-indicator"></span>
         <span class="property-type">string</span>
     </dt>
-    <dd>{{% md %}}Text identifier for this plan{{% /md %}}</dd>
-    <dt class="property-required"
+    <dd>{{% md %}}Text identifier for this plan{{% /md %}}</dd><dt class="property-required"
             title="Required">
         <span id="skuid_csharp">
 <a href="#skuid_csharp" style="color: inherit; text-decoration: inherit;">Sku<wbr>Id</a>
@@ -1058,8 +938,7 @@ All [input](#inputs) properties are implicitly available as output properties. A
         <span class="property-indicator"></span>
         <span class="property-type">string</span>
     </dt>
-    <dd>{{% md %}}Identifier for this plan{{% /md %}}</dd>
-    <dt class="property-required"
+    <dd>{{% md %}}Identifier for this plan{{% /md %}}</dd><dt class="property-required"
             title="Required">
         <span id="stacktype_csharp">
 <a href="#stacktype_csharp" style="color: inherit; text-decoration: inherit;">Stack<wbr>Type</a>
@@ -1067,8 +946,7 @@ All [input](#inputs) properties are implicitly available as output properties. A
         <span class="property-indicator"></span>
         <span class="property-type">string</span>
     </dt>
-    <dd>{{% md %}}Stack type (classic or arm){{% /md %}}</dd>
-    <dt class="property-optional"
+    <dd>{{% md %}}Stack type (classic or arm){{% /md %}}</dd><dt class="property-optional"
             title="Optional">
         <span id="accessibility_csharp">
 <a href="#accessibility_csharp" style="color: inherit; text-decoration: inherit;">Accessibility</a>
@@ -1076,14 +954,11 @@ All [input](#inputs) properties are implicitly available as output properties. A
         <span class="property-indicator"></span>
         <span class="property-type">string</span>
     </dt>
-    <dd>{{% md %}}Plan accessibility{{% /md %}}</dd>
-</dl>
+    <dd>{{% md %}}Plan accessibility{{% /md %}}</dd></dl>
 {{% /choosable %}}
 
 {{% choosable language go %}}
-<dl class="resources-properties">
-
-    <dt class="property-required"
+<dl class="resources-properties"><dt class="property-required"
             title="Required">
         <span id="altstackreference_go">
 <a href="#altstackreference_go" style="color: inherit; text-decoration: inherit;">Alt<wbr>Stack<wbr>Reference</a>
@@ -1091,8 +966,7 @@ All [input](#inputs) properties are implicitly available as output properties. A
         <span class="property-indicator"></span>
         <span class="property-type">string</span>
     </dt>
-    <dd>{{% md %}}Alternative stack type{{% /md %}}</dd>
-    <dt class="property-required"
+    <dd>{{% md %}}Alternative stack type{{% /md %}}</dd><dt class="property-required"
             title="Required">
         <span id="plandisplayname_go">
 <a href="#plandisplayname_go" style="color: inherit; text-decoration: inherit;">Plan<wbr>Display<wbr>Name</a>
@@ -1100,8 +974,7 @@ All [input](#inputs) properties are implicitly available as output properties. A
         <span class="property-indicator"></span>
         <span class="property-type">string</span>
     </dt>
-    <dd>{{% md %}}Friendly name for the plan for display in the marketplace{{% /md %}}</dd>
-    <dt class="property-required"
+    <dd>{{% md %}}Friendly name for the plan for display in the marketplace{{% /md %}}</dd><dt class="property-required"
             title="Required">
         <span id="planid_go">
 <a href="#planid_go" style="color: inherit; text-decoration: inherit;">Plan<wbr>Id</a>
@@ -1109,8 +982,7 @@ All [input](#inputs) properties are implicitly available as output properties. A
         <span class="property-indicator"></span>
         <span class="property-type">string</span>
     </dt>
-    <dd>{{% md %}}Text identifier for this plan{{% /md %}}</dd>
-    <dt class="property-required"
+    <dd>{{% md %}}Text identifier for this plan{{% /md %}}</dd><dt class="property-required"
             title="Required">
         <span id="skuid_go">
 <a href="#skuid_go" style="color: inherit; text-decoration: inherit;">Sku<wbr>Id</a>
@@ -1118,8 +990,7 @@ All [input](#inputs) properties are implicitly available as output properties. A
         <span class="property-indicator"></span>
         <span class="property-type">string</span>
     </dt>
-    <dd>{{% md %}}Identifier for this plan{{% /md %}}</dd>
-    <dt class="property-required"
+    <dd>{{% md %}}Identifier for this plan{{% /md %}}</dd><dt class="property-required"
             title="Required">
         <span id="stacktype_go">
 <a href="#stacktype_go" style="color: inherit; text-decoration: inherit;">Stack<wbr>Type</a>
@@ -1127,8 +998,7 @@ All [input](#inputs) properties are implicitly available as output properties. A
         <span class="property-indicator"></span>
         <span class="property-type">string</span>
     </dt>
-    <dd>{{% md %}}Stack type (classic or arm){{% /md %}}</dd>
-    <dt class="property-optional"
+    <dd>{{% md %}}Stack type (classic or arm){{% /md %}}</dd><dt class="property-optional"
             title="Optional">
         <span id="accessibility_go">
 <a href="#accessibility_go" style="color: inherit; text-decoration: inherit;">Accessibility</a>
@@ -1136,14 +1006,11 @@ All [input](#inputs) properties are implicitly available as output properties. A
         <span class="property-indicator"></span>
         <span class="property-type">string</span>
     </dt>
-    <dd>{{% md %}}Plan accessibility{{% /md %}}</dd>
-</dl>
+    <dd>{{% md %}}Plan accessibility{{% /md %}}</dd></dl>
 {{% /choosable %}}
 
 {{% choosable language nodejs %}}
-<dl class="resources-properties">
-
-    <dt class="property-required"
+<dl class="resources-properties"><dt class="property-required"
             title="Required">
         <span id="altstackreference_nodejs">
 <a href="#altstackreference_nodejs" style="color: inherit; text-decoration: inherit;">alt<wbr>Stack<wbr>Reference</a>
@@ -1151,8 +1018,7 @@ All [input](#inputs) properties are implicitly available as output properties. A
         <span class="property-indicator"></span>
         <span class="property-type">string</span>
     </dt>
-    <dd>{{% md %}}Alternative stack type{{% /md %}}</dd>
-    <dt class="property-required"
+    <dd>{{% md %}}Alternative stack type{{% /md %}}</dd><dt class="property-required"
             title="Required">
         <span id="plandisplayname_nodejs">
 <a href="#plandisplayname_nodejs" style="color: inherit; text-decoration: inherit;">plan<wbr>Display<wbr>Name</a>
@@ -1160,8 +1026,7 @@ All [input](#inputs) properties are implicitly available as output properties. A
         <span class="property-indicator"></span>
         <span class="property-type">string</span>
     </dt>
-    <dd>{{% md %}}Friendly name for the plan for display in the marketplace{{% /md %}}</dd>
-    <dt class="property-required"
+    <dd>{{% md %}}Friendly name for the plan for display in the marketplace{{% /md %}}</dd><dt class="property-required"
             title="Required">
         <span id="planid_nodejs">
 <a href="#planid_nodejs" style="color: inherit; text-decoration: inherit;">plan<wbr>Id</a>
@@ -1169,8 +1034,7 @@ All [input](#inputs) properties are implicitly available as output properties. A
         <span class="property-indicator"></span>
         <span class="property-type">string</span>
     </dt>
-    <dd>{{% md %}}Text identifier for this plan{{% /md %}}</dd>
-    <dt class="property-required"
+    <dd>{{% md %}}Text identifier for this plan{{% /md %}}</dd><dt class="property-required"
             title="Required">
         <span id="skuid_nodejs">
 <a href="#skuid_nodejs" style="color: inherit; text-decoration: inherit;">sku<wbr>Id</a>
@@ -1178,8 +1042,7 @@ All [input](#inputs) properties are implicitly available as output properties. A
         <span class="property-indicator"></span>
         <span class="property-type">string</span>
     </dt>
-    <dd>{{% md %}}Identifier for this plan{{% /md %}}</dd>
-    <dt class="property-required"
+    <dd>{{% md %}}Identifier for this plan{{% /md %}}</dd><dt class="property-required"
             title="Required">
         <span id="stacktype_nodejs">
 <a href="#stacktype_nodejs" style="color: inherit; text-decoration: inherit;">stack<wbr>Type</a>
@@ -1187,8 +1050,7 @@ All [input](#inputs) properties are implicitly available as output properties. A
         <span class="property-indicator"></span>
         <span class="property-type">string</span>
     </dt>
-    <dd>{{% md %}}Stack type (classic or arm){{% /md %}}</dd>
-    <dt class="property-optional"
+    <dd>{{% md %}}Stack type (classic or arm){{% /md %}}</dd><dt class="property-optional"
             title="Optional">
         <span id="accessibility_nodejs">
 <a href="#accessibility_nodejs" style="color: inherit; text-decoration: inherit;">accessibility</a>
@@ -1196,14 +1058,11 @@ All [input](#inputs) properties are implicitly available as output properties. A
         <span class="property-indicator"></span>
         <span class="property-type">string</span>
     </dt>
-    <dd>{{% md %}}Plan accessibility{{% /md %}}</dd>
-</dl>
+    <dd>{{% md %}}Plan accessibility{{% /md %}}</dd></dl>
 {{% /choosable %}}
 
 {{% choosable language python %}}
-<dl class="resources-properties">
-
-    <dt class="property-required"
+<dl class="resources-properties"><dt class="property-required"
             title="Required">
         <span id="alt_stack_reference_python">
 <a href="#alt_stack_reference_python" style="color: inherit; text-decoration: inherit;">alt_<wbr>stack_<wbr>reference</a>
@@ -1211,8 +1070,7 @@ All [input](#inputs) properties are implicitly available as output properties. A
         <span class="property-indicator"></span>
         <span class="property-type">str</span>
     </dt>
-    <dd>{{% md %}}Alternative stack type{{% /md %}}</dd>
-    <dt class="property-required"
+    <dd>{{% md %}}Alternative stack type{{% /md %}}</dd><dt class="property-required"
             title="Required">
         <span id="plan_display_name_python">
 <a href="#plan_display_name_python" style="color: inherit; text-decoration: inherit;">plan_<wbr>display_<wbr>name</a>
@@ -1220,8 +1078,7 @@ All [input](#inputs) properties are implicitly available as output properties. A
         <span class="property-indicator"></span>
         <span class="property-type">str</span>
     </dt>
-    <dd>{{% md %}}Friendly name for the plan for display in the marketplace{{% /md %}}</dd>
-    <dt class="property-required"
+    <dd>{{% md %}}Friendly name for the plan for display in the marketplace{{% /md %}}</dd><dt class="property-required"
             title="Required">
         <span id="plan_id_python">
 <a href="#plan_id_python" style="color: inherit; text-decoration: inherit;">plan_<wbr>id</a>
@@ -1229,8 +1086,7 @@ All [input](#inputs) properties are implicitly available as output properties. A
         <span class="property-indicator"></span>
         <span class="property-type">str</span>
     </dt>
-    <dd>{{% md %}}Text identifier for this plan{{% /md %}}</dd>
-    <dt class="property-required"
+    <dd>{{% md %}}Text identifier for this plan{{% /md %}}</dd><dt class="property-required"
             title="Required">
         <span id="sku_id_python">
 <a href="#sku_id_python" style="color: inherit; text-decoration: inherit;">sku_<wbr>id</a>
@@ -1238,8 +1094,7 @@ All [input](#inputs) properties are implicitly available as output properties. A
         <span class="property-indicator"></span>
         <span class="property-type">str</span>
     </dt>
-    <dd>{{% md %}}Identifier for this plan{{% /md %}}</dd>
-    <dt class="property-required"
+    <dd>{{% md %}}Identifier for this plan{{% /md %}}</dd><dt class="property-required"
             title="Required">
         <span id="stack_type_python">
 <a href="#stack_type_python" style="color: inherit; text-decoration: inherit;">stack_<wbr>type</a>
@@ -1247,8 +1102,7 @@ All [input](#inputs) properties are implicitly available as output properties. A
         <span class="property-indicator"></span>
         <span class="property-type">str</span>
     </dt>
-    <dd>{{% md %}}Stack type (classic or arm){{% /md %}}</dd>
-    <dt class="property-optional"
+    <dd>{{% md %}}Stack type (classic or arm){{% /md %}}</dd><dt class="property-optional"
             title="Optional">
         <span id="accessibility_python">
 <a href="#accessibility_python" style="color: inherit; text-decoration: inherit;">accessibility</a>
@@ -1256,8 +1110,7 @@ All [input](#inputs) properties are implicitly available as output properties. A
         <span class="property-indicator"></span>
         <span class="property-type">str</span>
     </dt>
-    <dd>{{% md %}}Plan accessibility{{% /md %}}</dd>
-</dl>
+    <dd>{{% md %}}Plan accessibility{{% /md %}}</dd></dl>
 {{% /choosable %}}
 ## Import
 

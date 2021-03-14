@@ -14,11 +14,17 @@ VirtualHubRouteTableV2 Resource.
 API Version: 2020-08-01.
 
 {{% examples %}}
+
 ## Example Usage
 
 {{< chooser language "typescript,python,go,csharp" / >}}
+
+
 ### VirtualHubRouteTableV2Put
-{{% example csharp %}}
+
+
+{{< example csharp >}}
+
 ```csharp
 using Pulumi;
 using AzureNative = Pulumi.AzureNative;
@@ -73,9 +79,12 @@ class MyStack : Stack
 
 ```
 
-{{% /example %}}
 
-{{% example go %}}
+{{< /example >}}
+
+
+{{< example go >}}
+
 
 ```go
 package main
@@ -127,9 +136,12 @@ func main() {
 
 ```
 
-{{% /example %}}
 
-{{% example python %}}
+{{< /example >}}
+
+
+{{< example python >}}
+
 
 ```python
 import pulumi
@@ -160,9 +172,12 @@ virtual_hub_route_table_v2 = azure_native.network.VirtualHubRouteTableV2("virtua
 
 ```
 
-{{% /example %}}
 
-{{% example typescript %}}
+{{< /example >}}
+
+
+{{< example typescript >}}
+
 
 ```typescript
 import * as pulumi from "@pulumi/pulumi";
@@ -194,9 +209,16 @@ const virtualHubRouteTableV2 = new azure_native.network.VirtualHubRouteTableV2("
 
 ```
 
-{{% /example %}}
+
+{{< /example >}}
+
+
+
+
 
 {{% /examples %}}
+
+
 
 
 ## Create a VirtualHubRouteTableV2 Resource {#create}
@@ -221,9 +243,7 @@ const virtualHubRouteTableV2 = new azure_native.network.VirtualHubRouteTableV2("
 
 {{% choosable language nodejs %}}
 
-<dl class="resources-properties">
-  
-    <dt
+<dl class="resources-properties"><dt
         class="property-required" title="Required">
         <span>name</span>
         <span class="property-indicator"></span>
@@ -231,9 +251,7 @@ const virtualHubRouteTableV2 = new azure_native.network.VirtualHubRouteTableV2("
     </dt>
     <dd>
       The unique name of the resource.
-    </dd>
-  
-    <dt
+    </dd><dt
         class="property-required" title="Required">
         <span>args</span>
         <span class="property-indicator"></span>
@@ -241,9 +259,7 @@ const virtualHubRouteTableV2 = new azure_native.network.VirtualHubRouteTableV2("
     </dt>
     <dd>
       The arguments to resource properties.
-    </dd>
-  
-    <dt
+    </dd><dt
         class="property-optional" title="Optional">
         <span>opts</span>
         <span class="property-indicator"></span>
@@ -251,10 +267,7 @@ const virtualHubRouteTableV2 = new azure_native.network.VirtualHubRouteTableV2("
     </dt>
     <dd>
       Bag of options to control resource&#39;s behavior.
-    </dd>
-  
-
-</dl>
+    </dd></dl>
 
 {{% /choosable %}}
 
@@ -280,9 +293,7 @@ const virtualHubRouteTableV2 = new azure_native.network.VirtualHubRouteTableV2("
 
 {{% choosable language go %}}
 
-<dl class="resources-properties">
-  
-    <dt
+<dl class="resources-properties"><dt
         class="property-optional" title="Optional">
         <span>ctx</span>
         <span class="property-indicator"></span>
@@ -290,9 +301,7 @@ const virtualHubRouteTableV2 = new azure_native.network.VirtualHubRouteTableV2("
     </dt>
     <dd>
       Context object for the current deployment.
-    </dd>
-  
-    <dt
+    </dd><dt
         class="property-required" title="Required">
         <span>name</span>
         <span class="property-indicator"></span>
@@ -300,9 +309,7 @@ const virtualHubRouteTableV2 = new azure_native.network.VirtualHubRouteTableV2("
     </dt>
     <dd>
       The unique name of the resource.
-    </dd>
-  
-    <dt
+    </dd><dt
         class="property-required" title="Required">
         <span>args</span>
         <span class="property-indicator"></span>
@@ -310,9 +317,7 @@ const virtualHubRouteTableV2 = new azure_native.network.VirtualHubRouteTableV2("
     </dt>
     <dd>
       The arguments to resource properties.
-    </dd>
-  
-    <dt
+    </dd><dt
         class="property-optional" title="Optional">
         <span>opts</span>
         <span class="property-indicator"></span>
@@ -320,18 +325,13 @@ const virtualHubRouteTableV2 = new azure_native.network.VirtualHubRouteTableV2("
     </dt>
     <dd>
       Bag of options to control resource&#39;s behavior.
-    </dd>
-  
-
-</dl>
+    </dd></dl>
 
 {{% /choosable %}}
 
 {{% choosable language csharp %}}
 
-<dl class="resources-properties">
-  
-    <dt
+<dl class="resources-properties"><dt
         class="property-required" title="Required">
         <span>name</span>
         <span class="property-indicator"></span>
@@ -339,9 +339,7 @@ const virtualHubRouteTableV2 = new azure_native.network.VirtualHubRouteTableV2("
     </dt>
     <dd>
       The unique name of the resource.
-    </dd>
-  
-    <dt
+    </dd><dt
         class="property-required" title="Required">
         <span>args</span>
         <span class="property-indicator"></span>
@@ -349,9 +347,7 @@ const virtualHubRouteTableV2 = new azure_native.network.VirtualHubRouteTableV2("
     </dt>
     <dd>
       The arguments to resource properties.
-    </dd>
-  
-    <dt
+    </dd><dt
         class="property-optional" title="Optional">
         <span>opts</span>
         <span class="property-indicator"></span>
@@ -359,10 +355,7 @@ const virtualHubRouteTableV2 = new azure_native.network.VirtualHubRouteTableV2("
     </dt>
     <dd>
       Bag of options to control resource&#39;s behavior.
-    </dd>
-  
-
-</dl>
+    </dd></dl>
 
 {{% /choosable %}}
 
@@ -377,9 +370,7 @@ The VirtualHubRouteTableV2 resource accepts the following [input]({{< relref "/d
 
 
 {{% choosable language csharp %}}
-<dl class="resources-properties">
-
-    <dt class="property-required"
+<dl class="resources-properties"><dt class="property-required"
             title="Required">
         <span id="resourcegroupname_csharp">
 <a href="#resourcegroupname_csharp" style="color: inherit; text-decoration: inherit;">Resource<wbr>Group<wbr>Name</a>
@@ -387,8 +378,7 @@ The VirtualHubRouteTableV2 resource accepts the following [input]({{< relref "/d
         <span class="property-indicator"></span>
         <span class="property-type">string</span>
     </dt>
-    <dd>{{% md %}}The resource group name of the VirtualHub.{{% /md %}}</dd>
-    <dt class="property-required"
+    <dd>{{% md %}}The resource group name of the VirtualHub.{{% /md %}}</dd><dt class="property-required"
             title="Required">
         <span id="virtualhubname_csharp">
 <a href="#virtualhubname_csharp" style="color: inherit; text-decoration: inherit;">Virtual<wbr>Hub<wbr>Name</a>
@@ -396,8 +386,7 @@ The VirtualHubRouteTableV2 resource accepts the following [input]({{< relref "/d
         <span class="property-indicator"></span>
         <span class="property-type">string</span>
     </dt>
-    <dd>{{% md %}}The name of the VirtualHub.{{% /md %}}</dd>
-    <dt class="property-optional"
+    <dd>{{% md %}}The name of the VirtualHub.{{% /md %}}</dd><dt class="property-optional"
             title="Optional">
         <span id="attachedconnections_csharp">
 <a href="#attachedconnections_csharp" style="color: inherit; text-decoration: inherit;">Attached<wbr>Connections</a>
@@ -405,8 +394,7 @@ The VirtualHubRouteTableV2 resource accepts the following [input]({{< relref "/d
         <span class="property-indicator"></span>
         <span class="property-type">List&lt;string&gt;</span>
     </dt>
-    <dd>{{% md %}}List of all connections attached to this route table v2.{{% /md %}}</dd>
-    <dt class="property-optional"
+    <dd>{{% md %}}List of all connections attached to this route table v2.{{% /md %}}</dd><dt class="property-optional"
             title="Optional">
         <span id="id_csharp">
 <a href="#id_csharp" style="color: inherit; text-decoration: inherit;">Id</a>
@@ -414,8 +402,7 @@ The VirtualHubRouteTableV2 resource accepts the following [input]({{< relref "/d
         <span class="property-indicator"></span>
         <span class="property-type">string</span>
     </dt>
-    <dd>{{% md %}}Resource ID.{{% /md %}}</dd>
-    <dt class="property-optional"
+    <dd>{{% md %}}Resource ID.{{% /md %}}</dd><dt class="property-optional"
             title="Optional">
         <span id="name_csharp">
 <a href="#name_csharp" style="color: inherit; text-decoration: inherit;">Name</a>
@@ -423,8 +410,7 @@ The VirtualHubRouteTableV2 resource accepts the following [input]({{< relref "/d
         <span class="property-indicator"></span>
         <span class="property-type">string</span>
     </dt>
-    <dd>{{% md %}}The name of the resource that is unique within a resource group. This name can be used to access the resource.{{% /md %}}</dd>
-    <dt class="property-optional"
+    <dd>{{% md %}}The name of the resource that is unique within a resource group. This name can be used to access the resource.{{% /md %}}</dd><dt class="property-optional"
             title="Optional">
         <span id="routetablename_csharp">
 <a href="#routetablename_csharp" style="color: inherit; text-decoration: inherit;">Route<wbr>Table<wbr>Name</a>
@@ -432,8 +418,7 @@ The VirtualHubRouteTableV2 resource accepts the following [input]({{< relref "/d
         <span class="property-indicator"></span>
         <span class="property-type">string</span>
     </dt>
-    <dd>{{% md %}}The name of the VirtualHubRouteTableV2.{{% /md %}}</dd>
-    <dt class="property-optional"
+    <dd>{{% md %}}The name of the VirtualHubRouteTableV2.{{% /md %}}</dd><dt class="property-optional"
             title="Optional">
         <span id="routes_csharp">
 <a href="#routes_csharp" style="color: inherit; text-decoration: inherit;">Routes</a>
@@ -441,14 +426,11 @@ The VirtualHubRouteTableV2 resource accepts the following [input]({{< relref "/d
         <span class="property-indicator"></span>
         <span class="property-type"><a href="#virtualhubroutev2">List&lt;Pulumi.<wbr>Azure<wbr>Native.<wbr>Network.<wbr>Inputs.<wbr>Virtual<wbr>Hub<wbr>Route<wbr>V2Args&gt;</a></span>
     </dt>
-    <dd>{{% md %}}List of all routes.{{% /md %}}</dd>
-</dl>
+    <dd>{{% md %}}List of all routes.{{% /md %}}</dd></dl>
 {{% /choosable %}}
 
 {{% choosable language go %}}
-<dl class="resources-properties">
-
-    <dt class="property-required"
+<dl class="resources-properties"><dt class="property-required"
             title="Required">
         <span id="resourcegroupname_go">
 <a href="#resourcegroupname_go" style="color: inherit; text-decoration: inherit;">Resource<wbr>Group<wbr>Name</a>
@@ -456,8 +438,7 @@ The VirtualHubRouteTableV2 resource accepts the following [input]({{< relref "/d
         <span class="property-indicator"></span>
         <span class="property-type">string</span>
     </dt>
-    <dd>{{% md %}}The resource group name of the VirtualHub.{{% /md %}}</dd>
-    <dt class="property-required"
+    <dd>{{% md %}}The resource group name of the VirtualHub.{{% /md %}}</dd><dt class="property-required"
             title="Required">
         <span id="virtualhubname_go">
 <a href="#virtualhubname_go" style="color: inherit; text-decoration: inherit;">Virtual<wbr>Hub<wbr>Name</a>
@@ -465,8 +446,7 @@ The VirtualHubRouteTableV2 resource accepts the following [input]({{< relref "/d
         <span class="property-indicator"></span>
         <span class="property-type">string</span>
     </dt>
-    <dd>{{% md %}}The name of the VirtualHub.{{% /md %}}</dd>
-    <dt class="property-optional"
+    <dd>{{% md %}}The name of the VirtualHub.{{% /md %}}</dd><dt class="property-optional"
             title="Optional">
         <span id="attachedconnections_go">
 <a href="#attachedconnections_go" style="color: inherit; text-decoration: inherit;">Attached<wbr>Connections</a>
@@ -474,8 +454,7 @@ The VirtualHubRouteTableV2 resource accepts the following [input]({{< relref "/d
         <span class="property-indicator"></span>
         <span class="property-type">[]string</span>
     </dt>
-    <dd>{{% md %}}List of all connections attached to this route table v2.{{% /md %}}</dd>
-    <dt class="property-optional"
+    <dd>{{% md %}}List of all connections attached to this route table v2.{{% /md %}}</dd><dt class="property-optional"
             title="Optional">
         <span id="id_go">
 <a href="#id_go" style="color: inherit; text-decoration: inherit;">Id</a>
@@ -483,8 +462,7 @@ The VirtualHubRouteTableV2 resource accepts the following [input]({{< relref "/d
         <span class="property-indicator"></span>
         <span class="property-type">string</span>
     </dt>
-    <dd>{{% md %}}Resource ID.{{% /md %}}</dd>
-    <dt class="property-optional"
+    <dd>{{% md %}}Resource ID.{{% /md %}}</dd><dt class="property-optional"
             title="Optional">
         <span id="name_go">
 <a href="#name_go" style="color: inherit; text-decoration: inherit;">Name</a>
@@ -492,8 +470,7 @@ The VirtualHubRouteTableV2 resource accepts the following [input]({{< relref "/d
         <span class="property-indicator"></span>
         <span class="property-type">string</span>
     </dt>
-    <dd>{{% md %}}The name of the resource that is unique within a resource group. This name can be used to access the resource.{{% /md %}}</dd>
-    <dt class="property-optional"
+    <dd>{{% md %}}The name of the resource that is unique within a resource group. This name can be used to access the resource.{{% /md %}}</dd><dt class="property-optional"
             title="Optional">
         <span id="routetablename_go">
 <a href="#routetablename_go" style="color: inherit; text-decoration: inherit;">Route<wbr>Table<wbr>Name</a>
@@ -501,8 +478,7 @@ The VirtualHubRouteTableV2 resource accepts the following [input]({{< relref "/d
         <span class="property-indicator"></span>
         <span class="property-type">string</span>
     </dt>
-    <dd>{{% md %}}The name of the VirtualHubRouteTableV2.{{% /md %}}</dd>
-    <dt class="property-optional"
+    <dd>{{% md %}}The name of the VirtualHubRouteTableV2.{{% /md %}}</dd><dt class="property-optional"
             title="Optional">
         <span id="routes_go">
 <a href="#routes_go" style="color: inherit; text-decoration: inherit;">Routes</a>
@@ -510,14 +486,11 @@ The VirtualHubRouteTableV2 resource accepts the following [input]({{< relref "/d
         <span class="property-indicator"></span>
         <span class="property-type"><a href="#virtualhubroutev2">[]Virtual<wbr>Hub<wbr>Route<wbr>V2</a></span>
     </dt>
-    <dd>{{% md %}}List of all routes.{{% /md %}}</dd>
-</dl>
+    <dd>{{% md %}}List of all routes.{{% /md %}}</dd></dl>
 {{% /choosable %}}
 
 {{% choosable language nodejs %}}
-<dl class="resources-properties">
-
-    <dt class="property-required"
+<dl class="resources-properties"><dt class="property-required"
             title="Required">
         <span id="resourcegroupname_nodejs">
 <a href="#resourcegroupname_nodejs" style="color: inherit; text-decoration: inherit;">resource<wbr>Group<wbr>Name</a>
@@ -525,8 +498,7 @@ The VirtualHubRouteTableV2 resource accepts the following [input]({{< relref "/d
         <span class="property-indicator"></span>
         <span class="property-type">string</span>
     </dt>
-    <dd>{{% md %}}The resource group name of the VirtualHub.{{% /md %}}</dd>
-    <dt class="property-required"
+    <dd>{{% md %}}The resource group name of the VirtualHub.{{% /md %}}</dd><dt class="property-required"
             title="Required">
         <span id="virtualhubname_nodejs">
 <a href="#virtualhubname_nodejs" style="color: inherit; text-decoration: inherit;">virtual<wbr>Hub<wbr>Name</a>
@@ -534,8 +506,7 @@ The VirtualHubRouteTableV2 resource accepts the following [input]({{< relref "/d
         <span class="property-indicator"></span>
         <span class="property-type">string</span>
     </dt>
-    <dd>{{% md %}}The name of the VirtualHub.{{% /md %}}</dd>
-    <dt class="property-optional"
+    <dd>{{% md %}}The name of the VirtualHub.{{% /md %}}</dd><dt class="property-optional"
             title="Optional">
         <span id="attachedconnections_nodejs">
 <a href="#attachedconnections_nodejs" style="color: inherit; text-decoration: inherit;">attached<wbr>Connections</a>
@@ -543,8 +514,7 @@ The VirtualHubRouteTableV2 resource accepts the following [input]({{< relref "/d
         <span class="property-indicator"></span>
         <span class="property-type">string[]</span>
     </dt>
-    <dd>{{% md %}}List of all connections attached to this route table v2.{{% /md %}}</dd>
-    <dt class="property-optional"
+    <dd>{{% md %}}List of all connections attached to this route table v2.{{% /md %}}</dd><dt class="property-optional"
             title="Optional">
         <span id="id_nodejs">
 <a href="#id_nodejs" style="color: inherit; text-decoration: inherit;">id</a>
@@ -552,8 +522,7 @@ The VirtualHubRouteTableV2 resource accepts the following [input]({{< relref "/d
         <span class="property-indicator"></span>
         <span class="property-type">string</span>
     </dt>
-    <dd>{{% md %}}Resource ID.{{% /md %}}</dd>
-    <dt class="property-optional"
+    <dd>{{% md %}}Resource ID.{{% /md %}}</dd><dt class="property-optional"
             title="Optional">
         <span id="name_nodejs">
 <a href="#name_nodejs" style="color: inherit; text-decoration: inherit;">name</a>
@@ -561,8 +530,7 @@ The VirtualHubRouteTableV2 resource accepts the following [input]({{< relref "/d
         <span class="property-indicator"></span>
         <span class="property-type">string</span>
     </dt>
-    <dd>{{% md %}}The name of the resource that is unique within a resource group. This name can be used to access the resource.{{% /md %}}</dd>
-    <dt class="property-optional"
+    <dd>{{% md %}}The name of the resource that is unique within a resource group. This name can be used to access the resource.{{% /md %}}</dd><dt class="property-optional"
             title="Optional">
         <span id="routetablename_nodejs">
 <a href="#routetablename_nodejs" style="color: inherit; text-decoration: inherit;">route<wbr>Table<wbr>Name</a>
@@ -570,8 +538,7 @@ The VirtualHubRouteTableV2 resource accepts the following [input]({{< relref "/d
         <span class="property-indicator"></span>
         <span class="property-type">string</span>
     </dt>
-    <dd>{{% md %}}The name of the VirtualHubRouteTableV2.{{% /md %}}</dd>
-    <dt class="property-optional"
+    <dd>{{% md %}}The name of the VirtualHubRouteTableV2.{{% /md %}}</dd><dt class="property-optional"
             title="Optional">
         <span id="routes_nodejs">
 <a href="#routes_nodejs" style="color: inherit; text-decoration: inherit;">routes</a>
@@ -579,14 +546,11 @@ The VirtualHubRouteTableV2 resource accepts the following [input]({{< relref "/d
         <span class="property-indicator"></span>
         <span class="property-type"><a href="#virtualhubroutev2">Virtual<wbr>Hub<wbr>Route<wbr>V2[]</a></span>
     </dt>
-    <dd>{{% md %}}List of all routes.{{% /md %}}</dd>
-</dl>
+    <dd>{{% md %}}List of all routes.{{% /md %}}</dd></dl>
 {{% /choosable %}}
 
 {{% choosable language python %}}
-<dl class="resources-properties">
-
-    <dt class="property-required"
+<dl class="resources-properties"><dt class="property-required"
             title="Required">
         <span id="resource_group_name_python">
 <a href="#resource_group_name_python" style="color: inherit; text-decoration: inherit;">resource_<wbr>group_<wbr>name</a>
@@ -594,8 +558,7 @@ The VirtualHubRouteTableV2 resource accepts the following [input]({{< relref "/d
         <span class="property-indicator"></span>
         <span class="property-type">str</span>
     </dt>
-    <dd>{{% md %}}The resource group name of the VirtualHub.{{% /md %}}</dd>
-    <dt class="property-required"
+    <dd>{{% md %}}The resource group name of the VirtualHub.{{% /md %}}</dd><dt class="property-required"
             title="Required">
         <span id="virtual_hub_name_python">
 <a href="#virtual_hub_name_python" style="color: inherit; text-decoration: inherit;">virtual_<wbr>hub_<wbr>name</a>
@@ -603,8 +566,7 @@ The VirtualHubRouteTableV2 resource accepts the following [input]({{< relref "/d
         <span class="property-indicator"></span>
         <span class="property-type">str</span>
     </dt>
-    <dd>{{% md %}}The name of the VirtualHub.{{% /md %}}</dd>
-    <dt class="property-optional"
+    <dd>{{% md %}}The name of the VirtualHub.{{% /md %}}</dd><dt class="property-optional"
             title="Optional">
         <span id="attached_connections_python">
 <a href="#attached_connections_python" style="color: inherit; text-decoration: inherit;">attached_<wbr>connections</a>
@@ -612,8 +574,7 @@ The VirtualHubRouteTableV2 resource accepts the following [input]({{< relref "/d
         <span class="property-indicator"></span>
         <span class="property-type">Sequence[str]</span>
     </dt>
-    <dd>{{% md %}}List of all connections attached to this route table v2.{{% /md %}}</dd>
-    <dt class="property-optional"
+    <dd>{{% md %}}List of all connections attached to this route table v2.{{% /md %}}</dd><dt class="property-optional"
             title="Optional">
         <span id="id_python">
 <a href="#id_python" style="color: inherit; text-decoration: inherit;">id</a>
@@ -621,8 +582,7 @@ The VirtualHubRouteTableV2 resource accepts the following [input]({{< relref "/d
         <span class="property-indicator"></span>
         <span class="property-type">str</span>
     </dt>
-    <dd>{{% md %}}Resource ID.{{% /md %}}</dd>
-    <dt class="property-optional"
+    <dd>{{% md %}}Resource ID.{{% /md %}}</dd><dt class="property-optional"
             title="Optional">
         <span id="name_python">
 <a href="#name_python" style="color: inherit; text-decoration: inherit;">name</a>
@@ -630,8 +590,7 @@ The VirtualHubRouteTableV2 resource accepts the following [input]({{< relref "/d
         <span class="property-indicator"></span>
         <span class="property-type">str</span>
     </dt>
-    <dd>{{% md %}}The name of the resource that is unique within a resource group. This name can be used to access the resource.{{% /md %}}</dd>
-    <dt class="property-optional"
+    <dd>{{% md %}}The name of the resource that is unique within a resource group. This name can be used to access the resource.{{% /md %}}</dd><dt class="property-optional"
             title="Optional">
         <span id="route_table_name_python">
 <a href="#route_table_name_python" style="color: inherit; text-decoration: inherit;">route_<wbr>table_<wbr>name</a>
@@ -639,8 +598,7 @@ The VirtualHubRouteTableV2 resource accepts the following [input]({{< relref "/d
         <span class="property-indicator"></span>
         <span class="property-type">str</span>
     </dt>
-    <dd>{{% md %}}The name of the VirtualHubRouteTableV2.{{% /md %}}</dd>
-    <dt class="property-optional"
+    <dd>{{% md %}}The name of the VirtualHubRouteTableV2.{{% /md %}}</dd><dt class="property-optional"
             title="Optional">
         <span id="routes_python">
 <a href="#routes_python" style="color: inherit; text-decoration: inherit;">routes</a>
@@ -648,8 +606,7 @@ The VirtualHubRouteTableV2 resource accepts the following [input]({{< relref "/d
         <span class="property-indicator"></span>
         <span class="property-type"><a href="#virtualhubroutev2">Sequence[Virtual<wbr>Hub<wbr>Route<wbr>V2Args]</a></span>
     </dt>
-    <dd>{{% md %}}List of all routes.{{% /md %}}</dd>
-</dl>
+    <dd>{{% md %}}List of all routes.{{% /md %}}</dd></dl>
 {{% /choosable %}}
 
 
@@ -660,9 +617,7 @@ All [input](#inputs) properties are implicitly available as output properties. A
 
 
 {{% choosable language csharp %}}
-<dl class="resources-properties">
-
-    <dt class="property-"
+<dl class="resources-properties"><dt class="property-"
             title="">
         <span id="etag_csharp">
 <a href="#etag_csharp" style="color: inherit; text-decoration: inherit;">Etag</a>
@@ -670,8 +625,7 @@ All [input](#inputs) properties are implicitly available as output properties. A
         <span class="property-indicator"></span>
         <span class="property-type">string</span>
     </dt>
-    <dd>{{% md %}}A unique read-only string that changes whenever the resource is updated.{{% /md %}}</dd>
-    <dt class="property-"
+    <dd>{{% md %}}A unique read-only string that changes whenever the resource is updated.{{% /md %}}</dd><dt class="property-"
             title="">
         <span id="id_csharp">
 <a href="#id_csharp" style="color: inherit; text-decoration: inherit;">Id</a>
@@ -679,8 +633,7 @@ All [input](#inputs) properties are implicitly available as output properties. A
         <span class="property-indicator"></span>
         <span class="property-type">string</span>
     </dt>
-    <dd>{{% md %}}The provider-assigned unique ID for this managed resource.{{% /md %}}</dd>
-    <dt class="property-"
+    <dd>{{% md %}}The provider-assigned unique ID for this managed resource.{{% /md %}}</dd><dt class="property-"
             title="">
         <span id="provisioningstate_csharp">
 <a href="#provisioningstate_csharp" style="color: inherit; text-decoration: inherit;">Provisioning<wbr>State</a>
@@ -688,14 +641,11 @@ All [input](#inputs) properties are implicitly available as output properties. A
         <span class="property-indicator"></span>
         <span class="property-type">string</span>
     </dt>
-    <dd>{{% md %}}The provisioning state of the virtual hub route table v2 resource.{{% /md %}}</dd>
-</dl>
+    <dd>{{% md %}}The provisioning state of the virtual hub route table v2 resource.{{% /md %}}</dd></dl>
 {{% /choosable %}}
 
 {{% choosable language go %}}
-<dl class="resources-properties">
-
-    <dt class="property-"
+<dl class="resources-properties"><dt class="property-"
             title="">
         <span id="etag_go">
 <a href="#etag_go" style="color: inherit; text-decoration: inherit;">Etag</a>
@@ -703,8 +653,7 @@ All [input](#inputs) properties are implicitly available as output properties. A
         <span class="property-indicator"></span>
         <span class="property-type">string</span>
     </dt>
-    <dd>{{% md %}}A unique read-only string that changes whenever the resource is updated.{{% /md %}}</dd>
-    <dt class="property-"
+    <dd>{{% md %}}A unique read-only string that changes whenever the resource is updated.{{% /md %}}</dd><dt class="property-"
             title="">
         <span id="id_go">
 <a href="#id_go" style="color: inherit; text-decoration: inherit;">Id</a>
@@ -712,8 +661,7 @@ All [input](#inputs) properties are implicitly available as output properties. A
         <span class="property-indicator"></span>
         <span class="property-type">string</span>
     </dt>
-    <dd>{{% md %}}The provider-assigned unique ID for this managed resource.{{% /md %}}</dd>
-    <dt class="property-"
+    <dd>{{% md %}}The provider-assigned unique ID for this managed resource.{{% /md %}}</dd><dt class="property-"
             title="">
         <span id="provisioningstate_go">
 <a href="#provisioningstate_go" style="color: inherit; text-decoration: inherit;">Provisioning<wbr>State</a>
@@ -721,14 +669,11 @@ All [input](#inputs) properties are implicitly available as output properties. A
         <span class="property-indicator"></span>
         <span class="property-type">string</span>
     </dt>
-    <dd>{{% md %}}The provisioning state of the virtual hub route table v2 resource.{{% /md %}}</dd>
-</dl>
+    <dd>{{% md %}}The provisioning state of the virtual hub route table v2 resource.{{% /md %}}</dd></dl>
 {{% /choosable %}}
 
 {{% choosable language nodejs %}}
-<dl class="resources-properties">
-
-    <dt class="property-"
+<dl class="resources-properties"><dt class="property-"
             title="">
         <span id="etag_nodejs">
 <a href="#etag_nodejs" style="color: inherit; text-decoration: inherit;">etag</a>
@@ -736,8 +681,7 @@ All [input](#inputs) properties are implicitly available as output properties. A
         <span class="property-indicator"></span>
         <span class="property-type">string</span>
     </dt>
-    <dd>{{% md %}}A unique read-only string that changes whenever the resource is updated.{{% /md %}}</dd>
-    <dt class="property-"
+    <dd>{{% md %}}A unique read-only string that changes whenever the resource is updated.{{% /md %}}</dd><dt class="property-"
             title="">
         <span id="id_nodejs">
 <a href="#id_nodejs" style="color: inherit; text-decoration: inherit;">id</a>
@@ -745,8 +689,7 @@ All [input](#inputs) properties are implicitly available as output properties. A
         <span class="property-indicator"></span>
         <span class="property-type">string</span>
     </dt>
-    <dd>{{% md %}}The provider-assigned unique ID for this managed resource.{{% /md %}}</dd>
-    <dt class="property-"
+    <dd>{{% md %}}The provider-assigned unique ID for this managed resource.{{% /md %}}</dd><dt class="property-"
             title="">
         <span id="provisioningstate_nodejs">
 <a href="#provisioningstate_nodejs" style="color: inherit; text-decoration: inherit;">provisioning<wbr>State</a>
@@ -754,14 +697,11 @@ All [input](#inputs) properties are implicitly available as output properties. A
         <span class="property-indicator"></span>
         <span class="property-type">string</span>
     </dt>
-    <dd>{{% md %}}The provisioning state of the virtual hub route table v2 resource.{{% /md %}}</dd>
-</dl>
+    <dd>{{% md %}}The provisioning state of the virtual hub route table v2 resource.{{% /md %}}</dd></dl>
 {{% /choosable %}}
 
 {{% choosable language python %}}
-<dl class="resources-properties">
-
-    <dt class="property-"
+<dl class="resources-properties"><dt class="property-"
             title="">
         <span id="etag_python">
 <a href="#etag_python" style="color: inherit; text-decoration: inherit;">etag</a>
@@ -769,8 +709,7 @@ All [input](#inputs) properties are implicitly available as output properties. A
         <span class="property-indicator"></span>
         <span class="property-type">str</span>
     </dt>
-    <dd>{{% md %}}A unique read-only string that changes whenever the resource is updated.{{% /md %}}</dd>
-    <dt class="property-"
+    <dd>{{% md %}}A unique read-only string that changes whenever the resource is updated.{{% /md %}}</dd><dt class="property-"
             title="">
         <span id="id_python">
 <a href="#id_python" style="color: inherit; text-decoration: inherit;">id</a>
@@ -778,8 +717,7 @@ All [input](#inputs) properties are implicitly available as output properties. A
         <span class="property-indicator"></span>
         <span class="property-type">str</span>
     </dt>
-    <dd>{{% md %}}The provider-assigned unique ID for this managed resource.{{% /md %}}</dd>
-    <dt class="property-"
+    <dd>{{% md %}}The provider-assigned unique ID for this managed resource.{{% /md %}}</dd><dt class="property-"
             title="">
         <span id="provisioning_state_python">
 <a href="#provisioning_state_python" style="color: inherit; text-decoration: inherit;">provisioning_<wbr>state</a>
@@ -787,8 +725,7 @@ All [input](#inputs) properties are implicitly available as output properties. A
         <span class="property-indicator"></span>
         <span class="property-type">str</span>
     </dt>
-    <dd>{{% md %}}The provisioning state of the virtual hub route table v2 resource.{{% /md %}}</dd>
-</dl>
+    <dd>{{% md %}}The provisioning state of the virtual hub route table v2 resource.{{% /md %}}</dd></dl>
 {{% /choosable %}}
 
 
@@ -804,9 +741,7 @@ All [input](#inputs) properties are implicitly available as output properties. A
 <h4 id="virtualhubroutev2">Virtual<wbr>Hub<wbr>Route<wbr>V2</h4>
 
 {{% choosable language csharp %}}
-<dl class="resources-properties">
-
-    <dt class="property-optional"
+<dl class="resources-properties"><dt class="property-optional"
             title="Optional">
         <span id="destinationtype_csharp">
 <a href="#destinationtype_csharp" style="color: inherit; text-decoration: inherit;">Destination<wbr>Type</a>
@@ -814,8 +749,7 @@ All [input](#inputs) properties are implicitly available as output properties. A
         <span class="property-indicator"></span>
         <span class="property-type">string</span>
     </dt>
-    <dd>{{% md %}}The type of destinations.{{% /md %}}</dd>
-    <dt class="property-optional"
+    <dd>{{% md %}}The type of destinations.{{% /md %}}</dd><dt class="property-optional"
             title="Optional">
         <span id="destinations_csharp">
 <a href="#destinations_csharp" style="color: inherit; text-decoration: inherit;">Destinations</a>
@@ -823,8 +757,7 @@ All [input](#inputs) properties are implicitly available as output properties. A
         <span class="property-indicator"></span>
         <span class="property-type">List&lt;string&gt;</span>
     </dt>
-    <dd>{{% md %}}List of all destinations.{{% /md %}}</dd>
-    <dt class="property-optional"
+    <dd>{{% md %}}List of all destinations.{{% /md %}}</dd><dt class="property-optional"
             title="Optional">
         <span id="nexthoptype_csharp">
 <a href="#nexthoptype_csharp" style="color: inherit; text-decoration: inherit;">Next<wbr>Hop<wbr>Type</a>
@@ -832,8 +765,7 @@ All [input](#inputs) properties are implicitly available as output properties. A
         <span class="property-indicator"></span>
         <span class="property-type">string</span>
     </dt>
-    <dd>{{% md %}}The type of next hops.{{% /md %}}</dd>
-    <dt class="property-optional"
+    <dd>{{% md %}}The type of next hops.{{% /md %}}</dd><dt class="property-optional"
             title="Optional">
         <span id="nexthops_csharp">
 <a href="#nexthops_csharp" style="color: inherit; text-decoration: inherit;">Next<wbr>Hops</a>
@@ -841,14 +773,11 @@ All [input](#inputs) properties are implicitly available as output properties. A
         <span class="property-indicator"></span>
         <span class="property-type">List&lt;string&gt;</span>
     </dt>
-    <dd>{{% md %}}NextHops ip address.{{% /md %}}</dd>
-</dl>
+    <dd>{{% md %}}NextHops ip address.{{% /md %}}</dd></dl>
 {{% /choosable %}}
 
 {{% choosable language go %}}
-<dl class="resources-properties">
-
-    <dt class="property-optional"
+<dl class="resources-properties"><dt class="property-optional"
             title="Optional">
         <span id="destinationtype_go">
 <a href="#destinationtype_go" style="color: inherit; text-decoration: inherit;">Destination<wbr>Type</a>
@@ -856,8 +785,7 @@ All [input](#inputs) properties are implicitly available as output properties. A
         <span class="property-indicator"></span>
         <span class="property-type">string</span>
     </dt>
-    <dd>{{% md %}}The type of destinations.{{% /md %}}</dd>
-    <dt class="property-optional"
+    <dd>{{% md %}}The type of destinations.{{% /md %}}</dd><dt class="property-optional"
             title="Optional">
         <span id="destinations_go">
 <a href="#destinations_go" style="color: inherit; text-decoration: inherit;">Destinations</a>
@@ -865,8 +793,7 @@ All [input](#inputs) properties are implicitly available as output properties. A
         <span class="property-indicator"></span>
         <span class="property-type">[]string</span>
     </dt>
-    <dd>{{% md %}}List of all destinations.{{% /md %}}</dd>
-    <dt class="property-optional"
+    <dd>{{% md %}}List of all destinations.{{% /md %}}</dd><dt class="property-optional"
             title="Optional">
         <span id="nexthoptype_go">
 <a href="#nexthoptype_go" style="color: inherit; text-decoration: inherit;">Next<wbr>Hop<wbr>Type</a>
@@ -874,8 +801,7 @@ All [input](#inputs) properties are implicitly available as output properties. A
         <span class="property-indicator"></span>
         <span class="property-type">string</span>
     </dt>
-    <dd>{{% md %}}The type of next hops.{{% /md %}}</dd>
-    <dt class="property-optional"
+    <dd>{{% md %}}The type of next hops.{{% /md %}}</dd><dt class="property-optional"
             title="Optional">
         <span id="nexthops_go">
 <a href="#nexthops_go" style="color: inherit; text-decoration: inherit;">Next<wbr>Hops</a>
@@ -883,14 +809,11 @@ All [input](#inputs) properties are implicitly available as output properties. A
         <span class="property-indicator"></span>
         <span class="property-type">[]string</span>
     </dt>
-    <dd>{{% md %}}NextHops ip address.{{% /md %}}</dd>
-</dl>
+    <dd>{{% md %}}NextHops ip address.{{% /md %}}</dd></dl>
 {{% /choosable %}}
 
 {{% choosable language nodejs %}}
-<dl class="resources-properties">
-
-    <dt class="property-optional"
+<dl class="resources-properties"><dt class="property-optional"
             title="Optional">
         <span id="destinationtype_nodejs">
 <a href="#destinationtype_nodejs" style="color: inherit; text-decoration: inherit;">destination<wbr>Type</a>
@@ -898,8 +821,7 @@ All [input](#inputs) properties are implicitly available as output properties. A
         <span class="property-indicator"></span>
         <span class="property-type">string</span>
     </dt>
-    <dd>{{% md %}}The type of destinations.{{% /md %}}</dd>
-    <dt class="property-optional"
+    <dd>{{% md %}}The type of destinations.{{% /md %}}</dd><dt class="property-optional"
             title="Optional">
         <span id="destinations_nodejs">
 <a href="#destinations_nodejs" style="color: inherit; text-decoration: inherit;">destinations</a>
@@ -907,8 +829,7 @@ All [input](#inputs) properties are implicitly available as output properties. A
         <span class="property-indicator"></span>
         <span class="property-type">string[]</span>
     </dt>
-    <dd>{{% md %}}List of all destinations.{{% /md %}}</dd>
-    <dt class="property-optional"
+    <dd>{{% md %}}List of all destinations.{{% /md %}}</dd><dt class="property-optional"
             title="Optional">
         <span id="nexthoptype_nodejs">
 <a href="#nexthoptype_nodejs" style="color: inherit; text-decoration: inherit;">next<wbr>Hop<wbr>Type</a>
@@ -916,8 +837,7 @@ All [input](#inputs) properties are implicitly available as output properties. A
         <span class="property-indicator"></span>
         <span class="property-type">string</span>
     </dt>
-    <dd>{{% md %}}The type of next hops.{{% /md %}}</dd>
-    <dt class="property-optional"
+    <dd>{{% md %}}The type of next hops.{{% /md %}}</dd><dt class="property-optional"
             title="Optional">
         <span id="nexthops_nodejs">
 <a href="#nexthops_nodejs" style="color: inherit; text-decoration: inherit;">next<wbr>Hops</a>
@@ -925,14 +845,11 @@ All [input](#inputs) properties are implicitly available as output properties. A
         <span class="property-indicator"></span>
         <span class="property-type">string[]</span>
     </dt>
-    <dd>{{% md %}}NextHops ip address.{{% /md %}}</dd>
-</dl>
+    <dd>{{% md %}}NextHops ip address.{{% /md %}}</dd></dl>
 {{% /choosable %}}
 
 {{% choosable language python %}}
-<dl class="resources-properties">
-
-    <dt class="property-optional"
+<dl class="resources-properties"><dt class="property-optional"
             title="Optional">
         <span id="destination_type_python">
 <a href="#destination_type_python" style="color: inherit; text-decoration: inherit;">destination_<wbr>type</a>
@@ -940,8 +857,7 @@ All [input](#inputs) properties are implicitly available as output properties. A
         <span class="property-indicator"></span>
         <span class="property-type">str</span>
     </dt>
-    <dd>{{% md %}}The type of destinations.{{% /md %}}</dd>
-    <dt class="property-optional"
+    <dd>{{% md %}}The type of destinations.{{% /md %}}</dd><dt class="property-optional"
             title="Optional">
         <span id="destinations_python">
 <a href="#destinations_python" style="color: inherit; text-decoration: inherit;">destinations</a>
@@ -949,8 +865,7 @@ All [input](#inputs) properties are implicitly available as output properties. A
         <span class="property-indicator"></span>
         <span class="property-type">Sequence[str]</span>
     </dt>
-    <dd>{{% md %}}List of all destinations.{{% /md %}}</dd>
-    <dt class="property-optional"
+    <dd>{{% md %}}List of all destinations.{{% /md %}}</dd><dt class="property-optional"
             title="Optional">
         <span id="next_hop_type_python">
 <a href="#next_hop_type_python" style="color: inherit; text-decoration: inherit;">next_<wbr>hop_<wbr>type</a>
@@ -958,8 +873,7 @@ All [input](#inputs) properties are implicitly available as output properties. A
         <span class="property-indicator"></span>
         <span class="property-type">str</span>
     </dt>
-    <dd>{{% md %}}The type of next hops.{{% /md %}}</dd>
-    <dt class="property-optional"
+    <dd>{{% md %}}The type of next hops.{{% /md %}}</dd><dt class="property-optional"
             title="Optional">
         <span id="next_hops_python">
 <a href="#next_hops_python" style="color: inherit; text-decoration: inherit;">next_<wbr>hops</a>
@@ -967,16 +881,13 @@ All [input](#inputs) properties are implicitly available as output properties. A
         <span class="property-indicator"></span>
         <span class="property-type">Sequence[str]</span>
     </dt>
-    <dd>{{% md %}}NextHops ip address.{{% /md %}}</dd>
-</dl>
+    <dd>{{% md %}}NextHops ip address.{{% /md %}}</dd></dl>
 {{% /choosable %}}
 
 <h4 id="virtualhubroutev2response">Virtual<wbr>Hub<wbr>Route<wbr>V2Response</h4>
 
 {{% choosable language csharp %}}
-<dl class="resources-properties">
-
-    <dt class="property-optional"
+<dl class="resources-properties"><dt class="property-optional"
             title="Optional">
         <span id="destinationtype_csharp">
 <a href="#destinationtype_csharp" style="color: inherit; text-decoration: inherit;">Destination<wbr>Type</a>
@@ -984,8 +895,7 @@ All [input](#inputs) properties are implicitly available as output properties. A
         <span class="property-indicator"></span>
         <span class="property-type">string</span>
     </dt>
-    <dd>{{% md %}}The type of destinations.{{% /md %}}</dd>
-    <dt class="property-optional"
+    <dd>{{% md %}}The type of destinations.{{% /md %}}</dd><dt class="property-optional"
             title="Optional">
         <span id="destinations_csharp">
 <a href="#destinations_csharp" style="color: inherit; text-decoration: inherit;">Destinations</a>
@@ -993,8 +903,7 @@ All [input](#inputs) properties are implicitly available as output properties. A
         <span class="property-indicator"></span>
         <span class="property-type">List&lt;string&gt;</span>
     </dt>
-    <dd>{{% md %}}List of all destinations.{{% /md %}}</dd>
-    <dt class="property-optional"
+    <dd>{{% md %}}List of all destinations.{{% /md %}}</dd><dt class="property-optional"
             title="Optional">
         <span id="nexthoptype_csharp">
 <a href="#nexthoptype_csharp" style="color: inherit; text-decoration: inherit;">Next<wbr>Hop<wbr>Type</a>
@@ -1002,8 +911,7 @@ All [input](#inputs) properties are implicitly available as output properties. A
         <span class="property-indicator"></span>
         <span class="property-type">string</span>
     </dt>
-    <dd>{{% md %}}The type of next hops.{{% /md %}}</dd>
-    <dt class="property-optional"
+    <dd>{{% md %}}The type of next hops.{{% /md %}}</dd><dt class="property-optional"
             title="Optional">
         <span id="nexthops_csharp">
 <a href="#nexthops_csharp" style="color: inherit; text-decoration: inherit;">Next<wbr>Hops</a>
@@ -1011,14 +919,11 @@ All [input](#inputs) properties are implicitly available as output properties. A
         <span class="property-indicator"></span>
         <span class="property-type">List&lt;string&gt;</span>
     </dt>
-    <dd>{{% md %}}NextHops ip address.{{% /md %}}</dd>
-</dl>
+    <dd>{{% md %}}NextHops ip address.{{% /md %}}</dd></dl>
 {{% /choosable %}}
 
 {{% choosable language go %}}
-<dl class="resources-properties">
-
-    <dt class="property-optional"
+<dl class="resources-properties"><dt class="property-optional"
             title="Optional">
         <span id="destinationtype_go">
 <a href="#destinationtype_go" style="color: inherit; text-decoration: inherit;">Destination<wbr>Type</a>
@@ -1026,8 +931,7 @@ All [input](#inputs) properties are implicitly available as output properties. A
         <span class="property-indicator"></span>
         <span class="property-type">string</span>
     </dt>
-    <dd>{{% md %}}The type of destinations.{{% /md %}}</dd>
-    <dt class="property-optional"
+    <dd>{{% md %}}The type of destinations.{{% /md %}}</dd><dt class="property-optional"
             title="Optional">
         <span id="destinations_go">
 <a href="#destinations_go" style="color: inherit; text-decoration: inherit;">Destinations</a>
@@ -1035,8 +939,7 @@ All [input](#inputs) properties are implicitly available as output properties. A
         <span class="property-indicator"></span>
         <span class="property-type">[]string</span>
     </dt>
-    <dd>{{% md %}}List of all destinations.{{% /md %}}</dd>
-    <dt class="property-optional"
+    <dd>{{% md %}}List of all destinations.{{% /md %}}</dd><dt class="property-optional"
             title="Optional">
         <span id="nexthoptype_go">
 <a href="#nexthoptype_go" style="color: inherit; text-decoration: inherit;">Next<wbr>Hop<wbr>Type</a>
@@ -1044,8 +947,7 @@ All [input](#inputs) properties are implicitly available as output properties. A
         <span class="property-indicator"></span>
         <span class="property-type">string</span>
     </dt>
-    <dd>{{% md %}}The type of next hops.{{% /md %}}</dd>
-    <dt class="property-optional"
+    <dd>{{% md %}}The type of next hops.{{% /md %}}</dd><dt class="property-optional"
             title="Optional">
         <span id="nexthops_go">
 <a href="#nexthops_go" style="color: inherit; text-decoration: inherit;">Next<wbr>Hops</a>
@@ -1053,14 +955,11 @@ All [input](#inputs) properties are implicitly available as output properties. A
         <span class="property-indicator"></span>
         <span class="property-type">[]string</span>
     </dt>
-    <dd>{{% md %}}NextHops ip address.{{% /md %}}</dd>
-</dl>
+    <dd>{{% md %}}NextHops ip address.{{% /md %}}</dd></dl>
 {{% /choosable %}}
 
 {{% choosable language nodejs %}}
-<dl class="resources-properties">
-
-    <dt class="property-optional"
+<dl class="resources-properties"><dt class="property-optional"
             title="Optional">
         <span id="destinationtype_nodejs">
 <a href="#destinationtype_nodejs" style="color: inherit; text-decoration: inherit;">destination<wbr>Type</a>
@@ -1068,8 +967,7 @@ All [input](#inputs) properties are implicitly available as output properties. A
         <span class="property-indicator"></span>
         <span class="property-type">string</span>
     </dt>
-    <dd>{{% md %}}The type of destinations.{{% /md %}}</dd>
-    <dt class="property-optional"
+    <dd>{{% md %}}The type of destinations.{{% /md %}}</dd><dt class="property-optional"
             title="Optional">
         <span id="destinations_nodejs">
 <a href="#destinations_nodejs" style="color: inherit; text-decoration: inherit;">destinations</a>
@@ -1077,8 +975,7 @@ All [input](#inputs) properties are implicitly available as output properties. A
         <span class="property-indicator"></span>
         <span class="property-type">string[]</span>
     </dt>
-    <dd>{{% md %}}List of all destinations.{{% /md %}}</dd>
-    <dt class="property-optional"
+    <dd>{{% md %}}List of all destinations.{{% /md %}}</dd><dt class="property-optional"
             title="Optional">
         <span id="nexthoptype_nodejs">
 <a href="#nexthoptype_nodejs" style="color: inherit; text-decoration: inherit;">next<wbr>Hop<wbr>Type</a>
@@ -1086,8 +983,7 @@ All [input](#inputs) properties are implicitly available as output properties. A
         <span class="property-indicator"></span>
         <span class="property-type">string</span>
     </dt>
-    <dd>{{% md %}}The type of next hops.{{% /md %}}</dd>
-    <dt class="property-optional"
+    <dd>{{% md %}}The type of next hops.{{% /md %}}</dd><dt class="property-optional"
             title="Optional">
         <span id="nexthops_nodejs">
 <a href="#nexthops_nodejs" style="color: inherit; text-decoration: inherit;">next<wbr>Hops</a>
@@ -1095,14 +991,11 @@ All [input](#inputs) properties are implicitly available as output properties. A
         <span class="property-indicator"></span>
         <span class="property-type">string[]</span>
     </dt>
-    <dd>{{% md %}}NextHops ip address.{{% /md %}}</dd>
-</dl>
+    <dd>{{% md %}}NextHops ip address.{{% /md %}}</dd></dl>
 {{% /choosable %}}
 
 {{% choosable language python %}}
-<dl class="resources-properties">
-
-    <dt class="property-optional"
+<dl class="resources-properties"><dt class="property-optional"
             title="Optional">
         <span id="destination_type_python">
 <a href="#destination_type_python" style="color: inherit; text-decoration: inherit;">destination_<wbr>type</a>
@@ -1110,8 +1003,7 @@ All [input](#inputs) properties are implicitly available as output properties. A
         <span class="property-indicator"></span>
         <span class="property-type">str</span>
     </dt>
-    <dd>{{% md %}}The type of destinations.{{% /md %}}</dd>
-    <dt class="property-optional"
+    <dd>{{% md %}}The type of destinations.{{% /md %}}</dd><dt class="property-optional"
             title="Optional">
         <span id="destinations_python">
 <a href="#destinations_python" style="color: inherit; text-decoration: inherit;">destinations</a>
@@ -1119,8 +1011,7 @@ All [input](#inputs) properties are implicitly available as output properties. A
         <span class="property-indicator"></span>
         <span class="property-type">Sequence[str]</span>
     </dt>
-    <dd>{{% md %}}List of all destinations.{{% /md %}}</dd>
-    <dt class="property-optional"
+    <dd>{{% md %}}List of all destinations.{{% /md %}}</dd><dt class="property-optional"
             title="Optional">
         <span id="next_hop_type_python">
 <a href="#next_hop_type_python" style="color: inherit; text-decoration: inherit;">next_<wbr>hop_<wbr>type</a>
@@ -1128,8 +1019,7 @@ All [input](#inputs) properties are implicitly available as output properties. A
         <span class="property-indicator"></span>
         <span class="property-type">str</span>
     </dt>
-    <dd>{{% md %}}The type of next hops.{{% /md %}}</dd>
-    <dt class="property-optional"
+    <dd>{{% md %}}The type of next hops.{{% /md %}}</dd><dt class="property-optional"
             title="Optional">
         <span id="next_hops_python">
 <a href="#next_hops_python" style="color: inherit; text-decoration: inherit;">next_<wbr>hops</a>
@@ -1137,8 +1027,7 @@ All [input](#inputs) properties are implicitly available as output properties. A
         <span class="property-indicator"></span>
         <span class="property-type">Sequence[str]</span>
     </dt>
-    <dd>{{% md %}}NextHops ip address.{{% /md %}}</dd>
-</dl>
+    <dd>{{% md %}}NextHops ip address.{{% /md %}}</dd></dl>
 {{% /choosable %}}
 ## Import
 

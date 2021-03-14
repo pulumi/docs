@@ -15,11 +15,17 @@ are used to restrict access to a whole application using an
 authorisation gateway managed by Cloudflare.
 
 {{% examples %}}
+
 ## Example Usage
 
 {{< chooser language "typescript,python,go,csharp" / >}}
 
-{{% example csharp %}}
+
+
+
+
+{{< example csharp >}}
+
 ```csharp
 using Pulumi;
 using Cloudflare = Pulumi.Cloudflare;
@@ -59,9 +65,12 @@ class MyStack : Stack
 }
 ```
 
-{{% /example %}}
 
-{{% example go %}}
+{{< /example >}}
+
+
+{{< example go >}}
+
 ```go
 package main
 
@@ -100,9 +109,12 @@ func main() {
 }
 ```
 
-{{% /example %}}
 
-{{% example python %}}
+{{< /example >}}
+
+
+{{< example python >}}
+
 ```python
 import pulumi
 import pulumi_cloudflare as cloudflare
@@ -125,9 +137,12 @@ staging_app = cloudflare.AccessApplication("stagingApp",
     zone_id="1d5fdc9e88c8a8c4518b068cd94331fe")
 ```
 
-{{% /example %}}
 
-{{% example typescript %}}
+{{< /example >}}
+
+
+{{< example typescript >}}
+
 
 ```typescript
 import * as pulumi from "@pulumi/pulumi";
@@ -152,9 +167,16 @@ const stagingApp = new cloudflare.AccessApplication("staging_app", {
 });
 ```
 
-{{% /example %}}
+
+{{< /example >}}
+
+
+
+
 
 {{% /examples %}}
+
+
 
 
 ## Create a AccessApplication Resource {#create}
@@ -179,9 +201,7 @@ const stagingApp = new cloudflare.AccessApplication("staging_app", {
 
 {{% choosable language nodejs %}}
 
-<dl class="resources-properties">
-  
-    <dt
+<dl class="resources-properties"><dt
         class="property-required" title="Required">
         <span>name</span>
         <span class="property-indicator"></span>
@@ -189,9 +209,7 @@ const stagingApp = new cloudflare.AccessApplication("staging_app", {
     </dt>
     <dd>
       The unique name of the resource.
-    </dd>
-  
-    <dt
+    </dd><dt
         class="property-required" title="Required">
         <span>args</span>
         <span class="property-indicator"></span>
@@ -199,9 +217,7 @@ const stagingApp = new cloudflare.AccessApplication("staging_app", {
     </dt>
     <dd>
       The arguments to resource properties.
-    </dd>
-  
-    <dt
+    </dd><dt
         class="property-optional" title="Optional">
         <span>opts</span>
         <span class="property-indicator"></span>
@@ -209,10 +225,7 @@ const stagingApp = new cloudflare.AccessApplication("staging_app", {
     </dt>
     <dd>
       Bag of options to control resource&#39;s behavior.
-    </dd>
-  
-
-</dl>
+    </dd></dl>
 
 {{% /choosable %}}
 
@@ -238,9 +251,7 @@ const stagingApp = new cloudflare.AccessApplication("staging_app", {
 
 {{% choosable language go %}}
 
-<dl class="resources-properties">
-  
-    <dt
+<dl class="resources-properties"><dt
         class="property-optional" title="Optional">
         <span>ctx</span>
         <span class="property-indicator"></span>
@@ -248,9 +259,7 @@ const stagingApp = new cloudflare.AccessApplication("staging_app", {
     </dt>
     <dd>
       Context object for the current deployment.
-    </dd>
-  
-    <dt
+    </dd><dt
         class="property-required" title="Required">
         <span>name</span>
         <span class="property-indicator"></span>
@@ -258,9 +267,7 @@ const stagingApp = new cloudflare.AccessApplication("staging_app", {
     </dt>
     <dd>
       The unique name of the resource.
-    </dd>
-  
-    <dt
+    </dd><dt
         class="property-required" title="Required">
         <span>args</span>
         <span class="property-indicator"></span>
@@ -268,9 +275,7 @@ const stagingApp = new cloudflare.AccessApplication("staging_app", {
     </dt>
     <dd>
       The arguments to resource properties.
-    </dd>
-  
-    <dt
+    </dd><dt
         class="property-optional" title="Optional">
         <span>opts</span>
         <span class="property-indicator"></span>
@@ -278,18 +283,13 @@ const stagingApp = new cloudflare.AccessApplication("staging_app", {
     </dt>
     <dd>
       Bag of options to control resource&#39;s behavior.
-    </dd>
-  
-
-</dl>
+    </dd></dl>
 
 {{% /choosable %}}
 
 {{% choosable language csharp %}}
 
-<dl class="resources-properties">
-  
-    <dt
+<dl class="resources-properties"><dt
         class="property-required" title="Required">
         <span>name</span>
         <span class="property-indicator"></span>
@@ -297,9 +297,7 @@ const stagingApp = new cloudflare.AccessApplication("staging_app", {
     </dt>
     <dd>
       The unique name of the resource.
-    </dd>
-  
-    <dt
+    </dd><dt
         class="property-required" title="Required">
         <span>args</span>
         <span class="property-indicator"></span>
@@ -307,9 +305,7 @@ const stagingApp = new cloudflare.AccessApplication("staging_app", {
     </dt>
     <dd>
       The arguments to resource properties.
-    </dd>
-  
-    <dt
+    </dd><dt
         class="property-optional" title="Optional">
         <span>opts</span>
         <span class="property-indicator"></span>
@@ -317,10 +313,7 @@ const stagingApp = new cloudflare.AccessApplication("staging_app", {
     </dt>
     <dd>
       Bag of options to control resource&#39;s behavior.
-    </dd>
-  
-
-</dl>
+    </dd></dl>
 
 {{% /choosable %}}
 
@@ -335,9 +328,7 @@ The AccessApplication resource accepts the following [input]({{< relref "/docs/i
 
 
 {{% choosable language csharp %}}
-<dl class="resources-properties">
-
-    <dt class="property-required"
+<dl class="resources-properties"><dt class="property-required"
             title="Required">
         <span id="domain_csharp">
 <a href="#domain_csharp" style="color: inherit; text-decoration: inherit;">Domain</a>
@@ -347,8 +338,7 @@ The AccessApplication resource accepts the following [input]({{< relref "/docs/i
     </dt>
     <dd>{{% md %}}The complete URL of the asset you wish to put
 Cloudflare Access in front of. Can include subdomains or paths. Or both.
-{{% /md %}}</dd>
-    <dt class="property-required"
+{{% /md %}}</dd><dt class="property-required"
             title="Required">
         <span id="name_csharp">
 <a href="#name_csharp" style="color: inherit; text-decoration: inherit;">Name</a>
@@ -357,8 +347,7 @@ Cloudflare Access in front of. Can include subdomains or paths. Or both.
         <span class="property-type">string</span>
     </dt>
     <dd>{{% md %}}Friendly name of the Access Application.
-{{% /md %}}</dd>
-    <dt class="property-optional"
+{{% /md %}}</dd><dt class="property-optional"
             title="Optional">
         <span id="accountid_csharp">
 <a href="#accountid_csharp" style="color: inherit; text-decoration: inherit;">Account<wbr>Id</a>
@@ -367,8 +356,7 @@ Cloudflare Access in front of. Can include subdomains or paths. Or both.
         <span class="property-type">string</span>
     </dt>
     <dd>{{% md %}}The account to which the access application should be added. Conflicts with `zone_id`.
-{{% /md %}}</dd>
-    <dt class="property-optional"
+{{% /md %}}</dd><dt class="property-optional"
             title="Optional">
         <span id="allowedidps_csharp">
 <a href="#allowedidps_csharp" style="color: inherit; text-decoration: inherit;">Allowed<wbr>Idps</a>
@@ -377,8 +365,7 @@ Cloudflare Access in front of. Can include subdomains or paths. Or both.
         <span class="property-type">List&lt;string&gt;</span>
     </dt>
     <dd>{{% md %}}The identity providers selected for the application.
-{{% /md %}}</dd>
-    <dt class="property-optional"
+{{% /md %}}</dd><dt class="property-optional"
             title="Optional">
         <span id="autoredirecttoidentity_csharp">
 <a href="#autoredirecttoidentity_csharp" style="color: inherit; text-decoration: inherit;">Auto<wbr>Redirect<wbr>To<wbr>Identity</a>
@@ -389,8 +376,7 @@ Cloudflare Access in front of. Can include subdomains or paths. Or both.
     <dd>{{% md %}}Option to skip identity provider
 selection if only one is configured in allowed_idps. Defaults to `false`
 (disabled).
-{{% /md %}}</dd>
-    <dt class="property-optional"
+{{% /md %}}</dd><dt class="property-optional"
             title="Optional">
         <span id="corsheaders_csharp">
 <a href="#corsheaders_csharp" style="color: inherit; text-decoration: inherit;">Cors<wbr>Headers</a>
@@ -400,8 +386,7 @@ selection if only one is configured in allowed_idps. Defaults to `false`
     </dt>
     <dd>{{% md %}}CORS configuration for the Access Application. See
 below for reference structure.
-{{% /md %}}</dd>
-    <dt class="property-optional"
+{{% /md %}}</dd><dt class="property-optional"
             title="Optional">
         <span id="customdenymessage_csharp">
 <a href="#customdenymessage_csharp" style="color: inherit; text-decoration: inherit;">Custom<wbr>Deny<wbr>Message</a>
@@ -410,8 +395,7 @@ below for reference structure.
         <span class="property-type">string</span>
     </dt>
     <dd>{{% md %}}Option that returns a custom error message when a user is denied access to the application.
-{{% /md %}}</dd>
-    <dt class="property-optional"
+{{% /md %}}</dd><dt class="property-optional"
             title="Optional">
         <span id="customdenyurl_csharp">
 <a href="#customdenyurl_csharp" style="color: inherit; text-decoration: inherit;">Custom<wbr>Deny<wbr>Url</a>
@@ -420,8 +404,7 @@ below for reference structure.
         <span class="property-type">string</span>
     </dt>
     <dd>{{% md %}}Option that redirects to a custom URL when a user is denied access to the application.
-{{% /md %}}</dd>
-    <dt class="property-optional"
+{{% /md %}}</dd><dt class="property-optional"
             title="Optional">
         <span id="enablebindingcookie_csharp">
 <a href="#enablebindingcookie_csharp" style="color: inherit; text-decoration: inherit;">Enable<wbr>Binding<wbr>Cookie</a>
@@ -430,8 +413,7 @@ below for reference structure.
         <span class="property-type">bool</span>
     </dt>
     <dd>{{% md %}}Option to provide increased security against compromised authorization tokens and CSRF attacks by requiring an additional "binding" cookie on requests. Defaults to `false`.
-{{% /md %}}</dd>
-    <dt class="property-optional"
+{{% /md %}}</dd><dt class="property-optional"
             title="Optional">
         <span id="sessionduration_csharp">
 <a href="#sessionduration_csharp" style="color: inherit; text-decoration: inherit;">Session<wbr>Duration</a>
@@ -442,8 +424,7 @@ below for reference structure.
     <dd>{{% md %}}How often a user will be forced to
 re-authorise. Must be in the format `"48h"` or `"2h45m"`.
 Valid time units are `ns`, `us` (or `µs`), `ms`, `s`, `m`, `h`. Defaults to `24h`.
-{{% /md %}}</dd>
-    <dt class="property-optional"
+{{% /md %}}</dd><dt class="property-optional"
             title="Optional">
         <span id="zoneid_csharp">
 <a href="#zoneid_csharp" style="color: inherit; text-decoration: inherit;">Zone<wbr>Id</a>
@@ -452,14 +433,11 @@ Valid time units are `ns`, `us` (or `µs`), `ms`, `s`, `m`, `h`. Defaults to `24
         <span class="property-type">string</span>
     </dt>
     <dd>{{% md %}}The DNS zone to which the access application should be added. Conflicts with `account_id`.
-{{% /md %}}</dd>
-</dl>
+{{% /md %}}</dd></dl>
 {{% /choosable %}}
 
 {{% choosable language go %}}
-<dl class="resources-properties">
-
-    <dt class="property-required"
+<dl class="resources-properties"><dt class="property-required"
             title="Required">
         <span id="domain_go">
 <a href="#domain_go" style="color: inherit; text-decoration: inherit;">Domain</a>
@@ -469,8 +447,7 @@ Valid time units are `ns`, `us` (or `µs`), `ms`, `s`, `m`, `h`. Defaults to `24
     </dt>
     <dd>{{% md %}}The complete URL of the asset you wish to put
 Cloudflare Access in front of. Can include subdomains or paths. Or both.
-{{% /md %}}</dd>
-    <dt class="property-required"
+{{% /md %}}</dd><dt class="property-required"
             title="Required">
         <span id="name_go">
 <a href="#name_go" style="color: inherit; text-decoration: inherit;">Name</a>
@@ -479,8 +456,7 @@ Cloudflare Access in front of. Can include subdomains or paths. Or both.
         <span class="property-type">string</span>
     </dt>
     <dd>{{% md %}}Friendly name of the Access Application.
-{{% /md %}}</dd>
-    <dt class="property-optional"
+{{% /md %}}</dd><dt class="property-optional"
             title="Optional">
         <span id="accountid_go">
 <a href="#accountid_go" style="color: inherit; text-decoration: inherit;">Account<wbr>Id</a>
@@ -489,8 +465,7 @@ Cloudflare Access in front of. Can include subdomains or paths. Or both.
         <span class="property-type">string</span>
     </dt>
     <dd>{{% md %}}The account to which the access application should be added. Conflicts with `zone_id`.
-{{% /md %}}</dd>
-    <dt class="property-optional"
+{{% /md %}}</dd><dt class="property-optional"
             title="Optional">
         <span id="allowedidps_go">
 <a href="#allowedidps_go" style="color: inherit; text-decoration: inherit;">Allowed<wbr>Idps</a>
@@ -499,8 +474,7 @@ Cloudflare Access in front of. Can include subdomains or paths. Or both.
         <span class="property-type">[]string</span>
     </dt>
     <dd>{{% md %}}The identity providers selected for the application.
-{{% /md %}}</dd>
-    <dt class="property-optional"
+{{% /md %}}</dd><dt class="property-optional"
             title="Optional">
         <span id="autoredirecttoidentity_go">
 <a href="#autoredirecttoidentity_go" style="color: inherit; text-decoration: inherit;">Auto<wbr>Redirect<wbr>To<wbr>Identity</a>
@@ -511,8 +485,7 @@ Cloudflare Access in front of. Can include subdomains or paths. Or both.
     <dd>{{% md %}}Option to skip identity provider
 selection if only one is configured in allowed_idps. Defaults to `false`
 (disabled).
-{{% /md %}}</dd>
-    <dt class="property-optional"
+{{% /md %}}</dd><dt class="property-optional"
             title="Optional">
         <span id="corsheaders_go">
 <a href="#corsheaders_go" style="color: inherit; text-decoration: inherit;">Cors<wbr>Headers</a>
@@ -522,8 +495,7 @@ selection if only one is configured in allowed_idps. Defaults to `false`
     </dt>
     <dd>{{% md %}}CORS configuration for the Access Application. See
 below for reference structure.
-{{% /md %}}</dd>
-    <dt class="property-optional"
+{{% /md %}}</dd><dt class="property-optional"
             title="Optional">
         <span id="customdenymessage_go">
 <a href="#customdenymessage_go" style="color: inherit; text-decoration: inherit;">Custom<wbr>Deny<wbr>Message</a>
@@ -532,8 +504,7 @@ below for reference structure.
         <span class="property-type">string</span>
     </dt>
     <dd>{{% md %}}Option that returns a custom error message when a user is denied access to the application.
-{{% /md %}}</dd>
-    <dt class="property-optional"
+{{% /md %}}</dd><dt class="property-optional"
             title="Optional">
         <span id="customdenyurl_go">
 <a href="#customdenyurl_go" style="color: inherit; text-decoration: inherit;">Custom<wbr>Deny<wbr>Url</a>
@@ -542,8 +513,7 @@ below for reference structure.
         <span class="property-type">string</span>
     </dt>
     <dd>{{% md %}}Option that redirects to a custom URL when a user is denied access to the application.
-{{% /md %}}</dd>
-    <dt class="property-optional"
+{{% /md %}}</dd><dt class="property-optional"
             title="Optional">
         <span id="enablebindingcookie_go">
 <a href="#enablebindingcookie_go" style="color: inherit; text-decoration: inherit;">Enable<wbr>Binding<wbr>Cookie</a>
@@ -552,8 +522,7 @@ below for reference structure.
         <span class="property-type">bool</span>
     </dt>
     <dd>{{% md %}}Option to provide increased security against compromised authorization tokens and CSRF attacks by requiring an additional "binding" cookie on requests. Defaults to `false`.
-{{% /md %}}</dd>
-    <dt class="property-optional"
+{{% /md %}}</dd><dt class="property-optional"
             title="Optional">
         <span id="sessionduration_go">
 <a href="#sessionduration_go" style="color: inherit; text-decoration: inherit;">Session<wbr>Duration</a>
@@ -564,8 +533,7 @@ below for reference structure.
     <dd>{{% md %}}How often a user will be forced to
 re-authorise. Must be in the format `"48h"` or `"2h45m"`.
 Valid time units are `ns`, `us` (or `µs`), `ms`, `s`, `m`, `h`. Defaults to `24h`.
-{{% /md %}}</dd>
-    <dt class="property-optional"
+{{% /md %}}</dd><dt class="property-optional"
             title="Optional">
         <span id="zoneid_go">
 <a href="#zoneid_go" style="color: inherit; text-decoration: inherit;">Zone<wbr>Id</a>
@@ -574,14 +542,11 @@ Valid time units are `ns`, `us` (or `µs`), `ms`, `s`, `m`, `h`. Defaults to `24
         <span class="property-type">string</span>
     </dt>
     <dd>{{% md %}}The DNS zone to which the access application should be added. Conflicts with `account_id`.
-{{% /md %}}</dd>
-</dl>
+{{% /md %}}</dd></dl>
 {{% /choosable %}}
 
 {{% choosable language nodejs %}}
-<dl class="resources-properties">
-
-    <dt class="property-required"
+<dl class="resources-properties"><dt class="property-required"
             title="Required">
         <span id="domain_nodejs">
 <a href="#domain_nodejs" style="color: inherit; text-decoration: inherit;">domain</a>
@@ -591,8 +556,7 @@ Valid time units are `ns`, `us` (or `µs`), `ms`, `s`, `m`, `h`. Defaults to `24
     </dt>
     <dd>{{% md %}}The complete URL of the asset you wish to put
 Cloudflare Access in front of. Can include subdomains or paths. Or both.
-{{% /md %}}</dd>
-    <dt class="property-required"
+{{% /md %}}</dd><dt class="property-required"
             title="Required">
         <span id="name_nodejs">
 <a href="#name_nodejs" style="color: inherit; text-decoration: inherit;">name</a>
@@ -601,8 +565,7 @@ Cloudflare Access in front of. Can include subdomains or paths. Or both.
         <span class="property-type">string</span>
     </dt>
     <dd>{{% md %}}Friendly name of the Access Application.
-{{% /md %}}</dd>
-    <dt class="property-optional"
+{{% /md %}}</dd><dt class="property-optional"
             title="Optional">
         <span id="accountid_nodejs">
 <a href="#accountid_nodejs" style="color: inherit; text-decoration: inherit;">account<wbr>Id</a>
@@ -611,8 +574,7 @@ Cloudflare Access in front of. Can include subdomains or paths. Or both.
         <span class="property-type">string</span>
     </dt>
     <dd>{{% md %}}The account to which the access application should be added. Conflicts with `zone_id`.
-{{% /md %}}</dd>
-    <dt class="property-optional"
+{{% /md %}}</dd><dt class="property-optional"
             title="Optional">
         <span id="allowedidps_nodejs">
 <a href="#allowedidps_nodejs" style="color: inherit; text-decoration: inherit;">allowed<wbr>Idps</a>
@@ -621,8 +583,7 @@ Cloudflare Access in front of. Can include subdomains or paths. Or both.
         <span class="property-type">string[]</span>
     </dt>
     <dd>{{% md %}}The identity providers selected for the application.
-{{% /md %}}</dd>
-    <dt class="property-optional"
+{{% /md %}}</dd><dt class="property-optional"
             title="Optional">
         <span id="autoredirecttoidentity_nodejs">
 <a href="#autoredirecttoidentity_nodejs" style="color: inherit; text-decoration: inherit;">auto<wbr>Redirect<wbr>To<wbr>Identity</a>
@@ -633,8 +594,7 @@ Cloudflare Access in front of. Can include subdomains or paths. Or both.
     <dd>{{% md %}}Option to skip identity provider
 selection if only one is configured in allowed_idps. Defaults to `false`
 (disabled).
-{{% /md %}}</dd>
-    <dt class="property-optional"
+{{% /md %}}</dd><dt class="property-optional"
             title="Optional">
         <span id="corsheaders_nodejs">
 <a href="#corsheaders_nodejs" style="color: inherit; text-decoration: inherit;">cors<wbr>Headers</a>
@@ -644,8 +604,7 @@ selection if only one is configured in allowed_idps. Defaults to `false`
     </dt>
     <dd>{{% md %}}CORS configuration for the Access Application. See
 below for reference structure.
-{{% /md %}}</dd>
-    <dt class="property-optional"
+{{% /md %}}</dd><dt class="property-optional"
             title="Optional">
         <span id="customdenymessage_nodejs">
 <a href="#customdenymessage_nodejs" style="color: inherit; text-decoration: inherit;">custom<wbr>Deny<wbr>Message</a>
@@ -654,8 +613,7 @@ below for reference structure.
         <span class="property-type">string</span>
     </dt>
     <dd>{{% md %}}Option that returns a custom error message when a user is denied access to the application.
-{{% /md %}}</dd>
-    <dt class="property-optional"
+{{% /md %}}</dd><dt class="property-optional"
             title="Optional">
         <span id="customdenyurl_nodejs">
 <a href="#customdenyurl_nodejs" style="color: inherit; text-decoration: inherit;">custom<wbr>Deny<wbr>Url</a>
@@ -664,8 +622,7 @@ below for reference structure.
         <span class="property-type">string</span>
     </dt>
     <dd>{{% md %}}Option that redirects to a custom URL when a user is denied access to the application.
-{{% /md %}}</dd>
-    <dt class="property-optional"
+{{% /md %}}</dd><dt class="property-optional"
             title="Optional">
         <span id="enablebindingcookie_nodejs">
 <a href="#enablebindingcookie_nodejs" style="color: inherit; text-decoration: inherit;">enable<wbr>Binding<wbr>Cookie</a>
@@ -674,8 +631,7 @@ below for reference structure.
         <span class="property-type">boolean</span>
     </dt>
     <dd>{{% md %}}Option to provide increased security against compromised authorization tokens and CSRF attacks by requiring an additional "binding" cookie on requests. Defaults to `false`.
-{{% /md %}}</dd>
-    <dt class="property-optional"
+{{% /md %}}</dd><dt class="property-optional"
             title="Optional">
         <span id="sessionduration_nodejs">
 <a href="#sessionduration_nodejs" style="color: inherit; text-decoration: inherit;">session<wbr>Duration</a>
@@ -686,8 +642,7 @@ below for reference structure.
     <dd>{{% md %}}How often a user will be forced to
 re-authorise. Must be in the format `"48h"` or `"2h45m"`.
 Valid time units are `ns`, `us` (or `µs`), `ms`, `s`, `m`, `h`. Defaults to `24h`.
-{{% /md %}}</dd>
-    <dt class="property-optional"
+{{% /md %}}</dd><dt class="property-optional"
             title="Optional">
         <span id="zoneid_nodejs">
 <a href="#zoneid_nodejs" style="color: inherit; text-decoration: inherit;">zone<wbr>Id</a>
@@ -696,14 +651,11 @@ Valid time units are `ns`, `us` (or `µs`), `ms`, `s`, `m`, `h`. Defaults to `24
         <span class="property-type">string</span>
     </dt>
     <dd>{{% md %}}The DNS zone to which the access application should be added. Conflicts with `account_id`.
-{{% /md %}}</dd>
-</dl>
+{{% /md %}}</dd></dl>
 {{% /choosable %}}
 
 {{% choosable language python %}}
-<dl class="resources-properties">
-
-    <dt class="property-required"
+<dl class="resources-properties"><dt class="property-required"
             title="Required">
         <span id="domain_python">
 <a href="#domain_python" style="color: inherit; text-decoration: inherit;">domain</a>
@@ -713,8 +665,7 @@ Valid time units are `ns`, `us` (or `µs`), `ms`, `s`, `m`, `h`. Defaults to `24
     </dt>
     <dd>{{% md %}}The complete URL of the asset you wish to put
 Cloudflare Access in front of. Can include subdomains or paths. Or both.
-{{% /md %}}</dd>
-    <dt class="property-required"
+{{% /md %}}</dd><dt class="property-required"
             title="Required">
         <span id="name_python">
 <a href="#name_python" style="color: inherit; text-decoration: inherit;">name</a>
@@ -723,8 +674,7 @@ Cloudflare Access in front of. Can include subdomains or paths. Or both.
         <span class="property-type">str</span>
     </dt>
     <dd>{{% md %}}Friendly name of the Access Application.
-{{% /md %}}</dd>
-    <dt class="property-optional"
+{{% /md %}}</dd><dt class="property-optional"
             title="Optional">
         <span id="account_id_python">
 <a href="#account_id_python" style="color: inherit; text-decoration: inherit;">account_<wbr>id</a>
@@ -733,8 +683,7 @@ Cloudflare Access in front of. Can include subdomains or paths. Or both.
         <span class="property-type">str</span>
     </dt>
     <dd>{{% md %}}The account to which the access application should be added. Conflicts with `zone_id`.
-{{% /md %}}</dd>
-    <dt class="property-optional"
+{{% /md %}}</dd><dt class="property-optional"
             title="Optional">
         <span id="allowed_idps_python">
 <a href="#allowed_idps_python" style="color: inherit; text-decoration: inherit;">allowed_<wbr>idps</a>
@@ -743,8 +692,7 @@ Cloudflare Access in front of. Can include subdomains or paths. Or both.
         <span class="property-type">Sequence[str]</span>
     </dt>
     <dd>{{% md %}}The identity providers selected for the application.
-{{% /md %}}</dd>
-    <dt class="property-optional"
+{{% /md %}}</dd><dt class="property-optional"
             title="Optional">
         <span id="auto_redirect_to_identity_python">
 <a href="#auto_redirect_to_identity_python" style="color: inherit; text-decoration: inherit;">auto_<wbr>redirect_<wbr>to_<wbr>identity</a>
@@ -755,8 +703,7 @@ Cloudflare Access in front of. Can include subdomains or paths. Or both.
     <dd>{{% md %}}Option to skip identity provider
 selection if only one is configured in allowed_idps. Defaults to `false`
 (disabled).
-{{% /md %}}</dd>
-    <dt class="property-optional"
+{{% /md %}}</dd><dt class="property-optional"
             title="Optional">
         <span id="cors_headers_python">
 <a href="#cors_headers_python" style="color: inherit; text-decoration: inherit;">cors_<wbr>headers</a>
@@ -766,8 +713,7 @@ selection if only one is configured in allowed_idps. Defaults to `false`
     </dt>
     <dd>{{% md %}}CORS configuration for the Access Application. See
 below for reference structure.
-{{% /md %}}</dd>
-    <dt class="property-optional"
+{{% /md %}}</dd><dt class="property-optional"
             title="Optional">
         <span id="custom_deny_message_python">
 <a href="#custom_deny_message_python" style="color: inherit; text-decoration: inherit;">custom_<wbr>deny_<wbr>message</a>
@@ -776,8 +722,7 @@ below for reference structure.
         <span class="property-type">str</span>
     </dt>
     <dd>{{% md %}}Option that returns a custom error message when a user is denied access to the application.
-{{% /md %}}</dd>
-    <dt class="property-optional"
+{{% /md %}}</dd><dt class="property-optional"
             title="Optional">
         <span id="custom_deny_url_python">
 <a href="#custom_deny_url_python" style="color: inherit; text-decoration: inherit;">custom_<wbr>deny_<wbr>url</a>
@@ -786,8 +731,7 @@ below for reference structure.
         <span class="property-type">str</span>
     </dt>
     <dd>{{% md %}}Option that redirects to a custom URL when a user is denied access to the application.
-{{% /md %}}</dd>
-    <dt class="property-optional"
+{{% /md %}}</dd><dt class="property-optional"
             title="Optional">
         <span id="enable_binding_cookie_python">
 <a href="#enable_binding_cookie_python" style="color: inherit; text-decoration: inherit;">enable_<wbr>binding_<wbr>cookie</a>
@@ -796,8 +740,7 @@ below for reference structure.
         <span class="property-type">bool</span>
     </dt>
     <dd>{{% md %}}Option to provide increased security against compromised authorization tokens and CSRF attacks by requiring an additional "binding" cookie on requests. Defaults to `false`.
-{{% /md %}}</dd>
-    <dt class="property-optional"
+{{% /md %}}</dd><dt class="property-optional"
             title="Optional">
         <span id="session_duration_python">
 <a href="#session_duration_python" style="color: inherit; text-decoration: inherit;">session_<wbr>duration</a>
@@ -808,8 +751,7 @@ below for reference structure.
     <dd>{{% md %}}How often a user will be forced to
 re-authorise. Must be in the format `"48h"` or `"2h45m"`.
 Valid time units are `ns`, `us` (or `µs`), `ms`, `s`, `m`, `h`. Defaults to `24h`.
-{{% /md %}}</dd>
-    <dt class="property-optional"
+{{% /md %}}</dd><dt class="property-optional"
             title="Optional">
         <span id="zone_id_python">
 <a href="#zone_id_python" style="color: inherit; text-decoration: inherit;">zone_<wbr>id</a>
@@ -818,8 +760,7 @@ Valid time units are `ns`, `us` (or `µs`), `ms`, `s`, `m`, `h`. Defaults to `24
         <span class="property-type">str</span>
     </dt>
     <dd>{{% md %}}The DNS zone to which the access application should be added. Conflicts with `account_id`.
-{{% /md %}}</dd>
-</dl>
+{{% /md %}}</dd></dl>
 {{% /choosable %}}
 
 
@@ -830,9 +771,7 @@ All [input](#inputs) properties are implicitly available as output properties. A
 
 
 {{% choosable language csharp %}}
-<dl class="resources-properties">
-
-    <dt class="property-"
+<dl class="resources-properties"><dt class="property-"
             title="">
         <span id="aud_csharp">
 <a href="#aud_csharp" style="color: inherit; text-decoration: inherit;">Aud</a>
@@ -841,8 +780,7 @@ All [input](#inputs) properties are implicitly available as output properties. A
         <span class="property-type">string</span>
     </dt>
     <dd>{{% md %}}Application Audience (AUD) Tag of the application
-{{% /md %}}</dd>
-    <dt class="property-"
+{{% /md %}}</dd><dt class="property-"
             title="">
         <span id="id_csharp">
 <a href="#id_csharp" style="color: inherit; text-decoration: inherit;">Id</a>
@@ -850,14 +788,11 @@ All [input](#inputs) properties are implicitly available as output properties. A
         <span class="property-indicator"></span>
         <span class="property-type">string</span>
     </dt>
-    <dd>{{% md %}}The provider-assigned unique ID for this managed resource.{{% /md %}}</dd>
-</dl>
+    <dd>{{% md %}}The provider-assigned unique ID for this managed resource.{{% /md %}}</dd></dl>
 {{% /choosable %}}
 
 {{% choosable language go %}}
-<dl class="resources-properties">
-
-    <dt class="property-"
+<dl class="resources-properties"><dt class="property-"
             title="">
         <span id="aud_go">
 <a href="#aud_go" style="color: inherit; text-decoration: inherit;">Aud</a>
@@ -866,8 +801,7 @@ All [input](#inputs) properties are implicitly available as output properties. A
         <span class="property-type">string</span>
     </dt>
     <dd>{{% md %}}Application Audience (AUD) Tag of the application
-{{% /md %}}</dd>
-    <dt class="property-"
+{{% /md %}}</dd><dt class="property-"
             title="">
         <span id="id_go">
 <a href="#id_go" style="color: inherit; text-decoration: inherit;">Id</a>
@@ -875,14 +809,11 @@ All [input](#inputs) properties are implicitly available as output properties. A
         <span class="property-indicator"></span>
         <span class="property-type">string</span>
     </dt>
-    <dd>{{% md %}}The provider-assigned unique ID for this managed resource.{{% /md %}}</dd>
-</dl>
+    <dd>{{% md %}}The provider-assigned unique ID for this managed resource.{{% /md %}}</dd></dl>
 {{% /choosable %}}
 
 {{% choosable language nodejs %}}
-<dl class="resources-properties">
-
-    <dt class="property-"
+<dl class="resources-properties"><dt class="property-"
             title="">
         <span id="aud_nodejs">
 <a href="#aud_nodejs" style="color: inherit; text-decoration: inherit;">aud</a>
@@ -891,8 +822,7 @@ All [input](#inputs) properties are implicitly available as output properties. A
         <span class="property-type">string</span>
     </dt>
     <dd>{{% md %}}Application Audience (AUD) Tag of the application
-{{% /md %}}</dd>
-    <dt class="property-"
+{{% /md %}}</dd><dt class="property-"
             title="">
         <span id="id_nodejs">
 <a href="#id_nodejs" style="color: inherit; text-decoration: inherit;">id</a>
@@ -900,14 +830,11 @@ All [input](#inputs) properties are implicitly available as output properties. A
         <span class="property-indicator"></span>
         <span class="property-type">string</span>
     </dt>
-    <dd>{{% md %}}The provider-assigned unique ID for this managed resource.{{% /md %}}</dd>
-</dl>
+    <dd>{{% md %}}The provider-assigned unique ID for this managed resource.{{% /md %}}</dd></dl>
 {{% /choosable %}}
 
 {{% choosable language python %}}
-<dl class="resources-properties">
-
-    <dt class="property-"
+<dl class="resources-properties"><dt class="property-"
             title="">
         <span id="aud_python">
 <a href="#aud_python" style="color: inherit; text-decoration: inherit;">aud</a>
@@ -916,8 +843,7 @@ All [input](#inputs) properties are implicitly available as output properties. A
         <span class="property-type">str</span>
     </dt>
     <dd>{{% md %}}Application Audience (AUD) Tag of the application
-{{% /md %}}</dd>
-    <dt class="property-"
+{{% /md %}}</dd><dt class="property-"
             title="">
         <span id="id_python">
 <a href="#id_python" style="color: inherit; text-decoration: inherit;">id</a>
@@ -925,8 +851,7 @@ All [input](#inputs) properties are implicitly available as output properties. A
         <span class="property-indicator"></span>
         <span class="property-type">str</span>
     </dt>
-    <dd>{{% md %}}The provider-assigned unique ID for this managed resource.{{% /md %}}</dd>
-</dl>
+    <dd>{{% md %}}The provider-assigned unique ID for this managed resource.{{% /md %}}</dd></dl>
 {{% /choosable %}}
 
 
@@ -1053,9 +978,7 @@ The following state arguments are supported:
 
 
 {{% choosable language csharp %}}
-<dl class="resources-properties">
-
-    <dt class="property-optional"
+<dl class="resources-properties"><dt class="property-optional"
             title="Optional">
         <span id="state_accountid_csharp">
 <a href="#state_accountid_csharp" style="color: inherit; text-decoration: inherit;">Account<wbr>Id</a>
@@ -1064,8 +987,7 @@ The following state arguments are supported:
         <span class="property-type">string</span>
     </dt>
     <dd>{{% md %}}The account to which the access application should be added. Conflicts with `zone_id`.
-{{% /md %}}</dd>
-    <dt class="property-optional"
+{{% /md %}}</dd><dt class="property-optional"
             title="Optional">
         <span id="state_allowedidps_csharp">
 <a href="#state_allowedidps_csharp" style="color: inherit; text-decoration: inherit;">Allowed<wbr>Idps</a>
@@ -1074,8 +996,7 @@ The following state arguments are supported:
         <span class="property-type">List&lt;string&gt;</span>
     </dt>
     <dd>{{% md %}}The identity providers selected for the application.
-{{% /md %}}</dd>
-    <dt class="property-optional"
+{{% /md %}}</dd><dt class="property-optional"
             title="Optional">
         <span id="state_aud_csharp">
 <a href="#state_aud_csharp" style="color: inherit; text-decoration: inherit;">Aud</a>
@@ -1084,8 +1005,7 @@ The following state arguments are supported:
         <span class="property-type">string</span>
     </dt>
     <dd>{{% md %}}Application Audience (AUD) Tag of the application
-{{% /md %}}</dd>
-    <dt class="property-optional"
+{{% /md %}}</dd><dt class="property-optional"
             title="Optional">
         <span id="state_autoredirecttoidentity_csharp">
 <a href="#state_autoredirecttoidentity_csharp" style="color: inherit; text-decoration: inherit;">Auto<wbr>Redirect<wbr>To<wbr>Identity</a>
@@ -1096,8 +1016,7 @@ The following state arguments are supported:
     <dd>{{% md %}}Option to skip identity provider
 selection if only one is configured in allowed_idps. Defaults to `false`
 (disabled).
-{{% /md %}}</dd>
-    <dt class="property-optional"
+{{% /md %}}</dd><dt class="property-optional"
             title="Optional">
         <span id="state_corsheaders_csharp">
 <a href="#state_corsheaders_csharp" style="color: inherit; text-decoration: inherit;">Cors<wbr>Headers</a>
@@ -1107,8 +1026,7 @@ selection if only one is configured in allowed_idps. Defaults to `false`
     </dt>
     <dd>{{% md %}}CORS configuration for the Access Application. See
 below for reference structure.
-{{% /md %}}</dd>
-    <dt class="property-optional"
+{{% /md %}}</dd><dt class="property-optional"
             title="Optional">
         <span id="state_customdenymessage_csharp">
 <a href="#state_customdenymessage_csharp" style="color: inherit; text-decoration: inherit;">Custom<wbr>Deny<wbr>Message</a>
@@ -1117,8 +1035,7 @@ below for reference structure.
         <span class="property-type">string</span>
     </dt>
     <dd>{{% md %}}Option that returns a custom error message when a user is denied access to the application.
-{{% /md %}}</dd>
-    <dt class="property-optional"
+{{% /md %}}</dd><dt class="property-optional"
             title="Optional">
         <span id="state_customdenyurl_csharp">
 <a href="#state_customdenyurl_csharp" style="color: inherit; text-decoration: inherit;">Custom<wbr>Deny<wbr>Url</a>
@@ -1127,8 +1044,7 @@ below for reference structure.
         <span class="property-type">string</span>
     </dt>
     <dd>{{% md %}}Option that redirects to a custom URL when a user is denied access to the application.
-{{% /md %}}</dd>
-    <dt class="property-optional"
+{{% /md %}}</dd><dt class="property-optional"
             title="Optional">
         <span id="state_domain_csharp">
 <a href="#state_domain_csharp" style="color: inherit; text-decoration: inherit;">Domain</a>
@@ -1138,8 +1054,7 @@ below for reference structure.
     </dt>
     <dd>{{% md %}}The complete URL of the asset you wish to put
 Cloudflare Access in front of. Can include subdomains or paths. Or both.
-{{% /md %}}</dd>
-    <dt class="property-optional"
+{{% /md %}}</dd><dt class="property-optional"
             title="Optional">
         <span id="state_enablebindingcookie_csharp">
 <a href="#state_enablebindingcookie_csharp" style="color: inherit; text-decoration: inherit;">Enable<wbr>Binding<wbr>Cookie</a>
@@ -1148,8 +1063,7 @@ Cloudflare Access in front of. Can include subdomains or paths. Or both.
         <span class="property-type">bool</span>
     </dt>
     <dd>{{% md %}}Option to provide increased security against compromised authorization tokens and CSRF attacks by requiring an additional "binding" cookie on requests. Defaults to `false`.
-{{% /md %}}</dd>
-    <dt class="property-optional"
+{{% /md %}}</dd><dt class="property-optional"
             title="Optional">
         <span id="state_name_csharp">
 <a href="#state_name_csharp" style="color: inherit; text-decoration: inherit;">Name</a>
@@ -1158,8 +1072,7 @@ Cloudflare Access in front of. Can include subdomains or paths. Or both.
         <span class="property-type">string</span>
     </dt>
     <dd>{{% md %}}Friendly name of the Access Application.
-{{% /md %}}</dd>
-    <dt class="property-optional"
+{{% /md %}}</dd><dt class="property-optional"
             title="Optional">
         <span id="state_sessionduration_csharp">
 <a href="#state_sessionduration_csharp" style="color: inherit; text-decoration: inherit;">Session<wbr>Duration</a>
@@ -1170,8 +1083,7 @@ Cloudflare Access in front of. Can include subdomains or paths. Or both.
     <dd>{{% md %}}How often a user will be forced to
 re-authorise. Must be in the format `"48h"` or `"2h45m"`.
 Valid time units are `ns`, `us` (or `µs`), `ms`, `s`, `m`, `h`. Defaults to `24h`.
-{{% /md %}}</dd>
-    <dt class="property-optional"
+{{% /md %}}</dd><dt class="property-optional"
             title="Optional">
         <span id="state_zoneid_csharp">
 <a href="#state_zoneid_csharp" style="color: inherit; text-decoration: inherit;">Zone<wbr>Id</a>
@@ -1180,14 +1092,11 @@ Valid time units are `ns`, `us` (or `µs`), `ms`, `s`, `m`, `h`. Defaults to `24
         <span class="property-type">string</span>
     </dt>
     <dd>{{% md %}}The DNS zone to which the access application should be added. Conflicts with `account_id`.
-{{% /md %}}</dd>
-</dl>
+{{% /md %}}</dd></dl>
 {{% /choosable %}}
 
 {{% choosable language go %}}
-<dl class="resources-properties">
-
-    <dt class="property-optional"
+<dl class="resources-properties"><dt class="property-optional"
             title="Optional">
         <span id="state_accountid_go">
 <a href="#state_accountid_go" style="color: inherit; text-decoration: inherit;">Account<wbr>Id</a>
@@ -1196,8 +1105,7 @@ Valid time units are `ns`, `us` (or `µs`), `ms`, `s`, `m`, `h`. Defaults to `24
         <span class="property-type">string</span>
     </dt>
     <dd>{{% md %}}The account to which the access application should be added. Conflicts with `zone_id`.
-{{% /md %}}</dd>
-    <dt class="property-optional"
+{{% /md %}}</dd><dt class="property-optional"
             title="Optional">
         <span id="state_allowedidps_go">
 <a href="#state_allowedidps_go" style="color: inherit; text-decoration: inherit;">Allowed<wbr>Idps</a>
@@ -1206,8 +1114,7 @@ Valid time units are `ns`, `us` (or `µs`), `ms`, `s`, `m`, `h`. Defaults to `24
         <span class="property-type">[]string</span>
     </dt>
     <dd>{{% md %}}The identity providers selected for the application.
-{{% /md %}}</dd>
-    <dt class="property-optional"
+{{% /md %}}</dd><dt class="property-optional"
             title="Optional">
         <span id="state_aud_go">
 <a href="#state_aud_go" style="color: inherit; text-decoration: inherit;">Aud</a>
@@ -1216,8 +1123,7 @@ Valid time units are `ns`, `us` (or `µs`), `ms`, `s`, `m`, `h`. Defaults to `24
         <span class="property-type">string</span>
     </dt>
     <dd>{{% md %}}Application Audience (AUD) Tag of the application
-{{% /md %}}</dd>
-    <dt class="property-optional"
+{{% /md %}}</dd><dt class="property-optional"
             title="Optional">
         <span id="state_autoredirecttoidentity_go">
 <a href="#state_autoredirecttoidentity_go" style="color: inherit; text-decoration: inherit;">Auto<wbr>Redirect<wbr>To<wbr>Identity</a>
@@ -1228,8 +1134,7 @@ Valid time units are `ns`, `us` (or `µs`), `ms`, `s`, `m`, `h`. Defaults to `24
     <dd>{{% md %}}Option to skip identity provider
 selection if only one is configured in allowed_idps. Defaults to `false`
 (disabled).
-{{% /md %}}</dd>
-    <dt class="property-optional"
+{{% /md %}}</dd><dt class="property-optional"
             title="Optional">
         <span id="state_corsheaders_go">
 <a href="#state_corsheaders_go" style="color: inherit; text-decoration: inherit;">Cors<wbr>Headers</a>
@@ -1239,8 +1144,7 @@ selection if only one is configured in allowed_idps. Defaults to `false`
     </dt>
     <dd>{{% md %}}CORS configuration for the Access Application. See
 below for reference structure.
-{{% /md %}}</dd>
-    <dt class="property-optional"
+{{% /md %}}</dd><dt class="property-optional"
             title="Optional">
         <span id="state_customdenymessage_go">
 <a href="#state_customdenymessage_go" style="color: inherit; text-decoration: inherit;">Custom<wbr>Deny<wbr>Message</a>
@@ -1249,8 +1153,7 @@ below for reference structure.
         <span class="property-type">string</span>
     </dt>
     <dd>{{% md %}}Option that returns a custom error message when a user is denied access to the application.
-{{% /md %}}</dd>
-    <dt class="property-optional"
+{{% /md %}}</dd><dt class="property-optional"
             title="Optional">
         <span id="state_customdenyurl_go">
 <a href="#state_customdenyurl_go" style="color: inherit; text-decoration: inherit;">Custom<wbr>Deny<wbr>Url</a>
@@ -1259,8 +1162,7 @@ below for reference structure.
         <span class="property-type">string</span>
     </dt>
     <dd>{{% md %}}Option that redirects to a custom URL when a user is denied access to the application.
-{{% /md %}}</dd>
-    <dt class="property-optional"
+{{% /md %}}</dd><dt class="property-optional"
             title="Optional">
         <span id="state_domain_go">
 <a href="#state_domain_go" style="color: inherit; text-decoration: inherit;">Domain</a>
@@ -1270,8 +1172,7 @@ below for reference structure.
     </dt>
     <dd>{{% md %}}The complete URL of the asset you wish to put
 Cloudflare Access in front of. Can include subdomains or paths. Or both.
-{{% /md %}}</dd>
-    <dt class="property-optional"
+{{% /md %}}</dd><dt class="property-optional"
             title="Optional">
         <span id="state_enablebindingcookie_go">
 <a href="#state_enablebindingcookie_go" style="color: inherit; text-decoration: inherit;">Enable<wbr>Binding<wbr>Cookie</a>
@@ -1280,8 +1181,7 @@ Cloudflare Access in front of. Can include subdomains or paths. Or both.
         <span class="property-type">bool</span>
     </dt>
     <dd>{{% md %}}Option to provide increased security against compromised authorization tokens and CSRF attacks by requiring an additional "binding" cookie on requests. Defaults to `false`.
-{{% /md %}}</dd>
-    <dt class="property-optional"
+{{% /md %}}</dd><dt class="property-optional"
             title="Optional">
         <span id="state_name_go">
 <a href="#state_name_go" style="color: inherit; text-decoration: inherit;">Name</a>
@@ -1290,8 +1190,7 @@ Cloudflare Access in front of. Can include subdomains or paths. Or both.
         <span class="property-type">string</span>
     </dt>
     <dd>{{% md %}}Friendly name of the Access Application.
-{{% /md %}}</dd>
-    <dt class="property-optional"
+{{% /md %}}</dd><dt class="property-optional"
             title="Optional">
         <span id="state_sessionduration_go">
 <a href="#state_sessionduration_go" style="color: inherit; text-decoration: inherit;">Session<wbr>Duration</a>
@@ -1302,8 +1201,7 @@ Cloudflare Access in front of. Can include subdomains or paths. Or both.
     <dd>{{% md %}}How often a user will be forced to
 re-authorise. Must be in the format `"48h"` or `"2h45m"`.
 Valid time units are `ns`, `us` (or `µs`), `ms`, `s`, `m`, `h`. Defaults to `24h`.
-{{% /md %}}</dd>
-    <dt class="property-optional"
+{{% /md %}}</dd><dt class="property-optional"
             title="Optional">
         <span id="state_zoneid_go">
 <a href="#state_zoneid_go" style="color: inherit; text-decoration: inherit;">Zone<wbr>Id</a>
@@ -1312,14 +1210,11 @@ Valid time units are `ns`, `us` (or `µs`), `ms`, `s`, `m`, `h`. Defaults to `24
         <span class="property-type">string</span>
     </dt>
     <dd>{{% md %}}The DNS zone to which the access application should be added. Conflicts with `account_id`.
-{{% /md %}}</dd>
-</dl>
+{{% /md %}}</dd></dl>
 {{% /choosable %}}
 
 {{% choosable language nodejs %}}
-<dl class="resources-properties">
-
-    <dt class="property-optional"
+<dl class="resources-properties"><dt class="property-optional"
             title="Optional">
         <span id="state_accountid_nodejs">
 <a href="#state_accountid_nodejs" style="color: inherit; text-decoration: inherit;">account<wbr>Id</a>
@@ -1328,8 +1223,7 @@ Valid time units are `ns`, `us` (or `µs`), `ms`, `s`, `m`, `h`. Defaults to `24
         <span class="property-type">string</span>
     </dt>
     <dd>{{% md %}}The account to which the access application should be added. Conflicts with `zone_id`.
-{{% /md %}}</dd>
-    <dt class="property-optional"
+{{% /md %}}</dd><dt class="property-optional"
             title="Optional">
         <span id="state_allowedidps_nodejs">
 <a href="#state_allowedidps_nodejs" style="color: inherit; text-decoration: inherit;">allowed<wbr>Idps</a>
@@ -1338,8 +1232,7 @@ Valid time units are `ns`, `us` (or `µs`), `ms`, `s`, `m`, `h`. Defaults to `24
         <span class="property-type">string[]</span>
     </dt>
     <dd>{{% md %}}The identity providers selected for the application.
-{{% /md %}}</dd>
-    <dt class="property-optional"
+{{% /md %}}</dd><dt class="property-optional"
             title="Optional">
         <span id="state_aud_nodejs">
 <a href="#state_aud_nodejs" style="color: inherit; text-decoration: inherit;">aud</a>
@@ -1348,8 +1241,7 @@ Valid time units are `ns`, `us` (or `µs`), `ms`, `s`, `m`, `h`. Defaults to `24
         <span class="property-type">string</span>
     </dt>
     <dd>{{% md %}}Application Audience (AUD) Tag of the application
-{{% /md %}}</dd>
-    <dt class="property-optional"
+{{% /md %}}</dd><dt class="property-optional"
             title="Optional">
         <span id="state_autoredirecttoidentity_nodejs">
 <a href="#state_autoredirecttoidentity_nodejs" style="color: inherit; text-decoration: inherit;">auto<wbr>Redirect<wbr>To<wbr>Identity</a>
@@ -1360,8 +1252,7 @@ Valid time units are `ns`, `us` (or `µs`), `ms`, `s`, `m`, `h`. Defaults to `24
     <dd>{{% md %}}Option to skip identity provider
 selection if only one is configured in allowed_idps. Defaults to `false`
 (disabled).
-{{% /md %}}</dd>
-    <dt class="property-optional"
+{{% /md %}}</dd><dt class="property-optional"
             title="Optional">
         <span id="state_corsheaders_nodejs">
 <a href="#state_corsheaders_nodejs" style="color: inherit; text-decoration: inherit;">cors<wbr>Headers</a>
@@ -1371,8 +1262,7 @@ selection if only one is configured in allowed_idps. Defaults to `false`
     </dt>
     <dd>{{% md %}}CORS configuration for the Access Application. See
 below for reference structure.
-{{% /md %}}</dd>
-    <dt class="property-optional"
+{{% /md %}}</dd><dt class="property-optional"
             title="Optional">
         <span id="state_customdenymessage_nodejs">
 <a href="#state_customdenymessage_nodejs" style="color: inherit; text-decoration: inherit;">custom<wbr>Deny<wbr>Message</a>
@@ -1381,8 +1271,7 @@ below for reference structure.
         <span class="property-type">string</span>
     </dt>
     <dd>{{% md %}}Option that returns a custom error message when a user is denied access to the application.
-{{% /md %}}</dd>
-    <dt class="property-optional"
+{{% /md %}}</dd><dt class="property-optional"
             title="Optional">
         <span id="state_customdenyurl_nodejs">
 <a href="#state_customdenyurl_nodejs" style="color: inherit; text-decoration: inherit;">custom<wbr>Deny<wbr>Url</a>
@@ -1391,8 +1280,7 @@ below for reference structure.
         <span class="property-type">string</span>
     </dt>
     <dd>{{% md %}}Option that redirects to a custom URL when a user is denied access to the application.
-{{% /md %}}</dd>
-    <dt class="property-optional"
+{{% /md %}}</dd><dt class="property-optional"
             title="Optional">
         <span id="state_domain_nodejs">
 <a href="#state_domain_nodejs" style="color: inherit; text-decoration: inherit;">domain</a>
@@ -1402,8 +1290,7 @@ below for reference structure.
     </dt>
     <dd>{{% md %}}The complete URL of the asset you wish to put
 Cloudflare Access in front of. Can include subdomains or paths. Or both.
-{{% /md %}}</dd>
-    <dt class="property-optional"
+{{% /md %}}</dd><dt class="property-optional"
             title="Optional">
         <span id="state_enablebindingcookie_nodejs">
 <a href="#state_enablebindingcookie_nodejs" style="color: inherit; text-decoration: inherit;">enable<wbr>Binding<wbr>Cookie</a>
@@ -1412,8 +1299,7 @@ Cloudflare Access in front of. Can include subdomains or paths. Or both.
         <span class="property-type">boolean</span>
     </dt>
     <dd>{{% md %}}Option to provide increased security against compromised authorization tokens and CSRF attacks by requiring an additional "binding" cookie on requests. Defaults to `false`.
-{{% /md %}}</dd>
-    <dt class="property-optional"
+{{% /md %}}</dd><dt class="property-optional"
             title="Optional">
         <span id="state_name_nodejs">
 <a href="#state_name_nodejs" style="color: inherit; text-decoration: inherit;">name</a>
@@ -1422,8 +1308,7 @@ Cloudflare Access in front of. Can include subdomains or paths. Or both.
         <span class="property-type">string</span>
     </dt>
     <dd>{{% md %}}Friendly name of the Access Application.
-{{% /md %}}</dd>
-    <dt class="property-optional"
+{{% /md %}}</dd><dt class="property-optional"
             title="Optional">
         <span id="state_sessionduration_nodejs">
 <a href="#state_sessionduration_nodejs" style="color: inherit; text-decoration: inherit;">session<wbr>Duration</a>
@@ -1434,8 +1319,7 @@ Cloudflare Access in front of. Can include subdomains or paths. Or both.
     <dd>{{% md %}}How often a user will be forced to
 re-authorise. Must be in the format `"48h"` or `"2h45m"`.
 Valid time units are `ns`, `us` (or `µs`), `ms`, `s`, `m`, `h`. Defaults to `24h`.
-{{% /md %}}</dd>
-    <dt class="property-optional"
+{{% /md %}}</dd><dt class="property-optional"
             title="Optional">
         <span id="state_zoneid_nodejs">
 <a href="#state_zoneid_nodejs" style="color: inherit; text-decoration: inherit;">zone<wbr>Id</a>
@@ -1444,14 +1328,11 @@ Valid time units are `ns`, `us` (or `µs`), `ms`, `s`, `m`, `h`. Defaults to `24
         <span class="property-type">string</span>
     </dt>
     <dd>{{% md %}}The DNS zone to which the access application should be added. Conflicts with `account_id`.
-{{% /md %}}</dd>
-</dl>
+{{% /md %}}</dd></dl>
 {{% /choosable %}}
 
 {{% choosable language python %}}
-<dl class="resources-properties">
-
-    <dt class="property-optional"
+<dl class="resources-properties"><dt class="property-optional"
             title="Optional">
         <span id="state_account_id_python">
 <a href="#state_account_id_python" style="color: inherit; text-decoration: inherit;">account_<wbr>id</a>
@@ -1460,8 +1341,7 @@ Valid time units are `ns`, `us` (or `µs`), `ms`, `s`, `m`, `h`. Defaults to `24
         <span class="property-type">str</span>
     </dt>
     <dd>{{% md %}}The account to which the access application should be added. Conflicts with `zone_id`.
-{{% /md %}}</dd>
-    <dt class="property-optional"
+{{% /md %}}</dd><dt class="property-optional"
             title="Optional">
         <span id="state_allowed_idps_python">
 <a href="#state_allowed_idps_python" style="color: inherit; text-decoration: inherit;">allowed_<wbr>idps</a>
@@ -1470,8 +1350,7 @@ Valid time units are `ns`, `us` (or `µs`), `ms`, `s`, `m`, `h`. Defaults to `24
         <span class="property-type">Sequence[str]</span>
     </dt>
     <dd>{{% md %}}The identity providers selected for the application.
-{{% /md %}}</dd>
-    <dt class="property-optional"
+{{% /md %}}</dd><dt class="property-optional"
             title="Optional">
         <span id="state_aud_python">
 <a href="#state_aud_python" style="color: inherit; text-decoration: inherit;">aud</a>
@@ -1480,8 +1359,7 @@ Valid time units are `ns`, `us` (or `µs`), `ms`, `s`, `m`, `h`. Defaults to `24
         <span class="property-type">str</span>
     </dt>
     <dd>{{% md %}}Application Audience (AUD) Tag of the application
-{{% /md %}}</dd>
-    <dt class="property-optional"
+{{% /md %}}</dd><dt class="property-optional"
             title="Optional">
         <span id="state_auto_redirect_to_identity_python">
 <a href="#state_auto_redirect_to_identity_python" style="color: inherit; text-decoration: inherit;">auto_<wbr>redirect_<wbr>to_<wbr>identity</a>
@@ -1492,8 +1370,7 @@ Valid time units are `ns`, `us` (or `µs`), `ms`, `s`, `m`, `h`. Defaults to `24
     <dd>{{% md %}}Option to skip identity provider
 selection if only one is configured in allowed_idps. Defaults to `false`
 (disabled).
-{{% /md %}}</dd>
-    <dt class="property-optional"
+{{% /md %}}</dd><dt class="property-optional"
             title="Optional">
         <span id="state_cors_headers_python">
 <a href="#state_cors_headers_python" style="color: inherit; text-decoration: inherit;">cors_<wbr>headers</a>
@@ -1503,8 +1380,7 @@ selection if only one is configured in allowed_idps. Defaults to `false`
     </dt>
     <dd>{{% md %}}CORS configuration for the Access Application. See
 below for reference structure.
-{{% /md %}}</dd>
-    <dt class="property-optional"
+{{% /md %}}</dd><dt class="property-optional"
             title="Optional">
         <span id="state_custom_deny_message_python">
 <a href="#state_custom_deny_message_python" style="color: inherit; text-decoration: inherit;">custom_<wbr>deny_<wbr>message</a>
@@ -1513,8 +1389,7 @@ below for reference structure.
         <span class="property-type">str</span>
     </dt>
     <dd>{{% md %}}Option that returns a custom error message when a user is denied access to the application.
-{{% /md %}}</dd>
-    <dt class="property-optional"
+{{% /md %}}</dd><dt class="property-optional"
             title="Optional">
         <span id="state_custom_deny_url_python">
 <a href="#state_custom_deny_url_python" style="color: inherit; text-decoration: inherit;">custom_<wbr>deny_<wbr>url</a>
@@ -1523,8 +1398,7 @@ below for reference structure.
         <span class="property-type">str</span>
     </dt>
     <dd>{{% md %}}Option that redirects to a custom URL when a user is denied access to the application.
-{{% /md %}}</dd>
-    <dt class="property-optional"
+{{% /md %}}</dd><dt class="property-optional"
             title="Optional">
         <span id="state_domain_python">
 <a href="#state_domain_python" style="color: inherit; text-decoration: inherit;">domain</a>
@@ -1534,8 +1408,7 @@ below for reference structure.
     </dt>
     <dd>{{% md %}}The complete URL of the asset you wish to put
 Cloudflare Access in front of. Can include subdomains or paths. Or both.
-{{% /md %}}</dd>
-    <dt class="property-optional"
+{{% /md %}}</dd><dt class="property-optional"
             title="Optional">
         <span id="state_enable_binding_cookie_python">
 <a href="#state_enable_binding_cookie_python" style="color: inherit; text-decoration: inherit;">enable_<wbr>binding_<wbr>cookie</a>
@@ -1544,8 +1417,7 @@ Cloudflare Access in front of. Can include subdomains or paths. Or both.
         <span class="property-type">bool</span>
     </dt>
     <dd>{{% md %}}Option to provide increased security against compromised authorization tokens and CSRF attacks by requiring an additional "binding" cookie on requests. Defaults to `false`.
-{{% /md %}}</dd>
-    <dt class="property-optional"
+{{% /md %}}</dd><dt class="property-optional"
             title="Optional">
         <span id="state_name_python">
 <a href="#state_name_python" style="color: inherit; text-decoration: inherit;">name</a>
@@ -1554,8 +1426,7 @@ Cloudflare Access in front of. Can include subdomains or paths. Or both.
         <span class="property-type">str</span>
     </dt>
     <dd>{{% md %}}Friendly name of the Access Application.
-{{% /md %}}</dd>
-    <dt class="property-optional"
+{{% /md %}}</dd><dt class="property-optional"
             title="Optional">
         <span id="state_session_duration_python">
 <a href="#state_session_duration_python" style="color: inherit; text-decoration: inherit;">session_<wbr>duration</a>
@@ -1566,8 +1437,7 @@ Cloudflare Access in front of. Can include subdomains or paths. Or both.
     <dd>{{% md %}}How often a user will be forced to
 re-authorise. Must be in the format `"48h"` or `"2h45m"`.
 Valid time units are `ns`, `us` (or `µs`), `ms`, `s`, `m`, `h`. Defaults to `24h`.
-{{% /md %}}</dd>
-    <dt class="property-optional"
+{{% /md %}}</dd><dt class="property-optional"
             title="Optional">
         <span id="state_zone_id_python">
 <a href="#state_zone_id_python" style="color: inherit; text-decoration: inherit;">zone_<wbr>id</a>
@@ -1576,8 +1446,7 @@ Valid time units are `ns`, `us` (or `µs`), `ms`, `s`, `m`, `h`. Defaults to `24
         <span class="property-type">str</span>
     </dt>
     <dd>{{% md %}}The DNS zone to which the access application should be added. Conflicts with `account_id`.
-{{% /md %}}</dd>
-</dl>
+{{% /md %}}</dd></dl>
 {{% /choosable %}}
 
 
@@ -1592,9 +1461,7 @@ Valid time units are `ns`, `us` (or `µs`), `ms`, `s`, `m`, `h`. Defaults to `24
 <h4 id="accessapplicationcorsheader">Access<wbr>Application<wbr>Cors<wbr>Header</h4>
 
 {{% choosable language csharp %}}
-<dl class="resources-properties">
-
-    <dt class="property-optional"
+<dl class="resources-properties"><dt class="property-optional"
             title="Optional">
         <span id="allowallheaders_csharp">
 <a href="#allowallheaders_csharp" style="color: inherit; text-decoration: inherit;">Allow<wbr>All<wbr>Headers</a>
@@ -1604,8 +1471,7 @@ Valid time units are `ns`, `us` (or `µs`), `ms`, `s`, `m`, `h`. Defaults to `24
     </dt>
     <dd>{{% md %}}Boolean value to determine whether all
 HTTP headers are exposed.
-{{% /md %}}</dd>
-    <dt class="property-optional"
+{{% /md %}}</dd><dt class="property-optional"
             title="Optional">
         <span id="allowallmethods_csharp">
 <a href="#allowallmethods_csharp" style="color: inherit; text-decoration: inherit;">Allow<wbr>All<wbr>Methods</a>
@@ -1615,8 +1481,7 @@ HTTP headers are exposed.
     </dt>
     <dd>{{% md %}}Boolean value to determine whether all
 methods are exposed.
-{{% /md %}}</dd>
-    <dt class="property-optional"
+{{% /md %}}</dd><dt class="property-optional"
             title="Optional">
         <span id="allowallorigins_csharp">
 <a href="#allowallorigins_csharp" style="color: inherit; text-decoration: inherit;">Allow<wbr>All<wbr>Origins</a>
@@ -1626,8 +1491,7 @@ methods are exposed.
     </dt>
     <dd>{{% md %}}Boolean value to determine whether all
 origins are permitted to make CORS requests.
-{{% /md %}}</dd>
-    <dt class="property-optional"
+{{% /md %}}</dd><dt class="property-optional"
             title="Optional">
         <span id="allowcredentials_csharp">
 <a href="#allowcredentials_csharp" style="color: inherit; text-decoration: inherit;">Allow<wbr>Credentials</a>
@@ -1638,8 +1502,7 @@ origins are permitted to make CORS requests.
     <dd>{{% md %}}Boolean value to determine if credentials
 (cookies, authorization headers, or TLS client certificates) are included with
 requests.
-{{% /md %}}</dd>
-    <dt class="property-optional"
+{{% /md %}}</dd><dt class="property-optional"
             title="Optional">
         <span id="allowedheaders_csharp">
 <a href="#allowedheaders_csharp" style="color: inherit; text-decoration: inherit;">Allowed<wbr>Headers</a>
@@ -1648,8 +1511,7 @@ requests.
         <span class="property-type">List&lt;string&gt;</span>
     </dt>
     <dd>{{% md %}}List of HTTP headers to expose via CORS.
-{{% /md %}}</dd>
-    <dt class="property-optional"
+{{% /md %}}</dd><dt class="property-optional"
             title="Optional">
         <span id="allowedmethods_csharp">
 <a href="#allowedmethods_csharp" style="color: inherit; text-decoration: inherit;">Allowed<wbr>Methods</a>
@@ -1658,8 +1520,7 @@ requests.
         <span class="property-type">List&lt;string&gt;</span>
     </dt>
     <dd>{{% md %}}List of methods to expose via CORS.
-{{% /md %}}</dd>
-    <dt class="property-optional"
+{{% /md %}}</dd><dt class="property-optional"
             title="Optional">
         <span id="allowedorigins_csharp">
 <a href="#allowedorigins_csharp" style="color: inherit; text-decoration: inherit;">Allowed<wbr>Origins</a>
@@ -1668,8 +1529,7 @@ requests.
         <span class="property-type">List&lt;string&gt;</span>
     </dt>
     <dd>{{% md %}}List of origins permitted to make CORS requests.
-{{% /md %}}</dd>
-    <dt class="property-optional"
+{{% /md %}}</dd><dt class="property-optional"
             title="Optional">
         <span id="maxage_csharp">
 <a href="#maxage_csharp" style="color: inherit; text-decoration: inherit;">Max<wbr>Age</a>
@@ -1679,14 +1539,11 @@ requests.
     </dt>
     <dd>{{% md %}}Integer representing the maximum time a preflight
 request will be cached.
-{{% /md %}}</dd>
-</dl>
+{{% /md %}}</dd></dl>
 {{% /choosable %}}
 
 {{% choosable language go %}}
-<dl class="resources-properties">
-
-    <dt class="property-optional"
+<dl class="resources-properties"><dt class="property-optional"
             title="Optional">
         <span id="allowallheaders_go">
 <a href="#allowallheaders_go" style="color: inherit; text-decoration: inherit;">Allow<wbr>All<wbr>Headers</a>
@@ -1696,8 +1553,7 @@ request will be cached.
     </dt>
     <dd>{{% md %}}Boolean value to determine whether all
 HTTP headers are exposed.
-{{% /md %}}</dd>
-    <dt class="property-optional"
+{{% /md %}}</dd><dt class="property-optional"
             title="Optional">
         <span id="allowallmethods_go">
 <a href="#allowallmethods_go" style="color: inherit; text-decoration: inherit;">Allow<wbr>All<wbr>Methods</a>
@@ -1707,8 +1563,7 @@ HTTP headers are exposed.
     </dt>
     <dd>{{% md %}}Boolean value to determine whether all
 methods are exposed.
-{{% /md %}}</dd>
-    <dt class="property-optional"
+{{% /md %}}</dd><dt class="property-optional"
             title="Optional">
         <span id="allowallorigins_go">
 <a href="#allowallorigins_go" style="color: inherit; text-decoration: inherit;">Allow<wbr>All<wbr>Origins</a>
@@ -1718,8 +1573,7 @@ methods are exposed.
     </dt>
     <dd>{{% md %}}Boolean value to determine whether all
 origins are permitted to make CORS requests.
-{{% /md %}}</dd>
-    <dt class="property-optional"
+{{% /md %}}</dd><dt class="property-optional"
             title="Optional">
         <span id="allowcredentials_go">
 <a href="#allowcredentials_go" style="color: inherit; text-decoration: inherit;">Allow<wbr>Credentials</a>
@@ -1730,8 +1584,7 @@ origins are permitted to make CORS requests.
     <dd>{{% md %}}Boolean value to determine if credentials
 (cookies, authorization headers, or TLS client certificates) are included with
 requests.
-{{% /md %}}</dd>
-    <dt class="property-optional"
+{{% /md %}}</dd><dt class="property-optional"
             title="Optional">
         <span id="allowedheaders_go">
 <a href="#allowedheaders_go" style="color: inherit; text-decoration: inherit;">Allowed<wbr>Headers</a>
@@ -1740,8 +1593,7 @@ requests.
         <span class="property-type">[]string</span>
     </dt>
     <dd>{{% md %}}List of HTTP headers to expose via CORS.
-{{% /md %}}</dd>
-    <dt class="property-optional"
+{{% /md %}}</dd><dt class="property-optional"
             title="Optional">
         <span id="allowedmethods_go">
 <a href="#allowedmethods_go" style="color: inherit; text-decoration: inherit;">Allowed<wbr>Methods</a>
@@ -1750,8 +1602,7 @@ requests.
         <span class="property-type">[]string</span>
     </dt>
     <dd>{{% md %}}List of methods to expose via CORS.
-{{% /md %}}</dd>
-    <dt class="property-optional"
+{{% /md %}}</dd><dt class="property-optional"
             title="Optional">
         <span id="allowedorigins_go">
 <a href="#allowedorigins_go" style="color: inherit; text-decoration: inherit;">Allowed<wbr>Origins</a>
@@ -1760,8 +1611,7 @@ requests.
         <span class="property-type">[]string</span>
     </dt>
     <dd>{{% md %}}List of origins permitted to make CORS requests.
-{{% /md %}}</dd>
-    <dt class="property-optional"
+{{% /md %}}</dd><dt class="property-optional"
             title="Optional">
         <span id="maxage_go">
 <a href="#maxage_go" style="color: inherit; text-decoration: inherit;">Max<wbr>Age</a>
@@ -1771,14 +1621,11 @@ requests.
     </dt>
     <dd>{{% md %}}Integer representing the maximum time a preflight
 request will be cached.
-{{% /md %}}</dd>
-</dl>
+{{% /md %}}</dd></dl>
 {{% /choosable %}}
 
 {{% choosable language nodejs %}}
-<dl class="resources-properties">
-
-    <dt class="property-optional"
+<dl class="resources-properties"><dt class="property-optional"
             title="Optional">
         <span id="allowallheaders_nodejs">
 <a href="#allowallheaders_nodejs" style="color: inherit; text-decoration: inherit;">allow<wbr>All<wbr>Headers</a>
@@ -1788,8 +1635,7 @@ request will be cached.
     </dt>
     <dd>{{% md %}}Boolean value to determine whether all
 HTTP headers are exposed.
-{{% /md %}}</dd>
-    <dt class="property-optional"
+{{% /md %}}</dd><dt class="property-optional"
             title="Optional">
         <span id="allowallmethods_nodejs">
 <a href="#allowallmethods_nodejs" style="color: inherit; text-decoration: inherit;">allow<wbr>All<wbr>Methods</a>
@@ -1799,8 +1645,7 @@ HTTP headers are exposed.
     </dt>
     <dd>{{% md %}}Boolean value to determine whether all
 methods are exposed.
-{{% /md %}}</dd>
-    <dt class="property-optional"
+{{% /md %}}</dd><dt class="property-optional"
             title="Optional">
         <span id="allowallorigins_nodejs">
 <a href="#allowallorigins_nodejs" style="color: inherit; text-decoration: inherit;">allow<wbr>All<wbr>Origins</a>
@@ -1810,8 +1655,7 @@ methods are exposed.
     </dt>
     <dd>{{% md %}}Boolean value to determine whether all
 origins are permitted to make CORS requests.
-{{% /md %}}</dd>
-    <dt class="property-optional"
+{{% /md %}}</dd><dt class="property-optional"
             title="Optional">
         <span id="allowcredentials_nodejs">
 <a href="#allowcredentials_nodejs" style="color: inherit; text-decoration: inherit;">allow<wbr>Credentials</a>
@@ -1822,8 +1666,7 @@ origins are permitted to make CORS requests.
     <dd>{{% md %}}Boolean value to determine if credentials
 (cookies, authorization headers, or TLS client certificates) are included with
 requests.
-{{% /md %}}</dd>
-    <dt class="property-optional"
+{{% /md %}}</dd><dt class="property-optional"
             title="Optional">
         <span id="allowedheaders_nodejs">
 <a href="#allowedheaders_nodejs" style="color: inherit; text-decoration: inherit;">allowed<wbr>Headers</a>
@@ -1832,8 +1675,7 @@ requests.
         <span class="property-type">string[]</span>
     </dt>
     <dd>{{% md %}}List of HTTP headers to expose via CORS.
-{{% /md %}}</dd>
-    <dt class="property-optional"
+{{% /md %}}</dd><dt class="property-optional"
             title="Optional">
         <span id="allowedmethods_nodejs">
 <a href="#allowedmethods_nodejs" style="color: inherit; text-decoration: inherit;">allowed<wbr>Methods</a>
@@ -1842,8 +1684,7 @@ requests.
         <span class="property-type">string[]</span>
     </dt>
     <dd>{{% md %}}List of methods to expose via CORS.
-{{% /md %}}</dd>
-    <dt class="property-optional"
+{{% /md %}}</dd><dt class="property-optional"
             title="Optional">
         <span id="allowedorigins_nodejs">
 <a href="#allowedorigins_nodejs" style="color: inherit; text-decoration: inherit;">allowed<wbr>Origins</a>
@@ -1852,8 +1693,7 @@ requests.
         <span class="property-type">string[]</span>
     </dt>
     <dd>{{% md %}}List of origins permitted to make CORS requests.
-{{% /md %}}</dd>
-    <dt class="property-optional"
+{{% /md %}}</dd><dt class="property-optional"
             title="Optional">
         <span id="maxage_nodejs">
 <a href="#maxage_nodejs" style="color: inherit; text-decoration: inherit;">max<wbr>Age</a>
@@ -1863,14 +1703,11 @@ requests.
     </dt>
     <dd>{{% md %}}Integer representing the maximum time a preflight
 request will be cached.
-{{% /md %}}</dd>
-</dl>
+{{% /md %}}</dd></dl>
 {{% /choosable %}}
 
 {{% choosable language python %}}
-<dl class="resources-properties">
-
-    <dt class="property-optional"
+<dl class="resources-properties"><dt class="property-optional"
             title="Optional">
         <span id="allow_all_headers_python">
 <a href="#allow_all_headers_python" style="color: inherit; text-decoration: inherit;">allow_<wbr>all_<wbr>headers</a>
@@ -1880,8 +1717,7 @@ request will be cached.
     </dt>
     <dd>{{% md %}}Boolean value to determine whether all
 HTTP headers are exposed.
-{{% /md %}}</dd>
-    <dt class="property-optional"
+{{% /md %}}</dd><dt class="property-optional"
             title="Optional">
         <span id="allow_all_methods_python">
 <a href="#allow_all_methods_python" style="color: inherit; text-decoration: inherit;">allow_<wbr>all_<wbr>methods</a>
@@ -1891,8 +1727,7 @@ HTTP headers are exposed.
     </dt>
     <dd>{{% md %}}Boolean value to determine whether all
 methods are exposed.
-{{% /md %}}</dd>
-    <dt class="property-optional"
+{{% /md %}}</dd><dt class="property-optional"
             title="Optional">
         <span id="allow_all_origins_python">
 <a href="#allow_all_origins_python" style="color: inherit; text-decoration: inherit;">allow_<wbr>all_<wbr>origins</a>
@@ -1902,8 +1737,7 @@ methods are exposed.
     </dt>
     <dd>{{% md %}}Boolean value to determine whether all
 origins are permitted to make CORS requests.
-{{% /md %}}</dd>
-    <dt class="property-optional"
+{{% /md %}}</dd><dt class="property-optional"
             title="Optional">
         <span id="allow_credentials_python">
 <a href="#allow_credentials_python" style="color: inherit; text-decoration: inherit;">allow_<wbr>credentials</a>
@@ -1914,8 +1748,7 @@ origins are permitted to make CORS requests.
     <dd>{{% md %}}Boolean value to determine if credentials
 (cookies, authorization headers, or TLS client certificates) are included with
 requests.
-{{% /md %}}</dd>
-    <dt class="property-optional"
+{{% /md %}}</dd><dt class="property-optional"
             title="Optional">
         <span id="allowed_headers_python">
 <a href="#allowed_headers_python" style="color: inherit; text-decoration: inherit;">allowed_<wbr>headers</a>
@@ -1924,8 +1757,7 @@ requests.
         <span class="property-type">Sequence[str]</span>
     </dt>
     <dd>{{% md %}}List of HTTP headers to expose via CORS.
-{{% /md %}}</dd>
-    <dt class="property-optional"
+{{% /md %}}</dd><dt class="property-optional"
             title="Optional">
         <span id="allowed_methods_python">
 <a href="#allowed_methods_python" style="color: inherit; text-decoration: inherit;">allowed_<wbr>methods</a>
@@ -1934,8 +1766,7 @@ requests.
         <span class="property-type">Sequence[str]</span>
     </dt>
     <dd>{{% md %}}List of methods to expose via CORS.
-{{% /md %}}</dd>
-    <dt class="property-optional"
+{{% /md %}}</dd><dt class="property-optional"
             title="Optional">
         <span id="allowed_origins_python">
 <a href="#allowed_origins_python" style="color: inherit; text-decoration: inherit;">allowed_<wbr>origins</a>
@@ -1944,8 +1775,7 @@ requests.
         <span class="property-type">Sequence[str]</span>
     </dt>
     <dd>{{% md %}}List of origins permitted to make CORS requests.
-{{% /md %}}</dd>
-    <dt class="property-optional"
+{{% /md %}}</dd><dt class="property-optional"
             title="Optional">
         <span id="max_age_python">
 <a href="#max_age_python" style="color: inherit; text-decoration: inherit;">max_<wbr>age</a>
@@ -1955,8 +1785,7 @@ requests.
     </dt>
     <dd>{{% md %}}Integer representing the maximum time a preflight
 request will be cached.
-{{% /md %}}</dd>
-</dl>
+{{% /md %}}</dd></dl>
 {{% /choosable %}}
 ## Import
 
@@ -1977,6 +1806,6 @@ Access Applications can be imported using a composite ID formed of zone ID and a
 	<dt>License</dt>
 	<dd>Apache-2.0</dd>
 	<dt>Notes</dt>
-	<dd>This Pulumi package is based on the [`cloudflare` Terraform Provider](https://github.com/cloudflare/terraform-provider-cloudflare).</dd>
+	<dd>{{% md %}}This Pulumi package is based on the [`cloudflare` Terraform Provider](https://github.com/cloudflare/terraform-provider-cloudflare).{{% /md %}}</dd>
 </dl>
 

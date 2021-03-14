@@ -51,9 +51,7 @@ The following arguments are supported:
 
 
 {{% choosable language csharp %}}
-<dl class="resources-properties">
-
-    <dt class="property-required"
+<dl class="resources-properties"><dt class="property-required"
             title="Required">
         <span id="name_csharp">
 <a href="#name_csharp" style="color: inherit; text-decoration: inherit;">Name</a>
@@ -61,14 +59,11 @@ The following arguments are supported:
         <span class="property-indicator"></span>
         <span class="property-type">string</span>
     </dt>
-    <dd>{{% md %}}The name of the diagnostic setting.{{% /md %}}</dd>
-</dl>
+    <dd>{{% md %}}The name of the diagnostic setting.{{% /md %}}</dd></dl>
 {{% /choosable %}}
 
 {{% choosable language go %}}
-<dl class="resources-properties">
-
-    <dt class="property-required"
+<dl class="resources-properties"><dt class="property-required"
             title="Required">
         <span id="name_go">
 <a href="#name_go" style="color: inherit; text-decoration: inherit;">Name</a>
@@ -76,14 +71,11 @@ The following arguments are supported:
         <span class="property-indicator"></span>
         <span class="property-type">string</span>
     </dt>
-    <dd>{{% md %}}The name of the diagnostic setting.{{% /md %}}</dd>
-</dl>
+    <dd>{{% md %}}The name of the diagnostic setting.{{% /md %}}</dd></dl>
 {{% /choosable %}}
 
 {{% choosable language nodejs %}}
-<dl class="resources-properties">
-
-    <dt class="property-required"
+<dl class="resources-properties"><dt class="property-required"
             title="Required">
         <span id="name_nodejs">
 <a href="#name_nodejs" style="color: inherit; text-decoration: inherit;">name</a>
@@ -91,14 +83,11 @@ The following arguments are supported:
         <span class="property-indicator"></span>
         <span class="property-type">string</span>
     </dt>
-    <dd>{{% md %}}The name of the diagnostic setting.{{% /md %}}</dd>
-</dl>
+    <dd>{{% md %}}The name of the diagnostic setting.{{% /md %}}</dd></dl>
 {{% /choosable %}}
 
 {{% choosable language python %}}
-<dl class="resources-properties">
-
-    <dt class="property-required"
+<dl class="resources-properties"><dt class="property-required"
             title="Required">
         <span id="name_python">
 <a href="#name_python" style="color: inherit; text-decoration: inherit;">name</a>
@@ -106,8 +95,7 @@ The following arguments are supported:
         <span class="property-indicator"></span>
         <span class="property-type">str</span>
     </dt>
-    <dd>{{% md %}}The name of the diagnostic setting.{{% /md %}}</dd>
-</dl>
+    <dd>{{% md %}}The name of the diagnostic setting.{{% /md %}}</dd></dl>
 {{% /choosable %}}
 
 
@@ -120,9 +108,7 @@ The following output properties are available:
 
 
 {{% choosable language csharp %}}
-<dl class="resources-properties">
-
-    <dt class="property-"
+<dl class="resources-properties"><dt class="property-"
             title="">
         <span id="id_csharp">
 <a href="#id_csharp" style="color: inherit; text-decoration: inherit;">Id</a>
@@ -130,8 +116,7 @@ The following output properties are available:
         <span class="property-indicator"></span>
         <span class="property-type">string</span>
     </dt>
-    <dd>{{% md %}}Azure resource Id{{% /md %}}</dd>
-    <dt class="property-"
+    <dd>{{% md %}}Azure resource Id{{% /md %}}</dd><dt class="property-"
             title="">
         <span id="name_csharp">
 <a href="#name_csharp" style="color: inherit; text-decoration: inherit;">Name</a>
@@ -139,8 +124,7 @@ The following output properties are available:
         <span class="property-indicator"></span>
         <span class="property-type">string</span>
     </dt>
-    <dd>{{% md %}}Azure resource name{{% /md %}}</dd>
-    <dt class="property-"
+    <dd>{{% md %}}Azure resource name{{% /md %}}</dd><dt class="property-"
             title="">
         <span id="type_csharp">
 <a href="#type_csharp" style="color: inherit; text-decoration: inherit;">Type</a>
@@ -148,8 +132,7 @@ The following output properties are available:
         <span class="property-indicator"></span>
         <span class="property-type">string</span>
     </dt>
-    <dd>{{% md %}}Azure resource type{{% /md %}}</dd>
-    <dt class="property-"
+    <dd>{{% md %}}Azure resource type{{% /md %}}</dd><dt class="property-"
             title="">
         <span id="eventhubauthorizationruleid_csharp">
 <a href="#eventhubauthorizationruleid_csharp" style="color: inherit; text-decoration: inherit;">Event<wbr>Hub<wbr>Authorization<wbr>Rule<wbr>Id</a>
@@ -157,8 +140,7 @@ The following output properties are available:
         <span class="property-indicator"></span>
         <span class="property-type">string</span>
     </dt>
-    <dd>{{% md %}}The resource Id for the event hub authorization rule.{{% /md %}}</dd>
-    <dt class="property-"
+    <dd>{{% md %}}The resource Id for the event hub authorization rule.{{% /md %}}</dd><dt class="property-"
             title="">
         <span id="eventhubname_csharp">
 <a href="#eventhubname_csharp" style="color: inherit; text-decoration: inherit;">Event<wbr>Hub<wbr>Name</a>
@@ -166,8 +148,7 @@ The following output properties are available:
         <span class="property-indicator"></span>
         <span class="property-type">string</span>
     </dt>
-    <dd>{{% md %}}The name of the event hub. If none is specified, the default event hub will be selected.{{% /md %}}</dd>
-    <dt class="property-"
+    <dd>{{% md %}}The name of the event hub. If none is specified, the default event hub will be selected.{{% /md %}}</dd><dt class="property-"
             title="">
         <span id="logs_csharp">
 <a href="#logs_csharp" style="color: inherit; text-decoration: inherit;">Logs</a>
@@ -175,8 +156,7 @@ The following output properties are available:
         <span class="property-indicator"></span>
         <span class="property-type"><a href="#logsettingsresponse">List&lt;Pulumi.<wbr>Azure<wbr>Native.<wbr>Aad<wbr>Iam.<wbr>Outputs.<wbr>Log<wbr>Settings<wbr>Response&gt;</a></span>
     </dt>
-    <dd>{{% md %}}The list of logs settings.{{% /md %}}</dd>
-    <dt class="property-"
+    <dd>{{% md %}}The list of logs settings.{{% /md %}}</dd><dt class="property-"
             title="">
         <span id="servicebusruleid_csharp">
 <a href="#servicebusruleid_csharp" style="color: inherit; text-decoration: inherit;">Service<wbr>Bus<wbr>Rule<wbr>Id</a>
@@ -184,8 +164,7 @@ The following output properties are available:
         <span class="property-indicator"></span>
         <span class="property-type">string</span>
     </dt>
-    <dd>{{% md %}}The service bus rule Id of the diagnostic setting. This is here to maintain backwards compatibility.{{% /md %}}</dd>
-    <dt class="property-"
+    <dd>{{% md %}}The service bus rule Id of the diagnostic setting. This is here to maintain backwards compatibility.{{% /md %}}</dd><dt class="property-"
             title="">
         <span id="storageaccountid_csharp">
 <a href="#storageaccountid_csharp" style="color: inherit; text-decoration: inherit;">Storage<wbr>Account<wbr>Id</a>
@@ -193,8 +172,7 @@ The following output properties are available:
         <span class="property-indicator"></span>
         <span class="property-type">string</span>
     </dt>
-    <dd>{{% md %}}The resource ID of the storage account to which you would like to send Diagnostic Logs.{{% /md %}}</dd>
-    <dt class="property-"
+    <dd>{{% md %}}The resource ID of the storage account to which you would like to send Diagnostic Logs.{{% /md %}}</dd><dt class="property-"
             title="">
         <span id="workspaceid_csharp">
 <a href="#workspaceid_csharp" style="color: inherit; text-decoration: inherit;">Workspace<wbr>Id</a>
@@ -202,14 +180,11 @@ The following output properties are available:
         <span class="property-indicator"></span>
         <span class="property-type">string</span>
     </dt>
-    <dd>{{% md %}}The workspace ID (resource ID of a Log Analytics workspace) for a Log Analytics workspace to which you would like to send Diagnostic Logs. Example: /subscriptions/4b9e8510-67ab-4e9a-95a9-e2f1e570ea9c/resourceGroups/insights-integration/providers/Microsoft.OperationalInsights/workspaces/viruela2{{% /md %}}</dd>
-</dl>
+    <dd>{{% md %}}The workspace ID (resource ID of a Log Analytics workspace) for a Log Analytics workspace to which you would like to send Diagnostic Logs. Example: /subscriptions/4b9e8510-67ab-4e9a-95a9-e2f1e570ea9c/resourceGroups/insights-integration/providers/Microsoft.OperationalInsights/workspaces/viruela2{{% /md %}}</dd></dl>
 {{% /choosable %}}
 
 {{% choosable language go %}}
-<dl class="resources-properties">
-
-    <dt class="property-"
+<dl class="resources-properties"><dt class="property-"
             title="">
         <span id="id_go">
 <a href="#id_go" style="color: inherit; text-decoration: inherit;">Id</a>
@@ -217,8 +192,7 @@ The following output properties are available:
         <span class="property-indicator"></span>
         <span class="property-type">string</span>
     </dt>
-    <dd>{{% md %}}Azure resource Id{{% /md %}}</dd>
-    <dt class="property-"
+    <dd>{{% md %}}Azure resource Id{{% /md %}}</dd><dt class="property-"
             title="">
         <span id="name_go">
 <a href="#name_go" style="color: inherit; text-decoration: inherit;">Name</a>
@@ -226,8 +200,7 @@ The following output properties are available:
         <span class="property-indicator"></span>
         <span class="property-type">string</span>
     </dt>
-    <dd>{{% md %}}Azure resource name{{% /md %}}</dd>
-    <dt class="property-"
+    <dd>{{% md %}}Azure resource name{{% /md %}}</dd><dt class="property-"
             title="">
         <span id="type_go">
 <a href="#type_go" style="color: inherit; text-decoration: inherit;">Type</a>
@@ -235,8 +208,7 @@ The following output properties are available:
         <span class="property-indicator"></span>
         <span class="property-type">string</span>
     </dt>
-    <dd>{{% md %}}Azure resource type{{% /md %}}</dd>
-    <dt class="property-"
+    <dd>{{% md %}}Azure resource type{{% /md %}}</dd><dt class="property-"
             title="">
         <span id="eventhubauthorizationruleid_go">
 <a href="#eventhubauthorizationruleid_go" style="color: inherit; text-decoration: inherit;">Event<wbr>Hub<wbr>Authorization<wbr>Rule<wbr>Id</a>
@@ -244,8 +216,7 @@ The following output properties are available:
         <span class="property-indicator"></span>
         <span class="property-type">string</span>
     </dt>
-    <dd>{{% md %}}The resource Id for the event hub authorization rule.{{% /md %}}</dd>
-    <dt class="property-"
+    <dd>{{% md %}}The resource Id for the event hub authorization rule.{{% /md %}}</dd><dt class="property-"
             title="">
         <span id="eventhubname_go">
 <a href="#eventhubname_go" style="color: inherit; text-decoration: inherit;">Event<wbr>Hub<wbr>Name</a>
@@ -253,8 +224,7 @@ The following output properties are available:
         <span class="property-indicator"></span>
         <span class="property-type">string</span>
     </dt>
-    <dd>{{% md %}}The name of the event hub. If none is specified, the default event hub will be selected.{{% /md %}}</dd>
-    <dt class="property-"
+    <dd>{{% md %}}The name of the event hub. If none is specified, the default event hub will be selected.{{% /md %}}</dd><dt class="property-"
             title="">
         <span id="logs_go">
 <a href="#logs_go" style="color: inherit; text-decoration: inherit;">Logs</a>
@@ -262,8 +232,7 @@ The following output properties are available:
         <span class="property-indicator"></span>
         <span class="property-type"><a href="#logsettingsresponse">[]Log<wbr>Settings<wbr>Response</a></span>
     </dt>
-    <dd>{{% md %}}The list of logs settings.{{% /md %}}</dd>
-    <dt class="property-"
+    <dd>{{% md %}}The list of logs settings.{{% /md %}}</dd><dt class="property-"
             title="">
         <span id="servicebusruleid_go">
 <a href="#servicebusruleid_go" style="color: inherit; text-decoration: inherit;">Service<wbr>Bus<wbr>Rule<wbr>Id</a>
@@ -271,8 +240,7 @@ The following output properties are available:
         <span class="property-indicator"></span>
         <span class="property-type">string</span>
     </dt>
-    <dd>{{% md %}}The service bus rule Id of the diagnostic setting. This is here to maintain backwards compatibility.{{% /md %}}</dd>
-    <dt class="property-"
+    <dd>{{% md %}}The service bus rule Id of the diagnostic setting. This is here to maintain backwards compatibility.{{% /md %}}</dd><dt class="property-"
             title="">
         <span id="storageaccountid_go">
 <a href="#storageaccountid_go" style="color: inherit; text-decoration: inherit;">Storage<wbr>Account<wbr>Id</a>
@@ -280,8 +248,7 @@ The following output properties are available:
         <span class="property-indicator"></span>
         <span class="property-type">string</span>
     </dt>
-    <dd>{{% md %}}The resource ID of the storage account to which you would like to send Diagnostic Logs.{{% /md %}}</dd>
-    <dt class="property-"
+    <dd>{{% md %}}The resource ID of the storage account to which you would like to send Diagnostic Logs.{{% /md %}}</dd><dt class="property-"
             title="">
         <span id="workspaceid_go">
 <a href="#workspaceid_go" style="color: inherit; text-decoration: inherit;">Workspace<wbr>Id</a>
@@ -289,14 +256,11 @@ The following output properties are available:
         <span class="property-indicator"></span>
         <span class="property-type">string</span>
     </dt>
-    <dd>{{% md %}}The workspace ID (resource ID of a Log Analytics workspace) for a Log Analytics workspace to which you would like to send Diagnostic Logs. Example: /subscriptions/4b9e8510-67ab-4e9a-95a9-e2f1e570ea9c/resourceGroups/insights-integration/providers/Microsoft.OperationalInsights/workspaces/viruela2{{% /md %}}</dd>
-</dl>
+    <dd>{{% md %}}The workspace ID (resource ID of a Log Analytics workspace) for a Log Analytics workspace to which you would like to send Diagnostic Logs. Example: /subscriptions/4b9e8510-67ab-4e9a-95a9-e2f1e570ea9c/resourceGroups/insights-integration/providers/Microsoft.OperationalInsights/workspaces/viruela2{{% /md %}}</dd></dl>
 {{% /choosable %}}
 
 {{% choosable language nodejs %}}
-<dl class="resources-properties">
-
-    <dt class="property-"
+<dl class="resources-properties"><dt class="property-"
             title="">
         <span id="id_nodejs">
 <a href="#id_nodejs" style="color: inherit; text-decoration: inherit;">id</a>
@@ -304,8 +268,7 @@ The following output properties are available:
         <span class="property-indicator"></span>
         <span class="property-type">string</span>
     </dt>
-    <dd>{{% md %}}Azure resource Id{{% /md %}}</dd>
-    <dt class="property-"
+    <dd>{{% md %}}Azure resource Id{{% /md %}}</dd><dt class="property-"
             title="">
         <span id="name_nodejs">
 <a href="#name_nodejs" style="color: inherit; text-decoration: inherit;">name</a>
@@ -313,8 +276,7 @@ The following output properties are available:
         <span class="property-indicator"></span>
         <span class="property-type">string</span>
     </dt>
-    <dd>{{% md %}}Azure resource name{{% /md %}}</dd>
-    <dt class="property-"
+    <dd>{{% md %}}Azure resource name{{% /md %}}</dd><dt class="property-"
             title="">
         <span id="type_nodejs">
 <a href="#type_nodejs" style="color: inherit; text-decoration: inherit;">type</a>
@@ -322,8 +284,7 @@ The following output properties are available:
         <span class="property-indicator"></span>
         <span class="property-type">string</span>
     </dt>
-    <dd>{{% md %}}Azure resource type{{% /md %}}</dd>
-    <dt class="property-"
+    <dd>{{% md %}}Azure resource type{{% /md %}}</dd><dt class="property-"
             title="">
         <span id="eventhubauthorizationruleid_nodejs">
 <a href="#eventhubauthorizationruleid_nodejs" style="color: inherit; text-decoration: inherit;">event<wbr>Hub<wbr>Authorization<wbr>Rule<wbr>Id</a>
@@ -331,8 +292,7 @@ The following output properties are available:
         <span class="property-indicator"></span>
         <span class="property-type">string</span>
     </dt>
-    <dd>{{% md %}}The resource Id for the event hub authorization rule.{{% /md %}}</dd>
-    <dt class="property-"
+    <dd>{{% md %}}The resource Id for the event hub authorization rule.{{% /md %}}</dd><dt class="property-"
             title="">
         <span id="eventhubname_nodejs">
 <a href="#eventhubname_nodejs" style="color: inherit; text-decoration: inherit;">event<wbr>Hub<wbr>Name</a>
@@ -340,8 +300,7 @@ The following output properties are available:
         <span class="property-indicator"></span>
         <span class="property-type">string</span>
     </dt>
-    <dd>{{% md %}}The name of the event hub. If none is specified, the default event hub will be selected.{{% /md %}}</dd>
-    <dt class="property-"
+    <dd>{{% md %}}The name of the event hub. If none is specified, the default event hub will be selected.{{% /md %}}</dd><dt class="property-"
             title="">
         <span id="logs_nodejs">
 <a href="#logs_nodejs" style="color: inherit; text-decoration: inherit;">logs</a>
@@ -349,8 +308,7 @@ The following output properties are available:
         <span class="property-indicator"></span>
         <span class="property-type"><a href="#logsettingsresponse">Log<wbr>Settings<wbr>Response[]</a></span>
     </dt>
-    <dd>{{% md %}}The list of logs settings.{{% /md %}}</dd>
-    <dt class="property-"
+    <dd>{{% md %}}The list of logs settings.{{% /md %}}</dd><dt class="property-"
             title="">
         <span id="servicebusruleid_nodejs">
 <a href="#servicebusruleid_nodejs" style="color: inherit; text-decoration: inherit;">service<wbr>Bus<wbr>Rule<wbr>Id</a>
@@ -358,8 +316,7 @@ The following output properties are available:
         <span class="property-indicator"></span>
         <span class="property-type">string</span>
     </dt>
-    <dd>{{% md %}}The service bus rule Id of the diagnostic setting. This is here to maintain backwards compatibility.{{% /md %}}</dd>
-    <dt class="property-"
+    <dd>{{% md %}}The service bus rule Id of the diagnostic setting. This is here to maintain backwards compatibility.{{% /md %}}</dd><dt class="property-"
             title="">
         <span id="storageaccountid_nodejs">
 <a href="#storageaccountid_nodejs" style="color: inherit; text-decoration: inherit;">storage<wbr>Account<wbr>Id</a>
@@ -367,8 +324,7 @@ The following output properties are available:
         <span class="property-indicator"></span>
         <span class="property-type">string</span>
     </dt>
-    <dd>{{% md %}}The resource ID of the storage account to which you would like to send Diagnostic Logs.{{% /md %}}</dd>
-    <dt class="property-"
+    <dd>{{% md %}}The resource ID of the storage account to which you would like to send Diagnostic Logs.{{% /md %}}</dd><dt class="property-"
             title="">
         <span id="workspaceid_nodejs">
 <a href="#workspaceid_nodejs" style="color: inherit; text-decoration: inherit;">workspace<wbr>Id</a>
@@ -376,14 +332,11 @@ The following output properties are available:
         <span class="property-indicator"></span>
         <span class="property-type">string</span>
     </dt>
-    <dd>{{% md %}}The workspace ID (resource ID of a Log Analytics workspace) for a Log Analytics workspace to which you would like to send Diagnostic Logs. Example: /subscriptions/4b9e8510-67ab-4e9a-95a9-e2f1e570ea9c/resourceGroups/insights-integration/providers/Microsoft.OperationalInsights/workspaces/viruela2{{% /md %}}</dd>
-</dl>
+    <dd>{{% md %}}The workspace ID (resource ID of a Log Analytics workspace) for a Log Analytics workspace to which you would like to send Diagnostic Logs. Example: /subscriptions/4b9e8510-67ab-4e9a-95a9-e2f1e570ea9c/resourceGroups/insights-integration/providers/Microsoft.OperationalInsights/workspaces/viruela2{{% /md %}}</dd></dl>
 {{% /choosable %}}
 
 {{% choosable language python %}}
-<dl class="resources-properties">
-
-    <dt class="property-"
+<dl class="resources-properties"><dt class="property-"
             title="">
         <span id="id_python">
 <a href="#id_python" style="color: inherit; text-decoration: inherit;">id</a>
@@ -391,8 +344,7 @@ The following output properties are available:
         <span class="property-indicator"></span>
         <span class="property-type">str</span>
     </dt>
-    <dd>{{% md %}}Azure resource Id{{% /md %}}</dd>
-    <dt class="property-"
+    <dd>{{% md %}}Azure resource Id{{% /md %}}</dd><dt class="property-"
             title="">
         <span id="name_python">
 <a href="#name_python" style="color: inherit; text-decoration: inherit;">name</a>
@@ -400,8 +352,7 @@ The following output properties are available:
         <span class="property-indicator"></span>
         <span class="property-type">str</span>
     </dt>
-    <dd>{{% md %}}Azure resource name{{% /md %}}</dd>
-    <dt class="property-"
+    <dd>{{% md %}}Azure resource name{{% /md %}}</dd><dt class="property-"
             title="">
         <span id="type_python">
 <a href="#type_python" style="color: inherit; text-decoration: inherit;">type</a>
@@ -409,8 +360,7 @@ The following output properties are available:
         <span class="property-indicator"></span>
         <span class="property-type">str</span>
     </dt>
-    <dd>{{% md %}}Azure resource type{{% /md %}}</dd>
-    <dt class="property-"
+    <dd>{{% md %}}Azure resource type{{% /md %}}</dd><dt class="property-"
             title="">
         <span id="event_hub_authorization_rule_id_python">
 <a href="#event_hub_authorization_rule_id_python" style="color: inherit; text-decoration: inherit;">event_<wbr>hub_<wbr>authorization_<wbr>rule_<wbr>id</a>
@@ -418,8 +368,7 @@ The following output properties are available:
         <span class="property-indicator"></span>
         <span class="property-type">str</span>
     </dt>
-    <dd>{{% md %}}The resource Id for the event hub authorization rule.{{% /md %}}</dd>
-    <dt class="property-"
+    <dd>{{% md %}}The resource Id for the event hub authorization rule.{{% /md %}}</dd><dt class="property-"
             title="">
         <span id="event_hub_name_python">
 <a href="#event_hub_name_python" style="color: inherit; text-decoration: inherit;">event_<wbr>hub_<wbr>name</a>
@@ -427,8 +376,7 @@ The following output properties are available:
         <span class="property-indicator"></span>
         <span class="property-type">str</span>
     </dt>
-    <dd>{{% md %}}The name of the event hub. If none is specified, the default event hub will be selected.{{% /md %}}</dd>
-    <dt class="property-"
+    <dd>{{% md %}}The name of the event hub. If none is specified, the default event hub will be selected.{{% /md %}}</dd><dt class="property-"
             title="">
         <span id="logs_python">
 <a href="#logs_python" style="color: inherit; text-decoration: inherit;">logs</a>
@@ -436,8 +384,7 @@ The following output properties are available:
         <span class="property-indicator"></span>
         <span class="property-type"><a href="#logsettingsresponse">Sequence[Log<wbr>Settings<wbr>Response]</a></span>
     </dt>
-    <dd>{{% md %}}The list of logs settings.{{% /md %}}</dd>
-    <dt class="property-"
+    <dd>{{% md %}}The list of logs settings.{{% /md %}}</dd><dt class="property-"
             title="">
         <span id="service_bus_rule_id_python">
 <a href="#service_bus_rule_id_python" style="color: inherit; text-decoration: inherit;">service_<wbr>bus_<wbr>rule_<wbr>id</a>
@@ -445,8 +392,7 @@ The following output properties are available:
         <span class="property-indicator"></span>
         <span class="property-type">str</span>
     </dt>
-    <dd>{{% md %}}The service bus rule Id of the diagnostic setting. This is here to maintain backwards compatibility.{{% /md %}}</dd>
-    <dt class="property-"
+    <dd>{{% md %}}The service bus rule Id of the diagnostic setting. This is here to maintain backwards compatibility.{{% /md %}}</dd><dt class="property-"
             title="">
         <span id="storage_account_id_python">
 <a href="#storage_account_id_python" style="color: inherit; text-decoration: inherit;">storage_<wbr>account_<wbr>id</a>
@@ -454,8 +400,7 @@ The following output properties are available:
         <span class="property-indicator"></span>
         <span class="property-type">str</span>
     </dt>
-    <dd>{{% md %}}The resource ID of the storage account to which you would like to send Diagnostic Logs.{{% /md %}}</dd>
-    <dt class="property-"
+    <dd>{{% md %}}The resource ID of the storage account to which you would like to send Diagnostic Logs.{{% /md %}}</dd><dt class="property-"
             title="">
         <span id="workspace_id_python">
 <a href="#workspace_id_python" style="color: inherit; text-decoration: inherit;">workspace_<wbr>id</a>
@@ -463,8 +408,7 @@ The following output properties are available:
         <span class="property-indicator"></span>
         <span class="property-type">str</span>
     </dt>
-    <dd>{{% md %}}The workspace ID (resource ID of a Log Analytics workspace) for a Log Analytics workspace to which you would like to send Diagnostic Logs. Example: /subscriptions/4b9e8510-67ab-4e9a-95a9-e2f1e570ea9c/resourceGroups/insights-integration/providers/Microsoft.OperationalInsights/workspaces/viruela2{{% /md %}}</dd>
-</dl>
+    <dd>{{% md %}}The workspace ID (resource ID of a Log Analytics workspace) for a Log Analytics workspace to which you would like to send Diagnostic Logs. Example: /subscriptions/4b9e8510-67ab-4e9a-95a9-e2f1e570ea9c/resourceGroups/insights-integration/providers/Microsoft.OperationalInsights/workspaces/viruela2{{% /md %}}</dd></dl>
 {{% /choosable %}}
 
 
@@ -478,9 +422,7 @@ The following output properties are available:
 
 
 {{% choosable language csharp %}}
-<dl class="resources-properties">
-
-    <dt class="property-required"
+<dl class="resources-properties"><dt class="property-required"
             title="Required">
         <span id="enabled_csharp">
 <a href="#enabled_csharp" style="color: inherit; text-decoration: inherit;">Enabled</a>
@@ -488,8 +430,7 @@ The following output properties are available:
         <span class="property-indicator"></span>
         <span class="property-type">bool</span>
     </dt>
-    <dd>{{% md %}}A value indicating whether this log is enabled.{{% /md %}}</dd>
-    <dt class="property-optional"
+    <dd>{{% md %}}A value indicating whether this log is enabled.{{% /md %}}</dd><dt class="property-optional"
             title="Optional">
         <span id="category_csharp">
 <a href="#category_csharp" style="color: inherit; text-decoration: inherit;">Category</a>
@@ -497,8 +438,7 @@ The following output properties are available:
         <span class="property-indicator"></span>
         <span class="property-type">string</span>
     </dt>
-    <dd>{{% md %}}Name of a Diagnostic Log category for a resource type this setting is applied to. To obtain the list of Diagnostic Log categories for a resource, first perform a GET diagnostic settings operation.{{% /md %}}</dd>
-    <dt class="property-optional"
+    <dd>{{% md %}}Name of a Diagnostic Log category for a resource type this setting is applied to. To obtain the list of Diagnostic Log categories for a resource, first perform a GET diagnostic settings operation.{{% /md %}}</dd><dt class="property-optional"
             title="Optional">
         <span id="retentionpolicy_csharp">
 <a href="#retentionpolicy_csharp" style="color: inherit; text-decoration: inherit;">Retention<wbr>Policy</a>
@@ -506,14 +446,11 @@ The following output properties are available:
         <span class="property-indicator"></span>
         <span class="property-type"><a href="#retentionpolicyresponse">Pulumi.<wbr>Azure<wbr>Native.<wbr>Aad<wbr>Iam.<wbr>Inputs.<wbr>Retention<wbr>Policy<wbr>Response<wbr>Args</a></span>
     </dt>
-    <dd>{{% md %}}The retention policy for this log.{{% /md %}}</dd>
-</dl>
+    <dd>{{% md %}}The retention policy for this log.{{% /md %}}</dd></dl>
 {{% /choosable %}}
 
 {{% choosable language go %}}
-<dl class="resources-properties">
-
-    <dt class="property-required"
+<dl class="resources-properties"><dt class="property-required"
             title="Required">
         <span id="enabled_go">
 <a href="#enabled_go" style="color: inherit; text-decoration: inherit;">Enabled</a>
@@ -521,8 +458,7 @@ The following output properties are available:
         <span class="property-indicator"></span>
         <span class="property-type">bool</span>
     </dt>
-    <dd>{{% md %}}A value indicating whether this log is enabled.{{% /md %}}</dd>
-    <dt class="property-optional"
+    <dd>{{% md %}}A value indicating whether this log is enabled.{{% /md %}}</dd><dt class="property-optional"
             title="Optional">
         <span id="category_go">
 <a href="#category_go" style="color: inherit; text-decoration: inherit;">Category</a>
@@ -530,8 +466,7 @@ The following output properties are available:
         <span class="property-indicator"></span>
         <span class="property-type">string</span>
     </dt>
-    <dd>{{% md %}}Name of a Diagnostic Log category for a resource type this setting is applied to. To obtain the list of Diagnostic Log categories for a resource, first perform a GET diagnostic settings operation.{{% /md %}}</dd>
-    <dt class="property-optional"
+    <dd>{{% md %}}Name of a Diagnostic Log category for a resource type this setting is applied to. To obtain the list of Diagnostic Log categories for a resource, first perform a GET diagnostic settings operation.{{% /md %}}</dd><dt class="property-optional"
             title="Optional">
         <span id="retentionpolicy_go">
 <a href="#retentionpolicy_go" style="color: inherit; text-decoration: inherit;">Retention<wbr>Policy</a>
@@ -539,14 +474,11 @@ The following output properties are available:
         <span class="property-indicator"></span>
         <span class="property-type"><a href="#retentionpolicyresponse">Retention<wbr>Policy<wbr>Response</a></span>
     </dt>
-    <dd>{{% md %}}The retention policy for this log.{{% /md %}}</dd>
-</dl>
+    <dd>{{% md %}}The retention policy for this log.{{% /md %}}</dd></dl>
 {{% /choosable %}}
 
 {{% choosable language nodejs %}}
-<dl class="resources-properties">
-
-    <dt class="property-required"
+<dl class="resources-properties"><dt class="property-required"
             title="Required">
         <span id="enabled_nodejs">
 <a href="#enabled_nodejs" style="color: inherit; text-decoration: inherit;">enabled</a>
@@ -554,8 +486,7 @@ The following output properties are available:
         <span class="property-indicator"></span>
         <span class="property-type">boolean</span>
     </dt>
-    <dd>{{% md %}}A value indicating whether this log is enabled.{{% /md %}}</dd>
-    <dt class="property-optional"
+    <dd>{{% md %}}A value indicating whether this log is enabled.{{% /md %}}</dd><dt class="property-optional"
             title="Optional">
         <span id="category_nodejs">
 <a href="#category_nodejs" style="color: inherit; text-decoration: inherit;">category</a>
@@ -563,8 +494,7 @@ The following output properties are available:
         <span class="property-indicator"></span>
         <span class="property-type">string</span>
     </dt>
-    <dd>{{% md %}}Name of a Diagnostic Log category for a resource type this setting is applied to. To obtain the list of Diagnostic Log categories for a resource, first perform a GET diagnostic settings operation.{{% /md %}}</dd>
-    <dt class="property-optional"
+    <dd>{{% md %}}Name of a Diagnostic Log category for a resource type this setting is applied to. To obtain the list of Diagnostic Log categories for a resource, first perform a GET diagnostic settings operation.{{% /md %}}</dd><dt class="property-optional"
             title="Optional">
         <span id="retentionpolicy_nodejs">
 <a href="#retentionpolicy_nodejs" style="color: inherit; text-decoration: inherit;">retention<wbr>Policy</a>
@@ -572,14 +502,11 @@ The following output properties are available:
         <span class="property-indicator"></span>
         <span class="property-type"><a href="#retentionpolicyresponse">Retention<wbr>Policy<wbr>Response</a></span>
     </dt>
-    <dd>{{% md %}}The retention policy for this log.{{% /md %}}</dd>
-</dl>
+    <dd>{{% md %}}The retention policy for this log.{{% /md %}}</dd></dl>
 {{% /choosable %}}
 
 {{% choosable language python %}}
-<dl class="resources-properties">
-
-    <dt class="property-required"
+<dl class="resources-properties"><dt class="property-required"
             title="Required">
         <span id="enabled_python">
 <a href="#enabled_python" style="color: inherit; text-decoration: inherit;">enabled</a>
@@ -587,8 +514,7 @@ The following output properties are available:
         <span class="property-indicator"></span>
         <span class="property-type">bool</span>
     </dt>
-    <dd>{{% md %}}A value indicating whether this log is enabled.{{% /md %}}</dd>
-    <dt class="property-optional"
+    <dd>{{% md %}}A value indicating whether this log is enabled.{{% /md %}}</dd><dt class="property-optional"
             title="Optional">
         <span id="category_python">
 <a href="#category_python" style="color: inherit; text-decoration: inherit;">category</a>
@@ -596,8 +522,7 @@ The following output properties are available:
         <span class="property-indicator"></span>
         <span class="property-type">str</span>
     </dt>
-    <dd>{{% md %}}Name of a Diagnostic Log category for a resource type this setting is applied to. To obtain the list of Diagnostic Log categories for a resource, first perform a GET diagnostic settings operation.{{% /md %}}</dd>
-    <dt class="property-optional"
+    <dd>{{% md %}}Name of a Diagnostic Log category for a resource type this setting is applied to. To obtain the list of Diagnostic Log categories for a resource, first perform a GET diagnostic settings operation.{{% /md %}}</dd><dt class="property-optional"
             title="Optional">
         <span id="retention_policy_python">
 <a href="#retention_policy_python" style="color: inherit; text-decoration: inherit;">retention_<wbr>policy</a>
@@ -605,8 +530,7 @@ The following output properties are available:
         <span class="property-indicator"></span>
         <span class="property-type"><a href="#retentionpolicyresponse">Retention<wbr>Policy<wbr>Response<wbr>Args</a></span>
     </dt>
-    <dd>{{% md %}}The retention policy for this log.{{% /md %}}</dd>
-</dl>
+    <dd>{{% md %}}The retention policy for this log.{{% /md %}}</dd></dl>
 {{% /choosable %}}
 
 <h4 id="retentionpolicyresponse">Retention<wbr>Policy<wbr>Response</h4>
@@ -614,9 +538,7 @@ The following output properties are available:
 
 
 {{% choosable language csharp %}}
-<dl class="resources-properties">
-
-    <dt class="property-required"
+<dl class="resources-properties"><dt class="property-required"
             title="Required">
         <span id="days_csharp">
 <a href="#days_csharp" style="color: inherit; text-decoration: inherit;">Days</a>
@@ -624,8 +546,7 @@ The following output properties are available:
         <span class="property-indicator"></span>
         <span class="property-type">int</span>
     </dt>
-    <dd>{{% md %}}The number of days for the retention in days. A value of 0 will retain the events indefinitely.{{% /md %}}</dd>
-    <dt class="property-required"
+    <dd>{{% md %}}The number of days for the retention in days. A value of 0 will retain the events indefinitely.{{% /md %}}</dd><dt class="property-required"
             title="Required">
         <span id="enabled_csharp">
 <a href="#enabled_csharp" style="color: inherit; text-decoration: inherit;">Enabled</a>
@@ -633,14 +554,11 @@ The following output properties are available:
         <span class="property-indicator"></span>
         <span class="property-type">bool</span>
     </dt>
-    <dd>{{% md %}}A value indicating whether the retention policy is enabled.{{% /md %}}</dd>
-</dl>
+    <dd>{{% md %}}A value indicating whether the retention policy is enabled.{{% /md %}}</dd></dl>
 {{% /choosable %}}
 
 {{% choosable language go %}}
-<dl class="resources-properties">
-
-    <dt class="property-required"
+<dl class="resources-properties"><dt class="property-required"
             title="Required">
         <span id="days_go">
 <a href="#days_go" style="color: inherit; text-decoration: inherit;">Days</a>
@@ -648,8 +566,7 @@ The following output properties are available:
         <span class="property-indicator"></span>
         <span class="property-type">int</span>
     </dt>
-    <dd>{{% md %}}The number of days for the retention in days. A value of 0 will retain the events indefinitely.{{% /md %}}</dd>
-    <dt class="property-required"
+    <dd>{{% md %}}The number of days for the retention in days. A value of 0 will retain the events indefinitely.{{% /md %}}</dd><dt class="property-required"
             title="Required">
         <span id="enabled_go">
 <a href="#enabled_go" style="color: inherit; text-decoration: inherit;">Enabled</a>
@@ -657,14 +574,11 @@ The following output properties are available:
         <span class="property-indicator"></span>
         <span class="property-type">bool</span>
     </dt>
-    <dd>{{% md %}}A value indicating whether the retention policy is enabled.{{% /md %}}</dd>
-</dl>
+    <dd>{{% md %}}A value indicating whether the retention policy is enabled.{{% /md %}}</dd></dl>
 {{% /choosable %}}
 
 {{% choosable language nodejs %}}
-<dl class="resources-properties">
-
-    <dt class="property-required"
+<dl class="resources-properties"><dt class="property-required"
             title="Required">
         <span id="days_nodejs">
 <a href="#days_nodejs" style="color: inherit; text-decoration: inherit;">days</a>
@@ -672,8 +586,7 @@ The following output properties are available:
         <span class="property-indicator"></span>
         <span class="property-type">number</span>
     </dt>
-    <dd>{{% md %}}The number of days for the retention in days. A value of 0 will retain the events indefinitely.{{% /md %}}</dd>
-    <dt class="property-required"
+    <dd>{{% md %}}The number of days for the retention in days. A value of 0 will retain the events indefinitely.{{% /md %}}</dd><dt class="property-required"
             title="Required">
         <span id="enabled_nodejs">
 <a href="#enabled_nodejs" style="color: inherit; text-decoration: inherit;">enabled</a>
@@ -681,14 +594,11 @@ The following output properties are available:
         <span class="property-indicator"></span>
         <span class="property-type">boolean</span>
     </dt>
-    <dd>{{% md %}}A value indicating whether the retention policy is enabled.{{% /md %}}</dd>
-</dl>
+    <dd>{{% md %}}A value indicating whether the retention policy is enabled.{{% /md %}}</dd></dl>
 {{% /choosable %}}
 
 {{% choosable language python %}}
-<dl class="resources-properties">
-
-    <dt class="property-required"
+<dl class="resources-properties"><dt class="property-required"
             title="Required">
         <span id="days_python">
 <a href="#days_python" style="color: inherit; text-decoration: inherit;">days</a>
@@ -696,8 +606,7 @@ The following output properties are available:
         <span class="property-indicator"></span>
         <span class="property-type">int</span>
     </dt>
-    <dd>{{% md %}}The number of days for the retention in days. A value of 0 will retain the events indefinitely.{{% /md %}}</dd>
-    <dt class="property-required"
+    <dd>{{% md %}}The number of days for the retention in days. A value of 0 will retain the events indefinitely.{{% /md %}}</dd><dt class="property-required"
             title="Required">
         <span id="enabled_python">
 <a href="#enabled_python" style="color: inherit; text-decoration: inherit;">enabled</a>
@@ -705,8 +614,7 @@ The following output properties are available:
         <span class="property-indicator"></span>
         <span class="property-type">bool</span>
     </dt>
-    <dd>{{% md %}}A value indicating whether the retention policy is enabled.{{% /md %}}</dd>
-</dl>
+    <dd>{{% md %}}A value indicating whether the retention policy is enabled.{{% /md %}}</dd></dl>
 {{% /choosable %}}
 
 

@@ -51,9 +51,7 @@ The following arguments are supported:
 
 
 {{% choosable language csharp %}}
-<dl class="resources-properties">
-
-    <dt class="property-required"
+<dl class="resources-properties"><dt class="property-required"
             title="Required">
         <span id="accountname_csharp">
 <a href="#accountname_csharp" style="color: inherit; text-decoration: inherit;">Account<wbr>Name</a>
@@ -61,8 +59,7 @@ The following arguments are supported:
         <span class="property-indicator"></span>
         <span class="property-type">string</span>
     </dt>
-    <dd>{{% md %}}The Media Services account name.{{% /md %}}</dd>
-    <dt class="property-required"
+    <dd>{{% md %}}The Media Services account name.{{% /md %}}</dd><dt class="property-required"
             title="Required">
         <span id="assetname_csharp">
 <a href="#assetname_csharp" style="color: inherit; text-decoration: inherit;">Asset<wbr>Name</a>
@@ -70,8 +67,7 @@ The following arguments are supported:
         <span class="property-indicator"></span>
         <span class="property-type">string</span>
     </dt>
-    <dd>{{% md %}}The Asset name.{{% /md %}}</dd>
-    <dt class="property-required"
+    <dd>{{% md %}}The Asset name.{{% /md %}}</dd><dt class="property-required"
             title="Required">
         <span id="resourcegroupname_csharp">
 <a href="#resourcegroupname_csharp" style="color: inherit; text-decoration: inherit;">Resource<wbr>Group<wbr>Name</a>
@@ -79,14 +75,11 @@ The following arguments are supported:
         <span class="property-indicator"></span>
         <span class="property-type">string</span>
     </dt>
-    <dd>{{% md %}}The name of the resource group within the Azure subscription.{{% /md %}}</dd>
-</dl>
+    <dd>{{% md %}}The name of the resource group within the Azure subscription.{{% /md %}}</dd></dl>
 {{% /choosable %}}
 
 {{% choosable language go %}}
-<dl class="resources-properties">
-
-    <dt class="property-required"
+<dl class="resources-properties"><dt class="property-required"
             title="Required">
         <span id="accountname_go">
 <a href="#accountname_go" style="color: inherit; text-decoration: inherit;">Account<wbr>Name</a>
@@ -94,8 +87,7 @@ The following arguments are supported:
         <span class="property-indicator"></span>
         <span class="property-type">string</span>
     </dt>
-    <dd>{{% md %}}The Media Services account name.{{% /md %}}</dd>
-    <dt class="property-required"
+    <dd>{{% md %}}The Media Services account name.{{% /md %}}</dd><dt class="property-required"
             title="Required">
         <span id="assetname_go">
 <a href="#assetname_go" style="color: inherit; text-decoration: inherit;">Asset<wbr>Name</a>
@@ -103,8 +95,7 @@ The following arguments are supported:
         <span class="property-indicator"></span>
         <span class="property-type">string</span>
     </dt>
-    <dd>{{% md %}}The Asset name.{{% /md %}}</dd>
-    <dt class="property-required"
+    <dd>{{% md %}}The Asset name.{{% /md %}}</dd><dt class="property-required"
             title="Required">
         <span id="resourcegroupname_go">
 <a href="#resourcegroupname_go" style="color: inherit; text-decoration: inherit;">Resource<wbr>Group<wbr>Name</a>
@@ -112,14 +103,11 @@ The following arguments are supported:
         <span class="property-indicator"></span>
         <span class="property-type">string</span>
     </dt>
-    <dd>{{% md %}}The name of the resource group within the Azure subscription.{{% /md %}}</dd>
-</dl>
+    <dd>{{% md %}}The name of the resource group within the Azure subscription.{{% /md %}}</dd></dl>
 {{% /choosable %}}
 
 {{% choosable language nodejs %}}
-<dl class="resources-properties">
-
-    <dt class="property-required"
+<dl class="resources-properties"><dt class="property-required"
             title="Required">
         <span id="accountname_nodejs">
 <a href="#accountname_nodejs" style="color: inherit; text-decoration: inherit;">account<wbr>Name</a>
@@ -127,8 +115,7 @@ The following arguments are supported:
         <span class="property-indicator"></span>
         <span class="property-type">string</span>
     </dt>
-    <dd>{{% md %}}The Media Services account name.{{% /md %}}</dd>
-    <dt class="property-required"
+    <dd>{{% md %}}The Media Services account name.{{% /md %}}</dd><dt class="property-required"
             title="Required">
         <span id="assetname_nodejs">
 <a href="#assetname_nodejs" style="color: inherit; text-decoration: inherit;">asset<wbr>Name</a>
@@ -136,8 +123,7 @@ The following arguments are supported:
         <span class="property-indicator"></span>
         <span class="property-type">string</span>
     </dt>
-    <dd>{{% md %}}The Asset name.{{% /md %}}</dd>
-    <dt class="property-required"
+    <dd>{{% md %}}The Asset name.{{% /md %}}</dd><dt class="property-required"
             title="Required">
         <span id="resourcegroupname_nodejs">
 <a href="#resourcegroupname_nodejs" style="color: inherit; text-decoration: inherit;">resource<wbr>Group<wbr>Name</a>
@@ -145,14 +131,11 @@ The following arguments are supported:
         <span class="property-indicator"></span>
         <span class="property-type">string</span>
     </dt>
-    <dd>{{% md %}}The name of the resource group within the Azure subscription.{{% /md %}}</dd>
-</dl>
+    <dd>{{% md %}}The name of the resource group within the Azure subscription.{{% /md %}}</dd></dl>
 {{% /choosable %}}
 
 {{% choosable language python %}}
-<dl class="resources-properties">
-
-    <dt class="property-required"
+<dl class="resources-properties"><dt class="property-required"
             title="Required">
         <span id="account_name_python">
 <a href="#account_name_python" style="color: inherit; text-decoration: inherit;">account_<wbr>name</a>
@@ -160,8 +143,7 @@ The following arguments are supported:
         <span class="property-indicator"></span>
         <span class="property-type">str</span>
     </dt>
-    <dd>{{% md %}}The Media Services account name.{{% /md %}}</dd>
-    <dt class="property-required"
+    <dd>{{% md %}}The Media Services account name.{{% /md %}}</dd><dt class="property-required"
             title="Required">
         <span id="asset_name_python">
 <a href="#asset_name_python" style="color: inherit; text-decoration: inherit;">asset_<wbr>name</a>
@@ -169,8 +151,7 @@ The following arguments are supported:
         <span class="property-indicator"></span>
         <span class="property-type">str</span>
     </dt>
-    <dd>{{% md %}}The Asset name.{{% /md %}}</dd>
-    <dt class="property-required"
+    <dd>{{% md %}}The Asset name.{{% /md %}}</dd><dt class="property-required"
             title="Required">
         <span id="resource_group_name_python">
 <a href="#resource_group_name_python" style="color: inherit; text-decoration: inherit;">resource_<wbr>group_<wbr>name</a>
@@ -178,8 +159,7 @@ The following arguments are supported:
         <span class="property-indicator"></span>
         <span class="property-type">str</span>
     </dt>
-    <dd>{{% md %}}The name of the resource group within the Azure subscription.{{% /md %}}</dd>
-</dl>
+    <dd>{{% md %}}The name of the resource group within the Azure subscription.{{% /md %}}</dd></dl>
 {{% /choosable %}}
 
 
@@ -192,9 +172,7 @@ The following output properties are available:
 
 
 {{% choosable language csharp %}}
-<dl class="resources-properties">
-
-    <dt class="property-"
+<dl class="resources-properties"><dt class="property-"
             title="">
         <span id="assetfileencryptionmetadata_csharp">
 <a href="#assetfileencryptionmetadata_csharp" style="color: inherit; text-decoration: inherit;">Asset<wbr>File<wbr>Encryption<wbr>Metadata</a>
@@ -202,8 +180,7 @@ The following output properties are available:
         <span class="property-indicator"></span>
         <span class="property-type"><a href="#assetfileencryptionmetadataresponse">List&lt;Pulumi.<wbr>Azure<wbr>Native.<wbr>Media.<wbr>Outputs.<wbr>Asset<wbr>File<wbr>Encryption<wbr>Metadata<wbr>Response&gt;</a></span>
     </dt>
-    <dd>{{% md %}}Asset File encryption metadata.{{% /md %}}</dd>
-    <dt class="property-"
+    <dd>{{% md %}}Asset File encryption metadata.{{% /md %}}</dd><dt class="property-"
             title="">
         <span id="key_csharp">
 <a href="#key_csharp" style="color: inherit; text-decoration: inherit;">Key</a>
@@ -211,14 +188,11 @@ The following output properties are available:
         <span class="property-indicator"></span>
         <span class="property-type">string</span>
     </dt>
-    <dd>{{% md %}}The Asset File storage encryption key.{{% /md %}}</dd>
-</dl>
+    <dd>{{% md %}}The Asset File storage encryption key.{{% /md %}}</dd></dl>
 {{% /choosable %}}
 
 {{% choosable language go %}}
-<dl class="resources-properties">
-
-    <dt class="property-"
+<dl class="resources-properties"><dt class="property-"
             title="">
         <span id="assetfileencryptionmetadata_go">
 <a href="#assetfileencryptionmetadata_go" style="color: inherit; text-decoration: inherit;">Asset<wbr>File<wbr>Encryption<wbr>Metadata</a>
@@ -226,8 +200,7 @@ The following output properties are available:
         <span class="property-indicator"></span>
         <span class="property-type"><a href="#assetfileencryptionmetadataresponse">[]Asset<wbr>File<wbr>Encryption<wbr>Metadata<wbr>Response</a></span>
     </dt>
-    <dd>{{% md %}}Asset File encryption metadata.{{% /md %}}</dd>
-    <dt class="property-"
+    <dd>{{% md %}}Asset File encryption metadata.{{% /md %}}</dd><dt class="property-"
             title="">
         <span id="key_go">
 <a href="#key_go" style="color: inherit; text-decoration: inherit;">Key</a>
@@ -235,14 +208,11 @@ The following output properties are available:
         <span class="property-indicator"></span>
         <span class="property-type">string</span>
     </dt>
-    <dd>{{% md %}}The Asset File storage encryption key.{{% /md %}}</dd>
-</dl>
+    <dd>{{% md %}}The Asset File storage encryption key.{{% /md %}}</dd></dl>
 {{% /choosable %}}
 
 {{% choosable language nodejs %}}
-<dl class="resources-properties">
-
-    <dt class="property-"
+<dl class="resources-properties"><dt class="property-"
             title="">
         <span id="assetfileencryptionmetadata_nodejs">
 <a href="#assetfileencryptionmetadata_nodejs" style="color: inherit; text-decoration: inherit;">asset<wbr>File<wbr>Encryption<wbr>Metadata</a>
@@ -250,8 +220,7 @@ The following output properties are available:
         <span class="property-indicator"></span>
         <span class="property-type"><a href="#assetfileencryptionmetadataresponse">Asset<wbr>File<wbr>Encryption<wbr>Metadata<wbr>Response[]</a></span>
     </dt>
-    <dd>{{% md %}}Asset File encryption metadata.{{% /md %}}</dd>
-    <dt class="property-"
+    <dd>{{% md %}}Asset File encryption metadata.{{% /md %}}</dd><dt class="property-"
             title="">
         <span id="key_nodejs">
 <a href="#key_nodejs" style="color: inherit; text-decoration: inherit;">key</a>
@@ -259,14 +228,11 @@ The following output properties are available:
         <span class="property-indicator"></span>
         <span class="property-type">string</span>
     </dt>
-    <dd>{{% md %}}The Asset File storage encryption key.{{% /md %}}</dd>
-</dl>
+    <dd>{{% md %}}The Asset File storage encryption key.{{% /md %}}</dd></dl>
 {{% /choosable %}}
 
 {{% choosable language python %}}
-<dl class="resources-properties">
-
-    <dt class="property-"
+<dl class="resources-properties"><dt class="property-"
             title="">
         <span id="asset_file_encryption_metadata_python">
 <a href="#asset_file_encryption_metadata_python" style="color: inherit; text-decoration: inherit;">asset_<wbr>file_<wbr>encryption_<wbr>metadata</a>
@@ -274,8 +240,7 @@ The following output properties are available:
         <span class="property-indicator"></span>
         <span class="property-type"><a href="#assetfileencryptionmetadataresponse">Sequence[Asset<wbr>File<wbr>Encryption<wbr>Metadata<wbr>Response]</a></span>
     </dt>
-    <dd>{{% md %}}Asset File encryption metadata.{{% /md %}}</dd>
-    <dt class="property-"
+    <dd>{{% md %}}Asset File encryption metadata.{{% /md %}}</dd><dt class="property-"
             title="">
         <span id="key_python">
 <a href="#key_python" style="color: inherit; text-decoration: inherit;">key</a>
@@ -283,8 +248,7 @@ The following output properties are available:
         <span class="property-indicator"></span>
         <span class="property-type">str</span>
     </dt>
-    <dd>{{% md %}}The Asset File storage encryption key.{{% /md %}}</dd>
-</dl>
+    <dd>{{% md %}}The Asset File storage encryption key.{{% /md %}}</dd></dl>
 {{% /choosable %}}
 
 
@@ -298,9 +262,7 @@ The following output properties are available:
 
 
 {{% choosable language csharp %}}
-<dl class="resources-properties">
-
-    <dt class="property-required"
+<dl class="resources-properties"><dt class="property-required"
             title="Required">
         <span id="assetfileid_csharp">
 <a href="#assetfileid_csharp" style="color: inherit; text-decoration: inherit;">Asset<wbr>File<wbr>Id</a>
@@ -308,8 +270,7 @@ The following output properties are available:
         <span class="property-indicator"></span>
         <span class="property-type">string</span>
     </dt>
-    <dd>{{% md %}}The Asset File Id.{{% /md %}}</dd>
-    <dt class="property-optional"
+    <dd>{{% md %}}The Asset File Id.{{% /md %}}</dd><dt class="property-optional"
             title="Optional">
         <span id="assetfilename_csharp">
 <a href="#assetfilename_csharp" style="color: inherit; text-decoration: inherit;">Asset<wbr>File<wbr>Name</a>
@@ -317,8 +278,7 @@ The following output properties are available:
         <span class="property-indicator"></span>
         <span class="property-type">string</span>
     </dt>
-    <dd>{{% md %}}The Asset File name.{{% /md %}}</dd>
-    <dt class="property-optional"
+    <dd>{{% md %}}The Asset File name.{{% /md %}}</dd><dt class="property-optional"
             title="Optional">
         <span id="initializationvector_csharp">
 <a href="#initializationvector_csharp" style="color: inherit; text-decoration: inherit;">Initialization<wbr>Vector</a>
@@ -326,14 +286,11 @@ The following output properties are available:
         <span class="property-indicator"></span>
         <span class="property-type">string</span>
     </dt>
-    <dd>{{% md %}}The Asset File initialization vector.{{% /md %}}</dd>
-</dl>
+    <dd>{{% md %}}The Asset File initialization vector.{{% /md %}}</dd></dl>
 {{% /choosable %}}
 
 {{% choosable language go %}}
-<dl class="resources-properties">
-
-    <dt class="property-required"
+<dl class="resources-properties"><dt class="property-required"
             title="Required">
         <span id="assetfileid_go">
 <a href="#assetfileid_go" style="color: inherit; text-decoration: inherit;">Asset<wbr>File<wbr>Id</a>
@@ -341,8 +298,7 @@ The following output properties are available:
         <span class="property-indicator"></span>
         <span class="property-type">string</span>
     </dt>
-    <dd>{{% md %}}The Asset File Id.{{% /md %}}</dd>
-    <dt class="property-optional"
+    <dd>{{% md %}}The Asset File Id.{{% /md %}}</dd><dt class="property-optional"
             title="Optional">
         <span id="assetfilename_go">
 <a href="#assetfilename_go" style="color: inherit; text-decoration: inherit;">Asset<wbr>File<wbr>Name</a>
@@ -350,8 +306,7 @@ The following output properties are available:
         <span class="property-indicator"></span>
         <span class="property-type">string</span>
     </dt>
-    <dd>{{% md %}}The Asset File name.{{% /md %}}</dd>
-    <dt class="property-optional"
+    <dd>{{% md %}}The Asset File name.{{% /md %}}</dd><dt class="property-optional"
             title="Optional">
         <span id="initializationvector_go">
 <a href="#initializationvector_go" style="color: inherit; text-decoration: inherit;">Initialization<wbr>Vector</a>
@@ -359,14 +314,11 @@ The following output properties are available:
         <span class="property-indicator"></span>
         <span class="property-type">string</span>
     </dt>
-    <dd>{{% md %}}The Asset File initialization vector.{{% /md %}}</dd>
-</dl>
+    <dd>{{% md %}}The Asset File initialization vector.{{% /md %}}</dd></dl>
 {{% /choosable %}}
 
 {{% choosable language nodejs %}}
-<dl class="resources-properties">
-
-    <dt class="property-required"
+<dl class="resources-properties"><dt class="property-required"
             title="Required">
         <span id="assetfileid_nodejs">
 <a href="#assetfileid_nodejs" style="color: inherit; text-decoration: inherit;">asset<wbr>File<wbr>Id</a>
@@ -374,8 +326,7 @@ The following output properties are available:
         <span class="property-indicator"></span>
         <span class="property-type">string</span>
     </dt>
-    <dd>{{% md %}}The Asset File Id.{{% /md %}}</dd>
-    <dt class="property-optional"
+    <dd>{{% md %}}The Asset File Id.{{% /md %}}</dd><dt class="property-optional"
             title="Optional">
         <span id="assetfilename_nodejs">
 <a href="#assetfilename_nodejs" style="color: inherit; text-decoration: inherit;">asset<wbr>File<wbr>Name</a>
@@ -383,8 +334,7 @@ The following output properties are available:
         <span class="property-indicator"></span>
         <span class="property-type">string</span>
     </dt>
-    <dd>{{% md %}}The Asset File name.{{% /md %}}</dd>
-    <dt class="property-optional"
+    <dd>{{% md %}}The Asset File name.{{% /md %}}</dd><dt class="property-optional"
             title="Optional">
         <span id="initializationvector_nodejs">
 <a href="#initializationvector_nodejs" style="color: inherit; text-decoration: inherit;">initialization<wbr>Vector</a>
@@ -392,14 +342,11 @@ The following output properties are available:
         <span class="property-indicator"></span>
         <span class="property-type">string</span>
     </dt>
-    <dd>{{% md %}}The Asset File initialization vector.{{% /md %}}</dd>
-</dl>
+    <dd>{{% md %}}The Asset File initialization vector.{{% /md %}}</dd></dl>
 {{% /choosable %}}
 
 {{% choosable language python %}}
-<dl class="resources-properties">
-
-    <dt class="property-required"
+<dl class="resources-properties"><dt class="property-required"
             title="Required">
         <span id="asset_file_id_python">
 <a href="#asset_file_id_python" style="color: inherit; text-decoration: inherit;">asset_<wbr>file_<wbr>id</a>
@@ -407,8 +354,7 @@ The following output properties are available:
         <span class="property-indicator"></span>
         <span class="property-type">str</span>
     </dt>
-    <dd>{{% md %}}The Asset File Id.{{% /md %}}</dd>
-    <dt class="property-optional"
+    <dd>{{% md %}}The Asset File Id.{{% /md %}}</dd><dt class="property-optional"
             title="Optional">
         <span id="asset_file_name_python">
 <a href="#asset_file_name_python" style="color: inherit; text-decoration: inherit;">asset_<wbr>file_<wbr>name</a>
@@ -416,8 +362,7 @@ The following output properties are available:
         <span class="property-indicator"></span>
         <span class="property-type">str</span>
     </dt>
-    <dd>{{% md %}}The Asset File name.{{% /md %}}</dd>
-    <dt class="property-optional"
+    <dd>{{% md %}}The Asset File name.{{% /md %}}</dd><dt class="property-optional"
             title="Optional">
         <span id="initialization_vector_python">
 <a href="#initialization_vector_python" style="color: inherit; text-decoration: inherit;">initialization_<wbr>vector</a>
@@ -425,8 +370,7 @@ The following output properties are available:
         <span class="property-indicator"></span>
         <span class="property-type">str</span>
     </dt>
-    <dd>{{% md %}}The Asset File initialization vector.{{% /md %}}</dd>
-</dl>
+    <dd>{{% md %}}The Asset File initialization vector.{{% /md %}}</dd></dl>
 {{% /choosable %}}
 
 

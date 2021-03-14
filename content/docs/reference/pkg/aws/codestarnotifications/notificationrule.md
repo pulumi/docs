@@ -13,11 +13,17 @@ meta_desc: "Documentation for the aws.codestarnotifications.NotificationRule res
 Provides a CodeStar Notifications Rule.
 
 {{% examples %}}
+
 ## Example Usage
 
 {{< chooser language "typescript,python,go,csharp" / >}}
 
-{{% example csharp %}}
+
+
+
+
+{{< example csharp >}}
+
 ```csharp
 using Pulumi;
 using Aws = Pulumi.Aws;
@@ -87,9 +93,12 @@ class MyStack : Stack
 }
 ```
 
-{{% /example %}}
 
-{{% example go %}}
+{{< /example >}}
+
+
+{{< example go >}}
+
 ```go
 package main
 
@@ -142,9 +151,12 @@ func main() {
 }
 ```
 
-{{% /example %}}
 
-{{% example python %}}
+{{< /example >}}
+
+
+{{< example python >}}
+
 ```python
 import pulumi
 import pulumi_aws as aws
@@ -171,9 +183,12 @@ commits = aws.codestarnotifications.NotificationRule("commits",
     )])
 ```
 
-{{% /example %}}
 
-{{% example typescript %}}
+{{< /example >}}
+
+
+{{< example typescript >}}
+
 
 ```typescript
 import * as pulumi from "@pulumi/pulumi";
@@ -205,9 +220,16 @@ const commits = new aws.codestarnotifications.NotificationRule("commits", {
 });
 ```
 
-{{% /example %}}
+
+{{< /example >}}
+
+
+
+
 
 {{% /examples %}}
+
+
 
 
 ## Create a NotificationRule Resource {#create}
@@ -232,9 +254,7 @@ const commits = new aws.codestarnotifications.NotificationRule("commits", {
 
 {{% choosable language nodejs %}}
 
-<dl class="resources-properties">
-  
-    <dt
+<dl class="resources-properties"><dt
         class="property-required" title="Required">
         <span>name</span>
         <span class="property-indicator"></span>
@@ -242,9 +262,7 @@ const commits = new aws.codestarnotifications.NotificationRule("commits", {
     </dt>
     <dd>
       The unique name of the resource.
-    </dd>
-  
-    <dt
+    </dd><dt
         class="property-required" title="Required">
         <span>args</span>
         <span class="property-indicator"></span>
@@ -252,9 +270,7 @@ const commits = new aws.codestarnotifications.NotificationRule("commits", {
     </dt>
     <dd>
       The arguments to resource properties.
-    </dd>
-  
-    <dt
+    </dd><dt
         class="property-optional" title="Optional">
         <span>opts</span>
         <span class="property-indicator"></span>
@@ -262,10 +278,7 @@ const commits = new aws.codestarnotifications.NotificationRule("commits", {
     </dt>
     <dd>
       Bag of options to control resource&#39;s behavior.
-    </dd>
-  
-
-</dl>
+    </dd></dl>
 
 {{% /choosable %}}
 
@@ -291,9 +304,7 @@ const commits = new aws.codestarnotifications.NotificationRule("commits", {
 
 {{% choosable language go %}}
 
-<dl class="resources-properties">
-  
-    <dt
+<dl class="resources-properties"><dt
         class="property-optional" title="Optional">
         <span>ctx</span>
         <span class="property-indicator"></span>
@@ -301,9 +312,7 @@ const commits = new aws.codestarnotifications.NotificationRule("commits", {
     </dt>
     <dd>
       Context object for the current deployment.
-    </dd>
-  
-    <dt
+    </dd><dt
         class="property-required" title="Required">
         <span>name</span>
         <span class="property-indicator"></span>
@@ -311,9 +320,7 @@ const commits = new aws.codestarnotifications.NotificationRule("commits", {
     </dt>
     <dd>
       The unique name of the resource.
-    </dd>
-  
-    <dt
+    </dd><dt
         class="property-required" title="Required">
         <span>args</span>
         <span class="property-indicator"></span>
@@ -321,9 +328,7 @@ const commits = new aws.codestarnotifications.NotificationRule("commits", {
     </dt>
     <dd>
       The arguments to resource properties.
-    </dd>
-  
-    <dt
+    </dd><dt
         class="property-optional" title="Optional">
         <span>opts</span>
         <span class="property-indicator"></span>
@@ -331,18 +336,13 @@ const commits = new aws.codestarnotifications.NotificationRule("commits", {
     </dt>
     <dd>
       Bag of options to control resource&#39;s behavior.
-    </dd>
-  
-
-</dl>
+    </dd></dl>
 
 {{% /choosable %}}
 
 {{% choosable language csharp %}}
 
-<dl class="resources-properties">
-  
-    <dt
+<dl class="resources-properties"><dt
         class="property-required" title="Required">
         <span>name</span>
         <span class="property-indicator"></span>
@@ -350,9 +350,7 @@ const commits = new aws.codestarnotifications.NotificationRule("commits", {
     </dt>
     <dd>
       The unique name of the resource.
-    </dd>
-  
-    <dt
+    </dd><dt
         class="property-required" title="Required">
         <span>args</span>
         <span class="property-indicator"></span>
@@ -360,9 +358,7 @@ const commits = new aws.codestarnotifications.NotificationRule("commits", {
     </dt>
     <dd>
       The arguments to resource properties.
-    </dd>
-  
-    <dt
+    </dd><dt
         class="property-optional" title="Optional">
         <span>opts</span>
         <span class="property-indicator"></span>
@@ -370,10 +366,7 @@ const commits = new aws.codestarnotifications.NotificationRule("commits", {
     </dt>
     <dd>
       Bag of options to control resource&#39;s behavior.
-    </dd>
-  
-
-</dl>
+    </dd></dl>
 
 {{% /choosable %}}
 
@@ -388,9 +381,7 @@ The NotificationRule resource accepts the following [input]({{< relref "/docs/in
 
 
 {{% choosable language csharp %}}
-<dl class="resources-properties">
-
-    <dt class="property-required"
+<dl class="resources-properties"><dt class="property-required"
             title="Required">
         <span id="detailtype_csharp">
 <a href="#detailtype_csharp" style="color: inherit; text-decoration: inherit;">Detail<wbr>Type</a>
@@ -399,8 +390,7 @@ The NotificationRule resource accepts the following [input]({{< relref "/docs/in
         <span class="property-type">string</span>
     </dt>
     <dd>{{% md %}}The level of detail to include in the notifications for this resource. Possible values are `BASIC` and `FULL`.
-{{% /md %}}</dd>
-    <dt class="property-required"
+{{% /md %}}</dd><dt class="property-required"
             title="Required">
         <span id="eventtypeids_csharp">
 <a href="#eventtypeids_csharp" style="color: inherit; text-decoration: inherit;">Event<wbr>Type<wbr>Ids</a>
@@ -410,8 +400,7 @@ The NotificationRule resource accepts the following [input]({{< relref "/docs/in
     </dt>
     <dd>{{% md %}}A list of event types associated with this notification rule.
 For list of allowed events see [here](https://docs.aws.amazon.com/codestar-notifications/latest/userguide/concepts.html#concepts-api).
-{{% /md %}}</dd>
-    <dt class="property-required"
+{{% /md %}}</dd><dt class="property-required"
             title="Required">
         <span id="resource_csharp">
 <a href="#resource_csharp" style="color: inherit; text-decoration: inherit;">Resource</a>
@@ -420,8 +409,7 @@ For list of allowed events see [here](https://docs.aws.amazon.com/codestar-notif
         <span class="property-type">string</span>
     </dt>
     <dd>{{% md %}}The ARN of the resource to associate with the notification rule.
-{{% /md %}}</dd>
-    <dt class="property-optional"
+{{% /md %}}</dd><dt class="property-optional"
             title="Optional">
         <span id="name_csharp">
 <a href="#name_csharp" style="color: inherit; text-decoration: inherit;">Name</a>
@@ -430,8 +418,7 @@ For list of allowed events see [here](https://docs.aws.amazon.com/codestar-notif
         <span class="property-type">string</span>
     </dt>
     <dd>{{% md %}}The name of notification rule.
-{{% /md %}}</dd>
-    <dt class="property-optional"
+{{% /md %}}</dd><dt class="property-optional"
             title="Optional">
         <span id="status_csharp">
 <a href="#status_csharp" style="color: inherit; text-decoration: inherit;">Status</a>
@@ -440,8 +427,7 @@ For list of allowed events see [here](https://docs.aws.amazon.com/codestar-notif
         <span class="property-type">string</span>
     </dt>
     <dd>{{% md %}}The status of the notification rule. Possible values are `ENABLED` and `DISABLED`, default is `ENABLED`.
-{{% /md %}}</dd>
-    <dt class="property-optional"
+{{% /md %}}</dd><dt class="property-optional"
             title="Optional">
         <span id="tags_csharp">
 <a href="#tags_csharp" style="color: inherit; text-decoration: inherit;">Tags</a>
@@ -450,8 +436,7 @@ For list of allowed events see [here](https://docs.aws.amazon.com/codestar-notif
         <span class="property-type">Dictionary&lt;string, string&gt;</span>
     </dt>
     <dd>{{% md %}}A map of tags to assign to the resource.
-{{% /md %}}</dd>
-    <dt class="property-optional"
+{{% /md %}}</dd><dt class="property-optional"
             title="Optional">
         <span id="targets_csharp">
 <a href="#targets_csharp" style="color: inherit; text-decoration: inherit;">Targets</a>
@@ -460,14 +445,11 @@ For list of allowed events see [here](https://docs.aws.amazon.com/codestar-notif
         <span class="property-type"><a href="#notificationruletarget">List&lt;Notification<wbr>Rule<wbr>Target<wbr>Args&gt;</a></span>
     </dt>
     <dd>{{% md %}}Configuration blocks containing notification target information. Can be specified multiple times. At least one target must be specified on creation.
-{{% /md %}}</dd>
-</dl>
+{{% /md %}}</dd></dl>
 {{% /choosable %}}
 
 {{% choosable language go %}}
-<dl class="resources-properties">
-
-    <dt class="property-required"
+<dl class="resources-properties"><dt class="property-required"
             title="Required">
         <span id="detailtype_go">
 <a href="#detailtype_go" style="color: inherit; text-decoration: inherit;">Detail<wbr>Type</a>
@@ -476,8 +458,7 @@ For list of allowed events see [here](https://docs.aws.amazon.com/codestar-notif
         <span class="property-type">string</span>
     </dt>
     <dd>{{% md %}}The level of detail to include in the notifications for this resource. Possible values are `BASIC` and `FULL`.
-{{% /md %}}</dd>
-    <dt class="property-required"
+{{% /md %}}</dd><dt class="property-required"
             title="Required">
         <span id="eventtypeids_go">
 <a href="#eventtypeids_go" style="color: inherit; text-decoration: inherit;">Event<wbr>Type<wbr>Ids</a>
@@ -487,8 +468,7 @@ For list of allowed events see [here](https://docs.aws.amazon.com/codestar-notif
     </dt>
     <dd>{{% md %}}A list of event types associated with this notification rule.
 For list of allowed events see [here](https://docs.aws.amazon.com/codestar-notifications/latest/userguide/concepts.html#concepts-api).
-{{% /md %}}</dd>
-    <dt class="property-required"
+{{% /md %}}</dd><dt class="property-required"
             title="Required">
         <span id="resource_go">
 <a href="#resource_go" style="color: inherit; text-decoration: inherit;">Resource</a>
@@ -497,8 +477,7 @@ For list of allowed events see [here](https://docs.aws.amazon.com/codestar-notif
         <span class="property-type">string</span>
     </dt>
     <dd>{{% md %}}The ARN of the resource to associate with the notification rule.
-{{% /md %}}</dd>
-    <dt class="property-optional"
+{{% /md %}}</dd><dt class="property-optional"
             title="Optional">
         <span id="name_go">
 <a href="#name_go" style="color: inherit; text-decoration: inherit;">Name</a>
@@ -507,8 +486,7 @@ For list of allowed events see [here](https://docs.aws.amazon.com/codestar-notif
         <span class="property-type">string</span>
     </dt>
     <dd>{{% md %}}The name of notification rule.
-{{% /md %}}</dd>
-    <dt class="property-optional"
+{{% /md %}}</dd><dt class="property-optional"
             title="Optional">
         <span id="status_go">
 <a href="#status_go" style="color: inherit; text-decoration: inherit;">Status</a>
@@ -517,8 +495,7 @@ For list of allowed events see [here](https://docs.aws.amazon.com/codestar-notif
         <span class="property-type">string</span>
     </dt>
     <dd>{{% md %}}The status of the notification rule. Possible values are `ENABLED` and `DISABLED`, default is `ENABLED`.
-{{% /md %}}</dd>
-    <dt class="property-optional"
+{{% /md %}}</dd><dt class="property-optional"
             title="Optional">
         <span id="tags_go">
 <a href="#tags_go" style="color: inherit; text-decoration: inherit;">Tags</a>
@@ -527,8 +504,7 @@ For list of allowed events see [here](https://docs.aws.amazon.com/codestar-notif
         <span class="property-type">map[string]string</span>
     </dt>
     <dd>{{% md %}}A map of tags to assign to the resource.
-{{% /md %}}</dd>
-    <dt class="property-optional"
+{{% /md %}}</dd><dt class="property-optional"
             title="Optional">
         <span id="targets_go">
 <a href="#targets_go" style="color: inherit; text-decoration: inherit;">Targets</a>
@@ -537,14 +513,11 @@ For list of allowed events see [here](https://docs.aws.amazon.com/codestar-notif
         <span class="property-type"><a href="#notificationruletarget">[]Notification<wbr>Rule<wbr>Target</a></span>
     </dt>
     <dd>{{% md %}}Configuration blocks containing notification target information. Can be specified multiple times. At least one target must be specified on creation.
-{{% /md %}}</dd>
-</dl>
+{{% /md %}}</dd></dl>
 {{% /choosable %}}
 
 {{% choosable language nodejs %}}
-<dl class="resources-properties">
-
-    <dt class="property-required"
+<dl class="resources-properties"><dt class="property-required"
             title="Required">
         <span id="detailtype_nodejs">
 <a href="#detailtype_nodejs" style="color: inherit; text-decoration: inherit;">detail<wbr>Type</a>
@@ -553,8 +526,7 @@ For list of allowed events see [here](https://docs.aws.amazon.com/codestar-notif
         <span class="property-type">string</span>
     </dt>
     <dd>{{% md %}}The level of detail to include in the notifications for this resource. Possible values are `BASIC` and `FULL`.
-{{% /md %}}</dd>
-    <dt class="property-required"
+{{% /md %}}</dd><dt class="property-required"
             title="Required">
         <span id="eventtypeids_nodejs">
 <a href="#eventtypeids_nodejs" style="color: inherit; text-decoration: inherit;">event<wbr>Type<wbr>Ids</a>
@@ -564,8 +536,7 @@ For list of allowed events see [here](https://docs.aws.amazon.com/codestar-notif
     </dt>
     <dd>{{% md %}}A list of event types associated with this notification rule.
 For list of allowed events see [here](https://docs.aws.amazon.com/codestar-notifications/latest/userguide/concepts.html#concepts-api).
-{{% /md %}}</dd>
-    <dt class="property-required"
+{{% /md %}}</dd><dt class="property-required"
             title="Required">
         <span id="resource_nodejs">
 <a href="#resource_nodejs" style="color: inherit; text-decoration: inherit;">resource</a>
@@ -574,8 +545,7 @@ For list of allowed events see [here](https://docs.aws.amazon.com/codestar-notif
         <span class="property-type">string</span>
     </dt>
     <dd>{{% md %}}The ARN of the resource to associate with the notification rule.
-{{% /md %}}</dd>
-    <dt class="property-optional"
+{{% /md %}}</dd><dt class="property-optional"
             title="Optional">
         <span id="name_nodejs">
 <a href="#name_nodejs" style="color: inherit; text-decoration: inherit;">name</a>
@@ -584,8 +554,7 @@ For list of allowed events see [here](https://docs.aws.amazon.com/codestar-notif
         <span class="property-type">string</span>
     </dt>
     <dd>{{% md %}}The name of notification rule.
-{{% /md %}}</dd>
-    <dt class="property-optional"
+{{% /md %}}</dd><dt class="property-optional"
             title="Optional">
         <span id="status_nodejs">
 <a href="#status_nodejs" style="color: inherit; text-decoration: inherit;">status</a>
@@ -594,8 +563,7 @@ For list of allowed events see [here](https://docs.aws.amazon.com/codestar-notif
         <span class="property-type">string</span>
     </dt>
     <dd>{{% md %}}The status of the notification rule. Possible values are `ENABLED` and `DISABLED`, default is `ENABLED`.
-{{% /md %}}</dd>
-    <dt class="property-optional"
+{{% /md %}}</dd><dt class="property-optional"
             title="Optional">
         <span id="tags_nodejs">
 <a href="#tags_nodejs" style="color: inherit; text-decoration: inherit;">tags</a>
@@ -604,8 +572,7 @@ For list of allowed events see [here](https://docs.aws.amazon.com/codestar-notif
         <span class="property-type">{[key: string]: string}</span>
     </dt>
     <dd>{{% md %}}A map of tags to assign to the resource.
-{{% /md %}}</dd>
-    <dt class="property-optional"
+{{% /md %}}</dd><dt class="property-optional"
             title="Optional">
         <span id="targets_nodejs">
 <a href="#targets_nodejs" style="color: inherit; text-decoration: inherit;">targets</a>
@@ -614,14 +581,11 @@ For list of allowed events see [here](https://docs.aws.amazon.com/codestar-notif
         <span class="property-type"><a href="#notificationruletarget">Notification<wbr>Rule<wbr>Target[]</a></span>
     </dt>
     <dd>{{% md %}}Configuration blocks containing notification target information. Can be specified multiple times. At least one target must be specified on creation.
-{{% /md %}}</dd>
-</dl>
+{{% /md %}}</dd></dl>
 {{% /choosable %}}
 
 {{% choosable language python %}}
-<dl class="resources-properties">
-
-    <dt class="property-required"
+<dl class="resources-properties"><dt class="property-required"
             title="Required">
         <span id="detail_type_python">
 <a href="#detail_type_python" style="color: inherit; text-decoration: inherit;">detail_<wbr>type</a>
@@ -630,8 +594,7 @@ For list of allowed events see [here](https://docs.aws.amazon.com/codestar-notif
         <span class="property-type">str</span>
     </dt>
     <dd>{{% md %}}The level of detail to include in the notifications for this resource. Possible values are `BASIC` and `FULL`.
-{{% /md %}}</dd>
-    <dt class="property-required"
+{{% /md %}}</dd><dt class="property-required"
             title="Required">
         <span id="event_type_ids_python">
 <a href="#event_type_ids_python" style="color: inherit; text-decoration: inherit;">event_<wbr>type_<wbr>ids</a>
@@ -641,8 +604,7 @@ For list of allowed events see [here](https://docs.aws.amazon.com/codestar-notif
     </dt>
     <dd>{{% md %}}A list of event types associated with this notification rule.
 For list of allowed events see [here](https://docs.aws.amazon.com/codestar-notifications/latest/userguide/concepts.html#concepts-api).
-{{% /md %}}</dd>
-    <dt class="property-required"
+{{% /md %}}</dd><dt class="property-required"
             title="Required">
         <span id="resource_python">
 <a href="#resource_python" style="color: inherit; text-decoration: inherit;">resource</a>
@@ -651,8 +613,7 @@ For list of allowed events see [here](https://docs.aws.amazon.com/codestar-notif
         <span class="property-type">str</span>
     </dt>
     <dd>{{% md %}}The ARN of the resource to associate with the notification rule.
-{{% /md %}}</dd>
-    <dt class="property-optional"
+{{% /md %}}</dd><dt class="property-optional"
             title="Optional">
         <span id="name_python">
 <a href="#name_python" style="color: inherit; text-decoration: inherit;">name</a>
@@ -661,8 +622,7 @@ For list of allowed events see [here](https://docs.aws.amazon.com/codestar-notif
         <span class="property-type">str</span>
     </dt>
     <dd>{{% md %}}The name of notification rule.
-{{% /md %}}</dd>
-    <dt class="property-optional"
+{{% /md %}}</dd><dt class="property-optional"
             title="Optional">
         <span id="status_python">
 <a href="#status_python" style="color: inherit; text-decoration: inherit;">status</a>
@@ -671,8 +631,7 @@ For list of allowed events see [here](https://docs.aws.amazon.com/codestar-notif
         <span class="property-type">str</span>
     </dt>
     <dd>{{% md %}}The status of the notification rule. Possible values are `ENABLED` and `DISABLED`, default is `ENABLED`.
-{{% /md %}}</dd>
-    <dt class="property-optional"
+{{% /md %}}</dd><dt class="property-optional"
             title="Optional">
         <span id="tags_python">
 <a href="#tags_python" style="color: inherit; text-decoration: inherit;">tags</a>
@@ -681,8 +640,7 @@ For list of allowed events see [here](https://docs.aws.amazon.com/codestar-notif
         <span class="property-type">Mapping[str, str]</span>
     </dt>
     <dd>{{% md %}}A map of tags to assign to the resource.
-{{% /md %}}</dd>
-    <dt class="property-optional"
+{{% /md %}}</dd><dt class="property-optional"
             title="Optional">
         <span id="targets_python">
 <a href="#targets_python" style="color: inherit; text-decoration: inherit;">targets</a>
@@ -691,8 +649,7 @@ For list of allowed events see [here](https://docs.aws.amazon.com/codestar-notif
         <span class="property-type"><a href="#notificationruletarget">Sequence[Notification<wbr>Rule<wbr>Target<wbr>Args]</a></span>
     </dt>
     <dd>{{% md %}}Configuration blocks containing notification target information. Can be specified multiple times. At least one target must be specified on creation.
-{{% /md %}}</dd>
-</dl>
+{{% /md %}}</dd></dl>
 {{% /choosable %}}
 
 
@@ -703,9 +660,7 @@ All [input](#inputs) properties are implicitly available as output properties. A
 
 
 {{% choosable language csharp %}}
-<dl class="resources-properties">
-
-    <dt class="property-"
+<dl class="resources-properties"><dt class="property-"
             title="">
         <span id="arn_csharp">
 <a href="#arn_csharp" style="color: inherit; text-decoration: inherit;">Arn</a>
@@ -714,8 +669,7 @@ All [input](#inputs) properties are implicitly available as output properties. A
         <span class="property-type">string</span>
     </dt>
     <dd>{{% md %}}The codestar notification rule ARN.
-{{% /md %}}</dd>
-    <dt class="property-"
+{{% /md %}}</dd><dt class="property-"
             title="">
         <span id="id_csharp">
 <a href="#id_csharp" style="color: inherit; text-decoration: inherit;">Id</a>
@@ -723,14 +677,11 @@ All [input](#inputs) properties are implicitly available as output properties. A
         <span class="property-indicator"></span>
         <span class="property-type">string</span>
     </dt>
-    <dd>{{% md %}}The provider-assigned unique ID for this managed resource.{{% /md %}}</dd>
-</dl>
+    <dd>{{% md %}}The provider-assigned unique ID for this managed resource.{{% /md %}}</dd></dl>
 {{% /choosable %}}
 
 {{% choosable language go %}}
-<dl class="resources-properties">
-
-    <dt class="property-"
+<dl class="resources-properties"><dt class="property-"
             title="">
         <span id="arn_go">
 <a href="#arn_go" style="color: inherit; text-decoration: inherit;">Arn</a>
@@ -739,8 +690,7 @@ All [input](#inputs) properties are implicitly available as output properties. A
         <span class="property-type">string</span>
     </dt>
     <dd>{{% md %}}The codestar notification rule ARN.
-{{% /md %}}</dd>
-    <dt class="property-"
+{{% /md %}}</dd><dt class="property-"
             title="">
         <span id="id_go">
 <a href="#id_go" style="color: inherit; text-decoration: inherit;">Id</a>
@@ -748,14 +698,11 @@ All [input](#inputs) properties are implicitly available as output properties. A
         <span class="property-indicator"></span>
         <span class="property-type">string</span>
     </dt>
-    <dd>{{% md %}}The provider-assigned unique ID for this managed resource.{{% /md %}}</dd>
-</dl>
+    <dd>{{% md %}}The provider-assigned unique ID for this managed resource.{{% /md %}}</dd></dl>
 {{% /choosable %}}
 
 {{% choosable language nodejs %}}
-<dl class="resources-properties">
-
-    <dt class="property-"
+<dl class="resources-properties"><dt class="property-"
             title="">
         <span id="arn_nodejs">
 <a href="#arn_nodejs" style="color: inherit; text-decoration: inherit;">arn</a>
@@ -764,8 +711,7 @@ All [input](#inputs) properties are implicitly available as output properties. A
         <span class="property-type">string</span>
     </dt>
     <dd>{{% md %}}The codestar notification rule ARN.
-{{% /md %}}</dd>
-    <dt class="property-"
+{{% /md %}}</dd><dt class="property-"
             title="">
         <span id="id_nodejs">
 <a href="#id_nodejs" style="color: inherit; text-decoration: inherit;">id</a>
@@ -773,14 +719,11 @@ All [input](#inputs) properties are implicitly available as output properties. A
         <span class="property-indicator"></span>
         <span class="property-type">string</span>
     </dt>
-    <dd>{{% md %}}The provider-assigned unique ID for this managed resource.{{% /md %}}</dd>
-</dl>
+    <dd>{{% md %}}The provider-assigned unique ID for this managed resource.{{% /md %}}</dd></dl>
 {{% /choosable %}}
 
 {{% choosable language python %}}
-<dl class="resources-properties">
-
-    <dt class="property-"
+<dl class="resources-properties"><dt class="property-"
             title="">
         <span id="arn_python">
 <a href="#arn_python" style="color: inherit; text-decoration: inherit;">arn</a>
@@ -789,8 +732,7 @@ All [input](#inputs) properties are implicitly available as output properties. A
         <span class="property-type">str</span>
     </dt>
     <dd>{{% md %}}The codestar notification rule ARN.
-{{% /md %}}</dd>
-    <dt class="property-"
+{{% /md %}}</dd><dt class="property-"
             title="">
         <span id="id_python">
 <a href="#id_python" style="color: inherit; text-decoration: inherit;">id</a>
@@ -798,8 +740,7 @@ All [input](#inputs) properties are implicitly available as output properties. A
         <span class="property-indicator"></span>
         <span class="property-type">str</span>
     </dt>
-    <dd>{{% md %}}The provider-assigned unique ID for this managed resource.{{% /md %}}</dd>
-</dl>
+    <dd>{{% md %}}The provider-assigned unique ID for this managed resource.{{% /md %}}</dd></dl>
 {{% /choosable %}}
 
 
@@ -926,9 +867,7 @@ The following state arguments are supported:
 
 
 {{% choosable language csharp %}}
-<dl class="resources-properties">
-
-    <dt class="property-optional"
+<dl class="resources-properties"><dt class="property-optional"
             title="Optional">
         <span id="state_arn_csharp">
 <a href="#state_arn_csharp" style="color: inherit; text-decoration: inherit;">Arn</a>
@@ -937,8 +876,7 @@ The following state arguments are supported:
         <span class="property-type">string</span>
     </dt>
     <dd>{{% md %}}The codestar notification rule ARN.
-{{% /md %}}</dd>
-    <dt class="property-optional"
+{{% /md %}}</dd><dt class="property-optional"
             title="Optional">
         <span id="state_detailtype_csharp">
 <a href="#state_detailtype_csharp" style="color: inherit; text-decoration: inherit;">Detail<wbr>Type</a>
@@ -947,8 +885,7 @@ The following state arguments are supported:
         <span class="property-type">string</span>
     </dt>
     <dd>{{% md %}}The level of detail to include in the notifications for this resource. Possible values are `BASIC` and `FULL`.
-{{% /md %}}</dd>
-    <dt class="property-optional"
+{{% /md %}}</dd><dt class="property-optional"
             title="Optional">
         <span id="state_eventtypeids_csharp">
 <a href="#state_eventtypeids_csharp" style="color: inherit; text-decoration: inherit;">Event<wbr>Type<wbr>Ids</a>
@@ -958,8 +895,7 @@ The following state arguments are supported:
     </dt>
     <dd>{{% md %}}A list of event types associated with this notification rule.
 For list of allowed events see [here](https://docs.aws.amazon.com/codestar-notifications/latest/userguide/concepts.html#concepts-api).
-{{% /md %}}</dd>
-    <dt class="property-optional"
+{{% /md %}}</dd><dt class="property-optional"
             title="Optional">
         <span id="state_name_csharp">
 <a href="#state_name_csharp" style="color: inherit; text-decoration: inherit;">Name</a>
@@ -968,8 +904,7 @@ For list of allowed events see [here](https://docs.aws.amazon.com/codestar-notif
         <span class="property-type">string</span>
     </dt>
     <dd>{{% md %}}The name of notification rule.
-{{% /md %}}</dd>
-    <dt class="property-optional"
+{{% /md %}}</dd><dt class="property-optional"
             title="Optional">
         <span id="state_resource_csharp">
 <a href="#state_resource_csharp" style="color: inherit; text-decoration: inherit;">Resource</a>
@@ -978,8 +913,7 @@ For list of allowed events see [here](https://docs.aws.amazon.com/codestar-notif
         <span class="property-type">string</span>
     </dt>
     <dd>{{% md %}}The ARN of the resource to associate with the notification rule.
-{{% /md %}}</dd>
-    <dt class="property-optional"
+{{% /md %}}</dd><dt class="property-optional"
             title="Optional">
         <span id="state_status_csharp">
 <a href="#state_status_csharp" style="color: inherit; text-decoration: inherit;">Status</a>
@@ -988,8 +922,7 @@ For list of allowed events see [here](https://docs.aws.amazon.com/codestar-notif
         <span class="property-type">string</span>
     </dt>
     <dd>{{% md %}}The status of the notification rule. Possible values are `ENABLED` and `DISABLED`, default is `ENABLED`.
-{{% /md %}}</dd>
-    <dt class="property-optional"
+{{% /md %}}</dd><dt class="property-optional"
             title="Optional">
         <span id="state_tags_csharp">
 <a href="#state_tags_csharp" style="color: inherit; text-decoration: inherit;">Tags</a>
@@ -998,8 +931,7 @@ For list of allowed events see [here](https://docs.aws.amazon.com/codestar-notif
         <span class="property-type">Dictionary&lt;string, string&gt;</span>
     </dt>
     <dd>{{% md %}}A map of tags to assign to the resource.
-{{% /md %}}</dd>
-    <dt class="property-optional"
+{{% /md %}}</dd><dt class="property-optional"
             title="Optional">
         <span id="state_targets_csharp">
 <a href="#state_targets_csharp" style="color: inherit; text-decoration: inherit;">Targets</a>
@@ -1008,14 +940,11 @@ For list of allowed events see [here](https://docs.aws.amazon.com/codestar-notif
         <span class="property-type"><a href="#notificationruletarget">List&lt;Notification<wbr>Rule<wbr>Target<wbr>Args&gt;</a></span>
     </dt>
     <dd>{{% md %}}Configuration blocks containing notification target information. Can be specified multiple times. At least one target must be specified on creation.
-{{% /md %}}</dd>
-</dl>
+{{% /md %}}</dd></dl>
 {{% /choosable %}}
 
 {{% choosable language go %}}
-<dl class="resources-properties">
-
-    <dt class="property-optional"
+<dl class="resources-properties"><dt class="property-optional"
             title="Optional">
         <span id="state_arn_go">
 <a href="#state_arn_go" style="color: inherit; text-decoration: inherit;">Arn</a>
@@ -1024,8 +953,7 @@ For list of allowed events see [here](https://docs.aws.amazon.com/codestar-notif
         <span class="property-type">string</span>
     </dt>
     <dd>{{% md %}}The codestar notification rule ARN.
-{{% /md %}}</dd>
-    <dt class="property-optional"
+{{% /md %}}</dd><dt class="property-optional"
             title="Optional">
         <span id="state_detailtype_go">
 <a href="#state_detailtype_go" style="color: inherit; text-decoration: inherit;">Detail<wbr>Type</a>
@@ -1034,8 +962,7 @@ For list of allowed events see [here](https://docs.aws.amazon.com/codestar-notif
         <span class="property-type">string</span>
     </dt>
     <dd>{{% md %}}The level of detail to include in the notifications for this resource. Possible values are `BASIC` and `FULL`.
-{{% /md %}}</dd>
-    <dt class="property-optional"
+{{% /md %}}</dd><dt class="property-optional"
             title="Optional">
         <span id="state_eventtypeids_go">
 <a href="#state_eventtypeids_go" style="color: inherit; text-decoration: inherit;">Event<wbr>Type<wbr>Ids</a>
@@ -1045,8 +972,7 @@ For list of allowed events see [here](https://docs.aws.amazon.com/codestar-notif
     </dt>
     <dd>{{% md %}}A list of event types associated with this notification rule.
 For list of allowed events see [here](https://docs.aws.amazon.com/codestar-notifications/latest/userguide/concepts.html#concepts-api).
-{{% /md %}}</dd>
-    <dt class="property-optional"
+{{% /md %}}</dd><dt class="property-optional"
             title="Optional">
         <span id="state_name_go">
 <a href="#state_name_go" style="color: inherit; text-decoration: inherit;">Name</a>
@@ -1055,8 +981,7 @@ For list of allowed events see [here](https://docs.aws.amazon.com/codestar-notif
         <span class="property-type">string</span>
     </dt>
     <dd>{{% md %}}The name of notification rule.
-{{% /md %}}</dd>
-    <dt class="property-optional"
+{{% /md %}}</dd><dt class="property-optional"
             title="Optional">
         <span id="state_resource_go">
 <a href="#state_resource_go" style="color: inherit; text-decoration: inherit;">Resource</a>
@@ -1065,8 +990,7 @@ For list of allowed events see [here](https://docs.aws.amazon.com/codestar-notif
         <span class="property-type">string</span>
     </dt>
     <dd>{{% md %}}The ARN of the resource to associate with the notification rule.
-{{% /md %}}</dd>
-    <dt class="property-optional"
+{{% /md %}}</dd><dt class="property-optional"
             title="Optional">
         <span id="state_status_go">
 <a href="#state_status_go" style="color: inherit; text-decoration: inherit;">Status</a>
@@ -1075,8 +999,7 @@ For list of allowed events see [here](https://docs.aws.amazon.com/codestar-notif
         <span class="property-type">string</span>
     </dt>
     <dd>{{% md %}}The status of the notification rule. Possible values are `ENABLED` and `DISABLED`, default is `ENABLED`.
-{{% /md %}}</dd>
-    <dt class="property-optional"
+{{% /md %}}</dd><dt class="property-optional"
             title="Optional">
         <span id="state_tags_go">
 <a href="#state_tags_go" style="color: inherit; text-decoration: inherit;">Tags</a>
@@ -1085,8 +1008,7 @@ For list of allowed events see [here](https://docs.aws.amazon.com/codestar-notif
         <span class="property-type">map[string]string</span>
     </dt>
     <dd>{{% md %}}A map of tags to assign to the resource.
-{{% /md %}}</dd>
-    <dt class="property-optional"
+{{% /md %}}</dd><dt class="property-optional"
             title="Optional">
         <span id="state_targets_go">
 <a href="#state_targets_go" style="color: inherit; text-decoration: inherit;">Targets</a>
@@ -1095,14 +1017,11 @@ For list of allowed events see [here](https://docs.aws.amazon.com/codestar-notif
         <span class="property-type"><a href="#notificationruletarget">[]Notification<wbr>Rule<wbr>Target</a></span>
     </dt>
     <dd>{{% md %}}Configuration blocks containing notification target information. Can be specified multiple times. At least one target must be specified on creation.
-{{% /md %}}</dd>
-</dl>
+{{% /md %}}</dd></dl>
 {{% /choosable %}}
 
 {{% choosable language nodejs %}}
-<dl class="resources-properties">
-
-    <dt class="property-optional"
+<dl class="resources-properties"><dt class="property-optional"
             title="Optional">
         <span id="state_arn_nodejs">
 <a href="#state_arn_nodejs" style="color: inherit; text-decoration: inherit;">arn</a>
@@ -1111,8 +1030,7 @@ For list of allowed events see [here](https://docs.aws.amazon.com/codestar-notif
         <span class="property-type">string</span>
     </dt>
     <dd>{{% md %}}The codestar notification rule ARN.
-{{% /md %}}</dd>
-    <dt class="property-optional"
+{{% /md %}}</dd><dt class="property-optional"
             title="Optional">
         <span id="state_detailtype_nodejs">
 <a href="#state_detailtype_nodejs" style="color: inherit; text-decoration: inherit;">detail<wbr>Type</a>
@@ -1121,8 +1039,7 @@ For list of allowed events see [here](https://docs.aws.amazon.com/codestar-notif
         <span class="property-type">string</span>
     </dt>
     <dd>{{% md %}}The level of detail to include in the notifications for this resource. Possible values are `BASIC` and `FULL`.
-{{% /md %}}</dd>
-    <dt class="property-optional"
+{{% /md %}}</dd><dt class="property-optional"
             title="Optional">
         <span id="state_eventtypeids_nodejs">
 <a href="#state_eventtypeids_nodejs" style="color: inherit; text-decoration: inherit;">event<wbr>Type<wbr>Ids</a>
@@ -1132,8 +1049,7 @@ For list of allowed events see [here](https://docs.aws.amazon.com/codestar-notif
     </dt>
     <dd>{{% md %}}A list of event types associated with this notification rule.
 For list of allowed events see [here](https://docs.aws.amazon.com/codestar-notifications/latest/userguide/concepts.html#concepts-api).
-{{% /md %}}</dd>
-    <dt class="property-optional"
+{{% /md %}}</dd><dt class="property-optional"
             title="Optional">
         <span id="state_name_nodejs">
 <a href="#state_name_nodejs" style="color: inherit; text-decoration: inherit;">name</a>
@@ -1142,8 +1058,7 @@ For list of allowed events see [here](https://docs.aws.amazon.com/codestar-notif
         <span class="property-type">string</span>
     </dt>
     <dd>{{% md %}}The name of notification rule.
-{{% /md %}}</dd>
-    <dt class="property-optional"
+{{% /md %}}</dd><dt class="property-optional"
             title="Optional">
         <span id="state_resource_nodejs">
 <a href="#state_resource_nodejs" style="color: inherit; text-decoration: inherit;">resource</a>
@@ -1152,8 +1067,7 @@ For list of allowed events see [here](https://docs.aws.amazon.com/codestar-notif
         <span class="property-type">string</span>
     </dt>
     <dd>{{% md %}}The ARN of the resource to associate with the notification rule.
-{{% /md %}}</dd>
-    <dt class="property-optional"
+{{% /md %}}</dd><dt class="property-optional"
             title="Optional">
         <span id="state_status_nodejs">
 <a href="#state_status_nodejs" style="color: inherit; text-decoration: inherit;">status</a>
@@ -1162,8 +1076,7 @@ For list of allowed events see [here](https://docs.aws.amazon.com/codestar-notif
         <span class="property-type">string</span>
     </dt>
     <dd>{{% md %}}The status of the notification rule. Possible values are `ENABLED` and `DISABLED`, default is `ENABLED`.
-{{% /md %}}</dd>
-    <dt class="property-optional"
+{{% /md %}}</dd><dt class="property-optional"
             title="Optional">
         <span id="state_tags_nodejs">
 <a href="#state_tags_nodejs" style="color: inherit; text-decoration: inherit;">tags</a>
@@ -1172,8 +1085,7 @@ For list of allowed events see [here](https://docs.aws.amazon.com/codestar-notif
         <span class="property-type">{[key: string]: string}</span>
     </dt>
     <dd>{{% md %}}A map of tags to assign to the resource.
-{{% /md %}}</dd>
-    <dt class="property-optional"
+{{% /md %}}</dd><dt class="property-optional"
             title="Optional">
         <span id="state_targets_nodejs">
 <a href="#state_targets_nodejs" style="color: inherit; text-decoration: inherit;">targets</a>
@@ -1182,14 +1094,11 @@ For list of allowed events see [here](https://docs.aws.amazon.com/codestar-notif
         <span class="property-type"><a href="#notificationruletarget">Notification<wbr>Rule<wbr>Target[]</a></span>
     </dt>
     <dd>{{% md %}}Configuration blocks containing notification target information. Can be specified multiple times. At least one target must be specified on creation.
-{{% /md %}}</dd>
-</dl>
+{{% /md %}}</dd></dl>
 {{% /choosable %}}
 
 {{% choosable language python %}}
-<dl class="resources-properties">
-
-    <dt class="property-optional"
+<dl class="resources-properties"><dt class="property-optional"
             title="Optional">
         <span id="state_arn_python">
 <a href="#state_arn_python" style="color: inherit; text-decoration: inherit;">arn</a>
@@ -1198,8 +1107,7 @@ For list of allowed events see [here](https://docs.aws.amazon.com/codestar-notif
         <span class="property-type">str</span>
     </dt>
     <dd>{{% md %}}The codestar notification rule ARN.
-{{% /md %}}</dd>
-    <dt class="property-optional"
+{{% /md %}}</dd><dt class="property-optional"
             title="Optional">
         <span id="state_detail_type_python">
 <a href="#state_detail_type_python" style="color: inherit; text-decoration: inherit;">detail_<wbr>type</a>
@@ -1208,8 +1116,7 @@ For list of allowed events see [here](https://docs.aws.amazon.com/codestar-notif
         <span class="property-type">str</span>
     </dt>
     <dd>{{% md %}}The level of detail to include in the notifications for this resource. Possible values are `BASIC` and `FULL`.
-{{% /md %}}</dd>
-    <dt class="property-optional"
+{{% /md %}}</dd><dt class="property-optional"
             title="Optional">
         <span id="state_event_type_ids_python">
 <a href="#state_event_type_ids_python" style="color: inherit; text-decoration: inherit;">event_<wbr>type_<wbr>ids</a>
@@ -1219,8 +1126,7 @@ For list of allowed events see [here](https://docs.aws.amazon.com/codestar-notif
     </dt>
     <dd>{{% md %}}A list of event types associated with this notification rule.
 For list of allowed events see [here](https://docs.aws.amazon.com/codestar-notifications/latest/userguide/concepts.html#concepts-api).
-{{% /md %}}</dd>
-    <dt class="property-optional"
+{{% /md %}}</dd><dt class="property-optional"
             title="Optional">
         <span id="state_name_python">
 <a href="#state_name_python" style="color: inherit; text-decoration: inherit;">name</a>
@@ -1229,8 +1135,7 @@ For list of allowed events see [here](https://docs.aws.amazon.com/codestar-notif
         <span class="property-type">str</span>
     </dt>
     <dd>{{% md %}}The name of notification rule.
-{{% /md %}}</dd>
-    <dt class="property-optional"
+{{% /md %}}</dd><dt class="property-optional"
             title="Optional">
         <span id="state_resource_python">
 <a href="#state_resource_python" style="color: inherit; text-decoration: inherit;">resource</a>
@@ -1239,8 +1144,7 @@ For list of allowed events see [here](https://docs.aws.amazon.com/codestar-notif
         <span class="property-type">str</span>
     </dt>
     <dd>{{% md %}}The ARN of the resource to associate with the notification rule.
-{{% /md %}}</dd>
-    <dt class="property-optional"
+{{% /md %}}</dd><dt class="property-optional"
             title="Optional">
         <span id="state_status_python">
 <a href="#state_status_python" style="color: inherit; text-decoration: inherit;">status</a>
@@ -1249,8 +1153,7 @@ For list of allowed events see [here](https://docs.aws.amazon.com/codestar-notif
         <span class="property-type">str</span>
     </dt>
     <dd>{{% md %}}The status of the notification rule. Possible values are `ENABLED` and `DISABLED`, default is `ENABLED`.
-{{% /md %}}</dd>
-    <dt class="property-optional"
+{{% /md %}}</dd><dt class="property-optional"
             title="Optional">
         <span id="state_tags_python">
 <a href="#state_tags_python" style="color: inherit; text-decoration: inherit;">tags</a>
@@ -1259,8 +1162,7 @@ For list of allowed events see [here](https://docs.aws.amazon.com/codestar-notif
         <span class="property-type">Mapping[str, str]</span>
     </dt>
     <dd>{{% md %}}A map of tags to assign to the resource.
-{{% /md %}}</dd>
-    <dt class="property-optional"
+{{% /md %}}</dd><dt class="property-optional"
             title="Optional">
         <span id="state_targets_python">
 <a href="#state_targets_python" style="color: inherit; text-decoration: inherit;">targets</a>
@@ -1269,8 +1171,7 @@ For list of allowed events see [here](https://docs.aws.amazon.com/codestar-notif
         <span class="property-type"><a href="#notificationruletarget">Sequence[Notification<wbr>Rule<wbr>Target<wbr>Args]</a></span>
     </dt>
     <dd>{{% md %}}Configuration blocks containing notification target information. Can be specified multiple times. At least one target must be specified on creation.
-{{% /md %}}</dd>
-</dl>
+{{% /md %}}</dd></dl>
 {{% /choosable %}}
 
 
@@ -1285,9 +1186,7 @@ For list of allowed events see [here](https://docs.aws.amazon.com/codestar-notif
 <h4 id="notificationruletarget">Notification<wbr>Rule<wbr>Target</h4>
 
 {{% choosable language csharp %}}
-<dl class="resources-properties">
-
-    <dt class="property-required"
+<dl class="resources-properties"><dt class="property-required"
             title="Required">
         <span id="address_csharp">
 <a href="#address_csharp" style="color: inherit; text-decoration: inherit;">Address</a>
@@ -1296,8 +1195,7 @@ For list of allowed events see [here](https://docs.aws.amazon.com/codestar-notif
         <span class="property-type">string</span>
     </dt>
     <dd>{{% md %}}The ARN of notification rule target. For example, a SNS Topic ARN.
-{{% /md %}}</dd>
-    <dt class="property-optional"
+{{% /md %}}</dd><dt class="property-optional"
             title="Optional">
         <span id="status_csharp">
 <a href="#status_csharp" style="color: inherit; text-decoration: inherit;">Status</a>
@@ -1306,8 +1204,7 @@ For list of allowed events see [here](https://docs.aws.amazon.com/codestar-notif
         <span class="property-type">string</span>
     </dt>
     <dd>{{% md %}}The status of the notification rule. Possible values are `ENABLED` and `DISABLED`, default is `ENABLED`.
-{{% /md %}}</dd>
-    <dt class="property-optional"
+{{% /md %}}</dd><dt class="property-optional"
             title="Optional">
         <span id="type_csharp">
 <a href="#type_csharp" style="color: inherit; text-decoration: inherit;">Type</a>
@@ -1316,14 +1213,11 @@ For list of allowed events see [here](https://docs.aws.amazon.com/codestar-notif
         <span class="property-type">string</span>
     </dt>
     <dd>{{% md %}}The type of the notification target. Default value is `SNS`.
-{{% /md %}}</dd>
-</dl>
+{{% /md %}}</dd></dl>
 {{% /choosable %}}
 
 {{% choosable language go %}}
-<dl class="resources-properties">
-
-    <dt class="property-required"
+<dl class="resources-properties"><dt class="property-required"
             title="Required">
         <span id="address_go">
 <a href="#address_go" style="color: inherit; text-decoration: inherit;">Address</a>
@@ -1332,8 +1226,7 @@ For list of allowed events see [here](https://docs.aws.amazon.com/codestar-notif
         <span class="property-type">string</span>
     </dt>
     <dd>{{% md %}}The ARN of notification rule target. For example, a SNS Topic ARN.
-{{% /md %}}</dd>
-    <dt class="property-optional"
+{{% /md %}}</dd><dt class="property-optional"
             title="Optional">
         <span id="status_go">
 <a href="#status_go" style="color: inherit; text-decoration: inherit;">Status</a>
@@ -1342,8 +1235,7 @@ For list of allowed events see [here](https://docs.aws.amazon.com/codestar-notif
         <span class="property-type">string</span>
     </dt>
     <dd>{{% md %}}The status of the notification rule. Possible values are `ENABLED` and `DISABLED`, default is `ENABLED`.
-{{% /md %}}</dd>
-    <dt class="property-optional"
+{{% /md %}}</dd><dt class="property-optional"
             title="Optional">
         <span id="type_go">
 <a href="#type_go" style="color: inherit; text-decoration: inherit;">Type</a>
@@ -1352,14 +1244,11 @@ For list of allowed events see [here](https://docs.aws.amazon.com/codestar-notif
         <span class="property-type">string</span>
     </dt>
     <dd>{{% md %}}The type of the notification target. Default value is `SNS`.
-{{% /md %}}</dd>
-</dl>
+{{% /md %}}</dd></dl>
 {{% /choosable %}}
 
 {{% choosable language nodejs %}}
-<dl class="resources-properties">
-
-    <dt class="property-required"
+<dl class="resources-properties"><dt class="property-required"
             title="Required">
         <span id="address_nodejs">
 <a href="#address_nodejs" style="color: inherit; text-decoration: inherit;">address</a>
@@ -1368,8 +1257,7 @@ For list of allowed events see [here](https://docs.aws.amazon.com/codestar-notif
         <span class="property-type">string</span>
     </dt>
     <dd>{{% md %}}The ARN of notification rule target. For example, a SNS Topic ARN.
-{{% /md %}}</dd>
-    <dt class="property-optional"
+{{% /md %}}</dd><dt class="property-optional"
             title="Optional">
         <span id="status_nodejs">
 <a href="#status_nodejs" style="color: inherit; text-decoration: inherit;">status</a>
@@ -1378,8 +1266,7 @@ For list of allowed events see [here](https://docs.aws.amazon.com/codestar-notif
         <span class="property-type">string</span>
     </dt>
     <dd>{{% md %}}The status of the notification rule. Possible values are `ENABLED` and `DISABLED`, default is `ENABLED`.
-{{% /md %}}</dd>
-    <dt class="property-optional"
+{{% /md %}}</dd><dt class="property-optional"
             title="Optional">
         <span id="type_nodejs">
 <a href="#type_nodejs" style="color: inherit; text-decoration: inherit;">type</a>
@@ -1388,14 +1275,11 @@ For list of allowed events see [here](https://docs.aws.amazon.com/codestar-notif
         <span class="property-type">string</span>
     </dt>
     <dd>{{% md %}}The type of the notification target. Default value is `SNS`.
-{{% /md %}}</dd>
-</dl>
+{{% /md %}}</dd></dl>
 {{% /choosable %}}
 
 {{% choosable language python %}}
-<dl class="resources-properties">
-
-    <dt class="property-required"
+<dl class="resources-properties"><dt class="property-required"
             title="Required">
         <span id="address_python">
 <a href="#address_python" style="color: inherit; text-decoration: inherit;">address</a>
@@ -1404,8 +1288,7 @@ For list of allowed events see [here](https://docs.aws.amazon.com/codestar-notif
         <span class="property-type">str</span>
     </dt>
     <dd>{{% md %}}The ARN of notification rule target. For example, a SNS Topic ARN.
-{{% /md %}}</dd>
-    <dt class="property-optional"
+{{% /md %}}</dd><dt class="property-optional"
             title="Optional">
         <span id="status_python">
 <a href="#status_python" style="color: inherit; text-decoration: inherit;">status</a>
@@ -1414,8 +1297,7 @@ For list of allowed events see [here](https://docs.aws.amazon.com/codestar-notif
         <span class="property-type">str</span>
     </dt>
     <dd>{{% md %}}The status of the notification rule. Possible values are `ENABLED` and `DISABLED`, default is `ENABLED`.
-{{% /md %}}</dd>
-    <dt class="property-optional"
+{{% /md %}}</dd><dt class="property-optional"
             title="Optional">
         <span id="type_python">
 <a href="#type_python" style="color: inherit; text-decoration: inherit;">type</a>
@@ -1424,8 +1306,7 @@ For list of allowed events see [here](https://docs.aws.amazon.com/codestar-notif
         <span class="property-type">str</span>
     </dt>
     <dd>{{% md %}}The type of the notification target. Default value is `SNS`.
-{{% /md %}}</dd>
-</dl>
+{{% /md %}}</dd></dl>
 {{% /choosable %}}
 ## Import
 
@@ -1446,6 +1327,6 @@ CodeStar notification rule can be imported using the ARN, e.g.
 	<dt>License</dt>
 	<dd>Apache-2.0</dd>
 	<dt>Notes</dt>
-	<dd>This Pulumi package is based on the [`aws` Terraform Provider](https://github.com/terraform-providers/terraform-provider-aws).</dd>
+	<dd>{{% md %}}This Pulumi package is based on the [`aws` Terraform Provider](https://github.com/terraform-providers/terraform-provider-aws).{{% /md %}}</dd>
 </dl>
 

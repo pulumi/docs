@@ -51,9 +51,7 @@ The following arguments are supported:
 
 
 {{% choosable language csharp %}}
-<dl class="resources-properties">
-
-    <dt class="property-required"
+<dl class="resources-properties"><dt class="property-required"
             title="Required">
         <span id="name_csharp">
 <a href="#name_csharp" style="color: inherit; text-decoration: inherit;">Name</a>
@@ -61,8 +59,7 @@ The following arguments are supported:
         <span class="property-indicator"></span>
         <span class="property-type">string</span>
     </dt>
-    <dd>{{% md %}}Name of the app.{{% /md %}}</dd>
-    <dt class="property-required"
+    <dd>{{% md %}}Name of the app.{{% /md %}}</dd><dt class="property-required"
             title="Required">
         <span id="resourcegroupname_csharp">
 <a href="#resourcegroupname_csharp" style="color: inherit; text-decoration: inherit;">Resource<wbr>Group<wbr>Name</a>
@@ -70,14 +67,11 @@ The following arguments are supported:
         <span class="property-indicator"></span>
         <span class="property-type">string</span>
     </dt>
-    <dd>{{% md %}}Name of the resource group to which the resource belongs.{{% /md %}}</dd>
-</dl>
+    <dd>{{% md %}}Name of the resource group to which the resource belongs.{{% /md %}}</dd></dl>
 {{% /choosable %}}
 
 {{% choosable language go %}}
-<dl class="resources-properties">
-
-    <dt class="property-required"
+<dl class="resources-properties"><dt class="property-required"
             title="Required">
         <span id="name_go">
 <a href="#name_go" style="color: inherit; text-decoration: inherit;">Name</a>
@@ -85,8 +79,7 @@ The following arguments are supported:
         <span class="property-indicator"></span>
         <span class="property-type">string</span>
     </dt>
-    <dd>{{% md %}}Name of the app.{{% /md %}}</dd>
-    <dt class="property-required"
+    <dd>{{% md %}}Name of the app.{{% /md %}}</dd><dt class="property-required"
             title="Required">
         <span id="resourcegroupname_go">
 <a href="#resourcegroupname_go" style="color: inherit; text-decoration: inherit;">Resource<wbr>Group<wbr>Name</a>
@@ -94,14 +87,11 @@ The following arguments are supported:
         <span class="property-indicator"></span>
         <span class="property-type">string</span>
     </dt>
-    <dd>{{% md %}}Name of the resource group to which the resource belongs.{{% /md %}}</dd>
-</dl>
+    <dd>{{% md %}}Name of the resource group to which the resource belongs.{{% /md %}}</dd></dl>
 {{% /choosable %}}
 
 {{% choosable language nodejs %}}
-<dl class="resources-properties">
-
-    <dt class="property-required"
+<dl class="resources-properties"><dt class="property-required"
             title="Required">
         <span id="name_nodejs">
 <a href="#name_nodejs" style="color: inherit; text-decoration: inherit;">name</a>
@@ -109,8 +99,7 @@ The following arguments are supported:
         <span class="property-indicator"></span>
         <span class="property-type">string</span>
     </dt>
-    <dd>{{% md %}}Name of the app.{{% /md %}}</dd>
-    <dt class="property-required"
+    <dd>{{% md %}}Name of the app.{{% /md %}}</dd><dt class="property-required"
             title="Required">
         <span id="resourcegroupname_nodejs">
 <a href="#resourcegroupname_nodejs" style="color: inherit; text-decoration: inherit;">resource<wbr>Group<wbr>Name</a>
@@ -118,14 +107,11 @@ The following arguments are supported:
         <span class="property-indicator"></span>
         <span class="property-type">string</span>
     </dt>
-    <dd>{{% md %}}Name of the resource group to which the resource belongs.{{% /md %}}</dd>
-</dl>
+    <dd>{{% md %}}Name of the resource group to which the resource belongs.{{% /md %}}</dd></dl>
 {{% /choosable %}}
 
 {{% choosable language python %}}
-<dl class="resources-properties">
-
-    <dt class="property-required"
+<dl class="resources-properties"><dt class="property-required"
             title="Required">
         <span id="name_python">
 <a href="#name_python" style="color: inherit; text-decoration: inherit;">name</a>
@@ -133,8 +119,7 @@ The following arguments are supported:
         <span class="property-indicator"></span>
         <span class="property-type">str</span>
     </dt>
-    <dd>{{% md %}}Name of the app.{{% /md %}}</dd>
-    <dt class="property-required"
+    <dd>{{% md %}}Name of the app.{{% /md %}}</dd><dt class="property-required"
             title="Required">
         <span id="resource_group_name_python">
 <a href="#resource_group_name_python" style="color: inherit; text-decoration: inherit;">resource_<wbr>group_<wbr>name</a>
@@ -142,8 +127,7 @@ The following arguments are supported:
         <span class="property-indicator"></span>
         <span class="property-type">str</span>
     </dt>
-    <dd>{{% md %}}Name of the resource group to which the resource belongs.{{% /md %}}</dd>
-</dl>
+    <dd>{{% md %}}Name of the resource group to which the resource belongs.{{% /md %}}</dd></dl>
 {{% /choosable %}}
 
 
@@ -156,9 +140,7 @@ The following output properties are available:
 
 
 {{% choosable language csharp %}}
-<dl class="resources-properties">
-
-    <dt class="property-"
+<dl class="resources-properties"><dt class="property-"
             title="">
         <span id="id_csharp">
 <a href="#id_csharp" style="color: inherit; text-decoration: inherit;">Id</a>
@@ -166,8 +148,7 @@ The following output properties are available:
         <span class="property-indicator"></span>
         <span class="property-type">string</span>
     </dt>
-    <dd>{{% md %}}Resource Id.{{% /md %}}</dd>
-    <dt class="property-"
+    <dd>{{% md %}}Resource Id.{{% /md %}}</dd><dt class="property-"
             title="">
         <span id="name_csharp">
 <a href="#name_csharp" style="color: inherit; text-decoration: inherit;">Name</a>
@@ -175,8 +156,7 @@ The following output properties are available:
         <span class="property-indicator"></span>
         <span class="property-type">string</span>
     </dt>
-    <dd>{{% md %}}Resource Name.{{% /md %}}</dd>
-    <dt class="property-"
+    <dd>{{% md %}}Resource Name.{{% /md %}}</dd><dt class="property-"
             title="">
         <span id="systemdata_csharp">
 <a href="#systemdata_csharp" style="color: inherit; text-decoration: inherit;">System<wbr>Data</a>
@@ -184,8 +164,7 @@ The following output properties are available:
         <span class="property-indicator"></span>
         <span class="property-type"><a href="#systemdataresponse">Pulumi.<wbr>Azure<wbr>Native.<wbr>Web.<wbr>Outputs.<wbr>System<wbr>Data<wbr>Response</a></span>
     </dt>
-    <dd>{{% md %}}The system metadata relating to this resource.{{% /md %}}</dd>
-    <dt class="property-"
+    <dd>{{% md %}}The system metadata relating to this resource.{{% /md %}}</dd><dt class="property-"
             title="">
         <span id="type_csharp">
 <a href="#type_csharp" style="color: inherit; text-decoration: inherit;">Type</a>
@@ -193,8 +172,7 @@ The following output properties are available:
         <span class="property-indicator"></span>
         <span class="property-type">string</span>
     </dt>
-    <dd>{{% md %}}Resource type.{{% /md %}}</dd>
-    <dt class="property-"
+    <dd>{{% md %}}Resource type.{{% /md %}}</dd><dt class="property-"
             title="">
         <span id="aadclaimsauthorization_csharp">
 <a href="#aadclaimsauthorization_csharp" style="color: inherit; text-decoration: inherit;">Aad<wbr>Claims<wbr>Authorization</a>
@@ -202,8 +180,7 @@ The following output properties are available:
         <span class="property-indicator"></span>
         <span class="property-type">string</span>
     </dt>
-    <dd>{{% md %}}Gets a JSON string containing the Azure AD Acl settings.{{% /md %}}</dd>
-    <dt class="property-"
+    <dd>{{% md %}}Gets a JSON string containing the Azure AD Acl settings.{{% /md %}}</dd><dt class="property-"
             title="">
         <span id="additionalloginparams_csharp">
 <a href="#additionalloginparams_csharp" style="color: inherit; text-decoration: inherit;">Additional<wbr>Login<wbr>Params</a>
@@ -212,8 +189,7 @@ The following output properties are available:
         <span class="property-type">List&lt;string&gt;</span>
     </dt>
     <dd>{{% md %}}Login parameters to send to the OpenID Connect authorization endpoint when
-a user logs in. Each parameter must be in the form "key=value".{{% /md %}}</dd>
-    <dt class="property-"
+a user logs in. Each parameter must be in the form "key=value".{{% /md %}}</dd><dt class="property-"
             title="">
         <span id="allowedaudiences_csharp">
 <a href="#allowedaudiences_csharp" style="color: inherit; text-decoration: inherit;">Allowed<wbr>Audiences</a>
@@ -223,8 +199,7 @@ a user logs in. Each parameter must be in the form "key=value".{{% /md %}}</dd>
     </dt>
     <dd>{{% md %}}Allowed audience values to consider when validating JWTs issued by 
 Azure Active Directory. Note that the <code>ClientID</code> value is always considered an
-allowed audience, regardless of this setting.{{% /md %}}</dd>
-    <dt class="property-"
+allowed audience, regardless of this setting.{{% /md %}}</dd><dt class="property-"
             title="">
         <span id="allowedexternalredirecturls_csharp">
 <a href="#allowedexternalredirecturls_csharp" style="color: inherit; text-decoration: inherit;">Allowed<wbr>External<wbr>Redirect<wbr>Urls</a>
@@ -234,8 +209,7 @@ allowed audience, regardless of this setting.{{% /md %}}</dd>
     </dt>
     <dd>{{% md %}}External URLs that can be redirected to as part of logging in or logging out of the app. Note that the query string part of the URL is ignored.
 This is an advanced setting typically only needed by Windows Store application backends.
-Note that URLs within the current domain are always implicitly allowed.{{% /md %}}</dd>
-    <dt class="property-"
+Note that URLs within the current domain are always implicitly allowed.{{% /md %}}</dd><dt class="property-"
             title="">
         <span id="authfilepath_csharp">
 <a href="#authfilepath_csharp" style="color: inherit; text-decoration: inherit;">Auth<wbr>File<wbr>Path</a>
@@ -244,8 +218,7 @@ Note that URLs within the current domain are always implicitly allowed.{{% /md %
         <span class="property-type">string</span>
     </dt>
     <dd>{{% md %}}The path of the config file containing auth settings.
-If the path is relative, base will the site's root directory.{{% /md %}}</dd>
-    <dt class="property-"
+If the path is relative, base will the site's root directory.{{% /md %}}</dd><dt class="property-"
             title="">
         <span id="clientid_csharp">
 <a href="#clientid_csharp" style="color: inherit; text-decoration: inherit;">Client<wbr>Id</a>
@@ -256,8 +229,7 @@ If the path is relative, base will the site's root directory.{{% /md %}}</dd>
     <dd>{{% md %}}The Client ID of this relying party application, known as the client_id.
 This setting is required for enabling OpenID Connection authentication with Azure Active Directory or 
 other 3rd party OpenID Connect providers.
-More information on OpenID Connect: http://openid.net/specs/openid-connect-core-1_0.html{{% /md %}}</dd>
-    <dt class="property-"
+More information on OpenID Connect: http://openid.net/specs/openid-connect-core-1_0.html{{% /md %}}</dd><dt class="property-"
             title="">
         <span id="clientsecret_csharp">
 <a href="#clientsecret_csharp" style="color: inherit; text-decoration: inherit;">Client<wbr>Secret</a>
@@ -268,8 +240,7 @@ More information on OpenID Connect: http://openid.net/specs/openid-connect-core-
     <dd>{{% md %}}The Client Secret of this relying party application (in Azure Active Directory, this is also referred to as the Key).
 This setting is optional. If no client secret is configured, the OpenID Connect implicit auth flow is used to authenticate end users.
 Otherwise, the OpenID Connect Authorization Code Flow is used to authenticate end users.
-More information on OpenID Connect: http://openid.net/specs/openid-connect-core-1_0.html{{% /md %}}</dd>
-    <dt class="property-"
+More information on OpenID Connect: http://openid.net/specs/openid-connect-core-1_0.html{{% /md %}}</dd><dt class="property-"
             title="">
         <span id="clientsecretcertificatethumbprint_csharp">
 <a href="#clientsecretcertificatethumbprint_csharp" style="color: inherit; text-decoration: inherit;">Client<wbr>Secret<wbr>Certificate<wbr>Thumbprint</a>
@@ -278,8 +249,7 @@ More information on OpenID Connect: http://openid.net/specs/openid-connect-core-
         <span class="property-type">string</span>
     </dt>
     <dd>{{% md %}}An alternative to the client secret, that is the thumbprint of a certificate used for signing purposes. This property acts as
-a replacement for the Client Secret. It is also optional.{{% /md %}}</dd>
-    <dt class="property-"
+a replacement for the Client Secret. It is also optional.{{% /md %}}</dd><dt class="property-"
             title="">
         <span id="clientsecretsettingname_csharp">
 <a href="#clientsecretsettingname_csharp" style="color: inherit; text-decoration: inherit;">Client<wbr>Secret<wbr>Setting<wbr>Name</a>
@@ -287,8 +257,7 @@ a replacement for the Client Secret. It is also optional.{{% /md %}}</dd>
         <span class="property-indicator"></span>
         <span class="property-type">string</span>
     </dt>
-    <dd>{{% md %}}The app setting name that contains the client secret of the relying party application.{{% /md %}}</dd>
-    <dt class="property-"
+    <dd>{{% md %}}The app setting name that contains the client secret of the relying party application.{{% /md %}}</dd><dt class="property-"
             title="">
         <span id="defaultprovider_csharp">
 <a href="#defaultprovider_csharp" style="color: inherit; text-decoration: inherit;">Default<wbr>Provider</a>
@@ -298,8 +267,7 @@ a replacement for the Client Secret. It is also optional.{{% /md %}}</dd>
     </dt>
     <dd>{{% md %}}The default authentication provider to use when multiple providers are configured.
 This setting is only needed if multiple providers are configured and the unauthenticated client
-action is set to "RedirectToLoginPage".{{% /md %}}</dd>
-    <dt class="property-"
+action is set to "RedirectToLoginPage".{{% /md %}}</dd><dt class="property-"
             title="">
         <span id="enabled_csharp">
 <a href="#enabled_csharp" style="color: inherit; text-decoration: inherit;">Enabled</a>
@@ -307,8 +275,7 @@ action is set to "RedirectToLoginPage".{{% /md %}}</dd>
         <span class="property-indicator"></span>
         <span class="property-type">bool</span>
     </dt>
-    <dd>{{% md %}}<code>true</code> if the Authentication / Authorization feature is enabled for the current app; otherwise, <code>false</code>.{{% /md %}}</dd>
-    <dt class="property-"
+    <dd>{{% md %}}<code>true</code> if the Authentication / Authorization feature is enabled for the current app; otherwise, <code>false</code>.{{% /md %}}</dd><dt class="property-"
             title="">
         <span id="facebookappid_csharp">
 <a href="#facebookappid_csharp" style="color: inherit; text-decoration: inherit;">Facebook<wbr>App<wbr>Id</a>
@@ -318,8 +285,7 @@ action is set to "RedirectToLoginPage".{{% /md %}}</dd>
     </dt>
     <dd>{{% md %}}The App ID of the Facebook app used for login.
 This setting is required for enabling Facebook Login.
-Facebook Login documentation: https://developers.facebook.com/docs/facebook-login{{% /md %}}</dd>
-    <dt class="property-"
+Facebook Login documentation: https://developers.facebook.com/docs/facebook-login{{% /md %}}</dd><dt class="property-"
             title="">
         <span id="facebookappsecret_csharp">
 <a href="#facebookappsecret_csharp" style="color: inherit; text-decoration: inherit;">Facebook<wbr>App<wbr>Secret</a>
@@ -329,8 +295,7 @@ Facebook Login documentation: https://developers.facebook.com/docs/facebook-logi
     </dt>
     <dd>{{% md %}}The App Secret of the Facebook app used for Facebook Login.
 This setting is required for enabling Facebook Login.
-Facebook Login documentation: https://developers.facebook.com/docs/facebook-login{{% /md %}}</dd>
-    <dt class="property-"
+Facebook Login documentation: https://developers.facebook.com/docs/facebook-login{{% /md %}}</dd><dt class="property-"
             title="">
         <span id="facebookappsecretsettingname_csharp">
 <a href="#facebookappsecretsettingname_csharp" style="color: inherit; text-decoration: inherit;">Facebook<wbr>App<wbr>Secret<wbr>Setting<wbr>Name</a>
@@ -338,8 +303,7 @@ Facebook Login documentation: https://developers.facebook.com/docs/facebook-logi
         <span class="property-indicator"></span>
         <span class="property-type">string</span>
     </dt>
-    <dd>{{% md %}}The app setting name that contains the app secret used for Facebook Login.{{% /md %}}</dd>
-    <dt class="property-"
+    <dd>{{% md %}}The app setting name that contains the app secret used for Facebook Login.{{% /md %}}</dd><dt class="property-"
             title="">
         <span id="facebookoauthscopes_csharp">
 <a href="#facebookoauthscopes_csharp" style="color: inherit; text-decoration: inherit;">Facebook<wbr>OAuth<wbr>Scopes</a>
@@ -349,8 +313,7 @@ Facebook Login documentation: https://developers.facebook.com/docs/facebook-logi
     </dt>
     <dd>{{% md %}}The OAuth 2.0 scopes that will be requested as part of Facebook Login authentication.
 This setting is optional.
-Facebook Login documentation: https://developers.facebook.com/docs/facebook-login{{% /md %}}</dd>
-    <dt class="property-"
+Facebook Login documentation: https://developers.facebook.com/docs/facebook-login{{% /md %}}</dd><dt class="property-"
             title="">
         <span id="githubclientid_csharp">
 <a href="#githubclientid_csharp" style="color: inherit; text-decoration: inherit;">Git<wbr>Hub<wbr>Client<wbr>Id</a>
@@ -359,8 +322,7 @@ Facebook Login documentation: https://developers.facebook.com/docs/facebook-logi
         <span class="property-type">string</span>
     </dt>
     <dd>{{% md %}}The Client Id of the GitHub app used for login.
-This setting is required for enabling Github login{{% /md %}}</dd>
-    <dt class="property-"
+This setting is required for enabling Github login{{% /md %}}</dd><dt class="property-"
             title="">
         <span id="githubclientsecret_csharp">
 <a href="#githubclientsecret_csharp" style="color: inherit; text-decoration: inherit;">Git<wbr>Hub<wbr>Client<wbr>Secret</a>
@@ -369,8 +331,7 @@ This setting is required for enabling Github login{{% /md %}}</dd>
         <span class="property-type">string</span>
     </dt>
     <dd>{{% md %}}The Client Secret of the GitHub app used for Github Login.
-This setting is required for enabling Github login.{{% /md %}}</dd>
-    <dt class="property-"
+This setting is required for enabling Github login.{{% /md %}}</dd><dt class="property-"
             title="">
         <span id="githubclientsecretsettingname_csharp">
 <a href="#githubclientsecretsettingname_csharp" style="color: inherit; text-decoration: inherit;">Git<wbr>Hub<wbr>Client<wbr>Secret<wbr>Setting<wbr>Name</a>
@@ -379,8 +340,7 @@ This setting is required for enabling Github login.{{% /md %}}</dd>
         <span class="property-type">string</span>
     </dt>
     <dd>{{% md %}}The app setting name that contains the client secret of the Github
-app used for GitHub Login.{{% /md %}}</dd>
-    <dt class="property-"
+app used for GitHub Login.{{% /md %}}</dd><dt class="property-"
             title="">
         <span id="githuboauthscopes_csharp">
 <a href="#githuboauthscopes_csharp" style="color: inherit; text-decoration: inherit;">Git<wbr>Hub<wbr>OAuth<wbr>Scopes</a>
@@ -389,8 +349,7 @@ app used for GitHub Login.{{% /md %}}</dd>
         <span class="property-type">List&lt;string&gt;</span>
     </dt>
     <dd>{{% md %}}The OAuth 2.0 scopes that will be requested as part of GitHub Login authentication.
-This setting is optional{{% /md %}}</dd>
-    <dt class="property-"
+This setting is optional{{% /md %}}</dd><dt class="property-"
             title="">
         <span id="googleclientid_csharp">
 <a href="#googleclientid_csharp" style="color: inherit; text-decoration: inherit;">Google<wbr>Client<wbr>Id</a>
@@ -400,8 +359,7 @@ This setting is optional{{% /md %}}</dd>
     </dt>
     <dd>{{% md %}}The OpenID Connect Client ID for the Google web application.
 This setting is required for enabling Google Sign-In.
-Google Sign-In documentation: https://developers.google.com/identity/sign-in/web/{{% /md %}}</dd>
-    <dt class="property-"
+Google Sign-In documentation: https://developers.google.com/identity/sign-in/web/{{% /md %}}</dd><dt class="property-"
             title="">
         <span id="googleclientsecret_csharp">
 <a href="#googleclientsecret_csharp" style="color: inherit; text-decoration: inherit;">Google<wbr>Client<wbr>Secret</a>
@@ -411,8 +369,7 @@ Google Sign-In documentation: https://developers.google.com/identity/sign-in/web
     </dt>
     <dd>{{% md %}}The client secret associated with the Google web application.
 This setting is required for enabling Google Sign-In.
-Google Sign-In documentation: https://developers.google.com/identity/sign-in/web/{{% /md %}}</dd>
-    <dt class="property-"
+Google Sign-In documentation: https://developers.google.com/identity/sign-in/web/{{% /md %}}</dd><dt class="property-"
             title="">
         <span id="googleclientsecretsettingname_csharp">
 <a href="#googleclientsecretsettingname_csharp" style="color: inherit; text-decoration: inherit;">Google<wbr>Client<wbr>Secret<wbr>Setting<wbr>Name</a>
@@ -421,8 +378,7 @@ Google Sign-In documentation: https://developers.google.com/identity/sign-in/web
         <span class="property-type">string</span>
     </dt>
     <dd>{{% md %}}The app setting name that contains the client secret associated with 
-the Google web application.{{% /md %}}</dd>
-    <dt class="property-"
+the Google web application.{{% /md %}}</dd><dt class="property-"
             title="">
         <span id="googleoauthscopes_csharp">
 <a href="#googleoauthscopes_csharp" style="color: inherit; text-decoration: inherit;">Google<wbr>OAuth<wbr>Scopes</a>
@@ -432,8 +388,7 @@ the Google web application.{{% /md %}}</dd>
     </dt>
     <dd>{{% md %}}The OAuth 2.0 scopes that will be requested as part of Google Sign-In authentication.
 This setting is optional. If not specified, "openid", "profile", and "email" are used as default scopes.
-Google Sign-In documentation: https://developers.google.com/identity/sign-in/web/{{% /md %}}</dd>
-    <dt class="property-"
+Google Sign-In documentation: https://developers.google.com/identity/sign-in/web/{{% /md %}}</dd><dt class="property-"
             title="">
         <span id="isauthfromfile_csharp">
 <a href="#isauthfromfile_csharp" style="color: inherit; text-decoration: inherit;">Is<wbr>Auth<wbr>From<wbr>File</a>
@@ -442,8 +397,7 @@ Google Sign-In documentation: https://developers.google.com/identity/sign-in/web
         <span class="property-type">string</span>
     </dt>
     <dd>{{% md %}}"true" if the auth config settings should be read from a file,
-"false" otherwise{{% /md %}}</dd>
-    <dt class="property-"
+"false" otherwise{{% /md %}}</dd><dt class="property-"
             title="">
         <span id="issuer_csharp">
 <a href="#issuer_csharp" style="color: inherit; text-decoration: inherit;">Issuer</a>
@@ -454,8 +408,7 @@ Google Sign-In documentation: https://developers.google.com/identity/sign-in/web
     <dd>{{% md %}}The OpenID Connect Issuer URI that represents the entity which issues access tokens for this application.
 When using Azure Active Directory, this value is the URI of the directory tenant, e.g. https://sts.windows.net/{tenant-guid}/.
 This URI is a case-sensitive identifier for the token issuer.
-More information on OpenID Connect Discovery: http://openid.net/specs/openid-connect-discovery-1_0.html{{% /md %}}</dd>
-    <dt class="property-"
+More information on OpenID Connect Discovery: http://openid.net/specs/openid-connect-discovery-1_0.html{{% /md %}}</dd><dt class="property-"
             title="">
         <span id="kind_csharp">
 <a href="#kind_csharp" style="color: inherit; text-decoration: inherit;">Kind</a>
@@ -463,8 +416,7 @@ More information on OpenID Connect Discovery: http://openid.net/specs/openid-con
         <span class="property-indicator"></span>
         <span class="property-type">string</span>
     </dt>
-    <dd>{{% md %}}Kind of resource.{{% /md %}}</dd>
-    <dt class="property-"
+    <dd>{{% md %}}Kind of resource.{{% /md %}}</dd><dt class="property-"
             title="">
         <span id="microsoftaccountclientid_csharp">
 <a href="#microsoftaccountclientid_csharp" style="color: inherit; text-decoration: inherit;">Microsoft<wbr>Account<wbr>Client<wbr>Id</a>
@@ -474,8 +426,7 @@ More information on OpenID Connect Discovery: http://openid.net/specs/openid-con
     </dt>
     <dd>{{% md %}}The OAuth 2.0 client ID that was created for the app used for authentication.
 This setting is required for enabling Microsoft Account authentication.
-Microsoft Account OAuth documentation: https://dev.onedrive.com/auth/msa_oauth.htm{{% /md %}}</dd>
-    <dt class="property-"
+Microsoft Account OAuth documentation: https://dev.onedrive.com/auth/msa_oauth.htm{{% /md %}}</dd><dt class="property-"
             title="">
         <span id="microsoftaccountclientsecret_csharp">
 <a href="#microsoftaccountclientsecret_csharp" style="color: inherit; text-decoration: inherit;">Microsoft<wbr>Account<wbr>Client<wbr>Secret</a>
@@ -485,8 +436,7 @@ Microsoft Account OAuth documentation: https://dev.onedrive.com/auth/msa_oauth.h
     </dt>
     <dd>{{% md %}}The OAuth 2.0 client secret that was created for the app used for authentication.
 This setting is required for enabling Microsoft Account authentication.
-Microsoft Account OAuth documentation: https://dev.onedrive.com/auth/msa_oauth.htm{{% /md %}}</dd>
-    <dt class="property-"
+Microsoft Account OAuth documentation: https://dev.onedrive.com/auth/msa_oauth.htm{{% /md %}}</dd><dt class="property-"
             title="">
         <span id="microsoftaccountclientsecretsettingname_csharp">
 <a href="#microsoftaccountclientsecretsettingname_csharp" style="color: inherit; text-decoration: inherit;">Microsoft<wbr>Account<wbr>Client<wbr>Secret<wbr>Setting<wbr>Name</a>
@@ -495,8 +445,7 @@ Microsoft Account OAuth documentation: https://dev.onedrive.com/auth/msa_oauth.h
         <span class="property-type">string</span>
     </dt>
     <dd>{{% md %}}The app setting name containing the OAuth 2.0 client secret that was created for the
-app used for authentication.{{% /md %}}</dd>
-    <dt class="property-"
+app used for authentication.{{% /md %}}</dd><dt class="property-"
             title="">
         <span id="microsoftaccountoauthscopes_csharp">
 <a href="#microsoftaccountoauthscopes_csharp" style="color: inherit; text-decoration: inherit;">Microsoft<wbr>Account<wbr>OAuth<wbr>Scopes</a>
@@ -506,8 +455,7 @@ app used for authentication.{{% /md %}}</dd>
     </dt>
     <dd>{{% md %}}The OAuth 2.0 scopes that will be requested as part of Microsoft Account authentication.
 This setting is optional. If not specified, "wl.basic" is used as the default scope.
-Microsoft Account Scopes and permissions documentation: https://msdn.microsoft.com/en-us/library/dn631845.aspx{{% /md %}}</dd>
-    <dt class="property-"
+Microsoft Account Scopes and permissions documentation: https://msdn.microsoft.com/en-us/library/dn631845.aspx{{% /md %}}</dd><dt class="property-"
             title="">
         <span id="runtimeversion_csharp">
 <a href="#runtimeversion_csharp" style="color: inherit; text-decoration: inherit;">Runtime<wbr>Version</a>
@@ -516,8 +464,7 @@ Microsoft Account Scopes and permissions documentation: https://msdn.microsoft.c
         <span class="property-type">string</span>
     </dt>
     <dd>{{% md %}}The RuntimeVersion of the Authentication / Authorization feature in use for the current app.
-The setting in this value can control the behavior of certain features in the Authentication / Authorization module.{{% /md %}}</dd>
-    <dt class="property-"
+The setting in this value can control the behavior of certain features in the Authentication / Authorization module.{{% /md %}}</dd><dt class="property-"
             title="">
         <span id="tokenrefreshextensionhours_csharp">
 <a href="#tokenrefreshextensionhours_csharp" style="color: inherit; text-decoration: inherit;">Token<wbr>Refresh<wbr>Extension<wbr>Hours</a>
@@ -526,8 +473,7 @@ The setting in this value can control the behavior of certain features in the Au
         <span class="property-type">double</span>
     </dt>
     <dd>{{% md %}}The number of hours after session token expiration that a session token can be used to
-call the token refresh API. The default is 72 hours.{{% /md %}}</dd>
-    <dt class="property-"
+call the token refresh API. The default is 72 hours.{{% /md %}}</dd><dt class="property-"
             title="">
         <span id="tokenstoreenabled_csharp">
 <a href="#tokenstoreenabled_csharp" style="color: inherit; text-decoration: inherit;">Token<wbr>Store<wbr>Enabled</a>
@@ -536,8 +482,7 @@ call the token refresh API. The default is 72 hours.{{% /md %}}</dd>
         <span class="property-type">bool</span>
     </dt>
     <dd>{{% md %}}<code>true</code> to durably store platform-specific security tokens that are obtained during login flows; otherwise, <code>false</code>.
- The default is <code>false</code>.{{% /md %}}</dd>
-    <dt class="property-"
+ The default is <code>false</code>.{{% /md %}}</dd><dt class="property-"
             title="">
         <span id="twitterconsumerkey_csharp">
 <a href="#twitterconsumerkey_csharp" style="color: inherit; text-decoration: inherit;">Twitter<wbr>Consumer<wbr>Key</a>
@@ -547,8 +492,7 @@ call the token refresh API. The default is 72 hours.{{% /md %}}</dd>
     </dt>
     <dd>{{% md %}}The OAuth 1.0a consumer key of the Twitter application used for sign-in.
 This setting is required for enabling Twitter Sign-In.
-Twitter Sign-In documentation: https://dev.twitter.com/web/sign-in{{% /md %}}</dd>
-    <dt class="property-"
+Twitter Sign-In documentation: https://dev.twitter.com/web/sign-in{{% /md %}}</dd><dt class="property-"
             title="">
         <span id="twitterconsumersecret_csharp">
 <a href="#twitterconsumersecret_csharp" style="color: inherit; text-decoration: inherit;">Twitter<wbr>Consumer<wbr>Secret</a>
@@ -558,8 +502,7 @@ Twitter Sign-In documentation: https://dev.twitter.com/web/sign-in{{% /md %}}</d
     </dt>
     <dd>{{% md %}}The OAuth 1.0a consumer secret of the Twitter application used for sign-in.
 This setting is required for enabling Twitter Sign-In.
-Twitter Sign-In documentation: https://dev.twitter.com/web/sign-in{{% /md %}}</dd>
-    <dt class="property-"
+Twitter Sign-In documentation: https://dev.twitter.com/web/sign-in{{% /md %}}</dd><dt class="property-"
             title="">
         <span id="twitterconsumersecretsettingname_csharp">
 <a href="#twitterconsumersecretsettingname_csharp" style="color: inherit; text-decoration: inherit;">Twitter<wbr>Consumer<wbr>Secret<wbr>Setting<wbr>Name</a>
@@ -568,8 +511,7 @@ Twitter Sign-In documentation: https://dev.twitter.com/web/sign-in{{% /md %}}</d
         <span class="property-type">string</span>
     </dt>
     <dd>{{% md %}}The app setting name that contains the OAuth 1.0a consumer secret of the Twitter
-application used for sign-in.{{% /md %}}</dd>
-    <dt class="property-"
+application used for sign-in.{{% /md %}}</dd><dt class="property-"
             title="">
         <span id="unauthenticatedclientaction_csharp">
 <a href="#unauthenticatedclientaction_csharp" style="color: inherit; text-decoration: inherit;">Unauthenticated<wbr>Client<wbr>Action</a>
@@ -577,8 +519,7 @@ application used for sign-in.{{% /md %}}</dd>
         <span class="property-indicator"></span>
         <span class="property-type">string</span>
     </dt>
-    <dd>{{% md %}}The action to take when an unauthenticated client attempts to access the app.{{% /md %}}</dd>
-    <dt class="property-"
+    <dd>{{% md %}}The action to take when an unauthenticated client attempts to access the app.{{% /md %}}</dd><dt class="property-"
             title="">
         <span id="validateissuer_csharp">
 <a href="#validateissuer_csharp" style="color: inherit; text-decoration: inherit;">Validate<wbr>Issuer</a>
@@ -586,14 +527,11 @@ application used for sign-in.{{% /md %}}</dd>
         <span class="property-indicator"></span>
         <span class="property-type">bool</span>
     </dt>
-    <dd>{{% md %}}Gets a value indicating whether the issuer should be a valid HTTPS url and be validated as such.{{% /md %}}</dd>
-</dl>
+    <dd>{{% md %}}Gets a value indicating whether the issuer should be a valid HTTPS url and be validated as such.{{% /md %}}</dd></dl>
 {{% /choosable %}}
 
 {{% choosable language go %}}
-<dl class="resources-properties">
-
-    <dt class="property-"
+<dl class="resources-properties"><dt class="property-"
             title="">
         <span id="id_go">
 <a href="#id_go" style="color: inherit; text-decoration: inherit;">Id</a>
@@ -601,8 +539,7 @@ application used for sign-in.{{% /md %}}</dd>
         <span class="property-indicator"></span>
         <span class="property-type">string</span>
     </dt>
-    <dd>{{% md %}}Resource Id.{{% /md %}}</dd>
-    <dt class="property-"
+    <dd>{{% md %}}Resource Id.{{% /md %}}</dd><dt class="property-"
             title="">
         <span id="name_go">
 <a href="#name_go" style="color: inherit; text-decoration: inherit;">Name</a>
@@ -610,8 +547,7 @@ application used for sign-in.{{% /md %}}</dd>
         <span class="property-indicator"></span>
         <span class="property-type">string</span>
     </dt>
-    <dd>{{% md %}}Resource Name.{{% /md %}}</dd>
-    <dt class="property-"
+    <dd>{{% md %}}Resource Name.{{% /md %}}</dd><dt class="property-"
             title="">
         <span id="systemdata_go">
 <a href="#systemdata_go" style="color: inherit; text-decoration: inherit;">System<wbr>Data</a>
@@ -619,8 +555,7 @@ application used for sign-in.{{% /md %}}</dd>
         <span class="property-indicator"></span>
         <span class="property-type"><a href="#systemdataresponse">System<wbr>Data<wbr>Response</a></span>
     </dt>
-    <dd>{{% md %}}The system metadata relating to this resource.{{% /md %}}</dd>
-    <dt class="property-"
+    <dd>{{% md %}}The system metadata relating to this resource.{{% /md %}}</dd><dt class="property-"
             title="">
         <span id="type_go">
 <a href="#type_go" style="color: inherit; text-decoration: inherit;">Type</a>
@@ -628,8 +563,7 @@ application used for sign-in.{{% /md %}}</dd>
         <span class="property-indicator"></span>
         <span class="property-type">string</span>
     </dt>
-    <dd>{{% md %}}Resource type.{{% /md %}}</dd>
-    <dt class="property-"
+    <dd>{{% md %}}Resource type.{{% /md %}}</dd><dt class="property-"
             title="">
         <span id="aadclaimsauthorization_go">
 <a href="#aadclaimsauthorization_go" style="color: inherit; text-decoration: inherit;">Aad<wbr>Claims<wbr>Authorization</a>
@@ -637,8 +571,7 @@ application used for sign-in.{{% /md %}}</dd>
         <span class="property-indicator"></span>
         <span class="property-type">string</span>
     </dt>
-    <dd>{{% md %}}Gets a JSON string containing the Azure AD Acl settings.{{% /md %}}</dd>
-    <dt class="property-"
+    <dd>{{% md %}}Gets a JSON string containing the Azure AD Acl settings.{{% /md %}}</dd><dt class="property-"
             title="">
         <span id="additionalloginparams_go">
 <a href="#additionalloginparams_go" style="color: inherit; text-decoration: inherit;">Additional<wbr>Login<wbr>Params</a>
@@ -647,8 +580,7 @@ application used for sign-in.{{% /md %}}</dd>
         <span class="property-type">[]string</span>
     </dt>
     <dd>{{% md %}}Login parameters to send to the OpenID Connect authorization endpoint when
-a user logs in. Each parameter must be in the form "key=value".{{% /md %}}</dd>
-    <dt class="property-"
+a user logs in. Each parameter must be in the form "key=value".{{% /md %}}</dd><dt class="property-"
             title="">
         <span id="allowedaudiences_go">
 <a href="#allowedaudiences_go" style="color: inherit; text-decoration: inherit;">Allowed<wbr>Audiences</a>
@@ -658,8 +590,7 @@ a user logs in. Each parameter must be in the form "key=value".{{% /md %}}</dd>
     </dt>
     <dd>{{% md %}}Allowed audience values to consider when validating JWTs issued by 
 Azure Active Directory. Note that the <code>ClientID</code> value is always considered an
-allowed audience, regardless of this setting.{{% /md %}}</dd>
-    <dt class="property-"
+allowed audience, regardless of this setting.{{% /md %}}</dd><dt class="property-"
             title="">
         <span id="allowedexternalredirecturls_go">
 <a href="#allowedexternalredirecturls_go" style="color: inherit; text-decoration: inherit;">Allowed<wbr>External<wbr>Redirect<wbr>Urls</a>
@@ -669,8 +600,7 @@ allowed audience, regardless of this setting.{{% /md %}}</dd>
     </dt>
     <dd>{{% md %}}External URLs that can be redirected to as part of logging in or logging out of the app. Note that the query string part of the URL is ignored.
 This is an advanced setting typically only needed by Windows Store application backends.
-Note that URLs within the current domain are always implicitly allowed.{{% /md %}}</dd>
-    <dt class="property-"
+Note that URLs within the current domain are always implicitly allowed.{{% /md %}}</dd><dt class="property-"
             title="">
         <span id="authfilepath_go">
 <a href="#authfilepath_go" style="color: inherit; text-decoration: inherit;">Auth<wbr>File<wbr>Path</a>
@@ -679,8 +609,7 @@ Note that URLs within the current domain are always implicitly allowed.{{% /md %
         <span class="property-type">string</span>
     </dt>
     <dd>{{% md %}}The path of the config file containing auth settings.
-If the path is relative, base will the site's root directory.{{% /md %}}</dd>
-    <dt class="property-"
+If the path is relative, base will the site's root directory.{{% /md %}}</dd><dt class="property-"
             title="">
         <span id="clientid_go">
 <a href="#clientid_go" style="color: inherit; text-decoration: inherit;">Client<wbr>Id</a>
@@ -691,8 +620,7 @@ If the path is relative, base will the site's root directory.{{% /md %}}</dd>
     <dd>{{% md %}}The Client ID of this relying party application, known as the client_id.
 This setting is required for enabling OpenID Connection authentication with Azure Active Directory or 
 other 3rd party OpenID Connect providers.
-More information on OpenID Connect: http://openid.net/specs/openid-connect-core-1_0.html{{% /md %}}</dd>
-    <dt class="property-"
+More information on OpenID Connect: http://openid.net/specs/openid-connect-core-1_0.html{{% /md %}}</dd><dt class="property-"
             title="">
         <span id="clientsecret_go">
 <a href="#clientsecret_go" style="color: inherit; text-decoration: inherit;">Client<wbr>Secret</a>
@@ -703,8 +631,7 @@ More information on OpenID Connect: http://openid.net/specs/openid-connect-core-
     <dd>{{% md %}}The Client Secret of this relying party application (in Azure Active Directory, this is also referred to as the Key).
 This setting is optional. If no client secret is configured, the OpenID Connect implicit auth flow is used to authenticate end users.
 Otherwise, the OpenID Connect Authorization Code Flow is used to authenticate end users.
-More information on OpenID Connect: http://openid.net/specs/openid-connect-core-1_0.html{{% /md %}}</dd>
-    <dt class="property-"
+More information on OpenID Connect: http://openid.net/specs/openid-connect-core-1_0.html{{% /md %}}</dd><dt class="property-"
             title="">
         <span id="clientsecretcertificatethumbprint_go">
 <a href="#clientsecretcertificatethumbprint_go" style="color: inherit; text-decoration: inherit;">Client<wbr>Secret<wbr>Certificate<wbr>Thumbprint</a>
@@ -713,8 +640,7 @@ More information on OpenID Connect: http://openid.net/specs/openid-connect-core-
         <span class="property-type">string</span>
     </dt>
     <dd>{{% md %}}An alternative to the client secret, that is the thumbprint of a certificate used for signing purposes. This property acts as
-a replacement for the Client Secret. It is also optional.{{% /md %}}</dd>
-    <dt class="property-"
+a replacement for the Client Secret. It is also optional.{{% /md %}}</dd><dt class="property-"
             title="">
         <span id="clientsecretsettingname_go">
 <a href="#clientsecretsettingname_go" style="color: inherit; text-decoration: inherit;">Client<wbr>Secret<wbr>Setting<wbr>Name</a>
@@ -722,8 +648,7 @@ a replacement for the Client Secret. It is also optional.{{% /md %}}</dd>
         <span class="property-indicator"></span>
         <span class="property-type">string</span>
     </dt>
-    <dd>{{% md %}}The app setting name that contains the client secret of the relying party application.{{% /md %}}</dd>
-    <dt class="property-"
+    <dd>{{% md %}}The app setting name that contains the client secret of the relying party application.{{% /md %}}</dd><dt class="property-"
             title="">
         <span id="defaultprovider_go">
 <a href="#defaultprovider_go" style="color: inherit; text-decoration: inherit;">Default<wbr>Provider</a>
@@ -733,8 +658,7 @@ a replacement for the Client Secret. It is also optional.{{% /md %}}</dd>
     </dt>
     <dd>{{% md %}}The default authentication provider to use when multiple providers are configured.
 This setting is only needed if multiple providers are configured and the unauthenticated client
-action is set to "RedirectToLoginPage".{{% /md %}}</dd>
-    <dt class="property-"
+action is set to "RedirectToLoginPage".{{% /md %}}</dd><dt class="property-"
             title="">
         <span id="enabled_go">
 <a href="#enabled_go" style="color: inherit; text-decoration: inherit;">Enabled</a>
@@ -742,8 +666,7 @@ action is set to "RedirectToLoginPage".{{% /md %}}</dd>
         <span class="property-indicator"></span>
         <span class="property-type">bool</span>
     </dt>
-    <dd>{{% md %}}<code>true</code> if the Authentication / Authorization feature is enabled for the current app; otherwise, <code>false</code>.{{% /md %}}</dd>
-    <dt class="property-"
+    <dd>{{% md %}}<code>true</code> if the Authentication / Authorization feature is enabled for the current app; otherwise, <code>false</code>.{{% /md %}}</dd><dt class="property-"
             title="">
         <span id="facebookappid_go">
 <a href="#facebookappid_go" style="color: inherit; text-decoration: inherit;">Facebook<wbr>App<wbr>Id</a>
@@ -753,8 +676,7 @@ action is set to "RedirectToLoginPage".{{% /md %}}</dd>
     </dt>
     <dd>{{% md %}}The App ID of the Facebook app used for login.
 This setting is required for enabling Facebook Login.
-Facebook Login documentation: https://developers.facebook.com/docs/facebook-login{{% /md %}}</dd>
-    <dt class="property-"
+Facebook Login documentation: https://developers.facebook.com/docs/facebook-login{{% /md %}}</dd><dt class="property-"
             title="">
         <span id="facebookappsecret_go">
 <a href="#facebookappsecret_go" style="color: inherit; text-decoration: inherit;">Facebook<wbr>App<wbr>Secret</a>
@@ -764,8 +686,7 @@ Facebook Login documentation: https://developers.facebook.com/docs/facebook-logi
     </dt>
     <dd>{{% md %}}The App Secret of the Facebook app used for Facebook Login.
 This setting is required for enabling Facebook Login.
-Facebook Login documentation: https://developers.facebook.com/docs/facebook-login{{% /md %}}</dd>
-    <dt class="property-"
+Facebook Login documentation: https://developers.facebook.com/docs/facebook-login{{% /md %}}</dd><dt class="property-"
             title="">
         <span id="facebookappsecretsettingname_go">
 <a href="#facebookappsecretsettingname_go" style="color: inherit; text-decoration: inherit;">Facebook<wbr>App<wbr>Secret<wbr>Setting<wbr>Name</a>
@@ -773,8 +694,7 @@ Facebook Login documentation: https://developers.facebook.com/docs/facebook-logi
         <span class="property-indicator"></span>
         <span class="property-type">string</span>
     </dt>
-    <dd>{{% md %}}The app setting name that contains the app secret used for Facebook Login.{{% /md %}}</dd>
-    <dt class="property-"
+    <dd>{{% md %}}The app setting name that contains the app secret used for Facebook Login.{{% /md %}}</dd><dt class="property-"
             title="">
         <span id="facebookoauthscopes_go">
 <a href="#facebookoauthscopes_go" style="color: inherit; text-decoration: inherit;">Facebook<wbr>OAuth<wbr>Scopes</a>
@@ -784,8 +704,7 @@ Facebook Login documentation: https://developers.facebook.com/docs/facebook-logi
     </dt>
     <dd>{{% md %}}The OAuth 2.0 scopes that will be requested as part of Facebook Login authentication.
 This setting is optional.
-Facebook Login documentation: https://developers.facebook.com/docs/facebook-login{{% /md %}}</dd>
-    <dt class="property-"
+Facebook Login documentation: https://developers.facebook.com/docs/facebook-login{{% /md %}}</dd><dt class="property-"
             title="">
         <span id="githubclientid_go">
 <a href="#githubclientid_go" style="color: inherit; text-decoration: inherit;">Git<wbr>Hub<wbr>Client<wbr>Id</a>
@@ -794,8 +713,7 @@ Facebook Login documentation: https://developers.facebook.com/docs/facebook-logi
         <span class="property-type">string</span>
     </dt>
     <dd>{{% md %}}The Client Id of the GitHub app used for login.
-This setting is required for enabling Github login{{% /md %}}</dd>
-    <dt class="property-"
+This setting is required for enabling Github login{{% /md %}}</dd><dt class="property-"
             title="">
         <span id="githubclientsecret_go">
 <a href="#githubclientsecret_go" style="color: inherit; text-decoration: inherit;">Git<wbr>Hub<wbr>Client<wbr>Secret</a>
@@ -804,8 +722,7 @@ This setting is required for enabling Github login{{% /md %}}</dd>
         <span class="property-type">string</span>
     </dt>
     <dd>{{% md %}}The Client Secret of the GitHub app used for Github Login.
-This setting is required for enabling Github login.{{% /md %}}</dd>
-    <dt class="property-"
+This setting is required for enabling Github login.{{% /md %}}</dd><dt class="property-"
             title="">
         <span id="githubclientsecretsettingname_go">
 <a href="#githubclientsecretsettingname_go" style="color: inherit; text-decoration: inherit;">Git<wbr>Hub<wbr>Client<wbr>Secret<wbr>Setting<wbr>Name</a>
@@ -814,8 +731,7 @@ This setting is required for enabling Github login.{{% /md %}}</dd>
         <span class="property-type">string</span>
     </dt>
     <dd>{{% md %}}The app setting name that contains the client secret of the Github
-app used for GitHub Login.{{% /md %}}</dd>
-    <dt class="property-"
+app used for GitHub Login.{{% /md %}}</dd><dt class="property-"
             title="">
         <span id="githuboauthscopes_go">
 <a href="#githuboauthscopes_go" style="color: inherit; text-decoration: inherit;">Git<wbr>Hub<wbr>OAuth<wbr>Scopes</a>
@@ -824,8 +740,7 @@ app used for GitHub Login.{{% /md %}}</dd>
         <span class="property-type">[]string</span>
     </dt>
     <dd>{{% md %}}The OAuth 2.0 scopes that will be requested as part of GitHub Login authentication.
-This setting is optional{{% /md %}}</dd>
-    <dt class="property-"
+This setting is optional{{% /md %}}</dd><dt class="property-"
             title="">
         <span id="googleclientid_go">
 <a href="#googleclientid_go" style="color: inherit; text-decoration: inherit;">Google<wbr>Client<wbr>Id</a>
@@ -835,8 +750,7 @@ This setting is optional{{% /md %}}</dd>
     </dt>
     <dd>{{% md %}}The OpenID Connect Client ID for the Google web application.
 This setting is required for enabling Google Sign-In.
-Google Sign-In documentation: https://developers.google.com/identity/sign-in/web/{{% /md %}}</dd>
-    <dt class="property-"
+Google Sign-In documentation: https://developers.google.com/identity/sign-in/web/{{% /md %}}</dd><dt class="property-"
             title="">
         <span id="googleclientsecret_go">
 <a href="#googleclientsecret_go" style="color: inherit; text-decoration: inherit;">Google<wbr>Client<wbr>Secret</a>
@@ -846,8 +760,7 @@ Google Sign-In documentation: https://developers.google.com/identity/sign-in/web
     </dt>
     <dd>{{% md %}}The client secret associated with the Google web application.
 This setting is required for enabling Google Sign-In.
-Google Sign-In documentation: https://developers.google.com/identity/sign-in/web/{{% /md %}}</dd>
-    <dt class="property-"
+Google Sign-In documentation: https://developers.google.com/identity/sign-in/web/{{% /md %}}</dd><dt class="property-"
             title="">
         <span id="googleclientsecretsettingname_go">
 <a href="#googleclientsecretsettingname_go" style="color: inherit; text-decoration: inherit;">Google<wbr>Client<wbr>Secret<wbr>Setting<wbr>Name</a>
@@ -856,8 +769,7 @@ Google Sign-In documentation: https://developers.google.com/identity/sign-in/web
         <span class="property-type">string</span>
     </dt>
     <dd>{{% md %}}The app setting name that contains the client secret associated with 
-the Google web application.{{% /md %}}</dd>
-    <dt class="property-"
+the Google web application.{{% /md %}}</dd><dt class="property-"
             title="">
         <span id="googleoauthscopes_go">
 <a href="#googleoauthscopes_go" style="color: inherit; text-decoration: inherit;">Google<wbr>OAuth<wbr>Scopes</a>
@@ -867,8 +779,7 @@ the Google web application.{{% /md %}}</dd>
     </dt>
     <dd>{{% md %}}The OAuth 2.0 scopes that will be requested as part of Google Sign-In authentication.
 This setting is optional. If not specified, "openid", "profile", and "email" are used as default scopes.
-Google Sign-In documentation: https://developers.google.com/identity/sign-in/web/{{% /md %}}</dd>
-    <dt class="property-"
+Google Sign-In documentation: https://developers.google.com/identity/sign-in/web/{{% /md %}}</dd><dt class="property-"
             title="">
         <span id="isauthfromfile_go">
 <a href="#isauthfromfile_go" style="color: inherit; text-decoration: inherit;">Is<wbr>Auth<wbr>From<wbr>File</a>
@@ -877,8 +788,7 @@ Google Sign-In documentation: https://developers.google.com/identity/sign-in/web
         <span class="property-type">string</span>
     </dt>
     <dd>{{% md %}}"true" if the auth config settings should be read from a file,
-"false" otherwise{{% /md %}}</dd>
-    <dt class="property-"
+"false" otherwise{{% /md %}}</dd><dt class="property-"
             title="">
         <span id="issuer_go">
 <a href="#issuer_go" style="color: inherit; text-decoration: inherit;">Issuer</a>
@@ -889,8 +799,7 @@ Google Sign-In documentation: https://developers.google.com/identity/sign-in/web
     <dd>{{% md %}}The OpenID Connect Issuer URI that represents the entity which issues access tokens for this application.
 When using Azure Active Directory, this value is the URI of the directory tenant, e.g. https://sts.windows.net/{tenant-guid}/.
 This URI is a case-sensitive identifier for the token issuer.
-More information on OpenID Connect Discovery: http://openid.net/specs/openid-connect-discovery-1_0.html{{% /md %}}</dd>
-    <dt class="property-"
+More information on OpenID Connect Discovery: http://openid.net/specs/openid-connect-discovery-1_0.html{{% /md %}}</dd><dt class="property-"
             title="">
         <span id="kind_go">
 <a href="#kind_go" style="color: inherit; text-decoration: inherit;">Kind</a>
@@ -898,8 +807,7 @@ More information on OpenID Connect Discovery: http://openid.net/specs/openid-con
         <span class="property-indicator"></span>
         <span class="property-type">string</span>
     </dt>
-    <dd>{{% md %}}Kind of resource.{{% /md %}}</dd>
-    <dt class="property-"
+    <dd>{{% md %}}Kind of resource.{{% /md %}}</dd><dt class="property-"
             title="">
         <span id="microsoftaccountclientid_go">
 <a href="#microsoftaccountclientid_go" style="color: inherit; text-decoration: inherit;">Microsoft<wbr>Account<wbr>Client<wbr>Id</a>
@@ -909,8 +817,7 @@ More information on OpenID Connect Discovery: http://openid.net/specs/openid-con
     </dt>
     <dd>{{% md %}}The OAuth 2.0 client ID that was created for the app used for authentication.
 This setting is required for enabling Microsoft Account authentication.
-Microsoft Account OAuth documentation: https://dev.onedrive.com/auth/msa_oauth.htm{{% /md %}}</dd>
-    <dt class="property-"
+Microsoft Account OAuth documentation: https://dev.onedrive.com/auth/msa_oauth.htm{{% /md %}}</dd><dt class="property-"
             title="">
         <span id="microsoftaccountclientsecret_go">
 <a href="#microsoftaccountclientsecret_go" style="color: inherit; text-decoration: inherit;">Microsoft<wbr>Account<wbr>Client<wbr>Secret</a>
@@ -920,8 +827,7 @@ Microsoft Account OAuth documentation: https://dev.onedrive.com/auth/msa_oauth.h
     </dt>
     <dd>{{% md %}}The OAuth 2.0 client secret that was created for the app used for authentication.
 This setting is required for enabling Microsoft Account authentication.
-Microsoft Account OAuth documentation: https://dev.onedrive.com/auth/msa_oauth.htm{{% /md %}}</dd>
-    <dt class="property-"
+Microsoft Account OAuth documentation: https://dev.onedrive.com/auth/msa_oauth.htm{{% /md %}}</dd><dt class="property-"
             title="">
         <span id="microsoftaccountclientsecretsettingname_go">
 <a href="#microsoftaccountclientsecretsettingname_go" style="color: inherit; text-decoration: inherit;">Microsoft<wbr>Account<wbr>Client<wbr>Secret<wbr>Setting<wbr>Name</a>
@@ -930,8 +836,7 @@ Microsoft Account OAuth documentation: https://dev.onedrive.com/auth/msa_oauth.h
         <span class="property-type">string</span>
     </dt>
     <dd>{{% md %}}The app setting name containing the OAuth 2.0 client secret that was created for the
-app used for authentication.{{% /md %}}</dd>
-    <dt class="property-"
+app used for authentication.{{% /md %}}</dd><dt class="property-"
             title="">
         <span id="microsoftaccountoauthscopes_go">
 <a href="#microsoftaccountoauthscopes_go" style="color: inherit; text-decoration: inherit;">Microsoft<wbr>Account<wbr>OAuth<wbr>Scopes</a>
@@ -941,8 +846,7 @@ app used for authentication.{{% /md %}}</dd>
     </dt>
     <dd>{{% md %}}The OAuth 2.0 scopes that will be requested as part of Microsoft Account authentication.
 This setting is optional. If not specified, "wl.basic" is used as the default scope.
-Microsoft Account Scopes and permissions documentation: https://msdn.microsoft.com/en-us/library/dn631845.aspx{{% /md %}}</dd>
-    <dt class="property-"
+Microsoft Account Scopes and permissions documentation: https://msdn.microsoft.com/en-us/library/dn631845.aspx{{% /md %}}</dd><dt class="property-"
             title="">
         <span id="runtimeversion_go">
 <a href="#runtimeversion_go" style="color: inherit; text-decoration: inherit;">Runtime<wbr>Version</a>
@@ -951,8 +855,7 @@ Microsoft Account Scopes and permissions documentation: https://msdn.microsoft.c
         <span class="property-type">string</span>
     </dt>
     <dd>{{% md %}}The RuntimeVersion of the Authentication / Authorization feature in use for the current app.
-The setting in this value can control the behavior of certain features in the Authentication / Authorization module.{{% /md %}}</dd>
-    <dt class="property-"
+The setting in this value can control the behavior of certain features in the Authentication / Authorization module.{{% /md %}}</dd><dt class="property-"
             title="">
         <span id="tokenrefreshextensionhours_go">
 <a href="#tokenrefreshextensionhours_go" style="color: inherit; text-decoration: inherit;">Token<wbr>Refresh<wbr>Extension<wbr>Hours</a>
@@ -961,8 +864,7 @@ The setting in this value can control the behavior of certain features in the Au
         <span class="property-type">float64</span>
     </dt>
     <dd>{{% md %}}The number of hours after session token expiration that a session token can be used to
-call the token refresh API. The default is 72 hours.{{% /md %}}</dd>
-    <dt class="property-"
+call the token refresh API. The default is 72 hours.{{% /md %}}</dd><dt class="property-"
             title="">
         <span id="tokenstoreenabled_go">
 <a href="#tokenstoreenabled_go" style="color: inherit; text-decoration: inherit;">Token<wbr>Store<wbr>Enabled</a>
@@ -971,8 +873,7 @@ call the token refresh API. The default is 72 hours.{{% /md %}}</dd>
         <span class="property-type">bool</span>
     </dt>
     <dd>{{% md %}}<code>true</code> to durably store platform-specific security tokens that are obtained during login flows; otherwise, <code>false</code>.
- The default is <code>false</code>.{{% /md %}}</dd>
-    <dt class="property-"
+ The default is <code>false</code>.{{% /md %}}</dd><dt class="property-"
             title="">
         <span id="twitterconsumerkey_go">
 <a href="#twitterconsumerkey_go" style="color: inherit; text-decoration: inherit;">Twitter<wbr>Consumer<wbr>Key</a>
@@ -982,8 +883,7 @@ call the token refresh API. The default is 72 hours.{{% /md %}}</dd>
     </dt>
     <dd>{{% md %}}The OAuth 1.0a consumer key of the Twitter application used for sign-in.
 This setting is required for enabling Twitter Sign-In.
-Twitter Sign-In documentation: https://dev.twitter.com/web/sign-in{{% /md %}}</dd>
-    <dt class="property-"
+Twitter Sign-In documentation: https://dev.twitter.com/web/sign-in{{% /md %}}</dd><dt class="property-"
             title="">
         <span id="twitterconsumersecret_go">
 <a href="#twitterconsumersecret_go" style="color: inherit; text-decoration: inherit;">Twitter<wbr>Consumer<wbr>Secret</a>
@@ -993,8 +893,7 @@ Twitter Sign-In documentation: https://dev.twitter.com/web/sign-in{{% /md %}}</d
     </dt>
     <dd>{{% md %}}The OAuth 1.0a consumer secret of the Twitter application used for sign-in.
 This setting is required for enabling Twitter Sign-In.
-Twitter Sign-In documentation: https://dev.twitter.com/web/sign-in{{% /md %}}</dd>
-    <dt class="property-"
+Twitter Sign-In documentation: https://dev.twitter.com/web/sign-in{{% /md %}}</dd><dt class="property-"
             title="">
         <span id="twitterconsumersecretsettingname_go">
 <a href="#twitterconsumersecretsettingname_go" style="color: inherit; text-decoration: inherit;">Twitter<wbr>Consumer<wbr>Secret<wbr>Setting<wbr>Name</a>
@@ -1003,8 +902,7 @@ Twitter Sign-In documentation: https://dev.twitter.com/web/sign-in{{% /md %}}</d
         <span class="property-type">string</span>
     </dt>
     <dd>{{% md %}}The app setting name that contains the OAuth 1.0a consumer secret of the Twitter
-application used for sign-in.{{% /md %}}</dd>
-    <dt class="property-"
+application used for sign-in.{{% /md %}}</dd><dt class="property-"
             title="">
         <span id="unauthenticatedclientaction_go">
 <a href="#unauthenticatedclientaction_go" style="color: inherit; text-decoration: inherit;">Unauthenticated<wbr>Client<wbr>Action</a>
@@ -1012,8 +910,7 @@ application used for sign-in.{{% /md %}}</dd>
         <span class="property-indicator"></span>
         <span class="property-type">string</span>
     </dt>
-    <dd>{{% md %}}The action to take when an unauthenticated client attempts to access the app.{{% /md %}}</dd>
-    <dt class="property-"
+    <dd>{{% md %}}The action to take when an unauthenticated client attempts to access the app.{{% /md %}}</dd><dt class="property-"
             title="">
         <span id="validateissuer_go">
 <a href="#validateissuer_go" style="color: inherit; text-decoration: inherit;">Validate<wbr>Issuer</a>
@@ -1021,14 +918,11 @@ application used for sign-in.{{% /md %}}</dd>
         <span class="property-indicator"></span>
         <span class="property-type">bool</span>
     </dt>
-    <dd>{{% md %}}Gets a value indicating whether the issuer should be a valid HTTPS url and be validated as such.{{% /md %}}</dd>
-</dl>
+    <dd>{{% md %}}Gets a value indicating whether the issuer should be a valid HTTPS url and be validated as such.{{% /md %}}</dd></dl>
 {{% /choosable %}}
 
 {{% choosable language nodejs %}}
-<dl class="resources-properties">
-
-    <dt class="property-"
+<dl class="resources-properties"><dt class="property-"
             title="">
         <span id="id_nodejs">
 <a href="#id_nodejs" style="color: inherit; text-decoration: inherit;">id</a>
@@ -1036,8 +930,7 @@ application used for sign-in.{{% /md %}}</dd>
         <span class="property-indicator"></span>
         <span class="property-type">string</span>
     </dt>
-    <dd>{{% md %}}Resource Id.{{% /md %}}</dd>
-    <dt class="property-"
+    <dd>{{% md %}}Resource Id.{{% /md %}}</dd><dt class="property-"
             title="">
         <span id="name_nodejs">
 <a href="#name_nodejs" style="color: inherit; text-decoration: inherit;">name</a>
@@ -1045,8 +938,7 @@ application used for sign-in.{{% /md %}}</dd>
         <span class="property-indicator"></span>
         <span class="property-type">string</span>
     </dt>
-    <dd>{{% md %}}Resource Name.{{% /md %}}</dd>
-    <dt class="property-"
+    <dd>{{% md %}}Resource Name.{{% /md %}}</dd><dt class="property-"
             title="">
         <span id="systemdata_nodejs">
 <a href="#systemdata_nodejs" style="color: inherit; text-decoration: inherit;">system<wbr>Data</a>
@@ -1054,8 +946,7 @@ application used for sign-in.{{% /md %}}</dd>
         <span class="property-indicator"></span>
         <span class="property-type"><a href="#systemdataresponse">System<wbr>Data<wbr>Response</a></span>
     </dt>
-    <dd>{{% md %}}The system metadata relating to this resource.{{% /md %}}</dd>
-    <dt class="property-"
+    <dd>{{% md %}}The system metadata relating to this resource.{{% /md %}}</dd><dt class="property-"
             title="">
         <span id="type_nodejs">
 <a href="#type_nodejs" style="color: inherit; text-decoration: inherit;">type</a>
@@ -1063,8 +954,7 @@ application used for sign-in.{{% /md %}}</dd>
         <span class="property-indicator"></span>
         <span class="property-type">string</span>
     </dt>
-    <dd>{{% md %}}Resource type.{{% /md %}}</dd>
-    <dt class="property-"
+    <dd>{{% md %}}Resource type.{{% /md %}}</dd><dt class="property-"
             title="">
         <span id="aadclaimsauthorization_nodejs">
 <a href="#aadclaimsauthorization_nodejs" style="color: inherit; text-decoration: inherit;">aad<wbr>Claims<wbr>Authorization</a>
@@ -1072,8 +962,7 @@ application used for sign-in.{{% /md %}}</dd>
         <span class="property-indicator"></span>
         <span class="property-type">string</span>
     </dt>
-    <dd>{{% md %}}Gets a JSON string containing the Azure AD Acl settings.{{% /md %}}</dd>
-    <dt class="property-"
+    <dd>{{% md %}}Gets a JSON string containing the Azure AD Acl settings.{{% /md %}}</dd><dt class="property-"
             title="">
         <span id="additionalloginparams_nodejs">
 <a href="#additionalloginparams_nodejs" style="color: inherit; text-decoration: inherit;">additional<wbr>Login<wbr>Params</a>
@@ -1082,8 +971,7 @@ application used for sign-in.{{% /md %}}</dd>
         <span class="property-type">string[]</span>
     </dt>
     <dd>{{% md %}}Login parameters to send to the OpenID Connect authorization endpoint when
-a user logs in. Each parameter must be in the form "key=value".{{% /md %}}</dd>
-    <dt class="property-"
+a user logs in. Each parameter must be in the form "key=value".{{% /md %}}</dd><dt class="property-"
             title="">
         <span id="allowedaudiences_nodejs">
 <a href="#allowedaudiences_nodejs" style="color: inherit; text-decoration: inherit;">allowed<wbr>Audiences</a>
@@ -1093,8 +981,7 @@ a user logs in. Each parameter must be in the form "key=value".{{% /md %}}</dd>
     </dt>
     <dd>{{% md %}}Allowed audience values to consider when validating JWTs issued by 
 Azure Active Directory. Note that the <code>ClientID</code> value is always considered an
-allowed audience, regardless of this setting.{{% /md %}}</dd>
-    <dt class="property-"
+allowed audience, regardless of this setting.{{% /md %}}</dd><dt class="property-"
             title="">
         <span id="allowedexternalredirecturls_nodejs">
 <a href="#allowedexternalredirecturls_nodejs" style="color: inherit; text-decoration: inherit;">allowed<wbr>External<wbr>Redirect<wbr>Urls</a>
@@ -1104,8 +991,7 @@ allowed audience, regardless of this setting.{{% /md %}}</dd>
     </dt>
     <dd>{{% md %}}External URLs that can be redirected to as part of logging in or logging out of the app. Note that the query string part of the URL is ignored.
 This is an advanced setting typically only needed by Windows Store application backends.
-Note that URLs within the current domain are always implicitly allowed.{{% /md %}}</dd>
-    <dt class="property-"
+Note that URLs within the current domain are always implicitly allowed.{{% /md %}}</dd><dt class="property-"
             title="">
         <span id="authfilepath_nodejs">
 <a href="#authfilepath_nodejs" style="color: inherit; text-decoration: inherit;">auth<wbr>File<wbr>Path</a>
@@ -1114,8 +1000,7 @@ Note that URLs within the current domain are always implicitly allowed.{{% /md %
         <span class="property-type">string</span>
     </dt>
     <dd>{{% md %}}The path of the config file containing auth settings.
-If the path is relative, base will the site's root directory.{{% /md %}}</dd>
-    <dt class="property-"
+If the path is relative, base will the site's root directory.{{% /md %}}</dd><dt class="property-"
             title="">
         <span id="clientid_nodejs">
 <a href="#clientid_nodejs" style="color: inherit; text-decoration: inherit;">client<wbr>Id</a>
@@ -1126,8 +1011,7 @@ If the path is relative, base will the site's root directory.{{% /md %}}</dd>
     <dd>{{% md %}}The Client ID of this relying party application, known as the client_id.
 This setting is required for enabling OpenID Connection authentication with Azure Active Directory or 
 other 3rd party OpenID Connect providers.
-More information on OpenID Connect: http://openid.net/specs/openid-connect-core-1_0.html{{% /md %}}</dd>
-    <dt class="property-"
+More information on OpenID Connect: http://openid.net/specs/openid-connect-core-1_0.html{{% /md %}}</dd><dt class="property-"
             title="">
         <span id="clientsecret_nodejs">
 <a href="#clientsecret_nodejs" style="color: inherit; text-decoration: inherit;">client<wbr>Secret</a>
@@ -1138,8 +1022,7 @@ More information on OpenID Connect: http://openid.net/specs/openid-connect-core-
     <dd>{{% md %}}The Client Secret of this relying party application (in Azure Active Directory, this is also referred to as the Key).
 This setting is optional. If no client secret is configured, the OpenID Connect implicit auth flow is used to authenticate end users.
 Otherwise, the OpenID Connect Authorization Code Flow is used to authenticate end users.
-More information on OpenID Connect: http://openid.net/specs/openid-connect-core-1_0.html{{% /md %}}</dd>
-    <dt class="property-"
+More information on OpenID Connect: http://openid.net/specs/openid-connect-core-1_0.html{{% /md %}}</dd><dt class="property-"
             title="">
         <span id="clientsecretcertificatethumbprint_nodejs">
 <a href="#clientsecretcertificatethumbprint_nodejs" style="color: inherit; text-decoration: inherit;">client<wbr>Secret<wbr>Certificate<wbr>Thumbprint</a>
@@ -1148,8 +1031,7 @@ More information on OpenID Connect: http://openid.net/specs/openid-connect-core-
         <span class="property-type">string</span>
     </dt>
     <dd>{{% md %}}An alternative to the client secret, that is the thumbprint of a certificate used for signing purposes. This property acts as
-a replacement for the Client Secret. It is also optional.{{% /md %}}</dd>
-    <dt class="property-"
+a replacement for the Client Secret. It is also optional.{{% /md %}}</dd><dt class="property-"
             title="">
         <span id="clientsecretsettingname_nodejs">
 <a href="#clientsecretsettingname_nodejs" style="color: inherit; text-decoration: inherit;">client<wbr>Secret<wbr>Setting<wbr>Name</a>
@@ -1157,8 +1039,7 @@ a replacement for the Client Secret. It is also optional.{{% /md %}}</dd>
         <span class="property-indicator"></span>
         <span class="property-type">string</span>
     </dt>
-    <dd>{{% md %}}The app setting name that contains the client secret of the relying party application.{{% /md %}}</dd>
-    <dt class="property-"
+    <dd>{{% md %}}The app setting name that contains the client secret of the relying party application.{{% /md %}}</dd><dt class="property-"
             title="">
         <span id="defaultprovider_nodejs">
 <a href="#defaultprovider_nodejs" style="color: inherit; text-decoration: inherit;">default<wbr>Provider</a>
@@ -1168,8 +1049,7 @@ a replacement for the Client Secret. It is also optional.{{% /md %}}</dd>
     </dt>
     <dd>{{% md %}}The default authentication provider to use when multiple providers are configured.
 This setting is only needed if multiple providers are configured and the unauthenticated client
-action is set to "RedirectToLoginPage".{{% /md %}}</dd>
-    <dt class="property-"
+action is set to "RedirectToLoginPage".{{% /md %}}</dd><dt class="property-"
             title="">
         <span id="enabled_nodejs">
 <a href="#enabled_nodejs" style="color: inherit; text-decoration: inherit;">enabled</a>
@@ -1177,8 +1057,7 @@ action is set to "RedirectToLoginPage".{{% /md %}}</dd>
         <span class="property-indicator"></span>
         <span class="property-type">boolean</span>
     </dt>
-    <dd>{{% md %}}<code>true</code> if the Authentication / Authorization feature is enabled for the current app; otherwise, <code>false</code>.{{% /md %}}</dd>
-    <dt class="property-"
+    <dd>{{% md %}}<code>true</code> if the Authentication / Authorization feature is enabled for the current app; otherwise, <code>false</code>.{{% /md %}}</dd><dt class="property-"
             title="">
         <span id="facebookappid_nodejs">
 <a href="#facebookappid_nodejs" style="color: inherit; text-decoration: inherit;">facebook<wbr>App<wbr>Id</a>
@@ -1188,8 +1067,7 @@ action is set to "RedirectToLoginPage".{{% /md %}}</dd>
     </dt>
     <dd>{{% md %}}The App ID of the Facebook app used for login.
 This setting is required for enabling Facebook Login.
-Facebook Login documentation: https://developers.facebook.com/docs/facebook-login{{% /md %}}</dd>
-    <dt class="property-"
+Facebook Login documentation: https://developers.facebook.com/docs/facebook-login{{% /md %}}</dd><dt class="property-"
             title="">
         <span id="facebookappsecret_nodejs">
 <a href="#facebookappsecret_nodejs" style="color: inherit; text-decoration: inherit;">facebook<wbr>App<wbr>Secret</a>
@@ -1199,8 +1077,7 @@ Facebook Login documentation: https://developers.facebook.com/docs/facebook-logi
     </dt>
     <dd>{{% md %}}The App Secret of the Facebook app used for Facebook Login.
 This setting is required for enabling Facebook Login.
-Facebook Login documentation: https://developers.facebook.com/docs/facebook-login{{% /md %}}</dd>
-    <dt class="property-"
+Facebook Login documentation: https://developers.facebook.com/docs/facebook-login{{% /md %}}</dd><dt class="property-"
             title="">
         <span id="facebookappsecretsettingname_nodejs">
 <a href="#facebookappsecretsettingname_nodejs" style="color: inherit; text-decoration: inherit;">facebook<wbr>App<wbr>Secret<wbr>Setting<wbr>Name</a>
@@ -1208,8 +1085,7 @@ Facebook Login documentation: https://developers.facebook.com/docs/facebook-logi
         <span class="property-indicator"></span>
         <span class="property-type">string</span>
     </dt>
-    <dd>{{% md %}}The app setting name that contains the app secret used for Facebook Login.{{% /md %}}</dd>
-    <dt class="property-"
+    <dd>{{% md %}}The app setting name that contains the app secret used for Facebook Login.{{% /md %}}</dd><dt class="property-"
             title="">
         <span id="facebookoauthscopes_nodejs">
 <a href="#facebookoauthscopes_nodejs" style="color: inherit; text-decoration: inherit;">facebook<wbr>OAuth<wbr>Scopes</a>
@@ -1219,8 +1095,7 @@ Facebook Login documentation: https://developers.facebook.com/docs/facebook-logi
     </dt>
     <dd>{{% md %}}The OAuth 2.0 scopes that will be requested as part of Facebook Login authentication.
 This setting is optional.
-Facebook Login documentation: https://developers.facebook.com/docs/facebook-login{{% /md %}}</dd>
-    <dt class="property-"
+Facebook Login documentation: https://developers.facebook.com/docs/facebook-login{{% /md %}}</dd><dt class="property-"
             title="">
         <span id="githubclientid_nodejs">
 <a href="#githubclientid_nodejs" style="color: inherit; text-decoration: inherit;">git<wbr>Hub<wbr>Client<wbr>Id</a>
@@ -1229,8 +1104,7 @@ Facebook Login documentation: https://developers.facebook.com/docs/facebook-logi
         <span class="property-type">string</span>
     </dt>
     <dd>{{% md %}}The Client Id of the GitHub app used for login.
-This setting is required for enabling Github login{{% /md %}}</dd>
-    <dt class="property-"
+This setting is required for enabling Github login{{% /md %}}</dd><dt class="property-"
             title="">
         <span id="githubclientsecret_nodejs">
 <a href="#githubclientsecret_nodejs" style="color: inherit; text-decoration: inherit;">git<wbr>Hub<wbr>Client<wbr>Secret</a>
@@ -1239,8 +1113,7 @@ This setting is required for enabling Github login{{% /md %}}</dd>
         <span class="property-type">string</span>
     </dt>
     <dd>{{% md %}}The Client Secret of the GitHub app used for Github Login.
-This setting is required for enabling Github login.{{% /md %}}</dd>
-    <dt class="property-"
+This setting is required for enabling Github login.{{% /md %}}</dd><dt class="property-"
             title="">
         <span id="githubclientsecretsettingname_nodejs">
 <a href="#githubclientsecretsettingname_nodejs" style="color: inherit; text-decoration: inherit;">git<wbr>Hub<wbr>Client<wbr>Secret<wbr>Setting<wbr>Name</a>
@@ -1249,8 +1122,7 @@ This setting is required for enabling Github login.{{% /md %}}</dd>
         <span class="property-type">string</span>
     </dt>
     <dd>{{% md %}}The app setting name that contains the client secret of the Github
-app used for GitHub Login.{{% /md %}}</dd>
-    <dt class="property-"
+app used for GitHub Login.{{% /md %}}</dd><dt class="property-"
             title="">
         <span id="githuboauthscopes_nodejs">
 <a href="#githuboauthscopes_nodejs" style="color: inherit; text-decoration: inherit;">git<wbr>Hub<wbr>OAuth<wbr>Scopes</a>
@@ -1259,8 +1131,7 @@ app used for GitHub Login.{{% /md %}}</dd>
         <span class="property-type">string[]</span>
     </dt>
     <dd>{{% md %}}The OAuth 2.0 scopes that will be requested as part of GitHub Login authentication.
-This setting is optional{{% /md %}}</dd>
-    <dt class="property-"
+This setting is optional{{% /md %}}</dd><dt class="property-"
             title="">
         <span id="googleclientid_nodejs">
 <a href="#googleclientid_nodejs" style="color: inherit; text-decoration: inherit;">google<wbr>Client<wbr>Id</a>
@@ -1270,8 +1141,7 @@ This setting is optional{{% /md %}}</dd>
     </dt>
     <dd>{{% md %}}The OpenID Connect Client ID for the Google web application.
 This setting is required for enabling Google Sign-In.
-Google Sign-In documentation: https://developers.google.com/identity/sign-in/web/{{% /md %}}</dd>
-    <dt class="property-"
+Google Sign-In documentation: https://developers.google.com/identity/sign-in/web/{{% /md %}}</dd><dt class="property-"
             title="">
         <span id="googleclientsecret_nodejs">
 <a href="#googleclientsecret_nodejs" style="color: inherit; text-decoration: inherit;">google<wbr>Client<wbr>Secret</a>
@@ -1281,8 +1151,7 @@ Google Sign-In documentation: https://developers.google.com/identity/sign-in/web
     </dt>
     <dd>{{% md %}}The client secret associated with the Google web application.
 This setting is required for enabling Google Sign-In.
-Google Sign-In documentation: https://developers.google.com/identity/sign-in/web/{{% /md %}}</dd>
-    <dt class="property-"
+Google Sign-In documentation: https://developers.google.com/identity/sign-in/web/{{% /md %}}</dd><dt class="property-"
             title="">
         <span id="googleclientsecretsettingname_nodejs">
 <a href="#googleclientsecretsettingname_nodejs" style="color: inherit; text-decoration: inherit;">google<wbr>Client<wbr>Secret<wbr>Setting<wbr>Name</a>
@@ -1291,8 +1160,7 @@ Google Sign-In documentation: https://developers.google.com/identity/sign-in/web
         <span class="property-type">string</span>
     </dt>
     <dd>{{% md %}}The app setting name that contains the client secret associated with 
-the Google web application.{{% /md %}}</dd>
-    <dt class="property-"
+the Google web application.{{% /md %}}</dd><dt class="property-"
             title="">
         <span id="googleoauthscopes_nodejs">
 <a href="#googleoauthscopes_nodejs" style="color: inherit; text-decoration: inherit;">google<wbr>OAuth<wbr>Scopes</a>
@@ -1302,8 +1170,7 @@ the Google web application.{{% /md %}}</dd>
     </dt>
     <dd>{{% md %}}The OAuth 2.0 scopes that will be requested as part of Google Sign-In authentication.
 This setting is optional. If not specified, "openid", "profile", and "email" are used as default scopes.
-Google Sign-In documentation: https://developers.google.com/identity/sign-in/web/{{% /md %}}</dd>
-    <dt class="property-"
+Google Sign-In documentation: https://developers.google.com/identity/sign-in/web/{{% /md %}}</dd><dt class="property-"
             title="">
         <span id="isauthfromfile_nodejs">
 <a href="#isauthfromfile_nodejs" style="color: inherit; text-decoration: inherit;">is<wbr>Auth<wbr>From<wbr>File</a>
@@ -1312,8 +1179,7 @@ Google Sign-In documentation: https://developers.google.com/identity/sign-in/web
         <span class="property-type">string</span>
     </dt>
     <dd>{{% md %}}"true" if the auth config settings should be read from a file,
-"false" otherwise{{% /md %}}</dd>
-    <dt class="property-"
+"false" otherwise{{% /md %}}</dd><dt class="property-"
             title="">
         <span id="issuer_nodejs">
 <a href="#issuer_nodejs" style="color: inherit; text-decoration: inherit;">issuer</a>
@@ -1324,8 +1190,7 @@ Google Sign-In documentation: https://developers.google.com/identity/sign-in/web
     <dd>{{% md %}}The OpenID Connect Issuer URI that represents the entity which issues access tokens for this application.
 When using Azure Active Directory, this value is the URI of the directory tenant, e.g. https://sts.windows.net/{tenant-guid}/.
 This URI is a case-sensitive identifier for the token issuer.
-More information on OpenID Connect Discovery: http://openid.net/specs/openid-connect-discovery-1_0.html{{% /md %}}</dd>
-    <dt class="property-"
+More information on OpenID Connect Discovery: http://openid.net/specs/openid-connect-discovery-1_0.html{{% /md %}}</dd><dt class="property-"
             title="">
         <span id="kind_nodejs">
 <a href="#kind_nodejs" style="color: inherit; text-decoration: inherit;">kind</a>
@@ -1333,8 +1198,7 @@ More information on OpenID Connect Discovery: http://openid.net/specs/openid-con
         <span class="property-indicator"></span>
         <span class="property-type">string</span>
     </dt>
-    <dd>{{% md %}}Kind of resource.{{% /md %}}</dd>
-    <dt class="property-"
+    <dd>{{% md %}}Kind of resource.{{% /md %}}</dd><dt class="property-"
             title="">
         <span id="microsoftaccountclientid_nodejs">
 <a href="#microsoftaccountclientid_nodejs" style="color: inherit; text-decoration: inherit;">microsoft<wbr>Account<wbr>Client<wbr>Id</a>
@@ -1344,8 +1208,7 @@ More information on OpenID Connect Discovery: http://openid.net/specs/openid-con
     </dt>
     <dd>{{% md %}}The OAuth 2.0 client ID that was created for the app used for authentication.
 This setting is required for enabling Microsoft Account authentication.
-Microsoft Account OAuth documentation: https://dev.onedrive.com/auth/msa_oauth.htm{{% /md %}}</dd>
-    <dt class="property-"
+Microsoft Account OAuth documentation: https://dev.onedrive.com/auth/msa_oauth.htm{{% /md %}}</dd><dt class="property-"
             title="">
         <span id="microsoftaccountclientsecret_nodejs">
 <a href="#microsoftaccountclientsecret_nodejs" style="color: inherit; text-decoration: inherit;">microsoft<wbr>Account<wbr>Client<wbr>Secret</a>
@@ -1355,8 +1218,7 @@ Microsoft Account OAuth documentation: https://dev.onedrive.com/auth/msa_oauth.h
     </dt>
     <dd>{{% md %}}The OAuth 2.0 client secret that was created for the app used for authentication.
 This setting is required for enabling Microsoft Account authentication.
-Microsoft Account OAuth documentation: https://dev.onedrive.com/auth/msa_oauth.htm{{% /md %}}</dd>
-    <dt class="property-"
+Microsoft Account OAuth documentation: https://dev.onedrive.com/auth/msa_oauth.htm{{% /md %}}</dd><dt class="property-"
             title="">
         <span id="microsoftaccountclientsecretsettingname_nodejs">
 <a href="#microsoftaccountclientsecretsettingname_nodejs" style="color: inherit; text-decoration: inherit;">microsoft<wbr>Account<wbr>Client<wbr>Secret<wbr>Setting<wbr>Name</a>
@@ -1365,8 +1227,7 @@ Microsoft Account OAuth documentation: https://dev.onedrive.com/auth/msa_oauth.h
         <span class="property-type">string</span>
     </dt>
     <dd>{{% md %}}The app setting name containing the OAuth 2.0 client secret that was created for the
-app used for authentication.{{% /md %}}</dd>
-    <dt class="property-"
+app used for authentication.{{% /md %}}</dd><dt class="property-"
             title="">
         <span id="microsoftaccountoauthscopes_nodejs">
 <a href="#microsoftaccountoauthscopes_nodejs" style="color: inherit; text-decoration: inherit;">microsoft<wbr>Account<wbr>OAuth<wbr>Scopes</a>
@@ -1376,8 +1237,7 @@ app used for authentication.{{% /md %}}</dd>
     </dt>
     <dd>{{% md %}}The OAuth 2.0 scopes that will be requested as part of Microsoft Account authentication.
 This setting is optional. If not specified, "wl.basic" is used as the default scope.
-Microsoft Account Scopes and permissions documentation: https://msdn.microsoft.com/en-us/library/dn631845.aspx{{% /md %}}</dd>
-    <dt class="property-"
+Microsoft Account Scopes and permissions documentation: https://msdn.microsoft.com/en-us/library/dn631845.aspx{{% /md %}}</dd><dt class="property-"
             title="">
         <span id="runtimeversion_nodejs">
 <a href="#runtimeversion_nodejs" style="color: inherit; text-decoration: inherit;">runtime<wbr>Version</a>
@@ -1386,8 +1246,7 @@ Microsoft Account Scopes and permissions documentation: https://msdn.microsoft.c
         <span class="property-type">string</span>
     </dt>
     <dd>{{% md %}}The RuntimeVersion of the Authentication / Authorization feature in use for the current app.
-The setting in this value can control the behavior of certain features in the Authentication / Authorization module.{{% /md %}}</dd>
-    <dt class="property-"
+The setting in this value can control the behavior of certain features in the Authentication / Authorization module.{{% /md %}}</dd><dt class="property-"
             title="">
         <span id="tokenrefreshextensionhours_nodejs">
 <a href="#tokenrefreshextensionhours_nodejs" style="color: inherit; text-decoration: inherit;">token<wbr>Refresh<wbr>Extension<wbr>Hours</a>
@@ -1396,8 +1255,7 @@ The setting in this value can control the behavior of certain features in the Au
         <span class="property-type">number</span>
     </dt>
     <dd>{{% md %}}The number of hours after session token expiration that a session token can be used to
-call the token refresh API. The default is 72 hours.{{% /md %}}</dd>
-    <dt class="property-"
+call the token refresh API. The default is 72 hours.{{% /md %}}</dd><dt class="property-"
             title="">
         <span id="tokenstoreenabled_nodejs">
 <a href="#tokenstoreenabled_nodejs" style="color: inherit; text-decoration: inherit;">token<wbr>Store<wbr>Enabled</a>
@@ -1406,8 +1264,7 @@ call the token refresh API. The default is 72 hours.{{% /md %}}</dd>
         <span class="property-type">boolean</span>
     </dt>
     <dd>{{% md %}}<code>true</code> to durably store platform-specific security tokens that are obtained during login flows; otherwise, <code>false</code>.
- The default is <code>false</code>.{{% /md %}}</dd>
-    <dt class="property-"
+ The default is <code>false</code>.{{% /md %}}</dd><dt class="property-"
             title="">
         <span id="twitterconsumerkey_nodejs">
 <a href="#twitterconsumerkey_nodejs" style="color: inherit; text-decoration: inherit;">twitter<wbr>Consumer<wbr>Key</a>
@@ -1417,8 +1274,7 @@ call the token refresh API. The default is 72 hours.{{% /md %}}</dd>
     </dt>
     <dd>{{% md %}}The OAuth 1.0a consumer key of the Twitter application used for sign-in.
 This setting is required for enabling Twitter Sign-In.
-Twitter Sign-In documentation: https://dev.twitter.com/web/sign-in{{% /md %}}</dd>
-    <dt class="property-"
+Twitter Sign-In documentation: https://dev.twitter.com/web/sign-in{{% /md %}}</dd><dt class="property-"
             title="">
         <span id="twitterconsumersecret_nodejs">
 <a href="#twitterconsumersecret_nodejs" style="color: inherit; text-decoration: inherit;">twitter<wbr>Consumer<wbr>Secret</a>
@@ -1428,8 +1284,7 @@ Twitter Sign-In documentation: https://dev.twitter.com/web/sign-in{{% /md %}}</d
     </dt>
     <dd>{{% md %}}The OAuth 1.0a consumer secret of the Twitter application used for sign-in.
 This setting is required for enabling Twitter Sign-In.
-Twitter Sign-In documentation: https://dev.twitter.com/web/sign-in{{% /md %}}</dd>
-    <dt class="property-"
+Twitter Sign-In documentation: https://dev.twitter.com/web/sign-in{{% /md %}}</dd><dt class="property-"
             title="">
         <span id="twitterconsumersecretsettingname_nodejs">
 <a href="#twitterconsumersecretsettingname_nodejs" style="color: inherit; text-decoration: inherit;">twitter<wbr>Consumer<wbr>Secret<wbr>Setting<wbr>Name</a>
@@ -1438,8 +1293,7 @@ Twitter Sign-In documentation: https://dev.twitter.com/web/sign-in{{% /md %}}</d
         <span class="property-type">string</span>
     </dt>
     <dd>{{% md %}}The app setting name that contains the OAuth 1.0a consumer secret of the Twitter
-application used for sign-in.{{% /md %}}</dd>
-    <dt class="property-"
+application used for sign-in.{{% /md %}}</dd><dt class="property-"
             title="">
         <span id="unauthenticatedclientaction_nodejs">
 <a href="#unauthenticatedclientaction_nodejs" style="color: inherit; text-decoration: inherit;">unauthenticated<wbr>Client<wbr>Action</a>
@@ -1447,8 +1301,7 @@ application used for sign-in.{{% /md %}}</dd>
         <span class="property-indicator"></span>
         <span class="property-type">string</span>
     </dt>
-    <dd>{{% md %}}The action to take when an unauthenticated client attempts to access the app.{{% /md %}}</dd>
-    <dt class="property-"
+    <dd>{{% md %}}The action to take when an unauthenticated client attempts to access the app.{{% /md %}}</dd><dt class="property-"
             title="">
         <span id="validateissuer_nodejs">
 <a href="#validateissuer_nodejs" style="color: inherit; text-decoration: inherit;">validate<wbr>Issuer</a>
@@ -1456,14 +1309,11 @@ application used for sign-in.{{% /md %}}</dd>
         <span class="property-indicator"></span>
         <span class="property-type">boolean</span>
     </dt>
-    <dd>{{% md %}}Gets a value indicating whether the issuer should be a valid HTTPS url and be validated as such.{{% /md %}}</dd>
-</dl>
+    <dd>{{% md %}}Gets a value indicating whether the issuer should be a valid HTTPS url and be validated as such.{{% /md %}}</dd></dl>
 {{% /choosable %}}
 
 {{% choosable language python %}}
-<dl class="resources-properties">
-
-    <dt class="property-"
+<dl class="resources-properties"><dt class="property-"
             title="">
         <span id="id_python">
 <a href="#id_python" style="color: inherit; text-decoration: inherit;">id</a>
@@ -1471,8 +1321,7 @@ application used for sign-in.{{% /md %}}</dd>
         <span class="property-indicator"></span>
         <span class="property-type">str</span>
     </dt>
-    <dd>{{% md %}}Resource Id.{{% /md %}}</dd>
-    <dt class="property-"
+    <dd>{{% md %}}Resource Id.{{% /md %}}</dd><dt class="property-"
             title="">
         <span id="name_python">
 <a href="#name_python" style="color: inherit; text-decoration: inherit;">name</a>
@@ -1480,8 +1329,7 @@ application used for sign-in.{{% /md %}}</dd>
         <span class="property-indicator"></span>
         <span class="property-type">str</span>
     </dt>
-    <dd>{{% md %}}Resource Name.{{% /md %}}</dd>
-    <dt class="property-"
+    <dd>{{% md %}}Resource Name.{{% /md %}}</dd><dt class="property-"
             title="">
         <span id="system_data_python">
 <a href="#system_data_python" style="color: inherit; text-decoration: inherit;">system_<wbr>data</a>
@@ -1489,8 +1337,7 @@ application used for sign-in.{{% /md %}}</dd>
         <span class="property-indicator"></span>
         <span class="property-type"><a href="#systemdataresponse">System<wbr>Data<wbr>Response</a></span>
     </dt>
-    <dd>{{% md %}}The system metadata relating to this resource.{{% /md %}}</dd>
-    <dt class="property-"
+    <dd>{{% md %}}The system metadata relating to this resource.{{% /md %}}</dd><dt class="property-"
             title="">
         <span id="type_python">
 <a href="#type_python" style="color: inherit; text-decoration: inherit;">type</a>
@@ -1498,8 +1345,7 @@ application used for sign-in.{{% /md %}}</dd>
         <span class="property-indicator"></span>
         <span class="property-type">str</span>
     </dt>
-    <dd>{{% md %}}Resource type.{{% /md %}}</dd>
-    <dt class="property-"
+    <dd>{{% md %}}Resource type.{{% /md %}}</dd><dt class="property-"
             title="">
         <span id="aad_claims_authorization_python">
 <a href="#aad_claims_authorization_python" style="color: inherit; text-decoration: inherit;">aad_<wbr>claims_<wbr>authorization</a>
@@ -1507,8 +1353,7 @@ application used for sign-in.{{% /md %}}</dd>
         <span class="property-indicator"></span>
         <span class="property-type">str</span>
     </dt>
-    <dd>{{% md %}}Gets a JSON string containing the Azure AD Acl settings.{{% /md %}}</dd>
-    <dt class="property-"
+    <dd>{{% md %}}Gets a JSON string containing the Azure AD Acl settings.{{% /md %}}</dd><dt class="property-"
             title="">
         <span id="additional_login_params_python">
 <a href="#additional_login_params_python" style="color: inherit; text-decoration: inherit;">additional_<wbr>login_<wbr>params</a>
@@ -1517,8 +1362,7 @@ application used for sign-in.{{% /md %}}</dd>
         <span class="property-type">Sequence[str]</span>
     </dt>
     <dd>{{% md %}}Login parameters to send to the OpenID Connect authorization endpoint when
-a user logs in. Each parameter must be in the form "key=value".{{% /md %}}</dd>
-    <dt class="property-"
+a user logs in. Each parameter must be in the form "key=value".{{% /md %}}</dd><dt class="property-"
             title="">
         <span id="allowed_audiences_python">
 <a href="#allowed_audiences_python" style="color: inherit; text-decoration: inherit;">allowed_<wbr>audiences</a>
@@ -1528,8 +1372,7 @@ a user logs in. Each parameter must be in the form "key=value".{{% /md %}}</dd>
     </dt>
     <dd>{{% md %}}Allowed audience values to consider when validating JWTs issued by 
 Azure Active Directory. Note that the <code>ClientID</code> value is always considered an
-allowed audience, regardless of this setting.{{% /md %}}</dd>
-    <dt class="property-"
+allowed audience, regardless of this setting.{{% /md %}}</dd><dt class="property-"
             title="">
         <span id="allowed_external_redirect_urls_python">
 <a href="#allowed_external_redirect_urls_python" style="color: inherit; text-decoration: inherit;">allowed_<wbr>external_<wbr>redirect_<wbr>urls</a>
@@ -1539,8 +1382,7 @@ allowed audience, regardless of this setting.{{% /md %}}</dd>
     </dt>
     <dd>{{% md %}}External URLs that can be redirected to as part of logging in or logging out of the app. Note that the query string part of the URL is ignored.
 This is an advanced setting typically only needed by Windows Store application backends.
-Note that URLs within the current domain are always implicitly allowed.{{% /md %}}</dd>
-    <dt class="property-"
+Note that URLs within the current domain are always implicitly allowed.{{% /md %}}</dd><dt class="property-"
             title="">
         <span id="auth_file_path_python">
 <a href="#auth_file_path_python" style="color: inherit; text-decoration: inherit;">auth_<wbr>file_<wbr>path</a>
@@ -1549,8 +1391,7 @@ Note that URLs within the current domain are always implicitly allowed.{{% /md %
         <span class="property-type">str</span>
     </dt>
     <dd>{{% md %}}The path of the config file containing auth settings.
-If the path is relative, base will the site's root directory.{{% /md %}}</dd>
-    <dt class="property-"
+If the path is relative, base will the site's root directory.{{% /md %}}</dd><dt class="property-"
             title="">
         <span id="client_id_python">
 <a href="#client_id_python" style="color: inherit; text-decoration: inherit;">client_<wbr>id</a>
@@ -1561,8 +1402,7 @@ If the path is relative, base will the site's root directory.{{% /md %}}</dd>
     <dd>{{% md %}}The Client ID of this relying party application, known as the client_id.
 This setting is required for enabling OpenID Connection authentication with Azure Active Directory or 
 other 3rd party OpenID Connect providers.
-More information on OpenID Connect: http://openid.net/specs/openid-connect-core-1_0.html{{% /md %}}</dd>
-    <dt class="property-"
+More information on OpenID Connect: http://openid.net/specs/openid-connect-core-1_0.html{{% /md %}}</dd><dt class="property-"
             title="">
         <span id="client_secret_python">
 <a href="#client_secret_python" style="color: inherit; text-decoration: inherit;">client_<wbr>secret</a>
@@ -1573,8 +1413,7 @@ More information on OpenID Connect: http://openid.net/specs/openid-connect-core-
     <dd>{{% md %}}The Client Secret of this relying party application (in Azure Active Directory, this is also referred to as the Key).
 This setting is optional. If no client secret is configured, the OpenID Connect implicit auth flow is used to authenticate end users.
 Otherwise, the OpenID Connect Authorization Code Flow is used to authenticate end users.
-More information on OpenID Connect: http://openid.net/specs/openid-connect-core-1_0.html{{% /md %}}</dd>
-    <dt class="property-"
+More information on OpenID Connect: http://openid.net/specs/openid-connect-core-1_0.html{{% /md %}}</dd><dt class="property-"
             title="">
         <span id="client_secret_certificate_thumbprint_python">
 <a href="#client_secret_certificate_thumbprint_python" style="color: inherit; text-decoration: inherit;">client_<wbr>secret_<wbr>certificate_<wbr>thumbprint</a>
@@ -1583,8 +1422,7 @@ More information on OpenID Connect: http://openid.net/specs/openid-connect-core-
         <span class="property-type">str</span>
     </dt>
     <dd>{{% md %}}An alternative to the client secret, that is the thumbprint of a certificate used for signing purposes. This property acts as
-a replacement for the Client Secret. It is also optional.{{% /md %}}</dd>
-    <dt class="property-"
+a replacement for the Client Secret. It is also optional.{{% /md %}}</dd><dt class="property-"
             title="">
         <span id="client_secret_setting_name_python">
 <a href="#client_secret_setting_name_python" style="color: inherit; text-decoration: inherit;">client_<wbr>secret_<wbr>setting_<wbr>name</a>
@@ -1592,8 +1430,7 @@ a replacement for the Client Secret. It is also optional.{{% /md %}}</dd>
         <span class="property-indicator"></span>
         <span class="property-type">str</span>
     </dt>
-    <dd>{{% md %}}The app setting name that contains the client secret of the relying party application.{{% /md %}}</dd>
-    <dt class="property-"
+    <dd>{{% md %}}The app setting name that contains the client secret of the relying party application.{{% /md %}}</dd><dt class="property-"
             title="">
         <span id="default_provider_python">
 <a href="#default_provider_python" style="color: inherit; text-decoration: inherit;">default_<wbr>provider</a>
@@ -1603,8 +1440,7 @@ a replacement for the Client Secret. It is also optional.{{% /md %}}</dd>
     </dt>
     <dd>{{% md %}}The default authentication provider to use when multiple providers are configured.
 This setting is only needed if multiple providers are configured and the unauthenticated client
-action is set to "RedirectToLoginPage".{{% /md %}}</dd>
-    <dt class="property-"
+action is set to "RedirectToLoginPage".{{% /md %}}</dd><dt class="property-"
             title="">
         <span id="enabled_python">
 <a href="#enabled_python" style="color: inherit; text-decoration: inherit;">enabled</a>
@@ -1612,8 +1448,7 @@ action is set to "RedirectToLoginPage".{{% /md %}}</dd>
         <span class="property-indicator"></span>
         <span class="property-type">bool</span>
     </dt>
-    <dd>{{% md %}}<code>true</code> if the Authentication / Authorization feature is enabled for the current app; otherwise, <code>false</code>.{{% /md %}}</dd>
-    <dt class="property-"
+    <dd>{{% md %}}<code>true</code> if the Authentication / Authorization feature is enabled for the current app; otherwise, <code>false</code>.{{% /md %}}</dd><dt class="property-"
             title="">
         <span id="facebook_app_id_python">
 <a href="#facebook_app_id_python" style="color: inherit; text-decoration: inherit;">facebook_<wbr>app_<wbr>id</a>
@@ -1623,8 +1458,7 @@ action is set to "RedirectToLoginPage".{{% /md %}}</dd>
     </dt>
     <dd>{{% md %}}The App ID of the Facebook app used for login.
 This setting is required for enabling Facebook Login.
-Facebook Login documentation: https://developers.facebook.com/docs/facebook-login{{% /md %}}</dd>
-    <dt class="property-"
+Facebook Login documentation: https://developers.facebook.com/docs/facebook-login{{% /md %}}</dd><dt class="property-"
             title="">
         <span id="facebook_app_secret_python">
 <a href="#facebook_app_secret_python" style="color: inherit; text-decoration: inherit;">facebook_<wbr>app_<wbr>secret</a>
@@ -1634,8 +1468,7 @@ Facebook Login documentation: https://developers.facebook.com/docs/facebook-logi
     </dt>
     <dd>{{% md %}}The App Secret of the Facebook app used for Facebook Login.
 This setting is required for enabling Facebook Login.
-Facebook Login documentation: https://developers.facebook.com/docs/facebook-login{{% /md %}}</dd>
-    <dt class="property-"
+Facebook Login documentation: https://developers.facebook.com/docs/facebook-login{{% /md %}}</dd><dt class="property-"
             title="">
         <span id="facebook_app_secret_setting_name_python">
 <a href="#facebook_app_secret_setting_name_python" style="color: inherit; text-decoration: inherit;">facebook_<wbr>app_<wbr>secret_<wbr>setting_<wbr>name</a>
@@ -1643,8 +1476,7 @@ Facebook Login documentation: https://developers.facebook.com/docs/facebook-logi
         <span class="property-indicator"></span>
         <span class="property-type">str</span>
     </dt>
-    <dd>{{% md %}}The app setting name that contains the app secret used for Facebook Login.{{% /md %}}</dd>
-    <dt class="property-"
+    <dd>{{% md %}}The app setting name that contains the app secret used for Facebook Login.{{% /md %}}</dd><dt class="property-"
             title="">
         <span id="facebook_o_auth_scopes_python">
 <a href="#facebook_o_auth_scopes_python" style="color: inherit; text-decoration: inherit;">facebook_<wbr>o_<wbr>auth_<wbr>scopes</a>
@@ -1654,8 +1486,7 @@ Facebook Login documentation: https://developers.facebook.com/docs/facebook-logi
     </dt>
     <dd>{{% md %}}The OAuth 2.0 scopes that will be requested as part of Facebook Login authentication.
 This setting is optional.
-Facebook Login documentation: https://developers.facebook.com/docs/facebook-login{{% /md %}}</dd>
-    <dt class="property-"
+Facebook Login documentation: https://developers.facebook.com/docs/facebook-login{{% /md %}}</dd><dt class="property-"
             title="">
         <span id="git_hub_client_id_python">
 <a href="#git_hub_client_id_python" style="color: inherit; text-decoration: inherit;">git_<wbr>hub_<wbr>client_<wbr>id</a>
@@ -1664,8 +1495,7 @@ Facebook Login documentation: https://developers.facebook.com/docs/facebook-logi
         <span class="property-type">str</span>
     </dt>
     <dd>{{% md %}}The Client Id of the GitHub app used for login.
-This setting is required for enabling Github login{{% /md %}}</dd>
-    <dt class="property-"
+This setting is required for enabling Github login{{% /md %}}</dd><dt class="property-"
             title="">
         <span id="git_hub_client_secret_python">
 <a href="#git_hub_client_secret_python" style="color: inherit; text-decoration: inherit;">git_<wbr>hub_<wbr>client_<wbr>secret</a>
@@ -1674,8 +1504,7 @@ This setting is required for enabling Github login{{% /md %}}</dd>
         <span class="property-type">str</span>
     </dt>
     <dd>{{% md %}}The Client Secret of the GitHub app used for Github Login.
-This setting is required for enabling Github login.{{% /md %}}</dd>
-    <dt class="property-"
+This setting is required for enabling Github login.{{% /md %}}</dd><dt class="property-"
             title="">
         <span id="git_hub_client_secret_setting_name_python">
 <a href="#git_hub_client_secret_setting_name_python" style="color: inherit; text-decoration: inherit;">git_<wbr>hub_<wbr>client_<wbr>secret_<wbr>setting_<wbr>name</a>
@@ -1684,8 +1513,7 @@ This setting is required for enabling Github login.{{% /md %}}</dd>
         <span class="property-type">str</span>
     </dt>
     <dd>{{% md %}}The app setting name that contains the client secret of the Github
-app used for GitHub Login.{{% /md %}}</dd>
-    <dt class="property-"
+app used for GitHub Login.{{% /md %}}</dd><dt class="property-"
             title="">
         <span id="git_hub_o_auth_scopes_python">
 <a href="#git_hub_o_auth_scopes_python" style="color: inherit; text-decoration: inherit;">git_<wbr>hub_<wbr>o_<wbr>auth_<wbr>scopes</a>
@@ -1694,8 +1522,7 @@ app used for GitHub Login.{{% /md %}}</dd>
         <span class="property-type">Sequence[str]</span>
     </dt>
     <dd>{{% md %}}The OAuth 2.0 scopes that will be requested as part of GitHub Login authentication.
-This setting is optional{{% /md %}}</dd>
-    <dt class="property-"
+This setting is optional{{% /md %}}</dd><dt class="property-"
             title="">
         <span id="google_client_id_python">
 <a href="#google_client_id_python" style="color: inherit; text-decoration: inherit;">google_<wbr>client_<wbr>id</a>
@@ -1705,8 +1532,7 @@ This setting is optional{{% /md %}}</dd>
     </dt>
     <dd>{{% md %}}The OpenID Connect Client ID for the Google web application.
 This setting is required for enabling Google Sign-In.
-Google Sign-In documentation: https://developers.google.com/identity/sign-in/web/{{% /md %}}</dd>
-    <dt class="property-"
+Google Sign-In documentation: https://developers.google.com/identity/sign-in/web/{{% /md %}}</dd><dt class="property-"
             title="">
         <span id="google_client_secret_python">
 <a href="#google_client_secret_python" style="color: inherit; text-decoration: inherit;">google_<wbr>client_<wbr>secret</a>
@@ -1716,8 +1542,7 @@ Google Sign-In documentation: https://developers.google.com/identity/sign-in/web
     </dt>
     <dd>{{% md %}}The client secret associated with the Google web application.
 This setting is required for enabling Google Sign-In.
-Google Sign-In documentation: https://developers.google.com/identity/sign-in/web/{{% /md %}}</dd>
-    <dt class="property-"
+Google Sign-In documentation: https://developers.google.com/identity/sign-in/web/{{% /md %}}</dd><dt class="property-"
             title="">
         <span id="google_client_secret_setting_name_python">
 <a href="#google_client_secret_setting_name_python" style="color: inherit; text-decoration: inherit;">google_<wbr>client_<wbr>secret_<wbr>setting_<wbr>name</a>
@@ -1726,8 +1551,7 @@ Google Sign-In documentation: https://developers.google.com/identity/sign-in/web
         <span class="property-type">str</span>
     </dt>
     <dd>{{% md %}}The app setting name that contains the client secret associated with 
-the Google web application.{{% /md %}}</dd>
-    <dt class="property-"
+the Google web application.{{% /md %}}</dd><dt class="property-"
             title="">
         <span id="google_o_auth_scopes_python">
 <a href="#google_o_auth_scopes_python" style="color: inherit; text-decoration: inherit;">google_<wbr>o_<wbr>auth_<wbr>scopes</a>
@@ -1737,8 +1561,7 @@ the Google web application.{{% /md %}}</dd>
     </dt>
     <dd>{{% md %}}The OAuth 2.0 scopes that will be requested as part of Google Sign-In authentication.
 This setting is optional. If not specified, "openid", "profile", and "email" are used as default scopes.
-Google Sign-In documentation: https://developers.google.com/identity/sign-in/web/{{% /md %}}</dd>
-    <dt class="property-"
+Google Sign-In documentation: https://developers.google.com/identity/sign-in/web/{{% /md %}}</dd><dt class="property-"
             title="">
         <span id="is_auth_from_file_python">
 <a href="#is_auth_from_file_python" style="color: inherit; text-decoration: inherit;">is_<wbr>auth_<wbr>from_<wbr>file</a>
@@ -1747,8 +1570,7 @@ Google Sign-In documentation: https://developers.google.com/identity/sign-in/web
         <span class="property-type">str</span>
     </dt>
     <dd>{{% md %}}"true" if the auth config settings should be read from a file,
-"false" otherwise{{% /md %}}</dd>
-    <dt class="property-"
+"false" otherwise{{% /md %}}</dd><dt class="property-"
             title="">
         <span id="issuer_python">
 <a href="#issuer_python" style="color: inherit; text-decoration: inherit;">issuer</a>
@@ -1759,8 +1581,7 @@ Google Sign-In documentation: https://developers.google.com/identity/sign-in/web
     <dd>{{% md %}}The OpenID Connect Issuer URI that represents the entity which issues access tokens for this application.
 When using Azure Active Directory, this value is the URI of the directory tenant, e.g. https://sts.windows.net/{tenant-guid}/.
 This URI is a case-sensitive identifier for the token issuer.
-More information on OpenID Connect Discovery: http://openid.net/specs/openid-connect-discovery-1_0.html{{% /md %}}</dd>
-    <dt class="property-"
+More information on OpenID Connect Discovery: http://openid.net/specs/openid-connect-discovery-1_0.html{{% /md %}}</dd><dt class="property-"
             title="">
         <span id="kind_python">
 <a href="#kind_python" style="color: inherit; text-decoration: inherit;">kind</a>
@@ -1768,8 +1589,7 @@ More information on OpenID Connect Discovery: http://openid.net/specs/openid-con
         <span class="property-indicator"></span>
         <span class="property-type">str</span>
     </dt>
-    <dd>{{% md %}}Kind of resource.{{% /md %}}</dd>
-    <dt class="property-"
+    <dd>{{% md %}}Kind of resource.{{% /md %}}</dd><dt class="property-"
             title="">
         <span id="microsoft_account_client_id_python">
 <a href="#microsoft_account_client_id_python" style="color: inherit; text-decoration: inherit;">microsoft_<wbr>account_<wbr>client_<wbr>id</a>
@@ -1779,8 +1599,7 @@ More information on OpenID Connect Discovery: http://openid.net/specs/openid-con
     </dt>
     <dd>{{% md %}}The OAuth 2.0 client ID that was created for the app used for authentication.
 This setting is required for enabling Microsoft Account authentication.
-Microsoft Account OAuth documentation: https://dev.onedrive.com/auth/msa_oauth.htm{{% /md %}}</dd>
-    <dt class="property-"
+Microsoft Account OAuth documentation: https://dev.onedrive.com/auth/msa_oauth.htm{{% /md %}}</dd><dt class="property-"
             title="">
         <span id="microsoft_account_client_secret_python">
 <a href="#microsoft_account_client_secret_python" style="color: inherit; text-decoration: inherit;">microsoft_<wbr>account_<wbr>client_<wbr>secret</a>
@@ -1790,8 +1609,7 @@ Microsoft Account OAuth documentation: https://dev.onedrive.com/auth/msa_oauth.h
     </dt>
     <dd>{{% md %}}The OAuth 2.0 client secret that was created for the app used for authentication.
 This setting is required for enabling Microsoft Account authentication.
-Microsoft Account OAuth documentation: https://dev.onedrive.com/auth/msa_oauth.htm{{% /md %}}</dd>
-    <dt class="property-"
+Microsoft Account OAuth documentation: https://dev.onedrive.com/auth/msa_oauth.htm{{% /md %}}</dd><dt class="property-"
             title="">
         <span id="microsoft_account_client_secret_setting_name_python">
 <a href="#microsoft_account_client_secret_setting_name_python" style="color: inherit; text-decoration: inherit;">microsoft_<wbr>account_<wbr>client_<wbr>secret_<wbr>setting_<wbr>name</a>
@@ -1800,8 +1618,7 @@ Microsoft Account OAuth documentation: https://dev.onedrive.com/auth/msa_oauth.h
         <span class="property-type">str</span>
     </dt>
     <dd>{{% md %}}The app setting name containing the OAuth 2.0 client secret that was created for the
-app used for authentication.{{% /md %}}</dd>
-    <dt class="property-"
+app used for authentication.{{% /md %}}</dd><dt class="property-"
             title="">
         <span id="microsoft_account_o_auth_scopes_python">
 <a href="#microsoft_account_o_auth_scopes_python" style="color: inherit; text-decoration: inherit;">microsoft_<wbr>account_<wbr>o_<wbr>auth_<wbr>scopes</a>
@@ -1811,8 +1628,7 @@ app used for authentication.{{% /md %}}</dd>
     </dt>
     <dd>{{% md %}}The OAuth 2.0 scopes that will be requested as part of Microsoft Account authentication.
 This setting is optional. If not specified, "wl.basic" is used as the default scope.
-Microsoft Account Scopes and permissions documentation: https://msdn.microsoft.com/en-us/library/dn631845.aspx{{% /md %}}</dd>
-    <dt class="property-"
+Microsoft Account Scopes and permissions documentation: https://msdn.microsoft.com/en-us/library/dn631845.aspx{{% /md %}}</dd><dt class="property-"
             title="">
         <span id="runtime_version_python">
 <a href="#runtime_version_python" style="color: inherit; text-decoration: inherit;">runtime_<wbr>version</a>
@@ -1821,8 +1637,7 @@ Microsoft Account Scopes and permissions documentation: https://msdn.microsoft.c
         <span class="property-type">str</span>
     </dt>
     <dd>{{% md %}}The RuntimeVersion of the Authentication / Authorization feature in use for the current app.
-The setting in this value can control the behavior of certain features in the Authentication / Authorization module.{{% /md %}}</dd>
-    <dt class="property-"
+The setting in this value can control the behavior of certain features in the Authentication / Authorization module.{{% /md %}}</dd><dt class="property-"
             title="">
         <span id="token_refresh_extension_hours_python">
 <a href="#token_refresh_extension_hours_python" style="color: inherit; text-decoration: inherit;">token_<wbr>refresh_<wbr>extension_<wbr>hours</a>
@@ -1831,8 +1646,7 @@ The setting in this value can control the behavior of certain features in the Au
         <span class="property-type">float</span>
     </dt>
     <dd>{{% md %}}The number of hours after session token expiration that a session token can be used to
-call the token refresh API. The default is 72 hours.{{% /md %}}</dd>
-    <dt class="property-"
+call the token refresh API. The default is 72 hours.{{% /md %}}</dd><dt class="property-"
             title="">
         <span id="token_store_enabled_python">
 <a href="#token_store_enabled_python" style="color: inherit; text-decoration: inherit;">token_<wbr>store_<wbr>enabled</a>
@@ -1841,8 +1655,7 @@ call the token refresh API. The default is 72 hours.{{% /md %}}</dd>
         <span class="property-type">bool</span>
     </dt>
     <dd>{{% md %}}<code>true</code> to durably store platform-specific security tokens that are obtained during login flows; otherwise, <code>false</code>.
- The default is <code>false</code>.{{% /md %}}</dd>
-    <dt class="property-"
+ The default is <code>false</code>.{{% /md %}}</dd><dt class="property-"
             title="">
         <span id="twitter_consumer_key_python">
 <a href="#twitter_consumer_key_python" style="color: inherit; text-decoration: inherit;">twitter_<wbr>consumer_<wbr>key</a>
@@ -1852,8 +1665,7 @@ call the token refresh API. The default is 72 hours.{{% /md %}}</dd>
     </dt>
     <dd>{{% md %}}The OAuth 1.0a consumer key of the Twitter application used for sign-in.
 This setting is required for enabling Twitter Sign-In.
-Twitter Sign-In documentation: https://dev.twitter.com/web/sign-in{{% /md %}}</dd>
-    <dt class="property-"
+Twitter Sign-In documentation: https://dev.twitter.com/web/sign-in{{% /md %}}</dd><dt class="property-"
             title="">
         <span id="twitter_consumer_secret_python">
 <a href="#twitter_consumer_secret_python" style="color: inherit; text-decoration: inherit;">twitter_<wbr>consumer_<wbr>secret</a>
@@ -1863,8 +1675,7 @@ Twitter Sign-In documentation: https://dev.twitter.com/web/sign-in{{% /md %}}</d
     </dt>
     <dd>{{% md %}}The OAuth 1.0a consumer secret of the Twitter application used for sign-in.
 This setting is required for enabling Twitter Sign-In.
-Twitter Sign-In documentation: https://dev.twitter.com/web/sign-in{{% /md %}}</dd>
-    <dt class="property-"
+Twitter Sign-In documentation: https://dev.twitter.com/web/sign-in{{% /md %}}</dd><dt class="property-"
             title="">
         <span id="twitter_consumer_secret_setting_name_python">
 <a href="#twitter_consumer_secret_setting_name_python" style="color: inherit; text-decoration: inherit;">twitter_<wbr>consumer_<wbr>secret_<wbr>setting_<wbr>name</a>
@@ -1873,8 +1684,7 @@ Twitter Sign-In documentation: https://dev.twitter.com/web/sign-in{{% /md %}}</d
         <span class="property-type">str</span>
     </dt>
     <dd>{{% md %}}The app setting name that contains the OAuth 1.0a consumer secret of the Twitter
-application used for sign-in.{{% /md %}}</dd>
-    <dt class="property-"
+application used for sign-in.{{% /md %}}</dd><dt class="property-"
             title="">
         <span id="unauthenticated_client_action_python">
 <a href="#unauthenticated_client_action_python" style="color: inherit; text-decoration: inherit;">unauthenticated_<wbr>client_<wbr>action</a>
@@ -1882,8 +1692,7 @@ application used for sign-in.{{% /md %}}</dd>
         <span class="property-indicator"></span>
         <span class="property-type">str</span>
     </dt>
-    <dd>{{% md %}}The action to take when an unauthenticated client attempts to access the app.{{% /md %}}</dd>
-    <dt class="property-"
+    <dd>{{% md %}}The action to take when an unauthenticated client attempts to access the app.{{% /md %}}</dd><dt class="property-"
             title="">
         <span id="validate_issuer_python">
 <a href="#validate_issuer_python" style="color: inherit; text-decoration: inherit;">validate_<wbr>issuer</a>
@@ -1891,8 +1700,7 @@ application used for sign-in.{{% /md %}}</dd>
         <span class="property-indicator"></span>
         <span class="property-type">bool</span>
     </dt>
-    <dd>{{% md %}}Gets a value indicating whether the issuer should be a valid HTTPS url and be validated as such.{{% /md %}}</dd>
-</dl>
+    <dd>{{% md %}}Gets a value indicating whether the issuer should be a valid HTTPS url and be validated as such.{{% /md %}}</dd></dl>
 {{% /choosable %}}
 
 
@@ -1906,9 +1714,7 @@ application used for sign-in.{{% /md %}}</dd>
 
 
 {{% choosable language csharp %}}
-<dl class="resources-properties">
-
-    <dt class="property-optional"
+<dl class="resources-properties"><dt class="property-optional"
             title="Optional">
         <span id="createdat_csharp">
 <a href="#createdat_csharp" style="color: inherit; text-decoration: inherit;">Created<wbr>At</a>
@@ -1916,8 +1722,7 @@ application used for sign-in.{{% /md %}}</dd>
         <span class="property-indicator"></span>
         <span class="property-type">string</span>
     </dt>
-    <dd>{{% md %}}The timestamp of resource creation (UTC).{{% /md %}}</dd>
-    <dt class="property-optional"
+    <dd>{{% md %}}The timestamp of resource creation (UTC).{{% /md %}}</dd><dt class="property-optional"
             title="Optional">
         <span id="createdby_csharp">
 <a href="#createdby_csharp" style="color: inherit; text-decoration: inherit;">Created<wbr>By</a>
@@ -1925,8 +1730,7 @@ application used for sign-in.{{% /md %}}</dd>
         <span class="property-indicator"></span>
         <span class="property-type">string</span>
     </dt>
-    <dd>{{% md %}}The identity that created the resource.{{% /md %}}</dd>
-    <dt class="property-optional"
+    <dd>{{% md %}}The identity that created the resource.{{% /md %}}</dd><dt class="property-optional"
             title="Optional">
         <span id="createdbytype_csharp">
 <a href="#createdbytype_csharp" style="color: inherit; text-decoration: inherit;">Created<wbr>By<wbr>Type</a>
@@ -1934,8 +1738,7 @@ application used for sign-in.{{% /md %}}</dd>
         <span class="property-indicator"></span>
         <span class="property-type">string</span>
     </dt>
-    <dd>{{% md %}}The type of identity that created the resource.{{% /md %}}</dd>
-    <dt class="property-optional"
+    <dd>{{% md %}}The type of identity that created the resource.{{% /md %}}</dd><dt class="property-optional"
             title="Optional">
         <span id="lastmodifiedat_csharp">
 <a href="#lastmodifiedat_csharp" style="color: inherit; text-decoration: inherit;">Last<wbr>Modified<wbr>At</a>
@@ -1943,8 +1746,7 @@ application used for sign-in.{{% /md %}}</dd>
         <span class="property-indicator"></span>
         <span class="property-type">string</span>
     </dt>
-    <dd>{{% md %}}The timestamp of resource last modification (UTC){{% /md %}}</dd>
-    <dt class="property-optional"
+    <dd>{{% md %}}The timestamp of resource last modification (UTC){{% /md %}}</dd><dt class="property-optional"
             title="Optional">
         <span id="lastmodifiedby_csharp">
 <a href="#lastmodifiedby_csharp" style="color: inherit; text-decoration: inherit;">Last<wbr>Modified<wbr>By</a>
@@ -1952,8 +1754,7 @@ application used for sign-in.{{% /md %}}</dd>
         <span class="property-indicator"></span>
         <span class="property-type">string</span>
     </dt>
-    <dd>{{% md %}}The identity that last modified the resource.{{% /md %}}</dd>
-    <dt class="property-optional"
+    <dd>{{% md %}}The identity that last modified the resource.{{% /md %}}</dd><dt class="property-optional"
             title="Optional">
         <span id="lastmodifiedbytype_csharp">
 <a href="#lastmodifiedbytype_csharp" style="color: inherit; text-decoration: inherit;">Last<wbr>Modified<wbr>By<wbr>Type</a>
@@ -1961,14 +1762,11 @@ application used for sign-in.{{% /md %}}</dd>
         <span class="property-indicator"></span>
         <span class="property-type">string</span>
     </dt>
-    <dd>{{% md %}}The type of identity that last modified the resource.{{% /md %}}</dd>
-</dl>
+    <dd>{{% md %}}The type of identity that last modified the resource.{{% /md %}}</dd></dl>
 {{% /choosable %}}
 
 {{% choosable language go %}}
-<dl class="resources-properties">
-
-    <dt class="property-optional"
+<dl class="resources-properties"><dt class="property-optional"
             title="Optional">
         <span id="createdat_go">
 <a href="#createdat_go" style="color: inherit; text-decoration: inherit;">Created<wbr>At</a>
@@ -1976,8 +1774,7 @@ application used for sign-in.{{% /md %}}</dd>
         <span class="property-indicator"></span>
         <span class="property-type">string</span>
     </dt>
-    <dd>{{% md %}}The timestamp of resource creation (UTC).{{% /md %}}</dd>
-    <dt class="property-optional"
+    <dd>{{% md %}}The timestamp of resource creation (UTC).{{% /md %}}</dd><dt class="property-optional"
             title="Optional">
         <span id="createdby_go">
 <a href="#createdby_go" style="color: inherit; text-decoration: inherit;">Created<wbr>By</a>
@@ -1985,8 +1782,7 @@ application used for sign-in.{{% /md %}}</dd>
         <span class="property-indicator"></span>
         <span class="property-type">string</span>
     </dt>
-    <dd>{{% md %}}The identity that created the resource.{{% /md %}}</dd>
-    <dt class="property-optional"
+    <dd>{{% md %}}The identity that created the resource.{{% /md %}}</dd><dt class="property-optional"
             title="Optional">
         <span id="createdbytype_go">
 <a href="#createdbytype_go" style="color: inherit; text-decoration: inherit;">Created<wbr>By<wbr>Type</a>
@@ -1994,8 +1790,7 @@ application used for sign-in.{{% /md %}}</dd>
         <span class="property-indicator"></span>
         <span class="property-type">string</span>
     </dt>
-    <dd>{{% md %}}The type of identity that created the resource.{{% /md %}}</dd>
-    <dt class="property-optional"
+    <dd>{{% md %}}The type of identity that created the resource.{{% /md %}}</dd><dt class="property-optional"
             title="Optional">
         <span id="lastmodifiedat_go">
 <a href="#lastmodifiedat_go" style="color: inherit; text-decoration: inherit;">Last<wbr>Modified<wbr>At</a>
@@ -2003,8 +1798,7 @@ application used for sign-in.{{% /md %}}</dd>
         <span class="property-indicator"></span>
         <span class="property-type">string</span>
     </dt>
-    <dd>{{% md %}}The timestamp of resource last modification (UTC){{% /md %}}</dd>
-    <dt class="property-optional"
+    <dd>{{% md %}}The timestamp of resource last modification (UTC){{% /md %}}</dd><dt class="property-optional"
             title="Optional">
         <span id="lastmodifiedby_go">
 <a href="#lastmodifiedby_go" style="color: inherit; text-decoration: inherit;">Last<wbr>Modified<wbr>By</a>
@@ -2012,8 +1806,7 @@ application used for sign-in.{{% /md %}}</dd>
         <span class="property-indicator"></span>
         <span class="property-type">string</span>
     </dt>
-    <dd>{{% md %}}The identity that last modified the resource.{{% /md %}}</dd>
-    <dt class="property-optional"
+    <dd>{{% md %}}The identity that last modified the resource.{{% /md %}}</dd><dt class="property-optional"
             title="Optional">
         <span id="lastmodifiedbytype_go">
 <a href="#lastmodifiedbytype_go" style="color: inherit; text-decoration: inherit;">Last<wbr>Modified<wbr>By<wbr>Type</a>
@@ -2021,14 +1814,11 @@ application used for sign-in.{{% /md %}}</dd>
         <span class="property-indicator"></span>
         <span class="property-type">string</span>
     </dt>
-    <dd>{{% md %}}The type of identity that last modified the resource.{{% /md %}}</dd>
-</dl>
+    <dd>{{% md %}}The type of identity that last modified the resource.{{% /md %}}</dd></dl>
 {{% /choosable %}}
 
 {{% choosable language nodejs %}}
-<dl class="resources-properties">
-
-    <dt class="property-optional"
+<dl class="resources-properties"><dt class="property-optional"
             title="Optional">
         <span id="createdat_nodejs">
 <a href="#createdat_nodejs" style="color: inherit; text-decoration: inherit;">created<wbr>At</a>
@@ -2036,8 +1826,7 @@ application used for sign-in.{{% /md %}}</dd>
         <span class="property-indicator"></span>
         <span class="property-type">string</span>
     </dt>
-    <dd>{{% md %}}The timestamp of resource creation (UTC).{{% /md %}}</dd>
-    <dt class="property-optional"
+    <dd>{{% md %}}The timestamp of resource creation (UTC).{{% /md %}}</dd><dt class="property-optional"
             title="Optional">
         <span id="createdby_nodejs">
 <a href="#createdby_nodejs" style="color: inherit; text-decoration: inherit;">created<wbr>By</a>
@@ -2045,8 +1834,7 @@ application used for sign-in.{{% /md %}}</dd>
         <span class="property-indicator"></span>
         <span class="property-type">string</span>
     </dt>
-    <dd>{{% md %}}The identity that created the resource.{{% /md %}}</dd>
-    <dt class="property-optional"
+    <dd>{{% md %}}The identity that created the resource.{{% /md %}}</dd><dt class="property-optional"
             title="Optional">
         <span id="createdbytype_nodejs">
 <a href="#createdbytype_nodejs" style="color: inherit; text-decoration: inherit;">created<wbr>By<wbr>Type</a>
@@ -2054,8 +1842,7 @@ application used for sign-in.{{% /md %}}</dd>
         <span class="property-indicator"></span>
         <span class="property-type">string</span>
     </dt>
-    <dd>{{% md %}}The type of identity that created the resource.{{% /md %}}</dd>
-    <dt class="property-optional"
+    <dd>{{% md %}}The type of identity that created the resource.{{% /md %}}</dd><dt class="property-optional"
             title="Optional">
         <span id="lastmodifiedat_nodejs">
 <a href="#lastmodifiedat_nodejs" style="color: inherit; text-decoration: inherit;">last<wbr>Modified<wbr>At</a>
@@ -2063,8 +1850,7 @@ application used for sign-in.{{% /md %}}</dd>
         <span class="property-indicator"></span>
         <span class="property-type">string</span>
     </dt>
-    <dd>{{% md %}}The timestamp of resource last modification (UTC){{% /md %}}</dd>
-    <dt class="property-optional"
+    <dd>{{% md %}}The timestamp of resource last modification (UTC){{% /md %}}</dd><dt class="property-optional"
             title="Optional">
         <span id="lastmodifiedby_nodejs">
 <a href="#lastmodifiedby_nodejs" style="color: inherit; text-decoration: inherit;">last<wbr>Modified<wbr>By</a>
@@ -2072,8 +1858,7 @@ application used for sign-in.{{% /md %}}</dd>
         <span class="property-indicator"></span>
         <span class="property-type">string</span>
     </dt>
-    <dd>{{% md %}}The identity that last modified the resource.{{% /md %}}</dd>
-    <dt class="property-optional"
+    <dd>{{% md %}}The identity that last modified the resource.{{% /md %}}</dd><dt class="property-optional"
             title="Optional">
         <span id="lastmodifiedbytype_nodejs">
 <a href="#lastmodifiedbytype_nodejs" style="color: inherit; text-decoration: inherit;">last<wbr>Modified<wbr>By<wbr>Type</a>
@@ -2081,14 +1866,11 @@ application used for sign-in.{{% /md %}}</dd>
         <span class="property-indicator"></span>
         <span class="property-type">string</span>
     </dt>
-    <dd>{{% md %}}The type of identity that last modified the resource.{{% /md %}}</dd>
-</dl>
+    <dd>{{% md %}}The type of identity that last modified the resource.{{% /md %}}</dd></dl>
 {{% /choosable %}}
 
 {{% choosable language python %}}
-<dl class="resources-properties">
-
-    <dt class="property-optional"
+<dl class="resources-properties"><dt class="property-optional"
             title="Optional">
         <span id="created_at_python">
 <a href="#created_at_python" style="color: inherit; text-decoration: inherit;">created_<wbr>at</a>
@@ -2096,8 +1878,7 @@ application used for sign-in.{{% /md %}}</dd>
         <span class="property-indicator"></span>
         <span class="property-type">str</span>
     </dt>
-    <dd>{{% md %}}The timestamp of resource creation (UTC).{{% /md %}}</dd>
-    <dt class="property-optional"
+    <dd>{{% md %}}The timestamp of resource creation (UTC).{{% /md %}}</dd><dt class="property-optional"
             title="Optional">
         <span id="created_by_python">
 <a href="#created_by_python" style="color: inherit; text-decoration: inherit;">created_<wbr>by</a>
@@ -2105,8 +1886,7 @@ application used for sign-in.{{% /md %}}</dd>
         <span class="property-indicator"></span>
         <span class="property-type">str</span>
     </dt>
-    <dd>{{% md %}}The identity that created the resource.{{% /md %}}</dd>
-    <dt class="property-optional"
+    <dd>{{% md %}}The identity that created the resource.{{% /md %}}</dd><dt class="property-optional"
             title="Optional">
         <span id="created_by_type_python">
 <a href="#created_by_type_python" style="color: inherit; text-decoration: inherit;">created_<wbr>by_<wbr>type</a>
@@ -2114,8 +1894,7 @@ application used for sign-in.{{% /md %}}</dd>
         <span class="property-indicator"></span>
         <span class="property-type">str</span>
     </dt>
-    <dd>{{% md %}}The type of identity that created the resource.{{% /md %}}</dd>
-    <dt class="property-optional"
+    <dd>{{% md %}}The type of identity that created the resource.{{% /md %}}</dd><dt class="property-optional"
             title="Optional">
         <span id="last_modified_at_python">
 <a href="#last_modified_at_python" style="color: inherit; text-decoration: inherit;">last_<wbr>modified_<wbr>at</a>
@@ -2123,8 +1902,7 @@ application used for sign-in.{{% /md %}}</dd>
         <span class="property-indicator"></span>
         <span class="property-type">str</span>
     </dt>
-    <dd>{{% md %}}The timestamp of resource last modification (UTC){{% /md %}}</dd>
-    <dt class="property-optional"
+    <dd>{{% md %}}The timestamp of resource last modification (UTC){{% /md %}}</dd><dt class="property-optional"
             title="Optional">
         <span id="last_modified_by_python">
 <a href="#last_modified_by_python" style="color: inherit; text-decoration: inherit;">last_<wbr>modified_<wbr>by</a>
@@ -2132,8 +1910,7 @@ application used for sign-in.{{% /md %}}</dd>
         <span class="property-indicator"></span>
         <span class="property-type">str</span>
     </dt>
-    <dd>{{% md %}}The identity that last modified the resource.{{% /md %}}</dd>
-    <dt class="property-optional"
+    <dd>{{% md %}}The identity that last modified the resource.{{% /md %}}</dd><dt class="property-optional"
             title="Optional">
         <span id="last_modified_by_type_python">
 <a href="#last_modified_by_type_python" style="color: inherit; text-decoration: inherit;">last_<wbr>modified_<wbr>by_<wbr>type</a>
@@ -2141,8 +1918,7 @@ application used for sign-in.{{% /md %}}</dd>
         <span class="property-indicator"></span>
         <span class="property-type">str</span>
     </dt>
-    <dd>{{% md %}}The type of identity that last modified the resource.{{% /md %}}</dd>
-</dl>
+    <dd>{{% md %}}The type of identity that last modified the resource.{{% /md %}}</dd></dl>
 {{% /choosable %}}
 
 

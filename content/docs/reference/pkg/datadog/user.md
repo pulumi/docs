@@ -35,11 +35,17 @@ Provides a Datadog user resource. This can be used to create and manage Datadog 
 - **verified** (Boolean) Returns true if Datadog user is verified.
 
 {{% examples %}}
+
 ## Example Usage
 
 {{< chooser language "typescript,python,go,csharp" / >}}
 
-{{% example csharp %}}
+
+
+
+
+{{< example csharp >}}
+
 ```csharp
 using Pulumi;
 using Datadog = Pulumi.Datadog;
@@ -66,9 +72,12 @@ class MyStack : Stack
 }
 ```
 
-{{% /example %}}
 
-{{% example go %}}
+{{< /example >}}
+
+
+{{< example go >}}
+
 ```go
 package main
 
@@ -99,9 +108,12 @@ func main() {
 }
 ```
 
-{{% /example %}}
 
-{{% example python %}}
+{{< /example >}}
+
+
+{{< example python >}}
+
 ```python
 import pulumi
 import pulumi_datadog as datadog
@@ -113,9 +125,12 @@ foo = datadog.User("foo",
     roles=[ro_role.id])
 ```
 
-{{% /example %}}
 
-{{% example typescript %}}
+{{< /example >}}
+
+
+{{< example typescript >}}
+
 
 ```typescript
 import * as pulumi from "@pulumi/pulumi";
@@ -131,9 +146,16 @@ const foo = new datadog.User("foo", {
 });
 ```
 
-{{% /example %}}
+
+{{< /example >}}
+
+
+
+
 
 {{% /examples %}}
+
+
 
 
 ## Create a User Resource {#create}
@@ -158,9 +180,7 @@ const foo = new datadog.User("foo", {
 
 {{% choosable language nodejs %}}
 
-<dl class="resources-properties">
-  
-    <dt
+<dl class="resources-properties"><dt
         class="property-required" title="Required">
         <span>name</span>
         <span class="property-indicator"></span>
@@ -168,9 +188,7 @@ const foo = new datadog.User("foo", {
     </dt>
     <dd>
       The unique name of the resource.
-    </dd>
-  
-    <dt
+    </dd><dt
         class="property-required" title="Required">
         <span>args</span>
         <span class="property-indicator"></span>
@@ -178,9 +196,7 @@ const foo = new datadog.User("foo", {
     </dt>
     <dd>
       The arguments to resource properties.
-    </dd>
-  
-    <dt
+    </dd><dt
         class="property-optional" title="Optional">
         <span>opts</span>
         <span class="property-indicator"></span>
@@ -188,10 +204,7 @@ const foo = new datadog.User("foo", {
     </dt>
     <dd>
       Bag of options to control resource&#39;s behavior.
-    </dd>
-  
-
-</dl>
+    </dd></dl>
 
 {{% /choosable %}}
 
@@ -217,9 +230,7 @@ const foo = new datadog.User("foo", {
 
 {{% choosable language go %}}
 
-<dl class="resources-properties">
-  
-    <dt
+<dl class="resources-properties"><dt
         class="property-optional" title="Optional">
         <span>ctx</span>
         <span class="property-indicator"></span>
@@ -227,9 +238,7 @@ const foo = new datadog.User("foo", {
     </dt>
     <dd>
       Context object for the current deployment.
-    </dd>
-  
-    <dt
+    </dd><dt
         class="property-required" title="Required">
         <span>name</span>
         <span class="property-indicator"></span>
@@ -237,9 +246,7 @@ const foo = new datadog.User("foo", {
     </dt>
     <dd>
       The unique name of the resource.
-    </dd>
-  
-    <dt
+    </dd><dt
         class="property-required" title="Required">
         <span>args</span>
         <span class="property-indicator"></span>
@@ -247,9 +254,7 @@ const foo = new datadog.User("foo", {
     </dt>
     <dd>
       The arguments to resource properties.
-    </dd>
-  
-    <dt
+    </dd><dt
         class="property-optional" title="Optional">
         <span>opts</span>
         <span class="property-indicator"></span>
@@ -257,18 +262,13 @@ const foo = new datadog.User("foo", {
     </dt>
     <dd>
       Bag of options to control resource&#39;s behavior.
-    </dd>
-  
-
-</dl>
+    </dd></dl>
 
 {{% /choosable %}}
 
 {{% choosable language csharp %}}
 
-<dl class="resources-properties">
-  
-    <dt
+<dl class="resources-properties"><dt
         class="property-required" title="Required">
         <span>name</span>
         <span class="property-indicator"></span>
@@ -276,9 +276,7 @@ const foo = new datadog.User("foo", {
     </dt>
     <dd>
       The unique name of the resource.
-    </dd>
-  
-    <dt
+    </dd><dt
         class="property-required" title="Required">
         <span>args</span>
         <span class="property-indicator"></span>
@@ -286,9 +284,7 @@ const foo = new datadog.User("foo", {
     </dt>
     <dd>
       The arguments to resource properties.
-    </dd>
-  
-    <dt
+    </dd><dt
         class="property-optional" title="Optional">
         <span>opts</span>
         <span class="property-indicator"></span>
@@ -296,10 +292,7 @@ const foo = new datadog.User("foo", {
     </dt>
     <dd>
       Bag of options to control resource&#39;s behavior.
-    </dd>
-  
-
-</dl>
+    </dd></dl>
 
 {{% /choosable %}}
 
@@ -314,9 +307,7 @@ The User resource accepts the following [input]({{< relref "/docs/intro/concepts
 
 
 {{% choosable language csharp %}}
-<dl class="resources-properties">
-
-    <dt class="property-required"
+<dl class="resources-properties"><dt class="property-required"
             title="Required">
         <span id="email_csharp">
 <a href="#email_csharp" style="color: inherit; text-decoration: inherit;">Email</a>
@@ -325,8 +316,7 @@ The User resource accepts the following [input]({{< relref "/docs/intro/concepts
         <span class="property-type">string</span>
     </dt>
     <dd>{{% md %}}Email address for user.
-{{% /md %}}</dd>
-    <dt class="property-optional property-deprecated"
+{{% /md %}}</dd><dt class="property-optional property-deprecated"
             title="Optional, Deprecated">
         <span id="accessrole_csharp">
 <a href="#accessrole_csharp" style="color: inherit; text-decoration: inherit;">Access<wbr>Role</a>
@@ -336,8 +326,7 @@ The User resource accepts the following [input]({{< relref "/docs/intro/concepts
     </dt>
     <dd>{{% md %}}Role description for user. Can be `st` (standard user), `adm` (admin user) or `ro` (read-only user). Default is `st`.
 `access_role` is ignored for new users created with this resource. New users have to use the `roles` attribute.
-{{% /md %}}<p class="property-message">Deprecated: {{% md %}}This parameter is replaced by `roles` and will be removed from the next Major version{{% /md %}}</p></dd>
-    <dt class="property-optional"
+{{% /md %}}<p class="property-message">Deprecated: {{% md %}}This parameter is replaced by `roles` and will be removed from the next Major version{{% /md %}}</p></dd><dt class="property-optional"
             title="Optional">
         <span id="disabled_csharp">
 <a href="#disabled_csharp" style="color: inherit; text-decoration: inherit;">Disabled</a>
@@ -346,8 +335,7 @@ The User resource accepts the following [input]({{< relref "/docs/intro/concepts
         <span class="property-type">bool</span>
     </dt>
     <dd>{{% md %}}Whether the user is disabled.
-{{% /md %}}</dd>
-    <dt class="property-optional property-deprecated"
+{{% /md %}}</dd><dt class="property-optional property-deprecated"
             title="Optional, Deprecated">
         <span id="handle_csharp">
 <a href="#handle_csharp" style="color: inherit; text-decoration: inherit;">Handle</a>
@@ -356,8 +344,7 @@ The User resource accepts the following [input]({{< relref "/docs/intro/concepts
         <span class="property-type">string</span>
     </dt>
     <dd>{{% md %}}The user handle, must be a valid email.
-{{% /md %}}<p class="property-message">Deprecated: {{% md %}}This parameter is deprecated and will be removed from the next Major version{{% /md %}}</p></dd>
-    <dt class="property-optional property-deprecated"
+{{% /md %}}<p class="property-message">Deprecated: {{% md %}}This parameter is deprecated and will be removed from the next Major version{{% /md %}}</p></dd><dt class="property-optional property-deprecated"
             title="Optional, Deprecated">
         <span id="isadmin_csharp">
 <a href="#isadmin_csharp" style="color: inherit; text-decoration: inherit;">Is<wbr>Admin</a>
@@ -367,8 +354,7 @@ The User resource accepts the following [input]({{< relref "/docs/intro/concepts
     </dt>
     <dd>{{% md %}}Whether the user is an administrator. Warning: the corresponding query parameter is ignored by the Datadog API, thus the
 argument would always trigger an execution plan.
-{{% /md %}}<p class="property-message">Deprecated: {{% md %}}This parameter is replaced by `roles` and will be removed from the next Major version{{% /md %}}</p></dd>
-    <dt class="property-optional"
+{{% /md %}}<p class="property-message">Deprecated: {{% md %}}This parameter is replaced by `roles` and will be removed from the next Major version{{% /md %}}</p></dd><dt class="property-optional"
             title="Optional">
         <span id="name_csharp">
 <a href="#name_csharp" style="color: inherit; text-decoration: inherit;">Name</a>
@@ -377,8 +363,7 @@ argument would always trigger an execution plan.
         <span class="property-type">string</span>
     </dt>
     <dd>{{% md %}}Name for user.
-{{% /md %}}</dd>
-    <dt class="property-optional property-deprecated"
+{{% /md %}}</dd><dt class="property-optional property-deprecated"
             title="Optional, Deprecated">
         <span id="role_csharp">
 <a href="#role_csharp" style="color: inherit; text-decoration: inherit;">Role</a>
@@ -388,8 +373,7 @@ argument would always trigger an execution plan.
     </dt>
     <dd>{{% md %}}Role description for user. Warning: the corresponding query parameter is ignored by the Datadog API, thus the argument
 would always trigger an execution plan.
-{{% /md %}}<p class="property-message">Deprecated: {{% md %}}This parameter was removed from the API and has no effect{{% /md %}}</p></dd>
-    <dt class="property-optional"
+{{% /md %}}<p class="property-message">Deprecated: {{% md %}}This parameter was removed from the API and has no effect{{% /md %}}</p></dd><dt class="property-optional"
             title="Optional">
         <span id="roles_csharp">
 <a href="#roles_csharp" style="color: inherit; text-decoration: inherit;">Roles</a>
@@ -398,8 +382,7 @@ would always trigger an execution plan.
         <span class="property-type">List&lt;string&gt;</span>
     </dt>
     <dd>{{% md %}}A list a role IDs to assign to the user.
-{{% /md %}}</dd>
-    <dt class="property-optional"
+{{% /md %}}</dd><dt class="property-optional"
             title="Optional">
         <span id="senduserinvitation_csharp">
 <a href="#senduserinvitation_csharp" style="color: inherit; text-decoration: inherit;">Send<wbr>User<wbr>Invitation</a>
@@ -408,14 +391,11 @@ would always trigger an execution plan.
         <span class="property-type">bool</span>
     </dt>
     <dd>{{% md %}}Whether an invitation email should be sent when the user is created.
-{{% /md %}}</dd>
-</dl>
+{{% /md %}}</dd></dl>
 {{% /choosable %}}
 
 {{% choosable language go %}}
-<dl class="resources-properties">
-
-    <dt class="property-required"
+<dl class="resources-properties"><dt class="property-required"
             title="Required">
         <span id="email_go">
 <a href="#email_go" style="color: inherit; text-decoration: inherit;">Email</a>
@@ -424,8 +404,7 @@ would always trigger an execution plan.
         <span class="property-type">string</span>
     </dt>
     <dd>{{% md %}}Email address for user.
-{{% /md %}}</dd>
-    <dt class="property-optional property-deprecated"
+{{% /md %}}</dd><dt class="property-optional property-deprecated"
             title="Optional, Deprecated">
         <span id="accessrole_go">
 <a href="#accessrole_go" style="color: inherit; text-decoration: inherit;">Access<wbr>Role</a>
@@ -435,8 +414,7 @@ would always trigger an execution plan.
     </dt>
     <dd>{{% md %}}Role description for user. Can be `st` (standard user), `adm` (admin user) or `ro` (read-only user). Default is `st`.
 `access_role` is ignored for new users created with this resource. New users have to use the `roles` attribute.
-{{% /md %}}<p class="property-message">Deprecated: {{% md %}}This parameter is replaced by `roles` and will be removed from the next Major version{{% /md %}}</p></dd>
-    <dt class="property-optional"
+{{% /md %}}<p class="property-message">Deprecated: {{% md %}}This parameter is replaced by `roles` and will be removed from the next Major version{{% /md %}}</p></dd><dt class="property-optional"
             title="Optional">
         <span id="disabled_go">
 <a href="#disabled_go" style="color: inherit; text-decoration: inherit;">Disabled</a>
@@ -445,8 +423,7 @@ would always trigger an execution plan.
         <span class="property-type">bool</span>
     </dt>
     <dd>{{% md %}}Whether the user is disabled.
-{{% /md %}}</dd>
-    <dt class="property-optional property-deprecated"
+{{% /md %}}</dd><dt class="property-optional property-deprecated"
             title="Optional, Deprecated">
         <span id="handle_go">
 <a href="#handle_go" style="color: inherit; text-decoration: inherit;">Handle</a>
@@ -455,8 +432,7 @@ would always trigger an execution plan.
         <span class="property-type">string</span>
     </dt>
     <dd>{{% md %}}The user handle, must be a valid email.
-{{% /md %}}<p class="property-message">Deprecated: {{% md %}}This parameter is deprecated and will be removed from the next Major version{{% /md %}}</p></dd>
-    <dt class="property-optional property-deprecated"
+{{% /md %}}<p class="property-message">Deprecated: {{% md %}}This parameter is deprecated and will be removed from the next Major version{{% /md %}}</p></dd><dt class="property-optional property-deprecated"
             title="Optional, Deprecated">
         <span id="isadmin_go">
 <a href="#isadmin_go" style="color: inherit; text-decoration: inherit;">Is<wbr>Admin</a>
@@ -466,8 +442,7 @@ would always trigger an execution plan.
     </dt>
     <dd>{{% md %}}Whether the user is an administrator. Warning: the corresponding query parameter is ignored by the Datadog API, thus the
 argument would always trigger an execution plan.
-{{% /md %}}<p class="property-message">Deprecated: {{% md %}}This parameter is replaced by `roles` and will be removed from the next Major version{{% /md %}}</p></dd>
-    <dt class="property-optional"
+{{% /md %}}<p class="property-message">Deprecated: {{% md %}}This parameter is replaced by `roles` and will be removed from the next Major version{{% /md %}}</p></dd><dt class="property-optional"
             title="Optional">
         <span id="name_go">
 <a href="#name_go" style="color: inherit; text-decoration: inherit;">Name</a>
@@ -476,8 +451,7 @@ argument would always trigger an execution plan.
         <span class="property-type">string</span>
     </dt>
     <dd>{{% md %}}Name for user.
-{{% /md %}}</dd>
-    <dt class="property-optional property-deprecated"
+{{% /md %}}</dd><dt class="property-optional property-deprecated"
             title="Optional, Deprecated">
         <span id="role_go">
 <a href="#role_go" style="color: inherit; text-decoration: inherit;">Role</a>
@@ -487,8 +461,7 @@ argument would always trigger an execution plan.
     </dt>
     <dd>{{% md %}}Role description for user. Warning: the corresponding query parameter is ignored by the Datadog API, thus the argument
 would always trigger an execution plan.
-{{% /md %}}<p class="property-message">Deprecated: {{% md %}}This parameter was removed from the API and has no effect{{% /md %}}</p></dd>
-    <dt class="property-optional"
+{{% /md %}}<p class="property-message">Deprecated: {{% md %}}This parameter was removed from the API and has no effect{{% /md %}}</p></dd><dt class="property-optional"
             title="Optional">
         <span id="roles_go">
 <a href="#roles_go" style="color: inherit; text-decoration: inherit;">Roles</a>
@@ -497,8 +470,7 @@ would always trigger an execution plan.
         <span class="property-type">[]string</span>
     </dt>
     <dd>{{% md %}}A list a role IDs to assign to the user.
-{{% /md %}}</dd>
-    <dt class="property-optional"
+{{% /md %}}</dd><dt class="property-optional"
             title="Optional">
         <span id="senduserinvitation_go">
 <a href="#senduserinvitation_go" style="color: inherit; text-decoration: inherit;">Send<wbr>User<wbr>Invitation</a>
@@ -507,14 +479,11 @@ would always trigger an execution plan.
         <span class="property-type">bool</span>
     </dt>
     <dd>{{% md %}}Whether an invitation email should be sent when the user is created.
-{{% /md %}}</dd>
-</dl>
+{{% /md %}}</dd></dl>
 {{% /choosable %}}
 
 {{% choosable language nodejs %}}
-<dl class="resources-properties">
-
-    <dt class="property-required"
+<dl class="resources-properties"><dt class="property-required"
             title="Required">
         <span id="email_nodejs">
 <a href="#email_nodejs" style="color: inherit; text-decoration: inherit;">email</a>
@@ -523,8 +492,7 @@ would always trigger an execution plan.
         <span class="property-type">string</span>
     </dt>
     <dd>{{% md %}}Email address for user.
-{{% /md %}}</dd>
-    <dt class="property-optional property-deprecated"
+{{% /md %}}</dd><dt class="property-optional property-deprecated"
             title="Optional, Deprecated">
         <span id="accessrole_nodejs">
 <a href="#accessrole_nodejs" style="color: inherit; text-decoration: inherit;">access<wbr>Role</a>
@@ -534,8 +502,7 @@ would always trigger an execution plan.
     </dt>
     <dd>{{% md %}}Role description for user. Can be `st` (standard user), `adm` (admin user) or `ro` (read-only user). Default is `st`.
 `access_role` is ignored for new users created with this resource. New users have to use the `roles` attribute.
-{{% /md %}}<p class="property-message">Deprecated: {{% md %}}This parameter is replaced by `roles` and will be removed from the next Major version{{% /md %}}</p></dd>
-    <dt class="property-optional"
+{{% /md %}}<p class="property-message">Deprecated: {{% md %}}This parameter is replaced by `roles` and will be removed from the next Major version{{% /md %}}</p></dd><dt class="property-optional"
             title="Optional">
         <span id="disabled_nodejs">
 <a href="#disabled_nodejs" style="color: inherit; text-decoration: inherit;">disabled</a>
@@ -544,8 +511,7 @@ would always trigger an execution plan.
         <span class="property-type">boolean</span>
     </dt>
     <dd>{{% md %}}Whether the user is disabled.
-{{% /md %}}</dd>
-    <dt class="property-optional property-deprecated"
+{{% /md %}}</dd><dt class="property-optional property-deprecated"
             title="Optional, Deprecated">
         <span id="handle_nodejs">
 <a href="#handle_nodejs" style="color: inherit; text-decoration: inherit;">handle</a>
@@ -554,8 +520,7 @@ would always trigger an execution plan.
         <span class="property-type">string</span>
     </dt>
     <dd>{{% md %}}The user handle, must be a valid email.
-{{% /md %}}<p class="property-message">Deprecated: {{% md %}}This parameter is deprecated and will be removed from the next Major version{{% /md %}}</p></dd>
-    <dt class="property-optional property-deprecated"
+{{% /md %}}<p class="property-message">Deprecated: {{% md %}}This parameter is deprecated and will be removed from the next Major version{{% /md %}}</p></dd><dt class="property-optional property-deprecated"
             title="Optional, Deprecated">
         <span id="isadmin_nodejs">
 <a href="#isadmin_nodejs" style="color: inherit; text-decoration: inherit;">is<wbr>Admin</a>
@@ -565,8 +530,7 @@ would always trigger an execution plan.
     </dt>
     <dd>{{% md %}}Whether the user is an administrator. Warning: the corresponding query parameter is ignored by the Datadog API, thus the
 argument would always trigger an execution plan.
-{{% /md %}}<p class="property-message">Deprecated: {{% md %}}This parameter is replaced by `roles` and will be removed from the next Major version{{% /md %}}</p></dd>
-    <dt class="property-optional"
+{{% /md %}}<p class="property-message">Deprecated: {{% md %}}This parameter is replaced by `roles` and will be removed from the next Major version{{% /md %}}</p></dd><dt class="property-optional"
             title="Optional">
         <span id="name_nodejs">
 <a href="#name_nodejs" style="color: inherit; text-decoration: inherit;">name</a>
@@ -575,8 +539,7 @@ argument would always trigger an execution plan.
         <span class="property-type">string</span>
     </dt>
     <dd>{{% md %}}Name for user.
-{{% /md %}}</dd>
-    <dt class="property-optional property-deprecated"
+{{% /md %}}</dd><dt class="property-optional property-deprecated"
             title="Optional, Deprecated">
         <span id="role_nodejs">
 <a href="#role_nodejs" style="color: inherit; text-decoration: inherit;">role</a>
@@ -586,8 +549,7 @@ argument would always trigger an execution plan.
     </dt>
     <dd>{{% md %}}Role description for user. Warning: the corresponding query parameter is ignored by the Datadog API, thus the argument
 would always trigger an execution plan.
-{{% /md %}}<p class="property-message">Deprecated: {{% md %}}This parameter was removed from the API and has no effect{{% /md %}}</p></dd>
-    <dt class="property-optional"
+{{% /md %}}<p class="property-message">Deprecated: {{% md %}}This parameter was removed from the API and has no effect{{% /md %}}</p></dd><dt class="property-optional"
             title="Optional">
         <span id="roles_nodejs">
 <a href="#roles_nodejs" style="color: inherit; text-decoration: inherit;">roles</a>
@@ -596,8 +558,7 @@ would always trigger an execution plan.
         <span class="property-type">string[]</span>
     </dt>
     <dd>{{% md %}}A list a role IDs to assign to the user.
-{{% /md %}}</dd>
-    <dt class="property-optional"
+{{% /md %}}</dd><dt class="property-optional"
             title="Optional">
         <span id="senduserinvitation_nodejs">
 <a href="#senduserinvitation_nodejs" style="color: inherit; text-decoration: inherit;">send<wbr>User<wbr>Invitation</a>
@@ -606,14 +567,11 @@ would always trigger an execution plan.
         <span class="property-type">boolean</span>
     </dt>
     <dd>{{% md %}}Whether an invitation email should be sent when the user is created.
-{{% /md %}}</dd>
-</dl>
+{{% /md %}}</dd></dl>
 {{% /choosable %}}
 
 {{% choosable language python %}}
-<dl class="resources-properties">
-
-    <dt class="property-required"
+<dl class="resources-properties"><dt class="property-required"
             title="Required">
         <span id="email_python">
 <a href="#email_python" style="color: inherit; text-decoration: inherit;">email</a>
@@ -622,8 +580,7 @@ would always trigger an execution plan.
         <span class="property-type">str</span>
     </dt>
     <dd>{{% md %}}Email address for user.
-{{% /md %}}</dd>
-    <dt class="property-optional property-deprecated"
+{{% /md %}}</dd><dt class="property-optional property-deprecated"
             title="Optional, Deprecated">
         <span id="access_role_python">
 <a href="#access_role_python" style="color: inherit; text-decoration: inherit;">access_<wbr>role</a>
@@ -633,8 +590,7 @@ would always trigger an execution plan.
     </dt>
     <dd>{{% md %}}Role description for user. Can be `st` (standard user), `adm` (admin user) or `ro` (read-only user). Default is `st`.
 `access_role` is ignored for new users created with this resource. New users have to use the `roles` attribute.
-{{% /md %}}<p class="property-message">Deprecated: {{% md %}}This parameter is replaced by `roles` and will be removed from the next Major version{{% /md %}}</p></dd>
-    <dt class="property-optional"
+{{% /md %}}<p class="property-message">Deprecated: {{% md %}}This parameter is replaced by `roles` and will be removed from the next Major version{{% /md %}}</p></dd><dt class="property-optional"
             title="Optional">
         <span id="disabled_python">
 <a href="#disabled_python" style="color: inherit; text-decoration: inherit;">disabled</a>
@@ -643,8 +599,7 @@ would always trigger an execution plan.
         <span class="property-type">bool</span>
     </dt>
     <dd>{{% md %}}Whether the user is disabled.
-{{% /md %}}</dd>
-    <dt class="property-optional property-deprecated"
+{{% /md %}}</dd><dt class="property-optional property-deprecated"
             title="Optional, Deprecated">
         <span id="handle_python">
 <a href="#handle_python" style="color: inherit; text-decoration: inherit;">handle</a>
@@ -653,8 +608,7 @@ would always trigger an execution plan.
         <span class="property-type">str</span>
     </dt>
     <dd>{{% md %}}The user handle, must be a valid email.
-{{% /md %}}<p class="property-message">Deprecated: {{% md %}}This parameter is deprecated and will be removed from the next Major version{{% /md %}}</p></dd>
-    <dt class="property-optional property-deprecated"
+{{% /md %}}<p class="property-message">Deprecated: {{% md %}}This parameter is deprecated and will be removed from the next Major version{{% /md %}}</p></dd><dt class="property-optional property-deprecated"
             title="Optional, Deprecated">
         <span id="is_admin_python">
 <a href="#is_admin_python" style="color: inherit; text-decoration: inherit;">is_<wbr>admin</a>
@@ -664,8 +618,7 @@ would always trigger an execution plan.
     </dt>
     <dd>{{% md %}}Whether the user is an administrator. Warning: the corresponding query parameter is ignored by the Datadog API, thus the
 argument would always trigger an execution plan.
-{{% /md %}}<p class="property-message">Deprecated: {{% md %}}This parameter is replaced by `roles` and will be removed from the next Major version{{% /md %}}</p></dd>
-    <dt class="property-optional"
+{{% /md %}}<p class="property-message">Deprecated: {{% md %}}This parameter is replaced by `roles` and will be removed from the next Major version{{% /md %}}</p></dd><dt class="property-optional"
             title="Optional">
         <span id="name_python">
 <a href="#name_python" style="color: inherit; text-decoration: inherit;">name</a>
@@ -674,8 +627,7 @@ argument would always trigger an execution plan.
         <span class="property-type">str</span>
     </dt>
     <dd>{{% md %}}Name for user.
-{{% /md %}}</dd>
-    <dt class="property-optional property-deprecated"
+{{% /md %}}</dd><dt class="property-optional property-deprecated"
             title="Optional, Deprecated">
         <span id="role_python">
 <a href="#role_python" style="color: inherit; text-decoration: inherit;">role</a>
@@ -685,8 +637,7 @@ argument would always trigger an execution plan.
     </dt>
     <dd>{{% md %}}Role description for user. Warning: the corresponding query parameter is ignored by the Datadog API, thus the argument
 would always trigger an execution plan.
-{{% /md %}}<p class="property-message">Deprecated: {{% md %}}This parameter was removed from the API and has no effect{{% /md %}}</p></dd>
-    <dt class="property-optional"
+{{% /md %}}<p class="property-message">Deprecated: {{% md %}}This parameter was removed from the API and has no effect{{% /md %}}</p></dd><dt class="property-optional"
             title="Optional">
         <span id="roles_python">
 <a href="#roles_python" style="color: inherit; text-decoration: inherit;">roles</a>
@@ -695,8 +646,7 @@ would always trigger an execution plan.
         <span class="property-type">Sequence[str]</span>
     </dt>
     <dd>{{% md %}}A list a role IDs to assign to the user.
-{{% /md %}}</dd>
-    <dt class="property-optional"
+{{% /md %}}</dd><dt class="property-optional"
             title="Optional">
         <span id="send_user_invitation_python">
 <a href="#send_user_invitation_python" style="color: inherit; text-decoration: inherit;">send_<wbr>user_<wbr>invitation</a>
@@ -705,8 +655,7 @@ would always trigger an execution plan.
         <span class="property-type">bool</span>
     </dt>
     <dd>{{% md %}}Whether an invitation email should be sent when the user is created.
-{{% /md %}}</dd>
-</dl>
+{{% /md %}}</dd></dl>
 {{% /choosable %}}
 
 
@@ -717,9 +666,7 @@ All [input](#inputs) properties are implicitly available as output properties. A
 
 
 {{% choosable language csharp %}}
-<dl class="resources-properties">
-
-    <dt class="property-"
+<dl class="resources-properties"><dt class="property-"
             title="">
         <span id="id_csharp">
 <a href="#id_csharp" style="color: inherit; text-decoration: inherit;">Id</a>
@@ -727,8 +674,7 @@ All [input](#inputs) properties are implicitly available as output properties. A
         <span class="property-indicator"></span>
         <span class="property-type">string</span>
     </dt>
-    <dd>{{% md %}}The provider-assigned unique ID for this managed resource.{{% /md %}}</dd>
-    <dt class="property-"
+    <dd>{{% md %}}The provider-assigned unique ID for this managed resource.{{% /md %}}</dd><dt class="property-"
             title="">
         <span id="userinvitationid_csharp">
 <a href="#userinvitationid_csharp" style="color: inherit; text-decoration: inherit;">User<wbr>Invitation<wbr>Id</a>
@@ -737,8 +683,7 @@ All [input](#inputs) properties are implicitly available as output properties. A
         <span class="property-type">string</span>
     </dt>
     <dd>{{% md %}}The ID of the user invitation that was sent when creating the user.
-{{% /md %}}</dd>
-    <dt class="property-"
+{{% /md %}}</dd><dt class="property-"
             title="">
         <span id="verified_csharp">
 <a href="#verified_csharp" style="color: inherit; text-decoration: inherit;">Verified</a>
@@ -747,14 +692,11 @@ All [input](#inputs) properties are implicitly available as output properties. A
         <span class="property-type">bool</span>
     </dt>
     <dd>{{% md %}}Returns true if Datadog user is verified.
-{{% /md %}}</dd>
-</dl>
+{{% /md %}}</dd></dl>
 {{% /choosable %}}
 
 {{% choosable language go %}}
-<dl class="resources-properties">
-
-    <dt class="property-"
+<dl class="resources-properties"><dt class="property-"
             title="">
         <span id="id_go">
 <a href="#id_go" style="color: inherit; text-decoration: inherit;">Id</a>
@@ -762,8 +704,7 @@ All [input](#inputs) properties are implicitly available as output properties. A
         <span class="property-indicator"></span>
         <span class="property-type">string</span>
     </dt>
-    <dd>{{% md %}}The provider-assigned unique ID for this managed resource.{{% /md %}}</dd>
-    <dt class="property-"
+    <dd>{{% md %}}The provider-assigned unique ID for this managed resource.{{% /md %}}</dd><dt class="property-"
             title="">
         <span id="userinvitationid_go">
 <a href="#userinvitationid_go" style="color: inherit; text-decoration: inherit;">User<wbr>Invitation<wbr>Id</a>
@@ -772,8 +713,7 @@ All [input](#inputs) properties are implicitly available as output properties. A
         <span class="property-type">string</span>
     </dt>
     <dd>{{% md %}}The ID of the user invitation that was sent when creating the user.
-{{% /md %}}</dd>
-    <dt class="property-"
+{{% /md %}}</dd><dt class="property-"
             title="">
         <span id="verified_go">
 <a href="#verified_go" style="color: inherit; text-decoration: inherit;">Verified</a>
@@ -782,14 +722,11 @@ All [input](#inputs) properties are implicitly available as output properties. A
         <span class="property-type">bool</span>
     </dt>
     <dd>{{% md %}}Returns true if Datadog user is verified.
-{{% /md %}}</dd>
-</dl>
+{{% /md %}}</dd></dl>
 {{% /choosable %}}
 
 {{% choosable language nodejs %}}
-<dl class="resources-properties">
-
-    <dt class="property-"
+<dl class="resources-properties"><dt class="property-"
             title="">
         <span id="id_nodejs">
 <a href="#id_nodejs" style="color: inherit; text-decoration: inherit;">id</a>
@@ -797,8 +734,7 @@ All [input](#inputs) properties are implicitly available as output properties. A
         <span class="property-indicator"></span>
         <span class="property-type">string</span>
     </dt>
-    <dd>{{% md %}}The provider-assigned unique ID for this managed resource.{{% /md %}}</dd>
-    <dt class="property-"
+    <dd>{{% md %}}The provider-assigned unique ID for this managed resource.{{% /md %}}</dd><dt class="property-"
             title="">
         <span id="userinvitationid_nodejs">
 <a href="#userinvitationid_nodejs" style="color: inherit; text-decoration: inherit;">user<wbr>Invitation<wbr>Id</a>
@@ -807,8 +743,7 @@ All [input](#inputs) properties are implicitly available as output properties. A
         <span class="property-type">string</span>
     </dt>
     <dd>{{% md %}}The ID of the user invitation that was sent when creating the user.
-{{% /md %}}</dd>
-    <dt class="property-"
+{{% /md %}}</dd><dt class="property-"
             title="">
         <span id="verified_nodejs">
 <a href="#verified_nodejs" style="color: inherit; text-decoration: inherit;">verified</a>
@@ -817,14 +752,11 @@ All [input](#inputs) properties are implicitly available as output properties. A
         <span class="property-type">boolean</span>
     </dt>
     <dd>{{% md %}}Returns true if Datadog user is verified.
-{{% /md %}}</dd>
-</dl>
+{{% /md %}}</dd></dl>
 {{% /choosable %}}
 
 {{% choosable language python %}}
-<dl class="resources-properties">
-
-    <dt class="property-"
+<dl class="resources-properties"><dt class="property-"
             title="">
         <span id="id_python">
 <a href="#id_python" style="color: inherit; text-decoration: inherit;">id</a>
@@ -832,8 +764,7 @@ All [input](#inputs) properties are implicitly available as output properties. A
         <span class="property-indicator"></span>
         <span class="property-type">str</span>
     </dt>
-    <dd>{{% md %}}The provider-assigned unique ID for this managed resource.{{% /md %}}</dd>
-    <dt class="property-"
+    <dd>{{% md %}}The provider-assigned unique ID for this managed resource.{{% /md %}}</dd><dt class="property-"
             title="">
         <span id="user_invitation_id_python">
 <a href="#user_invitation_id_python" style="color: inherit; text-decoration: inherit;">user_<wbr>invitation_<wbr>id</a>
@@ -842,8 +773,7 @@ All [input](#inputs) properties are implicitly available as output properties. A
         <span class="property-type">str</span>
     </dt>
     <dd>{{% md %}}The ID of the user invitation that was sent when creating the user.
-{{% /md %}}</dd>
-    <dt class="property-"
+{{% /md %}}</dd><dt class="property-"
             title="">
         <span id="verified_python">
 <a href="#verified_python" style="color: inherit; text-decoration: inherit;">verified</a>
@@ -852,8 +782,7 @@ All [input](#inputs) properties are implicitly available as output properties. A
         <span class="property-type">bool</span>
     </dt>
     <dd>{{% md %}}Returns true if Datadog user is verified.
-{{% /md %}}</dd>
-</dl>
+{{% /md %}}</dd></dl>
 {{% /choosable %}}
 
 
@@ -980,9 +909,7 @@ The following state arguments are supported:
 
 
 {{% choosable language csharp %}}
-<dl class="resources-properties">
-
-    <dt class="property-optional property-deprecated"
+<dl class="resources-properties"><dt class="property-optional property-deprecated"
             title="Optional, Deprecated">
         <span id="state_accessrole_csharp">
 <a href="#state_accessrole_csharp" style="color: inherit; text-decoration: inherit;">Access<wbr>Role</a>
@@ -992,8 +919,7 @@ The following state arguments are supported:
     </dt>
     <dd>{{% md %}}Role description for user. Can be `st` (standard user), `adm` (admin user) or `ro` (read-only user). Default is `st`.
 `access_role` is ignored for new users created with this resource. New users have to use the `roles` attribute.
-{{% /md %}}<p class="property-message">Deprecated: {{% md %}}This parameter is replaced by `roles` and will be removed from the next Major version{{% /md %}}</p></dd>
-    <dt class="property-optional"
+{{% /md %}}<p class="property-message">Deprecated: {{% md %}}This parameter is replaced by `roles` and will be removed from the next Major version{{% /md %}}</p></dd><dt class="property-optional"
             title="Optional">
         <span id="state_disabled_csharp">
 <a href="#state_disabled_csharp" style="color: inherit; text-decoration: inherit;">Disabled</a>
@@ -1002,8 +928,7 @@ The following state arguments are supported:
         <span class="property-type">bool</span>
     </dt>
     <dd>{{% md %}}Whether the user is disabled.
-{{% /md %}}</dd>
-    <dt class="property-optional"
+{{% /md %}}</dd><dt class="property-optional"
             title="Optional">
         <span id="state_email_csharp">
 <a href="#state_email_csharp" style="color: inherit; text-decoration: inherit;">Email</a>
@@ -1012,8 +937,7 @@ The following state arguments are supported:
         <span class="property-type">string</span>
     </dt>
     <dd>{{% md %}}Email address for user.
-{{% /md %}}</dd>
-    <dt class="property-optional property-deprecated"
+{{% /md %}}</dd><dt class="property-optional property-deprecated"
             title="Optional, Deprecated">
         <span id="state_handle_csharp">
 <a href="#state_handle_csharp" style="color: inherit; text-decoration: inherit;">Handle</a>
@@ -1022,8 +946,7 @@ The following state arguments are supported:
         <span class="property-type">string</span>
     </dt>
     <dd>{{% md %}}The user handle, must be a valid email.
-{{% /md %}}<p class="property-message">Deprecated: {{% md %}}This parameter is deprecated and will be removed from the next Major version{{% /md %}}</p></dd>
-    <dt class="property-optional property-deprecated"
+{{% /md %}}<p class="property-message">Deprecated: {{% md %}}This parameter is deprecated and will be removed from the next Major version{{% /md %}}</p></dd><dt class="property-optional property-deprecated"
             title="Optional, Deprecated">
         <span id="state_isadmin_csharp">
 <a href="#state_isadmin_csharp" style="color: inherit; text-decoration: inherit;">Is<wbr>Admin</a>
@@ -1033,8 +956,7 @@ The following state arguments are supported:
     </dt>
     <dd>{{% md %}}Whether the user is an administrator. Warning: the corresponding query parameter is ignored by the Datadog API, thus the
 argument would always trigger an execution plan.
-{{% /md %}}<p class="property-message">Deprecated: {{% md %}}This parameter is replaced by `roles` and will be removed from the next Major version{{% /md %}}</p></dd>
-    <dt class="property-optional"
+{{% /md %}}<p class="property-message">Deprecated: {{% md %}}This parameter is replaced by `roles` and will be removed from the next Major version{{% /md %}}</p></dd><dt class="property-optional"
             title="Optional">
         <span id="state_name_csharp">
 <a href="#state_name_csharp" style="color: inherit; text-decoration: inherit;">Name</a>
@@ -1043,8 +965,7 @@ argument would always trigger an execution plan.
         <span class="property-type">string</span>
     </dt>
     <dd>{{% md %}}Name for user.
-{{% /md %}}</dd>
-    <dt class="property-optional property-deprecated"
+{{% /md %}}</dd><dt class="property-optional property-deprecated"
             title="Optional, Deprecated">
         <span id="state_role_csharp">
 <a href="#state_role_csharp" style="color: inherit; text-decoration: inherit;">Role</a>
@@ -1054,8 +975,7 @@ argument would always trigger an execution plan.
     </dt>
     <dd>{{% md %}}Role description for user. Warning: the corresponding query parameter is ignored by the Datadog API, thus the argument
 would always trigger an execution plan.
-{{% /md %}}<p class="property-message">Deprecated: {{% md %}}This parameter was removed from the API and has no effect{{% /md %}}</p></dd>
-    <dt class="property-optional"
+{{% /md %}}<p class="property-message">Deprecated: {{% md %}}This parameter was removed from the API and has no effect{{% /md %}}</p></dd><dt class="property-optional"
             title="Optional">
         <span id="state_roles_csharp">
 <a href="#state_roles_csharp" style="color: inherit; text-decoration: inherit;">Roles</a>
@@ -1064,8 +984,7 @@ would always trigger an execution plan.
         <span class="property-type">List&lt;string&gt;</span>
     </dt>
     <dd>{{% md %}}A list a role IDs to assign to the user.
-{{% /md %}}</dd>
-    <dt class="property-optional"
+{{% /md %}}</dd><dt class="property-optional"
             title="Optional">
         <span id="state_senduserinvitation_csharp">
 <a href="#state_senduserinvitation_csharp" style="color: inherit; text-decoration: inherit;">Send<wbr>User<wbr>Invitation</a>
@@ -1074,8 +993,7 @@ would always trigger an execution plan.
         <span class="property-type">bool</span>
     </dt>
     <dd>{{% md %}}Whether an invitation email should be sent when the user is created.
-{{% /md %}}</dd>
-    <dt class="property-optional"
+{{% /md %}}</dd><dt class="property-optional"
             title="Optional">
         <span id="state_userinvitationid_csharp">
 <a href="#state_userinvitationid_csharp" style="color: inherit; text-decoration: inherit;">User<wbr>Invitation<wbr>Id</a>
@@ -1084,8 +1002,7 @@ would always trigger an execution plan.
         <span class="property-type">string</span>
     </dt>
     <dd>{{% md %}}The ID of the user invitation that was sent when creating the user.
-{{% /md %}}</dd>
-    <dt class="property-optional"
+{{% /md %}}</dd><dt class="property-optional"
             title="Optional">
         <span id="state_verified_csharp">
 <a href="#state_verified_csharp" style="color: inherit; text-decoration: inherit;">Verified</a>
@@ -1094,14 +1011,11 @@ would always trigger an execution plan.
         <span class="property-type">bool</span>
     </dt>
     <dd>{{% md %}}Returns true if Datadog user is verified.
-{{% /md %}}</dd>
-</dl>
+{{% /md %}}</dd></dl>
 {{% /choosable %}}
 
 {{% choosable language go %}}
-<dl class="resources-properties">
-
-    <dt class="property-optional property-deprecated"
+<dl class="resources-properties"><dt class="property-optional property-deprecated"
             title="Optional, Deprecated">
         <span id="state_accessrole_go">
 <a href="#state_accessrole_go" style="color: inherit; text-decoration: inherit;">Access<wbr>Role</a>
@@ -1111,8 +1025,7 @@ would always trigger an execution plan.
     </dt>
     <dd>{{% md %}}Role description for user. Can be `st` (standard user), `adm` (admin user) or `ro` (read-only user). Default is `st`.
 `access_role` is ignored for new users created with this resource. New users have to use the `roles` attribute.
-{{% /md %}}<p class="property-message">Deprecated: {{% md %}}This parameter is replaced by `roles` and will be removed from the next Major version{{% /md %}}</p></dd>
-    <dt class="property-optional"
+{{% /md %}}<p class="property-message">Deprecated: {{% md %}}This parameter is replaced by `roles` and will be removed from the next Major version{{% /md %}}</p></dd><dt class="property-optional"
             title="Optional">
         <span id="state_disabled_go">
 <a href="#state_disabled_go" style="color: inherit; text-decoration: inherit;">Disabled</a>
@@ -1121,8 +1034,7 @@ would always trigger an execution plan.
         <span class="property-type">bool</span>
     </dt>
     <dd>{{% md %}}Whether the user is disabled.
-{{% /md %}}</dd>
-    <dt class="property-optional"
+{{% /md %}}</dd><dt class="property-optional"
             title="Optional">
         <span id="state_email_go">
 <a href="#state_email_go" style="color: inherit; text-decoration: inherit;">Email</a>
@@ -1131,8 +1043,7 @@ would always trigger an execution plan.
         <span class="property-type">string</span>
     </dt>
     <dd>{{% md %}}Email address for user.
-{{% /md %}}</dd>
-    <dt class="property-optional property-deprecated"
+{{% /md %}}</dd><dt class="property-optional property-deprecated"
             title="Optional, Deprecated">
         <span id="state_handle_go">
 <a href="#state_handle_go" style="color: inherit; text-decoration: inherit;">Handle</a>
@@ -1141,8 +1052,7 @@ would always trigger an execution plan.
         <span class="property-type">string</span>
     </dt>
     <dd>{{% md %}}The user handle, must be a valid email.
-{{% /md %}}<p class="property-message">Deprecated: {{% md %}}This parameter is deprecated and will be removed from the next Major version{{% /md %}}</p></dd>
-    <dt class="property-optional property-deprecated"
+{{% /md %}}<p class="property-message">Deprecated: {{% md %}}This parameter is deprecated and will be removed from the next Major version{{% /md %}}</p></dd><dt class="property-optional property-deprecated"
             title="Optional, Deprecated">
         <span id="state_isadmin_go">
 <a href="#state_isadmin_go" style="color: inherit; text-decoration: inherit;">Is<wbr>Admin</a>
@@ -1152,8 +1062,7 @@ would always trigger an execution plan.
     </dt>
     <dd>{{% md %}}Whether the user is an administrator. Warning: the corresponding query parameter is ignored by the Datadog API, thus the
 argument would always trigger an execution plan.
-{{% /md %}}<p class="property-message">Deprecated: {{% md %}}This parameter is replaced by `roles` and will be removed from the next Major version{{% /md %}}</p></dd>
-    <dt class="property-optional"
+{{% /md %}}<p class="property-message">Deprecated: {{% md %}}This parameter is replaced by `roles` and will be removed from the next Major version{{% /md %}}</p></dd><dt class="property-optional"
             title="Optional">
         <span id="state_name_go">
 <a href="#state_name_go" style="color: inherit; text-decoration: inherit;">Name</a>
@@ -1162,8 +1071,7 @@ argument would always trigger an execution plan.
         <span class="property-type">string</span>
     </dt>
     <dd>{{% md %}}Name for user.
-{{% /md %}}</dd>
-    <dt class="property-optional property-deprecated"
+{{% /md %}}</dd><dt class="property-optional property-deprecated"
             title="Optional, Deprecated">
         <span id="state_role_go">
 <a href="#state_role_go" style="color: inherit; text-decoration: inherit;">Role</a>
@@ -1173,8 +1081,7 @@ argument would always trigger an execution plan.
     </dt>
     <dd>{{% md %}}Role description for user. Warning: the corresponding query parameter is ignored by the Datadog API, thus the argument
 would always trigger an execution plan.
-{{% /md %}}<p class="property-message">Deprecated: {{% md %}}This parameter was removed from the API and has no effect{{% /md %}}</p></dd>
-    <dt class="property-optional"
+{{% /md %}}<p class="property-message">Deprecated: {{% md %}}This parameter was removed from the API and has no effect{{% /md %}}</p></dd><dt class="property-optional"
             title="Optional">
         <span id="state_roles_go">
 <a href="#state_roles_go" style="color: inherit; text-decoration: inherit;">Roles</a>
@@ -1183,8 +1090,7 @@ would always trigger an execution plan.
         <span class="property-type">[]string</span>
     </dt>
     <dd>{{% md %}}A list a role IDs to assign to the user.
-{{% /md %}}</dd>
-    <dt class="property-optional"
+{{% /md %}}</dd><dt class="property-optional"
             title="Optional">
         <span id="state_senduserinvitation_go">
 <a href="#state_senduserinvitation_go" style="color: inherit; text-decoration: inherit;">Send<wbr>User<wbr>Invitation</a>
@@ -1193,8 +1099,7 @@ would always trigger an execution plan.
         <span class="property-type">bool</span>
     </dt>
     <dd>{{% md %}}Whether an invitation email should be sent when the user is created.
-{{% /md %}}</dd>
-    <dt class="property-optional"
+{{% /md %}}</dd><dt class="property-optional"
             title="Optional">
         <span id="state_userinvitationid_go">
 <a href="#state_userinvitationid_go" style="color: inherit; text-decoration: inherit;">User<wbr>Invitation<wbr>Id</a>
@@ -1203,8 +1108,7 @@ would always trigger an execution plan.
         <span class="property-type">string</span>
     </dt>
     <dd>{{% md %}}The ID of the user invitation that was sent when creating the user.
-{{% /md %}}</dd>
-    <dt class="property-optional"
+{{% /md %}}</dd><dt class="property-optional"
             title="Optional">
         <span id="state_verified_go">
 <a href="#state_verified_go" style="color: inherit; text-decoration: inherit;">Verified</a>
@@ -1213,14 +1117,11 @@ would always trigger an execution plan.
         <span class="property-type">bool</span>
     </dt>
     <dd>{{% md %}}Returns true if Datadog user is verified.
-{{% /md %}}</dd>
-</dl>
+{{% /md %}}</dd></dl>
 {{% /choosable %}}
 
 {{% choosable language nodejs %}}
-<dl class="resources-properties">
-
-    <dt class="property-optional property-deprecated"
+<dl class="resources-properties"><dt class="property-optional property-deprecated"
             title="Optional, Deprecated">
         <span id="state_accessrole_nodejs">
 <a href="#state_accessrole_nodejs" style="color: inherit; text-decoration: inherit;">access<wbr>Role</a>
@@ -1230,8 +1131,7 @@ would always trigger an execution plan.
     </dt>
     <dd>{{% md %}}Role description for user. Can be `st` (standard user), `adm` (admin user) or `ro` (read-only user). Default is `st`.
 `access_role` is ignored for new users created with this resource. New users have to use the `roles` attribute.
-{{% /md %}}<p class="property-message">Deprecated: {{% md %}}This parameter is replaced by `roles` and will be removed from the next Major version{{% /md %}}</p></dd>
-    <dt class="property-optional"
+{{% /md %}}<p class="property-message">Deprecated: {{% md %}}This parameter is replaced by `roles` and will be removed from the next Major version{{% /md %}}</p></dd><dt class="property-optional"
             title="Optional">
         <span id="state_disabled_nodejs">
 <a href="#state_disabled_nodejs" style="color: inherit; text-decoration: inherit;">disabled</a>
@@ -1240,8 +1140,7 @@ would always trigger an execution plan.
         <span class="property-type">boolean</span>
     </dt>
     <dd>{{% md %}}Whether the user is disabled.
-{{% /md %}}</dd>
-    <dt class="property-optional"
+{{% /md %}}</dd><dt class="property-optional"
             title="Optional">
         <span id="state_email_nodejs">
 <a href="#state_email_nodejs" style="color: inherit; text-decoration: inherit;">email</a>
@@ -1250,8 +1149,7 @@ would always trigger an execution plan.
         <span class="property-type">string</span>
     </dt>
     <dd>{{% md %}}Email address for user.
-{{% /md %}}</dd>
-    <dt class="property-optional property-deprecated"
+{{% /md %}}</dd><dt class="property-optional property-deprecated"
             title="Optional, Deprecated">
         <span id="state_handle_nodejs">
 <a href="#state_handle_nodejs" style="color: inherit; text-decoration: inherit;">handle</a>
@@ -1260,8 +1158,7 @@ would always trigger an execution plan.
         <span class="property-type">string</span>
     </dt>
     <dd>{{% md %}}The user handle, must be a valid email.
-{{% /md %}}<p class="property-message">Deprecated: {{% md %}}This parameter is deprecated and will be removed from the next Major version{{% /md %}}</p></dd>
-    <dt class="property-optional property-deprecated"
+{{% /md %}}<p class="property-message">Deprecated: {{% md %}}This parameter is deprecated and will be removed from the next Major version{{% /md %}}</p></dd><dt class="property-optional property-deprecated"
             title="Optional, Deprecated">
         <span id="state_isadmin_nodejs">
 <a href="#state_isadmin_nodejs" style="color: inherit; text-decoration: inherit;">is<wbr>Admin</a>
@@ -1271,8 +1168,7 @@ would always trigger an execution plan.
     </dt>
     <dd>{{% md %}}Whether the user is an administrator. Warning: the corresponding query parameter is ignored by the Datadog API, thus the
 argument would always trigger an execution plan.
-{{% /md %}}<p class="property-message">Deprecated: {{% md %}}This parameter is replaced by `roles` and will be removed from the next Major version{{% /md %}}</p></dd>
-    <dt class="property-optional"
+{{% /md %}}<p class="property-message">Deprecated: {{% md %}}This parameter is replaced by `roles` and will be removed from the next Major version{{% /md %}}</p></dd><dt class="property-optional"
             title="Optional">
         <span id="state_name_nodejs">
 <a href="#state_name_nodejs" style="color: inherit; text-decoration: inherit;">name</a>
@@ -1281,8 +1177,7 @@ argument would always trigger an execution plan.
         <span class="property-type">string</span>
     </dt>
     <dd>{{% md %}}Name for user.
-{{% /md %}}</dd>
-    <dt class="property-optional property-deprecated"
+{{% /md %}}</dd><dt class="property-optional property-deprecated"
             title="Optional, Deprecated">
         <span id="state_role_nodejs">
 <a href="#state_role_nodejs" style="color: inherit; text-decoration: inherit;">role</a>
@@ -1292,8 +1187,7 @@ argument would always trigger an execution plan.
     </dt>
     <dd>{{% md %}}Role description for user. Warning: the corresponding query parameter is ignored by the Datadog API, thus the argument
 would always trigger an execution plan.
-{{% /md %}}<p class="property-message">Deprecated: {{% md %}}This parameter was removed from the API and has no effect{{% /md %}}</p></dd>
-    <dt class="property-optional"
+{{% /md %}}<p class="property-message">Deprecated: {{% md %}}This parameter was removed from the API and has no effect{{% /md %}}</p></dd><dt class="property-optional"
             title="Optional">
         <span id="state_roles_nodejs">
 <a href="#state_roles_nodejs" style="color: inherit; text-decoration: inherit;">roles</a>
@@ -1302,8 +1196,7 @@ would always trigger an execution plan.
         <span class="property-type">string[]</span>
     </dt>
     <dd>{{% md %}}A list a role IDs to assign to the user.
-{{% /md %}}</dd>
-    <dt class="property-optional"
+{{% /md %}}</dd><dt class="property-optional"
             title="Optional">
         <span id="state_senduserinvitation_nodejs">
 <a href="#state_senduserinvitation_nodejs" style="color: inherit; text-decoration: inherit;">send<wbr>User<wbr>Invitation</a>
@@ -1312,8 +1205,7 @@ would always trigger an execution plan.
         <span class="property-type">boolean</span>
     </dt>
     <dd>{{% md %}}Whether an invitation email should be sent when the user is created.
-{{% /md %}}</dd>
-    <dt class="property-optional"
+{{% /md %}}</dd><dt class="property-optional"
             title="Optional">
         <span id="state_userinvitationid_nodejs">
 <a href="#state_userinvitationid_nodejs" style="color: inherit; text-decoration: inherit;">user<wbr>Invitation<wbr>Id</a>
@@ -1322,8 +1214,7 @@ would always trigger an execution plan.
         <span class="property-type">string</span>
     </dt>
     <dd>{{% md %}}The ID of the user invitation that was sent when creating the user.
-{{% /md %}}</dd>
-    <dt class="property-optional"
+{{% /md %}}</dd><dt class="property-optional"
             title="Optional">
         <span id="state_verified_nodejs">
 <a href="#state_verified_nodejs" style="color: inherit; text-decoration: inherit;">verified</a>
@@ -1332,14 +1223,11 @@ would always trigger an execution plan.
         <span class="property-type">boolean</span>
     </dt>
     <dd>{{% md %}}Returns true if Datadog user is verified.
-{{% /md %}}</dd>
-</dl>
+{{% /md %}}</dd></dl>
 {{% /choosable %}}
 
 {{% choosable language python %}}
-<dl class="resources-properties">
-
-    <dt class="property-optional property-deprecated"
+<dl class="resources-properties"><dt class="property-optional property-deprecated"
             title="Optional, Deprecated">
         <span id="state_access_role_python">
 <a href="#state_access_role_python" style="color: inherit; text-decoration: inherit;">access_<wbr>role</a>
@@ -1349,8 +1237,7 @@ would always trigger an execution plan.
     </dt>
     <dd>{{% md %}}Role description for user. Can be `st` (standard user), `adm` (admin user) or `ro` (read-only user). Default is `st`.
 `access_role` is ignored for new users created with this resource. New users have to use the `roles` attribute.
-{{% /md %}}<p class="property-message">Deprecated: {{% md %}}This parameter is replaced by `roles` and will be removed from the next Major version{{% /md %}}</p></dd>
-    <dt class="property-optional"
+{{% /md %}}<p class="property-message">Deprecated: {{% md %}}This parameter is replaced by `roles` and will be removed from the next Major version{{% /md %}}</p></dd><dt class="property-optional"
             title="Optional">
         <span id="state_disabled_python">
 <a href="#state_disabled_python" style="color: inherit; text-decoration: inherit;">disabled</a>
@@ -1359,8 +1246,7 @@ would always trigger an execution plan.
         <span class="property-type">bool</span>
     </dt>
     <dd>{{% md %}}Whether the user is disabled.
-{{% /md %}}</dd>
-    <dt class="property-optional"
+{{% /md %}}</dd><dt class="property-optional"
             title="Optional">
         <span id="state_email_python">
 <a href="#state_email_python" style="color: inherit; text-decoration: inherit;">email</a>
@@ -1369,8 +1255,7 @@ would always trigger an execution plan.
         <span class="property-type">str</span>
     </dt>
     <dd>{{% md %}}Email address for user.
-{{% /md %}}</dd>
-    <dt class="property-optional property-deprecated"
+{{% /md %}}</dd><dt class="property-optional property-deprecated"
             title="Optional, Deprecated">
         <span id="state_handle_python">
 <a href="#state_handle_python" style="color: inherit; text-decoration: inherit;">handle</a>
@@ -1379,8 +1264,7 @@ would always trigger an execution plan.
         <span class="property-type">str</span>
     </dt>
     <dd>{{% md %}}The user handle, must be a valid email.
-{{% /md %}}<p class="property-message">Deprecated: {{% md %}}This parameter is deprecated and will be removed from the next Major version{{% /md %}}</p></dd>
-    <dt class="property-optional property-deprecated"
+{{% /md %}}<p class="property-message">Deprecated: {{% md %}}This parameter is deprecated and will be removed from the next Major version{{% /md %}}</p></dd><dt class="property-optional property-deprecated"
             title="Optional, Deprecated">
         <span id="state_is_admin_python">
 <a href="#state_is_admin_python" style="color: inherit; text-decoration: inherit;">is_<wbr>admin</a>
@@ -1390,8 +1274,7 @@ would always trigger an execution plan.
     </dt>
     <dd>{{% md %}}Whether the user is an administrator. Warning: the corresponding query parameter is ignored by the Datadog API, thus the
 argument would always trigger an execution plan.
-{{% /md %}}<p class="property-message">Deprecated: {{% md %}}This parameter is replaced by `roles` and will be removed from the next Major version{{% /md %}}</p></dd>
-    <dt class="property-optional"
+{{% /md %}}<p class="property-message">Deprecated: {{% md %}}This parameter is replaced by `roles` and will be removed from the next Major version{{% /md %}}</p></dd><dt class="property-optional"
             title="Optional">
         <span id="state_name_python">
 <a href="#state_name_python" style="color: inherit; text-decoration: inherit;">name</a>
@@ -1400,8 +1283,7 @@ argument would always trigger an execution plan.
         <span class="property-type">str</span>
     </dt>
     <dd>{{% md %}}Name for user.
-{{% /md %}}</dd>
-    <dt class="property-optional property-deprecated"
+{{% /md %}}</dd><dt class="property-optional property-deprecated"
             title="Optional, Deprecated">
         <span id="state_role_python">
 <a href="#state_role_python" style="color: inherit; text-decoration: inherit;">role</a>
@@ -1411,8 +1293,7 @@ argument would always trigger an execution plan.
     </dt>
     <dd>{{% md %}}Role description for user. Warning: the corresponding query parameter is ignored by the Datadog API, thus the argument
 would always trigger an execution plan.
-{{% /md %}}<p class="property-message">Deprecated: {{% md %}}This parameter was removed from the API and has no effect{{% /md %}}</p></dd>
-    <dt class="property-optional"
+{{% /md %}}<p class="property-message">Deprecated: {{% md %}}This parameter was removed from the API and has no effect{{% /md %}}</p></dd><dt class="property-optional"
             title="Optional">
         <span id="state_roles_python">
 <a href="#state_roles_python" style="color: inherit; text-decoration: inherit;">roles</a>
@@ -1421,8 +1302,7 @@ would always trigger an execution plan.
         <span class="property-type">Sequence[str]</span>
     </dt>
     <dd>{{% md %}}A list a role IDs to assign to the user.
-{{% /md %}}</dd>
-    <dt class="property-optional"
+{{% /md %}}</dd><dt class="property-optional"
             title="Optional">
         <span id="state_send_user_invitation_python">
 <a href="#state_send_user_invitation_python" style="color: inherit; text-decoration: inherit;">send_<wbr>user_<wbr>invitation</a>
@@ -1431,8 +1311,7 @@ would always trigger an execution plan.
         <span class="property-type">bool</span>
     </dt>
     <dd>{{% md %}}Whether an invitation email should be sent when the user is created.
-{{% /md %}}</dd>
-    <dt class="property-optional"
+{{% /md %}}</dd><dt class="property-optional"
             title="Optional">
         <span id="state_user_invitation_id_python">
 <a href="#state_user_invitation_id_python" style="color: inherit; text-decoration: inherit;">user_<wbr>invitation_<wbr>id</a>
@@ -1441,8 +1320,7 @@ would always trigger an execution plan.
         <span class="property-type">str</span>
     </dt>
     <dd>{{% md %}}The ID of the user invitation that was sent when creating the user.
-{{% /md %}}</dd>
-    <dt class="property-optional"
+{{% /md %}}</dd><dt class="property-optional"
             title="Optional">
         <span id="state_verified_python">
 <a href="#state_verified_python" style="color: inherit; text-decoration: inherit;">verified</a>
@@ -1451,8 +1329,7 @@ would always trigger an execution plan.
         <span class="property-type">bool</span>
     </dt>
     <dd>{{% md %}}Returns true if Datadog user is verified.
-{{% /md %}}</dd>
-</dl>
+{{% /md %}}</dd></dl>
 {{% /choosable %}}
 
 
@@ -1478,6 +1355,6 @@ Import is supported using the following syntax
 	<dt>License</dt>
 	<dd>Apache-2.0</dd>
 	<dt>Notes</dt>
-	<dd>This Pulumi package is based on the [`datadog` Terraform Provider](https://github.com/terraform-providers/terraform-provider-datadog).</dd>
+	<dd>{{% md %}}This Pulumi package is based on the [`datadog` Terraform Provider](https://github.com/terraform-providers/terraform-provider-datadog).{{% /md %}}</dd>
 </dl>
 

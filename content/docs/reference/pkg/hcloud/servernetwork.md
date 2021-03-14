@@ -1,8 +1,8 @@
 
 ---
 title: "ServerNetwork"
-title_tag: "Resource ServerNetwork | Package Hetzner Cloud"
-meta_desc: "Explore the ServerNetwork resource of the Hetzner Cloud package, including examples, input properties, output properties, lookup functions, and supporting types. Provides a Hetzner Cloud Server Network to represent a private network on a server in the Hetzner Cloud."
+title_tag: "hcloud.ServerNetwork"
+meta_desc: "Documentation for the hcloud.ServerNetwork resource with examples, input properties, output properties, lookup functions, and supporting types."
 ---
 
 
@@ -13,11 +13,17 @@ meta_desc: "Explore the ServerNetwork resource of the Hetzner Cloud package, inc
 Provides a Hetzner Cloud Server Network to represent a private network on a server in the Hetzner Cloud.
 
 {{% examples %}}
+
 ## Example Usage
 
 {{< chooser language "typescript,python,go,csharp" / >}}
 
-{{% example csharp %}}
+
+
+
+
+{{< example csharp >}}
+
 ```csharp
 using Pulumi;
 using HCloud = Pulumi.HCloud;
@@ -53,9 +59,12 @@ class MyStack : Stack
 }
 ```
 
-{{% /example %}}
 
-{{% example go %}}
+{{< /example >}}
+
+
+{{< example go >}}
+
 ```go
 package main
 
@@ -101,9 +110,12 @@ func main() {
 }
 ```
 
-{{% /example %}}
 
-{{% example python %}}
+{{< /example >}}
+
+
+{{< example python >}}
+
 ```python
 import pulumi
 import pulumi_hcloud as hcloud
@@ -123,9 +135,12 @@ srvnetwork = hcloud.ServerNetwork("srvnetwork",
     ip="10.0.1.5")
 ```
 
-{{% /example %}}
 
-{{% example typescript %}}
+{{< /example >}}
+
+
+{{< example typescript >}}
+
 
 ```typescript
 import * as pulumi from "@pulumi/pulumi";
@@ -149,9 +164,16 @@ const srvnetwork = new hcloud.ServerNetwork("srvnetwork", {
 });
 ```
 
-{{% /example %}}
+
+{{< /example >}}
+
+
+
+
 
 {{% /examples %}}
+
+
 
 
 ## Create a ServerNetwork Resource {#create}
@@ -176,9 +198,7 @@ const srvnetwork = new hcloud.ServerNetwork("srvnetwork", {
 
 {{% choosable language nodejs %}}
 
-<dl class="resources-properties">
-  
-    <dt
+<dl class="resources-properties"><dt
         class="property-required" title="Required">
         <span>name</span>
         <span class="property-indicator"></span>
@@ -186,9 +206,7 @@ const srvnetwork = new hcloud.ServerNetwork("srvnetwork", {
     </dt>
     <dd>
       The unique name of the resource.
-    </dd>
-  
-    <dt
+    </dd><dt
         class="property-required" title="Required">
         <span>args</span>
         <span class="property-indicator"></span>
@@ -196,9 +214,7 @@ const srvnetwork = new hcloud.ServerNetwork("srvnetwork", {
     </dt>
     <dd>
       The arguments to resource properties.
-    </dd>
-  
-    <dt
+    </dd><dt
         class="property-optional" title="Optional">
         <span>opts</span>
         <span class="property-indicator"></span>
@@ -206,10 +222,7 @@ const srvnetwork = new hcloud.ServerNetwork("srvnetwork", {
     </dt>
     <dd>
       Bag of options to control resource&#39;s behavior.
-    </dd>
-  
-
-</dl>
+    </dd></dl>
 
 {{% /choosable %}}
 
@@ -235,9 +248,7 @@ const srvnetwork = new hcloud.ServerNetwork("srvnetwork", {
 
 {{% choosable language go %}}
 
-<dl class="resources-properties">
-  
-    <dt
+<dl class="resources-properties"><dt
         class="property-optional" title="Optional">
         <span>ctx</span>
         <span class="property-indicator"></span>
@@ -245,9 +256,7 @@ const srvnetwork = new hcloud.ServerNetwork("srvnetwork", {
     </dt>
     <dd>
       Context object for the current deployment.
-    </dd>
-  
-    <dt
+    </dd><dt
         class="property-required" title="Required">
         <span>name</span>
         <span class="property-indicator"></span>
@@ -255,9 +264,7 @@ const srvnetwork = new hcloud.ServerNetwork("srvnetwork", {
     </dt>
     <dd>
       The unique name of the resource.
-    </dd>
-  
-    <dt
+    </dd><dt
         class="property-required" title="Required">
         <span>args</span>
         <span class="property-indicator"></span>
@@ -265,9 +272,7 @@ const srvnetwork = new hcloud.ServerNetwork("srvnetwork", {
     </dt>
     <dd>
       The arguments to resource properties.
-    </dd>
-  
-    <dt
+    </dd><dt
         class="property-optional" title="Optional">
         <span>opts</span>
         <span class="property-indicator"></span>
@@ -275,18 +280,13 @@ const srvnetwork = new hcloud.ServerNetwork("srvnetwork", {
     </dt>
     <dd>
       Bag of options to control resource&#39;s behavior.
-    </dd>
-  
-
-</dl>
+    </dd></dl>
 
 {{% /choosable %}}
 
 {{% choosable language csharp %}}
 
-<dl class="resources-properties">
-  
-    <dt
+<dl class="resources-properties"><dt
         class="property-required" title="Required">
         <span>name</span>
         <span class="property-indicator"></span>
@@ -294,9 +294,7 @@ const srvnetwork = new hcloud.ServerNetwork("srvnetwork", {
     </dt>
     <dd>
       The unique name of the resource.
-    </dd>
-  
-    <dt
+    </dd><dt
         class="property-required" title="Required">
         <span>args</span>
         <span class="property-indicator"></span>
@@ -304,9 +302,7 @@ const srvnetwork = new hcloud.ServerNetwork("srvnetwork", {
     </dt>
     <dd>
       The arguments to resource properties.
-    </dd>
-  
-    <dt
+    </dd><dt
         class="property-optional" title="Optional">
         <span>opts</span>
         <span class="property-indicator"></span>
@@ -314,10 +310,7 @@ const srvnetwork = new hcloud.ServerNetwork("srvnetwork", {
     </dt>
     <dd>
       Bag of options to control resource&#39;s behavior.
-    </dd>
-  
-
-</dl>
+    </dd></dl>
 
 {{% /choosable %}}
 
@@ -332,9 +325,7 @@ The ServerNetwork resource accepts the following [input]({{< relref "/docs/intro
 
 
 {{% choosable language csharp %}}
-<dl class="resources-properties">
-
-    <dt class="property-required"
+<dl class="resources-properties"><dt class="property-required"
             title="Required">
         <span id="serverid_csharp">
 <a href="#serverid_csharp" style="color: inherit; text-decoration: inherit;">Server<wbr>Id</a>
@@ -343,8 +334,7 @@ The ServerNetwork resource accepts the following [input]({{< relref "/docs/intro
         <span class="property-type">int</span>
     </dt>
     <dd>{{% md %}}ID of the server.
-{{% /md %}}</dd>
-    <dt class="property-optional"
+{{% /md %}}</dd><dt class="property-optional"
             title="Optional">
         <span id="aliasips_csharp">
 <a href="#aliasips_csharp" style="color: inherit; text-decoration: inherit;">Alias<wbr>Ips</a>
@@ -354,8 +344,7 @@ The ServerNetwork resource accepts the following [input]({{< relref "/docs/intro
     </dt>
     <dd>{{% md %}}Additional IPs to be assigned
 to this server.
-{{% /md %}}</dd>
-    <dt class="property-optional"
+{{% /md %}}</dd><dt class="property-optional"
             title="Optional">
         <span id="ip_csharp">
 <a href="#ip_csharp" style="color: inherit; text-decoration: inherit;">Ip</a>
@@ -366,8 +355,7 @@ to this server.
     <dd>{{% md %}}IP to request to be assigned to this server.
 If you do not provide this then you will be auto assigned an IP
 address.
-{{% /md %}}</dd>
-    <dt class="property-optional"
+{{% /md %}}</dd><dt class="property-optional"
             title="Optional">
         <span id="networkid_csharp">
 <a href="#networkid_csharp" style="color: inherit; text-decoration: inherit;">Network<wbr>Id</a>
@@ -383,8 +371,7 @@ dependency between server and subnet. Therefore `depends_on` may need
 to be used. Alternatively the `subnet_id` property can be used, which
 will create an explicit dependency between `hcloud.ServerNetwork` and
 the existence of a subnet.
-{{% /md %}}</dd>
-    <dt class="property-optional"
+{{% /md %}}</dd><dt class="property-optional"
             title="Optional">
         <span id="subnetid_csharp">
 <a href="#subnetid_csharp" style="color: inherit; text-decoration: inherit;">Subnet<wbr>Id</a>
@@ -396,14 +383,11 @@ the existence of a subnet.
 added to the Server. Required if `network_id` is not set.
 *Note*: if the `ip` property is missing, the Server is currently added
 to the last created subnet.
-{{% /md %}}</dd>
-</dl>
+{{% /md %}}</dd></dl>
 {{% /choosable %}}
 
 {{% choosable language go %}}
-<dl class="resources-properties">
-
-    <dt class="property-required"
+<dl class="resources-properties"><dt class="property-required"
             title="Required">
         <span id="serverid_go">
 <a href="#serverid_go" style="color: inherit; text-decoration: inherit;">Server<wbr>Id</a>
@@ -412,8 +396,7 @@ to the last created subnet.
         <span class="property-type">int</span>
     </dt>
     <dd>{{% md %}}ID of the server.
-{{% /md %}}</dd>
-    <dt class="property-optional"
+{{% /md %}}</dd><dt class="property-optional"
             title="Optional">
         <span id="aliasips_go">
 <a href="#aliasips_go" style="color: inherit; text-decoration: inherit;">Alias<wbr>Ips</a>
@@ -423,8 +406,7 @@ to the last created subnet.
     </dt>
     <dd>{{% md %}}Additional IPs to be assigned
 to this server.
-{{% /md %}}</dd>
-    <dt class="property-optional"
+{{% /md %}}</dd><dt class="property-optional"
             title="Optional">
         <span id="ip_go">
 <a href="#ip_go" style="color: inherit; text-decoration: inherit;">Ip</a>
@@ -435,8 +417,7 @@ to this server.
     <dd>{{% md %}}IP to request to be assigned to this server.
 If you do not provide this then you will be auto assigned an IP
 address.
-{{% /md %}}</dd>
-    <dt class="property-optional"
+{{% /md %}}</dd><dt class="property-optional"
             title="Optional">
         <span id="networkid_go">
 <a href="#networkid_go" style="color: inherit; text-decoration: inherit;">Network<wbr>Id</a>
@@ -452,8 +433,7 @@ dependency between server and subnet. Therefore `depends_on` may need
 to be used. Alternatively the `subnet_id` property can be used, which
 will create an explicit dependency between `hcloud.ServerNetwork` and
 the existence of a subnet.
-{{% /md %}}</dd>
-    <dt class="property-optional"
+{{% /md %}}</dd><dt class="property-optional"
             title="Optional">
         <span id="subnetid_go">
 <a href="#subnetid_go" style="color: inherit; text-decoration: inherit;">Subnet<wbr>Id</a>
@@ -465,14 +445,11 @@ the existence of a subnet.
 added to the Server. Required if `network_id` is not set.
 *Note*: if the `ip` property is missing, the Server is currently added
 to the last created subnet.
-{{% /md %}}</dd>
-</dl>
+{{% /md %}}</dd></dl>
 {{% /choosable %}}
 
 {{% choosable language nodejs %}}
-<dl class="resources-properties">
-
-    <dt class="property-required"
+<dl class="resources-properties"><dt class="property-required"
             title="Required">
         <span id="serverid_nodejs">
 <a href="#serverid_nodejs" style="color: inherit; text-decoration: inherit;">server<wbr>Id</a>
@@ -481,8 +458,7 @@ to the last created subnet.
         <span class="property-type">number</span>
     </dt>
     <dd>{{% md %}}ID of the server.
-{{% /md %}}</dd>
-    <dt class="property-optional"
+{{% /md %}}</dd><dt class="property-optional"
             title="Optional">
         <span id="aliasips_nodejs">
 <a href="#aliasips_nodejs" style="color: inherit; text-decoration: inherit;">alias<wbr>Ips</a>
@@ -492,8 +468,7 @@ to the last created subnet.
     </dt>
     <dd>{{% md %}}Additional IPs to be assigned
 to this server.
-{{% /md %}}</dd>
-    <dt class="property-optional"
+{{% /md %}}</dd><dt class="property-optional"
             title="Optional">
         <span id="ip_nodejs">
 <a href="#ip_nodejs" style="color: inherit; text-decoration: inherit;">ip</a>
@@ -504,8 +479,7 @@ to this server.
     <dd>{{% md %}}IP to request to be assigned to this server.
 If you do not provide this then you will be auto assigned an IP
 address.
-{{% /md %}}</dd>
-    <dt class="property-optional"
+{{% /md %}}</dd><dt class="property-optional"
             title="Optional">
         <span id="networkid_nodejs">
 <a href="#networkid_nodejs" style="color: inherit; text-decoration: inherit;">network<wbr>Id</a>
@@ -521,8 +495,7 @@ dependency between server and subnet. Therefore `depends_on` may need
 to be used. Alternatively the `subnet_id` property can be used, which
 will create an explicit dependency between `hcloud.ServerNetwork` and
 the existence of a subnet.
-{{% /md %}}</dd>
-    <dt class="property-optional"
+{{% /md %}}</dd><dt class="property-optional"
             title="Optional">
         <span id="subnetid_nodejs">
 <a href="#subnetid_nodejs" style="color: inherit; text-decoration: inherit;">subnet<wbr>Id</a>
@@ -534,14 +507,11 @@ the existence of a subnet.
 added to the Server. Required if `network_id` is not set.
 *Note*: if the `ip` property is missing, the Server is currently added
 to the last created subnet.
-{{% /md %}}</dd>
-</dl>
+{{% /md %}}</dd></dl>
 {{% /choosable %}}
 
 {{% choosable language python %}}
-<dl class="resources-properties">
-
-    <dt class="property-required"
+<dl class="resources-properties"><dt class="property-required"
             title="Required">
         <span id="server_id_python">
 <a href="#server_id_python" style="color: inherit; text-decoration: inherit;">server_<wbr>id</a>
@@ -550,8 +520,7 @@ to the last created subnet.
         <span class="property-type">int</span>
     </dt>
     <dd>{{% md %}}ID of the server.
-{{% /md %}}</dd>
-    <dt class="property-optional"
+{{% /md %}}</dd><dt class="property-optional"
             title="Optional">
         <span id="alias_ips_python">
 <a href="#alias_ips_python" style="color: inherit; text-decoration: inherit;">alias_<wbr>ips</a>
@@ -561,8 +530,7 @@ to the last created subnet.
     </dt>
     <dd>{{% md %}}Additional IPs to be assigned
 to this server.
-{{% /md %}}</dd>
-    <dt class="property-optional"
+{{% /md %}}</dd><dt class="property-optional"
             title="Optional">
         <span id="ip_python">
 <a href="#ip_python" style="color: inherit; text-decoration: inherit;">ip</a>
@@ -573,8 +541,7 @@ to this server.
     <dd>{{% md %}}IP to request to be assigned to this server.
 If you do not provide this then you will be auto assigned an IP
 address.
-{{% /md %}}</dd>
-    <dt class="property-optional"
+{{% /md %}}</dd><dt class="property-optional"
             title="Optional">
         <span id="network_id_python">
 <a href="#network_id_python" style="color: inherit; text-decoration: inherit;">network_<wbr>id</a>
@@ -590,8 +557,7 @@ dependency between server and subnet. Therefore `depends_on` may need
 to be used. Alternatively the `subnet_id` property can be used, which
 will create an explicit dependency between `hcloud.ServerNetwork` and
 the existence of a subnet.
-{{% /md %}}</dd>
-    <dt class="property-optional"
+{{% /md %}}</dd><dt class="property-optional"
             title="Optional">
         <span id="subnet_id_python">
 <a href="#subnet_id_python" style="color: inherit; text-decoration: inherit;">subnet_<wbr>id</a>
@@ -603,8 +569,7 @@ the existence of a subnet.
 added to the Server. Required if `network_id` is not set.
 *Note*: if the `ip` property is missing, the Server is currently added
 to the last created subnet.
-{{% /md %}}</dd>
-</dl>
+{{% /md %}}</dd></dl>
 {{% /choosable %}}
 
 
@@ -615,9 +580,7 @@ All [input](#inputs) properties are implicitly available as output properties. A
 
 
 {{% choosable language csharp %}}
-<dl class="resources-properties">
-
-    <dt class="property-"
+<dl class="resources-properties"><dt class="property-"
             title="">
         <span id="id_csharp">
 <a href="#id_csharp" style="color: inherit; text-decoration: inherit;">Id</a>
@@ -625,8 +588,7 @@ All [input](#inputs) properties are implicitly available as output properties. A
         <span class="property-indicator"></span>
         <span class="property-type">string</span>
     </dt>
-    <dd>{{% md %}}The provider-assigned unique ID for this managed resource.{{% /md %}}</dd>
-    <dt class="property-"
+    <dd>{{% md %}}The provider-assigned unique ID for this managed resource.{{% /md %}}</dd><dt class="property-"
             title="">
         <span id="macaddress_csharp">
 <a href="#macaddress_csharp" style="color: inherit; text-decoration: inherit;">Mac<wbr>Address</a>
@@ -634,14 +596,11 @@ All [input](#inputs) properties are implicitly available as output properties. A
         <span class="property-indicator"></span>
         <span class="property-type">string</span>
     </dt>
-    <dd>{{% md %}}{{% /md %}}</dd>
-</dl>
+    <dd>{{% md %}}{{% /md %}}</dd></dl>
 {{% /choosable %}}
 
 {{% choosable language go %}}
-<dl class="resources-properties">
-
-    <dt class="property-"
+<dl class="resources-properties"><dt class="property-"
             title="">
         <span id="id_go">
 <a href="#id_go" style="color: inherit; text-decoration: inherit;">Id</a>
@@ -649,8 +608,7 @@ All [input](#inputs) properties are implicitly available as output properties. A
         <span class="property-indicator"></span>
         <span class="property-type">string</span>
     </dt>
-    <dd>{{% md %}}The provider-assigned unique ID for this managed resource.{{% /md %}}</dd>
-    <dt class="property-"
+    <dd>{{% md %}}The provider-assigned unique ID for this managed resource.{{% /md %}}</dd><dt class="property-"
             title="">
         <span id="macaddress_go">
 <a href="#macaddress_go" style="color: inherit; text-decoration: inherit;">Mac<wbr>Address</a>
@@ -658,14 +616,11 @@ All [input](#inputs) properties are implicitly available as output properties. A
         <span class="property-indicator"></span>
         <span class="property-type">string</span>
     </dt>
-    <dd>{{% md %}}{{% /md %}}</dd>
-</dl>
+    <dd>{{% md %}}{{% /md %}}</dd></dl>
 {{% /choosable %}}
 
 {{% choosable language nodejs %}}
-<dl class="resources-properties">
-
-    <dt class="property-"
+<dl class="resources-properties"><dt class="property-"
             title="">
         <span id="id_nodejs">
 <a href="#id_nodejs" style="color: inherit; text-decoration: inherit;">id</a>
@@ -673,8 +628,7 @@ All [input](#inputs) properties are implicitly available as output properties. A
         <span class="property-indicator"></span>
         <span class="property-type">string</span>
     </dt>
-    <dd>{{% md %}}The provider-assigned unique ID for this managed resource.{{% /md %}}</dd>
-    <dt class="property-"
+    <dd>{{% md %}}The provider-assigned unique ID for this managed resource.{{% /md %}}</dd><dt class="property-"
             title="">
         <span id="macaddress_nodejs">
 <a href="#macaddress_nodejs" style="color: inherit; text-decoration: inherit;">mac<wbr>Address</a>
@@ -682,14 +636,11 @@ All [input](#inputs) properties are implicitly available as output properties. A
         <span class="property-indicator"></span>
         <span class="property-type">string</span>
     </dt>
-    <dd>{{% md %}}{{% /md %}}</dd>
-</dl>
+    <dd>{{% md %}}{{% /md %}}</dd></dl>
 {{% /choosable %}}
 
 {{% choosable language python %}}
-<dl class="resources-properties">
-
-    <dt class="property-"
+<dl class="resources-properties"><dt class="property-"
             title="">
         <span id="id_python">
 <a href="#id_python" style="color: inherit; text-decoration: inherit;">id</a>
@@ -697,8 +648,7 @@ All [input](#inputs) properties are implicitly available as output properties. A
         <span class="property-indicator"></span>
         <span class="property-type">str</span>
     </dt>
-    <dd>{{% md %}}The provider-assigned unique ID for this managed resource.{{% /md %}}</dd>
-    <dt class="property-"
+    <dd>{{% md %}}The provider-assigned unique ID for this managed resource.{{% /md %}}</dd><dt class="property-"
             title="">
         <span id="mac_address_python">
 <a href="#mac_address_python" style="color: inherit; text-decoration: inherit;">mac_<wbr>address</a>
@@ -706,8 +656,7 @@ All [input](#inputs) properties are implicitly available as output properties. A
         <span class="property-indicator"></span>
         <span class="property-type">str</span>
     </dt>
-    <dd>{{% md %}}{{% /md %}}</dd>
-</dl>
+    <dd>{{% md %}}{{% /md %}}</dd></dl>
 {{% /choosable %}}
 
 
@@ -834,9 +783,7 @@ The following state arguments are supported:
 
 
 {{% choosable language csharp %}}
-<dl class="resources-properties">
-
-    <dt class="property-optional"
+<dl class="resources-properties"><dt class="property-optional"
             title="Optional">
         <span id="state_aliasips_csharp">
 <a href="#state_aliasips_csharp" style="color: inherit; text-decoration: inherit;">Alias<wbr>Ips</a>
@@ -846,8 +793,7 @@ The following state arguments are supported:
     </dt>
     <dd>{{% md %}}Additional IPs to be assigned
 to this server.
-{{% /md %}}</dd>
-    <dt class="property-optional"
+{{% /md %}}</dd><dt class="property-optional"
             title="Optional">
         <span id="state_ip_csharp">
 <a href="#state_ip_csharp" style="color: inherit; text-decoration: inherit;">Ip</a>
@@ -858,8 +804,7 @@ to this server.
     <dd>{{% md %}}IP to request to be assigned to this server.
 If you do not provide this then you will be auto assigned an IP
 address.
-{{% /md %}}</dd>
-    <dt class="property-optional"
+{{% /md %}}</dd><dt class="property-optional"
             title="Optional">
         <span id="state_macaddress_csharp">
 <a href="#state_macaddress_csharp" style="color: inherit; text-decoration: inherit;">Mac<wbr>Address</a>
@@ -867,8 +812,7 @@ address.
         <span class="property-indicator"></span>
         <span class="property-type">string</span>
     </dt>
-    <dd>{{% md %}}{{% /md %}}</dd>
-    <dt class="property-optional"
+    <dd>{{% md %}}{{% /md %}}</dd><dt class="property-optional"
             title="Optional">
         <span id="state_networkid_csharp">
 <a href="#state_networkid_csharp" style="color: inherit; text-decoration: inherit;">Network<wbr>Id</a>
@@ -884,8 +828,7 @@ dependency between server and subnet. Therefore `depends_on` may need
 to be used. Alternatively the `subnet_id` property can be used, which
 will create an explicit dependency between `hcloud.ServerNetwork` and
 the existence of a subnet.
-{{% /md %}}</dd>
-    <dt class="property-optional"
+{{% /md %}}</dd><dt class="property-optional"
             title="Optional">
         <span id="state_serverid_csharp">
 <a href="#state_serverid_csharp" style="color: inherit; text-decoration: inherit;">Server<wbr>Id</a>
@@ -894,8 +837,7 @@ the existence of a subnet.
         <span class="property-type">int</span>
     </dt>
     <dd>{{% md %}}ID of the server.
-{{% /md %}}</dd>
-    <dt class="property-optional"
+{{% /md %}}</dd><dt class="property-optional"
             title="Optional">
         <span id="state_subnetid_csharp">
 <a href="#state_subnetid_csharp" style="color: inherit; text-decoration: inherit;">Subnet<wbr>Id</a>
@@ -907,14 +849,11 @@ the existence of a subnet.
 added to the Server. Required if `network_id` is not set.
 *Note*: if the `ip` property is missing, the Server is currently added
 to the last created subnet.
-{{% /md %}}</dd>
-</dl>
+{{% /md %}}</dd></dl>
 {{% /choosable %}}
 
 {{% choosable language go %}}
-<dl class="resources-properties">
-
-    <dt class="property-optional"
+<dl class="resources-properties"><dt class="property-optional"
             title="Optional">
         <span id="state_aliasips_go">
 <a href="#state_aliasips_go" style="color: inherit; text-decoration: inherit;">Alias<wbr>Ips</a>
@@ -924,8 +863,7 @@ to the last created subnet.
     </dt>
     <dd>{{% md %}}Additional IPs to be assigned
 to this server.
-{{% /md %}}</dd>
-    <dt class="property-optional"
+{{% /md %}}</dd><dt class="property-optional"
             title="Optional">
         <span id="state_ip_go">
 <a href="#state_ip_go" style="color: inherit; text-decoration: inherit;">Ip</a>
@@ -936,8 +874,7 @@ to this server.
     <dd>{{% md %}}IP to request to be assigned to this server.
 If you do not provide this then you will be auto assigned an IP
 address.
-{{% /md %}}</dd>
-    <dt class="property-optional"
+{{% /md %}}</dd><dt class="property-optional"
             title="Optional">
         <span id="state_macaddress_go">
 <a href="#state_macaddress_go" style="color: inherit; text-decoration: inherit;">Mac<wbr>Address</a>
@@ -945,8 +882,7 @@ address.
         <span class="property-indicator"></span>
         <span class="property-type">string</span>
     </dt>
-    <dd>{{% md %}}{{% /md %}}</dd>
-    <dt class="property-optional"
+    <dd>{{% md %}}{{% /md %}}</dd><dt class="property-optional"
             title="Optional">
         <span id="state_networkid_go">
 <a href="#state_networkid_go" style="color: inherit; text-decoration: inherit;">Network<wbr>Id</a>
@@ -962,8 +898,7 @@ dependency between server and subnet. Therefore `depends_on` may need
 to be used. Alternatively the `subnet_id` property can be used, which
 will create an explicit dependency between `hcloud.ServerNetwork` and
 the existence of a subnet.
-{{% /md %}}</dd>
-    <dt class="property-optional"
+{{% /md %}}</dd><dt class="property-optional"
             title="Optional">
         <span id="state_serverid_go">
 <a href="#state_serverid_go" style="color: inherit; text-decoration: inherit;">Server<wbr>Id</a>
@@ -972,8 +907,7 @@ the existence of a subnet.
         <span class="property-type">int</span>
     </dt>
     <dd>{{% md %}}ID of the server.
-{{% /md %}}</dd>
-    <dt class="property-optional"
+{{% /md %}}</dd><dt class="property-optional"
             title="Optional">
         <span id="state_subnetid_go">
 <a href="#state_subnetid_go" style="color: inherit; text-decoration: inherit;">Subnet<wbr>Id</a>
@@ -985,14 +919,11 @@ the existence of a subnet.
 added to the Server. Required if `network_id` is not set.
 *Note*: if the `ip` property is missing, the Server is currently added
 to the last created subnet.
-{{% /md %}}</dd>
-</dl>
+{{% /md %}}</dd></dl>
 {{% /choosable %}}
 
 {{% choosable language nodejs %}}
-<dl class="resources-properties">
-
-    <dt class="property-optional"
+<dl class="resources-properties"><dt class="property-optional"
             title="Optional">
         <span id="state_aliasips_nodejs">
 <a href="#state_aliasips_nodejs" style="color: inherit; text-decoration: inherit;">alias<wbr>Ips</a>
@@ -1002,8 +933,7 @@ to the last created subnet.
     </dt>
     <dd>{{% md %}}Additional IPs to be assigned
 to this server.
-{{% /md %}}</dd>
-    <dt class="property-optional"
+{{% /md %}}</dd><dt class="property-optional"
             title="Optional">
         <span id="state_ip_nodejs">
 <a href="#state_ip_nodejs" style="color: inherit; text-decoration: inherit;">ip</a>
@@ -1014,8 +944,7 @@ to this server.
     <dd>{{% md %}}IP to request to be assigned to this server.
 If you do not provide this then you will be auto assigned an IP
 address.
-{{% /md %}}</dd>
-    <dt class="property-optional"
+{{% /md %}}</dd><dt class="property-optional"
             title="Optional">
         <span id="state_macaddress_nodejs">
 <a href="#state_macaddress_nodejs" style="color: inherit; text-decoration: inherit;">mac<wbr>Address</a>
@@ -1023,8 +952,7 @@ address.
         <span class="property-indicator"></span>
         <span class="property-type">string</span>
     </dt>
-    <dd>{{% md %}}{{% /md %}}</dd>
-    <dt class="property-optional"
+    <dd>{{% md %}}{{% /md %}}</dd><dt class="property-optional"
             title="Optional">
         <span id="state_networkid_nodejs">
 <a href="#state_networkid_nodejs" style="color: inherit; text-decoration: inherit;">network<wbr>Id</a>
@@ -1040,8 +968,7 @@ dependency between server and subnet. Therefore `depends_on` may need
 to be used. Alternatively the `subnet_id` property can be used, which
 will create an explicit dependency between `hcloud.ServerNetwork` and
 the existence of a subnet.
-{{% /md %}}</dd>
-    <dt class="property-optional"
+{{% /md %}}</dd><dt class="property-optional"
             title="Optional">
         <span id="state_serverid_nodejs">
 <a href="#state_serverid_nodejs" style="color: inherit; text-decoration: inherit;">server<wbr>Id</a>
@@ -1050,8 +977,7 @@ the existence of a subnet.
         <span class="property-type">number</span>
     </dt>
     <dd>{{% md %}}ID of the server.
-{{% /md %}}</dd>
-    <dt class="property-optional"
+{{% /md %}}</dd><dt class="property-optional"
             title="Optional">
         <span id="state_subnetid_nodejs">
 <a href="#state_subnetid_nodejs" style="color: inherit; text-decoration: inherit;">subnet<wbr>Id</a>
@@ -1063,14 +989,11 @@ the existence of a subnet.
 added to the Server. Required if `network_id` is not set.
 *Note*: if the `ip` property is missing, the Server is currently added
 to the last created subnet.
-{{% /md %}}</dd>
-</dl>
+{{% /md %}}</dd></dl>
 {{% /choosable %}}
 
 {{% choosable language python %}}
-<dl class="resources-properties">
-
-    <dt class="property-optional"
+<dl class="resources-properties"><dt class="property-optional"
             title="Optional">
         <span id="state_alias_ips_python">
 <a href="#state_alias_ips_python" style="color: inherit; text-decoration: inherit;">alias_<wbr>ips</a>
@@ -1080,8 +1003,7 @@ to the last created subnet.
     </dt>
     <dd>{{% md %}}Additional IPs to be assigned
 to this server.
-{{% /md %}}</dd>
-    <dt class="property-optional"
+{{% /md %}}</dd><dt class="property-optional"
             title="Optional">
         <span id="state_ip_python">
 <a href="#state_ip_python" style="color: inherit; text-decoration: inherit;">ip</a>
@@ -1092,8 +1014,7 @@ to this server.
     <dd>{{% md %}}IP to request to be assigned to this server.
 If you do not provide this then you will be auto assigned an IP
 address.
-{{% /md %}}</dd>
-    <dt class="property-optional"
+{{% /md %}}</dd><dt class="property-optional"
             title="Optional">
         <span id="state_mac_address_python">
 <a href="#state_mac_address_python" style="color: inherit; text-decoration: inherit;">mac_<wbr>address</a>
@@ -1101,8 +1022,7 @@ address.
         <span class="property-indicator"></span>
         <span class="property-type">str</span>
     </dt>
-    <dd>{{% md %}}{{% /md %}}</dd>
-    <dt class="property-optional"
+    <dd>{{% md %}}{{% /md %}}</dd><dt class="property-optional"
             title="Optional">
         <span id="state_network_id_python">
 <a href="#state_network_id_python" style="color: inherit; text-decoration: inherit;">network_<wbr>id</a>
@@ -1118,8 +1038,7 @@ dependency between server and subnet. Therefore `depends_on` may need
 to be used. Alternatively the `subnet_id` property can be used, which
 will create an explicit dependency between `hcloud.ServerNetwork` and
 the existence of a subnet.
-{{% /md %}}</dd>
-    <dt class="property-optional"
+{{% /md %}}</dd><dt class="property-optional"
             title="Optional">
         <span id="state_server_id_python">
 <a href="#state_server_id_python" style="color: inherit; text-decoration: inherit;">server_<wbr>id</a>
@@ -1128,8 +1047,7 @@ the existence of a subnet.
         <span class="property-type">int</span>
     </dt>
     <dd>{{% md %}}ID of the server.
-{{% /md %}}</dd>
-    <dt class="property-optional"
+{{% /md %}}</dd><dt class="property-optional"
             title="Optional">
         <span id="state_subnet_id_python">
 <a href="#state_subnet_id_python" style="color: inherit; text-decoration: inherit;">subnet_<wbr>id</a>
@@ -1141,8 +1059,7 @@ the existence of a subnet.
 added to the Server. Required if `network_id` is not set.
 *Note*: if the `ip` property is missing, the Server is currently added
 to the last created subnet.
-{{% /md %}}</dd>
-</dl>
+{{% /md %}}</dd></dl>
 {{% /choosable %}}
 
 
@@ -1168,6 +1085,6 @@ Server Network entries can be imported using a compound ID with the following fo
 	<dt>License</dt>
 	<dd>Apache-2.0</dd>
 	<dt>Notes</dt>
-	<dd>This Pulumi package is based on the [`hcloud` Terraform Provider](https://github.com/hetznercloud/terraform-provider-hcloud).</dd>
+	<dd>{{% md %}}This Pulumi package is based on the [`hcloud` Terraform Provider](https://github.com/hetznercloud/terraform-provider-hcloud).{{% /md %}}</dd>
 </dl>
 

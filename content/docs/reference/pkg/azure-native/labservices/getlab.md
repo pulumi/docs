@@ -51,9 +51,7 @@ The following arguments are supported:
 
 
 {{% choosable language csharp %}}
-<dl class="resources-properties">
-
-    <dt class="property-required"
+<dl class="resources-properties"><dt class="property-required"
             title="Required">
         <span id="labaccountname_csharp">
 <a href="#labaccountname_csharp" style="color: inherit; text-decoration: inherit;">Lab<wbr>Account<wbr>Name</a>
@@ -61,8 +59,7 @@ The following arguments are supported:
         <span class="property-indicator"></span>
         <span class="property-type">string</span>
     </dt>
-    <dd>{{% md %}}The name of the lab Account.{{% /md %}}</dd>
-    <dt class="property-required"
+    <dd>{{% md %}}The name of the lab Account.{{% /md %}}</dd><dt class="property-required"
             title="Required">
         <span id="labname_csharp">
 <a href="#labname_csharp" style="color: inherit; text-decoration: inherit;">Lab<wbr>Name</a>
@@ -70,8 +67,7 @@ The following arguments are supported:
         <span class="property-indicator"></span>
         <span class="property-type">string</span>
     </dt>
-    <dd>{{% md %}}The name of the lab.{{% /md %}}</dd>
-    <dt class="property-required"
+    <dd>{{% md %}}The name of the lab.{{% /md %}}</dd><dt class="property-required"
             title="Required">
         <span id="resourcegroupname_csharp">
 <a href="#resourcegroupname_csharp" style="color: inherit; text-decoration: inherit;">Resource<wbr>Group<wbr>Name</a>
@@ -79,8 +75,7 @@ The following arguments are supported:
         <span class="property-indicator"></span>
         <span class="property-type">string</span>
     </dt>
-    <dd>{{% md %}}The name of the resource group.{{% /md %}}</dd>
-    <dt class="property-optional"
+    <dd>{{% md %}}The name of the resource group.{{% /md %}}</dd><dt class="property-optional"
             title="Optional">
         <span id="expand_csharp">
 <a href="#expand_csharp" style="color: inherit; text-decoration: inherit;">Expand</a>
@@ -88,14 +83,11 @@ The following arguments are supported:
         <span class="property-indicator"></span>
         <span class="property-type">string</span>
     </dt>
-    <dd>{{% md %}}Specify the $expand query. Example: 'properties($select=maxUsersInLab)'{{% /md %}}</dd>
-</dl>
+    <dd>{{% md %}}Specify the $expand query. Example: 'properties($select=maxUsersInLab)'{{% /md %}}</dd></dl>
 {{% /choosable %}}
 
 {{% choosable language go %}}
-<dl class="resources-properties">
-
-    <dt class="property-required"
+<dl class="resources-properties"><dt class="property-required"
             title="Required">
         <span id="labaccountname_go">
 <a href="#labaccountname_go" style="color: inherit; text-decoration: inherit;">Lab<wbr>Account<wbr>Name</a>
@@ -103,8 +95,7 @@ The following arguments are supported:
         <span class="property-indicator"></span>
         <span class="property-type">string</span>
     </dt>
-    <dd>{{% md %}}The name of the lab Account.{{% /md %}}</dd>
-    <dt class="property-required"
+    <dd>{{% md %}}The name of the lab Account.{{% /md %}}</dd><dt class="property-required"
             title="Required">
         <span id="labname_go">
 <a href="#labname_go" style="color: inherit; text-decoration: inherit;">Lab<wbr>Name</a>
@@ -112,8 +103,7 @@ The following arguments are supported:
         <span class="property-indicator"></span>
         <span class="property-type">string</span>
     </dt>
-    <dd>{{% md %}}The name of the lab.{{% /md %}}</dd>
-    <dt class="property-required"
+    <dd>{{% md %}}The name of the lab.{{% /md %}}</dd><dt class="property-required"
             title="Required">
         <span id="resourcegroupname_go">
 <a href="#resourcegroupname_go" style="color: inherit; text-decoration: inherit;">Resource<wbr>Group<wbr>Name</a>
@@ -121,8 +111,7 @@ The following arguments are supported:
         <span class="property-indicator"></span>
         <span class="property-type">string</span>
     </dt>
-    <dd>{{% md %}}The name of the resource group.{{% /md %}}</dd>
-    <dt class="property-optional"
+    <dd>{{% md %}}The name of the resource group.{{% /md %}}</dd><dt class="property-optional"
             title="Optional">
         <span id="expand_go">
 <a href="#expand_go" style="color: inherit; text-decoration: inherit;">Expand</a>
@@ -130,14 +119,11 @@ The following arguments are supported:
         <span class="property-indicator"></span>
         <span class="property-type">string</span>
     </dt>
-    <dd>{{% md %}}Specify the $expand query. Example: 'properties($select=maxUsersInLab)'{{% /md %}}</dd>
-</dl>
+    <dd>{{% md %}}Specify the $expand query. Example: 'properties($select=maxUsersInLab)'{{% /md %}}</dd></dl>
 {{% /choosable %}}
 
 {{% choosable language nodejs %}}
-<dl class="resources-properties">
-
-    <dt class="property-required"
+<dl class="resources-properties"><dt class="property-required"
             title="Required">
         <span id="labaccountname_nodejs">
 <a href="#labaccountname_nodejs" style="color: inherit; text-decoration: inherit;">lab<wbr>Account<wbr>Name</a>
@@ -145,8 +131,7 @@ The following arguments are supported:
         <span class="property-indicator"></span>
         <span class="property-type">string</span>
     </dt>
-    <dd>{{% md %}}The name of the lab Account.{{% /md %}}</dd>
-    <dt class="property-required"
+    <dd>{{% md %}}The name of the lab Account.{{% /md %}}</dd><dt class="property-required"
             title="Required">
         <span id="labname_nodejs">
 <a href="#labname_nodejs" style="color: inherit; text-decoration: inherit;">lab<wbr>Name</a>
@@ -154,8 +139,7 @@ The following arguments are supported:
         <span class="property-indicator"></span>
         <span class="property-type">string</span>
     </dt>
-    <dd>{{% md %}}The name of the lab.{{% /md %}}</dd>
-    <dt class="property-required"
+    <dd>{{% md %}}The name of the lab.{{% /md %}}</dd><dt class="property-required"
             title="Required">
         <span id="resourcegroupname_nodejs">
 <a href="#resourcegroupname_nodejs" style="color: inherit; text-decoration: inherit;">resource<wbr>Group<wbr>Name</a>
@@ -163,8 +147,7 @@ The following arguments are supported:
         <span class="property-indicator"></span>
         <span class="property-type">string</span>
     </dt>
-    <dd>{{% md %}}The name of the resource group.{{% /md %}}</dd>
-    <dt class="property-optional"
+    <dd>{{% md %}}The name of the resource group.{{% /md %}}</dd><dt class="property-optional"
             title="Optional">
         <span id="expand_nodejs">
 <a href="#expand_nodejs" style="color: inherit; text-decoration: inherit;">expand</a>
@@ -172,14 +155,11 @@ The following arguments are supported:
         <span class="property-indicator"></span>
         <span class="property-type">string</span>
     </dt>
-    <dd>{{% md %}}Specify the $expand query. Example: 'properties($select=maxUsersInLab)'{{% /md %}}</dd>
-</dl>
+    <dd>{{% md %}}Specify the $expand query. Example: 'properties($select=maxUsersInLab)'{{% /md %}}</dd></dl>
 {{% /choosable %}}
 
 {{% choosable language python %}}
-<dl class="resources-properties">
-
-    <dt class="property-required"
+<dl class="resources-properties"><dt class="property-required"
             title="Required">
         <span id="lab_account_name_python">
 <a href="#lab_account_name_python" style="color: inherit; text-decoration: inherit;">lab_<wbr>account_<wbr>name</a>
@@ -187,8 +167,7 @@ The following arguments are supported:
         <span class="property-indicator"></span>
         <span class="property-type">str</span>
     </dt>
-    <dd>{{% md %}}The name of the lab Account.{{% /md %}}</dd>
-    <dt class="property-required"
+    <dd>{{% md %}}The name of the lab Account.{{% /md %}}</dd><dt class="property-required"
             title="Required">
         <span id="lab_name_python">
 <a href="#lab_name_python" style="color: inherit; text-decoration: inherit;">lab_<wbr>name</a>
@@ -196,8 +175,7 @@ The following arguments are supported:
         <span class="property-indicator"></span>
         <span class="property-type">str</span>
     </dt>
-    <dd>{{% md %}}The name of the lab.{{% /md %}}</dd>
-    <dt class="property-required"
+    <dd>{{% md %}}The name of the lab.{{% /md %}}</dd><dt class="property-required"
             title="Required">
         <span id="resource_group_name_python">
 <a href="#resource_group_name_python" style="color: inherit; text-decoration: inherit;">resource_<wbr>group_<wbr>name</a>
@@ -205,8 +183,7 @@ The following arguments are supported:
         <span class="property-indicator"></span>
         <span class="property-type">str</span>
     </dt>
-    <dd>{{% md %}}The name of the resource group.{{% /md %}}</dd>
-    <dt class="property-optional"
+    <dd>{{% md %}}The name of the resource group.{{% /md %}}</dd><dt class="property-optional"
             title="Optional">
         <span id="expand_python">
 <a href="#expand_python" style="color: inherit; text-decoration: inherit;">expand</a>
@@ -214,8 +191,7 @@ The following arguments are supported:
         <span class="property-indicator"></span>
         <span class="property-type">str</span>
     </dt>
-    <dd>{{% md %}}Specify the $expand query. Example: 'properties($select=maxUsersInLab)'{{% /md %}}</dd>
-</dl>
+    <dd>{{% md %}}Specify the $expand query. Example: 'properties($select=maxUsersInLab)'{{% /md %}}</dd></dl>
 {{% /choosable %}}
 
 
@@ -228,9 +204,7 @@ The following output properties are available:
 
 
 {{% choosable language csharp %}}
-<dl class="resources-properties">
-
-    <dt class="property-"
+<dl class="resources-properties"><dt class="property-"
             title="">
         <span id="createdbyobjectid_csharp">
 <a href="#createdbyobjectid_csharp" style="color: inherit; text-decoration: inherit;">Created<wbr>By<wbr>Object<wbr>Id</a>
@@ -238,8 +212,7 @@ The following output properties are available:
         <span class="property-indicator"></span>
         <span class="property-type">string</span>
     </dt>
-    <dd>{{% md %}}Object id of the user that created the lab.{{% /md %}}</dd>
-    <dt class="property-"
+    <dd>{{% md %}}Object id of the user that created the lab.{{% /md %}}</dd><dt class="property-"
             title="">
         <span id="createdbyuserprincipalname_csharp">
 <a href="#createdbyuserprincipalname_csharp" style="color: inherit; text-decoration: inherit;">Created<wbr>By<wbr>User<wbr>Principal<wbr>Name</a>
@@ -247,8 +220,7 @@ The following output properties are available:
         <span class="property-indicator"></span>
         <span class="property-type">string</span>
     </dt>
-    <dd>{{% md %}}Lab creator name{{% /md %}}</dd>
-    <dt class="property-"
+    <dd>{{% md %}}Lab creator name{{% /md %}}</dd><dt class="property-"
             title="">
         <span id="createddate_csharp">
 <a href="#createddate_csharp" style="color: inherit; text-decoration: inherit;">Created<wbr>Date</a>
@@ -256,8 +228,7 @@ The following output properties are available:
         <span class="property-indicator"></span>
         <span class="property-type">string</span>
     </dt>
-    <dd>{{% md %}}Creation date for the lab{{% /md %}}</dd>
-    <dt class="property-"
+    <dd>{{% md %}}Creation date for the lab{{% /md %}}</dd><dt class="property-"
             title="">
         <span id="id_csharp">
 <a href="#id_csharp" style="color: inherit; text-decoration: inherit;">Id</a>
@@ -265,8 +236,7 @@ The following output properties are available:
         <span class="property-indicator"></span>
         <span class="property-type">string</span>
     </dt>
-    <dd>{{% md %}}The identifier of the resource.{{% /md %}}</dd>
-    <dt class="property-"
+    <dd>{{% md %}}The identifier of the resource.{{% /md %}}</dd><dt class="property-"
             title="">
         <span id="invitationcode_csharp">
 <a href="#invitationcode_csharp" style="color: inherit; text-decoration: inherit;">Invitation<wbr>Code</a>
@@ -274,8 +244,7 @@ The following output properties are available:
         <span class="property-indicator"></span>
         <span class="property-type">string</span>
     </dt>
-    <dd>{{% md %}}Invitation code that users can use to join a lab.{{% /md %}}</dd>
-    <dt class="property-"
+    <dd>{{% md %}}Invitation code that users can use to join a lab.{{% /md %}}</dd><dt class="property-"
             title="">
         <span id="latestoperationresult_csharp">
 <a href="#latestoperationresult_csharp" style="color: inherit; text-decoration: inherit;">Latest<wbr>Operation<wbr>Result</a>
@@ -283,8 +252,7 @@ The following output properties are available:
         <span class="property-indicator"></span>
         <span class="property-type"><a href="#latestoperationresultresponse">Pulumi.<wbr>Azure<wbr>Native.<wbr>Lab<wbr>Services.<wbr>Outputs.<wbr>Latest<wbr>Operation<wbr>Result<wbr>Response</a></span>
     </dt>
-    <dd>{{% md %}}The details of the latest operation. ex: status, error{{% /md %}}</dd>
-    <dt class="property-"
+    <dd>{{% md %}}The details of the latest operation. ex: status, error{{% /md %}}</dd><dt class="property-"
             title="">
         <span id="name_csharp">
 <a href="#name_csharp" style="color: inherit; text-decoration: inherit;">Name</a>
@@ -292,8 +260,7 @@ The following output properties are available:
         <span class="property-indicator"></span>
         <span class="property-type">string</span>
     </dt>
-    <dd>{{% md %}}The name of the resource.{{% /md %}}</dd>
-    <dt class="property-"
+    <dd>{{% md %}}The name of the resource.{{% /md %}}</dd><dt class="property-"
             title="">
         <span id="type_csharp">
 <a href="#type_csharp" style="color: inherit; text-decoration: inherit;">Type</a>
@@ -301,8 +268,7 @@ The following output properties are available:
         <span class="property-indicator"></span>
         <span class="property-type">string</span>
     </dt>
-    <dd>{{% md %}}The type of the resource.{{% /md %}}</dd>
-    <dt class="property-"
+    <dd>{{% md %}}The type of the resource.{{% /md %}}</dd><dt class="property-"
             title="">
         <span id="userquota_csharp">
 <a href="#userquota_csharp" style="color: inherit; text-decoration: inherit;">User<wbr>Quota</a>
@@ -310,8 +276,7 @@ The following output properties are available:
         <span class="property-indicator"></span>
         <span class="property-type">int</span>
     </dt>
-    <dd>{{% md %}}Maximum value MaxUsersInLab can be set to, as specified by the service{{% /md %}}</dd>
-    <dt class="property-"
+    <dd>{{% md %}}Maximum value MaxUsersInLab can be set to, as specified by the service{{% /md %}}</dd><dt class="property-"
             title="">
         <span id="location_csharp">
 <a href="#location_csharp" style="color: inherit; text-decoration: inherit;">Location</a>
@@ -319,8 +284,7 @@ The following output properties are available:
         <span class="property-indicator"></span>
         <span class="property-type">string</span>
     </dt>
-    <dd>{{% md %}}The location of the resource.{{% /md %}}</dd>
-    <dt class="property-"
+    <dd>{{% md %}}The location of the resource.{{% /md %}}</dd><dt class="property-"
             title="">
         <span id="maxusersinlab_csharp">
 <a href="#maxusersinlab_csharp" style="color: inherit; text-decoration: inherit;">Max<wbr>Users<wbr>In<wbr>Lab</a>
@@ -328,8 +292,7 @@ The following output properties are available:
         <span class="property-indicator"></span>
         <span class="property-type">int</span>
     </dt>
-    <dd>{{% md %}}Maximum number of users allowed in the lab.{{% /md %}}</dd>
-    <dt class="property-"
+    <dd>{{% md %}}Maximum number of users allowed in the lab.{{% /md %}}</dd><dt class="property-"
             title="">
         <span id="provisioningstate_csharp">
 <a href="#provisioningstate_csharp" style="color: inherit; text-decoration: inherit;">Provisioning<wbr>State</a>
@@ -337,8 +300,7 @@ The following output properties are available:
         <span class="property-indicator"></span>
         <span class="property-type">string</span>
     </dt>
-    <dd>{{% md %}}The provisioning status of the resource.{{% /md %}}</dd>
-    <dt class="property-"
+    <dd>{{% md %}}The provisioning status of the resource.{{% /md %}}</dd><dt class="property-"
             title="">
         <span id="tags_csharp">
 <a href="#tags_csharp" style="color: inherit; text-decoration: inherit;">Tags</a>
@@ -346,8 +308,7 @@ The following output properties are available:
         <span class="property-indicator"></span>
         <span class="property-type">Dictionary&lt;string, string&gt;</span>
     </dt>
-    <dd>{{% md %}}The tags of the resource.{{% /md %}}</dd>
-    <dt class="property-"
+    <dd>{{% md %}}The tags of the resource.{{% /md %}}</dd><dt class="property-"
             title="">
         <span id="uniqueidentifier_csharp">
 <a href="#uniqueidentifier_csharp" style="color: inherit; text-decoration: inherit;">Unique<wbr>Identifier</a>
@@ -355,8 +316,7 @@ The following output properties are available:
         <span class="property-indicator"></span>
         <span class="property-type">string</span>
     </dt>
-    <dd>{{% md %}}The unique immutable identifier of a resource (Guid).{{% /md %}}</dd>
-    <dt class="property-"
+    <dd>{{% md %}}The unique immutable identifier of a resource (Guid).{{% /md %}}</dd><dt class="property-"
             title="">
         <span id="usagequota_csharp">
 <a href="#usagequota_csharp" style="color: inherit; text-decoration: inherit;">Usage<wbr>Quota</a>
@@ -364,8 +324,7 @@ The following output properties are available:
         <span class="property-indicator"></span>
         <span class="property-type">string</span>
     </dt>
-    <dd>{{% md %}}Maximum duration a user can use an environment for in the lab.{{% /md %}}</dd>
-    <dt class="property-"
+    <dd>{{% md %}}Maximum duration a user can use an environment for in the lab.{{% /md %}}</dd><dt class="property-"
             title="">
         <span id="useraccessmode_csharp">
 <a href="#useraccessmode_csharp" style="color: inherit; text-decoration: inherit;">User<wbr>Access<wbr>Mode</a>
@@ -373,14 +332,11 @@ The following output properties are available:
         <span class="property-indicator"></span>
         <span class="property-type">string</span>
     </dt>
-    <dd>{{% md %}}Lab user access mode (open to all vs. restricted to those listed on the lab).{{% /md %}}</dd>
-</dl>
+    <dd>{{% md %}}Lab user access mode (open to all vs. restricted to those listed on the lab).{{% /md %}}</dd></dl>
 {{% /choosable %}}
 
 {{% choosable language go %}}
-<dl class="resources-properties">
-
-    <dt class="property-"
+<dl class="resources-properties"><dt class="property-"
             title="">
         <span id="createdbyobjectid_go">
 <a href="#createdbyobjectid_go" style="color: inherit; text-decoration: inherit;">Created<wbr>By<wbr>Object<wbr>Id</a>
@@ -388,8 +344,7 @@ The following output properties are available:
         <span class="property-indicator"></span>
         <span class="property-type">string</span>
     </dt>
-    <dd>{{% md %}}Object id of the user that created the lab.{{% /md %}}</dd>
-    <dt class="property-"
+    <dd>{{% md %}}Object id of the user that created the lab.{{% /md %}}</dd><dt class="property-"
             title="">
         <span id="createdbyuserprincipalname_go">
 <a href="#createdbyuserprincipalname_go" style="color: inherit; text-decoration: inherit;">Created<wbr>By<wbr>User<wbr>Principal<wbr>Name</a>
@@ -397,8 +352,7 @@ The following output properties are available:
         <span class="property-indicator"></span>
         <span class="property-type">string</span>
     </dt>
-    <dd>{{% md %}}Lab creator name{{% /md %}}</dd>
-    <dt class="property-"
+    <dd>{{% md %}}Lab creator name{{% /md %}}</dd><dt class="property-"
             title="">
         <span id="createddate_go">
 <a href="#createddate_go" style="color: inherit; text-decoration: inherit;">Created<wbr>Date</a>
@@ -406,8 +360,7 @@ The following output properties are available:
         <span class="property-indicator"></span>
         <span class="property-type">string</span>
     </dt>
-    <dd>{{% md %}}Creation date for the lab{{% /md %}}</dd>
-    <dt class="property-"
+    <dd>{{% md %}}Creation date for the lab{{% /md %}}</dd><dt class="property-"
             title="">
         <span id="id_go">
 <a href="#id_go" style="color: inherit; text-decoration: inherit;">Id</a>
@@ -415,8 +368,7 @@ The following output properties are available:
         <span class="property-indicator"></span>
         <span class="property-type">string</span>
     </dt>
-    <dd>{{% md %}}The identifier of the resource.{{% /md %}}</dd>
-    <dt class="property-"
+    <dd>{{% md %}}The identifier of the resource.{{% /md %}}</dd><dt class="property-"
             title="">
         <span id="invitationcode_go">
 <a href="#invitationcode_go" style="color: inherit; text-decoration: inherit;">Invitation<wbr>Code</a>
@@ -424,8 +376,7 @@ The following output properties are available:
         <span class="property-indicator"></span>
         <span class="property-type">string</span>
     </dt>
-    <dd>{{% md %}}Invitation code that users can use to join a lab.{{% /md %}}</dd>
-    <dt class="property-"
+    <dd>{{% md %}}Invitation code that users can use to join a lab.{{% /md %}}</dd><dt class="property-"
             title="">
         <span id="latestoperationresult_go">
 <a href="#latestoperationresult_go" style="color: inherit; text-decoration: inherit;">Latest<wbr>Operation<wbr>Result</a>
@@ -433,8 +384,7 @@ The following output properties are available:
         <span class="property-indicator"></span>
         <span class="property-type"><a href="#latestoperationresultresponse">Latest<wbr>Operation<wbr>Result<wbr>Response</a></span>
     </dt>
-    <dd>{{% md %}}The details of the latest operation. ex: status, error{{% /md %}}</dd>
-    <dt class="property-"
+    <dd>{{% md %}}The details of the latest operation. ex: status, error{{% /md %}}</dd><dt class="property-"
             title="">
         <span id="name_go">
 <a href="#name_go" style="color: inherit; text-decoration: inherit;">Name</a>
@@ -442,8 +392,7 @@ The following output properties are available:
         <span class="property-indicator"></span>
         <span class="property-type">string</span>
     </dt>
-    <dd>{{% md %}}The name of the resource.{{% /md %}}</dd>
-    <dt class="property-"
+    <dd>{{% md %}}The name of the resource.{{% /md %}}</dd><dt class="property-"
             title="">
         <span id="type_go">
 <a href="#type_go" style="color: inherit; text-decoration: inherit;">Type</a>
@@ -451,8 +400,7 @@ The following output properties are available:
         <span class="property-indicator"></span>
         <span class="property-type">string</span>
     </dt>
-    <dd>{{% md %}}The type of the resource.{{% /md %}}</dd>
-    <dt class="property-"
+    <dd>{{% md %}}The type of the resource.{{% /md %}}</dd><dt class="property-"
             title="">
         <span id="userquota_go">
 <a href="#userquota_go" style="color: inherit; text-decoration: inherit;">User<wbr>Quota</a>
@@ -460,8 +408,7 @@ The following output properties are available:
         <span class="property-indicator"></span>
         <span class="property-type">int</span>
     </dt>
-    <dd>{{% md %}}Maximum value MaxUsersInLab can be set to, as specified by the service{{% /md %}}</dd>
-    <dt class="property-"
+    <dd>{{% md %}}Maximum value MaxUsersInLab can be set to, as specified by the service{{% /md %}}</dd><dt class="property-"
             title="">
         <span id="location_go">
 <a href="#location_go" style="color: inherit; text-decoration: inherit;">Location</a>
@@ -469,8 +416,7 @@ The following output properties are available:
         <span class="property-indicator"></span>
         <span class="property-type">string</span>
     </dt>
-    <dd>{{% md %}}The location of the resource.{{% /md %}}</dd>
-    <dt class="property-"
+    <dd>{{% md %}}The location of the resource.{{% /md %}}</dd><dt class="property-"
             title="">
         <span id="maxusersinlab_go">
 <a href="#maxusersinlab_go" style="color: inherit; text-decoration: inherit;">Max<wbr>Users<wbr>In<wbr>Lab</a>
@@ -478,8 +424,7 @@ The following output properties are available:
         <span class="property-indicator"></span>
         <span class="property-type">int</span>
     </dt>
-    <dd>{{% md %}}Maximum number of users allowed in the lab.{{% /md %}}</dd>
-    <dt class="property-"
+    <dd>{{% md %}}Maximum number of users allowed in the lab.{{% /md %}}</dd><dt class="property-"
             title="">
         <span id="provisioningstate_go">
 <a href="#provisioningstate_go" style="color: inherit; text-decoration: inherit;">Provisioning<wbr>State</a>
@@ -487,8 +432,7 @@ The following output properties are available:
         <span class="property-indicator"></span>
         <span class="property-type">string</span>
     </dt>
-    <dd>{{% md %}}The provisioning status of the resource.{{% /md %}}</dd>
-    <dt class="property-"
+    <dd>{{% md %}}The provisioning status of the resource.{{% /md %}}</dd><dt class="property-"
             title="">
         <span id="tags_go">
 <a href="#tags_go" style="color: inherit; text-decoration: inherit;">Tags</a>
@@ -496,8 +440,7 @@ The following output properties are available:
         <span class="property-indicator"></span>
         <span class="property-type">map[string]string</span>
     </dt>
-    <dd>{{% md %}}The tags of the resource.{{% /md %}}</dd>
-    <dt class="property-"
+    <dd>{{% md %}}The tags of the resource.{{% /md %}}</dd><dt class="property-"
             title="">
         <span id="uniqueidentifier_go">
 <a href="#uniqueidentifier_go" style="color: inherit; text-decoration: inherit;">Unique<wbr>Identifier</a>
@@ -505,8 +448,7 @@ The following output properties are available:
         <span class="property-indicator"></span>
         <span class="property-type">string</span>
     </dt>
-    <dd>{{% md %}}The unique immutable identifier of a resource (Guid).{{% /md %}}</dd>
-    <dt class="property-"
+    <dd>{{% md %}}The unique immutable identifier of a resource (Guid).{{% /md %}}</dd><dt class="property-"
             title="">
         <span id="usagequota_go">
 <a href="#usagequota_go" style="color: inherit; text-decoration: inherit;">Usage<wbr>Quota</a>
@@ -514,8 +456,7 @@ The following output properties are available:
         <span class="property-indicator"></span>
         <span class="property-type">string</span>
     </dt>
-    <dd>{{% md %}}Maximum duration a user can use an environment for in the lab.{{% /md %}}</dd>
-    <dt class="property-"
+    <dd>{{% md %}}Maximum duration a user can use an environment for in the lab.{{% /md %}}</dd><dt class="property-"
             title="">
         <span id="useraccessmode_go">
 <a href="#useraccessmode_go" style="color: inherit; text-decoration: inherit;">User<wbr>Access<wbr>Mode</a>
@@ -523,14 +464,11 @@ The following output properties are available:
         <span class="property-indicator"></span>
         <span class="property-type">string</span>
     </dt>
-    <dd>{{% md %}}Lab user access mode (open to all vs. restricted to those listed on the lab).{{% /md %}}</dd>
-</dl>
+    <dd>{{% md %}}Lab user access mode (open to all vs. restricted to those listed on the lab).{{% /md %}}</dd></dl>
 {{% /choosable %}}
 
 {{% choosable language nodejs %}}
-<dl class="resources-properties">
-
-    <dt class="property-"
+<dl class="resources-properties"><dt class="property-"
             title="">
         <span id="createdbyobjectid_nodejs">
 <a href="#createdbyobjectid_nodejs" style="color: inherit; text-decoration: inherit;">created<wbr>By<wbr>Object<wbr>Id</a>
@@ -538,8 +476,7 @@ The following output properties are available:
         <span class="property-indicator"></span>
         <span class="property-type">string</span>
     </dt>
-    <dd>{{% md %}}Object id of the user that created the lab.{{% /md %}}</dd>
-    <dt class="property-"
+    <dd>{{% md %}}Object id of the user that created the lab.{{% /md %}}</dd><dt class="property-"
             title="">
         <span id="createdbyuserprincipalname_nodejs">
 <a href="#createdbyuserprincipalname_nodejs" style="color: inherit; text-decoration: inherit;">created<wbr>By<wbr>User<wbr>Principal<wbr>Name</a>
@@ -547,8 +484,7 @@ The following output properties are available:
         <span class="property-indicator"></span>
         <span class="property-type">string</span>
     </dt>
-    <dd>{{% md %}}Lab creator name{{% /md %}}</dd>
-    <dt class="property-"
+    <dd>{{% md %}}Lab creator name{{% /md %}}</dd><dt class="property-"
             title="">
         <span id="createddate_nodejs">
 <a href="#createddate_nodejs" style="color: inherit; text-decoration: inherit;">created<wbr>Date</a>
@@ -556,8 +492,7 @@ The following output properties are available:
         <span class="property-indicator"></span>
         <span class="property-type">string</span>
     </dt>
-    <dd>{{% md %}}Creation date for the lab{{% /md %}}</dd>
-    <dt class="property-"
+    <dd>{{% md %}}Creation date for the lab{{% /md %}}</dd><dt class="property-"
             title="">
         <span id="id_nodejs">
 <a href="#id_nodejs" style="color: inherit; text-decoration: inherit;">id</a>
@@ -565,8 +500,7 @@ The following output properties are available:
         <span class="property-indicator"></span>
         <span class="property-type">string</span>
     </dt>
-    <dd>{{% md %}}The identifier of the resource.{{% /md %}}</dd>
-    <dt class="property-"
+    <dd>{{% md %}}The identifier of the resource.{{% /md %}}</dd><dt class="property-"
             title="">
         <span id="invitationcode_nodejs">
 <a href="#invitationcode_nodejs" style="color: inherit; text-decoration: inherit;">invitation<wbr>Code</a>
@@ -574,8 +508,7 @@ The following output properties are available:
         <span class="property-indicator"></span>
         <span class="property-type">string</span>
     </dt>
-    <dd>{{% md %}}Invitation code that users can use to join a lab.{{% /md %}}</dd>
-    <dt class="property-"
+    <dd>{{% md %}}Invitation code that users can use to join a lab.{{% /md %}}</dd><dt class="property-"
             title="">
         <span id="latestoperationresult_nodejs">
 <a href="#latestoperationresult_nodejs" style="color: inherit; text-decoration: inherit;">latest<wbr>Operation<wbr>Result</a>
@@ -583,8 +516,7 @@ The following output properties are available:
         <span class="property-indicator"></span>
         <span class="property-type"><a href="#latestoperationresultresponse">Latest<wbr>Operation<wbr>Result<wbr>Response</a></span>
     </dt>
-    <dd>{{% md %}}The details of the latest operation. ex: status, error{{% /md %}}</dd>
-    <dt class="property-"
+    <dd>{{% md %}}The details of the latest operation. ex: status, error{{% /md %}}</dd><dt class="property-"
             title="">
         <span id="name_nodejs">
 <a href="#name_nodejs" style="color: inherit; text-decoration: inherit;">name</a>
@@ -592,8 +524,7 @@ The following output properties are available:
         <span class="property-indicator"></span>
         <span class="property-type">string</span>
     </dt>
-    <dd>{{% md %}}The name of the resource.{{% /md %}}</dd>
-    <dt class="property-"
+    <dd>{{% md %}}The name of the resource.{{% /md %}}</dd><dt class="property-"
             title="">
         <span id="type_nodejs">
 <a href="#type_nodejs" style="color: inherit; text-decoration: inherit;">type</a>
@@ -601,8 +532,7 @@ The following output properties are available:
         <span class="property-indicator"></span>
         <span class="property-type">string</span>
     </dt>
-    <dd>{{% md %}}The type of the resource.{{% /md %}}</dd>
-    <dt class="property-"
+    <dd>{{% md %}}The type of the resource.{{% /md %}}</dd><dt class="property-"
             title="">
         <span id="userquota_nodejs">
 <a href="#userquota_nodejs" style="color: inherit; text-decoration: inherit;">user<wbr>Quota</a>
@@ -610,8 +540,7 @@ The following output properties are available:
         <span class="property-indicator"></span>
         <span class="property-type">number</span>
     </dt>
-    <dd>{{% md %}}Maximum value MaxUsersInLab can be set to, as specified by the service{{% /md %}}</dd>
-    <dt class="property-"
+    <dd>{{% md %}}Maximum value MaxUsersInLab can be set to, as specified by the service{{% /md %}}</dd><dt class="property-"
             title="">
         <span id="location_nodejs">
 <a href="#location_nodejs" style="color: inherit; text-decoration: inherit;">location</a>
@@ -619,8 +548,7 @@ The following output properties are available:
         <span class="property-indicator"></span>
         <span class="property-type">string</span>
     </dt>
-    <dd>{{% md %}}The location of the resource.{{% /md %}}</dd>
-    <dt class="property-"
+    <dd>{{% md %}}The location of the resource.{{% /md %}}</dd><dt class="property-"
             title="">
         <span id="maxusersinlab_nodejs">
 <a href="#maxusersinlab_nodejs" style="color: inherit; text-decoration: inherit;">max<wbr>Users<wbr>In<wbr>Lab</a>
@@ -628,8 +556,7 @@ The following output properties are available:
         <span class="property-indicator"></span>
         <span class="property-type">number</span>
     </dt>
-    <dd>{{% md %}}Maximum number of users allowed in the lab.{{% /md %}}</dd>
-    <dt class="property-"
+    <dd>{{% md %}}Maximum number of users allowed in the lab.{{% /md %}}</dd><dt class="property-"
             title="">
         <span id="provisioningstate_nodejs">
 <a href="#provisioningstate_nodejs" style="color: inherit; text-decoration: inherit;">provisioning<wbr>State</a>
@@ -637,8 +564,7 @@ The following output properties are available:
         <span class="property-indicator"></span>
         <span class="property-type">string</span>
     </dt>
-    <dd>{{% md %}}The provisioning status of the resource.{{% /md %}}</dd>
-    <dt class="property-"
+    <dd>{{% md %}}The provisioning status of the resource.{{% /md %}}</dd><dt class="property-"
             title="">
         <span id="tags_nodejs">
 <a href="#tags_nodejs" style="color: inherit; text-decoration: inherit;">tags</a>
@@ -646,8 +572,7 @@ The following output properties are available:
         <span class="property-indicator"></span>
         <span class="property-type">{[key: string]: string}</span>
     </dt>
-    <dd>{{% md %}}The tags of the resource.{{% /md %}}</dd>
-    <dt class="property-"
+    <dd>{{% md %}}The tags of the resource.{{% /md %}}</dd><dt class="property-"
             title="">
         <span id="uniqueidentifier_nodejs">
 <a href="#uniqueidentifier_nodejs" style="color: inherit; text-decoration: inherit;">unique<wbr>Identifier</a>
@@ -655,8 +580,7 @@ The following output properties are available:
         <span class="property-indicator"></span>
         <span class="property-type">string</span>
     </dt>
-    <dd>{{% md %}}The unique immutable identifier of a resource (Guid).{{% /md %}}</dd>
-    <dt class="property-"
+    <dd>{{% md %}}The unique immutable identifier of a resource (Guid).{{% /md %}}</dd><dt class="property-"
             title="">
         <span id="usagequota_nodejs">
 <a href="#usagequota_nodejs" style="color: inherit; text-decoration: inherit;">usage<wbr>Quota</a>
@@ -664,8 +588,7 @@ The following output properties are available:
         <span class="property-indicator"></span>
         <span class="property-type">string</span>
     </dt>
-    <dd>{{% md %}}Maximum duration a user can use an environment for in the lab.{{% /md %}}</dd>
-    <dt class="property-"
+    <dd>{{% md %}}Maximum duration a user can use an environment for in the lab.{{% /md %}}</dd><dt class="property-"
             title="">
         <span id="useraccessmode_nodejs">
 <a href="#useraccessmode_nodejs" style="color: inherit; text-decoration: inherit;">user<wbr>Access<wbr>Mode</a>
@@ -673,14 +596,11 @@ The following output properties are available:
         <span class="property-indicator"></span>
         <span class="property-type">string</span>
     </dt>
-    <dd>{{% md %}}Lab user access mode (open to all vs. restricted to those listed on the lab).{{% /md %}}</dd>
-</dl>
+    <dd>{{% md %}}Lab user access mode (open to all vs. restricted to those listed on the lab).{{% /md %}}</dd></dl>
 {{% /choosable %}}
 
 {{% choosable language python %}}
-<dl class="resources-properties">
-
-    <dt class="property-"
+<dl class="resources-properties"><dt class="property-"
             title="">
         <span id="created_by_object_id_python">
 <a href="#created_by_object_id_python" style="color: inherit; text-decoration: inherit;">created_<wbr>by_<wbr>object_<wbr>id</a>
@@ -688,8 +608,7 @@ The following output properties are available:
         <span class="property-indicator"></span>
         <span class="property-type">str</span>
     </dt>
-    <dd>{{% md %}}Object id of the user that created the lab.{{% /md %}}</dd>
-    <dt class="property-"
+    <dd>{{% md %}}Object id of the user that created the lab.{{% /md %}}</dd><dt class="property-"
             title="">
         <span id="created_by_user_principal_name_python">
 <a href="#created_by_user_principal_name_python" style="color: inherit; text-decoration: inherit;">created_<wbr>by_<wbr>user_<wbr>principal_<wbr>name</a>
@@ -697,8 +616,7 @@ The following output properties are available:
         <span class="property-indicator"></span>
         <span class="property-type">str</span>
     </dt>
-    <dd>{{% md %}}Lab creator name{{% /md %}}</dd>
-    <dt class="property-"
+    <dd>{{% md %}}Lab creator name{{% /md %}}</dd><dt class="property-"
             title="">
         <span id="created_date_python">
 <a href="#created_date_python" style="color: inherit; text-decoration: inherit;">created_<wbr>date</a>
@@ -706,8 +624,7 @@ The following output properties are available:
         <span class="property-indicator"></span>
         <span class="property-type">str</span>
     </dt>
-    <dd>{{% md %}}Creation date for the lab{{% /md %}}</dd>
-    <dt class="property-"
+    <dd>{{% md %}}Creation date for the lab{{% /md %}}</dd><dt class="property-"
             title="">
         <span id="id_python">
 <a href="#id_python" style="color: inherit; text-decoration: inherit;">id</a>
@@ -715,8 +632,7 @@ The following output properties are available:
         <span class="property-indicator"></span>
         <span class="property-type">str</span>
     </dt>
-    <dd>{{% md %}}The identifier of the resource.{{% /md %}}</dd>
-    <dt class="property-"
+    <dd>{{% md %}}The identifier of the resource.{{% /md %}}</dd><dt class="property-"
             title="">
         <span id="invitation_code_python">
 <a href="#invitation_code_python" style="color: inherit; text-decoration: inherit;">invitation_<wbr>code</a>
@@ -724,8 +640,7 @@ The following output properties are available:
         <span class="property-indicator"></span>
         <span class="property-type">str</span>
     </dt>
-    <dd>{{% md %}}Invitation code that users can use to join a lab.{{% /md %}}</dd>
-    <dt class="property-"
+    <dd>{{% md %}}Invitation code that users can use to join a lab.{{% /md %}}</dd><dt class="property-"
             title="">
         <span id="latest_operation_result_python">
 <a href="#latest_operation_result_python" style="color: inherit; text-decoration: inherit;">latest_<wbr>operation_<wbr>result</a>
@@ -733,8 +648,7 @@ The following output properties are available:
         <span class="property-indicator"></span>
         <span class="property-type"><a href="#latestoperationresultresponse">Latest<wbr>Operation<wbr>Result<wbr>Response</a></span>
     </dt>
-    <dd>{{% md %}}The details of the latest operation. ex: status, error{{% /md %}}</dd>
-    <dt class="property-"
+    <dd>{{% md %}}The details of the latest operation. ex: status, error{{% /md %}}</dd><dt class="property-"
             title="">
         <span id="name_python">
 <a href="#name_python" style="color: inherit; text-decoration: inherit;">name</a>
@@ -742,8 +656,7 @@ The following output properties are available:
         <span class="property-indicator"></span>
         <span class="property-type">str</span>
     </dt>
-    <dd>{{% md %}}The name of the resource.{{% /md %}}</dd>
-    <dt class="property-"
+    <dd>{{% md %}}The name of the resource.{{% /md %}}</dd><dt class="property-"
             title="">
         <span id="type_python">
 <a href="#type_python" style="color: inherit; text-decoration: inherit;">type</a>
@@ -751,8 +664,7 @@ The following output properties are available:
         <span class="property-indicator"></span>
         <span class="property-type">str</span>
     </dt>
-    <dd>{{% md %}}The type of the resource.{{% /md %}}</dd>
-    <dt class="property-"
+    <dd>{{% md %}}The type of the resource.{{% /md %}}</dd><dt class="property-"
             title="">
         <span id="user_quota_python">
 <a href="#user_quota_python" style="color: inherit; text-decoration: inherit;">user_<wbr>quota</a>
@@ -760,8 +672,7 @@ The following output properties are available:
         <span class="property-indicator"></span>
         <span class="property-type">int</span>
     </dt>
-    <dd>{{% md %}}Maximum value MaxUsersInLab can be set to, as specified by the service{{% /md %}}</dd>
-    <dt class="property-"
+    <dd>{{% md %}}Maximum value MaxUsersInLab can be set to, as specified by the service{{% /md %}}</dd><dt class="property-"
             title="">
         <span id="location_python">
 <a href="#location_python" style="color: inherit; text-decoration: inherit;">location</a>
@@ -769,8 +680,7 @@ The following output properties are available:
         <span class="property-indicator"></span>
         <span class="property-type">str</span>
     </dt>
-    <dd>{{% md %}}The location of the resource.{{% /md %}}</dd>
-    <dt class="property-"
+    <dd>{{% md %}}The location of the resource.{{% /md %}}</dd><dt class="property-"
             title="">
         <span id="max_users_in_lab_python">
 <a href="#max_users_in_lab_python" style="color: inherit; text-decoration: inherit;">max_<wbr>users_<wbr>in_<wbr>lab</a>
@@ -778,8 +688,7 @@ The following output properties are available:
         <span class="property-indicator"></span>
         <span class="property-type">int</span>
     </dt>
-    <dd>{{% md %}}Maximum number of users allowed in the lab.{{% /md %}}</dd>
-    <dt class="property-"
+    <dd>{{% md %}}Maximum number of users allowed in the lab.{{% /md %}}</dd><dt class="property-"
             title="">
         <span id="provisioning_state_python">
 <a href="#provisioning_state_python" style="color: inherit; text-decoration: inherit;">provisioning_<wbr>state</a>
@@ -787,8 +696,7 @@ The following output properties are available:
         <span class="property-indicator"></span>
         <span class="property-type">str</span>
     </dt>
-    <dd>{{% md %}}The provisioning status of the resource.{{% /md %}}</dd>
-    <dt class="property-"
+    <dd>{{% md %}}The provisioning status of the resource.{{% /md %}}</dd><dt class="property-"
             title="">
         <span id="tags_python">
 <a href="#tags_python" style="color: inherit; text-decoration: inherit;">tags</a>
@@ -796,8 +704,7 @@ The following output properties are available:
         <span class="property-indicator"></span>
         <span class="property-type">Mapping[str, str]</span>
     </dt>
-    <dd>{{% md %}}The tags of the resource.{{% /md %}}</dd>
-    <dt class="property-"
+    <dd>{{% md %}}The tags of the resource.{{% /md %}}</dd><dt class="property-"
             title="">
         <span id="unique_identifier_python">
 <a href="#unique_identifier_python" style="color: inherit; text-decoration: inherit;">unique_<wbr>identifier</a>
@@ -805,8 +712,7 @@ The following output properties are available:
         <span class="property-indicator"></span>
         <span class="property-type">str</span>
     </dt>
-    <dd>{{% md %}}The unique immutable identifier of a resource (Guid).{{% /md %}}</dd>
-    <dt class="property-"
+    <dd>{{% md %}}The unique immutable identifier of a resource (Guid).{{% /md %}}</dd><dt class="property-"
             title="">
         <span id="usage_quota_python">
 <a href="#usage_quota_python" style="color: inherit; text-decoration: inherit;">usage_<wbr>quota</a>
@@ -814,8 +720,7 @@ The following output properties are available:
         <span class="property-indicator"></span>
         <span class="property-type">str</span>
     </dt>
-    <dd>{{% md %}}Maximum duration a user can use an environment for in the lab.{{% /md %}}</dd>
-    <dt class="property-"
+    <dd>{{% md %}}Maximum duration a user can use an environment for in the lab.{{% /md %}}</dd><dt class="property-"
             title="">
         <span id="user_access_mode_python">
 <a href="#user_access_mode_python" style="color: inherit; text-decoration: inherit;">user_<wbr>access_<wbr>mode</a>
@@ -823,8 +728,7 @@ The following output properties are available:
         <span class="property-indicator"></span>
         <span class="property-type">str</span>
     </dt>
-    <dd>{{% md %}}Lab user access mode (open to all vs. restricted to those listed on the lab).{{% /md %}}</dd>
-</dl>
+    <dd>{{% md %}}Lab user access mode (open to all vs. restricted to those listed on the lab).{{% /md %}}</dd></dl>
 {{% /choosable %}}
 
 
@@ -838,9 +742,7 @@ The following output properties are available:
 
 
 {{% choosable language csharp %}}
-<dl class="resources-properties">
-
-    <dt class="property-required"
+<dl class="resources-properties"><dt class="property-required"
             title="Required">
         <span id="errorcode_csharp">
 <a href="#errorcode_csharp" style="color: inherit; text-decoration: inherit;">Error<wbr>Code</a>
@@ -848,8 +750,7 @@ The following output properties are available:
         <span class="property-indicator"></span>
         <span class="property-type">string</span>
     </dt>
-    <dd>{{% md %}}Error code on failure.{{% /md %}}</dd>
-    <dt class="property-required"
+    <dd>{{% md %}}Error code on failure.{{% /md %}}</dd><dt class="property-required"
             title="Required">
         <span id="errormessage_csharp">
 <a href="#errormessage_csharp" style="color: inherit; text-decoration: inherit;">Error<wbr>Message</a>
@@ -857,8 +758,7 @@ The following output properties are available:
         <span class="property-indicator"></span>
         <span class="property-type">string</span>
     </dt>
-    <dd>{{% md %}}The error message.{{% /md %}}</dd>
-    <dt class="property-required"
+    <dd>{{% md %}}The error message.{{% /md %}}</dd><dt class="property-required"
             title="Required">
         <span id="httpmethod_csharp">
 <a href="#httpmethod_csharp" style="color: inherit; text-decoration: inherit;">Http<wbr>Method</a>
@@ -866,8 +766,7 @@ The following output properties are available:
         <span class="property-indicator"></span>
         <span class="property-type">string</span>
     </dt>
-    <dd>{{% md %}}The HttpMethod - PUT/POST/DELETE for the operation.{{% /md %}}</dd>
-    <dt class="property-required"
+    <dd>{{% md %}}The HttpMethod - PUT/POST/DELETE for the operation.{{% /md %}}</dd><dt class="property-required"
             title="Required">
         <span id="operationurl_csharp">
 <a href="#operationurl_csharp" style="color: inherit; text-decoration: inherit;">Operation<wbr>Url</a>
@@ -875,8 +774,7 @@ The following output properties are available:
         <span class="property-indicator"></span>
         <span class="property-type">string</span>
     </dt>
-    <dd>{{% md %}}The URL to use to check long-running operation status{{% /md %}}</dd>
-    <dt class="property-required"
+    <dd>{{% md %}}The URL to use to check long-running operation status{{% /md %}}</dd><dt class="property-required"
             title="Required">
         <span id="requesturi_csharp">
 <a href="#requesturi_csharp" style="color: inherit; text-decoration: inherit;">Request<wbr>Uri</a>
@@ -884,8 +782,7 @@ The following output properties are available:
         <span class="property-indicator"></span>
         <span class="property-type">string</span>
     </dt>
-    <dd>{{% md %}}Request URI of the operation.{{% /md %}}</dd>
-    <dt class="property-required"
+    <dd>{{% md %}}Request URI of the operation.{{% /md %}}</dd><dt class="property-required"
             title="Required">
         <span id="status_csharp">
 <a href="#status_csharp" style="color: inherit; text-decoration: inherit;">Status</a>
@@ -893,14 +790,11 @@ The following output properties are available:
         <span class="property-indicator"></span>
         <span class="property-type">string</span>
     </dt>
-    <dd>{{% md %}}The current status of the operation.{{% /md %}}</dd>
-</dl>
+    <dd>{{% md %}}The current status of the operation.{{% /md %}}</dd></dl>
 {{% /choosable %}}
 
 {{% choosable language go %}}
-<dl class="resources-properties">
-
-    <dt class="property-required"
+<dl class="resources-properties"><dt class="property-required"
             title="Required">
         <span id="errorcode_go">
 <a href="#errorcode_go" style="color: inherit; text-decoration: inherit;">Error<wbr>Code</a>
@@ -908,8 +802,7 @@ The following output properties are available:
         <span class="property-indicator"></span>
         <span class="property-type">string</span>
     </dt>
-    <dd>{{% md %}}Error code on failure.{{% /md %}}</dd>
-    <dt class="property-required"
+    <dd>{{% md %}}Error code on failure.{{% /md %}}</dd><dt class="property-required"
             title="Required">
         <span id="errormessage_go">
 <a href="#errormessage_go" style="color: inherit; text-decoration: inherit;">Error<wbr>Message</a>
@@ -917,8 +810,7 @@ The following output properties are available:
         <span class="property-indicator"></span>
         <span class="property-type">string</span>
     </dt>
-    <dd>{{% md %}}The error message.{{% /md %}}</dd>
-    <dt class="property-required"
+    <dd>{{% md %}}The error message.{{% /md %}}</dd><dt class="property-required"
             title="Required">
         <span id="httpmethod_go">
 <a href="#httpmethod_go" style="color: inherit; text-decoration: inherit;">Http<wbr>Method</a>
@@ -926,8 +818,7 @@ The following output properties are available:
         <span class="property-indicator"></span>
         <span class="property-type">string</span>
     </dt>
-    <dd>{{% md %}}The HttpMethod - PUT/POST/DELETE for the operation.{{% /md %}}</dd>
-    <dt class="property-required"
+    <dd>{{% md %}}The HttpMethod - PUT/POST/DELETE for the operation.{{% /md %}}</dd><dt class="property-required"
             title="Required">
         <span id="operationurl_go">
 <a href="#operationurl_go" style="color: inherit; text-decoration: inherit;">Operation<wbr>Url</a>
@@ -935,8 +826,7 @@ The following output properties are available:
         <span class="property-indicator"></span>
         <span class="property-type">string</span>
     </dt>
-    <dd>{{% md %}}The URL to use to check long-running operation status{{% /md %}}</dd>
-    <dt class="property-required"
+    <dd>{{% md %}}The URL to use to check long-running operation status{{% /md %}}</dd><dt class="property-required"
             title="Required">
         <span id="requesturi_go">
 <a href="#requesturi_go" style="color: inherit; text-decoration: inherit;">Request<wbr>Uri</a>
@@ -944,8 +834,7 @@ The following output properties are available:
         <span class="property-indicator"></span>
         <span class="property-type">string</span>
     </dt>
-    <dd>{{% md %}}Request URI of the operation.{{% /md %}}</dd>
-    <dt class="property-required"
+    <dd>{{% md %}}Request URI of the operation.{{% /md %}}</dd><dt class="property-required"
             title="Required">
         <span id="status_go">
 <a href="#status_go" style="color: inherit; text-decoration: inherit;">Status</a>
@@ -953,14 +842,11 @@ The following output properties are available:
         <span class="property-indicator"></span>
         <span class="property-type">string</span>
     </dt>
-    <dd>{{% md %}}The current status of the operation.{{% /md %}}</dd>
-</dl>
+    <dd>{{% md %}}The current status of the operation.{{% /md %}}</dd></dl>
 {{% /choosable %}}
 
 {{% choosable language nodejs %}}
-<dl class="resources-properties">
-
-    <dt class="property-required"
+<dl class="resources-properties"><dt class="property-required"
             title="Required">
         <span id="errorcode_nodejs">
 <a href="#errorcode_nodejs" style="color: inherit; text-decoration: inherit;">error<wbr>Code</a>
@@ -968,8 +854,7 @@ The following output properties are available:
         <span class="property-indicator"></span>
         <span class="property-type">string</span>
     </dt>
-    <dd>{{% md %}}Error code on failure.{{% /md %}}</dd>
-    <dt class="property-required"
+    <dd>{{% md %}}Error code on failure.{{% /md %}}</dd><dt class="property-required"
             title="Required">
         <span id="errormessage_nodejs">
 <a href="#errormessage_nodejs" style="color: inherit; text-decoration: inherit;">error<wbr>Message</a>
@@ -977,8 +862,7 @@ The following output properties are available:
         <span class="property-indicator"></span>
         <span class="property-type">string</span>
     </dt>
-    <dd>{{% md %}}The error message.{{% /md %}}</dd>
-    <dt class="property-required"
+    <dd>{{% md %}}The error message.{{% /md %}}</dd><dt class="property-required"
             title="Required">
         <span id="httpmethod_nodejs">
 <a href="#httpmethod_nodejs" style="color: inherit; text-decoration: inherit;">http<wbr>Method</a>
@@ -986,8 +870,7 @@ The following output properties are available:
         <span class="property-indicator"></span>
         <span class="property-type">string</span>
     </dt>
-    <dd>{{% md %}}The HttpMethod - PUT/POST/DELETE for the operation.{{% /md %}}</dd>
-    <dt class="property-required"
+    <dd>{{% md %}}The HttpMethod - PUT/POST/DELETE for the operation.{{% /md %}}</dd><dt class="property-required"
             title="Required">
         <span id="operationurl_nodejs">
 <a href="#operationurl_nodejs" style="color: inherit; text-decoration: inherit;">operation<wbr>Url</a>
@@ -995,8 +878,7 @@ The following output properties are available:
         <span class="property-indicator"></span>
         <span class="property-type">string</span>
     </dt>
-    <dd>{{% md %}}The URL to use to check long-running operation status{{% /md %}}</dd>
-    <dt class="property-required"
+    <dd>{{% md %}}The URL to use to check long-running operation status{{% /md %}}</dd><dt class="property-required"
             title="Required">
         <span id="requesturi_nodejs">
 <a href="#requesturi_nodejs" style="color: inherit; text-decoration: inherit;">request<wbr>Uri</a>
@@ -1004,8 +886,7 @@ The following output properties are available:
         <span class="property-indicator"></span>
         <span class="property-type">string</span>
     </dt>
-    <dd>{{% md %}}Request URI of the operation.{{% /md %}}</dd>
-    <dt class="property-required"
+    <dd>{{% md %}}Request URI of the operation.{{% /md %}}</dd><dt class="property-required"
             title="Required">
         <span id="status_nodejs">
 <a href="#status_nodejs" style="color: inherit; text-decoration: inherit;">status</a>
@@ -1013,14 +894,11 @@ The following output properties are available:
         <span class="property-indicator"></span>
         <span class="property-type">string</span>
     </dt>
-    <dd>{{% md %}}The current status of the operation.{{% /md %}}</dd>
-</dl>
+    <dd>{{% md %}}The current status of the operation.{{% /md %}}</dd></dl>
 {{% /choosable %}}
 
 {{% choosable language python %}}
-<dl class="resources-properties">
-
-    <dt class="property-required"
+<dl class="resources-properties"><dt class="property-required"
             title="Required">
         <span id="error_code_python">
 <a href="#error_code_python" style="color: inherit; text-decoration: inherit;">error_<wbr>code</a>
@@ -1028,8 +906,7 @@ The following output properties are available:
         <span class="property-indicator"></span>
         <span class="property-type">str</span>
     </dt>
-    <dd>{{% md %}}Error code on failure.{{% /md %}}</dd>
-    <dt class="property-required"
+    <dd>{{% md %}}Error code on failure.{{% /md %}}</dd><dt class="property-required"
             title="Required">
         <span id="error_message_python">
 <a href="#error_message_python" style="color: inherit; text-decoration: inherit;">error_<wbr>message</a>
@@ -1037,8 +914,7 @@ The following output properties are available:
         <span class="property-indicator"></span>
         <span class="property-type">str</span>
     </dt>
-    <dd>{{% md %}}The error message.{{% /md %}}</dd>
-    <dt class="property-required"
+    <dd>{{% md %}}The error message.{{% /md %}}</dd><dt class="property-required"
             title="Required">
         <span id="http_method_python">
 <a href="#http_method_python" style="color: inherit; text-decoration: inherit;">http_<wbr>method</a>
@@ -1046,8 +922,7 @@ The following output properties are available:
         <span class="property-indicator"></span>
         <span class="property-type">str</span>
     </dt>
-    <dd>{{% md %}}The HttpMethod - PUT/POST/DELETE for the operation.{{% /md %}}</dd>
-    <dt class="property-required"
+    <dd>{{% md %}}The HttpMethod - PUT/POST/DELETE for the operation.{{% /md %}}</dd><dt class="property-required"
             title="Required">
         <span id="operation_url_python">
 <a href="#operation_url_python" style="color: inherit; text-decoration: inherit;">operation_<wbr>url</a>
@@ -1055,8 +930,7 @@ The following output properties are available:
         <span class="property-indicator"></span>
         <span class="property-type">str</span>
     </dt>
-    <dd>{{% md %}}The URL to use to check long-running operation status{{% /md %}}</dd>
-    <dt class="property-required"
+    <dd>{{% md %}}The URL to use to check long-running operation status{{% /md %}}</dd><dt class="property-required"
             title="Required">
         <span id="request_uri_python">
 <a href="#request_uri_python" style="color: inherit; text-decoration: inherit;">request_<wbr>uri</a>
@@ -1064,8 +938,7 @@ The following output properties are available:
         <span class="property-indicator"></span>
         <span class="property-type">str</span>
     </dt>
-    <dd>{{% md %}}Request URI of the operation.{{% /md %}}</dd>
-    <dt class="property-required"
+    <dd>{{% md %}}Request URI of the operation.{{% /md %}}</dd><dt class="property-required"
             title="Required">
         <span id="status_python">
 <a href="#status_python" style="color: inherit; text-decoration: inherit;">status</a>
@@ -1073,8 +946,7 @@ The following output properties are available:
         <span class="property-indicator"></span>
         <span class="property-type">str</span>
     </dt>
-    <dd>{{% md %}}The current status of the operation.{{% /md %}}</dd>
-</dl>
+    <dd>{{% md %}}The current status of the operation.{{% /md %}}</dd></dl>
 {{% /choosable %}}
 
 

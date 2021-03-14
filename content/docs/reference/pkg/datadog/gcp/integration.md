@@ -13,11 +13,17 @@ meta_desc: "Documentation for the datadog.gcp.Integration resource with examples
 Provides a Datadog - Google Cloud Platform integration resource. This can be used to create and manage Datadog - Google Cloud Platform integration.
 
 {{% examples %}}
+
 ## Example Usage
 
 {{< chooser language "typescript,python,go,csharp" / >}}
 
-{{% example csharp %}}
+
+
+
+
+{{< example csharp >}}
+
 ```csharp
 using Pulumi;
 using Datadog = Pulumi.Datadog;
@@ -45,9 +51,12 @@ class MyStack : Stack
 }
 ```
 
-{{% /example %}}
 
-{{% example go %}}
+{{< /example >}}
+
+
+{{< example go >}}
+
 ```go
 package main
 
@@ -76,9 +85,12 @@ func main() {
 }
 ```
 
-{{% /example %}}
 
-{{% example python %}}
+{{< /example >}}
+
+
+{{< example python >}}
+
 ```python
 import pulumi
 import pulumi_datadog as datadog
@@ -97,9 +109,12 @@ awesome_gcp_project_integration = datadog.gcp.Integration("awesomeGcpProjectInte
     project_id="awesome-project-id")
 ```
 
-{{% /example %}}
 
-{{% example typescript %}}
+{{< /example >}}
+
+
+{{< example typescript >}}
+
 
 ```typescript
 import * as pulumi from "@pulumi/pulumi";
@@ -119,9 +134,16 @@ const awesomeGcpProjectIntegration = new datadog.gcp.Integration("awesome_gcp_pr
 });
 ```
 
-{{% /example %}}
+
+{{< /example >}}
+
+
+
+
 
 {{% /examples %}}
+
+
 
 
 ## Create a Integration Resource {#create}
@@ -146,9 +168,7 @@ const awesomeGcpProjectIntegration = new datadog.gcp.Integration("awesome_gcp_pr
 
 {{% choosable language nodejs %}}
 
-<dl class="resources-properties">
-  
-    <dt
+<dl class="resources-properties"><dt
         class="property-required" title="Required">
         <span>name</span>
         <span class="property-indicator"></span>
@@ -156,9 +176,7 @@ const awesomeGcpProjectIntegration = new datadog.gcp.Integration("awesome_gcp_pr
     </dt>
     <dd>
       The unique name of the resource.
-    </dd>
-  
-    <dt
+    </dd><dt
         class="property-required" title="Required">
         <span>args</span>
         <span class="property-indicator"></span>
@@ -166,9 +184,7 @@ const awesomeGcpProjectIntegration = new datadog.gcp.Integration("awesome_gcp_pr
     </dt>
     <dd>
       The arguments to resource properties.
-    </dd>
-  
-    <dt
+    </dd><dt
         class="property-optional" title="Optional">
         <span>opts</span>
         <span class="property-indicator"></span>
@@ -176,10 +192,7 @@ const awesomeGcpProjectIntegration = new datadog.gcp.Integration("awesome_gcp_pr
     </dt>
     <dd>
       Bag of options to control resource&#39;s behavior.
-    </dd>
-  
-
-</dl>
+    </dd></dl>
 
 {{% /choosable %}}
 
@@ -205,9 +218,7 @@ const awesomeGcpProjectIntegration = new datadog.gcp.Integration("awesome_gcp_pr
 
 {{% choosable language go %}}
 
-<dl class="resources-properties">
-  
-    <dt
+<dl class="resources-properties"><dt
         class="property-optional" title="Optional">
         <span>ctx</span>
         <span class="property-indicator"></span>
@@ -215,9 +226,7 @@ const awesomeGcpProjectIntegration = new datadog.gcp.Integration("awesome_gcp_pr
     </dt>
     <dd>
       Context object for the current deployment.
-    </dd>
-  
-    <dt
+    </dd><dt
         class="property-required" title="Required">
         <span>name</span>
         <span class="property-indicator"></span>
@@ -225,9 +234,7 @@ const awesomeGcpProjectIntegration = new datadog.gcp.Integration("awesome_gcp_pr
     </dt>
     <dd>
       The unique name of the resource.
-    </dd>
-  
-    <dt
+    </dd><dt
         class="property-required" title="Required">
         <span>args</span>
         <span class="property-indicator"></span>
@@ -235,9 +242,7 @@ const awesomeGcpProjectIntegration = new datadog.gcp.Integration("awesome_gcp_pr
     </dt>
     <dd>
       The arguments to resource properties.
-    </dd>
-  
-    <dt
+    </dd><dt
         class="property-optional" title="Optional">
         <span>opts</span>
         <span class="property-indicator"></span>
@@ -245,18 +250,13 @@ const awesomeGcpProjectIntegration = new datadog.gcp.Integration("awesome_gcp_pr
     </dt>
     <dd>
       Bag of options to control resource&#39;s behavior.
-    </dd>
-  
-
-</dl>
+    </dd></dl>
 
 {{% /choosable %}}
 
 {{% choosable language csharp %}}
 
-<dl class="resources-properties">
-  
-    <dt
+<dl class="resources-properties"><dt
         class="property-required" title="Required">
         <span>name</span>
         <span class="property-indicator"></span>
@@ -264,9 +264,7 @@ const awesomeGcpProjectIntegration = new datadog.gcp.Integration("awesome_gcp_pr
     </dt>
     <dd>
       The unique name of the resource.
-    </dd>
-  
-    <dt
+    </dd><dt
         class="property-required" title="Required">
         <span>args</span>
         <span class="property-indicator"></span>
@@ -274,9 +272,7 @@ const awesomeGcpProjectIntegration = new datadog.gcp.Integration("awesome_gcp_pr
     </dt>
     <dd>
       The arguments to resource properties.
-    </dd>
-  
-    <dt
+    </dd><dt
         class="property-optional" title="Optional">
         <span>opts</span>
         <span class="property-indicator"></span>
@@ -284,10 +280,7 @@ const awesomeGcpProjectIntegration = new datadog.gcp.Integration("awesome_gcp_pr
     </dt>
     <dd>
       Bag of options to control resource&#39;s behavior.
-    </dd>
-  
-
-</dl>
+    </dd></dl>
 
 {{% /choosable %}}
 
@@ -302,9 +295,7 @@ The Integration resource accepts the following [input]({{< relref "/docs/intro/c
 
 
 {{% choosable language csharp %}}
-<dl class="resources-properties">
-
-    <dt class="property-required"
+<dl class="resources-properties"><dt class="property-required"
             title="Required">
         <span id="clientemail_csharp">
 <a href="#clientemail_csharp" style="color: inherit; text-decoration: inherit;">Client<wbr>Email</a>
@@ -313,8 +304,7 @@ The Integration resource accepts the following [input]({{< relref "/docs/intro/c
         <span class="property-type">string</span>
     </dt>
     <dd>{{% md %}}Your email found in your JSON service account key.
-{{% /md %}}</dd>
-    <dt class="property-required"
+{{% /md %}}</dd><dt class="property-required"
             title="Required">
         <span id="clientid_csharp">
 <a href="#clientid_csharp" style="color: inherit; text-decoration: inherit;">Client<wbr>Id</a>
@@ -323,8 +313,7 @@ The Integration resource accepts the following [input]({{< relref "/docs/intro/c
         <span class="property-type">string</span>
     </dt>
     <dd>{{% md %}}Your ID found in your JSON service account key.
-{{% /md %}}</dd>
-    <dt class="property-required"
+{{% /md %}}</dd><dt class="property-required"
             title="Required">
         <span id="privatekey_csharp">
 <a href="#privatekey_csharp" style="color: inherit; text-decoration: inherit;">Private<wbr>Key</a>
@@ -333,8 +322,7 @@ The Integration resource accepts the following [input]({{< relref "/docs/intro/c
         <span class="property-type">string</span>
     </dt>
     <dd>{{% md %}}Your private key name found in your JSON service account key.
-{{% /md %}}</dd>
-    <dt class="property-required"
+{{% /md %}}</dd><dt class="property-required"
             title="Required">
         <span id="privatekeyid_csharp">
 <a href="#privatekeyid_csharp" style="color: inherit; text-decoration: inherit;">Private<wbr>Key<wbr>Id</a>
@@ -343,8 +331,7 @@ The Integration resource accepts the following [input]({{< relref "/docs/intro/c
         <span class="property-type">string</span>
     </dt>
     <dd>{{% md %}}Your private key ID found in your JSON service account key.
-{{% /md %}}</dd>
-    <dt class="property-required"
+{{% /md %}}</dd><dt class="property-required"
             title="Required">
         <span id="projectid_csharp">
 <a href="#projectid_csharp" style="color: inherit; text-decoration: inherit;">Project<wbr>Id</a>
@@ -353,8 +340,7 @@ The Integration resource accepts the following [input]({{< relref "/docs/intro/c
         <span class="property-type">string</span>
     </dt>
     <dd>{{% md %}}Your Google Cloud project ID found in your JSON service account key.
-{{% /md %}}</dd>
-    <dt class="property-optional"
+{{% /md %}}</dd><dt class="property-optional"
             title="Optional">
         <span id="hostfilters_csharp">
 <a href="#hostfilters_csharp" style="color: inherit; text-decoration: inherit;">Host<wbr>Filters</a>
@@ -364,14 +350,11 @@ The Integration resource accepts the following [input]({{< relref "/docs/intro/c
     </dt>
     <dd>{{% md %}}Limit the GCE instances that are pulled into Datadog by using tags. Only hosts that match one of the defined tags are
 imported into Datadog.
-{{% /md %}}</dd>
-</dl>
+{{% /md %}}</dd></dl>
 {{% /choosable %}}
 
 {{% choosable language go %}}
-<dl class="resources-properties">
-
-    <dt class="property-required"
+<dl class="resources-properties"><dt class="property-required"
             title="Required">
         <span id="clientemail_go">
 <a href="#clientemail_go" style="color: inherit; text-decoration: inherit;">Client<wbr>Email</a>
@@ -380,8 +363,7 @@ imported into Datadog.
         <span class="property-type">string</span>
     </dt>
     <dd>{{% md %}}Your email found in your JSON service account key.
-{{% /md %}}</dd>
-    <dt class="property-required"
+{{% /md %}}</dd><dt class="property-required"
             title="Required">
         <span id="clientid_go">
 <a href="#clientid_go" style="color: inherit; text-decoration: inherit;">Client<wbr>Id</a>
@@ -390,8 +372,7 @@ imported into Datadog.
         <span class="property-type">string</span>
     </dt>
     <dd>{{% md %}}Your ID found in your JSON service account key.
-{{% /md %}}</dd>
-    <dt class="property-required"
+{{% /md %}}</dd><dt class="property-required"
             title="Required">
         <span id="privatekey_go">
 <a href="#privatekey_go" style="color: inherit; text-decoration: inherit;">Private<wbr>Key</a>
@@ -400,8 +381,7 @@ imported into Datadog.
         <span class="property-type">string</span>
     </dt>
     <dd>{{% md %}}Your private key name found in your JSON service account key.
-{{% /md %}}</dd>
-    <dt class="property-required"
+{{% /md %}}</dd><dt class="property-required"
             title="Required">
         <span id="privatekeyid_go">
 <a href="#privatekeyid_go" style="color: inherit; text-decoration: inherit;">Private<wbr>Key<wbr>Id</a>
@@ -410,8 +390,7 @@ imported into Datadog.
         <span class="property-type">string</span>
     </dt>
     <dd>{{% md %}}Your private key ID found in your JSON service account key.
-{{% /md %}}</dd>
-    <dt class="property-required"
+{{% /md %}}</dd><dt class="property-required"
             title="Required">
         <span id="projectid_go">
 <a href="#projectid_go" style="color: inherit; text-decoration: inherit;">Project<wbr>Id</a>
@@ -420,8 +399,7 @@ imported into Datadog.
         <span class="property-type">string</span>
     </dt>
     <dd>{{% md %}}Your Google Cloud project ID found in your JSON service account key.
-{{% /md %}}</dd>
-    <dt class="property-optional"
+{{% /md %}}</dd><dt class="property-optional"
             title="Optional">
         <span id="hostfilters_go">
 <a href="#hostfilters_go" style="color: inherit; text-decoration: inherit;">Host<wbr>Filters</a>
@@ -431,14 +409,11 @@ imported into Datadog.
     </dt>
     <dd>{{% md %}}Limit the GCE instances that are pulled into Datadog by using tags. Only hosts that match one of the defined tags are
 imported into Datadog.
-{{% /md %}}</dd>
-</dl>
+{{% /md %}}</dd></dl>
 {{% /choosable %}}
 
 {{% choosable language nodejs %}}
-<dl class="resources-properties">
-
-    <dt class="property-required"
+<dl class="resources-properties"><dt class="property-required"
             title="Required">
         <span id="clientemail_nodejs">
 <a href="#clientemail_nodejs" style="color: inherit; text-decoration: inherit;">client<wbr>Email</a>
@@ -447,8 +422,7 @@ imported into Datadog.
         <span class="property-type">string</span>
     </dt>
     <dd>{{% md %}}Your email found in your JSON service account key.
-{{% /md %}}</dd>
-    <dt class="property-required"
+{{% /md %}}</dd><dt class="property-required"
             title="Required">
         <span id="clientid_nodejs">
 <a href="#clientid_nodejs" style="color: inherit; text-decoration: inherit;">client<wbr>Id</a>
@@ -457,8 +431,7 @@ imported into Datadog.
         <span class="property-type">string</span>
     </dt>
     <dd>{{% md %}}Your ID found in your JSON service account key.
-{{% /md %}}</dd>
-    <dt class="property-required"
+{{% /md %}}</dd><dt class="property-required"
             title="Required">
         <span id="privatekey_nodejs">
 <a href="#privatekey_nodejs" style="color: inherit; text-decoration: inherit;">private<wbr>Key</a>
@@ -467,8 +440,7 @@ imported into Datadog.
         <span class="property-type">string</span>
     </dt>
     <dd>{{% md %}}Your private key name found in your JSON service account key.
-{{% /md %}}</dd>
-    <dt class="property-required"
+{{% /md %}}</dd><dt class="property-required"
             title="Required">
         <span id="privatekeyid_nodejs">
 <a href="#privatekeyid_nodejs" style="color: inherit; text-decoration: inherit;">private<wbr>Key<wbr>Id</a>
@@ -477,8 +449,7 @@ imported into Datadog.
         <span class="property-type">string</span>
     </dt>
     <dd>{{% md %}}Your private key ID found in your JSON service account key.
-{{% /md %}}</dd>
-    <dt class="property-required"
+{{% /md %}}</dd><dt class="property-required"
             title="Required">
         <span id="projectid_nodejs">
 <a href="#projectid_nodejs" style="color: inherit; text-decoration: inherit;">project<wbr>Id</a>
@@ -487,8 +458,7 @@ imported into Datadog.
         <span class="property-type">string</span>
     </dt>
     <dd>{{% md %}}Your Google Cloud project ID found in your JSON service account key.
-{{% /md %}}</dd>
-    <dt class="property-optional"
+{{% /md %}}</dd><dt class="property-optional"
             title="Optional">
         <span id="hostfilters_nodejs">
 <a href="#hostfilters_nodejs" style="color: inherit; text-decoration: inherit;">host<wbr>Filters</a>
@@ -498,14 +468,11 @@ imported into Datadog.
     </dt>
     <dd>{{% md %}}Limit the GCE instances that are pulled into Datadog by using tags. Only hosts that match one of the defined tags are
 imported into Datadog.
-{{% /md %}}</dd>
-</dl>
+{{% /md %}}</dd></dl>
 {{% /choosable %}}
 
 {{% choosable language python %}}
-<dl class="resources-properties">
-
-    <dt class="property-required"
+<dl class="resources-properties"><dt class="property-required"
             title="Required">
         <span id="client_email_python">
 <a href="#client_email_python" style="color: inherit; text-decoration: inherit;">client_<wbr>email</a>
@@ -514,8 +481,7 @@ imported into Datadog.
         <span class="property-type">str</span>
     </dt>
     <dd>{{% md %}}Your email found in your JSON service account key.
-{{% /md %}}</dd>
-    <dt class="property-required"
+{{% /md %}}</dd><dt class="property-required"
             title="Required">
         <span id="client_id_python">
 <a href="#client_id_python" style="color: inherit; text-decoration: inherit;">client_<wbr>id</a>
@@ -524,8 +490,7 @@ imported into Datadog.
         <span class="property-type">str</span>
     </dt>
     <dd>{{% md %}}Your ID found in your JSON service account key.
-{{% /md %}}</dd>
-    <dt class="property-required"
+{{% /md %}}</dd><dt class="property-required"
             title="Required">
         <span id="private_key_python">
 <a href="#private_key_python" style="color: inherit; text-decoration: inherit;">private_<wbr>key</a>
@@ -534,8 +499,7 @@ imported into Datadog.
         <span class="property-type">str</span>
     </dt>
     <dd>{{% md %}}Your private key name found in your JSON service account key.
-{{% /md %}}</dd>
-    <dt class="property-required"
+{{% /md %}}</dd><dt class="property-required"
             title="Required">
         <span id="private_key_id_python">
 <a href="#private_key_id_python" style="color: inherit; text-decoration: inherit;">private_<wbr>key_<wbr>id</a>
@@ -544,8 +508,7 @@ imported into Datadog.
         <span class="property-type">str</span>
     </dt>
     <dd>{{% md %}}Your private key ID found in your JSON service account key.
-{{% /md %}}</dd>
-    <dt class="property-required"
+{{% /md %}}</dd><dt class="property-required"
             title="Required">
         <span id="project_id_python">
 <a href="#project_id_python" style="color: inherit; text-decoration: inherit;">project_<wbr>id</a>
@@ -554,8 +517,7 @@ imported into Datadog.
         <span class="property-type">str</span>
     </dt>
     <dd>{{% md %}}Your Google Cloud project ID found in your JSON service account key.
-{{% /md %}}</dd>
-    <dt class="property-optional"
+{{% /md %}}</dd><dt class="property-optional"
             title="Optional">
         <span id="host_filters_python">
 <a href="#host_filters_python" style="color: inherit; text-decoration: inherit;">host_<wbr>filters</a>
@@ -565,8 +527,7 @@ imported into Datadog.
     </dt>
     <dd>{{% md %}}Limit the GCE instances that are pulled into Datadog by using tags. Only hosts that match one of the defined tags are
 imported into Datadog.
-{{% /md %}}</dd>
-</dl>
+{{% /md %}}</dd></dl>
 {{% /choosable %}}
 
 
@@ -577,9 +538,7 @@ All [input](#inputs) properties are implicitly available as output properties. A
 
 
 {{% choosable language csharp %}}
-<dl class="resources-properties">
-
-    <dt class="property-"
+<dl class="resources-properties"><dt class="property-"
             title="">
         <span id="id_csharp">
 <a href="#id_csharp" style="color: inherit; text-decoration: inherit;">Id</a>
@@ -587,14 +546,11 @@ All [input](#inputs) properties are implicitly available as output properties. A
         <span class="property-indicator"></span>
         <span class="property-type">string</span>
     </dt>
-    <dd>{{% md %}}The provider-assigned unique ID for this managed resource.{{% /md %}}</dd>
-</dl>
+    <dd>{{% md %}}The provider-assigned unique ID for this managed resource.{{% /md %}}</dd></dl>
 {{% /choosable %}}
 
 {{% choosable language go %}}
-<dl class="resources-properties">
-
-    <dt class="property-"
+<dl class="resources-properties"><dt class="property-"
             title="">
         <span id="id_go">
 <a href="#id_go" style="color: inherit; text-decoration: inherit;">Id</a>
@@ -602,14 +558,11 @@ All [input](#inputs) properties are implicitly available as output properties. A
         <span class="property-indicator"></span>
         <span class="property-type">string</span>
     </dt>
-    <dd>{{% md %}}The provider-assigned unique ID for this managed resource.{{% /md %}}</dd>
-</dl>
+    <dd>{{% md %}}The provider-assigned unique ID for this managed resource.{{% /md %}}</dd></dl>
 {{% /choosable %}}
 
 {{% choosable language nodejs %}}
-<dl class="resources-properties">
-
-    <dt class="property-"
+<dl class="resources-properties"><dt class="property-"
             title="">
         <span id="id_nodejs">
 <a href="#id_nodejs" style="color: inherit; text-decoration: inherit;">id</a>
@@ -617,14 +570,11 @@ All [input](#inputs) properties are implicitly available as output properties. A
         <span class="property-indicator"></span>
         <span class="property-type">string</span>
     </dt>
-    <dd>{{% md %}}The provider-assigned unique ID for this managed resource.{{% /md %}}</dd>
-</dl>
+    <dd>{{% md %}}The provider-assigned unique ID for this managed resource.{{% /md %}}</dd></dl>
 {{% /choosable %}}
 
 {{% choosable language python %}}
-<dl class="resources-properties">
-
-    <dt class="property-"
+<dl class="resources-properties"><dt class="property-"
             title="">
         <span id="id_python">
 <a href="#id_python" style="color: inherit; text-decoration: inherit;">id</a>
@@ -632,8 +582,7 @@ All [input](#inputs) properties are implicitly available as output properties. A
         <span class="property-indicator"></span>
         <span class="property-type">str</span>
     </dt>
-    <dd>{{% md %}}The provider-assigned unique ID for this managed resource.{{% /md %}}</dd>
-</dl>
+    <dd>{{% md %}}The provider-assigned unique ID for this managed resource.{{% /md %}}</dd></dl>
 {{% /choosable %}}
 
 
@@ -760,9 +709,7 @@ The following state arguments are supported:
 
 
 {{% choosable language csharp %}}
-<dl class="resources-properties">
-
-    <dt class="property-optional"
+<dl class="resources-properties"><dt class="property-optional"
             title="Optional">
         <span id="state_clientemail_csharp">
 <a href="#state_clientemail_csharp" style="color: inherit; text-decoration: inherit;">Client<wbr>Email</a>
@@ -771,8 +718,7 @@ The following state arguments are supported:
         <span class="property-type">string</span>
     </dt>
     <dd>{{% md %}}Your email found in your JSON service account key.
-{{% /md %}}</dd>
-    <dt class="property-optional"
+{{% /md %}}</dd><dt class="property-optional"
             title="Optional">
         <span id="state_clientid_csharp">
 <a href="#state_clientid_csharp" style="color: inherit; text-decoration: inherit;">Client<wbr>Id</a>
@@ -781,8 +727,7 @@ The following state arguments are supported:
         <span class="property-type">string</span>
     </dt>
     <dd>{{% md %}}Your ID found in your JSON service account key.
-{{% /md %}}</dd>
-    <dt class="property-optional"
+{{% /md %}}</dd><dt class="property-optional"
             title="Optional">
         <span id="state_hostfilters_csharp">
 <a href="#state_hostfilters_csharp" style="color: inherit; text-decoration: inherit;">Host<wbr>Filters</a>
@@ -792,8 +737,7 @@ The following state arguments are supported:
     </dt>
     <dd>{{% md %}}Limit the GCE instances that are pulled into Datadog by using tags. Only hosts that match one of the defined tags are
 imported into Datadog.
-{{% /md %}}</dd>
-    <dt class="property-optional"
+{{% /md %}}</dd><dt class="property-optional"
             title="Optional">
         <span id="state_privatekey_csharp">
 <a href="#state_privatekey_csharp" style="color: inherit; text-decoration: inherit;">Private<wbr>Key</a>
@@ -802,8 +746,7 @@ imported into Datadog.
         <span class="property-type">string</span>
     </dt>
     <dd>{{% md %}}Your private key name found in your JSON service account key.
-{{% /md %}}</dd>
-    <dt class="property-optional"
+{{% /md %}}</dd><dt class="property-optional"
             title="Optional">
         <span id="state_privatekeyid_csharp">
 <a href="#state_privatekeyid_csharp" style="color: inherit; text-decoration: inherit;">Private<wbr>Key<wbr>Id</a>
@@ -812,8 +755,7 @@ imported into Datadog.
         <span class="property-type">string</span>
     </dt>
     <dd>{{% md %}}Your private key ID found in your JSON service account key.
-{{% /md %}}</dd>
-    <dt class="property-optional"
+{{% /md %}}</dd><dt class="property-optional"
             title="Optional">
         <span id="state_projectid_csharp">
 <a href="#state_projectid_csharp" style="color: inherit; text-decoration: inherit;">Project<wbr>Id</a>
@@ -822,14 +764,11 @@ imported into Datadog.
         <span class="property-type">string</span>
     </dt>
     <dd>{{% md %}}Your Google Cloud project ID found in your JSON service account key.
-{{% /md %}}</dd>
-</dl>
+{{% /md %}}</dd></dl>
 {{% /choosable %}}
 
 {{% choosable language go %}}
-<dl class="resources-properties">
-
-    <dt class="property-optional"
+<dl class="resources-properties"><dt class="property-optional"
             title="Optional">
         <span id="state_clientemail_go">
 <a href="#state_clientemail_go" style="color: inherit; text-decoration: inherit;">Client<wbr>Email</a>
@@ -838,8 +777,7 @@ imported into Datadog.
         <span class="property-type">string</span>
     </dt>
     <dd>{{% md %}}Your email found in your JSON service account key.
-{{% /md %}}</dd>
-    <dt class="property-optional"
+{{% /md %}}</dd><dt class="property-optional"
             title="Optional">
         <span id="state_clientid_go">
 <a href="#state_clientid_go" style="color: inherit; text-decoration: inherit;">Client<wbr>Id</a>
@@ -848,8 +786,7 @@ imported into Datadog.
         <span class="property-type">string</span>
     </dt>
     <dd>{{% md %}}Your ID found in your JSON service account key.
-{{% /md %}}</dd>
-    <dt class="property-optional"
+{{% /md %}}</dd><dt class="property-optional"
             title="Optional">
         <span id="state_hostfilters_go">
 <a href="#state_hostfilters_go" style="color: inherit; text-decoration: inherit;">Host<wbr>Filters</a>
@@ -859,8 +796,7 @@ imported into Datadog.
     </dt>
     <dd>{{% md %}}Limit the GCE instances that are pulled into Datadog by using tags. Only hosts that match one of the defined tags are
 imported into Datadog.
-{{% /md %}}</dd>
-    <dt class="property-optional"
+{{% /md %}}</dd><dt class="property-optional"
             title="Optional">
         <span id="state_privatekey_go">
 <a href="#state_privatekey_go" style="color: inherit; text-decoration: inherit;">Private<wbr>Key</a>
@@ -869,8 +805,7 @@ imported into Datadog.
         <span class="property-type">string</span>
     </dt>
     <dd>{{% md %}}Your private key name found in your JSON service account key.
-{{% /md %}}</dd>
-    <dt class="property-optional"
+{{% /md %}}</dd><dt class="property-optional"
             title="Optional">
         <span id="state_privatekeyid_go">
 <a href="#state_privatekeyid_go" style="color: inherit; text-decoration: inherit;">Private<wbr>Key<wbr>Id</a>
@@ -879,8 +814,7 @@ imported into Datadog.
         <span class="property-type">string</span>
     </dt>
     <dd>{{% md %}}Your private key ID found in your JSON service account key.
-{{% /md %}}</dd>
-    <dt class="property-optional"
+{{% /md %}}</dd><dt class="property-optional"
             title="Optional">
         <span id="state_projectid_go">
 <a href="#state_projectid_go" style="color: inherit; text-decoration: inherit;">Project<wbr>Id</a>
@@ -889,14 +823,11 @@ imported into Datadog.
         <span class="property-type">string</span>
     </dt>
     <dd>{{% md %}}Your Google Cloud project ID found in your JSON service account key.
-{{% /md %}}</dd>
-</dl>
+{{% /md %}}</dd></dl>
 {{% /choosable %}}
 
 {{% choosable language nodejs %}}
-<dl class="resources-properties">
-
-    <dt class="property-optional"
+<dl class="resources-properties"><dt class="property-optional"
             title="Optional">
         <span id="state_clientemail_nodejs">
 <a href="#state_clientemail_nodejs" style="color: inherit; text-decoration: inherit;">client<wbr>Email</a>
@@ -905,8 +836,7 @@ imported into Datadog.
         <span class="property-type">string</span>
     </dt>
     <dd>{{% md %}}Your email found in your JSON service account key.
-{{% /md %}}</dd>
-    <dt class="property-optional"
+{{% /md %}}</dd><dt class="property-optional"
             title="Optional">
         <span id="state_clientid_nodejs">
 <a href="#state_clientid_nodejs" style="color: inherit; text-decoration: inherit;">client<wbr>Id</a>
@@ -915,8 +845,7 @@ imported into Datadog.
         <span class="property-type">string</span>
     </dt>
     <dd>{{% md %}}Your ID found in your JSON service account key.
-{{% /md %}}</dd>
-    <dt class="property-optional"
+{{% /md %}}</dd><dt class="property-optional"
             title="Optional">
         <span id="state_hostfilters_nodejs">
 <a href="#state_hostfilters_nodejs" style="color: inherit; text-decoration: inherit;">host<wbr>Filters</a>
@@ -926,8 +855,7 @@ imported into Datadog.
     </dt>
     <dd>{{% md %}}Limit the GCE instances that are pulled into Datadog by using tags. Only hosts that match one of the defined tags are
 imported into Datadog.
-{{% /md %}}</dd>
-    <dt class="property-optional"
+{{% /md %}}</dd><dt class="property-optional"
             title="Optional">
         <span id="state_privatekey_nodejs">
 <a href="#state_privatekey_nodejs" style="color: inherit; text-decoration: inherit;">private<wbr>Key</a>
@@ -936,8 +864,7 @@ imported into Datadog.
         <span class="property-type">string</span>
     </dt>
     <dd>{{% md %}}Your private key name found in your JSON service account key.
-{{% /md %}}</dd>
-    <dt class="property-optional"
+{{% /md %}}</dd><dt class="property-optional"
             title="Optional">
         <span id="state_privatekeyid_nodejs">
 <a href="#state_privatekeyid_nodejs" style="color: inherit; text-decoration: inherit;">private<wbr>Key<wbr>Id</a>
@@ -946,8 +873,7 @@ imported into Datadog.
         <span class="property-type">string</span>
     </dt>
     <dd>{{% md %}}Your private key ID found in your JSON service account key.
-{{% /md %}}</dd>
-    <dt class="property-optional"
+{{% /md %}}</dd><dt class="property-optional"
             title="Optional">
         <span id="state_projectid_nodejs">
 <a href="#state_projectid_nodejs" style="color: inherit; text-decoration: inherit;">project<wbr>Id</a>
@@ -956,14 +882,11 @@ imported into Datadog.
         <span class="property-type">string</span>
     </dt>
     <dd>{{% md %}}Your Google Cloud project ID found in your JSON service account key.
-{{% /md %}}</dd>
-</dl>
+{{% /md %}}</dd></dl>
 {{% /choosable %}}
 
 {{% choosable language python %}}
-<dl class="resources-properties">
-
-    <dt class="property-optional"
+<dl class="resources-properties"><dt class="property-optional"
             title="Optional">
         <span id="state_client_email_python">
 <a href="#state_client_email_python" style="color: inherit; text-decoration: inherit;">client_<wbr>email</a>
@@ -972,8 +895,7 @@ imported into Datadog.
         <span class="property-type">str</span>
     </dt>
     <dd>{{% md %}}Your email found in your JSON service account key.
-{{% /md %}}</dd>
-    <dt class="property-optional"
+{{% /md %}}</dd><dt class="property-optional"
             title="Optional">
         <span id="state_client_id_python">
 <a href="#state_client_id_python" style="color: inherit; text-decoration: inherit;">client_<wbr>id</a>
@@ -982,8 +904,7 @@ imported into Datadog.
         <span class="property-type">str</span>
     </dt>
     <dd>{{% md %}}Your ID found in your JSON service account key.
-{{% /md %}}</dd>
-    <dt class="property-optional"
+{{% /md %}}</dd><dt class="property-optional"
             title="Optional">
         <span id="state_host_filters_python">
 <a href="#state_host_filters_python" style="color: inherit; text-decoration: inherit;">host_<wbr>filters</a>
@@ -993,8 +914,7 @@ imported into Datadog.
     </dt>
     <dd>{{% md %}}Limit the GCE instances that are pulled into Datadog by using tags. Only hosts that match one of the defined tags are
 imported into Datadog.
-{{% /md %}}</dd>
-    <dt class="property-optional"
+{{% /md %}}</dd><dt class="property-optional"
             title="Optional">
         <span id="state_private_key_python">
 <a href="#state_private_key_python" style="color: inherit; text-decoration: inherit;">private_<wbr>key</a>
@@ -1003,8 +923,7 @@ imported into Datadog.
         <span class="property-type">str</span>
     </dt>
     <dd>{{% md %}}Your private key name found in your JSON service account key.
-{{% /md %}}</dd>
-    <dt class="property-optional"
+{{% /md %}}</dd><dt class="property-optional"
             title="Optional">
         <span id="state_private_key_id_python">
 <a href="#state_private_key_id_python" style="color: inherit; text-decoration: inherit;">private_<wbr>key_<wbr>id</a>
@@ -1013,8 +932,7 @@ imported into Datadog.
         <span class="property-type">str</span>
     </dt>
     <dd>{{% md %}}Your private key ID found in your JSON service account key.
-{{% /md %}}</dd>
-    <dt class="property-optional"
+{{% /md %}}</dd><dt class="property-optional"
             title="Optional">
         <span id="state_project_id_python">
 <a href="#state_project_id_python" style="color: inherit; text-decoration: inherit;">project_<wbr>id</a>
@@ -1023,8 +941,7 @@ imported into Datadog.
         <span class="property-type">str</span>
     </dt>
     <dd>{{% md %}}Your Google Cloud project ID found in your JSON service account key.
-{{% /md %}}</dd>
-</dl>
+{{% /md %}}</dd></dl>
 {{% /choosable %}}
 
 
@@ -1050,6 +967,6 @@ Google Cloud Platform integrations can be imported using their project ID, e.g.
 	<dt>License</dt>
 	<dd>Apache-2.0</dd>
 	<dt>Notes</dt>
-	<dd>This Pulumi package is based on the [`datadog` Terraform Provider](https://github.com/terraform-providers/terraform-provider-datadog).</dd>
+	<dd>{{% md %}}This Pulumi package is based on the [`datadog` Terraform Provider](https://github.com/terraform-providers/terraform-provider-datadog).{{% /md %}}</dd>
 </dl>
 

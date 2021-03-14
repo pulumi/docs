@@ -16,11 +16,17 @@ create and manage applications on Mailgun.
 After DNS records are set, domain verification should be triggered manually using [PUT /domains/\<domain\>/verify](https://documentation.mailgun.com/en/latest/api-domains.html#domains)
 
 {{% examples %}}
+
 ## Example Usage
 
 {{< chooser language "typescript,python,go,csharp" / >}}
 
-{{% example csharp %}}
+
+
+
+
+{{< example csharp >}}
+
 ```csharp
 using Pulumi;
 using Mailgun = Pulumi.Mailgun;
@@ -41,9 +47,12 @@ class MyStack : Stack
 }
 ```
 
-{{% /example %}}
 
-{{% example go %}}
+{{< /example >}}
+
+
+{{< example go >}}
+
 ```go
 package main
 
@@ -67,9 +76,12 @@ func main() {
 }
 ```
 
-{{% /example %}}
 
-{{% example python %}}
+{{< /example >}}
+
+
+{{< example python >}}
+
 ```python
 import pulumi
 import pulumi_mailgun as mailgun
@@ -81,9 +93,12 @@ default = mailgun.Domain("default",
     spam_action="disabled")
 ```
 
-{{% /example %}}
 
-{{% example typescript %}}
+{{< /example >}}
+
+
+{{< example typescript >}}
+
 
 ```typescript
 import * as pulumi from "@pulumi/pulumi";
@@ -97,9 +112,16 @@ const defaultDomain = new mailgun.Domain("default", {
 });
 ```
 
-{{% /example %}}
+
+{{< /example >}}
+
+
+
+
 
 {{% /examples %}}
+
+
 
 
 ## Create a Domain Resource {#create}
@@ -124,9 +146,7 @@ const defaultDomain = new mailgun.Domain("default", {
 
 {{% choosable language nodejs %}}
 
-<dl class="resources-properties">
-  
-    <dt
+<dl class="resources-properties"><dt
         class="property-required" title="Required">
         <span>name</span>
         <span class="property-indicator"></span>
@@ -134,9 +154,7 @@ const defaultDomain = new mailgun.Domain("default", {
     </dt>
     <dd>
       The unique name of the resource.
-    </dd>
-  
-    <dt
+    </dd><dt
         class="property-optional" title="Optional">
         <span>args</span>
         <span class="property-indicator"></span>
@@ -144,9 +162,7 @@ const defaultDomain = new mailgun.Domain("default", {
     </dt>
     <dd>
       The arguments to resource properties.
-    </dd>
-  
-    <dt
+    </dd><dt
         class="property-optional" title="Optional">
         <span>opts</span>
         <span class="property-indicator"></span>
@@ -154,10 +170,7 @@ const defaultDomain = new mailgun.Domain("default", {
     </dt>
     <dd>
       Bag of options to control resource&#39;s behavior.
-    </dd>
-  
-
-</dl>
+    </dd></dl>
 
 {{% /choosable %}}
 
@@ -183,9 +196,7 @@ const defaultDomain = new mailgun.Domain("default", {
 
 {{% choosable language go %}}
 
-<dl class="resources-properties">
-  
-    <dt
+<dl class="resources-properties"><dt
         class="property-optional" title="Optional">
         <span>ctx</span>
         <span class="property-indicator"></span>
@@ -193,9 +204,7 @@ const defaultDomain = new mailgun.Domain("default", {
     </dt>
     <dd>
       Context object for the current deployment.
-    </dd>
-  
-    <dt
+    </dd><dt
         class="property-required" title="Required">
         <span>name</span>
         <span class="property-indicator"></span>
@@ -203,9 +212,7 @@ const defaultDomain = new mailgun.Domain("default", {
     </dt>
     <dd>
       The unique name of the resource.
-    </dd>
-  
-    <dt
+    </dd><dt
         class="property-optional" title="Optional">
         <span>args</span>
         <span class="property-indicator"></span>
@@ -213,9 +220,7 @@ const defaultDomain = new mailgun.Domain("default", {
     </dt>
     <dd>
       The arguments to resource properties.
-    </dd>
-  
-    <dt
+    </dd><dt
         class="property-optional" title="Optional">
         <span>opts</span>
         <span class="property-indicator"></span>
@@ -223,18 +228,13 @@ const defaultDomain = new mailgun.Domain("default", {
     </dt>
     <dd>
       Bag of options to control resource&#39;s behavior.
-    </dd>
-  
-
-</dl>
+    </dd></dl>
 
 {{% /choosable %}}
 
 {{% choosable language csharp %}}
 
-<dl class="resources-properties">
-  
-    <dt
+<dl class="resources-properties"><dt
         class="property-required" title="Required">
         <span>name</span>
         <span class="property-indicator"></span>
@@ -242,9 +242,7 @@ const defaultDomain = new mailgun.Domain("default", {
     </dt>
     <dd>
       The unique name of the resource.
-    </dd>
-  
-    <dt
+    </dd><dt
         class="property-optional" title="Optional">
         <span>args</span>
         <span class="property-indicator"></span>
@@ -252,9 +250,7 @@ const defaultDomain = new mailgun.Domain("default", {
     </dt>
     <dd>
       The arguments to resource properties.
-    </dd>
-  
-    <dt
+    </dd><dt
         class="property-optional" title="Optional">
         <span>opts</span>
         <span class="property-indicator"></span>
@@ -262,10 +258,7 @@ const defaultDomain = new mailgun.Domain("default", {
     </dt>
     <dd>
       Bag of options to control resource&#39;s behavior.
-    </dd>
-  
-
-</dl>
+    </dd></dl>
 
 {{% /choosable %}}
 
@@ -280,9 +273,7 @@ The Domain resource accepts the following [input]({{< relref "/docs/intro/concep
 
 
 {{% choosable language csharp %}}
-<dl class="resources-properties">
-
-    <dt class="property-optional"
+<dl class="resources-properties"><dt class="property-optional"
             title="Optional">
         <span id="name_csharp">
 <a href="#name_csharp" style="color: inherit; text-decoration: inherit;">Name</a>
@@ -291,8 +282,7 @@ The Domain resource accepts the following [input]({{< relref "/docs/intro/concep
         <span class="property-type">string</span>
     </dt>
     <dd>{{% md %}}The domain to add to Mailgun
-{{% /md %}}</dd>
-    <dt class="property-optional"
+{{% /md %}}</dd><dt class="property-optional"
             title="Optional">
         <span id="region_csharp">
 <a href="#region_csharp" style="color: inherit; text-decoration: inherit;">Region</a>
@@ -301,8 +291,7 @@ The Domain resource accepts the following [input]({{< relref "/docs/intro/concep
         <span class="property-type">string</span>
     </dt>
     <dd>{{% md %}}The region where domain will be created. Default value is `us`.
-{{% /md %}}</dd>
-    <dt class="property-optional"
+{{% /md %}}</dd><dt class="property-optional"
             title="Optional">
         <span id="smtppassword_csharp">
 <a href="#smtppassword_csharp" style="color: inherit; text-decoration: inherit;">Smtp<wbr>Password</a>
@@ -311,8 +300,7 @@ The Domain resource accepts the following [input]({{< relref "/docs/intro/concep
         <span class="property-type">string</span>
     </dt>
     <dd>{{% md %}}Password for SMTP authentication
-{{% /md %}}</dd>
-    <dt class="property-optional"
+{{% /md %}}</dd><dt class="property-optional"
             title="Optional">
         <span id="spamaction_csharp">
 <a href="#spamaction_csharp" style="color: inherit; text-decoration: inherit;">Spam<wbr>Action</a>
@@ -323,8 +311,7 @@ The Domain resource accepts the following [input]({{< relref "/docs/intro/concep
     <dd>{{% md %}}`disabled` or `tag` Disable, no spam
 filtering will occur for inbound messages. Tag, messages
 will be tagged with a spam header.
-{{% /md %}}</dd>
-    <dt class="property-optional"
+{{% /md %}}</dd><dt class="property-optional"
             title="Optional">
         <span id="wildcard_csharp">
 <a href="#wildcard_csharp" style="color: inherit; text-decoration: inherit;">Wildcard</a>
@@ -334,14 +321,11 @@ will be tagged with a spam header.
     </dt>
     <dd>{{% md %}}Boolean that determines whether
 the domain will accept email for sub-domains.
-{{% /md %}}</dd>
-</dl>
+{{% /md %}}</dd></dl>
 {{% /choosable %}}
 
 {{% choosable language go %}}
-<dl class="resources-properties">
-
-    <dt class="property-optional"
+<dl class="resources-properties"><dt class="property-optional"
             title="Optional">
         <span id="name_go">
 <a href="#name_go" style="color: inherit; text-decoration: inherit;">Name</a>
@@ -350,8 +334,7 @@ the domain will accept email for sub-domains.
         <span class="property-type">string</span>
     </dt>
     <dd>{{% md %}}The domain to add to Mailgun
-{{% /md %}}</dd>
-    <dt class="property-optional"
+{{% /md %}}</dd><dt class="property-optional"
             title="Optional">
         <span id="region_go">
 <a href="#region_go" style="color: inherit; text-decoration: inherit;">Region</a>
@@ -360,8 +343,7 @@ the domain will accept email for sub-domains.
         <span class="property-type">string</span>
     </dt>
     <dd>{{% md %}}The region where domain will be created. Default value is `us`.
-{{% /md %}}</dd>
-    <dt class="property-optional"
+{{% /md %}}</dd><dt class="property-optional"
             title="Optional">
         <span id="smtppassword_go">
 <a href="#smtppassword_go" style="color: inherit; text-decoration: inherit;">Smtp<wbr>Password</a>
@@ -370,8 +352,7 @@ the domain will accept email for sub-domains.
         <span class="property-type">string</span>
     </dt>
     <dd>{{% md %}}Password for SMTP authentication
-{{% /md %}}</dd>
-    <dt class="property-optional"
+{{% /md %}}</dd><dt class="property-optional"
             title="Optional">
         <span id="spamaction_go">
 <a href="#spamaction_go" style="color: inherit; text-decoration: inherit;">Spam<wbr>Action</a>
@@ -382,8 +363,7 @@ the domain will accept email for sub-domains.
     <dd>{{% md %}}`disabled` or `tag` Disable, no spam
 filtering will occur for inbound messages. Tag, messages
 will be tagged with a spam header.
-{{% /md %}}</dd>
-    <dt class="property-optional"
+{{% /md %}}</dd><dt class="property-optional"
             title="Optional">
         <span id="wildcard_go">
 <a href="#wildcard_go" style="color: inherit; text-decoration: inherit;">Wildcard</a>
@@ -393,14 +373,11 @@ will be tagged with a spam header.
     </dt>
     <dd>{{% md %}}Boolean that determines whether
 the domain will accept email for sub-domains.
-{{% /md %}}</dd>
-</dl>
+{{% /md %}}</dd></dl>
 {{% /choosable %}}
 
 {{% choosable language nodejs %}}
-<dl class="resources-properties">
-
-    <dt class="property-optional"
+<dl class="resources-properties"><dt class="property-optional"
             title="Optional">
         <span id="name_nodejs">
 <a href="#name_nodejs" style="color: inherit; text-decoration: inherit;">name</a>
@@ -409,8 +386,7 @@ the domain will accept email for sub-domains.
         <span class="property-type">string</span>
     </dt>
     <dd>{{% md %}}The domain to add to Mailgun
-{{% /md %}}</dd>
-    <dt class="property-optional"
+{{% /md %}}</dd><dt class="property-optional"
             title="Optional">
         <span id="region_nodejs">
 <a href="#region_nodejs" style="color: inherit; text-decoration: inherit;">region</a>
@@ -419,8 +395,7 @@ the domain will accept email for sub-domains.
         <span class="property-type">string</span>
     </dt>
     <dd>{{% md %}}The region where domain will be created. Default value is `us`.
-{{% /md %}}</dd>
-    <dt class="property-optional"
+{{% /md %}}</dd><dt class="property-optional"
             title="Optional">
         <span id="smtppassword_nodejs">
 <a href="#smtppassword_nodejs" style="color: inherit; text-decoration: inherit;">smtp<wbr>Password</a>
@@ -429,8 +404,7 @@ the domain will accept email for sub-domains.
         <span class="property-type">string</span>
     </dt>
     <dd>{{% md %}}Password for SMTP authentication
-{{% /md %}}</dd>
-    <dt class="property-optional"
+{{% /md %}}</dd><dt class="property-optional"
             title="Optional">
         <span id="spamaction_nodejs">
 <a href="#spamaction_nodejs" style="color: inherit; text-decoration: inherit;">spam<wbr>Action</a>
@@ -441,8 +415,7 @@ the domain will accept email for sub-domains.
     <dd>{{% md %}}`disabled` or `tag` Disable, no spam
 filtering will occur for inbound messages. Tag, messages
 will be tagged with a spam header.
-{{% /md %}}</dd>
-    <dt class="property-optional"
+{{% /md %}}</dd><dt class="property-optional"
             title="Optional">
         <span id="wildcard_nodejs">
 <a href="#wildcard_nodejs" style="color: inherit; text-decoration: inherit;">wildcard</a>
@@ -452,14 +425,11 @@ will be tagged with a spam header.
     </dt>
     <dd>{{% md %}}Boolean that determines whether
 the domain will accept email for sub-domains.
-{{% /md %}}</dd>
-</dl>
+{{% /md %}}</dd></dl>
 {{% /choosable %}}
 
 {{% choosable language python %}}
-<dl class="resources-properties">
-
-    <dt class="property-optional"
+<dl class="resources-properties"><dt class="property-optional"
             title="Optional">
         <span id="name_python">
 <a href="#name_python" style="color: inherit; text-decoration: inherit;">name</a>
@@ -468,8 +438,7 @@ the domain will accept email for sub-domains.
         <span class="property-type">str</span>
     </dt>
     <dd>{{% md %}}The domain to add to Mailgun
-{{% /md %}}</dd>
-    <dt class="property-optional"
+{{% /md %}}</dd><dt class="property-optional"
             title="Optional">
         <span id="region_python">
 <a href="#region_python" style="color: inherit; text-decoration: inherit;">region</a>
@@ -478,8 +447,7 @@ the domain will accept email for sub-domains.
         <span class="property-type">str</span>
     </dt>
     <dd>{{% md %}}The region where domain will be created. Default value is `us`.
-{{% /md %}}</dd>
-    <dt class="property-optional"
+{{% /md %}}</dd><dt class="property-optional"
             title="Optional">
         <span id="smtp_password_python">
 <a href="#smtp_password_python" style="color: inherit; text-decoration: inherit;">smtp_<wbr>password</a>
@@ -488,8 +456,7 @@ the domain will accept email for sub-domains.
         <span class="property-type">str</span>
     </dt>
     <dd>{{% md %}}Password for SMTP authentication
-{{% /md %}}</dd>
-    <dt class="property-optional"
+{{% /md %}}</dd><dt class="property-optional"
             title="Optional">
         <span id="spam_action_python">
 <a href="#spam_action_python" style="color: inherit; text-decoration: inherit;">spam_<wbr>action</a>
@@ -500,8 +467,7 @@ the domain will accept email for sub-domains.
     <dd>{{% md %}}`disabled` or `tag` Disable, no spam
 filtering will occur for inbound messages. Tag, messages
 will be tagged with a spam header.
-{{% /md %}}</dd>
-    <dt class="property-optional"
+{{% /md %}}</dd><dt class="property-optional"
             title="Optional">
         <span id="wildcard_python">
 <a href="#wildcard_python" style="color: inherit; text-decoration: inherit;">wildcard</a>
@@ -511,8 +477,7 @@ will be tagged with a spam header.
     </dt>
     <dd>{{% md %}}Boolean that determines whether
 the domain will accept email for sub-domains.
-{{% /md %}}</dd>
-</dl>
+{{% /md %}}</dd></dl>
 {{% /choosable %}}
 
 
@@ -523,9 +488,7 @@ All [input](#inputs) properties are implicitly available as output properties. A
 
 
 {{% choosable language csharp %}}
-<dl class="resources-properties">
-
-    <dt class="property-"
+<dl class="resources-properties"><dt class="property-"
             title="">
         <span id="id_csharp">
 <a href="#id_csharp" style="color: inherit; text-decoration: inherit;">Id</a>
@@ -533,8 +496,7 @@ All [input](#inputs) properties are implicitly available as output properties. A
         <span class="property-indicator"></span>
         <span class="property-type">string</span>
     </dt>
-    <dd>{{% md %}}The provider-assigned unique ID for this managed resource.{{% /md %}}</dd>
-    <dt class="property-"
+    <dd>{{% md %}}The provider-assigned unique ID for this managed resource.{{% /md %}}</dd><dt class="property-"
             title="">
         <span id="receivingrecords_csharp">
 <a href="#receivingrecords_csharp" style="color: inherit; text-decoration: inherit;">Receiving<wbr>Records</a>
@@ -543,8 +505,7 @@ All [input](#inputs) properties are implicitly available as output properties. A
         <span class="property-type"><a href="#domainreceivingrecord">List&lt;Domain<wbr>Receiving<wbr>Record&gt;</a></span>
     </dt>
     <dd>{{% md %}}A list of DNS records for receiving validation.
-{{% /md %}}</dd>
-    <dt class="property-"
+{{% /md %}}</dd><dt class="property-"
             title="">
         <span id="sendingrecords_csharp">
 <a href="#sendingrecords_csharp" style="color: inherit; text-decoration: inherit;">Sending<wbr>Records</a>
@@ -553,8 +514,7 @@ All [input](#inputs) properties are implicitly available as output properties. A
         <span class="property-type"><a href="#domainsendingrecord">List&lt;Domain<wbr>Sending<wbr>Record&gt;</a></span>
     </dt>
     <dd>{{% md %}}A list of DNS records for sending validation.
-{{% /md %}}</dd>
-    <dt class="property-"
+{{% /md %}}</dd><dt class="property-"
             title="">
         <span id="smtplogin_csharp">
 <a href="#smtplogin_csharp" style="color: inherit; text-decoration: inherit;">Smtp<wbr>Login</a>
@@ -563,14 +523,11 @@ All [input](#inputs) properties are implicitly available as output properties. A
         <span class="property-type">string</span>
     </dt>
     <dd>{{% md %}}The login email for the SMTP server.
-{{% /md %}}</dd>
-</dl>
+{{% /md %}}</dd></dl>
 {{% /choosable %}}
 
 {{% choosable language go %}}
-<dl class="resources-properties">
-
-    <dt class="property-"
+<dl class="resources-properties"><dt class="property-"
             title="">
         <span id="id_go">
 <a href="#id_go" style="color: inherit; text-decoration: inherit;">Id</a>
@@ -578,8 +535,7 @@ All [input](#inputs) properties are implicitly available as output properties. A
         <span class="property-indicator"></span>
         <span class="property-type">string</span>
     </dt>
-    <dd>{{% md %}}The provider-assigned unique ID for this managed resource.{{% /md %}}</dd>
-    <dt class="property-"
+    <dd>{{% md %}}The provider-assigned unique ID for this managed resource.{{% /md %}}</dd><dt class="property-"
             title="">
         <span id="receivingrecords_go">
 <a href="#receivingrecords_go" style="color: inherit; text-decoration: inherit;">Receiving<wbr>Records</a>
@@ -588,8 +544,7 @@ All [input](#inputs) properties are implicitly available as output properties. A
         <span class="property-type"><a href="#domainreceivingrecord">[]Domain<wbr>Receiving<wbr>Record</a></span>
     </dt>
     <dd>{{% md %}}A list of DNS records for receiving validation.
-{{% /md %}}</dd>
-    <dt class="property-"
+{{% /md %}}</dd><dt class="property-"
             title="">
         <span id="sendingrecords_go">
 <a href="#sendingrecords_go" style="color: inherit; text-decoration: inherit;">Sending<wbr>Records</a>
@@ -598,8 +553,7 @@ All [input](#inputs) properties are implicitly available as output properties. A
         <span class="property-type"><a href="#domainsendingrecord">[]Domain<wbr>Sending<wbr>Record</a></span>
     </dt>
     <dd>{{% md %}}A list of DNS records for sending validation.
-{{% /md %}}</dd>
-    <dt class="property-"
+{{% /md %}}</dd><dt class="property-"
             title="">
         <span id="smtplogin_go">
 <a href="#smtplogin_go" style="color: inherit; text-decoration: inherit;">Smtp<wbr>Login</a>
@@ -608,14 +562,11 @@ All [input](#inputs) properties are implicitly available as output properties. A
         <span class="property-type">string</span>
     </dt>
     <dd>{{% md %}}The login email for the SMTP server.
-{{% /md %}}</dd>
-</dl>
+{{% /md %}}</dd></dl>
 {{% /choosable %}}
 
 {{% choosable language nodejs %}}
-<dl class="resources-properties">
-
-    <dt class="property-"
+<dl class="resources-properties"><dt class="property-"
             title="">
         <span id="id_nodejs">
 <a href="#id_nodejs" style="color: inherit; text-decoration: inherit;">id</a>
@@ -623,8 +574,7 @@ All [input](#inputs) properties are implicitly available as output properties. A
         <span class="property-indicator"></span>
         <span class="property-type">string</span>
     </dt>
-    <dd>{{% md %}}The provider-assigned unique ID for this managed resource.{{% /md %}}</dd>
-    <dt class="property-"
+    <dd>{{% md %}}The provider-assigned unique ID for this managed resource.{{% /md %}}</dd><dt class="property-"
             title="">
         <span id="receivingrecords_nodejs">
 <a href="#receivingrecords_nodejs" style="color: inherit; text-decoration: inherit;">receiving<wbr>Records</a>
@@ -633,8 +583,7 @@ All [input](#inputs) properties are implicitly available as output properties. A
         <span class="property-type"><a href="#domainreceivingrecord">Domain<wbr>Receiving<wbr>Record[]</a></span>
     </dt>
     <dd>{{% md %}}A list of DNS records for receiving validation.
-{{% /md %}}</dd>
-    <dt class="property-"
+{{% /md %}}</dd><dt class="property-"
             title="">
         <span id="sendingrecords_nodejs">
 <a href="#sendingrecords_nodejs" style="color: inherit; text-decoration: inherit;">sending<wbr>Records</a>
@@ -643,8 +592,7 @@ All [input](#inputs) properties are implicitly available as output properties. A
         <span class="property-type"><a href="#domainsendingrecord">Domain<wbr>Sending<wbr>Record[]</a></span>
     </dt>
     <dd>{{% md %}}A list of DNS records for sending validation.
-{{% /md %}}</dd>
-    <dt class="property-"
+{{% /md %}}</dd><dt class="property-"
             title="">
         <span id="smtplogin_nodejs">
 <a href="#smtplogin_nodejs" style="color: inherit; text-decoration: inherit;">smtp<wbr>Login</a>
@@ -653,14 +601,11 @@ All [input](#inputs) properties are implicitly available as output properties. A
         <span class="property-type">string</span>
     </dt>
     <dd>{{% md %}}The login email for the SMTP server.
-{{% /md %}}</dd>
-</dl>
+{{% /md %}}</dd></dl>
 {{% /choosable %}}
 
 {{% choosable language python %}}
-<dl class="resources-properties">
-
-    <dt class="property-"
+<dl class="resources-properties"><dt class="property-"
             title="">
         <span id="id_python">
 <a href="#id_python" style="color: inherit; text-decoration: inherit;">id</a>
@@ -668,8 +613,7 @@ All [input](#inputs) properties are implicitly available as output properties. A
         <span class="property-indicator"></span>
         <span class="property-type">str</span>
     </dt>
-    <dd>{{% md %}}The provider-assigned unique ID for this managed resource.{{% /md %}}</dd>
-    <dt class="property-"
+    <dd>{{% md %}}The provider-assigned unique ID for this managed resource.{{% /md %}}</dd><dt class="property-"
             title="">
         <span id="receiving_records_python">
 <a href="#receiving_records_python" style="color: inherit; text-decoration: inherit;">receiving_<wbr>records</a>
@@ -678,8 +622,7 @@ All [input](#inputs) properties are implicitly available as output properties. A
         <span class="property-type"><a href="#domainreceivingrecord">Sequence[Domain<wbr>Receiving<wbr>Record]</a></span>
     </dt>
     <dd>{{% md %}}A list of DNS records for receiving validation.
-{{% /md %}}</dd>
-    <dt class="property-"
+{{% /md %}}</dd><dt class="property-"
             title="">
         <span id="sending_records_python">
 <a href="#sending_records_python" style="color: inherit; text-decoration: inherit;">sending_<wbr>records</a>
@@ -688,8 +631,7 @@ All [input](#inputs) properties are implicitly available as output properties. A
         <span class="property-type"><a href="#domainsendingrecord">Sequence[Domain<wbr>Sending<wbr>Record]</a></span>
     </dt>
     <dd>{{% md %}}A list of DNS records for sending validation.
-{{% /md %}}</dd>
-    <dt class="property-"
+{{% /md %}}</dd><dt class="property-"
             title="">
         <span id="smtp_login_python">
 <a href="#smtp_login_python" style="color: inherit; text-decoration: inherit;">smtp_<wbr>login</a>
@@ -698,8 +640,7 @@ All [input](#inputs) properties are implicitly available as output properties. A
         <span class="property-type">str</span>
     </dt>
     <dd>{{% md %}}The login email for the SMTP server.
-{{% /md %}}</dd>
-</dl>
+{{% /md %}}</dd></dl>
 {{% /choosable %}}
 
 
@@ -826,9 +767,7 @@ The following state arguments are supported:
 
 
 {{% choosable language csharp %}}
-<dl class="resources-properties">
-
-    <dt class="property-optional"
+<dl class="resources-properties"><dt class="property-optional"
             title="Optional">
         <span id="state_name_csharp">
 <a href="#state_name_csharp" style="color: inherit; text-decoration: inherit;">Name</a>
@@ -837,8 +776,7 @@ The following state arguments are supported:
         <span class="property-type">string</span>
     </dt>
     <dd>{{% md %}}The domain to add to Mailgun
-{{% /md %}}</dd>
-    <dt class="property-optional"
+{{% /md %}}</dd><dt class="property-optional"
             title="Optional">
         <span id="state_receivingrecords_csharp">
 <a href="#state_receivingrecords_csharp" style="color: inherit; text-decoration: inherit;">Receiving<wbr>Records</a>
@@ -847,8 +785,7 @@ The following state arguments are supported:
         <span class="property-type"><a href="#domainreceivingrecord">List&lt;Domain<wbr>Receiving<wbr>Record<wbr>Args&gt;</a></span>
     </dt>
     <dd>{{% md %}}A list of DNS records for receiving validation.
-{{% /md %}}</dd>
-    <dt class="property-optional"
+{{% /md %}}</dd><dt class="property-optional"
             title="Optional">
         <span id="state_region_csharp">
 <a href="#state_region_csharp" style="color: inherit; text-decoration: inherit;">Region</a>
@@ -857,8 +794,7 @@ The following state arguments are supported:
         <span class="property-type">string</span>
     </dt>
     <dd>{{% md %}}The region where domain will be created. Default value is `us`.
-{{% /md %}}</dd>
-    <dt class="property-optional"
+{{% /md %}}</dd><dt class="property-optional"
             title="Optional">
         <span id="state_sendingrecords_csharp">
 <a href="#state_sendingrecords_csharp" style="color: inherit; text-decoration: inherit;">Sending<wbr>Records</a>
@@ -867,8 +803,7 @@ The following state arguments are supported:
         <span class="property-type"><a href="#domainsendingrecord">List&lt;Domain<wbr>Sending<wbr>Record<wbr>Args&gt;</a></span>
     </dt>
     <dd>{{% md %}}A list of DNS records for sending validation.
-{{% /md %}}</dd>
-    <dt class="property-optional"
+{{% /md %}}</dd><dt class="property-optional"
             title="Optional">
         <span id="state_smtplogin_csharp">
 <a href="#state_smtplogin_csharp" style="color: inherit; text-decoration: inherit;">Smtp<wbr>Login</a>
@@ -877,8 +812,7 @@ The following state arguments are supported:
         <span class="property-type">string</span>
     </dt>
     <dd>{{% md %}}The login email for the SMTP server.
-{{% /md %}}</dd>
-    <dt class="property-optional"
+{{% /md %}}</dd><dt class="property-optional"
             title="Optional">
         <span id="state_smtppassword_csharp">
 <a href="#state_smtppassword_csharp" style="color: inherit; text-decoration: inherit;">Smtp<wbr>Password</a>
@@ -887,8 +821,7 @@ The following state arguments are supported:
         <span class="property-type">string</span>
     </dt>
     <dd>{{% md %}}Password for SMTP authentication
-{{% /md %}}</dd>
-    <dt class="property-optional"
+{{% /md %}}</dd><dt class="property-optional"
             title="Optional">
         <span id="state_spamaction_csharp">
 <a href="#state_spamaction_csharp" style="color: inherit; text-decoration: inherit;">Spam<wbr>Action</a>
@@ -899,8 +832,7 @@ The following state arguments are supported:
     <dd>{{% md %}}`disabled` or `tag` Disable, no spam
 filtering will occur for inbound messages. Tag, messages
 will be tagged with a spam header.
-{{% /md %}}</dd>
-    <dt class="property-optional"
+{{% /md %}}</dd><dt class="property-optional"
             title="Optional">
         <span id="state_wildcard_csharp">
 <a href="#state_wildcard_csharp" style="color: inherit; text-decoration: inherit;">Wildcard</a>
@@ -910,14 +842,11 @@ will be tagged with a spam header.
     </dt>
     <dd>{{% md %}}Boolean that determines whether
 the domain will accept email for sub-domains.
-{{% /md %}}</dd>
-</dl>
+{{% /md %}}</dd></dl>
 {{% /choosable %}}
 
 {{% choosable language go %}}
-<dl class="resources-properties">
-
-    <dt class="property-optional"
+<dl class="resources-properties"><dt class="property-optional"
             title="Optional">
         <span id="state_name_go">
 <a href="#state_name_go" style="color: inherit; text-decoration: inherit;">Name</a>
@@ -926,8 +855,7 @@ the domain will accept email for sub-domains.
         <span class="property-type">string</span>
     </dt>
     <dd>{{% md %}}The domain to add to Mailgun
-{{% /md %}}</dd>
-    <dt class="property-optional"
+{{% /md %}}</dd><dt class="property-optional"
             title="Optional">
         <span id="state_receivingrecords_go">
 <a href="#state_receivingrecords_go" style="color: inherit; text-decoration: inherit;">Receiving<wbr>Records</a>
@@ -936,8 +864,7 @@ the domain will accept email for sub-domains.
         <span class="property-type"><a href="#domainreceivingrecord">[]Domain<wbr>Receiving<wbr>Record</a></span>
     </dt>
     <dd>{{% md %}}A list of DNS records for receiving validation.
-{{% /md %}}</dd>
-    <dt class="property-optional"
+{{% /md %}}</dd><dt class="property-optional"
             title="Optional">
         <span id="state_region_go">
 <a href="#state_region_go" style="color: inherit; text-decoration: inherit;">Region</a>
@@ -946,8 +873,7 @@ the domain will accept email for sub-domains.
         <span class="property-type">string</span>
     </dt>
     <dd>{{% md %}}The region where domain will be created. Default value is `us`.
-{{% /md %}}</dd>
-    <dt class="property-optional"
+{{% /md %}}</dd><dt class="property-optional"
             title="Optional">
         <span id="state_sendingrecords_go">
 <a href="#state_sendingrecords_go" style="color: inherit; text-decoration: inherit;">Sending<wbr>Records</a>
@@ -956,8 +882,7 @@ the domain will accept email for sub-domains.
         <span class="property-type"><a href="#domainsendingrecord">[]Domain<wbr>Sending<wbr>Record</a></span>
     </dt>
     <dd>{{% md %}}A list of DNS records for sending validation.
-{{% /md %}}</dd>
-    <dt class="property-optional"
+{{% /md %}}</dd><dt class="property-optional"
             title="Optional">
         <span id="state_smtplogin_go">
 <a href="#state_smtplogin_go" style="color: inherit; text-decoration: inherit;">Smtp<wbr>Login</a>
@@ -966,8 +891,7 @@ the domain will accept email for sub-domains.
         <span class="property-type">string</span>
     </dt>
     <dd>{{% md %}}The login email for the SMTP server.
-{{% /md %}}</dd>
-    <dt class="property-optional"
+{{% /md %}}</dd><dt class="property-optional"
             title="Optional">
         <span id="state_smtppassword_go">
 <a href="#state_smtppassword_go" style="color: inherit; text-decoration: inherit;">Smtp<wbr>Password</a>
@@ -976,8 +900,7 @@ the domain will accept email for sub-domains.
         <span class="property-type">string</span>
     </dt>
     <dd>{{% md %}}Password for SMTP authentication
-{{% /md %}}</dd>
-    <dt class="property-optional"
+{{% /md %}}</dd><dt class="property-optional"
             title="Optional">
         <span id="state_spamaction_go">
 <a href="#state_spamaction_go" style="color: inherit; text-decoration: inherit;">Spam<wbr>Action</a>
@@ -988,8 +911,7 @@ the domain will accept email for sub-domains.
     <dd>{{% md %}}`disabled` or `tag` Disable, no spam
 filtering will occur for inbound messages. Tag, messages
 will be tagged with a spam header.
-{{% /md %}}</dd>
-    <dt class="property-optional"
+{{% /md %}}</dd><dt class="property-optional"
             title="Optional">
         <span id="state_wildcard_go">
 <a href="#state_wildcard_go" style="color: inherit; text-decoration: inherit;">Wildcard</a>
@@ -999,14 +921,11 @@ will be tagged with a spam header.
     </dt>
     <dd>{{% md %}}Boolean that determines whether
 the domain will accept email for sub-domains.
-{{% /md %}}</dd>
-</dl>
+{{% /md %}}</dd></dl>
 {{% /choosable %}}
 
 {{% choosable language nodejs %}}
-<dl class="resources-properties">
-
-    <dt class="property-optional"
+<dl class="resources-properties"><dt class="property-optional"
             title="Optional">
         <span id="state_name_nodejs">
 <a href="#state_name_nodejs" style="color: inherit; text-decoration: inherit;">name</a>
@@ -1015,8 +934,7 @@ the domain will accept email for sub-domains.
         <span class="property-type">string</span>
     </dt>
     <dd>{{% md %}}The domain to add to Mailgun
-{{% /md %}}</dd>
-    <dt class="property-optional"
+{{% /md %}}</dd><dt class="property-optional"
             title="Optional">
         <span id="state_receivingrecords_nodejs">
 <a href="#state_receivingrecords_nodejs" style="color: inherit; text-decoration: inherit;">receiving<wbr>Records</a>
@@ -1025,8 +943,7 @@ the domain will accept email for sub-domains.
         <span class="property-type"><a href="#domainreceivingrecord">Domain<wbr>Receiving<wbr>Record[]</a></span>
     </dt>
     <dd>{{% md %}}A list of DNS records for receiving validation.
-{{% /md %}}</dd>
-    <dt class="property-optional"
+{{% /md %}}</dd><dt class="property-optional"
             title="Optional">
         <span id="state_region_nodejs">
 <a href="#state_region_nodejs" style="color: inherit; text-decoration: inherit;">region</a>
@@ -1035,8 +952,7 @@ the domain will accept email for sub-domains.
         <span class="property-type">string</span>
     </dt>
     <dd>{{% md %}}The region where domain will be created. Default value is `us`.
-{{% /md %}}</dd>
-    <dt class="property-optional"
+{{% /md %}}</dd><dt class="property-optional"
             title="Optional">
         <span id="state_sendingrecords_nodejs">
 <a href="#state_sendingrecords_nodejs" style="color: inherit; text-decoration: inherit;">sending<wbr>Records</a>
@@ -1045,8 +961,7 @@ the domain will accept email for sub-domains.
         <span class="property-type"><a href="#domainsendingrecord">Domain<wbr>Sending<wbr>Record[]</a></span>
     </dt>
     <dd>{{% md %}}A list of DNS records for sending validation.
-{{% /md %}}</dd>
-    <dt class="property-optional"
+{{% /md %}}</dd><dt class="property-optional"
             title="Optional">
         <span id="state_smtplogin_nodejs">
 <a href="#state_smtplogin_nodejs" style="color: inherit; text-decoration: inherit;">smtp<wbr>Login</a>
@@ -1055,8 +970,7 @@ the domain will accept email for sub-domains.
         <span class="property-type">string</span>
     </dt>
     <dd>{{% md %}}The login email for the SMTP server.
-{{% /md %}}</dd>
-    <dt class="property-optional"
+{{% /md %}}</dd><dt class="property-optional"
             title="Optional">
         <span id="state_smtppassword_nodejs">
 <a href="#state_smtppassword_nodejs" style="color: inherit; text-decoration: inherit;">smtp<wbr>Password</a>
@@ -1065,8 +979,7 @@ the domain will accept email for sub-domains.
         <span class="property-type">string</span>
     </dt>
     <dd>{{% md %}}Password for SMTP authentication
-{{% /md %}}</dd>
-    <dt class="property-optional"
+{{% /md %}}</dd><dt class="property-optional"
             title="Optional">
         <span id="state_spamaction_nodejs">
 <a href="#state_spamaction_nodejs" style="color: inherit; text-decoration: inherit;">spam<wbr>Action</a>
@@ -1077,8 +990,7 @@ the domain will accept email for sub-domains.
     <dd>{{% md %}}`disabled` or `tag` Disable, no spam
 filtering will occur for inbound messages. Tag, messages
 will be tagged with a spam header.
-{{% /md %}}</dd>
-    <dt class="property-optional"
+{{% /md %}}</dd><dt class="property-optional"
             title="Optional">
         <span id="state_wildcard_nodejs">
 <a href="#state_wildcard_nodejs" style="color: inherit; text-decoration: inherit;">wildcard</a>
@@ -1088,14 +1000,11 @@ will be tagged with a spam header.
     </dt>
     <dd>{{% md %}}Boolean that determines whether
 the domain will accept email for sub-domains.
-{{% /md %}}</dd>
-</dl>
+{{% /md %}}</dd></dl>
 {{% /choosable %}}
 
 {{% choosable language python %}}
-<dl class="resources-properties">
-
-    <dt class="property-optional"
+<dl class="resources-properties"><dt class="property-optional"
             title="Optional">
         <span id="state_name_python">
 <a href="#state_name_python" style="color: inherit; text-decoration: inherit;">name</a>
@@ -1104,8 +1013,7 @@ the domain will accept email for sub-domains.
         <span class="property-type">str</span>
     </dt>
     <dd>{{% md %}}The domain to add to Mailgun
-{{% /md %}}</dd>
-    <dt class="property-optional"
+{{% /md %}}</dd><dt class="property-optional"
             title="Optional">
         <span id="state_receiving_records_python">
 <a href="#state_receiving_records_python" style="color: inherit; text-decoration: inherit;">receiving_<wbr>records</a>
@@ -1114,8 +1022,7 @@ the domain will accept email for sub-domains.
         <span class="property-type"><a href="#domainreceivingrecord">Sequence[Domain<wbr>Receiving<wbr>Record<wbr>Args]</a></span>
     </dt>
     <dd>{{% md %}}A list of DNS records for receiving validation.
-{{% /md %}}</dd>
-    <dt class="property-optional"
+{{% /md %}}</dd><dt class="property-optional"
             title="Optional">
         <span id="state_region_python">
 <a href="#state_region_python" style="color: inherit; text-decoration: inherit;">region</a>
@@ -1124,8 +1031,7 @@ the domain will accept email for sub-domains.
         <span class="property-type">str</span>
     </dt>
     <dd>{{% md %}}The region where domain will be created. Default value is `us`.
-{{% /md %}}</dd>
-    <dt class="property-optional"
+{{% /md %}}</dd><dt class="property-optional"
             title="Optional">
         <span id="state_sending_records_python">
 <a href="#state_sending_records_python" style="color: inherit; text-decoration: inherit;">sending_<wbr>records</a>
@@ -1134,8 +1040,7 @@ the domain will accept email for sub-domains.
         <span class="property-type"><a href="#domainsendingrecord">Sequence[Domain<wbr>Sending<wbr>Record<wbr>Args]</a></span>
     </dt>
     <dd>{{% md %}}A list of DNS records for sending validation.
-{{% /md %}}</dd>
-    <dt class="property-optional"
+{{% /md %}}</dd><dt class="property-optional"
             title="Optional">
         <span id="state_smtp_login_python">
 <a href="#state_smtp_login_python" style="color: inherit; text-decoration: inherit;">smtp_<wbr>login</a>
@@ -1144,8 +1049,7 @@ the domain will accept email for sub-domains.
         <span class="property-type">str</span>
     </dt>
     <dd>{{% md %}}The login email for the SMTP server.
-{{% /md %}}</dd>
-    <dt class="property-optional"
+{{% /md %}}</dd><dt class="property-optional"
             title="Optional">
         <span id="state_smtp_password_python">
 <a href="#state_smtp_password_python" style="color: inherit; text-decoration: inherit;">smtp_<wbr>password</a>
@@ -1154,8 +1058,7 @@ the domain will accept email for sub-domains.
         <span class="property-type">str</span>
     </dt>
     <dd>{{% md %}}Password for SMTP authentication
-{{% /md %}}</dd>
-    <dt class="property-optional"
+{{% /md %}}</dd><dt class="property-optional"
             title="Optional">
         <span id="state_spam_action_python">
 <a href="#state_spam_action_python" style="color: inherit; text-decoration: inherit;">spam_<wbr>action</a>
@@ -1166,8 +1069,7 @@ the domain will accept email for sub-domains.
     <dd>{{% md %}}`disabled` or `tag` Disable, no spam
 filtering will occur for inbound messages. Tag, messages
 will be tagged with a spam header.
-{{% /md %}}</dd>
-    <dt class="property-optional"
+{{% /md %}}</dd><dt class="property-optional"
             title="Optional">
         <span id="state_wildcard_python">
 <a href="#state_wildcard_python" style="color: inherit; text-decoration: inherit;">wildcard</a>
@@ -1177,8 +1079,7 @@ will be tagged with a spam header.
     </dt>
     <dd>{{% md %}}Boolean that determines whether
 the domain will accept email for sub-domains.
-{{% /md %}}</dd>
-</dl>
+{{% /md %}}</dd></dl>
 {{% /choosable %}}
 
 
@@ -1193,9 +1094,7 @@ the domain will accept email for sub-domains.
 <h4 id="domainreceivingrecord">Domain<wbr>Receiving<wbr>Record</h4>
 
 {{% choosable language csharp %}}
-<dl class="resources-properties">
-
-    <dt class="property-optional"
+<dl class="resources-properties"><dt class="property-optional"
             title="Optional">
         <span id="priority_csharp">
 <a href="#priority_csharp" style="color: inherit; text-decoration: inherit;">Priority</a>
@@ -1204,8 +1103,7 @@ the domain will accept email for sub-domains.
         <span class="property-type">string</span>
     </dt>
     <dd>{{% md %}}The priority of the record.
-{{% /md %}}</dd>
-    <dt class="property-optional"
+{{% /md %}}</dd><dt class="property-optional"
             title="Optional">
         <span id="recordtype_csharp">
 <a href="#recordtype_csharp" style="color: inherit; text-decoration: inherit;">Record<wbr>Type</a>
@@ -1214,8 +1112,7 @@ the domain will accept email for sub-domains.
         <span class="property-type">string</span>
     </dt>
     <dd>{{% md %}}The record type.
-{{% /md %}}</dd>
-    <dt class="property-optional"
+{{% /md %}}</dd><dt class="property-optional"
             title="Optional">
         <span id="valid_csharp">
 <a href="#valid_csharp" style="color: inherit; text-decoration: inherit;">Valid</a>
@@ -1224,8 +1121,7 @@ the domain will accept email for sub-domains.
         <span class="property-type">string</span>
     </dt>
     <dd>{{% md %}}`"valid"` if the record is valid.
-{{% /md %}}</dd>
-    <dt class="property-optional"
+{{% /md %}}</dd><dt class="property-optional"
             title="Optional">
         <span id="value_csharp">
 <a href="#value_csharp" style="color: inherit; text-decoration: inherit;">Value</a>
@@ -1234,14 +1130,11 @@ the domain will accept email for sub-domains.
         <span class="property-type">string</span>
     </dt>
     <dd>{{% md %}}The value of the record.
-{{% /md %}}</dd>
-</dl>
+{{% /md %}}</dd></dl>
 {{% /choosable %}}
 
 {{% choosable language go %}}
-<dl class="resources-properties">
-
-    <dt class="property-optional"
+<dl class="resources-properties"><dt class="property-optional"
             title="Optional">
         <span id="priority_go">
 <a href="#priority_go" style="color: inherit; text-decoration: inherit;">Priority</a>
@@ -1250,8 +1143,7 @@ the domain will accept email for sub-domains.
         <span class="property-type">string</span>
     </dt>
     <dd>{{% md %}}The priority of the record.
-{{% /md %}}</dd>
-    <dt class="property-optional"
+{{% /md %}}</dd><dt class="property-optional"
             title="Optional">
         <span id="recordtype_go">
 <a href="#recordtype_go" style="color: inherit; text-decoration: inherit;">Record<wbr>Type</a>
@@ -1260,8 +1152,7 @@ the domain will accept email for sub-domains.
         <span class="property-type">string</span>
     </dt>
     <dd>{{% md %}}The record type.
-{{% /md %}}</dd>
-    <dt class="property-optional"
+{{% /md %}}</dd><dt class="property-optional"
             title="Optional">
         <span id="valid_go">
 <a href="#valid_go" style="color: inherit; text-decoration: inherit;">Valid</a>
@@ -1270,8 +1161,7 @@ the domain will accept email for sub-domains.
         <span class="property-type">string</span>
     </dt>
     <dd>{{% md %}}`"valid"` if the record is valid.
-{{% /md %}}</dd>
-    <dt class="property-optional"
+{{% /md %}}</dd><dt class="property-optional"
             title="Optional">
         <span id="value_go">
 <a href="#value_go" style="color: inherit; text-decoration: inherit;">Value</a>
@@ -1280,14 +1170,11 @@ the domain will accept email for sub-domains.
         <span class="property-type">string</span>
     </dt>
     <dd>{{% md %}}The value of the record.
-{{% /md %}}</dd>
-</dl>
+{{% /md %}}</dd></dl>
 {{% /choosable %}}
 
 {{% choosable language nodejs %}}
-<dl class="resources-properties">
-
-    <dt class="property-optional"
+<dl class="resources-properties"><dt class="property-optional"
             title="Optional">
         <span id="priority_nodejs">
 <a href="#priority_nodejs" style="color: inherit; text-decoration: inherit;">priority</a>
@@ -1296,8 +1183,7 @@ the domain will accept email for sub-domains.
         <span class="property-type">string</span>
     </dt>
     <dd>{{% md %}}The priority of the record.
-{{% /md %}}</dd>
-    <dt class="property-optional"
+{{% /md %}}</dd><dt class="property-optional"
             title="Optional">
         <span id="recordtype_nodejs">
 <a href="#recordtype_nodejs" style="color: inherit; text-decoration: inherit;">record<wbr>Type</a>
@@ -1306,8 +1192,7 @@ the domain will accept email for sub-domains.
         <span class="property-type">string</span>
     </dt>
     <dd>{{% md %}}The record type.
-{{% /md %}}</dd>
-    <dt class="property-optional"
+{{% /md %}}</dd><dt class="property-optional"
             title="Optional">
         <span id="valid_nodejs">
 <a href="#valid_nodejs" style="color: inherit; text-decoration: inherit;">valid</a>
@@ -1316,8 +1201,7 @@ the domain will accept email for sub-domains.
         <span class="property-type">string</span>
     </dt>
     <dd>{{% md %}}`"valid"` if the record is valid.
-{{% /md %}}</dd>
-    <dt class="property-optional"
+{{% /md %}}</dd><dt class="property-optional"
             title="Optional">
         <span id="value_nodejs">
 <a href="#value_nodejs" style="color: inherit; text-decoration: inherit;">value</a>
@@ -1326,14 +1210,11 @@ the domain will accept email for sub-domains.
         <span class="property-type">string</span>
     </dt>
     <dd>{{% md %}}The value of the record.
-{{% /md %}}</dd>
-</dl>
+{{% /md %}}</dd></dl>
 {{% /choosable %}}
 
 {{% choosable language python %}}
-<dl class="resources-properties">
-
-    <dt class="property-optional"
+<dl class="resources-properties"><dt class="property-optional"
             title="Optional">
         <span id="priority_python">
 <a href="#priority_python" style="color: inherit; text-decoration: inherit;">priority</a>
@@ -1342,8 +1223,7 @@ the domain will accept email for sub-domains.
         <span class="property-type">str</span>
     </dt>
     <dd>{{% md %}}The priority of the record.
-{{% /md %}}</dd>
-    <dt class="property-optional"
+{{% /md %}}</dd><dt class="property-optional"
             title="Optional">
         <span id="record_type_python">
 <a href="#record_type_python" style="color: inherit; text-decoration: inherit;">record_<wbr>type</a>
@@ -1352,8 +1232,7 @@ the domain will accept email for sub-domains.
         <span class="property-type">str</span>
     </dt>
     <dd>{{% md %}}The record type.
-{{% /md %}}</dd>
-    <dt class="property-optional"
+{{% /md %}}</dd><dt class="property-optional"
             title="Optional">
         <span id="valid_python">
 <a href="#valid_python" style="color: inherit; text-decoration: inherit;">valid</a>
@@ -1362,8 +1241,7 @@ the domain will accept email for sub-domains.
         <span class="property-type">str</span>
     </dt>
     <dd>{{% md %}}`"valid"` if the record is valid.
-{{% /md %}}</dd>
-    <dt class="property-optional"
+{{% /md %}}</dd><dt class="property-optional"
             title="Optional">
         <span id="value_python">
 <a href="#value_python" style="color: inherit; text-decoration: inherit;">value</a>
@@ -1372,16 +1250,13 @@ the domain will accept email for sub-domains.
         <span class="property-type">str</span>
     </dt>
     <dd>{{% md %}}The value of the record.
-{{% /md %}}</dd>
-</dl>
+{{% /md %}}</dd></dl>
 {{% /choosable %}}
 
 <h4 id="domainsendingrecord">Domain<wbr>Sending<wbr>Record</h4>
 
 {{% choosable language csharp %}}
-<dl class="resources-properties">
-
-    <dt class="property-optional"
+<dl class="resources-properties"><dt class="property-optional"
             title="Optional">
         <span id="name_csharp">
 <a href="#name_csharp" style="color: inherit; text-decoration: inherit;">Name</a>
@@ -1390,8 +1265,7 @@ the domain will accept email for sub-domains.
         <span class="property-type">string</span>
     </dt>
     <dd>{{% md %}}The domain to add to Mailgun
-{{% /md %}}</dd>
-    <dt class="property-optional"
+{{% /md %}}</dd><dt class="property-optional"
             title="Optional">
         <span id="recordtype_csharp">
 <a href="#recordtype_csharp" style="color: inherit; text-decoration: inherit;">Record<wbr>Type</a>
@@ -1400,8 +1274,7 @@ the domain will accept email for sub-domains.
         <span class="property-type">string</span>
     </dt>
     <dd>{{% md %}}The record type.
-{{% /md %}}</dd>
-    <dt class="property-optional"
+{{% /md %}}</dd><dt class="property-optional"
             title="Optional">
         <span id="valid_csharp">
 <a href="#valid_csharp" style="color: inherit; text-decoration: inherit;">Valid</a>
@@ -1410,8 +1283,7 @@ the domain will accept email for sub-domains.
         <span class="property-type">string</span>
     </dt>
     <dd>{{% md %}}`"valid"` if the record is valid.
-{{% /md %}}</dd>
-    <dt class="property-optional"
+{{% /md %}}</dd><dt class="property-optional"
             title="Optional">
         <span id="value_csharp">
 <a href="#value_csharp" style="color: inherit; text-decoration: inherit;">Value</a>
@@ -1420,14 +1292,11 @@ the domain will accept email for sub-domains.
         <span class="property-type">string</span>
     </dt>
     <dd>{{% md %}}The value of the record.
-{{% /md %}}</dd>
-</dl>
+{{% /md %}}</dd></dl>
 {{% /choosable %}}
 
 {{% choosable language go %}}
-<dl class="resources-properties">
-
-    <dt class="property-optional"
+<dl class="resources-properties"><dt class="property-optional"
             title="Optional">
         <span id="name_go">
 <a href="#name_go" style="color: inherit; text-decoration: inherit;">Name</a>
@@ -1436,8 +1305,7 @@ the domain will accept email for sub-domains.
         <span class="property-type">string</span>
     </dt>
     <dd>{{% md %}}The domain to add to Mailgun
-{{% /md %}}</dd>
-    <dt class="property-optional"
+{{% /md %}}</dd><dt class="property-optional"
             title="Optional">
         <span id="recordtype_go">
 <a href="#recordtype_go" style="color: inherit; text-decoration: inherit;">Record<wbr>Type</a>
@@ -1446,8 +1314,7 @@ the domain will accept email for sub-domains.
         <span class="property-type">string</span>
     </dt>
     <dd>{{% md %}}The record type.
-{{% /md %}}</dd>
-    <dt class="property-optional"
+{{% /md %}}</dd><dt class="property-optional"
             title="Optional">
         <span id="valid_go">
 <a href="#valid_go" style="color: inherit; text-decoration: inherit;">Valid</a>
@@ -1456,8 +1323,7 @@ the domain will accept email for sub-domains.
         <span class="property-type">string</span>
     </dt>
     <dd>{{% md %}}`"valid"` if the record is valid.
-{{% /md %}}</dd>
-    <dt class="property-optional"
+{{% /md %}}</dd><dt class="property-optional"
             title="Optional">
         <span id="value_go">
 <a href="#value_go" style="color: inherit; text-decoration: inherit;">Value</a>
@@ -1466,14 +1332,11 @@ the domain will accept email for sub-domains.
         <span class="property-type">string</span>
     </dt>
     <dd>{{% md %}}The value of the record.
-{{% /md %}}</dd>
-</dl>
+{{% /md %}}</dd></dl>
 {{% /choosable %}}
 
 {{% choosable language nodejs %}}
-<dl class="resources-properties">
-
-    <dt class="property-optional"
+<dl class="resources-properties"><dt class="property-optional"
             title="Optional">
         <span id="name_nodejs">
 <a href="#name_nodejs" style="color: inherit; text-decoration: inherit;">name</a>
@@ -1482,8 +1345,7 @@ the domain will accept email for sub-domains.
         <span class="property-type">string</span>
     </dt>
     <dd>{{% md %}}The domain to add to Mailgun
-{{% /md %}}</dd>
-    <dt class="property-optional"
+{{% /md %}}</dd><dt class="property-optional"
             title="Optional">
         <span id="recordtype_nodejs">
 <a href="#recordtype_nodejs" style="color: inherit; text-decoration: inherit;">record<wbr>Type</a>
@@ -1492,8 +1354,7 @@ the domain will accept email for sub-domains.
         <span class="property-type">string</span>
     </dt>
     <dd>{{% md %}}The record type.
-{{% /md %}}</dd>
-    <dt class="property-optional"
+{{% /md %}}</dd><dt class="property-optional"
             title="Optional">
         <span id="valid_nodejs">
 <a href="#valid_nodejs" style="color: inherit; text-decoration: inherit;">valid</a>
@@ -1502,8 +1363,7 @@ the domain will accept email for sub-domains.
         <span class="property-type">string</span>
     </dt>
     <dd>{{% md %}}`"valid"` if the record is valid.
-{{% /md %}}</dd>
-    <dt class="property-optional"
+{{% /md %}}</dd><dt class="property-optional"
             title="Optional">
         <span id="value_nodejs">
 <a href="#value_nodejs" style="color: inherit; text-decoration: inherit;">value</a>
@@ -1512,14 +1372,11 @@ the domain will accept email for sub-domains.
         <span class="property-type">string</span>
     </dt>
     <dd>{{% md %}}The value of the record.
-{{% /md %}}</dd>
-</dl>
+{{% /md %}}</dd></dl>
 {{% /choosable %}}
 
 {{% choosable language python %}}
-<dl class="resources-properties">
-
-    <dt class="property-optional"
+<dl class="resources-properties"><dt class="property-optional"
             title="Optional">
         <span id="name_python">
 <a href="#name_python" style="color: inherit; text-decoration: inherit;">name</a>
@@ -1528,8 +1385,7 @@ the domain will accept email for sub-domains.
         <span class="property-type">str</span>
     </dt>
     <dd>{{% md %}}The domain to add to Mailgun
-{{% /md %}}</dd>
-    <dt class="property-optional"
+{{% /md %}}</dd><dt class="property-optional"
             title="Optional">
         <span id="record_type_python">
 <a href="#record_type_python" style="color: inherit; text-decoration: inherit;">record_<wbr>type</a>
@@ -1538,8 +1394,7 @@ the domain will accept email for sub-domains.
         <span class="property-type">str</span>
     </dt>
     <dd>{{% md %}}The record type.
-{{% /md %}}</dd>
-    <dt class="property-optional"
+{{% /md %}}</dd><dt class="property-optional"
             title="Optional">
         <span id="valid_python">
 <a href="#valid_python" style="color: inherit; text-decoration: inherit;">valid</a>
@@ -1548,8 +1403,7 @@ the domain will accept email for sub-domains.
         <span class="property-type">str</span>
     </dt>
     <dd>{{% md %}}`"valid"` if the record is valid.
-{{% /md %}}</dd>
-    <dt class="property-optional"
+{{% /md %}}</dd><dt class="property-optional"
             title="Optional">
         <span id="value_python">
 <a href="#value_python" style="color: inherit; text-decoration: inherit;">value</a>
@@ -1558,8 +1412,7 @@ the domain will accept email for sub-domains.
         <span class="property-type">str</span>
     </dt>
     <dd>{{% md %}}The value of the record.
-{{% /md %}}</dd>
-</dl>
+{{% /md %}}</dd></dl>
 {{% /choosable %}}
 ## Import
 
@@ -1582,6 +1435,6 @@ hcl
 	<dt>License</dt>
 	<dd>Apache-2.0</dd>
 	<dt>Notes</dt>
-	<dd>This Pulumi package is based on the [`mailgun` Terraform Provider](https://github.com/terraform-providers/terraform-provider-mailgun).</dd>
+	<dd>{{% md %}}This Pulumi package is based on the [`mailgun` Terraform Provider](https://github.com/terraform-providers/terraform-provider-mailgun).{{% /md %}}</dd>
 </dl>
 

@@ -1,8 +1,8 @@
 
 ---
 title: "Template"
-title_tag: "Resource Template | Package Civo"
-meta_desc: "Explore the Template resource of the Civo package, including examples, input properties, output properties, lookup functions, and supporting types. Provides a Civo Template resource."
+title_tag: "civo.Template"
+meta_desc: "Documentation for the civo.Template resource with examples, input properties, output properties, lookup functions, and supporting types."
 ---
 
 
@@ -37,9 +37,7 @@ This can be used to create, modify, and delete Templates.
 
 {{% choosable language nodejs %}}
 
-<dl class="resources-properties">
-  
-    <dt
+<dl class="resources-properties"><dt
         class="property-required" title="Required">
         <span>name</span>
         <span class="property-indicator"></span>
@@ -47,9 +45,7 @@ This can be used to create, modify, and delete Templates.
     </dt>
     <dd>
       The unique name of the resource.
-    </dd>
-  
-    <dt
+    </dd><dt
         class="property-required" title="Required">
         <span>args</span>
         <span class="property-indicator"></span>
@@ -57,9 +53,7 @@ This can be used to create, modify, and delete Templates.
     </dt>
     <dd>
       The arguments to resource properties.
-    </dd>
-  
-    <dt
+    </dd><dt
         class="property-optional" title="Optional">
         <span>opts</span>
         <span class="property-indicator"></span>
@@ -67,10 +61,7 @@ This can be used to create, modify, and delete Templates.
     </dt>
     <dd>
       Bag of options to control resource&#39;s behavior.
-    </dd>
-  
-
-</dl>
+    </dd></dl>
 
 {{% /choosable %}}
 
@@ -96,9 +87,7 @@ This can be used to create, modify, and delete Templates.
 
 {{% choosable language go %}}
 
-<dl class="resources-properties">
-  
-    <dt
+<dl class="resources-properties"><dt
         class="property-optional" title="Optional">
         <span>ctx</span>
         <span class="property-indicator"></span>
@@ -106,9 +95,7 @@ This can be used to create, modify, and delete Templates.
     </dt>
     <dd>
       Context object for the current deployment.
-    </dd>
-  
-    <dt
+    </dd><dt
         class="property-required" title="Required">
         <span>name</span>
         <span class="property-indicator"></span>
@@ -116,9 +103,7 @@ This can be used to create, modify, and delete Templates.
     </dt>
     <dd>
       The unique name of the resource.
-    </dd>
-  
-    <dt
+    </dd><dt
         class="property-required" title="Required">
         <span>args</span>
         <span class="property-indicator"></span>
@@ -126,9 +111,7 @@ This can be used to create, modify, and delete Templates.
     </dt>
     <dd>
       The arguments to resource properties.
-    </dd>
-  
-    <dt
+    </dd><dt
         class="property-optional" title="Optional">
         <span>opts</span>
         <span class="property-indicator"></span>
@@ -136,18 +119,13 @@ This can be used to create, modify, and delete Templates.
     </dt>
     <dd>
       Bag of options to control resource&#39;s behavior.
-    </dd>
-  
-
-</dl>
+    </dd></dl>
 
 {{% /choosable %}}
 
 {{% choosable language csharp %}}
 
-<dl class="resources-properties">
-  
-    <dt
+<dl class="resources-properties"><dt
         class="property-required" title="Required">
         <span>name</span>
         <span class="property-indicator"></span>
@@ -155,9 +133,7 @@ This can be used to create, modify, and delete Templates.
     </dt>
     <dd>
       The unique name of the resource.
-    </dd>
-  
-    <dt
+    </dd><dt
         class="property-required" title="Required">
         <span>args</span>
         <span class="property-indicator"></span>
@@ -165,9 +141,7 @@ This can be used to create, modify, and delete Templates.
     </dt>
     <dd>
       The arguments to resource properties.
-    </dd>
-  
-    <dt
+    </dd><dt
         class="property-optional" title="Optional">
         <span>opts</span>
         <span class="property-indicator"></span>
@@ -175,10 +149,7 @@ This can be used to create, modify, and delete Templates.
     </dt>
     <dd>
       Bag of options to control resource&#39;s behavior.
-    </dd>
-  
-
-</dl>
+    </dd></dl>
 
 {{% /choosable %}}
 
@@ -193,9 +164,7 @@ The Template resource accepts the following [input]({{< relref "/docs/intro/conc
 
 
 {{% choosable language csharp %}}
-<dl class="resources-properties">
-
-    <dt class="property-required"
+<dl class="resources-properties"><dt class="property-required"
             title="Required">
         <span id="code_csharp">
 <a href="#code_csharp" style="color: inherit; text-decoration: inherit;">Code</a>
@@ -204,8 +173,7 @@ The Template resource accepts the following [input]({{< relref "/docs/intro/conc
         <span class="property-type">string</span>
     </dt>
     <dd>{{% md %}}This is a unqiue, alphanumerical, short, human readable code for the template.
-{{% /md %}}</dd>
-    <dt class="property-optional"
+{{% /md %}}</dd><dt class="property-optional"
             title="Optional">
         <span id="cloudconfig_csharp">
 <a href="#cloudconfig_csharp" style="color: inherit; text-decoration: inherit;">Cloud<wbr>Config</a>
@@ -221,8 +189,7 @@ replaced with the random password generated by the system, `$HOSTNAME` is the fu
 domain name of the instance and `$SSH_KEY` will be the content of the SSH public key.
 (this is technically optional, but you won't really be able to use instances without it -
 see our learn guide on templates for more information).
-{{% /md %}}</dd>
-    <dt class="property-optional"
+{{% /md %}}</dd><dt class="property-optional"
             title="Optional">
         <span id="defaultusername_csharp">
 <a href="#defaultusername_csharp" style="color: inherit; text-decoration: inherit;">Default<wbr>Username</a>
@@ -231,8 +198,7 @@ see our learn guide on templates for more information).
         <span class="property-type">string</span>
     </dt>
     <dd>{{% md %}}The default username to suggest that the user creates
-{{% /md %}}</dd>
-    <dt class="property-optional"
+{{% /md %}}</dd><dt class="property-optional"
             title="Optional">
         <span id="description_csharp">
 <a href="#description_csharp" style="color: inherit; text-decoration: inherit;">Description</a>
@@ -241,8 +207,7 @@ see our learn guide on templates for more information).
         <span class="property-type">string</span>
     </dt>
     <dd>{{% md %}}A multi-line description of the template, in Markdown format
-{{% /md %}}</dd>
-    <dt class="property-optional"
+{{% /md %}}</dd><dt class="property-optional"
             title="Optional">
         <span id="imageid_csharp">
 <a href="#imageid_csharp" style="color: inherit; text-decoration: inherit;">Image<wbr>Id</a>
@@ -252,8 +217,7 @@ see our learn guide on templates for more information).
     </dt>
     <dd>{{% md %}}This is the Image ID of any default template or the ID of another template
 either owned by you or global (optional; but must be specified if no volume_id is specified).
-{{% /md %}}</dd>
-    <dt class="property-optional"
+{{% /md %}}</dd><dt class="property-optional"
             title="Optional">
         <span id="name_csharp">
 <a href="#name_csharp" style="color: inherit; text-decoration: inherit;">Name</a>
@@ -262,8 +226,7 @@ either owned by you or global (optional; but must be specified if no volume_id i
         <span class="property-type">string</span>
     </dt>
     <dd>{{% md %}}This is a short human readable name for the template
-{{% /md %}}</dd>
-    <dt class="property-optional"
+{{% /md %}}</dd><dt class="property-optional"
             title="Optional">
         <span id="shortdescription_csharp">
 <a href="#shortdescription_csharp" style="color: inherit; text-decoration: inherit;">Short<wbr>Description</a>
@@ -272,8 +235,7 @@ either owned by you or global (optional; but must be specified if no volume_id i
         <span class="property-type">string</span>
     </dt>
     <dd>{{% md %}}A one line description of the template
-{{% /md %}}</dd>
-    <dt class="property-optional"
+{{% /md %}}</dd><dt class="property-optional"
             title="Optional">
         <span id="volumeid_csharp">
 <a href="#volumeid_csharp" style="color: inherit; text-decoration: inherit;">Volume<wbr>Id</a>
@@ -283,14 +245,11 @@ either owned by you or global (optional; but must be specified if no volume_id i
     </dt>
     <dd>{{% md %}}This is the ID of a bootable volume, either owned by you or global
 (optional; but must be specified if no image_id is specified)
-{{% /md %}}</dd>
-</dl>
+{{% /md %}}</dd></dl>
 {{% /choosable %}}
 
 {{% choosable language go %}}
-<dl class="resources-properties">
-
-    <dt class="property-required"
+<dl class="resources-properties"><dt class="property-required"
             title="Required">
         <span id="code_go">
 <a href="#code_go" style="color: inherit; text-decoration: inherit;">Code</a>
@@ -299,8 +258,7 @@ either owned by you or global (optional; but must be specified if no volume_id i
         <span class="property-type">string</span>
     </dt>
     <dd>{{% md %}}This is a unqiue, alphanumerical, short, human readable code for the template.
-{{% /md %}}</dd>
-    <dt class="property-optional"
+{{% /md %}}</dd><dt class="property-optional"
             title="Optional">
         <span id="cloudconfig_go">
 <a href="#cloudconfig_go" style="color: inherit; text-decoration: inherit;">Cloud<wbr>Config</a>
@@ -316,8 +274,7 @@ replaced with the random password generated by the system, `$HOSTNAME` is the fu
 domain name of the instance and `$SSH_KEY` will be the content of the SSH public key.
 (this is technically optional, but you won't really be able to use instances without it -
 see our learn guide on templates for more information).
-{{% /md %}}</dd>
-    <dt class="property-optional"
+{{% /md %}}</dd><dt class="property-optional"
             title="Optional">
         <span id="defaultusername_go">
 <a href="#defaultusername_go" style="color: inherit; text-decoration: inherit;">Default<wbr>Username</a>
@@ -326,8 +283,7 @@ see our learn guide on templates for more information).
         <span class="property-type">string</span>
     </dt>
     <dd>{{% md %}}The default username to suggest that the user creates
-{{% /md %}}</dd>
-    <dt class="property-optional"
+{{% /md %}}</dd><dt class="property-optional"
             title="Optional">
         <span id="description_go">
 <a href="#description_go" style="color: inherit; text-decoration: inherit;">Description</a>
@@ -336,8 +292,7 @@ see our learn guide on templates for more information).
         <span class="property-type">string</span>
     </dt>
     <dd>{{% md %}}A multi-line description of the template, in Markdown format
-{{% /md %}}</dd>
-    <dt class="property-optional"
+{{% /md %}}</dd><dt class="property-optional"
             title="Optional">
         <span id="imageid_go">
 <a href="#imageid_go" style="color: inherit; text-decoration: inherit;">Image<wbr>Id</a>
@@ -347,8 +302,7 @@ see our learn guide on templates for more information).
     </dt>
     <dd>{{% md %}}This is the Image ID of any default template or the ID of another template
 either owned by you or global (optional; but must be specified if no volume_id is specified).
-{{% /md %}}</dd>
-    <dt class="property-optional"
+{{% /md %}}</dd><dt class="property-optional"
             title="Optional">
         <span id="name_go">
 <a href="#name_go" style="color: inherit; text-decoration: inherit;">Name</a>
@@ -357,8 +311,7 @@ either owned by you or global (optional; but must be specified if no volume_id i
         <span class="property-type">string</span>
     </dt>
     <dd>{{% md %}}This is a short human readable name for the template
-{{% /md %}}</dd>
-    <dt class="property-optional"
+{{% /md %}}</dd><dt class="property-optional"
             title="Optional">
         <span id="shortdescription_go">
 <a href="#shortdescription_go" style="color: inherit; text-decoration: inherit;">Short<wbr>Description</a>
@@ -367,8 +320,7 @@ either owned by you or global (optional; but must be specified if no volume_id i
         <span class="property-type">string</span>
     </dt>
     <dd>{{% md %}}A one line description of the template
-{{% /md %}}</dd>
-    <dt class="property-optional"
+{{% /md %}}</dd><dt class="property-optional"
             title="Optional">
         <span id="volumeid_go">
 <a href="#volumeid_go" style="color: inherit; text-decoration: inherit;">Volume<wbr>Id</a>
@@ -378,14 +330,11 @@ either owned by you or global (optional; but must be specified if no volume_id i
     </dt>
     <dd>{{% md %}}This is the ID of a bootable volume, either owned by you or global
 (optional; but must be specified if no image_id is specified)
-{{% /md %}}</dd>
-</dl>
+{{% /md %}}</dd></dl>
 {{% /choosable %}}
 
 {{% choosable language nodejs %}}
-<dl class="resources-properties">
-
-    <dt class="property-required"
+<dl class="resources-properties"><dt class="property-required"
             title="Required">
         <span id="code_nodejs">
 <a href="#code_nodejs" style="color: inherit; text-decoration: inherit;">code</a>
@@ -394,8 +343,7 @@ either owned by you or global (optional; but must be specified if no volume_id i
         <span class="property-type">string</span>
     </dt>
     <dd>{{% md %}}This is a unqiue, alphanumerical, short, human readable code for the template.
-{{% /md %}}</dd>
-    <dt class="property-optional"
+{{% /md %}}</dd><dt class="property-optional"
             title="Optional">
         <span id="cloudconfig_nodejs">
 <a href="#cloudconfig_nodejs" style="color: inherit; text-decoration: inherit;">cloud<wbr>Config</a>
@@ -411,8 +359,7 @@ replaced with the random password generated by the system, `$HOSTNAME` is the fu
 domain name of the instance and `$SSH_KEY` will be the content of the SSH public key.
 (this is technically optional, but you won't really be able to use instances without it -
 see our learn guide on templates for more information).
-{{% /md %}}</dd>
-    <dt class="property-optional"
+{{% /md %}}</dd><dt class="property-optional"
             title="Optional">
         <span id="defaultusername_nodejs">
 <a href="#defaultusername_nodejs" style="color: inherit; text-decoration: inherit;">default<wbr>Username</a>
@@ -421,8 +368,7 @@ see our learn guide on templates for more information).
         <span class="property-type">string</span>
     </dt>
     <dd>{{% md %}}The default username to suggest that the user creates
-{{% /md %}}</dd>
-    <dt class="property-optional"
+{{% /md %}}</dd><dt class="property-optional"
             title="Optional">
         <span id="description_nodejs">
 <a href="#description_nodejs" style="color: inherit; text-decoration: inherit;">description</a>
@@ -431,8 +377,7 @@ see our learn guide on templates for more information).
         <span class="property-type">string</span>
     </dt>
     <dd>{{% md %}}A multi-line description of the template, in Markdown format
-{{% /md %}}</dd>
-    <dt class="property-optional"
+{{% /md %}}</dd><dt class="property-optional"
             title="Optional">
         <span id="imageid_nodejs">
 <a href="#imageid_nodejs" style="color: inherit; text-decoration: inherit;">image<wbr>Id</a>
@@ -442,8 +387,7 @@ see our learn guide on templates for more information).
     </dt>
     <dd>{{% md %}}This is the Image ID of any default template or the ID of another template
 either owned by you or global (optional; but must be specified if no volume_id is specified).
-{{% /md %}}</dd>
-    <dt class="property-optional"
+{{% /md %}}</dd><dt class="property-optional"
             title="Optional">
         <span id="name_nodejs">
 <a href="#name_nodejs" style="color: inherit; text-decoration: inherit;">name</a>
@@ -452,8 +396,7 @@ either owned by you or global (optional; but must be specified if no volume_id i
         <span class="property-type">string</span>
     </dt>
     <dd>{{% md %}}This is a short human readable name for the template
-{{% /md %}}</dd>
-    <dt class="property-optional"
+{{% /md %}}</dd><dt class="property-optional"
             title="Optional">
         <span id="shortdescription_nodejs">
 <a href="#shortdescription_nodejs" style="color: inherit; text-decoration: inherit;">short<wbr>Description</a>
@@ -462,8 +405,7 @@ either owned by you or global (optional; but must be specified if no volume_id i
         <span class="property-type">string</span>
     </dt>
     <dd>{{% md %}}A one line description of the template
-{{% /md %}}</dd>
-    <dt class="property-optional"
+{{% /md %}}</dd><dt class="property-optional"
             title="Optional">
         <span id="volumeid_nodejs">
 <a href="#volumeid_nodejs" style="color: inherit; text-decoration: inherit;">volume<wbr>Id</a>
@@ -473,14 +415,11 @@ either owned by you or global (optional; but must be specified if no volume_id i
     </dt>
     <dd>{{% md %}}This is the ID of a bootable volume, either owned by you or global
 (optional; but must be specified if no image_id is specified)
-{{% /md %}}</dd>
-</dl>
+{{% /md %}}</dd></dl>
 {{% /choosable %}}
 
 {{% choosable language python %}}
-<dl class="resources-properties">
-
-    <dt class="property-required"
+<dl class="resources-properties"><dt class="property-required"
             title="Required">
         <span id="code_python">
 <a href="#code_python" style="color: inherit; text-decoration: inherit;">code</a>
@@ -489,8 +428,7 @@ either owned by you or global (optional; but must be specified if no volume_id i
         <span class="property-type">str</span>
     </dt>
     <dd>{{% md %}}This is a unqiue, alphanumerical, short, human readable code for the template.
-{{% /md %}}</dd>
-    <dt class="property-optional"
+{{% /md %}}</dd><dt class="property-optional"
             title="Optional">
         <span id="cloud_config_python">
 <a href="#cloud_config_python" style="color: inherit; text-decoration: inherit;">cloud_<wbr>config</a>
@@ -506,8 +444,7 @@ replaced with the random password generated by the system, `$HOSTNAME` is the fu
 domain name of the instance and `$SSH_KEY` will be the content of the SSH public key.
 (this is technically optional, but you won't really be able to use instances without it -
 see our learn guide on templates for more information).
-{{% /md %}}</dd>
-    <dt class="property-optional"
+{{% /md %}}</dd><dt class="property-optional"
             title="Optional">
         <span id="default_username_python">
 <a href="#default_username_python" style="color: inherit; text-decoration: inherit;">default_<wbr>username</a>
@@ -516,8 +453,7 @@ see our learn guide on templates for more information).
         <span class="property-type">str</span>
     </dt>
     <dd>{{% md %}}The default username to suggest that the user creates
-{{% /md %}}</dd>
-    <dt class="property-optional"
+{{% /md %}}</dd><dt class="property-optional"
             title="Optional">
         <span id="description_python">
 <a href="#description_python" style="color: inherit; text-decoration: inherit;">description</a>
@@ -526,8 +462,7 @@ see our learn guide on templates for more information).
         <span class="property-type">str</span>
     </dt>
     <dd>{{% md %}}A multi-line description of the template, in Markdown format
-{{% /md %}}</dd>
-    <dt class="property-optional"
+{{% /md %}}</dd><dt class="property-optional"
             title="Optional">
         <span id="image_id_python">
 <a href="#image_id_python" style="color: inherit; text-decoration: inherit;">image_<wbr>id</a>
@@ -537,8 +472,7 @@ see our learn guide on templates for more information).
     </dt>
     <dd>{{% md %}}This is the Image ID of any default template or the ID of another template
 either owned by you or global (optional; but must be specified if no volume_id is specified).
-{{% /md %}}</dd>
-    <dt class="property-optional"
+{{% /md %}}</dd><dt class="property-optional"
             title="Optional">
         <span id="name_python">
 <a href="#name_python" style="color: inherit; text-decoration: inherit;">name</a>
@@ -547,8 +481,7 @@ either owned by you or global (optional; but must be specified if no volume_id i
         <span class="property-type">str</span>
     </dt>
     <dd>{{% md %}}This is a short human readable name for the template
-{{% /md %}}</dd>
-    <dt class="property-optional"
+{{% /md %}}</dd><dt class="property-optional"
             title="Optional">
         <span id="short_description_python">
 <a href="#short_description_python" style="color: inherit; text-decoration: inherit;">short_<wbr>description</a>
@@ -557,8 +490,7 @@ either owned by you or global (optional; but must be specified if no volume_id i
         <span class="property-type">str</span>
     </dt>
     <dd>{{% md %}}A one line description of the template
-{{% /md %}}</dd>
-    <dt class="property-optional"
+{{% /md %}}</dd><dt class="property-optional"
             title="Optional">
         <span id="volume_id_python">
 <a href="#volume_id_python" style="color: inherit; text-decoration: inherit;">volume_<wbr>id</a>
@@ -568,8 +500,7 @@ either owned by you or global (optional; but must be specified if no volume_id i
     </dt>
     <dd>{{% md %}}This is the ID of a bootable volume, either owned by you or global
 (optional; but must be specified if no image_id is specified)
-{{% /md %}}</dd>
-</dl>
+{{% /md %}}</dd></dl>
 {{% /choosable %}}
 
 
@@ -580,9 +511,7 @@ All [input](#inputs) properties are implicitly available as output properties. A
 
 
 {{% choosable language csharp %}}
-<dl class="resources-properties">
-
-    <dt class="property-"
+<dl class="resources-properties"><dt class="property-"
             title="">
         <span id="id_csharp">
 <a href="#id_csharp" style="color: inherit; text-decoration: inherit;">Id</a>
@@ -590,14 +519,11 @@ All [input](#inputs) properties are implicitly available as output properties. A
         <span class="property-indicator"></span>
         <span class="property-type">string</span>
     </dt>
-    <dd>{{% md %}}The provider-assigned unique ID for this managed resource.{{% /md %}}</dd>
-</dl>
+    <dd>{{% md %}}The provider-assigned unique ID for this managed resource.{{% /md %}}</dd></dl>
 {{% /choosable %}}
 
 {{% choosable language go %}}
-<dl class="resources-properties">
-
-    <dt class="property-"
+<dl class="resources-properties"><dt class="property-"
             title="">
         <span id="id_go">
 <a href="#id_go" style="color: inherit; text-decoration: inherit;">Id</a>
@@ -605,14 +531,11 @@ All [input](#inputs) properties are implicitly available as output properties. A
         <span class="property-indicator"></span>
         <span class="property-type">string</span>
     </dt>
-    <dd>{{% md %}}The provider-assigned unique ID for this managed resource.{{% /md %}}</dd>
-</dl>
+    <dd>{{% md %}}The provider-assigned unique ID for this managed resource.{{% /md %}}</dd></dl>
 {{% /choosable %}}
 
 {{% choosable language nodejs %}}
-<dl class="resources-properties">
-
-    <dt class="property-"
+<dl class="resources-properties"><dt class="property-"
             title="">
         <span id="id_nodejs">
 <a href="#id_nodejs" style="color: inherit; text-decoration: inherit;">id</a>
@@ -620,14 +543,11 @@ All [input](#inputs) properties are implicitly available as output properties. A
         <span class="property-indicator"></span>
         <span class="property-type">string</span>
     </dt>
-    <dd>{{% md %}}The provider-assigned unique ID for this managed resource.{{% /md %}}</dd>
-</dl>
+    <dd>{{% md %}}The provider-assigned unique ID for this managed resource.{{% /md %}}</dd></dl>
 {{% /choosable %}}
 
 {{% choosable language python %}}
-<dl class="resources-properties">
-
-    <dt class="property-"
+<dl class="resources-properties"><dt class="property-"
             title="">
         <span id="id_python">
 <a href="#id_python" style="color: inherit; text-decoration: inherit;">id</a>
@@ -635,8 +555,7 @@ All [input](#inputs) properties are implicitly available as output properties. A
         <span class="property-indicator"></span>
         <span class="property-type">str</span>
     </dt>
-    <dd>{{% md %}}The provider-assigned unique ID for this managed resource.{{% /md %}}</dd>
-</dl>
+    <dd>{{% md %}}The provider-assigned unique ID for this managed resource.{{% /md %}}</dd></dl>
 {{% /choosable %}}
 
 
@@ -763,9 +682,7 @@ The following state arguments are supported:
 
 
 {{% choosable language csharp %}}
-<dl class="resources-properties">
-
-    <dt class="property-optional"
+<dl class="resources-properties"><dt class="property-optional"
             title="Optional">
         <span id="state_cloudconfig_csharp">
 <a href="#state_cloudconfig_csharp" style="color: inherit; text-decoration: inherit;">Cloud<wbr>Config</a>
@@ -781,8 +698,7 @@ replaced with the random password generated by the system, `$HOSTNAME` is the fu
 domain name of the instance and `$SSH_KEY` will be the content of the SSH public key.
 (this is technically optional, but you won't really be able to use instances without it -
 see our learn guide on templates for more information).
-{{% /md %}}</dd>
-    <dt class="property-optional"
+{{% /md %}}</dd><dt class="property-optional"
             title="Optional">
         <span id="state_code_csharp">
 <a href="#state_code_csharp" style="color: inherit; text-decoration: inherit;">Code</a>
@@ -791,8 +707,7 @@ see our learn guide on templates for more information).
         <span class="property-type">string</span>
     </dt>
     <dd>{{% md %}}This is a unqiue, alphanumerical, short, human readable code for the template.
-{{% /md %}}</dd>
-    <dt class="property-optional"
+{{% /md %}}</dd><dt class="property-optional"
             title="Optional">
         <span id="state_defaultusername_csharp">
 <a href="#state_defaultusername_csharp" style="color: inherit; text-decoration: inherit;">Default<wbr>Username</a>
@@ -801,8 +716,7 @@ see our learn guide on templates for more information).
         <span class="property-type">string</span>
     </dt>
     <dd>{{% md %}}The default username to suggest that the user creates
-{{% /md %}}</dd>
-    <dt class="property-optional"
+{{% /md %}}</dd><dt class="property-optional"
             title="Optional">
         <span id="state_description_csharp">
 <a href="#state_description_csharp" style="color: inherit; text-decoration: inherit;">Description</a>
@@ -811,8 +725,7 @@ see our learn guide on templates for more information).
         <span class="property-type">string</span>
     </dt>
     <dd>{{% md %}}A multi-line description of the template, in Markdown format
-{{% /md %}}</dd>
-    <dt class="property-optional"
+{{% /md %}}</dd><dt class="property-optional"
             title="Optional">
         <span id="state_imageid_csharp">
 <a href="#state_imageid_csharp" style="color: inherit; text-decoration: inherit;">Image<wbr>Id</a>
@@ -822,8 +735,7 @@ see our learn guide on templates for more information).
     </dt>
     <dd>{{% md %}}This is the Image ID of any default template or the ID of another template
 either owned by you or global (optional; but must be specified if no volume_id is specified).
-{{% /md %}}</dd>
-    <dt class="property-optional"
+{{% /md %}}</dd><dt class="property-optional"
             title="Optional">
         <span id="state_name_csharp">
 <a href="#state_name_csharp" style="color: inherit; text-decoration: inherit;">Name</a>
@@ -832,8 +744,7 @@ either owned by you or global (optional; but must be specified if no volume_id i
         <span class="property-type">string</span>
     </dt>
     <dd>{{% md %}}This is a short human readable name for the template
-{{% /md %}}</dd>
-    <dt class="property-optional"
+{{% /md %}}</dd><dt class="property-optional"
             title="Optional">
         <span id="state_shortdescription_csharp">
 <a href="#state_shortdescription_csharp" style="color: inherit; text-decoration: inherit;">Short<wbr>Description</a>
@@ -842,8 +753,7 @@ either owned by you or global (optional; but must be specified if no volume_id i
         <span class="property-type">string</span>
     </dt>
     <dd>{{% md %}}A one line description of the template
-{{% /md %}}</dd>
-    <dt class="property-optional"
+{{% /md %}}</dd><dt class="property-optional"
             title="Optional">
         <span id="state_volumeid_csharp">
 <a href="#state_volumeid_csharp" style="color: inherit; text-decoration: inherit;">Volume<wbr>Id</a>
@@ -853,14 +763,11 @@ either owned by you or global (optional; but must be specified if no volume_id i
     </dt>
     <dd>{{% md %}}This is the ID of a bootable volume, either owned by you or global
 (optional; but must be specified if no image_id is specified)
-{{% /md %}}</dd>
-</dl>
+{{% /md %}}</dd></dl>
 {{% /choosable %}}
 
 {{% choosable language go %}}
-<dl class="resources-properties">
-
-    <dt class="property-optional"
+<dl class="resources-properties"><dt class="property-optional"
             title="Optional">
         <span id="state_cloudconfig_go">
 <a href="#state_cloudconfig_go" style="color: inherit; text-decoration: inherit;">Cloud<wbr>Config</a>
@@ -876,8 +783,7 @@ replaced with the random password generated by the system, `$HOSTNAME` is the fu
 domain name of the instance and `$SSH_KEY` will be the content of the SSH public key.
 (this is technically optional, but you won't really be able to use instances without it -
 see our learn guide on templates for more information).
-{{% /md %}}</dd>
-    <dt class="property-optional"
+{{% /md %}}</dd><dt class="property-optional"
             title="Optional">
         <span id="state_code_go">
 <a href="#state_code_go" style="color: inherit; text-decoration: inherit;">Code</a>
@@ -886,8 +792,7 @@ see our learn guide on templates for more information).
         <span class="property-type">string</span>
     </dt>
     <dd>{{% md %}}This is a unqiue, alphanumerical, short, human readable code for the template.
-{{% /md %}}</dd>
-    <dt class="property-optional"
+{{% /md %}}</dd><dt class="property-optional"
             title="Optional">
         <span id="state_defaultusername_go">
 <a href="#state_defaultusername_go" style="color: inherit; text-decoration: inherit;">Default<wbr>Username</a>
@@ -896,8 +801,7 @@ see our learn guide on templates for more information).
         <span class="property-type">string</span>
     </dt>
     <dd>{{% md %}}The default username to suggest that the user creates
-{{% /md %}}</dd>
-    <dt class="property-optional"
+{{% /md %}}</dd><dt class="property-optional"
             title="Optional">
         <span id="state_description_go">
 <a href="#state_description_go" style="color: inherit; text-decoration: inherit;">Description</a>
@@ -906,8 +810,7 @@ see our learn guide on templates for more information).
         <span class="property-type">string</span>
     </dt>
     <dd>{{% md %}}A multi-line description of the template, in Markdown format
-{{% /md %}}</dd>
-    <dt class="property-optional"
+{{% /md %}}</dd><dt class="property-optional"
             title="Optional">
         <span id="state_imageid_go">
 <a href="#state_imageid_go" style="color: inherit; text-decoration: inherit;">Image<wbr>Id</a>
@@ -917,8 +820,7 @@ see our learn guide on templates for more information).
     </dt>
     <dd>{{% md %}}This is the Image ID of any default template or the ID of another template
 either owned by you or global (optional; but must be specified if no volume_id is specified).
-{{% /md %}}</dd>
-    <dt class="property-optional"
+{{% /md %}}</dd><dt class="property-optional"
             title="Optional">
         <span id="state_name_go">
 <a href="#state_name_go" style="color: inherit; text-decoration: inherit;">Name</a>
@@ -927,8 +829,7 @@ either owned by you or global (optional; but must be specified if no volume_id i
         <span class="property-type">string</span>
     </dt>
     <dd>{{% md %}}This is a short human readable name for the template
-{{% /md %}}</dd>
-    <dt class="property-optional"
+{{% /md %}}</dd><dt class="property-optional"
             title="Optional">
         <span id="state_shortdescription_go">
 <a href="#state_shortdescription_go" style="color: inherit; text-decoration: inherit;">Short<wbr>Description</a>
@@ -937,8 +838,7 @@ either owned by you or global (optional; but must be specified if no volume_id i
         <span class="property-type">string</span>
     </dt>
     <dd>{{% md %}}A one line description of the template
-{{% /md %}}</dd>
-    <dt class="property-optional"
+{{% /md %}}</dd><dt class="property-optional"
             title="Optional">
         <span id="state_volumeid_go">
 <a href="#state_volumeid_go" style="color: inherit; text-decoration: inherit;">Volume<wbr>Id</a>
@@ -948,14 +848,11 @@ either owned by you or global (optional; but must be specified if no volume_id i
     </dt>
     <dd>{{% md %}}This is the ID of a bootable volume, either owned by you or global
 (optional; but must be specified if no image_id is specified)
-{{% /md %}}</dd>
-</dl>
+{{% /md %}}</dd></dl>
 {{% /choosable %}}
 
 {{% choosable language nodejs %}}
-<dl class="resources-properties">
-
-    <dt class="property-optional"
+<dl class="resources-properties"><dt class="property-optional"
             title="Optional">
         <span id="state_cloudconfig_nodejs">
 <a href="#state_cloudconfig_nodejs" style="color: inherit; text-decoration: inherit;">cloud<wbr>Config</a>
@@ -971,8 +868,7 @@ replaced with the random password generated by the system, `$HOSTNAME` is the fu
 domain name of the instance and `$SSH_KEY` will be the content of the SSH public key.
 (this is technically optional, but you won't really be able to use instances without it -
 see our learn guide on templates for more information).
-{{% /md %}}</dd>
-    <dt class="property-optional"
+{{% /md %}}</dd><dt class="property-optional"
             title="Optional">
         <span id="state_code_nodejs">
 <a href="#state_code_nodejs" style="color: inherit; text-decoration: inherit;">code</a>
@@ -981,8 +877,7 @@ see our learn guide on templates for more information).
         <span class="property-type">string</span>
     </dt>
     <dd>{{% md %}}This is a unqiue, alphanumerical, short, human readable code for the template.
-{{% /md %}}</dd>
-    <dt class="property-optional"
+{{% /md %}}</dd><dt class="property-optional"
             title="Optional">
         <span id="state_defaultusername_nodejs">
 <a href="#state_defaultusername_nodejs" style="color: inherit; text-decoration: inherit;">default<wbr>Username</a>
@@ -991,8 +886,7 @@ see our learn guide on templates for more information).
         <span class="property-type">string</span>
     </dt>
     <dd>{{% md %}}The default username to suggest that the user creates
-{{% /md %}}</dd>
-    <dt class="property-optional"
+{{% /md %}}</dd><dt class="property-optional"
             title="Optional">
         <span id="state_description_nodejs">
 <a href="#state_description_nodejs" style="color: inherit; text-decoration: inherit;">description</a>
@@ -1001,8 +895,7 @@ see our learn guide on templates for more information).
         <span class="property-type">string</span>
     </dt>
     <dd>{{% md %}}A multi-line description of the template, in Markdown format
-{{% /md %}}</dd>
-    <dt class="property-optional"
+{{% /md %}}</dd><dt class="property-optional"
             title="Optional">
         <span id="state_imageid_nodejs">
 <a href="#state_imageid_nodejs" style="color: inherit; text-decoration: inherit;">image<wbr>Id</a>
@@ -1012,8 +905,7 @@ see our learn guide on templates for more information).
     </dt>
     <dd>{{% md %}}This is the Image ID of any default template or the ID of another template
 either owned by you or global (optional; but must be specified if no volume_id is specified).
-{{% /md %}}</dd>
-    <dt class="property-optional"
+{{% /md %}}</dd><dt class="property-optional"
             title="Optional">
         <span id="state_name_nodejs">
 <a href="#state_name_nodejs" style="color: inherit; text-decoration: inherit;">name</a>
@@ -1022,8 +914,7 @@ either owned by you or global (optional; but must be specified if no volume_id i
         <span class="property-type">string</span>
     </dt>
     <dd>{{% md %}}This is a short human readable name for the template
-{{% /md %}}</dd>
-    <dt class="property-optional"
+{{% /md %}}</dd><dt class="property-optional"
             title="Optional">
         <span id="state_shortdescription_nodejs">
 <a href="#state_shortdescription_nodejs" style="color: inherit; text-decoration: inherit;">short<wbr>Description</a>
@@ -1032,8 +923,7 @@ either owned by you or global (optional; but must be specified if no volume_id i
         <span class="property-type">string</span>
     </dt>
     <dd>{{% md %}}A one line description of the template
-{{% /md %}}</dd>
-    <dt class="property-optional"
+{{% /md %}}</dd><dt class="property-optional"
             title="Optional">
         <span id="state_volumeid_nodejs">
 <a href="#state_volumeid_nodejs" style="color: inherit; text-decoration: inherit;">volume<wbr>Id</a>
@@ -1043,14 +933,11 @@ either owned by you or global (optional; but must be specified if no volume_id i
     </dt>
     <dd>{{% md %}}This is the ID of a bootable volume, either owned by you or global
 (optional; but must be specified if no image_id is specified)
-{{% /md %}}</dd>
-</dl>
+{{% /md %}}</dd></dl>
 {{% /choosable %}}
 
 {{% choosable language python %}}
-<dl class="resources-properties">
-
-    <dt class="property-optional"
+<dl class="resources-properties"><dt class="property-optional"
             title="Optional">
         <span id="state_cloud_config_python">
 <a href="#state_cloud_config_python" style="color: inherit; text-decoration: inherit;">cloud_<wbr>config</a>
@@ -1066,8 +953,7 @@ replaced with the random password generated by the system, `$HOSTNAME` is the fu
 domain name of the instance and `$SSH_KEY` will be the content of the SSH public key.
 (this is technically optional, but you won't really be able to use instances without it -
 see our learn guide on templates for more information).
-{{% /md %}}</dd>
-    <dt class="property-optional"
+{{% /md %}}</dd><dt class="property-optional"
             title="Optional">
         <span id="state_code_python">
 <a href="#state_code_python" style="color: inherit; text-decoration: inherit;">code</a>
@@ -1076,8 +962,7 @@ see our learn guide on templates for more information).
         <span class="property-type">str</span>
     </dt>
     <dd>{{% md %}}This is a unqiue, alphanumerical, short, human readable code for the template.
-{{% /md %}}</dd>
-    <dt class="property-optional"
+{{% /md %}}</dd><dt class="property-optional"
             title="Optional">
         <span id="state_default_username_python">
 <a href="#state_default_username_python" style="color: inherit; text-decoration: inherit;">default_<wbr>username</a>
@@ -1086,8 +971,7 @@ see our learn guide on templates for more information).
         <span class="property-type">str</span>
     </dt>
     <dd>{{% md %}}The default username to suggest that the user creates
-{{% /md %}}</dd>
-    <dt class="property-optional"
+{{% /md %}}</dd><dt class="property-optional"
             title="Optional">
         <span id="state_description_python">
 <a href="#state_description_python" style="color: inherit; text-decoration: inherit;">description</a>
@@ -1096,8 +980,7 @@ see our learn guide on templates for more information).
         <span class="property-type">str</span>
     </dt>
     <dd>{{% md %}}A multi-line description of the template, in Markdown format
-{{% /md %}}</dd>
-    <dt class="property-optional"
+{{% /md %}}</dd><dt class="property-optional"
             title="Optional">
         <span id="state_image_id_python">
 <a href="#state_image_id_python" style="color: inherit; text-decoration: inherit;">image_<wbr>id</a>
@@ -1107,8 +990,7 @@ see our learn guide on templates for more information).
     </dt>
     <dd>{{% md %}}This is the Image ID of any default template or the ID of another template
 either owned by you or global (optional; but must be specified if no volume_id is specified).
-{{% /md %}}</dd>
-    <dt class="property-optional"
+{{% /md %}}</dd><dt class="property-optional"
             title="Optional">
         <span id="state_name_python">
 <a href="#state_name_python" style="color: inherit; text-decoration: inherit;">name</a>
@@ -1117,8 +999,7 @@ either owned by you or global (optional; but must be specified if no volume_id i
         <span class="property-type">str</span>
     </dt>
     <dd>{{% md %}}This is a short human readable name for the template
-{{% /md %}}</dd>
-    <dt class="property-optional"
+{{% /md %}}</dd><dt class="property-optional"
             title="Optional">
         <span id="state_short_description_python">
 <a href="#state_short_description_python" style="color: inherit; text-decoration: inherit;">short_<wbr>description</a>
@@ -1127,8 +1008,7 @@ either owned by you or global (optional; but must be specified if no volume_id i
         <span class="property-type">str</span>
     </dt>
     <dd>{{% md %}}A one line description of the template
-{{% /md %}}</dd>
-    <dt class="property-optional"
+{{% /md %}}</dd><dt class="property-optional"
             title="Optional">
         <span id="state_volume_id_python">
 <a href="#state_volume_id_python" style="color: inherit; text-decoration: inherit;">volume_<wbr>id</a>
@@ -1138,8 +1018,7 @@ either owned by you or global (optional; but must be specified if no volume_id i
     </dt>
     <dd>{{% md %}}This is the ID of a bootable volume, either owned by you or global
 (optional; but must be specified if no image_id is specified)
-{{% /md %}}</dd>
-</dl>
+{{% /md %}}</dd></dl>
 {{% /choosable %}}
 
 
@@ -1165,6 +1044,6 @@ Template can be imported using the template `code`, e.g.
 	<dt>License</dt>
 	<dd>Apache-2.0</dd>
 	<dt>Notes</dt>
-	<dd>This Pulumi package is based on the [`civo` Terraform Provider](https://github.com/civo/terraform-provider-civo).</dd>
+	<dd>{{% md %}}This Pulumi package is based on the [`civo` Terraform Provider](https://github.com/civo/terraform-provider-civo).{{% /md %}}</dd>
 </dl>
 

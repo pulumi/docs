@@ -25,11 +25,17 @@ Once IP block is allocated or imported, an address from it can be assigned to de
 
 
 {{% examples %}}
+
 ## Example Usage
 
 {{< chooser language "typescript,python,go,csharp" / >}}
 
-{{% example csharp %}}
+
+
+
+
+{{< example csharp >}}
+
 ```csharp
 using Pulumi;
 using EquinixMetal = Pulumi.EquinixMetal;
@@ -57,9 +63,12 @@ class MyStack : Stack
 }
 ```
 
-{{% /example %}}
 
-{{% example go %}}
+{{< /example >}}
+
+
+{{< example go >}}
+
 ```go
 package main
 
@@ -91,9 +100,12 @@ func main() {
 }
 ```
 
-{{% /example %}}
 
-{{% example python %}}
+{{< /example >}}
+
+
+{{< example python >}}
+
 ```python
 import pulumi
 import pulumi_equinix_metal as equinix_metal
@@ -110,9 +122,12 @@ test = equinix_metal.ReservedIpBlock("test",
     quantity=1)
 ```
 
-{{% /example %}}
 
-{{% example typescript %}}
+{{< /example >}}
+
+
+{{< example typescript >}}
+
 
 ```typescript
 import * as pulumi from "@pulumi/pulumi";
@@ -132,9 +147,16 @@ const test = new equinix_metal.ReservedIpBlock("test", {
 });
 ```
 
-{{% /example %}}
+
+{{< /example >}}
+
+
+
+
 
 {{% /examples %}}
+
+
 
 
 ## Create a ReservedIpBlock Resource {#create}
@@ -159,9 +181,7 @@ const test = new equinix_metal.ReservedIpBlock("test", {
 
 {{% choosable language nodejs %}}
 
-<dl class="resources-properties">
-  
-    <dt
+<dl class="resources-properties"><dt
         class="property-required" title="Required">
         <span>name</span>
         <span class="property-indicator"></span>
@@ -169,9 +189,7 @@ const test = new equinix_metal.ReservedIpBlock("test", {
     </dt>
     <dd>
       The unique name of the resource.
-    </dd>
-  
-    <dt
+    </dd><dt
         class="property-required" title="Required">
         <span>args</span>
         <span class="property-indicator"></span>
@@ -179,9 +197,7 @@ const test = new equinix_metal.ReservedIpBlock("test", {
     </dt>
     <dd>
       The arguments to resource properties.
-    </dd>
-  
-    <dt
+    </dd><dt
         class="property-optional" title="Optional">
         <span>opts</span>
         <span class="property-indicator"></span>
@@ -189,10 +205,7 @@ const test = new equinix_metal.ReservedIpBlock("test", {
     </dt>
     <dd>
       Bag of options to control resource&#39;s behavior.
-    </dd>
-  
-
-</dl>
+    </dd></dl>
 
 {{% /choosable %}}
 
@@ -218,9 +231,7 @@ const test = new equinix_metal.ReservedIpBlock("test", {
 
 {{% choosable language go %}}
 
-<dl class="resources-properties">
-  
-    <dt
+<dl class="resources-properties"><dt
         class="property-optional" title="Optional">
         <span>ctx</span>
         <span class="property-indicator"></span>
@@ -228,9 +239,7 @@ const test = new equinix_metal.ReservedIpBlock("test", {
     </dt>
     <dd>
       Context object for the current deployment.
-    </dd>
-  
-    <dt
+    </dd><dt
         class="property-required" title="Required">
         <span>name</span>
         <span class="property-indicator"></span>
@@ -238,9 +247,7 @@ const test = new equinix_metal.ReservedIpBlock("test", {
     </dt>
     <dd>
       The unique name of the resource.
-    </dd>
-  
-    <dt
+    </dd><dt
         class="property-required" title="Required">
         <span>args</span>
         <span class="property-indicator"></span>
@@ -248,9 +255,7 @@ const test = new equinix_metal.ReservedIpBlock("test", {
     </dt>
     <dd>
       The arguments to resource properties.
-    </dd>
-  
-    <dt
+    </dd><dt
         class="property-optional" title="Optional">
         <span>opts</span>
         <span class="property-indicator"></span>
@@ -258,18 +263,13 @@ const test = new equinix_metal.ReservedIpBlock("test", {
     </dt>
     <dd>
       Bag of options to control resource&#39;s behavior.
-    </dd>
-  
-
-</dl>
+    </dd></dl>
 
 {{% /choosable %}}
 
 {{% choosable language csharp %}}
 
-<dl class="resources-properties">
-  
-    <dt
+<dl class="resources-properties"><dt
         class="property-required" title="Required">
         <span>name</span>
         <span class="property-indicator"></span>
@@ -277,9 +277,7 @@ const test = new equinix_metal.ReservedIpBlock("test", {
     </dt>
     <dd>
       The unique name of the resource.
-    </dd>
-  
-    <dt
+    </dd><dt
         class="property-required" title="Required">
         <span>args</span>
         <span class="property-indicator"></span>
@@ -287,9 +285,7 @@ const test = new equinix_metal.ReservedIpBlock("test", {
     </dt>
     <dd>
       The arguments to resource properties.
-    </dd>
-  
-    <dt
+    </dd><dt
         class="property-optional" title="Optional">
         <span>opts</span>
         <span class="property-indicator"></span>
@@ -297,10 +293,7 @@ const test = new equinix_metal.ReservedIpBlock("test", {
     </dt>
     <dd>
       Bag of options to control resource&#39;s behavior.
-    </dd>
-  
-
-</dl>
+    </dd></dl>
 
 {{% /choosable %}}
 
@@ -315,9 +308,7 @@ The ReservedIpBlock resource accepts the following [input]({{< relref "/docs/int
 
 
 {{% choosable language csharp %}}
-<dl class="resources-properties">
-
-    <dt class="property-required"
+<dl class="resources-properties"><dt class="property-required"
             title="Required">
         <span id="projectid_csharp">
 <a href="#projectid_csharp" style="color: inherit; text-decoration: inherit;">Project<wbr>Id</a>
@@ -326,8 +317,7 @@ The ReservedIpBlock resource accepts the following [input]({{< relref "/docs/int
         <span class="property-type">string</span>
     </dt>
     <dd>{{% md %}}The metal project ID where to allocate the address block
-{{% /md %}}</dd>
-    <dt class="property-required"
+{{% /md %}}</dd><dt class="property-required"
             title="Required">
         <span id="quantity_csharp">
 <a href="#quantity_csharp" style="color: inherit; text-decoration: inherit;">Quantity</a>
@@ -336,8 +326,7 @@ The ReservedIpBlock resource accepts the following [input]({{< relref "/docs/int
         <span class="property-type">int</span>
     </dt>
     <dd>{{% md %}}The number of allocated /32 addresses, a power of 2
-{{% /md %}}</dd>
-    <dt class="property-optional"
+{{% /md %}}</dd><dt class="property-optional"
             title="Optional">
         <span id="description_csharp">
 <a href="#description_csharp" style="color: inherit; text-decoration: inherit;">Description</a>
@@ -346,8 +335,7 @@ The ReservedIpBlock resource accepts the following [input]({{< relref "/docs/int
         <span class="property-type">string</span>
     </dt>
     <dd>{{% md %}}Arbitrary description
-{{% /md %}}</dd>
-    <dt class="property-optional"
+{{% /md %}}</dd><dt class="property-optional"
             title="Optional">
         <span id="facility_csharp">
 <a href="#facility_csharp" style="color: inherit; text-decoration: inherit;">Facility</a>
@@ -356,8 +344,7 @@ The ReservedIpBlock resource accepts the following [input]({{< relref "/docs/int
         <span class="property-type">string | <a href="#facility">Pulumi.<wbr>Equinix<wbr>Metal.<wbr>Facility</a></span>
     </dt>
     <dd>{{% md %}}Facility where to allocate the public IP address block, makes sense only for type==public_ipv4, must be empty for type==global_ipv4
-{{% /md %}}</dd>
-    <dt class="property-optional"
+{{% /md %}}</dd><dt class="property-optional"
             title="Optional">
         <span id="type_csharp">
 <a href="#type_csharp" style="color: inherit; text-decoration: inherit;">Type</a>
@@ -366,14 +353,11 @@ The ReservedIpBlock resource accepts the following [input]({{< relref "/docs/int
         <span class="property-type">string | <a href="#ipblocktype">Pulumi.<wbr>Equinix<wbr>Metal.<wbr>Ip<wbr>Block<wbr>Type</a></span>
     </dt>
     <dd>{{% md %}}Either "global_ipv4" or "public_ipv4", defaults to "public_ipv4" for backward compatibility
-{{% /md %}}</dd>
-</dl>
+{{% /md %}}</dd></dl>
 {{% /choosable %}}
 
 {{% choosable language go %}}
-<dl class="resources-properties">
-
-    <dt class="property-required"
+<dl class="resources-properties"><dt class="property-required"
             title="Required">
         <span id="projectid_go">
 <a href="#projectid_go" style="color: inherit; text-decoration: inherit;">Project<wbr>Id</a>
@@ -382,8 +366,7 @@ The ReservedIpBlock resource accepts the following [input]({{< relref "/docs/int
         <span class="property-type">string</span>
     </dt>
     <dd>{{% md %}}The metal project ID where to allocate the address block
-{{% /md %}}</dd>
-    <dt class="property-required"
+{{% /md %}}</dd><dt class="property-required"
             title="Required">
         <span id="quantity_go">
 <a href="#quantity_go" style="color: inherit; text-decoration: inherit;">Quantity</a>
@@ -392,8 +375,7 @@ The ReservedIpBlock resource accepts the following [input]({{< relref "/docs/int
         <span class="property-type">int</span>
     </dt>
     <dd>{{% md %}}The number of allocated /32 addresses, a power of 2
-{{% /md %}}</dd>
-    <dt class="property-optional"
+{{% /md %}}</dd><dt class="property-optional"
             title="Optional">
         <span id="description_go">
 <a href="#description_go" style="color: inherit; text-decoration: inherit;">Description</a>
@@ -402,8 +384,7 @@ The ReservedIpBlock resource accepts the following [input]({{< relref "/docs/int
         <span class="property-type">string</span>
     </dt>
     <dd>{{% md %}}Arbitrary description
-{{% /md %}}</dd>
-    <dt class="property-optional"
+{{% /md %}}</dd><dt class="property-optional"
             title="Optional">
         <span id="facility_go">
 <a href="#facility_go" style="color: inherit; text-decoration: inherit;">Facility</a>
@@ -412,8 +393,7 @@ The ReservedIpBlock resource accepts the following [input]({{< relref "/docs/int
         <span class="property-type">string | <a href="#facility">Facility</a></span>
     </dt>
     <dd>{{% md %}}Facility where to allocate the public IP address block, makes sense only for type==public_ipv4, must be empty for type==global_ipv4
-{{% /md %}}</dd>
-    <dt class="property-optional"
+{{% /md %}}</dd><dt class="property-optional"
             title="Optional">
         <span id="type_go">
 <a href="#type_go" style="color: inherit; text-decoration: inherit;">Type</a>
@@ -422,14 +402,11 @@ The ReservedIpBlock resource accepts the following [input]({{< relref "/docs/int
         <span class="property-type">string | <a href="#ipblocktype">Ip<wbr>Block<wbr>Type</a></span>
     </dt>
     <dd>{{% md %}}Either "global_ipv4" or "public_ipv4", defaults to "public_ipv4" for backward compatibility
-{{% /md %}}</dd>
-</dl>
+{{% /md %}}</dd></dl>
 {{% /choosable %}}
 
 {{% choosable language nodejs %}}
-<dl class="resources-properties">
-
-    <dt class="property-required"
+<dl class="resources-properties"><dt class="property-required"
             title="Required">
         <span id="projectid_nodejs">
 <a href="#projectid_nodejs" style="color: inherit; text-decoration: inherit;">project<wbr>Id</a>
@@ -438,8 +415,7 @@ The ReservedIpBlock resource accepts the following [input]({{< relref "/docs/int
         <span class="property-type">string</span>
     </dt>
     <dd>{{% md %}}The metal project ID where to allocate the address block
-{{% /md %}}</dd>
-    <dt class="property-required"
+{{% /md %}}</dd><dt class="property-required"
             title="Required">
         <span id="quantity_nodejs">
 <a href="#quantity_nodejs" style="color: inherit; text-decoration: inherit;">quantity</a>
@@ -448,8 +424,7 @@ The ReservedIpBlock resource accepts the following [input]({{< relref "/docs/int
         <span class="property-type">number</span>
     </dt>
     <dd>{{% md %}}The number of allocated /32 addresses, a power of 2
-{{% /md %}}</dd>
-    <dt class="property-optional"
+{{% /md %}}</dd><dt class="property-optional"
             title="Optional">
         <span id="description_nodejs">
 <a href="#description_nodejs" style="color: inherit; text-decoration: inherit;">description</a>
@@ -458,8 +433,7 @@ The ReservedIpBlock resource accepts the following [input]({{< relref "/docs/int
         <span class="property-type">string</span>
     </dt>
     <dd>{{% md %}}Arbitrary description
-{{% /md %}}</dd>
-    <dt class="property-optional"
+{{% /md %}}</dd><dt class="property-optional"
             title="Optional">
         <span id="facility_nodejs">
 <a href="#facility_nodejs" style="color: inherit; text-decoration: inherit;">facility</a>
@@ -468,8 +442,7 @@ The ReservedIpBlock resource accepts the following [input]({{< relref "/docs/int
         <span class="property-type">string | <a href="#facility">Facility</a></span>
     </dt>
     <dd>{{% md %}}Facility where to allocate the public IP address block, makes sense only for type==public_ipv4, must be empty for type==global_ipv4
-{{% /md %}}</dd>
-    <dt class="property-optional"
+{{% /md %}}</dd><dt class="property-optional"
             title="Optional">
         <span id="type_nodejs">
 <a href="#type_nodejs" style="color: inherit; text-decoration: inherit;">type</a>
@@ -478,14 +451,11 @@ The ReservedIpBlock resource accepts the following [input]({{< relref "/docs/int
         <span class="property-type">string | <a href="#ipblocktype">Ip<wbr>Block<wbr>Type</a></span>
     </dt>
     <dd>{{% md %}}Either "global_ipv4" or "public_ipv4", defaults to "public_ipv4" for backward compatibility
-{{% /md %}}</dd>
-</dl>
+{{% /md %}}</dd></dl>
 {{% /choosable %}}
 
 {{% choosable language python %}}
-<dl class="resources-properties">
-
-    <dt class="property-required"
+<dl class="resources-properties"><dt class="property-required"
             title="Required">
         <span id="project_id_python">
 <a href="#project_id_python" style="color: inherit; text-decoration: inherit;">project_<wbr>id</a>
@@ -494,8 +464,7 @@ The ReservedIpBlock resource accepts the following [input]({{< relref "/docs/int
         <span class="property-type">str</span>
     </dt>
     <dd>{{% md %}}The metal project ID where to allocate the address block
-{{% /md %}}</dd>
-    <dt class="property-required"
+{{% /md %}}</dd><dt class="property-required"
             title="Required">
         <span id="quantity_python">
 <a href="#quantity_python" style="color: inherit; text-decoration: inherit;">quantity</a>
@@ -504,8 +473,7 @@ The ReservedIpBlock resource accepts the following [input]({{< relref "/docs/int
         <span class="property-type">int</span>
     </dt>
     <dd>{{% md %}}The number of allocated /32 addresses, a power of 2
-{{% /md %}}</dd>
-    <dt class="property-optional"
+{{% /md %}}</dd><dt class="property-optional"
             title="Optional">
         <span id="description_python">
 <a href="#description_python" style="color: inherit; text-decoration: inherit;">description</a>
@@ -514,8 +482,7 @@ The ReservedIpBlock resource accepts the following [input]({{< relref "/docs/int
         <span class="property-type">str</span>
     </dt>
     <dd>{{% md %}}Arbitrary description
-{{% /md %}}</dd>
-    <dt class="property-optional"
+{{% /md %}}</dd><dt class="property-optional"
             title="Optional">
         <span id="facility_python">
 <a href="#facility_python" style="color: inherit; text-decoration: inherit;">facility</a>
@@ -524,8 +491,7 @@ The ReservedIpBlock resource accepts the following [input]({{< relref "/docs/int
         <span class="property-type">str | <a href="#facility">Facility</a></span>
     </dt>
     <dd>{{% md %}}Facility where to allocate the public IP address block, makes sense only for type==public_ipv4, must be empty for type==global_ipv4
-{{% /md %}}</dd>
-    <dt class="property-optional"
+{{% /md %}}</dd><dt class="property-optional"
             title="Optional">
         <span id="type_python">
 <a href="#type_python" style="color: inherit; text-decoration: inherit;">type</a>
@@ -534,8 +500,7 @@ The ReservedIpBlock resource accepts the following [input]({{< relref "/docs/int
         <span class="property-type">str | <a href="#ipblocktype">Ip<wbr>Block<wbr>Type</a></span>
     </dt>
     <dd>{{% md %}}Either "global_ipv4" or "public_ipv4", defaults to "public_ipv4" for backward compatibility
-{{% /md %}}</dd>
-</dl>
+{{% /md %}}</dd></dl>
 {{% /choosable %}}
 
 
@@ -546,9 +511,7 @@ All [input](#inputs) properties are implicitly available as output properties. A
 
 
 {{% choosable language csharp %}}
-<dl class="resources-properties">
-
-    <dt class="property-"
+<dl class="resources-properties"><dt class="property-"
             title="">
         <span id="address_csharp">
 <a href="#address_csharp" style="color: inherit; text-decoration: inherit;">Address</a>
@@ -556,8 +519,7 @@ All [input](#inputs) properties are implicitly available as output properties. A
         <span class="property-indicator"></span>
         <span class="property-type">string</span>
     </dt>
-    <dd>{{% md %}}{{% /md %}}</dd>
-    <dt class="property-"
+    <dd>{{% md %}}{{% /md %}}</dd><dt class="property-"
             title="">
         <span id="addressfamily_csharp">
 <a href="#addressfamily_csharp" style="color: inherit; text-decoration: inherit;">Address<wbr>Family</a>
@@ -566,8 +528,7 @@ All [input](#inputs) properties are implicitly available as output properties. A
         <span class="property-type">int</span>
     </dt>
     <dd>{{% md %}}Address family as integer (4 or 6)
-{{% /md %}}</dd>
-    <dt class="property-"
+{{% /md %}}</dd><dt class="property-"
             title="">
         <span id="cidr_csharp">
 <a href="#cidr_csharp" style="color: inherit; text-decoration: inherit;">Cidr</a>
@@ -576,8 +537,7 @@ All [input](#inputs) properties are implicitly available as output properties. A
         <span class="property-type">int</span>
     </dt>
     <dd>{{% md %}}length of CIDR prefix of the block as integer
-{{% /md %}}</dd>
-    <dt class="property-"
+{{% /md %}}</dd><dt class="property-"
             title="">
         <span id="cidrnotation_csharp">
 <a href="#cidrnotation_csharp" style="color: inherit; text-decoration: inherit;">Cidr<wbr>Notation</a>
@@ -586,8 +546,7 @@ All [input](#inputs) properties are implicitly available as output properties. A
         <span class="property-type">string</span>
     </dt>
     <dd>{{% md %}}Address and mask in CIDR notation, e.g. "147.229.15.30/31"
-{{% /md %}}</dd>
-    <dt class="property-"
+{{% /md %}}</dd><dt class="property-"
             title="">
         <span id="gateway_csharp">
 <a href="#gateway_csharp" style="color: inherit; text-decoration: inherit;">Gateway</a>
@@ -595,8 +554,7 @@ All [input](#inputs) properties are implicitly available as output properties. A
         <span class="property-indicator"></span>
         <span class="property-type">string</span>
     </dt>
-    <dd>{{% md %}}{{% /md %}}</dd>
-    <dt class="property-"
+    <dd>{{% md %}}{{% /md %}}</dd><dt class="property-"
             title="">
         <span id="global_csharp">
 <a href="#global_csharp" style="color: inherit; text-decoration: inherit;">Global</a>
@@ -605,8 +563,7 @@ All [input](#inputs) properties are implicitly available as output properties. A
         <span class="property-type">bool</span>
     </dt>
     <dd>{{% md %}}boolean flag whether addresses from a block are global (i.e. can be assigned in any facility)
-{{% /md %}}</dd>
-    <dt class="property-"
+{{% /md %}}</dd><dt class="property-"
             title="">
         <span id="id_csharp">
 <a href="#id_csharp" style="color: inherit; text-decoration: inherit;">Id</a>
@@ -614,8 +571,7 @@ All [input](#inputs) properties are implicitly available as output properties. A
         <span class="property-indicator"></span>
         <span class="property-type">string</span>
     </dt>
-    <dd>{{% md %}}The provider-assigned unique ID for this managed resource.{{% /md %}}</dd>
-    <dt class="property-"
+    <dd>{{% md %}}The provider-assigned unique ID for this managed resource.{{% /md %}}</dd><dt class="property-"
             title="">
         <span id="manageable_csharp">
 <a href="#manageable_csharp" style="color: inherit; text-decoration: inherit;">Manageable</a>
@@ -623,8 +579,7 @@ All [input](#inputs) properties are implicitly available as output properties. A
         <span class="property-indicator"></span>
         <span class="property-type">bool</span>
     </dt>
-    <dd>{{% md %}}{{% /md %}}</dd>
-    <dt class="property-"
+    <dd>{{% md %}}{{% /md %}}</dd><dt class="property-"
             title="">
         <span id="management_csharp">
 <a href="#management_csharp" style="color: inherit; text-decoration: inherit;">Management</a>
@@ -632,8 +587,7 @@ All [input](#inputs) properties are implicitly available as output properties. A
         <span class="property-indicator"></span>
         <span class="property-type">bool</span>
     </dt>
-    <dd>{{% md %}}{{% /md %}}</dd>
-    <dt class="property-"
+    <dd>{{% md %}}{{% /md %}}</dd><dt class="property-"
             title="">
         <span id="netmask_csharp">
 <a href="#netmask_csharp" style="color: inherit; text-decoration: inherit;">Netmask</a>
@@ -642,8 +596,7 @@ All [input](#inputs) properties are implicitly available as output properties. A
         <span class="property-type">string</span>
     </dt>
     <dd>{{% md %}}Mask in decimal notation, e.g. "255.255.255.0"
-{{% /md %}}</dd>
-    <dt class="property-"
+{{% /md %}}</dd><dt class="property-"
             title="">
         <span id="network_csharp">
 <a href="#network_csharp" style="color: inherit; text-decoration: inherit;">Network</a>
@@ -652,8 +605,7 @@ All [input](#inputs) properties are implicitly available as output properties. A
         <span class="property-type">string</span>
     </dt>
     <dd>{{% md %}}Network IP address portion of the block specification
-{{% /md %}}</dd>
-    <dt class="property-"
+{{% /md %}}</dd><dt class="property-"
             title="">
         <span id="public_csharp">
 <a href="#public_csharp" style="color: inherit; text-decoration: inherit;">Public</a>
@@ -662,14 +614,11 @@ All [input](#inputs) properties are implicitly available as output properties. A
         <span class="property-type">bool</span>
     </dt>
     <dd>{{% md %}}boolean flag whether addresses from a block are public
-{{% /md %}}</dd>
-</dl>
+{{% /md %}}</dd></dl>
 {{% /choosable %}}
 
 {{% choosable language go %}}
-<dl class="resources-properties">
-
-    <dt class="property-"
+<dl class="resources-properties"><dt class="property-"
             title="">
         <span id="address_go">
 <a href="#address_go" style="color: inherit; text-decoration: inherit;">Address</a>
@@ -677,8 +626,7 @@ All [input](#inputs) properties are implicitly available as output properties. A
         <span class="property-indicator"></span>
         <span class="property-type">string</span>
     </dt>
-    <dd>{{% md %}}{{% /md %}}</dd>
-    <dt class="property-"
+    <dd>{{% md %}}{{% /md %}}</dd><dt class="property-"
             title="">
         <span id="addressfamily_go">
 <a href="#addressfamily_go" style="color: inherit; text-decoration: inherit;">Address<wbr>Family</a>
@@ -687,8 +635,7 @@ All [input](#inputs) properties are implicitly available as output properties. A
         <span class="property-type">int</span>
     </dt>
     <dd>{{% md %}}Address family as integer (4 or 6)
-{{% /md %}}</dd>
-    <dt class="property-"
+{{% /md %}}</dd><dt class="property-"
             title="">
         <span id="cidr_go">
 <a href="#cidr_go" style="color: inherit; text-decoration: inherit;">Cidr</a>
@@ -697,8 +644,7 @@ All [input](#inputs) properties are implicitly available as output properties. A
         <span class="property-type">int</span>
     </dt>
     <dd>{{% md %}}length of CIDR prefix of the block as integer
-{{% /md %}}</dd>
-    <dt class="property-"
+{{% /md %}}</dd><dt class="property-"
             title="">
         <span id="cidrnotation_go">
 <a href="#cidrnotation_go" style="color: inherit; text-decoration: inherit;">Cidr<wbr>Notation</a>
@@ -707,8 +653,7 @@ All [input](#inputs) properties are implicitly available as output properties. A
         <span class="property-type">string</span>
     </dt>
     <dd>{{% md %}}Address and mask in CIDR notation, e.g. "147.229.15.30/31"
-{{% /md %}}</dd>
-    <dt class="property-"
+{{% /md %}}</dd><dt class="property-"
             title="">
         <span id="gateway_go">
 <a href="#gateway_go" style="color: inherit; text-decoration: inherit;">Gateway</a>
@@ -716,8 +661,7 @@ All [input](#inputs) properties are implicitly available as output properties. A
         <span class="property-indicator"></span>
         <span class="property-type">string</span>
     </dt>
-    <dd>{{% md %}}{{% /md %}}</dd>
-    <dt class="property-"
+    <dd>{{% md %}}{{% /md %}}</dd><dt class="property-"
             title="">
         <span id="global_go">
 <a href="#global_go" style="color: inherit; text-decoration: inherit;">Global</a>
@@ -726,8 +670,7 @@ All [input](#inputs) properties are implicitly available as output properties. A
         <span class="property-type">bool</span>
     </dt>
     <dd>{{% md %}}boolean flag whether addresses from a block are global (i.e. can be assigned in any facility)
-{{% /md %}}</dd>
-    <dt class="property-"
+{{% /md %}}</dd><dt class="property-"
             title="">
         <span id="id_go">
 <a href="#id_go" style="color: inherit; text-decoration: inherit;">Id</a>
@@ -735,8 +678,7 @@ All [input](#inputs) properties are implicitly available as output properties. A
         <span class="property-indicator"></span>
         <span class="property-type">string</span>
     </dt>
-    <dd>{{% md %}}The provider-assigned unique ID for this managed resource.{{% /md %}}</dd>
-    <dt class="property-"
+    <dd>{{% md %}}The provider-assigned unique ID for this managed resource.{{% /md %}}</dd><dt class="property-"
             title="">
         <span id="manageable_go">
 <a href="#manageable_go" style="color: inherit; text-decoration: inherit;">Manageable</a>
@@ -744,8 +686,7 @@ All [input](#inputs) properties are implicitly available as output properties. A
         <span class="property-indicator"></span>
         <span class="property-type">bool</span>
     </dt>
-    <dd>{{% md %}}{{% /md %}}</dd>
-    <dt class="property-"
+    <dd>{{% md %}}{{% /md %}}</dd><dt class="property-"
             title="">
         <span id="management_go">
 <a href="#management_go" style="color: inherit; text-decoration: inherit;">Management</a>
@@ -753,8 +694,7 @@ All [input](#inputs) properties are implicitly available as output properties. A
         <span class="property-indicator"></span>
         <span class="property-type">bool</span>
     </dt>
-    <dd>{{% md %}}{{% /md %}}</dd>
-    <dt class="property-"
+    <dd>{{% md %}}{{% /md %}}</dd><dt class="property-"
             title="">
         <span id="netmask_go">
 <a href="#netmask_go" style="color: inherit; text-decoration: inherit;">Netmask</a>
@@ -763,8 +703,7 @@ All [input](#inputs) properties are implicitly available as output properties. A
         <span class="property-type">string</span>
     </dt>
     <dd>{{% md %}}Mask in decimal notation, e.g. "255.255.255.0"
-{{% /md %}}</dd>
-    <dt class="property-"
+{{% /md %}}</dd><dt class="property-"
             title="">
         <span id="network_go">
 <a href="#network_go" style="color: inherit; text-decoration: inherit;">Network</a>
@@ -773,8 +712,7 @@ All [input](#inputs) properties are implicitly available as output properties. A
         <span class="property-type">string</span>
     </dt>
     <dd>{{% md %}}Network IP address portion of the block specification
-{{% /md %}}</dd>
-    <dt class="property-"
+{{% /md %}}</dd><dt class="property-"
             title="">
         <span id="public_go">
 <a href="#public_go" style="color: inherit; text-decoration: inherit;">Public</a>
@@ -783,14 +721,11 @@ All [input](#inputs) properties are implicitly available as output properties. A
         <span class="property-type">bool</span>
     </dt>
     <dd>{{% md %}}boolean flag whether addresses from a block are public
-{{% /md %}}</dd>
-</dl>
+{{% /md %}}</dd></dl>
 {{% /choosable %}}
 
 {{% choosable language nodejs %}}
-<dl class="resources-properties">
-
-    <dt class="property-"
+<dl class="resources-properties"><dt class="property-"
             title="">
         <span id="address_nodejs">
 <a href="#address_nodejs" style="color: inherit; text-decoration: inherit;">address</a>
@@ -798,8 +733,7 @@ All [input](#inputs) properties are implicitly available as output properties. A
         <span class="property-indicator"></span>
         <span class="property-type">string</span>
     </dt>
-    <dd>{{% md %}}{{% /md %}}</dd>
-    <dt class="property-"
+    <dd>{{% md %}}{{% /md %}}</dd><dt class="property-"
             title="">
         <span id="addressfamily_nodejs">
 <a href="#addressfamily_nodejs" style="color: inherit; text-decoration: inherit;">address<wbr>Family</a>
@@ -808,8 +742,7 @@ All [input](#inputs) properties are implicitly available as output properties. A
         <span class="property-type">number</span>
     </dt>
     <dd>{{% md %}}Address family as integer (4 or 6)
-{{% /md %}}</dd>
-    <dt class="property-"
+{{% /md %}}</dd><dt class="property-"
             title="">
         <span id="cidr_nodejs">
 <a href="#cidr_nodejs" style="color: inherit; text-decoration: inherit;">cidr</a>
@@ -818,8 +751,7 @@ All [input](#inputs) properties are implicitly available as output properties. A
         <span class="property-type">number</span>
     </dt>
     <dd>{{% md %}}length of CIDR prefix of the block as integer
-{{% /md %}}</dd>
-    <dt class="property-"
+{{% /md %}}</dd><dt class="property-"
             title="">
         <span id="cidrnotation_nodejs">
 <a href="#cidrnotation_nodejs" style="color: inherit; text-decoration: inherit;">cidr<wbr>Notation</a>
@@ -828,8 +760,7 @@ All [input](#inputs) properties are implicitly available as output properties. A
         <span class="property-type">string</span>
     </dt>
     <dd>{{% md %}}Address and mask in CIDR notation, e.g. "147.229.15.30/31"
-{{% /md %}}</dd>
-    <dt class="property-"
+{{% /md %}}</dd><dt class="property-"
             title="">
         <span id="gateway_nodejs">
 <a href="#gateway_nodejs" style="color: inherit; text-decoration: inherit;">gateway</a>
@@ -837,8 +768,7 @@ All [input](#inputs) properties are implicitly available as output properties. A
         <span class="property-indicator"></span>
         <span class="property-type">string</span>
     </dt>
-    <dd>{{% md %}}{{% /md %}}</dd>
-    <dt class="property-"
+    <dd>{{% md %}}{{% /md %}}</dd><dt class="property-"
             title="">
         <span id="global_nodejs">
 <a href="#global_nodejs" style="color: inherit; text-decoration: inherit;">global</a>
@@ -847,8 +777,7 @@ All [input](#inputs) properties are implicitly available as output properties. A
         <span class="property-type">boolean</span>
     </dt>
     <dd>{{% md %}}boolean flag whether addresses from a block are global (i.e. can be assigned in any facility)
-{{% /md %}}</dd>
-    <dt class="property-"
+{{% /md %}}</dd><dt class="property-"
             title="">
         <span id="id_nodejs">
 <a href="#id_nodejs" style="color: inherit; text-decoration: inherit;">id</a>
@@ -856,8 +785,7 @@ All [input](#inputs) properties are implicitly available as output properties. A
         <span class="property-indicator"></span>
         <span class="property-type">string</span>
     </dt>
-    <dd>{{% md %}}The provider-assigned unique ID for this managed resource.{{% /md %}}</dd>
-    <dt class="property-"
+    <dd>{{% md %}}The provider-assigned unique ID for this managed resource.{{% /md %}}</dd><dt class="property-"
             title="">
         <span id="manageable_nodejs">
 <a href="#manageable_nodejs" style="color: inherit; text-decoration: inherit;">manageable</a>
@@ -865,8 +793,7 @@ All [input](#inputs) properties are implicitly available as output properties. A
         <span class="property-indicator"></span>
         <span class="property-type">boolean</span>
     </dt>
-    <dd>{{% md %}}{{% /md %}}</dd>
-    <dt class="property-"
+    <dd>{{% md %}}{{% /md %}}</dd><dt class="property-"
             title="">
         <span id="management_nodejs">
 <a href="#management_nodejs" style="color: inherit; text-decoration: inherit;">management</a>
@@ -874,8 +801,7 @@ All [input](#inputs) properties are implicitly available as output properties. A
         <span class="property-indicator"></span>
         <span class="property-type">boolean</span>
     </dt>
-    <dd>{{% md %}}{{% /md %}}</dd>
-    <dt class="property-"
+    <dd>{{% md %}}{{% /md %}}</dd><dt class="property-"
             title="">
         <span id="netmask_nodejs">
 <a href="#netmask_nodejs" style="color: inherit; text-decoration: inherit;">netmask</a>
@@ -884,8 +810,7 @@ All [input](#inputs) properties are implicitly available as output properties. A
         <span class="property-type">string</span>
     </dt>
     <dd>{{% md %}}Mask in decimal notation, e.g. "255.255.255.0"
-{{% /md %}}</dd>
-    <dt class="property-"
+{{% /md %}}</dd><dt class="property-"
             title="">
         <span id="network_nodejs">
 <a href="#network_nodejs" style="color: inherit; text-decoration: inherit;">network</a>
@@ -894,8 +819,7 @@ All [input](#inputs) properties are implicitly available as output properties. A
         <span class="property-type">string</span>
     </dt>
     <dd>{{% md %}}Network IP address portion of the block specification
-{{% /md %}}</dd>
-    <dt class="property-"
+{{% /md %}}</dd><dt class="property-"
             title="">
         <span id="public_nodejs">
 <a href="#public_nodejs" style="color: inherit; text-decoration: inherit;">public</a>
@@ -904,14 +828,11 @@ All [input](#inputs) properties are implicitly available as output properties. A
         <span class="property-type">boolean</span>
     </dt>
     <dd>{{% md %}}boolean flag whether addresses from a block are public
-{{% /md %}}</dd>
-</dl>
+{{% /md %}}</dd></dl>
 {{% /choosable %}}
 
 {{% choosable language python %}}
-<dl class="resources-properties">
-
-    <dt class="property-"
+<dl class="resources-properties"><dt class="property-"
             title="">
         <span id="address_python">
 <a href="#address_python" style="color: inherit; text-decoration: inherit;">address</a>
@@ -919,8 +840,7 @@ All [input](#inputs) properties are implicitly available as output properties. A
         <span class="property-indicator"></span>
         <span class="property-type">str</span>
     </dt>
-    <dd>{{% md %}}{{% /md %}}</dd>
-    <dt class="property-"
+    <dd>{{% md %}}{{% /md %}}</dd><dt class="property-"
             title="">
         <span id="address_family_python">
 <a href="#address_family_python" style="color: inherit; text-decoration: inherit;">address_<wbr>family</a>
@@ -929,8 +849,7 @@ All [input](#inputs) properties are implicitly available as output properties. A
         <span class="property-type">int</span>
     </dt>
     <dd>{{% md %}}Address family as integer (4 or 6)
-{{% /md %}}</dd>
-    <dt class="property-"
+{{% /md %}}</dd><dt class="property-"
             title="">
         <span id="cidr_python">
 <a href="#cidr_python" style="color: inherit; text-decoration: inherit;">cidr</a>
@@ -939,8 +858,7 @@ All [input](#inputs) properties are implicitly available as output properties. A
         <span class="property-type">int</span>
     </dt>
     <dd>{{% md %}}length of CIDR prefix of the block as integer
-{{% /md %}}</dd>
-    <dt class="property-"
+{{% /md %}}</dd><dt class="property-"
             title="">
         <span id="cidr_notation_python">
 <a href="#cidr_notation_python" style="color: inherit; text-decoration: inherit;">cidr_<wbr>notation</a>
@@ -949,8 +867,7 @@ All [input](#inputs) properties are implicitly available as output properties. A
         <span class="property-type">str</span>
     </dt>
     <dd>{{% md %}}Address and mask in CIDR notation, e.g. "147.229.15.30/31"
-{{% /md %}}</dd>
-    <dt class="property-"
+{{% /md %}}</dd><dt class="property-"
             title="">
         <span id="gateway_python">
 <a href="#gateway_python" style="color: inherit; text-decoration: inherit;">gateway</a>
@@ -958,8 +875,7 @@ All [input](#inputs) properties are implicitly available as output properties. A
         <span class="property-indicator"></span>
         <span class="property-type">str</span>
     </dt>
-    <dd>{{% md %}}{{% /md %}}</dd>
-    <dt class="property-"
+    <dd>{{% md %}}{{% /md %}}</dd><dt class="property-"
             title="">
         <span id="global__python">
 <a href="#global__python" style="color: inherit; text-decoration: inherit;">global_</a>
@@ -968,8 +884,7 @@ All [input](#inputs) properties are implicitly available as output properties. A
         <span class="property-type">bool</span>
     </dt>
     <dd>{{% md %}}boolean flag whether addresses from a block are global (i.e. can be assigned in any facility)
-{{% /md %}}</dd>
-    <dt class="property-"
+{{% /md %}}</dd><dt class="property-"
             title="">
         <span id="id_python">
 <a href="#id_python" style="color: inherit; text-decoration: inherit;">id</a>
@@ -977,8 +892,7 @@ All [input](#inputs) properties are implicitly available as output properties. A
         <span class="property-indicator"></span>
         <span class="property-type">str</span>
     </dt>
-    <dd>{{% md %}}The provider-assigned unique ID for this managed resource.{{% /md %}}</dd>
-    <dt class="property-"
+    <dd>{{% md %}}The provider-assigned unique ID for this managed resource.{{% /md %}}</dd><dt class="property-"
             title="">
         <span id="manageable_python">
 <a href="#manageable_python" style="color: inherit; text-decoration: inherit;">manageable</a>
@@ -986,8 +900,7 @@ All [input](#inputs) properties are implicitly available as output properties. A
         <span class="property-indicator"></span>
         <span class="property-type">bool</span>
     </dt>
-    <dd>{{% md %}}{{% /md %}}</dd>
-    <dt class="property-"
+    <dd>{{% md %}}{{% /md %}}</dd><dt class="property-"
             title="">
         <span id="management_python">
 <a href="#management_python" style="color: inherit; text-decoration: inherit;">management</a>
@@ -995,8 +908,7 @@ All [input](#inputs) properties are implicitly available as output properties. A
         <span class="property-indicator"></span>
         <span class="property-type">bool</span>
     </dt>
-    <dd>{{% md %}}{{% /md %}}</dd>
-    <dt class="property-"
+    <dd>{{% md %}}{{% /md %}}</dd><dt class="property-"
             title="">
         <span id="netmask_python">
 <a href="#netmask_python" style="color: inherit; text-decoration: inherit;">netmask</a>
@@ -1005,8 +917,7 @@ All [input](#inputs) properties are implicitly available as output properties. A
         <span class="property-type">str</span>
     </dt>
     <dd>{{% md %}}Mask in decimal notation, e.g. "255.255.255.0"
-{{% /md %}}</dd>
-    <dt class="property-"
+{{% /md %}}</dd><dt class="property-"
             title="">
         <span id="network_python">
 <a href="#network_python" style="color: inherit; text-decoration: inherit;">network</a>
@@ -1015,8 +926,7 @@ All [input](#inputs) properties are implicitly available as output properties. A
         <span class="property-type">str</span>
     </dt>
     <dd>{{% md %}}Network IP address portion of the block specification
-{{% /md %}}</dd>
-    <dt class="property-"
+{{% /md %}}</dd><dt class="property-"
             title="">
         <span id="public_python">
 <a href="#public_python" style="color: inherit; text-decoration: inherit;">public</a>
@@ -1025,8 +935,7 @@ All [input](#inputs) properties are implicitly available as output properties. A
         <span class="property-type">bool</span>
     </dt>
     <dd>{{% md %}}boolean flag whether addresses from a block are public
-{{% /md %}}</dd>
-</dl>
+{{% /md %}}</dd></dl>
 {{% /choosable %}}
 
 
@@ -1153,9 +1062,7 @@ The following state arguments are supported:
 
 
 {{% choosable language csharp %}}
-<dl class="resources-properties">
-
-    <dt class="property-optional"
+<dl class="resources-properties"><dt class="property-optional"
             title="Optional">
         <span id="state_address_csharp">
 <a href="#state_address_csharp" style="color: inherit; text-decoration: inherit;">Address</a>
@@ -1163,8 +1070,7 @@ The following state arguments are supported:
         <span class="property-indicator"></span>
         <span class="property-type">string</span>
     </dt>
-    <dd>{{% md %}}{{% /md %}}</dd>
-    <dt class="property-optional"
+    <dd>{{% md %}}{{% /md %}}</dd><dt class="property-optional"
             title="Optional">
         <span id="state_addressfamily_csharp">
 <a href="#state_addressfamily_csharp" style="color: inherit; text-decoration: inherit;">Address<wbr>Family</a>
@@ -1173,8 +1079,7 @@ The following state arguments are supported:
         <span class="property-type">int</span>
     </dt>
     <dd>{{% md %}}Address family as integer (4 or 6)
-{{% /md %}}</dd>
-    <dt class="property-optional"
+{{% /md %}}</dd><dt class="property-optional"
             title="Optional">
         <span id="state_cidr_csharp">
 <a href="#state_cidr_csharp" style="color: inherit; text-decoration: inherit;">Cidr</a>
@@ -1183,8 +1088,7 @@ The following state arguments are supported:
         <span class="property-type">int</span>
     </dt>
     <dd>{{% md %}}length of CIDR prefix of the block as integer
-{{% /md %}}</dd>
-    <dt class="property-optional"
+{{% /md %}}</dd><dt class="property-optional"
             title="Optional">
         <span id="state_cidrnotation_csharp">
 <a href="#state_cidrnotation_csharp" style="color: inherit; text-decoration: inherit;">Cidr<wbr>Notation</a>
@@ -1193,8 +1097,7 @@ The following state arguments are supported:
         <span class="property-type">string</span>
     </dt>
     <dd>{{% md %}}Address and mask in CIDR notation, e.g. "147.229.15.30/31"
-{{% /md %}}</dd>
-    <dt class="property-optional"
+{{% /md %}}</dd><dt class="property-optional"
             title="Optional">
         <span id="state_description_csharp">
 <a href="#state_description_csharp" style="color: inherit; text-decoration: inherit;">Description</a>
@@ -1203,8 +1106,7 @@ The following state arguments are supported:
         <span class="property-type">string</span>
     </dt>
     <dd>{{% md %}}Arbitrary description
-{{% /md %}}</dd>
-    <dt class="property-optional"
+{{% /md %}}</dd><dt class="property-optional"
             title="Optional">
         <span id="state_facility_csharp">
 <a href="#state_facility_csharp" style="color: inherit; text-decoration: inherit;">Facility</a>
@@ -1213,8 +1115,7 @@ The following state arguments are supported:
         <span class="property-type">string | <a href="#facility">Pulumi.<wbr>Equinix<wbr>Metal.<wbr>Facility</a></span>
     </dt>
     <dd>{{% md %}}Facility where to allocate the public IP address block, makes sense only for type==public_ipv4, must be empty for type==global_ipv4
-{{% /md %}}</dd>
-    <dt class="property-optional"
+{{% /md %}}</dd><dt class="property-optional"
             title="Optional">
         <span id="state_gateway_csharp">
 <a href="#state_gateway_csharp" style="color: inherit; text-decoration: inherit;">Gateway</a>
@@ -1222,8 +1123,7 @@ The following state arguments are supported:
         <span class="property-indicator"></span>
         <span class="property-type">string</span>
     </dt>
-    <dd>{{% md %}}{{% /md %}}</dd>
-    <dt class="property-optional"
+    <dd>{{% md %}}{{% /md %}}</dd><dt class="property-optional"
             title="Optional">
         <span id="state_global_csharp">
 <a href="#state_global_csharp" style="color: inherit; text-decoration: inherit;">Global</a>
@@ -1232,8 +1132,7 @@ The following state arguments are supported:
         <span class="property-type">bool</span>
     </dt>
     <dd>{{% md %}}boolean flag whether addresses from a block are global (i.e. can be assigned in any facility)
-{{% /md %}}</dd>
-    <dt class="property-optional"
+{{% /md %}}</dd><dt class="property-optional"
             title="Optional">
         <span id="state_manageable_csharp">
 <a href="#state_manageable_csharp" style="color: inherit; text-decoration: inherit;">Manageable</a>
@@ -1241,8 +1140,7 @@ The following state arguments are supported:
         <span class="property-indicator"></span>
         <span class="property-type">bool</span>
     </dt>
-    <dd>{{% md %}}{{% /md %}}</dd>
-    <dt class="property-optional"
+    <dd>{{% md %}}{{% /md %}}</dd><dt class="property-optional"
             title="Optional">
         <span id="state_management_csharp">
 <a href="#state_management_csharp" style="color: inherit; text-decoration: inherit;">Management</a>
@@ -1250,8 +1148,7 @@ The following state arguments are supported:
         <span class="property-indicator"></span>
         <span class="property-type">bool</span>
     </dt>
-    <dd>{{% md %}}{{% /md %}}</dd>
-    <dt class="property-optional"
+    <dd>{{% md %}}{{% /md %}}</dd><dt class="property-optional"
             title="Optional">
         <span id="state_netmask_csharp">
 <a href="#state_netmask_csharp" style="color: inherit; text-decoration: inherit;">Netmask</a>
@@ -1260,8 +1157,7 @@ The following state arguments are supported:
         <span class="property-type">string</span>
     </dt>
     <dd>{{% md %}}Mask in decimal notation, e.g. "255.255.255.0"
-{{% /md %}}</dd>
-    <dt class="property-optional"
+{{% /md %}}</dd><dt class="property-optional"
             title="Optional">
         <span id="state_network_csharp">
 <a href="#state_network_csharp" style="color: inherit; text-decoration: inherit;">Network</a>
@@ -1270,8 +1166,7 @@ The following state arguments are supported:
         <span class="property-type">string</span>
     </dt>
     <dd>{{% md %}}Network IP address portion of the block specification
-{{% /md %}}</dd>
-    <dt class="property-optional"
+{{% /md %}}</dd><dt class="property-optional"
             title="Optional">
         <span id="state_projectid_csharp">
 <a href="#state_projectid_csharp" style="color: inherit; text-decoration: inherit;">Project<wbr>Id</a>
@@ -1280,8 +1175,7 @@ The following state arguments are supported:
         <span class="property-type">string</span>
     </dt>
     <dd>{{% md %}}The metal project ID where to allocate the address block
-{{% /md %}}</dd>
-    <dt class="property-optional"
+{{% /md %}}</dd><dt class="property-optional"
             title="Optional">
         <span id="state_public_csharp">
 <a href="#state_public_csharp" style="color: inherit; text-decoration: inherit;">Public</a>
@@ -1290,8 +1184,7 @@ The following state arguments are supported:
         <span class="property-type">bool</span>
     </dt>
     <dd>{{% md %}}boolean flag whether addresses from a block are public
-{{% /md %}}</dd>
-    <dt class="property-optional"
+{{% /md %}}</dd><dt class="property-optional"
             title="Optional">
         <span id="state_quantity_csharp">
 <a href="#state_quantity_csharp" style="color: inherit; text-decoration: inherit;">Quantity</a>
@@ -1300,8 +1193,7 @@ The following state arguments are supported:
         <span class="property-type">int</span>
     </dt>
     <dd>{{% md %}}The number of allocated /32 addresses, a power of 2
-{{% /md %}}</dd>
-    <dt class="property-optional"
+{{% /md %}}</dd><dt class="property-optional"
             title="Optional">
         <span id="state_type_csharp">
 <a href="#state_type_csharp" style="color: inherit; text-decoration: inherit;">Type</a>
@@ -1310,14 +1202,11 @@ The following state arguments are supported:
         <span class="property-type">string | <a href="#ipblocktype">Pulumi.<wbr>Equinix<wbr>Metal.<wbr>Ip<wbr>Block<wbr>Type</a></span>
     </dt>
     <dd>{{% md %}}Either "global_ipv4" or "public_ipv4", defaults to "public_ipv4" for backward compatibility
-{{% /md %}}</dd>
-</dl>
+{{% /md %}}</dd></dl>
 {{% /choosable %}}
 
 {{% choosable language go %}}
-<dl class="resources-properties">
-
-    <dt class="property-optional"
+<dl class="resources-properties"><dt class="property-optional"
             title="Optional">
         <span id="state_address_go">
 <a href="#state_address_go" style="color: inherit; text-decoration: inherit;">Address</a>
@@ -1325,8 +1214,7 @@ The following state arguments are supported:
         <span class="property-indicator"></span>
         <span class="property-type">string</span>
     </dt>
-    <dd>{{% md %}}{{% /md %}}</dd>
-    <dt class="property-optional"
+    <dd>{{% md %}}{{% /md %}}</dd><dt class="property-optional"
             title="Optional">
         <span id="state_addressfamily_go">
 <a href="#state_addressfamily_go" style="color: inherit; text-decoration: inherit;">Address<wbr>Family</a>
@@ -1335,8 +1223,7 @@ The following state arguments are supported:
         <span class="property-type">int</span>
     </dt>
     <dd>{{% md %}}Address family as integer (4 or 6)
-{{% /md %}}</dd>
-    <dt class="property-optional"
+{{% /md %}}</dd><dt class="property-optional"
             title="Optional">
         <span id="state_cidr_go">
 <a href="#state_cidr_go" style="color: inherit; text-decoration: inherit;">Cidr</a>
@@ -1345,8 +1232,7 @@ The following state arguments are supported:
         <span class="property-type">int</span>
     </dt>
     <dd>{{% md %}}length of CIDR prefix of the block as integer
-{{% /md %}}</dd>
-    <dt class="property-optional"
+{{% /md %}}</dd><dt class="property-optional"
             title="Optional">
         <span id="state_cidrnotation_go">
 <a href="#state_cidrnotation_go" style="color: inherit; text-decoration: inherit;">Cidr<wbr>Notation</a>
@@ -1355,8 +1241,7 @@ The following state arguments are supported:
         <span class="property-type">string</span>
     </dt>
     <dd>{{% md %}}Address and mask in CIDR notation, e.g. "147.229.15.30/31"
-{{% /md %}}</dd>
-    <dt class="property-optional"
+{{% /md %}}</dd><dt class="property-optional"
             title="Optional">
         <span id="state_description_go">
 <a href="#state_description_go" style="color: inherit; text-decoration: inherit;">Description</a>
@@ -1365,8 +1250,7 @@ The following state arguments are supported:
         <span class="property-type">string</span>
     </dt>
     <dd>{{% md %}}Arbitrary description
-{{% /md %}}</dd>
-    <dt class="property-optional"
+{{% /md %}}</dd><dt class="property-optional"
             title="Optional">
         <span id="state_facility_go">
 <a href="#state_facility_go" style="color: inherit; text-decoration: inherit;">Facility</a>
@@ -1375,8 +1259,7 @@ The following state arguments are supported:
         <span class="property-type">string | <a href="#facility">Facility</a></span>
     </dt>
     <dd>{{% md %}}Facility where to allocate the public IP address block, makes sense only for type==public_ipv4, must be empty for type==global_ipv4
-{{% /md %}}</dd>
-    <dt class="property-optional"
+{{% /md %}}</dd><dt class="property-optional"
             title="Optional">
         <span id="state_gateway_go">
 <a href="#state_gateway_go" style="color: inherit; text-decoration: inherit;">Gateway</a>
@@ -1384,8 +1267,7 @@ The following state arguments are supported:
         <span class="property-indicator"></span>
         <span class="property-type">string</span>
     </dt>
-    <dd>{{% md %}}{{% /md %}}</dd>
-    <dt class="property-optional"
+    <dd>{{% md %}}{{% /md %}}</dd><dt class="property-optional"
             title="Optional">
         <span id="state_global_go">
 <a href="#state_global_go" style="color: inherit; text-decoration: inherit;">Global</a>
@@ -1394,8 +1276,7 @@ The following state arguments are supported:
         <span class="property-type">bool</span>
     </dt>
     <dd>{{% md %}}boolean flag whether addresses from a block are global (i.e. can be assigned in any facility)
-{{% /md %}}</dd>
-    <dt class="property-optional"
+{{% /md %}}</dd><dt class="property-optional"
             title="Optional">
         <span id="state_manageable_go">
 <a href="#state_manageable_go" style="color: inherit; text-decoration: inherit;">Manageable</a>
@@ -1403,8 +1284,7 @@ The following state arguments are supported:
         <span class="property-indicator"></span>
         <span class="property-type">bool</span>
     </dt>
-    <dd>{{% md %}}{{% /md %}}</dd>
-    <dt class="property-optional"
+    <dd>{{% md %}}{{% /md %}}</dd><dt class="property-optional"
             title="Optional">
         <span id="state_management_go">
 <a href="#state_management_go" style="color: inherit; text-decoration: inherit;">Management</a>
@@ -1412,8 +1292,7 @@ The following state arguments are supported:
         <span class="property-indicator"></span>
         <span class="property-type">bool</span>
     </dt>
-    <dd>{{% md %}}{{% /md %}}</dd>
-    <dt class="property-optional"
+    <dd>{{% md %}}{{% /md %}}</dd><dt class="property-optional"
             title="Optional">
         <span id="state_netmask_go">
 <a href="#state_netmask_go" style="color: inherit; text-decoration: inherit;">Netmask</a>
@@ -1422,8 +1301,7 @@ The following state arguments are supported:
         <span class="property-type">string</span>
     </dt>
     <dd>{{% md %}}Mask in decimal notation, e.g. "255.255.255.0"
-{{% /md %}}</dd>
-    <dt class="property-optional"
+{{% /md %}}</dd><dt class="property-optional"
             title="Optional">
         <span id="state_network_go">
 <a href="#state_network_go" style="color: inherit; text-decoration: inherit;">Network</a>
@@ -1432,8 +1310,7 @@ The following state arguments are supported:
         <span class="property-type">string</span>
     </dt>
     <dd>{{% md %}}Network IP address portion of the block specification
-{{% /md %}}</dd>
-    <dt class="property-optional"
+{{% /md %}}</dd><dt class="property-optional"
             title="Optional">
         <span id="state_projectid_go">
 <a href="#state_projectid_go" style="color: inherit; text-decoration: inherit;">Project<wbr>Id</a>
@@ -1442,8 +1319,7 @@ The following state arguments are supported:
         <span class="property-type">string</span>
     </dt>
     <dd>{{% md %}}The metal project ID where to allocate the address block
-{{% /md %}}</dd>
-    <dt class="property-optional"
+{{% /md %}}</dd><dt class="property-optional"
             title="Optional">
         <span id="state_public_go">
 <a href="#state_public_go" style="color: inherit; text-decoration: inherit;">Public</a>
@@ -1452,8 +1328,7 @@ The following state arguments are supported:
         <span class="property-type">bool</span>
     </dt>
     <dd>{{% md %}}boolean flag whether addresses from a block are public
-{{% /md %}}</dd>
-    <dt class="property-optional"
+{{% /md %}}</dd><dt class="property-optional"
             title="Optional">
         <span id="state_quantity_go">
 <a href="#state_quantity_go" style="color: inherit; text-decoration: inherit;">Quantity</a>
@@ -1462,8 +1337,7 @@ The following state arguments are supported:
         <span class="property-type">int</span>
     </dt>
     <dd>{{% md %}}The number of allocated /32 addresses, a power of 2
-{{% /md %}}</dd>
-    <dt class="property-optional"
+{{% /md %}}</dd><dt class="property-optional"
             title="Optional">
         <span id="state_type_go">
 <a href="#state_type_go" style="color: inherit; text-decoration: inherit;">Type</a>
@@ -1472,14 +1346,11 @@ The following state arguments are supported:
         <span class="property-type">string | <a href="#ipblocktype">Ip<wbr>Block<wbr>Type</a></span>
     </dt>
     <dd>{{% md %}}Either "global_ipv4" or "public_ipv4", defaults to "public_ipv4" for backward compatibility
-{{% /md %}}</dd>
-</dl>
+{{% /md %}}</dd></dl>
 {{% /choosable %}}
 
 {{% choosable language nodejs %}}
-<dl class="resources-properties">
-
-    <dt class="property-optional"
+<dl class="resources-properties"><dt class="property-optional"
             title="Optional">
         <span id="state_address_nodejs">
 <a href="#state_address_nodejs" style="color: inherit; text-decoration: inherit;">address</a>
@@ -1487,8 +1358,7 @@ The following state arguments are supported:
         <span class="property-indicator"></span>
         <span class="property-type">string</span>
     </dt>
-    <dd>{{% md %}}{{% /md %}}</dd>
-    <dt class="property-optional"
+    <dd>{{% md %}}{{% /md %}}</dd><dt class="property-optional"
             title="Optional">
         <span id="state_addressfamily_nodejs">
 <a href="#state_addressfamily_nodejs" style="color: inherit; text-decoration: inherit;">address<wbr>Family</a>
@@ -1497,8 +1367,7 @@ The following state arguments are supported:
         <span class="property-type">number</span>
     </dt>
     <dd>{{% md %}}Address family as integer (4 or 6)
-{{% /md %}}</dd>
-    <dt class="property-optional"
+{{% /md %}}</dd><dt class="property-optional"
             title="Optional">
         <span id="state_cidr_nodejs">
 <a href="#state_cidr_nodejs" style="color: inherit; text-decoration: inherit;">cidr</a>
@@ -1507,8 +1376,7 @@ The following state arguments are supported:
         <span class="property-type">number</span>
     </dt>
     <dd>{{% md %}}length of CIDR prefix of the block as integer
-{{% /md %}}</dd>
-    <dt class="property-optional"
+{{% /md %}}</dd><dt class="property-optional"
             title="Optional">
         <span id="state_cidrnotation_nodejs">
 <a href="#state_cidrnotation_nodejs" style="color: inherit; text-decoration: inherit;">cidr<wbr>Notation</a>
@@ -1517,8 +1385,7 @@ The following state arguments are supported:
         <span class="property-type">string</span>
     </dt>
     <dd>{{% md %}}Address and mask in CIDR notation, e.g. "147.229.15.30/31"
-{{% /md %}}</dd>
-    <dt class="property-optional"
+{{% /md %}}</dd><dt class="property-optional"
             title="Optional">
         <span id="state_description_nodejs">
 <a href="#state_description_nodejs" style="color: inherit; text-decoration: inherit;">description</a>
@@ -1527,8 +1394,7 @@ The following state arguments are supported:
         <span class="property-type">string</span>
     </dt>
     <dd>{{% md %}}Arbitrary description
-{{% /md %}}</dd>
-    <dt class="property-optional"
+{{% /md %}}</dd><dt class="property-optional"
             title="Optional">
         <span id="state_facility_nodejs">
 <a href="#state_facility_nodejs" style="color: inherit; text-decoration: inherit;">facility</a>
@@ -1537,8 +1403,7 @@ The following state arguments are supported:
         <span class="property-type">string | <a href="#facility">Facility</a></span>
     </dt>
     <dd>{{% md %}}Facility where to allocate the public IP address block, makes sense only for type==public_ipv4, must be empty for type==global_ipv4
-{{% /md %}}</dd>
-    <dt class="property-optional"
+{{% /md %}}</dd><dt class="property-optional"
             title="Optional">
         <span id="state_gateway_nodejs">
 <a href="#state_gateway_nodejs" style="color: inherit; text-decoration: inherit;">gateway</a>
@@ -1546,8 +1411,7 @@ The following state arguments are supported:
         <span class="property-indicator"></span>
         <span class="property-type">string</span>
     </dt>
-    <dd>{{% md %}}{{% /md %}}</dd>
-    <dt class="property-optional"
+    <dd>{{% md %}}{{% /md %}}</dd><dt class="property-optional"
             title="Optional">
         <span id="state_global_nodejs">
 <a href="#state_global_nodejs" style="color: inherit; text-decoration: inherit;">global</a>
@@ -1556,8 +1420,7 @@ The following state arguments are supported:
         <span class="property-type">boolean</span>
     </dt>
     <dd>{{% md %}}boolean flag whether addresses from a block are global (i.e. can be assigned in any facility)
-{{% /md %}}</dd>
-    <dt class="property-optional"
+{{% /md %}}</dd><dt class="property-optional"
             title="Optional">
         <span id="state_manageable_nodejs">
 <a href="#state_manageable_nodejs" style="color: inherit; text-decoration: inherit;">manageable</a>
@@ -1565,8 +1428,7 @@ The following state arguments are supported:
         <span class="property-indicator"></span>
         <span class="property-type">boolean</span>
     </dt>
-    <dd>{{% md %}}{{% /md %}}</dd>
-    <dt class="property-optional"
+    <dd>{{% md %}}{{% /md %}}</dd><dt class="property-optional"
             title="Optional">
         <span id="state_management_nodejs">
 <a href="#state_management_nodejs" style="color: inherit; text-decoration: inherit;">management</a>
@@ -1574,8 +1436,7 @@ The following state arguments are supported:
         <span class="property-indicator"></span>
         <span class="property-type">boolean</span>
     </dt>
-    <dd>{{% md %}}{{% /md %}}</dd>
-    <dt class="property-optional"
+    <dd>{{% md %}}{{% /md %}}</dd><dt class="property-optional"
             title="Optional">
         <span id="state_netmask_nodejs">
 <a href="#state_netmask_nodejs" style="color: inherit; text-decoration: inherit;">netmask</a>
@@ -1584,8 +1445,7 @@ The following state arguments are supported:
         <span class="property-type">string</span>
     </dt>
     <dd>{{% md %}}Mask in decimal notation, e.g. "255.255.255.0"
-{{% /md %}}</dd>
-    <dt class="property-optional"
+{{% /md %}}</dd><dt class="property-optional"
             title="Optional">
         <span id="state_network_nodejs">
 <a href="#state_network_nodejs" style="color: inherit; text-decoration: inherit;">network</a>
@@ -1594,8 +1454,7 @@ The following state arguments are supported:
         <span class="property-type">string</span>
     </dt>
     <dd>{{% md %}}Network IP address portion of the block specification
-{{% /md %}}</dd>
-    <dt class="property-optional"
+{{% /md %}}</dd><dt class="property-optional"
             title="Optional">
         <span id="state_projectid_nodejs">
 <a href="#state_projectid_nodejs" style="color: inherit; text-decoration: inherit;">project<wbr>Id</a>
@@ -1604,8 +1463,7 @@ The following state arguments are supported:
         <span class="property-type">string</span>
     </dt>
     <dd>{{% md %}}The metal project ID where to allocate the address block
-{{% /md %}}</dd>
-    <dt class="property-optional"
+{{% /md %}}</dd><dt class="property-optional"
             title="Optional">
         <span id="state_public_nodejs">
 <a href="#state_public_nodejs" style="color: inherit; text-decoration: inherit;">public</a>
@@ -1614,8 +1472,7 @@ The following state arguments are supported:
         <span class="property-type">boolean</span>
     </dt>
     <dd>{{% md %}}boolean flag whether addresses from a block are public
-{{% /md %}}</dd>
-    <dt class="property-optional"
+{{% /md %}}</dd><dt class="property-optional"
             title="Optional">
         <span id="state_quantity_nodejs">
 <a href="#state_quantity_nodejs" style="color: inherit; text-decoration: inherit;">quantity</a>
@@ -1624,8 +1481,7 @@ The following state arguments are supported:
         <span class="property-type">number</span>
     </dt>
     <dd>{{% md %}}The number of allocated /32 addresses, a power of 2
-{{% /md %}}</dd>
-    <dt class="property-optional"
+{{% /md %}}</dd><dt class="property-optional"
             title="Optional">
         <span id="state_type_nodejs">
 <a href="#state_type_nodejs" style="color: inherit; text-decoration: inherit;">type</a>
@@ -1634,14 +1490,11 @@ The following state arguments are supported:
         <span class="property-type">string | <a href="#ipblocktype">Ip<wbr>Block<wbr>Type</a></span>
     </dt>
     <dd>{{% md %}}Either "global_ipv4" or "public_ipv4", defaults to "public_ipv4" for backward compatibility
-{{% /md %}}</dd>
-</dl>
+{{% /md %}}</dd></dl>
 {{% /choosable %}}
 
 {{% choosable language python %}}
-<dl class="resources-properties">
-
-    <dt class="property-optional"
+<dl class="resources-properties"><dt class="property-optional"
             title="Optional">
         <span id="state_address_python">
 <a href="#state_address_python" style="color: inherit; text-decoration: inherit;">address</a>
@@ -1649,8 +1502,7 @@ The following state arguments are supported:
         <span class="property-indicator"></span>
         <span class="property-type">str</span>
     </dt>
-    <dd>{{% md %}}{{% /md %}}</dd>
-    <dt class="property-optional"
+    <dd>{{% md %}}{{% /md %}}</dd><dt class="property-optional"
             title="Optional">
         <span id="state_address_family_python">
 <a href="#state_address_family_python" style="color: inherit; text-decoration: inherit;">address_<wbr>family</a>
@@ -1659,8 +1511,7 @@ The following state arguments are supported:
         <span class="property-type">int</span>
     </dt>
     <dd>{{% md %}}Address family as integer (4 or 6)
-{{% /md %}}</dd>
-    <dt class="property-optional"
+{{% /md %}}</dd><dt class="property-optional"
             title="Optional">
         <span id="state_cidr_python">
 <a href="#state_cidr_python" style="color: inherit; text-decoration: inherit;">cidr</a>
@@ -1669,8 +1520,7 @@ The following state arguments are supported:
         <span class="property-type">int</span>
     </dt>
     <dd>{{% md %}}length of CIDR prefix of the block as integer
-{{% /md %}}</dd>
-    <dt class="property-optional"
+{{% /md %}}</dd><dt class="property-optional"
             title="Optional">
         <span id="state_cidr_notation_python">
 <a href="#state_cidr_notation_python" style="color: inherit; text-decoration: inherit;">cidr_<wbr>notation</a>
@@ -1679,8 +1529,7 @@ The following state arguments are supported:
         <span class="property-type">str</span>
     </dt>
     <dd>{{% md %}}Address and mask in CIDR notation, e.g. "147.229.15.30/31"
-{{% /md %}}</dd>
-    <dt class="property-optional"
+{{% /md %}}</dd><dt class="property-optional"
             title="Optional">
         <span id="state_description_python">
 <a href="#state_description_python" style="color: inherit; text-decoration: inherit;">description</a>
@@ -1689,8 +1538,7 @@ The following state arguments are supported:
         <span class="property-type">str</span>
     </dt>
     <dd>{{% md %}}Arbitrary description
-{{% /md %}}</dd>
-    <dt class="property-optional"
+{{% /md %}}</dd><dt class="property-optional"
             title="Optional">
         <span id="state_facility_python">
 <a href="#state_facility_python" style="color: inherit; text-decoration: inherit;">facility</a>
@@ -1699,8 +1547,7 @@ The following state arguments are supported:
         <span class="property-type">str | <a href="#facility">Facility</a></span>
     </dt>
     <dd>{{% md %}}Facility where to allocate the public IP address block, makes sense only for type==public_ipv4, must be empty for type==global_ipv4
-{{% /md %}}</dd>
-    <dt class="property-optional"
+{{% /md %}}</dd><dt class="property-optional"
             title="Optional">
         <span id="state_gateway_python">
 <a href="#state_gateway_python" style="color: inherit; text-decoration: inherit;">gateway</a>
@@ -1708,8 +1555,7 @@ The following state arguments are supported:
         <span class="property-indicator"></span>
         <span class="property-type">str</span>
     </dt>
-    <dd>{{% md %}}{{% /md %}}</dd>
-    <dt class="property-optional"
+    <dd>{{% md %}}{{% /md %}}</dd><dt class="property-optional"
             title="Optional">
         <span id="state_global__python">
 <a href="#state_global__python" style="color: inherit; text-decoration: inherit;">global_</a>
@@ -1718,8 +1564,7 @@ The following state arguments are supported:
         <span class="property-type">bool</span>
     </dt>
     <dd>{{% md %}}boolean flag whether addresses from a block are global (i.e. can be assigned in any facility)
-{{% /md %}}</dd>
-    <dt class="property-optional"
+{{% /md %}}</dd><dt class="property-optional"
             title="Optional">
         <span id="state_manageable_python">
 <a href="#state_manageable_python" style="color: inherit; text-decoration: inherit;">manageable</a>
@@ -1727,8 +1572,7 @@ The following state arguments are supported:
         <span class="property-indicator"></span>
         <span class="property-type">bool</span>
     </dt>
-    <dd>{{% md %}}{{% /md %}}</dd>
-    <dt class="property-optional"
+    <dd>{{% md %}}{{% /md %}}</dd><dt class="property-optional"
             title="Optional">
         <span id="state_management_python">
 <a href="#state_management_python" style="color: inherit; text-decoration: inherit;">management</a>
@@ -1736,8 +1580,7 @@ The following state arguments are supported:
         <span class="property-indicator"></span>
         <span class="property-type">bool</span>
     </dt>
-    <dd>{{% md %}}{{% /md %}}</dd>
-    <dt class="property-optional"
+    <dd>{{% md %}}{{% /md %}}</dd><dt class="property-optional"
             title="Optional">
         <span id="state_netmask_python">
 <a href="#state_netmask_python" style="color: inherit; text-decoration: inherit;">netmask</a>
@@ -1746,8 +1589,7 @@ The following state arguments are supported:
         <span class="property-type">str</span>
     </dt>
     <dd>{{% md %}}Mask in decimal notation, e.g. "255.255.255.0"
-{{% /md %}}</dd>
-    <dt class="property-optional"
+{{% /md %}}</dd><dt class="property-optional"
             title="Optional">
         <span id="state_network_python">
 <a href="#state_network_python" style="color: inherit; text-decoration: inherit;">network</a>
@@ -1756,8 +1598,7 @@ The following state arguments are supported:
         <span class="property-type">str</span>
     </dt>
     <dd>{{% md %}}Network IP address portion of the block specification
-{{% /md %}}</dd>
-    <dt class="property-optional"
+{{% /md %}}</dd><dt class="property-optional"
             title="Optional">
         <span id="state_project_id_python">
 <a href="#state_project_id_python" style="color: inherit; text-decoration: inherit;">project_<wbr>id</a>
@@ -1766,8 +1607,7 @@ The following state arguments are supported:
         <span class="property-type">str</span>
     </dt>
     <dd>{{% md %}}The metal project ID where to allocate the address block
-{{% /md %}}</dd>
-    <dt class="property-optional"
+{{% /md %}}</dd><dt class="property-optional"
             title="Optional">
         <span id="state_public_python">
 <a href="#state_public_python" style="color: inherit; text-decoration: inherit;">public</a>
@@ -1776,8 +1616,7 @@ The following state arguments are supported:
         <span class="property-type">bool</span>
     </dt>
     <dd>{{% md %}}boolean flag whether addresses from a block are public
-{{% /md %}}</dd>
-    <dt class="property-optional"
+{{% /md %}}</dd><dt class="property-optional"
             title="Optional">
         <span id="state_quantity_python">
 <a href="#state_quantity_python" style="color: inherit; text-decoration: inherit;">quantity</a>
@@ -1786,8 +1625,7 @@ The following state arguments are supported:
         <span class="property-type">int</span>
     </dt>
     <dd>{{% md %}}The number of allocated /32 addresses, a power of 2
-{{% /md %}}</dd>
-    <dt class="property-optional"
+{{% /md %}}</dd><dt class="property-optional"
             title="Optional">
         <span id="state_type_python">
 <a href="#state_type_python" style="color: inherit; text-decoration: inherit;">type</a>
@@ -1796,8 +1634,7 @@ The following state arguments are supported:
         <span class="property-type">str | <a href="#ipblocktype">Ip<wbr>Block<wbr>Type</a></span>
     </dt>
     <dd>{{% md %}}Either "global_ipv4" or "public_ipv4", defaults to "public_ipv4" for backward compatibility
-{{% /md %}}</dd>
-</dl>
+{{% /md %}}</dd></dl>
 {{% /choosable %}}
 
 
@@ -1812,269 +1649,149 @@ The following state arguments are supported:
 <h4 id="facility">Facility</h4>
 
 {{% choosable language csharp %}}
-<dl class="tabular">
-    <dt>EWR1</dt>
-    <dd>ewr1</dd>
-    <dt>SJC1</dt>
-    <dd>sjc1</dd>
-    <dt>DFW1</dt>
-    <dd>dfw1</dd>
-    <dt>DFW2</dt>
-    <dd>dfw2</dd>
-    <dt>AMS1</dt>
-    <dd>ams1</dd>
-    <dt>NRT1</dt>
-    <dd>nrt1</dd>
-    <dt>SEA1</dt>
-    <dd>sea1</dd>
-    <dt>LAX1</dt>
-    <dd>lax1</dd>
-    <dt>ORD1</dt>
-    <dd>ord1</dd>
-    <dt>ATL1</dt>
-    <dd>atl1</dd>
-    <dt>IAD1</dt>
-    <dd>iad1</dd>
-    <dt>SIN1</dt>
-    <dd>sin1</dd>
-    <dt>HKG1</dt>
-    <dd>hkg1</dd>
-    <dt>SYD1</dt>
-    <dd>syd1</dd>
-    <dt>MRS1</dt>
-    <dd>mrs1</dd>
-    <dt>YYZ1</dt>
-    <dd>yyz1</dd>
-    <dt>FRA2</dt>
-    <dd>fra2</dd>
-    <dt>AM6</dt>
-    <dd>am6</dd>
-    <dt>DC13</dt>
-    <dd>dc13</dd>
-    <dt>CH3</dt>
-    <dd>ch3</dd>
-    <dt>DA3</dt>
-    <dd>da3</dd>
-    <dt>DA11</dt>
-    <dd>da11</dd>
-    <dt>LA4</dt>
-    <dd>la4</dd>
-    <dt>NY5</dt>
-    <dd>ny5</dd>
-    <dt>SG1</dt>
-    <dd>sg1</dd>
-    <dt>SV15</dt>
-    <dd>sv15</dd>
-</dl>
+<dl class="tabular"><dt>EWR1</dt>
+    <dd>ewr1</dd><dt>SJC1</dt>
+    <dd>sjc1</dd><dt>DFW1</dt>
+    <dd>dfw1</dd><dt>DFW2</dt>
+    <dd>dfw2</dd><dt>AMS1</dt>
+    <dd>ams1</dd><dt>NRT1</dt>
+    <dd>nrt1</dd><dt>SEA1</dt>
+    <dd>sea1</dd><dt>LAX1</dt>
+    <dd>lax1</dd><dt>ORD1</dt>
+    <dd>ord1</dd><dt>ATL1</dt>
+    <dd>atl1</dd><dt>IAD1</dt>
+    <dd>iad1</dd><dt>SIN1</dt>
+    <dd>sin1</dd><dt>HKG1</dt>
+    <dd>hkg1</dd><dt>SYD1</dt>
+    <dd>syd1</dd><dt>MRS1</dt>
+    <dd>mrs1</dd><dt>YYZ1</dt>
+    <dd>yyz1</dd><dt>FRA2</dt>
+    <dd>fra2</dd><dt>AM6</dt>
+    <dd>am6</dd><dt>DC13</dt>
+    <dd>dc13</dd><dt>CH3</dt>
+    <dd>ch3</dd><dt>DA3</dt>
+    <dd>da3</dd><dt>DA11</dt>
+    <dd>da11</dd><dt>LA4</dt>
+    <dd>la4</dd><dt>NY5</dt>
+    <dd>ny5</dd><dt>SG1</dt>
+    <dd>sg1</dd><dt>SV15</dt>
+    <dd>sv15</dd></dl>
 {{% /choosable %}}
 
 {{% choosable language go %}}
-<dl class="tabular">
-    <dt>Facility<wbr>EWR1</dt>
-    <dd>ewr1</dd>
-    <dt>Facility<wbr>SJC1</dt>
-    <dd>sjc1</dd>
-    <dt>Facility<wbr>DFW1</dt>
-    <dd>dfw1</dd>
-    <dt>Facility<wbr>DFW2</dt>
-    <dd>dfw2</dd>
-    <dt>Facility<wbr>AMS1</dt>
-    <dd>ams1</dd>
-    <dt>Facility<wbr>NRT1</dt>
-    <dd>nrt1</dd>
-    <dt>Facility<wbr>SEA1</dt>
-    <dd>sea1</dd>
-    <dt>Facility<wbr>LAX1</dt>
-    <dd>lax1</dd>
-    <dt>Facility<wbr>ORD1</dt>
-    <dd>ord1</dd>
-    <dt>Facility<wbr>ATL1</dt>
-    <dd>atl1</dd>
-    <dt>Facility<wbr>IAD1</dt>
-    <dd>iad1</dd>
-    <dt>Facility<wbr>SIN1</dt>
-    <dd>sin1</dd>
-    <dt>Facility<wbr>HKG1</dt>
-    <dd>hkg1</dd>
-    <dt>Facility<wbr>SYD1</dt>
-    <dd>syd1</dd>
-    <dt>Facility<wbr>MRS1</dt>
-    <dd>mrs1</dd>
-    <dt>Facility<wbr>YYZ1</dt>
-    <dd>yyz1</dd>
-    <dt>Facility<wbr>FRA2</dt>
-    <dd>fra2</dd>
-    <dt>Facility<wbr>AM6</dt>
-    <dd>am6</dd>
-    <dt>Facility<wbr>DC13</dt>
-    <dd>dc13</dd>
-    <dt>Facility<wbr>CH3</dt>
-    <dd>ch3</dd>
-    <dt>Facility<wbr>DA3</dt>
-    <dd>da3</dd>
-    <dt>Facility<wbr>DA11</dt>
-    <dd>da11</dd>
-    <dt>Facility<wbr>LA4</dt>
-    <dd>la4</dd>
-    <dt>Facility<wbr>NY5</dt>
-    <dd>ny5</dd>
-    <dt>Facility<wbr>SG1</dt>
-    <dd>sg1</dd>
-    <dt>Facility<wbr>SV15</dt>
-    <dd>sv15</dd>
-</dl>
+<dl class="tabular"><dt>Facility<wbr>EWR1</dt>
+    <dd>ewr1</dd><dt>Facility<wbr>SJC1</dt>
+    <dd>sjc1</dd><dt>Facility<wbr>DFW1</dt>
+    <dd>dfw1</dd><dt>Facility<wbr>DFW2</dt>
+    <dd>dfw2</dd><dt>Facility<wbr>AMS1</dt>
+    <dd>ams1</dd><dt>Facility<wbr>NRT1</dt>
+    <dd>nrt1</dd><dt>Facility<wbr>SEA1</dt>
+    <dd>sea1</dd><dt>Facility<wbr>LAX1</dt>
+    <dd>lax1</dd><dt>Facility<wbr>ORD1</dt>
+    <dd>ord1</dd><dt>Facility<wbr>ATL1</dt>
+    <dd>atl1</dd><dt>Facility<wbr>IAD1</dt>
+    <dd>iad1</dd><dt>Facility<wbr>SIN1</dt>
+    <dd>sin1</dd><dt>Facility<wbr>HKG1</dt>
+    <dd>hkg1</dd><dt>Facility<wbr>SYD1</dt>
+    <dd>syd1</dd><dt>Facility<wbr>MRS1</dt>
+    <dd>mrs1</dd><dt>Facility<wbr>YYZ1</dt>
+    <dd>yyz1</dd><dt>Facility<wbr>FRA2</dt>
+    <dd>fra2</dd><dt>Facility<wbr>AM6</dt>
+    <dd>am6</dd><dt>Facility<wbr>DC13</dt>
+    <dd>dc13</dd><dt>Facility<wbr>CH3</dt>
+    <dd>ch3</dd><dt>Facility<wbr>DA3</dt>
+    <dd>da3</dd><dt>Facility<wbr>DA11</dt>
+    <dd>da11</dd><dt>Facility<wbr>LA4</dt>
+    <dd>la4</dd><dt>Facility<wbr>NY5</dt>
+    <dd>ny5</dd><dt>Facility<wbr>SG1</dt>
+    <dd>sg1</dd><dt>Facility<wbr>SV15</dt>
+    <dd>sv15</dd></dl>
 {{% /choosable %}}
 
 {{% choosable language nodejs %}}
-<dl class="tabular">
-    <dt>EWR1</dt>
-    <dd>ewr1</dd>
-    <dt>SJC1</dt>
-    <dd>sjc1</dd>
-    <dt>DFW1</dt>
-    <dd>dfw1</dd>
-    <dt>DFW2</dt>
-    <dd>dfw2</dd>
-    <dt>AMS1</dt>
-    <dd>ams1</dd>
-    <dt>NRT1</dt>
-    <dd>nrt1</dd>
-    <dt>SEA1</dt>
-    <dd>sea1</dd>
-    <dt>LAX1</dt>
-    <dd>lax1</dd>
-    <dt>ORD1</dt>
-    <dd>ord1</dd>
-    <dt>ATL1</dt>
-    <dd>atl1</dd>
-    <dt>IAD1</dt>
-    <dd>iad1</dd>
-    <dt>SIN1</dt>
-    <dd>sin1</dd>
-    <dt>HKG1</dt>
-    <dd>hkg1</dd>
-    <dt>SYD1</dt>
-    <dd>syd1</dd>
-    <dt>MRS1</dt>
-    <dd>mrs1</dd>
-    <dt>YYZ1</dt>
-    <dd>yyz1</dd>
-    <dt>FRA2</dt>
-    <dd>fra2</dd>
-    <dt>AM6</dt>
-    <dd>am6</dd>
-    <dt>DC13</dt>
-    <dd>dc13</dd>
-    <dt>CH3</dt>
-    <dd>ch3</dd>
-    <dt>DA3</dt>
-    <dd>da3</dd>
-    <dt>DA11</dt>
-    <dd>da11</dd>
-    <dt>LA4</dt>
-    <dd>la4</dd>
-    <dt>NY5</dt>
-    <dd>ny5</dd>
-    <dt>SG1</dt>
-    <dd>sg1</dd>
-    <dt>SV15</dt>
-    <dd>sv15</dd>
-</dl>
+<dl class="tabular"><dt>EWR1</dt>
+    <dd>ewr1</dd><dt>SJC1</dt>
+    <dd>sjc1</dd><dt>DFW1</dt>
+    <dd>dfw1</dd><dt>DFW2</dt>
+    <dd>dfw2</dd><dt>AMS1</dt>
+    <dd>ams1</dd><dt>NRT1</dt>
+    <dd>nrt1</dd><dt>SEA1</dt>
+    <dd>sea1</dd><dt>LAX1</dt>
+    <dd>lax1</dd><dt>ORD1</dt>
+    <dd>ord1</dd><dt>ATL1</dt>
+    <dd>atl1</dd><dt>IAD1</dt>
+    <dd>iad1</dd><dt>SIN1</dt>
+    <dd>sin1</dd><dt>HKG1</dt>
+    <dd>hkg1</dd><dt>SYD1</dt>
+    <dd>syd1</dd><dt>MRS1</dt>
+    <dd>mrs1</dd><dt>YYZ1</dt>
+    <dd>yyz1</dd><dt>FRA2</dt>
+    <dd>fra2</dd><dt>AM6</dt>
+    <dd>am6</dd><dt>DC13</dt>
+    <dd>dc13</dd><dt>CH3</dt>
+    <dd>ch3</dd><dt>DA3</dt>
+    <dd>da3</dd><dt>DA11</dt>
+    <dd>da11</dd><dt>LA4</dt>
+    <dd>la4</dd><dt>NY5</dt>
+    <dd>ny5</dd><dt>SG1</dt>
+    <dd>sg1</dd><dt>SV15</dt>
+    <dd>sv15</dd></dl>
 {{% /choosable %}}
 
 {{% choosable language python %}}
-<dl class="tabular">
-    <dt>EWR1</dt>
-    <dd>ewr1</dd>
-    <dt>SJC1</dt>
-    <dd>sjc1</dd>
-    <dt>DFW1</dt>
-    <dd>dfw1</dd>
-    <dt>DFW2</dt>
-    <dd>dfw2</dd>
-    <dt>AMS1</dt>
-    <dd>ams1</dd>
-    <dt>NRT1</dt>
-    <dd>nrt1</dd>
-    <dt>SEA1</dt>
-    <dd>sea1</dd>
-    <dt>LAX1</dt>
-    <dd>lax1</dd>
-    <dt>ORD1</dt>
-    <dd>ord1</dd>
-    <dt>ATL1</dt>
-    <dd>atl1</dd>
-    <dt>IAD1</dt>
-    <dd>iad1</dd>
-    <dt>SIN1</dt>
-    <dd>sin1</dd>
-    <dt>HKG1</dt>
-    <dd>hkg1</dd>
-    <dt>SYD1</dt>
-    <dd>syd1</dd>
-    <dt>MRS1</dt>
-    <dd>mrs1</dd>
-    <dt>YYZ1</dt>
-    <dd>yyz1</dd>
-    <dt>FRA2</dt>
-    <dd>fra2</dd>
-    <dt>AM6</dt>
-    <dd>am6</dd>
-    <dt>DC13</dt>
-    <dd>dc13</dd>
-    <dt>CH3</dt>
-    <dd>ch3</dd>
-    <dt>DA3</dt>
-    <dd>da3</dd>
-    <dt>DA11</dt>
-    <dd>da11</dd>
-    <dt>LA4</dt>
-    <dd>la4</dd>
-    <dt>NY5</dt>
-    <dd>ny5</dd>
-    <dt>SG1</dt>
-    <dd>sg1</dd>
-    <dt>SV15</dt>
-    <dd>sv15</dd>
-</dl>
+<dl class="tabular"><dt>EWR1</dt>
+    <dd>ewr1</dd><dt>SJC1</dt>
+    <dd>sjc1</dd><dt>DFW1</dt>
+    <dd>dfw1</dd><dt>DFW2</dt>
+    <dd>dfw2</dd><dt>AMS1</dt>
+    <dd>ams1</dd><dt>NRT1</dt>
+    <dd>nrt1</dd><dt>SEA1</dt>
+    <dd>sea1</dd><dt>LAX1</dt>
+    <dd>lax1</dd><dt>ORD1</dt>
+    <dd>ord1</dd><dt>ATL1</dt>
+    <dd>atl1</dd><dt>IAD1</dt>
+    <dd>iad1</dd><dt>SIN1</dt>
+    <dd>sin1</dd><dt>HKG1</dt>
+    <dd>hkg1</dd><dt>SYD1</dt>
+    <dd>syd1</dd><dt>MRS1</dt>
+    <dd>mrs1</dd><dt>YYZ1</dt>
+    <dd>yyz1</dd><dt>FRA2</dt>
+    <dd>fra2</dd><dt>AM6</dt>
+    <dd>am6</dd><dt>DC13</dt>
+    <dd>dc13</dd><dt>CH3</dt>
+    <dd>ch3</dd><dt>DA3</dt>
+    <dd>da3</dd><dt>DA11</dt>
+    <dd>da11</dd><dt>LA4</dt>
+    <dd>la4</dd><dt>NY5</dt>
+    <dd>ny5</dd><dt>SG1</dt>
+    <dd>sg1</dd><dt>SV15</dt>
+    <dd>sv15</dd></dl>
 {{% /choosable %}}
 
 <h4 id="ipblocktype">Ip<wbr>Block<wbr>Type</h4>
 
 {{% choosable language csharp %}}
-<dl class="tabular">
-    <dt>Global<wbr>IPv4</dt>
-    <dd>global_ipv4</dd>
-    <dt>Public<wbr>IPv4</dt>
-    <dd>public_ipv4</dd>
-</dl>
+<dl class="tabular"><dt>Global<wbr>IPv4</dt>
+    <dd>global_ipv4</dd><dt>Public<wbr>IPv4</dt>
+    <dd>public_ipv4</dd></dl>
 {{% /choosable %}}
 
 {{% choosable language go %}}
-<dl class="tabular">
-    <dt>Ip<wbr>Block<wbr>Type<wbr>Global<wbr>IPv4</dt>
-    <dd>global_ipv4</dd>
-    <dt>Ip<wbr>Block<wbr>Type<wbr>Public<wbr>IPv4</dt>
-    <dd>public_ipv4</dd>
-</dl>
+<dl class="tabular"><dt>Ip<wbr>Block<wbr>Type<wbr>Global<wbr>IPv4</dt>
+    <dd>global_ipv4</dd><dt>Ip<wbr>Block<wbr>Type<wbr>Public<wbr>IPv4</dt>
+    <dd>public_ipv4</dd></dl>
 {{% /choosable %}}
 
 {{% choosable language nodejs %}}
-<dl class="tabular">
-    <dt>Global<wbr>IPv4</dt>
-    <dd>global_ipv4</dd>
-    <dt>Public<wbr>IPv4</dt>
-    <dd>public_ipv4</dd>
-</dl>
+<dl class="tabular"><dt>Global<wbr>IPv4</dt>
+    <dd>global_ipv4</dd><dt>Public<wbr>IPv4</dt>
+    <dd>public_ipv4</dd></dl>
 {{% /choosable %}}
 
 {{% choosable language python %}}
-<dl class="tabular">
-    <dt>GLOBAL_I_PV4</dt>
-    <dd>global_ipv4</dd>
-    <dt>PUBLIC_I_PV4</dt>
-    <dd>public_ipv4</dd>
-</dl>
+<dl class="tabular"><dt>GLOBAL_I_PV4</dt>
+    <dd>global_ipv4</dd><dt>PUBLIC_I_PV4</dt>
+    <dd>public_ipv4</dd></dl>
 {{% /choosable %}}
 
 
@@ -2085,6 +1802,6 @@ The following state arguments are supported:
 	<dt>License</dt>
 	<dd>Apache-2.0</dd>
 	<dt>Notes</dt>
-	<dd>This Pulumi package is based on the [`metal` Terraform Provider](https://github.com/equinix/terraform-provider-metal).</dd>
+	<dd>{{% md %}}This Pulumi package is based on the [`metal` Terraform Provider](https://github.com/equinix/terraform-provider-metal).{{% /md %}}</dd>
 </dl>
 

@@ -14,11 +14,17 @@ A lab.
 API Version: 2018-09-15.
 
 {{% examples %}}
+
 ## Example Usage
 
 {{< chooser language "typescript,python,go,csharp" / >}}
+
+
 ### Labs_CreateOrUpdate
-{{% example csharp %}}
+
+
+{{< example csharp >}}
+
 ```csharp
 using Pulumi;
 using AzureNative = Pulumi.AzureNative;
@@ -44,9 +50,12 @@ class MyStack : Stack
 
 ```
 
-{{% /example %}}
 
-{{% example go %}}
+{{< /example >}}
+
+
+{{< example go >}}
+
 
 ```go
 package main
@@ -76,9 +85,12 @@ func main() {
 
 ```
 
-{{% /example %}}
 
-{{% example python %}}
+{{< /example >}}
+
+
+{{< example python >}}
+
 
 ```python
 import pulumi
@@ -95,9 +107,12 @@ lab = azure_native.devtestlab.Lab("lab",
 
 ```
 
-{{% /example %}}
 
-{{% example typescript %}}
+{{< /example >}}
+
+
+{{< example typescript >}}
+
 
 ```typescript
 import * as pulumi from "@pulumi/pulumi";
@@ -115,9 +130,16 @@ const lab = new azure_native.devtestlab.Lab("lab", {
 
 ```
 
-{{% /example %}}
+
+{{< /example >}}
+
+
+
+
 
 {{% /examples %}}
+
+
 
 
 ## Create a Lab Resource {#create}
@@ -142,9 +164,7 @@ const lab = new azure_native.devtestlab.Lab("lab", {
 
 {{% choosable language nodejs %}}
 
-<dl class="resources-properties">
-  
-    <dt
+<dl class="resources-properties"><dt
         class="property-required" title="Required">
         <span>name</span>
         <span class="property-indicator"></span>
@@ -152,9 +172,7 @@ const lab = new azure_native.devtestlab.Lab("lab", {
     </dt>
     <dd>
       The unique name of the resource.
-    </dd>
-  
-    <dt
+    </dd><dt
         class="property-required" title="Required">
         <span>args</span>
         <span class="property-indicator"></span>
@@ -162,9 +180,7 @@ const lab = new azure_native.devtestlab.Lab("lab", {
     </dt>
     <dd>
       The arguments to resource properties.
-    </dd>
-  
-    <dt
+    </dd><dt
         class="property-optional" title="Optional">
         <span>opts</span>
         <span class="property-indicator"></span>
@@ -172,10 +188,7 @@ const lab = new azure_native.devtestlab.Lab("lab", {
     </dt>
     <dd>
       Bag of options to control resource&#39;s behavior.
-    </dd>
-  
-
-</dl>
+    </dd></dl>
 
 {{% /choosable %}}
 
@@ -201,9 +214,7 @@ const lab = new azure_native.devtestlab.Lab("lab", {
 
 {{% choosable language go %}}
 
-<dl class="resources-properties">
-  
-    <dt
+<dl class="resources-properties"><dt
         class="property-optional" title="Optional">
         <span>ctx</span>
         <span class="property-indicator"></span>
@@ -211,9 +222,7 @@ const lab = new azure_native.devtestlab.Lab("lab", {
     </dt>
     <dd>
       Context object for the current deployment.
-    </dd>
-  
-    <dt
+    </dd><dt
         class="property-required" title="Required">
         <span>name</span>
         <span class="property-indicator"></span>
@@ -221,9 +230,7 @@ const lab = new azure_native.devtestlab.Lab("lab", {
     </dt>
     <dd>
       The unique name of the resource.
-    </dd>
-  
-    <dt
+    </dd><dt
         class="property-required" title="Required">
         <span>args</span>
         <span class="property-indicator"></span>
@@ -231,9 +238,7 @@ const lab = new azure_native.devtestlab.Lab("lab", {
     </dt>
     <dd>
       The arguments to resource properties.
-    </dd>
-  
-    <dt
+    </dd><dt
         class="property-optional" title="Optional">
         <span>opts</span>
         <span class="property-indicator"></span>
@@ -241,18 +246,13 @@ const lab = new azure_native.devtestlab.Lab("lab", {
     </dt>
     <dd>
       Bag of options to control resource&#39;s behavior.
-    </dd>
-  
-
-</dl>
+    </dd></dl>
 
 {{% /choosable %}}
 
 {{% choosable language csharp %}}
 
-<dl class="resources-properties">
-  
-    <dt
+<dl class="resources-properties"><dt
         class="property-required" title="Required">
         <span>name</span>
         <span class="property-indicator"></span>
@@ -260,9 +260,7 @@ const lab = new azure_native.devtestlab.Lab("lab", {
     </dt>
     <dd>
       The unique name of the resource.
-    </dd>
-  
-    <dt
+    </dd><dt
         class="property-required" title="Required">
         <span>args</span>
         <span class="property-indicator"></span>
@@ -270,9 +268,7 @@ const lab = new azure_native.devtestlab.Lab("lab", {
     </dt>
     <dd>
       The arguments to resource properties.
-    </dd>
-  
-    <dt
+    </dd><dt
         class="property-optional" title="Optional">
         <span>opts</span>
         <span class="property-indicator"></span>
@@ -280,10 +276,7 @@ const lab = new azure_native.devtestlab.Lab("lab", {
     </dt>
     <dd>
       Bag of options to control resource&#39;s behavior.
-    </dd>
-  
-
-</dl>
+    </dd></dl>
 
 {{% /choosable %}}
 
@@ -298,9 +291,7 @@ The Lab resource accepts the following [input]({{< relref "/docs/intro/concepts/
 
 
 {{% choosable language csharp %}}
-<dl class="resources-properties">
-
-    <dt class="property-required"
+<dl class="resources-properties"><dt class="property-required"
             title="Required">
         <span id="resourcegroupname_csharp">
 <a href="#resourcegroupname_csharp" style="color: inherit; text-decoration: inherit;">Resource<wbr>Group<wbr>Name</a>
@@ -308,8 +299,7 @@ The Lab resource accepts the following [input]({{< relref "/docs/intro/concepts/
         <span class="property-indicator"></span>
         <span class="property-type">string</span>
     </dt>
-    <dd>{{% md %}}The name of the resource group.{{% /md %}}</dd>
-    <dt class="property-optional"
+    <dd>{{% md %}}The name of the resource group.{{% /md %}}</dd><dt class="property-optional"
             title="Optional">
         <span id="announcement_csharp">
 <a href="#announcement_csharp" style="color: inherit; text-decoration: inherit;">Announcement</a>
@@ -317,8 +307,7 @@ The Lab resource accepts the following [input]({{< relref "/docs/intro/concepts/
         <span class="property-indicator"></span>
         <span class="property-type"><a href="#labannouncementproperties">Pulumi.<wbr>Azure<wbr>Native.<wbr>Dev<wbr>Test<wbr>Lab.<wbr>Inputs.<wbr>Lab<wbr>Announcement<wbr>Properties<wbr>Args</a></span>
     </dt>
-    <dd>{{% md %}}The properties of any lab announcement associated with this lab{{% /md %}}</dd>
-    <dt class="property-optional"
+    <dd>{{% md %}}The properties of any lab announcement associated with this lab{{% /md %}}</dd><dt class="property-optional"
             title="Optional">
         <span id="environmentpermission_csharp">
 <a href="#environmentpermission_csharp" style="color: inherit; text-decoration: inherit;">Environment<wbr>Permission</a>
@@ -326,8 +315,7 @@ The Lab resource accepts the following [input]({{< relref "/docs/intro/concepts/
         <span class="property-indicator"></span>
         <span class="property-type">string | <a href="#environmentpermission">Pulumi.<wbr>Azure<wbr>Native.<wbr>Dev<wbr>Test<wbr>Lab.<wbr>Environment<wbr>Permission</a></span>
     </dt>
-    <dd>{{% md %}}The access rights to be granted to the user when provisioning an environment{{% /md %}}</dd>
-    <dt class="property-optional"
+    <dd>{{% md %}}The access rights to be granted to the user when provisioning an environment{{% /md %}}</dd><dt class="property-optional"
             title="Optional">
         <span id="extendedproperties_csharp">
 <a href="#extendedproperties_csharp" style="color: inherit; text-decoration: inherit;">Extended<wbr>Properties</a>
@@ -335,8 +323,7 @@ The Lab resource accepts the following [input]({{< relref "/docs/intro/concepts/
         <span class="property-indicator"></span>
         <span class="property-type">Dictionary&lt;string, string&gt;</span>
     </dt>
-    <dd>{{% md %}}Extended properties of the lab used for experimental features{{% /md %}}</dd>
-    <dt class="property-optional"
+    <dd>{{% md %}}Extended properties of the lab used for experimental features{{% /md %}}</dd><dt class="property-optional"
             title="Optional">
         <span id="labstoragetype_csharp">
 <a href="#labstoragetype_csharp" style="color: inherit; text-decoration: inherit;">Lab<wbr>Storage<wbr>Type</a>
@@ -344,8 +331,7 @@ The Lab resource accepts the following [input]({{< relref "/docs/intro/concepts/
         <span class="property-indicator"></span>
         <span class="property-type">string | <a href="#storagetype">Pulumi.<wbr>Azure<wbr>Native.<wbr>Dev<wbr>Test<wbr>Lab.<wbr>Storage<wbr>Type</a></span>
     </dt>
-    <dd>{{% md %}}Type of storage used by the lab. It can be either Premium or Standard. Default is Premium.{{% /md %}}</dd>
-    <dt class="property-optional"
+    <dd>{{% md %}}Type of storage used by the lab. It can be either Premium or Standard. Default is Premium.{{% /md %}}</dd><dt class="property-optional"
             title="Optional">
         <span id="location_csharp">
 <a href="#location_csharp" style="color: inherit; text-decoration: inherit;">Location</a>
@@ -353,8 +339,7 @@ The Lab resource accepts the following [input]({{< relref "/docs/intro/concepts/
         <span class="property-indicator"></span>
         <span class="property-type">string</span>
     </dt>
-    <dd>{{% md %}}The location of the resource.{{% /md %}}</dd>
-    <dt class="property-optional"
+    <dd>{{% md %}}The location of the resource.{{% /md %}}</dd><dt class="property-optional"
             title="Optional">
         <span id="mandatoryartifactsresourceidslinux_csharp">
 <a href="#mandatoryartifactsresourceidslinux_csharp" style="color: inherit; text-decoration: inherit;">Mandatory<wbr>Artifacts<wbr>Resource<wbr>Ids<wbr>Linux</a>
@@ -362,8 +347,7 @@ The Lab resource accepts the following [input]({{< relref "/docs/intro/concepts/
         <span class="property-indicator"></span>
         <span class="property-type">List&lt;string&gt;</span>
     </dt>
-    <dd>{{% md %}}The ordered list of artifact resource IDs that should be applied on all Linux VM creations by default, prior to the artifacts specified by the user.{{% /md %}}</dd>
-    <dt class="property-optional"
+    <dd>{{% md %}}The ordered list of artifact resource IDs that should be applied on all Linux VM creations by default, prior to the artifacts specified by the user.{{% /md %}}</dd><dt class="property-optional"
             title="Optional">
         <span id="mandatoryartifactsresourceidswindows_csharp">
 <a href="#mandatoryartifactsresourceidswindows_csharp" style="color: inherit; text-decoration: inherit;">Mandatory<wbr>Artifacts<wbr>Resource<wbr>Ids<wbr>Windows</a>
@@ -371,8 +355,7 @@ The Lab resource accepts the following [input]({{< relref "/docs/intro/concepts/
         <span class="property-indicator"></span>
         <span class="property-type">List&lt;string&gt;</span>
     </dt>
-    <dd>{{% md %}}The ordered list of artifact resource IDs that should be applied on all Windows VM creations by default, prior to the artifacts specified by the user.{{% /md %}}</dd>
-    <dt class="property-optional"
+    <dd>{{% md %}}The ordered list of artifact resource IDs that should be applied on all Windows VM creations by default, prior to the artifacts specified by the user.{{% /md %}}</dd><dt class="property-optional"
             title="Optional">
         <span id="name_csharp">
 <a href="#name_csharp" style="color: inherit; text-decoration: inherit;">Name</a>
@@ -380,8 +363,7 @@ The Lab resource accepts the following [input]({{< relref "/docs/intro/concepts/
         <span class="property-indicator"></span>
         <span class="property-type">string</span>
     </dt>
-    <dd>{{% md %}}The name of the lab.{{% /md %}}</dd>
-    <dt class="property-optional"
+    <dd>{{% md %}}The name of the lab.{{% /md %}}</dd><dt class="property-optional"
             title="Optional">
         <span id="premiumdatadisks_csharp">
 <a href="#premiumdatadisks_csharp" style="color: inherit; text-decoration: inherit;">Premium<wbr>Data<wbr>Disks</a>
@@ -391,8 +373,7 @@ The Lab resource accepts the following [input]({{< relref "/docs/intro/concepts/
     </dt>
     <dd>{{% md %}}The setting to enable usage of premium data disks.
 When its value is 'Enabled', creation of standard or premium data disks is allowed.
-When its value is 'Disabled', only creation of standard data disks is allowed.{{% /md %}}</dd>
-    <dt class="property-optional"
+When its value is 'Disabled', only creation of standard data disks is allowed.{{% /md %}}</dd><dt class="property-optional"
             title="Optional">
         <span id="support_csharp">
 <a href="#support_csharp" style="color: inherit; text-decoration: inherit;">Support</a>
@@ -400,8 +381,7 @@ When its value is 'Disabled', only creation of standard data disks is allowed.{{
         <span class="property-indicator"></span>
         <span class="property-type"><a href="#labsupportproperties">Pulumi.<wbr>Azure<wbr>Native.<wbr>Dev<wbr>Test<wbr>Lab.<wbr>Inputs.<wbr>Lab<wbr>Support<wbr>Properties<wbr>Args</a></span>
     </dt>
-    <dd>{{% md %}}The properties of any lab support message associated with this lab{{% /md %}}</dd>
-    <dt class="property-optional"
+    <dd>{{% md %}}The properties of any lab support message associated with this lab{{% /md %}}</dd><dt class="property-optional"
             title="Optional">
         <span id="tags_csharp">
 <a href="#tags_csharp" style="color: inherit; text-decoration: inherit;">Tags</a>
@@ -409,14 +389,11 @@ When its value is 'Disabled', only creation of standard data disks is allowed.{{
         <span class="property-indicator"></span>
         <span class="property-type">Dictionary&lt;string, string&gt;</span>
     </dt>
-    <dd>{{% md %}}The tags of the resource.{{% /md %}}</dd>
-</dl>
+    <dd>{{% md %}}The tags of the resource.{{% /md %}}</dd></dl>
 {{% /choosable %}}
 
 {{% choosable language go %}}
-<dl class="resources-properties">
-
-    <dt class="property-required"
+<dl class="resources-properties"><dt class="property-required"
             title="Required">
         <span id="resourcegroupname_go">
 <a href="#resourcegroupname_go" style="color: inherit; text-decoration: inherit;">Resource<wbr>Group<wbr>Name</a>
@@ -424,8 +401,7 @@ When its value is 'Disabled', only creation of standard data disks is allowed.{{
         <span class="property-indicator"></span>
         <span class="property-type">string</span>
     </dt>
-    <dd>{{% md %}}The name of the resource group.{{% /md %}}</dd>
-    <dt class="property-optional"
+    <dd>{{% md %}}The name of the resource group.{{% /md %}}</dd><dt class="property-optional"
             title="Optional">
         <span id="announcement_go">
 <a href="#announcement_go" style="color: inherit; text-decoration: inherit;">Announcement</a>
@@ -433,8 +409,7 @@ When its value is 'Disabled', only creation of standard data disks is allowed.{{
         <span class="property-indicator"></span>
         <span class="property-type"><a href="#labannouncementproperties">Lab<wbr>Announcement<wbr>Properties</a></span>
     </dt>
-    <dd>{{% md %}}The properties of any lab announcement associated with this lab{{% /md %}}</dd>
-    <dt class="property-optional"
+    <dd>{{% md %}}The properties of any lab announcement associated with this lab{{% /md %}}</dd><dt class="property-optional"
             title="Optional">
         <span id="environmentpermission_go">
 <a href="#environmentpermission_go" style="color: inherit; text-decoration: inherit;">Environment<wbr>Permission</a>
@@ -442,8 +417,7 @@ When its value is 'Disabled', only creation of standard data disks is allowed.{{
         <span class="property-indicator"></span>
         <span class="property-type">string | <a href="#environmentpermission">Environment<wbr>Permission</a></span>
     </dt>
-    <dd>{{% md %}}The access rights to be granted to the user when provisioning an environment{{% /md %}}</dd>
-    <dt class="property-optional"
+    <dd>{{% md %}}The access rights to be granted to the user when provisioning an environment{{% /md %}}</dd><dt class="property-optional"
             title="Optional">
         <span id="extendedproperties_go">
 <a href="#extendedproperties_go" style="color: inherit; text-decoration: inherit;">Extended<wbr>Properties</a>
@@ -451,8 +425,7 @@ When its value is 'Disabled', only creation of standard data disks is allowed.{{
         <span class="property-indicator"></span>
         <span class="property-type">map[string]string</span>
     </dt>
-    <dd>{{% md %}}Extended properties of the lab used for experimental features{{% /md %}}</dd>
-    <dt class="property-optional"
+    <dd>{{% md %}}Extended properties of the lab used for experimental features{{% /md %}}</dd><dt class="property-optional"
             title="Optional">
         <span id="labstoragetype_go">
 <a href="#labstoragetype_go" style="color: inherit; text-decoration: inherit;">Lab<wbr>Storage<wbr>Type</a>
@@ -460,8 +433,7 @@ When its value is 'Disabled', only creation of standard data disks is allowed.{{
         <span class="property-indicator"></span>
         <span class="property-type">string | <a href="#storagetype">Storage<wbr>Type</a></span>
     </dt>
-    <dd>{{% md %}}Type of storage used by the lab. It can be either Premium or Standard. Default is Premium.{{% /md %}}</dd>
-    <dt class="property-optional"
+    <dd>{{% md %}}Type of storage used by the lab. It can be either Premium or Standard. Default is Premium.{{% /md %}}</dd><dt class="property-optional"
             title="Optional">
         <span id="location_go">
 <a href="#location_go" style="color: inherit; text-decoration: inherit;">Location</a>
@@ -469,8 +441,7 @@ When its value is 'Disabled', only creation of standard data disks is allowed.{{
         <span class="property-indicator"></span>
         <span class="property-type">string</span>
     </dt>
-    <dd>{{% md %}}The location of the resource.{{% /md %}}</dd>
-    <dt class="property-optional"
+    <dd>{{% md %}}The location of the resource.{{% /md %}}</dd><dt class="property-optional"
             title="Optional">
         <span id="mandatoryartifactsresourceidslinux_go">
 <a href="#mandatoryartifactsresourceidslinux_go" style="color: inherit; text-decoration: inherit;">Mandatory<wbr>Artifacts<wbr>Resource<wbr>Ids<wbr>Linux</a>
@@ -478,8 +449,7 @@ When its value is 'Disabled', only creation of standard data disks is allowed.{{
         <span class="property-indicator"></span>
         <span class="property-type">[]string</span>
     </dt>
-    <dd>{{% md %}}The ordered list of artifact resource IDs that should be applied on all Linux VM creations by default, prior to the artifacts specified by the user.{{% /md %}}</dd>
-    <dt class="property-optional"
+    <dd>{{% md %}}The ordered list of artifact resource IDs that should be applied on all Linux VM creations by default, prior to the artifacts specified by the user.{{% /md %}}</dd><dt class="property-optional"
             title="Optional">
         <span id="mandatoryartifactsresourceidswindows_go">
 <a href="#mandatoryartifactsresourceidswindows_go" style="color: inherit; text-decoration: inherit;">Mandatory<wbr>Artifacts<wbr>Resource<wbr>Ids<wbr>Windows</a>
@@ -487,8 +457,7 @@ When its value is 'Disabled', only creation of standard data disks is allowed.{{
         <span class="property-indicator"></span>
         <span class="property-type">[]string</span>
     </dt>
-    <dd>{{% md %}}The ordered list of artifact resource IDs that should be applied on all Windows VM creations by default, prior to the artifacts specified by the user.{{% /md %}}</dd>
-    <dt class="property-optional"
+    <dd>{{% md %}}The ordered list of artifact resource IDs that should be applied on all Windows VM creations by default, prior to the artifacts specified by the user.{{% /md %}}</dd><dt class="property-optional"
             title="Optional">
         <span id="name_go">
 <a href="#name_go" style="color: inherit; text-decoration: inherit;">Name</a>
@@ -496,8 +465,7 @@ When its value is 'Disabled', only creation of standard data disks is allowed.{{
         <span class="property-indicator"></span>
         <span class="property-type">string</span>
     </dt>
-    <dd>{{% md %}}The name of the lab.{{% /md %}}</dd>
-    <dt class="property-optional"
+    <dd>{{% md %}}The name of the lab.{{% /md %}}</dd><dt class="property-optional"
             title="Optional">
         <span id="premiumdatadisks_go">
 <a href="#premiumdatadisks_go" style="color: inherit; text-decoration: inherit;">Premium<wbr>Data<wbr>Disks</a>
@@ -507,8 +475,7 @@ When its value is 'Disabled', only creation of standard data disks is allowed.{{
     </dt>
     <dd>{{% md %}}The setting to enable usage of premium data disks.
 When its value is 'Enabled', creation of standard or premium data disks is allowed.
-When its value is 'Disabled', only creation of standard data disks is allowed.{{% /md %}}</dd>
-    <dt class="property-optional"
+When its value is 'Disabled', only creation of standard data disks is allowed.{{% /md %}}</dd><dt class="property-optional"
             title="Optional">
         <span id="support_go">
 <a href="#support_go" style="color: inherit; text-decoration: inherit;">Support</a>
@@ -516,8 +483,7 @@ When its value is 'Disabled', only creation of standard data disks is allowed.{{
         <span class="property-indicator"></span>
         <span class="property-type"><a href="#labsupportproperties">Lab<wbr>Support<wbr>Properties</a></span>
     </dt>
-    <dd>{{% md %}}The properties of any lab support message associated with this lab{{% /md %}}</dd>
-    <dt class="property-optional"
+    <dd>{{% md %}}The properties of any lab support message associated with this lab{{% /md %}}</dd><dt class="property-optional"
             title="Optional">
         <span id="tags_go">
 <a href="#tags_go" style="color: inherit; text-decoration: inherit;">Tags</a>
@@ -525,14 +491,11 @@ When its value is 'Disabled', only creation of standard data disks is allowed.{{
         <span class="property-indicator"></span>
         <span class="property-type">map[string]string</span>
     </dt>
-    <dd>{{% md %}}The tags of the resource.{{% /md %}}</dd>
-</dl>
+    <dd>{{% md %}}The tags of the resource.{{% /md %}}</dd></dl>
 {{% /choosable %}}
 
 {{% choosable language nodejs %}}
-<dl class="resources-properties">
-
-    <dt class="property-required"
+<dl class="resources-properties"><dt class="property-required"
             title="Required">
         <span id="resourcegroupname_nodejs">
 <a href="#resourcegroupname_nodejs" style="color: inherit; text-decoration: inherit;">resource<wbr>Group<wbr>Name</a>
@@ -540,8 +503,7 @@ When its value is 'Disabled', only creation of standard data disks is allowed.{{
         <span class="property-indicator"></span>
         <span class="property-type">string</span>
     </dt>
-    <dd>{{% md %}}The name of the resource group.{{% /md %}}</dd>
-    <dt class="property-optional"
+    <dd>{{% md %}}The name of the resource group.{{% /md %}}</dd><dt class="property-optional"
             title="Optional">
         <span id="announcement_nodejs">
 <a href="#announcement_nodejs" style="color: inherit; text-decoration: inherit;">announcement</a>
@@ -549,8 +511,7 @@ When its value is 'Disabled', only creation of standard data disks is allowed.{{
         <span class="property-indicator"></span>
         <span class="property-type"><a href="#labannouncementproperties">Lab<wbr>Announcement<wbr>Properties</a></span>
     </dt>
-    <dd>{{% md %}}The properties of any lab announcement associated with this lab{{% /md %}}</dd>
-    <dt class="property-optional"
+    <dd>{{% md %}}The properties of any lab announcement associated with this lab{{% /md %}}</dd><dt class="property-optional"
             title="Optional">
         <span id="environmentpermission_nodejs">
 <a href="#environmentpermission_nodejs" style="color: inherit; text-decoration: inherit;">environment<wbr>Permission</a>
@@ -558,8 +519,7 @@ When its value is 'Disabled', only creation of standard data disks is allowed.{{
         <span class="property-indicator"></span>
         <span class="property-type">string | <a href="#environmentpermission">Environment<wbr>Permission</a></span>
     </dt>
-    <dd>{{% md %}}The access rights to be granted to the user when provisioning an environment{{% /md %}}</dd>
-    <dt class="property-optional"
+    <dd>{{% md %}}The access rights to be granted to the user when provisioning an environment{{% /md %}}</dd><dt class="property-optional"
             title="Optional">
         <span id="extendedproperties_nodejs">
 <a href="#extendedproperties_nodejs" style="color: inherit; text-decoration: inherit;">extended<wbr>Properties</a>
@@ -567,8 +527,7 @@ When its value is 'Disabled', only creation of standard data disks is allowed.{{
         <span class="property-indicator"></span>
         <span class="property-type">{[key: string]: string}</span>
     </dt>
-    <dd>{{% md %}}Extended properties of the lab used for experimental features{{% /md %}}</dd>
-    <dt class="property-optional"
+    <dd>{{% md %}}Extended properties of the lab used for experimental features{{% /md %}}</dd><dt class="property-optional"
             title="Optional">
         <span id="labstoragetype_nodejs">
 <a href="#labstoragetype_nodejs" style="color: inherit; text-decoration: inherit;">lab<wbr>Storage<wbr>Type</a>
@@ -576,8 +535,7 @@ When its value is 'Disabled', only creation of standard data disks is allowed.{{
         <span class="property-indicator"></span>
         <span class="property-type">string | <a href="#storagetype">Storage<wbr>Type</a></span>
     </dt>
-    <dd>{{% md %}}Type of storage used by the lab. It can be either Premium or Standard. Default is Premium.{{% /md %}}</dd>
-    <dt class="property-optional"
+    <dd>{{% md %}}Type of storage used by the lab. It can be either Premium or Standard. Default is Premium.{{% /md %}}</dd><dt class="property-optional"
             title="Optional">
         <span id="location_nodejs">
 <a href="#location_nodejs" style="color: inherit; text-decoration: inherit;">location</a>
@@ -585,8 +543,7 @@ When its value is 'Disabled', only creation of standard data disks is allowed.{{
         <span class="property-indicator"></span>
         <span class="property-type">string</span>
     </dt>
-    <dd>{{% md %}}The location of the resource.{{% /md %}}</dd>
-    <dt class="property-optional"
+    <dd>{{% md %}}The location of the resource.{{% /md %}}</dd><dt class="property-optional"
             title="Optional">
         <span id="mandatoryartifactsresourceidslinux_nodejs">
 <a href="#mandatoryartifactsresourceidslinux_nodejs" style="color: inherit; text-decoration: inherit;">mandatory<wbr>Artifacts<wbr>Resource<wbr>Ids<wbr>Linux</a>
@@ -594,8 +551,7 @@ When its value is 'Disabled', only creation of standard data disks is allowed.{{
         <span class="property-indicator"></span>
         <span class="property-type">string[]</span>
     </dt>
-    <dd>{{% md %}}The ordered list of artifact resource IDs that should be applied on all Linux VM creations by default, prior to the artifacts specified by the user.{{% /md %}}</dd>
-    <dt class="property-optional"
+    <dd>{{% md %}}The ordered list of artifact resource IDs that should be applied on all Linux VM creations by default, prior to the artifacts specified by the user.{{% /md %}}</dd><dt class="property-optional"
             title="Optional">
         <span id="mandatoryartifactsresourceidswindows_nodejs">
 <a href="#mandatoryartifactsresourceidswindows_nodejs" style="color: inherit; text-decoration: inherit;">mandatory<wbr>Artifacts<wbr>Resource<wbr>Ids<wbr>Windows</a>
@@ -603,8 +559,7 @@ When its value is 'Disabled', only creation of standard data disks is allowed.{{
         <span class="property-indicator"></span>
         <span class="property-type">string[]</span>
     </dt>
-    <dd>{{% md %}}The ordered list of artifact resource IDs that should be applied on all Windows VM creations by default, prior to the artifacts specified by the user.{{% /md %}}</dd>
-    <dt class="property-optional"
+    <dd>{{% md %}}The ordered list of artifact resource IDs that should be applied on all Windows VM creations by default, prior to the artifacts specified by the user.{{% /md %}}</dd><dt class="property-optional"
             title="Optional">
         <span id="name_nodejs">
 <a href="#name_nodejs" style="color: inherit; text-decoration: inherit;">name</a>
@@ -612,8 +567,7 @@ When its value is 'Disabled', only creation of standard data disks is allowed.{{
         <span class="property-indicator"></span>
         <span class="property-type">string</span>
     </dt>
-    <dd>{{% md %}}The name of the lab.{{% /md %}}</dd>
-    <dt class="property-optional"
+    <dd>{{% md %}}The name of the lab.{{% /md %}}</dd><dt class="property-optional"
             title="Optional">
         <span id="premiumdatadisks_nodejs">
 <a href="#premiumdatadisks_nodejs" style="color: inherit; text-decoration: inherit;">premium<wbr>Data<wbr>Disks</a>
@@ -623,8 +577,7 @@ When its value is 'Disabled', only creation of standard data disks is allowed.{{
     </dt>
     <dd>{{% md %}}The setting to enable usage of premium data disks.
 When its value is 'Enabled', creation of standard or premium data disks is allowed.
-When its value is 'Disabled', only creation of standard data disks is allowed.{{% /md %}}</dd>
-    <dt class="property-optional"
+When its value is 'Disabled', only creation of standard data disks is allowed.{{% /md %}}</dd><dt class="property-optional"
             title="Optional">
         <span id="support_nodejs">
 <a href="#support_nodejs" style="color: inherit; text-decoration: inherit;">support</a>
@@ -632,8 +585,7 @@ When its value is 'Disabled', only creation of standard data disks is allowed.{{
         <span class="property-indicator"></span>
         <span class="property-type"><a href="#labsupportproperties">Lab<wbr>Support<wbr>Properties</a></span>
     </dt>
-    <dd>{{% md %}}The properties of any lab support message associated with this lab{{% /md %}}</dd>
-    <dt class="property-optional"
+    <dd>{{% md %}}The properties of any lab support message associated with this lab{{% /md %}}</dd><dt class="property-optional"
             title="Optional">
         <span id="tags_nodejs">
 <a href="#tags_nodejs" style="color: inherit; text-decoration: inherit;">tags</a>
@@ -641,14 +593,11 @@ When its value is 'Disabled', only creation of standard data disks is allowed.{{
         <span class="property-indicator"></span>
         <span class="property-type">{[key: string]: string}</span>
     </dt>
-    <dd>{{% md %}}The tags of the resource.{{% /md %}}</dd>
-</dl>
+    <dd>{{% md %}}The tags of the resource.{{% /md %}}</dd></dl>
 {{% /choosable %}}
 
 {{% choosable language python %}}
-<dl class="resources-properties">
-
-    <dt class="property-required"
+<dl class="resources-properties"><dt class="property-required"
             title="Required">
         <span id="resource_group_name_python">
 <a href="#resource_group_name_python" style="color: inherit; text-decoration: inherit;">resource_<wbr>group_<wbr>name</a>
@@ -656,8 +605,7 @@ When its value is 'Disabled', only creation of standard data disks is allowed.{{
         <span class="property-indicator"></span>
         <span class="property-type">str</span>
     </dt>
-    <dd>{{% md %}}The name of the resource group.{{% /md %}}</dd>
-    <dt class="property-optional"
+    <dd>{{% md %}}The name of the resource group.{{% /md %}}</dd><dt class="property-optional"
             title="Optional">
         <span id="announcement_python">
 <a href="#announcement_python" style="color: inherit; text-decoration: inherit;">announcement</a>
@@ -665,8 +613,7 @@ When its value is 'Disabled', only creation of standard data disks is allowed.{{
         <span class="property-indicator"></span>
         <span class="property-type"><a href="#labannouncementproperties">Lab<wbr>Announcement<wbr>Properties<wbr>Args</a></span>
     </dt>
-    <dd>{{% md %}}The properties of any lab announcement associated with this lab{{% /md %}}</dd>
-    <dt class="property-optional"
+    <dd>{{% md %}}The properties of any lab announcement associated with this lab{{% /md %}}</dd><dt class="property-optional"
             title="Optional">
         <span id="environment_permission_python">
 <a href="#environment_permission_python" style="color: inherit; text-decoration: inherit;">environment_<wbr>permission</a>
@@ -674,8 +621,7 @@ When its value is 'Disabled', only creation of standard data disks is allowed.{{
         <span class="property-indicator"></span>
         <span class="property-type">str | <a href="#environmentpermission">Environment<wbr>Permission</a></span>
     </dt>
-    <dd>{{% md %}}The access rights to be granted to the user when provisioning an environment{{% /md %}}</dd>
-    <dt class="property-optional"
+    <dd>{{% md %}}The access rights to be granted to the user when provisioning an environment{{% /md %}}</dd><dt class="property-optional"
             title="Optional">
         <span id="extended_properties_python">
 <a href="#extended_properties_python" style="color: inherit; text-decoration: inherit;">extended_<wbr>properties</a>
@@ -683,8 +629,7 @@ When its value is 'Disabled', only creation of standard data disks is allowed.{{
         <span class="property-indicator"></span>
         <span class="property-type">Mapping[str, str]</span>
     </dt>
-    <dd>{{% md %}}Extended properties of the lab used for experimental features{{% /md %}}</dd>
-    <dt class="property-optional"
+    <dd>{{% md %}}Extended properties of the lab used for experimental features{{% /md %}}</dd><dt class="property-optional"
             title="Optional">
         <span id="lab_storage_type_python">
 <a href="#lab_storage_type_python" style="color: inherit; text-decoration: inherit;">lab_<wbr>storage_<wbr>type</a>
@@ -692,8 +637,7 @@ When its value is 'Disabled', only creation of standard data disks is allowed.{{
         <span class="property-indicator"></span>
         <span class="property-type">str | <a href="#storagetype">Storage<wbr>Type</a></span>
     </dt>
-    <dd>{{% md %}}Type of storage used by the lab. It can be either Premium or Standard. Default is Premium.{{% /md %}}</dd>
-    <dt class="property-optional"
+    <dd>{{% md %}}Type of storage used by the lab. It can be either Premium or Standard. Default is Premium.{{% /md %}}</dd><dt class="property-optional"
             title="Optional">
         <span id="location_python">
 <a href="#location_python" style="color: inherit; text-decoration: inherit;">location</a>
@@ -701,8 +645,7 @@ When its value is 'Disabled', only creation of standard data disks is allowed.{{
         <span class="property-indicator"></span>
         <span class="property-type">str</span>
     </dt>
-    <dd>{{% md %}}The location of the resource.{{% /md %}}</dd>
-    <dt class="property-optional"
+    <dd>{{% md %}}The location of the resource.{{% /md %}}</dd><dt class="property-optional"
             title="Optional">
         <span id="mandatory_artifacts_resource_ids_linux_python">
 <a href="#mandatory_artifacts_resource_ids_linux_python" style="color: inherit; text-decoration: inherit;">mandatory_<wbr>artifacts_<wbr>resource_<wbr>ids_<wbr>linux</a>
@@ -710,8 +653,7 @@ When its value is 'Disabled', only creation of standard data disks is allowed.{{
         <span class="property-indicator"></span>
         <span class="property-type">Sequence[str]</span>
     </dt>
-    <dd>{{% md %}}The ordered list of artifact resource IDs that should be applied on all Linux VM creations by default, prior to the artifacts specified by the user.{{% /md %}}</dd>
-    <dt class="property-optional"
+    <dd>{{% md %}}The ordered list of artifact resource IDs that should be applied on all Linux VM creations by default, prior to the artifacts specified by the user.{{% /md %}}</dd><dt class="property-optional"
             title="Optional">
         <span id="mandatory_artifacts_resource_ids_windows_python">
 <a href="#mandatory_artifacts_resource_ids_windows_python" style="color: inherit; text-decoration: inherit;">mandatory_<wbr>artifacts_<wbr>resource_<wbr>ids_<wbr>windows</a>
@@ -719,8 +661,7 @@ When its value is 'Disabled', only creation of standard data disks is allowed.{{
         <span class="property-indicator"></span>
         <span class="property-type">Sequence[str]</span>
     </dt>
-    <dd>{{% md %}}The ordered list of artifact resource IDs that should be applied on all Windows VM creations by default, prior to the artifacts specified by the user.{{% /md %}}</dd>
-    <dt class="property-optional"
+    <dd>{{% md %}}The ordered list of artifact resource IDs that should be applied on all Windows VM creations by default, prior to the artifacts specified by the user.{{% /md %}}</dd><dt class="property-optional"
             title="Optional">
         <span id="name_python">
 <a href="#name_python" style="color: inherit; text-decoration: inherit;">name</a>
@@ -728,8 +669,7 @@ When its value is 'Disabled', only creation of standard data disks is allowed.{{
         <span class="property-indicator"></span>
         <span class="property-type">str</span>
     </dt>
-    <dd>{{% md %}}The name of the lab.{{% /md %}}</dd>
-    <dt class="property-optional"
+    <dd>{{% md %}}The name of the lab.{{% /md %}}</dd><dt class="property-optional"
             title="Optional">
         <span id="premium_data_disks_python">
 <a href="#premium_data_disks_python" style="color: inherit; text-decoration: inherit;">premium_<wbr>data_<wbr>disks</a>
@@ -739,8 +679,7 @@ When its value is 'Disabled', only creation of standard data disks is allowed.{{
     </dt>
     <dd>{{% md %}}The setting to enable usage of premium data disks.
 When its value is 'Enabled', creation of standard or premium data disks is allowed.
-When its value is 'Disabled', only creation of standard data disks is allowed.{{% /md %}}</dd>
-    <dt class="property-optional"
+When its value is 'Disabled', only creation of standard data disks is allowed.{{% /md %}}</dd><dt class="property-optional"
             title="Optional">
         <span id="support_python">
 <a href="#support_python" style="color: inherit; text-decoration: inherit;">support</a>
@@ -748,8 +687,7 @@ When its value is 'Disabled', only creation of standard data disks is allowed.{{
         <span class="property-indicator"></span>
         <span class="property-type"><a href="#labsupportproperties">Lab<wbr>Support<wbr>Properties<wbr>Args</a></span>
     </dt>
-    <dd>{{% md %}}The properties of any lab support message associated with this lab{{% /md %}}</dd>
-    <dt class="property-optional"
+    <dd>{{% md %}}The properties of any lab support message associated with this lab{{% /md %}}</dd><dt class="property-optional"
             title="Optional">
         <span id="tags_python">
 <a href="#tags_python" style="color: inherit; text-decoration: inherit;">tags</a>
@@ -757,8 +695,7 @@ When its value is 'Disabled', only creation of standard data disks is allowed.{{
         <span class="property-indicator"></span>
         <span class="property-type">Mapping[str, str]</span>
     </dt>
-    <dd>{{% md %}}The tags of the resource.{{% /md %}}</dd>
-</dl>
+    <dd>{{% md %}}The tags of the resource.{{% /md %}}</dd></dl>
 {{% /choosable %}}
 
 
@@ -769,9 +706,7 @@ All [input](#inputs) properties are implicitly available as output properties. A
 
 
 {{% choosable language csharp %}}
-<dl class="resources-properties">
-
-    <dt class="property-"
+<dl class="resources-properties"><dt class="property-"
             title="">
         <span id="artifactsstorageaccount_csharp">
 <a href="#artifactsstorageaccount_csharp" style="color: inherit; text-decoration: inherit;">Artifacts<wbr>Storage<wbr>Account</a>
@@ -779,8 +714,7 @@ All [input](#inputs) properties are implicitly available as output properties. A
         <span class="property-indicator"></span>
         <span class="property-type">string</span>
     </dt>
-    <dd>{{% md %}}The lab's artifact storage account.{{% /md %}}</dd>
-    <dt class="property-"
+    <dd>{{% md %}}The lab's artifact storage account.{{% /md %}}</dd><dt class="property-"
             title="">
         <span id="createddate_csharp">
 <a href="#createddate_csharp" style="color: inherit; text-decoration: inherit;">Created<wbr>Date</a>
@@ -788,8 +722,7 @@ All [input](#inputs) properties are implicitly available as output properties. A
         <span class="property-indicator"></span>
         <span class="property-type">string</span>
     </dt>
-    <dd>{{% md %}}The creation date of the lab.{{% /md %}}</dd>
-    <dt class="property-"
+    <dd>{{% md %}}The creation date of the lab.{{% /md %}}</dd><dt class="property-"
             title="">
         <span id="defaultpremiumstorageaccount_csharp">
 <a href="#defaultpremiumstorageaccount_csharp" style="color: inherit; text-decoration: inherit;">Default<wbr>Premium<wbr>Storage<wbr>Account</a>
@@ -797,8 +730,7 @@ All [input](#inputs) properties are implicitly available as output properties. A
         <span class="property-indicator"></span>
         <span class="property-type">string</span>
     </dt>
-    <dd>{{% md %}}The lab's default premium storage account.{{% /md %}}</dd>
-    <dt class="property-"
+    <dd>{{% md %}}The lab's default premium storage account.{{% /md %}}</dd><dt class="property-"
             title="">
         <span id="defaultstorageaccount_csharp">
 <a href="#defaultstorageaccount_csharp" style="color: inherit; text-decoration: inherit;">Default<wbr>Storage<wbr>Account</a>
@@ -806,8 +738,7 @@ All [input](#inputs) properties are implicitly available as output properties. A
         <span class="property-indicator"></span>
         <span class="property-type">string</span>
     </dt>
-    <dd>{{% md %}}The lab's default storage account.{{% /md %}}</dd>
-    <dt class="property-"
+    <dd>{{% md %}}The lab's default storage account.{{% /md %}}</dd><dt class="property-"
             title="">
         <span id="id_csharp">
 <a href="#id_csharp" style="color: inherit; text-decoration: inherit;">Id</a>
@@ -815,8 +746,7 @@ All [input](#inputs) properties are implicitly available as output properties. A
         <span class="property-indicator"></span>
         <span class="property-type">string</span>
     </dt>
-    <dd>{{% md %}}The provider-assigned unique ID for this managed resource.{{% /md %}}</dd>
-    <dt class="property-"
+    <dd>{{% md %}}The provider-assigned unique ID for this managed resource.{{% /md %}}</dd><dt class="property-"
             title="">
         <span id="loadbalancerid_csharp">
 <a href="#loadbalancerid_csharp" style="color: inherit; text-decoration: inherit;">Load<wbr>Balancer<wbr>Id</a>
@@ -824,8 +754,7 @@ All [input](#inputs) properties are implicitly available as output properties. A
         <span class="property-indicator"></span>
         <span class="property-type">string</span>
     </dt>
-    <dd>{{% md %}}The load balancer used to for lab VMs that use shared IP address.{{% /md %}}</dd>
-    <dt class="property-"
+    <dd>{{% md %}}The load balancer used to for lab VMs that use shared IP address.{{% /md %}}</dd><dt class="property-"
             title="">
         <span id="networksecuritygroupid_csharp">
 <a href="#networksecuritygroupid_csharp" style="color: inherit; text-decoration: inherit;">Network<wbr>Security<wbr>Group<wbr>Id</a>
@@ -833,8 +762,7 @@ All [input](#inputs) properties are implicitly available as output properties. A
         <span class="property-indicator"></span>
         <span class="property-type">string</span>
     </dt>
-    <dd>{{% md %}}The Network Security Group attached to the lab VMs Network interfaces to restrict open ports.{{% /md %}}</dd>
-    <dt class="property-"
+    <dd>{{% md %}}The Network Security Group attached to the lab VMs Network interfaces to restrict open ports.{{% /md %}}</dd><dt class="property-"
             title="">
         <span id="premiumdatadiskstorageaccount_csharp">
 <a href="#premiumdatadiskstorageaccount_csharp" style="color: inherit; text-decoration: inherit;">Premium<wbr>Data<wbr>Disk<wbr>Storage<wbr>Account</a>
@@ -842,8 +770,7 @@ All [input](#inputs) properties are implicitly available as output properties. A
         <span class="property-indicator"></span>
         <span class="property-type">string</span>
     </dt>
-    <dd>{{% md %}}The lab's premium data disk storage account.{{% /md %}}</dd>
-    <dt class="property-"
+    <dd>{{% md %}}The lab's premium data disk storage account.{{% /md %}}</dd><dt class="property-"
             title="">
         <span id="provisioningstate_csharp">
 <a href="#provisioningstate_csharp" style="color: inherit; text-decoration: inherit;">Provisioning<wbr>State</a>
@@ -851,8 +778,7 @@ All [input](#inputs) properties are implicitly available as output properties. A
         <span class="property-indicator"></span>
         <span class="property-type">string</span>
     </dt>
-    <dd>{{% md %}}The provisioning status of the resource.{{% /md %}}</dd>
-    <dt class="property-"
+    <dd>{{% md %}}The provisioning status of the resource.{{% /md %}}</dd><dt class="property-"
             title="">
         <span id="publicipid_csharp">
 <a href="#publicipid_csharp" style="color: inherit; text-decoration: inherit;">Public<wbr>Ip<wbr>Id</a>
@@ -860,8 +786,7 @@ All [input](#inputs) properties are implicitly available as output properties. A
         <span class="property-indicator"></span>
         <span class="property-type">string</span>
     </dt>
-    <dd>{{% md %}}The public IP address for the lab's load balancer.{{% /md %}}</dd>
-    <dt class="property-"
+    <dd>{{% md %}}The public IP address for the lab's load balancer.{{% /md %}}</dd><dt class="property-"
             title="">
         <span id="type_csharp">
 <a href="#type_csharp" style="color: inherit; text-decoration: inherit;">Type</a>
@@ -869,8 +794,7 @@ All [input](#inputs) properties are implicitly available as output properties. A
         <span class="property-indicator"></span>
         <span class="property-type">string</span>
     </dt>
-    <dd>{{% md %}}The type of the resource.{{% /md %}}</dd>
-    <dt class="property-"
+    <dd>{{% md %}}The type of the resource.{{% /md %}}</dd><dt class="property-"
             title="">
         <span id="uniqueidentifier_csharp">
 <a href="#uniqueidentifier_csharp" style="color: inherit; text-decoration: inherit;">Unique<wbr>Identifier</a>
@@ -878,8 +802,7 @@ All [input](#inputs) properties are implicitly available as output properties. A
         <span class="property-indicator"></span>
         <span class="property-type">string</span>
     </dt>
-    <dd>{{% md %}}The unique immutable identifier of a resource (Guid).{{% /md %}}</dd>
-    <dt class="property-"
+    <dd>{{% md %}}The unique immutable identifier of a resource (Guid).{{% /md %}}</dd><dt class="property-"
             title="">
         <span id="vaultname_csharp">
 <a href="#vaultname_csharp" style="color: inherit; text-decoration: inherit;">Vault<wbr>Name</a>
@@ -887,8 +810,7 @@ All [input](#inputs) properties are implicitly available as output properties. A
         <span class="property-indicator"></span>
         <span class="property-type">string</span>
     </dt>
-    <dd>{{% md %}}The lab's Key vault.{{% /md %}}</dd>
-    <dt class="property-"
+    <dd>{{% md %}}The lab's Key vault.{{% /md %}}</dd><dt class="property-"
             title="">
         <span id="vmcreationresourcegroup_csharp">
 <a href="#vmcreationresourcegroup_csharp" style="color: inherit; text-decoration: inherit;">Vm<wbr>Creation<wbr>Resource<wbr>Group</a>
@@ -896,14 +818,11 @@ All [input](#inputs) properties are implicitly available as output properties. A
         <span class="property-indicator"></span>
         <span class="property-type">string</span>
     </dt>
-    <dd>{{% md %}}The resource group in which all new lab virtual machines will be created. To let DevTest Labs manage resource group creation, set this value to null.{{% /md %}}</dd>
-</dl>
+    <dd>{{% md %}}The resource group in which all new lab virtual machines will be created. To let DevTest Labs manage resource group creation, set this value to null.{{% /md %}}</dd></dl>
 {{% /choosable %}}
 
 {{% choosable language go %}}
-<dl class="resources-properties">
-
-    <dt class="property-"
+<dl class="resources-properties"><dt class="property-"
             title="">
         <span id="artifactsstorageaccount_go">
 <a href="#artifactsstorageaccount_go" style="color: inherit; text-decoration: inherit;">Artifacts<wbr>Storage<wbr>Account</a>
@@ -911,8 +830,7 @@ All [input](#inputs) properties are implicitly available as output properties. A
         <span class="property-indicator"></span>
         <span class="property-type">string</span>
     </dt>
-    <dd>{{% md %}}The lab's artifact storage account.{{% /md %}}</dd>
-    <dt class="property-"
+    <dd>{{% md %}}The lab's artifact storage account.{{% /md %}}</dd><dt class="property-"
             title="">
         <span id="createddate_go">
 <a href="#createddate_go" style="color: inherit; text-decoration: inherit;">Created<wbr>Date</a>
@@ -920,8 +838,7 @@ All [input](#inputs) properties are implicitly available as output properties. A
         <span class="property-indicator"></span>
         <span class="property-type">string</span>
     </dt>
-    <dd>{{% md %}}The creation date of the lab.{{% /md %}}</dd>
-    <dt class="property-"
+    <dd>{{% md %}}The creation date of the lab.{{% /md %}}</dd><dt class="property-"
             title="">
         <span id="defaultpremiumstorageaccount_go">
 <a href="#defaultpremiumstorageaccount_go" style="color: inherit; text-decoration: inherit;">Default<wbr>Premium<wbr>Storage<wbr>Account</a>
@@ -929,8 +846,7 @@ All [input](#inputs) properties are implicitly available as output properties. A
         <span class="property-indicator"></span>
         <span class="property-type">string</span>
     </dt>
-    <dd>{{% md %}}The lab's default premium storage account.{{% /md %}}</dd>
-    <dt class="property-"
+    <dd>{{% md %}}The lab's default premium storage account.{{% /md %}}</dd><dt class="property-"
             title="">
         <span id="defaultstorageaccount_go">
 <a href="#defaultstorageaccount_go" style="color: inherit; text-decoration: inherit;">Default<wbr>Storage<wbr>Account</a>
@@ -938,8 +854,7 @@ All [input](#inputs) properties are implicitly available as output properties. A
         <span class="property-indicator"></span>
         <span class="property-type">string</span>
     </dt>
-    <dd>{{% md %}}The lab's default storage account.{{% /md %}}</dd>
-    <dt class="property-"
+    <dd>{{% md %}}The lab's default storage account.{{% /md %}}</dd><dt class="property-"
             title="">
         <span id="id_go">
 <a href="#id_go" style="color: inherit; text-decoration: inherit;">Id</a>
@@ -947,8 +862,7 @@ All [input](#inputs) properties are implicitly available as output properties. A
         <span class="property-indicator"></span>
         <span class="property-type">string</span>
     </dt>
-    <dd>{{% md %}}The provider-assigned unique ID for this managed resource.{{% /md %}}</dd>
-    <dt class="property-"
+    <dd>{{% md %}}The provider-assigned unique ID for this managed resource.{{% /md %}}</dd><dt class="property-"
             title="">
         <span id="loadbalancerid_go">
 <a href="#loadbalancerid_go" style="color: inherit; text-decoration: inherit;">Load<wbr>Balancer<wbr>Id</a>
@@ -956,8 +870,7 @@ All [input](#inputs) properties are implicitly available as output properties. A
         <span class="property-indicator"></span>
         <span class="property-type">string</span>
     </dt>
-    <dd>{{% md %}}The load balancer used to for lab VMs that use shared IP address.{{% /md %}}</dd>
-    <dt class="property-"
+    <dd>{{% md %}}The load balancer used to for lab VMs that use shared IP address.{{% /md %}}</dd><dt class="property-"
             title="">
         <span id="networksecuritygroupid_go">
 <a href="#networksecuritygroupid_go" style="color: inherit; text-decoration: inherit;">Network<wbr>Security<wbr>Group<wbr>Id</a>
@@ -965,8 +878,7 @@ All [input](#inputs) properties are implicitly available as output properties. A
         <span class="property-indicator"></span>
         <span class="property-type">string</span>
     </dt>
-    <dd>{{% md %}}The Network Security Group attached to the lab VMs Network interfaces to restrict open ports.{{% /md %}}</dd>
-    <dt class="property-"
+    <dd>{{% md %}}The Network Security Group attached to the lab VMs Network interfaces to restrict open ports.{{% /md %}}</dd><dt class="property-"
             title="">
         <span id="premiumdatadiskstorageaccount_go">
 <a href="#premiumdatadiskstorageaccount_go" style="color: inherit; text-decoration: inherit;">Premium<wbr>Data<wbr>Disk<wbr>Storage<wbr>Account</a>
@@ -974,8 +886,7 @@ All [input](#inputs) properties are implicitly available as output properties. A
         <span class="property-indicator"></span>
         <span class="property-type">string</span>
     </dt>
-    <dd>{{% md %}}The lab's premium data disk storage account.{{% /md %}}</dd>
-    <dt class="property-"
+    <dd>{{% md %}}The lab's premium data disk storage account.{{% /md %}}</dd><dt class="property-"
             title="">
         <span id="provisioningstate_go">
 <a href="#provisioningstate_go" style="color: inherit; text-decoration: inherit;">Provisioning<wbr>State</a>
@@ -983,8 +894,7 @@ All [input](#inputs) properties are implicitly available as output properties. A
         <span class="property-indicator"></span>
         <span class="property-type">string</span>
     </dt>
-    <dd>{{% md %}}The provisioning status of the resource.{{% /md %}}</dd>
-    <dt class="property-"
+    <dd>{{% md %}}The provisioning status of the resource.{{% /md %}}</dd><dt class="property-"
             title="">
         <span id="publicipid_go">
 <a href="#publicipid_go" style="color: inherit; text-decoration: inherit;">Public<wbr>Ip<wbr>Id</a>
@@ -992,8 +902,7 @@ All [input](#inputs) properties are implicitly available as output properties. A
         <span class="property-indicator"></span>
         <span class="property-type">string</span>
     </dt>
-    <dd>{{% md %}}The public IP address for the lab's load balancer.{{% /md %}}</dd>
-    <dt class="property-"
+    <dd>{{% md %}}The public IP address for the lab's load balancer.{{% /md %}}</dd><dt class="property-"
             title="">
         <span id="type_go">
 <a href="#type_go" style="color: inherit; text-decoration: inherit;">Type</a>
@@ -1001,8 +910,7 @@ All [input](#inputs) properties are implicitly available as output properties. A
         <span class="property-indicator"></span>
         <span class="property-type">string</span>
     </dt>
-    <dd>{{% md %}}The type of the resource.{{% /md %}}</dd>
-    <dt class="property-"
+    <dd>{{% md %}}The type of the resource.{{% /md %}}</dd><dt class="property-"
             title="">
         <span id="uniqueidentifier_go">
 <a href="#uniqueidentifier_go" style="color: inherit; text-decoration: inherit;">Unique<wbr>Identifier</a>
@@ -1010,8 +918,7 @@ All [input](#inputs) properties are implicitly available as output properties. A
         <span class="property-indicator"></span>
         <span class="property-type">string</span>
     </dt>
-    <dd>{{% md %}}The unique immutable identifier of a resource (Guid).{{% /md %}}</dd>
-    <dt class="property-"
+    <dd>{{% md %}}The unique immutable identifier of a resource (Guid).{{% /md %}}</dd><dt class="property-"
             title="">
         <span id="vaultname_go">
 <a href="#vaultname_go" style="color: inherit; text-decoration: inherit;">Vault<wbr>Name</a>
@@ -1019,8 +926,7 @@ All [input](#inputs) properties are implicitly available as output properties. A
         <span class="property-indicator"></span>
         <span class="property-type">string</span>
     </dt>
-    <dd>{{% md %}}The lab's Key vault.{{% /md %}}</dd>
-    <dt class="property-"
+    <dd>{{% md %}}The lab's Key vault.{{% /md %}}</dd><dt class="property-"
             title="">
         <span id="vmcreationresourcegroup_go">
 <a href="#vmcreationresourcegroup_go" style="color: inherit; text-decoration: inherit;">Vm<wbr>Creation<wbr>Resource<wbr>Group</a>
@@ -1028,14 +934,11 @@ All [input](#inputs) properties are implicitly available as output properties. A
         <span class="property-indicator"></span>
         <span class="property-type">string</span>
     </dt>
-    <dd>{{% md %}}The resource group in which all new lab virtual machines will be created. To let DevTest Labs manage resource group creation, set this value to null.{{% /md %}}</dd>
-</dl>
+    <dd>{{% md %}}The resource group in which all new lab virtual machines will be created. To let DevTest Labs manage resource group creation, set this value to null.{{% /md %}}</dd></dl>
 {{% /choosable %}}
 
 {{% choosable language nodejs %}}
-<dl class="resources-properties">
-
-    <dt class="property-"
+<dl class="resources-properties"><dt class="property-"
             title="">
         <span id="artifactsstorageaccount_nodejs">
 <a href="#artifactsstorageaccount_nodejs" style="color: inherit; text-decoration: inherit;">artifacts<wbr>Storage<wbr>Account</a>
@@ -1043,8 +946,7 @@ All [input](#inputs) properties are implicitly available as output properties. A
         <span class="property-indicator"></span>
         <span class="property-type">string</span>
     </dt>
-    <dd>{{% md %}}The lab's artifact storage account.{{% /md %}}</dd>
-    <dt class="property-"
+    <dd>{{% md %}}The lab's artifact storage account.{{% /md %}}</dd><dt class="property-"
             title="">
         <span id="createddate_nodejs">
 <a href="#createddate_nodejs" style="color: inherit; text-decoration: inherit;">created<wbr>Date</a>
@@ -1052,8 +954,7 @@ All [input](#inputs) properties are implicitly available as output properties. A
         <span class="property-indicator"></span>
         <span class="property-type">string</span>
     </dt>
-    <dd>{{% md %}}The creation date of the lab.{{% /md %}}</dd>
-    <dt class="property-"
+    <dd>{{% md %}}The creation date of the lab.{{% /md %}}</dd><dt class="property-"
             title="">
         <span id="defaultpremiumstorageaccount_nodejs">
 <a href="#defaultpremiumstorageaccount_nodejs" style="color: inherit; text-decoration: inherit;">default<wbr>Premium<wbr>Storage<wbr>Account</a>
@@ -1061,8 +962,7 @@ All [input](#inputs) properties are implicitly available as output properties. A
         <span class="property-indicator"></span>
         <span class="property-type">string</span>
     </dt>
-    <dd>{{% md %}}The lab's default premium storage account.{{% /md %}}</dd>
-    <dt class="property-"
+    <dd>{{% md %}}The lab's default premium storage account.{{% /md %}}</dd><dt class="property-"
             title="">
         <span id="defaultstorageaccount_nodejs">
 <a href="#defaultstorageaccount_nodejs" style="color: inherit; text-decoration: inherit;">default<wbr>Storage<wbr>Account</a>
@@ -1070,8 +970,7 @@ All [input](#inputs) properties are implicitly available as output properties. A
         <span class="property-indicator"></span>
         <span class="property-type">string</span>
     </dt>
-    <dd>{{% md %}}The lab's default storage account.{{% /md %}}</dd>
-    <dt class="property-"
+    <dd>{{% md %}}The lab's default storage account.{{% /md %}}</dd><dt class="property-"
             title="">
         <span id="id_nodejs">
 <a href="#id_nodejs" style="color: inherit; text-decoration: inherit;">id</a>
@@ -1079,8 +978,7 @@ All [input](#inputs) properties are implicitly available as output properties. A
         <span class="property-indicator"></span>
         <span class="property-type">string</span>
     </dt>
-    <dd>{{% md %}}The provider-assigned unique ID for this managed resource.{{% /md %}}</dd>
-    <dt class="property-"
+    <dd>{{% md %}}The provider-assigned unique ID for this managed resource.{{% /md %}}</dd><dt class="property-"
             title="">
         <span id="loadbalancerid_nodejs">
 <a href="#loadbalancerid_nodejs" style="color: inherit; text-decoration: inherit;">load<wbr>Balancer<wbr>Id</a>
@@ -1088,8 +986,7 @@ All [input](#inputs) properties are implicitly available as output properties. A
         <span class="property-indicator"></span>
         <span class="property-type">string</span>
     </dt>
-    <dd>{{% md %}}The load balancer used to for lab VMs that use shared IP address.{{% /md %}}</dd>
-    <dt class="property-"
+    <dd>{{% md %}}The load balancer used to for lab VMs that use shared IP address.{{% /md %}}</dd><dt class="property-"
             title="">
         <span id="networksecuritygroupid_nodejs">
 <a href="#networksecuritygroupid_nodejs" style="color: inherit; text-decoration: inherit;">network<wbr>Security<wbr>Group<wbr>Id</a>
@@ -1097,8 +994,7 @@ All [input](#inputs) properties are implicitly available as output properties. A
         <span class="property-indicator"></span>
         <span class="property-type">string</span>
     </dt>
-    <dd>{{% md %}}The Network Security Group attached to the lab VMs Network interfaces to restrict open ports.{{% /md %}}</dd>
-    <dt class="property-"
+    <dd>{{% md %}}The Network Security Group attached to the lab VMs Network interfaces to restrict open ports.{{% /md %}}</dd><dt class="property-"
             title="">
         <span id="premiumdatadiskstorageaccount_nodejs">
 <a href="#premiumdatadiskstorageaccount_nodejs" style="color: inherit; text-decoration: inherit;">premium<wbr>Data<wbr>Disk<wbr>Storage<wbr>Account</a>
@@ -1106,8 +1002,7 @@ All [input](#inputs) properties are implicitly available as output properties. A
         <span class="property-indicator"></span>
         <span class="property-type">string</span>
     </dt>
-    <dd>{{% md %}}The lab's premium data disk storage account.{{% /md %}}</dd>
-    <dt class="property-"
+    <dd>{{% md %}}The lab's premium data disk storage account.{{% /md %}}</dd><dt class="property-"
             title="">
         <span id="provisioningstate_nodejs">
 <a href="#provisioningstate_nodejs" style="color: inherit; text-decoration: inherit;">provisioning<wbr>State</a>
@@ -1115,8 +1010,7 @@ All [input](#inputs) properties are implicitly available as output properties. A
         <span class="property-indicator"></span>
         <span class="property-type">string</span>
     </dt>
-    <dd>{{% md %}}The provisioning status of the resource.{{% /md %}}</dd>
-    <dt class="property-"
+    <dd>{{% md %}}The provisioning status of the resource.{{% /md %}}</dd><dt class="property-"
             title="">
         <span id="publicipid_nodejs">
 <a href="#publicipid_nodejs" style="color: inherit; text-decoration: inherit;">public<wbr>Ip<wbr>Id</a>
@@ -1124,8 +1018,7 @@ All [input](#inputs) properties are implicitly available as output properties. A
         <span class="property-indicator"></span>
         <span class="property-type">string</span>
     </dt>
-    <dd>{{% md %}}The public IP address for the lab's load balancer.{{% /md %}}</dd>
-    <dt class="property-"
+    <dd>{{% md %}}The public IP address for the lab's load balancer.{{% /md %}}</dd><dt class="property-"
             title="">
         <span id="type_nodejs">
 <a href="#type_nodejs" style="color: inherit; text-decoration: inherit;">type</a>
@@ -1133,8 +1026,7 @@ All [input](#inputs) properties are implicitly available as output properties. A
         <span class="property-indicator"></span>
         <span class="property-type">string</span>
     </dt>
-    <dd>{{% md %}}The type of the resource.{{% /md %}}</dd>
-    <dt class="property-"
+    <dd>{{% md %}}The type of the resource.{{% /md %}}</dd><dt class="property-"
             title="">
         <span id="uniqueidentifier_nodejs">
 <a href="#uniqueidentifier_nodejs" style="color: inherit; text-decoration: inherit;">unique<wbr>Identifier</a>
@@ -1142,8 +1034,7 @@ All [input](#inputs) properties are implicitly available as output properties. A
         <span class="property-indicator"></span>
         <span class="property-type">string</span>
     </dt>
-    <dd>{{% md %}}The unique immutable identifier of a resource (Guid).{{% /md %}}</dd>
-    <dt class="property-"
+    <dd>{{% md %}}The unique immutable identifier of a resource (Guid).{{% /md %}}</dd><dt class="property-"
             title="">
         <span id="vaultname_nodejs">
 <a href="#vaultname_nodejs" style="color: inherit; text-decoration: inherit;">vault<wbr>Name</a>
@@ -1151,8 +1042,7 @@ All [input](#inputs) properties are implicitly available as output properties. A
         <span class="property-indicator"></span>
         <span class="property-type">string</span>
     </dt>
-    <dd>{{% md %}}The lab's Key vault.{{% /md %}}</dd>
-    <dt class="property-"
+    <dd>{{% md %}}The lab's Key vault.{{% /md %}}</dd><dt class="property-"
             title="">
         <span id="vmcreationresourcegroup_nodejs">
 <a href="#vmcreationresourcegroup_nodejs" style="color: inherit; text-decoration: inherit;">vm<wbr>Creation<wbr>Resource<wbr>Group</a>
@@ -1160,14 +1050,11 @@ All [input](#inputs) properties are implicitly available as output properties. A
         <span class="property-indicator"></span>
         <span class="property-type">string</span>
     </dt>
-    <dd>{{% md %}}The resource group in which all new lab virtual machines will be created. To let DevTest Labs manage resource group creation, set this value to null.{{% /md %}}</dd>
-</dl>
+    <dd>{{% md %}}The resource group in which all new lab virtual machines will be created. To let DevTest Labs manage resource group creation, set this value to null.{{% /md %}}</dd></dl>
 {{% /choosable %}}
 
 {{% choosable language python %}}
-<dl class="resources-properties">
-
-    <dt class="property-"
+<dl class="resources-properties"><dt class="property-"
             title="">
         <span id="artifacts_storage_account_python">
 <a href="#artifacts_storage_account_python" style="color: inherit; text-decoration: inherit;">artifacts_<wbr>storage_<wbr>account</a>
@@ -1175,8 +1062,7 @@ All [input](#inputs) properties are implicitly available as output properties. A
         <span class="property-indicator"></span>
         <span class="property-type">str</span>
     </dt>
-    <dd>{{% md %}}The lab's artifact storage account.{{% /md %}}</dd>
-    <dt class="property-"
+    <dd>{{% md %}}The lab's artifact storage account.{{% /md %}}</dd><dt class="property-"
             title="">
         <span id="created_date_python">
 <a href="#created_date_python" style="color: inherit; text-decoration: inherit;">created_<wbr>date</a>
@@ -1184,8 +1070,7 @@ All [input](#inputs) properties are implicitly available as output properties. A
         <span class="property-indicator"></span>
         <span class="property-type">str</span>
     </dt>
-    <dd>{{% md %}}The creation date of the lab.{{% /md %}}</dd>
-    <dt class="property-"
+    <dd>{{% md %}}The creation date of the lab.{{% /md %}}</dd><dt class="property-"
             title="">
         <span id="default_premium_storage_account_python">
 <a href="#default_premium_storage_account_python" style="color: inherit; text-decoration: inherit;">default_<wbr>premium_<wbr>storage_<wbr>account</a>
@@ -1193,8 +1078,7 @@ All [input](#inputs) properties are implicitly available as output properties. A
         <span class="property-indicator"></span>
         <span class="property-type">str</span>
     </dt>
-    <dd>{{% md %}}The lab's default premium storage account.{{% /md %}}</dd>
-    <dt class="property-"
+    <dd>{{% md %}}The lab's default premium storage account.{{% /md %}}</dd><dt class="property-"
             title="">
         <span id="default_storage_account_python">
 <a href="#default_storage_account_python" style="color: inherit; text-decoration: inherit;">default_<wbr>storage_<wbr>account</a>
@@ -1202,8 +1086,7 @@ All [input](#inputs) properties are implicitly available as output properties. A
         <span class="property-indicator"></span>
         <span class="property-type">str</span>
     </dt>
-    <dd>{{% md %}}The lab's default storage account.{{% /md %}}</dd>
-    <dt class="property-"
+    <dd>{{% md %}}The lab's default storage account.{{% /md %}}</dd><dt class="property-"
             title="">
         <span id="id_python">
 <a href="#id_python" style="color: inherit; text-decoration: inherit;">id</a>
@@ -1211,8 +1094,7 @@ All [input](#inputs) properties are implicitly available as output properties. A
         <span class="property-indicator"></span>
         <span class="property-type">str</span>
     </dt>
-    <dd>{{% md %}}The provider-assigned unique ID for this managed resource.{{% /md %}}</dd>
-    <dt class="property-"
+    <dd>{{% md %}}The provider-assigned unique ID for this managed resource.{{% /md %}}</dd><dt class="property-"
             title="">
         <span id="load_balancer_id_python">
 <a href="#load_balancer_id_python" style="color: inherit; text-decoration: inherit;">load_<wbr>balancer_<wbr>id</a>
@@ -1220,8 +1102,7 @@ All [input](#inputs) properties are implicitly available as output properties. A
         <span class="property-indicator"></span>
         <span class="property-type">str</span>
     </dt>
-    <dd>{{% md %}}The load balancer used to for lab VMs that use shared IP address.{{% /md %}}</dd>
-    <dt class="property-"
+    <dd>{{% md %}}The load balancer used to for lab VMs that use shared IP address.{{% /md %}}</dd><dt class="property-"
             title="">
         <span id="network_security_group_id_python">
 <a href="#network_security_group_id_python" style="color: inherit; text-decoration: inherit;">network_<wbr>security_<wbr>group_<wbr>id</a>
@@ -1229,8 +1110,7 @@ All [input](#inputs) properties are implicitly available as output properties. A
         <span class="property-indicator"></span>
         <span class="property-type">str</span>
     </dt>
-    <dd>{{% md %}}The Network Security Group attached to the lab VMs Network interfaces to restrict open ports.{{% /md %}}</dd>
-    <dt class="property-"
+    <dd>{{% md %}}The Network Security Group attached to the lab VMs Network interfaces to restrict open ports.{{% /md %}}</dd><dt class="property-"
             title="">
         <span id="premium_data_disk_storage_account_python">
 <a href="#premium_data_disk_storage_account_python" style="color: inherit; text-decoration: inherit;">premium_<wbr>data_<wbr>disk_<wbr>storage_<wbr>account</a>
@@ -1238,8 +1118,7 @@ All [input](#inputs) properties are implicitly available as output properties. A
         <span class="property-indicator"></span>
         <span class="property-type">str</span>
     </dt>
-    <dd>{{% md %}}The lab's premium data disk storage account.{{% /md %}}</dd>
-    <dt class="property-"
+    <dd>{{% md %}}The lab's premium data disk storage account.{{% /md %}}</dd><dt class="property-"
             title="">
         <span id="provisioning_state_python">
 <a href="#provisioning_state_python" style="color: inherit; text-decoration: inherit;">provisioning_<wbr>state</a>
@@ -1247,8 +1126,7 @@ All [input](#inputs) properties are implicitly available as output properties. A
         <span class="property-indicator"></span>
         <span class="property-type">str</span>
     </dt>
-    <dd>{{% md %}}The provisioning status of the resource.{{% /md %}}</dd>
-    <dt class="property-"
+    <dd>{{% md %}}The provisioning status of the resource.{{% /md %}}</dd><dt class="property-"
             title="">
         <span id="public_ip_id_python">
 <a href="#public_ip_id_python" style="color: inherit; text-decoration: inherit;">public_<wbr>ip_<wbr>id</a>
@@ -1256,8 +1134,7 @@ All [input](#inputs) properties are implicitly available as output properties. A
         <span class="property-indicator"></span>
         <span class="property-type">str</span>
     </dt>
-    <dd>{{% md %}}The public IP address for the lab's load balancer.{{% /md %}}</dd>
-    <dt class="property-"
+    <dd>{{% md %}}The public IP address for the lab's load balancer.{{% /md %}}</dd><dt class="property-"
             title="">
         <span id="type_python">
 <a href="#type_python" style="color: inherit; text-decoration: inherit;">type</a>
@@ -1265,8 +1142,7 @@ All [input](#inputs) properties are implicitly available as output properties. A
         <span class="property-indicator"></span>
         <span class="property-type">str</span>
     </dt>
-    <dd>{{% md %}}The type of the resource.{{% /md %}}</dd>
-    <dt class="property-"
+    <dd>{{% md %}}The type of the resource.{{% /md %}}</dd><dt class="property-"
             title="">
         <span id="unique_identifier_python">
 <a href="#unique_identifier_python" style="color: inherit; text-decoration: inherit;">unique_<wbr>identifier</a>
@@ -1274,8 +1150,7 @@ All [input](#inputs) properties are implicitly available as output properties. A
         <span class="property-indicator"></span>
         <span class="property-type">str</span>
     </dt>
-    <dd>{{% md %}}The unique immutable identifier of a resource (Guid).{{% /md %}}</dd>
-    <dt class="property-"
+    <dd>{{% md %}}The unique immutable identifier of a resource (Guid).{{% /md %}}</dd><dt class="property-"
             title="">
         <span id="vault_name_python">
 <a href="#vault_name_python" style="color: inherit; text-decoration: inherit;">vault_<wbr>name</a>
@@ -1283,8 +1158,7 @@ All [input](#inputs) properties are implicitly available as output properties. A
         <span class="property-indicator"></span>
         <span class="property-type">str</span>
     </dt>
-    <dd>{{% md %}}The lab's Key vault.{{% /md %}}</dd>
-    <dt class="property-"
+    <dd>{{% md %}}The lab's Key vault.{{% /md %}}</dd><dt class="property-"
             title="">
         <span id="vm_creation_resource_group_python">
 <a href="#vm_creation_resource_group_python" style="color: inherit; text-decoration: inherit;">vm_<wbr>creation_<wbr>resource_<wbr>group</a>
@@ -1292,8 +1166,7 @@ All [input](#inputs) properties are implicitly available as output properties. A
         <span class="property-indicator"></span>
         <span class="property-type">str</span>
     </dt>
-    <dd>{{% md %}}The resource group in which all new lab virtual machines will be created. To let DevTest Labs manage resource group creation, set this value to null.{{% /md %}}</dd>
-</dl>
+    <dd>{{% md %}}The resource group in which all new lab virtual machines will be created. To let DevTest Labs manage resource group creation, set this value to null.{{% /md %}}</dd></dl>
 {{% /choosable %}}
 
 
@@ -1309,85 +1182,59 @@ All [input](#inputs) properties are implicitly available as output properties. A
 <h4 id="enablestatus">Enable<wbr>Status</h4>
 
 {{% choosable language csharp %}}
-<dl class="tabular">
-    <dt>Enabled</dt>
-    <dd>Enabled</dd>
-    <dt>Disabled</dt>
-    <dd>Disabled</dd>
-</dl>
+<dl class="tabular"><dt>Enabled</dt>
+    <dd>Enabled</dd><dt>Disabled</dt>
+    <dd>Disabled</dd></dl>
 {{% /choosable %}}
 
 {{% choosable language go %}}
-<dl class="tabular">
-    <dt>Enable<wbr>Status<wbr>Enabled</dt>
-    <dd>Enabled</dd>
-    <dt>Enable<wbr>Status<wbr>Disabled</dt>
-    <dd>Disabled</dd>
-</dl>
+<dl class="tabular"><dt>Enable<wbr>Status<wbr>Enabled</dt>
+    <dd>Enabled</dd><dt>Enable<wbr>Status<wbr>Disabled</dt>
+    <dd>Disabled</dd></dl>
 {{% /choosable %}}
 
 {{% choosable language nodejs %}}
-<dl class="tabular">
-    <dt>Enabled</dt>
-    <dd>Enabled</dd>
-    <dt>Disabled</dt>
-    <dd>Disabled</dd>
-</dl>
+<dl class="tabular"><dt>Enabled</dt>
+    <dd>Enabled</dd><dt>Disabled</dt>
+    <dd>Disabled</dd></dl>
 {{% /choosable %}}
 
 {{% choosable language python %}}
-<dl class="tabular">
-    <dt>ENABLED</dt>
-    <dd>Enabled</dd>
-    <dt>DISABLED</dt>
-    <dd>Disabled</dd>
-</dl>
+<dl class="tabular"><dt>ENABLED</dt>
+    <dd>Enabled</dd><dt>DISABLED</dt>
+    <dd>Disabled</dd></dl>
 {{% /choosable %}}
 
 <h4 id="environmentpermission">Environment<wbr>Permission</h4>
 
 {{% choosable language csharp %}}
-<dl class="tabular">
-    <dt>Reader</dt>
-    <dd>Reader</dd>
-    <dt>Contributor</dt>
-    <dd>Contributor</dd>
-</dl>
+<dl class="tabular"><dt>Reader</dt>
+    <dd>Reader</dd><dt>Contributor</dt>
+    <dd>Contributor</dd></dl>
 {{% /choosable %}}
 
 {{% choosable language go %}}
-<dl class="tabular">
-    <dt>Environment<wbr>Permission<wbr>Reader</dt>
-    <dd>Reader</dd>
-    <dt>Environment<wbr>Permission<wbr>Contributor</dt>
-    <dd>Contributor</dd>
-</dl>
+<dl class="tabular"><dt>Environment<wbr>Permission<wbr>Reader</dt>
+    <dd>Reader</dd><dt>Environment<wbr>Permission<wbr>Contributor</dt>
+    <dd>Contributor</dd></dl>
 {{% /choosable %}}
 
 {{% choosable language nodejs %}}
-<dl class="tabular">
-    <dt>Reader</dt>
-    <dd>Reader</dd>
-    <dt>Contributor</dt>
-    <dd>Contributor</dd>
-</dl>
+<dl class="tabular"><dt>Reader</dt>
+    <dd>Reader</dd><dt>Contributor</dt>
+    <dd>Contributor</dd></dl>
 {{% /choosable %}}
 
 {{% choosable language python %}}
-<dl class="tabular">
-    <dt>READER</dt>
-    <dd>Reader</dd>
-    <dt>CONTRIBUTOR</dt>
-    <dd>Contributor</dd>
-</dl>
+<dl class="tabular"><dt>READER</dt>
+    <dd>Reader</dd><dt>CONTRIBUTOR</dt>
+    <dd>Contributor</dd></dl>
 {{% /choosable %}}
 
 <h4 id="labannouncementproperties">Lab<wbr>Announcement<wbr>Properties</h4>
 
 {{% choosable language csharp %}}
-<dl class="resources-properties">
-
-    <dt class="property-optional"
+<dl class="resources-properties"><dt class="property-optional"
             title="Optional">
         <span id="enabled_csharp">
 <a href="#enabled_csharp" style="color: inherit; text-decoration: inherit;">Enabled</a>
@@ -1395,8 +1242,7 @@ All [input](#inputs) properties are implicitly available as output properties. A
         <span class="property-indicator"></span>
         <span class="property-type">string | <a href="#enablestatus">Pulumi.<wbr>Azure<wbr>Native.<wbr>Dev<wbr>Test<wbr>Lab.<wbr>Enable<wbr>Status</a></span>
     </dt>
-    <dd>{{% md %}}Is the lab announcement active/enabled at this time?{{% /md %}}</dd>
-    <dt class="property-optional"
+    <dd>{{% md %}}Is the lab announcement active/enabled at this time?{{% /md %}}</dd><dt class="property-optional"
             title="Optional">
         <span id="expirationdate_csharp">
 <a href="#expirationdate_csharp" style="color: inherit; text-decoration: inherit;">Expiration<wbr>Date</a>
@@ -1404,8 +1250,7 @@ All [input](#inputs) properties are implicitly available as output properties. A
         <span class="property-indicator"></span>
         <span class="property-type">string</span>
     </dt>
-    <dd>{{% md %}}The time at which the announcement expires (null for never){{% /md %}}</dd>
-    <dt class="property-optional"
+    <dd>{{% md %}}The time at which the announcement expires (null for never){{% /md %}}</dd><dt class="property-optional"
             title="Optional">
         <span id="expired_csharp">
 <a href="#expired_csharp" style="color: inherit; text-decoration: inherit;">Expired</a>
@@ -1413,8 +1258,7 @@ All [input](#inputs) properties are implicitly available as output properties. A
         <span class="property-indicator"></span>
         <span class="property-type">bool</span>
     </dt>
-    <dd>{{% md %}}Has this announcement expired?{{% /md %}}</dd>
-    <dt class="property-optional"
+    <dd>{{% md %}}Has this announcement expired?{{% /md %}}</dd><dt class="property-optional"
             title="Optional">
         <span id="markdown_csharp">
 <a href="#markdown_csharp" style="color: inherit; text-decoration: inherit;">Markdown</a>
@@ -1422,8 +1266,7 @@ All [input](#inputs) properties are implicitly available as output properties. A
         <span class="property-indicator"></span>
         <span class="property-type">string</span>
     </dt>
-    <dd>{{% md %}}The markdown text (if any) that this lab displays in the UI. If left empty/null, nothing will be shown.{{% /md %}}</dd>
-    <dt class="property-optional"
+    <dd>{{% md %}}The markdown text (if any) that this lab displays in the UI. If left empty/null, nothing will be shown.{{% /md %}}</dd><dt class="property-optional"
             title="Optional">
         <span id="title_csharp">
 <a href="#title_csharp" style="color: inherit; text-decoration: inherit;">Title</a>
@@ -1431,14 +1274,11 @@ All [input](#inputs) properties are implicitly available as output properties. A
         <span class="property-indicator"></span>
         <span class="property-type">string</span>
     </dt>
-    <dd>{{% md %}}The plain text title for the lab announcement{{% /md %}}</dd>
-</dl>
+    <dd>{{% md %}}The plain text title for the lab announcement{{% /md %}}</dd></dl>
 {{% /choosable %}}
 
 {{% choosable language go %}}
-<dl class="resources-properties">
-
-    <dt class="property-optional"
+<dl class="resources-properties"><dt class="property-optional"
             title="Optional">
         <span id="enabled_go">
 <a href="#enabled_go" style="color: inherit; text-decoration: inherit;">Enabled</a>
@@ -1446,8 +1286,7 @@ All [input](#inputs) properties are implicitly available as output properties. A
         <span class="property-indicator"></span>
         <span class="property-type">string | <a href="#enablestatus">Enable<wbr>Status</a></span>
     </dt>
-    <dd>{{% md %}}Is the lab announcement active/enabled at this time?{{% /md %}}</dd>
-    <dt class="property-optional"
+    <dd>{{% md %}}Is the lab announcement active/enabled at this time?{{% /md %}}</dd><dt class="property-optional"
             title="Optional">
         <span id="expirationdate_go">
 <a href="#expirationdate_go" style="color: inherit; text-decoration: inherit;">Expiration<wbr>Date</a>
@@ -1455,8 +1294,7 @@ All [input](#inputs) properties are implicitly available as output properties. A
         <span class="property-indicator"></span>
         <span class="property-type">string</span>
     </dt>
-    <dd>{{% md %}}The time at which the announcement expires (null for never){{% /md %}}</dd>
-    <dt class="property-optional"
+    <dd>{{% md %}}The time at which the announcement expires (null for never){{% /md %}}</dd><dt class="property-optional"
             title="Optional">
         <span id="expired_go">
 <a href="#expired_go" style="color: inherit; text-decoration: inherit;">Expired</a>
@@ -1464,8 +1302,7 @@ All [input](#inputs) properties are implicitly available as output properties. A
         <span class="property-indicator"></span>
         <span class="property-type">bool</span>
     </dt>
-    <dd>{{% md %}}Has this announcement expired?{{% /md %}}</dd>
-    <dt class="property-optional"
+    <dd>{{% md %}}Has this announcement expired?{{% /md %}}</dd><dt class="property-optional"
             title="Optional">
         <span id="markdown_go">
 <a href="#markdown_go" style="color: inherit; text-decoration: inherit;">Markdown</a>
@@ -1473,8 +1310,7 @@ All [input](#inputs) properties are implicitly available as output properties. A
         <span class="property-indicator"></span>
         <span class="property-type">string</span>
     </dt>
-    <dd>{{% md %}}The markdown text (if any) that this lab displays in the UI. If left empty/null, nothing will be shown.{{% /md %}}</dd>
-    <dt class="property-optional"
+    <dd>{{% md %}}The markdown text (if any) that this lab displays in the UI. If left empty/null, nothing will be shown.{{% /md %}}</dd><dt class="property-optional"
             title="Optional">
         <span id="title_go">
 <a href="#title_go" style="color: inherit; text-decoration: inherit;">Title</a>
@@ -1482,14 +1318,11 @@ All [input](#inputs) properties are implicitly available as output properties. A
         <span class="property-indicator"></span>
         <span class="property-type">string</span>
     </dt>
-    <dd>{{% md %}}The plain text title for the lab announcement{{% /md %}}</dd>
-</dl>
+    <dd>{{% md %}}The plain text title for the lab announcement{{% /md %}}</dd></dl>
 {{% /choosable %}}
 
 {{% choosable language nodejs %}}
-<dl class="resources-properties">
-
-    <dt class="property-optional"
+<dl class="resources-properties"><dt class="property-optional"
             title="Optional">
         <span id="enabled_nodejs">
 <a href="#enabled_nodejs" style="color: inherit; text-decoration: inherit;">enabled</a>
@@ -1497,8 +1330,7 @@ All [input](#inputs) properties are implicitly available as output properties. A
         <span class="property-indicator"></span>
         <span class="property-type">string | <a href="#enablestatus">Enable<wbr>Status</a></span>
     </dt>
-    <dd>{{% md %}}Is the lab announcement active/enabled at this time?{{% /md %}}</dd>
-    <dt class="property-optional"
+    <dd>{{% md %}}Is the lab announcement active/enabled at this time?{{% /md %}}</dd><dt class="property-optional"
             title="Optional">
         <span id="expirationdate_nodejs">
 <a href="#expirationdate_nodejs" style="color: inherit; text-decoration: inherit;">expiration<wbr>Date</a>
@@ -1506,8 +1338,7 @@ All [input](#inputs) properties are implicitly available as output properties. A
         <span class="property-indicator"></span>
         <span class="property-type">string</span>
     </dt>
-    <dd>{{% md %}}The time at which the announcement expires (null for never){{% /md %}}</dd>
-    <dt class="property-optional"
+    <dd>{{% md %}}The time at which the announcement expires (null for never){{% /md %}}</dd><dt class="property-optional"
             title="Optional">
         <span id="expired_nodejs">
 <a href="#expired_nodejs" style="color: inherit; text-decoration: inherit;">expired</a>
@@ -1515,8 +1346,7 @@ All [input](#inputs) properties are implicitly available as output properties. A
         <span class="property-indicator"></span>
         <span class="property-type">boolean</span>
     </dt>
-    <dd>{{% md %}}Has this announcement expired?{{% /md %}}</dd>
-    <dt class="property-optional"
+    <dd>{{% md %}}Has this announcement expired?{{% /md %}}</dd><dt class="property-optional"
             title="Optional">
         <span id="markdown_nodejs">
 <a href="#markdown_nodejs" style="color: inherit; text-decoration: inherit;">markdown</a>
@@ -1524,8 +1354,7 @@ All [input](#inputs) properties are implicitly available as output properties. A
         <span class="property-indicator"></span>
         <span class="property-type">string</span>
     </dt>
-    <dd>{{% md %}}The markdown text (if any) that this lab displays in the UI. If left empty/null, nothing will be shown.{{% /md %}}</dd>
-    <dt class="property-optional"
+    <dd>{{% md %}}The markdown text (if any) that this lab displays in the UI. If left empty/null, nothing will be shown.{{% /md %}}</dd><dt class="property-optional"
             title="Optional">
         <span id="title_nodejs">
 <a href="#title_nodejs" style="color: inherit; text-decoration: inherit;">title</a>
@@ -1533,14 +1362,11 @@ All [input](#inputs) properties are implicitly available as output properties. A
         <span class="property-indicator"></span>
         <span class="property-type">string</span>
     </dt>
-    <dd>{{% md %}}The plain text title for the lab announcement{{% /md %}}</dd>
-</dl>
+    <dd>{{% md %}}The plain text title for the lab announcement{{% /md %}}</dd></dl>
 {{% /choosable %}}
 
 {{% choosable language python %}}
-<dl class="resources-properties">
-
-    <dt class="property-optional"
+<dl class="resources-properties"><dt class="property-optional"
             title="Optional">
         <span id="enabled_python">
 <a href="#enabled_python" style="color: inherit; text-decoration: inherit;">enabled</a>
@@ -1548,8 +1374,7 @@ All [input](#inputs) properties are implicitly available as output properties. A
         <span class="property-indicator"></span>
         <span class="property-type">str | <a href="#enablestatus">Enable<wbr>Status</a></span>
     </dt>
-    <dd>{{% md %}}Is the lab announcement active/enabled at this time?{{% /md %}}</dd>
-    <dt class="property-optional"
+    <dd>{{% md %}}Is the lab announcement active/enabled at this time?{{% /md %}}</dd><dt class="property-optional"
             title="Optional">
         <span id="expiration_date_python">
 <a href="#expiration_date_python" style="color: inherit; text-decoration: inherit;">expiration_<wbr>date</a>
@@ -1557,8 +1382,7 @@ All [input](#inputs) properties are implicitly available as output properties. A
         <span class="property-indicator"></span>
         <span class="property-type">str</span>
     </dt>
-    <dd>{{% md %}}The time at which the announcement expires (null for never){{% /md %}}</dd>
-    <dt class="property-optional"
+    <dd>{{% md %}}The time at which the announcement expires (null for never){{% /md %}}</dd><dt class="property-optional"
             title="Optional">
         <span id="expired_python">
 <a href="#expired_python" style="color: inherit; text-decoration: inherit;">expired</a>
@@ -1566,8 +1390,7 @@ All [input](#inputs) properties are implicitly available as output properties. A
         <span class="property-indicator"></span>
         <span class="property-type">bool</span>
     </dt>
-    <dd>{{% md %}}Has this announcement expired?{{% /md %}}</dd>
-    <dt class="property-optional"
+    <dd>{{% md %}}Has this announcement expired?{{% /md %}}</dd><dt class="property-optional"
             title="Optional">
         <span id="markdown_python">
 <a href="#markdown_python" style="color: inherit; text-decoration: inherit;">markdown</a>
@@ -1575,8 +1398,7 @@ All [input](#inputs) properties are implicitly available as output properties. A
         <span class="property-indicator"></span>
         <span class="property-type">str</span>
     </dt>
-    <dd>{{% md %}}The markdown text (if any) that this lab displays in the UI. If left empty/null, nothing will be shown.{{% /md %}}</dd>
-    <dt class="property-optional"
+    <dd>{{% md %}}The markdown text (if any) that this lab displays in the UI. If left empty/null, nothing will be shown.{{% /md %}}</dd><dt class="property-optional"
             title="Optional">
         <span id="title_python">
 <a href="#title_python" style="color: inherit; text-decoration: inherit;">title</a>
@@ -1584,16 +1406,13 @@ All [input](#inputs) properties are implicitly available as output properties. A
         <span class="property-indicator"></span>
         <span class="property-type">str</span>
     </dt>
-    <dd>{{% md %}}The plain text title for the lab announcement{{% /md %}}</dd>
-</dl>
+    <dd>{{% md %}}The plain text title for the lab announcement{{% /md %}}</dd></dl>
 {{% /choosable %}}
 
 <h4 id="labannouncementpropertiesresponse">Lab<wbr>Announcement<wbr>Properties<wbr>Response</h4>
 
 {{% choosable language csharp %}}
-<dl class="resources-properties">
-
-    <dt class="property-required"
+<dl class="resources-properties"><dt class="property-required"
             title="Required">
         <span id="provisioningstate_csharp">
 <a href="#provisioningstate_csharp" style="color: inherit; text-decoration: inherit;">Provisioning<wbr>State</a>
@@ -1601,8 +1420,7 @@ All [input](#inputs) properties are implicitly available as output properties. A
         <span class="property-indicator"></span>
         <span class="property-type">string</span>
     </dt>
-    <dd>{{% md %}}The provisioning status of the resource.{{% /md %}}</dd>
-    <dt class="property-required"
+    <dd>{{% md %}}The provisioning status of the resource.{{% /md %}}</dd><dt class="property-required"
             title="Required">
         <span id="uniqueidentifier_csharp">
 <a href="#uniqueidentifier_csharp" style="color: inherit; text-decoration: inherit;">Unique<wbr>Identifier</a>
@@ -1610,8 +1428,7 @@ All [input](#inputs) properties are implicitly available as output properties. A
         <span class="property-indicator"></span>
         <span class="property-type">string</span>
     </dt>
-    <dd>{{% md %}}The unique immutable identifier of a resource (Guid).{{% /md %}}</dd>
-    <dt class="property-optional"
+    <dd>{{% md %}}The unique immutable identifier of a resource (Guid).{{% /md %}}</dd><dt class="property-optional"
             title="Optional">
         <span id="enabled_csharp">
 <a href="#enabled_csharp" style="color: inherit; text-decoration: inherit;">Enabled</a>
@@ -1619,8 +1436,7 @@ All [input](#inputs) properties are implicitly available as output properties. A
         <span class="property-indicator"></span>
         <span class="property-type">string</span>
     </dt>
-    <dd>{{% md %}}Is the lab announcement active/enabled at this time?{{% /md %}}</dd>
-    <dt class="property-optional"
+    <dd>{{% md %}}Is the lab announcement active/enabled at this time?{{% /md %}}</dd><dt class="property-optional"
             title="Optional">
         <span id="expirationdate_csharp">
 <a href="#expirationdate_csharp" style="color: inherit; text-decoration: inherit;">Expiration<wbr>Date</a>
@@ -1628,8 +1444,7 @@ All [input](#inputs) properties are implicitly available as output properties. A
         <span class="property-indicator"></span>
         <span class="property-type">string</span>
     </dt>
-    <dd>{{% md %}}The time at which the announcement expires (null for never){{% /md %}}</dd>
-    <dt class="property-optional"
+    <dd>{{% md %}}The time at which the announcement expires (null for never){{% /md %}}</dd><dt class="property-optional"
             title="Optional">
         <span id="expired_csharp">
 <a href="#expired_csharp" style="color: inherit; text-decoration: inherit;">Expired</a>
@@ -1637,8 +1452,7 @@ All [input](#inputs) properties are implicitly available as output properties. A
         <span class="property-indicator"></span>
         <span class="property-type">bool</span>
     </dt>
-    <dd>{{% md %}}Has this announcement expired?{{% /md %}}</dd>
-    <dt class="property-optional"
+    <dd>{{% md %}}Has this announcement expired?{{% /md %}}</dd><dt class="property-optional"
             title="Optional">
         <span id="markdown_csharp">
 <a href="#markdown_csharp" style="color: inherit; text-decoration: inherit;">Markdown</a>
@@ -1646,8 +1460,7 @@ All [input](#inputs) properties are implicitly available as output properties. A
         <span class="property-indicator"></span>
         <span class="property-type">string</span>
     </dt>
-    <dd>{{% md %}}The markdown text (if any) that this lab displays in the UI. If left empty/null, nothing will be shown.{{% /md %}}</dd>
-    <dt class="property-optional"
+    <dd>{{% md %}}The markdown text (if any) that this lab displays in the UI. If left empty/null, nothing will be shown.{{% /md %}}</dd><dt class="property-optional"
             title="Optional">
         <span id="title_csharp">
 <a href="#title_csharp" style="color: inherit; text-decoration: inherit;">Title</a>
@@ -1655,14 +1468,11 @@ All [input](#inputs) properties are implicitly available as output properties. A
         <span class="property-indicator"></span>
         <span class="property-type">string</span>
     </dt>
-    <dd>{{% md %}}The plain text title for the lab announcement{{% /md %}}</dd>
-</dl>
+    <dd>{{% md %}}The plain text title for the lab announcement{{% /md %}}</dd></dl>
 {{% /choosable %}}
 
 {{% choosable language go %}}
-<dl class="resources-properties">
-
-    <dt class="property-required"
+<dl class="resources-properties"><dt class="property-required"
             title="Required">
         <span id="provisioningstate_go">
 <a href="#provisioningstate_go" style="color: inherit; text-decoration: inherit;">Provisioning<wbr>State</a>
@@ -1670,8 +1480,7 @@ All [input](#inputs) properties are implicitly available as output properties. A
         <span class="property-indicator"></span>
         <span class="property-type">string</span>
     </dt>
-    <dd>{{% md %}}The provisioning status of the resource.{{% /md %}}</dd>
-    <dt class="property-required"
+    <dd>{{% md %}}The provisioning status of the resource.{{% /md %}}</dd><dt class="property-required"
             title="Required">
         <span id="uniqueidentifier_go">
 <a href="#uniqueidentifier_go" style="color: inherit; text-decoration: inherit;">Unique<wbr>Identifier</a>
@@ -1679,8 +1488,7 @@ All [input](#inputs) properties are implicitly available as output properties. A
         <span class="property-indicator"></span>
         <span class="property-type">string</span>
     </dt>
-    <dd>{{% md %}}The unique immutable identifier of a resource (Guid).{{% /md %}}</dd>
-    <dt class="property-optional"
+    <dd>{{% md %}}The unique immutable identifier of a resource (Guid).{{% /md %}}</dd><dt class="property-optional"
             title="Optional">
         <span id="enabled_go">
 <a href="#enabled_go" style="color: inherit; text-decoration: inherit;">Enabled</a>
@@ -1688,8 +1496,7 @@ All [input](#inputs) properties are implicitly available as output properties. A
         <span class="property-indicator"></span>
         <span class="property-type">string</span>
     </dt>
-    <dd>{{% md %}}Is the lab announcement active/enabled at this time?{{% /md %}}</dd>
-    <dt class="property-optional"
+    <dd>{{% md %}}Is the lab announcement active/enabled at this time?{{% /md %}}</dd><dt class="property-optional"
             title="Optional">
         <span id="expirationdate_go">
 <a href="#expirationdate_go" style="color: inherit; text-decoration: inherit;">Expiration<wbr>Date</a>
@@ -1697,8 +1504,7 @@ All [input](#inputs) properties are implicitly available as output properties. A
         <span class="property-indicator"></span>
         <span class="property-type">string</span>
     </dt>
-    <dd>{{% md %}}The time at which the announcement expires (null for never){{% /md %}}</dd>
-    <dt class="property-optional"
+    <dd>{{% md %}}The time at which the announcement expires (null for never){{% /md %}}</dd><dt class="property-optional"
             title="Optional">
         <span id="expired_go">
 <a href="#expired_go" style="color: inherit; text-decoration: inherit;">Expired</a>
@@ -1706,8 +1512,7 @@ All [input](#inputs) properties are implicitly available as output properties. A
         <span class="property-indicator"></span>
         <span class="property-type">bool</span>
     </dt>
-    <dd>{{% md %}}Has this announcement expired?{{% /md %}}</dd>
-    <dt class="property-optional"
+    <dd>{{% md %}}Has this announcement expired?{{% /md %}}</dd><dt class="property-optional"
             title="Optional">
         <span id="markdown_go">
 <a href="#markdown_go" style="color: inherit; text-decoration: inherit;">Markdown</a>
@@ -1715,8 +1520,7 @@ All [input](#inputs) properties are implicitly available as output properties. A
         <span class="property-indicator"></span>
         <span class="property-type">string</span>
     </dt>
-    <dd>{{% md %}}The markdown text (if any) that this lab displays in the UI. If left empty/null, nothing will be shown.{{% /md %}}</dd>
-    <dt class="property-optional"
+    <dd>{{% md %}}The markdown text (if any) that this lab displays in the UI. If left empty/null, nothing will be shown.{{% /md %}}</dd><dt class="property-optional"
             title="Optional">
         <span id="title_go">
 <a href="#title_go" style="color: inherit; text-decoration: inherit;">Title</a>
@@ -1724,14 +1528,11 @@ All [input](#inputs) properties are implicitly available as output properties. A
         <span class="property-indicator"></span>
         <span class="property-type">string</span>
     </dt>
-    <dd>{{% md %}}The plain text title for the lab announcement{{% /md %}}</dd>
-</dl>
+    <dd>{{% md %}}The plain text title for the lab announcement{{% /md %}}</dd></dl>
 {{% /choosable %}}
 
 {{% choosable language nodejs %}}
-<dl class="resources-properties">
-
-    <dt class="property-required"
+<dl class="resources-properties"><dt class="property-required"
             title="Required">
         <span id="provisioningstate_nodejs">
 <a href="#provisioningstate_nodejs" style="color: inherit; text-decoration: inherit;">provisioning<wbr>State</a>
@@ -1739,8 +1540,7 @@ All [input](#inputs) properties are implicitly available as output properties. A
         <span class="property-indicator"></span>
         <span class="property-type">string</span>
     </dt>
-    <dd>{{% md %}}The provisioning status of the resource.{{% /md %}}</dd>
-    <dt class="property-required"
+    <dd>{{% md %}}The provisioning status of the resource.{{% /md %}}</dd><dt class="property-required"
             title="Required">
         <span id="uniqueidentifier_nodejs">
 <a href="#uniqueidentifier_nodejs" style="color: inherit; text-decoration: inherit;">unique<wbr>Identifier</a>
@@ -1748,8 +1548,7 @@ All [input](#inputs) properties are implicitly available as output properties. A
         <span class="property-indicator"></span>
         <span class="property-type">string</span>
     </dt>
-    <dd>{{% md %}}The unique immutable identifier of a resource (Guid).{{% /md %}}</dd>
-    <dt class="property-optional"
+    <dd>{{% md %}}The unique immutable identifier of a resource (Guid).{{% /md %}}</dd><dt class="property-optional"
             title="Optional">
         <span id="enabled_nodejs">
 <a href="#enabled_nodejs" style="color: inherit; text-decoration: inherit;">enabled</a>
@@ -1757,8 +1556,7 @@ All [input](#inputs) properties are implicitly available as output properties. A
         <span class="property-indicator"></span>
         <span class="property-type">string</span>
     </dt>
-    <dd>{{% md %}}Is the lab announcement active/enabled at this time?{{% /md %}}</dd>
-    <dt class="property-optional"
+    <dd>{{% md %}}Is the lab announcement active/enabled at this time?{{% /md %}}</dd><dt class="property-optional"
             title="Optional">
         <span id="expirationdate_nodejs">
 <a href="#expirationdate_nodejs" style="color: inherit; text-decoration: inherit;">expiration<wbr>Date</a>
@@ -1766,8 +1564,7 @@ All [input](#inputs) properties are implicitly available as output properties. A
         <span class="property-indicator"></span>
         <span class="property-type">string</span>
     </dt>
-    <dd>{{% md %}}The time at which the announcement expires (null for never){{% /md %}}</dd>
-    <dt class="property-optional"
+    <dd>{{% md %}}The time at which the announcement expires (null for never){{% /md %}}</dd><dt class="property-optional"
             title="Optional">
         <span id="expired_nodejs">
 <a href="#expired_nodejs" style="color: inherit; text-decoration: inherit;">expired</a>
@@ -1775,8 +1572,7 @@ All [input](#inputs) properties are implicitly available as output properties. A
         <span class="property-indicator"></span>
         <span class="property-type">boolean</span>
     </dt>
-    <dd>{{% md %}}Has this announcement expired?{{% /md %}}</dd>
-    <dt class="property-optional"
+    <dd>{{% md %}}Has this announcement expired?{{% /md %}}</dd><dt class="property-optional"
             title="Optional">
         <span id="markdown_nodejs">
 <a href="#markdown_nodejs" style="color: inherit; text-decoration: inherit;">markdown</a>
@@ -1784,8 +1580,7 @@ All [input](#inputs) properties are implicitly available as output properties. A
         <span class="property-indicator"></span>
         <span class="property-type">string</span>
     </dt>
-    <dd>{{% md %}}The markdown text (if any) that this lab displays in the UI. If left empty/null, nothing will be shown.{{% /md %}}</dd>
-    <dt class="property-optional"
+    <dd>{{% md %}}The markdown text (if any) that this lab displays in the UI. If left empty/null, nothing will be shown.{{% /md %}}</dd><dt class="property-optional"
             title="Optional">
         <span id="title_nodejs">
 <a href="#title_nodejs" style="color: inherit; text-decoration: inherit;">title</a>
@@ -1793,14 +1588,11 @@ All [input](#inputs) properties are implicitly available as output properties. A
         <span class="property-indicator"></span>
         <span class="property-type">string</span>
     </dt>
-    <dd>{{% md %}}The plain text title for the lab announcement{{% /md %}}</dd>
-</dl>
+    <dd>{{% md %}}The plain text title for the lab announcement{{% /md %}}</dd></dl>
 {{% /choosable %}}
 
 {{% choosable language python %}}
-<dl class="resources-properties">
-
-    <dt class="property-required"
+<dl class="resources-properties"><dt class="property-required"
             title="Required">
         <span id="provisioning_state_python">
 <a href="#provisioning_state_python" style="color: inherit; text-decoration: inherit;">provisioning_<wbr>state</a>
@@ -1808,8 +1600,7 @@ All [input](#inputs) properties are implicitly available as output properties. A
         <span class="property-indicator"></span>
         <span class="property-type">str</span>
     </dt>
-    <dd>{{% md %}}The provisioning status of the resource.{{% /md %}}</dd>
-    <dt class="property-required"
+    <dd>{{% md %}}The provisioning status of the resource.{{% /md %}}</dd><dt class="property-required"
             title="Required">
         <span id="unique_identifier_python">
 <a href="#unique_identifier_python" style="color: inherit; text-decoration: inherit;">unique_<wbr>identifier</a>
@@ -1817,8 +1608,7 @@ All [input](#inputs) properties are implicitly available as output properties. A
         <span class="property-indicator"></span>
         <span class="property-type">str</span>
     </dt>
-    <dd>{{% md %}}The unique immutable identifier of a resource (Guid).{{% /md %}}</dd>
-    <dt class="property-optional"
+    <dd>{{% md %}}The unique immutable identifier of a resource (Guid).{{% /md %}}</dd><dt class="property-optional"
             title="Optional">
         <span id="enabled_python">
 <a href="#enabled_python" style="color: inherit; text-decoration: inherit;">enabled</a>
@@ -1826,8 +1616,7 @@ All [input](#inputs) properties are implicitly available as output properties. A
         <span class="property-indicator"></span>
         <span class="property-type">str</span>
     </dt>
-    <dd>{{% md %}}Is the lab announcement active/enabled at this time?{{% /md %}}</dd>
-    <dt class="property-optional"
+    <dd>{{% md %}}Is the lab announcement active/enabled at this time?{{% /md %}}</dd><dt class="property-optional"
             title="Optional">
         <span id="expiration_date_python">
 <a href="#expiration_date_python" style="color: inherit; text-decoration: inherit;">expiration_<wbr>date</a>
@@ -1835,8 +1624,7 @@ All [input](#inputs) properties are implicitly available as output properties. A
         <span class="property-indicator"></span>
         <span class="property-type">str</span>
     </dt>
-    <dd>{{% md %}}The time at which the announcement expires (null for never){{% /md %}}</dd>
-    <dt class="property-optional"
+    <dd>{{% md %}}The time at which the announcement expires (null for never){{% /md %}}</dd><dt class="property-optional"
             title="Optional">
         <span id="expired_python">
 <a href="#expired_python" style="color: inherit; text-decoration: inherit;">expired</a>
@@ -1844,8 +1632,7 @@ All [input](#inputs) properties are implicitly available as output properties. A
         <span class="property-indicator"></span>
         <span class="property-type">bool</span>
     </dt>
-    <dd>{{% md %}}Has this announcement expired?{{% /md %}}</dd>
-    <dt class="property-optional"
+    <dd>{{% md %}}Has this announcement expired?{{% /md %}}</dd><dt class="property-optional"
             title="Optional">
         <span id="markdown_python">
 <a href="#markdown_python" style="color: inherit; text-decoration: inherit;">markdown</a>
@@ -1853,8 +1640,7 @@ All [input](#inputs) properties are implicitly available as output properties. A
         <span class="property-indicator"></span>
         <span class="property-type">str</span>
     </dt>
-    <dd>{{% md %}}The markdown text (if any) that this lab displays in the UI. If left empty/null, nothing will be shown.{{% /md %}}</dd>
-    <dt class="property-optional"
+    <dd>{{% md %}}The markdown text (if any) that this lab displays in the UI. If left empty/null, nothing will be shown.{{% /md %}}</dd><dt class="property-optional"
             title="Optional">
         <span id="title_python">
 <a href="#title_python" style="color: inherit; text-decoration: inherit;">title</a>
@@ -1862,16 +1648,13 @@ All [input](#inputs) properties are implicitly available as output properties. A
         <span class="property-indicator"></span>
         <span class="property-type">str</span>
     </dt>
-    <dd>{{% md %}}The plain text title for the lab announcement{{% /md %}}</dd>
-</dl>
+    <dd>{{% md %}}The plain text title for the lab announcement{{% /md %}}</dd></dl>
 {{% /choosable %}}
 
 <h4 id="labsupportproperties">Lab<wbr>Support<wbr>Properties</h4>
 
 {{% choosable language csharp %}}
-<dl class="resources-properties">
-
-    <dt class="property-optional"
+<dl class="resources-properties"><dt class="property-optional"
             title="Optional">
         <span id="enabled_csharp">
 <a href="#enabled_csharp" style="color: inherit; text-decoration: inherit;">Enabled</a>
@@ -1879,8 +1662,7 @@ All [input](#inputs) properties are implicitly available as output properties. A
         <span class="property-indicator"></span>
         <span class="property-type">string | <a href="#enablestatus">Pulumi.<wbr>Azure<wbr>Native.<wbr>Dev<wbr>Test<wbr>Lab.<wbr>Enable<wbr>Status</a></span>
     </dt>
-    <dd>{{% md %}}Is the lab support banner active/enabled at this time?{{% /md %}}</dd>
-    <dt class="property-optional"
+    <dd>{{% md %}}Is the lab support banner active/enabled at this time?{{% /md %}}</dd><dt class="property-optional"
             title="Optional">
         <span id="markdown_csharp">
 <a href="#markdown_csharp" style="color: inherit; text-decoration: inherit;">Markdown</a>
@@ -1888,14 +1670,11 @@ All [input](#inputs) properties are implicitly available as output properties. A
         <span class="property-indicator"></span>
         <span class="property-type">string</span>
     </dt>
-    <dd>{{% md %}}The markdown text (if any) that this lab displays in the UI. If left empty/null, nothing will be shown.{{% /md %}}</dd>
-</dl>
+    <dd>{{% md %}}The markdown text (if any) that this lab displays in the UI. If left empty/null, nothing will be shown.{{% /md %}}</dd></dl>
 {{% /choosable %}}
 
 {{% choosable language go %}}
-<dl class="resources-properties">
-
-    <dt class="property-optional"
+<dl class="resources-properties"><dt class="property-optional"
             title="Optional">
         <span id="enabled_go">
 <a href="#enabled_go" style="color: inherit; text-decoration: inherit;">Enabled</a>
@@ -1903,8 +1682,7 @@ All [input](#inputs) properties are implicitly available as output properties. A
         <span class="property-indicator"></span>
         <span class="property-type">string | <a href="#enablestatus">Enable<wbr>Status</a></span>
     </dt>
-    <dd>{{% md %}}Is the lab support banner active/enabled at this time?{{% /md %}}</dd>
-    <dt class="property-optional"
+    <dd>{{% md %}}Is the lab support banner active/enabled at this time?{{% /md %}}</dd><dt class="property-optional"
             title="Optional">
         <span id="markdown_go">
 <a href="#markdown_go" style="color: inherit; text-decoration: inherit;">Markdown</a>
@@ -1912,14 +1690,11 @@ All [input](#inputs) properties are implicitly available as output properties. A
         <span class="property-indicator"></span>
         <span class="property-type">string</span>
     </dt>
-    <dd>{{% md %}}The markdown text (if any) that this lab displays in the UI. If left empty/null, nothing will be shown.{{% /md %}}</dd>
-</dl>
+    <dd>{{% md %}}The markdown text (if any) that this lab displays in the UI. If left empty/null, nothing will be shown.{{% /md %}}</dd></dl>
 {{% /choosable %}}
 
 {{% choosable language nodejs %}}
-<dl class="resources-properties">
-
-    <dt class="property-optional"
+<dl class="resources-properties"><dt class="property-optional"
             title="Optional">
         <span id="enabled_nodejs">
 <a href="#enabled_nodejs" style="color: inherit; text-decoration: inherit;">enabled</a>
@@ -1927,8 +1702,7 @@ All [input](#inputs) properties are implicitly available as output properties. A
         <span class="property-indicator"></span>
         <span class="property-type">string | <a href="#enablestatus">Enable<wbr>Status</a></span>
     </dt>
-    <dd>{{% md %}}Is the lab support banner active/enabled at this time?{{% /md %}}</dd>
-    <dt class="property-optional"
+    <dd>{{% md %}}Is the lab support banner active/enabled at this time?{{% /md %}}</dd><dt class="property-optional"
             title="Optional">
         <span id="markdown_nodejs">
 <a href="#markdown_nodejs" style="color: inherit; text-decoration: inherit;">markdown</a>
@@ -1936,14 +1710,11 @@ All [input](#inputs) properties are implicitly available as output properties. A
         <span class="property-indicator"></span>
         <span class="property-type">string</span>
     </dt>
-    <dd>{{% md %}}The markdown text (if any) that this lab displays in the UI. If left empty/null, nothing will be shown.{{% /md %}}</dd>
-</dl>
+    <dd>{{% md %}}The markdown text (if any) that this lab displays in the UI. If left empty/null, nothing will be shown.{{% /md %}}</dd></dl>
 {{% /choosable %}}
 
 {{% choosable language python %}}
-<dl class="resources-properties">
-
-    <dt class="property-optional"
+<dl class="resources-properties"><dt class="property-optional"
             title="Optional">
         <span id="enabled_python">
 <a href="#enabled_python" style="color: inherit; text-decoration: inherit;">enabled</a>
@@ -1951,8 +1722,7 @@ All [input](#inputs) properties are implicitly available as output properties. A
         <span class="property-indicator"></span>
         <span class="property-type">str | <a href="#enablestatus">Enable<wbr>Status</a></span>
     </dt>
-    <dd>{{% md %}}Is the lab support banner active/enabled at this time?{{% /md %}}</dd>
-    <dt class="property-optional"
+    <dd>{{% md %}}Is the lab support banner active/enabled at this time?{{% /md %}}</dd><dt class="property-optional"
             title="Optional">
         <span id="markdown_python">
 <a href="#markdown_python" style="color: inherit; text-decoration: inherit;">markdown</a>
@@ -1960,16 +1730,13 @@ All [input](#inputs) properties are implicitly available as output properties. A
         <span class="property-indicator"></span>
         <span class="property-type">str</span>
     </dt>
-    <dd>{{% md %}}The markdown text (if any) that this lab displays in the UI. If left empty/null, nothing will be shown.{{% /md %}}</dd>
-</dl>
+    <dd>{{% md %}}The markdown text (if any) that this lab displays in the UI. If left empty/null, nothing will be shown.{{% /md %}}</dd></dl>
 {{% /choosable %}}
 
 <h4 id="labsupportpropertiesresponse">Lab<wbr>Support<wbr>Properties<wbr>Response</h4>
 
 {{% choosable language csharp %}}
-<dl class="resources-properties">
-
-    <dt class="property-optional"
+<dl class="resources-properties"><dt class="property-optional"
             title="Optional">
         <span id="enabled_csharp">
 <a href="#enabled_csharp" style="color: inherit; text-decoration: inherit;">Enabled</a>
@@ -1977,8 +1744,7 @@ All [input](#inputs) properties are implicitly available as output properties. A
         <span class="property-indicator"></span>
         <span class="property-type">string</span>
     </dt>
-    <dd>{{% md %}}Is the lab support banner active/enabled at this time?{{% /md %}}</dd>
-    <dt class="property-optional"
+    <dd>{{% md %}}Is the lab support banner active/enabled at this time?{{% /md %}}</dd><dt class="property-optional"
             title="Optional">
         <span id="markdown_csharp">
 <a href="#markdown_csharp" style="color: inherit; text-decoration: inherit;">Markdown</a>
@@ -1986,14 +1752,11 @@ All [input](#inputs) properties are implicitly available as output properties. A
         <span class="property-indicator"></span>
         <span class="property-type">string</span>
     </dt>
-    <dd>{{% md %}}The markdown text (if any) that this lab displays in the UI. If left empty/null, nothing will be shown.{{% /md %}}</dd>
-</dl>
+    <dd>{{% md %}}The markdown text (if any) that this lab displays in the UI. If left empty/null, nothing will be shown.{{% /md %}}</dd></dl>
 {{% /choosable %}}
 
 {{% choosable language go %}}
-<dl class="resources-properties">
-
-    <dt class="property-optional"
+<dl class="resources-properties"><dt class="property-optional"
             title="Optional">
         <span id="enabled_go">
 <a href="#enabled_go" style="color: inherit; text-decoration: inherit;">Enabled</a>
@@ -2001,8 +1764,7 @@ All [input](#inputs) properties are implicitly available as output properties. A
         <span class="property-indicator"></span>
         <span class="property-type">string</span>
     </dt>
-    <dd>{{% md %}}Is the lab support banner active/enabled at this time?{{% /md %}}</dd>
-    <dt class="property-optional"
+    <dd>{{% md %}}Is the lab support banner active/enabled at this time?{{% /md %}}</dd><dt class="property-optional"
             title="Optional">
         <span id="markdown_go">
 <a href="#markdown_go" style="color: inherit; text-decoration: inherit;">Markdown</a>
@@ -2010,14 +1772,11 @@ All [input](#inputs) properties are implicitly available as output properties. A
         <span class="property-indicator"></span>
         <span class="property-type">string</span>
     </dt>
-    <dd>{{% md %}}The markdown text (if any) that this lab displays in the UI. If left empty/null, nothing will be shown.{{% /md %}}</dd>
-</dl>
+    <dd>{{% md %}}The markdown text (if any) that this lab displays in the UI. If left empty/null, nothing will be shown.{{% /md %}}</dd></dl>
 {{% /choosable %}}
 
 {{% choosable language nodejs %}}
-<dl class="resources-properties">
-
-    <dt class="property-optional"
+<dl class="resources-properties"><dt class="property-optional"
             title="Optional">
         <span id="enabled_nodejs">
 <a href="#enabled_nodejs" style="color: inherit; text-decoration: inherit;">enabled</a>
@@ -2025,8 +1784,7 @@ All [input](#inputs) properties are implicitly available as output properties. A
         <span class="property-indicator"></span>
         <span class="property-type">string</span>
     </dt>
-    <dd>{{% md %}}Is the lab support banner active/enabled at this time?{{% /md %}}</dd>
-    <dt class="property-optional"
+    <dd>{{% md %}}Is the lab support banner active/enabled at this time?{{% /md %}}</dd><dt class="property-optional"
             title="Optional">
         <span id="markdown_nodejs">
 <a href="#markdown_nodejs" style="color: inherit; text-decoration: inherit;">markdown</a>
@@ -2034,14 +1792,11 @@ All [input](#inputs) properties are implicitly available as output properties. A
         <span class="property-indicator"></span>
         <span class="property-type">string</span>
     </dt>
-    <dd>{{% md %}}The markdown text (if any) that this lab displays in the UI. If left empty/null, nothing will be shown.{{% /md %}}</dd>
-</dl>
+    <dd>{{% md %}}The markdown text (if any) that this lab displays in the UI. If left empty/null, nothing will be shown.{{% /md %}}</dd></dl>
 {{% /choosable %}}
 
 {{% choosable language python %}}
-<dl class="resources-properties">
-
-    <dt class="property-optional"
+<dl class="resources-properties"><dt class="property-optional"
             title="Optional">
         <span id="enabled_python">
 <a href="#enabled_python" style="color: inherit; text-decoration: inherit;">enabled</a>
@@ -2049,8 +1804,7 @@ All [input](#inputs) properties are implicitly available as output properties. A
         <span class="property-indicator"></span>
         <span class="property-type">str</span>
     </dt>
-    <dd>{{% md %}}Is the lab support banner active/enabled at this time?{{% /md %}}</dd>
-    <dt class="property-optional"
+    <dd>{{% md %}}Is the lab support banner active/enabled at this time?{{% /md %}}</dd><dt class="property-optional"
             title="Optional">
         <span id="markdown_python">
 <a href="#markdown_python" style="color: inherit; text-decoration: inherit;">markdown</a>
@@ -2058,92 +1812,63 @@ All [input](#inputs) properties are implicitly available as output properties. A
         <span class="property-indicator"></span>
         <span class="property-type">str</span>
     </dt>
-    <dd>{{% md %}}The markdown text (if any) that this lab displays in the UI. If left empty/null, nothing will be shown.{{% /md %}}</dd>
-</dl>
+    <dd>{{% md %}}The markdown text (if any) that this lab displays in the UI. If left empty/null, nothing will be shown.{{% /md %}}</dd></dl>
 {{% /choosable %}}
 
 <h4 id="premiumdatadisk">Premium<wbr>Data<wbr>Disk</h4>
 
 {{% choosable language csharp %}}
-<dl class="tabular">
-    <dt>Disabled</dt>
-    <dd>Disabled</dd>
-    <dt>Enabled</dt>
-    <dd>Enabled</dd>
-</dl>
+<dl class="tabular"><dt>Disabled</dt>
+    <dd>Disabled</dd><dt>Enabled</dt>
+    <dd>Enabled</dd></dl>
 {{% /choosable %}}
 
 {{% choosable language go %}}
-<dl class="tabular">
-    <dt>Premium<wbr>Data<wbr>Disk<wbr>Disabled</dt>
-    <dd>Disabled</dd>
-    <dt>Premium<wbr>Data<wbr>Disk<wbr>Enabled</dt>
-    <dd>Enabled</dd>
-</dl>
+<dl class="tabular"><dt>Premium<wbr>Data<wbr>Disk<wbr>Disabled</dt>
+    <dd>Disabled</dd><dt>Premium<wbr>Data<wbr>Disk<wbr>Enabled</dt>
+    <dd>Enabled</dd></dl>
 {{% /choosable %}}
 
 {{% choosable language nodejs %}}
-<dl class="tabular">
-    <dt>Disabled</dt>
-    <dd>Disabled</dd>
-    <dt>Enabled</dt>
-    <dd>Enabled</dd>
-</dl>
+<dl class="tabular"><dt>Disabled</dt>
+    <dd>Disabled</dd><dt>Enabled</dt>
+    <dd>Enabled</dd></dl>
 {{% /choosable %}}
 
 {{% choosable language python %}}
-<dl class="tabular">
-    <dt>DISABLED</dt>
-    <dd>Disabled</dd>
-    <dt>ENABLED</dt>
-    <dd>Enabled</dd>
-</dl>
+<dl class="tabular"><dt>DISABLED</dt>
+    <dd>Disabled</dd><dt>ENABLED</dt>
+    <dd>Enabled</dd></dl>
 {{% /choosable %}}
 
 <h4 id="storagetype">Storage<wbr>Type</h4>
 
 {{% choosable language csharp %}}
-<dl class="tabular">
-    <dt>Standard</dt>
-    <dd>Standard</dd>
-    <dt>Premium</dt>
-    <dd>Premium</dd>
-    <dt>Standard<wbr>SSD</dt>
-    <dd>StandardSSD</dd>
-</dl>
+<dl class="tabular"><dt>Standard</dt>
+    <dd>Standard</dd><dt>Premium</dt>
+    <dd>Premium</dd><dt>Standard<wbr>SSD</dt>
+    <dd>StandardSSD</dd></dl>
 {{% /choosable %}}
 
 {{% choosable language go %}}
-<dl class="tabular">
-    <dt>Storage<wbr>Type<wbr>Standard</dt>
-    <dd>Standard</dd>
-    <dt>Storage<wbr>Type<wbr>Premium</dt>
-    <dd>Premium</dd>
-    <dt>Storage<wbr>Type<wbr>Standard<wbr>SSD</dt>
-    <dd>StandardSSD</dd>
-</dl>
+<dl class="tabular"><dt>Storage<wbr>Type<wbr>Standard</dt>
+    <dd>Standard</dd><dt>Storage<wbr>Type<wbr>Premium</dt>
+    <dd>Premium</dd><dt>Storage<wbr>Type<wbr>Standard<wbr>SSD</dt>
+    <dd>StandardSSD</dd></dl>
 {{% /choosable %}}
 
 {{% choosable language nodejs %}}
-<dl class="tabular">
-    <dt>Standard</dt>
-    <dd>Standard</dd>
-    <dt>Premium</dt>
-    <dd>Premium</dd>
-    <dt>Standard<wbr>SSD</dt>
-    <dd>StandardSSD</dd>
-</dl>
+<dl class="tabular"><dt>Standard</dt>
+    <dd>Standard</dd><dt>Premium</dt>
+    <dd>Premium</dd><dt>Standard<wbr>SSD</dt>
+    <dd>StandardSSD</dd></dl>
 {{% /choosable %}}
 
 {{% choosable language python %}}
-<dl class="tabular">
-    <dt>STANDARD</dt>
-    <dd>Standard</dd>
-    <dt>PREMIUM</dt>
-    <dd>Premium</dd>
-    <dt>STANDARD_SSD</dt>
-    <dd>StandardSSD</dd>
-</dl>
+<dl class="tabular"><dt>STANDARD</dt>
+    <dd>Standard</dd><dt>PREMIUM</dt>
+    <dd>Premium</dd><dt>STANDARD_SSD</dt>
+    <dd>StandardSSD</dd></dl>
 {{% /choosable %}}
 ## Import
 

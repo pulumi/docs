@@ -13,11 +13,17 @@ meta_desc: "Documentation for the azure.kusto.EventGridDataConnection resource w
 Manages a Kusto (also known as Azure Data Explorer) Event Grid Data Connection
 
 {{% examples %}}
+
 ## Example Usage
 
 {{< chooser language "typescript,python,go,csharp" / >}}
 
-{{% example csharp %}}
+
+
+
+
+{{< example csharp >}}
+
 ```csharp
 using Pulumi;
 using Azure = Pulumi.Azure;
@@ -111,9 +117,12 @@ class MyStack : Stack
 }
 ```
 
-{{% /example %}}
 
-{{% example go %}}
+{{< /example >}}
+
+
+{{< example go >}}
+
 ```go
 package main
 
@@ -224,9 +233,12 @@ func main() {
 }
 ```
 
-{{% /example %}}
 
-{{% example python %}}
+{{< /example >}}
+
+
+{{< example python >}}
+
 ```python
 import pulumi
 import pulumi_azure as azure
@@ -286,9 +298,12 @@ example_event_grid_data_connection = azure.kusto.EventGridDataConnection("exampl
     opts=pulumi.ResourceOptions(depends_on=[example_event_subscription]))
 ```
 
-{{% /example %}}
 
-{{% example typescript %}}
+{{< /example >}}
+
+
+{{< example typescript >}}
+
 
 ```typescript
 import * as pulumi from "@pulumi/pulumi";
@@ -358,9 +373,16 @@ const exampleEventGridDataConnection = new azure.kusto.EventGridDataConnection("
 });
 ```
 
-{{% /example %}}
+
+{{< /example >}}
+
+
+
+
 
 {{% /examples %}}
+
+
 
 
 ## Create a EventGridDataConnection Resource {#create}
@@ -385,9 +407,7 @@ const exampleEventGridDataConnection = new azure.kusto.EventGridDataConnection("
 
 {{% choosable language nodejs %}}
 
-<dl class="resources-properties">
-  
-    <dt
+<dl class="resources-properties"><dt
         class="property-required" title="Required">
         <span>name</span>
         <span class="property-indicator"></span>
@@ -395,9 +415,7 @@ const exampleEventGridDataConnection = new azure.kusto.EventGridDataConnection("
     </dt>
     <dd>
       The unique name of the resource.
-    </dd>
-  
-    <dt
+    </dd><dt
         class="property-required" title="Required">
         <span>args</span>
         <span class="property-indicator"></span>
@@ -405,9 +423,7 @@ const exampleEventGridDataConnection = new azure.kusto.EventGridDataConnection("
     </dt>
     <dd>
       The arguments to resource properties.
-    </dd>
-  
-    <dt
+    </dd><dt
         class="property-optional" title="Optional">
         <span>opts</span>
         <span class="property-indicator"></span>
@@ -415,10 +431,7 @@ const exampleEventGridDataConnection = new azure.kusto.EventGridDataConnection("
     </dt>
     <dd>
       Bag of options to control resource&#39;s behavior.
-    </dd>
-  
-
-</dl>
+    </dd></dl>
 
 {{% /choosable %}}
 
@@ -444,9 +457,7 @@ const exampleEventGridDataConnection = new azure.kusto.EventGridDataConnection("
 
 {{% choosable language go %}}
 
-<dl class="resources-properties">
-  
-    <dt
+<dl class="resources-properties"><dt
         class="property-optional" title="Optional">
         <span>ctx</span>
         <span class="property-indicator"></span>
@@ -454,9 +465,7 @@ const exampleEventGridDataConnection = new azure.kusto.EventGridDataConnection("
     </dt>
     <dd>
       Context object for the current deployment.
-    </dd>
-  
-    <dt
+    </dd><dt
         class="property-required" title="Required">
         <span>name</span>
         <span class="property-indicator"></span>
@@ -464,9 +473,7 @@ const exampleEventGridDataConnection = new azure.kusto.EventGridDataConnection("
     </dt>
     <dd>
       The unique name of the resource.
-    </dd>
-  
-    <dt
+    </dd><dt
         class="property-required" title="Required">
         <span>args</span>
         <span class="property-indicator"></span>
@@ -474,9 +481,7 @@ const exampleEventGridDataConnection = new azure.kusto.EventGridDataConnection("
     </dt>
     <dd>
       The arguments to resource properties.
-    </dd>
-  
-    <dt
+    </dd><dt
         class="property-optional" title="Optional">
         <span>opts</span>
         <span class="property-indicator"></span>
@@ -484,18 +489,13 @@ const exampleEventGridDataConnection = new azure.kusto.EventGridDataConnection("
     </dt>
     <dd>
       Bag of options to control resource&#39;s behavior.
-    </dd>
-  
-
-</dl>
+    </dd></dl>
 
 {{% /choosable %}}
 
 {{% choosable language csharp %}}
 
-<dl class="resources-properties">
-  
-    <dt
+<dl class="resources-properties"><dt
         class="property-required" title="Required">
         <span>name</span>
         <span class="property-indicator"></span>
@@ -503,9 +503,7 @@ const exampleEventGridDataConnection = new azure.kusto.EventGridDataConnection("
     </dt>
     <dd>
       The unique name of the resource.
-    </dd>
-  
-    <dt
+    </dd><dt
         class="property-required" title="Required">
         <span>args</span>
         <span class="property-indicator"></span>
@@ -513,9 +511,7 @@ const exampleEventGridDataConnection = new azure.kusto.EventGridDataConnection("
     </dt>
     <dd>
       The arguments to resource properties.
-    </dd>
-  
-    <dt
+    </dd><dt
         class="property-optional" title="Optional">
         <span>opts</span>
         <span class="property-indicator"></span>
@@ -523,10 +519,7 @@ const exampleEventGridDataConnection = new azure.kusto.EventGridDataConnection("
     </dt>
     <dd>
       Bag of options to control resource&#39;s behavior.
-    </dd>
-  
-
-</dl>
+    </dd></dl>
 
 {{% /choosable %}}
 
@@ -541,9 +534,7 @@ The EventGridDataConnection resource accepts the following [input]({{< relref "/
 
 
 {{% choosable language csharp %}}
-<dl class="resources-properties">
-
-    <dt class="property-required"
+<dl class="resources-properties"><dt class="property-required"
             title="Required">
         <span id="clustername_csharp">
 <a href="#clustername_csharp" style="color: inherit; text-decoration: inherit;">Cluster<wbr>Name</a>
@@ -552,8 +543,7 @@ The EventGridDataConnection resource accepts the following [input]({{< relref "/
         <span class="property-type">string</span>
     </dt>
     <dd>{{% md %}}Specifies the name of the Kusto Cluster this data connection will be added to. Changing this forces a new resource to be created.
-{{% /md %}}</dd>
-    <dt class="property-required"
+{{% /md %}}</dd><dt class="property-required"
             title="Required">
         <span id="databasename_csharp">
 <a href="#databasename_csharp" style="color: inherit; text-decoration: inherit;">Database<wbr>Name</a>
@@ -562,8 +552,7 @@ The EventGridDataConnection resource accepts the following [input]({{< relref "/
         <span class="property-type">string</span>
     </dt>
     <dd>{{% md %}}Specifies the name of the Kusto Database this data connection will be added to. Changing this forces a new resource to be created.
-{{% /md %}}</dd>
-    <dt class="property-required"
+{{% /md %}}</dd><dt class="property-required"
             title="Required">
         <span id="eventhubconsumergroupname_csharp">
 <a href="#eventhubconsumergroupname_csharp" style="color: inherit; text-decoration: inherit;">Eventhub<wbr>Consumer<wbr>Group<wbr>Name</a>
@@ -573,8 +562,7 @@ The EventGridDataConnection resource accepts the following [input]({{< relref "/
     </dt>
     <dd>{{% md %}}Specifies the Event Hub consumer group this data connection will use for
 ingestion. Changing this forces a new resource to be created.
-{{% /md %}}</dd>
-    <dt class="property-required"
+{{% /md %}}</dd><dt class="property-required"
             title="Required">
         <span id="eventhubid_csharp">
 <a href="#eventhubid_csharp" style="color: inherit; text-decoration: inherit;">Eventhub<wbr>Id</a>
@@ -584,8 +572,7 @@ ingestion. Changing this forces a new resource to be created.
     </dt>
     <dd>{{% md %}}Specifies the resource id of the Event Hub this data connection will use for ingestion.
 Changing this forces a new resource to be created.
-{{% /md %}}</dd>
-    <dt class="property-required"
+{{% /md %}}</dd><dt class="property-required"
             title="Required">
         <span id="resourcegroupname_csharp">
 <a href="#resourcegroupname_csharp" style="color: inherit; text-decoration: inherit;">Resource<wbr>Group<wbr>Name</a>
@@ -594,8 +581,7 @@ Changing this forces a new resource to be created.
         <span class="property-type">string</span>
     </dt>
     <dd>{{% md %}}Specifies the Resource Group where the Kusto Database should exist. Changing this forces a new resource to be created.
-{{% /md %}}</dd>
-    <dt class="property-required"
+{{% /md %}}</dd><dt class="property-required"
             title="Required">
         <span id="storageaccountid_csharp">
 <a href="#storageaccountid_csharp" style="color: inherit; text-decoration: inherit;">Storage<wbr>Account<wbr>Id</a>
@@ -604,8 +590,7 @@ Changing this forces a new resource to be created.
         <span class="property-type">string</span>
     </dt>
     <dd>{{% md %}}Specifies the resource id of the Storage Account this data connection will use for ingestion. Changing this forces a new resource to be created.
-{{% /md %}}</dd>
-    <dt class="property-optional"
+{{% /md %}}</dd><dt class="property-optional"
             title="Optional">
         <span id="blobstorageeventtype_csharp">
 <a href="#blobstorageeventtype_csharp" style="color: inherit; text-decoration: inherit;">Blob<wbr>Storage<wbr>Event<wbr>Type</a>
@@ -616,8 +601,7 @@ Changing this forces a new resource to be created.
     <dd>{{% md %}}Specifies the blob storage event type that needs to be processed. Possible
 Values are `Microsoft.Storage.BlobCreated` and `Microsoft.Storage.BlobRenamed`. Defaults
 to `Microsoft.Storage.BlobCreated`.
-{{% /md %}}</dd>
-    <dt class="property-optional"
+{{% /md %}}</dd><dt class="property-optional"
             title="Optional">
         <span id="location_csharp">
 <a href="#location_csharp" style="color: inherit; text-decoration: inherit;">Location</a>
@@ -626,8 +610,7 @@ to `Microsoft.Storage.BlobCreated`.
         <span class="property-type">string</span>
     </dt>
     <dd>{{% md %}}The location where the Kusto Database should be created. Changing this forces a new resource to be created.
-{{% /md %}}</dd>
-    <dt class="property-optional"
+{{% /md %}}</dd><dt class="property-optional"
             title="Optional">
         <span id="name_csharp">
 <a href="#name_csharp" style="color: inherit; text-decoration: inherit;">Name</a>
@@ -636,8 +619,7 @@ to `Microsoft.Storage.BlobCreated`.
         <span class="property-type">string</span>
     </dt>
     <dd>{{% md %}}The name of the Kusto Event Grid Data Connection to create. Changing this forces a new resource to be created.
-{{% /md %}}</dd>
-    <dt class="property-optional"
+{{% /md %}}</dd><dt class="property-optional"
             title="Optional">
         <span id="skipfirstrecord_csharp">
 <a href="#skipfirstrecord_csharp" style="color: inherit; text-decoration: inherit;">Skip<wbr>First<wbr>Record</a>
@@ -646,14 +628,11 @@ to `Microsoft.Storage.BlobCreated`.
         <span class="property-type">bool</span>
     </dt>
     <dd>{{% md %}}is the first record of every file ignored? Defaults to `false`.
-{{% /md %}}</dd>
-</dl>
+{{% /md %}}</dd></dl>
 {{% /choosable %}}
 
 {{% choosable language go %}}
-<dl class="resources-properties">
-
-    <dt class="property-required"
+<dl class="resources-properties"><dt class="property-required"
             title="Required">
         <span id="clustername_go">
 <a href="#clustername_go" style="color: inherit; text-decoration: inherit;">Cluster<wbr>Name</a>
@@ -662,8 +641,7 @@ to `Microsoft.Storage.BlobCreated`.
         <span class="property-type">string</span>
     </dt>
     <dd>{{% md %}}Specifies the name of the Kusto Cluster this data connection will be added to. Changing this forces a new resource to be created.
-{{% /md %}}</dd>
-    <dt class="property-required"
+{{% /md %}}</dd><dt class="property-required"
             title="Required">
         <span id="databasename_go">
 <a href="#databasename_go" style="color: inherit; text-decoration: inherit;">Database<wbr>Name</a>
@@ -672,8 +650,7 @@ to `Microsoft.Storage.BlobCreated`.
         <span class="property-type">string</span>
     </dt>
     <dd>{{% md %}}Specifies the name of the Kusto Database this data connection will be added to. Changing this forces a new resource to be created.
-{{% /md %}}</dd>
-    <dt class="property-required"
+{{% /md %}}</dd><dt class="property-required"
             title="Required">
         <span id="eventhubconsumergroupname_go">
 <a href="#eventhubconsumergroupname_go" style="color: inherit; text-decoration: inherit;">Eventhub<wbr>Consumer<wbr>Group<wbr>Name</a>
@@ -683,8 +660,7 @@ to `Microsoft.Storage.BlobCreated`.
     </dt>
     <dd>{{% md %}}Specifies the Event Hub consumer group this data connection will use for
 ingestion. Changing this forces a new resource to be created.
-{{% /md %}}</dd>
-    <dt class="property-required"
+{{% /md %}}</dd><dt class="property-required"
             title="Required">
         <span id="eventhubid_go">
 <a href="#eventhubid_go" style="color: inherit; text-decoration: inherit;">Eventhub<wbr>Id</a>
@@ -694,8 +670,7 @@ ingestion. Changing this forces a new resource to be created.
     </dt>
     <dd>{{% md %}}Specifies the resource id of the Event Hub this data connection will use for ingestion.
 Changing this forces a new resource to be created.
-{{% /md %}}</dd>
-    <dt class="property-required"
+{{% /md %}}</dd><dt class="property-required"
             title="Required">
         <span id="resourcegroupname_go">
 <a href="#resourcegroupname_go" style="color: inherit; text-decoration: inherit;">Resource<wbr>Group<wbr>Name</a>
@@ -704,8 +679,7 @@ Changing this forces a new resource to be created.
         <span class="property-type">string</span>
     </dt>
     <dd>{{% md %}}Specifies the Resource Group where the Kusto Database should exist. Changing this forces a new resource to be created.
-{{% /md %}}</dd>
-    <dt class="property-required"
+{{% /md %}}</dd><dt class="property-required"
             title="Required">
         <span id="storageaccountid_go">
 <a href="#storageaccountid_go" style="color: inherit; text-decoration: inherit;">Storage<wbr>Account<wbr>Id</a>
@@ -714,8 +688,7 @@ Changing this forces a new resource to be created.
         <span class="property-type">string</span>
     </dt>
     <dd>{{% md %}}Specifies the resource id of the Storage Account this data connection will use for ingestion. Changing this forces a new resource to be created.
-{{% /md %}}</dd>
-    <dt class="property-optional"
+{{% /md %}}</dd><dt class="property-optional"
             title="Optional">
         <span id="blobstorageeventtype_go">
 <a href="#blobstorageeventtype_go" style="color: inherit; text-decoration: inherit;">Blob<wbr>Storage<wbr>Event<wbr>Type</a>
@@ -726,8 +699,7 @@ Changing this forces a new resource to be created.
     <dd>{{% md %}}Specifies the blob storage event type that needs to be processed. Possible
 Values are `Microsoft.Storage.BlobCreated` and `Microsoft.Storage.BlobRenamed`. Defaults
 to `Microsoft.Storage.BlobCreated`.
-{{% /md %}}</dd>
-    <dt class="property-optional"
+{{% /md %}}</dd><dt class="property-optional"
             title="Optional">
         <span id="location_go">
 <a href="#location_go" style="color: inherit; text-decoration: inherit;">Location</a>
@@ -736,8 +708,7 @@ to `Microsoft.Storage.BlobCreated`.
         <span class="property-type">string</span>
     </dt>
     <dd>{{% md %}}The location where the Kusto Database should be created. Changing this forces a new resource to be created.
-{{% /md %}}</dd>
-    <dt class="property-optional"
+{{% /md %}}</dd><dt class="property-optional"
             title="Optional">
         <span id="name_go">
 <a href="#name_go" style="color: inherit; text-decoration: inherit;">Name</a>
@@ -746,8 +717,7 @@ to `Microsoft.Storage.BlobCreated`.
         <span class="property-type">string</span>
     </dt>
     <dd>{{% md %}}The name of the Kusto Event Grid Data Connection to create. Changing this forces a new resource to be created.
-{{% /md %}}</dd>
-    <dt class="property-optional"
+{{% /md %}}</dd><dt class="property-optional"
             title="Optional">
         <span id="skipfirstrecord_go">
 <a href="#skipfirstrecord_go" style="color: inherit; text-decoration: inherit;">Skip<wbr>First<wbr>Record</a>
@@ -756,14 +726,11 @@ to `Microsoft.Storage.BlobCreated`.
         <span class="property-type">bool</span>
     </dt>
     <dd>{{% md %}}is the first record of every file ignored? Defaults to `false`.
-{{% /md %}}</dd>
-</dl>
+{{% /md %}}</dd></dl>
 {{% /choosable %}}
 
 {{% choosable language nodejs %}}
-<dl class="resources-properties">
-
-    <dt class="property-required"
+<dl class="resources-properties"><dt class="property-required"
             title="Required">
         <span id="clustername_nodejs">
 <a href="#clustername_nodejs" style="color: inherit; text-decoration: inherit;">cluster<wbr>Name</a>
@@ -772,8 +739,7 @@ to `Microsoft.Storage.BlobCreated`.
         <span class="property-type">string</span>
     </dt>
     <dd>{{% md %}}Specifies the name of the Kusto Cluster this data connection will be added to. Changing this forces a new resource to be created.
-{{% /md %}}</dd>
-    <dt class="property-required"
+{{% /md %}}</dd><dt class="property-required"
             title="Required">
         <span id="databasename_nodejs">
 <a href="#databasename_nodejs" style="color: inherit; text-decoration: inherit;">database<wbr>Name</a>
@@ -782,8 +748,7 @@ to `Microsoft.Storage.BlobCreated`.
         <span class="property-type">string</span>
     </dt>
     <dd>{{% md %}}Specifies the name of the Kusto Database this data connection will be added to. Changing this forces a new resource to be created.
-{{% /md %}}</dd>
-    <dt class="property-required"
+{{% /md %}}</dd><dt class="property-required"
             title="Required">
         <span id="eventhubconsumergroupname_nodejs">
 <a href="#eventhubconsumergroupname_nodejs" style="color: inherit; text-decoration: inherit;">eventhub<wbr>Consumer<wbr>Group<wbr>Name</a>
@@ -793,8 +758,7 @@ to `Microsoft.Storage.BlobCreated`.
     </dt>
     <dd>{{% md %}}Specifies the Event Hub consumer group this data connection will use for
 ingestion. Changing this forces a new resource to be created.
-{{% /md %}}</dd>
-    <dt class="property-required"
+{{% /md %}}</dd><dt class="property-required"
             title="Required">
         <span id="eventhubid_nodejs">
 <a href="#eventhubid_nodejs" style="color: inherit; text-decoration: inherit;">eventhub<wbr>Id</a>
@@ -804,8 +768,7 @@ ingestion. Changing this forces a new resource to be created.
     </dt>
     <dd>{{% md %}}Specifies the resource id of the Event Hub this data connection will use for ingestion.
 Changing this forces a new resource to be created.
-{{% /md %}}</dd>
-    <dt class="property-required"
+{{% /md %}}</dd><dt class="property-required"
             title="Required">
         <span id="resourcegroupname_nodejs">
 <a href="#resourcegroupname_nodejs" style="color: inherit; text-decoration: inherit;">resource<wbr>Group<wbr>Name</a>
@@ -814,8 +777,7 @@ Changing this forces a new resource to be created.
         <span class="property-type">string</span>
     </dt>
     <dd>{{% md %}}Specifies the Resource Group where the Kusto Database should exist. Changing this forces a new resource to be created.
-{{% /md %}}</dd>
-    <dt class="property-required"
+{{% /md %}}</dd><dt class="property-required"
             title="Required">
         <span id="storageaccountid_nodejs">
 <a href="#storageaccountid_nodejs" style="color: inherit; text-decoration: inherit;">storage<wbr>Account<wbr>Id</a>
@@ -824,8 +786,7 @@ Changing this forces a new resource to be created.
         <span class="property-type">string</span>
     </dt>
     <dd>{{% md %}}Specifies the resource id of the Storage Account this data connection will use for ingestion. Changing this forces a new resource to be created.
-{{% /md %}}</dd>
-    <dt class="property-optional"
+{{% /md %}}</dd><dt class="property-optional"
             title="Optional">
         <span id="blobstorageeventtype_nodejs">
 <a href="#blobstorageeventtype_nodejs" style="color: inherit; text-decoration: inherit;">blob<wbr>Storage<wbr>Event<wbr>Type</a>
@@ -836,8 +797,7 @@ Changing this forces a new resource to be created.
     <dd>{{% md %}}Specifies the blob storage event type that needs to be processed. Possible
 Values are `Microsoft.Storage.BlobCreated` and `Microsoft.Storage.BlobRenamed`. Defaults
 to `Microsoft.Storage.BlobCreated`.
-{{% /md %}}</dd>
-    <dt class="property-optional"
+{{% /md %}}</dd><dt class="property-optional"
             title="Optional">
         <span id="location_nodejs">
 <a href="#location_nodejs" style="color: inherit; text-decoration: inherit;">location</a>
@@ -846,8 +806,7 @@ to `Microsoft.Storage.BlobCreated`.
         <span class="property-type">string</span>
     </dt>
     <dd>{{% md %}}The location where the Kusto Database should be created. Changing this forces a new resource to be created.
-{{% /md %}}</dd>
-    <dt class="property-optional"
+{{% /md %}}</dd><dt class="property-optional"
             title="Optional">
         <span id="name_nodejs">
 <a href="#name_nodejs" style="color: inherit; text-decoration: inherit;">name</a>
@@ -856,8 +815,7 @@ to `Microsoft.Storage.BlobCreated`.
         <span class="property-type">string</span>
     </dt>
     <dd>{{% md %}}The name of the Kusto Event Grid Data Connection to create. Changing this forces a new resource to be created.
-{{% /md %}}</dd>
-    <dt class="property-optional"
+{{% /md %}}</dd><dt class="property-optional"
             title="Optional">
         <span id="skipfirstrecord_nodejs">
 <a href="#skipfirstrecord_nodejs" style="color: inherit; text-decoration: inherit;">skip<wbr>First<wbr>Record</a>
@@ -866,14 +824,11 @@ to `Microsoft.Storage.BlobCreated`.
         <span class="property-type">boolean</span>
     </dt>
     <dd>{{% md %}}is the first record of every file ignored? Defaults to `false`.
-{{% /md %}}</dd>
-</dl>
+{{% /md %}}</dd></dl>
 {{% /choosable %}}
 
 {{% choosable language python %}}
-<dl class="resources-properties">
-
-    <dt class="property-required"
+<dl class="resources-properties"><dt class="property-required"
             title="Required">
         <span id="cluster_name_python">
 <a href="#cluster_name_python" style="color: inherit; text-decoration: inherit;">cluster_<wbr>name</a>
@@ -882,8 +837,7 @@ to `Microsoft.Storage.BlobCreated`.
         <span class="property-type">str</span>
     </dt>
     <dd>{{% md %}}Specifies the name of the Kusto Cluster this data connection will be added to. Changing this forces a new resource to be created.
-{{% /md %}}</dd>
-    <dt class="property-required"
+{{% /md %}}</dd><dt class="property-required"
             title="Required">
         <span id="database_name_python">
 <a href="#database_name_python" style="color: inherit; text-decoration: inherit;">database_<wbr>name</a>
@@ -892,8 +846,7 @@ to `Microsoft.Storage.BlobCreated`.
         <span class="property-type">str</span>
     </dt>
     <dd>{{% md %}}Specifies the name of the Kusto Database this data connection will be added to. Changing this forces a new resource to be created.
-{{% /md %}}</dd>
-    <dt class="property-required"
+{{% /md %}}</dd><dt class="property-required"
             title="Required">
         <span id="eventhub_consumer_group_name_python">
 <a href="#eventhub_consumer_group_name_python" style="color: inherit; text-decoration: inherit;">eventhub_<wbr>consumer_<wbr>group_<wbr>name</a>
@@ -903,8 +856,7 @@ to `Microsoft.Storage.BlobCreated`.
     </dt>
     <dd>{{% md %}}Specifies the Event Hub consumer group this data connection will use for
 ingestion. Changing this forces a new resource to be created.
-{{% /md %}}</dd>
-    <dt class="property-required"
+{{% /md %}}</dd><dt class="property-required"
             title="Required">
         <span id="eventhub_id_python">
 <a href="#eventhub_id_python" style="color: inherit; text-decoration: inherit;">eventhub_<wbr>id</a>
@@ -914,8 +866,7 @@ ingestion. Changing this forces a new resource to be created.
     </dt>
     <dd>{{% md %}}Specifies the resource id of the Event Hub this data connection will use for ingestion.
 Changing this forces a new resource to be created.
-{{% /md %}}</dd>
-    <dt class="property-required"
+{{% /md %}}</dd><dt class="property-required"
             title="Required">
         <span id="resource_group_name_python">
 <a href="#resource_group_name_python" style="color: inherit; text-decoration: inherit;">resource_<wbr>group_<wbr>name</a>
@@ -924,8 +875,7 @@ Changing this forces a new resource to be created.
         <span class="property-type">str</span>
     </dt>
     <dd>{{% md %}}Specifies the Resource Group where the Kusto Database should exist. Changing this forces a new resource to be created.
-{{% /md %}}</dd>
-    <dt class="property-required"
+{{% /md %}}</dd><dt class="property-required"
             title="Required">
         <span id="storage_account_id_python">
 <a href="#storage_account_id_python" style="color: inherit; text-decoration: inherit;">storage_<wbr>account_<wbr>id</a>
@@ -934,8 +884,7 @@ Changing this forces a new resource to be created.
         <span class="property-type">str</span>
     </dt>
     <dd>{{% md %}}Specifies the resource id of the Storage Account this data connection will use for ingestion. Changing this forces a new resource to be created.
-{{% /md %}}</dd>
-    <dt class="property-optional"
+{{% /md %}}</dd><dt class="property-optional"
             title="Optional">
         <span id="blob_storage_event_type_python">
 <a href="#blob_storage_event_type_python" style="color: inherit; text-decoration: inherit;">blob_<wbr>storage_<wbr>event_<wbr>type</a>
@@ -946,8 +895,7 @@ Changing this forces a new resource to be created.
     <dd>{{% md %}}Specifies the blob storage event type that needs to be processed. Possible
 Values are `Microsoft.Storage.BlobCreated` and `Microsoft.Storage.BlobRenamed`. Defaults
 to `Microsoft.Storage.BlobCreated`.
-{{% /md %}}</dd>
-    <dt class="property-optional"
+{{% /md %}}</dd><dt class="property-optional"
             title="Optional">
         <span id="location_python">
 <a href="#location_python" style="color: inherit; text-decoration: inherit;">location</a>
@@ -956,8 +904,7 @@ to `Microsoft.Storage.BlobCreated`.
         <span class="property-type">str</span>
     </dt>
     <dd>{{% md %}}The location where the Kusto Database should be created. Changing this forces a new resource to be created.
-{{% /md %}}</dd>
-    <dt class="property-optional"
+{{% /md %}}</dd><dt class="property-optional"
             title="Optional">
         <span id="name_python">
 <a href="#name_python" style="color: inherit; text-decoration: inherit;">name</a>
@@ -966,8 +913,7 @@ to `Microsoft.Storage.BlobCreated`.
         <span class="property-type">str</span>
     </dt>
     <dd>{{% md %}}The name of the Kusto Event Grid Data Connection to create. Changing this forces a new resource to be created.
-{{% /md %}}</dd>
-    <dt class="property-optional"
+{{% /md %}}</dd><dt class="property-optional"
             title="Optional">
         <span id="skip_first_record_python">
 <a href="#skip_first_record_python" style="color: inherit; text-decoration: inherit;">skip_<wbr>first_<wbr>record</a>
@@ -976,8 +922,7 @@ to `Microsoft.Storage.BlobCreated`.
         <span class="property-type">bool</span>
     </dt>
     <dd>{{% md %}}is the first record of every file ignored? Defaults to `false`.
-{{% /md %}}</dd>
-</dl>
+{{% /md %}}</dd></dl>
 {{% /choosable %}}
 
 
@@ -988,9 +933,7 @@ All [input](#inputs) properties are implicitly available as output properties. A
 
 
 {{% choosable language csharp %}}
-<dl class="resources-properties">
-
-    <dt class="property-"
+<dl class="resources-properties"><dt class="property-"
             title="">
         <span id="id_csharp">
 <a href="#id_csharp" style="color: inherit; text-decoration: inherit;">Id</a>
@@ -998,14 +941,11 @@ All [input](#inputs) properties are implicitly available as output properties. A
         <span class="property-indicator"></span>
         <span class="property-type">string</span>
     </dt>
-    <dd>{{% md %}}The provider-assigned unique ID for this managed resource.{{% /md %}}</dd>
-</dl>
+    <dd>{{% md %}}The provider-assigned unique ID for this managed resource.{{% /md %}}</dd></dl>
 {{% /choosable %}}
 
 {{% choosable language go %}}
-<dl class="resources-properties">
-
-    <dt class="property-"
+<dl class="resources-properties"><dt class="property-"
             title="">
         <span id="id_go">
 <a href="#id_go" style="color: inherit; text-decoration: inherit;">Id</a>
@@ -1013,14 +953,11 @@ All [input](#inputs) properties are implicitly available as output properties. A
         <span class="property-indicator"></span>
         <span class="property-type">string</span>
     </dt>
-    <dd>{{% md %}}The provider-assigned unique ID for this managed resource.{{% /md %}}</dd>
-</dl>
+    <dd>{{% md %}}The provider-assigned unique ID for this managed resource.{{% /md %}}</dd></dl>
 {{% /choosable %}}
 
 {{% choosable language nodejs %}}
-<dl class="resources-properties">
-
-    <dt class="property-"
+<dl class="resources-properties"><dt class="property-"
             title="">
         <span id="id_nodejs">
 <a href="#id_nodejs" style="color: inherit; text-decoration: inherit;">id</a>
@@ -1028,14 +965,11 @@ All [input](#inputs) properties are implicitly available as output properties. A
         <span class="property-indicator"></span>
         <span class="property-type">string</span>
     </dt>
-    <dd>{{% md %}}The provider-assigned unique ID for this managed resource.{{% /md %}}</dd>
-</dl>
+    <dd>{{% md %}}The provider-assigned unique ID for this managed resource.{{% /md %}}</dd></dl>
 {{% /choosable %}}
 
 {{% choosable language python %}}
-<dl class="resources-properties">
-
-    <dt class="property-"
+<dl class="resources-properties"><dt class="property-"
             title="">
         <span id="id_python">
 <a href="#id_python" style="color: inherit; text-decoration: inherit;">id</a>
@@ -1043,8 +977,7 @@ All [input](#inputs) properties are implicitly available as output properties. A
         <span class="property-indicator"></span>
         <span class="property-type">str</span>
     </dt>
-    <dd>{{% md %}}The provider-assigned unique ID for this managed resource.{{% /md %}}</dd>
-</dl>
+    <dd>{{% md %}}The provider-assigned unique ID for this managed resource.{{% /md %}}</dd></dl>
 {{% /choosable %}}
 
 
@@ -1171,9 +1104,7 @@ The following state arguments are supported:
 
 
 {{% choosable language csharp %}}
-<dl class="resources-properties">
-
-    <dt class="property-optional"
+<dl class="resources-properties"><dt class="property-optional"
             title="Optional">
         <span id="state_blobstorageeventtype_csharp">
 <a href="#state_blobstorageeventtype_csharp" style="color: inherit; text-decoration: inherit;">Blob<wbr>Storage<wbr>Event<wbr>Type</a>
@@ -1184,8 +1115,7 @@ The following state arguments are supported:
     <dd>{{% md %}}Specifies the blob storage event type that needs to be processed. Possible
 Values are `Microsoft.Storage.BlobCreated` and `Microsoft.Storage.BlobRenamed`. Defaults
 to `Microsoft.Storage.BlobCreated`.
-{{% /md %}}</dd>
-    <dt class="property-optional"
+{{% /md %}}</dd><dt class="property-optional"
             title="Optional">
         <span id="state_clustername_csharp">
 <a href="#state_clustername_csharp" style="color: inherit; text-decoration: inherit;">Cluster<wbr>Name</a>
@@ -1194,8 +1124,7 @@ to `Microsoft.Storage.BlobCreated`.
         <span class="property-type">string</span>
     </dt>
     <dd>{{% md %}}Specifies the name of the Kusto Cluster this data connection will be added to. Changing this forces a new resource to be created.
-{{% /md %}}</dd>
-    <dt class="property-optional"
+{{% /md %}}</dd><dt class="property-optional"
             title="Optional">
         <span id="state_databasename_csharp">
 <a href="#state_databasename_csharp" style="color: inherit; text-decoration: inherit;">Database<wbr>Name</a>
@@ -1204,8 +1133,7 @@ to `Microsoft.Storage.BlobCreated`.
         <span class="property-type">string</span>
     </dt>
     <dd>{{% md %}}Specifies the name of the Kusto Database this data connection will be added to. Changing this forces a new resource to be created.
-{{% /md %}}</dd>
-    <dt class="property-optional"
+{{% /md %}}</dd><dt class="property-optional"
             title="Optional">
         <span id="state_eventhubconsumergroupname_csharp">
 <a href="#state_eventhubconsumergroupname_csharp" style="color: inherit; text-decoration: inherit;">Eventhub<wbr>Consumer<wbr>Group<wbr>Name</a>
@@ -1215,8 +1143,7 @@ to `Microsoft.Storage.BlobCreated`.
     </dt>
     <dd>{{% md %}}Specifies the Event Hub consumer group this data connection will use for
 ingestion. Changing this forces a new resource to be created.
-{{% /md %}}</dd>
-    <dt class="property-optional"
+{{% /md %}}</dd><dt class="property-optional"
             title="Optional">
         <span id="state_eventhubid_csharp">
 <a href="#state_eventhubid_csharp" style="color: inherit; text-decoration: inherit;">Eventhub<wbr>Id</a>
@@ -1226,8 +1153,7 @@ ingestion. Changing this forces a new resource to be created.
     </dt>
     <dd>{{% md %}}Specifies the resource id of the Event Hub this data connection will use for ingestion.
 Changing this forces a new resource to be created.
-{{% /md %}}</dd>
-    <dt class="property-optional"
+{{% /md %}}</dd><dt class="property-optional"
             title="Optional">
         <span id="state_location_csharp">
 <a href="#state_location_csharp" style="color: inherit; text-decoration: inherit;">Location</a>
@@ -1236,8 +1162,7 @@ Changing this forces a new resource to be created.
         <span class="property-type">string</span>
     </dt>
     <dd>{{% md %}}The location where the Kusto Database should be created. Changing this forces a new resource to be created.
-{{% /md %}}</dd>
-    <dt class="property-optional"
+{{% /md %}}</dd><dt class="property-optional"
             title="Optional">
         <span id="state_name_csharp">
 <a href="#state_name_csharp" style="color: inherit; text-decoration: inherit;">Name</a>
@@ -1246,8 +1171,7 @@ Changing this forces a new resource to be created.
         <span class="property-type">string</span>
     </dt>
     <dd>{{% md %}}The name of the Kusto Event Grid Data Connection to create. Changing this forces a new resource to be created.
-{{% /md %}}</dd>
-    <dt class="property-optional"
+{{% /md %}}</dd><dt class="property-optional"
             title="Optional">
         <span id="state_resourcegroupname_csharp">
 <a href="#state_resourcegroupname_csharp" style="color: inherit; text-decoration: inherit;">Resource<wbr>Group<wbr>Name</a>
@@ -1256,8 +1180,7 @@ Changing this forces a new resource to be created.
         <span class="property-type">string</span>
     </dt>
     <dd>{{% md %}}Specifies the Resource Group where the Kusto Database should exist. Changing this forces a new resource to be created.
-{{% /md %}}</dd>
-    <dt class="property-optional"
+{{% /md %}}</dd><dt class="property-optional"
             title="Optional">
         <span id="state_skipfirstrecord_csharp">
 <a href="#state_skipfirstrecord_csharp" style="color: inherit; text-decoration: inherit;">Skip<wbr>First<wbr>Record</a>
@@ -1266,8 +1189,7 @@ Changing this forces a new resource to be created.
         <span class="property-type">bool</span>
     </dt>
     <dd>{{% md %}}is the first record of every file ignored? Defaults to `false`.
-{{% /md %}}</dd>
-    <dt class="property-optional"
+{{% /md %}}</dd><dt class="property-optional"
             title="Optional">
         <span id="state_storageaccountid_csharp">
 <a href="#state_storageaccountid_csharp" style="color: inherit; text-decoration: inherit;">Storage<wbr>Account<wbr>Id</a>
@@ -1276,14 +1198,11 @@ Changing this forces a new resource to be created.
         <span class="property-type">string</span>
     </dt>
     <dd>{{% md %}}Specifies the resource id of the Storage Account this data connection will use for ingestion. Changing this forces a new resource to be created.
-{{% /md %}}</dd>
-</dl>
+{{% /md %}}</dd></dl>
 {{% /choosable %}}
 
 {{% choosable language go %}}
-<dl class="resources-properties">
-
-    <dt class="property-optional"
+<dl class="resources-properties"><dt class="property-optional"
             title="Optional">
         <span id="state_blobstorageeventtype_go">
 <a href="#state_blobstorageeventtype_go" style="color: inherit; text-decoration: inherit;">Blob<wbr>Storage<wbr>Event<wbr>Type</a>
@@ -1294,8 +1213,7 @@ Changing this forces a new resource to be created.
     <dd>{{% md %}}Specifies the blob storage event type that needs to be processed. Possible
 Values are `Microsoft.Storage.BlobCreated` and `Microsoft.Storage.BlobRenamed`. Defaults
 to `Microsoft.Storage.BlobCreated`.
-{{% /md %}}</dd>
-    <dt class="property-optional"
+{{% /md %}}</dd><dt class="property-optional"
             title="Optional">
         <span id="state_clustername_go">
 <a href="#state_clustername_go" style="color: inherit; text-decoration: inherit;">Cluster<wbr>Name</a>
@@ -1304,8 +1222,7 @@ to `Microsoft.Storage.BlobCreated`.
         <span class="property-type">string</span>
     </dt>
     <dd>{{% md %}}Specifies the name of the Kusto Cluster this data connection will be added to. Changing this forces a new resource to be created.
-{{% /md %}}</dd>
-    <dt class="property-optional"
+{{% /md %}}</dd><dt class="property-optional"
             title="Optional">
         <span id="state_databasename_go">
 <a href="#state_databasename_go" style="color: inherit; text-decoration: inherit;">Database<wbr>Name</a>
@@ -1314,8 +1231,7 @@ to `Microsoft.Storage.BlobCreated`.
         <span class="property-type">string</span>
     </dt>
     <dd>{{% md %}}Specifies the name of the Kusto Database this data connection will be added to. Changing this forces a new resource to be created.
-{{% /md %}}</dd>
-    <dt class="property-optional"
+{{% /md %}}</dd><dt class="property-optional"
             title="Optional">
         <span id="state_eventhubconsumergroupname_go">
 <a href="#state_eventhubconsumergroupname_go" style="color: inherit; text-decoration: inherit;">Eventhub<wbr>Consumer<wbr>Group<wbr>Name</a>
@@ -1325,8 +1241,7 @@ to `Microsoft.Storage.BlobCreated`.
     </dt>
     <dd>{{% md %}}Specifies the Event Hub consumer group this data connection will use for
 ingestion. Changing this forces a new resource to be created.
-{{% /md %}}</dd>
-    <dt class="property-optional"
+{{% /md %}}</dd><dt class="property-optional"
             title="Optional">
         <span id="state_eventhubid_go">
 <a href="#state_eventhubid_go" style="color: inherit; text-decoration: inherit;">Eventhub<wbr>Id</a>
@@ -1336,8 +1251,7 @@ ingestion. Changing this forces a new resource to be created.
     </dt>
     <dd>{{% md %}}Specifies the resource id of the Event Hub this data connection will use for ingestion.
 Changing this forces a new resource to be created.
-{{% /md %}}</dd>
-    <dt class="property-optional"
+{{% /md %}}</dd><dt class="property-optional"
             title="Optional">
         <span id="state_location_go">
 <a href="#state_location_go" style="color: inherit; text-decoration: inherit;">Location</a>
@@ -1346,8 +1260,7 @@ Changing this forces a new resource to be created.
         <span class="property-type">string</span>
     </dt>
     <dd>{{% md %}}The location where the Kusto Database should be created. Changing this forces a new resource to be created.
-{{% /md %}}</dd>
-    <dt class="property-optional"
+{{% /md %}}</dd><dt class="property-optional"
             title="Optional">
         <span id="state_name_go">
 <a href="#state_name_go" style="color: inherit; text-decoration: inherit;">Name</a>
@@ -1356,8 +1269,7 @@ Changing this forces a new resource to be created.
         <span class="property-type">string</span>
     </dt>
     <dd>{{% md %}}The name of the Kusto Event Grid Data Connection to create. Changing this forces a new resource to be created.
-{{% /md %}}</dd>
-    <dt class="property-optional"
+{{% /md %}}</dd><dt class="property-optional"
             title="Optional">
         <span id="state_resourcegroupname_go">
 <a href="#state_resourcegroupname_go" style="color: inherit; text-decoration: inherit;">Resource<wbr>Group<wbr>Name</a>
@@ -1366,8 +1278,7 @@ Changing this forces a new resource to be created.
         <span class="property-type">string</span>
     </dt>
     <dd>{{% md %}}Specifies the Resource Group where the Kusto Database should exist. Changing this forces a new resource to be created.
-{{% /md %}}</dd>
-    <dt class="property-optional"
+{{% /md %}}</dd><dt class="property-optional"
             title="Optional">
         <span id="state_skipfirstrecord_go">
 <a href="#state_skipfirstrecord_go" style="color: inherit; text-decoration: inherit;">Skip<wbr>First<wbr>Record</a>
@@ -1376,8 +1287,7 @@ Changing this forces a new resource to be created.
         <span class="property-type">bool</span>
     </dt>
     <dd>{{% md %}}is the first record of every file ignored? Defaults to `false`.
-{{% /md %}}</dd>
-    <dt class="property-optional"
+{{% /md %}}</dd><dt class="property-optional"
             title="Optional">
         <span id="state_storageaccountid_go">
 <a href="#state_storageaccountid_go" style="color: inherit; text-decoration: inherit;">Storage<wbr>Account<wbr>Id</a>
@@ -1386,14 +1296,11 @@ Changing this forces a new resource to be created.
         <span class="property-type">string</span>
     </dt>
     <dd>{{% md %}}Specifies the resource id of the Storage Account this data connection will use for ingestion. Changing this forces a new resource to be created.
-{{% /md %}}</dd>
-</dl>
+{{% /md %}}</dd></dl>
 {{% /choosable %}}
 
 {{% choosable language nodejs %}}
-<dl class="resources-properties">
-
-    <dt class="property-optional"
+<dl class="resources-properties"><dt class="property-optional"
             title="Optional">
         <span id="state_blobstorageeventtype_nodejs">
 <a href="#state_blobstorageeventtype_nodejs" style="color: inherit; text-decoration: inherit;">blob<wbr>Storage<wbr>Event<wbr>Type</a>
@@ -1404,8 +1311,7 @@ Changing this forces a new resource to be created.
     <dd>{{% md %}}Specifies the blob storage event type that needs to be processed. Possible
 Values are `Microsoft.Storage.BlobCreated` and `Microsoft.Storage.BlobRenamed`. Defaults
 to `Microsoft.Storage.BlobCreated`.
-{{% /md %}}</dd>
-    <dt class="property-optional"
+{{% /md %}}</dd><dt class="property-optional"
             title="Optional">
         <span id="state_clustername_nodejs">
 <a href="#state_clustername_nodejs" style="color: inherit; text-decoration: inherit;">cluster<wbr>Name</a>
@@ -1414,8 +1320,7 @@ to `Microsoft.Storage.BlobCreated`.
         <span class="property-type">string</span>
     </dt>
     <dd>{{% md %}}Specifies the name of the Kusto Cluster this data connection will be added to. Changing this forces a new resource to be created.
-{{% /md %}}</dd>
-    <dt class="property-optional"
+{{% /md %}}</dd><dt class="property-optional"
             title="Optional">
         <span id="state_databasename_nodejs">
 <a href="#state_databasename_nodejs" style="color: inherit; text-decoration: inherit;">database<wbr>Name</a>
@@ -1424,8 +1329,7 @@ to `Microsoft.Storage.BlobCreated`.
         <span class="property-type">string</span>
     </dt>
     <dd>{{% md %}}Specifies the name of the Kusto Database this data connection will be added to. Changing this forces a new resource to be created.
-{{% /md %}}</dd>
-    <dt class="property-optional"
+{{% /md %}}</dd><dt class="property-optional"
             title="Optional">
         <span id="state_eventhubconsumergroupname_nodejs">
 <a href="#state_eventhubconsumergroupname_nodejs" style="color: inherit; text-decoration: inherit;">eventhub<wbr>Consumer<wbr>Group<wbr>Name</a>
@@ -1435,8 +1339,7 @@ to `Microsoft.Storage.BlobCreated`.
     </dt>
     <dd>{{% md %}}Specifies the Event Hub consumer group this data connection will use for
 ingestion. Changing this forces a new resource to be created.
-{{% /md %}}</dd>
-    <dt class="property-optional"
+{{% /md %}}</dd><dt class="property-optional"
             title="Optional">
         <span id="state_eventhubid_nodejs">
 <a href="#state_eventhubid_nodejs" style="color: inherit; text-decoration: inherit;">eventhub<wbr>Id</a>
@@ -1446,8 +1349,7 @@ ingestion. Changing this forces a new resource to be created.
     </dt>
     <dd>{{% md %}}Specifies the resource id of the Event Hub this data connection will use for ingestion.
 Changing this forces a new resource to be created.
-{{% /md %}}</dd>
-    <dt class="property-optional"
+{{% /md %}}</dd><dt class="property-optional"
             title="Optional">
         <span id="state_location_nodejs">
 <a href="#state_location_nodejs" style="color: inherit; text-decoration: inherit;">location</a>
@@ -1456,8 +1358,7 @@ Changing this forces a new resource to be created.
         <span class="property-type">string</span>
     </dt>
     <dd>{{% md %}}The location where the Kusto Database should be created. Changing this forces a new resource to be created.
-{{% /md %}}</dd>
-    <dt class="property-optional"
+{{% /md %}}</dd><dt class="property-optional"
             title="Optional">
         <span id="state_name_nodejs">
 <a href="#state_name_nodejs" style="color: inherit; text-decoration: inherit;">name</a>
@@ -1466,8 +1367,7 @@ Changing this forces a new resource to be created.
         <span class="property-type">string</span>
     </dt>
     <dd>{{% md %}}The name of the Kusto Event Grid Data Connection to create. Changing this forces a new resource to be created.
-{{% /md %}}</dd>
-    <dt class="property-optional"
+{{% /md %}}</dd><dt class="property-optional"
             title="Optional">
         <span id="state_resourcegroupname_nodejs">
 <a href="#state_resourcegroupname_nodejs" style="color: inherit; text-decoration: inherit;">resource<wbr>Group<wbr>Name</a>
@@ -1476,8 +1376,7 @@ Changing this forces a new resource to be created.
         <span class="property-type">string</span>
     </dt>
     <dd>{{% md %}}Specifies the Resource Group where the Kusto Database should exist. Changing this forces a new resource to be created.
-{{% /md %}}</dd>
-    <dt class="property-optional"
+{{% /md %}}</dd><dt class="property-optional"
             title="Optional">
         <span id="state_skipfirstrecord_nodejs">
 <a href="#state_skipfirstrecord_nodejs" style="color: inherit; text-decoration: inherit;">skip<wbr>First<wbr>Record</a>
@@ -1486,8 +1385,7 @@ Changing this forces a new resource to be created.
         <span class="property-type">boolean</span>
     </dt>
     <dd>{{% md %}}is the first record of every file ignored? Defaults to `false`.
-{{% /md %}}</dd>
-    <dt class="property-optional"
+{{% /md %}}</dd><dt class="property-optional"
             title="Optional">
         <span id="state_storageaccountid_nodejs">
 <a href="#state_storageaccountid_nodejs" style="color: inherit; text-decoration: inherit;">storage<wbr>Account<wbr>Id</a>
@@ -1496,14 +1394,11 @@ Changing this forces a new resource to be created.
         <span class="property-type">string</span>
     </dt>
     <dd>{{% md %}}Specifies the resource id of the Storage Account this data connection will use for ingestion. Changing this forces a new resource to be created.
-{{% /md %}}</dd>
-</dl>
+{{% /md %}}</dd></dl>
 {{% /choosable %}}
 
 {{% choosable language python %}}
-<dl class="resources-properties">
-
-    <dt class="property-optional"
+<dl class="resources-properties"><dt class="property-optional"
             title="Optional">
         <span id="state_blob_storage_event_type_python">
 <a href="#state_blob_storage_event_type_python" style="color: inherit; text-decoration: inherit;">blob_<wbr>storage_<wbr>event_<wbr>type</a>
@@ -1514,8 +1409,7 @@ Changing this forces a new resource to be created.
     <dd>{{% md %}}Specifies the blob storage event type that needs to be processed. Possible
 Values are `Microsoft.Storage.BlobCreated` and `Microsoft.Storage.BlobRenamed`. Defaults
 to `Microsoft.Storage.BlobCreated`.
-{{% /md %}}</dd>
-    <dt class="property-optional"
+{{% /md %}}</dd><dt class="property-optional"
             title="Optional">
         <span id="state_cluster_name_python">
 <a href="#state_cluster_name_python" style="color: inherit; text-decoration: inherit;">cluster_<wbr>name</a>
@@ -1524,8 +1418,7 @@ to `Microsoft.Storage.BlobCreated`.
         <span class="property-type">str</span>
     </dt>
     <dd>{{% md %}}Specifies the name of the Kusto Cluster this data connection will be added to. Changing this forces a new resource to be created.
-{{% /md %}}</dd>
-    <dt class="property-optional"
+{{% /md %}}</dd><dt class="property-optional"
             title="Optional">
         <span id="state_database_name_python">
 <a href="#state_database_name_python" style="color: inherit; text-decoration: inherit;">database_<wbr>name</a>
@@ -1534,8 +1427,7 @@ to `Microsoft.Storage.BlobCreated`.
         <span class="property-type">str</span>
     </dt>
     <dd>{{% md %}}Specifies the name of the Kusto Database this data connection will be added to. Changing this forces a new resource to be created.
-{{% /md %}}</dd>
-    <dt class="property-optional"
+{{% /md %}}</dd><dt class="property-optional"
             title="Optional">
         <span id="state_eventhub_consumer_group_name_python">
 <a href="#state_eventhub_consumer_group_name_python" style="color: inherit; text-decoration: inherit;">eventhub_<wbr>consumer_<wbr>group_<wbr>name</a>
@@ -1545,8 +1437,7 @@ to `Microsoft.Storage.BlobCreated`.
     </dt>
     <dd>{{% md %}}Specifies the Event Hub consumer group this data connection will use for
 ingestion. Changing this forces a new resource to be created.
-{{% /md %}}</dd>
-    <dt class="property-optional"
+{{% /md %}}</dd><dt class="property-optional"
             title="Optional">
         <span id="state_eventhub_id_python">
 <a href="#state_eventhub_id_python" style="color: inherit; text-decoration: inherit;">eventhub_<wbr>id</a>
@@ -1556,8 +1447,7 @@ ingestion. Changing this forces a new resource to be created.
     </dt>
     <dd>{{% md %}}Specifies the resource id of the Event Hub this data connection will use for ingestion.
 Changing this forces a new resource to be created.
-{{% /md %}}</dd>
-    <dt class="property-optional"
+{{% /md %}}</dd><dt class="property-optional"
             title="Optional">
         <span id="state_location_python">
 <a href="#state_location_python" style="color: inherit; text-decoration: inherit;">location</a>
@@ -1566,8 +1456,7 @@ Changing this forces a new resource to be created.
         <span class="property-type">str</span>
     </dt>
     <dd>{{% md %}}The location where the Kusto Database should be created. Changing this forces a new resource to be created.
-{{% /md %}}</dd>
-    <dt class="property-optional"
+{{% /md %}}</dd><dt class="property-optional"
             title="Optional">
         <span id="state_name_python">
 <a href="#state_name_python" style="color: inherit; text-decoration: inherit;">name</a>
@@ -1576,8 +1465,7 @@ Changing this forces a new resource to be created.
         <span class="property-type">str</span>
     </dt>
     <dd>{{% md %}}The name of the Kusto Event Grid Data Connection to create. Changing this forces a new resource to be created.
-{{% /md %}}</dd>
-    <dt class="property-optional"
+{{% /md %}}</dd><dt class="property-optional"
             title="Optional">
         <span id="state_resource_group_name_python">
 <a href="#state_resource_group_name_python" style="color: inherit; text-decoration: inherit;">resource_<wbr>group_<wbr>name</a>
@@ -1586,8 +1474,7 @@ Changing this forces a new resource to be created.
         <span class="property-type">str</span>
     </dt>
     <dd>{{% md %}}Specifies the Resource Group where the Kusto Database should exist. Changing this forces a new resource to be created.
-{{% /md %}}</dd>
-    <dt class="property-optional"
+{{% /md %}}</dd><dt class="property-optional"
             title="Optional">
         <span id="state_skip_first_record_python">
 <a href="#state_skip_first_record_python" style="color: inherit; text-decoration: inherit;">skip_<wbr>first_<wbr>record</a>
@@ -1596,8 +1483,7 @@ Changing this forces a new resource to be created.
         <span class="property-type">bool</span>
     </dt>
     <dd>{{% md %}}is the first record of every file ignored? Defaults to `false`.
-{{% /md %}}</dd>
-    <dt class="property-optional"
+{{% /md %}}</dd><dt class="property-optional"
             title="Optional">
         <span id="state_storage_account_id_python">
 <a href="#state_storage_account_id_python" style="color: inherit; text-decoration: inherit;">storage_<wbr>account_<wbr>id</a>
@@ -1606,8 +1492,7 @@ Changing this forces a new resource to be created.
         <span class="property-type">str</span>
     </dt>
     <dd>{{% md %}}Specifies the resource id of the Storage Account this data connection will use for ingestion. Changing this forces a new resource to be created.
-{{% /md %}}</dd>
-</dl>
+{{% /md %}}</dd></dl>
 {{% /choosable %}}
 
 
@@ -1633,6 +1518,6 @@ Kusto Event Grid Data Connections can be imported using the `resource id`, e.g.
 	<dt>License</dt>
 	<dd>Apache-2.0</dd>
 	<dt>Notes</dt>
-	<dd>This Pulumi package is based on the [`azurerm` Terraform Provider](https://github.com/terraform-providers/terraform-provider-azurerm).</dd>
+	<dd>{{% md %}}This Pulumi package is based on the [`azurerm` Terraform Provider](https://github.com/terraform-providers/terraform-provider-azurerm).{{% /md %}}</dd>
 </dl>
 

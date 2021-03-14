@@ -35,9 +35,7 @@ meta_desc: "Documentation for the tls.SelfSignedCert resource with examples, inp
 
 {{% choosable language nodejs %}}
 
-<dl class="resources-properties">
-  
-    <dt
+<dl class="resources-properties"><dt
         class="property-required" title="Required">
         <span>name</span>
         <span class="property-indicator"></span>
@@ -45,9 +43,7 @@ meta_desc: "Documentation for the tls.SelfSignedCert resource with examples, inp
     </dt>
     <dd>
       The unique name of the resource.
-    </dd>
-  
-    <dt
+    </dd><dt
         class="property-required" title="Required">
         <span>args</span>
         <span class="property-indicator"></span>
@@ -55,9 +51,7 @@ meta_desc: "Documentation for the tls.SelfSignedCert resource with examples, inp
     </dt>
     <dd>
       The arguments to resource properties.
-    </dd>
-  
-    <dt
+    </dd><dt
         class="property-optional" title="Optional">
         <span>opts</span>
         <span class="property-indicator"></span>
@@ -65,10 +59,7 @@ meta_desc: "Documentation for the tls.SelfSignedCert resource with examples, inp
     </dt>
     <dd>
       Bag of options to control resource&#39;s behavior.
-    </dd>
-  
-
-</dl>
+    </dd></dl>
 
 {{% /choosable %}}
 
@@ -94,9 +85,7 @@ meta_desc: "Documentation for the tls.SelfSignedCert resource with examples, inp
 
 {{% choosable language go %}}
 
-<dl class="resources-properties">
-  
-    <dt
+<dl class="resources-properties"><dt
         class="property-optional" title="Optional">
         <span>ctx</span>
         <span class="property-indicator"></span>
@@ -104,9 +93,7 @@ meta_desc: "Documentation for the tls.SelfSignedCert resource with examples, inp
     </dt>
     <dd>
       Context object for the current deployment.
-    </dd>
-  
-    <dt
+    </dd><dt
         class="property-required" title="Required">
         <span>name</span>
         <span class="property-indicator"></span>
@@ -114,9 +101,7 @@ meta_desc: "Documentation for the tls.SelfSignedCert resource with examples, inp
     </dt>
     <dd>
       The unique name of the resource.
-    </dd>
-  
-    <dt
+    </dd><dt
         class="property-required" title="Required">
         <span>args</span>
         <span class="property-indicator"></span>
@@ -124,9 +109,7 @@ meta_desc: "Documentation for the tls.SelfSignedCert resource with examples, inp
     </dt>
     <dd>
       The arguments to resource properties.
-    </dd>
-  
-    <dt
+    </dd><dt
         class="property-optional" title="Optional">
         <span>opts</span>
         <span class="property-indicator"></span>
@@ -134,18 +117,13 @@ meta_desc: "Documentation for the tls.SelfSignedCert resource with examples, inp
     </dt>
     <dd>
       Bag of options to control resource&#39;s behavior.
-    </dd>
-  
-
-</dl>
+    </dd></dl>
 
 {{% /choosable %}}
 
 {{% choosable language csharp %}}
 
-<dl class="resources-properties">
-  
-    <dt
+<dl class="resources-properties"><dt
         class="property-required" title="Required">
         <span>name</span>
         <span class="property-indicator"></span>
@@ -153,9 +131,7 @@ meta_desc: "Documentation for the tls.SelfSignedCert resource with examples, inp
     </dt>
     <dd>
       The unique name of the resource.
-    </dd>
-  
-    <dt
+    </dd><dt
         class="property-required" title="Required">
         <span>args</span>
         <span class="property-indicator"></span>
@@ -163,9 +139,7 @@ meta_desc: "Documentation for the tls.SelfSignedCert resource with examples, inp
     </dt>
     <dd>
       The arguments to resource properties.
-    </dd>
-  
-    <dt
+    </dd><dt
         class="property-optional" title="Optional">
         <span>opts</span>
         <span class="property-indicator"></span>
@@ -173,10 +147,7 @@ meta_desc: "Documentation for the tls.SelfSignedCert resource with examples, inp
     </dt>
     <dd>
       Bag of options to control resource&#39;s behavior.
-    </dd>
-  
-
-</dl>
+    </dd></dl>
 
 {{% /choosable %}}
 
@@ -191,9 +162,7 @@ The SelfSignedCert resource accepts the following [input]({{< relref "/docs/intr
 
 
 {{% choosable language csharp %}}
-<dl class="resources-properties">
-
-    <dt class="property-required"
+<dl class="resources-properties"><dt class="property-required"
             title="Required">
         <span id="alloweduses_csharp">
 <a href="#alloweduses_csharp" style="color: inherit; text-decoration: inherit;">Allowed<wbr>Uses</a>
@@ -203,8 +172,7 @@ The SelfSignedCert resource accepts the following [input]({{< relref "/docs/intr
     </dt>
     <dd>{{% md %}}List of keywords each describing a use that is permitted
 for the issued certificate. The valid keywords are listed below.
-{{% /md %}}</dd>
-    <dt class="property-required"
+{{% /md %}}</dd><dt class="property-required"
             title="Required">
         <span id="keyalgorithm_csharp">
 <a href="#keyalgorithm_csharp" style="color: inherit; text-decoration: inherit;">Key<wbr>Algorithm</a>
@@ -214,8 +182,7 @@ for the issued certificate. The valid keywords are listed below.
     </dt>
     <dd>{{% md %}}The name of the algorithm for the key provided
 in `private_key_pem`.
-{{% /md %}}</dd>
-    <dt class="property-required"
+{{% /md %}}</dd><dt class="property-required"
             title="Required">
         <span id="privatekeypem_csharp">
 <a href="#privatekeypem_csharp" style="color: inherit; text-decoration: inherit;">Private<wbr>Key<wbr>Pem</a>
@@ -224,8 +191,7 @@ in `private_key_pem`.
         <span class="property-type">string</span>
     </dt>
     <dd>{{% md %}}PEM-encoded private key that the certificate will belong to
-{{% /md %}}</dd>
-    <dt class="property-required"
+{{% /md %}}</dd><dt class="property-required"
             title="Required">
         <span id="subjects_csharp">
 <a href="#subjects_csharp" style="color: inherit; text-decoration: inherit;">Subjects</a>
@@ -236,8 +202,7 @@ in `private_key_pem`.
     <dd>{{% md %}}The subject for which a certificate is being requested.
 This is a nested configuration block whose structure matches the
 corresponding block for `tls.CertRequest`.
-{{% /md %}}</dd>
-    <dt class="property-required"
+{{% /md %}}</dd><dt class="property-required"
             title="Required">
         <span id="validityperiodhours_csharp">
 <a href="#validityperiodhours_csharp" style="color: inherit; text-decoration: inherit;">Validity<wbr>Period<wbr>Hours</a>
@@ -247,8 +212,7 @@ corresponding block for `tls.CertRequest`.
     </dt>
     <dd>{{% md %}}The number of hours after initial issuing that the
 certificate will become invalid.
-{{% /md %}}</dd>
-    <dt class="property-optional"
+{{% /md %}}</dd><dt class="property-optional"
             title="Optional">
         <span id="dnsnames_csharp">
 <a href="#dnsnames_csharp" style="color: inherit; text-decoration: inherit;">Dns<wbr>Names</a>
@@ -257,8 +221,7 @@ certificate will become invalid.
         <span class="property-type">List&lt;string&gt;</span>
     </dt>
     <dd>{{% md %}}List of DNS names for which a certificate is being requested.
-{{% /md %}}</dd>
-    <dt class="property-optional"
+{{% /md %}}</dd><dt class="property-optional"
             title="Optional">
         <span id="earlyrenewalhours_csharp">
 <a href="#earlyrenewalhours_csharp" style="color: inherit; text-decoration: inherit;">Early<wbr>Renewal<wbr>Hours</a>
@@ -267,8 +230,7 @@ certificate will become invalid.
         <span class="property-type">int</span>
     </dt>
     <dd>{{% md %}}Number of hours before the certificates expiry when a new certificate will be generated
-{{% /md %}}</dd>
-    <dt class="property-optional"
+{{% /md %}}</dd><dt class="property-optional"
             title="Optional">
         <span id="ipaddresses_csharp">
 <a href="#ipaddresses_csharp" style="color: inherit; text-decoration: inherit;">Ip<wbr>Addresses</a>
@@ -277,8 +239,7 @@ certificate will become invalid.
         <span class="property-type">List&lt;string&gt;</span>
     </dt>
     <dd>{{% md %}}List of IP addresses for which a certificate is being requested.
-{{% /md %}}</dd>
-    <dt class="property-optional"
+{{% /md %}}</dd><dt class="property-optional"
             title="Optional">
         <span id="iscacertificate_csharp">
 <a href="#iscacertificate_csharp" style="color: inherit; text-decoration: inherit;">Is<wbr>Ca<wbr>Certificate</a>
@@ -289,8 +250,7 @@ certificate will become invalid.
     <dd>{{% md %}}Boolean controlling whether the CA flag will be set in the
 generated certificate. Defaults to `false`, meaning that the certificate does not represent
 a certificate authority.
-{{% /md %}}</dd>
-    <dt class="property-optional"
+{{% /md %}}</dd><dt class="property-optional"
             title="Optional">
         <span id="setsubjectkeyid_csharp">
 <a href="#setsubjectkeyid_csharp" style="color: inherit; text-decoration: inherit;">Set<wbr>Subject<wbr>Key<wbr>Id</a>
@@ -301,8 +261,7 @@ a certificate authority.
     <dd>{{% md %}}If `true`, the certificate will include
 the subject key identifier. Defaults to `false`, in which case the subject
 key identifier is not set at all.
-{{% /md %}}</dd>
-    <dt class="property-optional"
+{{% /md %}}</dd><dt class="property-optional"
             title="Optional">
         <span id="uris_csharp">
 <a href="#uris_csharp" style="color: inherit; text-decoration: inherit;">Uris</a>
@@ -311,14 +270,11 @@ key identifier is not set at all.
         <span class="property-type">List&lt;string&gt;</span>
     </dt>
     <dd>{{% md %}}List of URIs for which a certificate is being requested.
-{{% /md %}}</dd>
-</dl>
+{{% /md %}}</dd></dl>
 {{% /choosable %}}
 
 {{% choosable language go %}}
-<dl class="resources-properties">
-
-    <dt class="property-required"
+<dl class="resources-properties"><dt class="property-required"
             title="Required">
         <span id="alloweduses_go">
 <a href="#alloweduses_go" style="color: inherit; text-decoration: inherit;">Allowed<wbr>Uses</a>
@@ -328,8 +284,7 @@ key identifier is not set at all.
     </dt>
     <dd>{{% md %}}List of keywords each describing a use that is permitted
 for the issued certificate. The valid keywords are listed below.
-{{% /md %}}</dd>
-    <dt class="property-required"
+{{% /md %}}</dd><dt class="property-required"
             title="Required">
         <span id="keyalgorithm_go">
 <a href="#keyalgorithm_go" style="color: inherit; text-decoration: inherit;">Key<wbr>Algorithm</a>
@@ -339,8 +294,7 @@ for the issued certificate. The valid keywords are listed below.
     </dt>
     <dd>{{% md %}}The name of the algorithm for the key provided
 in `private_key_pem`.
-{{% /md %}}</dd>
-    <dt class="property-required"
+{{% /md %}}</dd><dt class="property-required"
             title="Required">
         <span id="privatekeypem_go">
 <a href="#privatekeypem_go" style="color: inherit; text-decoration: inherit;">Private<wbr>Key<wbr>Pem</a>
@@ -349,8 +303,7 @@ in `private_key_pem`.
         <span class="property-type">string</span>
     </dt>
     <dd>{{% md %}}PEM-encoded private key that the certificate will belong to
-{{% /md %}}</dd>
-    <dt class="property-required"
+{{% /md %}}</dd><dt class="property-required"
             title="Required">
         <span id="subjects_go">
 <a href="#subjects_go" style="color: inherit; text-decoration: inherit;">Subjects</a>
@@ -361,8 +314,7 @@ in `private_key_pem`.
     <dd>{{% md %}}The subject for which a certificate is being requested.
 This is a nested configuration block whose structure matches the
 corresponding block for `tls.CertRequest`.
-{{% /md %}}</dd>
-    <dt class="property-required"
+{{% /md %}}</dd><dt class="property-required"
             title="Required">
         <span id="validityperiodhours_go">
 <a href="#validityperiodhours_go" style="color: inherit; text-decoration: inherit;">Validity<wbr>Period<wbr>Hours</a>
@@ -372,8 +324,7 @@ corresponding block for `tls.CertRequest`.
     </dt>
     <dd>{{% md %}}The number of hours after initial issuing that the
 certificate will become invalid.
-{{% /md %}}</dd>
-    <dt class="property-optional"
+{{% /md %}}</dd><dt class="property-optional"
             title="Optional">
         <span id="dnsnames_go">
 <a href="#dnsnames_go" style="color: inherit; text-decoration: inherit;">Dns<wbr>Names</a>
@@ -382,8 +333,7 @@ certificate will become invalid.
         <span class="property-type">[]string</span>
     </dt>
     <dd>{{% md %}}List of DNS names for which a certificate is being requested.
-{{% /md %}}</dd>
-    <dt class="property-optional"
+{{% /md %}}</dd><dt class="property-optional"
             title="Optional">
         <span id="earlyrenewalhours_go">
 <a href="#earlyrenewalhours_go" style="color: inherit; text-decoration: inherit;">Early<wbr>Renewal<wbr>Hours</a>
@@ -392,8 +342,7 @@ certificate will become invalid.
         <span class="property-type">int</span>
     </dt>
     <dd>{{% md %}}Number of hours before the certificates expiry when a new certificate will be generated
-{{% /md %}}</dd>
-    <dt class="property-optional"
+{{% /md %}}</dd><dt class="property-optional"
             title="Optional">
         <span id="ipaddresses_go">
 <a href="#ipaddresses_go" style="color: inherit; text-decoration: inherit;">Ip<wbr>Addresses</a>
@@ -402,8 +351,7 @@ certificate will become invalid.
         <span class="property-type">[]string</span>
     </dt>
     <dd>{{% md %}}List of IP addresses for which a certificate is being requested.
-{{% /md %}}</dd>
-    <dt class="property-optional"
+{{% /md %}}</dd><dt class="property-optional"
             title="Optional">
         <span id="iscacertificate_go">
 <a href="#iscacertificate_go" style="color: inherit; text-decoration: inherit;">Is<wbr>Ca<wbr>Certificate</a>
@@ -414,8 +362,7 @@ certificate will become invalid.
     <dd>{{% md %}}Boolean controlling whether the CA flag will be set in the
 generated certificate. Defaults to `false`, meaning that the certificate does not represent
 a certificate authority.
-{{% /md %}}</dd>
-    <dt class="property-optional"
+{{% /md %}}</dd><dt class="property-optional"
             title="Optional">
         <span id="setsubjectkeyid_go">
 <a href="#setsubjectkeyid_go" style="color: inherit; text-decoration: inherit;">Set<wbr>Subject<wbr>Key<wbr>Id</a>
@@ -426,8 +373,7 @@ a certificate authority.
     <dd>{{% md %}}If `true`, the certificate will include
 the subject key identifier. Defaults to `false`, in which case the subject
 key identifier is not set at all.
-{{% /md %}}</dd>
-    <dt class="property-optional"
+{{% /md %}}</dd><dt class="property-optional"
             title="Optional">
         <span id="uris_go">
 <a href="#uris_go" style="color: inherit; text-decoration: inherit;">Uris</a>
@@ -436,14 +382,11 @@ key identifier is not set at all.
         <span class="property-type">[]string</span>
     </dt>
     <dd>{{% md %}}List of URIs for which a certificate is being requested.
-{{% /md %}}</dd>
-</dl>
+{{% /md %}}</dd></dl>
 {{% /choosable %}}
 
 {{% choosable language nodejs %}}
-<dl class="resources-properties">
-
-    <dt class="property-required"
+<dl class="resources-properties"><dt class="property-required"
             title="Required">
         <span id="alloweduses_nodejs">
 <a href="#alloweduses_nodejs" style="color: inherit; text-decoration: inherit;">allowed<wbr>Uses</a>
@@ -453,8 +396,7 @@ key identifier is not set at all.
     </dt>
     <dd>{{% md %}}List of keywords each describing a use that is permitted
 for the issued certificate. The valid keywords are listed below.
-{{% /md %}}</dd>
-    <dt class="property-required"
+{{% /md %}}</dd><dt class="property-required"
             title="Required">
         <span id="keyalgorithm_nodejs">
 <a href="#keyalgorithm_nodejs" style="color: inherit; text-decoration: inherit;">key<wbr>Algorithm</a>
@@ -464,8 +406,7 @@ for the issued certificate. The valid keywords are listed below.
     </dt>
     <dd>{{% md %}}The name of the algorithm for the key provided
 in `private_key_pem`.
-{{% /md %}}</dd>
-    <dt class="property-required"
+{{% /md %}}</dd><dt class="property-required"
             title="Required">
         <span id="privatekeypem_nodejs">
 <a href="#privatekeypem_nodejs" style="color: inherit; text-decoration: inherit;">private<wbr>Key<wbr>Pem</a>
@@ -474,8 +415,7 @@ in `private_key_pem`.
         <span class="property-type">string</span>
     </dt>
     <dd>{{% md %}}PEM-encoded private key that the certificate will belong to
-{{% /md %}}</dd>
-    <dt class="property-required"
+{{% /md %}}</dd><dt class="property-required"
             title="Required">
         <span id="subjects_nodejs">
 <a href="#subjects_nodejs" style="color: inherit; text-decoration: inherit;">subjects</a>
@@ -486,8 +426,7 @@ in `private_key_pem`.
     <dd>{{% md %}}The subject for which a certificate is being requested.
 This is a nested configuration block whose structure matches the
 corresponding block for `tls.CertRequest`.
-{{% /md %}}</dd>
-    <dt class="property-required"
+{{% /md %}}</dd><dt class="property-required"
             title="Required">
         <span id="validityperiodhours_nodejs">
 <a href="#validityperiodhours_nodejs" style="color: inherit; text-decoration: inherit;">validity<wbr>Period<wbr>Hours</a>
@@ -497,8 +436,7 @@ corresponding block for `tls.CertRequest`.
     </dt>
     <dd>{{% md %}}The number of hours after initial issuing that the
 certificate will become invalid.
-{{% /md %}}</dd>
-    <dt class="property-optional"
+{{% /md %}}</dd><dt class="property-optional"
             title="Optional">
         <span id="dnsnames_nodejs">
 <a href="#dnsnames_nodejs" style="color: inherit; text-decoration: inherit;">dns<wbr>Names</a>
@@ -507,8 +445,7 @@ certificate will become invalid.
         <span class="property-type">string[]</span>
     </dt>
     <dd>{{% md %}}List of DNS names for which a certificate is being requested.
-{{% /md %}}</dd>
-    <dt class="property-optional"
+{{% /md %}}</dd><dt class="property-optional"
             title="Optional">
         <span id="earlyrenewalhours_nodejs">
 <a href="#earlyrenewalhours_nodejs" style="color: inherit; text-decoration: inherit;">early<wbr>Renewal<wbr>Hours</a>
@@ -517,8 +454,7 @@ certificate will become invalid.
         <span class="property-type">number</span>
     </dt>
     <dd>{{% md %}}Number of hours before the certificates expiry when a new certificate will be generated
-{{% /md %}}</dd>
-    <dt class="property-optional"
+{{% /md %}}</dd><dt class="property-optional"
             title="Optional">
         <span id="ipaddresses_nodejs">
 <a href="#ipaddresses_nodejs" style="color: inherit; text-decoration: inherit;">ip<wbr>Addresses</a>
@@ -527,8 +463,7 @@ certificate will become invalid.
         <span class="property-type">string[]</span>
     </dt>
     <dd>{{% md %}}List of IP addresses for which a certificate is being requested.
-{{% /md %}}</dd>
-    <dt class="property-optional"
+{{% /md %}}</dd><dt class="property-optional"
             title="Optional">
         <span id="iscacertificate_nodejs">
 <a href="#iscacertificate_nodejs" style="color: inherit; text-decoration: inherit;">is<wbr>Ca<wbr>Certificate</a>
@@ -539,8 +474,7 @@ certificate will become invalid.
     <dd>{{% md %}}Boolean controlling whether the CA flag will be set in the
 generated certificate. Defaults to `false`, meaning that the certificate does not represent
 a certificate authority.
-{{% /md %}}</dd>
-    <dt class="property-optional"
+{{% /md %}}</dd><dt class="property-optional"
             title="Optional">
         <span id="setsubjectkeyid_nodejs">
 <a href="#setsubjectkeyid_nodejs" style="color: inherit; text-decoration: inherit;">set<wbr>Subject<wbr>Key<wbr>Id</a>
@@ -551,8 +485,7 @@ a certificate authority.
     <dd>{{% md %}}If `true`, the certificate will include
 the subject key identifier. Defaults to `false`, in which case the subject
 key identifier is not set at all.
-{{% /md %}}</dd>
-    <dt class="property-optional"
+{{% /md %}}</dd><dt class="property-optional"
             title="Optional">
         <span id="uris_nodejs">
 <a href="#uris_nodejs" style="color: inherit; text-decoration: inherit;">uris</a>
@@ -561,14 +494,11 @@ key identifier is not set at all.
         <span class="property-type">string[]</span>
     </dt>
     <dd>{{% md %}}List of URIs for which a certificate is being requested.
-{{% /md %}}</dd>
-</dl>
+{{% /md %}}</dd></dl>
 {{% /choosable %}}
 
 {{% choosable language python %}}
-<dl class="resources-properties">
-
-    <dt class="property-required"
+<dl class="resources-properties"><dt class="property-required"
             title="Required">
         <span id="allowed_uses_python">
 <a href="#allowed_uses_python" style="color: inherit; text-decoration: inherit;">allowed_<wbr>uses</a>
@@ -578,8 +508,7 @@ key identifier is not set at all.
     </dt>
     <dd>{{% md %}}List of keywords each describing a use that is permitted
 for the issued certificate. The valid keywords are listed below.
-{{% /md %}}</dd>
-    <dt class="property-required"
+{{% /md %}}</dd><dt class="property-required"
             title="Required">
         <span id="key_algorithm_python">
 <a href="#key_algorithm_python" style="color: inherit; text-decoration: inherit;">key_<wbr>algorithm</a>
@@ -589,8 +518,7 @@ for the issued certificate. The valid keywords are listed below.
     </dt>
     <dd>{{% md %}}The name of the algorithm for the key provided
 in `private_key_pem`.
-{{% /md %}}</dd>
-    <dt class="property-required"
+{{% /md %}}</dd><dt class="property-required"
             title="Required">
         <span id="private_key_pem_python">
 <a href="#private_key_pem_python" style="color: inherit; text-decoration: inherit;">private_<wbr>key_<wbr>pem</a>
@@ -599,8 +527,7 @@ in `private_key_pem`.
         <span class="property-type">str</span>
     </dt>
     <dd>{{% md %}}PEM-encoded private key that the certificate will belong to
-{{% /md %}}</dd>
-    <dt class="property-required"
+{{% /md %}}</dd><dt class="property-required"
             title="Required">
         <span id="subjects_python">
 <a href="#subjects_python" style="color: inherit; text-decoration: inherit;">subjects</a>
@@ -611,8 +538,7 @@ in `private_key_pem`.
     <dd>{{% md %}}The subject for which a certificate is being requested.
 This is a nested configuration block whose structure matches the
 corresponding block for `tls.CertRequest`.
-{{% /md %}}</dd>
-    <dt class="property-required"
+{{% /md %}}</dd><dt class="property-required"
             title="Required">
         <span id="validity_period_hours_python">
 <a href="#validity_period_hours_python" style="color: inherit; text-decoration: inherit;">validity_<wbr>period_<wbr>hours</a>
@@ -622,8 +548,7 @@ corresponding block for `tls.CertRequest`.
     </dt>
     <dd>{{% md %}}The number of hours after initial issuing that the
 certificate will become invalid.
-{{% /md %}}</dd>
-    <dt class="property-optional"
+{{% /md %}}</dd><dt class="property-optional"
             title="Optional">
         <span id="dns_names_python">
 <a href="#dns_names_python" style="color: inherit; text-decoration: inherit;">dns_<wbr>names</a>
@@ -632,8 +557,7 @@ certificate will become invalid.
         <span class="property-type">Sequence[str]</span>
     </dt>
     <dd>{{% md %}}List of DNS names for which a certificate is being requested.
-{{% /md %}}</dd>
-    <dt class="property-optional"
+{{% /md %}}</dd><dt class="property-optional"
             title="Optional">
         <span id="early_renewal_hours_python">
 <a href="#early_renewal_hours_python" style="color: inherit; text-decoration: inherit;">early_<wbr>renewal_<wbr>hours</a>
@@ -642,8 +566,7 @@ certificate will become invalid.
         <span class="property-type">int</span>
     </dt>
     <dd>{{% md %}}Number of hours before the certificates expiry when a new certificate will be generated
-{{% /md %}}</dd>
-    <dt class="property-optional"
+{{% /md %}}</dd><dt class="property-optional"
             title="Optional">
         <span id="ip_addresses_python">
 <a href="#ip_addresses_python" style="color: inherit; text-decoration: inherit;">ip_<wbr>addresses</a>
@@ -652,8 +575,7 @@ certificate will become invalid.
         <span class="property-type">Sequence[str]</span>
     </dt>
     <dd>{{% md %}}List of IP addresses for which a certificate is being requested.
-{{% /md %}}</dd>
-    <dt class="property-optional"
+{{% /md %}}</dd><dt class="property-optional"
             title="Optional">
         <span id="is_ca_certificate_python">
 <a href="#is_ca_certificate_python" style="color: inherit; text-decoration: inherit;">is_<wbr>ca_<wbr>certificate</a>
@@ -664,8 +586,7 @@ certificate will become invalid.
     <dd>{{% md %}}Boolean controlling whether the CA flag will be set in the
 generated certificate. Defaults to `false`, meaning that the certificate does not represent
 a certificate authority.
-{{% /md %}}</dd>
-    <dt class="property-optional"
+{{% /md %}}</dd><dt class="property-optional"
             title="Optional">
         <span id="set_subject_key_id_python">
 <a href="#set_subject_key_id_python" style="color: inherit; text-decoration: inherit;">set_<wbr>subject_<wbr>key_<wbr>id</a>
@@ -676,8 +597,7 @@ a certificate authority.
     <dd>{{% md %}}If `true`, the certificate will include
 the subject key identifier. Defaults to `false`, in which case the subject
 key identifier is not set at all.
-{{% /md %}}</dd>
-    <dt class="property-optional"
+{{% /md %}}</dd><dt class="property-optional"
             title="Optional">
         <span id="uris_python">
 <a href="#uris_python" style="color: inherit; text-decoration: inherit;">uris</a>
@@ -686,8 +606,7 @@ key identifier is not set at all.
         <span class="property-type">Sequence[str]</span>
     </dt>
     <dd>{{% md %}}List of URIs for which a certificate is being requested.
-{{% /md %}}</dd>
-</dl>
+{{% /md %}}</dd></dl>
 {{% /choosable %}}
 
 
@@ -698,9 +617,7 @@ All [input](#inputs) properties are implicitly available as output properties. A
 
 
 {{% choosable language csharp %}}
-<dl class="resources-properties">
-
-    <dt class="property-"
+<dl class="resources-properties"><dt class="property-"
             title="">
         <span id="certpem_csharp">
 <a href="#certpem_csharp" style="color: inherit; text-decoration: inherit;">Cert<wbr>Pem</a>
@@ -709,8 +626,7 @@ All [input](#inputs) properties are implicitly available as output properties. A
         <span class="property-type">string</span>
     </dt>
     <dd>{{% md %}}The certificate data in PEM format.
-{{% /md %}}</dd>
-    <dt class="property-"
+{{% /md %}}</dd><dt class="property-"
             title="">
         <span id="id_csharp">
 <a href="#id_csharp" style="color: inherit; text-decoration: inherit;">Id</a>
@@ -718,8 +634,7 @@ All [input](#inputs) properties are implicitly available as output properties. A
         <span class="property-indicator"></span>
         <span class="property-type">string</span>
     </dt>
-    <dd>{{% md %}}The provider-assigned unique ID for this managed resource.{{% /md %}}</dd>
-    <dt class="property-"
+    <dd>{{% md %}}The provider-assigned unique ID for this managed resource.{{% /md %}}</dd><dt class="property-"
             title="">
         <span id="readyforrenewal_csharp">
 <a href="#readyforrenewal_csharp" style="color: inherit; text-decoration: inherit;">Ready<wbr>For<wbr>Renewal</a>
@@ -727,8 +642,7 @@ All [input](#inputs) properties are implicitly available as output properties. A
         <span class="property-indicator"></span>
         <span class="property-type">bool</span>
     </dt>
-    <dd>{{% md %}}{{% /md %}}</dd>
-    <dt class="property-"
+    <dd>{{% md %}}{{% /md %}}</dd><dt class="property-"
             title="">
         <span id="validityendtime_csharp">
 <a href="#validityendtime_csharp" style="color: inherit; text-decoration: inherit;">Validity<wbr>End<wbr>Time</a>
@@ -738,8 +652,7 @@ All [input](#inputs) properties are implicitly available as output properties. A
     </dt>
     <dd>{{% md %}}The time until which the certificate is invalid, as an
 [RFC3339](https://tools.ietf.org/html/rfc3339) timestamp.
-{{% /md %}}</dd>
-    <dt class="property-"
+{{% /md %}}</dd><dt class="property-"
             title="">
         <span id="validitystarttime_csharp">
 <a href="#validitystarttime_csharp" style="color: inherit; text-decoration: inherit;">Validity<wbr>Start<wbr>Time</a>
@@ -749,14 +662,11 @@ All [input](#inputs) properties are implicitly available as output properties. A
     </dt>
     <dd>{{% md %}}The time after which the certificate is valid, as an
 [RFC3339](https://tools.ietf.org/html/rfc3339) timestamp.
-{{% /md %}}</dd>
-</dl>
+{{% /md %}}</dd></dl>
 {{% /choosable %}}
 
 {{% choosable language go %}}
-<dl class="resources-properties">
-
-    <dt class="property-"
+<dl class="resources-properties"><dt class="property-"
             title="">
         <span id="certpem_go">
 <a href="#certpem_go" style="color: inherit; text-decoration: inherit;">Cert<wbr>Pem</a>
@@ -765,8 +675,7 @@ All [input](#inputs) properties are implicitly available as output properties. A
         <span class="property-type">string</span>
     </dt>
     <dd>{{% md %}}The certificate data in PEM format.
-{{% /md %}}</dd>
-    <dt class="property-"
+{{% /md %}}</dd><dt class="property-"
             title="">
         <span id="id_go">
 <a href="#id_go" style="color: inherit; text-decoration: inherit;">Id</a>
@@ -774,8 +683,7 @@ All [input](#inputs) properties are implicitly available as output properties. A
         <span class="property-indicator"></span>
         <span class="property-type">string</span>
     </dt>
-    <dd>{{% md %}}The provider-assigned unique ID for this managed resource.{{% /md %}}</dd>
-    <dt class="property-"
+    <dd>{{% md %}}The provider-assigned unique ID for this managed resource.{{% /md %}}</dd><dt class="property-"
             title="">
         <span id="readyforrenewal_go">
 <a href="#readyforrenewal_go" style="color: inherit; text-decoration: inherit;">Ready<wbr>For<wbr>Renewal</a>
@@ -783,8 +691,7 @@ All [input](#inputs) properties are implicitly available as output properties. A
         <span class="property-indicator"></span>
         <span class="property-type">bool</span>
     </dt>
-    <dd>{{% md %}}{{% /md %}}</dd>
-    <dt class="property-"
+    <dd>{{% md %}}{{% /md %}}</dd><dt class="property-"
             title="">
         <span id="validityendtime_go">
 <a href="#validityendtime_go" style="color: inherit; text-decoration: inherit;">Validity<wbr>End<wbr>Time</a>
@@ -794,8 +701,7 @@ All [input](#inputs) properties are implicitly available as output properties. A
     </dt>
     <dd>{{% md %}}The time until which the certificate is invalid, as an
 [RFC3339](https://tools.ietf.org/html/rfc3339) timestamp.
-{{% /md %}}</dd>
-    <dt class="property-"
+{{% /md %}}</dd><dt class="property-"
             title="">
         <span id="validitystarttime_go">
 <a href="#validitystarttime_go" style="color: inherit; text-decoration: inherit;">Validity<wbr>Start<wbr>Time</a>
@@ -805,14 +711,11 @@ All [input](#inputs) properties are implicitly available as output properties. A
     </dt>
     <dd>{{% md %}}The time after which the certificate is valid, as an
 [RFC3339](https://tools.ietf.org/html/rfc3339) timestamp.
-{{% /md %}}</dd>
-</dl>
+{{% /md %}}</dd></dl>
 {{% /choosable %}}
 
 {{% choosable language nodejs %}}
-<dl class="resources-properties">
-
-    <dt class="property-"
+<dl class="resources-properties"><dt class="property-"
             title="">
         <span id="certpem_nodejs">
 <a href="#certpem_nodejs" style="color: inherit; text-decoration: inherit;">cert<wbr>Pem</a>
@@ -821,8 +724,7 @@ All [input](#inputs) properties are implicitly available as output properties. A
         <span class="property-type">string</span>
     </dt>
     <dd>{{% md %}}The certificate data in PEM format.
-{{% /md %}}</dd>
-    <dt class="property-"
+{{% /md %}}</dd><dt class="property-"
             title="">
         <span id="id_nodejs">
 <a href="#id_nodejs" style="color: inherit; text-decoration: inherit;">id</a>
@@ -830,8 +732,7 @@ All [input](#inputs) properties are implicitly available as output properties. A
         <span class="property-indicator"></span>
         <span class="property-type">string</span>
     </dt>
-    <dd>{{% md %}}The provider-assigned unique ID for this managed resource.{{% /md %}}</dd>
-    <dt class="property-"
+    <dd>{{% md %}}The provider-assigned unique ID for this managed resource.{{% /md %}}</dd><dt class="property-"
             title="">
         <span id="readyforrenewal_nodejs">
 <a href="#readyforrenewal_nodejs" style="color: inherit; text-decoration: inherit;">ready<wbr>For<wbr>Renewal</a>
@@ -839,8 +740,7 @@ All [input](#inputs) properties are implicitly available as output properties. A
         <span class="property-indicator"></span>
         <span class="property-type">boolean</span>
     </dt>
-    <dd>{{% md %}}{{% /md %}}</dd>
-    <dt class="property-"
+    <dd>{{% md %}}{{% /md %}}</dd><dt class="property-"
             title="">
         <span id="validityendtime_nodejs">
 <a href="#validityendtime_nodejs" style="color: inherit; text-decoration: inherit;">validity<wbr>End<wbr>Time</a>
@@ -850,8 +750,7 @@ All [input](#inputs) properties are implicitly available as output properties. A
     </dt>
     <dd>{{% md %}}The time until which the certificate is invalid, as an
 [RFC3339](https://tools.ietf.org/html/rfc3339) timestamp.
-{{% /md %}}</dd>
-    <dt class="property-"
+{{% /md %}}</dd><dt class="property-"
             title="">
         <span id="validitystarttime_nodejs">
 <a href="#validitystarttime_nodejs" style="color: inherit; text-decoration: inherit;">validity<wbr>Start<wbr>Time</a>
@@ -861,14 +760,11 @@ All [input](#inputs) properties are implicitly available as output properties. A
     </dt>
     <dd>{{% md %}}The time after which the certificate is valid, as an
 [RFC3339](https://tools.ietf.org/html/rfc3339) timestamp.
-{{% /md %}}</dd>
-</dl>
+{{% /md %}}</dd></dl>
 {{% /choosable %}}
 
 {{% choosable language python %}}
-<dl class="resources-properties">
-
-    <dt class="property-"
+<dl class="resources-properties"><dt class="property-"
             title="">
         <span id="cert_pem_python">
 <a href="#cert_pem_python" style="color: inherit; text-decoration: inherit;">cert_<wbr>pem</a>
@@ -877,8 +773,7 @@ All [input](#inputs) properties are implicitly available as output properties. A
         <span class="property-type">str</span>
     </dt>
     <dd>{{% md %}}The certificate data in PEM format.
-{{% /md %}}</dd>
-    <dt class="property-"
+{{% /md %}}</dd><dt class="property-"
             title="">
         <span id="id_python">
 <a href="#id_python" style="color: inherit; text-decoration: inherit;">id</a>
@@ -886,8 +781,7 @@ All [input](#inputs) properties are implicitly available as output properties. A
         <span class="property-indicator"></span>
         <span class="property-type">str</span>
     </dt>
-    <dd>{{% md %}}The provider-assigned unique ID for this managed resource.{{% /md %}}</dd>
-    <dt class="property-"
+    <dd>{{% md %}}The provider-assigned unique ID for this managed resource.{{% /md %}}</dd><dt class="property-"
             title="">
         <span id="ready_for_renewal_python">
 <a href="#ready_for_renewal_python" style="color: inherit; text-decoration: inherit;">ready_<wbr>for_<wbr>renewal</a>
@@ -895,8 +789,7 @@ All [input](#inputs) properties are implicitly available as output properties. A
         <span class="property-indicator"></span>
         <span class="property-type">bool</span>
     </dt>
-    <dd>{{% md %}}{{% /md %}}</dd>
-    <dt class="property-"
+    <dd>{{% md %}}{{% /md %}}</dd><dt class="property-"
             title="">
         <span id="validity_end_time_python">
 <a href="#validity_end_time_python" style="color: inherit; text-decoration: inherit;">validity_<wbr>end_<wbr>time</a>
@@ -906,8 +799,7 @@ All [input](#inputs) properties are implicitly available as output properties. A
     </dt>
     <dd>{{% md %}}The time until which the certificate is invalid, as an
 [RFC3339](https://tools.ietf.org/html/rfc3339) timestamp.
-{{% /md %}}</dd>
-    <dt class="property-"
+{{% /md %}}</dd><dt class="property-"
             title="">
         <span id="validity_start_time_python">
 <a href="#validity_start_time_python" style="color: inherit; text-decoration: inherit;">validity_<wbr>start_<wbr>time</a>
@@ -917,8 +809,7 @@ All [input](#inputs) properties are implicitly available as output properties. A
     </dt>
     <dd>{{% md %}}The time after which the certificate is valid, as an
 [RFC3339](https://tools.ietf.org/html/rfc3339) timestamp.
-{{% /md %}}</dd>
-</dl>
+{{% /md %}}</dd></dl>
 {{% /choosable %}}
 
 
@@ -1045,9 +936,7 @@ The following state arguments are supported:
 
 
 {{% choosable language csharp %}}
-<dl class="resources-properties">
-
-    <dt class="property-optional"
+<dl class="resources-properties"><dt class="property-optional"
             title="Optional">
         <span id="state_alloweduses_csharp">
 <a href="#state_alloweduses_csharp" style="color: inherit; text-decoration: inherit;">Allowed<wbr>Uses</a>
@@ -1057,8 +946,7 @@ The following state arguments are supported:
     </dt>
     <dd>{{% md %}}List of keywords each describing a use that is permitted
 for the issued certificate. The valid keywords are listed below.
-{{% /md %}}</dd>
-    <dt class="property-optional"
+{{% /md %}}</dd><dt class="property-optional"
             title="Optional">
         <span id="state_certpem_csharp">
 <a href="#state_certpem_csharp" style="color: inherit; text-decoration: inherit;">Cert<wbr>Pem</a>
@@ -1067,8 +955,7 @@ for the issued certificate. The valid keywords are listed below.
         <span class="property-type">string</span>
     </dt>
     <dd>{{% md %}}The certificate data in PEM format.
-{{% /md %}}</dd>
-    <dt class="property-optional"
+{{% /md %}}</dd><dt class="property-optional"
             title="Optional">
         <span id="state_dnsnames_csharp">
 <a href="#state_dnsnames_csharp" style="color: inherit; text-decoration: inherit;">Dns<wbr>Names</a>
@@ -1077,8 +964,7 @@ for the issued certificate. The valid keywords are listed below.
         <span class="property-type">List&lt;string&gt;</span>
     </dt>
     <dd>{{% md %}}List of DNS names for which a certificate is being requested.
-{{% /md %}}</dd>
-    <dt class="property-optional"
+{{% /md %}}</dd><dt class="property-optional"
             title="Optional">
         <span id="state_earlyrenewalhours_csharp">
 <a href="#state_earlyrenewalhours_csharp" style="color: inherit; text-decoration: inherit;">Early<wbr>Renewal<wbr>Hours</a>
@@ -1087,8 +973,7 @@ for the issued certificate. The valid keywords are listed below.
         <span class="property-type">int</span>
     </dt>
     <dd>{{% md %}}Number of hours before the certificates expiry when a new certificate will be generated
-{{% /md %}}</dd>
-    <dt class="property-optional"
+{{% /md %}}</dd><dt class="property-optional"
             title="Optional">
         <span id="state_ipaddresses_csharp">
 <a href="#state_ipaddresses_csharp" style="color: inherit; text-decoration: inherit;">Ip<wbr>Addresses</a>
@@ -1097,8 +982,7 @@ for the issued certificate. The valid keywords are listed below.
         <span class="property-type">List&lt;string&gt;</span>
     </dt>
     <dd>{{% md %}}List of IP addresses for which a certificate is being requested.
-{{% /md %}}</dd>
-    <dt class="property-optional"
+{{% /md %}}</dd><dt class="property-optional"
             title="Optional">
         <span id="state_iscacertificate_csharp">
 <a href="#state_iscacertificate_csharp" style="color: inherit; text-decoration: inherit;">Is<wbr>Ca<wbr>Certificate</a>
@@ -1109,8 +993,7 @@ for the issued certificate. The valid keywords are listed below.
     <dd>{{% md %}}Boolean controlling whether the CA flag will be set in the
 generated certificate. Defaults to `false`, meaning that the certificate does not represent
 a certificate authority.
-{{% /md %}}</dd>
-    <dt class="property-optional"
+{{% /md %}}</dd><dt class="property-optional"
             title="Optional">
         <span id="state_keyalgorithm_csharp">
 <a href="#state_keyalgorithm_csharp" style="color: inherit; text-decoration: inherit;">Key<wbr>Algorithm</a>
@@ -1120,8 +1003,7 @@ a certificate authority.
     </dt>
     <dd>{{% md %}}The name of the algorithm for the key provided
 in `private_key_pem`.
-{{% /md %}}</dd>
-    <dt class="property-optional"
+{{% /md %}}</dd><dt class="property-optional"
             title="Optional">
         <span id="state_privatekeypem_csharp">
 <a href="#state_privatekeypem_csharp" style="color: inherit; text-decoration: inherit;">Private<wbr>Key<wbr>Pem</a>
@@ -1130,8 +1012,7 @@ in `private_key_pem`.
         <span class="property-type">string</span>
     </dt>
     <dd>{{% md %}}PEM-encoded private key that the certificate will belong to
-{{% /md %}}</dd>
-    <dt class="property-optional"
+{{% /md %}}</dd><dt class="property-optional"
             title="Optional">
         <span id="state_readyforrenewal_csharp">
 <a href="#state_readyforrenewal_csharp" style="color: inherit; text-decoration: inherit;">Ready<wbr>For<wbr>Renewal</a>
@@ -1139,8 +1020,7 @@ in `private_key_pem`.
         <span class="property-indicator"></span>
         <span class="property-type">bool</span>
     </dt>
-    <dd>{{% md %}}{{% /md %}}</dd>
-    <dt class="property-optional"
+    <dd>{{% md %}}{{% /md %}}</dd><dt class="property-optional"
             title="Optional">
         <span id="state_setsubjectkeyid_csharp">
 <a href="#state_setsubjectkeyid_csharp" style="color: inherit; text-decoration: inherit;">Set<wbr>Subject<wbr>Key<wbr>Id</a>
@@ -1151,8 +1031,7 @@ in `private_key_pem`.
     <dd>{{% md %}}If `true`, the certificate will include
 the subject key identifier. Defaults to `false`, in which case the subject
 key identifier is not set at all.
-{{% /md %}}</dd>
-    <dt class="property-optional"
+{{% /md %}}</dd><dt class="property-optional"
             title="Optional">
         <span id="state_subjects_csharp">
 <a href="#state_subjects_csharp" style="color: inherit; text-decoration: inherit;">Subjects</a>
@@ -1163,8 +1042,7 @@ key identifier is not set at all.
     <dd>{{% md %}}The subject for which a certificate is being requested.
 This is a nested configuration block whose structure matches the
 corresponding block for `tls.CertRequest`.
-{{% /md %}}</dd>
-    <dt class="property-optional"
+{{% /md %}}</dd><dt class="property-optional"
             title="Optional">
         <span id="state_uris_csharp">
 <a href="#state_uris_csharp" style="color: inherit; text-decoration: inherit;">Uris</a>
@@ -1173,8 +1051,7 @@ corresponding block for `tls.CertRequest`.
         <span class="property-type">List&lt;string&gt;</span>
     </dt>
     <dd>{{% md %}}List of URIs for which a certificate is being requested.
-{{% /md %}}</dd>
-    <dt class="property-optional"
+{{% /md %}}</dd><dt class="property-optional"
             title="Optional">
         <span id="state_validityendtime_csharp">
 <a href="#state_validityendtime_csharp" style="color: inherit; text-decoration: inherit;">Validity<wbr>End<wbr>Time</a>
@@ -1184,8 +1061,7 @@ corresponding block for `tls.CertRequest`.
     </dt>
     <dd>{{% md %}}The time until which the certificate is invalid, as an
 [RFC3339](https://tools.ietf.org/html/rfc3339) timestamp.
-{{% /md %}}</dd>
-    <dt class="property-optional"
+{{% /md %}}</dd><dt class="property-optional"
             title="Optional">
         <span id="state_validityperiodhours_csharp">
 <a href="#state_validityperiodhours_csharp" style="color: inherit; text-decoration: inherit;">Validity<wbr>Period<wbr>Hours</a>
@@ -1195,8 +1071,7 @@ corresponding block for `tls.CertRequest`.
     </dt>
     <dd>{{% md %}}The number of hours after initial issuing that the
 certificate will become invalid.
-{{% /md %}}</dd>
-    <dt class="property-optional"
+{{% /md %}}</dd><dt class="property-optional"
             title="Optional">
         <span id="state_validitystarttime_csharp">
 <a href="#state_validitystarttime_csharp" style="color: inherit; text-decoration: inherit;">Validity<wbr>Start<wbr>Time</a>
@@ -1206,14 +1081,11 @@ certificate will become invalid.
     </dt>
     <dd>{{% md %}}The time after which the certificate is valid, as an
 [RFC3339](https://tools.ietf.org/html/rfc3339) timestamp.
-{{% /md %}}</dd>
-</dl>
+{{% /md %}}</dd></dl>
 {{% /choosable %}}
 
 {{% choosable language go %}}
-<dl class="resources-properties">
-
-    <dt class="property-optional"
+<dl class="resources-properties"><dt class="property-optional"
             title="Optional">
         <span id="state_alloweduses_go">
 <a href="#state_alloweduses_go" style="color: inherit; text-decoration: inherit;">Allowed<wbr>Uses</a>
@@ -1223,8 +1095,7 @@ certificate will become invalid.
     </dt>
     <dd>{{% md %}}List of keywords each describing a use that is permitted
 for the issued certificate. The valid keywords are listed below.
-{{% /md %}}</dd>
-    <dt class="property-optional"
+{{% /md %}}</dd><dt class="property-optional"
             title="Optional">
         <span id="state_certpem_go">
 <a href="#state_certpem_go" style="color: inherit; text-decoration: inherit;">Cert<wbr>Pem</a>
@@ -1233,8 +1104,7 @@ for the issued certificate. The valid keywords are listed below.
         <span class="property-type">string</span>
     </dt>
     <dd>{{% md %}}The certificate data in PEM format.
-{{% /md %}}</dd>
-    <dt class="property-optional"
+{{% /md %}}</dd><dt class="property-optional"
             title="Optional">
         <span id="state_dnsnames_go">
 <a href="#state_dnsnames_go" style="color: inherit; text-decoration: inherit;">Dns<wbr>Names</a>
@@ -1243,8 +1113,7 @@ for the issued certificate. The valid keywords are listed below.
         <span class="property-type">[]string</span>
     </dt>
     <dd>{{% md %}}List of DNS names for which a certificate is being requested.
-{{% /md %}}</dd>
-    <dt class="property-optional"
+{{% /md %}}</dd><dt class="property-optional"
             title="Optional">
         <span id="state_earlyrenewalhours_go">
 <a href="#state_earlyrenewalhours_go" style="color: inherit; text-decoration: inherit;">Early<wbr>Renewal<wbr>Hours</a>
@@ -1253,8 +1122,7 @@ for the issued certificate. The valid keywords are listed below.
         <span class="property-type">int</span>
     </dt>
     <dd>{{% md %}}Number of hours before the certificates expiry when a new certificate will be generated
-{{% /md %}}</dd>
-    <dt class="property-optional"
+{{% /md %}}</dd><dt class="property-optional"
             title="Optional">
         <span id="state_ipaddresses_go">
 <a href="#state_ipaddresses_go" style="color: inherit; text-decoration: inherit;">Ip<wbr>Addresses</a>
@@ -1263,8 +1131,7 @@ for the issued certificate. The valid keywords are listed below.
         <span class="property-type">[]string</span>
     </dt>
     <dd>{{% md %}}List of IP addresses for which a certificate is being requested.
-{{% /md %}}</dd>
-    <dt class="property-optional"
+{{% /md %}}</dd><dt class="property-optional"
             title="Optional">
         <span id="state_iscacertificate_go">
 <a href="#state_iscacertificate_go" style="color: inherit; text-decoration: inherit;">Is<wbr>Ca<wbr>Certificate</a>
@@ -1275,8 +1142,7 @@ for the issued certificate. The valid keywords are listed below.
     <dd>{{% md %}}Boolean controlling whether the CA flag will be set in the
 generated certificate. Defaults to `false`, meaning that the certificate does not represent
 a certificate authority.
-{{% /md %}}</dd>
-    <dt class="property-optional"
+{{% /md %}}</dd><dt class="property-optional"
             title="Optional">
         <span id="state_keyalgorithm_go">
 <a href="#state_keyalgorithm_go" style="color: inherit; text-decoration: inherit;">Key<wbr>Algorithm</a>
@@ -1286,8 +1152,7 @@ a certificate authority.
     </dt>
     <dd>{{% md %}}The name of the algorithm for the key provided
 in `private_key_pem`.
-{{% /md %}}</dd>
-    <dt class="property-optional"
+{{% /md %}}</dd><dt class="property-optional"
             title="Optional">
         <span id="state_privatekeypem_go">
 <a href="#state_privatekeypem_go" style="color: inherit; text-decoration: inherit;">Private<wbr>Key<wbr>Pem</a>
@@ -1296,8 +1161,7 @@ in `private_key_pem`.
         <span class="property-type">string</span>
     </dt>
     <dd>{{% md %}}PEM-encoded private key that the certificate will belong to
-{{% /md %}}</dd>
-    <dt class="property-optional"
+{{% /md %}}</dd><dt class="property-optional"
             title="Optional">
         <span id="state_readyforrenewal_go">
 <a href="#state_readyforrenewal_go" style="color: inherit; text-decoration: inherit;">Ready<wbr>For<wbr>Renewal</a>
@@ -1305,8 +1169,7 @@ in `private_key_pem`.
         <span class="property-indicator"></span>
         <span class="property-type">bool</span>
     </dt>
-    <dd>{{% md %}}{{% /md %}}</dd>
-    <dt class="property-optional"
+    <dd>{{% md %}}{{% /md %}}</dd><dt class="property-optional"
             title="Optional">
         <span id="state_setsubjectkeyid_go">
 <a href="#state_setsubjectkeyid_go" style="color: inherit; text-decoration: inherit;">Set<wbr>Subject<wbr>Key<wbr>Id</a>
@@ -1317,8 +1180,7 @@ in `private_key_pem`.
     <dd>{{% md %}}If `true`, the certificate will include
 the subject key identifier. Defaults to `false`, in which case the subject
 key identifier is not set at all.
-{{% /md %}}</dd>
-    <dt class="property-optional"
+{{% /md %}}</dd><dt class="property-optional"
             title="Optional">
         <span id="state_subjects_go">
 <a href="#state_subjects_go" style="color: inherit; text-decoration: inherit;">Subjects</a>
@@ -1329,8 +1191,7 @@ key identifier is not set at all.
     <dd>{{% md %}}The subject for which a certificate is being requested.
 This is a nested configuration block whose structure matches the
 corresponding block for `tls.CertRequest`.
-{{% /md %}}</dd>
-    <dt class="property-optional"
+{{% /md %}}</dd><dt class="property-optional"
             title="Optional">
         <span id="state_uris_go">
 <a href="#state_uris_go" style="color: inherit; text-decoration: inherit;">Uris</a>
@@ -1339,8 +1200,7 @@ corresponding block for `tls.CertRequest`.
         <span class="property-type">[]string</span>
     </dt>
     <dd>{{% md %}}List of URIs for which a certificate is being requested.
-{{% /md %}}</dd>
-    <dt class="property-optional"
+{{% /md %}}</dd><dt class="property-optional"
             title="Optional">
         <span id="state_validityendtime_go">
 <a href="#state_validityendtime_go" style="color: inherit; text-decoration: inherit;">Validity<wbr>End<wbr>Time</a>
@@ -1350,8 +1210,7 @@ corresponding block for `tls.CertRequest`.
     </dt>
     <dd>{{% md %}}The time until which the certificate is invalid, as an
 [RFC3339](https://tools.ietf.org/html/rfc3339) timestamp.
-{{% /md %}}</dd>
-    <dt class="property-optional"
+{{% /md %}}</dd><dt class="property-optional"
             title="Optional">
         <span id="state_validityperiodhours_go">
 <a href="#state_validityperiodhours_go" style="color: inherit; text-decoration: inherit;">Validity<wbr>Period<wbr>Hours</a>
@@ -1361,8 +1220,7 @@ corresponding block for `tls.CertRequest`.
     </dt>
     <dd>{{% md %}}The number of hours after initial issuing that the
 certificate will become invalid.
-{{% /md %}}</dd>
-    <dt class="property-optional"
+{{% /md %}}</dd><dt class="property-optional"
             title="Optional">
         <span id="state_validitystarttime_go">
 <a href="#state_validitystarttime_go" style="color: inherit; text-decoration: inherit;">Validity<wbr>Start<wbr>Time</a>
@@ -1372,14 +1230,11 @@ certificate will become invalid.
     </dt>
     <dd>{{% md %}}The time after which the certificate is valid, as an
 [RFC3339](https://tools.ietf.org/html/rfc3339) timestamp.
-{{% /md %}}</dd>
-</dl>
+{{% /md %}}</dd></dl>
 {{% /choosable %}}
 
 {{% choosable language nodejs %}}
-<dl class="resources-properties">
-
-    <dt class="property-optional"
+<dl class="resources-properties"><dt class="property-optional"
             title="Optional">
         <span id="state_alloweduses_nodejs">
 <a href="#state_alloweduses_nodejs" style="color: inherit; text-decoration: inherit;">allowed<wbr>Uses</a>
@@ -1389,8 +1244,7 @@ certificate will become invalid.
     </dt>
     <dd>{{% md %}}List of keywords each describing a use that is permitted
 for the issued certificate. The valid keywords are listed below.
-{{% /md %}}</dd>
-    <dt class="property-optional"
+{{% /md %}}</dd><dt class="property-optional"
             title="Optional">
         <span id="state_certpem_nodejs">
 <a href="#state_certpem_nodejs" style="color: inherit; text-decoration: inherit;">cert<wbr>Pem</a>
@@ -1399,8 +1253,7 @@ for the issued certificate. The valid keywords are listed below.
         <span class="property-type">string</span>
     </dt>
     <dd>{{% md %}}The certificate data in PEM format.
-{{% /md %}}</dd>
-    <dt class="property-optional"
+{{% /md %}}</dd><dt class="property-optional"
             title="Optional">
         <span id="state_dnsnames_nodejs">
 <a href="#state_dnsnames_nodejs" style="color: inherit; text-decoration: inherit;">dns<wbr>Names</a>
@@ -1409,8 +1262,7 @@ for the issued certificate. The valid keywords are listed below.
         <span class="property-type">string[]</span>
     </dt>
     <dd>{{% md %}}List of DNS names for which a certificate is being requested.
-{{% /md %}}</dd>
-    <dt class="property-optional"
+{{% /md %}}</dd><dt class="property-optional"
             title="Optional">
         <span id="state_earlyrenewalhours_nodejs">
 <a href="#state_earlyrenewalhours_nodejs" style="color: inherit; text-decoration: inherit;">early<wbr>Renewal<wbr>Hours</a>
@@ -1419,8 +1271,7 @@ for the issued certificate. The valid keywords are listed below.
         <span class="property-type">number</span>
     </dt>
     <dd>{{% md %}}Number of hours before the certificates expiry when a new certificate will be generated
-{{% /md %}}</dd>
-    <dt class="property-optional"
+{{% /md %}}</dd><dt class="property-optional"
             title="Optional">
         <span id="state_ipaddresses_nodejs">
 <a href="#state_ipaddresses_nodejs" style="color: inherit; text-decoration: inherit;">ip<wbr>Addresses</a>
@@ -1429,8 +1280,7 @@ for the issued certificate. The valid keywords are listed below.
         <span class="property-type">string[]</span>
     </dt>
     <dd>{{% md %}}List of IP addresses for which a certificate is being requested.
-{{% /md %}}</dd>
-    <dt class="property-optional"
+{{% /md %}}</dd><dt class="property-optional"
             title="Optional">
         <span id="state_iscacertificate_nodejs">
 <a href="#state_iscacertificate_nodejs" style="color: inherit; text-decoration: inherit;">is<wbr>Ca<wbr>Certificate</a>
@@ -1441,8 +1291,7 @@ for the issued certificate. The valid keywords are listed below.
     <dd>{{% md %}}Boolean controlling whether the CA flag will be set in the
 generated certificate. Defaults to `false`, meaning that the certificate does not represent
 a certificate authority.
-{{% /md %}}</dd>
-    <dt class="property-optional"
+{{% /md %}}</dd><dt class="property-optional"
             title="Optional">
         <span id="state_keyalgorithm_nodejs">
 <a href="#state_keyalgorithm_nodejs" style="color: inherit; text-decoration: inherit;">key<wbr>Algorithm</a>
@@ -1452,8 +1301,7 @@ a certificate authority.
     </dt>
     <dd>{{% md %}}The name of the algorithm for the key provided
 in `private_key_pem`.
-{{% /md %}}</dd>
-    <dt class="property-optional"
+{{% /md %}}</dd><dt class="property-optional"
             title="Optional">
         <span id="state_privatekeypem_nodejs">
 <a href="#state_privatekeypem_nodejs" style="color: inherit; text-decoration: inherit;">private<wbr>Key<wbr>Pem</a>
@@ -1462,8 +1310,7 @@ in `private_key_pem`.
         <span class="property-type">string</span>
     </dt>
     <dd>{{% md %}}PEM-encoded private key that the certificate will belong to
-{{% /md %}}</dd>
-    <dt class="property-optional"
+{{% /md %}}</dd><dt class="property-optional"
             title="Optional">
         <span id="state_readyforrenewal_nodejs">
 <a href="#state_readyforrenewal_nodejs" style="color: inherit; text-decoration: inherit;">ready<wbr>For<wbr>Renewal</a>
@@ -1471,8 +1318,7 @@ in `private_key_pem`.
         <span class="property-indicator"></span>
         <span class="property-type">boolean</span>
     </dt>
-    <dd>{{% md %}}{{% /md %}}</dd>
-    <dt class="property-optional"
+    <dd>{{% md %}}{{% /md %}}</dd><dt class="property-optional"
             title="Optional">
         <span id="state_setsubjectkeyid_nodejs">
 <a href="#state_setsubjectkeyid_nodejs" style="color: inherit; text-decoration: inherit;">set<wbr>Subject<wbr>Key<wbr>Id</a>
@@ -1483,8 +1329,7 @@ in `private_key_pem`.
     <dd>{{% md %}}If `true`, the certificate will include
 the subject key identifier. Defaults to `false`, in which case the subject
 key identifier is not set at all.
-{{% /md %}}</dd>
-    <dt class="property-optional"
+{{% /md %}}</dd><dt class="property-optional"
             title="Optional">
         <span id="state_subjects_nodejs">
 <a href="#state_subjects_nodejs" style="color: inherit; text-decoration: inherit;">subjects</a>
@@ -1495,8 +1340,7 @@ key identifier is not set at all.
     <dd>{{% md %}}The subject for which a certificate is being requested.
 This is a nested configuration block whose structure matches the
 corresponding block for `tls.CertRequest`.
-{{% /md %}}</dd>
-    <dt class="property-optional"
+{{% /md %}}</dd><dt class="property-optional"
             title="Optional">
         <span id="state_uris_nodejs">
 <a href="#state_uris_nodejs" style="color: inherit; text-decoration: inherit;">uris</a>
@@ -1505,8 +1349,7 @@ corresponding block for `tls.CertRequest`.
         <span class="property-type">string[]</span>
     </dt>
     <dd>{{% md %}}List of URIs for which a certificate is being requested.
-{{% /md %}}</dd>
-    <dt class="property-optional"
+{{% /md %}}</dd><dt class="property-optional"
             title="Optional">
         <span id="state_validityendtime_nodejs">
 <a href="#state_validityendtime_nodejs" style="color: inherit; text-decoration: inherit;">validity<wbr>End<wbr>Time</a>
@@ -1516,8 +1359,7 @@ corresponding block for `tls.CertRequest`.
     </dt>
     <dd>{{% md %}}The time until which the certificate is invalid, as an
 [RFC3339](https://tools.ietf.org/html/rfc3339) timestamp.
-{{% /md %}}</dd>
-    <dt class="property-optional"
+{{% /md %}}</dd><dt class="property-optional"
             title="Optional">
         <span id="state_validityperiodhours_nodejs">
 <a href="#state_validityperiodhours_nodejs" style="color: inherit; text-decoration: inherit;">validity<wbr>Period<wbr>Hours</a>
@@ -1527,8 +1369,7 @@ corresponding block for `tls.CertRequest`.
     </dt>
     <dd>{{% md %}}The number of hours after initial issuing that the
 certificate will become invalid.
-{{% /md %}}</dd>
-    <dt class="property-optional"
+{{% /md %}}</dd><dt class="property-optional"
             title="Optional">
         <span id="state_validitystarttime_nodejs">
 <a href="#state_validitystarttime_nodejs" style="color: inherit; text-decoration: inherit;">validity<wbr>Start<wbr>Time</a>
@@ -1538,14 +1379,11 @@ certificate will become invalid.
     </dt>
     <dd>{{% md %}}The time after which the certificate is valid, as an
 [RFC3339](https://tools.ietf.org/html/rfc3339) timestamp.
-{{% /md %}}</dd>
-</dl>
+{{% /md %}}</dd></dl>
 {{% /choosable %}}
 
 {{% choosable language python %}}
-<dl class="resources-properties">
-
-    <dt class="property-optional"
+<dl class="resources-properties"><dt class="property-optional"
             title="Optional">
         <span id="state_allowed_uses_python">
 <a href="#state_allowed_uses_python" style="color: inherit; text-decoration: inherit;">allowed_<wbr>uses</a>
@@ -1555,8 +1393,7 @@ certificate will become invalid.
     </dt>
     <dd>{{% md %}}List of keywords each describing a use that is permitted
 for the issued certificate. The valid keywords are listed below.
-{{% /md %}}</dd>
-    <dt class="property-optional"
+{{% /md %}}</dd><dt class="property-optional"
             title="Optional">
         <span id="state_cert_pem_python">
 <a href="#state_cert_pem_python" style="color: inherit; text-decoration: inherit;">cert_<wbr>pem</a>
@@ -1565,8 +1402,7 @@ for the issued certificate. The valid keywords are listed below.
         <span class="property-type">str</span>
     </dt>
     <dd>{{% md %}}The certificate data in PEM format.
-{{% /md %}}</dd>
-    <dt class="property-optional"
+{{% /md %}}</dd><dt class="property-optional"
             title="Optional">
         <span id="state_dns_names_python">
 <a href="#state_dns_names_python" style="color: inherit; text-decoration: inherit;">dns_<wbr>names</a>
@@ -1575,8 +1411,7 @@ for the issued certificate. The valid keywords are listed below.
         <span class="property-type">Sequence[str]</span>
     </dt>
     <dd>{{% md %}}List of DNS names for which a certificate is being requested.
-{{% /md %}}</dd>
-    <dt class="property-optional"
+{{% /md %}}</dd><dt class="property-optional"
             title="Optional">
         <span id="state_early_renewal_hours_python">
 <a href="#state_early_renewal_hours_python" style="color: inherit; text-decoration: inherit;">early_<wbr>renewal_<wbr>hours</a>
@@ -1585,8 +1420,7 @@ for the issued certificate. The valid keywords are listed below.
         <span class="property-type">int</span>
     </dt>
     <dd>{{% md %}}Number of hours before the certificates expiry when a new certificate will be generated
-{{% /md %}}</dd>
-    <dt class="property-optional"
+{{% /md %}}</dd><dt class="property-optional"
             title="Optional">
         <span id="state_ip_addresses_python">
 <a href="#state_ip_addresses_python" style="color: inherit; text-decoration: inherit;">ip_<wbr>addresses</a>
@@ -1595,8 +1429,7 @@ for the issued certificate. The valid keywords are listed below.
         <span class="property-type">Sequence[str]</span>
     </dt>
     <dd>{{% md %}}List of IP addresses for which a certificate is being requested.
-{{% /md %}}</dd>
-    <dt class="property-optional"
+{{% /md %}}</dd><dt class="property-optional"
             title="Optional">
         <span id="state_is_ca_certificate_python">
 <a href="#state_is_ca_certificate_python" style="color: inherit; text-decoration: inherit;">is_<wbr>ca_<wbr>certificate</a>
@@ -1607,8 +1440,7 @@ for the issued certificate. The valid keywords are listed below.
     <dd>{{% md %}}Boolean controlling whether the CA flag will be set in the
 generated certificate. Defaults to `false`, meaning that the certificate does not represent
 a certificate authority.
-{{% /md %}}</dd>
-    <dt class="property-optional"
+{{% /md %}}</dd><dt class="property-optional"
             title="Optional">
         <span id="state_key_algorithm_python">
 <a href="#state_key_algorithm_python" style="color: inherit; text-decoration: inherit;">key_<wbr>algorithm</a>
@@ -1618,8 +1450,7 @@ a certificate authority.
     </dt>
     <dd>{{% md %}}The name of the algorithm for the key provided
 in `private_key_pem`.
-{{% /md %}}</dd>
-    <dt class="property-optional"
+{{% /md %}}</dd><dt class="property-optional"
             title="Optional">
         <span id="state_private_key_pem_python">
 <a href="#state_private_key_pem_python" style="color: inherit; text-decoration: inherit;">private_<wbr>key_<wbr>pem</a>
@@ -1628,8 +1459,7 @@ in `private_key_pem`.
         <span class="property-type">str</span>
     </dt>
     <dd>{{% md %}}PEM-encoded private key that the certificate will belong to
-{{% /md %}}</dd>
-    <dt class="property-optional"
+{{% /md %}}</dd><dt class="property-optional"
             title="Optional">
         <span id="state_ready_for_renewal_python">
 <a href="#state_ready_for_renewal_python" style="color: inherit; text-decoration: inherit;">ready_<wbr>for_<wbr>renewal</a>
@@ -1637,8 +1467,7 @@ in `private_key_pem`.
         <span class="property-indicator"></span>
         <span class="property-type">bool</span>
     </dt>
-    <dd>{{% md %}}{{% /md %}}</dd>
-    <dt class="property-optional"
+    <dd>{{% md %}}{{% /md %}}</dd><dt class="property-optional"
             title="Optional">
         <span id="state_set_subject_key_id_python">
 <a href="#state_set_subject_key_id_python" style="color: inherit; text-decoration: inherit;">set_<wbr>subject_<wbr>key_<wbr>id</a>
@@ -1649,8 +1478,7 @@ in `private_key_pem`.
     <dd>{{% md %}}If `true`, the certificate will include
 the subject key identifier. Defaults to `false`, in which case the subject
 key identifier is not set at all.
-{{% /md %}}</dd>
-    <dt class="property-optional"
+{{% /md %}}</dd><dt class="property-optional"
             title="Optional">
         <span id="state_subjects_python">
 <a href="#state_subjects_python" style="color: inherit; text-decoration: inherit;">subjects</a>
@@ -1661,8 +1489,7 @@ key identifier is not set at all.
     <dd>{{% md %}}The subject for which a certificate is being requested.
 This is a nested configuration block whose structure matches the
 corresponding block for `tls.CertRequest`.
-{{% /md %}}</dd>
-    <dt class="property-optional"
+{{% /md %}}</dd><dt class="property-optional"
             title="Optional">
         <span id="state_uris_python">
 <a href="#state_uris_python" style="color: inherit; text-decoration: inherit;">uris</a>
@@ -1671,8 +1498,7 @@ corresponding block for `tls.CertRequest`.
         <span class="property-type">Sequence[str]</span>
     </dt>
     <dd>{{% md %}}List of URIs for which a certificate is being requested.
-{{% /md %}}</dd>
-    <dt class="property-optional"
+{{% /md %}}</dd><dt class="property-optional"
             title="Optional">
         <span id="state_validity_end_time_python">
 <a href="#state_validity_end_time_python" style="color: inherit; text-decoration: inherit;">validity_<wbr>end_<wbr>time</a>
@@ -1682,8 +1508,7 @@ corresponding block for `tls.CertRequest`.
     </dt>
     <dd>{{% md %}}The time until which the certificate is invalid, as an
 [RFC3339](https://tools.ietf.org/html/rfc3339) timestamp.
-{{% /md %}}</dd>
-    <dt class="property-optional"
+{{% /md %}}</dd><dt class="property-optional"
             title="Optional">
         <span id="state_validity_period_hours_python">
 <a href="#state_validity_period_hours_python" style="color: inherit; text-decoration: inherit;">validity_<wbr>period_<wbr>hours</a>
@@ -1693,8 +1518,7 @@ corresponding block for `tls.CertRequest`.
     </dt>
     <dd>{{% md %}}The number of hours after initial issuing that the
 certificate will become invalid.
-{{% /md %}}</dd>
-    <dt class="property-optional"
+{{% /md %}}</dd><dt class="property-optional"
             title="Optional">
         <span id="state_validity_start_time_python">
 <a href="#state_validity_start_time_python" style="color: inherit; text-decoration: inherit;">validity_<wbr>start_<wbr>time</a>
@@ -1704,8 +1528,7 @@ certificate will become invalid.
     </dt>
     <dd>{{% md %}}The time after which the certificate is valid, as an
 [RFC3339](https://tools.ietf.org/html/rfc3339) timestamp.
-{{% /md %}}</dd>
-</dl>
+{{% /md %}}</dd></dl>
 {{% /choosable %}}
 
 
@@ -1720,9 +1543,7 @@ certificate will become invalid.
 <h4 id="selfsignedcertsubject">Self<wbr>Signed<wbr>Cert<wbr>Subject</h4>
 
 {{% choosable language csharp %}}
-<dl class="resources-properties">
-
-    <dt class="property-optional"
+<dl class="resources-properties"><dt class="property-optional"
             title="Optional">
         <span id="commonname_csharp">
 <a href="#commonname_csharp" style="color: inherit; text-decoration: inherit;">Common<wbr>Name</a>
@@ -1730,8 +1551,7 @@ certificate will become invalid.
         <span class="property-indicator"></span>
         <span class="property-type">string</span>
     </dt>
-    <dd>{{% md %}}{{% /md %}}</dd>
-    <dt class="property-optional"
+    <dd>{{% md %}}{{% /md %}}</dd><dt class="property-optional"
             title="Optional">
         <span id="country_csharp">
 <a href="#country_csharp" style="color: inherit; text-decoration: inherit;">Country</a>
@@ -1739,8 +1559,7 @@ certificate will become invalid.
         <span class="property-indicator"></span>
         <span class="property-type">string</span>
     </dt>
-    <dd>{{% md %}}{{% /md %}}</dd>
-    <dt class="property-optional"
+    <dd>{{% md %}}{{% /md %}}</dd><dt class="property-optional"
             title="Optional">
         <span id="locality_csharp">
 <a href="#locality_csharp" style="color: inherit; text-decoration: inherit;">Locality</a>
@@ -1748,8 +1567,7 @@ certificate will become invalid.
         <span class="property-indicator"></span>
         <span class="property-type">string</span>
     </dt>
-    <dd>{{% md %}}{{% /md %}}</dd>
-    <dt class="property-optional"
+    <dd>{{% md %}}{{% /md %}}</dd><dt class="property-optional"
             title="Optional">
         <span id="organization_csharp">
 <a href="#organization_csharp" style="color: inherit; text-decoration: inherit;">Organization</a>
@@ -1757,8 +1575,7 @@ certificate will become invalid.
         <span class="property-indicator"></span>
         <span class="property-type">string</span>
     </dt>
-    <dd>{{% md %}}{{% /md %}}</dd>
-    <dt class="property-optional"
+    <dd>{{% md %}}{{% /md %}}</dd><dt class="property-optional"
             title="Optional">
         <span id="organizationalunit_csharp">
 <a href="#organizationalunit_csharp" style="color: inherit; text-decoration: inherit;">Organizational<wbr>Unit</a>
@@ -1766,8 +1583,7 @@ certificate will become invalid.
         <span class="property-indicator"></span>
         <span class="property-type">string</span>
     </dt>
-    <dd>{{% md %}}{{% /md %}}</dd>
-    <dt class="property-optional"
+    <dd>{{% md %}}{{% /md %}}</dd><dt class="property-optional"
             title="Optional">
         <span id="postalcode_csharp">
 <a href="#postalcode_csharp" style="color: inherit; text-decoration: inherit;">Postal<wbr>Code</a>
@@ -1775,8 +1591,7 @@ certificate will become invalid.
         <span class="property-indicator"></span>
         <span class="property-type">string</span>
     </dt>
-    <dd>{{% md %}}{{% /md %}}</dd>
-    <dt class="property-optional"
+    <dd>{{% md %}}{{% /md %}}</dd><dt class="property-optional"
             title="Optional">
         <span id="province_csharp">
 <a href="#province_csharp" style="color: inherit; text-decoration: inherit;">Province</a>
@@ -1784,8 +1599,7 @@ certificate will become invalid.
         <span class="property-indicator"></span>
         <span class="property-type">string</span>
     </dt>
-    <dd>{{% md %}}{{% /md %}}</dd>
-    <dt class="property-optional"
+    <dd>{{% md %}}{{% /md %}}</dd><dt class="property-optional"
             title="Optional">
         <span id="serialnumber_csharp">
 <a href="#serialnumber_csharp" style="color: inherit; text-decoration: inherit;">Serial<wbr>Number</a>
@@ -1793,8 +1607,7 @@ certificate will become invalid.
         <span class="property-indicator"></span>
         <span class="property-type">string</span>
     </dt>
-    <dd>{{% md %}}{{% /md %}}</dd>
-    <dt class="property-optional"
+    <dd>{{% md %}}{{% /md %}}</dd><dt class="property-optional"
             title="Optional">
         <span id="streetaddresses_csharp">
 <a href="#streetaddresses_csharp" style="color: inherit; text-decoration: inherit;">Street<wbr>Addresses</a>
@@ -1802,14 +1615,11 @@ certificate will become invalid.
         <span class="property-indicator"></span>
         <span class="property-type">List&lt;string&gt;</span>
     </dt>
-    <dd>{{% md %}}{{% /md %}}</dd>
-</dl>
+    <dd>{{% md %}}{{% /md %}}</dd></dl>
 {{% /choosable %}}
 
 {{% choosable language go %}}
-<dl class="resources-properties">
-
-    <dt class="property-optional"
+<dl class="resources-properties"><dt class="property-optional"
             title="Optional">
         <span id="commonname_go">
 <a href="#commonname_go" style="color: inherit; text-decoration: inherit;">Common<wbr>Name</a>
@@ -1817,8 +1627,7 @@ certificate will become invalid.
         <span class="property-indicator"></span>
         <span class="property-type">string</span>
     </dt>
-    <dd>{{% md %}}{{% /md %}}</dd>
-    <dt class="property-optional"
+    <dd>{{% md %}}{{% /md %}}</dd><dt class="property-optional"
             title="Optional">
         <span id="country_go">
 <a href="#country_go" style="color: inherit; text-decoration: inherit;">Country</a>
@@ -1826,8 +1635,7 @@ certificate will become invalid.
         <span class="property-indicator"></span>
         <span class="property-type">string</span>
     </dt>
-    <dd>{{% md %}}{{% /md %}}</dd>
-    <dt class="property-optional"
+    <dd>{{% md %}}{{% /md %}}</dd><dt class="property-optional"
             title="Optional">
         <span id="locality_go">
 <a href="#locality_go" style="color: inherit; text-decoration: inherit;">Locality</a>
@@ -1835,8 +1643,7 @@ certificate will become invalid.
         <span class="property-indicator"></span>
         <span class="property-type">string</span>
     </dt>
-    <dd>{{% md %}}{{% /md %}}</dd>
-    <dt class="property-optional"
+    <dd>{{% md %}}{{% /md %}}</dd><dt class="property-optional"
             title="Optional">
         <span id="organization_go">
 <a href="#organization_go" style="color: inherit; text-decoration: inherit;">Organization</a>
@@ -1844,8 +1651,7 @@ certificate will become invalid.
         <span class="property-indicator"></span>
         <span class="property-type">string</span>
     </dt>
-    <dd>{{% md %}}{{% /md %}}</dd>
-    <dt class="property-optional"
+    <dd>{{% md %}}{{% /md %}}</dd><dt class="property-optional"
             title="Optional">
         <span id="organizationalunit_go">
 <a href="#organizationalunit_go" style="color: inherit; text-decoration: inherit;">Organizational<wbr>Unit</a>
@@ -1853,8 +1659,7 @@ certificate will become invalid.
         <span class="property-indicator"></span>
         <span class="property-type">string</span>
     </dt>
-    <dd>{{% md %}}{{% /md %}}</dd>
-    <dt class="property-optional"
+    <dd>{{% md %}}{{% /md %}}</dd><dt class="property-optional"
             title="Optional">
         <span id="postalcode_go">
 <a href="#postalcode_go" style="color: inherit; text-decoration: inherit;">Postal<wbr>Code</a>
@@ -1862,8 +1667,7 @@ certificate will become invalid.
         <span class="property-indicator"></span>
         <span class="property-type">string</span>
     </dt>
-    <dd>{{% md %}}{{% /md %}}</dd>
-    <dt class="property-optional"
+    <dd>{{% md %}}{{% /md %}}</dd><dt class="property-optional"
             title="Optional">
         <span id="province_go">
 <a href="#province_go" style="color: inherit; text-decoration: inherit;">Province</a>
@@ -1871,8 +1675,7 @@ certificate will become invalid.
         <span class="property-indicator"></span>
         <span class="property-type">string</span>
     </dt>
-    <dd>{{% md %}}{{% /md %}}</dd>
-    <dt class="property-optional"
+    <dd>{{% md %}}{{% /md %}}</dd><dt class="property-optional"
             title="Optional">
         <span id="serialnumber_go">
 <a href="#serialnumber_go" style="color: inherit; text-decoration: inherit;">Serial<wbr>Number</a>
@@ -1880,8 +1683,7 @@ certificate will become invalid.
         <span class="property-indicator"></span>
         <span class="property-type">string</span>
     </dt>
-    <dd>{{% md %}}{{% /md %}}</dd>
-    <dt class="property-optional"
+    <dd>{{% md %}}{{% /md %}}</dd><dt class="property-optional"
             title="Optional">
         <span id="streetaddresses_go">
 <a href="#streetaddresses_go" style="color: inherit; text-decoration: inherit;">Street<wbr>Addresses</a>
@@ -1889,14 +1691,11 @@ certificate will become invalid.
         <span class="property-indicator"></span>
         <span class="property-type">[]string</span>
     </dt>
-    <dd>{{% md %}}{{% /md %}}</dd>
-</dl>
+    <dd>{{% md %}}{{% /md %}}</dd></dl>
 {{% /choosable %}}
 
 {{% choosable language nodejs %}}
-<dl class="resources-properties">
-
-    <dt class="property-optional"
+<dl class="resources-properties"><dt class="property-optional"
             title="Optional">
         <span id="commonname_nodejs">
 <a href="#commonname_nodejs" style="color: inherit; text-decoration: inherit;">common<wbr>Name</a>
@@ -1904,8 +1703,7 @@ certificate will become invalid.
         <span class="property-indicator"></span>
         <span class="property-type">string</span>
     </dt>
-    <dd>{{% md %}}{{% /md %}}</dd>
-    <dt class="property-optional"
+    <dd>{{% md %}}{{% /md %}}</dd><dt class="property-optional"
             title="Optional">
         <span id="country_nodejs">
 <a href="#country_nodejs" style="color: inherit; text-decoration: inherit;">country</a>
@@ -1913,8 +1711,7 @@ certificate will become invalid.
         <span class="property-indicator"></span>
         <span class="property-type">string</span>
     </dt>
-    <dd>{{% md %}}{{% /md %}}</dd>
-    <dt class="property-optional"
+    <dd>{{% md %}}{{% /md %}}</dd><dt class="property-optional"
             title="Optional">
         <span id="locality_nodejs">
 <a href="#locality_nodejs" style="color: inherit; text-decoration: inherit;">locality</a>
@@ -1922,8 +1719,7 @@ certificate will become invalid.
         <span class="property-indicator"></span>
         <span class="property-type">string</span>
     </dt>
-    <dd>{{% md %}}{{% /md %}}</dd>
-    <dt class="property-optional"
+    <dd>{{% md %}}{{% /md %}}</dd><dt class="property-optional"
             title="Optional">
         <span id="organization_nodejs">
 <a href="#organization_nodejs" style="color: inherit; text-decoration: inherit;">organization</a>
@@ -1931,8 +1727,7 @@ certificate will become invalid.
         <span class="property-indicator"></span>
         <span class="property-type">string</span>
     </dt>
-    <dd>{{% md %}}{{% /md %}}</dd>
-    <dt class="property-optional"
+    <dd>{{% md %}}{{% /md %}}</dd><dt class="property-optional"
             title="Optional">
         <span id="organizationalunit_nodejs">
 <a href="#organizationalunit_nodejs" style="color: inherit; text-decoration: inherit;">organizational<wbr>Unit</a>
@@ -1940,8 +1735,7 @@ certificate will become invalid.
         <span class="property-indicator"></span>
         <span class="property-type">string</span>
     </dt>
-    <dd>{{% md %}}{{% /md %}}</dd>
-    <dt class="property-optional"
+    <dd>{{% md %}}{{% /md %}}</dd><dt class="property-optional"
             title="Optional">
         <span id="postalcode_nodejs">
 <a href="#postalcode_nodejs" style="color: inherit; text-decoration: inherit;">postal<wbr>Code</a>
@@ -1949,8 +1743,7 @@ certificate will become invalid.
         <span class="property-indicator"></span>
         <span class="property-type">string</span>
     </dt>
-    <dd>{{% md %}}{{% /md %}}</dd>
-    <dt class="property-optional"
+    <dd>{{% md %}}{{% /md %}}</dd><dt class="property-optional"
             title="Optional">
         <span id="province_nodejs">
 <a href="#province_nodejs" style="color: inherit; text-decoration: inherit;">province</a>
@@ -1958,8 +1751,7 @@ certificate will become invalid.
         <span class="property-indicator"></span>
         <span class="property-type">string</span>
     </dt>
-    <dd>{{% md %}}{{% /md %}}</dd>
-    <dt class="property-optional"
+    <dd>{{% md %}}{{% /md %}}</dd><dt class="property-optional"
             title="Optional">
         <span id="serialnumber_nodejs">
 <a href="#serialnumber_nodejs" style="color: inherit; text-decoration: inherit;">serial<wbr>Number</a>
@@ -1967,8 +1759,7 @@ certificate will become invalid.
         <span class="property-indicator"></span>
         <span class="property-type">string</span>
     </dt>
-    <dd>{{% md %}}{{% /md %}}</dd>
-    <dt class="property-optional"
+    <dd>{{% md %}}{{% /md %}}</dd><dt class="property-optional"
             title="Optional">
         <span id="streetaddresses_nodejs">
 <a href="#streetaddresses_nodejs" style="color: inherit; text-decoration: inherit;">street<wbr>Addresses</a>
@@ -1976,14 +1767,11 @@ certificate will become invalid.
         <span class="property-indicator"></span>
         <span class="property-type">string[]</span>
     </dt>
-    <dd>{{% md %}}{{% /md %}}</dd>
-</dl>
+    <dd>{{% md %}}{{% /md %}}</dd></dl>
 {{% /choosable %}}
 
 {{% choosable language python %}}
-<dl class="resources-properties">
-
-    <dt class="property-optional"
+<dl class="resources-properties"><dt class="property-optional"
             title="Optional">
         <span id="common_name_python">
 <a href="#common_name_python" style="color: inherit; text-decoration: inherit;">common_<wbr>name</a>
@@ -1991,8 +1779,7 @@ certificate will become invalid.
         <span class="property-indicator"></span>
         <span class="property-type">str</span>
     </dt>
-    <dd>{{% md %}}{{% /md %}}</dd>
-    <dt class="property-optional"
+    <dd>{{% md %}}{{% /md %}}</dd><dt class="property-optional"
             title="Optional">
         <span id="country_python">
 <a href="#country_python" style="color: inherit; text-decoration: inherit;">country</a>
@@ -2000,8 +1787,7 @@ certificate will become invalid.
         <span class="property-indicator"></span>
         <span class="property-type">str</span>
     </dt>
-    <dd>{{% md %}}{{% /md %}}</dd>
-    <dt class="property-optional"
+    <dd>{{% md %}}{{% /md %}}</dd><dt class="property-optional"
             title="Optional">
         <span id="locality_python">
 <a href="#locality_python" style="color: inherit; text-decoration: inherit;">locality</a>
@@ -2009,8 +1795,7 @@ certificate will become invalid.
         <span class="property-indicator"></span>
         <span class="property-type">str</span>
     </dt>
-    <dd>{{% md %}}{{% /md %}}</dd>
-    <dt class="property-optional"
+    <dd>{{% md %}}{{% /md %}}</dd><dt class="property-optional"
             title="Optional">
         <span id="organization_python">
 <a href="#organization_python" style="color: inherit; text-decoration: inherit;">organization</a>
@@ -2018,8 +1803,7 @@ certificate will become invalid.
         <span class="property-indicator"></span>
         <span class="property-type">str</span>
     </dt>
-    <dd>{{% md %}}{{% /md %}}</dd>
-    <dt class="property-optional"
+    <dd>{{% md %}}{{% /md %}}</dd><dt class="property-optional"
             title="Optional">
         <span id="organizational_unit_python">
 <a href="#organizational_unit_python" style="color: inherit; text-decoration: inherit;">organizational_<wbr>unit</a>
@@ -2027,8 +1811,7 @@ certificate will become invalid.
         <span class="property-indicator"></span>
         <span class="property-type">str</span>
     </dt>
-    <dd>{{% md %}}{{% /md %}}</dd>
-    <dt class="property-optional"
+    <dd>{{% md %}}{{% /md %}}</dd><dt class="property-optional"
             title="Optional">
         <span id="postal_code_python">
 <a href="#postal_code_python" style="color: inherit; text-decoration: inherit;">postal_<wbr>code</a>
@@ -2036,8 +1819,7 @@ certificate will become invalid.
         <span class="property-indicator"></span>
         <span class="property-type">str</span>
     </dt>
-    <dd>{{% md %}}{{% /md %}}</dd>
-    <dt class="property-optional"
+    <dd>{{% md %}}{{% /md %}}</dd><dt class="property-optional"
             title="Optional">
         <span id="province_python">
 <a href="#province_python" style="color: inherit; text-decoration: inherit;">province</a>
@@ -2045,8 +1827,7 @@ certificate will become invalid.
         <span class="property-indicator"></span>
         <span class="property-type">str</span>
     </dt>
-    <dd>{{% md %}}{{% /md %}}</dd>
-    <dt class="property-optional"
+    <dd>{{% md %}}{{% /md %}}</dd><dt class="property-optional"
             title="Optional">
         <span id="serial_number_python">
 <a href="#serial_number_python" style="color: inherit; text-decoration: inherit;">serial_<wbr>number</a>
@@ -2054,8 +1835,7 @@ certificate will become invalid.
         <span class="property-indicator"></span>
         <span class="property-type">str</span>
     </dt>
-    <dd>{{% md %}}{{% /md %}}</dd>
-    <dt class="property-optional"
+    <dd>{{% md %}}{{% /md %}}</dd><dt class="property-optional"
             title="Optional">
         <span id="street_addresses_python">
 <a href="#street_addresses_python" style="color: inherit; text-decoration: inherit;">street_<wbr>addresses</a>
@@ -2063,8 +1843,7 @@ certificate will become invalid.
         <span class="property-indicator"></span>
         <span class="property-type">Sequence[str]</span>
     </dt>
-    <dd>{{% md %}}{{% /md %}}</dd>
-</dl>
+    <dd>{{% md %}}{{% /md %}}</dd></dl>
 {{% /choosable %}}
 
 
@@ -2075,6 +1854,6 @@ certificate will become invalid.
 	<dt>License</dt>
 	<dd>Apache-2.0</dd>
 	<dt>Notes</dt>
-	<dd>This Pulumi package is based on the [`tls` Terraform Provider](https://github.com/terraform-providers/terraform-provider-tls).</dd>
+	<dd>{{% md %}}This Pulumi package is based on the [`tls` Terraform Provider](https://github.com/terraform-providers/terraform-provider-tls).{{% /md %}}</dd>
 </dl>
 

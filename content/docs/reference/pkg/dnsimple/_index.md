@@ -25,7 +25,7 @@ A Pulumi package for creating and managing dnsimple cloud resources.
 	<dt>License</dt>
 	<dd>Apache-2.0</dd>
 	<dt>Notes</dt>
-	<dd>This Pulumi package is based on the [`dnsimple` Terraform Provider](https://github.com/terraform-providers/terraform-provider-dnsimple).</dd>
+	<dd>{{% md %}}This Pulumi package is based on the [`dnsimple` Terraform Provider](https://github.com/terraform-providers/terraform-provider-dnsimple).{{% /md %}}</dd>
 	<dt>Version</dt>
 	<dd>2.5.1</dd>
 </dl>

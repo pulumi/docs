@@ -12,7 +12,6 @@ no_edit_this_page: true
     <a class="flex flex-wrap items-center rounded text-xs text-white bg-blue-600 border-2 border-blue-600 px-2 mr-2 whitespace-no-wrap hover:text-white" style="height: 32px" href="https://github.com/pulumi/examples/tree/master/aws-go-console-slack-notification" target="_blank">
         <span><i class="fab fa-github pr-2"></i> View Code</span>
     </a>
-
 </p>
 
 

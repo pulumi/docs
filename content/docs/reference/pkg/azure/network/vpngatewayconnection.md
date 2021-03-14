@@ -36,9 +36,7 @@ Manages a VPN Gateway Connection.
 
 {{% choosable language nodejs %}}
 
-<dl class="resources-properties">
-  
-    <dt
+<dl class="resources-properties"><dt
         class="property-required" title="Required">
         <span>name</span>
         <span class="property-indicator"></span>
@@ -46,9 +44,7 @@ Manages a VPN Gateway Connection.
     </dt>
     <dd>
       The unique name of the resource.
-    </dd>
-  
-    <dt
+    </dd><dt
         class="property-required" title="Required">
         <span>args</span>
         <span class="property-indicator"></span>
@@ -56,9 +52,7 @@ Manages a VPN Gateway Connection.
     </dt>
     <dd>
       The arguments to resource properties.
-    </dd>
-  
-    <dt
+    </dd><dt
         class="property-optional" title="Optional">
         <span>opts</span>
         <span class="property-indicator"></span>
@@ -66,10 +60,7 @@ Manages a VPN Gateway Connection.
     </dt>
     <dd>
       Bag of options to control resource&#39;s behavior.
-    </dd>
-  
-
-</dl>
+    </dd></dl>
 
 {{% /choosable %}}
 
@@ -95,9 +86,7 @@ Manages a VPN Gateway Connection.
 
 {{% choosable language go %}}
 
-<dl class="resources-properties">
-  
-    <dt
+<dl class="resources-properties"><dt
         class="property-optional" title="Optional">
         <span>ctx</span>
         <span class="property-indicator"></span>
@@ -105,9 +94,7 @@ Manages a VPN Gateway Connection.
     </dt>
     <dd>
       Context object for the current deployment.
-    </dd>
-  
-    <dt
+    </dd><dt
         class="property-required" title="Required">
         <span>name</span>
         <span class="property-indicator"></span>
@@ -115,9 +102,7 @@ Manages a VPN Gateway Connection.
     </dt>
     <dd>
       The unique name of the resource.
-    </dd>
-  
-    <dt
+    </dd><dt
         class="property-required" title="Required">
         <span>args</span>
         <span class="property-indicator"></span>
@@ -125,9 +110,7 @@ Manages a VPN Gateway Connection.
     </dt>
     <dd>
       The arguments to resource properties.
-    </dd>
-  
-    <dt
+    </dd><dt
         class="property-optional" title="Optional">
         <span>opts</span>
         <span class="property-indicator"></span>
@@ -135,18 +118,13 @@ Manages a VPN Gateway Connection.
     </dt>
     <dd>
       Bag of options to control resource&#39;s behavior.
-    </dd>
-  
-
-</dl>
+    </dd></dl>
 
 {{% /choosable %}}
 
 {{% choosable language csharp %}}
 
-<dl class="resources-properties">
-  
-    <dt
+<dl class="resources-properties"><dt
         class="property-required" title="Required">
         <span>name</span>
         <span class="property-indicator"></span>
@@ -154,9 +132,7 @@ Manages a VPN Gateway Connection.
     </dt>
     <dd>
       The unique name of the resource.
-    </dd>
-  
-    <dt
+    </dd><dt
         class="property-required" title="Required">
         <span>args</span>
         <span class="property-indicator"></span>
@@ -164,9 +140,7 @@ Manages a VPN Gateway Connection.
     </dt>
     <dd>
       The arguments to resource properties.
-    </dd>
-  
-    <dt
+    </dd><dt
         class="property-optional" title="Optional">
         <span>opts</span>
         <span class="property-indicator"></span>
@@ -174,10 +148,7 @@ Manages a VPN Gateway Connection.
     </dt>
     <dd>
       Bag of options to control resource&#39;s behavior.
-    </dd>
-  
-
-</dl>
+    </dd></dl>
 
 {{% /choosable %}}
 
@@ -192,9 +163,7 @@ The VpnGatewayConnection resource accepts the following [input]({{< relref "/doc
 
 
 {{% choosable language csharp %}}
-<dl class="resources-properties">
-
-    <dt class="property-required"
+<dl class="resources-properties"><dt class="property-required"
             title="Required">
         <span id="remotevpnsiteid_csharp">
 <a href="#remotevpnsiteid_csharp" style="color: inherit; text-decoration: inherit;">Remote<wbr>Vpn<wbr>Site<wbr>Id</a>
@@ -203,8 +172,7 @@ The VpnGatewayConnection resource accepts the following [input]({{< relref "/doc
         <span class="property-type">string</span>
     </dt>
     <dd>{{% md %}}The ID of the remote VPN Site, which will connect to the VPN Gateway. Changing this forces a new VPN Gateway Connection to be created.
-{{% /md %}}</dd>
-    <dt class="property-required"
+{{% /md %}}</dd><dt class="property-required"
             title="Required">
         <span id="vpngatewayid_csharp">
 <a href="#vpngatewayid_csharp" style="color: inherit; text-decoration: inherit;">Vpn<wbr>Gateway<wbr>Id</a>
@@ -213,8 +181,7 @@ The VpnGatewayConnection resource accepts the following [input]({{< relref "/doc
         <span class="property-type">string</span>
     </dt>
     <dd>{{% md %}}The ID of the VPN Gateway that this VPN Gateway Connection belongs to. Changing this forces a new VPN Gateway Connection to be created.
-{{% /md %}}</dd>
-    <dt class="property-required"
+{{% /md %}}</dd><dt class="property-required"
             title="Required">
         <span id="vpnlinks_csharp">
 <a href="#vpnlinks_csharp" style="color: inherit; text-decoration: inherit;">Vpn<wbr>Links</a>
@@ -223,8 +190,7 @@ The VpnGatewayConnection resource accepts the following [input]({{< relref "/doc
         <span class="property-type"><a href="#vpngatewayconnectionvpnlink">List&lt;Vpn<wbr>Gateway<wbr>Connection<wbr>Vpn<wbr>Link<wbr>Args&gt;</a></span>
     </dt>
     <dd>{{% md %}}One or more `vpn_link` blocks as defined below.
-{{% /md %}}</dd>
-    <dt class="property-optional"
+{{% /md %}}</dd><dt class="property-optional"
             title="Optional">
         <span id="internetsecurityenabled_csharp">
 <a href="#internetsecurityenabled_csharp" style="color: inherit; text-decoration: inherit;">Internet<wbr>Security<wbr>Enabled</a>
@@ -233,8 +199,7 @@ The VpnGatewayConnection resource accepts the following [input]({{< relref "/doc
         <span class="property-type">bool</span>
     </dt>
     <dd>{{% md %}}Whether Internet Security is enabled for this VPN Connection. Defaults to `false`.
-{{% /md %}}</dd>
-    <dt class="property-optional"
+{{% /md %}}</dd><dt class="property-optional"
             title="Optional">
         <span id="name_csharp">
 <a href="#name_csharp" style="color: inherit; text-decoration: inherit;">Name</a>
@@ -243,8 +208,7 @@ The VpnGatewayConnection resource accepts the following [input]({{< relref "/doc
         <span class="property-type">string</span>
     </dt>
     <dd>{{% md %}}The name which should be used for this VPN Gateway Connection. Changing this forces a new VPN Gateway Connection to be created.
-{{% /md %}}</dd>
-    <dt class="property-optional"
+{{% /md %}}</dd><dt class="property-optional"
             title="Optional">
         <span id="routings_csharp">
 <a href="#routings_csharp" style="color: inherit; text-decoration: inherit;">Routings</a>
@@ -253,14 +217,11 @@ The VpnGatewayConnection resource accepts the following [input]({{< relref "/doc
         <span class="property-type"><a href="#vpngatewayconnectionrouting">List&lt;Vpn<wbr>Gateway<wbr>Connection<wbr>Routing<wbr>Args&gt;</a></span>
     </dt>
     <dd>{{% md %}}A `routing` block as defined below. If this is not specified, there will be a default route table created implicitly.
-{{% /md %}}</dd>
-</dl>
+{{% /md %}}</dd></dl>
 {{% /choosable %}}
 
 {{% choosable language go %}}
-<dl class="resources-properties">
-
-    <dt class="property-required"
+<dl class="resources-properties"><dt class="property-required"
             title="Required">
         <span id="remotevpnsiteid_go">
 <a href="#remotevpnsiteid_go" style="color: inherit; text-decoration: inherit;">Remote<wbr>Vpn<wbr>Site<wbr>Id</a>
@@ -269,8 +230,7 @@ The VpnGatewayConnection resource accepts the following [input]({{< relref "/doc
         <span class="property-type">string</span>
     </dt>
     <dd>{{% md %}}The ID of the remote VPN Site, which will connect to the VPN Gateway. Changing this forces a new VPN Gateway Connection to be created.
-{{% /md %}}</dd>
-    <dt class="property-required"
+{{% /md %}}</dd><dt class="property-required"
             title="Required">
         <span id="vpngatewayid_go">
 <a href="#vpngatewayid_go" style="color: inherit; text-decoration: inherit;">Vpn<wbr>Gateway<wbr>Id</a>
@@ -279,8 +239,7 @@ The VpnGatewayConnection resource accepts the following [input]({{< relref "/doc
         <span class="property-type">string</span>
     </dt>
     <dd>{{% md %}}The ID of the VPN Gateway that this VPN Gateway Connection belongs to. Changing this forces a new VPN Gateway Connection to be created.
-{{% /md %}}</dd>
-    <dt class="property-required"
+{{% /md %}}</dd><dt class="property-required"
             title="Required">
         <span id="vpnlinks_go">
 <a href="#vpnlinks_go" style="color: inherit; text-decoration: inherit;">Vpn<wbr>Links</a>
@@ -289,8 +248,7 @@ The VpnGatewayConnection resource accepts the following [input]({{< relref "/doc
         <span class="property-type"><a href="#vpngatewayconnectionvpnlink">[]Vpn<wbr>Gateway<wbr>Connection<wbr>Vpn<wbr>Link</a></span>
     </dt>
     <dd>{{% md %}}One or more `vpn_link` blocks as defined below.
-{{% /md %}}</dd>
-    <dt class="property-optional"
+{{% /md %}}</dd><dt class="property-optional"
             title="Optional">
         <span id="internetsecurityenabled_go">
 <a href="#internetsecurityenabled_go" style="color: inherit; text-decoration: inherit;">Internet<wbr>Security<wbr>Enabled</a>
@@ -299,8 +257,7 @@ The VpnGatewayConnection resource accepts the following [input]({{< relref "/doc
         <span class="property-type">bool</span>
     </dt>
     <dd>{{% md %}}Whether Internet Security is enabled for this VPN Connection. Defaults to `false`.
-{{% /md %}}</dd>
-    <dt class="property-optional"
+{{% /md %}}</dd><dt class="property-optional"
             title="Optional">
         <span id="name_go">
 <a href="#name_go" style="color: inherit; text-decoration: inherit;">Name</a>
@@ -309,8 +266,7 @@ The VpnGatewayConnection resource accepts the following [input]({{< relref "/doc
         <span class="property-type">string</span>
     </dt>
     <dd>{{% md %}}The name which should be used for this VPN Gateway Connection. Changing this forces a new VPN Gateway Connection to be created.
-{{% /md %}}</dd>
-    <dt class="property-optional"
+{{% /md %}}</dd><dt class="property-optional"
             title="Optional">
         <span id="routings_go">
 <a href="#routings_go" style="color: inherit; text-decoration: inherit;">Routings</a>
@@ -319,14 +275,11 @@ The VpnGatewayConnection resource accepts the following [input]({{< relref "/doc
         <span class="property-type"><a href="#vpngatewayconnectionrouting">[]Vpn<wbr>Gateway<wbr>Connection<wbr>Routing</a></span>
     </dt>
     <dd>{{% md %}}A `routing` block as defined below. If this is not specified, there will be a default route table created implicitly.
-{{% /md %}}</dd>
-</dl>
+{{% /md %}}</dd></dl>
 {{% /choosable %}}
 
 {{% choosable language nodejs %}}
-<dl class="resources-properties">
-
-    <dt class="property-required"
+<dl class="resources-properties"><dt class="property-required"
             title="Required">
         <span id="remotevpnsiteid_nodejs">
 <a href="#remotevpnsiteid_nodejs" style="color: inherit; text-decoration: inherit;">remote<wbr>Vpn<wbr>Site<wbr>Id</a>
@@ -335,8 +288,7 @@ The VpnGatewayConnection resource accepts the following [input]({{< relref "/doc
         <span class="property-type">string</span>
     </dt>
     <dd>{{% md %}}The ID of the remote VPN Site, which will connect to the VPN Gateway. Changing this forces a new VPN Gateway Connection to be created.
-{{% /md %}}</dd>
-    <dt class="property-required"
+{{% /md %}}</dd><dt class="property-required"
             title="Required">
         <span id="vpngatewayid_nodejs">
 <a href="#vpngatewayid_nodejs" style="color: inherit; text-decoration: inherit;">vpn<wbr>Gateway<wbr>Id</a>
@@ -345,8 +297,7 @@ The VpnGatewayConnection resource accepts the following [input]({{< relref "/doc
         <span class="property-type">string</span>
     </dt>
     <dd>{{% md %}}The ID of the VPN Gateway that this VPN Gateway Connection belongs to. Changing this forces a new VPN Gateway Connection to be created.
-{{% /md %}}</dd>
-    <dt class="property-required"
+{{% /md %}}</dd><dt class="property-required"
             title="Required">
         <span id="vpnlinks_nodejs">
 <a href="#vpnlinks_nodejs" style="color: inherit; text-decoration: inherit;">vpn<wbr>Links</a>
@@ -355,8 +306,7 @@ The VpnGatewayConnection resource accepts the following [input]({{< relref "/doc
         <span class="property-type"><a href="#vpngatewayconnectionvpnlink">Vpn<wbr>Gateway<wbr>Connection<wbr>Vpn<wbr>Link[]</a></span>
     </dt>
     <dd>{{% md %}}One or more `vpn_link` blocks as defined below.
-{{% /md %}}</dd>
-    <dt class="property-optional"
+{{% /md %}}</dd><dt class="property-optional"
             title="Optional">
         <span id="internetsecurityenabled_nodejs">
 <a href="#internetsecurityenabled_nodejs" style="color: inherit; text-decoration: inherit;">internet<wbr>Security<wbr>Enabled</a>
@@ -365,8 +315,7 @@ The VpnGatewayConnection resource accepts the following [input]({{< relref "/doc
         <span class="property-type">boolean</span>
     </dt>
     <dd>{{% md %}}Whether Internet Security is enabled for this VPN Connection. Defaults to `false`.
-{{% /md %}}</dd>
-    <dt class="property-optional"
+{{% /md %}}</dd><dt class="property-optional"
             title="Optional">
         <span id="name_nodejs">
 <a href="#name_nodejs" style="color: inherit; text-decoration: inherit;">name</a>
@@ -375,8 +324,7 @@ The VpnGatewayConnection resource accepts the following [input]({{< relref "/doc
         <span class="property-type">string</span>
     </dt>
     <dd>{{% md %}}The name which should be used for this VPN Gateway Connection. Changing this forces a new VPN Gateway Connection to be created.
-{{% /md %}}</dd>
-    <dt class="property-optional"
+{{% /md %}}</dd><dt class="property-optional"
             title="Optional">
         <span id="routings_nodejs">
 <a href="#routings_nodejs" style="color: inherit; text-decoration: inherit;">routings</a>
@@ -385,14 +333,11 @@ The VpnGatewayConnection resource accepts the following [input]({{< relref "/doc
         <span class="property-type"><a href="#vpngatewayconnectionrouting">Vpn<wbr>Gateway<wbr>Connection<wbr>Routing[]</a></span>
     </dt>
     <dd>{{% md %}}A `routing` block as defined below. If this is not specified, there will be a default route table created implicitly.
-{{% /md %}}</dd>
-</dl>
+{{% /md %}}</dd></dl>
 {{% /choosable %}}
 
 {{% choosable language python %}}
-<dl class="resources-properties">
-
-    <dt class="property-required"
+<dl class="resources-properties"><dt class="property-required"
             title="Required">
         <span id="remote_vpn_site_id_python">
 <a href="#remote_vpn_site_id_python" style="color: inherit; text-decoration: inherit;">remote_<wbr>vpn_<wbr>site_<wbr>id</a>
@@ -401,8 +346,7 @@ The VpnGatewayConnection resource accepts the following [input]({{< relref "/doc
         <span class="property-type">str</span>
     </dt>
     <dd>{{% md %}}The ID of the remote VPN Site, which will connect to the VPN Gateway. Changing this forces a new VPN Gateway Connection to be created.
-{{% /md %}}</dd>
-    <dt class="property-required"
+{{% /md %}}</dd><dt class="property-required"
             title="Required">
         <span id="vpn_gateway_id_python">
 <a href="#vpn_gateway_id_python" style="color: inherit; text-decoration: inherit;">vpn_<wbr>gateway_<wbr>id</a>
@@ -411,8 +355,7 @@ The VpnGatewayConnection resource accepts the following [input]({{< relref "/doc
         <span class="property-type">str</span>
     </dt>
     <dd>{{% md %}}The ID of the VPN Gateway that this VPN Gateway Connection belongs to. Changing this forces a new VPN Gateway Connection to be created.
-{{% /md %}}</dd>
-    <dt class="property-required"
+{{% /md %}}</dd><dt class="property-required"
             title="Required">
         <span id="vpn_links_python">
 <a href="#vpn_links_python" style="color: inherit; text-decoration: inherit;">vpn_<wbr>links</a>
@@ -421,8 +364,7 @@ The VpnGatewayConnection resource accepts the following [input]({{< relref "/doc
         <span class="property-type"><a href="#vpngatewayconnectionvpnlink">Sequence[Vpn<wbr>Gateway<wbr>Connection<wbr>Vpn<wbr>Link<wbr>Args]</a></span>
     </dt>
     <dd>{{% md %}}One or more `vpn_link` blocks as defined below.
-{{% /md %}}</dd>
-    <dt class="property-optional"
+{{% /md %}}</dd><dt class="property-optional"
             title="Optional">
         <span id="internet_security_enabled_python">
 <a href="#internet_security_enabled_python" style="color: inherit; text-decoration: inherit;">internet_<wbr>security_<wbr>enabled</a>
@@ -431,8 +373,7 @@ The VpnGatewayConnection resource accepts the following [input]({{< relref "/doc
         <span class="property-type">bool</span>
     </dt>
     <dd>{{% md %}}Whether Internet Security is enabled for this VPN Connection. Defaults to `false`.
-{{% /md %}}</dd>
-    <dt class="property-optional"
+{{% /md %}}</dd><dt class="property-optional"
             title="Optional">
         <span id="name_python">
 <a href="#name_python" style="color: inherit; text-decoration: inherit;">name</a>
@@ -441,8 +382,7 @@ The VpnGatewayConnection resource accepts the following [input]({{< relref "/doc
         <span class="property-type">str</span>
     </dt>
     <dd>{{% md %}}The name which should be used for this VPN Gateway Connection. Changing this forces a new VPN Gateway Connection to be created.
-{{% /md %}}</dd>
-    <dt class="property-optional"
+{{% /md %}}</dd><dt class="property-optional"
             title="Optional">
         <span id="routings_python">
 <a href="#routings_python" style="color: inherit; text-decoration: inherit;">routings</a>
@@ -451,8 +391,7 @@ The VpnGatewayConnection resource accepts the following [input]({{< relref "/doc
         <span class="property-type"><a href="#vpngatewayconnectionrouting">Sequence[Vpn<wbr>Gateway<wbr>Connection<wbr>Routing<wbr>Args]</a></span>
     </dt>
     <dd>{{% md %}}A `routing` block as defined below. If this is not specified, there will be a default route table created implicitly.
-{{% /md %}}</dd>
-</dl>
+{{% /md %}}</dd></dl>
 {{% /choosable %}}
 
 
@@ -463,9 +402,7 @@ All [input](#inputs) properties are implicitly available as output properties. A
 
 
 {{% choosable language csharp %}}
-<dl class="resources-properties">
-
-    <dt class="property-"
+<dl class="resources-properties"><dt class="property-"
             title="">
         <span id="id_csharp">
 <a href="#id_csharp" style="color: inherit; text-decoration: inherit;">Id</a>
@@ -473,14 +410,11 @@ All [input](#inputs) properties are implicitly available as output properties. A
         <span class="property-indicator"></span>
         <span class="property-type">string</span>
     </dt>
-    <dd>{{% md %}}The provider-assigned unique ID for this managed resource.{{% /md %}}</dd>
-</dl>
+    <dd>{{% md %}}The provider-assigned unique ID for this managed resource.{{% /md %}}</dd></dl>
 {{% /choosable %}}
 
 {{% choosable language go %}}
-<dl class="resources-properties">
-
-    <dt class="property-"
+<dl class="resources-properties"><dt class="property-"
             title="">
         <span id="id_go">
 <a href="#id_go" style="color: inherit; text-decoration: inherit;">Id</a>
@@ -488,14 +422,11 @@ All [input](#inputs) properties are implicitly available as output properties. A
         <span class="property-indicator"></span>
         <span class="property-type">string</span>
     </dt>
-    <dd>{{% md %}}The provider-assigned unique ID for this managed resource.{{% /md %}}</dd>
-</dl>
+    <dd>{{% md %}}The provider-assigned unique ID for this managed resource.{{% /md %}}</dd></dl>
 {{% /choosable %}}
 
 {{% choosable language nodejs %}}
-<dl class="resources-properties">
-
-    <dt class="property-"
+<dl class="resources-properties"><dt class="property-"
             title="">
         <span id="id_nodejs">
 <a href="#id_nodejs" style="color: inherit; text-decoration: inherit;">id</a>
@@ -503,14 +434,11 @@ All [input](#inputs) properties are implicitly available as output properties. A
         <span class="property-indicator"></span>
         <span class="property-type">string</span>
     </dt>
-    <dd>{{% md %}}The provider-assigned unique ID for this managed resource.{{% /md %}}</dd>
-</dl>
+    <dd>{{% md %}}The provider-assigned unique ID for this managed resource.{{% /md %}}</dd></dl>
 {{% /choosable %}}
 
 {{% choosable language python %}}
-<dl class="resources-properties">
-
-    <dt class="property-"
+<dl class="resources-properties"><dt class="property-"
             title="">
         <span id="id_python">
 <a href="#id_python" style="color: inherit; text-decoration: inherit;">id</a>
@@ -518,8 +446,7 @@ All [input](#inputs) properties are implicitly available as output properties. A
         <span class="property-indicator"></span>
         <span class="property-type">str</span>
     </dt>
-    <dd>{{% md %}}The provider-assigned unique ID for this managed resource.{{% /md %}}</dd>
-</dl>
+    <dd>{{% md %}}The provider-assigned unique ID for this managed resource.{{% /md %}}</dd></dl>
 {{% /choosable %}}
 
 
@@ -646,9 +573,7 @@ The following state arguments are supported:
 
 
 {{% choosable language csharp %}}
-<dl class="resources-properties">
-
-    <dt class="property-optional"
+<dl class="resources-properties"><dt class="property-optional"
             title="Optional">
         <span id="state_internetsecurityenabled_csharp">
 <a href="#state_internetsecurityenabled_csharp" style="color: inherit; text-decoration: inherit;">Internet<wbr>Security<wbr>Enabled</a>
@@ -657,8 +582,7 @@ The following state arguments are supported:
         <span class="property-type">bool</span>
     </dt>
     <dd>{{% md %}}Whether Internet Security is enabled for this VPN Connection. Defaults to `false`.
-{{% /md %}}</dd>
-    <dt class="property-optional"
+{{% /md %}}</dd><dt class="property-optional"
             title="Optional">
         <span id="state_name_csharp">
 <a href="#state_name_csharp" style="color: inherit; text-decoration: inherit;">Name</a>
@@ -667,8 +591,7 @@ The following state arguments are supported:
         <span class="property-type">string</span>
     </dt>
     <dd>{{% md %}}The name which should be used for this VPN Gateway Connection. Changing this forces a new VPN Gateway Connection to be created.
-{{% /md %}}</dd>
-    <dt class="property-optional"
+{{% /md %}}</dd><dt class="property-optional"
             title="Optional">
         <span id="state_remotevpnsiteid_csharp">
 <a href="#state_remotevpnsiteid_csharp" style="color: inherit; text-decoration: inherit;">Remote<wbr>Vpn<wbr>Site<wbr>Id</a>
@@ -677,8 +600,7 @@ The following state arguments are supported:
         <span class="property-type">string</span>
     </dt>
     <dd>{{% md %}}The ID of the remote VPN Site, which will connect to the VPN Gateway. Changing this forces a new VPN Gateway Connection to be created.
-{{% /md %}}</dd>
-    <dt class="property-optional"
+{{% /md %}}</dd><dt class="property-optional"
             title="Optional">
         <span id="state_routings_csharp">
 <a href="#state_routings_csharp" style="color: inherit; text-decoration: inherit;">Routings</a>
@@ -687,8 +609,7 @@ The following state arguments are supported:
         <span class="property-type"><a href="#vpngatewayconnectionrouting">List&lt;Vpn<wbr>Gateway<wbr>Connection<wbr>Routing<wbr>Args&gt;</a></span>
     </dt>
     <dd>{{% md %}}A `routing` block as defined below. If this is not specified, there will be a default route table created implicitly.
-{{% /md %}}</dd>
-    <dt class="property-optional"
+{{% /md %}}</dd><dt class="property-optional"
             title="Optional">
         <span id="state_vpngatewayid_csharp">
 <a href="#state_vpngatewayid_csharp" style="color: inherit; text-decoration: inherit;">Vpn<wbr>Gateway<wbr>Id</a>
@@ -697,8 +618,7 @@ The following state arguments are supported:
         <span class="property-type">string</span>
     </dt>
     <dd>{{% md %}}The ID of the VPN Gateway that this VPN Gateway Connection belongs to. Changing this forces a new VPN Gateway Connection to be created.
-{{% /md %}}</dd>
-    <dt class="property-optional"
+{{% /md %}}</dd><dt class="property-optional"
             title="Optional">
         <span id="state_vpnlinks_csharp">
 <a href="#state_vpnlinks_csharp" style="color: inherit; text-decoration: inherit;">Vpn<wbr>Links</a>
@@ -707,14 +627,11 @@ The following state arguments are supported:
         <span class="property-type"><a href="#vpngatewayconnectionvpnlink">List&lt;Vpn<wbr>Gateway<wbr>Connection<wbr>Vpn<wbr>Link<wbr>Args&gt;</a></span>
     </dt>
     <dd>{{% md %}}One or more `vpn_link` blocks as defined below.
-{{% /md %}}</dd>
-</dl>
+{{% /md %}}</dd></dl>
 {{% /choosable %}}
 
 {{% choosable language go %}}
-<dl class="resources-properties">
-
-    <dt class="property-optional"
+<dl class="resources-properties"><dt class="property-optional"
             title="Optional">
         <span id="state_internetsecurityenabled_go">
 <a href="#state_internetsecurityenabled_go" style="color: inherit; text-decoration: inherit;">Internet<wbr>Security<wbr>Enabled</a>
@@ -723,8 +640,7 @@ The following state arguments are supported:
         <span class="property-type">bool</span>
     </dt>
     <dd>{{% md %}}Whether Internet Security is enabled for this VPN Connection. Defaults to `false`.
-{{% /md %}}</dd>
-    <dt class="property-optional"
+{{% /md %}}</dd><dt class="property-optional"
             title="Optional">
         <span id="state_name_go">
 <a href="#state_name_go" style="color: inherit; text-decoration: inherit;">Name</a>
@@ -733,8 +649,7 @@ The following state arguments are supported:
         <span class="property-type">string</span>
     </dt>
     <dd>{{% md %}}The name which should be used for this VPN Gateway Connection. Changing this forces a new VPN Gateway Connection to be created.
-{{% /md %}}</dd>
-    <dt class="property-optional"
+{{% /md %}}</dd><dt class="property-optional"
             title="Optional">
         <span id="state_remotevpnsiteid_go">
 <a href="#state_remotevpnsiteid_go" style="color: inherit; text-decoration: inherit;">Remote<wbr>Vpn<wbr>Site<wbr>Id</a>
@@ -743,8 +658,7 @@ The following state arguments are supported:
         <span class="property-type">string</span>
     </dt>
     <dd>{{% md %}}The ID of the remote VPN Site, which will connect to the VPN Gateway. Changing this forces a new VPN Gateway Connection to be created.
-{{% /md %}}</dd>
-    <dt class="property-optional"
+{{% /md %}}</dd><dt class="property-optional"
             title="Optional">
         <span id="state_routings_go">
 <a href="#state_routings_go" style="color: inherit; text-decoration: inherit;">Routings</a>
@@ -753,8 +667,7 @@ The following state arguments are supported:
         <span class="property-type"><a href="#vpngatewayconnectionrouting">[]Vpn<wbr>Gateway<wbr>Connection<wbr>Routing</a></span>
     </dt>
     <dd>{{% md %}}A `routing` block as defined below. If this is not specified, there will be a default route table created implicitly.
-{{% /md %}}</dd>
-    <dt class="property-optional"
+{{% /md %}}</dd><dt class="property-optional"
             title="Optional">
         <span id="state_vpngatewayid_go">
 <a href="#state_vpngatewayid_go" style="color: inherit; text-decoration: inherit;">Vpn<wbr>Gateway<wbr>Id</a>
@@ -763,8 +676,7 @@ The following state arguments are supported:
         <span class="property-type">string</span>
     </dt>
     <dd>{{% md %}}The ID of the VPN Gateway that this VPN Gateway Connection belongs to. Changing this forces a new VPN Gateway Connection to be created.
-{{% /md %}}</dd>
-    <dt class="property-optional"
+{{% /md %}}</dd><dt class="property-optional"
             title="Optional">
         <span id="state_vpnlinks_go">
 <a href="#state_vpnlinks_go" style="color: inherit; text-decoration: inherit;">Vpn<wbr>Links</a>
@@ -773,14 +685,11 @@ The following state arguments are supported:
         <span class="property-type"><a href="#vpngatewayconnectionvpnlink">[]Vpn<wbr>Gateway<wbr>Connection<wbr>Vpn<wbr>Link</a></span>
     </dt>
     <dd>{{% md %}}One or more `vpn_link` blocks as defined below.
-{{% /md %}}</dd>
-</dl>
+{{% /md %}}</dd></dl>
 {{% /choosable %}}
 
 {{% choosable language nodejs %}}
-<dl class="resources-properties">
-
-    <dt class="property-optional"
+<dl class="resources-properties"><dt class="property-optional"
             title="Optional">
         <span id="state_internetsecurityenabled_nodejs">
 <a href="#state_internetsecurityenabled_nodejs" style="color: inherit; text-decoration: inherit;">internet<wbr>Security<wbr>Enabled</a>
@@ -789,8 +698,7 @@ The following state arguments are supported:
         <span class="property-type">boolean</span>
     </dt>
     <dd>{{% md %}}Whether Internet Security is enabled for this VPN Connection. Defaults to `false`.
-{{% /md %}}</dd>
-    <dt class="property-optional"
+{{% /md %}}</dd><dt class="property-optional"
             title="Optional">
         <span id="state_name_nodejs">
 <a href="#state_name_nodejs" style="color: inherit; text-decoration: inherit;">name</a>
@@ -799,8 +707,7 @@ The following state arguments are supported:
         <span class="property-type">string</span>
     </dt>
     <dd>{{% md %}}The name which should be used for this VPN Gateway Connection. Changing this forces a new VPN Gateway Connection to be created.
-{{% /md %}}</dd>
-    <dt class="property-optional"
+{{% /md %}}</dd><dt class="property-optional"
             title="Optional">
         <span id="state_remotevpnsiteid_nodejs">
 <a href="#state_remotevpnsiteid_nodejs" style="color: inherit; text-decoration: inherit;">remote<wbr>Vpn<wbr>Site<wbr>Id</a>
@@ -809,8 +716,7 @@ The following state arguments are supported:
         <span class="property-type">string</span>
     </dt>
     <dd>{{% md %}}The ID of the remote VPN Site, which will connect to the VPN Gateway. Changing this forces a new VPN Gateway Connection to be created.
-{{% /md %}}</dd>
-    <dt class="property-optional"
+{{% /md %}}</dd><dt class="property-optional"
             title="Optional">
         <span id="state_routings_nodejs">
 <a href="#state_routings_nodejs" style="color: inherit; text-decoration: inherit;">routings</a>
@@ -819,8 +725,7 @@ The following state arguments are supported:
         <span class="property-type"><a href="#vpngatewayconnectionrouting">Vpn<wbr>Gateway<wbr>Connection<wbr>Routing[]</a></span>
     </dt>
     <dd>{{% md %}}A `routing` block as defined below. If this is not specified, there will be a default route table created implicitly.
-{{% /md %}}</dd>
-    <dt class="property-optional"
+{{% /md %}}</dd><dt class="property-optional"
             title="Optional">
         <span id="state_vpngatewayid_nodejs">
 <a href="#state_vpngatewayid_nodejs" style="color: inherit; text-decoration: inherit;">vpn<wbr>Gateway<wbr>Id</a>
@@ -829,8 +734,7 @@ The following state arguments are supported:
         <span class="property-type">string</span>
     </dt>
     <dd>{{% md %}}The ID of the VPN Gateway that this VPN Gateway Connection belongs to. Changing this forces a new VPN Gateway Connection to be created.
-{{% /md %}}</dd>
-    <dt class="property-optional"
+{{% /md %}}</dd><dt class="property-optional"
             title="Optional">
         <span id="state_vpnlinks_nodejs">
 <a href="#state_vpnlinks_nodejs" style="color: inherit; text-decoration: inherit;">vpn<wbr>Links</a>
@@ -839,14 +743,11 @@ The following state arguments are supported:
         <span class="property-type"><a href="#vpngatewayconnectionvpnlink">Vpn<wbr>Gateway<wbr>Connection<wbr>Vpn<wbr>Link[]</a></span>
     </dt>
     <dd>{{% md %}}One or more `vpn_link` blocks as defined below.
-{{% /md %}}</dd>
-</dl>
+{{% /md %}}</dd></dl>
 {{% /choosable %}}
 
 {{% choosable language python %}}
-<dl class="resources-properties">
-
-    <dt class="property-optional"
+<dl class="resources-properties"><dt class="property-optional"
             title="Optional">
         <span id="state_internet_security_enabled_python">
 <a href="#state_internet_security_enabled_python" style="color: inherit; text-decoration: inherit;">internet_<wbr>security_<wbr>enabled</a>
@@ -855,8 +756,7 @@ The following state arguments are supported:
         <span class="property-type">bool</span>
     </dt>
     <dd>{{% md %}}Whether Internet Security is enabled for this VPN Connection. Defaults to `false`.
-{{% /md %}}</dd>
-    <dt class="property-optional"
+{{% /md %}}</dd><dt class="property-optional"
             title="Optional">
         <span id="state_name_python">
 <a href="#state_name_python" style="color: inherit; text-decoration: inherit;">name</a>
@@ -865,8 +765,7 @@ The following state arguments are supported:
         <span class="property-type">str</span>
     </dt>
     <dd>{{% md %}}The name which should be used for this VPN Gateway Connection. Changing this forces a new VPN Gateway Connection to be created.
-{{% /md %}}</dd>
-    <dt class="property-optional"
+{{% /md %}}</dd><dt class="property-optional"
             title="Optional">
         <span id="state_remote_vpn_site_id_python">
 <a href="#state_remote_vpn_site_id_python" style="color: inherit; text-decoration: inherit;">remote_<wbr>vpn_<wbr>site_<wbr>id</a>
@@ -875,8 +774,7 @@ The following state arguments are supported:
         <span class="property-type">str</span>
     </dt>
     <dd>{{% md %}}The ID of the remote VPN Site, which will connect to the VPN Gateway. Changing this forces a new VPN Gateway Connection to be created.
-{{% /md %}}</dd>
-    <dt class="property-optional"
+{{% /md %}}</dd><dt class="property-optional"
             title="Optional">
         <span id="state_routings_python">
 <a href="#state_routings_python" style="color: inherit; text-decoration: inherit;">routings</a>
@@ -885,8 +783,7 @@ The following state arguments are supported:
         <span class="property-type"><a href="#vpngatewayconnectionrouting">Sequence[Vpn<wbr>Gateway<wbr>Connection<wbr>Routing<wbr>Args]</a></span>
     </dt>
     <dd>{{% md %}}A `routing` block as defined below. If this is not specified, there will be a default route table created implicitly.
-{{% /md %}}</dd>
-    <dt class="property-optional"
+{{% /md %}}</dd><dt class="property-optional"
             title="Optional">
         <span id="state_vpn_gateway_id_python">
 <a href="#state_vpn_gateway_id_python" style="color: inherit; text-decoration: inherit;">vpn_<wbr>gateway_<wbr>id</a>
@@ -895,8 +792,7 @@ The following state arguments are supported:
         <span class="property-type">str</span>
     </dt>
     <dd>{{% md %}}The ID of the VPN Gateway that this VPN Gateway Connection belongs to. Changing this forces a new VPN Gateway Connection to be created.
-{{% /md %}}</dd>
-    <dt class="property-optional"
+{{% /md %}}</dd><dt class="property-optional"
             title="Optional">
         <span id="state_vpn_links_python">
 <a href="#state_vpn_links_python" style="color: inherit; text-decoration: inherit;">vpn_<wbr>links</a>
@@ -905,8 +801,7 @@ The following state arguments are supported:
         <span class="property-type"><a href="#vpngatewayconnectionvpnlink">Sequence[Vpn<wbr>Gateway<wbr>Connection<wbr>Vpn<wbr>Link<wbr>Args]</a></span>
     </dt>
     <dd>{{% md %}}One or more `vpn_link` blocks as defined below.
-{{% /md %}}</dd>
-</dl>
+{{% /md %}}</dd></dl>
 {{% /choosable %}}
 
 
@@ -921,9 +816,7 @@ The following state arguments are supported:
 <h4 id="vpngatewayconnectionrouting">Vpn<wbr>Gateway<wbr>Connection<wbr>Routing</h4>
 
 {{% choosable language csharp %}}
-<dl class="resources-properties">
-
-    <dt class="property-required"
+<dl class="resources-properties"><dt class="property-required"
             title="Required">
         <span id="associatedroutetable_csharp">
 <a href="#associatedroutetable_csharp" style="color: inherit; text-decoration: inherit;">Associated<wbr>Route<wbr>Table</a>
@@ -932,8 +825,7 @@ The following state arguments are supported:
         <span class="property-type">string</span>
     </dt>
     <dd>{{% md %}}The ID of the Route Table associated with this VPN Connection.
-{{% /md %}}</dd>
-    <dt class="property-required"
+{{% /md %}}</dd><dt class="property-required"
             title="Required">
         <span id="propagatedroutetables_csharp">
 <a href="#propagatedroutetables_csharp" style="color: inherit; text-decoration: inherit;">Propagated<wbr>Route<wbr>Tables</a>
@@ -942,14 +834,11 @@ The following state arguments are supported:
         <span class="property-type">List&lt;string&gt;</span>
     </dt>
     <dd>{{% md %}}The list IDs of Route Tables to advertise the routes of this VPN Connection.
-{{% /md %}}</dd>
-</dl>
+{{% /md %}}</dd></dl>
 {{% /choosable %}}
 
 {{% choosable language go %}}
-<dl class="resources-properties">
-
-    <dt class="property-required"
+<dl class="resources-properties"><dt class="property-required"
             title="Required">
         <span id="associatedroutetable_go">
 <a href="#associatedroutetable_go" style="color: inherit; text-decoration: inherit;">Associated<wbr>Route<wbr>Table</a>
@@ -958,8 +847,7 @@ The following state arguments are supported:
         <span class="property-type">string</span>
     </dt>
     <dd>{{% md %}}The ID of the Route Table associated with this VPN Connection.
-{{% /md %}}</dd>
-    <dt class="property-required"
+{{% /md %}}</dd><dt class="property-required"
             title="Required">
         <span id="propagatedroutetables_go">
 <a href="#propagatedroutetables_go" style="color: inherit; text-decoration: inherit;">Propagated<wbr>Route<wbr>Tables</a>
@@ -968,14 +856,11 @@ The following state arguments are supported:
         <span class="property-type">[]string</span>
     </dt>
     <dd>{{% md %}}The list IDs of Route Tables to advertise the routes of this VPN Connection.
-{{% /md %}}</dd>
-</dl>
+{{% /md %}}</dd></dl>
 {{% /choosable %}}
 
 {{% choosable language nodejs %}}
-<dl class="resources-properties">
-
-    <dt class="property-required"
+<dl class="resources-properties"><dt class="property-required"
             title="Required">
         <span id="associatedroutetable_nodejs">
 <a href="#associatedroutetable_nodejs" style="color: inherit; text-decoration: inherit;">associated<wbr>Route<wbr>Table</a>
@@ -984,8 +869,7 @@ The following state arguments are supported:
         <span class="property-type">string</span>
     </dt>
     <dd>{{% md %}}The ID of the Route Table associated with this VPN Connection.
-{{% /md %}}</dd>
-    <dt class="property-required"
+{{% /md %}}</dd><dt class="property-required"
             title="Required">
         <span id="propagatedroutetables_nodejs">
 <a href="#propagatedroutetables_nodejs" style="color: inherit; text-decoration: inherit;">propagated<wbr>Route<wbr>Tables</a>
@@ -994,14 +878,11 @@ The following state arguments are supported:
         <span class="property-type">string[]</span>
     </dt>
     <dd>{{% md %}}The list IDs of Route Tables to advertise the routes of this VPN Connection.
-{{% /md %}}</dd>
-</dl>
+{{% /md %}}</dd></dl>
 {{% /choosable %}}
 
 {{% choosable language python %}}
-<dl class="resources-properties">
-
-    <dt class="property-required"
+<dl class="resources-properties"><dt class="property-required"
             title="Required">
         <span id="associated_route_table_python">
 <a href="#associated_route_table_python" style="color: inherit; text-decoration: inherit;">associated_<wbr>route_<wbr>table</a>
@@ -1010,8 +891,7 @@ The following state arguments are supported:
         <span class="property-type">str</span>
     </dt>
     <dd>{{% md %}}The ID of the Route Table associated with this VPN Connection.
-{{% /md %}}</dd>
-    <dt class="property-required"
+{{% /md %}}</dd><dt class="property-required"
             title="Required">
         <span id="propagated_route_tables_python">
 <a href="#propagated_route_tables_python" style="color: inherit; text-decoration: inherit;">propagated_<wbr>route_<wbr>tables</a>
@@ -1020,16 +900,13 @@ The following state arguments are supported:
         <span class="property-type">Sequence[str]</span>
     </dt>
     <dd>{{% md %}}The list IDs of Route Tables to advertise the routes of this VPN Connection.
-{{% /md %}}</dd>
-</dl>
+{{% /md %}}</dd></dl>
 {{% /choosable %}}
 
 <h4 id="vpngatewayconnectionvpnlink">Vpn<wbr>Gateway<wbr>Connection<wbr>Vpn<wbr>Link</h4>
 
 {{% choosable language csharp %}}
-<dl class="resources-properties">
-
-    <dt class="property-required"
+<dl class="resources-properties"><dt class="property-required"
             title="Required">
         <span id="name_csharp">
 <a href="#name_csharp" style="color: inherit; text-decoration: inherit;">Name</a>
@@ -1038,8 +915,7 @@ The following state arguments are supported:
         <span class="property-type">string</span>
     </dt>
     <dd>{{% md %}}The name which should be used for this VPN Link Connection.
-{{% /md %}}</dd>
-    <dt class="property-required"
+{{% /md %}}</dd><dt class="property-required"
             title="Required">
         <span id="vpnsitelinkid_csharp">
 <a href="#vpnsitelinkid_csharp" style="color: inherit; text-decoration: inherit;">Vpn<wbr>Site<wbr>Link<wbr>Id</a>
@@ -1048,8 +924,7 @@ The following state arguments are supported:
         <span class="property-type">string</span>
     </dt>
     <dd>{{% md %}}The ID of the connected VPN Site Link. Changing this forces a new VPN Gateway Connection to be created.
-{{% /md %}}</dd>
-    <dt class="property-optional"
+{{% /md %}}</dd><dt class="property-optional"
             title="Optional">
         <span id="bandwidthmbps_csharp">
 <a href="#bandwidthmbps_csharp" style="color: inherit; text-decoration: inherit;">Bandwidth<wbr>Mbps</a>
@@ -1058,8 +933,7 @@ The following state arguments are supported:
         <span class="property-type">int</span>
     </dt>
     <dd>{{% md %}}The expected connection bandwidth in MBPS. Defaults to `10`.
-{{% /md %}}</dd>
-    <dt class="property-optional"
+{{% /md %}}</dd><dt class="property-optional"
             title="Optional">
         <span id="bgpenabled_csharp">
 <a href="#bgpenabled_csharp" style="color: inherit; text-decoration: inherit;">Bgp<wbr>Enabled</a>
@@ -1068,8 +942,7 @@ The following state arguments are supported:
         <span class="property-type">bool</span>
     </dt>
     <dd>{{% md %}}Should the BGP be enabled? Defaults to `false`. Changing this forces a new VPN Gateway Connection to be created.
-{{% /md %}}</dd>
-    <dt class="property-optional"
+{{% /md %}}</dd><dt class="property-optional"
             title="Optional">
         <span id="ipsecpolicies_csharp">
 <a href="#ipsecpolicies_csharp" style="color: inherit; text-decoration: inherit;">Ipsec<wbr>Policies</a>
@@ -1078,8 +951,7 @@ The following state arguments are supported:
         <span class="property-type"><a href="#vpngatewayconnectionvpnlinkipsecpolicy">List&lt;Vpn<wbr>Gateway<wbr>Connection<wbr>Vpn<wbr>Link<wbr>Ipsec<wbr>Policy<wbr>Args&gt;</a></span>
     </dt>
     <dd>{{% md %}}One or more `ipsec_policy` blocks as defined above.
-{{% /md %}}</dd>
-    <dt class="property-optional"
+{{% /md %}}</dd><dt class="property-optional"
             title="Optional">
         <span id="localazureipaddressenabled_csharp">
 <a href="#localazureipaddressenabled_csharp" style="color: inherit; text-decoration: inherit;">Local<wbr>Azure<wbr>Ip<wbr>Address<wbr>Enabled</a>
@@ -1088,8 +960,7 @@ The following state arguments are supported:
         <span class="property-type">bool</span>
     </dt>
     <dd>{{% md %}}Whether to use local azure ip to initiate connection? Defaults to `false`.
-{{% /md %}}</dd>
-    <dt class="property-optional"
+{{% /md %}}</dd><dt class="property-optional"
             title="Optional">
         <span id="policybasedtrafficselectorenabled_csharp">
 <a href="#policybasedtrafficselectorenabled_csharp" style="color: inherit; text-decoration: inherit;">Policy<wbr>Based<wbr>Traffic<wbr>Selector<wbr>Enabled</a>
@@ -1098,8 +969,7 @@ The following state arguments are supported:
         <span class="property-type">bool</span>
     </dt>
     <dd>{{% md %}}Whether to enable policy-based traffic selectors? Defaults to `false`.
-{{% /md %}}</dd>
-    <dt class="property-optional"
+{{% /md %}}</dd><dt class="property-optional"
             title="Optional">
         <span id="protocol_csharp">
 <a href="#protocol_csharp" style="color: inherit; text-decoration: inherit;">Protocol</a>
@@ -1108,8 +978,7 @@ The following state arguments are supported:
         <span class="property-type">string</span>
     </dt>
     <dd>{{% md %}}The protocol used for this VPN Link Connection. Possible values are `IKEv1` and `IKEv2`. Defaults to `IKEv2`.
-{{% /md %}}</dd>
-    <dt class="property-optional"
+{{% /md %}}</dd><dt class="property-optional"
             title="Optional">
         <span id="ratelimitenabled_csharp">
 <a href="#ratelimitenabled_csharp" style="color: inherit; text-decoration: inherit;">Ratelimit<wbr>Enabled</a>
@@ -1118,8 +987,7 @@ The following state arguments are supported:
         <span class="property-type">bool</span>
     </dt>
     <dd>{{% md %}}Should the rate limit be enabled? Defaults to `false`.
-{{% /md %}}</dd>
-    <dt class="property-optional"
+{{% /md %}}</dd><dt class="property-optional"
             title="Optional">
         <span id="routeweight_csharp">
 <a href="#routeweight_csharp" style="color: inherit; text-decoration: inherit;">Route<wbr>Weight</a>
@@ -1128,8 +996,7 @@ The following state arguments are supported:
         <span class="property-type">int</span>
     </dt>
     <dd>{{% md %}}Routing weight for this VPN Link Connection. Defaults to `0`.
-{{% /md %}}</dd>
-    <dt class="property-optional"
+{{% /md %}}</dd><dt class="property-optional"
             title="Optional">
         <span id="sharedkey_csharp">
 <a href="#sharedkey_csharp" style="color: inherit; text-decoration: inherit;">Shared<wbr>Key</a>
@@ -1138,14 +1005,11 @@ The following state arguments are supported:
         <span class="property-type">string</span>
     </dt>
     <dd>{{% md %}}SharedKey for this VPN Link Connection.
-{{% /md %}}</dd>
-</dl>
+{{% /md %}}</dd></dl>
 {{% /choosable %}}
 
 {{% choosable language go %}}
-<dl class="resources-properties">
-
-    <dt class="property-required"
+<dl class="resources-properties"><dt class="property-required"
             title="Required">
         <span id="name_go">
 <a href="#name_go" style="color: inherit; text-decoration: inherit;">Name</a>
@@ -1154,8 +1018,7 @@ The following state arguments are supported:
         <span class="property-type">string</span>
     </dt>
     <dd>{{% md %}}The name which should be used for this VPN Link Connection.
-{{% /md %}}</dd>
-    <dt class="property-required"
+{{% /md %}}</dd><dt class="property-required"
             title="Required">
         <span id="vpnsitelinkid_go">
 <a href="#vpnsitelinkid_go" style="color: inherit; text-decoration: inherit;">Vpn<wbr>Site<wbr>Link<wbr>Id</a>
@@ -1164,8 +1027,7 @@ The following state arguments are supported:
         <span class="property-type">string</span>
     </dt>
     <dd>{{% md %}}The ID of the connected VPN Site Link. Changing this forces a new VPN Gateway Connection to be created.
-{{% /md %}}</dd>
-    <dt class="property-optional"
+{{% /md %}}</dd><dt class="property-optional"
             title="Optional">
         <span id="bandwidthmbps_go">
 <a href="#bandwidthmbps_go" style="color: inherit; text-decoration: inherit;">Bandwidth<wbr>Mbps</a>
@@ -1174,8 +1036,7 @@ The following state arguments are supported:
         <span class="property-type">int</span>
     </dt>
     <dd>{{% md %}}The expected connection bandwidth in MBPS. Defaults to `10`.
-{{% /md %}}</dd>
-    <dt class="property-optional"
+{{% /md %}}</dd><dt class="property-optional"
             title="Optional">
         <span id="bgpenabled_go">
 <a href="#bgpenabled_go" style="color: inherit; text-decoration: inherit;">Bgp<wbr>Enabled</a>
@@ -1184,8 +1045,7 @@ The following state arguments are supported:
         <span class="property-type">bool</span>
     </dt>
     <dd>{{% md %}}Should the BGP be enabled? Defaults to `false`. Changing this forces a new VPN Gateway Connection to be created.
-{{% /md %}}</dd>
-    <dt class="property-optional"
+{{% /md %}}</dd><dt class="property-optional"
             title="Optional">
         <span id="ipsecpolicies_go">
 <a href="#ipsecpolicies_go" style="color: inherit; text-decoration: inherit;">Ipsec<wbr>Policies</a>
@@ -1194,8 +1054,7 @@ The following state arguments are supported:
         <span class="property-type"><a href="#vpngatewayconnectionvpnlinkipsecpolicy">[]Vpn<wbr>Gateway<wbr>Connection<wbr>Vpn<wbr>Link<wbr>Ipsec<wbr>Policy</a></span>
     </dt>
     <dd>{{% md %}}One or more `ipsec_policy` blocks as defined above.
-{{% /md %}}</dd>
-    <dt class="property-optional"
+{{% /md %}}</dd><dt class="property-optional"
             title="Optional">
         <span id="localazureipaddressenabled_go">
 <a href="#localazureipaddressenabled_go" style="color: inherit; text-decoration: inherit;">Local<wbr>Azure<wbr>Ip<wbr>Address<wbr>Enabled</a>
@@ -1204,8 +1063,7 @@ The following state arguments are supported:
         <span class="property-type">bool</span>
     </dt>
     <dd>{{% md %}}Whether to use local azure ip to initiate connection? Defaults to `false`.
-{{% /md %}}</dd>
-    <dt class="property-optional"
+{{% /md %}}</dd><dt class="property-optional"
             title="Optional">
         <span id="policybasedtrafficselectorenabled_go">
 <a href="#policybasedtrafficselectorenabled_go" style="color: inherit; text-decoration: inherit;">Policy<wbr>Based<wbr>Traffic<wbr>Selector<wbr>Enabled</a>
@@ -1214,8 +1072,7 @@ The following state arguments are supported:
         <span class="property-type">bool</span>
     </dt>
     <dd>{{% md %}}Whether to enable policy-based traffic selectors? Defaults to `false`.
-{{% /md %}}</dd>
-    <dt class="property-optional"
+{{% /md %}}</dd><dt class="property-optional"
             title="Optional">
         <span id="protocol_go">
 <a href="#protocol_go" style="color: inherit; text-decoration: inherit;">Protocol</a>
@@ -1224,8 +1081,7 @@ The following state arguments are supported:
         <span class="property-type">string</span>
     </dt>
     <dd>{{% md %}}The protocol used for this VPN Link Connection. Possible values are `IKEv1` and `IKEv2`. Defaults to `IKEv2`.
-{{% /md %}}</dd>
-    <dt class="property-optional"
+{{% /md %}}</dd><dt class="property-optional"
             title="Optional">
         <span id="ratelimitenabled_go">
 <a href="#ratelimitenabled_go" style="color: inherit; text-decoration: inherit;">Ratelimit<wbr>Enabled</a>
@@ -1234,8 +1090,7 @@ The following state arguments are supported:
         <span class="property-type">bool</span>
     </dt>
     <dd>{{% md %}}Should the rate limit be enabled? Defaults to `false`.
-{{% /md %}}</dd>
-    <dt class="property-optional"
+{{% /md %}}</dd><dt class="property-optional"
             title="Optional">
         <span id="routeweight_go">
 <a href="#routeweight_go" style="color: inherit; text-decoration: inherit;">Route<wbr>Weight</a>
@@ -1244,8 +1099,7 @@ The following state arguments are supported:
         <span class="property-type">int</span>
     </dt>
     <dd>{{% md %}}Routing weight for this VPN Link Connection. Defaults to `0`.
-{{% /md %}}</dd>
-    <dt class="property-optional"
+{{% /md %}}</dd><dt class="property-optional"
             title="Optional">
         <span id="sharedkey_go">
 <a href="#sharedkey_go" style="color: inherit; text-decoration: inherit;">Shared<wbr>Key</a>
@@ -1254,14 +1108,11 @@ The following state arguments are supported:
         <span class="property-type">string</span>
     </dt>
     <dd>{{% md %}}SharedKey for this VPN Link Connection.
-{{% /md %}}</dd>
-</dl>
+{{% /md %}}</dd></dl>
 {{% /choosable %}}
 
 {{% choosable language nodejs %}}
-<dl class="resources-properties">
-
-    <dt class="property-required"
+<dl class="resources-properties"><dt class="property-required"
             title="Required">
         <span id="name_nodejs">
 <a href="#name_nodejs" style="color: inherit; text-decoration: inherit;">name</a>
@@ -1270,8 +1121,7 @@ The following state arguments are supported:
         <span class="property-type">string</span>
     </dt>
     <dd>{{% md %}}The name which should be used for this VPN Link Connection.
-{{% /md %}}</dd>
-    <dt class="property-required"
+{{% /md %}}</dd><dt class="property-required"
             title="Required">
         <span id="vpnsitelinkid_nodejs">
 <a href="#vpnsitelinkid_nodejs" style="color: inherit; text-decoration: inherit;">vpn<wbr>Site<wbr>Link<wbr>Id</a>
@@ -1280,8 +1130,7 @@ The following state arguments are supported:
         <span class="property-type">string</span>
     </dt>
     <dd>{{% md %}}The ID of the connected VPN Site Link. Changing this forces a new VPN Gateway Connection to be created.
-{{% /md %}}</dd>
-    <dt class="property-optional"
+{{% /md %}}</dd><dt class="property-optional"
             title="Optional">
         <span id="bandwidthmbps_nodejs">
 <a href="#bandwidthmbps_nodejs" style="color: inherit; text-decoration: inherit;">bandwidth<wbr>Mbps</a>
@@ -1290,8 +1139,7 @@ The following state arguments are supported:
         <span class="property-type">number</span>
     </dt>
     <dd>{{% md %}}The expected connection bandwidth in MBPS. Defaults to `10`.
-{{% /md %}}</dd>
-    <dt class="property-optional"
+{{% /md %}}</dd><dt class="property-optional"
             title="Optional">
         <span id="bgpenabled_nodejs">
 <a href="#bgpenabled_nodejs" style="color: inherit; text-decoration: inherit;">bgp<wbr>Enabled</a>
@@ -1300,8 +1148,7 @@ The following state arguments are supported:
         <span class="property-type">boolean</span>
     </dt>
     <dd>{{% md %}}Should the BGP be enabled? Defaults to `false`. Changing this forces a new VPN Gateway Connection to be created.
-{{% /md %}}</dd>
-    <dt class="property-optional"
+{{% /md %}}</dd><dt class="property-optional"
             title="Optional">
         <span id="ipsecpolicies_nodejs">
 <a href="#ipsecpolicies_nodejs" style="color: inherit; text-decoration: inherit;">ipsec<wbr>Policies</a>
@@ -1310,8 +1157,7 @@ The following state arguments are supported:
         <span class="property-type"><a href="#vpngatewayconnectionvpnlinkipsecpolicy">Vpn<wbr>Gateway<wbr>Connection<wbr>Vpn<wbr>Link<wbr>Ipsec<wbr>Policy[]</a></span>
     </dt>
     <dd>{{% md %}}One or more `ipsec_policy` blocks as defined above.
-{{% /md %}}</dd>
-    <dt class="property-optional"
+{{% /md %}}</dd><dt class="property-optional"
             title="Optional">
         <span id="localazureipaddressenabled_nodejs">
 <a href="#localazureipaddressenabled_nodejs" style="color: inherit; text-decoration: inherit;">local<wbr>Azure<wbr>Ip<wbr>Address<wbr>Enabled</a>
@@ -1320,8 +1166,7 @@ The following state arguments are supported:
         <span class="property-type">boolean</span>
     </dt>
     <dd>{{% md %}}Whether to use local azure ip to initiate connection? Defaults to `false`.
-{{% /md %}}</dd>
-    <dt class="property-optional"
+{{% /md %}}</dd><dt class="property-optional"
             title="Optional">
         <span id="policybasedtrafficselectorenabled_nodejs">
 <a href="#policybasedtrafficselectorenabled_nodejs" style="color: inherit; text-decoration: inherit;">policy<wbr>Based<wbr>Traffic<wbr>Selector<wbr>Enabled</a>
@@ -1330,8 +1175,7 @@ The following state arguments are supported:
         <span class="property-type">boolean</span>
     </dt>
     <dd>{{% md %}}Whether to enable policy-based traffic selectors? Defaults to `false`.
-{{% /md %}}</dd>
-    <dt class="property-optional"
+{{% /md %}}</dd><dt class="property-optional"
             title="Optional">
         <span id="protocol_nodejs">
 <a href="#protocol_nodejs" style="color: inherit; text-decoration: inherit;">protocol</a>
@@ -1340,8 +1184,7 @@ The following state arguments are supported:
         <span class="property-type">string</span>
     </dt>
     <dd>{{% md %}}The protocol used for this VPN Link Connection. Possible values are `IKEv1` and `IKEv2`. Defaults to `IKEv2`.
-{{% /md %}}</dd>
-    <dt class="property-optional"
+{{% /md %}}</dd><dt class="property-optional"
             title="Optional">
         <span id="ratelimitenabled_nodejs">
 <a href="#ratelimitenabled_nodejs" style="color: inherit; text-decoration: inherit;">ratelimit<wbr>Enabled</a>
@@ -1350,8 +1193,7 @@ The following state arguments are supported:
         <span class="property-type">boolean</span>
     </dt>
     <dd>{{% md %}}Should the rate limit be enabled? Defaults to `false`.
-{{% /md %}}</dd>
-    <dt class="property-optional"
+{{% /md %}}</dd><dt class="property-optional"
             title="Optional">
         <span id="routeweight_nodejs">
 <a href="#routeweight_nodejs" style="color: inherit; text-decoration: inherit;">route<wbr>Weight</a>
@@ -1360,8 +1202,7 @@ The following state arguments are supported:
         <span class="property-type">number</span>
     </dt>
     <dd>{{% md %}}Routing weight for this VPN Link Connection. Defaults to `0`.
-{{% /md %}}</dd>
-    <dt class="property-optional"
+{{% /md %}}</dd><dt class="property-optional"
             title="Optional">
         <span id="sharedkey_nodejs">
 <a href="#sharedkey_nodejs" style="color: inherit; text-decoration: inherit;">shared<wbr>Key</a>
@@ -1370,14 +1211,11 @@ The following state arguments are supported:
         <span class="property-type">string</span>
     </dt>
     <dd>{{% md %}}SharedKey for this VPN Link Connection.
-{{% /md %}}</dd>
-</dl>
+{{% /md %}}</dd></dl>
 {{% /choosable %}}
 
 {{% choosable language python %}}
-<dl class="resources-properties">
-
-    <dt class="property-required"
+<dl class="resources-properties"><dt class="property-required"
             title="Required">
         <span id="name_python">
 <a href="#name_python" style="color: inherit; text-decoration: inherit;">name</a>
@@ -1386,8 +1224,7 @@ The following state arguments are supported:
         <span class="property-type">str</span>
     </dt>
     <dd>{{% md %}}The name which should be used for this VPN Link Connection.
-{{% /md %}}</dd>
-    <dt class="property-required"
+{{% /md %}}</dd><dt class="property-required"
             title="Required">
         <span id="vpn_site_link_id_python">
 <a href="#vpn_site_link_id_python" style="color: inherit; text-decoration: inherit;">vpn_<wbr>site_<wbr>link_<wbr>id</a>
@@ -1396,8 +1233,7 @@ The following state arguments are supported:
         <span class="property-type">str</span>
     </dt>
     <dd>{{% md %}}The ID of the connected VPN Site Link. Changing this forces a new VPN Gateway Connection to be created.
-{{% /md %}}</dd>
-    <dt class="property-optional"
+{{% /md %}}</dd><dt class="property-optional"
             title="Optional">
         <span id="bandwidth_mbps_python">
 <a href="#bandwidth_mbps_python" style="color: inherit; text-decoration: inherit;">bandwidth_<wbr>mbps</a>
@@ -1406,8 +1242,7 @@ The following state arguments are supported:
         <span class="property-type">int</span>
     </dt>
     <dd>{{% md %}}The expected connection bandwidth in MBPS. Defaults to `10`.
-{{% /md %}}</dd>
-    <dt class="property-optional"
+{{% /md %}}</dd><dt class="property-optional"
             title="Optional">
         <span id="bgp_enabled_python">
 <a href="#bgp_enabled_python" style="color: inherit; text-decoration: inherit;">bgp_<wbr>enabled</a>
@@ -1416,8 +1251,7 @@ The following state arguments are supported:
         <span class="property-type">bool</span>
     </dt>
     <dd>{{% md %}}Should the BGP be enabled? Defaults to `false`. Changing this forces a new VPN Gateway Connection to be created.
-{{% /md %}}</dd>
-    <dt class="property-optional"
+{{% /md %}}</dd><dt class="property-optional"
             title="Optional">
         <span id="ipsec_policies_python">
 <a href="#ipsec_policies_python" style="color: inherit; text-decoration: inherit;">ipsec_<wbr>policies</a>
@@ -1426,8 +1260,7 @@ The following state arguments are supported:
         <span class="property-type"><a href="#vpngatewayconnectionvpnlinkipsecpolicy">Sequence[Vpn<wbr>Gateway<wbr>Connection<wbr>Vpn<wbr>Link<wbr>Ipsec<wbr>Policy<wbr>Args]</a></span>
     </dt>
     <dd>{{% md %}}One or more `ipsec_policy` blocks as defined above.
-{{% /md %}}</dd>
-    <dt class="property-optional"
+{{% /md %}}</dd><dt class="property-optional"
             title="Optional">
         <span id="local_azure_ip_address_enabled_python">
 <a href="#local_azure_ip_address_enabled_python" style="color: inherit; text-decoration: inherit;">local_<wbr>azure_<wbr>ip_<wbr>address_<wbr>enabled</a>
@@ -1436,8 +1269,7 @@ The following state arguments are supported:
         <span class="property-type">bool</span>
     </dt>
     <dd>{{% md %}}Whether to use local azure ip to initiate connection? Defaults to `false`.
-{{% /md %}}</dd>
-    <dt class="property-optional"
+{{% /md %}}</dd><dt class="property-optional"
             title="Optional">
         <span id="policy_based_traffic_selector_enabled_python">
 <a href="#policy_based_traffic_selector_enabled_python" style="color: inherit; text-decoration: inherit;">policy_<wbr>based_<wbr>traffic_<wbr>selector_<wbr>enabled</a>
@@ -1446,8 +1278,7 @@ The following state arguments are supported:
         <span class="property-type">bool</span>
     </dt>
     <dd>{{% md %}}Whether to enable policy-based traffic selectors? Defaults to `false`.
-{{% /md %}}</dd>
-    <dt class="property-optional"
+{{% /md %}}</dd><dt class="property-optional"
             title="Optional">
         <span id="protocol_python">
 <a href="#protocol_python" style="color: inherit; text-decoration: inherit;">protocol</a>
@@ -1456,8 +1287,7 @@ The following state arguments are supported:
         <span class="property-type">str</span>
     </dt>
     <dd>{{% md %}}The protocol used for this VPN Link Connection. Possible values are `IKEv1` and `IKEv2`. Defaults to `IKEv2`.
-{{% /md %}}</dd>
-    <dt class="property-optional"
+{{% /md %}}</dd><dt class="property-optional"
             title="Optional">
         <span id="ratelimit_enabled_python">
 <a href="#ratelimit_enabled_python" style="color: inherit; text-decoration: inherit;">ratelimit_<wbr>enabled</a>
@@ -1466,8 +1296,7 @@ The following state arguments are supported:
         <span class="property-type">bool</span>
     </dt>
     <dd>{{% md %}}Should the rate limit be enabled? Defaults to `false`.
-{{% /md %}}</dd>
-    <dt class="property-optional"
+{{% /md %}}</dd><dt class="property-optional"
             title="Optional">
         <span id="route_weight_python">
 <a href="#route_weight_python" style="color: inherit; text-decoration: inherit;">route_<wbr>weight</a>
@@ -1476,8 +1305,7 @@ The following state arguments are supported:
         <span class="property-type">int</span>
     </dt>
     <dd>{{% md %}}Routing weight for this VPN Link Connection. Defaults to `0`.
-{{% /md %}}</dd>
-    <dt class="property-optional"
+{{% /md %}}</dd><dt class="property-optional"
             title="Optional">
         <span id="shared_key_python">
 <a href="#shared_key_python" style="color: inherit; text-decoration: inherit;">shared_<wbr>key</a>
@@ -1486,16 +1314,13 @@ The following state arguments are supported:
         <span class="property-type">str</span>
     </dt>
     <dd>{{% md %}}SharedKey for this VPN Link Connection.
-{{% /md %}}</dd>
-</dl>
+{{% /md %}}</dd></dl>
 {{% /choosable %}}
 
 <h4 id="vpngatewayconnectionvpnlinkipsecpolicy">Vpn<wbr>Gateway<wbr>Connection<wbr>Vpn<wbr>Link<wbr>Ipsec<wbr>Policy</h4>
 
 {{% choosable language csharp %}}
-<dl class="resources-properties">
-
-    <dt class="property-required"
+<dl class="resources-properties"><dt class="property-required"
             title="Required">
         <span id="dhgroup_csharp">
 <a href="#dhgroup_csharp" style="color: inherit; text-decoration: inherit;">Dh<wbr>Group</a>
@@ -1504,8 +1329,7 @@ The following state arguments are supported:
         <span class="property-type">string</span>
     </dt>
     <dd>{{% md %}}The DH Group used in IKE Phase 1 for initial SA. Possible values are `None`, `DHGroup1`, `DHGroup2`, `DHGroup14`, `DHGroup24`, `DHGroup2048`, `ECP256`, `ECP384`.
-{{% /md %}}</dd>
-    <dt class="property-required"
+{{% /md %}}</dd><dt class="property-required"
             title="Required">
         <span id="encryptionalgorithm_csharp">
 <a href="#encryptionalgorithm_csharp" style="color: inherit; text-decoration: inherit;">Encryption<wbr>Algorithm</a>
@@ -1514,8 +1338,7 @@ The following state arguments are supported:
         <span class="property-type">string</span>
     </dt>
     <dd>{{% md %}}The IPSec encryption algorithm (IKE phase 1). Possible values are `AES128`, `AES192`, `AES256`, `DES`, `DES3`, `GCMAES128`, `GCMAES192`, `GCMAES256`, `None`.
-{{% /md %}}</dd>
-    <dt class="property-required"
+{{% /md %}}</dd><dt class="property-required"
             title="Required">
         <span id="ikeencryptionalgorithm_csharp">
 <a href="#ikeencryptionalgorithm_csharp" style="color: inherit; text-decoration: inherit;">Ike<wbr>Encryption<wbr>Algorithm</a>
@@ -1524,8 +1347,7 @@ The following state arguments are supported:
         <span class="property-type">string</span>
     </dt>
     <dd>{{% md %}}The IKE encryption algorithm (IKE phase 2). Possible values are `DES`, `DES3`, `AES128`, `AES192`, `AES256`, `GCMAES128`, `GCMAES256`.
-{{% /md %}}</dd>
-    <dt class="property-required"
+{{% /md %}}</dd><dt class="property-required"
             title="Required">
         <span id="ikeintegrityalgorithm_csharp">
 <a href="#ikeintegrityalgorithm_csharp" style="color: inherit; text-decoration: inherit;">Ike<wbr>Integrity<wbr>Algorithm</a>
@@ -1534,8 +1356,7 @@ The following state arguments are supported:
         <span class="property-type">string</span>
     </dt>
     <dd>{{% md %}}The IKE integrity algorithm (IKE phase 2). Possible values are `MD5`, `SHA1`, `SHA256`, `SHA384`, `GCMAES128`, `GCMAES256`.
-{{% /md %}}</dd>
-    <dt class="property-required"
+{{% /md %}}</dd><dt class="property-required"
             title="Required">
         <span id="integrityalgorithm_csharp">
 <a href="#integrityalgorithm_csharp" style="color: inherit; text-decoration: inherit;">Integrity<wbr>Algorithm</a>
@@ -1544,8 +1365,7 @@ The following state arguments are supported:
         <span class="property-type">string</span>
     </dt>
     <dd>{{% md %}}The IPSec integrity algorithm (IKE phase 1). Possible values are `MD5`, `SHA1`, `SHA256`, `GCMAES128`, `GCMAES192`, `GCMAES256`.
-{{% /md %}}</dd>
-    <dt class="property-required"
+{{% /md %}}</dd><dt class="property-required"
             title="Required">
         <span id="pfsgroup_csharp">
 <a href="#pfsgroup_csharp" style="color: inherit; text-decoration: inherit;">Pfs<wbr>Group</a>
@@ -1554,8 +1374,7 @@ The following state arguments are supported:
         <span class="property-type">string</span>
     </dt>
     <dd>{{% md %}}The Pfs Group used in IKE Phase 2 for the new child SA. Possible values are `None`, `PFS1`, `PFS2`, `PFS14`, `PFS24`, `PFS2048`, `PFSMM`, `ECP256`, `ECP384`.
-{{% /md %}}</dd>
-    <dt class="property-required"
+{{% /md %}}</dd><dt class="property-required"
             title="Required">
         <span id="sadatasizekb_csharp">
 <a href="#sadatasizekb_csharp" style="color: inherit; text-decoration: inherit;">Sa<wbr>Data<wbr>Size<wbr>Kb</a>
@@ -1564,8 +1383,7 @@ The following state arguments are supported:
         <span class="property-type">int</span>
     </dt>
     <dd>{{% md %}}The IPSec Security Association (also called Quick Mode or Phase 2 SA) payload size in KB for the site to site VPN tunnel.
-{{% /md %}}</dd>
-    <dt class="property-required"
+{{% /md %}}</dd><dt class="property-required"
             title="Required">
         <span id="salifetimesec_csharp">
 <a href="#salifetimesec_csharp" style="color: inherit; text-decoration: inherit;">Sa<wbr>Lifetime<wbr>Sec</a>
@@ -1574,14 +1392,11 @@ The following state arguments are supported:
         <span class="property-type">int</span>
     </dt>
     <dd>{{% md %}}The IPSec Security Association (also called Quick Mode or Phase 2 SA) lifetime in seconds for the site to site VPN tunnel.
-{{% /md %}}</dd>
-</dl>
+{{% /md %}}</dd></dl>
 {{% /choosable %}}
 
 {{% choosable language go %}}
-<dl class="resources-properties">
-
-    <dt class="property-required"
+<dl class="resources-properties"><dt class="property-required"
             title="Required">
         <span id="dhgroup_go">
 <a href="#dhgroup_go" style="color: inherit; text-decoration: inherit;">Dh<wbr>Group</a>
@@ -1590,8 +1405,7 @@ The following state arguments are supported:
         <span class="property-type">string</span>
     </dt>
     <dd>{{% md %}}The DH Group used in IKE Phase 1 for initial SA. Possible values are `None`, `DHGroup1`, `DHGroup2`, `DHGroup14`, `DHGroup24`, `DHGroup2048`, `ECP256`, `ECP384`.
-{{% /md %}}</dd>
-    <dt class="property-required"
+{{% /md %}}</dd><dt class="property-required"
             title="Required">
         <span id="encryptionalgorithm_go">
 <a href="#encryptionalgorithm_go" style="color: inherit; text-decoration: inherit;">Encryption<wbr>Algorithm</a>
@@ -1600,8 +1414,7 @@ The following state arguments are supported:
         <span class="property-type">string</span>
     </dt>
     <dd>{{% md %}}The IPSec encryption algorithm (IKE phase 1). Possible values are `AES128`, `AES192`, `AES256`, `DES`, `DES3`, `GCMAES128`, `GCMAES192`, `GCMAES256`, `None`.
-{{% /md %}}</dd>
-    <dt class="property-required"
+{{% /md %}}</dd><dt class="property-required"
             title="Required">
         <span id="ikeencryptionalgorithm_go">
 <a href="#ikeencryptionalgorithm_go" style="color: inherit; text-decoration: inherit;">Ike<wbr>Encryption<wbr>Algorithm</a>
@@ -1610,8 +1423,7 @@ The following state arguments are supported:
         <span class="property-type">string</span>
     </dt>
     <dd>{{% md %}}The IKE encryption algorithm (IKE phase 2). Possible values are `DES`, `DES3`, `AES128`, `AES192`, `AES256`, `GCMAES128`, `GCMAES256`.
-{{% /md %}}</dd>
-    <dt class="property-required"
+{{% /md %}}</dd><dt class="property-required"
             title="Required">
         <span id="ikeintegrityalgorithm_go">
 <a href="#ikeintegrityalgorithm_go" style="color: inherit; text-decoration: inherit;">Ike<wbr>Integrity<wbr>Algorithm</a>
@@ -1620,8 +1432,7 @@ The following state arguments are supported:
         <span class="property-type">string</span>
     </dt>
     <dd>{{% md %}}The IKE integrity algorithm (IKE phase 2). Possible values are `MD5`, `SHA1`, `SHA256`, `SHA384`, `GCMAES128`, `GCMAES256`.
-{{% /md %}}</dd>
-    <dt class="property-required"
+{{% /md %}}</dd><dt class="property-required"
             title="Required">
         <span id="integrityalgorithm_go">
 <a href="#integrityalgorithm_go" style="color: inherit; text-decoration: inherit;">Integrity<wbr>Algorithm</a>
@@ -1630,8 +1441,7 @@ The following state arguments are supported:
         <span class="property-type">string</span>
     </dt>
     <dd>{{% md %}}The IPSec integrity algorithm (IKE phase 1). Possible values are `MD5`, `SHA1`, `SHA256`, `GCMAES128`, `GCMAES192`, `GCMAES256`.
-{{% /md %}}</dd>
-    <dt class="property-required"
+{{% /md %}}</dd><dt class="property-required"
             title="Required">
         <span id="pfsgroup_go">
 <a href="#pfsgroup_go" style="color: inherit; text-decoration: inherit;">Pfs<wbr>Group</a>
@@ -1640,8 +1450,7 @@ The following state arguments are supported:
         <span class="property-type">string</span>
     </dt>
     <dd>{{% md %}}The Pfs Group used in IKE Phase 2 for the new child SA. Possible values are `None`, `PFS1`, `PFS2`, `PFS14`, `PFS24`, `PFS2048`, `PFSMM`, `ECP256`, `ECP384`.
-{{% /md %}}</dd>
-    <dt class="property-required"
+{{% /md %}}</dd><dt class="property-required"
             title="Required">
         <span id="sadatasizekb_go">
 <a href="#sadatasizekb_go" style="color: inherit; text-decoration: inherit;">Sa<wbr>Data<wbr>Size<wbr>Kb</a>
@@ -1650,8 +1459,7 @@ The following state arguments are supported:
         <span class="property-type">int</span>
     </dt>
     <dd>{{% md %}}The IPSec Security Association (also called Quick Mode or Phase 2 SA) payload size in KB for the site to site VPN tunnel.
-{{% /md %}}</dd>
-    <dt class="property-required"
+{{% /md %}}</dd><dt class="property-required"
             title="Required">
         <span id="salifetimesec_go">
 <a href="#salifetimesec_go" style="color: inherit; text-decoration: inherit;">Sa<wbr>Lifetime<wbr>Sec</a>
@@ -1660,14 +1468,11 @@ The following state arguments are supported:
         <span class="property-type">int</span>
     </dt>
     <dd>{{% md %}}The IPSec Security Association (also called Quick Mode or Phase 2 SA) lifetime in seconds for the site to site VPN tunnel.
-{{% /md %}}</dd>
-</dl>
+{{% /md %}}</dd></dl>
 {{% /choosable %}}
 
 {{% choosable language nodejs %}}
-<dl class="resources-properties">
-
-    <dt class="property-required"
+<dl class="resources-properties"><dt class="property-required"
             title="Required">
         <span id="dhgroup_nodejs">
 <a href="#dhgroup_nodejs" style="color: inherit; text-decoration: inherit;">dh<wbr>Group</a>
@@ -1676,8 +1481,7 @@ The following state arguments are supported:
         <span class="property-type">string</span>
     </dt>
     <dd>{{% md %}}The DH Group used in IKE Phase 1 for initial SA. Possible values are `None`, `DHGroup1`, `DHGroup2`, `DHGroup14`, `DHGroup24`, `DHGroup2048`, `ECP256`, `ECP384`.
-{{% /md %}}</dd>
-    <dt class="property-required"
+{{% /md %}}</dd><dt class="property-required"
             title="Required">
         <span id="encryptionalgorithm_nodejs">
 <a href="#encryptionalgorithm_nodejs" style="color: inherit; text-decoration: inherit;">encryption<wbr>Algorithm</a>
@@ -1686,8 +1490,7 @@ The following state arguments are supported:
         <span class="property-type">string</span>
     </dt>
     <dd>{{% md %}}The IPSec encryption algorithm (IKE phase 1). Possible values are `AES128`, `AES192`, `AES256`, `DES`, `DES3`, `GCMAES128`, `GCMAES192`, `GCMAES256`, `None`.
-{{% /md %}}</dd>
-    <dt class="property-required"
+{{% /md %}}</dd><dt class="property-required"
             title="Required">
         <span id="ikeencryptionalgorithm_nodejs">
 <a href="#ikeencryptionalgorithm_nodejs" style="color: inherit; text-decoration: inherit;">ike<wbr>Encryption<wbr>Algorithm</a>
@@ -1696,8 +1499,7 @@ The following state arguments are supported:
         <span class="property-type">string</span>
     </dt>
     <dd>{{% md %}}The IKE encryption algorithm (IKE phase 2). Possible values are `DES`, `DES3`, `AES128`, `AES192`, `AES256`, `GCMAES128`, `GCMAES256`.
-{{% /md %}}</dd>
-    <dt class="property-required"
+{{% /md %}}</dd><dt class="property-required"
             title="Required">
         <span id="ikeintegrityalgorithm_nodejs">
 <a href="#ikeintegrityalgorithm_nodejs" style="color: inherit; text-decoration: inherit;">ike<wbr>Integrity<wbr>Algorithm</a>
@@ -1706,8 +1508,7 @@ The following state arguments are supported:
         <span class="property-type">string</span>
     </dt>
     <dd>{{% md %}}The IKE integrity algorithm (IKE phase 2). Possible values are `MD5`, `SHA1`, `SHA256`, `SHA384`, `GCMAES128`, `GCMAES256`.
-{{% /md %}}</dd>
-    <dt class="property-required"
+{{% /md %}}</dd><dt class="property-required"
             title="Required">
         <span id="integrityalgorithm_nodejs">
 <a href="#integrityalgorithm_nodejs" style="color: inherit; text-decoration: inherit;">integrity<wbr>Algorithm</a>
@@ -1716,8 +1517,7 @@ The following state arguments are supported:
         <span class="property-type">string</span>
     </dt>
     <dd>{{% md %}}The IPSec integrity algorithm (IKE phase 1). Possible values are `MD5`, `SHA1`, `SHA256`, `GCMAES128`, `GCMAES192`, `GCMAES256`.
-{{% /md %}}</dd>
-    <dt class="property-required"
+{{% /md %}}</dd><dt class="property-required"
             title="Required">
         <span id="pfsgroup_nodejs">
 <a href="#pfsgroup_nodejs" style="color: inherit; text-decoration: inherit;">pfs<wbr>Group</a>
@@ -1726,8 +1526,7 @@ The following state arguments are supported:
         <span class="property-type">string</span>
     </dt>
     <dd>{{% md %}}The Pfs Group used in IKE Phase 2 for the new child SA. Possible values are `None`, `PFS1`, `PFS2`, `PFS14`, `PFS24`, `PFS2048`, `PFSMM`, `ECP256`, `ECP384`.
-{{% /md %}}</dd>
-    <dt class="property-required"
+{{% /md %}}</dd><dt class="property-required"
             title="Required">
         <span id="sadatasizekb_nodejs">
 <a href="#sadatasizekb_nodejs" style="color: inherit; text-decoration: inherit;">sa<wbr>Data<wbr>Size<wbr>Kb</a>
@@ -1736,8 +1535,7 @@ The following state arguments are supported:
         <span class="property-type">number</span>
     </dt>
     <dd>{{% md %}}The IPSec Security Association (also called Quick Mode or Phase 2 SA) payload size in KB for the site to site VPN tunnel.
-{{% /md %}}</dd>
-    <dt class="property-required"
+{{% /md %}}</dd><dt class="property-required"
             title="Required">
         <span id="salifetimesec_nodejs">
 <a href="#salifetimesec_nodejs" style="color: inherit; text-decoration: inherit;">sa<wbr>Lifetime<wbr>Sec</a>
@@ -1746,14 +1544,11 @@ The following state arguments are supported:
         <span class="property-type">number</span>
     </dt>
     <dd>{{% md %}}The IPSec Security Association (also called Quick Mode or Phase 2 SA) lifetime in seconds for the site to site VPN tunnel.
-{{% /md %}}</dd>
-</dl>
+{{% /md %}}</dd></dl>
 {{% /choosable %}}
 
 {{% choosable language python %}}
-<dl class="resources-properties">
-
-    <dt class="property-required"
+<dl class="resources-properties"><dt class="property-required"
             title="Required">
         <span id="dh_group_python">
 <a href="#dh_group_python" style="color: inherit; text-decoration: inherit;">dh_<wbr>group</a>
@@ -1762,8 +1557,7 @@ The following state arguments are supported:
         <span class="property-type">str</span>
     </dt>
     <dd>{{% md %}}The DH Group used in IKE Phase 1 for initial SA. Possible values are `None`, `DHGroup1`, `DHGroup2`, `DHGroup14`, `DHGroup24`, `DHGroup2048`, `ECP256`, `ECP384`.
-{{% /md %}}</dd>
-    <dt class="property-required"
+{{% /md %}}</dd><dt class="property-required"
             title="Required">
         <span id="encryption_algorithm_python">
 <a href="#encryption_algorithm_python" style="color: inherit; text-decoration: inherit;">encryption_<wbr>algorithm</a>
@@ -1772,8 +1566,7 @@ The following state arguments are supported:
         <span class="property-type">str</span>
     </dt>
     <dd>{{% md %}}The IPSec encryption algorithm (IKE phase 1). Possible values are `AES128`, `AES192`, `AES256`, `DES`, `DES3`, `GCMAES128`, `GCMAES192`, `GCMAES256`, `None`.
-{{% /md %}}</dd>
-    <dt class="property-required"
+{{% /md %}}</dd><dt class="property-required"
             title="Required">
         <span id="ike_encryption_algorithm_python">
 <a href="#ike_encryption_algorithm_python" style="color: inherit; text-decoration: inherit;">ike_<wbr>encryption_<wbr>algorithm</a>
@@ -1782,8 +1575,7 @@ The following state arguments are supported:
         <span class="property-type">str</span>
     </dt>
     <dd>{{% md %}}The IKE encryption algorithm (IKE phase 2). Possible values are `DES`, `DES3`, `AES128`, `AES192`, `AES256`, `GCMAES128`, `GCMAES256`.
-{{% /md %}}</dd>
-    <dt class="property-required"
+{{% /md %}}</dd><dt class="property-required"
             title="Required">
         <span id="ike_integrity_algorithm_python">
 <a href="#ike_integrity_algorithm_python" style="color: inherit; text-decoration: inherit;">ike_<wbr>integrity_<wbr>algorithm</a>
@@ -1792,8 +1584,7 @@ The following state arguments are supported:
         <span class="property-type">str</span>
     </dt>
     <dd>{{% md %}}The IKE integrity algorithm (IKE phase 2). Possible values are `MD5`, `SHA1`, `SHA256`, `SHA384`, `GCMAES128`, `GCMAES256`.
-{{% /md %}}</dd>
-    <dt class="property-required"
+{{% /md %}}</dd><dt class="property-required"
             title="Required">
         <span id="integrity_algorithm_python">
 <a href="#integrity_algorithm_python" style="color: inherit; text-decoration: inherit;">integrity_<wbr>algorithm</a>
@@ -1802,8 +1593,7 @@ The following state arguments are supported:
         <span class="property-type">str</span>
     </dt>
     <dd>{{% md %}}The IPSec integrity algorithm (IKE phase 1). Possible values are `MD5`, `SHA1`, `SHA256`, `GCMAES128`, `GCMAES192`, `GCMAES256`.
-{{% /md %}}</dd>
-    <dt class="property-required"
+{{% /md %}}</dd><dt class="property-required"
             title="Required">
         <span id="pfs_group_python">
 <a href="#pfs_group_python" style="color: inherit; text-decoration: inherit;">pfs_<wbr>group</a>
@@ -1812,8 +1602,7 @@ The following state arguments are supported:
         <span class="property-type">str</span>
     </dt>
     <dd>{{% md %}}The Pfs Group used in IKE Phase 2 for the new child SA. Possible values are `None`, `PFS1`, `PFS2`, `PFS14`, `PFS24`, `PFS2048`, `PFSMM`, `ECP256`, `ECP384`.
-{{% /md %}}</dd>
-    <dt class="property-required"
+{{% /md %}}</dd><dt class="property-required"
             title="Required">
         <span id="sa_data_size_kb_python">
 <a href="#sa_data_size_kb_python" style="color: inherit; text-decoration: inherit;">sa_<wbr>data_<wbr>size_<wbr>kb</a>
@@ -1822,8 +1611,7 @@ The following state arguments are supported:
         <span class="property-type">int</span>
     </dt>
     <dd>{{% md %}}The IPSec Security Association (also called Quick Mode or Phase 2 SA) payload size in KB for the site to site VPN tunnel.
-{{% /md %}}</dd>
-    <dt class="property-required"
+{{% /md %}}</dd><dt class="property-required"
             title="Required">
         <span id="sa_lifetime_sec_python">
 <a href="#sa_lifetime_sec_python" style="color: inherit; text-decoration: inherit;">sa_<wbr>lifetime_<wbr>sec</a>
@@ -1832,8 +1620,7 @@ The following state arguments are supported:
         <span class="property-type">int</span>
     </dt>
     <dd>{{% md %}}The IPSec Security Association (also called Quick Mode or Phase 2 SA) lifetime in seconds for the site to site VPN tunnel.
-{{% /md %}}</dd>
-</dl>
+{{% /md %}}</dd></dl>
 {{% /choosable %}}
 ## Import
 
@@ -1854,6 +1641,6 @@ VPN Gateway Connections can be imported using the `resource id`, e.g.
 	<dt>License</dt>
 	<dd>Apache-2.0</dd>
 	<dt>Notes</dt>
-	<dd>This Pulumi package is based on the [`azurerm` Terraform Provider](https://github.com/terraform-providers/terraform-provider-azurerm).</dd>
+	<dd>{{% md %}}This Pulumi package is based on the [`azurerm` Terraform Provider](https://github.com/terraform-providers/terraform-provider-azurerm).{{% /md %}}</dd>
 </dl>
 

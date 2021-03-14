@@ -13,11 +13,17 @@ meta_desc: "Documentation for the gcp.sql.User resource with examples, input pro
 Creates a new Google SQL User on a Google SQL User Instance. For more information, see the [official documentation](https://cloud.google.com/sql/), or the [JSON API](https://cloud.google.com/sql/docs/admin-api/v1beta4/users).
 
 {{% examples %}}
+
 ## Example Usage
 
 {{< chooser language "typescript,python,go,csharp" / >}}
 
-{{% example csharp %}}
+
+
+
+
+{{< example csharp >}}
+
 ```csharp
 using Pulumi;
 using Gcp = Pulumi.Gcp;
@@ -49,9 +55,12 @@ class MyStack : Stack
 }
 ```
 
-{{% /example %}}
 
-{{% example go %}}
+{{< /example >}}
+
+
+{{< example go >}}
+
 ```go
 package main
 
@@ -90,9 +99,12 @@ func main() {
 }
 ```
 
-{{% /example %}}
 
-{{% example python %}}
+{{< /example >}}
+
+
+{{< example python >}}
+
 ```python
 import pulumi
 import pulumi_gcp as gcp
@@ -108,9 +120,12 @@ users = gcp.sql.User("users",
     password="changeme")
 ```
 
-{{% /example %}}
 
-{{% example typescript %}}
+{{< /example >}}
+
+
+{{< example typescript >}}
+
 
 ```typescript
 import * as pulumi from "@pulumi/pulumi";
@@ -128,9 +143,16 @@ const users = new gcp.sql.User("users", {
 });
 ```
 
-{{% /example %}}
+
+{{< /example >}}
+
+
+
+
 
 {{% /examples %}}
+
+
 
 
 ## Create a User Resource {#create}
@@ -155,9 +177,7 @@ const users = new gcp.sql.User("users", {
 
 {{% choosable language nodejs %}}
 
-<dl class="resources-properties">
-  
-    <dt
+<dl class="resources-properties"><dt
         class="property-required" title="Required">
         <span>name</span>
         <span class="property-indicator"></span>
@@ -165,9 +185,7 @@ const users = new gcp.sql.User("users", {
     </dt>
     <dd>
       The unique name of the resource.
-    </dd>
-  
-    <dt
+    </dd><dt
         class="property-required" title="Required">
         <span>args</span>
         <span class="property-indicator"></span>
@@ -175,9 +193,7 @@ const users = new gcp.sql.User("users", {
     </dt>
     <dd>
       The arguments to resource properties.
-    </dd>
-  
-    <dt
+    </dd><dt
         class="property-optional" title="Optional">
         <span>opts</span>
         <span class="property-indicator"></span>
@@ -185,10 +201,7 @@ const users = new gcp.sql.User("users", {
     </dt>
     <dd>
       Bag of options to control resource&#39;s behavior.
-    </dd>
-  
-
-</dl>
+    </dd></dl>
 
 {{% /choosable %}}
 
@@ -214,9 +227,7 @@ const users = new gcp.sql.User("users", {
 
 {{% choosable language go %}}
 
-<dl class="resources-properties">
-  
-    <dt
+<dl class="resources-properties"><dt
         class="property-optional" title="Optional">
         <span>ctx</span>
         <span class="property-indicator"></span>
@@ -224,9 +235,7 @@ const users = new gcp.sql.User("users", {
     </dt>
     <dd>
       Context object for the current deployment.
-    </dd>
-  
-    <dt
+    </dd><dt
         class="property-required" title="Required">
         <span>name</span>
         <span class="property-indicator"></span>
@@ -234,9 +243,7 @@ const users = new gcp.sql.User("users", {
     </dt>
     <dd>
       The unique name of the resource.
-    </dd>
-  
-    <dt
+    </dd><dt
         class="property-required" title="Required">
         <span>args</span>
         <span class="property-indicator"></span>
@@ -244,9 +251,7 @@ const users = new gcp.sql.User("users", {
     </dt>
     <dd>
       The arguments to resource properties.
-    </dd>
-  
-    <dt
+    </dd><dt
         class="property-optional" title="Optional">
         <span>opts</span>
         <span class="property-indicator"></span>
@@ -254,18 +259,13 @@ const users = new gcp.sql.User("users", {
     </dt>
     <dd>
       Bag of options to control resource&#39;s behavior.
-    </dd>
-  
-
-</dl>
+    </dd></dl>
 
 {{% /choosable %}}
 
 {{% choosable language csharp %}}
 
-<dl class="resources-properties">
-  
-    <dt
+<dl class="resources-properties"><dt
         class="property-required" title="Required">
         <span>name</span>
         <span class="property-indicator"></span>
@@ -273,9 +273,7 @@ const users = new gcp.sql.User("users", {
     </dt>
     <dd>
       The unique name of the resource.
-    </dd>
-  
-    <dt
+    </dd><dt
         class="property-required" title="Required">
         <span>args</span>
         <span class="property-indicator"></span>
@@ -283,9 +281,7 @@ const users = new gcp.sql.User("users", {
     </dt>
     <dd>
       The arguments to resource properties.
-    </dd>
-  
-    <dt
+    </dd><dt
         class="property-optional" title="Optional">
         <span>opts</span>
         <span class="property-indicator"></span>
@@ -293,10 +289,7 @@ const users = new gcp.sql.User("users", {
     </dt>
     <dd>
       Bag of options to control resource&#39;s behavior.
-    </dd>
-  
-
-</dl>
+    </dd></dl>
 
 {{% /choosable %}}
 
@@ -311,9 +304,7 @@ The User resource accepts the following [input]({{< relref "/docs/intro/concepts
 
 
 {{% choosable language csharp %}}
-<dl class="resources-properties">
-
-    <dt class="property-required"
+<dl class="resources-properties"><dt class="property-required"
             title="Required">
         <span id="instance_csharp">
 <a href="#instance_csharp" style="color: inherit; text-decoration: inherit;">Instance</a>
@@ -323,8 +314,7 @@ The User resource accepts the following [input]({{< relref "/docs/intro/concepts
     </dt>
     <dd>{{% md %}}The name of the Cloud SQL instance. Changing this
 forces a new resource to be created.
-{{% /md %}}</dd>
-    <dt class="property-optional"
+{{% /md %}}</dd><dt class="property-optional"
             title="Optional">
         <span id="deletionpolicy_csharp">
 <a href="#deletionpolicy_csharp" style="color: inherit; text-decoration: inherit;">Deletion<wbr>Policy</a>
@@ -335,8 +325,7 @@ forces a new resource to be created.
     <dd>{{% md %}}The deletion policy for the user.
 Setting `ABANDON` allows the resource to be abandoned rather than deleted. This is useful
 for Postgres, where users cannot be deleted from the API if they have been granted SQL roles.
-{{% /md %}}</dd>
-    <dt class="property-optional"
+{{% /md %}}</dd><dt class="property-optional"
             title="Optional">
         <span id="host_csharp">
 <a href="#host_csharp" style="color: inherit; text-decoration: inherit;">Host</a>
@@ -347,8 +336,7 @@ for Postgres, where users cannot be deleted from the API if they have been grant
     <dd>{{% md %}}The host the user can connect from. This is only supported
 for MySQL instances. Don't set this field for PostgreSQL instances.
 Can be an IP address. Changing this forces a new resource to be created.
-{{% /md %}}</dd>
-    <dt class="property-optional"
+{{% /md %}}</dd><dt class="property-optional"
             title="Optional">
         <span id="name_csharp">
 <a href="#name_csharp" style="color: inherit; text-decoration: inherit;">Name</a>
@@ -358,8 +346,7 @@ Can be an IP address. Changing this forces a new resource to be created.
     </dt>
     <dd>{{% md %}}The name of the user. Changing this forces a new resource
 to be created.
-{{% /md %}}</dd>
-    <dt class="property-optional"
+{{% /md %}}</dd><dt class="property-optional"
             title="Optional">
         <span id="password_csharp">
 <a href="#password_csharp" style="color: inherit; text-decoration: inherit;">Password</a>
@@ -369,8 +356,7 @@ to be created.
     </dt>
     <dd>{{% md %}}The password for the user. Can be updated. For Postgres
 instances this is a Required field.
-{{% /md %}}</dd>
-    <dt class="property-optional"
+{{% /md %}}</dd><dt class="property-optional"
             title="Optional">
         <span id="project_csharp">
 <a href="#project_csharp" style="color: inherit; text-decoration: inherit;">Project</a>
@@ -380,8 +366,7 @@ instances this is a Required field.
     </dt>
     <dd>{{% md %}}The ID of the project in which the resource belongs. If it
 is not provided, the provider project is used.
-{{% /md %}}</dd>
-    <dt class="property-optional"
+{{% /md %}}</dd><dt class="property-optional"
             title="Optional">
         <span id="type_csharp">
 <a href="#type_csharp" style="color: inherit; text-decoration: inherit;">Type</a>
@@ -392,14 +377,11 @@ is not provided, the provider project is used.
     <dd>{{% md %}}The user type. It determines the method to authenticate the
 user during login. The default is the database's built-in user type. Flags
 include "BUILT_IN", "CLOUD_IAM_USER", or "CLOUD_IAM_SERVICE_ACCOUNT".
-{{% /md %}}</dd>
-</dl>
+{{% /md %}}</dd></dl>
 {{% /choosable %}}
 
 {{% choosable language go %}}
-<dl class="resources-properties">
-
-    <dt class="property-required"
+<dl class="resources-properties"><dt class="property-required"
             title="Required">
         <span id="instance_go">
 <a href="#instance_go" style="color: inherit; text-decoration: inherit;">Instance</a>
@@ -409,8 +391,7 @@ include "BUILT_IN", "CLOUD_IAM_USER", or "CLOUD_IAM_SERVICE_ACCOUNT".
     </dt>
     <dd>{{% md %}}The name of the Cloud SQL instance. Changing this
 forces a new resource to be created.
-{{% /md %}}</dd>
-    <dt class="property-optional"
+{{% /md %}}</dd><dt class="property-optional"
             title="Optional">
         <span id="deletionpolicy_go">
 <a href="#deletionpolicy_go" style="color: inherit; text-decoration: inherit;">Deletion<wbr>Policy</a>
@@ -421,8 +402,7 @@ forces a new resource to be created.
     <dd>{{% md %}}The deletion policy for the user.
 Setting `ABANDON` allows the resource to be abandoned rather than deleted. This is useful
 for Postgres, where users cannot be deleted from the API if they have been granted SQL roles.
-{{% /md %}}</dd>
-    <dt class="property-optional"
+{{% /md %}}</dd><dt class="property-optional"
             title="Optional">
         <span id="host_go">
 <a href="#host_go" style="color: inherit; text-decoration: inherit;">Host</a>
@@ -433,8 +413,7 @@ for Postgres, where users cannot be deleted from the API if they have been grant
     <dd>{{% md %}}The host the user can connect from. This is only supported
 for MySQL instances. Don't set this field for PostgreSQL instances.
 Can be an IP address. Changing this forces a new resource to be created.
-{{% /md %}}</dd>
-    <dt class="property-optional"
+{{% /md %}}</dd><dt class="property-optional"
             title="Optional">
         <span id="name_go">
 <a href="#name_go" style="color: inherit; text-decoration: inherit;">Name</a>
@@ -444,8 +423,7 @@ Can be an IP address. Changing this forces a new resource to be created.
     </dt>
     <dd>{{% md %}}The name of the user. Changing this forces a new resource
 to be created.
-{{% /md %}}</dd>
-    <dt class="property-optional"
+{{% /md %}}</dd><dt class="property-optional"
             title="Optional">
         <span id="password_go">
 <a href="#password_go" style="color: inherit; text-decoration: inherit;">Password</a>
@@ -455,8 +433,7 @@ to be created.
     </dt>
     <dd>{{% md %}}The password for the user. Can be updated. For Postgres
 instances this is a Required field.
-{{% /md %}}</dd>
-    <dt class="property-optional"
+{{% /md %}}</dd><dt class="property-optional"
             title="Optional">
         <span id="project_go">
 <a href="#project_go" style="color: inherit; text-decoration: inherit;">Project</a>
@@ -466,8 +443,7 @@ instances this is a Required field.
     </dt>
     <dd>{{% md %}}The ID of the project in which the resource belongs. If it
 is not provided, the provider project is used.
-{{% /md %}}</dd>
-    <dt class="property-optional"
+{{% /md %}}</dd><dt class="property-optional"
             title="Optional">
         <span id="type_go">
 <a href="#type_go" style="color: inherit; text-decoration: inherit;">Type</a>
@@ -478,14 +454,11 @@ is not provided, the provider project is used.
     <dd>{{% md %}}The user type. It determines the method to authenticate the
 user during login. The default is the database's built-in user type. Flags
 include "BUILT_IN", "CLOUD_IAM_USER", or "CLOUD_IAM_SERVICE_ACCOUNT".
-{{% /md %}}</dd>
-</dl>
+{{% /md %}}</dd></dl>
 {{% /choosable %}}
 
 {{% choosable language nodejs %}}
-<dl class="resources-properties">
-
-    <dt class="property-required"
+<dl class="resources-properties"><dt class="property-required"
             title="Required">
         <span id="instance_nodejs">
 <a href="#instance_nodejs" style="color: inherit; text-decoration: inherit;">instance</a>
@@ -495,8 +468,7 @@ include "BUILT_IN", "CLOUD_IAM_USER", or "CLOUD_IAM_SERVICE_ACCOUNT".
     </dt>
     <dd>{{% md %}}The name of the Cloud SQL instance. Changing this
 forces a new resource to be created.
-{{% /md %}}</dd>
-    <dt class="property-optional"
+{{% /md %}}</dd><dt class="property-optional"
             title="Optional">
         <span id="deletionpolicy_nodejs">
 <a href="#deletionpolicy_nodejs" style="color: inherit; text-decoration: inherit;">deletion<wbr>Policy</a>
@@ -507,8 +479,7 @@ forces a new resource to be created.
     <dd>{{% md %}}The deletion policy for the user.
 Setting `ABANDON` allows the resource to be abandoned rather than deleted. This is useful
 for Postgres, where users cannot be deleted from the API if they have been granted SQL roles.
-{{% /md %}}</dd>
-    <dt class="property-optional"
+{{% /md %}}</dd><dt class="property-optional"
             title="Optional">
         <span id="host_nodejs">
 <a href="#host_nodejs" style="color: inherit; text-decoration: inherit;">host</a>
@@ -519,8 +490,7 @@ for Postgres, where users cannot be deleted from the API if they have been grant
     <dd>{{% md %}}The host the user can connect from. This is only supported
 for MySQL instances. Don't set this field for PostgreSQL instances.
 Can be an IP address. Changing this forces a new resource to be created.
-{{% /md %}}</dd>
-    <dt class="property-optional"
+{{% /md %}}</dd><dt class="property-optional"
             title="Optional">
         <span id="name_nodejs">
 <a href="#name_nodejs" style="color: inherit; text-decoration: inherit;">name</a>
@@ -530,8 +500,7 @@ Can be an IP address. Changing this forces a new resource to be created.
     </dt>
     <dd>{{% md %}}The name of the user. Changing this forces a new resource
 to be created.
-{{% /md %}}</dd>
-    <dt class="property-optional"
+{{% /md %}}</dd><dt class="property-optional"
             title="Optional">
         <span id="password_nodejs">
 <a href="#password_nodejs" style="color: inherit; text-decoration: inherit;">password</a>
@@ -541,8 +510,7 @@ to be created.
     </dt>
     <dd>{{% md %}}The password for the user. Can be updated. For Postgres
 instances this is a Required field.
-{{% /md %}}</dd>
-    <dt class="property-optional"
+{{% /md %}}</dd><dt class="property-optional"
             title="Optional">
         <span id="project_nodejs">
 <a href="#project_nodejs" style="color: inherit; text-decoration: inherit;">project</a>
@@ -552,8 +520,7 @@ instances this is a Required field.
     </dt>
     <dd>{{% md %}}The ID of the project in which the resource belongs. If it
 is not provided, the provider project is used.
-{{% /md %}}</dd>
-    <dt class="property-optional"
+{{% /md %}}</dd><dt class="property-optional"
             title="Optional">
         <span id="type_nodejs">
 <a href="#type_nodejs" style="color: inherit; text-decoration: inherit;">type</a>
@@ -564,14 +531,11 @@ is not provided, the provider project is used.
     <dd>{{% md %}}The user type. It determines the method to authenticate the
 user during login. The default is the database's built-in user type. Flags
 include "BUILT_IN", "CLOUD_IAM_USER", or "CLOUD_IAM_SERVICE_ACCOUNT".
-{{% /md %}}</dd>
-</dl>
+{{% /md %}}</dd></dl>
 {{% /choosable %}}
 
 {{% choosable language python %}}
-<dl class="resources-properties">
-
-    <dt class="property-required"
+<dl class="resources-properties"><dt class="property-required"
             title="Required">
         <span id="instance_python">
 <a href="#instance_python" style="color: inherit; text-decoration: inherit;">instance</a>
@@ -581,8 +545,7 @@ include "BUILT_IN", "CLOUD_IAM_USER", or "CLOUD_IAM_SERVICE_ACCOUNT".
     </dt>
     <dd>{{% md %}}The name of the Cloud SQL instance. Changing this
 forces a new resource to be created.
-{{% /md %}}</dd>
-    <dt class="property-optional"
+{{% /md %}}</dd><dt class="property-optional"
             title="Optional">
         <span id="deletion_policy_python">
 <a href="#deletion_policy_python" style="color: inherit; text-decoration: inherit;">deletion_<wbr>policy</a>
@@ -593,8 +556,7 @@ forces a new resource to be created.
     <dd>{{% md %}}The deletion policy for the user.
 Setting `ABANDON` allows the resource to be abandoned rather than deleted. This is useful
 for Postgres, where users cannot be deleted from the API if they have been granted SQL roles.
-{{% /md %}}</dd>
-    <dt class="property-optional"
+{{% /md %}}</dd><dt class="property-optional"
             title="Optional">
         <span id="host_python">
 <a href="#host_python" style="color: inherit; text-decoration: inherit;">host</a>
@@ -605,8 +567,7 @@ for Postgres, where users cannot be deleted from the API if they have been grant
     <dd>{{% md %}}The host the user can connect from. This is only supported
 for MySQL instances. Don't set this field for PostgreSQL instances.
 Can be an IP address. Changing this forces a new resource to be created.
-{{% /md %}}</dd>
-    <dt class="property-optional"
+{{% /md %}}</dd><dt class="property-optional"
             title="Optional">
         <span id="name_python">
 <a href="#name_python" style="color: inherit; text-decoration: inherit;">name</a>
@@ -616,8 +577,7 @@ Can be an IP address. Changing this forces a new resource to be created.
     </dt>
     <dd>{{% md %}}The name of the user. Changing this forces a new resource
 to be created.
-{{% /md %}}</dd>
-    <dt class="property-optional"
+{{% /md %}}</dd><dt class="property-optional"
             title="Optional">
         <span id="password_python">
 <a href="#password_python" style="color: inherit; text-decoration: inherit;">password</a>
@@ -627,8 +587,7 @@ to be created.
     </dt>
     <dd>{{% md %}}The password for the user. Can be updated. For Postgres
 instances this is a Required field.
-{{% /md %}}</dd>
-    <dt class="property-optional"
+{{% /md %}}</dd><dt class="property-optional"
             title="Optional">
         <span id="project_python">
 <a href="#project_python" style="color: inherit; text-decoration: inherit;">project</a>
@@ -638,8 +597,7 @@ instances this is a Required field.
     </dt>
     <dd>{{% md %}}The ID of the project in which the resource belongs. If it
 is not provided, the provider project is used.
-{{% /md %}}</dd>
-    <dt class="property-optional"
+{{% /md %}}</dd><dt class="property-optional"
             title="Optional">
         <span id="type_python">
 <a href="#type_python" style="color: inherit; text-decoration: inherit;">type</a>
@@ -650,8 +608,7 @@ is not provided, the provider project is used.
     <dd>{{% md %}}The user type. It determines the method to authenticate the
 user during login. The default is the database's built-in user type. Flags
 include "BUILT_IN", "CLOUD_IAM_USER", or "CLOUD_IAM_SERVICE_ACCOUNT".
-{{% /md %}}</dd>
-</dl>
+{{% /md %}}</dd></dl>
 {{% /choosable %}}
 
 
@@ -662,9 +619,7 @@ All [input](#inputs) properties are implicitly available as output properties. A
 
 
 {{% choosable language csharp %}}
-<dl class="resources-properties">
-
-    <dt class="property-"
+<dl class="resources-properties"><dt class="property-"
             title="">
         <span id="id_csharp">
 <a href="#id_csharp" style="color: inherit; text-decoration: inherit;">Id</a>
@@ -672,14 +627,11 @@ All [input](#inputs) properties are implicitly available as output properties. A
         <span class="property-indicator"></span>
         <span class="property-type">string</span>
     </dt>
-    <dd>{{% md %}}The provider-assigned unique ID for this managed resource.{{% /md %}}</dd>
-</dl>
+    <dd>{{% md %}}The provider-assigned unique ID for this managed resource.{{% /md %}}</dd></dl>
 {{% /choosable %}}
 
 {{% choosable language go %}}
-<dl class="resources-properties">
-
-    <dt class="property-"
+<dl class="resources-properties"><dt class="property-"
             title="">
         <span id="id_go">
 <a href="#id_go" style="color: inherit; text-decoration: inherit;">Id</a>
@@ -687,14 +639,11 @@ All [input](#inputs) properties are implicitly available as output properties. A
         <span class="property-indicator"></span>
         <span class="property-type">string</span>
     </dt>
-    <dd>{{% md %}}The provider-assigned unique ID for this managed resource.{{% /md %}}</dd>
-</dl>
+    <dd>{{% md %}}The provider-assigned unique ID for this managed resource.{{% /md %}}</dd></dl>
 {{% /choosable %}}
 
 {{% choosable language nodejs %}}
-<dl class="resources-properties">
-
-    <dt class="property-"
+<dl class="resources-properties"><dt class="property-"
             title="">
         <span id="id_nodejs">
 <a href="#id_nodejs" style="color: inherit; text-decoration: inherit;">id</a>
@@ -702,14 +651,11 @@ All [input](#inputs) properties are implicitly available as output properties. A
         <span class="property-indicator"></span>
         <span class="property-type">string</span>
     </dt>
-    <dd>{{% md %}}The provider-assigned unique ID for this managed resource.{{% /md %}}</dd>
-</dl>
+    <dd>{{% md %}}The provider-assigned unique ID for this managed resource.{{% /md %}}</dd></dl>
 {{% /choosable %}}
 
 {{% choosable language python %}}
-<dl class="resources-properties">
-
-    <dt class="property-"
+<dl class="resources-properties"><dt class="property-"
             title="">
         <span id="id_python">
 <a href="#id_python" style="color: inherit; text-decoration: inherit;">id</a>
@@ -717,8 +663,7 @@ All [input](#inputs) properties are implicitly available as output properties. A
         <span class="property-indicator"></span>
         <span class="property-type">str</span>
     </dt>
-    <dd>{{% md %}}The provider-assigned unique ID for this managed resource.{{% /md %}}</dd>
-</dl>
+    <dd>{{% md %}}The provider-assigned unique ID for this managed resource.{{% /md %}}</dd></dl>
 {{% /choosable %}}
 
 
@@ -845,9 +790,7 @@ The following state arguments are supported:
 
 
 {{% choosable language csharp %}}
-<dl class="resources-properties">
-
-    <dt class="property-optional"
+<dl class="resources-properties"><dt class="property-optional"
             title="Optional">
         <span id="state_deletionpolicy_csharp">
 <a href="#state_deletionpolicy_csharp" style="color: inherit; text-decoration: inherit;">Deletion<wbr>Policy</a>
@@ -858,8 +801,7 @@ The following state arguments are supported:
     <dd>{{% md %}}The deletion policy for the user.
 Setting `ABANDON` allows the resource to be abandoned rather than deleted. This is useful
 for Postgres, where users cannot be deleted from the API if they have been granted SQL roles.
-{{% /md %}}</dd>
-    <dt class="property-optional"
+{{% /md %}}</dd><dt class="property-optional"
             title="Optional">
         <span id="state_host_csharp">
 <a href="#state_host_csharp" style="color: inherit; text-decoration: inherit;">Host</a>
@@ -870,8 +812,7 @@ for Postgres, where users cannot be deleted from the API if they have been grant
     <dd>{{% md %}}The host the user can connect from. This is only supported
 for MySQL instances. Don't set this field for PostgreSQL instances.
 Can be an IP address. Changing this forces a new resource to be created.
-{{% /md %}}</dd>
-    <dt class="property-optional"
+{{% /md %}}</dd><dt class="property-optional"
             title="Optional">
         <span id="state_instance_csharp">
 <a href="#state_instance_csharp" style="color: inherit; text-decoration: inherit;">Instance</a>
@@ -881,8 +822,7 @@ Can be an IP address. Changing this forces a new resource to be created.
     </dt>
     <dd>{{% md %}}The name of the Cloud SQL instance. Changing this
 forces a new resource to be created.
-{{% /md %}}</dd>
-    <dt class="property-optional"
+{{% /md %}}</dd><dt class="property-optional"
             title="Optional">
         <span id="state_name_csharp">
 <a href="#state_name_csharp" style="color: inherit; text-decoration: inherit;">Name</a>
@@ -892,8 +832,7 @@ forces a new resource to be created.
     </dt>
     <dd>{{% md %}}The name of the user. Changing this forces a new resource
 to be created.
-{{% /md %}}</dd>
-    <dt class="property-optional"
+{{% /md %}}</dd><dt class="property-optional"
             title="Optional">
         <span id="state_password_csharp">
 <a href="#state_password_csharp" style="color: inherit; text-decoration: inherit;">Password</a>
@@ -903,8 +842,7 @@ to be created.
     </dt>
     <dd>{{% md %}}The password for the user. Can be updated. For Postgres
 instances this is a Required field.
-{{% /md %}}</dd>
-    <dt class="property-optional"
+{{% /md %}}</dd><dt class="property-optional"
             title="Optional">
         <span id="state_project_csharp">
 <a href="#state_project_csharp" style="color: inherit; text-decoration: inherit;">Project</a>
@@ -914,8 +852,7 @@ instances this is a Required field.
     </dt>
     <dd>{{% md %}}The ID of the project in which the resource belongs. If it
 is not provided, the provider project is used.
-{{% /md %}}</dd>
-    <dt class="property-optional"
+{{% /md %}}</dd><dt class="property-optional"
             title="Optional">
         <span id="state_type_csharp">
 <a href="#state_type_csharp" style="color: inherit; text-decoration: inherit;">Type</a>
@@ -926,14 +863,11 @@ is not provided, the provider project is used.
     <dd>{{% md %}}The user type. It determines the method to authenticate the
 user during login. The default is the database's built-in user type. Flags
 include "BUILT_IN", "CLOUD_IAM_USER", or "CLOUD_IAM_SERVICE_ACCOUNT".
-{{% /md %}}</dd>
-</dl>
+{{% /md %}}</dd></dl>
 {{% /choosable %}}
 
 {{% choosable language go %}}
-<dl class="resources-properties">
-
-    <dt class="property-optional"
+<dl class="resources-properties"><dt class="property-optional"
             title="Optional">
         <span id="state_deletionpolicy_go">
 <a href="#state_deletionpolicy_go" style="color: inherit; text-decoration: inherit;">Deletion<wbr>Policy</a>
@@ -944,8 +878,7 @@ include "BUILT_IN", "CLOUD_IAM_USER", or "CLOUD_IAM_SERVICE_ACCOUNT".
     <dd>{{% md %}}The deletion policy for the user.
 Setting `ABANDON` allows the resource to be abandoned rather than deleted. This is useful
 for Postgres, where users cannot be deleted from the API if they have been granted SQL roles.
-{{% /md %}}</dd>
-    <dt class="property-optional"
+{{% /md %}}</dd><dt class="property-optional"
             title="Optional">
         <span id="state_host_go">
 <a href="#state_host_go" style="color: inherit; text-decoration: inherit;">Host</a>
@@ -956,8 +889,7 @@ for Postgres, where users cannot be deleted from the API if they have been grant
     <dd>{{% md %}}The host the user can connect from. This is only supported
 for MySQL instances. Don't set this field for PostgreSQL instances.
 Can be an IP address. Changing this forces a new resource to be created.
-{{% /md %}}</dd>
-    <dt class="property-optional"
+{{% /md %}}</dd><dt class="property-optional"
             title="Optional">
         <span id="state_instance_go">
 <a href="#state_instance_go" style="color: inherit; text-decoration: inherit;">Instance</a>
@@ -967,8 +899,7 @@ Can be an IP address. Changing this forces a new resource to be created.
     </dt>
     <dd>{{% md %}}The name of the Cloud SQL instance. Changing this
 forces a new resource to be created.
-{{% /md %}}</dd>
-    <dt class="property-optional"
+{{% /md %}}</dd><dt class="property-optional"
             title="Optional">
         <span id="state_name_go">
 <a href="#state_name_go" style="color: inherit; text-decoration: inherit;">Name</a>
@@ -978,8 +909,7 @@ forces a new resource to be created.
     </dt>
     <dd>{{% md %}}The name of the user. Changing this forces a new resource
 to be created.
-{{% /md %}}</dd>
-    <dt class="property-optional"
+{{% /md %}}</dd><dt class="property-optional"
             title="Optional">
         <span id="state_password_go">
 <a href="#state_password_go" style="color: inherit; text-decoration: inherit;">Password</a>
@@ -989,8 +919,7 @@ to be created.
     </dt>
     <dd>{{% md %}}The password for the user. Can be updated. For Postgres
 instances this is a Required field.
-{{% /md %}}</dd>
-    <dt class="property-optional"
+{{% /md %}}</dd><dt class="property-optional"
             title="Optional">
         <span id="state_project_go">
 <a href="#state_project_go" style="color: inherit; text-decoration: inherit;">Project</a>
@@ -1000,8 +929,7 @@ instances this is a Required field.
     </dt>
     <dd>{{% md %}}The ID of the project in which the resource belongs. If it
 is not provided, the provider project is used.
-{{% /md %}}</dd>
-    <dt class="property-optional"
+{{% /md %}}</dd><dt class="property-optional"
             title="Optional">
         <span id="state_type_go">
 <a href="#state_type_go" style="color: inherit; text-decoration: inherit;">Type</a>
@@ -1012,14 +940,11 @@ is not provided, the provider project is used.
     <dd>{{% md %}}The user type. It determines the method to authenticate the
 user during login. The default is the database's built-in user type. Flags
 include "BUILT_IN", "CLOUD_IAM_USER", or "CLOUD_IAM_SERVICE_ACCOUNT".
-{{% /md %}}</dd>
-</dl>
+{{% /md %}}</dd></dl>
 {{% /choosable %}}
 
 {{% choosable language nodejs %}}
-<dl class="resources-properties">
-
-    <dt class="property-optional"
+<dl class="resources-properties"><dt class="property-optional"
             title="Optional">
         <span id="state_deletionpolicy_nodejs">
 <a href="#state_deletionpolicy_nodejs" style="color: inherit; text-decoration: inherit;">deletion<wbr>Policy</a>
@@ -1030,8 +955,7 @@ include "BUILT_IN", "CLOUD_IAM_USER", or "CLOUD_IAM_SERVICE_ACCOUNT".
     <dd>{{% md %}}The deletion policy for the user.
 Setting `ABANDON` allows the resource to be abandoned rather than deleted. This is useful
 for Postgres, where users cannot be deleted from the API if they have been granted SQL roles.
-{{% /md %}}</dd>
-    <dt class="property-optional"
+{{% /md %}}</dd><dt class="property-optional"
             title="Optional">
         <span id="state_host_nodejs">
 <a href="#state_host_nodejs" style="color: inherit; text-decoration: inherit;">host</a>
@@ -1042,8 +966,7 @@ for Postgres, where users cannot be deleted from the API if they have been grant
     <dd>{{% md %}}The host the user can connect from. This is only supported
 for MySQL instances. Don't set this field for PostgreSQL instances.
 Can be an IP address. Changing this forces a new resource to be created.
-{{% /md %}}</dd>
-    <dt class="property-optional"
+{{% /md %}}</dd><dt class="property-optional"
             title="Optional">
         <span id="state_instance_nodejs">
 <a href="#state_instance_nodejs" style="color: inherit; text-decoration: inherit;">instance</a>
@@ -1053,8 +976,7 @@ Can be an IP address. Changing this forces a new resource to be created.
     </dt>
     <dd>{{% md %}}The name of the Cloud SQL instance. Changing this
 forces a new resource to be created.
-{{% /md %}}</dd>
-    <dt class="property-optional"
+{{% /md %}}</dd><dt class="property-optional"
             title="Optional">
         <span id="state_name_nodejs">
 <a href="#state_name_nodejs" style="color: inherit; text-decoration: inherit;">name</a>
@@ -1064,8 +986,7 @@ forces a new resource to be created.
     </dt>
     <dd>{{% md %}}The name of the user. Changing this forces a new resource
 to be created.
-{{% /md %}}</dd>
-    <dt class="property-optional"
+{{% /md %}}</dd><dt class="property-optional"
             title="Optional">
         <span id="state_password_nodejs">
 <a href="#state_password_nodejs" style="color: inherit; text-decoration: inherit;">password</a>
@@ -1075,8 +996,7 @@ to be created.
     </dt>
     <dd>{{% md %}}The password for the user. Can be updated. For Postgres
 instances this is a Required field.
-{{% /md %}}</dd>
-    <dt class="property-optional"
+{{% /md %}}</dd><dt class="property-optional"
             title="Optional">
         <span id="state_project_nodejs">
 <a href="#state_project_nodejs" style="color: inherit; text-decoration: inherit;">project</a>
@@ -1086,8 +1006,7 @@ instances this is a Required field.
     </dt>
     <dd>{{% md %}}The ID of the project in which the resource belongs. If it
 is not provided, the provider project is used.
-{{% /md %}}</dd>
-    <dt class="property-optional"
+{{% /md %}}</dd><dt class="property-optional"
             title="Optional">
         <span id="state_type_nodejs">
 <a href="#state_type_nodejs" style="color: inherit; text-decoration: inherit;">type</a>
@@ -1098,14 +1017,11 @@ is not provided, the provider project is used.
     <dd>{{% md %}}The user type. It determines the method to authenticate the
 user during login. The default is the database's built-in user type. Flags
 include "BUILT_IN", "CLOUD_IAM_USER", or "CLOUD_IAM_SERVICE_ACCOUNT".
-{{% /md %}}</dd>
-</dl>
+{{% /md %}}</dd></dl>
 {{% /choosable %}}
 
 {{% choosable language python %}}
-<dl class="resources-properties">
-
-    <dt class="property-optional"
+<dl class="resources-properties"><dt class="property-optional"
             title="Optional">
         <span id="state_deletion_policy_python">
 <a href="#state_deletion_policy_python" style="color: inherit; text-decoration: inherit;">deletion_<wbr>policy</a>
@@ -1116,8 +1032,7 @@ include "BUILT_IN", "CLOUD_IAM_USER", or "CLOUD_IAM_SERVICE_ACCOUNT".
     <dd>{{% md %}}The deletion policy for the user.
 Setting `ABANDON` allows the resource to be abandoned rather than deleted. This is useful
 for Postgres, where users cannot be deleted from the API if they have been granted SQL roles.
-{{% /md %}}</dd>
-    <dt class="property-optional"
+{{% /md %}}</dd><dt class="property-optional"
             title="Optional">
         <span id="state_host_python">
 <a href="#state_host_python" style="color: inherit; text-decoration: inherit;">host</a>
@@ -1128,8 +1043,7 @@ for Postgres, where users cannot be deleted from the API if they have been grant
     <dd>{{% md %}}The host the user can connect from. This is only supported
 for MySQL instances. Don't set this field for PostgreSQL instances.
 Can be an IP address. Changing this forces a new resource to be created.
-{{% /md %}}</dd>
-    <dt class="property-optional"
+{{% /md %}}</dd><dt class="property-optional"
             title="Optional">
         <span id="state_instance_python">
 <a href="#state_instance_python" style="color: inherit; text-decoration: inherit;">instance</a>
@@ -1139,8 +1053,7 @@ Can be an IP address. Changing this forces a new resource to be created.
     </dt>
     <dd>{{% md %}}The name of the Cloud SQL instance. Changing this
 forces a new resource to be created.
-{{% /md %}}</dd>
-    <dt class="property-optional"
+{{% /md %}}</dd><dt class="property-optional"
             title="Optional">
         <span id="state_name_python">
 <a href="#state_name_python" style="color: inherit; text-decoration: inherit;">name</a>
@@ -1150,8 +1063,7 @@ forces a new resource to be created.
     </dt>
     <dd>{{% md %}}The name of the user. Changing this forces a new resource
 to be created.
-{{% /md %}}</dd>
-    <dt class="property-optional"
+{{% /md %}}</dd><dt class="property-optional"
             title="Optional">
         <span id="state_password_python">
 <a href="#state_password_python" style="color: inherit; text-decoration: inherit;">password</a>
@@ -1161,8 +1073,7 @@ to be created.
     </dt>
     <dd>{{% md %}}The password for the user. Can be updated. For Postgres
 instances this is a Required field.
-{{% /md %}}</dd>
-    <dt class="property-optional"
+{{% /md %}}</dd><dt class="property-optional"
             title="Optional">
         <span id="state_project_python">
 <a href="#state_project_python" style="color: inherit; text-decoration: inherit;">project</a>
@@ -1172,8 +1083,7 @@ instances this is a Required field.
     </dt>
     <dd>{{% md %}}The ID of the project in which the resource belongs. If it
 is not provided, the provider project is used.
-{{% /md %}}</dd>
-    <dt class="property-optional"
+{{% /md %}}</dd><dt class="property-optional"
             title="Optional">
         <span id="state_type_python">
 <a href="#state_type_python" style="color: inherit; text-decoration: inherit;">type</a>
@@ -1184,8 +1094,7 @@ is not provided, the provider project is used.
     <dd>{{% md %}}The user type. It determines the method to authenticate the
 user during login. The default is the database's built-in user type. Flags
 include "BUILT_IN", "CLOUD_IAM_USER", or "CLOUD_IAM_SERVICE_ACCOUNT".
-{{% /md %}}</dd>
-</dl>
+{{% /md %}}</dd></dl>
 {{% /choosable %}}
 
 
@@ -1217,6 +1126,6 @@ SQL users for MySQL databases can be imported using the `project`, `instance`, `
 	<dt>License</dt>
 	<dd>Apache-2.0</dd>
 	<dt>Notes</dt>
-	<dd>This Pulumi package is based on the [`google-beta` Terraform Provider](https://github.com/hashicorp/terraform-provider-google-beta).</dd>
+	<dd>{{% md %}}This Pulumi package is based on the [`google-beta` Terraform Provider](https://github.com/hashicorp/terraform-provider-google-beta).{{% /md %}}</dd>
 </dl>
 

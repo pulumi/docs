@@ -66,9 +66,7 @@ The `term` block the following arguments:
 
 {{% choosable language nodejs %}}
 
-<dl class="resources-properties">
-  
-    <dt
+<dl class="resources-properties"><dt
         class="property-required" title="Required">
         <span>name</span>
         <span class="property-indicator"></span>
@@ -76,9 +74,7 @@ The `term` block the following arguments:
     </dt>
     <dd>
       The unique name of the resource.
-    </dd>
-  
-    <dt
+    </dd><dt
         class="property-required" title="Required">
         <span>args</span>
         <span class="property-indicator"></span>
@@ -86,9 +82,7 @@ The `term` block the following arguments:
     </dt>
     <dd>
       The arguments to resource properties.
-    </dd>
-  
-    <dt
+    </dd><dt
         class="property-optional" title="Optional">
         <span>opts</span>
         <span class="property-indicator"></span>
@@ -96,10 +90,7 @@ The `term` block the following arguments:
     </dt>
     <dd>
       Bag of options to control resource&#39;s behavior.
-    </dd>
-  
-
-</dl>
+    </dd></dl>
 
 {{% /choosable %}}
 
@@ -125,9 +116,7 @@ The `term` block the following arguments:
 
 {{% choosable language go %}}
 
-<dl class="resources-properties">
-  
-    <dt
+<dl class="resources-properties"><dt
         class="property-optional" title="Optional">
         <span>ctx</span>
         <span class="property-indicator"></span>
@@ -135,9 +124,7 @@ The `term` block the following arguments:
     </dt>
     <dd>
       Context object for the current deployment.
-    </dd>
-  
-    <dt
+    </dd><dt
         class="property-required" title="Required">
         <span>name</span>
         <span class="property-indicator"></span>
@@ -145,9 +132,7 @@ The `term` block the following arguments:
     </dt>
     <dd>
       The unique name of the resource.
-    </dd>
-  
-    <dt
+    </dd><dt
         class="property-required" title="Required">
         <span>args</span>
         <span class="property-indicator"></span>
@@ -155,9 +140,7 @@ The `term` block the following arguments:
     </dt>
     <dd>
       The arguments to resource properties.
-    </dd>
-  
-    <dt
+    </dd><dt
         class="property-optional" title="Optional">
         <span>opts</span>
         <span class="property-indicator"></span>
@@ -165,18 +148,13 @@ The `term` block the following arguments:
     </dt>
     <dd>
       Bag of options to control resource&#39;s behavior.
-    </dd>
-  
-
-</dl>
+    </dd></dl>
 
 {{% /choosable %}}
 
 {{% choosable language csharp %}}
 
-<dl class="resources-properties">
-  
-    <dt
+<dl class="resources-properties"><dt
         class="property-required" title="Required">
         <span>name</span>
         <span class="property-indicator"></span>
@@ -184,9 +162,7 @@ The `term` block the following arguments:
     </dt>
     <dd>
       The unique name of the resource.
-    </dd>
-  
-    <dt
+    </dd><dt
         class="property-required" title="Required">
         <span>args</span>
         <span class="property-indicator"></span>
@@ -194,9 +170,7 @@ The `term` block the following arguments:
     </dt>
     <dd>
       The arguments to resource properties.
-    </dd>
-  
-    <dt
+    </dd><dt
         class="property-optional" title="Optional">
         <span>opts</span>
         <span class="property-indicator"></span>
@@ -204,10 +178,7 @@ The `term` block the following arguments:
     </dt>
     <dd>
       Bag of options to control resource&#39;s behavior.
-    </dd>
-  
-
-</dl>
+    </dd></dl>
 
 {{% /choosable %}}
 
@@ -222,9 +193,7 @@ The NrqlAlertCondition resource accepts the following [input]({{< relref "/docs/
 
 
 {{% choosable language csharp %}}
-<dl class="resources-properties">
-
-    <dt class="property-required"
+<dl class="resources-properties"><dt class="property-required"
             title="Required">
         <span id="nrql_csharp">
 <a href="#nrql_csharp" style="color: inherit; text-decoration: inherit;">Nrql</a>
@@ -233,8 +202,7 @@ The NrqlAlertCondition resource accepts the following [input]({{< relref "/docs/
         <span class="property-type"><a href="#nrqlalertconditionnrql">Pulumi.<wbr>New<wbr>Relic.<wbr>Inputs.<wbr>Nrql<wbr>Alert<wbr>Condition<wbr>Nrql<wbr>Args</a></span>
     </dt>
     <dd>{{% md %}}A NRQL query. See NRQL below for details.
-{{% /md %}}</dd>
-    <dt class="property-required"
+{{% /md %}}</dd><dt class="property-required"
             title="Required">
         <span id="policyid_csharp">
 <a href="#policyid_csharp" style="color: inherit; text-decoration: inherit;">Policy<wbr>Id</a>
@@ -243,8 +211,7 @@ The NrqlAlertCondition resource accepts the following [input]({{< relref "/docs/
         <span class="property-type">int</span>
     </dt>
     <dd>{{% md %}}The ID of the policy where this condition should be used.
-{{% /md %}}</dd>
-    <dt class="property-optional"
+{{% /md %}}</dd><dt class="property-optional"
             title="Optional">
         <span id="accountid_csharp">
 <a href="#accountid_csharp" style="color: inherit; text-decoration: inherit;">Account<wbr>Id</a>
@@ -253,8 +220,7 @@ The NrqlAlertCondition resource accepts the following [input]({{< relref "/docs/
         <span class="property-type">int</span>
     </dt>
     <dd>{{% md %}}The New Relic account ID of the account you wish to create the condition. Defaults to the account ID set in your environment variable `NEW_RELIC_ACCOUNT_ID`.
-{{% /md %}}</dd>
-    <dt class="property-optional"
+{{% /md %}}</dd><dt class="property-optional"
             title="Optional">
         <span id="aggregationwindow_csharp">
 <a href="#aggregationwindow_csharp" style="color: inherit; text-decoration: inherit;">Aggregation<wbr>Window</a>
@@ -263,8 +229,7 @@ The NrqlAlertCondition resource accepts the following [input]({{< relref "/docs/
         <span class="property-type">int</span>
     </dt>
     <dd>{{% md %}}The duration of the time window used to evaluate the NRQL query, in seconds. The value must be at least 30 seconds, and no more than 15 minutes (900 seconds). Default is 60 seconds.
-{{% /md %}}</dd>
-    <dt class="property-optional"
+{{% /md %}}</dd><dt class="property-optional"
             title="Optional">
         <span id="baselinedirection_csharp">
 <a href="#baselinedirection_csharp" style="color: inherit; text-decoration: inherit;">Baseline<wbr>Direction</a>
@@ -273,8 +238,7 @@ The NrqlAlertCondition resource accepts the following [input]({{< relref "/docs/
         <span class="property-type">string</span>
     </dt>
     <dd>{{% md %}}The baseline direction of a _baseline_ NRQL alert condition. Valid values are: `lower_only`, `upper_and_lower`, `upper_only` (case insensitive).
-{{% /md %}}</dd>
-    <dt class="property-optional"
+{{% /md %}}</dd><dt class="property-optional"
             title="Optional">
         <span id="closeviolationsonexpiration_csharp">
 <a href="#closeviolationsonexpiration_csharp" style="color: inherit; text-decoration: inherit;">Close<wbr>Violations<wbr>On<wbr>Expiration</a>
@@ -283,8 +247,7 @@ The NrqlAlertCondition resource accepts the following [input]({{< relref "/docs/
         <span class="property-type">bool</span>
     </dt>
     <dd>{{% md %}}Whether to close all open violations when the signal expires.
-{{% /md %}}</dd>
-    <dt class="property-optional"
+{{% /md %}}</dd><dt class="property-optional"
             title="Optional">
         <span id="critical_csharp">
 <a href="#critical_csharp" style="color: inherit; text-decoration: inherit;">Critical</a>
@@ -293,8 +256,7 @@ The NrqlAlertCondition resource accepts the following [input]({{< relref "/docs/
         <span class="property-type"><a href="#nrqlalertconditioncritical">Pulumi.<wbr>New<wbr>Relic.<wbr>Inputs.<wbr>Nrql<wbr>Alert<wbr>Condition<wbr>Critical<wbr>Args</a></span>
     </dt>
     <dd>{{% md %}}A list containing the `critical` threshold values. See Terms below for details.
-{{% /md %}}</dd>
-    <dt class="property-optional"
+{{% /md %}}</dd><dt class="property-optional"
             title="Optional">
         <span id="description_csharp">
 <a href="#description_csharp" style="color: inherit; text-decoration: inherit;">Description</a>
@@ -303,8 +265,7 @@ The NrqlAlertCondition resource accepts the following [input]({{< relref "/docs/
         <span class="property-type">string</span>
     </dt>
     <dd>{{% md %}}The description of the NRQL alert condition.
-{{% /md %}}</dd>
-    <dt class="property-optional"
+{{% /md %}}</dd><dt class="property-optional"
             title="Optional">
         <span id="enabled_csharp">
 <a href="#enabled_csharp" style="color: inherit; text-decoration: inherit;">Enabled</a>
@@ -313,8 +274,7 @@ The NrqlAlertCondition resource accepts the following [input]({{< relref "/docs/
         <span class="property-type">bool</span>
     </dt>
     <dd>{{% md %}}Whether to enable the alert condition. Valid values are `true` and `false`. Defaults to `true`.
-{{% /md %}}</dd>
-    <dt class="property-optional"
+{{% /md %}}</dd><dt class="property-optional"
             title="Optional">
         <span id="expectedgroups_csharp">
 <a href="#expectedgroups_csharp" style="color: inherit; text-decoration: inherit;">Expected<wbr>Groups</a>
@@ -323,8 +283,7 @@ The NrqlAlertCondition resource accepts the following [input]({{< relref "/docs/
         <span class="property-type">int</span>
     </dt>
     <dd>{{% md %}}Number of expected groups when using `outlier` detection.
-{{% /md %}}</dd>
-    <dt class="property-optional"
+{{% /md %}}</dd><dt class="property-optional"
             title="Optional">
         <span id="expirationduration_csharp">
 <a href="#expirationduration_csharp" style="color: inherit; text-decoration: inherit;">Expiration<wbr>Duration</a>
@@ -333,8 +292,7 @@ The NrqlAlertCondition resource accepts the following [input]({{< relref "/docs/
         <span class="property-type">int</span>
     </dt>
     <dd>{{% md %}}The amount of time (in seconds) to wait before considering the signal expired.
-{{% /md %}}</dd>
-    <dt class="property-optional"
+{{% /md %}}</dd><dt class="property-optional"
             title="Optional">
         <span id="filloption_csharp">
 <a href="#filloption_csharp" style="color: inherit; text-decoration: inherit;">Fill<wbr>Option</a>
@@ -343,8 +301,7 @@ The NrqlAlertCondition resource accepts the following [input]({{< relref "/docs/
         <span class="property-type">string</span>
     </dt>
     <dd>{{% md %}}Which strategy to use when filling gaps in the signal. Possible values are `none`, `last_value` or `static`. If `static`, the `fill_value` field will be used for filling gaps in the signal.
-{{% /md %}}</dd>
-    <dt class="property-optional"
+{{% /md %}}</dd><dt class="property-optional"
             title="Optional">
         <span id="fillvalue_csharp">
 <a href="#fillvalue_csharp" style="color: inherit; text-decoration: inherit;">Fill<wbr>Value</a>
@@ -353,8 +310,7 @@ The NrqlAlertCondition resource accepts the following [input]({{< relref "/docs/
         <span class="property-type">double</span>
     </dt>
     <dd>{{% md %}}This value will be used for filling gaps in the signal.
-{{% /md %}}</dd>
-    <dt class="property-optional property-deprecated"
+{{% /md %}}</dd><dt class="property-optional property-deprecated"
             title="Optional, Deprecated">
         <span id="ignoreoverlap_csharp">
 <a href="#ignoreoverlap_csharp" style="color: inherit; text-decoration: inherit;">Ignore<wbr>Overlap</a>
@@ -363,8 +319,7 @@ The NrqlAlertCondition resource accepts the following [input]({{< relref "/docs/
         <span class="property-type">bool</span>
     </dt>
     <dd>{{% md %}}**DEPRECATED:** Use `open_violation_on_group_overlap` instead, but use the inverse value of your boolean - e.g. if `ignore_overlap = false`, use `open_violation_on_group_overlap = true`. This argument sets whether to trigger a violation when groups overlap. If set to `true` overlapping groups will not trigger a violation. This argument is only applicable in `outlier` conditions.
-{{% /md %}}<p class="property-message">Deprecated: {{% md %}}use `open_violation_on_group_overlap` attribute instead, but use the inverse of your boolean - e.g. if ignore_overlap = false, use open_violation_on_group_overlap = true{{% /md %}}</p></dd>
-    <dt class="property-optional"
+{{% /md %}}<p class="property-message">Deprecated: {{% md %}}use `open_violation_on_group_overlap` attribute instead, but use the inverse of your boolean - e.g. if ignore_overlap = false, use open_violation_on_group_overlap = true{{% /md %}}</p></dd><dt class="property-optional"
             title="Optional">
         <span id="name_csharp">
 <a href="#name_csharp" style="color: inherit; text-decoration: inherit;">Name</a>
@@ -373,8 +328,7 @@ The NrqlAlertCondition resource accepts the following [input]({{< relref "/docs/
         <span class="property-type">string</span>
     </dt>
     <dd>{{% md %}}The title of the condition.
-{{% /md %}}</dd>
-    <dt class="property-optional"
+{{% /md %}}</dd><dt class="property-optional"
             title="Optional">
         <span id="openviolationonexpiration_csharp">
 <a href="#openviolationonexpiration_csharp" style="color: inherit; text-decoration: inherit;">Open<wbr>Violation<wbr>On<wbr>Expiration</a>
@@ -383,8 +337,7 @@ The NrqlAlertCondition resource accepts the following [input]({{< relref "/docs/
         <span class="property-type">bool</span>
     </dt>
     <dd>{{% md %}}Whether to create a new violation to capture that the signal expired.
-{{% /md %}}</dd>
-    <dt class="property-optional"
+{{% /md %}}</dd><dt class="property-optional"
             title="Optional">
         <span id="openviolationongroupoverlap_csharp">
 <a href="#openviolationongroupoverlap_csharp" style="color: inherit; text-decoration: inherit;">Open<wbr>Violation<wbr>On<wbr>Group<wbr>Overlap</a>
@@ -393,8 +346,7 @@ The NrqlAlertCondition resource accepts the following [input]({{< relref "/docs/
         <span class="property-type">bool</span>
     </dt>
     <dd>{{% md %}}Whether or not to trigger a violation when groups overlap. Set to `true` if you want to trigger a violation when groups overlap. This argument is only applicable in `outlier` conditions.
-{{% /md %}}</dd>
-    <dt class="property-optional"
+{{% /md %}}</dd><dt class="property-optional"
             title="Optional">
         <span id="runbookurl_csharp">
 <a href="#runbookurl_csharp" style="color: inherit; text-decoration: inherit;">Runbook<wbr>Url</a>
@@ -403,8 +355,7 @@ The NrqlAlertCondition resource accepts the following [input]({{< relref "/docs/
         <span class="property-type">string</span>
     </dt>
     <dd>{{% md %}}Runbook URL to display in notifications.
-{{% /md %}}</dd>
-    <dt class="property-optional property-deprecated"
+{{% /md %}}</dd><dt class="property-optional property-deprecated"
             title="Optional, Deprecated">
         <span id="terms_csharp">
 <a href="#terms_csharp" style="color: inherit; text-decoration: inherit;">Terms</a>
@@ -413,8 +364,7 @@ The NrqlAlertCondition resource accepts the following [input]({{< relref "/docs/
         <span class="property-type"><a href="#nrqlalertconditionterm">List&lt;Pulumi.<wbr>New<wbr>Relic.<wbr>Inputs.<wbr>Nrql<wbr>Alert<wbr>Condition<wbr>Term<wbr>Args&gt;</a></span>
     </dt>
     <dd>{{% md %}}**DEPRECATED** Use `critical`, and `warning` instead.  A list of terms for this condition. See Terms below for details.
-{{% /md %}}<p class="property-message">Deprecated: {{% md %}}use `critical` and `warning` attributes instead{{% /md %}}</p></dd>
-    <dt class="property-optional"
+{{% /md %}}<p class="property-message">Deprecated: {{% md %}}use `critical` and `warning` attributes instead{{% /md %}}</p></dd><dt class="property-optional"
             title="Optional">
         <span id="type_csharp">
 <a href="#type_csharp" style="color: inherit; text-decoration: inherit;">Type</a>
@@ -423,8 +373,7 @@ The NrqlAlertCondition resource accepts the following [input]({{< relref "/docs/
         <span class="property-type">string</span>
     </dt>
     <dd>{{% md %}}The type of the condition. Valid values are `static`, `baseline`, or `outlier`. Defaults to `static`.
-{{% /md %}}</dd>
-    <dt class="property-optional"
+{{% /md %}}</dd><dt class="property-optional"
             title="Optional">
         <span id="valuefunction_csharp">
 <a href="#valuefunction_csharp" style="color: inherit; text-decoration: inherit;">Value<wbr>Function</a>
@@ -433,8 +382,7 @@ The NrqlAlertCondition resource accepts the following [input]({{< relref "/docs/
         <span class="property-type">string</span>
     </dt>
     <dd>{{% md %}}Possible values are `single_value`, `sum` (case insensitive).
-{{% /md %}}</dd>
-    <dt class="property-optional property-deprecated"
+{{% /md %}}</dd><dt class="property-optional property-deprecated"
             title="Optional, Deprecated">
         <span id="violationtimelimit_csharp">
 <a href="#violationtimelimit_csharp" style="color: inherit; text-decoration: inherit;">Violation<wbr>Time<wbr>Limit</a>
@@ -444,8 +392,7 @@ The NrqlAlertCondition resource accepts the following [input]({{< relref "/docs/
     </dt>
     <dd>{{% md %}}**DEPRECATED:** Use `violation_time_limit_seconds` instead. Sets a time limit, in hours, that will automatically force-close a long-lasting violation after the time limit you select. Possible values are `ONE_HOUR`, `TWO_HOURS`, `FOUR_HOURS`, `EIGHT_HOURS`, `TWELVE_HOURS`, `TWENTY_FOUR_HOURS`, `THIRTY_DAYS` (case insensitive).<br>
 <small>\***Note**: One of `violation_time_limit` _or_ `violation_time_limit_seconds` must be set, but not both.</small>
-{{% /md %}}<p class="property-message">Deprecated: {{% md %}}use `violation_time_limit_seconds` attribute instead{{% /md %}}</p></dd>
-    <dt class="property-optional"
+{{% /md %}}<p class="property-message">Deprecated: {{% md %}}use `violation_time_limit_seconds` attribute instead{{% /md %}}</p></dd><dt class="property-optional"
             title="Optional">
         <span id="violationtimelimitseconds_csharp">
 <a href="#violationtimelimitseconds_csharp" style="color: inherit; text-decoration: inherit;">Violation<wbr>Time<wbr>Limit<wbr>Seconds</a>
@@ -455,8 +402,7 @@ The NrqlAlertCondition resource accepts the following [input]({{< relref "/docs/
     </dt>
     <dd>{{% md %}}Sets a time limit, in seconds, that will automatically force-close a long-lasting violation after the time limit you select. The value must be between 300 seconds (5 minutes) to 2592000 seconds (30 days) (inclusive). <br>
 <small>\***Note**: One of `violation_time_limit` _or_ `violation_time_limit_seconds` must be set, but not both.</small>
-{{% /md %}}</dd>
-    <dt class="property-optional"
+{{% /md %}}</dd><dt class="property-optional"
             title="Optional">
         <span id="warning_csharp">
 <a href="#warning_csharp" style="color: inherit; text-decoration: inherit;">Warning</a>
@@ -465,14 +411,11 @@ The NrqlAlertCondition resource accepts the following [input]({{< relref "/docs/
         <span class="property-type"><a href="#nrqlalertconditionwarning">Pulumi.<wbr>New<wbr>Relic.<wbr>Inputs.<wbr>Nrql<wbr>Alert<wbr>Condition<wbr>Warning<wbr>Args</a></span>
     </dt>
     <dd>{{% md %}}A list containing the `warning` threshold values. See Terms below for details.
-{{% /md %}}</dd>
-</dl>
+{{% /md %}}</dd></dl>
 {{% /choosable %}}
 
 {{% choosable language go %}}
-<dl class="resources-properties">
-
-    <dt class="property-required"
+<dl class="resources-properties"><dt class="property-required"
             title="Required">
         <span id="nrql_go">
 <a href="#nrql_go" style="color: inherit; text-decoration: inherit;">Nrql</a>
@@ -481,8 +424,7 @@ The NrqlAlertCondition resource accepts the following [input]({{< relref "/docs/
         <span class="property-type"><a href="#nrqlalertconditionnrql">Nrql<wbr>Alert<wbr>Condition<wbr>Nrql</a></span>
     </dt>
     <dd>{{% md %}}A NRQL query. See NRQL below for details.
-{{% /md %}}</dd>
-    <dt class="property-required"
+{{% /md %}}</dd><dt class="property-required"
             title="Required">
         <span id="policyid_go">
 <a href="#policyid_go" style="color: inherit; text-decoration: inherit;">Policy<wbr>Id</a>
@@ -491,8 +433,7 @@ The NrqlAlertCondition resource accepts the following [input]({{< relref "/docs/
         <span class="property-type">int</span>
     </dt>
     <dd>{{% md %}}The ID of the policy where this condition should be used.
-{{% /md %}}</dd>
-    <dt class="property-optional"
+{{% /md %}}</dd><dt class="property-optional"
             title="Optional">
         <span id="accountid_go">
 <a href="#accountid_go" style="color: inherit; text-decoration: inherit;">Account<wbr>Id</a>
@@ -501,8 +442,7 @@ The NrqlAlertCondition resource accepts the following [input]({{< relref "/docs/
         <span class="property-type">int</span>
     </dt>
     <dd>{{% md %}}The New Relic account ID of the account you wish to create the condition. Defaults to the account ID set in your environment variable `NEW_RELIC_ACCOUNT_ID`.
-{{% /md %}}</dd>
-    <dt class="property-optional"
+{{% /md %}}</dd><dt class="property-optional"
             title="Optional">
         <span id="aggregationwindow_go">
 <a href="#aggregationwindow_go" style="color: inherit; text-decoration: inherit;">Aggregation<wbr>Window</a>
@@ -511,8 +451,7 @@ The NrqlAlertCondition resource accepts the following [input]({{< relref "/docs/
         <span class="property-type">int</span>
     </dt>
     <dd>{{% md %}}The duration of the time window used to evaluate the NRQL query, in seconds. The value must be at least 30 seconds, and no more than 15 minutes (900 seconds). Default is 60 seconds.
-{{% /md %}}</dd>
-    <dt class="property-optional"
+{{% /md %}}</dd><dt class="property-optional"
             title="Optional">
         <span id="baselinedirection_go">
 <a href="#baselinedirection_go" style="color: inherit; text-decoration: inherit;">Baseline<wbr>Direction</a>
@@ -521,8 +460,7 @@ The NrqlAlertCondition resource accepts the following [input]({{< relref "/docs/
         <span class="property-type">string</span>
     </dt>
     <dd>{{% md %}}The baseline direction of a _baseline_ NRQL alert condition. Valid values are: `lower_only`, `upper_and_lower`, `upper_only` (case insensitive).
-{{% /md %}}</dd>
-    <dt class="property-optional"
+{{% /md %}}</dd><dt class="property-optional"
             title="Optional">
         <span id="closeviolationsonexpiration_go">
 <a href="#closeviolationsonexpiration_go" style="color: inherit; text-decoration: inherit;">Close<wbr>Violations<wbr>On<wbr>Expiration</a>
@@ -531,8 +469,7 @@ The NrqlAlertCondition resource accepts the following [input]({{< relref "/docs/
         <span class="property-type">bool</span>
     </dt>
     <dd>{{% md %}}Whether to close all open violations when the signal expires.
-{{% /md %}}</dd>
-    <dt class="property-optional"
+{{% /md %}}</dd><dt class="property-optional"
             title="Optional">
         <span id="critical_go">
 <a href="#critical_go" style="color: inherit; text-decoration: inherit;">Critical</a>
@@ -541,8 +478,7 @@ The NrqlAlertCondition resource accepts the following [input]({{< relref "/docs/
         <span class="property-type"><a href="#nrqlalertconditioncritical">Nrql<wbr>Alert<wbr>Condition<wbr>Critical</a></span>
     </dt>
     <dd>{{% md %}}A list containing the `critical` threshold values. See Terms below for details.
-{{% /md %}}</dd>
-    <dt class="property-optional"
+{{% /md %}}</dd><dt class="property-optional"
             title="Optional">
         <span id="description_go">
 <a href="#description_go" style="color: inherit; text-decoration: inherit;">Description</a>
@@ -551,8 +487,7 @@ The NrqlAlertCondition resource accepts the following [input]({{< relref "/docs/
         <span class="property-type">string</span>
     </dt>
     <dd>{{% md %}}The description of the NRQL alert condition.
-{{% /md %}}</dd>
-    <dt class="property-optional"
+{{% /md %}}</dd><dt class="property-optional"
             title="Optional">
         <span id="enabled_go">
 <a href="#enabled_go" style="color: inherit; text-decoration: inherit;">Enabled</a>
@@ -561,8 +496,7 @@ The NrqlAlertCondition resource accepts the following [input]({{< relref "/docs/
         <span class="property-type">bool</span>
     </dt>
     <dd>{{% md %}}Whether to enable the alert condition. Valid values are `true` and `false`. Defaults to `true`.
-{{% /md %}}</dd>
-    <dt class="property-optional"
+{{% /md %}}</dd><dt class="property-optional"
             title="Optional">
         <span id="expectedgroups_go">
 <a href="#expectedgroups_go" style="color: inherit; text-decoration: inherit;">Expected<wbr>Groups</a>
@@ -571,8 +505,7 @@ The NrqlAlertCondition resource accepts the following [input]({{< relref "/docs/
         <span class="property-type">int</span>
     </dt>
     <dd>{{% md %}}Number of expected groups when using `outlier` detection.
-{{% /md %}}</dd>
-    <dt class="property-optional"
+{{% /md %}}</dd><dt class="property-optional"
             title="Optional">
         <span id="expirationduration_go">
 <a href="#expirationduration_go" style="color: inherit; text-decoration: inherit;">Expiration<wbr>Duration</a>
@@ -581,8 +514,7 @@ The NrqlAlertCondition resource accepts the following [input]({{< relref "/docs/
         <span class="property-type">int</span>
     </dt>
     <dd>{{% md %}}The amount of time (in seconds) to wait before considering the signal expired.
-{{% /md %}}</dd>
-    <dt class="property-optional"
+{{% /md %}}</dd><dt class="property-optional"
             title="Optional">
         <span id="filloption_go">
 <a href="#filloption_go" style="color: inherit; text-decoration: inherit;">Fill<wbr>Option</a>
@@ -591,8 +523,7 @@ The NrqlAlertCondition resource accepts the following [input]({{< relref "/docs/
         <span class="property-type">string</span>
     </dt>
     <dd>{{% md %}}Which strategy to use when filling gaps in the signal. Possible values are `none`, `last_value` or `static`. If `static`, the `fill_value` field will be used for filling gaps in the signal.
-{{% /md %}}</dd>
-    <dt class="property-optional"
+{{% /md %}}</dd><dt class="property-optional"
             title="Optional">
         <span id="fillvalue_go">
 <a href="#fillvalue_go" style="color: inherit; text-decoration: inherit;">Fill<wbr>Value</a>
@@ -601,8 +532,7 @@ The NrqlAlertCondition resource accepts the following [input]({{< relref "/docs/
         <span class="property-type">float64</span>
     </dt>
     <dd>{{% md %}}This value will be used for filling gaps in the signal.
-{{% /md %}}</dd>
-    <dt class="property-optional property-deprecated"
+{{% /md %}}</dd><dt class="property-optional property-deprecated"
             title="Optional, Deprecated">
         <span id="ignoreoverlap_go">
 <a href="#ignoreoverlap_go" style="color: inherit; text-decoration: inherit;">Ignore<wbr>Overlap</a>
@@ -611,8 +541,7 @@ The NrqlAlertCondition resource accepts the following [input]({{< relref "/docs/
         <span class="property-type">bool</span>
     </dt>
     <dd>{{% md %}}**DEPRECATED:** Use `open_violation_on_group_overlap` instead, but use the inverse value of your boolean - e.g. if `ignore_overlap = false`, use `open_violation_on_group_overlap = true`. This argument sets whether to trigger a violation when groups overlap. If set to `true` overlapping groups will not trigger a violation. This argument is only applicable in `outlier` conditions.
-{{% /md %}}<p class="property-message">Deprecated: {{% md %}}use `open_violation_on_group_overlap` attribute instead, but use the inverse of your boolean - e.g. if ignore_overlap = false, use open_violation_on_group_overlap = true{{% /md %}}</p></dd>
-    <dt class="property-optional"
+{{% /md %}}<p class="property-message">Deprecated: {{% md %}}use `open_violation_on_group_overlap` attribute instead, but use the inverse of your boolean - e.g. if ignore_overlap = false, use open_violation_on_group_overlap = true{{% /md %}}</p></dd><dt class="property-optional"
             title="Optional">
         <span id="name_go">
 <a href="#name_go" style="color: inherit; text-decoration: inherit;">Name</a>
@@ -621,8 +550,7 @@ The NrqlAlertCondition resource accepts the following [input]({{< relref "/docs/
         <span class="property-type">string</span>
     </dt>
     <dd>{{% md %}}The title of the condition.
-{{% /md %}}</dd>
-    <dt class="property-optional"
+{{% /md %}}</dd><dt class="property-optional"
             title="Optional">
         <span id="openviolationonexpiration_go">
 <a href="#openviolationonexpiration_go" style="color: inherit; text-decoration: inherit;">Open<wbr>Violation<wbr>On<wbr>Expiration</a>
@@ -631,8 +559,7 @@ The NrqlAlertCondition resource accepts the following [input]({{< relref "/docs/
         <span class="property-type">bool</span>
     </dt>
     <dd>{{% md %}}Whether to create a new violation to capture that the signal expired.
-{{% /md %}}</dd>
-    <dt class="property-optional"
+{{% /md %}}</dd><dt class="property-optional"
             title="Optional">
         <span id="openviolationongroupoverlap_go">
 <a href="#openviolationongroupoverlap_go" style="color: inherit; text-decoration: inherit;">Open<wbr>Violation<wbr>On<wbr>Group<wbr>Overlap</a>
@@ -641,8 +568,7 @@ The NrqlAlertCondition resource accepts the following [input]({{< relref "/docs/
         <span class="property-type">bool</span>
     </dt>
     <dd>{{% md %}}Whether or not to trigger a violation when groups overlap. Set to `true` if you want to trigger a violation when groups overlap. This argument is only applicable in `outlier` conditions.
-{{% /md %}}</dd>
-    <dt class="property-optional"
+{{% /md %}}</dd><dt class="property-optional"
             title="Optional">
         <span id="runbookurl_go">
 <a href="#runbookurl_go" style="color: inherit; text-decoration: inherit;">Runbook<wbr>Url</a>
@@ -651,8 +577,7 @@ The NrqlAlertCondition resource accepts the following [input]({{< relref "/docs/
         <span class="property-type">string</span>
     </dt>
     <dd>{{% md %}}Runbook URL to display in notifications.
-{{% /md %}}</dd>
-    <dt class="property-optional property-deprecated"
+{{% /md %}}</dd><dt class="property-optional property-deprecated"
             title="Optional, Deprecated">
         <span id="terms_go">
 <a href="#terms_go" style="color: inherit; text-decoration: inherit;">Terms</a>
@@ -661,8 +586,7 @@ The NrqlAlertCondition resource accepts the following [input]({{< relref "/docs/
         <span class="property-type"><a href="#nrqlalertconditionterm">[]Nrql<wbr>Alert<wbr>Condition<wbr>Term</a></span>
     </dt>
     <dd>{{% md %}}**DEPRECATED** Use `critical`, and `warning` instead.  A list of terms for this condition. See Terms below for details.
-{{% /md %}}<p class="property-message">Deprecated: {{% md %}}use `critical` and `warning` attributes instead{{% /md %}}</p></dd>
-    <dt class="property-optional"
+{{% /md %}}<p class="property-message">Deprecated: {{% md %}}use `critical` and `warning` attributes instead{{% /md %}}</p></dd><dt class="property-optional"
             title="Optional">
         <span id="type_go">
 <a href="#type_go" style="color: inherit; text-decoration: inherit;">Type</a>
@@ -671,8 +595,7 @@ The NrqlAlertCondition resource accepts the following [input]({{< relref "/docs/
         <span class="property-type">string</span>
     </dt>
     <dd>{{% md %}}The type of the condition. Valid values are `static`, `baseline`, or `outlier`. Defaults to `static`.
-{{% /md %}}</dd>
-    <dt class="property-optional"
+{{% /md %}}</dd><dt class="property-optional"
             title="Optional">
         <span id="valuefunction_go">
 <a href="#valuefunction_go" style="color: inherit; text-decoration: inherit;">Value<wbr>Function</a>
@@ -681,8 +604,7 @@ The NrqlAlertCondition resource accepts the following [input]({{< relref "/docs/
         <span class="property-type">string</span>
     </dt>
     <dd>{{% md %}}Possible values are `single_value`, `sum` (case insensitive).
-{{% /md %}}</dd>
-    <dt class="property-optional property-deprecated"
+{{% /md %}}</dd><dt class="property-optional property-deprecated"
             title="Optional, Deprecated">
         <span id="violationtimelimit_go">
 <a href="#violationtimelimit_go" style="color: inherit; text-decoration: inherit;">Violation<wbr>Time<wbr>Limit</a>
@@ -692,8 +614,7 @@ The NrqlAlertCondition resource accepts the following [input]({{< relref "/docs/
     </dt>
     <dd>{{% md %}}**DEPRECATED:** Use `violation_time_limit_seconds` instead. Sets a time limit, in hours, that will automatically force-close a long-lasting violation after the time limit you select. Possible values are `ONE_HOUR`, `TWO_HOURS`, `FOUR_HOURS`, `EIGHT_HOURS`, `TWELVE_HOURS`, `TWENTY_FOUR_HOURS`, `THIRTY_DAYS` (case insensitive).<br>
 <small>\***Note**: One of `violation_time_limit` _or_ `violation_time_limit_seconds` must be set, but not both.</small>
-{{% /md %}}<p class="property-message">Deprecated: {{% md %}}use `violation_time_limit_seconds` attribute instead{{% /md %}}</p></dd>
-    <dt class="property-optional"
+{{% /md %}}<p class="property-message">Deprecated: {{% md %}}use `violation_time_limit_seconds` attribute instead{{% /md %}}</p></dd><dt class="property-optional"
             title="Optional">
         <span id="violationtimelimitseconds_go">
 <a href="#violationtimelimitseconds_go" style="color: inherit; text-decoration: inherit;">Violation<wbr>Time<wbr>Limit<wbr>Seconds</a>
@@ -703,8 +624,7 @@ The NrqlAlertCondition resource accepts the following [input]({{< relref "/docs/
     </dt>
     <dd>{{% md %}}Sets a time limit, in seconds, that will automatically force-close a long-lasting violation after the time limit you select. The value must be between 300 seconds (5 minutes) to 2592000 seconds (30 days) (inclusive). <br>
 <small>\***Note**: One of `violation_time_limit` _or_ `violation_time_limit_seconds` must be set, but not both.</small>
-{{% /md %}}</dd>
-    <dt class="property-optional"
+{{% /md %}}</dd><dt class="property-optional"
             title="Optional">
         <span id="warning_go">
 <a href="#warning_go" style="color: inherit; text-decoration: inherit;">Warning</a>
@@ -713,14 +633,11 @@ The NrqlAlertCondition resource accepts the following [input]({{< relref "/docs/
         <span class="property-type"><a href="#nrqlalertconditionwarning">Nrql<wbr>Alert<wbr>Condition<wbr>Warning</a></span>
     </dt>
     <dd>{{% md %}}A list containing the `warning` threshold values. See Terms below for details.
-{{% /md %}}</dd>
-</dl>
+{{% /md %}}</dd></dl>
 {{% /choosable %}}
 
 {{% choosable language nodejs %}}
-<dl class="resources-properties">
-
-    <dt class="property-required"
+<dl class="resources-properties"><dt class="property-required"
             title="Required">
         <span id="nrql_nodejs">
 <a href="#nrql_nodejs" style="color: inherit; text-decoration: inherit;">nrql</a>
@@ -729,8 +646,7 @@ The NrqlAlertCondition resource accepts the following [input]({{< relref "/docs/
         <span class="property-type"><a href="#nrqlalertconditionnrql">Nrql<wbr>Alert<wbr>Condition<wbr>Nrql</a></span>
     </dt>
     <dd>{{% md %}}A NRQL query. See NRQL below for details.
-{{% /md %}}</dd>
-    <dt class="property-required"
+{{% /md %}}</dd><dt class="property-required"
             title="Required">
         <span id="policyid_nodejs">
 <a href="#policyid_nodejs" style="color: inherit; text-decoration: inherit;">policy<wbr>Id</a>
@@ -739,8 +655,7 @@ The NrqlAlertCondition resource accepts the following [input]({{< relref "/docs/
         <span class="property-type">number</span>
     </dt>
     <dd>{{% md %}}The ID of the policy where this condition should be used.
-{{% /md %}}</dd>
-    <dt class="property-optional"
+{{% /md %}}</dd><dt class="property-optional"
             title="Optional">
         <span id="accountid_nodejs">
 <a href="#accountid_nodejs" style="color: inherit; text-decoration: inherit;">account<wbr>Id</a>
@@ -749,8 +664,7 @@ The NrqlAlertCondition resource accepts the following [input]({{< relref "/docs/
         <span class="property-type">number</span>
     </dt>
     <dd>{{% md %}}The New Relic account ID of the account you wish to create the condition. Defaults to the account ID set in your environment variable `NEW_RELIC_ACCOUNT_ID`.
-{{% /md %}}</dd>
-    <dt class="property-optional"
+{{% /md %}}</dd><dt class="property-optional"
             title="Optional">
         <span id="aggregationwindow_nodejs">
 <a href="#aggregationwindow_nodejs" style="color: inherit; text-decoration: inherit;">aggregation<wbr>Window</a>
@@ -759,8 +673,7 @@ The NrqlAlertCondition resource accepts the following [input]({{< relref "/docs/
         <span class="property-type">number</span>
     </dt>
     <dd>{{% md %}}The duration of the time window used to evaluate the NRQL query, in seconds. The value must be at least 30 seconds, and no more than 15 minutes (900 seconds). Default is 60 seconds.
-{{% /md %}}</dd>
-    <dt class="property-optional"
+{{% /md %}}</dd><dt class="property-optional"
             title="Optional">
         <span id="baselinedirection_nodejs">
 <a href="#baselinedirection_nodejs" style="color: inherit; text-decoration: inherit;">baseline<wbr>Direction</a>
@@ -769,8 +682,7 @@ The NrqlAlertCondition resource accepts the following [input]({{< relref "/docs/
         <span class="property-type">string</span>
     </dt>
     <dd>{{% md %}}The baseline direction of a _baseline_ NRQL alert condition. Valid values are: `lower_only`, `upper_and_lower`, `upper_only` (case insensitive).
-{{% /md %}}</dd>
-    <dt class="property-optional"
+{{% /md %}}</dd><dt class="property-optional"
             title="Optional">
         <span id="closeviolationsonexpiration_nodejs">
 <a href="#closeviolationsonexpiration_nodejs" style="color: inherit; text-decoration: inherit;">close<wbr>Violations<wbr>On<wbr>Expiration</a>
@@ -779,8 +691,7 @@ The NrqlAlertCondition resource accepts the following [input]({{< relref "/docs/
         <span class="property-type">boolean</span>
     </dt>
     <dd>{{% md %}}Whether to close all open violations when the signal expires.
-{{% /md %}}</dd>
-    <dt class="property-optional"
+{{% /md %}}</dd><dt class="property-optional"
             title="Optional">
         <span id="critical_nodejs">
 <a href="#critical_nodejs" style="color: inherit; text-decoration: inherit;">critical</a>
@@ -789,8 +700,7 @@ The NrqlAlertCondition resource accepts the following [input]({{< relref "/docs/
         <span class="property-type"><a href="#nrqlalertconditioncritical">Nrql<wbr>Alert<wbr>Condition<wbr>Critical</a></span>
     </dt>
     <dd>{{% md %}}A list containing the `critical` threshold values. See Terms below for details.
-{{% /md %}}</dd>
-    <dt class="property-optional"
+{{% /md %}}</dd><dt class="property-optional"
             title="Optional">
         <span id="description_nodejs">
 <a href="#description_nodejs" style="color: inherit; text-decoration: inherit;">description</a>
@@ -799,8 +709,7 @@ The NrqlAlertCondition resource accepts the following [input]({{< relref "/docs/
         <span class="property-type">string</span>
     </dt>
     <dd>{{% md %}}The description of the NRQL alert condition.
-{{% /md %}}</dd>
-    <dt class="property-optional"
+{{% /md %}}</dd><dt class="property-optional"
             title="Optional">
         <span id="enabled_nodejs">
 <a href="#enabled_nodejs" style="color: inherit; text-decoration: inherit;">enabled</a>
@@ -809,8 +718,7 @@ The NrqlAlertCondition resource accepts the following [input]({{< relref "/docs/
         <span class="property-type">boolean</span>
     </dt>
     <dd>{{% md %}}Whether to enable the alert condition. Valid values are `true` and `false`. Defaults to `true`.
-{{% /md %}}</dd>
-    <dt class="property-optional"
+{{% /md %}}</dd><dt class="property-optional"
             title="Optional">
         <span id="expectedgroups_nodejs">
 <a href="#expectedgroups_nodejs" style="color: inherit; text-decoration: inherit;">expected<wbr>Groups</a>
@@ -819,8 +727,7 @@ The NrqlAlertCondition resource accepts the following [input]({{< relref "/docs/
         <span class="property-type">number</span>
     </dt>
     <dd>{{% md %}}Number of expected groups when using `outlier` detection.
-{{% /md %}}</dd>
-    <dt class="property-optional"
+{{% /md %}}</dd><dt class="property-optional"
             title="Optional">
         <span id="expirationduration_nodejs">
 <a href="#expirationduration_nodejs" style="color: inherit; text-decoration: inherit;">expiration<wbr>Duration</a>
@@ -829,8 +736,7 @@ The NrqlAlertCondition resource accepts the following [input]({{< relref "/docs/
         <span class="property-type">number</span>
     </dt>
     <dd>{{% md %}}The amount of time (in seconds) to wait before considering the signal expired.
-{{% /md %}}</dd>
-    <dt class="property-optional"
+{{% /md %}}</dd><dt class="property-optional"
             title="Optional">
         <span id="filloption_nodejs">
 <a href="#filloption_nodejs" style="color: inherit; text-decoration: inherit;">fill<wbr>Option</a>
@@ -839,8 +745,7 @@ The NrqlAlertCondition resource accepts the following [input]({{< relref "/docs/
         <span class="property-type">string</span>
     </dt>
     <dd>{{% md %}}Which strategy to use when filling gaps in the signal. Possible values are `none`, `last_value` or `static`. If `static`, the `fill_value` field will be used for filling gaps in the signal.
-{{% /md %}}</dd>
-    <dt class="property-optional"
+{{% /md %}}</dd><dt class="property-optional"
             title="Optional">
         <span id="fillvalue_nodejs">
 <a href="#fillvalue_nodejs" style="color: inherit; text-decoration: inherit;">fill<wbr>Value</a>
@@ -849,8 +754,7 @@ The NrqlAlertCondition resource accepts the following [input]({{< relref "/docs/
         <span class="property-type">number</span>
     </dt>
     <dd>{{% md %}}This value will be used for filling gaps in the signal.
-{{% /md %}}</dd>
-    <dt class="property-optional property-deprecated"
+{{% /md %}}</dd><dt class="property-optional property-deprecated"
             title="Optional, Deprecated">
         <span id="ignoreoverlap_nodejs">
 <a href="#ignoreoverlap_nodejs" style="color: inherit; text-decoration: inherit;">ignore<wbr>Overlap</a>
@@ -859,8 +763,7 @@ The NrqlAlertCondition resource accepts the following [input]({{< relref "/docs/
         <span class="property-type">boolean</span>
     </dt>
     <dd>{{% md %}}**DEPRECATED:** Use `open_violation_on_group_overlap` instead, but use the inverse value of your boolean - e.g. if `ignore_overlap = false`, use `open_violation_on_group_overlap = true`. This argument sets whether to trigger a violation when groups overlap. If set to `true` overlapping groups will not trigger a violation. This argument is only applicable in `outlier` conditions.
-{{% /md %}}<p class="property-message">Deprecated: {{% md %}}use `open_violation_on_group_overlap` attribute instead, but use the inverse of your boolean - e.g. if ignore_overlap = false, use open_violation_on_group_overlap = true{{% /md %}}</p></dd>
-    <dt class="property-optional"
+{{% /md %}}<p class="property-message">Deprecated: {{% md %}}use `open_violation_on_group_overlap` attribute instead, but use the inverse of your boolean - e.g. if ignore_overlap = false, use open_violation_on_group_overlap = true{{% /md %}}</p></dd><dt class="property-optional"
             title="Optional">
         <span id="name_nodejs">
 <a href="#name_nodejs" style="color: inherit; text-decoration: inherit;">name</a>
@@ -869,8 +772,7 @@ The NrqlAlertCondition resource accepts the following [input]({{< relref "/docs/
         <span class="property-type">string</span>
     </dt>
     <dd>{{% md %}}The title of the condition.
-{{% /md %}}</dd>
-    <dt class="property-optional"
+{{% /md %}}</dd><dt class="property-optional"
             title="Optional">
         <span id="openviolationonexpiration_nodejs">
 <a href="#openviolationonexpiration_nodejs" style="color: inherit; text-decoration: inherit;">open<wbr>Violation<wbr>On<wbr>Expiration</a>
@@ -879,8 +781,7 @@ The NrqlAlertCondition resource accepts the following [input]({{< relref "/docs/
         <span class="property-type">boolean</span>
     </dt>
     <dd>{{% md %}}Whether to create a new violation to capture that the signal expired.
-{{% /md %}}</dd>
-    <dt class="property-optional"
+{{% /md %}}</dd><dt class="property-optional"
             title="Optional">
         <span id="openviolationongroupoverlap_nodejs">
 <a href="#openviolationongroupoverlap_nodejs" style="color: inherit; text-decoration: inherit;">open<wbr>Violation<wbr>On<wbr>Group<wbr>Overlap</a>
@@ -889,8 +790,7 @@ The NrqlAlertCondition resource accepts the following [input]({{< relref "/docs/
         <span class="property-type">boolean</span>
     </dt>
     <dd>{{% md %}}Whether or not to trigger a violation when groups overlap. Set to `true` if you want to trigger a violation when groups overlap. This argument is only applicable in `outlier` conditions.
-{{% /md %}}</dd>
-    <dt class="property-optional"
+{{% /md %}}</dd><dt class="property-optional"
             title="Optional">
         <span id="runbookurl_nodejs">
 <a href="#runbookurl_nodejs" style="color: inherit; text-decoration: inherit;">runbook<wbr>Url</a>
@@ -899,8 +799,7 @@ The NrqlAlertCondition resource accepts the following [input]({{< relref "/docs/
         <span class="property-type">string</span>
     </dt>
     <dd>{{% md %}}Runbook URL to display in notifications.
-{{% /md %}}</dd>
-    <dt class="property-optional property-deprecated"
+{{% /md %}}</dd><dt class="property-optional property-deprecated"
             title="Optional, Deprecated">
         <span id="terms_nodejs">
 <a href="#terms_nodejs" style="color: inherit; text-decoration: inherit;">terms</a>
@@ -909,8 +808,7 @@ The NrqlAlertCondition resource accepts the following [input]({{< relref "/docs/
         <span class="property-type"><a href="#nrqlalertconditionterm">Nrql<wbr>Alert<wbr>Condition<wbr>Term[]</a></span>
     </dt>
     <dd>{{% md %}}**DEPRECATED** Use `critical`, and `warning` instead.  A list of terms for this condition. See Terms below for details.
-{{% /md %}}<p class="property-message">Deprecated: {{% md %}}use `critical` and `warning` attributes instead{{% /md %}}</p></dd>
-    <dt class="property-optional"
+{{% /md %}}<p class="property-message">Deprecated: {{% md %}}use `critical` and `warning` attributes instead{{% /md %}}</p></dd><dt class="property-optional"
             title="Optional">
         <span id="type_nodejs">
 <a href="#type_nodejs" style="color: inherit; text-decoration: inherit;">type</a>
@@ -919,8 +817,7 @@ The NrqlAlertCondition resource accepts the following [input]({{< relref "/docs/
         <span class="property-type">string</span>
     </dt>
     <dd>{{% md %}}The type of the condition. Valid values are `static`, `baseline`, or `outlier`. Defaults to `static`.
-{{% /md %}}</dd>
-    <dt class="property-optional"
+{{% /md %}}</dd><dt class="property-optional"
             title="Optional">
         <span id="valuefunction_nodejs">
 <a href="#valuefunction_nodejs" style="color: inherit; text-decoration: inherit;">value<wbr>Function</a>
@@ -929,8 +826,7 @@ The NrqlAlertCondition resource accepts the following [input]({{< relref "/docs/
         <span class="property-type">string</span>
     </dt>
     <dd>{{% md %}}Possible values are `single_value`, `sum` (case insensitive).
-{{% /md %}}</dd>
-    <dt class="property-optional property-deprecated"
+{{% /md %}}</dd><dt class="property-optional property-deprecated"
             title="Optional, Deprecated">
         <span id="violationtimelimit_nodejs">
 <a href="#violationtimelimit_nodejs" style="color: inherit; text-decoration: inherit;">violation<wbr>Time<wbr>Limit</a>
@@ -940,8 +836,7 @@ The NrqlAlertCondition resource accepts the following [input]({{< relref "/docs/
     </dt>
     <dd>{{% md %}}**DEPRECATED:** Use `violation_time_limit_seconds` instead. Sets a time limit, in hours, that will automatically force-close a long-lasting violation after the time limit you select. Possible values are `ONE_HOUR`, `TWO_HOURS`, `FOUR_HOURS`, `EIGHT_HOURS`, `TWELVE_HOURS`, `TWENTY_FOUR_HOURS`, `THIRTY_DAYS` (case insensitive).<br>
 <small>\***Note**: One of `violation_time_limit` _or_ `violation_time_limit_seconds` must be set, but not both.</small>
-{{% /md %}}<p class="property-message">Deprecated: {{% md %}}use `violation_time_limit_seconds` attribute instead{{% /md %}}</p></dd>
-    <dt class="property-optional"
+{{% /md %}}<p class="property-message">Deprecated: {{% md %}}use `violation_time_limit_seconds` attribute instead{{% /md %}}</p></dd><dt class="property-optional"
             title="Optional">
         <span id="violationtimelimitseconds_nodejs">
 <a href="#violationtimelimitseconds_nodejs" style="color: inherit; text-decoration: inherit;">violation<wbr>Time<wbr>Limit<wbr>Seconds</a>
@@ -951,8 +846,7 @@ The NrqlAlertCondition resource accepts the following [input]({{< relref "/docs/
     </dt>
     <dd>{{% md %}}Sets a time limit, in seconds, that will automatically force-close a long-lasting violation after the time limit you select. The value must be between 300 seconds (5 minutes) to 2592000 seconds (30 days) (inclusive). <br>
 <small>\***Note**: One of `violation_time_limit` _or_ `violation_time_limit_seconds` must be set, but not both.</small>
-{{% /md %}}</dd>
-    <dt class="property-optional"
+{{% /md %}}</dd><dt class="property-optional"
             title="Optional">
         <span id="warning_nodejs">
 <a href="#warning_nodejs" style="color: inherit; text-decoration: inherit;">warning</a>
@@ -961,14 +855,11 @@ The NrqlAlertCondition resource accepts the following [input]({{< relref "/docs/
         <span class="property-type"><a href="#nrqlalertconditionwarning">Nrql<wbr>Alert<wbr>Condition<wbr>Warning</a></span>
     </dt>
     <dd>{{% md %}}A list containing the `warning` threshold values. See Terms below for details.
-{{% /md %}}</dd>
-</dl>
+{{% /md %}}</dd></dl>
 {{% /choosable %}}
 
 {{% choosable language python %}}
-<dl class="resources-properties">
-
-    <dt class="property-required"
+<dl class="resources-properties"><dt class="property-required"
             title="Required">
         <span id="nrql_python">
 <a href="#nrql_python" style="color: inherit; text-decoration: inherit;">nrql</a>
@@ -977,8 +868,7 @@ The NrqlAlertCondition resource accepts the following [input]({{< relref "/docs/
         <span class="property-type"><a href="#nrqlalertconditionnrql">Nrql<wbr>Alert<wbr>Condition<wbr>Nrql<wbr>Args</a></span>
     </dt>
     <dd>{{% md %}}A NRQL query. See NRQL below for details.
-{{% /md %}}</dd>
-    <dt class="property-required"
+{{% /md %}}</dd><dt class="property-required"
             title="Required">
         <span id="policy_id_python">
 <a href="#policy_id_python" style="color: inherit; text-decoration: inherit;">policy_<wbr>id</a>
@@ -987,8 +877,7 @@ The NrqlAlertCondition resource accepts the following [input]({{< relref "/docs/
         <span class="property-type">int</span>
     </dt>
     <dd>{{% md %}}The ID of the policy where this condition should be used.
-{{% /md %}}</dd>
-    <dt class="property-optional"
+{{% /md %}}</dd><dt class="property-optional"
             title="Optional">
         <span id="account_id_python">
 <a href="#account_id_python" style="color: inherit; text-decoration: inherit;">account_<wbr>id</a>
@@ -997,8 +886,7 @@ The NrqlAlertCondition resource accepts the following [input]({{< relref "/docs/
         <span class="property-type">int</span>
     </dt>
     <dd>{{% md %}}The New Relic account ID of the account you wish to create the condition. Defaults to the account ID set in your environment variable `NEW_RELIC_ACCOUNT_ID`.
-{{% /md %}}</dd>
-    <dt class="property-optional"
+{{% /md %}}</dd><dt class="property-optional"
             title="Optional">
         <span id="aggregation_window_python">
 <a href="#aggregation_window_python" style="color: inherit; text-decoration: inherit;">aggregation_<wbr>window</a>
@@ -1007,8 +895,7 @@ The NrqlAlertCondition resource accepts the following [input]({{< relref "/docs/
         <span class="property-type">int</span>
     </dt>
     <dd>{{% md %}}The duration of the time window used to evaluate the NRQL query, in seconds. The value must be at least 30 seconds, and no more than 15 minutes (900 seconds). Default is 60 seconds.
-{{% /md %}}</dd>
-    <dt class="property-optional"
+{{% /md %}}</dd><dt class="property-optional"
             title="Optional">
         <span id="baseline_direction_python">
 <a href="#baseline_direction_python" style="color: inherit; text-decoration: inherit;">baseline_<wbr>direction</a>
@@ -1017,8 +904,7 @@ The NrqlAlertCondition resource accepts the following [input]({{< relref "/docs/
         <span class="property-type">str</span>
     </dt>
     <dd>{{% md %}}The baseline direction of a _baseline_ NRQL alert condition. Valid values are: `lower_only`, `upper_and_lower`, `upper_only` (case insensitive).
-{{% /md %}}</dd>
-    <dt class="property-optional"
+{{% /md %}}</dd><dt class="property-optional"
             title="Optional">
         <span id="close_violations_on_expiration_python">
 <a href="#close_violations_on_expiration_python" style="color: inherit; text-decoration: inherit;">close_<wbr>violations_<wbr>on_<wbr>expiration</a>
@@ -1027,8 +913,7 @@ The NrqlAlertCondition resource accepts the following [input]({{< relref "/docs/
         <span class="property-type">bool</span>
     </dt>
     <dd>{{% md %}}Whether to close all open violations when the signal expires.
-{{% /md %}}</dd>
-    <dt class="property-optional"
+{{% /md %}}</dd><dt class="property-optional"
             title="Optional">
         <span id="critical_python">
 <a href="#critical_python" style="color: inherit; text-decoration: inherit;">critical</a>
@@ -1037,8 +922,7 @@ The NrqlAlertCondition resource accepts the following [input]({{< relref "/docs/
         <span class="property-type"><a href="#nrqlalertconditioncritical">Nrql<wbr>Alert<wbr>Condition<wbr>Critical<wbr>Args</a></span>
     </dt>
     <dd>{{% md %}}A list containing the `critical` threshold values. See Terms below for details.
-{{% /md %}}</dd>
-    <dt class="property-optional"
+{{% /md %}}</dd><dt class="property-optional"
             title="Optional">
         <span id="description_python">
 <a href="#description_python" style="color: inherit; text-decoration: inherit;">description</a>
@@ -1047,8 +931,7 @@ The NrqlAlertCondition resource accepts the following [input]({{< relref "/docs/
         <span class="property-type">str</span>
     </dt>
     <dd>{{% md %}}The description of the NRQL alert condition.
-{{% /md %}}</dd>
-    <dt class="property-optional"
+{{% /md %}}</dd><dt class="property-optional"
             title="Optional">
         <span id="enabled_python">
 <a href="#enabled_python" style="color: inherit; text-decoration: inherit;">enabled</a>
@@ -1057,8 +940,7 @@ The NrqlAlertCondition resource accepts the following [input]({{< relref "/docs/
         <span class="property-type">bool</span>
     </dt>
     <dd>{{% md %}}Whether to enable the alert condition. Valid values are `true` and `false`. Defaults to `true`.
-{{% /md %}}</dd>
-    <dt class="property-optional"
+{{% /md %}}</dd><dt class="property-optional"
             title="Optional">
         <span id="expected_groups_python">
 <a href="#expected_groups_python" style="color: inherit; text-decoration: inherit;">expected_<wbr>groups</a>
@@ -1067,8 +949,7 @@ The NrqlAlertCondition resource accepts the following [input]({{< relref "/docs/
         <span class="property-type">int</span>
     </dt>
     <dd>{{% md %}}Number of expected groups when using `outlier` detection.
-{{% /md %}}</dd>
-    <dt class="property-optional"
+{{% /md %}}</dd><dt class="property-optional"
             title="Optional">
         <span id="expiration_duration_python">
 <a href="#expiration_duration_python" style="color: inherit; text-decoration: inherit;">expiration_<wbr>duration</a>
@@ -1077,8 +958,7 @@ The NrqlAlertCondition resource accepts the following [input]({{< relref "/docs/
         <span class="property-type">int</span>
     </dt>
     <dd>{{% md %}}The amount of time (in seconds) to wait before considering the signal expired.
-{{% /md %}}</dd>
-    <dt class="property-optional"
+{{% /md %}}</dd><dt class="property-optional"
             title="Optional">
         <span id="fill_option_python">
 <a href="#fill_option_python" style="color: inherit; text-decoration: inherit;">fill_<wbr>option</a>
@@ -1087,8 +967,7 @@ The NrqlAlertCondition resource accepts the following [input]({{< relref "/docs/
         <span class="property-type">str</span>
     </dt>
     <dd>{{% md %}}Which strategy to use when filling gaps in the signal. Possible values are `none`, `last_value` or `static`. If `static`, the `fill_value` field will be used for filling gaps in the signal.
-{{% /md %}}</dd>
-    <dt class="property-optional"
+{{% /md %}}</dd><dt class="property-optional"
             title="Optional">
         <span id="fill_value_python">
 <a href="#fill_value_python" style="color: inherit; text-decoration: inherit;">fill_<wbr>value</a>
@@ -1097,8 +976,7 @@ The NrqlAlertCondition resource accepts the following [input]({{< relref "/docs/
         <span class="property-type">float</span>
     </dt>
     <dd>{{% md %}}This value will be used for filling gaps in the signal.
-{{% /md %}}</dd>
-    <dt class="property-optional property-deprecated"
+{{% /md %}}</dd><dt class="property-optional property-deprecated"
             title="Optional, Deprecated">
         <span id="ignore_overlap_python">
 <a href="#ignore_overlap_python" style="color: inherit; text-decoration: inherit;">ignore_<wbr>overlap</a>
@@ -1107,8 +985,7 @@ The NrqlAlertCondition resource accepts the following [input]({{< relref "/docs/
         <span class="property-type">bool</span>
     </dt>
     <dd>{{% md %}}**DEPRECATED:** Use `open_violation_on_group_overlap` instead, but use the inverse value of your boolean - e.g. if `ignore_overlap = false`, use `open_violation_on_group_overlap = true`. This argument sets whether to trigger a violation when groups overlap. If set to `true` overlapping groups will not trigger a violation. This argument is only applicable in `outlier` conditions.
-{{% /md %}}<p class="property-message">Deprecated: {{% md %}}use `open_violation_on_group_overlap` attribute instead, but use the inverse of your boolean - e.g. if ignore_overlap = false, use open_violation_on_group_overlap = true{{% /md %}}</p></dd>
-    <dt class="property-optional"
+{{% /md %}}<p class="property-message">Deprecated: {{% md %}}use `open_violation_on_group_overlap` attribute instead, but use the inverse of your boolean - e.g. if ignore_overlap = false, use open_violation_on_group_overlap = true{{% /md %}}</p></dd><dt class="property-optional"
             title="Optional">
         <span id="name_python">
 <a href="#name_python" style="color: inherit; text-decoration: inherit;">name</a>
@@ -1117,8 +994,7 @@ The NrqlAlertCondition resource accepts the following [input]({{< relref "/docs/
         <span class="property-type">str</span>
     </dt>
     <dd>{{% md %}}The title of the condition.
-{{% /md %}}</dd>
-    <dt class="property-optional"
+{{% /md %}}</dd><dt class="property-optional"
             title="Optional">
         <span id="open_violation_on_expiration_python">
 <a href="#open_violation_on_expiration_python" style="color: inherit; text-decoration: inherit;">open_<wbr>violation_<wbr>on_<wbr>expiration</a>
@@ -1127,8 +1003,7 @@ The NrqlAlertCondition resource accepts the following [input]({{< relref "/docs/
         <span class="property-type">bool</span>
     </dt>
     <dd>{{% md %}}Whether to create a new violation to capture that the signal expired.
-{{% /md %}}</dd>
-    <dt class="property-optional"
+{{% /md %}}</dd><dt class="property-optional"
             title="Optional">
         <span id="open_violation_on_group_overlap_python">
 <a href="#open_violation_on_group_overlap_python" style="color: inherit; text-decoration: inherit;">open_<wbr>violation_<wbr>on_<wbr>group_<wbr>overlap</a>
@@ -1137,8 +1012,7 @@ The NrqlAlertCondition resource accepts the following [input]({{< relref "/docs/
         <span class="property-type">bool</span>
     </dt>
     <dd>{{% md %}}Whether or not to trigger a violation when groups overlap. Set to `true` if you want to trigger a violation when groups overlap. This argument is only applicable in `outlier` conditions.
-{{% /md %}}</dd>
-    <dt class="property-optional"
+{{% /md %}}</dd><dt class="property-optional"
             title="Optional">
         <span id="runbook_url_python">
 <a href="#runbook_url_python" style="color: inherit; text-decoration: inherit;">runbook_<wbr>url</a>
@@ -1147,8 +1021,7 @@ The NrqlAlertCondition resource accepts the following [input]({{< relref "/docs/
         <span class="property-type">str</span>
     </dt>
     <dd>{{% md %}}Runbook URL to display in notifications.
-{{% /md %}}</dd>
-    <dt class="property-optional property-deprecated"
+{{% /md %}}</dd><dt class="property-optional property-deprecated"
             title="Optional, Deprecated">
         <span id="terms_python">
 <a href="#terms_python" style="color: inherit; text-decoration: inherit;">terms</a>
@@ -1157,8 +1030,7 @@ The NrqlAlertCondition resource accepts the following [input]({{< relref "/docs/
         <span class="property-type"><a href="#nrqlalertconditionterm">Sequence[Nrql<wbr>Alert<wbr>Condition<wbr>Term<wbr>Args]</a></span>
     </dt>
     <dd>{{% md %}}**DEPRECATED** Use `critical`, and `warning` instead.  A list of terms for this condition. See Terms below for details.
-{{% /md %}}<p class="property-message">Deprecated: {{% md %}}use `critical` and `warning` attributes instead{{% /md %}}</p></dd>
-    <dt class="property-optional"
+{{% /md %}}<p class="property-message">Deprecated: {{% md %}}use `critical` and `warning` attributes instead{{% /md %}}</p></dd><dt class="property-optional"
             title="Optional">
         <span id="type_python">
 <a href="#type_python" style="color: inherit; text-decoration: inherit;">type</a>
@@ -1167,8 +1039,7 @@ The NrqlAlertCondition resource accepts the following [input]({{< relref "/docs/
         <span class="property-type">str</span>
     </dt>
     <dd>{{% md %}}The type of the condition. Valid values are `static`, `baseline`, or `outlier`. Defaults to `static`.
-{{% /md %}}</dd>
-    <dt class="property-optional"
+{{% /md %}}</dd><dt class="property-optional"
             title="Optional">
         <span id="value_function_python">
 <a href="#value_function_python" style="color: inherit; text-decoration: inherit;">value_<wbr>function</a>
@@ -1177,8 +1048,7 @@ The NrqlAlertCondition resource accepts the following [input]({{< relref "/docs/
         <span class="property-type">str</span>
     </dt>
     <dd>{{% md %}}Possible values are `single_value`, `sum` (case insensitive).
-{{% /md %}}</dd>
-    <dt class="property-optional property-deprecated"
+{{% /md %}}</dd><dt class="property-optional property-deprecated"
             title="Optional, Deprecated">
         <span id="violation_time_limit_python">
 <a href="#violation_time_limit_python" style="color: inherit; text-decoration: inherit;">violation_<wbr>time_<wbr>limit</a>
@@ -1188,8 +1058,7 @@ The NrqlAlertCondition resource accepts the following [input]({{< relref "/docs/
     </dt>
     <dd>{{% md %}}**DEPRECATED:** Use `violation_time_limit_seconds` instead. Sets a time limit, in hours, that will automatically force-close a long-lasting violation after the time limit you select. Possible values are `ONE_HOUR`, `TWO_HOURS`, `FOUR_HOURS`, `EIGHT_HOURS`, `TWELVE_HOURS`, `TWENTY_FOUR_HOURS`, `THIRTY_DAYS` (case insensitive).<br>
 <small>\***Note**: One of `violation_time_limit` _or_ `violation_time_limit_seconds` must be set, but not both.</small>
-{{% /md %}}<p class="property-message">Deprecated: {{% md %}}use `violation_time_limit_seconds` attribute instead{{% /md %}}</p></dd>
-    <dt class="property-optional"
+{{% /md %}}<p class="property-message">Deprecated: {{% md %}}use `violation_time_limit_seconds` attribute instead{{% /md %}}</p></dd><dt class="property-optional"
             title="Optional">
         <span id="violation_time_limit_seconds_python">
 <a href="#violation_time_limit_seconds_python" style="color: inherit; text-decoration: inherit;">violation_<wbr>time_<wbr>limit_<wbr>seconds</a>
@@ -1199,8 +1068,7 @@ The NrqlAlertCondition resource accepts the following [input]({{< relref "/docs/
     </dt>
     <dd>{{% md %}}Sets a time limit, in seconds, that will automatically force-close a long-lasting violation after the time limit you select. The value must be between 300 seconds (5 minutes) to 2592000 seconds (30 days) (inclusive). <br>
 <small>\***Note**: One of `violation_time_limit` _or_ `violation_time_limit_seconds` must be set, but not both.</small>
-{{% /md %}}</dd>
-    <dt class="property-optional"
+{{% /md %}}</dd><dt class="property-optional"
             title="Optional">
         <span id="warning_python">
 <a href="#warning_python" style="color: inherit; text-decoration: inherit;">warning</a>
@@ -1209,8 +1077,7 @@ The NrqlAlertCondition resource accepts the following [input]({{< relref "/docs/
         <span class="property-type"><a href="#nrqlalertconditionwarning">Nrql<wbr>Alert<wbr>Condition<wbr>Warning<wbr>Args</a></span>
     </dt>
     <dd>{{% md %}}A list containing the `warning` threshold values. See Terms below for details.
-{{% /md %}}</dd>
-</dl>
+{{% /md %}}</dd></dl>
 {{% /choosable %}}
 
 
@@ -1221,9 +1088,7 @@ All [input](#inputs) properties are implicitly available as output properties. A
 
 
 {{% choosable language csharp %}}
-<dl class="resources-properties">
-
-    <dt class="property-"
+<dl class="resources-properties"><dt class="property-"
             title="">
         <span id="id_csharp">
 <a href="#id_csharp" style="color: inherit; text-decoration: inherit;">Id</a>
@@ -1231,14 +1096,11 @@ All [input](#inputs) properties are implicitly available as output properties. A
         <span class="property-indicator"></span>
         <span class="property-type">string</span>
     </dt>
-    <dd>{{% md %}}The provider-assigned unique ID for this managed resource.{{% /md %}}</dd>
-</dl>
+    <dd>{{% md %}}The provider-assigned unique ID for this managed resource.{{% /md %}}</dd></dl>
 {{% /choosable %}}
 
 {{% choosable language go %}}
-<dl class="resources-properties">
-
-    <dt class="property-"
+<dl class="resources-properties"><dt class="property-"
             title="">
         <span id="id_go">
 <a href="#id_go" style="color: inherit; text-decoration: inherit;">Id</a>
@@ -1246,14 +1108,11 @@ All [input](#inputs) properties are implicitly available as output properties. A
         <span class="property-indicator"></span>
         <span class="property-type">string</span>
     </dt>
-    <dd>{{% md %}}The provider-assigned unique ID for this managed resource.{{% /md %}}</dd>
-</dl>
+    <dd>{{% md %}}The provider-assigned unique ID for this managed resource.{{% /md %}}</dd></dl>
 {{% /choosable %}}
 
 {{% choosable language nodejs %}}
-<dl class="resources-properties">
-
-    <dt class="property-"
+<dl class="resources-properties"><dt class="property-"
             title="">
         <span id="id_nodejs">
 <a href="#id_nodejs" style="color: inherit; text-decoration: inherit;">id</a>
@@ -1261,14 +1120,11 @@ All [input](#inputs) properties are implicitly available as output properties. A
         <span class="property-indicator"></span>
         <span class="property-type">string</span>
     </dt>
-    <dd>{{% md %}}The provider-assigned unique ID for this managed resource.{{% /md %}}</dd>
-</dl>
+    <dd>{{% md %}}The provider-assigned unique ID for this managed resource.{{% /md %}}</dd></dl>
 {{% /choosable %}}
 
 {{% choosable language python %}}
-<dl class="resources-properties">
-
-    <dt class="property-"
+<dl class="resources-properties"><dt class="property-"
             title="">
         <span id="id_python">
 <a href="#id_python" style="color: inherit; text-decoration: inherit;">id</a>
@@ -1276,8 +1132,7 @@ All [input](#inputs) properties are implicitly available as output properties. A
         <span class="property-indicator"></span>
         <span class="property-type">str</span>
     </dt>
-    <dd>{{% md %}}The provider-assigned unique ID for this managed resource.{{% /md %}}</dd>
-</dl>
+    <dd>{{% md %}}The provider-assigned unique ID for this managed resource.{{% /md %}}</dd></dl>
 {{% /choosable %}}
 
 
@@ -1404,9 +1259,7 @@ The following state arguments are supported:
 
 
 {{% choosable language csharp %}}
-<dl class="resources-properties">
-
-    <dt class="property-optional"
+<dl class="resources-properties"><dt class="property-optional"
             title="Optional">
         <span id="state_accountid_csharp">
 <a href="#state_accountid_csharp" style="color: inherit; text-decoration: inherit;">Account<wbr>Id</a>
@@ -1415,8 +1268,7 @@ The following state arguments are supported:
         <span class="property-type">int</span>
     </dt>
     <dd>{{% md %}}The New Relic account ID of the account you wish to create the condition. Defaults to the account ID set in your environment variable `NEW_RELIC_ACCOUNT_ID`.
-{{% /md %}}</dd>
-    <dt class="property-optional"
+{{% /md %}}</dd><dt class="property-optional"
             title="Optional">
         <span id="state_aggregationwindow_csharp">
 <a href="#state_aggregationwindow_csharp" style="color: inherit; text-decoration: inherit;">Aggregation<wbr>Window</a>
@@ -1425,8 +1277,7 @@ The following state arguments are supported:
         <span class="property-type">int</span>
     </dt>
     <dd>{{% md %}}The duration of the time window used to evaluate the NRQL query, in seconds. The value must be at least 30 seconds, and no more than 15 minutes (900 seconds). Default is 60 seconds.
-{{% /md %}}</dd>
-    <dt class="property-optional"
+{{% /md %}}</dd><dt class="property-optional"
             title="Optional">
         <span id="state_baselinedirection_csharp">
 <a href="#state_baselinedirection_csharp" style="color: inherit; text-decoration: inherit;">Baseline<wbr>Direction</a>
@@ -1435,8 +1286,7 @@ The following state arguments are supported:
         <span class="property-type">string</span>
     </dt>
     <dd>{{% md %}}The baseline direction of a _baseline_ NRQL alert condition. Valid values are: `lower_only`, `upper_and_lower`, `upper_only` (case insensitive).
-{{% /md %}}</dd>
-    <dt class="property-optional"
+{{% /md %}}</dd><dt class="property-optional"
             title="Optional">
         <span id="state_closeviolationsonexpiration_csharp">
 <a href="#state_closeviolationsonexpiration_csharp" style="color: inherit; text-decoration: inherit;">Close<wbr>Violations<wbr>On<wbr>Expiration</a>
@@ -1445,8 +1295,7 @@ The following state arguments are supported:
         <span class="property-type">bool</span>
     </dt>
     <dd>{{% md %}}Whether to close all open violations when the signal expires.
-{{% /md %}}</dd>
-    <dt class="property-optional"
+{{% /md %}}</dd><dt class="property-optional"
             title="Optional">
         <span id="state_critical_csharp">
 <a href="#state_critical_csharp" style="color: inherit; text-decoration: inherit;">Critical</a>
@@ -1455,8 +1304,7 @@ The following state arguments are supported:
         <span class="property-type"><a href="#nrqlalertconditioncritical">Pulumi.<wbr>New<wbr>Relic.<wbr>Inputs.<wbr>Nrql<wbr>Alert<wbr>Condition<wbr>Critical<wbr>Args</a></span>
     </dt>
     <dd>{{% md %}}A list containing the `critical` threshold values. See Terms below for details.
-{{% /md %}}</dd>
-    <dt class="property-optional"
+{{% /md %}}</dd><dt class="property-optional"
             title="Optional">
         <span id="state_description_csharp">
 <a href="#state_description_csharp" style="color: inherit; text-decoration: inherit;">Description</a>
@@ -1465,8 +1313,7 @@ The following state arguments are supported:
         <span class="property-type">string</span>
     </dt>
     <dd>{{% md %}}The description of the NRQL alert condition.
-{{% /md %}}</dd>
-    <dt class="property-optional"
+{{% /md %}}</dd><dt class="property-optional"
             title="Optional">
         <span id="state_enabled_csharp">
 <a href="#state_enabled_csharp" style="color: inherit; text-decoration: inherit;">Enabled</a>
@@ -1475,8 +1322,7 @@ The following state arguments are supported:
         <span class="property-type">bool</span>
     </dt>
     <dd>{{% md %}}Whether to enable the alert condition. Valid values are `true` and `false`. Defaults to `true`.
-{{% /md %}}</dd>
-    <dt class="property-optional"
+{{% /md %}}</dd><dt class="property-optional"
             title="Optional">
         <span id="state_expectedgroups_csharp">
 <a href="#state_expectedgroups_csharp" style="color: inherit; text-decoration: inherit;">Expected<wbr>Groups</a>
@@ -1485,8 +1331,7 @@ The following state arguments are supported:
         <span class="property-type">int</span>
     </dt>
     <dd>{{% md %}}Number of expected groups when using `outlier` detection.
-{{% /md %}}</dd>
-    <dt class="property-optional"
+{{% /md %}}</dd><dt class="property-optional"
             title="Optional">
         <span id="state_expirationduration_csharp">
 <a href="#state_expirationduration_csharp" style="color: inherit; text-decoration: inherit;">Expiration<wbr>Duration</a>
@@ -1495,8 +1340,7 @@ The following state arguments are supported:
         <span class="property-type">int</span>
     </dt>
     <dd>{{% md %}}The amount of time (in seconds) to wait before considering the signal expired.
-{{% /md %}}</dd>
-    <dt class="property-optional"
+{{% /md %}}</dd><dt class="property-optional"
             title="Optional">
         <span id="state_filloption_csharp">
 <a href="#state_filloption_csharp" style="color: inherit; text-decoration: inherit;">Fill<wbr>Option</a>
@@ -1505,8 +1349,7 @@ The following state arguments are supported:
         <span class="property-type">string</span>
     </dt>
     <dd>{{% md %}}Which strategy to use when filling gaps in the signal. Possible values are `none`, `last_value` or `static`. If `static`, the `fill_value` field will be used for filling gaps in the signal.
-{{% /md %}}</dd>
-    <dt class="property-optional"
+{{% /md %}}</dd><dt class="property-optional"
             title="Optional">
         <span id="state_fillvalue_csharp">
 <a href="#state_fillvalue_csharp" style="color: inherit; text-decoration: inherit;">Fill<wbr>Value</a>
@@ -1515,8 +1358,7 @@ The following state arguments are supported:
         <span class="property-type">double</span>
     </dt>
     <dd>{{% md %}}This value will be used for filling gaps in the signal.
-{{% /md %}}</dd>
-    <dt class="property-optional property-deprecated"
+{{% /md %}}</dd><dt class="property-optional property-deprecated"
             title="Optional, Deprecated">
         <span id="state_ignoreoverlap_csharp">
 <a href="#state_ignoreoverlap_csharp" style="color: inherit; text-decoration: inherit;">Ignore<wbr>Overlap</a>
@@ -1525,8 +1367,7 @@ The following state arguments are supported:
         <span class="property-type">bool</span>
     </dt>
     <dd>{{% md %}}**DEPRECATED:** Use `open_violation_on_group_overlap` instead, but use the inverse value of your boolean - e.g. if `ignore_overlap = false`, use `open_violation_on_group_overlap = true`. This argument sets whether to trigger a violation when groups overlap. If set to `true` overlapping groups will not trigger a violation. This argument is only applicable in `outlier` conditions.
-{{% /md %}}<p class="property-message">Deprecated: {{% md %}}use `open_violation_on_group_overlap` attribute instead, but use the inverse of your boolean - e.g. if ignore_overlap = false, use open_violation_on_group_overlap = true{{% /md %}}</p></dd>
-    <dt class="property-optional"
+{{% /md %}}<p class="property-message">Deprecated: {{% md %}}use `open_violation_on_group_overlap` attribute instead, but use the inverse of your boolean - e.g. if ignore_overlap = false, use open_violation_on_group_overlap = true{{% /md %}}</p></dd><dt class="property-optional"
             title="Optional">
         <span id="state_name_csharp">
 <a href="#state_name_csharp" style="color: inherit; text-decoration: inherit;">Name</a>
@@ -1535,8 +1376,7 @@ The following state arguments are supported:
         <span class="property-type">string</span>
     </dt>
     <dd>{{% md %}}The title of the condition.
-{{% /md %}}</dd>
-    <dt class="property-optional"
+{{% /md %}}</dd><dt class="property-optional"
             title="Optional">
         <span id="state_nrql_csharp">
 <a href="#state_nrql_csharp" style="color: inherit; text-decoration: inherit;">Nrql</a>
@@ -1545,8 +1385,7 @@ The following state arguments are supported:
         <span class="property-type"><a href="#nrqlalertconditionnrql">Pulumi.<wbr>New<wbr>Relic.<wbr>Inputs.<wbr>Nrql<wbr>Alert<wbr>Condition<wbr>Nrql<wbr>Args</a></span>
     </dt>
     <dd>{{% md %}}A NRQL query. See NRQL below for details.
-{{% /md %}}</dd>
-    <dt class="property-optional"
+{{% /md %}}</dd><dt class="property-optional"
             title="Optional">
         <span id="state_openviolationonexpiration_csharp">
 <a href="#state_openviolationonexpiration_csharp" style="color: inherit; text-decoration: inherit;">Open<wbr>Violation<wbr>On<wbr>Expiration</a>
@@ -1555,8 +1394,7 @@ The following state arguments are supported:
         <span class="property-type">bool</span>
     </dt>
     <dd>{{% md %}}Whether to create a new violation to capture that the signal expired.
-{{% /md %}}</dd>
-    <dt class="property-optional"
+{{% /md %}}</dd><dt class="property-optional"
             title="Optional">
         <span id="state_openviolationongroupoverlap_csharp">
 <a href="#state_openviolationongroupoverlap_csharp" style="color: inherit; text-decoration: inherit;">Open<wbr>Violation<wbr>On<wbr>Group<wbr>Overlap</a>
@@ -1565,8 +1403,7 @@ The following state arguments are supported:
         <span class="property-type">bool</span>
     </dt>
     <dd>{{% md %}}Whether or not to trigger a violation when groups overlap. Set to `true` if you want to trigger a violation when groups overlap. This argument is only applicable in `outlier` conditions.
-{{% /md %}}</dd>
-    <dt class="property-optional"
+{{% /md %}}</dd><dt class="property-optional"
             title="Optional">
         <span id="state_policyid_csharp">
 <a href="#state_policyid_csharp" style="color: inherit; text-decoration: inherit;">Policy<wbr>Id</a>
@@ -1575,8 +1412,7 @@ The following state arguments are supported:
         <span class="property-type">int</span>
     </dt>
     <dd>{{% md %}}The ID of the policy where this condition should be used.
-{{% /md %}}</dd>
-    <dt class="property-optional"
+{{% /md %}}</dd><dt class="property-optional"
             title="Optional">
         <span id="state_runbookurl_csharp">
 <a href="#state_runbookurl_csharp" style="color: inherit; text-decoration: inherit;">Runbook<wbr>Url</a>
@@ -1585,8 +1421,7 @@ The following state arguments are supported:
         <span class="property-type">string</span>
     </dt>
     <dd>{{% md %}}Runbook URL to display in notifications.
-{{% /md %}}</dd>
-    <dt class="property-optional property-deprecated"
+{{% /md %}}</dd><dt class="property-optional property-deprecated"
             title="Optional, Deprecated">
         <span id="state_terms_csharp">
 <a href="#state_terms_csharp" style="color: inherit; text-decoration: inherit;">Terms</a>
@@ -1595,8 +1430,7 @@ The following state arguments are supported:
         <span class="property-type"><a href="#nrqlalertconditionterm">List&lt;Pulumi.<wbr>New<wbr>Relic.<wbr>Inputs.<wbr>Nrql<wbr>Alert<wbr>Condition<wbr>Term<wbr>Args&gt;</a></span>
     </dt>
     <dd>{{% md %}}**DEPRECATED** Use `critical`, and `warning` instead.  A list of terms for this condition. See Terms below for details.
-{{% /md %}}<p class="property-message">Deprecated: {{% md %}}use `critical` and `warning` attributes instead{{% /md %}}</p></dd>
-    <dt class="property-optional"
+{{% /md %}}<p class="property-message">Deprecated: {{% md %}}use `critical` and `warning` attributes instead{{% /md %}}</p></dd><dt class="property-optional"
             title="Optional">
         <span id="state_type_csharp">
 <a href="#state_type_csharp" style="color: inherit; text-decoration: inherit;">Type</a>
@@ -1605,8 +1439,7 @@ The following state arguments are supported:
         <span class="property-type">string</span>
     </dt>
     <dd>{{% md %}}The type of the condition. Valid values are `static`, `baseline`, or `outlier`. Defaults to `static`.
-{{% /md %}}</dd>
-    <dt class="property-optional"
+{{% /md %}}</dd><dt class="property-optional"
             title="Optional">
         <span id="state_valuefunction_csharp">
 <a href="#state_valuefunction_csharp" style="color: inherit; text-decoration: inherit;">Value<wbr>Function</a>
@@ -1615,8 +1448,7 @@ The following state arguments are supported:
         <span class="property-type">string</span>
     </dt>
     <dd>{{% md %}}Possible values are `single_value`, `sum` (case insensitive).
-{{% /md %}}</dd>
-    <dt class="property-optional property-deprecated"
+{{% /md %}}</dd><dt class="property-optional property-deprecated"
             title="Optional, Deprecated">
         <span id="state_violationtimelimit_csharp">
 <a href="#state_violationtimelimit_csharp" style="color: inherit; text-decoration: inherit;">Violation<wbr>Time<wbr>Limit</a>
@@ -1626,8 +1458,7 @@ The following state arguments are supported:
     </dt>
     <dd>{{% md %}}**DEPRECATED:** Use `violation_time_limit_seconds` instead. Sets a time limit, in hours, that will automatically force-close a long-lasting violation after the time limit you select. Possible values are `ONE_HOUR`, `TWO_HOURS`, `FOUR_HOURS`, `EIGHT_HOURS`, `TWELVE_HOURS`, `TWENTY_FOUR_HOURS`, `THIRTY_DAYS` (case insensitive).<br>
 <small>\***Note**: One of `violation_time_limit` _or_ `violation_time_limit_seconds` must be set, but not both.</small>
-{{% /md %}}<p class="property-message">Deprecated: {{% md %}}use `violation_time_limit_seconds` attribute instead{{% /md %}}</p></dd>
-    <dt class="property-optional"
+{{% /md %}}<p class="property-message">Deprecated: {{% md %}}use `violation_time_limit_seconds` attribute instead{{% /md %}}</p></dd><dt class="property-optional"
             title="Optional">
         <span id="state_violationtimelimitseconds_csharp">
 <a href="#state_violationtimelimitseconds_csharp" style="color: inherit; text-decoration: inherit;">Violation<wbr>Time<wbr>Limit<wbr>Seconds</a>
@@ -1637,8 +1468,7 @@ The following state arguments are supported:
     </dt>
     <dd>{{% md %}}Sets a time limit, in seconds, that will automatically force-close a long-lasting violation after the time limit you select. The value must be between 300 seconds (5 minutes) to 2592000 seconds (30 days) (inclusive). <br>
 <small>\***Note**: One of `violation_time_limit` _or_ `violation_time_limit_seconds` must be set, but not both.</small>
-{{% /md %}}</dd>
-    <dt class="property-optional"
+{{% /md %}}</dd><dt class="property-optional"
             title="Optional">
         <span id="state_warning_csharp">
 <a href="#state_warning_csharp" style="color: inherit; text-decoration: inherit;">Warning</a>
@@ -1647,14 +1477,11 @@ The following state arguments are supported:
         <span class="property-type"><a href="#nrqlalertconditionwarning">Pulumi.<wbr>New<wbr>Relic.<wbr>Inputs.<wbr>Nrql<wbr>Alert<wbr>Condition<wbr>Warning<wbr>Args</a></span>
     </dt>
     <dd>{{% md %}}A list containing the `warning` threshold values. See Terms below for details.
-{{% /md %}}</dd>
-</dl>
+{{% /md %}}</dd></dl>
 {{% /choosable %}}
 
 {{% choosable language go %}}
-<dl class="resources-properties">
-
-    <dt class="property-optional"
+<dl class="resources-properties"><dt class="property-optional"
             title="Optional">
         <span id="state_accountid_go">
 <a href="#state_accountid_go" style="color: inherit; text-decoration: inherit;">Account<wbr>Id</a>
@@ -1663,8 +1490,7 @@ The following state arguments are supported:
         <span class="property-type">int</span>
     </dt>
     <dd>{{% md %}}The New Relic account ID of the account you wish to create the condition. Defaults to the account ID set in your environment variable `NEW_RELIC_ACCOUNT_ID`.
-{{% /md %}}</dd>
-    <dt class="property-optional"
+{{% /md %}}</dd><dt class="property-optional"
             title="Optional">
         <span id="state_aggregationwindow_go">
 <a href="#state_aggregationwindow_go" style="color: inherit; text-decoration: inherit;">Aggregation<wbr>Window</a>
@@ -1673,8 +1499,7 @@ The following state arguments are supported:
         <span class="property-type">int</span>
     </dt>
     <dd>{{% md %}}The duration of the time window used to evaluate the NRQL query, in seconds. The value must be at least 30 seconds, and no more than 15 minutes (900 seconds). Default is 60 seconds.
-{{% /md %}}</dd>
-    <dt class="property-optional"
+{{% /md %}}</dd><dt class="property-optional"
             title="Optional">
         <span id="state_baselinedirection_go">
 <a href="#state_baselinedirection_go" style="color: inherit; text-decoration: inherit;">Baseline<wbr>Direction</a>
@@ -1683,8 +1508,7 @@ The following state arguments are supported:
         <span class="property-type">string</span>
     </dt>
     <dd>{{% md %}}The baseline direction of a _baseline_ NRQL alert condition. Valid values are: `lower_only`, `upper_and_lower`, `upper_only` (case insensitive).
-{{% /md %}}</dd>
-    <dt class="property-optional"
+{{% /md %}}</dd><dt class="property-optional"
             title="Optional">
         <span id="state_closeviolationsonexpiration_go">
 <a href="#state_closeviolationsonexpiration_go" style="color: inherit; text-decoration: inherit;">Close<wbr>Violations<wbr>On<wbr>Expiration</a>
@@ -1693,8 +1517,7 @@ The following state arguments are supported:
         <span class="property-type">bool</span>
     </dt>
     <dd>{{% md %}}Whether to close all open violations when the signal expires.
-{{% /md %}}</dd>
-    <dt class="property-optional"
+{{% /md %}}</dd><dt class="property-optional"
             title="Optional">
         <span id="state_critical_go">
 <a href="#state_critical_go" style="color: inherit; text-decoration: inherit;">Critical</a>
@@ -1703,8 +1526,7 @@ The following state arguments are supported:
         <span class="property-type"><a href="#nrqlalertconditioncritical">Nrql<wbr>Alert<wbr>Condition<wbr>Critical</a></span>
     </dt>
     <dd>{{% md %}}A list containing the `critical` threshold values. See Terms below for details.
-{{% /md %}}</dd>
-    <dt class="property-optional"
+{{% /md %}}</dd><dt class="property-optional"
             title="Optional">
         <span id="state_description_go">
 <a href="#state_description_go" style="color: inherit; text-decoration: inherit;">Description</a>
@@ -1713,8 +1535,7 @@ The following state arguments are supported:
         <span class="property-type">string</span>
     </dt>
     <dd>{{% md %}}The description of the NRQL alert condition.
-{{% /md %}}</dd>
-    <dt class="property-optional"
+{{% /md %}}</dd><dt class="property-optional"
             title="Optional">
         <span id="state_enabled_go">
 <a href="#state_enabled_go" style="color: inherit; text-decoration: inherit;">Enabled</a>
@@ -1723,8 +1544,7 @@ The following state arguments are supported:
         <span class="property-type">bool</span>
     </dt>
     <dd>{{% md %}}Whether to enable the alert condition. Valid values are `true` and `false`. Defaults to `true`.
-{{% /md %}}</dd>
-    <dt class="property-optional"
+{{% /md %}}</dd><dt class="property-optional"
             title="Optional">
         <span id="state_expectedgroups_go">
 <a href="#state_expectedgroups_go" style="color: inherit; text-decoration: inherit;">Expected<wbr>Groups</a>
@@ -1733,8 +1553,7 @@ The following state arguments are supported:
         <span class="property-type">int</span>
     </dt>
     <dd>{{% md %}}Number of expected groups when using `outlier` detection.
-{{% /md %}}</dd>
-    <dt class="property-optional"
+{{% /md %}}</dd><dt class="property-optional"
             title="Optional">
         <span id="state_expirationduration_go">
 <a href="#state_expirationduration_go" style="color: inherit; text-decoration: inherit;">Expiration<wbr>Duration</a>
@@ -1743,8 +1562,7 @@ The following state arguments are supported:
         <span class="property-type">int</span>
     </dt>
     <dd>{{% md %}}The amount of time (in seconds) to wait before considering the signal expired.
-{{% /md %}}</dd>
-    <dt class="property-optional"
+{{% /md %}}</dd><dt class="property-optional"
             title="Optional">
         <span id="state_filloption_go">
 <a href="#state_filloption_go" style="color: inherit; text-decoration: inherit;">Fill<wbr>Option</a>
@@ -1753,8 +1571,7 @@ The following state arguments are supported:
         <span class="property-type">string</span>
     </dt>
     <dd>{{% md %}}Which strategy to use when filling gaps in the signal. Possible values are `none`, `last_value` or `static`. If `static`, the `fill_value` field will be used for filling gaps in the signal.
-{{% /md %}}</dd>
-    <dt class="property-optional"
+{{% /md %}}</dd><dt class="property-optional"
             title="Optional">
         <span id="state_fillvalue_go">
 <a href="#state_fillvalue_go" style="color: inherit; text-decoration: inherit;">Fill<wbr>Value</a>
@@ -1763,8 +1580,7 @@ The following state arguments are supported:
         <span class="property-type">float64</span>
     </dt>
     <dd>{{% md %}}This value will be used for filling gaps in the signal.
-{{% /md %}}</dd>
-    <dt class="property-optional property-deprecated"
+{{% /md %}}</dd><dt class="property-optional property-deprecated"
             title="Optional, Deprecated">
         <span id="state_ignoreoverlap_go">
 <a href="#state_ignoreoverlap_go" style="color: inherit; text-decoration: inherit;">Ignore<wbr>Overlap</a>
@@ -1773,8 +1589,7 @@ The following state arguments are supported:
         <span class="property-type">bool</span>
     </dt>
     <dd>{{% md %}}**DEPRECATED:** Use `open_violation_on_group_overlap` instead, but use the inverse value of your boolean - e.g. if `ignore_overlap = false`, use `open_violation_on_group_overlap = true`. This argument sets whether to trigger a violation when groups overlap. If set to `true` overlapping groups will not trigger a violation. This argument is only applicable in `outlier` conditions.
-{{% /md %}}<p class="property-message">Deprecated: {{% md %}}use `open_violation_on_group_overlap` attribute instead, but use the inverse of your boolean - e.g. if ignore_overlap = false, use open_violation_on_group_overlap = true{{% /md %}}</p></dd>
-    <dt class="property-optional"
+{{% /md %}}<p class="property-message">Deprecated: {{% md %}}use `open_violation_on_group_overlap` attribute instead, but use the inverse of your boolean - e.g. if ignore_overlap = false, use open_violation_on_group_overlap = true{{% /md %}}</p></dd><dt class="property-optional"
             title="Optional">
         <span id="state_name_go">
 <a href="#state_name_go" style="color: inherit; text-decoration: inherit;">Name</a>
@@ -1783,8 +1598,7 @@ The following state arguments are supported:
         <span class="property-type">string</span>
     </dt>
     <dd>{{% md %}}The title of the condition.
-{{% /md %}}</dd>
-    <dt class="property-optional"
+{{% /md %}}</dd><dt class="property-optional"
             title="Optional">
         <span id="state_nrql_go">
 <a href="#state_nrql_go" style="color: inherit; text-decoration: inherit;">Nrql</a>
@@ -1793,8 +1607,7 @@ The following state arguments are supported:
         <span class="property-type"><a href="#nrqlalertconditionnrql">Nrql<wbr>Alert<wbr>Condition<wbr>Nrql</a></span>
     </dt>
     <dd>{{% md %}}A NRQL query. See NRQL below for details.
-{{% /md %}}</dd>
-    <dt class="property-optional"
+{{% /md %}}</dd><dt class="property-optional"
             title="Optional">
         <span id="state_openviolationonexpiration_go">
 <a href="#state_openviolationonexpiration_go" style="color: inherit; text-decoration: inherit;">Open<wbr>Violation<wbr>On<wbr>Expiration</a>
@@ -1803,8 +1616,7 @@ The following state arguments are supported:
         <span class="property-type">bool</span>
     </dt>
     <dd>{{% md %}}Whether to create a new violation to capture that the signal expired.
-{{% /md %}}</dd>
-    <dt class="property-optional"
+{{% /md %}}</dd><dt class="property-optional"
             title="Optional">
         <span id="state_openviolationongroupoverlap_go">
 <a href="#state_openviolationongroupoverlap_go" style="color: inherit; text-decoration: inherit;">Open<wbr>Violation<wbr>On<wbr>Group<wbr>Overlap</a>
@@ -1813,8 +1625,7 @@ The following state arguments are supported:
         <span class="property-type">bool</span>
     </dt>
     <dd>{{% md %}}Whether or not to trigger a violation when groups overlap. Set to `true` if you want to trigger a violation when groups overlap. This argument is only applicable in `outlier` conditions.
-{{% /md %}}</dd>
-    <dt class="property-optional"
+{{% /md %}}</dd><dt class="property-optional"
             title="Optional">
         <span id="state_policyid_go">
 <a href="#state_policyid_go" style="color: inherit; text-decoration: inherit;">Policy<wbr>Id</a>
@@ -1823,8 +1634,7 @@ The following state arguments are supported:
         <span class="property-type">int</span>
     </dt>
     <dd>{{% md %}}The ID of the policy where this condition should be used.
-{{% /md %}}</dd>
-    <dt class="property-optional"
+{{% /md %}}</dd><dt class="property-optional"
             title="Optional">
         <span id="state_runbookurl_go">
 <a href="#state_runbookurl_go" style="color: inherit; text-decoration: inherit;">Runbook<wbr>Url</a>
@@ -1833,8 +1643,7 @@ The following state arguments are supported:
         <span class="property-type">string</span>
     </dt>
     <dd>{{% md %}}Runbook URL to display in notifications.
-{{% /md %}}</dd>
-    <dt class="property-optional property-deprecated"
+{{% /md %}}</dd><dt class="property-optional property-deprecated"
             title="Optional, Deprecated">
         <span id="state_terms_go">
 <a href="#state_terms_go" style="color: inherit; text-decoration: inherit;">Terms</a>
@@ -1843,8 +1652,7 @@ The following state arguments are supported:
         <span class="property-type"><a href="#nrqlalertconditionterm">[]Nrql<wbr>Alert<wbr>Condition<wbr>Term</a></span>
     </dt>
     <dd>{{% md %}}**DEPRECATED** Use `critical`, and `warning` instead.  A list of terms for this condition. See Terms below for details.
-{{% /md %}}<p class="property-message">Deprecated: {{% md %}}use `critical` and `warning` attributes instead{{% /md %}}</p></dd>
-    <dt class="property-optional"
+{{% /md %}}<p class="property-message">Deprecated: {{% md %}}use `critical` and `warning` attributes instead{{% /md %}}</p></dd><dt class="property-optional"
             title="Optional">
         <span id="state_type_go">
 <a href="#state_type_go" style="color: inherit; text-decoration: inherit;">Type</a>
@@ -1853,8 +1661,7 @@ The following state arguments are supported:
         <span class="property-type">string</span>
     </dt>
     <dd>{{% md %}}The type of the condition. Valid values are `static`, `baseline`, or `outlier`. Defaults to `static`.
-{{% /md %}}</dd>
-    <dt class="property-optional"
+{{% /md %}}</dd><dt class="property-optional"
             title="Optional">
         <span id="state_valuefunction_go">
 <a href="#state_valuefunction_go" style="color: inherit; text-decoration: inherit;">Value<wbr>Function</a>
@@ -1863,8 +1670,7 @@ The following state arguments are supported:
         <span class="property-type">string</span>
     </dt>
     <dd>{{% md %}}Possible values are `single_value`, `sum` (case insensitive).
-{{% /md %}}</dd>
-    <dt class="property-optional property-deprecated"
+{{% /md %}}</dd><dt class="property-optional property-deprecated"
             title="Optional, Deprecated">
         <span id="state_violationtimelimit_go">
 <a href="#state_violationtimelimit_go" style="color: inherit; text-decoration: inherit;">Violation<wbr>Time<wbr>Limit</a>
@@ -1874,8 +1680,7 @@ The following state arguments are supported:
     </dt>
     <dd>{{% md %}}**DEPRECATED:** Use `violation_time_limit_seconds` instead. Sets a time limit, in hours, that will automatically force-close a long-lasting violation after the time limit you select. Possible values are `ONE_HOUR`, `TWO_HOURS`, `FOUR_HOURS`, `EIGHT_HOURS`, `TWELVE_HOURS`, `TWENTY_FOUR_HOURS`, `THIRTY_DAYS` (case insensitive).<br>
 <small>\***Note**: One of `violation_time_limit` _or_ `violation_time_limit_seconds` must be set, but not both.</small>
-{{% /md %}}<p class="property-message">Deprecated: {{% md %}}use `violation_time_limit_seconds` attribute instead{{% /md %}}</p></dd>
-    <dt class="property-optional"
+{{% /md %}}<p class="property-message">Deprecated: {{% md %}}use `violation_time_limit_seconds` attribute instead{{% /md %}}</p></dd><dt class="property-optional"
             title="Optional">
         <span id="state_violationtimelimitseconds_go">
 <a href="#state_violationtimelimitseconds_go" style="color: inherit; text-decoration: inherit;">Violation<wbr>Time<wbr>Limit<wbr>Seconds</a>
@@ -1885,8 +1690,7 @@ The following state arguments are supported:
     </dt>
     <dd>{{% md %}}Sets a time limit, in seconds, that will automatically force-close a long-lasting violation after the time limit you select. The value must be between 300 seconds (5 minutes) to 2592000 seconds (30 days) (inclusive). <br>
 <small>\***Note**: One of `violation_time_limit` _or_ `violation_time_limit_seconds` must be set, but not both.</small>
-{{% /md %}}</dd>
-    <dt class="property-optional"
+{{% /md %}}</dd><dt class="property-optional"
             title="Optional">
         <span id="state_warning_go">
 <a href="#state_warning_go" style="color: inherit; text-decoration: inherit;">Warning</a>
@@ -1895,14 +1699,11 @@ The following state arguments are supported:
         <span class="property-type"><a href="#nrqlalertconditionwarning">Nrql<wbr>Alert<wbr>Condition<wbr>Warning</a></span>
     </dt>
     <dd>{{% md %}}A list containing the `warning` threshold values. See Terms below for details.
-{{% /md %}}</dd>
-</dl>
+{{% /md %}}</dd></dl>
 {{% /choosable %}}
 
 {{% choosable language nodejs %}}
-<dl class="resources-properties">
-
-    <dt class="property-optional"
+<dl class="resources-properties"><dt class="property-optional"
             title="Optional">
         <span id="state_accountid_nodejs">
 <a href="#state_accountid_nodejs" style="color: inherit; text-decoration: inherit;">account<wbr>Id</a>
@@ -1911,8 +1712,7 @@ The following state arguments are supported:
         <span class="property-type">number</span>
     </dt>
     <dd>{{% md %}}The New Relic account ID of the account you wish to create the condition. Defaults to the account ID set in your environment variable `NEW_RELIC_ACCOUNT_ID`.
-{{% /md %}}</dd>
-    <dt class="property-optional"
+{{% /md %}}</dd><dt class="property-optional"
             title="Optional">
         <span id="state_aggregationwindow_nodejs">
 <a href="#state_aggregationwindow_nodejs" style="color: inherit; text-decoration: inherit;">aggregation<wbr>Window</a>
@@ -1921,8 +1721,7 @@ The following state arguments are supported:
         <span class="property-type">number</span>
     </dt>
     <dd>{{% md %}}The duration of the time window used to evaluate the NRQL query, in seconds. The value must be at least 30 seconds, and no more than 15 minutes (900 seconds). Default is 60 seconds.
-{{% /md %}}</dd>
-    <dt class="property-optional"
+{{% /md %}}</dd><dt class="property-optional"
             title="Optional">
         <span id="state_baselinedirection_nodejs">
 <a href="#state_baselinedirection_nodejs" style="color: inherit; text-decoration: inherit;">baseline<wbr>Direction</a>
@@ -1931,8 +1730,7 @@ The following state arguments are supported:
         <span class="property-type">string</span>
     </dt>
     <dd>{{% md %}}The baseline direction of a _baseline_ NRQL alert condition. Valid values are: `lower_only`, `upper_and_lower`, `upper_only` (case insensitive).
-{{% /md %}}</dd>
-    <dt class="property-optional"
+{{% /md %}}</dd><dt class="property-optional"
             title="Optional">
         <span id="state_closeviolationsonexpiration_nodejs">
 <a href="#state_closeviolationsonexpiration_nodejs" style="color: inherit; text-decoration: inherit;">close<wbr>Violations<wbr>On<wbr>Expiration</a>
@@ -1941,8 +1739,7 @@ The following state arguments are supported:
         <span class="property-type">boolean</span>
     </dt>
     <dd>{{% md %}}Whether to close all open violations when the signal expires.
-{{% /md %}}</dd>
-    <dt class="property-optional"
+{{% /md %}}</dd><dt class="property-optional"
             title="Optional">
         <span id="state_critical_nodejs">
 <a href="#state_critical_nodejs" style="color: inherit; text-decoration: inherit;">critical</a>
@@ -1951,8 +1748,7 @@ The following state arguments are supported:
         <span class="property-type"><a href="#nrqlalertconditioncritical">Nrql<wbr>Alert<wbr>Condition<wbr>Critical</a></span>
     </dt>
     <dd>{{% md %}}A list containing the `critical` threshold values. See Terms below for details.
-{{% /md %}}</dd>
-    <dt class="property-optional"
+{{% /md %}}</dd><dt class="property-optional"
             title="Optional">
         <span id="state_description_nodejs">
 <a href="#state_description_nodejs" style="color: inherit; text-decoration: inherit;">description</a>
@@ -1961,8 +1757,7 @@ The following state arguments are supported:
         <span class="property-type">string</span>
     </dt>
     <dd>{{% md %}}The description of the NRQL alert condition.
-{{% /md %}}</dd>
-    <dt class="property-optional"
+{{% /md %}}</dd><dt class="property-optional"
             title="Optional">
         <span id="state_enabled_nodejs">
 <a href="#state_enabled_nodejs" style="color: inherit; text-decoration: inherit;">enabled</a>
@@ -1971,8 +1766,7 @@ The following state arguments are supported:
         <span class="property-type">boolean</span>
     </dt>
     <dd>{{% md %}}Whether to enable the alert condition. Valid values are `true` and `false`. Defaults to `true`.
-{{% /md %}}</dd>
-    <dt class="property-optional"
+{{% /md %}}</dd><dt class="property-optional"
             title="Optional">
         <span id="state_expectedgroups_nodejs">
 <a href="#state_expectedgroups_nodejs" style="color: inherit; text-decoration: inherit;">expected<wbr>Groups</a>
@@ -1981,8 +1775,7 @@ The following state arguments are supported:
         <span class="property-type">number</span>
     </dt>
     <dd>{{% md %}}Number of expected groups when using `outlier` detection.
-{{% /md %}}</dd>
-    <dt class="property-optional"
+{{% /md %}}</dd><dt class="property-optional"
             title="Optional">
         <span id="state_expirationduration_nodejs">
 <a href="#state_expirationduration_nodejs" style="color: inherit; text-decoration: inherit;">expiration<wbr>Duration</a>
@@ -1991,8 +1784,7 @@ The following state arguments are supported:
         <span class="property-type">number</span>
     </dt>
     <dd>{{% md %}}The amount of time (in seconds) to wait before considering the signal expired.
-{{% /md %}}</dd>
-    <dt class="property-optional"
+{{% /md %}}</dd><dt class="property-optional"
             title="Optional">
         <span id="state_filloption_nodejs">
 <a href="#state_filloption_nodejs" style="color: inherit; text-decoration: inherit;">fill<wbr>Option</a>
@@ -2001,8 +1793,7 @@ The following state arguments are supported:
         <span class="property-type">string</span>
     </dt>
     <dd>{{% md %}}Which strategy to use when filling gaps in the signal. Possible values are `none`, `last_value` or `static`. If `static`, the `fill_value` field will be used for filling gaps in the signal.
-{{% /md %}}</dd>
-    <dt class="property-optional"
+{{% /md %}}</dd><dt class="property-optional"
             title="Optional">
         <span id="state_fillvalue_nodejs">
 <a href="#state_fillvalue_nodejs" style="color: inherit; text-decoration: inherit;">fill<wbr>Value</a>
@@ -2011,8 +1802,7 @@ The following state arguments are supported:
         <span class="property-type">number</span>
     </dt>
     <dd>{{% md %}}This value will be used for filling gaps in the signal.
-{{% /md %}}</dd>
-    <dt class="property-optional property-deprecated"
+{{% /md %}}</dd><dt class="property-optional property-deprecated"
             title="Optional, Deprecated">
         <span id="state_ignoreoverlap_nodejs">
 <a href="#state_ignoreoverlap_nodejs" style="color: inherit; text-decoration: inherit;">ignore<wbr>Overlap</a>
@@ -2021,8 +1811,7 @@ The following state arguments are supported:
         <span class="property-type">boolean</span>
     </dt>
     <dd>{{% md %}}**DEPRECATED:** Use `open_violation_on_group_overlap` instead, but use the inverse value of your boolean - e.g. if `ignore_overlap = false`, use `open_violation_on_group_overlap = true`. This argument sets whether to trigger a violation when groups overlap. If set to `true` overlapping groups will not trigger a violation. This argument is only applicable in `outlier` conditions.
-{{% /md %}}<p class="property-message">Deprecated: {{% md %}}use `open_violation_on_group_overlap` attribute instead, but use the inverse of your boolean - e.g. if ignore_overlap = false, use open_violation_on_group_overlap = true{{% /md %}}</p></dd>
-    <dt class="property-optional"
+{{% /md %}}<p class="property-message">Deprecated: {{% md %}}use `open_violation_on_group_overlap` attribute instead, but use the inverse of your boolean - e.g. if ignore_overlap = false, use open_violation_on_group_overlap = true{{% /md %}}</p></dd><dt class="property-optional"
             title="Optional">
         <span id="state_name_nodejs">
 <a href="#state_name_nodejs" style="color: inherit; text-decoration: inherit;">name</a>
@@ -2031,8 +1820,7 @@ The following state arguments are supported:
         <span class="property-type">string</span>
     </dt>
     <dd>{{% md %}}The title of the condition.
-{{% /md %}}</dd>
-    <dt class="property-optional"
+{{% /md %}}</dd><dt class="property-optional"
             title="Optional">
         <span id="state_nrql_nodejs">
 <a href="#state_nrql_nodejs" style="color: inherit; text-decoration: inherit;">nrql</a>
@@ -2041,8 +1829,7 @@ The following state arguments are supported:
         <span class="property-type"><a href="#nrqlalertconditionnrql">Nrql<wbr>Alert<wbr>Condition<wbr>Nrql</a></span>
     </dt>
     <dd>{{% md %}}A NRQL query. See NRQL below for details.
-{{% /md %}}</dd>
-    <dt class="property-optional"
+{{% /md %}}</dd><dt class="property-optional"
             title="Optional">
         <span id="state_openviolationonexpiration_nodejs">
 <a href="#state_openviolationonexpiration_nodejs" style="color: inherit; text-decoration: inherit;">open<wbr>Violation<wbr>On<wbr>Expiration</a>
@@ -2051,8 +1838,7 @@ The following state arguments are supported:
         <span class="property-type">boolean</span>
     </dt>
     <dd>{{% md %}}Whether to create a new violation to capture that the signal expired.
-{{% /md %}}</dd>
-    <dt class="property-optional"
+{{% /md %}}</dd><dt class="property-optional"
             title="Optional">
         <span id="state_openviolationongroupoverlap_nodejs">
 <a href="#state_openviolationongroupoverlap_nodejs" style="color: inherit; text-decoration: inherit;">open<wbr>Violation<wbr>On<wbr>Group<wbr>Overlap</a>
@@ -2061,8 +1847,7 @@ The following state arguments are supported:
         <span class="property-type">boolean</span>
     </dt>
     <dd>{{% md %}}Whether or not to trigger a violation when groups overlap. Set to `true` if you want to trigger a violation when groups overlap. This argument is only applicable in `outlier` conditions.
-{{% /md %}}</dd>
-    <dt class="property-optional"
+{{% /md %}}</dd><dt class="property-optional"
             title="Optional">
         <span id="state_policyid_nodejs">
 <a href="#state_policyid_nodejs" style="color: inherit; text-decoration: inherit;">policy<wbr>Id</a>
@@ -2071,8 +1856,7 @@ The following state arguments are supported:
         <span class="property-type">number</span>
     </dt>
     <dd>{{% md %}}The ID of the policy where this condition should be used.
-{{% /md %}}</dd>
-    <dt class="property-optional"
+{{% /md %}}</dd><dt class="property-optional"
             title="Optional">
         <span id="state_runbookurl_nodejs">
 <a href="#state_runbookurl_nodejs" style="color: inherit; text-decoration: inherit;">runbook<wbr>Url</a>
@@ -2081,8 +1865,7 @@ The following state arguments are supported:
         <span class="property-type">string</span>
     </dt>
     <dd>{{% md %}}Runbook URL to display in notifications.
-{{% /md %}}</dd>
-    <dt class="property-optional property-deprecated"
+{{% /md %}}</dd><dt class="property-optional property-deprecated"
             title="Optional, Deprecated">
         <span id="state_terms_nodejs">
 <a href="#state_terms_nodejs" style="color: inherit; text-decoration: inherit;">terms</a>
@@ -2091,8 +1874,7 @@ The following state arguments are supported:
         <span class="property-type"><a href="#nrqlalertconditionterm">Nrql<wbr>Alert<wbr>Condition<wbr>Term[]</a></span>
     </dt>
     <dd>{{% md %}}**DEPRECATED** Use `critical`, and `warning` instead.  A list of terms for this condition. See Terms below for details.
-{{% /md %}}<p class="property-message">Deprecated: {{% md %}}use `critical` and `warning` attributes instead{{% /md %}}</p></dd>
-    <dt class="property-optional"
+{{% /md %}}<p class="property-message">Deprecated: {{% md %}}use `critical` and `warning` attributes instead{{% /md %}}</p></dd><dt class="property-optional"
             title="Optional">
         <span id="state_type_nodejs">
 <a href="#state_type_nodejs" style="color: inherit; text-decoration: inherit;">type</a>
@@ -2101,8 +1883,7 @@ The following state arguments are supported:
         <span class="property-type">string</span>
     </dt>
     <dd>{{% md %}}The type of the condition. Valid values are `static`, `baseline`, or `outlier`. Defaults to `static`.
-{{% /md %}}</dd>
-    <dt class="property-optional"
+{{% /md %}}</dd><dt class="property-optional"
             title="Optional">
         <span id="state_valuefunction_nodejs">
 <a href="#state_valuefunction_nodejs" style="color: inherit; text-decoration: inherit;">value<wbr>Function</a>
@@ -2111,8 +1892,7 @@ The following state arguments are supported:
         <span class="property-type">string</span>
     </dt>
     <dd>{{% md %}}Possible values are `single_value`, `sum` (case insensitive).
-{{% /md %}}</dd>
-    <dt class="property-optional property-deprecated"
+{{% /md %}}</dd><dt class="property-optional property-deprecated"
             title="Optional, Deprecated">
         <span id="state_violationtimelimit_nodejs">
 <a href="#state_violationtimelimit_nodejs" style="color: inherit; text-decoration: inherit;">violation<wbr>Time<wbr>Limit</a>
@@ -2122,8 +1902,7 @@ The following state arguments are supported:
     </dt>
     <dd>{{% md %}}**DEPRECATED:** Use `violation_time_limit_seconds` instead. Sets a time limit, in hours, that will automatically force-close a long-lasting violation after the time limit you select. Possible values are `ONE_HOUR`, `TWO_HOURS`, `FOUR_HOURS`, `EIGHT_HOURS`, `TWELVE_HOURS`, `TWENTY_FOUR_HOURS`, `THIRTY_DAYS` (case insensitive).<br>
 <small>\***Note**: One of `violation_time_limit` _or_ `violation_time_limit_seconds` must be set, but not both.</small>
-{{% /md %}}<p class="property-message">Deprecated: {{% md %}}use `violation_time_limit_seconds` attribute instead{{% /md %}}</p></dd>
-    <dt class="property-optional"
+{{% /md %}}<p class="property-message">Deprecated: {{% md %}}use `violation_time_limit_seconds` attribute instead{{% /md %}}</p></dd><dt class="property-optional"
             title="Optional">
         <span id="state_violationtimelimitseconds_nodejs">
 <a href="#state_violationtimelimitseconds_nodejs" style="color: inherit; text-decoration: inherit;">violation<wbr>Time<wbr>Limit<wbr>Seconds</a>
@@ -2133,8 +1912,7 @@ The following state arguments are supported:
     </dt>
     <dd>{{% md %}}Sets a time limit, in seconds, that will automatically force-close a long-lasting violation after the time limit you select. The value must be between 300 seconds (5 minutes) to 2592000 seconds (30 days) (inclusive). <br>
 <small>\***Note**: One of `violation_time_limit` _or_ `violation_time_limit_seconds` must be set, but not both.</small>
-{{% /md %}}</dd>
-    <dt class="property-optional"
+{{% /md %}}</dd><dt class="property-optional"
             title="Optional">
         <span id="state_warning_nodejs">
 <a href="#state_warning_nodejs" style="color: inherit; text-decoration: inherit;">warning</a>
@@ -2143,14 +1921,11 @@ The following state arguments are supported:
         <span class="property-type"><a href="#nrqlalertconditionwarning">Nrql<wbr>Alert<wbr>Condition<wbr>Warning</a></span>
     </dt>
     <dd>{{% md %}}A list containing the `warning` threshold values. See Terms below for details.
-{{% /md %}}</dd>
-</dl>
+{{% /md %}}</dd></dl>
 {{% /choosable %}}
 
 {{% choosable language python %}}
-<dl class="resources-properties">
-
-    <dt class="property-optional"
+<dl class="resources-properties"><dt class="property-optional"
             title="Optional">
         <span id="state_account_id_python">
 <a href="#state_account_id_python" style="color: inherit; text-decoration: inherit;">account_<wbr>id</a>
@@ -2159,8 +1934,7 @@ The following state arguments are supported:
         <span class="property-type">int</span>
     </dt>
     <dd>{{% md %}}The New Relic account ID of the account you wish to create the condition. Defaults to the account ID set in your environment variable `NEW_RELIC_ACCOUNT_ID`.
-{{% /md %}}</dd>
-    <dt class="property-optional"
+{{% /md %}}</dd><dt class="property-optional"
             title="Optional">
         <span id="state_aggregation_window_python">
 <a href="#state_aggregation_window_python" style="color: inherit; text-decoration: inherit;">aggregation_<wbr>window</a>
@@ -2169,8 +1943,7 @@ The following state arguments are supported:
         <span class="property-type">int</span>
     </dt>
     <dd>{{% md %}}The duration of the time window used to evaluate the NRQL query, in seconds. The value must be at least 30 seconds, and no more than 15 minutes (900 seconds). Default is 60 seconds.
-{{% /md %}}</dd>
-    <dt class="property-optional"
+{{% /md %}}</dd><dt class="property-optional"
             title="Optional">
         <span id="state_baseline_direction_python">
 <a href="#state_baseline_direction_python" style="color: inherit; text-decoration: inherit;">baseline_<wbr>direction</a>
@@ -2179,8 +1952,7 @@ The following state arguments are supported:
         <span class="property-type">str</span>
     </dt>
     <dd>{{% md %}}The baseline direction of a _baseline_ NRQL alert condition. Valid values are: `lower_only`, `upper_and_lower`, `upper_only` (case insensitive).
-{{% /md %}}</dd>
-    <dt class="property-optional"
+{{% /md %}}</dd><dt class="property-optional"
             title="Optional">
         <span id="state_close_violations_on_expiration_python">
 <a href="#state_close_violations_on_expiration_python" style="color: inherit; text-decoration: inherit;">close_<wbr>violations_<wbr>on_<wbr>expiration</a>
@@ -2189,8 +1961,7 @@ The following state arguments are supported:
         <span class="property-type">bool</span>
     </dt>
     <dd>{{% md %}}Whether to close all open violations when the signal expires.
-{{% /md %}}</dd>
-    <dt class="property-optional"
+{{% /md %}}</dd><dt class="property-optional"
             title="Optional">
         <span id="state_critical_python">
 <a href="#state_critical_python" style="color: inherit; text-decoration: inherit;">critical</a>
@@ -2199,8 +1970,7 @@ The following state arguments are supported:
         <span class="property-type"><a href="#nrqlalertconditioncritical">Nrql<wbr>Alert<wbr>Condition<wbr>Critical<wbr>Args</a></span>
     </dt>
     <dd>{{% md %}}A list containing the `critical` threshold values. See Terms below for details.
-{{% /md %}}</dd>
-    <dt class="property-optional"
+{{% /md %}}</dd><dt class="property-optional"
             title="Optional">
         <span id="state_description_python">
 <a href="#state_description_python" style="color: inherit; text-decoration: inherit;">description</a>
@@ -2209,8 +1979,7 @@ The following state arguments are supported:
         <span class="property-type">str</span>
     </dt>
     <dd>{{% md %}}The description of the NRQL alert condition.
-{{% /md %}}</dd>
-    <dt class="property-optional"
+{{% /md %}}</dd><dt class="property-optional"
             title="Optional">
         <span id="state_enabled_python">
 <a href="#state_enabled_python" style="color: inherit; text-decoration: inherit;">enabled</a>
@@ -2219,8 +1988,7 @@ The following state arguments are supported:
         <span class="property-type">bool</span>
     </dt>
     <dd>{{% md %}}Whether to enable the alert condition. Valid values are `true` and `false`. Defaults to `true`.
-{{% /md %}}</dd>
-    <dt class="property-optional"
+{{% /md %}}</dd><dt class="property-optional"
             title="Optional">
         <span id="state_expected_groups_python">
 <a href="#state_expected_groups_python" style="color: inherit; text-decoration: inherit;">expected_<wbr>groups</a>
@@ -2229,8 +1997,7 @@ The following state arguments are supported:
         <span class="property-type">int</span>
     </dt>
     <dd>{{% md %}}Number of expected groups when using `outlier` detection.
-{{% /md %}}</dd>
-    <dt class="property-optional"
+{{% /md %}}</dd><dt class="property-optional"
             title="Optional">
         <span id="state_expiration_duration_python">
 <a href="#state_expiration_duration_python" style="color: inherit; text-decoration: inherit;">expiration_<wbr>duration</a>
@@ -2239,8 +2006,7 @@ The following state arguments are supported:
         <span class="property-type">int</span>
     </dt>
     <dd>{{% md %}}The amount of time (in seconds) to wait before considering the signal expired.
-{{% /md %}}</dd>
-    <dt class="property-optional"
+{{% /md %}}</dd><dt class="property-optional"
             title="Optional">
         <span id="state_fill_option_python">
 <a href="#state_fill_option_python" style="color: inherit; text-decoration: inherit;">fill_<wbr>option</a>
@@ -2249,8 +2015,7 @@ The following state arguments are supported:
         <span class="property-type">str</span>
     </dt>
     <dd>{{% md %}}Which strategy to use when filling gaps in the signal. Possible values are `none`, `last_value` or `static`. If `static`, the `fill_value` field will be used for filling gaps in the signal.
-{{% /md %}}</dd>
-    <dt class="property-optional"
+{{% /md %}}</dd><dt class="property-optional"
             title="Optional">
         <span id="state_fill_value_python">
 <a href="#state_fill_value_python" style="color: inherit; text-decoration: inherit;">fill_<wbr>value</a>
@@ -2259,8 +2024,7 @@ The following state arguments are supported:
         <span class="property-type">float</span>
     </dt>
     <dd>{{% md %}}This value will be used for filling gaps in the signal.
-{{% /md %}}</dd>
-    <dt class="property-optional property-deprecated"
+{{% /md %}}</dd><dt class="property-optional property-deprecated"
             title="Optional, Deprecated">
         <span id="state_ignore_overlap_python">
 <a href="#state_ignore_overlap_python" style="color: inherit; text-decoration: inherit;">ignore_<wbr>overlap</a>
@@ -2269,8 +2033,7 @@ The following state arguments are supported:
         <span class="property-type">bool</span>
     </dt>
     <dd>{{% md %}}**DEPRECATED:** Use `open_violation_on_group_overlap` instead, but use the inverse value of your boolean - e.g. if `ignore_overlap = false`, use `open_violation_on_group_overlap = true`. This argument sets whether to trigger a violation when groups overlap. If set to `true` overlapping groups will not trigger a violation. This argument is only applicable in `outlier` conditions.
-{{% /md %}}<p class="property-message">Deprecated: {{% md %}}use `open_violation_on_group_overlap` attribute instead, but use the inverse of your boolean - e.g. if ignore_overlap = false, use open_violation_on_group_overlap = true{{% /md %}}</p></dd>
-    <dt class="property-optional"
+{{% /md %}}<p class="property-message">Deprecated: {{% md %}}use `open_violation_on_group_overlap` attribute instead, but use the inverse of your boolean - e.g. if ignore_overlap = false, use open_violation_on_group_overlap = true{{% /md %}}</p></dd><dt class="property-optional"
             title="Optional">
         <span id="state_name_python">
 <a href="#state_name_python" style="color: inherit; text-decoration: inherit;">name</a>
@@ -2279,8 +2042,7 @@ The following state arguments are supported:
         <span class="property-type">str</span>
     </dt>
     <dd>{{% md %}}The title of the condition.
-{{% /md %}}</dd>
-    <dt class="property-optional"
+{{% /md %}}</dd><dt class="property-optional"
             title="Optional">
         <span id="state_nrql_python">
 <a href="#state_nrql_python" style="color: inherit; text-decoration: inherit;">nrql</a>
@@ -2289,8 +2051,7 @@ The following state arguments are supported:
         <span class="property-type"><a href="#nrqlalertconditionnrql">Nrql<wbr>Alert<wbr>Condition<wbr>Nrql<wbr>Args</a></span>
     </dt>
     <dd>{{% md %}}A NRQL query. See NRQL below for details.
-{{% /md %}}</dd>
-    <dt class="property-optional"
+{{% /md %}}</dd><dt class="property-optional"
             title="Optional">
         <span id="state_open_violation_on_expiration_python">
 <a href="#state_open_violation_on_expiration_python" style="color: inherit; text-decoration: inherit;">open_<wbr>violation_<wbr>on_<wbr>expiration</a>
@@ -2299,8 +2060,7 @@ The following state arguments are supported:
         <span class="property-type">bool</span>
     </dt>
     <dd>{{% md %}}Whether to create a new violation to capture that the signal expired.
-{{% /md %}}</dd>
-    <dt class="property-optional"
+{{% /md %}}</dd><dt class="property-optional"
             title="Optional">
         <span id="state_open_violation_on_group_overlap_python">
 <a href="#state_open_violation_on_group_overlap_python" style="color: inherit; text-decoration: inherit;">open_<wbr>violation_<wbr>on_<wbr>group_<wbr>overlap</a>
@@ -2309,8 +2069,7 @@ The following state arguments are supported:
         <span class="property-type">bool</span>
     </dt>
     <dd>{{% md %}}Whether or not to trigger a violation when groups overlap. Set to `true` if you want to trigger a violation when groups overlap. This argument is only applicable in `outlier` conditions.
-{{% /md %}}</dd>
-    <dt class="property-optional"
+{{% /md %}}</dd><dt class="property-optional"
             title="Optional">
         <span id="state_policy_id_python">
 <a href="#state_policy_id_python" style="color: inherit; text-decoration: inherit;">policy_<wbr>id</a>
@@ -2319,8 +2078,7 @@ The following state arguments are supported:
         <span class="property-type">int</span>
     </dt>
     <dd>{{% md %}}The ID of the policy where this condition should be used.
-{{% /md %}}</dd>
-    <dt class="property-optional"
+{{% /md %}}</dd><dt class="property-optional"
             title="Optional">
         <span id="state_runbook_url_python">
 <a href="#state_runbook_url_python" style="color: inherit; text-decoration: inherit;">runbook_<wbr>url</a>
@@ -2329,8 +2087,7 @@ The following state arguments are supported:
         <span class="property-type">str</span>
     </dt>
     <dd>{{% md %}}Runbook URL to display in notifications.
-{{% /md %}}</dd>
-    <dt class="property-optional property-deprecated"
+{{% /md %}}</dd><dt class="property-optional property-deprecated"
             title="Optional, Deprecated">
         <span id="state_terms_python">
 <a href="#state_terms_python" style="color: inherit; text-decoration: inherit;">terms</a>
@@ -2339,8 +2096,7 @@ The following state arguments are supported:
         <span class="property-type"><a href="#nrqlalertconditionterm">Sequence[Nrql<wbr>Alert<wbr>Condition<wbr>Term<wbr>Args]</a></span>
     </dt>
     <dd>{{% md %}}**DEPRECATED** Use `critical`, and `warning` instead.  A list of terms for this condition. See Terms below for details.
-{{% /md %}}<p class="property-message">Deprecated: {{% md %}}use `critical` and `warning` attributes instead{{% /md %}}</p></dd>
-    <dt class="property-optional"
+{{% /md %}}<p class="property-message">Deprecated: {{% md %}}use `critical` and `warning` attributes instead{{% /md %}}</p></dd><dt class="property-optional"
             title="Optional">
         <span id="state_type_python">
 <a href="#state_type_python" style="color: inherit; text-decoration: inherit;">type</a>
@@ -2349,8 +2105,7 @@ The following state arguments are supported:
         <span class="property-type">str</span>
     </dt>
     <dd>{{% md %}}The type of the condition. Valid values are `static`, `baseline`, or `outlier`. Defaults to `static`.
-{{% /md %}}</dd>
-    <dt class="property-optional"
+{{% /md %}}</dd><dt class="property-optional"
             title="Optional">
         <span id="state_value_function_python">
 <a href="#state_value_function_python" style="color: inherit; text-decoration: inherit;">value_<wbr>function</a>
@@ -2359,8 +2114,7 @@ The following state arguments are supported:
         <span class="property-type">str</span>
     </dt>
     <dd>{{% md %}}Possible values are `single_value`, `sum` (case insensitive).
-{{% /md %}}</dd>
-    <dt class="property-optional property-deprecated"
+{{% /md %}}</dd><dt class="property-optional property-deprecated"
             title="Optional, Deprecated">
         <span id="state_violation_time_limit_python">
 <a href="#state_violation_time_limit_python" style="color: inherit; text-decoration: inherit;">violation_<wbr>time_<wbr>limit</a>
@@ -2370,8 +2124,7 @@ The following state arguments are supported:
     </dt>
     <dd>{{% md %}}**DEPRECATED:** Use `violation_time_limit_seconds` instead. Sets a time limit, in hours, that will automatically force-close a long-lasting violation after the time limit you select. Possible values are `ONE_HOUR`, `TWO_HOURS`, `FOUR_HOURS`, `EIGHT_HOURS`, `TWELVE_HOURS`, `TWENTY_FOUR_HOURS`, `THIRTY_DAYS` (case insensitive).<br>
 <small>\***Note**: One of `violation_time_limit` _or_ `violation_time_limit_seconds` must be set, but not both.</small>
-{{% /md %}}<p class="property-message">Deprecated: {{% md %}}use `violation_time_limit_seconds` attribute instead{{% /md %}}</p></dd>
-    <dt class="property-optional"
+{{% /md %}}<p class="property-message">Deprecated: {{% md %}}use `violation_time_limit_seconds` attribute instead{{% /md %}}</p></dd><dt class="property-optional"
             title="Optional">
         <span id="state_violation_time_limit_seconds_python">
 <a href="#state_violation_time_limit_seconds_python" style="color: inherit; text-decoration: inherit;">violation_<wbr>time_<wbr>limit_<wbr>seconds</a>
@@ -2381,8 +2134,7 @@ The following state arguments are supported:
     </dt>
     <dd>{{% md %}}Sets a time limit, in seconds, that will automatically force-close a long-lasting violation after the time limit you select. The value must be between 300 seconds (5 minutes) to 2592000 seconds (30 days) (inclusive). <br>
 <small>\***Note**: One of `violation_time_limit` _or_ `violation_time_limit_seconds` must be set, but not both.</small>
-{{% /md %}}</dd>
-    <dt class="property-optional"
+{{% /md %}}</dd><dt class="property-optional"
             title="Optional">
         <span id="state_warning_python">
 <a href="#state_warning_python" style="color: inherit; text-decoration: inherit;">warning</a>
@@ -2391,8 +2143,7 @@ The following state arguments are supported:
         <span class="property-type"><a href="#nrqlalertconditionwarning">Nrql<wbr>Alert<wbr>Condition<wbr>Warning<wbr>Args</a></span>
     </dt>
     <dd>{{% md %}}A list containing the `warning` threshold values. See Terms below for details.
-{{% /md %}}</dd>
-</dl>
+{{% /md %}}</dd></dl>
 {{% /choosable %}}
 
 
@@ -2407,9 +2158,7 @@ The following state arguments are supported:
 <h4 id="nrqlalertconditioncritical">Nrql<wbr>Alert<wbr>Condition<wbr>Critical</h4>
 
 {{% choosable language csharp %}}
-<dl class="resources-properties">
-
-    <dt class="property-required"
+<dl class="resources-properties"><dt class="property-required"
             title="Required">
         <span id="threshold_csharp">
 <a href="#threshold_csharp" style="color: inherit; text-decoration: inherit;">Threshold</a>
@@ -2417,8 +2166,7 @@ The following state arguments are supported:
         <span class="property-indicator"></span>
         <span class="property-type">double</span>
     </dt>
-    <dd>{{% md %}}{{% /md %}}</dd>
-    <dt class="property-optional property-deprecated"
+    <dd>{{% md %}}{{% /md %}}</dd><dt class="property-optional property-deprecated"
             title="Optional, Deprecated">
         <span id="duration_csharp">
 <a href="#duration_csharp" style="color: inherit; text-decoration: inherit;">Duration</a>
@@ -2426,8 +2174,7 @@ The following state arguments are supported:
         <span class="property-indicator"></span>
         <span class="property-type">int</span>
     </dt>
-    <dd>{{% md %}}{{% /md %}}<p class="property-message">Deprecated: {{% md %}}use `threshold_duration` attribute instead{{% /md %}}</p></dd>
-    <dt class="property-optional"
+    <dd>{{% md %}}{{% /md %}}<p class="property-message">Deprecated: {{% md %}}use `threshold_duration` attribute instead{{% /md %}}</p></dd><dt class="property-optional"
             title="Optional">
         <span id="operator_csharp">
 <a href="#operator_csharp" style="color: inherit; text-decoration: inherit;">Operator</a>
@@ -2435,8 +2182,7 @@ The following state arguments are supported:
         <span class="property-indicator"></span>
         <span class="property-type">string</span>
     </dt>
-    <dd>{{% md %}}{{% /md %}}</dd>
-    <dt class="property-optional"
+    <dd>{{% md %}}{{% /md %}}</dd><dt class="property-optional"
             title="Optional">
         <span id="thresholdduration_csharp">
 <a href="#thresholdduration_csharp" style="color: inherit; text-decoration: inherit;">Threshold<wbr>Duration</a>
@@ -2444,8 +2190,7 @@ The following state arguments are supported:
         <span class="property-indicator"></span>
         <span class="property-type">int</span>
     </dt>
-    <dd>{{% md %}}{{% /md %}}</dd>
-    <dt class="property-optional"
+    <dd>{{% md %}}{{% /md %}}</dd><dt class="property-optional"
             title="Optional">
         <span id="thresholdoccurrences_csharp">
 <a href="#thresholdoccurrences_csharp" style="color: inherit; text-decoration: inherit;">Threshold<wbr>Occurrences</a>
@@ -2453,8 +2198,7 @@ The following state arguments are supported:
         <span class="property-indicator"></span>
         <span class="property-type">string</span>
     </dt>
-    <dd>{{% md %}}{{% /md %}}</dd>
-    <dt class="property-optional property-deprecated"
+    <dd>{{% md %}}{{% /md %}}</dd><dt class="property-optional property-deprecated"
             title="Optional, Deprecated">
         <span id="timefunction_csharp">
 <a href="#timefunction_csharp" style="color: inherit; text-decoration: inherit;">Time<wbr>Function</a>
@@ -2462,14 +2206,11 @@ The following state arguments are supported:
         <span class="property-indicator"></span>
         <span class="property-type">string</span>
     </dt>
-    <dd>{{% md %}}{{% /md %}}<p class="property-message">Deprecated: {{% md %}}use `threshold_occurrences` attribute instead{{% /md %}}</p></dd>
-</dl>
+    <dd>{{% md %}}{{% /md %}}<p class="property-message">Deprecated: {{% md %}}use `threshold_occurrences` attribute instead{{% /md %}}</p></dd></dl>
 {{% /choosable %}}
 
 {{% choosable language go %}}
-<dl class="resources-properties">
-
-    <dt class="property-required"
+<dl class="resources-properties"><dt class="property-required"
             title="Required">
         <span id="threshold_go">
 <a href="#threshold_go" style="color: inherit; text-decoration: inherit;">Threshold</a>
@@ -2477,8 +2218,7 @@ The following state arguments are supported:
         <span class="property-indicator"></span>
         <span class="property-type">float64</span>
     </dt>
-    <dd>{{% md %}}{{% /md %}}</dd>
-    <dt class="property-optional property-deprecated"
+    <dd>{{% md %}}{{% /md %}}</dd><dt class="property-optional property-deprecated"
             title="Optional, Deprecated">
         <span id="duration_go">
 <a href="#duration_go" style="color: inherit; text-decoration: inherit;">Duration</a>
@@ -2486,8 +2226,7 @@ The following state arguments are supported:
         <span class="property-indicator"></span>
         <span class="property-type">int</span>
     </dt>
-    <dd>{{% md %}}{{% /md %}}<p class="property-message">Deprecated: {{% md %}}use `threshold_duration` attribute instead{{% /md %}}</p></dd>
-    <dt class="property-optional"
+    <dd>{{% md %}}{{% /md %}}<p class="property-message">Deprecated: {{% md %}}use `threshold_duration` attribute instead{{% /md %}}</p></dd><dt class="property-optional"
             title="Optional">
         <span id="operator_go">
 <a href="#operator_go" style="color: inherit; text-decoration: inherit;">Operator</a>
@@ -2495,8 +2234,7 @@ The following state arguments are supported:
         <span class="property-indicator"></span>
         <span class="property-type">string</span>
     </dt>
-    <dd>{{% md %}}{{% /md %}}</dd>
-    <dt class="property-optional"
+    <dd>{{% md %}}{{% /md %}}</dd><dt class="property-optional"
             title="Optional">
         <span id="thresholdduration_go">
 <a href="#thresholdduration_go" style="color: inherit; text-decoration: inherit;">Threshold<wbr>Duration</a>
@@ -2504,8 +2242,7 @@ The following state arguments are supported:
         <span class="property-indicator"></span>
         <span class="property-type">int</span>
     </dt>
-    <dd>{{% md %}}{{% /md %}}</dd>
-    <dt class="property-optional"
+    <dd>{{% md %}}{{% /md %}}</dd><dt class="property-optional"
             title="Optional">
         <span id="thresholdoccurrences_go">
 <a href="#thresholdoccurrences_go" style="color: inherit; text-decoration: inherit;">Threshold<wbr>Occurrences</a>
@@ -2513,8 +2250,7 @@ The following state arguments are supported:
         <span class="property-indicator"></span>
         <span class="property-type">string</span>
     </dt>
-    <dd>{{% md %}}{{% /md %}}</dd>
-    <dt class="property-optional property-deprecated"
+    <dd>{{% md %}}{{% /md %}}</dd><dt class="property-optional property-deprecated"
             title="Optional, Deprecated">
         <span id="timefunction_go">
 <a href="#timefunction_go" style="color: inherit; text-decoration: inherit;">Time<wbr>Function</a>
@@ -2522,14 +2258,11 @@ The following state arguments are supported:
         <span class="property-indicator"></span>
         <span class="property-type">string</span>
     </dt>
-    <dd>{{% md %}}{{% /md %}}<p class="property-message">Deprecated: {{% md %}}use `threshold_occurrences` attribute instead{{% /md %}}</p></dd>
-</dl>
+    <dd>{{% md %}}{{% /md %}}<p class="property-message">Deprecated: {{% md %}}use `threshold_occurrences` attribute instead{{% /md %}}</p></dd></dl>
 {{% /choosable %}}
 
 {{% choosable language nodejs %}}
-<dl class="resources-properties">
-
-    <dt class="property-required"
+<dl class="resources-properties"><dt class="property-required"
             title="Required">
         <span id="threshold_nodejs">
 <a href="#threshold_nodejs" style="color: inherit; text-decoration: inherit;">threshold</a>
@@ -2537,8 +2270,7 @@ The following state arguments are supported:
         <span class="property-indicator"></span>
         <span class="property-type">number</span>
     </dt>
-    <dd>{{% md %}}{{% /md %}}</dd>
-    <dt class="property-optional property-deprecated"
+    <dd>{{% md %}}{{% /md %}}</dd><dt class="property-optional property-deprecated"
             title="Optional, Deprecated">
         <span id="duration_nodejs">
 <a href="#duration_nodejs" style="color: inherit; text-decoration: inherit;">duration</a>
@@ -2546,8 +2278,7 @@ The following state arguments are supported:
         <span class="property-indicator"></span>
         <span class="property-type">number</span>
     </dt>
-    <dd>{{% md %}}{{% /md %}}<p class="property-message">Deprecated: {{% md %}}use `threshold_duration` attribute instead{{% /md %}}</p></dd>
-    <dt class="property-optional"
+    <dd>{{% md %}}{{% /md %}}<p class="property-message">Deprecated: {{% md %}}use `threshold_duration` attribute instead{{% /md %}}</p></dd><dt class="property-optional"
             title="Optional">
         <span id="operator_nodejs">
 <a href="#operator_nodejs" style="color: inherit; text-decoration: inherit;">operator</a>
@@ -2555,8 +2286,7 @@ The following state arguments are supported:
         <span class="property-indicator"></span>
         <span class="property-type">string</span>
     </dt>
-    <dd>{{% md %}}{{% /md %}}</dd>
-    <dt class="property-optional"
+    <dd>{{% md %}}{{% /md %}}</dd><dt class="property-optional"
             title="Optional">
         <span id="thresholdduration_nodejs">
 <a href="#thresholdduration_nodejs" style="color: inherit; text-decoration: inherit;">threshold<wbr>Duration</a>
@@ -2564,8 +2294,7 @@ The following state arguments are supported:
         <span class="property-indicator"></span>
         <span class="property-type">number</span>
     </dt>
-    <dd>{{% md %}}{{% /md %}}</dd>
-    <dt class="property-optional"
+    <dd>{{% md %}}{{% /md %}}</dd><dt class="property-optional"
             title="Optional">
         <span id="thresholdoccurrences_nodejs">
 <a href="#thresholdoccurrences_nodejs" style="color: inherit; text-decoration: inherit;">threshold<wbr>Occurrences</a>
@@ -2573,8 +2302,7 @@ The following state arguments are supported:
         <span class="property-indicator"></span>
         <span class="property-type">string</span>
     </dt>
-    <dd>{{% md %}}{{% /md %}}</dd>
-    <dt class="property-optional property-deprecated"
+    <dd>{{% md %}}{{% /md %}}</dd><dt class="property-optional property-deprecated"
             title="Optional, Deprecated">
         <span id="timefunction_nodejs">
 <a href="#timefunction_nodejs" style="color: inherit; text-decoration: inherit;">time<wbr>Function</a>
@@ -2582,14 +2310,11 @@ The following state arguments are supported:
         <span class="property-indicator"></span>
         <span class="property-type">string</span>
     </dt>
-    <dd>{{% md %}}{{% /md %}}<p class="property-message">Deprecated: {{% md %}}use `threshold_occurrences` attribute instead{{% /md %}}</p></dd>
-</dl>
+    <dd>{{% md %}}{{% /md %}}<p class="property-message">Deprecated: {{% md %}}use `threshold_occurrences` attribute instead{{% /md %}}</p></dd></dl>
 {{% /choosable %}}
 
 {{% choosable language python %}}
-<dl class="resources-properties">
-
-    <dt class="property-required"
+<dl class="resources-properties"><dt class="property-required"
             title="Required">
         <span id="threshold_python">
 <a href="#threshold_python" style="color: inherit; text-decoration: inherit;">threshold</a>
@@ -2597,8 +2322,7 @@ The following state arguments are supported:
         <span class="property-indicator"></span>
         <span class="property-type">float</span>
     </dt>
-    <dd>{{% md %}}{{% /md %}}</dd>
-    <dt class="property-optional property-deprecated"
+    <dd>{{% md %}}{{% /md %}}</dd><dt class="property-optional property-deprecated"
             title="Optional, Deprecated">
         <span id="duration_python">
 <a href="#duration_python" style="color: inherit; text-decoration: inherit;">duration</a>
@@ -2606,8 +2330,7 @@ The following state arguments are supported:
         <span class="property-indicator"></span>
         <span class="property-type">int</span>
     </dt>
-    <dd>{{% md %}}{{% /md %}}<p class="property-message">Deprecated: {{% md %}}use `threshold_duration` attribute instead{{% /md %}}</p></dd>
-    <dt class="property-optional"
+    <dd>{{% md %}}{{% /md %}}<p class="property-message">Deprecated: {{% md %}}use `threshold_duration` attribute instead{{% /md %}}</p></dd><dt class="property-optional"
             title="Optional">
         <span id="operator_python">
 <a href="#operator_python" style="color: inherit; text-decoration: inherit;">operator</a>
@@ -2615,8 +2338,7 @@ The following state arguments are supported:
         <span class="property-indicator"></span>
         <span class="property-type">str</span>
     </dt>
-    <dd>{{% md %}}{{% /md %}}</dd>
-    <dt class="property-optional"
+    <dd>{{% md %}}{{% /md %}}</dd><dt class="property-optional"
             title="Optional">
         <span id="threshold_duration_python">
 <a href="#threshold_duration_python" style="color: inherit; text-decoration: inherit;">threshold_<wbr>duration</a>
@@ -2624,8 +2346,7 @@ The following state arguments are supported:
         <span class="property-indicator"></span>
         <span class="property-type">int</span>
     </dt>
-    <dd>{{% md %}}{{% /md %}}</dd>
-    <dt class="property-optional"
+    <dd>{{% md %}}{{% /md %}}</dd><dt class="property-optional"
             title="Optional">
         <span id="threshold_occurrences_python">
 <a href="#threshold_occurrences_python" style="color: inherit; text-decoration: inherit;">threshold_<wbr>occurrences</a>
@@ -2633,8 +2354,7 @@ The following state arguments are supported:
         <span class="property-indicator"></span>
         <span class="property-type">str</span>
     </dt>
-    <dd>{{% md %}}{{% /md %}}</dd>
-    <dt class="property-optional property-deprecated"
+    <dd>{{% md %}}{{% /md %}}</dd><dt class="property-optional property-deprecated"
             title="Optional, Deprecated">
         <span id="time_function_python">
 <a href="#time_function_python" style="color: inherit; text-decoration: inherit;">time_<wbr>function</a>
@@ -2642,16 +2362,13 @@ The following state arguments are supported:
         <span class="property-indicator"></span>
         <span class="property-type">str</span>
     </dt>
-    <dd>{{% md %}}{{% /md %}}<p class="property-message">Deprecated: {{% md %}}use `threshold_occurrences` attribute instead{{% /md %}}</p></dd>
-</dl>
+    <dd>{{% md %}}{{% /md %}}<p class="property-message">Deprecated: {{% md %}}use `threshold_occurrences` attribute instead{{% /md %}}</p></dd></dl>
 {{% /choosable %}}
 
 <h4 id="nrqlalertconditionnrql">Nrql<wbr>Alert<wbr>Condition<wbr>Nrql</h4>
 
 {{% choosable language csharp %}}
-<dl class="resources-properties">
-
-    <dt class="property-required"
+<dl class="resources-properties"><dt class="property-required"
             title="Required">
         <span id="query_csharp">
 <a href="#query_csharp" style="color: inherit; text-decoration: inherit;">Query</a>
@@ -2659,8 +2376,7 @@ The following state arguments are supported:
         <span class="property-indicator"></span>
         <span class="property-type">string</span>
     </dt>
-    <dd>{{% md %}}{{% /md %}}</dd>
-    <dt class="property-optional"
+    <dd>{{% md %}}{{% /md %}}</dd><dt class="property-optional"
             title="Optional">
         <span id="evaluationoffset_csharp">
 <a href="#evaluationoffset_csharp" style="color: inherit; text-decoration: inherit;">Evaluation<wbr>Offset</a>
@@ -2668,8 +2384,7 @@ The following state arguments are supported:
         <span class="property-indicator"></span>
         <span class="property-type">int</span>
     </dt>
-    <dd>{{% md %}}{{% /md %}}</dd>
-    <dt class="property-optional property-deprecated"
+    <dd>{{% md %}}{{% /md %}}</dd><dt class="property-optional property-deprecated"
             title="Optional, Deprecated">
         <span id="sincevalue_csharp">
 <a href="#sincevalue_csharp" style="color: inherit; text-decoration: inherit;">Since<wbr>Value</a>
@@ -2677,14 +2392,11 @@ The following state arguments are supported:
         <span class="property-indicator"></span>
         <span class="property-type">string</span>
     </dt>
-    <dd>{{% md %}}{{% /md %}}<p class="property-message">Deprecated: {{% md %}}use `evaluation_offset` attribute instead{{% /md %}}</p></dd>
-</dl>
+    <dd>{{% md %}}{{% /md %}}<p class="property-message">Deprecated: {{% md %}}use `evaluation_offset` attribute instead{{% /md %}}</p></dd></dl>
 {{% /choosable %}}
 
 {{% choosable language go %}}
-<dl class="resources-properties">
-
-    <dt class="property-required"
+<dl class="resources-properties"><dt class="property-required"
             title="Required">
         <span id="query_go">
 <a href="#query_go" style="color: inherit; text-decoration: inherit;">Query</a>
@@ -2692,8 +2404,7 @@ The following state arguments are supported:
         <span class="property-indicator"></span>
         <span class="property-type">string</span>
     </dt>
-    <dd>{{% md %}}{{% /md %}}</dd>
-    <dt class="property-optional"
+    <dd>{{% md %}}{{% /md %}}</dd><dt class="property-optional"
             title="Optional">
         <span id="evaluationoffset_go">
 <a href="#evaluationoffset_go" style="color: inherit; text-decoration: inherit;">Evaluation<wbr>Offset</a>
@@ -2701,8 +2412,7 @@ The following state arguments are supported:
         <span class="property-indicator"></span>
         <span class="property-type">int</span>
     </dt>
-    <dd>{{% md %}}{{% /md %}}</dd>
-    <dt class="property-optional property-deprecated"
+    <dd>{{% md %}}{{% /md %}}</dd><dt class="property-optional property-deprecated"
             title="Optional, Deprecated">
         <span id="sincevalue_go">
 <a href="#sincevalue_go" style="color: inherit; text-decoration: inherit;">Since<wbr>Value</a>
@@ -2710,14 +2420,11 @@ The following state arguments are supported:
         <span class="property-indicator"></span>
         <span class="property-type">string</span>
     </dt>
-    <dd>{{% md %}}{{% /md %}}<p class="property-message">Deprecated: {{% md %}}use `evaluation_offset` attribute instead{{% /md %}}</p></dd>
-</dl>
+    <dd>{{% md %}}{{% /md %}}<p class="property-message">Deprecated: {{% md %}}use `evaluation_offset` attribute instead{{% /md %}}</p></dd></dl>
 {{% /choosable %}}
 
 {{% choosable language nodejs %}}
-<dl class="resources-properties">
-
-    <dt class="property-required"
+<dl class="resources-properties"><dt class="property-required"
             title="Required">
         <span id="query_nodejs">
 <a href="#query_nodejs" style="color: inherit; text-decoration: inherit;">query</a>
@@ -2725,8 +2432,7 @@ The following state arguments are supported:
         <span class="property-indicator"></span>
         <span class="property-type">string</span>
     </dt>
-    <dd>{{% md %}}{{% /md %}}</dd>
-    <dt class="property-optional"
+    <dd>{{% md %}}{{% /md %}}</dd><dt class="property-optional"
             title="Optional">
         <span id="evaluationoffset_nodejs">
 <a href="#evaluationoffset_nodejs" style="color: inherit; text-decoration: inherit;">evaluation<wbr>Offset</a>
@@ -2734,8 +2440,7 @@ The following state arguments are supported:
         <span class="property-indicator"></span>
         <span class="property-type">number</span>
     </dt>
-    <dd>{{% md %}}{{% /md %}}</dd>
-    <dt class="property-optional property-deprecated"
+    <dd>{{% md %}}{{% /md %}}</dd><dt class="property-optional property-deprecated"
             title="Optional, Deprecated">
         <span id="sincevalue_nodejs">
 <a href="#sincevalue_nodejs" style="color: inherit; text-decoration: inherit;">since<wbr>Value</a>
@@ -2743,14 +2448,11 @@ The following state arguments are supported:
         <span class="property-indicator"></span>
         <span class="property-type">string</span>
     </dt>
-    <dd>{{% md %}}{{% /md %}}<p class="property-message">Deprecated: {{% md %}}use `evaluation_offset` attribute instead{{% /md %}}</p></dd>
-</dl>
+    <dd>{{% md %}}{{% /md %}}<p class="property-message">Deprecated: {{% md %}}use `evaluation_offset` attribute instead{{% /md %}}</p></dd></dl>
 {{% /choosable %}}
 
 {{% choosable language python %}}
-<dl class="resources-properties">
-
-    <dt class="property-required"
+<dl class="resources-properties"><dt class="property-required"
             title="Required">
         <span id="query_python">
 <a href="#query_python" style="color: inherit; text-decoration: inherit;">query</a>
@@ -2758,8 +2460,7 @@ The following state arguments are supported:
         <span class="property-indicator"></span>
         <span class="property-type">str</span>
     </dt>
-    <dd>{{% md %}}{{% /md %}}</dd>
-    <dt class="property-optional"
+    <dd>{{% md %}}{{% /md %}}</dd><dt class="property-optional"
             title="Optional">
         <span id="evaluation_offset_python">
 <a href="#evaluation_offset_python" style="color: inherit; text-decoration: inherit;">evaluation_<wbr>offset</a>
@@ -2767,8 +2468,7 @@ The following state arguments are supported:
         <span class="property-indicator"></span>
         <span class="property-type">int</span>
     </dt>
-    <dd>{{% md %}}{{% /md %}}</dd>
-    <dt class="property-optional property-deprecated"
+    <dd>{{% md %}}{{% /md %}}</dd><dt class="property-optional property-deprecated"
             title="Optional, Deprecated">
         <span id="since_value_python">
 <a href="#since_value_python" style="color: inherit; text-decoration: inherit;">since_<wbr>value</a>
@@ -2776,16 +2476,13 @@ The following state arguments are supported:
         <span class="property-indicator"></span>
         <span class="property-type">str</span>
     </dt>
-    <dd>{{% md %}}{{% /md %}}<p class="property-message">Deprecated: {{% md %}}use `evaluation_offset` attribute instead{{% /md %}}</p></dd>
-</dl>
+    <dd>{{% md %}}{{% /md %}}<p class="property-message">Deprecated: {{% md %}}use `evaluation_offset` attribute instead{{% /md %}}</p></dd></dl>
 {{% /choosable %}}
 
 <h4 id="nrqlalertconditionterm">Nrql<wbr>Alert<wbr>Condition<wbr>Term</h4>
 
 {{% choosable language csharp %}}
-<dl class="resources-properties">
-
-    <dt class="property-required"
+<dl class="resources-properties"><dt class="property-required"
             title="Required">
         <span id="threshold_csharp">
 <a href="#threshold_csharp" style="color: inherit; text-decoration: inherit;">Threshold</a>
@@ -2793,8 +2490,7 @@ The following state arguments are supported:
         <span class="property-indicator"></span>
         <span class="property-type">double</span>
     </dt>
-    <dd>{{% md %}}{{% /md %}}</dd>
-    <dt class="property-optional property-deprecated"
+    <dd>{{% md %}}{{% /md %}}</dd><dt class="property-optional property-deprecated"
             title="Optional, Deprecated">
         <span id="duration_csharp">
 <a href="#duration_csharp" style="color: inherit; text-decoration: inherit;">Duration</a>
@@ -2802,8 +2498,7 @@ The following state arguments are supported:
         <span class="property-indicator"></span>
         <span class="property-type">int</span>
     </dt>
-    <dd>{{% md %}}{{% /md %}}<p class="property-message">Deprecated: {{% md %}}use `threshold_duration` attribute instead{{% /md %}}</p></dd>
-    <dt class="property-optional"
+    <dd>{{% md %}}{{% /md %}}<p class="property-message">Deprecated: {{% md %}}use `threshold_duration` attribute instead{{% /md %}}</p></dd><dt class="property-optional"
             title="Optional">
         <span id="operator_csharp">
 <a href="#operator_csharp" style="color: inherit; text-decoration: inherit;">Operator</a>
@@ -2811,8 +2506,7 @@ The following state arguments are supported:
         <span class="property-indicator"></span>
         <span class="property-type">string</span>
     </dt>
-    <dd>{{% md %}}{{% /md %}}</dd>
-    <dt class="property-optional"
+    <dd>{{% md %}}{{% /md %}}</dd><dt class="property-optional"
             title="Optional">
         <span id="priority_csharp">
 <a href="#priority_csharp" style="color: inherit; text-decoration: inherit;">Priority</a>
@@ -2820,8 +2514,7 @@ The following state arguments are supported:
         <span class="property-indicator"></span>
         <span class="property-type">string</span>
     </dt>
-    <dd>{{% md %}}{{% /md %}}</dd>
-    <dt class="property-optional"
+    <dd>{{% md %}}{{% /md %}}</dd><dt class="property-optional"
             title="Optional">
         <span id="thresholdduration_csharp">
 <a href="#thresholdduration_csharp" style="color: inherit; text-decoration: inherit;">Threshold<wbr>Duration</a>
@@ -2829,8 +2522,7 @@ The following state arguments are supported:
         <span class="property-indicator"></span>
         <span class="property-type">int</span>
     </dt>
-    <dd>{{% md %}}{{% /md %}}</dd>
-    <dt class="property-optional"
+    <dd>{{% md %}}{{% /md %}}</dd><dt class="property-optional"
             title="Optional">
         <span id="thresholdoccurrences_csharp">
 <a href="#thresholdoccurrences_csharp" style="color: inherit; text-decoration: inherit;">Threshold<wbr>Occurrences</a>
@@ -2838,8 +2530,7 @@ The following state arguments are supported:
         <span class="property-indicator"></span>
         <span class="property-type">string</span>
     </dt>
-    <dd>{{% md %}}{{% /md %}}</dd>
-    <dt class="property-optional property-deprecated"
+    <dd>{{% md %}}{{% /md %}}</dd><dt class="property-optional property-deprecated"
             title="Optional, Deprecated">
         <span id="timefunction_csharp">
 <a href="#timefunction_csharp" style="color: inherit; text-decoration: inherit;">Time<wbr>Function</a>
@@ -2847,14 +2538,11 @@ The following state arguments are supported:
         <span class="property-indicator"></span>
         <span class="property-type">string</span>
     </dt>
-    <dd>{{% md %}}{{% /md %}}<p class="property-message">Deprecated: {{% md %}}use `threshold_occurrences` attribute instead{{% /md %}}</p></dd>
-</dl>
+    <dd>{{% md %}}{{% /md %}}<p class="property-message">Deprecated: {{% md %}}use `threshold_occurrences` attribute instead{{% /md %}}</p></dd></dl>
 {{% /choosable %}}
 
 {{% choosable language go %}}
-<dl class="resources-properties">
-
-    <dt class="property-required"
+<dl class="resources-properties"><dt class="property-required"
             title="Required">
         <span id="threshold_go">
 <a href="#threshold_go" style="color: inherit; text-decoration: inherit;">Threshold</a>
@@ -2862,8 +2550,7 @@ The following state arguments are supported:
         <span class="property-indicator"></span>
         <span class="property-type">float64</span>
     </dt>
-    <dd>{{% md %}}{{% /md %}}</dd>
-    <dt class="property-optional property-deprecated"
+    <dd>{{% md %}}{{% /md %}}</dd><dt class="property-optional property-deprecated"
             title="Optional, Deprecated">
         <span id="duration_go">
 <a href="#duration_go" style="color: inherit; text-decoration: inherit;">Duration</a>
@@ -2871,8 +2558,7 @@ The following state arguments are supported:
         <span class="property-indicator"></span>
         <span class="property-type">int</span>
     </dt>
-    <dd>{{% md %}}{{% /md %}}<p class="property-message">Deprecated: {{% md %}}use `threshold_duration` attribute instead{{% /md %}}</p></dd>
-    <dt class="property-optional"
+    <dd>{{% md %}}{{% /md %}}<p class="property-message">Deprecated: {{% md %}}use `threshold_duration` attribute instead{{% /md %}}</p></dd><dt class="property-optional"
             title="Optional">
         <span id="operator_go">
 <a href="#operator_go" style="color: inherit; text-decoration: inherit;">Operator</a>
@@ -2880,8 +2566,7 @@ The following state arguments are supported:
         <span class="property-indicator"></span>
         <span class="property-type">string</span>
     </dt>
-    <dd>{{% md %}}{{% /md %}}</dd>
-    <dt class="property-optional"
+    <dd>{{% md %}}{{% /md %}}</dd><dt class="property-optional"
             title="Optional">
         <span id="priority_go">
 <a href="#priority_go" style="color: inherit; text-decoration: inherit;">Priority</a>
@@ -2889,8 +2574,7 @@ The following state arguments are supported:
         <span class="property-indicator"></span>
         <span class="property-type">string</span>
     </dt>
-    <dd>{{% md %}}{{% /md %}}</dd>
-    <dt class="property-optional"
+    <dd>{{% md %}}{{% /md %}}</dd><dt class="property-optional"
             title="Optional">
         <span id="thresholdduration_go">
 <a href="#thresholdduration_go" style="color: inherit; text-decoration: inherit;">Threshold<wbr>Duration</a>
@@ -2898,8 +2582,7 @@ The following state arguments are supported:
         <span class="property-indicator"></span>
         <span class="property-type">int</span>
     </dt>
-    <dd>{{% md %}}{{% /md %}}</dd>
-    <dt class="property-optional"
+    <dd>{{% md %}}{{% /md %}}</dd><dt class="property-optional"
             title="Optional">
         <span id="thresholdoccurrences_go">
 <a href="#thresholdoccurrences_go" style="color: inherit; text-decoration: inherit;">Threshold<wbr>Occurrences</a>
@@ -2907,8 +2590,7 @@ The following state arguments are supported:
         <span class="property-indicator"></span>
         <span class="property-type">string</span>
     </dt>
-    <dd>{{% md %}}{{% /md %}}</dd>
-    <dt class="property-optional property-deprecated"
+    <dd>{{% md %}}{{% /md %}}</dd><dt class="property-optional property-deprecated"
             title="Optional, Deprecated">
         <span id="timefunction_go">
 <a href="#timefunction_go" style="color: inherit; text-decoration: inherit;">Time<wbr>Function</a>
@@ -2916,14 +2598,11 @@ The following state arguments are supported:
         <span class="property-indicator"></span>
         <span class="property-type">string</span>
     </dt>
-    <dd>{{% md %}}{{% /md %}}<p class="property-message">Deprecated: {{% md %}}use `threshold_occurrences` attribute instead{{% /md %}}</p></dd>
-</dl>
+    <dd>{{% md %}}{{% /md %}}<p class="property-message">Deprecated: {{% md %}}use `threshold_occurrences` attribute instead{{% /md %}}</p></dd></dl>
 {{% /choosable %}}
 
 {{% choosable language nodejs %}}
-<dl class="resources-properties">
-
-    <dt class="property-required"
+<dl class="resources-properties"><dt class="property-required"
             title="Required">
         <span id="threshold_nodejs">
 <a href="#threshold_nodejs" style="color: inherit; text-decoration: inherit;">threshold</a>
@@ -2931,8 +2610,7 @@ The following state arguments are supported:
         <span class="property-indicator"></span>
         <span class="property-type">number</span>
     </dt>
-    <dd>{{% md %}}{{% /md %}}</dd>
-    <dt class="property-optional property-deprecated"
+    <dd>{{% md %}}{{% /md %}}</dd><dt class="property-optional property-deprecated"
             title="Optional, Deprecated">
         <span id="duration_nodejs">
 <a href="#duration_nodejs" style="color: inherit; text-decoration: inherit;">duration</a>
@@ -2940,8 +2618,7 @@ The following state arguments are supported:
         <span class="property-indicator"></span>
         <span class="property-type">number</span>
     </dt>
-    <dd>{{% md %}}{{% /md %}}<p class="property-message">Deprecated: {{% md %}}use `threshold_duration` attribute instead{{% /md %}}</p></dd>
-    <dt class="property-optional"
+    <dd>{{% md %}}{{% /md %}}<p class="property-message">Deprecated: {{% md %}}use `threshold_duration` attribute instead{{% /md %}}</p></dd><dt class="property-optional"
             title="Optional">
         <span id="operator_nodejs">
 <a href="#operator_nodejs" style="color: inherit; text-decoration: inherit;">operator</a>
@@ -2949,8 +2626,7 @@ The following state arguments are supported:
         <span class="property-indicator"></span>
         <span class="property-type">string</span>
     </dt>
-    <dd>{{% md %}}{{% /md %}}</dd>
-    <dt class="property-optional"
+    <dd>{{% md %}}{{% /md %}}</dd><dt class="property-optional"
             title="Optional">
         <span id="priority_nodejs">
 <a href="#priority_nodejs" style="color: inherit; text-decoration: inherit;">priority</a>
@@ -2958,8 +2634,7 @@ The following state arguments are supported:
         <span class="property-indicator"></span>
         <span class="property-type">string</span>
     </dt>
-    <dd>{{% md %}}{{% /md %}}</dd>
-    <dt class="property-optional"
+    <dd>{{% md %}}{{% /md %}}</dd><dt class="property-optional"
             title="Optional">
         <span id="thresholdduration_nodejs">
 <a href="#thresholdduration_nodejs" style="color: inherit; text-decoration: inherit;">threshold<wbr>Duration</a>
@@ -2967,8 +2642,7 @@ The following state arguments are supported:
         <span class="property-indicator"></span>
         <span class="property-type">number</span>
     </dt>
-    <dd>{{% md %}}{{% /md %}}</dd>
-    <dt class="property-optional"
+    <dd>{{% md %}}{{% /md %}}</dd><dt class="property-optional"
             title="Optional">
         <span id="thresholdoccurrences_nodejs">
 <a href="#thresholdoccurrences_nodejs" style="color: inherit; text-decoration: inherit;">threshold<wbr>Occurrences</a>
@@ -2976,8 +2650,7 @@ The following state arguments are supported:
         <span class="property-indicator"></span>
         <span class="property-type">string</span>
     </dt>
-    <dd>{{% md %}}{{% /md %}}</dd>
-    <dt class="property-optional property-deprecated"
+    <dd>{{% md %}}{{% /md %}}</dd><dt class="property-optional property-deprecated"
             title="Optional, Deprecated">
         <span id="timefunction_nodejs">
 <a href="#timefunction_nodejs" style="color: inherit; text-decoration: inherit;">time<wbr>Function</a>
@@ -2985,14 +2658,11 @@ The following state arguments are supported:
         <span class="property-indicator"></span>
         <span class="property-type">string</span>
     </dt>
-    <dd>{{% md %}}{{% /md %}}<p class="property-message">Deprecated: {{% md %}}use `threshold_occurrences` attribute instead{{% /md %}}</p></dd>
-</dl>
+    <dd>{{% md %}}{{% /md %}}<p class="property-message">Deprecated: {{% md %}}use `threshold_occurrences` attribute instead{{% /md %}}</p></dd></dl>
 {{% /choosable %}}
 
 {{% choosable language python %}}
-<dl class="resources-properties">
-
-    <dt class="property-required"
+<dl class="resources-properties"><dt class="property-required"
             title="Required">
         <span id="threshold_python">
 <a href="#threshold_python" style="color: inherit; text-decoration: inherit;">threshold</a>
@@ -3000,8 +2670,7 @@ The following state arguments are supported:
         <span class="property-indicator"></span>
         <span class="property-type">float</span>
     </dt>
-    <dd>{{% md %}}{{% /md %}}</dd>
-    <dt class="property-optional property-deprecated"
+    <dd>{{% md %}}{{% /md %}}</dd><dt class="property-optional property-deprecated"
             title="Optional, Deprecated">
         <span id="duration_python">
 <a href="#duration_python" style="color: inherit; text-decoration: inherit;">duration</a>
@@ -3009,8 +2678,7 @@ The following state arguments are supported:
         <span class="property-indicator"></span>
         <span class="property-type">int</span>
     </dt>
-    <dd>{{% md %}}{{% /md %}}<p class="property-message">Deprecated: {{% md %}}use `threshold_duration` attribute instead{{% /md %}}</p></dd>
-    <dt class="property-optional"
+    <dd>{{% md %}}{{% /md %}}<p class="property-message">Deprecated: {{% md %}}use `threshold_duration` attribute instead{{% /md %}}</p></dd><dt class="property-optional"
             title="Optional">
         <span id="operator_python">
 <a href="#operator_python" style="color: inherit; text-decoration: inherit;">operator</a>
@@ -3018,8 +2686,7 @@ The following state arguments are supported:
         <span class="property-indicator"></span>
         <span class="property-type">str</span>
     </dt>
-    <dd>{{% md %}}{{% /md %}}</dd>
-    <dt class="property-optional"
+    <dd>{{% md %}}{{% /md %}}</dd><dt class="property-optional"
             title="Optional">
         <span id="priority_python">
 <a href="#priority_python" style="color: inherit; text-decoration: inherit;">priority</a>
@@ -3027,8 +2694,7 @@ The following state arguments are supported:
         <span class="property-indicator"></span>
         <span class="property-type">str</span>
     </dt>
-    <dd>{{% md %}}{{% /md %}}</dd>
-    <dt class="property-optional"
+    <dd>{{% md %}}{{% /md %}}</dd><dt class="property-optional"
             title="Optional">
         <span id="threshold_duration_python">
 <a href="#threshold_duration_python" style="color: inherit; text-decoration: inherit;">threshold_<wbr>duration</a>
@@ -3036,8 +2702,7 @@ The following state arguments are supported:
         <span class="property-indicator"></span>
         <span class="property-type">int</span>
     </dt>
-    <dd>{{% md %}}{{% /md %}}</dd>
-    <dt class="property-optional"
+    <dd>{{% md %}}{{% /md %}}</dd><dt class="property-optional"
             title="Optional">
         <span id="threshold_occurrences_python">
 <a href="#threshold_occurrences_python" style="color: inherit; text-decoration: inherit;">threshold_<wbr>occurrences</a>
@@ -3045,8 +2710,7 @@ The following state arguments are supported:
         <span class="property-indicator"></span>
         <span class="property-type">str</span>
     </dt>
-    <dd>{{% md %}}{{% /md %}}</dd>
-    <dt class="property-optional property-deprecated"
+    <dd>{{% md %}}{{% /md %}}</dd><dt class="property-optional property-deprecated"
             title="Optional, Deprecated">
         <span id="time_function_python">
 <a href="#time_function_python" style="color: inherit; text-decoration: inherit;">time_<wbr>function</a>
@@ -3054,16 +2718,13 @@ The following state arguments are supported:
         <span class="property-indicator"></span>
         <span class="property-type">str</span>
     </dt>
-    <dd>{{% md %}}{{% /md %}}<p class="property-message">Deprecated: {{% md %}}use `threshold_occurrences` attribute instead{{% /md %}}</p></dd>
-</dl>
+    <dd>{{% md %}}{{% /md %}}<p class="property-message">Deprecated: {{% md %}}use `threshold_occurrences` attribute instead{{% /md %}}</p></dd></dl>
 {{% /choosable %}}
 
 <h4 id="nrqlalertconditionwarning">Nrql<wbr>Alert<wbr>Condition<wbr>Warning</h4>
 
 {{% choosable language csharp %}}
-<dl class="resources-properties">
-
-    <dt class="property-required"
+<dl class="resources-properties"><dt class="property-required"
             title="Required">
         <span id="threshold_csharp">
 <a href="#threshold_csharp" style="color: inherit; text-decoration: inherit;">Threshold</a>
@@ -3071,8 +2732,7 @@ The following state arguments are supported:
         <span class="property-indicator"></span>
         <span class="property-type">double</span>
     </dt>
-    <dd>{{% md %}}{{% /md %}}</dd>
-    <dt class="property-optional property-deprecated"
+    <dd>{{% md %}}{{% /md %}}</dd><dt class="property-optional property-deprecated"
             title="Optional, Deprecated">
         <span id="duration_csharp">
 <a href="#duration_csharp" style="color: inherit; text-decoration: inherit;">Duration</a>
@@ -3080,8 +2740,7 @@ The following state arguments are supported:
         <span class="property-indicator"></span>
         <span class="property-type">int</span>
     </dt>
-    <dd>{{% md %}}{{% /md %}}<p class="property-message">Deprecated: {{% md %}}use `threshold_duration` attribute instead{{% /md %}}</p></dd>
-    <dt class="property-optional"
+    <dd>{{% md %}}{{% /md %}}<p class="property-message">Deprecated: {{% md %}}use `threshold_duration` attribute instead{{% /md %}}</p></dd><dt class="property-optional"
             title="Optional">
         <span id="operator_csharp">
 <a href="#operator_csharp" style="color: inherit; text-decoration: inherit;">Operator</a>
@@ -3089,8 +2748,7 @@ The following state arguments are supported:
         <span class="property-indicator"></span>
         <span class="property-type">string</span>
     </dt>
-    <dd>{{% md %}}{{% /md %}}</dd>
-    <dt class="property-optional"
+    <dd>{{% md %}}{{% /md %}}</dd><dt class="property-optional"
             title="Optional">
         <span id="thresholdduration_csharp">
 <a href="#thresholdduration_csharp" style="color: inherit; text-decoration: inherit;">Threshold<wbr>Duration</a>
@@ -3098,8 +2756,7 @@ The following state arguments are supported:
         <span class="property-indicator"></span>
         <span class="property-type">int</span>
     </dt>
-    <dd>{{% md %}}{{% /md %}}</dd>
-    <dt class="property-optional"
+    <dd>{{% md %}}{{% /md %}}</dd><dt class="property-optional"
             title="Optional">
         <span id="thresholdoccurrences_csharp">
 <a href="#thresholdoccurrences_csharp" style="color: inherit; text-decoration: inherit;">Threshold<wbr>Occurrences</a>
@@ -3107,8 +2764,7 @@ The following state arguments are supported:
         <span class="property-indicator"></span>
         <span class="property-type">string</span>
     </dt>
-    <dd>{{% md %}}{{% /md %}}</dd>
-    <dt class="property-optional property-deprecated"
+    <dd>{{% md %}}{{% /md %}}</dd><dt class="property-optional property-deprecated"
             title="Optional, Deprecated">
         <span id="timefunction_csharp">
 <a href="#timefunction_csharp" style="color: inherit; text-decoration: inherit;">Time<wbr>Function</a>
@@ -3116,14 +2772,11 @@ The following state arguments are supported:
         <span class="property-indicator"></span>
         <span class="property-type">string</span>
     </dt>
-    <dd>{{% md %}}{{% /md %}}<p class="property-message">Deprecated: {{% md %}}use `threshold_occurrences` attribute instead{{% /md %}}</p></dd>
-</dl>
+    <dd>{{% md %}}{{% /md %}}<p class="property-message">Deprecated: {{% md %}}use `threshold_occurrences` attribute instead{{% /md %}}</p></dd></dl>
 {{% /choosable %}}
 
 {{% choosable language go %}}
-<dl class="resources-properties">
-
-    <dt class="property-required"
+<dl class="resources-properties"><dt class="property-required"
             title="Required">
         <span id="threshold_go">
 <a href="#threshold_go" style="color: inherit; text-decoration: inherit;">Threshold</a>
@@ -3131,8 +2784,7 @@ The following state arguments are supported:
         <span class="property-indicator"></span>
         <span class="property-type">float64</span>
     </dt>
-    <dd>{{% md %}}{{% /md %}}</dd>
-    <dt class="property-optional property-deprecated"
+    <dd>{{% md %}}{{% /md %}}</dd><dt class="property-optional property-deprecated"
             title="Optional, Deprecated">
         <span id="duration_go">
 <a href="#duration_go" style="color: inherit; text-decoration: inherit;">Duration</a>
@@ -3140,8 +2792,7 @@ The following state arguments are supported:
         <span class="property-indicator"></span>
         <span class="property-type">int</span>
     </dt>
-    <dd>{{% md %}}{{% /md %}}<p class="property-message">Deprecated: {{% md %}}use `threshold_duration` attribute instead{{% /md %}}</p></dd>
-    <dt class="property-optional"
+    <dd>{{% md %}}{{% /md %}}<p class="property-message">Deprecated: {{% md %}}use `threshold_duration` attribute instead{{% /md %}}</p></dd><dt class="property-optional"
             title="Optional">
         <span id="operator_go">
 <a href="#operator_go" style="color: inherit; text-decoration: inherit;">Operator</a>
@@ -3149,8 +2800,7 @@ The following state arguments are supported:
         <span class="property-indicator"></span>
         <span class="property-type">string</span>
     </dt>
-    <dd>{{% md %}}{{% /md %}}</dd>
-    <dt class="property-optional"
+    <dd>{{% md %}}{{% /md %}}</dd><dt class="property-optional"
             title="Optional">
         <span id="thresholdduration_go">
 <a href="#thresholdduration_go" style="color: inherit; text-decoration: inherit;">Threshold<wbr>Duration</a>
@@ -3158,8 +2808,7 @@ The following state arguments are supported:
         <span class="property-indicator"></span>
         <span class="property-type">int</span>
     </dt>
-    <dd>{{% md %}}{{% /md %}}</dd>
-    <dt class="property-optional"
+    <dd>{{% md %}}{{% /md %}}</dd><dt class="property-optional"
             title="Optional">
         <span id="thresholdoccurrences_go">
 <a href="#thresholdoccurrences_go" style="color: inherit; text-decoration: inherit;">Threshold<wbr>Occurrences</a>
@@ -3167,8 +2816,7 @@ The following state arguments are supported:
         <span class="property-indicator"></span>
         <span class="property-type">string</span>
     </dt>
-    <dd>{{% md %}}{{% /md %}}</dd>
-    <dt class="property-optional property-deprecated"
+    <dd>{{% md %}}{{% /md %}}</dd><dt class="property-optional property-deprecated"
             title="Optional, Deprecated">
         <span id="timefunction_go">
 <a href="#timefunction_go" style="color: inherit; text-decoration: inherit;">Time<wbr>Function</a>
@@ -3176,14 +2824,11 @@ The following state arguments are supported:
         <span class="property-indicator"></span>
         <span class="property-type">string</span>
     </dt>
-    <dd>{{% md %}}{{% /md %}}<p class="property-message">Deprecated: {{% md %}}use `threshold_occurrences` attribute instead{{% /md %}}</p></dd>
-</dl>
+    <dd>{{% md %}}{{% /md %}}<p class="property-message">Deprecated: {{% md %}}use `threshold_occurrences` attribute instead{{% /md %}}</p></dd></dl>
 {{% /choosable %}}
 
 {{% choosable language nodejs %}}
-<dl class="resources-properties">
-
-    <dt class="property-required"
+<dl class="resources-properties"><dt class="property-required"
             title="Required">
         <span id="threshold_nodejs">
 <a href="#threshold_nodejs" style="color: inherit; text-decoration: inherit;">threshold</a>
@@ -3191,8 +2836,7 @@ The following state arguments are supported:
         <span class="property-indicator"></span>
         <span class="property-type">number</span>
     </dt>
-    <dd>{{% md %}}{{% /md %}}</dd>
-    <dt class="property-optional property-deprecated"
+    <dd>{{% md %}}{{% /md %}}</dd><dt class="property-optional property-deprecated"
             title="Optional, Deprecated">
         <span id="duration_nodejs">
 <a href="#duration_nodejs" style="color: inherit; text-decoration: inherit;">duration</a>
@@ -3200,8 +2844,7 @@ The following state arguments are supported:
         <span class="property-indicator"></span>
         <span class="property-type">number</span>
     </dt>
-    <dd>{{% md %}}{{% /md %}}<p class="property-message">Deprecated: {{% md %}}use `threshold_duration` attribute instead{{% /md %}}</p></dd>
-    <dt class="property-optional"
+    <dd>{{% md %}}{{% /md %}}<p class="property-message">Deprecated: {{% md %}}use `threshold_duration` attribute instead{{% /md %}}</p></dd><dt class="property-optional"
             title="Optional">
         <span id="operator_nodejs">
 <a href="#operator_nodejs" style="color: inherit; text-decoration: inherit;">operator</a>
@@ -3209,8 +2852,7 @@ The following state arguments are supported:
         <span class="property-indicator"></span>
         <span class="property-type">string</span>
     </dt>
-    <dd>{{% md %}}{{% /md %}}</dd>
-    <dt class="property-optional"
+    <dd>{{% md %}}{{% /md %}}</dd><dt class="property-optional"
             title="Optional">
         <span id="thresholdduration_nodejs">
 <a href="#thresholdduration_nodejs" style="color: inherit; text-decoration: inherit;">threshold<wbr>Duration</a>
@@ -3218,8 +2860,7 @@ The following state arguments are supported:
         <span class="property-indicator"></span>
         <span class="property-type">number</span>
     </dt>
-    <dd>{{% md %}}{{% /md %}}</dd>
-    <dt class="property-optional"
+    <dd>{{% md %}}{{% /md %}}</dd><dt class="property-optional"
             title="Optional">
         <span id="thresholdoccurrences_nodejs">
 <a href="#thresholdoccurrences_nodejs" style="color: inherit; text-decoration: inherit;">threshold<wbr>Occurrences</a>
@@ -3227,8 +2868,7 @@ The following state arguments are supported:
         <span class="property-indicator"></span>
         <span class="property-type">string</span>
     </dt>
-    <dd>{{% md %}}{{% /md %}}</dd>
-    <dt class="property-optional property-deprecated"
+    <dd>{{% md %}}{{% /md %}}</dd><dt class="property-optional property-deprecated"
             title="Optional, Deprecated">
         <span id="timefunction_nodejs">
 <a href="#timefunction_nodejs" style="color: inherit; text-decoration: inherit;">time<wbr>Function</a>
@@ -3236,14 +2876,11 @@ The following state arguments are supported:
         <span class="property-indicator"></span>
         <span class="property-type">string</span>
     </dt>
-    <dd>{{% md %}}{{% /md %}}<p class="property-message">Deprecated: {{% md %}}use `threshold_occurrences` attribute instead{{% /md %}}</p></dd>
-</dl>
+    <dd>{{% md %}}{{% /md %}}<p class="property-message">Deprecated: {{% md %}}use `threshold_occurrences` attribute instead{{% /md %}}</p></dd></dl>
 {{% /choosable %}}
 
 {{% choosable language python %}}
-<dl class="resources-properties">
-
-    <dt class="property-required"
+<dl class="resources-properties"><dt class="property-required"
             title="Required">
         <span id="threshold_python">
 <a href="#threshold_python" style="color: inherit; text-decoration: inherit;">threshold</a>
@@ -3251,8 +2888,7 @@ The following state arguments are supported:
         <span class="property-indicator"></span>
         <span class="property-type">float</span>
     </dt>
-    <dd>{{% md %}}{{% /md %}}</dd>
-    <dt class="property-optional property-deprecated"
+    <dd>{{% md %}}{{% /md %}}</dd><dt class="property-optional property-deprecated"
             title="Optional, Deprecated">
         <span id="duration_python">
 <a href="#duration_python" style="color: inherit; text-decoration: inherit;">duration</a>
@@ -3260,8 +2896,7 @@ The following state arguments are supported:
         <span class="property-indicator"></span>
         <span class="property-type">int</span>
     </dt>
-    <dd>{{% md %}}{{% /md %}}<p class="property-message">Deprecated: {{% md %}}use `threshold_duration` attribute instead{{% /md %}}</p></dd>
-    <dt class="property-optional"
+    <dd>{{% md %}}{{% /md %}}<p class="property-message">Deprecated: {{% md %}}use `threshold_duration` attribute instead{{% /md %}}</p></dd><dt class="property-optional"
             title="Optional">
         <span id="operator_python">
 <a href="#operator_python" style="color: inherit; text-decoration: inherit;">operator</a>
@@ -3269,8 +2904,7 @@ The following state arguments are supported:
         <span class="property-indicator"></span>
         <span class="property-type">str</span>
     </dt>
-    <dd>{{% md %}}{{% /md %}}</dd>
-    <dt class="property-optional"
+    <dd>{{% md %}}{{% /md %}}</dd><dt class="property-optional"
             title="Optional">
         <span id="threshold_duration_python">
 <a href="#threshold_duration_python" style="color: inherit; text-decoration: inherit;">threshold_<wbr>duration</a>
@@ -3278,8 +2912,7 @@ The following state arguments are supported:
         <span class="property-indicator"></span>
         <span class="property-type">int</span>
     </dt>
-    <dd>{{% md %}}{{% /md %}}</dd>
-    <dt class="property-optional"
+    <dd>{{% md %}}{{% /md %}}</dd><dt class="property-optional"
             title="Optional">
         <span id="threshold_occurrences_python">
 <a href="#threshold_occurrences_python" style="color: inherit; text-decoration: inherit;">threshold_<wbr>occurrences</a>
@@ -3287,8 +2920,7 @@ The following state arguments are supported:
         <span class="property-indicator"></span>
         <span class="property-type">str</span>
     </dt>
-    <dd>{{% md %}}{{% /md %}}</dd>
-    <dt class="property-optional property-deprecated"
+    <dd>{{% md %}}{{% /md %}}</dd><dt class="property-optional property-deprecated"
             title="Optional, Deprecated">
         <span id="time_function_python">
 <a href="#time_function_python" style="color: inherit; text-decoration: inherit;">time_<wbr>function</a>
@@ -3296,8 +2928,7 @@ The following state arguments are supported:
         <span class="property-indicator"></span>
         <span class="property-type">str</span>
     </dt>
-    <dd>{{% md %}}{{% /md %}}<p class="property-message">Deprecated: {{% md %}}use `threshold_occurrences` attribute instead{{% /md %}}</p></dd>
-</dl>
+    <dd>{{% md %}}{{% /md %}}<p class="property-message">Deprecated: {{% md %}}use `threshold_occurrences` attribute instead{{% /md %}}</p></dd></dl>
 {{% /choosable %}}
 ## Import
 
@@ -3332,6 +2963,6 @@ Alert conditions can be imported using a composite ID of `<policy_id>:<condition
 	<dt>License</dt>
 	<dd>Apache-2.0</dd>
 	<dt>Notes</dt>
-	<dd>This Pulumi package is based on the [`newrelic` Terraform Provider](https://github.com/newrelic/terraform-provider-newrelic).</dd>
+	<dd>{{% md %}}This Pulumi package is based on the [`newrelic` Terraform Provider](https://github.com/newrelic/terraform-provider-newrelic).{{% /md %}}</dd>
 </dl>
 

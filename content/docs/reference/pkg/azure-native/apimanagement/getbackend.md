@@ -51,9 +51,7 @@ The following arguments are supported:
 
 
 {{% choosable language csharp %}}
-<dl class="resources-properties">
-
-    <dt class="property-required"
+<dl class="resources-properties"><dt class="property-required"
             title="Required">
         <span id="backendid_csharp">
 <a href="#backendid_csharp" style="color: inherit; text-decoration: inherit;">Backend<wbr>Id</a>
@@ -61,8 +59,7 @@ The following arguments are supported:
         <span class="property-indicator"></span>
         <span class="property-type">string</span>
     </dt>
-    <dd>{{% md %}}Identifier of the Backend entity. Must be unique in the current API Management service instance.{{% /md %}}</dd>
-    <dt class="property-required"
+    <dd>{{% md %}}Identifier of the Backend entity. Must be unique in the current API Management service instance.{{% /md %}}</dd><dt class="property-required"
             title="Required">
         <span id="resourcegroupname_csharp">
 <a href="#resourcegroupname_csharp" style="color: inherit; text-decoration: inherit;">Resource<wbr>Group<wbr>Name</a>
@@ -70,8 +67,7 @@ The following arguments are supported:
         <span class="property-indicator"></span>
         <span class="property-type">string</span>
     </dt>
-    <dd>{{% md %}}The name of the resource group.{{% /md %}}</dd>
-    <dt class="property-required"
+    <dd>{{% md %}}The name of the resource group.{{% /md %}}</dd><dt class="property-required"
             title="Required">
         <span id="servicename_csharp">
 <a href="#servicename_csharp" style="color: inherit; text-decoration: inherit;">Service<wbr>Name</a>
@@ -79,14 +75,11 @@ The following arguments are supported:
         <span class="property-indicator"></span>
         <span class="property-type">string</span>
     </dt>
-    <dd>{{% md %}}The name of the API Management service.{{% /md %}}</dd>
-</dl>
+    <dd>{{% md %}}The name of the API Management service.{{% /md %}}</dd></dl>
 {{% /choosable %}}
 
 {{% choosable language go %}}
-<dl class="resources-properties">
-
-    <dt class="property-required"
+<dl class="resources-properties"><dt class="property-required"
             title="Required">
         <span id="backendid_go">
 <a href="#backendid_go" style="color: inherit; text-decoration: inherit;">Backend<wbr>Id</a>
@@ -94,8 +87,7 @@ The following arguments are supported:
         <span class="property-indicator"></span>
         <span class="property-type">string</span>
     </dt>
-    <dd>{{% md %}}Identifier of the Backend entity. Must be unique in the current API Management service instance.{{% /md %}}</dd>
-    <dt class="property-required"
+    <dd>{{% md %}}Identifier of the Backend entity. Must be unique in the current API Management service instance.{{% /md %}}</dd><dt class="property-required"
             title="Required">
         <span id="resourcegroupname_go">
 <a href="#resourcegroupname_go" style="color: inherit; text-decoration: inherit;">Resource<wbr>Group<wbr>Name</a>
@@ -103,8 +95,7 @@ The following arguments are supported:
         <span class="property-indicator"></span>
         <span class="property-type">string</span>
     </dt>
-    <dd>{{% md %}}The name of the resource group.{{% /md %}}</dd>
-    <dt class="property-required"
+    <dd>{{% md %}}The name of the resource group.{{% /md %}}</dd><dt class="property-required"
             title="Required">
         <span id="servicename_go">
 <a href="#servicename_go" style="color: inherit; text-decoration: inherit;">Service<wbr>Name</a>
@@ -112,14 +103,11 @@ The following arguments are supported:
         <span class="property-indicator"></span>
         <span class="property-type">string</span>
     </dt>
-    <dd>{{% md %}}The name of the API Management service.{{% /md %}}</dd>
-</dl>
+    <dd>{{% md %}}The name of the API Management service.{{% /md %}}</dd></dl>
 {{% /choosable %}}
 
 {{% choosable language nodejs %}}
-<dl class="resources-properties">
-
-    <dt class="property-required"
+<dl class="resources-properties"><dt class="property-required"
             title="Required">
         <span id="backendid_nodejs">
 <a href="#backendid_nodejs" style="color: inherit; text-decoration: inherit;">backend<wbr>Id</a>
@@ -127,8 +115,7 @@ The following arguments are supported:
         <span class="property-indicator"></span>
         <span class="property-type">string</span>
     </dt>
-    <dd>{{% md %}}Identifier of the Backend entity. Must be unique in the current API Management service instance.{{% /md %}}</dd>
-    <dt class="property-required"
+    <dd>{{% md %}}Identifier of the Backend entity. Must be unique in the current API Management service instance.{{% /md %}}</dd><dt class="property-required"
             title="Required">
         <span id="resourcegroupname_nodejs">
 <a href="#resourcegroupname_nodejs" style="color: inherit; text-decoration: inherit;">resource<wbr>Group<wbr>Name</a>
@@ -136,8 +123,7 @@ The following arguments are supported:
         <span class="property-indicator"></span>
         <span class="property-type">string</span>
     </dt>
-    <dd>{{% md %}}The name of the resource group.{{% /md %}}</dd>
-    <dt class="property-required"
+    <dd>{{% md %}}The name of the resource group.{{% /md %}}</dd><dt class="property-required"
             title="Required">
         <span id="servicename_nodejs">
 <a href="#servicename_nodejs" style="color: inherit; text-decoration: inherit;">service<wbr>Name</a>
@@ -145,14 +131,11 @@ The following arguments are supported:
         <span class="property-indicator"></span>
         <span class="property-type">string</span>
     </dt>
-    <dd>{{% md %}}The name of the API Management service.{{% /md %}}</dd>
-</dl>
+    <dd>{{% md %}}The name of the API Management service.{{% /md %}}</dd></dl>
 {{% /choosable %}}
 
 {{% choosable language python %}}
-<dl class="resources-properties">
-
-    <dt class="property-required"
+<dl class="resources-properties"><dt class="property-required"
             title="Required">
         <span id="backend_id_python">
 <a href="#backend_id_python" style="color: inherit; text-decoration: inherit;">backend_<wbr>id</a>
@@ -160,8 +143,7 @@ The following arguments are supported:
         <span class="property-indicator"></span>
         <span class="property-type">str</span>
     </dt>
-    <dd>{{% md %}}Identifier of the Backend entity. Must be unique in the current API Management service instance.{{% /md %}}</dd>
-    <dt class="property-required"
+    <dd>{{% md %}}Identifier of the Backend entity. Must be unique in the current API Management service instance.{{% /md %}}</dd><dt class="property-required"
             title="Required">
         <span id="resource_group_name_python">
 <a href="#resource_group_name_python" style="color: inherit; text-decoration: inherit;">resource_<wbr>group_<wbr>name</a>
@@ -169,8 +151,7 @@ The following arguments are supported:
         <span class="property-indicator"></span>
         <span class="property-type">str</span>
     </dt>
-    <dd>{{% md %}}The name of the resource group.{{% /md %}}</dd>
-    <dt class="property-required"
+    <dd>{{% md %}}The name of the resource group.{{% /md %}}</dd><dt class="property-required"
             title="Required">
         <span id="service_name_python">
 <a href="#service_name_python" style="color: inherit; text-decoration: inherit;">service_<wbr>name</a>
@@ -178,8 +159,7 @@ The following arguments are supported:
         <span class="property-indicator"></span>
         <span class="property-type">str</span>
     </dt>
-    <dd>{{% md %}}The name of the API Management service.{{% /md %}}</dd>
-</dl>
+    <dd>{{% md %}}The name of the API Management service.{{% /md %}}</dd></dl>
 {{% /choosable %}}
 
 
@@ -192,9 +172,7 @@ The following output properties are available:
 
 
 {{% choosable language csharp %}}
-<dl class="resources-properties">
-
-    <dt class="property-"
+<dl class="resources-properties"><dt class="property-"
             title="">
         <span id="id_csharp">
 <a href="#id_csharp" style="color: inherit; text-decoration: inherit;">Id</a>
@@ -202,8 +180,7 @@ The following output properties are available:
         <span class="property-indicator"></span>
         <span class="property-type">string</span>
     </dt>
-    <dd>{{% md %}}Resource ID.{{% /md %}}</dd>
-    <dt class="property-"
+    <dd>{{% md %}}Resource ID.{{% /md %}}</dd><dt class="property-"
             title="">
         <span id="name_csharp">
 <a href="#name_csharp" style="color: inherit; text-decoration: inherit;">Name</a>
@@ -211,8 +188,7 @@ The following output properties are available:
         <span class="property-indicator"></span>
         <span class="property-type">string</span>
     </dt>
-    <dd>{{% md %}}Resource name.{{% /md %}}</dd>
-    <dt class="property-"
+    <dd>{{% md %}}Resource name.{{% /md %}}</dd><dt class="property-"
             title="">
         <span id="properties_csharp">
 <a href="#properties_csharp" style="color: inherit; text-decoration: inherit;">Properties</a>
@@ -220,8 +196,7 @@ The following output properties are available:
         <span class="property-indicator"></span>
         <span class="property-type"><a href="#backendpropertiesresponse">Pulumi.<wbr>Azure<wbr>Native.<wbr>Api<wbr>Management.<wbr>Outputs.<wbr>Backend<wbr>Properties<wbr>Response</a></span>
     </dt>
-    <dd>{{% md %}}Backend Properties contract{{% /md %}}</dd>
-    <dt class="property-"
+    <dd>{{% md %}}Backend Properties contract{{% /md %}}</dd><dt class="property-"
             title="">
         <span id="protocol_csharp">
 <a href="#protocol_csharp" style="color: inherit; text-decoration: inherit;">Protocol</a>
@@ -229,8 +204,7 @@ The following output properties are available:
         <span class="property-indicator"></span>
         <span class="property-type">string</span>
     </dt>
-    <dd>{{% md %}}Backend communication protocol.{{% /md %}}</dd>
-    <dt class="property-"
+    <dd>{{% md %}}Backend communication protocol.{{% /md %}}</dd><dt class="property-"
             title="">
         <span id="type_csharp">
 <a href="#type_csharp" style="color: inherit; text-decoration: inherit;">Type</a>
@@ -238,8 +212,7 @@ The following output properties are available:
         <span class="property-indicator"></span>
         <span class="property-type">string</span>
     </dt>
-    <dd>{{% md %}}Resource type for API Management resource.{{% /md %}}</dd>
-    <dt class="property-"
+    <dd>{{% md %}}Resource type for API Management resource.{{% /md %}}</dd><dt class="property-"
             title="">
         <span id="url_csharp">
 <a href="#url_csharp" style="color: inherit; text-decoration: inherit;">Url</a>
@@ -247,8 +220,7 @@ The following output properties are available:
         <span class="property-indicator"></span>
         <span class="property-type">string</span>
     </dt>
-    <dd>{{% md %}}Runtime Url of the Backend.{{% /md %}}</dd>
-    <dt class="property-"
+    <dd>{{% md %}}Runtime Url of the Backend.{{% /md %}}</dd><dt class="property-"
             title="">
         <span id="credentials_csharp">
 <a href="#credentials_csharp" style="color: inherit; text-decoration: inherit;">Credentials</a>
@@ -256,8 +228,7 @@ The following output properties are available:
         <span class="property-indicator"></span>
         <span class="property-type"><a href="#backendcredentialscontractresponse">Pulumi.<wbr>Azure<wbr>Native.<wbr>Api<wbr>Management.<wbr>Outputs.<wbr>Backend<wbr>Credentials<wbr>Contract<wbr>Response</a></span>
     </dt>
-    <dd>{{% md %}}Backend Credentials Contract Properties{{% /md %}}</dd>
-    <dt class="property-"
+    <dd>{{% md %}}Backend Credentials Contract Properties{{% /md %}}</dd><dt class="property-"
             title="">
         <span id="description_csharp">
 <a href="#description_csharp" style="color: inherit; text-decoration: inherit;">Description</a>
@@ -265,8 +236,7 @@ The following output properties are available:
         <span class="property-indicator"></span>
         <span class="property-type">string</span>
     </dt>
-    <dd>{{% md %}}Backend Description.{{% /md %}}</dd>
-    <dt class="property-"
+    <dd>{{% md %}}Backend Description.{{% /md %}}</dd><dt class="property-"
             title="">
         <span id="proxy_csharp">
 <a href="#proxy_csharp" style="color: inherit; text-decoration: inherit;">Proxy</a>
@@ -274,8 +244,7 @@ The following output properties are available:
         <span class="property-indicator"></span>
         <span class="property-type"><a href="#backendproxycontractresponse">Pulumi.<wbr>Azure<wbr>Native.<wbr>Api<wbr>Management.<wbr>Outputs.<wbr>Backend<wbr>Proxy<wbr>Contract<wbr>Response</a></span>
     </dt>
-    <dd>{{% md %}}Backend Proxy Contract Properties{{% /md %}}</dd>
-    <dt class="property-"
+    <dd>{{% md %}}Backend Proxy Contract Properties{{% /md %}}</dd><dt class="property-"
             title="">
         <span id="resourceid_csharp">
 <a href="#resourceid_csharp" style="color: inherit; text-decoration: inherit;">Resource<wbr>Id</a>
@@ -283,8 +252,7 @@ The following output properties are available:
         <span class="property-indicator"></span>
         <span class="property-type">string</span>
     </dt>
-    <dd>{{% md %}}Management Uri of the Resource in External System. This url can be the Arm Resource Id of Logic Apps, Function Apps or Api Apps.{{% /md %}}</dd>
-    <dt class="property-"
+    <dd>{{% md %}}Management Uri of the Resource in External System. This url can be the Arm Resource Id of Logic Apps, Function Apps or Api Apps.{{% /md %}}</dd><dt class="property-"
             title="">
         <span id="title_csharp">
 <a href="#title_csharp" style="color: inherit; text-decoration: inherit;">Title</a>
@@ -292,8 +260,7 @@ The following output properties are available:
         <span class="property-indicator"></span>
         <span class="property-type">string</span>
     </dt>
-    <dd>{{% md %}}Backend Title.{{% /md %}}</dd>
-    <dt class="property-"
+    <dd>{{% md %}}Backend Title.{{% /md %}}</dd><dt class="property-"
             title="">
         <span id="tls_csharp">
 <a href="#tls_csharp" style="color: inherit; text-decoration: inherit;">Tls</a>
@@ -301,14 +268,11 @@ The following output properties are available:
         <span class="property-indicator"></span>
         <span class="property-type"><a href="#backendtlspropertiesresponse">Pulumi.<wbr>Azure<wbr>Native.<wbr>Api<wbr>Management.<wbr>Outputs.<wbr>Backend<wbr>Tls<wbr>Properties<wbr>Response</a></span>
     </dt>
-    <dd>{{% md %}}Backend TLS Properties{{% /md %}}</dd>
-</dl>
+    <dd>{{% md %}}Backend TLS Properties{{% /md %}}</dd></dl>
 {{% /choosable %}}
 
 {{% choosable language go %}}
-<dl class="resources-properties">
-
-    <dt class="property-"
+<dl class="resources-properties"><dt class="property-"
             title="">
         <span id="id_go">
 <a href="#id_go" style="color: inherit; text-decoration: inherit;">Id</a>
@@ -316,8 +280,7 @@ The following output properties are available:
         <span class="property-indicator"></span>
         <span class="property-type">string</span>
     </dt>
-    <dd>{{% md %}}Resource ID.{{% /md %}}</dd>
-    <dt class="property-"
+    <dd>{{% md %}}Resource ID.{{% /md %}}</dd><dt class="property-"
             title="">
         <span id="name_go">
 <a href="#name_go" style="color: inherit; text-decoration: inherit;">Name</a>
@@ -325,8 +288,7 @@ The following output properties are available:
         <span class="property-indicator"></span>
         <span class="property-type">string</span>
     </dt>
-    <dd>{{% md %}}Resource name.{{% /md %}}</dd>
-    <dt class="property-"
+    <dd>{{% md %}}Resource name.{{% /md %}}</dd><dt class="property-"
             title="">
         <span id="properties_go">
 <a href="#properties_go" style="color: inherit; text-decoration: inherit;">Properties</a>
@@ -334,8 +296,7 @@ The following output properties are available:
         <span class="property-indicator"></span>
         <span class="property-type"><a href="#backendpropertiesresponse">Backend<wbr>Properties<wbr>Response</a></span>
     </dt>
-    <dd>{{% md %}}Backend Properties contract{{% /md %}}</dd>
-    <dt class="property-"
+    <dd>{{% md %}}Backend Properties contract{{% /md %}}</dd><dt class="property-"
             title="">
         <span id="protocol_go">
 <a href="#protocol_go" style="color: inherit; text-decoration: inherit;">Protocol</a>
@@ -343,8 +304,7 @@ The following output properties are available:
         <span class="property-indicator"></span>
         <span class="property-type">string</span>
     </dt>
-    <dd>{{% md %}}Backend communication protocol.{{% /md %}}</dd>
-    <dt class="property-"
+    <dd>{{% md %}}Backend communication protocol.{{% /md %}}</dd><dt class="property-"
             title="">
         <span id="type_go">
 <a href="#type_go" style="color: inherit; text-decoration: inherit;">Type</a>
@@ -352,8 +312,7 @@ The following output properties are available:
         <span class="property-indicator"></span>
         <span class="property-type">string</span>
     </dt>
-    <dd>{{% md %}}Resource type for API Management resource.{{% /md %}}</dd>
-    <dt class="property-"
+    <dd>{{% md %}}Resource type for API Management resource.{{% /md %}}</dd><dt class="property-"
             title="">
         <span id="url_go">
 <a href="#url_go" style="color: inherit; text-decoration: inherit;">Url</a>
@@ -361,8 +320,7 @@ The following output properties are available:
         <span class="property-indicator"></span>
         <span class="property-type">string</span>
     </dt>
-    <dd>{{% md %}}Runtime Url of the Backend.{{% /md %}}</dd>
-    <dt class="property-"
+    <dd>{{% md %}}Runtime Url of the Backend.{{% /md %}}</dd><dt class="property-"
             title="">
         <span id="credentials_go">
 <a href="#credentials_go" style="color: inherit; text-decoration: inherit;">Credentials</a>
@@ -370,8 +328,7 @@ The following output properties are available:
         <span class="property-indicator"></span>
         <span class="property-type"><a href="#backendcredentialscontractresponse">Backend<wbr>Credentials<wbr>Contract<wbr>Response</a></span>
     </dt>
-    <dd>{{% md %}}Backend Credentials Contract Properties{{% /md %}}</dd>
-    <dt class="property-"
+    <dd>{{% md %}}Backend Credentials Contract Properties{{% /md %}}</dd><dt class="property-"
             title="">
         <span id="description_go">
 <a href="#description_go" style="color: inherit; text-decoration: inherit;">Description</a>
@@ -379,8 +336,7 @@ The following output properties are available:
         <span class="property-indicator"></span>
         <span class="property-type">string</span>
     </dt>
-    <dd>{{% md %}}Backend Description.{{% /md %}}</dd>
-    <dt class="property-"
+    <dd>{{% md %}}Backend Description.{{% /md %}}</dd><dt class="property-"
             title="">
         <span id="proxy_go">
 <a href="#proxy_go" style="color: inherit; text-decoration: inherit;">Proxy</a>
@@ -388,8 +344,7 @@ The following output properties are available:
         <span class="property-indicator"></span>
         <span class="property-type"><a href="#backendproxycontractresponse">Backend<wbr>Proxy<wbr>Contract<wbr>Response</a></span>
     </dt>
-    <dd>{{% md %}}Backend Proxy Contract Properties{{% /md %}}</dd>
-    <dt class="property-"
+    <dd>{{% md %}}Backend Proxy Contract Properties{{% /md %}}</dd><dt class="property-"
             title="">
         <span id="resourceid_go">
 <a href="#resourceid_go" style="color: inherit; text-decoration: inherit;">Resource<wbr>Id</a>
@@ -397,8 +352,7 @@ The following output properties are available:
         <span class="property-indicator"></span>
         <span class="property-type">string</span>
     </dt>
-    <dd>{{% md %}}Management Uri of the Resource in External System. This url can be the Arm Resource Id of Logic Apps, Function Apps or Api Apps.{{% /md %}}</dd>
-    <dt class="property-"
+    <dd>{{% md %}}Management Uri of the Resource in External System. This url can be the Arm Resource Id of Logic Apps, Function Apps or Api Apps.{{% /md %}}</dd><dt class="property-"
             title="">
         <span id="title_go">
 <a href="#title_go" style="color: inherit; text-decoration: inherit;">Title</a>
@@ -406,8 +360,7 @@ The following output properties are available:
         <span class="property-indicator"></span>
         <span class="property-type">string</span>
     </dt>
-    <dd>{{% md %}}Backend Title.{{% /md %}}</dd>
-    <dt class="property-"
+    <dd>{{% md %}}Backend Title.{{% /md %}}</dd><dt class="property-"
             title="">
         <span id="tls_go">
 <a href="#tls_go" style="color: inherit; text-decoration: inherit;">Tls</a>
@@ -415,14 +368,11 @@ The following output properties are available:
         <span class="property-indicator"></span>
         <span class="property-type"><a href="#backendtlspropertiesresponse">Backend<wbr>Tls<wbr>Properties<wbr>Response</a></span>
     </dt>
-    <dd>{{% md %}}Backend TLS Properties{{% /md %}}</dd>
-</dl>
+    <dd>{{% md %}}Backend TLS Properties{{% /md %}}</dd></dl>
 {{% /choosable %}}
 
 {{% choosable language nodejs %}}
-<dl class="resources-properties">
-
-    <dt class="property-"
+<dl class="resources-properties"><dt class="property-"
             title="">
         <span id="id_nodejs">
 <a href="#id_nodejs" style="color: inherit; text-decoration: inherit;">id</a>
@@ -430,8 +380,7 @@ The following output properties are available:
         <span class="property-indicator"></span>
         <span class="property-type">string</span>
     </dt>
-    <dd>{{% md %}}Resource ID.{{% /md %}}</dd>
-    <dt class="property-"
+    <dd>{{% md %}}Resource ID.{{% /md %}}</dd><dt class="property-"
             title="">
         <span id="name_nodejs">
 <a href="#name_nodejs" style="color: inherit; text-decoration: inherit;">name</a>
@@ -439,8 +388,7 @@ The following output properties are available:
         <span class="property-indicator"></span>
         <span class="property-type">string</span>
     </dt>
-    <dd>{{% md %}}Resource name.{{% /md %}}</dd>
-    <dt class="property-"
+    <dd>{{% md %}}Resource name.{{% /md %}}</dd><dt class="property-"
             title="">
         <span id="properties_nodejs">
 <a href="#properties_nodejs" style="color: inherit; text-decoration: inherit;">properties</a>
@@ -448,8 +396,7 @@ The following output properties are available:
         <span class="property-indicator"></span>
         <span class="property-type"><a href="#backendpropertiesresponse">Backend<wbr>Properties<wbr>Response</a></span>
     </dt>
-    <dd>{{% md %}}Backend Properties contract{{% /md %}}</dd>
-    <dt class="property-"
+    <dd>{{% md %}}Backend Properties contract{{% /md %}}</dd><dt class="property-"
             title="">
         <span id="protocol_nodejs">
 <a href="#protocol_nodejs" style="color: inherit; text-decoration: inherit;">protocol</a>
@@ -457,8 +404,7 @@ The following output properties are available:
         <span class="property-indicator"></span>
         <span class="property-type">string</span>
     </dt>
-    <dd>{{% md %}}Backend communication protocol.{{% /md %}}</dd>
-    <dt class="property-"
+    <dd>{{% md %}}Backend communication protocol.{{% /md %}}</dd><dt class="property-"
             title="">
         <span id="type_nodejs">
 <a href="#type_nodejs" style="color: inherit; text-decoration: inherit;">type</a>
@@ -466,8 +412,7 @@ The following output properties are available:
         <span class="property-indicator"></span>
         <span class="property-type">string</span>
     </dt>
-    <dd>{{% md %}}Resource type for API Management resource.{{% /md %}}</dd>
-    <dt class="property-"
+    <dd>{{% md %}}Resource type for API Management resource.{{% /md %}}</dd><dt class="property-"
             title="">
         <span id="url_nodejs">
 <a href="#url_nodejs" style="color: inherit; text-decoration: inherit;">url</a>
@@ -475,8 +420,7 @@ The following output properties are available:
         <span class="property-indicator"></span>
         <span class="property-type">string</span>
     </dt>
-    <dd>{{% md %}}Runtime Url of the Backend.{{% /md %}}</dd>
-    <dt class="property-"
+    <dd>{{% md %}}Runtime Url of the Backend.{{% /md %}}</dd><dt class="property-"
             title="">
         <span id="credentials_nodejs">
 <a href="#credentials_nodejs" style="color: inherit; text-decoration: inherit;">credentials</a>
@@ -484,8 +428,7 @@ The following output properties are available:
         <span class="property-indicator"></span>
         <span class="property-type"><a href="#backendcredentialscontractresponse">Backend<wbr>Credentials<wbr>Contract<wbr>Response</a></span>
     </dt>
-    <dd>{{% md %}}Backend Credentials Contract Properties{{% /md %}}</dd>
-    <dt class="property-"
+    <dd>{{% md %}}Backend Credentials Contract Properties{{% /md %}}</dd><dt class="property-"
             title="">
         <span id="description_nodejs">
 <a href="#description_nodejs" style="color: inherit; text-decoration: inherit;">description</a>
@@ -493,8 +436,7 @@ The following output properties are available:
         <span class="property-indicator"></span>
         <span class="property-type">string</span>
     </dt>
-    <dd>{{% md %}}Backend Description.{{% /md %}}</dd>
-    <dt class="property-"
+    <dd>{{% md %}}Backend Description.{{% /md %}}</dd><dt class="property-"
             title="">
         <span id="proxy_nodejs">
 <a href="#proxy_nodejs" style="color: inherit; text-decoration: inherit;">proxy</a>
@@ -502,8 +444,7 @@ The following output properties are available:
         <span class="property-indicator"></span>
         <span class="property-type"><a href="#backendproxycontractresponse">Backend<wbr>Proxy<wbr>Contract<wbr>Response</a></span>
     </dt>
-    <dd>{{% md %}}Backend Proxy Contract Properties{{% /md %}}</dd>
-    <dt class="property-"
+    <dd>{{% md %}}Backend Proxy Contract Properties{{% /md %}}</dd><dt class="property-"
             title="">
         <span id="resourceid_nodejs">
 <a href="#resourceid_nodejs" style="color: inherit; text-decoration: inherit;">resource<wbr>Id</a>
@@ -511,8 +452,7 @@ The following output properties are available:
         <span class="property-indicator"></span>
         <span class="property-type">string</span>
     </dt>
-    <dd>{{% md %}}Management Uri of the Resource in External System. This url can be the Arm Resource Id of Logic Apps, Function Apps or Api Apps.{{% /md %}}</dd>
-    <dt class="property-"
+    <dd>{{% md %}}Management Uri of the Resource in External System. This url can be the Arm Resource Id of Logic Apps, Function Apps or Api Apps.{{% /md %}}</dd><dt class="property-"
             title="">
         <span id="title_nodejs">
 <a href="#title_nodejs" style="color: inherit; text-decoration: inherit;">title</a>
@@ -520,8 +460,7 @@ The following output properties are available:
         <span class="property-indicator"></span>
         <span class="property-type">string</span>
     </dt>
-    <dd>{{% md %}}Backend Title.{{% /md %}}</dd>
-    <dt class="property-"
+    <dd>{{% md %}}Backend Title.{{% /md %}}</dd><dt class="property-"
             title="">
         <span id="tls_nodejs">
 <a href="#tls_nodejs" style="color: inherit; text-decoration: inherit;">tls</a>
@@ -529,14 +468,11 @@ The following output properties are available:
         <span class="property-indicator"></span>
         <span class="property-type"><a href="#backendtlspropertiesresponse">Backend<wbr>Tls<wbr>Properties<wbr>Response</a></span>
     </dt>
-    <dd>{{% md %}}Backend TLS Properties{{% /md %}}</dd>
-</dl>
+    <dd>{{% md %}}Backend TLS Properties{{% /md %}}</dd></dl>
 {{% /choosable %}}
 
 {{% choosable language python %}}
-<dl class="resources-properties">
-
-    <dt class="property-"
+<dl class="resources-properties"><dt class="property-"
             title="">
         <span id="id_python">
 <a href="#id_python" style="color: inherit; text-decoration: inherit;">id</a>
@@ -544,8 +480,7 @@ The following output properties are available:
         <span class="property-indicator"></span>
         <span class="property-type">str</span>
     </dt>
-    <dd>{{% md %}}Resource ID.{{% /md %}}</dd>
-    <dt class="property-"
+    <dd>{{% md %}}Resource ID.{{% /md %}}</dd><dt class="property-"
             title="">
         <span id="name_python">
 <a href="#name_python" style="color: inherit; text-decoration: inherit;">name</a>
@@ -553,8 +488,7 @@ The following output properties are available:
         <span class="property-indicator"></span>
         <span class="property-type">str</span>
     </dt>
-    <dd>{{% md %}}Resource name.{{% /md %}}</dd>
-    <dt class="property-"
+    <dd>{{% md %}}Resource name.{{% /md %}}</dd><dt class="property-"
             title="">
         <span id="properties_python">
 <a href="#properties_python" style="color: inherit; text-decoration: inherit;">properties</a>
@@ -562,8 +496,7 @@ The following output properties are available:
         <span class="property-indicator"></span>
         <span class="property-type"><a href="#backendpropertiesresponse">Backend<wbr>Properties<wbr>Response</a></span>
     </dt>
-    <dd>{{% md %}}Backend Properties contract{{% /md %}}</dd>
-    <dt class="property-"
+    <dd>{{% md %}}Backend Properties contract{{% /md %}}</dd><dt class="property-"
             title="">
         <span id="protocol_python">
 <a href="#protocol_python" style="color: inherit; text-decoration: inherit;">protocol</a>
@@ -571,8 +504,7 @@ The following output properties are available:
         <span class="property-indicator"></span>
         <span class="property-type">str</span>
     </dt>
-    <dd>{{% md %}}Backend communication protocol.{{% /md %}}</dd>
-    <dt class="property-"
+    <dd>{{% md %}}Backend communication protocol.{{% /md %}}</dd><dt class="property-"
             title="">
         <span id="type_python">
 <a href="#type_python" style="color: inherit; text-decoration: inherit;">type</a>
@@ -580,8 +512,7 @@ The following output properties are available:
         <span class="property-indicator"></span>
         <span class="property-type">str</span>
     </dt>
-    <dd>{{% md %}}Resource type for API Management resource.{{% /md %}}</dd>
-    <dt class="property-"
+    <dd>{{% md %}}Resource type for API Management resource.{{% /md %}}</dd><dt class="property-"
             title="">
         <span id="url_python">
 <a href="#url_python" style="color: inherit; text-decoration: inherit;">url</a>
@@ -589,8 +520,7 @@ The following output properties are available:
         <span class="property-indicator"></span>
         <span class="property-type">str</span>
     </dt>
-    <dd>{{% md %}}Runtime Url of the Backend.{{% /md %}}</dd>
-    <dt class="property-"
+    <dd>{{% md %}}Runtime Url of the Backend.{{% /md %}}</dd><dt class="property-"
             title="">
         <span id="credentials_python">
 <a href="#credentials_python" style="color: inherit; text-decoration: inherit;">credentials</a>
@@ -598,8 +528,7 @@ The following output properties are available:
         <span class="property-indicator"></span>
         <span class="property-type"><a href="#backendcredentialscontractresponse">Backend<wbr>Credentials<wbr>Contract<wbr>Response</a></span>
     </dt>
-    <dd>{{% md %}}Backend Credentials Contract Properties{{% /md %}}</dd>
-    <dt class="property-"
+    <dd>{{% md %}}Backend Credentials Contract Properties{{% /md %}}</dd><dt class="property-"
             title="">
         <span id="description_python">
 <a href="#description_python" style="color: inherit; text-decoration: inherit;">description</a>
@@ -607,8 +536,7 @@ The following output properties are available:
         <span class="property-indicator"></span>
         <span class="property-type">str</span>
     </dt>
-    <dd>{{% md %}}Backend Description.{{% /md %}}</dd>
-    <dt class="property-"
+    <dd>{{% md %}}Backend Description.{{% /md %}}</dd><dt class="property-"
             title="">
         <span id="proxy_python">
 <a href="#proxy_python" style="color: inherit; text-decoration: inherit;">proxy</a>
@@ -616,8 +544,7 @@ The following output properties are available:
         <span class="property-indicator"></span>
         <span class="property-type"><a href="#backendproxycontractresponse">Backend<wbr>Proxy<wbr>Contract<wbr>Response</a></span>
     </dt>
-    <dd>{{% md %}}Backend Proxy Contract Properties{{% /md %}}</dd>
-    <dt class="property-"
+    <dd>{{% md %}}Backend Proxy Contract Properties{{% /md %}}</dd><dt class="property-"
             title="">
         <span id="resource_id_python">
 <a href="#resource_id_python" style="color: inherit; text-decoration: inherit;">resource_<wbr>id</a>
@@ -625,8 +552,7 @@ The following output properties are available:
         <span class="property-indicator"></span>
         <span class="property-type">str</span>
     </dt>
-    <dd>{{% md %}}Management Uri of the Resource in External System. This url can be the Arm Resource Id of Logic Apps, Function Apps or Api Apps.{{% /md %}}</dd>
-    <dt class="property-"
+    <dd>{{% md %}}Management Uri of the Resource in External System. This url can be the Arm Resource Id of Logic Apps, Function Apps or Api Apps.{{% /md %}}</dd><dt class="property-"
             title="">
         <span id="title_python">
 <a href="#title_python" style="color: inherit; text-decoration: inherit;">title</a>
@@ -634,8 +560,7 @@ The following output properties are available:
         <span class="property-indicator"></span>
         <span class="property-type">str</span>
     </dt>
-    <dd>{{% md %}}Backend Title.{{% /md %}}</dd>
-    <dt class="property-"
+    <dd>{{% md %}}Backend Title.{{% /md %}}</dd><dt class="property-"
             title="">
         <span id="tls_python">
 <a href="#tls_python" style="color: inherit; text-decoration: inherit;">tls</a>
@@ -643,8 +568,7 @@ The following output properties are available:
         <span class="property-indicator"></span>
         <span class="property-type"><a href="#backendtlspropertiesresponse">Backend<wbr>Tls<wbr>Properties<wbr>Response</a></span>
     </dt>
-    <dd>{{% md %}}Backend TLS Properties{{% /md %}}</dd>
-</dl>
+    <dd>{{% md %}}Backend TLS Properties{{% /md %}}</dd></dl>
 {{% /choosable %}}
 
 
@@ -658,9 +582,7 @@ The following output properties are available:
 
 
 {{% choosable language csharp %}}
-<dl class="resources-properties">
-
-    <dt class="property-required"
+<dl class="resources-properties"><dt class="property-required"
             title="Required">
         <span id="parameter_csharp">
 <a href="#parameter_csharp" style="color: inherit; text-decoration: inherit;">Parameter</a>
@@ -668,8 +590,7 @@ The following output properties are available:
         <span class="property-indicator"></span>
         <span class="property-type">string</span>
     </dt>
-    <dd>{{% md %}}Authentication Parameter value.{{% /md %}}</dd>
-    <dt class="property-required"
+    <dd>{{% md %}}Authentication Parameter value.{{% /md %}}</dd><dt class="property-required"
             title="Required">
         <span id="scheme_csharp">
 <a href="#scheme_csharp" style="color: inherit; text-decoration: inherit;">Scheme</a>
@@ -677,14 +598,11 @@ The following output properties are available:
         <span class="property-indicator"></span>
         <span class="property-type">string</span>
     </dt>
-    <dd>{{% md %}}Authentication Scheme name.{{% /md %}}</dd>
-</dl>
+    <dd>{{% md %}}Authentication Scheme name.{{% /md %}}</dd></dl>
 {{% /choosable %}}
 
 {{% choosable language go %}}
-<dl class="resources-properties">
-
-    <dt class="property-required"
+<dl class="resources-properties"><dt class="property-required"
             title="Required">
         <span id="parameter_go">
 <a href="#parameter_go" style="color: inherit; text-decoration: inherit;">Parameter</a>
@@ -692,8 +610,7 @@ The following output properties are available:
         <span class="property-indicator"></span>
         <span class="property-type">string</span>
     </dt>
-    <dd>{{% md %}}Authentication Parameter value.{{% /md %}}</dd>
-    <dt class="property-required"
+    <dd>{{% md %}}Authentication Parameter value.{{% /md %}}</dd><dt class="property-required"
             title="Required">
         <span id="scheme_go">
 <a href="#scheme_go" style="color: inherit; text-decoration: inherit;">Scheme</a>
@@ -701,14 +618,11 @@ The following output properties are available:
         <span class="property-indicator"></span>
         <span class="property-type">string</span>
     </dt>
-    <dd>{{% md %}}Authentication Scheme name.{{% /md %}}</dd>
-</dl>
+    <dd>{{% md %}}Authentication Scheme name.{{% /md %}}</dd></dl>
 {{% /choosable %}}
 
 {{% choosable language nodejs %}}
-<dl class="resources-properties">
-
-    <dt class="property-required"
+<dl class="resources-properties"><dt class="property-required"
             title="Required">
         <span id="parameter_nodejs">
 <a href="#parameter_nodejs" style="color: inherit; text-decoration: inherit;">parameter</a>
@@ -716,8 +630,7 @@ The following output properties are available:
         <span class="property-indicator"></span>
         <span class="property-type">string</span>
     </dt>
-    <dd>{{% md %}}Authentication Parameter value.{{% /md %}}</dd>
-    <dt class="property-required"
+    <dd>{{% md %}}Authentication Parameter value.{{% /md %}}</dd><dt class="property-required"
             title="Required">
         <span id="scheme_nodejs">
 <a href="#scheme_nodejs" style="color: inherit; text-decoration: inherit;">scheme</a>
@@ -725,14 +638,11 @@ The following output properties are available:
         <span class="property-indicator"></span>
         <span class="property-type">string</span>
     </dt>
-    <dd>{{% md %}}Authentication Scheme name.{{% /md %}}</dd>
-</dl>
+    <dd>{{% md %}}Authentication Scheme name.{{% /md %}}</dd></dl>
 {{% /choosable %}}
 
 {{% choosable language python %}}
-<dl class="resources-properties">
-
-    <dt class="property-required"
+<dl class="resources-properties"><dt class="property-required"
             title="Required">
         <span id="parameter_python">
 <a href="#parameter_python" style="color: inherit; text-decoration: inherit;">parameter</a>
@@ -740,8 +650,7 @@ The following output properties are available:
         <span class="property-indicator"></span>
         <span class="property-type">str</span>
     </dt>
-    <dd>{{% md %}}Authentication Parameter value.{{% /md %}}</dd>
-    <dt class="property-required"
+    <dd>{{% md %}}Authentication Parameter value.{{% /md %}}</dd><dt class="property-required"
             title="Required">
         <span id="scheme_python">
 <a href="#scheme_python" style="color: inherit; text-decoration: inherit;">scheme</a>
@@ -749,8 +658,7 @@ The following output properties are available:
         <span class="property-indicator"></span>
         <span class="property-type">str</span>
     </dt>
-    <dd>{{% md %}}Authentication Scheme name.{{% /md %}}</dd>
-</dl>
+    <dd>{{% md %}}Authentication Scheme name.{{% /md %}}</dd></dl>
 {{% /choosable %}}
 
 <h4 id="backendcredentialscontractresponse">Backend<wbr>Credentials<wbr>Contract<wbr>Response</h4>
@@ -758,9 +666,7 @@ The following output properties are available:
 
 
 {{% choosable language csharp %}}
-<dl class="resources-properties">
-
-    <dt class="property-optional"
+<dl class="resources-properties"><dt class="property-optional"
             title="Optional">
         <span id="authorization_csharp">
 <a href="#authorization_csharp" style="color: inherit; text-decoration: inherit;">Authorization</a>
@@ -768,8 +674,7 @@ The following output properties are available:
         <span class="property-indicator"></span>
         <span class="property-type"><a href="#backendauthorizationheadercredentialsresponse">Pulumi.<wbr>Azure<wbr>Native.<wbr>Api<wbr>Management.<wbr>Inputs.<wbr>Backend<wbr>Authorization<wbr>Header<wbr>Credentials<wbr>Response<wbr>Args</a></span>
     </dt>
-    <dd>{{% md %}}Authorization header authentication{{% /md %}}</dd>
-    <dt class="property-optional"
+    <dd>{{% md %}}Authorization header authentication{{% /md %}}</dd><dt class="property-optional"
             title="Optional">
         <span id="certificate_csharp">
 <a href="#certificate_csharp" style="color: inherit; text-decoration: inherit;">Certificate</a>
@@ -777,8 +682,7 @@ The following output properties are available:
         <span class="property-indicator"></span>
         <span class="property-type">List&lt;string&gt;</span>
     </dt>
-    <dd>{{% md %}}List of Client Certificate Thumbprint.{{% /md %}}</dd>
-    <dt class="property-optional"
+    <dd>{{% md %}}List of Client Certificate Thumbprint.{{% /md %}}</dd><dt class="property-optional"
             title="Optional">
         <span id="header_csharp">
 <a href="#header_csharp" style="color: inherit; text-decoration: inherit;">Header</a>
@@ -786,8 +690,7 @@ The following output properties are available:
         <span class="property-indicator"></span>
         <span class="property-type">Dictionary&lt;string, Immutable<wbr>Array&lt;string&gt;&gt;</span>
     </dt>
-    <dd>{{% md %}}Header Parameter description.{{% /md %}}</dd>
-    <dt class="property-optional"
+    <dd>{{% md %}}Header Parameter description.{{% /md %}}</dd><dt class="property-optional"
             title="Optional">
         <span id="query_csharp">
 <a href="#query_csharp" style="color: inherit; text-decoration: inherit;">Query</a>
@@ -795,14 +698,11 @@ The following output properties are available:
         <span class="property-indicator"></span>
         <span class="property-type">Dictionary&lt;string, Immutable<wbr>Array&lt;string&gt;&gt;</span>
     </dt>
-    <dd>{{% md %}}Query Parameter description.{{% /md %}}</dd>
-</dl>
+    <dd>{{% md %}}Query Parameter description.{{% /md %}}</dd></dl>
 {{% /choosable %}}
 
 {{% choosable language go %}}
-<dl class="resources-properties">
-
-    <dt class="property-optional"
+<dl class="resources-properties"><dt class="property-optional"
             title="Optional">
         <span id="authorization_go">
 <a href="#authorization_go" style="color: inherit; text-decoration: inherit;">Authorization</a>
@@ -810,8 +710,7 @@ The following output properties are available:
         <span class="property-indicator"></span>
         <span class="property-type"><a href="#backendauthorizationheadercredentialsresponse">Backend<wbr>Authorization<wbr>Header<wbr>Credentials<wbr>Response</a></span>
     </dt>
-    <dd>{{% md %}}Authorization header authentication{{% /md %}}</dd>
-    <dt class="property-optional"
+    <dd>{{% md %}}Authorization header authentication{{% /md %}}</dd><dt class="property-optional"
             title="Optional">
         <span id="certificate_go">
 <a href="#certificate_go" style="color: inherit; text-decoration: inherit;">Certificate</a>
@@ -819,8 +718,7 @@ The following output properties are available:
         <span class="property-indicator"></span>
         <span class="property-type">[]string</span>
     </dt>
-    <dd>{{% md %}}List of Client Certificate Thumbprint.{{% /md %}}</dd>
-    <dt class="property-optional"
+    <dd>{{% md %}}List of Client Certificate Thumbprint.{{% /md %}}</dd><dt class="property-optional"
             title="Optional">
         <span id="header_go">
 <a href="#header_go" style="color: inherit; text-decoration: inherit;">Header</a>
@@ -828,8 +726,7 @@ The following output properties are available:
         <span class="property-indicator"></span>
         <span class="property-type">map[string][]string</span>
     </dt>
-    <dd>{{% md %}}Header Parameter description.{{% /md %}}</dd>
-    <dt class="property-optional"
+    <dd>{{% md %}}Header Parameter description.{{% /md %}}</dd><dt class="property-optional"
             title="Optional">
         <span id="query_go">
 <a href="#query_go" style="color: inherit; text-decoration: inherit;">Query</a>
@@ -837,14 +734,11 @@ The following output properties are available:
         <span class="property-indicator"></span>
         <span class="property-type">map[string][]string</span>
     </dt>
-    <dd>{{% md %}}Query Parameter description.{{% /md %}}</dd>
-</dl>
+    <dd>{{% md %}}Query Parameter description.{{% /md %}}</dd></dl>
 {{% /choosable %}}
 
 {{% choosable language nodejs %}}
-<dl class="resources-properties">
-
-    <dt class="property-optional"
+<dl class="resources-properties"><dt class="property-optional"
             title="Optional">
         <span id="authorization_nodejs">
 <a href="#authorization_nodejs" style="color: inherit; text-decoration: inherit;">authorization</a>
@@ -852,8 +746,7 @@ The following output properties are available:
         <span class="property-indicator"></span>
         <span class="property-type"><a href="#backendauthorizationheadercredentialsresponse">Backend<wbr>Authorization<wbr>Header<wbr>Credentials<wbr>Response</a></span>
     </dt>
-    <dd>{{% md %}}Authorization header authentication{{% /md %}}</dd>
-    <dt class="property-optional"
+    <dd>{{% md %}}Authorization header authentication{{% /md %}}</dd><dt class="property-optional"
             title="Optional">
         <span id="certificate_nodejs">
 <a href="#certificate_nodejs" style="color: inherit; text-decoration: inherit;">certificate</a>
@@ -861,8 +754,7 @@ The following output properties are available:
         <span class="property-indicator"></span>
         <span class="property-type">string[]</span>
     </dt>
-    <dd>{{% md %}}List of Client Certificate Thumbprint.{{% /md %}}</dd>
-    <dt class="property-optional"
+    <dd>{{% md %}}List of Client Certificate Thumbprint.{{% /md %}}</dd><dt class="property-optional"
             title="Optional">
         <span id="header_nodejs">
 <a href="#header_nodejs" style="color: inherit; text-decoration: inherit;">header</a>
@@ -870,8 +762,7 @@ The following output properties are available:
         <span class="property-indicator"></span>
         <span class="property-type">{[key: string]: string[]}</span>
     </dt>
-    <dd>{{% md %}}Header Parameter description.{{% /md %}}</dd>
-    <dt class="property-optional"
+    <dd>{{% md %}}Header Parameter description.{{% /md %}}</dd><dt class="property-optional"
             title="Optional">
         <span id="query_nodejs">
 <a href="#query_nodejs" style="color: inherit; text-decoration: inherit;">query</a>
@@ -879,14 +770,11 @@ The following output properties are available:
         <span class="property-indicator"></span>
         <span class="property-type">{[key: string]: string[]}</span>
     </dt>
-    <dd>{{% md %}}Query Parameter description.{{% /md %}}</dd>
-</dl>
+    <dd>{{% md %}}Query Parameter description.{{% /md %}}</dd></dl>
 {{% /choosable %}}
 
 {{% choosable language python %}}
-<dl class="resources-properties">
-
-    <dt class="property-optional"
+<dl class="resources-properties"><dt class="property-optional"
             title="Optional">
         <span id="authorization_python">
 <a href="#authorization_python" style="color: inherit; text-decoration: inherit;">authorization</a>
@@ -894,8 +782,7 @@ The following output properties are available:
         <span class="property-indicator"></span>
         <span class="property-type"><a href="#backendauthorizationheadercredentialsresponse">Backend<wbr>Authorization<wbr>Header<wbr>Credentials<wbr>Response<wbr>Args</a></span>
     </dt>
-    <dd>{{% md %}}Authorization header authentication{{% /md %}}</dd>
-    <dt class="property-optional"
+    <dd>{{% md %}}Authorization header authentication{{% /md %}}</dd><dt class="property-optional"
             title="Optional">
         <span id="certificate_python">
 <a href="#certificate_python" style="color: inherit; text-decoration: inherit;">certificate</a>
@@ -903,8 +790,7 @@ The following output properties are available:
         <span class="property-indicator"></span>
         <span class="property-type">Sequence[str]</span>
     </dt>
-    <dd>{{% md %}}List of Client Certificate Thumbprint.{{% /md %}}</dd>
-    <dt class="property-optional"
+    <dd>{{% md %}}List of Client Certificate Thumbprint.{{% /md %}}</dd><dt class="property-optional"
             title="Optional">
         <span id="header_python">
 <a href="#header_python" style="color: inherit; text-decoration: inherit;">header</a>
@@ -912,8 +798,7 @@ The following output properties are available:
         <span class="property-indicator"></span>
         <span class="property-type">Mapping[str, Sequence[str]]</span>
     </dt>
-    <dd>{{% md %}}Header Parameter description.{{% /md %}}</dd>
-    <dt class="property-optional"
+    <dd>{{% md %}}Header Parameter description.{{% /md %}}</dd><dt class="property-optional"
             title="Optional">
         <span id="query_python">
 <a href="#query_python" style="color: inherit; text-decoration: inherit;">query</a>
@@ -921,8 +806,7 @@ The following output properties are available:
         <span class="property-indicator"></span>
         <span class="property-type">Mapping[str, Sequence[str]]</span>
     </dt>
-    <dd>{{% md %}}Query Parameter description.{{% /md %}}</dd>
-</dl>
+    <dd>{{% md %}}Query Parameter description.{{% /md %}}</dd></dl>
 {{% /choosable %}}
 
 <h4 id="backendpropertiesresponse">Backend<wbr>Properties<wbr>Response</h4>
@@ -930,9 +814,7 @@ The following output properties are available:
 
 
 {{% choosable language csharp %}}
-<dl class="resources-properties">
-
-    <dt class="property-optional"
+<dl class="resources-properties"><dt class="property-optional"
             title="Optional">
         <span id="servicefabriccluster_csharp">
 <a href="#servicefabriccluster_csharp" style="color: inherit; text-decoration: inherit;">Service<wbr>Fabric<wbr>Cluster</a>
@@ -940,14 +822,11 @@ The following output properties are available:
         <span class="property-indicator"></span>
         <span class="property-type"><a href="#backendservicefabricclusterpropertiesresponse">Pulumi.<wbr>Azure<wbr>Native.<wbr>Api<wbr>Management.<wbr>Inputs.<wbr>Backend<wbr>Service<wbr>Fabric<wbr>Cluster<wbr>Properties<wbr>Response<wbr>Args</a></span>
     </dt>
-    <dd>{{% md %}}Backend Service Fabric Cluster Properties{{% /md %}}</dd>
-</dl>
+    <dd>{{% md %}}Backend Service Fabric Cluster Properties{{% /md %}}</dd></dl>
 {{% /choosable %}}
 
 {{% choosable language go %}}
-<dl class="resources-properties">
-
-    <dt class="property-optional"
+<dl class="resources-properties"><dt class="property-optional"
             title="Optional">
         <span id="servicefabriccluster_go">
 <a href="#servicefabriccluster_go" style="color: inherit; text-decoration: inherit;">Service<wbr>Fabric<wbr>Cluster</a>
@@ -955,14 +834,11 @@ The following output properties are available:
         <span class="property-indicator"></span>
         <span class="property-type"><a href="#backendservicefabricclusterpropertiesresponse">Backend<wbr>Service<wbr>Fabric<wbr>Cluster<wbr>Properties<wbr>Response</a></span>
     </dt>
-    <dd>{{% md %}}Backend Service Fabric Cluster Properties{{% /md %}}</dd>
-</dl>
+    <dd>{{% md %}}Backend Service Fabric Cluster Properties{{% /md %}}</dd></dl>
 {{% /choosable %}}
 
 {{% choosable language nodejs %}}
-<dl class="resources-properties">
-
-    <dt class="property-optional"
+<dl class="resources-properties"><dt class="property-optional"
             title="Optional">
         <span id="servicefabriccluster_nodejs">
 <a href="#servicefabriccluster_nodejs" style="color: inherit; text-decoration: inherit;">service<wbr>Fabric<wbr>Cluster</a>
@@ -970,14 +846,11 @@ The following output properties are available:
         <span class="property-indicator"></span>
         <span class="property-type"><a href="#backendservicefabricclusterpropertiesresponse">Backend<wbr>Service<wbr>Fabric<wbr>Cluster<wbr>Properties<wbr>Response</a></span>
     </dt>
-    <dd>{{% md %}}Backend Service Fabric Cluster Properties{{% /md %}}</dd>
-</dl>
+    <dd>{{% md %}}Backend Service Fabric Cluster Properties{{% /md %}}</dd></dl>
 {{% /choosable %}}
 
 {{% choosable language python %}}
-<dl class="resources-properties">
-
-    <dt class="property-optional"
+<dl class="resources-properties"><dt class="property-optional"
             title="Optional">
         <span id="service_fabric_cluster_python">
 <a href="#service_fabric_cluster_python" style="color: inherit; text-decoration: inherit;">service_<wbr>fabric_<wbr>cluster</a>
@@ -985,8 +858,7 @@ The following output properties are available:
         <span class="property-indicator"></span>
         <span class="property-type"><a href="#backendservicefabricclusterpropertiesresponse">Backend<wbr>Service<wbr>Fabric<wbr>Cluster<wbr>Properties<wbr>Response<wbr>Args</a></span>
     </dt>
-    <dd>{{% md %}}Backend Service Fabric Cluster Properties{{% /md %}}</dd>
-</dl>
+    <dd>{{% md %}}Backend Service Fabric Cluster Properties{{% /md %}}</dd></dl>
 {{% /choosable %}}
 
 <h4 id="backendproxycontractresponse">Backend<wbr>Proxy<wbr>Contract<wbr>Response</h4>
@@ -994,9 +866,7 @@ The following output properties are available:
 
 
 {{% choosable language csharp %}}
-<dl class="resources-properties">
-
-    <dt class="property-required"
+<dl class="resources-properties"><dt class="property-required"
             title="Required">
         <span id="url_csharp">
 <a href="#url_csharp" style="color: inherit; text-decoration: inherit;">Url</a>
@@ -1004,8 +874,7 @@ The following output properties are available:
         <span class="property-indicator"></span>
         <span class="property-type">string</span>
     </dt>
-    <dd>{{% md %}}WebProxy Server AbsoluteUri property which includes the entire URI stored in the Uri instance, including all fragments and query strings.{{% /md %}}</dd>
-    <dt class="property-optional"
+    <dd>{{% md %}}WebProxy Server AbsoluteUri property which includes the entire URI stored in the Uri instance, including all fragments and query strings.{{% /md %}}</dd><dt class="property-optional"
             title="Optional">
         <span id="password_csharp">
 <a href="#password_csharp" style="color: inherit; text-decoration: inherit;">Password</a>
@@ -1013,8 +882,7 @@ The following output properties are available:
         <span class="property-indicator"></span>
         <span class="property-type">string</span>
     </dt>
-    <dd>{{% md %}}Password to connect to the WebProxy Server{{% /md %}}</dd>
-    <dt class="property-optional"
+    <dd>{{% md %}}Password to connect to the WebProxy Server{{% /md %}}</dd><dt class="property-optional"
             title="Optional">
         <span id="username_csharp">
 <a href="#username_csharp" style="color: inherit; text-decoration: inherit;">Username</a>
@@ -1022,14 +890,11 @@ The following output properties are available:
         <span class="property-indicator"></span>
         <span class="property-type">string</span>
     </dt>
-    <dd>{{% md %}}Username to connect to the WebProxy server{{% /md %}}</dd>
-</dl>
+    <dd>{{% md %}}Username to connect to the WebProxy server{{% /md %}}</dd></dl>
 {{% /choosable %}}
 
 {{% choosable language go %}}
-<dl class="resources-properties">
-
-    <dt class="property-required"
+<dl class="resources-properties"><dt class="property-required"
             title="Required">
         <span id="url_go">
 <a href="#url_go" style="color: inherit; text-decoration: inherit;">Url</a>
@@ -1037,8 +902,7 @@ The following output properties are available:
         <span class="property-indicator"></span>
         <span class="property-type">string</span>
     </dt>
-    <dd>{{% md %}}WebProxy Server AbsoluteUri property which includes the entire URI stored in the Uri instance, including all fragments and query strings.{{% /md %}}</dd>
-    <dt class="property-optional"
+    <dd>{{% md %}}WebProxy Server AbsoluteUri property which includes the entire URI stored in the Uri instance, including all fragments and query strings.{{% /md %}}</dd><dt class="property-optional"
             title="Optional">
         <span id="password_go">
 <a href="#password_go" style="color: inherit; text-decoration: inherit;">Password</a>
@@ -1046,8 +910,7 @@ The following output properties are available:
         <span class="property-indicator"></span>
         <span class="property-type">string</span>
     </dt>
-    <dd>{{% md %}}Password to connect to the WebProxy Server{{% /md %}}</dd>
-    <dt class="property-optional"
+    <dd>{{% md %}}Password to connect to the WebProxy Server{{% /md %}}</dd><dt class="property-optional"
             title="Optional">
         <span id="username_go">
 <a href="#username_go" style="color: inherit; text-decoration: inherit;">Username</a>
@@ -1055,14 +918,11 @@ The following output properties are available:
         <span class="property-indicator"></span>
         <span class="property-type">string</span>
     </dt>
-    <dd>{{% md %}}Username to connect to the WebProxy server{{% /md %}}</dd>
-</dl>
+    <dd>{{% md %}}Username to connect to the WebProxy server{{% /md %}}</dd></dl>
 {{% /choosable %}}
 
 {{% choosable language nodejs %}}
-<dl class="resources-properties">
-
-    <dt class="property-required"
+<dl class="resources-properties"><dt class="property-required"
             title="Required">
         <span id="url_nodejs">
 <a href="#url_nodejs" style="color: inherit; text-decoration: inherit;">url</a>
@@ -1070,8 +930,7 @@ The following output properties are available:
         <span class="property-indicator"></span>
         <span class="property-type">string</span>
     </dt>
-    <dd>{{% md %}}WebProxy Server AbsoluteUri property which includes the entire URI stored in the Uri instance, including all fragments and query strings.{{% /md %}}</dd>
-    <dt class="property-optional"
+    <dd>{{% md %}}WebProxy Server AbsoluteUri property which includes the entire URI stored in the Uri instance, including all fragments and query strings.{{% /md %}}</dd><dt class="property-optional"
             title="Optional">
         <span id="password_nodejs">
 <a href="#password_nodejs" style="color: inherit; text-decoration: inherit;">password</a>
@@ -1079,8 +938,7 @@ The following output properties are available:
         <span class="property-indicator"></span>
         <span class="property-type">string</span>
     </dt>
-    <dd>{{% md %}}Password to connect to the WebProxy Server{{% /md %}}</dd>
-    <dt class="property-optional"
+    <dd>{{% md %}}Password to connect to the WebProxy Server{{% /md %}}</dd><dt class="property-optional"
             title="Optional">
         <span id="username_nodejs">
 <a href="#username_nodejs" style="color: inherit; text-decoration: inherit;">username</a>
@@ -1088,14 +946,11 @@ The following output properties are available:
         <span class="property-indicator"></span>
         <span class="property-type">string</span>
     </dt>
-    <dd>{{% md %}}Username to connect to the WebProxy server{{% /md %}}</dd>
-</dl>
+    <dd>{{% md %}}Username to connect to the WebProxy server{{% /md %}}</dd></dl>
 {{% /choosable %}}
 
 {{% choosable language python %}}
-<dl class="resources-properties">
-
-    <dt class="property-required"
+<dl class="resources-properties"><dt class="property-required"
             title="Required">
         <span id="url_python">
 <a href="#url_python" style="color: inherit; text-decoration: inherit;">url</a>
@@ -1103,8 +958,7 @@ The following output properties are available:
         <span class="property-indicator"></span>
         <span class="property-type">str</span>
     </dt>
-    <dd>{{% md %}}WebProxy Server AbsoluteUri property which includes the entire URI stored in the Uri instance, including all fragments and query strings.{{% /md %}}</dd>
-    <dt class="property-optional"
+    <dd>{{% md %}}WebProxy Server AbsoluteUri property which includes the entire URI stored in the Uri instance, including all fragments and query strings.{{% /md %}}</dd><dt class="property-optional"
             title="Optional">
         <span id="password_python">
 <a href="#password_python" style="color: inherit; text-decoration: inherit;">password</a>
@@ -1112,8 +966,7 @@ The following output properties are available:
         <span class="property-indicator"></span>
         <span class="property-type">str</span>
     </dt>
-    <dd>{{% md %}}Password to connect to the WebProxy Server{{% /md %}}</dd>
-    <dt class="property-optional"
+    <dd>{{% md %}}Password to connect to the WebProxy Server{{% /md %}}</dd><dt class="property-optional"
             title="Optional">
         <span id="username_python">
 <a href="#username_python" style="color: inherit; text-decoration: inherit;">username</a>
@@ -1121,8 +974,7 @@ The following output properties are available:
         <span class="property-indicator"></span>
         <span class="property-type">str</span>
     </dt>
-    <dd>{{% md %}}Username to connect to the WebProxy server{{% /md %}}</dd>
-</dl>
+    <dd>{{% md %}}Username to connect to the WebProxy server{{% /md %}}</dd></dl>
 {{% /choosable %}}
 
 <h4 id="backendservicefabricclusterpropertiesresponse">Backend<wbr>Service<wbr>Fabric<wbr>Cluster<wbr>Properties<wbr>Response</h4>
@@ -1130,9 +982,7 @@ The following output properties are available:
 
 
 {{% choosable language csharp %}}
-<dl class="resources-properties">
-
-    <dt class="property-required"
+<dl class="resources-properties"><dt class="property-required"
             title="Required">
         <span id="clientcertificatethumbprint_csharp">
 <a href="#clientcertificatethumbprint_csharp" style="color: inherit; text-decoration: inherit;">Client<wbr>Certificatethumbprint</a>
@@ -1140,8 +990,7 @@ The following output properties are available:
         <span class="property-indicator"></span>
         <span class="property-type">string</span>
     </dt>
-    <dd>{{% md %}}The client certificate thumbprint for the management endpoint.{{% /md %}}</dd>
-    <dt class="property-required"
+    <dd>{{% md %}}The client certificate thumbprint for the management endpoint.{{% /md %}}</dd><dt class="property-required"
             title="Required">
         <span id="managementendpoints_csharp">
 <a href="#managementendpoints_csharp" style="color: inherit; text-decoration: inherit;">Management<wbr>Endpoints</a>
@@ -1149,8 +998,7 @@ The following output properties are available:
         <span class="property-indicator"></span>
         <span class="property-type">List&lt;string&gt;</span>
     </dt>
-    <dd>{{% md %}}The cluster management endpoint.{{% /md %}}</dd>
-    <dt class="property-optional"
+    <dd>{{% md %}}The cluster management endpoint.{{% /md %}}</dd><dt class="property-optional"
             title="Optional">
         <span id="maxpartitionresolutionretries_csharp">
 <a href="#maxpartitionresolutionretries_csharp" style="color: inherit; text-decoration: inherit;">Max<wbr>Partition<wbr>Resolution<wbr>Retries</a>
@@ -1158,8 +1006,7 @@ The following output properties are available:
         <span class="property-indicator"></span>
         <span class="property-type">int</span>
     </dt>
-    <dd>{{% md %}}Maximum number of retries while attempting resolve the partition.{{% /md %}}</dd>
-    <dt class="property-optional"
+    <dd>{{% md %}}Maximum number of retries while attempting resolve the partition.{{% /md %}}</dd><dt class="property-optional"
             title="Optional">
         <span id="servercertificatethumbprints_csharp">
 <a href="#servercertificatethumbprints_csharp" style="color: inherit; text-decoration: inherit;">Server<wbr>Certificate<wbr>Thumbprints</a>
@@ -1167,8 +1014,7 @@ The following output properties are available:
         <span class="property-indicator"></span>
         <span class="property-type">List&lt;string&gt;</span>
     </dt>
-    <dd>{{% md %}}Thumbprints of certificates cluster management service uses for tls communication{{% /md %}}</dd>
-    <dt class="property-optional"
+    <dd>{{% md %}}Thumbprints of certificates cluster management service uses for tls communication{{% /md %}}</dd><dt class="property-optional"
             title="Optional">
         <span id="serverx509names_csharp">
 <a href="#serverx509names_csharp" style="color: inherit; text-decoration: inherit;">Server<wbr>X509Names</a>
@@ -1176,14 +1022,11 @@ The following output properties are available:
         <span class="property-indicator"></span>
         <span class="property-type"><a href="#x509certificatenameresponse">List&lt;Pulumi.<wbr>Azure<wbr>Native.<wbr>Api<wbr>Management.<wbr>Inputs.<wbr>X509Certificate<wbr>Name<wbr>Response<wbr>Args&gt;</a></span>
     </dt>
-    <dd>{{% md %}}Server X509 Certificate Names Collection{{% /md %}}</dd>
-</dl>
+    <dd>{{% md %}}Server X509 Certificate Names Collection{{% /md %}}</dd></dl>
 {{% /choosable %}}
 
 {{% choosable language go %}}
-<dl class="resources-properties">
-
-    <dt class="property-required"
+<dl class="resources-properties"><dt class="property-required"
             title="Required">
         <span id="clientcertificatethumbprint_go">
 <a href="#clientcertificatethumbprint_go" style="color: inherit; text-decoration: inherit;">Client<wbr>Certificatethumbprint</a>
@@ -1191,8 +1034,7 @@ The following output properties are available:
         <span class="property-indicator"></span>
         <span class="property-type">string</span>
     </dt>
-    <dd>{{% md %}}The client certificate thumbprint for the management endpoint.{{% /md %}}</dd>
-    <dt class="property-required"
+    <dd>{{% md %}}The client certificate thumbprint for the management endpoint.{{% /md %}}</dd><dt class="property-required"
             title="Required">
         <span id="managementendpoints_go">
 <a href="#managementendpoints_go" style="color: inherit; text-decoration: inherit;">Management<wbr>Endpoints</a>
@@ -1200,8 +1042,7 @@ The following output properties are available:
         <span class="property-indicator"></span>
         <span class="property-type">[]string</span>
     </dt>
-    <dd>{{% md %}}The cluster management endpoint.{{% /md %}}</dd>
-    <dt class="property-optional"
+    <dd>{{% md %}}The cluster management endpoint.{{% /md %}}</dd><dt class="property-optional"
             title="Optional">
         <span id="maxpartitionresolutionretries_go">
 <a href="#maxpartitionresolutionretries_go" style="color: inherit; text-decoration: inherit;">Max<wbr>Partition<wbr>Resolution<wbr>Retries</a>
@@ -1209,8 +1050,7 @@ The following output properties are available:
         <span class="property-indicator"></span>
         <span class="property-type">int</span>
     </dt>
-    <dd>{{% md %}}Maximum number of retries while attempting resolve the partition.{{% /md %}}</dd>
-    <dt class="property-optional"
+    <dd>{{% md %}}Maximum number of retries while attempting resolve the partition.{{% /md %}}</dd><dt class="property-optional"
             title="Optional">
         <span id="servercertificatethumbprints_go">
 <a href="#servercertificatethumbprints_go" style="color: inherit; text-decoration: inherit;">Server<wbr>Certificate<wbr>Thumbprints</a>
@@ -1218,8 +1058,7 @@ The following output properties are available:
         <span class="property-indicator"></span>
         <span class="property-type">[]string</span>
     </dt>
-    <dd>{{% md %}}Thumbprints of certificates cluster management service uses for tls communication{{% /md %}}</dd>
-    <dt class="property-optional"
+    <dd>{{% md %}}Thumbprints of certificates cluster management service uses for tls communication{{% /md %}}</dd><dt class="property-optional"
             title="Optional">
         <span id="serverx509names_go">
 <a href="#serverx509names_go" style="color: inherit; text-decoration: inherit;">Server<wbr>X509Names</a>
@@ -1227,14 +1066,11 @@ The following output properties are available:
         <span class="property-indicator"></span>
         <span class="property-type"><a href="#x509certificatenameresponse">[]X509Certificate<wbr>Name<wbr>Response</a></span>
     </dt>
-    <dd>{{% md %}}Server X509 Certificate Names Collection{{% /md %}}</dd>
-</dl>
+    <dd>{{% md %}}Server X509 Certificate Names Collection{{% /md %}}</dd></dl>
 {{% /choosable %}}
 
 {{% choosable language nodejs %}}
-<dl class="resources-properties">
-
-    <dt class="property-required"
+<dl class="resources-properties"><dt class="property-required"
             title="Required">
         <span id="clientcertificatethumbprint_nodejs">
 <a href="#clientcertificatethumbprint_nodejs" style="color: inherit; text-decoration: inherit;">client<wbr>Certificatethumbprint</a>
@@ -1242,8 +1078,7 @@ The following output properties are available:
         <span class="property-indicator"></span>
         <span class="property-type">string</span>
     </dt>
-    <dd>{{% md %}}The client certificate thumbprint for the management endpoint.{{% /md %}}</dd>
-    <dt class="property-required"
+    <dd>{{% md %}}The client certificate thumbprint for the management endpoint.{{% /md %}}</dd><dt class="property-required"
             title="Required">
         <span id="managementendpoints_nodejs">
 <a href="#managementendpoints_nodejs" style="color: inherit; text-decoration: inherit;">management<wbr>Endpoints</a>
@@ -1251,8 +1086,7 @@ The following output properties are available:
         <span class="property-indicator"></span>
         <span class="property-type">string[]</span>
     </dt>
-    <dd>{{% md %}}The cluster management endpoint.{{% /md %}}</dd>
-    <dt class="property-optional"
+    <dd>{{% md %}}The cluster management endpoint.{{% /md %}}</dd><dt class="property-optional"
             title="Optional">
         <span id="maxpartitionresolutionretries_nodejs">
 <a href="#maxpartitionresolutionretries_nodejs" style="color: inherit; text-decoration: inherit;">max<wbr>Partition<wbr>Resolution<wbr>Retries</a>
@@ -1260,8 +1094,7 @@ The following output properties are available:
         <span class="property-indicator"></span>
         <span class="property-type">number</span>
     </dt>
-    <dd>{{% md %}}Maximum number of retries while attempting resolve the partition.{{% /md %}}</dd>
-    <dt class="property-optional"
+    <dd>{{% md %}}Maximum number of retries while attempting resolve the partition.{{% /md %}}</dd><dt class="property-optional"
             title="Optional">
         <span id="servercertificatethumbprints_nodejs">
 <a href="#servercertificatethumbprints_nodejs" style="color: inherit; text-decoration: inherit;">server<wbr>Certificate<wbr>Thumbprints</a>
@@ -1269,8 +1102,7 @@ The following output properties are available:
         <span class="property-indicator"></span>
         <span class="property-type">string[]</span>
     </dt>
-    <dd>{{% md %}}Thumbprints of certificates cluster management service uses for tls communication{{% /md %}}</dd>
-    <dt class="property-optional"
+    <dd>{{% md %}}Thumbprints of certificates cluster management service uses for tls communication{{% /md %}}</dd><dt class="property-optional"
             title="Optional">
         <span id="serverx509names_nodejs">
 <a href="#serverx509names_nodejs" style="color: inherit; text-decoration: inherit;">server<wbr>X509Names</a>
@@ -1278,14 +1110,11 @@ The following output properties are available:
         <span class="property-indicator"></span>
         <span class="property-type"><a href="#x509certificatenameresponse">X509Certificate<wbr>Name<wbr>Response[]</a></span>
     </dt>
-    <dd>{{% md %}}Server X509 Certificate Names Collection{{% /md %}}</dd>
-</dl>
+    <dd>{{% md %}}Server X509 Certificate Names Collection{{% /md %}}</dd></dl>
 {{% /choosable %}}
 
 {{% choosable language python %}}
-<dl class="resources-properties">
-
-    <dt class="property-required"
+<dl class="resources-properties"><dt class="property-required"
             title="Required">
         <span id="client_certificatethumbprint_python">
 <a href="#client_certificatethumbprint_python" style="color: inherit; text-decoration: inherit;">client_<wbr>certificatethumbprint</a>
@@ -1293,8 +1122,7 @@ The following output properties are available:
         <span class="property-indicator"></span>
         <span class="property-type">str</span>
     </dt>
-    <dd>{{% md %}}The client certificate thumbprint for the management endpoint.{{% /md %}}</dd>
-    <dt class="property-required"
+    <dd>{{% md %}}The client certificate thumbprint for the management endpoint.{{% /md %}}</dd><dt class="property-required"
             title="Required">
         <span id="management_endpoints_python">
 <a href="#management_endpoints_python" style="color: inherit; text-decoration: inherit;">management_<wbr>endpoints</a>
@@ -1302,8 +1130,7 @@ The following output properties are available:
         <span class="property-indicator"></span>
         <span class="property-type">Sequence[str]</span>
     </dt>
-    <dd>{{% md %}}The cluster management endpoint.{{% /md %}}</dd>
-    <dt class="property-optional"
+    <dd>{{% md %}}The cluster management endpoint.{{% /md %}}</dd><dt class="property-optional"
             title="Optional">
         <span id="max_partition_resolution_retries_python">
 <a href="#max_partition_resolution_retries_python" style="color: inherit; text-decoration: inherit;">max_<wbr>partition_<wbr>resolution_<wbr>retries</a>
@@ -1311,8 +1138,7 @@ The following output properties are available:
         <span class="property-indicator"></span>
         <span class="property-type">int</span>
     </dt>
-    <dd>{{% md %}}Maximum number of retries while attempting resolve the partition.{{% /md %}}</dd>
-    <dt class="property-optional"
+    <dd>{{% md %}}Maximum number of retries while attempting resolve the partition.{{% /md %}}</dd><dt class="property-optional"
             title="Optional">
         <span id="server_certificate_thumbprints_python">
 <a href="#server_certificate_thumbprints_python" style="color: inherit; text-decoration: inherit;">server_<wbr>certificate_<wbr>thumbprints</a>
@@ -1320,8 +1146,7 @@ The following output properties are available:
         <span class="property-indicator"></span>
         <span class="property-type">Sequence[str]</span>
     </dt>
-    <dd>{{% md %}}Thumbprints of certificates cluster management service uses for tls communication{{% /md %}}</dd>
-    <dt class="property-optional"
+    <dd>{{% md %}}Thumbprints of certificates cluster management service uses for tls communication{{% /md %}}</dd><dt class="property-optional"
             title="Optional">
         <span id="server_x509_names_python">
 <a href="#server_x509_names_python" style="color: inherit; text-decoration: inherit;">server_<wbr>x509_<wbr>names</a>
@@ -1329,8 +1154,7 @@ The following output properties are available:
         <span class="property-indicator"></span>
         <span class="property-type"><a href="#x509certificatenameresponse">Sequence[X509Certificate<wbr>Name<wbr>Response<wbr>Args]</a></span>
     </dt>
-    <dd>{{% md %}}Server X509 Certificate Names Collection{{% /md %}}</dd>
-</dl>
+    <dd>{{% md %}}Server X509 Certificate Names Collection{{% /md %}}</dd></dl>
 {{% /choosable %}}
 
 <h4 id="backendtlspropertiesresponse">Backend<wbr>Tls<wbr>Properties<wbr>Response</h4>
@@ -1338,9 +1162,7 @@ The following output properties are available:
 
 
 {{% choosable language csharp %}}
-<dl class="resources-properties">
-
-    <dt class="property-optional"
+<dl class="resources-properties"><dt class="property-optional"
             title="Optional">
         <span id="validatecertificatechain_csharp">
 <a href="#validatecertificatechain_csharp" style="color: inherit; text-decoration: inherit;">Validate<wbr>Certificate<wbr>Chain</a>
@@ -1348,8 +1170,7 @@ The following output properties are available:
         <span class="property-indicator"></span>
         <span class="property-type">bool</span>
     </dt>
-    <dd>{{% md %}}Flag indicating whether SSL certificate chain validation should be done when using self-signed certificates for this backend host.{{% /md %}}</dd>
-    <dt class="property-optional"
+    <dd>{{% md %}}Flag indicating whether SSL certificate chain validation should be done when using self-signed certificates for this backend host.{{% /md %}}</dd><dt class="property-optional"
             title="Optional">
         <span id="validatecertificatename_csharp">
 <a href="#validatecertificatename_csharp" style="color: inherit; text-decoration: inherit;">Validate<wbr>Certificate<wbr>Name</a>
@@ -1357,14 +1178,11 @@ The following output properties are available:
         <span class="property-indicator"></span>
         <span class="property-type">bool</span>
     </dt>
-    <dd>{{% md %}}Flag indicating whether SSL certificate name validation should be done when using self-signed certificates for this backend host.{{% /md %}}</dd>
-</dl>
+    <dd>{{% md %}}Flag indicating whether SSL certificate name validation should be done when using self-signed certificates for this backend host.{{% /md %}}</dd></dl>
 {{% /choosable %}}
 
 {{% choosable language go %}}
-<dl class="resources-properties">
-
-    <dt class="property-optional"
+<dl class="resources-properties"><dt class="property-optional"
             title="Optional">
         <span id="validatecertificatechain_go">
 <a href="#validatecertificatechain_go" style="color: inherit; text-decoration: inherit;">Validate<wbr>Certificate<wbr>Chain</a>
@@ -1372,8 +1190,7 @@ The following output properties are available:
         <span class="property-indicator"></span>
         <span class="property-type">bool</span>
     </dt>
-    <dd>{{% md %}}Flag indicating whether SSL certificate chain validation should be done when using self-signed certificates for this backend host.{{% /md %}}</dd>
-    <dt class="property-optional"
+    <dd>{{% md %}}Flag indicating whether SSL certificate chain validation should be done when using self-signed certificates for this backend host.{{% /md %}}</dd><dt class="property-optional"
             title="Optional">
         <span id="validatecertificatename_go">
 <a href="#validatecertificatename_go" style="color: inherit; text-decoration: inherit;">Validate<wbr>Certificate<wbr>Name</a>
@@ -1381,14 +1198,11 @@ The following output properties are available:
         <span class="property-indicator"></span>
         <span class="property-type">bool</span>
     </dt>
-    <dd>{{% md %}}Flag indicating whether SSL certificate name validation should be done when using self-signed certificates for this backend host.{{% /md %}}</dd>
-</dl>
+    <dd>{{% md %}}Flag indicating whether SSL certificate name validation should be done when using self-signed certificates for this backend host.{{% /md %}}</dd></dl>
 {{% /choosable %}}
 
 {{% choosable language nodejs %}}
-<dl class="resources-properties">
-
-    <dt class="property-optional"
+<dl class="resources-properties"><dt class="property-optional"
             title="Optional">
         <span id="validatecertificatechain_nodejs">
 <a href="#validatecertificatechain_nodejs" style="color: inherit; text-decoration: inherit;">validate<wbr>Certificate<wbr>Chain</a>
@@ -1396,8 +1210,7 @@ The following output properties are available:
         <span class="property-indicator"></span>
         <span class="property-type">boolean</span>
     </dt>
-    <dd>{{% md %}}Flag indicating whether SSL certificate chain validation should be done when using self-signed certificates for this backend host.{{% /md %}}</dd>
-    <dt class="property-optional"
+    <dd>{{% md %}}Flag indicating whether SSL certificate chain validation should be done when using self-signed certificates for this backend host.{{% /md %}}</dd><dt class="property-optional"
             title="Optional">
         <span id="validatecertificatename_nodejs">
 <a href="#validatecertificatename_nodejs" style="color: inherit; text-decoration: inherit;">validate<wbr>Certificate<wbr>Name</a>
@@ -1405,14 +1218,11 @@ The following output properties are available:
         <span class="property-indicator"></span>
         <span class="property-type">boolean</span>
     </dt>
-    <dd>{{% md %}}Flag indicating whether SSL certificate name validation should be done when using self-signed certificates for this backend host.{{% /md %}}</dd>
-</dl>
+    <dd>{{% md %}}Flag indicating whether SSL certificate name validation should be done when using self-signed certificates for this backend host.{{% /md %}}</dd></dl>
 {{% /choosable %}}
 
 {{% choosable language python %}}
-<dl class="resources-properties">
-
-    <dt class="property-optional"
+<dl class="resources-properties"><dt class="property-optional"
             title="Optional">
         <span id="validate_certificate_chain_python">
 <a href="#validate_certificate_chain_python" style="color: inherit; text-decoration: inherit;">validate_<wbr>certificate_<wbr>chain</a>
@@ -1420,8 +1230,7 @@ The following output properties are available:
         <span class="property-indicator"></span>
         <span class="property-type">bool</span>
     </dt>
-    <dd>{{% md %}}Flag indicating whether SSL certificate chain validation should be done when using self-signed certificates for this backend host.{{% /md %}}</dd>
-    <dt class="property-optional"
+    <dd>{{% md %}}Flag indicating whether SSL certificate chain validation should be done when using self-signed certificates for this backend host.{{% /md %}}</dd><dt class="property-optional"
             title="Optional">
         <span id="validate_certificate_name_python">
 <a href="#validate_certificate_name_python" style="color: inherit; text-decoration: inherit;">validate_<wbr>certificate_<wbr>name</a>
@@ -1429,8 +1238,7 @@ The following output properties are available:
         <span class="property-indicator"></span>
         <span class="property-type">bool</span>
     </dt>
-    <dd>{{% md %}}Flag indicating whether SSL certificate name validation should be done when using self-signed certificates for this backend host.{{% /md %}}</dd>
-</dl>
+    <dd>{{% md %}}Flag indicating whether SSL certificate name validation should be done when using self-signed certificates for this backend host.{{% /md %}}</dd></dl>
 {{% /choosable %}}
 
 <h4 id="x509certificatenameresponse">X509Certificate<wbr>Name<wbr>Response</h4>
@@ -1438,9 +1246,7 @@ The following output properties are available:
 
 
 {{% choosable language csharp %}}
-<dl class="resources-properties">
-
-    <dt class="property-optional"
+<dl class="resources-properties"><dt class="property-optional"
             title="Optional">
         <span id="issuercertificatethumbprint_csharp">
 <a href="#issuercertificatethumbprint_csharp" style="color: inherit; text-decoration: inherit;">Issuer<wbr>Certificate<wbr>Thumbprint</a>
@@ -1448,8 +1254,7 @@ The following output properties are available:
         <span class="property-indicator"></span>
         <span class="property-type">string</span>
     </dt>
-    <dd>{{% md %}}Thumbprint for the Issuer of the Certificate.{{% /md %}}</dd>
-    <dt class="property-optional"
+    <dd>{{% md %}}Thumbprint for the Issuer of the Certificate.{{% /md %}}</dd><dt class="property-optional"
             title="Optional">
         <span id="name_csharp">
 <a href="#name_csharp" style="color: inherit; text-decoration: inherit;">Name</a>
@@ -1457,14 +1262,11 @@ The following output properties are available:
         <span class="property-indicator"></span>
         <span class="property-type">string</span>
     </dt>
-    <dd>{{% md %}}Common Name of the Certificate.{{% /md %}}</dd>
-</dl>
+    <dd>{{% md %}}Common Name of the Certificate.{{% /md %}}</dd></dl>
 {{% /choosable %}}
 
 {{% choosable language go %}}
-<dl class="resources-properties">
-
-    <dt class="property-optional"
+<dl class="resources-properties"><dt class="property-optional"
             title="Optional">
         <span id="issuercertificatethumbprint_go">
 <a href="#issuercertificatethumbprint_go" style="color: inherit; text-decoration: inherit;">Issuer<wbr>Certificate<wbr>Thumbprint</a>
@@ -1472,8 +1274,7 @@ The following output properties are available:
         <span class="property-indicator"></span>
         <span class="property-type">string</span>
     </dt>
-    <dd>{{% md %}}Thumbprint for the Issuer of the Certificate.{{% /md %}}</dd>
-    <dt class="property-optional"
+    <dd>{{% md %}}Thumbprint for the Issuer of the Certificate.{{% /md %}}</dd><dt class="property-optional"
             title="Optional">
         <span id="name_go">
 <a href="#name_go" style="color: inherit; text-decoration: inherit;">Name</a>
@@ -1481,14 +1282,11 @@ The following output properties are available:
         <span class="property-indicator"></span>
         <span class="property-type">string</span>
     </dt>
-    <dd>{{% md %}}Common Name of the Certificate.{{% /md %}}</dd>
-</dl>
+    <dd>{{% md %}}Common Name of the Certificate.{{% /md %}}</dd></dl>
 {{% /choosable %}}
 
 {{% choosable language nodejs %}}
-<dl class="resources-properties">
-
-    <dt class="property-optional"
+<dl class="resources-properties"><dt class="property-optional"
             title="Optional">
         <span id="issuercertificatethumbprint_nodejs">
 <a href="#issuercertificatethumbprint_nodejs" style="color: inherit; text-decoration: inherit;">issuer<wbr>Certificate<wbr>Thumbprint</a>
@@ -1496,8 +1294,7 @@ The following output properties are available:
         <span class="property-indicator"></span>
         <span class="property-type">string</span>
     </dt>
-    <dd>{{% md %}}Thumbprint for the Issuer of the Certificate.{{% /md %}}</dd>
-    <dt class="property-optional"
+    <dd>{{% md %}}Thumbprint for the Issuer of the Certificate.{{% /md %}}</dd><dt class="property-optional"
             title="Optional">
         <span id="name_nodejs">
 <a href="#name_nodejs" style="color: inherit; text-decoration: inherit;">name</a>
@@ -1505,14 +1302,11 @@ The following output properties are available:
         <span class="property-indicator"></span>
         <span class="property-type">string</span>
     </dt>
-    <dd>{{% md %}}Common Name of the Certificate.{{% /md %}}</dd>
-</dl>
+    <dd>{{% md %}}Common Name of the Certificate.{{% /md %}}</dd></dl>
 {{% /choosable %}}
 
 {{% choosable language python %}}
-<dl class="resources-properties">
-
-    <dt class="property-optional"
+<dl class="resources-properties"><dt class="property-optional"
             title="Optional">
         <span id="issuer_certificate_thumbprint_python">
 <a href="#issuer_certificate_thumbprint_python" style="color: inherit; text-decoration: inherit;">issuer_<wbr>certificate_<wbr>thumbprint</a>
@@ -1520,8 +1314,7 @@ The following output properties are available:
         <span class="property-indicator"></span>
         <span class="property-type">str</span>
     </dt>
-    <dd>{{% md %}}Thumbprint for the Issuer of the Certificate.{{% /md %}}</dd>
-    <dt class="property-optional"
+    <dd>{{% md %}}Thumbprint for the Issuer of the Certificate.{{% /md %}}</dd><dt class="property-optional"
             title="Optional">
         <span id="name_python">
 <a href="#name_python" style="color: inherit; text-decoration: inherit;">name</a>
@@ -1529,8 +1322,7 @@ The following output properties are available:
         <span class="property-indicator"></span>
         <span class="property-type">str</span>
     </dt>
-    <dd>{{% md %}}Common Name of the Certificate.{{% /md %}}</dd>
-</dl>
+    <dd>{{% md %}}Common Name of the Certificate.{{% /md %}}</dd></dl>
 {{% /choosable %}}
 
 

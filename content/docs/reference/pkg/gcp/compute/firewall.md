@@ -30,11 +30,17 @@ To get more information about Firewall, see:
     * [Official Documentation](https://cloud.google.com/vpc/docs/firewalls)
 
 {{% examples %}}
+
 ## Example Usage
 
 {{< chooser language "typescript,python,go,csharp" / >}}
+
+
 ### Firewall Basic
-{{% example csharp %}}
+
+
+{{< example csharp >}}
+
 ```csharp
 using Pulumi;
 using Gcp = Pulumi.Gcp;
@@ -76,9 +82,12 @@ class MyStack : Stack
 }
 ```
 
-{{% /example %}}
 
-{{% example go %}}
+{{< /example >}}
+
+
+{{< example go >}}
+
 ```go
 package main
 
@@ -120,9 +129,12 @@ func main() {
 }
 ```
 
-{{% /example %}}
 
-{{% example python %}}
+{{< /example >}}
+
+
+{{< example python >}}
+
 ```python
 import pulumi
 import pulumi_gcp as gcp
@@ -146,9 +158,12 @@ default_firewall = gcp.compute.Firewall("defaultFirewall",
     source_tags=["web"])
 ```
 
-{{% /example %}}
 
-{{% example typescript %}}
+{{< /example >}}
+
+
+{{< example typescript >}}
+
 
 ```typescript
 import * as pulumi from "@pulumi/pulumi";
@@ -174,9 +189,16 @@ const defaultFirewall = new gcp.compute.Firewall("defaultFirewall", {
 });
 ```
 
-{{% /example %}}
+
+{{< /example >}}
+
+
+
+
 
 {{% /examples %}}
+
+
 
 
 ## Create a Firewall Resource {#create}
@@ -201,9 +223,7 @@ const defaultFirewall = new gcp.compute.Firewall("defaultFirewall", {
 
 {{% choosable language nodejs %}}
 
-<dl class="resources-properties">
-  
-    <dt
+<dl class="resources-properties"><dt
         class="property-required" title="Required">
         <span>name</span>
         <span class="property-indicator"></span>
@@ -211,9 +231,7 @@ const defaultFirewall = new gcp.compute.Firewall("defaultFirewall", {
     </dt>
     <dd>
       The unique name of the resource.
-    </dd>
-  
-    <dt
+    </dd><dt
         class="property-required" title="Required">
         <span>args</span>
         <span class="property-indicator"></span>
@@ -221,9 +239,7 @@ const defaultFirewall = new gcp.compute.Firewall("defaultFirewall", {
     </dt>
     <dd>
       The arguments to resource properties.
-    </dd>
-  
-    <dt
+    </dd><dt
         class="property-optional" title="Optional">
         <span>opts</span>
         <span class="property-indicator"></span>
@@ -231,10 +247,7 @@ const defaultFirewall = new gcp.compute.Firewall("defaultFirewall", {
     </dt>
     <dd>
       Bag of options to control resource&#39;s behavior.
-    </dd>
-  
-
-</dl>
+    </dd></dl>
 
 {{% /choosable %}}
 
@@ -260,9 +273,7 @@ const defaultFirewall = new gcp.compute.Firewall("defaultFirewall", {
 
 {{% choosable language go %}}
 
-<dl class="resources-properties">
-  
-    <dt
+<dl class="resources-properties"><dt
         class="property-optional" title="Optional">
         <span>ctx</span>
         <span class="property-indicator"></span>
@@ -270,9 +281,7 @@ const defaultFirewall = new gcp.compute.Firewall("defaultFirewall", {
     </dt>
     <dd>
       Context object for the current deployment.
-    </dd>
-  
-    <dt
+    </dd><dt
         class="property-required" title="Required">
         <span>name</span>
         <span class="property-indicator"></span>
@@ -280,9 +289,7 @@ const defaultFirewall = new gcp.compute.Firewall("defaultFirewall", {
     </dt>
     <dd>
       The unique name of the resource.
-    </dd>
-  
-    <dt
+    </dd><dt
         class="property-required" title="Required">
         <span>args</span>
         <span class="property-indicator"></span>
@@ -290,9 +297,7 @@ const defaultFirewall = new gcp.compute.Firewall("defaultFirewall", {
     </dt>
     <dd>
       The arguments to resource properties.
-    </dd>
-  
-    <dt
+    </dd><dt
         class="property-optional" title="Optional">
         <span>opts</span>
         <span class="property-indicator"></span>
@@ -300,18 +305,13 @@ const defaultFirewall = new gcp.compute.Firewall("defaultFirewall", {
     </dt>
     <dd>
       Bag of options to control resource&#39;s behavior.
-    </dd>
-  
-
-</dl>
+    </dd></dl>
 
 {{% /choosable %}}
 
 {{% choosable language csharp %}}
 
-<dl class="resources-properties">
-  
-    <dt
+<dl class="resources-properties"><dt
         class="property-required" title="Required">
         <span>name</span>
         <span class="property-indicator"></span>
@@ -319,9 +319,7 @@ const defaultFirewall = new gcp.compute.Firewall("defaultFirewall", {
     </dt>
     <dd>
       The unique name of the resource.
-    </dd>
-  
-    <dt
+    </dd><dt
         class="property-required" title="Required">
         <span>args</span>
         <span class="property-indicator"></span>
@@ -329,9 +327,7 @@ const defaultFirewall = new gcp.compute.Firewall("defaultFirewall", {
     </dt>
     <dd>
       The arguments to resource properties.
-    </dd>
-  
-    <dt
+    </dd><dt
         class="property-optional" title="Optional">
         <span>opts</span>
         <span class="property-indicator"></span>
@@ -339,10 +335,7 @@ const defaultFirewall = new gcp.compute.Firewall("defaultFirewall", {
     </dt>
     <dd>
       Bag of options to control resource&#39;s behavior.
-    </dd>
-  
-
-</dl>
+    </dd></dl>
 
 {{% /choosable %}}
 
@@ -357,9 +350,7 @@ The Firewall resource accepts the following [input]({{< relref "/docs/intro/conc
 
 
 {{% choosable language csharp %}}
-<dl class="resources-properties">
-
-    <dt class="property-required"
+<dl class="resources-properties"><dt class="property-required"
             title="Required">
         <span id="network_csharp">
 <a href="#network_csharp" style="color: inherit; text-decoration: inherit;">Network</a>
@@ -368,8 +359,7 @@ The Firewall resource accepts the following [input]({{< relref "/docs/intro/conc
         <span class="property-type">string</span>
     </dt>
     <dd>{{% md %}}The name or self_link of the network to attach this firewall to.
-{{% /md %}}</dd>
-    <dt class="property-optional"
+{{% /md %}}</dd><dt class="property-optional"
             title="Optional">
         <span id="allows_csharp">
 <a href="#allows_csharp" style="color: inherit; text-decoration: inherit;">Allows</a>
@@ -381,8 +371,7 @@ The Firewall resource accepts the following [input]({{< relref "/docs/intro/conc
 specifies a protocol and port-range tuple that describes a permitted
 connection.
 Structure is documented below.
-{{% /md %}}</dd>
-    <dt class="property-optional"
+{{% /md %}}</dd><dt class="property-optional"
             title="Optional">
         <span id="denies_csharp">
 <a href="#denies_csharp" style="color: inherit; text-decoration: inherit;">Denies</a>
@@ -393,8 +382,7 @@ Structure is documented below.
     <dd>{{% md %}}The list of DENY rules specified by this firewall. Each rule specifies
 a protocol and port-range tuple that describes a denied connection.
 Structure is documented below.
-{{% /md %}}</dd>
-    <dt class="property-optional"
+{{% /md %}}</dd><dt class="property-optional"
             title="Optional">
         <span id="description_csharp">
 <a href="#description_csharp" style="color: inherit; text-decoration: inherit;">Description</a>
@@ -404,8 +392,7 @@ Structure is documented below.
     </dt>
     <dd>{{% md %}}An optional description of this resource. Provide this property when
 you create the resource.
-{{% /md %}}</dd>
-    <dt class="property-optional"
+{{% /md %}}</dd><dt class="property-optional"
             title="Optional">
         <span id="destinationranges_csharp">
 <a href="#destinationranges_csharp" style="color: inherit; text-decoration: inherit;">Destination<wbr>Ranges</a>
@@ -416,8 +403,7 @@ you create the resource.
     <dd>{{% md %}}If destination ranges are specified, the firewall will apply only to
 traffic that has destination IP address in these ranges. These ranges
 must be expressed in CIDR format. Only IPv4 is supported.
-{{% /md %}}</dd>
-    <dt class="property-optional"
+{{% /md %}}</dd><dt class="property-optional"
             title="Optional">
         <span id="direction_csharp">
 <a href="#direction_csharp" style="color: inherit; text-decoration: inherit;">Direction</a>
@@ -430,8 +416,7 @@ INGRESS. Note: For INGRESS traffic, it is NOT supported to specify
 destinationRanges; For EGRESS traffic, it is NOT supported to specify
 sourceRanges OR sourceTags.
 Possible values are `INGRESS` and `EGRESS`.
-{{% /md %}}</dd>
-    <dt class="property-optional"
+{{% /md %}}</dd><dt class="property-optional"
             title="Optional">
         <span id="disabled_csharp">
 <a href="#disabled_csharp" style="color: inherit; text-decoration: inherit;">Disabled</a>
@@ -443,8 +428,7 @@ Possible values are `INGRESS` and `EGRESS`.
 network it is associated with. When set to true, the firewall rule is
 not enforced and the network behaves as if it did not exist. If this
 is unspecified, the firewall rule will be enabled.
-{{% /md %}}</dd>
-    <dt class="property-optional property-deprecated"
+{{% /md %}}</dd><dt class="property-optional property-deprecated"
             title="Optional, Deprecated">
         <span id="enablelogging_csharp">
 <a href="#enablelogging_csharp" style="color: inherit; text-decoration: inherit;">Enable<wbr>Logging</a>
@@ -454,8 +438,7 @@ is unspecified, the firewall rule will be enabled.
     </dt>
     <dd>{{% md %}}This field denotes whether to enable logging for a particular firewall rule.
 If logging is enabled, logs will be exported to Stackdriver. Deprecated in favor of `log_config`
-{{% /md %}}<p class="property-message">Deprecated: {{% md %}}Deprecated in favor of log_config{{% /md %}}</p></dd>
-    <dt class="property-optional"
+{{% /md %}}<p class="property-message">Deprecated: {{% md %}}Deprecated in favor of log_config{{% /md %}}</p></dd><dt class="property-optional"
             title="Optional">
         <span id="logconfig_csharp">
 <a href="#logconfig_csharp" style="color: inherit; text-decoration: inherit;">Log<wbr>Config</a>
@@ -466,8 +449,7 @@ If logging is enabled, logs will be exported to Stackdriver. Deprecated in favor
     <dd>{{% md %}}This field denotes the logging options for a particular firewall rule.
 If defined, logging is enabled, and logs will be exported to Cloud Logging.
 Structure is documented below.
-{{% /md %}}</dd>
-    <dt class="property-optional"
+{{% /md %}}</dd><dt class="property-optional"
             title="Optional">
         <span id="name_csharp">
 <a href="#name_csharp" style="color: inherit; text-decoration: inherit;">Name</a>
@@ -482,8 +464,7 @@ the regular expression `a-z?` which means the
 first character must be a lowercase letter, and all following
 characters must be a dash, lowercase letter, or digit, except the last
 character, which cannot be a dash.
-{{% /md %}}</dd>
-    <dt class="property-optional"
+{{% /md %}}</dd><dt class="property-optional"
             title="Optional">
         <span id="priority_csharp">
 <a href="#priority_csharp" style="color: inherit; text-decoration: inherit;">Priority</a>
@@ -497,8 +478,7 @@ priorities determine precedence of conflicting rules. Lower value of
 priority implies higher precedence (eg, a rule with priority 0 has
 higher precedence than a rule with priority 1). DENY rules take
 precedence over ALLOW rules having equal priority.
-{{% /md %}}</dd>
-    <dt class="property-optional"
+{{% /md %}}</dd><dt class="property-optional"
             title="Optional">
         <span id="project_csharp">
 <a href="#project_csharp" style="color: inherit; text-decoration: inherit;">Project</a>
@@ -508,8 +488,7 @@ precedence over ALLOW rules having equal priority.
     </dt>
     <dd>{{% md %}}The ID of the project in which the resource belongs.
 If it is not provided, the provider project is used.
-{{% /md %}}</dd>
-    <dt class="property-optional"
+{{% /md %}}</dd><dt class="property-optional"
             title="Optional">
         <span id="sourceranges_csharp">
 <a href="#sourceranges_csharp" style="color: inherit; text-decoration: inherit;">Source<wbr>Ranges</a>
@@ -525,8 +504,7 @@ apply to traffic that has source IP address within sourceRanges OR the
 source IP that belongs to a tag listed in the sourceTags property. The
 connection does not need to match both properties for the firewall to
 apply. Only IPv4 is supported.
-{{% /md %}}</dd>
-    <dt class="property-optional"
+{{% /md %}}</dd><dt class="property-optional"
             title="Optional">
         <span id="sourceserviceaccounts_csharp">
 <a href="#sourceserviceaccounts_csharp" style="color: inherit; text-decoration: inherit;">Source<wbr>Service<wbr>Accounts</a>
@@ -545,8 +523,7 @@ source IP belongs to an instance with service account listed in
 sourceServiceAccount. The connection does not need to match both
 properties for the firewall to apply. sourceServiceAccounts cannot be
 used at the same time as sourceTags or targetTags.
-{{% /md %}}</dd>
-    <dt class="property-optional"
+{{% /md %}}</dd><dt class="property-optional"
             title="Optional">
         <span id="sourcetags_csharp">
 <a href="#sourcetags_csharp" style="color: inherit; text-decoration: inherit;">Source<wbr>Tags</a>
@@ -563,8 +540,7 @@ both properties are set, the firewall will apply to traffic that has
 source IP address within sourceRanges OR the source IP that belongs to
 a tag listed in the sourceTags property. The connection does not need
 to match both properties for the firewall to apply.
-{{% /md %}}</dd>
-    <dt class="property-optional"
+{{% /md %}}</dd><dt class="property-optional"
             title="Optional">
         <span id="targetserviceaccounts_csharp">
 <a href="#targetserviceaccounts_csharp" style="color: inherit; text-decoration: inherit;">Target<wbr>Service<wbr>Accounts</a>
@@ -578,8 +554,7 @@ targetServiceAccounts cannot be used at the same time as targetTags or
 sourceTags. If neither targetServiceAccounts nor targetTags are
 specified, the firewall rule applies to all instances on the specified
 network.
-{{% /md %}}</dd>
-    <dt class="property-optional"
+{{% /md %}}</dd><dt class="property-optional"
             title="Optional">
         <span id="targettags_csharp">
 <a href="#targettags_csharp" style="color: inherit; text-decoration: inherit;">Target<wbr>Tags</a>
@@ -591,14 +566,11 @@ network.
 network that may make network connections as specified in allowed[].
 If no targetTags are specified, the firewall rule applies to all
 instances on the specified network.
-{{% /md %}}</dd>
-</dl>
+{{% /md %}}</dd></dl>
 {{% /choosable %}}
 
 {{% choosable language go %}}
-<dl class="resources-properties">
-
-    <dt class="property-required"
+<dl class="resources-properties"><dt class="property-required"
             title="Required">
         <span id="network_go">
 <a href="#network_go" style="color: inherit; text-decoration: inherit;">Network</a>
@@ -607,8 +579,7 @@ instances on the specified network.
         <span class="property-type">string</span>
     </dt>
     <dd>{{% md %}}The name or self_link of the network to attach this firewall to.
-{{% /md %}}</dd>
-    <dt class="property-optional"
+{{% /md %}}</dd><dt class="property-optional"
             title="Optional">
         <span id="allows_go">
 <a href="#allows_go" style="color: inherit; text-decoration: inherit;">Allows</a>
@@ -620,8 +591,7 @@ instances on the specified network.
 specifies a protocol and port-range tuple that describes a permitted
 connection.
 Structure is documented below.
-{{% /md %}}</dd>
-    <dt class="property-optional"
+{{% /md %}}</dd><dt class="property-optional"
             title="Optional">
         <span id="denies_go">
 <a href="#denies_go" style="color: inherit; text-decoration: inherit;">Denies</a>
@@ -632,8 +602,7 @@ Structure is documented below.
     <dd>{{% md %}}The list of DENY rules specified by this firewall. Each rule specifies
 a protocol and port-range tuple that describes a denied connection.
 Structure is documented below.
-{{% /md %}}</dd>
-    <dt class="property-optional"
+{{% /md %}}</dd><dt class="property-optional"
             title="Optional">
         <span id="description_go">
 <a href="#description_go" style="color: inherit; text-decoration: inherit;">Description</a>
@@ -643,8 +612,7 @@ Structure is documented below.
     </dt>
     <dd>{{% md %}}An optional description of this resource. Provide this property when
 you create the resource.
-{{% /md %}}</dd>
-    <dt class="property-optional"
+{{% /md %}}</dd><dt class="property-optional"
             title="Optional">
         <span id="destinationranges_go">
 <a href="#destinationranges_go" style="color: inherit; text-decoration: inherit;">Destination<wbr>Ranges</a>
@@ -655,8 +623,7 @@ you create the resource.
     <dd>{{% md %}}If destination ranges are specified, the firewall will apply only to
 traffic that has destination IP address in these ranges. These ranges
 must be expressed in CIDR format. Only IPv4 is supported.
-{{% /md %}}</dd>
-    <dt class="property-optional"
+{{% /md %}}</dd><dt class="property-optional"
             title="Optional">
         <span id="direction_go">
 <a href="#direction_go" style="color: inherit; text-decoration: inherit;">Direction</a>
@@ -669,8 +636,7 @@ INGRESS. Note: For INGRESS traffic, it is NOT supported to specify
 destinationRanges; For EGRESS traffic, it is NOT supported to specify
 sourceRanges OR sourceTags.
 Possible values are `INGRESS` and `EGRESS`.
-{{% /md %}}</dd>
-    <dt class="property-optional"
+{{% /md %}}</dd><dt class="property-optional"
             title="Optional">
         <span id="disabled_go">
 <a href="#disabled_go" style="color: inherit; text-decoration: inherit;">Disabled</a>
@@ -682,8 +648,7 @@ Possible values are `INGRESS` and `EGRESS`.
 network it is associated with. When set to true, the firewall rule is
 not enforced and the network behaves as if it did not exist. If this
 is unspecified, the firewall rule will be enabled.
-{{% /md %}}</dd>
-    <dt class="property-optional property-deprecated"
+{{% /md %}}</dd><dt class="property-optional property-deprecated"
             title="Optional, Deprecated">
         <span id="enablelogging_go">
 <a href="#enablelogging_go" style="color: inherit; text-decoration: inherit;">Enable<wbr>Logging</a>
@@ -693,8 +658,7 @@ is unspecified, the firewall rule will be enabled.
     </dt>
     <dd>{{% md %}}This field denotes whether to enable logging for a particular firewall rule.
 If logging is enabled, logs will be exported to Stackdriver. Deprecated in favor of `log_config`
-{{% /md %}}<p class="property-message">Deprecated: {{% md %}}Deprecated in favor of log_config{{% /md %}}</p></dd>
-    <dt class="property-optional"
+{{% /md %}}<p class="property-message">Deprecated: {{% md %}}Deprecated in favor of log_config{{% /md %}}</p></dd><dt class="property-optional"
             title="Optional">
         <span id="logconfig_go">
 <a href="#logconfig_go" style="color: inherit; text-decoration: inherit;">Log<wbr>Config</a>
@@ -705,8 +669,7 @@ If logging is enabled, logs will be exported to Stackdriver. Deprecated in favor
     <dd>{{% md %}}This field denotes the logging options for a particular firewall rule.
 If defined, logging is enabled, and logs will be exported to Cloud Logging.
 Structure is documented below.
-{{% /md %}}</dd>
-    <dt class="property-optional"
+{{% /md %}}</dd><dt class="property-optional"
             title="Optional">
         <span id="name_go">
 <a href="#name_go" style="color: inherit; text-decoration: inherit;">Name</a>
@@ -721,8 +684,7 @@ the regular expression `a-z?` which means the
 first character must be a lowercase letter, and all following
 characters must be a dash, lowercase letter, or digit, except the last
 character, which cannot be a dash.
-{{% /md %}}</dd>
-    <dt class="property-optional"
+{{% /md %}}</dd><dt class="property-optional"
             title="Optional">
         <span id="priority_go">
 <a href="#priority_go" style="color: inherit; text-decoration: inherit;">Priority</a>
@@ -736,8 +698,7 @@ priorities determine precedence of conflicting rules. Lower value of
 priority implies higher precedence (eg, a rule with priority 0 has
 higher precedence than a rule with priority 1). DENY rules take
 precedence over ALLOW rules having equal priority.
-{{% /md %}}</dd>
-    <dt class="property-optional"
+{{% /md %}}</dd><dt class="property-optional"
             title="Optional">
         <span id="project_go">
 <a href="#project_go" style="color: inherit; text-decoration: inherit;">Project</a>
@@ -747,8 +708,7 @@ precedence over ALLOW rules having equal priority.
     </dt>
     <dd>{{% md %}}The ID of the project in which the resource belongs.
 If it is not provided, the provider project is used.
-{{% /md %}}</dd>
-    <dt class="property-optional"
+{{% /md %}}</dd><dt class="property-optional"
             title="Optional">
         <span id="sourceranges_go">
 <a href="#sourceranges_go" style="color: inherit; text-decoration: inherit;">Source<wbr>Ranges</a>
@@ -764,8 +724,7 @@ apply to traffic that has source IP address within sourceRanges OR the
 source IP that belongs to a tag listed in the sourceTags property. The
 connection does not need to match both properties for the firewall to
 apply. Only IPv4 is supported.
-{{% /md %}}</dd>
-    <dt class="property-optional"
+{{% /md %}}</dd><dt class="property-optional"
             title="Optional">
         <span id="sourceserviceaccounts_go">
 <a href="#sourceserviceaccounts_go" style="color: inherit; text-decoration: inherit;">Source<wbr>Service<wbr>Accounts</a>
@@ -784,8 +743,7 @@ source IP belongs to an instance with service account listed in
 sourceServiceAccount. The connection does not need to match both
 properties for the firewall to apply. sourceServiceAccounts cannot be
 used at the same time as sourceTags or targetTags.
-{{% /md %}}</dd>
-    <dt class="property-optional"
+{{% /md %}}</dd><dt class="property-optional"
             title="Optional">
         <span id="sourcetags_go">
 <a href="#sourcetags_go" style="color: inherit; text-decoration: inherit;">Source<wbr>Tags</a>
@@ -802,8 +760,7 @@ both properties are set, the firewall will apply to traffic that has
 source IP address within sourceRanges OR the source IP that belongs to
 a tag listed in the sourceTags property. The connection does not need
 to match both properties for the firewall to apply.
-{{% /md %}}</dd>
-    <dt class="property-optional"
+{{% /md %}}</dd><dt class="property-optional"
             title="Optional">
         <span id="targetserviceaccounts_go">
 <a href="#targetserviceaccounts_go" style="color: inherit; text-decoration: inherit;">Target<wbr>Service<wbr>Accounts</a>
@@ -817,8 +774,7 @@ targetServiceAccounts cannot be used at the same time as targetTags or
 sourceTags. If neither targetServiceAccounts nor targetTags are
 specified, the firewall rule applies to all instances on the specified
 network.
-{{% /md %}}</dd>
-    <dt class="property-optional"
+{{% /md %}}</dd><dt class="property-optional"
             title="Optional">
         <span id="targettags_go">
 <a href="#targettags_go" style="color: inherit; text-decoration: inherit;">Target<wbr>Tags</a>
@@ -830,14 +786,11 @@ network.
 network that may make network connections as specified in allowed[].
 If no targetTags are specified, the firewall rule applies to all
 instances on the specified network.
-{{% /md %}}</dd>
-</dl>
+{{% /md %}}</dd></dl>
 {{% /choosable %}}
 
 {{% choosable language nodejs %}}
-<dl class="resources-properties">
-
-    <dt class="property-required"
+<dl class="resources-properties"><dt class="property-required"
             title="Required">
         <span id="network_nodejs">
 <a href="#network_nodejs" style="color: inherit; text-decoration: inherit;">network</a>
@@ -846,8 +799,7 @@ instances on the specified network.
         <span class="property-type">string</span>
     </dt>
     <dd>{{% md %}}The name or self_link of the network to attach this firewall to.
-{{% /md %}}</dd>
-    <dt class="property-optional"
+{{% /md %}}</dd><dt class="property-optional"
             title="Optional">
         <span id="allows_nodejs">
 <a href="#allows_nodejs" style="color: inherit; text-decoration: inherit;">allows</a>
@@ -859,8 +811,7 @@ instances on the specified network.
 specifies a protocol and port-range tuple that describes a permitted
 connection.
 Structure is documented below.
-{{% /md %}}</dd>
-    <dt class="property-optional"
+{{% /md %}}</dd><dt class="property-optional"
             title="Optional">
         <span id="denies_nodejs">
 <a href="#denies_nodejs" style="color: inherit; text-decoration: inherit;">denies</a>
@@ -871,8 +822,7 @@ Structure is documented below.
     <dd>{{% md %}}The list of DENY rules specified by this firewall. Each rule specifies
 a protocol and port-range tuple that describes a denied connection.
 Structure is documented below.
-{{% /md %}}</dd>
-    <dt class="property-optional"
+{{% /md %}}</dd><dt class="property-optional"
             title="Optional">
         <span id="description_nodejs">
 <a href="#description_nodejs" style="color: inherit; text-decoration: inherit;">description</a>
@@ -882,8 +832,7 @@ Structure is documented below.
     </dt>
     <dd>{{% md %}}An optional description of this resource. Provide this property when
 you create the resource.
-{{% /md %}}</dd>
-    <dt class="property-optional"
+{{% /md %}}</dd><dt class="property-optional"
             title="Optional">
         <span id="destinationranges_nodejs">
 <a href="#destinationranges_nodejs" style="color: inherit; text-decoration: inherit;">destination<wbr>Ranges</a>
@@ -894,8 +843,7 @@ you create the resource.
     <dd>{{% md %}}If destination ranges are specified, the firewall will apply only to
 traffic that has destination IP address in these ranges. These ranges
 must be expressed in CIDR format. Only IPv4 is supported.
-{{% /md %}}</dd>
-    <dt class="property-optional"
+{{% /md %}}</dd><dt class="property-optional"
             title="Optional">
         <span id="direction_nodejs">
 <a href="#direction_nodejs" style="color: inherit; text-decoration: inherit;">direction</a>
@@ -908,8 +856,7 @@ INGRESS. Note: For INGRESS traffic, it is NOT supported to specify
 destinationRanges; For EGRESS traffic, it is NOT supported to specify
 sourceRanges OR sourceTags.
 Possible values are `INGRESS` and `EGRESS`.
-{{% /md %}}</dd>
-    <dt class="property-optional"
+{{% /md %}}</dd><dt class="property-optional"
             title="Optional">
         <span id="disabled_nodejs">
 <a href="#disabled_nodejs" style="color: inherit; text-decoration: inherit;">disabled</a>
@@ -921,8 +868,7 @@ Possible values are `INGRESS` and `EGRESS`.
 network it is associated with. When set to true, the firewall rule is
 not enforced and the network behaves as if it did not exist. If this
 is unspecified, the firewall rule will be enabled.
-{{% /md %}}</dd>
-    <dt class="property-optional property-deprecated"
+{{% /md %}}</dd><dt class="property-optional property-deprecated"
             title="Optional, Deprecated">
         <span id="enablelogging_nodejs">
 <a href="#enablelogging_nodejs" style="color: inherit; text-decoration: inherit;">enable<wbr>Logging</a>
@@ -932,8 +878,7 @@ is unspecified, the firewall rule will be enabled.
     </dt>
     <dd>{{% md %}}This field denotes whether to enable logging for a particular firewall rule.
 If logging is enabled, logs will be exported to Stackdriver. Deprecated in favor of `log_config`
-{{% /md %}}<p class="property-message">Deprecated: {{% md %}}Deprecated in favor of log_config{{% /md %}}</p></dd>
-    <dt class="property-optional"
+{{% /md %}}<p class="property-message">Deprecated: {{% md %}}Deprecated in favor of log_config{{% /md %}}</p></dd><dt class="property-optional"
             title="Optional">
         <span id="logconfig_nodejs">
 <a href="#logconfig_nodejs" style="color: inherit; text-decoration: inherit;">log<wbr>Config</a>
@@ -944,8 +889,7 @@ If logging is enabled, logs will be exported to Stackdriver. Deprecated in favor
     <dd>{{% md %}}This field denotes the logging options for a particular firewall rule.
 If defined, logging is enabled, and logs will be exported to Cloud Logging.
 Structure is documented below.
-{{% /md %}}</dd>
-    <dt class="property-optional"
+{{% /md %}}</dd><dt class="property-optional"
             title="Optional">
         <span id="name_nodejs">
 <a href="#name_nodejs" style="color: inherit; text-decoration: inherit;">name</a>
@@ -960,8 +904,7 @@ the regular expression `a-z?` which means the
 first character must be a lowercase letter, and all following
 characters must be a dash, lowercase letter, or digit, except the last
 character, which cannot be a dash.
-{{% /md %}}</dd>
-    <dt class="property-optional"
+{{% /md %}}</dd><dt class="property-optional"
             title="Optional">
         <span id="priority_nodejs">
 <a href="#priority_nodejs" style="color: inherit; text-decoration: inherit;">priority</a>
@@ -975,8 +918,7 @@ priorities determine precedence of conflicting rules. Lower value of
 priority implies higher precedence (eg, a rule with priority 0 has
 higher precedence than a rule with priority 1). DENY rules take
 precedence over ALLOW rules having equal priority.
-{{% /md %}}</dd>
-    <dt class="property-optional"
+{{% /md %}}</dd><dt class="property-optional"
             title="Optional">
         <span id="project_nodejs">
 <a href="#project_nodejs" style="color: inherit; text-decoration: inherit;">project</a>
@@ -986,8 +928,7 @@ precedence over ALLOW rules having equal priority.
     </dt>
     <dd>{{% md %}}The ID of the project in which the resource belongs.
 If it is not provided, the provider project is used.
-{{% /md %}}</dd>
-    <dt class="property-optional"
+{{% /md %}}</dd><dt class="property-optional"
             title="Optional">
         <span id="sourceranges_nodejs">
 <a href="#sourceranges_nodejs" style="color: inherit; text-decoration: inherit;">source<wbr>Ranges</a>
@@ -1003,8 +944,7 @@ apply to traffic that has source IP address within sourceRanges OR the
 source IP that belongs to a tag listed in the sourceTags property. The
 connection does not need to match both properties for the firewall to
 apply. Only IPv4 is supported.
-{{% /md %}}</dd>
-    <dt class="property-optional"
+{{% /md %}}</dd><dt class="property-optional"
             title="Optional">
         <span id="sourceserviceaccounts_nodejs">
 <a href="#sourceserviceaccounts_nodejs" style="color: inherit; text-decoration: inherit;">source<wbr>Service<wbr>Accounts</a>
@@ -1023,8 +963,7 @@ source IP belongs to an instance with service account listed in
 sourceServiceAccount. The connection does not need to match both
 properties for the firewall to apply. sourceServiceAccounts cannot be
 used at the same time as sourceTags or targetTags.
-{{% /md %}}</dd>
-    <dt class="property-optional"
+{{% /md %}}</dd><dt class="property-optional"
             title="Optional">
         <span id="sourcetags_nodejs">
 <a href="#sourcetags_nodejs" style="color: inherit; text-decoration: inherit;">source<wbr>Tags</a>
@@ -1041,8 +980,7 @@ both properties are set, the firewall will apply to traffic that has
 source IP address within sourceRanges OR the source IP that belongs to
 a tag listed in the sourceTags property. The connection does not need
 to match both properties for the firewall to apply.
-{{% /md %}}</dd>
-    <dt class="property-optional"
+{{% /md %}}</dd><dt class="property-optional"
             title="Optional">
         <span id="targetserviceaccounts_nodejs">
 <a href="#targetserviceaccounts_nodejs" style="color: inherit; text-decoration: inherit;">target<wbr>Service<wbr>Accounts</a>
@@ -1056,8 +994,7 @@ targetServiceAccounts cannot be used at the same time as targetTags or
 sourceTags. If neither targetServiceAccounts nor targetTags are
 specified, the firewall rule applies to all instances on the specified
 network.
-{{% /md %}}</dd>
-    <dt class="property-optional"
+{{% /md %}}</dd><dt class="property-optional"
             title="Optional">
         <span id="targettags_nodejs">
 <a href="#targettags_nodejs" style="color: inherit; text-decoration: inherit;">target<wbr>Tags</a>
@@ -1069,14 +1006,11 @@ network.
 network that may make network connections as specified in allowed[].
 If no targetTags are specified, the firewall rule applies to all
 instances on the specified network.
-{{% /md %}}</dd>
-</dl>
+{{% /md %}}</dd></dl>
 {{% /choosable %}}
 
 {{% choosable language python %}}
-<dl class="resources-properties">
-
-    <dt class="property-required"
+<dl class="resources-properties"><dt class="property-required"
             title="Required">
         <span id="network_python">
 <a href="#network_python" style="color: inherit; text-decoration: inherit;">network</a>
@@ -1085,8 +1019,7 @@ instances on the specified network.
         <span class="property-type">str</span>
     </dt>
     <dd>{{% md %}}The name or self_link of the network to attach this firewall to.
-{{% /md %}}</dd>
-    <dt class="property-optional"
+{{% /md %}}</dd><dt class="property-optional"
             title="Optional">
         <span id="allows_python">
 <a href="#allows_python" style="color: inherit; text-decoration: inherit;">allows</a>
@@ -1098,8 +1031,7 @@ instances on the specified network.
 specifies a protocol and port-range tuple that describes a permitted
 connection.
 Structure is documented below.
-{{% /md %}}</dd>
-    <dt class="property-optional"
+{{% /md %}}</dd><dt class="property-optional"
             title="Optional">
         <span id="denies_python">
 <a href="#denies_python" style="color: inherit; text-decoration: inherit;">denies</a>
@@ -1110,8 +1042,7 @@ Structure is documented below.
     <dd>{{% md %}}The list of DENY rules specified by this firewall. Each rule specifies
 a protocol and port-range tuple that describes a denied connection.
 Structure is documented below.
-{{% /md %}}</dd>
-    <dt class="property-optional"
+{{% /md %}}</dd><dt class="property-optional"
             title="Optional">
         <span id="description_python">
 <a href="#description_python" style="color: inherit; text-decoration: inherit;">description</a>
@@ -1121,8 +1052,7 @@ Structure is documented below.
     </dt>
     <dd>{{% md %}}An optional description of this resource. Provide this property when
 you create the resource.
-{{% /md %}}</dd>
-    <dt class="property-optional"
+{{% /md %}}</dd><dt class="property-optional"
             title="Optional">
         <span id="destination_ranges_python">
 <a href="#destination_ranges_python" style="color: inherit; text-decoration: inherit;">destination_<wbr>ranges</a>
@@ -1133,8 +1063,7 @@ you create the resource.
     <dd>{{% md %}}If destination ranges are specified, the firewall will apply only to
 traffic that has destination IP address in these ranges. These ranges
 must be expressed in CIDR format. Only IPv4 is supported.
-{{% /md %}}</dd>
-    <dt class="property-optional"
+{{% /md %}}</dd><dt class="property-optional"
             title="Optional">
         <span id="direction_python">
 <a href="#direction_python" style="color: inherit; text-decoration: inherit;">direction</a>
@@ -1147,8 +1076,7 @@ INGRESS. Note: For INGRESS traffic, it is NOT supported to specify
 destinationRanges; For EGRESS traffic, it is NOT supported to specify
 sourceRanges OR sourceTags.
 Possible values are `INGRESS` and `EGRESS`.
-{{% /md %}}</dd>
-    <dt class="property-optional"
+{{% /md %}}</dd><dt class="property-optional"
             title="Optional">
         <span id="disabled_python">
 <a href="#disabled_python" style="color: inherit; text-decoration: inherit;">disabled</a>
@@ -1160,8 +1088,7 @@ Possible values are `INGRESS` and `EGRESS`.
 network it is associated with. When set to true, the firewall rule is
 not enforced and the network behaves as if it did not exist. If this
 is unspecified, the firewall rule will be enabled.
-{{% /md %}}</dd>
-    <dt class="property-optional property-deprecated"
+{{% /md %}}</dd><dt class="property-optional property-deprecated"
             title="Optional, Deprecated">
         <span id="enable_logging_python">
 <a href="#enable_logging_python" style="color: inherit; text-decoration: inherit;">enable_<wbr>logging</a>
@@ -1171,8 +1098,7 @@ is unspecified, the firewall rule will be enabled.
     </dt>
     <dd>{{% md %}}This field denotes whether to enable logging for a particular firewall rule.
 If logging is enabled, logs will be exported to Stackdriver. Deprecated in favor of `log_config`
-{{% /md %}}<p class="property-message">Deprecated: {{% md %}}Deprecated in favor of log_config{{% /md %}}</p></dd>
-    <dt class="property-optional"
+{{% /md %}}<p class="property-message">Deprecated: {{% md %}}Deprecated in favor of log_config{{% /md %}}</p></dd><dt class="property-optional"
             title="Optional">
         <span id="log_config_python">
 <a href="#log_config_python" style="color: inherit; text-decoration: inherit;">log_<wbr>config</a>
@@ -1183,8 +1109,7 @@ If logging is enabled, logs will be exported to Stackdriver. Deprecated in favor
     <dd>{{% md %}}This field denotes the logging options for a particular firewall rule.
 If defined, logging is enabled, and logs will be exported to Cloud Logging.
 Structure is documented below.
-{{% /md %}}</dd>
-    <dt class="property-optional"
+{{% /md %}}</dd><dt class="property-optional"
             title="Optional">
         <span id="name_python">
 <a href="#name_python" style="color: inherit; text-decoration: inherit;">name</a>
@@ -1199,8 +1124,7 @@ the regular expression `a-z?` which means the
 first character must be a lowercase letter, and all following
 characters must be a dash, lowercase letter, or digit, except the last
 character, which cannot be a dash.
-{{% /md %}}</dd>
-    <dt class="property-optional"
+{{% /md %}}</dd><dt class="property-optional"
             title="Optional">
         <span id="priority_python">
 <a href="#priority_python" style="color: inherit; text-decoration: inherit;">priority</a>
@@ -1214,8 +1138,7 @@ priorities determine precedence of conflicting rules. Lower value of
 priority implies higher precedence (eg, a rule with priority 0 has
 higher precedence than a rule with priority 1). DENY rules take
 precedence over ALLOW rules having equal priority.
-{{% /md %}}</dd>
-    <dt class="property-optional"
+{{% /md %}}</dd><dt class="property-optional"
             title="Optional">
         <span id="project_python">
 <a href="#project_python" style="color: inherit; text-decoration: inherit;">project</a>
@@ -1225,8 +1148,7 @@ precedence over ALLOW rules having equal priority.
     </dt>
     <dd>{{% md %}}The ID of the project in which the resource belongs.
 If it is not provided, the provider project is used.
-{{% /md %}}</dd>
-    <dt class="property-optional"
+{{% /md %}}</dd><dt class="property-optional"
             title="Optional">
         <span id="source_ranges_python">
 <a href="#source_ranges_python" style="color: inherit; text-decoration: inherit;">source_<wbr>ranges</a>
@@ -1242,8 +1164,7 @@ apply to traffic that has source IP address within sourceRanges OR the
 source IP that belongs to a tag listed in the sourceTags property. The
 connection does not need to match both properties for the firewall to
 apply. Only IPv4 is supported.
-{{% /md %}}</dd>
-    <dt class="property-optional"
+{{% /md %}}</dd><dt class="property-optional"
             title="Optional">
         <span id="source_service_accounts_python">
 <a href="#source_service_accounts_python" style="color: inherit; text-decoration: inherit;">source_<wbr>service_<wbr>accounts</a>
@@ -1262,8 +1183,7 @@ source IP belongs to an instance with service account listed in
 sourceServiceAccount. The connection does not need to match both
 properties for the firewall to apply. sourceServiceAccounts cannot be
 used at the same time as sourceTags or targetTags.
-{{% /md %}}</dd>
-    <dt class="property-optional"
+{{% /md %}}</dd><dt class="property-optional"
             title="Optional">
         <span id="source_tags_python">
 <a href="#source_tags_python" style="color: inherit; text-decoration: inherit;">source_<wbr>tags</a>
@@ -1280,8 +1200,7 @@ both properties are set, the firewall will apply to traffic that has
 source IP address within sourceRanges OR the source IP that belongs to
 a tag listed in the sourceTags property. The connection does not need
 to match both properties for the firewall to apply.
-{{% /md %}}</dd>
-    <dt class="property-optional"
+{{% /md %}}</dd><dt class="property-optional"
             title="Optional">
         <span id="target_service_accounts_python">
 <a href="#target_service_accounts_python" style="color: inherit; text-decoration: inherit;">target_<wbr>service_<wbr>accounts</a>
@@ -1295,8 +1214,7 @@ targetServiceAccounts cannot be used at the same time as targetTags or
 sourceTags. If neither targetServiceAccounts nor targetTags are
 specified, the firewall rule applies to all instances on the specified
 network.
-{{% /md %}}</dd>
-    <dt class="property-optional"
+{{% /md %}}</dd><dt class="property-optional"
             title="Optional">
         <span id="target_tags_python">
 <a href="#target_tags_python" style="color: inherit; text-decoration: inherit;">target_<wbr>tags</a>
@@ -1308,8 +1226,7 @@ network.
 network that may make network connections as specified in allowed[].
 If no targetTags are specified, the firewall rule applies to all
 instances on the specified network.
-{{% /md %}}</dd>
-</dl>
+{{% /md %}}</dd></dl>
 {{% /choosable %}}
 
 
@@ -1320,9 +1237,7 @@ All [input](#inputs) properties are implicitly available as output properties. A
 
 
 {{% choosable language csharp %}}
-<dl class="resources-properties">
-
-    <dt class="property-"
+<dl class="resources-properties"><dt class="property-"
             title="">
         <span id="creationtimestamp_csharp">
 <a href="#creationtimestamp_csharp" style="color: inherit; text-decoration: inherit;">Creation<wbr>Timestamp</a>
@@ -1331,8 +1246,7 @@ All [input](#inputs) properties are implicitly available as output properties. A
         <span class="property-type">string</span>
     </dt>
     <dd>{{% md %}}Creation timestamp in RFC3339 text format.
-{{% /md %}}</dd>
-    <dt class="property-"
+{{% /md %}}</dd><dt class="property-"
             title="">
         <span id="id_csharp">
 <a href="#id_csharp" style="color: inherit; text-decoration: inherit;">Id</a>
@@ -1340,8 +1254,7 @@ All [input](#inputs) properties are implicitly available as output properties. A
         <span class="property-indicator"></span>
         <span class="property-type">string</span>
     </dt>
-    <dd>{{% md %}}The provider-assigned unique ID for this managed resource.{{% /md %}}</dd>
-    <dt class="property-"
+    <dd>{{% md %}}The provider-assigned unique ID for this managed resource.{{% /md %}}</dd><dt class="property-"
             title="">
         <span id="selflink_csharp">
 <a href="#selflink_csharp" style="color: inherit; text-decoration: inherit;">Self<wbr>Link</a>
@@ -1350,14 +1263,11 @@ All [input](#inputs) properties are implicitly available as output properties. A
         <span class="property-type">string</span>
     </dt>
     <dd>{{% md %}}The URI of the created resource.
-{{% /md %}}</dd>
-</dl>
+{{% /md %}}</dd></dl>
 {{% /choosable %}}
 
 {{% choosable language go %}}
-<dl class="resources-properties">
-
-    <dt class="property-"
+<dl class="resources-properties"><dt class="property-"
             title="">
         <span id="creationtimestamp_go">
 <a href="#creationtimestamp_go" style="color: inherit; text-decoration: inherit;">Creation<wbr>Timestamp</a>
@@ -1366,8 +1276,7 @@ All [input](#inputs) properties are implicitly available as output properties. A
         <span class="property-type">string</span>
     </dt>
     <dd>{{% md %}}Creation timestamp in RFC3339 text format.
-{{% /md %}}</dd>
-    <dt class="property-"
+{{% /md %}}</dd><dt class="property-"
             title="">
         <span id="id_go">
 <a href="#id_go" style="color: inherit; text-decoration: inherit;">Id</a>
@@ -1375,8 +1284,7 @@ All [input](#inputs) properties are implicitly available as output properties. A
         <span class="property-indicator"></span>
         <span class="property-type">string</span>
     </dt>
-    <dd>{{% md %}}The provider-assigned unique ID for this managed resource.{{% /md %}}</dd>
-    <dt class="property-"
+    <dd>{{% md %}}The provider-assigned unique ID for this managed resource.{{% /md %}}</dd><dt class="property-"
             title="">
         <span id="selflink_go">
 <a href="#selflink_go" style="color: inherit; text-decoration: inherit;">Self<wbr>Link</a>
@@ -1385,14 +1293,11 @@ All [input](#inputs) properties are implicitly available as output properties. A
         <span class="property-type">string</span>
     </dt>
     <dd>{{% md %}}The URI of the created resource.
-{{% /md %}}</dd>
-</dl>
+{{% /md %}}</dd></dl>
 {{% /choosable %}}
 
 {{% choosable language nodejs %}}
-<dl class="resources-properties">
-
-    <dt class="property-"
+<dl class="resources-properties"><dt class="property-"
             title="">
         <span id="creationtimestamp_nodejs">
 <a href="#creationtimestamp_nodejs" style="color: inherit; text-decoration: inherit;">creation<wbr>Timestamp</a>
@@ -1401,8 +1306,7 @@ All [input](#inputs) properties are implicitly available as output properties. A
         <span class="property-type">string</span>
     </dt>
     <dd>{{% md %}}Creation timestamp in RFC3339 text format.
-{{% /md %}}</dd>
-    <dt class="property-"
+{{% /md %}}</dd><dt class="property-"
             title="">
         <span id="id_nodejs">
 <a href="#id_nodejs" style="color: inherit; text-decoration: inherit;">id</a>
@@ -1410,8 +1314,7 @@ All [input](#inputs) properties are implicitly available as output properties. A
         <span class="property-indicator"></span>
         <span class="property-type">string</span>
     </dt>
-    <dd>{{% md %}}The provider-assigned unique ID for this managed resource.{{% /md %}}</dd>
-    <dt class="property-"
+    <dd>{{% md %}}The provider-assigned unique ID for this managed resource.{{% /md %}}</dd><dt class="property-"
             title="">
         <span id="selflink_nodejs">
 <a href="#selflink_nodejs" style="color: inherit; text-decoration: inherit;">self<wbr>Link</a>
@@ -1420,14 +1323,11 @@ All [input](#inputs) properties are implicitly available as output properties. A
         <span class="property-type">string</span>
     </dt>
     <dd>{{% md %}}The URI of the created resource.
-{{% /md %}}</dd>
-</dl>
+{{% /md %}}</dd></dl>
 {{% /choosable %}}
 
 {{% choosable language python %}}
-<dl class="resources-properties">
-
-    <dt class="property-"
+<dl class="resources-properties"><dt class="property-"
             title="">
         <span id="creation_timestamp_python">
 <a href="#creation_timestamp_python" style="color: inherit; text-decoration: inherit;">creation_<wbr>timestamp</a>
@@ -1436,8 +1336,7 @@ All [input](#inputs) properties are implicitly available as output properties. A
         <span class="property-type">str</span>
     </dt>
     <dd>{{% md %}}Creation timestamp in RFC3339 text format.
-{{% /md %}}</dd>
-    <dt class="property-"
+{{% /md %}}</dd><dt class="property-"
             title="">
         <span id="id_python">
 <a href="#id_python" style="color: inherit; text-decoration: inherit;">id</a>
@@ -1445,8 +1344,7 @@ All [input](#inputs) properties are implicitly available as output properties. A
         <span class="property-indicator"></span>
         <span class="property-type">str</span>
     </dt>
-    <dd>{{% md %}}The provider-assigned unique ID for this managed resource.{{% /md %}}</dd>
-    <dt class="property-"
+    <dd>{{% md %}}The provider-assigned unique ID for this managed resource.{{% /md %}}</dd><dt class="property-"
             title="">
         <span id="self_link_python">
 <a href="#self_link_python" style="color: inherit; text-decoration: inherit;">self_<wbr>link</a>
@@ -1455,8 +1353,7 @@ All [input](#inputs) properties are implicitly available as output properties. A
         <span class="property-type">str</span>
     </dt>
     <dd>{{% md %}}The URI of the created resource.
-{{% /md %}}</dd>
-</dl>
+{{% /md %}}</dd></dl>
 {{% /choosable %}}
 
 
@@ -1583,9 +1480,7 @@ The following state arguments are supported:
 
 
 {{% choosable language csharp %}}
-<dl class="resources-properties">
-
-    <dt class="property-optional"
+<dl class="resources-properties"><dt class="property-optional"
             title="Optional">
         <span id="state_allows_csharp">
 <a href="#state_allows_csharp" style="color: inherit; text-decoration: inherit;">Allows</a>
@@ -1597,8 +1492,7 @@ The following state arguments are supported:
 specifies a protocol and port-range tuple that describes a permitted
 connection.
 Structure is documented below.
-{{% /md %}}</dd>
-    <dt class="property-optional"
+{{% /md %}}</dd><dt class="property-optional"
             title="Optional">
         <span id="state_creationtimestamp_csharp">
 <a href="#state_creationtimestamp_csharp" style="color: inherit; text-decoration: inherit;">Creation<wbr>Timestamp</a>
@@ -1607,8 +1501,7 @@ Structure is documented below.
         <span class="property-type">string</span>
     </dt>
     <dd>{{% md %}}Creation timestamp in RFC3339 text format.
-{{% /md %}}</dd>
-    <dt class="property-optional"
+{{% /md %}}</dd><dt class="property-optional"
             title="Optional">
         <span id="state_denies_csharp">
 <a href="#state_denies_csharp" style="color: inherit; text-decoration: inherit;">Denies</a>
@@ -1619,8 +1512,7 @@ Structure is documented below.
     <dd>{{% md %}}The list of DENY rules specified by this firewall. Each rule specifies
 a protocol and port-range tuple that describes a denied connection.
 Structure is documented below.
-{{% /md %}}</dd>
-    <dt class="property-optional"
+{{% /md %}}</dd><dt class="property-optional"
             title="Optional">
         <span id="state_description_csharp">
 <a href="#state_description_csharp" style="color: inherit; text-decoration: inherit;">Description</a>
@@ -1630,8 +1522,7 @@ Structure is documented below.
     </dt>
     <dd>{{% md %}}An optional description of this resource. Provide this property when
 you create the resource.
-{{% /md %}}</dd>
-    <dt class="property-optional"
+{{% /md %}}</dd><dt class="property-optional"
             title="Optional">
         <span id="state_destinationranges_csharp">
 <a href="#state_destinationranges_csharp" style="color: inherit; text-decoration: inherit;">Destination<wbr>Ranges</a>
@@ -1642,8 +1533,7 @@ you create the resource.
     <dd>{{% md %}}If destination ranges are specified, the firewall will apply only to
 traffic that has destination IP address in these ranges. These ranges
 must be expressed in CIDR format. Only IPv4 is supported.
-{{% /md %}}</dd>
-    <dt class="property-optional"
+{{% /md %}}</dd><dt class="property-optional"
             title="Optional">
         <span id="state_direction_csharp">
 <a href="#state_direction_csharp" style="color: inherit; text-decoration: inherit;">Direction</a>
@@ -1656,8 +1546,7 @@ INGRESS. Note: For INGRESS traffic, it is NOT supported to specify
 destinationRanges; For EGRESS traffic, it is NOT supported to specify
 sourceRanges OR sourceTags.
 Possible values are `INGRESS` and `EGRESS`.
-{{% /md %}}</dd>
-    <dt class="property-optional"
+{{% /md %}}</dd><dt class="property-optional"
             title="Optional">
         <span id="state_disabled_csharp">
 <a href="#state_disabled_csharp" style="color: inherit; text-decoration: inherit;">Disabled</a>
@@ -1669,8 +1558,7 @@ Possible values are `INGRESS` and `EGRESS`.
 network it is associated with. When set to true, the firewall rule is
 not enforced and the network behaves as if it did not exist. If this
 is unspecified, the firewall rule will be enabled.
-{{% /md %}}</dd>
-    <dt class="property-optional property-deprecated"
+{{% /md %}}</dd><dt class="property-optional property-deprecated"
             title="Optional, Deprecated">
         <span id="state_enablelogging_csharp">
 <a href="#state_enablelogging_csharp" style="color: inherit; text-decoration: inherit;">Enable<wbr>Logging</a>
@@ -1680,8 +1568,7 @@ is unspecified, the firewall rule will be enabled.
     </dt>
     <dd>{{% md %}}This field denotes whether to enable logging for a particular firewall rule.
 If logging is enabled, logs will be exported to Stackdriver. Deprecated in favor of `log_config`
-{{% /md %}}<p class="property-message">Deprecated: {{% md %}}Deprecated in favor of log_config{{% /md %}}</p></dd>
-    <dt class="property-optional"
+{{% /md %}}<p class="property-message">Deprecated: {{% md %}}Deprecated in favor of log_config{{% /md %}}</p></dd><dt class="property-optional"
             title="Optional">
         <span id="state_logconfig_csharp">
 <a href="#state_logconfig_csharp" style="color: inherit; text-decoration: inherit;">Log<wbr>Config</a>
@@ -1692,8 +1579,7 @@ If logging is enabled, logs will be exported to Stackdriver. Deprecated in favor
     <dd>{{% md %}}This field denotes the logging options for a particular firewall rule.
 If defined, logging is enabled, and logs will be exported to Cloud Logging.
 Structure is documented below.
-{{% /md %}}</dd>
-    <dt class="property-optional"
+{{% /md %}}</dd><dt class="property-optional"
             title="Optional">
         <span id="state_name_csharp">
 <a href="#state_name_csharp" style="color: inherit; text-decoration: inherit;">Name</a>
@@ -1708,8 +1594,7 @@ the regular expression `a-z?` which means the
 first character must be a lowercase letter, and all following
 characters must be a dash, lowercase letter, or digit, except the last
 character, which cannot be a dash.
-{{% /md %}}</dd>
-    <dt class="property-optional"
+{{% /md %}}</dd><dt class="property-optional"
             title="Optional">
         <span id="state_network_csharp">
 <a href="#state_network_csharp" style="color: inherit; text-decoration: inherit;">Network</a>
@@ -1718,8 +1603,7 @@ character, which cannot be a dash.
         <span class="property-type">string</span>
     </dt>
     <dd>{{% md %}}The name or self_link of the network to attach this firewall to.
-{{% /md %}}</dd>
-    <dt class="property-optional"
+{{% /md %}}</dd><dt class="property-optional"
             title="Optional">
         <span id="state_priority_csharp">
 <a href="#state_priority_csharp" style="color: inherit; text-decoration: inherit;">Priority</a>
@@ -1733,8 +1617,7 @@ priorities determine precedence of conflicting rules. Lower value of
 priority implies higher precedence (eg, a rule with priority 0 has
 higher precedence than a rule with priority 1). DENY rules take
 precedence over ALLOW rules having equal priority.
-{{% /md %}}</dd>
-    <dt class="property-optional"
+{{% /md %}}</dd><dt class="property-optional"
             title="Optional">
         <span id="state_project_csharp">
 <a href="#state_project_csharp" style="color: inherit; text-decoration: inherit;">Project</a>
@@ -1744,8 +1627,7 @@ precedence over ALLOW rules having equal priority.
     </dt>
     <dd>{{% md %}}The ID of the project in which the resource belongs.
 If it is not provided, the provider project is used.
-{{% /md %}}</dd>
-    <dt class="property-optional"
+{{% /md %}}</dd><dt class="property-optional"
             title="Optional">
         <span id="state_selflink_csharp">
 <a href="#state_selflink_csharp" style="color: inherit; text-decoration: inherit;">Self<wbr>Link</a>
@@ -1754,8 +1636,7 @@ If it is not provided, the provider project is used.
         <span class="property-type">string</span>
     </dt>
     <dd>{{% md %}}The URI of the created resource.
-{{% /md %}}</dd>
-    <dt class="property-optional"
+{{% /md %}}</dd><dt class="property-optional"
             title="Optional">
         <span id="state_sourceranges_csharp">
 <a href="#state_sourceranges_csharp" style="color: inherit; text-decoration: inherit;">Source<wbr>Ranges</a>
@@ -1771,8 +1652,7 @@ apply to traffic that has source IP address within sourceRanges OR the
 source IP that belongs to a tag listed in the sourceTags property. The
 connection does not need to match both properties for the firewall to
 apply. Only IPv4 is supported.
-{{% /md %}}</dd>
-    <dt class="property-optional"
+{{% /md %}}</dd><dt class="property-optional"
             title="Optional">
         <span id="state_sourceserviceaccounts_csharp">
 <a href="#state_sourceserviceaccounts_csharp" style="color: inherit; text-decoration: inherit;">Source<wbr>Service<wbr>Accounts</a>
@@ -1791,8 +1671,7 @@ source IP belongs to an instance with service account listed in
 sourceServiceAccount. The connection does not need to match both
 properties for the firewall to apply. sourceServiceAccounts cannot be
 used at the same time as sourceTags or targetTags.
-{{% /md %}}</dd>
-    <dt class="property-optional"
+{{% /md %}}</dd><dt class="property-optional"
             title="Optional">
         <span id="state_sourcetags_csharp">
 <a href="#state_sourcetags_csharp" style="color: inherit; text-decoration: inherit;">Source<wbr>Tags</a>
@@ -1809,8 +1688,7 @@ both properties are set, the firewall will apply to traffic that has
 source IP address within sourceRanges OR the source IP that belongs to
 a tag listed in the sourceTags property. The connection does not need
 to match both properties for the firewall to apply.
-{{% /md %}}</dd>
-    <dt class="property-optional"
+{{% /md %}}</dd><dt class="property-optional"
             title="Optional">
         <span id="state_targetserviceaccounts_csharp">
 <a href="#state_targetserviceaccounts_csharp" style="color: inherit; text-decoration: inherit;">Target<wbr>Service<wbr>Accounts</a>
@@ -1824,8 +1702,7 @@ targetServiceAccounts cannot be used at the same time as targetTags or
 sourceTags. If neither targetServiceAccounts nor targetTags are
 specified, the firewall rule applies to all instances on the specified
 network.
-{{% /md %}}</dd>
-    <dt class="property-optional"
+{{% /md %}}</dd><dt class="property-optional"
             title="Optional">
         <span id="state_targettags_csharp">
 <a href="#state_targettags_csharp" style="color: inherit; text-decoration: inherit;">Target<wbr>Tags</a>
@@ -1837,14 +1714,11 @@ network.
 network that may make network connections as specified in allowed[].
 If no targetTags are specified, the firewall rule applies to all
 instances on the specified network.
-{{% /md %}}</dd>
-</dl>
+{{% /md %}}</dd></dl>
 {{% /choosable %}}
 
 {{% choosable language go %}}
-<dl class="resources-properties">
-
-    <dt class="property-optional"
+<dl class="resources-properties"><dt class="property-optional"
             title="Optional">
         <span id="state_allows_go">
 <a href="#state_allows_go" style="color: inherit; text-decoration: inherit;">Allows</a>
@@ -1856,8 +1730,7 @@ instances on the specified network.
 specifies a protocol and port-range tuple that describes a permitted
 connection.
 Structure is documented below.
-{{% /md %}}</dd>
-    <dt class="property-optional"
+{{% /md %}}</dd><dt class="property-optional"
             title="Optional">
         <span id="state_creationtimestamp_go">
 <a href="#state_creationtimestamp_go" style="color: inherit; text-decoration: inherit;">Creation<wbr>Timestamp</a>
@@ -1866,8 +1739,7 @@ Structure is documented below.
         <span class="property-type">string</span>
     </dt>
     <dd>{{% md %}}Creation timestamp in RFC3339 text format.
-{{% /md %}}</dd>
-    <dt class="property-optional"
+{{% /md %}}</dd><dt class="property-optional"
             title="Optional">
         <span id="state_denies_go">
 <a href="#state_denies_go" style="color: inherit; text-decoration: inherit;">Denies</a>
@@ -1878,8 +1750,7 @@ Structure is documented below.
     <dd>{{% md %}}The list of DENY rules specified by this firewall. Each rule specifies
 a protocol and port-range tuple that describes a denied connection.
 Structure is documented below.
-{{% /md %}}</dd>
-    <dt class="property-optional"
+{{% /md %}}</dd><dt class="property-optional"
             title="Optional">
         <span id="state_description_go">
 <a href="#state_description_go" style="color: inherit; text-decoration: inherit;">Description</a>
@@ -1889,8 +1760,7 @@ Structure is documented below.
     </dt>
     <dd>{{% md %}}An optional description of this resource. Provide this property when
 you create the resource.
-{{% /md %}}</dd>
-    <dt class="property-optional"
+{{% /md %}}</dd><dt class="property-optional"
             title="Optional">
         <span id="state_destinationranges_go">
 <a href="#state_destinationranges_go" style="color: inherit; text-decoration: inherit;">Destination<wbr>Ranges</a>
@@ -1901,8 +1771,7 @@ you create the resource.
     <dd>{{% md %}}If destination ranges are specified, the firewall will apply only to
 traffic that has destination IP address in these ranges. These ranges
 must be expressed in CIDR format. Only IPv4 is supported.
-{{% /md %}}</dd>
-    <dt class="property-optional"
+{{% /md %}}</dd><dt class="property-optional"
             title="Optional">
         <span id="state_direction_go">
 <a href="#state_direction_go" style="color: inherit; text-decoration: inherit;">Direction</a>
@@ -1915,8 +1784,7 @@ INGRESS. Note: For INGRESS traffic, it is NOT supported to specify
 destinationRanges; For EGRESS traffic, it is NOT supported to specify
 sourceRanges OR sourceTags.
 Possible values are `INGRESS` and `EGRESS`.
-{{% /md %}}</dd>
-    <dt class="property-optional"
+{{% /md %}}</dd><dt class="property-optional"
             title="Optional">
         <span id="state_disabled_go">
 <a href="#state_disabled_go" style="color: inherit; text-decoration: inherit;">Disabled</a>
@@ -1928,8 +1796,7 @@ Possible values are `INGRESS` and `EGRESS`.
 network it is associated with. When set to true, the firewall rule is
 not enforced and the network behaves as if it did not exist. If this
 is unspecified, the firewall rule will be enabled.
-{{% /md %}}</dd>
-    <dt class="property-optional property-deprecated"
+{{% /md %}}</dd><dt class="property-optional property-deprecated"
             title="Optional, Deprecated">
         <span id="state_enablelogging_go">
 <a href="#state_enablelogging_go" style="color: inherit; text-decoration: inherit;">Enable<wbr>Logging</a>
@@ -1939,8 +1806,7 @@ is unspecified, the firewall rule will be enabled.
     </dt>
     <dd>{{% md %}}This field denotes whether to enable logging for a particular firewall rule.
 If logging is enabled, logs will be exported to Stackdriver. Deprecated in favor of `log_config`
-{{% /md %}}<p class="property-message">Deprecated: {{% md %}}Deprecated in favor of log_config{{% /md %}}</p></dd>
-    <dt class="property-optional"
+{{% /md %}}<p class="property-message">Deprecated: {{% md %}}Deprecated in favor of log_config{{% /md %}}</p></dd><dt class="property-optional"
             title="Optional">
         <span id="state_logconfig_go">
 <a href="#state_logconfig_go" style="color: inherit; text-decoration: inherit;">Log<wbr>Config</a>
@@ -1951,8 +1817,7 @@ If logging is enabled, logs will be exported to Stackdriver. Deprecated in favor
     <dd>{{% md %}}This field denotes the logging options for a particular firewall rule.
 If defined, logging is enabled, and logs will be exported to Cloud Logging.
 Structure is documented below.
-{{% /md %}}</dd>
-    <dt class="property-optional"
+{{% /md %}}</dd><dt class="property-optional"
             title="Optional">
         <span id="state_name_go">
 <a href="#state_name_go" style="color: inherit; text-decoration: inherit;">Name</a>
@@ -1967,8 +1832,7 @@ the regular expression `a-z?` which means the
 first character must be a lowercase letter, and all following
 characters must be a dash, lowercase letter, or digit, except the last
 character, which cannot be a dash.
-{{% /md %}}</dd>
-    <dt class="property-optional"
+{{% /md %}}</dd><dt class="property-optional"
             title="Optional">
         <span id="state_network_go">
 <a href="#state_network_go" style="color: inherit; text-decoration: inherit;">Network</a>
@@ -1977,8 +1841,7 @@ character, which cannot be a dash.
         <span class="property-type">string</span>
     </dt>
     <dd>{{% md %}}The name or self_link of the network to attach this firewall to.
-{{% /md %}}</dd>
-    <dt class="property-optional"
+{{% /md %}}</dd><dt class="property-optional"
             title="Optional">
         <span id="state_priority_go">
 <a href="#state_priority_go" style="color: inherit; text-decoration: inherit;">Priority</a>
@@ -1992,8 +1855,7 @@ priorities determine precedence of conflicting rules. Lower value of
 priority implies higher precedence (eg, a rule with priority 0 has
 higher precedence than a rule with priority 1). DENY rules take
 precedence over ALLOW rules having equal priority.
-{{% /md %}}</dd>
-    <dt class="property-optional"
+{{% /md %}}</dd><dt class="property-optional"
             title="Optional">
         <span id="state_project_go">
 <a href="#state_project_go" style="color: inherit; text-decoration: inherit;">Project</a>
@@ -2003,8 +1865,7 @@ precedence over ALLOW rules having equal priority.
     </dt>
     <dd>{{% md %}}The ID of the project in which the resource belongs.
 If it is not provided, the provider project is used.
-{{% /md %}}</dd>
-    <dt class="property-optional"
+{{% /md %}}</dd><dt class="property-optional"
             title="Optional">
         <span id="state_selflink_go">
 <a href="#state_selflink_go" style="color: inherit; text-decoration: inherit;">Self<wbr>Link</a>
@@ -2013,8 +1874,7 @@ If it is not provided, the provider project is used.
         <span class="property-type">string</span>
     </dt>
     <dd>{{% md %}}The URI of the created resource.
-{{% /md %}}</dd>
-    <dt class="property-optional"
+{{% /md %}}</dd><dt class="property-optional"
             title="Optional">
         <span id="state_sourceranges_go">
 <a href="#state_sourceranges_go" style="color: inherit; text-decoration: inherit;">Source<wbr>Ranges</a>
@@ -2030,8 +1890,7 @@ apply to traffic that has source IP address within sourceRanges OR the
 source IP that belongs to a tag listed in the sourceTags property. The
 connection does not need to match both properties for the firewall to
 apply. Only IPv4 is supported.
-{{% /md %}}</dd>
-    <dt class="property-optional"
+{{% /md %}}</dd><dt class="property-optional"
             title="Optional">
         <span id="state_sourceserviceaccounts_go">
 <a href="#state_sourceserviceaccounts_go" style="color: inherit; text-decoration: inherit;">Source<wbr>Service<wbr>Accounts</a>
@@ -2050,8 +1909,7 @@ source IP belongs to an instance with service account listed in
 sourceServiceAccount. The connection does not need to match both
 properties for the firewall to apply. sourceServiceAccounts cannot be
 used at the same time as sourceTags or targetTags.
-{{% /md %}}</dd>
-    <dt class="property-optional"
+{{% /md %}}</dd><dt class="property-optional"
             title="Optional">
         <span id="state_sourcetags_go">
 <a href="#state_sourcetags_go" style="color: inherit; text-decoration: inherit;">Source<wbr>Tags</a>
@@ -2068,8 +1926,7 @@ both properties are set, the firewall will apply to traffic that has
 source IP address within sourceRanges OR the source IP that belongs to
 a tag listed in the sourceTags property. The connection does not need
 to match both properties for the firewall to apply.
-{{% /md %}}</dd>
-    <dt class="property-optional"
+{{% /md %}}</dd><dt class="property-optional"
             title="Optional">
         <span id="state_targetserviceaccounts_go">
 <a href="#state_targetserviceaccounts_go" style="color: inherit; text-decoration: inherit;">Target<wbr>Service<wbr>Accounts</a>
@@ -2083,8 +1940,7 @@ targetServiceAccounts cannot be used at the same time as targetTags or
 sourceTags. If neither targetServiceAccounts nor targetTags are
 specified, the firewall rule applies to all instances on the specified
 network.
-{{% /md %}}</dd>
-    <dt class="property-optional"
+{{% /md %}}</dd><dt class="property-optional"
             title="Optional">
         <span id="state_targettags_go">
 <a href="#state_targettags_go" style="color: inherit; text-decoration: inherit;">Target<wbr>Tags</a>
@@ -2096,14 +1952,11 @@ network.
 network that may make network connections as specified in allowed[].
 If no targetTags are specified, the firewall rule applies to all
 instances on the specified network.
-{{% /md %}}</dd>
-</dl>
+{{% /md %}}</dd></dl>
 {{% /choosable %}}
 
 {{% choosable language nodejs %}}
-<dl class="resources-properties">
-
-    <dt class="property-optional"
+<dl class="resources-properties"><dt class="property-optional"
             title="Optional">
         <span id="state_allows_nodejs">
 <a href="#state_allows_nodejs" style="color: inherit; text-decoration: inherit;">allows</a>
@@ -2115,8 +1968,7 @@ instances on the specified network.
 specifies a protocol and port-range tuple that describes a permitted
 connection.
 Structure is documented below.
-{{% /md %}}</dd>
-    <dt class="property-optional"
+{{% /md %}}</dd><dt class="property-optional"
             title="Optional">
         <span id="state_creationtimestamp_nodejs">
 <a href="#state_creationtimestamp_nodejs" style="color: inherit; text-decoration: inherit;">creation<wbr>Timestamp</a>
@@ -2125,8 +1977,7 @@ Structure is documented below.
         <span class="property-type">string</span>
     </dt>
     <dd>{{% md %}}Creation timestamp in RFC3339 text format.
-{{% /md %}}</dd>
-    <dt class="property-optional"
+{{% /md %}}</dd><dt class="property-optional"
             title="Optional">
         <span id="state_denies_nodejs">
 <a href="#state_denies_nodejs" style="color: inherit; text-decoration: inherit;">denies</a>
@@ -2137,8 +1988,7 @@ Structure is documented below.
     <dd>{{% md %}}The list of DENY rules specified by this firewall. Each rule specifies
 a protocol and port-range tuple that describes a denied connection.
 Structure is documented below.
-{{% /md %}}</dd>
-    <dt class="property-optional"
+{{% /md %}}</dd><dt class="property-optional"
             title="Optional">
         <span id="state_description_nodejs">
 <a href="#state_description_nodejs" style="color: inherit; text-decoration: inherit;">description</a>
@@ -2148,8 +1998,7 @@ Structure is documented below.
     </dt>
     <dd>{{% md %}}An optional description of this resource. Provide this property when
 you create the resource.
-{{% /md %}}</dd>
-    <dt class="property-optional"
+{{% /md %}}</dd><dt class="property-optional"
             title="Optional">
         <span id="state_destinationranges_nodejs">
 <a href="#state_destinationranges_nodejs" style="color: inherit; text-decoration: inherit;">destination<wbr>Ranges</a>
@@ -2160,8 +2009,7 @@ you create the resource.
     <dd>{{% md %}}If destination ranges are specified, the firewall will apply only to
 traffic that has destination IP address in these ranges. These ranges
 must be expressed in CIDR format. Only IPv4 is supported.
-{{% /md %}}</dd>
-    <dt class="property-optional"
+{{% /md %}}</dd><dt class="property-optional"
             title="Optional">
         <span id="state_direction_nodejs">
 <a href="#state_direction_nodejs" style="color: inherit; text-decoration: inherit;">direction</a>
@@ -2174,8 +2022,7 @@ INGRESS. Note: For INGRESS traffic, it is NOT supported to specify
 destinationRanges; For EGRESS traffic, it is NOT supported to specify
 sourceRanges OR sourceTags.
 Possible values are `INGRESS` and `EGRESS`.
-{{% /md %}}</dd>
-    <dt class="property-optional"
+{{% /md %}}</dd><dt class="property-optional"
             title="Optional">
         <span id="state_disabled_nodejs">
 <a href="#state_disabled_nodejs" style="color: inherit; text-decoration: inherit;">disabled</a>
@@ -2187,8 +2034,7 @@ Possible values are `INGRESS` and `EGRESS`.
 network it is associated with. When set to true, the firewall rule is
 not enforced and the network behaves as if it did not exist. If this
 is unspecified, the firewall rule will be enabled.
-{{% /md %}}</dd>
-    <dt class="property-optional property-deprecated"
+{{% /md %}}</dd><dt class="property-optional property-deprecated"
             title="Optional, Deprecated">
         <span id="state_enablelogging_nodejs">
 <a href="#state_enablelogging_nodejs" style="color: inherit; text-decoration: inherit;">enable<wbr>Logging</a>
@@ -2198,8 +2044,7 @@ is unspecified, the firewall rule will be enabled.
     </dt>
     <dd>{{% md %}}This field denotes whether to enable logging for a particular firewall rule.
 If logging is enabled, logs will be exported to Stackdriver. Deprecated in favor of `log_config`
-{{% /md %}}<p class="property-message">Deprecated: {{% md %}}Deprecated in favor of log_config{{% /md %}}</p></dd>
-    <dt class="property-optional"
+{{% /md %}}<p class="property-message">Deprecated: {{% md %}}Deprecated in favor of log_config{{% /md %}}</p></dd><dt class="property-optional"
             title="Optional">
         <span id="state_logconfig_nodejs">
 <a href="#state_logconfig_nodejs" style="color: inherit; text-decoration: inherit;">log<wbr>Config</a>
@@ -2210,8 +2055,7 @@ If logging is enabled, logs will be exported to Stackdriver. Deprecated in favor
     <dd>{{% md %}}This field denotes the logging options for a particular firewall rule.
 If defined, logging is enabled, and logs will be exported to Cloud Logging.
 Structure is documented below.
-{{% /md %}}</dd>
-    <dt class="property-optional"
+{{% /md %}}</dd><dt class="property-optional"
             title="Optional">
         <span id="state_name_nodejs">
 <a href="#state_name_nodejs" style="color: inherit; text-decoration: inherit;">name</a>
@@ -2226,8 +2070,7 @@ the regular expression `a-z?` which means the
 first character must be a lowercase letter, and all following
 characters must be a dash, lowercase letter, or digit, except the last
 character, which cannot be a dash.
-{{% /md %}}</dd>
-    <dt class="property-optional"
+{{% /md %}}</dd><dt class="property-optional"
             title="Optional">
         <span id="state_network_nodejs">
 <a href="#state_network_nodejs" style="color: inherit; text-decoration: inherit;">network</a>
@@ -2236,8 +2079,7 @@ character, which cannot be a dash.
         <span class="property-type">string</span>
     </dt>
     <dd>{{% md %}}The name or self_link of the network to attach this firewall to.
-{{% /md %}}</dd>
-    <dt class="property-optional"
+{{% /md %}}</dd><dt class="property-optional"
             title="Optional">
         <span id="state_priority_nodejs">
 <a href="#state_priority_nodejs" style="color: inherit; text-decoration: inherit;">priority</a>
@@ -2251,8 +2093,7 @@ priorities determine precedence of conflicting rules. Lower value of
 priority implies higher precedence (eg, a rule with priority 0 has
 higher precedence than a rule with priority 1). DENY rules take
 precedence over ALLOW rules having equal priority.
-{{% /md %}}</dd>
-    <dt class="property-optional"
+{{% /md %}}</dd><dt class="property-optional"
             title="Optional">
         <span id="state_project_nodejs">
 <a href="#state_project_nodejs" style="color: inherit; text-decoration: inherit;">project</a>
@@ -2262,8 +2103,7 @@ precedence over ALLOW rules having equal priority.
     </dt>
     <dd>{{% md %}}The ID of the project in which the resource belongs.
 If it is not provided, the provider project is used.
-{{% /md %}}</dd>
-    <dt class="property-optional"
+{{% /md %}}</dd><dt class="property-optional"
             title="Optional">
         <span id="state_selflink_nodejs">
 <a href="#state_selflink_nodejs" style="color: inherit; text-decoration: inherit;">self<wbr>Link</a>
@@ -2272,8 +2112,7 @@ If it is not provided, the provider project is used.
         <span class="property-type">string</span>
     </dt>
     <dd>{{% md %}}The URI of the created resource.
-{{% /md %}}</dd>
-    <dt class="property-optional"
+{{% /md %}}</dd><dt class="property-optional"
             title="Optional">
         <span id="state_sourceranges_nodejs">
 <a href="#state_sourceranges_nodejs" style="color: inherit; text-decoration: inherit;">source<wbr>Ranges</a>
@@ -2289,8 +2128,7 @@ apply to traffic that has source IP address within sourceRanges OR the
 source IP that belongs to a tag listed in the sourceTags property. The
 connection does not need to match both properties for the firewall to
 apply. Only IPv4 is supported.
-{{% /md %}}</dd>
-    <dt class="property-optional"
+{{% /md %}}</dd><dt class="property-optional"
             title="Optional">
         <span id="state_sourceserviceaccounts_nodejs">
 <a href="#state_sourceserviceaccounts_nodejs" style="color: inherit; text-decoration: inherit;">source<wbr>Service<wbr>Accounts</a>
@@ -2309,8 +2147,7 @@ source IP belongs to an instance with service account listed in
 sourceServiceAccount. The connection does not need to match both
 properties for the firewall to apply. sourceServiceAccounts cannot be
 used at the same time as sourceTags or targetTags.
-{{% /md %}}</dd>
-    <dt class="property-optional"
+{{% /md %}}</dd><dt class="property-optional"
             title="Optional">
         <span id="state_sourcetags_nodejs">
 <a href="#state_sourcetags_nodejs" style="color: inherit; text-decoration: inherit;">source<wbr>Tags</a>
@@ -2327,8 +2164,7 @@ both properties are set, the firewall will apply to traffic that has
 source IP address within sourceRanges OR the source IP that belongs to
 a tag listed in the sourceTags property. The connection does not need
 to match both properties for the firewall to apply.
-{{% /md %}}</dd>
-    <dt class="property-optional"
+{{% /md %}}</dd><dt class="property-optional"
             title="Optional">
         <span id="state_targetserviceaccounts_nodejs">
 <a href="#state_targetserviceaccounts_nodejs" style="color: inherit; text-decoration: inherit;">target<wbr>Service<wbr>Accounts</a>
@@ -2342,8 +2178,7 @@ targetServiceAccounts cannot be used at the same time as targetTags or
 sourceTags. If neither targetServiceAccounts nor targetTags are
 specified, the firewall rule applies to all instances on the specified
 network.
-{{% /md %}}</dd>
-    <dt class="property-optional"
+{{% /md %}}</dd><dt class="property-optional"
             title="Optional">
         <span id="state_targettags_nodejs">
 <a href="#state_targettags_nodejs" style="color: inherit; text-decoration: inherit;">target<wbr>Tags</a>
@@ -2355,14 +2190,11 @@ network.
 network that may make network connections as specified in allowed[].
 If no targetTags are specified, the firewall rule applies to all
 instances on the specified network.
-{{% /md %}}</dd>
-</dl>
+{{% /md %}}</dd></dl>
 {{% /choosable %}}
 
 {{% choosable language python %}}
-<dl class="resources-properties">
-
-    <dt class="property-optional"
+<dl class="resources-properties"><dt class="property-optional"
             title="Optional">
         <span id="state_allows_python">
 <a href="#state_allows_python" style="color: inherit; text-decoration: inherit;">allows</a>
@@ -2374,8 +2206,7 @@ instances on the specified network.
 specifies a protocol and port-range tuple that describes a permitted
 connection.
 Structure is documented below.
-{{% /md %}}</dd>
-    <dt class="property-optional"
+{{% /md %}}</dd><dt class="property-optional"
             title="Optional">
         <span id="state_creation_timestamp_python">
 <a href="#state_creation_timestamp_python" style="color: inherit; text-decoration: inherit;">creation_<wbr>timestamp</a>
@@ -2384,8 +2215,7 @@ Structure is documented below.
         <span class="property-type">str</span>
     </dt>
     <dd>{{% md %}}Creation timestamp in RFC3339 text format.
-{{% /md %}}</dd>
-    <dt class="property-optional"
+{{% /md %}}</dd><dt class="property-optional"
             title="Optional">
         <span id="state_denies_python">
 <a href="#state_denies_python" style="color: inherit; text-decoration: inherit;">denies</a>
@@ -2396,8 +2226,7 @@ Structure is documented below.
     <dd>{{% md %}}The list of DENY rules specified by this firewall. Each rule specifies
 a protocol and port-range tuple that describes a denied connection.
 Structure is documented below.
-{{% /md %}}</dd>
-    <dt class="property-optional"
+{{% /md %}}</dd><dt class="property-optional"
             title="Optional">
         <span id="state_description_python">
 <a href="#state_description_python" style="color: inherit; text-decoration: inherit;">description</a>
@@ -2407,8 +2236,7 @@ Structure is documented below.
     </dt>
     <dd>{{% md %}}An optional description of this resource. Provide this property when
 you create the resource.
-{{% /md %}}</dd>
-    <dt class="property-optional"
+{{% /md %}}</dd><dt class="property-optional"
             title="Optional">
         <span id="state_destination_ranges_python">
 <a href="#state_destination_ranges_python" style="color: inherit; text-decoration: inherit;">destination_<wbr>ranges</a>
@@ -2419,8 +2247,7 @@ you create the resource.
     <dd>{{% md %}}If destination ranges are specified, the firewall will apply only to
 traffic that has destination IP address in these ranges. These ranges
 must be expressed in CIDR format. Only IPv4 is supported.
-{{% /md %}}</dd>
-    <dt class="property-optional"
+{{% /md %}}</dd><dt class="property-optional"
             title="Optional">
         <span id="state_direction_python">
 <a href="#state_direction_python" style="color: inherit; text-decoration: inherit;">direction</a>
@@ -2433,8 +2260,7 @@ INGRESS. Note: For INGRESS traffic, it is NOT supported to specify
 destinationRanges; For EGRESS traffic, it is NOT supported to specify
 sourceRanges OR sourceTags.
 Possible values are `INGRESS` and `EGRESS`.
-{{% /md %}}</dd>
-    <dt class="property-optional"
+{{% /md %}}</dd><dt class="property-optional"
             title="Optional">
         <span id="state_disabled_python">
 <a href="#state_disabled_python" style="color: inherit; text-decoration: inherit;">disabled</a>
@@ -2446,8 +2272,7 @@ Possible values are `INGRESS` and `EGRESS`.
 network it is associated with. When set to true, the firewall rule is
 not enforced and the network behaves as if it did not exist. If this
 is unspecified, the firewall rule will be enabled.
-{{% /md %}}</dd>
-    <dt class="property-optional property-deprecated"
+{{% /md %}}</dd><dt class="property-optional property-deprecated"
             title="Optional, Deprecated">
         <span id="state_enable_logging_python">
 <a href="#state_enable_logging_python" style="color: inherit; text-decoration: inherit;">enable_<wbr>logging</a>
@@ -2457,8 +2282,7 @@ is unspecified, the firewall rule will be enabled.
     </dt>
     <dd>{{% md %}}This field denotes whether to enable logging for a particular firewall rule.
 If logging is enabled, logs will be exported to Stackdriver. Deprecated in favor of `log_config`
-{{% /md %}}<p class="property-message">Deprecated: {{% md %}}Deprecated in favor of log_config{{% /md %}}</p></dd>
-    <dt class="property-optional"
+{{% /md %}}<p class="property-message">Deprecated: {{% md %}}Deprecated in favor of log_config{{% /md %}}</p></dd><dt class="property-optional"
             title="Optional">
         <span id="state_log_config_python">
 <a href="#state_log_config_python" style="color: inherit; text-decoration: inherit;">log_<wbr>config</a>
@@ -2469,8 +2293,7 @@ If logging is enabled, logs will be exported to Stackdriver. Deprecated in favor
     <dd>{{% md %}}This field denotes the logging options for a particular firewall rule.
 If defined, logging is enabled, and logs will be exported to Cloud Logging.
 Structure is documented below.
-{{% /md %}}</dd>
-    <dt class="property-optional"
+{{% /md %}}</dd><dt class="property-optional"
             title="Optional">
         <span id="state_name_python">
 <a href="#state_name_python" style="color: inherit; text-decoration: inherit;">name</a>
@@ -2485,8 +2308,7 @@ the regular expression `a-z?` which means the
 first character must be a lowercase letter, and all following
 characters must be a dash, lowercase letter, or digit, except the last
 character, which cannot be a dash.
-{{% /md %}}</dd>
-    <dt class="property-optional"
+{{% /md %}}</dd><dt class="property-optional"
             title="Optional">
         <span id="state_network_python">
 <a href="#state_network_python" style="color: inherit; text-decoration: inherit;">network</a>
@@ -2495,8 +2317,7 @@ character, which cannot be a dash.
         <span class="property-type">str</span>
     </dt>
     <dd>{{% md %}}The name or self_link of the network to attach this firewall to.
-{{% /md %}}</dd>
-    <dt class="property-optional"
+{{% /md %}}</dd><dt class="property-optional"
             title="Optional">
         <span id="state_priority_python">
 <a href="#state_priority_python" style="color: inherit; text-decoration: inherit;">priority</a>
@@ -2510,8 +2331,7 @@ priorities determine precedence of conflicting rules. Lower value of
 priority implies higher precedence (eg, a rule with priority 0 has
 higher precedence than a rule with priority 1). DENY rules take
 precedence over ALLOW rules having equal priority.
-{{% /md %}}</dd>
-    <dt class="property-optional"
+{{% /md %}}</dd><dt class="property-optional"
             title="Optional">
         <span id="state_project_python">
 <a href="#state_project_python" style="color: inherit; text-decoration: inherit;">project</a>
@@ -2521,8 +2341,7 @@ precedence over ALLOW rules having equal priority.
     </dt>
     <dd>{{% md %}}The ID of the project in which the resource belongs.
 If it is not provided, the provider project is used.
-{{% /md %}}</dd>
-    <dt class="property-optional"
+{{% /md %}}</dd><dt class="property-optional"
             title="Optional">
         <span id="state_self_link_python">
 <a href="#state_self_link_python" style="color: inherit; text-decoration: inherit;">self_<wbr>link</a>
@@ -2531,8 +2350,7 @@ If it is not provided, the provider project is used.
         <span class="property-type">str</span>
     </dt>
     <dd>{{% md %}}The URI of the created resource.
-{{% /md %}}</dd>
-    <dt class="property-optional"
+{{% /md %}}</dd><dt class="property-optional"
             title="Optional">
         <span id="state_source_ranges_python">
 <a href="#state_source_ranges_python" style="color: inherit; text-decoration: inherit;">source_<wbr>ranges</a>
@@ -2548,8 +2366,7 @@ apply to traffic that has source IP address within sourceRanges OR the
 source IP that belongs to a tag listed in the sourceTags property. The
 connection does not need to match both properties for the firewall to
 apply. Only IPv4 is supported.
-{{% /md %}}</dd>
-    <dt class="property-optional"
+{{% /md %}}</dd><dt class="property-optional"
             title="Optional">
         <span id="state_source_service_accounts_python">
 <a href="#state_source_service_accounts_python" style="color: inherit; text-decoration: inherit;">source_<wbr>service_<wbr>accounts</a>
@@ -2568,8 +2385,7 @@ source IP belongs to an instance with service account listed in
 sourceServiceAccount. The connection does not need to match both
 properties for the firewall to apply. sourceServiceAccounts cannot be
 used at the same time as sourceTags or targetTags.
-{{% /md %}}</dd>
-    <dt class="property-optional"
+{{% /md %}}</dd><dt class="property-optional"
             title="Optional">
         <span id="state_source_tags_python">
 <a href="#state_source_tags_python" style="color: inherit; text-decoration: inherit;">source_<wbr>tags</a>
@@ -2586,8 +2402,7 @@ both properties are set, the firewall will apply to traffic that has
 source IP address within sourceRanges OR the source IP that belongs to
 a tag listed in the sourceTags property. The connection does not need
 to match both properties for the firewall to apply.
-{{% /md %}}</dd>
-    <dt class="property-optional"
+{{% /md %}}</dd><dt class="property-optional"
             title="Optional">
         <span id="state_target_service_accounts_python">
 <a href="#state_target_service_accounts_python" style="color: inherit; text-decoration: inherit;">target_<wbr>service_<wbr>accounts</a>
@@ -2601,8 +2416,7 @@ targetServiceAccounts cannot be used at the same time as targetTags or
 sourceTags. If neither targetServiceAccounts nor targetTags are
 specified, the firewall rule applies to all instances on the specified
 network.
-{{% /md %}}</dd>
-    <dt class="property-optional"
+{{% /md %}}</dd><dt class="property-optional"
             title="Optional">
         <span id="state_target_tags_python">
 <a href="#state_target_tags_python" style="color: inherit; text-decoration: inherit;">target_<wbr>tags</a>
@@ -2614,8 +2428,7 @@ network.
 network that may make network connections as specified in allowed[].
 If no targetTags are specified, the firewall rule applies to all
 instances on the specified network.
-{{% /md %}}</dd>
-</dl>
+{{% /md %}}</dd></dl>
 {{% /choosable %}}
 
 
@@ -2630,9 +2443,7 @@ instances on the specified network.
 <h4 id="firewallallow">Firewall<wbr>Allow</h4>
 
 {{% choosable language csharp %}}
-<dl class="resources-properties">
-
-    <dt class="property-required"
+<dl class="resources-properties"><dt class="property-required"
             title="Required">
         <span id="protocol_csharp">
 <a href="#protocol_csharp" style="color: inherit; text-decoration: inherit;">Protocol</a>
@@ -2644,8 +2455,7 @@ instances on the specified network.
 required when creating a firewall rule. This value can either be
 one of the following well known protocol strings (tcp, udp,
 icmp, esp, ah, sctp, ipip, all), or the IP protocol number.
-{{% /md %}}</dd>
-    <dt class="property-optional"
+{{% /md %}}</dd><dt class="property-optional"
             title="Optional">
         <span id="ports_csharp">
 <a href="#ports_csharp" style="color: inherit; text-decoration: inherit;">Ports</a>
@@ -2659,14 +2469,11 @@ either an integer or a range. If not specified, this rule
 applies to connections through any port.
 Example inputs include: ["22"], ["80","443"], and
 ["12345-12349"].
-{{% /md %}}</dd>
-</dl>
+{{% /md %}}</dd></dl>
 {{% /choosable %}}
 
 {{% choosable language go %}}
-<dl class="resources-properties">
-
-    <dt class="property-required"
+<dl class="resources-properties"><dt class="property-required"
             title="Required">
         <span id="protocol_go">
 <a href="#protocol_go" style="color: inherit; text-decoration: inherit;">Protocol</a>
@@ -2678,8 +2485,7 @@ Example inputs include: ["22"], ["80","443"], and
 required when creating a firewall rule. This value can either be
 one of the following well known protocol strings (tcp, udp,
 icmp, esp, ah, sctp, ipip, all), or the IP protocol number.
-{{% /md %}}</dd>
-    <dt class="property-optional"
+{{% /md %}}</dd><dt class="property-optional"
             title="Optional">
         <span id="ports_go">
 <a href="#ports_go" style="color: inherit; text-decoration: inherit;">Ports</a>
@@ -2693,14 +2499,11 @@ either an integer or a range. If not specified, this rule
 applies to connections through any port.
 Example inputs include: ["22"], ["80","443"], and
 ["12345-12349"].
-{{% /md %}}</dd>
-</dl>
+{{% /md %}}</dd></dl>
 {{% /choosable %}}
 
 {{% choosable language nodejs %}}
-<dl class="resources-properties">
-
-    <dt class="property-required"
+<dl class="resources-properties"><dt class="property-required"
             title="Required">
         <span id="protocol_nodejs">
 <a href="#protocol_nodejs" style="color: inherit; text-decoration: inherit;">protocol</a>
@@ -2712,8 +2515,7 @@ Example inputs include: ["22"], ["80","443"], and
 required when creating a firewall rule. This value can either be
 one of the following well known protocol strings (tcp, udp,
 icmp, esp, ah, sctp, ipip, all), or the IP protocol number.
-{{% /md %}}</dd>
-    <dt class="property-optional"
+{{% /md %}}</dd><dt class="property-optional"
             title="Optional">
         <span id="ports_nodejs">
 <a href="#ports_nodejs" style="color: inherit; text-decoration: inherit;">ports</a>
@@ -2727,14 +2529,11 @@ either an integer or a range. If not specified, this rule
 applies to connections through any port.
 Example inputs include: ["22"], ["80","443"], and
 ["12345-12349"].
-{{% /md %}}</dd>
-</dl>
+{{% /md %}}</dd></dl>
 {{% /choosable %}}
 
 {{% choosable language python %}}
-<dl class="resources-properties">
-
-    <dt class="property-required"
+<dl class="resources-properties"><dt class="property-required"
             title="Required">
         <span id="protocol_python">
 <a href="#protocol_python" style="color: inherit; text-decoration: inherit;">protocol</a>
@@ -2746,8 +2545,7 @@ Example inputs include: ["22"], ["80","443"], and
 required when creating a firewall rule. This value can either be
 one of the following well known protocol strings (tcp, udp,
 icmp, esp, ah, sctp, ipip, all), or the IP protocol number.
-{{% /md %}}</dd>
-    <dt class="property-optional"
+{{% /md %}}</dd><dt class="property-optional"
             title="Optional">
         <span id="ports_python">
 <a href="#ports_python" style="color: inherit; text-decoration: inherit;">ports</a>
@@ -2761,16 +2559,13 @@ either an integer or a range. If not specified, this rule
 applies to connections through any port.
 Example inputs include: ["22"], ["80","443"], and
 ["12345-12349"].
-{{% /md %}}</dd>
-</dl>
+{{% /md %}}</dd></dl>
 {{% /choosable %}}
 
 <h4 id="firewalldeny">Firewall<wbr>Deny</h4>
 
 {{% choosable language csharp %}}
-<dl class="resources-properties">
-
-    <dt class="property-required"
+<dl class="resources-properties"><dt class="property-required"
             title="Required">
         <span id="protocol_csharp">
 <a href="#protocol_csharp" style="color: inherit; text-decoration: inherit;">Protocol</a>
@@ -2782,8 +2577,7 @@ Example inputs include: ["22"], ["80","443"], and
 required when creating a firewall rule. This value can either be
 one of the following well known protocol strings (tcp, udp,
 icmp, esp, ah, sctp, ipip, all), or the IP protocol number.
-{{% /md %}}</dd>
-    <dt class="property-optional"
+{{% /md %}}</dd><dt class="property-optional"
             title="Optional">
         <span id="ports_csharp">
 <a href="#ports_csharp" style="color: inherit; text-decoration: inherit;">Ports</a>
@@ -2797,14 +2591,11 @@ either an integer or a range. If not specified, this rule
 applies to connections through any port.
 Example inputs include: ["22"], ["80","443"], and
 ["12345-12349"].
-{{% /md %}}</dd>
-</dl>
+{{% /md %}}</dd></dl>
 {{% /choosable %}}
 
 {{% choosable language go %}}
-<dl class="resources-properties">
-
-    <dt class="property-required"
+<dl class="resources-properties"><dt class="property-required"
             title="Required">
         <span id="protocol_go">
 <a href="#protocol_go" style="color: inherit; text-decoration: inherit;">Protocol</a>
@@ -2816,8 +2607,7 @@ Example inputs include: ["22"], ["80","443"], and
 required when creating a firewall rule. This value can either be
 one of the following well known protocol strings (tcp, udp,
 icmp, esp, ah, sctp, ipip, all), or the IP protocol number.
-{{% /md %}}</dd>
-    <dt class="property-optional"
+{{% /md %}}</dd><dt class="property-optional"
             title="Optional">
         <span id="ports_go">
 <a href="#ports_go" style="color: inherit; text-decoration: inherit;">Ports</a>
@@ -2831,14 +2621,11 @@ either an integer or a range. If not specified, this rule
 applies to connections through any port.
 Example inputs include: ["22"], ["80","443"], and
 ["12345-12349"].
-{{% /md %}}</dd>
-</dl>
+{{% /md %}}</dd></dl>
 {{% /choosable %}}
 
 {{% choosable language nodejs %}}
-<dl class="resources-properties">
-
-    <dt class="property-required"
+<dl class="resources-properties"><dt class="property-required"
             title="Required">
         <span id="protocol_nodejs">
 <a href="#protocol_nodejs" style="color: inherit; text-decoration: inherit;">protocol</a>
@@ -2850,8 +2637,7 @@ Example inputs include: ["22"], ["80","443"], and
 required when creating a firewall rule. This value can either be
 one of the following well known protocol strings (tcp, udp,
 icmp, esp, ah, sctp, ipip, all), or the IP protocol number.
-{{% /md %}}</dd>
-    <dt class="property-optional"
+{{% /md %}}</dd><dt class="property-optional"
             title="Optional">
         <span id="ports_nodejs">
 <a href="#ports_nodejs" style="color: inherit; text-decoration: inherit;">ports</a>
@@ -2865,14 +2651,11 @@ either an integer or a range. If not specified, this rule
 applies to connections through any port.
 Example inputs include: ["22"], ["80","443"], and
 ["12345-12349"].
-{{% /md %}}</dd>
-</dl>
+{{% /md %}}</dd></dl>
 {{% /choosable %}}
 
 {{% choosable language python %}}
-<dl class="resources-properties">
-
-    <dt class="property-required"
+<dl class="resources-properties"><dt class="property-required"
             title="Required">
         <span id="protocol_python">
 <a href="#protocol_python" style="color: inherit; text-decoration: inherit;">protocol</a>
@@ -2884,8 +2667,7 @@ Example inputs include: ["22"], ["80","443"], and
 required when creating a firewall rule. This value can either be
 one of the following well known protocol strings (tcp, udp,
 icmp, esp, ah, sctp, ipip, all), or the IP protocol number.
-{{% /md %}}</dd>
-    <dt class="property-optional"
+{{% /md %}}</dd><dt class="property-optional"
             title="Optional">
         <span id="ports_python">
 <a href="#ports_python" style="color: inherit; text-decoration: inherit;">ports</a>
@@ -2899,16 +2681,13 @@ either an integer or a range. If not specified, this rule
 applies to connections through any port.
 Example inputs include: ["22"], ["80","443"], and
 ["12345-12349"].
-{{% /md %}}</dd>
-</dl>
+{{% /md %}}</dd></dl>
 {{% /choosable %}}
 
 <h4 id="firewalllogconfig">Firewall<wbr>Log<wbr>Config</h4>
 
 {{% choosable language csharp %}}
-<dl class="resources-properties">
-
-    <dt class="property-required"
+<dl class="resources-properties"><dt class="property-required"
             title="Required">
         <span id="metadata_csharp">
 <a href="#metadata_csharp" style="color: inherit; text-decoration: inherit;">Metadata</a>
@@ -2918,14 +2697,11 @@ Example inputs include: ["22"], ["80","443"], and
     </dt>
     <dd>{{% md %}}This field denotes whether to include or exclude metadata for firewall logs.
 Possible values are `EXCLUDE_ALL_METADATA` and `INCLUDE_ALL_METADATA`.
-{{% /md %}}</dd>
-</dl>
+{{% /md %}}</dd></dl>
 {{% /choosable %}}
 
 {{% choosable language go %}}
-<dl class="resources-properties">
-
-    <dt class="property-required"
+<dl class="resources-properties"><dt class="property-required"
             title="Required">
         <span id="metadata_go">
 <a href="#metadata_go" style="color: inherit; text-decoration: inherit;">Metadata</a>
@@ -2935,14 +2711,11 @@ Possible values are `EXCLUDE_ALL_METADATA` and `INCLUDE_ALL_METADATA`.
     </dt>
     <dd>{{% md %}}This field denotes whether to include or exclude metadata for firewall logs.
 Possible values are `EXCLUDE_ALL_METADATA` and `INCLUDE_ALL_METADATA`.
-{{% /md %}}</dd>
-</dl>
+{{% /md %}}</dd></dl>
 {{% /choosable %}}
 
 {{% choosable language nodejs %}}
-<dl class="resources-properties">
-
-    <dt class="property-required"
+<dl class="resources-properties"><dt class="property-required"
             title="Required">
         <span id="metadata_nodejs">
 <a href="#metadata_nodejs" style="color: inherit; text-decoration: inherit;">metadata</a>
@@ -2952,14 +2725,11 @@ Possible values are `EXCLUDE_ALL_METADATA` and `INCLUDE_ALL_METADATA`.
     </dt>
     <dd>{{% md %}}This field denotes whether to include or exclude metadata for firewall logs.
 Possible values are `EXCLUDE_ALL_METADATA` and `INCLUDE_ALL_METADATA`.
-{{% /md %}}</dd>
-</dl>
+{{% /md %}}</dd></dl>
 {{% /choosable %}}
 
 {{% choosable language python %}}
-<dl class="resources-properties">
-
-    <dt class="property-required"
+<dl class="resources-properties"><dt class="property-required"
             title="Required">
         <span id="metadata_python">
 <a href="#metadata_python" style="color: inherit; text-decoration: inherit;">metadata</a>
@@ -2969,8 +2739,7 @@ Possible values are `EXCLUDE_ALL_METADATA` and `INCLUDE_ALL_METADATA`.
     </dt>
     <dd>{{% md %}}This field denotes whether to include or exclude metadata for firewall logs.
 Possible values are `EXCLUDE_ALL_METADATA` and `INCLUDE_ALL_METADATA`.
-{{% /md %}}</dd>
-</dl>
+{{% /md %}}</dd></dl>
 {{% /choosable %}}
 ## Import
 
@@ -2999,6 +2768,6 @@ Firewall can be imported using any of these accepted formats
 	<dt>License</dt>
 	<dd>Apache-2.0</dd>
 	<dt>Notes</dt>
-	<dd>This Pulumi package is based on the [`google-beta` Terraform Provider](https://github.com/hashicorp/terraform-provider-google-beta).</dd>
+	<dd>{{% md %}}This Pulumi package is based on the [`google-beta` Terraform Provider](https://github.com/hashicorp/terraform-provider-google-beta).{{% /md %}}</dd>
 </dl>
 

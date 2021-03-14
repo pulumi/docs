@@ -51,9 +51,7 @@ The following arguments are supported:
 
 
 {{% choosable language csharp %}}
-<dl class="resources-properties">
-
-    <dt class="property-required"
+<dl class="resources-properties"><dt class="property-required"
             title="Required">
         <span id="privatezonename_csharp">
 <a href="#privatezonename_csharp" style="color: inherit; text-decoration: inherit;">Private<wbr>Zone<wbr>Name</a>
@@ -61,8 +59,7 @@ The following arguments are supported:
         <span class="property-indicator"></span>
         <span class="property-type">string</span>
     </dt>
-    <dd>{{% md %}}The name of the Private DNS zone (without a terminating dot).{{% /md %}}</dd>
-    <dt class="property-required"
+    <dd>{{% md %}}The name of the Private DNS zone (without a terminating dot).{{% /md %}}</dd><dt class="property-required"
             title="Required">
         <span id="resourcegroupname_csharp">
 <a href="#resourcegroupname_csharp" style="color: inherit; text-decoration: inherit;">Resource<wbr>Group<wbr>Name</a>
@@ -70,14 +67,11 @@ The following arguments are supported:
         <span class="property-indicator"></span>
         <span class="property-type">string</span>
     </dt>
-    <dd>{{% md %}}The name of the resource group.{{% /md %}}</dd>
-</dl>
+    <dd>{{% md %}}The name of the resource group.{{% /md %}}</dd></dl>
 {{% /choosable %}}
 
 {{% choosable language go %}}
-<dl class="resources-properties">
-
-    <dt class="property-required"
+<dl class="resources-properties"><dt class="property-required"
             title="Required">
         <span id="privatezonename_go">
 <a href="#privatezonename_go" style="color: inherit; text-decoration: inherit;">Private<wbr>Zone<wbr>Name</a>
@@ -85,8 +79,7 @@ The following arguments are supported:
         <span class="property-indicator"></span>
         <span class="property-type">string</span>
     </dt>
-    <dd>{{% md %}}The name of the Private DNS zone (without a terminating dot).{{% /md %}}</dd>
-    <dt class="property-required"
+    <dd>{{% md %}}The name of the Private DNS zone (without a terminating dot).{{% /md %}}</dd><dt class="property-required"
             title="Required">
         <span id="resourcegroupname_go">
 <a href="#resourcegroupname_go" style="color: inherit; text-decoration: inherit;">Resource<wbr>Group<wbr>Name</a>
@@ -94,14 +87,11 @@ The following arguments are supported:
         <span class="property-indicator"></span>
         <span class="property-type">string</span>
     </dt>
-    <dd>{{% md %}}The name of the resource group.{{% /md %}}</dd>
-</dl>
+    <dd>{{% md %}}The name of the resource group.{{% /md %}}</dd></dl>
 {{% /choosable %}}
 
 {{% choosable language nodejs %}}
-<dl class="resources-properties">
-
-    <dt class="property-required"
+<dl class="resources-properties"><dt class="property-required"
             title="Required">
         <span id="privatezonename_nodejs">
 <a href="#privatezonename_nodejs" style="color: inherit; text-decoration: inherit;">private<wbr>Zone<wbr>Name</a>
@@ -109,8 +99,7 @@ The following arguments are supported:
         <span class="property-indicator"></span>
         <span class="property-type">string</span>
     </dt>
-    <dd>{{% md %}}The name of the Private DNS zone (without a terminating dot).{{% /md %}}</dd>
-    <dt class="property-required"
+    <dd>{{% md %}}The name of the Private DNS zone (without a terminating dot).{{% /md %}}</dd><dt class="property-required"
             title="Required">
         <span id="resourcegroupname_nodejs">
 <a href="#resourcegroupname_nodejs" style="color: inherit; text-decoration: inherit;">resource<wbr>Group<wbr>Name</a>
@@ -118,14 +107,11 @@ The following arguments are supported:
         <span class="property-indicator"></span>
         <span class="property-type">string</span>
     </dt>
-    <dd>{{% md %}}The name of the resource group.{{% /md %}}</dd>
-</dl>
+    <dd>{{% md %}}The name of the resource group.{{% /md %}}</dd></dl>
 {{% /choosable %}}
 
 {{% choosable language python %}}
-<dl class="resources-properties">
-
-    <dt class="property-required"
+<dl class="resources-properties"><dt class="property-required"
             title="Required">
         <span id="private_zone_name_python">
 <a href="#private_zone_name_python" style="color: inherit; text-decoration: inherit;">private_<wbr>zone_<wbr>name</a>
@@ -133,8 +119,7 @@ The following arguments are supported:
         <span class="property-indicator"></span>
         <span class="property-type">str</span>
     </dt>
-    <dd>{{% md %}}The name of the Private DNS zone (without a terminating dot).{{% /md %}}</dd>
-    <dt class="property-required"
+    <dd>{{% md %}}The name of the Private DNS zone (without a terminating dot).{{% /md %}}</dd><dt class="property-required"
             title="Required">
         <span id="resource_group_name_python">
 <a href="#resource_group_name_python" style="color: inherit; text-decoration: inherit;">resource_<wbr>group_<wbr>name</a>
@@ -142,8 +127,7 @@ The following arguments are supported:
         <span class="property-indicator"></span>
         <span class="property-type">str</span>
     </dt>
-    <dd>{{% md %}}The name of the resource group.{{% /md %}}</dd>
-</dl>
+    <dd>{{% md %}}The name of the resource group.{{% /md %}}</dd></dl>
 {{% /choosable %}}
 
 
@@ -156,9 +140,7 @@ The following output properties are available:
 
 
 {{% choosable language csharp %}}
-<dl class="resources-properties">
-
-    <dt class="property-"
+<dl class="resources-properties"><dt class="property-"
             title="">
         <span id="id_csharp">
 <a href="#id_csharp" style="color: inherit; text-decoration: inherit;">Id</a>
@@ -166,8 +148,7 @@ The following output properties are available:
         <span class="property-indicator"></span>
         <span class="property-type">string</span>
     </dt>
-    <dd>{{% md %}}Fully qualified resource Id for the resource. Example - '/subscriptions/{subscriptionId}/resourceGroups/{resourceGroupName}/providers/Microsoft.Network/privateDnsZones/{privateDnsZoneName}'.{{% /md %}}</dd>
-    <dt class="property-"
+    <dd>{{% md %}}Fully qualified resource Id for the resource. Example - '/subscriptions/{subscriptionId}/resourceGroups/{resourceGroupName}/providers/Microsoft.Network/privateDnsZones/{privateDnsZoneName}'.{{% /md %}}</dd><dt class="property-"
             title="">
         <span id="internalid_csharp">
 <a href="#internalid_csharp" style="color: inherit; text-decoration: inherit;">Internal<wbr>Id</a>
@@ -175,8 +156,7 @@ The following output properties are available:
         <span class="property-indicator"></span>
         <span class="property-type">string</span>
     </dt>
-    <dd>{{% md %}}Private zone internal Id{{% /md %}}</dd>
-    <dt class="property-"
+    <dd>{{% md %}}Private zone internal Id{{% /md %}}</dd><dt class="property-"
             title="">
         <span id="maxnumberofrecordsets_csharp">
 <a href="#maxnumberofrecordsets_csharp" style="color: inherit; text-decoration: inherit;">Max<wbr>Number<wbr>Of<wbr>Record<wbr>Sets</a>
@@ -184,8 +164,7 @@ The following output properties are available:
         <span class="property-indicator"></span>
         <span class="property-type">double</span>
     </dt>
-    <dd>{{% md %}}The maximum number of record sets that can be created in this Private DNS zone. This is a read-only property and any attempt to set this value will be ignored.{{% /md %}}</dd>
-    <dt class="property-"
+    <dd>{{% md %}}The maximum number of record sets that can be created in this Private DNS zone. This is a read-only property and any attempt to set this value will be ignored.{{% /md %}}</dd><dt class="property-"
             title="">
         <span id="maxnumberofvirtualnetworklinks_csharp">
 <a href="#maxnumberofvirtualnetworklinks_csharp" style="color: inherit; text-decoration: inherit;">Max<wbr>Number<wbr>Of<wbr>Virtual<wbr>Network<wbr>Links</a>
@@ -193,8 +172,7 @@ The following output properties are available:
         <span class="property-indicator"></span>
         <span class="property-type">double</span>
     </dt>
-    <dd>{{% md %}}The maximum number of virtual networks that can be linked to this Private DNS zone. This is a read-only property and any attempt to set this value will be ignored.{{% /md %}}</dd>
-    <dt class="property-"
+    <dd>{{% md %}}The maximum number of virtual networks that can be linked to this Private DNS zone. This is a read-only property and any attempt to set this value will be ignored.{{% /md %}}</dd><dt class="property-"
             title="">
         <span id="maxnumberofvirtualnetworklinkswithregistration_csharp">
 <a href="#maxnumberofvirtualnetworklinkswithregistration_csharp" style="color: inherit; text-decoration: inherit;">Max<wbr>Number<wbr>Of<wbr>Virtual<wbr>Network<wbr>Links<wbr>With<wbr>Registration</a>
@@ -202,8 +180,7 @@ The following output properties are available:
         <span class="property-indicator"></span>
         <span class="property-type">double</span>
     </dt>
-    <dd>{{% md %}}The maximum number of virtual networks that can be linked to this Private DNS zone with registration enabled. This is a read-only property and any attempt to set this value will be ignored.{{% /md %}}</dd>
-    <dt class="property-"
+    <dd>{{% md %}}The maximum number of virtual networks that can be linked to this Private DNS zone with registration enabled. This is a read-only property and any attempt to set this value will be ignored.{{% /md %}}</dd><dt class="property-"
             title="">
         <span id="name_csharp">
 <a href="#name_csharp" style="color: inherit; text-decoration: inherit;">Name</a>
@@ -211,8 +188,7 @@ The following output properties are available:
         <span class="property-indicator"></span>
         <span class="property-type">string</span>
     </dt>
-    <dd>{{% md %}}The name of the resource{{% /md %}}</dd>
-    <dt class="property-"
+    <dd>{{% md %}}The name of the resource{{% /md %}}</dd><dt class="property-"
             title="">
         <span id="numberofrecordsets_csharp">
 <a href="#numberofrecordsets_csharp" style="color: inherit; text-decoration: inherit;">Number<wbr>Of<wbr>Record<wbr>Sets</a>
@@ -220,8 +196,7 @@ The following output properties are available:
         <span class="property-indicator"></span>
         <span class="property-type">double</span>
     </dt>
-    <dd>{{% md %}}The current number of record sets in this Private DNS zone. This is a read-only property and any attempt to set this value will be ignored.{{% /md %}}</dd>
-    <dt class="property-"
+    <dd>{{% md %}}The current number of record sets in this Private DNS zone. This is a read-only property and any attempt to set this value will be ignored.{{% /md %}}</dd><dt class="property-"
             title="">
         <span id="numberofvirtualnetworklinks_csharp">
 <a href="#numberofvirtualnetworklinks_csharp" style="color: inherit; text-decoration: inherit;">Number<wbr>Of<wbr>Virtual<wbr>Network<wbr>Links</a>
@@ -229,8 +204,7 @@ The following output properties are available:
         <span class="property-indicator"></span>
         <span class="property-type">double</span>
     </dt>
-    <dd>{{% md %}}The current number of virtual networks that are linked to this Private DNS zone. This is a read-only property and any attempt to set this value will be ignored.{{% /md %}}</dd>
-    <dt class="property-"
+    <dd>{{% md %}}The current number of virtual networks that are linked to this Private DNS zone. This is a read-only property and any attempt to set this value will be ignored.{{% /md %}}</dd><dt class="property-"
             title="">
         <span id="numberofvirtualnetworklinkswithregistration_csharp">
 <a href="#numberofvirtualnetworklinkswithregistration_csharp" style="color: inherit; text-decoration: inherit;">Number<wbr>Of<wbr>Virtual<wbr>Network<wbr>Links<wbr>With<wbr>Registration</a>
@@ -238,8 +212,7 @@ The following output properties are available:
         <span class="property-indicator"></span>
         <span class="property-type">double</span>
     </dt>
-    <dd>{{% md %}}The current number of virtual networks that are linked to this Private DNS zone with registration enabled. This is a read-only property and any attempt to set this value will be ignored.{{% /md %}}</dd>
-    <dt class="property-"
+    <dd>{{% md %}}The current number of virtual networks that are linked to this Private DNS zone with registration enabled. This is a read-only property and any attempt to set this value will be ignored.{{% /md %}}</dd><dt class="property-"
             title="">
         <span id="provisioningstate_csharp">
 <a href="#provisioningstate_csharp" style="color: inherit; text-decoration: inherit;">Provisioning<wbr>State</a>
@@ -247,8 +220,7 @@ The following output properties are available:
         <span class="property-indicator"></span>
         <span class="property-type">string</span>
     </dt>
-    <dd>{{% md %}}The provisioning state of the resource. This is a read-only property and any attempt to set this value will be ignored.{{% /md %}}</dd>
-    <dt class="property-"
+    <dd>{{% md %}}The provisioning state of the resource. This is a read-only property and any attempt to set this value will be ignored.{{% /md %}}</dd><dt class="property-"
             title="">
         <span id="type_csharp">
 <a href="#type_csharp" style="color: inherit; text-decoration: inherit;">Type</a>
@@ -256,8 +228,7 @@ The following output properties are available:
         <span class="property-indicator"></span>
         <span class="property-type">string</span>
     </dt>
-    <dd>{{% md %}}The type of the resource. Example - 'Microsoft.Network/privateDnsZones'.{{% /md %}}</dd>
-    <dt class="property-"
+    <dd>{{% md %}}The type of the resource. Example - 'Microsoft.Network/privateDnsZones'.{{% /md %}}</dd><dt class="property-"
             title="">
         <span id="etag_csharp">
 <a href="#etag_csharp" style="color: inherit; text-decoration: inherit;">Etag</a>
@@ -265,8 +236,7 @@ The following output properties are available:
         <span class="property-indicator"></span>
         <span class="property-type">string</span>
     </dt>
-    <dd>{{% md %}}The ETag of the zone.{{% /md %}}</dd>
-    <dt class="property-"
+    <dd>{{% md %}}The ETag of the zone.{{% /md %}}</dd><dt class="property-"
             title="">
         <span id="location_csharp">
 <a href="#location_csharp" style="color: inherit; text-decoration: inherit;">Location</a>
@@ -274,8 +244,7 @@ The following output properties are available:
         <span class="property-indicator"></span>
         <span class="property-type">string</span>
     </dt>
-    <dd>{{% md %}}The Azure Region where the resource lives{{% /md %}}</dd>
-    <dt class="property-"
+    <dd>{{% md %}}The Azure Region where the resource lives{{% /md %}}</dd><dt class="property-"
             title="">
         <span id="tags_csharp">
 <a href="#tags_csharp" style="color: inherit; text-decoration: inherit;">Tags</a>
@@ -283,14 +252,11 @@ The following output properties are available:
         <span class="property-indicator"></span>
         <span class="property-type">Dictionary&lt;string, string&gt;</span>
     </dt>
-    <dd>{{% md %}}Resource tags.{{% /md %}}</dd>
-</dl>
+    <dd>{{% md %}}Resource tags.{{% /md %}}</dd></dl>
 {{% /choosable %}}
 
 {{% choosable language go %}}
-<dl class="resources-properties">
-
-    <dt class="property-"
+<dl class="resources-properties"><dt class="property-"
             title="">
         <span id="id_go">
 <a href="#id_go" style="color: inherit; text-decoration: inherit;">Id</a>
@@ -298,8 +264,7 @@ The following output properties are available:
         <span class="property-indicator"></span>
         <span class="property-type">string</span>
     </dt>
-    <dd>{{% md %}}Fully qualified resource Id for the resource. Example - '/subscriptions/{subscriptionId}/resourceGroups/{resourceGroupName}/providers/Microsoft.Network/privateDnsZones/{privateDnsZoneName}'.{{% /md %}}</dd>
-    <dt class="property-"
+    <dd>{{% md %}}Fully qualified resource Id for the resource. Example - '/subscriptions/{subscriptionId}/resourceGroups/{resourceGroupName}/providers/Microsoft.Network/privateDnsZones/{privateDnsZoneName}'.{{% /md %}}</dd><dt class="property-"
             title="">
         <span id="internalid_go">
 <a href="#internalid_go" style="color: inherit; text-decoration: inherit;">Internal<wbr>Id</a>
@@ -307,8 +272,7 @@ The following output properties are available:
         <span class="property-indicator"></span>
         <span class="property-type">string</span>
     </dt>
-    <dd>{{% md %}}Private zone internal Id{{% /md %}}</dd>
-    <dt class="property-"
+    <dd>{{% md %}}Private zone internal Id{{% /md %}}</dd><dt class="property-"
             title="">
         <span id="maxnumberofrecordsets_go">
 <a href="#maxnumberofrecordsets_go" style="color: inherit; text-decoration: inherit;">Max<wbr>Number<wbr>Of<wbr>Record<wbr>Sets</a>
@@ -316,8 +280,7 @@ The following output properties are available:
         <span class="property-indicator"></span>
         <span class="property-type">float64</span>
     </dt>
-    <dd>{{% md %}}The maximum number of record sets that can be created in this Private DNS zone. This is a read-only property and any attempt to set this value will be ignored.{{% /md %}}</dd>
-    <dt class="property-"
+    <dd>{{% md %}}The maximum number of record sets that can be created in this Private DNS zone. This is a read-only property and any attempt to set this value will be ignored.{{% /md %}}</dd><dt class="property-"
             title="">
         <span id="maxnumberofvirtualnetworklinks_go">
 <a href="#maxnumberofvirtualnetworklinks_go" style="color: inherit; text-decoration: inherit;">Max<wbr>Number<wbr>Of<wbr>Virtual<wbr>Network<wbr>Links</a>
@@ -325,8 +288,7 @@ The following output properties are available:
         <span class="property-indicator"></span>
         <span class="property-type">float64</span>
     </dt>
-    <dd>{{% md %}}The maximum number of virtual networks that can be linked to this Private DNS zone. This is a read-only property and any attempt to set this value will be ignored.{{% /md %}}</dd>
-    <dt class="property-"
+    <dd>{{% md %}}The maximum number of virtual networks that can be linked to this Private DNS zone. This is a read-only property and any attempt to set this value will be ignored.{{% /md %}}</dd><dt class="property-"
             title="">
         <span id="maxnumberofvirtualnetworklinkswithregistration_go">
 <a href="#maxnumberofvirtualnetworklinkswithregistration_go" style="color: inherit; text-decoration: inherit;">Max<wbr>Number<wbr>Of<wbr>Virtual<wbr>Network<wbr>Links<wbr>With<wbr>Registration</a>
@@ -334,8 +296,7 @@ The following output properties are available:
         <span class="property-indicator"></span>
         <span class="property-type">float64</span>
     </dt>
-    <dd>{{% md %}}The maximum number of virtual networks that can be linked to this Private DNS zone with registration enabled. This is a read-only property and any attempt to set this value will be ignored.{{% /md %}}</dd>
-    <dt class="property-"
+    <dd>{{% md %}}The maximum number of virtual networks that can be linked to this Private DNS zone with registration enabled. This is a read-only property and any attempt to set this value will be ignored.{{% /md %}}</dd><dt class="property-"
             title="">
         <span id="name_go">
 <a href="#name_go" style="color: inherit; text-decoration: inherit;">Name</a>
@@ -343,8 +304,7 @@ The following output properties are available:
         <span class="property-indicator"></span>
         <span class="property-type">string</span>
     </dt>
-    <dd>{{% md %}}The name of the resource{{% /md %}}</dd>
-    <dt class="property-"
+    <dd>{{% md %}}The name of the resource{{% /md %}}</dd><dt class="property-"
             title="">
         <span id="numberofrecordsets_go">
 <a href="#numberofrecordsets_go" style="color: inherit; text-decoration: inherit;">Number<wbr>Of<wbr>Record<wbr>Sets</a>
@@ -352,8 +312,7 @@ The following output properties are available:
         <span class="property-indicator"></span>
         <span class="property-type">float64</span>
     </dt>
-    <dd>{{% md %}}The current number of record sets in this Private DNS zone. This is a read-only property and any attempt to set this value will be ignored.{{% /md %}}</dd>
-    <dt class="property-"
+    <dd>{{% md %}}The current number of record sets in this Private DNS zone. This is a read-only property and any attempt to set this value will be ignored.{{% /md %}}</dd><dt class="property-"
             title="">
         <span id="numberofvirtualnetworklinks_go">
 <a href="#numberofvirtualnetworklinks_go" style="color: inherit; text-decoration: inherit;">Number<wbr>Of<wbr>Virtual<wbr>Network<wbr>Links</a>
@@ -361,8 +320,7 @@ The following output properties are available:
         <span class="property-indicator"></span>
         <span class="property-type">float64</span>
     </dt>
-    <dd>{{% md %}}The current number of virtual networks that are linked to this Private DNS zone. This is a read-only property and any attempt to set this value will be ignored.{{% /md %}}</dd>
-    <dt class="property-"
+    <dd>{{% md %}}The current number of virtual networks that are linked to this Private DNS zone. This is a read-only property and any attempt to set this value will be ignored.{{% /md %}}</dd><dt class="property-"
             title="">
         <span id="numberofvirtualnetworklinkswithregistration_go">
 <a href="#numberofvirtualnetworklinkswithregistration_go" style="color: inherit; text-decoration: inherit;">Number<wbr>Of<wbr>Virtual<wbr>Network<wbr>Links<wbr>With<wbr>Registration</a>
@@ -370,8 +328,7 @@ The following output properties are available:
         <span class="property-indicator"></span>
         <span class="property-type">float64</span>
     </dt>
-    <dd>{{% md %}}The current number of virtual networks that are linked to this Private DNS zone with registration enabled. This is a read-only property and any attempt to set this value will be ignored.{{% /md %}}</dd>
-    <dt class="property-"
+    <dd>{{% md %}}The current number of virtual networks that are linked to this Private DNS zone with registration enabled. This is a read-only property and any attempt to set this value will be ignored.{{% /md %}}</dd><dt class="property-"
             title="">
         <span id="provisioningstate_go">
 <a href="#provisioningstate_go" style="color: inherit; text-decoration: inherit;">Provisioning<wbr>State</a>
@@ -379,8 +336,7 @@ The following output properties are available:
         <span class="property-indicator"></span>
         <span class="property-type">string</span>
     </dt>
-    <dd>{{% md %}}The provisioning state of the resource. This is a read-only property and any attempt to set this value will be ignored.{{% /md %}}</dd>
-    <dt class="property-"
+    <dd>{{% md %}}The provisioning state of the resource. This is a read-only property and any attempt to set this value will be ignored.{{% /md %}}</dd><dt class="property-"
             title="">
         <span id="type_go">
 <a href="#type_go" style="color: inherit; text-decoration: inherit;">Type</a>
@@ -388,8 +344,7 @@ The following output properties are available:
         <span class="property-indicator"></span>
         <span class="property-type">string</span>
     </dt>
-    <dd>{{% md %}}The type of the resource. Example - 'Microsoft.Network/privateDnsZones'.{{% /md %}}</dd>
-    <dt class="property-"
+    <dd>{{% md %}}The type of the resource. Example - 'Microsoft.Network/privateDnsZones'.{{% /md %}}</dd><dt class="property-"
             title="">
         <span id="etag_go">
 <a href="#etag_go" style="color: inherit; text-decoration: inherit;">Etag</a>
@@ -397,8 +352,7 @@ The following output properties are available:
         <span class="property-indicator"></span>
         <span class="property-type">string</span>
     </dt>
-    <dd>{{% md %}}The ETag of the zone.{{% /md %}}</dd>
-    <dt class="property-"
+    <dd>{{% md %}}The ETag of the zone.{{% /md %}}</dd><dt class="property-"
             title="">
         <span id="location_go">
 <a href="#location_go" style="color: inherit; text-decoration: inherit;">Location</a>
@@ -406,8 +360,7 @@ The following output properties are available:
         <span class="property-indicator"></span>
         <span class="property-type">string</span>
     </dt>
-    <dd>{{% md %}}The Azure Region where the resource lives{{% /md %}}</dd>
-    <dt class="property-"
+    <dd>{{% md %}}The Azure Region where the resource lives{{% /md %}}</dd><dt class="property-"
             title="">
         <span id="tags_go">
 <a href="#tags_go" style="color: inherit; text-decoration: inherit;">Tags</a>
@@ -415,14 +368,11 @@ The following output properties are available:
         <span class="property-indicator"></span>
         <span class="property-type">map[string]string</span>
     </dt>
-    <dd>{{% md %}}Resource tags.{{% /md %}}</dd>
-</dl>
+    <dd>{{% md %}}Resource tags.{{% /md %}}</dd></dl>
 {{% /choosable %}}
 
 {{% choosable language nodejs %}}
-<dl class="resources-properties">
-
-    <dt class="property-"
+<dl class="resources-properties"><dt class="property-"
             title="">
         <span id="id_nodejs">
 <a href="#id_nodejs" style="color: inherit; text-decoration: inherit;">id</a>
@@ -430,8 +380,7 @@ The following output properties are available:
         <span class="property-indicator"></span>
         <span class="property-type">string</span>
     </dt>
-    <dd>{{% md %}}Fully qualified resource Id for the resource. Example - '/subscriptions/{subscriptionId}/resourceGroups/{resourceGroupName}/providers/Microsoft.Network/privateDnsZones/{privateDnsZoneName}'.{{% /md %}}</dd>
-    <dt class="property-"
+    <dd>{{% md %}}Fully qualified resource Id for the resource. Example - '/subscriptions/{subscriptionId}/resourceGroups/{resourceGroupName}/providers/Microsoft.Network/privateDnsZones/{privateDnsZoneName}'.{{% /md %}}</dd><dt class="property-"
             title="">
         <span id="internalid_nodejs">
 <a href="#internalid_nodejs" style="color: inherit; text-decoration: inherit;">internal<wbr>Id</a>
@@ -439,8 +388,7 @@ The following output properties are available:
         <span class="property-indicator"></span>
         <span class="property-type">string</span>
     </dt>
-    <dd>{{% md %}}Private zone internal Id{{% /md %}}</dd>
-    <dt class="property-"
+    <dd>{{% md %}}Private zone internal Id{{% /md %}}</dd><dt class="property-"
             title="">
         <span id="maxnumberofrecordsets_nodejs">
 <a href="#maxnumberofrecordsets_nodejs" style="color: inherit; text-decoration: inherit;">max<wbr>Number<wbr>Of<wbr>Record<wbr>Sets</a>
@@ -448,8 +396,7 @@ The following output properties are available:
         <span class="property-indicator"></span>
         <span class="property-type">number</span>
     </dt>
-    <dd>{{% md %}}The maximum number of record sets that can be created in this Private DNS zone. This is a read-only property and any attempt to set this value will be ignored.{{% /md %}}</dd>
-    <dt class="property-"
+    <dd>{{% md %}}The maximum number of record sets that can be created in this Private DNS zone. This is a read-only property and any attempt to set this value will be ignored.{{% /md %}}</dd><dt class="property-"
             title="">
         <span id="maxnumberofvirtualnetworklinks_nodejs">
 <a href="#maxnumberofvirtualnetworklinks_nodejs" style="color: inherit; text-decoration: inherit;">max<wbr>Number<wbr>Of<wbr>Virtual<wbr>Network<wbr>Links</a>
@@ -457,8 +404,7 @@ The following output properties are available:
         <span class="property-indicator"></span>
         <span class="property-type">number</span>
     </dt>
-    <dd>{{% md %}}The maximum number of virtual networks that can be linked to this Private DNS zone. This is a read-only property and any attempt to set this value will be ignored.{{% /md %}}</dd>
-    <dt class="property-"
+    <dd>{{% md %}}The maximum number of virtual networks that can be linked to this Private DNS zone. This is a read-only property and any attempt to set this value will be ignored.{{% /md %}}</dd><dt class="property-"
             title="">
         <span id="maxnumberofvirtualnetworklinkswithregistration_nodejs">
 <a href="#maxnumberofvirtualnetworklinkswithregistration_nodejs" style="color: inherit; text-decoration: inherit;">max<wbr>Number<wbr>Of<wbr>Virtual<wbr>Network<wbr>Links<wbr>With<wbr>Registration</a>
@@ -466,8 +412,7 @@ The following output properties are available:
         <span class="property-indicator"></span>
         <span class="property-type">number</span>
     </dt>
-    <dd>{{% md %}}The maximum number of virtual networks that can be linked to this Private DNS zone with registration enabled. This is a read-only property and any attempt to set this value will be ignored.{{% /md %}}</dd>
-    <dt class="property-"
+    <dd>{{% md %}}The maximum number of virtual networks that can be linked to this Private DNS zone with registration enabled. This is a read-only property and any attempt to set this value will be ignored.{{% /md %}}</dd><dt class="property-"
             title="">
         <span id="name_nodejs">
 <a href="#name_nodejs" style="color: inherit; text-decoration: inherit;">name</a>
@@ -475,8 +420,7 @@ The following output properties are available:
         <span class="property-indicator"></span>
         <span class="property-type">string</span>
     </dt>
-    <dd>{{% md %}}The name of the resource{{% /md %}}</dd>
-    <dt class="property-"
+    <dd>{{% md %}}The name of the resource{{% /md %}}</dd><dt class="property-"
             title="">
         <span id="numberofrecordsets_nodejs">
 <a href="#numberofrecordsets_nodejs" style="color: inherit; text-decoration: inherit;">number<wbr>Of<wbr>Record<wbr>Sets</a>
@@ -484,8 +428,7 @@ The following output properties are available:
         <span class="property-indicator"></span>
         <span class="property-type">number</span>
     </dt>
-    <dd>{{% md %}}The current number of record sets in this Private DNS zone. This is a read-only property and any attempt to set this value will be ignored.{{% /md %}}</dd>
-    <dt class="property-"
+    <dd>{{% md %}}The current number of record sets in this Private DNS zone. This is a read-only property and any attempt to set this value will be ignored.{{% /md %}}</dd><dt class="property-"
             title="">
         <span id="numberofvirtualnetworklinks_nodejs">
 <a href="#numberofvirtualnetworklinks_nodejs" style="color: inherit; text-decoration: inherit;">number<wbr>Of<wbr>Virtual<wbr>Network<wbr>Links</a>
@@ -493,8 +436,7 @@ The following output properties are available:
         <span class="property-indicator"></span>
         <span class="property-type">number</span>
     </dt>
-    <dd>{{% md %}}The current number of virtual networks that are linked to this Private DNS zone. This is a read-only property and any attempt to set this value will be ignored.{{% /md %}}</dd>
-    <dt class="property-"
+    <dd>{{% md %}}The current number of virtual networks that are linked to this Private DNS zone. This is a read-only property and any attempt to set this value will be ignored.{{% /md %}}</dd><dt class="property-"
             title="">
         <span id="numberofvirtualnetworklinkswithregistration_nodejs">
 <a href="#numberofvirtualnetworklinkswithregistration_nodejs" style="color: inherit; text-decoration: inherit;">number<wbr>Of<wbr>Virtual<wbr>Network<wbr>Links<wbr>With<wbr>Registration</a>
@@ -502,8 +444,7 @@ The following output properties are available:
         <span class="property-indicator"></span>
         <span class="property-type">number</span>
     </dt>
-    <dd>{{% md %}}The current number of virtual networks that are linked to this Private DNS zone with registration enabled. This is a read-only property and any attempt to set this value will be ignored.{{% /md %}}</dd>
-    <dt class="property-"
+    <dd>{{% md %}}The current number of virtual networks that are linked to this Private DNS zone with registration enabled. This is a read-only property and any attempt to set this value will be ignored.{{% /md %}}</dd><dt class="property-"
             title="">
         <span id="provisioningstate_nodejs">
 <a href="#provisioningstate_nodejs" style="color: inherit; text-decoration: inherit;">provisioning<wbr>State</a>
@@ -511,8 +452,7 @@ The following output properties are available:
         <span class="property-indicator"></span>
         <span class="property-type">string</span>
     </dt>
-    <dd>{{% md %}}The provisioning state of the resource. This is a read-only property and any attempt to set this value will be ignored.{{% /md %}}</dd>
-    <dt class="property-"
+    <dd>{{% md %}}The provisioning state of the resource. This is a read-only property and any attempt to set this value will be ignored.{{% /md %}}</dd><dt class="property-"
             title="">
         <span id="type_nodejs">
 <a href="#type_nodejs" style="color: inherit; text-decoration: inherit;">type</a>
@@ -520,8 +460,7 @@ The following output properties are available:
         <span class="property-indicator"></span>
         <span class="property-type">string</span>
     </dt>
-    <dd>{{% md %}}The type of the resource. Example - 'Microsoft.Network/privateDnsZones'.{{% /md %}}</dd>
-    <dt class="property-"
+    <dd>{{% md %}}The type of the resource. Example - 'Microsoft.Network/privateDnsZones'.{{% /md %}}</dd><dt class="property-"
             title="">
         <span id="etag_nodejs">
 <a href="#etag_nodejs" style="color: inherit; text-decoration: inherit;">etag</a>
@@ -529,8 +468,7 @@ The following output properties are available:
         <span class="property-indicator"></span>
         <span class="property-type">string</span>
     </dt>
-    <dd>{{% md %}}The ETag of the zone.{{% /md %}}</dd>
-    <dt class="property-"
+    <dd>{{% md %}}The ETag of the zone.{{% /md %}}</dd><dt class="property-"
             title="">
         <span id="location_nodejs">
 <a href="#location_nodejs" style="color: inherit; text-decoration: inherit;">location</a>
@@ -538,8 +476,7 @@ The following output properties are available:
         <span class="property-indicator"></span>
         <span class="property-type">string</span>
     </dt>
-    <dd>{{% md %}}The Azure Region where the resource lives{{% /md %}}</dd>
-    <dt class="property-"
+    <dd>{{% md %}}The Azure Region where the resource lives{{% /md %}}</dd><dt class="property-"
             title="">
         <span id="tags_nodejs">
 <a href="#tags_nodejs" style="color: inherit; text-decoration: inherit;">tags</a>
@@ -547,14 +484,11 @@ The following output properties are available:
         <span class="property-indicator"></span>
         <span class="property-type">{[key: string]: string}</span>
     </dt>
-    <dd>{{% md %}}Resource tags.{{% /md %}}</dd>
-</dl>
+    <dd>{{% md %}}Resource tags.{{% /md %}}</dd></dl>
 {{% /choosable %}}
 
 {{% choosable language python %}}
-<dl class="resources-properties">
-
-    <dt class="property-"
+<dl class="resources-properties"><dt class="property-"
             title="">
         <span id="id_python">
 <a href="#id_python" style="color: inherit; text-decoration: inherit;">id</a>
@@ -562,8 +496,7 @@ The following output properties are available:
         <span class="property-indicator"></span>
         <span class="property-type">str</span>
     </dt>
-    <dd>{{% md %}}Fully qualified resource Id for the resource. Example - '/subscriptions/{subscriptionId}/resourceGroups/{resourceGroupName}/providers/Microsoft.Network/privateDnsZones/{privateDnsZoneName}'.{{% /md %}}</dd>
-    <dt class="property-"
+    <dd>{{% md %}}Fully qualified resource Id for the resource. Example - '/subscriptions/{subscriptionId}/resourceGroups/{resourceGroupName}/providers/Microsoft.Network/privateDnsZones/{privateDnsZoneName}'.{{% /md %}}</dd><dt class="property-"
             title="">
         <span id="internal_id_python">
 <a href="#internal_id_python" style="color: inherit; text-decoration: inherit;">internal_<wbr>id</a>
@@ -571,8 +504,7 @@ The following output properties are available:
         <span class="property-indicator"></span>
         <span class="property-type">str</span>
     </dt>
-    <dd>{{% md %}}Private zone internal Id{{% /md %}}</dd>
-    <dt class="property-"
+    <dd>{{% md %}}Private zone internal Id{{% /md %}}</dd><dt class="property-"
             title="">
         <span id="max_number_of_record_sets_python">
 <a href="#max_number_of_record_sets_python" style="color: inherit; text-decoration: inherit;">max_<wbr>number_<wbr>of_<wbr>record_<wbr>sets</a>
@@ -580,8 +512,7 @@ The following output properties are available:
         <span class="property-indicator"></span>
         <span class="property-type">float</span>
     </dt>
-    <dd>{{% md %}}The maximum number of record sets that can be created in this Private DNS zone. This is a read-only property and any attempt to set this value will be ignored.{{% /md %}}</dd>
-    <dt class="property-"
+    <dd>{{% md %}}The maximum number of record sets that can be created in this Private DNS zone. This is a read-only property and any attempt to set this value will be ignored.{{% /md %}}</dd><dt class="property-"
             title="">
         <span id="max_number_of_virtual_network_links_python">
 <a href="#max_number_of_virtual_network_links_python" style="color: inherit; text-decoration: inherit;">max_<wbr>number_<wbr>of_<wbr>virtual_<wbr>network_<wbr>links</a>
@@ -589,8 +520,7 @@ The following output properties are available:
         <span class="property-indicator"></span>
         <span class="property-type">float</span>
     </dt>
-    <dd>{{% md %}}The maximum number of virtual networks that can be linked to this Private DNS zone. This is a read-only property and any attempt to set this value will be ignored.{{% /md %}}</dd>
-    <dt class="property-"
+    <dd>{{% md %}}The maximum number of virtual networks that can be linked to this Private DNS zone. This is a read-only property and any attempt to set this value will be ignored.{{% /md %}}</dd><dt class="property-"
             title="">
         <span id="max_number_of_virtual_network_links_with_registration_python">
 <a href="#max_number_of_virtual_network_links_with_registration_python" style="color: inherit; text-decoration: inherit;">max_<wbr>number_<wbr>of_<wbr>virtual_<wbr>network_<wbr>links_<wbr>with_<wbr>registration</a>
@@ -598,8 +528,7 @@ The following output properties are available:
         <span class="property-indicator"></span>
         <span class="property-type">float</span>
     </dt>
-    <dd>{{% md %}}The maximum number of virtual networks that can be linked to this Private DNS zone with registration enabled. This is a read-only property and any attempt to set this value will be ignored.{{% /md %}}</dd>
-    <dt class="property-"
+    <dd>{{% md %}}The maximum number of virtual networks that can be linked to this Private DNS zone with registration enabled. This is a read-only property and any attempt to set this value will be ignored.{{% /md %}}</dd><dt class="property-"
             title="">
         <span id="name_python">
 <a href="#name_python" style="color: inherit; text-decoration: inherit;">name</a>
@@ -607,8 +536,7 @@ The following output properties are available:
         <span class="property-indicator"></span>
         <span class="property-type">str</span>
     </dt>
-    <dd>{{% md %}}The name of the resource{{% /md %}}</dd>
-    <dt class="property-"
+    <dd>{{% md %}}The name of the resource{{% /md %}}</dd><dt class="property-"
             title="">
         <span id="number_of_record_sets_python">
 <a href="#number_of_record_sets_python" style="color: inherit; text-decoration: inherit;">number_<wbr>of_<wbr>record_<wbr>sets</a>
@@ -616,8 +544,7 @@ The following output properties are available:
         <span class="property-indicator"></span>
         <span class="property-type">float</span>
     </dt>
-    <dd>{{% md %}}The current number of record sets in this Private DNS zone. This is a read-only property and any attempt to set this value will be ignored.{{% /md %}}</dd>
-    <dt class="property-"
+    <dd>{{% md %}}The current number of record sets in this Private DNS zone. This is a read-only property and any attempt to set this value will be ignored.{{% /md %}}</dd><dt class="property-"
             title="">
         <span id="number_of_virtual_network_links_python">
 <a href="#number_of_virtual_network_links_python" style="color: inherit; text-decoration: inherit;">number_<wbr>of_<wbr>virtual_<wbr>network_<wbr>links</a>
@@ -625,8 +552,7 @@ The following output properties are available:
         <span class="property-indicator"></span>
         <span class="property-type">float</span>
     </dt>
-    <dd>{{% md %}}The current number of virtual networks that are linked to this Private DNS zone. This is a read-only property and any attempt to set this value will be ignored.{{% /md %}}</dd>
-    <dt class="property-"
+    <dd>{{% md %}}The current number of virtual networks that are linked to this Private DNS zone. This is a read-only property and any attempt to set this value will be ignored.{{% /md %}}</dd><dt class="property-"
             title="">
         <span id="number_of_virtual_network_links_with_registration_python">
 <a href="#number_of_virtual_network_links_with_registration_python" style="color: inherit; text-decoration: inherit;">number_<wbr>of_<wbr>virtual_<wbr>network_<wbr>links_<wbr>with_<wbr>registration</a>
@@ -634,8 +560,7 @@ The following output properties are available:
         <span class="property-indicator"></span>
         <span class="property-type">float</span>
     </dt>
-    <dd>{{% md %}}The current number of virtual networks that are linked to this Private DNS zone with registration enabled. This is a read-only property and any attempt to set this value will be ignored.{{% /md %}}</dd>
-    <dt class="property-"
+    <dd>{{% md %}}The current number of virtual networks that are linked to this Private DNS zone with registration enabled. This is a read-only property and any attempt to set this value will be ignored.{{% /md %}}</dd><dt class="property-"
             title="">
         <span id="provisioning_state_python">
 <a href="#provisioning_state_python" style="color: inherit; text-decoration: inherit;">provisioning_<wbr>state</a>
@@ -643,8 +568,7 @@ The following output properties are available:
         <span class="property-indicator"></span>
         <span class="property-type">str</span>
     </dt>
-    <dd>{{% md %}}The provisioning state of the resource. This is a read-only property and any attempt to set this value will be ignored.{{% /md %}}</dd>
-    <dt class="property-"
+    <dd>{{% md %}}The provisioning state of the resource. This is a read-only property and any attempt to set this value will be ignored.{{% /md %}}</dd><dt class="property-"
             title="">
         <span id="type_python">
 <a href="#type_python" style="color: inherit; text-decoration: inherit;">type</a>
@@ -652,8 +576,7 @@ The following output properties are available:
         <span class="property-indicator"></span>
         <span class="property-type">str</span>
     </dt>
-    <dd>{{% md %}}The type of the resource. Example - 'Microsoft.Network/privateDnsZones'.{{% /md %}}</dd>
-    <dt class="property-"
+    <dd>{{% md %}}The type of the resource. Example - 'Microsoft.Network/privateDnsZones'.{{% /md %}}</dd><dt class="property-"
             title="">
         <span id="etag_python">
 <a href="#etag_python" style="color: inherit; text-decoration: inherit;">etag</a>
@@ -661,8 +584,7 @@ The following output properties are available:
         <span class="property-indicator"></span>
         <span class="property-type">str</span>
     </dt>
-    <dd>{{% md %}}The ETag of the zone.{{% /md %}}</dd>
-    <dt class="property-"
+    <dd>{{% md %}}The ETag of the zone.{{% /md %}}</dd><dt class="property-"
             title="">
         <span id="location_python">
 <a href="#location_python" style="color: inherit; text-decoration: inherit;">location</a>
@@ -670,8 +592,7 @@ The following output properties are available:
         <span class="property-indicator"></span>
         <span class="property-type">str</span>
     </dt>
-    <dd>{{% md %}}The Azure Region where the resource lives{{% /md %}}</dd>
-    <dt class="property-"
+    <dd>{{% md %}}The Azure Region where the resource lives{{% /md %}}</dd><dt class="property-"
             title="">
         <span id="tags_python">
 <a href="#tags_python" style="color: inherit; text-decoration: inherit;">tags</a>
@@ -679,8 +600,7 @@ The following output properties are available:
         <span class="property-indicator"></span>
         <span class="property-type">Mapping[str, str]</span>
     </dt>
-    <dd>{{% md %}}Resource tags.{{% /md %}}</dd>
-</dl>
+    <dd>{{% md %}}Resource tags.{{% /md %}}</dd></dl>
 {{% /choosable %}}
 
 

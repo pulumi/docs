@@ -14,11 +14,17 @@ Machine Learning dataset object wrapped into ARM resource envelope.
 API Version: 2020-05-01-preview.
 
 {{% examples %}}
+
 ## Example Usage
 
 {{< chooser language "typescript,python,go,csharp" / >}}
+
+
 ### Create Dataset
-{{% example csharp %}}
+
+
+{{< example csharp >}}
+
 ```csharp
 using Pulumi;
 using AzureNative = Pulumi.AzureNative;
@@ -57,9 +63,12 @@ class MyStack : Stack
 
 ```
 
-{{% /example %}}
 
-{{% example go %}}
+{{< /example >}}
+
+
+{{< example go >}}
+
 
 ```go
 package main
@@ -99,9 +108,12 @@ func main() {
 
 ```
 
-{{% /example %}}
 
-{{% example python %}}
+{{< /example >}}
+
+
+{{< example python >}}
+
 
 ```python
 import pulumi
@@ -128,9 +140,12 @@ machine_learning_dataset = azure_native.machinelearningservices.MachineLearningD
 
 ```
 
-{{% /example %}}
 
-{{% example typescript %}}
+{{< /example >}}
+
+
+{{< example typescript >}}
+
 
 ```typescript
 import * as pulumi from "@pulumi/pulumi";
@@ -158,9 +173,16 @@ const machineLearningDataset = new azure_native.machinelearningservices.MachineL
 
 ```
 
-{{% /example %}}
+
+{{< /example >}}
+
+
+
+
 
 {{% /examples %}}
+
+
 
 
 ## Create a MachineLearningDataset Resource {#create}
@@ -185,9 +207,7 @@ const machineLearningDataset = new azure_native.machinelearningservices.MachineL
 
 {{% choosable language nodejs %}}
 
-<dl class="resources-properties">
-  
-    <dt
+<dl class="resources-properties"><dt
         class="property-required" title="Required">
         <span>name</span>
         <span class="property-indicator"></span>
@@ -195,9 +215,7 @@ const machineLearningDataset = new azure_native.machinelearningservices.MachineL
     </dt>
     <dd>
       The unique name of the resource.
-    </dd>
-  
-    <dt
+    </dd><dt
         class="property-required" title="Required">
         <span>args</span>
         <span class="property-indicator"></span>
@@ -205,9 +223,7 @@ const machineLearningDataset = new azure_native.machinelearningservices.MachineL
     </dt>
     <dd>
       The arguments to resource properties.
-    </dd>
-  
-    <dt
+    </dd><dt
         class="property-optional" title="Optional">
         <span>opts</span>
         <span class="property-indicator"></span>
@@ -215,10 +231,7 @@ const machineLearningDataset = new azure_native.machinelearningservices.MachineL
     </dt>
     <dd>
       Bag of options to control resource&#39;s behavior.
-    </dd>
-  
-
-</dl>
+    </dd></dl>
 
 {{% /choosable %}}
 
@@ -244,9 +257,7 @@ const machineLearningDataset = new azure_native.machinelearningservices.MachineL
 
 {{% choosable language go %}}
 
-<dl class="resources-properties">
-  
-    <dt
+<dl class="resources-properties"><dt
         class="property-optional" title="Optional">
         <span>ctx</span>
         <span class="property-indicator"></span>
@@ -254,9 +265,7 @@ const machineLearningDataset = new azure_native.machinelearningservices.MachineL
     </dt>
     <dd>
       Context object for the current deployment.
-    </dd>
-  
-    <dt
+    </dd><dt
         class="property-required" title="Required">
         <span>name</span>
         <span class="property-indicator"></span>
@@ -264,9 +273,7 @@ const machineLearningDataset = new azure_native.machinelearningservices.MachineL
     </dt>
     <dd>
       The unique name of the resource.
-    </dd>
-  
-    <dt
+    </dd><dt
         class="property-required" title="Required">
         <span>args</span>
         <span class="property-indicator"></span>
@@ -274,9 +281,7 @@ const machineLearningDataset = new azure_native.machinelearningservices.MachineL
     </dt>
     <dd>
       The arguments to resource properties.
-    </dd>
-  
-    <dt
+    </dd><dt
         class="property-optional" title="Optional">
         <span>opts</span>
         <span class="property-indicator"></span>
@@ -284,18 +289,13 @@ const machineLearningDataset = new azure_native.machinelearningservices.MachineL
     </dt>
     <dd>
       Bag of options to control resource&#39;s behavior.
-    </dd>
-  
-
-</dl>
+    </dd></dl>
 
 {{% /choosable %}}
 
 {{% choosable language csharp %}}
 
-<dl class="resources-properties">
-  
-    <dt
+<dl class="resources-properties"><dt
         class="property-required" title="Required">
         <span>name</span>
         <span class="property-indicator"></span>
@@ -303,9 +303,7 @@ const machineLearningDataset = new azure_native.machinelearningservices.MachineL
     </dt>
     <dd>
       The unique name of the resource.
-    </dd>
-  
-    <dt
+    </dd><dt
         class="property-required" title="Required">
         <span>args</span>
         <span class="property-indicator"></span>
@@ -313,9 +311,7 @@ const machineLearningDataset = new azure_native.machinelearningservices.MachineL
     </dt>
     <dd>
       The arguments to resource properties.
-    </dd>
-  
-    <dt
+    </dd><dt
         class="property-optional" title="Optional">
         <span>opts</span>
         <span class="property-indicator"></span>
@@ -323,10 +319,7 @@ const machineLearningDataset = new azure_native.machinelearningservices.MachineL
     </dt>
     <dd>
       Bag of options to control resource&#39;s behavior.
-    </dd>
-  
-
-</dl>
+    </dd></dl>
 
 {{% /choosable %}}
 
@@ -341,9 +334,7 @@ The MachineLearningDataset resource accepts the following [input]({{< relref "/d
 
 
 {{% choosable language csharp %}}
-<dl class="resources-properties">
-
-    <dt class="property-required"
+<dl class="resources-properties"><dt class="property-required"
             title="Required">
         <span id="datasettype_csharp">
 <a href="#datasettype_csharp" style="color: inherit; text-decoration: inherit;">Dataset<wbr>Type</a>
@@ -351,8 +342,7 @@ The MachineLearningDataset resource accepts the following [input]({{< relref "/d
         <span class="property-indicator"></span>
         <span class="property-type">string | <a href="#datasettype">Pulumi.<wbr>Azure<wbr>Native.<wbr>Machine<wbr>Learning<wbr>Services.<wbr>Dataset<wbr>Type</a></span>
     </dt>
-    <dd>{{% md %}}Specifies dataset type.{{% /md %}}</dd>
-    <dt class="property-required"
+    <dd>{{% md %}}Specifies dataset type.{{% /md %}}</dd><dt class="property-required"
             title="Required">
         <span id="parameters_csharp">
 <a href="#parameters_csharp" style="color: inherit; text-decoration: inherit;">Parameters</a>
@@ -360,8 +350,7 @@ The MachineLearningDataset resource accepts the following [input]({{< relref "/d
         <span class="property-indicator"></span>
         <span class="property-type"><a href="#datasetcreaterequestparameters">Pulumi.<wbr>Azure<wbr>Native.<wbr>Machine<wbr>Learning<wbr>Services.<wbr>Inputs.<wbr>Dataset<wbr>Create<wbr>Request<wbr>Parameters<wbr>Args</a></span>
     </dt>
-    <dd>{{% md %}}{{% /md %}}</dd>
-    <dt class="property-required"
+    <dd>{{% md %}}{{% /md %}}</dd><dt class="property-required"
             title="Required">
         <span id="registration_csharp">
 <a href="#registration_csharp" style="color: inherit; text-decoration: inherit;">Registration</a>
@@ -369,8 +358,7 @@ The MachineLearningDataset resource accepts the following [input]({{< relref "/d
         <span class="property-indicator"></span>
         <span class="property-type"><a href="#datasetcreaterequestregistration">Pulumi.<wbr>Azure<wbr>Native.<wbr>Machine<wbr>Learning<wbr>Services.<wbr>Inputs.<wbr>Dataset<wbr>Create<wbr>Request<wbr>Registration<wbr>Args</a></span>
     </dt>
-    <dd>{{% md %}}{{% /md %}}</dd>
-    <dt class="property-required"
+    <dd>{{% md %}}{{% /md %}}</dd><dt class="property-required"
             title="Required">
         <span id="resourcegroupname_csharp">
 <a href="#resourcegroupname_csharp" style="color: inherit; text-decoration: inherit;">Resource<wbr>Group<wbr>Name</a>
@@ -378,8 +366,7 @@ The MachineLearningDataset resource accepts the following [input]({{< relref "/d
         <span class="property-indicator"></span>
         <span class="property-type">string</span>
     </dt>
-    <dd>{{% md %}}Name of the resource group in which workspace is located.{{% /md %}}</dd>
-    <dt class="property-required"
+    <dd>{{% md %}}Name of the resource group in which workspace is located.{{% /md %}}</dd><dt class="property-required"
             title="Required">
         <span id="workspacename_csharp">
 <a href="#workspacename_csharp" style="color: inherit; text-decoration: inherit;">Workspace<wbr>Name</a>
@@ -387,8 +374,7 @@ The MachineLearningDataset resource accepts the following [input]({{< relref "/d
         <span class="property-indicator"></span>
         <span class="property-type">string</span>
     </dt>
-    <dd>{{% md %}}Name of Azure Machine Learning workspace.{{% /md %}}</dd>
-    <dt class="property-optional"
+    <dd>{{% md %}}Name of Azure Machine Learning workspace.{{% /md %}}</dd><dt class="property-optional"
             title="Optional">
         <span id="datasetname_csharp">
 <a href="#datasetname_csharp" style="color: inherit; text-decoration: inherit;">Dataset<wbr>Name</a>
@@ -396,8 +382,7 @@ The MachineLearningDataset resource accepts the following [input]({{< relref "/d
         <span class="property-indicator"></span>
         <span class="property-type">string</span>
     </dt>
-    <dd>{{% md %}}The Dataset name.{{% /md %}}</dd>
-    <dt class="property-optional"
+    <dd>{{% md %}}The Dataset name.{{% /md %}}</dd><dt class="property-optional"
             title="Optional">
         <span id="skipvalidation_csharp">
 <a href="#skipvalidation_csharp" style="color: inherit; text-decoration: inherit;">Skip<wbr>Validation</a>
@@ -405,8 +390,7 @@ The MachineLearningDataset resource accepts the following [input]({{< relref "/d
         <span class="property-indicator"></span>
         <span class="property-type">bool</span>
     </dt>
-    <dd>{{% md %}}Skip validation that ensures data can be loaded from the dataset before registration.{{% /md %}}</dd>
-    <dt class="property-optional"
+    <dd>{{% md %}}Skip validation that ensures data can be loaded from the dataset before registration.{{% /md %}}</dd><dt class="property-optional"
             title="Optional">
         <span id="timeseries_csharp">
 <a href="#timeseries_csharp" style="color: inherit; text-decoration: inherit;">Time<wbr>Series</a>
@@ -414,14 +398,11 @@ The MachineLearningDataset resource accepts the following [input]({{< relref "/d
         <span class="property-indicator"></span>
         <span class="property-type"><a href="#datasetcreaterequesttimeseries">Pulumi.<wbr>Azure<wbr>Native.<wbr>Machine<wbr>Learning<wbr>Services.<wbr>Inputs.<wbr>Dataset<wbr>Create<wbr>Request<wbr>Time<wbr>Series<wbr>Args</a></span>
     </dt>
-    <dd>{{% md %}}{{% /md %}}</dd>
-</dl>
+    <dd>{{% md %}}{{% /md %}}</dd></dl>
 {{% /choosable %}}
 
 {{% choosable language go %}}
-<dl class="resources-properties">
-
-    <dt class="property-required"
+<dl class="resources-properties"><dt class="property-required"
             title="Required">
         <span id="datasettype_go">
 <a href="#datasettype_go" style="color: inherit; text-decoration: inherit;">Dataset<wbr>Type</a>
@@ -429,8 +410,7 @@ The MachineLearningDataset resource accepts the following [input]({{< relref "/d
         <span class="property-indicator"></span>
         <span class="property-type">string | <a href="#datasettype">Dataset<wbr>Type</a></span>
     </dt>
-    <dd>{{% md %}}Specifies dataset type.{{% /md %}}</dd>
-    <dt class="property-required"
+    <dd>{{% md %}}Specifies dataset type.{{% /md %}}</dd><dt class="property-required"
             title="Required">
         <span id="parameters_go">
 <a href="#parameters_go" style="color: inherit; text-decoration: inherit;">Parameters</a>
@@ -438,8 +418,7 @@ The MachineLearningDataset resource accepts the following [input]({{< relref "/d
         <span class="property-indicator"></span>
         <span class="property-type"><a href="#datasetcreaterequestparameters">Dataset<wbr>Create<wbr>Request<wbr>Parameters</a></span>
     </dt>
-    <dd>{{% md %}}{{% /md %}}</dd>
-    <dt class="property-required"
+    <dd>{{% md %}}{{% /md %}}</dd><dt class="property-required"
             title="Required">
         <span id="registration_go">
 <a href="#registration_go" style="color: inherit; text-decoration: inherit;">Registration</a>
@@ -447,8 +426,7 @@ The MachineLearningDataset resource accepts the following [input]({{< relref "/d
         <span class="property-indicator"></span>
         <span class="property-type"><a href="#datasetcreaterequestregistration">Dataset<wbr>Create<wbr>Request<wbr>Registration</a></span>
     </dt>
-    <dd>{{% md %}}{{% /md %}}</dd>
-    <dt class="property-required"
+    <dd>{{% md %}}{{% /md %}}</dd><dt class="property-required"
             title="Required">
         <span id="resourcegroupname_go">
 <a href="#resourcegroupname_go" style="color: inherit; text-decoration: inherit;">Resource<wbr>Group<wbr>Name</a>
@@ -456,8 +434,7 @@ The MachineLearningDataset resource accepts the following [input]({{< relref "/d
         <span class="property-indicator"></span>
         <span class="property-type">string</span>
     </dt>
-    <dd>{{% md %}}Name of the resource group in which workspace is located.{{% /md %}}</dd>
-    <dt class="property-required"
+    <dd>{{% md %}}Name of the resource group in which workspace is located.{{% /md %}}</dd><dt class="property-required"
             title="Required">
         <span id="workspacename_go">
 <a href="#workspacename_go" style="color: inherit; text-decoration: inherit;">Workspace<wbr>Name</a>
@@ -465,8 +442,7 @@ The MachineLearningDataset resource accepts the following [input]({{< relref "/d
         <span class="property-indicator"></span>
         <span class="property-type">string</span>
     </dt>
-    <dd>{{% md %}}Name of Azure Machine Learning workspace.{{% /md %}}</dd>
-    <dt class="property-optional"
+    <dd>{{% md %}}Name of Azure Machine Learning workspace.{{% /md %}}</dd><dt class="property-optional"
             title="Optional">
         <span id="datasetname_go">
 <a href="#datasetname_go" style="color: inherit; text-decoration: inherit;">Dataset<wbr>Name</a>
@@ -474,8 +450,7 @@ The MachineLearningDataset resource accepts the following [input]({{< relref "/d
         <span class="property-indicator"></span>
         <span class="property-type">string</span>
     </dt>
-    <dd>{{% md %}}The Dataset name.{{% /md %}}</dd>
-    <dt class="property-optional"
+    <dd>{{% md %}}The Dataset name.{{% /md %}}</dd><dt class="property-optional"
             title="Optional">
         <span id="skipvalidation_go">
 <a href="#skipvalidation_go" style="color: inherit; text-decoration: inherit;">Skip<wbr>Validation</a>
@@ -483,8 +458,7 @@ The MachineLearningDataset resource accepts the following [input]({{< relref "/d
         <span class="property-indicator"></span>
         <span class="property-type">bool</span>
     </dt>
-    <dd>{{% md %}}Skip validation that ensures data can be loaded from the dataset before registration.{{% /md %}}</dd>
-    <dt class="property-optional"
+    <dd>{{% md %}}Skip validation that ensures data can be loaded from the dataset before registration.{{% /md %}}</dd><dt class="property-optional"
             title="Optional">
         <span id="timeseries_go">
 <a href="#timeseries_go" style="color: inherit; text-decoration: inherit;">Time<wbr>Series</a>
@@ -492,14 +466,11 @@ The MachineLearningDataset resource accepts the following [input]({{< relref "/d
         <span class="property-indicator"></span>
         <span class="property-type"><a href="#datasetcreaterequesttimeseries">Dataset<wbr>Create<wbr>Request<wbr>Time<wbr>Series</a></span>
     </dt>
-    <dd>{{% md %}}{{% /md %}}</dd>
-</dl>
+    <dd>{{% md %}}{{% /md %}}</dd></dl>
 {{% /choosable %}}
 
 {{% choosable language nodejs %}}
-<dl class="resources-properties">
-
-    <dt class="property-required"
+<dl class="resources-properties"><dt class="property-required"
             title="Required">
         <span id="datasettype_nodejs">
 <a href="#datasettype_nodejs" style="color: inherit; text-decoration: inherit;">dataset<wbr>Type</a>
@@ -507,8 +478,7 @@ The MachineLearningDataset resource accepts the following [input]({{< relref "/d
         <span class="property-indicator"></span>
         <span class="property-type">string | <a href="#datasettype">Dataset<wbr>Type</a></span>
     </dt>
-    <dd>{{% md %}}Specifies dataset type.{{% /md %}}</dd>
-    <dt class="property-required"
+    <dd>{{% md %}}Specifies dataset type.{{% /md %}}</dd><dt class="property-required"
             title="Required">
         <span id="parameters_nodejs">
 <a href="#parameters_nodejs" style="color: inherit; text-decoration: inherit;">parameters</a>
@@ -516,8 +486,7 @@ The MachineLearningDataset resource accepts the following [input]({{< relref "/d
         <span class="property-indicator"></span>
         <span class="property-type"><a href="#datasetcreaterequestparameters">Dataset<wbr>Create<wbr>Request<wbr>Parameters</a></span>
     </dt>
-    <dd>{{% md %}}{{% /md %}}</dd>
-    <dt class="property-required"
+    <dd>{{% md %}}{{% /md %}}</dd><dt class="property-required"
             title="Required">
         <span id="registration_nodejs">
 <a href="#registration_nodejs" style="color: inherit; text-decoration: inherit;">registration</a>
@@ -525,8 +494,7 @@ The MachineLearningDataset resource accepts the following [input]({{< relref "/d
         <span class="property-indicator"></span>
         <span class="property-type"><a href="#datasetcreaterequestregistration">Dataset<wbr>Create<wbr>Request<wbr>Registration</a></span>
     </dt>
-    <dd>{{% md %}}{{% /md %}}</dd>
-    <dt class="property-required"
+    <dd>{{% md %}}{{% /md %}}</dd><dt class="property-required"
             title="Required">
         <span id="resourcegroupname_nodejs">
 <a href="#resourcegroupname_nodejs" style="color: inherit; text-decoration: inherit;">resource<wbr>Group<wbr>Name</a>
@@ -534,8 +502,7 @@ The MachineLearningDataset resource accepts the following [input]({{< relref "/d
         <span class="property-indicator"></span>
         <span class="property-type">string</span>
     </dt>
-    <dd>{{% md %}}Name of the resource group in which workspace is located.{{% /md %}}</dd>
-    <dt class="property-required"
+    <dd>{{% md %}}Name of the resource group in which workspace is located.{{% /md %}}</dd><dt class="property-required"
             title="Required">
         <span id="workspacename_nodejs">
 <a href="#workspacename_nodejs" style="color: inherit; text-decoration: inherit;">workspace<wbr>Name</a>
@@ -543,8 +510,7 @@ The MachineLearningDataset resource accepts the following [input]({{< relref "/d
         <span class="property-indicator"></span>
         <span class="property-type">string</span>
     </dt>
-    <dd>{{% md %}}Name of Azure Machine Learning workspace.{{% /md %}}</dd>
-    <dt class="property-optional"
+    <dd>{{% md %}}Name of Azure Machine Learning workspace.{{% /md %}}</dd><dt class="property-optional"
             title="Optional">
         <span id="datasetname_nodejs">
 <a href="#datasetname_nodejs" style="color: inherit; text-decoration: inherit;">dataset<wbr>Name</a>
@@ -552,8 +518,7 @@ The MachineLearningDataset resource accepts the following [input]({{< relref "/d
         <span class="property-indicator"></span>
         <span class="property-type">string</span>
     </dt>
-    <dd>{{% md %}}The Dataset name.{{% /md %}}</dd>
-    <dt class="property-optional"
+    <dd>{{% md %}}The Dataset name.{{% /md %}}</dd><dt class="property-optional"
             title="Optional">
         <span id="skipvalidation_nodejs">
 <a href="#skipvalidation_nodejs" style="color: inherit; text-decoration: inherit;">skip<wbr>Validation</a>
@@ -561,8 +526,7 @@ The MachineLearningDataset resource accepts the following [input]({{< relref "/d
         <span class="property-indicator"></span>
         <span class="property-type">boolean</span>
     </dt>
-    <dd>{{% md %}}Skip validation that ensures data can be loaded from the dataset before registration.{{% /md %}}</dd>
-    <dt class="property-optional"
+    <dd>{{% md %}}Skip validation that ensures data can be loaded from the dataset before registration.{{% /md %}}</dd><dt class="property-optional"
             title="Optional">
         <span id="timeseries_nodejs">
 <a href="#timeseries_nodejs" style="color: inherit; text-decoration: inherit;">time<wbr>Series</a>
@@ -570,14 +534,11 @@ The MachineLearningDataset resource accepts the following [input]({{< relref "/d
         <span class="property-indicator"></span>
         <span class="property-type"><a href="#datasetcreaterequesttimeseries">Dataset<wbr>Create<wbr>Request<wbr>Time<wbr>Series</a></span>
     </dt>
-    <dd>{{% md %}}{{% /md %}}</dd>
-</dl>
+    <dd>{{% md %}}{{% /md %}}</dd></dl>
 {{% /choosable %}}
 
 {{% choosable language python %}}
-<dl class="resources-properties">
-
-    <dt class="property-required"
+<dl class="resources-properties"><dt class="property-required"
             title="Required">
         <span id="dataset_type_python">
 <a href="#dataset_type_python" style="color: inherit; text-decoration: inherit;">dataset_<wbr>type</a>
@@ -585,8 +546,7 @@ The MachineLearningDataset resource accepts the following [input]({{< relref "/d
         <span class="property-indicator"></span>
         <span class="property-type">str | <a href="#datasettype">Dataset<wbr>Type</a></span>
     </dt>
-    <dd>{{% md %}}Specifies dataset type.{{% /md %}}</dd>
-    <dt class="property-required"
+    <dd>{{% md %}}Specifies dataset type.{{% /md %}}</dd><dt class="property-required"
             title="Required">
         <span id="parameters_python">
 <a href="#parameters_python" style="color: inherit; text-decoration: inherit;">parameters</a>
@@ -594,8 +554,7 @@ The MachineLearningDataset resource accepts the following [input]({{< relref "/d
         <span class="property-indicator"></span>
         <span class="property-type"><a href="#datasetcreaterequestparameters">Dataset<wbr>Create<wbr>Request<wbr>Parameters<wbr>Args</a></span>
     </dt>
-    <dd>{{% md %}}{{% /md %}}</dd>
-    <dt class="property-required"
+    <dd>{{% md %}}{{% /md %}}</dd><dt class="property-required"
             title="Required">
         <span id="registration_python">
 <a href="#registration_python" style="color: inherit; text-decoration: inherit;">registration</a>
@@ -603,8 +562,7 @@ The MachineLearningDataset resource accepts the following [input]({{< relref "/d
         <span class="property-indicator"></span>
         <span class="property-type"><a href="#datasetcreaterequestregistration">Dataset<wbr>Create<wbr>Request<wbr>Registration<wbr>Args</a></span>
     </dt>
-    <dd>{{% md %}}{{% /md %}}</dd>
-    <dt class="property-required"
+    <dd>{{% md %}}{{% /md %}}</dd><dt class="property-required"
             title="Required">
         <span id="resource_group_name_python">
 <a href="#resource_group_name_python" style="color: inherit; text-decoration: inherit;">resource_<wbr>group_<wbr>name</a>
@@ -612,8 +570,7 @@ The MachineLearningDataset resource accepts the following [input]({{< relref "/d
         <span class="property-indicator"></span>
         <span class="property-type">str</span>
     </dt>
-    <dd>{{% md %}}Name of the resource group in which workspace is located.{{% /md %}}</dd>
-    <dt class="property-required"
+    <dd>{{% md %}}Name of the resource group in which workspace is located.{{% /md %}}</dd><dt class="property-required"
             title="Required">
         <span id="workspace_name_python">
 <a href="#workspace_name_python" style="color: inherit; text-decoration: inherit;">workspace_<wbr>name</a>
@@ -621,8 +578,7 @@ The MachineLearningDataset resource accepts the following [input]({{< relref "/d
         <span class="property-indicator"></span>
         <span class="property-type">str</span>
     </dt>
-    <dd>{{% md %}}Name of Azure Machine Learning workspace.{{% /md %}}</dd>
-    <dt class="property-optional"
+    <dd>{{% md %}}Name of Azure Machine Learning workspace.{{% /md %}}</dd><dt class="property-optional"
             title="Optional">
         <span id="dataset_name_python">
 <a href="#dataset_name_python" style="color: inherit; text-decoration: inherit;">dataset_<wbr>name</a>
@@ -630,8 +586,7 @@ The MachineLearningDataset resource accepts the following [input]({{< relref "/d
         <span class="property-indicator"></span>
         <span class="property-type">str</span>
     </dt>
-    <dd>{{% md %}}The Dataset name.{{% /md %}}</dd>
-    <dt class="property-optional"
+    <dd>{{% md %}}The Dataset name.{{% /md %}}</dd><dt class="property-optional"
             title="Optional">
         <span id="skip_validation_python">
 <a href="#skip_validation_python" style="color: inherit; text-decoration: inherit;">skip_<wbr>validation</a>
@@ -639,8 +594,7 @@ The MachineLearningDataset resource accepts the following [input]({{< relref "/d
         <span class="property-indicator"></span>
         <span class="property-type">bool</span>
     </dt>
-    <dd>{{% md %}}Skip validation that ensures data can be loaded from the dataset before registration.{{% /md %}}</dd>
-    <dt class="property-optional"
+    <dd>{{% md %}}Skip validation that ensures data can be loaded from the dataset before registration.{{% /md %}}</dd><dt class="property-optional"
             title="Optional">
         <span id="time_series_python">
 <a href="#time_series_python" style="color: inherit; text-decoration: inherit;">time_<wbr>series</a>
@@ -648,8 +602,7 @@ The MachineLearningDataset resource accepts the following [input]({{< relref "/d
         <span class="property-indicator"></span>
         <span class="property-type"><a href="#datasetcreaterequesttimeseries">Dataset<wbr>Create<wbr>Request<wbr>Time<wbr>Series<wbr>Args</a></span>
     </dt>
-    <dd>{{% md %}}{{% /md %}}</dd>
-</dl>
+    <dd>{{% md %}}{{% /md %}}</dd></dl>
 {{% /choosable %}}
 
 
@@ -660,9 +613,7 @@ All [input](#inputs) properties are implicitly available as output properties. A
 
 
 {{% choosable language csharp %}}
-<dl class="resources-properties">
-
-    <dt class="property-"
+<dl class="resources-properties"><dt class="property-"
             title="">
         <span id="id_csharp">
 <a href="#id_csharp" style="color: inherit; text-decoration: inherit;">Id</a>
@@ -670,8 +621,7 @@ All [input](#inputs) properties are implicitly available as output properties. A
         <span class="property-indicator"></span>
         <span class="property-type">string</span>
     </dt>
-    <dd>{{% md %}}The provider-assigned unique ID for this managed resource.{{% /md %}}</dd>
-    <dt class="property-"
+    <dd>{{% md %}}The provider-assigned unique ID for this managed resource.{{% /md %}}</dd><dt class="property-"
             title="">
         <span id="name_csharp">
 <a href="#name_csharp" style="color: inherit; text-decoration: inherit;">Name</a>
@@ -679,8 +629,7 @@ All [input](#inputs) properties are implicitly available as output properties. A
         <span class="property-indicator"></span>
         <span class="property-type">string</span>
     </dt>
-    <dd>{{% md %}}Specifies the name of the resource.{{% /md %}}</dd>
-    <dt class="property-"
+    <dd>{{% md %}}Specifies the name of the resource.{{% /md %}}</dd><dt class="property-"
             title="">
         <span id="properties_csharp">
 <a href="#properties_csharp" style="color: inherit; text-decoration: inherit;">Properties</a>
@@ -688,8 +637,7 @@ All [input](#inputs) properties are implicitly available as output properties. A
         <span class="property-indicator"></span>
         <span class="property-type"><a href="#datasetresponse">Pulumi.<wbr>Azure<wbr>Native.<wbr>Machine<wbr>Learning<wbr>Services.<wbr>Outputs.<wbr>Dataset<wbr>Response</a></span>
     </dt>
-    <dd>{{% md %}}Dataset properties{{% /md %}}</dd>
-    <dt class="property-"
+    <dd>{{% md %}}Dataset properties{{% /md %}}</dd><dt class="property-"
             title="">
         <span id="type_csharp">
 <a href="#type_csharp" style="color: inherit; text-decoration: inherit;">Type</a>
@@ -697,8 +645,7 @@ All [input](#inputs) properties are implicitly available as output properties. A
         <span class="property-indicator"></span>
         <span class="property-type">string</span>
     </dt>
-    <dd>{{% md %}}Specifies the type of the resource.{{% /md %}}</dd>
-    <dt class="property-"
+    <dd>{{% md %}}Specifies the type of the resource.{{% /md %}}</dd><dt class="property-"
             title="">
         <span id="identity_csharp">
 <a href="#identity_csharp" style="color: inherit; text-decoration: inherit;">Identity</a>
@@ -706,8 +653,7 @@ All [input](#inputs) properties are implicitly available as output properties. A
         <span class="property-indicator"></span>
         <span class="property-type"><a href="#identityresponse">Pulumi.<wbr>Azure<wbr>Native.<wbr>Machine<wbr>Learning<wbr>Services.<wbr>Outputs.<wbr>Identity<wbr>Response</a></span>
     </dt>
-    <dd>{{% md %}}The identity of the resource.{{% /md %}}</dd>
-    <dt class="property-"
+    <dd>{{% md %}}The identity of the resource.{{% /md %}}</dd><dt class="property-"
             title="">
         <span id="location_csharp">
 <a href="#location_csharp" style="color: inherit; text-decoration: inherit;">Location</a>
@@ -715,8 +661,7 @@ All [input](#inputs) properties are implicitly available as output properties. A
         <span class="property-indicator"></span>
         <span class="property-type">string</span>
     </dt>
-    <dd>{{% md %}}Specifies the location of the resource.{{% /md %}}</dd>
-    <dt class="property-"
+    <dd>{{% md %}}Specifies the location of the resource.{{% /md %}}</dd><dt class="property-"
             title="">
         <span id="sku_csharp">
 <a href="#sku_csharp" style="color: inherit; text-decoration: inherit;">Sku</a>
@@ -724,8 +669,7 @@ All [input](#inputs) properties are implicitly available as output properties. A
         <span class="property-indicator"></span>
         <span class="property-type"><a href="#skuresponse">Pulumi.<wbr>Azure<wbr>Native.<wbr>Machine<wbr>Learning<wbr>Services.<wbr>Outputs.<wbr>Sku<wbr>Response</a></span>
     </dt>
-    <dd>{{% md %}}The sku of the workspace.{{% /md %}}</dd>
-    <dt class="property-"
+    <dd>{{% md %}}The sku of the workspace.{{% /md %}}</dd><dt class="property-"
             title="">
         <span id="tags_csharp">
 <a href="#tags_csharp" style="color: inherit; text-decoration: inherit;">Tags</a>
@@ -733,14 +677,11 @@ All [input](#inputs) properties are implicitly available as output properties. A
         <span class="property-indicator"></span>
         <span class="property-type">Dictionary&lt;string, string&gt;</span>
     </dt>
-    <dd>{{% md %}}Contains resource tags defined as key/value pairs.{{% /md %}}</dd>
-</dl>
+    <dd>{{% md %}}Contains resource tags defined as key/value pairs.{{% /md %}}</dd></dl>
 {{% /choosable %}}
 
 {{% choosable language go %}}
-<dl class="resources-properties">
-
-    <dt class="property-"
+<dl class="resources-properties"><dt class="property-"
             title="">
         <span id="id_go">
 <a href="#id_go" style="color: inherit; text-decoration: inherit;">Id</a>
@@ -748,8 +689,7 @@ All [input](#inputs) properties are implicitly available as output properties. A
         <span class="property-indicator"></span>
         <span class="property-type">string</span>
     </dt>
-    <dd>{{% md %}}The provider-assigned unique ID for this managed resource.{{% /md %}}</dd>
-    <dt class="property-"
+    <dd>{{% md %}}The provider-assigned unique ID for this managed resource.{{% /md %}}</dd><dt class="property-"
             title="">
         <span id="name_go">
 <a href="#name_go" style="color: inherit; text-decoration: inherit;">Name</a>
@@ -757,8 +697,7 @@ All [input](#inputs) properties are implicitly available as output properties. A
         <span class="property-indicator"></span>
         <span class="property-type">string</span>
     </dt>
-    <dd>{{% md %}}Specifies the name of the resource.{{% /md %}}</dd>
-    <dt class="property-"
+    <dd>{{% md %}}Specifies the name of the resource.{{% /md %}}</dd><dt class="property-"
             title="">
         <span id="properties_go">
 <a href="#properties_go" style="color: inherit; text-decoration: inherit;">Properties</a>
@@ -766,8 +705,7 @@ All [input](#inputs) properties are implicitly available as output properties. A
         <span class="property-indicator"></span>
         <span class="property-type"><a href="#datasetresponse">Dataset<wbr>Response</a></span>
     </dt>
-    <dd>{{% md %}}Dataset properties{{% /md %}}</dd>
-    <dt class="property-"
+    <dd>{{% md %}}Dataset properties{{% /md %}}</dd><dt class="property-"
             title="">
         <span id="type_go">
 <a href="#type_go" style="color: inherit; text-decoration: inherit;">Type</a>
@@ -775,8 +713,7 @@ All [input](#inputs) properties are implicitly available as output properties. A
         <span class="property-indicator"></span>
         <span class="property-type">string</span>
     </dt>
-    <dd>{{% md %}}Specifies the type of the resource.{{% /md %}}</dd>
-    <dt class="property-"
+    <dd>{{% md %}}Specifies the type of the resource.{{% /md %}}</dd><dt class="property-"
             title="">
         <span id="identity_go">
 <a href="#identity_go" style="color: inherit; text-decoration: inherit;">Identity</a>
@@ -784,8 +721,7 @@ All [input](#inputs) properties are implicitly available as output properties. A
         <span class="property-indicator"></span>
         <span class="property-type"><a href="#identityresponse">Identity<wbr>Response</a></span>
     </dt>
-    <dd>{{% md %}}The identity of the resource.{{% /md %}}</dd>
-    <dt class="property-"
+    <dd>{{% md %}}The identity of the resource.{{% /md %}}</dd><dt class="property-"
             title="">
         <span id="location_go">
 <a href="#location_go" style="color: inherit; text-decoration: inherit;">Location</a>
@@ -793,8 +729,7 @@ All [input](#inputs) properties are implicitly available as output properties. A
         <span class="property-indicator"></span>
         <span class="property-type">string</span>
     </dt>
-    <dd>{{% md %}}Specifies the location of the resource.{{% /md %}}</dd>
-    <dt class="property-"
+    <dd>{{% md %}}Specifies the location of the resource.{{% /md %}}</dd><dt class="property-"
             title="">
         <span id="sku_go">
 <a href="#sku_go" style="color: inherit; text-decoration: inherit;">Sku</a>
@@ -802,8 +737,7 @@ All [input](#inputs) properties are implicitly available as output properties. A
         <span class="property-indicator"></span>
         <span class="property-type"><a href="#skuresponse">Sku<wbr>Response</a></span>
     </dt>
-    <dd>{{% md %}}The sku of the workspace.{{% /md %}}</dd>
-    <dt class="property-"
+    <dd>{{% md %}}The sku of the workspace.{{% /md %}}</dd><dt class="property-"
             title="">
         <span id="tags_go">
 <a href="#tags_go" style="color: inherit; text-decoration: inherit;">Tags</a>
@@ -811,14 +745,11 @@ All [input](#inputs) properties are implicitly available as output properties. A
         <span class="property-indicator"></span>
         <span class="property-type">map[string]string</span>
     </dt>
-    <dd>{{% md %}}Contains resource tags defined as key/value pairs.{{% /md %}}</dd>
-</dl>
+    <dd>{{% md %}}Contains resource tags defined as key/value pairs.{{% /md %}}</dd></dl>
 {{% /choosable %}}
 
 {{% choosable language nodejs %}}
-<dl class="resources-properties">
-
-    <dt class="property-"
+<dl class="resources-properties"><dt class="property-"
             title="">
         <span id="id_nodejs">
 <a href="#id_nodejs" style="color: inherit; text-decoration: inherit;">id</a>
@@ -826,8 +757,7 @@ All [input](#inputs) properties are implicitly available as output properties. A
         <span class="property-indicator"></span>
         <span class="property-type">string</span>
     </dt>
-    <dd>{{% md %}}The provider-assigned unique ID for this managed resource.{{% /md %}}</dd>
-    <dt class="property-"
+    <dd>{{% md %}}The provider-assigned unique ID for this managed resource.{{% /md %}}</dd><dt class="property-"
             title="">
         <span id="name_nodejs">
 <a href="#name_nodejs" style="color: inherit; text-decoration: inherit;">name</a>
@@ -835,8 +765,7 @@ All [input](#inputs) properties are implicitly available as output properties. A
         <span class="property-indicator"></span>
         <span class="property-type">string</span>
     </dt>
-    <dd>{{% md %}}Specifies the name of the resource.{{% /md %}}</dd>
-    <dt class="property-"
+    <dd>{{% md %}}Specifies the name of the resource.{{% /md %}}</dd><dt class="property-"
             title="">
         <span id="properties_nodejs">
 <a href="#properties_nodejs" style="color: inherit; text-decoration: inherit;">properties</a>
@@ -844,8 +773,7 @@ All [input](#inputs) properties are implicitly available as output properties. A
         <span class="property-indicator"></span>
         <span class="property-type"><a href="#datasetresponse">Dataset<wbr>Response</a></span>
     </dt>
-    <dd>{{% md %}}Dataset properties{{% /md %}}</dd>
-    <dt class="property-"
+    <dd>{{% md %}}Dataset properties{{% /md %}}</dd><dt class="property-"
             title="">
         <span id="type_nodejs">
 <a href="#type_nodejs" style="color: inherit; text-decoration: inherit;">type</a>
@@ -853,8 +781,7 @@ All [input](#inputs) properties are implicitly available as output properties. A
         <span class="property-indicator"></span>
         <span class="property-type">string</span>
     </dt>
-    <dd>{{% md %}}Specifies the type of the resource.{{% /md %}}</dd>
-    <dt class="property-"
+    <dd>{{% md %}}Specifies the type of the resource.{{% /md %}}</dd><dt class="property-"
             title="">
         <span id="identity_nodejs">
 <a href="#identity_nodejs" style="color: inherit; text-decoration: inherit;">identity</a>
@@ -862,8 +789,7 @@ All [input](#inputs) properties are implicitly available as output properties. A
         <span class="property-indicator"></span>
         <span class="property-type"><a href="#identityresponse">Identity<wbr>Response</a></span>
     </dt>
-    <dd>{{% md %}}The identity of the resource.{{% /md %}}</dd>
-    <dt class="property-"
+    <dd>{{% md %}}The identity of the resource.{{% /md %}}</dd><dt class="property-"
             title="">
         <span id="location_nodejs">
 <a href="#location_nodejs" style="color: inherit; text-decoration: inherit;">location</a>
@@ -871,8 +797,7 @@ All [input](#inputs) properties are implicitly available as output properties. A
         <span class="property-indicator"></span>
         <span class="property-type">string</span>
     </dt>
-    <dd>{{% md %}}Specifies the location of the resource.{{% /md %}}</dd>
-    <dt class="property-"
+    <dd>{{% md %}}Specifies the location of the resource.{{% /md %}}</dd><dt class="property-"
             title="">
         <span id="sku_nodejs">
 <a href="#sku_nodejs" style="color: inherit; text-decoration: inherit;">sku</a>
@@ -880,8 +805,7 @@ All [input](#inputs) properties are implicitly available as output properties. A
         <span class="property-indicator"></span>
         <span class="property-type"><a href="#skuresponse">Sku<wbr>Response</a></span>
     </dt>
-    <dd>{{% md %}}The sku of the workspace.{{% /md %}}</dd>
-    <dt class="property-"
+    <dd>{{% md %}}The sku of the workspace.{{% /md %}}</dd><dt class="property-"
             title="">
         <span id="tags_nodejs">
 <a href="#tags_nodejs" style="color: inherit; text-decoration: inherit;">tags</a>
@@ -889,14 +813,11 @@ All [input](#inputs) properties are implicitly available as output properties. A
         <span class="property-indicator"></span>
         <span class="property-type">{[key: string]: string}</span>
     </dt>
-    <dd>{{% md %}}Contains resource tags defined as key/value pairs.{{% /md %}}</dd>
-</dl>
+    <dd>{{% md %}}Contains resource tags defined as key/value pairs.{{% /md %}}</dd></dl>
 {{% /choosable %}}
 
 {{% choosable language python %}}
-<dl class="resources-properties">
-
-    <dt class="property-"
+<dl class="resources-properties"><dt class="property-"
             title="">
         <span id="id_python">
 <a href="#id_python" style="color: inherit; text-decoration: inherit;">id</a>
@@ -904,8 +825,7 @@ All [input](#inputs) properties are implicitly available as output properties. A
         <span class="property-indicator"></span>
         <span class="property-type">str</span>
     </dt>
-    <dd>{{% md %}}The provider-assigned unique ID for this managed resource.{{% /md %}}</dd>
-    <dt class="property-"
+    <dd>{{% md %}}The provider-assigned unique ID for this managed resource.{{% /md %}}</dd><dt class="property-"
             title="">
         <span id="name_python">
 <a href="#name_python" style="color: inherit; text-decoration: inherit;">name</a>
@@ -913,8 +833,7 @@ All [input](#inputs) properties are implicitly available as output properties. A
         <span class="property-indicator"></span>
         <span class="property-type">str</span>
     </dt>
-    <dd>{{% md %}}Specifies the name of the resource.{{% /md %}}</dd>
-    <dt class="property-"
+    <dd>{{% md %}}Specifies the name of the resource.{{% /md %}}</dd><dt class="property-"
             title="">
         <span id="properties_python">
 <a href="#properties_python" style="color: inherit; text-decoration: inherit;">properties</a>
@@ -922,8 +841,7 @@ All [input](#inputs) properties are implicitly available as output properties. A
         <span class="property-indicator"></span>
         <span class="property-type"><a href="#datasetresponse">Dataset<wbr>Response</a></span>
     </dt>
-    <dd>{{% md %}}Dataset properties{{% /md %}}</dd>
-    <dt class="property-"
+    <dd>{{% md %}}Dataset properties{{% /md %}}</dd><dt class="property-"
             title="">
         <span id="type_python">
 <a href="#type_python" style="color: inherit; text-decoration: inherit;">type</a>
@@ -931,8 +849,7 @@ All [input](#inputs) properties are implicitly available as output properties. A
         <span class="property-indicator"></span>
         <span class="property-type">str</span>
     </dt>
-    <dd>{{% md %}}Specifies the type of the resource.{{% /md %}}</dd>
-    <dt class="property-"
+    <dd>{{% md %}}Specifies the type of the resource.{{% /md %}}</dd><dt class="property-"
             title="">
         <span id="identity_python">
 <a href="#identity_python" style="color: inherit; text-decoration: inherit;">identity</a>
@@ -940,8 +857,7 @@ All [input](#inputs) properties are implicitly available as output properties. A
         <span class="property-indicator"></span>
         <span class="property-type"><a href="#identityresponse">Identity<wbr>Response</a></span>
     </dt>
-    <dd>{{% md %}}The identity of the resource.{{% /md %}}</dd>
-    <dt class="property-"
+    <dd>{{% md %}}The identity of the resource.{{% /md %}}</dd><dt class="property-"
             title="">
         <span id="location_python">
 <a href="#location_python" style="color: inherit; text-decoration: inherit;">location</a>
@@ -949,8 +865,7 @@ All [input](#inputs) properties are implicitly available as output properties. A
         <span class="property-indicator"></span>
         <span class="property-type">str</span>
     </dt>
-    <dd>{{% md %}}Specifies the location of the resource.{{% /md %}}</dd>
-    <dt class="property-"
+    <dd>{{% md %}}Specifies the location of the resource.{{% /md %}}</dd><dt class="property-"
             title="">
         <span id="sku_python">
 <a href="#sku_python" style="color: inherit; text-decoration: inherit;">sku</a>
@@ -958,8 +873,7 @@ All [input](#inputs) properties are implicitly available as output properties. A
         <span class="property-indicator"></span>
         <span class="property-type"><a href="#skuresponse">Sku<wbr>Response</a></span>
     </dt>
-    <dd>{{% md %}}The sku of the workspace.{{% /md %}}</dd>
-    <dt class="property-"
+    <dd>{{% md %}}The sku of the workspace.{{% /md %}}</dd><dt class="property-"
             title="">
         <span id="tags_python">
 <a href="#tags_python" style="color: inherit; text-decoration: inherit;">tags</a>
@@ -967,8 +881,7 @@ All [input](#inputs) properties are implicitly available as output properties. A
         <span class="property-indicator"></span>
         <span class="property-type">Mapping[str, str]</span>
     </dt>
-    <dd>{{% md %}}Contains resource tags defined as key/value pairs.{{% /md %}}</dd>
-</dl>
+    <dd>{{% md %}}Contains resource tags defined as key/value pairs.{{% /md %}}</dd></dl>
 {{% /choosable %}}
 
 
@@ -984,9 +897,7 @@ All [input](#inputs) properties are implicitly available as output properties. A
 <h4 id="datasetcreaterequestdatapath">Dataset<wbr>Create<wbr>Request<wbr>Data<wbr>Path</h4>
 
 {{% choosable language csharp %}}
-<dl class="resources-properties">
-
-    <dt class="property-optional"
+<dl class="resources-properties"><dt class="property-optional"
             title="Optional">
         <span id="datastorename_csharp">
 <a href="#datastorename_csharp" style="color: inherit; text-decoration: inherit;">Datastore<wbr>Name</a>
@@ -994,8 +905,7 @@ All [input](#inputs) properties are implicitly available as output properties. A
         <span class="property-indicator"></span>
         <span class="property-type">string</span>
     </dt>
-    <dd>{{% md %}}The datastore name.{{% /md %}}</dd>
-    <dt class="property-optional"
+    <dd>{{% md %}}The datastore name.{{% /md %}}</dd><dt class="property-optional"
             title="Optional">
         <span id="relativepath_csharp">
 <a href="#relativepath_csharp" style="color: inherit; text-decoration: inherit;">Relative<wbr>Path</a>
@@ -1003,14 +913,11 @@ All [input](#inputs) properties are implicitly available as output properties. A
         <span class="property-indicator"></span>
         <span class="property-type">string</span>
     </dt>
-    <dd>{{% md %}}Path within the datastore.{{% /md %}}</dd>
-</dl>
+    <dd>{{% md %}}Path within the datastore.{{% /md %}}</dd></dl>
 {{% /choosable %}}
 
 {{% choosable language go %}}
-<dl class="resources-properties">
-
-    <dt class="property-optional"
+<dl class="resources-properties"><dt class="property-optional"
             title="Optional">
         <span id="datastorename_go">
 <a href="#datastorename_go" style="color: inherit; text-decoration: inherit;">Datastore<wbr>Name</a>
@@ -1018,8 +925,7 @@ All [input](#inputs) properties are implicitly available as output properties. A
         <span class="property-indicator"></span>
         <span class="property-type">string</span>
     </dt>
-    <dd>{{% md %}}The datastore name.{{% /md %}}</dd>
-    <dt class="property-optional"
+    <dd>{{% md %}}The datastore name.{{% /md %}}</dd><dt class="property-optional"
             title="Optional">
         <span id="relativepath_go">
 <a href="#relativepath_go" style="color: inherit; text-decoration: inherit;">Relative<wbr>Path</a>
@@ -1027,14 +933,11 @@ All [input](#inputs) properties are implicitly available as output properties. A
         <span class="property-indicator"></span>
         <span class="property-type">string</span>
     </dt>
-    <dd>{{% md %}}Path within the datastore.{{% /md %}}</dd>
-</dl>
+    <dd>{{% md %}}Path within the datastore.{{% /md %}}</dd></dl>
 {{% /choosable %}}
 
 {{% choosable language nodejs %}}
-<dl class="resources-properties">
-
-    <dt class="property-optional"
+<dl class="resources-properties"><dt class="property-optional"
             title="Optional">
         <span id="datastorename_nodejs">
 <a href="#datastorename_nodejs" style="color: inherit; text-decoration: inherit;">datastore<wbr>Name</a>
@@ -1042,8 +945,7 @@ All [input](#inputs) properties are implicitly available as output properties. A
         <span class="property-indicator"></span>
         <span class="property-type">string</span>
     </dt>
-    <dd>{{% md %}}The datastore name.{{% /md %}}</dd>
-    <dt class="property-optional"
+    <dd>{{% md %}}The datastore name.{{% /md %}}</dd><dt class="property-optional"
             title="Optional">
         <span id="relativepath_nodejs">
 <a href="#relativepath_nodejs" style="color: inherit; text-decoration: inherit;">relative<wbr>Path</a>
@@ -1051,14 +953,11 @@ All [input](#inputs) properties are implicitly available as output properties. A
         <span class="property-indicator"></span>
         <span class="property-type">string</span>
     </dt>
-    <dd>{{% md %}}Path within the datastore.{{% /md %}}</dd>
-</dl>
+    <dd>{{% md %}}Path within the datastore.{{% /md %}}</dd></dl>
 {{% /choosable %}}
 
 {{% choosable language python %}}
-<dl class="resources-properties">
-
-    <dt class="property-optional"
+<dl class="resources-properties"><dt class="property-optional"
             title="Optional">
         <span id="datastore_name_python">
 <a href="#datastore_name_python" style="color: inherit; text-decoration: inherit;">datastore_<wbr>name</a>
@@ -1066,8 +965,7 @@ All [input](#inputs) properties are implicitly available as output properties. A
         <span class="property-indicator"></span>
         <span class="property-type">str</span>
     </dt>
-    <dd>{{% md %}}The datastore name.{{% /md %}}</dd>
-    <dt class="property-optional"
+    <dd>{{% md %}}The datastore name.{{% /md %}}</dd><dt class="property-optional"
             title="Optional">
         <span id="relative_path_python">
 <a href="#relative_path_python" style="color: inherit; text-decoration: inherit;">relative_<wbr>path</a>
@@ -1075,16 +973,13 @@ All [input](#inputs) properties are implicitly available as output properties. A
         <span class="property-indicator"></span>
         <span class="property-type">str</span>
     </dt>
-    <dd>{{% md %}}Path within the datastore.{{% /md %}}</dd>
-</dl>
+    <dd>{{% md %}}Path within the datastore.{{% /md %}}</dd></dl>
 {{% /choosable %}}
 
 <h4 id="datasetcreaterequestparameters">Dataset<wbr>Create<wbr>Request<wbr>Parameters</h4>
 
 {{% choosable language csharp %}}
-<dl class="resources-properties">
-
-    <dt class="property-optional"
+<dl class="resources-properties"><dt class="property-optional"
             title="Optional">
         <span id="header_csharp">
 <a href="#header_csharp" style="color: inherit; text-decoration: inherit;">Header</a>
@@ -1092,8 +987,7 @@ All [input](#inputs) properties are implicitly available as output properties. A
         <span class="property-indicator"></span>
         <span class="property-type">string | <a href="#header">Pulumi.<wbr>Azure<wbr>Native.<wbr>Machine<wbr>Learning<wbr>Services.<wbr>Header</a></span>
     </dt>
-    <dd>{{% md %}}Header type.{{% /md %}}</dd>
-    <dt class="property-optional"
+    <dd>{{% md %}}Header type.{{% /md %}}</dd><dt class="property-optional"
             title="Optional">
         <span id="includepath_csharp">
 <a href="#includepath_csharp" style="color: inherit; text-decoration: inherit;">Include<wbr>Path</a>
@@ -1101,8 +995,7 @@ All [input](#inputs) properties are implicitly available as output properties. A
         <span class="property-indicator"></span>
         <span class="property-type">bool</span>
     </dt>
-    <dd>{{% md %}}Boolean to keep path information as column in the dataset. Defaults to False. This is useful when reading multiple files, and want to know which file a particular record originated from, or to keep useful information in file path.{{% /md %}}</dd>
-    <dt class="property-optional"
+    <dd>{{% md %}}Boolean to keep path information as column in the dataset. Defaults to False. This is useful when reading multiple files, and want to know which file a particular record originated from, or to keep useful information in file path.{{% /md %}}</dd><dt class="property-optional"
             title="Optional">
         <span id="partitionformat_csharp">
 <a href="#partitionformat_csharp" style="color: inherit; text-decoration: inherit;">Partition<wbr>Format</a>
@@ -1110,8 +1003,7 @@ All [input](#inputs) properties are implicitly available as output properties. A
         <span class="property-indicator"></span>
         <span class="property-type">string</span>
     </dt>
-    <dd>{{% md %}}The partition information of each path will be extracted into columns based on the specified format. Format part '{column_name}' creates string column, and '{column_name:yyyy/MM/dd/HH/mm/ss}' creates datetime column, where 'yyyy', 'MM', 'dd', 'HH', 'mm' and 'ss' are used to extract year, month, day, hour, minute and second for the datetime type. The format should start from the position of first partition key until the end of file path. For example, given the path '../USA/2019/01/01/data.parquet' where the partition is by country/region and time, partition_format='/{CountryOrRegion}/{PartitionDate:yyyy/MM/dd}/data.csv' creates a string column 'CountryOrRegion' with the value 'USA' and a datetime column 'PartitionDate' with the value '2019-01-01{{% /md %}}</dd>
-    <dt class="property-optional"
+    <dd>{{% md %}}The partition information of each path will be extracted into columns based on the specified format. Format part '{column_name}' creates string column, and '{column_name:yyyy/MM/dd/HH/mm/ss}' creates datetime column, where 'yyyy', 'MM', 'dd', 'HH', 'mm' and 'ss' are used to extract year, month, day, hour, minute and second for the datetime type. The format should start from the position of first partition key until the end of file path. For example, given the path '../USA/2019/01/01/data.parquet' where the partition is by country/region and time, partition_format='/{CountryOrRegion}/{PartitionDate:yyyy/MM/dd}/data.csv' creates a string column 'CountryOrRegion' with the value 'USA' and a datetime column 'PartitionDate' with the value '2019-01-01{{% /md %}}</dd><dt class="property-optional"
             title="Optional">
         <span id="path_csharp">
 <a href="#path_csharp" style="color: inherit; text-decoration: inherit;">Path</a>
@@ -1119,8 +1011,7 @@ All [input](#inputs) properties are implicitly available as output properties. A
         <span class="property-indicator"></span>
         <span class="property-type"><a href="#datasetcreaterequestpath">Pulumi.<wbr>Azure<wbr>Native.<wbr>Machine<wbr>Learning<wbr>Services.<wbr>Inputs.<wbr>Dataset<wbr>Create<wbr>Request<wbr>Path<wbr>Args</a></span>
     </dt>
-    <dd>{{% md %}}{{% /md %}}</dd>
-    <dt class="property-optional"
+    <dd>{{% md %}}{{% /md %}}</dd><dt class="property-optional"
             title="Optional">
         <span id="query_csharp">
 <a href="#query_csharp" style="color: inherit; text-decoration: inherit;">Query</a>
@@ -1128,8 +1019,7 @@ All [input](#inputs) properties are implicitly available as output properties. A
         <span class="property-indicator"></span>
         <span class="property-type"><a href="#datasetcreaterequestquery">Pulumi.<wbr>Azure<wbr>Native.<wbr>Machine<wbr>Learning<wbr>Services.<wbr>Inputs.<wbr>Dataset<wbr>Create<wbr>Request<wbr>Query<wbr>Args</a></span>
     </dt>
-    <dd>{{% md %}}{{% /md %}}</dd>
-    <dt class="property-optional"
+    <dd>{{% md %}}{{% /md %}}</dd><dt class="property-optional"
             title="Optional">
         <span id="separator_csharp">
 <a href="#separator_csharp" style="color: inherit; text-decoration: inherit;">Separator</a>
@@ -1137,8 +1027,7 @@ All [input](#inputs) properties are implicitly available as output properties. A
         <span class="property-indicator"></span>
         <span class="property-type">string</span>
     </dt>
-    <dd>{{% md %}}The separator used to split columns for 'delimited_files' sourceType.{{% /md %}}</dd>
-    <dt class="property-optional"
+    <dd>{{% md %}}The separator used to split columns for 'delimited_files' sourceType.{{% /md %}}</dd><dt class="property-optional"
             title="Optional">
         <span id="sourcetype_csharp">
 <a href="#sourcetype_csharp" style="color: inherit; text-decoration: inherit;">Source<wbr>Type</a>
@@ -1146,14 +1035,11 @@ All [input](#inputs) properties are implicitly available as output properties. A
         <span class="property-indicator"></span>
         <span class="property-type">string | <a href="#sourcetype">Pulumi.<wbr>Azure<wbr>Native.<wbr>Machine<wbr>Learning<wbr>Services.<wbr>Source<wbr>Type</a></span>
     </dt>
-    <dd>{{% md %}}Data source type.{{% /md %}}</dd>
-</dl>
+    <dd>{{% md %}}Data source type.{{% /md %}}</dd></dl>
 {{% /choosable %}}
 
 {{% choosable language go %}}
-<dl class="resources-properties">
-
-    <dt class="property-optional"
+<dl class="resources-properties"><dt class="property-optional"
             title="Optional">
         <span id="header_go">
 <a href="#header_go" style="color: inherit; text-decoration: inherit;">Header</a>
@@ -1161,8 +1047,7 @@ All [input](#inputs) properties are implicitly available as output properties. A
         <span class="property-indicator"></span>
         <span class="property-type">string | <a href="#header">Header</a></span>
     </dt>
-    <dd>{{% md %}}Header type.{{% /md %}}</dd>
-    <dt class="property-optional"
+    <dd>{{% md %}}Header type.{{% /md %}}</dd><dt class="property-optional"
             title="Optional">
         <span id="includepath_go">
 <a href="#includepath_go" style="color: inherit; text-decoration: inherit;">Include<wbr>Path</a>
@@ -1170,8 +1055,7 @@ All [input](#inputs) properties are implicitly available as output properties. A
         <span class="property-indicator"></span>
         <span class="property-type">bool</span>
     </dt>
-    <dd>{{% md %}}Boolean to keep path information as column in the dataset. Defaults to False. This is useful when reading multiple files, and want to know which file a particular record originated from, or to keep useful information in file path.{{% /md %}}</dd>
-    <dt class="property-optional"
+    <dd>{{% md %}}Boolean to keep path information as column in the dataset. Defaults to False. This is useful when reading multiple files, and want to know which file a particular record originated from, or to keep useful information in file path.{{% /md %}}</dd><dt class="property-optional"
             title="Optional">
         <span id="partitionformat_go">
 <a href="#partitionformat_go" style="color: inherit; text-decoration: inherit;">Partition<wbr>Format</a>
@@ -1179,8 +1063,7 @@ All [input](#inputs) properties are implicitly available as output properties. A
         <span class="property-indicator"></span>
         <span class="property-type">string</span>
     </dt>
-    <dd>{{% md %}}The partition information of each path will be extracted into columns based on the specified format. Format part '{column_name}' creates string column, and '{column_name:yyyy/MM/dd/HH/mm/ss}' creates datetime column, where 'yyyy', 'MM', 'dd', 'HH', 'mm' and 'ss' are used to extract year, month, day, hour, minute and second for the datetime type. The format should start from the position of first partition key until the end of file path. For example, given the path '../USA/2019/01/01/data.parquet' where the partition is by country/region and time, partition_format='/{CountryOrRegion}/{PartitionDate:yyyy/MM/dd}/data.csv' creates a string column 'CountryOrRegion' with the value 'USA' and a datetime column 'PartitionDate' with the value '2019-01-01{{% /md %}}</dd>
-    <dt class="property-optional"
+    <dd>{{% md %}}The partition information of each path will be extracted into columns based on the specified format. Format part '{column_name}' creates string column, and '{column_name:yyyy/MM/dd/HH/mm/ss}' creates datetime column, where 'yyyy', 'MM', 'dd', 'HH', 'mm' and 'ss' are used to extract year, month, day, hour, minute and second for the datetime type. The format should start from the position of first partition key until the end of file path. For example, given the path '../USA/2019/01/01/data.parquet' where the partition is by country/region and time, partition_format='/{CountryOrRegion}/{PartitionDate:yyyy/MM/dd}/data.csv' creates a string column 'CountryOrRegion' with the value 'USA' and a datetime column 'PartitionDate' with the value '2019-01-01{{% /md %}}</dd><dt class="property-optional"
             title="Optional">
         <span id="path_go">
 <a href="#path_go" style="color: inherit; text-decoration: inherit;">Path</a>
@@ -1188,8 +1071,7 @@ All [input](#inputs) properties are implicitly available as output properties. A
         <span class="property-indicator"></span>
         <span class="property-type"><a href="#datasetcreaterequestpath">Dataset<wbr>Create<wbr>Request<wbr>Path</a></span>
     </dt>
-    <dd>{{% md %}}{{% /md %}}</dd>
-    <dt class="property-optional"
+    <dd>{{% md %}}{{% /md %}}</dd><dt class="property-optional"
             title="Optional">
         <span id="query_go">
 <a href="#query_go" style="color: inherit; text-decoration: inherit;">Query</a>
@@ -1197,8 +1079,7 @@ All [input](#inputs) properties are implicitly available as output properties. A
         <span class="property-indicator"></span>
         <span class="property-type"><a href="#datasetcreaterequestquery">Dataset<wbr>Create<wbr>Request<wbr>Query</a></span>
     </dt>
-    <dd>{{% md %}}{{% /md %}}</dd>
-    <dt class="property-optional"
+    <dd>{{% md %}}{{% /md %}}</dd><dt class="property-optional"
             title="Optional">
         <span id="separator_go">
 <a href="#separator_go" style="color: inherit; text-decoration: inherit;">Separator</a>
@@ -1206,8 +1087,7 @@ All [input](#inputs) properties are implicitly available as output properties. A
         <span class="property-indicator"></span>
         <span class="property-type">string</span>
     </dt>
-    <dd>{{% md %}}The separator used to split columns for 'delimited_files' sourceType.{{% /md %}}</dd>
-    <dt class="property-optional"
+    <dd>{{% md %}}The separator used to split columns for 'delimited_files' sourceType.{{% /md %}}</dd><dt class="property-optional"
             title="Optional">
         <span id="sourcetype_go">
 <a href="#sourcetype_go" style="color: inherit; text-decoration: inherit;">Source<wbr>Type</a>
@@ -1215,14 +1095,11 @@ All [input](#inputs) properties are implicitly available as output properties. A
         <span class="property-indicator"></span>
         <span class="property-type">string | <a href="#sourcetype">Source<wbr>Type</a></span>
     </dt>
-    <dd>{{% md %}}Data source type.{{% /md %}}</dd>
-</dl>
+    <dd>{{% md %}}Data source type.{{% /md %}}</dd></dl>
 {{% /choosable %}}
 
 {{% choosable language nodejs %}}
-<dl class="resources-properties">
-
-    <dt class="property-optional"
+<dl class="resources-properties"><dt class="property-optional"
             title="Optional">
         <span id="header_nodejs">
 <a href="#header_nodejs" style="color: inherit; text-decoration: inherit;">header</a>
@@ -1230,8 +1107,7 @@ All [input](#inputs) properties are implicitly available as output properties. A
         <span class="property-indicator"></span>
         <span class="property-type">string | <a href="#header">Header</a></span>
     </dt>
-    <dd>{{% md %}}Header type.{{% /md %}}</dd>
-    <dt class="property-optional"
+    <dd>{{% md %}}Header type.{{% /md %}}</dd><dt class="property-optional"
             title="Optional">
         <span id="includepath_nodejs">
 <a href="#includepath_nodejs" style="color: inherit; text-decoration: inherit;">include<wbr>Path</a>
@@ -1239,8 +1115,7 @@ All [input](#inputs) properties are implicitly available as output properties. A
         <span class="property-indicator"></span>
         <span class="property-type">boolean</span>
     </dt>
-    <dd>{{% md %}}Boolean to keep path information as column in the dataset. Defaults to False. This is useful when reading multiple files, and want to know which file a particular record originated from, or to keep useful information in file path.{{% /md %}}</dd>
-    <dt class="property-optional"
+    <dd>{{% md %}}Boolean to keep path information as column in the dataset. Defaults to False. This is useful when reading multiple files, and want to know which file a particular record originated from, or to keep useful information in file path.{{% /md %}}</dd><dt class="property-optional"
             title="Optional">
         <span id="partitionformat_nodejs">
 <a href="#partitionformat_nodejs" style="color: inherit; text-decoration: inherit;">partition<wbr>Format</a>
@@ -1248,8 +1123,7 @@ All [input](#inputs) properties are implicitly available as output properties. A
         <span class="property-indicator"></span>
         <span class="property-type">string</span>
     </dt>
-    <dd>{{% md %}}The partition information of each path will be extracted into columns based on the specified format. Format part '{column_name}' creates string column, and '{column_name:yyyy/MM/dd/HH/mm/ss}' creates datetime column, where 'yyyy', 'MM', 'dd', 'HH', 'mm' and 'ss' are used to extract year, month, day, hour, minute and second for the datetime type. The format should start from the position of first partition key until the end of file path. For example, given the path '../USA/2019/01/01/data.parquet' where the partition is by country/region and time, partition_format='/{CountryOrRegion}/{PartitionDate:yyyy/MM/dd}/data.csv' creates a string column 'CountryOrRegion' with the value 'USA' and a datetime column 'PartitionDate' with the value '2019-01-01{{% /md %}}</dd>
-    <dt class="property-optional"
+    <dd>{{% md %}}The partition information of each path will be extracted into columns based on the specified format. Format part '{column_name}' creates string column, and '{column_name:yyyy/MM/dd/HH/mm/ss}' creates datetime column, where 'yyyy', 'MM', 'dd', 'HH', 'mm' and 'ss' are used to extract year, month, day, hour, minute and second for the datetime type. The format should start from the position of first partition key until the end of file path. For example, given the path '../USA/2019/01/01/data.parquet' where the partition is by country/region and time, partition_format='/{CountryOrRegion}/{PartitionDate:yyyy/MM/dd}/data.csv' creates a string column 'CountryOrRegion' with the value 'USA' and a datetime column 'PartitionDate' with the value '2019-01-01{{% /md %}}</dd><dt class="property-optional"
             title="Optional">
         <span id="path_nodejs">
 <a href="#path_nodejs" style="color: inherit; text-decoration: inherit;">path</a>
@@ -1257,8 +1131,7 @@ All [input](#inputs) properties are implicitly available as output properties. A
         <span class="property-indicator"></span>
         <span class="property-type"><a href="#datasetcreaterequestpath">Dataset<wbr>Create<wbr>Request<wbr>Path</a></span>
     </dt>
-    <dd>{{% md %}}{{% /md %}}</dd>
-    <dt class="property-optional"
+    <dd>{{% md %}}{{% /md %}}</dd><dt class="property-optional"
             title="Optional">
         <span id="query_nodejs">
 <a href="#query_nodejs" style="color: inherit; text-decoration: inherit;">query</a>
@@ -1266,8 +1139,7 @@ All [input](#inputs) properties are implicitly available as output properties. A
         <span class="property-indicator"></span>
         <span class="property-type"><a href="#datasetcreaterequestquery">Dataset<wbr>Create<wbr>Request<wbr>Query</a></span>
     </dt>
-    <dd>{{% md %}}{{% /md %}}</dd>
-    <dt class="property-optional"
+    <dd>{{% md %}}{{% /md %}}</dd><dt class="property-optional"
             title="Optional">
         <span id="separator_nodejs">
 <a href="#separator_nodejs" style="color: inherit; text-decoration: inherit;">separator</a>
@@ -1275,8 +1147,7 @@ All [input](#inputs) properties are implicitly available as output properties. A
         <span class="property-indicator"></span>
         <span class="property-type">string</span>
     </dt>
-    <dd>{{% md %}}The separator used to split columns for 'delimited_files' sourceType.{{% /md %}}</dd>
-    <dt class="property-optional"
+    <dd>{{% md %}}The separator used to split columns for 'delimited_files' sourceType.{{% /md %}}</dd><dt class="property-optional"
             title="Optional">
         <span id="sourcetype_nodejs">
 <a href="#sourcetype_nodejs" style="color: inherit; text-decoration: inherit;">source<wbr>Type</a>
@@ -1284,14 +1155,11 @@ All [input](#inputs) properties are implicitly available as output properties. A
         <span class="property-indicator"></span>
         <span class="property-type">string | <a href="#sourcetype">Source<wbr>Type</a></span>
     </dt>
-    <dd>{{% md %}}Data source type.{{% /md %}}</dd>
-</dl>
+    <dd>{{% md %}}Data source type.{{% /md %}}</dd></dl>
 {{% /choosable %}}
 
 {{% choosable language python %}}
-<dl class="resources-properties">
-
-    <dt class="property-optional"
+<dl class="resources-properties"><dt class="property-optional"
             title="Optional">
         <span id="header_python">
 <a href="#header_python" style="color: inherit; text-decoration: inherit;">header</a>
@@ -1299,8 +1167,7 @@ All [input](#inputs) properties are implicitly available as output properties. A
         <span class="property-indicator"></span>
         <span class="property-type">str | <a href="#header">Header</a></span>
     </dt>
-    <dd>{{% md %}}Header type.{{% /md %}}</dd>
-    <dt class="property-optional"
+    <dd>{{% md %}}Header type.{{% /md %}}</dd><dt class="property-optional"
             title="Optional">
         <span id="include_path_python">
 <a href="#include_path_python" style="color: inherit; text-decoration: inherit;">include_<wbr>path</a>
@@ -1308,8 +1175,7 @@ All [input](#inputs) properties are implicitly available as output properties. A
         <span class="property-indicator"></span>
         <span class="property-type">bool</span>
     </dt>
-    <dd>{{% md %}}Boolean to keep path information as column in the dataset. Defaults to False. This is useful when reading multiple files, and want to know which file a particular record originated from, or to keep useful information in file path.{{% /md %}}</dd>
-    <dt class="property-optional"
+    <dd>{{% md %}}Boolean to keep path information as column in the dataset. Defaults to False. This is useful when reading multiple files, and want to know which file a particular record originated from, or to keep useful information in file path.{{% /md %}}</dd><dt class="property-optional"
             title="Optional">
         <span id="partition_format_python">
 <a href="#partition_format_python" style="color: inherit; text-decoration: inherit;">partition_<wbr>format</a>
@@ -1317,8 +1183,7 @@ All [input](#inputs) properties are implicitly available as output properties. A
         <span class="property-indicator"></span>
         <span class="property-type">str</span>
     </dt>
-    <dd>{{% md %}}The partition information of each path will be extracted into columns based on the specified format. Format part '{column_name}' creates string column, and '{column_name:yyyy/MM/dd/HH/mm/ss}' creates datetime column, where 'yyyy', 'MM', 'dd', 'HH', 'mm' and 'ss' are used to extract year, month, day, hour, minute and second for the datetime type. The format should start from the position of first partition key until the end of file path. For example, given the path '../USA/2019/01/01/data.parquet' where the partition is by country/region and time, partition_format='/{CountryOrRegion}/{PartitionDate:yyyy/MM/dd}/data.csv' creates a string column 'CountryOrRegion' with the value 'USA' and a datetime column 'PartitionDate' with the value '2019-01-01{{% /md %}}</dd>
-    <dt class="property-optional"
+    <dd>{{% md %}}The partition information of each path will be extracted into columns based on the specified format. Format part '{column_name}' creates string column, and '{column_name:yyyy/MM/dd/HH/mm/ss}' creates datetime column, where 'yyyy', 'MM', 'dd', 'HH', 'mm' and 'ss' are used to extract year, month, day, hour, minute and second for the datetime type. The format should start from the position of first partition key until the end of file path. For example, given the path '../USA/2019/01/01/data.parquet' where the partition is by country/region and time, partition_format='/{CountryOrRegion}/{PartitionDate:yyyy/MM/dd}/data.csv' creates a string column 'CountryOrRegion' with the value 'USA' and a datetime column 'PartitionDate' with the value '2019-01-01{{% /md %}}</dd><dt class="property-optional"
             title="Optional">
         <span id="path_python">
 <a href="#path_python" style="color: inherit; text-decoration: inherit;">path</a>
@@ -1326,8 +1191,7 @@ All [input](#inputs) properties are implicitly available as output properties. A
         <span class="property-indicator"></span>
         <span class="property-type"><a href="#datasetcreaterequestpath">Dataset<wbr>Create<wbr>Request<wbr>Path<wbr>Args</a></span>
     </dt>
-    <dd>{{% md %}}{{% /md %}}</dd>
-    <dt class="property-optional"
+    <dd>{{% md %}}{{% /md %}}</dd><dt class="property-optional"
             title="Optional">
         <span id="query_python">
 <a href="#query_python" style="color: inherit; text-decoration: inherit;">query</a>
@@ -1335,8 +1199,7 @@ All [input](#inputs) properties are implicitly available as output properties. A
         <span class="property-indicator"></span>
         <span class="property-type"><a href="#datasetcreaterequestquery">Dataset<wbr>Create<wbr>Request<wbr>Query<wbr>Args</a></span>
     </dt>
-    <dd>{{% md %}}{{% /md %}}</dd>
-    <dt class="property-optional"
+    <dd>{{% md %}}{{% /md %}}</dd><dt class="property-optional"
             title="Optional">
         <span id="separator_python">
 <a href="#separator_python" style="color: inherit; text-decoration: inherit;">separator</a>
@@ -1344,8 +1207,7 @@ All [input](#inputs) properties are implicitly available as output properties. A
         <span class="property-indicator"></span>
         <span class="property-type">str</span>
     </dt>
-    <dd>{{% md %}}The separator used to split columns for 'delimited_files' sourceType.{{% /md %}}</dd>
-    <dt class="property-optional"
+    <dd>{{% md %}}The separator used to split columns for 'delimited_files' sourceType.{{% /md %}}</dd><dt class="property-optional"
             title="Optional">
         <span id="source_type_python">
 <a href="#source_type_python" style="color: inherit; text-decoration: inherit;">source_<wbr>type</a>
@@ -1353,16 +1215,13 @@ All [input](#inputs) properties are implicitly available as output properties. A
         <span class="property-indicator"></span>
         <span class="property-type">str | <a href="#sourcetype">Source<wbr>Type</a></span>
     </dt>
-    <dd>{{% md %}}Data source type.{{% /md %}}</dd>
-</dl>
+    <dd>{{% md %}}Data source type.{{% /md %}}</dd></dl>
 {{% /choosable %}}
 
 <h4 id="datasetcreaterequestpath">Dataset<wbr>Create<wbr>Request<wbr>Path</h4>
 
 {{% choosable language csharp %}}
-<dl class="resources-properties">
-
-    <dt class="property-optional"
+<dl class="resources-properties"><dt class="property-optional"
             title="Optional">
         <span id="datapath_csharp">
 <a href="#datapath_csharp" style="color: inherit; text-decoration: inherit;">Data<wbr>Path</a>
@@ -1370,8 +1229,7 @@ All [input](#inputs) properties are implicitly available as output properties. A
         <span class="property-indicator"></span>
         <span class="property-type"><a href="#datasetcreaterequestdatapath">Pulumi.<wbr>Azure<wbr>Native.<wbr>Machine<wbr>Learning<wbr>Services.<wbr>Inputs.<wbr>Dataset<wbr>Create<wbr>Request<wbr>Data<wbr>Path<wbr>Args</a></span>
     </dt>
-    <dd>{{% md %}}{{% /md %}}</dd>
-    <dt class="property-optional"
+    <dd>{{% md %}}{{% /md %}}</dd><dt class="property-optional"
             title="Optional">
         <span id="httpurl_csharp">
 <a href="#httpurl_csharp" style="color: inherit; text-decoration: inherit;">Http<wbr>Url</a>
@@ -1379,14 +1237,11 @@ All [input](#inputs) properties are implicitly available as output properties. A
         <span class="property-indicator"></span>
         <span class="property-type">string</span>
     </dt>
-    <dd>{{% md %}}The Http URL.{{% /md %}}</dd>
-</dl>
+    <dd>{{% md %}}The Http URL.{{% /md %}}</dd></dl>
 {{% /choosable %}}
 
 {{% choosable language go %}}
-<dl class="resources-properties">
-
-    <dt class="property-optional"
+<dl class="resources-properties"><dt class="property-optional"
             title="Optional">
         <span id="datapath_go">
 <a href="#datapath_go" style="color: inherit; text-decoration: inherit;">Data<wbr>Path</a>
@@ -1394,8 +1249,7 @@ All [input](#inputs) properties are implicitly available as output properties. A
         <span class="property-indicator"></span>
         <span class="property-type"><a href="#datasetcreaterequestdatapath">Dataset<wbr>Create<wbr>Request<wbr>Data<wbr>Path</a></span>
     </dt>
-    <dd>{{% md %}}{{% /md %}}</dd>
-    <dt class="property-optional"
+    <dd>{{% md %}}{{% /md %}}</dd><dt class="property-optional"
             title="Optional">
         <span id="httpurl_go">
 <a href="#httpurl_go" style="color: inherit; text-decoration: inherit;">Http<wbr>Url</a>
@@ -1403,14 +1257,11 @@ All [input](#inputs) properties are implicitly available as output properties. A
         <span class="property-indicator"></span>
         <span class="property-type">string</span>
     </dt>
-    <dd>{{% md %}}The Http URL.{{% /md %}}</dd>
-</dl>
+    <dd>{{% md %}}The Http URL.{{% /md %}}</dd></dl>
 {{% /choosable %}}
 
 {{% choosable language nodejs %}}
-<dl class="resources-properties">
-
-    <dt class="property-optional"
+<dl class="resources-properties"><dt class="property-optional"
             title="Optional">
         <span id="datapath_nodejs">
 <a href="#datapath_nodejs" style="color: inherit; text-decoration: inherit;">data<wbr>Path</a>
@@ -1418,8 +1269,7 @@ All [input](#inputs) properties are implicitly available as output properties. A
         <span class="property-indicator"></span>
         <span class="property-type"><a href="#datasetcreaterequestdatapath">Dataset<wbr>Create<wbr>Request<wbr>Data<wbr>Path</a></span>
     </dt>
-    <dd>{{% md %}}{{% /md %}}</dd>
-    <dt class="property-optional"
+    <dd>{{% md %}}{{% /md %}}</dd><dt class="property-optional"
             title="Optional">
         <span id="httpurl_nodejs">
 <a href="#httpurl_nodejs" style="color: inherit; text-decoration: inherit;">http<wbr>Url</a>
@@ -1427,14 +1277,11 @@ All [input](#inputs) properties are implicitly available as output properties. A
         <span class="property-indicator"></span>
         <span class="property-type">string</span>
     </dt>
-    <dd>{{% md %}}The Http URL.{{% /md %}}</dd>
-</dl>
+    <dd>{{% md %}}The Http URL.{{% /md %}}</dd></dl>
 {{% /choosable %}}
 
 {{% choosable language python %}}
-<dl class="resources-properties">
-
-    <dt class="property-optional"
+<dl class="resources-properties"><dt class="property-optional"
             title="Optional">
         <span id="data_path_python">
 <a href="#data_path_python" style="color: inherit; text-decoration: inherit;">data_<wbr>path</a>
@@ -1442,8 +1289,7 @@ All [input](#inputs) properties are implicitly available as output properties. A
         <span class="property-indicator"></span>
         <span class="property-type"><a href="#datasetcreaterequestdatapath">Dataset<wbr>Create<wbr>Request<wbr>Data<wbr>Path<wbr>Args</a></span>
     </dt>
-    <dd>{{% md %}}{{% /md %}}</dd>
-    <dt class="property-optional"
+    <dd>{{% md %}}{{% /md %}}</dd><dt class="property-optional"
             title="Optional">
         <span id="http_url_python">
 <a href="#http_url_python" style="color: inherit; text-decoration: inherit;">http_<wbr>url</a>
@@ -1451,16 +1297,13 @@ All [input](#inputs) properties are implicitly available as output properties. A
         <span class="property-indicator"></span>
         <span class="property-type">str</span>
     </dt>
-    <dd>{{% md %}}The Http URL.{{% /md %}}</dd>
-</dl>
+    <dd>{{% md %}}The Http URL.{{% /md %}}</dd></dl>
 {{% /choosable %}}
 
 <h4 id="datasetcreaterequestquery">Dataset<wbr>Create<wbr>Request<wbr>Query</h4>
 
 {{% choosable language csharp %}}
-<dl class="resources-properties">
-
-    <dt class="property-optional"
+<dl class="resources-properties"><dt class="property-optional"
             title="Optional">
         <span id="datastorename_csharp">
 <a href="#datastorename_csharp" style="color: inherit; text-decoration: inherit;">Datastore<wbr>Name</a>
@@ -1468,8 +1311,7 @@ All [input](#inputs) properties are implicitly available as output properties. A
         <span class="property-indicator"></span>
         <span class="property-type">string</span>
     </dt>
-    <dd>{{% md %}}The SQL/PostgreSQL/MySQL datastore name.{{% /md %}}</dd>
-    <dt class="property-optional"
+    <dd>{{% md %}}The SQL/PostgreSQL/MySQL datastore name.{{% /md %}}</dd><dt class="property-optional"
             title="Optional">
         <span id="query_csharp">
 <a href="#query_csharp" style="color: inherit; text-decoration: inherit;">Query</a>
@@ -1477,14 +1319,11 @@ All [input](#inputs) properties are implicitly available as output properties. A
         <span class="property-indicator"></span>
         <span class="property-type">string</span>
     </dt>
-    <dd>{{% md %}}SQL Quey.{{% /md %}}</dd>
-</dl>
+    <dd>{{% md %}}SQL Quey.{{% /md %}}</dd></dl>
 {{% /choosable %}}
 
 {{% choosable language go %}}
-<dl class="resources-properties">
-
-    <dt class="property-optional"
+<dl class="resources-properties"><dt class="property-optional"
             title="Optional">
         <span id="datastorename_go">
 <a href="#datastorename_go" style="color: inherit; text-decoration: inherit;">Datastore<wbr>Name</a>
@@ -1492,8 +1331,7 @@ All [input](#inputs) properties are implicitly available as output properties. A
         <span class="property-indicator"></span>
         <span class="property-type">string</span>
     </dt>
-    <dd>{{% md %}}The SQL/PostgreSQL/MySQL datastore name.{{% /md %}}</dd>
-    <dt class="property-optional"
+    <dd>{{% md %}}The SQL/PostgreSQL/MySQL datastore name.{{% /md %}}</dd><dt class="property-optional"
             title="Optional">
         <span id="query_go">
 <a href="#query_go" style="color: inherit; text-decoration: inherit;">Query</a>
@@ -1501,14 +1339,11 @@ All [input](#inputs) properties are implicitly available as output properties. A
         <span class="property-indicator"></span>
         <span class="property-type">string</span>
     </dt>
-    <dd>{{% md %}}SQL Quey.{{% /md %}}</dd>
-</dl>
+    <dd>{{% md %}}SQL Quey.{{% /md %}}</dd></dl>
 {{% /choosable %}}
 
 {{% choosable language nodejs %}}
-<dl class="resources-properties">
-
-    <dt class="property-optional"
+<dl class="resources-properties"><dt class="property-optional"
             title="Optional">
         <span id="datastorename_nodejs">
 <a href="#datastorename_nodejs" style="color: inherit; text-decoration: inherit;">datastore<wbr>Name</a>
@@ -1516,8 +1351,7 @@ All [input](#inputs) properties are implicitly available as output properties. A
         <span class="property-indicator"></span>
         <span class="property-type">string</span>
     </dt>
-    <dd>{{% md %}}The SQL/PostgreSQL/MySQL datastore name.{{% /md %}}</dd>
-    <dt class="property-optional"
+    <dd>{{% md %}}The SQL/PostgreSQL/MySQL datastore name.{{% /md %}}</dd><dt class="property-optional"
             title="Optional">
         <span id="query_nodejs">
 <a href="#query_nodejs" style="color: inherit; text-decoration: inherit;">query</a>
@@ -1525,14 +1359,11 @@ All [input](#inputs) properties are implicitly available as output properties. A
         <span class="property-indicator"></span>
         <span class="property-type">string</span>
     </dt>
-    <dd>{{% md %}}SQL Quey.{{% /md %}}</dd>
-</dl>
+    <dd>{{% md %}}SQL Quey.{{% /md %}}</dd></dl>
 {{% /choosable %}}
 
 {{% choosable language python %}}
-<dl class="resources-properties">
-
-    <dt class="property-optional"
+<dl class="resources-properties"><dt class="property-optional"
             title="Optional">
         <span id="datastore_name_python">
 <a href="#datastore_name_python" style="color: inherit; text-decoration: inherit;">datastore_<wbr>name</a>
@@ -1540,8 +1371,7 @@ All [input](#inputs) properties are implicitly available as output properties. A
         <span class="property-indicator"></span>
         <span class="property-type">str</span>
     </dt>
-    <dd>{{% md %}}The SQL/PostgreSQL/MySQL datastore name.{{% /md %}}</dd>
-    <dt class="property-optional"
+    <dd>{{% md %}}The SQL/PostgreSQL/MySQL datastore name.{{% /md %}}</dd><dt class="property-optional"
             title="Optional">
         <span id="query_python">
 <a href="#query_python" style="color: inherit; text-decoration: inherit;">query</a>
@@ -1549,16 +1379,13 @@ All [input](#inputs) properties are implicitly available as output properties. A
         <span class="property-indicator"></span>
         <span class="property-type">str</span>
     </dt>
-    <dd>{{% md %}}SQL Quey.{{% /md %}}</dd>
-</dl>
+    <dd>{{% md %}}SQL Quey.{{% /md %}}</dd></dl>
 {{% /choosable %}}
 
 <h4 id="datasetcreaterequestregistration">Dataset<wbr>Create<wbr>Request<wbr>Registration</h4>
 
 {{% choosable language csharp %}}
-<dl class="resources-properties">
-
-    <dt class="property-optional"
+<dl class="resources-properties"><dt class="property-optional"
             title="Optional">
         <span id="description_csharp">
 <a href="#description_csharp" style="color: inherit; text-decoration: inherit;">Description</a>
@@ -1566,8 +1393,7 @@ All [input](#inputs) properties are implicitly available as output properties. A
         <span class="property-indicator"></span>
         <span class="property-type">string</span>
     </dt>
-    <dd>{{% md %}}The description for the dataset.{{% /md %}}</dd>
-    <dt class="property-optional"
+    <dd>{{% md %}}The description for the dataset.{{% /md %}}</dd><dt class="property-optional"
             title="Optional">
         <span id="name_csharp">
 <a href="#name_csharp" style="color: inherit; text-decoration: inherit;">Name</a>
@@ -1575,8 +1401,7 @@ All [input](#inputs) properties are implicitly available as output properties. A
         <span class="property-indicator"></span>
         <span class="property-type">string</span>
     </dt>
-    <dd>{{% md %}}The name of the dataset.{{% /md %}}</dd>
-    <dt class="property-optional"
+    <dd>{{% md %}}The name of the dataset.{{% /md %}}</dd><dt class="property-optional"
             title="Optional">
         <span id="tags_csharp">
 <a href="#tags_csharp" style="color: inherit; text-decoration: inherit;">Tags</a>
@@ -1584,14 +1409,11 @@ All [input](#inputs) properties are implicitly available as output properties. A
         <span class="property-indicator"></span>
         <span class="property-type">Dictionary&lt;string, string&gt;</span>
     </dt>
-    <dd>{{% md %}}Tags associated with the dataset.{{% /md %}}</dd>
-</dl>
+    <dd>{{% md %}}Tags associated with the dataset.{{% /md %}}</dd></dl>
 {{% /choosable %}}
 
 {{% choosable language go %}}
-<dl class="resources-properties">
-
-    <dt class="property-optional"
+<dl class="resources-properties"><dt class="property-optional"
             title="Optional">
         <span id="description_go">
 <a href="#description_go" style="color: inherit; text-decoration: inherit;">Description</a>
@@ -1599,8 +1421,7 @@ All [input](#inputs) properties are implicitly available as output properties. A
         <span class="property-indicator"></span>
         <span class="property-type">string</span>
     </dt>
-    <dd>{{% md %}}The description for the dataset.{{% /md %}}</dd>
-    <dt class="property-optional"
+    <dd>{{% md %}}The description for the dataset.{{% /md %}}</dd><dt class="property-optional"
             title="Optional">
         <span id="name_go">
 <a href="#name_go" style="color: inherit; text-decoration: inherit;">Name</a>
@@ -1608,8 +1429,7 @@ All [input](#inputs) properties are implicitly available as output properties. A
         <span class="property-indicator"></span>
         <span class="property-type">string</span>
     </dt>
-    <dd>{{% md %}}The name of the dataset.{{% /md %}}</dd>
-    <dt class="property-optional"
+    <dd>{{% md %}}The name of the dataset.{{% /md %}}</dd><dt class="property-optional"
             title="Optional">
         <span id="tags_go">
 <a href="#tags_go" style="color: inherit; text-decoration: inherit;">Tags</a>
@@ -1617,14 +1437,11 @@ All [input](#inputs) properties are implicitly available as output properties. A
         <span class="property-indicator"></span>
         <span class="property-type">map[string]string</span>
     </dt>
-    <dd>{{% md %}}Tags associated with the dataset.{{% /md %}}</dd>
-</dl>
+    <dd>{{% md %}}Tags associated with the dataset.{{% /md %}}</dd></dl>
 {{% /choosable %}}
 
 {{% choosable language nodejs %}}
-<dl class="resources-properties">
-
-    <dt class="property-optional"
+<dl class="resources-properties"><dt class="property-optional"
             title="Optional">
         <span id="description_nodejs">
 <a href="#description_nodejs" style="color: inherit; text-decoration: inherit;">description</a>
@@ -1632,8 +1449,7 @@ All [input](#inputs) properties are implicitly available as output properties. A
         <span class="property-indicator"></span>
         <span class="property-type">string</span>
     </dt>
-    <dd>{{% md %}}The description for the dataset.{{% /md %}}</dd>
-    <dt class="property-optional"
+    <dd>{{% md %}}The description for the dataset.{{% /md %}}</dd><dt class="property-optional"
             title="Optional">
         <span id="name_nodejs">
 <a href="#name_nodejs" style="color: inherit; text-decoration: inherit;">name</a>
@@ -1641,8 +1457,7 @@ All [input](#inputs) properties are implicitly available as output properties. A
         <span class="property-indicator"></span>
         <span class="property-type">string</span>
     </dt>
-    <dd>{{% md %}}The name of the dataset.{{% /md %}}</dd>
-    <dt class="property-optional"
+    <dd>{{% md %}}The name of the dataset.{{% /md %}}</dd><dt class="property-optional"
             title="Optional">
         <span id="tags_nodejs">
 <a href="#tags_nodejs" style="color: inherit; text-decoration: inherit;">tags</a>
@@ -1650,14 +1465,11 @@ All [input](#inputs) properties are implicitly available as output properties. A
         <span class="property-indicator"></span>
         <span class="property-type">{[key: string]: string}</span>
     </dt>
-    <dd>{{% md %}}Tags associated with the dataset.{{% /md %}}</dd>
-</dl>
+    <dd>{{% md %}}Tags associated with the dataset.{{% /md %}}</dd></dl>
 {{% /choosable %}}
 
 {{% choosable language python %}}
-<dl class="resources-properties">
-
-    <dt class="property-optional"
+<dl class="resources-properties"><dt class="property-optional"
             title="Optional">
         <span id="description_python">
 <a href="#description_python" style="color: inherit; text-decoration: inherit;">description</a>
@@ -1665,8 +1477,7 @@ All [input](#inputs) properties are implicitly available as output properties. A
         <span class="property-indicator"></span>
         <span class="property-type">str</span>
     </dt>
-    <dd>{{% md %}}The description for the dataset.{{% /md %}}</dd>
-    <dt class="property-optional"
+    <dd>{{% md %}}The description for the dataset.{{% /md %}}</dd><dt class="property-optional"
             title="Optional">
         <span id="name_python">
 <a href="#name_python" style="color: inherit; text-decoration: inherit;">name</a>
@@ -1674,8 +1485,7 @@ All [input](#inputs) properties are implicitly available as output properties. A
         <span class="property-indicator"></span>
         <span class="property-type">str</span>
     </dt>
-    <dd>{{% md %}}The name of the dataset.{{% /md %}}</dd>
-    <dt class="property-optional"
+    <dd>{{% md %}}The name of the dataset.{{% /md %}}</dd><dt class="property-optional"
             title="Optional">
         <span id="tags_python">
 <a href="#tags_python" style="color: inherit; text-decoration: inherit;">tags</a>
@@ -1683,16 +1493,13 @@ All [input](#inputs) properties are implicitly available as output properties. A
         <span class="property-indicator"></span>
         <span class="property-type">Mapping[str, str]</span>
     </dt>
-    <dd>{{% md %}}Tags associated with the dataset.{{% /md %}}</dd>
-</dl>
+    <dd>{{% md %}}Tags associated with the dataset.{{% /md %}}</dd></dl>
 {{% /choosable %}}
 
 <h4 id="datasetcreaterequesttimeseries">Dataset<wbr>Create<wbr>Request<wbr>Time<wbr>Series</h4>
 
 {{% choosable language csharp %}}
-<dl class="resources-properties">
-
-    <dt class="property-optional"
+<dl class="resources-properties"><dt class="property-optional"
             title="Optional">
         <span id="coarsegraintimestamp_csharp">
 <a href="#coarsegraintimestamp_csharp" style="color: inherit; text-decoration: inherit;">Coarse<wbr>Grain<wbr>Timestamp</a>
@@ -1700,8 +1507,7 @@ All [input](#inputs) properties are implicitly available as output properties. A
         <span class="property-indicator"></span>
         <span class="property-type">string</span>
     </dt>
-    <dd>{{% md %}}Column name to be used as CoarseGrainTimestamp. Can only be used if 'fineGrainTimestamp' is specified and cannot be same as 'fineGrainTimestamp'.{{% /md %}}</dd>
-    <dt class="property-optional"
+    <dd>{{% md %}}Column name to be used as CoarseGrainTimestamp. Can only be used if 'fineGrainTimestamp' is specified and cannot be same as 'fineGrainTimestamp'.{{% /md %}}</dd><dt class="property-optional"
             title="Optional">
         <span id="finegraintimestamp_csharp">
 <a href="#finegraintimestamp_csharp" style="color: inherit; text-decoration: inherit;">Fine<wbr>Grain<wbr>Timestamp</a>
@@ -1709,14 +1515,11 @@ All [input](#inputs) properties are implicitly available as output properties. A
         <span class="property-indicator"></span>
         <span class="property-type">string</span>
     </dt>
-    <dd>{{% md %}} Column name to be used as FineGrainTimestamp{{% /md %}}</dd>
-</dl>
+    <dd>{{% md %}} Column name to be used as FineGrainTimestamp{{% /md %}}</dd></dl>
 {{% /choosable %}}
 
 {{% choosable language go %}}
-<dl class="resources-properties">
-
-    <dt class="property-optional"
+<dl class="resources-properties"><dt class="property-optional"
             title="Optional">
         <span id="coarsegraintimestamp_go">
 <a href="#coarsegraintimestamp_go" style="color: inherit; text-decoration: inherit;">Coarse<wbr>Grain<wbr>Timestamp</a>
@@ -1724,8 +1527,7 @@ All [input](#inputs) properties are implicitly available as output properties. A
         <span class="property-indicator"></span>
         <span class="property-type">string</span>
     </dt>
-    <dd>{{% md %}}Column name to be used as CoarseGrainTimestamp. Can only be used if 'fineGrainTimestamp' is specified and cannot be same as 'fineGrainTimestamp'.{{% /md %}}</dd>
-    <dt class="property-optional"
+    <dd>{{% md %}}Column name to be used as CoarseGrainTimestamp. Can only be used if 'fineGrainTimestamp' is specified and cannot be same as 'fineGrainTimestamp'.{{% /md %}}</dd><dt class="property-optional"
             title="Optional">
         <span id="finegraintimestamp_go">
 <a href="#finegraintimestamp_go" style="color: inherit; text-decoration: inherit;">Fine<wbr>Grain<wbr>Timestamp</a>
@@ -1733,14 +1535,11 @@ All [input](#inputs) properties are implicitly available as output properties. A
         <span class="property-indicator"></span>
         <span class="property-type">string</span>
     </dt>
-    <dd>{{% md %}} Column name to be used as FineGrainTimestamp{{% /md %}}</dd>
-</dl>
+    <dd>{{% md %}} Column name to be used as FineGrainTimestamp{{% /md %}}</dd></dl>
 {{% /choosable %}}
 
 {{% choosable language nodejs %}}
-<dl class="resources-properties">
-
-    <dt class="property-optional"
+<dl class="resources-properties"><dt class="property-optional"
             title="Optional">
         <span id="coarsegraintimestamp_nodejs">
 <a href="#coarsegraintimestamp_nodejs" style="color: inherit; text-decoration: inherit;">coarse<wbr>Grain<wbr>Timestamp</a>
@@ -1748,8 +1547,7 @@ All [input](#inputs) properties are implicitly available as output properties. A
         <span class="property-indicator"></span>
         <span class="property-type">string</span>
     </dt>
-    <dd>{{% md %}}Column name to be used as CoarseGrainTimestamp. Can only be used if 'fineGrainTimestamp' is specified and cannot be same as 'fineGrainTimestamp'.{{% /md %}}</dd>
-    <dt class="property-optional"
+    <dd>{{% md %}}Column name to be used as CoarseGrainTimestamp. Can only be used if 'fineGrainTimestamp' is specified and cannot be same as 'fineGrainTimestamp'.{{% /md %}}</dd><dt class="property-optional"
             title="Optional">
         <span id="finegraintimestamp_nodejs">
 <a href="#finegraintimestamp_nodejs" style="color: inherit; text-decoration: inherit;">fine<wbr>Grain<wbr>Timestamp</a>
@@ -1757,14 +1555,11 @@ All [input](#inputs) properties are implicitly available as output properties. A
         <span class="property-indicator"></span>
         <span class="property-type">string</span>
     </dt>
-    <dd>{{% md %}} Column name to be used as FineGrainTimestamp{{% /md %}}</dd>
-</dl>
+    <dd>{{% md %}} Column name to be used as FineGrainTimestamp{{% /md %}}</dd></dl>
 {{% /choosable %}}
 
 {{% choosable language python %}}
-<dl class="resources-properties">
-
-    <dt class="property-optional"
+<dl class="resources-properties"><dt class="property-optional"
             title="Optional">
         <span id="coarse_grain_timestamp_python">
 <a href="#coarse_grain_timestamp_python" style="color: inherit; text-decoration: inherit;">coarse_<wbr>grain_<wbr>timestamp</a>
@@ -1772,8 +1567,7 @@ All [input](#inputs) properties are implicitly available as output properties. A
         <span class="property-indicator"></span>
         <span class="property-type">str</span>
     </dt>
-    <dd>{{% md %}}Column name to be used as CoarseGrainTimestamp. Can only be used if 'fineGrainTimestamp' is specified and cannot be same as 'fineGrainTimestamp'.{{% /md %}}</dd>
-    <dt class="property-optional"
+    <dd>{{% md %}}Column name to be used as CoarseGrainTimestamp. Can only be used if 'fineGrainTimestamp' is specified and cannot be same as 'fineGrainTimestamp'.{{% /md %}}</dd><dt class="property-optional"
             title="Optional">
         <span id="fine_grain_timestamp_python">
 <a href="#fine_grain_timestamp_python" style="color: inherit; text-decoration: inherit;">fine_<wbr>grain_<wbr>timestamp</a>
@@ -1781,16 +1575,13 @@ All [input](#inputs) properties are implicitly available as output properties. A
         <span class="property-indicator"></span>
         <span class="property-type">str</span>
     </dt>
-    <dd>{{% md %}} Column name to be used as FineGrainTimestamp{{% /md %}}</dd>
-</dl>
+    <dd>{{% md %}} Column name to be used as FineGrainTimestamp{{% /md %}}</dd></dl>
 {{% /choosable %}}
 
 <h4 id="datasetresponse">Dataset<wbr>Response</h4>
 
 {{% choosable language csharp %}}
-<dl class="resources-properties">
-
-    <dt class="property-required"
+<dl class="resources-properties"><dt class="property-required"
             title="Required">
         <span id="createdtime_csharp">
 <a href="#createdtime_csharp" style="color: inherit; text-decoration: inherit;">Created<wbr>Time</a>
@@ -1798,8 +1589,7 @@ All [input](#inputs) properties are implicitly available as output properties. A
         <span class="property-indicator"></span>
         <span class="property-type">string</span>
     </dt>
-    <dd>{{% md %}}The dataset creation time (UTC).{{% /md %}}</dd>
-    <dt class="property-required"
+    <dd>{{% md %}}The dataset creation time (UTC).{{% /md %}}</dd><dt class="property-required"
             title="Required">
         <span id="datasetid_csharp">
 <a href="#datasetid_csharp" style="color: inherit; text-decoration: inherit;">Dataset<wbr>Id</a>
@@ -1807,8 +1597,7 @@ All [input](#inputs) properties are implicitly available as output properties. A
         <span class="property-indicator"></span>
         <span class="property-type">string</span>
     </dt>
-    <dd>{{% md %}}Unique Dataset identifier.{{% /md %}}</dd>
-    <dt class="property-required"
+    <dd>{{% md %}}Unique Dataset identifier.{{% /md %}}</dd><dt class="property-required"
             title="Required">
         <span id="datasettype_csharp">
 <a href="#datasettype_csharp" style="color: inherit; text-decoration: inherit;">Dataset<wbr>Type</a>
@@ -1816,8 +1605,7 @@ All [input](#inputs) properties are implicitly available as output properties. A
         <span class="property-indicator"></span>
         <span class="property-type">string</span>
     </dt>
-    <dd>{{% md %}}Dataset Type.{{% /md %}}</dd>
-    <dt class="property-required"
+    <dd>{{% md %}}Dataset Type.{{% /md %}}</dd><dt class="property-required"
             title="Required">
         <span id="defaultcompute_csharp">
 <a href="#defaultcompute_csharp" style="color: inherit; text-decoration: inherit;">Default<wbr>Compute</a>
@@ -1825,8 +1613,7 @@ All [input](#inputs) properties are implicitly available as output properties. A
         <span class="property-indicator"></span>
         <span class="property-type">string</span>
     </dt>
-    <dd>{{% md %}}Name of the default compute to be used for any Dataset actions (such as Profile, Write).{{% /md %}}</dd>
-    <dt class="property-required"
+    <dd>{{% md %}}Name of the default compute to be used for any Dataset actions (such as Profile, Write).{{% /md %}}</dd><dt class="property-required"
             title="Required">
         <span id="description_csharp">
 <a href="#description_csharp" style="color: inherit; text-decoration: inherit;">Description</a>
@@ -1834,8 +1621,7 @@ All [input](#inputs) properties are implicitly available as output properties. A
         <span class="property-indicator"></span>
         <span class="property-type">string</span>
     </dt>
-    <dd>{{% md %}}Description about this dataset version.{{% /md %}}</dd>
-    <dt class="property-required"
+    <dd>{{% md %}}Description about this dataset version.{{% /md %}}</dd><dt class="property-required"
             title="Required">
         <span id="etag_csharp">
 <a href="#etag_csharp" style="color: inherit; text-decoration: inherit;">Etag</a>
@@ -1843,8 +1629,7 @@ All [input](#inputs) properties are implicitly available as output properties. A
         <span class="property-indicator"></span>
         <span class="property-type">string</span>
     </dt>
-    <dd>{{% md %}}eTag description{{% /md %}}</dd>
-    <dt class="property-required"
+    <dd>{{% md %}}eTag description{{% /md %}}</dd><dt class="property-required"
             title="Required">
         <span id="isvisible_csharp">
 <a href="#isvisible_csharp" style="color: inherit; text-decoration: inherit;">Is<wbr>Visible</a>
@@ -1852,8 +1637,7 @@ All [input](#inputs) properties are implicitly available as output properties. A
         <span class="property-indicator"></span>
         <span class="property-type">bool</span>
     </dt>
-    <dd>{{% md %}}Flag to hide Dataset in UI{{% /md %}}</dd>
-    <dt class="property-required"
+    <dd>{{% md %}}Flag to hide Dataset in UI{{% /md %}}</dd><dt class="property-required"
             title="Required">
         <span id="modifiedtime_csharp">
 <a href="#modifiedtime_csharp" style="color: inherit; text-decoration: inherit;">Modified<wbr>Time</a>
@@ -1861,8 +1645,7 @@ All [input](#inputs) properties are implicitly available as output properties. A
         <span class="property-indicator"></span>
         <span class="property-type">string</span>
     </dt>
-    <dd>{{% md %}}The dataset last modified time (UTC).{{% /md %}}</dd>
-    <dt class="property-required"
+    <dd>{{% md %}}The dataset last modified time (UTC).{{% /md %}}</dd><dt class="property-required"
             title="Required">
         <span id="name_csharp">
 <a href="#name_csharp" style="color: inherit; text-decoration: inherit;">Name</a>
@@ -1870,8 +1653,7 @@ All [input](#inputs) properties are implicitly available as output properties. A
         <span class="property-indicator"></span>
         <span class="property-type">string</span>
     </dt>
-    <dd>{{% md %}}Unique dataset name{{% /md %}}</dd>
-    <dt class="property-required"
+    <dd>{{% md %}}Unique dataset name{{% /md %}}</dd><dt class="property-required"
             title="Required">
         <span id="tags_csharp">
 <a href="#tags_csharp" style="color: inherit; text-decoration: inherit;">Tags</a>
@@ -1879,8 +1661,7 @@ All [input](#inputs) properties are implicitly available as output properties. A
         <span class="property-indicator"></span>
         <span class="property-type">Dictionary&lt;string, string&gt;</span>
     </dt>
-    <dd>{{% md %}}Tags for this dataset version.{{% /md %}}</dd>
-    <dt class="property-optional"
+    <dd>{{% md %}}Tags for this dataset version.{{% /md %}}</dd><dt class="property-optional"
             title="Optional">
         <span id="datasetstate_csharp">
 <a href="#datasetstate_csharp" style="color: inherit; text-decoration: inherit;">Dataset<wbr>State</a>
@@ -1888,8 +1669,7 @@ All [input](#inputs) properties are implicitly available as output properties. A
         <span class="property-indicator"></span>
         <span class="property-type"><a href="#datasetstateresponse">Pulumi.<wbr>Azure<wbr>Native.<wbr>Machine<wbr>Learning<wbr>Services.<wbr>Inputs.<wbr>Dataset<wbr>State<wbr>Response<wbr>Args</a></span>
     </dt>
-    <dd>{{% md %}}Dataset state{{% /md %}}</dd>
-    <dt class="property-optional"
+    <dd>{{% md %}}Dataset state{{% /md %}}</dd><dt class="property-optional"
             title="Optional">
         <span id="latest_csharp">
 <a href="#latest_csharp" style="color: inherit; text-decoration: inherit;">Latest</a>
@@ -1897,14 +1677,11 @@ All [input](#inputs) properties are implicitly available as output properties. A
         <span class="property-indicator"></span>
         <span class="property-type"><a href="#datasetresponselatest">Pulumi.<wbr>Azure<wbr>Native.<wbr>Machine<wbr>Learning<wbr>Services.<wbr>Inputs.<wbr>Dataset<wbr>Response<wbr>Latest<wbr>Args</a></span>
     </dt>
-    <dd>{{% md %}}Last created Dataset definition.{{% /md %}}</dd>
-</dl>
+    <dd>{{% md %}}Last created Dataset definition.{{% /md %}}</dd></dl>
 {{% /choosable %}}
 
 {{% choosable language go %}}
-<dl class="resources-properties">
-
-    <dt class="property-required"
+<dl class="resources-properties"><dt class="property-required"
             title="Required">
         <span id="createdtime_go">
 <a href="#createdtime_go" style="color: inherit; text-decoration: inherit;">Created<wbr>Time</a>
@@ -1912,8 +1689,7 @@ All [input](#inputs) properties are implicitly available as output properties. A
         <span class="property-indicator"></span>
         <span class="property-type">string</span>
     </dt>
-    <dd>{{% md %}}The dataset creation time (UTC).{{% /md %}}</dd>
-    <dt class="property-required"
+    <dd>{{% md %}}The dataset creation time (UTC).{{% /md %}}</dd><dt class="property-required"
             title="Required">
         <span id="datasetid_go">
 <a href="#datasetid_go" style="color: inherit; text-decoration: inherit;">Dataset<wbr>Id</a>
@@ -1921,8 +1697,7 @@ All [input](#inputs) properties are implicitly available as output properties. A
         <span class="property-indicator"></span>
         <span class="property-type">string</span>
     </dt>
-    <dd>{{% md %}}Unique Dataset identifier.{{% /md %}}</dd>
-    <dt class="property-required"
+    <dd>{{% md %}}Unique Dataset identifier.{{% /md %}}</dd><dt class="property-required"
             title="Required">
         <span id="datasettype_go">
 <a href="#datasettype_go" style="color: inherit; text-decoration: inherit;">Dataset<wbr>Type</a>
@@ -1930,8 +1705,7 @@ All [input](#inputs) properties are implicitly available as output properties. A
         <span class="property-indicator"></span>
         <span class="property-type">string</span>
     </dt>
-    <dd>{{% md %}}Dataset Type.{{% /md %}}</dd>
-    <dt class="property-required"
+    <dd>{{% md %}}Dataset Type.{{% /md %}}</dd><dt class="property-required"
             title="Required">
         <span id="defaultcompute_go">
 <a href="#defaultcompute_go" style="color: inherit; text-decoration: inherit;">Default<wbr>Compute</a>
@@ -1939,8 +1713,7 @@ All [input](#inputs) properties are implicitly available as output properties. A
         <span class="property-indicator"></span>
         <span class="property-type">string</span>
     </dt>
-    <dd>{{% md %}}Name of the default compute to be used for any Dataset actions (such as Profile, Write).{{% /md %}}</dd>
-    <dt class="property-required"
+    <dd>{{% md %}}Name of the default compute to be used for any Dataset actions (such as Profile, Write).{{% /md %}}</dd><dt class="property-required"
             title="Required">
         <span id="description_go">
 <a href="#description_go" style="color: inherit; text-decoration: inherit;">Description</a>
@@ -1948,8 +1721,7 @@ All [input](#inputs) properties are implicitly available as output properties. A
         <span class="property-indicator"></span>
         <span class="property-type">string</span>
     </dt>
-    <dd>{{% md %}}Description about this dataset version.{{% /md %}}</dd>
-    <dt class="property-required"
+    <dd>{{% md %}}Description about this dataset version.{{% /md %}}</dd><dt class="property-required"
             title="Required">
         <span id="etag_go">
 <a href="#etag_go" style="color: inherit; text-decoration: inherit;">Etag</a>
@@ -1957,8 +1729,7 @@ All [input](#inputs) properties are implicitly available as output properties. A
         <span class="property-indicator"></span>
         <span class="property-type">string</span>
     </dt>
-    <dd>{{% md %}}eTag description{{% /md %}}</dd>
-    <dt class="property-required"
+    <dd>{{% md %}}eTag description{{% /md %}}</dd><dt class="property-required"
             title="Required">
         <span id="isvisible_go">
 <a href="#isvisible_go" style="color: inherit; text-decoration: inherit;">Is<wbr>Visible</a>
@@ -1966,8 +1737,7 @@ All [input](#inputs) properties are implicitly available as output properties. A
         <span class="property-indicator"></span>
         <span class="property-type">bool</span>
     </dt>
-    <dd>{{% md %}}Flag to hide Dataset in UI{{% /md %}}</dd>
-    <dt class="property-required"
+    <dd>{{% md %}}Flag to hide Dataset in UI{{% /md %}}</dd><dt class="property-required"
             title="Required">
         <span id="modifiedtime_go">
 <a href="#modifiedtime_go" style="color: inherit; text-decoration: inherit;">Modified<wbr>Time</a>
@@ -1975,8 +1745,7 @@ All [input](#inputs) properties are implicitly available as output properties. A
         <span class="property-indicator"></span>
         <span class="property-type">string</span>
     </dt>
-    <dd>{{% md %}}The dataset last modified time (UTC).{{% /md %}}</dd>
-    <dt class="property-required"
+    <dd>{{% md %}}The dataset last modified time (UTC).{{% /md %}}</dd><dt class="property-required"
             title="Required">
         <span id="name_go">
 <a href="#name_go" style="color: inherit; text-decoration: inherit;">Name</a>
@@ -1984,8 +1753,7 @@ All [input](#inputs) properties are implicitly available as output properties. A
         <span class="property-indicator"></span>
         <span class="property-type">string</span>
     </dt>
-    <dd>{{% md %}}Unique dataset name{{% /md %}}</dd>
-    <dt class="property-required"
+    <dd>{{% md %}}Unique dataset name{{% /md %}}</dd><dt class="property-required"
             title="Required">
         <span id="tags_go">
 <a href="#tags_go" style="color: inherit; text-decoration: inherit;">Tags</a>
@@ -1993,8 +1761,7 @@ All [input](#inputs) properties are implicitly available as output properties. A
         <span class="property-indicator"></span>
         <span class="property-type">map[string]string</span>
     </dt>
-    <dd>{{% md %}}Tags for this dataset version.{{% /md %}}</dd>
-    <dt class="property-optional"
+    <dd>{{% md %}}Tags for this dataset version.{{% /md %}}</dd><dt class="property-optional"
             title="Optional">
         <span id="datasetstate_go">
 <a href="#datasetstate_go" style="color: inherit; text-decoration: inherit;">Dataset<wbr>State</a>
@@ -2002,8 +1769,7 @@ All [input](#inputs) properties are implicitly available as output properties. A
         <span class="property-indicator"></span>
         <span class="property-type"><a href="#datasetstateresponse">Dataset<wbr>State<wbr>Response</a></span>
     </dt>
-    <dd>{{% md %}}Dataset state{{% /md %}}</dd>
-    <dt class="property-optional"
+    <dd>{{% md %}}Dataset state{{% /md %}}</dd><dt class="property-optional"
             title="Optional">
         <span id="latest_go">
 <a href="#latest_go" style="color: inherit; text-decoration: inherit;">Latest</a>
@@ -2011,14 +1777,11 @@ All [input](#inputs) properties are implicitly available as output properties. A
         <span class="property-indicator"></span>
         <span class="property-type"><a href="#datasetresponselatest">Dataset<wbr>Response<wbr>Latest</a></span>
     </dt>
-    <dd>{{% md %}}Last created Dataset definition.{{% /md %}}</dd>
-</dl>
+    <dd>{{% md %}}Last created Dataset definition.{{% /md %}}</dd></dl>
 {{% /choosable %}}
 
 {{% choosable language nodejs %}}
-<dl class="resources-properties">
-
-    <dt class="property-required"
+<dl class="resources-properties"><dt class="property-required"
             title="Required">
         <span id="createdtime_nodejs">
 <a href="#createdtime_nodejs" style="color: inherit; text-decoration: inherit;">created<wbr>Time</a>
@@ -2026,8 +1789,7 @@ All [input](#inputs) properties are implicitly available as output properties. A
         <span class="property-indicator"></span>
         <span class="property-type">string</span>
     </dt>
-    <dd>{{% md %}}The dataset creation time (UTC).{{% /md %}}</dd>
-    <dt class="property-required"
+    <dd>{{% md %}}The dataset creation time (UTC).{{% /md %}}</dd><dt class="property-required"
             title="Required">
         <span id="datasetid_nodejs">
 <a href="#datasetid_nodejs" style="color: inherit; text-decoration: inherit;">dataset<wbr>Id</a>
@@ -2035,8 +1797,7 @@ All [input](#inputs) properties are implicitly available as output properties. A
         <span class="property-indicator"></span>
         <span class="property-type">string</span>
     </dt>
-    <dd>{{% md %}}Unique Dataset identifier.{{% /md %}}</dd>
-    <dt class="property-required"
+    <dd>{{% md %}}Unique Dataset identifier.{{% /md %}}</dd><dt class="property-required"
             title="Required">
         <span id="datasettype_nodejs">
 <a href="#datasettype_nodejs" style="color: inherit; text-decoration: inherit;">dataset<wbr>Type</a>
@@ -2044,8 +1805,7 @@ All [input](#inputs) properties are implicitly available as output properties. A
         <span class="property-indicator"></span>
         <span class="property-type">string</span>
     </dt>
-    <dd>{{% md %}}Dataset Type.{{% /md %}}</dd>
-    <dt class="property-required"
+    <dd>{{% md %}}Dataset Type.{{% /md %}}</dd><dt class="property-required"
             title="Required">
         <span id="defaultcompute_nodejs">
 <a href="#defaultcompute_nodejs" style="color: inherit; text-decoration: inherit;">default<wbr>Compute</a>
@@ -2053,8 +1813,7 @@ All [input](#inputs) properties are implicitly available as output properties. A
         <span class="property-indicator"></span>
         <span class="property-type">string</span>
     </dt>
-    <dd>{{% md %}}Name of the default compute to be used for any Dataset actions (such as Profile, Write).{{% /md %}}</dd>
-    <dt class="property-required"
+    <dd>{{% md %}}Name of the default compute to be used for any Dataset actions (such as Profile, Write).{{% /md %}}</dd><dt class="property-required"
             title="Required">
         <span id="description_nodejs">
 <a href="#description_nodejs" style="color: inherit; text-decoration: inherit;">description</a>
@@ -2062,8 +1821,7 @@ All [input](#inputs) properties are implicitly available as output properties. A
         <span class="property-indicator"></span>
         <span class="property-type">string</span>
     </dt>
-    <dd>{{% md %}}Description about this dataset version.{{% /md %}}</dd>
-    <dt class="property-required"
+    <dd>{{% md %}}Description about this dataset version.{{% /md %}}</dd><dt class="property-required"
             title="Required">
         <span id="etag_nodejs">
 <a href="#etag_nodejs" style="color: inherit; text-decoration: inherit;">etag</a>
@@ -2071,8 +1829,7 @@ All [input](#inputs) properties are implicitly available as output properties. A
         <span class="property-indicator"></span>
         <span class="property-type">string</span>
     </dt>
-    <dd>{{% md %}}eTag description{{% /md %}}</dd>
-    <dt class="property-required"
+    <dd>{{% md %}}eTag description{{% /md %}}</dd><dt class="property-required"
             title="Required">
         <span id="isvisible_nodejs">
 <a href="#isvisible_nodejs" style="color: inherit; text-decoration: inherit;">is<wbr>Visible</a>
@@ -2080,8 +1837,7 @@ All [input](#inputs) properties are implicitly available as output properties. A
         <span class="property-indicator"></span>
         <span class="property-type">boolean</span>
     </dt>
-    <dd>{{% md %}}Flag to hide Dataset in UI{{% /md %}}</dd>
-    <dt class="property-required"
+    <dd>{{% md %}}Flag to hide Dataset in UI{{% /md %}}</dd><dt class="property-required"
             title="Required">
         <span id="modifiedtime_nodejs">
 <a href="#modifiedtime_nodejs" style="color: inherit; text-decoration: inherit;">modified<wbr>Time</a>
@@ -2089,8 +1845,7 @@ All [input](#inputs) properties are implicitly available as output properties. A
         <span class="property-indicator"></span>
         <span class="property-type">string</span>
     </dt>
-    <dd>{{% md %}}The dataset last modified time (UTC).{{% /md %}}</dd>
-    <dt class="property-required"
+    <dd>{{% md %}}The dataset last modified time (UTC).{{% /md %}}</dd><dt class="property-required"
             title="Required">
         <span id="name_nodejs">
 <a href="#name_nodejs" style="color: inherit; text-decoration: inherit;">name</a>
@@ -2098,8 +1853,7 @@ All [input](#inputs) properties are implicitly available as output properties. A
         <span class="property-indicator"></span>
         <span class="property-type">string</span>
     </dt>
-    <dd>{{% md %}}Unique dataset name{{% /md %}}</dd>
-    <dt class="property-required"
+    <dd>{{% md %}}Unique dataset name{{% /md %}}</dd><dt class="property-required"
             title="Required">
         <span id="tags_nodejs">
 <a href="#tags_nodejs" style="color: inherit; text-decoration: inherit;">tags</a>
@@ -2107,8 +1861,7 @@ All [input](#inputs) properties are implicitly available as output properties. A
         <span class="property-indicator"></span>
         <span class="property-type">{[key: string]: string}</span>
     </dt>
-    <dd>{{% md %}}Tags for this dataset version.{{% /md %}}</dd>
-    <dt class="property-optional"
+    <dd>{{% md %}}Tags for this dataset version.{{% /md %}}</dd><dt class="property-optional"
             title="Optional">
         <span id="datasetstate_nodejs">
 <a href="#datasetstate_nodejs" style="color: inherit; text-decoration: inherit;">dataset<wbr>State</a>
@@ -2116,8 +1869,7 @@ All [input](#inputs) properties are implicitly available as output properties. A
         <span class="property-indicator"></span>
         <span class="property-type"><a href="#datasetstateresponse">Dataset<wbr>State<wbr>Response</a></span>
     </dt>
-    <dd>{{% md %}}Dataset state{{% /md %}}</dd>
-    <dt class="property-optional"
+    <dd>{{% md %}}Dataset state{{% /md %}}</dd><dt class="property-optional"
             title="Optional">
         <span id="latest_nodejs">
 <a href="#latest_nodejs" style="color: inherit; text-decoration: inherit;">latest</a>
@@ -2125,14 +1877,11 @@ All [input](#inputs) properties are implicitly available as output properties. A
         <span class="property-indicator"></span>
         <span class="property-type"><a href="#datasetresponselatest">Dataset<wbr>Response<wbr>Latest</a></span>
     </dt>
-    <dd>{{% md %}}Last created Dataset definition.{{% /md %}}</dd>
-</dl>
+    <dd>{{% md %}}Last created Dataset definition.{{% /md %}}</dd></dl>
 {{% /choosable %}}
 
 {{% choosable language python %}}
-<dl class="resources-properties">
-
-    <dt class="property-required"
+<dl class="resources-properties"><dt class="property-required"
             title="Required">
         <span id="created_time_python">
 <a href="#created_time_python" style="color: inherit; text-decoration: inherit;">created_<wbr>time</a>
@@ -2140,8 +1889,7 @@ All [input](#inputs) properties are implicitly available as output properties. A
         <span class="property-indicator"></span>
         <span class="property-type">str</span>
     </dt>
-    <dd>{{% md %}}The dataset creation time (UTC).{{% /md %}}</dd>
-    <dt class="property-required"
+    <dd>{{% md %}}The dataset creation time (UTC).{{% /md %}}</dd><dt class="property-required"
             title="Required">
         <span id="dataset_id_python">
 <a href="#dataset_id_python" style="color: inherit; text-decoration: inherit;">dataset_<wbr>id</a>
@@ -2149,8 +1897,7 @@ All [input](#inputs) properties are implicitly available as output properties. A
         <span class="property-indicator"></span>
         <span class="property-type">str</span>
     </dt>
-    <dd>{{% md %}}Unique Dataset identifier.{{% /md %}}</dd>
-    <dt class="property-required"
+    <dd>{{% md %}}Unique Dataset identifier.{{% /md %}}</dd><dt class="property-required"
             title="Required">
         <span id="dataset_type_python">
 <a href="#dataset_type_python" style="color: inherit; text-decoration: inherit;">dataset_<wbr>type</a>
@@ -2158,8 +1905,7 @@ All [input](#inputs) properties are implicitly available as output properties. A
         <span class="property-indicator"></span>
         <span class="property-type">str</span>
     </dt>
-    <dd>{{% md %}}Dataset Type.{{% /md %}}</dd>
-    <dt class="property-required"
+    <dd>{{% md %}}Dataset Type.{{% /md %}}</dd><dt class="property-required"
             title="Required">
         <span id="default_compute_python">
 <a href="#default_compute_python" style="color: inherit; text-decoration: inherit;">default_<wbr>compute</a>
@@ -2167,8 +1913,7 @@ All [input](#inputs) properties are implicitly available as output properties. A
         <span class="property-indicator"></span>
         <span class="property-type">str</span>
     </dt>
-    <dd>{{% md %}}Name of the default compute to be used for any Dataset actions (such as Profile, Write).{{% /md %}}</dd>
-    <dt class="property-required"
+    <dd>{{% md %}}Name of the default compute to be used for any Dataset actions (such as Profile, Write).{{% /md %}}</dd><dt class="property-required"
             title="Required">
         <span id="description_python">
 <a href="#description_python" style="color: inherit; text-decoration: inherit;">description</a>
@@ -2176,8 +1921,7 @@ All [input](#inputs) properties are implicitly available as output properties. A
         <span class="property-indicator"></span>
         <span class="property-type">str</span>
     </dt>
-    <dd>{{% md %}}Description about this dataset version.{{% /md %}}</dd>
-    <dt class="property-required"
+    <dd>{{% md %}}Description about this dataset version.{{% /md %}}</dd><dt class="property-required"
             title="Required">
         <span id="etag_python">
 <a href="#etag_python" style="color: inherit; text-decoration: inherit;">etag</a>
@@ -2185,8 +1929,7 @@ All [input](#inputs) properties are implicitly available as output properties. A
         <span class="property-indicator"></span>
         <span class="property-type">str</span>
     </dt>
-    <dd>{{% md %}}eTag description{{% /md %}}</dd>
-    <dt class="property-required"
+    <dd>{{% md %}}eTag description{{% /md %}}</dd><dt class="property-required"
             title="Required">
         <span id="is_visible_python">
 <a href="#is_visible_python" style="color: inherit; text-decoration: inherit;">is_<wbr>visible</a>
@@ -2194,8 +1937,7 @@ All [input](#inputs) properties are implicitly available as output properties. A
         <span class="property-indicator"></span>
         <span class="property-type">bool</span>
     </dt>
-    <dd>{{% md %}}Flag to hide Dataset in UI{{% /md %}}</dd>
-    <dt class="property-required"
+    <dd>{{% md %}}Flag to hide Dataset in UI{{% /md %}}</dd><dt class="property-required"
             title="Required">
         <span id="modified_time_python">
 <a href="#modified_time_python" style="color: inherit; text-decoration: inherit;">modified_<wbr>time</a>
@@ -2203,8 +1945,7 @@ All [input](#inputs) properties are implicitly available as output properties. A
         <span class="property-indicator"></span>
         <span class="property-type">str</span>
     </dt>
-    <dd>{{% md %}}The dataset last modified time (UTC).{{% /md %}}</dd>
-    <dt class="property-required"
+    <dd>{{% md %}}The dataset last modified time (UTC).{{% /md %}}</dd><dt class="property-required"
             title="Required">
         <span id="name_python">
 <a href="#name_python" style="color: inherit; text-decoration: inherit;">name</a>
@@ -2212,8 +1953,7 @@ All [input](#inputs) properties are implicitly available as output properties. A
         <span class="property-indicator"></span>
         <span class="property-type">str</span>
     </dt>
-    <dd>{{% md %}}Unique dataset name{{% /md %}}</dd>
-    <dt class="property-required"
+    <dd>{{% md %}}Unique dataset name{{% /md %}}</dd><dt class="property-required"
             title="Required">
         <span id="tags_python">
 <a href="#tags_python" style="color: inherit; text-decoration: inherit;">tags</a>
@@ -2221,8 +1961,7 @@ All [input](#inputs) properties are implicitly available as output properties. A
         <span class="property-indicator"></span>
         <span class="property-type">Mapping[str, str]</span>
     </dt>
-    <dd>{{% md %}}Tags for this dataset version.{{% /md %}}</dd>
-    <dt class="property-optional"
+    <dd>{{% md %}}Tags for this dataset version.{{% /md %}}</dd><dt class="property-optional"
             title="Optional">
         <span id="dataset_state_python">
 <a href="#dataset_state_python" style="color: inherit; text-decoration: inherit;">dataset_<wbr>state</a>
@@ -2230,8 +1969,7 @@ All [input](#inputs) properties are implicitly available as output properties. A
         <span class="property-indicator"></span>
         <span class="property-type"><a href="#datasetstateresponse">Dataset<wbr>State<wbr>Response<wbr>Args</a></span>
     </dt>
-    <dd>{{% md %}}Dataset state{{% /md %}}</dd>
-    <dt class="property-optional"
+    <dd>{{% md %}}Dataset state{{% /md %}}</dd><dt class="property-optional"
             title="Optional">
         <span id="latest_python">
 <a href="#latest_python" style="color: inherit; text-decoration: inherit;">latest</a>
@@ -2239,16 +1977,13 @@ All [input](#inputs) properties are implicitly available as output properties. A
         <span class="property-indicator"></span>
         <span class="property-type"><a href="#datasetresponselatest">Dataset<wbr>Response<wbr>Latest<wbr>Args</a></span>
     </dt>
-    <dd>{{% md %}}Last created Dataset definition.{{% /md %}}</dd>
-</dl>
+    <dd>{{% md %}}Last created Dataset definition.{{% /md %}}</dd></dl>
 {{% /choosable %}}
 
 <h4 id="datasetresponsedatapath">Dataset<wbr>Response<wbr>Data<wbr>Path</h4>
 
 {{% choosable language csharp %}}
-<dl class="resources-properties">
-
-    <dt class="property-required"
+<dl class="resources-properties"><dt class="property-required"
             title="Required">
         <span id="azurefilepath_csharp">
 <a href="#azurefilepath_csharp" style="color: inherit; text-decoration: inherit;">Azure<wbr>File<wbr>Path</a>
@@ -2256,8 +1991,7 @@ All [input](#inputs) properties are implicitly available as output properties. A
         <span class="property-indicator"></span>
         <span class="property-type">string</span>
     </dt>
-    <dd>{{% md %}}Azure path for Azure Blob or File{{% /md %}}</dd>
-    <dt class="property-required"
+    <dd>{{% md %}}Azure path for Azure Blob or File{{% /md %}}</dd><dt class="property-required"
             title="Required">
         <span id="datastorename_csharp">
 <a href="#datastorename_csharp" style="color: inherit; text-decoration: inherit;">Datastore<wbr>Name</a>
@@ -2265,8 +1999,7 @@ All [input](#inputs) properties are implicitly available as output properties. A
         <span class="property-indicator"></span>
         <span class="property-type">string</span>
     </dt>
-    <dd>{{% md %}}Data store Name{{% /md %}}</dd>
-    <dt class="property-required"
+    <dd>{{% md %}}Data store Name{{% /md %}}</dd><dt class="property-required"
             title="Required">
         <span id="httpurl_csharp">
 <a href="#httpurl_csharp" style="color: inherit; text-decoration: inherit;">Http<wbr>Url</a>
@@ -2274,8 +2007,7 @@ All [input](#inputs) properties are implicitly available as output properties. A
         <span class="property-indicator"></span>
         <span class="property-type">string</span>
     </dt>
-    <dd>{{% md %}}HTTP URL.{{% /md %}}</dd>
-    <dt class="property-required"
+    <dd>{{% md %}}HTTP URL.{{% /md %}}</dd><dt class="property-required"
             title="Required">
         <span id="partitionformat_csharp">
 <a href="#partitionformat_csharp" style="color: inherit; text-decoration: inherit;">Partition<wbr>Format</a>
@@ -2283,8 +2015,7 @@ All [input](#inputs) properties are implicitly available as output properties. A
         <span class="property-indicator"></span>
         <span class="property-type">string</span>
     </dt>
-    <dd>{{% md %}}Specify the partition format of path. Defaults to None.{{% /md %}}</dd>
-    <dt class="property-required"
+    <dd>{{% md %}}Specify the partition format of path. Defaults to None.{{% /md %}}</dd><dt class="property-required"
             title="Required">
         <span id="partitionformatignoreerror_csharp">
 <a href="#partitionformatignoreerror_csharp" style="color: inherit; text-decoration: inherit;">Partition<wbr>Format<wbr>Ignore<wbr>Error</a>
@@ -2292,8 +2023,7 @@ All [input](#inputs) properties are implicitly available as output properties. A
         <span class="property-indicator"></span>
         <span class="property-type">bool</span>
     </dt>
-    <dd>{{% md %}}Whether or not to ignore unmatched path.{{% /md %}}</dd>
-    <dt class="property-required"
+    <dd>{{% md %}}Whether or not to ignore unmatched path.{{% /md %}}</dd><dt class="property-required"
             title="Required">
         <span id="paths_csharp">
 <a href="#paths_csharp" style="color: inherit; text-decoration: inherit;">Paths</a>
@@ -2301,8 +2031,7 @@ All [input](#inputs) properties are implicitly available as output properties. A
         <span class="property-indicator"></span>
         <span class="property-type">List&lt;string&gt;</span>
     </dt>
-    <dd>{{% md %}}List of files expanded from a file GLOB specified{{% /md %}}</dd>
-    <dt class="property-required"
+    <dd>{{% md %}}List of files expanded from a file GLOB specified{{% /md %}}</dd><dt class="property-required"
             title="Required">
         <span id="relativepath_csharp">
 <a href="#relativepath_csharp" style="color: inherit; text-decoration: inherit;">Relative<wbr>Path</a>
@@ -2310,8 +2039,7 @@ All [input](#inputs) properties are implicitly available as output properties. A
         <span class="property-indicator"></span>
         <span class="property-type">string</span>
     </dt>
-    <dd>{{% md %}}Relative path in the data store{{% /md %}}</dd>
-    <dt class="property-optional"
+    <dd>{{% md %}}Relative path in the data store{{% /md %}}</dd><dt class="property-optional"
             title="Optional">
         <span id="additionalproperties_csharp">
 <a href="#additionalproperties_csharp" style="color: inherit; text-decoration: inherit;">Additional<wbr>Properties</a>
@@ -2319,8 +2047,7 @@ All [input](#inputs) properties are implicitly available as output properties. A
         <span class="property-indicator"></span>
         <span class="property-type">Dictionary&lt;string, object&gt;</span>
     </dt>
-    <dd>{{% md %}}Additional Properties.{{% /md %}}</dd>
-    <dt class="property-optional"
+    <dd>{{% md %}}Additional Properties.{{% /md %}}</dd><dt class="property-optional"
             title="Optional">
         <span id="sqldatapath_csharp">
 <a href="#sqldatapath_csharp" style="color: inherit; text-decoration: inherit;">Sql<wbr>Data<wbr>Path</a>
@@ -2328,14 +2055,11 @@ All [input](#inputs) properties are implicitly available as output properties. A
         <span class="property-indicator"></span>
         <span class="property-type"><a href="#datasetresponsesqldatapath">Pulumi.<wbr>Azure<wbr>Native.<wbr>Machine<wbr>Learning<wbr>Services.<wbr>Inputs.<wbr>Dataset<wbr>Response<wbr>Sql<wbr>Data<wbr>Path<wbr>Args</a></span>
     </dt>
-    <dd>{{% md %}}Sql Query/Table/Stored Procedure details.{{% /md %}}</dd>
-</dl>
+    <dd>{{% md %}}Sql Query/Table/Stored Procedure details.{{% /md %}}</dd></dl>
 {{% /choosable %}}
 
 {{% choosable language go %}}
-<dl class="resources-properties">
-
-    <dt class="property-required"
+<dl class="resources-properties"><dt class="property-required"
             title="Required">
         <span id="azurefilepath_go">
 <a href="#azurefilepath_go" style="color: inherit; text-decoration: inherit;">Azure<wbr>File<wbr>Path</a>
@@ -2343,8 +2067,7 @@ All [input](#inputs) properties are implicitly available as output properties. A
         <span class="property-indicator"></span>
         <span class="property-type">string</span>
     </dt>
-    <dd>{{% md %}}Azure path for Azure Blob or File{{% /md %}}</dd>
-    <dt class="property-required"
+    <dd>{{% md %}}Azure path for Azure Blob or File{{% /md %}}</dd><dt class="property-required"
             title="Required">
         <span id="datastorename_go">
 <a href="#datastorename_go" style="color: inherit; text-decoration: inherit;">Datastore<wbr>Name</a>
@@ -2352,8 +2075,7 @@ All [input](#inputs) properties are implicitly available as output properties. A
         <span class="property-indicator"></span>
         <span class="property-type">string</span>
     </dt>
-    <dd>{{% md %}}Data store Name{{% /md %}}</dd>
-    <dt class="property-required"
+    <dd>{{% md %}}Data store Name{{% /md %}}</dd><dt class="property-required"
             title="Required">
         <span id="httpurl_go">
 <a href="#httpurl_go" style="color: inherit; text-decoration: inherit;">Http<wbr>Url</a>
@@ -2361,8 +2083,7 @@ All [input](#inputs) properties are implicitly available as output properties. A
         <span class="property-indicator"></span>
         <span class="property-type">string</span>
     </dt>
-    <dd>{{% md %}}HTTP URL.{{% /md %}}</dd>
-    <dt class="property-required"
+    <dd>{{% md %}}HTTP URL.{{% /md %}}</dd><dt class="property-required"
             title="Required">
         <span id="partitionformat_go">
 <a href="#partitionformat_go" style="color: inherit; text-decoration: inherit;">Partition<wbr>Format</a>
@@ -2370,8 +2091,7 @@ All [input](#inputs) properties are implicitly available as output properties. A
         <span class="property-indicator"></span>
         <span class="property-type">string</span>
     </dt>
-    <dd>{{% md %}}Specify the partition format of path. Defaults to None.{{% /md %}}</dd>
-    <dt class="property-required"
+    <dd>{{% md %}}Specify the partition format of path. Defaults to None.{{% /md %}}</dd><dt class="property-required"
             title="Required">
         <span id="partitionformatignoreerror_go">
 <a href="#partitionformatignoreerror_go" style="color: inherit; text-decoration: inherit;">Partition<wbr>Format<wbr>Ignore<wbr>Error</a>
@@ -2379,8 +2099,7 @@ All [input](#inputs) properties are implicitly available as output properties. A
         <span class="property-indicator"></span>
         <span class="property-type">bool</span>
     </dt>
-    <dd>{{% md %}}Whether or not to ignore unmatched path.{{% /md %}}</dd>
-    <dt class="property-required"
+    <dd>{{% md %}}Whether or not to ignore unmatched path.{{% /md %}}</dd><dt class="property-required"
             title="Required">
         <span id="paths_go">
 <a href="#paths_go" style="color: inherit; text-decoration: inherit;">Paths</a>
@@ -2388,8 +2107,7 @@ All [input](#inputs) properties are implicitly available as output properties. A
         <span class="property-indicator"></span>
         <span class="property-type">[]string</span>
     </dt>
-    <dd>{{% md %}}List of files expanded from a file GLOB specified{{% /md %}}</dd>
-    <dt class="property-required"
+    <dd>{{% md %}}List of files expanded from a file GLOB specified{{% /md %}}</dd><dt class="property-required"
             title="Required">
         <span id="relativepath_go">
 <a href="#relativepath_go" style="color: inherit; text-decoration: inherit;">Relative<wbr>Path</a>
@@ -2397,8 +2115,7 @@ All [input](#inputs) properties are implicitly available as output properties. A
         <span class="property-indicator"></span>
         <span class="property-type">string</span>
     </dt>
-    <dd>{{% md %}}Relative path in the data store{{% /md %}}</dd>
-    <dt class="property-optional"
+    <dd>{{% md %}}Relative path in the data store{{% /md %}}</dd><dt class="property-optional"
             title="Optional">
         <span id="additionalproperties_go">
 <a href="#additionalproperties_go" style="color: inherit; text-decoration: inherit;">Additional<wbr>Properties</a>
@@ -2406,8 +2123,7 @@ All [input](#inputs) properties are implicitly available as output properties. A
         <span class="property-indicator"></span>
         <span class="property-type">map[string]interface{}</span>
     </dt>
-    <dd>{{% md %}}Additional Properties.{{% /md %}}</dd>
-    <dt class="property-optional"
+    <dd>{{% md %}}Additional Properties.{{% /md %}}</dd><dt class="property-optional"
             title="Optional">
         <span id="sqldatapath_go">
 <a href="#sqldatapath_go" style="color: inherit; text-decoration: inherit;">Sql<wbr>Data<wbr>Path</a>
@@ -2415,14 +2131,11 @@ All [input](#inputs) properties are implicitly available as output properties. A
         <span class="property-indicator"></span>
         <span class="property-type"><a href="#datasetresponsesqldatapath">Dataset<wbr>Response<wbr>Sql<wbr>Data<wbr>Path</a></span>
     </dt>
-    <dd>{{% md %}}Sql Query/Table/Stored Procedure details.{{% /md %}}</dd>
-</dl>
+    <dd>{{% md %}}Sql Query/Table/Stored Procedure details.{{% /md %}}</dd></dl>
 {{% /choosable %}}
 
 {{% choosable language nodejs %}}
-<dl class="resources-properties">
-
-    <dt class="property-required"
+<dl class="resources-properties"><dt class="property-required"
             title="Required">
         <span id="azurefilepath_nodejs">
 <a href="#azurefilepath_nodejs" style="color: inherit; text-decoration: inherit;">azure<wbr>File<wbr>Path</a>
@@ -2430,8 +2143,7 @@ All [input](#inputs) properties are implicitly available as output properties. A
         <span class="property-indicator"></span>
         <span class="property-type">string</span>
     </dt>
-    <dd>{{% md %}}Azure path for Azure Blob or File{{% /md %}}</dd>
-    <dt class="property-required"
+    <dd>{{% md %}}Azure path for Azure Blob or File{{% /md %}}</dd><dt class="property-required"
             title="Required">
         <span id="datastorename_nodejs">
 <a href="#datastorename_nodejs" style="color: inherit; text-decoration: inherit;">datastore<wbr>Name</a>
@@ -2439,8 +2151,7 @@ All [input](#inputs) properties are implicitly available as output properties. A
         <span class="property-indicator"></span>
         <span class="property-type">string</span>
     </dt>
-    <dd>{{% md %}}Data store Name{{% /md %}}</dd>
-    <dt class="property-required"
+    <dd>{{% md %}}Data store Name{{% /md %}}</dd><dt class="property-required"
             title="Required">
         <span id="httpurl_nodejs">
 <a href="#httpurl_nodejs" style="color: inherit; text-decoration: inherit;">http<wbr>Url</a>
@@ -2448,8 +2159,7 @@ All [input](#inputs) properties are implicitly available as output properties. A
         <span class="property-indicator"></span>
         <span class="property-type">string</span>
     </dt>
-    <dd>{{% md %}}HTTP URL.{{% /md %}}</dd>
-    <dt class="property-required"
+    <dd>{{% md %}}HTTP URL.{{% /md %}}</dd><dt class="property-required"
             title="Required">
         <span id="partitionformat_nodejs">
 <a href="#partitionformat_nodejs" style="color: inherit; text-decoration: inherit;">partition<wbr>Format</a>
@@ -2457,8 +2167,7 @@ All [input](#inputs) properties are implicitly available as output properties. A
         <span class="property-indicator"></span>
         <span class="property-type">string</span>
     </dt>
-    <dd>{{% md %}}Specify the partition format of path. Defaults to None.{{% /md %}}</dd>
-    <dt class="property-required"
+    <dd>{{% md %}}Specify the partition format of path. Defaults to None.{{% /md %}}</dd><dt class="property-required"
             title="Required">
         <span id="partitionformatignoreerror_nodejs">
 <a href="#partitionformatignoreerror_nodejs" style="color: inherit; text-decoration: inherit;">partition<wbr>Format<wbr>Ignore<wbr>Error</a>
@@ -2466,8 +2175,7 @@ All [input](#inputs) properties are implicitly available as output properties. A
         <span class="property-indicator"></span>
         <span class="property-type">boolean</span>
     </dt>
-    <dd>{{% md %}}Whether or not to ignore unmatched path.{{% /md %}}</dd>
-    <dt class="property-required"
+    <dd>{{% md %}}Whether or not to ignore unmatched path.{{% /md %}}</dd><dt class="property-required"
             title="Required">
         <span id="paths_nodejs">
 <a href="#paths_nodejs" style="color: inherit; text-decoration: inherit;">paths</a>
@@ -2475,8 +2183,7 @@ All [input](#inputs) properties are implicitly available as output properties. A
         <span class="property-indicator"></span>
         <span class="property-type">string[]</span>
     </dt>
-    <dd>{{% md %}}List of files expanded from a file GLOB specified{{% /md %}}</dd>
-    <dt class="property-required"
+    <dd>{{% md %}}List of files expanded from a file GLOB specified{{% /md %}}</dd><dt class="property-required"
             title="Required">
         <span id="relativepath_nodejs">
 <a href="#relativepath_nodejs" style="color: inherit; text-decoration: inherit;">relative<wbr>Path</a>
@@ -2484,8 +2191,7 @@ All [input](#inputs) properties are implicitly available as output properties. A
         <span class="property-indicator"></span>
         <span class="property-type">string</span>
     </dt>
-    <dd>{{% md %}}Relative path in the data store{{% /md %}}</dd>
-    <dt class="property-optional"
+    <dd>{{% md %}}Relative path in the data store{{% /md %}}</dd><dt class="property-optional"
             title="Optional">
         <span id="additionalproperties_nodejs">
 <a href="#additionalproperties_nodejs" style="color: inherit; text-decoration: inherit;">additional<wbr>Properties</a>
@@ -2493,8 +2199,7 @@ All [input](#inputs) properties are implicitly available as output properties. A
         <span class="property-indicator"></span>
         <span class="property-type">{[key: string]: any}</span>
     </dt>
-    <dd>{{% md %}}Additional Properties.{{% /md %}}</dd>
-    <dt class="property-optional"
+    <dd>{{% md %}}Additional Properties.{{% /md %}}</dd><dt class="property-optional"
             title="Optional">
         <span id="sqldatapath_nodejs">
 <a href="#sqldatapath_nodejs" style="color: inherit; text-decoration: inherit;">sql<wbr>Data<wbr>Path</a>
@@ -2502,14 +2207,11 @@ All [input](#inputs) properties are implicitly available as output properties. A
         <span class="property-indicator"></span>
         <span class="property-type"><a href="#datasetresponsesqldatapath">Dataset<wbr>Response<wbr>Sql<wbr>Data<wbr>Path</a></span>
     </dt>
-    <dd>{{% md %}}Sql Query/Table/Stored Procedure details.{{% /md %}}</dd>
-</dl>
+    <dd>{{% md %}}Sql Query/Table/Stored Procedure details.{{% /md %}}</dd></dl>
 {{% /choosable %}}
 
 {{% choosable language python %}}
-<dl class="resources-properties">
-
-    <dt class="property-required"
+<dl class="resources-properties"><dt class="property-required"
             title="Required">
         <span id="azure_file_path_python">
 <a href="#azure_file_path_python" style="color: inherit; text-decoration: inherit;">azure_<wbr>file_<wbr>path</a>
@@ -2517,8 +2219,7 @@ All [input](#inputs) properties are implicitly available as output properties. A
         <span class="property-indicator"></span>
         <span class="property-type">str</span>
     </dt>
-    <dd>{{% md %}}Azure path for Azure Blob or File{{% /md %}}</dd>
-    <dt class="property-required"
+    <dd>{{% md %}}Azure path for Azure Blob or File{{% /md %}}</dd><dt class="property-required"
             title="Required">
         <span id="datastore_name_python">
 <a href="#datastore_name_python" style="color: inherit; text-decoration: inherit;">datastore_<wbr>name</a>
@@ -2526,8 +2227,7 @@ All [input](#inputs) properties are implicitly available as output properties. A
         <span class="property-indicator"></span>
         <span class="property-type">str</span>
     </dt>
-    <dd>{{% md %}}Data store Name{{% /md %}}</dd>
-    <dt class="property-required"
+    <dd>{{% md %}}Data store Name{{% /md %}}</dd><dt class="property-required"
             title="Required">
         <span id="http_url_python">
 <a href="#http_url_python" style="color: inherit; text-decoration: inherit;">http_<wbr>url</a>
@@ -2535,8 +2235,7 @@ All [input](#inputs) properties are implicitly available as output properties. A
         <span class="property-indicator"></span>
         <span class="property-type">str</span>
     </dt>
-    <dd>{{% md %}}HTTP URL.{{% /md %}}</dd>
-    <dt class="property-required"
+    <dd>{{% md %}}HTTP URL.{{% /md %}}</dd><dt class="property-required"
             title="Required">
         <span id="partition_format_python">
 <a href="#partition_format_python" style="color: inherit; text-decoration: inherit;">partition_<wbr>format</a>
@@ -2544,8 +2243,7 @@ All [input](#inputs) properties are implicitly available as output properties. A
         <span class="property-indicator"></span>
         <span class="property-type">str</span>
     </dt>
-    <dd>{{% md %}}Specify the partition format of path. Defaults to None.{{% /md %}}</dd>
-    <dt class="property-required"
+    <dd>{{% md %}}Specify the partition format of path. Defaults to None.{{% /md %}}</dd><dt class="property-required"
             title="Required">
         <span id="partition_format_ignore_error_python">
 <a href="#partition_format_ignore_error_python" style="color: inherit; text-decoration: inherit;">partition_<wbr>format_<wbr>ignore_<wbr>error</a>
@@ -2553,8 +2251,7 @@ All [input](#inputs) properties are implicitly available as output properties. A
         <span class="property-indicator"></span>
         <span class="property-type">bool</span>
     </dt>
-    <dd>{{% md %}}Whether or not to ignore unmatched path.{{% /md %}}</dd>
-    <dt class="property-required"
+    <dd>{{% md %}}Whether or not to ignore unmatched path.{{% /md %}}</dd><dt class="property-required"
             title="Required">
         <span id="paths_python">
 <a href="#paths_python" style="color: inherit; text-decoration: inherit;">paths</a>
@@ -2562,8 +2259,7 @@ All [input](#inputs) properties are implicitly available as output properties. A
         <span class="property-indicator"></span>
         <span class="property-type">Sequence[str]</span>
     </dt>
-    <dd>{{% md %}}List of files expanded from a file GLOB specified{{% /md %}}</dd>
-    <dt class="property-required"
+    <dd>{{% md %}}List of files expanded from a file GLOB specified{{% /md %}}</dd><dt class="property-required"
             title="Required">
         <span id="relative_path_python">
 <a href="#relative_path_python" style="color: inherit; text-decoration: inherit;">relative_<wbr>path</a>
@@ -2571,8 +2267,7 @@ All [input](#inputs) properties are implicitly available as output properties. A
         <span class="property-indicator"></span>
         <span class="property-type">str</span>
     </dt>
-    <dd>{{% md %}}Relative path in the data store{{% /md %}}</dd>
-    <dt class="property-optional"
+    <dd>{{% md %}}Relative path in the data store{{% /md %}}</dd><dt class="property-optional"
             title="Optional">
         <span id="additional_properties_python">
 <a href="#additional_properties_python" style="color: inherit; text-decoration: inherit;">additional_<wbr>properties</a>
@@ -2580,8 +2275,7 @@ All [input](#inputs) properties are implicitly available as output properties. A
         <span class="property-indicator"></span>
         <span class="property-type">Mapping[str, Any]</span>
     </dt>
-    <dd>{{% md %}}Additional Properties.{{% /md %}}</dd>
-    <dt class="property-optional"
+    <dd>{{% md %}}Additional Properties.{{% /md %}}</dd><dt class="property-optional"
             title="Optional">
         <span id="sql_data_path_python">
 <a href="#sql_data_path_python" style="color: inherit; text-decoration: inherit;">sql_<wbr>data_<wbr>path</a>
@@ -2589,16 +2283,13 @@ All [input](#inputs) properties are implicitly available as output properties. A
         <span class="property-indicator"></span>
         <span class="property-type"><a href="#datasetresponsesqldatapath">Dataset<wbr>Response<wbr>Sql<wbr>Data<wbr>Path<wbr>Args</a></span>
     </dt>
-    <dd>{{% md %}}Sql Query/Table/Stored Procedure details.{{% /md %}}</dd>
-</dl>
+    <dd>{{% md %}}Sql Query/Table/Stored Procedure details.{{% /md %}}</dd></dl>
 {{% /choosable %}}
 
 <h4 id="datasetresponselatest">Dataset<wbr>Response<wbr>Latest</h4>
 
 {{% choosable language csharp %}}
-<dl class="resources-properties">
-
-    <dt class="property-required"
+<dl class="resources-properties"><dt class="property-required"
             title="Required">
         <span id="createdtime_csharp">
 <a href="#createdtime_csharp" style="color: inherit; text-decoration: inherit;">Created<wbr>Time</a>
@@ -2606,8 +2297,7 @@ All [input](#inputs) properties are implicitly available as output properties. A
         <span class="property-indicator"></span>
         <span class="property-type">string</span>
     </dt>
-    <dd>{{% md %}}The dataset creation time (UTC).{{% /md %}}</dd>
-    <dt class="property-required"
+    <dd>{{% md %}}The dataset creation time (UTC).{{% /md %}}</dd><dt class="property-required"
             title="Required">
         <span id="dataflow_csharp">
 <a href="#dataflow_csharp" style="color: inherit; text-decoration: inherit;">Dataflow</a>
@@ -2615,8 +2305,7 @@ All [input](#inputs) properties are implicitly available as output properties. A
         <span class="property-indicator"></span>
         <span class="property-type">string</span>
     </dt>
-    <dd>{{% md %}}Dataflow Json{{% /md %}}</dd>
-    <dt class="property-required"
+    <dd>{{% md %}}Dataflow Json{{% /md %}}</dd><dt class="property-required"
             title="Required">
         <span id="datasetid_csharp">
 <a href="#datasetid_csharp" style="color: inherit; text-decoration: inherit;">Dataset<wbr>Id</a>
@@ -2624,8 +2313,7 @@ All [input](#inputs) properties are implicitly available as output properties. A
         <span class="property-indicator"></span>
         <span class="property-type">string</span>
     </dt>
-    <dd>{{% md %}}Unique Dataset identifier.{{% /md %}}</dd>
-    <dt class="property-required"
+    <dd>{{% md %}}Unique Dataset identifier.{{% /md %}}</dd><dt class="property-required"
             title="Required">
         <span id="description_csharp">
 <a href="#description_csharp" style="color: inherit; text-decoration: inherit;">Description</a>
@@ -2633,8 +2321,7 @@ All [input](#inputs) properties are implicitly available as output properties. A
         <span class="property-indicator"></span>
         <span class="property-type">string</span>
     </dt>
-    <dd>{{% md %}}Description about the dataset.{{% /md %}}</dd>
-    <dt class="property-required"
+    <dd>{{% md %}}Description about the dataset.{{% /md %}}</dd><dt class="property-required"
             title="Required">
         <span id="etag_csharp">
 <a href="#etag_csharp" style="color: inherit; text-decoration: inherit;">Etag</a>
@@ -2642,8 +2329,7 @@ All [input](#inputs) properties are implicitly available as output properties. A
         <span class="property-indicator"></span>
         <span class="property-type">string</span>
     </dt>
-    <dd>{{% md %}}eTag description{{% /md %}}</dd>
-    <dt class="property-required"
+    <dd>{{% md %}}eTag description{{% /md %}}</dd><dt class="property-required"
             title="Required">
         <span id="filetype_csharp">
 <a href="#filetype_csharp" style="color: inherit; text-decoration: inherit;">File<wbr>Type</a>
@@ -2651,8 +2337,7 @@ All [input](#inputs) properties are implicitly available as output properties. A
         <span class="property-indicator"></span>
         <span class="property-type">string</span>
     </dt>
-    <dd>{{% md %}}Dataset FileType, specified by user.{{% /md %}}</dd>
-    <dt class="property-required"
+    <dd>{{% md %}}Dataset FileType, specified by user.{{% /md %}}</dd><dt class="property-required"
             title="Required">
         <span id="modifiedtime_csharp">
 <a href="#modifiedtime_csharp" style="color: inherit; text-decoration: inherit;">Modified<wbr>Time</a>
@@ -2660,8 +2345,7 @@ All [input](#inputs) properties are implicitly available as output properties. A
         <span class="property-indicator"></span>
         <span class="property-type">string</span>
     </dt>
-    <dd>{{% md %}}The dataset last modified time (UTC).{{% /md %}}</dd>
-    <dt class="property-required"
+    <dd>{{% md %}}The dataset last modified time (UTC).{{% /md %}}</dd><dt class="property-required"
             title="Required">
         <span id="notes_csharp">
 <a href="#notes_csharp" style="color: inherit; text-decoration: inherit;">Notes</a>
@@ -2669,8 +2353,7 @@ All [input](#inputs) properties are implicitly available as output properties. A
         <span class="property-indicator"></span>
         <span class="property-type">string</span>
     </dt>
-    <dd>{{% md %}}Summary of Definition changes.{{% /md %}}</dd>
-    <dt class="property-required"
+    <dd>{{% md %}}Summary of Definition changes.{{% /md %}}</dd><dt class="property-required"
             title="Required">
         <span id="partitionformatinpath_csharp">
 <a href="#partitionformatinpath_csharp" style="color: inherit; text-decoration: inherit;">Partition<wbr>Format<wbr>In<wbr>Path</a>
@@ -2678,8 +2361,7 @@ All [input](#inputs) properties are implicitly available as output properties. A
         <span class="property-indicator"></span>
         <span class="property-type">bool</span>
     </dt>
-    <dd>{{% md %}}Indicates how the source data is partitioned. This is defined to filter on a range of partitioned data before performing actions or materialization.{{% /md %}}</dd>
-    <dt class="property-required"
+    <dd>{{% md %}}Indicates how the source data is partitioned. This is defined to filter on a range of partitioned data before performing actions or materialization.{{% /md %}}</dd><dt class="property-required"
             title="Required">
         <span id="saveddatasetid_csharp">
 <a href="#saveddatasetid_csharp" style="color: inherit; text-decoration: inherit;">Saved<wbr>Dataset<wbr>Id</a>
@@ -2687,8 +2369,7 @@ All [input](#inputs) properties are implicitly available as output properties. A
         <span class="property-indicator"></span>
         <span class="property-type">string</span>
     </dt>
-    <dd>{{% md %}}Indicates the saved dataset this definition is mapping to, populated on Get.{{% /md %}}</dd>
-    <dt class="property-required"
+    <dd>{{% md %}}Indicates the saved dataset this definition is mapping to, populated on Get.{{% /md %}}</dd><dt class="property-required"
             title="Required">
         <span id="tags_csharp">
 <a href="#tags_csharp" style="color: inherit; text-decoration: inherit;">Tags</a>
@@ -2696,8 +2377,7 @@ All [input](#inputs) properties are implicitly available as output properties. A
         <span class="property-indicator"></span>
         <span class="property-type">Dictionary&lt;string, string&gt;</span>
     </dt>
-    <dd>{{% md %}}Tags associated with the dataset.{{% /md %}}</dd>
-    <dt class="property-required"
+    <dd>{{% md %}}Tags associated with the dataset.{{% /md %}}</dd><dt class="property-required"
             title="Required">
         <span id="telemetryinfo_csharp">
 <a href="#telemetryinfo_csharp" style="color: inherit; text-decoration: inherit;">Telemetry<wbr>Info</a>
@@ -2705,8 +2385,7 @@ All [input](#inputs) properties are implicitly available as output properties. A
         <span class="property-indicator"></span>
         <span class="property-type">Dictionary&lt;string, string&gt;</span>
     </dt>
-    <dd>{{% md %}} Telemetry information about the dataset including information like which service the dataset was created from.{{% /md %}}</dd>
-    <dt class="property-required"
+    <dd>{{% md %}} Telemetry information about the dataset including information like which service the dataset was created from.{{% /md %}}</dd><dt class="property-required"
             title="Required">
         <span id="usedescriptiontagsfromdefinition_csharp">
 <a href="#usedescriptiontagsfromdefinition_csharp" style="color: inherit; text-decoration: inherit;">Use<wbr>Description<wbr>Tags<wbr>From<wbr>Definition</a>
@@ -2714,8 +2393,7 @@ All [input](#inputs) properties are implicitly available as output properties. A
         <span class="property-indicator"></span>
         <span class="property-type">bool</span>
     </dt>
-    <dd>{{% md %}} Whether to use description and tags from the definition level as opposed to dataset level (old behavior).{{% /md %}}</dd>
-    <dt class="property-required"
+    <dd>{{% md %}} Whether to use description and tags from the definition level as opposed to dataset level (old behavior).{{% /md %}}</dd><dt class="property-required"
             title="Required">
         <span id="versionid_csharp">
 <a href="#versionid_csharp" style="color: inherit; text-decoration: inherit;">Version<wbr>Id</a>
@@ -2723,8 +2401,7 @@ All [input](#inputs) properties are implicitly available as output properties. A
         <span class="property-indicator"></span>
         <span class="property-type">string</span>
     </dt>
-    <dd>{{% md %}}An identifier uniquely identifies a definition change.{{% /md %}}</dd>
-    <dt class="property-optional"
+    <dd>{{% md %}}An identifier uniquely identifies a definition change.{{% /md %}}</dd><dt class="property-optional"
             title="Optional">
         <span id="createdby_csharp">
 <a href="#createdby_csharp" style="color: inherit; text-decoration: inherit;">Created<wbr>By</a>
@@ -2732,8 +2409,7 @@ All [input](#inputs) properties are implicitly available as output properties. A
         <span class="property-indicator"></span>
         <span class="property-type"><a href="#userinforesponse">Pulumi.<wbr>Azure<wbr>Native.<wbr>Machine<wbr>Learning<wbr>Services.<wbr>Inputs.<wbr>User<wbr>Info<wbr>Response<wbr>Args</a></span>
     </dt>
-    <dd>{{% md %}}User who created.{{% /md %}}</dd>
-    <dt class="property-optional"
+    <dd>{{% md %}}User who created.{{% /md %}}</dd><dt class="property-optional"
             title="Optional">
         <span id="datapath_csharp">
 <a href="#datapath_csharp" style="color: inherit; text-decoration: inherit;">Data<wbr>Path</a>
@@ -2741,8 +2417,7 @@ All [input](#inputs) properties are implicitly available as output properties. A
         <span class="property-indicator"></span>
         <span class="property-type"><a href="#datasetresponsedatapath">Pulumi.<wbr>Azure<wbr>Native.<wbr>Machine<wbr>Learning<wbr>Services.<wbr>Inputs.<wbr>Dataset<wbr>Response<wbr>Data<wbr>Path<wbr>Args</a></span>
     </dt>
-    <dd>{{% md %}} Datastore and reference to location of data such as relativePath, Sql Query and etc.{{% /md %}}</dd>
-    <dt class="property-optional"
+    <dd>{{% md %}} Datastore and reference to location of data such as relativePath, Sql Query and etc.{{% /md %}}</dd><dt class="property-optional"
             title="Optional">
         <span id="datasetdefinitionstate_csharp">
 <a href="#datasetdefinitionstate_csharp" style="color: inherit; text-decoration: inherit;">Dataset<wbr>Definition<wbr>State</a>
@@ -2750,8 +2425,7 @@ All [input](#inputs) properties are implicitly available as output properties. A
         <span class="property-indicator"></span>
         <span class="property-type"><a href="#datasetstateresponse">Pulumi.<wbr>Azure<wbr>Native.<wbr>Machine<wbr>Learning<wbr>Services.<wbr>Inputs.<wbr>Dataset<wbr>State<wbr>Response<wbr>Args</a></span>
     </dt>
-    <dd>{{% md %}}Dataset state{{% /md %}}</dd>
-    <dt class="property-optional"
+    <dd>{{% md %}}Dataset state{{% /md %}}</dd><dt class="property-optional"
             title="Optional">
         <span id="properties_csharp">
 <a href="#properties_csharp" style="color: inherit; text-decoration: inherit;">Properties</a>
@@ -2759,14 +2433,11 @@ All [input](#inputs) properties are implicitly available as output properties. A
         <span class="property-indicator"></span>
         <span class="property-type">Dictionary&lt;string, object&gt;</span>
     </dt>
-    <dd>{{% md %}}Properties stores information like name of time series column for time series dataset.{{% /md %}}</dd>
-</dl>
+    <dd>{{% md %}}Properties stores information like name of time series column for time series dataset.{{% /md %}}</dd></dl>
 {{% /choosable %}}
 
 {{% choosable language go %}}
-<dl class="resources-properties">
-
-    <dt class="property-required"
+<dl class="resources-properties"><dt class="property-required"
             title="Required">
         <span id="createdtime_go">
 <a href="#createdtime_go" style="color: inherit; text-decoration: inherit;">Created<wbr>Time</a>
@@ -2774,8 +2445,7 @@ All [input](#inputs) properties are implicitly available as output properties. A
         <span class="property-indicator"></span>
         <span class="property-type">string</span>
     </dt>
-    <dd>{{% md %}}The dataset creation time (UTC).{{% /md %}}</dd>
-    <dt class="property-required"
+    <dd>{{% md %}}The dataset creation time (UTC).{{% /md %}}</dd><dt class="property-required"
             title="Required">
         <span id="dataflow_go">
 <a href="#dataflow_go" style="color: inherit; text-decoration: inherit;">Dataflow</a>
@@ -2783,8 +2453,7 @@ All [input](#inputs) properties are implicitly available as output properties. A
         <span class="property-indicator"></span>
         <span class="property-type">string</span>
     </dt>
-    <dd>{{% md %}}Dataflow Json{{% /md %}}</dd>
-    <dt class="property-required"
+    <dd>{{% md %}}Dataflow Json{{% /md %}}</dd><dt class="property-required"
             title="Required">
         <span id="datasetid_go">
 <a href="#datasetid_go" style="color: inherit; text-decoration: inherit;">Dataset<wbr>Id</a>
@@ -2792,8 +2461,7 @@ All [input](#inputs) properties are implicitly available as output properties. A
         <span class="property-indicator"></span>
         <span class="property-type">string</span>
     </dt>
-    <dd>{{% md %}}Unique Dataset identifier.{{% /md %}}</dd>
-    <dt class="property-required"
+    <dd>{{% md %}}Unique Dataset identifier.{{% /md %}}</dd><dt class="property-required"
             title="Required">
         <span id="description_go">
 <a href="#description_go" style="color: inherit; text-decoration: inherit;">Description</a>
@@ -2801,8 +2469,7 @@ All [input](#inputs) properties are implicitly available as output properties. A
         <span class="property-indicator"></span>
         <span class="property-type">string</span>
     </dt>
-    <dd>{{% md %}}Description about the dataset.{{% /md %}}</dd>
-    <dt class="property-required"
+    <dd>{{% md %}}Description about the dataset.{{% /md %}}</dd><dt class="property-required"
             title="Required">
         <span id="etag_go">
 <a href="#etag_go" style="color: inherit; text-decoration: inherit;">Etag</a>
@@ -2810,8 +2477,7 @@ All [input](#inputs) properties are implicitly available as output properties. A
         <span class="property-indicator"></span>
         <span class="property-type">string</span>
     </dt>
-    <dd>{{% md %}}eTag description{{% /md %}}</dd>
-    <dt class="property-required"
+    <dd>{{% md %}}eTag description{{% /md %}}</dd><dt class="property-required"
             title="Required">
         <span id="filetype_go">
 <a href="#filetype_go" style="color: inherit; text-decoration: inherit;">File<wbr>Type</a>
@@ -2819,8 +2485,7 @@ All [input](#inputs) properties are implicitly available as output properties. A
         <span class="property-indicator"></span>
         <span class="property-type">string</span>
     </dt>
-    <dd>{{% md %}}Dataset FileType, specified by user.{{% /md %}}</dd>
-    <dt class="property-required"
+    <dd>{{% md %}}Dataset FileType, specified by user.{{% /md %}}</dd><dt class="property-required"
             title="Required">
         <span id="modifiedtime_go">
 <a href="#modifiedtime_go" style="color: inherit; text-decoration: inherit;">Modified<wbr>Time</a>
@@ -2828,8 +2493,7 @@ All [input](#inputs) properties are implicitly available as output properties. A
         <span class="property-indicator"></span>
         <span class="property-type">string</span>
     </dt>
-    <dd>{{% md %}}The dataset last modified time (UTC).{{% /md %}}</dd>
-    <dt class="property-required"
+    <dd>{{% md %}}The dataset last modified time (UTC).{{% /md %}}</dd><dt class="property-required"
             title="Required">
         <span id="notes_go">
 <a href="#notes_go" style="color: inherit; text-decoration: inherit;">Notes</a>
@@ -2837,8 +2501,7 @@ All [input](#inputs) properties are implicitly available as output properties. A
         <span class="property-indicator"></span>
         <span class="property-type">string</span>
     </dt>
-    <dd>{{% md %}}Summary of Definition changes.{{% /md %}}</dd>
-    <dt class="property-required"
+    <dd>{{% md %}}Summary of Definition changes.{{% /md %}}</dd><dt class="property-required"
             title="Required">
         <span id="partitionformatinpath_go">
 <a href="#partitionformatinpath_go" style="color: inherit; text-decoration: inherit;">Partition<wbr>Format<wbr>In<wbr>Path</a>
@@ -2846,8 +2509,7 @@ All [input](#inputs) properties are implicitly available as output properties. A
         <span class="property-indicator"></span>
         <span class="property-type">bool</span>
     </dt>
-    <dd>{{% md %}}Indicates how the source data is partitioned. This is defined to filter on a range of partitioned data before performing actions or materialization.{{% /md %}}</dd>
-    <dt class="property-required"
+    <dd>{{% md %}}Indicates how the source data is partitioned. This is defined to filter on a range of partitioned data before performing actions or materialization.{{% /md %}}</dd><dt class="property-required"
             title="Required">
         <span id="saveddatasetid_go">
 <a href="#saveddatasetid_go" style="color: inherit; text-decoration: inherit;">Saved<wbr>Dataset<wbr>Id</a>
@@ -2855,8 +2517,7 @@ All [input](#inputs) properties are implicitly available as output properties. A
         <span class="property-indicator"></span>
         <span class="property-type">string</span>
     </dt>
-    <dd>{{% md %}}Indicates the saved dataset this definition is mapping to, populated on Get.{{% /md %}}</dd>
-    <dt class="property-required"
+    <dd>{{% md %}}Indicates the saved dataset this definition is mapping to, populated on Get.{{% /md %}}</dd><dt class="property-required"
             title="Required">
         <span id="tags_go">
 <a href="#tags_go" style="color: inherit; text-decoration: inherit;">Tags</a>
@@ -2864,8 +2525,7 @@ All [input](#inputs) properties are implicitly available as output properties. A
         <span class="property-indicator"></span>
         <span class="property-type">map[string]string</span>
     </dt>
-    <dd>{{% md %}}Tags associated with the dataset.{{% /md %}}</dd>
-    <dt class="property-required"
+    <dd>{{% md %}}Tags associated with the dataset.{{% /md %}}</dd><dt class="property-required"
             title="Required">
         <span id="telemetryinfo_go">
 <a href="#telemetryinfo_go" style="color: inherit; text-decoration: inherit;">Telemetry<wbr>Info</a>
@@ -2873,8 +2533,7 @@ All [input](#inputs) properties are implicitly available as output properties. A
         <span class="property-indicator"></span>
         <span class="property-type">map[string]string</span>
     </dt>
-    <dd>{{% md %}} Telemetry information about the dataset including information like which service the dataset was created from.{{% /md %}}</dd>
-    <dt class="property-required"
+    <dd>{{% md %}} Telemetry information about the dataset including information like which service the dataset was created from.{{% /md %}}</dd><dt class="property-required"
             title="Required">
         <span id="usedescriptiontagsfromdefinition_go">
 <a href="#usedescriptiontagsfromdefinition_go" style="color: inherit; text-decoration: inherit;">Use<wbr>Description<wbr>Tags<wbr>From<wbr>Definition</a>
@@ -2882,8 +2541,7 @@ All [input](#inputs) properties are implicitly available as output properties. A
         <span class="property-indicator"></span>
         <span class="property-type">bool</span>
     </dt>
-    <dd>{{% md %}} Whether to use description and tags from the definition level as opposed to dataset level (old behavior).{{% /md %}}</dd>
-    <dt class="property-required"
+    <dd>{{% md %}} Whether to use description and tags from the definition level as opposed to dataset level (old behavior).{{% /md %}}</dd><dt class="property-required"
             title="Required">
         <span id="versionid_go">
 <a href="#versionid_go" style="color: inherit; text-decoration: inherit;">Version<wbr>Id</a>
@@ -2891,8 +2549,7 @@ All [input](#inputs) properties are implicitly available as output properties. A
         <span class="property-indicator"></span>
         <span class="property-type">string</span>
     </dt>
-    <dd>{{% md %}}An identifier uniquely identifies a definition change.{{% /md %}}</dd>
-    <dt class="property-optional"
+    <dd>{{% md %}}An identifier uniquely identifies a definition change.{{% /md %}}</dd><dt class="property-optional"
             title="Optional">
         <span id="createdby_go">
 <a href="#createdby_go" style="color: inherit; text-decoration: inherit;">Created<wbr>By</a>
@@ -2900,8 +2557,7 @@ All [input](#inputs) properties are implicitly available as output properties. A
         <span class="property-indicator"></span>
         <span class="property-type"><a href="#userinforesponse">User<wbr>Info<wbr>Response</a></span>
     </dt>
-    <dd>{{% md %}}User who created.{{% /md %}}</dd>
-    <dt class="property-optional"
+    <dd>{{% md %}}User who created.{{% /md %}}</dd><dt class="property-optional"
             title="Optional">
         <span id="datapath_go">
 <a href="#datapath_go" style="color: inherit; text-decoration: inherit;">Data<wbr>Path</a>
@@ -2909,8 +2565,7 @@ All [input](#inputs) properties are implicitly available as output properties. A
         <span class="property-indicator"></span>
         <span class="property-type"><a href="#datasetresponsedatapath">Dataset<wbr>Response<wbr>Data<wbr>Path</a></span>
     </dt>
-    <dd>{{% md %}} Datastore and reference to location of data such as relativePath, Sql Query and etc.{{% /md %}}</dd>
-    <dt class="property-optional"
+    <dd>{{% md %}} Datastore and reference to location of data such as relativePath, Sql Query and etc.{{% /md %}}</dd><dt class="property-optional"
             title="Optional">
         <span id="datasetdefinitionstate_go">
 <a href="#datasetdefinitionstate_go" style="color: inherit; text-decoration: inherit;">Dataset<wbr>Definition<wbr>State</a>
@@ -2918,8 +2573,7 @@ All [input](#inputs) properties are implicitly available as output properties. A
         <span class="property-indicator"></span>
         <span class="property-type"><a href="#datasetstateresponse">Dataset<wbr>State<wbr>Response</a></span>
     </dt>
-    <dd>{{% md %}}Dataset state{{% /md %}}</dd>
-    <dt class="property-optional"
+    <dd>{{% md %}}Dataset state{{% /md %}}</dd><dt class="property-optional"
             title="Optional">
         <span id="properties_go">
 <a href="#properties_go" style="color: inherit; text-decoration: inherit;">Properties</a>
@@ -2927,14 +2581,11 @@ All [input](#inputs) properties are implicitly available as output properties. A
         <span class="property-indicator"></span>
         <span class="property-type">map[string]interface{}</span>
     </dt>
-    <dd>{{% md %}}Properties stores information like name of time series column for time series dataset.{{% /md %}}</dd>
-</dl>
+    <dd>{{% md %}}Properties stores information like name of time series column for time series dataset.{{% /md %}}</dd></dl>
 {{% /choosable %}}
 
 {{% choosable language nodejs %}}
-<dl class="resources-properties">
-
-    <dt class="property-required"
+<dl class="resources-properties"><dt class="property-required"
             title="Required">
         <span id="createdtime_nodejs">
 <a href="#createdtime_nodejs" style="color: inherit; text-decoration: inherit;">created<wbr>Time</a>
@@ -2942,8 +2593,7 @@ All [input](#inputs) properties are implicitly available as output properties. A
         <span class="property-indicator"></span>
         <span class="property-type">string</span>
     </dt>
-    <dd>{{% md %}}The dataset creation time (UTC).{{% /md %}}</dd>
-    <dt class="property-required"
+    <dd>{{% md %}}The dataset creation time (UTC).{{% /md %}}</dd><dt class="property-required"
             title="Required">
         <span id="dataflow_nodejs">
 <a href="#dataflow_nodejs" style="color: inherit; text-decoration: inherit;">dataflow</a>
@@ -2951,8 +2601,7 @@ All [input](#inputs) properties are implicitly available as output properties. A
         <span class="property-indicator"></span>
         <span class="property-type">string</span>
     </dt>
-    <dd>{{% md %}}Dataflow Json{{% /md %}}</dd>
-    <dt class="property-required"
+    <dd>{{% md %}}Dataflow Json{{% /md %}}</dd><dt class="property-required"
             title="Required">
         <span id="datasetid_nodejs">
 <a href="#datasetid_nodejs" style="color: inherit; text-decoration: inherit;">dataset<wbr>Id</a>
@@ -2960,8 +2609,7 @@ All [input](#inputs) properties are implicitly available as output properties. A
         <span class="property-indicator"></span>
         <span class="property-type">string</span>
     </dt>
-    <dd>{{% md %}}Unique Dataset identifier.{{% /md %}}</dd>
-    <dt class="property-required"
+    <dd>{{% md %}}Unique Dataset identifier.{{% /md %}}</dd><dt class="property-required"
             title="Required">
         <span id="description_nodejs">
 <a href="#description_nodejs" style="color: inherit; text-decoration: inherit;">description</a>
@@ -2969,8 +2617,7 @@ All [input](#inputs) properties are implicitly available as output properties. A
         <span class="property-indicator"></span>
         <span class="property-type">string</span>
     </dt>
-    <dd>{{% md %}}Description about the dataset.{{% /md %}}</dd>
-    <dt class="property-required"
+    <dd>{{% md %}}Description about the dataset.{{% /md %}}</dd><dt class="property-required"
             title="Required">
         <span id="etag_nodejs">
 <a href="#etag_nodejs" style="color: inherit; text-decoration: inherit;">etag</a>
@@ -2978,8 +2625,7 @@ All [input](#inputs) properties are implicitly available as output properties. A
         <span class="property-indicator"></span>
         <span class="property-type">string</span>
     </dt>
-    <dd>{{% md %}}eTag description{{% /md %}}</dd>
-    <dt class="property-required"
+    <dd>{{% md %}}eTag description{{% /md %}}</dd><dt class="property-required"
             title="Required">
         <span id="filetype_nodejs">
 <a href="#filetype_nodejs" style="color: inherit; text-decoration: inherit;">file<wbr>Type</a>
@@ -2987,8 +2633,7 @@ All [input](#inputs) properties are implicitly available as output properties. A
         <span class="property-indicator"></span>
         <span class="property-type">string</span>
     </dt>
-    <dd>{{% md %}}Dataset FileType, specified by user.{{% /md %}}</dd>
-    <dt class="property-required"
+    <dd>{{% md %}}Dataset FileType, specified by user.{{% /md %}}</dd><dt class="property-required"
             title="Required">
         <span id="modifiedtime_nodejs">
 <a href="#modifiedtime_nodejs" style="color: inherit; text-decoration: inherit;">modified<wbr>Time</a>
@@ -2996,8 +2641,7 @@ All [input](#inputs) properties are implicitly available as output properties. A
         <span class="property-indicator"></span>
         <span class="property-type">string</span>
     </dt>
-    <dd>{{% md %}}The dataset last modified time (UTC).{{% /md %}}</dd>
-    <dt class="property-required"
+    <dd>{{% md %}}The dataset last modified time (UTC).{{% /md %}}</dd><dt class="property-required"
             title="Required">
         <span id="notes_nodejs">
 <a href="#notes_nodejs" style="color: inherit; text-decoration: inherit;">notes</a>
@@ -3005,8 +2649,7 @@ All [input](#inputs) properties are implicitly available as output properties. A
         <span class="property-indicator"></span>
         <span class="property-type">string</span>
     </dt>
-    <dd>{{% md %}}Summary of Definition changes.{{% /md %}}</dd>
-    <dt class="property-required"
+    <dd>{{% md %}}Summary of Definition changes.{{% /md %}}</dd><dt class="property-required"
             title="Required">
         <span id="partitionformatinpath_nodejs">
 <a href="#partitionformatinpath_nodejs" style="color: inherit; text-decoration: inherit;">partition<wbr>Format<wbr>In<wbr>Path</a>
@@ -3014,8 +2657,7 @@ All [input](#inputs) properties are implicitly available as output properties. A
         <span class="property-indicator"></span>
         <span class="property-type">boolean</span>
     </dt>
-    <dd>{{% md %}}Indicates how the source data is partitioned. This is defined to filter on a range of partitioned data before performing actions or materialization.{{% /md %}}</dd>
-    <dt class="property-required"
+    <dd>{{% md %}}Indicates how the source data is partitioned. This is defined to filter on a range of partitioned data before performing actions or materialization.{{% /md %}}</dd><dt class="property-required"
             title="Required">
         <span id="saveddatasetid_nodejs">
 <a href="#saveddatasetid_nodejs" style="color: inherit; text-decoration: inherit;">saved<wbr>Dataset<wbr>Id</a>
@@ -3023,8 +2665,7 @@ All [input](#inputs) properties are implicitly available as output properties. A
         <span class="property-indicator"></span>
         <span class="property-type">string</span>
     </dt>
-    <dd>{{% md %}}Indicates the saved dataset this definition is mapping to, populated on Get.{{% /md %}}</dd>
-    <dt class="property-required"
+    <dd>{{% md %}}Indicates the saved dataset this definition is mapping to, populated on Get.{{% /md %}}</dd><dt class="property-required"
             title="Required">
         <span id="tags_nodejs">
 <a href="#tags_nodejs" style="color: inherit; text-decoration: inherit;">tags</a>
@@ -3032,8 +2673,7 @@ All [input](#inputs) properties are implicitly available as output properties. A
         <span class="property-indicator"></span>
         <span class="property-type">{[key: string]: string}</span>
     </dt>
-    <dd>{{% md %}}Tags associated with the dataset.{{% /md %}}</dd>
-    <dt class="property-required"
+    <dd>{{% md %}}Tags associated with the dataset.{{% /md %}}</dd><dt class="property-required"
             title="Required">
         <span id="telemetryinfo_nodejs">
 <a href="#telemetryinfo_nodejs" style="color: inherit; text-decoration: inherit;">telemetry<wbr>Info</a>
@@ -3041,8 +2681,7 @@ All [input](#inputs) properties are implicitly available as output properties. A
         <span class="property-indicator"></span>
         <span class="property-type">{[key: string]: string}</span>
     </dt>
-    <dd>{{% md %}} Telemetry information about the dataset including information like which service the dataset was created from.{{% /md %}}</dd>
-    <dt class="property-required"
+    <dd>{{% md %}} Telemetry information about the dataset including information like which service the dataset was created from.{{% /md %}}</dd><dt class="property-required"
             title="Required">
         <span id="usedescriptiontagsfromdefinition_nodejs">
 <a href="#usedescriptiontagsfromdefinition_nodejs" style="color: inherit; text-decoration: inherit;">use<wbr>Description<wbr>Tags<wbr>From<wbr>Definition</a>
@@ -3050,8 +2689,7 @@ All [input](#inputs) properties are implicitly available as output properties. A
         <span class="property-indicator"></span>
         <span class="property-type">boolean</span>
     </dt>
-    <dd>{{% md %}} Whether to use description and tags from the definition level as opposed to dataset level (old behavior).{{% /md %}}</dd>
-    <dt class="property-required"
+    <dd>{{% md %}} Whether to use description and tags from the definition level as opposed to dataset level (old behavior).{{% /md %}}</dd><dt class="property-required"
             title="Required">
         <span id="versionid_nodejs">
 <a href="#versionid_nodejs" style="color: inherit; text-decoration: inherit;">version<wbr>Id</a>
@@ -3059,8 +2697,7 @@ All [input](#inputs) properties are implicitly available as output properties. A
         <span class="property-indicator"></span>
         <span class="property-type">string</span>
     </dt>
-    <dd>{{% md %}}An identifier uniquely identifies a definition change.{{% /md %}}</dd>
-    <dt class="property-optional"
+    <dd>{{% md %}}An identifier uniquely identifies a definition change.{{% /md %}}</dd><dt class="property-optional"
             title="Optional">
         <span id="createdby_nodejs">
 <a href="#createdby_nodejs" style="color: inherit; text-decoration: inherit;">created<wbr>By</a>
@@ -3068,8 +2705,7 @@ All [input](#inputs) properties are implicitly available as output properties. A
         <span class="property-indicator"></span>
         <span class="property-type"><a href="#userinforesponse">User<wbr>Info<wbr>Response</a></span>
     </dt>
-    <dd>{{% md %}}User who created.{{% /md %}}</dd>
-    <dt class="property-optional"
+    <dd>{{% md %}}User who created.{{% /md %}}</dd><dt class="property-optional"
             title="Optional">
         <span id="datapath_nodejs">
 <a href="#datapath_nodejs" style="color: inherit; text-decoration: inherit;">data<wbr>Path</a>
@@ -3077,8 +2713,7 @@ All [input](#inputs) properties are implicitly available as output properties. A
         <span class="property-indicator"></span>
         <span class="property-type"><a href="#datasetresponsedatapath">Dataset<wbr>Response<wbr>Data<wbr>Path</a></span>
     </dt>
-    <dd>{{% md %}} Datastore and reference to location of data such as relativePath, Sql Query and etc.{{% /md %}}</dd>
-    <dt class="property-optional"
+    <dd>{{% md %}} Datastore and reference to location of data such as relativePath, Sql Query and etc.{{% /md %}}</dd><dt class="property-optional"
             title="Optional">
         <span id="datasetdefinitionstate_nodejs">
 <a href="#datasetdefinitionstate_nodejs" style="color: inherit; text-decoration: inherit;">dataset<wbr>Definition<wbr>State</a>
@@ -3086,8 +2721,7 @@ All [input](#inputs) properties are implicitly available as output properties. A
         <span class="property-indicator"></span>
         <span class="property-type"><a href="#datasetstateresponse">Dataset<wbr>State<wbr>Response</a></span>
     </dt>
-    <dd>{{% md %}}Dataset state{{% /md %}}</dd>
-    <dt class="property-optional"
+    <dd>{{% md %}}Dataset state{{% /md %}}</dd><dt class="property-optional"
             title="Optional">
         <span id="properties_nodejs">
 <a href="#properties_nodejs" style="color: inherit; text-decoration: inherit;">properties</a>
@@ -3095,14 +2729,11 @@ All [input](#inputs) properties are implicitly available as output properties. A
         <span class="property-indicator"></span>
         <span class="property-type">{[key: string]: any}</span>
     </dt>
-    <dd>{{% md %}}Properties stores information like name of time series column for time series dataset.{{% /md %}}</dd>
-</dl>
+    <dd>{{% md %}}Properties stores information like name of time series column for time series dataset.{{% /md %}}</dd></dl>
 {{% /choosable %}}
 
 {{% choosable language python %}}
-<dl class="resources-properties">
-
-    <dt class="property-required"
+<dl class="resources-properties"><dt class="property-required"
             title="Required">
         <span id="created_time_python">
 <a href="#created_time_python" style="color: inherit; text-decoration: inherit;">created_<wbr>time</a>
@@ -3110,8 +2741,7 @@ All [input](#inputs) properties are implicitly available as output properties. A
         <span class="property-indicator"></span>
         <span class="property-type">str</span>
     </dt>
-    <dd>{{% md %}}The dataset creation time (UTC).{{% /md %}}</dd>
-    <dt class="property-required"
+    <dd>{{% md %}}The dataset creation time (UTC).{{% /md %}}</dd><dt class="property-required"
             title="Required">
         <span id="dataflow_python">
 <a href="#dataflow_python" style="color: inherit; text-decoration: inherit;">dataflow</a>
@@ -3119,8 +2749,7 @@ All [input](#inputs) properties are implicitly available as output properties. A
         <span class="property-indicator"></span>
         <span class="property-type">str</span>
     </dt>
-    <dd>{{% md %}}Dataflow Json{{% /md %}}</dd>
-    <dt class="property-required"
+    <dd>{{% md %}}Dataflow Json{{% /md %}}</dd><dt class="property-required"
             title="Required">
         <span id="dataset_id_python">
 <a href="#dataset_id_python" style="color: inherit; text-decoration: inherit;">dataset_<wbr>id</a>
@@ -3128,8 +2757,7 @@ All [input](#inputs) properties are implicitly available as output properties. A
         <span class="property-indicator"></span>
         <span class="property-type">str</span>
     </dt>
-    <dd>{{% md %}}Unique Dataset identifier.{{% /md %}}</dd>
-    <dt class="property-required"
+    <dd>{{% md %}}Unique Dataset identifier.{{% /md %}}</dd><dt class="property-required"
             title="Required">
         <span id="description_python">
 <a href="#description_python" style="color: inherit; text-decoration: inherit;">description</a>
@@ -3137,8 +2765,7 @@ All [input](#inputs) properties are implicitly available as output properties. A
         <span class="property-indicator"></span>
         <span class="property-type">str</span>
     </dt>
-    <dd>{{% md %}}Description about the dataset.{{% /md %}}</dd>
-    <dt class="property-required"
+    <dd>{{% md %}}Description about the dataset.{{% /md %}}</dd><dt class="property-required"
             title="Required">
         <span id="etag_python">
 <a href="#etag_python" style="color: inherit; text-decoration: inherit;">etag</a>
@@ -3146,8 +2773,7 @@ All [input](#inputs) properties are implicitly available as output properties. A
         <span class="property-indicator"></span>
         <span class="property-type">str</span>
     </dt>
-    <dd>{{% md %}}eTag description{{% /md %}}</dd>
-    <dt class="property-required"
+    <dd>{{% md %}}eTag description{{% /md %}}</dd><dt class="property-required"
             title="Required">
         <span id="file_type_python">
 <a href="#file_type_python" style="color: inherit; text-decoration: inherit;">file_<wbr>type</a>
@@ -3155,8 +2781,7 @@ All [input](#inputs) properties are implicitly available as output properties. A
         <span class="property-indicator"></span>
         <span class="property-type">str</span>
     </dt>
-    <dd>{{% md %}}Dataset FileType, specified by user.{{% /md %}}</dd>
-    <dt class="property-required"
+    <dd>{{% md %}}Dataset FileType, specified by user.{{% /md %}}</dd><dt class="property-required"
             title="Required">
         <span id="modified_time_python">
 <a href="#modified_time_python" style="color: inherit; text-decoration: inherit;">modified_<wbr>time</a>
@@ -3164,8 +2789,7 @@ All [input](#inputs) properties are implicitly available as output properties. A
         <span class="property-indicator"></span>
         <span class="property-type">str</span>
     </dt>
-    <dd>{{% md %}}The dataset last modified time (UTC).{{% /md %}}</dd>
-    <dt class="property-required"
+    <dd>{{% md %}}The dataset last modified time (UTC).{{% /md %}}</dd><dt class="property-required"
             title="Required">
         <span id="notes_python">
 <a href="#notes_python" style="color: inherit; text-decoration: inherit;">notes</a>
@@ -3173,8 +2797,7 @@ All [input](#inputs) properties are implicitly available as output properties. A
         <span class="property-indicator"></span>
         <span class="property-type">str</span>
     </dt>
-    <dd>{{% md %}}Summary of Definition changes.{{% /md %}}</dd>
-    <dt class="property-required"
+    <dd>{{% md %}}Summary of Definition changes.{{% /md %}}</dd><dt class="property-required"
             title="Required">
         <span id="partition_format_in_path_python">
 <a href="#partition_format_in_path_python" style="color: inherit; text-decoration: inherit;">partition_<wbr>format_<wbr>in_<wbr>path</a>
@@ -3182,8 +2805,7 @@ All [input](#inputs) properties are implicitly available as output properties. A
         <span class="property-indicator"></span>
         <span class="property-type">bool</span>
     </dt>
-    <dd>{{% md %}}Indicates how the source data is partitioned. This is defined to filter on a range of partitioned data before performing actions or materialization.{{% /md %}}</dd>
-    <dt class="property-required"
+    <dd>{{% md %}}Indicates how the source data is partitioned. This is defined to filter on a range of partitioned data before performing actions or materialization.{{% /md %}}</dd><dt class="property-required"
             title="Required">
         <span id="saved_dataset_id_python">
 <a href="#saved_dataset_id_python" style="color: inherit; text-decoration: inherit;">saved_<wbr>dataset_<wbr>id</a>
@@ -3191,8 +2813,7 @@ All [input](#inputs) properties are implicitly available as output properties. A
         <span class="property-indicator"></span>
         <span class="property-type">str</span>
     </dt>
-    <dd>{{% md %}}Indicates the saved dataset this definition is mapping to, populated on Get.{{% /md %}}</dd>
-    <dt class="property-required"
+    <dd>{{% md %}}Indicates the saved dataset this definition is mapping to, populated on Get.{{% /md %}}</dd><dt class="property-required"
             title="Required">
         <span id="tags_python">
 <a href="#tags_python" style="color: inherit; text-decoration: inherit;">tags</a>
@@ -3200,8 +2821,7 @@ All [input](#inputs) properties are implicitly available as output properties. A
         <span class="property-indicator"></span>
         <span class="property-type">Mapping[str, str]</span>
     </dt>
-    <dd>{{% md %}}Tags associated with the dataset.{{% /md %}}</dd>
-    <dt class="property-required"
+    <dd>{{% md %}}Tags associated with the dataset.{{% /md %}}</dd><dt class="property-required"
             title="Required">
         <span id="telemetry_info_python">
 <a href="#telemetry_info_python" style="color: inherit; text-decoration: inherit;">telemetry_<wbr>info</a>
@@ -3209,8 +2829,7 @@ All [input](#inputs) properties are implicitly available as output properties. A
         <span class="property-indicator"></span>
         <span class="property-type">Mapping[str, str]</span>
     </dt>
-    <dd>{{% md %}} Telemetry information about the dataset including information like which service the dataset was created from.{{% /md %}}</dd>
-    <dt class="property-required"
+    <dd>{{% md %}} Telemetry information about the dataset including information like which service the dataset was created from.{{% /md %}}</dd><dt class="property-required"
             title="Required">
         <span id="use_description_tags_from_definition_python">
 <a href="#use_description_tags_from_definition_python" style="color: inherit; text-decoration: inherit;">use_<wbr>description_<wbr>tags_<wbr>from_<wbr>definition</a>
@@ -3218,8 +2837,7 @@ All [input](#inputs) properties are implicitly available as output properties. A
         <span class="property-indicator"></span>
         <span class="property-type">bool</span>
     </dt>
-    <dd>{{% md %}} Whether to use description and tags from the definition level as opposed to dataset level (old behavior).{{% /md %}}</dd>
-    <dt class="property-required"
+    <dd>{{% md %}} Whether to use description and tags from the definition level as opposed to dataset level (old behavior).{{% /md %}}</dd><dt class="property-required"
             title="Required">
         <span id="version_id_python">
 <a href="#version_id_python" style="color: inherit; text-decoration: inherit;">version_<wbr>id</a>
@@ -3227,8 +2845,7 @@ All [input](#inputs) properties are implicitly available as output properties. A
         <span class="property-indicator"></span>
         <span class="property-type">str</span>
     </dt>
-    <dd>{{% md %}}An identifier uniquely identifies a definition change.{{% /md %}}</dd>
-    <dt class="property-optional"
+    <dd>{{% md %}}An identifier uniquely identifies a definition change.{{% /md %}}</dd><dt class="property-optional"
             title="Optional">
         <span id="created_by_python">
 <a href="#created_by_python" style="color: inherit; text-decoration: inherit;">created_<wbr>by</a>
@@ -3236,8 +2853,7 @@ All [input](#inputs) properties are implicitly available as output properties. A
         <span class="property-indicator"></span>
         <span class="property-type"><a href="#userinforesponse">User<wbr>Info<wbr>Response<wbr>Args</a></span>
     </dt>
-    <dd>{{% md %}}User who created.{{% /md %}}</dd>
-    <dt class="property-optional"
+    <dd>{{% md %}}User who created.{{% /md %}}</dd><dt class="property-optional"
             title="Optional">
         <span id="data_path_python">
 <a href="#data_path_python" style="color: inherit; text-decoration: inherit;">data_<wbr>path</a>
@@ -3245,8 +2861,7 @@ All [input](#inputs) properties are implicitly available as output properties. A
         <span class="property-indicator"></span>
         <span class="property-type"><a href="#datasetresponsedatapath">Dataset<wbr>Response<wbr>Data<wbr>Path<wbr>Args</a></span>
     </dt>
-    <dd>{{% md %}} Datastore and reference to location of data such as relativePath, Sql Query and etc.{{% /md %}}</dd>
-    <dt class="property-optional"
+    <dd>{{% md %}} Datastore and reference to location of data such as relativePath, Sql Query and etc.{{% /md %}}</dd><dt class="property-optional"
             title="Optional">
         <span id="dataset_definition_state_python">
 <a href="#dataset_definition_state_python" style="color: inherit; text-decoration: inherit;">dataset_<wbr>definition_<wbr>state</a>
@@ -3254,8 +2869,7 @@ All [input](#inputs) properties are implicitly available as output properties. A
         <span class="property-indicator"></span>
         <span class="property-type"><a href="#datasetstateresponse">Dataset<wbr>State<wbr>Response<wbr>Args</a></span>
     </dt>
-    <dd>{{% md %}}Dataset state{{% /md %}}</dd>
-    <dt class="property-optional"
+    <dd>{{% md %}}Dataset state{{% /md %}}</dd><dt class="property-optional"
             title="Optional">
         <span id="properties_python">
 <a href="#properties_python" style="color: inherit; text-decoration: inherit;">properties</a>
@@ -3263,16 +2877,13 @@ All [input](#inputs) properties are implicitly available as output properties. A
         <span class="property-indicator"></span>
         <span class="property-type">Mapping[str, Any]</span>
     </dt>
-    <dd>{{% md %}}Properties stores information like name of time series column for time series dataset.{{% /md %}}</dd>
-</dl>
+    <dd>{{% md %}}Properties stores information like name of time series column for time series dataset.{{% /md %}}</dd></dl>
 {{% /choosable %}}
 
 <h4 id="datasetresponsesqldatapath">Dataset<wbr>Response<wbr>Sql<wbr>Data<wbr>Path</h4>
 
 {{% choosable language csharp %}}
-<dl class="resources-properties">
-
-    <dt class="property-required"
+<dl class="resources-properties"><dt class="property-required"
             title="Required">
         <span id="querytimeout_csharp">
 <a href="#querytimeout_csharp" style="color: inherit; text-decoration: inherit;">Query<wbr>Timeout</a>
@@ -3280,8 +2891,7 @@ All [input](#inputs) properties are implicitly available as output properties. A
         <span class="property-indicator"></span>
         <span class="property-type">double</span>
     </dt>
-    <dd>{{% md %}}SQL query timeout. Unit in seconds.{{% /md %}}</dd>
-    <dt class="property-required"
+    <dd>{{% md %}}SQL query timeout. Unit in seconds.{{% /md %}}</dd><dt class="property-required"
             title="Required">
         <span id="sqlquery_csharp">
 <a href="#sqlquery_csharp" style="color: inherit; text-decoration: inherit;">Sql<wbr>Query</a>
@@ -3289,8 +2899,7 @@ All [input](#inputs) properties are implicitly available as output properties. A
         <span class="property-indicator"></span>
         <span class="property-type">string</span>
     </dt>
-    <dd>{{% md %}}SQL query{{% /md %}}</dd>
-    <dt class="property-required"
+    <dd>{{% md %}}SQL query{{% /md %}}</dd><dt class="property-required"
             title="Required">
         <span id="sqlstoredprocedurename_csharp">
 <a href="#sqlstoredprocedurename_csharp" style="color: inherit; text-decoration: inherit;">Sql<wbr>Stored<wbr>Procedure<wbr>Name</a>
@@ -3298,8 +2907,7 @@ All [input](#inputs) properties are implicitly available as output properties. A
         <span class="property-indicator"></span>
         <span class="property-type">string</span>
     </dt>
-    <dd>{{% md %}}SQL storedProcedure name{{% /md %}}</dd>
-    <dt class="property-required"
+    <dd>{{% md %}}SQL storedProcedure name{{% /md %}}</dd><dt class="property-required"
             title="Required">
         <span id="sqltablename_csharp">
 <a href="#sqltablename_csharp" style="color: inherit; text-decoration: inherit;">Sql<wbr>Table<wbr>Name</a>
@@ -3307,14 +2915,11 @@ All [input](#inputs) properties are implicitly available as output properties. A
         <span class="property-indicator"></span>
         <span class="property-type">string</span>
     </dt>
-    <dd>{{% md %}}SQL table name{{% /md %}}</dd>
-</dl>
+    <dd>{{% md %}}SQL table name{{% /md %}}</dd></dl>
 {{% /choosable %}}
 
 {{% choosable language go %}}
-<dl class="resources-properties">
-
-    <dt class="property-required"
+<dl class="resources-properties"><dt class="property-required"
             title="Required">
         <span id="querytimeout_go">
 <a href="#querytimeout_go" style="color: inherit; text-decoration: inherit;">Query<wbr>Timeout</a>
@@ -3322,8 +2927,7 @@ All [input](#inputs) properties are implicitly available as output properties. A
         <span class="property-indicator"></span>
         <span class="property-type">float64</span>
     </dt>
-    <dd>{{% md %}}SQL query timeout. Unit in seconds.{{% /md %}}</dd>
-    <dt class="property-required"
+    <dd>{{% md %}}SQL query timeout. Unit in seconds.{{% /md %}}</dd><dt class="property-required"
             title="Required">
         <span id="sqlquery_go">
 <a href="#sqlquery_go" style="color: inherit; text-decoration: inherit;">Sql<wbr>Query</a>
@@ -3331,8 +2935,7 @@ All [input](#inputs) properties are implicitly available as output properties. A
         <span class="property-indicator"></span>
         <span class="property-type">string</span>
     </dt>
-    <dd>{{% md %}}SQL query{{% /md %}}</dd>
-    <dt class="property-required"
+    <dd>{{% md %}}SQL query{{% /md %}}</dd><dt class="property-required"
             title="Required">
         <span id="sqlstoredprocedurename_go">
 <a href="#sqlstoredprocedurename_go" style="color: inherit; text-decoration: inherit;">Sql<wbr>Stored<wbr>Procedure<wbr>Name</a>
@@ -3340,8 +2943,7 @@ All [input](#inputs) properties are implicitly available as output properties. A
         <span class="property-indicator"></span>
         <span class="property-type">string</span>
     </dt>
-    <dd>{{% md %}}SQL storedProcedure name{{% /md %}}</dd>
-    <dt class="property-required"
+    <dd>{{% md %}}SQL storedProcedure name{{% /md %}}</dd><dt class="property-required"
             title="Required">
         <span id="sqltablename_go">
 <a href="#sqltablename_go" style="color: inherit; text-decoration: inherit;">Sql<wbr>Table<wbr>Name</a>
@@ -3349,14 +2951,11 @@ All [input](#inputs) properties are implicitly available as output properties. A
         <span class="property-indicator"></span>
         <span class="property-type">string</span>
     </dt>
-    <dd>{{% md %}}SQL table name{{% /md %}}</dd>
-</dl>
+    <dd>{{% md %}}SQL table name{{% /md %}}</dd></dl>
 {{% /choosable %}}
 
 {{% choosable language nodejs %}}
-<dl class="resources-properties">
-
-    <dt class="property-required"
+<dl class="resources-properties"><dt class="property-required"
             title="Required">
         <span id="querytimeout_nodejs">
 <a href="#querytimeout_nodejs" style="color: inherit; text-decoration: inherit;">query<wbr>Timeout</a>
@@ -3364,8 +2963,7 @@ All [input](#inputs) properties are implicitly available as output properties. A
         <span class="property-indicator"></span>
         <span class="property-type">number</span>
     </dt>
-    <dd>{{% md %}}SQL query timeout. Unit in seconds.{{% /md %}}</dd>
-    <dt class="property-required"
+    <dd>{{% md %}}SQL query timeout. Unit in seconds.{{% /md %}}</dd><dt class="property-required"
             title="Required">
         <span id="sqlquery_nodejs">
 <a href="#sqlquery_nodejs" style="color: inherit; text-decoration: inherit;">sql<wbr>Query</a>
@@ -3373,8 +2971,7 @@ All [input](#inputs) properties are implicitly available as output properties. A
         <span class="property-indicator"></span>
         <span class="property-type">string</span>
     </dt>
-    <dd>{{% md %}}SQL query{{% /md %}}</dd>
-    <dt class="property-required"
+    <dd>{{% md %}}SQL query{{% /md %}}</dd><dt class="property-required"
             title="Required">
         <span id="sqlstoredprocedurename_nodejs">
 <a href="#sqlstoredprocedurename_nodejs" style="color: inherit; text-decoration: inherit;">sql<wbr>Stored<wbr>Procedure<wbr>Name</a>
@@ -3382,8 +2979,7 @@ All [input](#inputs) properties are implicitly available as output properties. A
         <span class="property-indicator"></span>
         <span class="property-type">string</span>
     </dt>
-    <dd>{{% md %}}SQL storedProcedure name{{% /md %}}</dd>
-    <dt class="property-required"
+    <dd>{{% md %}}SQL storedProcedure name{{% /md %}}</dd><dt class="property-required"
             title="Required">
         <span id="sqltablename_nodejs">
 <a href="#sqltablename_nodejs" style="color: inherit; text-decoration: inherit;">sql<wbr>Table<wbr>Name</a>
@@ -3391,14 +2987,11 @@ All [input](#inputs) properties are implicitly available as output properties. A
         <span class="property-indicator"></span>
         <span class="property-type">string</span>
     </dt>
-    <dd>{{% md %}}SQL table name{{% /md %}}</dd>
-</dl>
+    <dd>{{% md %}}SQL table name{{% /md %}}</dd></dl>
 {{% /choosable %}}
 
 {{% choosable language python %}}
-<dl class="resources-properties">
-
-    <dt class="property-required"
+<dl class="resources-properties"><dt class="property-required"
             title="Required">
         <span id="query_timeout_python">
 <a href="#query_timeout_python" style="color: inherit; text-decoration: inherit;">query_<wbr>timeout</a>
@@ -3406,8 +2999,7 @@ All [input](#inputs) properties are implicitly available as output properties. A
         <span class="property-indicator"></span>
         <span class="property-type">float</span>
     </dt>
-    <dd>{{% md %}}SQL query timeout. Unit in seconds.{{% /md %}}</dd>
-    <dt class="property-required"
+    <dd>{{% md %}}SQL query timeout. Unit in seconds.{{% /md %}}</dd><dt class="property-required"
             title="Required">
         <span id="sql_query_python">
 <a href="#sql_query_python" style="color: inherit; text-decoration: inherit;">sql_<wbr>query</a>
@@ -3415,8 +3007,7 @@ All [input](#inputs) properties are implicitly available as output properties. A
         <span class="property-indicator"></span>
         <span class="property-type">str</span>
     </dt>
-    <dd>{{% md %}}SQL query{{% /md %}}</dd>
-    <dt class="property-required"
+    <dd>{{% md %}}SQL query{{% /md %}}</dd><dt class="property-required"
             title="Required">
         <span id="sql_stored_procedure_name_python">
 <a href="#sql_stored_procedure_name_python" style="color: inherit; text-decoration: inherit;">sql_<wbr>stored_<wbr>procedure_<wbr>name</a>
@@ -3424,8 +3015,7 @@ All [input](#inputs) properties are implicitly available as output properties. A
         <span class="property-indicator"></span>
         <span class="property-type">str</span>
     </dt>
-    <dd>{{% md %}}SQL storedProcedure name{{% /md %}}</dd>
-    <dt class="property-required"
+    <dd>{{% md %}}SQL storedProcedure name{{% /md %}}</dd><dt class="property-required"
             title="Required">
         <span id="sql_table_name_python">
 <a href="#sql_table_name_python" style="color: inherit; text-decoration: inherit;">sql_<wbr>table_<wbr>name</a>
@@ -3433,16 +3023,13 @@ All [input](#inputs) properties are implicitly available as output properties. A
         <span class="property-indicator"></span>
         <span class="property-type">str</span>
     </dt>
-    <dd>{{% md %}}SQL table name{{% /md %}}</dd>
-</dl>
+    <dd>{{% md %}}SQL table name{{% /md %}}</dd></dl>
 {{% /choosable %}}
 
 <h4 id="datasetstateresponse">Dataset<wbr>State<wbr>Response</h4>
 
 {{% choosable language csharp %}}
-<dl class="resources-properties">
-
-    <dt class="property-required"
+<dl class="resources-properties"><dt class="property-required"
             title="Required">
         <span id="etag_csharp">
 <a href="#etag_csharp" style="color: inherit; text-decoration: inherit;">Etag</a>
@@ -3450,8 +3037,7 @@ All [input](#inputs) properties are implicitly available as output properties. A
         <span class="property-indicator"></span>
         <span class="property-type">string</span>
     </dt>
-    <dd>{{% md %}}eTag description{{% /md %}}</dd>
-    <dt class="property-optional"
+    <dd>{{% md %}}eTag description{{% /md %}}</dd><dt class="property-optional"
             title="Optional">
         <span id="deprecatedby_csharp">
 <a href="#deprecatedby_csharp" style="color: inherit; text-decoration: inherit;">Deprecated<wbr>By</a>
@@ -3459,8 +3045,7 @@ All [input](#inputs) properties are implicitly available as output properties. A
         <span class="property-indicator"></span>
         <span class="property-type"><a href="#datasetstateresponsedeprecatedby">Pulumi.<wbr>Azure<wbr>Native.<wbr>Machine<wbr>Learning<wbr>Services.<wbr>Inputs.<wbr>Dataset<wbr>State<wbr>Response<wbr>Deprecated<wbr>By<wbr>Args</a></span>
     </dt>
-    <dd>{{% md %}}Reference to better Dataset or a Definition{{% /md %}}</dd>
-    <dt class="property-optional"
+    <dd>{{% md %}}Reference to better Dataset or a Definition{{% /md %}}</dd><dt class="property-optional"
             title="Optional">
         <span id="state_csharp">
 <a href="#state_csharp" style="color: inherit; text-decoration: inherit;">State</a>
@@ -3468,14 +3053,11 @@ All [input](#inputs) properties are implicitly available as output properties. A
         <span class="property-indicator"></span>
         <span class="property-type">string</span>
     </dt>
-    <dd>{{% md %}}Dataset state{{% /md %}}</dd>
-</dl>
+    <dd>{{% md %}}Dataset state{{% /md %}}</dd></dl>
 {{% /choosable %}}
 
 {{% choosable language go %}}
-<dl class="resources-properties">
-
-    <dt class="property-required"
+<dl class="resources-properties"><dt class="property-required"
             title="Required">
         <span id="etag_go">
 <a href="#etag_go" style="color: inherit; text-decoration: inherit;">Etag</a>
@@ -3483,8 +3065,7 @@ All [input](#inputs) properties are implicitly available as output properties. A
         <span class="property-indicator"></span>
         <span class="property-type">string</span>
     </dt>
-    <dd>{{% md %}}eTag description{{% /md %}}</dd>
-    <dt class="property-optional"
+    <dd>{{% md %}}eTag description{{% /md %}}</dd><dt class="property-optional"
             title="Optional">
         <span id="deprecatedby_go">
 <a href="#deprecatedby_go" style="color: inherit; text-decoration: inherit;">Deprecated<wbr>By</a>
@@ -3492,8 +3073,7 @@ All [input](#inputs) properties are implicitly available as output properties. A
         <span class="property-indicator"></span>
         <span class="property-type"><a href="#datasetstateresponsedeprecatedby">Dataset<wbr>State<wbr>Response<wbr>Deprecated<wbr>By</a></span>
     </dt>
-    <dd>{{% md %}}Reference to better Dataset or a Definition{{% /md %}}</dd>
-    <dt class="property-optional"
+    <dd>{{% md %}}Reference to better Dataset or a Definition{{% /md %}}</dd><dt class="property-optional"
             title="Optional">
         <span id="state_go">
 <a href="#state_go" style="color: inherit; text-decoration: inherit;">State</a>
@@ -3501,14 +3081,11 @@ All [input](#inputs) properties are implicitly available as output properties. A
         <span class="property-indicator"></span>
         <span class="property-type">string</span>
     </dt>
-    <dd>{{% md %}}Dataset state{{% /md %}}</dd>
-</dl>
+    <dd>{{% md %}}Dataset state{{% /md %}}</dd></dl>
 {{% /choosable %}}
 
 {{% choosable language nodejs %}}
-<dl class="resources-properties">
-
-    <dt class="property-required"
+<dl class="resources-properties"><dt class="property-required"
             title="Required">
         <span id="etag_nodejs">
 <a href="#etag_nodejs" style="color: inherit; text-decoration: inherit;">etag</a>
@@ -3516,8 +3093,7 @@ All [input](#inputs) properties are implicitly available as output properties. A
         <span class="property-indicator"></span>
         <span class="property-type">string</span>
     </dt>
-    <dd>{{% md %}}eTag description{{% /md %}}</dd>
-    <dt class="property-optional"
+    <dd>{{% md %}}eTag description{{% /md %}}</dd><dt class="property-optional"
             title="Optional">
         <span id="deprecatedby_nodejs">
 <a href="#deprecatedby_nodejs" style="color: inherit; text-decoration: inherit;">deprecated<wbr>By</a>
@@ -3525,8 +3101,7 @@ All [input](#inputs) properties are implicitly available as output properties. A
         <span class="property-indicator"></span>
         <span class="property-type"><a href="#datasetstateresponsedeprecatedby">Dataset<wbr>State<wbr>Response<wbr>Deprecated<wbr>By</a></span>
     </dt>
-    <dd>{{% md %}}Reference to better Dataset or a Definition{{% /md %}}</dd>
-    <dt class="property-optional"
+    <dd>{{% md %}}Reference to better Dataset or a Definition{{% /md %}}</dd><dt class="property-optional"
             title="Optional">
         <span id="state_nodejs">
 <a href="#state_nodejs" style="color: inherit; text-decoration: inherit;">state</a>
@@ -3534,14 +3109,11 @@ All [input](#inputs) properties are implicitly available as output properties. A
         <span class="property-indicator"></span>
         <span class="property-type">string</span>
     </dt>
-    <dd>{{% md %}}Dataset state{{% /md %}}</dd>
-</dl>
+    <dd>{{% md %}}Dataset state{{% /md %}}</dd></dl>
 {{% /choosable %}}
 
 {{% choosable language python %}}
-<dl class="resources-properties">
-
-    <dt class="property-required"
+<dl class="resources-properties"><dt class="property-required"
             title="Required">
         <span id="etag_python">
 <a href="#etag_python" style="color: inherit; text-decoration: inherit;">etag</a>
@@ -3549,8 +3121,7 @@ All [input](#inputs) properties are implicitly available as output properties. A
         <span class="property-indicator"></span>
         <span class="property-type">str</span>
     </dt>
-    <dd>{{% md %}}eTag description{{% /md %}}</dd>
-    <dt class="property-optional"
+    <dd>{{% md %}}eTag description{{% /md %}}</dd><dt class="property-optional"
             title="Optional">
         <span id="deprecated_by_python">
 <a href="#deprecated_by_python" style="color: inherit; text-decoration: inherit;">deprecated_<wbr>by</a>
@@ -3558,8 +3129,7 @@ All [input](#inputs) properties are implicitly available as output properties. A
         <span class="property-indicator"></span>
         <span class="property-type"><a href="#datasetstateresponsedeprecatedby">Dataset<wbr>State<wbr>Response<wbr>Deprecated<wbr>By<wbr>Args</a></span>
     </dt>
-    <dd>{{% md %}}Reference to better Dataset or a Definition{{% /md %}}</dd>
-    <dt class="property-optional"
+    <dd>{{% md %}}Reference to better Dataset or a Definition{{% /md %}}</dd><dt class="property-optional"
             title="Optional">
         <span id="state_python">
 <a href="#state_python" style="color: inherit; text-decoration: inherit;">state</a>
@@ -3567,16 +3137,13 @@ All [input](#inputs) properties are implicitly available as output properties. A
         <span class="property-indicator"></span>
         <span class="property-type">str</span>
     </dt>
-    <dd>{{% md %}}Dataset state{{% /md %}}</dd>
-</dl>
+    <dd>{{% md %}}Dataset state{{% /md %}}</dd></dl>
 {{% /choosable %}}
 
 <h4 id="datasetstateresponsedeprecatedby">Dataset<wbr>State<wbr>Response<wbr>Deprecated<wbr>By</h4>
 
 {{% choosable language csharp %}}
-<dl class="resources-properties">
-
-    <dt class="property-required"
+<dl class="resources-properties"><dt class="property-required"
             title="Required">
         <span id="datasetid_csharp">
 <a href="#datasetid_csharp" style="color: inherit; text-decoration: inherit;">Dataset<wbr>Id</a>
@@ -3584,8 +3151,7 @@ All [input](#inputs) properties are implicitly available as output properties. A
         <span class="property-indicator"></span>
         <span class="property-type">string</span>
     </dt>
-    <dd>{{% md %}}Unique Dataset identifier.{{% /md %}}</dd>
-    <dt class="property-optional"
+    <dd>{{% md %}}Unique Dataset identifier.{{% /md %}}</dd><dt class="property-optional"
             title="Optional">
         <span id="definitionversion_csharp">
 <a href="#definitionversion_csharp" style="color: inherit; text-decoration: inherit;">Definition<wbr>Version</a>
@@ -3593,14 +3159,11 @@ All [input](#inputs) properties are implicitly available as output properties. A
         <span class="property-indicator"></span>
         <span class="property-type">string</span>
     </dt>
-    <dd>{{% md %}}Definition Version{{% /md %}}</dd>
-</dl>
+    <dd>{{% md %}}Definition Version{{% /md %}}</dd></dl>
 {{% /choosable %}}
 
 {{% choosable language go %}}
-<dl class="resources-properties">
-
-    <dt class="property-required"
+<dl class="resources-properties"><dt class="property-required"
             title="Required">
         <span id="datasetid_go">
 <a href="#datasetid_go" style="color: inherit; text-decoration: inherit;">Dataset<wbr>Id</a>
@@ -3608,8 +3171,7 @@ All [input](#inputs) properties are implicitly available as output properties. A
         <span class="property-indicator"></span>
         <span class="property-type">string</span>
     </dt>
-    <dd>{{% md %}}Unique Dataset identifier.{{% /md %}}</dd>
-    <dt class="property-optional"
+    <dd>{{% md %}}Unique Dataset identifier.{{% /md %}}</dd><dt class="property-optional"
             title="Optional">
         <span id="definitionversion_go">
 <a href="#definitionversion_go" style="color: inherit; text-decoration: inherit;">Definition<wbr>Version</a>
@@ -3617,14 +3179,11 @@ All [input](#inputs) properties are implicitly available as output properties. A
         <span class="property-indicator"></span>
         <span class="property-type">string</span>
     </dt>
-    <dd>{{% md %}}Definition Version{{% /md %}}</dd>
-</dl>
+    <dd>{{% md %}}Definition Version{{% /md %}}</dd></dl>
 {{% /choosable %}}
 
 {{% choosable language nodejs %}}
-<dl class="resources-properties">
-
-    <dt class="property-required"
+<dl class="resources-properties"><dt class="property-required"
             title="Required">
         <span id="datasetid_nodejs">
 <a href="#datasetid_nodejs" style="color: inherit; text-decoration: inherit;">dataset<wbr>Id</a>
@@ -3632,8 +3191,7 @@ All [input](#inputs) properties are implicitly available as output properties. A
         <span class="property-indicator"></span>
         <span class="property-type">string</span>
     </dt>
-    <dd>{{% md %}}Unique Dataset identifier.{{% /md %}}</dd>
-    <dt class="property-optional"
+    <dd>{{% md %}}Unique Dataset identifier.{{% /md %}}</dd><dt class="property-optional"
             title="Optional">
         <span id="definitionversion_nodejs">
 <a href="#definitionversion_nodejs" style="color: inherit; text-decoration: inherit;">definition<wbr>Version</a>
@@ -3641,14 +3199,11 @@ All [input](#inputs) properties are implicitly available as output properties. A
         <span class="property-indicator"></span>
         <span class="property-type">string</span>
     </dt>
-    <dd>{{% md %}}Definition Version{{% /md %}}</dd>
-</dl>
+    <dd>{{% md %}}Definition Version{{% /md %}}</dd></dl>
 {{% /choosable %}}
 
 {{% choosable language python %}}
-<dl class="resources-properties">
-
-    <dt class="property-required"
+<dl class="resources-properties"><dt class="property-required"
             title="Required">
         <span id="dataset_id_python">
 <a href="#dataset_id_python" style="color: inherit; text-decoration: inherit;">dataset_<wbr>id</a>
@@ -3656,8 +3211,7 @@ All [input](#inputs) properties are implicitly available as output properties. A
         <span class="property-indicator"></span>
         <span class="property-type">str</span>
     </dt>
-    <dd>{{% md %}}Unique Dataset identifier.{{% /md %}}</dd>
-    <dt class="property-optional"
+    <dd>{{% md %}}Unique Dataset identifier.{{% /md %}}</dd><dt class="property-optional"
             title="Optional">
         <span id="definition_version_python">
 <a href="#definition_version_python" style="color: inherit; text-decoration: inherit;">definition_<wbr>version</a>
@@ -3665,108 +3219,73 @@ All [input](#inputs) properties are implicitly available as output properties. A
         <span class="property-indicator"></span>
         <span class="property-type">str</span>
     </dt>
-    <dd>{{% md %}}Definition Version{{% /md %}}</dd>
-</dl>
+    <dd>{{% md %}}Definition Version{{% /md %}}</dd></dl>
 {{% /choosable %}}
 
 <h4 id="datasettype">Dataset<wbr>Type</h4>
 
 {{% choosable language csharp %}}
-<dl class="tabular">
-    <dt>Tabular</dt>
-    <dd>tabular</dd>
-    <dt>File</dt>
-    <dd>file</dd>
-</dl>
+<dl class="tabular"><dt>Tabular</dt>
+    <dd>tabular</dd><dt>File</dt>
+    <dd>file</dd></dl>
 {{% /choosable %}}
 
 {{% choosable language go %}}
-<dl class="tabular">
-    <dt>Dataset<wbr>Type<wbr>Tabular</dt>
-    <dd>tabular</dd>
-    <dt>Dataset<wbr>Type<wbr>File</dt>
-    <dd>file</dd>
-</dl>
+<dl class="tabular"><dt>Dataset<wbr>Type<wbr>Tabular</dt>
+    <dd>tabular</dd><dt>Dataset<wbr>Type<wbr>File</dt>
+    <dd>file</dd></dl>
 {{% /choosable %}}
 
 {{% choosable language nodejs %}}
-<dl class="tabular">
-    <dt>Tabular</dt>
-    <dd>tabular</dd>
-    <dt>File</dt>
-    <dd>file</dd>
-</dl>
+<dl class="tabular"><dt>Tabular</dt>
+    <dd>tabular</dd><dt>File</dt>
+    <dd>file</dd></dl>
 {{% /choosable %}}
 
 {{% choosable language python %}}
-<dl class="tabular">
-    <dt>TABULAR</dt>
-    <dd>tabular</dd>
-    <dt>FILE</dt>
-    <dd>file</dd>
-</dl>
+<dl class="tabular"><dt>TABULAR</dt>
+    <dd>tabular</dd><dt>FILE</dt>
+    <dd>file</dd></dl>
 {{% /choosable %}}
 
 <h4 id="header">Header</h4>
 
 {{% choosable language csharp %}}
-<dl class="tabular">
-    <dt>All_<wbr>files_<wbr>have_<wbr>same_<wbr>headers</dt>
-    <dd>all_files_have_same_headers</dd>
-    <dt>Only_<wbr>first_<wbr>file_<wbr>has_<wbr>headers</dt>
-    <dd>only_first_file_has_headers</dd>
-    <dt>No_<wbr>headers</dt>
-    <dd>no_headers</dd>
-    <dt>Combine_<wbr>all_<wbr>files_<wbr>headers</dt>
-    <dd>combine_all_files_headers</dd>
-</dl>
+<dl class="tabular"><dt>All_<wbr>files_<wbr>have_<wbr>same_<wbr>headers</dt>
+    <dd>all_files_have_same_headers</dd><dt>Only_<wbr>first_<wbr>file_<wbr>has_<wbr>headers</dt>
+    <dd>only_first_file_has_headers</dd><dt>No_<wbr>headers</dt>
+    <dd>no_headers</dd><dt>Combine_<wbr>all_<wbr>files_<wbr>headers</dt>
+    <dd>combine_all_files_headers</dd></dl>
 {{% /choosable %}}
 
 {{% choosable language go %}}
-<dl class="tabular">
-    <dt>Header_All_<wbr>files_<wbr>have_<wbr>same_<wbr>headers</dt>
-    <dd>all_files_have_same_headers</dd>
-    <dt>Header_Only_<wbr>first_<wbr>file_<wbr>has_<wbr>headers</dt>
-    <dd>only_first_file_has_headers</dd>
-    <dt>Header_No_<wbr>headers</dt>
-    <dd>no_headers</dd>
-    <dt>Header_Combine_<wbr>all_<wbr>files_<wbr>headers</dt>
-    <dd>combine_all_files_headers</dd>
-</dl>
+<dl class="tabular"><dt>Header_All_<wbr>files_<wbr>have_<wbr>same_<wbr>headers</dt>
+    <dd>all_files_have_same_headers</dd><dt>Header_Only_<wbr>first_<wbr>file_<wbr>has_<wbr>headers</dt>
+    <dd>only_first_file_has_headers</dd><dt>Header_No_<wbr>headers</dt>
+    <dd>no_headers</dd><dt>Header_Combine_<wbr>all_<wbr>files_<wbr>headers</dt>
+    <dd>combine_all_files_headers</dd></dl>
 {{% /choosable %}}
 
 {{% choosable language nodejs %}}
-<dl class="tabular">
-    <dt>All_<wbr>files_<wbr>have_<wbr>same_<wbr>headers</dt>
-    <dd>all_files_have_same_headers</dd>
-    <dt>Only_<wbr>first_<wbr>file_<wbr>has_<wbr>headers</dt>
-    <dd>only_first_file_has_headers</dd>
-    <dt>No_<wbr>headers</dt>
-    <dd>no_headers</dd>
-    <dt>Combine_<wbr>all_<wbr>files_<wbr>headers</dt>
-    <dd>combine_all_files_headers</dd>
-</dl>
+<dl class="tabular"><dt>All_<wbr>files_<wbr>have_<wbr>same_<wbr>headers</dt>
+    <dd>all_files_have_same_headers</dd><dt>Only_<wbr>first_<wbr>file_<wbr>has_<wbr>headers</dt>
+    <dd>only_first_file_has_headers</dd><dt>No_<wbr>headers</dt>
+    <dd>no_headers</dd><dt>Combine_<wbr>all_<wbr>files_<wbr>headers</dt>
+    <dd>combine_all_files_headers</dd></dl>
 {{% /choosable %}}
 
 {{% choosable language python %}}
-<dl class="tabular">
-    <dt>ALL_FILES_HAVE_SAME_HEADERS</dt>
-    <dd>all_files_have_same_headers</dd>
-    <dt>ONLY_FIRST_FILE_HAS_HEADERS</dt>
-    <dd>only_first_file_has_headers</dd>
-    <dt>NO_HEADERS</dt>
-    <dd>no_headers</dd>
-    <dt>COMBINE_ALL_FILES_HEADERS</dt>
-    <dd>combine_all_files_headers</dd>
-</dl>
+<dl class="tabular"><dt>ALL_FILES_HAVE_SAME_HEADERS</dt>
+    <dd>all_files_have_same_headers</dd><dt>ONLY_FIRST_FILE_HAS_HEADERS</dt>
+    <dd>only_first_file_has_headers</dd><dt>NO_HEADERS</dt>
+    <dd>no_headers</dd><dt>COMBINE_ALL_FILES_HEADERS</dt>
+    <dd>combine_all_files_headers</dd></dl>
 {{% /choosable %}}
 
 <h4 id="identityresponse">Identity<wbr>Response</h4>
 
 {{% choosable language csharp %}}
-<dl class="resources-properties">
-
-    <dt class="property-required"
+<dl class="resources-properties"><dt class="property-required"
             title="Required">
         <span id="principalid_csharp">
 <a href="#principalid_csharp" style="color: inherit; text-decoration: inherit;">Principal<wbr>Id</a>
@@ -3774,8 +3293,7 @@ All [input](#inputs) properties are implicitly available as output properties. A
         <span class="property-indicator"></span>
         <span class="property-type">string</span>
     </dt>
-    <dd>{{% md %}}The principal ID of resource identity.{{% /md %}}</dd>
-    <dt class="property-required"
+    <dd>{{% md %}}The principal ID of resource identity.{{% /md %}}</dd><dt class="property-required"
             title="Required">
         <span id="tenantid_csharp">
 <a href="#tenantid_csharp" style="color: inherit; text-decoration: inherit;">Tenant<wbr>Id</a>
@@ -3783,8 +3301,7 @@ All [input](#inputs) properties are implicitly available as output properties. A
         <span class="property-indicator"></span>
         <span class="property-type">string</span>
     </dt>
-    <dd>{{% md %}}The tenant ID of resource.{{% /md %}}</dd>
-    <dt class="property-optional"
+    <dd>{{% md %}}The tenant ID of resource.{{% /md %}}</dd><dt class="property-optional"
             title="Optional">
         <span id="type_csharp">
 <a href="#type_csharp" style="color: inherit; text-decoration: inherit;">Type</a>
@@ -3792,8 +3309,7 @@ All [input](#inputs) properties are implicitly available as output properties. A
         <span class="property-indicator"></span>
         <span class="property-type">string</span>
     </dt>
-    <dd>{{% md %}}The identity type.{{% /md %}}</dd>
-    <dt class="property-optional"
+    <dd>{{% md %}}The identity type.{{% /md %}}</dd><dt class="property-optional"
             title="Optional">
         <span id="userassignedidentities_csharp">
 <a href="#userassignedidentities_csharp" style="color: inherit; text-decoration: inherit;">User<wbr>Assigned<wbr>Identities</a>
@@ -3801,14 +3317,11 @@ All [input](#inputs) properties are implicitly available as output properties. A
         <span class="property-indicator"></span>
         <span class="property-type">Dictionary&lt;string, Pulumi.<wbr>Azure<wbr>Native.<wbr>Machine<wbr>Learning<wbr>Services.<wbr>Inputs.<wbr>User<wbr>Assigned<wbr>Identity<wbr>Response<wbr>Args&gt;</span>
     </dt>
-    <dd>{{% md %}}The user assigned identities associated with the resource.{{% /md %}}</dd>
-</dl>
+    <dd>{{% md %}}The user assigned identities associated with the resource.{{% /md %}}</dd></dl>
 {{% /choosable %}}
 
 {{% choosable language go %}}
-<dl class="resources-properties">
-
-    <dt class="property-required"
+<dl class="resources-properties"><dt class="property-required"
             title="Required">
         <span id="principalid_go">
 <a href="#principalid_go" style="color: inherit; text-decoration: inherit;">Principal<wbr>Id</a>
@@ -3816,8 +3329,7 @@ All [input](#inputs) properties are implicitly available as output properties. A
         <span class="property-indicator"></span>
         <span class="property-type">string</span>
     </dt>
-    <dd>{{% md %}}The principal ID of resource identity.{{% /md %}}</dd>
-    <dt class="property-required"
+    <dd>{{% md %}}The principal ID of resource identity.{{% /md %}}</dd><dt class="property-required"
             title="Required">
         <span id="tenantid_go">
 <a href="#tenantid_go" style="color: inherit; text-decoration: inherit;">Tenant<wbr>Id</a>
@@ -3825,8 +3337,7 @@ All [input](#inputs) properties are implicitly available as output properties. A
         <span class="property-indicator"></span>
         <span class="property-type">string</span>
     </dt>
-    <dd>{{% md %}}The tenant ID of resource.{{% /md %}}</dd>
-    <dt class="property-optional"
+    <dd>{{% md %}}The tenant ID of resource.{{% /md %}}</dd><dt class="property-optional"
             title="Optional">
         <span id="type_go">
 <a href="#type_go" style="color: inherit; text-decoration: inherit;">Type</a>
@@ -3834,8 +3345,7 @@ All [input](#inputs) properties are implicitly available as output properties. A
         <span class="property-indicator"></span>
         <span class="property-type">string</span>
     </dt>
-    <dd>{{% md %}}The identity type.{{% /md %}}</dd>
-    <dt class="property-optional"
+    <dd>{{% md %}}The identity type.{{% /md %}}</dd><dt class="property-optional"
             title="Optional">
         <span id="userassignedidentities_go">
 <a href="#userassignedidentities_go" style="color: inherit; text-decoration: inherit;">User<wbr>Assigned<wbr>Identities</a>
@@ -3843,14 +3353,11 @@ All [input](#inputs) properties are implicitly available as output properties. A
         <span class="property-indicator"></span>
         <span class="property-type">map[string]User<wbr>Assigned<wbr>Identity<wbr>Response</span>
     </dt>
-    <dd>{{% md %}}The user assigned identities associated with the resource.{{% /md %}}</dd>
-</dl>
+    <dd>{{% md %}}The user assigned identities associated with the resource.{{% /md %}}</dd></dl>
 {{% /choosable %}}
 
 {{% choosable language nodejs %}}
-<dl class="resources-properties">
-
-    <dt class="property-required"
+<dl class="resources-properties"><dt class="property-required"
             title="Required">
         <span id="principalid_nodejs">
 <a href="#principalid_nodejs" style="color: inherit; text-decoration: inherit;">principal<wbr>Id</a>
@@ -3858,8 +3365,7 @@ All [input](#inputs) properties are implicitly available as output properties. A
         <span class="property-indicator"></span>
         <span class="property-type">string</span>
     </dt>
-    <dd>{{% md %}}The principal ID of resource identity.{{% /md %}}</dd>
-    <dt class="property-required"
+    <dd>{{% md %}}The principal ID of resource identity.{{% /md %}}</dd><dt class="property-required"
             title="Required">
         <span id="tenantid_nodejs">
 <a href="#tenantid_nodejs" style="color: inherit; text-decoration: inherit;">tenant<wbr>Id</a>
@@ -3867,8 +3373,7 @@ All [input](#inputs) properties are implicitly available as output properties. A
         <span class="property-indicator"></span>
         <span class="property-type">string</span>
     </dt>
-    <dd>{{% md %}}The tenant ID of resource.{{% /md %}}</dd>
-    <dt class="property-optional"
+    <dd>{{% md %}}The tenant ID of resource.{{% /md %}}</dd><dt class="property-optional"
             title="Optional">
         <span id="type_nodejs">
 <a href="#type_nodejs" style="color: inherit; text-decoration: inherit;">type</a>
@@ -3876,8 +3381,7 @@ All [input](#inputs) properties are implicitly available as output properties. A
         <span class="property-indicator"></span>
         <span class="property-type">string</span>
     </dt>
-    <dd>{{% md %}}The identity type.{{% /md %}}</dd>
-    <dt class="property-optional"
+    <dd>{{% md %}}The identity type.{{% /md %}}</dd><dt class="property-optional"
             title="Optional">
         <span id="userassignedidentities_nodejs">
 <a href="#userassignedidentities_nodejs" style="color: inherit; text-decoration: inherit;">user<wbr>Assigned<wbr>Identities</a>
@@ -3885,14 +3389,11 @@ All [input](#inputs) properties are implicitly available as output properties. A
         <span class="property-indicator"></span>
         <span class="property-type">{[key: string]: User<wbr>Assigned<wbr>Identity<wbr>Response}</span>
     </dt>
-    <dd>{{% md %}}The user assigned identities associated with the resource.{{% /md %}}</dd>
-</dl>
+    <dd>{{% md %}}The user assigned identities associated with the resource.{{% /md %}}</dd></dl>
 {{% /choosable %}}
 
 {{% choosable language python %}}
-<dl class="resources-properties">
-
-    <dt class="property-required"
+<dl class="resources-properties"><dt class="property-required"
             title="Required">
         <span id="principal_id_python">
 <a href="#principal_id_python" style="color: inherit; text-decoration: inherit;">principal_<wbr>id</a>
@@ -3900,8 +3401,7 @@ All [input](#inputs) properties are implicitly available as output properties. A
         <span class="property-indicator"></span>
         <span class="property-type">str</span>
     </dt>
-    <dd>{{% md %}}The principal ID of resource identity.{{% /md %}}</dd>
-    <dt class="property-required"
+    <dd>{{% md %}}The principal ID of resource identity.{{% /md %}}</dd><dt class="property-required"
             title="Required">
         <span id="tenant_id_python">
 <a href="#tenant_id_python" style="color: inherit; text-decoration: inherit;">tenant_<wbr>id</a>
@@ -3909,8 +3409,7 @@ All [input](#inputs) properties are implicitly available as output properties. A
         <span class="property-indicator"></span>
         <span class="property-type">str</span>
     </dt>
-    <dd>{{% md %}}The tenant ID of resource.{{% /md %}}</dd>
-    <dt class="property-optional"
+    <dd>{{% md %}}The tenant ID of resource.{{% /md %}}</dd><dt class="property-optional"
             title="Optional">
         <span id="type_python">
 <a href="#type_python" style="color: inherit; text-decoration: inherit;">type</a>
@@ -3918,8 +3417,7 @@ All [input](#inputs) properties are implicitly available as output properties. A
         <span class="property-indicator"></span>
         <span class="property-type">str</span>
     </dt>
-    <dd>{{% md %}}The identity type.{{% /md %}}</dd>
-    <dt class="property-optional"
+    <dd>{{% md %}}The identity type.{{% /md %}}</dd><dt class="property-optional"
             title="Optional">
         <span id="user_assigned_identities_python">
 <a href="#user_assigned_identities_python" style="color: inherit; text-decoration: inherit;">user_<wbr>assigned_<wbr>identities</a>
@@ -3927,16 +3425,13 @@ All [input](#inputs) properties are implicitly available as output properties. A
         <span class="property-indicator"></span>
         <span class="property-type">Mapping[str, User<wbr>Assigned<wbr>Identity<wbr>Response<wbr>Args]</span>
     </dt>
-    <dd>{{% md %}}The user assigned identities associated with the resource.{{% /md %}}</dd>
-</dl>
+    <dd>{{% md %}}The user assigned identities associated with the resource.{{% /md %}}</dd></dl>
 {{% /choosable %}}
 
 <h4 id="skuresponse">Sku<wbr>Response</h4>
 
 {{% choosable language csharp %}}
-<dl class="resources-properties">
-
-    <dt class="property-optional"
+<dl class="resources-properties"><dt class="property-optional"
             title="Optional">
         <span id="name_csharp">
 <a href="#name_csharp" style="color: inherit; text-decoration: inherit;">Name</a>
@@ -3944,8 +3439,7 @@ All [input](#inputs) properties are implicitly available as output properties. A
         <span class="property-indicator"></span>
         <span class="property-type">string</span>
     </dt>
-    <dd>{{% md %}}Name of the sku{{% /md %}}</dd>
-    <dt class="property-optional"
+    <dd>{{% md %}}Name of the sku{{% /md %}}</dd><dt class="property-optional"
             title="Optional">
         <span id="tier_csharp">
 <a href="#tier_csharp" style="color: inherit; text-decoration: inherit;">Tier</a>
@@ -3953,14 +3447,11 @@ All [input](#inputs) properties are implicitly available as output properties. A
         <span class="property-indicator"></span>
         <span class="property-type">string</span>
     </dt>
-    <dd>{{% md %}}Tier of the sku like Basic or Enterprise{{% /md %}}</dd>
-</dl>
+    <dd>{{% md %}}Tier of the sku like Basic or Enterprise{{% /md %}}</dd></dl>
 {{% /choosable %}}
 
 {{% choosable language go %}}
-<dl class="resources-properties">
-
-    <dt class="property-optional"
+<dl class="resources-properties"><dt class="property-optional"
             title="Optional">
         <span id="name_go">
 <a href="#name_go" style="color: inherit; text-decoration: inherit;">Name</a>
@@ -3968,8 +3459,7 @@ All [input](#inputs) properties are implicitly available as output properties. A
         <span class="property-indicator"></span>
         <span class="property-type">string</span>
     </dt>
-    <dd>{{% md %}}Name of the sku{{% /md %}}</dd>
-    <dt class="property-optional"
+    <dd>{{% md %}}Name of the sku{{% /md %}}</dd><dt class="property-optional"
             title="Optional">
         <span id="tier_go">
 <a href="#tier_go" style="color: inherit; text-decoration: inherit;">Tier</a>
@@ -3977,14 +3467,11 @@ All [input](#inputs) properties are implicitly available as output properties. A
         <span class="property-indicator"></span>
         <span class="property-type">string</span>
     </dt>
-    <dd>{{% md %}}Tier of the sku like Basic or Enterprise{{% /md %}}</dd>
-</dl>
+    <dd>{{% md %}}Tier of the sku like Basic or Enterprise{{% /md %}}</dd></dl>
 {{% /choosable %}}
 
 {{% choosable language nodejs %}}
-<dl class="resources-properties">
-
-    <dt class="property-optional"
+<dl class="resources-properties"><dt class="property-optional"
             title="Optional">
         <span id="name_nodejs">
 <a href="#name_nodejs" style="color: inherit; text-decoration: inherit;">name</a>
@@ -3992,8 +3479,7 @@ All [input](#inputs) properties are implicitly available as output properties. A
         <span class="property-indicator"></span>
         <span class="property-type">string</span>
     </dt>
-    <dd>{{% md %}}Name of the sku{{% /md %}}</dd>
-    <dt class="property-optional"
+    <dd>{{% md %}}Name of the sku{{% /md %}}</dd><dt class="property-optional"
             title="Optional">
         <span id="tier_nodejs">
 <a href="#tier_nodejs" style="color: inherit; text-decoration: inherit;">tier</a>
@@ -4001,14 +3487,11 @@ All [input](#inputs) properties are implicitly available as output properties. A
         <span class="property-indicator"></span>
         <span class="property-type">string</span>
     </dt>
-    <dd>{{% md %}}Tier of the sku like Basic or Enterprise{{% /md %}}</dd>
-</dl>
+    <dd>{{% md %}}Tier of the sku like Basic or Enterprise{{% /md %}}</dd></dl>
 {{% /choosable %}}
 
 {{% choosable language python %}}
-<dl class="resources-properties">
-
-    <dt class="property-optional"
+<dl class="resources-properties"><dt class="property-optional"
             title="Optional">
         <span id="name_python">
 <a href="#name_python" style="color: inherit; text-decoration: inherit;">name</a>
@@ -4016,8 +3499,7 @@ All [input](#inputs) properties are implicitly available as output properties. A
         <span class="property-indicator"></span>
         <span class="property-type">str</span>
     </dt>
-    <dd>{{% md %}}Name of the sku{{% /md %}}</dd>
-    <dt class="property-optional"
+    <dd>{{% md %}}Name of the sku{{% /md %}}</dd><dt class="property-optional"
             title="Optional">
         <span id="tier_python">
 <a href="#tier_python" style="color: inherit; text-decoration: inherit;">tier</a>
@@ -4025,62 +3507,43 @@ All [input](#inputs) properties are implicitly available as output properties. A
         <span class="property-indicator"></span>
         <span class="property-type">str</span>
     </dt>
-    <dd>{{% md %}}Tier of the sku like Basic or Enterprise{{% /md %}}</dd>
-</dl>
+    <dd>{{% md %}}Tier of the sku like Basic or Enterprise{{% /md %}}</dd></dl>
 {{% /choosable %}}
 
 <h4 id="sourcetype">Source<wbr>Type</h4>
 
 {{% choosable language csharp %}}
-<dl class="tabular">
-    <dt>Delimited_<wbr>files</dt>
-    <dd>delimited_files</dd>
-    <dt>Json_<wbr>lines_<wbr>files</dt>
-    <dd>json_lines_files</dd>
-    <dt>Parquet_<wbr>files</dt>
-    <dd>parquet_files</dd>
-</dl>
+<dl class="tabular"><dt>Delimited_<wbr>files</dt>
+    <dd>delimited_files</dd><dt>Json_<wbr>lines_<wbr>files</dt>
+    <dd>json_lines_files</dd><dt>Parquet_<wbr>files</dt>
+    <dd>parquet_files</dd></dl>
 {{% /choosable %}}
 
 {{% choosable language go %}}
-<dl class="tabular">
-    <dt>Source<wbr>Type_Delimited_<wbr>files</dt>
-    <dd>delimited_files</dd>
-    <dt>Source<wbr>Type_Json_<wbr>lines_<wbr>files</dt>
-    <dd>json_lines_files</dd>
-    <dt>Source<wbr>Type_Parquet_<wbr>files</dt>
-    <dd>parquet_files</dd>
-</dl>
+<dl class="tabular"><dt>Source<wbr>Type_Delimited_<wbr>files</dt>
+    <dd>delimited_files</dd><dt>Source<wbr>Type_Json_<wbr>lines_<wbr>files</dt>
+    <dd>json_lines_files</dd><dt>Source<wbr>Type_Parquet_<wbr>files</dt>
+    <dd>parquet_files</dd></dl>
 {{% /choosable %}}
 
 {{% choosable language nodejs %}}
-<dl class="tabular">
-    <dt>Delimited_<wbr>files</dt>
-    <dd>delimited_files</dd>
-    <dt>Json_<wbr>lines_<wbr>files</dt>
-    <dd>json_lines_files</dd>
-    <dt>Parquet_<wbr>files</dt>
-    <dd>parquet_files</dd>
-</dl>
+<dl class="tabular"><dt>Delimited_<wbr>files</dt>
+    <dd>delimited_files</dd><dt>Json_<wbr>lines_<wbr>files</dt>
+    <dd>json_lines_files</dd><dt>Parquet_<wbr>files</dt>
+    <dd>parquet_files</dd></dl>
 {{% /choosable %}}
 
 {{% choosable language python %}}
-<dl class="tabular">
-    <dt>DELIMITED_FILES</dt>
-    <dd>delimited_files</dd>
-    <dt>JSON_LINES_FILES</dt>
-    <dd>json_lines_files</dd>
-    <dt>PARQUET_FILES</dt>
-    <dd>parquet_files</dd>
-</dl>
+<dl class="tabular"><dt>DELIMITED_FILES</dt>
+    <dd>delimited_files</dd><dt>JSON_LINES_FILES</dt>
+    <dd>json_lines_files</dd><dt>PARQUET_FILES</dt>
+    <dd>parquet_files</dd></dl>
 {{% /choosable %}}
 
 <h4 id="userassignedidentityresponse">User<wbr>Assigned<wbr>Identity<wbr>Response</h4>
 
 {{% choosable language csharp %}}
-<dl class="resources-properties">
-
-    <dt class="property-required"
+<dl class="resources-properties"><dt class="property-required"
             title="Required">
         <span id="clientid_csharp">
 <a href="#clientid_csharp" style="color: inherit; text-decoration: inherit;">Client<wbr>Id</a>
@@ -4088,8 +3551,7 @@ All [input](#inputs) properties are implicitly available as output properties. A
         <span class="property-indicator"></span>
         <span class="property-type">string</span>
     </dt>
-    <dd>{{% md %}}The clientId(aka appId) of the user assigned identity.{{% /md %}}</dd>
-    <dt class="property-required"
+    <dd>{{% md %}}The clientId(aka appId) of the user assigned identity.{{% /md %}}</dd><dt class="property-required"
             title="Required">
         <span id="principalid_csharp">
 <a href="#principalid_csharp" style="color: inherit; text-decoration: inherit;">Principal<wbr>Id</a>
@@ -4097,8 +3559,7 @@ All [input](#inputs) properties are implicitly available as output properties. A
         <span class="property-indicator"></span>
         <span class="property-type">string</span>
     </dt>
-    <dd>{{% md %}}The principal ID of the user assigned identity.{{% /md %}}</dd>
-    <dt class="property-required"
+    <dd>{{% md %}}The principal ID of the user assigned identity.{{% /md %}}</dd><dt class="property-required"
             title="Required">
         <span id="tenantid_csharp">
 <a href="#tenantid_csharp" style="color: inherit; text-decoration: inherit;">Tenant<wbr>Id</a>
@@ -4106,14 +3567,11 @@ All [input](#inputs) properties are implicitly available as output properties. A
         <span class="property-indicator"></span>
         <span class="property-type">string</span>
     </dt>
-    <dd>{{% md %}}The tenant ID of the user assigned identity.{{% /md %}}</dd>
-</dl>
+    <dd>{{% md %}}The tenant ID of the user assigned identity.{{% /md %}}</dd></dl>
 {{% /choosable %}}
 
 {{% choosable language go %}}
-<dl class="resources-properties">
-
-    <dt class="property-required"
+<dl class="resources-properties"><dt class="property-required"
             title="Required">
         <span id="clientid_go">
 <a href="#clientid_go" style="color: inherit; text-decoration: inherit;">Client<wbr>Id</a>
@@ -4121,8 +3579,7 @@ All [input](#inputs) properties are implicitly available as output properties. A
         <span class="property-indicator"></span>
         <span class="property-type">string</span>
     </dt>
-    <dd>{{% md %}}The clientId(aka appId) of the user assigned identity.{{% /md %}}</dd>
-    <dt class="property-required"
+    <dd>{{% md %}}The clientId(aka appId) of the user assigned identity.{{% /md %}}</dd><dt class="property-required"
             title="Required">
         <span id="principalid_go">
 <a href="#principalid_go" style="color: inherit; text-decoration: inherit;">Principal<wbr>Id</a>
@@ -4130,8 +3587,7 @@ All [input](#inputs) properties are implicitly available as output properties. A
         <span class="property-indicator"></span>
         <span class="property-type">string</span>
     </dt>
-    <dd>{{% md %}}The principal ID of the user assigned identity.{{% /md %}}</dd>
-    <dt class="property-required"
+    <dd>{{% md %}}The principal ID of the user assigned identity.{{% /md %}}</dd><dt class="property-required"
             title="Required">
         <span id="tenantid_go">
 <a href="#tenantid_go" style="color: inherit; text-decoration: inherit;">Tenant<wbr>Id</a>
@@ -4139,14 +3595,11 @@ All [input](#inputs) properties are implicitly available as output properties. A
         <span class="property-indicator"></span>
         <span class="property-type">string</span>
     </dt>
-    <dd>{{% md %}}The tenant ID of the user assigned identity.{{% /md %}}</dd>
-</dl>
+    <dd>{{% md %}}The tenant ID of the user assigned identity.{{% /md %}}</dd></dl>
 {{% /choosable %}}
 
 {{% choosable language nodejs %}}
-<dl class="resources-properties">
-
-    <dt class="property-required"
+<dl class="resources-properties"><dt class="property-required"
             title="Required">
         <span id="clientid_nodejs">
 <a href="#clientid_nodejs" style="color: inherit; text-decoration: inherit;">client<wbr>Id</a>
@@ -4154,8 +3607,7 @@ All [input](#inputs) properties are implicitly available as output properties. A
         <span class="property-indicator"></span>
         <span class="property-type">string</span>
     </dt>
-    <dd>{{% md %}}The clientId(aka appId) of the user assigned identity.{{% /md %}}</dd>
-    <dt class="property-required"
+    <dd>{{% md %}}The clientId(aka appId) of the user assigned identity.{{% /md %}}</dd><dt class="property-required"
             title="Required">
         <span id="principalid_nodejs">
 <a href="#principalid_nodejs" style="color: inherit; text-decoration: inherit;">principal<wbr>Id</a>
@@ -4163,8 +3615,7 @@ All [input](#inputs) properties are implicitly available as output properties. A
         <span class="property-indicator"></span>
         <span class="property-type">string</span>
     </dt>
-    <dd>{{% md %}}The principal ID of the user assigned identity.{{% /md %}}</dd>
-    <dt class="property-required"
+    <dd>{{% md %}}The principal ID of the user assigned identity.{{% /md %}}</dd><dt class="property-required"
             title="Required">
         <span id="tenantid_nodejs">
 <a href="#tenantid_nodejs" style="color: inherit; text-decoration: inherit;">tenant<wbr>Id</a>
@@ -4172,14 +3623,11 @@ All [input](#inputs) properties are implicitly available as output properties. A
         <span class="property-indicator"></span>
         <span class="property-type">string</span>
     </dt>
-    <dd>{{% md %}}The tenant ID of the user assigned identity.{{% /md %}}</dd>
-</dl>
+    <dd>{{% md %}}The tenant ID of the user assigned identity.{{% /md %}}</dd></dl>
 {{% /choosable %}}
 
 {{% choosable language python %}}
-<dl class="resources-properties">
-
-    <dt class="property-required"
+<dl class="resources-properties"><dt class="property-required"
             title="Required">
         <span id="client_id_python">
 <a href="#client_id_python" style="color: inherit; text-decoration: inherit;">client_<wbr>id</a>
@@ -4187,8 +3635,7 @@ All [input](#inputs) properties are implicitly available as output properties. A
         <span class="property-indicator"></span>
         <span class="property-type">str</span>
     </dt>
-    <dd>{{% md %}}The clientId(aka appId) of the user assigned identity.{{% /md %}}</dd>
-    <dt class="property-required"
+    <dd>{{% md %}}The clientId(aka appId) of the user assigned identity.{{% /md %}}</dd><dt class="property-required"
             title="Required">
         <span id="principal_id_python">
 <a href="#principal_id_python" style="color: inherit; text-decoration: inherit;">principal_<wbr>id</a>
@@ -4196,8 +3643,7 @@ All [input](#inputs) properties are implicitly available as output properties. A
         <span class="property-indicator"></span>
         <span class="property-type">str</span>
     </dt>
-    <dd>{{% md %}}The principal ID of the user assigned identity.{{% /md %}}</dd>
-    <dt class="property-required"
+    <dd>{{% md %}}The principal ID of the user assigned identity.{{% /md %}}</dd><dt class="property-required"
             title="Required">
         <span id="tenant_id_python">
 <a href="#tenant_id_python" style="color: inherit; text-decoration: inherit;">tenant_<wbr>id</a>
@@ -4205,16 +3651,13 @@ All [input](#inputs) properties are implicitly available as output properties. A
         <span class="property-indicator"></span>
         <span class="property-type">str</span>
     </dt>
-    <dd>{{% md %}}The tenant ID of the user assigned identity.{{% /md %}}</dd>
-</dl>
+    <dd>{{% md %}}The tenant ID of the user assigned identity.{{% /md %}}</dd></dl>
 {{% /choosable %}}
 
 <h4 id="userinforesponse">User<wbr>Info<wbr>Response</h4>
 
 {{% choosable language csharp %}}
-<dl class="resources-properties">
-
-    <dt class="property-optional"
+<dl class="resources-properties"><dt class="property-optional"
             title="Optional">
         <span id="useraltsecid_csharp">
 <a href="#useraltsecid_csharp" style="color: inherit; text-decoration: inherit;">User<wbr>Alt<wbr>Sec<wbr>Id</a>
@@ -4222,8 +3665,7 @@ All [input](#inputs) properties are implicitly available as output properties. A
         <span class="property-indicator"></span>
         <span class="property-type">string</span>
     </dt>
-    <dd>{{% md %}}A user alternate sec id. This represents the user in a different identity provider system Eg.1:live.com:puid{{% /md %}}</dd>
-    <dt class="property-optional"
+    <dd>{{% md %}}A user alternate sec id. This represents the user in a different identity provider system Eg.1:live.com:puid{{% /md %}}</dd><dt class="property-optional"
             title="Optional">
         <span id="useridp_csharp">
 <a href="#useridp_csharp" style="color: inherit; text-decoration: inherit;">User<wbr>Idp</a>
@@ -4231,8 +3673,7 @@ All [input](#inputs) properties are implicitly available as output properties. A
         <span class="property-indicator"></span>
         <span class="property-type">string</span>
     </dt>
-    <dd>{{% md %}}A user identity provider. Eg live.com{{% /md %}}</dd>
-    <dt class="property-optional"
+    <dd>{{% md %}}A user identity provider. Eg live.com{{% /md %}}</dd><dt class="property-optional"
             title="Optional">
         <span id="useriss_csharp">
 <a href="#useriss_csharp" style="color: inherit; text-decoration: inherit;">User<wbr>Iss</a>
@@ -4240,8 +3681,7 @@ All [input](#inputs) properties are implicitly available as output properties. A
         <span class="property-indicator"></span>
         <span class="property-type">string</span>
     </dt>
-    <dd>{{% md %}}The issuer which issued the token for this user.{{% /md %}}</dd>
-    <dt class="property-optional"
+    <dd>{{% md %}}The issuer which issued the token for this user.{{% /md %}}</dd><dt class="property-optional"
             title="Optional">
         <span id="username_csharp">
 <a href="#username_csharp" style="color: inherit; text-decoration: inherit;">User<wbr>Name</a>
@@ -4249,8 +3689,7 @@ All [input](#inputs) properties are implicitly available as output properties. A
         <span class="property-indicator"></span>
         <span class="property-type">string</span>
     </dt>
-    <dd>{{% md %}} A user's full name or a service principal's app ID.{{% /md %}}</dd>
-    <dt class="property-optional"
+    <dd>{{% md %}} A user's full name or a service principal's app ID.{{% /md %}}</dd><dt class="property-optional"
             title="Optional">
         <span id="userobjectid_csharp">
 <a href="#userobjectid_csharp" style="color: inherit; text-decoration: inherit;">User<wbr>Object<wbr>Id</a>
@@ -4258,8 +3697,7 @@ All [input](#inputs) properties are implicitly available as output properties. A
         <span class="property-indicator"></span>
         <span class="property-type">string</span>
     </dt>
-    <dd>{{% md %}}A user or service principal's object ID..{{% /md %}}</dd>
-    <dt class="property-optional"
+    <dd>{{% md %}}A user or service principal's object ID..{{% /md %}}</dd><dt class="property-optional"
             title="Optional">
         <span id="userpuid_csharp">
 <a href="#userpuid_csharp" style="color: inherit; text-decoration: inherit;">User<wbr>Pu<wbr>Id</a>
@@ -4267,8 +3705,7 @@ All [input](#inputs) properties are implicitly available as output properties. A
         <span class="property-indicator"></span>
         <span class="property-type">string</span>
     </dt>
-    <dd>{{% md %}}A user or service principal's PuID.{{% /md %}}</dd>
-    <dt class="property-optional"
+    <dd>{{% md %}}A user or service principal's PuID.{{% /md %}}</dd><dt class="property-optional"
             title="Optional">
         <span id="usertenantid_csharp">
 <a href="#usertenantid_csharp" style="color: inherit; text-decoration: inherit;">User<wbr>Tenant<wbr>Id</a>
@@ -4276,14 +3713,11 @@ All [input](#inputs) properties are implicitly available as output properties. A
         <span class="property-indicator"></span>
         <span class="property-type">string</span>
     </dt>
-    <dd>{{% md %}}A user or service principal's tenant ID.{{% /md %}}</dd>
-</dl>
+    <dd>{{% md %}}A user or service principal's tenant ID.{{% /md %}}</dd></dl>
 {{% /choosable %}}
 
 {{% choosable language go %}}
-<dl class="resources-properties">
-
-    <dt class="property-optional"
+<dl class="resources-properties"><dt class="property-optional"
             title="Optional">
         <span id="useraltsecid_go">
 <a href="#useraltsecid_go" style="color: inherit; text-decoration: inherit;">User<wbr>Alt<wbr>Sec<wbr>Id</a>
@@ -4291,8 +3725,7 @@ All [input](#inputs) properties are implicitly available as output properties. A
         <span class="property-indicator"></span>
         <span class="property-type">string</span>
     </dt>
-    <dd>{{% md %}}A user alternate sec id. This represents the user in a different identity provider system Eg.1:live.com:puid{{% /md %}}</dd>
-    <dt class="property-optional"
+    <dd>{{% md %}}A user alternate sec id. This represents the user in a different identity provider system Eg.1:live.com:puid{{% /md %}}</dd><dt class="property-optional"
             title="Optional">
         <span id="useridp_go">
 <a href="#useridp_go" style="color: inherit; text-decoration: inherit;">User<wbr>Idp</a>
@@ -4300,8 +3733,7 @@ All [input](#inputs) properties are implicitly available as output properties. A
         <span class="property-indicator"></span>
         <span class="property-type">string</span>
     </dt>
-    <dd>{{% md %}}A user identity provider. Eg live.com{{% /md %}}</dd>
-    <dt class="property-optional"
+    <dd>{{% md %}}A user identity provider. Eg live.com{{% /md %}}</dd><dt class="property-optional"
             title="Optional">
         <span id="useriss_go">
 <a href="#useriss_go" style="color: inherit; text-decoration: inherit;">User<wbr>Iss</a>
@@ -4309,8 +3741,7 @@ All [input](#inputs) properties are implicitly available as output properties. A
         <span class="property-indicator"></span>
         <span class="property-type">string</span>
     </dt>
-    <dd>{{% md %}}The issuer which issued the token for this user.{{% /md %}}</dd>
-    <dt class="property-optional"
+    <dd>{{% md %}}The issuer which issued the token for this user.{{% /md %}}</dd><dt class="property-optional"
             title="Optional">
         <span id="username_go">
 <a href="#username_go" style="color: inherit; text-decoration: inherit;">User<wbr>Name</a>
@@ -4318,8 +3749,7 @@ All [input](#inputs) properties are implicitly available as output properties. A
         <span class="property-indicator"></span>
         <span class="property-type">string</span>
     </dt>
-    <dd>{{% md %}} A user's full name or a service principal's app ID.{{% /md %}}</dd>
-    <dt class="property-optional"
+    <dd>{{% md %}} A user's full name or a service principal's app ID.{{% /md %}}</dd><dt class="property-optional"
             title="Optional">
         <span id="userobjectid_go">
 <a href="#userobjectid_go" style="color: inherit; text-decoration: inherit;">User<wbr>Object<wbr>Id</a>
@@ -4327,8 +3757,7 @@ All [input](#inputs) properties are implicitly available as output properties. A
         <span class="property-indicator"></span>
         <span class="property-type">string</span>
     </dt>
-    <dd>{{% md %}}A user or service principal's object ID..{{% /md %}}</dd>
-    <dt class="property-optional"
+    <dd>{{% md %}}A user or service principal's object ID..{{% /md %}}</dd><dt class="property-optional"
             title="Optional">
         <span id="userpuid_go">
 <a href="#userpuid_go" style="color: inherit; text-decoration: inherit;">User<wbr>Pu<wbr>Id</a>
@@ -4336,8 +3765,7 @@ All [input](#inputs) properties are implicitly available as output properties. A
         <span class="property-indicator"></span>
         <span class="property-type">string</span>
     </dt>
-    <dd>{{% md %}}A user or service principal's PuID.{{% /md %}}</dd>
-    <dt class="property-optional"
+    <dd>{{% md %}}A user or service principal's PuID.{{% /md %}}</dd><dt class="property-optional"
             title="Optional">
         <span id="usertenantid_go">
 <a href="#usertenantid_go" style="color: inherit; text-decoration: inherit;">User<wbr>Tenant<wbr>Id</a>
@@ -4345,14 +3773,11 @@ All [input](#inputs) properties are implicitly available as output properties. A
         <span class="property-indicator"></span>
         <span class="property-type">string</span>
     </dt>
-    <dd>{{% md %}}A user or service principal's tenant ID.{{% /md %}}</dd>
-</dl>
+    <dd>{{% md %}}A user or service principal's tenant ID.{{% /md %}}</dd></dl>
 {{% /choosable %}}
 
 {{% choosable language nodejs %}}
-<dl class="resources-properties">
-
-    <dt class="property-optional"
+<dl class="resources-properties"><dt class="property-optional"
             title="Optional">
         <span id="useraltsecid_nodejs">
 <a href="#useraltsecid_nodejs" style="color: inherit; text-decoration: inherit;">user<wbr>Alt<wbr>Sec<wbr>Id</a>
@@ -4360,8 +3785,7 @@ All [input](#inputs) properties are implicitly available as output properties. A
         <span class="property-indicator"></span>
         <span class="property-type">string</span>
     </dt>
-    <dd>{{% md %}}A user alternate sec id. This represents the user in a different identity provider system Eg.1:live.com:puid{{% /md %}}</dd>
-    <dt class="property-optional"
+    <dd>{{% md %}}A user alternate sec id. This represents the user in a different identity provider system Eg.1:live.com:puid{{% /md %}}</dd><dt class="property-optional"
             title="Optional">
         <span id="useridp_nodejs">
 <a href="#useridp_nodejs" style="color: inherit; text-decoration: inherit;">user<wbr>Idp</a>
@@ -4369,8 +3793,7 @@ All [input](#inputs) properties are implicitly available as output properties. A
         <span class="property-indicator"></span>
         <span class="property-type">string</span>
     </dt>
-    <dd>{{% md %}}A user identity provider. Eg live.com{{% /md %}}</dd>
-    <dt class="property-optional"
+    <dd>{{% md %}}A user identity provider. Eg live.com{{% /md %}}</dd><dt class="property-optional"
             title="Optional">
         <span id="useriss_nodejs">
 <a href="#useriss_nodejs" style="color: inherit; text-decoration: inherit;">user<wbr>Iss</a>
@@ -4378,8 +3801,7 @@ All [input](#inputs) properties are implicitly available as output properties. A
         <span class="property-indicator"></span>
         <span class="property-type">string</span>
     </dt>
-    <dd>{{% md %}}The issuer which issued the token for this user.{{% /md %}}</dd>
-    <dt class="property-optional"
+    <dd>{{% md %}}The issuer which issued the token for this user.{{% /md %}}</dd><dt class="property-optional"
             title="Optional">
         <span id="username_nodejs">
 <a href="#username_nodejs" style="color: inherit; text-decoration: inherit;">user<wbr>Name</a>
@@ -4387,8 +3809,7 @@ All [input](#inputs) properties are implicitly available as output properties. A
         <span class="property-indicator"></span>
         <span class="property-type">string</span>
     </dt>
-    <dd>{{% md %}} A user's full name or a service principal's app ID.{{% /md %}}</dd>
-    <dt class="property-optional"
+    <dd>{{% md %}} A user's full name or a service principal's app ID.{{% /md %}}</dd><dt class="property-optional"
             title="Optional">
         <span id="userobjectid_nodejs">
 <a href="#userobjectid_nodejs" style="color: inherit; text-decoration: inherit;">user<wbr>Object<wbr>Id</a>
@@ -4396,8 +3817,7 @@ All [input](#inputs) properties are implicitly available as output properties. A
         <span class="property-indicator"></span>
         <span class="property-type">string</span>
     </dt>
-    <dd>{{% md %}}A user or service principal's object ID..{{% /md %}}</dd>
-    <dt class="property-optional"
+    <dd>{{% md %}}A user or service principal's object ID..{{% /md %}}</dd><dt class="property-optional"
             title="Optional">
         <span id="userpuid_nodejs">
 <a href="#userpuid_nodejs" style="color: inherit; text-decoration: inherit;">user<wbr>Pu<wbr>Id</a>
@@ -4405,8 +3825,7 @@ All [input](#inputs) properties are implicitly available as output properties. A
         <span class="property-indicator"></span>
         <span class="property-type">string</span>
     </dt>
-    <dd>{{% md %}}A user or service principal's PuID.{{% /md %}}</dd>
-    <dt class="property-optional"
+    <dd>{{% md %}}A user or service principal's PuID.{{% /md %}}</dd><dt class="property-optional"
             title="Optional">
         <span id="usertenantid_nodejs">
 <a href="#usertenantid_nodejs" style="color: inherit; text-decoration: inherit;">user<wbr>Tenant<wbr>Id</a>
@@ -4414,14 +3833,11 @@ All [input](#inputs) properties are implicitly available as output properties. A
         <span class="property-indicator"></span>
         <span class="property-type">string</span>
     </dt>
-    <dd>{{% md %}}A user or service principal's tenant ID.{{% /md %}}</dd>
-</dl>
+    <dd>{{% md %}}A user or service principal's tenant ID.{{% /md %}}</dd></dl>
 {{% /choosable %}}
 
 {{% choosable language python %}}
-<dl class="resources-properties">
-
-    <dt class="property-optional"
+<dl class="resources-properties"><dt class="property-optional"
             title="Optional">
         <span id="user_alt_sec_id_python">
 <a href="#user_alt_sec_id_python" style="color: inherit; text-decoration: inherit;">user_<wbr>alt_<wbr>sec_<wbr>id</a>
@@ -4429,8 +3845,7 @@ All [input](#inputs) properties are implicitly available as output properties. A
         <span class="property-indicator"></span>
         <span class="property-type">str</span>
     </dt>
-    <dd>{{% md %}}A user alternate sec id. This represents the user in a different identity provider system Eg.1:live.com:puid{{% /md %}}</dd>
-    <dt class="property-optional"
+    <dd>{{% md %}}A user alternate sec id. This represents the user in a different identity provider system Eg.1:live.com:puid{{% /md %}}</dd><dt class="property-optional"
             title="Optional">
         <span id="user_idp_python">
 <a href="#user_idp_python" style="color: inherit; text-decoration: inherit;">user_<wbr>idp</a>
@@ -4438,8 +3853,7 @@ All [input](#inputs) properties are implicitly available as output properties. A
         <span class="property-indicator"></span>
         <span class="property-type">str</span>
     </dt>
-    <dd>{{% md %}}A user identity provider. Eg live.com{{% /md %}}</dd>
-    <dt class="property-optional"
+    <dd>{{% md %}}A user identity provider. Eg live.com{{% /md %}}</dd><dt class="property-optional"
             title="Optional">
         <span id="user_iss_python">
 <a href="#user_iss_python" style="color: inherit; text-decoration: inherit;">user_<wbr>iss</a>
@@ -4447,8 +3861,7 @@ All [input](#inputs) properties are implicitly available as output properties. A
         <span class="property-indicator"></span>
         <span class="property-type">str</span>
     </dt>
-    <dd>{{% md %}}The issuer which issued the token for this user.{{% /md %}}</dd>
-    <dt class="property-optional"
+    <dd>{{% md %}}The issuer which issued the token for this user.{{% /md %}}</dd><dt class="property-optional"
             title="Optional">
         <span id="user_name_python">
 <a href="#user_name_python" style="color: inherit; text-decoration: inherit;">user_<wbr>name</a>
@@ -4456,8 +3869,7 @@ All [input](#inputs) properties are implicitly available as output properties. A
         <span class="property-indicator"></span>
         <span class="property-type">str</span>
     </dt>
-    <dd>{{% md %}} A user's full name or a service principal's app ID.{{% /md %}}</dd>
-    <dt class="property-optional"
+    <dd>{{% md %}} A user's full name or a service principal's app ID.{{% /md %}}</dd><dt class="property-optional"
             title="Optional">
         <span id="user_object_id_python">
 <a href="#user_object_id_python" style="color: inherit; text-decoration: inherit;">user_<wbr>object_<wbr>id</a>
@@ -4465,8 +3877,7 @@ All [input](#inputs) properties are implicitly available as output properties. A
         <span class="property-indicator"></span>
         <span class="property-type">str</span>
     </dt>
-    <dd>{{% md %}}A user or service principal's object ID..{{% /md %}}</dd>
-    <dt class="property-optional"
+    <dd>{{% md %}}A user or service principal's object ID..{{% /md %}}</dd><dt class="property-optional"
             title="Optional">
         <span id="user_pu_id_python">
 <a href="#user_pu_id_python" style="color: inherit; text-decoration: inherit;">user_<wbr>pu_<wbr>id</a>
@@ -4474,8 +3885,7 @@ All [input](#inputs) properties are implicitly available as output properties. A
         <span class="property-indicator"></span>
         <span class="property-type">str</span>
     </dt>
-    <dd>{{% md %}}A user or service principal's PuID.{{% /md %}}</dd>
-    <dt class="property-optional"
+    <dd>{{% md %}}A user or service principal's PuID.{{% /md %}}</dd><dt class="property-optional"
             title="Optional">
         <span id="user_tenant_id_python">
 <a href="#user_tenant_id_python" style="color: inherit; text-decoration: inherit;">user_<wbr>tenant_<wbr>id</a>
@@ -4483,8 +3893,7 @@ All [input](#inputs) properties are implicitly available as output properties. A
         <span class="property-indicator"></span>
         <span class="property-type">str</span>
     </dt>
-    <dd>{{% md %}}A user or service principal's tenant ID.{{% /md %}}</dd>
-</dl>
+    <dd>{{% md %}}A user or service principal's tenant ID.{{% /md %}}</dd></dl>
 {{% /choosable %}}
 ## Import
 

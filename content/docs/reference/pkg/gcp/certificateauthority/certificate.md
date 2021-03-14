@@ -51,9 +51,7 @@ Certificate can be imported using any of these accepted formats
 
 {{% choosable language nodejs %}}
 
-<dl class="resources-properties">
-  
-    <dt
+<dl class="resources-properties"><dt
         class="property-required" title="Required">
         <span>name</span>
         <span class="property-indicator"></span>
@@ -61,9 +59,7 @@ Certificate can be imported using any of these accepted formats
     </dt>
     <dd>
       The unique name of the resource.
-    </dd>
-  
-    <dt
+    </dd><dt
         class="property-required" title="Required">
         <span>args</span>
         <span class="property-indicator"></span>
@@ -71,9 +67,7 @@ Certificate can be imported using any of these accepted formats
     </dt>
     <dd>
       The arguments to resource properties.
-    </dd>
-  
-    <dt
+    </dd><dt
         class="property-optional" title="Optional">
         <span>opts</span>
         <span class="property-indicator"></span>
@@ -81,10 +75,7 @@ Certificate can be imported using any of these accepted formats
     </dt>
     <dd>
       Bag of options to control resource&#39;s behavior.
-    </dd>
-  
-
-</dl>
+    </dd></dl>
 
 {{% /choosable %}}
 
@@ -110,9 +101,7 @@ Certificate can be imported using any of these accepted formats
 
 {{% choosable language go %}}
 
-<dl class="resources-properties">
-  
-    <dt
+<dl class="resources-properties"><dt
         class="property-optional" title="Optional">
         <span>ctx</span>
         <span class="property-indicator"></span>
@@ -120,9 +109,7 @@ Certificate can be imported using any of these accepted formats
     </dt>
     <dd>
       Context object for the current deployment.
-    </dd>
-  
-    <dt
+    </dd><dt
         class="property-required" title="Required">
         <span>name</span>
         <span class="property-indicator"></span>
@@ -130,9 +117,7 @@ Certificate can be imported using any of these accepted formats
     </dt>
     <dd>
       The unique name of the resource.
-    </dd>
-  
-    <dt
+    </dd><dt
         class="property-required" title="Required">
         <span>args</span>
         <span class="property-indicator"></span>
@@ -140,9 +125,7 @@ Certificate can be imported using any of these accepted formats
     </dt>
     <dd>
       The arguments to resource properties.
-    </dd>
-  
-    <dt
+    </dd><dt
         class="property-optional" title="Optional">
         <span>opts</span>
         <span class="property-indicator"></span>
@@ -150,18 +133,13 @@ Certificate can be imported using any of these accepted formats
     </dt>
     <dd>
       Bag of options to control resource&#39;s behavior.
-    </dd>
-  
-
-</dl>
+    </dd></dl>
 
 {{% /choosable %}}
 
 {{% choosable language csharp %}}
 
-<dl class="resources-properties">
-  
-    <dt
+<dl class="resources-properties"><dt
         class="property-required" title="Required">
         <span>name</span>
         <span class="property-indicator"></span>
@@ -169,9 +147,7 @@ Certificate can be imported using any of these accepted formats
     </dt>
     <dd>
       The unique name of the resource.
-    </dd>
-  
-    <dt
+    </dd><dt
         class="property-required" title="Required">
         <span>args</span>
         <span class="property-indicator"></span>
@@ -179,9 +155,7 @@ Certificate can be imported using any of these accepted formats
     </dt>
     <dd>
       The arguments to resource properties.
-    </dd>
-  
-    <dt
+    </dd><dt
         class="property-optional" title="Optional">
         <span>opts</span>
         <span class="property-indicator"></span>
@@ -189,10 +163,7 @@ Certificate can be imported using any of these accepted formats
     </dt>
     <dd>
       Bag of options to control resource&#39;s behavior.
-    </dd>
-  
-
-</dl>
+    </dd></dl>
 
 {{% /choosable %}}
 
@@ -207,9 +178,7 @@ The Certificate resource accepts the following [input]({{< relref "/docs/intro/c
 
 
 {{% choosable language csharp %}}
-<dl class="resources-properties">
-
-    <dt class="property-required"
+<dl class="resources-properties"><dt class="property-required"
             title="Required">
         <span id="certificateauthority_csharp">
 <a href="#certificateauthority_csharp" style="color: inherit; text-decoration: inherit;">Certificate<wbr>Authority</a>
@@ -218,8 +187,7 @@ The Certificate resource accepts the following [input]({{< relref "/docs/intro/c
         <span class="property-type">string</span>
     </dt>
     <dd>{{% md %}}Certificate Authority name.
-{{% /md %}}</dd>
-    <dt class="property-required"
+{{% /md %}}</dd><dt class="property-required"
             title="Required">
         <span id="location_csharp">
 <a href="#location_csharp" style="color: inherit; text-decoration: inherit;">Location</a>
@@ -229,8 +197,7 @@ The Certificate resource accepts the following [input]({{< relref "/docs/intro/c
     </dt>
     <dd>{{% md %}}Location of the CertificateAuthority. A full list of valid locations can be found by
 running `gcloud beta privateca locations list`.
-{{% /md %}}</dd>
-    <dt class="property-optional"
+{{% /md %}}</dd><dt class="property-optional"
             title="Optional">
         <span id="config_csharp">
 <a href="#config_csharp" style="color: inherit; text-decoration: inherit;">Config</a>
@@ -240,8 +207,7 @@ running `gcloud beta privateca locations list`.
     </dt>
     <dd>{{% md %}}The config used to create a self-signed X.509 certificate or CSR.
 Structure is documented below.
-{{% /md %}}</dd>
-    <dt class="property-optional"
+{{% /md %}}</dd><dt class="property-optional"
             title="Optional">
         <span id="labels_csharp">
 <a href="#labels_csharp" style="color: inherit; text-decoration: inherit;">Labels</a>
@@ -250,8 +216,7 @@ Structure is documented below.
         <span class="property-type">Dictionary&lt;string, string&gt;</span>
     </dt>
     <dd>{{% md %}}Labels with user-defined metadata to apply to this resource.
-{{% /md %}}</dd>
-    <dt class="property-optional"
+{{% /md %}}</dd><dt class="property-optional"
             title="Optional">
         <span id="lifetime_csharp">
 <a href="#lifetime_csharp" style="color: inherit; text-decoration: inherit;">Lifetime</a>
@@ -262,8 +227,7 @@ Structure is documented below.
     <dd>{{% md %}}The desired lifetime of the CA certificate. Used to create the "notBeforeTime" and
 "notAfterTime" fields inside an X.509 certificate. A duration in seconds with up to nine
 fractional digits, terminated by 's'. Example: "3.5s".
-{{% /md %}}</dd>
-    <dt class="property-optional"
+{{% /md %}}</dd><dt class="property-optional"
             title="Optional">
         <span id="name_csharp">
 <a href="#name_csharp" style="color: inherit; text-decoration: inherit;">Name</a>
@@ -272,8 +236,7 @@ fractional digits, terminated by 's'. Example: "3.5s".
         <span class="property-type">string</span>
     </dt>
     <dd>{{% md %}}The name for this Certificate .
-{{% /md %}}</dd>
-    <dt class="property-optional"
+{{% /md %}}</dd><dt class="property-optional"
             title="Optional">
         <span id="pemcsr_csharp">
 <a href="#pemcsr_csharp" style="color: inherit; text-decoration: inherit;">Pem<wbr>Csr</a>
@@ -282,8 +245,7 @@ fractional digits, terminated by 's'. Example: "3.5s".
         <span class="property-type">string</span>
     </dt>
     <dd>{{% md %}}Immutable. A pem-encoded X.509 certificate signing request (CSR).
-{{% /md %}}</dd>
-    <dt class="property-optional"
+{{% /md %}}</dd><dt class="property-optional"
             title="Optional">
         <span id="project_csharp">
 <a href="#project_csharp" style="color: inherit; text-decoration: inherit;">Project</a>
@@ -293,14 +255,11 @@ fractional digits, terminated by 's'. Example: "3.5s".
     </dt>
     <dd>{{% md %}}The ID of the project in which the resource belongs.
 If it is not provided, the provider project is used.
-{{% /md %}}</dd>
-</dl>
+{{% /md %}}</dd></dl>
 {{% /choosable %}}
 
 {{% choosable language go %}}
-<dl class="resources-properties">
-
-    <dt class="property-required"
+<dl class="resources-properties"><dt class="property-required"
             title="Required">
         <span id="certificateauthority_go">
 <a href="#certificateauthority_go" style="color: inherit; text-decoration: inherit;">Certificate<wbr>Authority</a>
@@ -309,8 +268,7 @@ If it is not provided, the provider project is used.
         <span class="property-type">string</span>
     </dt>
     <dd>{{% md %}}Certificate Authority name.
-{{% /md %}}</dd>
-    <dt class="property-required"
+{{% /md %}}</dd><dt class="property-required"
             title="Required">
         <span id="location_go">
 <a href="#location_go" style="color: inherit; text-decoration: inherit;">Location</a>
@@ -320,8 +278,7 @@ If it is not provided, the provider project is used.
     </dt>
     <dd>{{% md %}}Location of the CertificateAuthority. A full list of valid locations can be found by
 running `gcloud beta privateca locations list`.
-{{% /md %}}</dd>
-    <dt class="property-optional"
+{{% /md %}}</dd><dt class="property-optional"
             title="Optional">
         <span id="config_go">
 <a href="#config_go" style="color: inherit; text-decoration: inherit;">Config</a>
@@ -331,8 +288,7 @@ running `gcloud beta privateca locations list`.
     </dt>
     <dd>{{% md %}}The config used to create a self-signed X.509 certificate or CSR.
 Structure is documented below.
-{{% /md %}}</dd>
-    <dt class="property-optional"
+{{% /md %}}</dd><dt class="property-optional"
             title="Optional">
         <span id="labels_go">
 <a href="#labels_go" style="color: inherit; text-decoration: inherit;">Labels</a>
@@ -341,8 +297,7 @@ Structure is documented below.
         <span class="property-type">map[string]string</span>
     </dt>
     <dd>{{% md %}}Labels with user-defined metadata to apply to this resource.
-{{% /md %}}</dd>
-    <dt class="property-optional"
+{{% /md %}}</dd><dt class="property-optional"
             title="Optional">
         <span id="lifetime_go">
 <a href="#lifetime_go" style="color: inherit; text-decoration: inherit;">Lifetime</a>
@@ -353,8 +308,7 @@ Structure is documented below.
     <dd>{{% md %}}The desired lifetime of the CA certificate. Used to create the "notBeforeTime" and
 "notAfterTime" fields inside an X.509 certificate. A duration in seconds with up to nine
 fractional digits, terminated by 's'. Example: "3.5s".
-{{% /md %}}</dd>
-    <dt class="property-optional"
+{{% /md %}}</dd><dt class="property-optional"
             title="Optional">
         <span id="name_go">
 <a href="#name_go" style="color: inherit; text-decoration: inherit;">Name</a>
@@ -363,8 +317,7 @@ fractional digits, terminated by 's'. Example: "3.5s".
         <span class="property-type">string</span>
     </dt>
     <dd>{{% md %}}The name for this Certificate .
-{{% /md %}}</dd>
-    <dt class="property-optional"
+{{% /md %}}</dd><dt class="property-optional"
             title="Optional">
         <span id="pemcsr_go">
 <a href="#pemcsr_go" style="color: inherit; text-decoration: inherit;">Pem<wbr>Csr</a>
@@ -373,8 +326,7 @@ fractional digits, terminated by 's'. Example: "3.5s".
         <span class="property-type">string</span>
     </dt>
     <dd>{{% md %}}Immutable. A pem-encoded X.509 certificate signing request (CSR).
-{{% /md %}}</dd>
-    <dt class="property-optional"
+{{% /md %}}</dd><dt class="property-optional"
             title="Optional">
         <span id="project_go">
 <a href="#project_go" style="color: inherit; text-decoration: inherit;">Project</a>
@@ -384,14 +336,11 @@ fractional digits, terminated by 's'. Example: "3.5s".
     </dt>
     <dd>{{% md %}}The ID of the project in which the resource belongs.
 If it is not provided, the provider project is used.
-{{% /md %}}</dd>
-</dl>
+{{% /md %}}</dd></dl>
 {{% /choosable %}}
 
 {{% choosable language nodejs %}}
-<dl class="resources-properties">
-
-    <dt class="property-required"
+<dl class="resources-properties"><dt class="property-required"
             title="Required">
         <span id="certificateauthority_nodejs">
 <a href="#certificateauthority_nodejs" style="color: inherit; text-decoration: inherit;">certificate<wbr>Authority</a>
@@ -400,8 +349,7 @@ If it is not provided, the provider project is used.
         <span class="property-type">string</span>
     </dt>
     <dd>{{% md %}}Certificate Authority name.
-{{% /md %}}</dd>
-    <dt class="property-required"
+{{% /md %}}</dd><dt class="property-required"
             title="Required">
         <span id="location_nodejs">
 <a href="#location_nodejs" style="color: inherit; text-decoration: inherit;">location</a>
@@ -411,8 +359,7 @@ If it is not provided, the provider project is used.
     </dt>
     <dd>{{% md %}}Location of the CertificateAuthority. A full list of valid locations can be found by
 running `gcloud beta privateca locations list`.
-{{% /md %}}</dd>
-    <dt class="property-optional"
+{{% /md %}}</dd><dt class="property-optional"
             title="Optional">
         <span id="config_nodejs">
 <a href="#config_nodejs" style="color: inherit; text-decoration: inherit;">config</a>
@@ -422,8 +369,7 @@ running `gcloud beta privateca locations list`.
     </dt>
     <dd>{{% md %}}The config used to create a self-signed X.509 certificate or CSR.
 Structure is documented below.
-{{% /md %}}</dd>
-    <dt class="property-optional"
+{{% /md %}}</dd><dt class="property-optional"
             title="Optional">
         <span id="labels_nodejs">
 <a href="#labels_nodejs" style="color: inherit; text-decoration: inherit;">labels</a>
@@ -432,8 +378,7 @@ Structure is documented below.
         <span class="property-type">{[key: string]: string}</span>
     </dt>
     <dd>{{% md %}}Labels with user-defined metadata to apply to this resource.
-{{% /md %}}</dd>
-    <dt class="property-optional"
+{{% /md %}}</dd><dt class="property-optional"
             title="Optional">
         <span id="lifetime_nodejs">
 <a href="#lifetime_nodejs" style="color: inherit; text-decoration: inherit;">lifetime</a>
@@ -444,8 +389,7 @@ Structure is documented below.
     <dd>{{% md %}}The desired lifetime of the CA certificate. Used to create the "notBeforeTime" and
 "notAfterTime" fields inside an X.509 certificate. A duration in seconds with up to nine
 fractional digits, terminated by 's'. Example: "3.5s".
-{{% /md %}}</dd>
-    <dt class="property-optional"
+{{% /md %}}</dd><dt class="property-optional"
             title="Optional">
         <span id="name_nodejs">
 <a href="#name_nodejs" style="color: inherit; text-decoration: inherit;">name</a>
@@ -454,8 +398,7 @@ fractional digits, terminated by 's'. Example: "3.5s".
         <span class="property-type">string</span>
     </dt>
     <dd>{{% md %}}The name for this Certificate .
-{{% /md %}}</dd>
-    <dt class="property-optional"
+{{% /md %}}</dd><dt class="property-optional"
             title="Optional">
         <span id="pemcsr_nodejs">
 <a href="#pemcsr_nodejs" style="color: inherit; text-decoration: inherit;">pem<wbr>Csr</a>
@@ -464,8 +407,7 @@ fractional digits, terminated by 's'. Example: "3.5s".
         <span class="property-type">string</span>
     </dt>
     <dd>{{% md %}}Immutable. A pem-encoded X.509 certificate signing request (CSR).
-{{% /md %}}</dd>
-    <dt class="property-optional"
+{{% /md %}}</dd><dt class="property-optional"
             title="Optional">
         <span id="project_nodejs">
 <a href="#project_nodejs" style="color: inherit; text-decoration: inherit;">project</a>
@@ -475,14 +417,11 @@ fractional digits, terminated by 's'. Example: "3.5s".
     </dt>
     <dd>{{% md %}}The ID of the project in which the resource belongs.
 If it is not provided, the provider project is used.
-{{% /md %}}</dd>
-</dl>
+{{% /md %}}</dd></dl>
 {{% /choosable %}}
 
 {{% choosable language python %}}
-<dl class="resources-properties">
-
-    <dt class="property-required"
+<dl class="resources-properties"><dt class="property-required"
             title="Required">
         <span id="certificate_authority_python">
 <a href="#certificate_authority_python" style="color: inherit; text-decoration: inherit;">certificate_<wbr>authority</a>
@@ -491,8 +430,7 @@ If it is not provided, the provider project is used.
         <span class="property-type">str</span>
     </dt>
     <dd>{{% md %}}Certificate Authority name.
-{{% /md %}}</dd>
-    <dt class="property-required"
+{{% /md %}}</dd><dt class="property-required"
             title="Required">
         <span id="location_python">
 <a href="#location_python" style="color: inherit; text-decoration: inherit;">location</a>
@@ -502,8 +440,7 @@ If it is not provided, the provider project is used.
     </dt>
     <dd>{{% md %}}Location of the CertificateAuthority. A full list of valid locations can be found by
 running `gcloud beta privateca locations list`.
-{{% /md %}}</dd>
-    <dt class="property-optional"
+{{% /md %}}</dd><dt class="property-optional"
             title="Optional">
         <span id="config_python">
 <a href="#config_python" style="color: inherit; text-decoration: inherit;">config</a>
@@ -513,8 +450,7 @@ running `gcloud beta privateca locations list`.
     </dt>
     <dd>{{% md %}}The config used to create a self-signed X.509 certificate or CSR.
 Structure is documented below.
-{{% /md %}}</dd>
-    <dt class="property-optional"
+{{% /md %}}</dd><dt class="property-optional"
             title="Optional">
         <span id="labels_python">
 <a href="#labels_python" style="color: inherit; text-decoration: inherit;">labels</a>
@@ -523,8 +459,7 @@ Structure is documented below.
         <span class="property-type">Mapping[str, str]</span>
     </dt>
     <dd>{{% md %}}Labels with user-defined metadata to apply to this resource.
-{{% /md %}}</dd>
-    <dt class="property-optional"
+{{% /md %}}</dd><dt class="property-optional"
             title="Optional">
         <span id="lifetime_python">
 <a href="#lifetime_python" style="color: inherit; text-decoration: inherit;">lifetime</a>
@@ -535,8 +470,7 @@ Structure is documented below.
     <dd>{{% md %}}The desired lifetime of the CA certificate. Used to create the "notBeforeTime" and
 "notAfterTime" fields inside an X.509 certificate. A duration in seconds with up to nine
 fractional digits, terminated by 's'. Example: "3.5s".
-{{% /md %}}</dd>
-    <dt class="property-optional"
+{{% /md %}}</dd><dt class="property-optional"
             title="Optional">
         <span id="name_python">
 <a href="#name_python" style="color: inherit; text-decoration: inherit;">name</a>
@@ -545,8 +479,7 @@ fractional digits, terminated by 's'. Example: "3.5s".
         <span class="property-type">str</span>
     </dt>
     <dd>{{% md %}}The name for this Certificate .
-{{% /md %}}</dd>
-    <dt class="property-optional"
+{{% /md %}}</dd><dt class="property-optional"
             title="Optional">
         <span id="pem_csr_python">
 <a href="#pem_csr_python" style="color: inherit; text-decoration: inherit;">pem_<wbr>csr</a>
@@ -555,8 +488,7 @@ fractional digits, terminated by 's'. Example: "3.5s".
         <span class="property-type">str</span>
     </dt>
     <dd>{{% md %}}Immutable. A pem-encoded X.509 certificate signing request (CSR).
-{{% /md %}}</dd>
-    <dt class="property-optional"
+{{% /md %}}</dd><dt class="property-optional"
             title="Optional">
         <span id="project_python">
 <a href="#project_python" style="color: inherit; text-decoration: inherit;">project</a>
@@ -566,8 +498,7 @@ fractional digits, terminated by 's'. Example: "3.5s".
     </dt>
     <dd>{{% md %}}The ID of the project in which the resource belongs.
 If it is not provided, the provider project is used.
-{{% /md %}}</dd>
-</dl>
+{{% /md %}}</dd></dl>
 {{% /choosable %}}
 
 
@@ -578,9 +509,7 @@ All [input](#inputs) properties are implicitly available as output properties. A
 
 
 {{% choosable language csharp %}}
-<dl class="resources-properties">
-
-    <dt class="property-"
+<dl class="resources-properties"><dt class="property-"
             title="">
         <span id="certificatedescriptions_csharp">
 <a href="#certificatedescriptions_csharp" style="color: inherit; text-decoration: inherit;">Certificate<wbr>Descriptions</a>
@@ -590,8 +519,7 @@ All [input](#inputs) properties are implicitly available as output properties. A
     </dt>
     <dd>{{% md %}}Output only. Details regarding the revocation of this Certificate. This Certificate is considered revoked if and only if
 this field is present.
-{{% /md %}}</dd>
-    <dt class="property-"
+{{% /md %}}</dd><dt class="property-"
             title="">
         <span id="createtime_csharp">
 <a href="#createtime_csharp" style="color: inherit; text-decoration: inherit;">Create<wbr>Time</a>
@@ -600,8 +528,7 @@ this field is present.
         <span class="property-type">string</span>
     </dt>
     <dd>{{% md %}}The time that this resource was created on the server. This is in RFC3339 text format.
-{{% /md %}}</dd>
-    <dt class="property-"
+{{% /md %}}</dd><dt class="property-"
             title="">
         <span id="id_csharp">
 <a href="#id_csharp" style="color: inherit; text-decoration: inherit;">Id</a>
@@ -609,8 +536,7 @@ this field is present.
         <span class="property-indicator"></span>
         <span class="property-type">string</span>
     </dt>
-    <dd>{{% md %}}The provider-assigned unique ID for this managed resource.{{% /md %}}</dd>
-    <dt class="property-"
+    <dd>{{% md %}}The provider-assigned unique ID for this managed resource.{{% /md %}}</dd><dt class="property-"
             title="">
         <span id="pemcertificate_csharp">
 <a href="#pemcertificate_csharp" style="color: inherit; text-decoration: inherit;">Pem<wbr>Certificate</a>
@@ -619,8 +545,7 @@ this field is present.
         <span class="property-type">string</span>
     </dt>
     <dd>{{% md %}}Output only. The pem-encoded, signed X.509 certificate.
-{{% /md %}}</dd>
-    <dt class="property-"
+{{% /md %}}</dd><dt class="property-"
             title="">
         <span id="pemcertificates_csharp">
 <a href="#pemcertificates_csharp" style="color: inherit; text-decoration: inherit;">Pem<wbr>Certificates</a>
@@ -629,8 +554,7 @@ this field is present.
         <span class="property-type">List&lt;string&gt;</span>
     </dt>
     <dd>{{% md %}}Required. Expected to be in leaf-to-root order according to RFC 5246.
-{{% /md %}}</dd>
-    <dt class="property-"
+{{% /md %}}</dd><dt class="property-"
             title="">
         <span id="revocationdetails_csharp">
 <a href="#revocationdetails_csharp" style="color: inherit; text-decoration: inherit;">Revocation<wbr>Details</a>
@@ -640,8 +564,7 @@ this field is present.
     </dt>
     <dd>{{% md %}}Output only. Details regarding the revocation of this Certificate. This Certificate is considered revoked if and only if
 this field is present.
-{{% /md %}}</dd>
-    <dt class="property-"
+{{% /md %}}</dd><dt class="property-"
             title="">
         <span id="updatetime_csharp">
 <a href="#updatetime_csharp" style="color: inherit; text-decoration: inherit;">Update<wbr>Time</a>
@@ -650,14 +573,11 @@ this field is present.
         <span class="property-type">string</span>
     </dt>
     <dd>{{% md %}}Output only. The time at which this CertificateAuthority was updated. This is in RFC3339 text format.
-{{% /md %}}</dd>
-</dl>
+{{% /md %}}</dd></dl>
 {{% /choosable %}}
 
 {{% choosable language go %}}
-<dl class="resources-properties">
-
-    <dt class="property-"
+<dl class="resources-properties"><dt class="property-"
             title="">
         <span id="certificatedescriptions_go">
 <a href="#certificatedescriptions_go" style="color: inherit; text-decoration: inherit;">Certificate<wbr>Descriptions</a>
@@ -667,8 +587,7 @@ this field is present.
     </dt>
     <dd>{{% md %}}Output only. Details regarding the revocation of this Certificate. This Certificate is considered revoked if and only if
 this field is present.
-{{% /md %}}</dd>
-    <dt class="property-"
+{{% /md %}}</dd><dt class="property-"
             title="">
         <span id="createtime_go">
 <a href="#createtime_go" style="color: inherit; text-decoration: inherit;">Create<wbr>Time</a>
@@ -677,8 +596,7 @@ this field is present.
         <span class="property-type">string</span>
     </dt>
     <dd>{{% md %}}The time that this resource was created on the server. This is in RFC3339 text format.
-{{% /md %}}</dd>
-    <dt class="property-"
+{{% /md %}}</dd><dt class="property-"
             title="">
         <span id="id_go">
 <a href="#id_go" style="color: inherit; text-decoration: inherit;">Id</a>
@@ -686,8 +604,7 @@ this field is present.
         <span class="property-indicator"></span>
         <span class="property-type">string</span>
     </dt>
-    <dd>{{% md %}}The provider-assigned unique ID for this managed resource.{{% /md %}}</dd>
-    <dt class="property-"
+    <dd>{{% md %}}The provider-assigned unique ID for this managed resource.{{% /md %}}</dd><dt class="property-"
             title="">
         <span id="pemcertificate_go">
 <a href="#pemcertificate_go" style="color: inherit; text-decoration: inherit;">Pem<wbr>Certificate</a>
@@ -696,8 +613,7 @@ this field is present.
         <span class="property-type">string</span>
     </dt>
     <dd>{{% md %}}Output only. The pem-encoded, signed X.509 certificate.
-{{% /md %}}</dd>
-    <dt class="property-"
+{{% /md %}}</dd><dt class="property-"
             title="">
         <span id="pemcertificates_go">
 <a href="#pemcertificates_go" style="color: inherit; text-decoration: inherit;">Pem<wbr>Certificates</a>
@@ -706,8 +622,7 @@ this field is present.
         <span class="property-type">[]string</span>
     </dt>
     <dd>{{% md %}}Required. Expected to be in leaf-to-root order according to RFC 5246.
-{{% /md %}}</dd>
-    <dt class="property-"
+{{% /md %}}</dd><dt class="property-"
             title="">
         <span id="revocationdetails_go">
 <a href="#revocationdetails_go" style="color: inherit; text-decoration: inherit;">Revocation<wbr>Details</a>
@@ -717,8 +632,7 @@ this field is present.
     </dt>
     <dd>{{% md %}}Output only. Details regarding the revocation of this Certificate. This Certificate is considered revoked if and only if
 this field is present.
-{{% /md %}}</dd>
-    <dt class="property-"
+{{% /md %}}</dd><dt class="property-"
             title="">
         <span id="updatetime_go">
 <a href="#updatetime_go" style="color: inherit; text-decoration: inherit;">Update<wbr>Time</a>
@@ -727,14 +641,11 @@ this field is present.
         <span class="property-type">string</span>
     </dt>
     <dd>{{% md %}}Output only. The time at which this CertificateAuthority was updated. This is in RFC3339 text format.
-{{% /md %}}</dd>
-</dl>
+{{% /md %}}</dd></dl>
 {{% /choosable %}}
 
 {{% choosable language nodejs %}}
-<dl class="resources-properties">
-
-    <dt class="property-"
+<dl class="resources-properties"><dt class="property-"
             title="">
         <span id="certificatedescriptions_nodejs">
 <a href="#certificatedescriptions_nodejs" style="color: inherit; text-decoration: inherit;">certificate<wbr>Descriptions</a>
@@ -744,8 +655,7 @@ this field is present.
     </dt>
     <dd>{{% md %}}Output only. Details regarding the revocation of this Certificate. This Certificate is considered revoked if and only if
 this field is present.
-{{% /md %}}</dd>
-    <dt class="property-"
+{{% /md %}}</dd><dt class="property-"
             title="">
         <span id="createtime_nodejs">
 <a href="#createtime_nodejs" style="color: inherit; text-decoration: inherit;">create<wbr>Time</a>
@@ -754,8 +664,7 @@ this field is present.
         <span class="property-type">string</span>
     </dt>
     <dd>{{% md %}}The time that this resource was created on the server. This is in RFC3339 text format.
-{{% /md %}}</dd>
-    <dt class="property-"
+{{% /md %}}</dd><dt class="property-"
             title="">
         <span id="id_nodejs">
 <a href="#id_nodejs" style="color: inherit; text-decoration: inherit;">id</a>
@@ -763,8 +672,7 @@ this field is present.
         <span class="property-indicator"></span>
         <span class="property-type">string</span>
     </dt>
-    <dd>{{% md %}}The provider-assigned unique ID for this managed resource.{{% /md %}}</dd>
-    <dt class="property-"
+    <dd>{{% md %}}The provider-assigned unique ID for this managed resource.{{% /md %}}</dd><dt class="property-"
             title="">
         <span id="pemcertificate_nodejs">
 <a href="#pemcertificate_nodejs" style="color: inherit; text-decoration: inherit;">pem<wbr>Certificate</a>
@@ -773,8 +681,7 @@ this field is present.
         <span class="property-type">string</span>
     </dt>
     <dd>{{% md %}}Output only. The pem-encoded, signed X.509 certificate.
-{{% /md %}}</dd>
-    <dt class="property-"
+{{% /md %}}</dd><dt class="property-"
             title="">
         <span id="pemcertificates_nodejs">
 <a href="#pemcertificates_nodejs" style="color: inherit; text-decoration: inherit;">pem<wbr>Certificates</a>
@@ -783,8 +690,7 @@ this field is present.
         <span class="property-type">string[]</span>
     </dt>
     <dd>{{% md %}}Required. Expected to be in leaf-to-root order according to RFC 5246.
-{{% /md %}}</dd>
-    <dt class="property-"
+{{% /md %}}</dd><dt class="property-"
             title="">
         <span id="revocationdetails_nodejs">
 <a href="#revocationdetails_nodejs" style="color: inherit; text-decoration: inherit;">revocation<wbr>Details</a>
@@ -794,8 +700,7 @@ this field is present.
     </dt>
     <dd>{{% md %}}Output only. Details regarding the revocation of this Certificate. This Certificate is considered revoked if and only if
 this field is present.
-{{% /md %}}</dd>
-    <dt class="property-"
+{{% /md %}}</dd><dt class="property-"
             title="">
         <span id="updatetime_nodejs">
 <a href="#updatetime_nodejs" style="color: inherit; text-decoration: inherit;">update<wbr>Time</a>
@@ -804,14 +709,11 @@ this field is present.
         <span class="property-type">string</span>
     </dt>
     <dd>{{% md %}}Output only. The time at which this CertificateAuthority was updated. This is in RFC3339 text format.
-{{% /md %}}</dd>
-</dl>
+{{% /md %}}</dd></dl>
 {{% /choosable %}}
 
 {{% choosable language python %}}
-<dl class="resources-properties">
-
-    <dt class="property-"
+<dl class="resources-properties"><dt class="property-"
             title="">
         <span id="certificate_descriptions_python">
 <a href="#certificate_descriptions_python" style="color: inherit; text-decoration: inherit;">certificate_<wbr>descriptions</a>
@@ -821,8 +723,7 @@ this field is present.
     </dt>
     <dd>{{% md %}}Output only. Details regarding the revocation of this Certificate. This Certificate is considered revoked if and only if
 this field is present.
-{{% /md %}}</dd>
-    <dt class="property-"
+{{% /md %}}</dd><dt class="property-"
             title="">
         <span id="create_time_python">
 <a href="#create_time_python" style="color: inherit; text-decoration: inherit;">create_<wbr>time</a>
@@ -831,8 +732,7 @@ this field is present.
         <span class="property-type">str</span>
     </dt>
     <dd>{{% md %}}The time that this resource was created on the server. This is in RFC3339 text format.
-{{% /md %}}</dd>
-    <dt class="property-"
+{{% /md %}}</dd><dt class="property-"
             title="">
         <span id="id_python">
 <a href="#id_python" style="color: inherit; text-decoration: inherit;">id</a>
@@ -840,8 +740,7 @@ this field is present.
         <span class="property-indicator"></span>
         <span class="property-type">str</span>
     </dt>
-    <dd>{{% md %}}The provider-assigned unique ID for this managed resource.{{% /md %}}</dd>
-    <dt class="property-"
+    <dd>{{% md %}}The provider-assigned unique ID for this managed resource.{{% /md %}}</dd><dt class="property-"
             title="">
         <span id="pem_certificate_python">
 <a href="#pem_certificate_python" style="color: inherit; text-decoration: inherit;">pem_<wbr>certificate</a>
@@ -850,8 +749,7 @@ this field is present.
         <span class="property-type">str</span>
     </dt>
     <dd>{{% md %}}Output only. The pem-encoded, signed X.509 certificate.
-{{% /md %}}</dd>
-    <dt class="property-"
+{{% /md %}}</dd><dt class="property-"
             title="">
         <span id="pem_certificates_python">
 <a href="#pem_certificates_python" style="color: inherit; text-decoration: inherit;">pem_<wbr>certificates</a>
@@ -860,8 +758,7 @@ this field is present.
         <span class="property-type">Sequence[str]</span>
     </dt>
     <dd>{{% md %}}Required. Expected to be in leaf-to-root order according to RFC 5246.
-{{% /md %}}</dd>
-    <dt class="property-"
+{{% /md %}}</dd><dt class="property-"
             title="">
         <span id="revocation_details_python">
 <a href="#revocation_details_python" style="color: inherit; text-decoration: inherit;">revocation_<wbr>details</a>
@@ -871,8 +768,7 @@ this field is present.
     </dt>
     <dd>{{% md %}}Output only. Details regarding the revocation of this Certificate. This Certificate is considered revoked if and only if
 this field is present.
-{{% /md %}}</dd>
-    <dt class="property-"
+{{% /md %}}</dd><dt class="property-"
             title="">
         <span id="update_time_python">
 <a href="#update_time_python" style="color: inherit; text-decoration: inherit;">update_<wbr>time</a>
@@ -881,8 +777,7 @@ this field is present.
         <span class="property-type">str</span>
     </dt>
     <dd>{{% md %}}Output only. The time at which this CertificateAuthority was updated. This is in RFC3339 text format.
-{{% /md %}}</dd>
-</dl>
+{{% /md %}}</dd></dl>
 {{% /choosable %}}
 
 
@@ -1009,9 +904,7 @@ The following state arguments are supported:
 
 
 {{% choosable language csharp %}}
-<dl class="resources-properties">
-
-    <dt class="property-optional"
+<dl class="resources-properties"><dt class="property-optional"
             title="Optional">
         <span id="state_certificateauthority_csharp">
 <a href="#state_certificateauthority_csharp" style="color: inherit; text-decoration: inherit;">Certificate<wbr>Authority</a>
@@ -1020,8 +913,7 @@ The following state arguments are supported:
         <span class="property-type">string</span>
     </dt>
     <dd>{{% md %}}Certificate Authority name.
-{{% /md %}}</dd>
-    <dt class="property-optional"
+{{% /md %}}</dd><dt class="property-optional"
             title="Optional">
         <span id="state_certificatedescriptions_csharp">
 <a href="#state_certificatedescriptions_csharp" style="color: inherit; text-decoration: inherit;">Certificate<wbr>Descriptions</a>
@@ -1031,8 +923,7 @@ The following state arguments are supported:
     </dt>
     <dd>{{% md %}}Output only. Details regarding the revocation of this Certificate. This Certificate is considered revoked if and only if
 this field is present.
-{{% /md %}}</dd>
-    <dt class="property-optional"
+{{% /md %}}</dd><dt class="property-optional"
             title="Optional">
         <span id="state_config_csharp">
 <a href="#state_config_csharp" style="color: inherit; text-decoration: inherit;">Config</a>
@@ -1042,8 +933,7 @@ this field is present.
     </dt>
     <dd>{{% md %}}The config used to create a self-signed X.509 certificate or CSR.
 Structure is documented below.
-{{% /md %}}</dd>
-    <dt class="property-optional"
+{{% /md %}}</dd><dt class="property-optional"
             title="Optional">
         <span id="state_createtime_csharp">
 <a href="#state_createtime_csharp" style="color: inherit; text-decoration: inherit;">Create<wbr>Time</a>
@@ -1052,8 +942,7 @@ Structure is documented below.
         <span class="property-type">string</span>
     </dt>
     <dd>{{% md %}}The time that this resource was created on the server. This is in RFC3339 text format.
-{{% /md %}}</dd>
-    <dt class="property-optional"
+{{% /md %}}</dd><dt class="property-optional"
             title="Optional">
         <span id="state_labels_csharp">
 <a href="#state_labels_csharp" style="color: inherit; text-decoration: inherit;">Labels</a>
@@ -1062,8 +951,7 @@ Structure is documented below.
         <span class="property-type">Dictionary&lt;string, string&gt;</span>
     </dt>
     <dd>{{% md %}}Labels with user-defined metadata to apply to this resource.
-{{% /md %}}</dd>
-    <dt class="property-optional"
+{{% /md %}}</dd><dt class="property-optional"
             title="Optional">
         <span id="state_lifetime_csharp">
 <a href="#state_lifetime_csharp" style="color: inherit; text-decoration: inherit;">Lifetime</a>
@@ -1074,8 +962,7 @@ Structure is documented below.
     <dd>{{% md %}}The desired lifetime of the CA certificate. Used to create the "notBeforeTime" and
 "notAfterTime" fields inside an X.509 certificate. A duration in seconds with up to nine
 fractional digits, terminated by 's'. Example: "3.5s".
-{{% /md %}}</dd>
-    <dt class="property-optional"
+{{% /md %}}</dd><dt class="property-optional"
             title="Optional">
         <span id="state_location_csharp">
 <a href="#state_location_csharp" style="color: inherit; text-decoration: inherit;">Location</a>
@@ -1085,8 +972,7 @@ fractional digits, terminated by 's'. Example: "3.5s".
     </dt>
     <dd>{{% md %}}Location of the CertificateAuthority. A full list of valid locations can be found by
 running `gcloud beta privateca locations list`.
-{{% /md %}}</dd>
-    <dt class="property-optional"
+{{% /md %}}</dd><dt class="property-optional"
             title="Optional">
         <span id="state_name_csharp">
 <a href="#state_name_csharp" style="color: inherit; text-decoration: inherit;">Name</a>
@@ -1095,8 +981,7 @@ running `gcloud beta privateca locations list`.
         <span class="property-type">string</span>
     </dt>
     <dd>{{% md %}}The name for this Certificate .
-{{% /md %}}</dd>
-    <dt class="property-optional"
+{{% /md %}}</dd><dt class="property-optional"
             title="Optional">
         <span id="state_pemcertificate_csharp">
 <a href="#state_pemcertificate_csharp" style="color: inherit; text-decoration: inherit;">Pem<wbr>Certificate</a>
@@ -1105,8 +990,7 @@ running `gcloud beta privateca locations list`.
         <span class="property-type">string</span>
     </dt>
     <dd>{{% md %}}Output only. The pem-encoded, signed X.509 certificate.
-{{% /md %}}</dd>
-    <dt class="property-optional"
+{{% /md %}}</dd><dt class="property-optional"
             title="Optional">
         <span id="state_pemcertificates_csharp">
 <a href="#state_pemcertificates_csharp" style="color: inherit; text-decoration: inherit;">Pem<wbr>Certificates</a>
@@ -1115,8 +999,7 @@ running `gcloud beta privateca locations list`.
         <span class="property-type">List&lt;string&gt;</span>
     </dt>
     <dd>{{% md %}}Required. Expected to be in leaf-to-root order according to RFC 5246.
-{{% /md %}}</dd>
-    <dt class="property-optional"
+{{% /md %}}</dd><dt class="property-optional"
             title="Optional">
         <span id="state_pemcsr_csharp">
 <a href="#state_pemcsr_csharp" style="color: inherit; text-decoration: inherit;">Pem<wbr>Csr</a>
@@ -1125,8 +1008,7 @@ running `gcloud beta privateca locations list`.
         <span class="property-type">string</span>
     </dt>
     <dd>{{% md %}}Immutable. A pem-encoded X.509 certificate signing request (CSR).
-{{% /md %}}</dd>
-    <dt class="property-optional"
+{{% /md %}}</dd><dt class="property-optional"
             title="Optional">
         <span id="state_project_csharp">
 <a href="#state_project_csharp" style="color: inherit; text-decoration: inherit;">Project</a>
@@ -1136,8 +1018,7 @@ running `gcloud beta privateca locations list`.
     </dt>
     <dd>{{% md %}}The ID of the project in which the resource belongs.
 If it is not provided, the provider project is used.
-{{% /md %}}</dd>
-    <dt class="property-optional"
+{{% /md %}}</dd><dt class="property-optional"
             title="Optional">
         <span id="state_revocationdetails_csharp">
 <a href="#state_revocationdetails_csharp" style="color: inherit; text-decoration: inherit;">Revocation<wbr>Details</a>
@@ -1147,8 +1028,7 @@ If it is not provided, the provider project is used.
     </dt>
     <dd>{{% md %}}Output only. Details regarding the revocation of this Certificate. This Certificate is considered revoked if and only if
 this field is present.
-{{% /md %}}</dd>
-    <dt class="property-optional"
+{{% /md %}}</dd><dt class="property-optional"
             title="Optional">
         <span id="state_updatetime_csharp">
 <a href="#state_updatetime_csharp" style="color: inherit; text-decoration: inherit;">Update<wbr>Time</a>
@@ -1157,14 +1037,11 @@ this field is present.
         <span class="property-type">string</span>
     </dt>
     <dd>{{% md %}}Output only. The time at which this CertificateAuthority was updated. This is in RFC3339 text format.
-{{% /md %}}</dd>
-</dl>
+{{% /md %}}</dd></dl>
 {{% /choosable %}}
 
 {{% choosable language go %}}
-<dl class="resources-properties">
-
-    <dt class="property-optional"
+<dl class="resources-properties"><dt class="property-optional"
             title="Optional">
         <span id="state_certificateauthority_go">
 <a href="#state_certificateauthority_go" style="color: inherit; text-decoration: inherit;">Certificate<wbr>Authority</a>
@@ -1173,8 +1050,7 @@ this field is present.
         <span class="property-type">string</span>
     </dt>
     <dd>{{% md %}}Certificate Authority name.
-{{% /md %}}</dd>
-    <dt class="property-optional"
+{{% /md %}}</dd><dt class="property-optional"
             title="Optional">
         <span id="state_certificatedescriptions_go">
 <a href="#state_certificatedescriptions_go" style="color: inherit; text-decoration: inherit;">Certificate<wbr>Descriptions</a>
@@ -1184,8 +1060,7 @@ this field is present.
     </dt>
     <dd>{{% md %}}Output only. Details regarding the revocation of this Certificate. This Certificate is considered revoked if and only if
 this field is present.
-{{% /md %}}</dd>
-    <dt class="property-optional"
+{{% /md %}}</dd><dt class="property-optional"
             title="Optional">
         <span id="state_config_go">
 <a href="#state_config_go" style="color: inherit; text-decoration: inherit;">Config</a>
@@ -1195,8 +1070,7 @@ this field is present.
     </dt>
     <dd>{{% md %}}The config used to create a self-signed X.509 certificate or CSR.
 Structure is documented below.
-{{% /md %}}</dd>
-    <dt class="property-optional"
+{{% /md %}}</dd><dt class="property-optional"
             title="Optional">
         <span id="state_createtime_go">
 <a href="#state_createtime_go" style="color: inherit; text-decoration: inherit;">Create<wbr>Time</a>
@@ -1205,8 +1079,7 @@ Structure is documented below.
         <span class="property-type">string</span>
     </dt>
     <dd>{{% md %}}The time that this resource was created on the server. This is in RFC3339 text format.
-{{% /md %}}</dd>
-    <dt class="property-optional"
+{{% /md %}}</dd><dt class="property-optional"
             title="Optional">
         <span id="state_labels_go">
 <a href="#state_labels_go" style="color: inherit; text-decoration: inherit;">Labels</a>
@@ -1215,8 +1088,7 @@ Structure is documented below.
         <span class="property-type">map[string]string</span>
     </dt>
     <dd>{{% md %}}Labels with user-defined metadata to apply to this resource.
-{{% /md %}}</dd>
-    <dt class="property-optional"
+{{% /md %}}</dd><dt class="property-optional"
             title="Optional">
         <span id="state_lifetime_go">
 <a href="#state_lifetime_go" style="color: inherit; text-decoration: inherit;">Lifetime</a>
@@ -1227,8 +1099,7 @@ Structure is documented below.
     <dd>{{% md %}}The desired lifetime of the CA certificate. Used to create the "notBeforeTime" and
 "notAfterTime" fields inside an X.509 certificate. A duration in seconds with up to nine
 fractional digits, terminated by 's'. Example: "3.5s".
-{{% /md %}}</dd>
-    <dt class="property-optional"
+{{% /md %}}</dd><dt class="property-optional"
             title="Optional">
         <span id="state_location_go">
 <a href="#state_location_go" style="color: inherit; text-decoration: inherit;">Location</a>
@@ -1238,8 +1109,7 @@ fractional digits, terminated by 's'. Example: "3.5s".
     </dt>
     <dd>{{% md %}}Location of the CertificateAuthority. A full list of valid locations can be found by
 running `gcloud beta privateca locations list`.
-{{% /md %}}</dd>
-    <dt class="property-optional"
+{{% /md %}}</dd><dt class="property-optional"
             title="Optional">
         <span id="state_name_go">
 <a href="#state_name_go" style="color: inherit; text-decoration: inherit;">Name</a>
@@ -1248,8 +1118,7 @@ running `gcloud beta privateca locations list`.
         <span class="property-type">string</span>
     </dt>
     <dd>{{% md %}}The name for this Certificate .
-{{% /md %}}</dd>
-    <dt class="property-optional"
+{{% /md %}}</dd><dt class="property-optional"
             title="Optional">
         <span id="state_pemcertificate_go">
 <a href="#state_pemcertificate_go" style="color: inherit; text-decoration: inherit;">Pem<wbr>Certificate</a>
@@ -1258,8 +1127,7 @@ running `gcloud beta privateca locations list`.
         <span class="property-type">string</span>
     </dt>
     <dd>{{% md %}}Output only. The pem-encoded, signed X.509 certificate.
-{{% /md %}}</dd>
-    <dt class="property-optional"
+{{% /md %}}</dd><dt class="property-optional"
             title="Optional">
         <span id="state_pemcertificates_go">
 <a href="#state_pemcertificates_go" style="color: inherit; text-decoration: inherit;">Pem<wbr>Certificates</a>
@@ -1268,8 +1136,7 @@ running `gcloud beta privateca locations list`.
         <span class="property-type">[]string</span>
     </dt>
     <dd>{{% md %}}Required. Expected to be in leaf-to-root order according to RFC 5246.
-{{% /md %}}</dd>
-    <dt class="property-optional"
+{{% /md %}}</dd><dt class="property-optional"
             title="Optional">
         <span id="state_pemcsr_go">
 <a href="#state_pemcsr_go" style="color: inherit; text-decoration: inherit;">Pem<wbr>Csr</a>
@@ -1278,8 +1145,7 @@ running `gcloud beta privateca locations list`.
         <span class="property-type">string</span>
     </dt>
     <dd>{{% md %}}Immutable. A pem-encoded X.509 certificate signing request (CSR).
-{{% /md %}}</dd>
-    <dt class="property-optional"
+{{% /md %}}</dd><dt class="property-optional"
             title="Optional">
         <span id="state_project_go">
 <a href="#state_project_go" style="color: inherit; text-decoration: inherit;">Project</a>
@@ -1289,8 +1155,7 @@ running `gcloud beta privateca locations list`.
     </dt>
     <dd>{{% md %}}The ID of the project in which the resource belongs.
 If it is not provided, the provider project is used.
-{{% /md %}}</dd>
-    <dt class="property-optional"
+{{% /md %}}</dd><dt class="property-optional"
             title="Optional">
         <span id="state_revocationdetails_go">
 <a href="#state_revocationdetails_go" style="color: inherit; text-decoration: inherit;">Revocation<wbr>Details</a>
@@ -1300,8 +1165,7 @@ If it is not provided, the provider project is used.
     </dt>
     <dd>{{% md %}}Output only. Details regarding the revocation of this Certificate. This Certificate is considered revoked if and only if
 this field is present.
-{{% /md %}}</dd>
-    <dt class="property-optional"
+{{% /md %}}</dd><dt class="property-optional"
             title="Optional">
         <span id="state_updatetime_go">
 <a href="#state_updatetime_go" style="color: inherit; text-decoration: inherit;">Update<wbr>Time</a>
@@ -1310,14 +1174,11 @@ this field is present.
         <span class="property-type">string</span>
     </dt>
     <dd>{{% md %}}Output only. The time at which this CertificateAuthority was updated. This is in RFC3339 text format.
-{{% /md %}}</dd>
-</dl>
+{{% /md %}}</dd></dl>
 {{% /choosable %}}
 
 {{% choosable language nodejs %}}
-<dl class="resources-properties">
-
-    <dt class="property-optional"
+<dl class="resources-properties"><dt class="property-optional"
             title="Optional">
         <span id="state_certificateauthority_nodejs">
 <a href="#state_certificateauthority_nodejs" style="color: inherit; text-decoration: inherit;">certificate<wbr>Authority</a>
@@ -1326,8 +1187,7 @@ this field is present.
         <span class="property-type">string</span>
     </dt>
     <dd>{{% md %}}Certificate Authority name.
-{{% /md %}}</dd>
-    <dt class="property-optional"
+{{% /md %}}</dd><dt class="property-optional"
             title="Optional">
         <span id="state_certificatedescriptions_nodejs">
 <a href="#state_certificatedescriptions_nodejs" style="color: inherit; text-decoration: inherit;">certificate<wbr>Descriptions</a>
@@ -1337,8 +1197,7 @@ this field is present.
     </dt>
     <dd>{{% md %}}Output only. Details regarding the revocation of this Certificate. This Certificate is considered revoked if and only if
 this field is present.
-{{% /md %}}</dd>
-    <dt class="property-optional"
+{{% /md %}}</dd><dt class="property-optional"
             title="Optional">
         <span id="state_config_nodejs">
 <a href="#state_config_nodejs" style="color: inherit; text-decoration: inherit;">config</a>
@@ -1348,8 +1207,7 @@ this field is present.
     </dt>
     <dd>{{% md %}}The config used to create a self-signed X.509 certificate or CSR.
 Structure is documented below.
-{{% /md %}}</dd>
-    <dt class="property-optional"
+{{% /md %}}</dd><dt class="property-optional"
             title="Optional">
         <span id="state_createtime_nodejs">
 <a href="#state_createtime_nodejs" style="color: inherit; text-decoration: inherit;">create<wbr>Time</a>
@@ -1358,8 +1216,7 @@ Structure is documented below.
         <span class="property-type">string</span>
     </dt>
     <dd>{{% md %}}The time that this resource was created on the server. This is in RFC3339 text format.
-{{% /md %}}</dd>
-    <dt class="property-optional"
+{{% /md %}}</dd><dt class="property-optional"
             title="Optional">
         <span id="state_labels_nodejs">
 <a href="#state_labels_nodejs" style="color: inherit; text-decoration: inherit;">labels</a>
@@ -1368,8 +1225,7 @@ Structure is documented below.
         <span class="property-type">{[key: string]: string}</span>
     </dt>
     <dd>{{% md %}}Labels with user-defined metadata to apply to this resource.
-{{% /md %}}</dd>
-    <dt class="property-optional"
+{{% /md %}}</dd><dt class="property-optional"
             title="Optional">
         <span id="state_lifetime_nodejs">
 <a href="#state_lifetime_nodejs" style="color: inherit; text-decoration: inherit;">lifetime</a>
@@ -1380,8 +1236,7 @@ Structure is documented below.
     <dd>{{% md %}}The desired lifetime of the CA certificate. Used to create the "notBeforeTime" and
 "notAfterTime" fields inside an X.509 certificate. A duration in seconds with up to nine
 fractional digits, terminated by 's'. Example: "3.5s".
-{{% /md %}}</dd>
-    <dt class="property-optional"
+{{% /md %}}</dd><dt class="property-optional"
             title="Optional">
         <span id="state_location_nodejs">
 <a href="#state_location_nodejs" style="color: inherit; text-decoration: inherit;">location</a>
@@ -1391,8 +1246,7 @@ fractional digits, terminated by 's'. Example: "3.5s".
     </dt>
     <dd>{{% md %}}Location of the CertificateAuthority. A full list of valid locations can be found by
 running `gcloud beta privateca locations list`.
-{{% /md %}}</dd>
-    <dt class="property-optional"
+{{% /md %}}</dd><dt class="property-optional"
             title="Optional">
         <span id="state_name_nodejs">
 <a href="#state_name_nodejs" style="color: inherit; text-decoration: inherit;">name</a>
@@ -1401,8 +1255,7 @@ running `gcloud beta privateca locations list`.
         <span class="property-type">string</span>
     </dt>
     <dd>{{% md %}}The name for this Certificate .
-{{% /md %}}</dd>
-    <dt class="property-optional"
+{{% /md %}}</dd><dt class="property-optional"
             title="Optional">
         <span id="state_pemcertificate_nodejs">
 <a href="#state_pemcertificate_nodejs" style="color: inherit; text-decoration: inherit;">pem<wbr>Certificate</a>
@@ -1411,8 +1264,7 @@ running `gcloud beta privateca locations list`.
         <span class="property-type">string</span>
     </dt>
     <dd>{{% md %}}Output only. The pem-encoded, signed X.509 certificate.
-{{% /md %}}</dd>
-    <dt class="property-optional"
+{{% /md %}}</dd><dt class="property-optional"
             title="Optional">
         <span id="state_pemcertificates_nodejs">
 <a href="#state_pemcertificates_nodejs" style="color: inherit; text-decoration: inherit;">pem<wbr>Certificates</a>
@@ -1421,8 +1273,7 @@ running `gcloud beta privateca locations list`.
         <span class="property-type">string[]</span>
     </dt>
     <dd>{{% md %}}Required. Expected to be in leaf-to-root order according to RFC 5246.
-{{% /md %}}</dd>
-    <dt class="property-optional"
+{{% /md %}}</dd><dt class="property-optional"
             title="Optional">
         <span id="state_pemcsr_nodejs">
 <a href="#state_pemcsr_nodejs" style="color: inherit; text-decoration: inherit;">pem<wbr>Csr</a>
@@ -1431,8 +1282,7 @@ running `gcloud beta privateca locations list`.
         <span class="property-type">string</span>
     </dt>
     <dd>{{% md %}}Immutable. A pem-encoded X.509 certificate signing request (CSR).
-{{% /md %}}</dd>
-    <dt class="property-optional"
+{{% /md %}}</dd><dt class="property-optional"
             title="Optional">
         <span id="state_project_nodejs">
 <a href="#state_project_nodejs" style="color: inherit; text-decoration: inherit;">project</a>
@@ -1442,8 +1292,7 @@ running `gcloud beta privateca locations list`.
     </dt>
     <dd>{{% md %}}The ID of the project in which the resource belongs.
 If it is not provided, the provider project is used.
-{{% /md %}}</dd>
-    <dt class="property-optional"
+{{% /md %}}</dd><dt class="property-optional"
             title="Optional">
         <span id="state_revocationdetails_nodejs">
 <a href="#state_revocationdetails_nodejs" style="color: inherit; text-decoration: inherit;">revocation<wbr>Details</a>
@@ -1453,8 +1302,7 @@ If it is not provided, the provider project is used.
     </dt>
     <dd>{{% md %}}Output only. Details regarding the revocation of this Certificate. This Certificate is considered revoked if and only if
 this field is present.
-{{% /md %}}</dd>
-    <dt class="property-optional"
+{{% /md %}}</dd><dt class="property-optional"
             title="Optional">
         <span id="state_updatetime_nodejs">
 <a href="#state_updatetime_nodejs" style="color: inherit; text-decoration: inherit;">update<wbr>Time</a>
@@ -1463,14 +1311,11 @@ this field is present.
         <span class="property-type">string</span>
     </dt>
     <dd>{{% md %}}Output only. The time at which this CertificateAuthority was updated. This is in RFC3339 text format.
-{{% /md %}}</dd>
-</dl>
+{{% /md %}}</dd></dl>
 {{% /choosable %}}
 
 {{% choosable language python %}}
-<dl class="resources-properties">
-
-    <dt class="property-optional"
+<dl class="resources-properties"><dt class="property-optional"
             title="Optional">
         <span id="state_certificate_authority_python">
 <a href="#state_certificate_authority_python" style="color: inherit; text-decoration: inherit;">certificate_<wbr>authority</a>
@@ -1479,8 +1324,7 @@ this field is present.
         <span class="property-type">str</span>
     </dt>
     <dd>{{% md %}}Certificate Authority name.
-{{% /md %}}</dd>
-    <dt class="property-optional"
+{{% /md %}}</dd><dt class="property-optional"
             title="Optional">
         <span id="state_certificate_descriptions_python">
 <a href="#state_certificate_descriptions_python" style="color: inherit; text-decoration: inherit;">certificate_<wbr>descriptions</a>
@@ -1490,8 +1334,7 @@ this field is present.
     </dt>
     <dd>{{% md %}}Output only. Details regarding the revocation of this Certificate. This Certificate is considered revoked if and only if
 this field is present.
-{{% /md %}}</dd>
-    <dt class="property-optional"
+{{% /md %}}</dd><dt class="property-optional"
             title="Optional">
         <span id="state_config_python">
 <a href="#state_config_python" style="color: inherit; text-decoration: inherit;">config</a>
@@ -1501,8 +1344,7 @@ this field is present.
     </dt>
     <dd>{{% md %}}The config used to create a self-signed X.509 certificate or CSR.
 Structure is documented below.
-{{% /md %}}</dd>
-    <dt class="property-optional"
+{{% /md %}}</dd><dt class="property-optional"
             title="Optional">
         <span id="state_create_time_python">
 <a href="#state_create_time_python" style="color: inherit; text-decoration: inherit;">create_<wbr>time</a>
@@ -1511,8 +1353,7 @@ Structure is documented below.
         <span class="property-type">str</span>
     </dt>
     <dd>{{% md %}}The time that this resource was created on the server. This is in RFC3339 text format.
-{{% /md %}}</dd>
-    <dt class="property-optional"
+{{% /md %}}</dd><dt class="property-optional"
             title="Optional">
         <span id="state_labels_python">
 <a href="#state_labels_python" style="color: inherit; text-decoration: inherit;">labels</a>
@@ -1521,8 +1362,7 @@ Structure is documented below.
         <span class="property-type">Mapping[str, str]</span>
     </dt>
     <dd>{{% md %}}Labels with user-defined metadata to apply to this resource.
-{{% /md %}}</dd>
-    <dt class="property-optional"
+{{% /md %}}</dd><dt class="property-optional"
             title="Optional">
         <span id="state_lifetime_python">
 <a href="#state_lifetime_python" style="color: inherit; text-decoration: inherit;">lifetime</a>
@@ -1533,8 +1373,7 @@ Structure is documented below.
     <dd>{{% md %}}The desired lifetime of the CA certificate. Used to create the "notBeforeTime" and
 "notAfterTime" fields inside an X.509 certificate. A duration in seconds with up to nine
 fractional digits, terminated by 's'. Example: "3.5s".
-{{% /md %}}</dd>
-    <dt class="property-optional"
+{{% /md %}}</dd><dt class="property-optional"
             title="Optional">
         <span id="state_location_python">
 <a href="#state_location_python" style="color: inherit; text-decoration: inherit;">location</a>
@@ -1544,8 +1383,7 @@ fractional digits, terminated by 's'. Example: "3.5s".
     </dt>
     <dd>{{% md %}}Location of the CertificateAuthority. A full list of valid locations can be found by
 running `gcloud beta privateca locations list`.
-{{% /md %}}</dd>
-    <dt class="property-optional"
+{{% /md %}}</dd><dt class="property-optional"
             title="Optional">
         <span id="state_name_python">
 <a href="#state_name_python" style="color: inherit; text-decoration: inherit;">name</a>
@@ -1554,8 +1392,7 @@ running `gcloud beta privateca locations list`.
         <span class="property-type">str</span>
     </dt>
     <dd>{{% md %}}The name for this Certificate .
-{{% /md %}}</dd>
-    <dt class="property-optional"
+{{% /md %}}</dd><dt class="property-optional"
             title="Optional">
         <span id="state_pem_certificate_python">
 <a href="#state_pem_certificate_python" style="color: inherit; text-decoration: inherit;">pem_<wbr>certificate</a>
@@ -1564,8 +1401,7 @@ running `gcloud beta privateca locations list`.
         <span class="property-type">str</span>
     </dt>
     <dd>{{% md %}}Output only. The pem-encoded, signed X.509 certificate.
-{{% /md %}}</dd>
-    <dt class="property-optional"
+{{% /md %}}</dd><dt class="property-optional"
             title="Optional">
         <span id="state_pem_certificates_python">
 <a href="#state_pem_certificates_python" style="color: inherit; text-decoration: inherit;">pem_<wbr>certificates</a>
@@ -1574,8 +1410,7 @@ running `gcloud beta privateca locations list`.
         <span class="property-type">Sequence[str]</span>
     </dt>
     <dd>{{% md %}}Required. Expected to be in leaf-to-root order according to RFC 5246.
-{{% /md %}}</dd>
-    <dt class="property-optional"
+{{% /md %}}</dd><dt class="property-optional"
             title="Optional">
         <span id="state_pem_csr_python">
 <a href="#state_pem_csr_python" style="color: inherit; text-decoration: inherit;">pem_<wbr>csr</a>
@@ -1584,8 +1419,7 @@ running `gcloud beta privateca locations list`.
         <span class="property-type">str</span>
     </dt>
     <dd>{{% md %}}Immutable. A pem-encoded X.509 certificate signing request (CSR).
-{{% /md %}}</dd>
-    <dt class="property-optional"
+{{% /md %}}</dd><dt class="property-optional"
             title="Optional">
         <span id="state_project_python">
 <a href="#state_project_python" style="color: inherit; text-decoration: inherit;">project</a>
@@ -1595,8 +1429,7 @@ running `gcloud beta privateca locations list`.
     </dt>
     <dd>{{% md %}}The ID of the project in which the resource belongs.
 If it is not provided, the provider project is used.
-{{% /md %}}</dd>
-    <dt class="property-optional"
+{{% /md %}}</dd><dt class="property-optional"
             title="Optional">
         <span id="state_revocation_details_python">
 <a href="#state_revocation_details_python" style="color: inherit; text-decoration: inherit;">revocation_<wbr>details</a>
@@ -1606,8 +1439,7 @@ If it is not provided, the provider project is used.
     </dt>
     <dd>{{% md %}}Output only. Details regarding the revocation of this Certificate. This Certificate is considered revoked if and only if
 this field is present.
-{{% /md %}}</dd>
-    <dt class="property-optional"
+{{% /md %}}</dd><dt class="property-optional"
             title="Optional">
         <span id="state_update_time_python">
 <a href="#state_update_time_python" style="color: inherit; text-decoration: inherit;">update_<wbr>time</a>
@@ -1616,8 +1448,7 @@ this field is present.
         <span class="property-type">str</span>
     </dt>
     <dd>{{% md %}}Output only. The time at which this CertificateAuthority was updated. This is in RFC3339 text format.
-{{% /md %}}</dd>
-</dl>
+{{% /md %}}</dd></dl>
 {{% /choosable %}}
 
 
@@ -1632,9 +1463,7 @@ this field is present.
 <h4 id="certificatecertificatedescription">Certificate<wbr>Certificate<wbr>Description</h4>
 
 {{% choosable language csharp %}}
-<dl class="resources-properties">
-
-    <dt class="property-required"
+<dl class="resources-properties"><dt class="property-required"
             title="Required">
         <span id="publickey_csharp">
 <a href="#publickey_csharp" style="color: inherit; text-decoration: inherit;">Public<wbr>Key</a>
@@ -1644,8 +1473,7 @@ this field is present.
     </dt>
     <dd>{{% md %}}A PublicKey describes a public key.
 Structure is documented below.
-{{% /md %}}</dd>
-    <dt class="property-optional"
+{{% /md %}}</dd><dt class="property-optional"
             title="Optional">
         <span id="aiaissuingcertificateurls_csharp">
 <a href="#aiaissuingcertificateurls_csharp" style="color: inherit; text-decoration: inherit;">Aia<wbr>Issuing<wbr>Certificate<wbr>Urls</a>
@@ -1653,8 +1481,7 @@ Structure is documented below.
         <span class="property-indicator"></span>
         <span class="property-type">List&lt;string&gt;</span>
     </dt>
-    <dd>{{% md %}}{{% /md %}}</dd>
-    <dt class="property-optional"
+    <dd>{{% md %}}{{% /md %}}</dd><dt class="property-optional"
             title="Optional">
         <span id="authoritykeyid_csharp">
 <a href="#authoritykeyid_csharp" style="color: inherit; text-decoration: inherit;">Authority<wbr>Key<wbr>Id</a>
@@ -1662,8 +1489,7 @@ Structure is documented below.
         <span class="property-indicator"></span>
         <span class="property-type"><a href="#certificatecertificatedescriptionauthoritykeyid">Certificate<wbr>Certificate<wbr>Description<wbr>Authority<wbr>Key<wbr>Id<wbr>Args</a></span>
     </dt>
-    <dd>{{% md %}}{{% /md %}}</dd>
-    <dt class="property-optional"
+    <dd>{{% md %}}{{% /md %}}</dd><dt class="property-optional"
             title="Optional">
         <span id="certfingerprint_csharp">
 <a href="#certfingerprint_csharp" style="color: inherit; text-decoration: inherit;">Cert<wbr>Fingerprint</a>
@@ -1671,8 +1497,7 @@ Structure is documented below.
         <span class="property-indicator"></span>
         <span class="property-type"><a href="#certificatecertificatedescriptioncertfingerprint">Certificate<wbr>Certificate<wbr>Description<wbr>Cert<wbr>Fingerprint<wbr>Args</a></span>
     </dt>
-    <dd>{{% md %}}{{% /md %}}</dd>
-    <dt class="property-optional"
+    <dd>{{% md %}}{{% /md %}}</dd><dt class="property-optional"
             title="Optional">
         <span id="configvalues_csharp">
 <a href="#configvalues_csharp" style="color: inherit; text-decoration: inherit;">Config<wbr>Values</a>
@@ -1680,8 +1505,7 @@ Structure is documented below.
         <span class="property-indicator"></span>
         <span class="property-type"><a href="#certificatecertificatedescriptionconfigvalues">Certificate<wbr>Certificate<wbr>Description<wbr>Config<wbr>Values<wbr>Args</a></span>
     </dt>
-    <dd>{{% md %}}{{% /md %}}</dd>
-    <dt class="property-optional"
+    <dd>{{% md %}}{{% /md %}}</dd><dt class="property-optional"
             title="Optional">
         <span id="crldistributionpoints_csharp">
 <a href="#crldistributionpoints_csharp" style="color: inherit; text-decoration: inherit;">Crl<wbr>Distribution<wbr>Points</a>
@@ -1689,8 +1513,7 @@ Structure is documented below.
         <span class="property-indicator"></span>
         <span class="property-type">List&lt;string&gt;</span>
     </dt>
-    <dd>{{% md %}}{{% /md %}}</dd>
-    <dt class="property-optional"
+    <dd>{{% md %}}{{% /md %}}</dd><dt class="property-optional"
             title="Optional">
         <span id="subjectdescription_csharp">
 <a href="#subjectdescription_csharp" style="color: inherit; text-decoration: inherit;">Subject<wbr>Description</a>
@@ -1698,8 +1521,7 @@ Structure is documented below.
         <span class="property-indicator"></span>
         <span class="property-type"><a href="#certificatecertificatedescriptionsubjectdescription">Certificate<wbr>Certificate<wbr>Description<wbr>Subject<wbr>Description<wbr>Args</a></span>
     </dt>
-    <dd>{{% md %}}{{% /md %}}</dd>
-    <dt class="property-optional"
+    <dd>{{% md %}}{{% /md %}}</dd><dt class="property-optional"
             title="Optional">
         <span id="subjectkeyid_csharp">
 <a href="#subjectkeyid_csharp" style="color: inherit; text-decoration: inherit;">Subject<wbr>Key<wbr>Id</a>
@@ -1707,14 +1529,11 @@ Structure is documented below.
         <span class="property-indicator"></span>
         <span class="property-type"><a href="#certificatecertificatedescriptionsubjectkeyid">Certificate<wbr>Certificate<wbr>Description<wbr>Subject<wbr>Key<wbr>Id<wbr>Args</a></span>
     </dt>
-    <dd>{{% md %}}{{% /md %}}</dd>
-</dl>
+    <dd>{{% md %}}{{% /md %}}</dd></dl>
 {{% /choosable %}}
 
 {{% choosable language go %}}
-<dl class="resources-properties">
-
-    <dt class="property-required"
+<dl class="resources-properties"><dt class="property-required"
             title="Required">
         <span id="publickey_go">
 <a href="#publickey_go" style="color: inherit; text-decoration: inherit;">Public<wbr>Key</a>
@@ -1724,8 +1543,7 @@ Structure is documented below.
     </dt>
     <dd>{{% md %}}A PublicKey describes a public key.
 Structure is documented below.
-{{% /md %}}</dd>
-    <dt class="property-optional"
+{{% /md %}}</dd><dt class="property-optional"
             title="Optional">
         <span id="aiaissuingcertificateurls_go">
 <a href="#aiaissuingcertificateurls_go" style="color: inherit; text-decoration: inherit;">Aia<wbr>Issuing<wbr>Certificate<wbr>Urls</a>
@@ -1733,8 +1551,7 @@ Structure is documented below.
         <span class="property-indicator"></span>
         <span class="property-type">[]string</span>
     </dt>
-    <dd>{{% md %}}{{% /md %}}</dd>
-    <dt class="property-optional"
+    <dd>{{% md %}}{{% /md %}}</dd><dt class="property-optional"
             title="Optional">
         <span id="authoritykeyid_go">
 <a href="#authoritykeyid_go" style="color: inherit; text-decoration: inherit;">Authority<wbr>Key<wbr>Id</a>
@@ -1742,8 +1559,7 @@ Structure is documented below.
         <span class="property-indicator"></span>
         <span class="property-type"><a href="#certificatecertificatedescriptionauthoritykeyid">Certificate<wbr>Certificate<wbr>Description<wbr>Authority<wbr>Key<wbr>Id</a></span>
     </dt>
-    <dd>{{% md %}}{{% /md %}}</dd>
-    <dt class="property-optional"
+    <dd>{{% md %}}{{% /md %}}</dd><dt class="property-optional"
             title="Optional">
         <span id="certfingerprint_go">
 <a href="#certfingerprint_go" style="color: inherit; text-decoration: inherit;">Cert<wbr>Fingerprint</a>
@@ -1751,8 +1567,7 @@ Structure is documented below.
         <span class="property-indicator"></span>
         <span class="property-type"><a href="#certificatecertificatedescriptioncertfingerprint">Certificate<wbr>Certificate<wbr>Description<wbr>Cert<wbr>Fingerprint</a></span>
     </dt>
-    <dd>{{% md %}}{{% /md %}}</dd>
-    <dt class="property-optional"
+    <dd>{{% md %}}{{% /md %}}</dd><dt class="property-optional"
             title="Optional">
         <span id="configvalues_go">
 <a href="#configvalues_go" style="color: inherit; text-decoration: inherit;">Config<wbr>Values</a>
@@ -1760,8 +1575,7 @@ Structure is documented below.
         <span class="property-indicator"></span>
         <span class="property-type"><a href="#certificatecertificatedescriptionconfigvalues">Certificate<wbr>Certificate<wbr>Description<wbr>Config<wbr>Values</a></span>
     </dt>
-    <dd>{{% md %}}{{% /md %}}</dd>
-    <dt class="property-optional"
+    <dd>{{% md %}}{{% /md %}}</dd><dt class="property-optional"
             title="Optional">
         <span id="crldistributionpoints_go">
 <a href="#crldistributionpoints_go" style="color: inherit; text-decoration: inherit;">Crl<wbr>Distribution<wbr>Points</a>
@@ -1769,8 +1583,7 @@ Structure is documented below.
         <span class="property-indicator"></span>
         <span class="property-type">[]string</span>
     </dt>
-    <dd>{{% md %}}{{% /md %}}</dd>
-    <dt class="property-optional"
+    <dd>{{% md %}}{{% /md %}}</dd><dt class="property-optional"
             title="Optional">
         <span id="subjectdescription_go">
 <a href="#subjectdescription_go" style="color: inherit; text-decoration: inherit;">Subject<wbr>Description</a>
@@ -1778,8 +1591,7 @@ Structure is documented below.
         <span class="property-indicator"></span>
         <span class="property-type"><a href="#certificatecertificatedescriptionsubjectdescription">Certificate<wbr>Certificate<wbr>Description<wbr>Subject<wbr>Description</a></span>
     </dt>
-    <dd>{{% md %}}{{% /md %}}</dd>
-    <dt class="property-optional"
+    <dd>{{% md %}}{{% /md %}}</dd><dt class="property-optional"
             title="Optional">
         <span id="subjectkeyid_go">
 <a href="#subjectkeyid_go" style="color: inherit; text-decoration: inherit;">Subject<wbr>Key<wbr>Id</a>
@@ -1787,14 +1599,11 @@ Structure is documented below.
         <span class="property-indicator"></span>
         <span class="property-type"><a href="#certificatecertificatedescriptionsubjectkeyid">Certificate<wbr>Certificate<wbr>Description<wbr>Subject<wbr>Key<wbr>Id</a></span>
     </dt>
-    <dd>{{% md %}}{{% /md %}}</dd>
-</dl>
+    <dd>{{% md %}}{{% /md %}}</dd></dl>
 {{% /choosable %}}
 
 {{% choosable language nodejs %}}
-<dl class="resources-properties">
-
-    <dt class="property-required"
+<dl class="resources-properties"><dt class="property-required"
             title="Required">
         <span id="publickey_nodejs">
 <a href="#publickey_nodejs" style="color: inherit; text-decoration: inherit;">public<wbr>Key</a>
@@ -1804,8 +1613,7 @@ Structure is documented below.
     </dt>
     <dd>{{% md %}}A PublicKey describes a public key.
 Structure is documented below.
-{{% /md %}}</dd>
-    <dt class="property-optional"
+{{% /md %}}</dd><dt class="property-optional"
             title="Optional">
         <span id="aiaissuingcertificateurls_nodejs">
 <a href="#aiaissuingcertificateurls_nodejs" style="color: inherit; text-decoration: inherit;">aia<wbr>Issuing<wbr>Certificate<wbr>Urls</a>
@@ -1813,8 +1621,7 @@ Structure is documented below.
         <span class="property-indicator"></span>
         <span class="property-type">string[]</span>
     </dt>
-    <dd>{{% md %}}{{% /md %}}</dd>
-    <dt class="property-optional"
+    <dd>{{% md %}}{{% /md %}}</dd><dt class="property-optional"
             title="Optional">
         <span id="authoritykeyid_nodejs">
 <a href="#authoritykeyid_nodejs" style="color: inherit; text-decoration: inherit;">authority<wbr>Key<wbr>Id</a>
@@ -1822,8 +1629,7 @@ Structure is documented below.
         <span class="property-indicator"></span>
         <span class="property-type"><a href="#certificatecertificatedescriptionauthoritykeyid">Certificate<wbr>Certificate<wbr>Description<wbr>Authority<wbr>Key<wbr>Id</a></span>
     </dt>
-    <dd>{{% md %}}{{% /md %}}</dd>
-    <dt class="property-optional"
+    <dd>{{% md %}}{{% /md %}}</dd><dt class="property-optional"
             title="Optional">
         <span id="certfingerprint_nodejs">
 <a href="#certfingerprint_nodejs" style="color: inherit; text-decoration: inherit;">cert<wbr>Fingerprint</a>
@@ -1831,8 +1637,7 @@ Structure is documented below.
         <span class="property-indicator"></span>
         <span class="property-type"><a href="#certificatecertificatedescriptioncertfingerprint">Certificate<wbr>Certificate<wbr>Description<wbr>Cert<wbr>Fingerprint</a></span>
     </dt>
-    <dd>{{% md %}}{{% /md %}}</dd>
-    <dt class="property-optional"
+    <dd>{{% md %}}{{% /md %}}</dd><dt class="property-optional"
             title="Optional">
         <span id="configvalues_nodejs">
 <a href="#configvalues_nodejs" style="color: inherit; text-decoration: inherit;">config<wbr>Values</a>
@@ -1840,8 +1645,7 @@ Structure is documented below.
         <span class="property-indicator"></span>
         <span class="property-type"><a href="#certificatecertificatedescriptionconfigvalues">Certificate<wbr>Certificate<wbr>Description<wbr>Config<wbr>Values</a></span>
     </dt>
-    <dd>{{% md %}}{{% /md %}}</dd>
-    <dt class="property-optional"
+    <dd>{{% md %}}{{% /md %}}</dd><dt class="property-optional"
             title="Optional">
         <span id="crldistributionpoints_nodejs">
 <a href="#crldistributionpoints_nodejs" style="color: inherit; text-decoration: inherit;">crl<wbr>Distribution<wbr>Points</a>
@@ -1849,8 +1653,7 @@ Structure is documented below.
         <span class="property-indicator"></span>
         <span class="property-type">string[]</span>
     </dt>
-    <dd>{{% md %}}{{% /md %}}</dd>
-    <dt class="property-optional"
+    <dd>{{% md %}}{{% /md %}}</dd><dt class="property-optional"
             title="Optional">
         <span id="subjectdescription_nodejs">
 <a href="#subjectdescription_nodejs" style="color: inherit; text-decoration: inherit;">subject<wbr>Description</a>
@@ -1858,8 +1661,7 @@ Structure is documented below.
         <span class="property-indicator"></span>
         <span class="property-type"><a href="#certificatecertificatedescriptionsubjectdescription">Certificate<wbr>Certificate<wbr>Description<wbr>Subject<wbr>Description</a></span>
     </dt>
-    <dd>{{% md %}}{{% /md %}}</dd>
-    <dt class="property-optional"
+    <dd>{{% md %}}{{% /md %}}</dd><dt class="property-optional"
             title="Optional">
         <span id="subjectkeyid_nodejs">
 <a href="#subjectkeyid_nodejs" style="color: inherit; text-decoration: inherit;">subject<wbr>Key<wbr>Id</a>
@@ -1867,14 +1669,11 @@ Structure is documented below.
         <span class="property-indicator"></span>
         <span class="property-type"><a href="#certificatecertificatedescriptionsubjectkeyid">Certificate<wbr>Certificate<wbr>Description<wbr>Subject<wbr>Key<wbr>Id</a></span>
     </dt>
-    <dd>{{% md %}}{{% /md %}}</dd>
-</dl>
+    <dd>{{% md %}}{{% /md %}}</dd></dl>
 {{% /choosable %}}
 
 {{% choosable language python %}}
-<dl class="resources-properties">
-
-    <dt class="property-required"
+<dl class="resources-properties"><dt class="property-required"
             title="Required">
         <span id="public_key_python">
 <a href="#public_key_python" style="color: inherit; text-decoration: inherit;">public_<wbr>key</a>
@@ -1884,8 +1683,7 @@ Structure is documented below.
     </dt>
     <dd>{{% md %}}A PublicKey describes a public key.
 Structure is documented below.
-{{% /md %}}</dd>
-    <dt class="property-optional"
+{{% /md %}}</dd><dt class="property-optional"
             title="Optional">
         <span id="aia_issuing_certificate_urls_python">
 <a href="#aia_issuing_certificate_urls_python" style="color: inherit; text-decoration: inherit;">aia_<wbr>issuing_<wbr>certificate_<wbr>urls</a>
@@ -1893,8 +1691,7 @@ Structure is documented below.
         <span class="property-indicator"></span>
         <span class="property-type">Sequence[str]</span>
     </dt>
-    <dd>{{% md %}}{{% /md %}}</dd>
-    <dt class="property-optional"
+    <dd>{{% md %}}{{% /md %}}</dd><dt class="property-optional"
             title="Optional">
         <span id="authority_key_id_python">
 <a href="#authority_key_id_python" style="color: inherit; text-decoration: inherit;">authority_<wbr>key_<wbr>id</a>
@@ -1902,8 +1699,7 @@ Structure is documented below.
         <span class="property-indicator"></span>
         <span class="property-type"><a href="#certificatecertificatedescriptionauthoritykeyid">Certificate<wbr>Certificate<wbr>Description<wbr>Authority<wbr>Key<wbr>Id<wbr>Args</a></span>
     </dt>
-    <dd>{{% md %}}{{% /md %}}</dd>
-    <dt class="property-optional"
+    <dd>{{% md %}}{{% /md %}}</dd><dt class="property-optional"
             title="Optional">
         <span id="cert_fingerprint_python">
 <a href="#cert_fingerprint_python" style="color: inherit; text-decoration: inherit;">cert_<wbr>fingerprint</a>
@@ -1911,8 +1707,7 @@ Structure is documented below.
         <span class="property-indicator"></span>
         <span class="property-type"><a href="#certificatecertificatedescriptioncertfingerprint">Certificate<wbr>Certificate<wbr>Description<wbr>Cert<wbr>Fingerprint<wbr>Args</a></span>
     </dt>
-    <dd>{{% md %}}{{% /md %}}</dd>
-    <dt class="property-optional"
+    <dd>{{% md %}}{{% /md %}}</dd><dt class="property-optional"
             title="Optional">
         <span id="config_values_python">
 <a href="#config_values_python" style="color: inherit; text-decoration: inherit;">config_<wbr>values</a>
@@ -1920,8 +1715,7 @@ Structure is documented below.
         <span class="property-indicator"></span>
         <span class="property-type"><a href="#certificatecertificatedescriptionconfigvalues">Certificate<wbr>Certificate<wbr>Description<wbr>Config<wbr>Values<wbr>Args</a></span>
     </dt>
-    <dd>{{% md %}}{{% /md %}}</dd>
-    <dt class="property-optional"
+    <dd>{{% md %}}{{% /md %}}</dd><dt class="property-optional"
             title="Optional">
         <span id="crl_distribution_points_python">
 <a href="#crl_distribution_points_python" style="color: inherit; text-decoration: inherit;">crl_<wbr>distribution_<wbr>points</a>
@@ -1929,8 +1723,7 @@ Structure is documented below.
         <span class="property-indicator"></span>
         <span class="property-type">Sequence[str]</span>
     </dt>
-    <dd>{{% md %}}{{% /md %}}</dd>
-    <dt class="property-optional"
+    <dd>{{% md %}}{{% /md %}}</dd><dt class="property-optional"
             title="Optional">
         <span id="subject_description_python">
 <a href="#subject_description_python" style="color: inherit; text-decoration: inherit;">subject_<wbr>description</a>
@@ -1938,8 +1731,7 @@ Structure is documented below.
         <span class="property-indicator"></span>
         <span class="property-type"><a href="#certificatecertificatedescriptionsubjectdescription">Certificate<wbr>Certificate<wbr>Description<wbr>Subject<wbr>Description<wbr>Args</a></span>
     </dt>
-    <dd>{{% md %}}{{% /md %}}</dd>
-    <dt class="property-optional"
+    <dd>{{% md %}}{{% /md %}}</dd><dt class="property-optional"
             title="Optional">
         <span id="subject_key_id_python">
 <a href="#subject_key_id_python" style="color: inherit; text-decoration: inherit;">subject_<wbr>key_<wbr>id</a>
@@ -1947,16 +1739,13 @@ Structure is documented below.
         <span class="property-indicator"></span>
         <span class="property-type"><a href="#certificatecertificatedescriptionsubjectkeyid">Certificate<wbr>Certificate<wbr>Description<wbr>Subject<wbr>Key<wbr>Id<wbr>Args</a></span>
     </dt>
-    <dd>{{% md %}}{{% /md %}}</dd>
-</dl>
+    <dd>{{% md %}}{{% /md %}}</dd></dl>
 {{% /choosable %}}
 
 <h4 id="certificatecertificatedescriptionauthoritykeyid">Certificate<wbr>Certificate<wbr>Description<wbr>Authority<wbr>Key<wbr>Id</h4>
 
 {{% choosable language csharp %}}
-<dl class="resources-properties">
-
-    <dt class="property-optional"
+<dl class="resources-properties"><dt class="property-optional"
             title="Optional">
         <span id="keyid_csharp">
 <a href="#keyid_csharp" style="color: inherit; text-decoration: inherit;">Key<wbr>Id</a>
@@ -1964,14 +1753,11 @@ Structure is documented below.
         <span class="property-indicator"></span>
         <span class="property-type">string</span>
     </dt>
-    <dd>{{% md %}}{{% /md %}}</dd>
-</dl>
+    <dd>{{% md %}}{{% /md %}}</dd></dl>
 {{% /choosable %}}
 
 {{% choosable language go %}}
-<dl class="resources-properties">
-
-    <dt class="property-optional"
+<dl class="resources-properties"><dt class="property-optional"
             title="Optional">
         <span id="keyid_go">
 <a href="#keyid_go" style="color: inherit; text-decoration: inherit;">Key<wbr>Id</a>
@@ -1979,14 +1765,11 @@ Structure is documented below.
         <span class="property-indicator"></span>
         <span class="property-type">string</span>
     </dt>
-    <dd>{{% md %}}{{% /md %}}</dd>
-</dl>
+    <dd>{{% md %}}{{% /md %}}</dd></dl>
 {{% /choosable %}}
 
 {{% choosable language nodejs %}}
-<dl class="resources-properties">
-
-    <dt class="property-optional"
+<dl class="resources-properties"><dt class="property-optional"
             title="Optional">
         <span id="keyid_nodejs">
 <a href="#keyid_nodejs" style="color: inherit; text-decoration: inherit;">key<wbr>Id</a>
@@ -1994,14 +1777,11 @@ Structure is documented below.
         <span class="property-indicator"></span>
         <span class="property-type">string</span>
     </dt>
-    <dd>{{% md %}}{{% /md %}}</dd>
-</dl>
+    <dd>{{% md %}}{{% /md %}}</dd></dl>
 {{% /choosable %}}
 
 {{% choosable language python %}}
-<dl class="resources-properties">
-
-    <dt class="property-optional"
+<dl class="resources-properties"><dt class="property-optional"
             title="Optional">
         <span id="key_id_python">
 <a href="#key_id_python" style="color: inherit; text-decoration: inherit;">key_<wbr>id</a>
@@ -2009,16 +1789,13 @@ Structure is documented below.
         <span class="property-indicator"></span>
         <span class="property-type">str</span>
     </dt>
-    <dd>{{% md %}}{{% /md %}}</dd>
-</dl>
+    <dd>{{% md %}}{{% /md %}}</dd></dl>
 {{% /choosable %}}
 
 <h4 id="certificatecertificatedescriptioncertfingerprint">Certificate<wbr>Certificate<wbr>Description<wbr>Cert<wbr>Fingerprint</h4>
 
 {{% choosable language csharp %}}
-<dl class="resources-properties">
-
-    <dt class="property-optional"
+<dl class="resources-properties"><dt class="property-optional"
             title="Optional">
         <span id="sha256hash_csharp">
 <a href="#sha256hash_csharp" style="color: inherit; text-decoration: inherit;">Sha256Hash</a>
@@ -2026,14 +1803,11 @@ Structure is documented below.
         <span class="property-indicator"></span>
         <span class="property-type">string</span>
     </dt>
-    <dd>{{% md %}}{{% /md %}}</dd>
-</dl>
+    <dd>{{% md %}}{{% /md %}}</dd></dl>
 {{% /choosable %}}
 
 {{% choosable language go %}}
-<dl class="resources-properties">
-
-    <dt class="property-optional"
+<dl class="resources-properties"><dt class="property-optional"
             title="Optional">
         <span id="sha256hash_go">
 <a href="#sha256hash_go" style="color: inherit; text-decoration: inherit;">Sha256Hash</a>
@@ -2041,14 +1815,11 @@ Structure is documented below.
         <span class="property-indicator"></span>
         <span class="property-type">string</span>
     </dt>
-    <dd>{{% md %}}{{% /md %}}</dd>
-</dl>
+    <dd>{{% md %}}{{% /md %}}</dd></dl>
 {{% /choosable %}}
 
 {{% choosable language nodejs %}}
-<dl class="resources-properties">
-
-    <dt class="property-optional"
+<dl class="resources-properties"><dt class="property-optional"
             title="Optional">
         <span id="sha256hash_nodejs">
 <a href="#sha256hash_nodejs" style="color: inherit; text-decoration: inherit;">sha256Hash</a>
@@ -2056,14 +1827,11 @@ Structure is documented below.
         <span class="property-indicator"></span>
         <span class="property-type">string</span>
     </dt>
-    <dd>{{% md %}}{{% /md %}}</dd>
-</dl>
+    <dd>{{% md %}}{{% /md %}}</dd></dl>
 {{% /choosable %}}
 
 {{% choosable language python %}}
-<dl class="resources-properties">
-
-    <dt class="property-optional"
+<dl class="resources-properties"><dt class="property-optional"
             title="Optional">
         <span id="sha256_hash_python">
 <a href="#sha256_hash_python" style="color: inherit; text-decoration: inherit;">sha256_<wbr>hash</a>
@@ -2071,16 +1839,13 @@ Structure is documented below.
         <span class="property-indicator"></span>
         <span class="property-type">str</span>
     </dt>
-    <dd>{{% md %}}{{% /md %}}</dd>
-</dl>
+    <dd>{{% md %}}{{% /md %}}</dd></dl>
 {{% /choosable %}}
 
 <h4 id="certificatecertificatedescriptionconfigvalues">Certificate<wbr>Certificate<wbr>Description<wbr>Config<wbr>Values</h4>
 
 {{% choosable language csharp %}}
-<dl class="resources-properties">
-
-    <dt class="property-optional"
+<dl class="resources-properties"><dt class="property-optional"
             title="Optional">
         <span id="keyusage_csharp">
 <a href="#keyusage_csharp" style="color: inherit; text-decoration: inherit;">Key<wbr>Usage</a>
@@ -2088,14 +1853,11 @@ Structure is documented below.
         <span class="property-indicator"></span>
         <span class="property-type"><a href="#certificatecertificatedescriptionconfigvalueskeyusage">Certificate<wbr>Certificate<wbr>Description<wbr>Config<wbr>Values<wbr>Key<wbr>Usage<wbr>Args</a></span>
     </dt>
-    <dd>{{% md %}}{{% /md %}}</dd>
-</dl>
+    <dd>{{% md %}}{{% /md %}}</dd></dl>
 {{% /choosable %}}
 
 {{% choosable language go %}}
-<dl class="resources-properties">
-
-    <dt class="property-optional"
+<dl class="resources-properties"><dt class="property-optional"
             title="Optional">
         <span id="keyusage_go">
 <a href="#keyusage_go" style="color: inherit; text-decoration: inherit;">Key<wbr>Usage</a>
@@ -2103,14 +1865,11 @@ Structure is documented below.
         <span class="property-indicator"></span>
         <span class="property-type"><a href="#certificatecertificatedescriptionconfigvalueskeyusage">Certificate<wbr>Certificate<wbr>Description<wbr>Config<wbr>Values<wbr>Key<wbr>Usage</a></span>
     </dt>
-    <dd>{{% md %}}{{% /md %}}</dd>
-</dl>
+    <dd>{{% md %}}{{% /md %}}</dd></dl>
 {{% /choosable %}}
 
 {{% choosable language nodejs %}}
-<dl class="resources-properties">
-
-    <dt class="property-optional"
+<dl class="resources-properties"><dt class="property-optional"
             title="Optional">
         <span id="keyusage_nodejs">
 <a href="#keyusage_nodejs" style="color: inherit; text-decoration: inherit;">key<wbr>Usage</a>
@@ -2118,14 +1877,11 @@ Structure is documented below.
         <span class="property-indicator"></span>
         <span class="property-type"><a href="#certificatecertificatedescriptionconfigvalueskeyusage">Certificate<wbr>Certificate<wbr>Description<wbr>Config<wbr>Values<wbr>Key<wbr>Usage</a></span>
     </dt>
-    <dd>{{% md %}}{{% /md %}}</dd>
-</dl>
+    <dd>{{% md %}}{{% /md %}}</dd></dl>
 {{% /choosable %}}
 
 {{% choosable language python %}}
-<dl class="resources-properties">
-
-    <dt class="property-optional"
+<dl class="resources-properties"><dt class="property-optional"
             title="Optional">
         <span id="key_usage_python">
 <a href="#key_usage_python" style="color: inherit; text-decoration: inherit;">key_<wbr>usage</a>
@@ -2133,16 +1889,13 @@ Structure is documented below.
         <span class="property-indicator"></span>
         <span class="property-type"><a href="#certificatecertificatedescriptionconfigvalueskeyusage">Certificate<wbr>Certificate<wbr>Description<wbr>Config<wbr>Values<wbr>Key<wbr>Usage<wbr>Args</a></span>
     </dt>
-    <dd>{{% md %}}{{% /md %}}</dd>
-</dl>
+    <dd>{{% md %}}{{% /md %}}</dd></dl>
 {{% /choosable %}}
 
 <h4 id="certificatecertificatedescriptionconfigvalueskeyusage">Certificate<wbr>Certificate<wbr>Description<wbr>Config<wbr>Values<wbr>Key<wbr>Usage</h4>
 
 {{% choosable language csharp %}}
-<dl class="resources-properties">
-
-    <dt class="property-required"
+<dl class="resources-properties"><dt class="property-required"
             title="Required">
         <span id="unknownextendedkeyusages_csharp">
 <a href="#unknownextendedkeyusages_csharp" style="color: inherit; text-decoration: inherit;">Unknown<wbr>Extended<wbr>Key<wbr>Usages</a>
@@ -2150,8 +1903,7 @@ Structure is documented below.
         <span class="property-indicator"></span>
         <span class="property-type"><a href="#certificatecertificatedescriptionconfigvalueskeyusageunknownextendedkeyusage">List&lt;Certificate<wbr>Certificate<wbr>Description<wbr>Config<wbr>Values<wbr>Key<wbr>Usage<wbr>Unknown<wbr>Extended<wbr>Key<wbr>Usage<wbr>Args&gt;</a></span>
     </dt>
-    <dd>{{% md %}}{{% /md %}}</dd>
-    <dt class="property-optional"
+    <dd>{{% md %}}{{% /md %}}</dd><dt class="property-optional"
             title="Optional">
         <span id="basekeyusage_csharp">
 <a href="#basekeyusage_csharp" style="color: inherit; text-decoration: inherit;">Base<wbr>Key<wbr>Usage</a>
@@ -2159,8 +1911,7 @@ Structure is documented below.
         <span class="property-indicator"></span>
         <span class="property-type"><a href="#certificatecertificatedescriptionconfigvalueskeyusagebasekeyusage">Certificate<wbr>Certificate<wbr>Description<wbr>Config<wbr>Values<wbr>Key<wbr>Usage<wbr>Base<wbr>Key<wbr>Usage<wbr>Args</a></span>
     </dt>
-    <dd>{{% md %}}{{% /md %}}</dd>
-    <dt class="property-optional"
+    <dd>{{% md %}}{{% /md %}}</dd><dt class="property-optional"
             title="Optional">
         <span id="extendedkeyusage_csharp">
 <a href="#extendedkeyusage_csharp" style="color: inherit; text-decoration: inherit;">Extended<wbr>Key<wbr>Usage</a>
@@ -2168,14 +1919,11 @@ Structure is documented below.
         <span class="property-indicator"></span>
         <span class="property-type"><a href="#certificatecertificatedescriptionconfigvalueskeyusageextendedkeyusage">Certificate<wbr>Certificate<wbr>Description<wbr>Config<wbr>Values<wbr>Key<wbr>Usage<wbr>Extended<wbr>Key<wbr>Usage<wbr>Args</a></span>
     </dt>
-    <dd>{{% md %}}{{% /md %}}</dd>
-</dl>
+    <dd>{{% md %}}{{% /md %}}</dd></dl>
 {{% /choosable %}}
 
 {{% choosable language go %}}
-<dl class="resources-properties">
-
-    <dt class="property-required"
+<dl class="resources-properties"><dt class="property-required"
             title="Required">
         <span id="unknownextendedkeyusages_go">
 <a href="#unknownextendedkeyusages_go" style="color: inherit; text-decoration: inherit;">Unknown<wbr>Extended<wbr>Key<wbr>Usages</a>
@@ -2183,8 +1931,7 @@ Structure is documented below.
         <span class="property-indicator"></span>
         <span class="property-type"><a href="#certificatecertificatedescriptionconfigvalueskeyusageunknownextendedkeyusage">[]Certificate<wbr>Certificate<wbr>Description<wbr>Config<wbr>Values<wbr>Key<wbr>Usage<wbr>Unknown<wbr>Extended<wbr>Key<wbr>Usage</a></span>
     </dt>
-    <dd>{{% md %}}{{% /md %}}</dd>
-    <dt class="property-optional"
+    <dd>{{% md %}}{{% /md %}}</dd><dt class="property-optional"
             title="Optional">
         <span id="basekeyusage_go">
 <a href="#basekeyusage_go" style="color: inherit; text-decoration: inherit;">Base<wbr>Key<wbr>Usage</a>
@@ -2192,8 +1939,7 @@ Structure is documented below.
         <span class="property-indicator"></span>
         <span class="property-type"><a href="#certificatecertificatedescriptionconfigvalueskeyusagebasekeyusage">Certificate<wbr>Certificate<wbr>Description<wbr>Config<wbr>Values<wbr>Key<wbr>Usage<wbr>Base<wbr>Key<wbr>Usage</a></span>
     </dt>
-    <dd>{{% md %}}{{% /md %}}</dd>
-    <dt class="property-optional"
+    <dd>{{% md %}}{{% /md %}}</dd><dt class="property-optional"
             title="Optional">
         <span id="extendedkeyusage_go">
 <a href="#extendedkeyusage_go" style="color: inherit; text-decoration: inherit;">Extended<wbr>Key<wbr>Usage</a>
@@ -2201,14 +1947,11 @@ Structure is documented below.
         <span class="property-indicator"></span>
         <span class="property-type"><a href="#certificatecertificatedescriptionconfigvalueskeyusageextendedkeyusage">Certificate<wbr>Certificate<wbr>Description<wbr>Config<wbr>Values<wbr>Key<wbr>Usage<wbr>Extended<wbr>Key<wbr>Usage</a></span>
     </dt>
-    <dd>{{% md %}}{{% /md %}}</dd>
-</dl>
+    <dd>{{% md %}}{{% /md %}}</dd></dl>
 {{% /choosable %}}
 
 {{% choosable language nodejs %}}
-<dl class="resources-properties">
-
-    <dt class="property-required"
+<dl class="resources-properties"><dt class="property-required"
             title="Required">
         <span id="unknownextendedkeyusages_nodejs">
 <a href="#unknownextendedkeyusages_nodejs" style="color: inherit; text-decoration: inherit;">unknown<wbr>Extended<wbr>Key<wbr>Usages</a>
@@ -2216,8 +1959,7 @@ Structure is documented below.
         <span class="property-indicator"></span>
         <span class="property-type"><a href="#certificatecertificatedescriptionconfigvalueskeyusageunknownextendedkeyusage">Certificate<wbr>Certificate<wbr>Description<wbr>Config<wbr>Values<wbr>Key<wbr>Usage<wbr>Unknown<wbr>Extended<wbr>Key<wbr>Usage[]</a></span>
     </dt>
-    <dd>{{% md %}}{{% /md %}}</dd>
-    <dt class="property-optional"
+    <dd>{{% md %}}{{% /md %}}</dd><dt class="property-optional"
             title="Optional">
         <span id="basekeyusage_nodejs">
 <a href="#basekeyusage_nodejs" style="color: inherit; text-decoration: inherit;">base<wbr>Key<wbr>Usage</a>
@@ -2225,8 +1967,7 @@ Structure is documented below.
         <span class="property-indicator"></span>
         <span class="property-type"><a href="#certificatecertificatedescriptionconfigvalueskeyusagebasekeyusage">Certificate<wbr>Certificate<wbr>Description<wbr>Config<wbr>Values<wbr>Key<wbr>Usage<wbr>Base<wbr>Key<wbr>Usage</a></span>
     </dt>
-    <dd>{{% md %}}{{% /md %}}</dd>
-    <dt class="property-optional"
+    <dd>{{% md %}}{{% /md %}}</dd><dt class="property-optional"
             title="Optional">
         <span id="extendedkeyusage_nodejs">
 <a href="#extendedkeyusage_nodejs" style="color: inherit; text-decoration: inherit;">extended<wbr>Key<wbr>Usage</a>
@@ -2234,14 +1975,11 @@ Structure is documented below.
         <span class="property-indicator"></span>
         <span class="property-type"><a href="#certificatecertificatedescriptionconfigvalueskeyusageextendedkeyusage">Certificate<wbr>Certificate<wbr>Description<wbr>Config<wbr>Values<wbr>Key<wbr>Usage<wbr>Extended<wbr>Key<wbr>Usage</a></span>
     </dt>
-    <dd>{{% md %}}{{% /md %}}</dd>
-</dl>
+    <dd>{{% md %}}{{% /md %}}</dd></dl>
 {{% /choosable %}}
 
 {{% choosable language python %}}
-<dl class="resources-properties">
-
-    <dt class="property-required"
+<dl class="resources-properties"><dt class="property-required"
             title="Required">
         <span id="unknown_extended_key_usages_python">
 <a href="#unknown_extended_key_usages_python" style="color: inherit; text-decoration: inherit;">unknown_<wbr>extended_<wbr>key_<wbr>usages</a>
@@ -2249,8 +1987,7 @@ Structure is documented below.
         <span class="property-indicator"></span>
         <span class="property-type"><a href="#certificatecertificatedescriptionconfigvalueskeyusageunknownextendedkeyusage">Sequence[Certificate<wbr>Certificate<wbr>Description<wbr>Config<wbr>Values<wbr>Key<wbr>Usage<wbr>Unknown<wbr>Extended<wbr>Key<wbr>Usage<wbr>Args]</a></span>
     </dt>
-    <dd>{{% md %}}{{% /md %}}</dd>
-    <dt class="property-optional"
+    <dd>{{% md %}}{{% /md %}}</dd><dt class="property-optional"
             title="Optional">
         <span id="base_key_usage_python">
 <a href="#base_key_usage_python" style="color: inherit; text-decoration: inherit;">base_<wbr>key_<wbr>usage</a>
@@ -2258,8 +1995,7 @@ Structure is documented below.
         <span class="property-indicator"></span>
         <span class="property-type"><a href="#certificatecertificatedescriptionconfigvalueskeyusagebasekeyusage">Certificate<wbr>Certificate<wbr>Description<wbr>Config<wbr>Values<wbr>Key<wbr>Usage<wbr>Base<wbr>Key<wbr>Usage<wbr>Args</a></span>
     </dt>
-    <dd>{{% md %}}{{% /md %}}</dd>
-    <dt class="property-optional"
+    <dd>{{% md %}}{{% /md %}}</dd><dt class="property-optional"
             title="Optional">
         <span id="extended_key_usage_python">
 <a href="#extended_key_usage_python" style="color: inherit; text-decoration: inherit;">extended_<wbr>key_<wbr>usage</a>
@@ -2267,16 +2003,13 @@ Structure is documented below.
         <span class="property-indicator"></span>
         <span class="property-type"><a href="#certificatecertificatedescriptionconfigvalueskeyusageextendedkeyusage">Certificate<wbr>Certificate<wbr>Description<wbr>Config<wbr>Values<wbr>Key<wbr>Usage<wbr>Extended<wbr>Key<wbr>Usage<wbr>Args</a></span>
     </dt>
-    <dd>{{% md %}}{{% /md %}}</dd>
-</dl>
+    <dd>{{% md %}}{{% /md %}}</dd></dl>
 {{% /choosable %}}
 
 <h4 id="certificatecertificatedescriptionconfigvalueskeyusagebasekeyusage">Certificate<wbr>Certificate<wbr>Description<wbr>Config<wbr>Values<wbr>Key<wbr>Usage<wbr>Base<wbr>Key<wbr>Usage</h4>
 
 {{% choosable language csharp %}}
-<dl class="resources-properties">
-
-    <dt class="property-optional"
+<dl class="resources-properties"><dt class="property-optional"
             title="Optional">
         <span id="keyusageoptions_csharp">
 <a href="#keyusageoptions_csharp" style="color: inherit; text-decoration: inherit;">Key<wbr>Usage<wbr>Options</a>
@@ -2284,14 +2017,11 @@ Structure is documented below.
         <span class="property-indicator"></span>
         <span class="property-type"><a href="#certificatecertificatedescriptionconfigvalueskeyusagebasekeyusagekeyusageoptions">Certificate<wbr>Certificate<wbr>Description<wbr>Config<wbr>Values<wbr>Key<wbr>Usage<wbr>Base<wbr>Key<wbr>Usage<wbr>Key<wbr>Usage<wbr>Options<wbr>Args</a></span>
     </dt>
-    <dd>{{% md %}}{{% /md %}}</dd>
-</dl>
+    <dd>{{% md %}}{{% /md %}}</dd></dl>
 {{% /choosable %}}
 
 {{% choosable language go %}}
-<dl class="resources-properties">
-
-    <dt class="property-optional"
+<dl class="resources-properties"><dt class="property-optional"
             title="Optional">
         <span id="keyusageoptions_go">
 <a href="#keyusageoptions_go" style="color: inherit; text-decoration: inherit;">Key<wbr>Usage<wbr>Options</a>
@@ -2299,14 +2029,11 @@ Structure is documented below.
         <span class="property-indicator"></span>
         <span class="property-type"><a href="#certificatecertificatedescriptionconfigvalueskeyusagebasekeyusagekeyusageoptions">Certificate<wbr>Certificate<wbr>Description<wbr>Config<wbr>Values<wbr>Key<wbr>Usage<wbr>Base<wbr>Key<wbr>Usage<wbr>Key<wbr>Usage<wbr>Options</a></span>
     </dt>
-    <dd>{{% md %}}{{% /md %}}</dd>
-</dl>
+    <dd>{{% md %}}{{% /md %}}</dd></dl>
 {{% /choosable %}}
 
 {{% choosable language nodejs %}}
-<dl class="resources-properties">
-
-    <dt class="property-optional"
+<dl class="resources-properties"><dt class="property-optional"
             title="Optional">
         <span id="keyusageoptions_nodejs">
 <a href="#keyusageoptions_nodejs" style="color: inherit; text-decoration: inherit;">key<wbr>Usage<wbr>Options</a>
@@ -2314,14 +2041,11 @@ Structure is documented below.
         <span class="property-indicator"></span>
         <span class="property-type"><a href="#certificatecertificatedescriptionconfigvalueskeyusagebasekeyusagekeyusageoptions">Certificate<wbr>Certificate<wbr>Description<wbr>Config<wbr>Values<wbr>Key<wbr>Usage<wbr>Base<wbr>Key<wbr>Usage<wbr>Key<wbr>Usage<wbr>Options</a></span>
     </dt>
-    <dd>{{% md %}}{{% /md %}}</dd>
-</dl>
+    <dd>{{% md %}}{{% /md %}}</dd></dl>
 {{% /choosable %}}
 
 {{% choosable language python %}}
-<dl class="resources-properties">
-
-    <dt class="property-optional"
+<dl class="resources-properties"><dt class="property-optional"
             title="Optional">
         <span id="key_usage_options_python">
 <a href="#key_usage_options_python" style="color: inherit; text-decoration: inherit;">key_<wbr>usage_<wbr>options</a>
@@ -2329,16 +2053,13 @@ Structure is documented below.
         <span class="property-indicator"></span>
         <span class="property-type"><a href="#certificatecertificatedescriptionconfigvalueskeyusagebasekeyusagekeyusageoptions">Certificate<wbr>Certificate<wbr>Description<wbr>Config<wbr>Values<wbr>Key<wbr>Usage<wbr>Base<wbr>Key<wbr>Usage<wbr>Key<wbr>Usage<wbr>Options<wbr>Args</a></span>
     </dt>
-    <dd>{{% md %}}{{% /md %}}</dd>
-</dl>
+    <dd>{{% md %}}{{% /md %}}</dd></dl>
 {{% /choosable %}}
 
 <h4 id="certificatecertificatedescriptionconfigvalueskeyusagebasekeyusagekeyusageoptions">Certificate<wbr>Certificate<wbr>Description<wbr>Config<wbr>Values<wbr>Key<wbr>Usage<wbr>Base<wbr>Key<wbr>Usage<wbr>Key<wbr>Usage<wbr>Options</h4>
 
 {{% choosable language csharp %}}
-<dl class="resources-properties">
-
-    <dt class="property-optional"
+<dl class="resources-properties"><dt class="property-optional"
             title="Optional">
         <span id="certsign_csharp">
 <a href="#certsign_csharp" style="color: inherit; text-decoration: inherit;">Cert<wbr>Sign</a>
@@ -2346,8 +2067,7 @@ Structure is documented below.
         <span class="property-indicator"></span>
         <span class="property-type">bool</span>
     </dt>
-    <dd>{{% md %}}{{% /md %}}</dd>
-    <dt class="property-optional"
+    <dd>{{% md %}}{{% /md %}}</dd><dt class="property-optional"
             title="Optional">
         <span id="contentcommitment_csharp">
 <a href="#contentcommitment_csharp" style="color: inherit; text-decoration: inherit;">Content<wbr>Commitment</a>
@@ -2355,8 +2075,7 @@ Structure is documented below.
         <span class="property-indicator"></span>
         <span class="property-type">bool</span>
     </dt>
-    <dd>{{% md %}}{{% /md %}}</dd>
-    <dt class="property-optional"
+    <dd>{{% md %}}{{% /md %}}</dd><dt class="property-optional"
             title="Optional">
         <span id="crlsign_csharp">
 <a href="#crlsign_csharp" style="color: inherit; text-decoration: inherit;">Crl<wbr>Sign</a>
@@ -2364,8 +2083,7 @@ Structure is documented below.
         <span class="property-indicator"></span>
         <span class="property-type">bool</span>
     </dt>
-    <dd>{{% md %}}{{% /md %}}</dd>
-    <dt class="property-optional"
+    <dd>{{% md %}}{{% /md %}}</dd><dt class="property-optional"
             title="Optional">
         <span id="dataencipherment_csharp">
 <a href="#dataencipherment_csharp" style="color: inherit; text-decoration: inherit;">Data<wbr>Encipherment</a>
@@ -2373,8 +2091,7 @@ Structure is documented below.
         <span class="property-indicator"></span>
         <span class="property-type">bool</span>
     </dt>
-    <dd>{{% md %}}{{% /md %}}</dd>
-    <dt class="property-optional"
+    <dd>{{% md %}}{{% /md %}}</dd><dt class="property-optional"
             title="Optional">
         <span id="decipheronly_csharp">
 <a href="#decipheronly_csharp" style="color: inherit; text-decoration: inherit;">Decipher<wbr>Only</a>
@@ -2382,8 +2099,7 @@ Structure is documented below.
         <span class="property-indicator"></span>
         <span class="property-type">bool</span>
     </dt>
-    <dd>{{% md %}}{{% /md %}}</dd>
-    <dt class="property-optional"
+    <dd>{{% md %}}{{% /md %}}</dd><dt class="property-optional"
             title="Optional">
         <span id="digitalsignature_csharp">
 <a href="#digitalsignature_csharp" style="color: inherit; text-decoration: inherit;">Digital<wbr>Signature</a>
@@ -2391,8 +2107,7 @@ Structure is documented below.
         <span class="property-indicator"></span>
         <span class="property-type">bool</span>
     </dt>
-    <dd>{{% md %}}{{% /md %}}</dd>
-    <dt class="property-optional"
+    <dd>{{% md %}}{{% /md %}}</dd><dt class="property-optional"
             title="Optional">
         <span id="encipheronly_csharp">
 <a href="#encipheronly_csharp" style="color: inherit; text-decoration: inherit;">Encipher<wbr>Only</a>
@@ -2400,8 +2115,7 @@ Structure is documented below.
         <span class="property-indicator"></span>
         <span class="property-type">bool</span>
     </dt>
-    <dd>{{% md %}}{{% /md %}}</dd>
-    <dt class="property-optional"
+    <dd>{{% md %}}{{% /md %}}</dd><dt class="property-optional"
             title="Optional">
         <span id="keyagreement_csharp">
 <a href="#keyagreement_csharp" style="color: inherit; text-decoration: inherit;">Key<wbr>Agreement</a>
@@ -2409,8 +2123,7 @@ Structure is documented below.
         <span class="property-indicator"></span>
         <span class="property-type">bool</span>
     </dt>
-    <dd>{{% md %}}{{% /md %}}</dd>
-    <dt class="property-optional"
+    <dd>{{% md %}}{{% /md %}}</dd><dt class="property-optional"
             title="Optional">
         <span id="keyencipherment_csharp">
 <a href="#keyencipherment_csharp" style="color: inherit; text-decoration: inherit;">Key<wbr>Encipherment</a>
@@ -2418,14 +2131,11 @@ Structure is documented below.
         <span class="property-indicator"></span>
         <span class="property-type">bool</span>
     </dt>
-    <dd>{{% md %}}{{% /md %}}</dd>
-</dl>
+    <dd>{{% md %}}{{% /md %}}</dd></dl>
 {{% /choosable %}}
 
 {{% choosable language go %}}
-<dl class="resources-properties">
-
-    <dt class="property-optional"
+<dl class="resources-properties"><dt class="property-optional"
             title="Optional">
         <span id="certsign_go">
 <a href="#certsign_go" style="color: inherit; text-decoration: inherit;">Cert<wbr>Sign</a>
@@ -2433,8 +2143,7 @@ Structure is documented below.
         <span class="property-indicator"></span>
         <span class="property-type">bool</span>
     </dt>
-    <dd>{{% md %}}{{% /md %}}</dd>
-    <dt class="property-optional"
+    <dd>{{% md %}}{{% /md %}}</dd><dt class="property-optional"
             title="Optional">
         <span id="contentcommitment_go">
 <a href="#contentcommitment_go" style="color: inherit; text-decoration: inherit;">Content<wbr>Commitment</a>
@@ -2442,8 +2151,7 @@ Structure is documented below.
         <span class="property-indicator"></span>
         <span class="property-type">bool</span>
     </dt>
-    <dd>{{% md %}}{{% /md %}}</dd>
-    <dt class="property-optional"
+    <dd>{{% md %}}{{% /md %}}</dd><dt class="property-optional"
             title="Optional">
         <span id="crlsign_go">
 <a href="#crlsign_go" style="color: inherit; text-decoration: inherit;">Crl<wbr>Sign</a>
@@ -2451,8 +2159,7 @@ Structure is documented below.
         <span class="property-indicator"></span>
         <span class="property-type">bool</span>
     </dt>
-    <dd>{{% md %}}{{% /md %}}</dd>
-    <dt class="property-optional"
+    <dd>{{% md %}}{{% /md %}}</dd><dt class="property-optional"
             title="Optional">
         <span id="dataencipherment_go">
 <a href="#dataencipherment_go" style="color: inherit; text-decoration: inherit;">Data<wbr>Encipherment</a>
@@ -2460,8 +2167,7 @@ Structure is documented below.
         <span class="property-indicator"></span>
         <span class="property-type">bool</span>
     </dt>
-    <dd>{{% md %}}{{% /md %}}</dd>
-    <dt class="property-optional"
+    <dd>{{% md %}}{{% /md %}}</dd><dt class="property-optional"
             title="Optional">
         <span id="decipheronly_go">
 <a href="#decipheronly_go" style="color: inherit; text-decoration: inherit;">Decipher<wbr>Only</a>
@@ -2469,8 +2175,7 @@ Structure is documented below.
         <span class="property-indicator"></span>
         <span class="property-type">bool</span>
     </dt>
-    <dd>{{% md %}}{{% /md %}}</dd>
-    <dt class="property-optional"
+    <dd>{{% md %}}{{% /md %}}</dd><dt class="property-optional"
             title="Optional">
         <span id="digitalsignature_go">
 <a href="#digitalsignature_go" style="color: inherit; text-decoration: inherit;">Digital<wbr>Signature</a>
@@ -2478,8 +2183,7 @@ Structure is documented below.
         <span class="property-indicator"></span>
         <span class="property-type">bool</span>
     </dt>
-    <dd>{{% md %}}{{% /md %}}</dd>
-    <dt class="property-optional"
+    <dd>{{% md %}}{{% /md %}}</dd><dt class="property-optional"
             title="Optional">
         <span id="encipheronly_go">
 <a href="#encipheronly_go" style="color: inherit; text-decoration: inherit;">Encipher<wbr>Only</a>
@@ -2487,8 +2191,7 @@ Structure is documented below.
         <span class="property-indicator"></span>
         <span class="property-type">bool</span>
     </dt>
-    <dd>{{% md %}}{{% /md %}}</dd>
-    <dt class="property-optional"
+    <dd>{{% md %}}{{% /md %}}</dd><dt class="property-optional"
             title="Optional">
         <span id="keyagreement_go">
 <a href="#keyagreement_go" style="color: inherit; text-decoration: inherit;">Key<wbr>Agreement</a>
@@ -2496,8 +2199,7 @@ Structure is documented below.
         <span class="property-indicator"></span>
         <span class="property-type">bool</span>
     </dt>
-    <dd>{{% md %}}{{% /md %}}</dd>
-    <dt class="property-optional"
+    <dd>{{% md %}}{{% /md %}}</dd><dt class="property-optional"
             title="Optional">
         <span id="keyencipherment_go">
 <a href="#keyencipherment_go" style="color: inherit; text-decoration: inherit;">Key<wbr>Encipherment</a>
@@ -2505,14 +2207,11 @@ Structure is documented below.
         <span class="property-indicator"></span>
         <span class="property-type">bool</span>
     </dt>
-    <dd>{{% md %}}{{% /md %}}</dd>
-</dl>
+    <dd>{{% md %}}{{% /md %}}</dd></dl>
 {{% /choosable %}}
 
 {{% choosable language nodejs %}}
-<dl class="resources-properties">
-
-    <dt class="property-optional"
+<dl class="resources-properties"><dt class="property-optional"
             title="Optional">
         <span id="certsign_nodejs">
 <a href="#certsign_nodejs" style="color: inherit; text-decoration: inherit;">cert<wbr>Sign</a>
@@ -2520,8 +2219,7 @@ Structure is documented below.
         <span class="property-indicator"></span>
         <span class="property-type">boolean</span>
     </dt>
-    <dd>{{% md %}}{{% /md %}}</dd>
-    <dt class="property-optional"
+    <dd>{{% md %}}{{% /md %}}</dd><dt class="property-optional"
             title="Optional">
         <span id="contentcommitment_nodejs">
 <a href="#contentcommitment_nodejs" style="color: inherit; text-decoration: inherit;">content<wbr>Commitment</a>
@@ -2529,8 +2227,7 @@ Structure is documented below.
         <span class="property-indicator"></span>
         <span class="property-type">boolean</span>
     </dt>
-    <dd>{{% md %}}{{% /md %}}</dd>
-    <dt class="property-optional"
+    <dd>{{% md %}}{{% /md %}}</dd><dt class="property-optional"
             title="Optional">
         <span id="crlsign_nodejs">
 <a href="#crlsign_nodejs" style="color: inherit; text-decoration: inherit;">crl<wbr>Sign</a>
@@ -2538,8 +2235,7 @@ Structure is documented below.
         <span class="property-indicator"></span>
         <span class="property-type">boolean</span>
     </dt>
-    <dd>{{% md %}}{{% /md %}}</dd>
-    <dt class="property-optional"
+    <dd>{{% md %}}{{% /md %}}</dd><dt class="property-optional"
             title="Optional">
         <span id="dataencipherment_nodejs">
 <a href="#dataencipherment_nodejs" style="color: inherit; text-decoration: inherit;">data<wbr>Encipherment</a>
@@ -2547,8 +2243,7 @@ Structure is documented below.
         <span class="property-indicator"></span>
         <span class="property-type">boolean</span>
     </dt>
-    <dd>{{% md %}}{{% /md %}}</dd>
-    <dt class="property-optional"
+    <dd>{{% md %}}{{% /md %}}</dd><dt class="property-optional"
             title="Optional">
         <span id="decipheronly_nodejs">
 <a href="#decipheronly_nodejs" style="color: inherit; text-decoration: inherit;">decipher<wbr>Only</a>
@@ -2556,8 +2251,7 @@ Structure is documented below.
         <span class="property-indicator"></span>
         <span class="property-type">boolean</span>
     </dt>
-    <dd>{{% md %}}{{% /md %}}</dd>
-    <dt class="property-optional"
+    <dd>{{% md %}}{{% /md %}}</dd><dt class="property-optional"
             title="Optional">
         <span id="digitalsignature_nodejs">
 <a href="#digitalsignature_nodejs" style="color: inherit; text-decoration: inherit;">digital<wbr>Signature</a>
@@ -2565,8 +2259,7 @@ Structure is documented below.
         <span class="property-indicator"></span>
         <span class="property-type">boolean</span>
     </dt>
-    <dd>{{% md %}}{{% /md %}}</dd>
-    <dt class="property-optional"
+    <dd>{{% md %}}{{% /md %}}</dd><dt class="property-optional"
             title="Optional">
         <span id="encipheronly_nodejs">
 <a href="#encipheronly_nodejs" style="color: inherit; text-decoration: inherit;">encipher<wbr>Only</a>
@@ -2574,8 +2267,7 @@ Structure is documented below.
         <span class="property-indicator"></span>
         <span class="property-type">boolean</span>
     </dt>
-    <dd>{{% md %}}{{% /md %}}</dd>
-    <dt class="property-optional"
+    <dd>{{% md %}}{{% /md %}}</dd><dt class="property-optional"
             title="Optional">
         <span id="keyagreement_nodejs">
 <a href="#keyagreement_nodejs" style="color: inherit; text-decoration: inherit;">key<wbr>Agreement</a>
@@ -2583,8 +2275,7 @@ Structure is documented below.
         <span class="property-indicator"></span>
         <span class="property-type">boolean</span>
     </dt>
-    <dd>{{% md %}}{{% /md %}}</dd>
-    <dt class="property-optional"
+    <dd>{{% md %}}{{% /md %}}</dd><dt class="property-optional"
             title="Optional">
         <span id="keyencipherment_nodejs">
 <a href="#keyencipherment_nodejs" style="color: inherit; text-decoration: inherit;">key<wbr>Encipherment</a>
@@ -2592,14 +2283,11 @@ Structure is documented below.
         <span class="property-indicator"></span>
         <span class="property-type">boolean</span>
     </dt>
-    <dd>{{% md %}}{{% /md %}}</dd>
-</dl>
+    <dd>{{% md %}}{{% /md %}}</dd></dl>
 {{% /choosable %}}
 
 {{% choosable language python %}}
-<dl class="resources-properties">
-
-    <dt class="property-optional"
+<dl class="resources-properties"><dt class="property-optional"
             title="Optional">
         <span id="cert_sign_python">
 <a href="#cert_sign_python" style="color: inherit; text-decoration: inherit;">cert_<wbr>sign</a>
@@ -2607,8 +2295,7 @@ Structure is documented below.
         <span class="property-indicator"></span>
         <span class="property-type">bool</span>
     </dt>
-    <dd>{{% md %}}{{% /md %}}</dd>
-    <dt class="property-optional"
+    <dd>{{% md %}}{{% /md %}}</dd><dt class="property-optional"
             title="Optional">
         <span id="content_commitment_python">
 <a href="#content_commitment_python" style="color: inherit; text-decoration: inherit;">content_<wbr>commitment</a>
@@ -2616,8 +2303,7 @@ Structure is documented below.
         <span class="property-indicator"></span>
         <span class="property-type">bool</span>
     </dt>
-    <dd>{{% md %}}{{% /md %}}</dd>
-    <dt class="property-optional"
+    <dd>{{% md %}}{{% /md %}}</dd><dt class="property-optional"
             title="Optional">
         <span id="crl_sign_python">
 <a href="#crl_sign_python" style="color: inherit; text-decoration: inherit;">crl_<wbr>sign</a>
@@ -2625,8 +2311,7 @@ Structure is documented below.
         <span class="property-indicator"></span>
         <span class="property-type">bool</span>
     </dt>
-    <dd>{{% md %}}{{% /md %}}</dd>
-    <dt class="property-optional"
+    <dd>{{% md %}}{{% /md %}}</dd><dt class="property-optional"
             title="Optional">
         <span id="data_encipherment_python">
 <a href="#data_encipherment_python" style="color: inherit; text-decoration: inherit;">data_<wbr>encipherment</a>
@@ -2634,8 +2319,7 @@ Structure is documented below.
         <span class="property-indicator"></span>
         <span class="property-type">bool</span>
     </dt>
-    <dd>{{% md %}}{{% /md %}}</dd>
-    <dt class="property-optional"
+    <dd>{{% md %}}{{% /md %}}</dd><dt class="property-optional"
             title="Optional">
         <span id="decipher_only_python">
 <a href="#decipher_only_python" style="color: inherit; text-decoration: inherit;">decipher_<wbr>only</a>
@@ -2643,8 +2327,7 @@ Structure is documented below.
         <span class="property-indicator"></span>
         <span class="property-type">bool</span>
     </dt>
-    <dd>{{% md %}}{{% /md %}}</dd>
-    <dt class="property-optional"
+    <dd>{{% md %}}{{% /md %}}</dd><dt class="property-optional"
             title="Optional">
         <span id="digital_signature_python">
 <a href="#digital_signature_python" style="color: inherit; text-decoration: inherit;">digital_<wbr>signature</a>
@@ -2652,8 +2335,7 @@ Structure is documented below.
         <span class="property-indicator"></span>
         <span class="property-type">bool</span>
     </dt>
-    <dd>{{% md %}}{{% /md %}}</dd>
-    <dt class="property-optional"
+    <dd>{{% md %}}{{% /md %}}</dd><dt class="property-optional"
             title="Optional">
         <span id="encipher_only_python">
 <a href="#encipher_only_python" style="color: inherit; text-decoration: inherit;">encipher_<wbr>only</a>
@@ -2661,8 +2343,7 @@ Structure is documented below.
         <span class="property-indicator"></span>
         <span class="property-type">bool</span>
     </dt>
-    <dd>{{% md %}}{{% /md %}}</dd>
-    <dt class="property-optional"
+    <dd>{{% md %}}{{% /md %}}</dd><dt class="property-optional"
             title="Optional">
         <span id="key_agreement_python">
 <a href="#key_agreement_python" style="color: inherit; text-decoration: inherit;">key_<wbr>agreement</a>
@@ -2670,8 +2351,7 @@ Structure is documented below.
         <span class="property-indicator"></span>
         <span class="property-type">bool</span>
     </dt>
-    <dd>{{% md %}}{{% /md %}}</dd>
-    <dt class="property-optional"
+    <dd>{{% md %}}{{% /md %}}</dd><dt class="property-optional"
             title="Optional">
         <span id="key_encipherment_python">
 <a href="#key_encipherment_python" style="color: inherit; text-decoration: inherit;">key_<wbr>encipherment</a>
@@ -2679,16 +2359,13 @@ Structure is documented below.
         <span class="property-indicator"></span>
         <span class="property-type">bool</span>
     </dt>
-    <dd>{{% md %}}{{% /md %}}</dd>
-</dl>
+    <dd>{{% md %}}{{% /md %}}</dd></dl>
 {{% /choosable %}}
 
 <h4 id="certificatecertificatedescriptionconfigvalueskeyusageextendedkeyusage">Certificate<wbr>Certificate<wbr>Description<wbr>Config<wbr>Values<wbr>Key<wbr>Usage<wbr>Extended<wbr>Key<wbr>Usage</h4>
 
 {{% choosable language csharp %}}
-<dl class="resources-properties">
-
-    <dt class="property-optional"
+<dl class="resources-properties"><dt class="property-optional"
             title="Optional">
         <span id="clientauth_csharp">
 <a href="#clientauth_csharp" style="color: inherit; text-decoration: inherit;">Client<wbr>Auth</a>
@@ -2696,8 +2373,7 @@ Structure is documented below.
         <span class="property-indicator"></span>
         <span class="property-type">bool</span>
     </dt>
-    <dd>{{% md %}}{{% /md %}}</dd>
-    <dt class="property-optional"
+    <dd>{{% md %}}{{% /md %}}</dd><dt class="property-optional"
             title="Optional">
         <span id="codesigning_csharp">
 <a href="#codesigning_csharp" style="color: inherit; text-decoration: inherit;">Code<wbr>Signing</a>
@@ -2705,8 +2381,7 @@ Structure is documented below.
         <span class="property-indicator"></span>
         <span class="property-type">bool</span>
     </dt>
-    <dd>{{% md %}}{{% /md %}}</dd>
-    <dt class="property-optional"
+    <dd>{{% md %}}{{% /md %}}</dd><dt class="property-optional"
             title="Optional">
         <span id="emailprotection_csharp">
 <a href="#emailprotection_csharp" style="color: inherit; text-decoration: inherit;">Email<wbr>Protection</a>
@@ -2714,8 +2389,7 @@ Structure is documented below.
         <span class="property-indicator"></span>
         <span class="property-type">bool</span>
     </dt>
-    <dd>{{% md %}}{{% /md %}}</dd>
-    <dt class="property-optional"
+    <dd>{{% md %}}{{% /md %}}</dd><dt class="property-optional"
             title="Optional">
         <span id="ocspsigning_csharp">
 <a href="#ocspsigning_csharp" style="color: inherit; text-decoration: inherit;">Ocsp<wbr>Signing</a>
@@ -2723,8 +2397,7 @@ Structure is documented below.
         <span class="property-indicator"></span>
         <span class="property-type">bool</span>
     </dt>
-    <dd>{{% md %}}{{% /md %}}</dd>
-    <dt class="property-optional"
+    <dd>{{% md %}}{{% /md %}}</dd><dt class="property-optional"
             title="Optional">
         <span id="serverauth_csharp">
 <a href="#serverauth_csharp" style="color: inherit; text-decoration: inherit;">Server<wbr>Auth</a>
@@ -2732,8 +2405,7 @@ Structure is documented below.
         <span class="property-indicator"></span>
         <span class="property-type">bool</span>
     </dt>
-    <dd>{{% md %}}{{% /md %}}</dd>
-    <dt class="property-optional"
+    <dd>{{% md %}}{{% /md %}}</dd><dt class="property-optional"
             title="Optional">
         <span id="timestamping_csharp">
 <a href="#timestamping_csharp" style="color: inherit; text-decoration: inherit;">Time<wbr>Stamping</a>
@@ -2741,14 +2413,11 @@ Structure is documented below.
         <span class="property-indicator"></span>
         <span class="property-type">bool</span>
     </dt>
-    <dd>{{% md %}}{{% /md %}}</dd>
-</dl>
+    <dd>{{% md %}}{{% /md %}}</dd></dl>
 {{% /choosable %}}
 
 {{% choosable language go %}}
-<dl class="resources-properties">
-
-    <dt class="property-optional"
+<dl class="resources-properties"><dt class="property-optional"
             title="Optional">
         <span id="clientauth_go">
 <a href="#clientauth_go" style="color: inherit; text-decoration: inherit;">Client<wbr>Auth</a>
@@ -2756,8 +2425,7 @@ Structure is documented below.
         <span class="property-indicator"></span>
         <span class="property-type">bool</span>
     </dt>
-    <dd>{{% md %}}{{% /md %}}</dd>
-    <dt class="property-optional"
+    <dd>{{% md %}}{{% /md %}}</dd><dt class="property-optional"
             title="Optional">
         <span id="codesigning_go">
 <a href="#codesigning_go" style="color: inherit; text-decoration: inherit;">Code<wbr>Signing</a>
@@ -2765,8 +2433,7 @@ Structure is documented below.
         <span class="property-indicator"></span>
         <span class="property-type">bool</span>
     </dt>
-    <dd>{{% md %}}{{% /md %}}</dd>
-    <dt class="property-optional"
+    <dd>{{% md %}}{{% /md %}}</dd><dt class="property-optional"
             title="Optional">
         <span id="emailprotection_go">
 <a href="#emailprotection_go" style="color: inherit; text-decoration: inherit;">Email<wbr>Protection</a>
@@ -2774,8 +2441,7 @@ Structure is documented below.
         <span class="property-indicator"></span>
         <span class="property-type">bool</span>
     </dt>
-    <dd>{{% md %}}{{% /md %}}</dd>
-    <dt class="property-optional"
+    <dd>{{% md %}}{{% /md %}}</dd><dt class="property-optional"
             title="Optional">
         <span id="ocspsigning_go">
 <a href="#ocspsigning_go" style="color: inherit; text-decoration: inherit;">Ocsp<wbr>Signing</a>
@@ -2783,8 +2449,7 @@ Structure is documented below.
         <span class="property-indicator"></span>
         <span class="property-type">bool</span>
     </dt>
-    <dd>{{% md %}}{{% /md %}}</dd>
-    <dt class="property-optional"
+    <dd>{{% md %}}{{% /md %}}</dd><dt class="property-optional"
             title="Optional">
         <span id="serverauth_go">
 <a href="#serverauth_go" style="color: inherit; text-decoration: inherit;">Server<wbr>Auth</a>
@@ -2792,8 +2457,7 @@ Structure is documented below.
         <span class="property-indicator"></span>
         <span class="property-type">bool</span>
     </dt>
-    <dd>{{% md %}}{{% /md %}}</dd>
-    <dt class="property-optional"
+    <dd>{{% md %}}{{% /md %}}</dd><dt class="property-optional"
             title="Optional">
         <span id="timestamping_go">
 <a href="#timestamping_go" style="color: inherit; text-decoration: inherit;">Time<wbr>Stamping</a>
@@ -2801,14 +2465,11 @@ Structure is documented below.
         <span class="property-indicator"></span>
         <span class="property-type">bool</span>
     </dt>
-    <dd>{{% md %}}{{% /md %}}</dd>
-</dl>
+    <dd>{{% md %}}{{% /md %}}</dd></dl>
 {{% /choosable %}}
 
 {{% choosable language nodejs %}}
-<dl class="resources-properties">
-
-    <dt class="property-optional"
+<dl class="resources-properties"><dt class="property-optional"
             title="Optional">
         <span id="clientauth_nodejs">
 <a href="#clientauth_nodejs" style="color: inherit; text-decoration: inherit;">client<wbr>Auth</a>
@@ -2816,8 +2477,7 @@ Structure is documented below.
         <span class="property-indicator"></span>
         <span class="property-type">boolean</span>
     </dt>
-    <dd>{{% md %}}{{% /md %}}</dd>
-    <dt class="property-optional"
+    <dd>{{% md %}}{{% /md %}}</dd><dt class="property-optional"
             title="Optional">
         <span id="codesigning_nodejs">
 <a href="#codesigning_nodejs" style="color: inherit; text-decoration: inherit;">code<wbr>Signing</a>
@@ -2825,8 +2485,7 @@ Structure is documented below.
         <span class="property-indicator"></span>
         <span class="property-type">boolean</span>
     </dt>
-    <dd>{{% md %}}{{% /md %}}</dd>
-    <dt class="property-optional"
+    <dd>{{% md %}}{{% /md %}}</dd><dt class="property-optional"
             title="Optional">
         <span id="emailprotection_nodejs">
 <a href="#emailprotection_nodejs" style="color: inherit; text-decoration: inherit;">email<wbr>Protection</a>
@@ -2834,8 +2493,7 @@ Structure is documented below.
         <span class="property-indicator"></span>
         <span class="property-type">boolean</span>
     </dt>
-    <dd>{{% md %}}{{% /md %}}</dd>
-    <dt class="property-optional"
+    <dd>{{% md %}}{{% /md %}}</dd><dt class="property-optional"
             title="Optional">
         <span id="ocspsigning_nodejs">
 <a href="#ocspsigning_nodejs" style="color: inherit; text-decoration: inherit;">ocsp<wbr>Signing</a>
@@ -2843,8 +2501,7 @@ Structure is documented below.
         <span class="property-indicator"></span>
         <span class="property-type">boolean</span>
     </dt>
-    <dd>{{% md %}}{{% /md %}}</dd>
-    <dt class="property-optional"
+    <dd>{{% md %}}{{% /md %}}</dd><dt class="property-optional"
             title="Optional">
         <span id="serverauth_nodejs">
 <a href="#serverauth_nodejs" style="color: inherit; text-decoration: inherit;">server<wbr>Auth</a>
@@ -2852,8 +2509,7 @@ Structure is documented below.
         <span class="property-indicator"></span>
         <span class="property-type">boolean</span>
     </dt>
-    <dd>{{% md %}}{{% /md %}}</dd>
-    <dt class="property-optional"
+    <dd>{{% md %}}{{% /md %}}</dd><dt class="property-optional"
             title="Optional">
         <span id="timestamping_nodejs">
 <a href="#timestamping_nodejs" style="color: inherit; text-decoration: inherit;">time<wbr>Stamping</a>
@@ -2861,14 +2517,11 @@ Structure is documented below.
         <span class="property-indicator"></span>
         <span class="property-type">boolean</span>
     </dt>
-    <dd>{{% md %}}{{% /md %}}</dd>
-</dl>
+    <dd>{{% md %}}{{% /md %}}</dd></dl>
 {{% /choosable %}}
 
 {{% choosable language python %}}
-<dl class="resources-properties">
-
-    <dt class="property-optional"
+<dl class="resources-properties"><dt class="property-optional"
             title="Optional">
         <span id="client_auth_python">
 <a href="#client_auth_python" style="color: inherit; text-decoration: inherit;">client_<wbr>auth</a>
@@ -2876,8 +2529,7 @@ Structure is documented below.
         <span class="property-indicator"></span>
         <span class="property-type">bool</span>
     </dt>
-    <dd>{{% md %}}{{% /md %}}</dd>
-    <dt class="property-optional"
+    <dd>{{% md %}}{{% /md %}}</dd><dt class="property-optional"
             title="Optional">
         <span id="code_signing_python">
 <a href="#code_signing_python" style="color: inherit; text-decoration: inherit;">code_<wbr>signing</a>
@@ -2885,8 +2537,7 @@ Structure is documented below.
         <span class="property-indicator"></span>
         <span class="property-type">bool</span>
     </dt>
-    <dd>{{% md %}}{{% /md %}}</dd>
-    <dt class="property-optional"
+    <dd>{{% md %}}{{% /md %}}</dd><dt class="property-optional"
             title="Optional">
         <span id="email_protection_python">
 <a href="#email_protection_python" style="color: inherit; text-decoration: inherit;">email_<wbr>protection</a>
@@ -2894,8 +2545,7 @@ Structure is documented below.
         <span class="property-indicator"></span>
         <span class="property-type">bool</span>
     </dt>
-    <dd>{{% md %}}{{% /md %}}</dd>
-    <dt class="property-optional"
+    <dd>{{% md %}}{{% /md %}}</dd><dt class="property-optional"
             title="Optional">
         <span id="ocsp_signing_python">
 <a href="#ocsp_signing_python" style="color: inherit; text-decoration: inherit;">ocsp_<wbr>signing</a>
@@ -2903,8 +2553,7 @@ Structure is documented below.
         <span class="property-indicator"></span>
         <span class="property-type">bool</span>
     </dt>
-    <dd>{{% md %}}{{% /md %}}</dd>
-    <dt class="property-optional"
+    <dd>{{% md %}}{{% /md %}}</dd><dt class="property-optional"
             title="Optional">
         <span id="server_auth_python">
 <a href="#server_auth_python" style="color: inherit; text-decoration: inherit;">server_<wbr>auth</a>
@@ -2912,8 +2561,7 @@ Structure is documented below.
         <span class="property-indicator"></span>
         <span class="property-type">bool</span>
     </dt>
-    <dd>{{% md %}}{{% /md %}}</dd>
-    <dt class="property-optional"
+    <dd>{{% md %}}{{% /md %}}</dd><dt class="property-optional"
             title="Optional">
         <span id="time_stamping_python">
 <a href="#time_stamping_python" style="color: inherit; text-decoration: inherit;">time_<wbr>stamping</a>
@@ -2921,16 +2569,13 @@ Structure is documented below.
         <span class="property-indicator"></span>
         <span class="property-type">bool</span>
     </dt>
-    <dd>{{% md %}}{{% /md %}}</dd>
-</dl>
+    <dd>{{% md %}}{{% /md %}}</dd></dl>
 {{% /choosable %}}
 
 <h4 id="certificatecertificatedescriptionconfigvalueskeyusageunknownextendedkeyusage">Certificate<wbr>Certificate<wbr>Description<wbr>Config<wbr>Values<wbr>Key<wbr>Usage<wbr>Unknown<wbr>Extended<wbr>Key<wbr>Usage</h4>
 
 {{% choosable language csharp %}}
-<dl class="resources-properties">
-
-    <dt class="property-required"
+<dl class="resources-properties"><dt class="property-required"
             title="Required">
         <span id="obectid_csharp">
 <a href="#obectid_csharp" style="color: inherit; text-decoration: inherit;">Obect<wbr>Id</a>
@@ -2938,14 +2583,11 @@ Structure is documented below.
         <span class="property-indicator"></span>
         <span class="property-type"><a href="#certificatecertificatedescriptionconfigvalueskeyusageunknownextendedkeyusageobectid">Certificate<wbr>Certificate<wbr>Description<wbr>Config<wbr>Values<wbr>Key<wbr>Usage<wbr>Unknown<wbr>Extended<wbr>Key<wbr>Usage<wbr>Obect<wbr>Id<wbr>Args</a></span>
     </dt>
-    <dd>{{% md %}}{{% /md %}}</dd>
-</dl>
+    <dd>{{% md %}}{{% /md %}}</dd></dl>
 {{% /choosable %}}
 
 {{% choosable language go %}}
-<dl class="resources-properties">
-
-    <dt class="property-required"
+<dl class="resources-properties"><dt class="property-required"
             title="Required">
         <span id="obectid_go">
 <a href="#obectid_go" style="color: inherit; text-decoration: inherit;">Obect<wbr>Id</a>
@@ -2953,14 +2595,11 @@ Structure is documented below.
         <span class="property-indicator"></span>
         <span class="property-type"><a href="#certificatecertificatedescriptionconfigvalueskeyusageunknownextendedkeyusageobectid">Certificate<wbr>Certificate<wbr>Description<wbr>Config<wbr>Values<wbr>Key<wbr>Usage<wbr>Unknown<wbr>Extended<wbr>Key<wbr>Usage<wbr>Obect<wbr>Id</a></span>
     </dt>
-    <dd>{{% md %}}{{% /md %}}</dd>
-</dl>
+    <dd>{{% md %}}{{% /md %}}</dd></dl>
 {{% /choosable %}}
 
 {{% choosable language nodejs %}}
-<dl class="resources-properties">
-
-    <dt class="property-required"
+<dl class="resources-properties"><dt class="property-required"
             title="Required">
         <span id="obectid_nodejs">
 <a href="#obectid_nodejs" style="color: inherit; text-decoration: inherit;">obect<wbr>Id</a>
@@ -2968,14 +2607,11 @@ Structure is documented below.
         <span class="property-indicator"></span>
         <span class="property-type"><a href="#certificatecertificatedescriptionconfigvalueskeyusageunknownextendedkeyusageobectid">Certificate<wbr>Certificate<wbr>Description<wbr>Config<wbr>Values<wbr>Key<wbr>Usage<wbr>Unknown<wbr>Extended<wbr>Key<wbr>Usage<wbr>Obect<wbr>Id</a></span>
     </dt>
-    <dd>{{% md %}}{{% /md %}}</dd>
-</dl>
+    <dd>{{% md %}}{{% /md %}}</dd></dl>
 {{% /choosable %}}
 
 {{% choosable language python %}}
-<dl class="resources-properties">
-
-    <dt class="property-required"
+<dl class="resources-properties"><dt class="property-required"
             title="Required">
         <span id="obect_id_python">
 <a href="#obect_id_python" style="color: inherit; text-decoration: inherit;">obect_<wbr>id</a>
@@ -2983,16 +2619,13 @@ Structure is documented below.
         <span class="property-indicator"></span>
         <span class="property-type"><a href="#certificatecertificatedescriptionconfigvalueskeyusageunknownextendedkeyusageobectid">Certificate<wbr>Certificate<wbr>Description<wbr>Config<wbr>Values<wbr>Key<wbr>Usage<wbr>Unknown<wbr>Extended<wbr>Key<wbr>Usage<wbr>Obect<wbr>Id<wbr>Args</a></span>
     </dt>
-    <dd>{{% md %}}{{% /md %}}</dd>
-</dl>
+    <dd>{{% md %}}{{% /md %}}</dd></dl>
 {{% /choosable %}}
 
 <h4 id="certificatecertificatedescriptionconfigvalueskeyusageunknownextendedkeyusageobectid">Certificate<wbr>Certificate<wbr>Description<wbr>Config<wbr>Values<wbr>Key<wbr>Usage<wbr>Unknown<wbr>Extended<wbr>Key<wbr>Usage<wbr>Obect<wbr>Id</h4>
 
 {{% choosable language csharp %}}
-<dl class="resources-properties">
-
-    <dt class="property-required"
+<dl class="resources-properties"><dt class="property-required"
             title="Required">
         <span id="objectidpaths_csharp">
 <a href="#objectidpaths_csharp" style="color: inherit; text-decoration: inherit;">Object<wbr>Id<wbr>Paths</a>
@@ -3000,14 +2633,11 @@ Structure is documented below.
         <span class="property-indicator"></span>
         <span class="property-type">List&lt;int&gt;</span>
     </dt>
-    <dd>{{% md %}}{{% /md %}}</dd>
-</dl>
+    <dd>{{% md %}}{{% /md %}}</dd></dl>
 {{% /choosable %}}
 
 {{% choosable language go %}}
-<dl class="resources-properties">
-
-    <dt class="property-required"
+<dl class="resources-properties"><dt class="property-required"
             title="Required">
         <span id="objectidpaths_go">
 <a href="#objectidpaths_go" style="color: inherit; text-decoration: inherit;">Object<wbr>Id<wbr>Paths</a>
@@ -3015,14 +2645,11 @@ Structure is documented below.
         <span class="property-indicator"></span>
         <span class="property-type">[]int</span>
     </dt>
-    <dd>{{% md %}}{{% /md %}}</dd>
-</dl>
+    <dd>{{% md %}}{{% /md %}}</dd></dl>
 {{% /choosable %}}
 
 {{% choosable language nodejs %}}
-<dl class="resources-properties">
-
-    <dt class="property-required"
+<dl class="resources-properties"><dt class="property-required"
             title="Required">
         <span id="objectidpaths_nodejs">
 <a href="#objectidpaths_nodejs" style="color: inherit; text-decoration: inherit;">object<wbr>Id<wbr>Paths</a>
@@ -3030,14 +2657,11 @@ Structure is documented below.
         <span class="property-indicator"></span>
         <span class="property-type">number[]</span>
     </dt>
-    <dd>{{% md %}}{{% /md %}}</dd>
-</dl>
+    <dd>{{% md %}}{{% /md %}}</dd></dl>
 {{% /choosable %}}
 
 {{% choosable language python %}}
-<dl class="resources-properties">
-
-    <dt class="property-required"
+<dl class="resources-properties"><dt class="property-required"
             title="Required">
         <span id="object_id_paths_python">
 <a href="#object_id_paths_python" style="color: inherit; text-decoration: inherit;">object_<wbr>id_<wbr>paths</a>
@@ -3045,16 +2669,13 @@ Structure is documented below.
         <span class="property-indicator"></span>
         <span class="property-type">Sequence[int]</span>
     </dt>
-    <dd>{{% md %}}{{% /md %}}</dd>
-</dl>
+    <dd>{{% md %}}{{% /md %}}</dd></dl>
 {{% /choosable %}}
 
 <h4 id="certificatecertificatedescriptionpublickey">Certificate<wbr>Certificate<wbr>Description<wbr>Public<wbr>Key</h4>
 
 {{% choosable language csharp %}}
-<dl class="resources-properties">
-
-    <dt class="property-required"
+<dl class="resources-properties"><dt class="property-required"
             title="Required">
         <span id="type_csharp">
 <a href="#type_csharp" style="color: inherit; text-decoration: inherit;">Type</a>
@@ -3064,8 +2685,7 @@ Structure is documented below.
     </dt>
     <dd>{{% md %}}Types of public keys that are supported. At a minimum, we support RSA and ECDSA, for the key sizes or curves listed: https://cloud.google.com/kms/docs/algorithms#asymmetric_signing_algorithms
 Possible values are `KEY_TYPE_UNSPECIFIED`, `PEM_RSA_KEY`, and `PEM_EC_KEY`.
-{{% /md %}}</dd>
-    <dt class="property-optional"
+{{% /md %}}</dd><dt class="property-optional"
             title="Optional">
         <span id="key_csharp">
 <a href="#key_csharp" style="color: inherit; text-decoration: inherit;">Key</a>
@@ -3074,14 +2694,11 @@ Possible values are `KEY_TYPE_UNSPECIFIED`, `PEM_RSA_KEY`, and `PEM_EC_KEY`.
         <span class="property-type">string</span>
     </dt>
     <dd>{{% md %}}Required. A public key. When this is specified in a request, the padding and encoding can be any of the options described by the respective 'KeyType' value. When this is generated by the service, it will always be an RFC 5280 SubjectPublicKeyInfo structure containing an algorithm identifier and a key. A base64-encoded string.
-{{% /md %}}</dd>
-</dl>
+{{% /md %}}</dd></dl>
 {{% /choosable %}}
 
 {{% choosable language go %}}
-<dl class="resources-properties">
-
-    <dt class="property-required"
+<dl class="resources-properties"><dt class="property-required"
             title="Required">
         <span id="type_go">
 <a href="#type_go" style="color: inherit; text-decoration: inherit;">Type</a>
@@ -3091,8 +2708,7 @@ Possible values are `KEY_TYPE_UNSPECIFIED`, `PEM_RSA_KEY`, and `PEM_EC_KEY`.
     </dt>
     <dd>{{% md %}}Types of public keys that are supported. At a minimum, we support RSA and ECDSA, for the key sizes or curves listed: https://cloud.google.com/kms/docs/algorithms#asymmetric_signing_algorithms
 Possible values are `KEY_TYPE_UNSPECIFIED`, `PEM_RSA_KEY`, and `PEM_EC_KEY`.
-{{% /md %}}</dd>
-    <dt class="property-optional"
+{{% /md %}}</dd><dt class="property-optional"
             title="Optional">
         <span id="key_go">
 <a href="#key_go" style="color: inherit; text-decoration: inherit;">Key</a>
@@ -3101,14 +2717,11 @@ Possible values are `KEY_TYPE_UNSPECIFIED`, `PEM_RSA_KEY`, and `PEM_EC_KEY`.
         <span class="property-type">string</span>
     </dt>
     <dd>{{% md %}}Required. A public key. When this is specified in a request, the padding and encoding can be any of the options described by the respective 'KeyType' value. When this is generated by the service, it will always be an RFC 5280 SubjectPublicKeyInfo structure containing an algorithm identifier and a key. A base64-encoded string.
-{{% /md %}}</dd>
-</dl>
+{{% /md %}}</dd></dl>
 {{% /choosable %}}
 
 {{% choosable language nodejs %}}
-<dl class="resources-properties">
-
-    <dt class="property-required"
+<dl class="resources-properties"><dt class="property-required"
             title="Required">
         <span id="type_nodejs">
 <a href="#type_nodejs" style="color: inherit; text-decoration: inherit;">type</a>
@@ -3118,8 +2731,7 @@ Possible values are `KEY_TYPE_UNSPECIFIED`, `PEM_RSA_KEY`, and `PEM_EC_KEY`.
     </dt>
     <dd>{{% md %}}Types of public keys that are supported. At a minimum, we support RSA and ECDSA, for the key sizes or curves listed: https://cloud.google.com/kms/docs/algorithms#asymmetric_signing_algorithms
 Possible values are `KEY_TYPE_UNSPECIFIED`, `PEM_RSA_KEY`, and `PEM_EC_KEY`.
-{{% /md %}}</dd>
-    <dt class="property-optional"
+{{% /md %}}</dd><dt class="property-optional"
             title="Optional">
         <span id="key_nodejs">
 <a href="#key_nodejs" style="color: inherit; text-decoration: inherit;">key</a>
@@ -3128,14 +2740,11 @@ Possible values are `KEY_TYPE_UNSPECIFIED`, `PEM_RSA_KEY`, and `PEM_EC_KEY`.
         <span class="property-type">string</span>
     </dt>
     <dd>{{% md %}}Required. A public key. When this is specified in a request, the padding and encoding can be any of the options described by the respective 'KeyType' value. When this is generated by the service, it will always be an RFC 5280 SubjectPublicKeyInfo structure containing an algorithm identifier and a key. A base64-encoded string.
-{{% /md %}}</dd>
-</dl>
+{{% /md %}}</dd></dl>
 {{% /choosable %}}
 
 {{% choosable language python %}}
-<dl class="resources-properties">
-
-    <dt class="property-required"
+<dl class="resources-properties"><dt class="property-required"
             title="Required">
         <span id="type_python">
 <a href="#type_python" style="color: inherit; text-decoration: inherit;">type</a>
@@ -3145,8 +2754,7 @@ Possible values are `KEY_TYPE_UNSPECIFIED`, `PEM_RSA_KEY`, and `PEM_EC_KEY`.
     </dt>
     <dd>{{% md %}}Types of public keys that are supported. At a minimum, we support RSA and ECDSA, for the key sizes or curves listed: https://cloud.google.com/kms/docs/algorithms#asymmetric_signing_algorithms
 Possible values are `KEY_TYPE_UNSPECIFIED`, `PEM_RSA_KEY`, and `PEM_EC_KEY`.
-{{% /md %}}</dd>
-    <dt class="property-optional"
+{{% /md %}}</dd><dt class="property-optional"
             title="Optional">
         <span id="key_python">
 <a href="#key_python" style="color: inherit; text-decoration: inherit;">key</a>
@@ -3155,16 +2763,13 @@ Possible values are `KEY_TYPE_UNSPECIFIED`, `PEM_RSA_KEY`, and `PEM_EC_KEY`.
         <span class="property-type">str</span>
     </dt>
     <dd>{{% md %}}Required. A public key. When this is specified in a request, the padding and encoding can be any of the options described by the respective 'KeyType' value. When this is generated by the service, it will always be an RFC 5280 SubjectPublicKeyInfo structure containing an algorithm identifier and a key. A base64-encoded string.
-{{% /md %}}</dd>
-</dl>
+{{% /md %}}</dd></dl>
 {{% /choosable %}}
 
 <h4 id="certificatecertificatedescriptionsubjectdescription">Certificate<wbr>Certificate<wbr>Description<wbr>Subject<wbr>Description</h4>
 
 {{% choosable language csharp %}}
-<dl class="resources-properties">
-
-    <dt class="property-optional"
+<dl class="resources-properties"><dt class="property-optional"
             title="Optional">
         <span id="commonname_csharp">
 <a href="#commonname_csharp" style="color: inherit; text-decoration: inherit;">Common<wbr>Name</a>
@@ -3173,8 +2778,7 @@ Possible values are `KEY_TYPE_UNSPECIFIED`, `PEM_RSA_KEY`, and `PEM_EC_KEY`.
         <span class="property-type">string</span>
     </dt>
     <dd>{{% md %}}The common name of the distinguished name.
-{{% /md %}}</dd>
-    <dt class="property-optional"
+{{% /md %}}</dd><dt class="property-optional"
             title="Optional">
         <span id="hexserialnumber_csharp">
 <a href="#hexserialnumber_csharp" style="color: inherit; text-decoration: inherit;">Hex<wbr>Serial<wbr>Number</a>
@@ -3182,8 +2786,7 @@ Possible values are `KEY_TYPE_UNSPECIFIED`, `PEM_RSA_KEY`, and `PEM_EC_KEY`.
         <span class="property-indicator"></span>
         <span class="property-type">string</span>
     </dt>
-    <dd>{{% md %}}{{% /md %}}</dd>
-    <dt class="property-optional"
+    <dd>{{% md %}}{{% /md %}}</dd><dt class="property-optional"
             title="Optional">
         <span id="lifetime_csharp">
 <a href="#lifetime_csharp" style="color: inherit; text-decoration: inherit;">Lifetime</a>
@@ -3194,8 +2797,7 @@ Possible values are `KEY_TYPE_UNSPECIFIED`, `PEM_RSA_KEY`, and `PEM_EC_KEY`.
     <dd>{{% md %}}The desired lifetime of the CA certificate. Used to create the "notBeforeTime" and
 "notAfterTime" fields inside an X.509 certificate. A duration in seconds with up to nine
 fractional digits, terminated by 's'. Example: "3.5s".
-{{% /md %}}</dd>
-    <dt class="property-optional"
+{{% /md %}}</dd><dt class="property-optional"
             title="Optional">
         <span id="notaftertime_csharp">
 <a href="#notaftertime_csharp" style="color: inherit; text-decoration: inherit;">Not<wbr>After<wbr>Time</a>
@@ -3203,8 +2805,7 @@ fractional digits, terminated by 's'. Example: "3.5s".
         <span class="property-indicator"></span>
         <span class="property-type">string</span>
     </dt>
-    <dd>{{% md %}}{{% /md %}}</dd>
-    <dt class="property-optional"
+    <dd>{{% md %}}{{% /md %}}</dd><dt class="property-optional"
             title="Optional">
         <span id="notbeforetime_csharp">
 <a href="#notbeforetime_csharp" style="color: inherit; text-decoration: inherit;">Not<wbr>Before<wbr>Time</a>
@@ -3212,8 +2813,7 @@ fractional digits, terminated by 's'. Example: "3.5s".
         <span class="property-indicator"></span>
         <span class="property-type">string</span>
     </dt>
-    <dd>{{% md %}}{{% /md %}}</dd>
-    <dt class="property-optional"
+    <dd>{{% md %}}{{% /md %}}</dd><dt class="property-optional"
             title="Optional">
         <span id="subject_csharp">
 <a href="#subject_csharp" style="color: inherit; text-decoration: inherit;">Subject</a>
@@ -3223,8 +2823,7 @@ fractional digits, terminated by 's'. Example: "3.5s".
     </dt>
     <dd>{{% md %}}Contains distinguished name fields such as the location and organization.
 Structure is documented below.
-{{% /md %}}</dd>
-    <dt class="property-optional"
+{{% /md %}}</dd><dt class="property-optional"
             title="Optional">
         <span id="subjectaltname_csharp">
 <a href="#subjectaltname_csharp" style="color: inherit; text-decoration: inherit;">Subject<wbr>Alt<wbr>Name</a>
@@ -3234,14 +2833,11 @@ Structure is documented below.
     </dt>
     <dd>{{% md %}}The subject alternative name fields.
 Structure is documented below.
-{{% /md %}}</dd>
-</dl>
+{{% /md %}}</dd></dl>
 {{% /choosable %}}
 
 {{% choosable language go %}}
-<dl class="resources-properties">
-
-    <dt class="property-optional"
+<dl class="resources-properties"><dt class="property-optional"
             title="Optional">
         <span id="commonname_go">
 <a href="#commonname_go" style="color: inherit; text-decoration: inherit;">Common<wbr>Name</a>
@@ -3250,8 +2846,7 @@ Structure is documented below.
         <span class="property-type">string</span>
     </dt>
     <dd>{{% md %}}The common name of the distinguished name.
-{{% /md %}}</dd>
-    <dt class="property-optional"
+{{% /md %}}</dd><dt class="property-optional"
             title="Optional">
         <span id="hexserialnumber_go">
 <a href="#hexserialnumber_go" style="color: inherit; text-decoration: inherit;">Hex<wbr>Serial<wbr>Number</a>
@@ -3259,8 +2854,7 @@ Structure is documented below.
         <span class="property-indicator"></span>
         <span class="property-type">string</span>
     </dt>
-    <dd>{{% md %}}{{% /md %}}</dd>
-    <dt class="property-optional"
+    <dd>{{% md %}}{{% /md %}}</dd><dt class="property-optional"
             title="Optional">
         <span id="lifetime_go">
 <a href="#lifetime_go" style="color: inherit; text-decoration: inherit;">Lifetime</a>
@@ -3271,8 +2865,7 @@ Structure is documented below.
     <dd>{{% md %}}The desired lifetime of the CA certificate. Used to create the "notBeforeTime" and
 "notAfterTime" fields inside an X.509 certificate. A duration in seconds with up to nine
 fractional digits, terminated by 's'. Example: "3.5s".
-{{% /md %}}</dd>
-    <dt class="property-optional"
+{{% /md %}}</dd><dt class="property-optional"
             title="Optional">
         <span id="notaftertime_go">
 <a href="#notaftertime_go" style="color: inherit; text-decoration: inherit;">Not<wbr>After<wbr>Time</a>
@@ -3280,8 +2873,7 @@ fractional digits, terminated by 's'. Example: "3.5s".
         <span class="property-indicator"></span>
         <span class="property-type">string</span>
     </dt>
-    <dd>{{% md %}}{{% /md %}}</dd>
-    <dt class="property-optional"
+    <dd>{{% md %}}{{% /md %}}</dd><dt class="property-optional"
             title="Optional">
         <span id="notbeforetime_go">
 <a href="#notbeforetime_go" style="color: inherit; text-decoration: inherit;">Not<wbr>Before<wbr>Time</a>
@@ -3289,8 +2881,7 @@ fractional digits, terminated by 's'. Example: "3.5s".
         <span class="property-indicator"></span>
         <span class="property-type">string</span>
     </dt>
-    <dd>{{% md %}}{{% /md %}}</dd>
-    <dt class="property-optional"
+    <dd>{{% md %}}{{% /md %}}</dd><dt class="property-optional"
             title="Optional">
         <span id="subject_go">
 <a href="#subject_go" style="color: inherit; text-decoration: inherit;">Subject</a>
@@ -3300,8 +2891,7 @@ fractional digits, terminated by 's'. Example: "3.5s".
     </dt>
     <dd>{{% md %}}Contains distinguished name fields such as the location and organization.
 Structure is documented below.
-{{% /md %}}</dd>
-    <dt class="property-optional"
+{{% /md %}}</dd><dt class="property-optional"
             title="Optional">
         <span id="subjectaltname_go">
 <a href="#subjectaltname_go" style="color: inherit; text-decoration: inherit;">Subject<wbr>Alt<wbr>Name</a>
@@ -3311,14 +2901,11 @@ Structure is documented below.
     </dt>
     <dd>{{% md %}}The subject alternative name fields.
 Structure is documented below.
-{{% /md %}}</dd>
-</dl>
+{{% /md %}}</dd></dl>
 {{% /choosable %}}
 
 {{% choosable language nodejs %}}
-<dl class="resources-properties">
-
-    <dt class="property-optional"
+<dl class="resources-properties"><dt class="property-optional"
             title="Optional">
         <span id="commonname_nodejs">
 <a href="#commonname_nodejs" style="color: inherit; text-decoration: inherit;">common<wbr>Name</a>
@@ -3327,8 +2914,7 @@ Structure is documented below.
         <span class="property-type">string</span>
     </dt>
     <dd>{{% md %}}The common name of the distinguished name.
-{{% /md %}}</dd>
-    <dt class="property-optional"
+{{% /md %}}</dd><dt class="property-optional"
             title="Optional">
         <span id="hexserialnumber_nodejs">
 <a href="#hexserialnumber_nodejs" style="color: inherit; text-decoration: inherit;">hex<wbr>Serial<wbr>Number</a>
@@ -3336,8 +2922,7 @@ Structure is documented below.
         <span class="property-indicator"></span>
         <span class="property-type">string</span>
     </dt>
-    <dd>{{% md %}}{{% /md %}}</dd>
-    <dt class="property-optional"
+    <dd>{{% md %}}{{% /md %}}</dd><dt class="property-optional"
             title="Optional">
         <span id="lifetime_nodejs">
 <a href="#lifetime_nodejs" style="color: inherit; text-decoration: inherit;">lifetime</a>
@@ -3348,8 +2933,7 @@ Structure is documented below.
     <dd>{{% md %}}The desired lifetime of the CA certificate. Used to create the "notBeforeTime" and
 "notAfterTime" fields inside an X.509 certificate. A duration in seconds with up to nine
 fractional digits, terminated by 's'. Example: "3.5s".
-{{% /md %}}</dd>
-    <dt class="property-optional"
+{{% /md %}}</dd><dt class="property-optional"
             title="Optional">
         <span id="notaftertime_nodejs">
 <a href="#notaftertime_nodejs" style="color: inherit; text-decoration: inherit;">not<wbr>After<wbr>Time</a>
@@ -3357,8 +2941,7 @@ fractional digits, terminated by 's'. Example: "3.5s".
         <span class="property-indicator"></span>
         <span class="property-type">string</span>
     </dt>
-    <dd>{{% md %}}{{% /md %}}</dd>
-    <dt class="property-optional"
+    <dd>{{% md %}}{{% /md %}}</dd><dt class="property-optional"
             title="Optional">
         <span id="notbeforetime_nodejs">
 <a href="#notbeforetime_nodejs" style="color: inherit; text-decoration: inherit;">not<wbr>Before<wbr>Time</a>
@@ -3366,8 +2949,7 @@ fractional digits, terminated by 's'. Example: "3.5s".
         <span class="property-indicator"></span>
         <span class="property-type">string</span>
     </dt>
-    <dd>{{% md %}}{{% /md %}}</dd>
-    <dt class="property-optional"
+    <dd>{{% md %}}{{% /md %}}</dd><dt class="property-optional"
             title="Optional">
         <span id="subject_nodejs">
 <a href="#subject_nodejs" style="color: inherit; text-decoration: inherit;">subject</a>
@@ -3377,8 +2959,7 @@ fractional digits, terminated by 's'. Example: "3.5s".
     </dt>
     <dd>{{% md %}}Contains distinguished name fields such as the location and organization.
 Structure is documented below.
-{{% /md %}}</dd>
-    <dt class="property-optional"
+{{% /md %}}</dd><dt class="property-optional"
             title="Optional">
         <span id="subjectaltname_nodejs">
 <a href="#subjectaltname_nodejs" style="color: inherit; text-decoration: inherit;">subject<wbr>Alt<wbr>Name</a>
@@ -3388,14 +2969,11 @@ Structure is documented below.
     </dt>
     <dd>{{% md %}}The subject alternative name fields.
 Structure is documented below.
-{{% /md %}}</dd>
-</dl>
+{{% /md %}}</dd></dl>
 {{% /choosable %}}
 
 {{% choosable language python %}}
-<dl class="resources-properties">
-
-    <dt class="property-optional"
+<dl class="resources-properties"><dt class="property-optional"
             title="Optional">
         <span id="common_name_python">
 <a href="#common_name_python" style="color: inherit; text-decoration: inherit;">common_<wbr>name</a>
@@ -3404,8 +2982,7 @@ Structure is documented below.
         <span class="property-type">str</span>
     </dt>
     <dd>{{% md %}}The common name of the distinguished name.
-{{% /md %}}</dd>
-    <dt class="property-optional"
+{{% /md %}}</dd><dt class="property-optional"
             title="Optional">
         <span id="hex_serial_number_python">
 <a href="#hex_serial_number_python" style="color: inherit; text-decoration: inherit;">hex_<wbr>serial_<wbr>number</a>
@@ -3413,8 +2990,7 @@ Structure is documented below.
         <span class="property-indicator"></span>
         <span class="property-type">str</span>
     </dt>
-    <dd>{{% md %}}{{% /md %}}</dd>
-    <dt class="property-optional"
+    <dd>{{% md %}}{{% /md %}}</dd><dt class="property-optional"
             title="Optional">
         <span id="lifetime_python">
 <a href="#lifetime_python" style="color: inherit; text-decoration: inherit;">lifetime</a>
@@ -3425,8 +3001,7 @@ Structure is documented below.
     <dd>{{% md %}}The desired lifetime of the CA certificate. Used to create the "notBeforeTime" and
 "notAfterTime" fields inside an X.509 certificate. A duration in seconds with up to nine
 fractional digits, terminated by 's'. Example: "3.5s".
-{{% /md %}}</dd>
-    <dt class="property-optional"
+{{% /md %}}</dd><dt class="property-optional"
             title="Optional">
         <span id="not_after_time_python">
 <a href="#not_after_time_python" style="color: inherit; text-decoration: inherit;">not_<wbr>after_<wbr>time</a>
@@ -3434,8 +3009,7 @@ fractional digits, terminated by 's'. Example: "3.5s".
         <span class="property-indicator"></span>
         <span class="property-type">str</span>
     </dt>
-    <dd>{{% md %}}{{% /md %}}</dd>
-    <dt class="property-optional"
+    <dd>{{% md %}}{{% /md %}}</dd><dt class="property-optional"
             title="Optional">
         <span id="not_before_time_python">
 <a href="#not_before_time_python" style="color: inherit; text-decoration: inherit;">not_<wbr>before_<wbr>time</a>
@@ -3443,8 +3017,7 @@ fractional digits, terminated by 's'. Example: "3.5s".
         <span class="property-indicator"></span>
         <span class="property-type">str</span>
     </dt>
-    <dd>{{% md %}}{{% /md %}}</dd>
-    <dt class="property-optional"
+    <dd>{{% md %}}{{% /md %}}</dd><dt class="property-optional"
             title="Optional">
         <span id="subject_python">
 <a href="#subject_python" style="color: inherit; text-decoration: inherit;">subject</a>
@@ -3454,8 +3027,7 @@ fractional digits, terminated by 's'. Example: "3.5s".
     </dt>
     <dd>{{% md %}}Contains distinguished name fields such as the location and organization.
 Structure is documented below.
-{{% /md %}}</dd>
-    <dt class="property-optional"
+{{% /md %}}</dd><dt class="property-optional"
             title="Optional">
         <span id="subject_alt_name_python">
 <a href="#subject_alt_name_python" style="color: inherit; text-decoration: inherit;">subject_<wbr>alt_<wbr>name</a>
@@ -3465,16 +3037,13 @@ Structure is documented below.
     </dt>
     <dd>{{% md %}}The subject alternative name fields.
 Structure is documented below.
-{{% /md %}}</dd>
-</dl>
+{{% /md %}}</dd></dl>
 {{% /choosable %}}
 
 <h4 id="certificatecertificatedescriptionsubjectdescriptionsubject">Certificate<wbr>Certificate<wbr>Description<wbr>Subject<wbr>Description<wbr>Subject</h4>
 
 {{% choosable language csharp %}}
-<dl class="resources-properties">
-
-    <dt class="property-optional"
+<dl class="resources-properties"><dt class="property-optional"
             title="Optional">
         <span id="countrycode_csharp">
 <a href="#countrycode_csharp" style="color: inherit; text-decoration: inherit;">Country<wbr>Code</a>
@@ -3483,8 +3052,7 @@ Structure is documented below.
         <span class="property-type">string</span>
     </dt>
     <dd>{{% md %}}The country code of the subject.
-{{% /md %}}</dd>
-    <dt class="property-optional"
+{{% /md %}}</dd><dt class="property-optional"
             title="Optional">
         <span id="locality_csharp">
 <a href="#locality_csharp" style="color: inherit; text-decoration: inherit;">Locality</a>
@@ -3493,8 +3061,7 @@ Structure is documented below.
         <span class="property-type">string</span>
     </dt>
     <dd>{{% md %}}The locality or city of the subject.
-{{% /md %}}</dd>
-    <dt class="property-optional"
+{{% /md %}}</dd><dt class="property-optional"
             title="Optional">
         <span id="organization_csharp">
 <a href="#organization_csharp" style="color: inherit; text-decoration: inherit;">Organization</a>
@@ -3503,8 +3070,7 @@ Structure is documented below.
         <span class="property-type">string</span>
     </dt>
     <dd>{{% md %}}The organization of the subject.
-{{% /md %}}</dd>
-    <dt class="property-optional"
+{{% /md %}}</dd><dt class="property-optional"
             title="Optional">
         <span id="organizationalunit_csharp">
 <a href="#organizationalunit_csharp" style="color: inherit; text-decoration: inherit;">Organizational<wbr>Unit</a>
@@ -3513,8 +3079,7 @@ Structure is documented below.
         <span class="property-type">string</span>
     </dt>
     <dd>{{% md %}}The organizational unit of the subject.
-{{% /md %}}</dd>
-    <dt class="property-optional"
+{{% /md %}}</dd><dt class="property-optional"
             title="Optional">
         <span id="postalcode_csharp">
 <a href="#postalcode_csharp" style="color: inherit; text-decoration: inherit;">Postal<wbr>Code</a>
@@ -3523,8 +3088,7 @@ Structure is documented below.
         <span class="property-type">string</span>
     </dt>
     <dd>{{% md %}}The postal code of the subject.
-{{% /md %}}</dd>
-    <dt class="property-optional"
+{{% /md %}}</dd><dt class="property-optional"
             title="Optional">
         <span id="province_csharp">
 <a href="#province_csharp" style="color: inherit; text-decoration: inherit;">Province</a>
@@ -3533,8 +3097,7 @@ Structure is documented below.
         <span class="property-type">string</span>
     </dt>
     <dd>{{% md %}}The province, territory, or regional state of the subject.
-{{% /md %}}</dd>
-    <dt class="property-optional"
+{{% /md %}}</dd><dt class="property-optional"
             title="Optional">
         <span id="streetaddress_csharp">
 <a href="#streetaddress_csharp" style="color: inherit; text-decoration: inherit;">Street<wbr>Address</a>
@@ -3543,14 +3106,11 @@ Structure is documented below.
         <span class="property-type">string</span>
     </dt>
     <dd>{{% md %}}The street address of the subject.
-{{% /md %}}</dd>
-</dl>
+{{% /md %}}</dd></dl>
 {{% /choosable %}}
 
 {{% choosable language go %}}
-<dl class="resources-properties">
-
-    <dt class="property-optional"
+<dl class="resources-properties"><dt class="property-optional"
             title="Optional">
         <span id="countrycode_go">
 <a href="#countrycode_go" style="color: inherit; text-decoration: inherit;">Country<wbr>Code</a>
@@ -3559,8 +3119,7 @@ Structure is documented below.
         <span class="property-type">string</span>
     </dt>
     <dd>{{% md %}}The country code of the subject.
-{{% /md %}}</dd>
-    <dt class="property-optional"
+{{% /md %}}</dd><dt class="property-optional"
             title="Optional">
         <span id="locality_go">
 <a href="#locality_go" style="color: inherit; text-decoration: inherit;">Locality</a>
@@ -3569,8 +3128,7 @@ Structure is documented below.
         <span class="property-type">string</span>
     </dt>
     <dd>{{% md %}}The locality or city of the subject.
-{{% /md %}}</dd>
-    <dt class="property-optional"
+{{% /md %}}</dd><dt class="property-optional"
             title="Optional">
         <span id="organization_go">
 <a href="#organization_go" style="color: inherit; text-decoration: inherit;">Organization</a>
@@ -3579,8 +3137,7 @@ Structure is documented below.
         <span class="property-type">string</span>
     </dt>
     <dd>{{% md %}}The organization of the subject.
-{{% /md %}}</dd>
-    <dt class="property-optional"
+{{% /md %}}</dd><dt class="property-optional"
             title="Optional">
         <span id="organizationalunit_go">
 <a href="#organizationalunit_go" style="color: inherit; text-decoration: inherit;">Organizational<wbr>Unit</a>
@@ -3589,8 +3146,7 @@ Structure is documented below.
         <span class="property-type">string</span>
     </dt>
     <dd>{{% md %}}The organizational unit of the subject.
-{{% /md %}}</dd>
-    <dt class="property-optional"
+{{% /md %}}</dd><dt class="property-optional"
             title="Optional">
         <span id="postalcode_go">
 <a href="#postalcode_go" style="color: inherit; text-decoration: inherit;">Postal<wbr>Code</a>
@@ -3599,8 +3155,7 @@ Structure is documented below.
         <span class="property-type">string</span>
     </dt>
     <dd>{{% md %}}The postal code of the subject.
-{{% /md %}}</dd>
-    <dt class="property-optional"
+{{% /md %}}</dd><dt class="property-optional"
             title="Optional">
         <span id="province_go">
 <a href="#province_go" style="color: inherit; text-decoration: inherit;">Province</a>
@@ -3609,8 +3164,7 @@ Structure is documented below.
         <span class="property-type">string</span>
     </dt>
     <dd>{{% md %}}The province, territory, or regional state of the subject.
-{{% /md %}}</dd>
-    <dt class="property-optional"
+{{% /md %}}</dd><dt class="property-optional"
             title="Optional">
         <span id="streetaddress_go">
 <a href="#streetaddress_go" style="color: inherit; text-decoration: inherit;">Street<wbr>Address</a>
@@ -3619,14 +3173,11 @@ Structure is documented below.
         <span class="property-type">string</span>
     </dt>
     <dd>{{% md %}}The street address of the subject.
-{{% /md %}}</dd>
-</dl>
+{{% /md %}}</dd></dl>
 {{% /choosable %}}
 
 {{% choosable language nodejs %}}
-<dl class="resources-properties">
-
-    <dt class="property-optional"
+<dl class="resources-properties"><dt class="property-optional"
             title="Optional">
         <span id="countrycode_nodejs">
 <a href="#countrycode_nodejs" style="color: inherit; text-decoration: inherit;">country<wbr>Code</a>
@@ -3635,8 +3186,7 @@ Structure is documented below.
         <span class="property-type">string</span>
     </dt>
     <dd>{{% md %}}The country code of the subject.
-{{% /md %}}</dd>
-    <dt class="property-optional"
+{{% /md %}}</dd><dt class="property-optional"
             title="Optional">
         <span id="locality_nodejs">
 <a href="#locality_nodejs" style="color: inherit; text-decoration: inherit;">locality</a>
@@ -3645,8 +3195,7 @@ Structure is documented below.
         <span class="property-type">string</span>
     </dt>
     <dd>{{% md %}}The locality or city of the subject.
-{{% /md %}}</dd>
-    <dt class="property-optional"
+{{% /md %}}</dd><dt class="property-optional"
             title="Optional">
         <span id="organization_nodejs">
 <a href="#organization_nodejs" style="color: inherit; text-decoration: inherit;">organization</a>
@@ -3655,8 +3204,7 @@ Structure is documented below.
         <span class="property-type">string</span>
     </dt>
     <dd>{{% md %}}The organization of the subject.
-{{% /md %}}</dd>
-    <dt class="property-optional"
+{{% /md %}}</dd><dt class="property-optional"
             title="Optional">
         <span id="organizationalunit_nodejs">
 <a href="#organizationalunit_nodejs" style="color: inherit; text-decoration: inherit;">organizational<wbr>Unit</a>
@@ -3665,8 +3213,7 @@ Structure is documented below.
         <span class="property-type">string</span>
     </dt>
     <dd>{{% md %}}The organizational unit of the subject.
-{{% /md %}}</dd>
-    <dt class="property-optional"
+{{% /md %}}</dd><dt class="property-optional"
             title="Optional">
         <span id="postalcode_nodejs">
 <a href="#postalcode_nodejs" style="color: inherit; text-decoration: inherit;">postal<wbr>Code</a>
@@ -3675,8 +3222,7 @@ Structure is documented below.
         <span class="property-type">string</span>
     </dt>
     <dd>{{% md %}}The postal code of the subject.
-{{% /md %}}</dd>
-    <dt class="property-optional"
+{{% /md %}}</dd><dt class="property-optional"
             title="Optional">
         <span id="province_nodejs">
 <a href="#province_nodejs" style="color: inherit; text-decoration: inherit;">province</a>
@@ -3685,8 +3231,7 @@ Structure is documented below.
         <span class="property-type">string</span>
     </dt>
     <dd>{{% md %}}The province, territory, or regional state of the subject.
-{{% /md %}}</dd>
-    <dt class="property-optional"
+{{% /md %}}</dd><dt class="property-optional"
             title="Optional">
         <span id="streetaddress_nodejs">
 <a href="#streetaddress_nodejs" style="color: inherit; text-decoration: inherit;">street<wbr>Address</a>
@@ -3695,14 +3240,11 @@ Structure is documented below.
         <span class="property-type">string</span>
     </dt>
     <dd>{{% md %}}The street address of the subject.
-{{% /md %}}</dd>
-</dl>
+{{% /md %}}</dd></dl>
 {{% /choosable %}}
 
 {{% choosable language python %}}
-<dl class="resources-properties">
-
-    <dt class="property-optional"
+<dl class="resources-properties"><dt class="property-optional"
             title="Optional">
         <span id="country_code_python">
 <a href="#country_code_python" style="color: inherit; text-decoration: inherit;">country_<wbr>code</a>
@@ -3711,8 +3253,7 @@ Structure is documented below.
         <span class="property-type">str</span>
     </dt>
     <dd>{{% md %}}The country code of the subject.
-{{% /md %}}</dd>
-    <dt class="property-optional"
+{{% /md %}}</dd><dt class="property-optional"
             title="Optional">
         <span id="locality_python">
 <a href="#locality_python" style="color: inherit; text-decoration: inherit;">locality</a>
@@ -3721,8 +3262,7 @@ Structure is documented below.
         <span class="property-type">str</span>
     </dt>
     <dd>{{% md %}}The locality or city of the subject.
-{{% /md %}}</dd>
-    <dt class="property-optional"
+{{% /md %}}</dd><dt class="property-optional"
             title="Optional">
         <span id="organization_python">
 <a href="#organization_python" style="color: inherit; text-decoration: inherit;">organization</a>
@@ -3731,8 +3271,7 @@ Structure is documented below.
         <span class="property-type">str</span>
     </dt>
     <dd>{{% md %}}The organization of the subject.
-{{% /md %}}</dd>
-    <dt class="property-optional"
+{{% /md %}}</dd><dt class="property-optional"
             title="Optional">
         <span id="organizational_unit_python">
 <a href="#organizational_unit_python" style="color: inherit; text-decoration: inherit;">organizational_<wbr>unit</a>
@@ -3741,8 +3280,7 @@ Structure is documented below.
         <span class="property-type">str</span>
     </dt>
     <dd>{{% md %}}The organizational unit of the subject.
-{{% /md %}}</dd>
-    <dt class="property-optional"
+{{% /md %}}</dd><dt class="property-optional"
             title="Optional">
         <span id="postal_code_python">
 <a href="#postal_code_python" style="color: inherit; text-decoration: inherit;">postal_<wbr>code</a>
@@ -3751,8 +3289,7 @@ Structure is documented below.
         <span class="property-type">str</span>
     </dt>
     <dd>{{% md %}}The postal code of the subject.
-{{% /md %}}</dd>
-    <dt class="property-optional"
+{{% /md %}}</dd><dt class="property-optional"
             title="Optional">
         <span id="province_python">
 <a href="#province_python" style="color: inherit; text-decoration: inherit;">province</a>
@@ -3761,8 +3298,7 @@ Structure is documented below.
         <span class="property-type">str</span>
     </dt>
     <dd>{{% md %}}The province, territory, or regional state of the subject.
-{{% /md %}}</dd>
-    <dt class="property-optional"
+{{% /md %}}</dd><dt class="property-optional"
             title="Optional">
         <span id="street_address_python">
 <a href="#street_address_python" style="color: inherit; text-decoration: inherit;">street_<wbr>address</a>
@@ -3771,16 +3307,13 @@ Structure is documented below.
         <span class="property-type">str</span>
     </dt>
     <dd>{{% md %}}The street address of the subject.
-{{% /md %}}</dd>
-</dl>
+{{% /md %}}</dd></dl>
 {{% /choosable %}}
 
 <h4 id="certificatecertificatedescriptionsubjectdescriptionsubjectaltname">Certificate<wbr>Certificate<wbr>Description<wbr>Subject<wbr>Description<wbr>Subject<wbr>Alt<wbr>Name</h4>
 
 {{% choosable language csharp %}}
-<dl class="resources-properties">
-
-    <dt class="property-required"
+<dl class="resources-properties"><dt class="property-required"
             title="Required">
         <span id="customsans_csharp">
 <a href="#customsans_csharp" style="color: inherit; text-decoration: inherit;">Custom<wbr>Sans</a>
@@ -3788,8 +3321,7 @@ Structure is documented below.
         <span class="property-indicator"></span>
         <span class="property-type"><a href="#certificatecertificatedescriptionsubjectdescriptionsubjectaltnamecustomsan">List&lt;Certificate<wbr>Certificate<wbr>Description<wbr>Subject<wbr>Description<wbr>Subject<wbr>Alt<wbr>Name<wbr>Custom<wbr>San<wbr>Args&gt;</a></span>
     </dt>
-    <dd>{{% md %}}{{% /md %}}</dd>
-    <dt class="property-optional"
+    <dd>{{% md %}}{{% /md %}}</dd><dt class="property-optional"
             title="Optional">
         <span id="dnsnames_csharp">
 <a href="#dnsnames_csharp" style="color: inherit; text-decoration: inherit;">Dns<wbr>Names</a>
@@ -3798,8 +3330,7 @@ Structure is documented below.
         <span class="property-type">List&lt;string&gt;</span>
     </dt>
     <dd>{{% md %}}Contains only valid, fully-qualified host names.
-{{% /md %}}</dd>
-    <dt class="property-optional"
+{{% /md %}}</dd><dt class="property-optional"
             title="Optional">
         <span id="emailaddresses_csharp">
 <a href="#emailaddresses_csharp" style="color: inherit; text-decoration: inherit;">Email<wbr>Addresses</a>
@@ -3808,8 +3339,7 @@ Structure is documented below.
         <span class="property-type">List&lt;string&gt;</span>
     </dt>
     <dd>{{% md %}}Contains only valid RFC 2822 E-mail addresses.
-{{% /md %}}</dd>
-    <dt class="property-optional"
+{{% /md %}}</dd><dt class="property-optional"
             title="Optional">
         <span id="ipaddresses_csharp">
 <a href="#ipaddresses_csharp" style="color: inherit; text-decoration: inherit;">Ip<wbr>Addresses</a>
@@ -3818,8 +3348,7 @@ Structure is documented below.
         <span class="property-type">List&lt;string&gt;</span>
     </dt>
     <dd>{{% md %}}Contains only valid 32-bit IPv4 addresses or RFC 4291 IPv6 addresses.
-{{% /md %}}</dd>
-    <dt class="property-optional"
+{{% /md %}}</dd><dt class="property-optional"
             title="Optional">
         <span id="uris_csharp">
 <a href="#uris_csharp" style="color: inherit; text-decoration: inherit;">Uris</a>
@@ -3828,14 +3357,11 @@ Structure is documented below.
         <span class="property-type">List&lt;string&gt;</span>
     </dt>
     <dd>{{% md %}}Contains only valid RFC 3986 URIs.
-{{% /md %}}</dd>
-</dl>
+{{% /md %}}</dd></dl>
 {{% /choosable %}}
 
 {{% choosable language go %}}
-<dl class="resources-properties">
-
-    <dt class="property-required"
+<dl class="resources-properties"><dt class="property-required"
             title="Required">
         <span id="customsans_go">
 <a href="#customsans_go" style="color: inherit; text-decoration: inherit;">Custom<wbr>Sans</a>
@@ -3843,8 +3369,7 @@ Structure is documented below.
         <span class="property-indicator"></span>
         <span class="property-type"><a href="#certificatecertificatedescriptionsubjectdescriptionsubjectaltnamecustomsan">[]Certificate<wbr>Certificate<wbr>Description<wbr>Subject<wbr>Description<wbr>Subject<wbr>Alt<wbr>Name<wbr>Custom<wbr>San</a></span>
     </dt>
-    <dd>{{% md %}}{{% /md %}}</dd>
-    <dt class="property-optional"
+    <dd>{{% md %}}{{% /md %}}</dd><dt class="property-optional"
             title="Optional">
         <span id="dnsnames_go">
 <a href="#dnsnames_go" style="color: inherit; text-decoration: inherit;">Dns<wbr>Names</a>
@@ -3853,8 +3378,7 @@ Structure is documented below.
         <span class="property-type">[]string</span>
     </dt>
     <dd>{{% md %}}Contains only valid, fully-qualified host names.
-{{% /md %}}</dd>
-    <dt class="property-optional"
+{{% /md %}}</dd><dt class="property-optional"
             title="Optional">
         <span id="emailaddresses_go">
 <a href="#emailaddresses_go" style="color: inherit; text-decoration: inherit;">Email<wbr>Addresses</a>
@@ -3863,8 +3387,7 @@ Structure is documented below.
         <span class="property-type">[]string</span>
     </dt>
     <dd>{{% md %}}Contains only valid RFC 2822 E-mail addresses.
-{{% /md %}}</dd>
-    <dt class="property-optional"
+{{% /md %}}</dd><dt class="property-optional"
             title="Optional">
         <span id="ipaddresses_go">
 <a href="#ipaddresses_go" style="color: inherit; text-decoration: inherit;">Ip<wbr>Addresses</a>
@@ -3873,8 +3396,7 @@ Structure is documented below.
         <span class="property-type">[]string</span>
     </dt>
     <dd>{{% md %}}Contains only valid 32-bit IPv4 addresses or RFC 4291 IPv6 addresses.
-{{% /md %}}</dd>
-    <dt class="property-optional"
+{{% /md %}}</dd><dt class="property-optional"
             title="Optional">
         <span id="uris_go">
 <a href="#uris_go" style="color: inherit; text-decoration: inherit;">Uris</a>
@@ -3883,14 +3405,11 @@ Structure is documented below.
         <span class="property-type">[]string</span>
     </dt>
     <dd>{{% md %}}Contains only valid RFC 3986 URIs.
-{{% /md %}}</dd>
-</dl>
+{{% /md %}}</dd></dl>
 {{% /choosable %}}
 
 {{% choosable language nodejs %}}
-<dl class="resources-properties">
-
-    <dt class="property-required"
+<dl class="resources-properties"><dt class="property-required"
             title="Required">
         <span id="customsans_nodejs">
 <a href="#customsans_nodejs" style="color: inherit; text-decoration: inherit;">custom<wbr>Sans</a>
@@ -3898,8 +3417,7 @@ Structure is documented below.
         <span class="property-indicator"></span>
         <span class="property-type"><a href="#certificatecertificatedescriptionsubjectdescriptionsubjectaltnamecustomsan">Certificate<wbr>Certificate<wbr>Description<wbr>Subject<wbr>Description<wbr>Subject<wbr>Alt<wbr>Name<wbr>Custom<wbr>San[]</a></span>
     </dt>
-    <dd>{{% md %}}{{% /md %}}</dd>
-    <dt class="property-optional"
+    <dd>{{% md %}}{{% /md %}}</dd><dt class="property-optional"
             title="Optional">
         <span id="dnsnames_nodejs">
 <a href="#dnsnames_nodejs" style="color: inherit; text-decoration: inherit;">dns<wbr>Names</a>
@@ -3908,8 +3426,7 @@ Structure is documented below.
         <span class="property-type">string[]</span>
     </dt>
     <dd>{{% md %}}Contains only valid, fully-qualified host names.
-{{% /md %}}</dd>
-    <dt class="property-optional"
+{{% /md %}}</dd><dt class="property-optional"
             title="Optional">
         <span id="emailaddresses_nodejs">
 <a href="#emailaddresses_nodejs" style="color: inherit; text-decoration: inherit;">email<wbr>Addresses</a>
@@ -3918,8 +3435,7 @@ Structure is documented below.
         <span class="property-type">string[]</span>
     </dt>
     <dd>{{% md %}}Contains only valid RFC 2822 E-mail addresses.
-{{% /md %}}</dd>
-    <dt class="property-optional"
+{{% /md %}}</dd><dt class="property-optional"
             title="Optional">
         <span id="ipaddresses_nodejs">
 <a href="#ipaddresses_nodejs" style="color: inherit; text-decoration: inherit;">ip<wbr>Addresses</a>
@@ -3928,8 +3444,7 @@ Structure is documented below.
         <span class="property-type">string[]</span>
     </dt>
     <dd>{{% md %}}Contains only valid 32-bit IPv4 addresses or RFC 4291 IPv6 addresses.
-{{% /md %}}</dd>
-    <dt class="property-optional"
+{{% /md %}}</dd><dt class="property-optional"
             title="Optional">
         <span id="uris_nodejs">
 <a href="#uris_nodejs" style="color: inherit; text-decoration: inherit;">uris</a>
@@ -3938,14 +3453,11 @@ Structure is documented below.
         <span class="property-type">string[]</span>
     </dt>
     <dd>{{% md %}}Contains only valid RFC 3986 URIs.
-{{% /md %}}</dd>
-</dl>
+{{% /md %}}</dd></dl>
 {{% /choosable %}}
 
 {{% choosable language python %}}
-<dl class="resources-properties">
-
-    <dt class="property-required"
+<dl class="resources-properties"><dt class="property-required"
             title="Required">
         <span id="custom_sans_python">
 <a href="#custom_sans_python" style="color: inherit; text-decoration: inherit;">custom_<wbr>sans</a>
@@ -3953,8 +3465,7 @@ Structure is documented below.
         <span class="property-indicator"></span>
         <span class="property-type"><a href="#certificatecertificatedescriptionsubjectdescriptionsubjectaltnamecustomsan">Sequence[Certificate<wbr>Certificate<wbr>Description<wbr>Subject<wbr>Description<wbr>Subject<wbr>Alt<wbr>Name<wbr>Custom<wbr>San<wbr>Args]</a></span>
     </dt>
-    <dd>{{% md %}}{{% /md %}}</dd>
-    <dt class="property-optional"
+    <dd>{{% md %}}{{% /md %}}</dd><dt class="property-optional"
             title="Optional">
         <span id="dns_names_python">
 <a href="#dns_names_python" style="color: inherit; text-decoration: inherit;">dns_<wbr>names</a>
@@ -3963,8 +3474,7 @@ Structure is documented below.
         <span class="property-type">Sequence[str]</span>
     </dt>
     <dd>{{% md %}}Contains only valid, fully-qualified host names.
-{{% /md %}}</dd>
-    <dt class="property-optional"
+{{% /md %}}</dd><dt class="property-optional"
             title="Optional">
         <span id="email_addresses_python">
 <a href="#email_addresses_python" style="color: inherit; text-decoration: inherit;">email_<wbr>addresses</a>
@@ -3973,8 +3483,7 @@ Structure is documented below.
         <span class="property-type">Sequence[str]</span>
     </dt>
     <dd>{{% md %}}Contains only valid RFC 2822 E-mail addresses.
-{{% /md %}}</dd>
-    <dt class="property-optional"
+{{% /md %}}</dd><dt class="property-optional"
             title="Optional">
         <span id="ip_addresses_python">
 <a href="#ip_addresses_python" style="color: inherit; text-decoration: inherit;">ip_<wbr>addresses</a>
@@ -3983,8 +3492,7 @@ Structure is documented below.
         <span class="property-type">Sequence[str]</span>
     </dt>
     <dd>{{% md %}}Contains only valid 32-bit IPv4 addresses or RFC 4291 IPv6 addresses.
-{{% /md %}}</dd>
-    <dt class="property-optional"
+{{% /md %}}</dd><dt class="property-optional"
             title="Optional">
         <span id="uris_python">
 <a href="#uris_python" style="color: inherit; text-decoration: inherit;">uris</a>
@@ -3993,16 +3501,13 @@ Structure is documented below.
         <span class="property-type">Sequence[str]</span>
     </dt>
     <dd>{{% md %}}Contains only valid RFC 3986 URIs.
-{{% /md %}}</dd>
-</dl>
+{{% /md %}}</dd></dl>
 {{% /choosable %}}
 
 <h4 id="certificatecertificatedescriptionsubjectdescriptionsubjectaltnamecustomsan">Certificate<wbr>Certificate<wbr>Description<wbr>Subject<wbr>Description<wbr>Subject<wbr>Alt<wbr>Name<wbr>Custom<wbr>San</h4>
 
 {{% choosable language csharp %}}
-<dl class="resources-properties">
-
-    <dt class="property-required"
+<dl class="resources-properties"><dt class="property-required"
             title="Required">
         <span id="critical_csharp">
 <a href="#critical_csharp" style="color: inherit; text-decoration: inherit;">Critical</a>
@@ -4010,8 +3515,7 @@ Structure is documented below.
         <span class="property-indicator"></span>
         <span class="property-type">bool</span>
     </dt>
-    <dd>{{% md %}}{{% /md %}}</dd>
-    <dt class="property-required"
+    <dd>{{% md %}}{{% /md %}}</dd><dt class="property-required"
             title="Required">
         <span id="obectid_csharp">
 <a href="#obectid_csharp" style="color: inherit; text-decoration: inherit;">Obect<wbr>Id</a>
@@ -4019,8 +3523,7 @@ Structure is documented below.
         <span class="property-indicator"></span>
         <span class="property-type"><a href="#certificatecertificatedescriptionsubjectdescriptionsubjectaltnamecustomsanobectid">Certificate<wbr>Certificate<wbr>Description<wbr>Subject<wbr>Description<wbr>Subject<wbr>Alt<wbr>Name<wbr>Custom<wbr>San<wbr>Obect<wbr>Id<wbr>Args</a></span>
     </dt>
-    <dd>{{% md %}}{{% /md %}}</dd>
-    <dt class="property-optional"
+    <dd>{{% md %}}{{% /md %}}</dd><dt class="property-optional"
             title="Optional">
         <span id="value_csharp">
 <a href="#value_csharp" style="color: inherit; text-decoration: inherit;">Value</a>
@@ -4028,14 +3531,11 @@ Structure is documented below.
         <span class="property-indicator"></span>
         <span class="property-type">string</span>
     </dt>
-    <dd>{{% md %}}{{% /md %}}</dd>
-</dl>
+    <dd>{{% md %}}{{% /md %}}</dd></dl>
 {{% /choosable %}}
 
 {{% choosable language go %}}
-<dl class="resources-properties">
-
-    <dt class="property-required"
+<dl class="resources-properties"><dt class="property-required"
             title="Required">
         <span id="critical_go">
 <a href="#critical_go" style="color: inherit; text-decoration: inherit;">Critical</a>
@@ -4043,8 +3543,7 @@ Structure is documented below.
         <span class="property-indicator"></span>
         <span class="property-type">bool</span>
     </dt>
-    <dd>{{% md %}}{{% /md %}}</dd>
-    <dt class="property-required"
+    <dd>{{% md %}}{{% /md %}}</dd><dt class="property-required"
             title="Required">
         <span id="obectid_go">
 <a href="#obectid_go" style="color: inherit; text-decoration: inherit;">Obect<wbr>Id</a>
@@ -4052,8 +3551,7 @@ Structure is documented below.
         <span class="property-indicator"></span>
         <span class="property-type"><a href="#certificatecertificatedescriptionsubjectdescriptionsubjectaltnamecustomsanobectid">Certificate<wbr>Certificate<wbr>Description<wbr>Subject<wbr>Description<wbr>Subject<wbr>Alt<wbr>Name<wbr>Custom<wbr>San<wbr>Obect<wbr>Id</a></span>
     </dt>
-    <dd>{{% md %}}{{% /md %}}</dd>
-    <dt class="property-optional"
+    <dd>{{% md %}}{{% /md %}}</dd><dt class="property-optional"
             title="Optional">
         <span id="value_go">
 <a href="#value_go" style="color: inherit; text-decoration: inherit;">Value</a>
@@ -4061,14 +3559,11 @@ Structure is documented below.
         <span class="property-indicator"></span>
         <span class="property-type">string</span>
     </dt>
-    <dd>{{% md %}}{{% /md %}}</dd>
-</dl>
+    <dd>{{% md %}}{{% /md %}}</dd></dl>
 {{% /choosable %}}
 
 {{% choosable language nodejs %}}
-<dl class="resources-properties">
-
-    <dt class="property-required"
+<dl class="resources-properties"><dt class="property-required"
             title="Required">
         <span id="critical_nodejs">
 <a href="#critical_nodejs" style="color: inherit; text-decoration: inherit;">critical</a>
@@ -4076,8 +3571,7 @@ Structure is documented below.
         <span class="property-indicator"></span>
         <span class="property-type">boolean</span>
     </dt>
-    <dd>{{% md %}}{{% /md %}}</dd>
-    <dt class="property-required"
+    <dd>{{% md %}}{{% /md %}}</dd><dt class="property-required"
             title="Required">
         <span id="obectid_nodejs">
 <a href="#obectid_nodejs" style="color: inherit; text-decoration: inherit;">obect<wbr>Id</a>
@@ -4085,8 +3579,7 @@ Structure is documented below.
         <span class="property-indicator"></span>
         <span class="property-type"><a href="#certificatecertificatedescriptionsubjectdescriptionsubjectaltnamecustomsanobectid">Certificate<wbr>Certificate<wbr>Description<wbr>Subject<wbr>Description<wbr>Subject<wbr>Alt<wbr>Name<wbr>Custom<wbr>San<wbr>Obect<wbr>Id</a></span>
     </dt>
-    <dd>{{% md %}}{{% /md %}}</dd>
-    <dt class="property-optional"
+    <dd>{{% md %}}{{% /md %}}</dd><dt class="property-optional"
             title="Optional">
         <span id="value_nodejs">
 <a href="#value_nodejs" style="color: inherit; text-decoration: inherit;">value</a>
@@ -4094,14 +3587,11 @@ Structure is documented below.
         <span class="property-indicator"></span>
         <span class="property-type">string</span>
     </dt>
-    <dd>{{% md %}}{{% /md %}}</dd>
-</dl>
+    <dd>{{% md %}}{{% /md %}}</dd></dl>
 {{% /choosable %}}
 
 {{% choosable language python %}}
-<dl class="resources-properties">
-
-    <dt class="property-required"
+<dl class="resources-properties"><dt class="property-required"
             title="Required">
         <span id="critical_python">
 <a href="#critical_python" style="color: inherit; text-decoration: inherit;">critical</a>
@@ -4109,8 +3599,7 @@ Structure is documented below.
         <span class="property-indicator"></span>
         <span class="property-type">bool</span>
     </dt>
-    <dd>{{% md %}}{{% /md %}}</dd>
-    <dt class="property-required"
+    <dd>{{% md %}}{{% /md %}}</dd><dt class="property-required"
             title="Required">
         <span id="obect_id_python">
 <a href="#obect_id_python" style="color: inherit; text-decoration: inherit;">obect_<wbr>id</a>
@@ -4118,8 +3607,7 @@ Structure is documented below.
         <span class="property-indicator"></span>
         <span class="property-type"><a href="#certificatecertificatedescriptionsubjectdescriptionsubjectaltnamecustomsanobectid">Certificate<wbr>Certificate<wbr>Description<wbr>Subject<wbr>Description<wbr>Subject<wbr>Alt<wbr>Name<wbr>Custom<wbr>San<wbr>Obect<wbr>Id<wbr>Args</a></span>
     </dt>
-    <dd>{{% md %}}{{% /md %}}</dd>
-    <dt class="property-optional"
+    <dd>{{% md %}}{{% /md %}}</dd><dt class="property-optional"
             title="Optional">
         <span id="value_python">
 <a href="#value_python" style="color: inherit; text-decoration: inherit;">value</a>
@@ -4127,16 +3615,13 @@ Structure is documented below.
         <span class="property-indicator"></span>
         <span class="property-type">str</span>
     </dt>
-    <dd>{{% md %}}{{% /md %}}</dd>
-</dl>
+    <dd>{{% md %}}{{% /md %}}</dd></dl>
 {{% /choosable %}}
 
 <h4 id="certificatecertificatedescriptionsubjectdescriptionsubjectaltnamecustomsanobectid">Certificate<wbr>Certificate<wbr>Description<wbr>Subject<wbr>Description<wbr>Subject<wbr>Alt<wbr>Name<wbr>Custom<wbr>San<wbr>Obect<wbr>Id</h4>
 
 {{% choosable language csharp %}}
-<dl class="resources-properties">
-
-    <dt class="property-required"
+<dl class="resources-properties"><dt class="property-required"
             title="Required">
         <span id="objectidpaths_csharp">
 <a href="#objectidpaths_csharp" style="color: inherit; text-decoration: inherit;">Object<wbr>Id<wbr>Paths</a>
@@ -4144,14 +3629,11 @@ Structure is documented below.
         <span class="property-indicator"></span>
         <span class="property-type">List&lt;int&gt;</span>
     </dt>
-    <dd>{{% md %}}{{% /md %}}</dd>
-</dl>
+    <dd>{{% md %}}{{% /md %}}</dd></dl>
 {{% /choosable %}}
 
 {{% choosable language go %}}
-<dl class="resources-properties">
-
-    <dt class="property-required"
+<dl class="resources-properties"><dt class="property-required"
             title="Required">
         <span id="objectidpaths_go">
 <a href="#objectidpaths_go" style="color: inherit; text-decoration: inherit;">Object<wbr>Id<wbr>Paths</a>
@@ -4159,14 +3641,11 @@ Structure is documented below.
         <span class="property-indicator"></span>
         <span class="property-type">[]int</span>
     </dt>
-    <dd>{{% md %}}{{% /md %}}</dd>
-</dl>
+    <dd>{{% md %}}{{% /md %}}</dd></dl>
 {{% /choosable %}}
 
 {{% choosable language nodejs %}}
-<dl class="resources-properties">
-
-    <dt class="property-required"
+<dl class="resources-properties"><dt class="property-required"
             title="Required">
         <span id="objectidpaths_nodejs">
 <a href="#objectidpaths_nodejs" style="color: inherit; text-decoration: inherit;">object<wbr>Id<wbr>Paths</a>
@@ -4174,14 +3653,11 @@ Structure is documented below.
         <span class="property-indicator"></span>
         <span class="property-type">number[]</span>
     </dt>
-    <dd>{{% md %}}{{% /md %}}</dd>
-</dl>
+    <dd>{{% md %}}{{% /md %}}</dd></dl>
 {{% /choosable %}}
 
 {{% choosable language python %}}
-<dl class="resources-properties">
-
-    <dt class="property-required"
+<dl class="resources-properties"><dt class="property-required"
             title="Required">
         <span id="object_id_paths_python">
 <a href="#object_id_paths_python" style="color: inherit; text-decoration: inherit;">object_<wbr>id_<wbr>paths</a>
@@ -4189,16 +3665,13 @@ Structure is documented below.
         <span class="property-indicator"></span>
         <span class="property-type">Sequence[int]</span>
     </dt>
-    <dd>{{% md %}}{{% /md %}}</dd>
-</dl>
+    <dd>{{% md %}}{{% /md %}}</dd></dl>
 {{% /choosable %}}
 
 <h4 id="certificatecertificatedescriptionsubjectkeyid">Certificate<wbr>Certificate<wbr>Description<wbr>Subject<wbr>Key<wbr>Id</h4>
 
 {{% choosable language csharp %}}
-<dl class="resources-properties">
-
-    <dt class="property-optional"
+<dl class="resources-properties"><dt class="property-optional"
             title="Optional">
         <span id="keyid_csharp">
 <a href="#keyid_csharp" style="color: inherit; text-decoration: inherit;">Key<wbr>Id</a>
@@ -4206,14 +3679,11 @@ Structure is documented below.
         <span class="property-indicator"></span>
         <span class="property-type">string</span>
     </dt>
-    <dd>{{% md %}}{{% /md %}}</dd>
-</dl>
+    <dd>{{% md %}}{{% /md %}}</dd></dl>
 {{% /choosable %}}
 
 {{% choosable language go %}}
-<dl class="resources-properties">
-
-    <dt class="property-optional"
+<dl class="resources-properties"><dt class="property-optional"
             title="Optional">
         <span id="keyid_go">
 <a href="#keyid_go" style="color: inherit; text-decoration: inherit;">Key<wbr>Id</a>
@@ -4221,14 +3691,11 @@ Structure is documented below.
         <span class="property-indicator"></span>
         <span class="property-type">string</span>
     </dt>
-    <dd>{{% md %}}{{% /md %}}</dd>
-</dl>
+    <dd>{{% md %}}{{% /md %}}</dd></dl>
 {{% /choosable %}}
 
 {{% choosable language nodejs %}}
-<dl class="resources-properties">
-
-    <dt class="property-optional"
+<dl class="resources-properties"><dt class="property-optional"
             title="Optional">
         <span id="keyid_nodejs">
 <a href="#keyid_nodejs" style="color: inherit; text-decoration: inherit;">key<wbr>Id</a>
@@ -4236,14 +3703,11 @@ Structure is documented below.
         <span class="property-indicator"></span>
         <span class="property-type">string</span>
     </dt>
-    <dd>{{% md %}}{{% /md %}}</dd>
-</dl>
+    <dd>{{% md %}}{{% /md %}}</dd></dl>
 {{% /choosable %}}
 
 {{% choosable language python %}}
-<dl class="resources-properties">
-
-    <dt class="property-optional"
+<dl class="resources-properties"><dt class="property-optional"
             title="Optional">
         <span id="key_id_python">
 <a href="#key_id_python" style="color: inherit; text-decoration: inherit;">key_<wbr>id</a>
@@ -4251,16 +3715,13 @@ Structure is documented below.
         <span class="property-indicator"></span>
         <span class="property-type">str</span>
     </dt>
-    <dd>{{% md %}}{{% /md %}}</dd>
-</dl>
+    <dd>{{% md %}}{{% /md %}}</dd></dl>
 {{% /choosable %}}
 
 <h4 id="certificateconfig">Certificate<wbr>Config</h4>
 
 {{% choosable language csharp %}}
-<dl class="resources-properties">
-
-    <dt class="property-required"
+<dl class="resources-properties"><dt class="property-required"
             title="Required">
         <span id="publickey_csharp">
 <a href="#publickey_csharp" style="color: inherit; text-decoration: inherit;">Public<wbr>Key</a>
@@ -4270,8 +3731,7 @@ Structure is documented below.
     </dt>
     <dd>{{% md %}}A PublicKey describes a public key.
 Structure is documented below.
-{{% /md %}}</dd>
-    <dt class="property-required"
+{{% /md %}}</dd><dt class="property-required"
             title="Required">
         <span id="reusableconfig_csharp">
 <a href="#reusableconfig_csharp" style="color: inherit; text-decoration: inherit;">Reusable<wbr>Config</a>
@@ -4281,8 +3741,7 @@ Structure is documented below.
     </dt>
     <dd>{{% md %}}A resource path to a ReusableConfig in the format
 `projects/*/locations/*/reusableConfigs/*`.
-{{% /md %}}</dd>
-    <dt class="property-required"
+{{% /md %}}</dd><dt class="property-required"
             title="Required">
         <span id="subjectconfig_csharp">
 <a href="#subjectconfig_csharp" style="color: inherit; text-decoration: inherit;">Subject<wbr>Config</a>
@@ -4292,14 +3751,11 @@ Structure is documented below.
     </dt>
     <dd>{{% md %}}Specifies some of the values in a certificate that are related to the subject.
 Structure is documented below.
-{{% /md %}}</dd>
-</dl>
+{{% /md %}}</dd></dl>
 {{% /choosable %}}
 
 {{% choosable language go %}}
-<dl class="resources-properties">
-
-    <dt class="property-required"
+<dl class="resources-properties"><dt class="property-required"
             title="Required">
         <span id="publickey_go">
 <a href="#publickey_go" style="color: inherit; text-decoration: inherit;">Public<wbr>Key</a>
@@ -4309,8 +3765,7 @@ Structure is documented below.
     </dt>
     <dd>{{% md %}}A PublicKey describes a public key.
 Structure is documented below.
-{{% /md %}}</dd>
-    <dt class="property-required"
+{{% /md %}}</dd><dt class="property-required"
             title="Required">
         <span id="reusableconfig_go">
 <a href="#reusableconfig_go" style="color: inherit; text-decoration: inherit;">Reusable<wbr>Config</a>
@@ -4320,8 +3775,7 @@ Structure is documented below.
     </dt>
     <dd>{{% md %}}A resource path to a ReusableConfig in the format
 `projects/*/locations/*/reusableConfigs/*`.
-{{% /md %}}</dd>
-    <dt class="property-required"
+{{% /md %}}</dd><dt class="property-required"
             title="Required">
         <span id="subjectconfig_go">
 <a href="#subjectconfig_go" style="color: inherit; text-decoration: inherit;">Subject<wbr>Config</a>
@@ -4331,14 +3785,11 @@ Structure is documented below.
     </dt>
     <dd>{{% md %}}Specifies some of the values in a certificate that are related to the subject.
 Structure is documented below.
-{{% /md %}}</dd>
-</dl>
+{{% /md %}}</dd></dl>
 {{% /choosable %}}
 
 {{% choosable language nodejs %}}
-<dl class="resources-properties">
-
-    <dt class="property-required"
+<dl class="resources-properties"><dt class="property-required"
             title="Required">
         <span id="publickey_nodejs">
 <a href="#publickey_nodejs" style="color: inherit; text-decoration: inherit;">public<wbr>Key</a>
@@ -4348,8 +3799,7 @@ Structure is documented below.
     </dt>
     <dd>{{% md %}}A PublicKey describes a public key.
 Structure is documented below.
-{{% /md %}}</dd>
-    <dt class="property-required"
+{{% /md %}}</dd><dt class="property-required"
             title="Required">
         <span id="reusableconfig_nodejs">
 <a href="#reusableconfig_nodejs" style="color: inherit; text-decoration: inherit;">reusable<wbr>Config</a>
@@ -4359,8 +3809,7 @@ Structure is documented below.
     </dt>
     <dd>{{% md %}}A resource path to a ReusableConfig in the format
 `projects/*/locations/*/reusableConfigs/*`.
-{{% /md %}}</dd>
-    <dt class="property-required"
+{{% /md %}}</dd><dt class="property-required"
             title="Required">
         <span id="subjectconfig_nodejs">
 <a href="#subjectconfig_nodejs" style="color: inherit; text-decoration: inherit;">subject<wbr>Config</a>
@@ -4370,14 +3819,11 @@ Structure is documented below.
     </dt>
     <dd>{{% md %}}Specifies some of the values in a certificate that are related to the subject.
 Structure is documented below.
-{{% /md %}}</dd>
-</dl>
+{{% /md %}}</dd></dl>
 {{% /choosable %}}
 
 {{% choosable language python %}}
-<dl class="resources-properties">
-
-    <dt class="property-required"
+<dl class="resources-properties"><dt class="property-required"
             title="Required">
         <span id="public_key_python">
 <a href="#public_key_python" style="color: inherit; text-decoration: inherit;">public_<wbr>key</a>
@@ -4387,8 +3833,7 @@ Structure is documented below.
     </dt>
     <dd>{{% md %}}A PublicKey describes a public key.
 Structure is documented below.
-{{% /md %}}</dd>
-    <dt class="property-required"
+{{% /md %}}</dd><dt class="property-required"
             title="Required">
         <span id="reusable_config_python">
 <a href="#reusable_config_python" style="color: inherit; text-decoration: inherit;">reusable_<wbr>config</a>
@@ -4398,8 +3843,7 @@ Structure is documented below.
     </dt>
     <dd>{{% md %}}A resource path to a ReusableConfig in the format
 `projects/*/locations/*/reusableConfigs/*`.
-{{% /md %}}</dd>
-    <dt class="property-required"
+{{% /md %}}</dd><dt class="property-required"
             title="Required">
         <span id="subject_config_python">
 <a href="#subject_config_python" style="color: inherit; text-decoration: inherit;">subject_<wbr>config</a>
@@ -4409,16 +3853,13 @@ Structure is documented below.
     </dt>
     <dd>{{% md %}}Specifies some of the values in a certificate that are related to the subject.
 Structure is documented below.
-{{% /md %}}</dd>
-</dl>
+{{% /md %}}</dd></dl>
 {{% /choosable %}}
 
 <h4 id="certificateconfigpublickey">Certificate<wbr>Config<wbr>Public<wbr>Key</h4>
 
 {{% choosable language csharp %}}
-<dl class="resources-properties">
-
-    <dt class="property-required"
+<dl class="resources-properties"><dt class="property-required"
             title="Required">
         <span id="type_csharp">
 <a href="#type_csharp" style="color: inherit; text-decoration: inherit;">Type</a>
@@ -4428,8 +3869,7 @@ Structure is documented below.
     </dt>
     <dd>{{% md %}}Types of public keys that are supported. At a minimum, we support RSA and ECDSA, for the key sizes or curves listed: https://cloud.google.com/kms/docs/algorithms#asymmetric_signing_algorithms
 Possible values are `KEY_TYPE_UNSPECIFIED`, `PEM_RSA_KEY`, and `PEM_EC_KEY`.
-{{% /md %}}</dd>
-    <dt class="property-optional"
+{{% /md %}}</dd><dt class="property-optional"
             title="Optional">
         <span id="key_csharp">
 <a href="#key_csharp" style="color: inherit; text-decoration: inherit;">Key</a>
@@ -4438,14 +3878,11 @@ Possible values are `KEY_TYPE_UNSPECIFIED`, `PEM_RSA_KEY`, and `PEM_EC_KEY`.
         <span class="property-type">string</span>
     </dt>
     <dd>{{% md %}}Required. A public key. When this is specified in a request, the padding and encoding can be any of the options described by the respective 'KeyType' value. When this is generated by the service, it will always be an RFC 5280 SubjectPublicKeyInfo structure containing an algorithm identifier and a key. A base64-encoded string.
-{{% /md %}}</dd>
-</dl>
+{{% /md %}}</dd></dl>
 {{% /choosable %}}
 
 {{% choosable language go %}}
-<dl class="resources-properties">
-
-    <dt class="property-required"
+<dl class="resources-properties"><dt class="property-required"
             title="Required">
         <span id="type_go">
 <a href="#type_go" style="color: inherit; text-decoration: inherit;">Type</a>
@@ -4455,8 +3892,7 @@ Possible values are `KEY_TYPE_UNSPECIFIED`, `PEM_RSA_KEY`, and `PEM_EC_KEY`.
     </dt>
     <dd>{{% md %}}Types of public keys that are supported. At a minimum, we support RSA and ECDSA, for the key sizes or curves listed: https://cloud.google.com/kms/docs/algorithms#asymmetric_signing_algorithms
 Possible values are `KEY_TYPE_UNSPECIFIED`, `PEM_RSA_KEY`, and `PEM_EC_KEY`.
-{{% /md %}}</dd>
-    <dt class="property-optional"
+{{% /md %}}</dd><dt class="property-optional"
             title="Optional">
         <span id="key_go">
 <a href="#key_go" style="color: inherit; text-decoration: inherit;">Key</a>
@@ -4465,14 +3901,11 @@ Possible values are `KEY_TYPE_UNSPECIFIED`, `PEM_RSA_KEY`, and `PEM_EC_KEY`.
         <span class="property-type">string</span>
     </dt>
     <dd>{{% md %}}Required. A public key. When this is specified in a request, the padding and encoding can be any of the options described by the respective 'KeyType' value. When this is generated by the service, it will always be an RFC 5280 SubjectPublicKeyInfo structure containing an algorithm identifier and a key. A base64-encoded string.
-{{% /md %}}</dd>
-</dl>
+{{% /md %}}</dd></dl>
 {{% /choosable %}}
 
 {{% choosable language nodejs %}}
-<dl class="resources-properties">
-
-    <dt class="property-required"
+<dl class="resources-properties"><dt class="property-required"
             title="Required">
         <span id="type_nodejs">
 <a href="#type_nodejs" style="color: inherit; text-decoration: inherit;">type</a>
@@ -4482,8 +3915,7 @@ Possible values are `KEY_TYPE_UNSPECIFIED`, `PEM_RSA_KEY`, and `PEM_EC_KEY`.
     </dt>
     <dd>{{% md %}}Types of public keys that are supported. At a minimum, we support RSA and ECDSA, for the key sizes or curves listed: https://cloud.google.com/kms/docs/algorithms#asymmetric_signing_algorithms
 Possible values are `KEY_TYPE_UNSPECIFIED`, `PEM_RSA_KEY`, and `PEM_EC_KEY`.
-{{% /md %}}</dd>
-    <dt class="property-optional"
+{{% /md %}}</dd><dt class="property-optional"
             title="Optional">
         <span id="key_nodejs">
 <a href="#key_nodejs" style="color: inherit; text-decoration: inherit;">key</a>
@@ -4492,14 +3924,11 @@ Possible values are `KEY_TYPE_UNSPECIFIED`, `PEM_RSA_KEY`, and `PEM_EC_KEY`.
         <span class="property-type">string</span>
     </dt>
     <dd>{{% md %}}Required. A public key. When this is specified in a request, the padding and encoding can be any of the options described by the respective 'KeyType' value. When this is generated by the service, it will always be an RFC 5280 SubjectPublicKeyInfo structure containing an algorithm identifier and a key. A base64-encoded string.
-{{% /md %}}</dd>
-</dl>
+{{% /md %}}</dd></dl>
 {{% /choosable %}}
 
 {{% choosable language python %}}
-<dl class="resources-properties">
-
-    <dt class="property-required"
+<dl class="resources-properties"><dt class="property-required"
             title="Required">
         <span id="type_python">
 <a href="#type_python" style="color: inherit; text-decoration: inherit;">type</a>
@@ -4509,8 +3938,7 @@ Possible values are `KEY_TYPE_UNSPECIFIED`, `PEM_RSA_KEY`, and `PEM_EC_KEY`.
     </dt>
     <dd>{{% md %}}Types of public keys that are supported. At a minimum, we support RSA and ECDSA, for the key sizes or curves listed: https://cloud.google.com/kms/docs/algorithms#asymmetric_signing_algorithms
 Possible values are `KEY_TYPE_UNSPECIFIED`, `PEM_RSA_KEY`, and `PEM_EC_KEY`.
-{{% /md %}}</dd>
-    <dt class="property-optional"
+{{% /md %}}</dd><dt class="property-optional"
             title="Optional">
         <span id="key_python">
 <a href="#key_python" style="color: inherit; text-decoration: inherit;">key</a>
@@ -4519,16 +3947,13 @@ Possible values are `KEY_TYPE_UNSPECIFIED`, `PEM_RSA_KEY`, and `PEM_EC_KEY`.
         <span class="property-type">str</span>
     </dt>
     <dd>{{% md %}}Required. A public key. When this is specified in a request, the padding and encoding can be any of the options described by the respective 'KeyType' value. When this is generated by the service, it will always be an RFC 5280 SubjectPublicKeyInfo structure containing an algorithm identifier and a key. A base64-encoded string.
-{{% /md %}}</dd>
-</dl>
+{{% /md %}}</dd></dl>
 {{% /choosable %}}
 
 <h4 id="certificateconfigreusableconfig">Certificate<wbr>Config<wbr>Reusable<wbr>Config</h4>
 
 {{% choosable language csharp %}}
-<dl class="resources-properties">
-
-    <dt class="property-required"
+<dl class="resources-properties"><dt class="property-required"
             title="Required">
         <span id="reusableconfig_csharp">
 <a href="#reusableconfig_csharp" style="color: inherit; text-decoration: inherit;">Reusable<wbr>Config</a>
@@ -4538,14 +3963,11 @@ Possible values are `KEY_TYPE_UNSPECIFIED`, `PEM_RSA_KEY`, and `PEM_EC_KEY`.
     </dt>
     <dd>{{% md %}}A resource path to a ReusableConfig in the format
 `projects/*/locations/*/reusableConfigs/*`.
-{{% /md %}}</dd>
-</dl>
+{{% /md %}}</dd></dl>
 {{% /choosable %}}
 
 {{% choosable language go %}}
-<dl class="resources-properties">
-
-    <dt class="property-required"
+<dl class="resources-properties"><dt class="property-required"
             title="Required">
         <span id="reusableconfig_go">
 <a href="#reusableconfig_go" style="color: inherit; text-decoration: inherit;">Reusable<wbr>Config</a>
@@ -4555,14 +3977,11 @@ Possible values are `KEY_TYPE_UNSPECIFIED`, `PEM_RSA_KEY`, and `PEM_EC_KEY`.
     </dt>
     <dd>{{% md %}}A resource path to a ReusableConfig in the format
 `projects/*/locations/*/reusableConfigs/*`.
-{{% /md %}}</dd>
-</dl>
+{{% /md %}}</dd></dl>
 {{% /choosable %}}
 
 {{% choosable language nodejs %}}
-<dl class="resources-properties">
-
-    <dt class="property-required"
+<dl class="resources-properties"><dt class="property-required"
             title="Required">
         <span id="reusableconfig_nodejs">
 <a href="#reusableconfig_nodejs" style="color: inherit; text-decoration: inherit;">reusable<wbr>Config</a>
@@ -4572,14 +3991,11 @@ Possible values are `KEY_TYPE_UNSPECIFIED`, `PEM_RSA_KEY`, and `PEM_EC_KEY`.
     </dt>
     <dd>{{% md %}}A resource path to a ReusableConfig in the format
 `projects/*/locations/*/reusableConfigs/*`.
-{{% /md %}}</dd>
-</dl>
+{{% /md %}}</dd></dl>
 {{% /choosable %}}
 
 {{% choosable language python %}}
-<dl class="resources-properties">
-
-    <dt class="property-required"
+<dl class="resources-properties"><dt class="property-required"
             title="Required">
         <span id="reusable_config_python">
 <a href="#reusable_config_python" style="color: inherit; text-decoration: inherit;">reusable_<wbr>config</a>
@@ -4589,16 +4005,13 @@ Possible values are `KEY_TYPE_UNSPECIFIED`, `PEM_RSA_KEY`, and `PEM_EC_KEY`.
     </dt>
     <dd>{{% md %}}A resource path to a ReusableConfig in the format
 `projects/*/locations/*/reusableConfigs/*`.
-{{% /md %}}</dd>
-</dl>
+{{% /md %}}</dd></dl>
 {{% /choosable %}}
 
 <h4 id="certificateconfigsubjectconfig">Certificate<wbr>Config<wbr>Subject<wbr>Config</h4>
 
 {{% choosable language csharp %}}
-<dl class="resources-properties">
-
-    <dt class="property-required"
+<dl class="resources-properties"><dt class="property-required"
             title="Required">
         <span id="commonname_csharp">
 <a href="#commonname_csharp" style="color: inherit; text-decoration: inherit;">Common<wbr>Name</a>
@@ -4607,8 +4020,7 @@ Possible values are `KEY_TYPE_UNSPECIFIED`, `PEM_RSA_KEY`, and `PEM_EC_KEY`.
         <span class="property-type">string</span>
     </dt>
     <dd>{{% md %}}The common name of the distinguished name.
-{{% /md %}}</dd>
-    <dt class="property-required"
+{{% /md %}}</dd><dt class="property-required"
             title="Required">
         <span id="subject_csharp">
 <a href="#subject_csharp" style="color: inherit; text-decoration: inherit;">Subject</a>
@@ -4618,8 +4030,7 @@ Possible values are `KEY_TYPE_UNSPECIFIED`, `PEM_RSA_KEY`, and `PEM_EC_KEY`.
     </dt>
     <dd>{{% md %}}Contains distinguished name fields such as the location and organization.
 Structure is documented below.
-{{% /md %}}</dd>
-    <dt class="property-optional"
+{{% /md %}}</dd><dt class="property-optional"
             title="Optional">
         <span id="subjectaltname_csharp">
 <a href="#subjectaltname_csharp" style="color: inherit; text-decoration: inherit;">Subject<wbr>Alt<wbr>Name</a>
@@ -4629,14 +4040,11 @@ Structure is documented below.
     </dt>
     <dd>{{% md %}}The subject alternative name fields.
 Structure is documented below.
-{{% /md %}}</dd>
-</dl>
+{{% /md %}}</dd></dl>
 {{% /choosable %}}
 
 {{% choosable language go %}}
-<dl class="resources-properties">
-
-    <dt class="property-required"
+<dl class="resources-properties"><dt class="property-required"
             title="Required">
         <span id="commonname_go">
 <a href="#commonname_go" style="color: inherit; text-decoration: inherit;">Common<wbr>Name</a>
@@ -4645,8 +4053,7 @@ Structure is documented below.
         <span class="property-type">string</span>
     </dt>
     <dd>{{% md %}}The common name of the distinguished name.
-{{% /md %}}</dd>
-    <dt class="property-required"
+{{% /md %}}</dd><dt class="property-required"
             title="Required">
         <span id="subject_go">
 <a href="#subject_go" style="color: inherit; text-decoration: inherit;">Subject</a>
@@ -4656,8 +4063,7 @@ Structure is documented below.
     </dt>
     <dd>{{% md %}}Contains distinguished name fields such as the location and organization.
 Structure is documented below.
-{{% /md %}}</dd>
-    <dt class="property-optional"
+{{% /md %}}</dd><dt class="property-optional"
             title="Optional">
         <span id="subjectaltname_go">
 <a href="#subjectaltname_go" style="color: inherit; text-decoration: inherit;">Subject<wbr>Alt<wbr>Name</a>
@@ -4667,14 +4073,11 @@ Structure is documented below.
     </dt>
     <dd>{{% md %}}The subject alternative name fields.
 Structure is documented below.
-{{% /md %}}</dd>
-</dl>
+{{% /md %}}</dd></dl>
 {{% /choosable %}}
 
 {{% choosable language nodejs %}}
-<dl class="resources-properties">
-
-    <dt class="property-required"
+<dl class="resources-properties"><dt class="property-required"
             title="Required">
         <span id="commonname_nodejs">
 <a href="#commonname_nodejs" style="color: inherit; text-decoration: inherit;">common<wbr>Name</a>
@@ -4683,8 +4086,7 @@ Structure is documented below.
         <span class="property-type">string</span>
     </dt>
     <dd>{{% md %}}The common name of the distinguished name.
-{{% /md %}}</dd>
-    <dt class="property-required"
+{{% /md %}}</dd><dt class="property-required"
             title="Required">
         <span id="subject_nodejs">
 <a href="#subject_nodejs" style="color: inherit; text-decoration: inherit;">subject</a>
@@ -4694,8 +4096,7 @@ Structure is documented below.
     </dt>
     <dd>{{% md %}}Contains distinguished name fields such as the location and organization.
 Structure is documented below.
-{{% /md %}}</dd>
-    <dt class="property-optional"
+{{% /md %}}</dd><dt class="property-optional"
             title="Optional">
         <span id="subjectaltname_nodejs">
 <a href="#subjectaltname_nodejs" style="color: inherit; text-decoration: inherit;">subject<wbr>Alt<wbr>Name</a>
@@ -4705,14 +4106,11 @@ Structure is documented below.
     </dt>
     <dd>{{% md %}}The subject alternative name fields.
 Structure is documented below.
-{{% /md %}}</dd>
-</dl>
+{{% /md %}}</dd></dl>
 {{% /choosable %}}
 
 {{% choosable language python %}}
-<dl class="resources-properties">
-
-    <dt class="property-required"
+<dl class="resources-properties"><dt class="property-required"
             title="Required">
         <span id="common_name_python">
 <a href="#common_name_python" style="color: inherit; text-decoration: inherit;">common_<wbr>name</a>
@@ -4721,8 +4119,7 @@ Structure is documented below.
         <span class="property-type">str</span>
     </dt>
     <dd>{{% md %}}The common name of the distinguished name.
-{{% /md %}}</dd>
-    <dt class="property-required"
+{{% /md %}}</dd><dt class="property-required"
             title="Required">
         <span id="subject_python">
 <a href="#subject_python" style="color: inherit; text-decoration: inherit;">subject</a>
@@ -4732,8 +4129,7 @@ Structure is documented below.
     </dt>
     <dd>{{% md %}}Contains distinguished name fields such as the location and organization.
 Structure is documented below.
-{{% /md %}}</dd>
-    <dt class="property-optional"
+{{% /md %}}</dd><dt class="property-optional"
             title="Optional">
         <span id="subject_alt_name_python">
 <a href="#subject_alt_name_python" style="color: inherit; text-decoration: inherit;">subject_<wbr>alt_<wbr>name</a>
@@ -4743,16 +4139,13 @@ Structure is documented below.
     </dt>
     <dd>{{% md %}}The subject alternative name fields.
 Structure is documented below.
-{{% /md %}}</dd>
-</dl>
+{{% /md %}}</dd></dl>
 {{% /choosable %}}
 
 <h4 id="certificateconfigsubjectconfigsubject">Certificate<wbr>Config<wbr>Subject<wbr>Config<wbr>Subject</h4>
 
 {{% choosable language csharp %}}
-<dl class="resources-properties">
-
-    <dt class="property-required"
+<dl class="resources-properties"><dt class="property-required"
             title="Required">
         <span id="organization_csharp">
 <a href="#organization_csharp" style="color: inherit; text-decoration: inherit;">Organization</a>
@@ -4761,8 +4154,7 @@ Structure is documented below.
         <span class="property-type">string</span>
     </dt>
     <dd>{{% md %}}The organization of the subject.
-{{% /md %}}</dd>
-    <dt class="property-optional"
+{{% /md %}}</dd><dt class="property-optional"
             title="Optional">
         <span id="countrycode_csharp">
 <a href="#countrycode_csharp" style="color: inherit; text-decoration: inherit;">Country<wbr>Code</a>
@@ -4771,8 +4163,7 @@ Structure is documented below.
         <span class="property-type">string</span>
     </dt>
     <dd>{{% md %}}The country code of the subject.
-{{% /md %}}</dd>
-    <dt class="property-optional"
+{{% /md %}}</dd><dt class="property-optional"
             title="Optional">
         <span id="locality_csharp">
 <a href="#locality_csharp" style="color: inherit; text-decoration: inherit;">Locality</a>
@@ -4781,8 +4172,7 @@ Structure is documented below.
         <span class="property-type">string</span>
     </dt>
     <dd>{{% md %}}The locality or city of the subject.
-{{% /md %}}</dd>
-    <dt class="property-optional"
+{{% /md %}}</dd><dt class="property-optional"
             title="Optional">
         <span id="organizationalunit_csharp">
 <a href="#organizationalunit_csharp" style="color: inherit; text-decoration: inherit;">Organizational<wbr>Unit</a>
@@ -4791,8 +4181,7 @@ Structure is documented below.
         <span class="property-type">string</span>
     </dt>
     <dd>{{% md %}}The organizational unit of the subject.
-{{% /md %}}</dd>
-    <dt class="property-optional"
+{{% /md %}}</dd><dt class="property-optional"
             title="Optional">
         <span id="postalcode_csharp">
 <a href="#postalcode_csharp" style="color: inherit; text-decoration: inherit;">Postal<wbr>Code</a>
@@ -4801,8 +4190,7 @@ Structure is documented below.
         <span class="property-type">string</span>
     </dt>
     <dd>{{% md %}}The postal code of the subject.
-{{% /md %}}</dd>
-    <dt class="property-optional"
+{{% /md %}}</dd><dt class="property-optional"
             title="Optional">
         <span id="province_csharp">
 <a href="#province_csharp" style="color: inherit; text-decoration: inherit;">Province</a>
@@ -4811,8 +4199,7 @@ Structure is documented below.
         <span class="property-type">string</span>
     </dt>
     <dd>{{% md %}}The province, territory, or regional state of the subject.
-{{% /md %}}</dd>
-    <dt class="property-optional"
+{{% /md %}}</dd><dt class="property-optional"
             title="Optional">
         <span id="streetaddress_csharp">
 <a href="#streetaddress_csharp" style="color: inherit; text-decoration: inherit;">Street<wbr>Address</a>
@@ -4821,14 +4208,11 @@ Structure is documented below.
         <span class="property-type">string</span>
     </dt>
     <dd>{{% md %}}The street address of the subject.
-{{% /md %}}</dd>
-</dl>
+{{% /md %}}</dd></dl>
 {{% /choosable %}}
 
 {{% choosable language go %}}
-<dl class="resources-properties">
-
-    <dt class="property-required"
+<dl class="resources-properties"><dt class="property-required"
             title="Required">
         <span id="organization_go">
 <a href="#organization_go" style="color: inherit; text-decoration: inherit;">Organization</a>
@@ -4837,8 +4221,7 @@ Structure is documented below.
         <span class="property-type">string</span>
     </dt>
     <dd>{{% md %}}The organization of the subject.
-{{% /md %}}</dd>
-    <dt class="property-optional"
+{{% /md %}}</dd><dt class="property-optional"
             title="Optional">
         <span id="countrycode_go">
 <a href="#countrycode_go" style="color: inherit; text-decoration: inherit;">Country<wbr>Code</a>
@@ -4847,8 +4230,7 @@ Structure is documented below.
         <span class="property-type">string</span>
     </dt>
     <dd>{{% md %}}The country code of the subject.
-{{% /md %}}</dd>
-    <dt class="property-optional"
+{{% /md %}}</dd><dt class="property-optional"
             title="Optional">
         <span id="locality_go">
 <a href="#locality_go" style="color: inherit; text-decoration: inherit;">Locality</a>
@@ -4857,8 +4239,7 @@ Structure is documented below.
         <span class="property-type">string</span>
     </dt>
     <dd>{{% md %}}The locality or city of the subject.
-{{% /md %}}</dd>
-    <dt class="property-optional"
+{{% /md %}}</dd><dt class="property-optional"
             title="Optional">
         <span id="organizationalunit_go">
 <a href="#organizationalunit_go" style="color: inherit; text-decoration: inherit;">Organizational<wbr>Unit</a>
@@ -4867,8 +4248,7 @@ Structure is documented below.
         <span class="property-type">string</span>
     </dt>
     <dd>{{% md %}}The organizational unit of the subject.
-{{% /md %}}</dd>
-    <dt class="property-optional"
+{{% /md %}}</dd><dt class="property-optional"
             title="Optional">
         <span id="postalcode_go">
 <a href="#postalcode_go" style="color: inherit; text-decoration: inherit;">Postal<wbr>Code</a>
@@ -4877,8 +4257,7 @@ Structure is documented below.
         <span class="property-type">string</span>
     </dt>
     <dd>{{% md %}}The postal code of the subject.
-{{% /md %}}</dd>
-    <dt class="property-optional"
+{{% /md %}}</dd><dt class="property-optional"
             title="Optional">
         <span id="province_go">
 <a href="#province_go" style="color: inherit; text-decoration: inherit;">Province</a>
@@ -4887,8 +4266,7 @@ Structure is documented below.
         <span class="property-type">string</span>
     </dt>
     <dd>{{% md %}}The province, territory, or regional state of the subject.
-{{% /md %}}</dd>
-    <dt class="property-optional"
+{{% /md %}}</dd><dt class="property-optional"
             title="Optional">
         <span id="streetaddress_go">
 <a href="#streetaddress_go" style="color: inherit; text-decoration: inherit;">Street<wbr>Address</a>
@@ -4897,14 +4275,11 @@ Structure is documented below.
         <span class="property-type">string</span>
     </dt>
     <dd>{{% md %}}The street address of the subject.
-{{% /md %}}</dd>
-</dl>
+{{% /md %}}</dd></dl>
 {{% /choosable %}}
 
 {{% choosable language nodejs %}}
-<dl class="resources-properties">
-
-    <dt class="property-required"
+<dl class="resources-properties"><dt class="property-required"
             title="Required">
         <span id="organization_nodejs">
 <a href="#organization_nodejs" style="color: inherit; text-decoration: inherit;">organization</a>
@@ -4913,8 +4288,7 @@ Structure is documented below.
         <span class="property-type">string</span>
     </dt>
     <dd>{{% md %}}The organization of the subject.
-{{% /md %}}</dd>
-    <dt class="property-optional"
+{{% /md %}}</dd><dt class="property-optional"
             title="Optional">
         <span id="countrycode_nodejs">
 <a href="#countrycode_nodejs" style="color: inherit; text-decoration: inherit;">country<wbr>Code</a>
@@ -4923,8 +4297,7 @@ Structure is documented below.
         <span class="property-type">string</span>
     </dt>
     <dd>{{% md %}}The country code of the subject.
-{{% /md %}}</dd>
-    <dt class="property-optional"
+{{% /md %}}</dd><dt class="property-optional"
             title="Optional">
         <span id="locality_nodejs">
 <a href="#locality_nodejs" style="color: inherit; text-decoration: inherit;">locality</a>
@@ -4933,8 +4306,7 @@ Structure is documented below.
         <span class="property-type">string</span>
     </dt>
     <dd>{{% md %}}The locality or city of the subject.
-{{% /md %}}</dd>
-    <dt class="property-optional"
+{{% /md %}}</dd><dt class="property-optional"
             title="Optional">
         <span id="organizationalunit_nodejs">
 <a href="#organizationalunit_nodejs" style="color: inherit; text-decoration: inherit;">organizational<wbr>Unit</a>
@@ -4943,8 +4315,7 @@ Structure is documented below.
         <span class="property-type">string</span>
     </dt>
     <dd>{{% md %}}The organizational unit of the subject.
-{{% /md %}}</dd>
-    <dt class="property-optional"
+{{% /md %}}</dd><dt class="property-optional"
             title="Optional">
         <span id="postalcode_nodejs">
 <a href="#postalcode_nodejs" style="color: inherit; text-decoration: inherit;">postal<wbr>Code</a>
@@ -4953,8 +4324,7 @@ Structure is documented below.
         <span class="property-type">string</span>
     </dt>
     <dd>{{% md %}}The postal code of the subject.
-{{% /md %}}</dd>
-    <dt class="property-optional"
+{{% /md %}}</dd><dt class="property-optional"
             title="Optional">
         <span id="province_nodejs">
 <a href="#province_nodejs" style="color: inherit; text-decoration: inherit;">province</a>
@@ -4963,8 +4333,7 @@ Structure is documented below.
         <span class="property-type">string</span>
     </dt>
     <dd>{{% md %}}The province, territory, or regional state of the subject.
-{{% /md %}}</dd>
-    <dt class="property-optional"
+{{% /md %}}</dd><dt class="property-optional"
             title="Optional">
         <span id="streetaddress_nodejs">
 <a href="#streetaddress_nodejs" style="color: inherit; text-decoration: inherit;">street<wbr>Address</a>
@@ -4973,14 +4342,11 @@ Structure is documented below.
         <span class="property-type">string</span>
     </dt>
     <dd>{{% md %}}The street address of the subject.
-{{% /md %}}</dd>
-</dl>
+{{% /md %}}</dd></dl>
 {{% /choosable %}}
 
 {{% choosable language python %}}
-<dl class="resources-properties">
-
-    <dt class="property-required"
+<dl class="resources-properties"><dt class="property-required"
             title="Required">
         <span id="organization_python">
 <a href="#organization_python" style="color: inherit; text-decoration: inherit;">organization</a>
@@ -4989,8 +4355,7 @@ Structure is documented below.
         <span class="property-type">str</span>
     </dt>
     <dd>{{% md %}}The organization of the subject.
-{{% /md %}}</dd>
-    <dt class="property-optional"
+{{% /md %}}</dd><dt class="property-optional"
             title="Optional">
         <span id="country_code_python">
 <a href="#country_code_python" style="color: inherit; text-decoration: inherit;">country_<wbr>code</a>
@@ -4999,8 +4364,7 @@ Structure is documented below.
         <span class="property-type">str</span>
     </dt>
     <dd>{{% md %}}The country code of the subject.
-{{% /md %}}</dd>
-    <dt class="property-optional"
+{{% /md %}}</dd><dt class="property-optional"
             title="Optional">
         <span id="locality_python">
 <a href="#locality_python" style="color: inherit; text-decoration: inherit;">locality</a>
@@ -5009,8 +4373,7 @@ Structure is documented below.
         <span class="property-type">str</span>
     </dt>
     <dd>{{% md %}}The locality or city of the subject.
-{{% /md %}}</dd>
-    <dt class="property-optional"
+{{% /md %}}</dd><dt class="property-optional"
             title="Optional">
         <span id="organizational_unit_python">
 <a href="#organizational_unit_python" style="color: inherit; text-decoration: inherit;">organizational_<wbr>unit</a>
@@ -5019,8 +4382,7 @@ Structure is documented below.
         <span class="property-type">str</span>
     </dt>
     <dd>{{% md %}}The organizational unit of the subject.
-{{% /md %}}</dd>
-    <dt class="property-optional"
+{{% /md %}}</dd><dt class="property-optional"
             title="Optional">
         <span id="postal_code_python">
 <a href="#postal_code_python" style="color: inherit; text-decoration: inherit;">postal_<wbr>code</a>
@@ -5029,8 +4391,7 @@ Structure is documented below.
         <span class="property-type">str</span>
     </dt>
     <dd>{{% md %}}The postal code of the subject.
-{{% /md %}}</dd>
-    <dt class="property-optional"
+{{% /md %}}</dd><dt class="property-optional"
             title="Optional">
         <span id="province_python">
 <a href="#province_python" style="color: inherit; text-decoration: inherit;">province</a>
@@ -5039,8 +4400,7 @@ Structure is documented below.
         <span class="property-type">str</span>
     </dt>
     <dd>{{% md %}}The province, territory, or regional state of the subject.
-{{% /md %}}</dd>
-    <dt class="property-optional"
+{{% /md %}}</dd><dt class="property-optional"
             title="Optional">
         <span id="street_address_python">
 <a href="#street_address_python" style="color: inherit; text-decoration: inherit;">street_<wbr>address</a>
@@ -5049,16 +4409,13 @@ Structure is documented below.
         <span class="property-type">str</span>
     </dt>
     <dd>{{% md %}}The street address of the subject.
-{{% /md %}}</dd>
-</dl>
+{{% /md %}}</dd></dl>
 {{% /choosable %}}
 
 <h4 id="certificateconfigsubjectconfigsubjectaltname">Certificate<wbr>Config<wbr>Subject<wbr>Config<wbr>Subject<wbr>Alt<wbr>Name</h4>
 
 {{% choosable language csharp %}}
-<dl class="resources-properties">
-
-    <dt class="property-optional"
+<dl class="resources-properties"><dt class="property-optional"
             title="Optional">
         <span id="dnsnames_csharp">
 <a href="#dnsnames_csharp" style="color: inherit; text-decoration: inherit;">Dns<wbr>Names</a>
@@ -5067,8 +4424,7 @@ Structure is documented below.
         <span class="property-type">List&lt;string&gt;</span>
     </dt>
     <dd>{{% md %}}Contains only valid, fully-qualified host names.
-{{% /md %}}</dd>
-    <dt class="property-optional"
+{{% /md %}}</dd><dt class="property-optional"
             title="Optional">
         <span id="emailaddresses_csharp">
 <a href="#emailaddresses_csharp" style="color: inherit; text-decoration: inherit;">Email<wbr>Addresses</a>
@@ -5077,8 +4433,7 @@ Structure is documented below.
         <span class="property-type">List&lt;string&gt;</span>
     </dt>
     <dd>{{% md %}}Contains only valid RFC 2822 E-mail addresses.
-{{% /md %}}</dd>
-    <dt class="property-optional"
+{{% /md %}}</dd><dt class="property-optional"
             title="Optional">
         <span id="ipaddresses_csharp">
 <a href="#ipaddresses_csharp" style="color: inherit; text-decoration: inherit;">Ip<wbr>Addresses</a>
@@ -5087,8 +4442,7 @@ Structure is documented below.
         <span class="property-type">List&lt;string&gt;</span>
     </dt>
     <dd>{{% md %}}Contains only valid 32-bit IPv4 addresses or RFC 4291 IPv6 addresses.
-{{% /md %}}</dd>
-    <dt class="property-optional"
+{{% /md %}}</dd><dt class="property-optional"
             title="Optional">
         <span id="uris_csharp">
 <a href="#uris_csharp" style="color: inherit; text-decoration: inherit;">Uris</a>
@@ -5097,14 +4451,11 @@ Structure is documented below.
         <span class="property-type">List&lt;string&gt;</span>
     </dt>
     <dd>{{% md %}}Contains only valid RFC 3986 URIs.
-{{% /md %}}</dd>
-</dl>
+{{% /md %}}</dd></dl>
 {{% /choosable %}}
 
 {{% choosable language go %}}
-<dl class="resources-properties">
-
-    <dt class="property-optional"
+<dl class="resources-properties"><dt class="property-optional"
             title="Optional">
         <span id="dnsnames_go">
 <a href="#dnsnames_go" style="color: inherit; text-decoration: inherit;">Dns<wbr>Names</a>
@@ -5113,8 +4464,7 @@ Structure is documented below.
         <span class="property-type">[]string</span>
     </dt>
     <dd>{{% md %}}Contains only valid, fully-qualified host names.
-{{% /md %}}</dd>
-    <dt class="property-optional"
+{{% /md %}}</dd><dt class="property-optional"
             title="Optional">
         <span id="emailaddresses_go">
 <a href="#emailaddresses_go" style="color: inherit; text-decoration: inherit;">Email<wbr>Addresses</a>
@@ -5123,8 +4473,7 @@ Structure is documented below.
         <span class="property-type">[]string</span>
     </dt>
     <dd>{{% md %}}Contains only valid RFC 2822 E-mail addresses.
-{{% /md %}}</dd>
-    <dt class="property-optional"
+{{% /md %}}</dd><dt class="property-optional"
             title="Optional">
         <span id="ipaddresses_go">
 <a href="#ipaddresses_go" style="color: inherit; text-decoration: inherit;">Ip<wbr>Addresses</a>
@@ -5133,8 +4482,7 @@ Structure is documented below.
         <span class="property-type">[]string</span>
     </dt>
     <dd>{{% md %}}Contains only valid 32-bit IPv4 addresses or RFC 4291 IPv6 addresses.
-{{% /md %}}</dd>
-    <dt class="property-optional"
+{{% /md %}}</dd><dt class="property-optional"
             title="Optional">
         <span id="uris_go">
 <a href="#uris_go" style="color: inherit; text-decoration: inherit;">Uris</a>
@@ -5143,14 +4491,11 @@ Structure is documented below.
         <span class="property-type">[]string</span>
     </dt>
     <dd>{{% md %}}Contains only valid RFC 3986 URIs.
-{{% /md %}}</dd>
-</dl>
+{{% /md %}}</dd></dl>
 {{% /choosable %}}
 
 {{% choosable language nodejs %}}
-<dl class="resources-properties">
-
-    <dt class="property-optional"
+<dl class="resources-properties"><dt class="property-optional"
             title="Optional">
         <span id="dnsnames_nodejs">
 <a href="#dnsnames_nodejs" style="color: inherit; text-decoration: inherit;">dns<wbr>Names</a>
@@ -5159,8 +4504,7 @@ Structure is documented below.
         <span class="property-type">string[]</span>
     </dt>
     <dd>{{% md %}}Contains only valid, fully-qualified host names.
-{{% /md %}}</dd>
-    <dt class="property-optional"
+{{% /md %}}</dd><dt class="property-optional"
             title="Optional">
         <span id="emailaddresses_nodejs">
 <a href="#emailaddresses_nodejs" style="color: inherit; text-decoration: inherit;">email<wbr>Addresses</a>
@@ -5169,8 +4513,7 @@ Structure is documented below.
         <span class="property-type">string[]</span>
     </dt>
     <dd>{{% md %}}Contains only valid RFC 2822 E-mail addresses.
-{{% /md %}}</dd>
-    <dt class="property-optional"
+{{% /md %}}</dd><dt class="property-optional"
             title="Optional">
         <span id="ipaddresses_nodejs">
 <a href="#ipaddresses_nodejs" style="color: inherit; text-decoration: inherit;">ip<wbr>Addresses</a>
@@ -5179,8 +4522,7 @@ Structure is documented below.
         <span class="property-type">string[]</span>
     </dt>
     <dd>{{% md %}}Contains only valid 32-bit IPv4 addresses or RFC 4291 IPv6 addresses.
-{{% /md %}}</dd>
-    <dt class="property-optional"
+{{% /md %}}</dd><dt class="property-optional"
             title="Optional">
         <span id="uris_nodejs">
 <a href="#uris_nodejs" style="color: inherit; text-decoration: inherit;">uris</a>
@@ -5189,14 +4531,11 @@ Structure is documented below.
         <span class="property-type">string[]</span>
     </dt>
     <dd>{{% md %}}Contains only valid RFC 3986 URIs.
-{{% /md %}}</dd>
-</dl>
+{{% /md %}}</dd></dl>
 {{% /choosable %}}
 
 {{% choosable language python %}}
-<dl class="resources-properties">
-
-    <dt class="property-optional"
+<dl class="resources-properties"><dt class="property-optional"
             title="Optional">
         <span id="dns_names_python">
 <a href="#dns_names_python" style="color: inherit; text-decoration: inherit;">dns_<wbr>names</a>
@@ -5205,8 +4544,7 @@ Structure is documented below.
         <span class="property-type">Sequence[str]</span>
     </dt>
     <dd>{{% md %}}Contains only valid, fully-qualified host names.
-{{% /md %}}</dd>
-    <dt class="property-optional"
+{{% /md %}}</dd><dt class="property-optional"
             title="Optional">
         <span id="email_addresses_python">
 <a href="#email_addresses_python" style="color: inherit; text-decoration: inherit;">email_<wbr>addresses</a>
@@ -5215,8 +4553,7 @@ Structure is documented below.
         <span class="property-type">Sequence[str]</span>
     </dt>
     <dd>{{% md %}}Contains only valid RFC 2822 E-mail addresses.
-{{% /md %}}</dd>
-    <dt class="property-optional"
+{{% /md %}}</dd><dt class="property-optional"
             title="Optional">
         <span id="ip_addresses_python">
 <a href="#ip_addresses_python" style="color: inherit; text-decoration: inherit;">ip_<wbr>addresses</a>
@@ -5225,8 +4562,7 @@ Structure is documented below.
         <span class="property-type">Sequence[str]</span>
     </dt>
     <dd>{{% md %}}Contains only valid 32-bit IPv4 addresses or RFC 4291 IPv6 addresses.
-{{% /md %}}</dd>
-    <dt class="property-optional"
+{{% /md %}}</dd><dt class="property-optional"
             title="Optional">
         <span id="uris_python">
 <a href="#uris_python" style="color: inherit; text-decoration: inherit;">uris</a>
@@ -5235,16 +4571,13 @@ Structure is documented below.
         <span class="property-type">Sequence[str]</span>
     </dt>
     <dd>{{% md %}}Contains only valid RFC 3986 URIs.
-{{% /md %}}</dd>
-</dl>
+{{% /md %}}</dd></dl>
 {{% /choosable %}}
 
 <h4 id="certificaterevocationdetail">Certificate<wbr>Revocation<wbr>Detail</h4>
 
 {{% choosable language csharp %}}
-<dl class="resources-properties">
-
-    <dt class="property-optional"
+<dl class="resources-properties"><dt class="property-optional"
             title="Optional">
         <span id="revocationstate_csharp">
 <a href="#revocationstate_csharp" style="color: inherit; text-decoration: inherit;">Revocation<wbr>State</a>
@@ -5252,8 +4585,7 @@ Structure is documented below.
         <span class="property-indicator"></span>
         <span class="property-type">string</span>
     </dt>
-    <dd>{{% md %}}{{% /md %}}</dd>
-    <dt class="property-optional"
+    <dd>{{% md %}}{{% /md %}}</dd><dt class="property-optional"
             title="Optional">
         <span id="revocationtime_csharp">
 <a href="#revocationtime_csharp" style="color: inherit; text-decoration: inherit;">Revocation<wbr>Time</a>
@@ -5261,14 +4593,11 @@ Structure is documented below.
         <span class="property-indicator"></span>
         <span class="property-type">string</span>
     </dt>
-    <dd>{{% md %}}{{% /md %}}</dd>
-</dl>
+    <dd>{{% md %}}{{% /md %}}</dd></dl>
 {{% /choosable %}}
 
 {{% choosable language go %}}
-<dl class="resources-properties">
-
-    <dt class="property-optional"
+<dl class="resources-properties"><dt class="property-optional"
             title="Optional">
         <span id="revocationstate_go">
 <a href="#revocationstate_go" style="color: inherit; text-decoration: inherit;">Revocation<wbr>State</a>
@@ -5276,8 +4605,7 @@ Structure is documented below.
         <span class="property-indicator"></span>
         <span class="property-type">string</span>
     </dt>
-    <dd>{{% md %}}{{% /md %}}</dd>
-    <dt class="property-optional"
+    <dd>{{% md %}}{{% /md %}}</dd><dt class="property-optional"
             title="Optional">
         <span id="revocationtime_go">
 <a href="#revocationtime_go" style="color: inherit; text-decoration: inherit;">Revocation<wbr>Time</a>
@@ -5285,14 +4613,11 @@ Structure is documented below.
         <span class="property-indicator"></span>
         <span class="property-type">string</span>
     </dt>
-    <dd>{{% md %}}{{% /md %}}</dd>
-</dl>
+    <dd>{{% md %}}{{% /md %}}</dd></dl>
 {{% /choosable %}}
 
 {{% choosable language nodejs %}}
-<dl class="resources-properties">
-
-    <dt class="property-optional"
+<dl class="resources-properties"><dt class="property-optional"
             title="Optional">
         <span id="revocationstate_nodejs">
 <a href="#revocationstate_nodejs" style="color: inherit; text-decoration: inherit;">revocation<wbr>State</a>
@@ -5300,8 +4625,7 @@ Structure is documented below.
         <span class="property-indicator"></span>
         <span class="property-type">string</span>
     </dt>
-    <dd>{{% md %}}{{% /md %}}</dd>
-    <dt class="property-optional"
+    <dd>{{% md %}}{{% /md %}}</dd><dt class="property-optional"
             title="Optional">
         <span id="revocationtime_nodejs">
 <a href="#revocationtime_nodejs" style="color: inherit; text-decoration: inherit;">revocation<wbr>Time</a>
@@ -5309,14 +4633,11 @@ Structure is documented below.
         <span class="property-indicator"></span>
         <span class="property-type">string</span>
     </dt>
-    <dd>{{% md %}}{{% /md %}}</dd>
-</dl>
+    <dd>{{% md %}}{{% /md %}}</dd></dl>
 {{% /choosable %}}
 
 {{% choosable language python %}}
-<dl class="resources-properties">
-
-    <dt class="property-optional"
+<dl class="resources-properties"><dt class="property-optional"
             title="Optional">
         <span id="revocation_state_python">
 <a href="#revocation_state_python" style="color: inherit; text-decoration: inherit;">revocation_<wbr>state</a>
@@ -5324,8 +4645,7 @@ Structure is documented below.
         <span class="property-indicator"></span>
         <span class="property-type">str</span>
     </dt>
-    <dd>{{% md %}}{{% /md %}}</dd>
-    <dt class="property-optional"
+    <dd>{{% md %}}{{% /md %}}</dd><dt class="property-optional"
             title="Optional">
         <span id="revocation_time_python">
 <a href="#revocation_time_python" style="color: inherit; text-decoration: inherit;">revocation_<wbr>time</a>
@@ -5333,8 +4653,7 @@ Structure is documented below.
         <span class="property-indicator"></span>
         <span class="property-type">str</span>
     </dt>
-    <dd>{{% md %}}{{% /md %}}</dd>
-</dl>
+    <dd>{{% md %}}{{% /md %}}</dd></dl>
 {{% /choosable %}}
 
 
@@ -5345,6 +4664,6 @@ Structure is documented below.
 	<dt>License</dt>
 	<dd>Apache-2.0</dd>
 	<dt>Notes</dt>
-	<dd>This Pulumi package is based on the [`google-beta` Terraform Provider](https://github.com/hashicorp/terraform-provider-google-beta).</dd>
+	<dd>{{% md %}}This Pulumi package is based on the [`google-beta` Terraform Provider](https://github.com/hashicorp/terraform-provider-google-beta).{{% /md %}}</dd>
 </dl>
 

@@ -14,11 +14,17 @@ Subscription details.
 API Version: 2019-12-01.
 
 {{% examples %}}
+
 ## Example Usage
 
 {{< chooser language "typescript,python,go,csharp" / >}}
+
+
 ### ApiManagementCreateSubscription
-{{% example csharp %}}
+
+
+{{< example csharp >}}
+
 ```csharp
 using Pulumi;
 using AzureNative = Pulumi.AzureNative;
@@ -42,9 +48,12 @@ class MyStack : Stack
 
 ```
 
-{{% /example %}}
 
-{{% example go %}}
+{{< /example >}}
+
+
+{{< example go >}}
+
 
 ```go
 package main
@@ -73,9 +82,12 @@ func main() {
 
 ```
 
-{{% /example %}}
 
-{{% example python %}}
+{{< /example >}}
+
+
+{{< example python >}}
+
 
 ```python
 import pulumi
@@ -91,9 +103,12 @@ subscription = azure_native.apimanagement.Subscription("subscription",
 
 ```
 
-{{% /example %}}
 
-{{% example typescript %}}
+{{< /example >}}
+
+
+{{< example typescript >}}
+
 
 ```typescript
 import * as pulumi from "@pulumi/pulumi";
@@ -110,9 +125,16 @@ const subscription = new azure_native.apimanagement.Subscription("subscription",
 
 ```
 
-{{% /example %}}
+
+{{< /example >}}
+
+
+
+
 
 {{% /examples %}}
+
+
 
 
 ## Create a Subscription Resource {#create}
@@ -137,9 +159,7 @@ const subscription = new azure_native.apimanagement.Subscription("subscription",
 
 {{% choosable language nodejs %}}
 
-<dl class="resources-properties">
-  
-    <dt
+<dl class="resources-properties"><dt
         class="property-required" title="Required">
         <span>name</span>
         <span class="property-indicator"></span>
@@ -147,9 +167,7 @@ const subscription = new azure_native.apimanagement.Subscription("subscription",
     </dt>
     <dd>
       The unique name of the resource.
-    </dd>
-  
-    <dt
+    </dd><dt
         class="property-required" title="Required">
         <span>args</span>
         <span class="property-indicator"></span>
@@ -157,9 +175,7 @@ const subscription = new azure_native.apimanagement.Subscription("subscription",
     </dt>
     <dd>
       The arguments to resource properties.
-    </dd>
-  
-    <dt
+    </dd><dt
         class="property-optional" title="Optional">
         <span>opts</span>
         <span class="property-indicator"></span>
@@ -167,10 +183,7 @@ const subscription = new azure_native.apimanagement.Subscription("subscription",
     </dt>
     <dd>
       Bag of options to control resource&#39;s behavior.
-    </dd>
-  
-
-</dl>
+    </dd></dl>
 
 {{% /choosable %}}
 
@@ -196,9 +209,7 @@ const subscription = new azure_native.apimanagement.Subscription("subscription",
 
 {{% choosable language go %}}
 
-<dl class="resources-properties">
-  
-    <dt
+<dl class="resources-properties"><dt
         class="property-optional" title="Optional">
         <span>ctx</span>
         <span class="property-indicator"></span>
@@ -206,9 +217,7 @@ const subscription = new azure_native.apimanagement.Subscription("subscription",
     </dt>
     <dd>
       Context object for the current deployment.
-    </dd>
-  
-    <dt
+    </dd><dt
         class="property-required" title="Required">
         <span>name</span>
         <span class="property-indicator"></span>
@@ -216,9 +225,7 @@ const subscription = new azure_native.apimanagement.Subscription("subscription",
     </dt>
     <dd>
       The unique name of the resource.
-    </dd>
-  
-    <dt
+    </dd><dt
         class="property-required" title="Required">
         <span>args</span>
         <span class="property-indicator"></span>
@@ -226,9 +233,7 @@ const subscription = new azure_native.apimanagement.Subscription("subscription",
     </dt>
     <dd>
       The arguments to resource properties.
-    </dd>
-  
-    <dt
+    </dd><dt
         class="property-optional" title="Optional">
         <span>opts</span>
         <span class="property-indicator"></span>
@@ -236,18 +241,13 @@ const subscription = new azure_native.apimanagement.Subscription("subscription",
     </dt>
     <dd>
       Bag of options to control resource&#39;s behavior.
-    </dd>
-  
-
-</dl>
+    </dd></dl>
 
 {{% /choosable %}}
 
 {{% choosable language csharp %}}
 
-<dl class="resources-properties">
-  
-    <dt
+<dl class="resources-properties"><dt
         class="property-required" title="Required">
         <span>name</span>
         <span class="property-indicator"></span>
@@ -255,9 +255,7 @@ const subscription = new azure_native.apimanagement.Subscription("subscription",
     </dt>
     <dd>
       The unique name of the resource.
-    </dd>
-  
-    <dt
+    </dd><dt
         class="property-required" title="Required">
         <span>args</span>
         <span class="property-indicator"></span>
@@ -265,9 +263,7 @@ const subscription = new azure_native.apimanagement.Subscription("subscription",
     </dt>
     <dd>
       The arguments to resource properties.
-    </dd>
-  
-    <dt
+    </dd><dt
         class="property-optional" title="Optional">
         <span>opts</span>
         <span class="property-indicator"></span>
@@ -275,10 +271,7 @@ const subscription = new azure_native.apimanagement.Subscription("subscription",
     </dt>
     <dd>
       Bag of options to control resource&#39;s behavior.
-    </dd>
-  
-
-</dl>
+    </dd></dl>
 
 {{% /choosable %}}
 
@@ -293,9 +286,7 @@ The Subscription resource accepts the following [input]({{< relref "/docs/intro/
 
 
 {{% choosable language csharp %}}
-<dl class="resources-properties">
-
-    <dt class="property-required"
+<dl class="resources-properties"><dt class="property-required"
             title="Required">
         <span id="displayname_csharp">
 <a href="#displayname_csharp" style="color: inherit; text-decoration: inherit;">Display<wbr>Name</a>
@@ -303,8 +294,7 @@ The Subscription resource accepts the following [input]({{< relref "/docs/intro/
         <span class="property-indicator"></span>
         <span class="property-type">string</span>
     </dt>
-    <dd>{{% md %}}Subscription name.{{% /md %}}</dd>
-    <dt class="property-required"
+    <dd>{{% md %}}Subscription name.{{% /md %}}</dd><dt class="property-required"
             title="Required">
         <span id="resourcegroupname_csharp">
 <a href="#resourcegroupname_csharp" style="color: inherit; text-decoration: inherit;">Resource<wbr>Group<wbr>Name</a>
@@ -312,8 +302,7 @@ The Subscription resource accepts the following [input]({{< relref "/docs/intro/
         <span class="property-indicator"></span>
         <span class="property-type">string</span>
     </dt>
-    <dd>{{% md %}}The name of the resource group.{{% /md %}}</dd>
-    <dt class="property-required"
+    <dd>{{% md %}}The name of the resource group.{{% /md %}}</dd><dt class="property-required"
             title="Required">
         <span id="scope_csharp">
 <a href="#scope_csharp" style="color: inherit; text-decoration: inherit;">Scope</a>
@@ -321,8 +310,7 @@ The Subscription resource accepts the following [input]({{< relref "/docs/intro/
         <span class="property-indicator"></span>
         <span class="property-type">string</span>
     </dt>
-    <dd>{{% md %}}Scope like /products/{productId} or /apis or /apis/{apiId}.{{% /md %}}</dd>
-    <dt class="property-required"
+    <dd>{{% md %}}Scope like /products/{productId} or /apis or /apis/{apiId}.{{% /md %}}</dd><dt class="property-required"
             title="Required">
         <span id="servicename_csharp">
 <a href="#servicename_csharp" style="color: inherit; text-decoration: inherit;">Service<wbr>Name</a>
@@ -330,8 +318,7 @@ The Subscription resource accepts the following [input]({{< relref "/docs/intro/
         <span class="property-indicator"></span>
         <span class="property-type">string</span>
     </dt>
-    <dd>{{% md %}}The name of the API Management service.{{% /md %}}</dd>
-    <dt class="property-optional"
+    <dd>{{% md %}}The name of the API Management service.{{% /md %}}</dd><dt class="property-optional"
             title="Optional">
         <span id="allowtracing_csharp">
 <a href="#allowtracing_csharp" style="color: inherit; text-decoration: inherit;">Allow<wbr>Tracing</a>
@@ -339,8 +326,7 @@ The Subscription resource accepts the following [input]({{< relref "/docs/intro/
         <span class="property-indicator"></span>
         <span class="property-type">bool</span>
     </dt>
-    <dd>{{% md %}}Determines whether tracing can be enabled{{% /md %}}</dd>
-    <dt class="property-optional"
+    <dd>{{% md %}}Determines whether tracing can be enabled{{% /md %}}</dd><dt class="property-optional"
             title="Optional">
         <span id="apptype_csharp">
 <a href="#apptype_csharp" style="color: inherit; text-decoration: inherit;">App<wbr>Type</a>
@@ -348,8 +334,7 @@ The Subscription resource accepts the following [input]({{< relref "/docs/intro/
         <span class="property-indicator"></span>
         <span class="property-type">string</span>
     </dt>
-    <dd>{{% md %}}Determines the type of application which send the create user request. Default is legacy publisher portal.{{% /md %}}</dd>
-    <dt class="property-optional"
+    <dd>{{% md %}}Determines the type of application which send the create user request. Default is legacy publisher portal.{{% /md %}}</dd><dt class="property-optional"
             title="Optional">
         <span id="notify_csharp">
 <a href="#notify_csharp" style="color: inherit; text-decoration: inherit;">Notify</a>
@@ -359,8 +344,7 @@ The Subscription resource accepts the following [input]({{< relref "/docs/intro/
     </dt>
     <dd>{{% md %}}Notify change in Subscription State. 
  - If false, do not send any email notification for change of state of subscription 
- - If true, send email notification of change of state of subscription {{% /md %}}</dd>
-    <dt class="property-optional"
+ - If true, send email notification of change of state of subscription {{% /md %}}</dd><dt class="property-optional"
             title="Optional">
         <span id="ownerid_csharp">
 <a href="#ownerid_csharp" style="color: inherit; text-decoration: inherit;">Owner<wbr>Id</a>
@@ -368,8 +352,7 @@ The Subscription resource accepts the following [input]({{< relref "/docs/intro/
         <span class="property-indicator"></span>
         <span class="property-type">string</span>
     </dt>
-    <dd>{{% md %}}User (user id path) for whom subscription is being created in form /users/{userId}{{% /md %}}</dd>
-    <dt class="property-optional"
+    <dd>{{% md %}}User (user id path) for whom subscription is being created in form /users/{userId}{{% /md %}}</dd><dt class="property-optional"
             title="Optional">
         <span id="primarykey_csharp">
 <a href="#primarykey_csharp" style="color: inherit; text-decoration: inherit;">Primary<wbr>Key</a>
@@ -377,8 +360,7 @@ The Subscription resource accepts the following [input]({{< relref "/docs/intro/
         <span class="property-indicator"></span>
         <span class="property-type">string</span>
     </dt>
-    <dd>{{% md %}}Primary subscription key. If not specified during request key will be generated automatically.{{% /md %}}</dd>
-    <dt class="property-optional"
+    <dd>{{% md %}}Primary subscription key. If not specified during request key will be generated automatically.{{% /md %}}</dd><dt class="property-optional"
             title="Optional">
         <span id="secondarykey_csharp">
 <a href="#secondarykey_csharp" style="color: inherit; text-decoration: inherit;">Secondary<wbr>Key</a>
@@ -386,8 +368,7 @@ The Subscription resource accepts the following [input]({{< relref "/docs/intro/
         <span class="property-indicator"></span>
         <span class="property-type">string</span>
     </dt>
-    <dd>{{% md %}}Secondary subscription key. If not specified during request key will be generated automatically.{{% /md %}}</dd>
-    <dt class="property-optional"
+    <dd>{{% md %}}Secondary subscription key. If not specified during request key will be generated automatically.{{% /md %}}</dd><dt class="property-optional"
             title="Optional">
         <span id="sid_csharp">
 <a href="#sid_csharp" style="color: inherit; text-decoration: inherit;">Sid</a>
@@ -395,8 +376,7 @@ The Subscription resource accepts the following [input]({{< relref "/docs/intro/
         <span class="property-indicator"></span>
         <span class="property-type">string</span>
     </dt>
-    <dd>{{% md %}}Subscription entity Identifier. The entity represents the association between a user and a product in API Management.{{% /md %}}</dd>
-    <dt class="property-optional"
+    <dd>{{% md %}}Subscription entity Identifier. The entity represents the association between a user and a product in API Management.{{% /md %}}</dd><dt class="property-optional"
             title="Optional">
         <span id="state_csharp">
 <a href="#state_csharp" style="color: inherit; text-decoration: inherit;">State</a>
@@ -404,14 +384,11 @@ The Subscription resource accepts the following [input]({{< relref "/docs/intro/
         <span class="property-indicator"></span>
         <span class="property-type"><a href="#subscriptionstate">Pulumi.<wbr>Azure<wbr>Native.<wbr>Api<wbr>Management.<wbr>Subscription<wbr>State</a></span>
     </dt>
-    <dd>{{% md %}}Initial subscription state. If no value is specified, subscription is created with Submitted state. Possible states are * active – the subscription is active, * suspended – the subscription is blocked, and the subscriber cannot call any APIs of the product, * submitted – the subscription request has been made by the developer, but has not yet been approved or rejected, * rejected – the subscription request has been denied by an administrator, * cancelled – the subscription has been cancelled by the developer or administrator, * expired – the subscription reached its expiration date and was deactivated.{{% /md %}}</dd>
-</dl>
+    <dd>{{% md %}}Initial subscription state. If no value is specified, subscription is created with Submitted state. Possible states are * active – the subscription is active, * suspended – the subscription is blocked, and the subscriber cannot call any APIs of the product, * submitted – the subscription request has been made by the developer, but has not yet been approved or rejected, * rejected – the subscription request has been denied by an administrator, * cancelled – the subscription has been cancelled by the developer or administrator, * expired – the subscription reached its expiration date and was deactivated.{{% /md %}}</dd></dl>
 {{% /choosable %}}
 
 {{% choosable language go %}}
-<dl class="resources-properties">
-
-    <dt class="property-required"
+<dl class="resources-properties"><dt class="property-required"
             title="Required">
         <span id="displayname_go">
 <a href="#displayname_go" style="color: inherit; text-decoration: inherit;">Display<wbr>Name</a>
@@ -419,8 +396,7 @@ The Subscription resource accepts the following [input]({{< relref "/docs/intro/
         <span class="property-indicator"></span>
         <span class="property-type">string</span>
     </dt>
-    <dd>{{% md %}}Subscription name.{{% /md %}}</dd>
-    <dt class="property-required"
+    <dd>{{% md %}}Subscription name.{{% /md %}}</dd><dt class="property-required"
             title="Required">
         <span id="resourcegroupname_go">
 <a href="#resourcegroupname_go" style="color: inherit; text-decoration: inherit;">Resource<wbr>Group<wbr>Name</a>
@@ -428,8 +404,7 @@ The Subscription resource accepts the following [input]({{< relref "/docs/intro/
         <span class="property-indicator"></span>
         <span class="property-type">string</span>
     </dt>
-    <dd>{{% md %}}The name of the resource group.{{% /md %}}</dd>
-    <dt class="property-required"
+    <dd>{{% md %}}The name of the resource group.{{% /md %}}</dd><dt class="property-required"
             title="Required">
         <span id="scope_go">
 <a href="#scope_go" style="color: inherit; text-decoration: inherit;">Scope</a>
@@ -437,8 +412,7 @@ The Subscription resource accepts the following [input]({{< relref "/docs/intro/
         <span class="property-indicator"></span>
         <span class="property-type">string</span>
     </dt>
-    <dd>{{% md %}}Scope like /products/{productId} or /apis or /apis/{apiId}.{{% /md %}}</dd>
-    <dt class="property-required"
+    <dd>{{% md %}}Scope like /products/{productId} or /apis or /apis/{apiId}.{{% /md %}}</dd><dt class="property-required"
             title="Required">
         <span id="servicename_go">
 <a href="#servicename_go" style="color: inherit; text-decoration: inherit;">Service<wbr>Name</a>
@@ -446,8 +420,7 @@ The Subscription resource accepts the following [input]({{< relref "/docs/intro/
         <span class="property-indicator"></span>
         <span class="property-type">string</span>
     </dt>
-    <dd>{{% md %}}The name of the API Management service.{{% /md %}}</dd>
-    <dt class="property-optional"
+    <dd>{{% md %}}The name of the API Management service.{{% /md %}}</dd><dt class="property-optional"
             title="Optional">
         <span id="allowtracing_go">
 <a href="#allowtracing_go" style="color: inherit; text-decoration: inherit;">Allow<wbr>Tracing</a>
@@ -455,8 +428,7 @@ The Subscription resource accepts the following [input]({{< relref "/docs/intro/
         <span class="property-indicator"></span>
         <span class="property-type">bool</span>
     </dt>
-    <dd>{{% md %}}Determines whether tracing can be enabled{{% /md %}}</dd>
-    <dt class="property-optional"
+    <dd>{{% md %}}Determines whether tracing can be enabled{{% /md %}}</dd><dt class="property-optional"
             title="Optional">
         <span id="apptype_go">
 <a href="#apptype_go" style="color: inherit; text-decoration: inherit;">App<wbr>Type</a>
@@ -464,8 +436,7 @@ The Subscription resource accepts the following [input]({{< relref "/docs/intro/
         <span class="property-indicator"></span>
         <span class="property-type">string</span>
     </dt>
-    <dd>{{% md %}}Determines the type of application which send the create user request. Default is legacy publisher portal.{{% /md %}}</dd>
-    <dt class="property-optional"
+    <dd>{{% md %}}Determines the type of application which send the create user request. Default is legacy publisher portal.{{% /md %}}</dd><dt class="property-optional"
             title="Optional">
         <span id="notify_go">
 <a href="#notify_go" style="color: inherit; text-decoration: inherit;">Notify</a>
@@ -475,8 +446,7 @@ The Subscription resource accepts the following [input]({{< relref "/docs/intro/
     </dt>
     <dd>{{% md %}}Notify change in Subscription State. 
  - If false, do not send any email notification for change of state of subscription 
- - If true, send email notification of change of state of subscription {{% /md %}}</dd>
-    <dt class="property-optional"
+ - If true, send email notification of change of state of subscription {{% /md %}}</dd><dt class="property-optional"
             title="Optional">
         <span id="ownerid_go">
 <a href="#ownerid_go" style="color: inherit; text-decoration: inherit;">Owner<wbr>Id</a>
@@ -484,8 +454,7 @@ The Subscription resource accepts the following [input]({{< relref "/docs/intro/
         <span class="property-indicator"></span>
         <span class="property-type">string</span>
     </dt>
-    <dd>{{% md %}}User (user id path) for whom subscription is being created in form /users/{userId}{{% /md %}}</dd>
-    <dt class="property-optional"
+    <dd>{{% md %}}User (user id path) for whom subscription is being created in form /users/{userId}{{% /md %}}</dd><dt class="property-optional"
             title="Optional">
         <span id="primarykey_go">
 <a href="#primarykey_go" style="color: inherit; text-decoration: inherit;">Primary<wbr>Key</a>
@@ -493,8 +462,7 @@ The Subscription resource accepts the following [input]({{< relref "/docs/intro/
         <span class="property-indicator"></span>
         <span class="property-type">string</span>
     </dt>
-    <dd>{{% md %}}Primary subscription key. If not specified during request key will be generated automatically.{{% /md %}}</dd>
-    <dt class="property-optional"
+    <dd>{{% md %}}Primary subscription key. If not specified during request key will be generated automatically.{{% /md %}}</dd><dt class="property-optional"
             title="Optional">
         <span id="secondarykey_go">
 <a href="#secondarykey_go" style="color: inherit; text-decoration: inherit;">Secondary<wbr>Key</a>
@@ -502,8 +470,7 @@ The Subscription resource accepts the following [input]({{< relref "/docs/intro/
         <span class="property-indicator"></span>
         <span class="property-type">string</span>
     </dt>
-    <dd>{{% md %}}Secondary subscription key. If not specified during request key will be generated automatically.{{% /md %}}</dd>
-    <dt class="property-optional"
+    <dd>{{% md %}}Secondary subscription key. If not specified during request key will be generated automatically.{{% /md %}}</dd><dt class="property-optional"
             title="Optional">
         <span id="sid_go">
 <a href="#sid_go" style="color: inherit; text-decoration: inherit;">Sid</a>
@@ -511,8 +478,7 @@ The Subscription resource accepts the following [input]({{< relref "/docs/intro/
         <span class="property-indicator"></span>
         <span class="property-type">string</span>
     </dt>
-    <dd>{{% md %}}Subscription entity Identifier. The entity represents the association between a user and a product in API Management.{{% /md %}}</dd>
-    <dt class="property-optional"
+    <dd>{{% md %}}Subscription entity Identifier. The entity represents the association between a user and a product in API Management.{{% /md %}}</dd><dt class="property-optional"
             title="Optional">
         <span id="state_go">
 <a href="#state_go" style="color: inherit; text-decoration: inherit;">State</a>
@@ -520,14 +486,11 @@ The Subscription resource accepts the following [input]({{< relref "/docs/intro/
         <span class="property-indicator"></span>
         <span class="property-type"><a href="#subscriptionstate">Subscription<wbr>State<wbr>Enum</a></span>
     </dt>
-    <dd>{{% md %}}Initial subscription state. If no value is specified, subscription is created with Submitted state. Possible states are * active – the subscription is active, * suspended – the subscription is blocked, and the subscriber cannot call any APIs of the product, * submitted – the subscription request has been made by the developer, but has not yet been approved or rejected, * rejected – the subscription request has been denied by an administrator, * cancelled – the subscription has been cancelled by the developer or administrator, * expired – the subscription reached its expiration date and was deactivated.{{% /md %}}</dd>
-</dl>
+    <dd>{{% md %}}Initial subscription state. If no value is specified, subscription is created with Submitted state. Possible states are * active – the subscription is active, * suspended – the subscription is blocked, and the subscriber cannot call any APIs of the product, * submitted – the subscription request has been made by the developer, but has not yet been approved or rejected, * rejected – the subscription request has been denied by an administrator, * cancelled – the subscription has been cancelled by the developer or administrator, * expired – the subscription reached its expiration date and was deactivated.{{% /md %}}</dd></dl>
 {{% /choosable %}}
 
 {{% choosable language nodejs %}}
-<dl class="resources-properties">
-
-    <dt class="property-required"
+<dl class="resources-properties"><dt class="property-required"
             title="Required">
         <span id="displayname_nodejs">
 <a href="#displayname_nodejs" style="color: inherit; text-decoration: inherit;">display<wbr>Name</a>
@@ -535,8 +498,7 @@ The Subscription resource accepts the following [input]({{< relref "/docs/intro/
         <span class="property-indicator"></span>
         <span class="property-type">string</span>
     </dt>
-    <dd>{{% md %}}Subscription name.{{% /md %}}</dd>
-    <dt class="property-required"
+    <dd>{{% md %}}Subscription name.{{% /md %}}</dd><dt class="property-required"
             title="Required">
         <span id="resourcegroupname_nodejs">
 <a href="#resourcegroupname_nodejs" style="color: inherit; text-decoration: inherit;">resource<wbr>Group<wbr>Name</a>
@@ -544,8 +506,7 @@ The Subscription resource accepts the following [input]({{< relref "/docs/intro/
         <span class="property-indicator"></span>
         <span class="property-type">string</span>
     </dt>
-    <dd>{{% md %}}The name of the resource group.{{% /md %}}</dd>
-    <dt class="property-required"
+    <dd>{{% md %}}The name of the resource group.{{% /md %}}</dd><dt class="property-required"
             title="Required">
         <span id="scope_nodejs">
 <a href="#scope_nodejs" style="color: inherit; text-decoration: inherit;">scope</a>
@@ -553,8 +514,7 @@ The Subscription resource accepts the following [input]({{< relref "/docs/intro/
         <span class="property-indicator"></span>
         <span class="property-type">string</span>
     </dt>
-    <dd>{{% md %}}Scope like /products/{productId} or /apis or /apis/{apiId}.{{% /md %}}</dd>
-    <dt class="property-required"
+    <dd>{{% md %}}Scope like /products/{productId} or /apis or /apis/{apiId}.{{% /md %}}</dd><dt class="property-required"
             title="Required">
         <span id="servicename_nodejs">
 <a href="#servicename_nodejs" style="color: inherit; text-decoration: inherit;">service<wbr>Name</a>
@@ -562,8 +522,7 @@ The Subscription resource accepts the following [input]({{< relref "/docs/intro/
         <span class="property-indicator"></span>
         <span class="property-type">string</span>
     </dt>
-    <dd>{{% md %}}The name of the API Management service.{{% /md %}}</dd>
-    <dt class="property-optional"
+    <dd>{{% md %}}The name of the API Management service.{{% /md %}}</dd><dt class="property-optional"
             title="Optional">
         <span id="allowtracing_nodejs">
 <a href="#allowtracing_nodejs" style="color: inherit; text-decoration: inherit;">allow<wbr>Tracing</a>
@@ -571,8 +530,7 @@ The Subscription resource accepts the following [input]({{< relref "/docs/intro/
         <span class="property-indicator"></span>
         <span class="property-type">boolean</span>
     </dt>
-    <dd>{{% md %}}Determines whether tracing can be enabled{{% /md %}}</dd>
-    <dt class="property-optional"
+    <dd>{{% md %}}Determines whether tracing can be enabled{{% /md %}}</dd><dt class="property-optional"
             title="Optional">
         <span id="apptype_nodejs">
 <a href="#apptype_nodejs" style="color: inherit; text-decoration: inherit;">app<wbr>Type</a>
@@ -580,8 +538,7 @@ The Subscription resource accepts the following [input]({{< relref "/docs/intro/
         <span class="property-indicator"></span>
         <span class="property-type">string</span>
     </dt>
-    <dd>{{% md %}}Determines the type of application which send the create user request. Default is legacy publisher portal.{{% /md %}}</dd>
-    <dt class="property-optional"
+    <dd>{{% md %}}Determines the type of application which send the create user request. Default is legacy publisher portal.{{% /md %}}</dd><dt class="property-optional"
             title="Optional">
         <span id="notify_nodejs">
 <a href="#notify_nodejs" style="color: inherit; text-decoration: inherit;">notify</a>
@@ -591,8 +548,7 @@ The Subscription resource accepts the following [input]({{< relref "/docs/intro/
     </dt>
     <dd>{{% md %}}Notify change in Subscription State. 
  - If false, do not send any email notification for change of state of subscription 
- - If true, send email notification of change of state of subscription {{% /md %}}</dd>
-    <dt class="property-optional"
+ - If true, send email notification of change of state of subscription {{% /md %}}</dd><dt class="property-optional"
             title="Optional">
         <span id="ownerid_nodejs">
 <a href="#ownerid_nodejs" style="color: inherit; text-decoration: inherit;">owner<wbr>Id</a>
@@ -600,8 +556,7 @@ The Subscription resource accepts the following [input]({{< relref "/docs/intro/
         <span class="property-indicator"></span>
         <span class="property-type">string</span>
     </dt>
-    <dd>{{% md %}}User (user id path) for whom subscription is being created in form /users/{userId}{{% /md %}}</dd>
-    <dt class="property-optional"
+    <dd>{{% md %}}User (user id path) for whom subscription is being created in form /users/{userId}{{% /md %}}</dd><dt class="property-optional"
             title="Optional">
         <span id="primarykey_nodejs">
 <a href="#primarykey_nodejs" style="color: inherit; text-decoration: inherit;">primary<wbr>Key</a>
@@ -609,8 +564,7 @@ The Subscription resource accepts the following [input]({{< relref "/docs/intro/
         <span class="property-indicator"></span>
         <span class="property-type">string</span>
     </dt>
-    <dd>{{% md %}}Primary subscription key. If not specified during request key will be generated automatically.{{% /md %}}</dd>
-    <dt class="property-optional"
+    <dd>{{% md %}}Primary subscription key. If not specified during request key will be generated automatically.{{% /md %}}</dd><dt class="property-optional"
             title="Optional">
         <span id="secondarykey_nodejs">
 <a href="#secondarykey_nodejs" style="color: inherit; text-decoration: inherit;">secondary<wbr>Key</a>
@@ -618,8 +572,7 @@ The Subscription resource accepts the following [input]({{< relref "/docs/intro/
         <span class="property-indicator"></span>
         <span class="property-type">string</span>
     </dt>
-    <dd>{{% md %}}Secondary subscription key. If not specified during request key will be generated automatically.{{% /md %}}</dd>
-    <dt class="property-optional"
+    <dd>{{% md %}}Secondary subscription key. If not specified during request key will be generated automatically.{{% /md %}}</dd><dt class="property-optional"
             title="Optional">
         <span id="sid_nodejs">
 <a href="#sid_nodejs" style="color: inherit; text-decoration: inherit;">sid</a>
@@ -627,8 +580,7 @@ The Subscription resource accepts the following [input]({{< relref "/docs/intro/
         <span class="property-indicator"></span>
         <span class="property-type">string</span>
     </dt>
-    <dd>{{% md %}}Subscription entity Identifier. The entity represents the association between a user and a product in API Management.{{% /md %}}</dd>
-    <dt class="property-optional"
+    <dd>{{% md %}}Subscription entity Identifier. The entity represents the association between a user and a product in API Management.{{% /md %}}</dd><dt class="property-optional"
             title="Optional">
         <span id="state_nodejs">
 <a href="#state_nodejs" style="color: inherit; text-decoration: inherit;">state</a>
@@ -636,14 +588,11 @@ The Subscription resource accepts the following [input]({{< relref "/docs/intro/
         <span class="property-indicator"></span>
         <span class="property-type"><a href="#subscriptionstate">Subscription<wbr>State</a></span>
     </dt>
-    <dd>{{% md %}}Initial subscription state. If no value is specified, subscription is created with Submitted state. Possible states are * active – the subscription is active, * suspended – the subscription is blocked, and the subscriber cannot call any APIs of the product, * submitted – the subscription request has been made by the developer, but has not yet been approved or rejected, * rejected – the subscription request has been denied by an administrator, * cancelled – the subscription has been cancelled by the developer or administrator, * expired – the subscription reached its expiration date and was deactivated.{{% /md %}}</dd>
-</dl>
+    <dd>{{% md %}}Initial subscription state. If no value is specified, subscription is created with Submitted state. Possible states are * active – the subscription is active, * suspended – the subscription is blocked, and the subscriber cannot call any APIs of the product, * submitted – the subscription request has been made by the developer, but has not yet been approved or rejected, * rejected – the subscription request has been denied by an administrator, * cancelled – the subscription has been cancelled by the developer or administrator, * expired – the subscription reached its expiration date and was deactivated.{{% /md %}}</dd></dl>
 {{% /choosable %}}
 
 {{% choosable language python %}}
-<dl class="resources-properties">
-
-    <dt class="property-required"
+<dl class="resources-properties"><dt class="property-required"
             title="Required">
         <span id="display_name_python">
 <a href="#display_name_python" style="color: inherit; text-decoration: inherit;">display_<wbr>name</a>
@@ -651,8 +600,7 @@ The Subscription resource accepts the following [input]({{< relref "/docs/intro/
         <span class="property-indicator"></span>
         <span class="property-type">str</span>
     </dt>
-    <dd>{{% md %}}Subscription name.{{% /md %}}</dd>
-    <dt class="property-required"
+    <dd>{{% md %}}Subscription name.{{% /md %}}</dd><dt class="property-required"
             title="Required">
         <span id="resource_group_name_python">
 <a href="#resource_group_name_python" style="color: inherit; text-decoration: inherit;">resource_<wbr>group_<wbr>name</a>
@@ -660,8 +608,7 @@ The Subscription resource accepts the following [input]({{< relref "/docs/intro/
         <span class="property-indicator"></span>
         <span class="property-type">str</span>
     </dt>
-    <dd>{{% md %}}The name of the resource group.{{% /md %}}</dd>
-    <dt class="property-required"
+    <dd>{{% md %}}The name of the resource group.{{% /md %}}</dd><dt class="property-required"
             title="Required">
         <span id="scope_python">
 <a href="#scope_python" style="color: inherit; text-decoration: inherit;">scope</a>
@@ -669,8 +616,7 @@ The Subscription resource accepts the following [input]({{< relref "/docs/intro/
         <span class="property-indicator"></span>
         <span class="property-type">str</span>
     </dt>
-    <dd>{{% md %}}Scope like /products/{productId} or /apis or /apis/{apiId}.{{% /md %}}</dd>
-    <dt class="property-required"
+    <dd>{{% md %}}Scope like /products/{productId} or /apis or /apis/{apiId}.{{% /md %}}</dd><dt class="property-required"
             title="Required">
         <span id="service_name_python">
 <a href="#service_name_python" style="color: inherit; text-decoration: inherit;">service_<wbr>name</a>
@@ -678,8 +624,7 @@ The Subscription resource accepts the following [input]({{< relref "/docs/intro/
         <span class="property-indicator"></span>
         <span class="property-type">str</span>
     </dt>
-    <dd>{{% md %}}The name of the API Management service.{{% /md %}}</dd>
-    <dt class="property-optional"
+    <dd>{{% md %}}The name of the API Management service.{{% /md %}}</dd><dt class="property-optional"
             title="Optional">
         <span id="allow_tracing_python">
 <a href="#allow_tracing_python" style="color: inherit; text-decoration: inherit;">allow_<wbr>tracing</a>
@@ -687,8 +632,7 @@ The Subscription resource accepts the following [input]({{< relref "/docs/intro/
         <span class="property-indicator"></span>
         <span class="property-type">bool</span>
     </dt>
-    <dd>{{% md %}}Determines whether tracing can be enabled{{% /md %}}</dd>
-    <dt class="property-optional"
+    <dd>{{% md %}}Determines whether tracing can be enabled{{% /md %}}</dd><dt class="property-optional"
             title="Optional">
         <span id="app_type_python">
 <a href="#app_type_python" style="color: inherit; text-decoration: inherit;">app_<wbr>type</a>
@@ -696,8 +640,7 @@ The Subscription resource accepts the following [input]({{< relref "/docs/intro/
         <span class="property-indicator"></span>
         <span class="property-type">str</span>
     </dt>
-    <dd>{{% md %}}Determines the type of application which send the create user request. Default is legacy publisher portal.{{% /md %}}</dd>
-    <dt class="property-optional"
+    <dd>{{% md %}}Determines the type of application which send the create user request. Default is legacy publisher portal.{{% /md %}}</dd><dt class="property-optional"
             title="Optional">
         <span id="notify_python">
 <a href="#notify_python" style="color: inherit; text-decoration: inherit;">notify</a>
@@ -707,8 +650,7 @@ The Subscription resource accepts the following [input]({{< relref "/docs/intro/
     </dt>
     <dd>{{% md %}}Notify change in Subscription State. 
  - If false, do not send any email notification for change of state of subscription 
- - If true, send email notification of change of state of subscription {{% /md %}}</dd>
-    <dt class="property-optional"
+ - If true, send email notification of change of state of subscription {{% /md %}}</dd><dt class="property-optional"
             title="Optional">
         <span id="owner_id_python">
 <a href="#owner_id_python" style="color: inherit; text-decoration: inherit;">owner_<wbr>id</a>
@@ -716,8 +658,7 @@ The Subscription resource accepts the following [input]({{< relref "/docs/intro/
         <span class="property-indicator"></span>
         <span class="property-type">str</span>
     </dt>
-    <dd>{{% md %}}User (user id path) for whom subscription is being created in form /users/{userId}{{% /md %}}</dd>
-    <dt class="property-optional"
+    <dd>{{% md %}}User (user id path) for whom subscription is being created in form /users/{userId}{{% /md %}}</dd><dt class="property-optional"
             title="Optional">
         <span id="primary_key_python">
 <a href="#primary_key_python" style="color: inherit; text-decoration: inherit;">primary_<wbr>key</a>
@@ -725,8 +666,7 @@ The Subscription resource accepts the following [input]({{< relref "/docs/intro/
         <span class="property-indicator"></span>
         <span class="property-type">str</span>
     </dt>
-    <dd>{{% md %}}Primary subscription key. If not specified during request key will be generated automatically.{{% /md %}}</dd>
-    <dt class="property-optional"
+    <dd>{{% md %}}Primary subscription key. If not specified during request key will be generated automatically.{{% /md %}}</dd><dt class="property-optional"
             title="Optional">
         <span id="secondary_key_python">
 <a href="#secondary_key_python" style="color: inherit; text-decoration: inherit;">secondary_<wbr>key</a>
@@ -734,8 +674,7 @@ The Subscription resource accepts the following [input]({{< relref "/docs/intro/
         <span class="property-indicator"></span>
         <span class="property-type">str</span>
     </dt>
-    <dd>{{% md %}}Secondary subscription key. If not specified during request key will be generated automatically.{{% /md %}}</dd>
-    <dt class="property-optional"
+    <dd>{{% md %}}Secondary subscription key. If not specified during request key will be generated automatically.{{% /md %}}</dd><dt class="property-optional"
             title="Optional">
         <span id="sid_python">
 <a href="#sid_python" style="color: inherit; text-decoration: inherit;">sid</a>
@@ -743,8 +682,7 @@ The Subscription resource accepts the following [input]({{< relref "/docs/intro/
         <span class="property-indicator"></span>
         <span class="property-type">str</span>
     </dt>
-    <dd>{{% md %}}Subscription entity Identifier. The entity represents the association between a user and a product in API Management.{{% /md %}}</dd>
-    <dt class="property-optional"
+    <dd>{{% md %}}Subscription entity Identifier. The entity represents the association between a user and a product in API Management.{{% /md %}}</dd><dt class="property-optional"
             title="Optional">
         <span id="state_python">
 <a href="#state_python" style="color: inherit; text-decoration: inherit;">state</a>
@@ -752,8 +690,7 @@ The Subscription resource accepts the following [input]({{< relref "/docs/intro/
         <span class="property-indicator"></span>
         <span class="property-type"><a href="#subscriptionstate">Subscription<wbr>State</a></span>
     </dt>
-    <dd>{{% md %}}Initial subscription state. If no value is specified, subscription is created with Submitted state. Possible states are * active – the subscription is active, * suspended – the subscription is blocked, and the subscriber cannot call any APIs of the product, * submitted – the subscription request has been made by the developer, but has not yet been approved or rejected, * rejected – the subscription request has been denied by an administrator, * cancelled – the subscription has been cancelled by the developer or administrator, * expired – the subscription reached its expiration date and was deactivated.{{% /md %}}</dd>
-</dl>
+    <dd>{{% md %}}Initial subscription state. If no value is specified, subscription is created with Submitted state. Possible states are * active – the subscription is active, * suspended – the subscription is blocked, and the subscriber cannot call any APIs of the product, * submitted – the subscription request has been made by the developer, but has not yet been approved or rejected, * rejected – the subscription request has been denied by an administrator, * cancelled – the subscription has been cancelled by the developer or administrator, * expired – the subscription reached its expiration date and was deactivated.{{% /md %}}</dd></dl>
 {{% /choosable %}}
 
 
@@ -764,9 +701,7 @@ All [input](#inputs) properties are implicitly available as output properties. A
 
 
 {{% choosable language csharp %}}
-<dl class="resources-properties">
-
-    <dt class="property-"
+<dl class="resources-properties"><dt class="property-"
             title="">
         <span id="createddate_csharp">
 <a href="#createddate_csharp" style="color: inherit; text-decoration: inherit;">Created<wbr>Date</a>
@@ -775,8 +710,7 @@ All [input](#inputs) properties are implicitly available as output properties. A
         <span class="property-type">string</span>
     </dt>
     <dd>{{% md %}}Subscription creation date. The date conforms to the following format: `yyyy-MM-ddTHH:mm:ssZ` as specified by the ISO 8601 standard.
-{{% /md %}}</dd>
-    <dt class="property-"
+{{% /md %}}</dd><dt class="property-"
             title="">
         <span id="id_csharp">
 <a href="#id_csharp" style="color: inherit; text-decoration: inherit;">Id</a>
@@ -784,8 +718,7 @@ All [input](#inputs) properties are implicitly available as output properties. A
         <span class="property-indicator"></span>
         <span class="property-type">string</span>
     </dt>
-    <dd>{{% md %}}The provider-assigned unique ID for this managed resource.{{% /md %}}</dd>
-    <dt class="property-"
+    <dd>{{% md %}}The provider-assigned unique ID for this managed resource.{{% /md %}}</dd><dt class="property-"
             title="">
         <span id="name_csharp">
 <a href="#name_csharp" style="color: inherit; text-decoration: inherit;">Name</a>
@@ -793,8 +726,7 @@ All [input](#inputs) properties are implicitly available as output properties. A
         <span class="property-indicator"></span>
         <span class="property-type">string</span>
     </dt>
-    <dd>{{% md %}}Resource name.{{% /md %}}</dd>
-    <dt class="property-"
+    <dd>{{% md %}}Resource name.{{% /md %}}</dd><dt class="property-"
             title="">
         <span id="type_csharp">
 <a href="#type_csharp" style="color: inherit; text-decoration: inherit;">Type</a>
@@ -802,8 +734,7 @@ All [input](#inputs) properties are implicitly available as output properties. A
         <span class="property-indicator"></span>
         <span class="property-type">string</span>
     </dt>
-    <dd>{{% md %}}Resource type for API Management resource.{{% /md %}}</dd>
-    <dt class="property-"
+    <dd>{{% md %}}Resource type for API Management resource.{{% /md %}}</dd><dt class="property-"
             title="">
         <span id="enddate_csharp">
 <a href="#enddate_csharp" style="color: inherit; text-decoration: inherit;">End<wbr>Date</a>
@@ -812,8 +743,7 @@ All [input](#inputs) properties are implicitly available as output properties. A
         <span class="property-type">string</span>
     </dt>
     <dd>{{% md %}}Date when subscription was cancelled or expired. The setting is for audit purposes only and the subscription is not automatically cancelled. The subscription lifecycle can be managed by using the `state` property. The date conforms to the following format: `yyyy-MM-ddTHH:mm:ssZ` as specified by the ISO 8601 standard.
-{{% /md %}}</dd>
-    <dt class="property-"
+{{% /md %}}</dd><dt class="property-"
             title="">
         <span id="expirationdate_csharp">
 <a href="#expirationdate_csharp" style="color: inherit; text-decoration: inherit;">Expiration<wbr>Date</a>
@@ -822,8 +752,7 @@ All [input](#inputs) properties are implicitly available as output properties. A
         <span class="property-type">string</span>
     </dt>
     <dd>{{% md %}}Subscription expiration date. The setting is for audit purposes only and the subscription is not automatically expired. The subscription lifecycle can be managed by using the `state` property. The date conforms to the following format: `yyyy-MM-ddTHH:mm:ssZ` as specified by the ISO 8601 standard.
-{{% /md %}}</dd>
-    <dt class="property-"
+{{% /md %}}</dd><dt class="property-"
             title="">
         <span id="notificationdate_csharp">
 <a href="#notificationdate_csharp" style="color: inherit; text-decoration: inherit;">Notification<wbr>Date</a>
@@ -832,8 +761,7 @@ All [input](#inputs) properties are implicitly available as output properties. A
         <span class="property-type">string</span>
     </dt>
     <dd>{{% md %}}Upcoming subscription expiration notification date. The date conforms to the following format: `yyyy-MM-ddTHH:mm:ssZ` as specified by the ISO 8601 standard.
-{{% /md %}}</dd>
-    <dt class="property-"
+{{% /md %}}</dd><dt class="property-"
             title="">
         <span id="startdate_csharp">
 <a href="#startdate_csharp" style="color: inherit; text-decoration: inherit;">Start<wbr>Date</a>
@@ -842,8 +770,7 @@ All [input](#inputs) properties are implicitly available as output properties. A
         <span class="property-type">string</span>
     </dt>
     <dd>{{% md %}}Subscription activation date. The setting is for audit purposes only and the subscription is not automatically activated. The subscription lifecycle can be managed by using the `state` property. The date conforms to the following format: `yyyy-MM-ddTHH:mm:ssZ` as specified by the ISO 8601 standard.
-{{% /md %}}</dd>
-    <dt class="property-"
+{{% /md %}}</dd><dt class="property-"
             title="">
         <span id="statecomment_csharp">
 <a href="#statecomment_csharp" style="color: inherit; text-decoration: inherit;">State<wbr>Comment</a>
@@ -851,14 +778,11 @@ All [input](#inputs) properties are implicitly available as output properties. A
         <span class="property-indicator"></span>
         <span class="property-type">string</span>
     </dt>
-    <dd>{{% md %}}Optional subscription comment added by an administrator when the state is changed to the 'rejected'.{{% /md %}}</dd>
-</dl>
+    <dd>{{% md %}}Optional subscription comment added by an administrator when the state is changed to the 'rejected'.{{% /md %}}</dd></dl>
 {{% /choosable %}}
 
 {{% choosable language go %}}
-<dl class="resources-properties">
-
-    <dt class="property-"
+<dl class="resources-properties"><dt class="property-"
             title="">
         <span id="createddate_go">
 <a href="#createddate_go" style="color: inherit; text-decoration: inherit;">Created<wbr>Date</a>
@@ -867,8 +791,7 @@ All [input](#inputs) properties are implicitly available as output properties. A
         <span class="property-type">string</span>
     </dt>
     <dd>{{% md %}}Subscription creation date. The date conforms to the following format: `yyyy-MM-ddTHH:mm:ssZ` as specified by the ISO 8601 standard.
-{{% /md %}}</dd>
-    <dt class="property-"
+{{% /md %}}</dd><dt class="property-"
             title="">
         <span id="id_go">
 <a href="#id_go" style="color: inherit; text-decoration: inherit;">Id</a>
@@ -876,8 +799,7 @@ All [input](#inputs) properties are implicitly available as output properties. A
         <span class="property-indicator"></span>
         <span class="property-type">string</span>
     </dt>
-    <dd>{{% md %}}The provider-assigned unique ID for this managed resource.{{% /md %}}</dd>
-    <dt class="property-"
+    <dd>{{% md %}}The provider-assigned unique ID for this managed resource.{{% /md %}}</dd><dt class="property-"
             title="">
         <span id="name_go">
 <a href="#name_go" style="color: inherit; text-decoration: inherit;">Name</a>
@@ -885,8 +807,7 @@ All [input](#inputs) properties are implicitly available as output properties. A
         <span class="property-indicator"></span>
         <span class="property-type">string</span>
     </dt>
-    <dd>{{% md %}}Resource name.{{% /md %}}</dd>
-    <dt class="property-"
+    <dd>{{% md %}}Resource name.{{% /md %}}</dd><dt class="property-"
             title="">
         <span id="type_go">
 <a href="#type_go" style="color: inherit; text-decoration: inherit;">Type</a>
@@ -894,8 +815,7 @@ All [input](#inputs) properties are implicitly available as output properties. A
         <span class="property-indicator"></span>
         <span class="property-type">string</span>
     </dt>
-    <dd>{{% md %}}Resource type for API Management resource.{{% /md %}}</dd>
-    <dt class="property-"
+    <dd>{{% md %}}Resource type for API Management resource.{{% /md %}}</dd><dt class="property-"
             title="">
         <span id="enddate_go">
 <a href="#enddate_go" style="color: inherit; text-decoration: inherit;">End<wbr>Date</a>
@@ -904,8 +824,7 @@ All [input](#inputs) properties are implicitly available as output properties. A
         <span class="property-type">string</span>
     </dt>
     <dd>{{% md %}}Date when subscription was cancelled or expired. The setting is for audit purposes only and the subscription is not automatically cancelled. The subscription lifecycle can be managed by using the `state` property. The date conforms to the following format: `yyyy-MM-ddTHH:mm:ssZ` as specified by the ISO 8601 standard.
-{{% /md %}}</dd>
-    <dt class="property-"
+{{% /md %}}</dd><dt class="property-"
             title="">
         <span id="expirationdate_go">
 <a href="#expirationdate_go" style="color: inherit; text-decoration: inherit;">Expiration<wbr>Date</a>
@@ -914,8 +833,7 @@ All [input](#inputs) properties are implicitly available as output properties. A
         <span class="property-type">string</span>
     </dt>
     <dd>{{% md %}}Subscription expiration date. The setting is for audit purposes only and the subscription is not automatically expired. The subscription lifecycle can be managed by using the `state` property. The date conforms to the following format: `yyyy-MM-ddTHH:mm:ssZ` as specified by the ISO 8601 standard.
-{{% /md %}}</dd>
-    <dt class="property-"
+{{% /md %}}</dd><dt class="property-"
             title="">
         <span id="notificationdate_go">
 <a href="#notificationdate_go" style="color: inherit; text-decoration: inherit;">Notification<wbr>Date</a>
@@ -924,8 +842,7 @@ All [input](#inputs) properties are implicitly available as output properties. A
         <span class="property-type">string</span>
     </dt>
     <dd>{{% md %}}Upcoming subscription expiration notification date. The date conforms to the following format: `yyyy-MM-ddTHH:mm:ssZ` as specified by the ISO 8601 standard.
-{{% /md %}}</dd>
-    <dt class="property-"
+{{% /md %}}</dd><dt class="property-"
             title="">
         <span id="startdate_go">
 <a href="#startdate_go" style="color: inherit; text-decoration: inherit;">Start<wbr>Date</a>
@@ -934,8 +851,7 @@ All [input](#inputs) properties are implicitly available as output properties. A
         <span class="property-type">string</span>
     </dt>
     <dd>{{% md %}}Subscription activation date. The setting is for audit purposes only and the subscription is not automatically activated. The subscription lifecycle can be managed by using the `state` property. The date conforms to the following format: `yyyy-MM-ddTHH:mm:ssZ` as specified by the ISO 8601 standard.
-{{% /md %}}</dd>
-    <dt class="property-"
+{{% /md %}}</dd><dt class="property-"
             title="">
         <span id="statecomment_go">
 <a href="#statecomment_go" style="color: inherit; text-decoration: inherit;">State<wbr>Comment</a>
@@ -943,14 +859,11 @@ All [input](#inputs) properties are implicitly available as output properties. A
         <span class="property-indicator"></span>
         <span class="property-type">string</span>
     </dt>
-    <dd>{{% md %}}Optional subscription comment added by an administrator when the state is changed to the 'rejected'.{{% /md %}}</dd>
-</dl>
+    <dd>{{% md %}}Optional subscription comment added by an administrator when the state is changed to the 'rejected'.{{% /md %}}</dd></dl>
 {{% /choosable %}}
 
 {{% choosable language nodejs %}}
-<dl class="resources-properties">
-
-    <dt class="property-"
+<dl class="resources-properties"><dt class="property-"
             title="">
         <span id="createddate_nodejs">
 <a href="#createddate_nodejs" style="color: inherit; text-decoration: inherit;">created<wbr>Date</a>
@@ -959,8 +872,7 @@ All [input](#inputs) properties are implicitly available as output properties. A
         <span class="property-type">string</span>
     </dt>
     <dd>{{% md %}}Subscription creation date. The date conforms to the following format: `yyyy-MM-ddTHH:mm:ssZ` as specified by the ISO 8601 standard.
-{{% /md %}}</dd>
-    <dt class="property-"
+{{% /md %}}</dd><dt class="property-"
             title="">
         <span id="id_nodejs">
 <a href="#id_nodejs" style="color: inherit; text-decoration: inherit;">id</a>
@@ -968,8 +880,7 @@ All [input](#inputs) properties are implicitly available as output properties. A
         <span class="property-indicator"></span>
         <span class="property-type">string</span>
     </dt>
-    <dd>{{% md %}}The provider-assigned unique ID for this managed resource.{{% /md %}}</dd>
-    <dt class="property-"
+    <dd>{{% md %}}The provider-assigned unique ID for this managed resource.{{% /md %}}</dd><dt class="property-"
             title="">
         <span id="name_nodejs">
 <a href="#name_nodejs" style="color: inherit; text-decoration: inherit;">name</a>
@@ -977,8 +888,7 @@ All [input](#inputs) properties are implicitly available as output properties. A
         <span class="property-indicator"></span>
         <span class="property-type">string</span>
     </dt>
-    <dd>{{% md %}}Resource name.{{% /md %}}</dd>
-    <dt class="property-"
+    <dd>{{% md %}}Resource name.{{% /md %}}</dd><dt class="property-"
             title="">
         <span id="type_nodejs">
 <a href="#type_nodejs" style="color: inherit; text-decoration: inherit;">type</a>
@@ -986,8 +896,7 @@ All [input](#inputs) properties are implicitly available as output properties. A
         <span class="property-indicator"></span>
         <span class="property-type">string</span>
     </dt>
-    <dd>{{% md %}}Resource type for API Management resource.{{% /md %}}</dd>
-    <dt class="property-"
+    <dd>{{% md %}}Resource type for API Management resource.{{% /md %}}</dd><dt class="property-"
             title="">
         <span id="enddate_nodejs">
 <a href="#enddate_nodejs" style="color: inherit; text-decoration: inherit;">end<wbr>Date</a>
@@ -996,8 +905,7 @@ All [input](#inputs) properties are implicitly available as output properties. A
         <span class="property-type">string</span>
     </dt>
     <dd>{{% md %}}Date when subscription was cancelled or expired. The setting is for audit purposes only and the subscription is not automatically cancelled. The subscription lifecycle can be managed by using the `state` property. The date conforms to the following format: `yyyy-MM-ddTHH:mm:ssZ` as specified by the ISO 8601 standard.
-{{% /md %}}</dd>
-    <dt class="property-"
+{{% /md %}}</dd><dt class="property-"
             title="">
         <span id="expirationdate_nodejs">
 <a href="#expirationdate_nodejs" style="color: inherit; text-decoration: inherit;">expiration<wbr>Date</a>
@@ -1006,8 +914,7 @@ All [input](#inputs) properties are implicitly available as output properties. A
         <span class="property-type">string</span>
     </dt>
     <dd>{{% md %}}Subscription expiration date. The setting is for audit purposes only and the subscription is not automatically expired. The subscription lifecycle can be managed by using the `state` property. The date conforms to the following format: `yyyy-MM-ddTHH:mm:ssZ` as specified by the ISO 8601 standard.
-{{% /md %}}</dd>
-    <dt class="property-"
+{{% /md %}}</dd><dt class="property-"
             title="">
         <span id="notificationdate_nodejs">
 <a href="#notificationdate_nodejs" style="color: inherit; text-decoration: inherit;">notification<wbr>Date</a>
@@ -1016,8 +923,7 @@ All [input](#inputs) properties are implicitly available as output properties. A
         <span class="property-type">string</span>
     </dt>
     <dd>{{% md %}}Upcoming subscription expiration notification date. The date conforms to the following format: `yyyy-MM-ddTHH:mm:ssZ` as specified by the ISO 8601 standard.
-{{% /md %}}</dd>
-    <dt class="property-"
+{{% /md %}}</dd><dt class="property-"
             title="">
         <span id="startdate_nodejs">
 <a href="#startdate_nodejs" style="color: inherit; text-decoration: inherit;">start<wbr>Date</a>
@@ -1026,8 +932,7 @@ All [input](#inputs) properties are implicitly available as output properties. A
         <span class="property-type">string</span>
     </dt>
     <dd>{{% md %}}Subscription activation date. The setting is for audit purposes only and the subscription is not automatically activated. The subscription lifecycle can be managed by using the `state` property. The date conforms to the following format: `yyyy-MM-ddTHH:mm:ssZ` as specified by the ISO 8601 standard.
-{{% /md %}}</dd>
-    <dt class="property-"
+{{% /md %}}</dd><dt class="property-"
             title="">
         <span id="statecomment_nodejs">
 <a href="#statecomment_nodejs" style="color: inherit; text-decoration: inherit;">state<wbr>Comment</a>
@@ -1035,14 +940,11 @@ All [input](#inputs) properties are implicitly available as output properties. A
         <span class="property-indicator"></span>
         <span class="property-type">string</span>
     </dt>
-    <dd>{{% md %}}Optional subscription comment added by an administrator when the state is changed to the 'rejected'.{{% /md %}}</dd>
-</dl>
+    <dd>{{% md %}}Optional subscription comment added by an administrator when the state is changed to the 'rejected'.{{% /md %}}</dd></dl>
 {{% /choosable %}}
 
 {{% choosable language python %}}
-<dl class="resources-properties">
-
-    <dt class="property-"
+<dl class="resources-properties"><dt class="property-"
             title="">
         <span id="created_date_python">
 <a href="#created_date_python" style="color: inherit; text-decoration: inherit;">created_<wbr>date</a>
@@ -1051,8 +953,7 @@ All [input](#inputs) properties are implicitly available as output properties. A
         <span class="property-type">str</span>
     </dt>
     <dd>{{% md %}}Subscription creation date. The date conforms to the following format: `yyyy-MM-ddTHH:mm:ssZ` as specified by the ISO 8601 standard.
-{{% /md %}}</dd>
-    <dt class="property-"
+{{% /md %}}</dd><dt class="property-"
             title="">
         <span id="id_python">
 <a href="#id_python" style="color: inherit; text-decoration: inherit;">id</a>
@@ -1060,8 +961,7 @@ All [input](#inputs) properties are implicitly available as output properties. A
         <span class="property-indicator"></span>
         <span class="property-type">str</span>
     </dt>
-    <dd>{{% md %}}The provider-assigned unique ID for this managed resource.{{% /md %}}</dd>
-    <dt class="property-"
+    <dd>{{% md %}}The provider-assigned unique ID for this managed resource.{{% /md %}}</dd><dt class="property-"
             title="">
         <span id="name_python">
 <a href="#name_python" style="color: inherit; text-decoration: inherit;">name</a>
@@ -1069,8 +969,7 @@ All [input](#inputs) properties are implicitly available as output properties. A
         <span class="property-indicator"></span>
         <span class="property-type">str</span>
     </dt>
-    <dd>{{% md %}}Resource name.{{% /md %}}</dd>
-    <dt class="property-"
+    <dd>{{% md %}}Resource name.{{% /md %}}</dd><dt class="property-"
             title="">
         <span id="type_python">
 <a href="#type_python" style="color: inherit; text-decoration: inherit;">type</a>
@@ -1078,8 +977,7 @@ All [input](#inputs) properties are implicitly available as output properties. A
         <span class="property-indicator"></span>
         <span class="property-type">str</span>
     </dt>
-    <dd>{{% md %}}Resource type for API Management resource.{{% /md %}}</dd>
-    <dt class="property-"
+    <dd>{{% md %}}Resource type for API Management resource.{{% /md %}}</dd><dt class="property-"
             title="">
         <span id="end_date_python">
 <a href="#end_date_python" style="color: inherit; text-decoration: inherit;">end_<wbr>date</a>
@@ -1088,8 +986,7 @@ All [input](#inputs) properties are implicitly available as output properties. A
         <span class="property-type">str</span>
     </dt>
     <dd>{{% md %}}Date when subscription was cancelled or expired. The setting is for audit purposes only and the subscription is not automatically cancelled. The subscription lifecycle can be managed by using the `state` property. The date conforms to the following format: `yyyy-MM-ddTHH:mm:ssZ` as specified by the ISO 8601 standard.
-{{% /md %}}</dd>
-    <dt class="property-"
+{{% /md %}}</dd><dt class="property-"
             title="">
         <span id="expiration_date_python">
 <a href="#expiration_date_python" style="color: inherit; text-decoration: inherit;">expiration_<wbr>date</a>
@@ -1098,8 +995,7 @@ All [input](#inputs) properties are implicitly available as output properties. A
         <span class="property-type">str</span>
     </dt>
     <dd>{{% md %}}Subscription expiration date. The setting is for audit purposes only and the subscription is not automatically expired. The subscription lifecycle can be managed by using the `state` property. The date conforms to the following format: `yyyy-MM-ddTHH:mm:ssZ` as specified by the ISO 8601 standard.
-{{% /md %}}</dd>
-    <dt class="property-"
+{{% /md %}}</dd><dt class="property-"
             title="">
         <span id="notification_date_python">
 <a href="#notification_date_python" style="color: inherit; text-decoration: inherit;">notification_<wbr>date</a>
@@ -1108,8 +1004,7 @@ All [input](#inputs) properties are implicitly available as output properties. A
         <span class="property-type">str</span>
     </dt>
     <dd>{{% md %}}Upcoming subscription expiration notification date. The date conforms to the following format: `yyyy-MM-ddTHH:mm:ssZ` as specified by the ISO 8601 standard.
-{{% /md %}}</dd>
-    <dt class="property-"
+{{% /md %}}</dd><dt class="property-"
             title="">
         <span id="start_date_python">
 <a href="#start_date_python" style="color: inherit; text-decoration: inherit;">start_<wbr>date</a>
@@ -1118,8 +1013,7 @@ All [input](#inputs) properties are implicitly available as output properties. A
         <span class="property-type">str</span>
     </dt>
     <dd>{{% md %}}Subscription activation date. The setting is for audit purposes only and the subscription is not automatically activated. The subscription lifecycle can be managed by using the `state` property. The date conforms to the following format: `yyyy-MM-ddTHH:mm:ssZ` as specified by the ISO 8601 standard.
-{{% /md %}}</dd>
-    <dt class="property-"
+{{% /md %}}</dd><dt class="property-"
             title="">
         <span id="state_comment_python">
 <a href="#state_comment_python" style="color: inherit; text-decoration: inherit;">state_<wbr>comment</a>
@@ -1127,8 +1021,7 @@ All [input](#inputs) properties are implicitly available as output properties. A
         <span class="property-indicator"></span>
         <span class="property-type">str</span>
     </dt>
-    <dd>{{% md %}}Optional subscription comment added by an administrator when the state is changed to the 'rejected'.{{% /md %}}</dd>
-</dl>
+    <dd>{{% md %}}Optional subscription comment added by an administrator when the state is changed to the 'rejected'.{{% /md %}}</dd></dl>
 {{% /choosable %}}
 
 
@@ -1144,71 +1037,43 @@ All [input](#inputs) properties are implicitly available as output properties. A
 <h4 id="subscriptionstate">Subscription<wbr>State</h4>
 
 {{% choosable language csharp %}}
-<dl class="tabular">
-    <dt>Suspended</dt>
-    <dd>suspended</dd>
-    <dt>Active</dt>
-    <dd>active</dd>
-    <dt>Expired</dt>
-    <dd>expired</dd>
-    <dt>Submitted</dt>
-    <dd>submitted</dd>
-    <dt>Rejected</dt>
-    <dd>rejected</dd>
-    <dt>Cancelled</dt>
-    <dd>cancelled</dd>
-</dl>
+<dl class="tabular"><dt>Suspended</dt>
+    <dd>suspended</dd><dt>Active</dt>
+    <dd>active</dd><dt>Expired</dt>
+    <dd>expired</dd><dt>Submitted</dt>
+    <dd>submitted</dd><dt>Rejected</dt>
+    <dd>rejected</dd><dt>Cancelled</dt>
+    <dd>cancelled</dd></dl>
 {{% /choosable %}}
 
 {{% choosable language go %}}
-<dl class="tabular">
-    <dt>Subscription<wbr>State<wbr>Suspended</dt>
-    <dd>suspended</dd>
-    <dt>Subscription<wbr>State<wbr>Active</dt>
-    <dd>active</dd>
-    <dt>Subscription<wbr>State<wbr>Expired</dt>
-    <dd>expired</dd>
-    <dt>Subscription<wbr>State<wbr>Submitted</dt>
-    <dd>submitted</dd>
-    <dt>Subscription<wbr>State<wbr>Rejected</dt>
-    <dd>rejected</dd>
-    <dt>Subscription<wbr>State<wbr>Cancelled</dt>
-    <dd>cancelled</dd>
-</dl>
+<dl class="tabular"><dt>Subscription<wbr>State<wbr>Suspended</dt>
+    <dd>suspended</dd><dt>Subscription<wbr>State<wbr>Active</dt>
+    <dd>active</dd><dt>Subscription<wbr>State<wbr>Expired</dt>
+    <dd>expired</dd><dt>Subscription<wbr>State<wbr>Submitted</dt>
+    <dd>submitted</dd><dt>Subscription<wbr>State<wbr>Rejected</dt>
+    <dd>rejected</dd><dt>Subscription<wbr>State<wbr>Cancelled</dt>
+    <dd>cancelled</dd></dl>
 {{% /choosable %}}
 
 {{% choosable language nodejs %}}
-<dl class="tabular">
-    <dt>Suspended</dt>
-    <dd>suspended</dd>
-    <dt>Active</dt>
-    <dd>active</dd>
-    <dt>Expired</dt>
-    <dd>expired</dd>
-    <dt>Submitted</dt>
-    <dd>submitted</dd>
-    <dt>Rejected</dt>
-    <dd>rejected</dd>
-    <dt>Cancelled</dt>
-    <dd>cancelled</dd>
-</dl>
+<dl class="tabular"><dt>Suspended</dt>
+    <dd>suspended</dd><dt>Active</dt>
+    <dd>active</dd><dt>Expired</dt>
+    <dd>expired</dd><dt>Submitted</dt>
+    <dd>submitted</dd><dt>Rejected</dt>
+    <dd>rejected</dd><dt>Cancelled</dt>
+    <dd>cancelled</dd></dl>
 {{% /choosable %}}
 
 {{% choosable language python %}}
-<dl class="tabular">
-    <dt>SUSPENDED</dt>
-    <dd>suspended</dd>
-    <dt>ACTIVE</dt>
-    <dd>active</dd>
-    <dt>EXPIRED</dt>
-    <dd>expired</dd>
-    <dt>SUBMITTED</dt>
-    <dd>submitted</dd>
-    <dt>REJECTED</dt>
-    <dd>rejected</dd>
-    <dt>CANCELLED</dt>
-    <dd>cancelled</dd>
-</dl>
+<dl class="tabular"><dt>SUSPENDED</dt>
+    <dd>suspended</dd><dt>ACTIVE</dt>
+    <dd>active</dd><dt>EXPIRED</dt>
+    <dd>expired</dd><dt>SUBMITTED</dt>
+    <dd>submitted</dd><dt>REJECTED</dt>
+    <dd>rejected</dd><dt>CANCELLED</dt>
+    <dd>cancelled</dd></dl>
 {{% /choosable %}}
 ## Import
 

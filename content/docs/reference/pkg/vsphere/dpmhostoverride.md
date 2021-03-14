@@ -35,9 +35,7 @@ meta_desc: "Documentation for the vsphere.DpmHostOverride resource with examples
 
 {{% choosable language nodejs %}}
 
-<dl class="resources-properties">
-  
-    <dt
+<dl class="resources-properties"><dt
         class="property-required" title="Required">
         <span>name</span>
         <span class="property-indicator"></span>
@@ -45,9 +43,7 @@ meta_desc: "Documentation for the vsphere.DpmHostOverride resource with examples
     </dt>
     <dd>
       The unique name of the resource.
-    </dd>
-  
-    <dt
+    </dd><dt
         class="property-required" title="Required">
         <span>args</span>
         <span class="property-indicator"></span>
@@ -55,9 +51,7 @@ meta_desc: "Documentation for the vsphere.DpmHostOverride resource with examples
     </dt>
     <dd>
       The arguments to resource properties.
-    </dd>
-  
-    <dt
+    </dd><dt
         class="property-optional" title="Optional">
         <span>opts</span>
         <span class="property-indicator"></span>
@@ -65,10 +59,7 @@ meta_desc: "Documentation for the vsphere.DpmHostOverride resource with examples
     </dt>
     <dd>
       Bag of options to control resource&#39;s behavior.
-    </dd>
-  
-
-</dl>
+    </dd></dl>
 
 {{% /choosable %}}
 
@@ -94,9 +85,7 @@ meta_desc: "Documentation for the vsphere.DpmHostOverride resource with examples
 
 {{% choosable language go %}}
 
-<dl class="resources-properties">
-  
-    <dt
+<dl class="resources-properties"><dt
         class="property-optional" title="Optional">
         <span>ctx</span>
         <span class="property-indicator"></span>
@@ -104,9 +93,7 @@ meta_desc: "Documentation for the vsphere.DpmHostOverride resource with examples
     </dt>
     <dd>
       Context object for the current deployment.
-    </dd>
-  
-    <dt
+    </dd><dt
         class="property-required" title="Required">
         <span>name</span>
         <span class="property-indicator"></span>
@@ -114,9 +101,7 @@ meta_desc: "Documentation for the vsphere.DpmHostOverride resource with examples
     </dt>
     <dd>
       The unique name of the resource.
-    </dd>
-  
-    <dt
+    </dd><dt
         class="property-required" title="Required">
         <span>args</span>
         <span class="property-indicator"></span>
@@ -124,9 +109,7 @@ meta_desc: "Documentation for the vsphere.DpmHostOverride resource with examples
     </dt>
     <dd>
       The arguments to resource properties.
-    </dd>
-  
-    <dt
+    </dd><dt
         class="property-optional" title="Optional">
         <span>opts</span>
         <span class="property-indicator"></span>
@@ -134,18 +117,13 @@ meta_desc: "Documentation for the vsphere.DpmHostOverride resource with examples
     </dt>
     <dd>
       Bag of options to control resource&#39;s behavior.
-    </dd>
-  
-
-</dl>
+    </dd></dl>
 
 {{% /choosable %}}
 
 {{% choosable language csharp %}}
 
-<dl class="resources-properties">
-  
-    <dt
+<dl class="resources-properties"><dt
         class="property-required" title="Required">
         <span>name</span>
         <span class="property-indicator"></span>
@@ -153,9 +131,7 @@ meta_desc: "Documentation for the vsphere.DpmHostOverride resource with examples
     </dt>
     <dd>
       The unique name of the resource.
-    </dd>
-  
-    <dt
+    </dd><dt
         class="property-required" title="Required">
         <span>args</span>
         <span class="property-indicator"></span>
@@ -163,9 +139,7 @@ meta_desc: "Documentation for the vsphere.DpmHostOverride resource with examples
     </dt>
     <dd>
       The arguments to resource properties.
-    </dd>
-  
-    <dt
+    </dd><dt
         class="property-optional" title="Optional">
         <span>opts</span>
         <span class="property-indicator"></span>
@@ -173,10 +147,7 @@ meta_desc: "Documentation for the vsphere.DpmHostOverride resource with examples
     </dt>
     <dd>
       Bag of options to control resource&#39;s behavior.
-    </dd>
-  
-
-</dl>
+    </dd></dl>
 
 {{% /choosable %}}
 
@@ -191,9 +162,7 @@ The DpmHostOverride resource accepts the following [input]({{< relref "/docs/int
 
 
 {{% choosable language csharp %}}
-<dl class="resources-properties">
-
-    <dt class="property-required"
+<dl class="resources-properties"><dt class="property-required"
             title="Required">
         <span id="computeclusterid_csharp">
 <a href="#computeclusterid_csharp" style="color: inherit; text-decoration: inherit;">Compute<wbr>Cluster<wbr>Id</a>
@@ -204,8 +173,7 @@ The DpmHostOverride resource accepts the following [input]({{< relref "/docs/int
     <dd>{{% md %}}The managed object reference
 ID of the cluster to put the override in.  Forces a new
 resource if changed.
-{{% /md %}}</dd>
-    <dt class="property-required"
+{{% /md %}}</dd><dt class="property-required"
             title="Required">
         <span id="hostsystemid_csharp">
 <a href="#hostsystemid_csharp" style="color: inherit; text-decoration: inherit;">Host<wbr>System<wbr>Id</a>
@@ -214,8 +182,7 @@ resource if changed.
         <span class="property-type">string</span>
     </dt>
     <dd>{{% md %}}The managed object ID of the host.
-{{% /md %}}</dd>
-    <dt class="property-optional"
+{{% /md %}}</dd><dt class="property-optional"
             title="Optional">
         <span id="dpmautomationlevel_csharp">
 <a href="#dpmautomationlevel_csharp" style="color: inherit; text-decoration: inherit;">Dpm<wbr>Automation<wbr>Level</a>
@@ -226,8 +193,7 @@ resource if changed.
     <dd>{{% md %}}The automation level for host power
 operations on this host. Can be one of `manual` or `automated`. Default:
 `manual`.
-{{% /md %}}</dd>
-    <dt class="property-optional"
+{{% /md %}}</dd><dt class="property-optional"
             title="Optional">
         <span id="dpmenabled_csharp">
 <a href="#dpmenabled_csharp" style="color: inherit; text-decoration: inherit;">Dpm<wbr>Enabled</a>
@@ -237,14 +203,11 @@ operations on this host. Can be one of `manual` or `automated`. Default:
     </dt>
     <dd>{{% md %}}Enable DPM support for this host. Default:
 `false`.
-{{% /md %}}</dd>
-</dl>
+{{% /md %}}</dd></dl>
 {{% /choosable %}}
 
 {{% choosable language go %}}
-<dl class="resources-properties">
-
-    <dt class="property-required"
+<dl class="resources-properties"><dt class="property-required"
             title="Required">
         <span id="computeclusterid_go">
 <a href="#computeclusterid_go" style="color: inherit; text-decoration: inherit;">Compute<wbr>Cluster<wbr>Id</a>
@@ -255,8 +218,7 @@ operations on this host. Can be one of `manual` or `automated`. Default:
     <dd>{{% md %}}The managed object reference
 ID of the cluster to put the override in.  Forces a new
 resource if changed.
-{{% /md %}}</dd>
-    <dt class="property-required"
+{{% /md %}}</dd><dt class="property-required"
             title="Required">
         <span id="hostsystemid_go">
 <a href="#hostsystemid_go" style="color: inherit; text-decoration: inherit;">Host<wbr>System<wbr>Id</a>
@@ -265,8 +227,7 @@ resource if changed.
         <span class="property-type">string</span>
     </dt>
     <dd>{{% md %}}The managed object ID of the host.
-{{% /md %}}</dd>
-    <dt class="property-optional"
+{{% /md %}}</dd><dt class="property-optional"
             title="Optional">
         <span id="dpmautomationlevel_go">
 <a href="#dpmautomationlevel_go" style="color: inherit; text-decoration: inherit;">Dpm<wbr>Automation<wbr>Level</a>
@@ -277,8 +238,7 @@ resource if changed.
     <dd>{{% md %}}The automation level for host power
 operations on this host. Can be one of `manual` or `automated`. Default:
 `manual`.
-{{% /md %}}</dd>
-    <dt class="property-optional"
+{{% /md %}}</dd><dt class="property-optional"
             title="Optional">
         <span id="dpmenabled_go">
 <a href="#dpmenabled_go" style="color: inherit; text-decoration: inherit;">Dpm<wbr>Enabled</a>
@@ -288,14 +248,11 @@ operations on this host. Can be one of `manual` or `automated`. Default:
     </dt>
     <dd>{{% md %}}Enable DPM support for this host. Default:
 `false`.
-{{% /md %}}</dd>
-</dl>
+{{% /md %}}</dd></dl>
 {{% /choosable %}}
 
 {{% choosable language nodejs %}}
-<dl class="resources-properties">
-
-    <dt class="property-required"
+<dl class="resources-properties"><dt class="property-required"
             title="Required">
         <span id="computeclusterid_nodejs">
 <a href="#computeclusterid_nodejs" style="color: inherit; text-decoration: inherit;">compute<wbr>Cluster<wbr>Id</a>
@@ -306,8 +263,7 @@ operations on this host. Can be one of `manual` or `automated`. Default:
     <dd>{{% md %}}The managed object reference
 ID of the cluster to put the override in.  Forces a new
 resource if changed.
-{{% /md %}}</dd>
-    <dt class="property-required"
+{{% /md %}}</dd><dt class="property-required"
             title="Required">
         <span id="hostsystemid_nodejs">
 <a href="#hostsystemid_nodejs" style="color: inherit; text-decoration: inherit;">host<wbr>System<wbr>Id</a>
@@ -316,8 +272,7 @@ resource if changed.
         <span class="property-type">string</span>
     </dt>
     <dd>{{% md %}}The managed object ID of the host.
-{{% /md %}}</dd>
-    <dt class="property-optional"
+{{% /md %}}</dd><dt class="property-optional"
             title="Optional">
         <span id="dpmautomationlevel_nodejs">
 <a href="#dpmautomationlevel_nodejs" style="color: inherit; text-decoration: inherit;">dpm<wbr>Automation<wbr>Level</a>
@@ -328,8 +283,7 @@ resource if changed.
     <dd>{{% md %}}The automation level for host power
 operations on this host. Can be one of `manual` or `automated`. Default:
 `manual`.
-{{% /md %}}</dd>
-    <dt class="property-optional"
+{{% /md %}}</dd><dt class="property-optional"
             title="Optional">
         <span id="dpmenabled_nodejs">
 <a href="#dpmenabled_nodejs" style="color: inherit; text-decoration: inherit;">dpm<wbr>Enabled</a>
@@ -339,14 +293,11 @@ operations on this host. Can be one of `manual` or `automated`. Default:
     </dt>
     <dd>{{% md %}}Enable DPM support for this host. Default:
 `false`.
-{{% /md %}}</dd>
-</dl>
+{{% /md %}}</dd></dl>
 {{% /choosable %}}
 
 {{% choosable language python %}}
-<dl class="resources-properties">
-
-    <dt class="property-required"
+<dl class="resources-properties"><dt class="property-required"
             title="Required">
         <span id="compute_cluster_id_python">
 <a href="#compute_cluster_id_python" style="color: inherit; text-decoration: inherit;">compute_<wbr>cluster_<wbr>id</a>
@@ -357,8 +308,7 @@ operations on this host. Can be one of `manual` or `automated`. Default:
     <dd>{{% md %}}The managed object reference
 ID of the cluster to put the override in.  Forces a new
 resource if changed.
-{{% /md %}}</dd>
-    <dt class="property-required"
+{{% /md %}}</dd><dt class="property-required"
             title="Required">
         <span id="host_system_id_python">
 <a href="#host_system_id_python" style="color: inherit; text-decoration: inherit;">host_<wbr>system_<wbr>id</a>
@@ -367,8 +317,7 @@ resource if changed.
         <span class="property-type">str</span>
     </dt>
     <dd>{{% md %}}The managed object ID of the host.
-{{% /md %}}</dd>
-    <dt class="property-optional"
+{{% /md %}}</dd><dt class="property-optional"
             title="Optional">
         <span id="dpm_automation_level_python">
 <a href="#dpm_automation_level_python" style="color: inherit; text-decoration: inherit;">dpm_<wbr>automation_<wbr>level</a>
@@ -379,8 +328,7 @@ resource if changed.
     <dd>{{% md %}}The automation level for host power
 operations on this host. Can be one of `manual` or `automated`. Default:
 `manual`.
-{{% /md %}}</dd>
-    <dt class="property-optional"
+{{% /md %}}</dd><dt class="property-optional"
             title="Optional">
         <span id="dpm_enabled_python">
 <a href="#dpm_enabled_python" style="color: inherit; text-decoration: inherit;">dpm_<wbr>enabled</a>
@@ -390,8 +338,7 @@ operations on this host. Can be one of `manual` or `automated`. Default:
     </dt>
     <dd>{{% md %}}Enable DPM support for this host. Default:
 `false`.
-{{% /md %}}</dd>
-</dl>
+{{% /md %}}</dd></dl>
 {{% /choosable %}}
 
 
@@ -402,9 +349,7 @@ All [input](#inputs) properties are implicitly available as output properties. A
 
 
 {{% choosable language csharp %}}
-<dl class="resources-properties">
-
-    <dt class="property-"
+<dl class="resources-properties"><dt class="property-"
             title="">
         <span id="id_csharp">
 <a href="#id_csharp" style="color: inherit; text-decoration: inherit;">Id</a>
@@ -412,14 +357,11 @@ All [input](#inputs) properties are implicitly available as output properties. A
         <span class="property-indicator"></span>
         <span class="property-type">string</span>
     </dt>
-    <dd>{{% md %}}The provider-assigned unique ID for this managed resource.{{% /md %}}</dd>
-</dl>
+    <dd>{{% md %}}The provider-assigned unique ID for this managed resource.{{% /md %}}</dd></dl>
 {{% /choosable %}}
 
 {{% choosable language go %}}
-<dl class="resources-properties">
-
-    <dt class="property-"
+<dl class="resources-properties"><dt class="property-"
             title="">
         <span id="id_go">
 <a href="#id_go" style="color: inherit; text-decoration: inherit;">Id</a>
@@ -427,14 +369,11 @@ All [input](#inputs) properties are implicitly available as output properties. A
         <span class="property-indicator"></span>
         <span class="property-type">string</span>
     </dt>
-    <dd>{{% md %}}The provider-assigned unique ID for this managed resource.{{% /md %}}</dd>
-</dl>
+    <dd>{{% md %}}The provider-assigned unique ID for this managed resource.{{% /md %}}</dd></dl>
 {{% /choosable %}}
 
 {{% choosable language nodejs %}}
-<dl class="resources-properties">
-
-    <dt class="property-"
+<dl class="resources-properties"><dt class="property-"
             title="">
         <span id="id_nodejs">
 <a href="#id_nodejs" style="color: inherit; text-decoration: inherit;">id</a>
@@ -442,14 +381,11 @@ All [input](#inputs) properties are implicitly available as output properties. A
         <span class="property-indicator"></span>
         <span class="property-type">string</span>
     </dt>
-    <dd>{{% md %}}The provider-assigned unique ID for this managed resource.{{% /md %}}</dd>
-</dl>
+    <dd>{{% md %}}The provider-assigned unique ID for this managed resource.{{% /md %}}</dd></dl>
 {{% /choosable %}}
 
 {{% choosable language python %}}
-<dl class="resources-properties">
-
-    <dt class="property-"
+<dl class="resources-properties"><dt class="property-"
             title="">
         <span id="id_python">
 <a href="#id_python" style="color: inherit; text-decoration: inherit;">id</a>
@@ -457,8 +393,7 @@ All [input](#inputs) properties are implicitly available as output properties. A
         <span class="property-indicator"></span>
         <span class="property-type">str</span>
     </dt>
-    <dd>{{% md %}}The provider-assigned unique ID for this managed resource.{{% /md %}}</dd>
-</dl>
+    <dd>{{% md %}}The provider-assigned unique ID for this managed resource.{{% /md %}}</dd></dl>
 {{% /choosable %}}
 
 
@@ -585,9 +520,7 @@ The following state arguments are supported:
 
 
 {{% choosable language csharp %}}
-<dl class="resources-properties">
-
-    <dt class="property-optional"
+<dl class="resources-properties"><dt class="property-optional"
             title="Optional">
         <span id="state_computeclusterid_csharp">
 <a href="#state_computeclusterid_csharp" style="color: inherit; text-decoration: inherit;">Compute<wbr>Cluster<wbr>Id</a>
@@ -598,8 +531,7 @@ The following state arguments are supported:
     <dd>{{% md %}}The managed object reference
 ID of the cluster to put the override in.  Forces a new
 resource if changed.
-{{% /md %}}</dd>
-    <dt class="property-optional"
+{{% /md %}}</dd><dt class="property-optional"
             title="Optional">
         <span id="state_dpmautomationlevel_csharp">
 <a href="#state_dpmautomationlevel_csharp" style="color: inherit; text-decoration: inherit;">Dpm<wbr>Automation<wbr>Level</a>
@@ -610,8 +542,7 @@ resource if changed.
     <dd>{{% md %}}The automation level for host power
 operations on this host. Can be one of `manual` or `automated`. Default:
 `manual`.
-{{% /md %}}</dd>
-    <dt class="property-optional"
+{{% /md %}}</dd><dt class="property-optional"
             title="Optional">
         <span id="state_dpmenabled_csharp">
 <a href="#state_dpmenabled_csharp" style="color: inherit; text-decoration: inherit;">Dpm<wbr>Enabled</a>
@@ -621,8 +552,7 @@ operations on this host. Can be one of `manual` or `automated`. Default:
     </dt>
     <dd>{{% md %}}Enable DPM support for this host. Default:
 `false`.
-{{% /md %}}</dd>
-    <dt class="property-optional"
+{{% /md %}}</dd><dt class="property-optional"
             title="Optional">
         <span id="state_hostsystemid_csharp">
 <a href="#state_hostsystemid_csharp" style="color: inherit; text-decoration: inherit;">Host<wbr>System<wbr>Id</a>
@@ -631,14 +561,11 @@ operations on this host. Can be one of `manual` or `automated`. Default:
         <span class="property-type">string</span>
     </dt>
     <dd>{{% md %}}The managed object ID of the host.
-{{% /md %}}</dd>
-</dl>
+{{% /md %}}</dd></dl>
 {{% /choosable %}}
 
 {{% choosable language go %}}
-<dl class="resources-properties">
-
-    <dt class="property-optional"
+<dl class="resources-properties"><dt class="property-optional"
             title="Optional">
         <span id="state_computeclusterid_go">
 <a href="#state_computeclusterid_go" style="color: inherit; text-decoration: inherit;">Compute<wbr>Cluster<wbr>Id</a>
@@ -649,8 +576,7 @@ operations on this host. Can be one of `manual` or `automated`. Default:
     <dd>{{% md %}}The managed object reference
 ID of the cluster to put the override in.  Forces a new
 resource if changed.
-{{% /md %}}</dd>
-    <dt class="property-optional"
+{{% /md %}}</dd><dt class="property-optional"
             title="Optional">
         <span id="state_dpmautomationlevel_go">
 <a href="#state_dpmautomationlevel_go" style="color: inherit; text-decoration: inherit;">Dpm<wbr>Automation<wbr>Level</a>
@@ -661,8 +587,7 @@ resource if changed.
     <dd>{{% md %}}The automation level for host power
 operations on this host. Can be one of `manual` or `automated`. Default:
 `manual`.
-{{% /md %}}</dd>
-    <dt class="property-optional"
+{{% /md %}}</dd><dt class="property-optional"
             title="Optional">
         <span id="state_dpmenabled_go">
 <a href="#state_dpmenabled_go" style="color: inherit; text-decoration: inherit;">Dpm<wbr>Enabled</a>
@@ -672,8 +597,7 @@ operations on this host. Can be one of `manual` or `automated`. Default:
     </dt>
     <dd>{{% md %}}Enable DPM support for this host. Default:
 `false`.
-{{% /md %}}</dd>
-    <dt class="property-optional"
+{{% /md %}}</dd><dt class="property-optional"
             title="Optional">
         <span id="state_hostsystemid_go">
 <a href="#state_hostsystemid_go" style="color: inherit; text-decoration: inherit;">Host<wbr>System<wbr>Id</a>
@@ -682,14 +606,11 @@ operations on this host. Can be one of `manual` or `automated`. Default:
         <span class="property-type">string</span>
     </dt>
     <dd>{{% md %}}The managed object ID of the host.
-{{% /md %}}</dd>
-</dl>
+{{% /md %}}</dd></dl>
 {{% /choosable %}}
 
 {{% choosable language nodejs %}}
-<dl class="resources-properties">
-
-    <dt class="property-optional"
+<dl class="resources-properties"><dt class="property-optional"
             title="Optional">
         <span id="state_computeclusterid_nodejs">
 <a href="#state_computeclusterid_nodejs" style="color: inherit; text-decoration: inherit;">compute<wbr>Cluster<wbr>Id</a>
@@ -700,8 +621,7 @@ operations on this host. Can be one of `manual` or `automated`. Default:
     <dd>{{% md %}}The managed object reference
 ID of the cluster to put the override in.  Forces a new
 resource if changed.
-{{% /md %}}</dd>
-    <dt class="property-optional"
+{{% /md %}}</dd><dt class="property-optional"
             title="Optional">
         <span id="state_dpmautomationlevel_nodejs">
 <a href="#state_dpmautomationlevel_nodejs" style="color: inherit; text-decoration: inherit;">dpm<wbr>Automation<wbr>Level</a>
@@ -712,8 +632,7 @@ resource if changed.
     <dd>{{% md %}}The automation level for host power
 operations on this host. Can be one of `manual` or `automated`. Default:
 `manual`.
-{{% /md %}}</dd>
-    <dt class="property-optional"
+{{% /md %}}</dd><dt class="property-optional"
             title="Optional">
         <span id="state_dpmenabled_nodejs">
 <a href="#state_dpmenabled_nodejs" style="color: inherit; text-decoration: inherit;">dpm<wbr>Enabled</a>
@@ -723,8 +642,7 @@ operations on this host. Can be one of `manual` or `automated`. Default:
     </dt>
     <dd>{{% md %}}Enable DPM support for this host. Default:
 `false`.
-{{% /md %}}</dd>
-    <dt class="property-optional"
+{{% /md %}}</dd><dt class="property-optional"
             title="Optional">
         <span id="state_hostsystemid_nodejs">
 <a href="#state_hostsystemid_nodejs" style="color: inherit; text-decoration: inherit;">host<wbr>System<wbr>Id</a>
@@ -733,14 +651,11 @@ operations on this host. Can be one of `manual` or `automated`. Default:
         <span class="property-type">string</span>
     </dt>
     <dd>{{% md %}}The managed object ID of the host.
-{{% /md %}}</dd>
-</dl>
+{{% /md %}}</dd></dl>
 {{% /choosable %}}
 
 {{% choosable language python %}}
-<dl class="resources-properties">
-
-    <dt class="property-optional"
+<dl class="resources-properties"><dt class="property-optional"
             title="Optional">
         <span id="state_compute_cluster_id_python">
 <a href="#state_compute_cluster_id_python" style="color: inherit; text-decoration: inherit;">compute_<wbr>cluster_<wbr>id</a>
@@ -751,8 +666,7 @@ operations on this host. Can be one of `manual` or `automated`. Default:
     <dd>{{% md %}}The managed object reference
 ID of the cluster to put the override in.  Forces a new
 resource if changed.
-{{% /md %}}</dd>
-    <dt class="property-optional"
+{{% /md %}}</dd><dt class="property-optional"
             title="Optional">
         <span id="state_dpm_automation_level_python">
 <a href="#state_dpm_automation_level_python" style="color: inherit; text-decoration: inherit;">dpm_<wbr>automation_<wbr>level</a>
@@ -763,8 +677,7 @@ resource if changed.
     <dd>{{% md %}}The automation level for host power
 operations on this host. Can be one of `manual` or `automated`. Default:
 `manual`.
-{{% /md %}}</dd>
-    <dt class="property-optional"
+{{% /md %}}</dd><dt class="property-optional"
             title="Optional">
         <span id="state_dpm_enabled_python">
 <a href="#state_dpm_enabled_python" style="color: inherit; text-decoration: inherit;">dpm_<wbr>enabled</a>
@@ -774,8 +687,7 @@ operations on this host. Can be one of `manual` or `automated`. Default:
     </dt>
     <dd>{{% md %}}Enable DPM support for this host. Default:
 `false`.
-{{% /md %}}</dd>
-    <dt class="property-optional"
+{{% /md %}}</dd><dt class="property-optional"
             title="Optional">
         <span id="state_host_system_id_python">
 <a href="#state_host_system_id_python" style="color: inherit; text-decoration: inherit;">host_<wbr>system_<wbr>id</a>
@@ -784,8 +696,7 @@ operations on this host. Can be one of `manual` or `automated`. Default:
         <span class="property-type">str</span>
     </dt>
     <dd>{{% md %}}The managed object ID of the host.
-{{% /md %}}</dd>
-</dl>
+{{% /md %}}</dd></dl>
 {{% /choosable %}}
 
 
@@ -801,6 +712,6 @@ operations on this host. Can be one of `manual` or `automated`. Default:
 	<dt>License</dt>
 	<dd>Apache-2.0</dd>
 	<dt>Notes</dt>
-	<dd>This Pulumi package is based on the [`vsphere` Terraform Provider](https://github.com/hashicorp/terraform-provider-vsphere).</dd>
+	<dd>{{% md %}}This Pulumi package is based on the [`vsphere` Terraform Provider](https://github.com/hashicorp/terraform-provider-vsphere).{{% /md %}}</dd>
 </dl>
 

@@ -51,9 +51,7 @@ The following arguments are supported:
 
 
 {{% choosable language csharp %}}
-<dl class="resources-properties">
-
-    <dt class="property-required"
+<dl class="resources-properties"><dt class="property-required"
             title="Required">
         <span id="peer_csharp">
 <a href="#peer_csharp" style="color: inherit; text-decoration: inherit;">Peer</a>
@@ -61,8 +59,7 @@ The following arguments are supported:
         <span class="property-indicator"></span>
         <span class="property-type">string</span>
     </dt>
-    <dd>{{% md %}}The IP address of the peer.{{% /md %}}</dd>
-    <dt class="property-required"
+    <dd>{{% md %}}The IP address of the peer.{{% /md %}}</dd><dt class="property-required"
             title="Required">
         <span id="resourcegroupname_csharp">
 <a href="#resourcegroupname_csharp" style="color: inherit; text-decoration: inherit;">Resource<wbr>Group<wbr>Name</a>
@@ -70,8 +67,7 @@ The following arguments are supported:
         <span class="property-indicator"></span>
         <span class="property-type">string</span>
     </dt>
-    <dd>{{% md %}}The name of the resource group.{{% /md %}}</dd>
-    <dt class="property-required"
+    <dd>{{% md %}}The name of the resource group.{{% /md %}}</dd><dt class="property-required"
             title="Required">
         <span id="virtualnetworkgatewayname_csharp">
 <a href="#virtualnetworkgatewayname_csharp" style="color: inherit; text-decoration: inherit;">Virtual<wbr>Network<wbr>Gateway<wbr>Name</a>
@@ -79,14 +75,11 @@ The following arguments are supported:
         <span class="property-indicator"></span>
         <span class="property-type">string</span>
     </dt>
-    <dd>{{% md %}}The name of the virtual network gateway.{{% /md %}}</dd>
-</dl>
+    <dd>{{% md %}}The name of the virtual network gateway.{{% /md %}}</dd></dl>
 {{% /choosable %}}
 
 {{% choosable language go %}}
-<dl class="resources-properties">
-
-    <dt class="property-required"
+<dl class="resources-properties"><dt class="property-required"
             title="Required">
         <span id="peer_go">
 <a href="#peer_go" style="color: inherit; text-decoration: inherit;">Peer</a>
@@ -94,8 +87,7 @@ The following arguments are supported:
         <span class="property-indicator"></span>
         <span class="property-type">string</span>
     </dt>
-    <dd>{{% md %}}The IP address of the peer.{{% /md %}}</dd>
-    <dt class="property-required"
+    <dd>{{% md %}}The IP address of the peer.{{% /md %}}</dd><dt class="property-required"
             title="Required">
         <span id="resourcegroupname_go">
 <a href="#resourcegroupname_go" style="color: inherit; text-decoration: inherit;">Resource<wbr>Group<wbr>Name</a>
@@ -103,8 +95,7 @@ The following arguments are supported:
         <span class="property-indicator"></span>
         <span class="property-type">string</span>
     </dt>
-    <dd>{{% md %}}The name of the resource group.{{% /md %}}</dd>
-    <dt class="property-required"
+    <dd>{{% md %}}The name of the resource group.{{% /md %}}</dd><dt class="property-required"
             title="Required">
         <span id="virtualnetworkgatewayname_go">
 <a href="#virtualnetworkgatewayname_go" style="color: inherit; text-decoration: inherit;">Virtual<wbr>Network<wbr>Gateway<wbr>Name</a>
@@ -112,14 +103,11 @@ The following arguments are supported:
         <span class="property-indicator"></span>
         <span class="property-type">string</span>
     </dt>
-    <dd>{{% md %}}The name of the virtual network gateway.{{% /md %}}</dd>
-</dl>
+    <dd>{{% md %}}The name of the virtual network gateway.{{% /md %}}</dd></dl>
 {{% /choosable %}}
 
 {{% choosable language nodejs %}}
-<dl class="resources-properties">
-
-    <dt class="property-required"
+<dl class="resources-properties"><dt class="property-required"
             title="Required">
         <span id="peer_nodejs">
 <a href="#peer_nodejs" style="color: inherit; text-decoration: inherit;">peer</a>
@@ -127,8 +115,7 @@ The following arguments are supported:
         <span class="property-indicator"></span>
         <span class="property-type">string</span>
     </dt>
-    <dd>{{% md %}}The IP address of the peer.{{% /md %}}</dd>
-    <dt class="property-required"
+    <dd>{{% md %}}The IP address of the peer.{{% /md %}}</dd><dt class="property-required"
             title="Required">
         <span id="resourcegroupname_nodejs">
 <a href="#resourcegroupname_nodejs" style="color: inherit; text-decoration: inherit;">resource<wbr>Group<wbr>Name</a>
@@ -136,8 +123,7 @@ The following arguments are supported:
         <span class="property-indicator"></span>
         <span class="property-type">string</span>
     </dt>
-    <dd>{{% md %}}The name of the resource group.{{% /md %}}</dd>
-    <dt class="property-required"
+    <dd>{{% md %}}The name of the resource group.{{% /md %}}</dd><dt class="property-required"
             title="Required">
         <span id="virtualnetworkgatewayname_nodejs">
 <a href="#virtualnetworkgatewayname_nodejs" style="color: inherit; text-decoration: inherit;">virtual<wbr>Network<wbr>Gateway<wbr>Name</a>
@@ -145,14 +131,11 @@ The following arguments are supported:
         <span class="property-indicator"></span>
         <span class="property-type">string</span>
     </dt>
-    <dd>{{% md %}}The name of the virtual network gateway.{{% /md %}}</dd>
-</dl>
+    <dd>{{% md %}}The name of the virtual network gateway.{{% /md %}}</dd></dl>
 {{% /choosable %}}
 
 {{% choosable language python %}}
-<dl class="resources-properties">
-
-    <dt class="property-required"
+<dl class="resources-properties"><dt class="property-required"
             title="Required">
         <span id="peer_python">
 <a href="#peer_python" style="color: inherit; text-decoration: inherit;">peer</a>
@@ -160,8 +143,7 @@ The following arguments are supported:
         <span class="property-indicator"></span>
         <span class="property-type">str</span>
     </dt>
-    <dd>{{% md %}}The IP address of the peer.{{% /md %}}</dd>
-    <dt class="property-required"
+    <dd>{{% md %}}The IP address of the peer.{{% /md %}}</dd><dt class="property-required"
             title="Required">
         <span id="resource_group_name_python">
 <a href="#resource_group_name_python" style="color: inherit; text-decoration: inherit;">resource_<wbr>group_<wbr>name</a>
@@ -169,8 +151,7 @@ The following arguments are supported:
         <span class="property-indicator"></span>
         <span class="property-type">str</span>
     </dt>
-    <dd>{{% md %}}The name of the resource group.{{% /md %}}</dd>
-    <dt class="property-required"
+    <dd>{{% md %}}The name of the resource group.{{% /md %}}</dd><dt class="property-required"
             title="Required">
         <span id="virtual_network_gateway_name_python">
 <a href="#virtual_network_gateway_name_python" style="color: inherit; text-decoration: inherit;">virtual_<wbr>network_<wbr>gateway_<wbr>name</a>
@@ -178,8 +159,7 @@ The following arguments are supported:
         <span class="property-indicator"></span>
         <span class="property-type">str</span>
     </dt>
-    <dd>{{% md %}}The name of the virtual network gateway.{{% /md %}}</dd>
-</dl>
+    <dd>{{% md %}}The name of the virtual network gateway.{{% /md %}}</dd></dl>
 {{% /choosable %}}
 
 
@@ -192,9 +172,7 @@ The following output properties are available:
 
 
 {{% choosable language csharp %}}
-<dl class="resources-properties">
-
-    <dt class="property-"
+<dl class="resources-properties"><dt class="property-"
             title="">
         <span id="value_csharp">
 <a href="#value_csharp" style="color: inherit; text-decoration: inherit;">Value</a>
@@ -202,14 +180,11 @@ The following output properties are available:
         <span class="property-indicator"></span>
         <span class="property-type"><a href="#gatewayrouteresponse">List&lt;Pulumi.<wbr>Azure<wbr>Native.<wbr>Network.<wbr>Outputs.<wbr>Gateway<wbr>Route<wbr>Response&gt;</a></span>
     </dt>
-    <dd>{{% md %}}List of gateway routes.{{% /md %}}</dd>
-</dl>
+    <dd>{{% md %}}List of gateway routes.{{% /md %}}</dd></dl>
 {{% /choosable %}}
 
 {{% choosable language go %}}
-<dl class="resources-properties">
-
-    <dt class="property-"
+<dl class="resources-properties"><dt class="property-"
             title="">
         <span id="value_go">
 <a href="#value_go" style="color: inherit; text-decoration: inherit;">Value</a>
@@ -217,14 +192,11 @@ The following output properties are available:
         <span class="property-indicator"></span>
         <span class="property-type"><a href="#gatewayrouteresponse">[]Gateway<wbr>Route<wbr>Response</a></span>
     </dt>
-    <dd>{{% md %}}List of gateway routes.{{% /md %}}</dd>
-</dl>
+    <dd>{{% md %}}List of gateway routes.{{% /md %}}</dd></dl>
 {{% /choosable %}}
 
 {{% choosable language nodejs %}}
-<dl class="resources-properties">
-
-    <dt class="property-"
+<dl class="resources-properties"><dt class="property-"
             title="">
         <span id="value_nodejs">
 <a href="#value_nodejs" style="color: inherit; text-decoration: inherit;">value</a>
@@ -232,14 +204,11 @@ The following output properties are available:
         <span class="property-indicator"></span>
         <span class="property-type"><a href="#gatewayrouteresponse">Gateway<wbr>Route<wbr>Response[]</a></span>
     </dt>
-    <dd>{{% md %}}List of gateway routes.{{% /md %}}</dd>
-</dl>
+    <dd>{{% md %}}List of gateway routes.{{% /md %}}</dd></dl>
 {{% /choosable %}}
 
 {{% choosable language python %}}
-<dl class="resources-properties">
-
-    <dt class="property-"
+<dl class="resources-properties"><dt class="property-"
             title="">
         <span id="value_python">
 <a href="#value_python" style="color: inherit; text-decoration: inherit;">value</a>
@@ -247,8 +216,7 @@ The following output properties are available:
         <span class="property-indicator"></span>
         <span class="property-type"><a href="#gatewayrouteresponse">Sequence[Gateway<wbr>Route<wbr>Response]</a></span>
     </dt>
-    <dd>{{% md %}}List of gateway routes.{{% /md %}}</dd>
-</dl>
+    <dd>{{% md %}}List of gateway routes.{{% /md %}}</dd></dl>
 {{% /choosable %}}
 
 
@@ -262,9 +230,7 @@ The following output properties are available:
 
 
 {{% choosable language csharp %}}
-<dl class="resources-properties">
-
-    <dt class="property-required"
+<dl class="resources-properties"><dt class="property-required"
             title="Required">
         <span id="aspath_csharp">
 <a href="#aspath_csharp" style="color: inherit; text-decoration: inherit;">As<wbr>Path</a>
@@ -272,8 +238,7 @@ The following output properties are available:
         <span class="property-indicator"></span>
         <span class="property-type">string</span>
     </dt>
-    <dd>{{% md %}}The route's AS path sequence.{{% /md %}}</dd>
-    <dt class="property-required"
+    <dd>{{% md %}}The route's AS path sequence.{{% /md %}}</dd><dt class="property-required"
             title="Required">
         <span id="localaddress_csharp">
 <a href="#localaddress_csharp" style="color: inherit; text-decoration: inherit;">Local<wbr>Address</a>
@@ -281,8 +246,7 @@ The following output properties are available:
         <span class="property-indicator"></span>
         <span class="property-type">string</span>
     </dt>
-    <dd>{{% md %}}The gateway's local address.{{% /md %}}</dd>
-    <dt class="property-required"
+    <dd>{{% md %}}The gateway's local address.{{% /md %}}</dd><dt class="property-required"
             title="Required">
         <span id="network_csharp">
 <a href="#network_csharp" style="color: inherit; text-decoration: inherit;">Network</a>
@@ -290,8 +254,7 @@ The following output properties are available:
         <span class="property-indicator"></span>
         <span class="property-type">string</span>
     </dt>
-    <dd>{{% md %}}The route's network prefix.{{% /md %}}</dd>
-    <dt class="property-required"
+    <dd>{{% md %}}The route's network prefix.{{% /md %}}</dd><dt class="property-required"
             title="Required">
         <span id="nexthop_csharp">
 <a href="#nexthop_csharp" style="color: inherit; text-decoration: inherit;">Next<wbr>Hop</a>
@@ -299,8 +262,7 @@ The following output properties are available:
         <span class="property-indicator"></span>
         <span class="property-type">string</span>
     </dt>
-    <dd>{{% md %}}The route's next hop.{{% /md %}}</dd>
-    <dt class="property-required"
+    <dd>{{% md %}}The route's next hop.{{% /md %}}</dd><dt class="property-required"
             title="Required">
         <span id="origin_csharp">
 <a href="#origin_csharp" style="color: inherit; text-decoration: inherit;">Origin</a>
@@ -308,8 +270,7 @@ The following output properties are available:
         <span class="property-indicator"></span>
         <span class="property-type">string</span>
     </dt>
-    <dd>{{% md %}}The source this route was learned from.{{% /md %}}</dd>
-    <dt class="property-required"
+    <dd>{{% md %}}The source this route was learned from.{{% /md %}}</dd><dt class="property-required"
             title="Required">
         <span id="sourcepeer_csharp">
 <a href="#sourcepeer_csharp" style="color: inherit; text-decoration: inherit;">Source<wbr>Peer</a>
@@ -317,8 +278,7 @@ The following output properties are available:
         <span class="property-indicator"></span>
         <span class="property-type">string</span>
     </dt>
-    <dd>{{% md %}}The peer this route was learned from.{{% /md %}}</dd>
-    <dt class="property-required"
+    <dd>{{% md %}}The peer this route was learned from.{{% /md %}}</dd><dt class="property-required"
             title="Required">
         <span id="weight_csharp">
 <a href="#weight_csharp" style="color: inherit; text-decoration: inherit;">Weight</a>
@@ -326,14 +286,11 @@ The following output properties are available:
         <span class="property-indicator"></span>
         <span class="property-type">int</span>
     </dt>
-    <dd>{{% md %}}The route's weight.{{% /md %}}</dd>
-</dl>
+    <dd>{{% md %}}The route's weight.{{% /md %}}</dd></dl>
 {{% /choosable %}}
 
 {{% choosable language go %}}
-<dl class="resources-properties">
-
-    <dt class="property-required"
+<dl class="resources-properties"><dt class="property-required"
             title="Required">
         <span id="aspath_go">
 <a href="#aspath_go" style="color: inherit; text-decoration: inherit;">As<wbr>Path</a>
@@ -341,8 +298,7 @@ The following output properties are available:
         <span class="property-indicator"></span>
         <span class="property-type">string</span>
     </dt>
-    <dd>{{% md %}}The route's AS path sequence.{{% /md %}}</dd>
-    <dt class="property-required"
+    <dd>{{% md %}}The route's AS path sequence.{{% /md %}}</dd><dt class="property-required"
             title="Required">
         <span id="localaddress_go">
 <a href="#localaddress_go" style="color: inherit; text-decoration: inherit;">Local<wbr>Address</a>
@@ -350,8 +306,7 @@ The following output properties are available:
         <span class="property-indicator"></span>
         <span class="property-type">string</span>
     </dt>
-    <dd>{{% md %}}The gateway's local address.{{% /md %}}</dd>
-    <dt class="property-required"
+    <dd>{{% md %}}The gateway's local address.{{% /md %}}</dd><dt class="property-required"
             title="Required">
         <span id="network_go">
 <a href="#network_go" style="color: inherit; text-decoration: inherit;">Network</a>
@@ -359,8 +314,7 @@ The following output properties are available:
         <span class="property-indicator"></span>
         <span class="property-type">string</span>
     </dt>
-    <dd>{{% md %}}The route's network prefix.{{% /md %}}</dd>
-    <dt class="property-required"
+    <dd>{{% md %}}The route's network prefix.{{% /md %}}</dd><dt class="property-required"
             title="Required">
         <span id="nexthop_go">
 <a href="#nexthop_go" style="color: inherit; text-decoration: inherit;">Next<wbr>Hop</a>
@@ -368,8 +322,7 @@ The following output properties are available:
         <span class="property-indicator"></span>
         <span class="property-type">string</span>
     </dt>
-    <dd>{{% md %}}The route's next hop.{{% /md %}}</dd>
-    <dt class="property-required"
+    <dd>{{% md %}}The route's next hop.{{% /md %}}</dd><dt class="property-required"
             title="Required">
         <span id="origin_go">
 <a href="#origin_go" style="color: inherit; text-decoration: inherit;">Origin</a>
@@ -377,8 +330,7 @@ The following output properties are available:
         <span class="property-indicator"></span>
         <span class="property-type">string</span>
     </dt>
-    <dd>{{% md %}}The source this route was learned from.{{% /md %}}</dd>
-    <dt class="property-required"
+    <dd>{{% md %}}The source this route was learned from.{{% /md %}}</dd><dt class="property-required"
             title="Required">
         <span id="sourcepeer_go">
 <a href="#sourcepeer_go" style="color: inherit; text-decoration: inherit;">Source<wbr>Peer</a>
@@ -386,8 +338,7 @@ The following output properties are available:
         <span class="property-indicator"></span>
         <span class="property-type">string</span>
     </dt>
-    <dd>{{% md %}}The peer this route was learned from.{{% /md %}}</dd>
-    <dt class="property-required"
+    <dd>{{% md %}}The peer this route was learned from.{{% /md %}}</dd><dt class="property-required"
             title="Required">
         <span id="weight_go">
 <a href="#weight_go" style="color: inherit; text-decoration: inherit;">Weight</a>
@@ -395,14 +346,11 @@ The following output properties are available:
         <span class="property-indicator"></span>
         <span class="property-type">int</span>
     </dt>
-    <dd>{{% md %}}The route's weight.{{% /md %}}</dd>
-</dl>
+    <dd>{{% md %}}The route's weight.{{% /md %}}</dd></dl>
 {{% /choosable %}}
 
 {{% choosable language nodejs %}}
-<dl class="resources-properties">
-
-    <dt class="property-required"
+<dl class="resources-properties"><dt class="property-required"
             title="Required">
         <span id="aspath_nodejs">
 <a href="#aspath_nodejs" style="color: inherit; text-decoration: inherit;">as<wbr>Path</a>
@@ -410,8 +358,7 @@ The following output properties are available:
         <span class="property-indicator"></span>
         <span class="property-type">string</span>
     </dt>
-    <dd>{{% md %}}The route's AS path sequence.{{% /md %}}</dd>
-    <dt class="property-required"
+    <dd>{{% md %}}The route's AS path sequence.{{% /md %}}</dd><dt class="property-required"
             title="Required">
         <span id="localaddress_nodejs">
 <a href="#localaddress_nodejs" style="color: inherit; text-decoration: inherit;">local<wbr>Address</a>
@@ -419,8 +366,7 @@ The following output properties are available:
         <span class="property-indicator"></span>
         <span class="property-type">string</span>
     </dt>
-    <dd>{{% md %}}The gateway's local address.{{% /md %}}</dd>
-    <dt class="property-required"
+    <dd>{{% md %}}The gateway's local address.{{% /md %}}</dd><dt class="property-required"
             title="Required">
         <span id="network_nodejs">
 <a href="#network_nodejs" style="color: inherit; text-decoration: inherit;">network</a>
@@ -428,8 +374,7 @@ The following output properties are available:
         <span class="property-indicator"></span>
         <span class="property-type">string</span>
     </dt>
-    <dd>{{% md %}}The route's network prefix.{{% /md %}}</dd>
-    <dt class="property-required"
+    <dd>{{% md %}}The route's network prefix.{{% /md %}}</dd><dt class="property-required"
             title="Required">
         <span id="nexthop_nodejs">
 <a href="#nexthop_nodejs" style="color: inherit; text-decoration: inherit;">next<wbr>Hop</a>
@@ -437,8 +382,7 @@ The following output properties are available:
         <span class="property-indicator"></span>
         <span class="property-type">string</span>
     </dt>
-    <dd>{{% md %}}The route's next hop.{{% /md %}}</dd>
-    <dt class="property-required"
+    <dd>{{% md %}}The route's next hop.{{% /md %}}</dd><dt class="property-required"
             title="Required">
         <span id="origin_nodejs">
 <a href="#origin_nodejs" style="color: inherit; text-decoration: inherit;">origin</a>
@@ -446,8 +390,7 @@ The following output properties are available:
         <span class="property-indicator"></span>
         <span class="property-type">string</span>
     </dt>
-    <dd>{{% md %}}The source this route was learned from.{{% /md %}}</dd>
-    <dt class="property-required"
+    <dd>{{% md %}}The source this route was learned from.{{% /md %}}</dd><dt class="property-required"
             title="Required">
         <span id="sourcepeer_nodejs">
 <a href="#sourcepeer_nodejs" style="color: inherit; text-decoration: inherit;">source<wbr>Peer</a>
@@ -455,8 +398,7 @@ The following output properties are available:
         <span class="property-indicator"></span>
         <span class="property-type">string</span>
     </dt>
-    <dd>{{% md %}}The peer this route was learned from.{{% /md %}}</dd>
-    <dt class="property-required"
+    <dd>{{% md %}}The peer this route was learned from.{{% /md %}}</dd><dt class="property-required"
             title="Required">
         <span id="weight_nodejs">
 <a href="#weight_nodejs" style="color: inherit; text-decoration: inherit;">weight</a>
@@ -464,14 +406,11 @@ The following output properties are available:
         <span class="property-indicator"></span>
         <span class="property-type">number</span>
     </dt>
-    <dd>{{% md %}}The route's weight.{{% /md %}}</dd>
-</dl>
+    <dd>{{% md %}}The route's weight.{{% /md %}}</dd></dl>
 {{% /choosable %}}
 
 {{% choosable language python %}}
-<dl class="resources-properties">
-
-    <dt class="property-required"
+<dl class="resources-properties"><dt class="property-required"
             title="Required">
         <span id="as_path_python">
 <a href="#as_path_python" style="color: inherit; text-decoration: inherit;">as_<wbr>path</a>
@@ -479,8 +418,7 @@ The following output properties are available:
         <span class="property-indicator"></span>
         <span class="property-type">str</span>
     </dt>
-    <dd>{{% md %}}The route's AS path sequence.{{% /md %}}</dd>
-    <dt class="property-required"
+    <dd>{{% md %}}The route's AS path sequence.{{% /md %}}</dd><dt class="property-required"
             title="Required">
         <span id="local_address_python">
 <a href="#local_address_python" style="color: inherit; text-decoration: inherit;">local_<wbr>address</a>
@@ -488,8 +426,7 @@ The following output properties are available:
         <span class="property-indicator"></span>
         <span class="property-type">str</span>
     </dt>
-    <dd>{{% md %}}The gateway's local address.{{% /md %}}</dd>
-    <dt class="property-required"
+    <dd>{{% md %}}The gateway's local address.{{% /md %}}</dd><dt class="property-required"
             title="Required">
         <span id="network_python">
 <a href="#network_python" style="color: inherit; text-decoration: inherit;">network</a>
@@ -497,8 +434,7 @@ The following output properties are available:
         <span class="property-indicator"></span>
         <span class="property-type">str</span>
     </dt>
-    <dd>{{% md %}}The route's network prefix.{{% /md %}}</dd>
-    <dt class="property-required"
+    <dd>{{% md %}}The route's network prefix.{{% /md %}}</dd><dt class="property-required"
             title="Required">
         <span id="next_hop_python">
 <a href="#next_hop_python" style="color: inherit; text-decoration: inherit;">next_<wbr>hop</a>
@@ -506,8 +442,7 @@ The following output properties are available:
         <span class="property-indicator"></span>
         <span class="property-type">str</span>
     </dt>
-    <dd>{{% md %}}The route's next hop.{{% /md %}}</dd>
-    <dt class="property-required"
+    <dd>{{% md %}}The route's next hop.{{% /md %}}</dd><dt class="property-required"
             title="Required">
         <span id="origin_python">
 <a href="#origin_python" style="color: inherit; text-decoration: inherit;">origin</a>
@@ -515,8 +450,7 @@ The following output properties are available:
         <span class="property-indicator"></span>
         <span class="property-type">str</span>
     </dt>
-    <dd>{{% md %}}The source this route was learned from.{{% /md %}}</dd>
-    <dt class="property-required"
+    <dd>{{% md %}}The source this route was learned from.{{% /md %}}</dd><dt class="property-required"
             title="Required">
         <span id="source_peer_python">
 <a href="#source_peer_python" style="color: inherit; text-decoration: inherit;">source_<wbr>peer</a>
@@ -524,8 +458,7 @@ The following output properties are available:
         <span class="property-indicator"></span>
         <span class="property-type">str</span>
     </dt>
-    <dd>{{% md %}}The peer this route was learned from.{{% /md %}}</dd>
-    <dt class="property-required"
+    <dd>{{% md %}}The peer this route was learned from.{{% /md %}}</dd><dt class="property-required"
             title="Required">
         <span id="weight_python">
 <a href="#weight_python" style="color: inherit; text-decoration: inherit;">weight</a>
@@ -533,8 +466,7 @@ The following output properties are available:
         <span class="property-indicator"></span>
         <span class="property-type">int</span>
     </dt>
-    <dd>{{% md %}}The route's weight.{{% /md %}}</dd>
-</dl>
+    <dd>{{% md %}}The route's weight.{{% /md %}}</dd></dl>
 {{% /choosable %}}
 
 

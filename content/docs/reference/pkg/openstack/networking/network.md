@@ -13,11 +13,17 @@ meta_desc: "Documentation for the openstack.networking.Network resource with exa
 Manages a V2 Neutron network resource within OpenStack.
 
 {{% examples %}}
+
 ## Example Usage
 
 {{< chooser language "typescript,python,go,csharp" / >}}
 
-{{% example csharp %}}
+
+
+
+
+{{< example csharp >}}
+
 ```csharp
 using Pulumi;
 using OpenStack = Pulumi.OpenStack;
@@ -86,9 +92,12 @@ class MyStack : Stack
 }
 ```
 
-{{% /example %}}
 
-{{% example go %}}
+{{< /example >}}
+
+
+{{< example go >}}
+
 ```go
 package main
 
@@ -162,9 +171,12 @@ func main() {
 }
 ```
 
-{{% /example %}}
 
-{{% example python %}}
+{{< /example >}}
+
+
+{{< example python >}}
+
 ```python
 import pulumi
 import pulumi_openstack as openstack
@@ -197,9 +209,12 @@ instance1 = openstack.compute.Instance("instance1",
     security_groups=[secgroup1.name])
 ```
 
-{{% /example %}}
 
-{{% example typescript %}}
+{{< /example >}}
+
+
+{{< example typescript >}}
+
 
 ```typescript
 import * as pulumi from "@pulumi/pulumi";
@@ -239,9 +254,16 @@ const instance1 = new openstack.compute.Instance("instance_1", {
 });
 ```
 
-{{% /example %}}
+
+{{< /example >}}
+
+
+
+
 
 {{% /examples %}}
+
+
 
 
 ## Create a Network Resource {#create}
@@ -266,9 +288,7 @@ const instance1 = new openstack.compute.Instance("instance_1", {
 
 {{% choosable language nodejs %}}
 
-<dl class="resources-properties">
-  
-    <dt
+<dl class="resources-properties"><dt
         class="property-required" title="Required">
         <span>name</span>
         <span class="property-indicator"></span>
@@ -276,9 +296,7 @@ const instance1 = new openstack.compute.Instance("instance_1", {
     </dt>
     <dd>
       The unique name of the resource.
-    </dd>
-  
-    <dt
+    </dd><dt
         class="property-optional" title="Optional">
         <span>args</span>
         <span class="property-indicator"></span>
@@ -286,9 +304,7 @@ const instance1 = new openstack.compute.Instance("instance_1", {
     </dt>
     <dd>
       The arguments to resource properties.
-    </dd>
-  
-    <dt
+    </dd><dt
         class="property-optional" title="Optional">
         <span>opts</span>
         <span class="property-indicator"></span>
@@ -296,10 +312,7 @@ const instance1 = new openstack.compute.Instance("instance_1", {
     </dt>
     <dd>
       Bag of options to control resource&#39;s behavior.
-    </dd>
-  
-
-</dl>
+    </dd></dl>
 
 {{% /choosable %}}
 
@@ -325,9 +338,7 @@ const instance1 = new openstack.compute.Instance("instance_1", {
 
 {{% choosable language go %}}
 
-<dl class="resources-properties">
-  
-    <dt
+<dl class="resources-properties"><dt
         class="property-optional" title="Optional">
         <span>ctx</span>
         <span class="property-indicator"></span>
@@ -335,9 +346,7 @@ const instance1 = new openstack.compute.Instance("instance_1", {
     </dt>
     <dd>
       Context object for the current deployment.
-    </dd>
-  
-    <dt
+    </dd><dt
         class="property-required" title="Required">
         <span>name</span>
         <span class="property-indicator"></span>
@@ -345,9 +354,7 @@ const instance1 = new openstack.compute.Instance("instance_1", {
     </dt>
     <dd>
       The unique name of the resource.
-    </dd>
-  
-    <dt
+    </dd><dt
         class="property-optional" title="Optional">
         <span>args</span>
         <span class="property-indicator"></span>
@@ -355,9 +362,7 @@ const instance1 = new openstack.compute.Instance("instance_1", {
     </dt>
     <dd>
       The arguments to resource properties.
-    </dd>
-  
-    <dt
+    </dd><dt
         class="property-optional" title="Optional">
         <span>opts</span>
         <span class="property-indicator"></span>
@@ -365,18 +370,13 @@ const instance1 = new openstack.compute.Instance("instance_1", {
     </dt>
     <dd>
       Bag of options to control resource&#39;s behavior.
-    </dd>
-  
-
-</dl>
+    </dd></dl>
 
 {{% /choosable %}}
 
 {{% choosable language csharp %}}
 
-<dl class="resources-properties">
-  
-    <dt
+<dl class="resources-properties"><dt
         class="property-required" title="Required">
         <span>name</span>
         <span class="property-indicator"></span>
@@ -384,9 +384,7 @@ const instance1 = new openstack.compute.Instance("instance_1", {
     </dt>
     <dd>
       The unique name of the resource.
-    </dd>
-  
-    <dt
+    </dd><dt
         class="property-optional" title="Optional">
         <span>args</span>
         <span class="property-indicator"></span>
@@ -394,9 +392,7 @@ const instance1 = new openstack.compute.Instance("instance_1", {
     </dt>
     <dd>
       The arguments to resource properties.
-    </dd>
-  
-    <dt
+    </dd><dt
         class="property-optional" title="Optional">
         <span>opts</span>
         <span class="property-indicator"></span>
@@ -404,10 +400,7 @@ const instance1 = new openstack.compute.Instance("instance_1", {
     </dt>
     <dd>
       Bag of options to control resource&#39;s behavior.
-    </dd>
-  
-
-</dl>
+    </dd></dl>
 
 {{% /choosable %}}
 
@@ -422,9 +415,7 @@ The Network resource accepts the following [input]({{< relref "/docs/intro/conce
 
 
 {{% choosable language csharp %}}
-<dl class="resources-properties">
-
-    <dt class="property-optional"
+<dl class="resources-properties"><dt class="property-optional"
             title="Optional">
         <span id="adminstateup_csharp">
 <a href="#adminstateup_csharp" style="color: inherit; text-decoration: inherit;">Admin<wbr>State<wbr>Up</a>
@@ -435,8 +426,7 @@ The Network resource accepts the following [input]({{< relref "/docs/intro/conce
     <dd>{{% md %}}The administrative state of the network.
 Acceptable values are "true" and "false". Changing this value updates the
 state of the existing network.
-{{% /md %}}</dd>
-    <dt class="property-optional"
+{{% /md %}}</dd><dt class="property-optional"
             title="Optional">
         <span id="availabilityzonehints_csharp">
 <a href="#availabilityzonehints_csharp" style="color: inherit; text-decoration: inherit;">Availability<wbr>Zone<wbr>Hints</a>
@@ -448,8 +438,7 @@ state of the existing network.
 network resources highly available. Used for resources with high availability
 so that they are scheduled on different availability zones. Changing this
 creates a new network.
-{{% /md %}}</dd>
-    <dt class="property-optional"
+{{% /md %}}</dd><dt class="property-optional"
             title="Optional">
         <span id="description_csharp">
 <a href="#description_csharp" style="color: inherit; text-decoration: inherit;">Description</a>
@@ -459,8 +448,7 @@ creates a new network.
     </dt>
     <dd>{{% md %}}Human-readable description of the network. Changing this
 updates the name of the existing network.
-{{% /md %}}</dd>
-    <dt class="property-optional"
+{{% /md %}}</dd><dt class="property-optional"
             title="Optional">
         <span id="dnsdomain_csharp">
 <a href="#dnsdomain_csharp" style="color: inherit; text-decoration: inherit;">Dns<wbr>Domain</a>
@@ -472,8 +460,7 @@ updates the name of the existing network.
 extension is enabled. The `dns_domain` of a network in conjunction with the
 `dns_name` attribute of its ports will be published in an external DNS
 service when Neutron is configured to integrate with such a service.
-{{% /md %}}</dd>
-    <dt class="property-optional"
+{{% /md %}}</dd><dt class="property-optional"
             title="Optional">
         <span id="external_csharp">
 <a href="#external_csharp" style="color: inherit; text-decoration: inherit;">External</a>
@@ -484,8 +471,7 @@ service when Neutron is configured to integrate with such a service.
     <dd>{{% md %}}Specifies whether the network resource has the
 external routing facility. Valid values are true and false. Defaults to
 false. Changing this updates the external attribute of the existing network.
-{{% /md %}}</dd>
-    <dt class="property-optional"
+{{% /md %}}</dd><dt class="property-optional"
             title="Optional">
         <span id="mtu_csharp">
 <a href="#mtu_csharp" style="color: inherit; text-decoration: inherit;">Mtu</a>
@@ -496,8 +482,7 @@ false. Changing this updates the external attribute of the existing network.
     <dd>{{% md %}}The network MTU. Available for read-only, when Neutron
 `net-mtu` extension is enabled. Available for the modification, when
 Neutron `net-mtu-writable` extension is enabled.
-{{% /md %}}</dd>
-    <dt class="property-optional"
+{{% /md %}}</dd><dt class="property-optional"
             title="Optional">
         <span id="name_csharp">
 <a href="#name_csharp" style="color: inherit; text-decoration: inherit;">Name</a>
@@ -507,8 +492,7 @@ Neutron `net-mtu-writable` extension is enabled.
     </dt>
     <dd>{{% md %}}The name of the network. Changing this updates the name of
 the existing network.
-{{% /md %}}</dd>
-    <dt class="property-optional"
+{{% /md %}}</dd><dt class="property-optional"
             title="Optional">
         <span id="portsecurityenabled_csharp">
 <a href="#portsecurityenabled_csharp" style="color: inherit; text-decoration: inherit;">Port<wbr>Security<wbr>Enabled</a>
@@ -521,8 +505,7 @@ port security on the network. Port Security is usually enabled by default, so
 omitting this argument will usually result in a value of "true". Setting this
 explicitly to `false` will disable port security. Valid values are `true` and
 `false`.
-{{% /md %}}</dd>
-    <dt class="property-optional"
+{{% /md %}}</dd><dt class="property-optional"
             title="Optional">
         <span id="qospolicyid_csharp">
 <a href="#qospolicyid_csharp" style="color: inherit; text-decoration: inherit;">Qos<wbr>Policy<wbr>Id</a>
@@ -531,8 +514,7 @@ explicitly to `false` will disable port security. Valid values are `true` and
         <span class="property-type">string</span>
     </dt>
     <dd>{{% md %}}Reference to the associated QoS policy.
-{{% /md %}}</dd>
-    <dt class="property-optional"
+{{% /md %}}</dd><dt class="property-optional"
             title="Optional">
         <span id="region_csharp">
 <a href="#region_csharp" style="color: inherit; text-decoration: inherit;">Region</a>
@@ -544,8 +526,7 @@ explicitly to `false` will disable port security. Valid values are `true` and
 A Networking client is needed to create a Neutron network. If omitted, the
 `region` argument of the provider is used. Changing this creates a new
 network.
-{{% /md %}}</dd>
-    <dt class="property-optional"
+{{% /md %}}</dd><dt class="property-optional"
             title="Optional">
         <span id="segments_csharp">
 <a href="#segments_csharp" style="color: inherit; text-decoration: inherit;">Segments</a>
@@ -554,8 +535,7 @@ network.
         <span class="property-type"><a href="#networksegment">List&lt;Pulumi.<wbr>Open<wbr>Stack.<wbr>Networking.<wbr>Inputs.<wbr>Network<wbr>Segment<wbr>Args&gt;</a></span>
     </dt>
     <dd>{{% md %}}An array of one or more provider segment objects.
-{{% /md %}}</dd>
-    <dt class="property-optional"
+{{% /md %}}</dd><dt class="property-optional"
             title="Optional">
         <span id="shared_csharp">
 <a href="#shared_csharp" style="color: inherit; text-decoration: inherit;">Shared</a>
@@ -566,8 +546,7 @@ network.
     <dd>{{% md %}}Specifies whether the network resource can be accessed
 by any tenant or not. Changing this updates the sharing capabilities of the
 existing network.
-{{% /md %}}</dd>
-    <dt class="property-optional"
+{{% /md %}}</dd><dt class="property-optional"
             title="Optional">
         <span id="tags_csharp">
 <a href="#tags_csharp" style="color: inherit; text-decoration: inherit;">Tags</a>
@@ -576,8 +555,7 @@ existing network.
         <span class="property-type">List&lt;string&gt;</span>
     </dt>
     <dd>{{% md %}}A set of string tags for the network.
-{{% /md %}}</dd>
-    <dt class="property-optional"
+{{% /md %}}</dd><dt class="property-optional"
             title="Optional">
         <span id="tenantid_csharp">
 <a href="#tenantid_csharp" style="color: inherit; text-decoration: inherit;">Tenant<wbr>Id</a>
@@ -587,8 +565,7 @@ existing network.
     </dt>
     <dd>{{% md %}}The owner of the network. Required if admin wants to
 create a network for another tenant. Changing this creates a new network.
-{{% /md %}}</dd>
-    <dt class="property-optional"
+{{% /md %}}</dd><dt class="property-optional"
             title="Optional">
         <span id="transparentvlan_csharp">
 <a href="#transparentvlan_csharp" style="color: inherit; text-decoration: inherit;">Transparent<wbr>Vlan</a>
@@ -600,8 +577,7 @@ create a network for another tenant. Changing this creates a new network.
 VLAN transparent attribute set. Valid values are true and false. Defaults to
 false. Changing this updates the `transparent_vlan` attribute of the existing
 network.
-{{% /md %}}</dd>
-    <dt class="property-optional"
+{{% /md %}}</dd><dt class="property-optional"
             title="Optional">
         <span id="valuespecs_csharp">
 <a href="#valuespecs_csharp" style="color: inherit; text-decoration: inherit;">Value<wbr>Specs</a>
@@ -610,14 +586,11 @@ network.
         <span class="property-type">Dictionary&lt;string, object&gt;</span>
     </dt>
     <dd>{{% md %}}Map of additional options.
-{{% /md %}}</dd>
-</dl>
+{{% /md %}}</dd></dl>
 {{% /choosable %}}
 
 {{% choosable language go %}}
-<dl class="resources-properties">
-
-    <dt class="property-optional"
+<dl class="resources-properties"><dt class="property-optional"
             title="Optional">
         <span id="adminstateup_go">
 <a href="#adminstateup_go" style="color: inherit; text-decoration: inherit;">Admin<wbr>State<wbr>Up</a>
@@ -628,8 +601,7 @@ network.
     <dd>{{% md %}}The administrative state of the network.
 Acceptable values are "true" and "false". Changing this value updates the
 state of the existing network.
-{{% /md %}}</dd>
-    <dt class="property-optional"
+{{% /md %}}</dd><dt class="property-optional"
             title="Optional">
         <span id="availabilityzonehints_go">
 <a href="#availabilityzonehints_go" style="color: inherit; text-decoration: inherit;">Availability<wbr>Zone<wbr>Hints</a>
@@ -641,8 +613,7 @@ state of the existing network.
 network resources highly available. Used for resources with high availability
 so that they are scheduled on different availability zones. Changing this
 creates a new network.
-{{% /md %}}</dd>
-    <dt class="property-optional"
+{{% /md %}}</dd><dt class="property-optional"
             title="Optional">
         <span id="description_go">
 <a href="#description_go" style="color: inherit; text-decoration: inherit;">Description</a>
@@ -652,8 +623,7 @@ creates a new network.
     </dt>
     <dd>{{% md %}}Human-readable description of the network. Changing this
 updates the name of the existing network.
-{{% /md %}}</dd>
-    <dt class="property-optional"
+{{% /md %}}</dd><dt class="property-optional"
             title="Optional">
         <span id="dnsdomain_go">
 <a href="#dnsdomain_go" style="color: inherit; text-decoration: inherit;">Dns<wbr>Domain</a>
@@ -665,8 +635,7 @@ updates the name of the existing network.
 extension is enabled. The `dns_domain` of a network in conjunction with the
 `dns_name` attribute of its ports will be published in an external DNS
 service when Neutron is configured to integrate with such a service.
-{{% /md %}}</dd>
-    <dt class="property-optional"
+{{% /md %}}</dd><dt class="property-optional"
             title="Optional">
         <span id="external_go">
 <a href="#external_go" style="color: inherit; text-decoration: inherit;">External</a>
@@ -677,8 +646,7 @@ service when Neutron is configured to integrate with such a service.
     <dd>{{% md %}}Specifies whether the network resource has the
 external routing facility. Valid values are true and false. Defaults to
 false. Changing this updates the external attribute of the existing network.
-{{% /md %}}</dd>
-    <dt class="property-optional"
+{{% /md %}}</dd><dt class="property-optional"
             title="Optional">
         <span id="mtu_go">
 <a href="#mtu_go" style="color: inherit; text-decoration: inherit;">Mtu</a>
@@ -689,8 +657,7 @@ false. Changing this updates the external attribute of the existing network.
     <dd>{{% md %}}The network MTU. Available for read-only, when Neutron
 `net-mtu` extension is enabled. Available for the modification, when
 Neutron `net-mtu-writable` extension is enabled.
-{{% /md %}}</dd>
-    <dt class="property-optional"
+{{% /md %}}</dd><dt class="property-optional"
             title="Optional">
         <span id="name_go">
 <a href="#name_go" style="color: inherit; text-decoration: inherit;">Name</a>
@@ -700,8 +667,7 @@ Neutron `net-mtu-writable` extension is enabled.
     </dt>
     <dd>{{% md %}}The name of the network. Changing this updates the name of
 the existing network.
-{{% /md %}}</dd>
-    <dt class="property-optional"
+{{% /md %}}</dd><dt class="property-optional"
             title="Optional">
         <span id="portsecurityenabled_go">
 <a href="#portsecurityenabled_go" style="color: inherit; text-decoration: inherit;">Port<wbr>Security<wbr>Enabled</a>
@@ -714,8 +680,7 @@ port security on the network. Port Security is usually enabled by default, so
 omitting this argument will usually result in a value of "true". Setting this
 explicitly to `false` will disable port security. Valid values are `true` and
 `false`.
-{{% /md %}}</dd>
-    <dt class="property-optional"
+{{% /md %}}</dd><dt class="property-optional"
             title="Optional">
         <span id="qospolicyid_go">
 <a href="#qospolicyid_go" style="color: inherit; text-decoration: inherit;">Qos<wbr>Policy<wbr>Id</a>
@@ -724,8 +689,7 @@ explicitly to `false` will disable port security. Valid values are `true` and
         <span class="property-type">string</span>
     </dt>
     <dd>{{% md %}}Reference to the associated QoS policy.
-{{% /md %}}</dd>
-    <dt class="property-optional"
+{{% /md %}}</dd><dt class="property-optional"
             title="Optional">
         <span id="region_go">
 <a href="#region_go" style="color: inherit; text-decoration: inherit;">Region</a>
@@ -737,8 +701,7 @@ explicitly to `false` will disable port security. Valid values are `true` and
 A Networking client is needed to create a Neutron network. If omitted, the
 `region` argument of the provider is used. Changing this creates a new
 network.
-{{% /md %}}</dd>
-    <dt class="property-optional"
+{{% /md %}}</dd><dt class="property-optional"
             title="Optional">
         <span id="segments_go">
 <a href="#segments_go" style="color: inherit; text-decoration: inherit;">Segments</a>
@@ -747,8 +710,7 @@ network.
         <span class="property-type"><a href="#networksegment">[]Network<wbr>Segment</a></span>
     </dt>
     <dd>{{% md %}}An array of one or more provider segment objects.
-{{% /md %}}</dd>
-    <dt class="property-optional"
+{{% /md %}}</dd><dt class="property-optional"
             title="Optional">
         <span id="shared_go">
 <a href="#shared_go" style="color: inherit; text-decoration: inherit;">Shared</a>
@@ -759,8 +721,7 @@ network.
     <dd>{{% md %}}Specifies whether the network resource can be accessed
 by any tenant or not. Changing this updates the sharing capabilities of the
 existing network.
-{{% /md %}}</dd>
-    <dt class="property-optional"
+{{% /md %}}</dd><dt class="property-optional"
             title="Optional">
         <span id="tags_go">
 <a href="#tags_go" style="color: inherit; text-decoration: inherit;">Tags</a>
@@ -769,8 +730,7 @@ existing network.
         <span class="property-type">[]string</span>
     </dt>
     <dd>{{% md %}}A set of string tags for the network.
-{{% /md %}}</dd>
-    <dt class="property-optional"
+{{% /md %}}</dd><dt class="property-optional"
             title="Optional">
         <span id="tenantid_go">
 <a href="#tenantid_go" style="color: inherit; text-decoration: inherit;">Tenant<wbr>Id</a>
@@ -780,8 +740,7 @@ existing network.
     </dt>
     <dd>{{% md %}}The owner of the network. Required if admin wants to
 create a network for another tenant. Changing this creates a new network.
-{{% /md %}}</dd>
-    <dt class="property-optional"
+{{% /md %}}</dd><dt class="property-optional"
             title="Optional">
         <span id="transparentvlan_go">
 <a href="#transparentvlan_go" style="color: inherit; text-decoration: inherit;">Transparent<wbr>Vlan</a>
@@ -793,8 +752,7 @@ create a network for another tenant. Changing this creates a new network.
 VLAN transparent attribute set. Valid values are true and false. Defaults to
 false. Changing this updates the `transparent_vlan` attribute of the existing
 network.
-{{% /md %}}</dd>
-    <dt class="property-optional"
+{{% /md %}}</dd><dt class="property-optional"
             title="Optional">
         <span id="valuespecs_go">
 <a href="#valuespecs_go" style="color: inherit; text-decoration: inherit;">Value<wbr>Specs</a>
@@ -803,14 +761,11 @@ network.
         <span class="property-type">map[string]interface{}</span>
     </dt>
     <dd>{{% md %}}Map of additional options.
-{{% /md %}}</dd>
-</dl>
+{{% /md %}}</dd></dl>
 {{% /choosable %}}
 
 {{% choosable language nodejs %}}
-<dl class="resources-properties">
-
-    <dt class="property-optional"
+<dl class="resources-properties"><dt class="property-optional"
             title="Optional">
         <span id="adminstateup_nodejs">
 <a href="#adminstateup_nodejs" style="color: inherit; text-decoration: inherit;">admin<wbr>State<wbr>Up</a>
@@ -821,8 +776,7 @@ network.
     <dd>{{% md %}}The administrative state of the network.
 Acceptable values are "true" and "false". Changing this value updates the
 state of the existing network.
-{{% /md %}}</dd>
-    <dt class="property-optional"
+{{% /md %}}</dd><dt class="property-optional"
             title="Optional">
         <span id="availabilityzonehints_nodejs">
 <a href="#availabilityzonehints_nodejs" style="color: inherit; text-decoration: inherit;">availability<wbr>Zone<wbr>Hints</a>
@@ -834,8 +788,7 @@ state of the existing network.
 network resources highly available. Used for resources with high availability
 so that they are scheduled on different availability zones. Changing this
 creates a new network.
-{{% /md %}}</dd>
-    <dt class="property-optional"
+{{% /md %}}</dd><dt class="property-optional"
             title="Optional">
         <span id="description_nodejs">
 <a href="#description_nodejs" style="color: inherit; text-decoration: inherit;">description</a>
@@ -845,8 +798,7 @@ creates a new network.
     </dt>
     <dd>{{% md %}}Human-readable description of the network. Changing this
 updates the name of the existing network.
-{{% /md %}}</dd>
-    <dt class="property-optional"
+{{% /md %}}</dd><dt class="property-optional"
             title="Optional">
         <span id="dnsdomain_nodejs">
 <a href="#dnsdomain_nodejs" style="color: inherit; text-decoration: inherit;">dns<wbr>Domain</a>
@@ -858,8 +810,7 @@ updates the name of the existing network.
 extension is enabled. The `dns_domain` of a network in conjunction with the
 `dns_name` attribute of its ports will be published in an external DNS
 service when Neutron is configured to integrate with such a service.
-{{% /md %}}</dd>
-    <dt class="property-optional"
+{{% /md %}}</dd><dt class="property-optional"
             title="Optional">
         <span id="external_nodejs">
 <a href="#external_nodejs" style="color: inherit; text-decoration: inherit;">external</a>
@@ -870,8 +821,7 @@ service when Neutron is configured to integrate with such a service.
     <dd>{{% md %}}Specifies whether the network resource has the
 external routing facility. Valid values are true and false. Defaults to
 false. Changing this updates the external attribute of the existing network.
-{{% /md %}}</dd>
-    <dt class="property-optional"
+{{% /md %}}</dd><dt class="property-optional"
             title="Optional">
         <span id="mtu_nodejs">
 <a href="#mtu_nodejs" style="color: inherit; text-decoration: inherit;">mtu</a>
@@ -882,8 +832,7 @@ false. Changing this updates the external attribute of the existing network.
     <dd>{{% md %}}The network MTU. Available for read-only, when Neutron
 `net-mtu` extension is enabled. Available for the modification, when
 Neutron `net-mtu-writable` extension is enabled.
-{{% /md %}}</dd>
-    <dt class="property-optional"
+{{% /md %}}</dd><dt class="property-optional"
             title="Optional">
         <span id="name_nodejs">
 <a href="#name_nodejs" style="color: inherit; text-decoration: inherit;">name</a>
@@ -893,8 +842,7 @@ Neutron `net-mtu-writable` extension is enabled.
     </dt>
     <dd>{{% md %}}The name of the network. Changing this updates the name of
 the existing network.
-{{% /md %}}</dd>
-    <dt class="property-optional"
+{{% /md %}}</dd><dt class="property-optional"
             title="Optional">
         <span id="portsecurityenabled_nodejs">
 <a href="#portsecurityenabled_nodejs" style="color: inherit; text-decoration: inherit;">port<wbr>Security<wbr>Enabled</a>
@@ -907,8 +855,7 @@ port security on the network. Port Security is usually enabled by default, so
 omitting this argument will usually result in a value of "true". Setting this
 explicitly to `false` will disable port security. Valid values are `true` and
 `false`.
-{{% /md %}}</dd>
-    <dt class="property-optional"
+{{% /md %}}</dd><dt class="property-optional"
             title="Optional">
         <span id="qospolicyid_nodejs">
 <a href="#qospolicyid_nodejs" style="color: inherit; text-decoration: inherit;">qos<wbr>Policy<wbr>Id</a>
@@ -917,8 +864,7 @@ explicitly to `false` will disable port security. Valid values are `true` and
         <span class="property-type">string</span>
     </dt>
     <dd>{{% md %}}Reference to the associated QoS policy.
-{{% /md %}}</dd>
-    <dt class="property-optional"
+{{% /md %}}</dd><dt class="property-optional"
             title="Optional">
         <span id="region_nodejs">
 <a href="#region_nodejs" style="color: inherit; text-decoration: inherit;">region</a>
@@ -930,8 +876,7 @@ explicitly to `false` will disable port security. Valid values are `true` and
 A Networking client is needed to create a Neutron network. If omitted, the
 `region` argument of the provider is used. Changing this creates a new
 network.
-{{% /md %}}</dd>
-    <dt class="property-optional"
+{{% /md %}}</dd><dt class="property-optional"
             title="Optional">
         <span id="segments_nodejs">
 <a href="#segments_nodejs" style="color: inherit; text-decoration: inherit;">segments</a>
@@ -940,8 +885,7 @@ network.
         <span class="property-type"><a href="#networksegment">Network<wbr>Segment[]</a></span>
     </dt>
     <dd>{{% md %}}An array of one or more provider segment objects.
-{{% /md %}}</dd>
-    <dt class="property-optional"
+{{% /md %}}</dd><dt class="property-optional"
             title="Optional">
         <span id="shared_nodejs">
 <a href="#shared_nodejs" style="color: inherit; text-decoration: inherit;">shared</a>
@@ -952,8 +896,7 @@ network.
     <dd>{{% md %}}Specifies whether the network resource can be accessed
 by any tenant or not. Changing this updates the sharing capabilities of the
 existing network.
-{{% /md %}}</dd>
-    <dt class="property-optional"
+{{% /md %}}</dd><dt class="property-optional"
             title="Optional">
         <span id="tags_nodejs">
 <a href="#tags_nodejs" style="color: inherit; text-decoration: inherit;">tags</a>
@@ -962,8 +905,7 @@ existing network.
         <span class="property-type">string[]</span>
     </dt>
     <dd>{{% md %}}A set of string tags for the network.
-{{% /md %}}</dd>
-    <dt class="property-optional"
+{{% /md %}}</dd><dt class="property-optional"
             title="Optional">
         <span id="tenantid_nodejs">
 <a href="#tenantid_nodejs" style="color: inherit; text-decoration: inherit;">tenant<wbr>Id</a>
@@ -973,8 +915,7 @@ existing network.
     </dt>
     <dd>{{% md %}}The owner of the network. Required if admin wants to
 create a network for another tenant. Changing this creates a new network.
-{{% /md %}}</dd>
-    <dt class="property-optional"
+{{% /md %}}</dd><dt class="property-optional"
             title="Optional">
         <span id="transparentvlan_nodejs">
 <a href="#transparentvlan_nodejs" style="color: inherit; text-decoration: inherit;">transparent<wbr>Vlan</a>
@@ -986,8 +927,7 @@ create a network for another tenant. Changing this creates a new network.
 VLAN transparent attribute set. Valid values are true and false. Defaults to
 false. Changing this updates the `transparent_vlan` attribute of the existing
 network.
-{{% /md %}}</dd>
-    <dt class="property-optional"
+{{% /md %}}</dd><dt class="property-optional"
             title="Optional">
         <span id="valuespecs_nodejs">
 <a href="#valuespecs_nodejs" style="color: inherit; text-decoration: inherit;">value<wbr>Specs</a>
@@ -996,14 +936,11 @@ network.
         <span class="property-type">{[key: string]: any}</span>
     </dt>
     <dd>{{% md %}}Map of additional options.
-{{% /md %}}</dd>
-</dl>
+{{% /md %}}</dd></dl>
 {{% /choosable %}}
 
 {{% choosable language python %}}
-<dl class="resources-properties">
-
-    <dt class="property-optional"
+<dl class="resources-properties"><dt class="property-optional"
             title="Optional">
         <span id="admin_state_up_python">
 <a href="#admin_state_up_python" style="color: inherit; text-decoration: inherit;">admin_<wbr>state_<wbr>up</a>
@@ -1014,8 +951,7 @@ network.
     <dd>{{% md %}}The administrative state of the network.
 Acceptable values are "true" and "false". Changing this value updates the
 state of the existing network.
-{{% /md %}}</dd>
-    <dt class="property-optional"
+{{% /md %}}</dd><dt class="property-optional"
             title="Optional">
         <span id="availability_zone_hints_python">
 <a href="#availability_zone_hints_python" style="color: inherit; text-decoration: inherit;">availability_<wbr>zone_<wbr>hints</a>
@@ -1027,8 +963,7 @@ state of the existing network.
 network resources highly available. Used for resources with high availability
 so that they are scheduled on different availability zones. Changing this
 creates a new network.
-{{% /md %}}</dd>
-    <dt class="property-optional"
+{{% /md %}}</dd><dt class="property-optional"
             title="Optional">
         <span id="description_python">
 <a href="#description_python" style="color: inherit; text-decoration: inherit;">description</a>
@@ -1038,8 +973,7 @@ creates a new network.
     </dt>
     <dd>{{% md %}}Human-readable description of the network. Changing this
 updates the name of the existing network.
-{{% /md %}}</dd>
-    <dt class="property-optional"
+{{% /md %}}</dd><dt class="property-optional"
             title="Optional">
         <span id="dns_domain_python">
 <a href="#dns_domain_python" style="color: inherit; text-decoration: inherit;">dns_<wbr>domain</a>
@@ -1051,8 +985,7 @@ updates the name of the existing network.
 extension is enabled. The `dns_domain` of a network in conjunction with the
 `dns_name` attribute of its ports will be published in an external DNS
 service when Neutron is configured to integrate with such a service.
-{{% /md %}}</dd>
-    <dt class="property-optional"
+{{% /md %}}</dd><dt class="property-optional"
             title="Optional">
         <span id="external_python">
 <a href="#external_python" style="color: inherit; text-decoration: inherit;">external</a>
@@ -1063,8 +996,7 @@ service when Neutron is configured to integrate with such a service.
     <dd>{{% md %}}Specifies whether the network resource has the
 external routing facility. Valid values are true and false. Defaults to
 false. Changing this updates the external attribute of the existing network.
-{{% /md %}}</dd>
-    <dt class="property-optional"
+{{% /md %}}</dd><dt class="property-optional"
             title="Optional">
         <span id="mtu_python">
 <a href="#mtu_python" style="color: inherit; text-decoration: inherit;">mtu</a>
@@ -1075,8 +1007,7 @@ false. Changing this updates the external attribute of the existing network.
     <dd>{{% md %}}The network MTU. Available for read-only, when Neutron
 `net-mtu` extension is enabled. Available for the modification, when
 Neutron `net-mtu-writable` extension is enabled.
-{{% /md %}}</dd>
-    <dt class="property-optional"
+{{% /md %}}</dd><dt class="property-optional"
             title="Optional">
         <span id="name_python">
 <a href="#name_python" style="color: inherit; text-decoration: inherit;">name</a>
@@ -1086,8 +1017,7 @@ Neutron `net-mtu-writable` extension is enabled.
     </dt>
     <dd>{{% md %}}The name of the network. Changing this updates the name of
 the existing network.
-{{% /md %}}</dd>
-    <dt class="property-optional"
+{{% /md %}}</dd><dt class="property-optional"
             title="Optional">
         <span id="port_security_enabled_python">
 <a href="#port_security_enabled_python" style="color: inherit; text-decoration: inherit;">port_<wbr>security_<wbr>enabled</a>
@@ -1100,8 +1030,7 @@ port security on the network. Port Security is usually enabled by default, so
 omitting this argument will usually result in a value of "true". Setting this
 explicitly to `false` will disable port security. Valid values are `true` and
 `false`.
-{{% /md %}}</dd>
-    <dt class="property-optional"
+{{% /md %}}</dd><dt class="property-optional"
             title="Optional">
         <span id="qos_policy_id_python">
 <a href="#qos_policy_id_python" style="color: inherit; text-decoration: inherit;">qos_<wbr>policy_<wbr>id</a>
@@ -1110,8 +1039,7 @@ explicitly to `false` will disable port security. Valid values are `true` and
         <span class="property-type">str</span>
     </dt>
     <dd>{{% md %}}Reference to the associated QoS policy.
-{{% /md %}}</dd>
-    <dt class="property-optional"
+{{% /md %}}</dd><dt class="property-optional"
             title="Optional">
         <span id="region_python">
 <a href="#region_python" style="color: inherit; text-decoration: inherit;">region</a>
@@ -1123,8 +1051,7 @@ explicitly to `false` will disable port security. Valid values are `true` and
 A Networking client is needed to create a Neutron network. If omitted, the
 `region` argument of the provider is used. Changing this creates a new
 network.
-{{% /md %}}</dd>
-    <dt class="property-optional"
+{{% /md %}}</dd><dt class="property-optional"
             title="Optional">
         <span id="segments_python">
 <a href="#segments_python" style="color: inherit; text-decoration: inherit;">segments</a>
@@ -1133,8 +1060,7 @@ network.
         <span class="property-type"><a href="#networksegment">Sequence[Network<wbr>Segment<wbr>Args]</a></span>
     </dt>
     <dd>{{% md %}}An array of one or more provider segment objects.
-{{% /md %}}</dd>
-    <dt class="property-optional"
+{{% /md %}}</dd><dt class="property-optional"
             title="Optional">
         <span id="shared_python">
 <a href="#shared_python" style="color: inherit; text-decoration: inherit;">shared</a>
@@ -1145,8 +1071,7 @@ network.
     <dd>{{% md %}}Specifies whether the network resource can be accessed
 by any tenant or not. Changing this updates the sharing capabilities of the
 existing network.
-{{% /md %}}</dd>
-    <dt class="property-optional"
+{{% /md %}}</dd><dt class="property-optional"
             title="Optional">
         <span id="tags_python">
 <a href="#tags_python" style="color: inherit; text-decoration: inherit;">tags</a>
@@ -1155,8 +1080,7 @@ existing network.
         <span class="property-type">Sequence[str]</span>
     </dt>
     <dd>{{% md %}}A set of string tags for the network.
-{{% /md %}}</dd>
-    <dt class="property-optional"
+{{% /md %}}</dd><dt class="property-optional"
             title="Optional">
         <span id="tenant_id_python">
 <a href="#tenant_id_python" style="color: inherit; text-decoration: inherit;">tenant_<wbr>id</a>
@@ -1166,8 +1090,7 @@ existing network.
     </dt>
     <dd>{{% md %}}The owner of the network. Required if admin wants to
 create a network for another tenant. Changing this creates a new network.
-{{% /md %}}</dd>
-    <dt class="property-optional"
+{{% /md %}}</dd><dt class="property-optional"
             title="Optional">
         <span id="transparent_vlan_python">
 <a href="#transparent_vlan_python" style="color: inherit; text-decoration: inherit;">transparent_<wbr>vlan</a>
@@ -1179,8 +1102,7 @@ create a network for another tenant. Changing this creates a new network.
 VLAN transparent attribute set. Valid values are true and false. Defaults to
 false. Changing this updates the `transparent_vlan` attribute of the existing
 network.
-{{% /md %}}</dd>
-    <dt class="property-optional"
+{{% /md %}}</dd><dt class="property-optional"
             title="Optional">
         <span id="value_specs_python">
 <a href="#value_specs_python" style="color: inherit; text-decoration: inherit;">value_<wbr>specs</a>
@@ -1189,8 +1111,7 @@ network.
         <span class="property-type">Mapping[str, Any]</span>
     </dt>
     <dd>{{% md %}}Map of additional options.
-{{% /md %}}</dd>
-</dl>
+{{% /md %}}</dd></dl>
 {{% /choosable %}}
 
 
@@ -1201,9 +1122,7 @@ All [input](#inputs) properties are implicitly available as output properties. A
 
 
 {{% choosable language csharp %}}
-<dl class="resources-properties">
-
-    <dt class="property-"
+<dl class="resources-properties"><dt class="property-"
             title="">
         <span id="alltags_csharp">
 <a href="#alltags_csharp" style="color: inherit; text-decoration: inherit;">All<wbr>Tags</a>
@@ -1213,8 +1132,7 @@ All [input](#inputs) properties are implicitly available as output properties. A
     </dt>
     <dd>{{% md %}}The collection of tags assigned on the network, which have been
 explicitly and implicitly added.
-{{% /md %}}</dd>
-    <dt class="property-"
+{{% /md %}}</dd><dt class="property-"
             title="">
         <span id="id_csharp">
 <a href="#id_csharp" style="color: inherit; text-decoration: inherit;">Id</a>
@@ -1222,14 +1140,11 @@ explicitly and implicitly added.
         <span class="property-indicator"></span>
         <span class="property-type">string</span>
     </dt>
-    <dd>{{% md %}}The provider-assigned unique ID for this managed resource.{{% /md %}}</dd>
-</dl>
+    <dd>{{% md %}}The provider-assigned unique ID for this managed resource.{{% /md %}}</dd></dl>
 {{% /choosable %}}
 
 {{% choosable language go %}}
-<dl class="resources-properties">
-
-    <dt class="property-"
+<dl class="resources-properties"><dt class="property-"
             title="">
         <span id="alltags_go">
 <a href="#alltags_go" style="color: inherit; text-decoration: inherit;">All<wbr>Tags</a>
@@ -1239,8 +1154,7 @@ explicitly and implicitly added.
     </dt>
     <dd>{{% md %}}The collection of tags assigned on the network, which have been
 explicitly and implicitly added.
-{{% /md %}}</dd>
-    <dt class="property-"
+{{% /md %}}</dd><dt class="property-"
             title="">
         <span id="id_go">
 <a href="#id_go" style="color: inherit; text-decoration: inherit;">Id</a>
@@ -1248,14 +1162,11 @@ explicitly and implicitly added.
         <span class="property-indicator"></span>
         <span class="property-type">string</span>
     </dt>
-    <dd>{{% md %}}The provider-assigned unique ID for this managed resource.{{% /md %}}</dd>
-</dl>
+    <dd>{{% md %}}The provider-assigned unique ID for this managed resource.{{% /md %}}</dd></dl>
 {{% /choosable %}}
 
 {{% choosable language nodejs %}}
-<dl class="resources-properties">
-
-    <dt class="property-"
+<dl class="resources-properties"><dt class="property-"
             title="">
         <span id="alltags_nodejs">
 <a href="#alltags_nodejs" style="color: inherit; text-decoration: inherit;">all<wbr>Tags</a>
@@ -1265,8 +1176,7 @@ explicitly and implicitly added.
     </dt>
     <dd>{{% md %}}The collection of tags assigned on the network, which have been
 explicitly and implicitly added.
-{{% /md %}}</dd>
-    <dt class="property-"
+{{% /md %}}</dd><dt class="property-"
             title="">
         <span id="id_nodejs">
 <a href="#id_nodejs" style="color: inherit; text-decoration: inherit;">id</a>
@@ -1274,14 +1184,11 @@ explicitly and implicitly added.
         <span class="property-indicator"></span>
         <span class="property-type">string</span>
     </dt>
-    <dd>{{% md %}}The provider-assigned unique ID for this managed resource.{{% /md %}}</dd>
-</dl>
+    <dd>{{% md %}}The provider-assigned unique ID for this managed resource.{{% /md %}}</dd></dl>
 {{% /choosable %}}
 
 {{% choosable language python %}}
-<dl class="resources-properties">
-
-    <dt class="property-"
+<dl class="resources-properties"><dt class="property-"
             title="">
         <span id="all_tags_python">
 <a href="#all_tags_python" style="color: inherit; text-decoration: inherit;">all_<wbr>tags</a>
@@ -1291,8 +1198,7 @@ explicitly and implicitly added.
     </dt>
     <dd>{{% md %}}The collection of tags assigned on the network, which have been
 explicitly and implicitly added.
-{{% /md %}}</dd>
-    <dt class="property-"
+{{% /md %}}</dd><dt class="property-"
             title="">
         <span id="id_python">
 <a href="#id_python" style="color: inherit; text-decoration: inherit;">id</a>
@@ -1300,8 +1206,7 @@ explicitly and implicitly added.
         <span class="property-indicator"></span>
         <span class="property-type">str</span>
     </dt>
-    <dd>{{% md %}}The provider-assigned unique ID for this managed resource.{{% /md %}}</dd>
-</dl>
+    <dd>{{% md %}}The provider-assigned unique ID for this managed resource.{{% /md %}}</dd></dl>
 {{% /choosable %}}
 
 
@@ -1428,9 +1333,7 @@ The following state arguments are supported:
 
 
 {{% choosable language csharp %}}
-<dl class="resources-properties">
-
-    <dt class="property-optional"
+<dl class="resources-properties"><dt class="property-optional"
             title="Optional">
         <span id="state_adminstateup_csharp">
 <a href="#state_adminstateup_csharp" style="color: inherit; text-decoration: inherit;">Admin<wbr>State<wbr>Up</a>
@@ -1441,8 +1344,7 @@ The following state arguments are supported:
     <dd>{{% md %}}The administrative state of the network.
 Acceptable values are "true" and "false". Changing this value updates the
 state of the existing network.
-{{% /md %}}</dd>
-    <dt class="property-optional"
+{{% /md %}}</dd><dt class="property-optional"
             title="Optional">
         <span id="state_alltags_csharp">
 <a href="#state_alltags_csharp" style="color: inherit; text-decoration: inherit;">All<wbr>Tags</a>
@@ -1452,8 +1354,7 @@ state of the existing network.
     </dt>
     <dd>{{% md %}}The collection of tags assigned on the network, which have been
 explicitly and implicitly added.
-{{% /md %}}</dd>
-    <dt class="property-optional"
+{{% /md %}}</dd><dt class="property-optional"
             title="Optional">
         <span id="state_availabilityzonehints_csharp">
 <a href="#state_availabilityzonehints_csharp" style="color: inherit; text-decoration: inherit;">Availability<wbr>Zone<wbr>Hints</a>
@@ -1465,8 +1366,7 @@ explicitly and implicitly added.
 network resources highly available. Used for resources with high availability
 so that they are scheduled on different availability zones. Changing this
 creates a new network.
-{{% /md %}}</dd>
-    <dt class="property-optional"
+{{% /md %}}</dd><dt class="property-optional"
             title="Optional">
         <span id="state_description_csharp">
 <a href="#state_description_csharp" style="color: inherit; text-decoration: inherit;">Description</a>
@@ -1476,8 +1376,7 @@ creates a new network.
     </dt>
     <dd>{{% md %}}Human-readable description of the network. Changing this
 updates the name of the existing network.
-{{% /md %}}</dd>
-    <dt class="property-optional"
+{{% /md %}}</dd><dt class="property-optional"
             title="Optional">
         <span id="state_dnsdomain_csharp">
 <a href="#state_dnsdomain_csharp" style="color: inherit; text-decoration: inherit;">Dns<wbr>Domain</a>
@@ -1489,8 +1388,7 @@ updates the name of the existing network.
 extension is enabled. The `dns_domain` of a network in conjunction with the
 `dns_name` attribute of its ports will be published in an external DNS
 service when Neutron is configured to integrate with such a service.
-{{% /md %}}</dd>
-    <dt class="property-optional"
+{{% /md %}}</dd><dt class="property-optional"
             title="Optional">
         <span id="state_external_csharp">
 <a href="#state_external_csharp" style="color: inherit; text-decoration: inherit;">External</a>
@@ -1501,8 +1399,7 @@ service when Neutron is configured to integrate with such a service.
     <dd>{{% md %}}Specifies whether the network resource has the
 external routing facility. Valid values are true and false. Defaults to
 false. Changing this updates the external attribute of the existing network.
-{{% /md %}}</dd>
-    <dt class="property-optional"
+{{% /md %}}</dd><dt class="property-optional"
             title="Optional">
         <span id="state_mtu_csharp">
 <a href="#state_mtu_csharp" style="color: inherit; text-decoration: inherit;">Mtu</a>
@@ -1513,8 +1410,7 @@ false. Changing this updates the external attribute of the existing network.
     <dd>{{% md %}}The network MTU. Available for read-only, when Neutron
 `net-mtu` extension is enabled. Available for the modification, when
 Neutron `net-mtu-writable` extension is enabled.
-{{% /md %}}</dd>
-    <dt class="property-optional"
+{{% /md %}}</dd><dt class="property-optional"
             title="Optional">
         <span id="state_name_csharp">
 <a href="#state_name_csharp" style="color: inherit; text-decoration: inherit;">Name</a>
@@ -1524,8 +1420,7 @@ Neutron `net-mtu-writable` extension is enabled.
     </dt>
     <dd>{{% md %}}The name of the network. Changing this updates the name of
 the existing network.
-{{% /md %}}</dd>
-    <dt class="property-optional"
+{{% /md %}}</dd><dt class="property-optional"
             title="Optional">
         <span id="state_portsecurityenabled_csharp">
 <a href="#state_portsecurityenabled_csharp" style="color: inherit; text-decoration: inherit;">Port<wbr>Security<wbr>Enabled</a>
@@ -1538,8 +1433,7 @@ port security on the network. Port Security is usually enabled by default, so
 omitting this argument will usually result in a value of "true". Setting this
 explicitly to `false` will disable port security. Valid values are `true` and
 `false`.
-{{% /md %}}</dd>
-    <dt class="property-optional"
+{{% /md %}}</dd><dt class="property-optional"
             title="Optional">
         <span id="state_qospolicyid_csharp">
 <a href="#state_qospolicyid_csharp" style="color: inherit; text-decoration: inherit;">Qos<wbr>Policy<wbr>Id</a>
@@ -1548,8 +1442,7 @@ explicitly to `false` will disable port security. Valid values are `true` and
         <span class="property-type">string</span>
     </dt>
     <dd>{{% md %}}Reference to the associated QoS policy.
-{{% /md %}}</dd>
-    <dt class="property-optional"
+{{% /md %}}</dd><dt class="property-optional"
             title="Optional">
         <span id="state_region_csharp">
 <a href="#state_region_csharp" style="color: inherit; text-decoration: inherit;">Region</a>
@@ -1561,8 +1454,7 @@ explicitly to `false` will disable port security. Valid values are `true` and
 A Networking client is needed to create a Neutron network. If omitted, the
 `region` argument of the provider is used. Changing this creates a new
 network.
-{{% /md %}}</dd>
-    <dt class="property-optional"
+{{% /md %}}</dd><dt class="property-optional"
             title="Optional">
         <span id="state_segments_csharp">
 <a href="#state_segments_csharp" style="color: inherit; text-decoration: inherit;">Segments</a>
@@ -1571,8 +1463,7 @@ network.
         <span class="property-type"><a href="#networksegment">List&lt;Pulumi.<wbr>Open<wbr>Stack.<wbr>Networking.<wbr>Inputs.<wbr>Network<wbr>Segment<wbr>Args&gt;</a></span>
     </dt>
     <dd>{{% md %}}An array of one or more provider segment objects.
-{{% /md %}}</dd>
-    <dt class="property-optional"
+{{% /md %}}</dd><dt class="property-optional"
             title="Optional">
         <span id="state_shared_csharp">
 <a href="#state_shared_csharp" style="color: inherit; text-decoration: inherit;">Shared</a>
@@ -1583,8 +1474,7 @@ network.
     <dd>{{% md %}}Specifies whether the network resource can be accessed
 by any tenant or not. Changing this updates the sharing capabilities of the
 existing network.
-{{% /md %}}</dd>
-    <dt class="property-optional"
+{{% /md %}}</dd><dt class="property-optional"
             title="Optional">
         <span id="state_tags_csharp">
 <a href="#state_tags_csharp" style="color: inherit; text-decoration: inherit;">Tags</a>
@@ -1593,8 +1483,7 @@ existing network.
         <span class="property-type">List&lt;string&gt;</span>
     </dt>
     <dd>{{% md %}}A set of string tags for the network.
-{{% /md %}}</dd>
-    <dt class="property-optional"
+{{% /md %}}</dd><dt class="property-optional"
             title="Optional">
         <span id="state_tenantid_csharp">
 <a href="#state_tenantid_csharp" style="color: inherit; text-decoration: inherit;">Tenant<wbr>Id</a>
@@ -1604,8 +1493,7 @@ existing network.
     </dt>
     <dd>{{% md %}}The owner of the network. Required if admin wants to
 create a network for another tenant. Changing this creates a new network.
-{{% /md %}}</dd>
-    <dt class="property-optional"
+{{% /md %}}</dd><dt class="property-optional"
             title="Optional">
         <span id="state_transparentvlan_csharp">
 <a href="#state_transparentvlan_csharp" style="color: inherit; text-decoration: inherit;">Transparent<wbr>Vlan</a>
@@ -1617,8 +1505,7 @@ create a network for another tenant. Changing this creates a new network.
 VLAN transparent attribute set. Valid values are true and false. Defaults to
 false. Changing this updates the `transparent_vlan` attribute of the existing
 network.
-{{% /md %}}</dd>
-    <dt class="property-optional"
+{{% /md %}}</dd><dt class="property-optional"
             title="Optional">
         <span id="state_valuespecs_csharp">
 <a href="#state_valuespecs_csharp" style="color: inherit; text-decoration: inherit;">Value<wbr>Specs</a>
@@ -1627,14 +1514,11 @@ network.
         <span class="property-type">Dictionary&lt;string, object&gt;</span>
     </dt>
     <dd>{{% md %}}Map of additional options.
-{{% /md %}}</dd>
-</dl>
+{{% /md %}}</dd></dl>
 {{% /choosable %}}
 
 {{% choosable language go %}}
-<dl class="resources-properties">
-
-    <dt class="property-optional"
+<dl class="resources-properties"><dt class="property-optional"
             title="Optional">
         <span id="state_adminstateup_go">
 <a href="#state_adminstateup_go" style="color: inherit; text-decoration: inherit;">Admin<wbr>State<wbr>Up</a>
@@ -1645,8 +1529,7 @@ network.
     <dd>{{% md %}}The administrative state of the network.
 Acceptable values are "true" and "false". Changing this value updates the
 state of the existing network.
-{{% /md %}}</dd>
-    <dt class="property-optional"
+{{% /md %}}</dd><dt class="property-optional"
             title="Optional">
         <span id="state_alltags_go">
 <a href="#state_alltags_go" style="color: inherit; text-decoration: inherit;">All<wbr>Tags</a>
@@ -1656,8 +1539,7 @@ state of the existing network.
     </dt>
     <dd>{{% md %}}The collection of tags assigned on the network, which have been
 explicitly and implicitly added.
-{{% /md %}}</dd>
-    <dt class="property-optional"
+{{% /md %}}</dd><dt class="property-optional"
             title="Optional">
         <span id="state_availabilityzonehints_go">
 <a href="#state_availabilityzonehints_go" style="color: inherit; text-decoration: inherit;">Availability<wbr>Zone<wbr>Hints</a>
@@ -1669,8 +1551,7 @@ explicitly and implicitly added.
 network resources highly available. Used for resources with high availability
 so that they are scheduled on different availability zones. Changing this
 creates a new network.
-{{% /md %}}</dd>
-    <dt class="property-optional"
+{{% /md %}}</dd><dt class="property-optional"
             title="Optional">
         <span id="state_description_go">
 <a href="#state_description_go" style="color: inherit; text-decoration: inherit;">Description</a>
@@ -1680,8 +1561,7 @@ creates a new network.
     </dt>
     <dd>{{% md %}}Human-readable description of the network. Changing this
 updates the name of the existing network.
-{{% /md %}}</dd>
-    <dt class="property-optional"
+{{% /md %}}</dd><dt class="property-optional"
             title="Optional">
         <span id="state_dnsdomain_go">
 <a href="#state_dnsdomain_go" style="color: inherit; text-decoration: inherit;">Dns<wbr>Domain</a>
@@ -1693,8 +1573,7 @@ updates the name of the existing network.
 extension is enabled. The `dns_domain` of a network in conjunction with the
 `dns_name` attribute of its ports will be published in an external DNS
 service when Neutron is configured to integrate with such a service.
-{{% /md %}}</dd>
-    <dt class="property-optional"
+{{% /md %}}</dd><dt class="property-optional"
             title="Optional">
         <span id="state_external_go">
 <a href="#state_external_go" style="color: inherit; text-decoration: inherit;">External</a>
@@ -1705,8 +1584,7 @@ service when Neutron is configured to integrate with such a service.
     <dd>{{% md %}}Specifies whether the network resource has the
 external routing facility. Valid values are true and false. Defaults to
 false. Changing this updates the external attribute of the existing network.
-{{% /md %}}</dd>
-    <dt class="property-optional"
+{{% /md %}}</dd><dt class="property-optional"
             title="Optional">
         <span id="state_mtu_go">
 <a href="#state_mtu_go" style="color: inherit; text-decoration: inherit;">Mtu</a>
@@ -1717,8 +1595,7 @@ false. Changing this updates the external attribute of the existing network.
     <dd>{{% md %}}The network MTU. Available for read-only, when Neutron
 `net-mtu` extension is enabled. Available for the modification, when
 Neutron `net-mtu-writable` extension is enabled.
-{{% /md %}}</dd>
-    <dt class="property-optional"
+{{% /md %}}</dd><dt class="property-optional"
             title="Optional">
         <span id="state_name_go">
 <a href="#state_name_go" style="color: inherit; text-decoration: inherit;">Name</a>
@@ -1728,8 +1605,7 @@ Neutron `net-mtu-writable` extension is enabled.
     </dt>
     <dd>{{% md %}}The name of the network. Changing this updates the name of
 the existing network.
-{{% /md %}}</dd>
-    <dt class="property-optional"
+{{% /md %}}</dd><dt class="property-optional"
             title="Optional">
         <span id="state_portsecurityenabled_go">
 <a href="#state_portsecurityenabled_go" style="color: inherit; text-decoration: inherit;">Port<wbr>Security<wbr>Enabled</a>
@@ -1742,8 +1618,7 @@ port security on the network. Port Security is usually enabled by default, so
 omitting this argument will usually result in a value of "true". Setting this
 explicitly to `false` will disable port security. Valid values are `true` and
 `false`.
-{{% /md %}}</dd>
-    <dt class="property-optional"
+{{% /md %}}</dd><dt class="property-optional"
             title="Optional">
         <span id="state_qospolicyid_go">
 <a href="#state_qospolicyid_go" style="color: inherit; text-decoration: inherit;">Qos<wbr>Policy<wbr>Id</a>
@@ -1752,8 +1627,7 @@ explicitly to `false` will disable port security. Valid values are `true` and
         <span class="property-type">string</span>
     </dt>
     <dd>{{% md %}}Reference to the associated QoS policy.
-{{% /md %}}</dd>
-    <dt class="property-optional"
+{{% /md %}}</dd><dt class="property-optional"
             title="Optional">
         <span id="state_region_go">
 <a href="#state_region_go" style="color: inherit; text-decoration: inherit;">Region</a>
@@ -1765,8 +1639,7 @@ explicitly to `false` will disable port security. Valid values are `true` and
 A Networking client is needed to create a Neutron network. If omitted, the
 `region` argument of the provider is used. Changing this creates a new
 network.
-{{% /md %}}</dd>
-    <dt class="property-optional"
+{{% /md %}}</dd><dt class="property-optional"
             title="Optional">
         <span id="state_segments_go">
 <a href="#state_segments_go" style="color: inherit; text-decoration: inherit;">Segments</a>
@@ -1775,8 +1648,7 @@ network.
         <span class="property-type"><a href="#networksegment">[]Network<wbr>Segment</a></span>
     </dt>
     <dd>{{% md %}}An array of one or more provider segment objects.
-{{% /md %}}</dd>
-    <dt class="property-optional"
+{{% /md %}}</dd><dt class="property-optional"
             title="Optional">
         <span id="state_shared_go">
 <a href="#state_shared_go" style="color: inherit; text-decoration: inherit;">Shared</a>
@@ -1787,8 +1659,7 @@ network.
     <dd>{{% md %}}Specifies whether the network resource can be accessed
 by any tenant or not. Changing this updates the sharing capabilities of the
 existing network.
-{{% /md %}}</dd>
-    <dt class="property-optional"
+{{% /md %}}</dd><dt class="property-optional"
             title="Optional">
         <span id="state_tags_go">
 <a href="#state_tags_go" style="color: inherit; text-decoration: inherit;">Tags</a>
@@ -1797,8 +1668,7 @@ existing network.
         <span class="property-type">[]string</span>
     </dt>
     <dd>{{% md %}}A set of string tags for the network.
-{{% /md %}}</dd>
-    <dt class="property-optional"
+{{% /md %}}</dd><dt class="property-optional"
             title="Optional">
         <span id="state_tenantid_go">
 <a href="#state_tenantid_go" style="color: inherit; text-decoration: inherit;">Tenant<wbr>Id</a>
@@ -1808,8 +1678,7 @@ existing network.
     </dt>
     <dd>{{% md %}}The owner of the network. Required if admin wants to
 create a network for another tenant. Changing this creates a new network.
-{{% /md %}}</dd>
-    <dt class="property-optional"
+{{% /md %}}</dd><dt class="property-optional"
             title="Optional">
         <span id="state_transparentvlan_go">
 <a href="#state_transparentvlan_go" style="color: inherit; text-decoration: inherit;">Transparent<wbr>Vlan</a>
@@ -1821,8 +1690,7 @@ create a network for another tenant. Changing this creates a new network.
 VLAN transparent attribute set. Valid values are true and false. Defaults to
 false. Changing this updates the `transparent_vlan` attribute of the existing
 network.
-{{% /md %}}</dd>
-    <dt class="property-optional"
+{{% /md %}}</dd><dt class="property-optional"
             title="Optional">
         <span id="state_valuespecs_go">
 <a href="#state_valuespecs_go" style="color: inherit; text-decoration: inherit;">Value<wbr>Specs</a>
@@ -1831,14 +1699,11 @@ network.
         <span class="property-type">map[string]interface{}</span>
     </dt>
     <dd>{{% md %}}Map of additional options.
-{{% /md %}}</dd>
-</dl>
+{{% /md %}}</dd></dl>
 {{% /choosable %}}
 
 {{% choosable language nodejs %}}
-<dl class="resources-properties">
-
-    <dt class="property-optional"
+<dl class="resources-properties"><dt class="property-optional"
             title="Optional">
         <span id="state_adminstateup_nodejs">
 <a href="#state_adminstateup_nodejs" style="color: inherit; text-decoration: inherit;">admin<wbr>State<wbr>Up</a>
@@ -1849,8 +1714,7 @@ network.
     <dd>{{% md %}}The administrative state of the network.
 Acceptable values are "true" and "false". Changing this value updates the
 state of the existing network.
-{{% /md %}}</dd>
-    <dt class="property-optional"
+{{% /md %}}</dd><dt class="property-optional"
             title="Optional">
         <span id="state_alltags_nodejs">
 <a href="#state_alltags_nodejs" style="color: inherit; text-decoration: inherit;">all<wbr>Tags</a>
@@ -1860,8 +1724,7 @@ state of the existing network.
     </dt>
     <dd>{{% md %}}The collection of tags assigned on the network, which have been
 explicitly and implicitly added.
-{{% /md %}}</dd>
-    <dt class="property-optional"
+{{% /md %}}</dd><dt class="property-optional"
             title="Optional">
         <span id="state_availabilityzonehints_nodejs">
 <a href="#state_availabilityzonehints_nodejs" style="color: inherit; text-decoration: inherit;">availability<wbr>Zone<wbr>Hints</a>
@@ -1873,8 +1736,7 @@ explicitly and implicitly added.
 network resources highly available. Used for resources with high availability
 so that they are scheduled on different availability zones. Changing this
 creates a new network.
-{{% /md %}}</dd>
-    <dt class="property-optional"
+{{% /md %}}</dd><dt class="property-optional"
             title="Optional">
         <span id="state_description_nodejs">
 <a href="#state_description_nodejs" style="color: inherit; text-decoration: inherit;">description</a>
@@ -1884,8 +1746,7 @@ creates a new network.
     </dt>
     <dd>{{% md %}}Human-readable description of the network. Changing this
 updates the name of the existing network.
-{{% /md %}}</dd>
-    <dt class="property-optional"
+{{% /md %}}</dd><dt class="property-optional"
             title="Optional">
         <span id="state_dnsdomain_nodejs">
 <a href="#state_dnsdomain_nodejs" style="color: inherit; text-decoration: inherit;">dns<wbr>Domain</a>
@@ -1897,8 +1758,7 @@ updates the name of the existing network.
 extension is enabled. The `dns_domain` of a network in conjunction with the
 `dns_name` attribute of its ports will be published in an external DNS
 service when Neutron is configured to integrate with such a service.
-{{% /md %}}</dd>
-    <dt class="property-optional"
+{{% /md %}}</dd><dt class="property-optional"
             title="Optional">
         <span id="state_external_nodejs">
 <a href="#state_external_nodejs" style="color: inherit; text-decoration: inherit;">external</a>
@@ -1909,8 +1769,7 @@ service when Neutron is configured to integrate with such a service.
     <dd>{{% md %}}Specifies whether the network resource has the
 external routing facility. Valid values are true and false. Defaults to
 false. Changing this updates the external attribute of the existing network.
-{{% /md %}}</dd>
-    <dt class="property-optional"
+{{% /md %}}</dd><dt class="property-optional"
             title="Optional">
         <span id="state_mtu_nodejs">
 <a href="#state_mtu_nodejs" style="color: inherit; text-decoration: inherit;">mtu</a>
@@ -1921,8 +1780,7 @@ false. Changing this updates the external attribute of the existing network.
     <dd>{{% md %}}The network MTU. Available for read-only, when Neutron
 `net-mtu` extension is enabled. Available for the modification, when
 Neutron `net-mtu-writable` extension is enabled.
-{{% /md %}}</dd>
-    <dt class="property-optional"
+{{% /md %}}</dd><dt class="property-optional"
             title="Optional">
         <span id="state_name_nodejs">
 <a href="#state_name_nodejs" style="color: inherit; text-decoration: inherit;">name</a>
@@ -1932,8 +1790,7 @@ Neutron `net-mtu-writable` extension is enabled.
     </dt>
     <dd>{{% md %}}The name of the network. Changing this updates the name of
 the existing network.
-{{% /md %}}</dd>
-    <dt class="property-optional"
+{{% /md %}}</dd><dt class="property-optional"
             title="Optional">
         <span id="state_portsecurityenabled_nodejs">
 <a href="#state_portsecurityenabled_nodejs" style="color: inherit; text-decoration: inherit;">port<wbr>Security<wbr>Enabled</a>
@@ -1946,8 +1803,7 @@ port security on the network. Port Security is usually enabled by default, so
 omitting this argument will usually result in a value of "true". Setting this
 explicitly to `false` will disable port security. Valid values are `true` and
 `false`.
-{{% /md %}}</dd>
-    <dt class="property-optional"
+{{% /md %}}</dd><dt class="property-optional"
             title="Optional">
         <span id="state_qospolicyid_nodejs">
 <a href="#state_qospolicyid_nodejs" style="color: inherit; text-decoration: inherit;">qos<wbr>Policy<wbr>Id</a>
@@ -1956,8 +1812,7 @@ explicitly to `false` will disable port security. Valid values are `true` and
         <span class="property-type">string</span>
     </dt>
     <dd>{{% md %}}Reference to the associated QoS policy.
-{{% /md %}}</dd>
-    <dt class="property-optional"
+{{% /md %}}</dd><dt class="property-optional"
             title="Optional">
         <span id="state_region_nodejs">
 <a href="#state_region_nodejs" style="color: inherit; text-decoration: inherit;">region</a>
@@ -1969,8 +1824,7 @@ explicitly to `false` will disable port security. Valid values are `true` and
 A Networking client is needed to create a Neutron network. If omitted, the
 `region` argument of the provider is used. Changing this creates a new
 network.
-{{% /md %}}</dd>
-    <dt class="property-optional"
+{{% /md %}}</dd><dt class="property-optional"
             title="Optional">
         <span id="state_segments_nodejs">
 <a href="#state_segments_nodejs" style="color: inherit; text-decoration: inherit;">segments</a>
@@ -1979,8 +1833,7 @@ network.
         <span class="property-type"><a href="#networksegment">Network<wbr>Segment[]</a></span>
     </dt>
     <dd>{{% md %}}An array of one or more provider segment objects.
-{{% /md %}}</dd>
-    <dt class="property-optional"
+{{% /md %}}</dd><dt class="property-optional"
             title="Optional">
         <span id="state_shared_nodejs">
 <a href="#state_shared_nodejs" style="color: inherit; text-decoration: inherit;">shared</a>
@@ -1991,8 +1844,7 @@ network.
     <dd>{{% md %}}Specifies whether the network resource can be accessed
 by any tenant or not. Changing this updates the sharing capabilities of the
 existing network.
-{{% /md %}}</dd>
-    <dt class="property-optional"
+{{% /md %}}</dd><dt class="property-optional"
             title="Optional">
         <span id="state_tags_nodejs">
 <a href="#state_tags_nodejs" style="color: inherit; text-decoration: inherit;">tags</a>
@@ -2001,8 +1853,7 @@ existing network.
         <span class="property-type">string[]</span>
     </dt>
     <dd>{{% md %}}A set of string tags for the network.
-{{% /md %}}</dd>
-    <dt class="property-optional"
+{{% /md %}}</dd><dt class="property-optional"
             title="Optional">
         <span id="state_tenantid_nodejs">
 <a href="#state_tenantid_nodejs" style="color: inherit; text-decoration: inherit;">tenant<wbr>Id</a>
@@ -2012,8 +1863,7 @@ existing network.
     </dt>
     <dd>{{% md %}}The owner of the network. Required if admin wants to
 create a network for another tenant. Changing this creates a new network.
-{{% /md %}}</dd>
-    <dt class="property-optional"
+{{% /md %}}</dd><dt class="property-optional"
             title="Optional">
         <span id="state_transparentvlan_nodejs">
 <a href="#state_transparentvlan_nodejs" style="color: inherit; text-decoration: inherit;">transparent<wbr>Vlan</a>
@@ -2025,8 +1875,7 @@ create a network for another tenant. Changing this creates a new network.
 VLAN transparent attribute set. Valid values are true and false. Defaults to
 false. Changing this updates the `transparent_vlan` attribute of the existing
 network.
-{{% /md %}}</dd>
-    <dt class="property-optional"
+{{% /md %}}</dd><dt class="property-optional"
             title="Optional">
         <span id="state_valuespecs_nodejs">
 <a href="#state_valuespecs_nodejs" style="color: inherit; text-decoration: inherit;">value<wbr>Specs</a>
@@ -2035,14 +1884,11 @@ network.
         <span class="property-type">{[key: string]: any}</span>
     </dt>
     <dd>{{% md %}}Map of additional options.
-{{% /md %}}</dd>
-</dl>
+{{% /md %}}</dd></dl>
 {{% /choosable %}}
 
 {{% choosable language python %}}
-<dl class="resources-properties">
-
-    <dt class="property-optional"
+<dl class="resources-properties"><dt class="property-optional"
             title="Optional">
         <span id="state_admin_state_up_python">
 <a href="#state_admin_state_up_python" style="color: inherit; text-decoration: inherit;">admin_<wbr>state_<wbr>up</a>
@@ -2053,8 +1899,7 @@ network.
     <dd>{{% md %}}The administrative state of the network.
 Acceptable values are "true" and "false". Changing this value updates the
 state of the existing network.
-{{% /md %}}</dd>
-    <dt class="property-optional"
+{{% /md %}}</dd><dt class="property-optional"
             title="Optional">
         <span id="state_all_tags_python">
 <a href="#state_all_tags_python" style="color: inherit; text-decoration: inherit;">all_<wbr>tags</a>
@@ -2064,8 +1909,7 @@ state of the existing network.
     </dt>
     <dd>{{% md %}}The collection of tags assigned on the network, which have been
 explicitly and implicitly added.
-{{% /md %}}</dd>
-    <dt class="property-optional"
+{{% /md %}}</dd><dt class="property-optional"
             title="Optional">
         <span id="state_availability_zone_hints_python">
 <a href="#state_availability_zone_hints_python" style="color: inherit; text-decoration: inherit;">availability_<wbr>zone_<wbr>hints</a>
@@ -2077,8 +1921,7 @@ explicitly and implicitly added.
 network resources highly available. Used for resources with high availability
 so that they are scheduled on different availability zones. Changing this
 creates a new network.
-{{% /md %}}</dd>
-    <dt class="property-optional"
+{{% /md %}}</dd><dt class="property-optional"
             title="Optional">
         <span id="state_description_python">
 <a href="#state_description_python" style="color: inherit; text-decoration: inherit;">description</a>
@@ -2088,8 +1931,7 @@ creates a new network.
     </dt>
     <dd>{{% md %}}Human-readable description of the network. Changing this
 updates the name of the existing network.
-{{% /md %}}</dd>
-    <dt class="property-optional"
+{{% /md %}}</dd><dt class="property-optional"
             title="Optional">
         <span id="state_dns_domain_python">
 <a href="#state_dns_domain_python" style="color: inherit; text-decoration: inherit;">dns_<wbr>domain</a>
@@ -2101,8 +1943,7 @@ updates the name of the existing network.
 extension is enabled. The `dns_domain` of a network in conjunction with the
 `dns_name` attribute of its ports will be published in an external DNS
 service when Neutron is configured to integrate with such a service.
-{{% /md %}}</dd>
-    <dt class="property-optional"
+{{% /md %}}</dd><dt class="property-optional"
             title="Optional">
         <span id="state_external_python">
 <a href="#state_external_python" style="color: inherit; text-decoration: inherit;">external</a>
@@ -2113,8 +1954,7 @@ service when Neutron is configured to integrate with such a service.
     <dd>{{% md %}}Specifies whether the network resource has the
 external routing facility. Valid values are true and false. Defaults to
 false. Changing this updates the external attribute of the existing network.
-{{% /md %}}</dd>
-    <dt class="property-optional"
+{{% /md %}}</dd><dt class="property-optional"
             title="Optional">
         <span id="state_mtu_python">
 <a href="#state_mtu_python" style="color: inherit; text-decoration: inherit;">mtu</a>
@@ -2125,8 +1965,7 @@ false. Changing this updates the external attribute of the existing network.
     <dd>{{% md %}}The network MTU. Available for read-only, when Neutron
 `net-mtu` extension is enabled. Available for the modification, when
 Neutron `net-mtu-writable` extension is enabled.
-{{% /md %}}</dd>
-    <dt class="property-optional"
+{{% /md %}}</dd><dt class="property-optional"
             title="Optional">
         <span id="state_name_python">
 <a href="#state_name_python" style="color: inherit; text-decoration: inherit;">name</a>
@@ -2136,8 +1975,7 @@ Neutron `net-mtu-writable` extension is enabled.
     </dt>
     <dd>{{% md %}}The name of the network. Changing this updates the name of
 the existing network.
-{{% /md %}}</dd>
-    <dt class="property-optional"
+{{% /md %}}</dd><dt class="property-optional"
             title="Optional">
         <span id="state_port_security_enabled_python">
 <a href="#state_port_security_enabled_python" style="color: inherit; text-decoration: inherit;">port_<wbr>security_<wbr>enabled</a>
@@ -2150,8 +1988,7 @@ port security on the network. Port Security is usually enabled by default, so
 omitting this argument will usually result in a value of "true". Setting this
 explicitly to `false` will disable port security. Valid values are `true` and
 `false`.
-{{% /md %}}</dd>
-    <dt class="property-optional"
+{{% /md %}}</dd><dt class="property-optional"
             title="Optional">
         <span id="state_qos_policy_id_python">
 <a href="#state_qos_policy_id_python" style="color: inherit; text-decoration: inherit;">qos_<wbr>policy_<wbr>id</a>
@@ -2160,8 +1997,7 @@ explicitly to `false` will disable port security. Valid values are `true` and
         <span class="property-type">str</span>
     </dt>
     <dd>{{% md %}}Reference to the associated QoS policy.
-{{% /md %}}</dd>
-    <dt class="property-optional"
+{{% /md %}}</dd><dt class="property-optional"
             title="Optional">
         <span id="state_region_python">
 <a href="#state_region_python" style="color: inherit; text-decoration: inherit;">region</a>
@@ -2173,8 +2009,7 @@ explicitly to `false` will disable port security. Valid values are `true` and
 A Networking client is needed to create a Neutron network. If omitted, the
 `region` argument of the provider is used. Changing this creates a new
 network.
-{{% /md %}}</dd>
-    <dt class="property-optional"
+{{% /md %}}</dd><dt class="property-optional"
             title="Optional">
         <span id="state_segments_python">
 <a href="#state_segments_python" style="color: inherit; text-decoration: inherit;">segments</a>
@@ -2183,8 +2018,7 @@ network.
         <span class="property-type"><a href="#networksegment">Sequence[Network<wbr>Segment<wbr>Args]</a></span>
     </dt>
     <dd>{{% md %}}An array of one or more provider segment objects.
-{{% /md %}}</dd>
-    <dt class="property-optional"
+{{% /md %}}</dd><dt class="property-optional"
             title="Optional">
         <span id="state_shared_python">
 <a href="#state_shared_python" style="color: inherit; text-decoration: inherit;">shared</a>
@@ -2195,8 +2029,7 @@ network.
     <dd>{{% md %}}Specifies whether the network resource can be accessed
 by any tenant or not. Changing this updates the sharing capabilities of the
 existing network.
-{{% /md %}}</dd>
-    <dt class="property-optional"
+{{% /md %}}</dd><dt class="property-optional"
             title="Optional">
         <span id="state_tags_python">
 <a href="#state_tags_python" style="color: inherit; text-decoration: inherit;">tags</a>
@@ -2205,8 +2038,7 @@ existing network.
         <span class="property-type">Sequence[str]</span>
     </dt>
     <dd>{{% md %}}A set of string tags for the network.
-{{% /md %}}</dd>
-    <dt class="property-optional"
+{{% /md %}}</dd><dt class="property-optional"
             title="Optional">
         <span id="state_tenant_id_python">
 <a href="#state_tenant_id_python" style="color: inherit; text-decoration: inherit;">tenant_<wbr>id</a>
@@ -2216,8 +2048,7 @@ existing network.
     </dt>
     <dd>{{% md %}}The owner of the network. Required if admin wants to
 create a network for another tenant. Changing this creates a new network.
-{{% /md %}}</dd>
-    <dt class="property-optional"
+{{% /md %}}</dd><dt class="property-optional"
             title="Optional">
         <span id="state_transparent_vlan_python">
 <a href="#state_transparent_vlan_python" style="color: inherit; text-decoration: inherit;">transparent_<wbr>vlan</a>
@@ -2229,8 +2060,7 @@ create a network for another tenant. Changing this creates a new network.
 VLAN transparent attribute set. Valid values are true and false. Defaults to
 false. Changing this updates the `transparent_vlan` attribute of the existing
 network.
-{{% /md %}}</dd>
-    <dt class="property-optional"
+{{% /md %}}</dd><dt class="property-optional"
             title="Optional">
         <span id="state_value_specs_python">
 <a href="#state_value_specs_python" style="color: inherit; text-decoration: inherit;">value_<wbr>specs</a>
@@ -2239,8 +2069,7 @@ network.
         <span class="property-type">Mapping[str, Any]</span>
     </dt>
     <dd>{{% md %}}Map of additional options.
-{{% /md %}}</dd>
-</dl>
+{{% /md %}}</dd></dl>
 {{% /choosable %}}
 
 
@@ -2255,9 +2084,7 @@ network.
 <h4 id="networksegment">Network<wbr>Segment</h4>
 
 {{% choosable language csharp %}}
-<dl class="resources-properties">
-
-    <dt class="property-optional"
+<dl class="resources-properties"><dt class="property-optional"
             title="Optional">
         <span id="networktype_csharp">
 <a href="#networktype_csharp" style="color: inherit; text-decoration: inherit;">Network<wbr>Type</a>
@@ -2266,8 +2093,7 @@ network.
         <span class="property-type">string</span>
     </dt>
     <dd>{{% md %}}The type of physical network.
-{{% /md %}}</dd>
-    <dt class="property-optional"
+{{% /md %}}</dd><dt class="property-optional"
             title="Optional">
         <span id="physicalnetwork_csharp">
 <a href="#physicalnetwork_csharp" style="color: inherit; text-decoration: inherit;">Physical<wbr>Network</a>
@@ -2276,8 +2102,7 @@ network.
         <span class="property-type">string</span>
     </dt>
     <dd>{{% md %}}The physical network where this network is implemented.
-{{% /md %}}</dd>
-    <dt class="property-optional"
+{{% /md %}}</dd><dt class="property-optional"
             title="Optional">
         <span id="segmentationid_csharp">
 <a href="#segmentationid_csharp" style="color: inherit; text-decoration: inherit;">Segmentation<wbr>Id</a>
@@ -2286,14 +2111,11 @@ network.
         <span class="property-type">int</span>
     </dt>
     <dd>{{% md %}}An isolated segment on the physical network.
-{{% /md %}}</dd>
-</dl>
+{{% /md %}}</dd></dl>
 {{% /choosable %}}
 
 {{% choosable language go %}}
-<dl class="resources-properties">
-
-    <dt class="property-optional"
+<dl class="resources-properties"><dt class="property-optional"
             title="Optional">
         <span id="networktype_go">
 <a href="#networktype_go" style="color: inherit; text-decoration: inherit;">Network<wbr>Type</a>
@@ -2302,8 +2124,7 @@ network.
         <span class="property-type">string</span>
     </dt>
     <dd>{{% md %}}The type of physical network.
-{{% /md %}}</dd>
-    <dt class="property-optional"
+{{% /md %}}</dd><dt class="property-optional"
             title="Optional">
         <span id="physicalnetwork_go">
 <a href="#physicalnetwork_go" style="color: inherit; text-decoration: inherit;">Physical<wbr>Network</a>
@@ -2312,8 +2133,7 @@ network.
         <span class="property-type">string</span>
     </dt>
     <dd>{{% md %}}The physical network where this network is implemented.
-{{% /md %}}</dd>
-    <dt class="property-optional"
+{{% /md %}}</dd><dt class="property-optional"
             title="Optional">
         <span id="segmentationid_go">
 <a href="#segmentationid_go" style="color: inherit; text-decoration: inherit;">Segmentation<wbr>Id</a>
@@ -2322,14 +2142,11 @@ network.
         <span class="property-type">int</span>
     </dt>
     <dd>{{% md %}}An isolated segment on the physical network.
-{{% /md %}}</dd>
-</dl>
+{{% /md %}}</dd></dl>
 {{% /choosable %}}
 
 {{% choosable language nodejs %}}
-<dl class="resources-properties">
-
-    <dt class="property-optional"
+<dl class="resources-properties"><dt class="property-optional"
             title="Optional">
         <span id="networktype_nodejs">
 <a href="#networktype_nodejs" style="color: inherit; text-decoration: inherit;">network<wbr>Type</a>
@@ -2338,8 +2155,7 @@ network.
         <span class="property-type">string</span>
     </dt>
     <dd>{{% md %}}The type of physical network.
-{{% /md %}}</dd>
-    <dt class="property-optional"
+{{% /md %}}</dd><dt class="property-optional"
             title="Optional">
         <span id="physicalnetwork_nodejs">
 <a href="#physicalnetwork_nodejs" style="color: inherit; text-decoration: inherit;">physical<wbr>Network</a>
@@ -2348,8 +2164,7 @@ network.
         <span class="property-type">string</span>
     </dt>
     <dd>{{% md %}}The physical network where this network is implemented.
-{{% /md %}}</dd>
-    <dt class="property-optional"
+{{% /md %}}</dd><dt class="property-optional"
             title="Optional">
         <span id="segmentationid_nodejs">
 <a href="#segmentationid_nodejs" style="color: inherit; text-decoration: inherit;">segmentation<wbr>Id</a>
@@ -2358,14 +2173,11 @@ network.
         <span class="property-type">number</span>
     </dt>
     <dd>{{% md %}}An isolated segment on the physical network.
-{{% /md %}}</dd>
-</dl>
+{{% /md %}}</dd></dl>
 {{% /choosable %}}
 
 {{% choosable language python %}}
-<dl class="resources-properties">
-
-    <dt class="property-optional"
+<dl class="resources-properties"><dt class="property-optional"
             title="Optional">
         <span id="network_type_python">
 <a href="#network_type_python" style="color: inherit; text-decoration: inherit;">network_<wbr>type</a>
@@ -2374,8 +2186,7 @@ network.
         <span class="property-type">str</span>
     </dt>
     <dd>{{% md %}}The type of physical network.
-{{% /md %}}</dd>
-    <dt class="property-optional"
+{{% /md %}}</dd><dt class="property-optional"
             title="Optional">
         <span id="physical_network_python">
 <a href="#physical_network_python" style="color: inherit; text-decoration: inherit;">physical_<wbr>network</a>
@@ -2384,8 +2195,7 @@ network.
         <span class="property-type">str</span>
     </dt>
     <dd>{{% md %}}The physical network where this network is implemented.
-{{% /md %}}</dd>
-    <dt class="property-optional"
+{{% /md %}}</dd><dt class="property-optional"
             title="Optional">
         <span id="segmentation_id_python">
 <a href="#segmentation_id_python" style="color: inherit; text-decoration: inherit;">segmentation_<wbr>id</a>
@@ -2394,8 +2204,7 @@ network.
         <span class="property-type">int</span>
     </dt>
     <dd>{{% md %}}An isolated segment on the physical network.
-{{% /md %}}</dd>
-</dl>
+{{% /md %}}</dd></dl>
 {{% /choosable %}}
 ## Import
 
@@ -2416,6 +2225,6 @@ Networks can be imported using the `id`, e.g.
 	<dt>License</dt>
 	<dd>Apache-2.0</dd>
 	<dt>Notes</dt>
-	<dd>This Pulumi package is based on the [`openstack` Terraform Provider](https://github.com/terraform-provider-openstack/terraform-provider-openstack).</dd>
+	<dd>{{% md %}}This Pulumi package is based on the [`openstack` Terraform Provider](https://github.com/terraform-provider-openstack/terraform-provider-openstack).{{% /md %}}</dd>
 </dl>
 

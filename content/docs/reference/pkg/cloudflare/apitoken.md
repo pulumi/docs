@@ -17,11 +17,17 @@ Read more about permission groups and their applicable scopes in
 
 
 {{% examples %}}
+
 ## Example Usage
 
 {{< chooser language "typescript,python,go,csharp" / >}}
+
+
 ### User Permissions
-{{% example csharp %}}
+
+
+{{< example csharp >}}
+
 ```csharp
 using Pulumi;
 using Cloudflare = Pulumi.Cloudflare;
@@ -70,13 +76,19 @@ class MyStack : Stack
 }
 ```
 
-{{% /example %}}
 
-{{% example go %}}
+{{< /example >}}
+
+
+{{< example go >}}
+
 Coming soon!
-{{% /example %}}
 
-{{% example python %}}
+{{< /example >}}
+
+
+{{< example python >}}
+
 ```python
 import pulumi
 import pulumi_cloudflare as cloudflare
@@ -100,9 +112,12 @@ api_token_create = cloudflare.ApiToken("apiTokenCreate",
     ))
 ```
 
-{{% /example %}}
 
-{{% example typescript %}}
+{{< /example >}}
+
+
+{{< example typescript >}}
+
 
 ```typescript
 import * as pulumi from "@pulumi/pulumi";
@@ -128,10 +143,17 @@ const apiTokenCreate = new cloudflare.ApiToken("apiTokenCreate", {
 });
 ```
 
-{{% /example %}}
+
+{{< /example >}}
+
+
+
 
 ### Account permissions
-{{% example csharp %}}
+
+
+{{< example csharp >}}
+
 ```csharp
 using Pulumi;
 using Cloudflare = Pulumi.Cloudflare;
@@ -184,13 +206,19 @@ class MyStack : Stack
 }
 ```
 
-{{% /example %}}
 
-{{% example go %}}
+{{< /example >}}
+
+
+{{< example go >}}
+
 Coming soon!
-{{% /example %}}
 
-{{% example python %}}
+{{< /example >}}
+
+
+{{< example python >}}
+
 ```python
 import pulumi
 import pulumi_cloudflare as cloudflare
@@ -216,9 +244,12 @@ logs_account = cloudflare.ApiToken("logsAccount",
     )])
 ```
 
-{{% /example %}}
 
-{{% example typescript %}}
+{{< /example >}}
+
+
+{{< example typescript >}}
+
 
 ```typescript
 import * as pulumi from "@pulumi/pulumi";
@@ -247,10 +278,17 @@ const logsAccount = new cloudflare.ApiToken("logsAccount", {
 });
 ```
 
-{{% /example %}}
+
+{{< /example >}}
+
+
+
 
 ### Zone Permissions
-{{% example csharp %}}
+
+
+{{< example csharp >}}
+
 ```csharp
 using System.Collections.Generic;
 using System.Text.Json;
@@ -340,13 +378,19 @@ class MyStack : Stack
 }
 ```
 
-{{% /example %}}
 
-{{% example go %}}
+{{< /example >}}
+
+
+{{< example go >}}
+
 Coming soon!
-{{% /example %}}
 
-{{% example python %}}
+{{< /example >}}
+
+
+{{< example python >}}
+
 ```python
 import pulumi
 import json
@@ -396,9 +440,12 @@ dns_edit_all_account = cloudflare.ApiToken("dnsEditAllAccount",
     )])
 ```
 
-{{% /example %}}
 
-{{% example typescript %}}
+{{< /example >}}
+
+
+{{< example typescript >}}
+
 
 ```typescript
 import * as pulumi from "@pulumi/pulumi";
@@ -451,9 +498,16 @@ const dnsEditAllAccount = new cloudflare.ApiToken("dnsEditAllAccount", {
 });
 ```
 
-{{% /example %}}
+
+{{< /example >}}
+
+
+
+
 
 {{% /examples %}}
+
+
 
 
 ## Create a ApiToken Resource {#create}
@@ -478,9 +532,7 @@ const dnsEditAllAccount = new cloudflare.ApiToken("dnsEditAllAccount", {
 
 {{% choosable language nodejs %}}
 
-<dl class="resources-properties">
-  
-    <dt
+<dl class="resources-properties"><dt
         class="property-required" title="Required">
         <span>name</span>
         <span class="property-indicator"></span>
@@ -488,9 +540,7 @@ const dnsEditAllAccount = new cloudflare.ApiToken("dnsEditAllAccount", {
     </dt>
     <dd>
       The unique name of the resource.
-    </dd>
-  
-    <dt
+    </dd><dt
         class="property-required" title="Required">
         <span>args</span>
         <span class="property-indicator"></span>
@@ -498,9 +548,7 @@ const dnsEditAllAccount = new cloudflare.ApiToken("dnsEditAllAccount", {
     </dt>
     <dd>
       The arguments to resource properties.
-    </dd>
-  
-    <dt
+    </dd><dt
         class="property-optional" title="Optional">
         <span>opts</span>
         <span class="property-indicator"></span>
@@ -508,10 +556,7 @@ const dnsEditAllAccount = new cloudflare.ApiToken("dnsEditAllAccount", {
     </dt>
     <dd>
       Bag of options to control resource&#39;s behavior.
-    </dd>
-  
-
-</dl>
+    </dd></dl>
 
 {{% /choosable %}}
 
@@ -537,9 +582,7 @@ const dnsEditAllAccount = new cloudflare.ApiToken("dnsEditAllAccount", {
 
 {{% choosable language go %}}
 
-<dl class="resources-properties">
-  
-    <dt
+<dl class="resources-properties"><dt
         class="property-optional" title="Optional">
         <span>ctx</span>
         <span class="property-indicator"></span>
@@ -547,9 +590,7 @@ const dnsEditAllAccount = new cloudflare.ApiToken("dnsEditAllAccount", {
     </dt>
     <dd>
       Context object for the current deployment.
-    </dd>
-  
-    <dt
+    </dd><dt
         class="property-required" title="Required">
         <span>name</span>
         <span class="property-indicator"></span>
@@ -557,9 +598,7 @@ const dnsEditAllAccount = new cloudflare.ApiToken("dnsEditAllAccount", {
     </dt>
     <dd>
       The unique name of the resource.
-    </dd>
-  
-    <dt
+    </dd><dt
         class="property-required" title="Required">
         <span>args</span>
         <span class="property-indicator"></span>
@@ -567,9 +606,7 @@ const dnsEditAllAccount = new cloudflare.ApiToken("dnsEditAllAccount", {
     </dt>
     <dd>
       The arguments to resource properties.
-    </dd>
-  
-    <dt
+    </dd><dt
         class="property-optional" title="Optional">
         <span>opts</span>
         <span class="property-indicator"></span>
@@ -577,18 +614,13 @@ const dnsEditAllAccount = new cloudflare.ApiToken("dnsEditAllAccount", {
     </dt>
     <dd>
       Bag of options to control resource&#39;s behavior.
-    </dd>
-  
-
-</dl>
+    </dd></dl>
 
 {{% /choosable %}}
 
 {{% choosable language csharp %}}
 
-<dl class="resources-properties">
-  
-    <dt
+<dl class="resources-properties"><dt
         class="property-required" title="Required">
         <span>name</span>
         <span class="property-indicator"></span>
@@ -596,9 +628,7 @@ const dnsEditAllAccount = new cloudflare.ApiToken("dnsEditAllAccount", {
     </dt>
     <dd>
       The unique name of the resource.
-    </dd>
-  
-    <dt
+    </dd><dt
         class="property-required" title="Required">
         <span>args</span>
         <span class="property-indicator"></span>
@@ -606,9 +636,7 @@ const dnsEditAllAccount = new cloudflare.ApiToken("dnsEditAllAccount", {
     </dt>
     <dd>
       The arguments to resource properties.
-    </dd>
-  
-    <dt
+    </dd><dt
         class="property-optional" title="Optional">
         <span>opts</span>
         <span class="property-indicator"></span>
@@ -616,10 +644,7 @@ const dnsEditAllAccount = new cloudflare.ApiToken("dnsEditAllAccount", {
     </dt>
     <dd>
       Bag of options to control resource&#39;s behavior.
-    </dd>
-  
-
-</dl>
+    </dd></dl>
 
 {{% /choosable %}}
 
@@ -634,9 +659,7 @@ The ApiToken resource accepts the following [input]({{< relref "/docs/intro/conc
 
 
 {{% choosable language csharp %}}
-<dl class="resources-properties">
-
-    <dt class="property-required"
+<dl class="resources-properties"><dt class="property-required"
             title="Required">
         <span id="name_csharp">
 <a href="#name_csharp" style="color: inherit; text-decoration: inherit;">Name</a>
@@ -645,8 +668,7 @@ The ApiToken resource accepts the following [input]({{< relref "/docs/intro/conc
         <span class="property-type">string</span>
     </dt>
     <dd>{{% md %}}Name of the APIToken.
-{{% /md %}}</dd>
-    <dt class="property-required"
+{{% /md %}}</dd><dt class="property-required"
             title="Required">
         <span id="policies_csharp">
 <a href="#policies_csharp" style="color: inherit; text-decoration: inherit;">Policies</a>
@@ -656,8 +678,7 @@ The ApiToken resource accepts the following [input]({{< relref "/docs/intro/conc
     </dt>
     <dd>{{% md %}}Permissions policy. Multiple policy blocks can be defined.
 See the definition below.
-{{% /md %}}</dd>
-    <dt class="property-optional"
+{{% /md %}}</dd><dt class="property-optional"
             title="Optional">
         <span id="condition_csharp">
 <a href="#condition_csharp" style="color: inherit; text-decoration: inherit;">Condition</a>
@@ -666,14 +687,11 @@ See the definition below.
         <span class="property-type"><a href="#apitokencondition">Api<wbr>Token<wbr>Condition<wbr>Args</a></span>
     </dt>
     <dd>{{% md %}}Condition block. See the definition below.
-{{% /md %}}</dd>
-</dl>
+{{% /md %}}</dd></dl>
 {{% /choosable %}}
 
 {{% choosable language go %}}
-<dl class="resources-properties">
-
-    <dt class="property-required"
+<dl class="resources-properties"><dt class="property-required"
             title="Required">
         <span id="name_go">
 <a href="#name_go" style="color: inherit; text-decoration: inherit;">Name</a>
@@ -682,8 +700,7 @@ See the definition below.
         <span class="property-type">string</span>
     </dt>
     <dd>{{% md %}}Name of the APIToken.
-{{% /md %}}</dd>
-    <dt class="property-required"
+{{% /md %}}</dd><dt class="property-required"
             title="Required">
         <span id="policies_go">
 <a href="#policies_go" style="color: inherit; text-decoration: inherit;">Policies</a>
@@ -693,8 +710,7 @@ See the definition below.
     </dt>
     <dd>{{% md %}}Permissions policy. Multiple policy blocks can be defined.
 See the definition below.
-{{% /md %}}</dd>
-    <dt class="property-optional"
+{{% /md %}}</dd><dt class="property-optional"
             title="Optional">
         <span id="condition_go">
 <a href="#condition_go" style="color: inherit; text-decoration: inherit;">Condition</a>
@@ -703,14 +719,11 @@ See the definition below.
         <span class="property-type"><a href="#apitokencondition">Api<wbr>Token<wbr>Condition</a></span>
     </dt>
     <dd>{{% md %}}Condition block. See the definition below.
-{{% /md %}}</dd>
-</dl>
+{{% /md %}}</dd></dl>
 {{% /choosable %}}
 
 {{% choosable language nodejs %}}
-<dl class="resources-properties">
-
-    <dt class="property-required"
+<dl class="resources-properties"><dt class="property-required"
             title="Required">
         <span id="name_nodejs">
 <a href="#name_nodejs" style="color: inherit; text-decoration: inherit;">name</a>
@@ -719,8 +732,7 @@ See the definition below.
         <span class="property-type">string</span>
     </dt>
     <dd>{{% md %}}Name of the APIToken.
-{{% /md %}}</dd>
-    <dt class="property-required"
+{{% /md %}}</dd><dt class="property-required"
             title="Required">
         <span id="policies_nodejs">
 <a href="#policies_nodejs" style="color: inherit; text-decoration: inherit;">policies</a>
@@ -730,8 +742,7 @@ See the definition below.
     </dt>
     <dd>{{% md %}}Permissions policy. Multiple policy blocks can be defined.
 See the definition below.
-{{% /md %}}</dd>
-    <dt class="property-optional"
+{{% /md %}}</dd><dt class="property-optional"
             title="Optional">
         <span id="condition_nodejs">
 <a href="#condition_nodejs" style="color: inherit; text-decoration: inherit;">condition</a>
@@ -740,14 +751,11 @@ See the definition below.
         <span class="property-type"><a href="#apitokencondition">Api<wbr>Token<wbr>Condition</a></span>
     </dt>
     <dd>{{% md %}}Condition block. See the definition below.
-{{% /md %}}</dd>
-</dl>
+{{% /md %}}</dd></dl>
 {{% /choosable %}}
 
 {{% choosable language python %}}
-<dl class="resources-properties">
-
-    <dt class="property-required"
+<dl class="resources-properties"><dt class="property-required"
             title="Required">
         <span id="name_python">
 <a href="#name_python" style="color: inherit; text-decoration: inherit;">name</a>
@@ -756,8 +764,7 @@ See the definition below.
         <span class="property-type">str</span>
     </dt>
     <dd>{{% md %}}Name of the APIToken.
-{{% /md %}}</dd>
-    <dt class="property-required"
+{{% /md %}}</dd><dt class="property-required"
             title="Required">
         <span id="policies_python">
 <a href="#policies_python" style="color: inherit; text-decoration: inherit;">policies</a>
@@ -767,8 +774,7 @@ See the definition below.
     </dt>
     <dd>{{% md %}}Permissions policy. Multiple policy blocks can be defined.
 See the definition below.
-{{% /md %}}</dd>
-    <dt class="property-optional"
+{{% /md %}}</dd><dt class="property-optional"
             title="Optional">
         <span id="condition_python">
 <a href="#condition_python" style="color: inherit; text-decoration: inherit;">condition</a>
@@ -777,8 +783,7 @@ See the definition below.
         <span class="property-type"><a href="#apitokencondition">Api<wbr>Token<wbr>Condition<wbr>Args</a></span>
     </dt>
     <dd>{{% md %}}Condition block. See the definition below.
-{{% /md %}}</dd>
-</dl>
+{{% /md %}}</dd></dl>
 {{% /choosable %}}
 
 
@@ -789,9 +794,7 @@ All [input](#inputs) properties are implicitly available as output properties. A
 
 
 {{% choosable language csharp %}}
-<dl class="resources-properties">
-
-    <dt class="property-"
+<dl class="resources-properties"><dt class="property-"
             title="">
         <span id="id_csharp">
 <a href="#id_csharp" style="color: inherit; text-decoration: inherit;">Id</a>
@@ -799,8 +802,7 @@ All [input](#inputs) properties are implicitly available as output properties. A
         <span class="property-indicator"></span>
         <span class="property-type">string</span>
     </dt>
-    <dd>{{% md %}}The provider-assigned unique ID for this managed resource.{{% /md %}}</dd>
-    <dt class="property-"
+    <dd>{{% md %}}The provider-assigned unique ID for this managed resource.{{% /md %}}</dd><dt class="property-"
             title="">
         <span id="issuedon_csharp">
 <a href="#issuedon_csharp" style="color: inherit; text-decoration: inherit;">Issued<wbr>On</a>
@@ -809,8 +811,7 @@ All [input](#inputs) properties are implicitly available as output properties. A
         <span class="property-type">string</span>
     </dt>
     <dd>{{% md %}}The RFC3339 timestamp of when the API Token was issued.
-{{% /md %}}</dd>
-    <dt class="property-"
+{{% /md %}}</dd><dt class="property-"
             title="">
         <span id="modifiedon_csharp">
 <a href="#modifiedon_csharp" style="color: inherit; text-decoration: inherit;">Modified<wbr>On</a>
@@ -819,8 +820,7 @@ All [input](#inputs) properties are implicitly available as output properties. A
         <span class="property-type">string</span>
     </dt>
     <dd>{{% md %}}The RFC3339 timestamp of when the API Token was last modified.
-{{% /md %}}</dd>
-    <dt class="property-"
+{{% /md %}}</dd><dt class="property-"
             title="">
         <span id="status_csharp">
 <a href="#status_csharp" style="color: inherit; text-decoration: inherit;">Status</a>
@@ -828,8 +828,7 @@ All [input](#inputs) properties are implicitly available as output properties. A
         <span class="property-indicator"></span>
         <span class="property-type">string</span>
     </dt>
-    <dd>{{% md %}}{{% /md %}}</dd>
-    <dt class="property-"
+    <dd>{{% md %}}{{% /md %}}</dd><dt class="property-"
             title="">
         <span id="value_csharp">
 <a href="#value_csharp" style="color: inherit; text-decoration: inherit;">Value</a>
@@ -838,14 +837,11 @@ All [input](#inputs) properties are implicitly available as output properties. A
         <span class="property-type">string</span>
     </dt>
     <dd>{{% md %}}The value of the API Token.
-{{% /md %}}</dd>
-</dl>
+{{% /md %}}</dd></dl>
 {{% /choosable %}}
 
 {{% choosable language go %}}
-<dl class="resources-properties">
-
-    <dt class="property-"
+<dl class="resources-properties"><dt class="property-"
             title="">
         <span id="id_go">
 <a href="#id_go" style="color: inherit; text-decoration: inherit;">Id</a>
@@ -853,8 +849,7 @@ All [input](#inputs) properties are implicitly available as output properties. A
         <span class="property-indicator"></span>
         <span class="property-type">string</span>
     </dt>
-    <dd>{{% md %}}The provider-assigned unique ID for this managed resource.{{% /md %}}</dd>
-    <dt class="property-"
+    <dd>{{% md %}}The provider-assigned unique ID for this managed resource.{{% /md %}}</dd><dt class="property-"
             title="">
         <span id="issuedon_go">
 <a href="#issuedon_go" style="color: inherit; text-decoration: inherit;">Issued<wbr>On</a>
@@ -863,8 +858,7 @@ All [input](#inputs) properties are implicitly available as output properties. A
         <span class="property-type">string</span>
     </dt>
     <dd>{{% md %}}The RFC3339 timestamp of when the API Token was issued.
-{{% /md %}}</dd>
-    <dt class="property-"
+{{% /md %}}</dd><dt class="property-"
             title="">
         <span id="modifiedon_go">
 <a href="#modifiedon_go" style="color: inherit; text-decoration: inherit;">Modified<wbr>On</a>
@@ -873,8 +867,7 @@ All [input](#inputs) properties are implicitly available as output properties. A
         <span class="property-type">string</span>
     </dt>
     <dd>{{% md %}}The RFC3339 timestamp of when the API Token was last modified.
-{{% /md %}}</dd>
-    <dt class="property-"
+{{% /md %}}</dd><dt class="property-"
             title="">
         <span id="status_go">
 <a href="#status_go" style="color: inherit; text-decoration: inherit;">Status</a>
@@ -882,8 +875,7 @@ All [input](#inputs) properties are implicitly available as output properties. A
         <span class="property-indicator"></span>
         <span class="property-type">string</span>
     </dt>
-    <dd>{{% md %}}{{% /md %}}</dd>
-    <dt class="property-"
+    <dd>{{% md %}}{{% /md %}}</dd><dt class="property-"
             title="">
         <span id="value_go">
 <a href="#value_go" style="color: inherit; text-decoration: inherit;">Value</a>
@@ -892,14 +884,11 @@ All [input](#inputs) properties are implicitly available as output properties. A
         <span class="property-type">string</span>
     </dt>
     <dd>{{% md %}}The value of the API Token.
-{{% /md %}}</dd>
-</dl>
+{{% /md %}}</dd></dl>
 {{% /choosable %}}
 
 {{% choosable language nodejs %}}
-<dl class="resources-properties">
-
-    <dt class="property-"
+<dl class="resources-properties"><dt class="property-"
             title="">
         <span id="id_nodejs">
 <a href="#id_nodejs" style="color: inherit; text-decoration: inherit;">id</a>
@@ -907,8 +896,7 @@ All [input](#inputs) properties are implicitly available as output properties. A
         <span class="property-indicator"></span>
         <span class="property-type">string</span>
     </dt>
-    <dd>{{% md %}}The provider-assigned unique ID for this managed resource.{{% /md %}}</dd>
-    <dt class="property-"
+    <dd>{{% md %}}The provider-assigned unique ID for this managed resource.{{% /md %}}</dd><dt class="property-"
             title="">
         <span id="issuedon_nodejs">
 <a href="#issuedon_nodejs" style="color: inherit; text-decoration: inherit;">issued<wbr>On</a>
@@ -917,8 +905,7 @@ All [input](#inputs) properties are implicitly available as output properties. A
         <span class="property-type">string</span>
     </dt>
     <dd>{{% md %}}The RFC3339 timestamp of when the API Token was issued.
-{{% /md %}}</dd>
-    <dt class="property-"
+{{% /md %}}</dd><dt class="property-"
             title="">
         <span id="modifiedon_nodejs">
 <a href="#modifiedon_nodejs" style="color: inherit; text-decoration: inherit;">modified<wbr>On</a>
@@ -927,8 +914,7 @@ All [input](#inputs) properties are implicitly available as output properties. A
         <span class="property-type">string</span>
     </dt>
     <dd>{{% md %}}The RFC3339 timestamp of when the API Token was last modified.
-{{% /md %}}</dd>
-    <dt class="property-"
+{{% /md %}}</dd><dt class="property-"
             title="">
         <span id="status_nodejs">
 <a href="#status_nodejs" style="color: inherit; text-decoration: inherit;">status</a>
@@ -936,8 +922,7 @@ All [input](#inputs) properties are implicitly available as output properties. A
         <span class="property-indicator"></span>
         <span class="property-type">string</span>
     </dt>
-    <dd>{{% md %}}{{% /md %}}</dd>
-    <dt class="property-"
+    <dd>{{% md %}}{{% /md %}}</dd><dt class="property-"
             title="">
         <span id="value_nodejs">
 <a href="#value_nodejs" style="color: inherit; text-decoration: inherit;">value</a>
@@ -946,14 +931,11 @@ All [input](#inputs) properties are implicitly available as output properties. A
         <span class="property-type">string</span>
     </dt>
     <dd>{{% md %}}The value of the API Token.
-{{% /md %}}</dd>
-</dl>
+{{% /md %}}</dd></dl>
 {{% /choosable %}}
 
 {{% choosable language python %}}
-<dl class="resources-properties">
-
-    <dt class="property-"
+<dl class="resources-properties"><dt class="property-"
             title="">
         <span id="id_python">
 <a href="#id_python" style="color: inherit; text-decoration: inherit;">id</a>
@@ -961,8 +943,7 @@ All [input](#inputs) properties are implicitly available as output properties. A
         <span class="property-indicator"></span>
         <span class="property-type">str</span>
     </dt>
-    <dd>{{% md %}}The provider-assigned unique ID for this managed resource.{{% /md %}}</dd>
-    <dt class="property-"
+    <dd>{{% md %}}The provider-assigned unique ID for this managed resource.{{% /md %}}</dd><dt class="property-"
             title="">
         <span id="issued_on_python">
 <a href="#issued_on_python" style="color: inherit; text-decoration: inherit;">issued_<wbr>on</a>
@@ -971,8 +952,7 @@ All [input](#inputs) properties are implicitly available as output properties. A
         <span class="property-type">str</span>
     </dt>
     <dd>{{% md %}}The RFC3339 timestamp of when the API Token was issued.
-{{% /md %}}</dd>
-    <dt class="property-"
+{{% /md %}}</dd><dt class="property-"
             title="">
         <span id="modified_on_python">
 <a href="#modified_on_python" style="color: inherit; text-decoration: inherit;">modified_<wbr>on</a>
@@ -981,8 +961,7 @@ All [input](#inputs) properties are implicitly available as output properties. A
         <span class="property-type">str</span>
     </dt>
     <dd>{{% md %}}The RFC3339 timestamp of when the API Token was last modified.
-{{% /md %}}</dd>
-    <dt class="property-"
+{{% /md %}}</dd><dt class="property-"
             title="">
         <span id="status_python">
 <a href="#status_python" style="color: inherit; text-decoration: inherit;">status</a>
@@ -990,8 +969,7 @@ All [input](#inputs) properties are implicitly available as output properties. A
         <span class="property-indicator"></span>
         <span class="property-type">str</span>
     </dt>
-    <dd>{{% md %}}{{% /md %}}</dd>
-    <dt class="property-"
+    <dd>{{% md %}}{{% /md %}}</dd><dt class="property-"
             title="">
         <span id="value_python">
 <a href="#value_python" style="color: inherit; text-decoration: inherit;">value</a>
@@ -1000,8 +978,7 @@ All [input](#inputs) properties are implicitly available as output properties. A
         <span class="property-type">str</span>
     </dt>
     <dd>{{% md %}}The value of the API Token.
-{{% /md %}}</dd>
-</dl>
+{{% /md %}}</dd></dl>
 {{% /choosable %}}
 
 
@@ -1128,9 +1105,7 @@ The following state arguments are supported:
 
 
 {{% choosable language csharp %}}
-<dl class="resources-properties">
-
-    <dt class="property-optional"
+<dl class="resources-properties"><dt class="property-optional"
             title="Optional">
         <span id="state_condition_csharp">
 <a href="#state_condition_csharp" style="color: inherit; text-decoration: inherit;">Condition</a>
@@ -1139,8 +1114,7 @@ The following state arguments are supported:
         <span class="property-type"><a href="#apitokencondition">Api<wbr>Token<wbr>Condition<wbr>Args</a></span>
     </dt>
     <dd>{{% md %}}Condition block. See the definition below.
-{{% /md %}}</dd>
-    <dt class="property-optional"
+{{% /md %}}</dd><dt class="property-optional"
             title="Optional">
         <span id="state_issuedon_csharp">
 <a href="#state_issuedon_csharp" style="color: inherit; text-decoration: inherit;">Issued<wbr>On</a>
@@ -1149,8 +1123,7 @@ The following state arguments are supported:
         <span class="property-type">string</span>
     </dt>
     <dd>{{% md %}}The RFC3339 timestamp of when the API Token was issued.
-{{% /md %}}</dd>
-    <dt class="property-optional"
+{{% /md %}}</dd><dt class="property-optional"
             title="Optional">
         <span id="state_modifiedon_csharp">
 <a href="#state_modifiedon_csharp" style="color: inherit; text-decoration: inherit;">Modified<wbr>On</a>
@@ -1159,8 +1132,7 @@ The following state arguments are supported:
         <span class="property-type">string</span>
     </dt>
     <dd>{{% md %}}The RFC3339 timestamp of when the API Token was last modified.
-{{% /md %}}</dd>
-    <dt class="property-optional"
+{{% /md %}}</dd><dt class="property-optional"
             title="Optional">
         <span id="state_name_csharp">
 <a href="#state_name_csharp" style="color: inherit; text-decoration: inherit;">Name</a>
@@ -1169,8 +1141,7 @@ The following state arguments are supported:
         <span class="property-type">string</span>
     </dt>
     <dd>{{% md %}}Name of the APIToken.
-{{% /md %}}</dd>
-    <dt class="property-optional"
+{{% /md %}}</dd><dt class="property-optional"
             title="Optional">
         <span id="state_policies_csharp">
 <a href="#state_policies_csharp" style="color: inherit; text-decoration: inherit;">Policies</a>
@@ -1180,8 +1151,7 @@ The following state arguments are supported:
     </dt>
     <dd>{{% md %}}Permissions policy. Multiple policy blocks can be defined.
 See the definition below.
-{{% /md %}}</dd>
-    <dt class="property-optional"
+{{% /md %}}</dd><dt class="property-optional"
             title="Optional">
         <span id="state_status_csharp">
 <a href="#state_status_csharp" style="color: inherit; text-decoration: inherit;">Status</a>
@@ -1189,8 +1159,7 @@ See the definition below.
         <span class="property-indicator"></span>
         <span class="property-type">string</span>
     </dt>
-    <dd>{{% md %}}{{% /md %}}</dd>
-    <dt class="property-optional"
+    <dd>{{% md %}}{{% /md %}}</dd><dt class="property-optional"
             title="Optional">
         <span id="state_value_csharp">
 <a href="#state_value_csharp" style="color: inherit; text-decoration: inherit;">Value</a>
@@ -1199,14 +1168,11 @@ See the definition below.
         <span class="property-type">string</span>
     </dt>
     <dd>{{% md %}}The value of the API Token.
-{{% /md %}}</dd>
-</dl>
+{{% /md %}}</dd></dl>
 {{% /choosable %}}
 
 {{% choosable language go %}}
-<dl class="resources-properties">
-
-    <dt class="property-optional"
+<dl class="resources-properties"><dt class="property-optional"
             title="Optional">
         <span id="state_condition_go">
 <a href="#state_condition_go" style="color: inherit; text-decoration: inherit;">Condition</a>
@@ -1215,8 +1181,7 @@ See the definition below.
         <span class="property-type"><a href="#apitokencondition">Api<wbr>Token<wbr>Condition</a></span>
     </dt>
     <dd>{{% md %}}Condition block. See the definition below.
-{{% /md %}}</dd>
-    <dt class="property-optional"
+{{% /md %}}</dd><dt class="property-optional"
             title="Optional">
         <span id="state_issuedon_go">
 <a href="#state_issuedon_go" style="color: inherit; text-decoration: inherit;">Issued<wbr>On</a>
@@ -1225,8 +1190,7 @@ See the definition below.
         <span class="property-type">string</span>
     </dt>
     <dd>{{% md %}}The RFC3339 timestamp of when the API Token was issued.
-{{% /md %}}</dd>
-    <dt class="property-optional"
+{{% /md %}}</dd><dt class="property-optional"
             title="Optional">
         <span id="state_modifiedon_go">
 <a href="#state_modifiedon_go" style="color: inherit; text-decoration: inherit;">Modified<wbr>On</a>
@@ -1235,8 +1199,7 @@ See the definition below.
         <span class="property-type">string</span>
     </dt>
     <dd>{{% md %}}The RFC3339 timestamp of when the API Token was last modified.
-{{% /md %}}</dd>
-    <dt class="property-optional"
+{{% /md %}}</dd><dt class="property-optional"
             title="Optional">
         <span id="state_name_go">
 <a href="#state_name_go" style="color: inherit; text-decoration: inherit;">Name</a>
@@ -1245,8 +1208,7 @@ See the definition below.
         <span class="property-type">string</span>
     </dt>
     <dd>{{% md %}}Name of the APIToken.
-{{% /md %}}</dd>
-    <dt class="property-optional"
+{{% /md %}}</dd><dt class="property-optional"
             title="Optional">
         <span id="state_policies_go">
 <a href="#state_policies_go" style="color: inherit; text-decoration: inherit;">Policies</a>
@@ -1256,8 +1218,7 @@ See the definition below.
     </dt>
     <dd>{{% md %}}Permissions policy. Multiple policy blocks can be defined.
 See the definition below.
-{{% /md %}}</dd>
-    <dt class="property-optional"
+{{% /md %}}</dd><dt class="property-optional"
             title="Optional">
         <span id="state_status_go">
 <a href="#state_status_go" style="color: inherit; text-decoration: inherit;">Status</a>
@@ -1265,8 +1226,7 @@ See the definition below.
         <span class="property-indicator"></span>
         <span class="property-type">string</span>
     </dt>
-    <dd>{{% md %}}{{% /md %}}</dd>
-    <dt class="property-optional"
+    <dd>{{% md %}}{{% /md %}}</dd><dt class="property-optional"
             title="Optional">
         <span id="state_value_go">
 <a href="#state_value_go" style="color: inherit; text-decoration: inherit;">Value</a>
@@ -1275,14 +1235,11 @@ See the definition below.
         <span class="property-type">string</span>
     </dt>
     <dd>{{% md %}}The value of the API Token.
-{{% /md %}}</dd>
-</dl>
+{{% /md %}}</dd></dl>
 {{% /choosable %}}
 
 {{% choosable language nodejs %}}
-<dl class="resources-properties">
-
-    <dt class="property-optional"
+<dl class="resources-properties"><dt class="property-optional"
             title="Optional">
         <span id="state_condition_nodejs">
 <a href="#state_condition_nodejs" style="color: inherit; text-decoration: inherit;">condition</a>
@@ -1291,8 +1248,7 @@ See the definition below.
         <span class="property-type"><a href="#apitokencondition">Api<wbr>Token<wbr>Condition</a></span>
     </dt>
     <dd>{{% md %}}Condition block. See the definition below.
-{{% /md %}}</dd>
-    <dt class="property-optional"
+{{% /md %}}</dd><dt class="property-optional"
             title="Optional">
         <span id="state_issuedon_nodejs">
 <a href="#state_issuedon_nodejs" style="color: inherit; text-decoration: inherit;">issued<wbr>On</a>
@@ -1301,8 +1257,7 @@ See the definition below.
         <span class="property-type">string</span>
     </dt>
     <dd>{{% md %}}The RFC3339 timestamp of when the API Token was issued.
-{{% /md %}}</dd>
-    <dt class="property-optional"
+{{% /md %}}</dd><dt class="property-optional"
             title="Optional">
         <span id="state_modifiedon_nodejs">
 <a href="#state_modifiedon_nodejs" style="color: inherit; text-decoration: inherit;">modified<wbr>On</a>
@@ -1311,8 +1266,7 @@ See the definition below.
         <span class="property-type">string</span>
     </dt>
     <dd>{{% md %}}The RFC3339 timestamp of when the API Token was last modified.
-{{% /md %}}</dd>
-    <dt class="property-optional"
+{{% /md %}}</dd><dt class="property-optional"
             title="Optional">
         <span id="state_name_nodejs">
 <a href="#state_name_nodejs" style="color: inherit; text-decoration: inherit;">name</a>
@@ -1321,8 +1275,7 @@ See the definition below.
         <span class="property-type">string</span>
     </dt>
     <dd>{{% md %}}Name of the APIToken.
-{{% /md %}}</dd>
-    <dt class="property-optional"
+{{% /md %}}</dd><dt class="property-optional"
             title="Optional">
         <span id="state_policies_nodejs">
 <a href="#state_policies_nodejs" style="color: inherit; text-decoration: inherit;">policies</a>
@@ -1332,8 +1285,7 @@ See the definition below.
     </dt>
     <dd>{{% md %}}Permissions policy. Multiple policy blocks can be defined.
 See the definition below.
-{{% /md %}}</dd>
-    <dt class="property-optional"
+{{% /md %}}</dd><dt class="property-optional"
             title="Optional">
         <span id="state_status_nodejs">
 <a href="#state_status_nodejs" style="color: inherit; text-decoration: inherit;">status</a>
@@ -1341,8 +1293,7 @@ See the definition below.
         <span class="property-indicator"></span>
         <span class="property-type">string</span>
     </dt>
-    <dd>{{% md %}}{{% /md %}}</dd>
-    <dt class="property-optional"
+    <dd>{{% md %}}{{% /md %}}</dd><dt class="property-optional"
             title="Optional">
         <span id="state_value_nodejs">
 <a href="#state_value_nodejs" style="color: inherit; text-decoration: inherit;">value</a>
@@ -1351,14 +1302,11 @@ See the definition below.
         <span class="property-type">string</span>
     </dt>
     <dd>{{% md %}}The value of the API Token.
-{{% /md %}}</dd>
-</dl>
+{{% /md %}}</dd></dl>
 {{% /choosable %}}
 
 {{% choosable language python %}}
-<dl class="resources-properties">
-
-    <dt class="property-optional"
+<dl class="resources-properties"><dt class="property-optional"
             title="Optional">
         <span id="state_condition_python">
 <a href="#state_condition_python" style="color: inherit; text-decoration: inherit;">condition</a>
@@ -1367,8 +1315,7 @@ See the definition below.
         <span class="property-type"><a href="#apitokencondition">Api<wbr>Token<wbr>Condition<wbr>Args</a></span>
     </dt>
     <dd>{{% md %}}Condition block. See the definition below.
-{{% /md %}}</dd>
-    <dt class="property-optional"
+{{% /md %}}</dd><dt class="property-optional"
             title="Optional">
         <span id="state_issued_on_python">
 <a href="#state_issued_on_python" style="color: inherit; text-decoration: inherit;">issued_<wbr>on</a>
@@ -1377,8 +1324,7 @@ See the definition below.
         <span class="property-type">str</span>
     </dt>
     <dd>{{% md %}}The RFC3339 timestamp of when the API Token was issued.
-{{% /md %}}</dd>
-    <dt class="property-optional"
+{{% /md %}}</dd><dt class="property-optional"
             title="Optional">
         <span id="state_modified_on_python">
 <a href="#state_modified_on_python" style="color: inherit; text-decoration: inherit;">modified_<wbr>on</a>
@@ -1387,8 +1333,7 @@ See the definition below.
         <span class="property-type">str</span>
     </dt>
     <dd>{{% md %}}The RFC3339 timestamp of when the API Token was last modified.
-{{% /md %}}</dd>
-    <dt class="property-optional"
+{{% /md %}}</dd><dt class="property-optional"
             title="Optional">
         <span id="state_name_python">
 <a href="#state_name_python" style="color: inherit; text-decoration: inherit;">name</a>
@@ -1397,8 +1342,7 @@ See the definition below.
         <span class="property-type">str</span>
     </dt>
     <dd>{{% md %}}Name of the APIToken.
-{{% /md %}}</dd>
-    <dt class="property-optional"
+{{% /md %}}</dd><dt class="property-optional"
             title="Optional">
         <span id="state_policies_python">
 <a href="#state_policies_python" style="color: inherit; text-decoration: inherit;">policies</a>
@@ -1408,8 +1352,7 @@ See the definition below.
     </dt>
     <dd>{{% md %}}Permissions policy. Multiple policy blocks can be defined.
 See the definition below.
-{{% /md %}}</dd>
-    <dt class="property-optional"
+{{% /md %}}</dd><dt class="property-optional"
             title="Optional">
         <span id="state_status_python">
 <a href="#state_status_python" style="color: inherit; text-decoration: inherit;">status</a>
@@ -1417,8 +1360,7 @@ See the definition below.
         <span class="property-indicator"></span>
         <span class="property-type">str</span>
     </dt>
-    <dd>{{% md %}}{{% /md %}}</dd>
-    <dt class="property-optional"
+    <dd>{{% md %}}{{% /md %}}</dd><dt class="property-optional"
             title="Optional">
         <span id="state_value_python">
 <a href="#state_value_python" style="color: inherit; text-decoration: inherit;">value</a>
@@ -1427,8 +1369,7 @@ See the definition below.
         <span class="property-type">str</span>
     </dt>
     <dd>{{% md %}}The value of the API Token.
-{{% /md %}}</dd>
-</dl>
+{{% /md %}}</dd></dl>
 {{% /choosable %}}
 
 
@@ -1443,9 +1384,7 @@ See the definition below.
 <h4 id="apitokencondition">Api<wbr>Token<wbr>Condition</h4>
 
 {{% choosable language csharp %}}
-<dl class="resources-properties">
-
-    <dt class="property-optional"
+<dl class="resources-properties"><dt class="property-optional"
             title="Optional">
         <span id="requestip_csharp">
 <a href="#requestip_csharp" style="color: inherit; text-decoration: inherit;">Request<wbr>Ip</a>
@@ -1454,14 +1393,11 @@ See the definition below.
         <span class="property-type"><a href="#apitokenconditionrequestip">Api<wbr>Token<wbr>Condition<wbr>Request<wbr>Ip<wbr>Args</a></span>
     </dt>
     <dd>{{% md %}}Request IP related conditions. See the definition below.
-{{% /md %}}</dd>
-</dl>
+{{% /md %}}</dd></dl>
 {{% /choosable %}}
 
 {{% choosable language go %}}
-<dl class="resources-properties">
-
-    <dt class="property-optional"
+<dl class="resources-properties"><dt class="property-optional"
             title="Optional">
         <span id="requestip_go">
 <a href="#requestip_go" style="color: inherit; text-decoration: inherit;">Request<wbr>Ip</a>
@@ -1470,14 +1406,11 @@ See the definition below.
         <span class="property-type"><a href="#apitokenconditionrequestip">Api<wbr>Token<wbr>Condition<wbr>Request<wbr>Ip</a></span>
     </dt>
     <dd>{{% md %}}Request IP related conditions. See the definition below.
-{{% /md %}}</dd>
-</dl>
+{{% /md %}}</dd></dl>
 {{% /choosable %}}
 
 {{% choosable language nodejs %}}
-<dl class="resources-properties">
-
-    <dt class="property-optional"
+<dl class="resources-properties"><dt class="property-optional"
             title="Optional">
         <span id="requestip_nodejs">
 <a href="#requestip_nodejs" style="color: inherit; text-decoration: inherit;">request<wbr>Ip</a>
@@ -1486,14 +1419,11 @@ See the definition below.
         <span class="property-type"><a href="#apitokenconditionrequestip">Api<wbr>Token<wbr>Condition<wbr>Request<wbr>Ip</a></span>
     </dt>
     <dd>{{% md %}}Request IP related conditions. See the definition below.
-{{% /md %}}</dd>
-</dl>
+{{% /md %}}</dd></dl>
 {{% /choosable %}}
 
 {{% choosable language python %}}
-<dl class="resources-properties">
-
-    <dt class="property-optional"
+<dl class="resources-properties"><dt class="property-optional"
             title="Optional">
         <span id="request_ip_python">
 <a href="#request_ip_python" style="color: inherit; text-decoration: inherit;">request_<wbr>ip</a>
@@ -1502,16 +1432,13 @@ See the definition below.
         <span class="property-type"><a href="#apitokenconditionrequestip">Api<wbr>Token<wbr>Condition<wbr>Request<wbr>Ip<wbr>Args</a></span>
     </dt>
     <dd>{{% md %}}Request IP related conditions. See the definition below.
-{{% /md %}}</dd>
-</dl>
+{{% /md %}}</dd></dl>
 {{% /choosable %}}
 
 <h4 id="apitokenconditionrequestip">Api<wbr>Token<wbr>Condition<wbr>Request<wbr>Ip</h4>
 
 {{% choosable language csharp %}}
-<dl class="resources-properties">
-
-    <dt class="property-optional"
+<dl class="resources-properties"><dt class="property-optional"
             title="Optional">
         <span id="ins_csharp">
 <a href="#ins_csharp" style="color: inherit; text-decoration: inherit;">Ins</a>
@@ -1521,8 +1448,7 @@ See the definition below.
     </dt>
     <dd>{{% md %}}List of IPv4/IPv6 CIDR addresses where
 the Token can be used from.
-{{% /md %}}</dd>
-    <dt class="property-optional"
+{{% /md %}}</dd><dt class="property-optional"
             title="Optional">
         <span id="notins_csharp">
 <a href="#notins_csharp" style="color: inherit; text-decoration: inherit;">Not<wbr>Ins</a>
@@ -1532,14 +1458,11 @@ the Token can be used from.
     </dt>
     <dd>{{% md %}}List of IPv4/IPv6 CIDR addresses where
 the Token cannot be used from.
-{{% /md %}}</dd>
-</dl>
+{{% /md %}}</dd></dl>
 {{% /choosable %}}
 
 {{% choosable language go %}}
-<dl class="resources-properties">
-
-    <dt class="property-optional"
+<dl class="resources-properties"><dt class="property-optional"
             title="Optional">
         <span id="ins_go">
 <a href="#ins_go" style="color: inherit; text-decoration: inherit;">Ins</a>
@@ -1549,8 +1472,7 @@ the Token cannot be used from.
     </dt>
     <dd>{{% md %}}List of IPv4/IPv6 CIDR addresses where
 the Token can be used from.
-{{% /md %}}</dd>
-    <dt class="property-optional"
+{{% /md %}}</dd><dt class="property-optional"
             title="Optional">
         <span id="notins_go">
 <a href="#notins_go" style="color: inherit; text-decoration: inherit;">Not<wbr>Ins</a>
@@ -1560,14 +1482,11 @@ the Token can be used from.
     </dt>
     <dd>{{% md %}}List of IPv4/IPv6 CIDR addresses where
 the Token cannot be used from.
-{{% /md %}}</dd>
-</dl>
+{{% /md %}}</dd></dl>
 {{% /choosable %}}
 
 {{% choosable language nodejs %}}
-<dl class="resources-properties">
-
-    <dt class="property-optional"
+<dl class="resources-properties"><dt class="property-optional"
             title="Optional">
         <span id="ins_nodejs">
 <a href="#ins_nodejs" style="color: inherit; text-decoration: inherit;">ins</a>
@@ -1577,8 +1496,7 @@ the Token cannot be used from.
     </dt>
     <dd>{{% md %}}List of IPv4/IPv6 CIDR addresses where
 the Token can be used from.
-{{% /md %}}</dd>
-    <dt class="property-optional"
+{{% /md %}}</dd><dt class="property-optional"
             title="Optional">
         <span id="notins_nodejs">
 <a href="#notins_nodejs" style="color: inherit; text-decoration: inherit;">not<wbr>Ins</a>
@@ -1588,14 +1506,11 @@ the Token can be used from.
     </dt>
     <dd>{{% md %}}List of IPv4/IPv6 CIDR addresses where
 the Token cannot be used from.
-{{% /md %}}</dd>
-</dl>
+{{% /md %}}</dd></dl>
 {{% /choosable %}}
 
 {{% choosable language python %}}
-<dl class="resources-properties">
-
-    <dt class="property-optional"
+<dl class="resources-properties"><dt class="property-optional"
             title="Optional">
         <span id="ins_python">
 <a href="#ins_python" style="color: inherit; text-decoration: inherit;">ins</a>
@@ -1605,8 +1520,7 @@ the Token cannot be used from.
     </dt>
     <dd>{{% md %}}List of IPv4/IPv6 CIDR addresses where
 the Token can be used from.
-{{% /md %}}</dd>
-    <dt class="property-optional"
+{{% /md %}}</dd><dt class="property-optional"
             title="Optional">
         <span id="not_ins_python">
 <a href="#not_ins_python" style="color: inherit; text-decoration: inherit;">not_<wbr>ins</a>
@@ -1616,16 +1530,13 @@ the Token can be used from.
     </dt>
     <dd>{{% md %}}List of IPv4/IPv6 CIDR addresses where
 the Token cannot be used from.
-{{% /md %}}</dd>
-</dl>
+{{% /md %}}</dd></dl>
 {{% /choosable %}}
 
 <h4 id="apitokenpolicy">Api<wbr>Token<wbr>Policy</h4>
 
 {{% choosable language csharp %}}
-<dl class="resources-properties">
-
-    <dt class="property-required"
+<dl class="resources-properties"><dt class="property-required"
             title="Required">
         <span id="permissiongroups_csharp">
 <a href="#permissiongroups_csharp" style="color: inherit; text-decoration: inherit;">Permission<wbr>Groups</a>
@@ -1635,8 +1546,7 @@ the Token cannot be used from.
     </dt>
     <dd>{{% md %}}List of permissions groups
 ids ([see official docs](https://developers.cloudflare.com/api/tokens/create/permissions)).
-{{% /md %}}</dd>
-    <dt class="property-required"
+{{% /md %}}</dd><dt class="property-required"
             title="Required">
         <span id="resources_csharp">
 <a href="#resources_csharp" style="color: inherit; text-decoration: inherit;">Resources</a>
@@ -1646,8 +1556,7 @@ ids ([see official docs](https://developers.cloudflare.com/api/tokens/create/per
     </dt>
     <dd>{{% md %}}Map describes what operations against which resources
 are allowed or denied.
-{{% /md %}}</dd>
-    <dt class="property-optional"
+{{% /md %}}</dd><dt class="property-optional"
             title="Optional">
         <span id="effect_csharp">
 <a href="#effect_csharp" style="color: inherit; text-decoration: inherit;">Effect</a>
@@ -1657,14 +1566,11 @@ are allowed or denied.
     </dt>
     <dd>{{% md %}}Policy effect. Valid values are `allow` or `deny`. `allow`
 is set as default.
-{{% /md %}}</dd>
-</dl>
+{{% /md %}}</dd></dl>
 {{% /choosable %}}
 
 {{% choosable language go %}}
-<dl class="resources-properties">
-
-    <dt class="property-required"
+<dl class="resources-properties"><dt class="property-required"
             title="Required">
         <span id="permissiongroups_go">
 <a href="#permissiongroups_go" style="color: inherit; text-decoration: inherit;">Permission<wbr>Groups</a>
@@ -1674,8 +1580,7 @@ is set as default.
     </dt>
     <dd>{{% md %}}List of permissions groups
 ids ([see official docs](https://developers.cloudflare.com/api/tokens/create/permissions)).
-{{% /md %}}</dd>
-    <dt class="property-required"
+{{% /md %}}</dd><dt class="property-required"
             title="Required">
         <span id="resources_go">
 <a href="#resources_go" style="color: inherit; text-decoration: inherit;">Resources</a>
@@ -1685,8 +1590,7 @@ ids ([see official docs](https://developers.cloudflare.com/api/tokens/create/per
     </dt>
     <dd>{{% md %}}Map describes what operations against which resources
 are allowed or denied.
-{{% /md %}}</dd>
-    <dt class="property-optional"
+{{% /md %}}</dd><dt class="property-optional"
             title="Optional">
         <span id="effect_go">
 <a href="#effect_go" style="color: inherit; text-decoration: inherit;">Effect</a>
@@ -1696,14 +1600,11 @@ are allowed or denied.
     </dt>
     <dd>{{% md %}}Policy effect. Valid values are `allow` or `deny`. `allow`
 is set as default.
-{{% /md %}}</dd>
-</dl>
+{{% /md %}}</dd></dl>
 {{% /choosable %}}
 
 {{% choosable language nodejs %}}
-<dl class="resources-properties">
-
-    <dt class="property-required"
+<dl class="resources-properties"><dt class="property-required"
             title="Required">
         <span id="permissiongroups_nodejs">
 <a href="#permissiongroups_nodejs" style="color: inherit; text-decoration: inherit;">permission<wbr>Groups</a>
@@ -1713,8 +1614,7 @@ is set as default.
     </dt>
     <dd>{{% md %}}List of permissions groups
 ids ([see official docs](https://developers.cloudflare.com/api/tokens/create/permissions)).
-{{% /md %}}</dd>
-    <dt class="property-required"
+{{% /md %}}</dd><dt class="property-required"
             title="Required">
         <span id="resources_nodejs">
 <a href="#resources_nodejs" style="color: inherit; text-decoration: inherit;">resources</a>
@@ -1724,8 +1624,7 @@ ids ([see official docs](https://developers.cloudflare.com/api/tokens/create/per
     </dt>
     <dd>{{% md %}}Map describes what operations against which resources
 are allowed or denied.
-{{% /md %}}</dd>
-    <dt class="property-optional"
+{{% /md %}}</dd><dt class="property-optional"
             title="Optional">
         <span id="effect_nodejs">
 <a href="#effect_nodejs" style="color: inherit; text-decoration: inherit;">effect</a>
@@ -1735,14 +1634,11 @@ are allowed or denied.
     </dt>
     <dd>{{% md %}}Policy effect. Valid values are `allow` or `deny`. `allow`
 is set as default.
-{{% /md %}}</dd>
-</dl>
+{{% /md %}}</dd></dl>
 {{% /choosable %}}
 
 {{% choosable language python %}}
-<dl class="resources-properties">
-
-    <dt class="property-required"
+<dl class="resources-properties"><dt class="property-required"
             title="Required">
         <span id="permission_groups_python">
 <a href="#permission_groups_python" style="color: inherit; text-decoration: inherit;">permission_<wbr>groups</a>
@@ -1752,8 +1648,7 @@ is set as default.
     </dt>
     <dd>{{% md %}}List of permissions groups
 ids ([see official docs](https://developers.cloudflare.com/api/tokens/create/permissions)).
-{{% /md %}}</dd>
-    <dt class="property-required"
+{{% /md %}}</dd><dt class="property-required"
             title="Required">
         <span id="resources_python">
 <a href="#resources_python" style="color: inherit; text-decoration: inherit;">resources</a>
@@ -1763,8 +1658,7 @@ ids ([see official docs](https://developers.cloudflare.com/api/tokens/create/per
     </dt>
     <dd>{{% md %}}Map describes what operations against which resources
 are allowed or denied.
-{{% /md %}}</dd>
-    <dt class="property-optional"
+{{% /md %}}</dd><dt class="property-optional"
             title="Optional">
         <span id="effect_python">
 <a href="#effect_python" style="color: inherit; text-decoration: inherit;">effect</a>
@@ -1774,8 +1668,7 @@ are allowed or denied.
     </dt>
     <dd>{{% md %}}Policy effect. Valid values are `allow` or `deny`. `allow`
 is set as default.
-{{% /md %}}</dd>
-</dl>
+{{% /md %}}</dd></dl>
 {{% /choosable %}}
 
 
@@ -1786,6 +1679,6 @@ is set as default.
 	<dt>License</dt>
 	<dd>Apache-2.0</dd>
 	<dt>Notes</dt>
-	<dd>This Pulumi package is based on the [`cloudflare` Terraform Provider](https://github.com/cloudflare/terraform-provider-cloudflare).</dd>
+	<dd>{{% md %}}This Pulumi package is based on the [`cloudflare` Terraform Provider](https://github.com/cloudflare/terraform-provider-cloudflare).{{% /md %}}</dd>
 </dl>
 

@@ -16,11 +16,17 @@ Log Service enables you to configure alerts based on the charts in a dashboard t
 > **NOTE:** Available in 1.78.0
 
 {{% examples %}}
+
 ## Example Usage
 
 {{< chooser language "typescript,python,go,csharp" / >}}
 
-{{% example csharp %}}
+
+
+
+
+{{< example csharp >}}
+
 ```csharp
 using Pulumi;
 using AliCloud = Pulumi.AliCloud;
@@ -95,9 +101,12 @@ class MyStack : Stack
 }
 ```
 
-{{% /example %}}
 
-{{% example go %}}
+{{< /example >}}
+
+
+{{< example go >}}
+
 ```go
 package main
 
@@ -172,9 +181,12 @@ func main() {
 }
 ```
 
-{{% /example %}}
 
-{{% example python %}}
+{{< /example >}}
+
+
+{{< example python >}}
+
 ```python
 import pulumi
 import pulumi_alicloud as alicloud
@@ -225,9 +237,12 @@ example_alert = alicloud.log.Alert("exampleAlert",
     ])
 ```
 
-{{% /example %}}
 
-{{% example typescript %}}
+{{< /example >}}
+
+
+{{< example typescript >}}
+
 
 ```typescript
 import * as pulumi from "@pulumi/pulumi";
@@ -281,9 +296,16 @@ const exampleAlert = new alicloud.log.Alert("exampleAlert", {
 });
 ```
 
-{{% /example %}}
+
+{{< /example >}}
+
+
+
+
 
 {{% /examples %}}
+
+
 
 
 ## Create a Alert Resource {#create}
@@ -308,9 +330,7 @@ const exampleAlert = new alicloud.log.Alert("exampleAlert", {
 
 {{% choosable language nodejs %}}
 
-<dl class="resources-properties">
-  
-    <dt
+<dl class="resources-properties"><dt
         class="property-required" title="Required">
         <span>name</span>
         <span class="property-indicator"></span>
@@ -318,9 +338,7 @@ const exampleAlert = new alicloud.log.Alert("exampleAlert", {
     </dt>
     <dd>
       The unique name of the resource.
-    </dd>
-  
-    <dt
+    </dd><dt
         class="property-required" title="Required">
         <span>args</span>
         <span class="property-indicator"></span>
@@ -328,9 +346,7 @@ const exampleAlert = new alicloud.log.Alert("exampleAlert", {
     </dt>
     <dd>
       The arguments to resource properties.
-    </dd>
-  
-    <dt
+    </dd><dt
         class="property-optional" title="Optional">
         <span>opts</span>
         <span class="property-indicator"></span>
@@ -338,10 +354,7 @@ const exampleAlert = new alicloud.log.Alert("exampleAlert", {
     </dt>
     <dd>
       Bag of options to control resource&#39;s behavior.
-    </dd>
-  
-
-</dl>
+    </dd></dl>
 
 {{% /choosable %}}
 
@@ -367,9 +380,7 @@ const exampleAlert = new alicloud.log.Alert("exampleAlert", {
 
 {{% choosable language go %}}
 
-<dl class="resources-properties">
-  
-    <dt
+<dl class="resources-properties"><dt
         class="property-optional" title="Optional">
         <span>ctx</span>
         <span class="property-indicator"></span>
@@ -377,9 +388,7 @@ const exampleAlert = new alicloud.log.Alert("exampleAlert", {
     </dt>
     <dd>
       Context object for the current deployment.
-    </dd>
-  
-    <dt
+    </dd><dt
         class="property-required" title="Required">
         <span>name</span>
         <span class="property-indicator"></span>
@@ -387,9 +396,7 @@ const exampleAlert = new alicloud.log.Alert("exampleAlert", {
     </dt>
     <dd>
       The unique name of the resource.
-    </dd>
-  
-    <dt
+    </dd><dt
         class="property-required" title="Required">
         <span>args</span>
         <span class="property-indicator"></span>
@@ -397,9 +404,7 @@ const exampleAlert = new alicloud.log.Alert("exampleAlert", {
     </dt>
     <dd>
       The arguments to resource properties.
-    </dd>
-  
-    <dt
+    </dd><dt
         class="property-optional" title="Optional">
         <span>opts</span>
         <span class="property-indicator"></span>
@@ -407,18 +412,13 @@ const exampleAlert = new alicloud.log.Alert("exampleAlert", {
     </dt>
     <dd>
       Bag of options to control resource&#39;s behavior.
-    </dd>
-  
-
-</dl>
+    </dd></dl>
 
 {{% /choosable %}}
 
 {{% choosable language csharp %}}
 
-<dl class="resources-properties">
-  
-    <dt
+<dl class="resources-properties"><dt
         class="property-required" title="Required">
         <span>name</span>
         <span class="property-indicator"></span>
@@ -426,9 +426,7 @@ const exampleAlert = new alicloud.log.Alert("exampleAlert", {
     </dt>
     <dd>
       The unique name of the resource.
-    </dd>
-  
-    <dt
+    </dd><dt
         class="property-required" title="Required">
         <span>args</span>
         <span class="property-indicator"></span>
@@ -436,9 +434,7 @@ const exampleAlert = new alicloud.log.Alert("exampleAlert", {
     </dt>
     <dd>
       The arguments to resource properties.
-    </dd>
-  
-    <dt
+    </dd><dt
         class="property-optional" title="Optional">
         <span>opts</span>
         <span class="property-indicator"></span>
@@ -446,10 +442,7 @@ const exampleAlert = new alicloud.log.Alert("exampleAlert", {
     </dt>
     <dd>
       Bag of options to control resource&#39;s behavior.
-    </dd>
-  
-
-</dl>
+    </dd></dl>
 
 {{% /choosable %}}
 
@@ -464,9 +457,7 @@ The Alert resource accepts the following [input]({{< relref "/docs/intro/concept
 
 
 {{% choosable language csharp %}}
-<dl class="resources-properties">
-
-    <dt class="property-required"
+<dl class="resources-properties"><dt class="property-required"
             title="Required">
         <span id="alertdisplayname_csharp">
 <a href="#alertdisplayname_csharp" style="color: inherit; text-decoration: inherit;">Alert<wbr>Displayname</a>
@@ -475,8 +466,7 @@ The Alert resource accepts the following [input]({{< relref "/docs/intro/concept
         <span class="property-type">string</span>
     </dt>
     <dd>{{% md %}}Alert displayname.
-{{% /md %}}</dd>
-    <dt class="property-required"
+{{% /md %}}</dd><dt class="property-required"
             title="Required">
         <span id="alertname_csharp">
 <a href="#alertname_csharp" style="color: inherit; text-decoration: inherit;">Alert<wbr>Name</a>
@@ -485,8 +475,7 @@ The Alert resource accepts the following [input]({{< relref "/docs/intro/concept
         <span class="property-type">string</span>
     </dt>
     <dd>{{% md %}}Name of logstore for configuring alarm service.
-{{% /md %}}</dd>
-    <dt class="property-required"
+{{% /md %}}</dd><dt class="property-required"
             title="Required">
         <span id="condition_csharp">
 <a href="#condition_csharp" style="color: inherit; text-decoration: inherit;">Condition</a>
@@ -495,8 +484,7 @@ The Alert resource accepts the following [input]({{< relref "/docs/intro/concept
         <span class="property-type">string</span>
     </dt>
     <dd>{{% md %}}Conditional expression, such as: count> 100.
-{{% /md %}}</dd>
-    <dt class="property-required"
+{{% /md %}}</dd><dt class="property-required"
             title="Required">
         <span id="dashboard_csharp">
 <a href="#dashboard_csharp" style="color: inherit; text-decoration: inherit;">Dashboard</a>
@@ -504,8 +492,7 @@ The Alert resource accepts the following [input]({{< relref "/docs/intro/concept
         <span class="property-indicator"></span>
         <span class="property-type">string</span>
     </dt>
-    <dd>{{% md %}}{{% /md %}}</dd>
-    <dt class="property-required"
+    <dd>{{% md %}}{{% /md %}}</dd><dt class="property-required"
             title="Required">
         <span id="notificationlists_csharp">
 <a href="#notificationlists_csharp" style="color: inherit; text-decoration: inherit;">Notification<wbr>Lists</a>
@@ -514,8 +501,7 @@ The Alert resource accepts the following [input]({{< relref "/docs/intro/concept
         <span class="property-type"><a href="#alertnotificationlist">List&lt;Pulumi.<wbr>Ali<wbr>Cloud.<wbr>Log.<wbr>Inputs.<wbr>Alert<wbr>Notification<wbr>List<wbr>Args&gt;</a></span>
     </dt>
     <dd>{{% md %}}Alarm information notification list.
-{{% /md %}}</dd>
-    <dt class="property-required"
+{{% /md %}}</dd><dt class="property-required"
             title="Required">
         <span id="projectname_csharp">
 <a href="#projectname_csharp" style="color: inherit; text-decoration: inherit;">Project<wbr>Name</a>
@@ -524,8 +510,7 @@ The Alert resource accepts the following [input]({{< relref "/docs/intro/concept
         <span class="property-type">string</span>
     </dt>
     <dd>{{% md %}}The project name.
-{{% /md %}}</dd>
-    <dt class="property-required"
+{{% /md %}}</dd><dt class="property-required"
             title="Required">
         <span id="querylists_csharp">
 <a href="#querylists_csharp" style="color: inherit; text-decoration: inherit;">Query<wbr>Lists</a>
@@ -534,8 +519,7 @@ The Alert resource accepts the following [input]({{< relref "/docs/intro/concept
         <span class="property-type"><a href="#alertquerylist">List&lt;Pulumi.<wbr>Ali<wbr>Cloud.<wbr>Log.<wbr>Inputs.<wbr>Alert<wbr>Query<wbr>List<wbr>Args&gt;</a></span>
     </dt>
     <dd>{{% md %}}Multiple conditions for configured alarm query.
-{{% /md %}}</dd>
-    <dt class="property-optional"
+{{% /md %}}</dd><dt class="property-optional"
             title="Optional">
         <span id="alertdescription_csharp">
 <a href="#alertdescription_csharp" style="color: inherit; text-decoration: inherit;">Alert<wbr>Description</a>
@@ -544,8 +528,7 @@ The Alert resource accepts the following [input]({{< relref "/docs/intro/concept
         <span class="property-type">string</span>
     </dt>
     <dd>{{% md %}}Alert description.
-{{% /md %}}</dd>
-    <dt class="property-optional"
+{{% /md %}}</dd><dt class="property-optional"
             title="Optional">
         <span id="muteuntil_csharp">
 <a href="#muteuntil_csharp" style="color: inherit; text-decoration: inherit;">Mute<wbr>Until</a>
@@ -554,8 +537,7 @@ The Alert resource accepts the following [input]({{< relref "/docs/intro/concept
         <span class="property-type">int</span>
     </dt>
     <dd>{{% md %}}Timestamp, notifications before closing again.
-{{% /md %}}</dd>
-    <dt class="property-optional"
+{{% /md %}}</dd><dt class="property-optional"
             title="Optional">
         <span id="notifythreshold_csharp">
 <a href="#notifythreshold_csharp" style="color: inherit; text-decoration: inherit;">Notify<wbr>Threshold</a>
@@ -564,8 +546,7 @@ The Alert resource accepts the following [input]({{< relref "/docs/intro/concept
         <span class="property-type">int</span>
     </dt>
     <dd>{{% md %}}Notification threshold, which is not notified until the number of triggers is reached. The default is 1.
-{{% /md %}}</dd>
-    <dt class="property-optional"
+{{% /md %}}</dd><dt class="property-optional"
             title="Optional">
         <span id="scheduleinterval_csharp">
 <a href="#scheduleinterval_csharp" style="color: inherit; text-decoration: inherit;">Schedule<wbr>Interval</a>
@@ -574,8 +555,7 @@ The Alert resource accepts the following [input]({{< relref "/docs/intro/concept
         <span class="property-type">string</span>
     </dt>
     <dd>{{% md %}}Execution interval. 60 seconds minimum, such as 60s, 1h.
-{{% /md %}}</dd>
-    <dt class="property-optional"
+{{% /md %}}</dd><dt class="property-optional"
             title="Optional">
         <span id="scheduletype_csharp">
 <a href="#scheduletype_csharp" style="color: inherit; text-decoration: inherit;">Schedule<wbr>Type</a>
@@ -584,8 +564,7 @@ The Alert resource accepts the following [input]({{< relref "/docs/intro/concept
         <span class="property-type">string</span>
     </dt>
     <dd>{{% md %}}Default FixedRate. No need to configure this parameter.
-{{% /md %}}</dd>
-    <dt class="property-optional"
+{{% /md %}}</dd><dt class="property-optional"
             title="Optional">
         <span id="throttling_csharp">
 <a href="#throttling_csharp" style="color: inherit; text-decoration: inherit;">Throttling</a>
@@ -594,14 +573,11 @@ The Alert resource accepts the following [input]({{< relref "/docs/intro/concept
         <span class="property-type">string</span>
     </dt>
     <dd>{{% md %}}Notification interval, default is no interval. Support number + unit type, for example 60s, 1h.
-{{% /md %}}</dd>
-</dl>
+{{% /md %}}</dd></dl>
 {{% /choosable %}}
 
 {{% choosable language go %}}
-<dl class="resources-properties">
-
-    <dt class="property-required"
+<dl class="resources-properties"><dt class="property-required"
             title="Required">
         <span id="alertdisplayname_go">
 <a href="#alertdisplayname_go" style="color: inherit; text-decoration: inherit;">Alert<wbr>Displayname</a>
@@ -610,8 +586,7 @@ The Alert resource accepts the following [input]({{< relref "/docs/intro/concept
         <span class="property-type">string</span>
     </dt>
     <dd>{{% md %}}Alert displayname.
-{{% /md %}}</dd>
-    <dt class="property-required"
+{{% /md %}}</dd><dt class="property-required"
             title="Required">
         <span id="alertname_go">
 <a href="#alertname_go" style="color: inherit; text-decoration: inherit;">Alert<wbr>Name</a>
@@ -620,8 +595,7 @@ The Alert resource accepts the following [input]({{< relref "/docs/intro/concept
         <span class="property-type">string</span>
     </dt>
     <dd>{{% md %}}Name of logstore for configuring alarm service.
-{{% /md %}}</dd>
-    <dt class="property-required"
+{{% /md %}}</dd><dt class="property-required"
             title="Required">
         <span id="condition_go">
 <a href="#condition_go" style="color: inherit; text-decoration: inherit;">Condition</a>
@@ -630,8 +604,7 @@ The Alert resource accepts the following [input]({{< relref "/docs/intro/concept
         <span class="property-type">string</span>
     </dt>
     <dd>{{% md %}}Conditional expression, such as: count> 100.
-{{% /md %}}</dd>
-    <dt class="property-required"
+{{% /md %}}</dd><dt class="property-required"
             title="Required">
         <span id="dashboard_go">
 <a href="#dashboard_go" style="color: inherit; text-decoration: inherit;">Dashboard</a>
@@ -639,8 +612,7 @@ The Alert resource accepts the following [input]({{< relref "/docs/intro/concept
         <span class="property-indicator"></span>
         <span class="property-type">string</span>
     </dt>
-    <dd>{{% md %}}{{% /md %}}</dd>
-    <dt class="property-required"
+    <dd>{{% md %}}{{% /md %}}</dd><dt class="property-required"
             title="Required">
         <span id="notificationlists_go">
 <a href="#notificationlists_go" style="color: inherit; text-decoration: inherit;">Notification<wbr>Lists</a>
@@ -649,8 +621,7 @@ The Alert resource accepts the following [input]({{< relref "/docs/intro/concept
         <span class="property-type"><a href="#alertnotificationlist">[]Alert<wbr>Notification<wbr>List</a></span>
     </dt>
     <dd>{{% md %}}Alarm information notification list.
-{{% /md %}}</dd>
-    <dt class="property-required"
+{{% /md %}}</dd><dt class="property-required"
             title="Required">
         <span id="projectname_go">
 <a href="#projectname_go" style="color: inherit; text-decoration: inherit;">Project<wbr>Name</a>
@@ -659,8 +630,7 @@ The Alert resource accepts the following [input]({{< relref "/docs/intro/concept
         <span class="property-type">string</span>
     </dt>
     <dd>{{% md %}}The project name.
-{{% /md %}}</dd>
-    <dt class="property-required"
+{{% /md %}}</dd><dt class="property-required"
             title="Required">
         <span id="querylists_go">
 <a href="#querylists_go" style="color: inherit; text-decoration: inherit;">Query<wbr>Lists</a>
@@ -669,8 +639,7 @@ The Alert resource accepts the following [input]({{< relref "/docs/intro/concept
         <span class="property-type"><a href="#alertquerylist">[]Alert<wbr>Query<wbr>List</a></span>
     </dt>
     <dd>{{% md %}}Multiple conditions for configured alarm query.
-{{% /md %}}</dd>
-    <dt class="property-optional"
+{{% /md %}}</dd><dt class="property-optional"
             title="Optional">
         <span id="alertdescription_go">
 <a href="#alertdescription_go" style="color: inherit; text-decoration: inherit;">Alert<wbr>Description</a>
@@ -679,8 +648,7 @@ The Alert resource accepts the following [input]({{< relref "/docs/intro/concept
         <span class="property-type">string</span>
     </dt>
     <dd>{{% md %}}Alert description.
-{{% /md %}}</dd>
-    <dt class="property-optional"
+{{% /md %}}</dd><dt class="property-optional"
             title="Optional">
         <span id="muteuntil_go">
 <a href="#muteuntil_go" style="color: inherit; text-decoration: inherit;">Mute<wbr>Until</a>
@@ -689,8 +657,7 @@ The Alert resource accepts the following [input]({{< relref "/docs/intro/concept
         <span class="property-type">int</span>
     </dt>
     <dd>{{% md %}}Timestamp, notifications before closing again.
-{{% /md %}}</dd>
-    <dt class="property-optional"
+{{% /md %}}</dd><dt class="property-optional"
             title="Optional">
         <span id="notifythreshold_go">
 <a href="#notifythreshold_go" style="color: inherit; text-decoration: inherit;">Notify<wbr>Threshold</a>
@@ -699,8 +666,7 @@ The Alert resource accepts the following [input]({{< relref "/docs/intro/concept
         <span class="property-type">int</span>
     </dt>
     <dd>{{% md %}}Notification threshold, which is not notified until the number of triggers is reached. The default is 1.
-{{% /md %}}</dd>
-    <dt class="property-optional"
+{{% /md %}}</dd><dt class="property-optional"
             title="Optional">
         <span id="scheduleinterval_go">
 <a href="#scheduleinterval_go" style="color: inherit; text-decoration: inherit;">Schedule<wbr>Interval</a>
@@ -709,8 +675,7 @@ The Alert resource accepts the following [input]({{< relref "/docs/intro/concept
         <span class="property-type">string</span>
     </dt>
     <dd>{{% md %}}Execution interval. 60 seconds minimum, such as 60s, 1h.
-{{% /md %}}</dd>
-    <dt class="property-optional"
+{{% /md %}}</dd><dt class="property-optional"
             title="Optional">
         <span id="scheduletype_go">
 <a href="#scheduletype_go" style="color: inherit; text-decoration: inherit;">Schedule<wbr>Type</a>
@@ -719,8 +684,7 @@ The Alert resource accepts the following [input]({{< relref "/docs/intro/concept
         <span class="property-type">string</span>
     </dt>
     <dd>{{% md %}}Default FixedRate. No need to configure this parameter.
-{{% /md %}}</dd>
-    <dt class="property-optional"
+{{% /md %}}</dd><dt class="property-optional"
             title="Optional">
         <span id="throttling_go">
 <a href="#throttling_go" style="color: inherit; text-decoration: inherit;">Throttling</a>
@@ -729,14 +693,11 @@ The Alert resource accepts the following [input]({{< relref "/docs/intro/concept
         <span class="property-type">string</span>
     </dt>
     <dd>{{% md %}}Notification interval, default is no interval. Support number + unit type, for example 60s, 1h.
-{{% /md %}}</dd>
-</dl>
+{{% /md %}}</dd></dl>
 {{% /choosable %}}
 
 {{% choosable language nodejs %}}
-<dl class="resources-properties">
-
-    <dt class="property-required"
+<dl class="resources-properties"><dt class="property-required"
             title="Required">
         <span id="alertdisplayname_nodejs">
 <a href="#alertdisplayname_nodejs" style="color: inherit; text-decoration: inherit;">alert<wbr>Displayname</a>
@@ -745,8 +706,7 @@ The Alert resource accepts the following [input]({{< relref "/docs/intro/concept
         <span class="property-type">string</span>
     </dt>
     <dd>{{% md %}}Alert displayname.
-{{% /md %}}</dd>
-    <dt class="property-required"
+{{% /md %}}</dd><dt class="property-required"
             title="Required">
         <span id="alertname_nodejs">
 <a href="#alertname_nodejs" style="color: inherit; text-decoration: inherit;">alert<wbr>Name</a>
@@ -755,8 +715,7 @@ The Alert resource accepts the following [input]({{< relref "/docs/intro/concept
         <span class="property-type">string</span>
     </dt>
     <dd>{{% md %}}Name of logstore for configuring alarm service.
-{{% /md %}}</dd>
-    <dt class="property-required"
+{{% /md %}}</dd><dt class="property-required"
             title="Required">
         <span id="condition_nodejs">
 <a href="#condition_nodejs" style="color: inherit; text-decoration: inherit;">condition</a>
@@ -765,8 +724,7 @@ The Alert resource accepts the following [input]({{< relref "/docs/intro/concept
         <span class="property-type">string</span>
     </dt>
     <dd>{{% md %}}Conditional expression, such as: count> 100.
-{{% /md %}}</dd>
-    <dt class="property-required"
+{{% /md %}}</dd><dt class="property-required"
             title="Required">
         <span id="dashboard_nodejs">
 <a href="#dashboard_nodejs" style="color: inherit; text-decoration: inherit;">dashboard</a>
@@ -774,8 +732,7 @@ The Alert resource accepts the following [input]({{< relref "/docs/intro/concept
         <span class="property-indicator"></span>
         <span class="property-type">string</span>
     </dt>
-    <dd>{{% md %}}{{% /md %}}</dd>
-    <dt class="property-required"
+    <dd>{{% md %}}{{% /md %}}</dd><dt class="property-required"
             title="Required">
         <span id="notificationlists_nodejs">
 <a href="#notificationlists_nodejs" style="color: inherit; text-decoration: inherit;">notification<wbr>Lists</a>
@@ -784,8 +741,7 @@ The Alert resource accepts the following [input]({{< relref "/docs/intro/concept
         <span class="property-type"><a href="#alertnotificationlist">Alert<wbr>Notification<wbr>List[]</a></span>
     </dt>
     <dd>{{% md %}}Alarm information notification list.
-{{% /md %}}</dd>
-    <dt class="property-required"
+{{% /md %}}</dd><dt class="property-required"
             title="Required">
         <span id="projectname_nodejs">
 <a href="#projectname_nodejs" style="color: inherit; text-decoration: inherit;">project<wbr>Name</a>
@@ -794,8 +750,7 @@ The Alert resource accepts the following [input]({{< relref "/docs/intro/concept
         <span class="property-type">string</span>
     </dt>
     <dd>{{% md %}}The project name.
-{{% /md %}}</dd>
-    <dt class="property-required"
+{{% /md %}}</dd><dt class="property-required"
             title="Required">
         <span id="querylists_nodejs">
 <a href="#querylists_nodejs" style="color: inherit; text-decoration: inherit;">query<wbr>Lists</a>
@@ -804,8 +759,7 @@ The Alert resource accepts the following [input]({{< relref "/docs/intro/concept
         <span class="property-type"><a href="#alertquerylist">Alert<wbr>Query<wbr>List[]</a></span>
     </dt>
     <dd>{{% md %}}Multiple conditions for configured alarm query.
-{{% /md %}}</dd>
-    <dt class="property-optional"
+{{% /md %}}</dd><dt class="property-optional"
             title="Optional">
         <span id="alertdescription_nodejs">
 <a href="#alertdescription_nodejs" style="color: inherit; text-decoration: inherit;">alert<wbr>Description</a>
@@ -814,8 +768,7 @@ The Alert resource accepts the following [input]({{< relref "/docs/intro/concept
         <span class="property-type">string</span>
     </dt>
     <dd>{{% md %}}Alert description.
-{{% /md %}}</dd>
-    <dt class="property-optional"
+{{% /md %}}</dd><dt class="property-optional"
             title="Optional">
         <span id="muteuntil_nodejs">
 <a href="#muteuntil_nodejs" style="color: inherit; text-decoration: inherit;">mute<wbr>Until</a>
@@ -824,8 +777,7 @@ The Alert resource accepts the following [input]({{< relref "/docs/intro/concept
         <span class="property-type">number</span>
     </dt>
     <dd>{{% md %}}Timestamp, notifications before closing again.
-{{% /md %}}</dd>
-    <dt class="property-optional"
+{{% /md %}}</dd><dt class="property-optional"
             title="Optional">
         <span id="notifythreshold_nodejs">
 <a href="#notifythreshold_nodejs" style="color: inherit; text-decoration: inherit;">notify<wbr>Threshold</a>
@@ -834,8 +786,7 @@ The Alert resource accepts the following [input]({{< relref "/docs/intro/concept
         <span class="property-type">number</span>
     </dt>
     <dd>{{% md %}}Notification threshold, which is not notified until the number of triggers is reached. The default is 1.
-{{% /md %}}</dd>
-    <dt class="property-optional"
+{{% /md %}}</dd><dt class="property-optional"
             title="Optional">
         <span id="scheduleinterval_nodejs">
 <a href="#scheduleinterval_nodejs" style="color: inherit; text-decoration: inherit;">schedule<wbr>Interval</a>
@@ -844,8 +795,7 @@ The Alert resource accepts the following [input]({{< relref "/docs/intro/concept
         <span class="property-type">string</span>
     </dt>
     <dd>{{% md %}}Execution interval. 60 seconds minimum, such as 60s, 1h.
-{{% /md %}}</dd>
-    <dt class="property-optional"
+{{% /md %}}</dd><dt class="property-optional"
             title="Optional">
         <span id="scheduletype_nodejs">
 <a href="#scheduletype_nodejs" style="color: inherit; text-decoration: inherit;">schedule<wbr>Type</a>
@@ -854,8 +804,7 @@ The Alert resource accepts the following [input]({{< relref "/docs/intro/concept
         <span class="property-type">string</span>
     </dt>
     <dd>{{% md %}}Default FixedRate. No need to configure this parameter.
-{{% /md %}}</dd>
-    <dt class="property-optional"
+{{% /md %}}</dd><dt class="property-optional"
             title="Optional">
         <span id="throttling_nodejs">
 <a href="#throttling_nodejs" style="color: inherit; text-decoration: inherit;">throttling</a>
@@ -864,14 +813,11 @@ The Alert resource accepts the following [input]({{< relref "/docs/intro/concept
         <span class="property-type">string</span>
     </dt>
     <dd>{{% md %}}Notification interval, default is no interval. Support number + unit type, for example 60s, 1h.
-{{% /md %}}</dd>
-</dl>
+{{% /md %}}</dd></dl>
 {{% /choosable %}}
 
 {{% choosable language python %}}
-<dl class="resources-properties">
-
-    <dt class="property-required"
+<dl class="resources-properties"><dt class="property-required"
             title="Required">
         <span id="alert_displayname_python">
 <a href="#alert_displayname_python" style="color: inherit; text-decoration: inherit;">alert_<wbr>displayname</a>
@@ -880,8 +826,7 @@ The Alert resource accepts the following [input]({{< relref "/docs/intro/concept
         <span class="property-type">str</span>
     </dt>
     <dd>{{% md %}}Alert displayname.
-{{% /md %}}</dd>
-    <dt class="property-required"
+{{% /md %}}</dd><dt class="property-required"
             title="Required">
         <span id="alert_name_python">
 <a href="#alert_name_python" style="color: inherit; text-decoration: inherit;">alert_<wbr>name</a>
@@ -890,8 +835,7 @@ The Alert resource accepts the following [input]({{< relref "/docs/intro/concept
         <span class="property-type">str</span>
     </dt>
     <dd>{{% md %}}Name of logstore for configuring alarm service.
-{{% /md %}}</dd>
-    <dt class="property-required"
+{{% /md %}}</dd><dt class="property-required"
             title="Required">
         <span id="condition_python">
 <a href="#condition_python" style="color: inherit; text-decoration: inherit;">condition</a>
@@ -900,8 +844,7 @@ The Alert resource accepts the following [input]({{< relref "/docs/intro/concept
         <span class="property-type">str</span>
     </dt>
     <dd>{{% md %}}Conditional expression, such as: count> 100.
-{{% /md %}}</dd>
-    <dt class="property-required"
+{{% /md %}}</dd><dt class="property-required"
             title="Required">
         <span id="dashboard_python">
 <a href="#dashboard_python" style="color: inherit; text-decoration: inherit;">dashboard</a>
@@ -909,8 +852,7 @@ The Alert resource accepts the following [input]({{< relref "/docs/intro/concept
         <span class="property-indicator"></span>
         <span class="property-type">str</span>
     </dt>
-    <dd>{{% md %}}{{% /md %}}</dd>
-    <dt class="property-required"
+    <dd>{{% md %}}{{% /md %}}</dd><dt class="property-required"
             title="Required">
         <span id="notification_lists_python">
 <a href="#notification_lists_python" style="color: inherit; text-decoration: inherit;">notification_<wbr>lists</a>
@@ -919,8 +861,7 @@ The Alert resource accepts the following [input]({{< relref "/docs/intro/concept
         <span class="property-type"><a href="#alertnotificationlist">Sequence[Alert<wbr>Notification<wbr>List<wbr>Args]</a></span>
     </dt>
     <dd>{{% md %}}Alarm information notification list.
-{{% /md %}}</dd>
-    <dt class="property-required"
+{{% /md %}}</dd><dt class="property-required"
             title="Required">
         <span id="project_name_python">
 <a href="#project_name_python" style="color: inherit; text-decoration: inherit;">project_<wbr>name</a>
@@ -929,8 +870,7 @@ The Alert resource accepts the following [input]({{< relref "/docs/intro/concept
         <span class="property-type">str</span>
     </dt>
     <dd>{{% md %}}The project name.
-{{% /md %}}</dd>
-    <dt class="property-required"
+{{% /md %}}</dd><dt class="property-required"
             title="Required">
         <span id="query_lists_python">
 <a href="#query_lists_python" style="color: inherit; text-decoration: inherit;">query_<wbr>lists</a>
@@ -939,8 +879,7 @@ The Alert resource accepts the following [input]({{< relref "/docs/intro/concept
         <span class="property-type"><a href="#alertquerylist">Sequence[Alert<wbr>Query<wbr>List<wbr>Args]</a></span>
     </dt>
     <dd>{{% md %}}Multiple conditions for configured alarm query.
-{{% /md %}}</dd>
-    <dt class="property-optional"
+{{% /md %}}</dd><dt class="property-optional"
             title="Optional">
         <span id="alert_description_python">
 <a href="#alert_description_python" style="color: inherit; text-decoration: inherit;">alert_<wbr>description</a>
@@ -949,8 +888,7 @@ The Alert resource accepts the following [input]({{< relref "/docs/intro/concept
         <span class="property-type">str</span>
     </dt>
     <dd>{{% md %}}Alert description.
-{{% /md %}}</dd>
-    <dt class="property-optional"
+{{% /md %}}</dd><dt class="property-optional"
             title="Optional">
         <span id="mute_until_python">
 <a href="#mute_until_python" style="color: inherit; text-decoration: inherit;">mute_<wbr>until</a>
@@ -959,8 +897,7 @@ The Alert resource accepts the following [input]({{< relref "/docs/intro/concept
         <span class="property-type">int</span>
     </dt>
     <dd>{{% md %}}Timestamp, notifications before closing again.
-{{% /md %}}</dd>
-    <dt class="property-optional"
+{{% /md %}}</dd><dt class="property-optional"
             title="Optional">
         <span id="notify_threshold_python">
 <a href="#notify_threshold_python" style="color: inherit; text-decoration: inherit;">notify_<wbr>threshold</a>
@@ -969,8 +906,7 @@ The Alert resource accepts the following [input]({{< relref "/docs/intro/concept
         <span class="property-type">int</span>
     </dt>
     <dd>{{% md %}}Notification threshold, which is not notified until the number of triggers is reached. The default is 1.
-{{% /md %}}</dd>
-    <dt class="property-optional"
+{{% /md %}}</dd><dt class="property-optional"
             title="Optional">
         <span id="schedule_interval_python">
 <a href="#schedule_interval_python" style="color: inherit; text-decoration: inherit;">schedule_<wbr>interval</a>
@@ -979,8 +915,7 @@ The Alert resource accepts the following [input]({{< relref "/docs/intro/concept
         <span class="property-type">str</span>
     </dt>
     <dd>{{% md %}}Execution interval. 60 seconds minimum, such as 60s, 1h.
-{{% /md %}}</dd>
-    <dt class="property-optional"
+{{% /md %}}</dd><dt class="property-optional"
             title="Optional">
         <span id="schedule_type_python">
 <a href="#schedule_type_python" style="color: inherit; text-decoration: inherit;">schedule_<wbr>type</a>
@@ -989,8 +924,7 @@ The Alert resource accepts the following [input]({{< relref "/docs/intro/concept
         <span class="property-type">str</span>
     </dt>
     <dd>{{% md %}}Default FixedRate. No need to configure this parameter.
-{{% /md %}}</dd>
-    <dt class="property-optional"
+{{% /md %}}</dd><dt class="property-optional"
             title="Optional">
         <span id="throttling_python">
 <a href="#throttling_python" style="color: inherit; text-decoration: inherit;">throttling</a>
@@ -999,8 +933,7 @@ The Alert resource accepts the following [input]({{< relref "/docs/intro/concept
         <span class="property-type">str</span>
     </dt>
     <dd>{{% md %}}Notification interval, default is no interval. Support number + unit type, for example 60s, 1h.
-{{% /md %}}</dd>
-</dl>
+{{% /md %}}</dd></dl>
 {{% /choosable %}}
 
 
@@ -1011,9 +944,7 @@ All [input](#inputs) properties are implicitly available as output properties. A
 
 
 {{% choosable language csharp %}}
-<dl class="resources-properties">
-
-    <dt class="property-"
+<dl class="resources-properties"><dt class="property-"
             title="">
         <span id="id_csharp">
 <a href="#id_csharp" style="color: inherit; text-decoration: inherit;">Id</a>
@@ -1021,14 +952,11 @@ All [input](#inputs) properties are implicitly available as output properties. A
         <span class="property-indicator"></span>
         <span class="property-type">string</span>
     </dt>
-    <dd>{{% md %}}The provider-assigned unique ID for this managed resource.{{% /md %}}</dd>
-</dl>
+    <dd>{{% md %}}The provider-assigned unique ID for this managed resource.{{% /md %}}</dd></dl>
 {{% /choosable %}}
 
 {{% choosable language go %}}
-<dl class="resources-properties">
-
-    <dt class="property-"
+<dl class="resources-properties"><dt class="property-"
             title="">
         <span id="id_go">
 <a href="#id_go" style="color: inherit; text-decoration: inherit;">Id</a>
@@ -1036,14 +964,11 @@ All [input](#inputs) properties are implicitly available as output properties. A
         <span class="property-indicator"></span>
         <span class="property-type">string</span>
     </dt>
-    <dd>{{% md %}}The provider-assigned unique ID for this managed resource.{{% /md %}}</dd>
-</dl>
+    <dd>{{% md %}}The provider-assigned unique ID for this managed resource.{{% /md %}}</dd></dl>
 {{% /choosable %}}
 
 {{% choosable language nodejs %}}
-<dl class="resources-properties">
-
-    <dt class="property-"
+<dl class="resources-properties"><dt class="property-"
             title="">
         <span id="id_nodejs">
 <a href="#id_nodejs" style="color: inherit; text-decoration: inherit;">id</a>
@@ -1051,14 +976,11 @@ All [input](#inputs) properties are implicitly available as output properties. A
         <span class="property-indicator"></span>
         <span class="property-type">string</span>
     </dt>
-    <dd>{{% md %}}The provider-assigned unique ID for this managed resource.{{% /md %}}</dd>
-</dl>
+    <dd>{{% md %}}The provider-assigned unique ID for this managed resource.{{% /md %}}</dd></dl>
 {{% /choosable %}}
 
 {{% choosable language python %}}
-<dl class="resources-properties">
-
-    <dt class="property-"
+<dl class="resources-properties"><dt class="property-"
             title="">
         <span id="id_python">
 <a href="#id_python" style="color: inherit; text-decoration: inherit;">id</a>
@@ -1066,8 +988,7 @@ All [input](#inputs) properties are implicitly available as output properties. A
         <span class="property-indicator"></span>
         <span class="property-type">str</span>
     </dt>
-    <dd>{{% md %}}The provider-assigned unique ID for this managed resource.{{% /md %}}</dd>
-</dl>
+    <dd>{{% md %}}The provider-assigned unique ID for this managed resource.{{% /md %}}</dd></dl>
 {{% /choosable %}}
 
 
@@ -1194,9 +1115,7 @@ The following state arguments are supported:
 
 
 {{% choosable language csharp %}}
-<dl class="resources-properties">
-
-    <dt class="property-optional"
+<dl class="resources-properties"><dt class="property-optional"
             title="Optional">
         <span id="state_alertdescription_csharp">
 <a href="#state_alertdescription_csharp" style="color: inherit; text-decoration: inherit;">Alert<wbr>Description</a>
@@ -1205,8 +1124,7 @@ The following state arguments are supported:
         <span class="property-type">string</span>
     </dt>
     <dd>{{% md %}}Alert description.
-{{% /md %}}</dd>
-    <dt class="property-optional"
+{{% /md %}}</dd><dt class="property-optional"
             title="Optional">
         <span id="state_alertdisplayname_csharp">
 <a href="#state_alertdisplayname_csharp" style="color: inherit; text-decoration: inherit;">Alert<wbr>Displayname</a>
@@ -1215,8 +1133,7 @@ The following state arguments are supported:
         <span class="property-type">string</span>
     </dt>
     <dd>{{% md %}}Alert displayname.
-{{% /md %}}</dd>
-    <dt class="property-optional"
+{{% /md %}}</dd><dt class="property-optional"
             title="Optional">
         <span id="state_alertname_csharp">
 <a href="#state_alertname_csharp" style="color: inherit; text-decoration: inherit;">Alert<wbr>Name</a>
@@ -1225,8 +1142,7 @@ The following state arguments are supported:
         <span class="property-type">string</span>
     </dt>
     <dd>{{% md %}}Name of logstore for configuring alarm service.
-{{% /md %}}</dd>
-    <dt class="property-optional"
+{{% /md %}}</dd><dt class="property-optional"
             title="Optional">
         <span id="state_condition_csharp">
 <a href="#state_condition_csharp" style="color: inherit; text-decoration: inherit;">Condition</a>
@@ -1235,8 +1151,7 @@ The following state arguments are supported:
         <span class="property-type">string</span>
     </dt>
     <dd>{{% md %}}Conditional expression, such as: count> 100.
-{{% /md %}}</dd>
-    <dt class="property-optional"
+{{% /md %}}</dd><dt class="property-optional"
             title="Optional">
         <span id="state_dashboard_csharp">
 <a href="#state_dashboard_csharp" style="color: inherit; text-decoration: inherit;">Dashboard</a>
@@ -1244,8 +1159,7 @@ The following state arguments are supported:
         <span class="property-indicator"></span>
         <span class="property-type">string</span>
     </dt>
-    <dd>{{% md %}}{{% /md %}}</dd>
-    <dt class="property-optional"
+    <dd>{{% md %}}{{% /md %}}</dd><dt class="property-optional"
             title="Optional">
         <span id="state_muteuntil_csharp">
 <a href="#state_muteuntil_csharp" style="color: inherit; text-decoration: inherit;">Mute<wbr>Until</a>
@@ -1254,8 +1168,7 @@ The following state arguments are supported:
         <span class="property-type">int</span>
     </dt>
     <dd>{{% md %}}Timestamp, notifications before closing again.
-{{% /md %}}</dd>
-    <dt class="property-optional"
+{{% /md %}}</dd><dt class="property-optional"
             title="Optional">
         <span id="state_notificationlists_csharp">
 <a href="#state_notificationlists_csharp" style="color: inherit; text-decoration: inherit;">Notification<wbr>Lists</a>
@@ -1264,8 +1177,7 @@ The following state arguments are supported:
         <span class="property-type"><a href="#alertnotificationlist">List&lt;Pulumi.<wbr>Ali<wbr>Cloud.<wbr>Log.<wbr>Inputs.<wbr>Alert<wbr>Notification<wbr>List<wbr>Args&gt;</a></span>
     </dt>
     <dd>{{% md %}}Alarm information notification list.
-{{% /md %}}</dd>
-    <dt class="property-optional"
+{{% /md %}}</dd><dt class="property-optional"
             title="Optional">
         <span id="state_notifythreshold_csharp">
 <a href="#state_notifythreshold_csharp" style="color: inherit; text-decoration: inherit;">Notify<wbr>Threshold</a>
@@ -1274,8 +1186,7 @@ The following state arguments are supported:
         <span class="property-type">int</span>
     </dt>
     <dd>{{% md %}}Notification threshold, which is not notified until the number of triggers is reached. The default is 1.
-{{% /md %}}</dd>
-    <dt class="property-optional"
+{{% /md %}}</dd><dt class="property-optional"
             title="Optional">
         <span id="state_projectname_csharp">
 <a href="#state_projectname_csharp" style="color: inherit; text-decoration: inherit;">Project<wbr>Name</a>
@@ -1284,8 +1195,7 @@ The following state arguments are supported:
         <span class="property-type">string</span>
     </dt>
     <dd>{{% md %}}The project name.
-{{% /md %}}</dd>
-    <dt class="property-optional"
+{{% /md %}}</dd><dt class="property-optional"
             title="Optional">
         <span id="state_querylists_csharp">
 <a href="#state_querylists_csharp" style="color: inherit; text-decoration: inherit;">Query<wbr>Lists</a>
@@ -1294,8 +1204,7 @@ The following state arguments are supported:
         <span class="property-type"><a href="#alertquerylist">List&lt;Pulumi.<wbr>Ali<wbr>Cloud.<wbr>Log.<wbr>Inputs.<wbr>Alert<wbr>Query<wbr>List<wbr>Args&gt;</a></span>
     </dt>
     <dd>{{% md %}}Multiple conditions for configured alarm query.
-{{% /md %}}</dd>
-    <dt class="property-optional"
+{{% /md %}}</dd><dt class="property-optional"
             title="Optional">
         <span id="state_scheduleinterval_csharp">
 <a href="#state_scheduleinterval_csharp" style="color: inherit; text-decoration: inherit;">Schedule<wbr>Interval</a>
@@ -1304,8 +1213,7 @@ The following state arguments are supported:
         <span class="property-type">string</span>
     </dt>
     <dd>{{% md %}}Execution interval. 60 seconds minimum, such as 60s, 1h.
-{{% /md %}}</dd>
-    <dt class="property-optional"
+{{% /md %}}</dd><dt class="property-optional"
             title="Optional">
         <span id="state_scheduletype_csharp">
 <a href="#state_scheduletype_csharp" style="color: inherit; text-decoration: inherit;">Schedule<wbr>Type</a>
@@ -1314,8 +1222,7 @@ The following state arguments are supported:
         <span class="property-type">string</span>
     </dt>
     <dd>{{% md %}}Default FixedRate. No need to configure this parameter.
-{{% /md %}}</dd>
-    <dt class="property-optional"
+{{% /md %}}</dd><dt class="property-optional"
             title="Optional">
         <span id="state_throttling_csharp">
 <a href="#state_throttling_csharp" style="color: inherit; text-decoration: inherit;">Throttling</a>
@@ -1324,14 +1231,11 @@ The following state arguments are supported:
         <span class="property-type">string</span>
     </dt>
     <dd>{{% md %}}Notification interval, default is no interval. Support number + unit type, for example 60s, 1h.
-{{% /md %}}</dd>
-</dl>
+{{% /md %}}</dd></dl>
 {{% /choosable %}}
 
 {{% choosable language go %}}
-<dl class="resources-properties">
-
-    <dt class="property-optional"
+<dl class="resources-properties"><dt class="property-optional"
             title="Optional">
         <span id="state_alertdescription_go">
 <a href="#state_alertdescription_go" style="color: inherit; text-decoration: inherit;">Alert<wbr>Description</a>
@@ -1340,8 +1244,7 @@ The following state arguments are supported:
         <span class="property-type">string</span>
     </dt>
     <dd>{{% md %}}Alert description.
-{{% /md %}}</dd>
-    <dt class="property-optional"
+{{% /md %}}</dd><dt class="property-optional"
             title="Optional">
         <span id="state_alertdisplayname_go">
 <a href="#state_alertdisplayname_go" style="color: inherit; text-decoration: inherit;">Alert<wbr>Displayname</a>
@@ -1350,8 +1253,7 @@ The following state arguments are supported:
         <span class="property-type">string</span>
     </dt>
     <dd>{{% md %}}Alert displayname.
-{{% /md %}}</dd>
-    <dt class="property-optional"
+{{% /md %}}</dd><dt class="property-optional"
             title="Optional">
         <span id="state_alertname_go">
 <a href="#state_alertname_go" style="color: inherit; text-decoration: inherit;">Alert<wbr>Name</a>
@@ -1360,8 +1262,7 @@ The following state arguments are supported:
         <span class="property-type">string</span>
     </dt>
     <dd>{{% md %}}Name of logstore for configuring alarm service.
-{{% /md %}}</dd>
-    <dt class="property-optional"
+{{% /md %}}</dd><dt class="property-optional"
             title="Optional">
         <span id="state_condition_go">
 <a href="#state_condition_go" style="color: inherit; text-decoration: inherit;">Condition</a>
@@ -1370,8 +1271,7 @@ The following state arguments are supported:
         <span class="property-type">string</span>
     </dt>
     <dd>{{% md %}}Conditional expression, such as: count> 100.
-{{% /md %}}</dd>
-    <dt class="property-optional"
+{{% /md %}}</dd><dt class="property-optional"
             title="Optional">
         <span id="state_dashboard_go">
 <a href="#state_dashboard_go" style="color: inherit; text-decoration: inherit;">Dashboard</a>
@@ -1379,8 +1279,7 @@ The following state arguments are supported:
         <span class="property-indicator"></span>
         <span class="property-type">string</span>
     </dt>
-    <dd>{{% md %}}{{% /md %}}</dd>
-    <dt class="property-optional"
+    <dd>{{% md %}}{{% /md %}}</dd><dt class="property-optional"
             title="Optional">
         <span id="state_muteuntil_go">
 <a href="#state_muteuntil_go" style="color: inherit; text-decoration: inherit;">Mute<wbr>Until</a>
@@ -1389,8 +1288,7 @@ The following state arguments are supported:
         <span class="property-type">int</span>
     </dt>
     <dd>{{% md %}}Timestamp, notifications before closing again.
-{{% /md %}}</dd>
-    <dt class="property-optional"
+{{% /md %}}</dd><dt class="property-optional"
             title="Optional">
         <span id="state_notificationlists_go">
 <a href="#state_notificationlists_go" style="color: inherit; text-decoration: inherit;">Notification<wbr>Lists</a>
@@ -1399,8 +1297,7 @@ The following state arguments are supported:
         <span class="property-type"><a href="#alertnotificationlist">[]Alert<wbr>Notification<wbr>List</a></span>
     </dt>
     <dd>{{% md %}}Alarm information notification list.
-{{% /md %}}</dd>
-    <dt class="property-optional"
+{{% /md %}}</dd><dt class="property-optional"
             title="Optional">
         <span id="state_notifythreshold_go">
 <a href="#state_notifythreshold_go" style="color: inherit; text-decoration: inherit;">Notify<wbr>Threshold</a>
@@ -1409,8 +1306,7 @@ The following state arguments are supported:
         <span class="property-type">int</span>
     </dt>
     <dd>{{% md %}}Notification threshold, which is not notified until the number of triggers is reached. The default is 1.
-{{% /md %}}</dd>
-    <dt class="property-optional"
+{{% /md %}}</dd><dt class="property-optional"
             title="Optional">
         <span id="state_projectname_go">
 <a href="#state_projectname_go" style="color: inherit; text-decoration: inherit;">Project<wbr>Name</a>
@@ -1419,8 +1315,7 @@ The following state arguments are supported:
         <span class="property-type">string</span>
     </dt>
     <dd>{{% md %}}The project name.
-{{% /md %}}</dd>
-    <dt class="property-optional"
+{{% /md %}}</dd><dt class="property-optional"
             title="Optional">
         <span id="state_querylists_go">
 <a href="#state_querylists_go" style="color: inherit; text-decoration: inherit;">Query<wbr>Lists</a>
@@ -1429,8 +1324,7 @@ The following state arguments are supported:
         <span class="property-type"><a href="#alertquerylist">[]Alert<wbr>Query<wbr>List</a></span>
     </dt>
     <dd>{{% md %}}Multiple conditions for configured alarm query.
-{{% /md %}}</dd>
-    <dt class="property-optional"
+{{% /md %}}</dd><dt class="property-optional"
             title="Optional">
         <span id="state_scheduleinterval_go">
 <a href="#state_scheduleinterval_go" style="color: inherit; text-decoration: inherit;">Schedule<wbr>Interval</a>
@@ -1439,8 +1333,7 @@ The following state arguments are supported:
         <span class="property-type">string</span>
     </dt>
     <dd>{{% md %}}Execution interval. 60 seconds minimum, such as 60s, 1h.
-{{% /md %}}</dd>
-    <dt class="property-optional"
+{{% /md %}}</dd><dt class="property-optional"
             title="Optional">
         <span id="state_scheduletype_go">
 <a href="#state_scheduletype_go" style="color: inherit; text-decoration: inherit;">Schedule<wbr>Type</a>
@@ -1449,8 +1342,7 @@ The following state arguments are supported:
         <span class="property-type">string</span>
     </dt>
     <dd>{{% md %}}Default FixedRate. No need to configure this parameter.
-{{% /md %}}</dd>
-    <dt class="property-optional"
+{{% /md %}}</dd><dt class="property-optional"
             title="Optional">
         <span id="state_throttling_go">
 <a href="#state_throttling_go" style="color: inherit; text-decoration: inherit;">Throttling</a>
@@ -1459,14 +1351,11 @@ The following state arguments are supported:
         <span class="property-type">string</span>
     </dt>
     <dd>{{% md %}}Notification interval, default is no interval. Support number + unit type, for example 60s, 1h.
-{{% /md %}}</dd>
-</dl>
+{{% /md %}}</dd></dl>
 {{% /choosable %}}
 
 {{% choosable language nodejs %}}
-<dl class="resources-properties">
-
-    <dt class="property-optional"
+<dl class="resources-properties"><dt class="property-optional"
             title="Optional">
         <span id="state_alertdescription_nodejs">
 <a href="#state_alertdescription_nodejs" style="color: inherit; text-decoration: inherit;">alert<wbr>Description</a>
@@ -1475,8 +1364,7 @@ The following state arguments are supported:
         <span class="property-type">string</span>
     </dt>
     <dd>{{% md %}}Alert description.
-{{% /md %}}</dd>
-    <dt class="property-optional"
+{{% /md %}}</dd><dt class="property-optional"
             title="Optional">
         <span id="state_alertdisplayname_nodejs">
 <a href="#state_alertdisplayname_nodejs" style="color: inherit; text-decoration: inherit;">alert<wbr>Displayname</a>
@@ -1485,8 +1373,7 @@ The following state arguments are supported:
         <span class="property-type">string</span>
     </dt>
     <dd>{{% md %}}Alert displayname.
-{{% /md %}}</dd>
-    <dt class="property-optional"
+{{% /md %}}</dd><dt class="property-optional"
             title="Optional">
         <span id="state_alertname_nodejs">
 <a href="#state_alertname_nodejs" style="color: inherit; text-decoration: inherit;">alert<wbr>Name</a>
@@ -1495,8 +1382,7 @@ The following state arguments are supported:
         <span class="property-type">string</span>
     </dt>
     <dd>{{% md %}}Name of logstore for configuring alarm service.
-{{% /md %}}</dd>
-    <dt class="property-optional"
+{{% /md %}}</dd><dt class="property-optional"
             title="Optional">
         <span id="state_condition_nodejs">
 <a href="#state_condition_nodejs" style="color: inherit; text-decoration: inherit;">condition</a>
@@ -1505,8 +1391,7 @@ The following state arguments are supported:
         <span class="property-type">string</span>
     </dt>
     <dd>{{% md %}}Conditional expression, such as: count> 100.
-{{% /md %}}</dd>
-    <dt class="property-optional"
+{{% /md %}}</dd><dt class="property-optional"
             title="Optional">
         <span id="state_dashboard_nodejs">
 <a href="#state_dashboard_nodejs" style="color: inherit; text-decoration: inherit;">dashboard</a>
@@ -1514,8 +1399,7 @@ The following state arguments are supported:
         <span class="property-indicator"></span>
         <span class="property-type">string</span>
     </dt>
-    <dd>{{% md %}}{{% /md %}}</dd>
-    <dt class="property-optional"
+    <dd>{{% md %}}{{% /md %}}</dd><dt class="property-optional"
             title="Optional">
         <span id="state_muteuntil_nodejs">
 <a href="#state_muteuntil_nodejs" style="color: inherit; text-decoration: inherit;">mute<wbr>Until</a>
@@ -1524,8 +1408,7 @@ The following state arguments are supported:
         <span class="property-type">number</span>
     </dt>
     <dd>{{% md %}}Timestamp, notifications before closing again.
-{{% /md %}}</dd>
-    <dt class="property-optional"
+{{% /md %}}</dd><dt class="property-optional"
             title="Optional">
         <span id="state_notificationlists_nodejs">
 <a href="#state_notificationlists_nodejs" style="color: inherit; text-decoration: inherit;">notification<wbr>Lists</a>
@@ -1534,8 +1417,7 @@ The following state arguments are supported:
         <span class="property-type"><a href="#alertnotificationlist">Alert<wbr>Notification<wbr>List[]</a></span>
     </dt>
     <dd>{{% md %}}Alarm information notification list.
-{{% /md %}}</dd>
-    <dt class="property-optional"
+{{% /md %}}</dd><dt class="property-optional"
             title="Optional">
         <span id="state_notifythreshold_nodejs">
 <a href="#state_notifythreshold_nodejs" style="color: inherit; text-decoration: inherit;">notify<wbr>Threshold</a>
@@ -1544,8 +1426,7 @@ The following state arguments are supported:
         <span class="property-type">number</span>
     </dt>
     <dd>{{% md %}}Notification threshold, which is not notified until the number of triggers is reached. The default is 1.
-{{% /md %}}</dd>
-    <dt class="property-optional"
+{{% /md %}}</dd><dt class="property-optional"
             title="Optional">
         <span id="state_projectname_nodejs">
 <a href="#state_projectname_nodejs" style="color: inherit; text-decoration: inherit;">project<wbr>Name</a>
@@ -1554,8 +1435,7 @@ The following state arguments are supported:
         <span class="property-type">string</span>
     </dt>
     <dd>{{% md %}}The project name.
-{{% /md %}}</dd>
-    <dt class="property-optional"
+{{% /md %}}</dd><dt class="property-optional"
             title="Optional">
         <span id="state_querylists_nodejs">
 <a href="#state_querylists_nodejs" style="color: inherit; text-decoration: inherit;">query<wbr>Lists</a>
@@ -1564,8 +1444,7 @@ The following state arguments are supported:
         <span class="property-type"><a href="#alertquerylist">Alert<wbr>Query<wbr>List[]</a></span>
     </dt>
     <dd>{{% md %}}Multiple conditions for configured alarm query.
-{{% /md %}}</dd>
-    <dt class="property-optional"
+{{% /md %}}</dd><dt class="property-optional"
             title="Optional">
         <span id="state_scheduleinterval_nodejs">
 <a href="#state_scheduleinterval_nodejs" style="color: inherit; text-decoration: inherit;">schedule<wbr>Interval</a>
@@ -1574,8 +1453,7 @@ The following state arguments are supported:
         <span class="property-type">string</span>
     </dt>
     <dd>{{% md %}}Execution interval. 60 seconds minimum, such as 60s, 1h.
-{{% /md %}}</dd>
-    <dt class="property-optional"
+{{% /md %}}</dd><dt class="property-optional"
             title="Optional">
         <span id="state_scheduletype_nodejs">
 <a href="#state_scheduletype_nodejs" style="color: inherit; text-decoration: inherit;">schedule<wbr>Type</a>
@@ -1584,8 +1462,7 @@ The following state arguments are supported:
         <span class="property-type">string</span>
     </dt>
     <dd>{{% md %}}Default FixedRate. No need to configure this parameter.
-{{% /md %}}</dd>
-    <dt class="property-optional"
+{{% /md %}}</dd><dt class="property-optional"
             title="Optional">
         <span id="state_throttling_nodejs">
 <a href="#state_throttling_nodejs" style="color: inherit; text-decoration: inherit;">throttling</a>
@@ -1594,14 +1471,11 @@ The following state arguments are supported:
         <span class="property-type">string</span>
     </dt>
     <dd>{{% md %}}Notification interval, default is no interval. Support number + unit type, for example 60s, 1h.
-{{% /md %}}</dd>
-</dl>
+{{% /md %}}</dd></dl>
 {{% /choosable %}}
 
 {{% choosable language python %}}
-<dl class="resources-properties">
-
-    <dt class="property-optional"
+<dl class="resources-properties"><dt class="property-optional"
             title="Optional">
         <span id="state_alert_description_python">
 <a href="#state_alert_description_python" style="color: inherit; text-decoration: inherit;">alert_<wbr>description</a>
@@ -1610,8 +1484,7 @@ The following state arguments are supported:
         <span class="property-type">str</span>
     </dt>
     <dd>{{% md %}}Alert description.
-{{% /md %}}</dd>
-    <dt class="property-optional"
+{{% /md %}}</dd><dt class="property-optional"
             title="Optional">
         <span id="state_alert_displayname_python">
 <a href="#state_alert_displayname_python" style="color: inherit; text-decoration: inherit;">alert_<wbr>displayname</a>
@@ -1620,8 +1493,7 @@ The following state arguments are supported:
         <span class="property-type">str</span>
     </dt>
     <dd>{{% md %}}Alert displayname.
-{{% /md %}}</dd>
-    <dt class="property-optional"
+{{% /md %}}</dd><dt class="property-optional"
             title="Optional">
         <span id="state_alert_name_python">
 <a href="#state_alert_name_python" style="color: inherit; text-decoration: inherit;">alert_<wbr>name</a>
@@ -1630,8 +1502,7 @@ The following state arguments are supported:
         <span class="property-type">str</span>
     </dt>
     <dd>{{% md %}}Name of logstore for configuring alarm service.
-{{% /md %}}</dd>
-    <dt class="property-optional"
+{{% /md %}}</dd><dt class="property-optional"
             title="Optional">
         <span id="state_condition_python">
 <a href="#state_condition_python" style="color: inherit; text-decoration: inherit;">condition</a>
@@ -1640,8 +1511,7 @@ The following state arguments are supported:
         <span class="property-type">str</span>
     </dt>
     <dd>{{% md %}}Conditional expression, such as: count> 100.
-{{% /md %}}</dd>
-    <dt class="property-optional"
+{{% /md %}}</dd><dt class="property-optional"
             title="Optional">
         <span id="state_dashboard_python">
 <a href="#state_dashboard_python" style="color: inherit; text-decoration: inherit;">dashboard</a>
@@ -1649,8 +1519,7 @@ The following state arguments are supported:
         <span class="property-indicator"></span>
         <span class="property-type">str</span>
     </dt>
-    <dd>{{% md %}}{{% /md %}}</dd>
-    <dt class="property-optional"
+    <dd>{{% md %}}{{% /md %}}</dd><dt class="property-optional"
             title="Optional">
         <span id="state_mute_until_python">
 <a href="#state_mute_until_python" style="color: inherit; text-decoration: inherit;">mute_<wbr>until</a>
@@ -1659,8 +1528,7 @@ The following state arguments are supported:
         <span class="property-type">int</span>
     </dt>
     <dd>{{% md %}}Timestamp, notifications before closing again.
-{{% /md %}}</dd>
-    <dt class="property-optional"
+{{% /md %}}</dd><dt class="property-optional"
             title="Optional">
         <span id="state_notification_lists_python">
 <a href="#state_notification_lists_python" style="color: inherit; text-decoration: inherit;">notification_<wbr>lists</a>
@@ -1669,8 +1537,7 @@ The following state arguments are supported:
         <span class="property-type"><a href="#alertnotificationlist">Sequence[Alert<wbr>Notification<wbr>List<wbr>Args]</a></span>
     </dt>
     <dd>{{% md %}}Alarm information notification list.
-{{% /md %}}</dd>
-    <dt class="property-optional"
+{{% /md %}}</dd><dt class="property-optional"
             title="Optional">
         <span id="state_notify_threshold_python">
 <a href="#state_notify_threshold_python" style="color: inherit; text-decoration: inherit;">notify_<wbr>threshold</a>
@@ -1679,8 +1546,7 @@ The following state arguments are supported:
         <span class="property-type">int</span>
     </dt>
     <dd>{{% md %}}Notification threshold, which is not notified until the number of triggers is reached. The default is 1.
-{{% /md %}}</dd>
-    <dt class="property-optional"
+{{% /md %}}</dd><dt class="property-optional"
             title="Optional">
         <span id="state_project_name_python">
 <a href="#state_project_name_python" style="color: inherit; text-decoration: inherit;">project_<wbr>name</a>
@@ -1689,8 +1555,7 @@ The following state arguments are supported:
         <span class="property-type">str</span>
     </dt>
     <dd>{{% md %}}The project name.
-{{% /md %}}</dd>
-    <dt class="property-optional"
+{{% /md %}}</dd><dt class="property-optional"
             title="Optional">
         <span id="state_query_lists_python">
 <a href="#state_query_lists_python" style="color: inherit; text-decoration: inherit;">query_<wbr>lists</a>
@@ -1699,8 +1564,7 @@ The following state arguments are supported:
         <span class="property-type"><a href="#alertquerylist">Sequence[Alert<wbr>Query<wbr>List<wbr>Args]</a></span>
     </dt>
     <dd>{{% md %}}Multiple conditions for configured alarm query.
-{{% /md %}}</dd>
-    <dt class="property-optional"
+{{% /md %}}</dd><dt class="property-optional"
             title="Optional">
         <span id="state_schedule_interval_python">
 <a href="#state_schedule_interval_python" style="color: inherit; text-decoration: inherit;">schedule_<wbr>interval</a>
@@ -1709,8 +1573,7 @@ The following state arguments are supported:
         <span class="property-type">str</span>
     </dt>
     <dd>{{% md %}}Execution interval. 60 seconds minimum, such as 60s, 1h.
-{{% /md %}}</dd>
-    <dt class="property-optional"
+{{% /md %}}</dd><dt class="property-optional"
             title="Optional">
         <span id="state_schedule_type_python">
 <a href="#state_schedule_type_python" style="color: inherit; text-decoration: inherit;">schedule_<wbr>type</a>
@@ -1719,8 +1582,7 @@ The following state arguments are supported:
         <span class="property-type">str</span>
     </dt>
     <dd>{{% md %}}Default FixedRate. No need to configure this parameter.
-{{% /md %}}</dd>
-    <dt class="property-optional"
+{{% /md %}}</dd><dt class="property-optional"
             title="Optional">
         <span id="state_throttling_python">
 <a href="#state_throttling_python" style="color: inherit; text-decoration: inherit;">throttling</a>
@@ -1729,8 +1591,7 @@ The following state arguments are supported:
         <span class="property-type">str</span>
     </dt>
     <dd>{{% md %}}Notification interval, default is no interval. Support number + unit type, for example 60s, 1h.
-{{% /md %}}</dd>
-</dl>
+{{% /md %}}</dd></dl>
 {{% /choosable %}}
 
 
@@ -1745,9 +1606,7 @@ The following state arguments are supported:
 <h4 id="alertnotificationlist">Alert<wbr>Notification<wbr>List</h4>
 
 {{% choosable language csharp %}}
-<dl class="resources-properties">
-
-    <dt class="property-required"
+<dl class="resources-properties"><dt class="property-required"
             title="Required">
         <span id="content_csharp">
 <a href="#content_csharp" style="color: inherit; text-decoration: inherit;">Content</a>
@@ -1756,8 +1615,7 @@ The following state arguments are supported:
         <span class="property-type">string</span>
     </dt>
     <dd>{{% md %}}Notice content of alarm.
-{{% /md %}}</dd>
-    <dt class="property-required"
+{{% /md %}}</dd><dt class="property-required"
             title="Required">
         <span id="type_csharp">
 <a href="#type_csharp" style="color: inherit; text-decoration: inherit;">Type</a>
@@ -1766,8 +1624,7 @@ The following state arguments are supported:
         <span class="property-type">string</span>
     </dt>
     <dd>{{% md %}}Notification type. support Email, SMS, DingTalk, MessageCenter.
-{{% /md %}}</dd>
-    <dt class="property-optional"
+{{% /md %}}</dd><dt class="property-optional"
             title="Optional">
         <span id="emaillists_csharp">
 <a href="#emaillists_csharp" style="color: inherit; text-decoration: inherit;">Email<wbr>Lists</a>
@@ -1776,8 +1633,7 @@ The following state arguments are supported:
         <span class="property-type">List&lt;string&gt;</span>
     </dt>
     <dd>{{% md %}}Email address list.
-{{% /md %}}</dd>
-    <dt class="property-optional"
+{{% /md %}}</dd><dt class="property-optional"
             title="Optional">
         <span id="mobilelists_csharp">
 <a href="#mobilelists_csharp" style="color: inherit; text-decoration: inherit;">Mobile<wbr>Lists</a>
@@ -1786,8 +1642,7 @@ The following state arguments are supported:
         <span class="property-type">List&lt;string&gt;</span>
     </dt>
     <dd>{{% md %}}SMS sending mobile number.
-{{% /md %}}</dd>
-    <dt class="property-optional"
+{{% /md %}}</dd><dt class="property-optional"
             title="Optional">
         <span id="serviceuri_csharp">
 <a href="#serviceuri_csharp" style="color: inherit; text-decoration: inherit;">Service<wbr>Uri</a>
@@ -1796,14 +1651,11 @@ The following state arguments are supported:
         <span class="property-type">string</span>
     </dt>
     <dd>{{% md %}}Request address.
-{{% /md %}}</dd>
-</dl>
+{{% /md %}}</dd></dl>
 {{% /choosable %}}
 
 {{% choosable language go %}}
-<dl class="resources-properties">
-
-    <dt class="property-required"
+<dl class="resources-properties"><dt class="property-required"
             title="Required">
         <span id="content_go">
 <a href="#content_go" style="color: inherit; text-decoration: inherit;">Content</a>
@@ -1812,8 +1664,7 @@ The following state arguments are supported:
         <span class="property-type">string</span>
     </dt>
     <dd>{{% md %}}Notice content of alarm.
-{{% /md %}}</dd>
-    <dt class="property-required"
+{{% /md %}}</dd><dt class="property-required"
             title="Required">
         <span id="type_go">
 <a href="#type_go" style="color: inherit; text-decoration: inherit;">Type</a>
@@ -1822,8 +1673,7 @@ The following state arguments are supported:
         <span class="property-type">string</span>
     </dt>
     <dd>{{% md %}}Notification type. support Email, SMS, DingTalk, MessageCenter.
-{{% /md %}}</dd>
-    <dt class="property-optional"
+{{% /md %}}</dd><dt class="property-optional"
             title="Optional">
         <span id="emaillists_go">
 <a href="#emaillists_go" style="color: inherit; text-decoration: inherit;">Email<wbr>Lists</a>
@@ -1832,8 +1682,7 @@ The following state arguments are supported:
         <span class="property-type">[]string</span>
     </dt>
     <dd>{{% md %}}Email address list.
-{{% /md %}}</dd>
-    <dt class="property-optional"
+{{% /md %}}</dd><dt class="property-optional"
             title="Optional">
         <span id="mobilelists_go">
 <a href="#mobilelists_go" style="color: inherit; text-decoration: inherit;">Mobile<wbr>Lists</a>
@@ -1842,8 +1691,7 @@ The following state arguments are supported:
         <span class="property-type">[]string</span>
     </dt>
     <dd>{{% md %}}SMS sending mobile number.
-{{% /md %}}</dd>
-    <dt class="property-optional"
+{{% /md %}}</dd><dt class="property-optional"
             title="Optional">
         <span id="serviceuri_go">
 <a href="#serviceuri_go" style="color: inherit; text-decoration: inherit;">Service<wbr>Uri</a>
@@ -1852,14 +1700,11 @@ The following state arguments are supported:
         <span class="property-type">string</span>
     </dt>
     <dd>{{% md %}}Request address.
-{{% /md %}}</dd>
-</dl>
+{{% /md %}}</dd></dl>
 {{% /choosable %}}
 
 {{% choosable language nodejs %}}
-<dl class="resources-properties">
-
-    <dt class="property-required"
+<dl class="resources-properties"><dt class="property-required"
             title="Required">
         <span id="content_nodejs">
 <a href="#content_nodejs" style="color: inherit; text-decoration: inherit;">content</a>
@@ -1868,8 +1713,7 @@ The following state arguments are supported:
         <span class="property-type">string</span>
     </dt>
     <dd>{{% md %}}Notice content of alarm.
-{{% /md %}}</dd>
-    <dt class="property-required"
+{{% /md %}}</dd><dt class="property-required"
             title="Required">
         <span id="type_nodejs">
 <a href="#type_nodejs" style="color: inherit; text-decoration: inherit;">type</a>
@@ -1878,8 +1722,7 @@ The following state arguments are supported:
         <span class="property-type">string</span>
     </dt>
     <dd>{{% md %}}Notification type. support Email, SMS, DingTalk, MessageCenter.
-{{% /md %}}</dd>
-    <dt class="property-optional"
+{{% /md %}}</dd><dt class="property-optional"
             title="Optional">
         <span id="emaillists_nodejs">
 <a href="#emaillists_nodejs" style="color: inherit; text-decoration: inherit;">email<wbr>Lists</a>
@@ -1888,8 +1731,7 @@ The following state arguments are supported:
         <span class="property-type">string[]</span>
     </dt>
     <dd>{{% md %}}Email address list.
-{{% /md %}}</dd>
-    <dt class="property-optional"
+{{% /md %}}</dd><dt class="property-optional"
             title="Optional">
         <span id="mobilelists_nodejs">
 <a href="#mobilelists_nodejs" style="color: inherit; text-decoration: inherit;">mobile<wbr>Lists</a>
@@ -1898,8 +1740,7 @@ The following state arguments are supported:
         <span class="property-type">string[]</span>
     </dt>
     <dd>{{% md %}}SMS sending mobile number.
-{{% /md %}}</dd>
-    <dt class="property-optional"
+{{% /md %}}</dd><dt class="property-optional"
             title="Optional">
         <span id="serviceuri_nodejs">
 <a href="#serviceuri_nodejs" style="color: inherit; text-decoration: inherit;">service<wbr>Uri</a>
@@ -1908,14 +1749,11 @@ The following state arguments are supported:
         <span class="property-type">string</span>
     </dt>
     <dd>{{% md %}}Request address.
-{{% /md %}}</dd>
-</dl>
+{{% /md %}}</dd></dl>
 {{% /choosable %}}
 
 {{% choosable language python %}}
-<dl class="resources-properties">
-
-    <dt class="property-required"
+<dl class="resources-properties"><dt class="property-required"
             title="Required">
         <span id="content_python">
 <a href="#content_python" style="color: inherit; text-decoration: inherit;">content</a>
@@ -1924,8 +1762,7 @@ The following state arguments are supported:
         <span class="property-type">str</span>
     </dt>
     <dd>{{% md %}}Notice content of alarm.
-{{% /md %}}</dd>
-    <dt class="property-required"
+{{% /md %}}</dd><dt class="property-required"
             title="Required">
         <span id="type_python">
 <a href="#type_python" style="color: inherit; text-decoration: inherit;">type</a>
@@ -1934,8 +1771,7 @@ The following state arguments are supported:
         <span class="property-type">str</span>
     </dt>
     <dd>{{% md %}}Notification type. support Email, SMS, DingTalk, MessageCenter.
-{{% /md %}}</dd>
-    <dt class="property-optional"
+{{% /md %}}</dd><dt class="property-optional"
             title="Optional">
         <span id="email_lists_python">
 <a href="#email_lists_python" style="color: inherit; text-decoration: inherit;">email_<wbr>lists</a>
@@ -1944,8 +1780,7 @@ The following state arguments are supported:
         <span class="property-type">Sequence[str]</span>
     </dt>
     <dd>{{% md %}}Email address list.
-{{% /md %}}</dd>
-    <dt class="property-optional"
+{{% /md %}}</dd><dt class="property-optional"
             title="Optional">
         <span id="mobile_lists_python">
 <a href="#mobile_lists_python" style="color: inherit; text-decoration: inherit;">mobile_<wbr>lists</a>
@@ -1954,8 +1789,7 @@ The following state arguments are supported:
         <span class="property-type">Sequence[str]</span>
     </dt>
     <dd>{{% md %}}SMS sending mobile number.
-{{% /md %}}</dd>
-    <dt class="property-optional"
+{{% /md %}}</dd><dt class="property-optional"
             title="Optional">
         <span id="service_uri_python">
 <a href="#service_uri_python" style="color: inherit; text-decoration: inherit;">service_<wbr>uri</a>
@@ -1964,16 +1798,13 @@ The following state arguments are supported:
         <span class="property-type">str</span>
     </dt>
     <dd>{{% md %}}Request address.
-{{% /md %}}</dd>
-</dl>
+{{% /md %}}</dd></dl>
 {{% /choosable %}}
 
 <h4 id="alertquerylist">Alert<wbr>Query<wbr>List</h4>
 
 {{% choosable language csharp %}}
-<dl class="resources-properties">
-
-    <dt class="property-required"
+<dl class="resources-properties"><dt class="property-required"
             title="Required">
         <span id="charttitle_csharp">
 <a href="#charttitle_csharp" style="color: inherit; text-decoration: inherit;">Chart<wbr>Title</a>
@@ -1982,8 +1813,7 @@ The following state arguments are supported:
         <span class="property-type">string</span>
     </dt>
     <dd>{{% md %}}chart title
-{{% /md %}}</dd>
-    <dt class="property-required"
+{{% /md %}}</dd><dt class="property-required"
             title="Required">
         <span id="end_csharp">
 <a href="#end_csharp" style="color: inherit; text-decoration: inherit;">End</a>
@@ -1992,8 +1822,7 @@ The following state arguments are supported:
         <span class="property-type">string</span>
     </dt>
     <dd>{{% md %}}end time. example: 20s.
-{{% /md %}}</dd>
-    <dt class="property-required"
+{{% /md %}}</dd><dt class="property-required"
             title="Required">
         <span id="logstore_csharp">
 <a href="#logstore_csharp" style="color: inherit; text-decoration: inherit;">Logstore</a>
@@ -2002,8 +1831,7 @@ The following state arguments are supported:
         <span class="property-type">string</span>
     </dt>
     <dd>{{% md %}}Query logstore
-{{% /md %}}</dd>
-    <dt class="property-required"
+{{% /md %}}</dd><dt class="property-required"
             title="Required">
         <span id="query_csharp">
 <a href="#query_csharp" style="color: inherit; text-decoration: inherit;">Query</a>
@@ -2012,8 +1840,7 @@ The following state arguments are supported:
         <span class="property-type">string</span>
     </dt>
     <dd>{{% md %}}query corresponding to chart. example: * AND aliyun.
-{{% /md %}}</dd>
-    <dt class="property-required"
+{{% /md %}}</dd><dt class="property-required"
             title="Required">
         <span id="start_csharp">
 <a href="#start_csharp" style="color: inherit; text-decoration: inherit;">Start</a>
@@ -2022,8 +1849,7 @@ The following state arguments are supported:
         <span class="property-type">string</span>
     </dt>
     <dd>{{% md %}}begin time. example: -60s.
-{{% /md %}}</dd>
-    <dt class="property-optional"
+{{% /md %}}</dd><dt class="property-optional"
             title="Optional">
         <span id="timespantype_csharp">
 <a href="#timespantype_csharp" style="color: inherit; text-decoration: inherit;">Time<wbr>Span<wbr>Type</a>
@@ -2032,14 +1858,11 @@ The following state arguments are supported:
         <span class="property-type">string</span>
     </dt>
     <dd>{{% md %}}default Custom. No need to configure this parameter.
-{{% /md %}}</dd>
-</dl>
+{{% /md %}}</dd></dl>
 {{% /choosable %}}
 
 {{% choosable language go %}}
-<dl class="resources-properties">
-
-    <dt class="property-required"
+<dl class="resources-properties"><dt class="property-required"
             title="Required">
         <span id="charttitle_go">
 <a href="#charttitle_go" style="color: inherit; text-decoration: inherit;">Chart<wbr>Title</a>
@@ -2048,8 +1871,7 @@ The following state arguments are supported:
         <span class="property-type">string</span>
     </dt>
     <dd>{{% md %}}chart title
-{{% /md %}}</dd>
-    <dt class="property-required"
+{{% /md %}}</dd><dt class="property-required"
             title="Required">
         <span id="end_go">
 <a href="#end_go" style="color: inherit; text-decoration: inherit;">End</a>
@@ -2058,8 +1880,7 @@ The following state arguments are supported:
         <span class="property-type">string</span>
     </dt>
     <dd>{{% md %}}end time. example: 20s.
-{{% /md %}}</dd>
-    <dt class="property-required"
+{{% /md %}}</dd><dt class="property-required"
             title="Required">
         <span id="logstore_go">
 <a href="#logstore_go" style="color: inherit; text-decoration: inherit;">Logstore</a>
@@ -2068,8 +1889,7 @@ The following state arguments are supported:
         <span class="property-type">string</span>
     </dt>
     <dd>{{% md %}}Query logstore
-{{% /md %}}</dd>
-    <dt class="property-required"
+{{% /md %}}</dd><dt class="property-required"
             title="Required">
         <span id="query_go">
 <a href="#query_go" style="color: inherit; text-decoration: inherit;">Query</a>
@@ -2078,8 +1898,7 @@ The following state arguments are supported:
         <span class="property-type">string</span>
     </dt>
     <dd>{{% md %}}query corresponding to chart. example: * AND aliyun.
-{{% /md %}}</dd>
-    <dt class="property-required"
+{{% /md %}}</dd><dt class="property-required"
             title="Required">
         <span id="start_go">
 <a href="#start_go" style="color: inherit; text-decoration: inherit;">Start</a>
@@ -2088,8 +1907,7 @@ The following state arguments are supported:
         <span class="property-type">string</span>
     </dt>
     <dd>{{% md %}}begin time. example: -60s.
-{{% /md %}}</dd>
-    <dt class="property-optional"
+{{% /md %}}</dd><dt class="property-optional"
             title="Optional">
         <span id="timespantype_go">
 <a href="#timespantype_go" style="color: inherit; text-decoration: inherit;">Time<wbr>Span<wbr>Type</a>
@@ -2098,14 +1916,11 @@ The following state arguments are supported:
         <span class="property-type">string</span>
     </dt>
     <dd>{{% md %}}default Custom. No need to configure this parameter.
-{{% /md %}}</dd>
-</dl>
+{{% /md %}}</dd></dl>
 {{% /choosable %}}
 
 {{% choosable language nodejs %}}
-<dl class="resources-properties">
-
-    <dt class="property-required"
+<dl class="resources-properties"><dt class="property-required"
             title="Required">
         <span id="charttitle_nodejs">
 <a href="#charttitle_nodejs" style="color: inherit; text-decoration: inherit;">chart<wbr>Title</a>
@@ -2114,8 +1929,7 @@ The following state arguments are supported:
         <span class="property-type">string</span>
     </dt>
     <dd>{{% md %}}chart title
-{{% /md %}}</dd>
-    <dt class="property-required"
+{{% /md %}}</dd><dt class="property-required"
             title="Required">
         <span id="end_nodejs">
 <a href="#end_nodejs" style="color: inherit; text-decoration: inherit;">end</a>
@@ -2124,8 +1938,7 @@ The following state arguments are supported:
         <span class="property-type">string</span>
     </dt>
     <dd>{{% md %}}end time. example: 20s.
-{{% /md %}}</dd>
-    <dt class="property-required"
+{{% /md %}}</dd><dt class="property-required"
             title="Required">
         <span id="logstore_nodejs">
 <a href="#logstore_nodejs" style="color: inherit; text-decoration: inherit;">logstore</a>
@@ -2134,8 +1947,7 @@ The following state arguments are supported:
         <span class="property-type">string</span>
     </dt>
     <dd>{{% md %}}Query logstore
-{{% /md %}}</dd>
-    <dt class="property-required"
+{{% /md %}}</dd><dt class="property-required"
             title="Required">
         <span id="query_nodejs">
 <a href="#query_nodejs" style="color: inherit; text-decoration: inherit;">query</a>
@@ -2144,8 +1956,7 @@ The following state arguments are supported:
         <span class="property-type">string</span>
     </dt>
     <dd>{{% md %}}query corresponding to chart. example: * AND aliyun.
-{{% /md %}}</dd>
-    <dt class="property-required"
+{{% /md %}}</dd><dt class="property-required"
             title="Required">
         <span id="start_nodejs">
 <a href="#start_nodejs" style="color: inherit; text-decoration: inherit;">start</a>
@@ -2154,8 +1965,7 @@ The following state arguments are supported:
         <span class="property-type">string</span>
     </dt>
     <dd>{{% md %}}begin time. example: -60s.
-{{% /md %}}</dd>
-    <dt class="property-optional"
+{{% /md %}}</dd><dt class="property-optional"
             title="Optional">
         <span id="timespantype_nodejs">
 <a href="#timespantype_nodejs" style="color: inherit; text-decoration: inherit;">time<wbr>Span<wbr>Type</a>
@@ -2164,14 +1974,11 @@ The following state arguments are supported:
         <span class="property-type">string</span>
     </dt>
     <dd>{{% md %}}default Custom. No need to configure this parameter.
-{{% /md %}}</dd>
-</dl>
+{{% /md %}}</dd></dl>
 {{% /choosable %}}
 
 {{% choosable language python %}}
-<dl class="resources-properties">
-
-    <dt class="property-required"
+<dl class="resources-properties"><dt class="property-required"
             title="Required">
         <span id="chart_title_python">
 <a href="#chart_title_python" style="color: inherit; text-decoration: inherit;">chart_<wbr>title</a>
@@ -2180,8 +1987,7 @@ The following state arguments are supported:
         <span class="property-type">str</span>
     </dt>
     <dd>{{% md %}}chart title
-{{% /md %}}</dd>
-    <dt class="property-required"
+{{% /md %}}</dd><dt class="property-required"
             title="Required">
         <span id="end_python">
 <a href="#end_python" style="color: inherit; text-decoration: inherit;">end</a>
@@ -2190,8 +1996,7 @@ The following state arguments are supported:
         <span class="property-type">str</span>
     </dt>
     <dd>{{% md %}}end time. example: 20s.
-{{% /md %}}</dd>
-    <dt class="property-required"
+{{% /md %}}</dd><dt class="property-required"
             title="Required">
         <span id="logstore_python">
 <a href="#logstore_python" style="color: inherit; text-decoration: inherit;">logstore</a>
@@ -2200,8 +2005,7 @@ The following state arguments are supported:
         <span class="property-type">str</span>
     </dt>
     <dd>{{% md %}}Query logstore
-{{% /md %}}</dd>
-    <dt class="property-required"
+{{% /md %}}</dd><dt class="property-required"
             title="Required">
         <span id="query_python">
 <a href="#query_python" style="color: inherit; text-decoration: inherit;">query</a>
@@ -2210,8 +2014,7 @@ The following state arguments are supported:
         <span class="property-type">str</span>
     </dt>
     <dd>{{% md %}}query corresponding to chart. example: * AND aliyun.
-{{% /md %}}</dd>
-    <dt class="property-required"
+{{% /md %}}</dd><dt class="property-required"
             title="Required">
         <span id="start_python">
 <a href="#start_python" style="color: inherit; text-decoration: inherit;">start</a>
@@ -2220,8 +2023,7 @@ The following state arguments are supported:
         <span class="property-type">str</span>
     </dt>
     <dd>{{% md %}}begin time. example: -60s.
-{{% /md %}}</dd>
-    <dt class="property-optional"
+{{% /md %}}</dd><dt class="property-optional"
             title="Optional">
         <span id="time_span_type_python">
 <a href="#time_span_type_python" style="color: inherit; text-decoration: inherit;">time_<wbr>span_<wbr>type</a>
@@ -2230,8 +2032,7 @@ The following state arguments are supported:
         <span class="property-type">str</span>
     </dt>
     <dd>{{% md %}}default Custom. No need to configure this parameter.
-{{% /md %}}</dd>
-</dl>
+{{% /md %}}</dd></dl>
 {{% /choosable %}}
 ## Import
 
@@ -2252,6 +2053,6 @@ Log alert can be imported using the id, e.g.
 	<dt>License</dt>
 	<dd>Apache-2.0</dd>
 	<dt>Notes</dt>
-	<dd>This Pulumi package is based on the [`alicloud` Terraform Provider](https://github.com/aliyun/terraform-provider-alicloud).</dd>
+	<dd>{{% md %}}This Pulumi package is based on the [`alicloud` Terraform Provider](https://github.com/aliyun/terraform-provider-alicloud).{{% /md %}}</dd>
 </dl>
 

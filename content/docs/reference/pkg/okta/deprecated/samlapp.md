@@ -35,9 +35,7 @@ meta_desc: "Documentation for the okta.deprecated.SamlApp resource with examples
 
 {{% choosable language nodejs %}}
 
-<dl class="resources-properties">
-  
-    <dt
+<dl class="resources-properties"><dt
         class="property-required" title="Required">
         <span>name</span>
         <span class="property-indicator"></span>
@@ -45,9 +43,7 @@ meta_desc: "Documentation for the okta.deprecated.SamlApp resource with examples
     </dt>
     <dd>
       The unique name of the resource.
-    </dd>
-  
-    <dt
+    </dd><dt
         class="property-required" title="Required">
         <span>args</span>
         <span class="property-indicator"></span>
@@ -55,9 +51,7 @@ meta_desc: "Documentation for the okta.deprecated.SamlApp resource with examples
     </dt>
     <dd>
       The arguments to resource properties.
-    </dd>
-  
-    <dt
+    </dd><dt
         class="property-optional" title="Optional">
         <span>opts</span>
         <span class="property-indicator"></span>
@@ -65,10 +59,7 @@ meta_desc: "Documentation for the okta.deprecated.SamlApp resource with examples
     </dt>
     <dd>
       Bag of options to control resource&#39;s behavior.
-    </dd>
-  
-
-</dl>
+    </dd></dl>
 
 {{% /choosable %}}
 
@@ -94,9 +85,7 @@ meta_desc: "Documentation for the okta.deprecated.SamlApp resource with examples
 
 {{% choosable language go %}}
 
-<dl class="resources-properties">
-  
-    <dt
+<dl class="resources-properties"><dt
         class="property-optional" title="Optional">
         <span>ctx</span>
         <span class="property-indicator"></span>
@@ -104,9 +93,7 @@ meta_desc: "Documentation for the okta.deprecated.SamlApp resource with examples
     </dt>
     <dd>
       Context object for the current deployment.
-    </dd>
-  
-    <dt
+    </dd><dt
         class="property-required" title="Required">
         <span>name</span>
         <span class="property-indicator"></span>
@@ -114,9 +101,7 @@ meta_desc: "Documentation for the okta.deprecated.SamlApp resource with examples
     </dt>
     <dd>
       The unique name of the resource.
-    </dd>
-  
-    <dt
+    </dd><dt
         class="property-required" title="Required">
         <span>args</span>
         <span class="property-indicator"></span>
@@ -124,9 +109,7 @@ meta_desc: "Documentation for the okta.deprecated.SamlApp resource with examples
     </dt>
     <dd>
       The arguments to resource properties.
-    </dd>
-  
-    <dt
+    </dd><dt
         class="property-optional" title="Optional">
         <span>opts</span>
         <span class="property-indicator"></span>
@@ -134,18 +117,13 @@ meta_desc: "Documentation for the okta.deprecated.SamlApp resource with examples
     </dt>
     <dd>
       Bag of options to control resource&#39;s behavior.
-    </dd>
-  
-
-</dl>
+    </dd></dl>
 
 {{% /choosable %}}
 
 {{% choosable language csharp %}}
 
-<dl class="resources-properties">
-  
-    <dt
+<dl class="resources-properties"><dt
         class="property-required" title="Required">
         <span>name</span>
         <span class="property-indicator"></span>
@@ -153,9 +131,7 @@ meta_desc: "Documentation for the okta.deprecated.SamlApp resource with examples
     </dt>
     <dd>
       The unique name of the resource.
-    </dd>
-  
-    <dt
+    </dd><dt
         class="property-required" title="Required">
         <span>args</span>
         <span class="property-indicator"></span>
@@ -163,9 +139,7 @@ meta_desc: "Documentation for the okta.deprecated.SamlApp resource with examples
     </dt>
     <dd>
       The arguments to resource properties.
-    </dd>
-  
-    <dt
+    </dd><dt
         class="property-optional" title="Optional">
         <span>opts</span>
         <span class="property-indicator"></span>
@@ -173,10 +147,7 @@ meta_desc: "Documentation for the okta.deprecated.SamlApp resource with examples
     </dt>
     <dd>
       Bag of options to control resource&#39;s behavior.
-    </dd>
-  
-
-</dl>
+    </dd></dl>
 
 {{% /choosable %}}
 
@@ -191,9 +162,7 @@ The SamlApp resource accepts the following [input]({{< relref "/docs/intro/conce
 
 
 {{% choosable language csharp %}}
-<dl class="resources-properties">
-
-    <dt class="property-required"
+<dl class="resources-properties"><dt class="property-required"
             title="Required">
         <span id="label_csharp">
 <a href="#label_csharp" style="color: inherit; text-decoration: inherit;">Label</a>
@@ -202,8 +171,7 @@ The SamlApp resource accepts the following [input]({{< relref "/docs/intro/conce
         <span class="property-type">string</span>
     </dt>
     <dd>{{% md %}}Pretty name of app.
-{{% /md %}}</dd>
-    <dt class="property-optional"
+{{% /md %}}</dd><dt class="property-optional"
             title="Optional">
         <span id="accessibilityerrorredirecturl_csharp">
 <a href="#accessibilityerrorredirecturl_csharp" style="color: inherit; text-decoration: inherit;">Accessibility<wbr>Error<wbr>Redirect<wbr>Url</a>
@@ -212,8 +180,7 @@ The SamlApp resource accepts the following [input]({{< relref "/docs/intro/conce
         <span class="property-type">string</span>
     </dt>
     <dd>{{% md %}}Custom error page URL
-{{% /md %}}</dd>
-    <dt class="property-optional"
+{{% /md %}}</dd><dt class="property-optional"
             title="Optional">
         <span id="accessibilityloginredirecturl_csharp">
 <a href="#accessibilityloginredirecturl_csharp" style="color: inherit; text-decoration: inherit;">Accessibility<wbr>Login<wbr>Redirect<wbr>Url</a>
@@ -222,8 +189,7 @@ The SamlApp resource accepts the following [input]({{< relref "/docs/intro/conce
         <span class="property-type">string</span>
     </dt>
     <dd>{{% md %}}Custom login page URL
-{{% /md %}}</dd>
-    <dt class="property-optional"
+{{% /md %}}</dd><dt class="property-optional"
             title="Optional">
         <span id="accessibilityselfservice_csharp">
 <a href="#accessibilityselfservice_csharp" style="color: inherit; text-decoration: inherit;">Accessibility<wbr>Self<wbr>Service</a>
@@ -232,8 +198,7 @@ The SamlApp resource accepts the following [input]({{< relref "/docs/intro/conce
         <span class="property-type">bool</span>
     </dt>
     <dd>{{% md %}}Enable self service
-{{% /md %}}</dd>
-    <dt class="property-optional"
+{{% /md %}}</dd><dt class="property-optional"
             title="Optional">
         <span id="acsendpoints_csharp">
 <a href="#acsendpoints_csharp" style="color: inherit; text-decoration: inherit;">Acs<wbr>Endpoints</a>
@@ -242,8 +207,7 @@ The SamlApp resource accepts the following [input]({{< relref "/docs/intro/conce
         <span class="property-type">List&lt;string&gt;</span>
     </dt>
     <dd>{{% md %}}List of ACS endpoints for this SAML application
-{{% /md %}}</dd>
-    <dt class="property-optional"
+{{% /md %}}</dd><dt class="property-optional"
             title="Optional">
         <span id="appsettingsjson_csharp">
 <a href="#appsettingsjson_csharp" style="color: inherit; text-decoration: inherit;">App<wbr>Settings<wbr>Json</a>
@@ -252,8 +216,7 @@ The SamlApp resource accepts the following [input]({{< relref "/docs/intro/conce
         <span class="property-type">string</span>
     </dt>
     <dd>{{% md %}}Application settings in JSON format
-{{% /md %}}</dd>
-    <dt class="property-optional"
+{{% /md %}}</dd><dt class="property-optional"
             title="Optional">
         <span id="assertionsigned_csharp">
 <a href="#assertionsigned_csharp" style="color: inherit; text-decoration: inherit;">Assertion<wbr>Signed</a>
@@ -262,8 +225,7 @@ The SamlApp resource accepts the following [input]({{< relref "/docs/intro/conce
         <span class="property-type">bool</span>
     </dt>
     <dd>{{% md %}}Determines whether the SAML assertion is digitally signed
-{{% /md %}}</dd>
-    <dt class="property-optional"
+{{% /md %}}</dd><dt class="property-optional"
             title="Optional">
         <span id="attributestatements_csharp">
 <a href="#attributestatements_csharp" style="color: inherit; text-decoration: inherit;">Attribute<wbr>Statements</a>
@@ -271,8 +233,7 @@ The SamlApp resource accepts the following [input]({{< relref "/docs/intro/conce
         <span class="property-indicator"></span>
         <span class="property-type"><a href="#samlappattributestatement">List&lt;Saml<wbr>App<wbr>Attribute<wbr>Statement<wbr>Args&gt;</a></span>
     </dt>
-    <dd>{{% md %}}{{% /md %}}</dd>
-    <dt class="property-optional"
+    <dd>{{% md %}}{{% /md %}}</dd><dt class="property-optional"
             title="Optional">
         <span id="audience_csharp">
 <a href="#audience_csharp" style="color: inherit; text-decoration: inherit;">Audience</a>
@@ -281,8 +242,7 @@ The SamlApp resource accepts the following [input]({{< relref "/docs/intro/conce
         <span class="property-type">string</span>
     </dt>
     <dd>{{% md %}}Audience Restriction
-{{% /md %}}</dd>
-    <dt class="property-optional"
+{{% /md %}}</dd><dt class="property-optional"
             title="Optional">
         <span id="authncontextclassref_csharp">
 <a href="#authncontextclassref_csharp" style="color: inherit; text-decoration: inherit;">Authn<wbr>Context<wbr>Class<wbr>Ref</a>
@@ -291,8 +251,7 @@ The SamlApp resource accepts the following [input]({{< relref "/docs/intro/conce
         <span class="property-type">string</span>
     </dt>
     <dd>{{% md %}}Identifies the SAML authentication context class for the assertion’s authentication statement
-{{% /md %}}</dd>
-    <dt class="property-optional"
+{{% /md %}}</dd><dt class="property-optional"
             title="Optional">
         <span id="autosubmittoolbar_csharp">
 <a href="#autosubmittoolbar_csharp" style="color: inherit; text-decoration: inherit;">Auto<wbr>Submit<wbr>Toolbar</a>
@@ -301,8 +260,7 @@ The SamlApp resource accepts the following [input]({{< relref "/docs/intro/conce
         <span class="property-type">bool</span>
     </dt>
     <dd>{{% md %}}Display auto submit toolbar
-{{% /md %}}</dd>
-    <dt class="property-optional"
+{{% /md %}}</dd><dt class="property-optional"
             title="Optional">
         <span id="defaultrelaystate_csharp">
 <a href="#defaultrelaystate_csharp" style="color: inherit; text-decoration: inherit;">Default<wbr>Relay<wbr>State</a>
@@ -311,8 +269,7 @@ The SamlApp resource accepts the following [input]({{< relref "/docs/intro/conce
         <span class="property-type">string</span>
     </dt>
     <dd>{{% md %}}Identifies a specific application resource in an IDP initiated SSO scenario.
-{{% /md %}}</dd>
-    <dt class="property-optional"
+{{% /md %}}</dd><dt class="property-optional"
             title="Optional">
         <span id="destination_csharp">
 <a href="#destination_csharp" style="color: inherit; text-decoration: inherit;">Destination</a>
@@ -321,8 +278,7 @@ The SamlApp resource accepts the following [input]({{< relref "/docs/intro/conce
         <span class="property-type">string</span>
     </dt>
     <dd>{{% md %}}Identifies the location where the SAML response is intended to be sent inside of the SAML assertion
-{{% /md %}}</dd>
-    <dt class="property-optional"
+{{% /md %}}</dd><dt class="property-optional"
             title="Optional">
         <span id="digestalgorithm_csharp">
 <a href="#digestalgorithm_csharp" style="color: inherit; text-decoration: inherit;">Digest<wbr>Algorithm</a>
@@ -331,8 +287,7 @@ The SamlApp resource accepts the following [input]({{< relref "/docs/intro/conce
         <span class="property-type">string</span>
     </dt>
     <dd>{{% md %}}Determines the digest algorithm used to digitally sign the SAML assertion and response
-{{% /md %}}</dd>
-    <dt class="property-optional"
+{{% /md %}}</dd><dt class="property-optional"
             title="Optional">
         <span id="features_csharp">
 <a href="#features_csharp" style="color: inherit; text-decoration: inherit;">Features</a>
@@ -341,8 +296,7 @@ The SamlApp resource accepts the following [input]({{< relref "/docs/intro/conce
         <span class="property-type">List&lt;string&gt;</span>
     </dt>
     <dd>{{% md %}}features to enable
-{{% /md %}}</dd>
-    <dt class="property-optional"
+{{% /md %}}</dd><dt class="property-optional"
             title="Optional">
         <span id="groups_csharp">
 <a href="#groups_csharp" style="color: inherit; text-decoration: inherit;">Groups</a>
@@ -351,8 +305,7 @@ The SamlApp resource accepts the following [input]({{< relref "/docs/intro/conce
         <span class="property-type">List&lt;string&gt;</span>
     </dt>
     <dd>{{% md %}}Groups associated with the application
-{{% /md %}}</dd>
-    <dt class="property-optional"
+{{% /md %}}</dd><dt class="property-optional"
             title="Optional">
         <span id="hideios_csharp">
 <a href="#hideios_csharp" style="color: inherit; text-decoration: inherit;">Hide<wbr>Ios</a>
@@ -361,8 +314,7 @@ The SamlApp resource accepts the following [input]({{< relref "/docs/intro/conce
         <span class="property-type">bool</span>
     </dt>
     <dd>{{% md %}}Do not display application icon on mobile app
-{{% /md %}}</dd>
-    <dt class="property-optional"
+{{% /md %}}</dd><dt class="property-optional"
             title="Optional">
         <span id="hideweb_csharp">
 <a href="#hideweb_csharp" style="color: inherit; text-decoration: inherit;">Hide<wbr>Web</a>
@@ -371,8 +323,7 @@ The SamlApp resource accepts the following [input]({{< relref "/docs/intro/conce
         <span class="property-type">bool</span>
     </dt>
     <dd>{{% md %}}Do not display application icon to users
-{{% /md %}}</dd>
-    <dt class="property-optional"
+{{% /md %}}</dd><dt class="property-optional"
             title="Optional">
         <span id="honorforceauthn_csharp">
 <a href="#honorforceauthn_csharp" style="color: inherit; text-decoration: inherit;">Honor<wbr>Force<wbr>Authn</a>
@@ -381,8 +332,7 @@ The SamlApp resource accepts the following [input]({{< relref "/docs/intro/conce
         <span class="property-type">bool</span>
     </dt>
     <dd>{{% md %}}Prompt user to re-authenticate if SP asks for it
-{{% /md %}}</dd>
-    <dt class="property-optional"
+{{% /md %}}</dd><dt class="property-optional"
             title="Optional">
         <span id="idpissuer_csharp">
 <a href="#idpissuer_csharp" style="color: inherit; text-decoration: inherit;">Idp<wbr>Issuer</a>
@@ -391,8 +341,7 @@ The SamlApp resource accepts the following [input]({{< relref "/docs/intro/conce
         <span class="property-type">string</span>
     </dt>
     <dd>{{% md %}}SAML issuer ID
-{{% /md %}}</dd>
-    <dt class="property-optional"
+{{% /md %}}</dd><dt class="property-optional"
             title="Optional">
         <span id="keyname_csharp">
 <a href="#keyname_csharp" style="color: inherit; text-decoration: inherit;">Key<wbr>Name</a>
@@ -401,8 +350,7 @@ The SamlApp resource accepts the following [input]({{< relref "/docs/intro/conce
         <span class="property-type">string</span>
     </dt>
     <dd>{{% md %}}Certificate name. This modulates the rotation of keys. New name == new key.
-{{% /md %}}</dd>
-    <dt class="property-optional"
+{{% /md %}}</dd><dt class="property-optional"
             title="Optional">
         <span id="keyyearsvalid_csharp">
 <a href="#keyyearsvalid_csharp" style="color: inherit; text-decoration: inherit;">Key<wbr>Years<wbr>Valid</a>
@@ -411,8 +359,7 @@ The SamlApp resource accepts the following [input]({{< relref "/docs/intro/conce
         <span class="property-type">int</span>
     </dt>
     <dd>{{% md %}}Number of years the certificate is valid.
-{{% /md %}}</dd>
-    <dt class="property-optional"
+{{% /md %}}</dd><dt class="property-optional"
             title="Optional">
         <span id="preconfiguredapp_csharp">
 <a href="#preconfiguredapp_csharp" style="color: inherit; text-decoration: inherit;">Preconfigured<wbr>App</a>
@@ -421,8 +368,7 @@ The SamlApp resource accepts the following [input]({{< relref "/docs/intro/conce
         <span class="property-type">string</span>
     </dt>
     <dd>{{% md %}}Name of preexisting SAML application. For instance 'slack'
-{{% /md %}}</dd>
-    <dt class="property-optional"
+{{% /md %}}</dd><dt class="property-optional"
             title="Optional">
         <span id="recipient_csharp">
 <a href="#recipient_csharp" style="color: inherit; text-decoration: inherit;">Recipient</a>
@@ -431,8 +377,7 @@ The SamlApp resource accepts the following [input]({{< relref "/docs/intro/conce
         <span class="property-type">string</span>
     </dt>
     <dd>{{% md %}}The location where the app may present the SAML assertion
-{{% /md %}}</dd>
-    <dt class="property-optional"
+{{% /md %}}</dd><dt class="property-optional"
             title="Optional">
         <span id="requestcompressed_csharp">
 <a href="#requestcompressed_csharp" style="color: inherit; text-decoration: inherit;">Request<wbr>Compressed</a>
@@ -441,8 +386,7 @@ The SamlApp resource accepts the following [input]({{< relref "/docs/intro/conce
         <span class="property-type">bool</span>
     </dt>
     <dd>{{% md %}}Denotes whether the request is compressed or not.
-{{% /md %}}</dd>
-    <dt class="property-optional"
+{{% /md %}}</dd><dt class="property-optional"
             title="Optional">
         <span id="responsesigned_csharp">
 <a href="#responsesigned_csharp" style="color: inherit; text-decoration: inherit;">Response<wbr>Signed</a>
@@ -451,8 +395,7 @@ The SamlApp resource accepts the following [input]({{< relref "/docs/intro/conce
         <span class="property-type">bool</span>
     </dt>
     <dd>{{% md %}}Determines whether the SAML auth response message is digitally signed
-{{% /md %}}</dd>
-    <dt class="property-optional"
+{{% /md %}}</dd><dt class="property-optional"
             title="Optional">
         <span id="signaturealgorithm_csharp">
 <a href="#signaturealgorithm_csharp" style="color: inherit; text-decoration: inherit;">Signature<wbr>Algorithm</a>
@@ -461,8 +404,7 @@ The SamlApp resource accepts the following [input]({{< relref "/docs/intro/conce
         <span class="property-type">string</span>
     </dt>
     <dd>{{% md %}}Signature algorithm used ot digitally sign the assertion and response
-{{% /md %}}</dd>
-    <dt class="property-optional"
+{{% /md %}}</dd><dt class="property-optional"
             title="Optional">
         <span id="singlelogoutcertificate_csharp">
 <a href="#singlelogoutcertificate_csharp" style="color: inherit; text-decoration: inherit;">Single<wbr>Logout<wbr>Certificate</a>
@@ -471,8 +413,7 @@ The SamlApp resource accepts the following [input]({{< relref "/docs/intro/conce
         <span class="property-type">string</span>
     </dt>
     <dd>{{% md %}}x509 encoded certificate that the Service Provider uses to sign Single Logout requests
-{{% /md %}}</dd>
-    <dt class="property-optional"
+{{% /md %}}</dd><dt class="property-optional"
             title="Optional">
         <span id="singlelogoutissuer_csharp">
 <a href="#singlelogoutissuer_csharp" style="color: inherit; text-decoration: inherit;">Single<wbr>Logout<wbr>Issuer</a>
@@ -481,8 +422,7 @@ The SamlApp resource accepts the following [input]({{< relref "/docs/intro/conce
         <span class="property-type">string</span>
     </dt>
     <dd>{{% md %}}The issuer of the Service Provider that generates the Single Logout request
-{{% /md %}}</dd>
-    <dt class="property-optional"
+{{% /md %}}</dd><dt class="property-optional"
             title="Optional">
         <span id="singlelogouturl_csharp">
 <a href="#singlelogouturl_csharp" style="color: inherit; text-decoration: inherit;">Single<wbr>Logout<wbr>Url</a>
@@ -491,8 +431,7 @@ The SamlApp resource accepts the following [input]({{< relref "/docs/intro/conce
         <span class="property-type">string</span>
     </dt>
     <dd>{{% md %}}The location where the logout response is sent
-{{% /md %}}</dd>
-    <dt class="property-optional"
+{{% /md %}}</dd><dt class="property-optional"
             title="Optional">
         <span id="spissuer_csharp">
 <a href="#spissuer_csharp" style="color: inherit; text-decoration: inherit;">Sp<wbr>Issuer</a>
@@ -501,8 +440,7 @@ The SamlApp resource accepts the following [input]({{< relref "/docs/intro/conce
         <span class="property-type">string</span>
     </dt>
     <dd>{{% md %}}SAML SP issuer ID
-{{% /md %}}</dd>
-    <dt class="property-optional"
+{{% /md %}}</dd><dt class="property-optional"
             title="Optional">
         <span id="ssourl_csharp">
 <a href="#ssourl_csharp" style="color: inherit; text-decoration: inherit;">Sso<wbr>Url</a>
@@ -511,8 +449,7 @@ The SamlApp resource accepts the following [input]({{< relref "/docs/intro/conce
         <span class="property-type">string</span>
     </dt>
     <dd>{{% md %}}Single Sign On URL
-{{% /md %}}</dd>
-    <dt class="property-optional"
+{{% /md %}}</dd><dt class="property-optional"
             title="Optional">
         <span id="status_csharp">
 <a href="#status_csharp" style="color: inherit; text-decoration: inherit;">Status</a>
@@ -521,8 +458,7 @@ The SamlApp resource accepts the following [input]({{< relref "/docs/intro/conce
         <span class="property-type">string</span>
     </dt>
     <dd>{{% md %}}Status of application.
-{{% /md %}}</dd>
-    <dt class="property-optional"
+{{% /md %}}</dd><dt class="property-optional"
             title="Optional">
         <span id="subjectnameidformat_csharp">
 <a href="#subjectnameidformat_csharp" style="color: inherit; text-decoration: inherit;">Subject<wbr>Name<wbr>Id<wbr>Format</a>
@@ -531,8 +467,7 @@ The SamlApp resource accepts the following [input]({{< relref "/docs/intro/conce
         <span class="property-type">string</span>
     </dt>
     <dd>{{% md %}}Identifies the SAML processing rules.
-{{% /md %}}</dd>
-    <dt class="property-optional"
+{{% /md %}}</dd><dt class="property-optional"
             title="Optional">
         <span id="subjectnameidtemplate_csharp">
 <a href="#subjectnameidtemplate_csharp" style="color: inherit; text-decoration: inherit;">Subject<wbr>Name<wbr>Id<wbr>Template</a>
@@ -541,8 +476,7 @@ The SamlApp resource accepts the following [input]({{< relref "/docs/intro/conce
         <span class="property-type">string</span>
     </dt>
     <dd>{{% md %}}Template for app user's username when a user is assigned to the app
-{{% /md %}}</dd>
-    <dt class="property-optional"
+{{% /md %}}</dd><dt class="property-optional"
             title="Optional">
         <span id="usernametemplate_csharp">
 <a href="#usernametemplate_csharp" style="color: inherit; text-decoration: inherit;">User<wbr>Name<wbr>Template</a>
@@ -551,8 +485,7 @@ The SamlApp resource accepts the following [input]({{< relref "/docs/intro/conce
         <span class="property-type">string</span>
     </dt>
     <dd>{{% md %}}Username template
-{{% /md %}}</dd>
-    <dt class="property-optional"
+{{% /md %}}</dd><dt class="property-optional"
             title="Optional">
         <span id="usernametemplatesuffix_csharp">
 <a href="#usernametemplatesuffix_csharp" style="color: inherit; text-decoration: inherit;">User<wbr>Name<wbr>Template<wbr>Suffix</a>
@@ -561,8 +494,7 @@ The SamlApp resource accepts the following [input]({{< relref "/docs/intro/conce
         <span class="property-type">string</span>
     </dt>
     <dd>{{% md %}}Username template suffix
-{{% /md %}}</dd>
-    <dt class="property-optional"
+{{% /md %}}</dd><dt class="property-optional"
             title="Optional">
         <span id="usernametemplatetype_csharp">
 <a href="#usernametemplatetype_csharp" style="color: inherit; text-decoration: inherit;">User<wbr>Name<wbr>Template<wbr>Type</a>
@@ -571,8 +503,7 @@ The SamlApp resource accepts the following [input]({{< relref "/docs/intro/conce
         <span class="property-type">string</span>
     </dt>
     <dd>{{% md %}}Username template type
-{{% /md %}}</dd>
-    <dt class="property-optional"
+{{% /md %}}</dd><dt class="property-optional"
             title="Optional">
         <span id="users_csharp">
 <a href="#users_csharp" style="color: inherit; text-decoration: inherit;">Users</a>
@@ -581,14 +512,11 @@ The SamlApp resource accepts the following [input]({{< relref "/docs/intro/conce
         <span class="property-type"><a href="#samlappuser">List&lt;Saml<wbr>App<wbr>User<wbr>Args&gt;</a></span>
     </dt>
     <dd>{{% md %}}Users associated with the application
-{{% /md %}}</dd>
-</dl>
+{{% /md %}}</dd></dl>
 {{% /choosable %}}
 
 {{% choosable language go %}}
-<dl class="resources-properties">
-
-    <dt class="property-required"
+<dl class="resources-properties"><dt class="property-required"
             title="Required">
         <span id="label_go">
 <a href="#label_go" style="color: inherit; text-decoration: inherit;">Label</a>
@@ -597,8 +525,7 @@ The SamlApp resource accepts the following [input]({{< relref "/docs/intro/conce
         <span class="property-type">string</span>
     </dt>
     <dd>{{% md %}}Pretty name of app.
-{{% /md %}}</dd>
-    <dt class="property-optional"
+{{% /md %}}</dd><dt class="property-optional"
             title="Optional">
         <span id="accessibilityerrorredirecturl_go">
 <a href="#accessibilityerrorredirecturl_go" style="color: inherit; text-decoration: inherit;">Accessibility<wbr>Error<wbr>Redirect<wbr>Url</a>
@@ -607,8 +534,7 @@ The SamlApp resource accepts the following [input]({{< relref "/docs/intro/conce
         <span class="property-type">string</span>
     </dt>
     <dd>{{% md %}}Custom error page URL
-{{% /md %}}</dd>
-    <dt class="property-optional"
+{{% /md %}}</dd><dt class="property-optional"
             title="Optional">
         <span id="accessibilityloginredirecturl_go">
 <a href="#accessibilityloginredirecturl_go" style="color: inherit; text-decoration: inherit;">Accessibility<wbr>Login<wbr>Redirect<wbr>Url</a>
@@ -617,8 +543,7 @@ The SamlApp resource accepts the following [input]({{< relref "/docs/intro/conce
         <span class="property-type">string</span>
     </dt>
     <dd>{{% md %}}Custom login page URL
-{{% /md %}}</dd>
-    <dt class="property-optional"
+{{% /md %}}</dd><dt class="property-optional"
             title="Optional">
         <span id="accessibilityselfservice_go">
 <a href="#accessibilityselfservice_go" style="color: inherit; text-decoration: inherit;">Accessibility<wbr>Self<wbr>Service</a>
@@ -627,8 +552,7 @@ The SamlApp resource accepts the following [input]({{< relref "/docs/intro/conce
         <span class="property-type">bool</span>
     </dt>
     <dd>{{% md %}}Enable self service
-{{% /md %}}</dd>
-    <dt class="property-optional"
+{{% /md %}}</dd><dt class="property-optional"
             title="Optional">
         <span id="acsendpoints_go">
 <a href="#acsendpoints_go" style="color: inherit; text-decoration: inherit;">Acs<wbr>Endpoints</a>
@@ -637,8 +561,7 @@ The SamlApp resource accepts the following [input]({{< relref "/docs/intro/conce
         <span class="property-type">[]string</span>
     </dt>
     <dd>{{% md %}}List of ACS endpoints for this SAML application
-{{% /md %}}</dd>
-    <dt class="property-optional"
+{{% /md %}}</dd><dt class="property-optional"
             title="Optional">
         <span id="appsettingsjson_go">
 <a href="#appsettingsjson_go" style="color: inherit; text-decoration: inherit;">App<wbr>Settings<wbr>Json</a>
@@ -647,8 +570,7 @@ The SamlApp resource accepts the following [input]({{< relref "/docs/intro/conce
         <span class="property-type">string</span>
     </dt>
     <dd>{{% md %}}Application settings in JSON format
-{{% /md %}}</dd>
-    <dt class="property-optional"
+{{% /md %}}</dd><dt class="property-optional"
             title="Optional">
         <span id="assertionsigned_go">
 <a href="#assertionsigned_go" style="color: inherit; text-decoration: inherit;">Assertion<wbr>Signed</a>
@@ -657,8 +579,7 @@ The SamlApp resource accepts the following [input]({{< relref "/docs/intro/conce
         <span class="property-type">bool</span>
     </dt>
     <dd>{{% md %}}Determines whether the SAML assertion is digitally signed
-{{% /md %}}</dd>
-    <dt class="property-optional"
+{{% /md %}}</dd><dt class="property-optional"
             title="Optional">
         <span id="attributestatements_go">
 <a href="#attributestatements_go" style="color: inherit; text-decoration: inherit;">Attribute<wbr>Statements</a>
@@ -666,8 +587,7 @@ The SamlApp resource accepts the following [input]({{< relref "/docs/intro/conce
         <span class="property-indicator"></span>
         <span class="property-type"><a href="#samlappattributestatement">[]Saml<wbr>App<wbr>Attribute<wbr>Statement</a></span>
     </dt>
-    <dd>{{% md %}}{{% /md %}}</dd>
-    <dt class="property-optional"
+    <dd>{{% md %}}{{% /md %}}</dd><dt class="property-optional"
             title="Optional">
         <span id="audience_go">
 <a href="#audience_go" style="color: inherit; text-decoration: inherit;">Audience</a>
@@ -676,8 +596,7 @@ The SamlApp resource accepts the following [input]({{< relref "/docs/intro/conce
         <span class="property-type">string</span>
     </dt>
     <dd>{{% md %}}Audience Restriction
-{{% /md %}}</dd>
-    <dt class="property-optional"
+{{% /md %}}</dd><dt class="property-optional"
             title="Optional">
         <span id="authncontextclassref_go">
 <a href="#authncontextclassref_go" style="color: inherit; text-decoration: inherit;">Authn<wbr>Context<wbr>Class<wbr>Ref</a>
@@ -686,8 +605,7 @@ The SamlApp resource accepts the following [input]({{< relref "/docs/intro/conce
         <span class="property-type">string</span>
     </dt>
     <dd>{{% md %}}Identifies the SAML authentication context class for the assertion’s authentication statement
-{{% /md %}}</dd>
-    <dt class="property-optional"
+{{% /md %}}</dd><dt class="property-optional"
             title="Optional">
         <span id="autosubmittoolbar_go">
 <a href="#autosubmittoolbar_go" style="color: inherit; text-decoration: inherit;">Auto<wbr>Submit<wbr>Toolbar</a>
@@ -696,8 +614,7 @@ The SamlApp resource accepts the following [input]({{< relref "/docs/intro/conce
         <span class="property-type">bool</span>
     </dt>
     <dd>{{% md %}}Display auto submit toolbar
-{{% /md %}}</dd>
-    <dt class="property-optional"
+{{% /md %}}</dd><dt class="property-optional"
             title="Optional">
         <span id="defaultrelaystate_go">
 <a href="#defaultrelaystate_go" style="color: inherit; text-decoration: inherit;">Default<wbr>Relay<wbr>State</a>
@@ -706,8 +623,7 @@ The SamlApp resource accepts the following [input]({{< relref "/docs/intro/conce
         <span class="property-type">string</span>
     </dt>
     <dd>{{% md %}}Identifies a specific application resource in an IDP initiated SSO scenario.
-{{% /md %}}</dd>
-    <dt class="property-optional"
+{{% /md %}}</dd><dt class="property-optional"
             title="Optional">
         <span id="destination_go">
 <a href="#destination_go" style="color: inherit; text-decoration: inherit;">Destination</a>
@@ -716,8 +632,7 @@ The SamlApp resource accepts the following [input]({{< relref "/docs/intro/conce
         <span class="property-type">string</span>
     </dt>
     <dd>{{% md %}}Identifies the location where the SAML response is intended to be sent inside of the SAML assertion
-{{% /md %}}</dd>
-    <dt class="property-optional"
+{{% /md %}}</dd><dt class="property-optional"
             title="Optional">
         <span id="digestalgorithm_go">
 <a href="#digestalgorithm_go" style="color: inherit; text-decoration: inherit;">Digest<wbr>Algorithm</a>
@@ -726,8 +641,7 @@ The SamlApp resource accepts the following [input]({{< relref "/docs/intro/conce
         <span class="property-type">string</span>
     </dt>
     <dd>{{% md %}}Determines the digest algorithm used to digitally sign the SAML assertion and response
-{{% /md %}}</dd>
-    <dt class="property-optional"
+{{% /md %}}</dd><dt class="property-optional"
             title="Optional">
         <span id="features_go">
 <a href="#features_go" style="color: inherit; text-decoration: inherit;">Features</a>
@@ -736,8 +650,7 @@ The SamlApp resource accepts the following [input]({{< relref "/docs/intro/conce
         <span class="property-type">[]string</span>
     </dt>
     <dd>{{% md %}}features to enable
-{{% /md %}}</dd>
-    <dt class="property-optional"
+{{% /md %}}</dd><dt class="property-optional"
             title="Optional">
         <span id="groups_go">
 <a href="#groups_go" style="color: inherit; text-decoration: inherit;">Groups</a>
@@ -746,8 +659,7 @@ The SamlApp resource accepts the following [input]({{< relref "/docs/intro/conce
         <span class="property-type">[]string</span>
     </dt>
     <dd>{{% md %}}Groups associated with the application
-{{% /md %}}</dd>
-    <dt class="property-optional"
+{{% /md %}}</dd><dt class="property-optional"
             title="Optional">
         <span id="hideios_go">
 <a href="#hideios_go" style="color: inherit; text-decoration: inherit;">Hide<wbr>Ios</a>
@@ -756,8 +668,7 @@ The SamlApp resource accepts the following [input]({{< relref "/docs/intro/conce
         <span class="property-type">bool</span>
     </dt>
     <dd>{{% md %}}Do not display application icon on mobile app
-{{% /md %}}</dd>
-    <dt class="property-optional"
+{{% /md %}}</dd><dt class="property-optional"
             title="Optional">
         <span id="hideweb_go">
 <a href="#hideweb_go" style="color: inherit; text-decoration: inherit;">Hide<wbr>Web</a>
@@ -766,8 +677,7 @@ The SamlApp resource accepts the following [input]({{< relref "/docs/intro/conce
         <span class="property-type">bool</span>
     </dt>
     <dd>{{% md %}}Do not display application icon to users
-{{% /md %}}</dd>
-    <dt class="property-optional"
+{{% /md %}}</dd><dt class="property-optional"
             title="Optional">
         <span id="honorforceauthn_go">
 <a href="#honorforceauthn_go" style="color: inherit; text-decoration: inherit;">Honor<wbr>Force<wbr>Authn</a>
@@ -776,8 +686,7 @@ The SamlApp resource accepts the following [input]({{< relref "/docs/intro/conce
         <span class="property-type">bool</span>
     </dt>
     <dd>{{% md %}}Prompt user to re-authenticate if SP asks for it
-{{% /md %}}</dd>
-    <dt class="property-optional"
+{{% /md %}}</dd><dt class="property-optional"
             title="Optional">
         <span id="idpissuer_go">
 <a href="#idpissuer_go" style="color: inherit; text-decoration: inherit;">Idp<wbr>Issuer</a>
@@ -786,8 +695,7 @@ The SamlApp resource accepts the following [input]({{< relref "/docs/intro/conce
         <span class="property-type">string</span>
     </dt>
     <dd>{{% md %}}SAML issuer ID
-{{% /md %}}</dd>
-    <dt class="property-optional"
+{{% /md %}}</dd><dt class="property-optional"
             title="Optional">
         <span id="keyname_go">
 <a href="#keyname_go" style="color: inherit; text-decoration: inherit;">Key<wbr>Name</a>
@@ -796,8 +704,7 @@ The SamlApp resource accepts the following [input]({{< relref "/docs/intro/conce
         <span class="property-type">string</span>
     </dt>
     <dd>{{% md %}}Certificate name. This modulates the rotation of keys. New name == new key.
-{{% /md %}}</dd>
-    <dt class="property-optional"
+{{% /md %}}</dd><dt class="property-optional"
             title="Optional">
         <span id="keyyearsvalid_go">
 <a href="#keyyearsvalid_go" style="color: inherit; text-decoration: inherit;">Key<wbr>Years<wbr>Valid</a>
@@ -806,8 +713,7 @@ The SamlApp resource accepts the following [input]({{< relref "/docs/intro/conce
         <span class="property-type">int</span>
     </dt>
     <dd>{{% md %}}Number of years the certificate is valid.
-{{% /md %}}</dd>
-    <dt class="property-optional"
+{{% /md %}}</dd><dt class="property-optional"
             title="Optional">
         <span id="preconfiguredapp_go">
 <a href="#preconfiguredapp_go" style="color: inherit; text-decoration: inherit;">Preconfigured<wbr>App</a>
@@ -816,8 +722,7 @@ The SamlApp resource accepts the following [input]({{< relref "/docs/intro/conce
         <span class="property-type">string</span>
     </dt>
     <dd>{{% md %}}Name of preexisting SAML application. For instance 'slack'
-{{% /md %}}</dd>
-    <dt class="property-optional"
+{{% /md %}}</dd><dt class="property-optional"
             title="Optional">
         <span id="recipient_go">
 <a href="#recipient_go" style="color: inherit; text-decoration: inherit;">Recipient</a>
@@ -826,8 +731,7 @@ The SamlApp resource accepts the following [input]({{< relref "/docs/intro/conce
         <span class="property-type">string</span>
     </dt>
     <dd>{{% md %}}The location where the app may present the SAML assertion
-{{% /md %}}</dd>
-    <dt class="property-optional"
+{{% /md %}}</dd><dt class="property-optional"
             title="Optional">
         <span id="requestcompressed_go">
 <a href="#requestcompressed_go" style="color: inherit; text-decoration: inherit;">Request<wbr>Compressed</a>
@@ -836,8 +740,7 @@ The SamlApp resource accepts the following [input]({{< relref "/docs/intro/conce
         <span class="property-type">bool</span>
     </dt>
     <dd>{{% md %}}Denotes whether the request is compressed or not.
-{{% /md %}}</dd>
-    <dt class="property-optional"
+{{% /md %}}</dd><dt class="property-optional"
             title="Optional">
         <span id="responsesigned_go">
 <a href="#responsesigned_go" style="color: inherit; text-decoration: inherit;">Response<wbr>Signed</a>
@@ -846,8 +749,7 @@ The SamlApp resource accepts the following [input]({{< relref "/docs/intro/conce
         <span class="property-type">bool</span>
     </dt>
     <dd>{{% md %}}Determines whether the SAML auth response message is digitally signed
-{{% /md %}}</dd>
-    <dt class="property-optional"
+{{% /md %}}</dd><dt class="property-optional"
             title="Optional">
         <span id="signaturealgorithm_go">
 <a href="#signaturealgorithm_go" style="color: inherit; text-decoration: inherit;">Signature<wbr>Algorithm</a>
@@ -856,8 +758,7 @@ The SamlApp resource accepts the following [input]({{< relref "/docs/intro/conce
         <span class="property-type">string</span>
     </dt>
     <dd>{{% md %}}Signature algorithm used ot digitally sign the assertion and response
-{{% /md %}}</dd>
-    <dt class="property-optional"
+{{% /md %}}</dd><dt class="property-optional"
             title="Optional">
         <span id="singlelogoutcertificate_go">
 <a href="#singlelogoutcertificate_go" style="color: inherit; text-decoration: inherit;">Single<wbr>Logout<wbr>Certificate</a>
@@ -866,8 +767,7 @@ The SamlApp resource accepts the following [input]({{< relref "/docs/intro/conce
         <span class="property-type">string</span>
     </dt>
     <dd>{{% md %}}x509 encoded certificate that the Service Provider uses to sign Single Logout requests
-{{% /md %}}</dd>
-    <dt class="property-optional"
+{{% /md %}}</dd><dt class="property-optional"
             title="Optional">
         <span id="singlelogoutissuer_go">
 <a href="#singlelogoutissuer_go" style="color: inherit; text-decoration: inherit;">Single<wbr>Logout<wbr>Issuer</a>
@@ -876,8 +776,7 @@ The SamlApp resource accepts the following [input]({{< relref "/docs/intro/conce
         <span class="property-type">string</span>
     </dt>
     <dd>{{% md %}}The issuer of the Service Provider that generates the Single Logout request
-{{% /md %}}</dd>
-    <dt class="property-optional"
+{{% /md %}}</dd><dt class="property-optional"
             title="Optional">
         <span id="singlelogouturl_go">
 <a href="#singlelogouturl_go" style="color: inherit; text-decoration: inherit;">Single<wbr>Logout<wbr>Url</a>
@@ -886,8 +785,7 @@ The SamlApp resource accepts the following [input]({{< relref "/docs/intro/conce
         <span class="property-type">string</span>
     </dt>
     <dd>{{% md %}}The location where the logout response is sent
-{{% /md %}}</dd>
-    <dt class="property-optional"
+{{% /md %}}</dd><dt class="property-optional"
             title="Optional">
         <span id="spissuer_go">
 <a href="#spissuer_go" style="color: inherit; text-decoration: inherit;">Sp<wbr>Issuer</a>
@@ -896,8 +794,7 @@ The SamlApp resource accepts the following [input]({{< relref "/docs/intro/conce
         <span class="property-type">string</span>
     </dt>
     <dd>{{% md %}}SAML SP issuer ID
-{{% /md %}}</dd>
-    <dt class="property-optional"
+{{% /md %}}</dd><dt class="property-optional"
             title="Optional">
         <span id="ssourl_go">
 <a href="#ssourl_go" style="color: inherit; text-decoration: inherit;">Sso<wbr>Url</a>
@@ -906,8 +803,7 @@ The SamlApp resource accepts the following [input]({{< relref "/docs/intro/conce
         <span class="property-type">string</span>
     </dt>
     <dd>{{% md %}}Single Sign On URL
-{{% /md %}}</dd>
-    <dt class="property-optional"
+{{% /md %}}</dd><dt class="property-optional"
             title="Optional">
         <span id="status_go">
 <a href="#status_go" style="color: inherit; text-decoration: inherit;">Status</a>
@@ -916,8 +812,7 @@ The SamlApp resource accepts the following [input]({{< relref "/docs/intro/conce
         <span class="property-type">string</span>
     </dt>
     <dd>{{% md %}}Status of application.
-{{% /md %}}</dd>
-    <dt class="property-optional"
+{{% /md %}}</dd><dt class="property-optional"
             title="Optional">
         <span id="subjectnameidformat_go">
 <a href="#subjectnameidformat_go" style="color: inherit; text-decoration: inherit;">Subject<wbr>Name<wbr>Id<wbr>Format</a>
@@ -926,8 +821,7 @@ The SamlApp resource accepts the following [input]({{< relref "/docs/intro/conce
         <span class="property-type">string</span>
     </dt>
     <dd>{{% md %}}Identifies the SAML processing rules.
-{{% /md %}}</dd>
-    <dt class="property-optional"
+{{% /md %}}</dd><dt class="property-optional"
             title="Optional">
         <span id="subjectnameidtemplate_go">
 <a href="#subjectnameidtemplate_go" style="color: inherit; text-decoration: inherit;">Subject<wbr>Name<wbr>Id<wbr>Template</a>
@@ -936,8 +830,7 @@ The SamlApp resource accepts the following [input]({{< relref "/docs/intro/conce
         <span class="property-type">string</span>
     </dt>
     <dd>{{% md %}}Template for app user's username when a user is assigned to the app
-{{% /md %}}</dd>
-    <dt class="property-optional"
+{{% /md %}}</dd><dt class="property-optional"
             title="Optional">
         <span id="usernametemplate_go">
 <a href="#usernametemplate_go" style="color: inherit; text-decoration: inherit;">User<wbr>Name<wbr>Template</a>
@@ -946,8 +839,7 @@ The SamlApp resource accepts the following [input]({{< relref "/docs/intro/conce
         <span class="property-type">string</span>
     </dt>
     <dd>{{% md %}}Username template
-{{% /md %}}</dd>
-    <dt class="property-optional"
+{{% /md %}}</dd><dt class="property-optional"
             title="Optional">
         <span id="usernametemplatesuffix_go">
 <a href="#usernametemplatesuffix_go" style="color: inherit; text-decoration: inherit;">User<wbr>Name<wbr>Template<wbr>Suffix</a>
@@ -956,8 +848,7 @@ The SamlApp resource accepts the following [input]({{< relref "/docs/intro/conce
         <span class="property-type">string</span>
     </dt>
     <dd>{{% md %}}Username template suffix
-{{% /md %}}</dd>
-    <dt class="property-optional"
+{{% /md %}}</dd><dt class="property-optional"
             title="Optional">
         <span id="usernametemplatetype_go">
 <a href="#usernametemplatetype_go" style="color: inherit; text-decoration: inherit;">User<wbr>Name<wbr>Template<wbr>Type</a>
@@ -966,8 +857,7 @@ The SamlApp resource accepts the following [input]({{< relref "/docs/intro/conce
         <span class="property-type">string</span>
     </dt>
     <dd>{{% md %}}Username template type
-{{% /md %}}</dd>
-    <dt class="property-optional"
+{{% /md %}}</dd><dt class="property-optional"
             title="Optional">
         <span id="users_go">
 <a href="#users_go" style="color: inherit; text-decoration: inherit;">Users</a>
@@ -976,14 +866,11 @@ The SamlApp resource accepts the following [input]({{< relref "/docs/intro/conce
         <span class="property-type"><a href="#samlappuser">[]Saml<wbr>App<wbr>User</a></span>
     </dt>
     <dd>{{% md %}}Users associated with the application
-{{% /md %}}</dd>
-</dl>
+{{% /md %}}</dd></dl>
 {{% /choosable %}}
 
 {{% choosable language nodejs %}}
-<dl class="resources-properties">
-
-    <dt class="property-required"
+<dl class="resources-properties"><dt class="property-required"
             title="Required">
         <span id="label_nodejs">
 <a href="#label_nodejs" style="color: inherit; text-decoration: inherit;">label</a>
@@ -992,8 +879,7 @@ The SamlApp resource accepts the following [input]({{< relref "/docs/intro/conce
         <span class="property-type">string</span>
     </dt>
     <dd>{{% md %}}Pretty name of app.
-{{% /md %}}</dd>
-    <dt class="property-optional"
+{{% /md %}}</dd><dt class="property-optional"
             title="Optional">
         <span id="accessibilityerrorredirecturl_nodejs">
 <a href="#accessibilityerrorredirecturl_nodejs" style="color: inherit; text-decoration: inherit;">accessibility<wbr>Error<wbr>Redirect<wbr>Url</a>
@@ -1002,8 +888,7 @@ The SamlApp resource accepts the following [input]({{< relref "/docs/intro/conce
         <span class="property-type">string</span>
     </dt>
     <dd>{{% md %}}Custom error page URL
-{{% /md %}}</dd>
-    <dt class="property-optional"
+{{% /md %}}</dd><dt class="property-optional"
             title="Optional">
         <span id="accessibilityloginredirecturl_nodejs">
 <a href="#accessibilityloginredirecturl_nodejs" style="color: inherit; text-decoration: inherit;">accessibility<wbr>Login<wbr>Redirect<wbr>Url</a>
@@ -1012,8 +897,7 @@ The SamlApp resource accepts the following [input]({{< relref "/docs/intro/conce
         <span class="property-type">string</span>
     </dt>
     <dd>{{% md %}}Custom login page URL
-{{% /md %}}</dd>
-    <dt class="property-optional"
+{{% /md %}}</dd><dt class="property-optional"
             title="Optional">
         <span id="accessibilityselfservice_nodejs">
 <a href="#accessibilityselfservice_nodejs" style="color: inherit; text-decoration: inherit;">accessibility<wbr>Self<wbr>Service</a>
@@ -1022,8 +906,7 @@ The SamlApp resource accepts the following [input]({{< relref "/docs/intro/conce
         <span class="property-type">boolean</span>
     </dt>
     <dd>{{% md %}}Enable self service
-{{% /md %}}</dd>
-    <dt class="property-optional"
+{{% /md %}}</dd><dt class="property-optional"
             title="Optional">
         <span id="acsendpoints_nodejs">
 <a href="#acsendpoints_nodejs" style="color: inherit; text-decoration: inherit;">acs<wbr>Endpoints</a>
@@ -1032,8 +915,7 @@ The SamlApp resource accepts the following [input]({{< relref "/docs/intro/conce
         <span class="property-type">string[]</span>
     </dt>
     <dd>{{% md %}}List of ACS endpoints for this SAML application
-{{% /md %}}</dd>
-    <dt class="property-optional"
+{{% /md %}}</dd><dt class="property-optional"
             title="Optional">
         <span id="appsettingsjson_nodejs">
 <a href="#appsettingsjson_nodejs" style="color: inherit; text-decoration: inherit;">app<wbr>Settings<wbr>Json</a>
@@ -1042,8 +924,7 @@ The SamlApp resource accepts the following [input]({{< relref "/docs/intro/conce
         <span class="property-type">string</span>
     </dt>
     <dd>{{% md %}}Application settings in JSON format
-{{% /md %}}</dd>
-    <dt class="property-optional"
+{{% /md %}}</dd><dt class="property-optional"
             title="Optional">
         <span id="assertionsigned_nodejs">
 <a href="#assertionsigned_nodejs" style="color: inherit; text-decoration: inherit;">assertion<wbr>Signed</a>
@@ -1052,8 +933,7 @@ The SamlApp resource accepts the following [input]({{< relref "/docs/intro/conce
         <span class="property-type">boolean</span>
     </dt>
     <dd>{{% md %}}Determines whether the SAML assertion is digitally signed
-{{% /md %}}</dd>
-    <dt class="property-optional"
+{{% /md %}}</dd><dt class="property-optional"
             title="Optional">
         <span id="attributestatements_nodejs">
 <a href="#attributestatements_nodejs" style="color: inherit; text-decoration: inherit;">attribute<wbr>Statements</a>
@@ -1061,8 +941,7 @@ The SamlApp resource accepts the following [input]({{< relref "/docs/intro/conce
         <span class="property-indicator"></span>
         <span class="property-type"><a href="#samlappattributestatement">Saml<wbr>App<wbr>Attribute<wbr>Statement[]</a></span>
     </dt>
-    <dd>{{% md %}}{{% /md %}}</dd>
-    <dt class="property-optional"
+    <dd>{{% md %}}{{% /md %}}</dd><dt class="property-optional"
             title="Optional">
         <span id="audience_nodejs">
 <a href="#audience_nodejs" style="color: inherit; text-decoration: inherit;">audience</a>
@@ -1071,8 +950,7 @@ The SamlApp resource accepts the following [input]({{< relref "/docs/intro/conce
         <span class="property-type">string</span>
     </dt>
     <dd>{{% md %}}Audience Restriction
-{{% /md %}}</dd>
-    <dt class="property-optional"
+{{% /md %}}</dd><dt class="property-optional"
             title="Optional">
         <span id="authncontextclassref_nodejs">
 <a href="#authncontextclassref_nodejs" style="color: inherit; text-decoration: inherit;">authn<wbr>Context<wbr>Class<wbr>Ref</a>
@@ -1081,8 +959,7 @@ The SamlApp resource accepts the following [input]({{< relref "/docs/intro/conce
         <span class="property-type">string</span>
     </dt>
     <dd>{{% md %}}Identifies the SAML authentication context class for the assertion’s authentication statement
-{{% /md %}}</dd>
-    <dt class="property-optional"
+{{% /md %}}</dd><dt class="property-optional"
             title="Optional">
         <span id="autosubmittoolbar_nodejs">
 <a href="#autosubmittoolbar_nodejs" style="color: inherit; text-decoration: inherit;">auto<wbr>Submit<wbr>Toolbar</a>
@@ -1091,8 +968,7 @@ The SamlApp resource accepts the following [input]({{< relref "/docs/intro/conce
         <span class="property-type">boolean</span>
     </dt>
     <dd>{{% md %}}Display auto submit toolbar
-{{% /md %}}</dd>
-    <dt class="property-optional"
+{{% /md %}}</dd><dt class="property-optional"
             title="Optional">
         <span id="defaultrelaystate_nodejs">
 <a href="#defaultrelaystate_nodejs" style="color: inherit; text-decoration: inherit;">default<wbr>Relay<wbr>State</a>
@@ -1101,8 +977,7 @@ The SamlApp resource accepts the following [input]({{< relref "/docs/intro/conce
         <span class="property-type">string</span>
     </dt>
     <dd>{{% md %}}Identifies a specific application resource in an IDP initiated SSO scenario.
-{{% /md %}}</dd>
-    <dt class="property-optional"
+{{% /md %}}</dd><dt class="property-optional"
             title="Optional">
         <span id="destination_nodejs">
 <a href="#destination_nodejs" style="color: inherit; text-decoration: inherit;">destination</a>
@@ -1111,8 +986,7 @@ The SamlApp resource accepts the following [input]({{< relref "/docs/intro/conce
         <span class="property-type">string</span>
     </dt>
     <dd>{{% md %}}Identifies the location where the SAML response is intended to be sent inside of the SAML assertion
-{{% /md %}}</dd>
-    <dt class="property-optional"
+{{% /md %}}</dd><dt class="property-optional"
             title="Optional">
         <span id="digestalgorithm_nodejs">
 <a href="#digestalgorithm_nodejs" style="color: inherit; text-decoration: inherit;">digest<wbr>Algorithm</a>
@@ -1121,8 +995,7 @@ The SamlApp resource accepts the following [input]({{< relref "/docs/intro/conce
         <span class="property-type">string</span>
     </dt>
     <dd>{{% md %}}Determines the digest algorithm used to digitally sign the SAML assertion and response
-{{% /md %}}</dd>
-    <dt class="property-optional"
+{{% /md %}}</dd><dt class="property-optional"
             title="Optional">
         <span id="features_nodejs">
 <a href="#features_nodejs" style="color: inherit; text-decoration: inherit;">features</a>
@@ -1131,8 +1004,7 @@ The SamlApp resource accepts the following [input]({{< relref "/docs/intro/conce
         <span class="property-type">string[]</span>
     </dt>
     <dd>{{% md %}}features to enable
-{{% /md %}}</dd>
-    <dt class="property-optional"
+{{% /md %}}</dd><dt class="property-optional"
             title="Optional">
         <span id="groups_nodejs">
 <a href="#groups_nodejs" style="color: inherit; text-decoration: inherit;">groups</a>
@@ -1141,8 +1013,7 @@ The SamlApp resource accepts the following [input]({{< relref "/docs/intro/conce
         <span class="property-type">string[]</span>
     </dt>
     <dd>{{% md %}}Groups associated with the application
-{{% /md %}}</dd>
-    <dt class="property-optional"
+{{% /md %}}</dd><dt class="property-optional"
             title="Optional">
         <span id="hideios_nodejs">
 <a href="#hideios_nodejs" style="color: inherit; text-decoration: inherit;">hide<wbr>Ios</a>
@@ -1151,8 +1022,7 @@ The SamlApp resource accepts the following [input]({{< relref "/docs/intro/conce
         <span class="property-type">boolean</span>
     </dt>
     <dd>{{% md %}}Do not display application icon on mobile app
-{{% /md %}}</dd>
-    <dt class="property-optional"
+{{% /md %}}</dd><dt class="property-optional"
             title="Optional">
         <span id="hideweb_nodejs">
 <a href="#hideweb_nodejs" style="color: inherit; text-decoration: inherit;">hide<wbr>Web</a>
@@ -1161,8 +1031,7 @@ The SamlApp resource accepts the following [input]({{< relref "/docs/intro/conce
         <span class="property-type">boolean</span>
     </dt>
     <dd>{{% md %}}Do not display application icon to users
-{{% /md %}}</dd>
-    <dt class="property-optional"
+{{% /md %}}</dd><dt class="property-optional"
             title="Optional">
         <span id="honorforceauthn_nodejs">
 <a href="#honorforceauthn_nodejs" style="color: inherit; text-decoration: inherit;">honor<wbr>Force<wbr>Authn</a>
@@ -1171,8 +1040,7 @@ The SamlApp resource accepts the following [input]({{< relref "/docs/intro/conce
         <span class="property-type">boolean</span>
     </dt>
     <dd>{{% md %}}Prompt user to re-authenticate if SP asks for it
-{{% /md %}}</dd>
-    <dt class="property-optional"
+{{% /md %}}</dd><dt class="property-optional"
             title="Optional">
         <span id="idpissuer_nodejs">
 <a href="#idpissuer_nodejs" style="color: inherit; text-decoration: inherit;">idp<wbr>Issuer</a>
@@ -1181,8 +1049,7 @@ The SamlApp resource accepts the following [input]({{< relref "/docs/intro/conce
         <span class="property-type">string</span>
     </dt>
     <dd>{{% md %}}SAML issuer ID
-{{% /md %}}</dd>
-    <dt class="property-optional"
+{{% /md %}}</dd><dt class="property-optional"
             title="Optional">
         <span id="keyname_nodejs">
 <a href="#keyname_nodejs" style="color: inherit; text-decoration: inherit;">key<wbr>Name</a>
@@ -1191,8 +1058,7 @@ The SamlApp resource accepts the following [input]({{< relref "/docs/intro/conce
         <span class="property-type">string</span>
     </dt>
     <dd>{{% md %}}Certificate name. This modulates the rotation of keys. New name == new key.
-{{% /md %}}</dd>
-    <dt class="property-optional"
+{{% /md %}}</dd><dt class="property-optional"
             title="Optional">
         <span id="keyyearsvalid_nodejs">
 <a href="#keyyearsvalid_nodejs" style="color: inherit; text-decoration: inherit;">key<wbr>Years<wbr>Valid</a>
@@ -1201,8 +1067,7 @@ The SamlApp resource accepts the following [input]({{< relref "/docs/intro/conce
         <span class="property-type">number</span>
     </dt>
     <dd>{{% md %}}Number of years the certificate is valid.
-{{% /md %}}</dd>
-    <dt class="property-optional"
+{{% /md %}}</dd><dt class="property-optional"
             title="Optional">
         <span id="preconfiguredapp_nodejs">
 <a href="#preconfiguredapp_nodejs" style="color: inherit; text-decoration: inherit;">preconfigured<wbr>App</a>
@@ -1211,8 +1076,7 @@ The SamlApp resource accepts the following [input]({{< relref "/docs/intro/conce
         <span class="property-type">string</span>
     </dt>
     <dd>{{% md %}}Name of preexisting SAML application. For instance 'slack'
-{{% /md %}}</dd>
-    <dt class="property-optional"
+{{% /md %}}</dd><dt class="property-optional"
             title="Optional">
         <span id="recipient_nodejs">
 <a href="#recipient_nodejs" style="color: inherit; text-decoration: inherit;">recipient</a>
@@ -1221,8 +1085,7 @@ The SamlApp resource accepts the following [input]({{< relref "/docs/intro/conce
         <span class="property-type">string</span>
     </dt>
     <dd>{{% md %}}The location where the app may present the SAML assertion
-{{% /md %}}</dd>
-    <dt class="property-optional"
+{{% /md %}}</dd><dt class="property-optional"
             title="Optional">
         <span id="requestcompressed_nodejs">
 <a href="#requestcompressed_nodejs" style="color: inherit; text-decoration: inherit;">request<wbr>Compressed</a>
@@ -1231,8 +1094,7 @@ The SamlApp resource accepts the following [input]({{< relref "/docs/intro/conce
         <span class="property-type">boolean</span>
     </dt>
     <dd>{{% md %}}Denotes whether the request is compressed or not.
-{{% /md %}}</dd>
-    <dt class="property-optional"
+{{% /md %}}</dd><dt class="property-optional"
             title="Optional">
         <span id="responsesigned_nodejs">
 <a href="#responsesigned_nodejs" style="color: inherit; text-decoration: inherit;">response<wbr>Signed</a>
@@ -1241,8 +1103,7 @@ The SamlApp resource accepts the following [input]({{< relref "/docs/intro/conce
         <span class="property-type">boolean</span>
     </dt>
     <dd>{{% md %}}Determines whether the SAML auth response message is digitally signed
-{{% /md %}}</dd>
-    <dt class="property-optional"
+{{% /md %}}</dd><dt class="property-optional"
             title="Optional">
         <span id="signaturealgorithm_nodejs">
 <a href="#signaturealgorithm_nodejs" style="color: inherit; text-decoration: inherit;">signature<wbr>Algorithm</a>
@@ -1251,8 +1112,7 @@ The SamlApp resource accepts the following [input]({{< relref "/docs/intro/conce
         <span class="property-type">string</span>
     </dt>
     <dd>{{% md %}}Signature algorithm used ot digitally sign the assertion and response
-{{% /md %}}</dd>
-    <dt class="property-optional"
+{{% /md %}}</dd><dt class="property-optional"
             title="Optional">
         <span id="singlelogoutcertificate_nodejs">
 <a href="#singlelogoutcertificate_nodejs" style="color: inherit; text-decoration: inherit;">single<wbr>Logout<wbr>Certificate</a>
@@ -1261,8 +1121,7 @@ The SamlApp resource accepts the following [input]({{< relref "/docs/intro/conce
         <span class="property-type">string</span>
     </dt>
     <dd>{{% md %}}x509 encoded certificate that the Service Provider uses to sign Single Logout requests
-{{% /md %}}</dd>
-    <dt class="property-optional"
+{{% /md %}}</dd><dt class="property-optional"
             title="Optional">
         <span id="singlelogoutissuer_nodejs">
 <a href="#singlelogoutissuer_nodejs" style="color: inherit; text-decoration: inherit;">single<wbr>Logout<wbr>Issuer</a>
@@ -1271,8 +1130,7 @@ The SamlApp resource accepts the following [input]({{< relref "/docs/intro/conce
         <span class="property-type">string</span>
     </dt>
     <dd>{{% md %}}The issuer of the Service Provider that generates the Single Logout request
-{{% /md %}}</dd>
-    <dt class="property-optional"
+{{% /md %}}</dd><dt class="property-optional"
             title="Optional">
         <span id="singlelogouturl_nodejs">
 <a href="#singlelogouturl_nodejs" style="color: inherit; text-decoration: inherit;">single<wbr>Logout<wbr>Url</a>
@@ -1281,8 +1139,7 @@ The SamlApp resource accepts the following [input]({{< relref "/docs/intro/conce
         <span class="property-type">string</span>
     </dt>
     <dd>{{% md %}}The location where the logout response is sent
-{{% /md %}}</dd>
-    <dt class="property-optional"
+{{% /md %}}</dd><dt class="property-optional"
             title="Optional">
         <span id="spissuer_nodejs">
 <a href="#spissuer_nodejs" style="color: inherit; text-decoration: inherit;">sp<wbr>Issuer</a>
@@ -1291,8 +1148,7 @@ The SamlApp resource accepts the following [input]({{< relref "/docs/intro/conce
         <span class="property-type">string</span>
     </dt>
     <dd>{{% md %}}SAML SP issuer ID
-{{% /md %}}</dd>
-    <dt class="property-optional"
+{{% /md %}}</dd><dt class="property-optional"
             title="Optional">
         <span id="ssourl_nodejs">
 <a href="#ssourl_nodejs" style="color: inherit; text-decoration: inherit;">sso<wbr>Url</a>
@@ -1301,8 +1157,7 @@ The SamlApp resource accepts the following [input]({{< relref "/docs/intro/conce
         <span class="property-type">string</span>
     </dt>
     <dd>{{% md %}}Single Sign On URL
-{{% /md %}}</dd>
-    <dt class="property-optional"
+{{% /md %}}</dd><dt class="property-optional"
             title="Optional">
         <span id="status_nodejs">
 <a href="#status_nodejs" style="color: inherit; text-decoration: inherit;">status</a>
@@ -1311,8 +1166,7 @@ The SamlApp resource accepts the following [input]({{< relref "/docs/intro/conce
         <span class="property-type">string</span>
     </dt>
     <dd>{{% md %}}Status of application.
-{{% /md %}}</dd>
-    <dt class="property-optional"
+{{% /md %}}</dd><dt class="property-optional"
             title="Optional">
         <span id="subjectnameidformat_nodejs">
 <a href="#subjectnameidformat_nodejs" style="color: inherit; text-decoration: inherit;">subject<wbr>Name<wbr>Id<wbr>Format</a>
@@ -1321,8 +1175,7 @@ The SamlApp resource accepts the following [input]({{< relref "/docs/intro/conce
         <span class="property-type">string</span>
     </dt>
     <dd>{{% md %}}Identifies the SAML processing rules.
-{{% /md %}}</dd>
-    <dt class="property-optional"
+{{% /md %}}</dd><dt class="property-optional"
             title="Optional">
         <span id="subjectnameidtemplate_nodejs">
 <a href="#subjectnameidtemplate_nodejs" style="color: inherit; text-decoration: inherit;">subject<wbr>Name<wbr>Id<wbr>Template</a>
@@ -1331,8 +1184,7 @@ The SamlApp resource accepts the following [input]({{< relref "/docs/intro/conce
         <span class="property-type">string</span>
     </dt>
     <dd>{{% md %}}Template for app user's username when a user is assigned to the app
-{{% /md %}}</dd>
-    <dt class="property-optional"
+{{% /md %}}</dd><dt class="property-optional"
             title="Optional">
         <span id="usernametemplate_nodejs">
 <a href="#usernametemplate_nodejs" style="color: inherit; text-decoration: inherit;">user<wbr>Name<wbr>Template</a>
@@ -1341,8 +1193,7 @@ The SamlApp resource accepts the following [input]({{< relref "/docs/intro/conce
         <span class="property-type">string</span>
     </dt>
     <dd>{{% md %}}Username template
-{{% /md %}}</dd>
-    <dt class="property-optional"
+{{% /md %}}</dd><dt class="property-optional"
             title="Optional">
         <span id="usernametemplatesuffix_nodejs">
 <a href="#usernametemplatesuffix_nodejs" style="color: inherit; text-decoration: inherit;">user<wbr>Name<wbr>Template<wbr>Suffix</a>
@@ -1351,8 +1202,7 @@ The SamlApp resource accepts the following [input]({{< relref "/docs/intro/conce
         <span class="property-type">string</span>
     </dt>
     <dd>{{% md %}}Username template suffix
-{{% /md %}}</dd>
-    <dt class="property-optional"
+{{% /md %}}</dd><dt class="property-optional"
             title="Optional">
         <span id="usernametemplatetype_nodejs">
 <a href="#usernametemplatetype_nodejs" style="color: inherit; text-decoration: inherit;">user<wbr>Name<wbr>Template<wbr>Type</a>
@@ -1361,8 +1211,7 @@ The SamlApp resource accepts the following [input]({{< relref "/docs/intro/conce
         <span class="property-type">string</span>
     </dt>
     <dd>{{% md %}}Username template type
-{{% /md %}}</dd>
-    <dt class="property-optional"
+{{% /md %}}</dd><dt class="property-optional"
             title="Optional">
         <span id="users_nodejs">
 <a href="#users_nodejs" style="color: inherit; text-decoration: inherit;">users</a>
@@ -1371,14 +1220,11 @@ The SamlApp resource accepts the following [input]({{< relref "/docs/intro/conce
         <span class="property-type"><a href="#samlappuser">Saml<wbr>App<wbr>User[]</a></span>
     </dt>
     <dd>{{% md %}}Users associated with the application
-{{% /md %}}</dd>
-</dl>
+{{% /md %}}</dd></dl>
 {{% /choosable %}}
 
 {{% choosable language python %}}
-<dl class="resources-properties">
-
-    <dt class="property-required"
+<dl class="resources-properties"><dt class="property-required"
             title="Required">
         <span id="label_python">
 <a href="#label_python" style="color: inherit; text-decoration: inherit;">label</a>
@@ -1387,8 +1233,7 @@ The SamlApp resource accepts the following [input]({{< relref "/docs/intro/conce
         <span class="property-type">str</span>
     </dt>
     <dd>{{% md %}}Pretty name of app.
-{{% /md %}}</dd>
-    <dt class="property-optional"
+{{% /md %}}</dd><dt class="property-optional"
             title="Optional">
         <span id="accessibility_error_redirect_url_python">
 <a href="#accessibility_error_redirect_url_python" style="color: inherit; text-decoration: inherit;">accessibility_<wbr>error_<wbr>redirect_<wbr>url</a>
@@ -1397,8 +1242,7 @@ The SamlApp resource accepts the following [input]({{< relref "/docs/intro/conce
         <span class="property-type">str</span>
     </dt>
     <dd>{{% md %}}Custom error page URL
-{{% /md %}}</dd>
-    <dt class="property-optional"
+{{% /md %}}</dd><dt class="property-optional"
             title="Optional">
         <span id="accessibility_login_redirect_url_python">
 <a href="#accessibility_login_redirect_url_python" style="color: inherit; text-decoration: inherit;">accessibility_<wbr>login_<wbr>redirect_<wbr>url</a>
@@ -1407,8 +1251,7 @@ The SamlApp resource accepts the following [input]({{< relref "/docs/intro/conce
         <span class="property-type">str</span>
     </dt>
     <dd>{{% md %}}Custom login page URL
-{{% /md %}}</dd>
-    <dt class="property-optional"
+{{% /md %}}</dd><dt class="property-optional"
             title="Optional">
         <span id="accessibility_self_service_python">
 <a href="#accessibility_self_service_python" style="color: inherit; text-decoration: inherit;">accessibility_<wbr>self_<wbr>service</a>
@@ -1417,8 +1260,7 @@ The SamlApp resource accepts the following [input]({{< relref "/docs/intro/conce
         <span class="property-type">bool</span>
     </dt>
     <dd>{{% md %}}Enable self service
-{{% /md %}}</dd>
-    <dt class="property-optional"
+{{% /md %}}</dd><dt class="property-optional"
             title="Optional">
         <span id="acs_endpoints_python">
 <a href="#acs_endpoints_python" style="color: inherit; text-decoration: inherit;">acs_<wbr>endpoints</a>
@@ -1427,8 +1269,7 @@ The SamlApp resource accepts the following [input]({{< relref "/docs/intro/conce
         <span class="property-type">Sequence[str]</span>
     </dt>
     <dd>{{% md %}}List of ACS endpoints for this SAML application
-{{% /md %}}</dd>
-    <dt class="property-optional"
+{{% /md %}}</dd><dt class="property-optional"
             title="Optional">
         <span id="app_settings_json_python">
 <a href="#app_settings_json_python" style="color: inherit; text-decoration: inherit;">app_<wbr>settings_<wbr>json</a>
@@ -1437,8 +1278,7 @@ The SamlApp resource accepts the following [input]({{< relref "/docs/intro/conce
         <span class="property-type">str</span>
     </dt>
     <dd>{{% md %}}Application settings in JSON format
-{{% /md %}}</dd>
-    <dt class="property-optional"
+{{% /md %}}</dd><dt class="property-optional"
             title="Optional">
         <span id="assertion_signed_python">
 <a href="#assertion_signed_python" style="color: inherit; text-decoration: inherit;">assertion_<wbr>signed</a>
@@ -1447,8 +1287,7 @@ The SamlApp resource accepts the following [input]({{< relref "/docs/intro/conce
         <span class="property-type">bool</span>
     </dt>
     <dd>{{% md %}}Determines whether the SAML assertion is digitally signed
-{{% /md %}}</dd>
-    <dt class="property-optional"
+{{% /md %}}</dd><dt class="property-optional"
             title="Optional">
         <span id="attribute_statements_python">
 <a href="#attribute_statements_python" style="color: inherit; text-decoration: inherit;">attribute_<wbr>statements</a>
@@ -1456,8 +1295,7 @@ The SamlApp resource accepts the following [input]({{< relref "/docs/intro/conce
         <span class="property-indicator"></span>
         <span class="property-type"><a href="#samlappattributestatement">Sequence[Saml<wbr>App<wbr>Attribute<wbr>Statement<wbr>Args]</a></span>
     </dt>
-    <dd>{{% md %}}{{% /md %}}</dd>
-    <dt class="property-optional"
+    <dd>{{% md %}}{{% /md %}}</dd><dt class="property-optional"
             title="Optional">
         <span id="audience_python">
 <a href="#audience_python" style="color: inherit; text-decoration: inherit;">audience</a>
@@ -1466,8 +1304,7 @@ The SamlApp resource accepts the following [input]({{< relref "/docs/intro/conce
         <span class="property-type">str</span>
     </dt>
     <dd>{{% md %}}Audience Restriction
-{{% /md %}}</dd>
-    <dt class="property-optional"
+{{% /md %}}</dd><dt class="property-optional"
             title="Optional">
         <span id="authn_context_class_ref_python">
 <a href="#authn_context_class_ref_python" style="color: inherit; text-decoration: inherit;">authn_<wbr>context_<wbr>class_<wbr>ref</a>
@@ -1476,8 +1313,7 @@ The SamlApp resource accepts the following [input]({{< relref "/docs/intro/conce
         <span class="property-type">str</span>
     </dt>
     <dd>{{% md %}}Identifies the SAML authentication context class for the assertion’s authentication statement
-{{% /md %}}</dd>
-    <dt class="property-optional"
+{{% /md %}}</dd><dt class="property-optional"
             title="Optional">
         <span id="auto_submit_toolbar_python">
 <a href="#auto_submit_toolbar_python" style="color: inherit; text-decoration: inherit;">auto_<wbr>submit_<wbr>toolbar</a>
@@ -1486,8 +1322,7 @@ The SamlApp resource accepts the following [input]({{< relref "/docs/intro/conce
         <span class="property-type">bool</span>
     </dt>
     <dd>{{% md %}}Display auto submit toolbar
-{{% /md %}}</dd>
-    <dt class="property-optional"
+{{% /md %}}</dd><dt class="property-optional"
             title="Optional">
         <span id="default_relay_state_python">
 <a href="#default_relay_state_python" style="color: inherit; text-decoration: inherit;">default_<wbr>relay_<wbr>state</a>
@@ -1496,8 +1331,7 @@ The SamlApp resource accepts the following [input]({{< relref "/docs/intro/conce
         <span class="property-type">str</span>
     </dt>
     <dd>{{% md %}}Identifies a specific application resource in an IDP initiated SSO scenario.
-{{% /md %}}</dd>
-    <dt class="property-optional"
+{{% /md %}}</dd><dt class="property-optional"
             title="Optional">
         <span id="destination_python">
 <a href="#destination_python" style="color: inherit; text-decoration: inherit;">destination</a>
@@ -1506,8 +1340,7 @@ The SamlApp resource accepts the following [input]({{< relref "/docs/intro/conce
         <span class="property-type">str</span>
     </dt>
     <dd>{{% md %}}Identifies the location where the SAML response is intended to be sent inside of the SAML assertion
-{{% /md %}}</dd>
-    <dt class="property-optional"
+{{% /md %}}</dd><dt class="property-optional"
             title="Optional">
         <span id="digest_algorithm_python">
 <a href="#digest_algorithm_python" style="color: inherit; text-decoration: inherit;">digest_<wbr>algorithm</a>
@@ -1516,8 +1349,7 @@ The SamlApp resource accepts the following [input]({{< relref "/docs/intro/conce
         <span class="property-type">str</span>
     </dt>
     <dd>{{% md %}}Determines the digest algorithm used to digitally sign the SAML assertion and response
-{{% /md %}}</dd>
-    <dt class="property-optional"
+{{% /md %}}</dd><dt class="property-optional"
             title="Optional">
         <span id="features_python">
 <a href="#features_python" style="color: inherit; text-decoration: inherit;">features</a>
@@ -1526,8 +1358,7 @@ The SamlApp resource accepts the following [input]({{< relref "/docs/intro/conce
         <span class="property-type">Sequence[str]</span>
     </dt>
     <dd>{{% md %}}features to enable
-{{% /md %}}</dd>
-    <dt class="property-optional"
+{{% /md %}}</dd><dt class="property-optional"
             title="Optional">
         <span id="groups_python">
 <a href="#groups_python" style="color: inherit; text-decoration: inherit;">groups</a>
@@ -1536,8 +1367,7 @@ The SamlApp resource accepts the following [input]({{< relref "/docs/intro/conce
         <span class="property-type">Sequence[str]</span>
     </dt>
     <dd>{{% md %}}Groups associated with the application
-{{% /md %}}</dd>
-    <dt class="property-optional"
+{{% /md %}}</dd><dt class="property-optional"
             title="Optional">
         <span id="hide_ios_python">
 <a href="#hide_ios_python" style="color: inherit; text-decoration: inherit;">hide_<wbr>ios</a>
@@ -1546,8 +1376,7 @@ The SamlApp resource accepts the following [input]({{< relref "/docs/intro/conce
         <span class="property-type">bool</span>
     </dt>
     <dd>{{% md %}}Do not display application icon on mobile app
-{{% /md %}}</dd>
-    <dt class="property-optional"
+{{% /md %}}</dd><dt class="property-optional"
             title="Optional">
         <span id="hide_web_python">
 <a href="#hide_web_python" style="color: inherit; text-decoration: inherit;">hide_<wbr>web</a>
@@ -1556,8 +1385,7 @@ The SamlApp resource accepts the following [input]({{< relref "/docs/intro/conce
         <span class="property-type">bool</span>
     </dt>
     <dd>{{% md %}}Do not display application icon to users
-{{% /md %}}</dd>
-    <dt class="property-optional"
+{{% /md %}}</dd><dt class="property-optional"
             title="Optional">
         <span id="honor_force_authn_python">
 <a href="#honor_force_authn_python" style="color: inherit; text-decoration: inherit;">honor_<wbr>force_<wbr>authn</a>
@@ -1566,8 +1394,7 @@ The SamlApp resource accepts the following [input]({{< relref "/docs/intro/conce
         <span class="property-type">bool</span>
     </dt>
     <dd>{{% md %}}Prompt user to re-authenticate if SP asks for it
-{{% /md %}}</dd>
-    <dt class="property-optional"
+{{% /md %}}</dd><dt class="property-optional"
             title="Optional">
         <span id="idp_issuer_python">
 <a href="#idp_issuer_python" style="color: inherit; text-decoration: inherit;">idp_<wbr>issuer</a>
@@ -1576,8 +1403,7 @@ The SamlApp resource accepts the following [input]({{< relref "/docs/intro/conce
         <span class="property-type">str</span>
     </dt>
     <dd>{{% md %}}SAML issuer ID
-{{% /md %}}</dd>
-    <dt class="property-optional"
+{{% /md %}}</dd><dt class="property-optional"
             title="Optional">
         <span id="key_name_python">
 <a href="#key_name_python" style="color: inherit; text-decoration: inherit;">key_<wbr>name</a>
@@ -1586,8 +1412,7 @@ The SamlApp resource accepts the following [input]({{< relref "/docs/intro/conce
         <span class="property-type">str</span>
     </dt>
     <dd>{{% md %}}Certificate name. This modulates the rotation of keys. New name == new key.
-{{% /md %}}</dd>
-    <dt class="property-optional"
+{{% /md %}}</dd><dt class="property-optional"
             title="Optional">
         <span id="key_years_valid_python">
 <a href="#key_years_valid_python" style="color: inherit; text-decoration: inherit;">key_<wbr>years_<wbr>valid</a>
@@ -1596,8 +1421,7 @@ The SamlApp resource accepts the following [input]({{< relref "/docs/intro/conce
         <span class="property-type">int</span>
     </dt>
     <dd>{{% md %}}Number of years the certificate is valid.
-{{% /md %}}</dd>
-    <dt class="property-optional"
+{{% /md %}}</dd><dt class="property-optional"
             title="Optional">
         <span id="preconfigured_app_python">
 <a href="#preconfigured_app_python" style="color: inherit; text-decoration: inherit;">preconfigured_<wbr>app</a>
@@ -1606,8 +1430,7 @@ The SamlApp resource accepts the following [input]({{< relref "/docs/intro/conce
         <span class="property-type">str</span>
     </dt>
     <dd>{{% md %}}Name of preexisting SAML application. For instance 'slack'
-{{% /md %}}</dd>
-    <dt class="property-optional"
+{{% /md %}}</dd><dt class="property-optional"
             title="Optional">
         <span id="recipient_python">
 <a href="#recipient_python" style="color: inherit; text-decoration: inherit;">recipient</a>
@@ -1616,8 +1439,7 @@ The SamlApp resource accepts the following [input]({{< relref "/docs/intro/conce
         <span class="property-type">str</span>
     </dt>
     <dd>{{% md %}}The location where the app may present the SAML assertion
-{{% /md %}}</dd>
-    <dt class="property-optional"
+{{% /md %}}</dd><dt class="property-optional"
             title="Optional">
         <span id="request_compressed_python">
 <a href="#request_compressed_python" style="color: inherit; text-decoration: inherit;">request_<wbr>compressed</a>
@@ -1626,8 +1448,7 @@ The SamlApp resource accepts the following [input]({{< relref "/docs/intro/conce
         <span class="property-type">bool</span>
     </dt>
     <dd>{{% md %}}Denotes whether the request is compressed or not.
-{{% /md %}}</dd>
-    <dt class="property-optional"
+{{% /md %}}</dd><dt class="property-optional"
             title="Optional">
         <span id="response_signed_python">
 <a href="#response_signed_python" style="color: inherit; text-decoration: inherit;">response_<wbr>signed</a>
@@ -1636,8 +1457,7 @@ The SamlApp resource accepts the following [input]({{< relref "/docs/intro/conce
         <span class="property-type">bool</span>
     </dt>
     <dd>{{% md %}}Determines whether the SAML auth response message is digitally signed
-{{% /md %}}</dd>
-    <dt class="property-optional"
+{{% /md %}}</dd><dt class="property-optional"
             title="Optional">
         <span id="signature_algorithm_python">
 <a href="#signature_algorithm_python" style="color: inherit; text-decoration: inherit;">signature_<wbr>algorithm</a>
@@ -1646,8 +1466,7 @@ The SamlApp resource accepts the following [input]({{< relref "/docs/intro/conce
         <span class="property-type">str</span>
     </dt>
     <dd>{{% md %}}Signature algorithm used ot digitally sign the assertion and response
-{{% /md %}}</dd>
-    <dt class="property-optional"
+{{% /md %}}</dd><dt class="property-optional"
             title="Optional">
         <span id="single_logout_certificate_python">
 <a href="#single_logout_certificate_python" style="color: inherit; text-decoration: inherit;">single_<wbr>logout_<wbr>certificate</a>
@@ -1656,8 +1475,7 @@ The SamlApp resource accepts the following [input]({{< relref "/docs/intro/conce
         <span class="property-type">str</span>
     </dt>
     <dd>{{% md %}}x509 encoded certificate that the Service Provider uses to sign Single Logout requests
-{{% /md %}}</dd>
-    <dt class="property-optional"
+{{% /md %}}</dd><dt class="property-optional"
             title="Optional">
         <span id="single_logout_issuer_python">
 <a href="#single_logout_issuer_python" style="color: inherit; text-decoration: inherit;">single_<wbr>logout_<wbr>issuer</a>
@@ -1666,8 +1484,7 @@ The SamlApp resource accepts the following [input]({{< relref "/docs/intro/conce
         <span class="property-type">str</span>
     </dt>
     <dd>{{% md %}}The issuer of the Service Provider that generates the Single Logout request
-{{% /md %}}</dd>
-    <dt class="property-optional"
+{{% /md %}}</dd><dt class="property-optional"
             title="Optional">
         <span id="single_logout_url_python">
 <a href="#single_logout_url_python" style="color: inherit; text-decoration: inherit;">single_<wbr>logout_<wbr>url</a>
@@ -1676,8 +1493,7 @@ The SamlApp resource accepts the following [input]({{< relref "/docs/intro/conce
         <span class="property-type">str</span>
     </dt>
     <dd>{{% md %}}The location where the logout response is sent
-{{% /md %}}</dd>
-    <dt class="property-optional"
+{{% /md %}}</dd><dt class="property-optional"
             title="Optional">
         <span id="sp_issuer_python">
 <a href="#sp_issuer_python" style="color: inherit; text-decoration: inherit;">sp_<wbr>issuer</a>
@@ -1686,8 +1502,7 @@ The SamlApp resource accepts the following [input]({{< relref "/docs/intro/conce
         <span class="property-type">str</span>
     </dt>
     <dd>{{% md %}}SAML SP issuer ID
-{{% /md %}}</dd>
-    <dt class="property-optional"
+{{% /md %}}</dd><dt class="property-optional"
             title="Optional">
         <span id="sso_url_python">
 <a href="#sso_url_python" style="color: inherit; text-decoration: inherit;">sso_<wbr>url</a>
@@ -1696,8 +1511,7 @@ The SamlApp resource accepts the following [input]({{< relref "/docs/intro/conce
         <span class="property-type">str</span>
     </dt>
     <dd>{{% md %}}Single Sign On URL
-{{% /md %}}</dd>
-    <dt class="property-optional"
+{{% /md %}}</dd><dt class="property-optional"
             title="Optional">
         <span id="status_python">
 <a href="#status_python" style="color: inherit; text-decoration: inherit;">status</a>
@@ -1706,8 +1520,7 @@ The SamlApp resource accepts the following [input]({{< relref "/docs/intro/conce
         <span class="property-type">str</span>
     </dt>
     <dd>{{% md %}}Status of application.
-{{% /md %}}</dd>
-    <dt class="property-optional"
+{{% /md %}}</dd><dt class="property-optional"
             title="Optional">
         <span id="subject_name_id_format_python">
 <a href="#subject_name_id_format_python" style="color: inherit; text-decoration: inherit;">subject_<wbr>name_<wbr>id_<wbr>format</a>
@@ -1716,8 +1529,7 @@ The SamlApp resource accepts the following [input]({{< relref "/docs/intro/conce
         <span class="property-type">str</span>
     </dt>
     <dd>{{% md %}}Identifies the SAML processing rules.
-{{% /md %}}</dd>
-    <dt class="property-optional"
+{{% /md %}}</dd><dt class="property-optional"
             title="Optional">
         <span id="subject_name_id_template_python">
 <a href="#subject_name_id_template_python" style="color: inherit; text-decoration: inherit;">subject_<wbr>name_<wbr>id_<wbr>template</a>
@@ -1726,8 +1538,7 @@ The SamlApp resource accepts the following [input]({{< relref "/docs/intro/conce
         <span class="property-type">str</span>
     </dt>
     <dd>{{% md %}}Template for app user's username when a user is assigned to the app
-{{% /md %}}</dd>
-    <dt class="property-optional"
+{{% /md %}}</dd><dt class="property-optional"
             title="Optional">
         <span id="user_name_template_python">
 <a href="#user_name_template_python" style="color: inherit; text-decoration: inherit;">user_<wbr>name_<wbr>template</a>
@@ -1736,8 +1547,7 @@ The SamlApp resource accepts the following [input]({{< relref "/docs/intro/conce
         <span class="property-type">str</span>
     </dt>
     <dd>{{% md %}}Username template
-{{% /md %}}</dd>
-    <dt class="property-optional"
+{{% /md %}}</dd><dt class="property-optional"
             title="Optional">
         <span id="user_name_template_suffix_python">
 <a href="#user_name_template_suffix_python" style="color: inherit; text-decoration: inherit;">user_<wbr>name_<wbr>template_<wbr>suffix</a>
@@ -1746,8 +1556,7 @@ The SamlApp resource accepts the following [input]({{< relref "/docs/intro/conce
         <span class="property-type">str</span>
     </dt>
     <dd>{{% md %}}Username template suffix
-{{% /md %}}</dd>
-    <dt class="property-optional"
+{{% /md %}}</dd><dt class="property-optional"
             title="Optional">
         <span id="user_name_template_type_python">
 <a href="#user_name_template_type_python" style="color: inherit; text-decoration: inherit;">user_<wbr>name_<wbr>template_<wbr>type</a>
@@ -1756,8 +1565,7 @@ The SamlApp resource accepts the following [input]({{< relref "/docs/intro/conce
         <span class="property-type">str</span>
     </dt>
     <dd>{{% md %}}Username template type
-{{% /md %}}</dd>
-    <dt class="property-optional"
+{{% /md %}}</dd><dt class="property-optional"
             title="Optional">
         <span id="users_python">
 <a href="#users_python" style="color: inherit; text-decoration: inherit;">users</a>
@@ -1766,8 +1574,7 @@ The SamlApp resource accepts the following [input]({{< relref "/docs/intro/conce
         <span class="property-type"><a href="#samlappuser">Sequence[Saml<wbr>App<wbr>User<wbr>Args]</a></span>
     </dt>
     <dd>{{% md %}}Users associated with the application
-{{% /md %}}</dd>
-</dl>
+{{% /md %}}</dd></dl>
 {{% /choosable %}}
 
 
@@ -1778,9 +1585,7 @@ All [input](#inputs) properties are implicitly available as output properties. A
 
 
 {{% choosable language csharp %}}
-<dl class="resources-properties">
-
-    <dt class="property-"
+<dl class="resources-properties"><dt class="property-"
             title="">
         <span id="certificate_csharp">
 <a href="#certificate_csharp" style="color: inherit; text-decoration: inherit;">Certificate</a>
@@ -1789,8 +1594,7 @@ All [input](#inputs) properties are implicitly available as output properties. A
         <span class="property-type">string</span>
     </dt>
     <dd>{{% md %}}cert from SAML XML metadata payload
-{{% /md %}}</dd>
-    <dt class="property-"
+{{% /md %}}</dd><dt class="property-"
             title="">
         <span id="entitykey_csharp">
 <a href="#entitykey_csharp" style="color: inherit; text-decoration: inherit;">Entity<wbr>Key</a>
@@ -1799,8 +1603,7 @@ All [input](#inputs) properties are implicitly available as output properties. A
         <span class="property-type">string</span>
     </dt>
     <dd>{{% md %}}Entity ID, the ID portion of the entity_url
-{{% /md %}}</dd>
-    <dt class="property-"
+{{% /md %}}</dd><dt class="property-"
             title="">
         <span id="entityurl_csharp">
 <a href="#entityurl_csharp" style="color: inherit; text-decoration: inherit;">Entity<wbr>Url</a>
@@ -1809,8 +1612,7 @@ All [input](#inputs) properties are implicitly available as output properties. A
         <span class="property-type">string</span>
     </dt>
     <dd>{{% md %}}Entity URL for instance http://www.okta.com/exk1fcia6d6EMsf331d8
-{{% /md %}}</dd>
-    <dt class="property-"
+{{% /md %}}</dd><dt class="property-"
             title="">
         <span id="httppostbinding_csharp">
 <a href="#httppostbinding_csharp" style="color: inherit; text-decoration: inherit;">Http<wbr>Post<wbr>Binding</a>
@@ -1819,8 +1621,7 @@ All [input](#inputs) properties are implicitly available as output properties. A
         <span class="property-type">string</span>
     </dt>
     <dd>{{% md %}}urn:oasis:names:tc:SAML:2.0:bindings:HTTP-Post location from the SAML metadata.
-{{% /md %}}</dd>
-    <dt class="property-"
+{{% /md %}}</dd><dt class="property-"
             title="">
         <span id="httpredirectbinding_csharp">
 <a href="#httpredirectbinding_csharp" style="color: inherit; text-decoration: inherit;">Http<wbr>Redirect<wbr>Binding</a>
@@ -1829,8 +1630,7 @@ All [input](#inputs) properties are implicitly available as output properties. A
         <span class="property-type">string</span>
     </dt>
     <dd>{{% md %}}urn:oasis:names:tc:SAML:2.0:bindings:HTTP-Redirect location from the SAML metadata.
-{{% /md %}}</dd>
-    <dt class="property-"
+{{% /md %}}</dd><dt class="property-"
             title="">
         <span id="id_csharp">
 <a href="#id_csharp" style="color: inherit; text-decoration: inherit;">Id</a>
@@ -1838,8 +1638,7 @@ All [input](#inputs) properties are implicitly available as output properties. A
         <span class="property-indicator"></span>
         <span class="property-type">string</span>
     </dt>
-    <dd>{{% md %}}The provider-assigned unique ID for this managed resource.{{% /md %}}</dd>
-    <dt class="property-"
+    <dd>{{% md %}}The provider-assigned unique ID for this managed resource.{{% /md %}}</dd><dt class="property-"
             title="">
         <span id="keyid_csharp">
 <a href="#keyid_csharp" style="color: inherit; text-decoration: inherit;">Key<wbr>Id</a>
@@ -1848,8 +1647,7 @@ All [input](#inputs) properties are implicitly available as output properties. A
         <span class="property-type">string</span>
     </dt>
     <dd>{{% md %}}Certificate ID
-{{% /md %}}</dd>
-    <dt class="property-"
+{{% /md %}}</dd><dt class="property-"
             title="">
         <span id="metadata_csharp">
 <a href="#metadata_csharp" style="color: inherit; text-decoration: inherit;">Metadata</a>
@@ -1858,8 +1656,7 @@ All [input](#inputs) properties are implicitly available as output properties. A
         <span class="property-type">string</span>
     </dt>
     <dd>{{% md %}}SAML xml metadata payload
-{{% /md %}}</dd>
-    <dt class="property-"
+{{% /md %}}</dd><dt class="property-"
             title="">
         <span id="metadataurl_csharp">
 <a href="#metadataurl_csharp" style="color: inherit; text-decoration: inherit;">Metadata<wbr>Url</a>
@@ -1868,8 +1665,7 @@ All [input](#inputs) properties are implicitly available as output properties. A
         <span class="property-type">string</span>
     </dt>
     <dd>{{% md %}}SAML xml metadata URL
-{{% /md %}}</dd>
-    <dt class="property-"
+{{% /md %}}</dd><dt class="property-"
             title="">
         <span id="name_csharp">
 <a href="#name_csharp" style="color: inherit; text-decoration: inherit;">Name</a>
@@ -1878,8 +1674,7 @@ All [input](#inputs) properties are implicitly available as output properties. A
         <span class="property-type">string</span>
     </dt>
     <dd>{{% md %}}name of app.
-{{% /md %}}</dd>
-    <dt class="property-"
+{{% /md %}}</dd><dt class="property-"
             title="">
         <span id="signonmode_csharp">
 <a href="#signonmode_csharp" style="color: inherit; text-decoration: inherit;">Sign<wbr>On<wbr>Mode</a>
@@ -1888,14 +1683,11 @@ All [input](#inputs) properties are implicitly available as output properties. A
         <span class="property-type">string</span>
     </dt>
     <dd>{{% md %}}Sign on mode of application.
-{{% /md %}}</dd>
-</dl>
+{{% /md %}}</dd></dl>
 {{% /choosable %}}
 
 {{% choosable language go %}}
-<dl class="resources-properties">
-
-    <dt class="property-"
+<dl class="resources-properties"><dt class="property-"
             title="">
         <span id="certificate_go">
 <a href="#certificate_go" style="color: inherit; text-decoration: inherit;">Certificate</a>
@@ -1904,8 +1696,7 @@ All [input](#inputs) properties are implicitly available as output properties. A
         <span class="property-type">string</span>
     </dt>
     <dd>{{% md %}}cert from SAML XML metadata payload
-{{% /md %}}</dd>
-    <dt class="property-"
+{{% /md %}}</dd><dt class="property-"
             title="">
         <span id="entitykey_go">
 <a href="#entitykey_go" style="color: inherit; text-decoration: inherit;">Entity<wbr>Key</a>
@@ -1914,8 +1705,7 @@ All [input](#inputs) properties are implicitly available as output properties. A
         <span class="property-type">string</span>
     </dt>
     <dd>{{% md %}}Entity ID, the ID portion of the entity_url
-{{% /md %}}</dd>
-    <dt class="property-"
+{{% /md %}}</dd><dt class="property-"
             title="">
         <span id="entityurl_go">
 <a href="#entityurl_go" style="color: inherit; text-decoration: inherit;">Entity<wbr>Url</a>
@@ -1924,8 +1714,7 @@ All [input](#inputs) properties are implicitly available as output properties. A
         <span class="property-type">string</span>
     </dt>
     <dd>{{% md %}}Entity URL for instance http://www.okta.com/exk1fcia6d6EMsf331d8
-{{% /md %}}</dd>
-    <dt class="property-"
+{{% /md %}}</dd><dt class="property-"
             title="">
         <span id="httppostbinding_go">
 <a href="#httppostbinding_go" style="color: inherit; text-decoration: inherit;">Http<wbr>Post<wbr>Binding</a>
@@ -1934,8 +1723,7 @@ All [input](#inputs) properties are implicitly available as output properties. A
         <span class="property-type">string</span>
     </dt>
     <dd>{{% md %}}urn:oasis:names:tc:SAML:2.0:bindings:HTTP-Post location from the SAML metadata.
-{{% /md %}}</dd>
-    <dt class="property-"
+{{% /md %}}</dd><dt class="property-"
             title="">
         <span id="httpredirectbinding_go">
 <a href="#httpredirectbinding_go" style="color: inherit; text-decoration: inherit;">Http<wbr>Redirect<wbr>Binding</a>
@@ -1944,8 +1732,7 @@ All [input](#inputs) properties are implicitly available as output properties. A
         <span class="property-type">string</span>
     </dt>
     <dd>{{% md %}}urn:oasis:names:tc:SAML:2.0:bindings:HTTP-Redirect location from the SAML metadata.
-{{% /md %}}</dd>
-    <dt class="property-"
+{{% /md %}}</dd><dt class="property-"
             title="">
         <span id="id_go">
 <a href="#id_go" style="color: inherit; text-decoration: inherit;">Id</a>
@@ -1953,8 +1740,7 @@ All [input](#inputs) properties are implicitly available as output properties. A
         <span class="property-indicator"></span>
         <span class="property-type">string</span>
     </dt>
-    <dd>{{% md %}}The provider-assigned unique ID for this managed resource.{{% /md %}}</dd>
-    <dt class="property-"
+    <dd>{{% md %}}The provider-assigned unique ID for this managed resource.{{% /md %}}</dd><dt class="property-"
             title="">
         <span id="keyid_go">
 <a href="#keyid_go" style="color: inherit; text-decoration: inherit;">Key<wbr>Id</a>
@@ -1963,8 +1749,7 @@ All [input](#inputs) properties are implicitly available as output properties. A
         <span class="property-type">string</span>
     </dt>
     <dd>{{% md %}}Certificate ID
-{{% /md %}}</dd>
-    <dt class="property-"
+{{% /md %}}</dd><dt class="property-"
             title="">
         <span id="metadata_go">
 <a href="#metadata_go" style="color: inherit; text-decoration: inherit;">Metadata</a>
@@ -1973,8 +1758,7 @@ All [input](#inputs) properties are implicitly available as output properties. A
         <span class="property-type">string</span>
     </dt>
     <dd>{{% md %}}SAML xml metadata payload
-{{% /md %}}</dd>
-    <dt class="property-"
+{{% /md %}}</dd><dt class="property-"
             title="">
         <span id="metadataurl_go">
 <a href="#metadataurl_go" style="color: inherit; text-decoration: inherit;">Metadata<wbr>Url</a>
@@ -1983,8 +1767,7 @@ All [input](#inputs) properties are implicitly available as output properties. A
         <span class="property-type">string</span>
     </dt>
     <dd>{{% md %}}SAML xml metadata URL
-{{% /md %}}</dd>
-    <dt class="property-"
+{{% /md %}}</dd><dt class="property-"
             title="">
         <span id="name_go">
 <a href="#name_go" style="color: inherit; text-decoration: inherit;">Name</a>
@@ -1993,8 +1776,7 @@ All [input](#inputs) properties are implicitly available as output properties. A
         <span class="property-type">string</span>
     </dt>
     <dd>{{% md %}}name of app.
-{{% /md %}}</dd>
-    <dt class="property-"
+{{% /md %}}</dd><dt class="property-"
             title="">
         <span id="signonmode_go">
 <a href="#signonmode_go" style="color: inherit; text-decoration: inherit;">Sign<wbr>On<wbr>Mode</a>
@@ -2003,14 +1785,11 @@ All [input](#inputs) properties are implicitly available as output properties. A
         <span class="property-type">string</span>
     </dt>
     <dd>{{% md %}}Sign on mode of application.
-{{% /md %}}</dd>
-</dl>
+{{% /md %}}</dd></dl>
 {{% /choosable %}}
 
 {{% choosable language nodejs %}}
-<dl class="resources-properties">
-
-    <dt class="property-"
+<dl class="resources-properties"><dt class="property-"
             title="">
         <span id="certificate_nodejs">
 <a href="#certificate_nodejs" style="color: inherit; text-decoration: inherit;">certificate</a>
@@ -2019,8 +1798,7 @@ All [input](#inputs) properties are implicitly available as output properties. A
         <span class="property-type">string</span>
     </dt>
     <dd>{{% md %}}cert from SAML XML metadata payload
-{{% /md %}}</dd>
-    <dt class="property-"
+{{% /md %}}</dd><dt class="property-"
             title="">
         <span id="entitykey_nodejs">
 <a href="#entitykey_nodejs" style="color: inherit; text-decoration: inherit;">entity<wbr>Key</a>
@@ -2029,8 +1807,7 @@ All [input](#inputs) properties are implicitly available as output properties. A
         <span class="property-type">string</span>
     </dt>
     <dd>{{% md %}}Entity ID, the ID portion of the entity_url
-{{% /md %}}</dd>
-    <dt class="property-"
+{{% /md %}}</dd><dt class="property-"
             title="">
         <span id="entityurl_nodejs">
 <a href="#entityurl_nodejs" style="color: inherit; text-decoration: inherit;">entity<wbr>Url</a>
@@ -2039,8 +1816,7 @@ All [input](#inputs) properties are implicitly available as output properties. A
         <span class="property-type">string</span>
     </dt>
     <dd>{{% md %}}Entity URL for instance http://www.okta.com/exk1fcia6d6EMsf331d8
-{{% /md %}}</dd>
-    <dt class="property-"
+{{% /md %}}</dd><dt class="property-"
             title="">
         <span id="httppostbinding_nodejs">
 <a href="#httppostbinding_nodejs" style="color: inherit; text-decoration: inherit;">http<wbr>Post<wbr>Binding</a>
@@ -2049,8 +1825,7 @@ All [input](#inputs) properties are implicitly available as output properties. A
         <span class="property-type">string</span>
     </dt>
     <dd>{{% md %}}urn:oasis:names:tc:SAML:2.0:bindings:HTTP-Post location from the SAML metadata.
-{{% /md %}}</dd>
-    <dt class="property-"
+{{% /md %}}</dd><dt class="property-"
             title="">
         <span id="httpredirectbinding_nodejs">
 <a href="#httpredirectbinding_nodejs" style="color: inherit; text-decoration: inherit;">http<wbr>Redirect<wbr>Binding</a>
@@ -2059,8 +1834,7 @@ All [input](#inputs) properties are implicitly available as output properties. A
         <span class="property-type">string</span>
     </dt>
     <dd>{{% md %}}urn:oasis:names:tc:SAML:2.0:bindings:HTTP-Redirect location from the SAML metadata.
-{{% /md %}}</dd>
-    <dt class="property-"
+{{% /md %}}</dd><dt class="property-"
             title="">
         <span id="id_nodejs">
 <a href="#id_nodejs" style="color: inherit; text-decoration: inherit;">id</a>
@@ -2068,8 +1842,7 @@ All [input](#inputs) properties are implicitly available as output properties. A
         <span class="property-indicator"></span>
         <span class="property-type">string</span>
     </dt>
-    <dd>{{% md %}}The provider-assigned unique ID for this managed resource.{{% /md %}}</dd>
-    <dt class="property-"
+    <dd>{{% md %}}The provider-assigned unique ID for this managed resource.{{% /md %}}</dd><dt class="property-"
             title="">
         <span id="keyid_nodejs">
 <a href="#keyid_nodejs" style="color: inherit; text-decoration: inherit;">key<wbr>Id</a>
@@ -2078,8 +1851,7 @@ All [input](#inputs) properties are implicitly available as output properties. A
         <span class="property-type">string</span>
     </dt>
     <dd>{{% md %}}Certificate ID
-{{% /md %}}</dd>
-    <dt class="property-"
+{{% /md %}}</dd><dt class="property-"
             title="">
         <span id="metadata_nodejs">
 <a href="#metadata_nodejs" style="color: inherit; text-decoration: inherit;">metadata</a>
@@ -2088,8 +1860,7 @@ All [input](#inputs) properties are implicitly available as output properties. A
         <span class="property-type">string</span>
     </dt>
     <dd>{{% md %}}SAML xml metadata payload
-{{% /md %}}</dd>
-    <dt class="property-"
+{{% /md %}}</dd><dt class="property-"
             title="">
         <span id="metadataurl_nodejs">
 <a href="#metadataurl_nodejs" style="color: inherit; text-decoration: inherit;">metadata<wbr>Url</a>
@@ -2098,8 +1869,7 @@ All [input](#inputs) properties are implicitly available as output properties. A
         <span class="property-type">string</span>
     </dt>
     <dd>{{% md %}}SAML xml metadata URL
-{{% /md %}}</dd>
-    <dt class="property-"
+{{% /md %}}</dd><dt class="property-"
             title="">
         <span id="name_nodejs">
 <a href="#name_nodejs" style="color: inherit; text-decoration: inherit;">name</a>
@@ -2108,8 +1878,7 @@ All [input](#inputs) properties are implicitly available as output properties. A
         <span class="property-type">string</span>
     </dt>
     <dd>{{% md %}}name of app.
-{{% /md %}}</dd>
-    <dt class="property-"
+{{% /md %}}</dd><dt class="property-"
             title="">
         <span id="signonmode_nodejs">
 <a href="#signonmode_nodejs" style="color: inherit; text-decoration: inherit;">sign<wbr>On<wbr>Mode</a>
@@ -2118,14 +1887,11 @@ All [input](#inputs) properties are implicitly available as output properties. A
         <span class="property-type">string</span>
     </dt>
     <dd>{{% md %}}Sign on mode of application.
-{{% /md %}}</dd>
-</dl>
+{{% /md %}}</dd></dl>
 {{% /choosable %}}
 
 {{% choosable language python %}}
-<dl class="resources-properties">
-
-    <dt class="property-"
+<dl class="resources-properties"><dt class="property-"
             title="">
         <span id="certificate_python">
 <a href="#certificate_python" style="color: inherit; text-decoration: inherit;">certificate</a>
@@ -2134,8 +1900,7 @@ All [input](#inputs) properties are implicitly available as output properties. A
         <span class="property-type">str</span>
     </dt>
     <dd>{{% md %}}cert from SAML XML metadata payload
-{{% /md %}}</dd>
-    <dt class="property-"
+{{% /md %}}</dd><dt class="property-"
             title="">
         <span id="entity_key_python">
 <a href="#entity_key_python" style="color: inherit; text-decoration: inherit;">entity_<wbr>key</a>
@@ -2144,8 +1909,7 @@ All [input](#inputs) properties are implicitly available as output properties. A
         <span class="property-type">str</span>
     </dt>
     <dd>{{% md %}}Entity ID, the ID portion of the entity_url
-{{% /md %}}</dd>
-    <dt class="property-"
+{{% /md %}}</dd><dt class="property-"
             title="">
         <span id="entity_url_python">
 <a href="#entity_url_python" style="color: inherit; text-decoration: inherit;">entity_<wbr>url</a>
@@ -2154,8 +1918,7 @@ All [input](#inputs) properties are implicitly available as output properties. A
         <span class="property-type">str</span>
     </dt>
     <dd>{{% md %}}Entity URL for instance http://www.okta.com/exk1fcia6d6EMsf331d8
-{{% /md %}}</dd>
-    <dt class="property-"
+{{% /md %}}</dd><dt class="property-"
             title="">
         <span id="http_post_binding_python">
 <a href="#http_post_binding_python" style="color: inherit; text-decoration: inherit;">http_<wbr>post_<wbr>binding</a>
@@ -2164,8 +1927,7 @@ All [input](#inputs) properties are implicitly available as output properties. A
         <span class="property-type">str</span>
     </dt>
     <dd>{{% md %}}urn:oasis:names:tc:SAML:2.0:bindings:HTTP-Post location from the SAML metadata.
-{{% /md %}}</dd>
-    <dt class="property-"
+{{% /md %}}</dd><dt class="property-"
             title="">
         <span id="http_redirect_binding_python">
 <a href="#http_redirect_binding_python" style="color: inherit; text-decoration: inherit;">http_<wbr>redirect_<wbr>binding</a>
@@ -2174,8 +1936,7 @@ All [input](#inputs) properties are implicitly available as output properties. A
         <span class="property-type">str</span>
     </dt>
     <dd>{{% md %}}urn:oasis:names:tc:SAML:2.0:bindings:HTTP-Redirect location from the SAML metadata.
-{{% /md %}}</dd>
-    <dt class="property-"
+{{% /md %}}</dd><dt class="property-"
             title="">
         <span id="id_python">
 <a href="#id_python" style="color: inherit; text-decoration: inherit;">id</a>
@@ -2183,8 +1944,7 @@ All [input](#inputs) properties are implicitly available as output properties. A
         <span class="property-indicator"></span>
         <span class="property-type">str</span>
     </dt>
-    <dd>{{% md %}}The provider-assigned unique ID for this managed resource.{{% /md %}}</dd>
-    <dt class="property-"
+    <dd>{{% md %}}The provider-assigned unique ID for this managed resource.{{% /md %}}</dd><dt class="property-"
             title="">
         <span id="key_id_python">
 <a href="#key_id_python" style="color: inherit; text-decoration: inherit;">key_<wbr>id</a>
@@ -2193,8 +1953,7 @@ All [input](#inputs) properties are implicitly available as output properties. A
         <span class="property-type">str</span>
     </dt>
     <dd>{{% md %}}Certificate ID
-{{% /md %}}</dd>
-    <dt class="property-"
+{{% /md %}}</dd><dt class="property-"
             title="">
         <span id="metadata_python">
 <a href="#metadata_python" style="color: inherit; text-decoration: inherit;">metadata</a>
@@ -2203,8 +1962,7 @@ All [input](#inputs) properties are implicitly available as output properties. A
         <span class="property-type">str</span>
     </dt>
     <dd>{{% md %}}SAML xml metadata payload
-{{% /md %}}</dd>
-    <dt class="property-"
+{{% /md %}}</dd><dt class="property-"
             title="">
         <span id="metadata_url_python">
 <a href="#metadata_url_python" style="color: inherit; text-decoration: inherit;">metadata_<wbr>url</a>
@@ -2213,8 +1971,7 @@ All [input](#inputs) properties are implicitly available as output properties. A
         <span class="property-type">str</span>
     </dt>
     <dd>{{% md %}}SAML xml metadata URL
-{{% /md %}}</dd>
-    <dt class="property-"
+{{% /md %}}</dd><dt class="property-"
             title="">
         <span id="name_python">
 <a href="#name_python" style="color: inherit; text-decoration: inherit;">name</a>
@@ -2223,8 +1980,7 @@ All [input](#inputs) properties are implicitly available as output properties. A
         <span class="property-type">str</span>
     </dt>
     <dd>{{% md %}}name of app.
-{{% /md %}}</dd>
-    <dt class="property-"
+{{% /md %}}</dd><dt class="property-"
             title="">
         <span id="sign_on_mode_python">
 <a href="#sign_on_mode_python" style="color: inherit; text-decoration: inherit;">sign_<wbr>on_<wbr>mode</a>
@@ -2233,8 +1989,7 @@ All [input](#inputs) properties are implicitly available as output properties. A
         <span class="property-type">str</span>
     </dt>
     <dd>{{% md %}}Sign on mode of application.
-{{% /md %}}</dd>
-</dl>
+{{% /md %}}</dd></dl>
 {{% /choosable %}}
 
 
@@ -2361,9 +2116,7 @@ The following state arguments are supported:
 
 
 {{% choosable language csharp %}}
-<dl class="resources-properties">
-
-    <dt class="property-optional"
+<dl class="resources-properties"><dt class="property-optional"
             title="Optional">
         <span id="state_accessibilityerrorredirecturl_csharp">
 <a href="#state_accessibilityerrorredirecturl_csharp" style="color: inherit; text-decoration: inherit;">Accessibility<wbr>Error<wbr>Redirect<wbr>Url</a>
@@ -2372,8 +2125,7 @@ The following state arguments are supported:
         <span class="property-type">string</span>
     </dt>
     <dd>{{% md %}}Custom error page URL
-{{% /md %}}</dd>
-    <dt class="property-optional"
+{{% /md %}}</dd><dt class="property-optional"
             title="Optional">
         <span id="state_accessibilityloginredirecturl_csharp">
 <a href="#state_accessibilityloginredirecturl_csharp" style="color: inherit; text-decoration: inherit;">Accessibility<wbr>Login<wbr>Redirect<wbr>Url</a>
@@ -2382,8 +2134,7 @@ The following state arguments are supported:
         <span class="property-type">string</span>
     </dt>
     <dd>{{% md %}}Custom login page URL
-{{% /md %}}</dd>
-    <dt class="property-optional"
+{{% /md %}}</dd><dt class="property-optional"
             title="Optional">
         <span id="state_accessibilityselfservice_csharp">
 <a href="#state_accessibilityselfservice_csharp" style="color: inherit; text-decoration: inherit;">Accessibility<wbr>Self<wbr>Service</a>
@@ -2392,8 +2143,7 @@ The following state arguments are supported:
         <span class="property-type">bool</span>
     </dt>
     <dd>{{% md %}}Enable self service
-{{% /md %}}</dd>
-    <dt class="property-optional"
+{{% /md %}}</dd><dt class="property-optional"
             title="Optional">
         <span id="state_acsendpoints_csharp">
 <a href="#state_acsendpoints_csharp" style="color: inherit; text-decoration: inherit;">Acs<wbr>Endpoints</a>
@@ -2402,8 +2152,7 @@ The following state arguments are supported:
         <span class="property-type">List&lt;string&gt;</span>
     </dt>
     <dd>{{% md %}}List of ACS endpoints for this SAML application
-{{% /md %}}</dd>
-    <dt class="property-optional"
+{{% /md %}}</dd><dt class="property-optional"
             title="Optional">
         <span id="state_appsettingsjson_csharp">
 <a href="#state_appsettingsjson_csharp" style="color: inherit; text-decoration: inherit;">App<wbr>Settings<wbr>Json</a>
@@ -2412,8 +2161,7 @@ The following state arguments are supported:
         <span class="property-type">string</span>
     </dt>
     <dd>{{% md %}}Application settings in JSON format
-{{% /md %}}</dd>
-    <dt class="property-optional"
+{{% /md %}}</dd><dt class="property-optional"
             title="Optional">
         <span id="state_assertionsigned_csharp">
 <a href="#state_assertionsigned_csharp" style="color: inherit; text-decoration: inherit;">Assertion<wbr>Signed</a>
@@ -2422,8 +2170,7 @@ The following state arguments are supported:
         <span class="property-type">bool</span>
     </dt>
     <dd>{{% md %}}Determines whether the SAML assertion is digitally signed
-{{% /md %}}</dd>
-    <dt class="property-optional"
+{{% /md %}}</dd><dt class="property-optional"
             title="Optional">
         <span id="state_attributestatements_csharp">
 <a href="#state_attributestatements_csharp" style="color: inherit; text-decoration: inherit;">Attribute<wbr>Statements</a>
@@ -2431,8 +2178,7 @@ The following state arguments are supported:
         <span class="property-indicator"></span>
         <span class="property-type"><a href="#samlappattributestatement">List&lt;Saml<wbr>App<wbr>Attribute<wbr>Statement<wbr>Args&gt;</a></span>
     </dt>
-    <dd>{{% md %}}{{% /md %}}</dd>
-    <dt class="property-optional"
+    <dd>{{% md %}}{{% /md %}}</dd><dt class="property-optional"
             title="Optional">
         <span id="state_audience_csharp">
 <a href="#state_audience_csharp" style="color: inherit; text-decoration: inherit;">Audience</a>
@@ -2441,8 +2187,7 @@ The following state arguments are supported:
         <span class="property-type">string</span>
     </dt>
     <dd>{{% md %}}Audience Restriction
-{{% /md %}}</dd>
-    <dt class="property-optional"
+{{% /md %}}</dd><dt class="property-optional"
             title="Optional">
         <span id="state_authncontextclassref_csharp">
 <a href="#state_authncontextclassref_csharp" style="color: inherit; text-decoration: inherit;">Authn<wbr>Context<wbr>Class<wbr>Ref</a>
@@ -2451,8 +2196,7 @@ The following state arguments are supported:
         <span class="property-type">string</span>
     </dt>
     <dd>{{% md %}}Identifies the SAML authentication context class for the assertion’s authentication statement
-{{% /md %}}</dd>
-    <dt class="property-optional"
+{{% /md %}}</dd><dt class="property-optional"
             title="Optional">
         <span id="state_autosubmittoolbar_csharp">
 <a href="#state_autosubmittoolbar_csharp" style="color: inherit; text-decoration: inherit;">Auto<wbr>Submit<wbr>Toolbar</a>
@@ -2461,8 +2205,7 @@ The following state arguments are supported:
         <span class="property-type">bool</span>
     </dt>
     <dd>{{% md %}}Display auto submit toolbar
-{{% /md %}}</dd>
-    <dt class="property-optional"
+{{% /md %}}</dd><dt class="property-optional"
             title="Optional">
         <span id="state_certificate_csharp">
 <a href="#state_certificate_csharp" style="color: inherit; text-decoration: inherit;">Certificate</a>
@@ -2471,8 +2214,7 @@ The following state arguments are supported:
         <span class="property-type">string</span>
     </dt>
     <dd>{{% md %}}cert from SAML XML metadata payload
-{{% /md %}}</dd>
-    <dt class="property-optional"
+{{% /md %}}</dd><dt class="property-optional"
             title="Optional">
         <span id="state_defaultrelaystate_csharp">
 <a href="#state_defaultrelaystate_csharp" style="color: inherit; text-decoration: inherit;">Default<wbr>Relay<wbr>State</a>
@@ -2481,8 +2223,7 @@ The following state arguments are supported:
         <span class="property-type">string</span>
     </dt>
     <dd>{{% md %}}Identifies a specific application resource in an IDP initiated SSO scenario.
-{{% /md %}}</dd>
-    <dt class="property-optional"
+{{% /md %}}</dd><dt class="property-optional"
             title="Optional">
         <span id="state_destination_csharp">
 <a href="#state_destination_csharp" style="color: inherit; text-decoration: inherit;">Destination</a>
@@ -2491,8 +2232,7 @@ The following state arguments are supported:
         <span class="property-type">string</span>
     </dt>
     <dd>{{% md %}}Identifies the location where the SAML response is intended to be sent inside of the SAML assertion
-{{% /md %}}</dd>
-    <dt class="property-optional"
+{{% /md %}}</dd><dt class="property-optional"
             title="Optional">
         <span id="state_digestalgorithm_csharp">
 <a href="#state_digestalgorithm_csharp" style="color: inherit; text-decoration: inherit;">Digest<wbr>Algorithm</a>
@@ -2501,8 +2241,7 @@ The following state arguments are supported:
         <span class="property-type">string</span>
     </dt>
     <dd>{{% md %}}Determines the digest algorithm used to digitally sign the SAML assertion and response
-{{% /md %}}</dd>
-    <dt class="property-optional"
+{{% /md %}}</dd><dt class="property-optional"
             title="Optional">
         <span id="state_entitykey_csharp">
 <a href="#state_entitykey_csharp" style="color: inherit; text-decoration: inherit;">Entity<wbr>Key</a>
@@ -2511,8 +2250,7 @@ The following state arguments are supported:
         <span class="property-type">string</span>
     </dt>
     <dd>{{% md %}}Entity ID, the ID portion of the entity_url
-{{% /md %}}</dd>
-    <dt class="property-optional"
+{{% /md %}}</dd><dt class="property-optional"
             title="Optional">
         <span id="state_entityurl_csharp">
 <a href="#state_entityurl_csharp" style="color: inherit; text-decoration: inherit;">Entity<wbr>Url</a>
@@ -2521,8 +2259,7 @@ The following state arguments are supported:
         <span class="property-type">string</span>
     </dt>
     <dd>{{% md %}}Entity URL for instance http://www.okta.com/exk1fcia6d6EMsf331d8
-{{% /md %}}</dd>
-    <dt class="property-optional"
+{{% /md %}}</dd><dt class="property-optional"
             title="Optional">
         <span id="state_features_csharp">
 <a href="#state_features_csharp" style="color: inherit; text-decoration: inherit;">Features</a>
@@ -2531,8 +2268,7 @@ The following state arguments are supported:
         <span class="property-type">List&lt;string&gt;</span>
     </dt>
     <dd>{{% md %}}features to enable
-{{% /md %}}</dd>
-    <dt class="property-optional"
+{{% /md %}}</dd><dt class="property-optional"
             title="Optional">
         <span id="state_groups_csharp">
 <a href="#state_groups_csharp" style="color: inherit; text-decoration: inherit;">Groups</a>
@@ -2541,8 +2277,7 @@ The following state arguments are supported:
         <span class="property-type">List&lt;string&gt;</span>
     </dt>
     <dd>{{% md %}}Groups associated with the application
-{{% /md %}}</dd>
-    <dt class="property-optional"
+{{% /md %}}</dd><dt class="property-optional"
             title="Optional">
         <span id="state_hideios_csharp">
 <a href="#state_hideios_csharp" style="color: inherit; text-decoration: inherit;">Hide<wbr>Ios</a>
@@ -2551,8 +2286,7 @@ The following state arguments are supported:
         <span class="property-type">bool</span>
     </dt>
     <dd>{{% md %}}Do not display application icon on mobile app
-{{% /md %}}</dd>
-    <dt class="property-optional"
+{{% /md %}}</dd><dt class="property-optional"
             title="Optional">
         <span id="state_hideweb_csharp">
 <a href="#state_hideweb_csharp" style="color: inherit; text-decoration: inherit;">Hide<wbr>Web</a>
@@ -2561,8 +2295,7 @@ The following state arguments are supported:
         <span class="property-type">bool</span>
     </dt>
     <dd>{{% md %}}Do not display application icon to users
-{{% /md %}}</dd>
-    <dt class="property-optional"
+{{% /md %}}</dd><dt class="property-optional"
             title="Optional">
         <span id="state_honorforceauthn_csharp">
 <a href="#state_honorforceauthn_csharp" style="color: inherit; text-decoration: inherit;">Honor<wbr>Force<wbr>Authn</a>
@@ -2571,8 +2304,7 @@ The following state arguments are supported:
         <span class="property-type">bool</span>
     </dt>
     <dd>{{% md %}}Prompt user to re-authenticate if SP asks for it
-{{% /md %}}</dd>
-    <dt class="property-optional"
+{{% /md %}}</dd><dt class="property-optional"
             title="Optional">
         <span id="state_httppostbinding_csharp">
 <a href="#state_httppostbinding_csharp" style="color: inherit; text-decoration: inherit;">Http<wbr>Post<wbr>Binding</a>
@@ -2581,8 +2313,7 @@ The following state arguments are supported:
         <span class="property-type">string</span>
     </dt>
     <dd>{{% md %}}urn:oasis:names:tc:SAML:2.0:bindings:HTTP-Post location from the SAML metadata.
-{{% /md %}}</dd>
-    <dt class="property-optional"
+{{% /md %}}</dd><dt class="property-optional"
             title="Optional">
         <span id="state_httpredirectbinding_csharp">
 <a href="#state_httpredirectbinding_csharp" style="color: inherit; text-decoration: inherit;">Http<wbr>Redirect<wbr>Binding</a>
@@ -2591,8 +2322,7 @@ The following state arguments are supported:
         <span class="property-type">string</span>
     </dt>
     <dd>{{% md %}}urn:oasis:names:tc:SAML:2.0:bindings:HTTP-Redirect location from the SAML metadata.
-{{% /md %}}</dd>
-    <dt class="property-optional"
+{{% /md %}}</dd><dt class="property-optional"
             title="Optional">
         <span id="state_idpissuer_csharp">
 <a href="#state_idpissuer_csharp" style="color: inherit; text-decoration: inherit;">Idp<wbr>Issuer</a>
@@ -2601,8 +2331,7 @@ The following state arguments are supported:
         <span class="property-type">string</span>
     </dt>
     <dd>{{% md %}}SAML issuer ID
-{{% /md %}}</dd>
-    <dt class="property-optional"
+{{% /md %}}</dd><dt class="property-optional"
             title="Optional">
         <span id="state_keyid_csharp">
 <a href="#state_keyid_csharp" style="color: inherit; text-decoration: inherit;">Key<wbr>Id</a>
@@ -2611,8 +2340,7 @@ The following state arguments are supported:
         <span class="property-type">string</span>
     </dt>
     <dd>{{% md %}}Certificate ID
-{{% /md %}}</dd>
-    <dt class="property-optional"
+{{% /md %}}</dd><dt class="property-optional"
             title="Optional">
         <span id="state_keyname_csharp">
 <a href="#state_keyname_csharp" style="color: inherit; text-decoration: inherit;">Key<wbr>Name</a>
@@ -2621,8 +2349,7 @@ The following state arguments are supported:
         <span class="property-type">string</span>
     </dt>
     <dd>{{% md %}}Certificate name. This modulates the rotation of keys. New name == new key.
-{{% /md %}}</dd>
-    <dt class="property-optional"
+{{% /md %}}</dd><dt class="property-optional"
             title="Optional">
         <span id="state_keyyearsvalid_csharp">
 <a href="#state_keyyearsvalid_csharp" style="color: inherit; text-decoration: inherit;">Key<wbr>Years<wbr>Valid</a>
@@ -2631,8 +2358,7 @@ The following state arguments are supported:
         <span class="property-type">int</span>
     </dt>
     <dd>{{% md %}}Number of years the certificate is valid.
-{{% /md %}}</dd>
-    <dt class="property-optional"
+{{% /md %}}</dd><dt class="property-optional"
             title="Optional">
         <span id="state_label_csharp">
 <a href="#state_label_csharp" style="color: inherit; text-decoration: inherit;">Label</a>
@@ -2641,8 +2367,7 @@ The following state arguments are supported:
         <span class="property-type">string</span>
     </dt>
     <dd>{{% md %}}Pretty name of app.
-{{% /md %}}</dd>
-    <dt class="property-optional"
+{{% /md %}}</dd><dt class="property-optional"
             title="Optional">
         <span id="state_metadata_csharp">
 <a href="#state_metadata_csharp" style="color: inherit; text-decoration: inherit;">Metadata</a>
@@ -2651,8 +2376,7 @@ The following state arguments are supported:
         <span class="property-type">string</span>
     </dt>
     <dd>{{% md %}}SAML xml metadata payload
-{{% /md %}}</dd>
-    <dt class="property-optional"
+{{% /md %}}</dd><dt class="property-optional"
             title="Optional">
         <span id="state_metadataurl_csharp">
 <a href="#state_metadataurl_csharp" style="color: inherit; text-decoration: inherit;">Metadata<wbr>Url</a>
@@ -2661,8 +2385,7 @@ The following state arguments are supported:
         <span class="property-type">string</span>
     </dt>
     <dd>{{% md %}}SAML xml metadata URL
-{{% /md %}}</dd>
-    <dt class="property-optional"
+{{% /md %}}</dd><dt class="property-optional"
             title="Optional">
         <span id="state_name_csharp">
 <a href="#state_name_csharp" style="color: inherit; text-decoration: inherit;">Name</a>
@@ -2671,8 +2394,7 @@ The following state arguments are supported:
         <span class="property-type">string</span>
     </dt>
     <dd>{{% md %}}name of app.
-{{% /md %}}</dd>
-    <dt class="property-optional"
+{{% /md %}}</dd><dt class="property-optional"
             title="Optional">
         <span id="state_preconfiguredapp_csharp">
 <a href="#state_preconfiguredapp_csharp" style="color: inherit; text-decoration: inherit;">Preconfigured<wbr>App</a>
@@ -2681,8 +2403,7 @@ The following state arguments are supported:
         <span class="property-type">string</span>
     </dt>
     <dd>{{% md %}}Name of preexisting SAML application. For instance 'slack'
-{{% /md %}}</dd>
-    <dt class="property-optional"
+{{% /md %}}</dd><dt class="property-optional"
             title="Optional">
         <span id="state_recipient_csharp">
 <a href="#state_recipient_csharp" style="color: inherit; text-decoration: inherit;">Recipient</a>
@@ -2691,8 +2412,7 @@ The following state arguments are supported:
         <span class="property-type">string</span>
     </dt>
     <dd>{{% md %}}The location where the app may present the SAML assertion
-{{% /md %}}</dd>
-    <dt class="property-optional"
+{{% /md %}}</dd><dt class="property-optional"
             title="Optional">
         <span id="state_requestcompressed_csharp">
 <a href="#state_requestcompressed_csharp" style="color: inherit; text-decoration: inherit;">Request<wbr>Compressed</a>
@@ -2701,8 +2421,7 @@ The following state arguments are supported:
         <span class="property-type">bool</span>
     </dt>
     <dd>{{% md %}}Denotes whether the request is compressed or not.
-{{% /md %}}</dd>
-    <dt class="property-optional"
+{{% /md %}}</dd><dt class="property-optional"
             title="Optional">
         <span id="state_responsesigned_csharp">
 <a href="#state_responsesigned_csharp" style="color: inherit; text-decoration: inherit;">Response<wbr>Signed</a>
@@ -2711,8 +2430,7 @@ The following state arguments are supported:
         <span class="property-type">bool</span>
     </dt>
     <dd>{{% md %}}Determines whether the SAML auth response message is digitally signed
-{{% /md %}}</dd>
-    <dt class="property-optional"
+{{% /md %}}</dd><dt class="property-optional"
             title="Optional">
         <span id="state_signonmode_csharp">
 <a href="#state_signonmode_csharp" style="color: inherit; text-decoration: inherit;">Sign<wbr>On<wbr>Mode</a>
@@ -2721,8 +2439,7 @@ The following state arguments are supported:
         <span class="property-type">string</span>
     </dt>
     <dd>{{% md %}}Sign on mode of application.
-{{% /md %}}</dd>
-    <dt class="property-optional"
+{{% /md %}}</dd><dt class="property-optional"
             title="Optional">
         <span id="state_signaturealgorithm_csharp">
 <a href="#state_signaturealgorithm_csharp" style="color: inherit; text-decoration: inherit;">Signature<wbr>Algorithm</a>
@@ -2731,8 +2448,7 @@ The following state arguments are supported:
         <span class="property-type">string</span>
     </dt>
     <dd>{{% md %}}Signature algorithm used ot digitally sign the assertion and response
-{{% /md %}}</dd>
-    <dt class="property-optional"
+{{% /md %}}</dd><dt class="property-optional"
             title="Optional">
         <span id="state_singlelogoutcertificate_csharp">
 <a href="#state_singlelogoutcertificate_csharp" style="color: inherit; text-decoration: inherit;">Single<wbr>Logout<wbr>Certificate</a>
@@ -2741,8 +2457,7 @@ The following state arguments are supported:
         <span class="property-type">string</span>
     </dt>
     <dd>{{% md %}}x509 encoded certificate that the Service Provider uses to sign Single Logout requests
-{{% /md %}}</dd>
-    <dt class="property-optional"
+{{% /md %}}</dd><dt class="property-optional"
             title="Optional">
         <span id="state_singlelogoutissuer_csharp">
 <a href="#state_singlelogoutissuer_csharp" style="color: inherit; text-decoration: inherit;">Single<wbr>Logout<wbr>Issuer</a>
@@ -2751,8 +2466,7 @@ The following state arguments are supported:
         <span class="property-type">string</span>
     </dt>
     <dd>{{% md %}}The issuer of the Service Provider that generates the Single Logout request
-{{% /md %}}</dd>
-    <dt class="property-optional"
+{{% /md %}}</dd><dt class="property-optional"
             title="Optional">
         <span id="state_singlelogouturl_csharp">
 <a href="#state_singlelogouturl_csharp" style="color: inherit; text-decoration: inherit;">Single<wbr>Logout<wbr>Url</a>
@@ -2761,8 +2475,7 @@ The following state arguments are supported:
         <span class="property-type">string</span>
     </dt>
     <dd>{{% md %}}The location where the logout response is sent
-{{% /md %}}</dd>
-    <dt class="property-optional"
+{{% /md %}}</dd><dt class="property-optional"
             title="Optional">
         <span id="state_spissuer_csharp">
 <a href="#state_spissuer_csharp" style="color: inherit; text-decoration: inherit;">Sp<wbr>Issuer</a>
@@ -2771,8 +2484,7 @@ The following state arguments are supported:
         <span class="property-type">string</span>
     </dt>
     <dd>{{% md %}}SAML SP issuer ID
-{{% /md %}}</dd>
-    <dt class="property-optional"
+{{% /md %}}</dd><dt class="property-optional"
             title="Optional">
         <span id="state_ssourl_csharp">
 <a href="#state_ssourl_csharp" style="color: inherit; text-decoration: inherit;">Sso<wbr>Url</a>
@@ -2781,8 +2493,7 @@ The following state arguments are supported:
         <span class="property-type">string</span>
     </dt>
     <dd>{{% md %}}Single Sign On URL
-{{% /md %}}</dd>
-    <dt class="property-optional"
+{{% /md %}}</dd><dt class="property-optional"
             title="Optional">
         <span id="state_status_csharp">
 <a href="#state_status_csharp" style="color: inherit; text-decoration: inherit;">Status</a>
@@ -2791,8 +2502,7 @@ The following state arguments are supported:
         <span class="property-type">string</span>
     </dt>
     <dd>{{% md %}}Status of application.
-{{% /md %}}</dd>
-    <dt class="property-optional"
+{{% /md %}}</dd><dt class="property-optional"
             title="Optional">
         <span id="state_subjectnameidformat_csharp">
 <a href="#state_subjectnameidformat_csharp" style="color: inherit; text-decoration: inherit;">Subject<wbr>Name<wbr>Id<wbr>Format</a>
@@ -2801,8 +2511,7 @@ The following state arguments are supported:
         <span class="property-type">string</span>
     </dt>
     <dd>{{% md %}}Identifies the SAML processing rules.
-{{% /md %}}</dd>
-    <dt class="property-optional"
+{{% /md %}}</dd><dt class="property-optional"
             title="Optional">
         <span id="state_subjectnameidtemplate_csharp">
 <a href="#state_subjectnameidtemplate_csharp" style="color: inherit; text-decoration: inherit;">Subject<wbr>Name<wbr>Id<wbr>Template</a>
@@ -2811,8 +2520,7 @@ The following state arguments are supported:
         <span class="property-type">string</span>
     </dt>
     <dd>{{% md %}}Template for app user's username when a user is assigned to the app
-{{% /md %}}</dd>
-    <dt class="property-optional"
+{{% /md %}}</dd><dt class="property-optional"
             title="Optional">
         <span id="state_usernametemplate_csharp">
 <a href="#state_usernametemplate_csharp" style="color: inherit; text-decoration: inherit;">User<wbr>Name<wbr>Template</a>
@@ -2821,8 +2529,7 @@ The following state arguments are supported:
         <span class="property-type">string</span>
     </dt>
     <dd>{{% md %}}Username template
-{{% /md %}}</dd>
-    <dt class="property-optional"
+{{% /md %}}</dd><dt class="property-optional"
             title="Optional">
         <span id="state_usernametemplatesuffix_csharp">
 <a href="#state_usernametemplatesuffix_csharp" style="color: inherit; text-decoration: inherit;">User<wbr>Name<wbr>Template<wbr>Suffix</a>
@@ -2831,8 +2538,7 @@ The following state arguments are supported:
         <span class="property-type">string</span>
     </dt>
     <dd>{{% md %}}Username template suffix
-{{% /md %}}</dd>
-    <dt class="property-optional"
+{{% /md %}}</dd><dt class="property-optional"
             title="Optional">
         <span id="state_usernametemplatetype_csharp">
 <a href="#state_usernametemplatetype_csharp" style="color: inherit; text-decoration: inherit;">User<wbr>Name<wbr>Template<wbr>Type</a>
@@ -2841,8 +2547,7 @@ The following state arguments are supported:
         <span class="property-type">string</span>
     </dt>
     <dd>{{% md %}}Username template type
-{{% /md %}}</dd>
-    <dt class="property-optional"
+{{% /md %}}</dd><dt class="property-optional"
             title="Optional">
         <span id="state_users_csharp">
 <a href="#state_users_csharp" style="color: inherit; text-decoration: inherit;">Users</a>
@@ -2851,14 +2556,11 @@ The following state arguments are supported:
         <span class="property-type"><a href="#samlappuser">List&lt;Saml<wbr>App<wbr>User<wbr>Args&gt;</a></span>
     </dt>
     <dd>{{% md %}}Users associated with the application
-{{% /md %}}</dd>
-</dl>
+{{% /md %}}</dd></dl>
 {{% /choosable %}}
 
 {{% choosable language go %}}
-<dl class="resources-properties">
-
-    <dt class="property-optional"
+<dl class="resources-properties"><dt class="property-optional"
             title="Optional">
         <span id="state_accessibilityerrorredirecturl_go">
 <a href="#state_accessibilityerrorredirecturl_go" style="color: inherit; text-decoration: inherit;">Accessibility<wbr>Error<wbr>Redirect<wbr>Url</a>
@@ -2867,8 +2569,7 @@ The following state arguments are supported:
         <span class="property-type">string</span>
     </dt>
     <dd>{{% md %}}Custom error page URL
-{{% /md %}}</dd>
-    <dt class="property-optional"
+{{% /md %}}</dd><dt class="property-optional"
             title="Optional">
         <span id="state_accessibilityloginredirecturl_go">
 <a href="#state_accessibilityloginredirecturl_go" style="color: inherit; text-decoration: inherit;">Accessibility<wbr>Login<wbr>Redirect<wbr>Url</a>
@@ -2877,8 +2578,7 @@ The following state arguments are supported:
         <span class="property-type">string</span>
     </dt>
     <dd>{{% md %}}Custom login page URL
-{{% /md %}}</dd>
-    <dt class="property-optional"
+{{% /md %}}</dd><dt class="property-optional"
             title="Optional">
         <span id="state_accessibilityselfservice_go">
 <a href="#state_accessibilityselfservice_go" style="color: inherit; text-decoration: inherit;">Accessibility<wbr>Self<wbr>Service</a>
@@ -2887,8 +2587,7 @@ The following state arguments are supported:
         <span class="property-type">bool</span>
     </dt>
     <dd>{{% md %}}Enable self service
-{{% /md %}}</dd>
-    <dt class="property-optional"
+{{% /md %}}</dd><dt class="property-optional"
             title="Optional">
         <span id="state_acsendpoints_go">
 <a href="#state_acsendpoints_go" style="color: inherit; text-decoration: inherit;">Acs<wbr>Endpoints</a>
@@ -2897,8 +2596,7 @@ The following state arguments are supported:
         <span class="property-type">[]string</span>
     </dt>
     <dd>{{% md %}}List of ACS endpoints for this SAML application
-{{% /md %}}</dd>
-    <dt class="property-optional"
+{{% /md %}}</dd><dt class="property-optional"
             title="Optional">
         <span id="state_appsettingsjson_go">
 <a href="#state_appsettingsjson_go" style="color: inherit; text-decoration: inherit;">App<wbr>Settings<wbr>Json</a>
@@ -2907,8 +2605,7 @@ The following state arguments are supported:
         <span class="property-type">string</span>
     </dt>
     <dd>{{% md %}}Application settings in JSON format
-{{% /md %}}</dd>
-    <dt class="property-optional"
+{{% /md %}}</dd><dt class="property-optional"
             title="Optional">
         <span id="state_assertionsigned_go">
 <a href="#state_assertionsigned_go" style="color: inherit; text-decoration: inherit;">Assertion<wbr>Signed</a>
@@ -2917,8 +2614,7 @@ The following state arguments are supported:
         <span class="property-type">bool</span>
     </dt>
     <dd>{{% md %}}Determines whether the SAML assertion is digitally signed
-{{% /md %}}</dd>
-    <dt class="property-optional"
+{{% /md %}}</dd><dt class="property-optional"
             title="Optional">
         <span id="state_attributestatements_go">
 <a href="#state_attributestatements_go" style="color: inherit; text-decoration: inherit;">Attribute<wbr>Statements</a>
@@ -2926,8 +2622,7 @@ The following state arguments are supported:
         <span class="property-indicator"></span>
         <span class="property-type"><a href="#samlappattributestatement">[]Saml<wbr>App<wbr>Attribute<wbr>Statement</a></span>
     </dt>
-    <dd>{{% md %}}{{% /md %}}</dd>
-    <dt class="property-optional"
+    <dd>{{% md %}}{{% /md %}}</dd><dt class="property-optional"
             title="Optional">
         <span id="state_audience_go">
 <a href="#state_audience_go" style="color: inherit; text-decoration: inherit;">Audience</a>
@@ -2936,8 +2631,7 @@ The following state arguments are supported:
         <span class="property-type">string</span>
     </dt>
     <dd>{{% md %}}Audience Restriction
-{{% /md %}}</dd>
-    <dt class="property-optional"
+{{% /md %}}</dd><dt class="property-optional"
             title="Optional">
         <span id="state_authncontextclassref_go">
 <a href="#state_authncontextclassref_go" style="color: inherit; text-decoration: inherit;">Authn<wbr>Context<wbr>Class<wbr>Ref</a>
@@ -2946,8 +2640,7 @@ The following state arguments are supported:
         <span class="property-type">string</span>
     </dt>
     <dd>{{% md %}}Identifies the SAML authentication context class for the assertion’s authentication statement
-{{% /md %}}</dd>
-    <dt class="property-optional"
+{{% /md %}}</dd><dt class="property-optional"
             title="Optional">
         <span id="state_autosubmittoolbar_go">
 <a href="#state_autosubmittoolbar_go" style="color: inherit; text-decoration: inherit;">Auto<wbr>Submit<wbr>Toolbar</a>
@@ -2956,8 +2649,7 @@ The following state arguments are supported:
         <span class="property-type">bool</span>
     </dt>
     <dd>{{% md %}}Display auto submit toolbar
-{{% /md %}}</dd>
-    <dt class="property-optional"
+{{% /md %}}</dd><dt class="property-optional"
             title="Optional">
         <span id="state_certificate_go">
 <a href="#state_certificate_go" style="color: inherit; text-decoration: inherit;">Certificate</a>
@@ -2966,8 +2658,7 @@ The following state arguments are supported:
         <span class="property-type">string</span>
     </dt>
     <dd>{{% md %}}cert from SAML XML metadata payload
-{{% /md %}}</dd>
-    <dt class="property-optional"
+{{% /md %}}</dd><dt class="property-optional"
             title="Optional">
         <span id="state_defaultrelaystate_go">
 <a href="#state_defaultrelaystate_go" style="color: inherit; text-decoration: inherit;">Default<wbr>Relay<wbr>State</a>
@@ -2976,8 +2667,7 @@ The following state arguments are supported:
         <span class="property-type">string</span>
     </dt>
     <dd>{{% md %}}Identifies a specific application resource in an IDP initiated SSO scenario.
-{{% /md %}}</dd>
-    <dt class="property-optional"
+{{% /md %}}</dd><dt class="property-optional"
             title="Optional">
         <span id="state_destination_go">
 <a href="#state_destination_go" style="color: inherit; text-decoration: inherit;">Destination</a>
@@ -2986,8 +2676,7 @@ The following state arguments are supported:
         <span class="property-type">string</span>
     </dt>
     <dd>{{% md %}}Identifies the location where the SAML response is intended to be sent inside of the SAML assertion
-{{% /md %}}</dd>
-    <dt class="property-optional"
+{{% /md %}}</dd><dt class="property-optional"
             title="Optional">
         <span id="state_digestalgorithm_go">
 <a href="#state_digestalgorithm_go" style="color: inherit; text-decoration: inherit;">Digest<wbr>Algorithm</a>
@@ -2996,8 +2685,7 @@ The following state arguments are supported:
         <span class="property-type">string</span>
     </dt>
     <dd>{{% md %}}Determines the digest algorithm used to digitally sign the SAML assertion and response
-{{% /md %}}</dd>
-    <dt class="property-optional"
+{{% /md %}}</dd><dt class="property-optional"
             title="Optional">
         <span id="state_entitykey_go">
 <a href="#state_entitykey_go" style="color: inherit; text-decoration: inherit;">Entity<wbr>Key</a>
@@ -3006,8 +2694,7 @@ The following state arguments are supported:
         <span class="property-type">string</span>
     </dt>
     <dd>{{% md %}}Entity ID, the ID portion of the entity_url
-{{% /md %}}</dd>
-    <dt class="property-optional"
+{{% /md %}}</dd><dt class="property-optional"
             title="Optional">
         <span id="state_entityurl_go">
 <a href="#state_entityurl_go" style="color: inherit; text-decoration: inherit;">Entity<wbr>Url</a>
@@ -3016,8 +2703,7 @@ The following state arguments are supported:
         <span class="property-type">string</span>
     </dt>
     <dd>{{% md %}}Entity URL for instance http://www.okta.com/exk1fcia6d6EMsf331d8
-{{% /md %}}</dd>
-    <dt class="property-optional"
+{{% /md %}}</dd><dt class="property-optional"
             title="Optional">
         <span id="state_features_go">
 <a href="#state_features_go" style="color: inherit; text-decoration: inherit;">Features</a>
@@ -3026,8 +2712,7 @@ The following state arguments are supported:
         <span class="property-type">[]string</span>
     </dt>
     <dd>{{% md %}}features to enable
-{{% /md %}}</dd>
-    <dt class="property-optional"
+{{% /md %}}</dd><dt class="property-optional"
             title="Optional">
         <span id="state_groups_go">
 <a href="#state_groups_go" style="color: inherit; text-decoration: inherit;">Groups</a>
@@ -3036,8 +2721,7 @@ The following state arguments are supported:
         <span class="property-type">[]string</span>
     </dt>
     <dd>{{% md %}}Groups associated with the application
-{{% /md %}}</dd>
-    <dt class="property-optional"
+{{% /md %}}</dd><dt class="property-optional"
             title="Optional">
         <span id="state_hideios_go">
 <a href="#state_hideios_go" style="color: inherit; text-decoration: inherit;">Hide<wbr>Ios</a>
@@ -3046,8 +2730,7 @@ The following state arguments are supported:
         <span class="property-type">bool</span>
     </dt>
     <dd>{{% md %}}Do not display application icon on mobile app
-{{% /md %}}</dd>
-    <dt class="property-optional"
+{{% /md %}}</dd><dt class="property-optional"
             title="Optional">
         <span id="state_hideweb_go">
 <a href="#state_hideweb_go" style="color: inherit; text-decoration: inherit;">Hide<wbr>Web</a>
@@ -3056,8 +2739,7 @@ The following state arguments are supported:
         <span class="property-type">bool</span>
     </dt>
     <dd>{{% md %}}Do not display application icon to users
-{{% /md %}}</dd>
-    <dt class="property-optional"
+{{% /md %}}</dd><dt class="property-optional"
             title="Optional">
         <span id="state_honorforceauthn_go">
 <a href="#state_honorforceauthn_go" style="color: inherit; text-decoration: inherit;">Honor<wbr>Force<wbr>Authn</a>
@@ -3066,8 +2748,7 @@ The following state arguments are supported:
         <span class="property-type">bool</span>
     </dt>
     <dd>{{% md %}}Prompt user to re-authenticate if SP asks for it
-{{% /md %}}</dd>
-    <dt class="property-optional"
+{{% /md %}}</dd><dt class="property-optional"
             title="Optional">
         <span id="state_httppostbinding_go">
 <a href="#state_httppostbinding_go" style="color: inherit; text-decoration: inherit;">Http<wbr>Post<wbr>Binding</a>
@@ -3076,8 +2757,7 @@ The following state arguments are supported:
         <span class="property-type">string</span>
     </dt>
     <dd>{{% md %}}urn:oasis:names:tc:SAML:2.0:bindings:HTTP-Post location from the SAML metadata.
-{{% /md %}}</dd>
-    <dt class="property-optional"
+{{% /md %}}</dd><dt class="property-optional"
             title="Optional">
         <span id="state_httpredirectbinding_go">
 <a href="#state_httpredirectbinding_go" style="color: inherit; text-decoration: inherit;">Http<wbr>Redirect<wbr>Binding</a>
@@ -3086,8 +2766,7 @@ The following state arguments are supported:
         <span class="property-type">string</span>
     </dt>
     <dd>{{% md %}}urn:oasis:names:tc:SAML:2.0:bindings:HTTP-Redirect location from the SAML metadata.
-{{% /md %}}</dd>
-    <dt class="property-optional"
+{{% /md %}}</dd><dt class="property-optional"
             title="Optional">
         <span id="state_idpissuer_go">
 <a href="#state_idpissuer_go" style="color: inherit; text-decoration: inherit;">Idp<wbr>Issuer</a>
@@ -3096,8 +2775,7 @@ The following state arguments are supported:
         <span class="property-type">string</span>
     </dt>
     <dd>{{% md %}}SAML issuer ID
-{{% /md %}}</dd>
-    <dt class="property-optional"
+{{% /md %}}</dd><dt class="property-optional"
             title="Optional">
         <span id="state_keyid_go">
 <a href="#state_keyid_go" style="color: inherit; text-decoration: inherit;">Key<wbr>Id</a>
@@ -3106,8 +2784,7 @@ The following state arguments are supported:
         <span class="property-type">string</span>
     </dt>
     <dd>{{% md %}}Certificate ID
-{{% /md %}}</dd>
-    <dt class="property-optional"
+{{% /md %}}</dd><dt class="property-optional"
             title="Optional">
         <span id="state_keyname_go">
 <a href="#state_keyname_go" style="color: inherit; text-decoration: inherit;">Key<wbr>Name</a>
@@ -3116,8 +2793,7 @@ The following state arguments are supported:
         <span class="property-type">string</span>
     </dt>
     <dd>{{% md %}}Certificate name. This modulates the rotation of keys. New name == new key.
-{{% /md %}}</dd>
-    <dt class="property-optional"
+{{% /md %}}</dd><dt class="property-optional"
             title="Optional">
         <span id="state_keyyearsvalid_go">
 <a href="#state_keyyearsvalid_go" style="color: inherit; text-decoration: inherit;">Key<wbr>Years<wbr>Valid</a>
@@ -3126,8 +2802,7 @@ The following state arguments are supported:
         <span class="property-type">int</span>
     </dt>
     <dd>{{% md %}}Number of years the certificate is valid.
-{{% /md %}}</dd>
-    <dt class="property-optional"
+{{% /md %}}</dd><dt class="property-optional"
             title="Optional">
         <span id="state_label_go">
 <a href="#state_label_go" style="color: inherit; text-decoration: inherit;">Label</a>
@@ -3136,8 +2811,7 @@ The following state arguments are supported:
         <span class="property-type">string</span>
     </dt>
     <dd>{{% md %}}Pretty name of app.
-{{% /md %}}</dd>
-    <dt class="property-optional"
+{{% /md %}}</dd><dt class="property-optional"
             title="Optional">
         <span id="state_metadata_go">
 <a href="#state_metadata_go" style="color: inherit; text-decoration: inherit;">Metadata</a>
@@ -3146,8 +2820,7 @@ The following state arguments are supported:
         <span class="property-type">string</span>
     </dt>
     <dd>{{% md %}}SAML xml metadata payload
-{{% /md %}}</dd>
-    <dt class="property-optional"
+{{% /md %}}</dd><dt class="property-optional"
             title="Optional">
         <span id="state_metadataurl_go">
 <a href="#state_metadataurl_go" style="color: inherit; text-decoration: inherit;">Metadata<wbr>Url</a>
@@ -3156,8 +2829,7 @@ The following state arguments are supported:
         <span class="property-type">string</span>
     </dt>
     <dd>{{% md %}}SAML xml metadata URL
-{{% /md %}}</dd>
-    <dt class="property-optional"
+{{% /md %}}</dd><dt class="property-optional"
             title="Optional">
         <span id="state_name_go">
 <a href="#state_name_go" style="color: inherit; text-decoration: inherit;">Name</a>
@@ -3166,8 +2838,7 @@ The following state arguments are supported:
         <span class="property-type">string</span>
     </dt>
     <dd>{{% md %}}name of app.
-{{% /md %}}</dd>
-    <dt class="property-optional"
+{{% /md %}}</dd><dt class="property-optional"
             title="Optional">
         <span id="state_preconfiguredapp_go">
 <a href="#state_preconfiguredapp_go" style="color: inherit; text-decoration: inherit;">Preconfigured<wbr>App</a>
@@ -3176,8 +2847,7 @@ The following state arguments are supported:
         <span class="property-type">string</span>
     </dt>
     <dd>{{% md %}}Name of preexisting SAML application. For instance 'slack'
-{{% /md %}}</dd>
-    <dt class="property-optional"
+{{% /md %}}</dd><dt class="property-optional"
             title="Optional">
         <span id="state_recipient_go">
 <a href="#state_recipient_go" style="color: inherit; text-decoration: inherit;">Recipient</a>
@@ -3186,8 +2856,7 @@ The following state arguments are supported:
         <span class="property-type">string</span>
     </dt>
     <dd>{{% md %}}The location where the app may present the SAML assertion
-{{% /md %}}</dd>
-    <dt class="property-optional"
+{{% /md %}}</dd><dt class="property-optional"
             title="Optional">
         <span id="state_requestcompressed_go">
 <a href="#state_requestcompressed_go" style="color: inherit; text-decoration: inherit;">Request<wbr>Compressed</a>
@@ -3196,8 +2865,7 @@ The following state arguments are supported:
         <span class="property-type">bool</span>
     </dt>
     <dd>{{% md %}}Denotes whether the request is compressed or not.
-{{% /md %}}</dd>
-    <dt class="property-optional"
+{{% /md %}}</dd><dt class="property-optional"
             title="Optional">
         <span id="state_responsesigned_go">
 <a href="#state_responsesigned_go" style="color: inherit; text-decoration: inherit;">Response<wbr>Signed</a>
@@ -3206,8 +2874,7 @@ The following state arguments are supported:
         <span class="property-type">bool</span>
     </dt>
     <dd>{{% md %}}Determines whether the SAML auth response message is digitally signed
-{{% /md %}}</dd>
-    <dt class="property-optional"
+{{% /md %}}</dd><dt class="property-optional"
             title="Optional">
         <span id="state_signonmode_go">
 <a href="#state_signonmode_go" style="color: inherit; text-decoration: inherit;">Sign<wbr>On<wbr>Mode</a>
@@ -3216,8 +2883,7 @@ The following state arguments are supported:
         <span class="property-type">string</span>
     </dt>
     <dd>{{% md %}}Sign on mode of application.
-{{% /md %}}</dd>
-    <dt class="property-optional"
+{{% /md %}}</dd><dt class="property-optional"
             title="Optional">
         <span id="state_signaturealgorithm_go">
 <a href="#state_signaturealgorithm_go" style="color: inherit; text-decoration: inherit;">Signature<wbr>Algorithm</a>
@@ -3226,8 +2892,7 @@ The following state arguments are supported:
         <span class="property-type">string</span>
     </dt>
     <dd>{{% md %}}Signature algorithm used ot digitally sign the assertion and response
-{{% /md %}}</dd>
-    <dt class="property-optional"
+{{% /md %}}</dd><dt class="property-optional"
             title="Optional">
         <span id="state_singlelogoutcertificate_go">
 <a href="#state_singlelogoutcertificate_go" style="color: inherit; text-decoration: inherit;">Single<wbr>Logout<wbr>Certificate</a>
@@ -3236,8 +2901,7 @@ The following state arguments are supported:
         <span class="property-type">string</span>
     </dt>
     <dd>{{% md %}}x509 encoded certificate that the Service Provider uses to sign Single Logout requests
-{{% /md %}}</dd>
-    <dt class="property-optional"
+{{% /md %}}</dd><dt class="property-optional"
             title="Optional">
         <span id="state_singlelogoutissuer_go">
 <a href="#state_singlelogoutissuer_go" style="color: inherit; text-decoration: inherit;">Single<wbr>Logout<wbr>Issuer</a>
@@ -3246,8 +2910,7 @@ The following state arguments are supported:
         <span class="property-type">string</span>
     </dt>
     <dd>{{% md %}}The issuer of the Service Provider that generates the Single Logout request
-{{% /md %}}</dd>
-    <dt class="property-optional"
+{{% /md %}}</dd><dt class="property-optional"
             title="Optional">
         <span id="state_singlelogouturl_go">
 <a href="#state_singlelogouturl_go" style="color: inherit; text-decoration: inherit;">Single<wbr>Logout<wbr>Url</a>
@@ -3256,8 +2919,7 @@ The following state arguments are supported:
         <span class="property-type">string</span>
     </dt>
     <dd>{{% md %}}The location where the logout response is sent
-{{% /md %}}</dd>
-    <dt class="property-optional"
+{{% /md %}}</dd><dt class="property-optional"
             title="Optional">
         <span id="state_spissuer_go">
 <a href="#state_spissuer_go" style="color: inherit; text-decoration: inherit;">Sp<wbr>Issuer</a>
@@ -3266,8 +2928,7 @@ The following state arguments are supported:
         <span class="property-type">string</span>
     </dt>
     <dd>{{% md %}}SAML SP issuer ID
-{{% /md %}}</dd>
-    <dt class="property-optional"
+{{% /md %}}</dd><dt class="property-optional"
             title="Optional">
         <span id="state_ssourl_go">
 <a href="#state_ssourl_go" style="color: inherit; text-decoration: inherit;">Sso<wbr>Url</a>
@@ -3276,8 +2937,7 @@ The following state arguments are supported:
         <span class="property-type">string</span>
     </dt>
     <dd>{{% md %}}Single Sign On URL
-{{% /md %}}</dd>
-    <dt class="property-optional"
+{{% /md %}}</dd><dt class="property-optional"
             title="Optional">
         <span id="state_status_go">
 <a href="#state_status_go" style="color: inherit; text-decoration: inherit;">Status</a>
@@ -3286,8 +2946,7 @@ The following state arguments are supported:
         <span class="property-type">string</span>
     </dt>
     <dd>{{% md %}}Status of application.
-{{% /md %}}</dd>
-    <dt class="property-optional"
+{{% /md %}}</dd><dt class="property-optional"
             title="Optional">
         <span id="state_subjectnameidformat_go">
 <a href="#state_subjectnameidformat_go" style="color: inherit; text-decoration: inherit;">Subject<wbr>Name<wbr>Id<wbr>Format</a>
@@ -3296,8 +2955,7 @@ The following state arguments are supported:
         <span class="property-type">string</span>
     </dt>
     <dd>{{% md %}}Identifies the SAML processing rules.
-{{% /md %}}</dd>
-    <dt class="property-optional"
+{{% /md %}}</dd><dt class="property-optional"
             title="Optional">
         <span id="state_subjectnameidtemplate_go">
 <a href="#state_subjectnameidtemplate_go" style="color: inherit; text-decoration: inherit;">Subject<wbr>Name<wbr>Id<wbr>Template</a>
@@ -3306,8 +2964,7 @@ The following state arguments are supported:
         <span class="property-type">string</span>
     </dt>
     <dd>{{% md %}}Template for app user's username when a user is assigned to the app
-{{% /md %}}</dd>
-    <dt class="property-optional"
+{{% /md %}}</dd><dt class="property-optional"
             title="Optional">
         <span id="state_usernametemplate_go">
 <a href="#state_usernametemplate_go" style="color: inherit; text-decoration: inherit;">User<wbr>Name<wbr>Template</a>
@@ -3316,8 +2973,7 @@ The following state arguments are supported:
         <span class="property-type">string</span>
     </dt>
     <dd>{{% md %}}Username template
-{{% /md %}}</dd>
-    <dt class="property-optional"
+{{% /md %}}</dd><dt class="property-optional"
             title="Optional">
         <span id="state_usernametemplatesuffix_go">
 <a href="#state_usernametemplatesuffix_go" style="color: inherit; text-decoration: inherit;">User<wbr>Name<wbr>Template<wbr>Suffix</a>
@@ -3326,8 +2982,7 @@ The following state arguments are supported:
         <span class="property-type">string</span>
     </dt>
     <dd>{{% md %}}Username template suffix
-{{% /md %}}</dd>
-    <dt class="property-optional"
+{{% /md %}}</dd><dt class="property-optional"
             title="Optional">
         <span id="state_usernametemplatetype_go">
 <a href="#state_usernametemplatetype_go" style="color: inherit; text-decoration: inherit;">User<wbr>Name<wbr>Template<wbr>Type</a>
@@ -3336,8 +2991,7 @@ The following state arguments are supported:
         <span class="property-type">string</span>
     </dt>
     <dd>{{% md %}}Username template type
-{{% /md %}}</dd>
-    <dt class="property-optional"
+{{% /md %}}</dd><dt class="property-optional"
             title="Optional">
         <span id="state_users_go">
 <a href="#state_users_go" style="color: inherit; text-decoration: inherit;">Users</a>
@@ -3346,14 +3000,11 @@ The following state arguments are supported:
         <span class="property-type"><a href="#samlappuser">[]Saml<wbr>App<wbr>User</a></span>
     </dt>
     <dd>{{% md %}}Users associated with the application
-{{% /md %}}</dd>
-</dl>
+{{% /md %}}</dd></dl>
 {{% /choosable %}}
 
 {{% choosable language nodejs %}}
-<dl class="resources-properties">
-
-    <dt class="property-optional"
+<dl class="resources-properties"><dt class="property-optional"
             title="Optional">
         <span id="state_accessibilityerrorredirecturl_nodejs">
 <a href="#state_accessibilityerrorredirecturl_nodejs" style="color: inherit; text-decoration: inherit;">accessibility<wbr>Error<wbr>Redirect<wbr>Url</a>
@@ -3362,8 +3013,7 @@ The following state arguments are supported:
         <span class="property-type">string</span>
     </dt>
     <dd>{{% md %}}Custom error page URL
-{{% /md %}}</dd>
-    <dt class="property-optional"
+{{% /md %}}</dd><dt class="property-optional"
             title="Optional">
         <span id="state_accessibilityloginredirecturl_nodejs">
 <a href="#state_accessibilityloginredirecturl_nodejs" style="color: inherit; text-decoration: inherit;">accessibility<wbr>Login<wbr>Redirect<wbr>Url</a>
@@ -3372,8 +3022,7 @@ The following state arguments are supported:
         <span class="property-type">string</span>
     </dt>
     <dd>{{% md %}}Custom login page URL
-{{% /md %}}</dd>
-    <dt class="property-optional"
+{{% /md %}}</dd><dt class="property-optional"
             title="Optional">
         <span id="state_accessibilityselfservice_nodejs">
 <a href="#state_accessibilityselfservice_nodejs" style="color: inherit; text-decoration: inherit;">accessibility<wbr>Self<wbr>Service</a>
@@ -3382,8 +3031,7 @@ The following state arguments are supported:
         <span class="property-type">boolean</span>
     </dt>
     <dd>{{% md %}}Enable self service
-{{% /md %}}</dd>
-    <dt class="property-optional"
+{{% /md %}}</dd><dt class="property-optional"
             title="Optional">
         <span id="state_acsendpoints_nodejs">
 <a href="#state_acsendpoints_nodejs" style="color: inherit; text-decoration: inherit;">acs<wbr>Endpoints</a>
@@ -3392,8 +3040,7 @@ The following state arguments are supported:
         <span class="property-type">string[]</span>
     </dt>
     <dd>{{% md %}}List of ACS endpoints for this SAML application
-{{% /md %}}</dd>
-    <dt class="property-optional"
+{{% /md %}}</dd><dt class="property-optional"
             title="Optional">
         <span id="state_appsettingsjson_nodejs">
 <a href="#state_appsettingsjson_nodejs" style="color: inherit; text-decoration: inherit;">app<wbr>Settings<wbr>Json</a>
@@ -3402,8 +3049,7 @@ The following state arguments are supported:
         <span class="property-type">string</span>
     </dt>
     <dd>{{% md %}}Application settings in JSON format
-{{% /md %}}</dd>
-    <dt class="property-optional"
+{{% /md %}}</dd><dt class="property-optional"
             title="Optional">
         <span id="state_assertionsigned_nodejs">
 <a href="#state_assertionsigned_nodejs" style="color: inherit; text-decoration: inherit;">assertion<wbr>Signed</a>
@@ -3412,8 +3058,7 @@ The following state arguments are supported:
         <span class="property-type">boolean</span>
     </dt>
     <dd>{{% md %}}Determines whether the SAML assertion is digitally signed
-{{% /md %}}</dd>
-    <dt class="property-optional"
+{{% /md %}}</dd><dt class="property-optional"
             title="Optional">
         <span id="state_attributestatements_nodejs">
 <a href="#state_attributestatements_nodejs" style="color: inherit; text-decoration: inherit;">attribute<wbr>Statements</a>
@@ -3421,8 +3066,7 @@ The following state arguments are supported:
         <span class="property-indicator"></span>
         <span class="property-type"><a href="#samlappattributestatement">Saml<wbr>App<wbr>Attribute<wbr>Statement[]</a></span>
     </dt>
-    <dd>{{% md %}}{{% /md %}}</dd>
-    <dt class="property-optional"
+    <dd>{{% md %}}{{% /md %}}</dd><dt class="property-optional"
             title="Optional">
         <span id="state_audience_nodejs">
 <a href="#state_audience_nodejs" style="color: inherit; text-decoration: inherit;">audience</a>
@@ -3431,8 +3075,7 @@ The following state arguments are supported:
         <span class="property-type">string</span>
     </dt>
     <dd>{{% md %}}Audience Restriction
-{{% /md %}}</dd>
-    <dt class="property-optional"
+{{% /md %}}</dd><dt class="property-optional"
             title="Optional">
         <span id="state_authncontextclassref_nodejs">
 <a href="#state_authncontextclassref_nodejs" style="color: inherit; text-decoration: inherit;">authn<wbr>Context<wbr>Class<wbr>Ref</a>
@@ -3441,8 +3084,7 @@ The following state arguments are supported:
         <span class="property-type">string</span>
     </dt>
     <dd>{{% md %}}Identifies the SAML authentication context class for the assertion’s authentication statement
-{{% /md %}}</dd>
-    <dt class="property-optional"
+{{% /md %}}</dd><dt class="property-optional"
             title="Optional">
         <span id="state_autosubmittoolbar_nodejs">
 <a href="#state_autosubmittoolbar_nodejs" style="color: inherit; text-decoration: inherit;">auto<wbr>Submit<wbr>Toolbar</a>
@@ -3451,8 +3093,7 @@ The following state arguments are supported:
         <span class="property-type">boolean</span>
     </dt>
     <dd>{{% md %}}Display auto submit toolbar
-{{% /md %}}</dd>
-    <dt class="property-optional"
+{{% /md %}}</dd><dt class="property-optional"
             title="Optional">
         <span id="state_certificate_nodejs">
 <a href="#state_certificate_nodejs" style="color: inherit; text-decoration: inherit;">certificate</a>
@@ -3461,8 +3102,7 @@ The following state arguments are supported:
         <span class="property-type">string</span>
     </dt>
     <dd>{{% md %}}cert from SAML XML metadata payload
-{{% /md %}}</dd>
-    <dt class="property-optional"
+{{% /md %}}</dd><dt class="property-optional"
             title="Optional">
         <span id="state_defaultrelaystate_nodejs">
 <a href="#state_defaultrelaystate_nodejs" style="color: inherit; text-decoration: inherit;">default<wbr>Relay<wbr>State</a>
@@ -3471,8 +3111,7 @@ The following state arguments are supported:
         <span class="property-type">string</span>
     </dt>
     <dd>{{% md %}}Identifies a specific application resource in an IDP initiated SSO scenario.
-{{% /md %}}</dd>
-    <dt class="property-optional"
+{{% /md %}}</dd><dt class="property-optional"
             title="Optional">
         <span id="state_destination_nodejs">
 <a href="#state_destination_nodejs" style="color: inherit; text-decoration: inherit;">destination</a>
@@ -3481,8 +3120,7 @@ The following state arguments are supported:
         <span class="property-type">string</span>
     </dt>
     <dd>{{% md %}}Identifies the location where the SAML response is intended to be sent inside of the SAML assertion
-{{% /md %}}</dd>
-    <dt class="property-optional"
+{{% /md %}}</dd><dt class="property-optional"
             title="Optional">
         <span id="state_digestalgorithm_nodejs">
 <a href="#state_digestalgorithm_nodejs" style="color: inherit; text-decoration: inherit;">digest<wbr>Algorithm</a>
@@ -3491,8 +3129,7 @@ The following state arguments are supported:
         <span class="property-type">string</span>
     </dt>
     <dd>{{% md %}}Determines the digest algorithm used to digitally sign the SAML assertion and response
-{{% /md %}}</dd>
-    <dt class="property-optional"
+{{% /md %}}</dd><dt class="property-optional"
             title="Optional">
         <span id="state_entitykey_nodejs">
 <a href="#state_entitykey_nodejs" style="color: inherit; text-decoration: inherit;">entity<wbr>Key</a>
@@ -3501,8 +3138,7 @@ The following state arguments are supported:
         <span class="property-type">string</span>
     </dt>
     <dd>{{% md %}}Entity ID, the ID portion of the entity_url
-{{% /md %}}</dd>
-    <dt class="property-optional"
+{{% /md %}}</dd><dt class="property-optional"
             title="Optional">
         <span id="state_entityurl_nodejs">
 <a href="#state_entityurl_nodejs" style="color: inherit; text-decoration: inherit;">entity<wbr>Url</a>
@@ -3511,8 +3147,7 @@ The following state arguments are supported:
         <span class="property-type">string</span>
     </dt>
     <dd>{{% md %}}Entity URL for instance http://www.okta.com/exk1fcia6d6EMsf331d8
-{{% /md %}}</dd>
-    <dt class="property-optional"
+{{% /md %}}</dd><dt class="property-optional"
             title="Optional">
         <span id="state_features_nodejs">
 <a href="#state_features_nodejs" style="color: inherit; text-decoration: inherit;">features</a>
@@ -3521,8 +3156,7 @@ The following state arguments are supported:
         <span class="property-type">string[]</span>
     </dt>
     <dd>{{% md %}}features to enable
-{{% /md %}}</dd>
-    <dt class="property-optional"
+{{% /md %}}</dd><dt class="property-optional"
             title="Optional">
         <span id="state_groups_nodejs">
 <a href="#state_groups_nodejs" style="color: inherit; text-decoration: inherit;">groups</a>
@@ -3531,8 +3165,7 @@ The following state arguments are supported:
         <span class="property-type">string[]</span>
     </dt>
     <dd>{{% md %}}Groups associated with the application
-{{% /md %}}</dd>
-    <dt class="property-optional"
+{{% /md %}}</dd><dt class="property-optional"
             title="Optional">
         <span id="state_hideios_nodejs">
 <a href="#state_hideios_nodejs" style="color: inherit; text-decoration: inherit;">hide<wbr>Ios</a>
@@ -3541,8 +3174,7 @@ The following state arguments are supported:
         <span class="property-type">boolean</span>
     </dt>
     <dd>{{% md %}}Do not display application icon on mobile app
-{{% /md %}}</dd>
-    <dt class="property-optional"
+{{% /md %}}</dd><dt class="property-optional"
             title="Optional">
         <span id="state_hideweb_nodejs">
 <a href="#state_hideweb_nodejs" style="color: inherit; text-decoration: inherit;">hide<wbr>Web</a>
@@ -3551,8 +3183,7 @@ The following state arguments are supported:
         <span class="property-type">boolean</span>
     </dt>
     <dd>{{% md %}}Do not display application icon to users
-{{% /md %}}</dd>
-    <dt class="property-optional"
+{{% /md %}}</dd><dt class="property-optional"
             title="Optional">
         <span id="state_honorforceauthn_nodejs">
 <a href="#state_honorforceauthn_nodejs" style="color: inherit; text-decoration: inherit;">honor<wbr>Force<wbr>Authn</a>
@@ -3561,8 +3192,7 @@ The following state arguments are supported:
         <span class="property-type">boolean</span>
     </dt>
     <dd>{{% md %}}Prompt user to re-authenticate if SP asks for it
-{{% /md %}}</dd>
-    <dt class="property-optional"
+{{% /md %}}</dd><dt class="property-optional"
             title="Optional">
         <span id="state_httppostbinding_nodejs">
 <a href="#state_httppostbinding_nodejs" style="color: inherit; text-decoration: inherit;">http<wbr>Post<wbr>Binding</a>
@@ -3571,8 +3201,7 @@ The following state arguments are supported:
         <span class="property-type">string</span>
     </dt>
     <dd>{{% md %}}urn:oasis:names:tc:SAML:2.0:bindings:HTTP-Post location from the SAML metadata.
-{{% /md %}}</dd>
-    <dt class="property-optional"
+{{% /md %}}</dd><dt class="property-optional"
             title="Optional">
         <span id="state_httpredirectbinding_nodejs">
 <a href="#state_httpredirectbinding_nodejs" style="color: inherit; text-decoration: inherit;">http<wbr>Redirect<wbr>Binding</a>
@@ -3581,8 +3210,7 @@ The following state arguments are supported:
         <span class="property-type">string</span>
     </dt>
     <dd>{{% md %}}urn:oasis:names:tc:SAML:2.0:bindings:HTTP-Redirect location from the SAML metadata.
-{{% /md %}}</dd>
-    <dt class="property-optional"
+{{% /md %}}</dd><dt class="property-optional"
             title="Optional">
         <span id="state_idpissuer_nodejs">
 <a href="#state_idpissuer_nodejs" style="color: inherit; text-decoration: inherit;">idp<wbr>Issuer</a>
@@ -3591,8 +3219,7 @@ The following state arguments are supported:
         <span class="property-type">string</span>
     </dt>
     <dd>{{% md %}}SAML issuer ID
-{{% /md %}}</dd>
-    <dt class="property-optional"
+{{% /md %}}</dd><dt class="property-optional"
             title="Optional">
         <span id="state_keyid_nodejs">
 <a href="#state_keyid_nodejs" style="color: inherit; text-decoration: inherit;">key<wbr>Id</a>
@@ -3601,8 +3228,7 @@ The following state arguments are supported:
         <span class="property-type">string</span>
     </dt>
     <dd>{{% md %}}Certificate ID
-{{% /md %}}</dd>
-    <dt class="property-optional"
+{{% /md %}}</dd><dt class="property-optional"
             title="Optional">
         <span id="state_keyname_nodejs">
 <a href="#state_keyname_nodejs" style="color: inherit; text-decoration: inherit;">key<wbr>Name</a>
@@ -3611,8 +3237,7 @@ The following state arguments are supported:
         <span class="property-type">string</span>
     </dt>
     <dd>{{% md %}}Certificate name. This modulates the rotation of keys. New name == new key.
-{{% /md %}}</dd>
-    <dt class="property-optional"
+{{% /md %}}</dd><dt class="property-optional"
             title="Optional">
         <span id="state_keyyearsvalid_nodejs">
 <a href="#state_keyyearsvalid_nodejs" style="color: inherit; text-decoration: inherit;">key<wbr>Years<wbr>Valid</a>
@@ -3621,8 +3246,7 @@ The following state arguments are supported:
         <span class="property-type">number</span>
     </dt>
     <dd>{{% md %}}Number of years the certificate is valid.
-{{% /md %}}</dd>
-    <dt class="property-optional"
+{{% /md %}}</dd><dt class="property-optional"
             title="Optional">
         <span id="state_label_nodejs">
 <a href="#state_label_nodejs" style="color: inherit; text-decoration: inherit;">label</a>
@@ -3631,8 +3255,7 @@ The following state arguments are supported:
         <span class="property-type">string</span>
     </dt>
     <dd>{{% md %}}Pretty name of app.
-{{% /md %}}</dd>
-    <dt class="property-optional"
+{{% /md %}}</dd><dt class="property-optional"
             title="Optional">
         <span id="state_metadata_nodejs">
 <a href="#state_metadata_nodejs" style="color: inherit; text-decoration: inherit;">metadata</a>
@@ -3641,8 +3264,7 @@ The following state arguments are supported:
         <span class="property-type">string</span>
     </dt>
     <dd>{{% md %}}SAML xml metadata payload
-{{% /md %}}</dd>
-    <dt class="property-optional"
+{{% /md %}}</dd><dt class="property-optional"
             title="Optional">
         <span id="state_metadataurl_nodejs">
 <a href="#state_metadataurl_nodejs" style="color: inherit; text-decoration: inherit;">metadata<wbr>Url</a>
@@ -3651,8 +3273,7 @@ The following state arguments are supported:
         <span class="property-type">string</span>
     </dt>
     <dd>{{% md %}}SAML xml metadata URL
-{{% /md %}}</dd>
-    <dt class="property-optional"
+{{% /md %}}</dd><dt class="property-optional"
             title="Optional">
         <span id="state_name_nodejs">
 <a href="#state_name_nodejs" style="color: inherit; text-decoration: inherit;">name</a>
@@ -3661,8 +3282,7 @@ The following state arguments are supported:
         <span class="property-type">string</span>
     </dt>
     <dd>{{% md %}}name of app.
-{{% /md %}}</dd>
-    <dt class="property-optional"
+{{% /md %}}</dd><dt class="property-optional"
             title="Optional">
         <span id="state_preconfiguredapp_nodejs">
 <a href="#state_preconfiguredapp_nodejs" style="color: inherit; text-decoration: inherit;">preconfigured<wbr>App</a>
@@ -3671,8 +3291,7 @@ The following state arguments are supported:
         <span class="property-type">string</span>
     </dt>
     <dd>{{% md %}}Name of preexisting SAML application. For instance 'slack'
-{{% /md %}}</dd>
-    <dt class="property-optional"
+{{% /md %}}</dd><dt class="property-optional"
             title="Optional">
         <span id="state_recipient_nodejs">
 <a href="#state_recipient_nodejs" style="color: inherit; text-decoration: inherit;">recipient</a>
@@ -3681,8 +3300,7 @@ The following state arguments are supported:
         <span class="property-type">string</span>
     </dt>
     <dd>{{% md %}}The location where the app may present the SAML assertion
-{{% /md %}}</dd>
-    <dt class="property-optional"
+{{% /md %}}</dd><dt class="property-optional"
             title="Optional">
         <span id="state_requestcompressed_nodejs">
 <a href="#state_requestcompressed_nodejs" style="color: inherit; text-decoration: inherit;">request<wbr>Compressed</a>
@@ -3691,8 +3309,7 @@ The following state arguments are supported:
         <span class="property-type">boolean</span>
     </dt>
     <dd>{{% md %}}Denotes whether the request is compressed or not.
-{{% /md %}}</dd>
-    <dt class="property-optional"
+{{% /md %}}</dd><dt class="property-optional"
             title="Optional">
         <span id="state_responsesigned_nodejs">
 <a href="#state_responsesigned_nodejs" style="color: inherit; text-decoration: inherit;">response<wbr>Signed</a>
@@ -3701,8 +3318,7 @@ The following state arguments are supported:
         <span class="property-type">boolean</span>
     </dt>
     <dd>{{% md %}}Determines whether the SAML auth response message is digitally signed
-{{% /md %}}</dd>
-    <dt class="property-optional"
+{{% /md %}}</dd><dt class="property-optional"
             title="Optional">
         <span id="state_signonmode_nodejs">
 <a href="#state_signonmode_nodejs" style="color: inherit; text-decoration: inherit;">sign<wbr>On<wbr>Mode</a>
@@ -3711,8 +3327,7 @@ The following state arguments are supported:
         <span class="property-type">string</span>
     </dt>
     <dd>{{% md %}}Sign on mode of application.
-{{% /md %}}</dd>
-    <dt class="property-optional"
+{{% /md %}}</dd><dt class="property-optional"
             title="Optional">
         <span id="state_signaturealgorithm_nodejs">
 <a href="#state_signaturealgorithm_nodejs" style="color: inherit; text-decoration: inherit;">signature<wbr>Algorithm</a>
@@ -3721,8 +3336,7 @@ The following state arguments are supported:
         <span class="property-type">string</span>
     </dt>
     <dd>{{% md %}}Signature algorithm used ot digitally sign the assertion and response
-{{% /md %}}</dd>
-    <dt class="property-optional"
+{{% /md %}}</dd><dt class="property-optional"
             title="Optional">
         <span id="state_singlelogoutcertificate_nodejs">
 <a href="#state_singlelogoutcertificate_nodejs" style="color: inherit; text-decoration: inherit;">single<wbr>Logout<wbr>Certificate</a>
@@ -3731,8 +3345,7 @@ The following state arguments are supported:
         <span class="property-type">string</span>
     </dt>
     <dd>{{% md %}}x509 encoded certificate that the Service Provider uses to sign Single Logout requests
-{{% /md %}}</dd>
-    <dt class="property-optional"
+{{% /md %}}</dd><dt class="property-optional"
             title="Optional">
         <span id="state_singlelogoutissuer_nodejs">
 <a href="#state_singlelogoutissuer_nodejs" style="color: inherit; text-decoration: inherit;">single<wbr>Logout<wbr>Issuer</a>
@@ -3741,8 +3354,7 @@ The following state arguments are supported:
         <span class="property-type">string</span>
     </dt>
     <dd>{{% md %}}The issuer of the Service Provider that generates the Single Logout request
-{{% /md %}}</dd>
-    <dt class="property-optional"
+{{% /md %}}</dd><dt class="property-optional"
             title="Optional">
         <span id="state_singlelogouturl_nodejs">
 <a href="#state_singlelogouturl_nodejs" style="color: inherit; text-decoration: inherit;">single<wbr>Logout<wbr>Url</a>
@@ -3751,8 +3363,7 @@ The following state arguments are supported:
         <span class="property-type">string</span>
     </dt>
     <dd>{{% md %}}The location where the logout response is sent
-{{% /md %}}</dd>
-    <dt class="property-optional"
+{{% /md %}}</dd><dt class="property-optional"
             title="Optional">
         <span id="state_spissuer_nodejs">
 <a href="#state_spissuer_nodejs" style="color: inherit; text-decoration: inherit;">sp<wbr>Issuer</a>
@@ -3761,8 +3372,7 @@ The following state arguments are supported:
         <span class="property-type">string</span>
     </dt>
     <dd>{{% md %}}SAML SP issuer ID
-{{% /md %}}</dd>
-    <dt class="property-optional"
+{{% /md %}}</dd><dt class="property-optional"
             title="Optional">
         <span id="state_ssourl_nodejs">
 <a href="#state_ssourl_nodejs" style="color: inherit; text-decoration: inherit;">sso<wbr>Url</a>
@@ -3771,8 +3381,7 @@ The following state arguments are supported:
         <span class="property-type">string</span>
     </dt>
     <dd>{{% md %}}Single Sign On URL
-{{% /md %}}</dd>
-    <dt class="property-optional"
+{{% /md %}}</dd><dt class="property-optional"
             title="Optional">
         <span id="state_status_nodejs">
 <a href="#state_status_nodejs" style="color: inherit; text-decoration: inherit;">status</a>
@@ -3781,8 +3390,7 @@ The following state arguments are supported:
         <span class="property-type">string</span>
     </dt>
     <dd>{{% md %}}Status of application.
-{{% /md %}}</dd>
-    <dt class="property-optional"
+{{% /md %}}</dd><dt class="property-optional"
             title="Optional">
         <span id="state_subjectnameidformat_nodejs">
 <a href="#state_subjectnameidformat_nodejs" style="color: inherit; text-decoration: inherit;">subject<wbr>Name<wbr>Id<wbr>Format</a>
@@ -3791,8 +3399,7 @@ The following state arguments are supported:
         <span class="property-type">string</span>
     </dt>
     <dd>{{% md %}}Identifies the SAML processing rules.
-{{% /md %}}</dd>
-    <dt class="property-optional"
+{{% /md %}}</dd><dt class="property-optional"
             title="Optional">
         <span id="state_subjectnameidtemplate_nodejs">
 <a href="#state_subjectnameidtemplate_nodejs" style="color: inherit; text-decoration: inherit;">subject<wbr>Name<wbr>Id<wbr>Template</a>
@@ -3801,8 +3408,7 @@ The following state arguments are supported:
         <span class="property-type">string</span>
     </dt>
     <dd>{{% md %}}Template for app user's username when a user is assigned to the app
-{{% /md %}}</dd>
-    <dt class="property-optional"
+{{% /md %}}</dd><dt class="property-optional"
             title="Optional">
         <span id="state_usernametemplate_nodejs">
 <a href="#state_usernametemplate_nodejs" style="color: inherit; text-decoration: inherit;">user<wbr>Name<wbr>Template</a>
@@ -3811,8 +3417,7 @@ The following state arguments are supported:
         <span class="property-type">string</span>
     </dt>
     <dd>{{% md %}}Username template
-{{% /md %}}</dd>
-    <dt class="property-optional"
+{{% /md %}}</dd><dt class="property-optional"
             title="Optional">
         <span id="state_usernametemplatesuffix_nodejs">
 <a href="#state_usernametemplatesuffix_nodejs" style="color: inherit; text-decoration: inherit;">user<wbr>Name<wbr>Template<wbr>Suffix</a>
@@ -3821,8 +3426,7 @@ The following state arguments are supported:
         <span class="property-type">string</span>
     </dt>
     <dd>{{% md %}}Username template suffix
-{{% /md %}}</dd>
-    <dt class="property-optional"
+{{% /md %}}</dd><dt class="property-optional"
             title="Optional">
         <span id="state_usernametemplatetype_nodejs">
 <a href="#state_usernametemplatetype_nodejs" style="color: inherit; text-decoration: inherit;">user<wbr>Name<wbr>Template<wbr>Type</a>
@@ -3831,8 +3435,7 @@ The following state arguments are supported:
         <span class="property-type">string</span>
     </dt>
     <dd>{{% md %}}Username template type
-{{% /md %}}</dd>
-    <dt class="property-optional"
+{{% /md %}}</dd><dt class="property-optional"
             title="Optional">
         <span id="state_users_nodejs">
 <a href="#state_users_nodejs" style="color: inherit; text-decoration: inherit;">users</a>
@@ -3841,14 +3444,11 @@ The following state arguments are supported:
         <span class="property-type"><a href="#samlappuser">Saml<wbr>App<wbr>User[]</a></span>
     </dt>
     <dd>{{% md %}}Users associated with the application
-{{% /md %}}</dd>
-</dl>
+{{% /md %}}</dd></dl>
 {{% /choosable %}}
 
 {{% choosable language python %}}
-<dl class="resources-properties">
-
-    <dt class="property-optional"
+<dl class="resources-properties"><dt class="property-optional"
             title="Optional">
         <span id="state_accessibility_error_redirect_url_python">
 <a href="#state_accessibility_error_redirect_url_python" style="color: inherit; text-decoration: inherit;">accessibility_<wbr>error_<wbr>redirect_<wbr>url</a>
@@ -3857,8 +3457,7 @@ The following state arguments are supported:
         <span class="property-type">str</span>
     </dt>
     <dd>{{% md %}}Custom error page URL
-{{% /md %}}</dd>
-    <dt class="property-optional"
+{{% /md %}}</dd><dt class="property-optional"
             title="Optional">
         <span id="state_accessibility_login_redirect_url_python">
 <a href="#state_accessibility_login_redirect_url_python" style="color: inherit; text-decoration: inherit;">accessibility_<wbr>login_<wbr>redirect_<wbr>url</a>
@@ -3867,8 +3466,7 @@ The following state arguments are supported:
         <span class="property-type">str</span>
     </dt>
     <dd>{{% md %}}Custom login page URL
-{{% /md %}}</dd>
-    <dt class="property-optional"
+{{% /md %}}</dd><dt class="property-optional"
             title="Optional">
         <span id="state_accessibility_self_service_python">
 <a href="#state_accessibility_self_service_python" style="color: inherit; text-decoration: inherit;">accessibility_<wbr>self_<wbr>service</a>
@@ -3877,8 +3475,7 @@ The following state arguments are supported:
         <span class="property-type">bool</span>
     </dt>
     <dd>{{% md %}}Enable self service
-{{% /md %}}</dd>
-    <dt class="property-optional"
+{{% /md %}}</dd><dt class="property-optional"
             title="Optional">
         <span id="state_acs_endpoints_python">
 <a href="#state_acs_endpoints_python" style="color: inherit; text-decoration: inherit;">acs_<wbr>endpoints</a>
@@ -3887,8 +3484,7 @@ The following state arguments are supported:
         <span class="property-type">Sequence[str]</span>
     </dt>
     <dd>{{% md %}}List of ACS endpoints for this SAML application
-{{% /md %}}</dd>
-    <dt class="property-optional"
+{{% /md %}}</dd><dt class="property-optional"
             title="Optional">
         <span id="state_app_settings_json_python">
 <a href="#state_app_settings_json_python" style="color: inherit; text-decoration: inherit;">app_<wbr>settings_<wbr>json</a>
@@ -3897,8 +3493,7 @@ The following state arguments are supported:
         <span class="property-type">str</span>
     </dt>
     <dd>{{% md %}}Application settings in JSON format
-{{% /md %}}</dd>
-    <dt class="property-optional"
+{{% /md %}}</dd><dt class="property-optional"
             title="Optional">
         <span id="state_assertion_signed_python">
 <a href="#state_assertion_signed_python" style="color: inherit; text-decoration: inherit;">assertion_<wbr>signed</a>
@@ -3907,8 +3502,7 @@ The following state arguments are supported:
         <span class="property-type">bool</span>
     </dt>
     <dd>{{% md %}}Determines whether the SAML assertion is digitally signed
-{{% /md %}}</dd>
-    <dt class="property-optional"
+{{% /md %}}</dd><dt class="property-optional"
             title="Optional">
         <span id="state_attribute_statements_python">
 <a href="#state_attribute_statements_python" style="color: inherit; text-decoration: inherit;">attribute_<wbr>statements</a>
@@ -3916,8 +3510,7 @@ The following state arguments are supported:
         <span class="property-indicator"></span>
         <span class="property-type"><a href="#samlappattributestatement">Sequence[Saml<wbr>App<wbr>Attribute<wbr>Statement<wbr>Args]</a></span>
     </dt>
-    <dd>{{% md %}}{{% /md %}}</dd>
-    <dt class="property-optional"
+    <dd>{{% md %}}{{% /md %}}</dd><dt class="property-optional"
             title="Optional">
         <span id="state_audience_python">
 <a href="#state_audience_python" style="color: inherit; text-decoration: inherit;">audience</a>
@@ -3926,8 +3519,7 @@ The following state arguments are supported:
         <span class="property-type">str</span>
     </dt>
     <dd>{{% md %}}Audience Restriction
-{{% /md %}}</dd>
-    <dt class="property-optional"
+{{% /md %}}</dd><dt class="property-optional"
             title="Optional">
         <span id="state_authn_context_class_ref_python">
 <a href="#state_authn_context_class_ref_python" style="color: inherit; text-decoration: inherit;">authn_<wbr>context_<wbr>class_<wbr>ref</a>
@@ -3936,8 +3528,7 @@ The following state arguments are supported:
         <span class="property-type">str</span>
     </dt>
     <dd>{{% md %}}Identifies the SAML authentication context class for the assertion’s authentication statement
-{{% /md %}}</dd>
-    <dt class="property-optional"
+{{% /md %}}</dd><dt class="property-optional"
             title="Optional">
         <span id="state_auto_submit_toolbar_python">
 <a href="#state_auto_submit_toolbar_python" style="color: inherit; text-decoration: inherit;">auto_<wbr>submit_<wbr>toolbar</a>
@@ -3946,8 +3537,7 @@ The following state arguments are supported:
         <span class="property-type">bool</span>
     </dt>
     <dd>{{% md %}}Display auto submit toolbar
-{{% /md %}}</dd>
-    <dt class="property-optional"
+{{% /md %}}</dd><dt class="property-optional"
             title="Optional">
         <span id="state_certificate_python">
 <a href="#state_certificate_python" style="color: inherit; text-decoration: inherit;">certificate</a>
@@ -3956,8 +3546,7 @@ The following state arguments are supported:
         <span class="property-type">str</span>
     </dt>
     <dd>{{% md %}}cert from SAML XML metadata payload
-{{% /md %}}</dd>
-    <dt class="property-optional"
+{{% /md %}}</dd><dt class="property-optional"
             title="Optional">
         <span id="state_default_relay_state_python">
 <a href="#state_default_relay_state_python" style="color: inherit; text-decoration: inherit;">default_<wbr>relay_<wbr>state</a>
@@ -3966,8 +3555,7 @@ The following state arguments are supported:
         <span class="property-type">str</span>
     </dt>
     <dd>{{% md %}}Identifies a specific application resource in an IDP initiated SSO scenario.
-{{% /md %}}</dd>
-    <dt class="property-optional"
+{{% /md %}}</dd><dt class="property-optional"
             title="Optional">
         <span id="state_destination_python">
 <a href="#state_destination_python" style="color: inherit; text-decoration: inherit;">destination</a>
@@ -3976,8 +3564,7 @@ The following state arguments are supported:
         <span class="property-type">str</span>
     </dt>
     <dd>{{% md %}}Identifies the location where the SAML response is intended to be sent inside of the SAML assertion
-{{% /md %}}</dd>
-    <dt class="property-optional"
+{{% /md %}}</dd><dt class="property-optional"
             title="Optional">
         <span id="state_digest_algorithm_python">
 <a href="#state_digest_algorithm_python" style="color: inherit; text-decoration: inherit;">digest_<wbr>algorithm</a>
@@ -3986,8 +3573,7 @@ The following state arguments are supported:
         <span class="property-type">str</span>
     </dt>
     <dd>{{% md %}}Determines the digest algorithm used to digitally sign the SAML assertion and response
-{{% /md %}}</dd>
-    <dt class="property-optional"
+{{% /md %}}</dd><dt class="property-optional"
             title="Optional">
         <span id="state_entity_key_python">
 <a href="#state_entity_key_python" style="color: inherit; text-decoration: inherit;">entity_<wbr>key</a>
@@ -3996,8 +3582,7 @@ The following state arguments are supported:
         <span class="property-type">str</span>
     </dt>
     <dd>{{% md %}}Entity ID, the ID portion of the entity_url
-{{% /md %}}</dd>
-    <dt class="property-optional"
+{{% /md %}}</dd><dt class="property-optional"
             title="Optional">
         <span id="state_entity_url_python">
 <a href="#state_entity_url_python" style="color: inherit; text-decoration: inherit;">entity_<wbr>url</a>
@@ -4006,8 +3591,7 @@ The following state arguments are supported:
         <span class="property-type">str</span>
     </dt>
     <dd>{{% md %}}Entity URL for instance http://www.okta.com/exk1fcia6d6EMsf331d8
-{{% /md %}}</dd>
-    <dt class="property-optional"
+{{% /md %}}</dd><dt class="property-optional"
             title="Optional">
         <span id="state_features_python">
 <a href="#state_features_python" style="color: inherit; text-decoration: inherit;">features</a>
@@ -4016,8 +3600,7 @@ The following state arguments are supported:
         <span class="property-type">Sequence[str]</span>
     </dt>
     <dd>{{% md %}}features to enable
-{{% /md %}}</dd>
-    <dt class="property-optional"
+{{% /md %}}</dd><dt class="property-optional"
             title="Optional">
         <span id="state_groups_python">
 <a href="#state_groups_python" style="color: inherit; text-decoration: inherit;">groups</a>
@@ -4026,8 +3609,7 @@ The following state arguments are supported:
         <span class="property-type">Sequence[str]</span>
     </dt>
     <dd>{{% md %}}Groups associated with the application
-{{% /md %}}</dd>
-    <dt class="property-optional"
+{{% /md %}}</dd><dt class="property-optional"
             title="Optional">
         <span id="state_hide_ios_python">
 <a href="#state_hide_ios_python" style="color: inherit; text-decoration: inherit;">hide_<wbr>ios</a>
@@ -4036,8 +3618,7 @@ The following state arguments are supported:
         <span class="property-type">bool</span>
     </dt>
     <dd>{{% md %}}Do not display application icon on mobile app
-{{% /md %}}</dd>
-    <dt class="property-optional"
+{{% /md %}}</dd><dt class="property-optional"
             title="Optional">
         <span id="state_hide_web_python">
 <a href="#state_hide_web_python" style="color: inherit; text-decoration: inherit;">hide_<wbr>web</a>
@@ -4046,8 +3627,7 @@ The following state arguments are supported:
         <span class="property-type">bool</span>
     </dt>
     <dd>{{% md %}}Do not display application icon to users
-{{% /md %}}</dd>
-    <dt class="property-optional"
+{{% /md %}}</dd><dt class="property-optional"
             title="Optional">
         <span id="state_honor_force_authn_python">
 <a href="#state_honor_force_authn_python" style="color: inherit; text-decoration: inherit;">honor_<wbr>force_<wbr>authn</a>
@@ -4056,8 +3636,7 @@ The following state arguments are supported:
         <span class="property-type">bool</span>
     </dt>
     <dd>{{% md %}}Prompt user to re-authenticate if SP asks for it
-{{% /md %}}</dd>
-    <dt class="property-optional"
+{{% /md %}}</dd><dt class="property-optional"
             title="Optional">
         <span id="state_http_post_binding_python">
 <a href="#state_http_post_binding_python" style="color: inherit; text-decoration: inherit;">http_<wbr>post_<wbr>binding</a>
@@ -4066,8 +3645,7 @@ The following state arguments are supported:
         <span class="property-type">str</span>
     </dt>
     <dd>{{% md %}}urn:oasis:names:tc:SAML:2.0:bindings:HTTP-Post location from the SAML metadata.
-{{% /md %}}</dd>
-    <dt class="property-optional"
+{{% /md %}}</dd><dt class="property-optional"
             title="Optional">
         <span id="state_http_redirect_binding_python">
 <a href="#state_http_redirect_binding_python" style="color: inherit; text-decoration: inherit;">http_<wbr>redirect_<wbr>binding</a>
@@ -4076,8 +3654,7 @@ The following state arguments are supported:
         <span class="property-type">str</span>
     </dt>
     <dd>{{% md %}}urn:oasis:names:tc:SAML:2.0:bindings:HTTP-Redirect location from the SAML metadata.
-{{% /md %}}</dd>
-    <dt class="property-optional"
+{{% /md %}}</dd><dt class="property-optional"
             title="Optional">
         <span id="state_idp_issuer_python">
 <a href="#state_idp_issuer_python" style="color: inherit; text-decoration: inherit;">idp_<wbr>issuer</a>
@@ -4086,8 +3663,7 @@ The following state arguments are supported:
         <span class="property-type">str</span>
     </dt>
     <dd>{{% md %}}SAML issuer ID
-{{% /md %}}</dd>
-    <dt class="property-optional"
+{{% /md %}}</dd><dt class="property-optional"
             title="Optional">
         <span id="state_key_id_python">
 <a href="#state_key_id_python" style="color: inherit; text-decoration: inherit;">key_<wbr>id</a>
@@ -4096,8 +3672,7 @@ The following state arguments are supported:
         <span class="property-type">str</span>
     </dt>
     <dd>{{% md %}}Certificate ID
-{{% /md %}}</dd>
-    <dt class="property-optional"
+{{% /md %}}</dd><dt class="property-optional"
             title="Optional">
         <span id="state_key_name_python">
 <a href="#state_key_name_python" style="color: inherit; text-decoration: inherit;">key_<wbr>name</a>
@@ -4106,8 +3681,7 @@ The following state arguments are supported:
         <span class="property-type">str</span>
     </dt>
     <dd>{{% md %}}Certificate name. This modulates the rotation of keys. New name == new key.
-{{% /md %}}</dd>
-    <dt class="property-optional"
+{{% /md %}}</dd><dt class="property-optional"
             title="Optional">
         <span id="state_key_years_valid_python">
 <a href="#state_key_years_valid_python" style="color: inherit; text-decoration: inherit;">key_<wbr>years_<wbr>valid</a>
@@ -4116,8 +3690,7 @@ The following state arguments are supported:
         <span class="property-type">int</span>
     </dt>
     <dd>{{% md %}}Number of years the certificate is valid.
-{{% /md %}}</dd>
-    <dt class="property-optional"
+{{% /md %}}</dd><dt class="property-optional"
             title="Optional">
         <span id="state_label_python">
 <a href="#state_label_python" style="color: inherit; text-decoration: inherit;">label</a>
@@ -4126,8 +3699,7 @@ The following state arguments are supported:
         <span class="property-type">str</span>
     </dt>
     <dd>{{% md %}}Pretty name of app.
-{{% /md %}}</dd>
-    <dt class="property-optional"
+{{% /md %}}</dd><dt class="property-optional"
             title="Optional">
         <span id="state_metadata_python">
 <a href="#state_metadata_python" style="color: inherit; text-decoration: inherit;">metadata</a>
@@ -4136,8 +3708,7 @@ The following state arguments are supported:
         <span class="property-type">str</span>
     </dt>
     <dd>{{% md %}}SAML xml metadata payload
-{{% /md %}}</dd>
-    <dt class="property-optional"
+{{% /md %}}</dd><dt class="property-optional"
             title="Optional">
         <span id="state_metadata_url_python">
 <a href="#state_metadata_url_python" style="color: inherit; text-decoration: inherit;">metadata_<wbr>url</a>
@@ -4146,8 +3717,7 @@ The following state arguments are supported:
         <span class="property-type">str</span>
     </dt>
     <dd>{{% md %}}SAML xml metadata URL
-{{% /md %}}</dd>
-    <dt class="property-optional"
+{{% /md %}}</dd><dt class="property-optional"
             title="Optional">
         <span id="state_name_python">
 <a href="#state_name_python" style="color: inherit; text-decoration: inherit;">name</a>
@@ -4156,8 +3726,7 @@ The following state arguments are supported:
         <span class="property-type">str</span>
     </dt>
     <dd>{{% md %}}name of app.
-{{% /md %}}</dd>
-    <dt class="property-optional"
+{{% /md %}}</dd><dt class="property-optional"
             title="Optional">
         <span id="state_preconfigured_app_python">
 <a href="#state_preconfigured_app_python" style="color: inherit; text-decoration: inherit;">preconfigured_<wbr>app</a>
@@ -4166,8 +3735,7 @@ The following state arguments are supported:
         <span class="property-type">str</span>
     </dt>
     <dd>{{% md %}}Name of preexisting SAML application. For instance 'slack'
-{{% /md %}}</dd>
-    <dt class="property-optional"
+{{% /md %}}</dd><dt class="property-optional"
             title="Optional">
         <span id="state_recipient_python">
 <a href="#state_recipient_python" style="color: inherit; text-decoration: inherit;">recipient</a>
@@ -4176,8 +3744,7 @@ The following state arguments are supported:
         <span class="property-type">str</span>
     </dt>
     <dd>{{% md %}}The location where the app may present the SAML assertion
-{{% /md %}}</dd>
-    <dt class="property-optional"
+{{% /md %}}</dd><dt class="property-optional"
             title="Optional">
         <span id="state_request_compressed_python">
 <a href="#state_request_compressed_python" style="color: inherit; text-decoration: inherit;">request_<wbr>compressed</a>
@@ -4186,8 +3753,7 @@ The following state arguments are supported:
         <span class="property-type">bool</span>
     </dt>
     <dd>{{% md %}}Denotes whether the request is compressed or not.
-{{% /md %}}</dd>
-    <dt class="property-optional"
+{{% /md %}}</dd><dt class="property-optional"
             title="Optional">
         <span id="state_response_signed_python">
 <a href="#state_response_signed_python" style="color: inherit; text-decoration: inherit;">response_<wbr>signed</a>
@@ -4196,8 +3762,7 @@ The following state arguments are supported:
         <span class="property-type">bool</span>
     </dt>
     <dd>{{% md %}}Determines whether the SAML auth response message is digitally signed
-{{% /md %}}</dd>
-    <dt class="property-optional"
+{{% /md %}}</dd><dt class="property-optional"
             title="Optional">
         <span id="state_sign_on_mode_python">
 <a href="#state_sign_on_mode_python" style="color: inherit; text-decoration: inherit;">sign_<wbr>on_<wbr>mode</a>
@@ -4206,8 +3771,7 @@ The following state arguments are supported:
         <span class="property-type">str</span>
     </dt>
     <dd>{{% md %}}Sign on mode of application.
-{{% /md %}}</dd>
-    <dt class="property-optional"
+{{% /md %}}</dd><dt class="property-optional"
             title="Optional">
         <span id="state_signature_algorithm_python">
 <a href="#state_signature_algorithm_python" style="color: inherit; text-decoration: inherit;">signature_<wbr>algorithm</a>
@@ -4216,8 +3780,7 @@ The following state arguments are supported:
         <span class="property-type">str</span>
     </dt>
     <dd>{{% md %}}Signature algorithm used ot digitally sign the assertion and response
-{{% /md %}}</dd>
-    <dt class="property-optional"
+{{% /md %}}</dd><dt class="property-optional"
             title="Optional">
         <span id="state_single_logout_certificate_python">
 <a href="#state_single_logout_certificate_python" style="color: inherit; text-decoration: inherit;">single_<wbr>logout_<wbr>certificate</a>
@@ -4226,8 +3789,7 @@ The following state arguments are supported:
         <span class="property-type">str</span>
     </dt>
     <dd>{{% md %}}x509 encoded certificate that the Service Provider uses to sign Single Logout requests
-{{% /md %}}</dd>
-    <dt class="property-optional"
+{{% /md %}}</dd><dt class="property-optional"
             title="Optional">
         <span id="state_single_logout_issuer_python">
 <a href="#state_single_logout_issuer_python" style="color: inherit; text-decoration: inherit;">single_<wbr>logout_<wbr>issuer</a>
@@ -4236,8 +3798,7 @@ The following state arguments are supported:
         <span class="property-type">str</span>
     </dt>
     <dd>{{% md %}}The issuer of the Service Provider that generates the Single Logout request
-{{% /md %}}</dd>
-    <dt class="property-optional"
+{{% /md %}}</dd><dt class="property-optional"
             title="Optional">
         <span id="state_single_logout_url_python">
 <a href="#state_single_logout_url_python" style="color: inherit; text-decoration: inherit;">single_<wbr>logout_<wbr>url</a>
@@ -4246,8 +3807,7 @@ The following state arguments are supported:
         <span class="property-type">str</span>
     </dt>
     <dd>{{% md %}}The location where the logout response is sent
-{{% /md %}}</dd>
-    <dt class="property-optional"
+{{% /md %}}</dd><dt class="property-optional"
             title="Optional">
         <span id="state_sp_issuer_python">
 <a href="#state_sp_issuer_python" style="color: inherit; text-decoration: inherit;">sp_<wbr>issuer</a>
@@ -4256,8 +3816,7 @@ The following state arguments are supported:
         <span class="property-type">str</span>
     </dt>
     <dd>{{% md %}}SAML SP issuer ID
-{{% /md %}}</dd>
-    <dt class="property-optional"
+{{% /md %}}</dd><dt class="property-optional"
             title="Optional">
         <span id="state_sso_url_python">
 <a href="#state_sso_url_python" style="color: inherit; text-decoration: inherit;">sso_<wbr>url</a>
@@ -4266,8 +3825,7 @@ The following state arguments are supported:
         <span class="property-type">str</span>
     </dt>
     <dd>{{% md %}}Single Sign On URL
-{{% /md %}}</dd>
-    <dt class="property-optional"
+{{% /md %}}</dd><dt class="property-optional"
             title="Optional">
         <span id="state_status_python">
 <a href="#state_status_python" style="color: inherit; text-decoration: inherit;">status</a>
@@ -4276,8 +3834,7 @@ The following state arguments are supported:
         <span class="property-type">str</span>
     </dt>
     <dd>{{% md %}}Status of application.
-{{% /md %}}</dd>
-    <dt class="property-optional"
+{{% /md %}}</dd><dt class="property-optional"
             title="Optional">
         <span id="state_subject_name_id_format_python">
 <a href="#state_subject_name_id_format_python" style="color: inherit; text-decoration: inherit;">subject_<wbr>name_<wbr>id_<wbr>format</a>
@@ -4286,8 +3843,7 @@ The following state arguments are supported:
         <span class="property-type">str</span>
     </dt>
     <dd>{{% md %}}Identifies the SAML processing rules.
-{{% /md %}}</dd>
-    <dt class="property-optional"
+{{% /md %}}</dd><dt class="property-optional"
             title="Optional">
         <span id="state_subject_name_id_template_python">
 <a href="#state_subject_name_id_template_python" style="color: inherit; text-decoration: inherit;">subject_<wbr>name_<wbr>id_<wbr>template</a>
@@ -4296,8 +3852,7 @@ The following state arguments are supported:
         <span class="property-type">str</span>
     </dt>
     <dd>{{% md %}}Template for app user's username when a user is assigned to the app
-{{% /md %}}</dd>
-    <dt class="property-optional"
+{{% /md %}}</dd><dt class="property-optional"
             title="Optional">
         <span id="state_user_name_template_python">
 <a href="#state_user_name_template_python" style="color: inherit; text-decoration: inherit;">user_<wbr>name_<wbr>template</a>
@@ -4306,8 +3861,7 @@ The following state arguments are supported:
         <span class="property-type">str</span>
     </dt>
     <dd>{{% md %}}Username template
-{{% /md %}}</dd>
-    <dt class="property-optional"
+{{% /md %}}</dd><dt class="property-optional"
             title="Optional">
         <span id="state_user_name_template_suffix_python">
 <a href="#state_user_name_template_suffix_python" style="color: inherit; text-decoration: inherit;">user_<wbr>name_<wbr>template_<wbr>suffix</a>
@@ -4316,8 +3870,7 @@ The following state arguments are supported:
         <span class="property-type">str</span>
     </dt>
     <dd>{{% md %}}Username template suffix
-{{% /md %}}</dd>
-    <dt class="property-optional"
+{{% /md %}}</dd><dt class="property-optional"
             title="Optional">
         <span id="state_user_name_template_type_python">
 <a href="#state_user_name_template_type_python" style="color: inherit; text-decoration: inherit;">user_<wbr>name_<wbr>template_<wbr>type</a>
@@ -4326,8 +3879,7 @@ The following state arguments are supported:
         <span class="property-type">str</span>
     </dt>
     <dd>{{% md %}}Username template type
-{{% /md %}}</dd>
-    <dt class="property-optional"
+{{% /md %}}</dd><dt class="property-optional"
             title="Optional">
         <span id="state_users_python">
 <a href="#state_users_python" style="color: inherit; text-decoration: inherit;">users</a>
@@ -4336,8 +3888,7 @@ The following state arguments are supported:
         <span class="property-type"><a href="#samlappuser">Sequence[Saml<wbr>App<wbr>User<wbr>Args]</a></span>
     </dt>
     <dd>{{% md %}}Users associated with the application
-{{% /md %}}</dd>
-</dl>
+{{% /md %}}</dd></dl>
 {{% /choosable %}}
 
 
@@ -4352,9 +3903,7 @@ The following state arguments are supported:
 <h4 id="samlappattributestatement">Saml<wbr>App<wbr>Attribute<wbr>Statement</h4>
 
 {{% choosable language csharp %}}
-<dl class="resources-properties">
-
-    <dt class="property-required"
+<dl class="resources-properties"><dt class="property-required"
             title="Required">
         <span id="name_csharp">
 <a href="#name_csharp" style="color: inherit; text-decoration: inherit;">Name</a>
@@ -4362,8 +3911,7 @@ The following state arguments are supported:
         <span class="property-indicator"></span>
         <span class="property-type">string</span>
     </dt>
-    <dd>{{% md %}}{{% /md %}}</dd>
-    <dt class="property-optional"
+    <dd>{{% md %}}{{% /md %}}</dd><dt class="property-optional"
             title="Optional">
         <span id="filtertype_csharp">
 <a href="#filtertype_csharp" style="color: inherit; text-decoration: inherit;">Filter<wbr>Type</a>
@@ -4371,8 +3919,7 @@ The following state arguments are supported:
         <span class="property-indicator"></span>
         <span class="property-type">string</span>
     </dt>
-    <dd>{{% md %}}{{% /md %}}</dd>
-    <dt class="property-optional"
+    <dd>{{% md %}}{{% /md %}}</dd><dt class="property-optional"
             title="Optional">
         <span id="filtervalue_csharp">
 <a href="#filtervalue_csharp" style="color: inherit; text-decoration: inherit;">Filter<wbr>Value</a>
@@ -4380,8 +3927,7 @@ The following state arguments are supported:
         <span class="property-indicator"></span>
         <span class="property-type">string</span>
     </dt>
-    <dd>{{% md %}}{{% /md %}}</dd>
-    <dt class="property-optional"
+    <dd>{{% md %}}{{% /md %}}</dd><dt class="property-optional"
             title="Optional">
         <span id="namespace_csharp">
 <a href="#namespace_csharp" style="color: inherit; text-decoration: inherit;">Namespace</a>
@@ -4389,8 +3935,7 @@ The following state arguments are supported:
         <span class="property-indicator"></span>
         <span class="property-type">string</span>
     </dt>
-    <dd>{{% md %}}{{% /md %}}</dd>
-    <dt class="property-optional"
+    <dd>{{% md %}}{{% /md %}}</dd><dt class="property-optional"
             title="Optional">
         <span id="type_csharp">
 <a href="#type_csharp" style="color: inherit; text-decoration: inherit;">Type</a>
@@ -4398,8 +3943,7 @@ The following state arguments are supported:
         <span class="property-indicator"></span>
         <span class="property-type">string</span>
     </dt>
-    <dd>{{% md %}}{{% /md %}}</dd>
-    <dt class="property-optional"
+    <dd>{{% md %}}{{% /md %}}</dd><dt class="property-optional"
             title="Optional">
         <span id="values_csharp">
 <a href="#values_csharp" style="color: inherit; text-decoration: inherit;">Values</a>
@@ -4407,14 +3951,11 @@ The following state arguments are supported:
         <span class="property-indicator"></span>
         <span class="property-type">List&lt;string&gt;</span>
     </dt>
-    <dd>{{% md %}}{{% /md %}}</dd>
-</dl>
+    <dd>{{% md %}}{{% /md %}}</dd></dl>
 {{% /choosable %}}
 
 {{% choosable language go %}}
-<dl class="resources-properties">
-
-    <dt class="property-required"
+<dl class="resources-properties"><dt class="property-required"
             title="Required">
         <span id="name_go">
 <a href="#name_go" style="color: inherit; text-decoration: inherit;">Name</a>
@@ -4422,8 +3963,7 @@ The following state arguments are supported:
         <span class="property-indicator"></span>
         <span class="property-type">string</span>
     </dt>
-    <dd>{{% md %}}{{% /md %}}</dd>
-    <dt class="property-optional"
+    <dd>{{% md %}}{{% /md %}}</dd><dt class="property-optional"
             title="Optional">
         <span id="filtertype_go">
 <a href="#filtertype_go" style="color: inherit; text-decoration: inherit;">Filter<wbr>Type</a>
@@ -4431,8 +3971,7 @@ The following state arguments are supported:
         <span class="property-indicator"></span>
         <span class="property-type">string</span>
     </dt>
-    <dd>{{% md %}}{{% /md %}}</dd>
-    <dt class="property-optional"
+    <dd>{{% md %}}{{% /md %}}</dd><dt class="property-optional"
             title="Optional">
         <span id="filtervalue_go">
 <a href="#filtervalue_go" style="color: inherit; text-decoration: inherit;">Filter<wbr>Value</a>
@@ -4440,8 +3979,7 @@ The following state arguments are supported:
         <span class="property-indicator"></span>
         <span class="property-type">string</span>
     </dt>
-    <dd>{{% md %}}{{% /md %}}</dd>
-    <dt class="property-optional"
+    <dd>{{% md %}}{{% /md %}}</dd><dt class="property-optional"
             title="Optional">
         <span id="namespace_go">
 <a href="#namespace_go" style="color: inherit; text-decoration: inherit;">Namespace</a>
@@ -4449,8 +3987,7 @@ The following state arguments are supported:
         <span class="property-indicator"></span>
         <span class="property-type">string</span>
     </dt>
-    <dd>{{% md %}}{{% /md %}}</dd>
-    <dt class="property-optional"
+    <dd>{{% md %}}{{% /md %}}</dd><dt class="property-optional"
             title="Optional">
         <span id="type_go">
 <a href="#type_go" style="color: inherit; text-decoration: inherit;">Type</a>
@@ -4458,8 +3995,7 @@ The following state arguments are supported:
         <span class="property-indicator"></span>
         <span class="property-type">string</span>
     </dt>
-    <dd>{{% md %}}{{% /md %}}</dd>
-    <dt class="property-optional"
+    <dd>{{% md %}}{{% /md %}}</dd><dt class="property-optional"
             title="Optional">
         <span id="values_go">
 <a href="#values_go" style="color: inherit; text-decoration: inherit;">Values</a>
@@ -4467,14 +4003,11 @@ The following state arguments are supported:
         <span class="property-indicator"></span>
         <span class="property-type">[]string</span>
     </dt>
-    <dd>{{% md %}}{{% /md %}}</dd>
-</dl>
+    <dd>{{% md %}}{{% /md %}}</dd></dl>
 {{% /choosable %}}
 
 {{% choosable language nodejs %}}
-<dl class="resources-properties">
-
-    <dt class="property-required"
+<dl class="resources-properties"><dt class="property-required"
             title="Required">
         <span id="name_nodejs">
 <a href="#name_nodejs" style="color: inherit; text-decoration: inherit;">name</a>
@@ -4482,8 +4015,7 @@ The following state arguments are supported:
         <span class="property-indicator"></span>
         <span class="property-type">string</span>
     </dt>
-    <dd>{{% md %}}{{% /md %}}</dd>
-    <dt class="property-optional"
+    <dd>{{% md %}}{{% /md %}}</dd><dt class="property-optional"
             title="Optional">
         <span id="filtertype_nodejs">
 <a href="#filtertype_nodejs" style="color: inherit; text-decoration: inherit;">filter<wbr>Type</a>
@@ -4491,8 +4023,7 @@ The following state arguments are supported:
         <span class="property-indicator"></span>
         <span class="property-type">string</span>
     </dt>
-    <dd>{{% md %}}{{% /md %}}</dd>
-    <dt class="property-optional"
+    <dd>{{% md %}}{{% /md %}}</dd><dt class="property-optional"
             title="Optional">
         <span id="filtervalue_nodejs">
 <a href="#filtervalue_nodejs" style="color: inherit; text-decoration: inherit;">filter<wbr>Value</a>
@@ -4500,8 +4031,7 @@ The following state arguments are supported:
         <span class="property-indicator"></span>
         <span class="property-type">string</span>
     </dt>
-    <dd>{{% md %}}{{% /md %}}</dd>
-    <dt class="property-optional"
+    <dd>{{% md %}}{{% /md %}}</dd><dt class="property-optional"
             title="Optional">
         <span id="namespace_nodejs">
 <a href="#namespace_nodejs" style="color: inherit; text-decoration: inherit;">namespace</a>
@@ -4509,8 +4039,7 @@ The following state arguments are supported:
         <span class="property-indicator"></span>
         <span class="property-type">string</span>
     </dt>
-    <dd>{{% md %}}{{% /md %}}</dd>
-    <dt class="property-optional"
+    <dd>{{% md %}}{{% /md %}}</dd><dt class="property-optional"
             title="Optional">
         <span id="type_nodejs">
 <a href="#type_nodejs" style="color: inherit; text-decoration: inherit;">type</a>
@@ -4518,8 +4047,7 @@ The following state arguments are supported:
         <span class="property-indicator"></span>
         <span class="property-type">string</span>
     </dt>
-    <dd>{{% md %}}{{% /md %}}</dd>
-    <dt class="property-optional"
+    <dd>{{% md %}}{{% /md %}}</dd><dt class="property-optional"
             title="Optional">
         <span id="values_nodejs">
 <a href="#values_nodejs" style="color: inherit; text-decoration: inherit;">values</a>
@@ -4527,14 +4055,11 @@ The following state arguments are supported:
         <span class="property-indicator"></span>
         <span class="property-type">string[]</span>
     </dt>
-    <dd>{{% md %}}{{% /md %}}</dd>
-</dl>
+    <dd>{{% md %}}{{% /md %}}</dd></dl>
 {{% /choosable %}}
 
 {{% choosable language python %}}
-<dl class="resources-properties">
-
-    <dt class="property-required"
+<dl class="resources-properties"><dt class="property-required"
             title="Required">
         <span id="name_python">
 <a href="#name_python" style="color: inherit; text-decoration: inherit;">name</a>
@@ -4542,8 +4067,7 @@ The following state arguments are supported:
         <span class="property-indicator"></span>
         <span class="property-type">str</span>
     </dt>
-    <dd>{{% md %}}{{% /md %}}</dd>
-    <dt class="property-optional"
+    <dd>{{% md %}}{{% /md %}}</dd><dt class="property-optional"
             title="Optional">
         <span id="filter_type_python">
 <a href="#filter_type_python" style="color: inherit; text-decoration: inherit;">filter_<wbr>type</a>
@@ -4551,8 +4075,7 @@ The following state arguments are supported:
         <span class="property-indicator"></span>
         <span class="property-type">str</span>
     </dt>
-    <dd>{{% md %}}{{% /md %}}</dd>
-    <dt class="property-optional"
+    <dd>{{% md %}}{{% /md %}}</dd><dt class="property-optional"
             title="Optional">
         <span id="filter_value_python">
 <a href="#filter_value_python" style="color: inherit; text-decoration: inherit;">filter_<wbr>value</a>
@@ -4560,8 +4083,7 @@ The following state arguments are supported:
         <span class="property-indicator"></span>
         <span class="property-type">str</span>
     </dt>
-    <dd>{{% md %}}{{% /md %}}</dd>
-    <dt class="property-optional"
+    <dd>{{% md %}}{{% /md %}}</dd><dt class="property-optional"
             title="Optional">
         <span id="namespace_python">
 <a href="#namespace_python" style="color: inherit; text-decoration: inherit;">namespace</a>
@@ -4569,8 +4091,7 @@ The following state arguments are supported:
         <span class="property-indicator"></span>
         <span class="property-type">str</span>
     </dt>
-    <dd>{{% md %}}{{% /md %}}</dd>
-    <dt class="property-optional"
+    <dd>{{% md %}}{{% /md %}}</dd><dt class="property-optional"
             title="Optional">
         <span id="type_python">
 <a href="#type_python" style="color: inherit; text-decoration: inherit;">type</a>
@@ -4578,8 +4099,7 @@ The following state arguments are supported:
         <span class="property-indicator"></span>
         <span class="property-type">str</span>
     </dt>
-    <dd>{{% md %}}{{% /md %}}</dd>
-    <dt class="property-optional"
+    <dd>{{% md %}}{{% /md %}}</dd><dt class="property-optional"
             title="Optional">
         <span id="values_python">
 <a href="#values_python" style="color: inherit; text-decoration: inherit;">values</a>
@@ -4587,16 +4107,13 @@ The following state arguments are supported:
         <span class="property-indicator"></span>
         <span class="property-type">Sequence[str]</span>
     </dt>
-    <dd>{{% md %}}{{% /md %}}</dd>
-</dl>
+    <dd>{{% md %}}{{% /md %}}</dd></dl>
 {{% /choosable %}}
 
 <h4 id="samlappuser">Saml<wbr>App<wbr>User</h4>
 
 {{% choosable language csharp %}}
-<dl class="resources-properties">
-
-    <dt class="property-optional"
+<dl class="resources-properties"><dt class="property-optional"
             title="Optional">
         <span id="id_csharp">
 <a href="#id_csharp" style="color: inherit; text-decoration: inherit;">Id</a>
@@ -4604,8 +4121,7 @@ The following state arguments are supported:
         <span class="property-indicator"></span>
         <span class="property-type">string</span>
     </dt>
-    <dd>{{% md %}}{{% /md %}}</dd>
-    <dt class="property-optional"
+    <dd>{{% md %}}{{% /md %}}</dd><dt class="property-optional"
             title="Optional">
         <span id="password_csharp">
 <a href="#password_csharp" style="color: inherit; text-decoration: inherit;">Password</a>
@@ -4613,8 +4129,7 @@ The following state arguments are supported:
         <span class="property-indicator"></span>
         <span class="property-type">string</span>
     </dt>
-    <dd>{{% md %}}{{% /md %}}</dd>
-    <dt class="property-optional"
+    <dd>{{% md %}}{{% /md %}}</dd><dt class="property-optional"
             title="Optional">
         <span id="scope_csharp">
 <a href="#scope_csharp" style="color: inherit; text-decoration: inherit;">Scope</a>
@@ -4622,8 +4137,7 @@ The following state arguments are supported:
         <span class="property-indicator"></span>
         <span class="property-type">string</span>
     </dt>
-    <dd>{{% md %}}{{% /md %}}</dd>
-    <dt class="property-optional"
+    <dd>{{% md %}}{{% /md %}}</dd><dt class="property-optional"
             title="Optional">
         <span id="username_csharp">
 <a href="#username_csharp" style="color: inherit; text-decoration: inherit;">Username</a>
@@ -4631,14 +4145,11 @@ The following state arguments are supported:
         <span class="property-indicator"></span>
         <span class="property-type">string</span>
     </dt>
-    <dd>{{% md %}}{{% /md %}}</dd>
-</dl>
+    <dd>{{% md %}}{{% /md %}}</dd></dl>
 {{% /choosable %}}
 
 {{% choosable language go %}}
-<dl class="resources-properties">
-
-    <dt class="property-optional"
+<dl class="resources-properties"><dt class="property-optional"
             title="Optional">
         <span id="id_go">
 <a href="#id_go" style="color: inherit; text-decoration: inherit;">Id</a>
@@ -4646,8 +4157,7 @@ The following state arguments are supported:
         <span class="property-indicator"></span>
         <span class="property-type">string</span>
     </dt>
-    <dd>{{% md %}}{{% /md %}}</dd>
-    <dt class="property-optional"
+    <dd>{{% md %}}{{% /md %}}</dd><dt class="property-optional"
             title="Optional">
         <span id="password_go">
 <a href="#password_go" style="color: inherit; text-decoration: inherit;">Password</a>
@@ -4655,8 +4165,7 @@ The following state arguments are supported:
         <span class="property-indicator"></span>
         <span class="property-type">string</span>
     </dt>
-    <dd>{{% md %}}{{% /md %}}</dd>
-    <dt class="property-optional"
+    <dd>{{% md %}}{{% /md %}}</dd><dt class="property-optional"
             title="Optional">
         <span id="scope_go">
 <a href="#scope_go" style="color: inherit; text-decoration: inherit;">Scope</a>
@@ -4664,8 +4173,7 @@ The following state arguments are supported:
         <span class="property-indicator"></span>
         <span class="property-type">string</span>
     </dt>
-    <dd>{{% md %}}{{% /md %}}</dd>
-    <dt class="property-optional"
+    <dd>{{% md %}}{{% /md %}}</dd><dt class="property-optional"
             title="Optional">
         <span id="username_go">
 <a href="#username_go" style="color: inherit; text-decoration: inherit;">Username</a>
@@ -4673,14 +4181,11 @@ The following state arguments are supported:
         <span class="property-indicator"></span>
         <span class="property-type">string</span>
     </dt>
-    <dd>{{% md %}}{{% /md %}}</dd>
-</dl>
+    <dd>{{% md %}}{{% /md %}}</dd></dl>
 {{% /choosable %}}
 
 {{% choosable language nodejs %}}
-<dl class="resources-properties">
-
-    <dt class="property-optional"
+<dl class="resources-properties"><dt class="property-optional"
             title="Optional">
         <span id="id_nodejs">
 <a href="#id_nodejs" style="color: inherit; text-decoration: inherit;">id</a>
@@ -4688,8 +4193,7 @@ The following state arguments are supported:
         <span class="property-indicator"></span>
         <span class="property-type">string</span>
     </dt>
-    <dd>{{% md %}}{{% /md %}}</dd>
-    <dt class="property-optional"
+    <dd>{{% md %}}{{% /md %}}</dd><dt class="property-optional"
             title="Optional">
         <span id="password_nodejs">
 <a href="#password_nodejs" style="color: inherit; text-decoration: inherit;">password</a>
@@ -4697,8 +4201,7 @@ The following state arguments are supported:
         <span class="property-indicator"></span>
         <span class="property-type">string</span>
     </dt>
-    <dd>{{% md %}}{{% /md %}}</dd>
-    <dt class="property-optional"
+    <dd>{{% md %}}{{% /md %}}</dd><dt class="property-optional"
             title="Optional">
         <span id="scope_nodejs">
 <a href="#scope_nodejs" style="color: inherit; text-decoration: inherit;">scope</a>
@@ -4706,8 +4209,7 @@ The following state arguments are supported:
         <span class="property-indicator"></span>
         <span class="property-type">string</span>
     </dt>
-    <dd>{{% md %}}{{% /md %}}</dd>
-    <dt class="property-optional"
+    <dd>{{% md %}}{{% /md %}}</dd><dt class="property-optional"
             title="Optional">
         <span id="username_nodejs">
 <a href="#username_nodejs" style="color: inherit; text-decoration: inherit;">username</a>
@@ -4715,14 +4217,11 @@ The following state arguments are supported:
         <span class="property-indicator"></span>
         <span class="property-type">string</span>
     </dt>
-    <dd>{{% md %}}{{% /md %}}</dd>
-</dl>
+    <dd>{{% md %}}{{% /md %}}</dd></dl>
 {{% /choosable %}}
 
 {{% choosable language python %}}
-<dl class="resources-properties">
-
-    <dt class="property-optional"
+<dl class="resources-properties"><dt class="property-optional"
             title="Optional">
         <span id="id_python">
 <a href="#id_python" style="color: inherit; text-decoration: inherit;">id</a>
@@ -4730,8 +4229,7 @@ The following state arguments are supported:
         <span class="property-indicator"></span>
         <span class="property-type">str</span>
     </dt>
-    <dd>{{% md %}}{{% /md %}}</dd>
-    <dt class="property-optional"
+    <dd>{{% md %}}{{% /md %}}</dd><dt class="property-optional"
             title="Optional">
         <span id="password_python">
 <a href="#password_python" style="color: inherit; text-decoration: inherit;">password</a>
@@ -4739,8 +4237,7 @@ The following state arguments are supported:
         <span class="property-indicator"></span>
         <span class="property-type">str</span>
     </dt>
-    <dd>{{% md %}}{{% /md %}}</dd>
-    <dt class="property-optional"
+    <dd>{{% md %}}{{% /md %}}</dd><dt class="property-optional"
             title="Optional">
         <span id="scope_python">
 <a href="#scope_python" style="color: inherit; text-decoration: inherit;">scope</a>
@@ -4748,8 +4245,7 @@ The following state arguments are supported:
         <span class="property-indicator"></span>
         <span class="property-type">str</span>
     </dt>
-    <dd>{{% md %}}{{% /md %}}</dd>
-    <dt class="property-optional"
+    <dd>{{% md %}}{{% /md %}}</dd><dt class="property-optional"
             title="Optional">
         <span id="username_python">
 <a href="#username_python" style="color: inherit; text-decoration: inherit;">username</a>
@@ -4757,8 +4253,7 @@ The following state arguments are supported:
         <span class="property-indicator"></span>
         <span class="property-type">str</span>
     </dt>
-    <dd>{{% md %}}{{% /md %}}</dd>
-</dl>
+    <dd>{{% md %}}{{% /md %}}</dd></dl>
 {{% /choosable %}}
 
 
@@ -4769,6 +4264,6 @@ The following state arguments are supported:
 	<dt>License</dt>
 	<dd>Apache-2.0</dd>
 	<dt>Notes</dt>
-	<dd>This Pulumi package is based on the [`okta` Terraform Provider](https://github.com/oktadeveloper/terraform-provider-okta).</dd>
+	<dd>{{% md %}}This Pulumi package is based on the [`okta` Terraform Provider](https://github.com/oktadeveloper/terraform-provider-okta).{{% /md %}}</dd>
 </dl>
 

@@ -51,9 +51,7 @@ The following arguments are supported:
 
 
 {{% choosable language csharp %}}
-<dl class="resources-properties">
-
-    <dt class="property-required"
+<dl class="resources-properties"><dt class="property-required"
             title="Required">
         <span id="policydefinitionname_csharp">
 <a href="#policydefinitionname_csharp" style="color: inherit; text-decoration: inherit;">Policy<wbr>Definition<wbr>Name</a>
@@ -61,14 +59,11 @@ The following arguments are supported:
         <span class="property-indicator"></span>
         <span class="property-type">string</span>
     </dt>
-    <dd>{{% md %}}The name of the policy definition to get.{{% /md %}}</dd>
-</dl>
+    <dd>{{% md %}}The name of the policy definition to get.{{% /md %}}</dd></dl>
 {{% /choosable %}}
 
 {{% choosable language go %}}
-<dl class="resources-properties">
-
-    <dt class="property-required"
+<dl class="resources-properties"><dt class="property-required"
             title="Required">
         <span id="policydefinitionname_go">
 <a href="#policydefinitionname_go" style="color: inherit; text-decoration: inherit;">Policy<wbr>Definition<wbr>Name</a>
@@ -76,14 +71,11 @@ The following arguments are supported:
         <span class="property-indicator"></span>
         <span class="property-type">string</span>
     </dt>
-    <dd>{{% md %}}The name of the policy definition to get.{{% /md %}}</dd>
-</dl>
+    <dd>{{% md %}}The name of the policy definition to get.{{% /md %}}</dd></dl>
 {{% /choosable %}}
 
 {{% choosable language nodejs %}}
-<dl class="resources-properties">
-
-    <dt class="property-required"
+<dl class="resources-properties"><dt class="property-required"
             title="Required">
         <span id="policydefinitionname_nodejs">
 <a href="#policydefinitionname_nodejs" style="color: inherit; text-decoration: inherit;">policy<wbr>Definition<wbr>Name</a>
@@ -91,14 +83,11 @@ The following arguments are supported:
         <span class="property-indicator"></span>
         <span class="property-type">string</span>
     </dt>
-    <dd>{{% md %}}The name of the policy definition to get.{{% /md %}}</dd>
-</dl>
+    <dd>{{% md %}}The name of the policy definition to get.{{% /md %}}</dd></dl>
 {{% /choosable %}}
 
 {{% choosable language python %}}
-<dl class="resources-properties">
-
-    <dt class="property-required"
+<dl class="resources-properties"><dt class="property-required"
             title="Required">
         <span id="policy_definition_name_python">
 <a href="#policy_definition_name_python" style="color: inherit; text-decoration: inherit;">policy_<wbr>definition_<wbr>name</a>
@@ -106,8 +95,7 @@ The following arguments are supported:
         <span class="property-indicator"></span>
         <span class="property-type">str</span>
     </dt>
-    <dd>{{% md %}}The name of the policy definition to get.{{% /md %}}</dd>
-</dl>
+    <dd>{{% md %}}The name of the policy definition to get.{{% /md %}}</dd></dl>
 {{% /choosable %}}
 
 
@@ -120,9 +108,7 @@ The following output properties are available:
 
 
 {{% choosable language csharp %}}
-<dl class="resources-properties">
-
-    <dt class="property-"
+<dl class="resources-properties"><dt class="property-"
             title="">
         <span id="id_csharp">
 <a href="#id_csharp" style="color: inherit; text-decoration: inherit;">Id</a>
@@ -130,8 +116,7 @@ The following output properties are available:
         <span class="property-indicator"></span>
         <span class="property-type">string</span>
     </dt>
-    <dd>{{% md %}}The ID of the policy definition.{{% /md %}}</dd>
-    <dt class="property-"
+    <dd>{{% md %}}The ID of the policy definition.{{% /md %}}</dd><dt class="property-"
             title="">
         <span id="name_csharp">
 <a href="#name_csharp" style="color: inherit; text-decoration: inherit;">Name</a>
@@ -139,8 +124,7 @@ The following output properties are available:
         <span class="property-indicator"></span>
         <span class="property-type">string</span>
     </dt>
-    <dd>{{% md %}}The name of the policy definition.{{% /md %}}</dd>
-    <dt class="property-"
+    <dd>{{% md %}}The name of the policy definition.{{% /md %}}</dd><dt class="property-"
             title="">
         <span id="type_csharp">
 <a href="#type_csharp" style="color: inherit; text-decoration: inherit;">Type</a>
@@ -148,8 +132,7 @@ The following output properties are available:
         <span class="property-indicator"></span>
         <span class="property-type">string</span>
     </dt>
-    <dd>{{% md %}}The type of the resource (Microsoft.Authorization/policyDefinitions).{{% /md %}}</dd>
-    <dt class="property-"
+    <dd>{{% md %}}The type of the resource (Microsoft.Authorization/policyDefinitions).{{% /md %}}</dd><dt class="property-"
             title="">
         <span id="description_csharp">
 <a href="#description_csharp" style="color: inherit; text-decoration: inherit;">Description</a>
@@ -157,8 +140,7 @@ The following output properties are available:
         <span class="property-indicator"></span>
         <span class="property-type">string</span>
     </dt>
-    <dd>{{% md %}}The policy definition description.{{% /md %}}</dd>
-    <dt class="property-"
+    <dd>{{% md %}}The policy definition description.{{% /md %}}</dd><dt class="property-"
             title="">
         <span id="displayname_csharp">
 <a href="#displayname_csharp" style="color: inherit; text-decoration: inherit;">Display<wbr>Name</a>
@@ -166,8 +148,7 @@ The following output properties are available:
         <span class="property-indicator"></span>
         <span class="property-type">string</span>
     </dt>
-    <dd>{{% md %}}The display name of the policy definition.{{% /md %}}</dd>
-    <dt class="property-"
+    <dd>{{% md %}}The display name of the policy definition.{{% /md %}}</dd><dt class="property-"
             title="">
         <span id="metadata_csharp">
 <a href="#metadata_csharp" style="color: inherit; text-decoration: inherit;">Metadata</a>
@@ -175,8 +156,7 @@ The following output properties are available:
         <span class="property-indicator"></span>
         <span class="property-type">object</span>
     </dt>
-    <dd>{{% md %}}The policy definition metadata.  Metadata is an open ended object and is typically a collection of key value pairs.{{% /md %}}</dd>
-    <dt class="property-"
+    <dd>{{% md %}}The policy definition metadata.  Metadata is an open ended object and is typically a collection of key value pairs.{{% /md %}}</dd><dt class="property-"
             title="">
         <span id="mode_csharp">
 <a href="#mode_csharp" style="color: inherit; text-decoration: inherit;">Mode</a>
@@ -184,8 +164,7 @@ The following output properties are available:
         <span class="property-indicator"></span>
         <span class="property-type">string</span>
     </dt>
-    <dd>{{% md %}}The policy definition mode. Some examples are All, Indexed, Microsoft.KeyVault.Data.{{% /md %}}</dd>
-    <dt class="property-"
+    <dd>{{% md %}}The policy definition mode. Some examples are All, Indexed, Microsoft.KeyVault.Data.{{% /md %}}</dd><dt class="property-"
             title="">
         <span id="parameters_csharp">
 <a href="#parameters_csharp" style="color: inherit; text-decoration: inherit;">Parameters</a>
@@ -193,8 +172,7 @@ The following output properties are available:
         <span class="property-indicator"></span>
         <span class="property-type">Dictionary&lt;string, Pulumi.<wbr>Azure<wbr>Native.<wbr>Authorization.<wbr>Outputs.<wbr>Parameter<wbr>Definitions<wbr>Value<wbr>Response&gt;</span>
     </dt>
-    <dd>{{% md %}}The parameter definitions for parameters used in the policy rule. The keys are the parameter names.{{% /md %}}</dd>
-    <dt class="property-"
+    <dd>{{% md %}}The parameter definitions for parameters used in the policy rule. The keys are the parameter names.{{% /md %}}</dd><dt class="property-"
             title="">
         <span id="policyrule_csharp">
 <a href="#policyrule_csharp" style="color: inherit; text-decoration: inherit;">Policy<wbr>Rule</a>
@@ -202,8 +180,7 @@ The following output properties are available:
         <span class="property-indicator"></span>
         <span class="property-type">object</span>
     </dt>
-    <dd>{{% md %}}The policy rule.{{% /md %}}</dd>
-    <dt class="property-"
+    <dd>{{% md %}}The policy rule.{{% /md %}}</dd><dt class="property-"
             title="">
         <span id="policytype_csharp">
 <a href="#policytype_csharp" style="color: inherit; text-decoration: inherit;">Policy<wbr>Type</a>
@@ -211,14 +188,11 @@ The following output properties are available:
         <span class="property-indicator"></span>
         <span class="property-type">string</span>
     </dt>
-    <dd>{{% md %}}The type of policy definition. Possible values are NotSpecified, BuiltIn, Custom, and Static.{{% /md %}}</dd>
-</dl>
+    <dd>{{% md %}}The type of policy definition. Possible values are NotSpecified, BuiltIn, Custom, and Static.{{% /md %}}</dd></dl>
 {{% /choosable %}}
 
 {{% choosable language go %}}
-<dl class="resources-properties">
-
-    <dt class="property-"
+<dl class="resources-properties"><dt class="property-"
             title="">
         <span id="id_go">
 <a href="#id_go" style="color: inherit; text-decoration: inherit;">Id</a>
@@ -226,8 +200,7 @@ The following output properties are available:
         <span class="property-indicator"></span>
         <span class="property-type">string</span>
     </dt>
-    <dd>{{% md %}}The ID of the policy definition.{{% /md %}}</dd>
-    <dt class="property-"
+    <dd>{{% md %}}The ID of the policy definition.{{% /md %}}</dd><dt class="property-"
             title="">
         <span id="name_go">
 <a href="#name_go" style="color: inherit; text-decoration: inherit;">Name</a>
@@ -235,8 +208,7 @@ The following output properties are available:
         <span class="property-indicator"></span>
         <span class="property-type">string</span>
     </dt>
-    <dd>{{% md %}}The name of the policy definition.{{% /md %}}</dd>
-    <dt class="property-"
+    <dd>{{% md %}}The name of the policy definition.{{% /md %}}</dd><dt class="property-"
             title="">
         <span id="type_go">
 <a href="#type_go" style="color: inherit; text-decoration: inherit;">Type</a>
@@ -244,8 +216,7 @@ The following output properties are available:
         <span class="property-indicator"></span>
         <span class="property-type">string</span>
     </dt>
-    <dd>{{% md %}}The type of the resource (Microsoft.Authorization/policyDefinitions).{{% /md %}}</dd>
-    <dt class="property-"
+    <dd>{{% md %}}The type of the resource (Microsoft.Authorization/policyDefinitions).{{% /md %}}</dd><dt class="property-"
             title="">
         <span id="description_go">
 <a href="#description_go" style="color: inherit; text-decoration: inherit;">Description</a>
@@ -253,8 +224,7 @@ The following output properties are available:
         <span class="property-indicator"></span>
         <span class="property-type">string</span>
     </dt>
-    <dd>{{% md %}}The policy definition description.{{% /md %}}</dd>
-    <dt class="property-"
+    <dd>{{% md %}}The policy definition description.{{% /md %}}</dd><dt class="property-"
             title="">
         <span id="displayname_go">
 <a href="#displayname_go" style="color: inherit; text-decoration: inherit;">Display<wbr>Name</a>
@@ -262,8 +232,7 @@ The following output properties are available:
         <span class="property-indicator"></span>
         <span class="property-type">string</span>
     </dt>
-    <dd>{{% md %}}The display name of the policy definition.{{% /md %}}</dd>
-    <dt class="property-"
+    <dd>{{% md %}}The display name of the policy definition.{{% /md %}}</dd><dt class="property-"
             title="">
         <span id="metadata_go">
 <a href="#metadata_go" style="color: inherit; text-decoration: inherit;">Metadata</a>
@@ -271,8 +240,7 @@ The following output properties are available:
         <span class="property-indicator"></span>
         <span class="property-type">interface{}</span>
     </dt>
-    <dd>{{% md %}}The policy definition metadata.  Metadata is an open ended object and is typically a collection of key value pairs.{{% /md %}}</dd>
-    <dt class="property-"
+    <dd>{{% md %}}The policy definition metadata.  Metadata is an open ended object and is typically a collection of key value pairs.{{% /md %}}</dd><dt class="property-"
             title="">
         <span id="mode_go">
 <a href="#mode_go" style="color: inherit; text-decoration: inherit;">Mode</a>
@@ -280,8 +248,7 @@ The following output properties are available:
         <span class="property-indicator"></span>
         <span class="property-type">string</span>
     </dt>
-    <dd>{{% md %}}The policy definition mode. Some examples are All, Indexed, Microsoft.KeyVault.Data.{{% /md %}}</dd>
-    <dt class="property-"
+    <dd>{{% md %}}The policy definition mode. Some examples are All, Indexed, Microsoft.KeyVault.Data.{{% /md %}}</dd><dt class="property-"
             title="">
         <span id="parameters_go">
 <a href="#parameters_go" style="color: inherit; text-decoration: inherit;">Parameters</a>
@@ -289,8 +256,7 @@ The following output properties are available:
         <span class="property-indicator"></span>
         <span class="property-type">map[string]Parameter<wbr>Definitions<wbr>Value<wbr>Response</span>
     </dt>
-    <dd>{{% md %}}The parameter definitions for parameters used in the policy rule. The keys are the parameter names.{{% /md %}}</dd>
-    <dt class="property-"
+    <dd>{{% md %}}The parameter definitions for parameters used in the policy rule. The keys are the parameter names.{{% /md %}}</dd><dt class="property-"
             title="">
         <span id="policyrule_go">
 <a href="#policyrule_go" style="color: inherit; text-decoration: inherit;">Policy<wbr>Rule</a>
@@ -298,8 +264,7 @@ The following output properties are available:
         <span class="property-indicator"></span>
         <span class="property-type">interface{}</span>
     </dt>
-    <dd>{{% md %}}The policy rule.{{% /md %}}</dd>
-    <dt class="property-"
+    <dd>{{% md %}}The policy rule.{{% /md %}}</dd><dt class="property-"
             title="">
         <span id="policytype_go">
 <a href="#policytype_go" style="color: inherit; text-decoration: inherit;">Policy<wbr>Type</a>
@@ -307,14 +272,11 @@ The following output properties are available:
         <span class="property-indicator"></span>
         <span class="property-type">string</span>
     </dt>
-    <dd>{{% md %}}The type of policy definition. Possible values are NotSpecified, BuiltIn, Custom, and Static.{{% /md %}}</dd>
-</dl>
+    <dd>{{% md %}}The type of policy definition. Possible values are NotSpecified, BuiltIn, Custom, and Static.{{% /md %}}</dd></dl>
 {{% /choosable %}}
 
 {{% choosable language nodejs %}}
-<dl class="resources-properties">
-
-    <dt class="property-"
+<dl class="resources-properties"><dt class="property-"
             title="">
         <span id="id_nodejs">
 <a href="#id_nodejs" style="color: inherit; text-decoration: inherit;">id</a>
@@ -322,8 +284,7 @@ The following output properties are available:
         <span class="property-indicator"></span>
         <span class="property-type">string</span>
     </dt>
-    <dd>{{% md %}}The ID of the policy definition.{{% /md %}}</dd>
-    <dt class="property-"
+    <dd>{{% md %}}The ID of the policy definition.{{% /md %}}</dd><dt class="property-"
             title="">
         <span id="name_nodejs">
 <a href="#name_nodejs" style="color: inherit; text-decoration: inherit;">name</a>
@@ -331,8 +292,7 @@ The following output properties are available:
         <span class="property-indicator"></span>
         <span class="property-type">string</span>
     </dt>
-    <dd>{{% md %}}The name of the policy definition.{{% /md %}}</dd>
-    <dt class="property-"
+    <dd>{{% md %}}The name of the policy definition.{{% /md %}}</dd><dt class="property-"
             title="">
         <span id="type_nodejs">
 <a href="#type_nodejs" style="color: inherit; text-decoration: inherit;">type</a>
@@ -340,8 +300,7 @@ The following output properties are available:
         <span class="property-indicator"></span>
         <span class="property-type">string</span>
     </dt>
-    <dd>{{% md %}}The type of the resource (Microsoft.Authorization/policyDefinitions).{{% /md %}}</dd>
-    <dt class="property-"
+    <dd>{{% md %}}The type of the resource (Microsoft.Authorization/policyDefinitions).{{% /md %}}</dd><dt class="property-"
             title="">
         <span id="description_nodejs">
 <a href="#description_nodejs" style="color: inherit; text-decoration: inherit;">description</a>
@@ -349,8 +308,7 @@ The following output properties are available:
         <span class="property-indicator"></span>
         <span class="property-type">string</span>
     </dt>
-    <dd>{{% md %}}The policy definition description.{{% /md %}}</dd>
-    <dt class="property-"
+    <dd>{{% md %}}The policy definition description.{{% /md %}}</dd><dt class="property-"
             title="">
         <span id="displayname_nodejs">
 <a href="#displayname_nodejs" style="color: inherit; text-decoration: inherit;">display<wbr>Name</a>
@@ -358,8 +316,7 @@ The following output properties are available:
         <span class="property-indicator"></span>
         <span class="property-type">string</span>
     </dt>
-    <dd>{{% md %}}The display name of the policy definition.{{% /md %}}</dd>
-    <dt class="property-"
+    <dd>{{% md %}}The display name of the policy definition.{{% /md %}}</dd><dt class="property-"
             title="">
         <span id="metadata_nodejs">
 <a href="#metadata_nodejs" style="color: inherit; text-decoration: inherit;">metadata</a>
@@ -367,8 +324,7 @@ The following output properties are available:
         <span class="property-indicator"></span>
         <span class="property-type">any</span>
     </dt>
-    <dd>{{% md %}}The policy definition metadata.  Metadata is an open ended object and is typically a collection of key value pairs.{{% /md %}}</dd>
-    <dt class="property-"
+    <dd>{{% md %}}The policy definition metadata.  Metadata is an open ended object and is typically a collection of key value pairs.{{% /md %}}</dd><dt class="property-"
             title="">
         <span id="mode_nodejs">
 <a href="#mode_nodejs" style="color: inherit; text-decoration: inherit;">mode</a>
@@ -376,8 +332,7 @@ The following output properties are available:
         <span class="property-indicator"></span>
         <span class="property-type">string</span>
     </dt>
-    <dd>{{% md %}}The policy definition mode. Some examples are All, Indexed, Microsoft.KeyVault.Data.{{% /md %}}</dd>
-    <dt class="property-"
+    <dd>{{% md %}}The policy definition mode. Some examples are All, Indexed, Microsoft.KeyVault.Data.{{% /md %}}</dd><dt class="property-"
             title="">
         <span id="parameters_nodejs">
 <a href="#parameters_nodejs" style="color: inherit; text-decoration: inherit;">parameters</a>
@@ -385,8 +340,7 @@ The following output properties are available:
         <span class="property-indicator"></span>
         <span class="property-type">{[key: string]: Parameter<wbr>Definitions<wbr>Value<wbr>Response}</span>
     </dt>
-    <dd>{{% md %}}The parameter definitions for parameters used in the policy rule. The keys are the parameter names.{{% /md %}}</dd>
-    <dt class="property-"
+    <dd>{{% md %}}The parameter definitions for parameters used in the policy rule. The keys are the parameter names.{{% /md %}}</dd><dt class="property-"
             title="">
         <span id="policyrule_nodejs">
 <a href="#policyrule_nodejs" style="color: inherit; text-decoration: inherit;">policy<wbr>Rule</a>
@@ -394,8 +348,7 @@ The following output properties are available:
         <span class="property-indicator"></span>
         <span class="property-type">any</span>
     </dt>
-    <dd>{{% md %}}The policy rule.{{% /md %}}</dd>
-    <dt class="property-"
+    <dd>{{% md %}}The policy rule.{{% /md %}}</dd><dt class="property-"
             title="">
         <span id="policytype_nodejs">
 <a href="#policytype_nodejs" style="color: inherit; text-decoration: inherit;">policy<wbr>Type</a>
@@ -403,14 +356,11 @@ The following output properties are available:
         <span class="property-indicator"></span>
         <span class="property-type">string</span>
     </dt>
-    <dd>{{% md %}}The type of policy definition. Possible values are NotSpecified, BuiltIn, Custom, and Static.{{% /md %}}</dd>
-</dl>
+    <dd>{{% md %}}The type of policy definition. Possible values are NotSpecified, BuiltIn, Custom, and Static.{{% /md %}}</dd></dl>
 {{% /choosable %}}
 
 {{% choosable language python %}}
-<dl class="resources-properties">
-
-    <dt class="property-"
+<dl class="resources-properties"><dt class="property-"
             title="">
         <span id="id_python">
 <a href="#id_python" style="color: inherit; text-decoration: inherit;">id</a>
@@ -418,8 +368,7 @@ The following output properties are available:
         <span class="property-indicator"></span>
         <span class="property-type">str</span>
     </dt>
-    <dd>{{% md %}}The ID of the policy definition.{{% /md %}}</dd>
-    <dt class="property-"
+    <dd>{{% md %}}The ID of the policy definition.{{% /md %}}</dd><dt class="property-"
             title="">
         <span id="name_python">
 <a href="#name_python" style="color: inherit; text-decoration: inherit;">name</a>
@@ -427,8 +376,7 @@ The following output properties are available:
         <span class="property-indicator"></span>
         <span class="property-type">str</span>
     </dt>
-    <dd>{{% md %}}The name of the policy definition.{{% /md %}}</dd>
-    <dt class="property-"
+    <dd>{{% md %}}The name of the policy definition.{{% /md %}}</dd><dt class="property-"
             title="">
         <span id="type_python">
 <a href="#type_python" style="color: inherit; text-decoration: inherit;">type</a>
@@ -436,8 +384,7 @@ The following output properties are available:
         <span class="property-indicator"></span>
         <span class="property-type">str</span>
     </dt>
-    <dd>{{% md %}}The type of the resource (Microsoft.Authorization/policyDefinitions).{{% /md %}}</dd>
-    <dt class="property-"
+    <dd>{{% md %}}The type of the resource (Microsoft.Authorization/policyDefinitions).{{% /md %}}</dd><dt class="property-"
             title="">
         <span id="description_python">
 <a href="#description_python" style="color: inherit; text-decoration: inherit;">description</a>
@@ -445,8 +392,7 @@ The following output properties are available:
         <span class="property-indicator"></span>
         <span class="property-type">str</span>
     </dt>
-    <dd>{{% md %}}The policy definition description.{{% /md %}}</dd>
-    <dt class="property-"
+    <dd>{{% md %}}The policy definition description.{{% /md %}}</dd><dt class="property-"
             title="">
         <span id="display_name_python">
 <a href="#display_name_python" style="color: inherit; text-decoration: inherit;">display_<wbr>name</a>
@@ -454,8 +400,7 @@ The following output properties are available:
         <span class="property-indicator"></span>
         <span class="property-type">str</span>
     </dt>
-    <dd>{{% md %}}The display name of the policy definition.{{% /md %}}</dd>
-    <dt class="property-"
+    <dd>{{% md %}}The display name of the policy definition.{{% /md %}}</dd><dt class="property-"
             title="">
         <span id="metadata_python">
 <a href="#metadata_python" style="color: inherit; text-decoration: inherit;">metadata</a>
@@ -463,8 +408,7 @@ The following output properties are available:
         <span class="property-indicator"></span>
         <span class="property-type">Any</span>
     </dt>
-    <dd>{{% md %}}The policy definition metadata.  Metadata is an open ended object and is typically a collection of key value pairs.{{% /md %}}</dd>
-    <dt class="property-"
+    <dd>{{% md %}}The policy definition metadata.  Metadata is an open ended object and is typically a collection of key value pairs.{{% /md %}}</dd><dt class="property-"
             title="">
         <span id="mode_python">
 <a href="#mode_python" style="color: inherit; text-decoration: inherit;">mode</a>
@@ -472,8 +416,7 @@ The following output properties are available:
         <span class="property-indicator"></span>
         <span class="property-type">str</span>
     </dt>
-    <dd>{{% md %}}The policy definition mode. Some examples are All, Indexed, Microsoft.KeyVault.Data.{{% /md %}}</dd>
-    <dt class="property-"
+    <dd>{{% md %}}The policy definition mode. Some examples are All, Indexed, Microsoft.KeyVault.Data.{{% /md %}}</dd><dt class="property-"
             title="">
         <span id="parameters_python">
 <a href="#parameters_python" style="color: inherit; text-decoration: inherit;">parameters</a>
@@ -481,8 +424,7 @@ The following output properties are available:
         <span class="property-indicator"></span>
         <span class="property-type">Mapping[str, Parameter<wbr>Definitions<wbr>Value<wbr>Response]</span>
     </dt>
-    <dd>{{% md %}}The parameter definitions for parameters used in the policy rule. The keys are the parameter names.{{% /md %}}</dd>
-    <dt class="property-"
+    <dd>{{% md %}}The parameter definitions for parameters used in the policy rule. The keys are the parameter names.{{% /md %}}</dd><dt class="property-"
             title="">
         <span id="policy_rule_python">
 <a href="#policy_rule_python" style="color: inherit; text-decoration: inherit;">policy_<wbr>rule</a>
@@ -490,8 +432,7 @@ The following output properties are available:
         <span class="property-indicator"></span>
         <span class="property-type">Any</span>
     </dt>
-    <dd>{{% md %}}The policy rule.{{% /md %}}</dd>
-    <dt class="property-"
+    <dd>{{% md %}}The policy rule.{{% /md %}}</dd><dt class="property-"
             title="">
         <span id="policy_type_python">
 <a href="#policy_type_python" style="color: inherit; text-decoration: inherit;">policy_<wbr>type</a>
@@ -499,8 +440,7 @@ The following output properties are available:
         <span class="property-indicator"></span>
         <span class="property-type">str</span>
     </dt>
-    <dd>{{% md %}}The type of policy definition. Possible values are NotSpecified, BuiltIn, Custom, and Static.{{% /md %}}</dd>
-</dl>
+    <dd>{{% md %}}The type of policy definition. Possible values are NotSpecified, BuiltIn, Custom, and Static.{{% /md %}}</dd></dl>
 {{% /choosable %}}
 
 
@@ -514,9 +454,7 @@ The following output properties are available:
 
 
 {{% choosable language csharp %}}
-<dl class="resources-properties">
-
-    <dt class="property-optional"
+<dl class="resources-properties"><dt class="property-optional"
             title="Optional">
         <span id="allowedvalues_csharp">
 <a href="#allowedvalues_csharp" style="color: inherit; text-decoration: inherit;">Allowed<wbr>Values</a>
@@ -524,8 +462,7 @@ The following output properties are available:
         <span class="property-indicator"></span>
         <span class="property-type">List&lt;object&gt;</span>
     </dt>
-    <dd>{{% md %}}The allowed values for the parameter.{{% /md %}}</dd>
-    <dt class="property-optional"
+    <dd>{{% md %}}The allowed values for the parameter.{{% /md %}}</dd><dt class="property-optional"
             title="Optional">
         <span id="defaultvalue_csharp">
 <a href="#defaultvalue_csharp" style="color: inherit; text-decoration: inherit;">Default<wbr>Value</a>
@@ -533,8 +470,7 @@ The following output properties are available:
         <span class="property-indicator"></span>
         <span class="property-type">object</span>
     </dt>
-    <dd>{{% md %}}The default value for the parameter if no value is provided.{{% /md %}}</dd>
-    <dt class="property-optional"
+    <dd>{{% md %}}The default value for the parameter if no value is provided.{{% /md %}}</dd><dt class="property-optional"
             title="Optional">
         <span id="metadata_csharp">
 <a href="#metadata_csharp" style="color: inherit; text-decoration: inherit;">Metadata</a>
@@ -542,8 +478,7 @@ The following output properties are available:
         <span class="property-indicator"></span>
         <span class="property-type"><a href="#parameterdefinitionsvalueresponsemetadata">Pulumi.<wbr>Azure<wbr>Native.<wbr>Authorization.<wbr>Inputs.<wbr>Parameter<wbr>Definitions<wbr>Value<wbr>Response<wbr>Metadata<wbr>Args</a></span>
     </dt>
-    <dd>{{% md %}}General metadata for the parameter.{{% /md %}}</dd>
-    <dt class="property-optional"
+    <dd>{{% md %}}General metadata for the parameter.{{% /md %}}</dd><dt class="property-optional"
             title="Optional">
         <span id="type_csharp">
 <a href="#type_csharp" style="color: inherit; text-decoration: inherit;">Type</a>
@@ -551,14 +486,11 @@ The following output properties are available:
         <span class="property-indicator"></span>
         <span class="property-type">string</span>
     </dt>
-    <dd>{{% md %}}The data type of the parameter.{{% /md %}}</dd>
-</dl>
+    <dd>{{% md %}}The data type of the parameter.{{% /md %}}</dd></dl>
 {{% /choosable %}}
 
 {{% choosable language go %}}
-<dl class="resources-properties">
-
-    <dt class="property-optional"
+<dl class="resources-properties"><dt class="property-optional"
             title="Optional">
         <span id="allowedvalues_go">
 <a href="#allowedvalues_go" style="color: inherit; text-decoration: inherit;">Allowed<wbr>Values</a>
@@ -566,8 +498,7 @@ The following output properties are available:
         <span class="property-indicator"></span>
         <span class="property-type">[]interface{}</span>
     </dt>
-    <dd>{{% md %}}The allowed values for the parameter.{{% /md %}}</dd>
-    <dt class="property-optional"
+    <dd>{{% md %}}The allowed values for the parameter.{{% /md %}}</dd><dt class="property-optional"
             title="Optional">
         <span id="defaultvalue_go">
 <a href="#defaultvalue_go" style="color: inherit; text-decoration: inherit;">Default<wbr>Value</a>
@@ -575,8 +506,7 @@ The following output properties are available:
         <span class="property-indicator"></span>
         <span class="property-type">interface{}</span>
     </dt>
-    <dd>{{% md %}}The default value for the parameter if no value is provided.{{% /md %}}</dd>
-    <dt class="property-optional"
+    <dd>{{% md %}}The default value for the parameter if no value is provided.{{% /md %}}</dd><dt class="property-optional"
             title="Optional">
         <span id="metadata_go">
 <a href="#metadata_go" style="color: inherit; text-decoration: inherit;">Metadata</a>
@@ -584,8 +514,7 @@ The following output properties are available:
         <span class="property-indicator"></span>
         <span class="property-type"><a href="#parameterdefinitionsvalueresponsemetadata">Parameter<wbr>Definitions<wbr>Value<wbr>Response<wbr>Metadata</a></span>
     </dt>
-    <dd>{{% md %}}General metadata for the parameter.{{% /md %}}</dd>
-    <dt class="property-optional"
+    <dd>{{% md %}}General metadata for the parameter.{{% /md %}}</dd><dt class="property-optional"
             title="Optional">
         <span id="type_go">
 <a href="#type_go" style="color: inherit; text-decoration: inherit;">Type</a>
@@ -593,14 +522,11 @@ The following output properties are available:
         <span class="property-indicator"></span>
         <span class="property-type">string</span>
     </dt>
-    <dd>{{% md %}}The data type of the parameter.{{% /md %}}</dd>
-</dl>
+    <dd>{{% md %}}The data type of the parameter.{{% /md %}}</dd></dl>
 {{% /choosable %}}
 
 {{% choosable language nodejs %}}
-<dl class="resources-properties">
-
-    <dt class="property-optional"
+<dl class="resources-properties"><dt class="property-optional"
             title="Optional">
         <span id="allowedvalues_nodejs">
 <a href="#allowedvalues_nodejs" style="color: inherit; text-decoration: inherit;">allowed<wbr>Values</a>
@@ -608,8 +534,7 @@ The following output properties are available:
         <span class="property-indicator"></span>
         <span class="property-type">any[]</span>
     </dt>
-    <dd>{{% md %}}The allowed values for the parameter.{{% /md %}}</dd>
-    <dt class="property-optional"
+    <dd>{{% md %}}The allowed values for the parameter.{{% /md %}}</dd><dt class="property-optional"
             title="Optional">
         <span id="defaultvalue_nodejs">
 <a href="#defaultvalue_nodejs" style="color: inherit; text-decoration: inherit;">default<wbr>Value</a>
@@ -617,8 +542,7 @@ The following output properties are available:
         <span class="property-indicator"></span>
         <span class="property-type">any</span>
     </dt>
-    <dd>{{% md %}}The default value for the parameter if no value is provided.{{% /md %}}</dd>
-    <dt class="property-optional"
+    <dd>{{% md %}}The default value for the parameter if no value is provided.{{% /md %}}</dd><dt class="property-optional"
             title="Optional">
         <span id="metadata_nodejs">
 <a href="#metadata_nodejs" style="color: inherit; text-decoration: inherit;">metadata</a>
@@ -626,8 +550,7 @@ The following output properties are available:
         <span class="property-indicator"></span>
         <span class="property-type"><a href="#parameterdefinitionsvalueresponsemetadata">Parameter<wbr>Definitions<wbr>Value<wbr>Response<wbr>Metadata</a></span>
     </dt>
-    <dd>{{% md %}}General metadata for the parameter.{{% /md %}}</dd>
-    <dt class="property-optional"
+    <dd>{{% md %}}General metadata for the parameter.{{% /md %}}</dd><dt class="property-optional"
             title="Optional">
         <span id="type_nodejs">
 <a href="#type_nodejs" style="color: inherit; text-decoration: inherit;">type</a>
@@ -635,14 +558,11 @@ The following output properties are available:
         <span class="property-indicator"></span>
         <span class="property-type">string</span>
     </dt>
-    <dd>{{% md %}}The data type of the parameter.{{% /md %}}</dd>
-</dl>
+    <dd>{{% md %}}The data type of the parameter.{{% /md %}}</dd></dl>
 {{% /choosable %}}
 
 {{% choosable language python %}}
-<dl class="resources-properties">
-
-    <dt class="property-optional"
+<dl class="resources-properties"><dt class="property-optional"
             title="Optional">
         <span id="allowed_values_python">
 <a href="#allowed_values_python" style="color: inherit; text-decoration: inherit;">allowed_<wbr>values</a>
@@ -650,8 +570,7 @@ The following output properties are available:
         <span class="property-indicator"></span>
         <span class="property-type">Sequence[Any]</span>
     </dt>
-    <dd>{{% md %}}The allowed values for the parameter.{{% /md %}}</dd>
-    <dt class="property-optional"
+    <dd>{{% md %}}The allowed values for the parameter.{{% /md %}}</dd><dt class="property-optional"
             title="Optional">
         <span id="default_value_python">
 <a href="#default_value_python" style="color: inherit; text-decoration: inherit;">default_<wbr>value</a>
@@ -659,8 +578,7 @@ The following output properties are available:
         <span class="property-indicator"></span>
         <span class="property-type">Any</span>
     </dt>
-    <dd>{{% md %}}The default value for the parameter if no value is provided.{{% /md %}}</dd>
-    <dt class="property-optional"
+    <dd>{{% md %}}The default value for the parameter if no value is provided.{{% /md %}}</dd><dt class="property-optional"
             title="Optional">
         <span id="metadata_python">
 <a href="#metadata_python" style="color: inherit; text-decoration: inherit;">metadata</a>
@@ -668,8 +586,7 @@ The following output properties are available:
         <span class="property-indicator"></span>
         <span class="property-type"><a href="#parameterdefinitionsvalueresponsemetadata">Parameter<wbr>Definitions<wbr>Value<wbr>Response<wbr>Metadata<wbr>Args</a></span>
     </dt>
-    <dd>{{% md %}}General metadata for the parameter.{{% /md %}}</dd>
-    <dt class="property-optional"
+    <dd>{{% md %}}General metadata for the parameter.{{% /md %}}</dd><dt class="property-optional"
             title="Optional">
         <span id="type_python">
 <a href="#type_python" style="color: inherit; text-decoration: inherit;">type</a>
@@ -677,8 +594,7 @@ The following output properties are available:
         <span class="property-indicator"></span>
         <span class="property-type">str</span>
     </dt>
-    <dd>{{% md %}}The data type of the parameter.{{% /md %}}</dd>
-</dl>
+    <dd>{{% md %}}The data type of the parameter.{{% /md %}}</dd></dl>
 {{% /choosable %}}
 
 <h4 id="parameterdefinitionsvalueresponsemetadata">Parameter<wbr>Definitions<wbr>Value<wbr>Response<wbr>Metadata</h4>
@@ -686,9 +602,7 @@ The following output properties are available:
 
 
 {{% choosable language csharp %}}
-<dl class="resources-properties">
-
-    <dt class="property-optional"
+<dl class="resources-properties"><dt class="property-optional"
             title="Optional">
         <span id="assignpermissions_csharp">
 <a href="#assignpermissions_csharp" style="color: inherit; text-decoration: inherit;">Assign<wbr>Permissions</a>
@@ -696,8 +610,7 @@ The following output properties are available:
         <span class="property-indicator"></span>
         <span class="property-type">bool</span>
     </dt>
-    <dd>{{% md %}}Set to true to have Azure portal create role assignments on the resource ID or resource scope value of this parameter during policy assignment. This property is useful in case you wish to assign permissions outside the assignment scope.{{% /md %}}</dd>
-    <dt class="property-optional"
+    <dd>{{% md %}}Set to true to have Azure portal create role assignments on the resource ID or resource scope value of this parameter during policy assignment. This property is useful in case you wish to assign permissions outside the assignment scope.{{% /md %}}</dd><dt class="property-optional"
             title="Optional">
         <span id="description_csharp">
 <a href="#description_csharp" style="color: inherit; text-decoration: inherit;">Description</a>
@@ -705,8 +618,7 @@ The following output properties are available:
         <span class="property-indicator"></span>
         <span class="property-type">string</span>
     </dt>
-    <dd>{{% md %}}The description of the parameter.{{% /md %}}</dd>
-    <dt class="property-optional"
+    <dd>{{% md %}}The description of the parameter.{{% /md %}}</dd><dt class="property-optional"
             title="Optional">
         <span id="displayname_csharp">
 <a href="#displayname_csharp" style="color: inherit; text-decoration: inherit;">Display<wbr>Name</a>
@@ -714,8 +626,7 @@ The following output properties are available:
         <span class="property-indicator"></span>
         <span class="property-type">string</span>
     </dt>
-    <dd>{{% md %}}The display name for the parameter.{{% /md %}}</dd>
-    <dt class="property-optional"
+    <dd>{{% md %}}The display name for the parameter.{{% /md %}}</dd><dt class="property-optional"
             title="Optional">
         <span id="strongtype_csharp">
 <a href="#strongtype_csharp" style="color: inherit; text-decoration: inherit;">Strong<wbr>Type</a>
@@ -723,14 +634,11 @@ The following output properties are available:
         <span class="property-indicator"></span>
         <span class="property-type">string</span>
     </dt>
-    <dd>{{% md %}}Used when assigning the policy definition through the portal. Provides a context aware list of values for the user to choose from.{{% /md %}}</dd>
-</dl>
+    <dd>{{% md %}}Used when assigning the policy definition through the portal. Provides a context aware list of values for the user to choose from.{{% /md %}}</dd></dl>
 {{% /choosable %}}
 
 {{% choosable language go %}}
-<dl class="resources-properties">
-
-    <dt class="property-optional"
+<dl class="resources-properties"><dt class="property-optional"
             title="Optional">
         <span id="assignpermissions_go">
 <a href="#assignpermissions_go" style="color: inherit; text-decoration: inherit;">Assign<wbr>Permissions</a>
@@ -738,8 +646,7 @@ The following output properties are available:
         <span class="property-indicator"></span>
         <span class="property-type">bool</span>
     </dt>
-    <dd>{{% md %}}Set to true to have Azure portal create role assignments on the resource ID or resource scope value of this parameter during policy assignment. This property is useful in case you wish to assign permissions outside the assignment scope.{{% /md %}}</dd>
-    <dt class="property-optional"
+    <dd>{{% md %}}Set to true to have Azure portal create role assignments on the resource ID or resource scope value of this parameter during policy assignment. This property is useful in case you wish to assign permissions outside the assignment scope.{{% /md %}}</dd><dt class="property-optional"
             title="Optional">
         <span id="description_go">
 <a href="#description_go" style="color: inherit; text-decoration: inherit;">Description</a>
@@ -747,8 +654,7 @@ The following output properties are available:
         <span class="property-indicator"></span>
         <span class="property-type">string</span>
     </dt>
-    <dd>{{% md %}}The description of the parameter.{{% /md %}}</dd>
-    <dt class="property-optional"
+    <dd>{{% md %}}The description of the parameter.{{% /md %}}</dd><dt class="property-optional"
             title="Optional">
         <span id="displayname_go">
 <a href="#displayname_go" style="color: inherit; text-decoration: inherit;">Display<wbr>Name</a>
@@ -756,8 +662,7 @@ The following output properties are available:
         <span class="property-indicator"></span>
         <span class="property-type">string</span>
     </dt>
-    <dd>{{% md %}}The display name for the parameter.{{% /md %}}</dd>
-    <dt class="property-optional"
+    <dd>{{% md %}}The display name for the parameter.{{% /md %}}</dd><dt class="property-optional"
             title="Optional">
         <span id="strongtype_go">
 <a href="#strongtype_go" style="color: inherit; text-decoration: inherit;">Strong<wbr>Type</a>
@@ -765,14 +670,11 @@ The following output properties are available:
         <span class="property-indicator"></span>
         <span class="property-type">string</span>
     </dt>
-    <dd>{{% md %}}Used when assigning the policy definition through the portal. Provides a context aware list of values for the user to choose from.{{% /md %}}</dd>
-</dl>
+    <dd>{{% md %}}Used when assigning the policy definition through the portal. Provides a context aware list of values for the user to choose from.{{% /md %}}</dd></dl>
 {{% /choosable %}}
 
 {{% choosable language nodejs %}}
-<dl class="resources-properties">
-
-    <dt class="property-optional"
+<dl class="resources-properties"><dt class="property-optional"
             title="Optional">
         <span id="assignpermissions_nodejs">
 <a href="#assignpermissions_nodejs" style="color: inherit; text-decoration: inherit;">assign<wbr>Permissions</a>
@@ -780,8 +682,7 @@ The following output properties are available:
         <span class="property-indicator"></span>
         <span class="property-type">boolean</span>
     </dt>
-    <dd>{{% md %}}Set to true to have Azure portal create role assignments on the resource ID or resource scope value of this parameter during policy assignment. This property is useful in case you wish to assign permissions outside the assignment scope.{{% /md %}}</dd>
-    <dt class="property-optional"
+    <dd>{{% md %}}Set to true to have Azure portal create role assignments on the resource ID or resource scope value of this parameter during policy assignment. This property is useful in case you wish to assign permissions outside the assignment scope.{{% /md %}}</dd><dt class="property-optional"
             title="Optional">
         <span id="description_nodejs">
 <a href="#description_nodejs" style="color: inherit; text-decoration: inherit;">description</a>
@@ -789,8 +690,7 @@ The following output properties are available:
         <span class="property-indicator"></span>
         <span class="property-type">string</span>
     </dt>
-    <dd>{{% md %}}The description of the parameter.{{% /md %}}</dd>
-    <dt class="property-optional"
+    <dd>{{% md %}}The description of the parameter.{{% /md %}}</dd><dt class="property-optional"
             title="Optional">
         <span id="displayname_nodejs">
 <a href="#displayname_nodejs" style="color: inherit; text-decoration: inherit;">display<wbr>Name</a>
@@ -798,8 +698,7 @@ The following output properties are available:
         <span class="property-indicator"></span>
         <span class="property-type">string</span>
     </dt>
-    <dd>{{% md %}}The display name for the parameter.{{% /md %}}</dd>
-    <dt class="property-optional"
+    <dd>{{% md %}}The display name for the parameter.{{% /md %}}</dd><dt class="property-optional"
             title="Optional">
         <span id="strongtype_nodejs">
 <a href="#strongtype_nodejs" style="color: inherit; text-decoration: inherit;">strong<wbr>Type</a>
@@ -807,14 +706,11 @@ The following output properties are available:
         <span class="property-indicator"></span>
         <span class="property-type">string</span>
     </dt>
-    <dd>{{% md %}}Used when assigning the policy definition through the portal. Provides a context aware list of values for the user to choose from.{{% /md %}}</dd>
-</dl>
+    <dd>{{% md %}}Used when assigning the policy definition through the portal. Provides a context aware list of values for the user to choose from.{{% /md %}}</dd></dl>
 {{% /choosable %}}
 
 {{% choosable language python %}}
-<dl class="resources-properties">
-
-    <dt class="property-optional"
+<dl class="resources-properties"><dt class="property-optional"
             title="Optional">
         <span id="assign_permissions_python">
 <a href="#assign_permissions_python" style="color: inherit; text-decoration: inherit;">assign_<wbr>permissions</a>
@@ -822,8 +718,7 @@ The following output properties are available:
         <span class="property-indicator"></span>
         <span class="property-type">bool</span>
     </dt>
-    <dd>{{% md %}}Set to true to have Azure portal create role assignments on the resource ID or resource scope value of this parameter during policy assignment. This property is useful in case you wish to assign permissions outside the assignment scope.{{% /md %}}</dd>
-    <dt class="property-optional"
+    <dd>{{% md %}}Set to true to have Azure portal create role assignments on the resource ID or resource scope value of this parameter during policy assignment. This property is useful in case you wish to assign permissions outside the assignment scope.{{% /md %}}</dd><dt class="property-optional"
             title="Optional">
         <span id="description_python">
 <a href="#description_python" style="color: inherit; text-decoration: inherit;">description</a>
@@ -831,8 +726,7 @@ The following output properties are available:
         <span class="property-indicator"></span>
         <span class="property-type">str</span>
     </dt>
-    <dd>{{% md %}}The description of the parameter.{{% /md %}}</dd>
-    <dt class="property-optional"
+    <dd>{{% md %}}The description of the parameter.{{% /md %}}</dd><dt class="property-optional"
             title="Optional">
         <span id="display_name_python">
 <a href="#display_name_python" style="color: inherit; text-decoration: inherit;">display_<wbr>name</a>
@@ -840,8 +734,7 @@ The following output properties are available:
         <span class="property-indicator"></span>
         <span class="property-type">str</span>
     </dt>
-    <dd>{{% md %}}The display name for the parameter.{{% /md %}}</dd>
-    <dt class="property-optional"
+    <dd>{{% md %}}The display name for the parameter.{{% /md %}}</dd><dt class="property-optional"
             title="Optional">
         <span id="strong_type_python">
 <a href="#strong_type_python" style="color: inherit; text-decoration: inherit;">strong_<wbr>type</a>
@@ -849,8 +742,7 @@ The following output properties are available:
         <span class="property-indicator"></span>
         <span class="property-type">str</span>
     </dt>
-    <dd>{{% md %}}Used when assigning the policy definition through the portal. Provides a context aware list of values for the user to choose from.{{% /md %}}</dd>
-</dl>
+    <dd>{{% md %}}Used when assigning the policy definition through the portal. Provides a context aware list of values for the user to choose from.{{% /md %}}</dd></dl>
 {{% /choosable %}}
 
 

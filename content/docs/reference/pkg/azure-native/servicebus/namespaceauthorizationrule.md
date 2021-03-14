@@ -14,11 +14,17 @@ Description of a namespace authorization rule.
 API Version: 2017-04-01.
 
 {{% examples %}}
+
 ## Example Usage
 
 {{< chooser language "typescript,python,go,csharp" / >}}
+
+
 ### NameSpaceAuthorizationRuleCreate
-{{% example csharp %}}
+
+
+{{< example csharp >}}
+
 ```csharp
 using Pulumi;
 using AzureNative = Pulumi.AzureNative;
@@ -44,13 +50,19 @@ class MyStack : Stack
 
 ```
 
-{{% /example %}}
 
-{{% example go %}}
+{{< /example >}}
+
+
+{{< example go >}}
+
 Coming soon!
-{{% /example %}}
 
-{{% example python %}}
+{{< /example >}}
+
+
+{{< example python >}}
+
 
 ```python
 import pulumi
@@ -67,9 +79,12 @@ namespace_authorization_rule = azure_native.servicebus.NamespaceAuthorizationRul
 
 ```
 
-{{% /example %}}
 
-{{% example typescript %}}
+{{< /example >}}
+
+
+{{< example typescript >}}
+
 
 ```typescript
 import * as pulumi from "@pulumi/pulumi";
@@ -87,9 +102,16 @@ const namespaceAuthorizationRule = new azure_native.servicebus.NamespaceAuthoriz
 
 ```
 
-{{% /example %}}
+
+{{< /example >}}
+
+
+
+
 
 {{% /examples %}}
+
+
 
 
 ## Create a NamespaceAuthorizationRule Resource {#create}
@@ -114,9 +136,7 @@ const namespaceAuthorizationRule = new azure_native.servicebus.NamespaceAuthoriz
 
 {{% choosable language nodejs %}}
 
-<dl class="resources-properties">
-  
-    <dt
+<dl class="resources-properties"><dt
         class="property-required" title="Required">
         <span>name</span>
         <span class="property-indicator"></span>
@@ -124,9 +144,7 @@ const namespaceAuthorizationRule = new azure_native.servicebus.NamespaceAuthoriz
     </dt>
     <dd>
       The unique name of the resource.
-    </dd>
-  
-    <dt
+    </dd><dt
         class="property-required" title="Required">
         <span>args</span>
         <span class="property-indicator"></span>
@@ -134,9 +152,7 @@ const namespaceAuthorizationRule = new azure_native.servicebus.NamespaceAuthoriz
     </dt>
     <dd>
       The arguments to resource properties.
-    </dd>
-  
-    <dt
+    </dd><dt
         class="property-optional" title="Optional">
         <span>opts</span>
         <span class="property-indicator"></span>
@@ -144,10 +160,7 @@ const namespaceAuthorizationRule = new azure_native.servicebus.NamespaceAuthoriz
     </dt>
     <dd>
       Bag of options to control resource&#39;s behavior.
-    </dd>
-  
-
-</dl>
+    </dd></dl>
 
 {{% /choosable %}}
 
@@ -173,9 +186,7 @@ const namespaceAuthorizationRule = new azure_native.servicebus.NamespaceAuthoriz
 
 {{% choosable language go %}}
 
-<dl class="resources-properties">
-  
-    <dt
+<dl class="resources-properties"><dt
         class="property-optional" title="Optional">
         <span>ctx</span>
         <span class="property-indicator"></span>
@@ -183,9 +194,7 @@ const namespaceAuthorizationRule = new azure_native.servicebus.NamespaceAuthoriz
     </dt>
     <dd>
       Context object for the current deployment.
-    </dd>
-  
-    <dt
+    </dd><dt
         class="property-required" title="Required">
         <span>name</span>
         <span class="property-indicator"></span>
@@ -193,9 +202,7 @@ const namespaceAuthorizationRule = new azure_native.servicebus.NamespaceAuthoriz
     </dt>
     <dd>
       The unique name of the resource.
-    </dd>
-  
-    <dt
+    </dd><dt
         class="property-required" title="Required">
         <span>args</span>
         <span class="property-indicator"></span>
@@ -203,9 +210,7 @@ const namespaceAuthorizationRule = new azure_native.servicebus.NamespaceAuthoriz
     </dt>
     <dd>
       The arguments to resource properties.
-    </dd>
-  
-    <dt
+    </dd><dt
         class="property-optional" title="Optional">
         <span>opts</span>
         <span class="property-indicator"></span>
@@ -213,18 +218,13 @@ const namespaceAuthorizationRule = new azure_native.servicebus.NamespaceAuthoriz
     </dt>
     <dd>
       Bag of options to control resource&#39;s behavior.
-    </dd>
-  
-
-</dl>
+    </dd></dl>
 
 {{% /choosable %}}
 
 {{% choosable language csharp %}}
 
-<dl class="resources-properties">
-  
-    <dt
+<dl class="resources-properties"><dt
         class="property-required" title="Required">
         <span>name</span>
         <span class="property-indicator"></span>
@@ -232,9 +232,7 @@ const namespaceAuthorizationRule = new azure_native.servicebus.NamespaceAuthoriz
     </dt>
     <dd>
       The unique name of the resource.
-    </dd>
-  
-    <dt
+    </dd><dt
         class="property-required" title="Required">
         <span>args</span>
         <span class="property-indicator"></span>
@@ -242,9 +240,7 @@ const namespaceAuthorizationRule = new azure_native.servicebus.NamespaceAuthoriz
     </dt>
     <dd>
       The arguments to resource properties.
-    </dd>
-  
-    <dt
+    </dd><dt
         class="property-optional" title="Optional">
         <span>opts</span>
         <span class="property-indicator"></span>
@@ -252,10 +248,7 @@ const namespaceAuthorizationRule = new azure_native.servicebus.NamespaceAuthoriz
     </dt>
     <dd>
       Bag of options to control resource&#39;s behavior.
-    </dd>
-  
-
-</dl>
+    </dd></dl>
 
 {{% /choosable %}}
 
@@ -270,9 +263,7 @@ The NamespaceAuthorizationRule resource accepts the following [input]({{< relref
 
 
 {{% choosable language csharp %}}
-<dl class="resources-properties">
-
-    <dt class="property-required"
+<dl class="resources-properties"><dt class="property-required"
             title="Required">
         <span id="namespacename_csharp">
 <a href="#namespacename_csharp" style="color: inherit; text-decoration: inherit;">Namespace<wbr>Name</a>
@@ -280,8 +271,7 @@ The NamespaceAuthorizationRule resource accepts the following [input]({{< relref
         <span class="property-indicator"></span>
         <span class="property-type">string</span>
     </dt>
-    <dd>{{% md %}}The namespace name{{% /md %}}</dd>
-    <dt class="property-required"
+    <dd>{{% md %}}The namespace name{{% /md %}}</dd><dt class="property-required"
             title="Required">
         <span id="resourcegroupname_csharp">
 <a href="#resourcegroupname_csharp" style="color: inherit; text-decoration: inherit;">Resource<wbr>Group<wbr>Name</a>
@@ -289,8 +279,7 @@ The NamespaceAuthorizationRule resource accepts the following [input]({{< relref
         <span class="property-indicator"></span>
         <span class="property-type">string</span>
     </dt>
-    <dd>{{% md %}}Name of the Resource group within the Azure subscription.{{% /md %}}</dd>
-    <dt class="property-required"
+    <dd>{{% md %}}Name of the Resource group within the Azure subscription.{{% /md %}}</dd><dt class="property-required"
             title="Required">
         <span id="rights_csharp">
 <a href="#rights_csharp" style="color: inherit; text-decoration: inherit;">Rights</a>
@@ -298,8 +287,7 @@ The NamespaceAuthorizationRule resource accepts the following [input]({{< relref
         <span class="property-indicator"></span>
         <span class="property-type"><a href="#accessrights">List&lt;Pulumi.<wbr>Azure<wbr>Native.<wbr>Service<wbr>Bus.<wbr>Access<wbr>Rights&gt;</a></span>
     </dt>
-    <dd>{{% md %}}The rights associated with the rule.{{% /md %}}</dd>
-    <dt class="property-optional"
+    <dd>{{% md %}}The rights associated with the rule.{{% /md %}}</dd><dt class="property-optional"
             title="Optional">
         <span id="authorizationrulename_csharp">
 <a href="#authorizationrulename_csharp" style="color: inherit; text-decoration: inherit;">Authorization<wbr>Rule<wbr>Name</a>
@@ -307,14 +295,11 @@ The NamespaceAuthorizationRule resource accepts the following [input]({{< relref
         <span class="property-indicator"></span>
         <span class="property-type">string</span>
     </dt>
-    <dd>{{% md %}}The authorization rule name.{{% /md %}}</dd>
-</dl>
+    <dd>{{% md %}}The authorization rule name.{{% /md %}}</dd></dl>
 {{% /choosable %}}
 
 {{% choosable language go %}}
-<dl class="resources-properties">
-
-    <dt class="property-required"
+<dl class="resources-properties"><dt class="property-required"
             title="Required">
         <span id="namespacename_go">
 <a href="#namespacename_go" style="color: inherit; text-decoration: inherit;">Namespace<wbr>Name</a>
@@ -322,8 +307,7 @@ The NamespaceAuthorizationRule resource accepts the following [input]({{< relref
         <span class="property-indicator"></span>
         <span class="property-type">string</span>
     </dt>
-    <dd>{{% md %}}The namespace name{{% /md %}}</dd>
-    <dt class="property-required"
+    <dd>{{% md %}}The namespace name{{% /md %}}</dd><dt class="property-required"
             title="Required">
         <span id="resourcegroupname_go">
 <a href="#resourcegroupname_go" style="color: inherit; text-decoration: inherit;">Resource<wbr>Group<wbr>Name</a>
@@ -331,8 +315,7 @@ The NamespaceAuthorizationRule resource accepts the following [input]({{< relref
         <span class="property-indicator"></span>
         <span class="property-type">string</span>
     </dt>
-    <dd>{{% md %}}Name of the Resource group within the Azure subscription.{{% /md %}}</dd>
-    <dt class="property-required"
+    <dd>{{% md %}}Name of the Resource group within the Azure subscription.{{% /md %}}</dd><dt class="property-required"
             title="Required">
         <span id="rights_go">
 <a href="#rights_go" style="color: inherit; text-decoration: inherit;">Rights</a>
@@ -340,8 +323,7 @@ The NamespaceAuthorizationRule resource accepts the following [input]({{< relref
         <span class="property-indicator"></span>
         <span class="property-type"><a href="#accessrights">[]string</a></span>
     </dt>
-    <dd>{{% md %}}The rights associated with the rule.{{% /md %}}</dd>
-    <dt class="property-optional"
+    <dd>{{% md %}}The rights associated with the rule.{{% /md %}}</dd><dt class="property-optional"
             title="Optional">
         <span id="authorizationrulename_go">
 <a href="#authorizationrulename_go" style="color: inherit; text-decoration: inherit;">Authorization<wbr>Rule<wbr>Name</a>
@@ -349,14 +331,11 @@ The NamespaceAuthorizationRule resource accepts the following [input]({{< relref
         <span class="property-indicator"></span>
         <span class="property-type">string</span>
     </dt>
-    <dd>{{% md %}}The authorization rule name.{{% /md %}}</dd>
-</dl>
+    <dd>{{% md %}}The authorization rule name.{{% /md %}}</dd></dl>
 {{% /choosable %}}
 
 {{% choosable language nodejs %}}
-<dl class="resources-properties">
-
-    <dt class="property-required"
+<dl class="resources-properties"><dt class="property-required"
             title="Required">
         <span id="namespacename_nodejs">
 <a href="#namespacename_nodejs" style="color: inherit; text-decoration: inherit;">namespace<wbr>Name</a>
@@ -364,8 +343,7 @@ The NamespaceAuthorizationRule resource accepts the following [input]({{< relref
         <span class="property-indicator"></span>
         <span class="property-type">string</span>
     </dt>
-    <dd>{{% md %}}The namespace name{{% /md %}}</dd>
-    <dt class="property-required"
+    <dd>{{% md %}}The namespace name{{% /md %}}</dd><dt class="property-required"
             title="Required">
         <span id="resourcegroupname_nodejs">
 <a href="#resourcegroupname_nodejs" style="color: inherit; text-decoration: inherit;">resource<wbr>Group<wbr>Name</a>
@@ -373,8 +351,7 @@ The NamespaceAuthorizationRule resource accepts the following [input]({{< relref
         <span class="property-indicator"></span>
         <span class="property-type">string</span>
     </dt>
-    <dd>{{% md %}}Name of the Resource group within the Azure subscription.{{% /md %}}</dd>
-    <dt class="property-required"
+    <dd>{{% md %}}Name of the Resource group within the Azure subscription.{{% /md %}}</dd><dt class="property-required"
             title="Required">
         <span id="rights_nodejs">
 <a href="#rights_nodejs" style="color: inherit; text-decoration: inherit;">rights</a>
@@ -382,8 +359,7 @@ The NamespaceAuthorizationRule resource accepts the following [input]({{< relref
         <span class="property-indicator"></span>
         <span class="property-type"><a href="#accessrights">Access<wbr>Rights[]</a></span>
     </dt>
-    <dd>{{% md %}}The rights associated with the rule.{{% /md %}}</dd>
-    <dt class="property-optional"
+    <dd>{{% md %}}The rights associated with the rule.{{% /md %}}</dd><dt class="property-optional"
             title="Optional">
         <span id="authorizationrulename_nodejs">
 <a href="#authorizationrulename_nodejs" style="color: inherit; text-decoration: inherit;">authorization<wbr>Rule<wbr>Name</a>
@@ -391,14 +367,11 @@ The NamespaceAuthorizationRule resource accepts the following [input]({{< relref
         <span class="property-indicator"></span>
         <span class="property-type">string</span>
     </dt>
-    <dd>{{% md %}}The authorization rule name.{{% /md %}}</dd>
-</dl>
+    <dd>{{% md %}}The authorization rule name.{{% /md %}}</dd></dl>
 {{% /choosable %}}
 
 {{% choosable language python %}}
-<dl class="resources-properties">
-
-    <dt class="property-required"
+<dl class="resources-properties"><dt class="property-required"
             title="Required">
         <span id="namespace_name_python">
 <a href="#namespace_name_python" style="color: inherit; text-decoration: inherit;">namespace_<wbr>name</a>
@@ -406,8 +379,7 @@ The NamespaceAuthorizationRule resource accepts the following [input]({{< relref
         <span class="property-indicator"></span>
         <span class="property-type">str</span>
     </dt>
-    <dd>{{% md %}}The namespace name{{% /md %}}</dd>
-    <dt class="property-required"
+    <dd>{{% md %}}The namespace name{{% /md %}}</dd><dt class="property-required"
             title="Required">
         <span id="resource_group_name_python">
 <a href="#resource_group_name_python" style="color: inherit; text-decoration: inherit;">resource_<wbr>group_<wbr>name</a>
@@ -415,8 +387,7 @@ The NamespaceAuthorizationRule resource accepts the following [input]({{< relref
         <span class="property-indicator"></span>
         <span class="property-type">str</span>
     </dt>
-    <dd>{{% md %}}Name of the Resource group within the Azure subscription.{{% /md %}}</dd>
-    <dt class="property-required"
+    <dd>{{% md %}}Name of the Resource group within the Azure subscription.{{% /md %}}</dd><dt class="property-required"
             title="Required">
         <span id="rights_python">
 <a href="#rights_python" style="color: inherit; text-decoration: inherit;">rights</a>
@@ -424,8 +395,7 @@ The NamespaceAuthorizationRule resource accepts the following [input]({{< relref
         <span class="property-indicator"></span>
         <span class="property-type"><a href="#accessrights">Sequence[Access<wbr>Rights]</a></span>
     </dt>
-    <dd>{{% md %}}The rights associated with the rule.{{% /md %}}</dd>
-    <dt class="property-optional"
+    <dd>{{% md %}}The rights associated with the rule.{{% /md %}}</dd><dt class="property-optional"
             title="Optional">
         <span id="authorization_rule_name_python">
 <a href="#authorization_rule_name_python" style="color: inherit; text-decoration: inherit;">authorization_<wbr>rule_<wbr>name</a>
@@ -433,8 +403,7 @@ The NamespaceAuthorizationRule resource accepts the following [input]({{< relref
         <span class="property-indicator"></span>
         <span class="property-type">str</span>
     </dt>
-    <dd>{{% md %}}The authorization rule name.{{% /md %}}</dd>
-</dl>
+    <dd>{{% md %}}The authorization rule name.{{% /md %}}</dd></dl>
 {{% /choosable %}}
 
 
@@ -445,9 +414,7 @@ All [input](#inputs) properties are implicitly available as output properties. A
 
 
 {{% choosable language csharp %}}
-<dl class="resources-properties">
-
-    <dt class="property-"
+<dl class="resources-properties"><dt class="property-"
             title="">
         <span id="id_csharp">
 <a href="#id_csharp" style="color: inherit; text-decoration: inherit;">Id</a>
@@ -455,8 +422,7 @@ All [input](#inputs) properties are implicitly available as output properties. A
         <span class="property-indicator"></span>
         <span class="property-type">string</span>
     </dt>
-    <dd>{{% md %}}The provider-assigned unique ID for this managed resource.{{% /md %}}</dd>
-    <dt class="property-"
+    <dd>{{% md %}}The provider-assigned unique ID for this managed resource.{{% /md %}}</dd><dt class="property-"
             title="">
         <span id="name_csharp">
 <a href="#name_csharp" style="color: inherit; text-decoration: inherit;">Name</a>
@@ -464,8 +430,7 @@ All [input](#inputs) properties are implicitly available as output properties. A
         <span class="property-indicator"></span>
         <span class="property-type">string</span>
     </dt>
-    <dd>{{% md %}}Resource name{{% /md %}}</dd>
-    <dt class="property-"
+    <dd>{{% md %}}Resource name{{% /md %}}</dd><dt class="property-"
             title="">
         <span id="type_csharp">
 <a href="#type_csharp" style="color: inherit; text-decoration: inherit;">Type</a>
@@ -473,14 +438,11 @@ All [input](#inputs) properties are implicitly available as output properties. A
         <span class="property-indicator"></span>
         <span class="property-type">string</span>
     </dt>
-    <dd>{{% md %}}Resource type{{% /md %}}</dd>
-</dl>
+    <dd>{{% md %}}Resource type{{% /md %}}</dd></dl>
 {{% /choosable %}}
 
 {{% choosable language go %}}
-<dl class="resources-properties">
-
-    <dt class="property-"
+<dl class="resources-properties"><dt class="property-"
             title="">
         <span id="id_go">
 <a href="#id_go" style="color: inherit; text-decoration: inherit;">Id</a>
@@ -488,8 +450,7 @@ All [input](#inputs) properties are implicitly available as output properties. A
         <span class="property-indicator"></span>
         <span class="property-type">string</span>
     </dt>
-    <dd>{{% md %}}The provider-assigned unique ID for this managed resource.{{% /md %}}</dd>
-    <dt class="property-"
+    <dd>{{% md %}}The provider-assigned unique ID for this managed resource.{{% /md %}}</dd><dt class="property-"
             title="">
         <span id="name_go">
 <a href="#name_go" style="color: inherit; text-decoration: inherit;">Name</a>
@@ -497,8 +458,7 @@ All [input](#inputs) properties are implicitly available as output properties. A
         <span class="property-indicator"></span>
         <span class="property-type">string</span>
     </dt>
-    <dd>{{% md %}}Resource name{{% /md %}}</dd>
-    <dt class="property-"
+    <dd>{{% md %}}Resource name{{% /md %}}</dd><dt class="property-"
             title="">
         <span id="type_go">
 <a href="#type_go" style="color: inherit; text-decoration: inherit;">Type</a>
@@ -506,14 +466,11 @@ All [input](#inputs) properties are implicitly available as output properties. A
         <span class="property-indicator"></span>
         <span class="property-type">string</span>
     </dt>
-    <dd>{{% md %}}Resource type{{% /md %}}</dd>
-</dl>
+    <dd>{{% md %}}Resource type{{% /md %}}</dd></dl>
 {{% /choosable %}}
 
 {{% choosable language nodejs %}}
-<dl class="resources-properties">
-
-    <dt class="property-"
+<dl class="resources-properties"><dt class="property-"
             title="">
         <span id="id_nodejs">
 <a href="#id_nodejs" style="color: inherit; text-decoration: inherit;">id</a>
@@ -521,8 +478,7 @@ All [input](#inputs) properties are implicitly available as output properties. A
         <span class="property-indicator"></span>
         <span class="property-type">string</span>
     </dt>
-    <dd>{{% md %}}The provider-assigned unique ID for this managed resource.{{% /md %}}</dd>
-    <dt class="property-"
+    <dd>{{% md %}}The provider-assigned unique ID for this managed resource.{{% /md %}}</dd><dt class="property-"
             title="">
         <span id="name_nodejs">
 <a href="#name_nodejs" style="color: inherit; text-decoration: inherit;">name</a>
@@ -530,8 +486,7 @@ All [input](#inputs) properties are implicitly available as output properties. A
         <span class="property-indicator"></span>
         <span class="property-type">string</span>
     </dt>
-    <dd>{{% md %}}Resource name{{% /md %}}</dd>
-    <dt class="property-"
+    <dd>{{% md %}}Resource name{{% /md %}}</dd><dt class="property-"
             title="">
         <span id="type_nodejs">
 <a href="#type_nodejs" style="color: inherit; text-decoration: inherit;">type</a>
@@ -539,14 +494,11 @@ All [input](#inputs) properties are implicitly available as output properties. A
         <span class="property-indicator"></span>
         <span class="property-type">string</span>
     </dt>
-    <dd>{{% md %}}Resource type{{% /md %}}</dd>
-</dl>
+    <dd>{{% md %}}Resource type{{% /md %}}</dd></dl>
 {{% /choosable %}}
 
 {{% choosable language python %}}
-<dl class="resources-properties">
-
-    <dt class="property-"
+<dl class="resources-properties"><dt class="property-"
             title="">
         <span id="id_python">
 <a href="#id_python" style="color: inherit; text-decoration: inherit;">id</a>
@@ -554,8 +506,7 @@ All [input](#inputs) properties are implicitly available as output properties. A
         <span class="property-indicator"></span>
         <span class="property-type">str</span>
     </dt>
-    <dd>{{% md %}}The provider-assigned unique ID for this managed resource.{{% /md %}}</dd>
-    <dt class="property-"
+    <dd>{{% md %}}The provider-assigned unique ID for this managed resource.{{% /md %}}</dd><dt class="property-"
             title="">
         <span id="name_python">
 <a href="#name_python" style="color: inherit; text-decoration: inherit;">name</a>
@@ -563,8 +514,7 @@ All [input](#inputs) properties are implicitly available as output properties. A
         <span class="property-indicator"></span>
         <span class="property-type">str</span>
     </dt>
-    <dd>{{% md %}}Resource name{{% /md %}}</dd>
-    <dt class="property-"
+    <dd>{{% md %}}Resource name{{% /md %}}</dd><dt class="property-"
             title="">
         <span id="type_python">
 <a href="#type_python" style="color: inherit; text-decoration: inherit;">type</a>
@@ -572,8 +522,7 @@ All [input](#inputs) properties are implicitly available as output properties. A
         <span class="property-indicator"></span>
         <span class="property-type">str</span>
     </dt>
-    <dd>{{% md %}}Resource type{{% /md %}}</dd>
-</dl>
+    <dd>{{% md %}}Resource type{{% /md %}}</dd></dl>
 {{% /choosable %}}
 
 
@@ -589,47 +538,31 @@ All [input](#inputs) properties are implicitly available as output properties. A
 <h4 id="accessrights">Access<wbr>Rights</h4>
 
 {{% choosable language csharp %}}
-<dl class="tabular">
-    <dt>Manage</dt>
-    <dd>Manage</dd>
-    <dt>Send</dt>
-    <dd>Send</dd>
-    <dt>Listen</dt>
-    <dd>Listen</dd>
-</dl>
+<dl class="tabular"><dt>Manage</dt>
+    <dd>Manage</dd><dt>Send</dt>
+    <dd>Send</dd><dt>Listen</dt>
+    <dd>Listen</dd></dl>
 {{% /choosable %}}
 
 {{% choosable language go %}}
-<dl class="tabular">
-    <dt>Access<wbr>Rights<wbr>Manage</dt>
-    <dd>Manage</dd>
-    <dt>Access<wbr>Rights<wbr>Send</dt>
-    <dd>Send</dd>
-    <dt>Access<wbr>Rights<wbr>Listen</dt>
-    <dd>Listen</dd>
-</dl>
+<dl class="tabular"><dt>Access<wbr>Rights<wbr>Manage</dt>
+    <dd>Manage</dd><dt>Access<wbr>Rights<wbr>Send</dt>
+    <dd>Send</dd><dt>Access<wbr>Rights<wbr>Listen</dt>
+    <dd>Listen</dd></dl>
 {{% /choosable %}}
 
 {{% choosable language nodejs %}}
-<dl class="tabular">
-    <dt>Manage</dt>
-    <dd>Manage</dd>
-    <dt>Send</dt>
-    <dd>Send</dd>
-    <dt>Listen</dt>
-    <dd>Listen</dd>
-</dl>
+<dl class="tabular"><dt>Manage</dt>
+    <dd>Manage</dd><dt>Send</dt>
+    <dd>Send</dd><dt>Listen</dt>
+    <dd>Listen</dd></dl>
 {{% /choosable %}}
 
 {{% choosable language python %}}
-<dl class="tabular">
-    <dt>MANAGE</dt>
-    <dd>Manage</dd>
-    <dt>SEND</dt>
-    <dd>Send</dd>
-    <dt>LISTEN</dt>
-    <dd>Listen</dd>
-</dl>
+<dl class="tabular"><dt>MANAGE</dt>
+    <dd>Manage</dd><dt>SEND</dt>
+    <dd>Send</dd><dt>LISTEN</dt>
+    <dd>Listen</dd></dl>
 {{% /choosable %}}
 ## Import
 

@@ -16,11 +16,17 @@ The Service User resource allows the creation and management of Aiven Service Us
 
 
 {{% examples %}}
+
 ## Example Usage
 
 {{< chooser language "typescript,python,go,csharp" / >}}
 
-{{% example csharp %}}
+
+
+
+
+{{< example csharp >}}
+
 ```csharp
 using Pulumi;
 using Aiven = Pulumi.Aiven;
@@ -40,9 +46,12 @@ class MyStack : Stack
 }
 ```
 
-{{% /example %}}
 
-{{% example go %}}
+{{< /example >}}
+
+
+{{< example go >}}
+
 ```go
 package main
 
@@ -66,9 +75,12 @@ func main() {
 }
 ```
 
-{{% /example %}}
 
-{{% example python %}}
+{{< /example >}}
+
+
+{{< example python >}}
+
 ```python
 import pulumi
 import pulumi_aiven as aiven
@@ -79,9 +91,12 @@ myserviceuser = aiven.ServiceUser("myserviceuser",
     username="<USERNAME>")
 ```
 
-{{% /example %}}
 
-{{% example typescript %}}
+{{< /example >}}
+
+
+{{< example typescript >}}
+
 
 ```typescript
 import * as pulumi from "@pulumi/pulumi";
@@ -94,9 +109,16 @@ const myserviceuser = new aiven.ServiceUser("myserviceuser", {
 });
 ```
 
-{{% /example %}}
+
+{{< /example >}}
+
+
+
+
 
 {{% /examples %}}
+
+
 
 
 ## Create a ServiceUser Resource {#create}
@@ -121,9 +143,7 @@ const myserviceuser = new aiven.ServiceUser("myserviceuser", {
 
 {{% choosable language nodejs %}}
 
-<dl class="resources-properties">
-  
-    <dt
+<dl class="resources-properties"><dt
         class="property-required" title="Required">
         <span>name</span>
         <span class="property-indicator"></span>
@@ -131,9 +151,7 @@ const myserviceuser = new aiven.ServiceUser("myserviceuser", {
     </dt>
     <dd>
       The unique name of the resource.
-    </dd>
-  
-    <dt
+    </dd><dt
         class="property-required" title="Required">
         <span>args</span>
         <span class="property-indicator"></span>
@@ -141,9 +159,7 @@ const myserviceuser = new aiven.ServiceUser("myserviceuser", {
     </dt>
     <dd>
       The arguments to resource properties.
-    </dd>
-  
-    <dt
+    </dd><dt
         class="property-optional" title="Optional">
         <span>opts</span>
         <span class="property-indicator"></span>
@@ -151,10 +167,7 @@ const myserviceuser = new aiven.ServiceUser("myserviceuser", {
     </dt>
     <dd>
       Bag of options to control resource&#39;s behavior.
-    </dd>
-  
-
-</dl>
+    </dd></dl>
 
 {{% /choosable %}}
 
@@ -180,9 +193,7 @@ const myserviceuser = new aiven.ServiceUser("myserviceuser", {
 
 {{% choosable language go %}}
 
-<dl class="resources-properties">
-  
-    <dt
+<dl class="resources-properties"><dt
         class="property-optional" title="Optional">
         <span>ctx</span>
         <span class="property-indicator"></span>
@@ -190,9 +201,7 @@ const myserviceuser = new aiven.ServiceUser("myserviceuser", {
     </dt>
     <dd>
       Context object for the current deployment.
-    </dd>
-  
-    <dt
+    </dd><dt
         class="property-required" title="Required">
         <span>name</span>
         <span class="property-indicator"></span>
@@ -200,9 +209,7 @@ const myserviceuser = new aiven.ServiceUser("myserviceuser", {
     </dt>
     <dd>
       The unique name of the resource.
-    </dd>
-  
-    <dt
+    </dd><dt
         class="property-required" title="Required">
         <span>args</span>
         <span class="property-indicator"></span>
@@ -210,9 +217,7 @@ const myserviceuser = new aiven.ServiceUser("myserviceuser", {
     </dt>
     <dd>
       The arguments to resource properties.
-    </dd>
-  
-    <dt
+    </dd><dt
         class="property-optional" title="Optional">
         <span>opts</span>
         <span class="property-indicator"></span>
@@ -220,18 +225,13 @@ const myserviceuser = new aiven.ServiceUser("myserviceuser", {
     </dt>
     <dd>
       Bag of options to control resource&#39;s behavior.
-    </dd>
-  
-
-</dl>
+    </dd></dl>
 
 {{% /choosable %}}
 
 {{% choosable language csharp %}}
 
-<dl class="resources-properties">
-  
-    <dt
+<dl class="resources-properties"><dt
         class="property-required" title="Required">
         <span>name</span>
         <span class="property-indicator"></span>
@@ -239,9 +239,7 @@ const myserviceuser = new aiven.ServiceUser("myserviceuser", {
     </dt>
     <dd>
       The unique name of the resource.
-    </dd>
-  
-    <dt
+    </dd><dt
         class="property-required" title="Required">
         <span>args</span>
         <span class="property-indicator"></span>
@@ -249,9 +247,7 @@ const myserviceuser = new aiven.ServiceUser("myserviceuser", {
     </dt>
     <dd>
       The arguments to resource properties.
-    </dd>
-  
-    <dt
+    </dd><dt
         class="property-optional" title="Optional">
         <span>opts</span>
         <span class="property-indicator"></span>
@@ -259,10 +255,7 @@ const myserviceuser = new aiven.ServiceUser("myserviceuser", {
     </dt>
     <dd>
       Bag of options to control resource&#39;s behavior.
-    </dd>
-  
-
-</dl>
+    </dd></dl>
 
 {{% /choosable %}}
 
@@ -277,9 +270,7 @@ The ServiceUser resource accepts the following [input]({{< relref "/docs/intro/c
 
 
 {{% choosable language csharp %}}
-<dl class="resources-properties">
-
-    <dt class="property-required"
+<dl class="resources-properties"><dt class="property-required"
             title="Required">
         <span id="project_csharp">
 <a href="#project_csharp" style="color: inherit; text-decoration: inherit;">Project</a>
@@ -289,8 +280,7 @@ The ServiceUser resource accepts the following [input]({{< relref "/docs/intro/c
     </dt>
     <dd>{{% md %}}and `service_name` - (Required) define the project and service the user belongs to. They should be defined
 using reference as shown above to set up dependencies correctly.
-{{% /md %}}</dd>
-    <dt class="property-required"
+{{% /md %}}</dd><dt class="property-required"
             title="Required">
         <span id="servicename_csharp">
 <a href="#servicename_csharp" style="color: inherit; text-decoration: inherit;">Service<wbr>Name</a>
@@ -299,8 +289,7 @@ using reference as shown above to set up dependencies correctly.
         <span class="property-type">string</span>
     </dt>
     <dd>{{% md %}}Service to link the user to
-{{% /md %}}</dd>
-    <dt class="property-required"
+{{% /md %}}</dd><dt class="property-required"
             title="Required">
         <span id="username_csharp">
 <a href="#username_csharp" style="color: inherit; text-decoration: inherit;">Username</a>
@@ -309,8 +298,7 @@ using reference as shown above to set up dependencies correctly.
         <span class="property-type">string</span>
     </dt>
     <dd>{{% md %}}is the actual name of the user account.
-{{% /md %}}</dd>
-    <dt class="property-optional"
+{{% /md %}}</dd><dt class="property-optional"
             title="Optional">
         <span id="authentication_csharp">
 <a href="#authentication_csharp" style="color: inherit; text-decoration: inherit;">Authentication</a>
@@ -319,8 +307,7 @@ using reference as shown above to set up dependencies correctly.
         <span class="property-type">string</span>
     </dt>
     <dd>{{% md %}}Authentication details
-{{% /md %}}</dd>
-    <dt class="property-optional"
+{{% /md %}}</dd><dt class="property-optional"
             title="Optional">
         <span id="password_csharp">
 <a href="#password_csharp" style="color: inherit; text-decoration: inherit;">Password</a>
@@ -329,8 +316,7 @@ using reference as shown above to set up dependencies correctly.
         <span class="property-type">string</span>
     </dt>
     <dd>{{% md %}}Password of the user
-{{% /md %}}</dd>
-    <dt class="property-optional"
+{{% /md %}}</dd><dt class="property-optional"
             title="Optional">
         <span id="redisaclcategories_csharp">
 <a href="#redisaclcategories_csharp" style="color: inherit; text-decoration: inherit;">Redis<wbr>Acl<wbr>Categories</a>
@@ -339,8 +325,7 @@ using reference as shown above to set up dependencies correctly.
         <span class="property-type">List&lt;string&gt;</span>
     </dt>
     <dd>{{% md %}}Redis specific field, defines command category rules.
-{{% /md %}}</dd>
-    <dt class="property-optional"
+{{% /md %}}</dd><dt class="property-optional"
             title="Optional">
         <span id="redisaclcommands_csharp">
 <a href="#redisaclcommands_csharp" style="color: inherit; text-decoration: inherit;">Redis<wbr>Acl<wbr>Commands</a>
@@ -349,8 +334,7 @@ using reference as shown above to set up dependencies correctly.
         <span class="property-type">List&lt;string&gt;</span>
     </dt>
     <dd>{{% md %}}Redis specific field, defines rules for individual commands.
-{{% /md %}}</dd>
-    <dt class="property-optional"
+{{% /md %}}</dd><dt class="property-optional"
             title="Optional">
         <span id="redisaclkeys_csharp">
 <a href="#redisaclkeys_csharp" style="color: inherit; text-decoration: inherit;">Redis<wbr>Acl<wbr>Keys</a>
@@ -359,14 +343,11 @@ using reference as shown above to set up dependencies correctly.
         <span class="property-type">List&lt;string&gt;</span>
     </dt>
     <dd>{{% md %}}Redis specific field, defines key access rules.
-{{% /md %}}</dd>
-</dl>
+{{% /md %}}</dd></dl>
 {{% /choosable %}}
 
 {{% choosable language go %}}
-<dl class="resources-properties">
-
-    <dt class="property-required"
+<dl class="resources-properties"><dt class="property-required"
             title="Required">
         <span id="project_go">
 <a href="#project_go" style="color: inherit; text-decoration: inherit;">Project</a>
@@ -376,8 +357,7 @@ using reference as shown above to set up dependencies correctly.
     </dt>
     <dd>{{% md %}}and `service_name` - (Required) define the project and service the user belongs to. They should be defined
 using reference as shown above to set up dependencies correctly.
-{{% /md %}}</dd>
-    <dt class="property-required"
+{{% /md %}}</dd><dt class="property-required"
             title="Required">
         <span id="servicename_go">
 <a href="#servicename_go" style="color: inherit; text-decoration: inherit;">Service<wbr>Name</a>
@@ -386,8 +366,7 @@ using reference as shown above to set up dependencies correctly.
         <span class="property-type">string</span>
     </dt>
     <dd>{{% md %}}Service to link the user to
-{{% /md %}}</dd>
-    <dt class="property-required"
+{{% /md %}}</dd><dt class="property-required"
             title="Required">
         <span id="username_go">
 <a href="#username_go" style="color: inherit; text-decoration: inherit;">Username</a>
@@ -396,8 +375,7 @@ using reference as shown above to set up dependencies correctly.
         <span class="property-type">string</span>
     </dt>
     <dd>{{% md %}}is the actual name of the user account.
-{{% /md %}}</dd>
-    <dt class="property-optional"
+{{% /md %}}</dd><dt class="property-optional"
             title="Optional">
         <span id="authentication_go">
 <a href="#authentication_go" style="color: inherit; text-decoration: inherit;">Authentication</a>
@@ -406,8 +384,7 @@ using reference as shown above to set up dependencies correctly.
         <span class="property-type">string</span>
     </dt>
     <dd>{{% md %}}Authentication details
-{{% /md %}}</dd>
-    <dt class="property-optional"
+{{% /md %}}</dd><dt class="property-optional"
             title="Optional">
         <span id="password_go">
 <a href="#password_go" style="color: inherit; text-decoration: inherit;">Password</a>
@@ -416,8 +393,7 @@ using reference as shown above to set up dependencies correctly.
         <span class="property-type">string</span>
     </dt>
     <dd>{{% md %}}Password of the user
-{{% /md %}}</dd>
-    <dt class="property-optional"
+{{% /md %}}</dd><dt class="property-optional"
             title="Optional">
         <span id="redisaclcategories_go">
 <a href="#redisaclcategories_go" style="color: inherit; text-decoration: inherit;">Redis<wbr>Acl<wbr>Categories</a>
@@ -426,8 +402,7 @@ using reference as shown above to set up dependencies correctly.
         <span class="property-type">[]string</span>
     </dt>
     <dd>{{% md %}}Redis specific field, defines command category rules.
-{{% /md %}}</dd>
-    <dt class="property-optional"
+{{% /md %}}</dd><dt class="property-optional"
             title="Optional">
         <span id="redisaclcommands_go">
 <a href="#redisaclcommands_go" style="color: inherit; text-decoration: inherit;">Redis<wbr>Acl<wbr>Commands</a>
@@ -436,8 +411,7 @@ using reference as shown above to set up dependencies correctly.
         <span class="property-type">[]string</span>
     </dt>
     <dd>{{% md %}}Redis specific field, defines rules for individual commands.
-{{% /md %}}</dd>
-    <dt class="property-optional"
+{{% /md %}}</dd><dt class="property-optional"
             title="Optional">
         <span id="redisaclkeys_go">
 <a href="#redisaclkeys_go" style="color: inherit; text-decoration: inherit;">Redis<wbr>Acl<wbr>Keys</a>
@@ -446,14 +420,11 @@ using reference as shown above to set up dependencies correctly.
         <span class="property-type">[]string</span>
     </dt>
     <dd>{{% md %}}Redis specific field, defines key access rules.
-{{% /md %}}</dd>
-</dl>
+{{% /md %}}</dd></dl>
 {{% /choosable %}}
 
 {{% choosable language nodejs %}}
-<dl class="resources-properties">
-
-    <dt class="property-required"
+<dl class="resources-properties"><dt class="property-required"
             title="Required">
         <span id="project_nodejs">
 <a href="#project_nodejs" style="color: inherit; text-decoration: inherit;">project</a>
@@ -463,8 +434,7 @@ using reference as shown above to set up dependencies correctly.
     </dt>
     <dd>{{% md %}}and `service_name` - (Required) define the project and service the user belongs to. They should be defined
 using reference as shown above to set up dependencies correctly.
-{{% /md %}}</dd>
-    <dt class="property-required"
+{{% /md %}}</dd><dt class="property-required"
             title="Required">
         <span id="servicename_nodejs">
 <a href="#servicename_nodejs" style="color: inherit; text-decoration: inherit;">service<wbr>Name</a>
@@ -473,8 +443,7 @@ using reference as shown above to set up dependencies correctly.
         <span class="property-type">string</span>
     </dt>
     <dd>{{% md %}}Service to link the user to
-{{% /md %}}</dd>
-    <dt class="property-required"
+{{% /md %}}</dd><dt class="property-required"
             title="Required">
         <span id="username_nodejs">
 <a href="#username_nodejs" style="color: inherit; text-decoration: inherit;">username</a>
@@ -483,8 +452,7 @@ using reference as shown above to set up dependencies correctly.
         <span class="property-type">string</span>
     </dt>
     <dd>{{% md %}}is the actual name of the user account.
-{{% /md %}}</dd>
-    <dt class="property-optional"
+{{% /md %}}</dd><dt class="property-optional"
             title="Optional">
         <span id="authentication_nodejs">
 <a href="#authentication_nodejs" style="color: inherit; text-decoration: inherit;">authentication</a>
@@ -493,8 +461,7 @@ using reference as shown above to set up dependencies correctly.
         <span class="property-type">string</span>
     </dt>
     <dd>{{% md %}}Authentication details
-{{% /md %}}</dd>
-    <dt class="property-optional"
+{{% /md %}}</dd><dt class="property-optional"
             title="Optional">
         <span id="password_nodejs">
 <a href="#password_nodejs" style="color: inherit; text-decoration: inherit;">password</a>
@@ -503,8 +470,7 @@ using reference as shown above to set up dependencies correctly.
         <span class="property-type">string</span>
     </dt>
     <dd>{{% md %}}Password of the user
-{{% /md %}}</dd>
-    <dt class="property-optional"
+{{% /md %}}</dd><dt class="property-optional"
             title="Optional">
         <span id="redisaclcategories_nodejs">
 <a href="#redisaclcategories_nodejs" style="color: inherit; text-decoration: inherit;">redis<wbr>Acl<wbr>Categories</a>
@@ -513,8 +479,7 @@ using reference as shown above to set up dependencies correctly.
         <span class="property-type">string[]</span>
     </dt>
     <dd>{{% md %}}Redis specific field, defines command category rules.
-{{% /md %}}</dd>
-    <dt class="property-optional"
+{{% /md %}}</dd><dt class="property-optional"
             title="Optional">
         <span id="redisaclcommands_nodejs">
 <a href="#redisaclcommands_nodejs" style="color: inherit; text-decoration: inherit;">redis<wbr>Acl<wbr>Commands</a>
@@ -523,8 +488,7 @@ using reference as shown above to set up dependencies correctly.
         <span class="property-type">string[]</span>
     </dt>
     <dd>{{% md %}}Redis specific field, defines rules for individual commands.
-{{% /md %}}</dd>
-    <dt class="property-optional"
+{{% /md %}}</dd><dt class="property-optional"
             title="Optional">
         <span id="redisaclkeys_nodejs">
 <a href="#redisaclkeys_nodejs" style="color: inherit; text-decoration: inherit;">redis<wbr>Acl<wbr>Keys</a>
@@ -533,14 +497,11 @@ using reference as shown above to set up dependencies correctly.
         <span class="property-type">string[]</span>
     </dt>
     <dd>{{% md %}}Redis specific field, defines key access rules.
-{{% /md %}}</dd>
-</dl>
+{{% /md %}}</dd></dl>
 {{% /choosable %}}
 
 {{% choosable language python %}}
-<dl class="resources-properties">
-
-    <dt class="property-required"
+<dl class="resources-properties"><dt class="property-required"
             title="Required">
         <span id="project_python">
 <a href="#project_python" style="color: inherit; text-decoration: inherit;">project</a>
@@ -550,8 +511,7 @@ using reference as shown above to set up dependencies correctly.
     </dt>
     <dd>{{% md %}}and `service_name` - (Required) define the project and service the user belongs to. They should be defined
 using reference as shown above to set up dependencies correctly.
-{{% /md %}}</dd>
-    <dt class="property-required"
+{{% /md %}}</dd><dt class="property-required"
             title="Required">
         <span id="service_name_python">
 <a href="#service_name_python" style="color: inherit; text-decoration: inherit;">service_<wbr>name</a>
@@ -560,8 +520,7 @@ using reference as shown above to set up dependencies correctly.
         <span class="property-type">str</span>
     </dt>
     <dd>{{% md %}}Service to link the user to
-{{% /md %}}</dd>
-    <dt class="property-required"
+{{% /md %}}</dd><dt class="property-required"
             title="Required">
         <span id="username_python">
 <a href="#username_python" style="color: inherit; text-decoration: inherit;">username</a>
@@ -570,8 +529,7 @@ using reference as shown above to set up dependencies correctly.
         <span class="property-type">str</span>
     </dt>
     <dd>{{% md %}}is the actual name of the user account.
-{{% /md %}}</dd>
-    <dt class="property-optional"
+{{% /md %}}</dd><dt class="property-optional"
             title="Optional">
         <span id="authentication_python">
 <a href="#authentication_python" style="color: inherit; text-decoration: inherit;">authentication</a>
@@ -580,8 +538,7 @@ using reference as shown above to set up dependencies correctly.
         <span class="property-type">str</span>
     </dt>
     <dd>{{% md %}}Authentication details
-{{% /md %}}</dd>
-    <dt class="property-optional"
+{{% /md %}}</dd><dt class="property-optional"
             title="Optional">
         <span id="password_python">
 <a href="#password_python" style="color: inherit; text-decoration: inherit;">password</a>
@@ -590,8 +547,7 @@ using reference as shown above to set up dependencies correctly.
         <span class="property-type">str</span>
     </dt>
     <dd>{{% md %}}Password of the user
-{{% /md %}}</dd>
-    <dt class="property-optional"
+{{% /md %}}</dd><dt class="property-optional"
             title="Optional">
         <span id="redis_acl_categories_python">
 <a href="#redis_acl_categories_python" style="color: inherit; text-decoration: inherit;">redis_<wbr>acl_<wbr>categories</a>
@@ -600,8 +556,7 @@ using reference as shown above to set up dependencies correctly.
         <span class="property-type">Sequence[str]</span>
     </dt>
     <dd>{{% md %}}Redis specific field, defines command category rules.
-{{% /md %}}</dd>
-    <dt class="property-optional"
+{{% /md %}}</dd><dt class="property-optional"
             title="Optional">
         <span id="redis_acl_commands_python">
 <a href="#redis_acl_commands_python" style="color: inherit; text-decoration: inherit;">redis_<wbr>acl_<wbr>commands</a>
@@ -610,8 +565,7 @@ using reference as shown above to set up dependencies correctly.
         <span class="property-type">Sequence[str]</span>
     </dt>
     <dd>{{% md %}}Redis specific field, defines rules for individual commands.
-{{% /md %}}</dd>
-    <dt class="property-optional"
+{{% /md %}}</dd><dt class="property-optional"
             title="Optional">
         <span id="redis_acl_keys_python">
 <a href="#redis_acl_keys_python" style="color: inherit; text-decoration: inherit;">redis_<wbr>acl_<wbr>keys</a>
@@ -620,8 +574,7 @@ using reference as shown above to set up dependencies correctly.
         <span class="property-type">Sequence[str]</span>
     </dt>
     <dd>{{% md %}}Redis specific field, defines key access rules.
-{{% /md %}}</dd>
-</dl>
+{{% /md %}}</dd></dl>
 {{% /choosable %}}
 
 
@@ -632,9 +585,7 @@ All [input](#inputs) properties are implicitly available as output properties. A
 
 
 {{% choosable language csharp %}}
-<dl class="resources-properties">
-
-    <dt class="property-"
+<dl class="resources-properties"><dt class="property-"
             title="">
         <span id="accesscert_csharp">
 <a href="#accesscert_csharp" style="color: inherit; text-decoration: inherit;">Access<wbr>Cert</a>
@@ -643,8 +594,7 @@ All [input](#inputs) properties are implicitly available as output properties. A
         <span class="property-type">string</span>
     </dt>
     <dd>{{% md %}}is the access certificate of the user (not applicable for all services).
-{{% /md %}}</dd>
-    <dt class="property-"
+{{% /md %}}</dd><dt class="property-"
             title="">
         <span id="accesskey_csharp">
 <a href="#accesskey_csharp" style="color: inherit; text-decoration: inherit;">Access<wbr>Key</a>
@@ -653,8 +603,7 @@ All [input](#inputs) properties are implicitly available as output properties. A
         <span class="property-type">string</span>
     </dt>
     <dd>{{% md %}}is the access key of the user (not applicable for all services).
-{{% /md %}}</dd>
-    <dt class="property-"
+{{% /md %}}</dd><dt class="property-"
             title="">
         <span id="id_csharp">
 <a href="#id_csharp" style="color: inherit; text-decoration: inherit;">Id</a>
@@ -662,8 +611,7 @@ All [input](#inputs) properties are implicitly available as output properties. A
         <span class="property-indicator"></span>
         <span class="property-type">string</span>
     </dt>
-    <dd>{{% md %}}The provider-assigned unique ID for this managed resource.{{% /md %}}</dd>
-    <dt class="property-"
+    <dd>{{% md %}}The provider-assigned unique ID for this managed resource.{{% /md %}}</dd><dt class="property-"
             title="">
         <span id="type_csharp">
 <a href="#type_csharp" style="color: inherit; text-decoration: inherit;">Type</a>
@@ -672,14 +620,11 @@ All [input](#inputs) properties are implicitly available as output properties. A
         <span class="property-type">string</span>
     </dt>
     <dd>{{% md %}}tells whether the user is primary account or regular account.
-{{% /md %}}</dd>
-</dl>
+{{% /md %}}</dd></dl>
 {{% /choosable %}}
 
 {{% choosable language go %}}
-<dl class="resources-properties">
-
-    <dt class="property-"
+<dl class="resources-properties"><dt class="property-"
             title="">
         <span id="accesscert_go">
 <a href="#accesscert_go" style="color: inherit; text-decoration: inherit;">Access<wbr>Cert</a>
@@ -688,8 +633,7 @@ All [input](#inputs) properties are implicitly available as output properties. A
         <span class="property-type">string</span>
     </dt>
     <dd>{{% md %}}is the access certificate of the user (not applicable for all services).
-{{% /md %}}</dd>
-    <dt class="property-"
+{{% /md %}}</dd><dt class="property-"
             title="">
         <span id="accesskey_go">
 <a href="#accesskey_go" style="color: inherit; text-decoration: inherit;">Access<wbr>Key</a>
@@ -698,8 +642,7 @@ All [input](#inputs) properties are implicitly available as output properties. A
         <span class="property-type">string</span>
     </dt>
     <dd>{{% md %}}is the access key of the user (not applicable for all services).
-{{% /md %}}</dd>
-    <dt class="property-"
+{{% /md %}}</dd><dt class="property-"
             title="">
         <span id="id_go">
 <a href="#id_go" style="color: inherit; text-decoration: inherit;">Id</a>
@@ -707,8 +650,7 @@ All [input](#inputs) properties are implicitly available as output properties. A
         <span class="property-indicator"></span>
         <span class="property-type">string</span>
     </dt>
-    <dd>{{% md %}}The provider-assigned unique ID for this managed resource.{{% /md %}}</dd>
-    <dt class="property-"
+    <dd>{{% md %}}The provider-assigned unique ID for this managed resource.{{% /md %}}</dd><dt class="property-"
             title="">
         <span id="type_go">
 <a href="#type_go" style="color: inherit; text-decoration: inherit;">Type</a>
@@ -717,14 +659,11 @@ All [input](#inputs) properties are implicitly available as output properties. A
         <span class="property-type">string</span>
     </dt>
     <dd>{{% md %}}tells whether the user is primary account or regular account.
-{{% /md %}}</dd>
-</dl>
+{{% /md %}}</dd></dl>
 {{% /choosable %}}
 
 {{% choosable language nodejs %}}
-<dl class="resources-properties">
-
-    <dt class="property-"
+<dl class="resources-properties"><dt class="property-"
             title="">
         <span id="accesscert_nodejs">
 <a href="#accesscert_nodejs" style="color: inherit; text-decoration: inherit;">access<wbr>Cert</a>
@@ -733,8 +672,7 @@ All [input](#inputs) properties are implicitly available as output properties. A
         <span class="property-type">string</span>
     </dt>
     <dd>{{% md %}}is the access certificate of the user (not applicable for all services).
-{{% /md %}}</dd>
-    <dt class="property-"
+{{% /md %}}</dd><dt class="property-"
             title="">
         <span id="accesskey_nodejs">
 <a href="#accesskey_nodejs" style="color: inherit; text-decoration: inherit;">access<wbr>Key</a>
@@ -743,8 +681,7 @@ All [input](#inputs) properties are implicitly available as output properties. A
         <span class="property-type">string</span>
     </dt>
     <dd>{{% md %}}is the access key of the user (not applicable for all services).
-{{% /md %}}</dd>
-    <dt class="property-"
+{{% /md %}}</dd><dt class="property-"
             title="">
         <span id="id_nodejs">
 <a href="#id_nodejs" style="color: inherit; text-decoration: inherit;">id</a>
@@ -752,8 +689,7 @@ All [input](#inputs) properties are implicitly available as output properties. A
         <span class="property-indicator"></span>
         <span class="property-type">string</span>
     </dt>
-    <dd>{{% md %}}The provider-assigned unique ID for this managed resource.{{% /md %}}</dd>
-    <dt class="property-"
+    <dd>{{% md %}}The provider-assigned unique ID for this managed resource.{{% /md %}}</dd><dt class="property-"
             title="">
         <span id="type_nodejs">
 <a href="#type_nodejs" style="color: inherit; text-decoration: inherit;">type</a>
@@ -762,14 +698,11 @@ All [input](#inputs) properties are implicitly available as output properties. A
         <span class="property-type">string</span>
     </dt>
     <dd>{{% md %}}tells whether the user is primary account or regular account.
-{{% /md %}}</dd>
-</dl>
+{{% /md %}}</dd></dl>
 {{% /choosable %}}
 
 {{% choosable language python %}}
-<dl class="resources-properties">
-
-    <dt class="property-"
+<dl class="resources-properties"><dt class="property-"
             title="">
         <span id="access_cert_python">
 <a href="#access_cert_python" style="color: inherit; text-decoration: inherit;">access_<wbr>cert</a>
@@ -778,8 +711,7 @@ All [input](#inputs) properties are implicitly available as output properties. A
         <span class="property-type">str</span>
     </dt>
     <dd>{{% md %}}is the access certificate of the user (not applicable for all services).
-{{% /md %}}</dd>
-    <dt class="property-"
+{{% /md %}}</dd><dt class="property-"
             title="">
         <span id="access_key_python">
 <a href="#access_key_python" style="color: inherit; text-decoration: inherit;">access_<wbr>key</a>
@@ -788,8 +720,7 @@ All [input](#inputs) properties are implicitly available as output properties. A
         <span class="property-type">str</span>
     </dt>
     <dd>{{% md %}}is the access key of the user (not applicable for all services).
-{{% /md %}}</dd>
-    <dt class="property-"
+{{% /md %}}</dd><dt class="property-"
             title="">
         <span id="id_python">
 <a href="#id_python" style="color: inherit; text-decoration: inherit;">id</a>
@@ -797,8 +728,7 @@ All [input](#inputs) properties are implicitly available as output properties. A
         <span class="property-indicator"></span>
         <span class="property-type">str</span>
     </dt>
-    <dd>{{% md %}}The provider-assigned unique ID for this managed resource.{{% /md %}}</dd>
-    <dt class="property-"
+    <dd>{{% md %}}The provider-assigned unique ID for this managed resource.{{% /md %}}</dd><dt class="property-"
             title="">
         <span id="type_python">
 <a href="#type_python" style="color: inherit; text-decoration: inherit;">type</a>
@@ -807,8 +737,7 @@ All [input](#inputs) properties are implicitly available as output properties. A
         <span class="property-type">str</span>
     </dt>
     <dd>{{% md %}}tells whether the user is primary account or regular account.
-{{% /md %}}</dd>
-</dl>
+{{% /md %}}</dd></dl>
 {{% /choosable %}}
 
 
@@ -935,9 +864,7 @@ The following state arguments are supported:
 
 
 {{% choosable language csharp %}}
-<dl class="resources-properties">
-
-    <dt class="property-optional"
+<dl class="resources-properties"><dt class="property-optional"
             title="Optional">
         <span id="state_accesscert_csharp">
 <a href="#state_accesscert_csharp" style="color: inherit; text-decoration: inherit;">Access<wbr>Cert</a>
@@ -946,8 +873,7 @@ The following state arguments are supported:
         <span class="property-type">string</span>
     </dt>
     <dd>{{% md %}}is the access certificate of the user (not applicable for all services).
-{{% /md %}}</dd>
-    <dt class="property-optional"
+{{% /md %}}</dd><dt class="property-optional"
             title="Optional">
         <span id="state_accesskey_csharp">
 <a href="#state_accesskey_csharp" style="color: inherit; text-decoration: inherit;">Access<wbr>Key</a>
@@ -956,8 +882,7 @@ The following state arguments are supported:
         <span class="property-type">string</span>
     </dt>
     <dd>{{% md %}}is the access key of the user (not applicable for all services).
-{{% /md %}}</dd>
-    <dt class="property-optional"
+{{% /md %}}</dd><dt class="property-optional"
             title="Optional">
         <span id="state_authentication_csharp">
 <a href="#state_authentication_csharp" style="color: inherit; text-decoration: inherit;">Authentication</a>
@@ -966,8 +891,7 @@ The following state arguments are supported:
         <span class="property-type">string</span>
     </dt>
     <dd>{{% md %}}Authentication details
-{{% /md %}}</dd>
-    <dt class="property-optional"
+{{% /md %}}</dd><dt class="property-optional"
             title="Optional">
         <span id="state_password_csharp">
 <a href="#state_password_csharp" style="color: inherit; text-decoration: inherit;">Password</a>
@@ -976,8 +900,7 @@ The following state arguments are supported:
         <span class="property-type">string</span>
     </dt>
     <dd>{{% md %}}Password of the user
-{{% /md %}}</dd>
-    <dt class="property-optional"
+{{% /md %}}</dd><dt class="property-optional"
             title="Optional">
         <span id="state_project_csharp">
 <a href="#state_project_csharp" style="color: inherit; text-decoration: inherit;">Project</a>
@@ -987,8 +910,7 @@ The following state arguments are supported:
     </dt>
     <dd>{{% md %}}and `service_name` - (Required) define the project and service the user belongs to. They should be defined
 using reference as shown above to set up dependencies correctly.
-{{% /md %}}</dd>
-    <dt class="property-optional"
+{{% /md %}}</dd><dt class="property-optional"
             title="Optional">
         <span id="state_redisaclcategories_csharp">
 <a href="#state_redisaclcategories_csharp" style="color: inherit; text-decoration: inherit;">Redis<wbr>Acl<wbr>Categories</a>
@@ -997,8 +919,7 @@ using reference as shown above to set up dependencies correctly.
         <span class="property-type">List&lt;string&gt;</span>
     </dt>
     <dd>{{% md %}}Redis specific field, defines command category rules.
-{{% /md %}}</dd>
-    <dt class="property-optional"
+{{% /md %}}</dd><dt class="property-optional"
             title="Optional">
         <span id="state_redisaclcommands_csharp">
 <a href="#state_redisaclcommands_csharp" style="color: inherit; text-decoration: inherit;">Redis<wbr>Acl<wbr>Commands</a>
@@ -1007,8 +928,7 @@ using reference as shown above to set up dependencies correctly.
         <span class="property-type">List&lt;string&gt;</span>
     </dt>
     <dd>{{% md %}}Redis specific field, defines rules for individual commands.
-{{% /md %}}</dd>
-    <dt class="property-optional"
+{{% /md %}}</dd><dt class="property-optional"
             title="Optional">
         <span id="state_redisaclkeys_csharp">
 <a href="#state_redisaclkeys_csharp" style="color: inherit; text-decoration: inherit;">Redis<wbr>Acl<wbr>Keys</a>
@@ -1017,8 +937,7 @@ using reference as shown above to set up dependencies correctly.
         <span class="property-type">List&lt;string&gt;</span>
     </dt>
     <dd>{{% md %}}Redis specific field, defines key access rules.
-{{% /md %}}</dd>
-    <dt class="property-optional"
+{{% /md %}}</dd><dt class="property-optional"
             title="Optional">
         <span id="state_servicename_csharp">
 <a href="#state_servicename_csharp" style="color: inherit; text-decoration: inherit;">Service<wbr>Name</a>
@@ -1027,8 +946,7 @@ using reference as shown above to set up dependencies correctly.
         <span class="property-type">string</span>
     </dt>
     <dd>{{% md %}}Service to link the user to
-{{% /md %}}</dd>
-    <dt class="property-optional"
+{{% /md %}}</dd><dt class="property-optional"
             title="Optional">
         <span id="state_type_csharp">
 <a href="#state_type_csharp" style="color: inherit; text-decoration: inherit;">Type</a>
@@ -1037,8 +955,7 @@ using reference as shown above to set up dependencies correctly.
         <span class="property-type">string</span>
     </dt>
     <dd>{{% md %}}tells whether the user is primary account or regular account.
-{{% /md %}}</dd>
-    <dt class="property-optional"
+{{% /md %}}</dd><dt class="property-optional"
             title="Optional">
         <span id="state_username_csharp">
 <a href="#state_username_csharp" style="color: inherit; text-decoration: inherit;">Username</a>
@@ -1047,14 +964,11 @@ using reference as shown above to set up dependencies correctly.
         <span class="property-type">string</span>
     </dt>
     <dd>{{% md %}}is the actual name of the user account.
-{{% /md %}}</dd>
-</dl>
+{{% /md %}}</dd></dl>
 {{% /choosable %}}
 
 {{% choosable language go %}}
-<dl class="resources-properties">
-
-    <dt class="property-optional"
+<dl class="resources-properties"><dt class="property-optional"
             title="Optional">
         <span id="state_accesscert_go">
 <a href="#state_accesscert_go" style="color: inherit; text-decoration: inherit;">Access<wbr>Cert</a>
@@ -1063,8 +977,7 @@ using reference as shown above to set up dependencies correctly.
         <span class="property-type">string</span>
     </dt>
     <dd>{{% md %}}is the access certificate of the user (not applicable for all services).
-{{% /md %}}</dd>
-    <dt class="property-optional"
+{{% /md %}}</dd><dt class="property-optional"
             title="Optional">
         <span id="state_accesskey_go">
 <a href="#state_accesskey_go" style="color: inherit; text-decoration: inherit;">Access<wbr>Key</a>
@@ -1073,8 +986,7 @@ using reference as shown above to set up dependencies correctly.
         <span class="property-type">string</span>
     </dt>
     <dd>{{% md %}}is the access key of the user (not applicable for all services).
-{{% /md %}}</dd>
-    <dt class="property-optional"
+{{% /md %}}</dd><dt class="property-optional"
             title="Optional">
         <span id="state_authentication_go">
 <a href="#state_authentication_go" style="color: inherit; text-decoration: inherit;">Authentication</a>
@@ -1083,8 +995,7 @@ using reference as shown above to set up dependencies correctly.
         <span class="property-type">string</span>
     </dt>
     <dd>{{% md %}}Authentication details
-{{% /md %}}</dd>
-    <dt class="property-optional"
+{{% /md %}}</dd><dt class="property-optional"
             title="Optional">
         <span id="state_password_go">
 <a href="#state_password_go" style="color: inherit; text-decoration: inherit;">Password</a>
@@ -1093,8 +1004,7 @@ using reference as shown above to set up dependencies correctly.
         <span class="property-type">string</span>
     </dt>
     <dd>{{% md %}}Password of the user
-{{% /md %}}</dd>
-    <dt class="property-optional"
+{{% /md %}}</dd><dt class="property-optional"
             title="Optional">
         <span id="state_project_go">
 <a href="#state_project_go" style="color: inherit; text-decoration: inherit;">Project</a>
@@ -1104,8 +1014,7 @@ using reference as shown above to set up dependencies correctly.
     </dt>
     <dd>{{% md %}}and `service_name` - (Required) define the project and service the user belongs to. They should be defined
 using reference as shown above to set up dependencies correctly.
-{{% /md %}}</dd>
-    <dt class="property-optional"
+{{% /md %}}</dd><dt class="property-optional"
             title="Optional">
         <span id="state_redisaclcategories_go">
 <a href="#state_redisaclcategories_go" style="color: inherit; text-decoration: inherit;">Redis<wbr>Acl<wbr>Categories</a>
@@ -1114,8 +1023,7 @@ using reference as shown above to set up dependencies correctly.
         <span class="property-type">[]string</span>
     </dt>
     <dd>{{% md %}}Redis specific field, defines command category rules.
-{{% /md %}}</dd>
-    <dt class="property-optional"
+{{% /md %}}</dd><dt class="property-optional"
             title="Optional">
         <span id="state_redisaclcommands_go">
 <a href="#state_redisaclcommands_go" style="color: inherit; text-decoration: inherit;">Redis<wbr>Acl<wbr>Commands</a>
@@ -1124,8 +1032,7 @@ using reference as shown above to set up dependencies correctly.
         <span class="property-type">[]string</span>
     </dt>
     <dd>{{% md %}}Redis specific field, defines rules for individual commands.
-{{% /md %}}</dd>
-    <dt class="property-optional"
+{{% /md %}}</dd><dt class="property-optional"
             title="Optional">
         <span id="state_redisaclkeys_go">
 <a href="#state_redisaclkeys_go" style="color: inherit; text-decoration: inherit;">Redis<wbr>Acl<wbr>Keys</a>
@@ -1134,8 +1041,7 @@ using reference as shown above to set up dependencies correctly.
         <span class="property-type">[]string</span>
     </dt>
     <dd>{{% md %}}Redis specific field, defines key access rules.
-{{% /md %}}</dd>
-    <dt class="property-optional"
+{{% /md %}}</dd><dt class="property-optional"
             title="Optional">
         <span id="state_servicename_go">
 <a href="#state_servicename_go" style="color: inherit; text-decoration: inherit;">Service<wbr>Name</a>
@@ -1144,8 +1050,7 @@ using reference as shown above to set up dependencies correctly.
         <span class="property-type">string</span>
     </dt>
     <dd>{{% md %}}Service to link the user to
-{{% /md %}}</dd>
-    <dt class="property-optional"
+{{% /md %}}</dd><dt class="property-optional"
             title="Optional">
         <span id="state_type_go">
 <a href="#state_type_go" style="color: inherit; text-decoration: inherit;">Type</a>
@@ -1154,8 +1059,7 @@ using reference as shown above to set up dependencies correctly.
         <span class="property-type">string</span>
     </dt>
     <dd>{{% md %}}tells whether the user is primary account or regular account.
-{{% /md %}}</dd>
-    <dt class="property-optional"
+{{% /md %}}</dd><dt class="property-optional"
             title="Optional">
         <span id="state_username_go">
 <a href="#state_username_go" style="color: inherit; text-decoration: inherit;">Username</a>
@@ -1164,14 +1068,11 @@ using reference as shown above to set up dependencies correctly.
         <span class="property-type">string</span>
     </dt>
     <dd>{{% md %}}is the actual name of the user account.
-{{% /md %}}</dd>
-</dl>
+{{% /md %}}</dd></dl>
 {{% /choosable %}}
 
 {{% choosable language nodejs %}}
-<dl class="resources-properties">
-
-    <dt class="property-optional"
+<dl class="resources-properties"><dt class="property-optional"
             title="Optional">
         <span id="state_accesscert_nodejs">
 <a href="#state_accesscert_nodejs" style="color: inherit; text-decoration: inherit;">access<wbr>Cert</a>
@@ -1180,8 +1081,7 @@ using reference as shown above to set up dependencies correctly.
         <span class="property-type">string</span>
     </dt>
     <dd>{{% md %}}is the access certificate of the user (not applicable for all services).
-{{% /md %}}</dd>
-    <dt class="property-optional"
+{{% /md %}}</dd><dt class="property-optional"
             title="Optional">
         <span id="state_accesskey_nodejs">
 <a href="#state_accesskey_nodejs" style="color: inherit; text-decoration: inherit;">access<wbr>Key</a>
@@ -1190,8 +1090,7 @@ using reference as shown above to set up dependencies correctly.
         <span class="property-type">string</span>
     </dt>
     <dd>{{% md %}}is the access key of the user (not applicable for all services).
-{{% /md %}}</dd>
-    <dt class="property-optional"
+{{% /md %}}</dd><dt class="property-optional"
             title="Optional">
         <span id="state_authentication_nodejs">
 <a href="#state_authentication_nodejs" style="color: inherit; text-decoration: inherit;">authentication</a>
@@ -1200,8 +1099,7 @@ using reference as shown above to set up dependencies correctly.
         <span class="property-type">string</span>
     </dt>
     <dd>{{% md %}}Authentication details
-{{% /md %}}</dd>
-    <dt class="property-optional"
+{{% /md %}}</dd><dt class="property-optional"
             title="Optional">
         <span id="state_password_nodejs">
 <a href="#state_password_nodejs" style="color: inherit; text-decoration: inherit;">password</a>
@@ -1210,8 +1108,7 @@ using reference as shown above to set up dependencies correctly.
         <span class="property-type">string</span>
     </dt>
     <dd>{{% md %}}Password of the user
-{{% /md %}}</dd>
-    <dt class="property-optional"
+{{% /md %}}</dd><dt class="property-optional"
             title="Optional">
         <span id="state_project_nodejs">
 <a href="#state_project_nodejs" style="color: inherit; text-decoration: inherit;">project</a>
@@ -1221,8 +1118,7 @@ using reference as shown above to set up dependencies correctly.
     </dt>
     <dd>{{% md %}}and `service_name` - (Required) define the project and service the user belongs to. They should be defined
 using reference as shown above to set up dependencies correctly.
-{{% /md %}}</dd>
-    <dt class="property-optional"
+{{% /md %}}</dd><dt class="property-optional"
             title="Optional">
         <span id="state_redisaclcategories_nodejs">
 <a href="#state_redisaclcategories_nodejs" style="color: inherit; text-decoration: inherit;">redis<wbr>Acl<wbr>Categories</a>
@@ -1231,8 +1127,7 @@ using reference as shown above to set up dependencies correctly.
         <span class="property-type">string[]</span>
     </dt>
     <dd>{{% md %}}Redis specific field, defines command category rules.
-{{% /md %}}</dd>
-    <dt class="property-optional"
+{{% /md %}}</dd><dt class="property-optional"
             title="Optional">
         <span id="state_redisaclcommands_nodejs">
 <a href="#state_redisaclcommands_nodejs" style="color: inherit; text-decoration: inherit;">redis<wbr>Acl<wbr>Commands</a>
@@ -1241,8 +1136,7 @@ using reference as shown above to set up dependencies correctly.
         <span class="property-type">string[]</span>
     </dt>
     <dd>{{% md %}}Redis specific field, defines rules for individual commands.
-{{% /md %}}</dd>
-    <dt class="property-optional"
+{{% /md %}}</dd><dt class="property-optional"
             title="Optional">
         <span id="state_redisaclkeys_nodejs">
 <a href="#state_redisaclkeys_nodejs" style="color: inherit; text-decoration: inherit;">redis<wbr>Acl<wbr>Keys</a>
@@ -1251,8 +1145,7 @@ using reference as shown above to set up dependencies correctly.
         <span class="property-type">string[]</span>
     </dt>
     <dd>{{% md %}}Redis specific field, defines key access rules.
-{{% /md %}}</dd>
-    <dt class="property-optional"
+{{% /md %}}</dd><dt class="property-optional"
             title="Optional">
         <span id="state_servicename_nodejs">
 <a href="#state_servicename_nodejs" style="color: inherit; text-decoration: inherit;">service<wbr>Name</a>
@@ -1261,8 +1154,7 @@ using reference as shown above to set up dependencies correctly.
         <span class="property-type">string</span>
     </dt>
     <dd>{{% md %}}Service to link the user to
-{{% /md %}}</dd>
-    <dt class="property-optional"
+{{% /md %}}</dd><dt class="property-optional"
             title="Optional">
         <span id="state_type_nodejs">
 <a href="#state_type_nodejs" style="color: inherit; text-decoration: inherit;">type</a>
@@ -1271,8 +1163,7 @@ using reference as shown above to set up dependencies correctly.
         <span class="property-type">string</span>
     </dt>
     <dd>{{% md %}}tells whether the user is primary account or regular account.
-{{% /md %}}</dd>
-    <dt class="property-optional"
+{{% /md %}}</dd><dt class="property-optional"
             title="Optional">
         <span id="state_username_nodejs">
 <a href="#state_username_nodejs" style="color: inherit; text-decoration: inherit;">username</a>
@@ -1281,14 +1172,11 @@ using reference as shown above to set up dependencies correctly.
         <span class="property-type">string</span>
     </dt>
     <dd>{{% md %}}is the actual name of the user account.
-{{% /md %}}</dd>
-</dl>
+{{% /md %}}</dd></dl>
 {{% /choosable %}}
 
 {{% choosable language python %}}
-<dl class="resources-properties">
-
-    <dt class="property-optional"
+<dl class="resources-properties"><dt class="property-optional"
             title="Optional">
         <span id="state_access_cert_python">
 <a href="#state_access_cert_python" style="color: inherit; text-decoration: inherit;">access_<wbr>cert</a>
@@ -1297,8 +1185,7 @@ using reference as shown above to set up dependencies correctly.
         <span class="property-type">str</span>
     </dt>
     <dd>{{% md %}}is the access certificate of the user (not applicable for all services).
-{{% /md %}}</dd>
-    <dt class="property-optional"
+{{% /md %}}</dd><dt class="property-optional"
             title="Optional">
         <span id="state_access_key_python">
 <a href="#state_access_key_python" style="color: inherit; text-decoration: inherit;">access_<wbr>key</a>
@@ -1307,8 +1194,7 @@ using reference as shown above to set up dependencies correctly.
         <span class="property-type">str</span>
     </dt>
     <dd>{{% md %}}is the access key of the user (not applicable for all services).
-{{% /md %}}</dd>
-    <dt class="property-optional"
+{{% /md %}}</dd><dt class="property-optional"
             title="Optional">
         <span id="state_authentication_python">
 <a href="#state_authentication_python" style="color: inherit; text-decoration: inherit;">authentication</a>
@@ -1317,8 +1203,7 @@ using reference as shown above to set up dependencies correctly.
         <span class="property-type">str</span>
     </dt>
     <dd>{{% md %}}Authentication details
-{{% /md %}}</dd>
-    <dt class="property-optional"
+{{% /md %}}</dd><dt class="property-optional"
             title="Optional">
         <span id="state_password_python">
 <a href="#state_password_python" style="color: inherit; text-decoration: inherit;">password</a>
@@ -1327,8 +1212,7 @@ using reference as shown above to set up dependencies correctly.
         <span class="property-type">str</span>
     </dt>
     <dd>{{% md %}}Password of the user
-{{% /md %}}</dd>
-    <dt class="property-optional"
+{{% /md %}}</dd><dt class="property-optional"
             title="Optional">
         <span id="state_project_python">
 <a href="#state_project_python" style="color: inherit; text-decoration: inherit;">project</a>
@@ -1338,8 +1222,7 @@ using reference as shown above to set up dependencies correctly.
     </dt>
     <dd>{{% md %}}and `service_name` - (Required) define the project and service the user belongs to. They should be defined
 using reference as shown above to set up dependencies correctly.
-{{% /md %}}</dd>
-    <dt class="property-optional"
+{{% /md %}}</dd><dt class="property-optional"
             title="Optional">
         <span id="state_redis_acl_categories_python">
 <a href="#state_redis_acl_categories_python" style="color: inherit; text-decoration: inherit;">redis_<wbr>acl_<wbr>categories</a>
@@ -1348,8 +1231,7 @@ using reference as shown above to set up dependencies correctly.
         <span class="property-type">Sequence[str]</span>
     </dt>
     <dd>{{% md %}}Redis specific field, defines command category rules.
-{{% /md %}}</dd>
-    <dt class="property-optional"
+{{% /md %}}</dd><dt class="property-optional"
             title="Optional">
         <span id="state_redis_acl_commands_python">
 <a href="#state_redis_acl_commands_python" style="color: inherit; text-decoration: inherit;">redis_<wbr>acl_<wbr>commands</a>
@@ -1358,8 +1240,7 @@ using reference as shown above to set up dependencies correctly.
         <span class="property-type">Sequence[str]</span>
     </dt>
     <dd>{{% md %}}Redis specific field, defines rules for individual commands.
-{{% /md %}}</dd>
-    <dt class="property-optional"
+{{% /md %}}</dd><dt class="property-optional"
             title="Optional">
         <span id="state_redis_acl_keys_python">
 <a href="#state_redis_acl_keys_python" style="color: inherit; text-decoration: inherit;">redis_<wbr>acl_<wbr>keys</a>
@@ -1368,8 +1249,7 @@ using reference as shown above to set up dependencies correctly.
         <span class="property-type">Sequence[str]</span>
     </dt>
     <dd>{{% md %}}Redis specific field, defines key access rules.
-{{% /md %}}</dd>
-    <dt class="property-optional"
+{{% /md %}}</dd><dt class="property-optional"
             title="Optional">
         <span id="state_service_name_python">
 <a href="#state_service_name_python" style="color: inherit; text-decoration: inherit;">service_<wbr>name</a>
@@ -1378,8 +1258,7 @@ using reference as shown above to set up dependencies correctly.
         <span class="property-type">str</span>
     </dt>
     <dd>{{% md %}}Service to link the user to
-{{% /md %}}</dd>
-    <dt class="property-optional"
+{{% /md %}}</dd><dt class="property-optional"
             title="Optional">
         <span id="state_type_python">
 <a href="#state_type_python" style="color: inherit; text-decoration: inherit;">type</a>
@@ -1388,8 +1267,7 @@ using reference as shown above to set up dependencies correctly.
         <span class="property-type">str</span>
     </dt>
     <dd>{{% md %}}tells whether the user is primary account or regular account.
-{{% /md %}}</dd>
-    <dt class="property-optional"
+{{% /md %}}</dd><dt class="property-optional"
             title="Optional">
         <span id="state_username_python">
 <a href="#state_username_python" style="color: inherit; text-decoration: inherit;">username</a>
@@ -1398,8 +1276,7 @@ using reference as shown above to set up dependencies correctly.
         <span class="property-type">str</span>
     </dt>
     <dd>{{% md %}}is the actual name of the user account.
-{{% /md %}}</dd>
-</dl>
+{{% /md %}}</dd></dl>
 {{% /choosable %}}
 
 
@@ -1415,6 +1292,6 @@ using reference as shown above to set up dependencies correctly.
 	<dt>License</dt>
 	<dd>Apache-2.0</dd>
 	<dt>Notes</dt>
-	<dd>This Pulumi package is based on the [`aiven` Terraform Provider](https://github.com/aiven/terraform-provider-aiven).</dd>
+	<dd>{{% md %}}This Pulumi package is based on the [`aiven` Terraform Provider](https://github.com/aiven/terraform-provider-aiven).{{% /md %}}</dd>
 </dl>
 

@@ -22,11 +22,17 @@ To get more information about RouterBgpPeer, see:
     * [Google Cloud Router](https://cloud.google.com/router/docs/)
 
 {{% examples %}}
+
 ## Example Usage
 
 {{< chooser language "typescript,python,go,csharp" / >}}
+
+
 ### Router Peer Basic
-{{% example csharp %}}
+
+
+{{< example csharp >}}
+
 ```csharp
 using Pulumi;
 using Gcp = Pulumi.Gcp;
@@ -49,9 +55,12 @@ class MyStack : Stack
 }
 ```
 
-{{% /example %}}
 
-{{% example go %}}
+{{< /example >}}
+
+
+{{< example go >}}
+
 ```go
 package main
 
@@ -78,9 +87,12 @@ func main() {
 }
 ```
 
-{{% /example %}}
 
-{{% example python %}}
+{{< /example >}}
+
+
+{{< example python >}}
+
 ```python
 import pulumi
 import pulumi_gcp as gcp
@@ -94,9 +106,12 @@ peer = gcp.compute.RouterPeer("peer",
     router="my-router")
 ```
 
-{{% /example %}}
 
-{{% example typescript %}}
+{{< /example >}}
+
+
+{{< example typescript >}}
+
 
 ```typescript
 import * as pulumi from "@pulumi/pulumi";
@@ -112,9 +127,16 @@ const peer = new gcp.compute.RouterPeer("peer", {
 });
 ```
 
-{{% /example %}}
+
+{{< /example >}}
+
+
+
+
 
 {{% /examples %}}
+
+
 
 
 ## Create a RouterPeer Resource {#create}
@@ -139,9 +161,7 @@ const peer = new gcp.compute.RouterPeer("peer", {
 
 {{% choosable language nodejs %}}
 
-<dl class="resources-properties">
-  
-    <dt
+<dl class="resources-properties"><dt
         class="property-required" title="Required">
         <span>name</span>
         <span class="property-indicator"></span>
@@ -149,9 +169,7 @@ const peer = new gcp.compute.RouterPeer("peer", {
     </dt>
     <dd>
       The unique name of the resource.
-    </dd>
-  
-    <dt
+    </dd><dt
         class="property-required" title="Required">
         <span>args</span>
         <span class="property-indicator"></span>
@@ -159,9 +177,7 @@ const peer = new gcp.compute.RouterPeer("peer", {
     </dt>
     <dd>
       The arguments to resource properties.
-    </dd>
-  
-    <dt
+    </dd><dt
         class="property-optional" title="Optional">
         <span>opts</span>
         <span class="property-indicator"></span>
@@ -169,10 +185,7 @@ const peer = new gcp.compute.RouterPeer("peer", {
     </dt>
     <dd>
       Bag of options to control resource&#39;s behavior.
-    </dd>
-  
-
-</dl>
+    </dd></dl>
 
 {{% /choosable %}}
 
@@ -198,9 +211,7 @@ const peer = new gcp.compute.RouterPeer("peer", {
 
 {{% choosable language go %}}
 
-<dl class="resources-properties">
-  
-    <dt
+<dl class="resources-properties"><dt
         class="property-optional" title="Optional">
         <span>ctx</span>
         <span class="property-indicator"></span>
@@ -208,9 +219,7 @@ const peer = new gcp.compute.RouterPeer("peer", {
     </dt>
     <dd>
       Context object for the current deployment.
-    </dd>
-  
-    <dt
+    </dd><dt
         class="property-required" title="Required">
         <span>name</span>
         <span class="property-indicator"></span>
@@ -218,9 +227,7 @@ const peer = new gcp.compute.RouterPeer("peer", {
     </dt>
     <dd>
       The unique name of the resource.
-    </dd>
-  
-    <dt
+    </dd><dt
         class="property-required" title="Required">
         <span>args</span>
         <span class="property-indicator"></span>
@@ -228,9 +235,7 @@ const peer = new gcp.compute.RouterPeer("peer", {
     </dt>
     <dd>
       The arguments to resource properties.
-    </dd>
-  
-    <dt
+    </dd><dt
         class="property-optional" title="Optional">
         <span>opts</span>
         <span class="property-indicator"></span>
@@ -238,18 +243,13 @@ const peer = new gcp.compute.RouterPeer("peer", {
     </dt>
     <dd>
       Bag of options to control resource&#39;s behavior.
-    </dd>
-  
-
-</dl>
+    </dd></dl>
 
 {{% /choosable %}}
 
 {{% choosable language csharp %}}
 
-<dl class="resources-properties">
-  
-    <dt
+<dl class="resources-properties"><dt
         class="property-required" title="Required">
         <span>name</span>
         <span class="property-indicator"></span>
@@ -257,9 +257,7 @@ const peer = new gcp.compute.RouterPeer("peer", {
     </dt>
     <dd>
       The unique name of the resource.
-    </dd>
-  
-    <dt
+    </dd><dt
         class="property-required" title="Required">
         <span>args</span>
         <span class="property-indicator"></span>
@@ -267,9 +265,7 @@ const peer = new gcp.compute.RouterPeer("peer", {
     </dt>
     <dd>
       The arguments to resource properties.
-    </dd>
-  
-    <dt
+    </dd><dt
         class="property-optional" title="Optional">
         <span>opts</span>
         <span class="property-indicator"></span>
@@ -277,10 +273,7 @@ const peer = new gcp.compute.RouterPeer("peer", {
     </dt>
     <dd>
       Bag of options to control resource&#39;s behavior.
-    </dd>
-  
-
-</dl>
+    </dd></dl>
 
 {{% /choosable %}}
 
@@ -295,9 +288,7 @@ The RouterPeer resource accepts the following [input]({{< relref "/docs/intro/co
 
 
 {{% choosable language csharp %}}
-<dl class="resources-properties">
-
-    <dt class="property-required"
+<dl class="resources-properties"><dt class="property-required"
             title="Required">
         <span id="interface_csharp">
 <a href="#interface_csharp" style="color: inherit; text-decoration: inherit;">Interface</a>
@@ -306,8 +297,7 @@ The RouterPeer resource accepts the following [input]({{< relref "/docs/intro/co
         <span class="property-type">string</span>
     </dt>
     <dd>{{% md %}}Name of the interface the BGP peer is associated with.
-{{% /md %}}</dd>
-    <dt class="property-required"
+{{% /md %}}</dd><dt class="property-required"
             title="Required">
         <span id="peerasn_csharp">
 <a href="#peerasn_csharp" style="color: inherit; text-decoration: inherit;">Peer<wbr>Asn</a>
@@ -317,8 +307,7 @@ The RouterPeer resource accepts the following [input]({{< relref "/docs/intro/co
     </dt>
     <dd>{{% md %}}Peer BGP Autonomous System Number (ASN).
 Each BGP interface may use a different value.
-{{% /md %}}</dd>
-    <dt class="property-required"
+{{% /md %}}</dd><dt class="property-required"
             title="Required">
         <span id="peeripaddress_csharp">
 <a href="#peeripaddress_csharp" style="color: inherit; text-decoration: inherit;">Peer<wbr>Ip<wbr>Address</a>
@@ -328,8 +317,7 @@ Each BGP interface may use a different value.
     </dt>
     <dd>{{% md %}}IP address of the BGP interface outside Google Cloud Platform.
 Only IPv4 is supported.
-{{% /md %}}</dd>
-    <dt class="property-required"
+{{% /md %}}</dd><dt class="property-required"
             title="Required">
         <span id="router_csharp">
 <a href="#router_csharp" style="color: inherit; text-decoration: inherit;">Router</a>
@@ -338,8 +326,7 @@ Only IPv4 is supported.
         <span class="property-type">string</span>
     </dt>
     <dd>{{% md %}}The name of the Cloud Router in which this BgpPeer will be configured.
-{{% /md %}}</dd>
-    <dt class="property-optional"
+{{% /md %}}</dd><dt class="property-optional"
             title="Optional">
         <span id="advertisemode_csharp">
 <a href="#advertisemode_csharp" style="color: inherit; text-decoration: inherit;">Advertise<wbr>Mode</a>
@@ -351,8 +338,7 @@ Only IPv4 is supported.
 Valid values of this enum field are: `DEFAULT`, `CUSTOM`
 Default value is `DEFAULT`.
 Possible values are `DEFAULT` and `CUSTOM`.
-{{% /md %}}</dd>
-    <dt class="property-optional"
+{{% /md %}}</dd><dt class="property-optional"
             title="Optional">
         <span id="advertisedgroups_csharp">
 <a href="#advertisedgroups_csharp" style="color: inherit; text-decoration: inherit;">Advertised<wbr>Groups</a>
@@ -365,8 +351,7 @@ mode, which can take one of the following options:
 * `ALL_SUBNETS`: Advertises all available subnets, including peer VPC subnets.
 * `ALL_VPC_SUBNETS`: Advertises the router's own VPC subnets.
 * `ALL_PEER_VPC_SUBNETS`: Advertises peer subnets of the router's VPC network.
-{{% /md %}}</dd>
-    <dt class="property-optional"
+{{% /md %}}</dd><dt class="property-optional"
             title="Optional">
         <span id="advertisedipranges_csharp">
 <a href="#advertisedipranges_csharp" style="color: inherit; text-decoration: inherit;">Advertised<wbr>Ip<wbr>Ranges</a>
@@ -380,8 +365,7 @@ is `CUSTOM` and is advertised to all peers of the router. These IP
 ranges will be advertised in addition to any specified groups.
 Leave this field blank to advertise no custom IP ranges.
 Structure is documented below.
-{{% /md %}}</dd>
-    <dt class="property-optional"
+{{% /md %}}</dd><dt class="property-optional"
             title="Optional">
         <span id="advertisedroutepriority_csharp">
 <a href="#advertisedroutepriority_csharp" style="color: inherit; text-decoration: inherit;">Advertised<wbr>Route<wbr>Priority</a>
@@ -392,8 +376,7 @@ Structure is documented below.
     <dd>{{% md %}}The priority of routes advertised to this BGP peer.
 Where there is more than one matching route of maximum
 length, the routes with the lowest priority value win.
-{{% /md %}}</dd>
-    <dt class="property-optional"
+{{% /md %}}</dd><dt class="property-optional"
             title="Optional">
         <span id="name_csharp">
 <a href="#name_csharp" style="color: inherit; text-decoration: inherit;">Name</a>
@@ -407,8 +390,7 @@ long and match the regular expression `a-z?` which
 means the first character must be a lowercase letter, and all
 following characters must be a dash, lowercase letter, or digit,
 except the last character, which cannot be a dash.
-{{% /md %}}</dd>
-    <dt class="property-optional"
+{{% /md %}}</dd><dt class="property-optional"
             title="Optional">
         <span id="project_csharp">
 <a href="#project_csharp" style="color: inherit; text-decoration: inherit;">Project</a>
@@ -418,8 +400,7 @@ except the last character, which cannot be a dash.
     </dt>
     <dd>{{% md %}}The ID of the project in which the resource belongs.
 If it is not provided, the provider project is used.
-{{% /md %}}</dd>
-    <dt class="property-optional"
+{{% /md %}}</dd><dt class="property-optional"
             title="Optional">
         <span id="region_csharp">
 <a href="#region_csharp" style="color: inherit; text-decoration: inherit;">Region</a>
@@ -429,14 +410,11 @@ If it is not provided, the provider project is used.
     </dt>
     <dd>{{% md %}}Region where the router and BgpPeer reside.
 If it is not provided, the provider region is used.
-{{% /md %}}</dd>
-</dl>
+{{% /md %}}</dd></dl>
 {{% /choosable %}}
 
 {{% choosable language go %}}
-<dl class="resources-properties">
-
-    <dt class="property-required"
+<dl class="resources-properties"><dt class="property-required"
             title="Required">
         <span id="interface_go">
 <a href="#interface_go" style="color: inherit; text-decoration: inherit;">Interface</a>
@@ -445,8 +423,7 @@ If it is not provided, the provider region is used.
         <span class="property-type">string</span>
     </dt>
     <dd>{{% md %}}Name of the interface the BGP peer is associated with.
-{{% /md %}}</dd>
-    <dt class="property-required"
+{{% /md %}}</dd><dt class="property-required"
             title="Required">
         <span id="peerasn_go">
 <a href="#peerasn_go" style="color: inherit; text-decoration: inherit;">Peer<wbr>Asn</a>
@@ -456,8 +433,7 @@ If it is not provided, the provider region is used.
     </dt>
     <dd>{{% md %}}Peer BGP Autonomous System Number (ASN).
 Each BGP interface may use a different value.
-{{% /md %}}</dd>
-    <dt class="property-required"
+{{% /md %}}</dd><dt class="property-required"
             title="Required">
         <span id="peeripaddress_go">
 <a href="#peeripaddress_go" style="color: inherit; text-decoration: inherit;">Peer<wbr>Ip<wbr>Address</a>
@@ -467,8 +443,7 @@ Each BGP interface may use a different value.
     </dt>
     <dd>{{% md %}}IP address of the BGP interface outside Google Cloud Platform.
 Only IPv4 is supported.
-{{% /md %}}</dd>
-    <dt class="property-required"
+{{% /md %}}</dd><dt class="property-required"
             title="Required">
         <span id="router_go">
 <a href="#router_go" style="color: inherit; text-decoration: inherit;">Router</a>
@@ -477,8 +452,7 @@ Only IPv4 is supported.
         <span class="property-type">string</span>
     </dt>
     <dd>{{% md %}}The name of the Cloud Router in which this BgpPeer will be configured.
-{{% /md %}}</dd>
-    <dt class="property-optional"
+{{% /md %}}</dd><dt class="property-optional"
             title="Optional">
         <span id="advertisemode_go">
 <a href="#advertisemode_go" style="color: inherit; text-decoration: inherit;">Advertise<wbr>Mode</a>
@@ -490,8 +464,7 @@ Only IPv4 is supported.
 Valid values of this enum field are: `DEFAULT`, `CUSTOM`
 Default value is `DEFAULT`.
 Possible values are `DEFAULT` and `CUSTOM`.
-{{% /md %}}</dd>
-    <dt class="property-optional"
+{{% /md %}}</dd><dt class="property-optional"
             title="Optional">
         <span id="advertisedgroups_go">
 <a href="#advertisedgroups_go" style="color: inherit; text-decoration: inherit;">Advertised<wbr>Groups</a>
@@ -504,8 +477,7 @@ mode, which can take one of the following options:
 * `ALL_SUBNETS`: Advertises all available subnets, including peer VPC subnets.
 * `ALL_VPC_SUBNETS`: Advertises the router's own VPC subnets.
 * `ALL_PEER_VPC_SUBNETS`: Advertises peer subnets of the router's VPC network.
-{{% /md %}}</dd>
-    <dt class="property-optional"
+{{% /md %}}</dd><dt class="property-optional"
             title="Optional">
         <span id="advertisedipranges_go">
 <a href="#advertisedipranges_go" style="color: inherit; text-decoration: inherit;">Advertised<wbr>Ip<wbr>Ranges</a>
@@ -519,8 +491,7 @@ is `CUSTOM` and is advertised to all peers of the router. These IP
 ranges will be advertised in addition to any specified groups.
 Leave this field blank to advertise no custom IP ranges.
 Structure is documented below.
-{{% /md %}}</dd>
-    <dt class="property-optional"
+{{% /md %}}</dd><dt class="property-optional"
             title="Optional">
         <span id="advertisedroutepriority_go">
 <a href="#advertisedroutepriority_go" style="color: inherit; text-decoration: inherit;">Advertised<wbr>Route<wbr>Priority</a>
@@ -531,8 +502,7 @@ Structure is documented below.
     <dd>{{% md %}}The priority of routes advertised to this BGP peer.
 Where there is more than one matching route of maximum
 length, the routes with the lowest priority value win.
-{{% /md %}}</dd>
-    <dt class="property-optional"
+{{% /md %}}</dd><dt class="property-optional"
             title="Optional">
         <span id="name_go">
 <a href="#name_go" style="color: inherit; text-decoration: inherit;">Name</a>
@@ -546,8 +516,7 @@ long and match the regular expression `a-z?` which
 means the first character must be a lowercase letter, and all
 following characters must be a dash, lowercase letter, or digit,
 except the last character, which cannot be a dash.
-{{% /md %}}</dd>
-    <dt class="property-optional"
+{{% /md %}}</dd><dt class="property-optional"
             title="Optional">
         <span id="project_go">
 <a href="#project_go" style="color: inherit; text-decoration: inherit;">Project</a>
@@ -557,8 +526,7 @@ except the last character, which cannot be a dash.
     </dt>
     <dd>{{% md %}}The ID of the project in which the resource belongs.
 If it is not provided, the provider project is used.
-{{% /md %}}</dd>
-    <dt class="property-optional"
+{{% /md %}}</dd><dt class="property-optional"
             title="Optional">
         <span id="region_go">
 <a href="#region_go" style="color: inherit; text-decoration: inherit;">Region</a>
@@ -568,14 +536,11 @@ If it is not provided, the provider project is used.
     </dt>
     <dd>{{% md %}}Region where the router and BgpPeer reside.
 If it is not provided, the provider region is used.
-{{% /md %}}</dd>
-</dl>
+{{% /md %}}</dd></dl>
 {{% /choosable %}}
 
 {{% choosable language nodejs %}}
-<dl class="resources-properties">
-
-    <dt class="property-required"
+<dl class="resources-properties"><dt class="property-required"
             title="Required">
         <span id="interface_nodejs">
 <a href="#interface_nodejs" style="color: inherit; text-decoration: inherit;">interface</a>
@@ -584,8 +549,7 @@ If it is not provided, the provider region is used.
         <span class="property-type">string</span>
     </dt>
     <dd>{{% md %}}Name of the interface the BGP peer is associated with.
-{{% /md %}}</dd>
-    <dt class="property-required"
+{{% /md %}}</dd><dt class="property-required"
             title="Required">
         <span id="peerasn_nodejs">
 <a href="#peerasn_nodejs" style="color: inherit; text-decoration: inherit;">peer<wbr>Asn</a>
@@ -595,8 +559,7 @@ If it is not provided, the provider region is used.
     </dt>
     <dd>{{% md %}}Peer BGP Autonomous System Number (ASN).
 Each BGP interface may use a different value.
-{{% /md %}}</dd>
-    <dt class="property-required"
+{{% /md %}}</dd><dt class="property-required"
             title="Required">
         <span id="peeripaddress_nodejs">
 <a href="#peeripaddress_nodejs" style="color: inherit; text-decoration: inherit;">peer<wbr>Ip<wbr>Address</a>
@@ -606,8 +569,7 @@ Each BGP interface may use a different value.
     </dt>
     <dd>{{% md %}}IP address of the BGP interface outside Google Cloud Platform.
 Only IPv4 is supported.
-{{% /md %}}</dd>
-    <dt class="property-required"
+{{% /md %}}</dd><dt class="property-required"
             title="Required">
         <span id="router_nodejs">
 <a href="#router_nodejs" style="color: inherit; text-decoration: inherit;">router</a>
@@ -616,8 +578,7 @@ Only IPv4 is supported.
         <span class="property-type">string</span>
     </dt>
     <dd>{{% md %}}The name of the Cloud Router in which this BgpPeer will be configured.
-{{% /md %}}</dd>
-    <dt class="property-optional"
+{{% /md %}}</dd><dt class="property-optional"
             title="Optional">
         <span id="advertisemode_nodejs">
 <a href="#advertisemode_nodejs" style="color: inherit; text-decoration: inherit;">advertise<wbr>Mode</a>
@@ -629,8 +590,7 @@ Only IPv4 is supported.
 Valid values of this enum field are: `DEFAULT`, `CUSTOM`
 Default value is `DEFAULT`.
 Possible values are `DEFAULT` and `CUSTOM`.
-{{% /md %}}</dd>
-    <dt class="property-optional"
+{{% /md %}}</dd><dt class="property-optional"
             title="Optional">
         <span id="advertisedgroups_nodejs">
 <a href="#advertisedgroups_nodejs" style="color: inherit; text-decoration: inherit;">advertised<wbr>Groups</a>
@@ -643,8 +603,7 @@ mode, which can take one of the following options:
 * `ALL_SUBNETS`: Advertises all available subnets, including peer VPC subnets.
 * `ALL_VPC_SUBNETS`: Advertises the router's own VPC subnets.
 * `ALL_PEER_VPC_SUBNETS`: Advertises peer subnets of the router's VPC network.
-{{% /md %}}</dd>
-    <dt class="property-optional"
+{{% /md %}}</dd><dt class="property-optional"
             title="Optional">
         <span id="advertisedipranges_nodejs">
 <a href="#advertisedipranges_nodejs" style="color: inherit; text-decoration: inherit;">advertised<wbr>Ip<wbr>Ranges</a>
@@ -658,8 +617,7 @@ is `CUSTOM` and is advertised to all peers of the router. These IP
 ranges will be advertised in addition to any specified groups.
 Leave this field blank to advertise no custom IP ranges.
 Structure is documented below.
-{{% /md %}}</dd>
-    <dt class="property-optional"
+{{% /md %}}</dd><dt class="property-optional"
             title="Optional">
         <span id="advertisedroutepriority_nodejs">
 <a href="#advertisedroutepriority_nodejs" style="color: inherit; text-decoration: inherit;">advertised<wbr>Route<wbr>Priority</a>
@@ -670,8 +628,7 @@ Structure is documented below.
     <dd>{{% md %}}The priority of routes advertised to this BGP peer.
 Where there is more than one matching route of maximum
 length, the routes with the lowest priority value win.
-{{% /md %}}</dd>
-    <dt class="property-optional"
+{{% /md %}}</dd><dt class="property-optional"
             title="Optional">
         <span id="name_nodejs">
 <a href="#name_nodejs" style="color: inherit; text-decoration: inherit;">name</a>
@@ -685,8 +642,7 @@ long and match the regular expression `a-z?` which
 means the first character must be a lowercase letter, and all
 following characters must be a dash, lowercase letter, or digit,
 except the last character, which cannot be a dash.
-{{% /md %}}</dd>
-    <dt class="property-optional"
+{{% /md %}}</dd><dt class="property-optional"
             title="Optional">
         <span id="project_nodejs">
 <a href="#project_nodejs" style="color: inherit; text-decoration: inherit;">project</a>
@@ -696,8 +652,7 @@ except the last character, which cannot be a dash.
     </dt>
     <dd>{{% md %}}The ID of the project in which the resource belongs.
 If it is not provided, the provider project is used.
-{{% /md %}}</dd>
-    <dt class="property-optional"
+{{% /md %}}</dd><dt class="property-optional"
             title="Optional">
         <span id="region_nodejs">
 <a href="#region_nodejs" style="color: inherit; text-decoration: inherit;">region</a>
@@ -707,14 +662,11 @@ If it is not provided, the provider project is used.
     </dt>
     <dd>{{% md %}}Region where the router and BgpPeer reside.
 If it is not provided, the provider region is used.
-{{% /md %}}</dd>
-</dl>
+{{% /md %}}</dd></dl>
 {{% /choosable %}}
 
 {{% choosable language python %}}
-<dl class="resources-properties">
-
-    <dt class="property-required"
+<dl class="resources-properties"><dt class="property-required"
             title="Required">
         <span id="interface_python">
 <a href="#interface_python" style="color: inherit; text-decoration: inherit;">interface</a>
@@ -723,8 +675,7 @@ If it is not provided, the provider region is used.
         <span class="property-type">str</span>
     </dt>
     <dd>{{% md %}}Name of the interface the BGP peer is associated with.
-{{% /md %}}</dd>
-    <dt class="property-required"
+{{% /md %}}</dd><dt class="property-required"
             title="Required">
         <span id="peer_asn_python">
 <a href="#peer_asn_python" style="color: inherit; text-decoration: inherit;">peer_<wbr>asn</a>
@@ -734,8 +685,7 @@ If it is not provided, the provider region is used.
     </dt>
     <dd>{{% md %}}Peer BGP Autonomous System Number (ASN).
 Each BGP interface may use a different value.
-{{% /md %}}</dd>
-    <dt class="property-required"
+{{% /md %}}</dd><dt class="property-required"
             title="Required">
         <span id="peer_ip_address_python">
 <a href="#peer_ip_address_python" style="color: inherit; text-decoration: inherit;">peer_<wbr>ip_<wbr>address</a>
@@ -745,8 +695,7 @@ Each BGP interface may use a different value.
     </dt>
     <dd>{{% md %}}IP address of the BGP interface outside Google Cloud Platform.
 Only IPv4 is supported.
-{{% /md %}}</dd>
-    <dt class="property-required"
+{{% /md %}}</dd><dt class="property-required"
             title="Required">
         <span id="router_python">
 <a href="#router_python" style="color: inherit; text-decoration: inherit;">router</a>
@@ -755,8 +704,7 @@ Only IPv4 is supported.
         <span class="property-type">str</span>
     </dt>
     <dd>{{% md %}}The name of the Cloud Router in which this BgpPeer will be configured.
-{{% /md %}}</dd>
-    <dt class="property-optional"
+{{% /md %}}</dd><dt class="property-optional"
             title="Optional">
         <span id="advertise_mode_python">
 <a href="#advertise_mode_python" style="color: inherit; text-decoration: inherit;">advertise_<wbr>mode</a>
@@ -768,8 +716,7 @@ Only IPv4 is supported.
 Valid values of this enum field are: `DEFAULT`, `CUSTOM`
 Default value is `DEFAULT`.
 Possible values are `DEFAULT` and `CUSTOM`.
-{{% /md %}}</dd>
-    <dt class="property-optional"
+{{% /md %}}</dd><dt class="property-optional"
             title="Optional">
         <span id="advertised_groups_python">
 <a href="#advertised_groups_python" style="color: inherit; text-decoration: inherit;">advertised_<wbr>groups</a>
@@ -782,8 +729,7 @@ mode, which can take one of the following options:
 * `ALL_SUBNETS`: Advertises all available subnets, including peer VPC subnets.
 * `ALL_VPC_SUBNETS`: Advertises the router's own VPC subnets.
 * `ALL_PEER_VPC_SUBNETS`: Advertises peer subnets of the router's VPC network.
-{{% /md %}}</dd>
-    <dt class="property-optional"
+{{% /md %}}</dd><dt class="property-optional"
             title="Optional">
         <span id="advertised_ip_ranges_python">
 <a href="#advertised_ip_ranges_python" style="color: inherit; text-decoration: inherit;">advertised_<wbr>ip_<wbr>ranges</a>
@@ -797,8 +743,7 @@ is `CUSTOM` and is advertised to all peers of the router. These IP
 ranges will be advertised in addition to any specified groups.
 Leave this field blank to advertise no custom IP ranges.
 Structure is documented below.
-{{% /md %}}</dd>
-    <dt class="property-optional"
+{{% /md %}}</dd><dt class="property-optional"
             title="Optional">
         <span id="advertised_route_priority_python">
 <a href="#advertised_route_priority_python" style="color: inherit; text-decoration: inherit;">advertised_<wbr>route_<wbr>priority</a>
@@ -809,8 +754,7 @@ Structure is documented below.
     <dd>{{% md %}}The priority of routes advertised to this BGP peer.
 Where there is more than one matching route of maximum
 length, the routes with the lowest priority value win.
-{{% /md %}}</dd>
-    <dt class="property-optional"
+{{% /md %}}</dd><dt class="property-optional"
             title="Optional">
         <span id="name_python">
 <a href="#name_python" style="color: inherit; text-decoration: inherit;">name</a>
@@ -824,8 +768,7 @@ long and match the regular expression `a-z?` which
 means the first character must be a lowercase letter, and all
 following characters must be a dash, lowercase letter, or digit,
 except the last character, which cannot be a dash.
-{{% /md %}}</dd>
-    <dt class="property-optional"
+{{% /md %}}</dd><dt class="property-optional"
             title="Optional">
         <span id="project_python">
 <a href="#project_python" style="color: inherit; text-decoration: inherit;">project</a>
@@ -835,8 +778,7 @@ except the last character, which cannot be a dash.
     </dt>
     <dd>{{% md %}}The ID of the project in which the resource belongs.
 If it is not provided, the provider project is used.
-{{% /md %}}</dd>
-    <dt class="property-optional"
+{{% /md %}}</dd><dt class="property-optional"
             title="Optional">
         <span id="region_python">
 <a href="#region_python" style="color: inherit; text-decoration: inherit;">region</a>
@@ -846,8 +788,7 @@ If it is not provided, the provider project is used.
     </dt>
     <dd>{{% md %}}Region where the router and BgpPeer reside.
 If it is not provided, the provider region is used.
-{{% /md %}}</dd>
-</dl>
+{{% /md %}}</dd></dl>
 {{% /choosable %}}
 
 
@@ -858,9 +799,7 @@ All [input](#inputs) properties are implicitly available as output properties. A
 
 
 {{% choosable language csharp %}}
-<dl class="resources-properties">
-
-    <dt class="property-"
+<dl class="resources-properties"><dt class="property-"
             title="">
         <span id="id_csharp">
 <a href="#id_csharp" style="color: inherit; text-decoration: inherit;">Id</a>
@@ -868,8 +807,7 @@ All [input](#inputs) properties are implicitly available as output properties. A
         <span class="property-indicator"></span>
         <span class="property-type">string</span>
     </dt>
-    <dd>{{% md %}}The provider-assigned unique ID for this managed resource.{{% /md %}}</dd>
-    <dt class="property-"
+    <dd>{{% md %}}The provider-assigned unique ID for this managed resource.{{% /md %}}</dd><dt class="property-"
             title="">
         <span id="ipaddress_csharp">
 <a href="#ipaddress_csharp" style="color: inherit; text-decoration: inherit;">Ip<wbr>Address</a>
@@ -878,8 +816,7 @@ All [input](#inputs) properties are implicitly available as output properties. A
         <span class="property-type">string</span>
     </dt>
     <dd>{{% md %}}IP address of the interface inside Google Cloud Platform. Only IPv4 is supported.
-{{% /md %}}</dd>
-    <dt class="property-"
+{{% /md %}}</dd><dt class="property-"
             title="">
         <span id="managementtype_csharp">
 <a href="#managementtype_csharp" style="color: inherit; text-decoration: inherit;">Management<wbr>Type</a>
@@ -891,14 +828,11 @@ All [input](#inputs) properties are implicitly available as output properties. A
 you or other users * 'MANAGED_BY_ATTACHMENT' is a BGP peer that is configured and managed by Cloud Interconnect,
 specifically by an InterconnectAttachment of type PARTNER. Google automatically creates, updates, and deletes this type
 of BGP peer when the PARTNER InterconnectAttachment is created, updated, or deleted.
-{{% /md %}}</dd>
-</dl>
+{{% /md %}}</dd></dl>
 {{% /choosable %}}
 
 {{% choosable language go %}}
-<dl class="resources-properties">
-
-    <dt class="property-"
+<dl class="resources-properties"><dt class="property-"
             title="">
         <span id="id_go">
 <a href="#id_go" style="color: inherit; text-decoration: inherit;">Id</a>
@@ -906,8 +840,7 @@ of BGP peer when the PARTNER InterconnectAttachment is created, updated, or dele
         <span class="property-indicator"></span>
         <span class="property-type">string</span>
     </dt>
-    <dd>{{% md %}}The provider-assigned unique ID for this managed resource.{{% /md %}}</dd>
-    <dt class="property-"
+    <dd>{{% md %}}The provider-assigned unique ID for this managed resource.{{% /md %}}</dd><dt class="property-"
             title="">
         <span id="ipaddress_go">
 <a href="#ipaddress_go" style="color: inherit; text-decoration: inherit;">Ip<wbr>Address</a>
@@ -916,8 +849,7 @@ of BGP peer when the PARTNER InterconnectAttachment is created, updated, or dele
         <span class="property-type">string</span>
     </dt>
     <dd>{{% md %}}IP address of the interface inside Google Cloud Platform. Only IPv4 is supported.
-{{% /md %}}</dd>
-    <dt class="property-"
+{{% /md %}}</dd><dt class="property-"
             title="">
         <span id="managementtype_go">
 <a href="#managementtype_go" style="color: inherit; text-decoration: inherit;">Management<wbr>Type</a>
@@ -929,14 +861,11 @@ of BGP peer when the PARTNER InterconnectAttachment is created, updated, or dele
 you or other users * 'MANAGED_BY_ATTACHMENT' is a BGP peer that is configured and managed by Cloud Interconnect,
 specifically by an InterconnectAttachment of type PARTNER. Google automatically creates, updates, and deletes this type
 of BGP peer when the PARTNER InterconnectAttachment is created, updated, or deleted.
-{{% /md %}}</dd>
-</dl>
+{{% /md %}}</dd></dl>
 {{% /choosable %}}
 
 {{% choosable language nodejs %}}
-<dl class="resources-properties">
-
-    <dt class="property-"
+<dl class="resources-properties"><dt class="property-"
             title="">
         <span id="id_nodejs">
 <a href="#id_nodejs" style="color: inherit; text-decoration: inherit;">id</a>
@@ -944,8 +873,7 @@ of BGP peer when the PARTNER InterconnectAttachment is created, updated, or dele
         <span class="property-indicator"></span>
         <span class="property-type">string</span>
     </dt>
-    <dd>{{% md %}}The provider-assigned unique ID for this managed resource.{{% /md %}}</dd>
-    <dt class="property-"
+    <dd>{{% md %}}The provider-assigned unique ID for this managed resource.{{% /md %}}</dd><dt class="property-"
             title="">
         <span id="ipaddress_nodejs">
 <a href="#ipaddress_nodejs" style="color: inherit; text-decoration: inherit;">ip<wbr>Address</a>
@@ -954,8 +882,7 @@ of BGP peer when the PARTNER InterconnectAttachment is created, updated, or dele
         <span class="property-type">string</span>
     </dt>
     <dd>{{% md %}}IP address of the interface inside Google Cloud Platform. Only IPv4 is supported.
-{{% /md %}}</dd>
-    <dt class="property-"
+{{% /md %}}</dd><dt class="property-"
             title="">
         <span id="managementtype_nodejs">
 <a href="#managementtype_nodejs" style="color: inherit; text-decoration: inherit;">management<wbr>Type</a>
@@ -967,14 +894,11 @@ of BGP peer when the PARTNER InterconnectAttachment is created, updated, or dele
 you or other users * 'MANAGED_BY_ATTACHMENT' is a BGP peer that is configured and managed by Cloud Interconnect,
 specifically by an InterconnectAttachment of type PARTNER. Google automatically creates, updates, and deletes this type
 of BGP peer when the PARTNER InterconnectAttachment is created, updated, or deleted.
-{{% /md %}}</dd>
-</dl>
+{{% /md %}}</dd></dl>
 {{% /choosable %}}
 
 {{% choosable language python %}}
-<dl class="resources-properties">
-
-    <dt class="property-"
+<dl class="resources-properties"><dt class="property-"
             title="">
         <span id="id_python">
 <a href="#id_python" style="color: inherit; text-decoration: inherit;">id</a>
@@ -982,8 +906,7 @@ of BGP peer when the PARTNER InterconnectAttachment is created, updated, or dele
         <span class="property-indicator"></span>
         <span class="property-type">str</span>
     </dt>
-    <dd>{{% md %}}The provider-assigned unique ID for this managed resource.{{% /md %}}</dd>
-    <dt class="property-"
+    <dd>{{% md %}}The provider-assigned unique ID for this managed resource.{{% /md %}}</dd><dt class="property-"
             title="">
         <span id="ip_address_python">
 <a href="#ip_address_python" style="color: inherit; text-decoration: inherit;">ip_<wbr>address</a>
@@ -992,8 +915,7 @@ of BGP peer when the PARTNER InterconnectAttachment is created, updated, or dele
         <span class="property-type">str</span>
     </dt>
     <dd>{{% md %}}IP address of the interface inside Google Cloud Platform. Only IPv4 is supported.
-{{% /md %}}</dd>
-    <dt class="property-"
+{{% /md %}}</dd><dt class="property-"
             title="">
         <span id="management_type_python">
 <a href="#management_type_python" style="color: inherit; text-decoration: inherit;">management_<wbr>type</a>
@@ -1005,8 +927,7 @@ of BGP peer when the PARTNER InterconnectAttachment is created, updated, or dele
 you or other users * 'MANAGED_BY_ATTACHMENT' is a BGP peer that is configured and managed by Cloud Interconnect,
 specifically by an InterconnectAttachment of type PARTNER. Google automatically creates, updates, and deletes this type
 of BGP peer when the PARTNER InterconnectAttachment is created, updated, or deleted.
-{{% /md %}}</dd>
-</dl>
+{{% /md %}}</dd></dl>
 {{% /choosable %}}
 
 
@@ -1133,9 +1054,7 @@ The following state arguments are supported:
 
 
 {{% choosable language csharp %}}
-<dl class="resources-properties">
-
-    <dt class="property-optional"
+<dl class="resources-properties"><dt class="property-optional"
             title="Optional">
         <span id="state_advertisemode_csharp">
 <a href="#state_advertisemode_csharp" style="color: inherit; text-decoration: inherit;">Advertise<wbr>Mode</a>
@@ -1147,8 +1066,7 @@ The following state arguments are supported:
 Valid values of this enum field are: `DEFAULT`, `CUSTOM`
 Default value is `DEFAULT`.
 Possible values are `DEFAULT` and `CUSTOM`.
-{{% /md %}}</dd>
-    <dt class="property-optional"
+{{% /md %}}</dd><dt class="property-optional"
             title="Optional">
         <span id="state_advertisedgroups_csharp">
 <a href="#state_advertisedgroups_csharp" style="color: inherit; text-decoration: inherit;">Advertised<wbr>Groups</a>
@@ -1161,8 +1079,7 @@ mode, which can take one of the following options:
 * `ALL_SUBNETS`: Advertises all available subnets, including peer VPC subnets.
 * `ALL_VPC_SUBNETS`: Advertises the router's own VPC subnets.
 * `ALL_PEER_VPC_SUBNETS`: Advertises peer subnets of the router's VPC network.
-{{% /md %}}</dd>
-    <dt class="property-optional"
+{{% /md %}}</dd><dt class="property-optional"
             title="Optional">
         <span id="state_advertisedipranges_csharp">
 <a href="#state_advertisedipranges_csharp" style="color: inherit; text-decoration: inherit;">Advertised<wbr>Ip<wbr>Ranges</a>
@@ -1176,8 +1093,7 @@ is `CUSTOM` and is advertised to all peers of the router. These IP
 ranges will be advertised in addition to any specified groups.
 Leave this field blank to advertise no custom IP ranges.
 Structure is documented below.
-{{% /md %}}</dd>
-    <dt class="property-optional"
+{{% /md %}}</dd><dt class="property-optional"
             title="Optional">
         <span id="state_advertisedroutepriority_csharp">
 <a href="#state_advertisedroutepriority_csharp" style="color: inherit; text-decoration: inherit;">Advertised<wbr>Route<wbr>Priority</a>
@@ -1188,8 +1104,7 @@ Structure is documented below.
     <dd>{{% md %}}The priority of routes advertised to this BGP peer.
 Where there is more than one matching route of maximum
 length, the routes with the lowest priority value win.
-{{% /md %}}</dd>
-    <dt class="property-optional"
+{{% /md %}}</dd><dt class="property-optional"
             title="Optional">
         <span id="state_interface_csharp">
 <a href="#state_interface_csharp" style="color: inherit; text-decoration: inherit;">Interface</a>
@@ -1198,8 +1113,7 @@ length, the routes with the lowest priority value win.
         <span class="property-type">string</span>
     </dt>
     <dd>{{% md %}}Name of the interface the BGP peer is associated with.
-{{% /md %}}</dd>
-    <dt class="property-optional"
+{{% /md %}}</dd><dt class="property-optional"
             title="Optional">
         <span id="state_ipaddress_csharp">
 <a href="#state_ipaddress_csharp" style="color: inherit; text-decoration: inherit;">Ip<wbr>Address</a>
@@ -1208,8 +1122,7 @@ length, the routes with the lowest priority value win.
         <span class="property-type">string</span>
     </dt>
     <dd>{{% md %}}IP address of the interface inside Google Cloud Platform. Only IPv4 is supported.
-{{% /md %}}</dd>
-    <dt class="property-optional"
+{{% /md %}}</dd><dt class="property-optional"
             title="Optional">
         <span id="state_managementtype_csharp">
 <a href="#state_managementtype_csharp" style="color: inherit; text-decoration: inherit;">Management<wbr>Type</a>
@@ -1221,8 +1134,7 @@ length, the routes with the lowest priority value win.
 you or other users * 'MANAGED_BY_ATTACHMENT' is a BGP peer that is configured and managed by Cloud Interconnect,
 specifically by an InterconnectAttachment of type PARTNER. Google automatically creates, updates, and deletes this type
 of BGP peer when the PARTNER InterconnectAttachment is created, updated, or deleted.
-{{% /md %}}</dd>
-    <dt class="property-optional"
+{{% /md %}}</dd><dt class="property-optional"
             title="Optional">
         <span id="state_name_csharp">
 <a href="#state_name_csharp" style="color: inherit; text-decoration: inherit;">Name</a>
@@ -1236,8 +1148,7 @@ long and match the regular expression `a-z?` which
 means the first character must be a lowercase letter, and all
 following characters must be a dash, lowercase letter, or digit,
 except the last character, which cannot be a dash.
-{{% /md %}}</dd>
-    <dt class="property-optional"
+{{% /md %}}</dd><dt class="property-optional"
             title="Optional">
         <span id="state_peerasn_csharp">
 <a href="#state_peerasn_csharp" style="color: inherit; text-decoration: inherit;">Peer<wbr>Asn</a>
@@ -1247,8 +1158,7 @@ except the last character, which cannot be a dash.
     </dt>
     <dd>{{% md %}}Peer BGP Autonomous System Number (ASN).
 Each BGP interface may use a different value.
-{{% /md %}}</dd>
-    <dt class="property-optional"
+{{% /md %}}</dd><dt class="property-optional"
             title="Optional">
         <span id="state_peeripaddress_csharp">
 <a href="#state_peeripaddress_csharp" style="color: inherit; text-decoration: inherit;">Peer<wbr>Ip<wbr>Address</a>
@@ -1258,8 +1168,7 @@ Each BGP interface may use a different value.
     </dt>
     <dd>{{% md %}}IP address of the BGP interface outside Google Cloud Platform.
 Only IPv4 is supported.
-{{% /md %}}</dd>
-    <dt class="property-optional"
+{{% /md %}}</dd><dt class="property-optional"
             title="Optional">
         <span id="state_project_csharp">
 <a href="#state_project_csharp" style="color: inherit; text-decoration: inherit;">Project</a>
@@ -1269,8 +1178,7 @@ Only IPv4 is supported.
     </dt>
     <dd>{{% md %}}The ID of the project in which the resource belongs.
 If it is not provided, the provider project is used.
-{{% /md %}}</dd>
-    <dt class="property-optional"
+{{% /md %}}</dd><dt class="property-optional"
             title="Optional">
         <span id="state_region_csharp">
 <a href="#state_region_csharp" style="color: inherit; text-decoration: inherit;">Region</a>
@@ -1280,8 +1188,7 @@ If it is not provided, the provider project is used.
     </dt>
     <dd>{{% md %}}Region where the router and BgpPeer reside.
 If it is not provided, the provider region is used.
-{{% /md %}}</dd>
-    <dt class="property-optional"
+{{% /md %}}</dd><dt class="property-optional"
             title="Optional">
         <span id="state_router_csharp">
 <a href="#state_router_csharp" style="color: inherit; text-decoration: inherit;">Router</a>
@@ -1290,14 +1197,11 @@ If it is not provided, the provider region is used.
         <span class="property-type">string</span>
     </dt>
     <dd>{{% md %}}The name of the Cloud Router in which this BgpPeer will be configured.
-{{% /md %}}</dd>
-</dl>
+{{% /md %}}</dd></dl>
 {{% /choosable %}}
 
 {{% choosable language go %}}
-<dl class="resources-properties">
-
-    <dt class="property-optional"
+<dl class="resources-properties"><dt class="property-optional"
             title="Optional">
         <span id="state_advertisemode_go">
 <a href="#state_advertisemode_go" style="color: inherit; text-decoration: inherit;">Advertise<wbr>Mode</a>
@@ -1309,8 +1213,7 @@ If it is not provided, the provider region is used.
 Valid values of this enum field are: `DEFAULT`, `CUSTOM`
 Default value is `DEFAULT`.
 Possible values are `DEFAULT` and `CUSTOM`.
-{{% /md %}}</dd>
-    <dt class="property-optional"
+{{% /md %}}</dd><dt class="property-optional"
             title="Optional">
         <span id="state_advertisedgroups_go">
 <a href="#state_advertisedgroups_go" style="color: inherit; text-decoration: inherit;">Advertised<wbr>Groups</a>
@@ -1323,8 +1226,7 @@ mode, which can take one of the following options:
 * `ALL_SUBNETS`: Advertises all available subnets, including peer VPC subnets.
 * `ALL_VPC_SUBNETS`: Advertises the router's own VPC subnets.
 * `ALL_PEER_VPC_SUBNETS`: Advertises peer subnets of the router's VPC network.
-{{% /md %}}</dd>
-    <dt class="property-optional"
+{{% /md %}}</dd><dt class="property-optional"
             title="Optional">
         <span id="state_advertisedipranges_go">
 <a href="#state_advertisedipranges_go" style="color: inherit; text-decoration: inherit;">Advertised<wbr>Ip<wbr>Ranges</a>
@@ -1338,8 +1240,7 @@ is `CUSTOM` and is advertised to all peers of the router. These IP
 ranges will be advertised in addition to any specified groups.
 Leave this field blank to advertise no custom IP ranges.
 Structure is documented below.
-{{% /md %}}</dd>
-    <dt class="property-optional"
+{{% /md %}}</dd><dt class="property-optional"
             title="Optional">
         <span id="state_advertisedroutepriority_go">
 <a href="#state_advertisedroutepriority_go" style="color: inherit; text-decoration: inherit;">Advertised<wbr>Route<wbr>Priority</a>
@@ -1350,8 +1251,7 @@ Structure is documented below.
     <dd>{{% md %}}The priority of routes advertised to this BGP peer.
 Where there is more than one matching route of maximum
 length, the routes with the lowest priority value win.
-{{% /md %}}</dd>
-    <dt class="property-optional"
+{{% /md %}}</dd><dt class="property-optional"
             title="Optional">
         <span id="state_interface_go">
 <a href="#state_interface_go" style="color: inherit; text-decoration: inherit;">Interface</a>
@@ -1360,8 +1260,7 @@ length, the routes with the lowest priority value win.
         <span class="property-type">string</span>
     </dt>
     <dd>{{% md %}}Name of the interface the BGP peer is associated with.
-{{% /md %}}</dd>
-    <dt class="property-optional"
+{{% /md %}}</dd><dt class="property-optional"
             title="Optional">
         <span id="state_ipaddress_go">
 <a href="#state_ipaddress_go" style="color: inherit; text-decoration: inherit;">Ip<wbr>Address</a>
@@ -1370,8 +1269,7 @@ length, the routes with the lowest priority value win.
         <span class="property-type">string</span>
     </dt>
     <dd>{{% md %}}IP address of the interface inside Google Cloud Platform. Only IPv4 is supported.
-{{% /md %}}</dd>
-    <dt class="property-optional"
+{{% /md %}}</dd><dt class="property-optional"
             title="Optional">
         <span id="state_managementtype_go">
 <a href="#state_managementtype_go" style="color: inherit; text-decoration: inherit;">Management<wbr>Type</a>
@@ -1383,8 +1281,7 @@ length, the routes with the lowest priority value win.
 you or other users * 'MANAGED_BY_ATTACHMENT' is a BGP peer that is configured and managed by Cloud Interconnect,
 specifically by an InterconnectAttachment of type PARTNER. Google automatically creates, updates, and deletes this type
 of BGP peer when the PARTNER InterconnectAttachment is created, updated, or deleted.
-{{% /md %}}</dd>
-    <dt class="property-optional"
+{{% /md %}}</dd><dt class="property-optional"
             title="Optional">
         <span id="state_name_go">
 <a href="#state_name_go" style="color: inherit; text-decoration: inherit;">Name</a>
@@ -1398,8 +1295,7 @@ long and match the regular expression `a-z?` which
 means the first character must be a lowercase letter, and all
 following characters must be a dash, lowercase letter, or digit,
 except the last character, which cannot be a dash.
-{{% /md %}}</dd>
-    <dt class="property-optional"
+{{% /md %}}</dd><dt class="property-optional"
             title="Optional">
         <span id="state_peerasn_go">
 <a href="#state_peerasn_go" style="color: inherit; text-decoration: inherit;">Peer<wbr>Asn</a>
@@ -1409,8 +1305,7 @@ except the last character, which cannot be a dash.
     </dt>
     <dd>{{% md %}}Peer BGP Autonomous System Number (ASN).
 Each BGP interface may use a different value.
-{{% /md %}}</dd>
-    <dt class="property-optional"
+{{% /md %}}</dd><dt class="property-optional"
             title="Optional">
         <span id="state_peeripaddress_go">
 <a href="#state_peeripaddress_go" style="color: inherit; text-decoration: inherit;">Peer<wbr>Ip<wbr>Address</a>
@@ -1420,8 +1315,7 @@ Each BGP interface may use a different value.
     </dt>
     <dd>{{% md %}}IP address of the BGP interface outside Google Cloud Platform.
 Only IPv4 is supported.
-{{% /md %}}</dd>
-    <dt class="property-optional"
+{{% /md %}}</dd><dt class="property-optional"
             title="Optional">
         <span id="state_project_go">
 <a href="#state_project_go" style="color: inherit; text-decoration: inherit;">Project</a>
@@ -1431,8 +1325,7 @@ Only IPv4 is supported.
     </dt>
     <dd>{{% md %}}The ID of the project in which the resource belongs.
 If it is not provided, the provider project is used.
-{{% /md %}}</dd>
-    <dt class="property-optional"
+{{% /md %}}</dd><dt class="property-optional"
             title="Optional">
         <span id="state_region_go">
 <a href="#state_region_go" style="color: inherit; text-decoration: inherit;">Region</a>
@@ -1442,8 +1335,7 @@ If it is not provided, the provider project is used.
     </dt>
     <dd>{{% md %}}Region where the router and BgpPeer reside.
 If it is not provided, the provider region is used.
-{{% /md %}}</dd>
-    <dt class="property-optional"
+{{% /md %}}</dd><dt class="property-optional"
             title="Optional">
         <span id="state_router_go">
 <a href="#state_router_go" style="color: inherit; text-decoration: inherit;">Router</a>
@@ -1452,14 +1344,11 @@ If it is not provided, the provider region is used.
         <span class="property-type">string</span>
     </dt>
     <dd>{{% md %}}The name of the Cloud Router in which this BgpPeer will be configured.
-{{% /md %}}</dd>
-</dl>
+{{% /md %}}</dd></dl>
 {{% /choosable %}}
 
 {{% choosable language nodejs %}}
-<dl class="resources-properties">
-
-    <dt class="property-optional"
+<dl class="resources-properties"><dt class="property-optional"
             title="Optional">
         <span id="state_advertisemode_nodejs">
 <a href="#state_advertisemode_nodejs" style="color: inherit; text-decoration: inherit;">advertise<wbr>Mode</a>
@@ -1471,8 +1360,7 @@ If it is not provided, the provider region is used.
 Valid values of this enum field are: `DEFAULT`, `CUSTOM`
 Default value is `DEFAULT`.
 Possible values are `DEFAULT` and `CUSTOM`.
-{{% /md %}}</dd>
-    <dt class="property-optional"
+{{% /md %}}</dd><dt class="property-optional"
             title="Optional">
         <span id="state_advertisedgroups_nodejs">
 <a href="#state_advertisedgroups_nodejs" style="color: inherit; text-decoration: inherit;">advertised<wbr>Groups</a>
@@ -1485,8 +1373,7 @@ mode, which can take one of the following options:
 * `ALL_SUBNETS`: Advertises all available subnets, including peer VPC subnets.
 * `ALL_VPC_SUBNETS`: Advertises the router's own VPC subnets.
 * `ALL_PEER_VPC_SUBNETS`: Advertises peer subnets of the router's VPC network.
-{{% /md %}}</dd>
-    <dt class="property-optional"
+{{% /md %}}</dd><dt class="property-optional"
             title="Optional">
         <span id="state_advertisedipranges_nodejs">
 <a href="#state_advertisedipranges_nodejs" style="color: inherit; text-decoration: inherit;">advertised<wbr>Ip<wbr>Ranges</a>
@@ -1500,8 +1387,7 @@ is `CUSTOM` and is advertised to all peers of the router. These IP
 ranges will be advertised in addition to any specified groups.
 Leave this field blank to advertise no custom IP ranges.
 Structure is documented below.
-{{% /md %}}</dd>
-    <dt class="property-optional"
+{{% /md %}}</dd><dt class="property-optional"
             title="Optional">
         <span id="state_advertisedroutepriority_nodejs">
 <a href="#state_advertisedroutepriority_nodejs" style="color: inherit; text-decoration: inherit;">advertised<wbr>Route<wbr>Priority</a>
@@ -1512,8 +1398,7 @@ Structure is documented below.
     <dd>{{% md %}}The priority of routes advertised to this BGP peer.
 Where there is more than one matching route of maximum
 length, the routes with the lowest priority value win.
-{{% /md %}}</dd>
-    <dt class="property-optional"
+{{% /md %}}</dd><dt class="property-optional"
             title="Optional">
         <span id="state_interface_nodejs">
 <a href="#state_interface_nodejs" style="color: inherit; text-decoration: inherit;">interface</a>
@@ -1522,8 +1407,7 @@ length, the routes with the lowest priority value win.
         <span class="property-type">string</span>
     </dt>
     <dd>{{% md %}}Name of the interface the BGP peer is associated with.
-{{% /md %}}</dd>
-    <dt class="property-optional"
+{{% /md %}}</dd><dt class="property-optional"
             title="Optional">
         <span id="state_ipaddress_nodejs">
 <a href="#state_ipaddress_nodejs" style="color: inherit; text-decoration: inherit;">ip<wbr>Address</a>
@@ -1532,8 +1416,7 @@ length, the routes with the lowest priority value win.
         <span class="property-type">string</span>
     </dt>
     <dd>{{% md %}}IP address of the interface inside Google Cloud Platform. Only IPv4 is supported.
-{{% /md %}}</dd>
-    <dt class="property-optional"
+{{% /md %}}</dd><dt class="property-optional"
             title="Optional">
         <span id="state_managementtype_nodejs">
 <a href="#state_managementtype_nodejs" style="color: inherit; text-decoration: inherit;">management<wbr>Type</a>
@@ -1545,8 +1428,7 @@ length, the routes with the lowest priority value win.
 you or other users * 'MANAGED_BY_ATTACHMENT' is a BGP peer that is configured and managed by Cloud Interconnect,
 specifically by an InterconnectAttachment of type PARTNER. Google automatically creates, updates, and deletes this type
 of BGP peer when the PARTNER InterconnectAttachment is created, updated, or deleted.
-{{% /md %}}</dd>
-    <dt class="property-optional"
+{{% /md %}}</dd><dt class="property-optional"
             title="Optional">
         <span id="state_name_nodejs">
 <a href="#state_name_nodejs" style="color: inherit; text-decoration: inherit;">name</a>
@@ -1560,8 +1442,7 @@ long and match the regular expression `a-z?` which
 means the first character must be a lowercase letter, and all
 following characters must be a dash, lowercase letter, or digit,
 except the last character, which cannot be a dash.
-{{% /md %}}</dd>
-    <dt class="property-optional"
+{{% /md %}}</dd><dt class="property-optional"
             title="Optional">
         <span id="state_peerasn_nodejs">
 <a href="#state_peerasn_nodejs" style="color: inherit; text-decoration: inherit;">peer<wbr>Asn</a>
@@ -1571,8 +1452,7 @@ except the last character, which cannot be a dash.
     </dt>
     <dd>{{% md %}}Peer BGP Autonomous System Number (ASN).
 Each BGP interface may use a different value.
-{{% /md %}}</dd>
-    <dt class="property-optional"
+{{% /md %}}</dd><dt class="property-optional"
             title="Optional">
         <span id="state_peeripaddress_nodejs">
 <a href="#state_peeripaddress_nodejs" style="color: inherit; text-decoration: inherit;">peer<wbr>Ip<wbr>Address</a>
@@ -1582,8 +1462,7 @@ Each BGP interface may use a different value.
     </dt>
     <dd>{{% md %}}IP address of the BGP interface outside Google Cloud Platform.
 Only IPv4 is supported.
-{{% /md %}}</dd>
-    <dt class="property-optional"
+{{% /md %}}</dd><dt class="property-optional"
             title="Optional">
         <span id="state_project_nodejs">
 <a href="#state_project_nodejs" style="color: inherit; text-decoration: inherit;">project</a>
@@ -1593,8 +1472,7 @@ Only IPv4 is supported.
     </dt>
     <dd>{{% md %}}The ID of the project in which the resource belongs.
 If it is not provided, the provider project is used.
-{{% /md %}}</dd>
-    <dt class="property-optional"
+{{% /md %}}</dd><dt class="property-optional"
             title="Optional">
         <span id="state_region_nodejs">
 <a href="#state_region_nodejs" style="color: inherit; text-decoration: inherit;">region</a>
@@ -1604,8 +1482,7 @@ If it is not provided, the provider project is used.
     </dt>
     <dd>{{% md %}}Region where the router and BgpPeer reside.
 If it is not provided, the provider region is used.
-{{% /md %}}</dd>
-    <dt class="property-optional"
+{{% /md %}}</dd><dt class="property-optional"
             title="Optional">
         <span id="state_router_nodejs">
 <a href="#state_router_nodejs" style="color: inherit; text-decoration: inherit;">router</a>
@@ -1614,14 +1491,11 @@ If it is not provided, the provider region is used.
         <span class="property-type">string</span>
     </dt>
     <dd>{{% md %}}The name of the Cloud Router in which this BgpPeer will be configured.
-{{% /md %}}</dd>
-</dl>
+{{% /md %}}</dd></dl>
 {{% /choosable %}}
 
 {{% choosable language python %}}
-<dl class="resources-properties">
-
-    <dt class="property-optional"
+<dl class="resources-properties"><dt class="property-optional"
             title="Optional">
         <span id="state_advertise_mode_python">
 <a href="#state_advertise_mode_python" style="color: inherit; text-decoration: inherit;">advertise_<wbr>mode</a>
@@ -1633,8 +1507,7 @@ If it is not provided, the provider region is used.
 Valid values of this enum field are: `DEFAULT`, `CUSTOM`
 Default value is `DEFAULT`.
 Possible values are `DEFAULT` and `CUSTOM`.
-{{% /md %}}</dd>
-    <dt class="property-optional"
+{{% /md %}}</dd><dt class="property-optional"
             title="Optional">
         <span id="state_advertised_groups_python">
 <a href="#state_advertised_groups_python" style="color: inherit; text-decoration: inherit;">advertised_<wbr>groups</a>
@@ -1647,8 +1520,7 @@ mode, which can take one of the following options:
 * `ALL_SUBNETS`: Advertises all available subnets, including peer VPC subnets.
 * `ALL_VPC_SUBNETS`: Advertises the router's own VPC subnets.
 * `ALL_PEER_VPC_SUBNETS`: Advertises peer subnets of the router's VPC network.
-{{% /md %}}</dd>
-    <dt class="property-optional"
+{{% /md %}}</dd><dt class="property-optional"
             title="Optional">
         <span id="state_advertised_ip_ranges_python">
 <a href="#state_advertised_ip_ranges_python" style="color: inherit; text-decoration: inherit;">advertised_<wbr>ip_<wbr>ranges</a>
@@ -1662,8 +1534,7 @@ is `CUSTOM` and is advertised to all peers of the router. These IP
 ranges will be advertised in addition to any specified groups.
 Leave this field blank to advertise no custom IP ranges.
 Structure is documented below.
-{{% /md %}}</dd>
-    <dt class="property-optional"
+{{% /md %}}</dd><dt class="property-optional"
             title="Optional">
         <span id="state_advertised_route_priority_python">
 <a href="#state_advertised_route_priority_python" style="color: inherit; text-decoration: inherit;">advertised_<wbr>route_<wbr>priority</a>
@@ -1674,8 +1545,7 @@ Structure is documented below.
     <dd>{{% md %}}The priority of routes advertised to this BGP peer.
 Where there is more than one matching route of maximum
 length, the routes with the lowest priority value win.
-{{% /md %}}</dd>
-    <dt class="property-optional"
+{{% /md %}}</dd><dt class="property-optional"
             title="Optional">
         <span id="state_interface_python">
 <a href="#state_interface_python" style="color: inherit; text-decoration: inherit;">interface</a>
@@ -1684,8 +1554,7 @@ length, the routes with the lowest priority value win.
         <span class="property-type">str</span>
     </dt>
     <dd>{{% md %}}Name of the interface the BGP peer is associated with.
-{{% /md %}}</dd>
-    <dt class="property-optional"
+{{% /md %}}</dd><dt class="property-optional"
             title="Optional">
         <span id="state_ip_address_python">
 <a href="#state_ip_address_python" style="color: inherit; text-decoration: inherit;">ip_<wbr>address</a>
@@ -1694,8 +1563,7 @@ length, the routes with the lowest priority value win.
         <span class="property-type">str</span>
     </dt>
     <dd>{{% md %}}IP address of the interface inside Google Cloud Platform. Only IPv4 is supported.
-{{% /md %}}</dd>
-    <dt class="property-optional"
+{{% /md %}}</dd><dt class="property-optional"
             title="Optional">
         <span id="state_management_type_python">
 <a href="#state_management_type_python" style="color: inherit; text-decoration: inherit;">management_<wbr>type</a>
@@ -1707,8 +1575,7 @@ length, the routes with the lowest priority value win.
 you or other users * 'MANAGED_BY_ATTACHMENT' is a BGP peer that is configured and managed by Cloud Interconnect,
 specifically by an InterconnectAttachment of type PARTNER. Google automatically creates, updates, and deletes this type
 of BGP peer when the PARTNER InterconnectAttachment is created, updated, or deleted.
-{{% /md %}}</dd>
-    <dt class="property-optional"
+{{% /md %}}</dd><dt class="property-optional"
             title="Optional">
         <span id="state_name_python">
 <a href="#state_name_python" style="color: inherit; text-decoration: inherit;">name</a>
@@ -1722,8 +1589,7 @@ long and match the regular expression `a-z?` which
 means the first character must be a lowercase letter, and all
 following characters must be a dash, lowercase letter, or digit,
 except the last character, which cannot be a dash.
-{{% /md %}}</dd>
-    <dt class="property-optional"
+{{% /md %}}</dd><dt class="property-optional"
             title="Optional">
         <span id="state_peer_asn_python">
 <a href="#state_peer_asn_python" style="color: inherit; text-decoration: inherit;">peer_<wbr>asn</a>
@@ -1733,8 +1599,7 @@ except the last character, which cannot be a dash.
     </dt>
     <dd>{{% md %}}Peer BGP Autonomous System Number (ASN).
 Each BGP interface may use a different value.
-{{% /md %}}</dd>
-    <dt class="property-optional"
+{{% /md %}}</dd><dt class="property-optional"
             title="Optional">
         <span id="state_peer_ip_address_python">
 <a href="#state_peer_ip_address_python" style="color: inherit; text-decoration: inherit;">peer_<wbr>ip_<wbr>address</a>
@@ -1744,8 +1609,7 @@ Each BGP interface may use a different value.
     </dt>
     <dd>{{% md %}}IP address of the BGP interface outside Google Cloud Platform.
 Only IPv4 is supported.
-{{% /md %}}</dd>
-    <dt class="property-optional"
+{{% /md %}}</dd><dt class="property-optional"
             title="Optional">
         <span id="state_project_python">
 <a href="#state_project_python" style="color: inherit; text-decoration: inherit;">project</a>
@@ -1755,8 +1619,7 @@ Only IPv4 is supported.
     </dt>
     <dd>{{% md %}}The ID of the project in which the resource belongs.
 If it is not provided, the provider project is used.
-{{% /md %}}</dd>
-    <dt class="property-optional"
+{{% /md %}}</dd><dt class="property-optional"
             title="Optional">
         <span id="state_region_python">
 <a href="#state_region_python" style="color: inherit; text-decoration: inherit;">region</a>
@@ -1766,8 +1629,7 @@ If it is not provided, the provider project is used.
     </dt>
     <dd>{{% md %}}Region where the router and BgpPeer reside.
 If it is not provided, the provider region is used.
-{{% /md %}}</dd>
-    <dt class="property-optional"
+{{% /md %}}</dd><dt class="property-optional"
             title="Optional">
         <span id="state_router_python">
 <a href="#state_router_python" style="color: inherit; text-decoration: inherit;">router</a>
@@ -1776,8 +1638,7 @@ If it is not provided, the provider region is used.
         <span class="property-type">str</span>
     </dt>
     <dd>{{% md %}}The name of the Cloud Router in which this BgpPeer will be configured.
-{{% /md %}}</dd>
-</dl>
+{{% /md %}}</dd></dl>
 {{% /choosable %}}
 
 
@@ -1792,9 +1653,7 @@ If it is not provided, the provider region is used.
 <h4 id="routerpeeradvertisediprange">Router<wbr>Peer<wbr>Advertised<wbr>Ip<wbr>Range</h4>
 
 {{% choosable language csharp %}}
-<dl class="resources-properties">
-
-    <dt class="property-required"
+<dl class="resources-properties"><dt class="property-required"
             title="Required">
         <span id="range_csharp">
 <a href="#range_csharp" style="color: inherit; text-decoration: inherit;">Range</a>
@@ -1804,8 +1663,7 @@ If it is not provided, the provider region is used.
     </dt>
     <dd>{{% md %}}The IP range to advertise. The value must be a
 CIDR-formatted string.
-{{% /md %}}</dd>
-    <dt class="property-optional"
+{{% /md %}}</dd><dt class="property-optional"
             title="Optional">
         <span id="description_csharp">
 <a href="#description_csharp" style="color: inherit; text-decoration: inherit;">Description</a>
@@ -1814,14 +1672,11 @@ CIDR-formatted string.
         <span class="property-type">string</span>
     </dt>
     <dd>{{% md %}}User-specified description for the IP range.
-{{% /md %}}</dd>
-</dl>
+{{% /md %}}</dd></dl>
 {{% /choosable %}}
 
 {{% choosable language go %}}
-<dl class="resources-properties">
-
-    <dt class="property-required"
+<dl class="resources-properties"><dt class="property-required"
             title="Required">
         <span id="range_go">
 <a href="#range_go" style="color: inherit; text-decoration: inherit;">Range</a>
@@ -1831,8 +1686,7 @@ CIDR-formatted string.
     </dt>
     <dd>{{% md %}}The IP range to advertise. The value must be a
 CIDR-formatted string.
-{{% /md %}}</dd>
-    <dt class="property-optional"
+{{% /md %}}</dd><dt class="property-optional"
             title="Optional">
         <span id="description_go">
 <a href="#description_go" style="color: inherit; text-decoration: inherit;">Description</a>
@@ -1841,14 +1695,11 @@ CIDR-formatted string.
         <span class="property-type">string</span>
     </dt>
     <dd>{{% md %}}User-specified description for the IP range.
-{{% /md %}}</dd>
-</dl>
+{{% /md %}}</dd></dl>
 {{% /choosable %}}
 
 {{% choosable language nodejs %}}
-<dl class="resources-properties">
-
-    <dt class="property-required"
+<dl class="resources-properties"><dt class="property-required"
             title="Required">
         <span id="range_nodejs">
 <a href="#range_nodejs" style="color: inherit; text-decoration: inherit;">range</a>
@@ -1858,8 +1709,7 @@ CIDR-formatted string.
     </dt>
     <dd>{{% md %}}The IP range to advertise. The value must be a
 CIDR-formatted string.
-{{% /md %}}</dd>
-    <dt class="property-optional"
+{{% /md %}}</dd><dt class="property-optional"
             title="Optional">
         <span id="description_nodejs">
 <a href="#description_nodejs" style="color: inherit; text-decoration: inherit;">description</a>
@@ -1868,14 +1718,11 @@ CIDR-formatted string.
         <span class="property-type">string</span>
     </dt>
     <dd>{{% md %}}User-specified description for the IP range.
-{{% /md %}}</dd>
-</dl>
+{{% /md %}}</dd></dl>
 {{% /choosable %}}
 
 {{% choosable language python %}}
-<dl class="resources-properties">
-
-    <dt class="property-required"
+<dl class="resources-properties"><dt class="property-required"
             title="Required">
         <span id="range_python">
 <a href="#range_python" style="color: inherit; text-decoration: inherit;">range</a>
@@ -1885,8 +1732,7 @@ CIDR-formatted string.
     </dt>
     <dd>{{% md %}}The IP range to advertise. The value must be a
 CIDR-formatted string.
-{{% /md %}}</dd>
-    <dt class="property-optional"
+{{% /md %}}</dd><dt class="property-optional"
             title="Optional">
         <span id="description_python">
 <a href="#description_python" style="color: inherit; text-decoration: inherit;">description</a>
@@ -1895,8 +1741,7 @@ CIDR-formatted string.
         <span class="property-type">str</span>
     </dt>
     <dd>{{% md %}}User-specified description for the IP range.
-{{% /md %}}</dd>
-</dl>
+{{% /md %}}</dd></dl>
 {{% /choosable %}}
 ## Import
 
@@ -1929,6 +1774,6 @@ RouterBgpPeer can be imported using any of these accepted formats
 	<dt>License</dt>
 	<dd>Apache-2.0</dd>
 	<dt>Notes</dt>
-	<dd>This Pulumi package is based on the [`google-beta` Terraform Provider](https://github.com/hashicorp/terraform-provider-google-beta).</dd>
+	<dd>{{% md %}}This Pulumi package is based on the [`google-beta` Terraform Provider](https://github.com/hashicorp/terraform-provider-google-beta).{{% /md %}}</dd>
 </dl>
 

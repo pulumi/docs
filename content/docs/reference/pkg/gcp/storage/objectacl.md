@@ -23,11 +23,17 @@ and
 role entity pairs.
 
 {{% examples %}}
+
 ## Example Usage
 
 {{< chooser language "typescript,python,go,csharp" / >}}
 
-{{% example csharp %}}
+
+
+
+
+{{< example csharp >}}
+
 ```csharp
 using Pulumi;
 using Gcp = Pulumi.Gcp;
@@ -60,9 +66,12 @@ class MyStack : Stack
 }
 ```
 
-{{% /example %}}
 
-{{% example go %}}
+{{< /example >}}
+
+
+{{< example go >}}
+
 ```go
 package main
 
@@ -102,9 +111,12 @@ func main() {
 }
 ```
 
-{{% /example %}}
 
-{{% example python %}}
+{{< /example >}}
+
+
+{{< example python >}}
+
 ```python
 import pulumi
 import pulumi_gcp as gcp
@@ -122,9 +134,12 @@ image_store_acl = gcp.storage.ObjectACL("image-store-acl",
     ])
 ```
 
-{{% /example %}}
 
-{{% example typescript %}}
+{{< /example >}}
+
+
+{{< example typescript >}}
+
 
 ```typescript
 import * as pulumi from "@pulumi/pulumi";
@@ -145,9 +160,16 @@ const image_store_acl = new gcp.storage.ObjectACL("image-store-acl", {
 });
 ```
 
-{{% /example %}}
+
+{{< /example >}}
+
+
+
+
 
 {{% /examples %}}
+
+
 
 
 ## Create a ObjectACL Resource {#create}
@@ -172,9 +194,7 @@ const image_store_acl = new gcp.storage.ObjectACL("image-store-acl", {
 
 {{% choosable language nodejs %}}
 
-<dl class="resources-properties">
-  
-    <dt
+<dl class="resources-properties"><dt
         class="property-required" title="Required">
         <span>name</span>
         <span class="property-indicator"></span>
@@ -182,9 +202,7 @@ const image_store_acl = new gcp.storage.ObjectACL("image-store-acl", {
     </dt>
     <dd>
       The unique name of the resource.
-    </dd>
-  
-    <dt
+    </dd><dt
         class="property-required" title="Required">
         <span>args</span>
         <span class="property-indicator"></span>
@@ -192,9 +210,7 @@ const image_store_acl = new gcp.storage.ObjectACL("image-store-acl", {
     </dt>
     <dd>
       The arguments to resource properties.
-    </dd>
-  
-    <dt
+    </dd><dt
         class="property-optional" title="Optional">
         <span>opts</span>
         <span class="property-indicator"></span>
@@ -202,10 +218,7 @@ const image_store_acl = new gcp.storage.ObjectACL("image-store-acl", {
     </dt>
     <dd>
       Bag of options to control resource&#39;s behavior.
-    </dd>
-  
-
-</dl>
+    </dd></dl>
 
 {{% /choosable %}}
 
@@ -231,9 +244,7 @@ const image_store_acl = new gcp.storage.ObjectACL("image-store-acl", {
 
 {{% choosable language go %}}
 
-<dl class="resources-properties">
-  
-    <dt
+<dl class="resources-properties"><dt
         class="property-optional" title="Optional">
         <span>ctx</span>
         <span class="property-indicator"></span>
@@ -241,9 +252,7 @@ const image_store_acl = new gcp.storage.ObjectACL("image-store-acl", {
     </dt>
     <dd>
       Context object for the current deployment.
-    </dd>
-  
-    <dt
+    </dd><dt
         class="property-required" title="Required">
         <span>name</span>
         <span class="property-indicator"></span>
@@ -251,9 +260,7 @@ const image_store_acl = new gcp.storage.ObjectACL("image-store-acl", {
     </dt>
     <dd>
       The unique name of the resource.
-    </dd>
-  
-    <dt
+    </dd><dt
         class="property-required" title="Required">
         <span>args</span>
         <span class="property-indicator"></span>
@@ -261,9 +268,7 @@ const image_store_acl = new gcp.storage.ObjectACL("image-store-acl", {
     </dt>
     <dd>
       The arguments to resource properties.
-    </dd>
-  
-    <dt
+    </dd><dt
         class="property-optional" title="Optional">
         <span>opts</span>
         <span class="property-indicator"></span>
@@ -271,18 +276,13 @@ const image_store_acl = new gcp.storage.ObjectACL("image-store-acl", {
     </dt>
     <dd>
       Bag of options to control resource&#39;s behavior.
-    </dd>
-  
-
-</dl>
+    </dd></dl>
 
 {{% /choosable %}}
 
 {{% choosable language csharp %}}
 
-<dl class="resources-properties">
-  
-    <dt
+<dl class="resources-properties"><dt
         class="property-required" title="Required">
         <span>name</span>
         <span class="property-indicator"></span>
@@ -290,9 +290,7 @@ const image_store_acl = new gcp.storage.ObjectACL("image-store-acl", {
     </dt>
     <dd>
       The unique name of the resource.
-    </dd>
-  
-    <dt
+    </dd><dt
         class="property-required" title="Required">
         <span>args</span>
         <span class="property-indicator"></span>
@@ -300,9 +298,7 @@ const image_store_acl = new gcp.storage.ObjectACL("image-store-acl", {
     </dt>
     <dd>
       The arguments to resource properties.
-    </dd>
-  
-    <dt
+    </dd><dt
         class="property-optional" title="Optional">
         <span>opts</span>
         <span class="property-indicator"></span>
@@ -310,10 +306,7 @@ const image_store_acl = new gcp.storage.ObjectACL("image-store-acl", {
     </dt>
     <dd>
       Bag of options to control resource&#39;s behavior.
-    </dd>
-  
-
-</dl>
+    </dd></dl>
 
 {{% /choosable %}}
 
@@ -328,9 +321,7 @@ The ObjectACL resource accepts the following [input]({{< relref "/docs/intro/con
 
 
 {{% choosable language csharp %}}
-<dl class="resources-properties">
-
-    <dt class="property-required"
+<dl class="resources-properties"><dt class="property-required"
             title="Required">
         <span id="bucket_csharp">
 <a href="#bucket_csharp" style="color: inherit; text-decoration: inherit;">Bucket</a>
@@ -339,8 +330,7 @@ The ObjectACL resource accepts the following [input]({{< relref "/docs/intro/con
         <span class="property-type">string</span>
     </dt>
     <dd>{{% md %}}The name of the bucket the object is stored in.
-{{% /md %}}</dd>
-    <dt class="property-required"
+{{% /md %}}</dd><dt class="property-required"
             title="Required">
         <span id="object_csharp">
 <a href="#object_csharp" style="color: inherit; text-decoration: inherit;">Object</a>
@@ -349,8 +339,7 @@ The ObjectACL resource accepts the following [input]({{< relref "/docs/intro/con
         <span class="property-type">string</span>
     </dt>
     <dd>{{% md %}}The name of the object to apply the acl to.
-{{% /md %}}</dd>
-    <dt class="property-optional"
+{{% /md %}}</dd><dt class="property-optional"
             title="Optional">
         <span id="predefinedacl_csharp">
 <a href="#predefinedacl_csharp" style="color: inherit; text-decoration: inherit;">Predefined<wbr>Acl</a>
@@ -359,8 +348,7 @@ The ObjectACL resource accepts the following [input]({{< relref "/docs/intro/con
         <span class="property-type">string</span>
     </dt>
     <dd>{{% md %}}The "canned" [predefined ACL](https://cloud.google.com/storage/docs/access-control#predefined-acl) to apply. Must be set if `role_entity` is not.
-{{% /md %}}</dd>
-    <dt class="property-optional"
+{{% /md %}}</dd><dt class="property-optional"
             title="Optional">
         <span id="roleentities_csharp">
 <a href="#roleentities_csharp" style="color: inherit; text-decoration: inherit;">Role<wbr>Entities</a>
@@ -370,14 +358,11 @@ The ObjectACL resource accepts the following [input]({{< relref "/docs/intro/con
     </dt>
     <dd>{{% md %}}List of role/entity pairs in the form `ROLE:entity`. See [GCS Object ACL documentation](https://cloud.google.com/storage/docs/json_api/v1/objectAccessControls) for more details.
 Must be set if `predefined_acl` is not.
-{{% /md %}}</dd>
-</dl>
+{{% /md %}}</dd></dl>
 {{% /choosable %}}
 
 {{% choosable language go %}}
-<dl class="resources-properties">
-
-    <dt class="property-required"
+<dl class="resources-properties"><dt class="property-required"
             title="Required">
         <span id="bucket_go">
 <a href="#bucket_go" style="color: inherit; text-decoration: inherit;">Bucket</a>
@@ -386,8 +371,7 @@ Must be set if `predefined_acl` is not.
         <span class="property-type">string</span>
     </dt>
     <dd>{{% md %}}The name of the bucket the object is stored in.
-{{% /md %}}</dd>
-    <dt class="property-required"
+{{% /md %}}</dd><dt class="property-required"
             title="Required">
         <span id="object_go">
 <a href="#object_go" style="color: inherit; text-decoration: inherit;">Object</a>
@@ -396,8 +380,7 @@ Must be set if `predefined_acl` is not.
         <span class="property-type">string</span>
     </dt>
     <dd>{{% md %}}The name of the object to apply the acl to.
-{{% /md %}}</dd>
-    <dt class="property-optional"
+{{% /md %}}</dd><dt class="property-optional"
             title="Optional">
         <span id="predefinedacl_go">
 <a href="#predefinedacl_go" style="color: inherit; text-decoration: inherit;">Predefined<wbr>Acl</a>
@@ -406,8 +389,7 @@ Must be set if `predefined_acl` is not.
         <span class="property-type">string</span>
     </dt>
     <dd>{{% md %}}The "canned" [predefined ACL](https://cloud.google.com/storage/docs/access-control#predefined-acl) to apply. Must be set if `role_entity` is not.
-{{% /md %}}</dd>
-    <dt class="property-optional"
+{{% /md %}}</dd><dt class="property-optional"
             title="Optional">
         <span id="roleentities_go">
 <a href="#roleentities_go" style="color: inherit; text-decoration: inherit;">Role<wbr>Entities</a>
@@ -417,14 +399,11 @@ Must be set if `predefined_acl` is not.
     </dt>
     <dd>{{% md %}}List of role/entity pairs in the form `ROLE:entity`. See [GCS Object ACL documentation](https://cloud.google.com/storage/docs/json_api/v1/objectAccessControls) for more details.
 Must be set if `predefined_acl` is not.
-{{% /md %}}</dd>
-</dl>
+{{% /md %}}</dd></dl>
 {{% /choosable %}}
 
 {{% choosable language nodejs %}}
-<dl class="resources-properties">
-
-    <dt class="property-required"
+<dl class="resources-properties"><dt class="property-required"
             title="Required">
         <span id="bucket_nodejs">
 <a href="#bucket_nodejs" style="color: inherit; text-decoration: inherit;">bucket</a>
@@ -433,8 +412,7 @@ Must be set if `predefined_acl` is not.
         <span class="property-type">string</span>
     </dt>
     <dd>{{% md %}}The name of the bucket the object is stored in.
-{{% /md %}}</dd>
-    <dt class="property-required"
+{{% /md %}}</dd><dt class="property-required"
             title="Required">
         <span id="object_nodejs">
 <a href="#object_nodejs" style="color: inherit; text-decoration: inherit;">object</a>
@@ -443,8 +421,7 @@ Must be set if `predefined_acl` is not.
         <span class="property-type">string</span>
     </dt>
     <dd>{{% md %}}The name of the object to apply the acl to.
-{{% /md %}}</dd>
-    <dt class="property-optional"
+{{% /md %}}</dd><dt class="property-optional"
             title="Optional">
         <span id="predefinedacl_nodejs">
 <a href="#predefinedacl_nodejs" style="color: inherit; text-decoration: inherit;">predefined<wbr>Acl</a>
@@ -453,8 +430,7 @@ Must be set if `predefined_acl` is not.
         <span class="property-type">string</span>
     </dt>
     <dd>{{% md %}}The "canned" [predefined ACL](https://cloud.google.com/storage/docs/access-control#predefined-acl) to apply. Must be set if `role_entity` is not.
-{{% /md %}}</dd>
-    <dt class="property-optional"
+{{% /md %}}</dd><dt class="property-optional"
             title="Optional">
         <span id="roleentities_nodejs">
 <a href="#roleentities_nodejs" style="color: inherit; text-decoration: inherit;">role<wbr>Entities</a>
@@ -464,14 +440,11 @@ Must be set if `predefined_acl` is not.
     </dt>
     <dd>{{% md %}}List of role/entity pairs in the form `ROLE:entity`. See [GCS Object ACL documentation](https://cloud.google.com/storage/docs/json_api/v1/objectAccessControls) for more details.
 Must be set if `predefined_acl` is not.
-{{% /md %}}</dd>
-</dl>
+{{% /md %}}</dd></dl>
 {{% /choosable %}}
 
 {{% choosable language python %}}
-<dl class="resources-properties">
-
-    <dt class="property-required"
+<dl class="resources-properties"><dt class="property-required"
             title="Required">
         <span id="bucket_python">
 <a href="#bucket_python" style="color: inherit; text-decoration: inherit;">bucket</a>
@@ -480,8 +453,7 @@ Must be set if `predefined_acl` is not.
         <span class="property-type">str</span>
     </dt>
     <dd>{{% md %}}The name of the bucket the object is stored in.
-{{% /md %}}</dd>
-    <dt class="property-required"
+{{% /md %}}</dd><dt class="property-required"
             title="Required">
         <span id="object_python">
 <a href="#object_python" style="color: inherit; text-decoration: inherit;">object</a>
@@ -490,8 +462,7 @@ Must be set if `predefined_acl` is not.
         <span class="property-type">str</span>
     </dt>
     <dd>{{% md %}}The name of the object to apply the acl to.
-{{% /md %}}</dd>
-    <dt class="property-optional"
+{{% /md %}}</dd><dt class="property-optional"
             title="Optional">
         <span id="predefined_acl_python">
 <a href="#predefined_acl_python" style="color: inherit; text-decoration: inherit;">predefined_<wbr>acl</a>
@@ -500,8 +471,7 @@ Must be set if `predefined_acl` is not.
         <span class="property-type">str</span>
     </dt>
     <dd>{{% md %}}The "canned" [predefined ACL](https://cloud.google.com/storage/docs/access-control#predefined-acl) to apply. Must be set if `role_entity` is not.
-{{% /md %}}</dd>
-    <dt class="property-optional"
+{{% /md %}}</dd><dt class="property-optional"
             title="Optional">
         <span id="role_entities_python">
 <a href="#role_entities_python" style="color: inherit; text-decoration: inherit;">role_<wbr>entities</a>
@@ -511,8 +481,7 @@ Must be set if `predefined_acl` is not.
     </dt>
     <dd>{{% md %}}List of role/entity pairs in the form `ROLE:entity`. See [GCS Object ACL documentation](https://cloud.google.com/storage/docs/json_api/v1/objectAccessControls) for more details.
 Must be set if `predefined_acl` is not.
-{{% /md %}}</dd>
-</dl>
+{{% /md %}}</dd></dl>
 {{% /choosable %}}
 
 
@@ -523,9 +492,7 @@ All [input](#inputs) properties are implicitly available as output properties. A
 
 
 {{% choosable language csharp %}}
-<dl class="resources-properties">
-
-    <dt class="property-"
+<dl class="resources-properties"><dt class="property-"
             title="">
         <span id="id_csharp">
 <a href="#id_csharp" style="color: inherit; text-decoration: inherit;">Id</a>
@@ -533,14 +500,11 @@ All [input](#inputs) properties are implicitly available as output properties. A
         <span class="property-indicator"></span>
         <span class="property-type">string</span>
     </dt>
-    <dd>{{% md %}}The provider-assigned unique ID for this managed resource.{{% /md %}}</dd>
-</dl>
+    <dd>{{% md %}}The provider-assigned unique ID for this managed resource.{{% /md %}}</dd></dl>
 {{% /choosable %}}
 
 {{% choosable language go %}}
-<dl class="resources-properties">
-
-    <dt class="property-"
+<dl class="resources-properties"><dt class="property-"
             title="">
         <span id="id_go">
 <a href="#id_go" style="color: inherit; text-decoration: inherit;">Id</a>
@@ -548,14 +512,11 @@ All [input](#inputs) properties are implicitly available as output properties. A
         <span class="property-indicator"></span>
         <span class="property-type">string</span>
     </dt>
-    <dd>{{% md %}}The provider-assigned unique ID for this managed resource.{{% /md %}}</dd>
-</dl>
+    <dd>{{% md %}}The provider-assigned unique ID for this managed resource.{{% /md %}}</dd></dl>
 {{% /choosable %}}
 
 {{% choosable language nodejs %}}
-<dl class="resources-properties">
-
-    <dt class="property-"
+<dl class="resources-properties"><dt class="property-"
             title="">
         <span id="id_nodejs">
 <a href="#id_nodejs" style="color: inherit; text-decoration: inherit;">id</a>
@@ -563,14 +524,11 @@ All [input](#inputs) properties are implicitly available as output properties. A
         <span class="property-indicator"></span>
         <span class="property-type">string</span>
     </dt>
-    <dd>{{% md %}}The provider-assigned unique ID for this managed resource.{{% /md %}}</dd>
-</dl>
+    <dd>{{% md %}}The provider-assigned unique ID for this managed resource.{{% /md %}}</dd></dl>
 {{% /choosable %}}
 
 {{% choosable language python %}}
-<dl class="resources-properties">
-
-    <dt class="property-"
+<dl class="resources-properties"><dt class="property-"
             title="">
         <span id="id_python">
 <a href="#id_python" style="color: inherit; text-decoration: inherit;">id</a>
@@ -578,8 +536,7 @@ All [input](#inputs) properties are implicitly available as output properties. A
         <span class="property-indicator"></span>
         <span class="property-type">str</span>
     </dt>
-    <dd>{{% md %}}The provider-assigned unique ID for this managed resource.{{% /md %}}</dd>
-</dl>
+    <dd>{{% md %}}The provider-assigned unique ID for this managed resource.{{% /md %}}</dd></dl>
 {{% /choosable %}}
 
 
@@ -706,9 +663,7 @@ The following state arguments are supported:
 
 
 {{% choosable language csharp %}}
-<dl class="resources-properties">
-
-    <dt class="property-optional"
+<dl class="resources-properties"><dt class="property-optional"
             title="Optional">
         <span id="state_bucket_csharp">
 <a href="#state_bucket_csharp" style="color: inherit; text-decoration: inherit;">Bucket</a>
@@ -717,8 +672,7 @@ The following state arguments are supported:
         <span class="property-type">string</span>
     </dt>
     <dd>{{% md %}}The name of the bucket the object is stored in.
-{{% /md %}}</dd>
-    <dt class="property-optional"
+{{% /md %}}</dd><dt class="property-optional"
             title="Optional">
         <span id="state_object_csharp">
 <a href="#state_object_csharp" style="color: inherit; text-decoration: inherit;">Object</a>
@@ -727,8 +681,7 @@ The following state arguments are supported:
         <span class="property-type">string</span>
     </dt>
     <dd>{{% md %}}The name of the object to apply the acl to.
-{{% /md %}}</dd>
-    <dt class="property-optional"
+{{% /md %}}</dd><dt class="property-optional"
             title="Optional">
         <span id="state_predefinedacl_csharp">
 <a href="#state_predefinedacl_csharp" style="color: inherit; text-decoration: inherit;">Predefined<wbr>Acl</a>
@@ -737,8 +690,7 @@ The following state arguments are supported:
         <span class="property-type">string</span>
     </dt>
     <dd>{{% md %}}The "canned" [predefined ACL](https://cloud.google.com/storage/docs/access-control#predefined-acl) to apply. Must be set if `role_entity` is not.
-{{% /md %}}</dd>
-    <dt class="property-optional"
+{{% /md %}}</dd><dt class="property-optional"
             title="Optional">
         <span id="state_roleentities_csharp">
 <a href="#state_roleentities_csharp" style="color: inherit; text-decoration: inherit;">Role<wbr>Entities</a>
@@ -748,14 +700,11 @@ The following state arguments are supported:
     </dt>
     <dd>{{% md %}}List of role/entity pairs in the form `ROLE:entity`. See [GCS Object ACL documentation](https://cloud.google.com/storage/docs/json_api/v1/objectAccessControls) for more details.
 Must be set if `predefined_acl` is not.
-{{% /md %}}</dd>
-</dl>
+{{% /md %}}</dd></dl>
 {{% /choosable %}}
 
 {{% choosable language go %}}
-<dl class="resources-properties">
-
-    <dt class="property-optional"
+<dl class="resources-properties"><dt class="property-optional"
             title="Optional">
         <span id="state_bucket_go">
 <a href="#state_bucket_go" style="color: inherit; text-decoration: inherit;">Bucket</a>
@@ -764,8 +713,7 @@ Must be set if `predefined_acl` is not.
         <span class="property-type">string</span>
     </dt>
     <dd>{{% md %}}The name of the bucket the object is stored in.
-{{% /md %}}</dd>
-    <dt class="property-optional"
+{{% /md %}}</dd><dt class="property-optional"
             title="Optional">
         <span id="state_object_go">
 <a href="#state_object_go" style="color: inherit; text-decoration: inherit;">Object</a>
@@ -774,8 +722,7 @@ Must be set if `predefined_acl` is not.
         <span class="property-type">string</span>
     </dt>
     <dd>{{% md %}}The name of the object to apply the acl to.
-{{% /md %}}</dd>
-    <dt class="property-optional"
+{{% /md %}}</dd><dt class="property-optional"
             title="Optional">
         <span id="state_predefinedacl_go">
 <a href="#state_predefinedacl_go" style="color: inherit; text-decoration: inherit;">Predefined<wbr>Acl</a>
@@ -784,8 +731,7 @@ Must be set if `predefined_acl` is not.
         <span class="property-type">string</span>
     </dt>
     <dd>{{% md %}}The "canned" [predefined ACL](https://cloud.google.com/storage/docs/access-control#predefined-acl) to apply. Must be set if `role_entity` is not.
-{{% /md %}}</dd>
-    <dt class="property-optional"
+{{% /md %}}</dd><dt class="property-optional"
             title="Optional">
         <span id="state_roleentities_go">
 <a href="#state_roleentities_go" style="color: inherit; text-decoration: inherit;">Role<wbr>Entities</a>
@@ -795,14 +741,11 @@ Must be set if `predefined_acl` is not.
     </dt>
     <dd>{{% md %}}List of role/entity pairs in the form `ROLE:entity`. See [GCS Object ACL documentation](https://cloud.google.com/storage/docs/json_api/v1/objectAccessControls) for more details.
 Must be set if `predefined_acl` is not.
-{{% /md %}}</dd>
-</dl>
+{{% /md %}}</dd></dl>
 {{% /choosable %}}
 
 {{% choosable language nodejs %}}
-<dl class="resources-properties">
-
-    <dt class="property-optional"
+<dl class="resources-properties"><dt class="property-optional"
             title="Optional">
         <span id="state_bucket_nodejs">
 <a href="#state_bucket_nodejs" style="color: inherit; text-decoration: inherit;">bucket</a>
@@ -811,8 +754,7 @@ Must be set if `predefined_acl` is not.
         <span class="property-type">string</span>
     </dt>
     <dd>{{% md %}}The name of the bucket the object is stored in.
-{{% /md %}}</dd>
-    <dt class="property-optional"
+{{% /md %}}</dd><dt class="property-optional"
             title="Optional">
         <span id="state_object_nodejs">
 <a href="#state_object_nodejs" style="color: inherit; text-decoration: inherit;">object</a>
@@ -821,8 +763,7 @@ Must be set if `predefined_acl` is not.
         <span class="property-type">string</span>
     </dt>
     <dd>{{% md %}}The name of the object to apply the acl to.
-{{% /md %}}</dd>
-    <dt class="property-optional"
+{{% /md %}}</dd><dt class="property-optional"
             title="Optional">
         <span id="state_predefinedacl_nodejs">
 <a href="#state_predefinedacl_nodejs" style="color: inherit; text-decoration: inherit;">predefined<wbr>Acl</a>
@@ -831,8 +772,7 @@ Must be set if `predefined_acl` is not.
         <span class="property-type">string</span>
     </dt>
     <dd>{{% md %}}The "canned" [predefined ACL](https://cloud.google.com/storage/docs/access-control#predefined-acl) to apply. Must be set if `role_entity` is not.
-{{% /md %}}</dd>
-    <dt class="property-optional"
+{{% /md %}}</dd><dt class="property-optional"
             title="Optional">
         <span id="state_roleentities_nodejs">
 <a href="#state_roleentities_nodejs" style="color: inherit; text-decoration: inherit;">role<wbr>Entities</a>
@@ -842,14 +782,11 @@ Must be set if `predefined_acl` is not.
     </dt>
     <dd>{{% md %}}List of role/entity pairs in the form `ROLE:entity`. See [GCS Object ACL documentation](https://cloud.google.com/storage/docs/json_api/v1/objectAccessControls) for more details.
 Must be set if `predefined_acl` is not.
-{{% /md %}}</dd>
-</dl>
+{{% /md %}}</dd></dl>
 {{% /choosable %}}
 
 {{% choosable language python %}}
-<dl class="resources-properties">
-
-    <dt class="property-optional"
+<dl class="resources-properties"><dt class="property-optional"
             title="Optional">
         <span id="state_bucket_python">
 <a href="#state_bucket_python" style="color: inherit; text-decoration: inherit;">bucket</a>
@@ -858,8 +795,7 @@ Must be set if `predefined_acl` is not.
         <span class="property-type">str</span>
     </dt>
     <dd>{{% md %}}The name of the bucket the object is stored in.
-{{% /md %}}</dd>
-    <dt class="property-optional"
+{{% /md %}}</dd><dt class="property-optional"
             title="Optional">
         <span id="state_object_python">
 <a href="#state_object_python" style="color: inherit; text-decoration: inherit;">object</a>
@@ -868,8 +804,7 @@ Must be set if `predefined_acl` is not.
         <span class="property-type">str</span>
     </dt>
     <dd>{{% md %}}The name of the object to apply the acl to.
-{{% /md %}}</dd>
-    <dt class="property-optional"
+{{% /md %}}</dd><dt class="property-optional"
             title="Optional">
         <span id="state_predefined_acl_python">
 <a href="#state_predefined_acl_python" style="color: inherit; text-decoration: inherit;">predefined_<wbr>acl</a>
@@ -878,8 +813,7 @@ Must be set if `predefined_acl` is not.
         <span class="property-type">str</span>
     </dt>
     <dd>{{% md %}}The "canned" [predefined ACL](https://cloud.google.com/storage/docs/access-control#predefined-acl) to apply. Must be set if `role_entity` is not.
-{{% /md %}}</dd>
-    <dt class="property-optional"
+{{% /md %}}</dd><dt class="property-optional"
             title="Optional">
         <span id="state_role_entities_python">
 <a href="#state_role_entities_python" style="color: inherit; text-decoration: inherit;">role_<wbr>entities</a>
@@ -889,8 +823,7 @@ Must be set if `predefined_acl` is not.
     </dt>
     <dd>{{% md %}}List of role/entity pairs in the form `ROLE:entity`. See [GCS Object ACL documentation](https://cloud.google.com/storage/docs/json_api/v1/objectAccessControls) for more details.
 Must be set if `predefined_acl` is not.
-{{% /md %}}</dd>
-</dl>
+{{% /md %}}</dd></dl>
 {{% /choosable %}}
 
 
@@ -912,6 +845,6 @@ This resource does not support import.
 	<dt>License</dt>
 	<dd>Apache-2.0</dd>
 	<dt>Notes</dt>
-	<dd>This Pulumi package is based on the [`google-beta` Terraform Provider](https://github.com/hashicorp/terraform-provider-google-beta).</dd>
+	<dd>{{% md %}}This Pulumi package is based on the [`google-beta` Terraform Provider](https://github.com/hashicorp/terraform-provider-google-beta).{{% /md %}}</dd>
 </dl>
 

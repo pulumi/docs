@@ -13,11 +13,17 @@ meta_desc: "Documentation for the wavefront.Alert resource with examples, input 
 Provides a Wavefront Alert resource.  This allows alerts to be created, updated, and deleted.
 
 {{% examples %}}
+
 ## Example Usage
 
 {{< chooser language "typescript,python,go,csharp" / >}}
 
-{{% example csharp %}}
+
+
+
+
+{{< example csharp >}}
+
 ```csharp
 using Pulumi;
 using Wavefront = Pulumi.Wavefront;
@@ -45,9 +51,12 @@ class MyStack : Stack
 }
 ```
 
-{{% /example %}}
 
-{{% example go %}}
+{{< /example >}}
+
+
+{{< example go >}}
+
 ```go
 package main
 
@@ -78,9 +87,12 @@ func main() {
 }
 ```
 
-{{% /example %}}
 
-{{% example python %}}
+{{< /example >}}
+
+
+{{< example python >}}
+
 ```python
 import pulumi
 import pulumi_wavefront as wavefront
@@ -98,9 +110,12 @@ foobar = wavefront.Alert("foobar",
     target="test@example.com")
 ```
 
-{{% /example %}}
 
-{{% example typescript %}}
+{{< /example >}}
+
+
+{{< example typescript >}}
+
 
 ```typescript
 import * as pulumi from "@pulumi/pulumi";
@@ -120,9 +135,16 @@ const foobar = new wavefront.Alert("foobar", {
 });
 ```
 
-{{% /example %}}
+
+{{< /example >}}
+
+
+
+
 
 {{% /examples %}}
+
+
 
 
 ## Create a Alert Resource {#create}
@@ -147,9 +169,7 @@ const foobar = new wavefront.Alert("foobar", {
 
 {{% choosable language nodejs %}}
 
-<dl class="resources-properties">
-  
-    <dt
+<dl class="resources-properties"><dt
         class="property-required" title="Required">
         <span>name</span>
         <span class="property-indicator"></span>
@@ -157,9 +177,7 @@ const foobar = new wavefront.Alert("foobar", {
     </dt>
     <dd>
       The unique name of the resource.
-    </dd>
-  
-    <dt
+    </dd><dt
         class="property-required" title="Required">
         <span>args</span>
         <span class="property-indicator"></span>
@@ -167,9 +185,7 @@ const foobar = new wavefront.Alert("foobar", {
     </dt>
     <dd>
       The arguments to resource properties.
-    </dd>
-  
-    <dt
+    </dd><dt
         class="property-optional" title="Optional">
         <span>opts</span>
         <span class="property-indicator"></span>
@@ -177,10 +193,7 @@ const foobar = new wavefront.Alert("foobar", {
     </dt>
     <dd>
       Bag of options to control resource&#39;s behavior.
-    </dd>
-  
-
-</dl>
+    </dd></dl>
 
 {{% /choosable %}}
 
@@ -206,9 +219,7 @@ const foobar = new wavefront.Alert("foobar", {
 
 {{% choosable language go %}}
 
-<dl class="resources-properties">
-  
-    <dt
+<dl class="resources-properties"><dt
         class="property-optional" title="Optional">
         <span>ctx</span>
         <span class="property-indicator"></span>
@@ -216,9 +227,7 @@ const foobar = new wavefront.Alert("foobar", {
     </dt>
     <dd>
       Context object for the current deployment.
-    </dd>
-  
-    <dt
+    </dd><dt
         class="property-required" title="Required">
         <span>name</span>
         <span class="property-indicator"></span>
@@ -226,9 +235,7 @@ const foobar = new wavefront.Alert("foobar", {
     </dt>
     <dd>
       The unique name of the resource.
-    </dd>
-  
-    <dt
+    </dd><dt
         class="property-required" title="Required">
         <span>args</span>
         <span class="property-indicator"></span>
@@ -236,9 +243,7 @@ const foobar = new wavefront.Alert("foobar", {
     </dt>
     <dd>
       The arguments to resource properties.
-    </dd>
-  
-    <dt
+    </dd><dt
         class="property-optional" title="Optional">
         <span>opts</span>
         <span class="property-indicator"></span>
@@ -246,18 +251,13 @@ const foobar = new wavefront.Alert("foobar", {
     </dt>
     <dd>
       Bag of options to control resource&#39;s behavior.
-    </dd>
-  
-
-</dl>
+    </dd></dl>
 
 {{% /choosable %}}
 
 {{% choosable language csharp %}}
 
-<dl class="resources-properties">
-  
-    <dt
+<dl class="resources-properties"><dt
         class="property-required" title="Required">
         <span>name</span>
         <span class="property-indicator"></span>
@@ -265,9 +265,7 @@ const foobar = new wavefront.Alert("foobar", {
     </dt>
     <dd>
       The unique name of the resource.
-    </dd>
-  
-    <dt
+    </dd><dt
         class="property-required" title="Required">
         <span>args</span>
         <span class="property-indicator"></span>
@@ -275,9 +273,7 @@ const foobar = new wavefront.Alert("foobar", {
     </dt>
     <dd>
       The arguments to resource properties.
-    </dd>
-  
-    <dt
+    </dd><dt
         class="property-optional" title="Optional">
         <span>opts</span>
         <span class="property-indicator"></span>
@@ -285,10 +281,7 @@ const foobar = new wavefront.Alert("foobar", {
     </dt>
     <dd>
       Bag of options to control resource&#39;s behavior.
-    </dd>
-  
-
-</dl>
+    </dd></dl>
 
 {{% /choosable %}}
 
@@ -303,9 +296,7 @@ The Alert resource accepts the following [input]({{< relref "/docs/intro/concept
 
 
 {{% choosable language csharp %}}
-<dl class="resources-properties">
-
-    <dt class="property-required"
+<dl class="resources-properties"><dt class="property-required"
             title="Required">
         <span id="minutes_csharp">
 <a href="#minutes_csharp" style="color: inherit; text-decoration: inherit;">Minutes</a>
@@ -315,8 +306,7 @@ The Alert resource accepts the following [input]({{< relref "/docs/intro/concept
     </dt>
     <dd>{{% md %}}The number of consecutive minutes that a series matching the condition query must 
 evaluate to "true" (non-zero value) before the alert fires.
-{{% /md %}}</dd>
-    <dt class="property-required"
+{{% /md %}}</dd><dt class="property-required"
             title="Required">
         <span id="tags_csharp">
 <a href="#tags_csharp" style="color: inherit; text-decoration: inherit;">Tags</a>
@@ -325,8 +315,7 @@ evaluate to "true" (non-zero value) before the alert fires.
         <span class="property-type">List&lt;string&gt;</span>
     </dt>
     <dd>{{% md %}}A set of tags to assign to this resource.
-{{% /md %}}</dd>
-    <dt class="property-optional"
+{{% /md %}}</dd><dt class="property-optional"
             title="Optional">
         <span id="additionalinformation_csharp">
 <a href="#additionalinformation_csharp" style="color: inherit; text-decoration: inherit;">Additional<wbr>Information</a>
@@ -336,8 +325,7 @@ evaluate to "true" (non-zero value) before the alert fires.
     </dt>
     <dd>{{% md %}}User-supplied additional explanatory information for this alert.
 Useful for linking runbooks, migrations...etc
-{{% /md %}}</dd>
-    <dt class="property-optional"
+{{% /md %}}</dd><dt class="property-optional"
             title="Optional">
         <span id="alerttype_csharp">
 <a href="#alerttype_csharp" style="color: inherit; text-decoration: inherit;">Alert<wbr>Type</a>
@@ -347,8 +335,7 @@ Useful for linking runbooks, migrations...etc
     </dt>
     <dd>{{% md %}}The type of alert in Wavefront.  Either `CLASSIC` (default) 
 or `THRESHOLD`
-{{% /md %}}</dd>
-    <dt class="property-optional"
+{{% /md %}}</dd><dt class="property-optional"
             title="Optional">
         <span id="canmodifies_csharp">
 <a href="#canmodifies_csharp" style="color: inherit; text-decoration: inherit;">Can<wbr>Modifies</a>
@@ -357,8 +344,7 @@ or `THRESHOLD`
         <span class="property-type">List&lt;string&gt;</span>
     </dt>
     <dd>{{% md %}}A list of users or groups that can modify this resource.
-{{% /md %}}</dd>
-    <dt class="property-optional"
+{{% /md %}}</dd><dt class="property-optional"
             title="Optional">
         <span id="canviews_csharp">
 <a href="#canviews_csharp" style="color: inherit; text-decoration: inherit;">Can<wbr>Views</a>
@@ -367,8 +353,7 @@ or `THRESHOLD`
         <span class="property-type">List&lt;string&gt;</span>
     </dt>
     <dd>{{% md %}}A list of users or groups that can view this resource.
-{{% /md %}}</dd>
-    <dt class="property-optional"
+{{% /md %}}</dd><dt class="property-optional"
             title="Optional">
         <span id="condition_csharp">
 <a href="#condition_csharp" style="color: inherit; text-decoration: inherit;">Condition</a>
@@ -379,8 +364,7 @@ or `THRESHOLD`
     <dd>{{% md %}}A Wavefront query that is evaluated at regular intervals (default 1m).
 The alert fires and notifications are triggered when data series matching this query evaluates
 to a non-zero value for a set number of consecutive minutes.
-{{% /md %}}</dd>
-    <dt class="property-optional"
+{{% /md %}}</dd><dt class="property-optional"
             title="Optional">
         <span id="conditions_csharp">
 <a href="#conditions_csharp" style="color: inherit; text-decoration: inherit;">Conditions</a>
@@ -390,8 +374,7 @@ to a non-zero value for a set number of consecutive minutes.
     </dt>
     <dd>{{% md %}}a string->string map of `severity` to `condition` 
 for which this alert will trigger.
-{{% /md %}}</dd>
-    <dt class="property-optional"
+{{% /md %}}</dd><dt class="property-optional"
             title="Optional">
         <span id="displayexpression_csharp">
 <a href="#displayexpression_csharp" style="color: inherit; text-decoration: inherit;">Display<wbr>Expression</a>
@@ -402,8 +385,7 @@ for which this alert will trigger.
     <dd>{{% md %}}A second query whose results are displayed in the alert user
 interface instead of the condition query.  This field is often used to display a version
 of the condition query with Boolean operators removed so that numerical values are plotted.
-{{% /md %}}</dd>
-    <dt class="property-optional"
+{{% /md %}}</dd><dt class="property-optional"
             title="Optional">
         <span id="name_csharp">
 <a href="#name_csharp" style="color: inherit; text-decoration: inherit;">Name</a>
@@ -412,8 +394,7 @@ of the condition query with Boolean operators removed so that numerical values a
         <span class="property-type">string</span>
     </dt>
     <dd>{{% md %}}The name of the alert as it is displayed in Wavefront.
-{{% /md %}}</dd>
-    <dt class="property-optional"
+{{% /md %}}</dd><dt class="property-optional"
             title="Optional">
         <span id="notificationresendfrequencyminutes_csharp">
 <a href="#notificationresendfrequencyminutes_csharp" style="color: inherit; text-decoration: inherit;">Notification<wbr>Resend<wbr>Frequency<wbr>Minutes</a>
@@ -423,8 +404,7 @@ of the condition query with Boolean operators removed so that numerical values a
     </dt>
     <dd>{{% md %}}How often to re-trigger a continually failing alert. 
 If absent or <= 0, no re-triggering occur.
-{{% /md %}}</dd>
-    <dt class="property-optional"
+{{% /md %}}</dd><dt class="property-optional"
             title="Optional">
         <span id="resolveafterminutes_csharp">
 <a href="#resolveafterminutes_csharp" style="color: inherit; text-decoration: inherit;">Resolve<wbr>After<wbr>Minutes</a>
@@ -435,8 +415,7 @@ If absent or <= 0, no re-triggering occur.
     <dd>{{% md %}}The number of consecutive minutes that a firing series matching the condition
 query must evaluate to "false" (zero value) before the alert resolves.  When unset, this default sto
 the same value as `minutes`.
-{{% /md %}}</dd>
-    <dt class="property-optional"
+{{% /md %}}</dd><dt class="property-optional"
             title="Optional">
         <span id="severity_csharp">
 <a href="#severity_csharp" style="color: inherit; text-decoration: inherit;">Severity</a>
@@ -445,8 +424,7 @@ the same value as `minutes`.
         <span class="property-type">string</span>
     </dt>
     <dd>{{% md %}}- Severity of the alert, valid values are `INFO`, `SMOKE`, `WARN`, `SEVERE`.
-{{% /md %}}</dd>
-    <dt class="property-optional"
+{{% /md %}}</dd><dt class="property-optional"
             title="Optional">
         <span id="target_csharp">
 <a href="#target_csharp" style="color: inherit; text-decoration: inherit;">Target</a>
@@ -456,8 +434,7 @@ the same value as `minutes`.
     </dt>
     <dd>{{% md %}}A comma-separated list of the email address or integration endpoint 
 (such as PagerDuty or web hook) to notify when the alert status changes.
-{{% /md %}}</dd>
-    <dt class="property-optional"
+{{% /md %}}</dd><dt class="property-optional"
             title="Optional">
         <span id="thresholdtargets_csharp">
 <a href="#thresholdtargets_csharp" style="color: inherit; text-decoration: inherit;">Threshold<wbr>Targets</a>
@@ -466,14 +443,11 @@ the same value as `minutes`.
         <span class="property-type">Dictionary&lt;string, string&gt;</span>
     </dt>
     <dd>{{% md %}}Targets for severity
-{{% /md %}}</dd>
-</dl>
+{{% /md %}}</dd></dl>
 {{% /choosable %}}
 
 {{% choosable language go %}}
-<dl class="resources-properties">
-
-    <dt class="property-required"
+<dl class="resources-properties"><dt class="property-required"
             title="Required">
         <span id="minutes_go">
 <a href="#minutes_go" style="color: inherit; text-decoration: inherit;">Minutes</a>
@@ -483,8 +457,7 @@ the same value as `minutes`.
     </dt>
     <dd>{{% md %}}The number of consecutive minutes that a series matching the condition query must 
 evaluate to "true" (non-zero value) before the alert fires.
-{{% /md %}}</dd>
-    <dt class="property-required"
+{{% /md %}}</dd><dt class="property-required"
             title="Required">
         <span id="tags_go">
 <a href="#tags_go" style="color: inherit; text-decoration: inherit;">Tags</a>
@@ -493,8 +466,7 @@ evaluate to "true" (non-zero value) before the alert fires.
         <span class="property-type">[]string</span>
     </dt>
     <dd>{{% md %}}A set of tags to assign to this resource.
-{{% /md %}}</dd>
-    <dt class="property-optional"
+{{% /md %}}</dd><dt class="property-optional"
             title="Optional">
         <span id="additionalinformation_go">
 <a href="#additionalinformation_go" style="color: inherit; text-decoration: inherit;">Additional<wbr>Information</a>
@@ -504,8 +476,7 @@ evaluate to "true" (non-zero value) before the alert fires.
     </dt>
     <dd>{{% md %}}User-supplied additional explanatory information for this alert.
 Useful for linking runbooks, migrations...etc
-{{% /md %}}</dd>
-    <dt class="property-optional"
+{{% /md %}}</dd><dt class="property-optional"
             title="Optional">
         <span id="alerttype_go">
 <a href="#alerttype_go" style="color: inherit; text-decoration: inherit;">Alert<wbr>Type</a>
@@ -515,8 +486,7 @@ Useful for linking runbooks, migrations...etc
     </dt>
     <dd>{{% md %}}The type of alert in Wavefront.  Either `CLASSIC` (default) 
 or `THRESHOLD`
-{{% /md %}}</dd>
-    <dt class="property-optional"
+{{% /md %}}</dd><dt class="property-optional"
             title="Optional">
         <span id="canmodifies_go">
 <a href="#canmodifies_go" style="color: inherit; text-decoration: inherit;">Can<wbr>Modifies</a>
@@ -525,8 +495,7 @@ or `THRESHOLD`
         <span class="property-type">[]string</span>
     </dt>
     <dd>{{% md %}}A list of users or groups that can modify this resource.
-{{% /md %}}</dd>
-    <dt class="property-optional"
+{{% /md %}}</dd><dt class="property-optional"
             title="Optional">
         <span id="canviews_go">
 <a href="#canviews_go" style="color: inherit; text-decoration: inherit;">Can<wbr>Views</a>
@@ -535,8 +504,7 @@ or `THRESHOLD`
         <span class="property-type">[]string</span>
     </dt>
     <dd>{{% md %}}A list of users or groups that can view this resource.
-{{% /md %}}</dd>
-    <dt class="property-optional"
+{{% /md %}}</dd><dt class="property-optional"
             title="Optional">
         <span id="condition_go">
 <a href="#condition_go" style="color: inherit; text-decoration: inherit;">Condition</a>
@@ -547,8 +515,7 @@ or `THRESHOLD`
     <dd>{{% md %}}A Wavefront query that is evaluated at regular intervals (default 1m).
 The alert fires and notifications are triggered when data series matching this query evaluates
 to a non-zero value for a set number of consecutive minutes.
-{{% /md %}}</dd>
-    <dt class="property-optional"
+{{% /md %}}</dd><dt class="property-optional"
             title="Optional">
         <span id="conditions_go">
 <a href="#conditions_go" style="color: inherit; text-decoration: inherit;">Conditions</a>
@@ -558,8 +525,7 @@ to a non-zero value for a set number of consecutive minutes.
     </dt>
     <dd>{{% md %}}a string->string map of `severity` to `condition` 
 for which this alert will trigger.
-{{% /md %}}</dd>
-    <dt class="property-optional"
+{{% /md %}}</dd><dt class="property-optional"
             title="Optional">
         <span id="displayexpression_go">
 <a href="#displayexpression_go" style="color: inherit; text-decoration: inherit;">Display<wbr>Expression</a>
@@ -570,8 +536,7 @@ for which this alert will trigger.
     <dd>{{% md %}}A second query whose results are displayed in the alert user
 interface instead of the condition query.  This field is often used to display a version
 of the condition query with Boolean operators removed so that numerical values are plotted.
-{{% /md %}}</dd>
-    <dt class="property-optional"
+{{% /md %}}</dd><dt class="property-optional"
             title="Optional">
         <span id="name_go">
 <a href="#name_go" style="color: inherit; text-decoration: inherit;">Name</a>
@@ -580,8 +545,7 @@ of the condition query with Boolean operators removed so that numerical values a
         <span class="property-type">string</span>
     </dt>
     <dd>{{% md %}}The name of the alert as it is displayed in Wavefront.
-{{% /md %}}</dd>
-    <dt class="property-optional"
+{{% /md %}}</dd><dt class="property-optional"
             title="Optional">
         <span id="notificationresendfrequencyminutes_go">
 <a href="#notificationresendfrequencyminutes_go" style="color: inherit; text-decoration: inherit;">Notification<wbr>Resend<wbr>Frequency<wbr>Minutes</a>
@@ -591,8 +555,7 @@ of the condition query with Boolean operators removed so that numerical values a
     </dt>
     <dd>{{% md %}}How often to re-trigger a continually failing alert. 
 If absent or <= 0, no re-triggering occur.
-{{% /md %}}</dd>
-    <dt class="property-optional"
+{{% /md %}}</dd><dt class="property-optional"
             title="Optional">
         <span id="resolveafterminutes_go">
 <a href="#resolveafterminutes_go" style="color: inherit; text-decoration: inherit;">Resolve<wbr>After<wbr>Minutes</a>
@@ -603,8 +566,7 @@ If absent or <= 0, no re-triggering occur.
     <dd>{{% md %}}The number of consecutive minutes that a firing series matching the condition
 query must evaluate to "false" (zero value) before the alert resolves.  When unset, this default sto
 the same value as `minutes`.
-{{% /md %}}</dd>
-    <dt class="property-optional"
+{{% /md %}}</dd><dt class="property-optional"
             title="Optional">
         <span id="severity_go">
 <a href="#severity_go" style="color: inherit; text-decoration: inherit;">Severity</a>
@@ -613,8 +575,7 @@ the same value as `minutes`.
         <span class="property-type">string</span>
     </dt>
     <dd>{{% md %}}- Severity of the alert, valid values are `INFO`, `SMOKE`, `WARN`, `SEVERE`.
-{{% /md %}}</dd>
-    <dt class="property-optional"
+{{% /md %}}</dd><dt class="property-optional"
             title="Optional">
         <span id="target_go">
 <a href="#target_go" style="color: inherit; text-decoration: inherit;">Target</a>
@@ -624,8 +585,7 @@ the same value as `minutes`.
     </dt>
     <dd>{{% md %}}A comma-separated list of the email address or integration endpoint 
 (such as PagerDuty or web hook) to notify when the alert status changes.
-{{% /md %}}</dd>
-    <dt class="property-optional"
+{{% /md %}}</dd><dt class="property-optional"
             title="Optional">
         <span id="thresholdtargets_go">
 <a href="#thresholdtargets_go" style="color: inherit; text-decoration: inherit;">Threshold<wbr>Targets</a>
@@ -634,14 +594,11 @@ the same value as `minutes`.
         <span class="property-type">map[string]string</span>
     </dt>
     <dd>{{% md %}}Targets for severity
-{{% /md %}}</dd>
-</dl>
+{{% /md %}}</dd></dl>
 {{% /choosable %}}
 
 {{% choosable language nodejs %}}
-<dl class="resources-properties">
-
-    <dt class="property-required"
+<dl class="resources-properties"><dt class="property-required"
             title="Required">
         <span id="minutes_nodejs">
 <a href="#minutes_nodejs" style="color: inherit; text-decoration: inherit;">minutes</a>
@@ -651,8 +608,7 @@ the same value as `minutes`.
     </dt>
     <dd>{{% md %}}The number of consecutive minutes that a series matching the condition query must 
 evaluate to "true" (non-zero value) before the alert fires.
-{{% /md %}}</dd>
-    <dt class="property-required"
+{{% /md %}}</dd><dt class="property-required"
             title="Required">
         <span id="tags_nodejs">
 <a href="#tags_nodejs" style="color: inherit; text-decoration: inherit;">tags</a>
@@ -661,8 +617,7 @@ evaluate to "true" (non-zero value) before the alert fires.
         <span class="property-type">string[]</span>
     </dt>
     <dd>{{% md %}}A set of tags to assign to this resource.
-{{% /md %}}</dd>
-    <dt class="property-optional"
+{{% /md %}}</dd><dt class="property-optional"
             title="Optional">
         <span id="additionalinformation_nodejs">
 <a href="#additionalinformation_nodejs" style="color: inherit; text-decoration: inherit;">additional<wbr>Information</a>
@@ -672,8 +627,7 @@ evaluate to "true" (non-zero value) before the alert fires.
     </dt>
     <dd>{{% md %}}User-supplied additional explanatory information for this alert.
 Useful for linking runbooks, migrations...etc
-{{% /md %}}</dd>
-    <dt class="property-optional"
+{{% /md %}}</dd><dt class="property-optional"
             title="Optional">
         <span id="alerttype_nodejs">
 <a href="#alerttype_nodejs" style="color: inherit; text-decoration: inherit;">alert<wbr>Type</a>
@@ -683,8 +637,7 @@ Useful for linking runbooks, migrations...etc
     </dt>
     <dd>{{% md %}}The type of alert in Wavefront.  Either `CLASSIC` (default) 
 or `THRESHOLD`
-{{% /md %}}</dd>
-    <dt class="property-optional"
+{{% /md %}}</dd><dt class="property-optional"
             title="Optional">
         <span id="canmodifies_nodejs">
 <a href="#canmodifies_nodejs" style="color: inherit; text-decoration: inherit;">can<wbr>Modifies</a>
@@ -693,8 +646,7 @@ or `THRESHOLD`
         <span class="property-type">string[]</span>
     </dt>
     <dd>{{% md %}}A list of users or groups that can modify this resource.
-{{% /md %}}</dd>
-    <dt class="property-optional"
+{{% /md %}}</dd><dt class="property-optional"
             title="Optional">
         <span id="canviews_nodejs">
 <a href="#canviews_nodejs" style="color: inherit; text-decoration: inherit;">can<wbr>Views</a>
@@ -703,8 +655,7 @@ or `THRESHOLD`
         <span class="property-type">string[]</span>
     </dt>
     <dd>{{% md %}}A list of users or groups that can view this resource.
-{{% /md %}}</dd>
-    <dt class="property-optional"
+{{% /md %}}</dd><dt class="property-optional"
             title="Optional">
         <span id="condition_nodejs">
 <a href="#condition_nodejs" style="color: inherit; text-decoration: inherit;">condition</a>
@@ -715,8 +666,7 @@ or `THRESHOLD`
     <dd>{{% md %}}A Wavefront query that is evaluated at regular intervals (default 1m).
 The alert fires and notifications are triggered when data series matching this query evaluates
 to a non-zero value for a set number of consecutive minutes.
-{{% /md %}}</dd>
-    <dt class="property-optional"
+{{% /md %}}</dd><dt class="property-optional"
             title="Optional">
         <span id="conditions_nodejs">
 <a href="#conditions_nodejs" style="color: inherit; text-decoration: inherit;">conditions</a>
@@ -726,8 +676,7 @@ to a non-zero value for a set number of consecutive minutes.
     </dt>
     <dd>{{% md %}}a string->string map of `severity` to `condition` 
 for which this alert will trigger.
-{{% /md %}}</dd>
-    <dt class="property-optional"
+{{% /md %}}</dd><dt class="property-optional"
             title="Optional">
         <span id="displayexpression_nodejs">
 <a href="#displayexpression_nodejs" style="color: inherit; text-decoration: inherit;">display<wbr>Expression</a>
@@ -738,8 +687,7 @@ for which this alert will trigger.
     <dd>{{% md %}}A second query whose results are displayed in the alert user
 interface instead of the condition query.  This field is often used to display a version
 of the condition query with Boolean operators removed so that numerical values are plotted.
-{{% /md %}}</dd>
-    <dt class="property-optional"
+{{% /md %}}</dd><dt class="property-optional"
             title="Optional">
         <span id="name_nodejs">
 <a href="#name_nodejs" style="color: inherit; text-decoration: inherit;">name</a>
@@ -748,8 +696,7 @@ of the condition query with Boolean operators removed so that numerical values a
         <span class="property-type">string</span>
     </dt>
     <dd>{{% md %}}The name of the alert as it is displayed in Wavefront.
-{{% /md %}}</dd>
-    <dt class="property-optional"
+{{% /md %}}</dd><dt class="property-optional"
             title="Optional">
         <span id="notificationresendfrequencyminutes_nodejs">
 <a href="#notificationresendfrequencyminutes_nodejs" style="color: inherit; text-decoration: inherit;">notification<wbr>Resend<wbr>Frequency<wbr>Minutes</a>
@@ -759,8 +706,7 @@ of the condition query with Boolean operators removed so that numerical values a
     </dt>
     <dd>{{% md %}}How often to re-trigger a continually failing alert. 
 If absent or <= 0, no re-triggering occur.
-{{% /md %}}</dd>
-    <dt class="property-optional"
+{{% /md %}}</dd><dt class="property-optional"
             title="Optional">
         <span id="resolveafterminutes_nodejs">
 <a href="#resolveafterminutes_nodejs" style="color: inherit; text-decoration: inherit;">resolve<wbr>After<wbr>Minutes</a>
@@ -771,8 +717,7 @@ If absent or <= 0, no re-triggering occur.
     <dd>{{% md %}}The number of consecutive minutes that a firing series matching the condition
 query must evaluate to "false" (zero value) before the alert resolves.  When unset, this default sto
 the same value as `minutes`.
-{{% /md %}}</dd>
-    <dt class="property-optional"
+{{% /md %}}</dd><dt class="property-optional"
             title="Optional">
         <span id="severity_nodejs">
 <a href="#severity_nodejs" style="color: inherit; text-decoration: inherit;">severity</a>
@@ -781,8 +726,7 @@ the same value as `minutes`.
         <span class="property-type">string</span>
     </dt>
     <dd>{{% md %}}- Severity of the alert, valid values are `INFO`, `SMOKE`, `WARN`, `SEVERE`.
-{{% /md %}}</dd>
-    <dt class="property-optional"
+{{% /md %}}</dd><dt class="property-optional"
             title="Optional">
         <span id="target_nodejs">
 <a href="#target_nodejs" style="color: inherit; text-decoration: inherit;">target</a>
@@ -792,8 +736,7 @@ the same value as `minutes`.
     </dt>
     <dd>{{% md %}}A comma-separated list of the email address or integration endpoint 
 (such as PagerDuty or web hook) to notify when the alert status changes.
-{{% /md %}}</dd>
-    <dt class="property-optional"
+{{% /md %}}</dd><dt class="property-optional"
             title="Optional">
         <span id="thresholdtargets_nodejs">
 <a href="#thresholdtargets_nodejs" style="color: inherit; text-decoration: inherit;">threshold<wbr>Targets</a>
@@ -802,14 +745,11 @@ the same value as `minutes`.
         <span class="property-type">{[key: string]: string}</span>
     </dt>
     <dd>{{% md %}}Targets for severity
-{{% /md %}}</dd>
-</dl>
+{{% /md %}}</dd></dl>
 {{% /choosable %}}
 
 {{% choosable language python %}}
-<dl class="resources-properties">
-
-    <dt class="property-required"
+<dl class="resources-properties"><dt class="property-required"
             title="Required">
         <span id="minutes_python">
 <a href="#minutes_python" style="color: inherit; text-decoration: inherit;">minutes</a>
@@ -819,8 +759,7 @@ the same value as `minutes`.
     </dt>
     <dd>{{% md %}}The number of consecutive minutes that a series matching the condition query must 
 evaluate to "true" (non-zero value) before the alert fires.
-{{% /md %}}</dd>
-    <dt class="property-required"
+{{% /md %}}</dd><dt class="property-required"
             title="Required">
         <span id="tags_python">
 <a href="#tags_python" style="color: inherit; text-decoration: inherit;">tags</a>
@@ -829,8 +768,7 @@ evaluate to "true" (non-zero value) before the alert fires.
         <span class="property-type">Sequence[str]</span>
     </dt>
     <dd>{{% md %}}A set of tags to assign to this resource.
-{{% /md %}}</dd>
-    <dt class="property-optional"
+{{% /md %}}</dd><dt class="property-optional"
             title="Optional">
         <span id="additional_information_python">
 <a href="#additional_information_python" style="color: inherit; text-decoration: inherit;">additional_<wbr>information</a>
@@ -840,8 +778,7 @@ evaluate to "true" (non-zero value) before the alert fires.
     </dt>
     <dd>{{% md %}}User-supplied additional explanatory information for this alert.
 Useful for linking runbooks, migrations...etc
-{{% /md %}}</dd>
-    <dt class="property-optional"
+{{% /md %}}</dd><dt class="property-optional"
             title="Optional">
         <span id="alert_type_python">
 <a href="#alert_type_python" style="color: inherit; text-decoration: inherit;">alert_<wbr>type</a>
@@ -851,8 +788,7 @@ Useful for linking runbooks, migrations...etc
     </dt>
     <dd>{{% md %}}The type of alert in Wavefront.  Either `CLASSIC` (default) 
 or `THRESHOLD`
-{{% /md %}}</dd>
-    <dt class="property-optional"
+{{% /md %}}</dd><dt class="property-optional"
             title="Optional">
         <span id="can_modifies_python">
 <a href="#can_modifies_python" style="color: inherit; text-decoration: inherit;">can_<wbr>modifies</a>
@@ -861,8 +797,7 @@ or `THRESHOLD`
         <span class="property-type">Sequence[str]</span>
     </dt>
     <dd>{{% md %}}A list of users or groups that can modify this resource.
-{{% /md %}}</dd>
-    <dt class="property-optional"
+{{% /md %}}</dd><dt class="property-optional"
             title="Optional">
         <span id="can_views_python">
 <a href="#can_views_python" style="color: inherit; text-decoration: inherit;">can_<wbr>views</a>
@@ -871,8 +806,7 @@ or `THRESHOLD`
         <span class="property-type">Sequence[str]</span>
     </dt>
     <dd>{{% md %}}A list of users or groups that can view this resource.
-{{% /md %}}</dd>
-    <dt class="property-optional"
+{{% /md %}}</dd><dt class="property-optional"
             title="Optional">
         <span id="condition_python">
 <a href="#condition_python" style="color: inherit; text-decoration: inherit;">condition</a>
@@ -883,8 +817,7 @@ or `THRESHOLD`
     <dd>{{% md %}}A Wavefront query that is evaluated at regular intervals (default 1m).
 The alert fires and notifications are triggered when data series matching this query evaluates
 to a non-zero value for a set number of consecutive minutes.
-{{% /md %}}</dd>
-    <dt class="property-optional"
+{{% /md %}}</dd><dt class="property-optional"
             title="Optional">
         <span id="conditions_python">
 <a href="#conditions_python" style="color: inherit; text-decoration: inherit;">conditions</a>
@@ -894,8 +827,7 @@ to a non-zero value for a set number of consecutive minutes.
     </dt>
     <dd>{{% md %}}a string->string map of `severity` to `condition` 
 for which this alert will trigger.
-{{% /md %}}</dd>
-    <dt class="property-optional"
+{{% /md %}}</dd><dt class="property-optional"
             title="Optional">
         <span id="display_expression_python">
 <a href="#display_expression_python" style="color: inherit; text-decoration: inherit;">display_<wbr>expression</a>
@@ -906,8 +838,7 @@ for which this alert will trigger.
     <dd>{{% md %}}A second query whose results are displayed in the alert user
 interface instead of the condition query.  This field is often used to display a version
 of the condition query with Boolean operators removed so that numerical values are plotted.
-{{% /md %}}</dd>
-    <dt class="property-optional"
+{{% /md %}}</dd><dt class="property-optional"
             title="Optional">
         <span id="name_python">
 <a href="#name_python" style="color: inherit; text-decoration: inherit;">name</a>
@@ -916,8 +847,7 @@ of the condition query with Boolean operators removed so that numerical values a
         <span class="property-type">str</span>
     </dt>
     <dd>{{% md %}}The name of the alert as it is displayed in Wavefront.
-{{% /md %}}</dd>
-    <dt class="property-optional"
+{{% /md %}}</dd><dt class="property-optional"
             title="Optional">
         <span id="notification_resend_frequency_minutes_python">
 <a href="#notification_resend_frequency_minutes_python" style="color: inherit; text-decoration: inherit;">notification_<wbr>resend_<wbr>frequency_<wbr>minutes</a>
@@ -927,8 +857,7 @@ of the condition query with Boolean operators removed so that numerical values a
     </dt>
     <dd>{{% md %}}How often to re-trigger a continually failing alert. 
 If absent or <= 0, no re-triggering occur.
-{{% /md %}}</dd>
-    <dt class="property-optional"
+{{% /md %}}</dd><dt class="property-optional"
             title="Optional">
         <span id="resolve_after_minutes_python">
 <a href="#resolve_after_minutes_python" style="color: inherit; text-decoration: inherit;">resolve_<wbr>after_<wbr>minutes</a>
@@ -939,8 +868,7 @@ If absent or <= 0, no re-triggering occur.
     <dd>{{% md %}}The number of consecutive minutes that a firing series matching the condition
 query must evaluate to "false" (zero value) before the alert resolves.  When unset, this default sto
 the same value as `minutes`.
-{{% /md %}}</dd>
-    <dt class="property-optional"
+{{% /md %}}</dd><dt class="property-optional"
             title="Optional">
         <span id="severity_python">
 <a href="#severity_python" style="color: inherit; text-decoration: inherit;">severity</a>
@@ -949,8 +877,7 @@ the same value as `minutes`.
         <span class="property-type">str</span>
     </dt>
     <dd>{{% md %}}- Severity of the alert, valid values are `INFO`, `SMOKE`, `WARN`, `SEVERE`.
-{{% /md %}}</dd>
-    <dt class="property-optional"
+{{% /md %}}</dd><dt class="property-optional"
             title="Optional">
         <span id="target_python">
 <a href="#target_python" style="color: inherit; text-decoration: inherit;">target</a>
@@ -960,8 +887,7 @@ the same value as `minutes`.
     </dt>
     <dd>{{% md %}}A comma-separated list of the email address or integration endpoint 
 (such as PagerDuty or web hook) to notify when the alert status changes.
-{{% /md %}}</dd>
-    <dt class="property-optional"
+{{% /md %}}</dd><dt class="property-optional"
             title="Optional">
         <span id="threshold_targets_python">
 <a href="#threshold_targets_python" style="color: inherit; text-decoration: inherit;">threshold_<wbr>targets</a>
@@ -970,8 +896,7 @@ the same value as `minutes`.
         <span class="property-type">Mapping[str, str]</span>
     </dt>
     <dd>{{% md %}}Targets for severity
-{{% /md %}}</dd>
-</dl>
+{{% /md %}}</dd></dl>
 {{% /choosable %}}
 
 
@@ -982,9 +907,7 @@ All [input](#inputs) properties are implicitly available as output properties. A
 
 
 {{% choosable language csharp %}}
-<dl class="resources-properties">
-
-    <dt class="property-"
+<dl class="resources-properties"><dt class="property-"
             title="">
         <span id="id_csharp">
 <a href="#id_csharp" style="color: inherit; text-decoration: inherit;">Id</a>
@@ -992,14 +915,11 @@ All [input](#inputs) properties are implicitly available as output properties. A
         <span class="property-indicator"></span>
         <span class="property-type">string</span>
     </dt>
-    <dd>{{% md %}}The provider-assigned unique ID for this managed resource.{{% /md %}}</dd>
-</dl>
+    <dd>{{% md %}}The provider-assigned unique ID for this managed resource.{{% /md %}}</dd></dl>
 {{% /choosable %}}
 
 {{% choosable language go %}}
-<dl class="resources-properties">
-
-    <dt class="property-"
+<dl class="resources-properties"><dt class="property-"
             title="">
         <span id="id_go">
 <a href="#id_go" style="color: inherit; text-decoration: inherit;">Id</a>
@@ -1007,14 +927,11 @@ All [input](#inputs) properties are implicitly available as output properties. A
         <span class="property-indicator"></span>
         <span class="property-type">string</span>
     </dt>
-    <dd>{{% md %}}The provider-assigned unique ID for this managed resource.{{% /md %}}</dd>
-</dl>
+    <dd>{{% md %}}The provider-assigned unique ID for this managed resource.{{% /md %}}</dd></dl>
 {{% /choosable %}}
 
 {{% choosable language nodejs %}}
-<dl class="resources-properties">
-
-    <dt class="property-"
+<dl class="resources-properties"><dt class="property-"
             title="">
         <span id="id_nodejs">
 <a href="#id_nodejs" style="color: inherit; text-decoration: inherit;">id</a>
@@ -1022,14 +939,11 @@ All [input](#inputs) properties are implicitly available as output properties. A
         <span class="property-indicator"></span>
         <span class="property-type">string</span>
     </dt>
-    <dd>{{% md %}}The provider-assigned unique ID for this managed resource.{{% /md %}}</dd>
-</dl>
+    <dd>{{% md %}}The provider-assigned unique ID for this managed resource.{{% /md %}}</dd></dl>
 {{% /choosable %}}
 
 {{% choosable language python %}}
-<dl class="resources-properties">
-
-    <dt class="property-"
+<dl class="resources-properties"><dt class="property-"
             title="">
         <span id="id_python">
 <a href="#id_python" style="color: inherit; text-decoration: inherit;">id</a>
@@ -1037,8 +951,7 @@ All [input](#inputs) properties are implicitly available as output properties. A
         <span class="property-indicator"></span>
         <span class="property-type">str</span>
     </dt>
-    <dd>{{% md %}}The provider-assigned unique ID for this managed resource.{{% /md %}}</dd>
-</dl>
+    <dd>{{% md %}}The provider-assigned unique ID for this managed resource.{{% /md %}}</dd></dl>
 {{% /choosable %}}
 
 
@@ -1165,9 +1078,7 @@ The following state arguments are supported:
 
 
 {{% choosable language csharp %}}
-<dl class="resources-properties">
-
-    <dt class="property-optional"
+<dl class="resources-properties"><dt class="property-optional"
             title="Optional">
         <span id="state_additionalinformation_csharp">
 <a href="#state_additionalinformation_csharp" style="color: inherit; text-decoration: inherit;">Additional<wbr>Information</a>
@@ -1177,8 +1088,7 @@ The following state arguments are supported:
     </dt>
     <dd>{{% md %}}User-supplied additional explanatory information for this alert.
 Useful for linking runbooks, migrations...etc
-{{% /md %}}</dd>
-    <dt class="property-optional"
+{{% /md %}}</dd><dt class="property-optional"
             title="Optional">
         <span id="state_alerttype_csharp">
 <a href="#state_alerttype_csharp" style="color: inherit; text-decoration: inherit;">Alert<wbr>Type</a>
@@ -1188,8 +1098,7 @@ Useful for linking runbooks, migrations...etc
     </dt>
     <dd>{{% md %}}The type of alert in Wavefront.  Either `CLASSIC` (default) 
 or `THRESHOLD`
-{{% /md %}}</dd>
-    <dt class="property-optional"
+{{% /md %}}</dd><dt class="property-optional"
             title="Optional">
         <span id="state_canmodifies_csharp">
 <a href="#state_canmodifies_csharp" style="color: inherit; text-decoration: inherit;">Can<wbr>Modifies</a>
@@ -1198,8 +1107,7 @@ or `THRESHOLD`
         <span class="property-type">List&lt;string&gt;</span>
     </dt>
     <dd>{{% md %}}A list of users or groups that can modify this resource.
-{{% /md %}}</dd>
-    <dt class="property-optional"
+{{% /md %}}</dd><dt class="property-optional"
             title="Optional">
         <span id="state_canviews_csharp">
 <a href="#state_canviews_csharp" style="color: inherit; text-decoration: inherit;">Can<wbr>Views</a>
@@ -1208,8 +1116,7 @@ or `THRESHOLD`
         <span class="property-type">List&lt;string&gt;</span>
     </dt>
     <dd>{{% md %}}A list of users or groups that can view this resource.
-{{% /md %}}</dd>
-    <dt class="property-optional"
+{{% /md %}}</dd><dt class="property-optional"
             title="Optional">
         <span id="state_condition_csharp">
 <a href="#state_condition_csharp" style="color: inherit; text-decoration: inherit;">Condition</a>
@@ -1220,8 +1127,7 @@ or `THRESHOLD`
     <dd>{{% md %}}A Wavefront query that is evaluated at regular intervals (default 1m).
 The alert fires and notifications are triggered when data series matching this query evaluates
 to a non-zero value for a set number of consecutive minutes.
-{{% /md %}}</dd>
-    <dt class="property-optional"
+{{% /md %}}</dd><dt class="property-optional"
             title="Optional">
         <span id="state_conditions_csharp">
 <a href="#state_conditions_csharp" style="color: inherit; text-decoration: inherit;">Conditions</a>
@@ -1231,8 +1137,7 @@ to a non-zero value for a set number of consecutive minutes.
     </dt>
     <dd>{{% md %}}a string->string map of `severity` to `condition` 
 for which this alert will trigger.
-{{% /md %}}</dd>
-    <dt class="property-optional"
+{{% /md %}}</dd><dt class="property-optional"
             title="Optional">
         <span id="state_displayexpression_csharp">
 <a href="#state_displayexpression_csharp" style="color: inherit; text-decoration: inherit;">Display<wbr>Expression</a>
@@ -1243,8 +1148,7 @@ for which this alert will trigger.
     <dd>{{% md %}}A second query whose results are displayed in the alert user
 interface instead of the condition query.  This field is often used to display a version
 of the condition query with Boolean operators removed so that numerical values are plotted.
-{{% /md %}}</dd>
-    <dt class="property-optional"
+{{% /md %}}</dd><dt class="property-optional"
             title="Optional">
         <span id="state_minutes_csharp">
 <a href="#state_minutes_csharp" style="color: inherit; text-decoration: inherit;">Minutes</a>
@@ -1254,8 +1158,7 @@ of the condition query with Boolean operators removed so that numerical values a
     </dt>
     <dd>{{% md %}}The number of consecutive minutes that a series matching the condition query must 
 evaluate to "true" (non-zero value) before the alert fires.
-{{% /md %}}</dd>
-    <dt class="property-optional"
+{{% /md %}}</dd><dt class="property-optional"
             title="Optional">
         <span id="state_name_csharp">
 <a href="#state_name_csharp" style="color: inherit; text-decoration: inherit;">Name</a>
@@ -1264,8 +1167,7 @@ evaluate to "true" (non-zero value) before the alert fires.
         <span class="property-type">string</span>
     </dt>
     <dd>{{% md %}}The name of the alert as it is displayed in Wavefront.
-{{% /md %}}</dd>
-    <dt class="property-optional"
+{{% /md %}}</dd><dt class="property-optional"
             title="Optional">
         <span id="state_notificationresendfrequencyminutes_csharp">
 <a href="#state_notificationresendfrequencyminutes_csharp" style="color: inherit; text-decoration: inherit;">Notification<wbr>Resend<wbr>Frequency<wbr>Minutes</a>
@@ -1275,8 +1177,7 @@ evaluate to "true" (non-zero value) before the alert fires.
     </dt>
     <dd>{{% md %}}How often to re-trigger a continually failing alert. 
 If absent or <= 0, no re-triggering occur.
-{{% /md %}}</dd>
-    <dt class="property-optional"
+{{% /md %}}</dd><dt class="property-optional"
             title="Optional">
         <span id="state_resolveafterminutes_csharp">
 <a href="#state_resolveafterminutes_csharp" style="color: inherit; text-decoration: inherit;">Resolve<wbr>After<wbr>Minutes</a>
@@ -1287,8 +1188,7 @@ If absent or <= 0, no re-triggering occur.
     <dd>{{% md %}}The number of consecutive minutes that a firing series matching the condition
 query must evaluate to "false" (zero value) before the alert resolves.  When unset, this default sto
 the same value as `minutes`.
-{{% /md %}}</dd>
-    <dt class="property-optional"
+{{% /md %}}</dd><dt class="property-optional"
             title="Optional">
         <span id="state_severity_csharp">
 <a href="#state_severity_csharp" style="color: inherit; text-decoration: inherit;">Severity</a>
@@ -1297,8 +1197,7 @@ the same value as `minutes`.
         <span class="property-type">string</span>
     </dt>
     <dd>{{% md %}}- Severity of the alert, valid values are `INFO`, `SMOKE`, `WARN`, `SEVERE`.
-{{% /md %}}</dd>
-    <dt class="property-optional"
+{{% /md %}}</dd><dt class="property-optional"
             title="Optional">
         <span id="state_tags_csharp">
 <a href="#state_tags_csharp" style="color: inherit; text-decoration: inherit;">Tags</a>
@@ -1307,8 +1206,7 @@ the same value as `minutes`.
         <span class="property-type">List&lt;string&gt;</span>
     </dt>
     <dd>{{% md %}}A set of tags to assign to this resource.
-{{% /md %}}</dd>
-    <dt class="property-optional"
+{{% /md %}}</dd><dt class="property-optional"
             title="Optional">
         <span id="state_target_csharp">
 <a href="#state_target_csharp" style="color: inherit; text-decoration: inherit;">Target</a>
@@ -1318,8 +1216,7 @@ the same value as `minutes`.
     </dt>
     <dd>{{% md %}}A comma-separated list of the email address or integration endpoint 
 (such as PagerDuty or web hook) to notify when the alert status changes.
-{{% /md %}}</dd>
-    <dt class="property-optional"
+{{% /md %}}</dd><dt class="property-optional"
             title="Optional">
         <span id="state_thresholdtargets_csharp">
 <a href="#state_thresholdtargets_csharp" style="color: inherit; text-decoration: inherit;">Threshold<wbr>Targets</a>
@@ -1328,14 +1225,11 @@ the same value as `minutes`.
         <span class="property-type">Dictionary&lt;string, string&gt;</span>
     </dt>
     <dd>{{% md %}}Targets for severity
-{{% /md %}}</dd>
-</dl>
+{{% /md %}}</dd></dl>
 {{% /choosable %}}
 
 {{% choosable language go %}}
-<dl class="resources-properties">
-
-    <dt class="property-optional"
+<dl class="resources-properties"><dt class="property-optional"
             title="Optional">
         <span id="state_additionalinformation_go">
 <a href="#state_additionalinformation_go" style="color: inherit; text-decoration: inherit;">Additional<wbr>Information</a>
@@ -1345,8 +1239,7 @@ the same value as `minutes`.
     </dt>
     <dd>{{% md %}}User-supplied additional explanatory information for this alert.
 Useful for linking runbooks, migrations...etc
-{{% /md %}}</dd>
-    <dt class="property-optional"
+{{% /md %}}</dd><dt class="property-optional"
             title="Optional">
         <span id="state_alerttype_go">
 <a href="#state_alerttype_go" style="color: inherit; text-decoration: inherit;">Alert<wbr>Type</a>
@@ -1356,8 +1249,7 @@ Useful for linking runbooks, migrations...etc
     </dt>
     <dd>{{% md %}}The type of alert in Wavefront.  Either `CLASSIC` (default) 
 or `THRESHOLD`
-{{% /md %}}</dd>
-    <dt class="property-optional"
+{{% /md %}}</dd><dt class="property-optional"
             title="Optional">
         <span id="state_canmodifies_go">
 <a href="#state_canmodifies_go" style="color: inherit; text-decoration: inherit;">Can<wbr>Modifies</a>
@@ -1366,8 +1258,7 @@ or `THRESHOLD`
         <span class="property-type">[]string</span>
     </dt>
     <dd>{{% md %}}A list of users or groups that can modify this resource.
-{{% /md %}}</dd>
-    <dt class="property-optional"
+{{% /md %}}</dd><dt class="property-optional"
             title="Optional">
         <span id="state_canviews_go">
 <a href="#state_canviews_go" style="color: inherit; text-decoration: inherit;">Can<wbr>Views</a>
@@ -1376,8 +1267,7 @@ or `THRESHOLD`
         <span class="property-type">[]string</span>
     </dt>
     <dd>{{% md %}}A list of users or groups that can view this resource.
-{{% /md %}}</dd>
-    <dt class="property-optional"
+{{% /md %}}</dd><dt class="property-optional"
             title="Optional">
         <span id="state_condition_go">
 <a href="#state_condition_go" style="color: inherit; text-decoration: inherit;">Condition</a>
@@ -1388,8 +1278,7 @@ or `THRESHOLD`
     <dd>{{% md %}}A Wavefront query that is evaluated at regular intervals (default 1m).
 The alert fires and notifications are triggered when data series matching this query evaluates
 to a non-zero value for a set number of consecutive minutes.
-{{% /md %}}</dd>
-    <dt class="property-optional"
+{{% /md %}}</dd><dt class="property-optional"
             title="Optional">
         <span id="state_conditions_go">
 <a href="#state_conditions_go" style="color: inherit; text-decoration: inherit;">Conditions</a>
@@ -1399,8 +1288,7 @@ to a non-zero value for a set number of consecutive minutes.
     </dt>
     <dd>{{% md %}}a string->string map of `severity` to `condition` 
 for which this alert will trigger.
-{{% /md %}}</dd>
-    <dt class="property-optional"
+{{% /md %}}</dd><dt class="property-optional"
             title="Optional">
         <span id="state_displayexpression_go">
 <a href="#state_displayexpression_go" style="color: inherit; text-decoration: inherit;">Display<wbr>Expression</a>
@@ -1411,8 +1299,7 @@ for which this alert will trigger.
     <dd>{{% md %}}A second query whose results are displayed in the alert user
 interface instead of the condition query.  This field is often used to display a version
 of the condition query with Boolean operators removed so that numerical values are plotted.
-{{% /md %}}</dd>
-    <dt class="property-optional"
+{{% /md %}}</dd><dt class="property-optional"
             title="Optional">
         <span id="state_minutes_go">
 <a href="#state_minutes_go" style="color: inherit; text-decoration: inherit;">Minutes</a>
@@ -1422,8 +1309,7 @@ of the condition query with Boolean operators removed so that numerical values a
     </dt>
     <dd>{{% md %}}The number of consecutive minutes that a series matching the condition query must 
 evaluate to "true" (non-zero value) before the alert fires.
-{{% /md %}}</dd>
-    <dt class="property-optional"
+{{% /md %}}</dd><dt class="property-optional"
             title="Optional">
         <span id="state_name_go">
 <a href="#state_name_go" style="color: inherit; text-decoration: inherit;">Name</a>
@@ -1432,8 +1318,7 @@ evaluate to "true" (non-zero value) before the alert fires.
         <span class="property-type">string</span>
     </dt>
     <dd>{{% md %}}The name of the alert as it is displayed in Wavefront.
-{{% /md %}}</dd>
-    <dt class="property-optional"
+{{% /md %}}</dd><dt class="property-optional"
             title="Optional">
         <span id="state_notificationresendfrequencyminutes_go">
 <a href="#state_notificationresendfrequencyminutes_go" style="color: inherit; text-decoration: inherit;">Notification<wbr>Resend<wbr>Frequency<wbr>Minutes</a>
@@ -1443,8 +1328,7 @@ evaluate to "true" (non-zero value) before the alert fires.
     </dt>
     <dd>{{% md %}}How often to re-trigger a continually failing alert. 
 If absent or <= 0, no re-triggering occur.
-{{% /md %}}</dd>
-    <dt class="property-optional"
+{{% /md %}}</dd><dt class="property-optional"
             title="Optional">
         <span id="state_resolveafterminutes_go">
 <a href="#state_resolveafterminutes_go" style="color: inherit; text-decoration: inherit;">Resolve<wbr>After<wbr>Minutes</a>
@@ -1455,8 +1339,7 @@ If absent or <= 0, no re-triggering occur.
     <dd>{{% md %}}The number of consecutive minutes that a firing series matching the condition
 query must evaluate to "false" (zero value) before the alert resolves.  When unset, this default sto
 the same value as `minutes`.
-{{% /md %}}</dd>
-    <dt class="property-optional"
+{{% /md %}}</dd><dt class="property-optional"
             title="Optional">
         <span id="state_severity_go">
 <a href="#state_severity_go" style="color: inherit; text-decoration: inherit;">Severity</a>
@@ -1465,8 +1348,7 @@ the same value as `minutes`.
         <span class="property-type">string</span>
     </dt>
     <dd>{{% md %}}- Severity of the alert, valid values are `INFO`, `SMOKE`, `WARN`, `SEVERE`.
-{{% /md %}}</dd>
-    <dt class="property-optional"
+{{% /md %}}</dd><dt class="property-optional"
             title="Optional">
         <span id="state_tags_go">
 <a href="#state_tags_go" style="color: inherit; text-decoration: inherit;">Tags</a>
@@ -1475,8 +1357,7 @@ the same value as `minutes`.
         <span class="property-type">[]string</span>
     </dt>
     <dd>{{% md %}}A set of tags to assign to this resource.
-{{% /md %}}</dd>
-    <dt class="property-optional"
+{{% /md %}}</dd><dt class="property-optional"
             title="Optional">
         <span id="state_target_go">
 <a href="#state_target_go" style="color: inherit; text-decoration: inherit;">Target</a>
@@ -1486,8 +1367,7 @@ the same value as `minutes`.
     </dt>
     <dd>{{% md %}}A comma-separated list of the email address or integration endpoint 
 (such as PagerDuty or web hook) to notify when the alert status changes.
-{{% /md %}}</dd>
-    <dt class="property-optional"
+{{% /md %}}</dd><dt class="property-optional"
             title="Optional">
         <span id="state_thresholdtargets_go">
 <a href="#state_thresholdtargets_go" style="color: inherit; text-decoration: inherit;">Threshold<wbr>Targets</a>
@@ -1496,14 +1376,11 @@ the same value as `minutes`.
         <span class="property-type">map[string]string</span>
     </dt>
     <dd>{{% md %}}Targets for severity
-{{% /md %}}</dd>
-</dl>
+{{% /md %}}</dd></dl>
 {{% /choosable %}}
 
 {{% choosable language nodejs %}}
-<dl class="resources-properties">
-
-    <dt class="property-optional"
+<dl class="resources-properties"><dt class="property-optional"
             title="Optional">
         <span id="state_additionalinformation_nodejs">
 <a href="#state_additionalinformation_nodejs" style="color: inherit; text-decoration: inherit;">additional<wbr>Information</a>
@@ -1513,8 +1390,7 @@ the same value as `minutes`.
     </dt>
     <dd>{{% md %}}User-supplied additional explanatory information for this alert.
 Useful for linking runbooks, migrations...etc
-{{% /md %}}</dd>
-    <dt class="property-optional"
+{{% /md %}}</dd><dt class="property-optional"
             title="Optional">
         <span id="state_alerttype_nodejs">
 <a href="#state_alerttype_nodejs" style="color: inherit; text-decoration: inherit;">alert<wbr>Type</a>
@@ -1524,8 +1400,7 @@ Useful for linking runbooks, migrations...etc
     </dt>
     <dd>{{% md %}}The type of alert in Wavefront.  Either `CLASSIC` (default) 
 or `THRESHOLD`
-{{% /md %}}</dd>
-    <dt class="property-optional"
+{{% /md %}}</dd><dt class="property-optional"
             title="Optional">
         <span id="state_canmodifies_nodejs">
 <a href="#state_canmodifies_nodejs" style="color: inherit; text-decoration: inherit;">can<wbr>Modifies</a>
@@ -1534,8 +1409,7 @@ or `THRESHOLD`
         <span class="property-type">string[]</span>
     </dt>
     <dd>{{% md %}}A list of users or groups that can modify this resource.
-{{% /md %}}</dd>
-    <dt class="property-optional"
+{{% /md %}}</dd><dt class="property-optional"
             title="Optional">
         <span id="state_canviews_nodejs">
 <a href="#state_canviews_nodejs" style="color: inherit; text-decoration: inherit;">can<wbr>Views</a>
@@ -1544,8 +1418,7 @@ or `THRESHOLD`
         <span class="property-type">string[]</span>
     </dt>
     <dd>{{% md %}}A list of users or groups that can view this resource.
-{{% /md %}}</dd>
-    <dt class="property-optional"
+{{% /md %}}</dd><dt class="property-optional"
             title="Optional">
         <span id="state_condition_nodejs">
 <a href="#state_condition_nodejs" style="color: inherit; text-decoration: inherit;">condition</a>
@@ -1556,8 +1429,7 @@ or `THRESHOLD`
     <dd>{{% md %}}A Wavefront query that is evaluated at regular intervals (default 1m).
 The alert fires and notifications are triggered when data series matching this query evaluates
 to a non-zero value for a set number of consecutive minutes.
-{{% /md %}}</dd>
-    <dt class="property-optional"
+{{% /md %}}</dd><dt class="property-optional"
             title="Optional">
         <span id="state_conditions_nodejs">
 <a href="#state_conditions_nodejs" style="color: inherit; text-decoration: inherit;">conditions</a>
@@ -1567,8 +1439,7 @@ to a non-zero value for a set number of consecutive minutes.
     </dt>
     <dd>{{% md %}}a string->string map of `severity` to `condition` 
 for which this alert will trigger.
-{{% /md %}}</dd>
-    <dt class="property-optional"
+{{% /md %}}</dd><dt class="property-optional"
             title="Optional">
         <span id="state_displayexpression_nodejs">
 <a href="#state_displayexpression_nodejs" style="color: inherit; text-decoration: inherit;">display<wbr>Expression</a>
@@ -1579,8 +1450,7 @@ for which this alert will trigger.
     <dd>{{% md %}}A second query whose results are displayed in the alert user
 interface instead of the condition query.  This field is often used to display a version
 of the condition query with Boolean operators removed so that numerical values are plotted.
-{{% /md %}}</dd>
-    <dt class="property-optional"
+{{% /md %}}</dd><dt class="property-optional"
             title="Optional">
         <span id="state_minutes_nodejs">
 <a href="#state_minutes_nodejs" style="color: inherit; text-decoration: inherit;">minutes</a>
@@ -1590,8 +1460,7 @@ of the condition query with Boolean operators removed so that numerical values a
     </dt>
     <dd>{{% md %}}The number of consecutive minutes that a series matching the condition query must 
 evaluate to "true" (non-zero value) before the alert fires.
-{{% /md %}}</dd>
-    <dt class="property-optional"
+{{% /md %}}</dd><dt class="property-optional"
             title="Optional">
         <span id="state_name_nodejs">
 <a href="#state_name_nodejs" style="color: inherit; text-decoration: inherit;">name</a>
@@ -1600,8 +1469,7 @@ evaluate to "true" (non-zero value) before the alert fires.
         <span class="property-type">string</span>
     </dt>
     <dd>{{% md %}}The name of the alert as it is displayed in Wavefront.
-{{% /md %}}</dd>
-    <dt class="property-optional"
+{{% /md %}}</dd><dt class="property-optional"
             title="Optional">
         <span id="state_notificationresendfrequencyminutes_nodejs">
 <a href="#state_notificationresendfrequencyminutes_nodejs" style="color: inherit; text-decoration: inherit;">notification<wbr>Resend<wbr>Frequency<wbr>Minutes</a>
@@ -1611,8 +1479,7 @@ evaluate to "true" (non-zero value) before the alert fires.
     </dt>
     <dd>{{% md %}}How often to re-trigger a continually failing alert. 
 If absent or <= 0, no re-triggering occur.
-{{% /md %}}</dd>
-    <dt class="property-optional"
+{{% /md %}}</dd><dt class="property-optional"
             title="Optional">
         <span id="state_resolveafterminutes_nodejs">
 <a href="#state_resolveafterminutes_nodejs" style="color: inherit; text-decoration: inherit;">resolve<wbr>After<wbr>Minutes</a>
@@ -1623,8 +1490,7 @@ If absent or <= 0, no re-triggering occur.
     <dd>{{% md %}}The number of consecutive minutes that a firing series matching the condition
 query must evaluate to "false" (zero value) before the alert resolves.  When unset, this default sto
 the same value as `minutes`.
-{{% /md %}}</dd>
-    <dt class="property-optional"
+{{% /md %}}</dd><dt class="property-optional"
             title="Optional">
         <span id="state_severity_nodejs">
 <a href="#state_severity_nodejs" style="color: inherit; text-decoration: inherit;">severity</a>
@@ -1633,8 +1499,7 @@ the same value as `minutes`.
         <span class="property-type">string</span>
     </dt>
     <dd>{{% md %}}- Severity of the alert, valid values are `INFO`, `SMOKE`, `WARN`, `SEVERE`.
-{{% /md %}}</dd>
-    <dt class="property-optional"
+{{% /md %}}</dd><dt class="property-optional"
             title="Optional">
         <span id="state_tags_nodejs">
 <a href="#state_tags_nodejs" style="color: inherit; text-decoration: inherit;">tags</a>
@@ -1643,8 +1508,7 @@ the same value as `minutes`.
         <span class="property-type">string[]</span>
     </dt>
     <dd>{{% md %}}A set of tags to assign to this resource.
-{{% /md %}}</dd>
-    <dt class="property-optional"
+{{% /md %}}</dd><dt class="property-optional"
             title="Optional">
         <span id="state_target_nodejs">
 <a href="#state_target_nodejs" style="color: inherit; text-decoration: inherit;">target</a>
@@ -1654,8 +1518,7 @@ the same value as `minutes`.
     </dt>
     <dd>{{% md %}}A comma-separated list of the email address or integration endpoint 
 (such as PagerDuty or web hook) to notify when the alert status changes.
-{{% /md %}}</dd>
-    <dt class="property-optional"
+{{% /md %}}</dd><dt class="property-optional"
             title="Optional">
         <span id="state_thresholdtargets_nodejs">
 <a href="#state_thresholdtargets_nodejs" style="color: inherit; text-decoration: inherit;">threshold<wbr>Targets</a>
@@ -1664,14 +1527,11 @@ the same value as `minutes`.
         <span class="property-type">{[key: string]: string}</span>
     </dt>
     <dd>{{% md %}}Targets for severity
-{{% /md %}}</dd>
-</dl>
+{{% /md %}}</dd></dl>
 {{% /choosable %}}
 
 {{% choosable language python %}}
-<dl class="resources-properties">
-
-    <dt class="property-optional"
+<dl class="resources-properties"><dt class="property-optional"
             title="Optional">
         <span id="state_additional_information_python">
 <a href="#state_additional_information_python" style="color: inherit; text-decoration: inherit;">additional_<wbr>information</a>
@@ -1681,8 +1541,7 @@ the same value as `minutes`.
     </dt>
     <dd>{{% md %}}User-supplied additional explanatory information for this alert.
 Useful for linking runbooks, migrations...etc
-{{% /md %}}</dd>
-    <dt class="property-optional"
+{{% /md %}}</dd><dt class="property-optional"
             title="Optional">
         <span id="state_alert_type_python">
 <a href="#state_alert_type_python" style="color: inherit; text-decoration: inherit;">alert_<wbr>type</a>
@@ -1692,8 +1551,7 @@ Useful for linking runbooks, migrations...etc
     </dt>
     <dd>{{% md %}}The type of alert in Wavefront.  Either `CLASSIC` (default) 
 or `THRESHOLD`
-{{% /md %}}</dd>
-    <dt class="property-optional"
+{{% /md %}}</dd><dt class="property-optional"
             title="Optional">
         <span id="state_can_modifies_python">
 <a href="#state_can_modifies_python" style="color: inherit; text-decoration: inherit;">can_<wbr>modifies</a>
@@ -1702,8 +1560,7 @@ or `THRESHOLD`
         <span class="property-type">Sequence[str]</span>
     </dt>
     <dd>{{% md %}}A list of users or groups that can modify this resource.
-{{% /md %}}</dd>
-    <dt class="property-optional"
+{{% /md %}}</dd><dt class="property-optional"
             title="Optional">
         <span id="state_can_views_python">
 <a href="#state_can_views_python" style="color: inherit; text-decoration: inherit;">can_<wbr>views</a>
@@ -1712,8 +1569,7 @@ or `THRESHOLD`
         <span class="property-type">Sequence[str]</span>
     </dt>
     <dd>{{% md %}}A list of users or groups that can view this resource.
-{{% /md %}}</dd>
-    <dt class="property-optional"
+{{% /md %}}</dd><dt class="property-optional"
             title="Optional">
         <span id="state_condition_python">
 <a href="#state_condition_python" style="color: inherit; text-decoration: inherit;">condition</a>
@@ -1724,8 +1580,7 @@ or `THRESHOLD`
     <dd>{{% md %}}A Wavefront query that is evaluated at regular intervals (default 1m).
 The alert fires and notifications are triggered when data series matching this query evaluates
 to a non-zero value for a set number of consecutive minutes.
-{{% /md %}}</dd>
-    <dt class="property-optional"
+{{% /md %}}</dd><dt class="property-optional"
             title="Optional">
         <span id="state_conditions_python">
 <a href="#state_conditions_python" style="color: inherit; text-decoration: inherit;">conditions</a>
@@ -1735,8 +1590,7 @@ to a non-zero value for a set number of consecutive minutes.
     </dt>
     <dd>{{% md %}}a string->string map of `severity` to `condition` 
 for which this alert will trigger.
-{{% /md %}}</dd>
-    <dt class="property-optional"
+{{% /md %}}</dd><dt class="property-optional"
             title="Optional">
         <span id="state_display_expression_python">
 <a href="#state_display_expression_python" style="color: inherit; text-decoration: inherit;">display_<wbr>expression</a>
@@ -1747,8 +1601,7 @@ for which this alert will trigger.
     <dd>{{% md %}}A second query whose results are displayed in the alert user
 interface instead of the condition query.  This field is often used to display a version
 of the condition query with Boolean operators removed so that numerical values are plotted.
-{{% /md %}}</dd>
-    <dt class="property-optional"
+{{% /md %}}</dd><dt class="property-optional"
             title="Optional">
         <span id="state_minutes_python">
 <a href="#state_minutes_python" style="color: inherit; text-decoration: inherit;">minutes</a>
@@ -1758,8 +1611,7 @@ of the condition query with Boolean operators removed so that numerical values a
     </dt>
     <dd>{{% md %}}The number of consecutive minutes that a series matching the condition query must 
 evaluate to "true" (non-zero value) before the alert fires.
-{{% /md %}}</dd>
-    <dt class="property-optional"
+{{% /md %}}</dd><dt class="property-optional"
             title="Optional">
         <span id="state_name_python">
 <a href="#state_name_python" style="color: inherit; text-decoration: inherit;">name</a>
@@ -1768,8 +1620,7 @@ evaluate to "true" (non-zero value) before the alert fires.
         <span class="property-type">str</span>
     </dt>
     <dd>{{% md %}}The name of the alert as it is displayed in Wavefront.
-{{% /md %}}</dd>
-    <dt class="property-optional"
+{{% /md %}}</dd><dt class="property-optional"
             title="Optional">
         <span id="state_notification_resend_frequency_minutes_python">
 <a href="#state_notification_resend_frequency_minutes_python" style="color: inherit; text-decoration: inherit;">notification_<wbr>resend_<wbr>frequency_<wbr>minutes</a>
@@ -1779,8 +1630,7 @@ evaluate to "true" (non-zero value) before the alert fires.
     </dt>
     <dd>{{% md %}}How often to re-trigger a continually failing alert. 
 If absent or <= 0, no re-triggering occur.
-{{% /md %}}</dd>
-    <dt class="property-optional"
+{{% /md %}}</dd><dt class="property-optional"
             title="Optional">
         <span id="state_resolve_after_minutes_python">
 <a href="#state_resolve_after_minutes_python" style="color: inherit; text-decoration: inherit;">resolve_<wbr>after_<wbr>minutes</a>
@@ -1791,8 +1641,7 @@ If absent or <= 0, no re-triggering occur.
     <dd>{{% md %}}The number of consecutive minutes that a firing series matching the condition
 query must evaluate to "false" (zero value) before the alert resolves.  When unset, this default sto
 the same value as `minutes`.
-{{% /md %}}</dd>
-    <dt class="property-optional"
+{{% /md %}}</dd><dt class="property-optional"
             title="Optional">
         <span id="state_severity_python">
 <a href="#state_severity_python" style="color: inherit; text-decoration: inherit;">severity</a>
@@ -1801,8 +1650,7 @@ the same value as `minutes`.
         <span class="property-type">str</span>
     </dt>
     <dd>{{% md %}}- Severity of the alert, valid values are `INFO`, `SMOKE`, `WARN`, `SEVERE`.
-{{% /md %}}</dd>
-    <dt class="property-optional"
+{{% /md %}}</dd><dt class="property-optional"
             title="Optional">
         <span id="state_tags_python">
 <a href="#state_tags_python" style="color: inherit; text-decoration: inherit;">tags</a>
@@ -1811,8 +1659,7 @@ the same value as `minutes`.
         <span class="property-type">Sequence[str]</span>
     </dt>
     <dd>{{% md %}}A set of tags to assign to this resource.
-{{% /md %}}</dd>
-    <dt class="property-optional"
+{{% /md %}}</dd><dt class="property-optional"
             title="Optional">
         <span id="state_target_python">
 <a href="#state_target_python" style="color: inherit; text-decoration: inherit;">target</a>
@@ -1822,8 +1669,7 @@ the same value as `minutes`.
     </dt>
     <dd>{{% md %}}A comma-separated list of the email address or integration endpoint 
 (such as PagerDuty or web hook) to notify when the alert status changes.
-{{% /md %}}</dd>
-    <dt class="property-optional"
+{{% /md %}}</dd><dt class="property-optional"
             title="Optional">
         <span id="state_threshold_targets_python">
 <a href="#state_threshold_targets_python" style="color: inherit; text-decoration: inherit;">threshold_<wbr>targets</a>
@@ -1832,8 +1678,7 @@ the same value as `minutes`.
         <span class="property-type">Mapping[str, str]</span>
     </dt>
     <dd>{{% md %}}Targets for severity
-{{% /md %}}</dd>
-</dl>
+{{% /md %}}</dd></dl>
 {{% /choosable %}}
 
 
@@ -1859,6 +1704,6 @@ Alerts can be imported using the `id`, e.g.
 	<dt>License</dt>
 	<dd>Apache-2.0</dd>
 	<dt>Notes</dt>
-	<dd>This Pulumi package is based on the [`wavefront` Terraform Provider](https://github.com/vmware/terraform-provider-wavefront).</dd>
+	<dd>{{% md %}}This Pulumi package is based on the [`wavefront` Terraform Provider](https://github.com/vmware/terraform-provider-wavefront).{{% /md %}}</dd>
 </dl>
 

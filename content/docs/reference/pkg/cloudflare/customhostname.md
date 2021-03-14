@@ -13,11 +13,17 @@ meta_desc: "Documentation for the cloudflare.CustomHostname resource with exampl
 Provides a Cloudflare custom hostname (also known as SSL for SaaS) resource.
 
 {{% examples %}}
+
 ## Example Usage
 
 {{< chooser language "typescript,python,go,csharp" / >}}
 
-{{% example csharp %}}
+
+
+
+
+{{< example csharp >}}
+
 ```csharp
 using Pulumi;
 using Cloudflare = Pulumi.Cloudflare;
@@ -43,9 +49,12 @@ class MyStack : Stack
 }
 ```
 
-{{% /example %}}
 
-{{% example go %}}
+{{< /example >}}
+
+
+{{< example go >}}
+
 ```go
 package main
 
@@ -73,9 +82,12 @@ func main() {
 }
 ```
 
-{{% /example %}}
 
-{{% example python %}}
+{{< /example >}}
+
+
+{{< example python >}}
+
 ```python
 import pulumi
 import pulumi_cloudflare as cloudflare
@@ -88,9 +100,12 @@ example_hostname = cloudflare.CustomHostname("exampleHostname",
     zone_id="d41d8cd98f00b204e9800998ecf8427e")
 ```
 
-{{% /example %}}
 
-{{% example typescript %}}
+{{< /example >}}
+
+
+{{< example typescript >}}
+
 
 ```typescript
 import * as pulumi from "@pulumi/pulumi";
@@ -105,9 +120,16 @@ const exampleHostname = new cloudflare.CustomHostname("example_hostname", {
 });
 ```
 
-{{% /example %}}
+
+{{< /example >}}
+
+
+
+
 
 {{% /examples %}}
+
+
 
 
 ## Create a CustomHostname Resource {#create}
@@ -132,9 +154,7 @@ const exampleHostname = new cloudflare.CustomHostname("example_hostname", {
 
 {{% choosable language nodejs %}}
 
-<dl class="resources-properties">
-  
-    <dt
+<dl class="resources-properties"><dt
         class="property-required" title="Required">
         <span>name</span>
         <span class="property-indicator"></span>
@@ -142,9 +162,7 @@ const exampleHostname = new cloudflare.CustomHostname("example_hostname", {
     </dt>
     <dd>
       The unique name of the resource.
-    </dd>
-  
-    <dt
+    </dd><dt
         class="property-required" title="Required">
         <span>args</span>
         <span class="property-indicator"></span>
@@ -152,9 +170,7 @@ const exampleHostname = new cloudflare.CustomHostname("example_hostname", {
     </dt>
     <dd>
       The arguments to resource properties.
-    </dd>
-  
-    <dt
+    </dd><dt
         class="property-optional" title="Optional">
         <span>opts</span>
         <span class="property-indicator"></span>
@@ -162,10 +178,7 @@ const exampleHostname = new cloudflare.CustomHostname("example_hostname", {
     </dt>
     <dd>
       Bag of options to control resource&#39;s behavior.
-    </dd>
-  
-
-</dl>
+    </dd></dl>
 
 {{% /choosable %}}
 
@@ -191,9 +204,7 @@ const exampleHostname = new cloudflare.CustomHostname("example_hostname", {
 
 {{% choosable language go %}}
 
-<dl class="resources-properties">
-  
-    <dt
+<dl class="resources-properties"><dt
         class="property-optional" title="Optional">
         <span>ctx</span>
         <span class="property-indicator"></span>
@@ -201,9 +212,7 @@ const exampleHostname = new cloudflare.CustomHostname("example_hostname", {
     </dt>
     <dd>
       Context object for the current deployment.
-    </dd>
-  
-    <dt
+    </dd><dt
         class="property-required" title="Required">
         <span>name</span>
         <span class="property-indicator"></span>
@@ -211,9 +220,7 @@ const exampleHostname = new cloudflare.CustomHostname("example_hostname", {
     </dt>
     <dd>
       The unique name of the resource.
-    </dd>
-  
-    <dt
+    </dd><dt
         class="property-required" title="Required">
         <span>args</span>
         <span class="property-indicator"></span>
@@ -221,9 +228,7 @@ const exampleHostname = new cloudflare.CustomHostname("example_hostname", {
     </dt>
     <dd>
       The arguments to resource properties.
-    </dd>
-  
-    <dt
+    </dd><dt
         class="property-optional" title="Optional">
         <span>opts</span>
         <span class="property-indicator"></span>
@@ -231,18 +236,13 @@ const exampleHostname = new cloudflare.CustomHostname("example_hostname", {
     </dt>
     <dd>
       Bag of options to control resource&#39;s behavior.
-    </dd>
-  
-
-</dl>
+    </dd></dl>
 
 {{% /choosable %}}
 
 {{% choosable language csharp %}}
 
-<dl class="resources-properties">
-  
-    <dt
+<dl class="resources-properties"><dt
         class="property-required" title="Required">
         <span>name</span>
         <span class="property-indicator"></span>
@@ -250,9 +250,7 @@ const exampleHostname = new cloudflare.CustomHostname("example_hostname", {
     </dt>
     <dd>
       The unique name of the resource.
-    </dd>
-  
-    <dt
+    </dd><dt
         class="property-required" title="Required">
         <span>args</span>
         <span class="property-indicator"></span>
@@ -260,9 +258,7 @@ const exampleHostname = new cloudflare.CustomHostname("example_hostname", {
     </dt>
     <dd>
       The arguments to resource properties.
-    </dd>
-  
-    <dt
+    </dd><dt
         class="property-optional" title="Optional">
         <span>opts</span>
         <span class="property-indicator"></span>
@@ -270,10 +266,7 @@ const exampleHostname = new cloudflare.CustomHostname("example_hostname", {
     </dt>
     <dd>
       Bag of options to control resource&#39;s behavior.
-    </dd>
-  
-
-</dl>
+    </dd></dl>
 
 {{% /choosable %}}
 
@@ -288,9 +281,7 @@ The CustomHostname resource accepts the following [input]({{< relref "/docs/intr
 
 
 {{% choosable language csharp %}}
-<dl class="resources-properties">
-
-    <dt class="property-required"
+<dl class="resources-properties"><dt class="property-required"
             title="Required">
         <span id="hostname_csharp">
 <a href="#hostname_csharp" style="color: inherit; text-decoration: inherit;">Hostname</a>
@@ -299,8 +290,7 @@ The CustomHostname resource accepts the following [input]({{< relref "/docs/intr
         <span class="property-type">string</span>
     </dt>
     <dd>{{% md %}}Hostname you intend to request a certificate for.
-{{% /md %}}</dd>
-    <dt class="property-required"
+{{% /md %}}</dd><dt class="property-required"
             title="Required">
         <span id="ssls_csharp">
 <a href="#ssls_csharp" style="color: inherit; text-decoration: inherit;">Ssls</a>
@@ -309,8 +299,7 @@ The CustomHostname resource accepts the following [input]({{< relref "/docs/intr
         <span class="property-type"><a href="#customhostnamessl">List&lt;Custom<wbr>Hostname<wbr>Ssl<wbr>Args&gt;</a></span>
     </dt>
     <dd>{{% md %}}SSL configuration of the certificate. See further notes below.
-{{% /md %}}</dd>
-    <dt class="property-required"
+{{% /md %}}</dd><dt class="property-required"
             title="Required">
         <span id="zoneid_csharp">
 <a href="#zoneid_csharp" style="color: inherit; text-decoration: inherit;">Zone<wbr>Id</a>
@@ -319,8 +308,7 @@ The CustomHostname resource accepts the following [input]({{< relref "/docs/intr
         <span class="property-type">string</span>
     </dt>
     <dd>{{% md %}}The DNS zone ID where the custom hostname should be assigned.
-{{% /md %}}</dd>
-    <dt class="property-optional"
+{{% /md %}}</dd><dt class="property-optional"
             title="Optional">
         <span id="customoriginserver_csharp">
 <a href="#customoriginserver_csharp" style="color: inherit; text-decoration: inherit;">Custom<wbr>Origin<wbr>Server</a>
@@ -329,14 +317,11 @@ The CustomHostname resource accepts the following [input]({{< relref "/docs/intr
         <span class="property-type">string</span>
     </dt>
     <dd>{{% md %}}The custom origin server used for certificates.
-{{% /md %}}</dd>
-</dl>
+{{% /md %}}</dd></dl>
 {{% /choosable %}}
 
 {{% choosable language go %}}
-<dl class="resources-properties">
-
-    <dt class="property-required"
+<dl class="resources-properties"><dt class="property-required"
             title="Required">
         <span id="hostname_go">
 <a href="#hostname_go" style="color: inherit; text-decoration: inherit;">Hostname</a>
@@ -345,8 +330,7 @@ The CustomHostname resource accepts the following [input]({{< relref "/docs/intr
         <span class="property-type">string</span>
     </dt>
     <dd>{{% md %}}Hostname you intend to request a certificate for.
-{{% /md %}}</dd>
-    <dt class="property-required"
+{{% /md %}}</dd><dt class="property-required"
             title="Required">
         <span id="ssls_go">
 <a href="#ssls_go" style="color: inherit; text-decoration: inherit;">Ssls</a>
@@ -355,8 +339,7 @@ The CustomHostname resource accepts the following [input]({{< relref "/docs/intr
         <span class="property-type"><a href="#customhostnamessl">[]Custom<wbr>Hostname<wbr>Ssl</a></span>
     </dt>
     <dd>{{% md %}}SSL configuration of the certificate. See further notes below.
-{{% /md %}}</dd>
-    <dt class="property-required"
+{{% /md %}}</dd><dt class="property-required"
             title="Required">
         <span id="zoneid_go">
 <a href="#zoneid_go" style="color: inherit; text-decoration: inherit;">Zone<wbr>Id</a>
@@ -365,8 +348,7 @@ The CustomHostname resource accepts the following [input]({{< relref "/docs/intr
         <span class="property-type">string</span>
     </dt>
     <dd>{{% md %}}The DNS zone ID where the custom hostname should be assigned.
-{{% /md %}}</dd>
-    <dt class="property-optional"
+{{% /md %}}</dd><dt class="property-optional"
             title="Optional">
         <span id="customoriginserver_go">
 <a href="#customoriginserver_go" style="color: inherit; text-decoration: inherit;">Custom<wbr>Origin<wbr>Server</a>
@@ -375,14 +357,11 @@ The CustomHostname resource accepts the following [input]({{< relref "/docs/intr
         <span class="property-type">string</span>
     </dt>
     <dd>{{% md %}}The custom origin server used for certificates.
-{{% /md %}}</dd>
-</dl>
+{{% /md %}}</dd></dl>
 {{% /choosable %}}
 
 {{% choosable language nodejs %}}
-<dl class="resources-properties">
-
-    <dt class="property-required"
+<dl class="resources-properties"><dt class="property-required"
             title="Required">
         <span id="hostname_nodejs">
 <a href="#hostname_nodejs" style="color: inherit; text-decoration: inherit;">hostname</a>
@@ -391,8 +370,7 @@ The CustomHostname resource accepts the following [input]({{< relref "/docs/intr
         <span class="property-type">string</span>
     </dt>
     <dd>{{% md %}}Hostname you intend to request a certificate for.
-{{% /md %}}</dd>
-    <dt class="property-required"
+{{% /md %}}</dd><dt class="property-required"
             title="Required">
         <span id="ssls_nodejs">
 <a href="#ssls_nodejs" style="color: inherit; text-decoration: inherit;">ssls</a>
@@ -401,8 +379,7 @@ The CustomHostname resource accepts the following [input]({{< relref "/docs/intr
         <span class="property-type"><a href="#customhostnamessl">Custom<wbr>Hostname<wbr>Ssl[]</a></span>
     </dt>
     <dd>{{% md %}}SSL configuration of the certificate. See further notes below.
-{{% /md %}}</dd>
-    <dt class="property-required"
+{{% /md %}}</dd><dt class="property-required"
             title="Required">
         <span id="zoneid_nodejs">
 <a href="#zoneid_nodejs" style="color: inherit; text-decoration: inherit;">zone<wbr>Id</a>
@@ -411,8 +388,7 @@ The CustomHostname resource accepts the following [input]({{< relref "/docs/intr
         <span class="property-type">string</span>
     </dt>
     <dd>{{% md %}}The DNS zone ID where the custom hostname should be assigned.
-{{% /md %}}</dd>
-    <dt class="property-optional"
+{{% /md %}}</dd><dt class="property-optional"
             title="Optional">
         <span id="customoriginserver_nodejs">
 <a href="#customoriginserver_nodejs" style="color: inherit; text-decoration: inherit;">custom<wbr>Origin<wbr>Server</a>
@@ -421,14 +397,11 @@ The CustomHostname resource accepts the following [input]({{< relref "/docs/intr
         <span class="property-type">string</span>
     </dt>
     <dd>{{% md %}}The custom origin server used for certificates.
-{{% /md %}}</dd>
-</dl>
+{{% /md %}}</dd></dl>
 {{% /choosable %}}
 
 {{% choosable language python %}}
-<dl class="resources-properties">
-
-    <dt class="property-required"
+<dl class="resources-properties"><dt class="property-required"
             title="Required">
         <span id="hostname_python">
 <a href="#hostname_python" style="color: inherit; text-decoration: inherit;">hostname</a>
@@ -437,8 +410,7 @@ The CustomHostname resource accepts the following [input]({{< relref "/docs/intr
         <span class="property-type">str</span>
     </dt>
     <dd>{{% md %}}Hostname you intend to request a certificate for.
-{{% /md %}}</dd>
-    <dt class="property-required"
+{{% /md %}}</dd><dt class="property-required"
             title="Required">
         <span id="ssls_python">
 <a href="#ssls_python" style="color: inherit; text-decoration: inherit;">ssls</a>
@@ -447,8 +419,7 @@ The CustomHostname resource accepts the following [input]({{< relref "/docs/intr
         <span class="property-type"><a href="#customhostnamessl">Sequence[Custom<wbr>Hostname<wbr>Ssl<wbr>Args]</a></span>
     </dt>
     <dd>{{% md %}}SSL configuration of the certificate. See further notes below.
-{{% /md %}}</dd>
-    <dt class="property-required"
+{{% /md %}}</dd><dt class="property-required"
             title="Required">
         <span id="zone_id_python">
 <a href="#zone_id_python" style="color: inherit; text-decoration: inherit;">zone_<wbr>id</a>
@@ -457,8 +428,7 @@ The CustomHostname resource accepts the following [input]({{< relref "/docs/intr
         <span class="property-type">str</span>
     </dt>
     <dd>{{% md %}}The DNS zone ID where the custom hostname should be assigned.
-{{% /md %}}</dd>
-    <dt class="property-optional"
+{{% /md %}}</dd><dt class="property-optional"
             title="Optional">
         <span id="custom_origin_server_python">
 <a href="#custom_origin_server_python" style="color: inherit; text-decoration: inherit;">custom_<wbr>origin_<wbr>server</a>
@@ -467,8 +437,7 @@ The CustomHostname resource accepts the following [input]({{< relref "/docs/intr
         <span class="property-type">str</span>
     </dt>
     <dd>{{% md %}}The custom origin server used for certificates.
-{{% /md %}}</dd>
-</dl>
+{{% /md %}}</dd></dl>
 {{% /choosable %}}
 
 
@@ -479,9 +448,7 @@ All [input](#inputs) properties are implicitly available as output properties. A
 
 
 {{% choosable language csharp %}}
-<dl class="resources-properties">
-
-    <dt class="property-"
+<dl class="resources-properties"><dt class="property-"
             title="">
         <span id="id_csharp">
 <a href="#id_csharp" style="color: inherit; text-decoration: inherit;">Id</a>
@@ -489,8 +456,7 @@ All [input](#inputs) properties are implicitly available as output properties. A
         <span class="property-indicator"></span>
         <span class="property-type">string</span>
     </dt>
-    <dd>{{% md %}}The provider-assigned unique ID for this managed resource.{{% /md %}}</dd>
-    <dt class="property-"
+    <dd>{{% md %}}The provider-assigned unique ID for this managed resource.{{% /md %}}</dd><dt class="property-"
             title="">
         <span id="ownershipverification_csharp">
 <a href="#ownershipverification_csharp" style="color: inherit; text-decoration: inherit;">Ownership<wbr>Verification</a>
@@ -498,8 +464,7 @@ All [input](#inputs) properties are implicitly available as output properties. A
         <span class="property-indicator"></span>
         <span class="property-type"><a href="#customhostnameownershipverification">Custom<wbr>Hostname<wbr>Ownership<wbr>Verification</a></span>
     </dt>
-    <dd>{{% md %}}{{% /md %}}</dd>
-    <dt class="property-"
+    <dd>{{% md %}}{{% /md %}}</dd><dt class="property-"
             title="">
         <span id="ownershipverificationhttp_csharp">
 <a href="#ownershipverificationhttp_csharp" style="color: inherit; text-decoration: inherit;">Ownership<wbr>Verification<wbr>Http</a>
@@ -507,8 +472,7 @@ All [input](#inputs) properties are implicitly available as output properties. A
         <span class="property-indicator"></span>
         <span class="property-type"><a href="#customhostnameownershipverificationhttp">Custom<wbr>Hostname<wbr>Ownership<wbr>Verification<wbr>Http</a></span>
     </dt>
-    <dd>{{% md %}}{{% /md %}}</dd>
-    <dt class="property-"
+    <dd>{{% md %}}{{% /md %}}</dd><dt class="property-"
             title="">
         <span id="status_csharp">
 <a href="#status_csharp" style="color: inherit; text-decoration: inherit;">Status</a>
@@ -516,14 +480,11 @@ All [input](#inputs) properties are implicitly available as output properties. A
         <span class="property-indicator"></span>
         <span class="property-type">string</span>
     </dt>
-    <dd>{{% md %}}{{% /md %}}</dd>
-</dl>
+    <dd>{{% md %}}{{% /md %}}</dd></dl>
 {{% /choosable %}}
 
 {{% choosable language go %}}
-<dl class="resources-properties">
-
-    <dt class="property-"
+<dl class="resources-properties"><dt class="property-"
             title="">
         <span id="id_go">
 <a href="#id_go" style="color: inherit; text-decoration: inherit;">Id</a>
@@ -531,8 +492,7 @@ All [input](#inputs) properties are implicitly available as output properties. A
         <span class="property-indicator"></span>
         <span class="property-type">string</span>
     </dt>
-    <dd>{{% md %}}The provider-assigned unique ID for this managed resource.{{% /md %}}</dd>
-    <dt class="property-"
+    <dd>{{% md %}}The provider-assigned unique ID for this managed resource.{{% /md %}}</dd><dt class="property-"
             title="">
         <span id="ownershipverification_go">
 <a href="#ownershipverification_go" style="color: inherit; text-decoration: inherit;">Ownership<wbr>Verification</a>
@@ -540,8 +500,7 @@ All [input](#inputs) properties are implicitly available as output properties. A
         <span class="property-indicator"></span>
         <span class="property-type"><a href="#customhostnameownershipverification">Custom<wbr>Hostname<wbr>Ownership<wbr>Verification</a></span>
     </dt>
-    <dd>{{% md %}}{{% /md %}}</dd>
-    <dt class="property-"
+    <dd>{{% md %}}{{% /md %}}</dd><dt class="property-"
             title="">
         <span id="ownershipverificationhttp_go">
 <a href="#ownershipverificationhttp_go" style="color: inherit; text-decoration: inherit;">Ownership<wbr>Verification<wbr>Http</a>
@@ -549,8 +508,7 @@ All [input](#inputs) properties are implicitly available as output properties. A
         <span class="property-indicator"></span>
         <span class="property-type"><a href="#customhostnameownershipverificationhttp">Custom<wbr>Hostname<wbr>Ownership<wbr>Verification<wbr>Http</a></span>
     </dt>
-    <dd>{{% md %}}{{% /md %}}</dd>
-    <dt class="property-"
+    <dd>{{% md %}}{{% /md %}}</dd><dt class="property-"
             title="">
         <span id="status_go">
 <a href="#status_go" style="color: inherit; text-decoration: inherit;">Status</a>
@@ -558,14 +516,11 @@ All [input](#inputs) properties are implicitly available as output properties. A
         <span class="property-indicator"></span>
         <span class="property-type">string</span>
     </dt>
-    <dd>{{% md %}}{{% /md %}}</dd>
-</dl>
+    <dd>{{% md %}}{{% /md %}}</dd></dl>
 {{% /choosable %}}
 
 {{% choosable language nodejs %}}
-<dl class="resources-properties">
-
-    <dt class="property-"
+<dl class="resources-properties"><dt class="property-"
             title="">
         <span id="id_nodejs">
 <a href="#id_nodejs" style="color: inherit; text-decoration: inherit;">id</a>
@@ -573,8 +528,7 @@ All [input](#inputs) properties are implicitly available as output properties. A
         <span class="property-indicator"></span>
         <span class="property-type">string</span>
     </dt>
-    <dd>{{% md %}}The provider-assigned unique ID for this managed resource.{{% /md %}}</dd>
-    <dt class="property-"
+    <dd>{{% md %}}The provider-assigned unique ID for this managed resource.{{% /md %}}</dd><dt class="property-"
             title="">
         <span id="ownershipverification_nodejs">
 <a href="#ownershipverification_nodejs" style="color: inherit; text-decoration: inherit;">ownership<wbr>Verification</a>
@@ -582,8 +536,7 @@ All [input](#inputs) properties are implicitly available as output properties. A
         <span class="property-indicator"></span>
         <span class="property-type"><a href="#customhostnameownershipverification">Custom<wbr>Hostname<wbr>Ownership<wbr>Verification</a></span>
     </dt>
-    <dd>{{% md %}}{{% /md %}}</dd>
-    <dt class="property-"
+    <dd>{{% md %}}{{% /md %}}</dd><dt class="property-"
             title="">
         <span id="ownershipverificationhttp_nodejs">
 <a href="#ownershipverificationhttp_nodejs" style="color: inherit; text-decoration: inherit;">ownership<wbr>Verification<wbr>Http</a>
@@ -591,8 +544,7 @@ All [input](#inputs) properties are implicitly available as output properties. A
         <span class="property-indicator"></span>
         <span class="property-type"><a href="#customhostnameownershipverificationhttp">Custom<wbr>Hostname<wbr>Ownership<wbr>Verification<wbr>Http</a></span>
     </dt>
-    <dd>{{% md %}}{{% /md %}}</dd>
-    <dt class="property-"
+    <dd>{{% md %}}{{% /md %}}</dd><dt class="property-"
             title="">
         <span id="status_nodejs">
 <a href="#status_nodejs" style="color: inherit; text-decoration: inherit;">status</a>
@@ -600,14 +552,11 @@ All [input](#inputs) properties are implicitly available as output properties. A
         <span class="property-indicator"></span>
         <span class="property-type">string</span>
     </dt>
-    <dd>{{% md %}}{{% /md %}}</dd>
-</dl>
+    <dd>{{% md %}}{{% /md %}}</dd></dl>
 {{% /choosable %}}
 
 {{% choosable language python %}}
-<dl class="resources-properties">
-
-    <dt class="property-"
+<dl class="resources-properties"><dt class="property-"
             title="">
         <span id="id_python">
 <a href="#id_python" style="color: inherit; text-decoration: inherit;">id</a>
@@ -615,8 +564,7 @@ All [input](#inputs) properties are implicitly available as output properties. A
         <span class="property-indicator"></span>
         <span class="property-type">str</span>
     </dt>
-    <dd>{{% md %}}The provider-assigned unique ID for this managed resource.{{% /md %}}</dd>
-    <dt class="property-"
+    <dd>{{% md %}}The provider-assigned unique ID for this managed resource.{{% /md %}}</dd><dt class="property-"
             title="">
         <span id="ownership_verification_python">
 <a href="#ownership_verification_python" style="color: inherit; text-decoration: inherit;">ownership_<wbr>verification</a>
@@ -624,8 +572,7 @@ All [input](#inputs) properties are implicitly available as output properties. A
         <span class="property-indicator"></span>
         <span class="property-type"><a href="#customhostnameownershipverification">Custom<wbr>Hostname<wbr>Ownership<wbr>Verification</a></span>
     </dt>
-    <dd>{{% md %}}{{% /md %}}</dd>
-    <dt class="property-"
+    <dd>{{% md %}}{{% /md %}}</dd><dt class="property-"
             title="">
         <span id="ownership_verification_http_python">
 <a href="#ownership_verification_http_python" style="color: inherit; text-decoration: inherit;">ownership_<wbr>verification_<wbr>http</a>
@@ -633,8 +580,7 @@ All [input](#inputs) properties are implicitly available as output properties. A
         <span class="property-indicator"></span>
         <span class="property-type"><a href="#customhostnameownershipverificationhttp">Custom<wbr>Hostname<wbr>Ownership<wbr>Verification<wbr>Http</a></span>
     </dt>
-    <dd>{{% md %}}{{% /md %}}</dd>
-    <dt class="property-"
+    <dd>{{% md %}}{{% /md %}}</dd><dt class="property-"
             title="">
         <span id="status_python">
 <a href="#status_python" style="color: inherit; text-decoration: inherit;">status</a>
@@ -642,8 +588,7 @@ All [input](#inputs) properties are implicitly available as output properties. A
         <span class="property-indicator"></span>
         <span class="property-type">str</span>
     </dt>
-    <dd>{{% md %}}{{% /md %}}</dd>
-</dl>
+    <dd>{{% md %}}{{% /md %}}</dd></dl>
 {{% /choosable %}}
 
 
@@ -770,9 +715,7 @@ The following state arguments are supported:
 
 
 {{% choosable language csharp %}}
-<dl class="resources-properties">
-
-    <dt class="property-optional"
+<dl class="resources-properties"><dt class="property-optional"
             title="Optional">
         <span id="state_customoriginserver_csharp">
 <a href="#state_customoriginserver_csharp" style="color: inherit; text-decoration: inherit;">Custom<wbr>Origin<wbr>Server</a>
@@ -781,8 +724,7 @@ The following state arguments are supported:
         <span class="property-type">string</span>
     </dt>
     <dd>{{% md %}}The custom origin server used for certificates.
-{{% /md %}}</dd>
-    <dt class="property-optional"
+{{% /md %}}</dd><dt class="property-optional"
             title="Optional">
         <span id="state_hostname_csharp">
 <a href="#state_hostname_csharp" style="color: inherit; text-decoration: inherit;">Hostname</a>
@@ -791,8 +733,7 @@ The following state arguments are supported:
         <span class="property-type">string</span>
     </dt>
     <dd>{{% md %}}Hostname you intend to request a certificate for.
-{{% /md %}}</dd>
-    <dt class="property-optional"
+{{% /md %}}</dd><dt class="property-optional"
             title="Optional">
         <span id="state_ownershipverification_csharp">
 <a href="#state_ownershipverification_csharp" style="color: inherit; text-decoration: inherit;">Ownership<wbr>Verification</a>
@@ -800,8 +741,7 @@ The following state arguments are supported:
         <span class="property-indicator"></span>
         <span class="property-type"><a href="#customhostnameownershipverification">Custom<wbr>Hostname<wbr>Ownership<wbr>Verification<wbr>Args</a></span>
     </dt>
-    <dd>{{% md %}}{{% /md %}}</dd>
-    <dt class="property-optional"
+    <dd>{{% md %}}{{% /md %}}</dd><dt class="property-optional"
             title="Optional">
         <span id="state_ownershipverificationhttp_csharp">
 <a href="#state_ownershipverificationhttp_csharp" style="color: inherit; text-decoration: inherit;">Ownership<wbr>Verification<wbr>Http</a>
@@ -809,8 +749,7 @@ The following state arguments are supported:
         <span class="property-indicator"></span>
         <span class="property-type"><a href="#customhostnameownershipverificationhttp">Custom<wbr>Hostname<wbr>Ownership<wbr>Verification<wbr>Http<wbr>Args</a></span>
     </dt>
-    <dd>{{% md %}}{{% /md %}}</dd>
-    <dt class="property-optional"
+    <dd>{{% md %}}{{% /md %}}</dd><dt class="property-optional"
             title="Optional">
         <span id="state_ssls_csharp">
 <a href="#state_ssls_csharp" style="color: inherit; text-decoration: inherit;">Ssls</a>
@@ -819,8 +758,7 @@ The following state arguments are supported:
         <span class="property-type"><a href="#customhostnamessl">List&lt;Custom<wbr>Hostname<wbr>Ssl<wbr>Args&gt;</a></span>
     </dt>
     <dd>{{% md %}}SSL configuration of the certificate. See further notes below.
-{{% /md %}}</dd>
-    <dt class="property-optional"
+{{% /md %}}</dd><dt class="property-optional"
             title="Optional">
         <span id="state_status_csharp">
 <a href="#state_status_csharp" style="color: inherit; text-decoration: inherit;">Status</a>
@@ -828,8 +766,7 @@ The following state arguments are supported:
         <span class="property-indicator"></span>
         <span class="property-type">string</span>
     </dt>
-    <dd>{{% md %}}{{% /md %}}</dd>
-    <dt class="property-optional"
+    <dd>{{% md %}}{{% /md %}}</dd><dt class="property-optional"
             title="Optional">
         <span id="state_zoneid_csharp">
 <a href="#state_zoneid_csharp" style="color: inherit; text-decoration: inherit;">Zone<wbr>Id</a>
@@ -838,14 +775,11 @@ The following state arguments are supported:
         <span class="property-type">string</span>
     </dt>
     <dd>{{% md %}}The DNS zone ID where the custom hostname should be assigned.
-{{% /md %}}</dd>
-</dl>
+{{% /md %}}</dd></dl>
 {{% /choosable %}}
 
 {{% choosable language go %}}
-<dl class="resources-properties">
-
-    <dt class="property-optional"
+<dl class="resources-properties"><dt class="property-optional"
             title="Optional">
         <span id="state_customoriginserver_go">
 <a href="#state_customoriginserver_go" style="color: inherit; text-decoration: inherit;">Custom<wbr>Origin<wbr>Server</a>
@@ -854,8 +788,7 @@ The following state arguments are supported:
         <span class="property-type">string</span>
     </dt>
     <dd>{{% md %}}The custom origin server used for certificates.
-{{% /md %}}</dd>
-    <dt class="property-optional"
+{{% /md %}}</dd><dt class="property-optional"
             title="Optional">
         <span id="state_hostname_go">
 <a href="#state_hostname_go" style="color: inherit; text-decoration: inherit;">Hostname</a>
@@ -864,8 +797,7 @@ The following state arguments are supported:
         <span class="property-type">string</span>
     </dt>
     <dd>{{% md %}}Hostname you intend to request a certificate for.
-{{% /md %}}</dd>
-    <dt class="property-optional"
+{{% /md %}}</dd><dt class="property-optional"
             title="Optional">
         <span id="state_ownershipverification_go">
 <a href="#state_ownershipverification_go" style="color: inherit; text-decoration: inherit;">Ownership<wbr>Verification</a>
@@ -873,8 +805,7 @@ The following state arguments are supported:
         <span class="property-indicator"></span>
         <span class="property-type"><a href="#customhostnameownershipverification">Custom<wbr>Hostname<wbr>Ownership<wbr>Verification</a></span>
     </dt>
-    <dd>{{% md %}}{{% /md %}}</dd>
-    <dt class="property-optional"
+    <dd>{{% md %}}{{% /md %}}</dd><dt class="property-optional"
             title="Optional">
         <span id="state_ownershipverificationhttp_go">
 <a href="#state_ownershipverificationhttp_go" style="color: inherit; text-decoration: inherit;">Ownership<wbr>Verification<wbr>Http</a>
@@ -882,8 +813,7 @@ The following state arguments are supported:
         <span class="property-indicator"></span>
         <span class="property-type"><a href="#customhostnameownershipverificationhttp">Custom<wbr>Hostname<wbr>Ownership<wbr>Verification<wbr>Http</a></span>
     </dt>
-    <dd>{{% md %}}{{% /md %}}</dd>
-    <dt class="property-optional"
+    <dd>{{% md %}}{{% /md %}}</dd><dt class="property-optional"
             title="Optional">
         <span id="state_ssls_go">
 <a href="#state_ssls_go" style="color: inherit; text-decoration: inherit;">Ssls</a>
@@ -892,8 +822,7 @@ The following state arguments are supported:
         <span class="property-type"><a href="#customhostnamessl">[]Custom<wbr>Hostname<wbr>Ssl</a></span>
     </dt>
     <dd>{{% md %}}SSL configuration of the certificate. See further notes below.
-{{% /md %}}</dd>
-    <dt class="property-optional"
+{{% /md %}}</dd><dt class="property-optional"
             title="Optional">
         <span id="state_status_go">
 <a href="#state_status_go" style="color: inherit; text-decoration: inherit;">Status</a>
@@ -901,8 +830,7 @@ The following state arguments are supported:
         <span class="property-indicator"></span>
         <span class="property-type">string</span>
     </dt>
-    <dd>{{% md %}}{{% /md %}}</dd>
-    <dt class="property-optional"
+    <dd>{{% md %}}{{% /md %}}</dd><dt class="property-optional"
             title="Optional">
         <span id="state_zoneid_go">
 <a href="#state_zoneid_go" style="color: inherit; text-decoration: inherit;">Zone<wbr>Id</a>
@@ -911,14 +839,11 @@ The following state arguments are supported:
         <span class="property-type">string</span>
     </dt>
     <dd>{{% md %}}The DNS zone ID where the custom hostname should be assigned.
-{{% /md %}}</dd>
-</dl>
+{{% /md %}}</dd></dl>
 {{% /choosable %}}
 
 {{% choosable language nodejs %}}
-<dl class="resources-properties">
-
-    <dt class="property-optional"
+<dl class="resources-properties"><dt class="property-optional"
             title="Optional">
         <span id="state_customoriginserver_nodejs">
 <a href="#state_customoriginserver_nodejs" style="color: inherit; text-decoration: inherit;">custom<wbr>Origin<wbr>Server</a>
@@ -927,8 +852,7 @@ The following state arguments are supported:
         <span class="property-type">string</span>
     </dt>
     <dd>{{% md %}}The custom origin server used for certificates.
-{{% /md %}}</dd>
-    <dt class="property-optional"
+{{% /md %}}</dd><dt class="property-optional"
             title="Optional">
         <span id="state_hostname_nodejs">
 <a href="#state_hostname_nodejs" style="color: inherit; text-decoration: inherit;">hostname</a>
@@ -937,8 +861,7 @@ The following state arguments are supported:
         <span class="property-type">string</span>
     </dt>
     <dd>{{% md %}}Hostname you intend to request a certificate for.
-{{% /md %}}</dd>
-    <dt class="property-optional"
+{{% /md %}}</dd><dt class="property-optional"
             title="Optional">
         <span id="state_ownershipverification_nodejs">
 <a href="#state_ownershipverification_nodejs" style="color: inherit; text-decoration: inherit;">ownership<wbr>Verification</a>
@@ -946,8 +869,7 @@ The following state arguments are supported:
         <span class="property-indicator"></span>
         <span class="property-type"><a href="#customhostnameownershipverification">Custom<wbr>Hostname<wbr>Ownership<wbr>Verification</a></span>
     </dt>
-    <dd>{{% md %}}{{% /md %}}</dd>
-    <dt class="property-optional"
+    <dd>{{% md %}}{{% /md %}}</dd><dt class="property-optional"
             title="Optional">
         <span id="state_ownershipverificationhttp_nodejs">
 <a href="#state_ownershipverificationhttp_nodejs" style="color: inherit; text-decoration: inherit;">ownership<wbr>Verification<wbr>Http</a>
@@ -955,8 +877,7 @@ The following state arguments are supported:
         <span class="property-indicator"></span>
         <span class="property-type"><a href="#customhostnameownershipverificationhttp">Custom<wbr>Hostname<wbr>Ownership<wbr>Verification<wbr>Http</a></span>
     </dt>
-    <dd>{{% md %}}{{% /md %}}</dd>
-    <dt class="property-optional"
+    <dd>{{% md %}}{{% /md %}}</dd><dt class="property-optional"
             title="Optional">
         <span id="state_ssls_nodejs">
 <a href="#state_ssls_nodejs" style="color: inherit; text-decoration: inherit;">ssls</a>
@@ -965,8 +886,7 @@ The following state arguments are supported:
         <span class="property-type"><a href="#customhostnamessl">Custom<wbr>Hostname<wbr>Ssl[]</a></span>
     </dt>
     <dd>{{% md %}}SSL configuration of the certificate. See further notes below.
-{{% /md %}}</dd>
-    <dt class="property-optional"
+{{% /md %}}</dd><dt class="property-optional"
             title="Optional">
         <span id="state_status_nodejs">
 <a href="#state_status_nodejs" style="color: inherit; text-decoration: inherit;">status</a>
@@ -974,8 +894,7 @@ The following state arguments are supported:
         <span class="property-indicator"></span>
         <span class="property-type">string</span>
     </dt>
-    <dd>{{% md %}}{{% /md %}}</dd>
-    <dt class="property-optional"
+    <dd>{{% md %}}{{% /md %}}</dd><dt class="property-optional"
             title="Optional">
         <span id="state_zoneid_nodejs">
 <a href="#state_zoneid_nodejs" style="color: inherit; text-decoration: inherit;">zone<wbr>Id</a>
@@ -984,14 +903,11 @@ The following state arguments are supported:
         <span class="property-type">string</span>
     </dt>
     <dd>{{% md %}}The DNS zone ID where the custom hostname should be assigned.
-{{% /md %}}</dd>
-</dl>
+{{% /md %}}</dd></dl>
 {{% /choosable %}}
 
 {{% choosable language python %}}
-<dl class="resources-properties">
-
-    <dt class="property-optional"
+<dl class="resources-properties"><dt class="property-optional"
             title="Optional">
         <span id="state_custom_origin_server_python">
 <a href="#state_custom_origin_server_python" style="color: inherit; text-decoration: inherit;">custom_<wbr>origin_<wbr>server</a>
@@ -1000,8 +916,7 @@ The following state arguments are supported:
         <span class="property-type">str</span>
     </dt>
     <dd>{{% md %}}The custom origin server used for certificates.
-{{% /md %}}</dd>
-    <dt class="property-optional"
+{{% /md %}}</dd><dt class="property-optional"
             title="Optional">
         <span id="state_hostname_python">
 <a href="#state_hostname_python" style="color: inherit; text-decoration: inherit;">hostname</a>
@@ -1010,8 +925,7 @@ The following state arguments are supported:
         <span class="property-type">str</span>
     </dt>
     <dd>{{% md %}}Hostname you intend to request a certificate for.
-{{% /md %}}</dd>
-    <dt class="property-optional"
+{{% /md %}}</dd><dt class="property-optional"
             title="Optional">
         <span id="state_ownership_verification_python">
 <a href="#state_ownership_verification_python" style="color: inherit; text-decoration: inherit;">ownership_<wbr>verification</a>
@@ -1019,8 +933,7 @@ The following state arguments are supported:
         <span class="property-indicator"></span>
         <span class="property-type"><a href="#customhostnameownershipverification">Custom<wbr>Hostname<wbr>Ownership<wbr>Verification<wbr>Args</a></span>
     </dt>
-    <dd>{{% md %}}{{% /md %}}</dd>
-    <dt class="property-optional"
+    <dd>{{% md %}}{{% /md %}}</dd><dt class="property-optional"
             title="Optional">
         <span id="state_ownership_verification_http_python">
 <a href="#state_ownership_verification_http_python" style="color: inherit; text-decoration: inherit;">ownership_<wbr>verification_<wbr>http</a>
@@ -1028,8 +941,7 @@ The following state arguments are supported:
         <span class="property-indicator"></span>
         <span class="property-type"><a href="#customhostnameownershipverificationhttp">Custom<wbr>Hostname<wbr>Ownership<wbr>Verification<wbr>Http<wbr>Args</a></span>
     </dt>
-    <dd>{{% md %}}{{% /md %}}</dd>
-    <dt class="property-optional"
+    <dd>{{% md %}}{{% /md %}}</dd><dt class="property-optional"
             title="Optional">
         <span id="state_ssls_python">
 <a href="#state_ssls_python" style="color: inherit; text-decoration: inherit;">ssls</a>
@@ -1038,8 +950,7 @@ The following state arguments are supported:
         <span class="property-type"><a href="#customhostnamessl">Sequence[Custom<wbr>Hostname<wbr>Ssl<wbr>Args]</a></span>
     </dt>
     <dd>{{% md %}}SSL configuration of the certificate. See further notes below.
-{{% /md %}}</dd>
-    <dt class="property-optional"
+{{% /md %}}</dd><dt class="property-optional"
             title="Optional">
         <span id="state_status_python">
 <a href="#state_status_python" style="color: inherit; text-decoration: inherit;">status</a>
@@ -1047,8 +958,7 @@ The following state arguments are supported:
         <span class="property-indicator"></span>
         <span class="property-type">str</span>
     </dt>
-    <dd>{{% md %}}{{% /md %}}</dd>
-    <dt class="property-optional"
+    <dd>{{% md %}}{{% /md %}}</dd><dt class="property-optional"
             title="Optional">
         <span id="state_zone_id_python">
 <a href="#state_zone_id_python" style="color: inherit; text-decoration: inherit;">zone_<wbr>id</a>
@@ -1057,8 +967,7 @@ The following state arguments are supported:
         <span class="property-type">str</span>
     </dt>
     <dd>{{% md %}}The DNS zone ID where the custom hostname should be assigned.
-{{% /md %}}</dd>
-</dl>
+{{% /md %}}</dd></dl>
 {{% /choosable %}}
 
 
@@ -1073,9 +982,7 @@ The following state arguments are supported:
 <h4 id="customhostnameownershipverification">Custom<wbr>Hostname<wbr>Ownership<wbr>Verification</h4>
 
 {{% choosable language csharp %}}
-<dl class="resources-properties">
-
-    <dt class="property-optional"
+<dl class="resources-properties"><dt class="property-optional"
             title="Optional">
         <span id="name_csharp">
 <a href="#name_csharp" style="color: inherit; text-decoration: inherit;">Name</a>
@@ -1083,8 +990,7 @@ The following state arguments are supported:
         <span class="property-indicator"></span>
         <span class="property-type">string</span>
     </dt>
-    <dd>{{% md %}}{{% /md %}}</dd>
-    <dt class="property-optional"
+    <dd>{{% md %}}{{% /md %}}</dd><dt class="property-optional"
             title="Optional">
         <span id="type_csharp">
 <a href="#type_csharp" style="color: inherit; text-decoration: inherit;">Type</a>
@@ -1093,8 +999,7 @@ The following state arguments are supported:
         <span class="property-type">string</span>
     </dt>
     <dd>{{% md %}}Level of validation to be used for this hostname. Domain validation ("dv") must be used.
-{{% /md %}}</dd>
-    <dt class="property-optional"
+{{% /md %}}</dd><dt class="property-optional"
             title="Optional">
         <span id="value_csharp">
 <a href="#value_csharp" style="color: inherit; text-decoration: inherit;">Value</a>
@@ -1102,14 +1007,11 @@ The following state arguments are supported:
         <span class="property-indicator"></span>
         <span class="property-type">string</span>
     </dt>
-    <dd>{{% md %}}{{% /md %}}</dd>
-</dl>
+    <dd>{{% md %}}{{% /md %}}</dd></dl>
 {{% /choosable %}}
 
 {{% choosable language go %}}
-<dl class="resources-properties">
-
-    <dt class="property-optional"
+<dl class="resources-properties"><dt class="property-optional"
             title="Optional">
         <span id="name_go">
 <a href="#name_go" style="color: inherit; text-decoration: inherit;">Name</a>
@@ -1117,8 +1019,7 @@ The following state arguments are supported:
         <span class="property-indicator"></span>
         <span class="property-type">string</span>
     </dt>
-    <dd>{{% md %}}{{% /md %}}</dd>
-    <dt class="property-optional"
+    <dd>{{% md %}}{{% /md %}}</dd><dt class="property-optional"
             title="Optional">
         <span id="type_go">
 <a href="#type_go" style="color: inherit; text-decoration: inherit;">Type</a>
@@ -1127,8 +1028,7 @@ The following state arguments are supported:
         <span class="property-type">string</span>
     </dt>
     <dd>{{% md %}}Level of validation to be used for this hostname. Domain validation ("dv") must be used.
-{{% /md %}}</dd>
-    <dt class="property-optional"
+{{% /md %}}</dd><dt class="property-optional"
             title="Optional">
         <span id="value_go">
 <a href="#value_go" style="color: inherit; text-decoration: inherit;">Value</a>
@@ -1136,14 +1036,11 @@ The following state arguments are supported:
         <span class="property-indicator"></span>
         <span class="property-type">string</span>
     </dt>
-    <dd>{{% md %}}{{% /md %}}</dd>
-</dl>
+    <dd>{{% md %}}{{% /md %}}</dd></dl>
 {{% /choosable %}}
 
 {{% choosable language nodejs %}}
-<dl class="resources-properties">
-
-    <dt class="property-optional"
+<dl class="resources-properties"><dt class="property-optional"
             title="Optional">
         <span id="name_nodejs">
 <a href="#name_nodejs" style="color: inherit; text-decoration: inherit;">name</a>
@@ -1151,8 +1048,7 @@ The following state arguments are supported:
         <span class="property-indicator"></span>
         <span class="property-type">string</span>
     </dt>
-    <dd>{{% md %}}{{% /md %}}</dd>
-    <dt class="property-optional"
+    <dd>{{% md %}}{{% /md %}}</dd><dt class="property-optional"
             title="Optional">
         <span id="type_nodejs">
 <a href="#type_nodejs" style="color: inherit; text-decoration: inherit;">type</a>
@@ -1161,8 +1057,7 @@ The following state arguments are supported:
         <span class="property-type">string</span>
     </dt>
     <dd>{{% md %}}Level of validation to be used for this hostname. Domain validation ("dv") must be used.
-{{% /md %}}</dd>
-    <dt class="property-optional"
+{{% /md %}}</dd><dt class="property-optional"
             title="Optional">
         <span id="value_nodejs">
 <a href="#value_nodejs" style="color: inherit; text-decoration: inherit;">value</a>
@@ -1170,14 +1065,11 @@ The following state arguments are supported:
         <span class="property-indicator"></span>
         <span class="property-type">string</span>
     </dt>
-    <dd>{{% md %}}{{% /md %}}</dd>
-</dl>
+    <dd>{{% md %}}{{% /md %}}</dd></dl>
 {{% /choosable %}}
 
 {{% choosable language python %}}
-<dl class="resources-properties">
-
-    <dt class="property-optional"
+<dl class="resources-properties"><dt class="property-optional"
             title="Optional">
         <span id="name_python">
 <a href="#name_python" style="color: inherit; text-decoration: inherit;">name</a>
@@ -1185,8 +1077,7 @@ The following state arguments are supported:
         <span class="property-indicator"></span>
         <span class="property-type">str</span>
     </dt>
-    <dd>{{% md %}}{{% /md %}}</dd>
-    <dt class="property-optional"
+    <dd>{{% md %}}{{% /md %}}</dd><dt class="property-optional"
             title="Optional">
         <span id="type_python">
 <a href="#type_python" style="color: inherit; text-decoration: inherit;">type</a>
@@ -1195,8 +1086,7 @@ The following state arguments are supported:
         <span class="property-type">str</span>
     </dt>
     <dd>{{% md %}}Level of validation to be used for this hostname. Domain validation ("dv") must be used.
-{{% /md %}}</dd>
-    <dt class="property-optional"
+{{% /md %}}</dd><dt class="property-optional"
             title="Optional">
         <span id="value_python">
 <a href="#value_python" style="color: inherit; text-decoration: inherit;">value</a>
@@ -1204,16 +1094,13 @@ The following state arguments are supported:
         <span class="property-indicator"></span>
         <span class="property-type">str</span>
     </dt>
-    <dd>{{% md %}}{{% /md %}}</dd>
-</dl>
+    <dd>{{% md %}}{{% /md %}}</dd></dl>
 {{% /choosable %}}
 
 <h4 id="customhostnameownershipverificationhttp">Custom<wbr>Hostname<wbr>Ownership<wbr>Verification<wbr>Http</h4>
 
 {{% choosable language csharp %}}
-<dl class="resources-properties">
-
-    <dt class="property-optional"
+<dl class="resources-properties"><dt class="property-optional"
             title="Optional">
         <span id="httpbody_csharp">
 <a href="#httpbody_csharp" style="color: inherit; text-decoration: inherit;">Http<wbr>Body</a>
@@ -1221,8 +1108,7 @@ The following state arguments are supported:
         <span class="property-indicator"></span>
         <span class="property-type">string</span>
     </dt>
-    <dd>{{% md %}}{{% /md %}}</dd>
-    <dt class="property-optional"
+    <dd>{{% md %}}{{% /md %}}</dd><dt class="property-optional"
             title="Optional">
         <span id="httpurl_csharp">
 <a href="#httpurl_csharp" style="color: inherit; text-decoration: inherit;">Http<wbr>Url</a>
@@ -1230,14 +1116,11 @@ The following state arguments are supported:
         <span class="property-indicator"></span>
         <span class="property-type">string</span>
     </dt>
-    <dd>{{% md %}}{{% /md %}}</dd>
-</dl>
+    <dd>{{% md %}}{{% /md %}}</dd></dl>
 {{% /choosable %}}
 
 {{% choosable language go %}}
-<dl class="resources-properties">
-
-    <dt class="property-optional"
+<dl class="resources-properties"><dt class="property-optional"
             title="Optional">
         <span id="httpbody_go">
 <a href="#httpbody_go" style="color: inherit; text-decoration: inherit;">Http<wbr>Body</a>
@@ -1245,8 +1128,7 @@ The following state arguments are supported:
         <span class="property-indicator"></span>
         <span class="property-type">string</span>
     </dt>
-    <dd>{{% md %}}{{% /md %}}</dd>
-    <dt class="property-optional"
+    <dd>{{% md %}}{{% /md %}}</dd><dt class="property-optional"
             title="Optional">
         <span id="httpurl_go">
 <a href="#httpurl_go" style="color: inherit; text-decoration: inherit;">Http<wbr>Url</a>
@@ -1254,14 +1136,11 @@ The following state arguments are supported:
         <span class="property-indicator"></span>
         <span class="property-type">string</span>
     </dt>
-    <dd>{{% md %}}{{% /md %}}</dd>
-</dl>
+    <dd>{{% md %}}{{% /md %}}</dd></dl>
 {{% /choosable %}}
 
 {{% choosable language nodejs %}}
-<dl class="resources-properties">
-
-    <dt class="property-optional"
+<dl class="resources-properties"><dt class="property-optional"
             title="Optional">
         <span id="httpbody_nodejs">
 <a href="#httpbody_nodejs" style="color: inherit; text-decoration: inherit;">http<wbr>Body</a>
@@ -1269,8 +1148,7 @@ The following state arguments are supported:
         <span class="property-indicator"></span>
         <span class="property-type">string</span>
     </dt>
-    <dd>{{% md %}}{{% /md %}}</dd>
-    <dt class="property-optional"
+    <dd>{{% md %}}{{% /md %}}</dd><dt class="property-optional"
             title="Optional">
         <span id="httpurl_nodejs">
 <a href="#httpurl_nodejs" style="color: inherit; text-decoration: inherit;">http<wbr>Url</a>
@@ -1278,14 +1156,11 @@ The following state arguments are supported:
         <span class="property-indicator"></span>
         <span class="property-type">string</span>
     </dt>
-    <dd>{{% md %}}{{% /md %}}</dd>
-</dl>
+    <dd>{{% md %}}{{% /md %}}</dd></dl>
 {{% /choosable %}}
 
 {{% choosable language python %}}
-<dl class="resources-properties">
-
-    <dt class="property-optional"
+<dl class="resources-properties"><dt class="property-optional"
             title="Optional">
         <span id="http_body_python">
 <a href="#http_body_python" style="color: inherit; text-decoration: inherit;">http_<wbr>body</a>
@@ -1293,8 +1168,7 @@ The following state arguments are supported:
         <span class="property-indicator"></span>
         <span class="property-type">str</span>
     </dt>
-    <dd>{{% md %}}{{% /md %}}</dd>
-    <dt class="property-optional"
+    <dd>{{% md %}}{{% /md %}}</dd><dt class="property-optional"
             title="Optional">
         <span id="http_url_python">
 <a href="#http_url_python" style="color: inherit; text-decoration: inherit;">http_<wbr>url</a>
@@ -1302,16 +1176,13 @@ The following state arguments are supported:
         <span class="property-indicator"></span>
         <span class="property-type">str</span>
     </dt>
-    <dd>{{% md %}}{{% /md %}}</dd>
-</dl>
+    <dd>{{% md %}}{{% /md %}}</dd></dl>
 {{% /choosable %}}
 
 <h4 id="customhostnamessl">Custom<wbr>Hostname<wbr>Ssl</h4>
 
 {{% choosable language csharp %}}
-<dl class="resources-properties">
-
-    <dt class="property-optional"
+<dl class="resources-properties"><dt class="property-optional"
             title="Optional">
         <span id="certificateauthority_csharp">
 <a href="#certificateauthority_csharp" style="color: inherit; text-decoration: inherit;">Certificate<wbr>Authority</a>
@@ -1319,8 +1190,7 @@ The following state arguments are supported:
         <span class="property-indicator"></span>
         <span class="property-type">string</span>
     </dt>
-    <dd>{{% md %}}{{% /md %}}</dd>
-    <dt class="property-optional"
+    <dd>{{% md %}}{{% /md %}}</dd><dt class="property-optional"
             title="Optional">
         <span id="cnamename_csharp">
 <a href="#cnamename_csharp" style="color: inherit; text-decoration: inherit;">Cname<wbr>Name</a>
@@ -1328,8 +1198,7 @@ The following state arguments are supported:
         <span class="property-indicator"></span>
         <span class="property-type">string</span>
     </dt>
-    <dd>{{% md %}}{{% /md %}}</dd>
-    <dt class="property-optional"
+    <dd>{{% md %}}{{% /md %}}</dd><dt class="property-optional"
             title="Optional">
         <span id="cnametarget_csharp">
 <a href="#cnametarget_csharp" style="color: inherit; text-decoration: inherit;">Cname<wbr>Target</a>
@@ -1337,8 +1206,7 @@ The following state arguments are supported:
         <span class="property-indicator"></span>
         <span class="property-type">string</span>
     </dt>
-    <dd>{{% md %}}{{% /md %}}</dd>
-    <dt class="property-optional"
+    <dd>{{% md %}}{{% /md %}}</dd><dt class="property-optional"
             title="Optional">
         <span id="customcertificate_csharp">
 <a href="#customcertificate_csharp" style="color: inherit; text-decoration: inherit;">Custom<wbr>Certificate</a>
@@ -1347,8 +1215,7 @@ The following state arguments are supported:
         <span class="property-type">string</span>
     </dt>
     <dd>{{% md %}}If a custom uploaded certificate is used.
-{{% /md %}}</dd>
-    <dt class="property-optional"
+{{% /md %}}</dd><dt class="property-optional"
             title="Optional">
         <span id="customkey_csharp">
 <a href="#customkey_csharp" style="color: inherit; text-decoration: inherit;">Custom<wbr>Key</a>
@@ -1357,8 +1224,7 @@ The following state arguments are supported:
         <span class="property-type">string</span>
     </dt>
     <dd>{{% md %}}The key for a custom uploaded certificate.
-{{% /md %}}</dd>
-    <dt class="property-optional"
+{{% /md %}}</dd><dt class="property-optional"
             title="Optional">
         <span id="method_csharp">
 <a href="#method_csharp" style="color: inherit; text-decoration: inherit;">Method</a>
@@ -1368,8 +1234,7 @@ The following state arguments are supported:
     </dt>
     <dd>{{% md %}}Domain control validation (DCV) method used for this
 hostname. Valid values are `"txt"`, `"http"` and `"email"`.
-{{% /md %}}</dd>
-    <dt class="property-optional"
+{{% /md %}}</dd><dt class="property-optional"
             title="Optional">
         <span id="settings_csharp">
 <a href="#settings_csharp" style="color: inherit; text-decoration: inherit;">Settings</a>
@@ -1378,8 +1243,7 @@ hostname. Valid values are `"txt"`, `"http"` and `"email"`.
         <span class="property-type"><a href="#customhostnamesslsetting">List&lt;Custom<wbr>Hostname<wbr>Ssl<wbr>Setting<wbr>Args&gt;</a></span>
     </dt>
     <dd>{{% md %}}SSL/TLS settings for the certificate. See further notes below.
-{{% /md %}}</dd>
-    <dt class="property-optional"
+{{% /md %}}</dd><dt class="property-optional"
             title="Optional">
         <span id="status_csharp">
 <a href="#status_csharp" style="color: inherit; text-decoration: inherit;">Status</a>
@@ -1387,8 +1251,7 @@ hostname. Valid values are `"txt"`, `"http"` and `"email"`.
         <span class="property-indicator"></span>
         <span class="property-type">string</span>
     </dt>
-    <dd>{{% md %}}{{% /md %}}</dd>
-    <dt class="property-optional"
+    <dd>{{% md %}}{{% /md %}}</dd><dt class="property-optional"
             title="Optional">
         <span id="type_csharp">
 <a href="#type_csharp" style="color: inherit; text-decoration: inherit;">Type</a>
@@ -1397,8 +1260,7 @@ hostname. Valid values are `"txt"`, `"http"` and `"email"`.
         <span class="property-type">string</span>
     </dt>
     <dd>{{% md %}}Level of validation to be used for this hostname. Domain validation ("dv") must be used.
-{{% /md %}}</dd>
-    <dt class="property-optional"
+{{% /md %}}</dd><dt class="property-optional"
             title="Optional">
         <span id="wildcard_csharp">
 <a href="#wildcard_csharp" style="color: inherit; text-decoration: inherit;">Wildcard</a>
@@ -1407,14 +1269,11 @@ hostname. Valid values are `"txt"`, `"http"` and `"email"`.
         <span class="property-type">bool</span>
     </dt>
     <dd>{{% md %}}Indicates whether the certificate covers a wildcard.
-{{% /md %}}</dd>
-</dl>
+{{% /md %}}</dd></dl>
 {{% /choosable %}}
 
 {{% choosable language go %}}
-<dl class="resources-properties">
-
-    <dt class="property-optional"
+<dl class="resources-properties"><dt class="property-optional"
             title="Optional">
         <span id="certificateauthority_go">
 <a href="#certificateauthority_go" style="color: inherit; text-decoration: inherit;">Certificate<wbr>Authority</a>
@@ -1422,8 +1281,7 @@ hostname. Valid values are `"txt"`, `"http"` and `"email"`.
         <span class="property-indicator"></span>
         <span class="property-type">string</span>
     </dt>
-    <dd>{{% md %}}{{% /md %}}</dd>
-    <dt class="property-optional"
+    <dd>{{% md %}}{{% /md %}}</dd><dt class="property-optional"
             title="Optional">
         <span id="cnamename_go">
 <a href="#cnamename_go" style="color: inherit; text-decoration: inherit;">Cname<wbr>Name</a>
@@ -1431,8 +1289,7 @@ hostname. Valid values are `"txt"`, `"http"` and `"email"`.
         <span class="property-indicator"></span>
         <span class="property-type">string</span>
     </dt>
-    <dd>{{% md %}}{{% /md %}}</dd>
-    <dt class="property-optional"
+    <dd>{{% md %}}{{% /md %}}</dd><dt class="property-optional"
             title="Optional">
         <span id="cnametarget_go">
 <a href="#cnametarget_go" style="color: inherit; text-decoration: inherit;">Cname<wbr>Target</a>
@@ -1440,8 +1297,7 @@ hostname. Valid values are `"txt"`, `"http"` and `"email"`.
         <span class="property-indicator"></span>
         <span class="property-type">string</span>
     </dt>
-    <dd>{{% md %}}{{% /md %}}</dd>
-    <dt class="property-optional"
+    <dd>{{% md %}}{{% /md %}}</dd><dt class="property-optional"
             title="Optional">
         <span id="customcertificate_go">
 <a href="#customcertificate_go" style="color: inherit; text-decoration: inherit;">Custom<wbr>Certificate</a>
@@ -1450,8 +1306,7 @@ hostname. Valid values are `"txt"`, `"http"` and `"email"`.
         <span class="property-type">string</span>
     </dt>
     <dd>{{% md %}}If a custom uploaded certificate is used.
-{{% /md %}}</dd>
-    <dt class="property-optional"
+{{% /md %}}</dd><dt class="property-optional"
             title="Optional">
         <span id="customkey_go">
 <a href="#customkey_go" style="color: inherit; text-decoration: inherit;">Custom<wbr>Key</a>
@@ -1460,8 +1315,7 @@ hostname. Valid values are `"txt"`, `"http"` and `"email"`.
         <span class="property-type">string</span>
     </dt>
     <dd>{{% md %}}The key for a custom uploaded certificate.
-{{% /md %}}</dd>
-    <dt class="property-optional"
+{{% /md %}}</dd><dt class="property-optional"
             title="Optional">
         <span id="method_go">
 <a href="#method_go" style="color: inherit; text-decoration: inherit;">Method</a>
@@ -1471,8 +1325,7 @@ hostname. Valid values are `"txt"`, `"http"` and `"email"`.
     </dt>
     <dd>{{% md %}}Domain control validation (DCV) method used for this
 hostname. Valid values are `"txt"`, `"http"` and `"email"`.
-{{% /md %}}</dd>
-    <dt class="property-optional"
+{{% /md %}}</dd><dt class="property-optional"
             title="Optional">
         <span id="settings_go">
 <a href="#settings_go" style="color: inherit; text-decoration: inherit;">Settings</a>
@@ -1481,8 +1334,7 @@ hostname. Valid values are `"txt"`, `"http"` and `"email"`.
         <span class="property-type"><a href="#customhostnamesslsetting">[]Custom<wbr>Hostname<wbr>Ssl<wbr>Setting</a></span>
     </dt>
     <dd>{{% md %}}SSL/TLS settings for the certificate. See further notes below.
-{{% /md %}}</dd>
-    <dt class="property-optional"
+{{% /md %}}</dd><dt class="property-optional"
             title="Optional">
         <span id="status_go">
 <a href="#status_go" style="color: inherit; text-decoration: inherit;">Status</a>
@@ -1490,8 +1342,7 @@ hostname. Valid values are `"txt"`, `"http"` and `"email"`.
         <span class="property-indicator"></span>
         <span class="property-type">string</span>
     </dt>
-    <dd>{{% md %}}{{% /md %}}</dd>
-    <dt class="property-optional"
+    <dd>{{% md %}}{{% /md %}}</dd><dt class="property-optional"
             title="Optional">
         <span id="type_go">
 <a href="#type_go" style="color: inherit; text-decoration: inherit;">Type</a>
@@ -1500,8 +1351,7 @@ hostname. Valid values are `"txt"`, `"http"` and `"email"`.
         <span class="property-type">string</span>
     </dt>
     <dd>{{% md %}}Level of validation to be used for this hostname. Domain validation ("dv") must be used.
-{{% /md %}}</dd>
-    <dt class="property-optional"
+{{% /md %}}</dd><dt class="property-optional"
             title="Optional">
         <span id="wildcard_go">
 <a href="#wildcard_go" style="color: inherit; text-decoration: inherit;">Wildcard</a>
@@ -1510,14 +1360,11 @@ hostname. Valid values are `"txt"`, `"http"` and `"email"`.
         <span class="property-type">bool</span>
     </dt>
     <dd>{{% md %}}Indicates whether the certificate covers a wildcard.
-{{% /md %}}</dd>
-</dl>
+{{% /md %}}</dd></dl>
 {{% /choosable %}}
 
 {{% choosable language nodejs %}}
-<dl class="resources-properties">
-
-    <dt class="property-optional"
+<dl class="resources-properties"><dt class="property-optional"
             title="Optional">
         <span id="certificateauthority_nodejs">
 <a href="#certificateauthority_nodejs" style="color: inherit; text-decoration: inherit;">certificate<wbr>Authority</a>
@@ -1525,8 +1372,7 @@ hostname. Valid values are `"txt"`, `"http"` and `"email"`.
         <span class="property-indicator"></span>
         <span class="property-type">string</span>
     </dt>
-    <dd>{{% md %}}{{% /md %}}</dd>
-    <dt class="property-optional"
+    <dd>{{% md %}}{{% /md %}}</dd><dt class="property-optional"
             title="Optional">
         <span id="cnamename_nodejs">
 <a href="#cnamename_nodejs" style="color: inherit; text-decoration: inherit;">cname<wbr>Name</a>
@@ -1534,8 +1380,7 @@ hostname. Valid values are `"txt"`, `"http"` and `"email"`.
         <span class="property-indicator"></span>
         <span class="property-type">string</span>
     </dt>
-    <dd>{{% md %}}{{% /md %}}</dd>
-    <dt class="property-optional"
+    <dd>{{% md %}}{{% /md %}}</dd><dt class="property-optional"
             title="Optional">
         <span id="cnametarget_nodejs">
 <a href="#cnametarget_nodejs" style="color: inherit; text-decoration: inherit;">cname<wbr>Target</a>
@@ -1543,8 +1388,7 @@ hostname. Valid values are `"txt"`, `"http"` and `"email"`.
         <span class="property-indicator"></span>
         <span class="property-type">string</span>
     </dt>
-    <dd>{{% md %}}{{% /md %}}</dd>
-    <dt class="property-optional"
+    <dd>{{% md %}}{{% /md %}}</dd><dt class="property-optional"
             title="Optional">
         <span id="customcertificate_nodejs">
 <a href="#customcertificate_nodejs" style="color: inherit; text-decoration: inherit;">custom<wbr>Certificate</a>
@@ -1553,8 +1397,7 @@ hostname. Valid values are `"txt"`, `"http"` and `"email"`.
         <span class="property-type">string</span>
     </dt>
     <dd>{{% md %}}If a custom uploaded certificate is used.
-{{% /md %}}</dd>
-    <dt class="property-optional"
+{{% /md %}}</dd><dt class="property-optional"
             title="Optional">
         <span id="customkey_nodejs">
 <a href="#customkey_nodejs" style="color: inherit; text-decoration: inherit;">custom<wbr>Key</a>
@@ -1563,8 +1406,7 @@ hostname. Valid values are `"txt"`, `"http"` and `"email"`.
         <span class="property-type">string</span>
     </dt>
     <dd>{{% md %}}The key for a custom uploaded certificate.
-{{% /md %}}</dd>
-    <dt class="property-optional"
+{{% /md %}}</dd><dt class="property-optional"
             title="Optional">
         <span id="method_nodejs">
 <a href="#method_nodejs" style="color: inherit; text-decoration: inherit;">method</a>
@@ -1574,8 +1416,7 @@ hostname. Valid values are `"txt"`, `"http"` and `"email"`.
     </dt>
     <dd>{{% md %}}Domain control validation (DCV) method used for this
 hostname. Valid values are `"txt"`, `"http"` and `"email"`.
-{{% /md %}}</dd>
-    <dt class="property-optional"
+{{% /md %}}</dd><dt class="property-optional"
             title="Optional">
         <span id="settings_nodejs">
 <a href="#settings_nodejs" style="color: inherit; text-decoration: inherit;">settings</a>
@@ -1584,8 +1425,7 @@ hostname. Valid values are `"txt"`, `"http"` and `"email"`.
         <span class="property-type"><a href="#customhostnamesslsetting">Custom<wbr>Hostname<wbr>Ssl<wbr>Setting[]</a></span>
     </dt>
     <dd>{{% md %}}SSL/TLS settings for the certificate. See further notes below.
-{{% /md %}}</dd>
-    <dt class="property-optional"
+{{% /md %}}</dd><dt class="property-optional"
             title="Optional">
         <span id="status_nodejs">
 <a href="#status_nodejs" style="color: inherit; text-decoration: inherit;">status</a>
@@ -1593,8 +1433,7 @@ hostname. Valid values are `"txt"`, `"http"` and `"email"`.
         <span class="property-indicator"></span>
         <span class="property-type">string</span>
     </dt>
-    <dd>{{% md %}}{{% /md %}}</dd>
-    <dt class="property-optional"
+    <dd>{{% md %}}{{% /md %}}</dd><dt class="property-optional"
             title="Optional">
         <span id="type_nodejs">
 <a href="#type_nodejs" style="color: inherit; text-decoration: inherit;">type</a>
@@ -1603,8 +1442,7 @@ hostname. Valid values are `"txt"`, `"http"` and `"email"`.
         <span class="property-type">string</span>
     </dt>
     <dd>{{% md %}}Level of validation to be used for this hostname. Domain validation ("dv") must be used.
-{{% /md %}}</dd>
-    <dt class="property-optional"
+{{% /md %}}</dd><dt class="property-optional"
             title="Optional">
         <span id="wildcard_nodejs">
 <a href="#wildcard_nodejs" style="color: inherit; text-decoration: inherit;">wildcard</a>
@@ -1613,14 +1451,11 @@ hostname. Valid values are `"txt"`, `"http"` and `"email"`.
         <span class="property-type">boolean</span>
     </dt>
     <dd>{{% md %}}Indicates whether the certificate covers a wildcard.
-{{% /md %}}</dd>
-</dl>
+{{% /md %}}</dd></dl>
 {{% /choosable %}}
 
 {{% choosable language python %}}
-<dl class="resources-properties">
-
-    <dt class="property-optional"
+<dl class="resources-properties"><dt class="property-optional"
             title="Optional">
         <span id="certificate_authority_python">
 <a href="#certificate_authority_python" style="color: inherit; text-decoration: inherit;">certificate_<wbr>authority</a>
@@ -1628,8 +1463,7 @@ hostname. Valid values are `"txt"`, `"http"` and `"email"`.
         <span class="property-indicator"></span>
         <span class="property-type">str</span>
     </dt>
-    <dd>{{% md %}}{{% /md %}}</dd>
-    <dt class="property-optional"
+    <dd>{{% md %}}{{% /md %}}</dd><dt class="property-optional"
             title="Optional">
         <span id="cname_name_python">
 <a href="#cname_name_python" style="color: inherit; text-decoration: inherit;">cname_<wbr>name</a>
@@ -1637,8 +1471,7 @@ hostname. Valid values are `"txt"`, `"http"` and `"email"`.
         <span class="property-indicator"></span>
         <span class="property-type">str</span>
     </dt>
-    <dd>{{% md %}}{{% /md %}}</dd>
-    <dt class="property-optional"
+    <dd>{{% md %}}{{% /md %}}</dd><dt class="property-optional"
             title="Optional">
         <span id="cname_target_python">
 <a href="#cname_target_python" style="color: inherit; text-decoration: inherit;">cname_<wbr>target</a>
@@ -1646,8 +1479,7 @@ hostname. Valid values are `"txt"`, `"http"` and `"email"`.
         <span class="property-indicator"></span>
         <span class="property-type">str</span>
     </dt>
-    <dd>{{% md %}}{{% /md %}}</dd>
-    <dt class="property-optional"
+    <dd>{{% md %}}{{% /md %}}</dd><dt class="property-optional"
             title="Optional">
         <span id="custom_certificate_python">
 <a href="#custom_certificate_python" style="color: inherit; text-decoration: inherit;">custom_<wbr>certificate</a>
@@ -1656,8 +1488,7 @@ hostname. Valid values are `"txt"`, `"http"` and `"email"`.
         <span class="property-type">str</span>
     </dt>
     <dd>{{% md %}}If a custom uploaded certificate is used.
-{{% /md %}}</dd>
-    <dt class="property-optional"
+{{% /md %}}</dd><dt class="property-optional"
             title="Optional">
         <span id="custom_key_python">
 <a href="#custom_key_python" style="color: inherit; text-decoration: inherit;">custom_<wbr>key</a>
@@ -1666,8 +1497,7 @@ hostname. Valid values are `"txt"`, `"http"` and `"email"`.
         <span class="property-type">str</span>
     </dt>
     <dd>{{% md %}}The key for a custom uploaded certificate.
-{{% /md %}}</dd>
-    <dt class="property-optional"
+{{% /md %}}</dd><dt class="property-optional"
             title="Optional">
         <span id="method_python">
 <a href="#method_python" style="color: inherit; text-decoration: inherit;">method</a>
@@ -1677,8 +1507,7 @@ hostname. Valid values are `"txt"`, `"http"` and `"email"`.
     </dt>
     <dd>{{% md %}}Domain control validation (DCV) method used for this
 hostname. Valid values are `"txt"`, `"http"` and `"email"`.
-{{% /md %}}</dd>
-    <dt class="property-optional"
+{{% /md %}}</dd><dt class="property-optional"
             title="Optional">
         <span id="settings_python">
 <a href="#settings_python" style="color: inherit; text-decoration: inherit;">settings</a>
@@ -1687,8 +1516,7 @@ hostname. Valid values are `"txt"`, `"http"` and `"email"`.
         <span class="property-type"><a href="#customhostnamesslsetting">Sequence[Custom<wbr>Hostname<wbr>Ssl<wbr>Setting<wbr>Args]</a></span>
     </dt>
     <dd>{{% md %}}SSL/TLS settings for the certificate. See further notes below.
-{{% /md %}}</dd>
-    <dt class="property-optional"
+{{% /md %}}</dd><dt class="property-optional"
             title="Optional">
         <span id="status_python">
 <a href="#status_python" style="color: inherit; text-decoration: inherit;">status</a>
@@ -1696,8 +1524,7 @@ hostname. Valid values are `"txt"`, `"http"` and `"email"`.
         <span class="property-indicator"></span>
         <span class="property-type">str</span>
     </dt>
-    <dd>{{% md %}}{{% /md %}}</dd>
-    <dt class="property-optional"
+    <dd>{{% md %}}{{% /md %}}</dd><dt class="property-optional"
             title="Optional">
         <span id="type_python">
 <a href="#type_python" style="color: inherit; text-decoration: inherit;">type</a>
@@ -1706,8 +1533,7 @@ hostname. Valid values are `"txt"`, `"http"` and `"email"`.
         <span class="property-type">str</span>
     </dt>
     <dd>{{% md %}}Level of validation to be used for this hostname. Domain validation ("dv") must be used.
-{{% /md %}}</dd>
-    <dt class="property-optional"
+{{% /md %}}</dd><dt class="property-optional"
             title="Optional">
         <span id="wildcard_python">
 <a href="#wildcard_python" style="color: inherit; text-decoration: inherit;">wildcard</a>
@@ -1716,16 +1542,13 @@ hostname. Valid values are `"txt"`, `"http"` and `"email"`.
         <span class="property-type">bool</span>
     </dt>
     <dd>{{% md %}}Indicates whether the certificate covers a wildcard.
-{{% /md %}}</dd>
-</dl>
+{{% /md %}}</dd></dl>
 {{% /choosable %}}
 
 <h4 id="customhostnamesslsetting">Custom<wbr>Hostname<wbr>Ssl<wbr>Setting</h4>
 
 {{% choosable language csharp %}}
-<dl class="resources-properties">
-
-    <dt class="property-optional"
+<dl class="resources-properties"><dt class="property-optional"
             title="Optional">
         <span id="ciphers_csharp">
 <a href="#ciphers_csharp" style="color: inherit; text-decoration: inherit;">Ciphers</a>
@@ -1734,8 +1557,7 @@ hostname. Valid values are `"txt"`, `"http"` and `"email"`.
         <span class="property-type">List&lt;string&gt;</span>
     </dt>
     <dd>{{% md %}}List of SSL/TLS ciphers to associate with this certificate.
-{{% /md %}}</dd>
-    <dt class="property-optional"
+{{% /md %}}</dd><dt class="property-optional"
             title="Optional">
         <span id="http2_csharp">
 <a href="#http2_csharp" style="color: inherit; text-decoration: inherit;">Http2</a>
@@ -1744,8 +1566,7 @@ hostname. Valid values are `"txt"`, `"http"` and `"email"`.
         <span class="property-type">string</span>
     </dt>
     <dd>{{% md %}}Whether or not HTTP2 should be supported. Valid values are `"on"` or `"off"`.
-{{% /md %}}</dd>
-    <dt class="property-optional"
+{{% /md %}}</dd><dt class="property-optional"
             title="Optional">
         <span id="mintlsversion_csharp">
 <a href="#mintlsversion_csharp" style="color: inherit; text-decoration: inherit;">Min<wbr>Tls<wbr>Version</a>
@@ -1755,8 +1576,7 @@ hostname. Valid values are `"txt"`, `"http"` and `"email"`.
     </dt>
     <dd>{{% md %}}Lowest version of TLS this certificate should
 support. Valid values are `"1.0"`, `"1.1"`, `"1.2"` and `"1.3"`.
-{{% /md %}}</dd>
-    <dt class="property-optional"
+{{% /md %}}</dd><dt class="property-optional"
             title="Optional">
         <span id="tls13_csharp">
 <a href="#tls13_csharp" style="color: inherit; text-decoration: inherit;">Tls13</a>
@@ -1765,14 +1585,11 @@ support. Valid values are `"1.0"`, `"1.1"`, `"1.2"` and `"1.3"`.
         <span class="property-type">string</span>
     </dt>
     <dd>{{% md %}}Whether or not TLSv1.3 should be supported. Valid values are `"on"` or `"off"`.
-{{% /md %}}</dd>
-</dl>
+{{% /md %}}</dd></dl>
 {{% /choosable %}}
 
 {{% choosable language go %}}
-<dl class="resources-properties">
-
-    <dt class="property-optional"
+<dl class="resources-properties"><dt class="property-optional"
             title="Optional">
         <span id="ciphers_go">
 <a href="#ciphers_go" style="color: inherit; text-decoration: inherit;">Ciphers</a>
@@ -1781,8 +1598,7 @@ support. Valid values are `"1.0"`, `"1.1"`, `"1.2"` and `"1.3"`.
         <span class="property-type">[]string</span>
     </dt>
     <dd>{{% md %}}List of SSL/TLS ciphers to associate with this certificate.
-{{% /md %}}</dd>
-    <dt class="property-optional"
+{{% /md %}}</dd><dt class="property-optional"
             title="Optional">
         <span id="http2_go">
 <a href="#http2_go" style="color: inherit; text-decoration: inherit;">Http2</a>
@@ -1791,8 +1607,7 @@ support. Valid values are `"1.0"`, `"1.1"`, `"1.2"` and `"1.3"`.
         <span class="property-type">string</span>
     </dt>
     <dd>{{% md %}}Whether or not HTTP2 should be supported. Valid values are `"on"` or `"off"`.
-{{% /md %}}</dd>
-    <dt class="property-optional"
+{{% /md %}}</dd><dt class="property-optional"
             title="Optional">
         <span id="mintlsversion_go">
 <a href="#mintlsversion_go" style="color: inherit; text-decoration: inherit;">Min<wbr>Tls<wbr>Version</a>
@@ -1802,8 +1617,7 @@ support. Valid values are `"1.0"`, `"1.1"`, `"1.2"` and `"1.3"`.
     </dt>
     <dd>{{% md %}}Lowest version of TLS this certificate should
 support. Valid values are `"1.0"`, `"1.1"`, `"1.2"` and `"1.3"`.
-{{% /md %}}</dd>
-    <dt class="property-optional"
+{{% /md %}}</dd><dt class="property-optional"
             title="Optional">
         <span id="tls13_go">
 <a href="#tls13_go" style="color: inherit; text-decoration: inherit;">Tls13</a>
@@ -1812,14 +1626,11 @@ support. Valid values are `"1.0"`, `"1.1"`, `"1.2"` and `"1.3"`.
         <span class="property-type">string</span>
     </dt>
     <dd>{{% md %}}Whether or not TLSv1.3 should be supported. Valid values are `"on"` or `"off"`.
-{{% /md %}}</dd>
-</dl>
+{{% /md %}}</dd></dl>
 {{% /choosable %}}
 
 {{% choosable language nodejs %}}
-<dl class="resources-properties">
-
-    <dt class="property-optional"
+<dl class="resources-properties"><dt class="property-optional"
             title="Optional">
         <span id="ciphers_nodejs">
 <a href="#ciphers_nodejs" style="color: inherit; text-decoration: inherit;">ciphers</a>
@@ -1828,8 +1639,7 @@ support. Valid values are `"1.0"`, `"1.1"`, `"1.2"` and `"1.3"`.
         <span class="property-type">string[]</span>
     </dt>
     <dd>{{% md %}}List of SSL/TLS ciphers to associate with this certificate.
-{{% /md %}}</dd>
-    <dt class="property-optional"
+{{% /md %}}</dd><dt class="property-optional"
             title="Optional">
         <span id="http2_nodejs">
 <a href="#http2_nodejs" style="color: inherit; text-decoration: inherit;">http2</a>
@@ -1838,8 +1648,7 @@ support. Valid values are `"1.0"`, `"1.1"`, `"1.2"` and `"1.3"`.
         <span class="property-type">string</span>
     </dt>
     <dd>{{% md %}}Whether or not HTTP2 should be supported. Valid values are `"on"` or `"off"`.
-{{% /md %}}</dd>
-    <dt class="property-optional"
+{{% /md %}}</dd><dt class="property-optional"
             title="Optional">
         <span id="mintlsversion_nodejs">
 <a href="#mintlsversion_nodejs" style="color: inherit; text-decoration: inherit;">min<wbr>Tls<wbr>Version</a>
@@ -1849,8 +1658,7 @@ support. Valid values are `"1.0"`, `"1.1"`, `"1.2"` and `"1.3"`.
     </dt>
     <dd>{{% md %}}Lowest version of TLS this certificate should
 support. Valid values are `"1.0"`, `"1.1"`, `"1.2"` and `"1.3"`.
-{{% /md %}}</dd>
-    <dt class="property-optional"
+{{% /md %}}</dd><dt class="property-optional"
             title="Optional">
         <span id="tls13_nodejs">
 <a href="#tls13_nodejs" style="color: inherit; text-decoration: inherit;">tls13</a>
@@ -1859,14 +1667,11 @@ support. Valid values are `"1.0"`, `"1.1"`, `"1.2"` and `"1.3"`.
         <span class="property-type">string</span>
     </dt>
     <dd>{{% md %}}Whether or not TLSv1.3 should be supported. Valid values are `"on"` or `"off"`.
-{{% /md %}}</dd>
-</dl>
+{{% /md %}}</dd></dl>
 {{% /choosable %}}
 
 {{% choosable language python %}}
-<dl class="resources-properties">
-
-    <dt class="property-optional"
+<dl class="resources-properties"><dt class="property-optional"
             title="Optional">
         <span id="ciphers_python">
 <a href="#ciphers_python" style="color: inherit; text-decoration: inherit;">ciphers</a>
@@ -1875,8 +1680,7 @@ support. Valid values are `"1.0"`, `"1.1"`, `"1.2"` and `"1.3"`.
         <span class="property-type">Sequence[str]</span>
     </dt>
     <dd>{{% md %}}List of SSL/TLS ciphers to associate with this certificate.
-{{% /md %}}</dd>
-    <dt class="property-optional"
+{{% /md %}}</dd><dt class="property-optional"
             title="Optional">
         <span id="http2_python">
 <a href="#http2_python" style="color: inherit; text-decoration: inherit;">http2</a>
@@ -1885,8 +1689,7 @@ support. Valid values are `"1.0"`, `"1.1"`, `"1.2"` and `"1.3"`.
         <span class="property-type">str</span>
     </dt>
     <dd>{{% md %}}Whether or not HTTP2 should be supported. Valid values are `"on"` or `"off"`.
-{{% /md %}}</dd>
-    <dt class="property-optional"
+{{% /md %}}</dd><dt class="property-optional"
             title="Optional">
         <span id="min_tls_version_python">
 <a href="#min_tls_version_python" style="color: inherit; text-decoration: inherit;">min_<wbr>tls_<wbr>version</a>
@@ -1896,8 +1699,7 @@ support. Valid values are `"1.0"`, `"1.1"`, `"1.2"` and `"1.3"`.
     </dt>
     <dd>{{% md %}}Lowest version of TLS this certificate should
 support. Valid values are `"1.0"`, `"1.1"`, `"1.2"` and `"1.3"`.
-{{% /md %}}</dd>
-    <dt class="property-optional"
+{{% /md %}}</dd><dt class="property-optional"
             title="Optional">
         <span id="tls13_python">
 <a href="#tls13_python" style="color: inherit; text-decoration: inherit;">tls13</a>
@@ -1906,8 +1708,7 @@ support. Valid values are `"1.0"`, `"1.1"`, `"1.2"` and `"1.3"`.
         <span class="property-type">str</span>
     </dt>
     <dd>{{% md %}}Whether or not TLSv1.3 should be supported. Valid values are `"on"` or `"off"`.
-{{% /md %}}</dd>
-</dl>
+{{% /md %}}</dd></dl>
 {{% /choosable %}}
 ## Import
 
@@ -1928,6 +1729,6 @@ Custom hostname certificates can be imported using a composite ID formed of the 
 	<dt>License</dt>
 	<dd>Apache-2.0</dd>
 	<dt>Notes</dt>
-	<dd>This Pulumi package is based on the [`cloudflare` Terraform Provider](https://github.com/cloudflare/terraform-provider-cloudflare).</dd>
+	<dd>{{% md %}}This Pulumi package is based on the [`cloudflare` Terraform Provider](https://github.com/cloudflare/terraform-provider-cloudflare).{{% /md %}}</dd>
 </dl>
 

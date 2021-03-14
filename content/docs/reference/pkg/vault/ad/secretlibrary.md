@@ -35,9 +35,7 @@ meta_desc: "Documentation for the vault.ad.SecretLibrary resource with examples,
 
 {{% choosable language nodejs %}}
 
-<dl class="resources-properties">
-  
-    <dt
+<dl class="resources-properties"><dt
         class="property-required" title="Required">
         <span>name</span>
         <span class="property-indicator"></span>
@@ -45,9 +43,7 @@ meta_desc: "Documentation for the vault.ad.SecretLibrary resource with examples,
     </dt>
     <dd>
       The unique name of the resource.
-    </dd>
-  
-    <dt
+    </dd><dt
         class="property-required" title="Required">
         <span>args</span>
         <span class="property-indicator"></span>
@@ -55,9 +51,7 @@ meta_desc: "Documentation for the vault.ad.SecretLibrary resource with examples,
     </dt>
     <dd>
       The arguments to resource properties.
-    </dd>
-  
-    <dt
+    </dd><dt
         class="property-optional" title="Optional">
         <span>opts</span>
         <span class="property-indicator"></span>
@@ -65,10 +59,7 @@ meta_desc: "Documentation for the vault.ad.SecretLibrary resource with examples,
     </dt>
     <dd>
       Bag of options to control resource&#39;s behavior.
-    </dd>
-  
-
-</dl>
+    </dd></dl>
 
 {{% /choosable %}}
 
@@ -94,9 +85,7 @@ meta_desc: "Documentation for the vault.ad.SecretLibrary resource with examples,
 
 {{% choosable language go %}}
 
-<dl class="resources-properties">
-  
-    <dt
+<dl class="resources-properties"><dt
         class="property-optional" title="Optional">
         <span>ctx</span>
         <span class="property-indicator"></span>
@@ -104,9 +93,7 @@ meta_desc: "Documentation for the vault.ad.SecretLibrary resource with examples,
     </dt>
     <dd>
       Context object for the current deployment.
-    </dd>
-  
-    <dt
+    </dd><dt
         class="property-required" title="Required">
         <span>name</span>
         <span class="property-indicator"></span>
@@ -114,9 +101,7 @@ meta_desc: "Documentation for the vault.ad.SecretLibrary resource with examples,
     </dt>
     <dd>
       The unique name of the resource.
-    </dd>
-  
-    <dt
+    </dd><dt
         class="property-required" title="Required">
         <span>args</span>
         <span class="property-indicator"></span>
@@ -124,9 +109,7 @@ meta_desc: "Documentation for the vault.ad.SecretLibrary resource with examples,
     </dt>
     <dd>
       The arguments to resource properties.
-    </dd>
-  
-    <dt
+    </dd><dt
         class="property-optional" title="Optional">
         <span>opts</span>
         <span class="property-indicator"></span>
@@ -134,18 +117,13 @@ meta_desc: "Documentation for the vault.ad.SecretLibrary resource with examples,
     </dt>
     <dd>
       Bag of options to control resource&#39;s behavior.
-    </dd>
-  
-
-</dl>
+    </dd></dl>
 
 {{% /choosable %}}
 
 {{% choosable language csharp %}}
 
-<dl class="resources-properties">
-  
-    <dt
+<dl class="resources-properties"><dt
         class="property-required" title="Required">
         <span>name</span>
         <span class="property-indicator"></span>
@@ -153,9 +131,7 @@ meta_desc: "Documentation for the vault.ad.SecretLibrary resource with examples,
     </dt>
     <dd>
       The unique name of the resource.
-    </dd>
-  
-    <dt
+    </dd><dt
         class="property-required" title="Required">
         <span>args</span>
         <span class="property-indicator"></span>
@@ -163,9 +139,7 @@ meta_desc: "Documentation for the vault.ad.SecretLibrary resource with examples,
     </dt>
     <dd>
       The arguments to resource properties.
-    </dd>
-  
-    <dt
+    </dd><dt
         class="property-optional" title="Optional">
         <span>opts</span>
         <span class="property-indicator"></span>
@@ -173,10 +147,7 @@ meta_desc: "Documentation for the vault.ad.SecretLibrary resource with examples,
     </dt>
     <dd>
       Bag of options to control resource&#39;s behavior.
-    </dd>
-  
-
-</dl>
+    </dd></dl>
 
 {{% /choosable %}}
 
@@ -191,9 +162,7 @@ The SecretLibrary resource accepts the following [input]({{< relref "/docs/intro
 
 
 {{% choosable language csharp %}}
-<dl class="resources-properties">
-
-    <dt class="property-required"
+<dl class="resources-properties"><dt class="property-required"
             title="Required">
         <span id="backend_csharp">
 <a href="#backend_csharp" style="color: inherit; text-decoration: inherit;">Backend</a>
@@ -202,8 +171,7 @@ The SecretLibrary resource accepts the following [input]({{< relref "/docs/intro
         <span class="property-type">string</span>
     </dt>
     <dd>{{% md %}}The mount path for the AD backend.
-{{% /md %}}</dd>
-    <dt class="property-required"
+{{% /md %}}</dd><dt class="property-required"
             title="Required">
         <span id="serviceaccountnames_csharp">
 <a href="#serviceaccountnames_csharp" style="color: inherit; text-decoration: inherit;">Service<wbr>Account<wbr>Names</a>
@@ -213,8 +181,7 @@ The SecretLibrary resource accepts the following [input]({{< relref "/docs/intro
     </dt>
     <dd>{{% md %}}The names of all the service accounts that can be checked out from this set. These service accounts must already exist
 in Active Directory.
-{{% /md %}}</dd>
-    <dt class="property-optional"
+{{% /md %}}</dd><dt class="property-optional"
             title="Optional">
         <span id="disablecheckinenforcement_csharp">
 <a href="#disablecheckinenforcement_csharp" style="color: inherit; text-decoration: inherit;">Disable<wbr>Check<wbr>In<wbr>Enforcement</a>
@@ -223,8 +190,7 @@ in Active Directory.
         <span class="property-type">bool</span>
     </dt>
     <dd>{{% md %}}Disable enforcing that service accounts must be checked in by the entity or client token that checked them out.
-{{% /md %}}</dd>
-    <dt class="property-optional"
+{{% /md %}}</dd><dt class="property-optional"
             title="Optional">
         <span id="maxttl_csharp">
 <a href="#maxttl_csharp" style="color: inherit; text-decoration: inherit;">Max<wbr>Ttl</a>
@@ -233,8 +199,7 @@ in Active Directory.
         <span class="property-type">int</span>
     </dt>
     <dd>{{% md %}}The maximum amount of time, in seconds, a check-out last with renewal before Vault automatically checks it back in.
-{{% /md %}}</dd>
-    <dt class="property-optional"
+{{% /md %}}</dd><dt class="property-optional"
             title="Optional">
         <span id="name_csharp">
 <a href="#name_csharp" style="color: inherit; text-decoration: inherit;">Name</a>
@@ -243,8 +208,7 @@ in Active Directory.
         <span class="property-type">string</span>
     </dt>
     <dd>{{% md %}}The name of the set of service accounts.
-{{% /md %}}</dd>
-    <dt class="property-optional"
+{{% /md %}}</dd><dt class="property-optional"
             title="Optional">
         <span id="ttl_csharp">
 <a href="#ttl_csharp" style="color: inherit; text-decoration: inherit;">Ttl</a>
@@ -253,14 +217,11 @@ in Active Directory.
         <span class="property-type">int</span>
     </dt>
     <dd>{{% md %}}The amount of time, in seconds, a single check-out lasts before Vault automatically checks it back in.
-{{% /md %}}</dd>
-</dl>
+{{% /md %}}</dd></dl>
 {{% /choosable %}}
 
 {{% choosable language go %}}
-<dl class="resources-properties">
-
-    <dt class="property-required"
+<dl class="resources-properties"><dt class="property-required"
             title="Required">
         <span id="backend_go">
 <a href="#backend_go" style="color: inherit; text-decoration: inherit;">Backend</a>
@@ -269,8 +230,7 @@ in Active Directory.
         <span class="property-type">string</span>
     </dt>
     <dd>{{% md %}}The mount path for the AD backend.
-{{% /md %}}</dd>
-    <dt class="property-required"
+{{% /md %}}</dd><dt class="property-required"
             title="Required">
         <span id="serviceaccountnames_go">
 <a href="#serviceaccountnames_go" style="color: inherit; text-decoration: inherit;">Service<wbr>Account<wbr>Names</a>
@@ -280,8 +240,7 @@ in Active Directory.
     </dt>
     <dd>{{% md %}}The names of all the service accounts that can be checked out from this set. These service accounts must already exist
 in Active Directory.
-{{% /md %}}</dd>
-    <dt class="property-optional"
+{{% /md %}}</dd><dt class="property-optional"
             title="Optional">
         <span id="disablecheckinenforcement_go">
 <a href="#disablecheckinenforcement_go" style="color: inherit; text-decoration: inherit;">Disable<wbr>Check<wbr>In<wbr>Enforcement</a>
@@ -290,8 +249,7 @@ in Active Directory.
         <span class="property-type">bool</span>
     </dt>
     <dd>{{% md %}}Disable enforcing that service accounts must be checked in by the entity or client token that checked them out.
-{{% /md %}}</dd>
-    <dt class="property-optional"
+{{% /md %}}</dd><dt class="property-optional"
             title="Optional">
         <span id="maxttl_go">
 <a href="#maxttl_go" style="color: inherit; text-decoration: inherit;">Max<wbr>Ttl</a>
@@ -300,8 +258,7 @@ in Active Directory.
         <span class="property-type">int</span>
     </dt>
     <dd>{{% md %}}The maximum amount of time, in seconds, a check-out last with renewal before Vault automatically checks it back in.
-{{% /md %}}</dd>
-    <dt class="property-optional"
+{{% /md %}}</dd><dt class="property-optional"
             title="Optional">
         <span id="name_go">
 <a href="#name_go" style="color: inherit; text-decoration: inherit;">Name</a>
@@ -310,8 +267,7 @@ in Active Directory.
         <span class="property-type">string</span>
     </dt>
     <dd>{{% md %}}The name of the set of service accounts.
-{{% /md %}}</dd>
-    <dt class="property-optional"
+{{% /md %}}</dd><dt class="property-optional"
             title="Optional">
         <span id="ttl_go">
 <a href="#ttl_go" style="color: inherit; text-decoration: inherit;">Ttl</a>
@@ -320,14 +276,11 @@ in Active Directory.
         <span class="property-type">int</span>
     </dt>
     <dd>{{% md %}}The amount of time, in seconds, a single check-out lasts before Vault automatically checks it back in.
-{{% /md %}}</dd>
-</dl>
+{{% /md %}}</dd></dl>
 {{% /choosable %}}
 
 {{% choosable language nodejs %}}
-<dl class="resources-properties">
-
-    <dt class="property-required"
+<dl class="resources-properties"><dt class="property-required"
             title="Required">
         <span id="backend_nodejs">
 <a href="#backend_nodejs" style="color: inherit; text-decoration: inherit;">backend</a>
@@ -336,8 +289,7 @@ in Active Directory.
         <span class="property-type">string</span>
     </dt>
     <dd>{{% md %}}The mount path for the AD backend.
-{{% /md %}}</dd>
-    <dt class="property-required"
+{{% /md %}}</dd><dt class="property-required"
             title="Required">
         <span id="serviceaccountnames_nodejs">
 <a href="#serviceaccountnames_nodejs" style="color: inherit; text-decoration: inherit;">service<wbr>Account<wbr>Names</a>
@@ -347,8 +299,7 @@ in Active Directory.
     </dt>
     <dd>{{% md %}}The names of all the service accounts that can be checked out from this set. These service accounts must already exist
 in Active Directory.
-{{% /md %}}</dd>
-    <dt class="property-optional"
+{{% /md %}}</dd><dt class="property-optional"
             title="Optional">
         <span id="disablecheckinenforcement_nodejs">
 <a href="#disablecheckinenforcement_nodejs" style="color: inherit; text-decoration: inherit;">disable<wbr>Check<wbr>In<wbr>Enforcement</a>
@@ -357,8 +308,7 @@ in Active Directory.
         <span class="property-type">boolean</span>
     </dt>
     <dd>{{% md %}}Disable enforcing that service accounts must be checked in by the entity or client token that checked them out.
-{{% /md %}}</dd>
-    <dt class="property-optional"
+{{% /md %}}</dd><dt class="property-optional"
             title="Optional">
         <span id="maxttl_nodejs">
 <a href="#maxttl_nodejs" style="color: inherit; text-decoration: inherit;">max<wbr>Ttl</a>
@@ -367,8 +317,7 @@ in Active Directory.
         <span class="property-type">number</span>
     </dt>
     <dd>{{% md %}}The maximum amount of time, in seconds, a check-out last with renewal before Vault automatically checks it back in.
-{{% /md %}}</dd>
-    <dt class="property-optional"
+{{% /md %}}</dd><dt class="property-optional"
             title="Optional">
         <span id="name_nodejs">
 <a href="#name_nodejs" style="color: inherit; text-decoration: inherit;">name</a>
@@ -377,8 +326,7 @@ in Active Directory.
         <span class="property-type">string</span>
     </dt>
     <dd>{{% md %}}The name of the set of service accounts.
-{{% /md %}}</dd>
-    <dt class="property-optional"
+{{% /md %}}</dd><dt class="property-optional"
             title="Optional">
         <span id="ttl_nodejs">
 <a href="#ttl_nodejs" style="color: inherit; text-decoration: inherit;">ttl</a>
@@ -387,14 +335,11 @@ in Active Directory.
         <span class="property-type">number</span>
     </dt>
     <dd>{{% md %}}The amount of time, in seconds, a single check-out lasts before Vault automatically checks it back in.
-{{% /md %}}</dd>
-</dl>
+{{% /md %}}</dd></dl>
 {{% /choosable %}}
 
 {{% choosable language python %}}
-<dl class="resources-properties">
-
-    <dt class="property-required"
+<dl class="resources-properties"><dt class="property-required"
             title="Required">
         <span id="backend_python">
 <a href="#backend_python" style="color: inherit; text-decoration: inherit;">backend</a>
@@ -403,8 +348,7 @@ in Active Directory.
         <span class="property-type">str</span>
     </dt>
     <dd>{{% md %}}The mount path for the AD backend.
-{{% /md %}}</dd>
-    <dt class="property-required"
+{{% /md %}}</dd><dt class="property-required"
             title="Required">
         <span id="service_account_names_python">
 <a href="#service_account_names_python" style="color: inherit; text-decoration: inherit;">service_<wbr>account_<wbr>names</a>
@@ -414,8 +358,7 @@ in Active Directory.
     </dt>
     <dd>{{% md %}}The names of all the service accounts that can be checked out from this set. These service accounts must already exist
 in Active Directory.
-{{% /md %}}</dd>
-    <dt class="property-optional"
+{{% /md %}}</dd><dt class="property-optional"
             title="Optional">
         <span id="disable_check_in_enforcement_python">
 <a href="#disable_check_in_enforcement_python" style="color: inherit; text-decoration: inherit;">disable_<wbr>check_<wbr>in_<wbr>enforcement</a>
@@ -424,8 +367,7 @@ in Active Directory.
         <span class="property-type">bool</span>
     </dt>
     <dd>{{% md %}}Disable enforcing that service accounts must be checked in by the entity or client token that checked them out.
-{{% /md %}}</dd>
-    <dt class="property-optional"
+{{% /md %}}</dd><dt class="property-optional"
             title="Optional">
         <span id="max_ttl_python">
 <a href="#max_ttl_python" style="color: inherit; text-decoration: inherit;">max_<wbr>ttl</a>
@@ -434,8 +376,7 @@ in Active Directory.
         <span class="property-type">int</span>
     </dt>
     <dd>{{% md %}}The maximum amount of time, in seconds, a check-out last with renewal before Vault automatically checks it back in.
-{{% /md %}}</dd>
-    <dt class="property-optional"
+{{% /md %}}</dd><dt class="property-optional"
             title="Optional">
         <span id="name_python">
 <a href="#name_python" style="color: inherit; text-decoration: inherit;">name</a>
@@ -444,8 +385,7 @@ in Active Directory.
         <span class="property-type">str</span>
     </dt>
     <dd>{{% md %}}The name of the set of service accounts.
-{{% /md %}}</dd>
-    <dt class="property-optional"
+{{% /md %}}</dd><dt class="property-optional"
             title="Optional">
         <span id="ttl_python">
 <a href="#ttl_python" style="color: inherit; text-decoration: inherit;">ttl</a>
@@ -454,8 +394,7 @@ in Active Directory.
         <span class="property-type">int</span>
     </dt>
     <dd>{{% md %}}The amount of time, in seconds, a single check-out lasts before Vault automatically checks it back in.
-{{% /md %}}</dd>
-</dl>
+{{% /md %}}</dd></dl>
 {{% /choosable %}}
 
 
@@ -466,9 +405,7 @@ All [input](#inputs) properties are implicitly available as output properties. A
 
 
 {{% choosable language csharp %}}
-<dl class="resources-properties">
-
-    <dt class="property-"
+<dl class="resources-properties"><dt class="property-"
             title="">
         <span id="id_csharp">
 <a href="#id_csharp" style="color: inherit; text-decoration: inherit;">Id</a>
@@ -476,14 +413,11 @@ All [input](#inputs) properties are implicitly available as output properties. A
         <span class="property-indicator"></span>
         <span class="property-type">string</span>
     </dt>
-    <dd>{{% md %}}The provider-assigned unique ID for this managed resource.{{% /md %}}</dd>
-</dl>
+    <dd>{{% md %}}The provider-assigned unique ID for this managed resource.{{% /md %}}</dd></dl>
 {{% /choosable %}}
 
 {{% choosable language go %}}
-<dl class="resources-properties">
-
-    <dt class="property-"
+<dl class="resources-properties"><dt class="property-"
             title="">
         <span id="id_go">
 <a href="#id_go" style="color: inherit; text-decoration: inherit;">Id</a>
@@ -491,14 +425,11 @@ All [input](#inputs) properties are implicitly available as output properties. A
         <span class="property-indicator"></span>
         <span class="property-type">string</span>
     </dt>
-    <dd>{{% md %}}The provider-assigned unique ID for this managed resource.{{% /md %}}</dd>
-</dl>
+    <dd>{{% md %}}The provider-assigned unique ID for this managed resource.{{% /md %}}</dd></dl>
 {{% /choosable %}}
 
 {{% choosable language nodejs %}}
-<dl class="resources-properties">
-
-    <dt class="property-"
+<dl class="resources-properties"><dt class="property-"
             title="">
         <span id="id_nodejs">
 <a href="#id_nodejs" style="color: inherit; text-decoration: inherit;">id</a>
@@ -506,14 +437,11 @@ All [input](#inputs) properties are implicitly available as output properties. A
         <span class="property-indicator"></span>
         <span class="property-type">string</span>
     </dt>
-    <dd>{{% md %}}The provider-assigned unique ID for this managed resource.{{% /md %}}</dd>
-</dl>
+    <dd>{{% md %}}The provider-assigned unique ID for this managed resource.{{% /md %}}</dd></dl>
 {{% /choosable %}}
 
 {{% choosable language python %}}
-<dl class="resources-properties">
-
-    <dt class="property-"
+<dl class="resources-properties"><dt class="property-"
             title="">
         <span id="id_python">
 <a href="#id_python" style="color: inherit; text-decoration: inherit;">id</a>
@@ -521,8 +449,7 @@ All [input](#inputs) properties are implicitly available as output properties. A
         <span class="property-indicator"></span>
         <span class="property-type">str</span>
     </dt>
-    <dd>{{% md %}}The provider-assigned unique ID for this managed resource.{{% /md %}}</dd>
-</dl>
+    <dd>{{% md %}}The provider-assigned unique ID for this managed resource.{{% /md %}}</dd></dl>
 {{% /choosable %}}
 
 
@@ -649,9 +576,7 @@ The following state arguments are supported:
 
 
 {{% choosable language csharp %}}
-<dl class="resources-properties">
-
-    <dt class="property-optional"
+<dl class="resources-properties"><dt class="property-optional"
             title="Optional">
         <span id="state_backend_csharp">
 <a href="#state_backend_csharp" style="color: inherit; text-decoration: inherit;">Backend</a>
@@ -660,8 +585,7 @@ The following state arguments are supported:
         <span class="property-type">string</span>
     </dt>
     <dd>{{% md %}}The mount path for the AD backend.
-{{% /md %}}</dd>
-    <dt class="property-optional"
+{{% /md %}}</dd><dt class="property-optional"
             title="Optional">
         <span id="state_disablecheckinenforcement_csharp">
 <a href="#state_disablecheckinenforcement_csharp" style="color: inherit; text-decoration: inherit;">Disable<wbr>Check<wbr>In<wbr>Enforcement</a>
@@ -670,8 +594,7 @@ The following state arguments are supported:
         <span class="property-type">bool</span>
     </dt>
     <dd>{{% md %}}Disable enforcing that service accounts must be checked in by the entity or client token that checked them out.
-{{% /md %}}</dd>
-    <dt class="property-optional"
+{{% /md %}}</dd><dt class="property-optional"
             title="Optional">
         <span id="state_maxttl_csharp">
 <a href="#state_maxttl_csharp" style="color: inherit; text-decoration: inherit;">Max<wbr>Ttl</a>
@@ -680,8 +603,7 @@ The following state arguments are supported:
         <span class="property-type">int</span>
     </dt>
     <dd>{{% md %}}The maximum amount of time, in seconds, a check-out last with renewal before Vault automatically checks it back in.
-{{% /md %}}</dd>
-    <dt class="property-optional"
+{{% /md %}}</dd><dt class="property-optional"
             title="Optional">
         <span id="state_name_csharp">
 <a href="#state_name_csharp" style="color: inherit; text-decoration: inherit;">Name</a>
@@ -690,8 +612,7 @@ The following state arguments are supported:
         <span class="property-type">string</span>
     </dt>
     <dd>{{% md %}}The name of the set of service accounts.
-{{% /md %}}</dd>
-    <dt class="property-optional"
+{{% /md %}}</dd><dt class="property-optional"
             title="Optional">
         <span id="state_serviceaccountnames_csharp">
 <a href="#state_serviceaccountnames_csharp" style="color: inherit; text-decoration: inherit;">Service<wbr>Account<wbr>Names</a>
@@ -701,8 +622,7 @@ The following state arguments are supported:
     </dt>
     <dd>{{% md %}}The names of all the service accounts that can be checked out from this set. These service accounts must already exist
 in Active Directory.
-{{% /md %}}</dd>
-    <dt class="property-optional"
+{{% /md %}}</dd><dt class="property-optional"
             title="Optional">
         <span id="state_ttl_csharp">
 <a href="#state_ttl_csharp" style="color: inherit; text-decoration: inherit;">Ttl</a>
@@ -711,14 +631,11 @@ in Active Directory.
         <span class="property-type">int</span>
     </dt>
     <dd>{{% md %}}The amount of time, in seconds, a single check-out lasts before Vault automatically checks it back in.
-{{% /md %}}</dd>
-</dl>
+{{% /md %}}</dd></dl>
 {{% /choosable %}}
 
 {{% choosable language go %}}
-<dl class="resources-properties">
-
-    <dt class="property-optional"
+<dl class="resources-properties"><dt class="property-optional"
             title="Optional">
         <span id="state_backend_go">
 <a href="#state_backend_go" style="color: inherit; text-decoration: inherit;">Backend</a>
@@ -727,8 +644,7 @@ in Active Directory.
         <span class="property-type">string</span>
     </dt>
     <dd>{{% md %}}The mount path for the AD backend.
-{{% /md %}}</dd>
-    <dt class="property-optional"
+{{% /md %}}</dd><dt class="property-optional"
             title="Optional">
         <span id="state_disablecheckinenforcement_go">
 <a href="#state_disablecheckinenforcement_go" style="color: inherit; text-decoration: inherit;">Disable<wbr>Check<wbr>In<wbr>Enforcement</a>
@@ -737,8 +653,7 @@ in Active Directory.
         <span class="property-type">bool</span>
     </dt>
     <dd>{{% md %}}Disable enforcing that service accounts must be checked in by the entity or client token that checked them out.
-{{% /md %}}</dd>
-    <dt class="property-optional"
+{{% /md %}}</dd><dt class="property-optional"
             title="Optional">
         <span id="state_maxttl_go">
 <a href="#state_maxttl_go" style="color: inherit; text-decoration: inherit;">Max<wbr>Ttl</a>
@@ -747,8 +662,7 @@ in Active Directory.
         <span class="property-type">int</span>
     </dt>
     <dd>{{% md %}}The maximum amount of time, in seconds, a check-out last with renewal before Vault automatically checks it back in.
-{{% /md %}}</dd>
-    <dt class="property-optional"
+{{% /md %}}</dd><dt class="property-optional"
             title="Optional">
         <span id="state_name_go">
 <a href="#state_name_go" style="color: inherit; text-decoration: inherit;">Name</a>
@@ -757,8 +671,7 @@ in Active Directory.
         <span class="property-type">string</span>
     </dt>
     <dd>{{% md %}}The name of the set of service accounts.
-{{% /md %}}</dd>
-    <dt class="property-optional"
+{{% /md %}}</dd><dt class="property-optional"
             title="Optional">
         <span id="state_serviceaccountnames_go">
 <a href="#state_serviceaccountnames_go" style="color: inherit; text-decoration: inherit;">Service<wbr>Account<wbr>Names</a>
@@ -768,8 +681,7 @@ in Active Directory.
     </dt>
     <dd>{{% md %}}The names of all the service accounts that can be checked out from this set. These service accounts must already exist
 in Active Directory.
-{{% /md %}}</dd>
-    <dt class="property-optional"
+{{% /md %}}</dd><dt class="property-optional"
             title="Optional">
         <span id="state_ttl_go">
 <a href="#state_ttl_go" style="color: inherit; text-decoration: inherit;">Ttl</a>
@@ -778,14 +690,11 @@ in Active Directory.
         <span class="property-type">int</span>
     </dt>
     <dd>{{% md %}}The amount of time, in seconds, a single check-out lasts before Vault automatically checks it back in.
-{{% /md %}}</dd>
-</dl>
+{{% /md %}}</dd></dl>
 {{% /choosable %}}
 
 {{% choosable language nodejs %}}
-<dl class="resources-properties">
-
-    <dt class="property-optional"
+<dl class="resources-properties"><dt class="property-optional"
             title="Optional">
         <span id="state_backend_nodejs">
 <a href="#state_backend_nodejs" style="color: inherit; text-decoration: inherit;">backend</a>
@@ -794,8 +703,7 @@ in Active Directory.
         <span class="property-type">string</span>
     </dt>
     <dd>{{% md %}}The mount path for the AD backend.
-{{% /md %}}</dd>
-    <dt class="property-optional"
+{{% /md %}}</dd><dt class="property-optional"
             title="Optional">
         <span id="state_disablecheckinenforcement_nodejs">
 <a href="#state_disablecheckinenforcement_nodejs" style="color: inherit; text-decoration: inherit;">disable<wbr>Check<wbr>In<wbr>Enforcement</a>
@@ -804,8 +712,7 @@ in Active Directory.
         <span class="property-type">boolean</span>
     </dt>
     <dd>{{% md %}}Disable enforcing that service accounts must be checked in by the entity or client token that checked them out.
-{{% /md %}}</dd>
-    <dt class="property-optional"
+{{% /md %}}</dd><dt class="property-optional"
             title="Optional">
         <span id="state_maxttl_nodejs">
 <a href="#state_maxttl_nodejs" style="color: inherit; text-decoration: inherit;">max<wbr>Ttl</a>
@@ -814,8 +721,7 @@ in Active Directory.
         <span class="property-type">number</span>
     </dt>
     <dd>{{% md %}}The maximum amount of time, in seconds, a check-out last with renewal before Vault automatically checks it back in.
-{{% /md %}}</dd>
-    <dt class="property-optional"
+{{% /md %}}</dd><dt class="property-optional"
             title="Optional">
         <span id="state_name_nodejs">
 <a href="#state_name_nodejs" style="color: inherit; text-decoration: inherit;">name</a>
@@ -824,8 +730,7 @@ in Active Directory.
         <span class="property-type">string</span>
     </dt>
     <dd>{{% md %}}The name of the set of service accounts.
-{{% /md %}}</dd>
-    <dt class="property-optional"
+{{% /md %}}</dd><dt class="property-optional"
             title="Optional">
         <span id="state_serviceaccountnames_nodejs">
 <a href="#state_serviceaccountnames_nodejs" style="color: inherit; text-decoration: inherit;">service<wbr>Account<wbr>Names</a>
@@ -835,8 +740,7 @@ in Active Directory.
     </dt>
     <dd>{{% md %}}The names of all the service accounts that can be checked out from this set. These service accounts must already exist
 in Active Directory.
-{{% /md %}}</dd>
-    <dt class="property-optional"
+{{% /md %}}</dd><dt class="property-optional"
             title="Optional">
         <span id="state_ttl_nodejs">
 <a href="#state_ttl_nodejs" style="color: inherit; text-decoration: inherit;">ttl</a>
@@ -845,14 +749,11 @@ in Active Directory.
         <span class="property-type">number</span>
     </dt>
     <dd>{{% md %}}The amount of time, in seconds, a single check-out lasts before Vault automatically checks it back in.
-{{% /md %}}</dd>
-</dl>
+{{% /md %}}</dd></dl>
 {{% /choosable %}}
 
 {{% choosable language python %}}
-<dl class="resources-properties">
-
-    <dt class="property-optional"
+<dl class="resources-properties"><dt class="property-optional"
             title="Optional">
         <span id="state_backend_python">
 <a href="#state_backend_python" style="color: inherit; text-decoration: inherit;">backend</a>
@@ -861,8 +762,7 @@ in Active Directory.
         <span class="property-type">str</span>
     </dt>
     <dd>{{% md %}}The mount path for the AD backend.
-{{% /md %}}</dd>
-    <dt class="property-optional"
+{{% /md %}}</dd><dt class="property-optional"
             title="Optional">
         <span id="state_disable_check_in_enforcement_python">
 <a href="#state_disable_check_in_enforcement_python" style="color: inherit; text-decoration: inherit;">disable_<wbr>check_<wbr>in_<wbr>enforcement</a>
@@ -871,8 +771,7 @@ in Active Directory.
         <span class="property-type">bool</span>
     </dt>
     <dd>{{% md %}}Disable enforcing that service accounts must be checked in by the entity or client token that checked them out.
-{{% /md %}}</dd>
-    <dt class="property-optional"
+{{% /md %}}</dd><dt class="property-optional"
             title="Optional">
         <span id="state_max_ttl_python">
 <a href="#state_max_ttl_python" style="color: inherit; text-decoration: inherit;">max_<wbr>ttl</a>
@@ -881,8 +780,7 @@ in Active Directory.
         <span class="property-type">int</span>
     </dt>
     <dd>{{% md %}}The maximum amount of time, in seconds, a check-out last with renewal before Vault automatically checks it back in.
-{{% /md %}}</dd>
-    <dt class="property-optional"
+{{% /md %}}</dd><dt class="property-optional"
             title="Optional">
         <span id="state_name_python">
 <a href="#state_name_python" style="color: inherit; text-decoration: inherit;">name</a>
@@ -891,8 +789,7 @@ in Active Directory.
         <span class="property-type">str</span>
     </dt>
     <dd>{{% md %}}The name of the set of service accounts.
-{{% /md %}}</dd>
-    <dt class="property-optional"
+{{% /md %}}</dd><dt class="property-optional"
             title="Optional">
         <span id="state_service_account_names_python">
 <a href="#state_service_account_names_python" style="color: inherit; text-decoration: inherit;">service_<wbr>account_<wbr>names</a>
@@ -902,8 +799,7 @@ in Active Directory.
     </dt>
     <dd>{{% md %}}The names of all the service accounts that can be checked out from this set. These service accounts must already exist
 in Active Directory.
-{{% /md %}}</dd>
-    <dt class="property-optional"
+{{% /md %}}</dd><dt class="property-optional"
             title="Optional">
         <span id="state_ttl_python">
 <a href="#state_ttl_python" style="color: inherit; text-decoration: inherit;">ttl</a>
@@ -912,8 +808,7 @@ in Active Directory.
         <span class="property-type">int</span>
     </dt>
     <dd>{{% md %}}The amount of time, in seconds, a single check-out lasts before Vault automatically checks it back in.
-{{% /md %}}</dd>
-</dl>
+{{% /md %}}</dd></dl>
 {{% /choosable %}}
 
 
@@ -929,6 +824,6 @@ in Active Directory.
 	<dt>License</dt>
 	<dd>Apache-2.0</dd>
 	<dt>Notes</dt>
-	<dd>This Pulumi package is based on the [`vault` Terraform Provider](https://github.com/hashicorp/terraform-provider-vault).</dd>
+	<dd>{{% md %}}This Pulumi package is based on the [`vault` Terraform Provider](https://github.com/hashicorp/terraform-provider-vault).{{% /md %}}</dd>
 </dl>
 

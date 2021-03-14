@@ -40,9 +40,7 @@ construction to achieve fine-grained programmatic control over provider settings
 
 {{% choosable language nodejs %}}
 
-<dl class="resources-properties">
-  
-    <dt
+<dl class="resources-properties"><dt
         class="property-required" title="Required">
         <span>name</span>
         <span class="property-indicator"></span>
@@ -50,9 +48,7 @@ construction to achieve fine-grained programmatic control over provider settings
     </dt>
     <dd>
       The unique name of the resource.
-    </dd>
-  
-    <dt
+    </dd><dt
         class="property-required" title="Required">
         <span>args</span>
         <span class="property-indicator"></span>
@@ -60,9 +56,7 @@ construction to achieve fine-grained programmatic control over provider settings
     </dt>
     <dd>
       The arguments to resource properties.
-    </dd>
-  
-    <dt
+    </dd><dt
         class="property-optional" title="Optional">
         <span>opts</span>
         <span class="property-indicator"></span>
@@ -70,10 +64,7 @@ construction to achieve fine-grained programmatic control over provider settings
     </dt>
     <dd>
       Bag of options to control resource&#39;s behavior.
-    </dd>
-  
-
-</dl>
+    </dd></dl>
 
 {{% /choosable %}}
 
@@ -99,9 +90,7 @@ construction to achieve fine-grained programmatic control over provider settings
 
 {{% choosable language go %}}
 
-<dl class="resources-properties">
-  
-    <dt
+<dl class="resources-properties"><dt
         class="property-optional" title="Optional">
         <span>ctx</span>
         <span class="property-indicator"></span>
@@ -109,9 +98,7 @@ construction to achieve fine-grained programmatic control over provider settings
     </dt>
     <dd>
       Context object for the current deployment.
-    </dd>
-  
-    <dt
+    </dd><dt
         class="property-required" title="Required">
         <span>name</span>
         <span class="property-indicator"></span>
@@ -119,9 +106,7 @@ construction to achieve fine-grained programmatic control over provider settings
     </dt>
     <dd>
       The unique name of the resource.
-    </dd>
-  
-    <dt
+    </dd><dt
         class="property-required" title="Required">
         <span>args</span>
         <span class="property-indicator"></span>
@@ -129,9 +114,7 @@ construction to achieve fine-grained programmatic control over provider settings
     </dt>
     <dd>
       The arguments to resource properties.
-    </dd>
-  
-    <dt
+    </dd><dt
         class="property-optional" title="Optional">
         <span>opts</span>
         <span class="property-indicator"></span>
@@ -139,18 +122,13 @@ construction to achieve fine-grained programmatic control over provider settings
     </dt>
     <dd>
       Bag of options to control resource&#39;s behavior.
-    </dd>
-  
-
-</dl>
+    </dd></dl>
 
 {{% /choosable %}}
 
 {{% choosable language csharp %}}
 
-<dl class="resources-properties">
-  
-    <dt
+<dl class="resources-properties"><dt
         class="property-required" title="Required">
         <span>name</span>
         <span class="property-indicator"></span>
@@ -158,9 +136,7 @@ construction to achieve fine-grained programmatic control over provider settings
     </dt>
     <dd>
       The unique name of the resource.
-    </dd>
-  
-    <dt
+    </dd><dt
         class="property-required" title="Required">
         <span>args</span>
         <span class="property-indicator"></span>
@@ -168,9 +144,7 @@ construction to achieve fine-grained programmatic control over provider settings
     </dt>
     <dd>
       The arguments to resource properties.
-    </dd>
-  
-    <dt
+    </dd><dt
         class="property-optional" title="Optional">
         <span>opts</span>
         <span class="property-indicator"></span>
@@ -178,10 +152,7 @@ construction to achieve fine-grained programmatic control over provider settings
     </dt>
     <dd>
       Bag of options to control resource&#39;s behavior.
-    </dd>
-  
-
-</dl>
+    </dd></dl>
 
 {{% /choosable %}}
 
@@ -196,9 +167,7 @@ The Provider resource accepts the following [input]({{< relref "/docs/intro/conc
 
 
 {{% choosable language csharp %}}
-<dl class="resources-properties">
-
-    <dt class="property-required"
+<dl class="resources-properties"><dt class="property-required"
             title="Required">
         <span id="bootstrapservers_csharp">
 <a href="#bootstrapservers_csharp" style="color: inherit; text-decoration: inherit;">Bootstrap<wbr>Servers</a>
@@ -207,8 +176,7 @@ The Provider resource accepts the following [input]({{< relref "/docs/intro/conc
         <span class="property-type">List&lt;string&gt;</span>
     </dt>
     <dd>{{% md %}}A list of kafka brokers
-{{% /md %}}</dd>
-    <dt class="property-optional"
+{{% /md %}}</dd><dt class="property-optional"
             title="Optional">
         <span id="cacert_csharp">
 <a href="#cacert_csharp" style="color: inherit; text-decoration: inherit;">Ca<wbr>Cert</a>
@@ -217,8 +185,7 @@ The Provider resource accepts the following [input]({{< relref "/docs/intro/conc
         <span class="property-type">string</span>
     </dt>
     <dd>{{% md %}}CA certificate file to validate the server's certificate.
-{{% /md %}}</dd>
-    <dt class="property-optional property-deprecated"
+{{% /md %}}</dd><dt class="property-optional property-deprecated"
             title="Optional, Deprecated">
         <span id="cacertfile_csharp">
 <a href="#cacertfile_csharp" style="color: inherit; text-decoration: inherit;">Ca<wbr>Cert<wbr>File</a>
@@ -227,8 +194,7 @@ The Provider resource accepts the following [input]({{< relref "/docs/intro/conc
         <span class="property-type">string</span>
     </dt>
     <dd>{{% md %}}Path to a CA certificate file to validate the server's certificate.
-{{% /md %}}<p class="property-message">Deprecated: {{% md %}}This parameter is now deprecated and will be removed in a later release, please use `ca_cert` instead.{{% /md %}}</p></dd>
-    <dt class="property-optional"
+{{% /md %}}<p class="property-message">Deprecated: {{% md %}}This parameter is now deprecated and will be removed in a later release, please use `ca_cert` instead.{{% /md %}}</p></dd><dt class="property-optional"
             title="Optional">
         <span id="clientcert_csharp">
 <a href="#clientcert_csharp" style="color: inherit; text-decoration: inherit;">Client<wbr>Cert</a>
@@ -237,8 +203,7 @@ The Provider resource accepts the following [input]({{< relref "/docs/intro/conc
         <span class="property-type">string</span>
     </dt>
     <dd>{{% md %}}The client certificate.
-{{% /md %}}</dd>
-    <dt class="property-optional property-deprecated"
+{{% /md %}}</dd><dt class="property-optional property-deprecated"
             title="Optional, Deprecated">
         <span id="clientcertfile_csharp">
 <a href="#clientcertfile_csharp" style="color: inherit; text-decoration: inherit;">Client<wbr>Cert<wbr>File</a>
@@ -247,8 +212,7 @@ The Provider resource accepts the following [input]({{< relref "/docs/intro/conc
         <span class="property-type">string</span>
     </dt>
     <dd>{{% md %}}Path to a file containing the client certificate.
-{{% /md %}}<p class="property-message">Deprecated: {{% md %}}This parameter is now deprecated and will be removed in a later release, please use `client_cert` instead.{{% /md %}}</p></dd>
-    <dt class="property-optional"
+{{% /md %}}<p class="property-message">Deprecated: {{% md %}}This parameter is now deprecated and will be removed in a later release, please use `client_cert` instead.{{% /md %}}</p></dd><dt class="property-optional"
             title="Optional">
         <span id="clientkey_csharp">
 <a href="#clientkey_csharp" style="color: inherit; text-decoration: inherit;">Client<wbr>Key</a>
@@ -257,8 +221,7 @@ The Provider resource accepts the following [input]({{< relref "/docs/intro/conc
         <span class="property-type">string</span>
     </dt>
     <dd>{{% md %}}The private key that the certificate was issued for.
-{{% /md %}}</dd>
-    <dt class="property-optional property-deprecated"
+{{% /md %}}</dd><dt class="property-optional property-deprecated"
             title="Optional, Deprecated">
         <span id="clientkeyfile_csharp">
 <a href="#clientkeyfile_csharp" style="color: inherit; text-decoration: inherit;">Client<wbr>Key<wbr>File</a>
@@ -267,8 +230,7 @@ The Provider resource accepts the following [input]({{< relref "/docs/intro/conc
         <span class="property-type">string</span>
     </dt>
     <dd>{{% md %}}Path to a file containing the private key that the certificate was issued for.
-{{% /md %}}<p class="property-message">Deprecated: {{% md %}}This parameter is now deprecated and will be removed in a later release, please use `client_key` instead.{{% /md %}}</p></dd>
-    <dt class="property-optional"
+{{% /md %}}<p class="property-message">Deprecated: {{% md %}}This parameter is now deprecated and will be removed in a later release, please use `client_key` instead.{{% /md %}}</p></dd><dt class="property-optional"
             title="Optional">
         <span id="clientkeypassphrase_csharp">
 <a href="#clientkeypassphrase_csharp" style="color: inherit; text-decoration: inherit;">Client<wbr>Key<wbr>Passphrase</a>
@@ -277,8 +239,7 @@ The Provider resource accepts the following [input]({{< relref "/docs/intro/conc
         <span class="property-type">string</span>
     </dt>
     <dd>{{% md %}}The passphrase for the private key that the certificate was issued for.
-{{% /md %}}</dd>
-    <dt class="property-optional"
+{{% /md %}}</dd><dt class="property-optional"
             title="Optional">
         <span id="saslmechanism_csharp">
 <a href="#saslmechanism_csharp" style="color: inherit; text-decoration: inherit;">Sasl<wbr>Mechanism</a>
@@ -287,8 +248,7 @@ The Provider resource accepts the following [input]({{< relref "/docs/intro/conc
         <span class="property-type">string</span>
     </dt>
     <dd>{{% md %}}SASL mechanism, can be plain, scram-sha512, scram-sha256
- It can also be sourced from the following environment variable: `KAFKA_SASL_MECHANISM`{{% /md %}}</dd>
-    <dt class="property-optional"
+ It can also be sourced from the following environment variable: `KAFKA_SASL_MECHANISM`{{% /md %}}</dd><dt class="property-optional"
             title="Optional">
         <span id="saslpassword_csharp">
 <a href="#saslpassword_csharp" style="color: inherit; text-decoration: inherit;">Sasl<wbr>Password</a>
@@ -297,8 +257,7 @@ The Provider resource accepts the following [input]({{< relref "/docs/intro/conc
         <span class="property-type">string</span>
     </dt>
     <dd>{{% md %}}Password for SASL authentication.
-{{% /md %}}</dd>
-    <dt class="property-optional"
+{{% /md %}}</dd><dt class="property-optional"
             title="Optional">
         <span id="saslusername_csharp">
 <a href="#saslusername_csharp" style="color: inherit; text-decoration: inherit;">Sasl<wbr>Username</a>
@@ -307,8 +266,7 @@ The Provider resource accepts the following [input]({{< relref "/docs/intro/conc
         <span class="property-type">string</span>
     </dt>
     <dd>{{% md %}}Username for SASL authentication.
-{{% /md %}}</dd>
-    <dt class="property-optional"
+{{% /md %}}</dd><dt class="property-optional"
             title="Optional">
         <span id="skiptlsverify_csharp">
 <a href="#skiptlsverify_csharp" style="color: inherit; text-decoration: inherit;">Skip<wbr>Tls<wbr>Verify</a>
@@ -317,8 +275,7 @@ The Provider resource accepts the following [input]({{< relref "/docs/intro/conc
         <span class="property-type">bool</span>
     </dt>
     <dd>{{% md %}}Set this to true only if the target Kafka server is an insecure development instance.
- It can also be sourced from the following environment variable: `KAFKA_SKIP_VERIFY`{{% /md %}}</dd>
-    <dt class="property-optional"
+ It can also be sourced from the following environment variable: `KAFKA_SKIP_VERIFY`{{% /md %}}</dd><dt class="property-optional"
             title="Optional">
         <span id="timeout_csharp">
 <a href="#timeout_csharp" style="color: inherit; text-decoration: inherit;">Timeout</a>
@@ -327,8 +284,7 @@ The Provider resource accepts the following [input]({{< relref "/docs/intro/conc
         <span class="property-type">int</span>
     </dt>
     <dd>{{% md %}}Timeout in seconds
-{{% /md %}}</dd>
-    <dt class="property-optional"
+{{% /md %}}</dd><dt class="property-optional"
             title="Optional">
         <span id="tlsenabled_csharp">
 <a href="#tlsenabled_csharp" style="color: inherit; text-decoration: inherit;">Tls<wbr>Enabled</a>
@@ -337,14 +293,11 @@ The Provider resource accepts the following [input]({{< relref "/docs/intro/conc
         <span class="property-type">bool</span>
     </dt>
     <dd>{{% md %}}Enable communication with the Kafka Cluster over TLS.
- It can also be sourced from the following environment variable: `KAFKA_ENABLE_TLS`{{% /md %}}</dd>
-</dl>
+ It can also be sourced from the following environment variable: `KAFKA_ENABLE_TLS`{{% /md %}}</dd></dl>
 {{% /choosable %}}
 
 {{% choosable language go %}}
-<dl class="resources-properties">
-
-    <dt class="property-required"
+<dl class="resources-properties"><dt class="property-required"
             title="Required">
         <span id="bootstrapservers_go">
 <a href="#bootstrapservers_go" style="color: inherit; text-decoration: inherit;">Bootstrap<wbr>Servers</a>
@@ -353,8 +306,7 @@ The Provider resource accepts the following [input]({{< relref "/docs/intro/conc
         <span class="property-type">[]string</span>
     </dt>
     <dd>{{% md %}}A list of kafka brokers
-{{% /md %}}</dd>
-    <dt class="property-optional"
+{{% /md %}}</dd><dt class="property-optional"
             title="Optional">
         <span id="cacert_go">
 <a href="#cacert_go" style="color: inherit; text-decoration: inherit;">Ca<wbr>Cert</a>
@@ -363,8 +315,7 @@ The Provider resource accepts the following [input]({{< relref "/docs/intro/conc
         <span class="property-type">string</span>
     </dt>
     <dd>{{% md %}}CA certificate file to validate the server's certificate.
-{{% /md %}}</dd>
-    <dt class="property-optional property-deprecated"
+{{% /md %}}</dd><dt class="property-optional property-deprecated"
             title="Optional, Deprecated">
         <span id="cacertfile_go">
 <a href="#cacertfile_go" style="color: inherit; text-decoration: inherit;">Ca<wbr>Cert<wbr>File</a>
@@ -373,8 +324,7 @@ The Provider resource accepts the following [input]({{< relref "/docs/intro/conc
         <span class="property-type">string</span>
     </dt>
     <dd>{{% md %}}Path to a CA certificate file to validate the server's certificate.
-{{% /md %}}<p class="property-message">Deprecated: {{% md %}}This parameter is now deprecated and will be removed in a later release, please use `ca_cert` instead.{{% /md %}}</p></dd>
-    <dt class="property-optional"
+{{% /md %}}<p class="property-message">Deprecated: {{% md %}}This parameter is now deprecated and will be removed in a later release, please use `ca_cert` instead.{{% /md %}}</p></dd><dt class="property-optional"
             title="Optional">
         <span id="clientcert_go">
 <a href="#clientcert_go" style="color: inherit; text-decoration: inherit;">Client<wbr>Cert</a>
@@ -383,8 +333,7 @@ The Provider resource accepts the following [input]({{< relref "/docs/intro/conc
         <span class="property-type">string</span>
     </dt>
     <dd>{{% md %}}The client certificate.
-{{% /md %}}</dd>
-    <dt class="property-optional property-deprecated"
+{{% /md %}}</dd><dt class="property-optional property-deprecated"
             title="Optional, Deprecated">
         <span id="clientcertfile_go">
 <a href="#clientcertfile_go" style="color: inherit; text-decoration: inherit;">Client<wbr>Cert<wbr>File</a>
@@ -393,8 +342,7 @@ The Provider resource accepts the following [input]({{< relref "/docs/intro/conc
         <span class="property-type">string</span>
     </dt>
     <dd>{{% md %}}Path to a file containing the client certificate.
-{{% /md %}}<p class="property-message">Deprecated: {{% md %}}This parameter is now deprecated and will be removed in a later release, please use `client_cert` instead.{{% /md %}}</p></dd>
-    <dt class="property-optional"
+{{% /md %}}<p class="property-message">Deprecated: {{% md %}}This parameter is now deprecated and will be removed in a later release, please use `client_cert` instead.{{% /md %}}</p></dd><dt class="property-optional"
             title="Optional">
         <span id="clientkey_go">
 <a href="#clientkey_go" style="color: inherit; text-decoration: inherit;">Client<wbr>Key</a>
@@ -403,8 +351,7 @@ The Provider resource accepts the following [input]({{< relref "/docs/intro/conc
         <span class="property-type">string</span>
     </dt>
     <dd>{{% md %}}The private key that the certificate was issued for.
-{{% /md %}}</dd>
-    <dt class="property-optional property-deprecated"
+{{% /md %}}</dd><dt class="property-optional property-deprecated"
             title="Optional, Deprecated">
         <span id="clientkeyfile_go">
 <a href="#clientkeyfile_go" style="color: inherit; text-decoration: inherit;">Client<wbr>Key<wbr>File</a>
@@ -413,8 +360,7 @@ The Provider resource accepts the following [input]({{< relref "/docs/intro/conc
         <span class="property-type">string</span>
     </dt>
     <dd>{{% md %}}Path to a file containing the private key that the certificate was issued for.
-{{% /md %}}<p class="property-message">Deprecated: {{% md %}}This parameter is now deprecated and will be removed in a later release, please use `client_key` instead.{{% /md %}}</p></dd>
-    <dt class="property-optional"
+{{% /md %}}<p class="property-message">Deprecated: {{% md %}}This parameter is now deprecated and will be removed in a later release, please use `client_key` instead.{{% /md %}}</p></dd><dt class="property-optional"
             title="Optional">
         <span id="clientkeypassphrase_go">
 <a href="#clientkeypassphrase_go" style="color: inherit; text-decoration: inherit;">Client<wbr>Key<wbr>Passphrase</a>
@@ -423,8 +369,7 @@ The Provider resource accepts the following [input]({{< relref "/docs/intro/conc
         <span class="property-type">string</span>
     </dt>
     <dd>{{% md %}}The passphrase for the private key that the certificate was issued for.
-{{% /md %}}</dd>
-    <dt class="property-optional"
+{{% /md %}}</dd><dt class="property-optional"
             title="Optional">
         <span id="saslmechanism_go">
 <a href="#saslmechanism_go" style="color: inherit; text-decoration: inherit;">Sasl<wbr>Mechanism</a>
@@ -433,8 +378,7 @@ The Provider resource accepts the following [input]({{< relref "/docs/intro/conc
         <span class="property-type">string</span>
     </dt>
     <dd>{{% md %}}SASL mechanism, can be plain, scram-sha512, scram-sha256
- It can also be sourced from the following environment variable: `KAFKA_SASL_MECHANISM`{{% /md %}}</dd>
-    <dt class="property-optional"
+ It can also be sourced from the following environment variable: `KAFKA_SASL_MECHANISM`{{% /md %}}</dd><dt class="property-optional"
             title="Optional">
         <span id="saslpassword_go">
 <a href="#saslpassword_go" style="color: inherit; text-decoration: inherit;">Sasl<wbr>Password</a>
@@ -443,8 +387,7 @@ The Provider resource accepts the following [input]({{< relref "/docs/intro/conc
         <span class="property-type">string</span>
     </dt>
     <dd>{{% md %}}Password for SASL authentication.
-{{% /md %}}</dd>
-    <dt class="property-optional"
+{{% /md %}}</dd><dt class="property-optional"
             title="Optional">
         <span id="saslusername_go">
 <a href="#saslusername_go" style="color: inherit; text-decoration: inherit;">Sasl<wbr>Username</a>
@@ -453,8 +396,7 @@ The Provider resource accepts the following [input]({{< relref "/docs/intro/conc
         <span class="property-type">string</span>
     </dt>
     <dd>{{% md %}}Username for SASL authentication.
-{{% /md %}}</dd>
-    <dt class="property-optional"
+{{% /md %}}</dd><dt class="property-optional"
             title="Optional">
         <span id="skiptlsverify_go">
 <a href="#skiptlsverify_go" style="color: inherit; text-decoration: inherit;">Skip<wbr>Tls<wbr>Verify</a>
@@ -463,8 +405,7 @@ The Provider resource accepts the following [input]({{< relref "/docs/intro/conc
         <span class="property-type">bool</span>
     </dt>
     <dd>{{% md %}}Set this to true only if the target Kafka server is an insecure development instance.
- It can also be sourced from the following environment variable: `KAFKA_SKIP_VERIFY`{{% /md %}}</dd>
-    <dt class="property-optional"
+ It can also be sourced from the following environment variable: `KAFKA_SKIP_VERIFY`{{% /md %}}</dd><dt class="property-optional"
             title="Optional">
         <span id="timeout_go">
 <a href="#timeout_go" style="color: inherit; text-decoration: inherit;">Timeout</a>
@@ -473,8 +414,7 @@ The Provider resource accepts the following [input]({{< relref "/docs/intro/conc
         <span class="property-type">int</span>
     </dt>
     <dd>{{% md %}}Timeout in seconds
-{{% /md %}}</dd>
-    <dt class="property-optional"
+{{% /md %}}</dd><dt class="property-optional"
             title="Optional">
         <span id="tlsenabled_go">
 <a href="#tlsenabled_go" style="color: inherit; text-decoration: inherit;">Tls<wbr>Enabled</a>
@@ -483,14 +423,11 @@ The Provider resource accepts the following [input]({{< relref "/docs/intro/conc
         <span class="property-type">bool</span>
     </dt>
     <dd>{{% md %}}Enable communication with the Kafka Cluster over TLS.
- It can also be sourced from the following environment variable: `KAFKA_ENABLE_TLS`{{% /md %}}</dd>
-</dl>
+ It can also be sourced from the following environment variable: `KAFKA_ENABLE_TLS`{{% /md %}}</dd></dl>
 {{% /choosable %}}
 
 {{% choosable language nodejs %}}
-<dl class="resources-properties">
-
-    <dt class="property-required"
+<dl class="resources-properties"><dt class="property-required"
             title="Required">
         <span id="bootstrapservers_nodejs">
 <a href="#bootstrapservers_nodejs" style="color: inherit; text-decoration: inherit;">bootstrap<wbr>Servers</a>
@@ -499,8 +436,7 @@ The Provider resource accepts the following [input]({{< relref "/docs/intro/conc
         <span class="property-type">string[]</span>
     </dt>
     <dd>{{% md %}}A list of kafka brokers
-{{% /md %}}</dd>
-    <dt class="property-optional"
+{{% /md %}}</dd><dt class="property-optional"
             title="Optional">
         <span id="cacert_nodejs">
 <a href="#cacert_nodejs" style="color: inherit; text-decoration: inherit;">ca<wbr>Cert</a>
@@ -509,8 +445,7 @@ The Provider resource accepts the following [input]({{< relref "/docs/intro/conc
         <span class="property-type">string</span>
     </dt>
     <dd>{{% md %}}CA certificate file to validate the server's certificate.
-{{% /md %}}</dd>
-    <dt class="property-optional property-deprecated"
+{{% /md %}}</dd><dt class="property-optional property-deprecated"
             title="Optional, Deprecated">
         <span id="cacertfile_nodejs">
 <a href="#cacertfile_nodejs" style="color: inherit; text-decoration: inherit;">ca<wbr>Cert<wbr>File</a>
@@ -519,8 +454,7 @@ The Provider resource accepts the following [input]({{< relref "/docs/intro/conc
         <span class="property-type">string</span>
     </dt>
     <dd>{{% md %}}Path to a CA certificate file to validate the server's certificate.
-{{% /md %}}<p class="property-message">Deprecated: {{% md %}}This parameter is now deprecated and will be removed in a later release, please use `ca_cert` instead.{{% /md %}}</p></dd>
-    <dt class="property-optional"
+{{% /md %}}<p class="property-message">Deprecated: {{% md %}}This parameter is now deprecated and will be removed in a later release, please use `ca_cert` instead.{{% /md %}}</p></dd><dt class="property-optional"
             title="Optional">
         <span id="clientcert_nodejs">
 <a href="#clientcert_nodejs" style="color: inherit; text-decoration: inherit;">client<wbr>Cert</a>
@@ -529,8 +463,7 @@ The Provider resource accepts the following [input]({{< relref "/docs/intro/conc
         <span class="property-type">string</span>
     </dt>
     <dd>{{% md %}}The client certificate.
-{{% /md %}}</dd>
-    <dt class="property-optional property-deprecated"
+{{% /md %}}</dd><dt class="property-optional property-deprecated"
             title="Optional, Deprecated">
         <span id="clientcertfile_nodejs">
 <a href="#clientcertfile_nodejs" style="color: inherit; text-decoration: inherit;">client<wbr>Cert<wbr>File</a>
@@ -539,8 +472,7 @@ The Provider resource accepts the following [input]({{< relref "/docs/intro/conc
         <span class="property-type">string</span>
     </dt>
     <dd>{{% md %}}Path to a file containing the client certificate.
-{{% /md %}}<p class="property-message">Deprecated: {{% md %}}This parameter is now deprecated and will be removed in a later release, please use `client_cert` instead.{{% /md %}}</p></dd>
-    <dt class="property-optional"
+{{% /md %}}<p class="property-message">Deprecated: {{% md %}}This parameter is now deprecated and will be removed in a later release, please use `client_cert` instead.{{% /md %}}</p></dd><dt class="property-optional"
             title="Optional">
         <span id="clientkey_nodejs">
 <a href="#clientkey_nodejs" style="color: inherit; text-decoration: inherit;">client<wbr>Key</a>
@@ -549,8 +481,7 @@ The Provider resource accepts the following [input]({{< relref "/docs/intro/conc
         <span class="property-type">string</span>
     </dt>
     <dd>{{% md %}}The private key that the certificate was issued for.
-{{% /md %}}</dd>
-    <dt class="property-optional property-deprecated"
+{{% /md %}}</dd><dt class="property-optional property-deprecated"
             title="Optional, Deprecated">
         <span id="clientkeyfile_nodejs">
 <a href="#clientkeyfile_nodejs" style="color: inherit; text-decoration: inherit;">client<wbr>Key<wbr>File</a>
@@ -559,8 +490,7 @@ The Provider resource accepts the following [input]({{< relref "/docs/intro/conc
         <span class="property-type">string</span>
     </dt>
     <dd>{{% md %}}Path to a file containing the private key that the certificate was issued for.
-{{% /md %}}<p class="property-message">Deprecated: {{% md %}}This parameter is now deprecated and will be removed in a later release, please use `client_key` instead.{{% /md %}}</p></dd>
-    <dt class="property-optional"
+{{% /md %}}<p class="property-message">Deprecated: {{% md %}}This parameter is now deprecated and will be removed in a later release, please use `client_key` instead.{{% /md %}}</p></dd><dt class="property-optional"
             title="Optional">
         <span id="clientkeypassphrase_nodejs">
 <a href="#clientkeypassphrase_nodejs" style="color: inherit; text-decoration: inherit;">client<wbr>Key<wbr>Passphrase</a>
@@ -569,8 +499,7 @@ The Provider resource accepts the following [input]({{< relref "/docs/intro/conc
         <span class="property-type">string</span>
     </dt>
     <dd>{{% md %}}The passphrase for the private key that the certificate was issued for.
-{{% /md %}}</dd>
-    <dt class="property-optional"
+{{% /md %}}</dd><dt class="property-optional"
             title="Optional">
         <span id="saslmechanism_nodejs">
 <a href="#saslmechanism_nodejs" style="color: inherit; text-decoration: inherit;">sasl<wbr>Mechanism</a>
@@ -579,8 +508,7 @@ The Provider resource accepts the following [input]({{< relref "/docs/intro/conc
         <span class="property-type">string</span>
     </dt>
     <dd>{{% md %}}SASL mechanism, can be plain, scram-sha512, scram-sha256
- It can also be sourced from the following environment variable: `KAFKA_SASL_MECHANISM`{{% /md %}}</dd>
-    <dt class="property-optional"
+ It can also be sourced from the following environment variable: `KAFKA_SASL_MECHANISM`{{% /md %}}</dd><dt class="property-optional"
             title="Optional">
         <span id="saslpassword_nodejs">
 <a href="#saslpassword_nodejs" style="color: inherit; text-decoration: inherit;">sasl<wbr>Password</a>
@@ -589,8 +517,7 @@ The Provider resource accepts the following [input]({{< relref "/docs/intro/conc
         <span class="property-type">string</span>
     </dt>
     <dd>{{% md %}}Password for SASL authentication.
-{{% /md %}}</dd>
-    <dt class="property-optional"
+{{% /md %}}</dd><dt class="property-optional"
             title="Optional">
         <span id="saslusername_nodejs">
 <a href="#saslusername_nodejs" style="color: inherit; text-decoration: inherit;">sasl<wbr>Username</a>
@@ -599,8 +526,7 @@ The Provider resource accepts the following [input]({{< relref "/docs/intro/conc
         <span class="property-type">string</span>
     </dt>
     <dd>{{% md %}}Username for SASL authentication.
-{{% /md %}}</dd>
-    <dt class="property-optional"
+{{% /md %}}</dd><dt class="property-optional"
             title="Optional">
         <span id="skiptlsverify_nodejs">
 <a href="#skiptlsverify_nodejs" style="color: inherit; text-decoration: inherit;">skip<wbr>Tls<wbr>Verify</a>
@@ -609,8 +535,7 @@ The Provider resource accepts the following [input]({{< relref "/docs/intro/conc
         <span class="property-type">boolean</span>
     </dt>
     <dd>{{% md %}}Set this to true only if the target Kafka server is an insecure development instance.
- It can also be sourced from the following environment variable: `KAFKA_SKIP_VERIFY`{{% /md %}}</dd>
-    <dt class="property-optional"
+ It can also be sourced from the following environment variable: `KAFKA_SKIP_VERIFY`{{% /md %}}</dd><dt class="property-optional"
             title="Optional">
         <span id="timeout_nodejs">
 <a href="#timeout_nodejs" style="color: inherit; text-decoration: inherit;">timeout</a>
@@ -619,8 +544,7 @@ The Provider resource accepts the following [input]({{< relref "/docs/intro/conc
         <span class="property-type">number</span>
     </dt>
     <dd>{{% md %}}Timeout in seconds
-{{% /md %}}</dd>
-    <dt class="property-optional"
+{{% /md %}}</dd><dt class="property-optional"
             title="Optional">
         <span id="tlsenabled_nodejs">
 <a href="#tlsenabled_nodejs" style="color: inherit; text-decoration: inherit;">tls<wbr>Enabled</a>
@@ -629,14 +553,11 @@ The Provider resource accepts the following [input]({{< relref "/docs/intro/conc
         <span class="property-type">boolean</span>
     </dt>
     <dd>{{% md %}}Enable communication with the Kafka Cluster over TLS.
- It can also be sourced from the following environment variable: `KAFKA_ENABLE_TLS`{{% /md %}}</dd>
-</dl>
+ It can also be sourced from the following environment variable: `KAFKA_ENABLE_TLS`{{% /md %}}</dd></dl>
 {{% /choosable %}}
 
 {{% choosable language python %}}
-<dl class="resources-properties">
-
-    <dt class="property-required"
+<dl class="resources-properties"><dt class="property-required"
             title="Required">
         <span id="bootstrap_servers_python">
 <a href="#bootstrap_servers_python" style="color: inherit; text-decoration: inherit;">bootstrap_<wbr>servers</a>
@@ -645,8 +566,7 @@ The Provider resource accepts the following [input]({{< relref "/docs/intro/conc
         <span class="property-type">Sequence[str]</span>
     </dt>
     <dd>{{% md %}}A list of kafka brokers
-{{% /md %}}</dd>
-    <dt class="property-optional"
+{{% /md %}}</dd><dt class="property-optional"
             title="Optional">
         <span id="ca_cert_python">
 <a href="#ca_cert_python" style="color: inherit; text-decoration: inherit;">ca_<wbr>cert</a>
@@ -655,8 +575,7 @@ The Provider resource accepts the following [input]({{< relref "/docs/intro/conc
         <span class="property-type">str</span>
     </dt>
     <dd>{{% md %}}CA certificate file to validate the server's certificate.
-{{% /md %}}</dd>
-    <dt class="property-optional property-deprecated"
+{{% /md %}}</dd><dt class="property-optional property-deprecated"
             title="Optional, Deprecated">
         <span id="ca_cert_file_python">
 <a href="#ca_cert_file_python" style="color: inherit; text-decoration: inherit;">ca_<wbr>cert_<wbr>file</a>
@@ -665,8 +584,7 @@ The Provider resource accepts the following [input]({{< relref "/docs/intro/conc
         <span class="property-type">str</span>
     </dt>
     <dd>{{% md %}}Path to a CA certificate file to validate the server's certificate.
-{{% /md %}}<p class="property-message">Deprecated: {{% md %}}This parameter is now deprecated and will be removed in a later release, please use `ca_cert` instead.{{% /md %}}</p></dd>
-    <dt class="property-optional"
+{{% /md %}}<p class="property-message">Deprecated: {{% md %}}This parameter is now deprecated and will be removed in a later release, please use `ca_cert` instead.{{% /md %}}</p></dd><dt class="property-optional"
             title="Optional">
         <span id="client_cert_python">
 <a href="#client_cert_python" style="color: inherit; text-decoration: inherit;">client_<wbr>cert</a>
@@ -675,8 +593,7 @@ The Provider resource accepts the following [input]({{< relref "/docs/intro/conc
         <span class="property-type">str</span>
     </dt>
     <dd>{{% md %}}The client certificate.
-{{% /md %}}</dd>
-    <dt class="property-optional property-deprecated"
+{{% /md %}}</dd><dt class="property-optional property-deprecated"
             title="Optional, Deprecated">
         <span id="client_cert_file_python">
 <a href="#client_cert_file_python" style="color: inherit; text-decoration: inherit;">client_<wbr>cert_<wbr>file</a>
@@ -685,8 +602,7 @@ The Provider resource accepts the following [input]({{< relref "/docs/intro/conc
         <span class="property-type">str</span>
     </dt>
     <dd>{{% md %}}Path to a file containing the client certificate.
-{{% /md %}}<p class="property-message">Deprecated: {{% md %}}This parameter is now deprecated and will be removed in a later release, please use `client_cert` instead.{{% /md %}}</p></dd>
-    <dt class="property-optional"
+{{% /md %}}<p class="property-message">Deprecated: {{% md %}}This parameter is now deprecated and will be removed in a later release, please use `client_cert` instead.{{% /md %}}</p></dd><dt class="property-optional"
             title="Optional">
         <span id="client_key_python">
 <a href="#client_key_python" style="color: inherit; text-decoration: inherit;">client_<wbr>key</a>
@@ -695,8 +611,7 @@ The Provider resource accepts the following [input]({{< relref "/docs/intro/conc
         <span class="property-type">str</span>
     </dt>
     <dd>{{% md %}}The private key that the certificate was issued for.
-{{% /md %}}</dd>
-    <dt class="property-optional property-deprecated"
+{{% /md %}}</dd><dt class="property-optional property-deprecated"
             title="Optional, Deprecated">
         <span id="client_key_file_python">
 <a href="#client_key_file_python" style="color: inherit; text-decoration: inherit;">client_<wbr>key_<wbr>file</a>
@@ -705,8 +620,7 @@ The Provider resource accepts the following [input]({{< relref "/docs/intro/conc
         <span class="property-type">str</span>
     </dt>
     <dd>{{% md %}}Path to a file containing the private key that the certificate was issued for.
-{{% /md %}}<p class="property-message">Deprecated: {{% md %}}This parameter is now deprecated and will be removed in a later release, please use `client_key` instead.{{% /md %}}</p></dd>
-    <dt class="property-optional"
+{{% /md %}}<p class="property-message">Deprecated: {{% md %}}This parameter is now deprecated and will be removed in a later release, please use `client_key` instead.{{% /md %}}</p></dd><dt class="property-optional"
             title="Optional">
         <span id="client_key_passphrase_python">
 <a href="#client_key_passphrase_python" style="color: inherit; text-decoration: inherit;">client_<wbr>key_<wbr>passphrase</a>
@@ -715,8 +629,7 @@ The Provider resource accepts the following [input]({{< relref "/docs/intro/conc
         <span class="property-type">str</span>
     </dt>
     <dd>{{% md %}}The passphrase for the private key that the certificate was issued for.
-{{% /md %}}</dd>
-    <dt class="property-optional"
+{{% /md %}}</dd><dt class="property-optional"
             title="Optional">
         <span id="sasl_mechanism_python">
 <a href="#sasl_mechanism_python" style="color: inherit; text-decoration: inherit;">sasl_<wbr>mechanism</a>
@@ -725,8 +638,7 @@ The Provider resource accepts the following [input]({{< relref "/docs/intro/conc
         <span class="property-type">str</span>
     </dt>
     <dd>{{% md %}}SASL mechanism, can be plain, scram-sha512, scram-sha256
- It can also be sourced from the following environment variable: `KAFKA_SASL_MECHANISM`{{% /md %}}</dd>
-    <dt class="property-optional"
+ It can also be sourced from the following environment variable: `KAFKA_SASL_MECHANISM`{{% /md %}}</dd><dt class="property-optional"
             title="Optional">
         <span id="sasl_password_python">
 <a href="#sasl_password_python" style="color: inherit; text-decoration: inherit;">sasl_<wbr>password</a>
@@ -735,8 +647,7 @@ The Provider resource accepts the following [input]({{< relref "/docs/intro/conc
         <span class="property-type">str</span>
     </dt>
     <dd>{{% md %}}Password for SASL authentication.
-{{% /md %}}</dd>
-    <dt class="property-optional"
+{{% /md %}}</dd><dt class="property-optional"
             title="Optional">
         <span id="sasl_username_python">
 <a href="#sasl_username_python" style="color: inherit; text-decoration: inherit;">sasl_<wbr>username</a>
@@ -745,8 +656,7 @@ The Provider resource accepts the following [input]({{< relref "/docs/intro/conc
         <span class="property-type">str</span>
     </dt>
     <dd>{{% md %}}Username for SASL authentication.
-{{% /md %}}</dd>
-    <dt class="property-optional"
+{{% /md %}}</dd><dt class="property-optional"
             title="Optional">
         <span id="skip_tls_verify_python">
 <a href="#skip_tls_verify_python" style="color: inherit; text-decoration: inherit;">skip_<wbr>tls_<wbr>verify</a>
@@ -755,8 +665,7 @@ The Provider resource accepts the following [input]({{< relref "/docs/intro/conc
         <span class="property-type">bool</span>
     </dt>
     <dd>{{% md %}}Set this to true only if the target Kafka server is an insecure development instance.
- It can also be sourced from the following environment variable: `KAFKA_SKIP_VERIFY`{{% /md %}}</dd>
-    <dt class="property-optional"
+ It can also be sourced from the following environment variable: `KAFKA_SKIP_VERIFY`{{% /md %}}</dd><dt class="property-optional"
             title="Optional">
         <span id="timeout_python">
 <a href="#timeout_python" style="color: inherit; text-decoration: inherit;">timeout</a>
@@ -765,8 +674,7 @@ The Provider resource accepts the following [input]({{< relref "/docs/intro/conc
         <span class="property-type">int</span>
     </dt>
     <dd>{{% md %}}Timeout in seconds
-{{% /md %}}</dd>
-    <dt class="property-optional"
+{{% /md %}}</dd><dt class="property-optional"
             title="Optional">
         <span id="tls_enabled_python">
 <a href="#tls_enabled_python" style="color: inherit; text-decoration: inherit;">tls_<wbr>enabled</a>
@@ -775,8 +683,7 @@ The Provider resource accepts the following [input]({{< relref "/docs/intro/conc
         <span class="property-type">bool</span>
     </dt>
     <dd>{{% md %}}Enable communication with the Kafka Cluster over TLS.
- It can also be sourced from the following environment variable: `KAFKA_ENABLE_TLS`{{% /md %}}</dd>
-</dl>
+ It can also be sourced from the following environment variable: `KAFKA_ENABLE_TLS`{{% /md %}}</dd></dl>
 {{% /choosable %}}
 
 
@@ -787,9 +694,7 @@ All [input](#inputs) properties are implicitly available as output properties. A
 
 
 {{% choosable language csharp %}}
-<dl class="resources-properties">
-
-    <dt class="property-"
+<dl class="resources-properties"><dt class="property-"
             title="">
         <span id="id_csharp">
 <a href="#id_csharp" style="color: inherit; text-decoration: inherit;">Id</a>
@@ -797,14 +702,11 @@ All [input](#inputs) properties are implicitly available as output properties. A
         <span class="property-indicator"></span>
         <span class="property-type">string</span>
     </dt>
-    <dd>{{% md %}}The provider-assigned unique ID for this managed resource.{{% /md %}}</dd>
-</dl>
+    <dd>{{% md %}}The provider-assigned unique ID for this managed resource.{{% /md %}}</dd></dl>
 {{% /choosable %}}
 
 {{% choosable language go %}}
-<dl class="resources-properties">
-
-    <dt class="property-"
+<dl class="resources-properties"><dt class="property-"
             title="">
         <span id="id_go">
 <a href="#id_go" style="color: inherit; text-decoration: inherit;">Id</a>
@@ -812,14 +714,11 @@ All [input](#inputs) properties are implicitly available as output properties. A
         <span class="property-indicator"></span>
         <span class="property-type">string</span>
     </dt>
-    <dd>{{% md %}}The provider-assigned unique ID for this managed resource.{{% /md %}}</dd>
-</dl>
+    <dd>{{% md %}}The provider-assigned unique ID for this managed resource.{{% /md %}}</dd></dl>
 {{% /choosable %}}
 
 {{% choosable language nodejs %}}
-<dl class="resources-properties">
-
-    <dt class="property-"
+<dl class="resources-properties"><dt class="property-"
             title="">
         <span id="id_nodejs">
 <a href="#id_nodejs" style="color: inherit; text-decoration: inherit;">id</a>
@@ -827,14 +726,11 @@ All [input](#inputs) properties are implicitly available as output properties. A
         <span class="property-indicator"></span>
         <span class="property-type">string</span>
     </dt>
-    <dd>{{% md %}}The provider-assigned unique ID for this managed resource.{{% /md %}}</dd>
-</dl>
+    <dd>{{% md %}}The provider-assigned unique ID for this managed resource.{{% /md %}}</dd></dl>
 {{% /choosable %}}
 
 {{% choosable language python %}}
-<dl class="resources-properties">
-
-    <dt class="property-"
+<dl class="resources-properties"><dt class="property-"
             title="">
         <span id="id_python">
 <a href="#id_python" style="color: inherit; text-decoration: inherit;">id</a>
@@ -842,8 +738,7 @@ All [input](#inputs) properties are implicitly available as output properties. A
         <span class="property-indicator"></span>
         <span class="property-type">str</span>
     </dt>
-    <dd>{{% md %}}The provider-assigned unique ID for this managed resource.{{% /md %}}</dd>
-</dl>
+    <dd>{{% md %}}The provider-assigned unique ID for this managed resource.{{% /md %}}</dd></dl>
 {{% /choosable %}}
 
 
@@ -860,6 +755,6 @@ All [input](#inputs) properties are implicitly available as output properties. A
 	<dt>License</dt>
 	<dd>Apache-2.0</dd>
 	<dt>Notes</dt>
-	<dd>This Pulumi package is based on the [`kafka` Terraform Provider](https://github.com/Mongey/terraform-provider-kafka).</dd>
+	<dd>{{% md %}}This Pulumi package is based on the [`kafka` Terraform Provider](https://github.com/Mongey/terraform-provider-kafka).{{% /md %}}</dd>
 </dl>
 

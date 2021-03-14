@@ -51,9 +51,7 @@ The following arguments are supported:
 
 
 {{% choosable language csharp %}}
-<dl class="resources-properties">
-
-    <dt class="property-required"
+<dl class="resources-properties"><dt class="property-required"
             title="Required">
         <span id="accountname_csharp">
 <a href="#accountname_csharp" style="color: inherit; text-decoration: inherit;">Account<wbr>Name</a>
@@ -61,8 +59,7 @@ The following arguments are supported:
         <span class="property-indicator"></span>
         <span class="property-type">string</span>
     </dt>
-    <dd>{{% md %}}The name of the NetApp account{{% /md %}}</dd>
-    <dt class="property-required"
+    <dd>{{% md %}}The name of the NetApp account{{% /md %}}</dd><dt class="property-required"
             title="Required">
         <span id="backuppolicyname_csharp">
 <a href="#backuppolicyname_csharp" style="color: inherit; text-decoration: inherit;">Backup<wbr>Policy<wbr>Name</a>
@@ -70,8 +67,7 @@ The following arguments are supported:
         <span class="property-indicator"></span>
         <span class="property-type">string</span>
     </dt>
-    <dd>{{% md %}}Backup policy Name which uniquely identify backup policy.{{% /md %}}</dd>
-    <dt class="property-required"
+    <dd>{{% md %}}Backup policy Name which uniquely identify backup policy.{{% /md %}}</dd><dt class="property-required"
             title="Required">
         <span id="resourcegroupname_csharp">
 <a href="#resourcegroupname_csharp" style="color: inherit; text-decoration: inherit;">Resource<wbr>Group<wbr>Name</a>
@@ -79,14 +75,11 @@ The following arguments are supported:
         <span class="property-indicator"></span>
         <span class="property-type">string</span>
     </dt>
-    <dd>{{% md %}}The name of the resource group.{{% /md %}}</dd>
-</dl>
+    <dd>{{% md %}}The name of the resource group.{{% /md %}}</dd></dl>
 {{% /choosable %}}
 
 {{% choosable language go %}}
-<dl class="resources-properties">
-
-    <dt class="property-required"
+<dl class="resources-properties"><dt class="property-required"
             title="Required">
         <span id="accountname_go">
 <a href="#accountname_go" style="color: inherit; text-decoration: inherit;">Account<wbr>Name</a>
@@ -94,8 +87,7 @@ The following arguments are supported:
         <span class="property-indicator"></span>
         <span class="property-type">string</span>
     </dt>
-    <dd>{{% md %}}The name of the NetApp account{{% /md %}}</dd>
-    <dt class="property-required"
+    <dd>{{% md %}}The name of the NetApp account{{% /md %}}</dd><dt class="property-required"
             title="Required">
         <span id="backuppolicyname_go">
 <a href="#backuppolicyname_go" style="color: inherit; text-decoration: inherit;">Backup<wbr>Policy<wbr>Name</a>
@@ -103,8 +95,7 @@ The following arguments are supported:
         <span class="property-indicator"></span>
         <span class="property-type">string</span>
     </dt>
-    <dd>{{% md %}}Backup policy Name which uniquely identify backup policy.{{% /md %}}</dd>
-    <dt class="property-required"
+    <dd>{{% md %}}Backup policy Name which uniquely identify backup policy.{{% /md %}}</dd><dt class="property-required"
             title="Required">
         <span id="resourcegroupname_go">
 <a href="#resourcegroupname_go" style="color: inherit; text-decoration: inherit;">Resource<wbr>Group<wbr>Name</a>
@@ -112,14 +103,11 @@ The following arguments are supported:
         <span class="property-indicator"></span>
         <span class="property-type">string</span>
     </dt>
-    <dd>{{% md %}}The name of the resource group.{{% /md %}}</dd>
-</dl>
+    <dd>{{% md %}}The name of the resource group.{{% /md %}}</dd></dl>
 {{% /choosable %}}
 
 {{% choosable language nodejs %}}
-<dl class="resources-properties">
-
-    <dt class="property-required"
+<dl class="resources-properties"><dt class="property-required"
             title="Required">
         <span id="accountname_nodejs">
 <a href="#accountname_nodejs" style="color: inherit; text-decoration: inherit;">account<wbr>Name</a>
@@ -127,8 +115,7 @@ The following arguments are supported:
         <span class="property-indicator"></span>
         <span class="property-type">string</span>
     </dt>
-    <dd>{{% md %}}The name of the NetApp account{{% /md %}}</dd>
-    <dt class="property-required"
+    <dd>{{% md %}}The name of the NetApp account{{% /md %}}</dd><dt class="property-required"
             title="Required">
         <span id="backuppolicyname_nodejs">
 <a href="#backuppolicyname_nodejs" style="color: inherit; text-decoration: inherit;">backup<wbr>Policy<wbr>Name</a>
@@ -136,8 +123,7 @@ The following arguments are supported:
         <span class="property-indicator"></span>
         <span class="property-type">string</span>
     </dt>
-    <dd>{{% md %}}Backup policy Name which uniquely identify backup policy.{{% /md %}}</dd>
-    <dt class="property-required"
+    <dd>{{% md %}}Backup policy Name which uniquely identify backup policy.{{% /md %}}</dd><dt class="property-required"
             title="Required">
         <span id="resourcegroupname_nodejs">
 <a href="#resourcegroupname_nodejs" style="color: inherit; text-decoration: inherit;">resource<wbr>Group<wbr>Name</a>
@@ -145,14 +131,11 @@ The following arguments are supported:
         <span class="property-indicator"></span>
         <span class="property-type">string</span>
     </dt>
-    <dd>{{% md %}}The name of the resource group.{{% /md %}}</dd>
-</dl>
+    <dd>{{% md %}}The name of the resource group.{{% /md %}}</dd></dl>
 {{% /choosable %}}
 
 {{% choosable language python %}}
-<dl class="resources-properties">
-
-    <dt class="property-required"
+<dl class="resources-properties"><dt class="property-required"
             title="Required">
         <span id="account_name_python">
 <a href="#account_name_python" style="color: inherit; text-decoration: inherit;">account_<wbr>name</a>
@@ -160,8 +143,7 @@ The following arguments are supported:
         <span class="property-indicator"></span>
         <span class="property-type">str</span>
     </dt>
-    <dd>{{% md %}}The name of the NetApp account{{% /md %}}</dd>
-    <dt class="property-required"
+    <dd>{{% md %}}The name of the NetApp account{{% /md %}}</dd><dt class="property-required"
             title="Required">
         <span id="backup_policy_name_python">
 <a href="#backup_policy_name_python" style="color: inherit; text-decoration: inherit;">backup_<wbr>policy_<wbr>name</a>
@@ -169,8 +151,7 @@ The following arguments are supported:
         <span class="property-indicator"></span>
         <span class="property-type">str</span>
     </dt>
-    <dd>{{% md %}}Backup policy Name which uniquely identify backup policy.{{% /md %}}</dd>
-    <dt class="property-required"
+    <dd>{{% md %}}Backup policy Name which uniquely identify backup policy.{{% /md %}}</dd><dt class="property-required"
             title="Required">
         <span id="resource_group_name_python">
 <a href="#resource_group_name_python" style="color: inherit; text-decoration: inherit;">resource_<wbr>group_<wbr>name</a>
@@ -178,8 +159,7 @@ The following arguments are supported:
         <span class="property-indicator"></span>
         <span class="property-type">str</span>
     </dt>
-    <dd>{{% md %}}The name of the resource group.{{% /md %}}</dd>
-</dl>
+    <dd>{{% md %}}The name of the resource group.{{% /md %}}</dd></dl>
 {{% /choosable %}}
 
 
@@ -192,9 +172,7 @@ The following output properties are available:
 
 
 {{% choosable language csharp %}}
-<dl class="resources-properties">
-
-    <dt class="property-"
+<dl class="resources-properties"><dt class="property-"
             title="">
         <span id="id_csharp">
 <a href="#id_csharp" style="color: inherit; text-decoration: inherit;">Id</a>
@@ -202,8 +180,7 @@ The following output properties are available:
         <span class="property-indicator"></span>
         <span class="property-type">string</span>
     </dt>
-    <dd>{{% md %}}Resource Id{{% /md %}}</dd>
-    <dt class="property-"
+    <dd>{{% md %}}Resource Id{{% /md %}}</dd><dt class="property-"
             title="">
         <span id="location_csharp">
 <a href="#location_csharp" style="color: inherit; text-decoration: inherit;">Location</a>
@@ -211,8 +188,7 @@ The following output properties are available:
         <span class="property-indicator"></span>
         <span class="property-type">string</span>
     </dt>
-    <dd>{{% md %}}Resource location{{% /md %}}</dd>
-    <dt class="property-"
+    <dd>{{% md %}}Resource location{{% /md %}}</dd><dt class="property-"
             title="">
         <span id="name_csharp">
 <a href="#name_csharp" style="color: inherit; text-decoration: inherit;">Name</a>
@@ -220,8 +196,7 @@ The following output properties are available:
         <span class="property-indicator"></span>
         <span class="property-type">string</span>
     </dt>
-    <dd>{{% md %}}Name of backup policy{{% /md %}}</dd>
-    <dt class="property-"
+    <dd>{{% md %}}Name of backup policy{{% /md %}}</dd><dt class="property-"
             title="">
         <span id="provisioningstate_csharp">
 <a href="#provisioningstate_csharp" style="color: inherit; text-decoration: inherit;">Provisioning<wbr>State</a>
@@ -229,8 +204,7 @@ The following output properties are available:
         <span class="property-indicator"></span>
         <span class="property-type">string</span>
     </dt>
-    <dd>{{% md %}}Azure lifecycle management{{% /md %}}</dd>
-    <dt class="property-"
+    <dd>{{% md %}}Azure lifecycle management{{% /md %}}</dd><dt class="property-"
             title="">
         <span id="type_csharp">
 <a href="#type_csharp" style="color: inherit; text-decoration: inherit;">Type</a>
@@ -238,8 +212,7 @@ The following output properties are available:
         <span class="property-indicator"></span>
         <span class="property-type">string</span>
     </dt>
-    <dd>{{% md %}}Resource type{{% /md %}}</dd>
-    <dt class="property-"
+    <dd>{{% md %}}Resource type{{% /md %}}</dd><dt class="property-"
             title="">
         <span id="dailybackupstokeep_csharp">
 <a href="#dailybackupstokeep_csharp" style="color: inherit; text-decoration: inherit;">Daily<wbr>Backups<wbr>To<wbr>Keep</a>
@@ -247,8 +220,7 @@ The following output properties are available:
         <span class="property-indicator"></span>
         <span class="property-type">int</span>
     </dt>
-    <dd>{{% md %}}Daily backups count to keep{{% /md %}}</dd>
-    <dt class="property-"
+    <dd>{{% md %}}Daily backups count to keep{{% /md %}}</dd><dt class="property-"
             title="">
         <span id="enabled_csharp">
 <a href="#enabled_csharp" style="color: inherit; text-decoration: inherit;">Enabled</a>
@@ -256,8 +228,7 @@ The following output properties are available:
         <span class="property-indicator"></span>
         <span class="property-type">bool</span>
     </dt>
-    <dd>{{% md %}}The property to decide policy is enabled or not{{% /md %}}</dd>
-    <dt class="property-"
+    <dd>{{% md %}}The property to decide policy is enabled or not{{% /md %}}</dd><dt class="property-"
             title="">
         <span id="monthlybackupstokeep_csharp">
 <a href="#monthlybackupstokeep_csharp" style="color: inherit; text-decoration: inherit;">Monthly<wbr>Backups<wbr>To<wbr>Keep</a>
@@ -265,8 +236,7 @@ The following output properties are available:
         <span class="property-indicator"></span>
         <span class="property-type">int</span>
     </dt>
-    <dd>{{% md %}}Monthly backups count to keep{{% /md %}}</dd>
-    <dt class="property-"
+    <dd>{{% md %}}Monthly backups count to keep{{% /md %}}</dd><dt class="property-"
             title="">
         <span id="tags_csharp">
 <a href="#tags_csharp" style="color: inherit; text-decoration: inherit;">Tags</a>
@@ -274,8 +244,7 @@ The following output properties are available:
         <span class="property-indicator"></span>
         <span class="property-type">Dictionary&lt;string, string&gt;</span>
     </dt>
-    <dd>{{% md %}}Resource tags{{% /md %}}</dd>
-    <dt class="property-"
+    <dd>{{% md %}}Resource tags{{% /md %}}</dd><dt class="property-"
             title="">
         <span id="volumebackups_csharp">
 <a href="#volumebackups_csharp" style="color: inherit; text-decoration: inherit;">Volume<wbr>Backups</a>
@@ -283,8 +252,7 @@ The following output properties are available:
         <span class="property-indicator"></span>
         <span class="property-type"><a href="#volumebackupsresponse">List&lt;Pulumi.<wbr>Azure<wbr>Native.<wbr>Net<wbr>App.<wbr>Outputs.<wbr>Volume<wbr>Backups<wbr>Response&gt;</a></span>
     </dt>
-    <dd>{{% md %}}A list of volumes assigned to this policy{{% /md %}}</dd>
-    <dt class="property-"
+    <dd>{{% md %}}A list of volumes assigned to this policy{{% /md %}}</dd><dt class="property-"
             title="">
         <span id="volumesassigned_csharp">
 <a href="#volumesassigned_csharp" style="color: inherit; text-decoration: inherit;">Volumes<wbr>Assigned</a>
@@ -292,8 +260,7 @@ The following output properties are available:
         <span class="property-indicator"></span>
         <span class="property-type">int</span>
     </dt>
-    <dd>{{% md %}}Volumes using current backup policy{{% /md %}}</dd>
-    <dt class="property-"
+    <dd>{{% md %}}Volumes using current backup policy{{% /md %}}</dd><dt class="property-"
             title="">
         <span id="weeklybackupstokeep_csharp">
 <a href="#weeklybackupstokeep_csharp" style="color: inherit; text-decoration: inherit;">Weekly<wbr>Backups<wbr>To<wbr>Keep</a>
@@ -301,8 +268,7 @@ The following output properties are available:
         <span class="property-indicator"></span>
         <span class="property-type">int</span>
     </dt>
-    <dd>{{% md %}}Weekly backups count to keep{{% /md %}}</dd>
-    <dt class="property-"
+    <dd>{{% md %}}Weekly backups count to keep{{% /md %}}</dd><dt class="property-"
             title="">
         <span id="yearlybackupstokeep_csharp">
 <a href="#yearlybackupstokeep_csharp" style="color: inherit; text-decoration: inherit;">Yearly<wbr>Backups<wbr>To<wbr>Keep</a>
@@ -310,14 +276,11 @@ The following output properties are available:
         <span class="property-indicator"></span>
         <span class="property-type">int</span>
     </dt>
-    <dd>{{% md %}}Yearly backups count to keep{{% /md %}}</dd>
-</dl>
+    <dd>{{% md %}}Yearly backups count to keep{{% /md %}}</dd></dl>
 {{% /choosable %}}
 
 {{% choosable language go %}}
-<dl class="resources-properties">
-
-    <dt class="property-"
+<dl class="resources-properties"><dt class="property-"
             title="">
         <span id="id_go">
 <a href="#id_go" style="color: inherit; text-decoration: inherit;">Id</a>
@@ -325,8 +288,7 @@ The following output properties are available:
         <span class="property-indicator"></span>
         <span class="property-type">string</span>
     </dt>
-    <dd>{{% md %}}Resource Id{{% /md %}}</dd>
-    <dt class="property-"
+    <dd>{{% md %}}Resource Id{{% /md %}}</dd><dt class="property-"
             title="">
         <span id="location_go">
 <a href="#location_go" style="color: inherit; text-decoration: inherit;">Location</a>
@@ -334,8 +296,7 @@ The following output properties are available:
         <span class="property-indicator"></span>
         <span class="property-type">string</span>
     </dt>
-    <dd>{{% md %}}Resource location{{% /md %}}</dd>
-    <dt class="property-"
+    <dd>{{% md %}}Resource location{{% /md %}}</dd><dt class="property-"
             title="">
         <span id="name_go">
 <a href="#name_go" style="color: inherit; text-decoration: inherit;">Name</a>
@@ -343,8 +304,7 @@ The following output properties are available:
         <span class="property-indicator"></span>
         <span class="property-type">string</span>
     </dt>
-    <dd>{{% md %}}Name of backup policy{{% /md %}}</dd>
-    <dt class="property-"
+    <dd>{{% md %}}Name of backup policy{{% /md %}}</dd><dt class="property-"
             title="">
         <span id="provisioningstate_go">
 <a href="#provisioningstate_go" style="color: inherit; text-decoration: inherit;">Provisioning<wbr>State</a>
@@ -352,8 +312,7 @@ The following output properties are available:
         <span class="property-indicator"></span>
         <span class="property-type">string</span>
     </dt>
-    <dd>{{% md %}}Azure lifecycle management{{% /md %}}</dd>
-    <dt class="property-"
+    <dd>{{% md %}}Azure lifecycle management{{% /md %}}</dd><dt class="property-"
             title="">
         <span id="type_go">
 <a href="#type_go" style="color: inherit; text-decoration: inherit;">Type</a>
@@ -361,8 +320,7 @@ The following output properties are available:
         <span class="property-indicator"></span>
         <span class="property-type">string</span>
     </dt>
-    <dd>{{% md %}}Resource type{{% /md %}}</dd>
-    <dt class="property-"
+    <dd>{{% md %}}Resource type{{% /md %}}</dd><dt class="property-"
             title="">
         <span id="dailybackupstokeep_go">
 <a href="#dailybackupstokeep_go" style="color: inherit; text-decoration: inherit;">Daily<wbr>Backups<wbr>To<wbr>Keep</a>
@@ -370,8 +328,7 @@ The following output properties are available:
         <span class="property-indicator"></span>
         <span class="property-type">int</span>
     </dt>
-    <dd>{{% md %}}Daily backups count to keep{{% /md %}}</dd>
-    <dt class="property-"
+    <dd>{{% md %}}Daily backups count to keep{{% /md %}}</dd><dt class="property-"
             title="">
         <span id="enabled_go">
 <a href="#enabled_go" style="color: inherit; text-decoration: inherit;">Enabled</a>
@@ -379,8 +336,7 @@ The following output properties are available:
         <span class="property-indicator"></span>
         <span class="property-type">bool</span>
     </dt>
-    <dd>{{% md %}}The property to decide policy is enabled or not{{% /md %}}</dd>
-    <dt class="property-"
+    <dd>{{% md %}}The property to decide policy is enabled or not{{% /md %}}</dd><dt class="property-"
             title="">
         <span id="monthlybackupstokeep_go">
 <a href="#monthlybackupstokeep_go" style="color: inherit; text-decoration: inherit;">Monthly<wbr>Backups<wbr>To<wbr>Keep</a>
@@ -388,8 +344,7 @@ The following output properties are available:
         <span class="property-indicator"></span>
         <span class="property-type">int</span>
     </dt>
-    <dd>{{% md %}}Monthly backups count to keep{{% /md %}}</dd>
-    <dt class="property-"
+    <dd>{{% md %}}Monthly backups count to keep{{% /md %}}</dd><dt class="property-"
             title="">
         <span id="tags_go">
 <a href="#tags_go" style="color: inherit; text-decoration: inherit;">Tags</a>
@@ -397,8 +352,7 @@ The following output properties are available:
         <span class="property-indicator"></span>
         <span class="property-type">map[string]string</span>
     </dt>
-    <dd>{{% md %}}Resource tags{{% /md %}}</dd>
-    <dt class="property-"
+    <dd>{{% md %}}Resource tags{{% /md %}}</dd><dt class="property-"
             title="">
         <span id="volumebackups_go">
 <a href="#volumebackups_go" style="color: inherit; text-decoration: inherit;">Volume<wbr>Backups</a>
@@ -406,8 +360,7 @@ The following output properties are available:
         <span class="property-indicator"></span>
         <span class="property-type"><a href="#volumebackupsresponse">[]Volume<wbr>Backups<wbr>Response</a></span>
     </dt>
-    <dd>{{% md %}}A list of volumes assigned to this policy{{% /md %}}</dd>
-    <dt class="property-"
+    <dd>{{% md %}}A list of volumes assigned to this policy{{% /md %}}</dd><dt class="property-"
             title="">
         <span id="volumesassigned_go">
 <a href="#volumesassigned_go" style="color: inherit; text-decoration: inherit;">Volumes<wbr>Assigned</a>
@@ -415,8 +368,7 @@ The following output properties are available:
         <span class="property-indicator"></span>
         <span class="property-type">int</span>
     </dt>
-    <dd>{{% md %}}Volumes using current backup policy{{% /md %}}</dd>
-    <dt class="property-"
+    <dd>{{% md %}}Volumes using current backup policy{{% /md %}}</dd><dt class="property-"
             title="">
         <span id="weeklybackupstokeep_go">
 <a href="#weeklybackupstokeep_go" style="color: inherit; text-decoration: inherit;">Weekly<wbr>Backups<wbr>To<wbr>Keep</a>
@@ -424,8 +376,7 @@ The following output properties are available:
         <span class="property-indicator"></span>
         <span class="property-type">int</span>
     </dt>
-    <dd>{{% md %}}Weekly backups count to keep{{% /md %}}</dd>
-    <dt class="property-"
+    <dd>{{% md %}}Weekly backups count to keep{{% /md %}}</dd><dt class="property-"
             title="">
         <span id="yearlybackupstokeep_go">
 <a href="#yearlybackupstokeep_go" style="color: inherit; text-decoration: inherit;">Yearly<wbr>Backups<wbr>To<wbr>Keep</a>
@@ -433,14 +384,11 @@ The following output properties are available:
         <span class="property-indicator"></span>
         <span class="property-type">int</span>
     </dt>
-    <dd>{{% md %}}Yearly backups count to keep{{% /md %}}</dd>
-</dl>
+    <dd>{{% md %}}Yearly backups count to keep{{% /md %}}</dd></dl>
 {{% /choosable %}}
 
 {{% choosable language nodejs %}}
-<dl class="resources-properties">
-
-    <dt class="property-"
+<dl class="resources-properties"><dt class="property-"
             title="">
         <span id="id_nodejs">
 <a href="#id_nodejs" style="color: inherit; text-decoration: inherit;">id</a>
@@ -448,8 +396,7 @@ The following output properties are available:
         <span class="property-indicator"></span>
         <span class="property-type">string</span>
     </dt>
-    <dd>{{% md %}}Resource Id{{% /md %}}</dd>
-    <dt class="property-"
+    <dd>{{% md %}}Resource Id{{% /md %}}</dd><dt class="property-"
             title="">
         <span id="location_nodejs">
 <a href="#location_nodejs" style="color: inherit; text-decoration: inherit;">location</a>
@@ -457,8 +404,7 @@ The following output properties are available:
         <span class="property-indicator"></span>
         <span class="property-type">string</span>
     </dt>
-    <dd>{{% md %}}Resource location{{% /md %}}</dd>
-    <dt class="property-"
+    <dd>{{% md %}}Resource location{{% /md %}}</dd><dt class="property-"
             title="">
         <span id="name_nodejs">
 <a href="#name_nodejs" style="color: inherit; text-decoration: inherit;">name</a>
@@ -466,8 +412,7 @@ The following output properties are available:
         <span class="property-indicator"></span>
         <span class="property-type">string</span>
     </dt>
-    <dd>{{% md %}}Name of backup policy{{% /md %}}</dd>
-    <dt class="property-"
+    <dd>{{% md %}}Name of backup policy{{% /md %}}</dd><dt class="property-"
             title="">
         <span id="provisioningstate_nodejs">
 <a href="#provisioningstate_nodejs" style="color: inherit; text-decoration: inherit;">provisioning<wbr>State</a>
@@ -475,8 +420,7 @@ The following output properties are available:
         <span class="property-indicator"></span>
         <span class="property-type">string</span>
     </dt>
-    <dd>{{% md %}}Azure lifecycle management{{% /md %}}</dd>
-    <dt class="property-"
+    <dd>{{% md %}}Azure lifecycle management{{% /md %}}</dd><dt class="property-"
             title="">
         <span id="type_nodejs">
 <a href="#type_nodejs" style="color: inherit; text-decoration: inherit;">type</a>
@@ -484,8 +428,7 @@ The following output properties are available:
         <span class="property-indicator"></span>
         <span class="property-type">string</span>
     </dt>
-    <dd>{{% md %}}Resource type{{% /md %}}</dd>
-    <dt class="property-"
+    <dd>{{% md %}}Resource type{{% /md %}}</dd><dt class="property-"
             title="">
         <span id="dailybackupstokeep_nodejs">
 <a href="#dailybackupstokeep_nodejs" style="color: inherit; text-decoration: inherit;">daily<wbr>Backups<wbr>To<wbr>Keep</a>
@@ -493,8 +436,7 @@ The following output properties are available:
         <span class="property-indicator"></span>
         <span class="property-type">number</span>
     </dt>
-    <dd>{{% md %}}Daily backups count to keep{{% /md %}}</dd>
-    <dt class="property-"
+    <dd>{{% md %}}Daily backups count to keep{{% /md %}}</dd><dt class="property-"
             title="">
         <span id="enabled_nodejs">
 <a href="#enabled_nodejs" style="color: inherit; text-decoration: inherit;">enabled</a>
@@ -502,8 +444,7 @@ The following output properties are available:
         <span class="property-indicator"></span>
         <span class="property-type">boolean</span>
     </dt>
-    <dd>{{% md %}}The property to decide policy is enabled or not{{% /md %}}</dd>
-    <dt class="property-"
+    <dd>{{% md %}}The property to decide policy is enabled or not{{% /md %}}</dd><dt class="property-"
             title="">
         <span id="monthlybackupstokeep_nodejs">
 <a href="#monthlybackupstokeep_nodejs" style="color: inherit; text-decoration: inherit;">monthly<wbr>Backups<wbr>To<wbr>Keep</a>
@@ -511,8 +452,7 @@ The following output properties are available:
         <span class="property-indicator"></span>
         <span class="property-type">number</span>
     </dt>
-    <dd>{{% md %}}Monthly backups count to keep{{% /md %}}</dd>
-    <dt class="property-"
+    <dd>{{% md %}}Monthly backups count to keep{{% /md %}}</dd><dt class="property-"
             title="">
         <span id="tags_nodejs">
 <a href="#tags_nodejs" style="color: inherit; text-decoration: inherit;">tags</a>
@@ -520,8 +460,7 @@ The following output properties are available:
         <span class="property-indicator"></span>
         <span class="property-type">{[key: string]: string}</span>
     </dt>
-    <dd>{{% md %}}Resource tags{{% /md %}}</dd>
-    <dt class="property-"
+    <dd>{{% md %}}Resource tags{{% /md %}}</dd><dt class="property-"
             title="">
         <span id="volumebackups_nodejs">
 <a href="#volumebackups_nodejs" style="color: inherit; text-decoration: inherit;">volume<wbr>Backups</a>
@@ -529,8 +468,7 @@ The following output properties are available:
         <span class="property-indicator"></span>
         <span class="property-type"><a href="#volumebackupsresponse">Volume<wbr>Backups<wbr>Response[]</a></span>
     </dt>
-    <dd>{{% md %}}A list of volumes assigned to this policy{{% /md %}}</dd>
-    <dt class="property-"
+    <dd>{{% md %}}A list of volumes assigned to this policy{{% /md %}}</dd><dt class="property-"
             title="">
         <span id="volumesassigned_nodejs">
 <a href="#volumesassigned_nodejs" style="color: inherit; text-decoration: inherit;">volumes<wbr>Assigned</a>
@@ -538,8 +476,7 @@ The following output properties are available:
         <span class="property-indicator"></span>
         <span class="property-type">number</span>
     </dt>
-    <dd>{{% md %}}Volumes using current backup policy{{% /md %}}</dd>
-    <dt class="property-"
+    <dd>{{% md %}}Volumes using current backup policy{{% /md %}}</dd><dt class="property-"
             title="">
         <span id="weeklybackupstokeep_nodejs">
 <a href="#weeklybackupstokeep_nodejs" style="color: inherit; text-decoration: inherit;">weekly<wbr>Backups<wbr>To<wbr>Keep</a>
@@ -547,8 +484,7 @@ The following output properties are available:
         <span class="property-indicator"></span>
         <span class="property-type">number</span>
     </dt>
-    <dd>{{% md %}}Weekly backups count to keep{{% /md %}}</dd>
-    <dt class="property-"
+    <dd>{{% md %}}Weekly backups count to keep{{% /md %}}</dd><dt class="property-"
             title="">
         <span id="yearlybackupstokeep_nodejs">
 <a href="#yearlybackupstokeep_nodejs" style="color: inherit; text-decoration: inherit;">yearly<wbr>Backups<wbr>To<wbr>Keep</a>
@@ -556,14 +492,11 @@ The following output properties are available:
         <span class="property-indicator"></span>
         <span class="property-type">number</span>
     </dt>
-    <dd>{{% md %}}Yearly backups count to keep{{% /md %}}</dd>
-</dl>
+    <dd>{{% md %}}Yearly backups count to keep{{% /md %}}</dd></dl>
 {{% /choosable %}}
 
 {{% choosable language python %}}
-<dl class="resources-properties">
-
-    <dt class="property-"
+<dl class="resources-properties"><dt class="property-"
             title="">
         <span id="id_python">
 <a href="#id_python" style="color: inherit; text-decoration: inherit;">id</a>
@@ -571,8 +504,7 @@ The following output properties are available:
         <span class="property-indicator"></span>
         <span class="property-type">str</span>
     </dt>
-    <dd>{{% md %}}Resource Id{{% /md %}}</dd>
-    <dt class="property-"
+    <dd>{{% md %}}Resource Id{{% /md %}}</dd><dt class="property-"
             title="">
         <span id="location_python">
 <a href="#location_python" style="color: inherit; text-decoration: inherit;">location</a>
@@ -580,8 +512,7 @@ The following output properties are available:
         <span class="property-indicator"></span>
         <span class="property-type">str</span>
     </dt>
-    <dd>{{% md %}}Resource location{{% /md %}}</dd>
-    <dt class="property-"
+    <dd>{{% md %}}Resource location{{% /md %}}</dd><dt class="property-"
             title="">
         <span id="name_python">
 <a href="#name_python" style="color: inherit; text-decoration: inherit;">name</a>
@@ -589,8 +520,7 @@ The following output properties are available:
         <span class="property-indicator"></span>
         <span class="property-type">str</span>
     </dt>
-    <dd>{{% md %}}Name of backup policy{{% /md %}}</dd>
-    <dt class="property-"
+    <dd>{{% md %}}Name of backup policy{{% /md %}}</dd><dt class="property-"
             title="">
         <span id="provisioning_state_python">
 <a href="#provisioning_state_python" style="color: inherit; text-decoration: inherit;">provisioning_<wbr>state</a>
@@ -598,8 +528,7 @@ The following output properties are available:
         <span class="property-indicator"></span>
         <span class="property-type">str</span>
     </dt>
-    <dd>{{% md %}}Azure lifecycle management{{% /md %}}</dd>
-    <dt class="property-"
+    <dd>{{% md %}}Azure lifecycle management{{% /md %}}</dd><dt class="property-"
             title="">
         <span id="type_python">
 <a href="#type_python" style="color: inherit; text-decoration: inherit;">type</a>
@@ -607,8 +536,7 @@ The following output properties are available:
         <span class="property-indicator"></span>
         <span class="property-type">str</span>
     </dt>
-    <dd>{{% md %}}Resource type{{% /md %}}</dd>
-    <dt class="property-"
+    <dd>{{% md %}}Resource type{{% /md %}}</dd><dt class="property-"
             title="">
         <span id="daily_backups_to_keep_python">
 <a href="#daily_backups_to_keep_python" style="color: inherit; text-decoration: inherit;">daily_<wbr>backups_<wbr>to_<wbr>keep</a>
@@ -616,8 +544,7 @@ The following output properties are available:
         <span class="property-indicator"></span>
         <span class="property-type">int</span>
     </dt>
-    <dd>{{% md %}}Daily backups count to keep{{% /md %}}</dd>
-    <dt class="property-"
+    <dd>{{% md %}}Daily backups count to keep{{% /md %}}</dd><dt class="property-"
             title="">
         <span id="enabled_python">
 <a href="#enabled_python" style="color: inherit; text-decoration: inherit;">enabled</a>
@@ -625,8 +552,7 @@ The following output properties are available:
         <span class="property-indicator"></span>
         <span class="property-type">bool</span>
     </dt>
-    <dd>{{% md %}}The property to decide policy is enabled or not{{% /md %}}</dd>
-    <dt class="property-"
+    <dd>{{% md %}}The property to decide policy is enabled or not{{% /md %}}</dd><dt class="property-"
             title="">
         <span id="monthly_backups_to_keep_python">
 <a href="#monthly_backups_to_keep_python" style="color: inherit; text-decoration: inherit;">monthly_<wbr>backups_<wbr>to_<wbr>keep</a>
@@ -634,8 +560,7 @@ The following output properties are available:
         <span class="property-indicator"></span>
         <span class="property-type">int</span>
     </dt>
-    <dd>{{% md %}}Monthly backups count to keep{{% /md %}}</dd>
-    <dt class="property-"
+    <dd>{{% md %}}Monthly backups count to keep{{% /md %}}</dd><dt class="property-"
             title="">
         <span id="tags_python">
 <a href="#tags_python" style="color: inherit; text-decoration: inherit;">tags</a>
@@ -643,8 +568,7 @@ The following output properties are available:
         <span class="property-indicator"></span>
         <span class="property-type">Mapping[str, str]</span>
     </dt>
-    <dd>{{% md %}}Resource tags{{% /md %}}</dd>
-    <dt class="property-"
+    <dd>{{% md %}}Resource tags{{% /md %}}</dd><dt class="property-"
             title="">
         <span id="volume_backups_python">
 <a href="#volume_backups_python" style="color: inherit; text-decoration: inherit;">volume_<wbr>backups</a>
@@ -652,8 +576,7 @@ The following output properties are available:
         <span class="property-indicator"></span>
         <span class="property-type"><a href="#volumebackupsresponse">Sequence[Volume<wbr>Backups<wbr>Response]</a></span>
     </dt>
-    <dd>{{% md %}}A list of volumes assigned to this policy{{% /md %}}</dd>
-    <dt class="property-"
+    <dd>{{% md %}}A list of volumes assigned to this policy{{% /md %}}</dd><dt class="property-"
             title="">
         <span id="volumes_assigned_python">
 <a href="#volumes_assigned_python" style="color: inherit; text-decoration: inherit;">volumes_<wbr>assigned</a>
@@ -661,8 +584,7 @@ The following output properties are available:
         <span class="property-indicator"></span>
         <span class="property-type">int</span>
     </dt>
-    <dd>{{% md %}}Volumes using current backup policy{{% /md %}}</dd>
-    <dt class="property-"
+    <dd>{{% md %}}Volumes using current backup policy{{% /md %}}</dd><dt class="property-"
             title="">
         <span id="weekly_backups_to_keep_python">
 <a href="#weekly_backups_to_keep_python" style="color: inherit; text-decoration: inherit;">weekly_<wbr>backups_<wbr>to_<wbr>keep</a>
@@ -670,8 +592,7 @@ The following output properties are available:
         <span class="property-indicator"></span>
         <span class="property-type">int</span>
     </dt>
-    <dd>{{% md %}}Weekly backups count to keep{{% /md %}}</dd>
-    <dt class="property-"
+    <dd>{{% md %}}Weekly backups count to keep{{% /md %}}</dd><dt class="property-"
             title="">
         <span id="yearly_backups_to_keep_python">
 <a href="#yearly_backups_to_keep_python" style="color: inherit; text-decoration: inherit;">yearly_<wbr>backups_<wbr>to_<wbr>keep</a>
@@ -679,8 +600,7 @@ The following output properties are available:
         <span class="property-indicator"></span>
         <span class="property-type">int</span>
     </dt>
-    <dd>{{% md %}}Yearly backups count to keep{{% /md %}}</dd>
-</dl>
+    <dd>{{% md %}}Yearly backups count to keep{{% /md %}}</dd></dl>
 {{% /choosable %}}
 
 
@@ -694,9 +614,7 @@ The following output properties are available:
 
 
 {{% choosable language csharp %}}
-<dl class="resources-properties">
-
-    <dt class="property-optional"
+<dl class="resources-properties"><dt class="property-optional"
             title="Optional">
         <span id="backupscount_csharp">
 <a href="#backupscount_csharp" style="color: inherit; text-decoration: inherit;">Backups<wbr>Count</a>
@@ -704,8 +622,7 @@ The following output properties are available:
         <span class="property-indicator"></span>
         <span class="property-type">int</span>
     </dt>
-    <dd>{{% md %}}Total count of backups for volume{{% /md %}}</dd>
-    <dt class="property-optional"
+    <dd>{{% md %}}Total count of backups for volume{{% /md %}}</dd><dt class="property-optional"
             title="Optional">
         <span id="policyenabled_csharp">
 <a href="#policyenabled_csharp" style="color: inherit; text-decoration: inherit;">Policy<wbr>Enabled</a>
@@ -713,8 +630,7 @@ The following output properties are available:
         <span class="property-indicator"></span>
         <span class="property-type">bool</span>
     </dt>
-    <dd>{{% md %}}Policy enabled{{% /md %}}</dd>
-    <dt class="property-optional"
+    <dd>{{% md %}}Policy enabled{{% /md %}}</dd><dt class="property-optional"
             title="Optional">
         <span id="volumename_csharp">
 <a href="#volumename_csharp" style="color: inherit; text-decoration: inherit;">Volume<wbr>Name</a>
@@ -722,14 +638,11 @@ The following output properties are available:
         <span class="property-indicator"></span>
         <span class="property-type">string</span>
     </dt>
-    <dd>{{% md %}}Volume name{{% /md %}}</dd>
-</dl>
+    <dd>{{% md %}}Volume name{{% /md %}}</dd></dl>
 {{% /choosable %}}
 
 {{% choosable language go %}}
-<dl class="resources-properties">
-
-    <dt class="property-optional"
+<dl class="resources-properties"><dt class="property-optional"
             title="Optional">
         <span id="backupscount_go">
 <a href="#backupscount_go" style="color: inherit; text-decoration: inherit;">Backups<wbr>Count</a>
@@ -737,8 +650,7 @@ The following output properties are available:
         <span class="property-indicator"></span>
         <span class="property-type">int</span>
     </dt>
-    <dd>{{% md %}}Total count of backups for volume{{% /md %}}</dd>
-    <dt class="property-optional"
+    <dd>{{% md %}}Total count of backups for volume{{% /md %}}</dd><dt class="property-optional"
             title="Optional">
         <span id="policyenabled_go">
 <a href="#policyenabled_go" style="color: inherit; text-decoration: inherit;">Policy<wbr>Enabled</a>
@@ -746,8 +658,7 @@ The following output properties are available:
         <span class="property-indicator"></span>
         <span class="property-type">bool</span>
     </dt>
-    <dd>{{% md %}}Policy enabled{{% /md %}}</dd>
-    <dt class="property-optional"
+    <dd>{{% md %}}Policy enabled{{% /md %}}</dd><dt class="property-optional"
             title="Optional">
         <span id="volumename_go">
 <a href="#volumename_go" style="color: inherit; text-decoration: inherit;">Volume<wbr>Name</a>
@@ -755,14 +666,11 @@ The following output properties are available:
         <span class="property-indicator"></span>
         <span class="property-type">string</span>
     </dt>
-    <dd>{{% md %}}Volume name{{% /md %}}</dd>
-</dl>
+    <dd>{{% md %}}Volume name{{% /md %}}</dd></dl>
 {{% /choosable %}}
 
 {{% choosable language nodejs %}}
-<dl class="resources-properties">
-
-    <dt class="property-optional"
+<dl class="resources-properties"><dt class="property-optional"
             title="Optional">
         <span id="backupscount_nodejs">
 <a href="#backupscount_nodejs" style="color: inherit; text-decoration: inherit;">backups<wbr>Count</a>
@@ -770,8 +678,7 @@ The following output properties are available:
         <span class="property-indicator"></span>
         <span class="property-type">number</span>
     </dt>
-    <dd>{{% md %}}Total count of backups for volume{{% /md %}}</dd>
-    <dt class="property-optional"
+    <dd>{{% md %}}Total count of backups for volume{{% /md %}}</dd><dt class="property-optional"
             title="Optional">
         <span id="policyenabled_nodejs">
 <a href="#policyenabled_nodejs" style="color: inherit; text-decoration: inherit;">policy<wbr>Enabled</a>
@@ -779,8 +686,7 @@ The following output properties are available:
         <span class="property-indicator"></span>
         <span class="property-type">boolean</span>
     </dt>
-    <dd>{{% md %}}Policy enabled{{% /md %}}</dd>
-    <dt class="property-optional"
+    <dd>{{% md %}}Policy enabled{{% /md %}}</dd><dt class="property-optional"
             title="Optional">
         <span id="volumename_nodejs">
 <a href="#volumename_nodejs" style="color: inherit; text-decoration: inherit;">volume<wbr>Name</a>
@@ -788,14 +694,11 @@ The following output properties are available:
         <span class="property-indicator"></span>
         <span class="property-type">string</span>
     </dt>
-    <dd>{{% md %}}Volume name{{% /md %}}</dd>
-</dl>
+    <dd>{{% md %}}Volume name{{% /md %}}</dd></dl>
 {{% /choosable %}}
 
 {{% choosable language python %}}
-<dl class="resources-properties">
-
-    <dt class="property-optional"
+<dl class="resources-properties"><dt class="property-optional"
             title="Optional">
         <span id="backups_count_python">
 <a href="#backups_count_python" style="color: inherit; text-decoration: inherit;">backups_<wbr>count</a>
@@ -803,8 +706,7 @@ The following output properties are available:
         <span class="property-indicator"></span>
         <span class="property-type">int</span>
     </dt>
-    <dd>{{% md %}}Total count of backups for volume{{% /md %}}</dd>
-    <dt class="property-optional"
+    <dd>{{% md %}}Total count of backups for volume{{% /md %}}</dd><dt class="property-optional"
             title="Optional">
         <span id="policy_enabled_python">
 <a href="#policy_enabled_python" style="color: inherit; text-decoration: inherit;">policy_<wbr>enabled</a>
@@ -812,8 +714,7 @@ The following output properties are available:
         <span class="property-indicator"></span>
         <span class="property-type">bool</span>
     </dt>
-    <dd>{{% md %}}Policy enabled{{% /md %}}</dd>
-    <dt class="property-optional"
+    <dd>{{% md %}}Policy enabled{{% /md %}}</dd><dt class="property-optional"
             title="Optional">
         <span id="volume_name_python">
 <a href="#volume_name_python" style="color: inherit; text-decoration: inherit;">volume_<wbr>name</a>
@@ -821,8 +722,7 @@ The following output properties are available:
         <span class="property-indicator"></span>
         <span class="property-type">str</span>
     </dt>
-    <dd>{{% md %}}Volume name{{% /md %}}</dd>
-</dl>
+    <dd>{{% md %}}Volume name{{% /md %}}</dd></dl>
 {{% /choosable %}}
 
 

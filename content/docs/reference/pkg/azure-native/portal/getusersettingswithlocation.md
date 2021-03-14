@@ -51,9 +51,7 @@ The following arguments are supported:
 
 
 {{% choosable language csharp %}}
-<dl class="resources-properties">
-
-    <dt class="property-required"
+<dl class="resources-properties"><dt class="property-required"
             title="Required">
         <span id="location_csharp">
 <a href="#location_csharp" style="color: inherit; text-decoration: inherit;">Location</a>
@@ -61,8 +59,7 @@ The following arguments are supported:
         <span class="property-indicator"></span>
         <span class="property-type">string</span>
     </dt>
-    <dd>{{% md %}}The provider location{{% /md %}}</dd>
-    <dt class="property-required"
+    <dd>{{% md %}}The provider location{{% /md %}}</dd><dt class="property-required"
             title="Required">
         <span id="usersettingsname_csharp">
 <a href="#usersettingsname_csharp" style="color: inherit; text-decoration: inherit;">User<wbr>Settings<wbr>Name</a>
@@ -70,14 +67,11 @@ The following arguments are supported:
         <span class="property-indicator"></span>
         <span class="property-type">string</span>
     </dt>
-    <dd>{{% md %}}The name of the user settings{{% /md %}}</dd>
-</dl>
+    <dd>{{% md %}}The name of the user settings{{% /md %}}</dd></dl>
 {{% /choosable %}}
 
 {{% choosable language go %}}
-<dl class="resources-properties">
-
-    <dt class="property-required"
+<dl class="resources-properties"><dt class="property-required"
             title="Required">
         <span id="location_go">
 <a href="#location_go" style="color: inherit; text-decoration: inherit;">Location</a>
@@ -85,8 +79,7 @@ The following arguments are supported:
         <span class="property-indicator"></span>
         <span class="property-type">string</span>
     </dt>
-    <dd>{{% md %}}The provider location{{% /md %}}</dd>
-    <dt class="property-required"
+    <dd>{{% md %}}The provider location{{% /md %}}</dd><dt class="property-required"
             title="Required">
         <span id="usersettingsname_go">
 <a href="#usersettingsname_go" style="color: inherit; text-decoration: inherit;">User<wbr>Settings<wbr>Name</a>
@@ -94,14 +87,11 @@ The following arguments are supported:
         <span class="property-indicator"></span>
         <span class="property-type">string</span>
     </dt>
-    <dd>{{% md %}}The name of the user settings{{% /md %}}</dd>
-</dl>
+    <dd>{{% md %}}The name of the user settings{{% /md %}}</dd></dl>
 {{% /choosable %}}
 
 {{% choosable language nodejs %}}
-<dl class="resources-properties">
-
-    <dt class="property-required"
+<dl class="resources-properties"><dt class="property-required"
             title="Required">
         <span id="location_nodejs">
 <a href="#location_nodejs" style="color: inherit; text-decoration: inherit;">location</a>
@@ -109,8 +99,7 @@ The following arguments are supported:
         <span class="property-indicator"></span>
         <span class="property-type">string</span>
     </dt>
-    <dd>{{% md %}}The provider location{{% /md %}}</dd>
-    <dt class="property-required"
+    <dd>{{% md %}}The provider location{{% /md %}}</dd><dt class="property-required"
             title="Required">
         <span id="usersettingsname_nodejs">
 <a href="#usersettingsname_nodejs" style="color: inherit; text-decoration: inherit;">user<wbr>Settings<wbr>Name</a>
@@ -118,14 +107,11 @@ The following arguments are supported:
         <span class="property-indicator"></span>
         <span class="property-type">string</span>
     </dt>
-    <dd>{{% md %}}The name of the user settings{{% /md %}}</dd>
-</dl>
+    <dd>{{% md %}}The name of the user settings{{% /md %}}</dd></dl>
 {{% /choosable %}}
 
 {{% choosable language python %}}
-<dl class="resources-properties">
-
-    <dt class="property-required"
+<dl class="resources-properties"><dt class="property-required"
             title="Required">
         <span id="location_python">
 <a href="#location_python" style="color: inherit; text-decoration: inherit;">location</a>
@@ -133,8 +119,7 @@ The following arguments are supported:
         <span class="property-indicator"></span>
         <span class="property-type">str</span>
     </dt>
-    <dd>{{% md %}}The provider location{{% /md %}}</dd>
-    <dt class="property-required"
+    <dd>{{% md %}}The provider location{{% /md %}}</dd><dt class="property-required"
             title="Required">
         <span id="user_settings_name_python">
 <a href="#user_settings_name_python" style="color: inherit; text-decoration: inherit;">user_<wbr>settings_<wbr>name</a>
@@ -142,8 +127,7 @@ The following arguments are supported:
         <span class="property-indicator"></span>
         <span class="property-type">str</span>
     </dt>
-    <dd>{{% md %}}The name of the user settings{{% /md %}}</dd>
-</dl>
+    <dd>{{% md %}}The name of the user settings{{% /md %}}</dd></dl>
 {{% /choosable %}}
 
 
@@ -156,9 +140,7 @@ The following output properties are available:
 
 
 {{% choosable language csharp %}}
-<dl class="resources-properties">
-
-    <dt class="property-"
+<dl class="resources-properties"><dt class="property-"
             title="">
         <span id="properties_csharp">
 <a href="#properties_csharp" style="color: inherit; text-decoration: inherit;">Properties</a>
@@ -166,14 +148,11 @@ The following output properties are available:
         <span class="property-indicator"></span>
         <span class="property-type"><a href="#userpropertiesresponse">Pulumi.<wbr>Azure<wbr>Native.<wbr>Portal.<wbr>Outputs.<wbr>User<wbr>Properties<wbr>Response</a></span>
     </dt>
-    <dd>{{% md %}}The cloud shell user settings properties.{{% /md %}}</dd>
-</dl>
+    <dd>{{% md %}}The cloud shell user settings properties.{{% /md %}}</dd></dl>
 {{% /choosable %}}
 
 {{% choosable language go %}}
-<dl class="resources-properties">
-
-    <dt class="property-"
+<dl class="resources-properties"><dt class="property-"
             title="">
         <span id="properties_go">
 <a href="#properties_go" style="color: inherit; text-decoration: inherit;">Properties</a>
@@ -181,14 +160,11 @@ The following output properties are available:
         <span class="property-indicator"></span>
         <span class="property-type"><a href="#userpropertiesresponse">User<wbr>Properties<wbr>Response</a></span>
     </dt>
-    <dd>{{% md %}}The cloud shell user settings properties.{{% /md %}}</dd>
-</dl>
+    <dd>{{% md %}}The cloud shell user settings properties.{{% /md %}}</dd></dl>
 {{% /choosable %}}
 
 {{% choosable language nodejs %}}
-<dl class="resources-properties">
-
-    <dt class="property-"
+<dl class="resources-properties"><dt class="property-"
             title="">
         <span id="properties_nodejs">
 <a href="#properties_nodejs" style="color: inherit; text-decoration: inherit;">properties</a>
@@ -196,14 +172,11 @@ The following output properties are available:
         <span class="property-indicator"></span>
         <span class="property-type"><a href="#userpropertiesresponse">User<wbr>Properties<wbr>Response</a></span>
     </dt>
-    <dd>{{% md %}}The cloud shell user settings properties.{{% /md %}}</dd>
-</dl>
+    <dd>{{% md %}}The cloud shell user settings properties.{{% /md %}}</dd></dl>
 {{% /choosable %}}
 
 {{% choosable language python %}}
-<dl class="resources-properties">
-
-    <dt class="property-"
+<dl class="resources-properties"><dt class="property-"
             title="">
         <span id="properties_python">
 <a href="#properties_python" style="color: inherit; text-decoration: inherit;">properties</a>
@@ -211,8 +184,7 @@ The following output properties are available:
         <span class="property-indicator"></span>
         <span class="property-type"><a href="#userpropertiesresponse">User<wbr>Properties<wbr>Response</a></span>
     </dt>
-    <dd>{{% md %}}The cloud shell user settings properties.{{% /md %}}</dd>
-</dl>
+    <dd>{{% md %}}The cloud shell user settings properties.{{% /md %}}</dd></dl>
 {{% /choosable %}}
 
 
@@ -226,9 +198,7 @@ The following output properties are available:
 
 
 {{% choosable language csharp %}}
-<dl class="resources-properties">
-
-    <dt class="property-optional"
+<dl class="resources-properties"><dt class="property-optional"
             title="Optional">
         <span id="disksizeingb_csharp">
 <a href="#disksizeingb_csharp" style="color: inherit; text-decoration: inherit;">Disk<wbr>Size<wbr>In<wbr>GB</a>
@@ -236,8 +206,7 @@ The following output properties are available:
         <span class="property-indicator"></span>
         <span class="property-type">int</span>
     </dt>
-    <dd>{{% md %}}Size of file share{{% /md %}}</dd>
-    <dt class="property-optional"
+    <dd>{{% md %}}Size of file share{{% /md %}}</dd><dt class="property-optional"
             title="Optional">
         <span id="filesharename_csharp">
 <a href="#filesharename_csharp" style="color: inherit; text-decoration: inherit;">File<wbr>Share<wbr>Name</a>
@@ -245,8 +214,7 @@ The following output properties are available:
         <span class="property-indicator"></span>
         <span class="property-type">string</span>
     </dt>
-    <dd>{{% md %}}Name of the mounted file share. 63 characters or less, lowercase alphabet, numbers, and -{{% /md %}}</dd>
-    <dt class="property-optional"
+    <dd>{{% md %}}Name of the mounted file share. 63 characters or less, lowercase alphabet, numbers, and -{{% /md %}}</dd><dt class="property-optional"
             title="Optional">
         <span id="storageaccountresourceid_csharp">
 <a href="#storageaccountresourceid_csharp" style="color: inherit; text-decoration: inherit;">Storage<wbr>Account<wbr>Resource<wbr>Id</a>
@@ -254,14 +222,11 @@ The following output properties are available:
         <span class="property-indicator"></span>
         <span class="property-type">string</span>
     </dt>
-    <dd>{{% md %}}Full resource ID of storage account.{{% /md %}}</dd>
-</dl>
+    <dd>{{% md %}}Full resource ID of storage account.{{% /md %}}</dd></dl>
 {{% /choosable %}}
 
 {{% choosable language go %}}
-<dl class="resources-properties">
-
-    <dt class="property-optional"
+<dl class="resources-properties"><dt class="property-optional"
             title="Optional">
         <span id="disksizeingb_go">
 <a href="#disksizeingb_go" style="color: inherit; text-decoration: inherit;">Disk<wbr>Size<wbr>In<wbr>GB</a>
@@ -269,8 +234,7 @@ The following output properties are available:
         <span class="property-indicator"></span>
         <span class="property-type">int</span>
     </dt>
-    <dd>{{% md %}}Size of file share{{% /md %}}</dd>
-    <dt class="property-optional"
+    <dd>{{% md %}}Size of file share{{% /md %}}</dd><dt class="property-optional"
             title="Optional">
         <span id="filesharename_go">
 <a href="#filesharename_go" style="color: inherit; text-decoration: inherit;">File<wbr>Share<wbr>Name</a>
@@ -278,8 +242,7 @@ The following output properties are available:
         <span class="property-indicator"></span>
         <span class="property-type">string</span>
     </dt>
-    <dd>{{% md %}}Name of the mounted file share. 63 characters or less, lowercase alphabet, numbers, and -{{% /md %}}</dd>
-    <dt class="property-optional"
+    <dd>{{% md %}}Name of the mounted file share. 63 characters or less, lowercase alphabet, numbers, and -{{% /md %}}</dd><dt class="property-optional"
             title="Optional">
         <span id="storageaccountresourceid_go">
 <a href="#storageaccountresourceid_go" style="color: inherit; text-decoration: inherit;">Storage<wbr>Account<wbr>Resource<wbr>Id</a>
@@ -287,14 +250,11 @@ The following output properties are available:
         <span class="property-indicator"></span>
         <span class="property-type">string</span>
     </dt>
-    <dd>{{% md %}}Full resource ID of storage account.{{% /md %}}</dd>
-</dl>
+    <dd>{{% md %}}Full resource ID of storage account.{{% /md %}}</dd></dl>
 {{% /choosable %}}
 
 {{% choosable language nodejs %}}
-<dl class="resources-properties">
-
-    <dt class="property-optional"
+<dl class="resources-properties"><dt class="property-optional"
             title="Optional">
         <span id="disksizeingb_nodejs">
 <a href="#disksizeingb_nodejs" style="color: inherit; text-decoration: inherit;">disk<wbr>Size<wbr>In<wbr>GB</a>
@@ -302,8 +262,7 @@ The following output properties are available:
         <span class="property-indicator"></span>
         <span class="property-type">number</span>
     </dt>
-    <dd>{{% md %}}Size of file share{{% /md %}}</dd>
-    <dt class="property-optional"
+    <dd>{{% md %}}Size of file share{{% /md %}}</dd><dt class="property-optional"
             title="Optional">
         <span id="filesharename_nodejs">
 <a href="#filesharename_nodejs" style="color: inherit; text-decoration: inherit;">file<wbr>Share<wbr>Name</a>
@@ -311,8 +270,7 @@ The following output properties are available:
         <span class="property-indicator"></span>
         <span class="property-type">string</span>
     </dt>
-    <dd>{{% md %}}Name of the mounted file share. 63 characters or less, lowercase alphabet, numbers, and -{{% /md %}}</dd>
-    <dt class="property-optional"
+    <dd>{{% md %}}Name of the mounted file share. 63 characters or less, lowercase alphabet, numbers, and -{{% /md %}}</dd><dt class="property-optional"
             title="Optional">
         <span id="storageaccountresourceid_nodejs">
 <a href="#storageaccountresourceid_nodejs" style="color: inherit; text-decoration: inherit;">storage<wbr>Account<wbr>Resource<wbr>Id</a>
@@ -320,14 +278,11 @@ The following output properties are available:
         <span class="property-indicator"></span>
         <span class="property-type">string</span>
     </dt>
-    <dd>{{% md %}}Full resource ID of storage account.{{% /md %}}</dd>
-</dl>
+    <dd>{{% md %}}Full resource ID of storage account.{{% /md %}}</dd></dl>
 {{% /choosable %}}
 
 {{% choosable language python %}}
-<dl class="resources-properties">
-
-    <dt class="property-optional"
+<dl class="resources-properties"><dt class="property-optional"
             title="Optional">
         <span id="disk_size_in_gb_python">
 <a href="#disk_size_in_gb_python" style="color: inherit; text-decoration: inherit;">disk_<wbr>size_<wbr>in_<wbr>gb</a>
@@ -335,8 +290,7 @@ The following output properties are available:
         <span class="property-indicator"></span>
         <span class="property-type">int</span>
     </dt>
-    <dd>{{% md %}}Size of file share{{% /md %}}</dd>
-    <dt class="property-optional"
+    <dd>{{% md %}}Size of file share{{% /md %}}</dd><dt class="property-optional"
             title="Optional">
         <span id="file_share_name_python">
 <a href="#file_share_name_python" style="color: inherit; text-decoration: inherit;">file_<wbr>share_<wbr>name</a>
@@ -344,8 +298,7 @@ The following output properties are available:
         <span class="property-indicator"></span>
         <span class="property-type">str</span>
     </dt>
-    <dd>{{% md %}}Name of the mounted file share. 63 characters or less, lowercase alphabet, numbers, and -{{% /md %}}</dd>
-    <dt class="property-optional"
+    <dd>{{% md %}}Name of the mounted file share. 63 characters or less, lowercase alphabet, numbers, and -{{% /md %}}</dd><dt class="property-optional"
             title="Optional">
         <span id="storage_account_resource_id_python">
 <a href="#storage_account_resource_id_python" style="color: inherit; text-decoration: inherit;">storage_<wbr>account_<wbr>resource_<wbr>id</a>
@@ -353,8 +306,7 @@ The following output properties are available:
         <span class="property-indicator"></span>
         <span class="property-type">str</span>
     </dt>
-    <dd>{{% md %}}Full resource ID of storage account.{{% /md %}}</dd>
-</dl>
+    <dd>{{% md %}}Full resource ID of storage account.{{% /md %}}</dd></dl>
 {{% /choosable %}}
 
 <h4 id="terminalsettingsresponse">Terminal<wbr>Settings<wbr>Response</h4>
@@ -362,9 +314,7 @@ The following output properties are available:
 
 
 {{% choosable language csharp %}}
-<dl class="resources-properties">
-
-    <dt class="property-optional"
+<dl class="resources-properties"><dt class="property-optional"
             title="Optional">
         <span id="fontsize_csharp">
 <a href="#fontsize_csharp" style="color: inherit; text-decoration: inherit;">Font<wbr>Size</a>
@@ -372,8 +322,7 @@ The following output properties are available:
         <span class="property-indicator"></span>
         <span class="property-type">string</span>
     </dt>
-    <dd>{{% md %}}Size of terminal font.{{% /md %}}</dd>
-    <dt class="property-optional"
+    <dd>{{% md %}}Size of terminal font.{{% /md %}}</dd><dt class="property-optional"
             title="Optional">
         <span id="fontstyle_csharp">
 <a href="#fontstyle_csharp" style="color: inherit; text-decoration: inherit;">Font<wbr>Style</a>
@@ -381,14 +330,11 @@ The following output properties are available:
         <span class="property-indicator"></span>
         <span class="property-type">string</span>
     </dt>
-    <dd>{{% md %}}Style of terminal font.{{% /md %}}</dd>
-</dl>
+    <dd>{{% md %}}Style of terminal font.{{% /md %}}</dd></dl>
 {{% /choosable %}}
 
 {{% choosable language go %}}
-<dl class="resources-properties">
-
-    <dt class="property-optional"
+<dl class="resources-properties"><dt class="property-optional"
             title="Optional">
         <span id="fontsize_go">
 <a href="#fontsize_go" style="color: inherit; text-decoration: inherit;">Font<wbr>Size</a>
@@ -396,8 +342,7 @@ The following output properties are available:
         <span class="property-indicator"></span>
         <span class="property-type">string</span>
     </dt>
-    <dd>{{% md %}}Size of terminal font.{{% /md %}}</dd>
-    <dt class="property-optional"
+    <dd>{{% md %}}Size of terminal font.{{% /md %}}</dd><dt class="property-optional"
             title="Optional">
         <span id="fontstyle_go">
 <a href="#fontstyle_go" style="color: inherit; text-decoration: inherit;">Font<wbr>Style</a>
@@ -405,14 +350,11 @@ The following output properties are available:
         <span class="property-indicator"></span>
         <span class="property-type">string</span>
     </dt>
-    <dd>{{% md %}}Style of terminal font.{{% /md %}}</dd>
-</dl>
+    <dd>{{% md %}}Style of terminal font.{{% /md %}}</dd></dl>
 {{% /choosable %}}
 
 {{% choosable language nodejs %}}
-<dl class="resources-properties">
-
-    <dt class="property-optional"
+<dl class="resources-properties"><dt class="property-optional"
             title="Optional">
         <span id="fontsize_nodejs">
 <a href="#fontsize_nodejs" style="color: inherit; text-decoration: inherit;">font<wbr>Size</a>
@@ -420,8 +362,7 @@ The following output properties are available:
         <span class="property-indicator"></span>
         <span class="property-type">string</span>
     </dt>
-    <dd>{{% md %}}Size of terminal font.{{% /md %}}</dd>
-    <dt class="property-optional"
+    <dd>{{% md %}}Size of terminal font.{{% /md %}}</dd><dt class="property-optional"
             title="Optional">
         <span id="fontstyle_nodejs">
 <a href="#fontstyle_nodejs" style="color: inherit; text-decoration: inherit;">font<wbr>Style</a>
@@ -429,14 +370,11 @@ The following output properties are available:
         <span class="property-indicator"></span>
         <span class="property-type">string</span>
     </dt>
-    <dd>{{% md %}}Style of terminal font.{{% /md %}}</dd>
-</dl>
+    <dd>{{% md %}}Style of terminal font.{{% /md %}}</dd></dl>
 {{% /choosable %}}
 
 {{% choosable language python %}}
-<dl class="resources-properties">
-
-    <dt class="property-optional"
+<dl class="resources-properties"><dt class="property-optional"
             title="Optional">
         <span id="font_size_python">
 <a href="#font_size_python" style="color: inherit; text-decoration: inherit;">font_<wbr>size</a>
@@ -444,8 +382,7 @@ The following output properties are available:
         <span class="property-indicator"></span>
         <span class="property-type">str</span>
     </dt>
-    <dd>{{% md %}}Size of terminal font.{{% /md %}}</dd>
-    <dt class="property-optional"
+    <dd>{{% md %}}Size of terminal font.{{% /md %}}</dd><dt class="property-optional"
             title="Optional">
         <span id="font_style_python">
 <a href="#font_style_python" style="color: inherit; text-decoration: inherit;">font_<wbr>style</a>
@@ -453,8 +390,7 @@ The following output properties are available:
         <span class="property-indicator"></span>
         <span class="property-type">str</span>
     </dt>
-    <dd>{{% md %}}Style of terminal font.{{% /md %}}</dd>
-</dl>
+    <dd>{{% md %}}Style of terminal font.{{% /md %}}</dd></dl>
 {{% /choosable %}}
 
 <h4 id="userpropertiesresponse">User<wbr>Properties<wbr>Response</h4>
@@ -462,9 +398,7 @@ The following output properties are available:
 
 
 {{% choosable language csharp %}}
-<dl class="resources-properties">
-
-    <dt class="property-required"
+<dl class="resources-properties"><dt class="property-required"
             title="Required">
         <span id="preferredlocation_csharp">
 <a href="#preferredlocation_csharp" style="color: inherit; text-decoration: inherit;">Preferred<wbr>Location</a>
@@ -472,8 +406,7 @@ The following output properties are available:
         <span class="property-indicator"></span>
         <span class="property-type">string</span>
     </dt>
-    <dd>{{% md %}}The preferred location of the cloud shell.{{% /md %}}</dd>
-    <dt class="property-required"
+    <dd>{{% md %}}The preferred location of the cloud shell.{{% /md %}}</dd><dt class="property-required"
             title="Required">
         <span id="preferredostype_csharp">
 <a href="#preferredostype_csharp" style="color: inherit; text-decoration: inherit;">Preferred<wbr>Os<wbr>Type</a>
@@ -481,8 +414,7 @@ The following output properties are available:
         <span class="property-indicator"></span>
         <span class="property-type">string</span>
     </dt>
-    <dd>{{% md %}}The operating system type of the cloud shell. Deprecated, use preferredShellType.{{% /md %}}</dd>
-    <dt class="property-required"
+    <dd>{{% md %}}The operating system type of the cloud shell. Deprecated, use preferredShellType.{{% /md %}}</dd><dt class="property-required"
             title="Required">
         <span id="preferredshelltype_csharp">
 <a href="#preferredshelltype_csharp" style="color: inherit; text-decoration: inherit;">Preferred<wbr>Shell<wbr>Type</a>
@@ -490,8 +422,7 @@ The following output properties are available:
         <span class="property-indicator"></span>
         <span class="property-type">string</span>
     </dt>
-    <dd>{{% md %}}The shell type of the cloud shell.{{% /md %}}</dd>
-    <dt class="property-required"
+    <dd>{{% md %}}The shell type of the cloud shell.{{% /md %}}</dd><dt class="property-required"
             title="Required">
         <span id="storageprofile_csharp">
 <a href="#storageprofile_csharp" style="color: inherit; text-decoration: inherit;">Storage<wbr>Profile</a>
@@ -499,8 +430,7 @@ The following output properties are available:
         <span class="property-indicator"></span>
         <span class="property-type"><a href="#storageprofileresponse">Pulumi.<wbr>Azure<wbr>Native.<wbr>Portal.<wbr>Inputs.<wbr>Storage<wbr>Profile<wbr>Response<wbr>Args</a></span>
     </dt>
-    <dd>{{% md %}}The storage profile of the user settings.{{% /md %}}</dd>
-    <dt class="property-required"
+    <dd>{{% md %}}The storage profile of the user settings.{{% /md %}}</dd><dt class="property-required"
             title="Required">
         <span id="terminalsettings_csharp">
 <a href="#terminalsettings_csharp" style="color: inherit; text-decoration: inherit;">Terminal<wbr>Settings</a>
@@ -508,14 +438,11 @@ The following output properties are available:
         <span class="property-indicator"></span>
         <span class="property-type"><a href="#terminalsettingsresponse">Pulumi.<wbr>Azure<wbr>Native.<wbr>Portal.<wbr>Inputs.<wbr>Terminal<wbr>Settings<wbr>Response<wbr>Args</a></span>
     </dt>
-    <dd>{{% md %}}Settings for terminal appearance.{{% /md %}}</dd>
-</dl>
+    <dd>{{% md %}}Settings for terminal appearance.{{% /md %}}</dd></dl>
 {{% /choosable %}}
 
 {{% choosable language go %}}
-<dl class="resources-properties">
-
-    <dt class="property-required"
+<dl class="resources-properties"><dt class="property-required"
             title="Required">
         <span id="preferredlocation_go">
 <a href="#preferredlocation_go" style="color: inherit; text-decoration: inherit;">Preferred<wbr>Location</a>
@@ -523,8 +450,7 @@ The following output properties are available:
         <span class="property-indicator"></span>
         <span class="property-type">string</span>
     </dt>
-    <dd>{{% md %}}The preferred location of the cloud shell.{{% /md %}}</dd>
-    <dt class="property-required"
+    <dd>{{% md %}}The preferred location of the cloud shell.{{% /md %}}</dd><dt class="property-required"
             title="Required">
         <span id="preferredostype_go">
 <a href="#preferredostype_go" style="color: inherit; text-decoration: inherit;">Preferred<wbr>Os<wbr>Type</a>
@@ -532,8 +458,7 @@ The following output properties are available:
         <span class="property-indicator"></span>
         <span class="property-type">string</span>
     </dt>
-    <dd>{{% md %}}The operating system type of the cloud shell. Deprecated, use preferredShellType.{{% /md %}}</dd>
-    <dt class="property-required"
+    <dd>{{% md %}}The operating system type of the cloud shell. Deprecated, use preferredShellType.{{% /md %}}</dd><dt class="property-required"
             title="Required">
         <span id="preferredshelltype_go">
 <a href="#preferredshelltype_go" style="color: inherit; text-decoration: inherit;">Preferred<wbr>Shell<wbr>Type</a>
@@ -541,8 +466,7 @@ The following output properties are available:
         <span class="property-indicator"></span>
         <span class="property-type">string</span>
     </dt>
-    <dd>{{% md %}}The shell type of the cloud shell.{{% /md %}}</dd>
-    <dt class="property-required"
+    <dd>{{% md %}}The shell type of the cloud shell.{{% /md %}}</dd><dt class="property-required"
             title="Required">
         <span id="storageprofile_go">
 <a href="#storageprofile_go" style="color: inherit; text-decoration: inherit;">Storage<wbr>Profile</a>
@@ -550,8 +474,7 @@ The following output properties are available:
         <span class="property-indicator"></span>
         <span class="property-type"><a href="#storageprofileresponse">Storage<wbr>Profile<wbr>Response</a></span>
     </dt>
-    <dd>{{% md %}}The storage profile of the user settings.{{% /md %}}</dd>
-    <dt class="property-required"
+    <dd>{{% md %}}The storage profile of the user settings.{{% /md %}}</dd><dt class="property-required"
             title="Required">
         <span id="terminalsettings_go">
 <a href="#terminalsettings_go" style="color: inherit; text-decoration: inherit;">Terminal<wbr>Settings</a>
@@ -559,14 +482,11 @@ The following output properties are available:
         <span class="property-indicator"></span>
         <span class="property-type"><a href="#terminalsettingsresponse">Terminal<wbr>Settings<wbr>Response</a></span>
     </dt>
-    <dd>{{% md %}}Settings for terminal appearance.{{% /md %}}</dd>
-</dl>
+    <dd>{{% md %}}Settings for terminal appearance.{{% /md %}}</dd></dl>
 {{% /choosable %}}
 
 {{% choosable language nodejs %}}
-<dl class="resources-properties">
-
-    <dt class="property-required"
+<dl class="resources-properties"><dt class="property-required"
             title="Required">
         <span id="preferredlocation_nodejs">
 <a href="#preferredlocation_nodejs" style="color: inherit; text-decoration: inherit;">preferred<wbr>Location</a>
@@ -574,8 +494,7 @@ The following output properties are available:
         <span class="property-indicator"></span>
         <span class="property-type">string</span>
     </dt>
-    <dd>{{% md %}}The preferred location of the cloud shell.{{% /md %}}</dd>
-    <dt class="property-required"
+    <dd>{{% md %}}The preferred location of the cloud shell.{{% /md %}}</dd><dt class="property-required"
             title="Required">
         <span id="preferredostype_nodejs">
 <a href="#preferredostype_nodejs" style="color: inherit; text-decoration: inherit;">preferred<wbr>Os<wbr>Type</a>
@@ -583,8 +502,7 @@ The following output properties are available:
         <span class="property-indicator"></span>
         <span class="property-type">string</span>
     </dt>
-    <dd>{{% md %}}The operating system type of the cloud shell. Deprecated, use preferredShellType.{{% /md %}}</dd>
-    <dt class="property-required"
+    <dd>{{% md %}}The operating system type of the cloud shell. Deprecated, use preferredShellType.{{% /md %}}</dd><dt class="property-required"
             title="Required">
         <span id="preferredshelltype_nodejs">
 <a href="#preferredshelltype_nodejs" style="color: inherit; text-decoration: inherit;">preferred<wbr>Shell<wbr>Type</a>
@@ -592,8 +510,7 @@ The following output properties are available:
         <span class="property-indicator"></span>
         <span class="property-type">string</span>
     </dt>
-    <dd>{{% md %}}The shell type of the cloud shell.{{% /md %}}</dd>
-    <dt class="property-required"
+    <dd>{{% md %}}The shell type of the cloud shell.{{% /md %}}</dd><dt class="property-required"
             title="Required">
         <span id="storageprofile_nodejs">
 <a href="#storageprofile_nodejs" style="color: inherit; text-decoration: inherit;">storage<wbr>Profile</a>
@@ -601,8 +518,7 @@ The following output properties are available:
         <span class="property-indicator"></span>
         <span class="property-type"><a href="#storageprofileresponse">Storage<wbr>Profile<wbr>Response</a></span>
     </dt>
-    <dd>{{% md %}}The storage profile of the user settings.{{% /md %}}</dd>
-    <dt class="property-required"
+    <dd>{{% md %}}The storage profile of the user settings.{{% /md %}}</dd><dt class="property-required"
             title="Required">
         <span id="terminalsettings_nodejs">
 <a href="#terminalsettings_nodejs" style="color: inherit; text-decoration: inherit;">terminal<wbr>Settings</a>
@@ -610,14 +526,11 @@ The following output properties are available:
         <span class="property-indicator"></span>
         <span class="property-type"><a href="#terminalsettingsresponse">Terminal<wbr>Settings<wbr>Response</a></span>
     </dt>
-    <dd>{{% md %}}Settings for terminal appearance.{{% /md %}}</dd>
-</dl>
+    <dd>{{% md %}}Settings for terminal appearance.{{% /md %}}</dd></dl>
 {{% /choosable %}}
 
 {{% choosable language python %}}
-<dl class="resources-properties">
-
-    <dt class="property-required"
+<dl class="resources-properties"><dt class="property-required"
             title="Required">
         <span id="preferred_location_python">
 <a href="#preferred_location_python" style="color: inherit; text-decoration: inherit;">preferred_<wbr>location</a>
@@ -625,8 +538,7 @@ The following output properties are available:
         <span class="property-indicator"></span>
         <span class="property-type">str</span>
     </dt>
-    <dd>{{% md %}}The preferred location of the cloud shell.{{% /md %}}</dd>
-    <dt class="property-required"
+    <dd>{{% md %}}The preferred location of the cloud shell.{{% /md %}}</dd><dt class="property-required"
             title="Required">
         <span id="preferred_os_type_python">
 <a href="#preferred_os_type_python" style="color: inherit; text-decoration: inherit;">preferred_<wbr>os_<wbr>type</a>
@@ -634,8 +546,7 @@ The following output properties are available:
         <span class="property-indicator"></span>
         <span class="property-type">str</span>
     </dt>
-    <dd>{{% md %}}The operating system type of the cloud shell. Deprecated, use preferredShellType.{{% /md %}}</dd>
-    <dt class="property-required"
+    <dd>{{% md %}}The operating system type of the cloud shell. Deprecated, use preferredShellType.{{% /md %}}</dd><dt class="property-required"
             title="Required">
         <span id="preferred_shell_type_python">
 <a href="#preferred_shell_type_python" style="color: inherit; text-decoration: inherit;">preferred_<wbr>shell_<wbr>type</a>
@@ -643,8 +554,7 @@ The following output properties are available:
         <span class="property-indicator"></span>
         <span class="property-type">str</span>
     </dt>
-    <dd>{{% md %}}The shell type of the cloud shell.{{% /md %}}</dd>
-    <dt class="property-required"
+    <dd>{{% md %}}The shell type of the cloud shell.{{% /md %}}</dd><dt class="property-required"
             title="Required">
         <span id="storage_profile_python">
 <a href="#storage_profile_python" style="color: inherit; text-decoration: inherit;">storage_<wbr>profile</a>
@@ -652,8 +562,7 @@ The following output properties are available:
         <span class="property-indicator"></span>
         <span class="property-type"><a href="#storageprofileresponse">Storage<wbr>Profile<wbr>Response<wbr>Args</a></span>
     </dt>
-    <dd>{{% md %}}The storage profile of the user settings.{{% /md %}}</dd>
-    <dt class="property-required"
+    <dd>{{% md %}}The storage profile of the user settings.{{% /md %}}</dd><dt class="property-required"
             title="Required">
         <span id="terminal_settings_python">
 <a href="#terminal_settings_python" style="color: inherit; text-decoration: inherit;">terminal_<wbr>settings</a>
@@ -661,8 +570,7 @@ The following output properties are available:
         <span class="property-indicator"></span>
         <span class="property-type"><a href="#terminalsettingsresponse">Terminal<wbr>Settings<wbr>Response<wbr>Args</a></span>
     </dt>
-    <dd>{{% md %}}Settings for terminal appearance.{{% /md %}}</dd>
-</dl>
+    <dd>{{% md %}}Settings for terminal appearance.{{% /md %}}</dd></dl>
 {{% /choosable %}}
 
 

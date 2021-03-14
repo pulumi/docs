@@ -15,11 +15,17 @@ Manages an Extension for a Virtual Machine Scale Set.
 > **NOTE:** This resource is not intended to be used with the `azure.compute.ScaleSet` resource - instead it's intended for this to be used with the `azure.compute.LinuxVirtualMachineScaleSet` and `azure.compute.WindowsVirtualMachineScaleSet` resources.
 
 {{% examples %}}
+
 ## Example Usage
 
 {{< chooser language "typescript,python,go,csharp" / >}}
 
-{{% example csharp %}}
+
+
+
+
+{{< example csharp >}}
+
 ```csharp
 using System.Collections.Generic;
 using System.Text.Json;
@@ -50,9 +56,12 @@ class MyStack : Stack
 }
 ```
 
-{{% /example %}}
 
-{{% example go %}}
+{{< /example >}}
+
+
+{{< example go >}}
+
 ```go
 package main
 
@@ -92,9 +101,12 @@ func main() {
 }
 ```
 
-{{% /example %}}
 
-{{% example python %}}
+{{< /example >}}
+
+
+{{< example python >}}
+
 ```python
 import pulumi
 import json
@@ -112,9 +124,12 @@ example_virtual_machine_scale_set_extension = azure.compute.VirtualMachineScaleS
     }))
 ```
 
-{{% /example %}}
 
-{{% example typescript %}}
+{{< /example >}}
+
+
+{{< example typescript >}}
+
 
 ```typescript
 import * as pulumi from "@pulumi/pulumi";
@@ -133,9 +148,16 @@ const exampleVirtualMachineScaleSetExtension = new azure.compute.VirtualMachineS
 });
 ```
 
-{{% /example %}}
+
+{{< /example >}}
+
+
+
+
 
 {{% /examples %}}
+
+
 
 
 ## Create a VirtualMachineScaleSetExtension Resource {#create}
@@ -160,9 +182,7 @@ const exampleVirtualMachineScaleSetExtension = new azure.compute.VirtualMachineS
 
 {{% choosable language nodejs %}}
 
-<dl class="resources-properties">
-  
-    <dt
+<dl class="resources-properties"><dt
         class="property-required" title="Required">
         <span>name</span>
         <span class="property-indicator"></span>
@@ -170,9 +190,7 @@ const exampleVirtualMachineScaleSetExtension = new azure.compute.VirtualMachineS
     </dt>
     <dd>
       The unique name of the resource.
-    </dd>
-  
-    <dt
+    </dd><dt
         class="property-required" title="Required">
         <span>args</span>
         <span class="property-indicator"></span>
@@ -180,9 +198,7 @@ const exampleVirtualMachineScaleSetExtension = new azure.compute.VirtualMachineS
     </dt>
     <dd>
       The arguments to resource properties.
-    </dd>
-  
-    <dt
+    </dd><dt
         class="property-optional" title="Optional">
         <span>opts</span>
         <span class="property-indicator"></span>
@@ -190,10 +206,7 @@ const exampleVirtualMachineScaleSetExtension = new azure.compute.VirtualMachineS
     </dt>
     <dd>
       Bag of options to control resource&#39;s behavior.
-    </dd>
-  
-
-</dl>
+    </dd></dl>
 
 {{% /choosable %}}
 
@@ -219,9 +232,7 @@ const exampleVirtualMachineScaleSetExtension = new azure.compute.VirtualMachineS
 
 {{% choosable language go %}}
 
-<dl class="resources-properties">
-  
-    <dt
+<dl class="resources-properties"><dt
         class="property-optional" title="Optional">
         <span>ctx</span>
         <span class="property-indicator"></span>
@@ -229,9 +240,7 @@ const exampleVirtualMachineScaleSetExtension = new azure.compute.VirtualMachineS
     </dt>
     <dd>
       Context object for the current deployment.
-    </dd>
-  
-    <dt
+    </dd><dt
         class="property-required" title="Required">
         <span>name</span>
         <span class="property-indicator"></span>
@@ -239,9 +248,7 @@ const exampleVirtualMachineScaleSetExtension = new azure.compute.VirtualMachineS
     </dt>
     <dd>
       The unique name of the resource.
-    </dd>
-  
-    <dt
+    </dd><dt
         class="property-required" title="Required">
         <span>args</span>
         <span class="property-indicator"></span>
@@ -249,9 +256,7 @@ const exampleVirtualMachineScaleSetExtension = new azure.compute.VirtualMachineS
     </dt>
     <dd>
       The arguments to resource properties.
-    </dd>
-  
-    <dt
+    </dd><dt
         class="property-optional" title="Optional">
         <span>opts</span>
         <span class="property-indicator"></span>
@@ -259,18 +264,13 @@ const exampleVirtualMachineScaleSetExtension = new azure.compute.VirtualMachineS
     </dt>
     <dd>
       Bag of options to control resource&#39;s behavior.
-    </dd>
-  
-
-</dl>
+    </dd></dl>
 
 {{% /choosable %}}
 
 {{% choosable language csharp %}}
 
-<dl class="resources-properties">
-  
-    <dt
+<dl class="resources-properties"><dt
         class="property-required" title="Required">
         <span>name</span>
         <span class="property-indicator"></span>
@@ -278,9 +278,7 @@ const exampleVirtualMachineScaleSetExtension = new azure.compute.VirtualMachineS
     </dt>
     <dd>
       The unique name of the resource.
-    </dd>
-  
-    <dt
+    </dd><dt
         class="property-required" title="Required">
         <span>args</span>
         <span class="property-indicator"></span>
@@ -288,9 +286,7 @@ const exampleVirtualMachineScaleSetExtension = new azure.compute.VirtualMachineS
     </dt>
     <dd>
       The arguments to resource properties.
-    </dd>
-  
-    <dt
+    </dd><dt
         class="property-optional" title="Optional">
         <span>opts</span>
         <span class="property-indicator"></span>
@@ -298,10 +294,7 @@ const exampleVirtualMachineScaleSetExtension = new azure.compute.VirtualMachineS
     </dt>
     <dd>
       Bag of options to control resource&#39;s behavior.
-    </dd>
-  
-
-</dl>
+    </dd></dl>
 
 {{% /choosable %}}
 
@@ -316,9 +309,7 @@ The VirtualMachineScaleSetExtension resource accepts the following [input]({{< r
 
 
 {{% choosable language csharp %}}
-<dl class="resources-properties">
-
-    <dt class="property-required"
+<dl class="resources-properties"><dt class="property-required"
             title="Required">
         <span id="publisher_csharp">
 <a href="#publisher_csharp" style="color: inherit; text-decoration: inherit;">Publisher</a>
@@ -327,8 +318,7 @@ The VirtualMachineScaleSetExtension resource accepts the following [input]({{< r
         <span class="property-type">string</span>
     </dt>
     <dd>{{% md %}}Specifies the Publisher of the Extension. Changing this forces a new resource to be created.
-{{% /md %}}</dd>
-    <dt class="property-required"
+{{% /md %}}</dd><dt class="property-required"
             title="Required">
         <span id="type_csharp">
 <a href="#type_csharp" style="color: inherit; text-decoration: inherit;">Type</a>
@@ -337,8 +327,7 @@ The VirtualMachineScaleSetExtension resource accepts the following [input]({{< r
         <span class="property-type">string</span>
     </dt>
     <dd>{{% md %}}Specifies the Type of the Extension. Changing this forces a new resource to be created.
-{{% /md %}}</dd>
-    <dt class="property-required"
+{{% /md %}}</dd><dt class="property-required"
             title="Required">
         <span id="typehandlerversion_csharp">
 <a href="#typehandlerversion_csharp" style="color: inherit; text-decoration: inherit;">Type<wbr>Handler<wbr>Version</a>
@@ -347,8 +336,7 @@ The VirtualMachineScaleSetExtension resource accepts the following [input]({{< r
         <span class="property-type">string</span>
     </dt>
     <dd>{{% md %}}Specifies the version of the extension to use, available versions can be found using the Azure CLI.
-{{% /md %}}</dd>
-    <dt class="property-required"
+{{% /md %}}</dd><dt class="property-required"
             title="Required">
         <span id="virtualmachinescalesetid_csharp">
 <a href="#virtualmachinescalesetid_csharp" style="color: inherit; text-decoration: inherit;">Virtual<wbr>Machine<wbr>Scale<wbr>Set<wbr>Id</a>
@@ -357,8 +345,7 @@ The VirtualMachineScaleSetExtension resource accepts the following [input]({{< r
         <span class="property-type">string</span>
     </dt>
     <dd>{{% md %}}The ID of the Virtual Machine Scale Set. Changing this forces a new resource to be created.
-{{% /md %}}</dd>
-    <dt class="property-optional"
+{{% /md %}}</dd><dt class="property-optional"
             title="Optional">
         <span id="autoupgrademinorversion_csharp">
 <a href="#autoupgrademinorversion_csharp" style="color: inherit; text-decoration: inherit;">Auto<wbr>Upgrade<wbr>Minor<wbr>Version</a>
@@ -367,8 +354,7 @@ The VirtualMachineScaleSetExtension resource accepts the following [input]({{< r
         <span class="property-type">bool</span>
     </dt>
     <dd>{{% md %}}Should the latest version of the Extension be used at Deployment Time, if one is available? This won't auto-update the extension on existing installation. Defaults to `true`.
-{{% /md %}}</dd>
-    <dt class="property-optional"
+{{% /md %}}</dd><dt class="property-optional"
             title="Optional">
         <span id="forceupdatetag_csharp">
 <a href="#forceupdatetag_csharp" style="color: inherit; text-decoration: inherit;">Force<wbr>Update<wbr>Tag</a>
@@ -377,8 +363,7 @@ The VirtualMachineScaleSetExtension resource accepts the following [input]({{< r
         <span class="property-type">string</span>
     </dt>
     <dd>{{% md %}}A value which, when different to the previous value can be used to force-run the Extension even if the Extension Configuration hasn't changed.
-{{% /md %}}</dd>
-    <dt class="property-optional"
+{{% /md %}}</dd><dt class="property-optional"
             title="Optional">
         <span id="name_csharp">
 <a href="#name_csharp" style="color: inherit; text-decoration: inherit;">Name</a>
@@ -387,8 +372,7 @@ The VirtualMachineScaleSetExtension resource accepts the following [input]({{< r
         <span class="property-type">string</span>
     </dt>
     <dd>{{% md %}}The name for the Virtual Machine Scale Set Extension. Changing this forces a new resource to be created.
-{{% /md %}}</dd>
-    <dt class="property-optional"
+{{% /md %}}</dd><dt class="property-optional"
             title="Optional">
         <span id="protectedsettings_csharp">
 <a href="#protectedsettings_csharp" style="color: inherit; text-decoration: inherit;">Protected<wbr>Settings</a>
@@ -397,8 +381,7 @@ The VirtualMachineScaleSetExtension resource accepts the following [input]({{< r
         <span class="property-type">string</span>
     </dt>
     <dd>{{% md %}}A JSON String which specifies Sensitive Settings (such as Passwords) for the Extension.
-{{% /md %}}</dd>
-    <dt class="property-optional"
+{{% /md %}}</dd><dt class="property-optional"
             title="Optional">
         <span id="provisionafterextensions_csharp">
 <a href="#provisionafterextensions_csharp" style="color: inherit; text-decoration: inherit;">Provision<wbr>After<wbr>Extensions</a>
@@ -407,8 +390,7 @@ The VirtualMachineScaleSetExtension resource accepts the following [input]({{< r
         <span class="property-type">List&lt;string&gt;</span>
     </dt>
     <dd>{{% md %}}An ordered list of Extension names which this should be provisioned after.
-{{% /md %}}</dd>
-    <dt class="property-optional"
+{{% /md %}}</dd><dt class="property-optional"
             title="Optional">
         <span id="settings_csharp">
 <a href="#settings_csharp" style="color: inherit; text-decoration: inherit;">Settings</a>
@@ -417,14 +399,11 @@ The VirtualMachineScaleSetExtension resource accepts the following [input]({{< r
         <span class="property-type">string</span>
     </dt>
     <dd>{{% md %}}A JSON String which specifies Settings for the Extension.
-{{% /md %}}</dd>
-</dl>
+{{% /md %}}</dd></dl>
 {{% /choosable %}}
 
 {{% choosable language go %}}
-<dl class="resources-properties">
-
-    <dt class="property-required"
+<dl class="resources-properties"><dt class="property-required"
             title="Required">
         <span id="publisher_go">
 <a href="#publisher_go" style="color: inherit; text-decoration: inherit;">Publisher</a>
@@ -433,8 +412,7 @@ The VirtualMachineScaleSetExtension resource accepts the following [input]({{< r
         <span class="property-type">string</span>
     </dt>
     <dd>{{% md %}}Specifies the Publisher of the Extension. Changing this forces a new resource to be created.
-{{% /md %}}</dd>
-    <dt class="property-required"
+{{% /md %}}</dd><dt class="property-required"
             title="Required">
         <span id="type_go">
 <a href="#type_go" style="color: inherit; text-decoration: inherit;">Type</a>
@@ -443,8 +421,7 @@ The VirtualMachineScaleSetExtension resource accepts the following [input]({{< r
         <span class="property-type">string</span>
     </dt>
     <dd>{{% md %}}Specifies the Type of the Extension. Changing this forces a new resource to be created.
-{{% /md %}}</dd>
-    <dt class="property-required"
+{{% /md %}}</dd><dt class="property-required"
             title="Required">
         <span id="typehandlerversion_go">
 <a href="#typehandlerversion_go" style="color: inherit; text-decoration: inherit;">Type<wbr>Handler<wbr>Version</a>
@@ -453,8 +430,7 @@ The VirtualMachineScaleSetExtension resource accepts the following [input]({{< r
         <span class="property-type">string</span>
     </dt>
     <dd>{{% md %}}Specifies the version of the extension to use, available versions can be found using the Azure CLI.
-{{% /md %}}</dd>
-    <dt class="property-required"
+{{% /md %}}</dd><dt class="property-required"
             title="Required">
         <span id="virtualmachinescalesetid_go">
 <a href="#virtualmachinescalesetid_go" style="color: inherit; text-decoration: inherit;">Virtual<wbr>Machine<wbr>Scale<wbr>Set<wbr>Id</a>
@@ -463,8 +439,7 @@ The VirtualMachineScaleSetExtension resource accepts the following [input]({{< r
         <span class="property-type">string</span>
     </dt>
     <dd>{{% md %}}The ID of the Virtual Machine Scale Set. Changing this forces a new resource to be created.
-{{% /md %}}</dd>
-    <dt class="property-optional"
+{{% /md %}}</dd><dt class="property-optional"
             title="Optional">
         <span id="autoupgrademinorversion_go">
 <a href="#autoupgrademinorversion_go" style="color: inherit; text-decoration: inherit;">Auto<wbr>Upgrade<wbr>Minor<wbr>Version</a>
@@ -473,8 +448,7 @@ The VirtualMachineScaleSetExtension resource accepts the following [input]({{< r
         <span class="property-type">bool</span>
     </dt>
     <dd>{{% md %}}Should the latest version of the Extension be used at Deployment Time, if one is available? This won't auto-update the extension on existing installation. Defaults to `true`.
-{{% /md %}}</dd>
-    <dt class="property-optional"
+{{% /md %}}</dd><dt class="property-optional"
             title="Optional">
         <span id="forceupdatetag_go">
 <a href="#forceupdatetag_go" style="color: inherit; text-decoration: inherit;">Force<wbr>Update<wbr>Tag</a>
@@ -483,8 +457,7 @@ The VirtualMachineScaleSetExtension resource accepts the following [input]({{< r
         <span class="property-type">string</span>
     </dt>
     <dd>{{% md %}}A value which, when different to the previous value can be used to force-run the Extension even if the Extension Configuration hasn't changed.
-{{% /md %}}</dd>
-    <dt class="property-optional"
+{{% /md %}}</dd><dt class="property-optional"
             title="Optional">
         <span id="name_go">
 <a href="#name_go" style="color: inherit; text-decoration: inherit;">Name</a>
@@ -493,8 +466,7 @@ The VirtualMachineScaleSetExtension resource accepts the following [input]({{< r
         <span class="property-type">string</span>
     </dt>
     <dd>{{% md %}}The name for the Virtual Machine Scale Set Extension. Changing this forces a new resource to be created.
-{{% /md %}}</dd>
-    <dt class="property-optional"
+{{% /md %}}</dd><dt class="property-optional"
             title="Optional">
         <span id="protectedsettings_go">
 <a href="#protectedsettings_go" style="color: inherit; text-decoration: inherit;">Protected<wbr>Settings</a>
@@ -503,8 +475,7 @@ The VirtualMachineScaleSetExtension resource accepts the following [input]({{< r
         <span class="property-type">string</span>
     </dt>
     <dd>{{% md %}}A JSON String which specifies Sensitive Settings (such as Passwords) for the Extension.
-{{% /md %}}</dd>
-    <dt class="property-optional"
+{{% /md %}}</dd><dt class="property-optional"
             title="Optional">
         <span id="provisionafterextensions_go">
 <a href="#provisionafterextensions_go" style="color: inherit; text-decoration: inherit;">Provision<wbr>After<wbr>Extensions</a>
@@ -513,8 +484,7 @@ The VirtualMachineScaleSetExtension resource accepts the following [input]({{< r
         <span class="property-type">[]string</span>
     </dt>
     <dd>{{% md %}}An ordered list of Extension names which this should be provisioned after.
-{{% /md %}}</dd>
-    <dt class="property-optional"
+{{% /md %}}</dd><dt class="property-optional"
             title="Optional">
         <span id="settings_go">
 <a href="#settings_go" style="color: inherit; text-decoration: inherit;">Settings</a>
@@ -523,14 +493,11 @@ The VirtualMachineScaleSetExtension resource accepts the following [input]({{< r
         <span class="property-type">string</span>
     </dt>
     <dd>{{% md %}}A JSON String which specifies Settings for the Extension.
-{{% /md %}}</dd>
-</dl>
+{{% /md %}}</dd></dl>
 {{% /choosable %}}
 
 {{% choosable language nodejs %}}
-<dl class="resources-properties">
-
-    <dt class="property-required"
+<dl class="resources-properties"><dt class="property-required"
             title="Required">
         <span id="publisher_nodejs">
 <a href="#publisher_nodejs" style="color: inherit; text-decoration: inherit;">publisher</a>
@@ -539,8 +506,7 @@ The VirtualMachineScaleSetExtension resource accepts the following [input]({{< r
         <span class="property-type">string</span>
     </dt>
     <dd>{{% md %}}Specifies the Publisher of the Extension. Changing this forces a new resource to be created.
-{{% /md %}}</dd>
-    <dt class="property-required"
+{{% /md %}}</dd><dt class="property-required"
             title="Required">
         <span id="type_nodejs">
 <a href="#type_nodejs" style="color: inherit; text-decoration: inherit;">type</a>
@@ -549,8 +515,7 @@ The VirtualMachineScaleSetExtension resource accepts the following [input]({{< r
         <span class="property-type">string</span>
     </dt>
     <dd>{{% md %}}Specifies the Type of the Extension. Changing this forces a new resource to be created.
-{{% /md %}}</dd>
-    <dt class="property-required"
+{{% /md %}}</dd><dt class="property-required"
             title="Required">
         <span id="typehandlerversion_nodejs">
 <a href="#typehandlerversion_nodejs" style="color: inherit; text-decoration: inherit;">type<wbr>Handler<wbr>Version</a>
@@ -559,8 +524,7 @@ The VirtualMachineScaleSetExtension resource accepts the following [input]({{< r
         <span class="property-type">string</span>
     </dt>
     <dd>{{% md %}}Specifies the version of the extension to use, available versions can be found using the Azure CLI.
-{{% /md %}}</dd>
-    <dt class="property-required"
+{{% /md %}}</dd><dt class="property-required"
             title="Required">
         <span id="virtualmachinescalesetid_nodejs">
 <a href="#virtualmachinescalesetid_nodejs" style="color: inherit; text-decoration: inherit;">virtual<wbr>Machine<wbr>Scale<wbr>Set<wbr>Id</a>
@@ -569,8 +533,7 @@ The VirtualMachineScaleSetExtension resource accepts the following [input]({{< r
         <span class="property-type">string</span>
     </dt>
     <dd>{{% md %}}The ID of the Virtual Machine Scale Set. Changing this forces a new resource to be created.
-{{% /md %}}</dd>
-    <dt class="property-optional"
+{{% /md %}}</dd><dt class="property-optional"
             title="Optional">
         <span id="autoupgrademinorversion_nodejs">
 <a href="#autoupgrademinorversion_nodejs" style="color: inherit; text-decoration: inherit;">auto<wbr>Upgrade<wbr>Minor<wbr>Version</a>
@@ -579,8 +542,7 @@ The VirtualMachineScaleSetExtension resource accepts the following [input]({{< r
         <span class="property-type">boolean</span>
     </dt>
     <dd>{{% md %}}Should the latest version of the Extension be used at Deployment Time, if one is available? This won't auto-update the extension on existing installation. Defaults to `true`.
-{{% /md %}}</dd>
-    <dt class="property-optional"
+{{% /md %}}</dd><dt class="property-optional"
             title="Optional">
         <span id="forceupdatetag_nodejs">
 <a href="#forceupdatetag_nodejs" style="color: inherit; text-decoration: inherit;">force<wbr>Update<wbr>Tag</a>
@@ -589,8 +551,7 @@ The VirtualMachineScaleSetExtension resource accepts the following [input]({{< r
         <span class="property-type">string</span>
     </dt>
     <dd>{{% md %}}A value which, when different to the previous value can be used to force-run the Extension even if the Extension Configuration hasn't changed.
-{{% /md %}}</dd>
-    <dt class="property-optional"
+{{% /md %}}</dd><dt class="property-optional"
             title="Optional">
         <span id="name_nodejs">
 <a href="#name_nodejs" style="color: inherit; text-decoration: inherit;">name</a>
@@ -599,8 +560,7 @@ The VirtualMachineScaleSetExtension resource accepts the following [input]({{< r
         <span class="property-type">string</span>
     </dt>
     <dd>{{% md %}}The name for the Virtual Machine Scale Set Extension. Changing this forces a new resource to be created.
-{{% /md %}}</dd>
-    <dt class="property-optional"
+{{% /md %}}</dd><dt class="property-optional"
             title="Optional">
         <span id="protectedsettings_nodejs">
 <a href="#protectedsettings_nodejs" style="color: inherit; text-decoration: inherit;">protected<wbr>Settings</a>
@@ -609,8 +569,7 @@ The VirtualMachineScaleSetExtension resource accepts the following [input]({{< r
         <span class="property-type">string</span>
     </dt>
     <dd>{{% md %}}A JSON String which specifies Sensitive Settings (such as Passwords) for the Extension.
-{{% /md %}}</dd>
-    <dt class="property-optional"
+{{% /md %}}</dd><dt class="property-optional"
             title="Optional">
         <span id="provisionafterextensions_nodejs">
 <a href="#provisionafterextensions_nodejs" style="color: inherit; text-decoration: inherit;">provision<wbr>After<wbr>Extensions</a>
@@ -619,8 +578,7 @@ The VirtualMachineScaleSetExtension resource accepts the following [input]({{< r
         <span class="property-type">string[]</span>
     </dt>
     <dd>{{% md %}}An ordered list of Extension names which this should be provisioned after.
-{{% /md %}}</dd>
-    <dt class="property-optional"
+{{% /md %}}</dd><dt class="property-optional"
             title="Optional">
         <span id="settings_nodejs">
 <a href="#settings_nodejs" style="color: inherit; text-decoration: inherit;">settings</a>
@@ -629,14 +587,11 @@ The VirtualMachineScaleSetExtension resource accepts the following [input]({{< r
         <span class="property-type">string</span>
     </dt>
     <dd>{{% md %}}A JSON String which specifies Settings for the Extension.
-{{% /md %}}</dd>
-</dl>
+{{% /md %}}</dd></dl>
 {{% /choosable %}}
 
 {{% choosable language python %}}
-<dl class="resources-properties">
-
-    <dt class="property-required"
+<dl class="resources-properties"><dt class="property-required"
             title="Required">
         <span id="publisher_python">
 <a href="#publisher_python" style="color: inherit; text-decoration: inherit;">publisher</a>
@@ -645,8 +600,7 @@ The VirtualMachineScaleSetExtension resource accepts the following [input]({{< r
         <span class="property-type">str</span>
     </dt>
     <dd>{{% md %}}Specifies the Publisher of the Extension. Changing this forces a new resource to be created.
-{{% /md %}}</dd>
-    <dt class="property-required"
+{{% /md %}}</dd><dt class="property-required"
             title="Required">
         <span id="type_python">
 <a href="#type_python" style="color: inherit; text-decoration: inherit;">type</a>
@@ -655,8 +609,7 @@ The VirtualMachineScaleSetExtension resource accepts the following [input]({{< r
         <span class="property-type">str</span>
     </dt>
     <dd>{{% md %}}Specifies the Type of the Extension. Changing this forces a new resource to be created.
-{{% /md %}}</dd>
-    <dt class="property-required"
+{{% /md %}}</dd><dt class="property-required"
             title="Required">
         <span id="type_handler_version_python">
 <a href="#type_handler_version_python" style="color: inherit; text-decoration: inherit;">type_<wbr>handler_<wbr>version</a>
@@ -665,8 +618,7 @@ The VirtualMachineScaleSetExtension resource accepts the following [input]({{< r
         <span class="property-type">str</span>
     </dt>
     <dd>{{% md %}}Specifies the version of the extension to use, available versions can be found using the Azure CLI.
-{{% /md %}}</dd>
-    <dt class="property-required"
+{{% /md %}}</dd><dt class="property-required"
             title="Required">
         <span id="virtual_machine_scale_set_id_python">
 <a href="#virtual_machine_scale_set_id_python" style="color: inherit; text-decoration: inherit;">virtual_<wbr>machine_<wbr>scale_<wbr>set_<wbr>id</a>
@@ -675,8 +627,7 @@ The VirtualMachineScaleSetExtension resource accepts the following [input]({{< r
         <span class="property-type">str</span>
     </dt>
     <dd>{{% md %}}The ID of the Virtual Machine Scale Set. Changing this forces a new resource to be created.
-{{% /md %}}</dd>
-    <dt class="property-optional"
+{{% /md %}}</dd><dt class="property-optional"
             title="Optional">
         <span id="auto_upgrade_minor_version_python">
 <a href="#auto_upgrade_minor_version_python" style="color: inherit; text-decoration: inherit;">auto_<wbr>upgrade_<wbr>minor_<wbr>version</a>
@@ -685,8 +636,7 @@ The VirtualMachineScaleSetExtension resource accepts the following [input]({{< r
         <span class="property-type">bool</span>
     </dt>
     <dd>{{% md %}}Should the latest version of the Extension be used at Deployment Time, if one is available? This won't auto-update the extension on existing installation. Defaults to `true`.
-{{% /md %}}</dd>
-    <dt class="property-optional"
+{{% /md %}}</dd><dt class="property-optional"
             title="Optional">
         <span id="force_update_tag_python">
 <a href="#force_update_tag_python" style="color: inherit; text-decoration: inherit;">force_<wbr>update_<wbr>tag</a>
@@ -695,8 +645,7 @@ The VirtualMachineScaleSetExtension resource accepts the following [input]({{< r
         <span class="property-type">str</span>
     </dt>
     <dd>{{% md %}}A value which, when different to the previous value can be used to force-run the Extension even if the Extension Configuration hasn't changed.
-{{% /md %}}</dd>
-    <dt class="property-optional"
+{{% /md %}}</dd><dt class="property-optional"
             title="Optional">
         <span id="name_python">
 <a href="#name_python" style="color: inherit; text-decoration: inherit;">name</a>
@@ -705,8 +654,7 @@ The VirtualMachineScaleSetExtension resource accepts the following [input]({{< r
         <span class="property-type">str</span>
     </dt>
     <dd>{{% md %}}The name for the Virtual Machine Scale Set Extension. Changing this forces a new resource to be created.
-{{% /md %}}</dd>
-    <dt class="property-optional"
+{{% /md %}}</dd><dt class="property-optional"
             title="Optional">
         <span id="protected_settings_python">
 <a href="#protected_settings_python" style="color: inherit; text-decoration: inherit;">protected_<wbr>settings</a>
@@ -715,8 +663,7 @@ The VirtualMachineScaleSetExtension resource accepts the following [input]({{< r
         <span class="property-type">str</span>
     </dt>
     <dd>{{% md %}}A JSON String which specifies Sensitive Settings (such as Passwords) for the Extension.
-{{% /md %}}</dd>
-    <dt class="property-optional"
+{{% /md %}}</dd><dt class="property-optional"
             title="Optional">
         <span id="provision_after_extensions_python">
 <a href="#provision_after_extensions_python" style="color: inherit; text-decoration: inherit;">provision_<wbr>after_<wbr>extensions</a>
@@ -725,8 +672,7 @@ The VirtualMachineScaleSetExtension resource accepts the following [input]({{< r
         <span class="property-type">Sequence[str]</span>
     </dt>
     <dd>{{% md %}}An ordered list of Extension names which this should be provisioned after.
-{{% /md %}}</dd>
-    <dt class="property-optional"
+{{% /md %}}</dd><dt class="property-optional"
             title="Optional">
         <span id="settings_python">
 <a href="#settings_python" style="color: inherit; text-decoration: inherit;">settings</a>
@@ -735,8 +681,7 @@ The VirtualMachineScaleSetExtension resource accepts the following [input]({{< r
         <span class="property-type">str</span>
     </dt>
     <dd>{{% md %}}A JSON String which specifies Settings for the Extension.
-{{% /md %}}</dd>
-</dl>
+{{% /md %}}</dd></dl>
 {{% /choosable %}}
 
 
@@ -747,9 +692,7 @@ All [input](#inputs) properties are implicitly available as output properties. A
 
 
 {{% choosable language csharp %}}
-<dl class="resources-properties">
-
-    <dt class="property-"
+<dl class="resources-properties"><dt class="property-"
             title="">
         <span id="id_csharp">
 <a href="#id_csharp" style="color: inherit; text-decoration: inherit;">Id</a>
@@ -757,14 +700,11 @@ All [input](#inputs) properties are implicitly available as output properties. A
         <span class="property-indicator"></span>
         <span class="property-type">string</span>
     </dt>
-    <dd>{{% md %}}The provider-assigned unique ID for this managed resource.{{% /md %}}</dd>
-</dl>
+    <dd>{{% md %}}The provider-assigned unique ID for this managed resource.{{% /md %}}</dd></dl>
 {{% /choosable %}}
 
 {{% choosable language go %}}
-<dl class="resources-properties">
-
-    <dt class="property-"
+<dl class="resources-properties"><dt class="property-"
             title="">
         <span id="id_go">
 <a href="#id_go" style="color: inherit; text-decoration: inherit;">Id</a>
@@ -772,14 +712,11 @@ All [input](#inputs) properties are implicitly available as output properties. A
         <span class="property-indicator"></span>
         <span class="property-type">string</span>
     </dt>
-    <dd>{{% md %}}The provider-assigned unique ID for this managed resource.{{% /md %}}</dd>
-</dl>
+    <dd>{{% md %}}The provider-assigned unique ID for this managed resource.{{% /md %}}</dd></dl>
 {{% /choosable %}}
 
 {{% choosable language nodejs %}}
-<dl class="resources-properties">
-
-    <dt class="property-"
+<dl class="resources-properties"><dt class="property-"
             title="">
         <span id="id_nodejs">
 <a href="#id_nodejs" style="color: inherit; text-decoration: inherit;">id</a>
@@ -787,14 +724,11 @@ All [input](#inputs) properties are implicitly available as output properties. A
         <span class="property-indicator"></span>
         <span class="property-type">string</span>
     </dt>
-    <dd>{{% md %}}The provider-assigned unique ID for this managed resource.{{% /md %}}</dd>
-</dl>
+    <dd>{{% md %}}The provider-assigned unique ID for this managed resource.{{% /md %}}</dd></dl>
 {{% /choosable %}}
 
 {{% choosable language python %}}
-<dl class="resources-properties">
-
-    <dt class="property-"
+<dl class="resources-properties"><dt class="property-"
             title="">
         <span id="id_python">
 <a href="#id_python" style="color: inherit; text-decoration: inherit;">id</a>
@@ -802,8 +736,7 @@ All [input](#inputs) properties are implicitly available as output properties. A
         <span class="property-indicator"></span>
         <span class="property-type">str</span>
     </dt>
-    <dd>{{% md %}}The provider-assigned unique ID for this managed resource.{{% /md %}}</dd>
-</dl>
+    <dd>{{% md %}}The provider-assigned unique ID for this managed resource.{{% /md %}}</dd></dl>
 {{% /choosable %}}
 
 
@@ -930,9 +863,7 @@ The following state arguments are supported:
 
 
 {{% choosable language csharp %}}
-<dl class="resources-properties">
-
-    <dt class="property-optional"
+<dl class="resources-properties"><dt class="property-optional"
             title="Optional">
         <span id="state_autoupgrademinorversion_csharp">
 <a href="#state_autoupgrademinorversion_csharp" style="color: inherit; text-decoration: inherit;">Auto<wbr>Upgrade<wbr>Minor<wbr>Version</a>
@@ -941,8 +872,7 @@ The following state arguments are supported:
         <span class="property-type">bool</span>
     </dt>
     <dd>{{% md %}}Should the latest version of the Extension be used at Deployment Time, if one is available? This won't auto-update the extension on existing installation. Defaults to `true`.
-{{% /md %}}</dd>
-    <dt class="property-optional"
+{{% /md %}}</dd><dt class="property-optional"
             title="Optional">
         <span id="state_forceupdatetag_csharp">
 <a href="#state_forceupdatetag_csharp" style="color: inherit; text-decoration: inherit;">Force<wbr>Update<wbr>Tag</a>
@@ -951,8 +881,7 @@ The following state arguments are supported:
         <span class="property-type">string</span>
     </dt>
     <dd>{{% md %}}A value which, when different to the previous value can be used to force-run the Extension even if the Extension Configuration hasn't changed.
-{{% /md %}}</dd>
-    <dt class="property-optional"
+{{% /md %}}</dd><dt class="property-optional"
             title="Optional">
         <span id="state_name_csharp">
 <a href="#state_name_csharp" style="color: inherit; text-decoration: inherit;">Name</a>
@@ -961,8 +890,7 @@ The following state arguments are supported:
         <span class="property-type">string</span>
     </dt>
     <dd>{{% md %}}The name for the Virtual Machine Scale Set Extension. Changing this forces a new resource to be created.
-{{% /md %}}</dd>
-    <dt class="property-optional"
+{{% /md %}}</dd><dt class="property-optional"
             title="Optional">
         <span id="state_protectedsettings_csharp">
 <a href="#state_protectedsettings_csharp" style="color: inherit; text-decoration: inherit;">Protected<wbr>Settings</a>
@@ -971,8 +899,7 @@ The following state arguments are supported:
         <span class="property-type">string</span>
     </dt>
     <dd>{{% md %}}A JSON String which specifies Sensitive Settings (such as Passwords) for the Extension.
-{{% /md %}}</dd>
-    <dt class="property-optional"
+{{% /md %}}</dd><dt class="property-optional"
             title="Optional">
         <span id="state_provisionafterextensions_csharp">
 <a href="#state_provisionafterextensions_csharp" style="color: inherit; text-decoration: inherit;">Provision<wbr>After<wbr>Extensions</a>
@@ -981,8 +908,7 @@ The following state arguments are supported:
         <span class="property-type">List&lt;string&gt;</span>
     </dt>
     <dd>{{% md %}}An ordered list of Extension names which this should be provisioned after.
-{{% /md %}}</dd>
-    <dt class="property-optional"
+{{% /md %}}</dd><dt class="property-optional"
             title="Optional">
         <span id="state_publisher_csharp">
 <a href="#state_publisher_csharp" style="color: inherit; text-decoration: inherit;">Publisher</a>
@@ -991,8 +917,7 @@ The following state arguments are supported:
         <span class="property-type">string</span>
     </dt>
     <dd>{{% md %}}Specifies the Publisher of the Extension. Changing this forces a new resource to be created.
-{{% /md %}}</dd>
-    <dt class="property-optional"
+{{% /md %}}</dd><dt class="property-optional"
             title="Optional">
         <span id="state_settings_csharp">
 <a href="#state_settings_csharp" style="color: inherit; text-decoration: inherit;">Settings</a>
@@ -1001,8 +926,7 @@ The following state arguments are supported:
         <span class="property-type">string</span>
     </dt>
     <dd>{{% md %}}A JSON String which specifies Settings for the Extension.
-{{% /md %}}</dd>
-    <dt class="property-optional"
+{{% /md %}}</dd><dt class="property-optional"
             title="Optional">
         <span id="state_type_csharp">
 <a href="#state_type_csharp" style="color: inherit; text-decoration: inherit;">Type</a>
@@ -1011,8 +935,7 @@ The following state arguments are supported:
         <span class="property-type">string</span>
     </dt>
     <dd>{{% md %}}Specifies the Type of the Extension. Changing this forces a new resource to be created.
-{{% /md %}}</dd>
-    <dt class="property-optional"
+{{% /md %}}</dd><dt class="property-optional"
             title="Optional">
         <span id="state_typehandlerversion_csharp">
 <a href="#state_typehandlerversion_csharp" style="color: inherit; text-decoration: inherit;">Type<wbr>Handler<wbr>Version</a>
@@ -1021,8 +944,7 @@ The following state arguments are supported:
         <span class="property-type">string</span>
     </dt>
     <dd>{{% md %}}Specifies the version of the extension to use, available versions can be found using the Azure CLI.
-{{% /md %}}</dd>
-    <dt class="property-optional"
+{{% /md %}}</dd><dt class="property-optional"
             title="Optional">
         <span id="state_virtualmachinescalesetid_csharp">
 <a href="#state_virtualmachinescalesetid_csharp" style="color: inherit; text-decoration: inherit;">Virtual<wbr>Machine<wbr>Scale<wbr>Set<wbr>Id</a>
@@ -1031,14 +953,11 @@ The following state arguments are supported:
         <span class="property-type">string</span>
     </dt>
     <dd>{{% md %}}The ID of the Virtual Machine Scale Set. Changing this forces a new resource to be created.
-{{% /md %}}</dd>
-</dl>
+{{% /md %}}</dd></dl>
 {{% /choosable %}}
 
 {{% choosable language go %}}
-<dl class="resources-properties">
-
-    <dt class="property-optional"
+<dl class="resources-properties"><dt class="property-optional"
             title="Optional">
         <span id="state_autoupgrademinorversion_go">
 <a href="#state_autoupgrademinorversion_go" style="color: inherit; text-decoration: inherit;">Auto<wbr>Upgrade<wbr>Minor<wbr>Version</a>
@@ -1047,8 +966,7 @@ The following state arguments are supported:
         <span class="property-type">bool</span>
     </dt>
     <dd>{{% md %}}Should the latest version of the Extension be used at Deployment Time, if one is available? This won't auto-update the extension on existing installation. Defaults to `true`.
-{{% /md %}}</dd>
-    <dt class="property-optional"
+{{% /md %}}</dd><dt class="property-optional"
             title="Optional">
         <span id="state_forceupdatetag_go">
 <a href="#state_forceupdatetag_go" style="color: inherit; text-decoration: inherit;">Force<wbr>Update<wbr>Tag</a>
@@ -1057,8 +975,7 @@ The following state arguments are supported:
         <span class="property-type">string</span>
     </dt>
     <dd>{{% md %}}A value which, when different to the previous value can be used to force-run the Extension even if the Extension Configuration hasn't changed.
-{{% /md %}}</dd>
-    <dt class="property-optional"
+{{% /md %}}</dd><dt class="property-optional"
             title="Optional">
         <span id="state_name_go">
 <a href="#state_name_go" style="color: inherit; text-decoration: inherit;">Name</a>
@@ -1067,8 +984,7 @@ The following state arguments are supported:
         <span class="property-type">string</span>
     </dt>
     <dd>{{% md %}}The name for the Virtual Machine Scale Set Extension. Changing this forces a new resource to be created.
-{{% /md %}}</dd>
-    <dt class="property-optional"
+{{% /md %}}</dd><dt class="property-optional"
             title="Optional">
         <span id="state_protectedsettings_go">
 <a href="#state_protectedsettings_go" style="color: inherit; text-decoration: inherit;">Protected<wbr>Settings</a>
@@ -1077,8 +993,7 @@ The following state arguments are supported:
         <span class="property-type">string</span>
     </dt>
     <dd>{{% md %}}A JSON String which specifies Sensitive Settings (such as Passwords) for the Extension.
-{{% /md %}}</dd>
-    <dt class="property-optional"
+{{% /md %}}</dd><dt class="property-optional"
             title="Optional">
         <span id="state_provisionafterextensions_go">
 <a href="#state_provisionafterextensions_go" style="color: inherit; text-decoration: inherit;">Provision<wbr>After<wbr>Extensions</a>
@@ -1087,8 +1002,7 @@ The following state arguments are supported:
         <span class="property-type">[]string</span>
     </dt>
     <dd>{{% md %}}An ordered list of Extension names which this should be provisioned after.
-{{% /md %}}</dd>
-    <dt class="property-optional"
+{{% /md %}}</dd><dt class="property-optional"
             title="Optional">
         <span id="state_publisher_go">
 <a href="#state_publisher_go" style="color: inherit; text-decoration: inherit;">Publisher</a>
@@ -1097,8 +1011,7 @@ The following state arguments are supported:
         <span class="property-type">string</span>
     </dt>
     <dd>{{% md %}}Specifies the Publisher of the Extension. Changing this forces a new resource to be created.
-{{% /md %}}</dd>
-    <dt class="property-optional"
+{{% /md %}}</dd><dt class="property-optional"
             title="Optional">
         <span id="state_settings_go">
 <a href="#state_settings_go" style="color: inherit; text-decoration: inherit;">Settings</a>
@@ -1107,8 +1020,7 @@ The following state arguments are supported:
         <span class="property-type">string</span>
     </dt>
     <dd>{{% md %}}A JSON String which specifies Settings for the Extension.
-{{% /md %}}</dd>
-    <dt class="property-optional"
+{{% /md %}}</dd><dt class="property-optional"
             title="Optional">
         <span id="state_type_go">
 <a href="#state_type_go" style="color: inherit; text-decoration: inherit;">Type</a>
@@ -1117,8 +1029,7 @@ The following state arguments are supported:
         <span class="property-type">string</span>
     </dt>
     <dd>{{% md %}}Specifies the Type of the Extension. Changing this forces a new resource to be created.
-{{% /md %}}</dd>
-    <dt class="property-optional"
+{{% /md %}}</dd><dt class="property-optional"
             title="Optional">
         <span id="state_typehandlerversion_go">
 <a href="#state_typehandlerversion_go" style="color: inherit; text-decoration: inherit;">Type<wbr>Handler<wbr>Version</a>
@@ -1127,8 +1038,7 @@ The following state arguments are supported:
         <span class="property-type">string</span>
     </dt>
     <dd>{{% md %}}Specifies the version of the extension to use, available versions can be found using the Azure CLI.
-{{% /md %}}</dd>
-    <dt class="property-optional"
+{{% /md %}}</dd><dt class="property-optional"
             title="Optional">
         <span id="state_virtualmachinescalesetid_go">
 <a href="#state_virtualmachinescalesetid_go" style="color: inherit; text-decoration: inherit;">Virtual<wbr>Machine<wbr>Scale<wbr>Set<wbr>Id</a>
@@ -1137,14 +1047,11 @@ The following state arguments are supported:
         <span class="property-type">string</span>
     </dt>
     <dd>{{% md %}}The ID of the Virtual Machine Scale Set. Changing this forces a new resource to be created.
-{{% /md %}}</dd>
-</dl>
+{{% /md %}}</dd></dl>
 {{% /choosable %}}
 
 {{% choosable language nodejs %}}
-<dl class="resources-properties">
-
-    <dt class="property-optional"
+<dl class="resources-properties"><dt class="property-optional"
             title="Optional">
         <span id="state_autoupgrademinorversion_nodejs">
 <a href="#state_autoupgrademinorversion_nodejs" style="color: inherit; text-decoration: inherit;">auto<wbr>Upgrade<wbr>Minor<wbr>Version</a>
@@ -1153,8 +1060,7 @@ The following state arguments are supported:
         <span class="property-type">boolean</span>
     </dt>
     <dd>{{% md %}}Should the latest version of the Extension be used at Deployment Time, if one is available? This won't auto-update the extension on existing installation. Defaults to `true`.
-{{% /md %}}</dd>
-    <dt class="property-optional"
+{{% /md %}}</dd><dt class="property-optional"
             title="Optional">
         <span id="state_forceupdatetag_nodejs">
 <a href="#state_forceupdatetag_nodejs" style="color: inherit; text-decoration: inherit;">force<wbr>Update<wbr>Tag</a>
@@ -1163,8 +1069,7 @@ The following state arguments are supported:
         <span class="property-type">string</span>
     </dt>
     <dd>{{% md %}}A value which, when different to the previous value can be used to force-run the Extension even if the Extension Configuration hasn't changed.
-{{% /md %}}</dd>
-    <dt class="property-optional"
+{{% /md %}}</dd><dt class="property-optional"
             title="Optional">
         <span id="state_name_nodejs">
 <a href="#state_name_nodejs" style="color: inherit; text-decoration: inherit;">name</a>
@@ -1173,8 +1078,7 @@ The following state arguments are supported:
         <span class="property-type">string</span>
     </dt>
     <dd>{{% md %}}The name for the Virtual Machine Scale Set Extension. Changing this forces a new resource to be created.
-{{% /md %}}</dd>
-    <dt class="property-optional"
+{{% /md %}}</dd><dt class="property-optional"
             title="Optional">
         <span id="state_protectedsettings_nodejs">
 <a href="#state_protectedsettings_nodejs" style="color: inherit; text-decoration: inherit;">protected<wbr>Settings</a>
@@ -1183,8 +1087,7 @@ The following state arguments are supported:
         <span class="property-type">string</span>
     </dt>
     <dd>{{% md %}}A JSON String which specifies Sensitive Settings (such as Passwords) for the Extension.
-{{% /md %}}</dd>
-    <dt class="property-optional"
+{{% /md %}}</dd><dt class="property-optional"
             title="Optional">
         <span id="state_provisionafterextensions_nodejs">
 <a href="#state_provisionafterextensions_nodejs" style="color: inherit; text-decoration: inherit;">provision<wbr>After<wbr>Extensions</a>
@@ -1193,8 +1096,7 @@ The following state arguments are supported:
         <span class="property-type">string[]</span>
     </dt>
     <dd>{{% md %}}An ordered list of Extension names which this should be provisioned after.
-{{% /md %}}</dd>
-    <dt class="property-optional"
+{{% /md %}}</dd><dt class="property-optional"
             title="Optional">
         <span id="state_publisher_nodejs">
 <a href="#state_publisher_nodejs" style="color: inherit; text-decoration: inherit;">publisher</a>
@@ -1203,8 +1105,7 @@ The following state arguments are supported:
         <span class="property-type">string</span>
     </dt>
     <dd>{{% md %}}Specifies the Publisher of the Extension. Changing this forces a new resource to be created.
-{{% /md %}}</dd>
-    <dt class="property-optional"
+{{% /md %}}</dd><dt class="property-optional"
             title="Optional">
         <span id="state_settings_nodejs">
 <a href="#state_settings_nodejs" style="color: inherit; text-decoration: inherit;">settings</a>
@@ -1213,8 +1114,7 @@ The following state arguments are supported:
         <span class="property-type">string</span>
     </dt>
     <dd>{{% md %}}A JSON String which specifies Settings for the Extension.
-{{% /md %}}</dd>
-    <dt class="property-optional"
+{{% /md %}}</dd><dt class="property-optional"
             title="Optional">
         <span id="state_type_nodejs">
 <a href="#state_type_nodejs" style="color: inherit; text-decoration: inherit;">type</a>
@@ -1223,8 +1123,7 @@ The following state arguments are supported:
         <span class="property-type">string</span>
     </dt>
     <dd>{{% md %}}Specifies the Type of the Extension. Changing this forces a new resource to be created.
-{{% /md %}}</dd>
-    <dt class="property-optional"
+{{% /md %}}</dd><dt class="property-optional"
             title="Optional">
         <span id="state_typehandlerversion_nodejs">
 <a href="#state_typehandlerversion_nodejs" style="color: inherit; text-decoration: inherit;">type<wbr>Handler<wbr>Version</a>
@@ -1233,8 +1132,7 @@ The following state arguments are supported:
         <span class="property-type">string</span>
     </dt>
     <dd>{{% md %}}Specifies the version of the extension to use, available versions can be found using the Azure CLI.
-{{% /md %}}</dd>
-    <dt class="property-optional"
+{{% /md %}}</dd><dt class="property-optional"
             title="Optional">
         <span id="state_virtualmachinescalesetid_nodejs">
 <a href="#state_virtualmachinescalesetid_nodejs" style="color: inherit; text-decoration: inherit;">virtual<wbr>Machine<wbr>Scale<wbr>Set<wbr>Id</a>
@@ -1243,14 +1141,11 @@ The following state arguments are supported:
         <span class="property-type">string</span>
     </dt>
     <dd>{{% md %}}The ID of the Virtual Machine Scale Set. Changing this forces a new resource to be created.
-{{% /md %}}</dd>
-</dl>
+{{% /md %}}</dd></dl>
 {{% /choosable %}}
 
 {{% choosable language python %}}
-<dl class="resources-properties">
-
-    <dt class="property-optional"
+<dl class="resources-properties"><dt class="property-optional"
             title="Optional">
         <span id="state_auto_upgrade_minor_version_python">
 <a href="#state_auto_upgrade_minor_version_python" style="color: inherit; text-decoration: inherit;">auto_<wbr>upgrade_<wbr>minor_<wbr>version</a>
@@ -1259,8 +1154,7 @@ The following state arguments are supported:
         <span class="property-type">bool</span>
     </dt>
     <dd>{{% md %}}Should the latest version of the Extension be used at Deployment Time, if one is available? This won't auto-update the extension on existing installation. Defaults to `true`.
-{{% /md %}}</dd>
-    <dt class="property-optional"
+{{% /md %}}</dd><dt class="property-optional"
             title="Optional">
         <span id="state_force_update_tag_python">
 <a href="#state_force_update_tag_python" style="color: inherit; text-decoration: inherit;">force_<wbr>update_<wbr>tag</a>
@@ -1269,8 +1163,7 @@ The following state arguments are supported:
         <span class="property-type">str</span>
     </dt>
     <dd>{{% md %}}A value which, when different to the previous value can be used to force-run the Extension even if the Extension Configuration hasn't changed.
-{{% /md %}}</dd>
-    <dt class="property-optional"
+{{% /md %}}</dd><dt class="property-optional"
             title="Optional">
         <span id="state_name_python">
 <a href="#state_name_python" style="color: inherit; text-decoration: inherit;">name</a>
@@ -1279,8 +1172,7 @@ The following state arguments are supported:
         <span class="property-type">str</span>
     </dt>
     <dd>{{% md %}}The name for the Virtual Machine Scale Set Extension. Changing this forces a new resource to be created.
-{{% /md %}}</dd>
-    <dt class="property-optional"
+{{% /md %}}</dd><dt class="property-optional"
             title="Optional">
         <span id="state_protected_settings_python">
 <a href="#state_protected_settings_python" style="color: inherit; text-decoration: inherit;">protected_<wbr>settings</a>
@@ -1289,8 +1181,7 @@ The following state arguments are supported:
         <span class="property-type">str</span>
     </dt>
     <dd>{{% md %}}A JSON String which specifies Sensitive Settings (such as Passwords) for the Extension.
-{{% /md %}}</dd>
-    <dt class="property-optional"
+{{% /md %}}</dd><dt class="property-optional"
             title="Optional">
         <span id="state_provision_after_extensions_python">
 <a href="#state_provision_after_extensions_python" style="color: inherit; text-decoration: inherit;">provision_<wbr>after_<wbr>extensions</a>
@@ -1299,8 +1190,7 @@ The following state arguments are supported:
         <span class="property-type">Sequence[str]</span>
     </dt>
     <dd>{{% md %}}An ordered list of Extension names which this should be provisioned after.
-{{% /md %}}</dd>
-    <dt class="property-optional"
+{{% /md %}}</dd><dt class="property-optional"
             title="Optional">
         <span id="state_publisher_python">
 <a href="#state_publisher_python" style="color: inherit; text-decoration: inherit;">publisher</a>
@@ -1309,8 +1199,7 @@ The following state arguments are supported:
         <span class="property-type">str</span>
     </dt>
     <dd>{{% md %}}Specifies the Publisher of the Extension. Changing this forces a new resource to be created.
-{{% /md %}}</dd>
-    <dt class="property-optional"
+{{% /md %}}</dd><dt class="property-optional"
             title="Optional">
         <span id="state_settings_python">
 <a href="#state_settings_python" style="color: inherit; text-decoration: inherit;">settings</a>
@@ -1319,8 +1208,7 @@ The following state arguments are supported:
         <span class="property-type">str</span>
     </dt>
     <dd>{{% md %}}A JSON String which specifies Settings for the Extension.
-{{% /md %}}</dd>
-    <dt class="property-optional"
+{{% /md %}}</dd><dt class="property-optional"
             title="Optional">
         <span id="state_type_python">
 <a href="#state_type_python" style="color: inherit; text-decoration: inherit;">type</a>
@@ -1329,8 +1217,7 @@ The following state arguments are supported:
         <span class="property-type">str</span>
     </dt>
     <dd>{{% md %}}Specifies the Type of the Extension. Changing this forces a new resource to be created.
-{{% /md %}}</dd>
-    <dt class="property-optional"
+{{% /md %}}</dd><dt class="property-optional"
             title="Optional">
         <span id="state_type_handler_version_python">
 <a href="#state_type_handler_version_python" style="color: inherit; text-decoration: inherit;">type_<wbr>handler_<wbr>version</a>
@@ -1339,8 +1226,7 @@ The following state arguments are supported:
         <span class="property-type">str</span>
     </dt>
     <dd>{{% md %}}Specifies the version of the extension to use, available versions can be found using the Azure CLI.
-{{% /md %}}</dd>
-    <dt class="property-optional"
+{{% /md %}}</dd><dt class="property-optional"
             title="Optional">
         <span id="state_virtual_machine_scale_set_id_python">
 <a href="#state_virtual_machine_scale_set_id_python" style="color: inherit; text-decoration: inherit;">virtual_<wbr>machine_<wbr>scale_<wbr>set_<wbr>id</a>
@@ -1349,8 +1235,7 @@ The following state arguments are supported:
         <span class="property-type">str</span>
     </dt>
     <dd>{{% md %}}The ID of the Virtual Machine Scale Set. Changing this forces a new resource to be created.
-{{% /md %}}</dd>
-</dl>
+{{% /md %}}</dd></dl>
 {{% /choosable %}}
 
 
@@ -1376,6 +1261,6 @@ Virtual Machine Scale Set Extensions can be imported using the `resource id`, e.
 	<dt>License</dt>
 	<dd>Apache-2.0</dd>
 	<dt>Notes</dt>
-	<dd>This Pulumi package is based on the [`azurerm` Terraform Provider](https://github.com/terraform-providers/terraform-provider-azurerm).</dd>
+	<dd>{{% md %}}This Pulumi package is based on the [`azurerm` Terraform Provider](https://github.com/terraform-providers/terraform-provider-azurerm).{{% /md %}}</dd>
 </dl>
 

@@ -14,11 +14,17 @@ The access control record.
 API Version: 2017-06-01.
 
 {{% examples %}}
+
 ## Example Usage
 
 {{< chooser language "typescript,python,go,csharp" / >}}
+
+
 ### AccessControlRecordsCreateOrUpdate
-{{% example csharp %}}
+
+
+{{< example csharp >}}
+
 ```csharp
 using Pulumi;
 using AzureNative = Pulumi.AzureNative;
@@ -40,9 +46,12 @@ class MyStack : Stack
 
 ```
 
-{{% /example %}}
 
-{{% example go %}}
+{{< /example >}}
+
+
+{{< example go >}}
+
 
 ```go
 package main
@@ -69,9 +78,12 @@ func main() {
 
 ```
 
-{{% /example %}}
 
-{{% example python %}}
+{{< /example >}}
+
+
+{{< example python >}}
+
 
 ```python
 import pulumi
@@ -85,9 +97,12 @@ access_control_record = azure_native.storsimple.AccessControlRecord("accessContr
 
 ```
 
-{{% /example %}}
 
-{{% example typescript %}}
+{{< /example >}}
+
+
+{{< example typescript >}}
+
 
 ```typescript
 import * as pulumi from "@pulumi/pulumi";
@@ -102,9 +117,16 @@ const accessControlRecord = new azure_native.storsimple.AccessControlRecord("acc
 
 ```
 
-{{% /example %}}
+
+{{< /example >}}
+
+
+
+
 
 {{% /examples %}}
+
+
 
 
 ## Create a AccessControlRecord Resource {#create}
@@ -129,9 +151,7 @@ const accessControlRecord = new azure_native.storsimple.AccessControlRecord("acc
 
 {{% choosable language nodejs %}}
 
-<dl class="resources-properties">
-  
-    <dt
+<dl class="resources-properties"><dt
         class="property-required" title="Required">
         <span>name</span>
         <span class="property-indicator"></span>
@@ -139,9 +159,7 @@ const accessControlRecord = new azure_native.storsimple.AccessControlRecord("acc
     </dt>
     <dd>
       The unique name of the resource.
-    </dd>
-  
-    <dt
+    </dd><dt
         class="property-required" title="Required">
         <span>args</span>
         <span class="property-indicator"></span>
@@ -149,9 +167,7 @@ const accessControlRecord = new azure_native.storsimple.AccessControlRecord("acc
     </dt>
     <dd>
       The arguments to resource properties.
-    </dd>
-  
-    <dt
+    </dd><dt
         class="property-optional" title="Optional">
         <span>opts</span>
         <span class="property-indicator"></span>
@@ -159,10 +175,7 @@ const accessControlRecord = new azure_native.storsimple.AccessControlRecord("acc
     </dt>
     <dd>
       Bag of options to control resource&#39;s behavior.
-    </dd>
-  
-
-</dl>
+    </dd></dl>
 
 {{% /choosable %}}
 
@@ -188,9 +201,7 @@ const accessControlRecord = new azure_native.storsimple.AccessControlRecord("acc
 
 {{% choosable language go %}}
 
-<dl class="resources-properties">
-  
-    <dt
+<dl class="resources-properties"><dt
         class="property-optional" title="Optional">
         <span>ctx</span>
         <span class="property-indicator"></span>
@@ -198,9 +209,7 @@ const accessControlRecord = new azure_native.storsimple.AccessControlRecord("acc
     </dt>
     <dd>
       Context object for the current deployment.
-    </dd>
-  
-    <dt
+    </dd><dt
         class="property-required" title="Required">
         <span>name</span>
         <span class="property-indicator"></span>
@@ -208,9 +217,7 @@ const accessControlRecord = new azure_native.storsimple.AccessControlRecord("acc
     </dt>
     <dd>
       The unique name of the resource.
-    </dd>
-  
-    <dt
+    </dd><dt
         class="property-required" title="Required">
         <span>args</span>
         <span class="property-indicator"></span>
@@ -218,9 +225,7 @@ const accessControlRecord = new azure_native.storsimple.AccessControlRecord("acc
     </dt>
     <dd>
       The arguments to resource properties.
-    </dd>
-  
-    <dt
+    </dd><dt
         class="property-optional" title="Optional">
         <span>opts</span>
         <span class="property-indicator"></span>
@@ -228,18 +233,13 @@ const accessControlRecord = new azure_native.storsimple.AccessControlRecord("acc
     </dt>
     <dd>
       Bag of options to control resource&#39;s behavior.
-    </dd>
-  
-
-</dl>
+    </dd></dl>
 
 {{% /choosable %}}
 
 {{% choosable language csharp %}}
 
-<dl class="resources-properties">
-  
-    <dt
+<dl class="resources-properties"><dt
         class="property-required" title="Required">
         <span>name</span>
         <span class="property-indicator"></span>
@@ -247,9 +247,7 @@ const accessControlRecord = new azure_native.storsimple.AccessControlRecord("acc
     </dt>
     <dd>
       The unique name of the resource.
-    </dd>
-  
-    <dt
+    </dd><dt
         class="property-required" title="Required">
         <span>args</span>
         <span class="property-indicator"></span>
@@ -257,9 +255,7 @@ const accessControlRecord = new azure_native.storsimple.AccessControlRecord("acc
     </dt>
     <dd>
       The arguments to resource properties.
-    </dd>
-  
-    <dt
+    </dd><dt
         class="property-optional" title="Optional">
         <span>opts</span>
         <span class="property-indicator"></span>
@@ -267,10 +263,7 @@ const accessControlRecord = new azure_native.storsimple.AccessControlRecord("acc
     </dt>
     <dd>
       Bag of options to control resource&#39;s behavior.
-    </dd>
-  
-
-</dl>
+    </dd></dl>
 
 {{% /choosable %}}
 
@@ -285,9 +278,7 @@ The AccessControlRecord resource accepts the following [input]({{< relref "/docs
 
 
 {{% choosable language csharp %}}
-<dl class="resources-properties">
-
-    <dt class="property-required"
+<dl class="resources-properties"><dt class="property-required"
             title="Required">
         <span id="initiatorname_csharp">
 <a href="#initiatorname_csharp" style="color: inherit; text-decoration: inherit;">Initiator<wbr>Name</a>
@@ -295,8 +286,7 @@ The AccessControlRecord resource accepts the following [input]({{< relref "/docs
         <span class="property-indicator"></span>
         <span class="property-type">string</span>
     </dt>
-    <dd>{{% md %}}The iSCSI initiator name (IQN).{{% /md %}}</dd>
-    <dt class="property-required"
+    <dd>{{% md %}}The iSCSI initiator name (IQN).{{% /md %}}</dd><dt class="property-required"
             title="Required">
         <span id="managername_csharp">
 <a href="#managername_csharp" style="color: inherit; text-decoration: inherit;">Manager<wbr>Name</a>
@@ -304,8 +294,7 @@ The AccessControlRecord resource accepts the following [input]({{< relref "/docs
         <span class="property-indicator"></span>
         <span class="property-type">string</span>
     </dt>
-    <dd>{{% md %}}The manager name{{% /md %}}</dd>
-    <dt class="property-required"
+    <dd>{{% md %}}The manager name{{% /md %}}</dd><dt class="property-required"
             title="Required">
         <span id="resourcegroupname_csharp">
 <a href="#resourcegroupname_csharp" style="color: inherit; text-decoration: inherit;">Resource<wbr>Group<wbr>Name</a>
@@ -313,8 +302,7 @@ The AccessControlRecord resource accepts the following [input]({{< relref "/docs
         <span class="property-indicator"></span>
         <span class="property-type">string</span>
     </dt>
-    <dd>{{% md %}}The resource group name{{% /md %}}</dd>
-    <dt class="property-optional"
+    <dd>{{% md %}}The resource group name{{% /md %}}</dd><dt class="property-optional"
             title="Optional">
         <span id="accesscontrolrecordname_csharp">
 <a href="#accesscontrolrecordname_csharp" style="color: inherit; text-decoration: inherit;">Access<wbr>Control<wbr>Record<wbr>Name</a>
@@ -322,8 +310,7 @@ The AccessControlRecord resource accepts the following [input]({{< relref "/docs
         <span class="property-indicator"></span>
         <span class="property-type">string</span>
     </dt>
-    <dd>{{% md %}}The name of the access control record.{{% /md %}}</dd>
-    <dt class="property-optional"
+    <dd>{{% md %}}The name of the access control record.{{% /md %}}</dd><dt class="property-optional"
             title="Optional">
         <span id="kind_csharp">
 <a href="#kind_csharp" style="color: inherit; text-decoration: inherit;">Kind</a>
@@ -331,14 +318,11 @@ The AccessControlRecord resource accepts the following [input]({{< relref "/docs
         <span class="property-indicator"></span>
         <span class="property-type"><a href="#kind">Pulumi.<wbr>Azure<wbr>Native.<wbr>Stor<wbr>Simple.<wbr>Kind</a></span>
     </dt>
-    <dd>{{% md %}}The Kind of the object. Currently only Series8000 is supported{{% /md %}}</dd>
-</dl>
+    <dd>{{% md %}}The Kind of the object. Currently only Series8000 is supported{{% /md %}}</dd></dl>
 {{% /choosable %}}
 
 {{% choosable language go %}}
-<dl class="resources-properties">
-
-    <dt class="property-required"
+<dl class="resources-properties"><dt class="property-required"
             title="Required">
         <span id="initiatorname_go">
 <a href="#initiatorname_go" style="color: inherit; text-decoration: inherit;">Initiator<wbr>Name</a>
@@ -346,8 +330,7 @@ The AccessControlRecord resource accepts the following [input]({{< relref "/docs
         <span class="property-indicator"></span>
         <span class="property-type">string</span>
     </dt>
-    <dd>{{% md %}}The iSCSI initiator name (IQN).{{% /md %}}</dd>
-    <dt class="property-required"
+    <dd>{{% md %}}The iSCSI initiator name (IQN).{{% /md %}}</dd><dt class="property-required"
             title="Required">
         <span id="managername_go">
 <a href="#managername_go" style="color: inherit; text-decoration: inherit;">Manager<wbr>Name</a>
@@ -355,8 +338,7 @@ The AccessControlRecord resource accepts the following [input]({{< relref "/docs
         <span class="property-indicator"></span>
         <span class="property-type">string</span>
     </dt>
-    <dd>{{% md %}}The manager name{{% /md %}}</dd>
-    <dt class="property-required"
+    <dd>{{% md %}}The manager name{{% /md %}}</dd><dt class="property-required"
             title="Required">
         <span id="resourcegroupname_go">
 <a href="#resourcegroupname_go" style="color: inherit; text-decoration: inherit;">Resource<wbr>Group<wbr>Name</a>
@@ -364,8 +346,7 @@ The AccessControlRecord resource accepts the following [input]({{< relref "/docs
         <span class="property-indicator"></span>
         <span class="property-type">string</span>
     </dt>
-    <dd>{{% md %}}The resource group name{{% /md %}}</dd>
-    <dt class="property-optional"
+    <dd>{{% md %}}The resource group name{{% /md %}}</dd><dt class="property-optional"
             title="Optional">
         <span id="accesscontrolrecordname_go">
 <a href="#accesscontrolrecordname_go" style="color: inherit; text-decoration: inherit;">Access<wbr>Control<wbr>Record<wbr>Name</a>
@@ -373,8 +354,7 @@ The AccessControlRecord resource accepts the following [input]({{< relref "/docs
         <span class="property-indicator"></span>
         <span class="property-type">string</span>
     </dt>
-    <dd>{{% md %}}The name of the access control record.{{% /md %}}</dd>
-    <dt class="property-optional"
+    <dd>{{% md %}}The name of the access control record.{{% /md %}}</dd><dt class="property-optional"
             title="Optional">
         <span id="kind_go">
 <a href="#kind_go" style="color: inherit; text-decoration: inherit;">Kind</a>
@@ -382,14 +362,11 @@ The AccessControlRecord resource accepts the following [input]({{< relref "/docs
         <span class="property-indicator"></span>
         <span class="property-type"><a href="#kind">Kind</a></span>
     </dt>
-    <dd>{{% md %}}The Kind of the object. Currently only Series8000 is supported{{% /md %}}</dd>
-</dl>
+    <dd>{{% md %}}The Kind of the object. Currently only Series8000 is supported{{% /md %}}</dd></dl>
 {{% /choosable %}}
 
 {{% choosable language nodejs %}}
-<dl class="resources-properties">
-
-    <dt class="property-required"
+<dl class="resources-properties"><dt class="property-required"
             title="Required">
         <span id="initiatorname_nodejs">
 <a href="#initiatorname_nodejs" style="color: inherit; text-decoration: inherit;">initiator<wbr>Name</a>
@@ -397,8 +374,7 @@ The AccessControlRecord resource accepts the following [input]({{< relref "/docs
         <span class="property-indicator"></span>
         <span class="property-type">string</span>
     </dt>
-    <dd>{{% md %}}The iSCSI initiator name (IQN).{{% /md %}}</dd>
-    <dt class="property-required"
+    <dd>{{% md %}}The iSCSI initiator name (IQN).{{% /md %}}</dd><dt class="property-required"
             title="Required">
         <span id="managername_nodejs">
 <a href="#managername_nodejs" style="color: inherit; text-decoration: inherit;">manager<wbr>Name</a>
@@ -406,8 +382,7 @@ The AccessControlRecord resource accepts the following [input]({{< relref "/docs
         <span class="property-indicator"></span>
         <span class="property-type">string</span>
     </dt>
-    <dd>{{% md %}}The manager name{{% /md %}}</dd>
-    <dt class="property-required"
+    <dd>{{% md %}}The manager name{{% /md %}}</dd><dt class="property-required"
             title="Required">
         <span id="resourcegroupname_nodejs">
 <a href="#resourcegroupname_nodejs" style="color: inherit; text-decoration: inherit;">resource<wbr>Group<wbr>Name</a>
@@ -415,8 +390,7 @@ The AccessControlRecord resource accepts the following [input]({{< relref "/docs
         <span class="property-indicator"></span>
         <span class="property-type">string</span>
     </dt>
-    <dd>{{% md %}}The resource group name{{% /md %}}</dd>
-    <dt class="property-optional"
+    <dd>{{% md %}}The resource group name{{% /md %}}</dd><dt class="property-optional"
             title="Optional">
         <span id="accesscontrolrecordname_nodejs">
 <a href="#accesscontrolrecordname_nodejs" style="color: inherit; text-decoration: inherit;">access<wbr>Control<wbr>Record<wbr>Name</a>
@@ -424,8 +398,7 @@ The AccessControlRecord resource accepts the following [input]({{< relref "/docs
         <span class="property-indicator"></span>
         <span class="property-type">string</span>
     </dt>
-    <dd>{{% md %}}The name of the access control record.{{% /md %}}</dd>
-    <dt class="property-optional"
+    <dd>{{% md %}}The name of the access control record.{{% /md %}}</dd><dt class="property-optional"
             title="Optional">
         <span id="kind_nodejs">
 <a href="#kind_nodejs" style="color: inherit; text-decoration: inherit;">kind</a>
@@ -433,14 +406,11 @@ The AccessControlRecord resource accepts the following [input]({{< relref "/docs
         <span class="property-indicator"></span>
         <span class="property-type"><a href="#kind">Kind</a></span>
     </dt>
-    <dd>{{% md %}}The Kind of the object. Currently only Series8000 is supported{{% /md %}}</dd>
-</dl>
+    <dd>{{% md %}}The Kind of the object. Currently only Series8000 is supported{{% /md %}}</dd></dl>
 {{% /choosable %}}
 
 {{% choosable language python %}}
-<dl class="resources-properties">
-
-    <dt class="property-required"
+<dl class="resources-properties"><dt class="property-required"
             title="Required">
         <span id="initiator_name_python">
 <a href="#initiator_name_python" style="color: inherit; text-decoration: inherit;">initiator_<wbr>name</a>
@@ -448,8 +418,7 @@ The AccessControlRecord resource accepts the following [input]({{< relref "/docs
         <span class="property-indicator"></span>
         <span class="property-type">str</span>
     </dt>
-    <dd>{{% md %}}The iSCSI initiator name (IQN).{{% /md %}}</dd>
-    <dt class="property-required"
+    <dd>{{% md %}}The iSCSI initiator name (IQN).{{% /md %}}</dd><dt class="property-required"
             title="Required">
         <span id="manager_name_python">
 <a href="#manager_name_python" style="color: inherit; text-decoration: inherit;">manager_<wbr>name</a>
@@ -457,8 +426,7 @@ The AccessControlRecord resource accepts the following [input]({{< relref "/docs
         <span class="property-indicator"></span>
         <span class="property-type">str</span>
     </dt>
-    <dd>{{% md %}}The manager name{{% /md %}}</dd>
-    <dt class="property-required"
+    <dd>{{% md %}}The manager name{{% /md %}}</dd><dt class="property-required"
             title="Required">
         <span id="resource_group_name_python">
 <a href="#resource_group_name_python" style="color: inherit; text-decoration: inherit;">resource_<wbr>group_<wbr>name</a>
@@ -466,8 +434,7 @@ The AccessControlRecord resource accepts the following [input]({{< relref "/docs
         <span class="property-indicator"></span>
         <span class="property-type">str</span>
     </dt>
-    <dd>{{% md %}}The resource group name{{% /md %}}</dd>
-    <dt class="property-optional"
+    <dd>{{% md %}}The resource group name{{% /md %}}</dd><dt class="property-optional"
             title="Optional">
         <span id="access_control_record_name_python">
 <a href="#access_control_record_name_python" style="color: inherit; text-decoration: inherit;">access_<wbr>control_<wbr>record_<wbr>name</a>
@@ -475,8 +442,7 @@ The AccessControlRecord resource accepts the following [input]({{< relref "/docs
         <span class="property-indicator"></span>
         <span class="property-type">str</span>
     </dt>
-    <dd>{{% md %}}The name of the access control record.{{% /md %}}</dd>
-    <dt class="property-optional"
+    <dd>{{% md %}}The name of the access control record.{{% /md %}}</dd><dt class="property-optional"
             title="Optional">
         <span id="kind_python">
 <a href="#kind_python" style="color: inherit; text-decoration: inherit;">kind</a>
@@ -484,8 +450,7 @@ The AccessControlRecord resource accepts the following [input]({{< relref "/docs
         <span class="property-indicator"></span>
         <span class="property-type"><a href="#kind">Kind</a></span>
     </dt>
-    <dd>{{% md %}}The Kind of the object. Currently only Series8000 is supported{{% /md %}}</dd>
-</dl>
+    <dd>{{% md %}}The Kind of the object. Currently only Series8000 is supported{{% /md %}}</dd></dl>
 {{% /choosable %}}
 
 
@@ -496,9 +461,7 @@ All [input](#inputs) properties are implicitly available as output properties. A
 
 
 {{% choosable language csharp %}}
-<dl class="resources-properties">
-
-    <dt class="property-"
+<dl class="resources-properties"><dt class="property-"
             title="">
         <span id="id_csharp">
 <a href="#id_csharp" style="color: inherit; text-decoration: inherit;">Id</a>
@@ -506,8 +469,7 @@ All [input](#inputs) properties are implicitly available as output properties. A
         <span class="property-indicator"></span>
         <span class="property-type">string</span>
     </dt>
-    <dd>{{% md %}}The provider-assigned unique ID for this managed resource.{{% /md %}}</dd>
-    <dt class="property-"
+    <dd>{{% md %}}The provider-assigned unique ID for this managed resource.{{% /md %}}</dd><dt class="property-"
             title="">
         <span id="name_csharp">
 <a href="#name_csharp" style="color: inherit; text-decoration: inherit;">Name</a>
@@ -515,8 +477,7 @@ All [input](#inputs) properties are implicitly available as output properties. A
         <span class="property-indicator"></span>
         <span class="property-type">string</span>
     </dt>
-    <dd>{{% md %}}The name of the object.{{% /md %}}</dd>
-    <dt class="property-"
+    <dd>{{% md %}}The name of the object.{{% /md %}}</dd><dt class="property-"
             title="">
         <span id="type_csharp">
 <a href="#type_csharp" style="color: inherit; text-decoration: inherit;">Type</a>
@@ -524,8 +485,7 @@ All [input](#inputs) properties are implicitly available as output properties. A
         <span class="property-indicator"></span>
         <span class="property-type">string</span>
     </dt>
-    <dd>{{% md %}}The hierarchical type of the object.{{% /md %}}</dd>
-    <dt class="property-"
+    <dd>{{% md %}}The hierarchical type of the object.{{% /md %}}</dd><dt class="property-"
             title="">
         <span id="volumecount_csharp">
 <a href="#volumecount_csharp" style="color: inherit; text-decoration: inherit;">Volume<wbr>Count</a>
@@ -533,14 +493,11 @@ All [input](#inputs) properties are implicitly available as output properties. A
         <span class="property-indicator"></span>
         <span class="property-type">int</span>
     </dt>
-    <dd>{{% md %}}The number of volumes using the access control record.{{% /md %}}</dd>
-</dl>
+    <dd>{{% md %}}The number of volumes using the access control record.{{% /md %}}</dd></dl>
 {{% /choosable %}}
 
 {{% choosable language go %}}
-<dl class="resources-properties">
-
-    <dt class="property-"
+<dl class="resources-properties"><dt class="property-"
             title="">
         <span id="id_go">
 <a href="#id_go" style="color: inherit; text-decoration: inherit;">Id</a>
@@ -548,8 +505,7 @@ All [input](#inputs) properties are implicitly available as output properties. A
         <span class="property-indicator"></span>
         <span class="property-type">string</span>
     </dt>
-    <dd>{{% md %}}The provider-assigned unique ID for this managed resource.{{% /md %}}</dd>
-    <dt class="property-"
+    <dd>{{% md %}}The provider-assigned unique ID for this managed resource.{{% /md %}}</dd><dt class="property-"
             title="">
         <span id="name_go">
 <a href="#name_go" style="color: inherit; text-decoration: inherit;">Name</a>
@@ -557,8 +513,7 @@ All [input](#inputs) properties are implicitly available as output properties. A
         <span class="property-indicator"></span>
         <span class="property-type">string</span>
     </dt>
-    <dd>{{% md %}}The name of the object.{{% /md %}}</dd>
-    <dt class="property-"
+    <dd>{{% md %}}The name of the object.{{% /md %}}</dd><dt class="property-"
             title="">
         <span id="type_go">
 <a href="#type_go" style="color: inherit; text-decoration: inherit;">Type</a>
@@ -566,8 +521,7 @@ All [input](#inputs) properties are implicitly available as output properties. A
         <span class="property-indicator"></span>
         <span class="property-type">string</span>
     </dt>
-    <dd>{{% md %}}The hierarchical type of the object.{{% /md %}}</dd>
-    <dt class="property-"
+    <dd>{{% md %}}The hierarchical type of the object.{{% /md %}}</dd><dt class="property-"
             title="">
         <span id="volumecount_go">
 <a href="#volumecount_go" style="color: inherit; text-decoration: inherit;">Volume<wbr>Count</a>
@@ -575,14 +529,11 @@ All [input](#inputs) properties are implicitly available as output properties. A
         <span class="property-indicator"></span>
         <span class="property-type">int</span>
     </dt>
-    <dd>{{% md %}}The number of volumes using the access control record.{{% /md %}}</dd>
-</dl>
+    <dd>{{% md %}}The number of volumes using the access control record.{{% /md %}}</dd></dl>
 {{% /choosable %}}
 
 {{% choosable language nodejs %}}
-<dl class="resources-properties">
-
-    <dt class="property-"
+<dl class="resources-properties"><dt class="property-"
             title="">
         <span id="id_nodejs">
 <a href="#id_nodejs" style="color: inherit; text-decoration: inherit;">id</a>
@@ -590,8 +541,7 @@ All [input](#inputs) properties are implicitly available as output properties. A
         <span class="property-indicator"></span>
         <span class="property-type">string</span>
     </dt>
-    <dd>{{% md %}}The provider-assigned unique ID for this managed resource.{{% /md %}}</dd>
-    <dt class="property-"
+    <dd>{{% md %}}The provider-assigned unique ID for this managed resource.{{% /md %}}</dd><dt class="property-"
             title="">
         <span id="name_nodejs">
 <a href="#name_nodejs" style="color: inherit; text-decoration: inherit;">name</a>
@@ -599,8 +549,7 @@ All [input](#inputs) properties are implicitly available as output properties. A
         <span class="property-indicator"></span>
         <span class="property-type">string</span>
     </dt>
-    <dd>{{% md %}}The name of the object.{{% /md %}}</dd>
-    <dt class="property-"
+    <dd>{{% md %}}The name of the object.{{% /md %}}</dd><dt class="property-"
             title="">
         <span id="type_nodejs">
 <a href="#type_nodejs" style="color: inherit; text-decoration: inherit;">type</a>
@@ -608,8 +557,7 @@ All [input](#inputs) properties are implicitly available as output properties. A
         <span class="property-indicator"></span>
         <span class="property-type">string</span>
     </dt>
-    <dd>{{% md %}}The hierarchical type of the object.{{% /md %}}</dd>
-    <dt class="property-"
+    <dd>{{% md %}}The hierarchical type of the object.{{% /md %}}</dd><dt class="property-"
             title="">
         <span id="volumecount_nodejs">
 <a href="#volumecount_nodejs" style="color: inherit; text-decoration: inherit;">volume<wbr>Count</a>
@@ -617,14 +565,11 @@ All [input](#inputs) properties are implicitly available as output properties. A
         <span class="property-indicator"></span>
         <span class="property-type">number</span>
     </dt>
-    <dd>{{% md %}}The number of volumes using the access control record.{{% /md %}}</dd>
-</dl>
+    <dd>{{% md %}}The number of volumes using the access control record.{{% /md %}}</dd></dl>
 {{% /choosable %}}
 
 {{% choosable language python %}}
-<dl class="resources-properties">
-
-    <dt class="property-"
+<dl class="resources-properties"><dt class="property-"
             title="">
         <span id="id_python">
 <a href="#id_python" style="color: inherit; text-decoration: inherit;">id</a>
@@ -632,8 +577,7 @@ All [input](#inputs) properties are implicitly available as output properties. A
         <span class="property-indicator"></span>
         <span class="property-type">str</span>
     </dt>
-    <dd>{{% md %}}The provider-assigned unique ID for this managed resource.{{% /md %}}</dd>
-    <dt class="property-"
+    <dd>{{% md %}}The provider-assigned unique ID for this managed resource.{{% /md %}}</dd><dt class="property-"
             title="">
         <span id="name_python">
 <a href="#name_python" style="color: inherit; text-decoration: inherit;">name</a>
@@ -641,8 +585,7 @@ All [input](#inputs) properties are implicitly available as output properties. A
         <span class="property-indicator"></span>
         <span class="property-type">str</span>
     </dt>
-    <dd>{{% md %}}The name of the object.{{% /md %}}</dd>
-    <dt class="property-"
+    <dd>{{% md %}}The name of the object.{{% /md %}}</dd><dt class="property-"
             title="">
         <span id="type_python">
 <a href="#type_python" style="color: inherit; text-decoration: inherit;">type</a>
@@ -650,8 +593,7 @@ All [input](#inputs) properties are implicitly available as output properties. A
         <span class="property-indicator"></span>
         <span class="property-type">str</span>
     </dt>
-    <dd>{{% md %}}The hierarchical type of the object.{{% /md %}}</dd>
-    <dt class="property-"
+    <dd>{{% md %}}The hierarchical type of the object.{{% /md %}}</dd><dt class="property-"
             title="">
         <span id="volume_count_python">
 <a href="#volume_count_python" style="color: inherit; text-decoration: inherit;">volume_<wbr>count</a>
@@ -659,8 +601,7 @@ All [input](#inputs) properties are implicitly available as output properties. A
         <span class="property-indicator"></span>
         <span class="property-type">int</span>
     </dt>
-    <dd>{{% md %}}The number of volumes using the access control record.{{% /md %}}</dd>
-</dl>
+    <dd>{{% md %}}The number of volumes using the access control record.{{% /md %}}</dd></dl>
 {{% /choosable %}}
 
 
@@ -676,31 +617,23 @@ All [input](#inputs) properties are implicitly available as output properties. A
 <h4 id="kind">Kind</h4>
 
 {{% choosable language csharp %}}
-<dl class="tabular">
-    <dt>Series8000</dt>
-    <dd>Series8000</dd>
-</dl>
+<dl class="tabular"><dt>Series8000</dt>
+    <dd>Series8000</dd></dl>
 {{% /choosable %}}
 
 {{% choosable language go %}}
-<dl class="tabular">
-    <dt>Kind<wbr>Series8000</dt>
-    <dd>Series8000</dd>
-</dl>
+<dl class="tabular"><dt>Kind<wbr>Series8000</dt>
+    <dd>Series8000</dd></dl>
 {{% /choosable %}}
 
 {{% choosable language nodejs %}}
-<dl class="tabular">
-    <dt>Series8000</dt>
-    <dd>Series8000</dd>
-</dl>
+<dl class="tabular"><dt>Series8000</dt>
+    <dd>Series8000</dd></dl>
 {{% /choosable %}}
 
 {{% choosable language python %}}
-<dl class="tabular">
-    <dt>SERIES8000</dt>
-    <dd>Series8000</dd>
-</dl>
+<dl class="tabular"><dt>SERIES8000</dt>
+    <dd>Series8000</dd></dl>
 {{% /choosable %}}
 ## Import
 

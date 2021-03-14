@@ -14,11 +14,17 @@ Information about RDS orderable DB instances and valid parameter combinations.
 
 
 {{% examples %}}
+
 ## Example Usage
 
 {{< chooser language "typescript,python,go,csharp" / >}}
 
-{{% example csharp %}}
+
+
+
+
+{{< example csharp >}}
+
 ```csharp
 using Pulumi;
 using Aws = Pulumi.Aws;
@@ -45,9 +51,12 @@ class MyStack : Stack
 }
 ```
 
-{{% /example %}}
 
-{{% example go %}}
+{{< /example >}}
+
+
+{{< example go >}}
+
 ```go
 package main
 
@@ -80,9 +89,12 @@ func main() {
 }
 ```
 
-{{% /example %}}
 
-{{% example python %}}
+{{< /example >}}
+
+
+{{< example python >}}
+
 ```python
 import pulumi
 import pulumi_aws as aws
@@ -98,9 +110,12 @@ test = aws.rds.get_orderable_db_instance(engine="mysql",
     storage_type="standard")
 ```
 
-{{% /example %}}
 
-{{% example typescript %}}
+{{< /example >}}
+
+
+{{< example typescript >}}
+
 
 ```typescript
 import * as pulumi from "@pulumi/pulumi";
@@ -119,9 +134,16 @@ const test = pulumi.output(aws.rds.getOrderableDbInstance({
 }, { async: true }));
 ```
 
-{{% /example %}}
+
+{{< /example >}}
+
+
+
+
 
 {{% /examples %}}
+
+
 
 
 ## Using getOrderableDbInstance {#using}
@@ -159,9 +181,7 @@ The following arguments are supported:
 
 
 {{% choosable language csharp %}}
-<dl class="resources-properties">
-
-    <dt class="property-required"
+<dl class="resources-properties"><dt class="property-required"
             title="Required">
         <span id="engine_csharp">
 <a href="#engine_csharp" style="color: inherit; text-decoration: inherit;">Engine</a>
@@ -170,8 +190,7 @@ The following arguments are supported:
         <span class="property-type">string</span>
     </dt>
     <dd>{{% md %}}DB engine. Engine values include `aurora`, `aurora-mysql`, `aurora-postgresql`, `docdb`, `mariadb`, `mysql`, `neptune`, `oracle-ee`, `oracle-se`, `oracle-se1`, `oracle-se2`, `postgres`, `sqlserver-ee`, `sqlserver-ex`, `sqlserver-se`, and `sqlserver-web`.
-{{% /md %}}</dd>
-    <dt class="property-optional"
+{{% /md %}}</dd><dt class="property-optional"
             title="Optional">
         <span id="availabilityzonegroup_csharp">
 <a href="#availabilityzonegroup_csharp" style="color: inherit; text-decoration: inherit;">Availability<wbr>Zone<wbr>Group</a>
@@ -180,8 +199,7 @@ The following arguments are supported:
         <span class="property-type">string</span>
     </dt>
     <dd>{{% md %}}Availability zone group.
-{{% /md %}}</dd>
-    <dt class="property-optional"
+{{% /md %}}</dd><dt class="property-optional"
             title="Optional">
         <span id="engineversion_csharp">
 <a href="#engineversion_csharp" style="color: inherit; text-decoration: inherit;">Engine<wbr>Version</a>
@@ -190,8 +208,7 @@ The following arguments are supported:
         <span class="property-type">string</span>
     </dt>
     <dd>{{% md %}}Version of the DB engine. If none is provided, the AWS-defined default version will be used.
-{{% /md %}}</dd>
-    <dt class="property-optional"
+{{% /md %}}</dd><dt class="property-optional"
             title="Optional">
         <span id="instanceclass_csharp">
 <a href="#instanceclass_csharp" style="color: inherit; text-decoration: inherit;">Instance<wbr>Class</a>
@@ -200,8 +217,7 @@ The following arguments are supported:
         <span class="property-type">string</span>
     </dt>
     <dd>{{% md %}}DB instance class. Examples of classes are `db.m3.2xlarge`, `db.t2.small`, and `db.m3.medium`.
-{{% /md %}}</dd>
-    <dt class="property-optional"
+{{% /md %}}</dd><dt class="property-optional"
             title="Optional">
         <span id="licensemodel_csharp">
 <a href="#licensemodel_csharp" style="color: inherit; text-decoration: inherit;">License<wbr>Model</a>
@@ -210,8 +226,7 @@ The following arguments are supported:
         <span class="property-type">string</span>
     </dt>
     <dd>{{% md %}}License model. Examples of license models are `general-public-license`, `bring-your-own-license`, and `amazon-license`.
-{{% /md %}}</dd>
-    <dt class="property-optional"
+{{% /md %}}</dd><dt class="property-optional"
             title="Optional">
         <span id="preferredengineversions_csharp">
 <a href="#preferredengineversions_csharp" style="color: inherit; text-decoration: inherit;">Preferred<wbr>Engine<wbr>Versions</a>
@@ -220,8 +235,7 @@ The following arguments are supported:
         <span class="property-type">List&lt;string&gt;</span>
     </dt>
     <dd>{{% md %}}Ordered list of preferred RDS DB instance engine versions. The first match in this list will be returned. If no preferred matches are found and the original search returned more than one result, an error is returned.
-{{% /md %}}</dd>
-    <dt class="property-optional"
+{{% /md %}}</dd><dt class="property-optional"
             title="Optional">
         <span id="preferredinstanceclasses_csharp">
 <a href="#preferredinstanceclasses_csharp" style="color: inherit; text-decoration: inherit;">Preferred<wbr>Instance<wbr>Classes</a>
@@ -230,8 +244,7 @@ The following arguments are supported:
         <span class="property-type">List&lt;string&gt;</span>
     </dt>
     <dd>{{% md %}}Ordered list of preferred RDS DB instance classes. The first match in this list will be returned. If no preferred matches are found and the original search returned more than one result, an error is returned.
-{{% /md %}}</dd>
-    <dt class="property-optional"
+{{% /md %}}</dd><dt class="property-optional"
             title="Optional">
         <span id="storagetype_csharp">
 <a href="#storagetype_csharp" style="color: inherit; text-decoration: inherit;">Storage<wbr>Type</a>
@@ -240,8 +253,7 @@ The following arguments are supported:
         <span class="property-type">string</span>
     </dt>
     <dd>{{% md %}}Storage types. Examples of storage types are `standard`, `io1`, `gp2`, and `aurora`.
-{{% /md %}}</dd>
-    <dt class="property-optional"
+{{% /md %}}</dd><dt class="property-optional"
             title="Optional">
         <span id="supportsenhancedmonitoring_csharp">
 <a href="#supportsenhancedmonitoring_csharp" style="color: inherit; text-decoration: inherit;">Supports<wbr>Enhanced<wbr>Monitoring</a>
@@ -250,8 +262,7 @@ The following arguments are supported:
         <span class="property-type">bool</span>
     </dt>
     <dd>{{% md %}}Enable this to ensure a DB instance supports Enhanced Monitoring at intervals from 1 to 60 seconds.
-{{% /md %}}</dd>
-    <dt class="property-optional"
+{{% /md %}}</dd><dt class="property-optional"
             title="Optional">
         <span id="supportsglobaldatabases_csharp">
 <a href="#supportsglobaldatabases_csharp" style="color: inherit; text-decoration: inherit;">Supports<wbr>Global<wbr>Databases</a>
@@ -260,8 +271,7 @@ The following arguments are supported:
         <span class="property-type">bool</span>
     </dt>
     <dd>{{% md %}}Enable this to ensure a DB instance supports Aurora global databases with a specific combination of other DB engine attributes.
-{{% /md %}}</dd>
-    <dt class="property-optional"
+{{% /md %}}</dd><dt class="property-optional"
             title="Optional">
         <span id="supportsiamdatabaseauthentication_csharp">
 <a href="#supportsiamdatabaseauthentication_csharp" style="color: inherit; text-decoration: inherit;">Supports<wbr>Iam<wbr>Database<wbr>Authentication</a>
@@ -270,8 +280,7 @@ The following arguments are supported:
         <span class="property-type">bool</span>
     </dt>
     <dd>{{% md %}}Enable this to ensure a DB instance supports IAM database authentication.
-{{% /md %}}</dd>
-    <dt class="property-optional"
+{{% /md %}}</dd><dt class="property-optional"
             title="Optional">
         <span id="supportsiops_csharp">
 <a href="#supportsiops_csharp" style="color: inherit; text-decoration: inherit;">Supports<wbr>Iops</a>
@@ -280,8 +289,7 @@ The following arguments are supported:
         <span class="property-type">bool</span>
     </dt>
     <dd>{{% md %}}Enable this to ensure a DB instance supports provisioned IOPS.
-{{% /md %}}</dd>
-    <dt class="property-optional"
+{{% /md %}}</dd><dt class="property-optional"
             title="Optional">
         <span id="supportskerberosauthentication_csharp">
 <a href="#supportskerberosauthentication_csharp" style="color: inherit; text-decoration: inherit;">Supports<wbr>Kerberos<wbr>Authentication</a>
@@ -290,8 +298,7 @@ The following arguments are supported:
         <span class="property-type">bool</span>
     </dt>
     <dd>{{% md %}}Enable this to ensure a DB instance supports Kerberos Authentication.
-{{% /md %}}</dd>
-    <dt class="property-optional"
+{{% /md %}}</dd><dt class="property-optional"
             title="Optional">
         <span id="supportsperformanceinsights_csharp">
 <a href="#supportsperformanceinsights_csharp" style="color: inherit; text-decoration: inherit;">Supports<wbr>Performance<wbr>Insights</a>
@@ -300,8 +307,7 @@ The following arguments are supported:
         <span class="property-type">bool</span>
     </dt>
     <dd>{{% md %}}Enable this to ensure a DB instance supports Performance Insights.
-{{% /md %}}</dd>
-    <dt class="property-optional"
+{{% /md %}}</dd><dt class="property-optional"
             title="Optional">
         <span id="supportsstorageautoscaling_csharp">
 <a href="#supportsstorageautoscaling_csharp" style="color: inherit; text-decoration: inherit;">Supports<wbr>Storage<wbr>Autoscaling</a>
@@ -310,8 +316,7 @@ The following arguments are supported:
         <span class="property-type">bool</span>
     </dt>
     <dd>{{% md %}}Enable this to ensure Amazon RDS can automatically scale storage for DB instances that use the specified DB instance class.
-{{% /md %}}</dd>
-    <dt class="property-optional"
+{{% /md %}}</dd><dt class="property-optional"
             title="Optional">
         <span id="supportsstorageencryption_csharp">
 <a href="#supportsstorageencryption_csharp" style="color: inherit; text-decoration: inherit;">Supports<wbr>Storage<wbr>Encryption</a>
@@ -320,8 +325,7 @@ The following arguments are supported:
         <span class="property-type">bool</span>
     </dt>
     <dd>{{% md %}}Enable this to ensure a DB instance supports encrypted storage.
-{{% /md %}}</dd>
-    <dt class="property-optional"
+{{% /md %}}</dd><dt class="property-optional"
             title="Optional">
         <span id="vpc_csharp">
 <a href="#vpc_csharp" style="color: inherit; text-decoration: inherit;">Vpc</a>
@@ -330,14 +334,11 @@ The following arguments are supported:
         <span class="property-type">bool</span>
     </dt>
     <dd>{{% md %}}Boolean that indicates whether to show only VPC or non-VPC offerings.
-{{% /md %}}</dd>
-</dl>
+{{% /md %}}</dd></dl>
 {{% /choosable %}}
 
 {{% choosable language go %}}
-<dl class="resources-properties">
-
-    <dt class="property-required"
+<dl class="resources-properties"><dt class="property-required"
             title="Required">
         <span id="engine_go">
 <a href="#engine_go" style="color: inherit; text-decoration: inherit;">Engine</a>
@@ -346,8 +347,7 @@ The following arguments are supported:
         <span class="property-type">string</span>
     </dt>
     <dd>{{% md %}}DB engine. Engine values include `aurora`, `aurora-mysql`, `aurora-postgresql`, `docdb`, `mariadb`, `mysql`, `neptune`, `oracle-ee`, `oracle-se`, `oracle-se1`, `oracle-se2`, `postgres`, `sqlserver-ee`, `sqlserver-ex`, `sqlserver-se`, and `sqlserver-web`.
-{{% /md %}}</dd>
-    <dt class="property-optional"
+{{% /md %}}</dd><dt class="property-optional"
             title="Optional">
         <span id="availabilityzonegroup_go">
 <a href="#availabilityzonegroup_go" style="color: inherit; text-decoration: inherit;">Availability<wbr>Zone<wbr>Group</a>
@@ -356,8 +356,7 @@ The following arguments are supported:
         <span class="property-type">string</span>
     </dt>
     <dd>{{% md %}}Availability zone group.
-{{% /md %}}</dd>
-    <dt class="property-optional"
+{{% /md %}}</dd><dt class="property-optional"
             title="Optional">
         <span id="engineversion_go">
 <a href="#engineversion_go" style="color: inherit; text-decoration: inherit;">Engine<wbr>Version</a>
@@ -366,8 +365,7 @@ The following arguments are supported:
         <span class="property-type">string</span>
     </dt>
     <dd>{{% md %}}Version of the DB engine. If none is provided, the AWS-defined default version will be used.
-{{% /md %}}</dd>
-    <dt class="property-optional"
+{{% /md %}}</dd><dt class="property-optional"
             title="Optional">
         <span id="instanceclass_go">
 <a href="#instanceclass_go" style="color: inherit; text-decoration: inherit;">Instance<wbr>Class</a>
@@ -376,8 +374,7 @@ The following arguments are supported:
         <span class="property-type">string</span>
     </dt>
     <dd>{{% md %}}DB instance class. Examples of classes are `db.m3.2xlarge`, `db.t2.small`, and `db.m3.medium`.
-{{% /md %}}</dd>
-    <dt class="property-optional"
+{{% /md %}}</dd><dt class="property-optional"
             title="Optional">
         <span id="licensemodel_go">
 <a href="#licensemodel_go" style="color: inherit; text-decoration: inherit;">License<wbr>Model</a>
@@ -386,8 +383,7 @@ The following arguments are supported:
         <span class="property-type">string</span>
     </dt>
     <dd>{{% md %}}License model. Examples of license models are `general-public-license`, `bring-your-own-license`, and `amazon-license`.
-{{% /md %}}</dd>
-    <dt class="property-optional"
+{{% /md %}}</dd><dt class="property-optional"
             title="Optional">
         <span id="preferredengineversions_go">
 <a href="#preferredengineversions_go" style="color: inherit; text-decoration: inherit;">Preferred<wbr>Engine<wbr>Versions</a>
@@ -396,8 +392,7 @@ The following arguments are supported:
         <span class="property-type">[]string</span>
     </dt>
     <dd>{{% md %}}Ordered list of preferred RDS DB instance engine versions. The first match in this list will be returned. If no preferred matches are found and the original search returned more than one result, an error is returned.
-{{% /md %}}</dd>
-    <dt class="property-optional"
+{{% /md %}}</dd><dt class="property-optional"
             title="Optional">
         <span id="preferredinstanceclasses_go">
 <a href="#preferredinstanceclasses_go" style="color: inherit; text-decoration: inherit;">Preferred<wbr>Instance<wbr>Classes</a>
@@ -406,8 +401,7 @@ The following arguments are supported:
         <span class="property-type">[]string</span>
     </dt>
     <dd>{{% md %}}Ordered list of preferred RDS DB instance classes. The first match in this list will be returned. If no preferred matches are found and the original search returned more than one result, an error is returned.
-{{% /md %}}</dd>
-    <dt class="property-optional"
+{{% /md %}}</dd><dt class="property-optional"
             title="Optional">
         <span id="storagetype_go">
 <a href="#storagetype_go" style="color: inherit; text-decoration: inherit;">Storage<wbr>Type</a>
@@ -416,8 +410,7 @@ The following arguments are supported:
         <span class="property-type">string</span>
     </dt>
     <dd>{{% md %}}Storage types. Examples of storage types are `standard`, `io1`, `gp2`, and `aurora`.
-{{% /md %}}</dd>
-    <dt class="property-optional"
+{{% /md %}}</dd><dt class="property-optional"
             title="Optional">
         <span id="supportsenhancedmonitoring_go">
 <a href="#supportsenhancedmonitoring_go" style="color: inherit; text-decoration: inherit;">Supports<wbr>Enhanced<wbr>Monitoring</a>
@@ -426,8 +419,7 @@ The following arguments are supported:
         <span class="property-type">bool</span>
     </dt>
     <dd>{{% md %}}Enable this to ensure a DB instance supports Enhanced Monitoring at intervals from 1 to 60 seconds.
-{{% /md %}}</dd>
-    <dt class="property-optional"
+{{% /md %}}</dd><dt class="property-optional"
             title="Optional">
         <span id="supportsglobaldatabases_go">
 <a href="#supportsglobaldatabases_go" style="color: inherit; text-decoration: inherit;">Supports<wbr>Global<wbr>Databases</a>
@@ -436,8 +428,7 @@ The following arguments are supported:
         <span class="property-type">bool</span>
     </dt>
     <dd>{{% md %}}Enable this to ensure a DB instance supports Aurora global databases with a specific combination of other DB engine attributes.
-{{% /md %}}</dd>
-    <dt class="property-optional"
+{{% /md %}}</dd><dt class="property-optional"
             title="Optional">
         <span id="supportsiamdatabaseauthentication_go">
 <a href="#supportsiamdatabaseauthentication_go" style="color: inherit; text-decoration: inherit;">Supports<wbr>Iam<wbr>Database<wbr>Authentication</a>
@@ -446,8 +437,7 @@ The following arguments are supported:
         <span class="property-type">bool</span>
     </dt>
     <dd>{{% md %}}Enable this to ensure a DB instance supports IAM database authentication.
-{{% /md %}}</dd>
-    <dt class="property-optional"
+{{% /md %}}</dd><dt class="property-optional"
             title="Optional">
         <span id="supportsiops_go">
 <a href="#supportsiops_go" style="color: inherit; text-decoration: inherit;">Supports<wbr>Iops</a>
@@ -456,8 +446,7 @@ The following arguments are supported:
         <span class="property-type">bool</span>
     </dt>
     <dd>{{% md %}}Enable this to ensure a DB instance supports provisioned IOPS.
-{{% /md %}}</dd>
-    <dt class="property-optional"
+{{% /md %}}</dd><dt class="property-optional"
             title="Optional">
         <span id="supportskerberosauthentication_go">
 <a href="#supportskerberosauthentication_go" style="color: inherit; text-decoration: inherit;">Supports<wbr>Kerberos<wbr>Authentication</a>
@@ -466,8 +455,7 @@ The following arguments are supported:
         <span class="property-type">bool</span>
     </dt>
     <dd>{{% md %}}Enable this to ensure a DB instance supports Kerberos Authentication.
-{{% /md %}}</dd>
-    <dt class="property-optional"
+{{% /md %}}</dd><dt class="property-optional"
             title="Optional">
         <span id="supportsperformanceinsights_go">
 <a href="#supportsperformanceinsights_go" style="color: inherit; text-decoration: inherit;">Supports<wbr>Performance<wbr>Insights</a>
@@ -476,8 +464,7 @@ The following arguments are supported:
         <span class="property-type">bool</span>
     </dt>
     <dd>{{% md %}}Enable this to ensure a DB instance supports Performance Insights.
-{{% /md %}}</dd>
-    <dt class="property-optional"
+{{% /md %}}</dd><dt class="property-optional"
             title="Optional">
         <span id="supportsstorageautoscaling_go">
 <a href="#supportsstorageautoscaling_go" style="color: inherit; text-decoration: inherit;">Supports<wbr>Storage<wbr>Autoscaling</a>
@@ -486,8 +473,7 @@ The following arguments are supported:
         <span class="property-type">bool</span>
     </dt>
     <dd>{{% md %}}Enable this to ensure Amazon RDS can automatically scale storage for DB instances that use the specified DB instance class.
-{{% /md %}}</dd>
-    <dt class="property-optional"
+{{% /md %}}</dd><dt class="property-optional"
             title="Optional">
         <span id="supportsstorageencryption_go">
 <a href="#supportsstorageencryption_go" style="color: inherit; text-decoration: inherit;">Supports<wbr>Storage<wbr>Encryption</a>
@@ -496,8 +482,7 @@ The following arguments are supported:
         <span class="property-type">bool</span>
     </dt>
     <dd>{{% md %}}Enable this to ensure a DB instance supports encrypted storage.
-{{% /md %}}</dd>
-    <dt class="property-optional"
+{{% /md %}}</dd><dt class="property-optional"
             title="Optional">
         <span id="vpc_go">
 <a href="#vpc_go" style="color: inherit; text-decoration: inherit;">Vpc</a>
@@ -506,14 +491,11 @@ The following arguments are supported:
         <span class="property-type">bool</span>
     </dt>
     <dd>{{% md %}}Boolean that indicates whether to show only VPC or non-VPC offerings.
-{{% /md %}}</dd>
-</dl>
+{{% /md %}}</dd></dl>
 {{% /choosable %}}
 
 {{% choosable language nodejs %}}
-<dl class="resources-properties">
-
-    <dt class="property-required"
+<dl class="resources-properties"><dt class="property-required"
             title="Required">
         <span id="engine_nodejs">
 <a href="#engine_nodejs" style="color: inherit; text-decoration: inherit;">engine</a>
@@ -522,8 +504,7 @@ The following arguments are supported:
         <span class="property-type">string</span>
     </dt>
     <dd>{{% md %}}DB engine. Engine values include `aurora`, `aurora-mysql`, `aurora-postgresql`, `docdb`, `mariadb`, `mysql`, `neptune`, `oracle-ee`, `oracle-se`, `oracle-se1`, `oracle-se2`, `postgres`, `sqlserver-ee`, `sqlserver-ex`, `sqlserver-se`, and `sqlserver-web`.
-{{% /md %}}</dd>
-    <dt class="property-optional"
+{{% /md %}}</dd><dt class="property-optional"
             title="Optional">
         <span id="availabilityzonegroup_nodejs">
 <a href="#availabilityzonegroup_nodejs" style="color: inherit; text-decoration: inherit;">availability<wbr>Zone<wbr>Group</a>
@@ -532,8 +513,7 @@ The following arguments are supported:
         <span class="property-type">string</span>
     </dt>
     <dd>{{% md %}}Availability zone group.
-{{% /md %}}</dd>
-    <dt class="property-optional"
+{{% /md %}}</dd><dt class="property-optional"
             title="Optional">
         <span id="engineversion_nodejs">
 <a href="#engineversion_nodejs" style="color: inherit; text-decoration: inherit;">engine<wbr>Version</a>
@@ -542,8 +522,7 @@ The following arguments are supported:
         <span class="property-type">string</span>
     </dt>
     <dd>{{% md %}}Version of the DB engine. If none is provided, the AWS-defined default version will be used.
-{{% /md %}}</dd>
-    <dt class="property-optional"
+{{% /md %}}</dd><dt class="property-optional"
             title="Optional">
         <span id="instanceclass_nodejs">
 <a href="#instanceclass_nodejs" style="color: inherit; text-decoration: inherit;">instance<wbr>Class</a>
@@ -552,8 +531,7 @@ The following arguments are supported:
         <span class="property-type">string</span>
     </dt>
     <dd>{{% md %}}DB instance class. Examples of classes are `db.m3.2xlarge`, `db.t2.small`, and `db.m3.medium`.
-{{% /md %}}</dd>
-    <dt class="property-optional"
+{{% /md %}}</dd><dt class="property-optional"
             title="Optional">
         <span id="licensemodel_nodejs">
 <a href="#licensemodel_nodejs" style="color: inherit; text-decoration: inherit;">license<wbr>Model</a>
@@ -562,8 +540,7 @@ The following arguments are supported:
         <span class="property-type">string</span>
     </dt>
     <dd>{{% md %}}License model. Examples of license models are `general-public-license`, `bring-your-own-license`, and `amazon-license`.
-{{% /md %}}</dd>
-    <dt class="property-optional"
+{{% /md %}}</dd><dt class="property-optional"
             title="Optional">
         <span id="preferredengineversions_nodejs">
 <a href="#preferredengineversions_nodejs" style="color: inherit; text-decoration: inherit;">preferred<wbr>Engine<wbr>Versions</a>
@@ -572,8 +549,7 @@ The following arguments are supported:
         <span class="property-type">string[]</span>
     </dt>
     <dd>{{% md %}}Ordered list of preferred RDS DB instance engine versions. The first match in this list will be returned. If no preferred matches are found and the original search returned more than one result, an error is returned.
-{{% /md %}}</dd>
-    <dt class="property-optional"
+{{% /md %}}</dd><dt class="property-optional"
             title="Optional">
         <span id="preferredinstanceclasses_nodejs">
 <a href="#preferredinstanceclasses_nodejs" style="color: inherit; text-decoration: inherit;">preferred<wbr>Instance<wbr>Classes</a>
@@ -582,8 +558,7 @@ The following arguments are supported:
         <span class="property-type">string[]</span>
     </dt>
     <dd>{{% md %}}Ordered list of preferred RDS DB instance classes. The first match in this list will be returned. If no preferred matches are found and the original search returned more than one result, an error is returned.
-{{% /md %}}</dd>
-    <dt class="property-optional"
+{{% /md %}}</dd><dt class="property-optional"
             title="Optional">
         <span id="storagetype_nodejs">
 <a href="#storagetype_nodejs" style="color: inherit; text-decoration: inherit;">storage<wbr>Type</a>
@@ -592,8 +567,7 @@ The following arguments are supported:
         <span class="property-type">string</span>
     </dt>
     <dd>{{% md %}}Storage types. Examples of storage types are `standard`, `io1`, `gp2`, and `aurora`.
-{{% /md %}}</dd>
-    <dt class="property-optional"
+{{% /md %}}</dd><dt class="property-optional"
             title="Optional">
         <span id="supportsenhancedmonitoring_nodejs">
 <a href="#supportsenhancedmonitoring_nodejs" style="color: inherit; text-decoration: inherit;">supports<wbr>Enhanced<wbr>Monitoring</a>
@@ -602,8 +576,7 @@ The following arguments are supported:
         <span class="property-type">boolean</span>
     </dt>
     <dd>{{% md %}}Enable this to ensure a DB instance supports Enhanced Monitoring at intervals from 1 to 60 seconds.
-{{% /md %}}</dd>
-    <dt class="property-optional"
+{{% /md %}}</dd><dt class="property-optional"
             title="Optional">
         <span id="supportsglobaldatabases_nodejs">
 <a href="#supportsglobaldatabases_nodejs" style="color: inherit; text-decoration: inherit;">supports<wbr>Global<wbr>Databases</a>
@@ -612,8 +585,7 @@ The following arguments are supported:
         <span class="property-type">boolean</span>
     </dt>
     <dd>{{% md %}}Enable this to ensure a DB instance supports Aurora global databases with a specific combination of other DB engine attributes.
-{{% /md %}}</dd>
-    <dt class="property-optional"
+{{% /md %}}</dd><dt class="property-optional"
             title="Optional">
         <span id="supportsiamdatabaseauthentication_nodejs">
 <a href="#supportsiamdatabaseauthentication_nodejs" style="color: inherit; text-decoration: inherit;">supports<wbr>Iam<wbr>Database<wbr>Authentication</a>
@@ -622,8 +594,7 @@ The following arguments are supported:
         <span class="property-type">boolean</span>
     </dt>
     <dd>{{% md %}}Enable this to ensure a DB instance supports IAM database authentication.
-{{% /md %}}</dd>
-    <dt class="property-optional"
+{{% /md %}}</dd><dt class="property-optional"
             title="Optional">
         <span id="supportsiops_nodejs">
 <a href="#supportsiops_nodejs" style="color: inherit; text-decoration: inherit;">supports<wbr>Iops</a>
@@ -632,8 +603,7 @@ The following arguments are supported:
         <span class="property-type">boolean</span>
     </dt>
     <dd>{{% md %}}Enable this to ensure a DB instance supports provisioned IOPS.
-{{% /md %}}</dd>
-    <dt class="property-optional"
+{{% /md %}}</dd><dt class="property-optional"
             title="Optional">
         <span id="supportskerberosauthentication_nodejs">
 <a href="#supportskerberosauthentication_nodejs" style="color: inherit; text-decoration: inherit;">supports<wbr>Kerberos<wbr>Authentication</a>
@@ -642,8 +612,7 @@ The following arguments are supported:
         <span class="property-type">boolean</span>
     </dt>
     <dd>{{% md %}}Enable this to ensure a DB instance supports Kerberos Authentication.
-{{% /md %}}</dd>
-    <dt class="property-optional"
+{{% /md %}}</dd><dt class="property-optional"
             title="Optional">
         <span id="supportsperformanceinsights_nodejs">
 <a href="#supportsperformanceinsights_nodejs" style="color: inherit; text-decoration: inherit;">supports<wbr>Performance<wbr>Insights</a>
@@ -652,8 +621,7 @@ The following arguments are supported:
         <span class="property-type">boolean</span>
     </dt>
     <dd>{{% md %}}Enable this to ensure a DB instance supports Performance Insights.
-{{% /md %}}</dd>
-    <dt class="property-optional"
+{{% /md %}}</dd><dt class="property-optional"
             title="Optional">
         <span id="supportsstorageautoscaling_nodejs">
 <a href="#supportsstorageautoscaling_nodejs" style="color: inherit; text-decoration: inherit;">supports<wbr>Storage<wbr>Autoscaling</a>
@@ -662,8 +630,7 @@ The following arguments are supported:
         <span class="property-type">boolean</span>
     </dt>
     <dd>{{% md %}}Enable this to ensure Amazon RDS can automatically scale storage for DB instances that use the specified DB instance class.
-{{% /md %}}</dd>
-    <dt class="property-optional"
+{{% /md %}}</dd><dt class="property-optional"
             title="Optional">
         <span id="supportsstorageencryption_nodejs">
 <a href="#supportsstorageencryption_nodejs" style="color: inherit; text-decoration: inherit;">supports<wbr>Storage<wbr>Encryption</a>
@@ -672,8 +639,7 @@ The following arguments are supported:
         <span class="property-type">boolean</span>
     </dt>
     <dd>{{% md %}}Enable this to ensure a DB instance supports encrypted storage.
-{{% /md %}}</dd>
-    <dt class="property-optional"
+{{% /md %}}</dd><dt class="property-optional"
             title="Optional">
         <span id="vpc_nodejs">
 <a href="#vpc_nodejs" style="color: inherit; text-decoration: inherit;">vpc</a>
@@ -682,14 +648,11 @@ The following arguments are supported:
         <span class="property-type">boolean</span>
     </dt>
     <dd>{{% md %}}Boolean that indicates whether to show only VPC or non-VPC offerings.
-{{% /md %}}</dd>
-</dl>
+{{% /md %}}</dd></dl>
 {{% /choosable %}}
 
 {{% choosable language python %}}
-<dl class="resources-properties">
-
-    <dt class="property-required"
+<dl class="resources-properties"><dt class="property-required"
             title="Required">
         <span id="engine_python">
 <a href="#engine_python" style="color: inherit; text-decoration: inherit;">engine</a>
@@ -698,8 +661,7 @@ The following arguments are supported:
         <span class="property-type">str</span>
     </dt>
     <dd>{{% md %}}DB engine. Engine values include `aurora`, `aurora-mysql`, `aurora-postgresql`, `docdb`, `mariadb`, `mysql`, `neptune`, `oracle-ee`, `oracle-se`, `oracle-se1`, `oracle-se2`, `postgres`, `sqlserver-ee`, `sqlserver-ex`, `sqlserver-se`, and `sqlserver-web`.
-{{% /md %}}</dd>
-    <dt class="property-optional"
+{{% /md %}}</dd><dt class="property-optional"
             title="Optional">
         <span id="availability_zone_group_python">
 <a href="#availability_zone_group_python" style="color: inherit; text-decoration: inherit;">availability_<wbr>zone_<wbr>group</a>
@@ -708,8 +670,7 @@ The following arguments are supported:
         <span class="property-type">str</span>
     </dt>
     <dd>{{% md %}}Availability zone group.
-{{% /md %}}</dd>
-    <dt class="property-optional"
+{{% /md %}}</dd><dt class="property-optional"
             title="Optional">
         <span id="engine_version_python">
 <a href="#engine_version_python" style="color: inherit; text-decoration: inherit;">engine_<wbr>version</a>
@@ -718,8 +679,7 @@ The following arguments are supported:
         <span class="property-type">str</span>
     </dt>
     <dd>{{% md %}}Version of the DB engine. If none is provided, the AWS-defined default version will be used.
-{{% /md %}}</dd>
-    <dt class="property-optional"
+{{% /md %}}</dd><dt class="property-optional"
             title="Optional">
         <span id="instance_class_python">
 <a href="#instance_class_python" style="color: inherit; text-decoration: inherit;">instance_<wbr>class</a>
@@ -728,8 +688,7 @@ The following arguments are supported:
         <span class="property-type">str</span>
     </dt>
     <dd>{{% md %}}DB instance class. Examples of classes are `db.m3.2xlarge`, `db.t2.small`, and `db.m3.medium`.
-{{% /md %}}</dd>
-    <dt class="property-optional"
+{{% /md %}}</dd><dt class="property-optional"
             title="Optional">
         <span id="license_model_python">
 <a href="#license_model_python" style="color: inherit; text-decoration: inherit;">license_<wbr>model</a>
@@ -738,8 +697,7 @@ The following arguments are supported:
         <span class="property-type">str</span>
     </dt>
     <dd>{{% md %}}License model. Examples of license models are `general-public-license`, `bring-your-own-license`, and `amazon-license`.
-{{% /md %}}</dd>
-    <dt class="property-optional"
+{{% /md %}}</dd><dt class="property-optional"
             title="Optional">
         <span id="preferred_engine_versions_python">
 <a href="#preferred_engine_versions_python" style="color: inherit; text-decoration: inherit;">preferred_<wbr>engine_<wbr>versions</a>
@@ -748,8 +706,7 @@ The following arguments are supported:
         <span class="property-type">Sequence[str]</span>
     </dt>
     <dd>{{% md %}}Ordered list of preferred RDS DB instance engine versions. The first match in this list will be returned. If no preferred matches are found and the original search returned more than one result, an error is returned.
-{{% /md %}}</dd>
-    <dt class="property-optional"
+{{% /md %}}</dd><dt class="property-optional"
             title="Optional">
         <span id="preferred_instance_classes_python">
 <a href="#preferred_instance_classes_python" style="color: inherit; text-decoration: inherit;">preferred_<wbr>instance_<wbr>classes</a>
@@ -758,8 +715,7 @@ The following arguments are supported:
         <span class="property-type">Sequence[str]</span>
     </dt>
     <dd>{{% md %}}Ordered list of preferred RDS DB instance classes. The first match in this list will be returned. If no preferred matches are found and the original search returned more than one result, an error is returned.
-{{% /md %}}</dd>
-    <dt class="property-optional"
+{{% /md %}}</dd><dt class="property-optional"
             title="Optional">
         <span id="storage_type_python">
 <a href="#storage_type_python" style="color: inherit; text-decoration: inherit;">storage_<wbr>type</a>
@@ -768,8 +724,7 @@ The following arguments are supported:
         <span class="property-type">str</span>
     </dt>
     <dd>{{% md %}}Storage types. Examples of storage types are `standard`, `io1`, `gp2`, and `aurora`.
-{{% /md %}}</dd>
-    <dt class="property-optional"
+{{% /md %}}</dd><dt class="property-optional"
             title="Optional">
         <span id="supports_enhanced_monitoring_python">
 <a href="#supports_enhanced_monitoring_python" style="color: inherit; text-decoration: inherit;">supports_<wbr>enhanced_<wbr>monitoring</a>
@@ -778,8 +733,7 @@ The following arguments are supported:
         <span class="property-type">bool</span>
     </dt>
     <dd>{{% md %}}Enable this to ensure a DB instance supports Enhanced Monitoring at intervals from 1 to 60 seconds.
-{{% /md %}}</dd>
-    <dt class="property-optional"
+{{% /md %}}</dd><dt class="property-optional"
             title="Optional">
         <span id="supports_global_databases_python">
 <a href="#supports_global_databases_python" style="color: inherit; text-decoration: inherit;">supports_<wbr>global_<wbr>databases</a>
@@ -788,8 +742,7 @@ The following arguments are supported:
         <span class="property-type">bool</span>
     </dt>
     <dd>{{% md %}}Enable this to ensure a DB instance supports Aurora global databases with a specific combination of other DB engine attributes.
-{{% /md %}}</dd>
-    <dt class="property-optional"
+{{% /md %}}</dd><dt class="property-optional"
             title="Optional">
         <span id="supports_iam_database_authentication_python">
 <a href="#supports_iam_database_authentication_python" style="color: inherit; text-decoration: inherit;">supports_<wbr>iam_<wbr>database_<wbr>authentication</a>
@@ -798,8 +751,7 @@ The following arguments are supported:
         <span class="property-type">bool</span>
     </dt>
     <dd>{{% md %}}Enable this to ensure a DB instance supports IAM database authentication.
-{{% /md %}}</dd>
-    <dt class="property-optional"
+{{% /md %}}</dd><dt class="property-optional"
             title="Optional">
         <span id="supports_iops_python">
 <a href="#supports_iops_python" style="color: inherit; text-decoration: inherit;">supports_<wbr>iops</a>
@@ -808,8 +760,7 @@ The following arguments are supported:
         <span class="property-type">bool</span>
     </dt>
     <dd>{{% md %}}Enable this to ensure a DB instance supports provisioned IOPS.
-{{% /md %}}</dd>
-    <dt class="property-optional"
+{{% /md %}}</dd><dt class="property-optional"
             title="Optional">
         <span id="supports_kerberos_authentication_python">
 <a href="#supports_kerberos_authentication_python" style="color: inherit; text-decoration: inherit;">supports_<wbr>kerberos_<wbr>authentication</a>
@@ -818,8 +769,7 @@ The following arguments are supported:
         <span class="property-type">bool</span>
     </dt>
     <dd>{{% md %}}Enable this to ensure a DB instance supports Kerberos Authentication.
-{{% /md %}}</dd>
-    <dt class="property-optional"
+{{% /md %}}</dd><dt class="property-optional"
             title="Optional">
         <span id="supports_performance_insights_python">
 <a href="#supports_performance_insights_python" style="color: inherit; text-decoration: inherit;">supports_<wbr>performance_<wbr>insights</a>
@@ -828,8 +778,7 @@ The following arguments are supported:
         <span class="property-type">bool</span>
     </dt>
     <dd>{{% md %}}Enable this to ensure a DB instance supports Performance Insights.
-{{% /md %}}</dd>
-    <dt class="property-optional"
+{{% /md %}}</dd><dt class="property-optional"
             title="Optional">
         <span id="supports_storage_autoscaling_python">
 <a href="#supports_storage_autoscaling_python" style="color: inherit; text-decoration: inherit;">supports_<wbr>storage_<wbr>autoscaling</a>
@@ -838,8 +787,7 @@ The following arguments are supported:
         <span class="property-type">bool</span>
     </dt>
     <dd>{{% md %}}Enable this to ensure Amazon RDS can automatically scale storage for DB instances that use the specified DB instance class.
-{{% /md %}}</dd>
-    <dt class="property-optional"
+{{% /md %}}</dd><dt class="property-optional"
             title="Optional">
         <span id="supports_storage_encryption_python">
 <a href="#supports_storage_encryption_python" style="color: inherit; text-decoration: inherit;">supports_<wbr>storage_<wbr>encryption</a>
@@ -848,8 +796,7 @@ The following arguments are supported:
         <span class="property-type">bool</span>
     </dt>
     <dd>{{% md %}}Enable this to ensure a DB instance supports encrypted storage.
-{{% /md %}}</dd>
-    <dt class="property-optional"
+{{% /md %}}</dd><dt class="property-optional"
             title="Optional">
         <span id="vpc_python">
 <a href="#vpc_python" style="color: inherit; text-decoration: inherit;">vpc</a>
@@ -858,8 +805,7 @@ The following arguments are supported:
         <span class="property-type">bool</span>
     </dt>
     <dd>{{% md %}}Boolean that indicates whether to show only VPC or non-VPC offerings.
-{{% /md %}}</dd>
-</dl>
+{{% /md %}}</dd></dl>
 {{% /choosable %}}
 
 
@@ -872,9 +818,7 @@ The following output properties are available:
 
 
 {{% choosable language csharp %}}
-<dl class="resources-properties">
-
-    <dt class="property-"
+<dl class="resources-properties"><dt class="property-"
             title="">
         <span id="availabilityzonegroup_csharp">
 <a href="#availabilityzonegroup_csharp" style="color: inherit; text-decoration: inherit;">Availability<wbr>Zone<wbr>Group</a>
@@ -882,8 +826,7 @@ The following output properties are available:
         <span class="property-indicator"></span>
         <span class="property-type">string</span>
     </dt>
-    <dd>{{% md %}}{{% /md %}}</dd>
-    <dt class="property-"
+    <dd>{{% md %}}{{% /md %}}</dd><dt class="property-"
             title="">
         <span id="availabilityzones_csharp">
 <a href="#availabilityzones_csharp" style="color: inherit; text-decoration: inherit;">Availability<wbr>Zones</a>
@@ -892,8 +835,7 @@ The following output properties are available:
         <span class="property-type">List&lt;string&gt;</span>
     </dt>
     <dd>{{% md %}}Availability zones where the instance is available.
-{{% /md %}}</dd>
-    <dt class="property-"
+{{% /md %}}</dd><dt class="property-"
             title="">
         <span id="engine_csharp">
 <a href="#engine_csharp" style="color: inherit; text-decoration: inherit;">Engine</a>
@@ -901,8 +843,7 @@ The following output properties are available:
         <span class="property-indicator"></span>
         <span class="property-type">string</span>
     </dt>
-    <dd>{{% md %}}{{% /md %}}</dd>
-    <dt class="property-"
+    <dd>{{% md %}}{{% /md %}}</dd><dt class="property-"
             title="">
         <span id="engineversion_csharp">
 <a href="#engineversion_csharp" style="color: inherit; text-decoration: inherit;">Engine<wbr>Version</a>
@@ -910,8 +851,7 @@ The following output properties are available:
         <span class="property-indicator"></span>
         <span class="property-type">string</span>
     </dt>
-    <dd>{{% md %}}{{% /md %}}</dd>
-    <dt class="property-"
+    <dd>{{% md %}}{{% /md %}}</dd><dt class="property-"
             title="">
         <span id="id_csharp">
 <a href="#id_csharp" style="color: inherit; text-decoration: inherit;">Id</a>
@@ -920,8 +860,7 @@ The following output properties are available:
         <span class="property-type">string</span>
     </dt>
     <dd>{{% md %}}The provider-assigned unique ID for this managed resource.
-{{% /md %}}</dd>
-    <dt class="property-"
+{{% /md %}}</dd><dt class="property-"
             title="">
         <span id="instanceclass_csharp">
 <a href="#instanceclass_csharp" style="color: inherit; text-decoration: inherit;">Instance<wbr>Class</a>
@@ -929,8 +868,7 @@ The following output properties are available:
         <span class="property-indicator"></span>
         <span class="property-type">string</span>
     </dt>
-    <dd>{{% md %}}{{% /md %}}</dd>
-    <dt class="property-"
+    <dd>{{% md %}}{{% /md %}}</dd><dt class="property-"
             title="">
         <span id="licensemodel_csharp">
 <a href="#licensemodel_csharp" style="color: inherit; text-decoration: inherit;">License<wbr>Model</a>
@@ -938,8 +876,7 @@ The following output properties are available:
         <span class="property-indicator"></span>
         <span class="property-type">string</span>
     </dt>
-    <dd>{{% md %}}{{% /md %}}</dd>
-    <dt class="property-"
+    <dd>{{% md %}}{{% /md %}}</dd><dt class="property-"
             title="">
         <span id="maxiopsperdbinstance_csharp">
 <a href="#maxiopsperdbinstance_csharp" style="color: inherit; text-decoration: inherit;">Max<wbr>Iops<wbr>Per<wbr>Db<wbr>Instance</a>
@@ -948,8 +885,7 @@ The following output properties are available:
         <span class="property-type">int</span>
     </dt>
     <dd>{{% md %}}Maximum total provisioned IOPS for a DB instance.
-{{% /md %}}</dd>
-    <dt class="property-"
+{{% /md %}}</dd><dt class="property-"
             title="">
         <span id="maxiopspergib_csharp">
 <a href="#maxiopspergib_csharp" style="color: inherit; text-decoration: inherit;">Max<wbr>Iops<wbr>Per<wbr>Gib</a>
@@ -958,8 +894,7 @@ The following output properties are available:
         <span class="property-type">double</span>
     </dt>
     <dd>{{% md %}}Maximum provisioned IOPS per GiB for a DB instance.
-{{% /md %}}</dd>
-    <dt class="property-"
+{{% /md %}}</dd><dt class="property-"
             title="">
         <span id="maxstoragesize_csharp">
 <a href="#maxstoragesize_csharp" style="color: inherit; text-decoration: inherit;">Max<wbr>Storage<wbr>Size</a>
@@ -968,8 +903,7 @@ The following output properties are available:
         <span class="property-type">int</span>
     </dt>
     <dd>{{% md %}}Maximum storage size for a DB instance.
-{{% /md %}}</dd>
-    <dt class="property-"
+{{% /md %}}</dd><dt class="property-"
             title="">
         <span id="miniopsperdbinstance_csharp">
 <a href="#miniopsperdbinstance_csharp" style="color: inherit; text-decoration: inherit;">Min<wbr>Iops<wbr>Per<wbr>Db<wbr>Instance</a>
@@ -978,8 +912,7 @@ The following output properties are available:
         <span class="property-type">int</span>
     </dt>
     <dd>{{% md %}}Minimum total provisioned IOPS for a DB instance.
-{{% /md %}}</dd>
-    <dt class="property-"
+{{% /md %}}</dd><dt class="property-"
             title="">
         <span id="miniopspergib_csharp">
 <a href="#miniopspergib_csharp" style="color: inherit; text-decoration: inherit;">Min<wbr>Iops<wbr>Per<wbr>Gib</a>
@@ -988,8 +921,7 @@ The following output properties are available:
         <span class="property-type">double</span>
     </dt>
     <dd>{{% md %}}Minimum provisioned IOPS per GiB for a DB instance.
-{{% /md %}}</dd>
-    <dt class="property-"
+{{% /md %}}</dd><dt class="property-"
             title="">
         <span id="minstoragesize_csharp">
 <a href="#minstoragesize_csharp" style="color: inherit; text-decoration: inherit;">Min<wbr>Storage<wbr>Size</a>
@@ -998,8 +930,7 @@ The following output properties are available:
         <span class="property-type">int</span>
     </dt>
     <dd>{{% md %}}Minimum storage size for a DB instance.
-{{% /md %}}</dd>
-    <dt class="property-"
+{{% /md %}}</dd><dt class="property-"
             title="">
         <span id="multiazcapable_csharp">
 <a href="#multiazcapable_csharp" style="color: inherit; text-decoration: inherit;">Multi<wbr>Az<wbr>Capable</a>
@@ -1008,8 +939,7 @@ The following output properties are available:
         <span class="property-type">bool</span>
     </dt>
     <dd>{{% md %}}Whether a DB instance is Multi-AZ capable.
-{{% /md %}}</dd>
-    <dt class="property-"
+{{% /md %}}</dd><dt class="property-"
             title="">
         <span id="outpostcapable_csharp">
 <a href="#outpostcapable_csharp" style="color: inherit; text-decoration: inherit;">Outpost<wbr>Capable</a>
@@ -1018,8 +948,7 @@ The following output properties are available:
         <span class="property-type">bool</span>
     </dt>
     <dd>{{% md %}}Whether a DB instance supports RDS on Outposts.
-{{% /md %}}</dd>
-    <dt class="property-"
+{{% /md %}}</dd><dt class="property-"
             title="">
         <span id="readreplicacapable_csharp">
 <a href="#readreplicacapable_csharp" style="color: inherit; text-decoration: inherit;">Read<wbr>Replica<wbr>Capable</a>
@@ -1028,8 +957,7 @@ The following output properties are available:
         <span class="property-type">bool</span>
     </dt>
     <dd>{{% md %}}Whether a DB instance can have a read replica.
-{{% /md %}}</dd>
-    <dt class="property-"
+{{% /md %}}</dd><dt class="property-"
             title="">
         <span id="storagetype_csharp">
 <a href="#storagetype_csharp" style="color: inherit; text-decoration: inherit;">Storage<wbr>Type</a>
@@ -1037,8 +965,7 @@ The following output properties are available:
         <span class="property-indicator"></span>
         <span class="property-type">string</span>
     </dt>
-    <dd>{{% md %}}{{% /md %}}</dd>
-    <dt class="property-"
+    <dd>{{% md %}}{{% /md %}}</dd><dt class="property-"
             title="">
         <span id="supportedenginemodes_csharp">
 <a href="#supportedenginemodes_csharp" style="color: inherit; text-decoration: inherit;">Supported<wbr>Engine<wbr>Modes</a>
@@ -1047,8 +974,7 @@ The following output properties are available:
         <span class="property-type">List&lt;string&gt;</span>
     </dt>
     <dd>{{% md %}}A list of the supported DB engine modes.
-{{% /md %}}</dd>
-    <dt class="property-"
+{{% /md %}}</dd><dt class="property-"
             title="">
         <span id="supportsenhancedmonitoring_csharp">
 <a href="#supportsenhancedmonitoring_csharp" style="color: inherit; text-decoration: inherit;">Supports<wbr>Enhanced<wbr>Monitoring</a>
@@ -1056,8 +982,7 @@ The following output properties are available:
         <span class="property-indicator"></span>
         <span class="property-type">bool</span>
     </dt>
-    <dd>{{% md %}}{{% /md %}}</dd>
-    <dt class="property-"
+    <dd>{{% md %}}{{% /md %}}</dd><dt class="property-"
             title="">
         <span id="supportsglobaldatabases_csharp">
 <a href="#supportsglobaldatabases_csharp" style="color: inherit; text-decoration: inherit;">Supports<wbr>Global<wbr>Databases</a>
@@ -1065,8 +990,7 @@ The following output properties are available:
         <span class="property-indicator"></span>
         <span class="property-type">bool</span>
     </dt>
-    <dd>{{% md %}}{{% /md %}}</dd>
-    <dt class="property-"
+    <dd>{{% md %}}{{% /md %}}</dd><dt class="property-"
             title="">
         <span id="supportsiamdatabaseauthentication_csharp">
 <a href="#supportsiamdatabaseauthentication_csharp" style="color: inherit; text-decoration: inherit;">Supports<wbr>Iam<wbr>Database<wbr>Authentication</a>
@@ -1074,8 +998,7 @@ The following output properties are available:
         <span class="property-indicator"></span>
         <span class="property-type">bool</span>
     </dt>
-    <dd>{{% md %}}{{% /md %}}</dd>
-    <dt class="property-"
+    <dd>{{% md %}}{{% /md %}}</dd><dt class="property-"
             title="">
         <span id="supportsiops_csharp">
 <a href="#supportsiops_csharp" style="color: inherit; text-decoration: inherit;">Supports<wbr>Iops</a>
@@ -1083,8 +1006,7 @@ The following output properties are available:
         <span class="property-indicator"></span>
         <span class="property-type">bool</span>
     </dt>
-    <dd>{{% md %}}{{% /md %}}</dd>
-    <dt class="property-"
+    <dd>{{% md %}}{{% /md %}}</dd><dt class="property-"
             title="">
         <span id="supportskerberosauthentication_csharp">
 <a href="#supportskerberosauthentication_csharp" style="color: inherit; text-decoration: inherit;">Supports<wbr>Kerberos<wbr>Authentication</a>
@@ -1092,8 +1014,7 @@ The following output properties are available:
         <span class="property-indicator"></span>
         <span class="property-type">bool</span>
     </dt>
-    <dd>{{% md %}}{{% /md %}}</dd>
-    <dt class="property-"
+    <dd>{{% md %}}{{% /md %}}</dd><dt class="property-"
             title="">
         <span id="supportsperformanceinsights_csharp">
 <a href="#supportsperformanceinsights_csharp" style="color: inherit; text-decoration: inherit;">Supports<wbr>Performance<wbr>Insights</a>
@@ -1101,8 +1022,7 @@ The following output properties are available:
         <span class="property-indicator"></span>
         <span class="property-type">bool</span>
     </dt>
-    <dd>{{% md %}}{{% /md %}}</dd>
-    <dt class="property-"
+    <dd>{{% md %}}{{% /md %}}</dd><dt class="property-"
             title="">
         <span id="supportsstorageautoscaling_csharp">
 <a href="#supportsstorageautoscaling_csharp" style="color: inherit; text-decoration: inherit;">Supports<wbr>Storage<wbr>Autoscaling</a>
@@ -1110,8 +1030,7 @@ The following output properties are available:
         <span class="property-indicator"></span>
         <span class="property-type">bool</span>
     </dt>
-    <dd>{{% md %}}{{% /md %}}</dd>
-    <dt class="property-"
+    <dd>{{% md %}}{{% /md %}}</dd><dt class="property-"
             title="">
         <span id="supportsstorageencryption_csharp">
 <a href="#supportsstorageencryption_csharp" style="color: inherit; text-decoration: inherit;">Supports<wbr>Storage<wbr>Encryption</a>
@@ -1119,8 +1038,7 @@ The following output properties are available:
         <span class="property-indicator"></span>
         <span class="property-type">bool</span>
     </dt>
-    <dd>{{% md %}}{{% /md %}}</dd>
-    <dt class="property-"
+    <dd>{{% md %}}{{% /md %}}</dd><dt class="property-"
             title="">
         <span id="vpc_csharp">
 <a href="#vpc_csharp" style="color: inherit; text-decoration: inherit;">Vpc</a>
@@ -1128,8 +1046,7 @@ The following output properties are available:
         <span class="property-indicator"></span>
         <span class="property-type">bool</span>
     </dt>
-    <dd>{{% md %}}{{% /md %}}</dd>
-    <dt class="property-"
+    <dd>{{% md %}}{{% /md %}}</dd><dt class="property-"
             title="">
         <span id="preferredengineversions_csharp">
 <a href="#preferredengineversions_csharp" style="color: inherit; text-decoration: inherit;">Preferred<wbr>Engine<wbr>Versions</a>
@@ -1137,8 +1054,7 @@ The following output properties are available:
         <span class="property-indicator"></span>
         <span class="property-type">List&lt;string&gt;</span>
     </dt>
-    <dd>{{% md %}}{{% /md %}}</dd>
-    <dt class="property-"
+    <dd>{{% md %}}{{% /md %}}</dd><dt class="property-"
             title="">
         <span id="preferredinstanceclasses_csharp">
 <a href="#preferredinstanceclasses_csharp" style="color: inherit; text-decoration: inherit;">Preferred<wbr>Instance<wbr>Classes</a>
@@ -1146,14 +1062,11 @@ The following output properties are available:
         <span class="property-indicator"></span>
         <span class="property-type">List&lt;string&gt;</span>
     </dt>
-    <dd>{{% md %}}{{% /md %}}</dd>
-</dl>
+    <dd>{{% md %}}{{% /md %}}</dd></dl>
 {{% /choosable %}}
 
 {{% choosable language go %}}
-<dl class="resources-properties">
-
-    <dt class="property-"
+<dl class="resources-properties"><dt class="property-"
             title="">
         <span id="availabilityzonegroup_go">
 <a href="#availabilityzonegroup_go" style="color: inherit; text-decoration: inherit;">Availability<wbr>Zone<wbr>Group</a>
@@ -1161,8 +1074,7 @@ The following output properties are available:
         <span class="property-indicator"></span>
         <span class="property-type">string</span>
     </dt>
-    <dd>{{% md %}}{{% /md %}}</dd>
-    <dt class="property-"
+    <dd>{{% md %}}{{% /md %}}</dd><dt class="property-"
             title="">
         <span id="availabilityzones_go">
 <a href="#availabilityzones_go" style="color: inherit; text-decoration: inherit;">Availability<wbr>Zones</a>
@@ -1171,8 +1083,7 @@ The following output properties are available:
         <span class="property-type">[]string</span>
     </dt>
     <dd>{{% md %}}Availability zones where the instance is available.
-{{% /md %}}</dd>
-    <dt class="property-"
+{{% /md %}}</dd><dt class="property-"
             title="">
         <span id="engine_go">
 <a href="#engine_go" style="color: inherit; text-decoration: inherit;">Engine</a>
@@ -1180,8 +1091,7 @@ The following output properties are available:
         <span class="property-indicator"></span>
         <span class="property-type">string</span>
     </dt>
-    <dd>{{% md %}}{{% /md %}}</dd>
-    <dt class="property-"
+    <dd>{{% md %}}{{% /md %}}</dd><dt class="property-"
             title="">
         <span id="engineversion_go">
 <a href="#engineversion_go" style="color: inherit; text-decoration: inherit;">Engine<wbr>Version</a>
@@ -1189,8 +1099,7 @@ The following output properties are available:
         <span class="property-indicator"></span>
         <span class="property-type">string</span>
     </dt>
-    <dd>{{% md %}}{{% /md %}}</dd>
-    <dt class="property-"
+    <dd>{{% md %}}{{% /md %}}</dd><dt class="property-"
             title="">
         <span id="id_go">
 <a href="#id_go" style="color: inherit; text-decoration: inherit;">Id</a>
@@ -1199,8 +1108,7 @@ The following output properties are available:
         <span class="property-type">string</span>
     </dt>
     <dd>{{% md %}}The provider-assigned unique ID for this managed resource.
-{{% /md %}}</dd>
-    <dt class="property-"
+{{% /md %}}</dd><dt class="property-"
             title="">
         <span id="instanceclass_go">
 <a href="#instanceclass_go" style="color: inherit; text-decoration: inherit;">Instance<wbr>Class</a>
@@ -1208,8 +1116,7 @@ The following output properties are available:
         <span class="property-indicator"></span>
         <span class="property-type">string</span>
     </dt>
-    <dd>{{% md %}}{{% /md %}}</dd>
-    <dt class="property-"
+    <dd>{{% md %}}{{% /md %}}</dd><dt class="property-"
             title="">
         <span id="licensemodel_go">
 <a href="#licensemodel_go" style="color: inherit; text-decoration: inherit;">License<wbr>Model</a>
@@ -1217,8 +1124,7 @@ The following output properties are available:
         <span class="property-indicator"></span>
         <span class="property-type">string</span>
     </dt>
-    <dd>{{% md %}}{{% /md %}}</dd>
-    <dt class="property-"
+    <dd>{{% md %}}{{% /md %}}</dd><dt class="property-"
             title="">
         <span id="maxiopsperdbinstance_go">
 <a href="#maxiopsperdbinstance_go" style="color: inherit; text-decoration: inherit;">Max<wbr>Iops<wbr>Per<wbr>Db<wbr>Instance</a>
@@ -1227,8 +1133,7 @@ The following output properties are available:
         <span class="property-type">int</span>
     </dt>
     <dd>{{% md %}}Maximum total provisioned IOPS for a DB instance.
-{{% /md %}}</dd>
-    <dt class="property-"
+{{% /md %}}</dd><dt class="property-"
             title="">
         <span id="maxiopspergib_go">
 <a href="#maxiopspergib_go" style="color: inherit; text-decoration: inherit;">Max<wbr>Iops<wbr>Per<wbr>Gib</a>
@@ -1237,8 +1142,7 @@ The following output properties are available:
         <span class="property-type">float64</span>
     </dt>
     <dd>{{% md %}}Maximum provisioned IOPS per GiB for a DB instance.
-{{% /md %}}</dd>
-    <dt class="property-"
+{{% /md %}}</dd><dt class="property-"
             title="">
         <span id="maxstoragesize_go">
 <a href="#maxstoragesize_go" style="color: inherit; text-decoration: inherit;">Max<wbr>Storage<wbr>Size</a>
@@ -1247,8 +1151,7 @@ The following output properties are available:
         <span class="property-type">int</span>
     </dt>
     <dd>{{% md %}}Maximum storage size for a DB instance.
-{{% /md %}}</dd>
-    <dt class="property-"
+{{% /md %}}</dd><dt class="property-"
             title="">
         <span id="miniopsperdbinstance_go">
 <a href="#miniopsperdbinstance_go" style="color: inherit; text-decoration: inherit;">Min<wbr>Iops<wbr>Per<wbr>Db<wbr>Instance</a>
@@ -1257,8 +1160,7 @@ The following output properties are available:
         <span class="property-type">int</span>
     </dt>
     <dd>{{% md %}}Minimum total provisioned IOPS for a DB instance.
-{{% /md %}}</dd>
-    <dt class="property-"
+{{% /md %}}</dd><dt class="property-"
             title="">
         <span id="miniopspergib_go">
 <a href="#miniopspergib_go" style="color: inherit; text-decoration: inherit;">Min<wbr>Iops<wbr>Per<wbr>Gib</a>
@@ -1267,8 +1169,7 @@ The following output properties are available:
         <span class="property-type">float64</span>
     </dt>
     <dd>{{% md %}}Minimum provisioned IOPS per GiB for a DB instance.
-{{% /md %}}</dd>
-    <dt class="property-"
+{{% /md %}}</dd><dt class="property-"
             title="">
         <span id="minstoragesize_go">
 <a href="#minstoragesize_go" style="color: inherit; text-decoration: inherit;">Min<wbr>Storage<wbr>Size</a>
@@ -1277,8 +1178,7 @@ The following output properties are available:
         <span class="property-type">int</span>
     </dt>
     <dd>{{% md %}}Minimum storage size for a DB instance.
-{{% /md %}}</dd>
-    <dt class="property-"
+{{% /md %}}</dd><dt class="property-"
             title="">
         <span id="multiazcapable_go">
 <a href="#multiazcapable_go" style="color: inherit; text-decoration: inherit;">Multi<wbr>Az<wbr>Capable</a>
@@ -1287,8 +1187,7 @@ The following output properties are available:
         <span class="property-type">bool</span>
     </dt>
     <dd>{{% md %}}Whether a DB instance is Multi-AZ capable.
-{{% /md %}}</dd>
-    <dt class="property-"
+{{% /md %}}</dd><dt class="property-"
             title="">
         <span id="outpostcapable_go">
 <a href="#outpostcapable_go" style="color: inherit; text-decoration: inherit;">Outpost<wbr>Capable</a>
@@ -1297,8 +1196,7 @@ The following output properties are available:
         <span class="property-type">bool</span>
     </dt>
     <dd>{{% md %}}Whether a DB instance supports RDS on Outposts.
-{{% /md %}}</dd>
-    <dt class="property-"
+{{% /md %}}</dd><dt class="property-"
             title="">
         <span id="readreplicacapable_go">
 <a href="#readreplicacapable_go" style="color: inherit; text-decoration: inherit;">Read<wbr>Replica<wbr>Capable</a>
@@ -1307,8 +1205,7 @@ The following output properties are available:
         <span class="property-type">bool</span>
     </dt>
     <dd>{{% md %}}Whether a DB instance can have a read replica.
-{{% /md %}}</dd>
-    <dt class="property-"
+{{% /md %}}</dd><dt class="property-"
             title="">
         <span id="storagetype_go">
 <a href="#storagetype_go" style="color: inherit; text-decoration: inherit;">Storage<wbr>Type</a>
@@ -1316,8 +1213,7 @@ The following output properties are available:
         <span class="property-indicator"></span>
         <span class="property-type">string</span>
     </dt>
-    <dd>{{% md %}}{{% /md %}}</dd>
-    <dt class="property-"
+    <dd>{{% md %}}{{% /md %}}</dd><dt class="property-"
             title="">
         <span id="supportedenginemodes_go">
 <a href="#supportedenginemodes_go" style="color: inherit; text-decoration: inherit;">Supported<wbr>Engine<wbr>Modes</a>
@@ -1326,8 +1222,7 @@ The following output properties are available:
         <span class="property-type">[]string</span>
     </dt>
     <dd>{{% md %}}A list of the supported DB engine modes.
-{{% /md %}}</dd>
-    <dt class="property-"
+{{% /md %}}</dd><dt class="property-"
             title="">
         <span id="supportsenhancedmonitoring_go">
 <a href="#supportsenhancedmonitoring_go" style="color: inherit; text-decoration: inherit;">Supports<wbr>Enhanced<wbr>Monitoring</a>
@@ -1335,8 +1230,7 @@ The following output properties are available:
         <span class="property-indicator"></span>
         <span class="property-type">bool</span>
     </dt>
-    <dd>{{% md %}}{{% /md %}}</dd>
-    <dt class="property-"
+    <dd>{{% md %}}{{% /md %}}</dd><dt class="property-"
             title="">
         <span id="supportsglobaldatabases_go">
 <a href="#supportsglobaldatabases_go" style="color: inherit; text-decoration: inherit;">Supports<wbr>Global<wbr>Databases</a>
@@ -1344,8 +1238,7 @@ The following output properties are available:
         <span class="property-indicator"></span>
         <span class="property-type">bool</span>
     </dt>
-    <dd>{{% md %}}{{% /md %}}</dd>
-    <dt class="property-"
+    <dd>{{% md %}}{{% /md %}}</dd><dt class="property-"
             title="">
         <span id="supportsiamdatabaseauthentication_go">
 <a href="#supportsiamdatabaseauthentication_go" style="color: inherit; text-decoration: inherit;">Supports<wbr>Iam<wbr>Database<wbr>Authentication</a>
@@ -1353,8 +1246,7 @@ The following output properties are available:
         <span class="property-indicator"></span>
         <span class="property-type">bool</span>
     </dt>
-    <dd>{{% md %}}{{% /md %}}</dd>
-    <dt class="property-"
+    <dd>{{% md %}}{{% /md %}}</dd><dt class="property-"
             title="">
         <span id="supportsiops_go">
 <a href="#supportsiops_go" style="color: inherit; text-decoration: inherit;">Supports<wbr>Iops</a>
@@ -1362,8 +1254,7 @@ The following output properties are available:
         <span class="property-indicator"></span>
         <span class="property-type">bool</span>
     </dt>
-    <dd>{{% md %}}{{% /md %}}</dd>
-    <dt class="property-"
+    <dd>{{% md %}}{{% /md %}}</dd><dt class="property-"
             title="">
         <span id="supportskerberosauthentication_go">
 <a href="#supportskerberosauthentication_go" style="color: inherit; text-decoration: inherit;">Supports<wbr>Kerberos<wbr>Authentication</a>
@@ -1371,8 +1262,7 @@ The following output properties are available:
         <span class="property-indicator"></span>
         <span class="property-type">bool</span>
     </dt>
-    <dd>{{% md %}}{{% /md %}}</dd>
-    <dt class="property-"
+    <dd>{{% md %}}{{% /md %}}</dd><dt class="property-"
             title="">
         <span id="supportsperformanceinsights_go">
 <a href="#supportsperformanceinsights_go" style="color: inherit; text-decoration: inherit;">Supports<wbr>Performance<wbr>Insights</a>
@@ -1380,8 +1270,7 @@ The following output properties are available:
         <span class="property-indicator"></span>
         <span class="property-type">bool</span>
     </dt>
-    <dd>{{% md %}}{{% /md %}}</dd>
-    <dt class="property-"
+    <dd>{{% md %}}{{% /md %}}</dd><dt class="property-"
             title="">
         <span id="supportsstorageautoscaling_go">
 <a href="#supportsstorageautoscaling_go" style="color: inherit; text-decoration: inherit;">Supports<wbr>Storage<wbr>Autoscaling</a>
@@ -1389,8 +1278,7 @@ The following output properties are available:
         <span class="property-indicator"></span>
         <span class="property-type">bool</span>
     </dt>
-    <dd>{{% md %}}{{% /md %}}</dd>
-    <dt class="property-"
+    <dd>{{% md %}}{{% /md %}}</dd><dt class="property-"
             title="">
         <span id="supportsstorageencryption_go">
 <a href="#supportsstorageencryption_go" style="color: inherit; text-decoration: inherit;">Supports<wbr>Storage<wbr>Encryption</a>
@@ -1398,8 +1286,7 @@ The following output properties are available:
         <span class="property-indicator"></span>
         <span class="property-type">bool</span>
     </dt>
-    <dd>{{% md %}}{{% /md %}}</dd>
-    <dt class="property-"
+    <dd>{{% md %}}{{% /md %}}</dd><dt class="property-"
             title="">
         <span id="vpc_go">
 <a href="#vpc_go" style="color: inherit; text-decoration: inherit;">Vpc</a>
@@ -1407,8 +1294,7 @@ The following output properties are available:
         <span class="property-indicator"></span>
         <span class="property-type">bool</span>
     </dt>
-    <dd>{{% md %}}{{% /md %}}</dd>
-    <dt class="property-"
+    <dd>{{% md %}}{{% /md %}}</dd><dt class="property-"
             title="">
         <span id="preferredengineversions_go">
 <a href="#preferredengineversions_go" style="color: inherit; text-decoration: inherit;">Preferred<wbr>Engine<wbr>Versions</a>
@@ -1416,8 +1302,7 @@ The following output properties are available:
         <span class="property-indicator"></span>
         <span class="property-type">[]string</span>
     </dt>
-    <dd>{{% md %}}{{% /md %}}</dd>
-    <dt class="property-"
+    <dd>{{% md %}}{{% /md %}}</dd><dt class="property-"
             title="">
         <span id="preferredinstanceclasses_go">
 <a href="#preferredinstanceclasses_go" style="color: inherit; text-decoration: inherit;">Preferred<wbr>Instance<wbr>Classes</a>
@@ -1425,14 +1310,11 @@ The following output properties are available:
         <span class="property-indicator"></span>
         <span class="property-type">[]string</span>
     </dt>
-    <dd>{{% md %}}{{% /md %}}</dd>
-</dl>
+    <dd>{{% md %}}{{% /md %}}</dd></dl>
 {{% /choosable %}}
 
 {{% choosable language nodejs %}}
-<dl class="resources-properties">
-
-    <dt class="property-"
+<dl class="resources-properties"><dt class="property-"
             title="">
         <span id="availabilityzonegroup_nodejs">
 <a href="#availabilityzonegroup_nodejs" style="color: inherit; text-decoration: inherit;">availability<wbr>Zone<wbr>Group</a>
@@ -1440,8 +1322,7 @@ The following output properties are available:
         <span class="property-indicator"></span>
         <span class="property-type">string</span>
     </dt>
-    <dd>{{% md %}}{{% /md %}}</dd>
-    <dt class="property-"
+    <dd>{{% md %}}{{% /md %}}</dd><dt class="property-"
             title="">
         <span id="availabilityzones_nodejs">
 <a href="#availabilityzones_nodejs" style="color: inherit; text-decoration: inherit;">availability<wbr>Zones</a>
@@ -1450,8 +1331,7 @@ The following output properties are available:
         <span class="property-type">string[]</span>
     </dt>
     <dd>{{% md %}}Availability zones where the instance is available.
-{{% /md %}}</dd>
-    <dt class="property-"
+{{% /md %}}</dd><dt class="property-"
             title="">
         <span id="engine_nodejs">
 <a href="#engine_nodejs" style="color: inherit; text-decoration: inherit;">engine</a>
@@ -1459,8 +1339,7 @@ The following output properties are available:
         <span class="property-indicator"></span>
         <span class="property-type">string</span>
     </dt>
-    <dd>{{% md %}}{{% /md %}}</dd>
-    <dt class="property-"
+    <dd>{{% md %}}{{% /md %}}</dd><dt class="property-"
             title="">
         <span id="engineversion_nodejs">
 <a href="#engineversion_nodejs" style="color: inherit; text-decoration: inherit;">engine<wbr>Version</a>
@@ -1468,8 +1347,7 @@ The following output properties are available:
         <span class="property-indicator"></span>
         <span class="property-type">string</span>
     </dt>
-    <dd>{{% md %}}{{% /md %}}</dd>
-    <dt class="property-"
+    <dd>{{% md %}}{{% /md %}}</dd><dt class="property-"
             title="">
         <span id="id_nodejs">
 <a href="#id_nodejs" style="color: inherit; text-decoration: inherit;">id</a>
@@ -1478,8 +1356,7 @@ The following output properties are available:
         <span class="property-type">string</span>
     </dt>
     <dd>{{% md %}}The provider-assigned unique ID for this managed resource.
-{{% /md %}}</dd>
-    <dt class="property-"
+{{% /md %}}</dd><dt class="property-"
             title="">
         <span id="instanceclass_nodejs">
 <a href="#instanceclass_nodejs" style="color: inherit; text-decoration: inherit;">instance<wbr>Class</a>
@@ -1487,8 +1364,7 @@ The following output properties are available:
         <span class="property-indicator"></span>
         <span class="property-type">string</span>
     </dt>
-    <dd>{{% md %}}{{% /md %}}</dd>
-    <dt class="property-"
+    <dd>{{% md %}}{{% /md %}}</dd><dt class="property-"
             title="">
         <span id="licensemodel_nodejs">
 <a href="#licensemodel_nodejs" style="color: inherit; text-decoration: inherit;">license<wbr>Model</a>
@@ -1496,8 +1372,7 @@ The following output properties are available:
         <span class="property-indicator"></span>
         <span class="property-type">string</span>
     </dt>
-    <dd>{{% md %}}{{% /md %}}</dd>
-    <dt class="property-"
+    <dd>{{% md %}}{{% /md %}}</dd><dt class="property-"
             title="">
         <span id="maxiopsperdbinstance_nodejs">
 <a href="#maxiopsperdbinstance_nodejs" style="color: inherit; text-decoration: inherit;">max<wbr>Iops<wbr>Per<wbr>Db<wbr>Instance</a>
@@ -1506,8 +1381,7 @@ The following output properties are available:
         <span class="property-type">number</span>
     </dt>
     <dd>{{% md %}}Maximum total provisioned IOPS for a DB instance.
-{{% /md %}}</dd>
-    <dt class="property-"
+{{% /md %}}</dd><dt class="property-"
             title="">
         <span id="maxiopspergib_nodejs">
 <a href="#maxiopspergib_nodejs" style="color: inherit; text-decoration: inherit;">max<wbr>Iops<wbr>Per<wbr>Gib</a>
@@ -1516,8 +1390,7 @@ The following output properties are available:
         <span class="property-type">number</span>
     </dt>
     <dd>{{% md %}}Maximum provisioned IOPS per GiB for a DB instance.
-{{% /md %}}</dd>
-    <dt class="property-"
+{{% /md %}}</dd><dt class="property-"
             title="">
         <span id="maxstoragesize_nodejs">
 <a href="#maxstoragesize_nodejs" style="color: inherit; text-decoration: inherit;">max<wbr>Storage<wbr>Size</a>
@@ -1526,8 +1399,7 @@ The following output properties are available:
         <span class="property-type">number</span>
     </dt>
     <dd>{{% md %}}Maximum storage size for a DB instance.
-{{% /md %}}</dd>
-    <dt class="property-"
+{{% /md %}}</dd><dt class="property-"
             title="">
         <span id="miniopsperdbinstance_nodejs">
 <a href="#miniopsperdbinstance_nodejs" style="color: inherit; text-decoration: inherit;">min<wbr>Iops<wbr>Per<wbr>Db<wbr>Instance</a>
@@ -1536,8 +1408,7 @@ The following output properties are available:
         <span class="property-type">number</span>
     </dt>
     <dd>{{% md %}}Minimum total provisioned IOPS for a DB instance.
-{{% /md %}}</dd>
-    <dt class="property-"
+{{% /md %}}</dd><dt class="property-"
             title="">
         <span id="miniopspergib_nodejs">
 <a href="#miniopspergib_nodejs" style="color: inherit; text-decoration: inherit;">min<wbr>Iops<wbr>Per<wbr>Gib</a>
@@ -1546,8 +1417,7 @@ The following output properties are available:
         <span class="property-type">number</span>
     </dt>
     <dd>{{% md %}}Minimum provisioned IOPS per GiB for a DB instance.
-{{% /md %}}</dd>
-    <dt class="property-"
+{{% /md %}}</dd><dt class="property-"
             title="">
         <span id="minstoragesize_nodejs">
 <a href="#minstoragesize_nodejs" style="color: inherit; text-decoration: inherit;">min<wbr>Storage<wbr>Size</a>
@@ -1556,8 +1426,7 @@ The following output properties are available:
         <span class="property-type">number</span>
     </dt>
     <dd>{{% md %}}Minimum storage size for a DB instance.
-{{% /md %}}</dd>
-    <dt class="property-"
+{{% /md %}}</dd><dt class="property-"
             title="">
         <span id="multiazcapable_nodejs">
 <a href="#multiazcapable_nodejs" style="color: inherit; text-decoration: inherit;">multi<wbr>Az<wbr>Capable</a>
@@ -1566,8 +1435,7 @@ The following output properties are available:
         <span class="property-type">boolean</span>
     </dt>
     <dd>{{% md %}}Whether a DB instance is Multi-AZ capable.
-{{% /md %}}</dd>
-    <dt class="property-"
+{{% /md %}}</dd><dt class="property-"
             title="">
         <span id="outpostcapable_nodejs">
 <a href="#outpostcapable_nodejs" style="color: inherit; text-decoration: inherit;">outpost<wbr>Capable</a>
@@ -1576,8 +1444,7 @@ The following output properties are available:
         <span class="property-type">boolean</span>
     </dt>
     <dd>{{% md %}}Whether a DB instance supports RDS on Outposts.
-{{% /md %}}</dd>
-    <dt class="property-"
+{{% /md %}}</dd><dt class="property-"
             title="">
         <span id="readreplicacapable_nodejs">
 <a href="#readreplicacapable_nodejs" style="color: inherit; text-decoration: inherit;">read<wbr>Replica<wbr>Capable</a>
@@ -1586,8 +1453,7 @@ The following output properties are available:
         <span class="property-type">boolean</span>
     </dt>
     <dd>{{% md %}}Whether a DB instance can have a read replica.
-{{% /md %}}</dd>
-    <dt class="property-"
+{{% /md %}}</dd><dt class="property-"
             title="">
         <span id="storagetype_nodejs">
 <a href="#storagetype_nodejs" style="color: inherit; text-decoration: inherit;">storage<wbr>Type</a>
@@ -1595,8 +1461,7 @@ The following output properties are available:
         <span class="property-indicator"></span>
         <span class="property-type">string</span>
     </dt>
-    <dd>{{% md %}}{{% /md %}}</dd>
-    <dt class="property-"
+    <dd>{{% md %}}{{% /md %}}</dd><dt class="property-"
             title="">
         <span id="supportedenginemodes_nodejs">
 <a href="#supportedenginemodes_nodejs" style="color: inherit; text-decoration: inherit;">supported<wbr>Engine<wbr>Modes</a>
@@ -1605,8 +1470,7 @@ The following output properties are available:
         <span class="property-type">string[]</span>
     </dt>
     <dd>{{% md %}}A list of the supported DB engine modes.
-{{% /md %}}</dd>
-    <dt class="property-"
+{{% /md %}}</dd><dt class="property-"
             title="">
         <span id="supportsenhancedmonitoring_nodejs">
 <a href="#supportsenhancedmonitoring_nodejs" style="color: inherit; text-decoration: inherit;">supports<wbr>Enhanced<wbr>Monitoring</a>
@@ -1614,8 +1478,7 @@ The following output properties are available:
         <span class="property-indicator"></span>
         <span class="property-type">boolean</span>
     </dt>
-    <dd>{{% md %}}{{% /md %}}</dd>
-    <dt class="property-"
+    <dd>{{% md %}}{{% /md %}}</dd><dt class="property-"
             title="">
         <span id="supportsglobaldatabases_nodejs">
 <a href="#supportsglobaldatabases_nodejs" style="color: inherit; text-decoration: inherit;">supports<wbr>Global<wbr>Databases</a>
@@ -1623,8 +1486,7 @@ The following output properties are available:
         <span class="property-indicator"></span>
         <span class="property-type">boolean</span>
     </dt>
-    <dd>{{% md %}}{{% /md %}}</dd>
-    <dt class="property-"
+    <dd>{{% md %}}{{% /md %}}</dd><dt class="property-"
             title="">
         <span id="supportsiamdatabaseauthentication_nodejs">
 <a href="#supportsiamdatabaseauthentication_nodejs" style="color: inherit; text-decoration: inherit;">supports<wbr>Iam<wbr>Database<wbr>Authentication</a>
@@ -1632,8 +1494,7 @@ The following output properties are available:
         <span class="property-indicator"></span>
         <span class="property-type">boolean</span>
     </dt>
-    <dd>{{% md %}}{{% /md %}}</dd>
-    <dt class="property-"
+    <dd>{{% md %}}{{% /md %}}</dd><dt class="property-"
             title="">
         <span id="supportsiops_nodejs">
 <a href="#supportsiops_nodejs" style="color: inherit; text-decoration: inherit;">supports<wbr>Iops</a>
@@ -1641,8 +1502,7 @@ The following output properties are available:
         <span class="property-indicator"></span>
         <span class="property-type">boolean</span>
     </dt>
-    <dd>{{% md %}}{{% /md %}}</dd>
-    <dt class="property-"
+    <dd>{{% md %}}{{% /md %}}</dd><dt class="property-"
             title="">
         <span id="supportskerberosauthentication_nodejs">
 <a href="#supportskerberosauthentication_nodejs" style="color: inherit; text-decoration: inherit;">supports<wbr>Kerberos<wbr>Authentication</a>
@@ -1650,8 +1510,7 @@ The following output properties are available:
         <span class="property-indicator"></span>
         <span class="property-type">boolean</span>
     </dt>
-    <dd>{{% md %}}{{% /md %}}</dd>
-    <dt class="property-"
+    <dd>{{% md %}}{{% /md %}}</dd><dt class="property-"
             title="">
         <span id="supportsperformanceinsights_nodejs">
 <a href="#supportsperformanceinsights_nodejs" style="color: inherit; text-decoration: inherit;">supports<wbr>Performance<wbr>Insights</a>
@@ -1659,8 +1518,7 @@ The following output properties are available:
         <span class="property-indicator"></span>
         <span class="property-type">boolean</span>
     </dt>
-    <dd>{{% md %}}{{% /md %}}</dd>
-    <dt class="property-"
+    <dd>{{% md %}}{{% /md %}}</dd><dt class="property-"
             title="">
         <span id="supportsstorageautoscaling_nodejs">
 <a href="#supportsstorageautoscaling_nodejs" style="color: inherit; text-decoration: inherit;">supports<wbr>Storage<wbr>Autoscaling</a>
@@ -1668,8 +1526,7 @@ The following output properties are available:
         <span class="property-indicator"></span>
         <span class="property-type">boolean</span>
     </dt>
-    <dd>{{% md %}}{{% /md %}}</dd>
-    <dt class="property-"
+    <dd>{{% md %}}{{% /md %}}</dd><dt class="property-"
             title="">
         <span id="supportsstorageencryption_nodejs">
 <a href="#supportsstorageencryption_nodejs" style="color: inherit; text-decoration: inherit;">supports<wbr>Storage<wbr>Encryption</a>
@@ -1677,8 +1534,7 @@ The following output properties are available:
         <span class="property-indicator"></span>
         <span class="property-type">boolean</span>
     </dt>
-    <dd>{{% md %}}{{% /md %}}</dd>
-    <dt class="property-"
+    <dd>{{% md %}}{{% /md %}}</dd><dt class="property-"
             title="">
         <span id="vpc_nodejs">
 <a href="#vpc_nodejs" style="color: inherit; text-decoration: inherit;">vpc</a>
@@ -1686,8 +1542,7 @@ The following output properties are available:
         <span class="property-indicator"></span>
         <span class="property-type">boolean</span>
     </dt>
-    <dd>{{% md %}}{{% /md %}}</dd>
-    <dt class="property-"
+    <dd>{{% md %}}{{% /md %}}</dd><dt class="property-"
             title="">
         <span id="preferredengineversions_nodejs">
 <a href="#preferredengineversions_nodejs" style="color: inherit; text-decoration: inherit;">preferred<wbr>Engine<wbr>Versions</a>
@@ -1695,8 +1550,7 @@ The following output properties are available:
         <span class="property-indicator"></span>
         <span class="property-type">string[]</span>
     </dt>
-    <dd>{{% md %}}{{% /md %}}</dd>
-    <dt class="property-"
+    <dd>{{% md %}}{{% /md %}}</dd><dt class="property-"
             title="">
         <span id="preferredinstanceclasses_nodejs">
 <a href="#preferredinstanceclasses_nodejs" style="color: inherit; text-decoration: inherit;">preferred<wbr>Instance<wbr>Classes</a>
@@ -1704,14 +1558,11 @@ The following output properties are available:
         <span class="property-indicator"></span>
         <span class="property-type">string[]</span>
     </dt>
-    <dd>{{% md %}}{{% /md %}}</dd>
-</dl>
+    <dd>{{% md %}}{{% /md %}}</dd></dl>
 {{% /choosable %}}
 
 {{% choosable language python %}}
-<dl class="resources-properties">
-
-    <dt class="property-"
+<dl class="resources-properties"><dt class="property-"
             title="">
         <span id="availability_zone_group_python">
 <a href="#availability_zone_group_python" style="color: inherit; text-decoration: inherit;">availability_<wbr>zone_<wbr>group</a>
@@ -1719,8 +1570,7 @@ The following output properties are available:
         <span class="property-indicator"></span>
         <span class="property-type">str</span>
     </dt>
-    <dd>{{% md %}}{{% /md %}}</dd>
-    <dt class="property-"
+    <dd>{{% md %}}{{% /md %}}</dd><dt class="property-"
             title="">
         <span id="availability_zones_python">
 <a href="#availability_zones_python" style="color: inherit; text-decoration: inherit;">availability_<wbr>zones</a>
@@ -1729,8 +1579,7 @@ The following output properties are available:
         <span class="property-type">Sequence[str]</span>
     </dt>
     <dd>{{% md %}}Availability zones where the instance is available.
-{{% /md %}}</dd>
-    <dt class="property-"
+{{% /md %}}</dd><dt class="property-"
             title="">
         <span id="engine_python">
 <a href="#engine_python" style="color: inherit; text-decoration: inherit;">engine</a>
@@ -1738,8 +1587,7 @@ The following output properties are available:
         <span class="property-indicator"></span>
         <span class="property-type">str</span>
     </dt>
-    <dd>{{% md %}}{{% /md %}}</dd>
-    <dt class="property-"
+    <dd>{{% md %}}{{% /md %}}</dd><dt class="property-"
             title="">
         <span id="engine_version_python">
 <a href="#engine_version_python" style="color: inherit; text-decoration: inherit;">engine_<wbr>version</a>
@@ -1747,8 +1595,7 @@ The following output properties are available:
         <span class="property-indicator"></span>
         <span class="property-type">str</span>
     </dt>
-    <dd>{{% md %}}{{% /md %}}</dd>
-    <dt class="property-"
+    <dd>{{% md %}}{{% /md %}}</dd><dt class="property-"
             title="">
         <span id="id_python">
 <a href="#id_python" style="color: inherit; text-decoration: inherit;">id</a>
@@ -1757,8 +1604,7 @@ The following output properties are available:
         <span class="property-type">str</span>
     </dt>
     <dd>{{% md %}}The provider-assigned unique ID for this managed resource.
-{{% /md %}}</dd>
-    <dt class="property-"
+{{% /md %}}</dd><dt class="property-"
             title="">
         <span id="instance_class_python">
 <a href="#instance_class_python" style="color: inherit; text-decoration: inherit;">instance_<wbr>class</a>
@@ -1766,8 +1612,7 @@ The following output properties are available:
         <span class="property-indicator"></span>
         <span class="property-type">str</span>
     </dt>
-    <dd>{{% md %}}{{% /md %}}</dd>
-    <dt class="property-"
+    <dd>{{% md %}}{{% /md %}}</dd><dt class="property-"
             title="">
         <span id="license_model_python">
 <a href="#license_model_python" style="color: inherit; text-decoration: inherit;">license_<wbr>model</a>
@@ -1775,8 +1620,7 @@ The following output properties are available:
         <span class="property-indicator"></span>
         <span class="property-type">str</span>
     </dt>
-    <dd>{{% md %}}{{% /md %}}</dd>
-    <dt class="property-"
+    <dd>{{% md %}}{{% /md %}}</dd><dt class="property-"
             title="">
         <span id="max_iops_per_db_instance_python">
 <a href="#max_iops_per_db_instance_python" style="color: inherit; text-decoration: inherit;">max_<wbr>iops_<wbr>per_<wbr>db_<wbr>instance</a>
@@ -1785,8 +1629,7 @@ The following output properties are available:
         <span class="property-type">int</span>
     </dt>
     <dd>{{% md %}}Maximum total provisioned IOPS for a DB instance.
-{{% /md %}}</dd>
-    <dt class="property-"
+{{% /md %}}</dd><dt class="property-"
             title="">
         <span id="max_iops_per_gib_python">
 <a href="#max_iops_per_gib_python" style="color: inherit; text-decoration: inherit;">max_<wbr>iops_<wbr>per_<wbr>gib</a>
@@ -1795,8 +1638,7 @@ The following output properties are available:
         <span class="property-type">float</span>
     </dt>
     <dd>{{% md %}}Maximum provisioned IOPS per GiB for a DB instance.
-{{% /md %}}</dd>
-    <dt class="property-"
+{{% /md %}}</dd><dt class="property-"
             title="">
         <span id="max_storage_size_python">
 <a href="#max_storage_size_python" style="color: inherit; text-decoration: inherit;">max_<wbr>storage_<wbr>size</a>
@@ -1805,8 +1647,7 @@ The following output properties are available:
         <span class="property-type">int</span>
     </dt>
     <dd>{{% md %}}Maximum storage size for a DB instance.
-{{% /md %}}</dd>
-    <dt class="property-"
+{{% /md %}}</dd><dt class="property-"
             title="">
         <span id="min_iops_per_db_instance_python">
 <a href="#min_iops_per_db_instance_python" style="color: inherit; text-decoration: inherit;">min_<wbr>iops_<wbr>per_<wbr>db_<wbr>instance</a>
@@ -1815,8 +1656,7 @@ The following output properties are available:
         <span class="property-type">int</span>
     </dt>
     <dd>{{% md %}}Minimum total provisioned IOPS for a DB instance.
-{{% /md %}}</dd>
-    <dt class="property-"
+{{% /md %}}</dd><dt class="property-"
             title="">
         <span id="min_iops_per_gib_python">
 <a href="#min_iops_per_gib_python" style="color: inherit; text-decoration: inherit;">min_<wbr>iops_<wbr>per_<wbr>gib</a>
@@ -1825,8 +1665,7 @@ The following output properties are available:
         <span class="property-type">float</span>
     </dt>
     <dd>{{% md %}}Minimum provisioned IOPS per GiB for a DB instance.
-{{% /md %}}</dd>
-    <dt class="property-"
+{{% /md %}}</dd><dt class="property-"
             title="">
         <span id="min_storage_size_python">
 <a href="#min_storage_size_python" style="color: inherit; text-decoration: inherit;">min_<wbr>storage_<wbr>size</a>
@@ -1835,8 +1674,7 @@ The following output properties are available:
         <span class="property-type">int</span>
     </dt>
     <dd>{{% md %}}Minimum storage size for a DB instance.
-{{% /md %}}</dd>
-    <dt class="property-"
+{{% /md %}}</dd><dt class="property-"
             title="">
         <span id="multi_az_capable_python">
 <a href="#multi_az_capable_python" style="color: inherit; text-decoration: inherit;">multi_<wbr>az_<wbr>capable</a>
@@ -1845,8 +1683,7 @@ The following output properties are available:
         <span class="property-type">bool</span>
     </dt>
     <dd>{{% md %}}Whether a DB instance is Multi-AZ capable.
-{{% /md %}}</dd>
-    <dt class="property-"
+{{% /md %}}</dd><dt class="property-"
             title="">
         <span id="outpost_capable_python">
 <a href="#outpost_capable_python" style="color: inherit; text-decoration: inherit;">outpost_<wbr>capable</a>
@@ -1855,8 +1692,7 @@ The following output properties are available:
         <span class="property-type">bool</span>
     </dt>
     <dd>{{% md %}}Whether a DB instance supports RDS on Outposts.
-{{% /md %}}</dd>
-    <dt class="property-"
+{{% /md %}}</dd><dt class="property-"
             title="">
         <span id="read_replica_capable_python">
 <a href="#read_replica_capable_python" style="color: inherit; text-decoration: inherit;">read_<wbr>replica_<wbr>capable</a>
@@ -1865,8 +1701,7 @@ The following output properties are available:
         <span class="property-type">bool</span>
     </dt>
     <dd>{{% md %}}Whether a DB instance can have a read replica.
-{{% /md %}}</dd>
-    <dt class="property-"
+{{% /md %}}</dd><dt class="property-"
             title="">
         <span id="storage_type_python">
 <a href="#storage_type_python" style="color: inherit; text-decoration: inherit;">storage_<wbr>type</a>
@@ -1874,8 +1709,7 @@ The following output properties are available:
         <span class="property-indicator"></span>
         <span class="property-type">str</span>
     </dt>
-    <dd>{{% md %}}{{% /md %}}</dd>
-    <dt class="property-"
+    <dd>{{% md %}}{{% /md %}}</dd><dt class="property-"
             title="">
         <span id="supported_engine_modes_python">
 <a href="#supported_engine_modes_python" style="color: inherit; text-decoration: inherit;">supported_<wbr>engine_<wbr>modes</a>
@@ -1884,8 +1718,7 @@ The following output properties are available:
         <span class="property-type">Sequence[str]</span>
     </dt>
     <dd>{{% md %}}A list of the supported DB engine modes.
-{{% /md %}}</dd>
-    <dt class="property-"
+{{% /md %}}</dd><dt class="property-"
             title="">
         <span id="supports_enhanced_monitoring_python">
 <a href="#supports_enhanced_monitoring_python" style="color: inherit; text-decoration: inherit;">supports_<wbr>enhanced_<wbr>monitoring</a>
@@ -1893,8 +1726,7 @@ The following output properties are available:
         <span class="property-indicator"></span>
         <span class="property-type">bool</span>
     </dt>
-    <dd>{{% md %}}{{% /md %}}</dd>
-    <dt class="property-"
+    <dd>{{% md %}}{{% /md %}}</dd><dt class="property-"
             title="">
         <span id="supports_global_databases_python">
 <a href="#supports_global_databases_python" style="color: inherit; text-decoration: inherit;">supports_<wbr>global_<wbr>databases</a>
@@ -1902,8 +1734,7 @@ The following output properties are available:
         <span class="property-indicator"></span>
         <span class="property-type">bool</span>
     </dt>
-    <dd>{{% md %}}{{% /md %}}</dd>
-    <dt class="property-"
+    <dd>{{% md %}}{{% /md %}}</dd><dt class="property-"
             title="">
         <span id="supports_iam_database_authentication_python">
 <a href="#supports_iam_database_authentication_python" style="color: inherit; text-decoration: inherit;">supports_<wbr>iam_<wbr>database_<wbr>authentication</a>
@@ -1911,8 +1742,7 @@ The following output properties are available:
         <span class="property-indicator"></span>
         <span class="property-type">bool</span>
     </dt>
-    <dd>{{% md %}}{{% /md %}}</dd>
-    <dt class="property-"
+    <dd>{{% md %}}{{% /md %}}</dd><dt class="property-"
             title="">
         <span id="supports_iops_python">
 <a href="#supports_iops_python" style="color: inherit; text-decoration: inherit;">supports_<wbr>iops</a>
@@ -1920,8 +1750,7 @@ The following output properties are available:
         <span class="property-indicator"></span>
         <span class="property-type">bool</span>
     </dt>
-    <dd>{{% md %}}{{% /md %}}</dd>
-    <dt class="property-"
+    <dd>{{% md %}}{{% /md %}}</dd><dt class="property-"
             title="">
         <span id="supports_kerberos_authentication_python">
 <a href="#supports_kerberos_authentication_python" style="color: inherit; text-decoration: inherit;">supports_<wbr>kerberos_<wbr>authentication</a>
@@ -1929,8 +1758,7 @@ The following output properties are available:
         <span class="property-indicator"></span>
         <span class="property-type">bool</span>
     </dt>
-    <dd>{{% md %}}{{% /md %}}</dd>
-    <dt class="property-"
+    <dd>{{% md %}}{{% /md %}}</dd><dt class="property-"
             title="">
         <span id="supports_performance_insights_python">
 <a href="#supports_performance_insights_python" style="color: inherit; text-decoration: inherit;">supports_<wbr>performance_<wbr>insights</a>
@@ -1938,8 +1766,7 @@ The following output properties are available:
         <span class="property-indicator"></span>
         <span class="property-type">bool</span>
     </dt>
-    <dd>{{% md %}}{{% /md %}}</dd>
-    <dt class="property-"
+    <dd>{{% md %}}{{% /md %}}</dd><dt class="property-"
             title="">
         <span id="supports_storage_autoscaling_python">
 <a href="#supports_storage_autoscaling_python" style="color: inherit; text-decoration: inherit;">supports_<wbr>storage_<wbr>autoscaling</a>
@@ -1947,8 +1774,7 @@ The following output properties are available:
         <span class="property-indicator"></span>
         <span class="property-type">bool</span>
     </dt>
-    <dd>{{% md %}}{{% /md %}}</dd>
-    <dt class="property-"
+    <dd>{{% md %}}{{% /md %}}</dd><dt class="property-"
             title="">
         <span id="supports_storage_encryption_python">
 <a href="#supports_storage_encryption_python" style="color: inherit; text-decoration: inherit;">supports_<wbr>storage_<wbr>encryption</a>
@@ -1956,8 +1782,7 @@ The following output properties are available:
         <span class="property-indicator"></span>
         <span class="property-type">bool</span>
     </dt>
-    <dd>{{% md %}}{{% /md %}}</dd>
-    <dt class="property-"
+    <dd>{{% md %}}{{% /md %}}</dd><dt class="property-"
             title="">
         <span id="vpc_python">
 <a href="#vpc_python" style="color: inherit; text-decoration: inherit;">vpc</a>
@@ -1965,8 +1790,7 @@ The following output properties are available:
         <span class="property-indicator"></span>
         <span class="property-type">bool</span>
     </dt>
-    <dd>{{% md %}}{{% /md %}}</dd>
-    <dt class="property-"
+    <dd>{{% md %}}{{% /md %}}</dd><dt class="property-"
             title="">
         <span id="preferred_engine_versions_python">
 <a href="#preferred_engine_versions_python" style="color: inherit; text-decoration: inherit;">preferred_<wbr>engine_<wbr>versions</a>
@@ -1974,8 +1798,7 @@ The following output properties are available:
         <span class="property-indicator"></span>
         <span class="property-type">Sequence[str]</span>
     </dt>
-    <dd>{{% md %}}{{% /md %}}</dd>
-    <dt class="property-"
+    <dd>{{% md %}}{{% /md %}}</dd><dt class="property-"
             title="">
         <span id="preferred_instance_classes_python">
 <a href="#preferred_instance_classes_python" style="color: inherit; text-decoration: inherit;">preferred_<wbr>instance_<wbr>classes</a>
@@ -1983,8 +1806,7 @@ The following output properties are available:
         <span class="property-indicator"></span>
         <span class="property-type">Sequence[str]</span>
     </dt>
-    <dd>{{% md %}}{{% /md %}}</dd>
-</dl>
+    <dd>{{% md %}}{{% /md %}}</dd></dl>
 {{% /choosable %}}
 
 
@@ -1998,6 +1820,6 @@ The following output properties are available:
 	<dt>License</dt>
 	<dd>Apache-2.0</dd>
 	<dt>Notes</dt>
-	<dd>This Pulumi package is based on the [`aws` Terraform Provider](https://github.com/terraform-providers/terraform-provider-aws).</dd>
+	<dd>{{% md %}}This Pulumi package is based on the [`aws` Terraform Provider](https://github.com/terraform-providers/terraform-provider-aws).{{% /md %}}</dd>
 </dl>
 

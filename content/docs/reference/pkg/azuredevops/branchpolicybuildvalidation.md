@@ -1,8 +1,8 @@
 
 ---
 title: "BranchPolicyBuildValidation"
-title_tag: "Resource BranchPolicyBuildValidation | Package Azure DevOps"
-meta_desc: "Explore the BranchPolicyBuildValidation resource of the Azure DevOps package, including examples, input properties, output properties, lookup functions, and supporting types. Manages a build validation branch policy within Azure DevOps."
+title_tag: "azuredevops.BranchPolicyBuildValidation"
+meta_desc: "Documentation for the azuredevops.BranchPolicyBuildValidation resource with examples, input properties, output properties, lookup functions, and supporting types."
 ---
 
 
@@ -16,11 +16,17 @@ Manages a build validation branch policy within Azure DevOps.
 - [Azure DevOps Service REST API 5.1 - Policy Configurations](https://docs.microsoft.com/en-us/rest/api/azure/devops/policy/configurations/create?view=azure-devops-rest-5.1)
 
 {{% examples %}}
+
 ## Example Usage
 
 {{< chooser language "typescript,python,go,csharp" / >}}
 
-{{% example csharp %}}
+
+
+
+
+{{< example csharp >}}
+
 ```csharp
 using Pulumi;
 using AzureDevOps = Pulumi.AzureDevOps;
@@ -88,15 +94,17 @@ class MyStack : Stack
 }
 ```
 
-{{% /example %}}
 
-{{% example go %}}
+{{< /example >}}
+
+
+{{< example go >}}
+
 ```go
 package main
 
 import (
 	"github.com/pulumi/pulumi-azuredevops/sdk/go/azuredevops"
-	"github.com/pulumi/pulumi-azuredevops/sdk/go/azuredevops/"
 	"github.com/pulumi/pulumi/sdk/v2/go/pulumi"
 )
 
@@ -161,9 +169,12 @@ func main() {
 }
 ```
 
-{{% /example %}}
 
-{{% example python %}}
+{{< /example >}}
+
+
+{{< example python >}}
+
 ```python
 import pulumi
 import pulumi_azuredevops as azuredevops
@@ -209,9 +220,12 @@ branch_policy_build_validation = azuredevops.BranchPolicyBuildValidation("branch
     ))
 ```
 
-{{% /example %}}
 
-{{% example typescript %}}
+{{< /example >}}
+
+
+{{< example typescript >}}
+
 
 ```typescript
 import * as pulumi from "@pulumi/pulumi";
@@ -261,9 +275,16 @@ const branchPolicyBuildValidation = new azuredevops.BranchPolicyBuildValidation(
 });
 ```
 
-{{% /example %}}
+
+{{< /example >}}
+
+
+
+
 
 {{% /examples %}}
+
+
 
 
 ## Create a BranchPolicyBuildValidation Resource {#create}
@@ -288,9 +309,7 @@ const branchPolicyBuildValidation = new azuredevops.BranchPolicyBuildValidation(
 
 {{% choosable language nodejs %}}
 
-<dl class="resources-properties">
-  
-    <dt
+<dl class="resources-properties"><dt
         class="property-required" title="Required">
         <span>name</span>
         <span class="property-indicator"></span>
@@ -298,9 +317,7 @@ const branchPolicyBuildValidation = new azuredevops.BranchPolicyBuildValidation(
     </dt>
     <dd>
       The unique name of the resource.
-    </dd>
-  
-    <dt
+    </dd><dt
         class="property-required" title="Required">
         <span>args</span>
         <span class="property-indicator"></span>
@@ -308,9 +325,7 @@ const branchPolicyBuildValidation = new azuredevops.BranchPolicyBuildValidation(
     </dt>
     <dd>
       The arguments to resource properties.
-    </dd>
-  
-    <dt
+    </dd><dt
         class="property-optional" title="Optional">
         <span>opts</span>
         <span class="property-indicator"></span>
@@ -318,10 +333,7 @@ const branchPolicyBuildValidation = new azuredevops.BranchPolicyBuildValidation(
     </dt>
     <dd>
       Bag of options to control resource&#39;s behavior.
-    </dd>
-  
-
-</dl>
+    </dd></dl>
 
 {{% /choosable %}}
 
@@ -347,9 +359,7 @@ const branchPolicyBuildValidation = new azuredevops.BranchPolicyBuildValidation(
 
 {{% choosable language go %}}
 
-<dl class="resources-properties">
-  
-    <dt
+<dl class="resources-properties"><dt
         class="property-optional" title="Optional">
         <span>ctx</span>
         <span class="property-indicator"></span>
@@ -357,9 +367,7 @@ const branchPolicyBuildValidation = new azuredevops.BranchPolicyBuildValidation(
     </dt>
     <dd>
       Context object for the current deployment.
-    </dd>
-  
-    <dt
+    </dd><dt
         class="property-required" title="Required">
         <span>name</span>
         <span class="property-indicator"></span>
@@ -367,9 +375,7 @@ const branchPolicyBuildValidation = new azuredevops.BranchPolicyBuildValidation(
     </dt>
     <dd>
       The unique name of the resource.
-    </dd>
-  
-    <dt
+    </dd><dt
         class="property-required" title="Required">
         <span>args</span>
         <span class="property-indicator"></span>
@@ -377,9 +383,7 @@ const branchPolicyBuildValidation = new azuredevops.BranchPolicyBuildValidation(
     </dt>
     <dd>
       The arguments to resource properties.
-    </dd>
-  
-    <dt
+    </dd><dt
         class="property-optional" title="Optional">
         <span>opts</span>
         <span class="property-indicator"></span>
@@ -387,18 +391,13 @@ const branchPolicyBuildValidation = new azuredevops.BranchPolicyBuildValidation(
     </dt>
     <dd>
       Bag of options to control resource&#39;s behavior.
-    </dd>
-  
-
-</dl>
+    </dd></dl>
 
 {{% /choosable %}}
 
 {{% choosable language csharp %}}
 
-<dl class="resources-properties">
-  
-    <dt
+<dl class="resources-properties"><dt
         class="property-required" title="Required">
         <span>name</span>
         <span class="property-indicator"></span>
@@ -406,9 +405,7 @@ const branchPolicyBuildValidation = new azuredevops.BranchPolicyBuildValidation(
     </dt>
     <dd>
       The unique name of the resource.
-    </dd>
-  
-    <dt
+    </dd><dt
         class="property-required" title="Required">
         <span>args</span>
         <span class="property-indicator"></span>
@@ -416,9 +413,7 @@ const branchPolicyBuildValidation = new azuredevops.BranchPolicyBuildValidation(
     </dt>
     <dd>
       The arguments to resource properties.
-    </dd>
-  
-    <dt
+    </dd><dt
         class="property-optional" title="Optional">
         <span>opts</span>
         <span class="property-indicator"></span>
@@ -426,10 +421,7 @@ const branchPolicyBuildValidation = new azuredevops.BranchPolicyBuildValidation(
     </dt>
     <dd>
       Bag of options to control resource&#39;s behavior.
-    </dd>
-  
-
-</dl>
+    </dd></dl>
 
 {{% /choosable %}}
 
@@ -444,9 +436,7 @@ The BranchPolicyBuildValidation resource accepts the following [input]({{< relre
 
 
 {{% choosable language csharp %}}
-<dl class="resources-properties">
-
-    <dt class="property-required"
+<dl class="resources-properties"><dt class="property-required"
             title="Required">
         <span id="projectid_csharp">
 <a href="#projectid_csharp" style="color: inherit; text-decoration: inherit;">Project<wbr>Id</a>
@@ -455,8 +445,7 @@ The BranchPolicyBuildValidation resource accepts the following [input]({{< relre
         <span class="property-type">string</span>
     </dt>
     <dd>{{% md %}}The ID of the project in which the policy will be created.
-{{% /md %}}</dd>
-    <dt class="property-required"
+{{% /md %}}</dd><dt class="property-required"
             title="Required">
         <span id="settings_csharp">
 <a href="#settings_csharp" style="color: inherit; text-decoration: inherit;">Settings</a>
@@ -465,8 +454,7 @@ The BranchPolicyBuildValidation resource accepts the following [input]({{< relre
         <span class="property-type"><a href="#branchpolicybuildvalidationsettings">Pulumi.<wbr>Azure<wbr>Dev<wbr>Ops.<wbr>Inputs.<wbr>Branch<wbr>Policy<wbr>Build<wbr>Validation<wbr>Settings<wbr>Args</a></span>
     </dt>
     <dd>{{% md %}}Configuration for the policy. This block must be defined exactly once.
-{{% /md %}}</dd>
-    <dt class="property-optional"
+{{% /md %}}</dd><dt class="property-optional"
             title="Optional">
         <span id="blocking_csharp">
 <a href="#blocking_csharp" style="color: inherit; text-decoration: inherit;">Blocking</a>
@@ -475,8 +463,7 @@ The BranchPolicyBuildValidation resource accepts the following [input]({{< relre
         <span class="property-type">bool</span>
     </dt>
     <dd>{{% md %}}A flag indicating if the policy should be blocking. Defaults to `true`.
-{{% /md %}}</dd>
-    <dt class="property-optional"
+{{% /md %}}</dd><dt class="property-optional"
             title="Optional">
         <span id="enabled_csharp">
 <a href="#enabled_csharp" style="color: inherit; text-decoration: inherit;">Enabled</a>
@@ -485,14 +472,11 @@ The BranchPolicyBuildValidation resource accepts the following [input]({{< relre
         <span class="property-type">bool</span>
     </dt>
     <dd>{{% md %}}A flag indicating if the policy should be enabled. Defaults to `true`.
-{{% /md %}}</dd>
-</dl>
+{{% /md %}}</dd></dl>
 {{% /choosable %}}
 
 {{% choosable language go %}}
-<dl class="resources-properties">
-
-    <dt class="property-required"
+<dl class="resources-properties"><dt class="property-required"
             title="Required">
         <span id="projectid_go">
 <a href="#projectid_go" style="color: inherit; text-decoration: inherit;">Project<wbr>Id</a>
@@ -501,8 +485,7 @@ The BranchPolicyBuildValidation resource accepts the following [input]({{< relre
         <span class="property-type">string</span>
     </dt>
     <dd>{{% md %}}The ID of the project in which the policy will be created.
-{{% /md %}}</dd>
-    <dt class="property-required"
+{{% /md %}}</dd><dt class="property-required"
             title="Required">
         <span id="settings_go">
 <a href="#settings_go" style="color: inherit; text-decoration: inherit;">Settings</a>
@@ -511,8 +494,7 @@ The BranchPolicyBuildValidation resource accepts the following [input]({{< relre
         <span class="property-type"><a href="#branchpolicybuildvalidationsettings">Branch<wbr>Policy<wbr>Build<wbr>Validation<wbr>Settings</a></span>
     </dt>
     <dd>{{% md %}}Configuration for the policy. This block must be defined exactly once.
-{{% /md %}}</dd>
-    <dt class="property-optional"
+{{% /md %}}</dd><dt class="property-optional"
             title="Optional">
         <span id="blocking_go">
 <a href="#blocking_go" style="color: inherit; text-decoration: inherit;">Blocking</a>
@@ -521,8 +503,7 @@ The BranchPolicyBuildValidation resource accepts the following [input]({{< relre
         <span class="property-type">bool</span>
     </dt>
     <dd>{{% md %}}A flag indicating if the policy should be blocking. Defaults to `true`.
-{{% /md %}}</dd>
-    <dt class="property-optional"
+{{% /md %}}</dd><dt class="property-optional"
             title="Optional">
         <span id="enabled_go">
 <a href="#enabled_go" style="color: inherit; text-decoration: inherit;">Enabled</a>
@@ -531,14 +512,11 @@ The BranchPolicyBuildValidation resource accepts the following [input]({{< relre
         <span class="property-type">bool</span>
     </dt>
     <dd>{{% md %}}A flag indicating if the policy should be enabled. Defaults to `true`.
-{{% /md %}}</dd>
-</dl>
+{{% /md %}}</dd></dl>
 {{% /choosable %}}
 
 {{% choosable language nodejs %}}
-<dl class="resources-properties">
-
-    <dt class="property-required"
+<dl class="resources-properties"><dt class="property-required"
             title="Required">
         <span id="projectid_nodejs">
 <a href="#projectid_nodejs" style="color: inherit; text-decoration: inherit;">project<wbr>Id</a>
@@ -547,8 +525,7 @@ The BranchPolicyBuildValidation resource accepts the following [input]({{< relre
         <span class="property-type">string</span>
     </dt>
     <dd>{{% md %}}The ID of the project in which the policy will be created.
-{{% /md %}}</dd>
-    <dt class="property-required"
+{{% /md %}}</dd><dt class="property-required"
             title="Required">
         <span id="settings_nodejs">
 <a href="#settings_nodejs" style="color: inherit; text-decoration: inherit;">settings</a>
@@ -557,8 +534,7 @@ The BranchPolicyBuildValidation resource accepts the following [input]({{< relre
         <span class="property-type"><a href="#branchpolicybuildvalidationsettings">Branch<wbr>Policy<wbr>Build<wbr>Validation<wbr>Settings</a></span>
     </dt>
     <dd>{{% md %}}Configuration for the policy. This block must be defined exactly once.
-{{% /md %}}</dd>
-    <dt class="property-optional"
+{{% /md %}}</dd><dt class="property-optional"
             title="Optional">
         <span id="blocking_nodejs">
 <a href="#blocking_nodejs" style="color: inherit; text-decoration: inherit;">blocking</a>
@@ -567,8 +543,7 @@ The BranchPolicyBuildValidation resource accepts the following [input]({{< relre
         <span class="property-type">boolean</span>
     </dt>
     <dd>{{% md %}}A flag indicating if the policy should be blocking. Defaults to `true`.
-{{% /md %}}</dd>
-    <dt class="property-optional"
+{{% /md %}}</dd><dt class="property-optional"
             title="Optional">
         <span id="enabled_nodejs">
 <a href="#enabled_nodejs" style="color: inherit; text-decoration: inherit;">enabled</a>
@@ -577,14 +552,11 @@ The BranchPolicyBuildValidation resource accepts the following [input]({{< relre
         <span class="property-type">boolean</span>
     </dt>
     <dd>{{% md %}}A flag indicating if the policy should be enabled. Defaults to `true`.
-{{% /md %}}</dd>
-</dl>
+{{% /md %}}</dd></dl>
 {{% /choosable %}}
 
 {{% choosable language python %}}
-<dl class="resources-properties">
-
-    <dt class="property-required"
+<dl class="resources-properties"><dt class="property-required"
             title="Required">
         <span id="project_id_python">
 <a href="#project_id_python" style="color: inherit; text-decoration: inherit;">project_<wbr>id</a>
@@ -593,8 +565,7 @@ The BranchPolicyBuildValidation resource accepts the following [input]({{< relre
         <span class="property-type">str</span>
     </dt>
     <dd>{{% md %}}The ID of the project in which the policy will be created.
-{{% /md %}}</dd>
-    <dt class="property-required"
+{{% /md %}}</dd><dt class="property-required"
             title="Required">
         <span id="settings_python">
 <a href="#settings_python" style="color: inherit; text-decoration: inherit;">settings</a>
@@ -603,8 +574,7 @@ The BranchPolicyBuildValidation resource accepts the following [input]({{< relre
         <span class="property-type"><a href="#branchpolicybuildvalidationsettings">Branch<wbr>Policy<wbr>Build<wbr>Validation<wbr>Settings<wbr>Args</a></span>
     </dt>
     <dd>{{% md %}}Configuration for the policy. This block must be defined exactly once.
-{{% /md %}}</dd>
-    <dt class="property-optional"
+{{% /md %}}</dd><dt class="property-optional"
             title="Optional">
         <span id="blocking_python">
 <a href="#blocking_python" style="color: inherit; text-decoration: inherit;">blocking</a>
@@ -613,8 +583,7 @@ The BranchPolicyBuildValidation resource accepts the following [input]({{< relre
         <span class="property-type">bool</span>
     </dt>
     <dd>{{% md %}}A flag indicating if the policy should be blocking. Defaults to `true`.
-{{% /md %}}</dd>
-    <dt class="property-optional"
+{{% /md %}}</dd><dt class="property-optional"
             title="Optional">
         <span id="enabled_python">
 <a href="#enabled_python" style="color: inherit; text-decoration: inherit;">enabled</a>
@@ -623,8 +592,7 @@ The BranchPolicyBuildValidation resource accepts the following [input]({{< relre
         <span class="property-type">bool</span>
     </dt>
     <dd>{{% md %}}A flag indicating if the policy should be enabled. Defaults to `true`.
-{{% /md %}}</dd>
-</dl>
+{{% /md %}}</dd></dl>
 {{% /choosable %}}
 
 
@@ -635,9 +603,7 @@ All [input](#inputs) properties are implicitly available as output properties. A
 
 
 {{% choosable language csharp %}}
-<dl class="resources-properties">
-
-    <dt class="property-"
+<dl class="resources-properties"><dt class="property-"
             title="">
         <span id="id_csharp">
 <a href="#id_csharp" style="color: inherit; text-decoration: inherit;">Id</a>
@@ -645,14 +611,11 @@ All [input](#inputs) properties are implicitly available as output properties. A
         <span class="property-indicator"></span>
         <span class="property-type">string</span>
     </dt>
-    <dd>{{% md %}}The provider-assigned unique ID for this managed resource.{{% /md %}}</dd>
-</dl>
+    <dd>{{% md %}}The provider-assigned unique ID for this managed resource.{{% /md %}}</dd></dl>
 {{% /choosable %}}
 
 {{% choosable language go %}}
-<dl class="resources-properties">
-
-    <dt class="property-"
+<dl class="resources-properties"><dt class="property-"
             title="">
         <span id="id_go">
 <a href="#id_go" style="color: inherit; text-decoration: inherit;">Id</a>
@@ -660,14 +623,11 @@ All [input](#inputs) properties are implicitly available as output properties. A
         <span class="property-indicator"></span>
         <span class="property-type">string</span>
     </dt>
-    <dd>{{% md %}}The provider-assigned unique ID for this managed resource.{{% /md %}}</dd>
-</dl>
+    <dd>{{% md %}}The provider-assigned unique ID for this managed resource.{{% /md %}}</dd></dl>
 {{% /choosable %}}
 
 {{% choosable language nodejs %}}
-<dl class="resources-properties">
-
-    <dt class="property-"
+<dl class="resources-properties"><dt class="property-"
             title="">
         <span id="id_nodejs">
 <a href="#id_nodejs" style="color: inherit; text-decoration: inherit;">id</a>
@@ -675,14 +635,11 @@ All [input](#inputs) properties are implicitly available as output properties. A
         <span class="property-indicator"></span>
         <span class="property-type">string</span>
     </dt>
-    <dd>{{% md %}}The provider-assigned unique ID for this managed resource.{{% /md %}}</dd>
-</dl>
+    <dd>{{% md %}}The provider-assigned unique ID for this managed resource.{{% /md %}}</dd></dl>
 {{% /choosable %}}
 
 {{% choosable language python %}}
-<dl class="resources-properties">
-
-    <dt class="property-"
+<dl class="resources-properties"><dt class="property-"
             title="">
         <span id="id_python">
 <a href="#id_python" style="color: inherit; text-decoration: inherit;">id</a>
@@ -690,8 +647,7 @@ All [input](#inputs) properties are implicitly available as output properties. A
         <span class="property-indicator"></span>
         <span class="property-type">str</span>
     </dt>
-    <dd>{{% md %}}The provider-assigned unique ID for this managed resource.{{% /md %}}</dd>
-</dl>
+    <dd>{{% md %}}The provider-assigned unique ID for this managed resource.{{% /md %}}</dd></dl>
 {{% /choosable %}}
 
 
@@ -818,9 +774,7 @@ The following state arguments are supported:
 
 
 {{% choosable language csharp %}}
-<dl class="resources-properties">
-
-    <dt class="property-optional"
+<dl class="resources-properties"><dt class="property-optional"
             title="Optional">
         <span id="state_blocking_csharp">
 <a href="#state_blocking_csharp" style="color: inherit; text-decoration: inherit;">Blocking</a>
@@ -829,8 +783,7 @@ The following state arguments are supported:
         <span class="property-type">bool</span>
     </dt>
     <dd>{{% md %}}A flag indicating if the policy should be blocking. Defaults to `true`.
-{{% /md %}}</dd>
-    <dt class="property-optional"
+{{% /md %}}</dd><dt class="property-optional"
             title="Optional">
         <span id="state_enabled_csharp">
 <a href="#state_enabled_csharp" style="color: inherit; text-decoration: inherit;">Enabled</a>
@@ -839,8 +792,7 @@ The following state arguments are supported:
         <span class="property-type">bool</span>
     </dt>
     <dd>{{% md %}}A flag indicating if the policy should be enabled. Defaults to `true`.
-{{% /md %}}</dd>
-    <dt class="property-optional"
+{{% /md %}}</dd><dt class="property-optional"
             title="Optional">
         <span id="state_projectid_csharp">
 <a href="#state_projectid_csharp" style="color: inherit; text-decoration: inherit;">Project<wbr>Id</a>
@@ -849,8 +801,7 @@ The following state arguments are supported:
         <span class="property-type">string</span>
     </dt>
     <dd>{{% md %}}The ID of the project in which the policy will be created.
-{{% /md %}}</dd>
-    <dt class="property-optional"
+{{% /md %}}</dd><dt class="property-optional"
             title="Optional">
         <span id="state_settings_csharp">
 <a href="#state_settings_csharp" style="color: inherit; text-decoration: inherit;">Settings</a>
@@ -859,14 +810,11 @@ The following state arguments are supported:
         <span class="property-type"><a href="#branchpolicybuildvalidationsettings">Pulumi.<wbr>Azure<wbr>Dev<wbr>Ops.<wbr>Inputs.<wbr>Branch<wbr>Policy<wbr>Build<wbr>Validation<wbr>Settings<wbr>Args</a></span>
     </dt>
     <dd>{{% md %}}Configuration for the policy. This block must be defined exactly once.
-{{% /md %}}</dd>
-</dl>
+{{% /md %}}</dd></dl>
 {{% /choosable %}}
 
 {{% choosable language go %}}
-<dl class="resources-properties">
-
-    <dt class="property-optional"
+<dl class="resources-properties"><dt class="property-optional"
             title="Optional">
         <span id="state_blocking_go">
 <a href="#state_blocking_go" style="color: inherit; text-decoration: inherit;">Blocking</a>
@@ -875,8 +823,7 @@ The following state arguments are supported:
         <span class="property-type">bool</span>
     </dt>
     <dd>{{% md %}}A flag indicating if the policy should be blocking. Defaults to `true`.
-{{% /md %}}</dd>
-    <dt class="property-optional"
+{{% /md %}}</dd><dt class="property-optional"
             title="Optional">
         <span id="state_enabled_go">
 <a href="#state_enabled_go" style="color: inherit; text-decoration: inherit;">Enabled</a>
@@ -885,8 +832,7 @@ The following state arguments are supported:
         <span class="property-type">bool</span>
     </dt>
     <dd>{{% md %}}A flag indicating if the policy should be enabled. Defaults to `true`.
-{{% /md %}}</dd>
-    <dt class="property-optional"
+{{% /md %}}</dd><dt class="property-optional"
             title="Optional">
         <span id="state_projectid_go">
 <a href="#state_projectid_go" style="color: inherit; text-decoration: inherit;">Project<wbr>Id</a>
@@ -895,8 +841,7 @@ The following state arguments are supported:
         <span class="property-type">string</span>
     </dt>
     <dd>{{% md %}}The ID of the project in which the policy will be created.
-{{% /md %}}</dd>
-    <dt class="property-optional"
+{{% /md %}}</dd><dt class="property-optional"
             title="Optional">
         <span id="state_settings_go">
 <a href="#state_settings_go" style="color: inherit; text-decoration: inherit;">Settings</a>
@@ -905,14 +850,11 @@ The following state arguments are supported:
         <span class="property-type"><a href="#branchpolicybuildvalidationsettings">Branch<wbr>Policy<wbr>Build<wbr>Validation<wbr>Settings</a></span>
     </dt>
     <dd>{{% md %}}Configuration for the policy. This block must be defined exactly once.
-{{% /md %}}</dd>
-</dl>
+{{% /md %}}</dd></dl>
 {{% /choosable %}}
 
 {{% choosable language nodejs %}}
-<dl class="resources-properties">
-
-    <dt class="property-optional"
+<dl class="resources-properties"><dt class="property-optional"
             title="Optional">
         <span id="state_blocking_nodejs">
 <a href="#state_blocking_nodejs" style="color: inherit; text-decoration: inherit;">blocking</a>
@@ -921,8 +863,7 @@ The following state arguments are supported:
         <span class="property-type">boolean</span>
     </dt>
     <dd>{{% md %}}A flag indicating if the policy should be blocking. Defaults to `true`.
-{{% /md %}}</dd>
-    <dt class="property-optional"
+{{% /md %}}</dd><dt class="property-optional"
             title="Optional">
         <span id="state_enabled_nodejs">
 <a href="#state_enabled_nodejs" style="color: inherit; text-decoration: inherit;">enabled</a>
@@ -931,8 +872,7 @@ The following state arguments are supported:
         <span class="property-type">boolean</span>
     </dt>
     <dd>{{% md %}}A flag indicating if the policy should be enabled. Defaults to `true`.
-{{% /md %}}</dd>
-    <dt class="property-optional"
+{{% /md %}}</dd><dt class="property-optional"
             title="Optional">
         <span id="state_projectid_nodejs">
 <a href="#state_projectid_nodejs" style="color: inherit; text-decoration: inherit;">project<wbr>Id</a>
@@ -941,8 +881,7 @@ The following state arguments are supported:
         <span class="property-type">string</span>
     </dt>
     <dd>{{% md %}}The ID of the project in which the policy will be created.
-{{% /md %}}</dd>
-    <dt class="property-optional"
+{{% /md %}}</dd><dt class="property-optional"
             title="Optional">
         <span id="state_settings_nodejs">
 <a href="#state_settings_nodejs" style="color: inherit; text-decoration: inherit;">settings</a>
@@ -951,14 +890,11 @@ The following state arguments are supported:
         <span class="property-type"><a href="#branchpolicybuildvalidationsettings">Branch<wbr>Policy<wbr>Build<wbr>Validation<wbr>Settings</a></span>
     </dt>
     <dd>{{% md %}}Configuration for the policy. This block must be defined exactly once.
-{{% /md %}}</dd>
-</dl>
+{{% /md %}}</dd></dl>
 {{% /choosable %}}
 
 {{% choosable language python %}}
-<dl class="resources-properties">
-
-    <dt class="property-optional"
+<dl class="resources-properties"><dt class="property-optional"
             title="Optional">
         <span id="state_blocking_python">
 <a href="#state_blocking_python" style="color: inherit; text-decoration: inherit;">blocking</a>
@@ -967,8 +903,7 @@ The following state arguments are supported:
         <span class="property-type">bool</span>
     </dt>
     <dd>{{% md %}}A flag indicating if the policy should be blocking. Defaults to `true`.
-{{% /md %}}</dd>
-    <dt class="property-optional"
+{{% /md %}}</dd><dt class="property-optional"
             title="Optional">
         <span id="state_enabled_python">
 <a href="#state_enabled_python" style="color: inherit; text-decoration: inherit;">enabled</a>
@@ -977,8 +912,7 @@ The following state arguments are supported:
         <span class="property-type">bool</span>
     </dt>
     <dd>{{% md %}}A flag indicating if the policy should be enabled. Defaults to `true`.
-{{% /md %}}</dd>
-    <dt class="property-optional"
+{{% /md %}}</dd><dt class="property-optional"
             title="Optional">
         <span id="state_project_id_python">
 <a href="#state_project_id_python" style="color: inherit; text-decoration: inherit;">project_<wbr>id</a>
@@ -987,8 +921,7 @@ The following state arguments are supported:
         <span class="property-type">str</span>
     </dt>
     <dd>{{% md %}}The ID of the project in which the policy will be created.
-{{% /md %}}</dd>
-    <dt class="property-optional"
+{{% /md %}}</dd><dt class="property-optional"
             title="Optional">
         <span id="state_settings_python">
 <a href="#state_settings_python" style="color: inherit; text-decoration: inherit;">settings</a>
@@ -997,8 +930,7 @@ The following state arguments are supported:
         <span class="property-type"><a href="#branchpolicybuildvalidationsettings">Branch<wbr>Policy<wbr>Build<wbr>Validation<wbr>Settings<wbr>Args</a></span>
     </dt>
     <dd>{{% md %}}Configuration for the policy. This block must be defined exactly once.
-{{% /md %}}</dd>
-</dl>
+{{% /md %}}</dd></dl>
 {{% /choosable %}}
 
 
@@ -1013,9 +945,7 @@ The following state arguments are supported:
 <h4 id="branchpolicybuildvalidationsettings">Branch<wbr>Policy<wbr>Build<wbr>Validation<wbr>Settings</h4>
 
 {{% choosable language csharp %}}
-<dl class="resources-properties">
-
-    <dt class="property-required"
+<dl class="resources-properties"><dt class="property-required"
             title="Required">
         <span id="builddefinitionid_csharp">
 <a href="#builddefinitionid_csharp" style="color: inherit; text-decoration: inherit;">Build<wbr>Definition<wbr>Id</a>
@@ -1024,8 +954,7 @@ The following state arguments are supported:
         <span class="property-type">int</span>
     </dt>
     <dd>{{% md %}}The ID of the build to monitor for the policy.
-{{% /md %}}</dd>
-    <dt class="property-required"
+{{% /md %}}</dd><dt class="property-required"
             title="Required">
         <span id="displayname_csharp">
 <a href="#displayname_csharp" style="color: inherit; text-decoration: inherit;">Display<wbr>Name</a>
@@ -1034,8 +963,7 @@ The following state arguments are supported:
         <span class="property-type">string</span>
     </dt>
     <dd>{{% md %}}The display name for the policy.
-{{% /md %}}</dd>
-    <dt class="property-required"
+{{% /md %}}</dd><dt class="property-required"
             title="Required">
         <span id="scopes_csharp">
 <a href="#scopes_csharp" style="color: inherit; text-decoration: inherit;">Scopes</a>
@@ -1044,8 +972,7 @@ The following state arguments are supported:
         <span class="property-type"><a href="#branchpolicybuildvalidationsettingsscope">List&lt;Pulumi.<wbr>Azure<wbr>Dev<wbr>Ops.<wbr>Inputs.<wbr>Branch<wbr>Policy<wbr>Build<wbr>Validation<wbr>Settings<wbr>Scope<wbr>Args&gt;</a></span>
     </dt>
     <dd>{{% md %}}Controls which repositories and branches the policy will be enabled for. This block must be defined at least once.
-{{% /md %}}</dd>
-    <dt class="property-optional"
+{{% /md %}}</dd><dt class="property-optional"
             title="Optional">
         <span id="filenamepatterns_csharp">
 <a href="#filenamepatterns_csharp" style="color: inherit; text-decoration: inherit;">Filename<wbr>Patterns</a>
@@ -1054,8 +981,7 @@ The following state arguments are supported:
         <span class="property-type">List&lt;string&gt;</span>
     </dt>
     <dd>{{% md %}}If a path filter is set, the policy wil only apply when files which match the filter are changes. Not setting this field means that the policy will always apply. You can specify absolute paths and wildcards. Example: `["/WebApp/Models/Data.cs", "/WebApp/*", "*.cs"]`. Paths prefixed with "!" are excluded. Example: `["/WebApp/*", "!/WebApp/Tests/*"]`. Order is significant.
-{{% /md %}}</dd>
-    <dt class="property-optional"
+{{% /md %}}</dd><dt class="property-optional"
             title="Optional">
         <span id="manualqueueonly_csharp">
 <a href="#manualqueueonly_csharp" style="color: inherit; text-decoration: inherit;">Manual<wbr>Queue<wbr>Only</a>
@@ -1064,8 +990,7 @@ The following state arguments are supported:
         <span class="property-type">bool</span>
     </dt>
     <dd>{{% md %}}If set to true, the build will need to be manually queued. Defaults to `false`
-{{% /md %}}</dd>
-    <dt class="property-optional"
+{{% /md %}}</dd><dt class="property-optional"
             title="Optional">
         <span id="queueonsourceupdateonly_csharp">
 <a href="#queueonsourceupdateonly_csharp" style="color: inherit; text-decoration: inherit;">Queue<wbr>On<wbr>Source<wbr>Update<wbr>Only</a>
@@ -1074,8 +999,7 @@ The following state arguments are supported:
         <span class="property-type">bool</span>
     </dt>
     <dd>{{% md %}}True if the build should queue on source updates only. Defaults to `true`.
-{{% /md %}}</dd>
-    <dt class="property-optional"
+{{% /md %}}</dd><dt class="property-optional"
             title="Optional">
         <span id="validduration_csharp">
 <a href="#validduration_csharp" style="color: inherit; text-decoration: inherit;">Valid<wbr>Duration</a>
@@ -1084,14 +1008,11 @@ The following state arguments are supported:
         <span class="property-type">int</span>
     </dt>
     <dd>{{% md %}}The number of minutes for which the build is valid. If `0`, the build will not expire. Defaults to `720` (12 hours).
-{{% /md %}}</dd>
-</dl>
+{{% /md %}}</dd></dl>
 {{% /choosable %}}
 
 {{% choosable language go %}}
-<dl class="resources-properties">
-
-    <dt class="property-required"
+<dl class="resources-properties"><dt class="property-required"
             title="Required">
         <span id="builddefinitionid_go">
 <a href="#builddefinitionid_go" style="color: inherit; text-decoration: inherit;">Build<wbr>Definition<wbr>Id</a>
@@ -1100,8 +1021,7 @@ The following state arguments are supported:
         <span class="property-type">int</span>
     </dt>
     <dd>{{% md %}}The ID of the build to monitor for the policy.
-{{% /md %}}</dd>
-    <dt class="property-required"
+{{% /md %}}</dd><dt class="property-required"
             title="Required">
         <span id="displayname_go">
 <a href="#displayname_go" style="color: inherit; text-decoration: inherit;">Display<wbr>Name</a>
@@ -1110,8 +1030,7 @@ The following state arguments are supported:
         <span class="property-type">string</span>
     </dt>
     <dd>{{% md %}}The display name for the policy.
-{{% /md %}}</dd>
-    <dt class="property-required"
+{{% /md %}}</dd><dt class="property-required"
             title="Required">
         <span id="scopes_go">
 <a href="#scopes_go" style="color: inherit; text-decoration: inherit;">Scopes</a>
@@ -1120,8 +1039,7 @@ The following state arguments are supported:
         <span class="property-type"><a href="#branchpolicybuildvalidationsettingsscope">[]Branch<wbr>Policy<wbr>Build<wbr>Validation<wbr>Settings<wbr>Scope</a></span>
     </dt>
     <dd>{{% md %}}Controls which repositories and branches the policy will be enabled for. This block must be defined at least once.
-{{% /md %}}</dd>
-    <dt class="property-optional"
+{{% /md %}}</dd><dt class="property-optional"
             title="Optional">
         <span id="filenamepatterns_go">
 <a href="#filenamepatterns_go" style="color: inherit; text-decoration: inherit;">Filename<wbr>Patterns</a>
@@ -1130,8 +1048,7 @@ The following state arguments are supported:
         <span class="property-type">[]string</span>
     </dt>
     <dd>{{% md %}}If a path filter is set, the policy wil only apply when files which match the filter are changes. Not setting this field means that the policy will always apply. You can specify absolute paths and wildcards. Example: `["/WebApp/Models/Data.cs", "/WebApp/*", "*.cs"]`. Paths prefixed with "!" are excluded. Example: `["/WebApp/*", "!/WebApp/Tests/*"]`. Order is significant.
-{{% /md %}}</dd>
-    <dt class="property-optional"
+{{% /md %}}</dd><dt class="property-optional"
             title="Optional">
         <span id="manualqueueonly_go">
 <a href="#manualqueueonly_go" style="color: inherit; text-decoration: inherit;">Manual<wbr>Queue<wbr>Only</a>
@@ -1140,8 +1057,7 @@ The following state arguments are supported:
         <span class="property-type">bool</span>
     </dt>
     <dd>{{% md %}}If set to true, the build will need to be manually queued. Defaults to `false`
-{{% /md %}}</dd>
-    <dt class="property-optional"
+{{% /md %}}</dd><dt class="property-optional"
             title="Optional">
         <span id="queueonsourceupdateonly_go">
 <a href="#queueonsourceupdateonly_go" style="color: inherit; text-decoration: inherit;">Queue<wbr>On<wbr>Source<wbr>Update<wbr>Only</a>
@@ -1150,8 +1066,7 @@ The following state arguments are supported:
         <span class="property-type">bool</span>
     </dt>
     <dd>{{% md %}}True if the build should queue on source updates only. Defaults to `true`.
-{{% /md %}}</dd>
-    <dt class="property-optional"
+{{% /md %}}</dd><dt class="property-optional"
             title="Optional">
         <span id="validduration_go">
 <a href="#validduration_go" style="color: inherit; text-decoration: inherit;">Valid<wbr>Duration</a>
@@ -1160,14 +1075,11 @@ The following state arguments are supported:
         <span class="property-type">int</span>
     </dt>
     <dd>{{% md %}}The number of minutes for which the build is valid. If `0`, the build will not expire. Defaults to `720` (12 hours).
-{{% /md %}}</dd>
-</dl>
+{{% /md %}}</dd></dl>
 {{% /choosable %}}
 
 {{% choosable language nodejs %}}
-<dl class="resources-properties">
-
-    <dt class="property-required"
+<dl class="resources-properties"><dt class="property-required"
             title="Required">
         <span id="builddefinitionid_nodejs">
 <a href="#builddefinitionid_nodejs" style="color: inherit; text-decoration: inherit;">build<wbr>Definition<wbr>Id</a>
@@ -1176,8 +1088,7 @@ The following state arguments are supported:
         <span class="property-type">number</span>
     </dt>
     <dd>{{% md %}}The ID of the build to monitor for the policy.
-{{% /md %}}</dd>
-    <dt class="property-required"
+{{% /md %}}</dd><dt class="property-required"
             title="Required">
         <span id="displayname_nodejs">
 <a href="#displayname_nodejs" style="color: inherit; text-decoration: inherit;">display<wbr>Name</a>
@@ -1186,8 +1097,7 @@ The following state arguments are supported:
         <span class="property-type">string</span>
     </dt>
     <dd>{{% md %}}The display name for the policy.
-{{% /md %}}</dd>
-    <dt class="property-required"
+{{% /md %}}</dd><dt class="property-required"
             title="Required">
         <span id="scopes_nodejs">
 <a href="#scopes_nodejs" style="color: inherit; text-decoration: inherit;">scopes</a>
@@ -1196,8 +1106,7 @@ The following state arguments are supported:
         <span class="property-type"><a href="#branchpolicybuildvalidationsettingsscope">Branch<wbr>Policy<wbr>Build<wbr>Validation<wbr>Settings<wbr>Scope[]</a></span>
     </dt>
     <dd>{{% md %}}Controls which repositories and branches the policy will be enabled for. This block must be defined at least once.
-{{% /md %}}</dd>
-    <dt class="property-optional"
+{{% /md %}}</dd><dt class="property-optional"
             title="Optional">
         <span id="filenamepatterns_nodejs">
 <a href="#filenamepatterns_nodejs" style="color: inherit; text-decoration: inherit;">filename<wbr>Patterns</a>
@@ -1206,8 +1115,7 @@ The following state arguments are supported:
         <span class="property-type">string[]</span>
     </dt>
     <dd>{{% md %}}If a path filter is set, the policy wil only apply when files which match the filter are changes. Not setting this field means that the policy will always apply. You can specify absolute paths and wildcards. Example: `["/WebApp/Models/Data.cs", "/WebApp/*", "*.cs"]`. Paths prefixed with "!" are excluded. Example: `["/WebApp/*", "!/WebApp/Tests/*"]`. Order is significant.
-{{% /md %}}</dd>
-    <dt class="property-optional"
+{{% /md %}}</dd><dt class="property-optional"
             title="Optional">
         <span id="manualqueueonly_nodejs">
 <a href="#manualqueueonly_nodejs" style="color: inherit; text-decoration: inherit;">manual<wbr>Queue<wbr>Only</a>
@@ -1216,8 +1124,7 @@ The following state arguments are supported:
         <span class="property-type">boolean</span>
     </dt>
     <dd>{{% md %}}If set to true, the build will need to be manually queued. Defaults to `false`
-{{% /md %}}</dd>
-    <dt class="property-optional"
+{{% /md %}}</dd><dt class="property-optional"
             title="Optional">
         <span id="queueonsourceupdateonly_nodejs">
 <a href="#queueonsourceupdateonly_nodejs" style="color: inherit; text-decoration: inherit;">queue<wbr>On<wbr>Source<wbr>Update<wbr>Only</a>
@@ -1226,8 +1133,7 @@ The following state arguments are supported:
         <span class="property-type">boolean</span>
     </dt>
     <dd>{{% md %}}True if the build should queue on source updates only. Defaults to `true`.
-{{% /md %}}</dd>
-    <dt class="property-optional"
+{{% /md %}}</dd><dt class="property-optional"
             title="Optional">
         <span id="validduration_nodejs">
 <a href="#validduration_nodejs" style="color: inherit; text-decoration: inherit;">valid<wbr>Duration</a>
@@ -1236,14 +1142,11 @@ The following state arguments are supported:
         <span class="property-type">number</span>
     </dt>
     <dd>{{% md %}}The number of minutes for which the build is valid. If `0`, the build will not expire. Defaults to `720` (12 hours).
-{{% /md %}}</dd>
-</dl>
+{{% /md %}}</dd></dl>
 {{% /choosable %}}
 
 {{% choosable language python %}}
-<dl class="resources-properties">
-
-    <dt class="property-required"
+<dl class="resources-properties"><dt class="property-required"
             title="Required">
         <span id="build_definition_id_python">
 <a href="#build_definition_id_python" style="color: inherit; text-decoration: inherit;">build_<wbr>definition_<wbr>id</a>
@@ -1252,8 +1155,7 @@ The following state arguments are supported:
         <span class="property-type">int</span>
     </dt>
     <dd>{{% md %}}The ID of the build to monitor for the policy.
-{{% /md %}}</dd>
-    <dt class="property-required"
+{{% /md %}}</dd><dt class="property-required"
             title="Required">
         <span id="display_name_python">
 <a href="#display_name_python" style="color: inherit; text-decoration: inherit;">display_<wbr>name</a>
@@ -1262,8 +1164,7 @@ The following state arguments are supported:
         <span class="property-type">str</span>
     </dt>
     <dd>{{% md %}}The display name for the policy.
-{{% /md %}}</dd>
-    <dt class="property-required"
+{{% /md %}}</dd><dt class="property-required"
             title="Required">
         <span id="scopes_python">
 <a href="#scopes_python" style="color: inherit; text-decoration: inherit;">scopes</a>
@@ -1272,8 +1173,7 @@ The following state arguments are supported:
         <span class="property-type"><a href="#branchpolicybuildvalidationsettingsscope">Sequence[Branch<wbr>Policy<wbr>Build<wbr>Validation<wbr>Settings<wbr>Scope<wbr>Args]</a></span>
     </dt>
     <dd>{{% md %}}Controls which repositories and branches the policy will be enabled for. This block must be defined at least once.
-{{% /md %}}</dd>
-    <dt class="property-optional"
+{{% /md %}}</dd><dt class="property-optional"
             title="Optional">
         <span id="filename_patterns_python">
 <a href="#filename_patterns_python" style="color: inherit; text-decoration: inherit;">filename_<wbr>patterns</a>
@@ -1282,8 +1182,7 @@ The following state arguments are supported:
         <span class="property-type">Sequence[str]</span>
     </dt>
     <dd>{{% md %}}If a path filter is set, the policy wil only apply when files which match the filter are changes. Not setting this field means that the policy will always apply. You can specify absolute paths and wildcards. Example: `["/WebApp/Models/Data.cs", "/WebApp/*", "*.cs"]`. Paths prefixed with "!" are excluded. Example: `["/WebApp/*", "!/WebApp/Tests/*"]`. Order is significant.
-{{% /md %}}</dd>
-    <dt class="property-optional"
+{{% /md %}}</dd><dt class="property-optional"
             title="Optional">
         <span id="manual_queue_only_python">
 <a href="#manual_queue_only_python" style="color: inherit; text-decoration: inherit;">manual_<wbr>queue_<wbr>only</a>
@@ -1292,8 +1191,7 @@ The following state arguments are supported:
         <span class="property-type">bool</span>
     </dt>
     <dd>{{% md %}}If set to true, the build will need to be manually queued. Defaults to `false`
-{{% /md %}}</dd>
-    <dt class="property-optional"
+{{% /md %}}</dd><dt class="property-optional"
             title="Optional">
         <span id="queue_on_source_update_only_python">
 <a href="#queue_on_source_update_only_python" style="color: inherit; text-decoration: inherit;">queue_<wbr>on_<wbr>source_<wbr>update_<wbr>only</a>
@@ -1302,8 +1200,7 @@ The following state arguments are supported:
         <span class="property-type">bool</span>
     </dt>
     <dd>{{% md %}}True if the build should queue on source updates only. Defaults to `true`.
-{{% /md %}}</dd>
-    <dt class="property-optional"
+{{% /md %}}</dd><dt class="property-optional"
             title="Optional">
         <span id="valid_duration_python">
 <a href="#valid_duration_python" style="color: inherit; text-decoration: inherit;">valid_<wbr>duration</a>
@@ -1312,16 +1209,13 @@ The following state arguments are supported:
         <span class="property-type">int</span>
     </dt>
     <dd>{{% md %}}The number of minutes for which the build is valid. If `0`, the build will not expire. Defaults to `720` (12 hours).
-{{% /md %}}</dd>
-</dl>
+{{% /md %}}</dd></dl>
 {{% /choosable %}}
 
 <h4 id="branchpolicybuildvalidationsettingsscope">Branch<wbr>Policy<wbr>Build<wbr>Validation<wbr>Settings<wbr>Scope</h4>
 
 {{% choosable language csharp %}}
-<dl class="resources-properties">
-
-    <dt class="property-optional"
+<dl class="resources-properties"><dt class="property-optional"
             title="Optional">
         <span id="matchtype_csharp">
 <a href="#matchtype_csharp" style="color: inherit; text-decoration: inherit;">Match<wbr>Type</a>
@@ -1330,8 +1224,7 @@ The following state arguments are supported:
         <span class="property-type">string</span>
     </dt>
     <dd>{{% md %}}The match type to use when applying the policy. Supported values are `Exact` (default) or `Prefix`.
-{{% /md %}}</dd>
-    <dt class="property-optional"
+{{% /md %}}</dd><dt class="property-optional"
             title="Optional">
         <span id="repositoryid_csharp">
 <a href="#repositoryid_csharp" style="color: inherit; text-decoration: inherit;">Repository<wbr>Id</a>
@@ -1340,8 +1233,7 @@ The following state arguments are supported:
         <span class="property-type">string</span>
     </dt>
     <dd>{{% md %}}The repository ID. Needed only if the scope of the policy will be limited to a single repository.
-{{% /md %}}</dd>
-    <dt class="property-optional"
+{{% /md %}}</dd><dt class="property-optional"
             title="Optional">
         <span id="repositoryref_csharp">
 <a href="#repositoryref_csharp" style="color: inherit; text-decoration: inherit;">Repository<wbr>Ref</a>
@@ -1350,14 +1242,11 @@ The following state arguments are supported:
         <span class="property-type">string</span>
     </dt>
     <dd>{{% md %}}The ref pattern to use for the match. If `match_type` is `Exact`, this should be a qualified ref such as `refs/heads/master`. If `match_type` is `Prefix`, this should be a ref path such as `refs/heads/releases`.
-{{% /md %}}</dd>
-</dl>
+{{% /md %}}</dd></dl>
 {{% /choosable %}}
 
 {{% choosable language go %}}
-<dl class="resources-properties">
-
-    <dt class="property-optional"
+<dl class="resources-properties"><dt class="property-optional"
             title="Optional">
         <span id="matchtype_go">
 <a href="#matchtype_go" style="color: inherit; text-decoration: inherit;">Match<wbr>Type</a>
@@ -1366,8 +1255,7 @@ The following state arguments are supported:
         <span class="property-type">string</span>
     </dt>
     <dd>{{% md %}}The match type to use when applying the policy. Supported values are `Exact` (default) or `Prefix`.
-{{% /md %}}</dd>
-    <dt class="property-optional"
+{{% /md %}}</dd><dt class="property-optional"
             title="Optional">
         <span id="repositoryid_go">
 <a href="#repositoryid_go" style="color: inherit; text-decoration: inherit;">Repository<wbr>Id</a>
@@ -1376,8 +1264,7 @@ The following state arguments are supported:
         <span class="property-type">string</span>
     </dt>
     <dd>{{% md %}}The repository ID. Needed only if the scope of the policy will be limited to a single repository.
-{{% /md %}}</dd>
-    <dt class="property-optional"
+{{% /md %}}</dd><dt class="property-optional"
             title="Optional">
         <span id="repositoryref_go">
 <a href="#repositoryref_go" style="color: inherit; text-decoration: inherit;">Repository<wbr>Ref</a>
@@ -1386,14 +1273,11 @@ The following state arguments are supported:
         <span class="property-type">string</span>
     </dt>
     <dd>{{% md %}}The ref pattern to use for the match. If `match_type` is `Exact`, this should be a qualified ref such as `refs/heads/master`. If `match_type` is `Prefix`, this should be a ref path such as `refs/heads/releases`.
-{{% /md %}}</dd>
-</dl>
+{{% /md %}}</dd></dl>
 {{% /choosable %}}
 
 {{% choosable language nodejs %}}
-<dl class="resources-properties">
-
-    <dt class="property-optional"
+<dl class="resources-properties"><dt class="property-optional"
             title="Optional">
         <span id="matchtype_nodejs">
 <a href="#matchtype_nodejs" style="color: inherit; text-decoration: inherit;">match<wbr>Type</a>
@@ -1402,8 +1286,7 @@ The following state arguments are supported:
         <span class="property-type">string</span>
     </dt>
     <dd>{{% md %}}The match type to use when applying the policy. Supported values are `Exact` (default) or `Prefix`.
-{{% /md %}}</dd>
-    <dt class="property-optional"
+{{% /md %}}</dd><dt class="property-optional"
             title="Optional">
         <span id="repositoryid_nodejs">
 <a href="#repositoryid_nodejs" style="color: inherit; text-decoration: inherit;">repository<wbr>Id</a>
@@ -1412,8 +1295,7 @@ The following state arguments are supported:
         <span class="property-type">string</span>
     </dt>
     <dd>{{% md %}}The repository ID. Needed only if the scope of the policy will be limited to a single repository.
-{{% /md %}}</dd>
-    <dt class="property-optional"
+{{% /md %}}</dd><dt class="property-optional"
             title="Optional">
         <span id="repositoryref_nodejs">
 <a href="#repositoryref_nodejs" style="color: inherit; text-decoration: inherit;">repository<wbr>Ref</a>
@@ -1422,14 +1304,11 @@ The following state arguments are supported:
         <span class="property-type">string</span>
     </dt>
     <dd>{{% md %}}The ref pattern to use for the match. If `match_type` is `Exact`, this should be a qualified ref such as `refs/heads/master`. If `match_type` is `Prefix`, this should be a ref path such as `refs/heads/releases`.
-{{% /md %}}</dd>
-</dl>
+{{% /md %}}</dd></dl>
 {{% /choosable %}}
 
 {{% choosable language python %}}
-<dl class="resources-properties">
-
-    <dt class="property-optional"
+<dl class="resources-properties"><dt class="property-optional"
             title="Optional">
         <span id="match_type_python">
 <a href="#match_type_python" style="color: inherit; text-decoration: inherit;">match_<wbr>type</a>
@@ -1438,8 +1317,7 @@ The following state arguments are supported:
         <span class="property-type">str</span>
     </dt>
     <dd>{{% md %}}The match type to use when applying the policy. Supported values are `Exact` (default) or `Prefix`.
-{{% /md %}}</dd>
-    <dt class="property-optional"
+{{% /md %}}</dd><dt class="property-optional"
             title="Optional">
         <span id="repository_id_python">
 <a href="#repository_id_python" style="color: inherit; text-decoration: inherit;">repository_<wbr>id</a>
@@ -1448,8 +1326,7 @@ The following state arguments are supported:
         <span class="property-type">str</span>
     </dt>
     <dd>{{% md %}}The repository ID. Needed only if the scope of the policy will be limited to a single repository.
-{{% /md %}}</dd>
-    <dt class="property-optional"
+{{% /md %}}</dd><dt class="property-optional"
             title="Optional">
         <span id="repository_ref_python">
 <a href="#repository_ref_python" style="color: inherit; text-decoration: inherit;">repository_<wbr>ref</a>
@@ -1458,8 +1335,7 @@ The following state arguments are supported:
         <span class="property-type">str</span>
     </dt>
     <dd>{{% md %}}The ref pattern to use for the match. If `match_type` is `Exact`, this should be a qualified ref such as `refs/heads/master`. If `match_type` is `Prefix`, this should be a ref path such as `refs/heads/releases`.
-{{% /md %}}</dd>
-</dl>
+{{% /md %}}</dd></dl>
 {{% /choosable %}}
 ## Import
 
@@ -1480,6 +1356,6 @@ Azure DevOps Branch Policies can be imported using the project ID and policy con
 	<dt>License</dt>
 	<dd>Apache-2.0</dd>
 	<dt>Notes</dt>
-	<dd>This Pulumi package is based on the [`azuredevops` Terraform Provider](https://github.com/microsoft/terraform-provider-azuredevops).</dd>
+	<dd>{{% md %}}This Pulumi package is based on the [`azuredevops` Terraform Provider](https://github.com/microsoft/terraform-provider-azuredevops).{{% /md %}}</dd>
 </dl>
 

@@ -29,7 +29,7 @@ A Pulumi package for creating and managing mysql cloud resources.
 	<dt>License</dt>
 	<dd>Apache-2.0</dd>
 	<dt>Notes</dt>
-	<dd>This Pulumi package is based on the [`mysql` Terraform Provider](https://github.com/terraform-providers/terraform-provider-mysql).</dd>
+	<dd>{{% md %}}This Pulumi package is based on the [`mysql` Terraform Provider](https://github.com/terraform-providers/terraform-provider-mysql).{{% /md %}}</dd>
 	<dt>Version</dt>
 	<dd>2.4.1</dd>
 </dl>

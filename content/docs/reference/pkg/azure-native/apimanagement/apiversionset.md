@@ -14,11 +14,17 @@ Api Version Set Contract details.
 API Version: 2019-12-01.
 
 {{% examples %}}
+
 ## Example Usage
 
 {{< chooser language "typescript,python,go,csharp" / >}}
+
+
 ### ApiManagementCreateApiVersionSet
-{{% example csharp %}}
+
+
+{{< example csharp >}}
+
 ```csharp
 using Pulumi;
 using AzureNative = Pulumi.AzureNative;
@@ -42,9 +48,12 @@ class MyStack : Stack
 
 ```
 
-{{% /example %}}
 
-{{% example go %}}
+{{< /example >}}
+
+
+{{< example go >}}
+
 
 ```go
 package main
@@ -73,9 +82,12 @@ func main() {
 
 ```
 
-{{% /example %}}
 
-{{% example python %}}
+{{< /example >}}
+
+
+{{< example python >}}
+
 
 ```python
 import pulumi
@@ -91,9 +103,12 @@ api_version_set = azure_native.apimanagement.ApiVersionSet("apiVersionSet",
 
 ```
 
-{{% /example %}}
 
-{{% example typescript %}}
+{{< /example >}}
+
+
+{{< example typescript >}}
+
 
 ```typescript
 import * as pulumi from "@pulumi/pulumi";
@@ -110,9 +125,16 @@ const apiVersionSet = new azure_native.apimanagement.ApiVersionSet("apiVersionSe
 
 ```
 
-{{% /example %}}
+
+{{< /example >}}
+
+
+
+
 
 {{% /examples %}}
+
+
 
 
 ## Create a ApiVersionSet Resource {#create}
@@ -137,9 +159,7 @@ const apiVersionSet = new azure_native.apimanagement.ApiVersionSet("apiVersionSe
 
 {{% choosable language nodejs %}}
 
-<dl class="resources-properties">
-  
-    <dt
+<dl class="resources-properties"><dt
         class="property-required" title="Required">
         <span>name</span>
         <span class="property-indicator"></span>
@@ -147,9 +167,7 @@ const apiVersionSet = new azure_native.apimanagement.ApiVersionSet("apiVersionSe
     </dt>
     <dd>
       The unique name of the resource.
-    </dd>
-  
-    <dt
+    </dd><dt
         class="property-required" title="Required">
         <span>args</span>
         <span class="property-indicator"></span>
@@ -157,9 +175,7 @@ const apiVersionSet = new azure_native.apimanagement.ApiVersionSet("apiVersionSe
     </dt>
     <dd>
       The arguments to resource properties.
-    </dd>
-  
-    <dt
+    </dd><dt
         class="property-optional" title="Optional">
         <span>opts</span>
         <span class="property-indicator"></span>
@@ -167,10 +183,7 @@ const apiVersionSet = new azure_native.apimanagement.ApiVersionSet("apiVersionSe
     </dt>
     <dd>
       Bag of options to control resource&#39;s behavior.
-    </dd>
-  
-
-</dl>
+    </dd></dl>
 
 {{% /choosable %}}
 
@@ -196,9 +209,7 @@ const apiVersionSet = new azure_native.apimanagement.ApiVersionSet("apiVersionSe
 
 {{% choosable language go %}}
 
-<dl class="resources-properties">
-  
-    <dt
+<dl class="resources-properties"><dt
         class="property-optional" title="Optional">
         <span>ctx</span>
         <span class="property-indicator"></span>
@@ -206,9 +217,7 @@ const apiVersionSet = new azure_native.apimanagement.ApiVersionSet("apiVersionSe
     </dt>
     <dd>
       Context object for the current deployment.
-    </dd>
-  
-    <dt
+    </dd><dt
         class="property-required" title="Required">
         <span>name</span>
         <span class="property-indicator"></span>
@@ -216,9 +225,7 @@ const apiVersionSet = new azure_native.apimanagement.ApiVersionSet("apiVersionSe
     </dt>
     <dd>
       The unique name of the resource.
-    </dd>
-  
-    <dt
+    </dd><dt
         class="property-required" title="Required">
         <span>args</span>
         <span class="property-indicator"></span>
@@ -226,9 +233,7 @@ const apiVersionSet = new azure_native.apimanagement.ApiVersionSet("apiVersionSe
     </dt>
     <dd>
       The arguments to resource properties.
-    </dd>
-  
-    <dt
+    </dd><dt
         class="property-optional" title="Optional">
         <span>opts</span>
         <span class="property-indicator"></span>
@@ -236,18 +241,13 @@ const apiVersionSet = new azure_native.apimanagement.ApiVersionSet("apiVersionSe
     </dt>
     <dd>
       Bag of options to control resource&#39;s behavior.
-    </dd>
-  
-
-</dl>
+    </dd></dl>
 
 {{% /choosable %}}
 
 {{% choosable language csharp %}}
 
-<dl class="resources-properties">
-  
-    <dt
+<dl class="resources-properties"><dt
         class="property-required" title="Required">
         <span>name</span>
         <span class="property-indicator"></span>
@@ -255,9 +255,7 @@ const apiVersionSet = new azure_native.apimanagement.ApiVersionSet("apiVersionSe
     </dt>
     <dd>
       The unique name of the resource.
-    </dd>
-  
-    <dt
+    </dd><dt
         class="property-required" title="Required">
         <span>args</span>
         <span class="property-indicator"></span>
@@ -265,9 +263,7 @@ const apiVersionSet = new azure_native.apimanagement.ApiVersionSet("apiVersionSe
     </dt>
     <dd>
       The arguments to resource properties.
-    </dd>
-  
-    <dt
+    </dd><dt
         class="property-optional" title="Optional">
         <span>opts</span>
         <span class="property-indicator"></span>
@@ -275,10 +271,7 @@ const apiVersionSet = new azure_native.apimanagement.ApiVersionSet("apiVersionSe
     </dt>
     <dd>
       Bag of options to control resource&#39;s behavior.
-    </dd>
-  
-
-</dl>
+    </dd></dl>
 
 {{% /choosable %}}
 
@@ -293,9 +286,7 @@ The ApiVersionSet resource accepts the following [input]({{< relref "/docs/intro
 
 
 {{% choosable language csharp %}}
-<dl class="resources-properties">
-
-    <dt class="property-required"
+<dl class="resources-properties"><dt class="property-required"
             title="Required">
         <span id="displayname_csharp">
 <a href="#displayname_csharp" style="color: inherit; text-decoration: inherit;">Display<wbr>Name</a>
@@ -303,8 +294,7 @@ The ApiVersionSet resource accepts the following [input]({{< relref "/docs/intro
         <span class="property-indicator"></span>
         <span class="property-type">string</span>
     </dt>
-    <dd>{{% md %}}Name of API Version Set{{% /md %}}</dd>
-    <dt class="property-required"
+    <dd>{{% md %}}Name of API Version Set{{% /md %}}</dd><dt class="property-required"
             title="Required">
         <span id="resourcegroupname_csharp">
 <a href="#resourcegroupname_csharp" style="color: inherit; text-decoration: inherit;">Resource<wbr>Group<wbr>Name</a>
@@ -312,8 +302,7 @@ The ApiVersionSet resource accepts the following [input]({{< relref "/docs/intro
         <span class="property-indicator"></span>
         <span class="property-type">string</span>
     </dt>
-    <dd>{{% md %}}The name of the resource group.{{% /md %}}</dd>
-    <dt class="property-required"
+    <dd>{{% md %}}The name of the resource group.{{% /md %}}</dd><dt class="property-required"
             title="Required">
         <span id="servicename_csharp">
 <a href="#servicename_csharp" style="color: inherit; text-decoration: inherit;">Service<wbr>Name</a>
@@ -321,8 +310,7 @@ The ApiVersionSet resource accepts the following [input]({{< relref "/docs/intro
         <span class="property-indicator"></span>
         <span class="property-type">string</span>
     </dt>
-    <dd>{{% md %}}The name of the API Management service.{{% /md %}}</dd>
-    <dt class="property-required"
+    <dd>{{% md %}}The name of the API Management service.{{% /md %}}</dd><dt class="property-required"
             title="Required">
         <span id="versioningscheme_csharp">
 <a href="#versioningscheme_csharp" style="color: inherit; text-decoration: inherit;">Versioning<wbr>Scheme</a>
@@ -330,8 +318,7 @@ The ApiVersionSet resource accepts the following [input]({{< relref "/docs/intro
         <span class="property-indicator"></span>
         <span class="property-type">string | <a href="#versioningscheme">Pulumi.<wbr>Azure<wbr>Native.<wbr>Api<wbr>Management.<wbr>Versioning<wbr>Scheme</a></span>
     </dt>
-    <dd>{{% md %}}An value that determines where the API Version identifier will be located in a HTTP request.{{% /md %}}</dd>
-    <dt class="property-optional"
+    <dd>{{% md %}}An value that determines where the API Version identifier will be located in a HTTP request.{{% /md %}}</dd><dt class="property-optional"
             title="Optional">
         <span id="description_csharp">
 <a href="#description_csharp" style="color: inherit; text-decoration: inherit;">Description</a>
@@ -339,8 +326,7 @@ The ApiVersionSet resource accepts the following [input]({{< relref "/docs/intro
         <span class="property-indicator"></span>
         <span class="property-type">string</span>
     </dt>
-    <dd>{{% md %}}Description of API Version Set.{{% /md %}}</dd>
-    <dt class="property-optional"
+    <dd>{{% md %}}Description of API Version Set.{{% /md %}}</dd><dt class="property-optional"
             title="Optional">
         <span id="versionheadername_csharp">
 <a href="#versionheadername_csharp" style="color: inherit; text-decoration: inherit;">Version<wbr>Header<wbr>Name</a>
@@ -348,8 +334,7 @@ The ApiVersionSet resource accepts the following [input]({{< relref "/docs/intro
         <span class="property-indicator"></span>
         <span class="property-type">string</span>
     </dt>
-    <dd>{{% md %}}Name of HTTP header parameter that indicates the API Version if versioningScheme is set to `header`.{{% /md %}}</dd>
-    <dt class="property-optional"
+    <dd>{{% md %}}Name of HTTP header parameter that indicates the API Version if versioningScheme is set to `header`.{{% /md %}}</dd><dt class="property-optional"
             title="Optional">
         <span id="versionqueryname_csharp">
 <a href="#versionqueryname_csharp" style="color: inherit; text-decoration: inherit;">Version<wbr>Query<wbr>Name</a>
@@ -357,8 +342,7 @@ The ApiVersionSet resource accepts the following [input]({{< relref "/docs/intro
         <span class="property-indicator"></span>
         <span class="property-type">string</span>
     </dt>
-    <dd>{{% md %}}Name of query parameter that indicates the API Version if versioningScheme is set to `query`.{{% /md %}}</dd>
-    <dt class="property-optional"
+    <dd>{{% md %}}Name of query parameter that indicates the API Version if versioningScheme is set to `query`.{{% /md %}}</dd><dt class="property-optional"
             title="Optional">
         <span id="versionsetid_csharp">
 <a href="#versionsetid_csharp" style="color: inherit; text-decoration: inherit;">Version<wbr>Set<wbr>Id</a>
@@ -366,14 +350,11 @@ The ApiVersionSet resource accepts the following [input]({{< relref "/docs/intro
         <span class="property-indicator"></span>
         <span class="property-type">string</span>
     </dt>
-    <dd>{{% md %}}Api Version Set identifier. Must be unique in the current API Management service instance.{{% /md %}}</dd>
-</dl>
+    <dd>{{% md %}}Api Version Set identifier. Must be unique in the current API Management service instance.{{% /md %}}</dd></dl>
 {{% /choosable %}}
 
 {{% choosable language go %}}
-<dl class="resources-properties">
-
-    <dt class="property-required"
+<dl class="resources-properties"><dt class="property-required"
             title="Required">
         <span id="displayname_go">
 <a href="#displayname_go" style="color: inherit; text-decoration: inherit;">Display<wbr>Name</a>
@@ -381,8 +362,7 @@ The ApiVersionSet resource accepts the following [input]({{< relref "/docs/intro
         <span class="property-indicator"></span>
         <span class="property-type">string</span>
     </dt>
-    <dd>{{% md %}}Name of API Version Set{{% /md %}}</dd>
-    <dt class="property-required"
+    <dd>{{% md %}}Name of API Version Set{{% /md %}}</dd><dt class="property-required"
             title="Required">
         <span id="resourcegroupname_go">
 <a href="#resourcegroupname_go" style="color: inherit; text-decoration: inherit;">Resource<wbr>Group<wbr>Name</a>
@@ -390,8 +370,7 @@ The ApiVersionSet resource accepts the following [input]({{< relref "/docs/intro
         <span class="property-indicator"></span>
         <span class="property-type">string</span>
     </dt>
-    <dd>{{% md %}}The name of the resource group.{{% /md %}}</dd>
-    <dt class="property-required"
+    <dd>{{% md %}}The name of the resource group.{{% /md %}}</dd><dt class="property-required"
             title="Required">
         <span id="servicename_go">
 <a href="#servicename_go" style="color: inherit; text-decoration: inherit;">Service<wbr>Name</a>
@@ -399,8 +378,7 @@ The ApiVersionSet resource accepts the following [input]({{< relref "/docs/intro
         <span class="property-indicator"></span>
         <span class="property-type">string</span>
     </dt>
-    <dd>{{% md %}}The name of the API Management service.{{% /md %}}</dd>
-    <dt class="property-required"
+    <dd>{{% md %}}The name of the API Management service.{{% /md %}}</dd><dt class="property-required"
             title="Required">
         <span id="versioningscheme_go">
 <a href="#versioningscheme_go" style="color: inherit; text-decoration: inherit;">Versioning<wbr>Scheme</a>
@@ -408,8 +386,7 @@ The ApiVersionSet resource accepts the following [input]({{< relref "/docs/intro
         <span class="property-indicator"></span>
         <span class="property-type">string | <a href="#versioningscheme">Versioning<wbr>Scheme</a></span>
     </dt>
-    <dd>{{% md %}}An value that determines where the API Version identifier will be located in a HTTP request.{{% /md %}}</dd>
-    <dt class="property-optional"
+    <dd>{{% md %}}An value that determines where the API Version identifier will be located in a HTTP request.{{% /md %}}</dd><dt class="property-optional"
             title="Optional">
         <span id="description_go">
 <a href="#description_go" style="color: inherit; text-decoration: inherit;">Description</a>
@@ -417,8 +394,7 @@ The ApiVersionSet resource accepts the following [input]({{< relref "/docs/intro
         <span class="property-indicator"></span>
         <span class="property-type">string</span>
     </dt>
-    <dd>{{% md %}}Description of API Version Set.{{% /md %}}</dd>
-    <dt class="property-optional"
+    <dd>{{% md %}}Description of API Version Set.{{% /md %}}</dd><dt class="property-optional"
             title="Optional">
         <span id="versionheadername_go">
 <a href="#versionheadername_go" style="color: inherit; text-decoration: inherit;">Version<wbr>Header<wbr>Name</a>
@@ -426,8 +402,7 @@ The ApiVersionSet resource accepts the following [input]({{< relref "/docs/intro
         <span class="property-indicator"></span>
         <span class="property-type">string</span>
     </dt>
-    <dd>{{% md %}}Name of HTTP header parameter that indicates the API Version if versioningScheme is set to `header`.{{% /md %}}</dd>
-    <dt class="property-optional"
+    <dd>{{% md %}}Name of HTTP header parameter that indicates the API Version if versioningScheme is set to `header`.{{% /md %}}</dd><dt class="property-optional"
             title="Optional">
         <span id="versionqueryname_go">
 <a href="#versionqueryname_go" style="color: inherit; text-decoration: inherit;">Version<wbr>Query<wbr>Name</a>
@@ -435,8 +410,7 @@ The ApiVersionSet resource accepts the following [input]({{< relref "/docs/intro
         <span class="property-indicator"></span>
         <span class="property-type">string</span>
     </dt>
-    <dd>{{% md %}}Name of query parameter that indicates the API Version if versioningScheme is set to `query`.{{% /md %}}</dd>
-    <dt class="property-optional"
+    <dd>{{% md %}}Name of query parameter that indicates the API Version if versioningScheme is set to `query`.{{% /md %}}</dd><dt class="property-optional"
             title="Optional">
         <span id="versionsetid_go">
 <a href="#versionsetid_go" style="color: inherit; text-decoration: inherit;">Version<wbr>Set<wbr>Id</a>
@@ -444,14 +418,11 @@ The ApiVersionSet resource accepts the following [input]({{< relref "/docs/intro
         <span class="property-indicator"></span>
         <span class="property-type">string</span>
     </dt>
-    <dd>{{% md %}}Api Version Set identifier. Must be unique in the current API Management service instance.{{% /md %}}</dd>
-</dl>
+    <dd>{{% md %}}Api Version Set identifier. Must be unique in the current API Management service instance.{{% /md %}}</dd></dl>
 {{% /choosable %}}
 
 {{% choosable language nodejs %}}
-<dl class="resources-properties">
-
-    <dt class="property-required"
+<dl class="resources-properties"><dt class="property-required"
             title="Required">
         <span id="displayname_nodejs">
 <a href="#displayname_nodejs" style="color: inherit; text-decoration: inherit;">display<wbr>Name</a>
@@ -459,8 +430,7 @@ The ApiVersionSet resource accepts the following [input]({{< relref "/docs/intro
         <span class="property-indicator"></span>
         <span class="property-type">string</span>
     </dt>
-    <dd>{{% md %}}Name of API Version Set{{% /md %}}</dd>
-    <dt class="property-required"
+    <dd>{{% md %}}Name of API Version Set{{% /md %}}</dd><dt class="property-required"
             title="Required">
         <span id="resourcegroupname_nodejs">
 <a href="#resourcegroupname_nodejs" style="color: inherit; text-decoration: inherit;">resource<wbr>Group<wbr>Name</a>
@@ -468,8 +438,7 @@ The ApiVersionSet resource accepts the following [input]({{< relref "/docs/intro
         <span class="property-indicator"></span>
         <span class="property-type">string</span>
     </dt>
-    <dd>{{% md %}}The name of the resource group.{{% /md %}}</dd>
-    <dt class="property-required"
+    <dd>{{% md %}}The name of the resource group.{{% /md %}}</dd><dt class="property-required"
             title="Required">
         <span id="servicename_nodejs">
 <a href="#servicename_nodejs" style="color: inherit; text-decoration: inherit;">service<wbr>Name</a>
@@ -477,8 +446,7 @@ The ApiVersionSet resource accepts the following [input]({{< relref "/docs/intro
         <span class="property-indicator"></span>
         <span class="property-type">string</span>
     </dt>
-    <dd>{{% md %}}The name of the API Management service.{{% /md %}}</dd>
-    <dt class="property-required"
+    <dd>{{% md %}}The name of the API Management service.{{% /md %}}</dd><dt class="property-required"
             title="Required">
         <span id="versioningscheme_nodejs">
 <a href="#versioningscheme_nodejs" style="color: inherit; text-decoration: inherit;">versioning<wbr>Scheme</a>
@@ -486,8 +454,7 @@ The ApiVersionSet resource accepts the following [input]({{< relref "/docs/intro
         <span class="property-indicator"></span>
         <span class="property-type">string | <a href="#versioningscheme">Versioning<wbr>Scheme</a></span>
     </dt>
-    <dd>{{% md %}}An value that determines where the API Version identifier will be located in a HTTP request.{{% /md %}}</dd>
-    <dt class="property-optional"
+    <dd>{{% md %}}An value that determines where the API Version identifier will be located in a HTTP request.{{% /md %}}</dd><dt class="property-optional"
             title="Optional">
         <span id="description_nodejs">
 <a href="#description_nodejs" style="color: inherit; text-decoration: inherit;">description</a>
@@ -495,8 +462,7 @@ The ApiVersionSet resource accepts the following [input]({{< relref "/docs/intro
         <span class="property-indicator"></span>
         <span class="property-type">string</span>
     </dt>
-    <dd>{{% md %}}Description of API Version Set.{{% /md %}}</dd>
-    <dt class="property-optional"
+    <dd>{{% md %}}Description of API Version Set.{{% /md %}}</dd><dt class="property-optional"
             title="Optional">
         <span id="versionheadername_nodejs">
 <a href="#versionheadername_nodejs" style="color: inherit; text-decoration: inherit;">version<wbr>Header<wbr>Name</a>
@@ -504,8 +470,7 @@ The ApiVersionSet resource accepts the following [input]({{< relref "/docs/intro
         <span class="property-indicator"></span>
         <span class="property-type">string</span>
     </dt>
-    <dd>{{% md %}}Name of HTTP header parameter that indicates the API Version if versioningScheme is set to `header`.{{% /md %}}</dd>
-    <dt class="property-optional"
+    <dd>{{% md %}}Name of HTTP header parameter that indicates the API Version if versioningScheme is set to `header`.{{% /md %}}</dd><dt class="property-optional"
             title="Optional">
         <span id="versionqueryname_nodejs">
 <a href="#versionqueryname_nodejs" style="color: inherit; text-decoration: inherit;">version<wbr>Query<wbr>Name</a>
@@ -513,8 +478,7 @@ The ApiVersionSet resource accepts the following [input]({{< relref "/docs/intro
         <span class="property-indicator"></span>
         <span class="property-type">string</span>
     </dt>
-    <dd>{{% md %}}Name of query parameter that indicates the API Version if versioningScheme is set to `query`.{{% /md %}}</dd>
-    <dt class="property-optional"
+    <dd>{{% md %}}Name of query parameter that indicates the API Version if versioningScheme is set to `query`.{{% /md %}}</dd><dt class="property-optional"
             title="Optional">
         <span id="versionsetid_nodejs">
 <a href="#versionsetid_nodejs" style="color: inherit; text-decoration: inherit;">version<wbr>Set<wbr>Id</a>
@@ -522,14 +486,11 @@ The ApiVersionSet resource accepts the following [input]({{< relref "/docs/intro
         <span class="property-indicator"></span>
         <span class="property-type">string</span>
     </dt>
-    <dd>{{% md %}}Api Version Set identifier. Must be unique in the current API Management service instance.{{% /md %}}</dd>
-</dl>
+    <dd>{{% md %}}Api Version Set identifier. Must be unique in the current API Management service instance.{{% /md %}}</dd></dl>
 {{% /choosable %}}
 
 {{% choosable language python %}}
-<dl class="resources-properties">
-
-    <dt class="property-required"
+<dl class="resources-properties"><dt class="property-required"
             title="Required">
         <span id="display_name_python">
 <a href="#display_name_python" style="color: inherit; text-decoration: inherit;">display_<wbr>name</a>
@@ -537,8 +498,7 @@ The ApiVersionSet resource accepts the following [input]({{< relref "/docs/intro
         <span class="property-indicator"></span>
         <span class="property-type">str</span>
     </dt>
-    <dd>{{% md %}}Name of API Version Set{{% /md %}}</dd>
-    <dt class="property-required"
+    <dd>{{% md %}}Name of API Version Set{{% /md %}}</dd><dt class="property-required"
             title="Required">
         <span id="resource_group_name_python">
 <a href="#resource_group_name_python" style="color: inherit; text-decoration: inherit;">resource_<wbr>group_<wbr>name</a>
@@ -546,8 +506,7 @@ The ApiVersionSet resource accepts the following [input]({{< relref "/docs/intro
         <span class="property-indicator"></span>
         <span class="property-type">str</span>
     </dt>
-    <dd>{{% md %}}The name of the resource group.{{% /md %}}</dd>
-    <dt class="property-required"
+    <dd>{{% md %}}The name of the resource group.{{% /md %}}</dd><dt class="property-required"
             title="Required">
         <span id="service_name_python">
 <a href="#service_name_python" style="color: inherit; text-decoration: inherit;">service_<wbr>name</a>
@@ -555,8 +514,7 @@ The ApiVersionSet resource accepts the following [input]({{< relref "/docs/intro
         <span class="property-indicator"></span>
         <span class="property-type">str</span>
     </dt>
-    <dd>{{% md %}}The name of the API Management service.{{% /md %}}</dd>
-    <dt class="property-required"
+    <dd>{{% md %}}The name of the API Management service.{{% /md %}}</dd><dt class="property-required"
             title="Required">
         <span id="versioning_scheme_python">
 <a href="#versioning_scheme_python" style="color: inherit; text-decoration: inherit;">versioning_<wbr>scheme</a>
@@ -564,8 +522,7 @@ The ApiVersionSet resource accepts the following [input]({{< relref "/docs/intro
         <span class="property-indicator"></span>
         <span class="property-type">str | <a href="#versioningscheme">Versioning<wbr>Scheme</a></span>
     </dt>
-    <dd>{{% md %}}An value that determines where the API Version identifier will be located in a HTTP request.{{% /md %}}</dd>
-    <dt class="property-optional"
+    <dd>{{% md %}}An value that determines where the API Version identifier will be located in a HTTP request.{{% /md %}}</dd><dt class="property-optional"
             title="Optional">
         <span id="description_python">
 <a href="#description_python" style="color: inherit; text-decoration: inherit;">description</a>
@@ -573,8 +530,7 @@ The ApiVersionSet resource accepts the following [input]({{< relref "/docs/intro
         <span class="property-indicator"></span>
         <span class="property-type">str</span>
     </dt>
-    <dd>{{% md %}}Description of API Version Set.{{% /md %}}</dd>
-    <dt class="property-optional"
+    <dd>{{% md %}}Description of API Version Set.{{% /md %}}</dd><dt class="property-optional"
             title="Optional">
         <span id="version_header_name_python">
 <a href="#version_header_name_python" style="color: inherit; text-decoration: inherit;">version_<wbr>header_<wbr>name</a>
@@ -582,8 +538,7 @@ The ApiVersionSet resource accepts the following [input]({{< relref "/docs/intro
         <span class="property-indicator"></span>
         <span class="property-type">str</span>
     </dt>
-    <dd>{{% md %}}Name of HTTP header parameter that indicates the API Version if versioningScheme is set to `header`.{{% /md %}}</dd>
-    <dt class="property-optional"
+    <dd>{{% md %}}Name of HTTP header parameter that indicates the API Version if versioningScheme is set to `header`.{{% /md %}}</dd><dt class="property-optional"
             title="Optional">
         <span id="version_query_name_python">
 <a href="#version_query_name_python" style="color: inherit; text-decoration: inherit;">version_<wbr>query_<wbr>name</a>
@@ -591,8 +546,7 @@ The ApiVersionSet resource accepts the following [input]({{< relref "/docs/intro
         <span class="property-indicator"></span>
         <span class="property-type">str</span>
     </dt>
-    <dd>{{% md %}}Name of query parameter that indicates the API Version if versioningScheme is set to `query`.{{% /md %}}</dd>
-    <dt class="property-optional"
+    <dd>{{% md %}}Name of query parameter that indicates the API Version if versioningScheme is set to `query`.{{% /md %}}</dd><dt class="property-optional"
             title="Optional">
         <span id="version_set_id_python">
 <a href="#version_set_id_python" style="color: inherit; text-decoration: inherit;">version_<wbr>set_<wbr>id</a>
@@ -600,8 +554,7 @@ The ApiVersionSet resource accepts the following [input]({{< relref "/docs/intro
         <span class="property-indicator"></span>
         <span class="property-type">str</span>
     </dt>
-    <dd>{{% md %}}Api Version Set identifier. Must be unique in the current API Management service instance.{{% /md %}}</dd>
-</dl>
+    <dd>{{% md %}}Api Version Set identifier. Must be unique in the current API Management service instance.{{% /md %}}</dd></dl>
 {{% /choosable %}}
 
 
@@ -612,9 +565,7 @@ All [input](#inputs) properties are implicitly available as output properties. A
 
 
 {{% choosable language csharp %}}
-<dl class="resources-properties">
-
-    <dt class="property-"
+<dl class="resources-properties"><dt class="property-"
             title="">
         <span id="id_csharp">
 <a href="#id_csharp" style="color: inherit; text-decoration: inherit;">Id</a>
@@ -622,8 +573,7 @@ All [input](#inputs) properties are implicitly available as output properties. A
         <span class="property-indicator"></span>
         <span class="property-type">string</span>
     </dt>
-    <dd>{{% md %}}The provider-assigned unique ID for this managed resource.{{% /md %}}</dd>
-    <dt class="property-"
+    <dd>{{% md %}}The provider-assigned unique ID for this managed resource.{{% /md %}}</dd><dt class="property-"
             title="">
         <span id="name_csharp">
 <a href="#name_csharp" style="color: inherit; text-decoration: inherit;">Name</a>
@@ -631,8 +581,7 @@ All [input](#inputs) properties are implicitly available as output properties. A
         <span class="property-indicator"></span>
         <span class="property-type">string</span>
     </dt>
-    <dd>{{% md %}}Resource name.{{% /md %}}</dd>
-    <dt class="property-"
+    <dd>{{% md %}}Resource name.{{% /md %}}</dd><dt class="property-"
             title="">
         <span id="type_csharp">
 <a href="#type_csharp" style="color: inherit; text-decoration: inherit;">Type</a>
@@ -640,14 +589,11 @@ All [input](#inputs) properties are implicitly available as output properties. A
         <span class="property-indicator"></span>
         <span class="property-type">string</span>
     </dt>
-    <dd>{{% md %}}Resource type for API Management resource.{{% /md %}}</dd>
-</dl>
+    <dd>{{% md %}}Resource type for API Management resource.{{% /md %}}</dd></dl>
 {{% /choosable %}}
 
 {{% choosable language go %}}
-<dl class="resources-properties">
-
-    <dt class="property-"
+<dl class="resources-properties"><dt class="property-"
             title="">
         <span id="id_go">
 <a href="#id_go" style="color: inherit; text-decoration: inherit;">Id</a>
@@ -655,8 +601,7 @@ All [input](#inputs) properties are implicitly available as output properties. A
         <span class="property-indicator"></span>
         <span class="property-type">string</span>
     </dt>
-    <dd>{{% md %}}The provider-assigned unique ID for this managed resource.{{% /md %}}</dd>
-    <dt class="property-"
+    <dd>{{% md %}}The provider-assigned unique ID for this managed resource.{{% /md %}}</dd><dt class="property-"
             title="">
         <span id="name_go">
 <a href="#name_go" style="color: inherit; text-decoration: inherit;">Name</a>
@@ -664,8 +609,7 @@ All [input](#inputs) properties are implicitly available as output properties. A
         <span class="property-indicator"></span>
         <span class="property-type">string</span>
     </dt>
-    <dd>{{% md %}}Resource name.{{% /md %}}</dd>
-    <dt class="property-"
+    <dd>{{% md %}}Resource name.{{% /md %}}</dd><dt class="property-"
             title="">
         <span id="type_go">
 <a href="#type_go" style="color: inherit; text-decoration: inherit;">Type</a>
@@ -673,14 +617,11 @@ All [input](#inputs) properties are implicitly available as output properties. A
         <span class="property-indicator"></span>
         <span class="property-type">string</span>
     </dt>
-    <dd>{{% md %}}Resource type for API Management resource.{{% /md %}}</dd>
-</dl>
+    <dd>{{% md %}}Resource type for API Management resource.{{% /md %}}</dd></dl>
 {{% /choosable %}}
 
 {{% choosable language nodejs %}}
-<dl class="resources-properties">
-
-    <dt class="property-"
+<dl class="resources-properties"><dt class="property-"
             title="">
         <span id="id_nodejs">
 <a href="#id_nodejs" style="color: inherit; text-decoration: inherit;">id</a>
@@ -688,8 +629,7 @@ All [input](#inputs) properties are implicitly available as output properties. A
         <span class="property-indicator"></span>
         <span class="property-type">string</span>
     </dt>
-    <dd>{{% md %}}The provider-assigned unique ID for this managed resource.{{% /md %}}</dd>
-    <dt class="property-"
+    <dd>{{% md %}}The provider-assigned unique ID for this managed resource.{{% /md %}}</dd><dt class="property-"
             title="">
         <span id="name_nodejs">
 <a href="#name_nodejs" style="color: inherit; text-decoration: inherit;">name</a>
@@ -697,8 +637,7 @@ All [input](#inputs) properties are implicitly available as output properties. A
         <span class="property-indicator"></span>
         <span class="property-type">string</span>
     </dt>
-    <dd>{{% md %}}Resource name.{{% /md %}}</dd>
-    <dt class="property-"
+    <dd>{{% md %}}Resource name.{{% /md %}}</dd><dt class="property-"
             title="">
         <span id="type_nodejs">
 <a href="#type_nodejs" style="color: inherit; text-decoration: inherit;">type</a>
@@ -706,14 +645,11 @@ All [input](#inputs) properties are implicitly available as output properties. A
         <span class="property-indicator"></span>
         <span class="property-type">string</span>
     </dt>
-    <dd>{{% md %}}Resource type for API Management resource.{{% /md %}}</dd>
-</dl>
+    <dd>{{% md %}}Resource type for API Management resource.{{% /md %}}</dd></dl>
 {{% /choosable %}}
 
 {{% choosable language python %}}
-<dl class="resources-properties">
-
-    <dt class="property-"
+<dl class="resources-properties"><dt class="property-"
             title="">
         <span id="id_python">
 <a href="#id_python" style="color: inherit; text-decoration: inherit;">id</a>
@@ -721,8 +657,7 @@ All [input](#inputs) properties are implicitly available as output properties. A
         <span class="property-indicator"></span>
         <span class="property-type">str</span>
     </dt>
-    <dd>{{% md %}}The provider-assigned unique ID for this managed resource.{{% /md %}}</dd>
-    <dt class="property-"
+    <dd>{{% md %}}The provider-assigned unique ID for this managed resource.{{% /md %}}</dd><dt class="property-"
             title="">
         <span id="name_python">
 <a href="#name_python" style="color: inherit; text-decoration: inherit;">name</a>
@@ -730,8 +665,7 @@ All [input](#inputs) properties are implicitly available as output properties. A
         <span class="property-indicator"></span>
         <span class="property-type">str</span>
     </dt>
-    <dd>{{% md %}}Resource name.{{% /md %}}</dd>
-    <dt class="property-"
+    <dd>{{% md %}}Resource name.{{% /md %}}</dd><dt class="property-"
             title="">
         <span id="type_python">
 <a href="#type_python" style="color: inherit; text-decoration: inherit;">type</a>
@@ -739,8 +673,7 @@ All [input](#inputs) properties are implicitly available as output properties. A
         <span class="property-indicator"></span>
         <span class="property-type">str</span>
     </dt>
-    <dd>{{% md %}}Resource type for API Management resource.{{% /md %}}</dd>
-</dl>
+    <dd>{{% md %}}Resource type for API Management resource.{{% /md %}}</dd></dl>
 {{% /choosable %}}
 
 
@@ -756,47 +689,31 @@ All [input](#inputs) properties are implicitly available as output properties. A
 <h4 id="versioningscheme">Versioning<wbr>Scheme</h4>
 
 {{% choosable language csharp %}}
-<dl class="tabular">
-    <dt>Segment</dt>
-    <dd>Segment{{% md %}}The API Version is passed in a path segment.{{% /md %}}</dd>
-    <dt>Query</dt>
-    <dd>Query{{% md %}}The API Version is passed in a query parameter.{{% /md %}}</dd>
-    <dt>Header</dt>
-    <dd>Header{{% md %}}The API Version is passed in a HTTP header.{{% /md %}}</dd>
-</dl>
+<dl class="tabular"><dt>Segment</dt>
+    <dd>Segment{{% md %}}The API Version is passed in a path segment.{{% /md %}}</dd><dt>Query</dt>
+    <dd>Query{{% md %}}The API Version is passed in a query parameter.{{% /md %}}</dd><dt>Header</dt>
+    <dd>Header{{% md %}}The API Version is passed in a HTTP header.{{% /md %}}</dd></dl>
 {{% /choosable %}}
 
 {{% choosable language go %}}
-<dl class="tabular">
-    <dt>Versioning<wbr>Scheme<wbr>Segment</dt>
-    <dd>Segment{{% md %}}The API Version is passed in a path segment.{{% /md %}}</dd>
-    <dt>Versioning<wbr>Scheme<wbr>Query</dt>
-    <dd>Query{{% md %}}The API Version is passed in a query parameter.{{% /md %}}</dd>
-    <dt>Versioning<wbr>Scheme<wbr>Header</dt>
-    <dd>Header{{% md %}}The API Version is passed in a HTTP header.{{% /md %}}</dd>
-</dl>
+<dl class="tabular"><dt>Versioning<wbr>Scheme<wbr>Segment</dt>
+    <dd>Segment{{% md %}}The API Version is passed in a path segment.{{% /md %}}</dd><dt>Versioning<wbr>Scheme<wbr>Query</dt>
+    <dd>Query{{% md %}}The API Version is passed in a query parameter.{{% /md %}}</dd><dt>Versioning<wbr>Scheme<wbr>Header</dt>
+    <dd>Header{{% md %}}The API Version is passed in a HTTP header.{{% /md %}}</dd></dl>
 {{% /choosable %}}
 
 {{% choosable language nodejs %}}
-<dl class="tabular">
-    <dt>Segment</dt>
-    <dd>Segment{{% md %}}The API Version is passed in a path segment.{{% /md %}}</dd>
-    <dt>Query</dt>
-    <dd>Query{{% md %}}The API Version is passed in a query parameter.{{% /md %}}</dd>
-    <dt>Header</dt>
-    <dd>Header{{% md %}}The API Version is passed in a HTTP header.{{% /md %}}</dd>
-</dl>
+<dl class="tabular"><dt>Segment</dt>
+    <dd>Segment{{% md %}}The API Version is passed in a path segment.{{% /md %}}</dd><dt>Query</dt>
+    <dd>Query{{% md %}}The API Version is passed in a query parameter.{{% /md %}}</dd><dt>Header</dt>
+    <dd>Header{{% md %}}The API Version is passed in a HTTP header.{{% /md %}}</dd></dl>
 {{% /choosable %}}
 
 {{% choosable language python %}}
-<dl class="tabular">
-    <dt>SEGMENT</dt>
-    <dd>Segment{{% md %}}The API Version is passed in a path segment.{{% /md %}}</dd>
-    <dt>QUERY</dt>
-    <dd>Query{{% md %}}The API Version is passed in a query parameter.{{% /md %}}</dd>
-    <dt>HEADER</dt>
-    <dd>Header{{% md %}}The API Version is passed in a HTTP header.{{% /md %}}</dd>
-</dl>
+<dl class="tabular"><dt>SEGMENT</dt>
+    <dd>Segment{{% md %}}The API Version is passed in a path segment.{{% /md %}}</dd><dt>QUERY</dt>
+    <dd>Query{{% md %}}The API Version is passed in a query parameter.{{% /md %}}</dd><dt>HEADER</dt>
+    <dd>Header{{% md %}}The API Version is passed in a HTTP header.{{% /md %}}</dd></dl>
 {{% /choosable %}}
 ## Import
 

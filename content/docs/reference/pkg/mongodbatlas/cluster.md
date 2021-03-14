@@ -23,11 +23,17 @@ meta_desc: "Documentation for the mongodbatlas.Cluster resource with examples, i
 <br> &#8226; If your Atlas project contains a custom role that uses actions introduced in a specific MongoDB version, you cannot create a cluster with a MongoDB version less than that version unless you delete the custom role.
 
 {{% examples %}}
+
 ## Example Usage
 
 {{< chooser language "typescript,python,go,csharp" / >}}
+
+
 ### Example AWS cluster
-{{% example csharp %}}
+
+
+{{< example csharp >}}
+
 ```csharp
 using Pulumi;
 using Mongodbatlas = Pulumi.Mongodbatlas;
@@ -72,9 +78,12 @@ class MyStack : Stack
 }
 ```
 
-{{% /example %}}
 
-{{% example go %}}
+{{< /example >}}
+
+
+{{< example go >}}
+
 ```go
 package main
 
@@ -119,9 +128,12 @@ func main() {
 }
 ```
 
-{{% /example %}}
 
-{{% example python %}}
+{{< /example >}}
+
+
+{{< example python >}}
+
 ```python
 import pulumi
 import pulumi_mongodbatlas as mongodbatlas
@@ -149,9 +161,12 @@ cluster_test = mongodbatlas.Cluster("cluster-test",
     )])
 ```
 
-{{% /example %}}
 
-{{% example typescript %}}
+{{< /example >}}
+
+
+{{< example typescript >}}
+
 
 ```typescript
 import * as pulumi from "@pulumi/pulumi";
@@ -182,10 +197,17 @@ const cluster_test = new mongodbatlas.Cluster("cluster-test", {
 });
 ```
 
-{{% /example %}}
+
+{{< /example >}}
+
+
+
 
 ### Example Azure cluster.
-{{% example csharp %}}
+
+
+{{< example csharp >}}
+
 ```csharp
 using Pulumi;
 using Mongodbatlas = Pulumi.Mongodbatlas;
@@ -227,9 +249,12 @@ class MyStack : Stack
 }
 ```
 
-{{% /example %}}
 
-{{% example go %}}
+{{< /example >}}
+
+
+{{< example go >}}
+
 ```go
 package main
 
@@ -271,9 +296,12 @@ func main() {
 }
 ```
 
-{{% /example %}}
 
-{{% example python %}}
+{{< /example >}}
+
+
+{{< example python >}}
+
 ```python
 import pulumi
 import pulumi_mongodbatlas as mongodbatlas
@@ -298,9 +326,12 @@ test = mongodbatlas.Cluster("test",
     )])
 ```
 
-{{% /example %}}
 
-{{% example typescript %}}
+{{< /example >}}
+
+
+{{< example typescript >}}
+
 
 ```typescript
 import * as pulumi from "@pulumi/pulumi";
@@ -328,10 +359,17 @@ const test = new mongodbatlas.Cluster("test", {
 });
 ```
 
-{{% /example %}}
+
+{{< /example >}}
+
+
+
 
 ### Example GCP cluster
-{{% example csharp %}}
+
+
+{{< example csharp >}}
+
 ```csharp
 using Pulumi;
 using Mongodbatlas = Pulumi.Mongodbatlas;
@@ -373,9 +411,12 @@ class MyStack : Stack
 }
 ```
 
-{{% /example %}}
 
-{{% example go %}}
+{{< /example >}}
+
+
+{{< example go >}}
+
 ```go
 package main
 
@@ -417,9 +458,12 @@ func main() {
 }
 ```
 
-{{% /example %}}
 
-{{% example python %}}
+{{< /example >}}
+
+
+{{< example python >}}
+
 ```python
 import pulumi
 import pulumi_mongodbatlas as mongodbatlas
@@ -444,9 +488,12 @@ test = mongodbatlas.Cluster("test",
     )])
 ```
 
-{{% /example %}}
 
-{{% example typescript %}}
+{{< /example >}}
+
+
+{{< example typescript >}}
+
 
 ```typescript
 import * as pulumi from "@pulumi/pulumi";
@@ -474,10 +521,17 @@ const test = new mongodbatlas.Cluster("test", {
 });
 ```
 
-{{% /example %}}
+
+{{< /example >}}
+
+
+
 
 ### Example Multi Region cluster
-{{% example csharp %}}
+
+
+{{< example csharp >}}
+
 ```csharp
 using Pulumi;
 using Mongodbatlas = Pulumi.Mongodbatlas;
@@ -534,9 +588,12 @@ class MyStack : Stack
 }
 ```
 
-{{% /example %}}
 
-{{% example go %}}
+{{< /example >}}
+
+
+{{< example go >}}
+
 ```go
 package main
 
@@ -591,9 +648,12 @@ func main() {
 }
 ```
 
-{{% /example %}}
 
-{{% example python %}}
+{{< /example >}}
+
+
+{{< example python >}}
+
 ```python
 import pulumi
 import pulumi_mongodbatlas as mongodbatlas
@@ -633,9 +693,12 @@ cluster_test = mongodbatlas.Cluster("cluster-test",
     )])
 ```
 
-{{% /example %}}
 
-{{% example typescript %}}
+{{< /example >}}
+
+
+{{< example typescript >}}
+
 
 ```typescript
 import * as pulumi from "@pulumi/pulumi";
@@ -678,10 +741,17 @@ const cluster_test = new mongodbatlas.Cluster("cluster-test", {
 });
 ```
 
-{{% /example %}}
+
+{{< /example >}}
+
+
+
 
 ### Example Global cluster
-{{% example csharp %}}
+
+
+{{< example csharp >}}
+
 ```csharp
 using Pulumi;
 using Mongodbatlas = Pulumi.Mongodbatlas;
@@ -740,9 +810,12 @@ class MyStack : Stack
 }
 ```
 
-{{% /example %}}
 
-{{% example go %}}
+{{< /example >}}
+
+
+{{< example go >}}
+
 ```go
 package main
 
@@ -798,9 +871,12 @@ func main() {
 }
 ```
 
-{{% /example %}}
 
-{{% example python %}}
+{{< /example >}}
+
+
+{{< example python >}}
+
 ```python
 import pulumi
 import pulumi_mongodbatlas as mongodbatlas
@@ -839,9 +915,12 @@ cluster_test = mongodbatlas.Cluster("cluster-test",
     ])
 ```
 
-{{% /example %}}
 
-{{% example typescript %}}
+{{< /example >}}
+
+
+{{< example typescript >}}
+
 
 ```typescript
 import * as pulumi from "@pulumi/pulumi";
@@ -883,10 +962,17 @@ const cluster_test = new mongodbatlas.Cluster("cluster-test", {
 });
 ```
 
-{{% /example %}}
+
+{{< /example >}}
+
+
+
 
 ### Example AWS Shared Tier cluster
-{{% example csharp %}}
+
+
+{{< example csharp >}}
+
 ```csharp
 using Pulumi;
 using Mongodbatlas = Pulumi.Mongodbatlas;
@@ -911,9 +997,12 @@ class MyStack : Stack
 }
 ```
 
-{{% /example %}}
 
-{{% example go %}}
+{{< /example >}}
+
+
+{{< example go >}}
+
 ```go
 package main
 
@@ -942,9 +1031,12 @@ func main() {
 }
 ```
 
-{{% /example %}}
 
-{{% example python %}}
+{{< /example >}}
+
+
+{{< example python >}}
+
 ```python
 import pulumi
 import pulumi_mongodbatlas as mongodbatlas
@@ -960,9 +1052,12 @@ cluster_test = mongodbatlas.Cluster("cluster-test",
     provider_region_name="US_EAST_1")
 ```
 
-{{% /example %}}
 
-{{% example typescript %}}
+{{< /example >}}
+
+
+{{< example typescript >}}
+
 ```typescript
 import * as pulumi from "@pulumi/pulumi";
 import * as mongodbatlas from "@pulumi/mongodbatlas";
@@ -981,9 +1076,16 @@ const cluster_test = new mongodbatlas.Cluster("cluster-test", {
 });
 ```
 
-{{% /example %}}
+
+{{< /example >}}
+
+
+
+
 
 {{% /examples %}}
+
+
 
 
 ## Create a Cluster Resource {#create}
@@ -1008,9 +1110,7 @@ const cluster_test = new mongodbatlas.Cluster("cluster-test", {
 
 {{% choosable language nodejs %}}
 
-<dl class="resources-properties">
-  
-    <dt
+<dl class="resources-properties"><dt
         class="property-required" title="Required">
         <span>name</span>
         <span class="property-indicator"></span>
@@ -1018,9 +1118,7 @@ const cluster_test = new mongodbatlas.Cluster("cluster-test", {
     </dt>
     <dd>
       The unique name of the resource.
-    </dd>
-  
-    <dt
+    </dd><dt
         class="property-required" title="Required">
         <span>args</span>
         <span class="property-indicator"></span>
@@ -1028,9 +1126,7 @@ const cluster_test = new mongodbatlas.Cluster("cluster-test", {
     </dt>
     <dd>
       The arguments to resource properties.
-    </dd>
-  
-    <dt
+    </dd><dt
         class="property-optional" title="Optional">
         <span>opts</span>
         <span class="property-indicator"></span>
@@ -1038,10 +1134,7 @@ const cluster_test = new mongodbatlas.Cluster("cluster-test", {
     </dt>
     <dd>
       Bag of options to control resource&#39;s behavior.
-    </dd>
-  
-
-</dl>
+    </dd></dl>
 
 {{% /choosable %}}
 
@@ -1067,9 +1160,7 @@ const cluster_test = new mongodbatlas.Cluster("cluster-test", {
 
 {{% choosable language go %}}
 
-<dl class="resources-properties">
-  
-    <dt
+<dl class="resources-properties"><dt
         class="property-optional" title="Optional">
         <span>ctx</span>
         <span class="property-indicator"></span>
@@ -1077,9 +1168,7 @@ const cluster_test = new mongodbatlas.Cluster("cluster-test", {
     </dt>
     <dd>
       Context object for the current deployment.
-    </dd>
-  
-    <dt
+    </dd><dt
         class="property-required" title="Required">
         <span>name</span>
         <span class="property-indicator"></span>
@@ -1087,9 +1176,7 @@ const cluster_test = new mongodbatlas.Cluster("cluster-test", {
     </dt>
     <dd>
       The unique name of the resource.
-    </dd>
-  
-    <dt
+    </dd><dt
         class="property-required" title="Required">
         <span>args</span>
         <span class="property-indicator"></span>
@@ -1097,9 +1184,7 @@ const cluster_test = new mongodbatlas.Cluster("cluster-test", {
     </dt>
     <dd>
       The arguments to resource properties.
-    </dd>
-  
-    <dt
+    </dd><dt
         class="property-optional" title="Optional">
         <span>opts</span>
         <span class="property-indicator"></span>
@@ -1107,18 +1192,13 @@ const cluster_test = new mongodbatlas.Cluster("cluster-test", {
     </dt>
     <dd>
       Bag of options to control resource&#39;s behavior.
-    </dd>
-  
-
-</dl>
+    </dd></dl>
 
 {{% /choosable %}}
 
 {{% choosable language csharp %}}
 
-<dl class="resources-properties">
-  
-    <dt
+<dl class="resources-properties"><dt
         class="property-required" title="Required">
         <span>name</span>
         <span class="property-indicator"></span>
@@ -1126,9 +1206,7 @@ const cluster_test = new mongodbatlas.Cluster("cluster-test", {
     </dt>
     <dd>
       The unique name of the resource.
-    </dd>
-  
-    <dt
+    </dd><dt
         class="property-required" title="Required">
         <span>args</span>
         <span class="property-indicator"></span>
@@ -1136,9 +1214,7 @@ const cluster_test = new mongodbatlas.Cluster("cluster-test", {
     </dt>
     <dd>
       The arguments to resource properties.
-    </dd>
-  
-    <dt
+    </dd><dt
         class="property-optional" title="Optional">
         <span>opts</span>
         <span class="property-indicator"></span>
@@ -1146,10 +1222,7 @@ const cluster_test = new mongodbatlas.Cluster("cluster-test", {
     </dt>
     <dd>
       Bag of options to control resource&#39;s behavior.
-    </dd>
-  
-
-</dl>
+    </dd></dl>
 
 {{% /choosable %}}
 
@@ -1164,9 +1237,7 @@ The Cluster resource accepts the following [input]({{< relref "/docs/intro/conce
 
 
 {{% choosable language csharp %}}
-<dl class="resources-properties">
-
-    <dt class="property-required"
+<dl class="resources-properties"><dt class="property-required"
             title="Required">
         <span id="projectid_csharp">
 <a href="#projectid_csharp" style="color: inherit; text-decoration: inherit;">Project<wbr>Id</a>
@@ -1175,8 +1246,7 @@ The Cluster resource accepts the following [input]({{< relref "/docs/intro/conce
         <span class="property-type">string</span>
     </dt>
     <dd>{{% md %}}The unique ID for the project to create the database user.
-{{% /md %}}</dd>
-    <dt class="property-required"
+{{% /md %}}</dd><dt class="property-required"
             title="Required">
         <span id="providerinstancesizename_csharp">
 <a href="#providerinstancesizename_csharp" style="color: inherit; text-decoration: inherit;">Provider<wbr>Instance<wbr>Size<wbr>Name</a>
@@ -1186,8 +1256,7 @@ The Cluster resource accepts the following [input]({{< relref "/docs/intro/conce
     </dt>
     <dd>{{% md %}}Atlas provides different instance sizes, each with a default storage capacity and RAM size. The instance size you select is used for all the data-bearing servers in your cluster. See [Create a Cluster](https://docs.atlas.mongodb.com/reference/api/clusters-create-one/) `providerSettings.instanceSizeName` for valid values and default resources. 
 **Note** free tier (M0) creation is not supported by the Atlas API and hence not supported by this provider.)
-{{% /md %}}</dd>
-    <dt class="property-required"
+{{% /md %}}</dd><dt class="property-required"
             title="Required">
         <span id="providername_csharp">
 <a href="#providername_csharp" style="color: inherit; text-decoration: inherit;">Provider<wbr>Name</a>
@@ -1196,8 +1265,7 @@ The Cluster resource accepts the following [input]({{< relref "/docs/intro/conce
         <span class="property-type">string</span>
     </dt>
     <dd>{{% md %}}Cloud service provider on which the servers are provisioned.
-{{% /md %}}</dd>
-    <dt class="property-optional"
+{{% /md %}}</dd><dt class="property-optional"
             title="Optional">
         <span id="advancedconfiguration_csharp">
 <a href="#advancedconfiguration_csharp" style="color: inherit; text-decoration: inherit;">Advanced<wbr>Configuration</a>
@@ -1205,8 +1273,7 @@ The Cluster resource accepts the following [input]({{< relref "/docs/intro/conce
         <span class="property-indicator"></span>
         <span class="property-type"><a href="#clusteradvancedconfiguration">Cluster<wbr>Advanced<wbr>Configuration<wbr>Args</a></span>
     </dt>
-    <dd>{{% md %}}{{% /md %}}</dd>
-    <dt class="property-optional"
+    <dd>{{% md %}}{{% /md %}}</dd><dt class="property-optional"
             title="Optional">
         <span id="autoscalingcomputeenabled_csharp">
 <a href="#autoscalingcomputeenabled_csharp" style="color: inherit; text-decoration: inherit;">Auto<wbr>Scaling<wbr>Compute<wbr>Enabled</a>
@@ -1217,8 +1284,7 @@ The Cluster resource accepts the following [input]({{< relref "/docs/intro/conce
     <dd>{{% md %}}Specifies whether cluster tier auto-scaling is enabled. The default is false.
 - Set to `true` to enable cluster tier auto-scaling. If enabled, you must specify a value for `providerSettings.autoScaling.compute.maxInstanceSize`.
 - Set to `false` to disable cluster tier auto-scaling.
-{{% /md %}}</dd>
-    <dt class="property-optional"
+{{% /md %}}</dd><dt class="property-optional"
             title="Optional">
         <span id="autoscalingcomputescaledownenabled_csharp">
 <a href="#autoscalingcomputescaledownenabled_csharp" style="color: inherit; text-decoration: inherit;">Auto<wbr>Scaling<wbr>Compute<wbr>Scale<wbr>Down<wbr>Enabled</a>
@@ -1228,8 +1294,7 @@ The Cluster resource accepts the following [input]({{< relref "/docs/intro/conce
     </dt>
     <dd>{{% md %}}Set to `true` to enable the cluster tier to scale down. This option is only available if `autoScaling.compute.enabled` is `true`.
 - If this option is enabled, you must specify a value for `providerSettings.autoScaling.compute.minInstanceSize`
-{{% /md %}}</dd>
-    <dt class="property-optional"
+{{% /md %}}</dd><dt class="property-optional"
             title="Optional">
         <span id="autoscalingdiskgbenabled_csharp">
 <a href="#autoscalingdiskgbenabled_csharp" style="color: inherit; text-decoration: inherit;">Auto<wbr>Scaling<wbr>Disk<wbr>Gb<wbr>Enabled</a>
@@ -1240,8 +1305,7 @@ The Cluster resource accepts the following [input]({{< relref "/docs/intro/conce
     <dd>{{% md %}}Specifies whether disk auto-scaling is enabled. The default is true.
 - Set to `true` to enable disk auto-scaling.
 - Set to `false` to disable disk auto-scaling.
-{{% /md %}}</dd>
-    <dt class="property-optional"
+{{% /md %}}</dd><dt class="property-optional"
             title="Optional">
         <span id="backingprovidername_csharp">
 <a href="#backingprovidername_csharp" style="color: inherit; text-decoration: inherit;">Backing<wbr>Provider<wbr>Name</a>
@@ -1250,8 +1314,7 @@ The Cluster resource accepts the following [input]({{< relref "/docs/intro/conce
         <span class="property-type">string</span>
     </dt>
     <dd>{{% md %}}Cloud service provider on which the server for a multi-tenant cluster is provisioned.
-{{% /md %}}</dd>
-    <dt class="property-optional"
+{{% /md %}}</dd><dt class="property-optional"
             title="Optional">
         <span id="backupenabled_csharp">
 <a href="#backupenabled_csharp" style="color: inherit; text-decoration: inherit;">Backup<wbr>Enabled</a>
@@ -1259,8 +1322,7 @@ The Cluster resource accepts the following [input]({{< relref "/docs/intro/conce
         <span class="property-indicator"></span>
         <span class="property-type">bool</span>
     </dt>
-    <dd>{{% md %}}{{% /md %}}</dd>
-    <dt class="property-optional"
+    <dd>{{% md %}}{{% /md %}}</dd><dt class="property-optional"
             title="Optional">
         <span id="biconnector_csharp">
 <a href="#biconnector_csharp" style="color: inherit; text-decoration: inherit;">Bi<wbr>Connector</a>
@@ -1269,8 +1331,7 @@ The Cluster resource accepts the following [input]({{< relref "/docs/intro/conce
         <span class="property-type"><a href="#clusterbiconnector">Cluster<wbr>Bi<wbr>Connector<wbr>Args</a></span>
     </dt>
     <dd>{{% md %}}Specifies BI Connector for Atlas configuration on this cluster. BI Connector for Atlas is only available for M10+ clusters. See BI Connector below for more details.
-{{% /md %}}</dd>
-    <dt class="property-optional"
+{{% /md %}}</dd><dt class="property-optional"
             title="Optional">
         <span id="clustertype_csharp">
 <a href="#clustertype_csharp" style="color: inherit; text-decoration: inherit;">Cluster<wbr>Type</a>
@@ -1279,8 +1340,7 @@ The Cluster resource accepts the following [input]({{< relref "/docs/intro/conce
         <span class="property-type">string</span>
     </dt>
     <dd>{{% md %}}Specifies the type of the cluster that you want to modify. You cannot convert a sharded cluster deployment to a replica set deployment.
-{{% /md %}}</dd>
-    <dt class="property-optional"
+{{% /md %}}</dd><dt class="property-optional"
             title="Optional">
         <span id="disksizegb_csharp">
 <a href="#disksizegb_csharp" style="color: inherit; text-decoration: inherit;">Disk<wbr>Size<wbr>Gb</a>
@@ -1293,8 +1353,7 @@ The Cluster resource accepts the following [input]({{< relref "/docs/intro/conce
 * Note: The maximum value for disk storage cannot exceed 50 times the maximum RAM for the selected cluster. If you require additional storage space beyond this limitation, consider upgrading your cluster to a higher tier.
 * Cannot be used with clusters with local NVMe SSDs
 * Cannot be used with Azure clusters
-{{% /md %}}</dd>
-    <dt class="property-optional"
+{{% /md %}}</dd><dt class="property-optional"
             title="Optional">
         <span id="encryptionatrestprovider_csharp">
 <a href="#encryptionatrestprovider_csharp" style="color: inherit; text-decoration: inherit;">Encryption<wbr>At<wbr>Rest<wbr>Provider</a>
@@ -1303,8 +1362,7 @@ The Cluster resource accepts the following [input]({{< relref "/docs/intro/conce
         <span class="property-type">string</span>
     </dt>
     <dd>{{% md %}}Possible values are AWS, GCP, AZURE or NONE.  Only needed if you desire to manage the keys, see [Encryption at Rest using Customer Key Management](https://docs.atlas.mongodb.com/security-aws-kms/) for complete documentation.  You must configure encryption at rest for the Atlas project before enabling it on any cluster in the project. For complete documentation on configuring Encryption at Rest, see Encryption at Rest using Customer Key Management. Requires M10 or greater. and for legacy backups, backup_enabled, to be false or omitted. **Note: Atlas encrypts all cluster storage and snapshot volumes, securing all cluster data on disk: a concept known as encryption at rest, by default**.
-{{% /md %}}</dd>
-    <dt class="property-optional"
+{{% /md %}}</dd><dt class="property-optional"
             title="Optional">
         <span id="labels_csharp">
 <a href="#labels_csharp" style="color: inherit; text-decoration: inherit;">Labels</a>
@@ -1312,8 +1370,7 @@ The Cluster resource accepts the following [input]({{< relref "/docs/intro/conce
         <span class="property-indicator"></span>
         <span class="property-type"><a href="#clusterlabel">List&lt;Cluster<wbr>Label<wbr>Args&gt;</a></span>
     </dt>
-    <dd>{{% md %}}{{% /md %}}</dd>
-    <dt class="property-optional"
+    <dd>{{% md %}}{{% /md %}}</dd><dt class="property-optional"
             title="Optional">
         <span id="mongodbmajorversion_csharp">
 <a href="#mongodbmajorversion_csharp" style="color: inherit; text-decoration: inherit;">Mongo<wbr>Db<wbr>Major<wbr>Version</a>
@@ -1322,8 +1379,7 @@ The Cluster resource accepts the following [input]({{< relref "/docs/intro/conce
         <span class="property-type">string</span>
     </dt>
     <dd>{{% md %}}Version of the cluster to deploy. Atlas supports the following MongoDB versions for M10+ clusters: `3.6`, `4.0`, or `4.2`. You must set this value to `4.2` if `provider_instance_size_name` is either M2 or M5.
-{{% /md %}}</dd>
-    <dt class="property-optional"
+{{% /md %}}</dd><dt class="property-optional"
             title="Optional">
         <span id="name_csharp">
 <a href="#name_csharp" style="color: inherit; text-decoration: inherit;">Name</a>
@@ -1332,8 +1388,7 @@ The Cluster resource accepts the following [input]({{< relref "/docs/intro/conce
         <span class="property-type">string</span>
     </dt>
     <dd>{{% md %}}Name of the cluster as it appears in Atlas. Once the cluster is created, its name cannot be changed.
-{{% /md %}}</dd>
-    <dt class="property-optional"
+{{% /md %}}</dd><dt class="property-optional"
             title="Optional">
         <span id="numshards_csharp">
 <a href="#numshards_csharp" style="color: inherit; text-decoration: inherit;">Num<wbr>Shards</a>
@@ -1342,8 +1397,7 @@ The Cluster resource accepts the following [input]({{< relref "/docs/intro/conce
         <span class="property-type">int</span>
     </dt>
     <dd>{{% md %}}Number of shards to deploy in the specified zone, minimum 1.
-{{% /md %}}</dd>
-    <dt class="property-optional"
+{{% /md %}}</dd><dt class="property-optional"
             title="Optional">
         <span id="pitenabled_csharp">
 <a href="#pitenabled_csharp" style="color: inherit; text-decoration: inherit;">Pit<wbr>Enabled</a>
@@ -1352,8 +1406,7 @@ The Cluster resource accepts the following [input]({{< relref "/docs/intro/conce
         <span class="property-type">bool</span>
     </dt>
     <dd>{{% md %}}- Flag that indicates if the cluster uses Continuous Cloud Backup. If set to true, provider_backup_enabled must also be set to true.
-{{% /md %}}</dd>
-    <dt class="property-optional"
+{{% /md %}}</dd><dt class="property-optional"
             title="Optional">
         <span id="providerautoscalingcomputemaxinstancesize_csharp">
 <a href="#providerautoscalingcomputemaxinstancesize_csharp" style="color: inherit; text-decoration: inherit;">Provider<wbr>Auto<wbr>Scaling<wbr>Compute<wbr>Max<wbr>Instance<wbr>Size</a>
@@ -1362,8 +1415,7 @@ The Cluster resource accepts the following [input]({{< relref "/docs/intro/conce
         <span class="property-type">string</span>
     </dt>
     <dd>{{% md %}}Maximum instance size to which your cluster can automatically scale (e.g., M40). Required if `autoScaling.compute.enabled` is `true`.
-{{% /md %}}</dd>
-    <dt class="property-optional"
+{{% /md %}}</dd><dt class="property-optional"
             title="Optional">
         <span id="providerautoscalingcomputemininstancesize_csharp">
 <a href="#providerautoscalingcomputemininstancesize_csharp" style="color: inherit; text-decoration: inherit;">Provider<wbr>Auto<wbr>Scaling<wbr>Compute<wbr>Min<wbr>Instance<wbr>Size</a>
@@ -1372,8 +1424,7 @@ The Cluster resource accepts the following [input]({{< relref "/docs/intro/conce
         <span class="property-type">string</span>
     </dt>
     <dd>{{% md %}}Minimum instance size to which your cluster can automatically scale (e.g., M10). Required if `autoScaling.compute.scaleDownEnabled` is `true`.
-{{% /md %}}</dd>
-    <dt class="property-optional"
+{{% /md %}}</dd><dt class="property-optional"
             title="Optional">
         <span id="providerbackupenabled_csharp">
 <a href="#providerbackupenabled_csharp" style="color: inherit; text-decoration: inherit;">Provider<wbr>Backup<wbr>Enabled</a>
@@ -1382,8 +1433,7 @@ The Cluster resource accepts the following [input]({{< relref "/docs/intro/conce
         <span class="property-type">bool</span>
     </dt>
     <dd>{{% md %}}Flag indicating if the cluster uses Cloud Backup for backups.
-{{% /md %}}</dd>
-    <dt class="property-optional"
+{{% /md %}}</dd><dt class="property-optional"
             title="Optional">
         <span id="providerdiskiops_csharp">
 <a href="#providerdiskiops_csharp" style="color: inherit; text-decoration: inherit;">Provider<wbr>Disk<wbr>Iops</a>
@@ -1392,8 +1442,7 @@ The Cluster resource accepts the following [input]({{< relref "/docs/intro/conce
         <span class="property-type">int</span>
     </dt>
     <dd>{{% md %}}The maximum input/output operations per second (IOPS) the system can perform. The possible values depend on the selected `provider_instance_size_name` and `disk_size_gb`.
-{{% /md %}}</dd>
-    <dt class="property-optional"
+{{% /md %}}</dd><dt class="property-optional"
             title="Optional">
         <span id="providerdisktypename_csharp">
 <a href="#providerdisktypename_csharp" style="color: inherit; text-decoration: inherit;">Provider<wbr>Disk<wbr>Type<wbr>Name</a>
@@ -1402,8 +1451,7 @@ The Cluster resource accepts the following [input]({{< relref "/docs/intro/conce
         <span class="property-type">string</span>
     </dt>
     <dd>{{% md %}}Azure disk type of the server’s root volume. If omitted, Atlas uses the default disk type for the selected providerSettings.instanceSizeName.  Example disk types and associated storage sizes: P4 - 32GB, P6 - 64GB, P10 - 128GB, P15 - 256GB, P20 - 512GB, P30 - 1024GB, P40 - 2048GB, P50 - 4095GB.  More information and the most update to date disk types/storage sizes can be located at https://docs.atlas.mongodb.com/reference/api/clusters-create-one/.
-{{% /md %}}</dd>
-    <dt class="property-optional"
+{{% /md %}}</dd><dt class="property-optional"
             title="Optional">
         <span id="providerencryptebsvolume_csharp">
 <a href="#providerencryptebsvolume_csharp" style="color: inherit; text-decoration: inherit;">Provider<wbr>Encrypt<wbr>Ebs<wbr>Volume</a>
@@ -1412,8 +1460,7 @@ The Cluster resource accepts the following [input]({{< relref "/docs/intro/conce
         <span class="property-type">bool</span>
     </dt>
     <dd>{{% md %}}The default value is true.  Flag that indicates whether the Amazon EBS encryption feature encrypts the host's root volume for both data at rest within the volume and for data moving between the volume and the cluster. Note: This setting is always enabled for clusters with local NVMe SSDs. **Atlas encrypts all cluster storage and snapshot volumes, securing all cluster data on disk: a concept known as encryption at rest, by default.**.
-{{% /md %}}</dd>
-    <dt class="property-optional"
+{{% /md %}}</dd><dt class="property-optional"
             title="Optional">
         <span id="providerregionname_csharp">
 <a href="#providerregionname_csharp" style="color: inherit; text-decoration: inherit;">Provider<wbr>Region<wbr>Name</a>
@@ -1423,8 +1470,7 @@ The Cluster resource accepts the following [input]({{< relref "/docs/intro/conce
     </dt>
     <dd>{{% md %}}Physical location of your MongoDB cluster. The region you choose can affect network latency for clients accessing your databases.  Requires the **Atlas region name**, see the reference list for [AWS](https://docs.atlas.mongodb.com/reference/amazon-aws/), [GCP](https://docs.atlas.mongodb.com/reference/google-gcp/), [Azure](https://docs.atlas.mongodb.com/reference/microsoft-azure/).
 Do not specify this field when creating a multi-region cluster using the replicationSpec document or a Global Cluster with the replicationSpecs array.
-{{% /md %}}</dd>
-    <dt class="property-optional"
+{{% /md %}}</dd><dt class="property-optional"
             title="Optional">
         <span id="providervolumetype_csharp">
 <a href="#providervolumetype_csharp" style="color: inherit; text-decoration: inherit;">Provider<wbr>Volume<wbr>Type</a>
@@ -1433,8 +1479,7 @@ Do not specify this field when creating a multi-region cluster using the replica
         <span class="property-type">string</span>
     </dt>
     <dd>{{% md %}}The type of the volume. The possible values are: `STANDARD` and `PROVISIONED`.  `PROVISIONED` required if setting IOPS higher than the default instance IOPS.
-{{% /md %}}</dd>
-    <dt class="property-optional"
+{{% /md %}}</dd><dt class="property-optional"
             title="Optional">
         <span id="replicationfactor_csharp">
 <a href="#replicationfactor_csharp" style="color: inherit; text-decoration: inherit;">Replication<wbr>Factor</a>
@@ -1443,8 +1488,7 @@ Do not specify this field when creating a multi-region cluster using the replica
         <span class="property-type">int</span>
     </dt>
     <dd>{{% md %}}Number of replica set members. Each member keeps a copy of your databases, providing high availability and data redundancy. The possible values are 3, 5, or 7. The default value is 3.
-{{% /md %}}</dd>
-    <dt class="property-optional"
+{{% /md %}}</dd><dt class="property-optional"
             title="Optional">
         <span id="replicationspecs_csharp">
 <a href="#replicationspecs_csharp" style="color: inherit; text-decoration: inherit;">Replication<wbr>Specs</a>
@@ -1453,14 +1497,11 @@ Do not specify this field when creating a multi-region cluster using the replica
         <span class="property-type"><a href="#clusterreplicationspec">List&lt;Cluster<wbr>Replication<wbr>Spec<wbr>Args&gt;</a></span>
     </dt>
     <dd>{{% md %}}Configuration for cluster regions.  See Replication Spec below for more details.
-{{% /md %}}</dd>
-</dl>
+{{% /md %}}</dd></dl>
 {{% /choosable %}}
 
 {{% choosable language go %}}
-<dl class="resources-properties">
-
-    <dt class="property-required"
+<dl class="resources-properties"><dt class="property-required"
             title="Required">
         <span id="projectid_go">
 <a href="#projectid_go" style="color: inherit; text-decoration: inherit;">Project<wbr>Id</a>
@@ -1469,8 +1510,7 @@ Do not specify this field when creating a multi-region cluster using the replica
         <span class="property-type">string</span>
     </dt>
     <dd>{{% md %}}The unique ID for the project to create the database user.
-{{% /md %}}</dd>
-    <dt class="property-required"
+{{% /md %}}</dd><dt class="property-required"
             title="Required">
         <span id="providerinstancesizename_go">
 <a href="#providerinstancesizename_go" style="color: inherit; text-decoration: inherit;">Provider<wbr>Instance<wbr>Size<wbr>Name</a>
@@ -1480,8 +1520,7 @@ Do not specify this field when creating a multi-region cluster using the replica
     </dt>
     <dd>{{% md %}}Atlas provides different instance sizes, each with a default storage capacity and RAM size. The instance size you select is used for all the data-bearing servers in your cluster. See [Create a Cluster](https://docs.atlas.mongodb.com/reference/api/clusters-create-one/) `providerSettings.instanceSizeName` for valid values and default resources. 
 **Note** free tier (M0) creation is not supported by the Atlas API and hence not supported by this provider.)
-{{% /md %}}</dd>
-    <dt class="property-required"
+{{% /md %}}</dd><dt class="property-required"
             title="Required">
         <span id="providername_go">
 <a href="#providername_go" style="color: inherit; text-decoration: inherit;">Provider<wbr>Name</a>
@@ -1490,8 +1529,7 @@ Do not specify this field when creating a multi-region cluster using the replica
         <span class="property-type">string</span>
     </dt>
     <dd>{{% md %}}Cloud service provider on which the servers are provisioned.
-{{% /md %}}</dd>
-    <dt class="property-optional"
+{{% /md %}}</dd><dt class="property-optional"
             title="Optional">
         <span id="advancedconfiguration_go">
 <a href="#advancedconfiguration_go" style="color: inherit; text-decoration: inherit;">Advanced<wbr>Configuration</a>
@@ -1499,8 +1537,7 @@ Do not specify this field when creating a multi-region cluster using the replica
         <span class="property-indicator"></span>
         <span class="property-type"><a href="#clusteradvancedconfiguration">Cluster<wbr>Advanced<wbr>Configuration</a></span>
     </dt>
-    <dd>{{% md %}}{{% /md %}}</dd>
-    <dt class="property-optional"
+    <dd>{{% md %}}{{% /md %}}</dd><dt class="property-optional"
             title="Optional">
         <span id="autoscalingcomputeenabled_go">
 <a href="#autoscalingcomputeenabled_go" style="color: inherit; text-decoration: inherit;">Auto<wbr>Scaling<wbr>Compute<wbr>Enabled</a>
@@ -1511,8 +1548,7 @@ Do not specify this field when creating a multi-region cluster using the replica
     <dd>{{% md %}}Specifies whether cluster tier auto-scaling is enabled. The default is false.
 - Set to `true` to enable cluster tier auto-scaling. If enabled, you must specify a value for `providerSettings.autoScaling.compute.maxInstanceSize`.
 - Set to `false` to disable cluster tier auto-scaling.
-{{% /md %}}</dd>
-    <dt class="property-optional"
+{{% /md %}}</dd><dt class="property-optional"
             title="Optional">
         <span id="autoscalingcomputescaledownenabled_go">
 <a href="#autoscalingcomputescaledownenabled_go" style="color: inherit; text-decoration: inherit;">Auto<wbr>Scaling<wbr>Compute<wbr>Scale<wbr>Down<wbr>Enabled</a>
@@ -1522,8 +1558,7 @@ Do not specify this field when creating a multi-region cluster using the replica
     </dt>
     <dd>{{% md %}}Set to `true` to enable the cluster tier to scale down. This option is only available if `autoScaling.compute.enabled` is `true`.
 - If this option is enabled, you must specify a value for `providerSettings.autoScaling.compute.minInstanceSize`
-{{% /md %}}</dd>
-    <dt class="property-optional"
+{{% /md %}}</dd><dt class="property-optional"
             title="Optional">
         <span id="autoscalingdiskgbenabled_go">
 <a href="#autoscalingdiskgbenabled_go" style="color: inherit; text-decoration: inherit;">Auto<wbr>Scaling<wbr>Disk<wbr>Gb<wbr>Enabled</a>
@@ -1534,8 +1569,7 @@ Do not specify this field when creating a multi-region cluster using the replica
     <dd>{{% md %}}Specifies whether disk auto-scaling is enabled. The default is true.
 - Set to `true` to enable disk auto-scaling.
 - Set to `false` to disable disk auto-scaling.
-{{% /md %}}</dd>
-    <dt class="property-optional"
+{{% /md %}}</dd><dt class="property-optional"
             title="Optional">
         <span id="backingprovidername_go">
 <a href="#backingprovidername_go" style="color: inherit; text-decoration: inherit;">Backing<wbr>Provider<wbr>Name</a>
@@ -1544,8 +1578,7 @@ Do not specify this field when creating a multi-region cluster using the replica
         <span class="property-type">string</span>
     </dt>
     <dd>{{% md %}}Cloud service provider on which the server for a multi-tenant cluster is provisioned.
-{{% /md %}}</dd>
-    <dt class="property-optional"
+{{% /md %}}</dd><dt class="property-optional"
             title="Optional">
         <span id="backupenabled_go">
 <a href="#backupenabled_go" style="color: inherit; text-decoration: inherit;">Backup<wbr>Enabled</a>
@@ -1553,8 +1586,7 @@ Do not specify this field when creating a multi-region cluster using the replica
         <span class="property-indicator"></span>
         <span class="property-type">bool</span>
     </dt>
-    <dd>{{% md %}}{{% /md %}}</dd>
-    <dt class="property-optional"
+    <dd>{{% md %}}{{% /md %}}</dd><dt class="property-optional"
             title="Optional">
         <span id="biconnector_go">
 <a href="#biconnector_go" style="color: inherit; text-decoration: inherit;">Bi<wbr>Connector</a>
@@ -1563,8 +1595,7 @@ Do not specify this field when creating a multi-region cluster using the replica
         <span class="property-type"><a href="#clusterbiconnector">Cluster<wbr>Bi<wbr>Connector</a></span>
     </dt>
     <dd>{{% md %}}Specifies BI Connector for Atlas configuration on this cluster. BI Connector for Atlas is only available for M10+ clusters. See BI Connector below for more details.
-{{% /md %}}</dd>
-    <dt class="property-optional"
+{{% /md %}}</dd><dt class="property-optional"
             title="Optional">
         <span id="clustertype_go">
 <a href="#clustertype_go" style="color: inherit; text-decoration: inherit;">Cluster<wbr>Type</a>
@@ -1573,8 +1604,7 @@ Do not specify this field when creating a multi-region cluster using the replica
         <span class="property-type">string</span>
     </dt>
     <dd>{{% md %}}Specifies the type of the cluster that you want to modify. You cannot convert a sharded cluster deployment to a replica set deployment.
-{{% /md %}}</dd>
-    <dt class="property-optional"
+{{% /md %}}</dd><dt class="property-optional"
             title="Optional">
         <span id="disksizegb_go">
 <a href="#disksizegb_go" style="color: inherit; text-decoration: inherit;">Disk<wbr>Size<wbr>Gb</a>
@@ -1587,8 +1617,7 @@ Do not specify this field when creating a multi-region cluster using the replica
 * Note: The maximum value for disk storage cannot exceed 50 times the maximum RAM for the selected cluster. If you require additional storage space beyond this limitation, consider upgrading your cluster to a higher tier.
 * Cannot be used with clusters with local NVMe SSDs
 * Cannot be used with Azure clusters
-{{% /md %}}</dd>
-    <dt class="property-optional"
+{{% /md %}}</dd><dt class="property-optional"
             title="Optional">
         <span id="encryptionatrestprovider_go">
 <a href="#encryptionatrestprovider_go" style="color: inherit; text-decoration: inherit;">Encryption<wbr>At<wbr>Rest<wbr>Provider</a>
@@ -1597,8 +1626,7 @@ Do not specify this field when creating a multi-region cluster using the replica
         <span class="property-type">string</span>
     </dt>
     <dd>{{% md %}}Possible values are AWS, GCP, AZURE or NONE.  Only needed if you desire to manage the keys, see [Encryption at Rest using Customer Key Management](https://docs.atlas.mongodb.com/security-aws-kms/) for complete documentation.  You must configure encryption at rest for the Atlas project before enabling it on any cluster in the project. For complete documentation on configuring Encryption at Rest, see Encryption at Rest using Customer Key Management. Requires M10 or greater. and for legacy backups, backup_enabled, to be false or omitted. **Note: Atlas encrypts all cluster storage and snapshot volumes, securing all cluster data on disk: a concept known as encryption at rest, by default**.
-{{% /md %}}</dd>
-    <dt class="property-optional"
+{{% /md %}}</dd><dt class="property-optional"
             title="Optional">
         <span id="labels_go">
 <a href="#labels_go" style="color: inherit; text-decoration: inherit;">Labels</a>
@@ -1606,8 +1634,7 @@ Do not specify this field when creating a multi-region cluster using the replica
         <span class="property-indicator"></span>
         <span class="property-type"><a href="#clusterlabel">[]Cluster<wbr>Label</a></span>
     </dt>
-    <dd>{{% md %}}{{% /md %}}</dd>
-    <dt class="property-optional"
+    <dd>{{% md %}}{{% /md %}}</dd><dt class="property-optional"
             title="Optional">
         <span id="mongodbmajorversion_go">
 <a href="#mongodbmajorversion_go" style="color: inherit; text-decoration: inherit;">Mongo<wbr>Db<wbr>Major<wbr>Version</a>
@@ -1616,8 +1643,7 @@ Do not specify this field when creating a multi-region cluster using the replica
         <span class="property-type">string</span>
     </dt>
     <dd>{{% md %}}Version of the cluster to deploy. Atlas supports the following MongoDB versions for M10+ clusters: `3.6`, `4.0`, or `4.2`. You must set this value to `4.2` if `provider_instance_size_name` is either M2 or M5.
-{{% /md %}}</dd>
-    <dt class="property-optional"
+{{% /md %}}</dd><dt class="property-optional"
             title="Optional">
         <span id="name_go">
 <a href="#name_go" style="color: inherit; text-decoration: inherit;">Name</a>
@@ -1626,8 +1652,7 @@ Do not specify this field when creating a multi-region cluster using the replica
         <span class="property-type">string</span>
     </dt>
     <dd>{{% md %}}Name of the cluster as it appears in Atlas. Once the cluster is created, its name cannot be changed.
-{{% /md %}}</dd>
-    <dt class="property-optional"
+{{% /md %}}</dd><dt class="property-optional"
             title="Optional">
         <span id="numshards_go">
 <a href="#numshards_go" style="color: inherit; text-decoration: inherit;">Num<wbr>Shards</a>
@@ -1636,8 +1661,7 @@ Do not specify this field when creating a multi-region cluster using the replica
         <span class="property-type">int</span>
     </dt>
     <dd>{{% md %}}Number of shards to deploy in the specified zone, minimum 1.
-{{% /md %}}</dd>
-    <dt class="property-optional"
+{{% /md %}}</dd><dt class="property-optional"
             title="Optional">
         <span id="pitenabled_go">
 <a href="#pitenabled_go" style="color: inherit; text-decoration: inherit;">Pit<wbr>Enabled</a>
@@ -1646,8 +1670,7 @@ Do not specify this field when creating a multi-region cluster using the replica
         <span class="property-type">bool</span>
     </dt>
     <dd>{{% md %}}- Flag that indicates if the cluster uses Continuous Cloud Backup. If set to true, provider_backup_enabled must also be set to true.
-{{% /md %}}</dd>
-    <dt class="property-optional"
+{{% /md %}}</dd><dt class="property-optional"
             title="Optional">
         <span id="providerautoscalingcomputemaxinstancesize_go">
 <a href="#providerautoscalingcomputemaxinstancesize_go" style="color: inherit; text-decoration: inherit;">Provider<wbr>Auto<wbr>Scaling<wbr>Compute<wbr>Max<wbr>Instance<wbr>Size</a>
@@ -1656,8 +1679,7 @@ Do not specify this field when creating a multi-region cluster using the replica
         <span class="property-type">string</span>
     </dt>
     <dd>{{% md %}}Maximum instance size to which your cluster can automatically scale (e.g., M40). Required if `autoScaling.compute.enabled` is `true`.
-{{% /md %}}</dd>
-    <dt class="property-optional"
+{{% /md %}}</dd><dt class="property-optional"
             title="Optional">
         <span id="providerautoscalingcomputemininstancesize_go">
 <a href="#providerautoscalingcomputemininstancesize_go" style="color: inherit; text-decoration: inherit;">Provider<wbr>Auto<wbr>Scaling<wbr>Compute<wbr>Min<wbr>Instance<wbr>Size</a>
@@ -1666,8 +1688,7 @@ Do not specify this field when creating a multi-region cluster using the replica
         <span class="property-type">string</span>
     </dt>
     <dd>{{% md %}}Minimum instance size to which your cluster can automatically scale (e.g., M10). Required if `autoScaling.compute.scaleDownEnabled` is `true`.
-{{% /md %}}</dd>
-    <dt class="property-optional"
+{{% /md %}}</dd><dt class="property-optional"
             title="Optional">
         <span id="providerbackupenabled_go">
 <a href="#providerbackupenabled_go" style="color: inherit; text-decoration: inherit;">Provider<wbr>Backup<wbr>Enabled</a>
@@ -1676,8 +1697,7 @@ Do not specify this field when creating a multi-region cluster using the replica
         <span class="property-type">bool</span>
     </dt>
     <dd>{{% md %}}Flag indicating if the cluster uses Cloud Backup for backups.
-{{% /md %}}</dd>
-    <dt class="property-optional"
+{{% /md %}}</dd><dt class="property-optional"
             title="Optional">
         <span id="providerdiskiops_go">
 <a href="#providerdiskiops_go" style="color: inherit; text-decoration: inherit;">Provider<wbr>Disk<wbr>Iops</a>
@@ -1686,8 +1706,7 @@ Do not specify this field when creating a multi-region cluster using the replica
         <span class="property-type">int</span>
     </dt>
     <dd>{{% md %}}The maximum input/output operations per second (IOPS) the system can perform. The possible values depend on the selected `provider_instance_size_name` and `disk_size_gb`.
-{{% /md %}}</dd>
-    <dt class="property-optional"
+{{% /md %}}</dd><dt class="property-optional"
             title="Optional">
         <span id="providerdisktypename_go">
 <a href="#providerdisktypename_go" style="color: inherit; text-decoration: inherit;">Provider<wbr>Disk<wbr>Type<wbr>Name</a>
@@ -1696,8 +1715,7 @@ Do not specify this field when creating a multi-region cluster using the replica
         <span class="property-type">string</span>
     </dt>
     <dd>{{% md %}}Azure disk type of the server’s root volume. If omitted, Atlas uses the default disk type for the selected providerSettings.instanceSizeName.  Example disk types and associated storage sizes: P4 - 32GB, P6 - 64GB, P10 - 128GB, P15 - 256GB, P20 - 512GB, P30 - 1024GB, P40 - 2048GB, P50 - 4095GB.  More information and the most update to date disk types/storage sizes can be located at https://docs.atlas.mongodb.com/reference/api/clusters-create-one/.
-{{% /md %}}</dd>
-    <dt class="property-optional"
+{{% /md %}}</dd><dt class="property-optional"
             title="Optional">
         <span id="providerencryptebsvolume_go">
 <a href="#providerencryptebsvolume_go" style="color: inherit; text-decoration: inherit;">Provider<wbr>Encrypt<wbr>Ebs<wbr>Volume</a>
@@ -1706,8 +1724,7 @@ Do not specify this field when creating a multi-region cluster using the replica
         <span class="property-type">bool</span>
     </dt>
     <dd>{{% md %}}The default value is true.  Flag that indicates whether the Amazon EBS encryption feature encrypts the host's root volume for both data at rest within the volume and for data moving between the volume and the cluster. Note: This setting is always enabled for clusters with local NVMe SSDs. **Atlas encrypts all cluster storage and snapshot volumes, securing all cluster data on disk: a concept known as encryption at rest, by default.**.
-{{% /md %}}</dd>
-    <dt class="property-optional"
+{{% /md %}}</dd><dt class="property-optional"
             title="Optional">
         <span id="providerregionname_go">
 <a href="#providerregionname_go" style="color: inherit; text-decoration: inherit;">Provider<wbr>Region<wbr>Name</a>
@@ -1717,8 +1734,7 @@ Do not specify this field when creating a multi-region cluster using the replica
     </dt>
     <dd>{{% md %}}Physical location of your MongoDB cluster. The region you choose can affect network latency for clients accessing your databases.  Requires the **Atlas region name**, see the reference list for [AWS](https://docs.atlas.mongodb.com/reference/amazon-aws/), [GCP](https://docs.atlas.mongodb.com/reference/google-gcp/), [Azure](https://docs.atlas.mongodb.com/reference/microsoft-azure/).
 Do not specify this field when creating a multi-region cluster using the replicationSpec document or a Global Cluster with the replicationSpecs array.
-{{% /md %}}</dd>
-    <dt class="property-optional"
+{{% /md %}}</dd><dt class="property-optional"
             title="Optional">
         <span id="providervolumetype_go">
 <a href="#providervolumetype_go" style="color: inherit; text-decoration: inherit;">Provider<wbr>Volume<wbr>Type</a>
@@ -1727,8 +1743,7 @@ Do not specify this field when creating a multi-region cluster using the replica
         <span class="property-type">string</span>
     </dt>
     <dd>{{% md %}}The type of the volume. The possible values are: `STANDARD` and `PROVISIONED`.  `PROVISIONED` required if setting IOPS higher than the default instance IOPS.
-{{% /md %}}</dd>
-    <dt class="property-optional"
+{{% /md %}}</dd><dt class="property-optional"
             title="Optional">
         <span id="replicationfactor_go">
 <a href="#replicationfactor_go" style="color: inherit; text-decoration: inherit;">Replication<wbr>Factor</a>
@@ -1737,8 +1752,7 @@ Do not specify this field when creating a multi-region cluster using the replica
         <span class="property-type">int</span>
     </dt>
     <dd>{{% md %}}Number of replica set members. Each member keeps a copy of your databases, providing high availability and data redundancy. The possible values are 3, 5, or 7. The default value is 3.
-{{% /md %}}</dd>
-    <dt class="property-optional"
+{{% /md %}}</dd><dt class="property-optional"
             title="Optional">
         <span id="replicationspecs_go">
 <a href="#replicationspecs_go" style="color: inherit; text-decoration: inherit;">Replication<wbr>Specs</a>
@@ -1747,14 +1761,11 @@ Do not specify this field when creating a multi-region cluster using the replica
         <span class="property-type"><a href="#clusterreplicationspec">[]Cluster<wbr>Replication<wbr>Spec</a></span>
     </dt>
     <dd>{{% md %}}Configuration for cluster regions.  See Replication Spec below for more details.
-{{% /md %}}</dd>
-</dl>
+{{% /md %}}</dd></dl>
 {{% /choosable %}}
 
 {{% choosable language nodejs %}}
-<dl class="resources-properties">
-
-    <dt class="property-required"
+<dl class="resources-properties"><dt class="property-required"
             title="Required">
         <span id="projectid_nodejs">
 <a href="#projectid_nodejs" style="color: inherit; text-decoration: inherit;">project<wbr>Id</a>
@@ -1763,8 +1774,7 @@ Do not specify this field when creating a multi-region cluster using the replica
         <span class="property-type">string</span>
     </dt>
     <dd>{{% md %}}The unique ID for the project to create the database user.
-{{% /md %}}</dd>
-    <dt class="property-required"
+{{% /md %}}</dd><dt class="property-required"
             title="Required">
         <span id="providerinstancesizename_nodejs">
 <a href="#providerinstancesizename_nodejs" style="color: inherit; text-decoration: inherit;">provider<wbr>Instance<wbr>Size<wbr>Name</a>
@@ -1774,8 +1784,7 @@ Do not specify this field when creating a multi-region cluster using the replica
     </dt>
     <dd>{{% md %}}Atlas provides different instance sizes, each with a default storage capacity and RAM size. The instance size you select is used for all the data-bearing servers in your cluster. See [Create a Cluster](https://docs.atlas.mongodb.com/reference/api/clusters-create-one/) `providerSettings.instanceSizeName` for valid values and default resources. 
 **Note** free tier (M0) creation is not supported by the Atlas API and hence not supported by this provider.)
-{{% /md %}}</dd>
-    <dt class="property-required"
+{{% /md %}}</dd><dt class="property-required"
             title="Required">
         <span id="providername_nodejs">
 <a href="#providername_nodejs" style="color: inherit; text-decoration: inherit;">provider<wbr>Name</a>
@@ -1784,8 +1793,7 @@ Do not specify this field when creating a multi-region cluster using the replica
         <span class="property-type">string</span>
     </dt>
     <dd>{{% md %}}Cloud service provider on which the servers are provisioned.
-{{% /md %}}</dd>
-    <dt class="property-optional"
+{{% /md %}}</dd><dt class="property-optional"
             title="Optional">
         <span id="advancedconfiguration_nodejs">
 <a href="#advancedconfiguration_nodejs" style="color: inherit; text-decoration: inherit;">advanced<wbr>Configuration</a>
@@ -1793,8 +1801,7 @@ Do not specify this field when creating a multi-region cluster using the replica
         <span class="property-indicator"></span>
         <span class="property-type"><a href="#clusteradvancedconfiguration">Cluster<wbr>Advanced<wbr>Configuration</a></span>
     </dt>
-    <dd>{{% md %}}{{% /md %}}</dd>
-    <dt class="property-optional"
+    <dd>{{% md %}}{{% /md %}}</dd><dt class="property-optional"
             title="Optional">
         <span id="autoscalingcomputeenabled_nodejs">
 <a href="#autoscalingcomputeenabled_nodejs" style="color: inherit; text-decoration: inherit;">auto<wbr>Scaling<wbr>Compute<wbr>Enabled</a>
@@ -1805,8 +1812,7 @@ Do not specify this field when creating a multi-region cluster using the replica
     <dd>{{% md %}}Specifies whether cluster tier auto-scaling is enabled. The default is false.
 - Set to `true` to enable cluster tier auto-scaling. If enabled, you must specify a value for `providerSettings.autoScaling.compute.maxInstanceSize`.
 - Set to `false` to disable cluster tier auto-scaling.
-{{% /md %}}</dd>
-    <dt class="property-optional"
+{{% /md %}}</dd><dt class="property-optional"
             title="Optional">
         <span id="autoscalingcomputescaledownenabled_nodejs">
 <a href="#autoscalingcomputescaledownenabled_nodejs" style="color: inherit; text-decoration: inherit;">auto<wbr>Scaling<wbr>Compute<wbr>Scale<wbr>Down<wbr>Enabled</a>
@@ -1816,8 +1822,7 @@ Do not specify this field when creating a multi-region cluster using the replica
     </dt>
     <dd>{{% md %}}Set to `true` to enable the cluster tier to scale down. This option is only available if `autoScaling.compute.enabled` is `true`.
 - If this option is enabled, you must specify a value for `providerSettings.autoScaling.compute.minInstanceSize`
-{{% /md %}}</dd>
-    <dt class="property-optional"
+{{% /md %}}</dd><dt class="property-optional"
             title="Optional">
         <span id="autoscalingdiskgbenabled_nodejs">
 <a href="#autoscalingdiskgbenabled_nodejs" style="color: inherit; text-decoration: inherit;">auto<wbr>Scaling<wbr>Disk<wbr>Gb<wbr>Enabled</a>
@@ -1828,8 +1833,7 @@ Do not specify this field when creating a multi-region cluster using the replica
     <dd>{{% md %}}Specifies whether disk auto-scaling is enabled. The default is true.
 - Set to `true` to enable disk auto-scaling.
 - Set to `false` to disable disk auto-scaling.
-{{% /md %}}</dd>
-    <dt class="property-optional"
+{{% /md %}}</dd><dt class="property-optional"
             title="Optional">
         <span id="backingprovidername_nodejs">
 <a href="#backingprovidername_nodejs" style="color: inherit; text-decoration: inherit;">backing<wbr>Provider<wbr>Name</a>
@@ -1838,8 +1842,7 @@ Do not specify this field when creating a multi-region cluster using the replica
         <span class="property-type">string</span>
     </dt>
     <dd>{{% md %}}Cloud service provider on which the server for a multi-tenant cluster is provisioned.
-{{% /md %}}</dd>
-    <dt class="property-optional"
+{{% /md %}}</dd><dt class="property-optional"
             title="Optional">
         <span id="backupenabled_nodejs">
 <a href="#backupenabled_nodejs" style="color: inherit; text-decoration: inherit;">backup<wbr>Enabled</a>
@@ -1847,8 +1850,7 @@ Do not specify this field when creating a multi-region cluster using the replica
         <span class="property-indicator"></span>
         <span class="property-type">boolean</span>
     </dt>
-    <dd>{{% md %}}{{% /md %}}</dd>
-    <dt class="property-optional"
+    <dd>{{% md %}}{{% /md %}}</dd><dt class="property-optional"
             title="Optional">
         <span id="biconnector_nodejs">
 <a href="#biconnector_nodejs" style="color: inherit; text-decoration: inherit;">bi<wbr>Connector</a>
@@ -1857,8 +1859,7 @@ Do not specify this field when creating a multi-region cluster using the replica
         <span class="property-type"><a href="#clusterbiconnector">Cluster<wbr>Bi<wbr>Connector</a></span>
     </dt>
     <dd>{{% md %}}Specifies BI Connector for Atlas configuration on this cluster. BI Connector for Atlas is only available for M10+ clusters. See BI Connector below for more details.
-{{% /md %}}</dd>
-    <dt class="property-optional"
+{{% /md %}}</dd><dt class="property-optional"
             title="Optional">
         <span id="clustertype_nodejs">
 <a href="#clustertype_nodejs" style="color: inherit; text-decoration: inherit;">cluster<wbr>Type</a>
@@ -1867,8 +1868,7 @@ Do not specify this field when creating a multi-region cluster using the replica
         <span class="property-type">string</span>
     </dt>
     <dd>{{% md %}}Specifies the type of the cluster that you want to modify. You cannot convert a sharded cluster deployment to a replica set deployment.
-{{% /md %}}</dd>
-    <dt class="property-optional"
+{{% /md %}}</dd><dt class="property-optional"
             title="Optional">
         <span id="disksizegb_nodejs">
 <a href="#disksizegb_nodejs" style="color: inherit; text-decoration: inherit;">disk<wbr>Size<wbr>Gb</a>
@@ -1881,8 +1881,7 @@ Do not specify this field when creating a multi-region cluster using the replica
 * Note: The maximum value for disk storage cannot exceed 50 times the maximum RAM for the selected cluster. If you require additional storage space beyond this limitation, consider upgrading your cluster to a higher tier.
 * Cannot be used with clusters with local NVMe SSDs
 * Cannot be used with Azure clusters
-{{% /md %}}</dd>
-    <dt class="property-optional"
+{{% /md %}}</dd><dt class="property-optional"
             title="Optional">
         <span id="encryptionatrestprovider_nodejs">
 <a href="#encryptionatrestprovider_nodejs" style="color: inherit; text-decoration: inherit;">encryption<wbr>At<wbr>Rest<wbr>Provider</a>
@@ -1891,8 +1890,7 @@ Do not specify this field when creating a multi-region cluster using the replica
         <span class="property-type">string</span>
     </dt>
     <dd>{{% md %}}Possible values are AWS, GCP, AZURE or NONE.  Only needed if you desire to manage the keys, see [Encryption at Rest using Customer Key Management](https://docs.atlas.mongodb.com/security-aws-kms/) for complete documentation.  You must configure encryption at rest for the Atlas project before enabling it on any cluster in the project. For complete documentation on configuring Encryption at Rest, see Encryption at Rest using Customer Key Management. Requires M10 or greater. and for legacy backups, backup_enabled, to be false or omitted. **Note: Atlas encrypts all cluster storage and snapshot volumes, securing all cluster data on disk: a concept known as encryption at rest, by default**.
-{{% /md %}}</dd>
-    <dt class="property-optional"
+{{% /md %}}</dd><dt class="property-optional"
             title="Optional">
         <span id="labels_nodejs">
 <a href="#labels_nodejs" style="color: inherit; text-decoration: inherit;">labels</a>
@@ -1900,8 +1898,7 @@ Do not specify this field when creating a multi-region cluster using the replica
         <span class="property-indicator"></span>
         <span class="property-type"><a href="#clusterlabel">Cluster<wbr>Label[]</a></span>
     </dt>
-    <dd>{{% md %}}{{% /md %}}</dd>
-    <dt class="property-optional"
+    <dd>{{% md %}}{{% /md %}}</dd><dt class="property-optional"
             title="Optional">
         <span id="mongodbmajorversion_nodejs">
 <a href="#mongodbmajorversion_nodejs" style="color: inherit; text-decoration: inherit;">mongo<wbr>Db<wbr>Major<wbr>Version</a>
@@ -1910,8 +1907,7 @@ Do not specify this field when creating a multi-region cluster using the replica
         <span class="property-type">string</span>
     </dt>
     <dd>{{% md %}}Version of the cluster to deploy. Atlas supports the following MongoDB versions for M10+ clusters: `3.6`, `4.0`, or `4.2`. You must set this value to `4.2` if `provider_instance_size_name` is either M2 or M5.
-{{% /md %}}</dd>
-    <dt class="property-optional"
+{{% /md %}}</dd><dt class="property-optional"
             title="Optional">
         <span id="name_nodejs">
 <a href="#name_nodejs" style="color: inherit; text-decoration: inherit;">name</a>
@@ -1920,8 +1916,7 @@ Do not specify this field when creating a multi-region cluster using the replica
         <span class="property-type">string</span>
     </dt>
     <dd>{{% md %}}Name of the cluster as it appears in Atlas. Once the cluster is created, its name cannot be changed.
-{{% /md %}}</dd>
-    <dt class="property-optional"
+{{% /md %}}</dd><dt class="property-optional"
             title="Optional">
         <span id="numshards_nodejs">
 <a href="#numshards_nodejs" style="color: inherit; text-decoration: inherit;">num<wbr>Shards</a>
@@ -1930,8 +1925,7 @@ Do not specify this field when creating a multi-region cluster using the replica
         <span class="property-type">number</span>
     </dt>
     <dd>{{% md %}}Number of shards to deploy in the specified zone, minimum 1.
-{{% /md %}}</dd>
-    <dt class="property-optional"
+{{% /md %}}</dd><dt class="property-optional"
             title="Optional">
         <span id="pitenabled_nodejs">
 <a href="#pitenabled_nodejs" style="color: inherit; text-decoration: inherit;">pit<wbr>Enabled</a>
@@ -1940,8 +1934,7 @@ Do not specify this field when creating a multi-region cluster using the replica
         <span class="property-type">boolean</span>
     </dt>
     <dd>{{% md %}}- Flag that indicates if the cluster uses Continuous Cloud Backup. If set to true, provider_backup_enabled must also be set to true.
-{{% /md %}}</dd>
-    <dt class="property-optional"
+{{% /md %}}</dd><dt class="property-optional"
             title="Optional">
         <span id="providerautoscalingcomputemaxinstancesize_nodejs">
 <a href="#providerautoscalingcomputemaxinstancesize_nodejs" style="color: inherit; text-decoration: inherit;">provider<wbr>Auto<wbr>Scaling<wbr>Compute<wbr>Max<wbr>Instance<wbr>Size</a>
@@ -1950,8 +1943,7 @@ Do not specify this field when creating a multi-region cluster using the replica
         <span class="property-type">string</span>
     </dt>
     <dd>{{% md %}}Maximum instance size to which your cluster can automatically scale (e.g., M40). Required if `autoScaling.compute.enabled` is `true`.
-{{% /md %}}</dd>
-    <dt class="property-optional"
+{{% /md %}}</dd><dt class="property-optional"
             title="Optional">
         <span id="providerautoscalingcomputemininstancesize_nodejs">
 <a href="#providerautoscalingcomputemininstancesize_nodejs" style="color: inherit; text-decoration: inherit;">provider<wbr>Auto<wbr>Scaling<wbr>Compute<wbr>Min<wbr>Instance<wbr>Size</a>
@@ -1960,8 +1952,7 @@ Do not specify this field when creating a multi-region cluster using the replica
         <span class="property-type">string</span>
     </dt>
     <dd>{{% md %}}Minimum instance size to which your cluster can automatically scale (e.g., M10). Required if `autoScaling.compute.scaleDownEnabled` is `true`.
-{{% /md %}}</dd>
-    <dt class="property-optional"
+{{% /md %}}</dd><dt class="property-optional"
             title="Optional">
         <span id="providerbackupenabled_nodejs">
 <a href="#providerbackupenabled_nodejs" style="color: inherit; text-decoration: inherit;">provider<wbr>Backup<wbr>Enabled</a>
@@ -1970,8 +1961,7 @@ Do not specify this field when creating a multi-region cluster using the replica
         <span class="property-type">boolean</span>
     </dt>
     <dd>{{% md %}}Flag indicating if the cluster uses Cloud Backup for backups.
-{{% /md %}}</dd>
-    <dt class="property-optional"
+{{% /md %}}</dd><dt class="property-optional"
             title="Optional">
         <span id="providerdiskiops_nodejs">
 <a href="#providerdiskiops_nodejs" style="color: inherit; text-decoration: inherit;">provider<wbr>Disk<wbr>Iops</a>
@@ -1980,8 +1970,7 @@ Do not specify this field when creating a multi-region cluster using the replica
         <span class="property-type">number</span>
     </dt>
     <dd>{{% md %}}The maximum input/output operations per second (IOPS) the system can perform. The possible values depend on the selected `provider_instance_size_name` and `disk_size_gb`.
-{{% /md %}}</dd>
-    <dt class="property-optional"
+{{% /md %}}</dd><dt class="property-optional"
             title="Optional">
         <span id="providerdisktypename_nodejs">
 <a href="#providerdisktypename_nodejs" style="color: inherit; text-decoration: inherit;">provider<wbr>Disk<wbr>Type<wbr>Name</a>
@@ -1990,8 +1979,7 @@ Do not specify this field when creating a multi-region cluster using the replica
         <span class="property-type">string</span>
     </dt>
     <dd>{{% md %}}Azure disk type of the server’s root volume. If omitted, Atlas uses the default disk type for the selected providerSettings.instanceSizeName.  Example disk types and associated storage sizes: P4 - 32GB, P6 - 64GB, P10 - 128GB, P15 - 256GB, P20 - 512GB, P30 - 1024GB, P40 - 2048GB, P50 - 4095GB.  More information and the most update to date disk types/storage sizes can be located at https://docs.atlas.mongodb.com/reference/api/clusters-create-one/.
-{{% /md %}}</dd>
-    <dt class="property-optional"
+{{% /md %}}</dd><dt class="property-optional"
             title="Optional">
         <span id="providerencryptebsvolume_nodejs">
 <a href="#providerencryptebsvolume_nodejs" style="color: inherit; text-decoration: inherit;">provider<wbr>Encrypt<wbr>Ebs<wbr>Volume</a>
@@ -2000,8 +1988,7 @@ Do not specify this field when creating a multi-region cluster using the replica
         <span class="property-type">boolean</span>
     </dt>
     <dd>{{% md %}}The default value is true.  Flag that indicates whether the Amazon EBS encryption feature encrypts the host's root volume for both data at rest within the volume and for data moving between the volume and the cluster. Note: This setting is always enabled for clusters with local NVMe SSDs. **Atlas encrypts all cluster storage and snapshot volumes, securing all cluster data on disk: a concept known as encryption at rest, by default.**.
-{{% /md %}}</dd>
-    <dt class="property-optional"
+{{% /md %}}</dd><dt class="property-optional"
             title="Optional">
         <span id="providerregionname_nodejs">
 <a href="#providerregionname_nodejs" style="color: inherit; text-decoration: inherit;">provider<wbr>Region<wbr>Name</a>
@@ -2011,8 +1998,7 @@ Do not specify this field when creating a multi-region cluster using the replica
     </dt>
     <dd>{{% md %}}Physical location of your MongoDB cluster. The region you choose can affect network latency for clients accessing your databases.  Requires the **Atlas region name**, see the reference list for [AWS](https://docs.atlas.mongodb.com/reference/amazon-aws/), [GCP](https://docs.atlas.mongodb.com/reference/google-gcp/), [Azure](https://docs.atlas.mongodb.com/reference/microsoft-azure/).
 Do not specify this field when creating a multi-region cluster using the replicationSpec document or a Global Cluster with the replicationSpecs array.
-{{% /md %}}</dd>
-    <dt class="property-optional"
+{{% /md %}}</dd><dt class="property-optional"
             title="Optional">
         <span id="providervolumetype_nodejs">
 <a href="#providervolumetype_nodejs" style="color: inherit; text-decoration: inherit;">provider<wbr>Volume<wbr>Type</a>
@@ -2021,8 +2007,7 @@ Do not specify this field when creating a multi-region cluster using the replica
         <span class="property-type">string</span>
     </dt>
     <dd>{{% md %}}The type of the volume. The possible values are: `STANDARD` and `PROVISIONED`.  `PROVISIONED` required if setting IOPS higher than the default instance IOPS.
-{{% /md %}}</dd>
-    <dt class="property-optional"
+{{% /md %}}</dd><dt class="property-optional"
             title="Optional">
         <span id="replicationfactor_nodejs">
 <a href="#replicationfactor_nodejs" style="color: inherit; text-decoration: inherit;">replication<wbr>Factor</a>
@@ -2031,8 +2016,7 @@ Do not specify this field when creating a multi-region cluster using the replica
         <span class="property-type">number</span>
     </dt>
     <dd>{{% md %}}Number of replica set members. Each member keeps a copy of your databases, providing high availability and data redundancy. The possible values are 3, 5, or 7. The default value is 3.
-{{% /md %}}</dd>
-    <dt class="property-optional"
+{{% /md %}}</dd><dt class="property-optional"
             title="Optional">
         <span id="replicationspecs_nodejs">
 <a href="#replicationspecs_nodejs" style="color: inherit; text-decoration: inherit;">replication<wbr>Specs</a>
@@ -2041,14 +2025,11 @@ Do not specify this field when creating a multi-region cluster using the replica
         <span class="property-type"><a href="#clusterreplicationspec">Cluster<wbr>Replication<wbr>Spec[]</a></span>
     </dt>
     <dd>{{% md %}}Configuration for cluster regions.  See Replication Spec below for more details.
-{{% /md %}}</dd>
-</dl>
+{{% /md %}}</dd></dl>
 {{% /choosable %}}
 
 {{% choosable language python %}}
-<dl class="resources-properties">
-
-    <dt class="property-required"
+<dl class="resources-properties"><dt class="property-required"
             title="Required">
         <span id="project_id_python">
 <a href="#project_id_python" style="color: inherit; text-decoration: inherit;">project_<wbr>id</a>
@@ -2057,8 +2038,7 @@ Do not specify this field when creating a multi-region cluster using the replica
         <span class="property-type">str</span>
     </dt>
     <dd>{{% md %}}The unique ID for the project to create the database user.
-{{% /md %}}</dd>
-    <dt class="property-required"
+{{% /md %}}</dd><dt class="property-required"
             title="Required">
         <span id="provider_instance_size_name_python">
 <a href="#provider_instance_size_name_python" style="color: inherit; text-decoration: inherit;">provider_<wbr>instance_<wbr>size_<wbr>name</a>
@@ -2068,8 +2048,7 @@ Do not specify this field when creating a multi-region cluster using the replica
     </dt>
     <dd>{{% md %}}Atlas provides different instance sizes, each with a default storage capacity and RAM size. The instance size you select is used for all the data-bearing servers in your cluster. See [Create a Cluster](https://docs.atlas.mongodb.com/reference/api/clusters-create-one/) `providerSettings.instanceSizeName` for valid values and default resources. 
 **Note** free tier (M0) creation is not supported by the Atlas API and hence not supported by this provider.)
-{{% /md %}}</dd>
-    <dt class="property-required"
+{{% /md %}}</dd><dt class="property-required"
             title="Required">
         <span id="provider_name_python">
 <a href="#provider_name_python" style="color: inherit; text-decoration: inherit;">provider_<wbr>name</a>
@@ -2078,8 +2057,7 @@ Do not specify this field when creating a multi-region cluster using the replica
         <span class="property-type">str</span>
     </dt>
     <dd>{{% md %}}Cloud service provider on which the servers are provisioned.
-{{% /md %}}</dd>
-    <dt class="property-optional"
+{{% /md %}}</dd><dt class="property-optional"
             title="Optional">
         <span id="advanced_configuration_python">
 <a href="#advanced_configuration_python" style="color: inherit; text-decoration: inherit;">advanced_<wbr>configuration</a>
@@ -2087,8 +2065,7 @@ Do not specify this field when creating a multi-region cluster using the replica
         <span class="property-indicator"></span>
         <span class="property-type"><a href="#clusteradvancedconfiguration">Cluster<wbr>Advanced<wbr>Configuration<wbr>Args</a></span>
     </dt>
-    <dd>{{% md %}}{{% /md %}}</dd>
-    <dt class="property-optional"
+    <dd>{{% md %}}{{% /md %}}</dd><dt class="property-optional"
             title="Optional">
         <span id="auto_scaling_compute_enabled_python">
 <a href="#auto_scaling_compute_enabled_python" style="color: inherit; text-decoration: inherit;">auto_<wbr>scaling_<wbr>compute_<wbr>enabled</a>
@@ -2099,8 +2076,7 @@ Do not specify this field when creating a multi-region cluster using the replica
     <dd>{{% md %}}Specifies whether cluster tier auto-scaling is enabled. The default is false.
 - Set to `true` to enable cluster tier auto-scaling. If enabled, you must specify a value for `providerSettings.autoScaling.compute.maxInstanceSize`.
 - Set to `false` to disable cluster tier auto-scaling.
-{{% /md %}}</dd>
-    <dt class="property-optional"
+{{% /md %}}</dd><dt class="property-optional"
             title="Optional">
         <span id="auto_scaling_compute_scale_down_enabled_python">
 <a href="#auto_scaling_compute_scale_down_enabled_python" style="color: inherit; text-decoration: inherit;">auto_<wbr>scaling_<wbr>compute_<wbr>scale_<wbr>down_<wbr>enabled</a>
@@ -2110,8 +2086,7 @@ Do not specify this field when creating a multi-region cluster using the replica
     </dt>
     <dd>{{% md %}}Set to `true` to enable the cluster tier to scale down. This option is only available if `autoScaling.compute.enabled` is `true`.
 - If this option is enabled, you must specify a value for `providerSettings.autoScaling.compute.minInstanceSize`
-{{% /md %}}</dd>
-    <dt class="property-optional"
+{{% /md %}}</dd><dt class="property-optional"
             title="Optional">
         <span id="auto_scaling_disk_gb_enabled_python">
 <a href="#auto_scaling_disk_gb_enabled_python" style="color: inherit; text-decoration: inherit;">auto_<wbr>scaling_<wbr>disk_<wbr>gb_<wbr>enabled</a>
@@ -2122,8 +2097,7 @@ Do not specify this field when creating a multi-region cluster using the replica
     <dd>{{% md %}}Specifies whether disk auto-scaling is enabled. The default is true.
 - Set to `true` to enable disk auto-scaling.
 - Set to `false` to disable disk auto-scaling.
-{{% /md %}}</dd>
-    <dt class="property-optional"
+{{% /md %}}</dd><dt class="property-optional"
             title="Optional">
         <span id="backing_provider_name_python">
 <a href="#backing_provider_name_python" style="color: inherit; text-decoration: inherit;">backing_<wbr>provider_<wbr>name</a>
@@ -2132,8 +2106,7 @@ Do not specify this field when creating a multi-region cluster using the replica
         <span class="property-type">str</span>
     </dt>
     <dd>{{% md %}}Cloud service provider on which the server for a multi-tenant cluster is provisioned.
-{{% /md %}}</dd>
-    <dt class="property-optional"
+{{% /md %}}</dd><dt class="property-optional"
             title="Optional">
         <span id="backup_enabled_python">
 <a href="#backup_enabled_python" style="color: inherit; text-decoration: inherit;">backup_<wbr>enabled</a>
@@ -2141,8 +2114,7 @@ Do not specify this field when creating a multi-region cluster using the replica
         <span class="property-indicator"></span>
         <span class="property-type">bool</span>
     </dt>
-    <dd>{{% md %}}{{% /md %}}</dd>
-    <dt class="property-optional"
+    <dd>{{% md %}}{{% /md %}}</dd><dt class="property-optional"
             title="Optional">
         <span id="bi_connector_python">
 <a href="#bi_connector_python" style="color: inherit; text-decoration: inherit;">bi_<wbr>connector</a>
@@ -2151,8 +2123,7 @@ Do not specify this field when creating a multi-region cluster using the replica
         <span class="property-type"><a href="#clusterbiconnector">Cluster<wbr>Bi<wbr>Connector<wbr>Args</a></span>
     </dt>
     <dd>{{% md %}}Specifies BI Connector for Atlas configuration on this cluster. BI Connector for Atlas is only available for M10+ clusters. See BI Connector below for more details.
-{{% /md %}}</dd>
-    <dt class="property-optional"
+{{% /md %}}</dd><dt class="property-optional"
             title="Optional">
         <span id="cluster_type_python">
 <a href="#cluster_type_python" style="color: inherit; text-decoration: inherit;">cluster_<wbr>type</a>
@@ -2161,8 +2132,7 @@ Do not specify this field when creating a multi-region cluster using the replica
         <span class="property-type">str</span>
     </dt>
     <dd>{{% md %}}Specifies the type of the cluster that you want to modify. You cannot convert a sharded cluster deployment to a replica set deployment.
-{{% /md %}}</dd>
-    <dt class="property-optional"
+{{% /md %}}</dd><dt class="property-optional"
             title="Optional">
         <span id="disk_size_gb_python">
 <a href="#disk_size_gb_python" style="color: inherit; text-decoration: inherit;">disk_<wbr>size_<wbr>gb</a>
@@ -2175,8 +2145,7 @@ Do not specify this field when creating a multi-region cluster using the replica
 * Note: The maximum value for disk storage cannot exceed 50 times the maximum RAM for the selected cluster. If you require additional storage space beyond this limitation, consider upgrading your cluster to a higher tier.
 * Cannot be used with clusters with local NVMe SSDs
 * Cannot be used with Azure clusters
-{{% /md %}}</dd>
-    <dt class="property-optional"
+{{% /md %}}</dd><dt class="property-optional"
             title="Optional">
         <span id="encryption_at_rest_provider_python">
 <a href="#encryption_at_rest_provider_python" style="color: inherit; text-decoration: inherit;">encryption_<wbr>at_<wbr>rest_<wbr>provider</a>
@@ -2185,8 +2154,7 @@ Do not specify this field when creating a multi-region cluster using the replica
         <span class="property-type">str</span>
     </dt>
     <dd>{{% md %}}Possible values are AWS, GCP, AZURE or NONE.  Only needed if you desire to manage the keys, see [Encryption at Rest using Customer Key Management](https://docs.atlas.mongodb.com/security-aws-kms/) for complete documentation.  You must configure encryption at rest for the Atlas project before enabling it on any cluster in the project. For complete documentation on configuring Encryption at Rest, see Encryption at Rest using Customer Key Management. Requires M10 or greater. and for legacy backups, backup_enabled, to be false or omitted. **Note: Atlas encrypts all cluster storage and snapshot volumes, securing all cluster data on disk: a concept known as encryption at rest, by default**.
-{{% /md %}}</dd>
-    <dt class="property-optional"
+{{% /md %}}</dd><dt class="property-optional"
             title="Optional">
         <span id="labels_python">
 <a href="#labels_python" style="color: inherit; text-decoration: inherit;">labels</a>
@@ -2194,8 +2162,7 @@ Do not specify this field when creating a multi-region cluster using the replica
         <span class="property-indicator"></span>
         <span class="property-type"><a href="#clusterlabel">Sequence[Cluster<wbr>Label<wbr>Args]</a></span>
     </dt>
-    <dd>{{% md %}}{{% /md %}}</dd>
-    <dt class="property-optional"
+    <dd>{{% md %}}{{% /md %}}</dd><dt class="property-optional"
             title="Optional">
         <span id="mongo_db_major_version_python">
 <a href="#mongo_db_major_version_python" style="color: inherit; text-decoration: inherit;">mongo_<wbr>db_<wbr>major_<wbr>version</a>
@@ -2204,8 +2171,7 @@ Do not specify this field when creating a multi-region cluster using the replica
         <span class="property-type">str</span>
     </dt>
     <dd>{{% md %}}Version of the cluster to deploy. Atlas supports the following MongoDB versions for M10+ clusters: `3.6`, `4.0`, or `4.2`. You must set this value to `4.2` if `provider_instance_size_name` is either M2 or M5.
-{{% /md %}}</dd>
-    <dt class="property-optional"
+{{% /md %}}</dd><dt class="property-optional"
             title="Optional">
         <span id="name_python">
 <a href="#name_python" style="color: inherit; text-decoration: inherit;">name</a>
@@ -2214,8 +2180,7 @@ Do not specify this field when creating a multi-region cluster using the replica
         <span class="property-type">str</span>
     </dt>
     <dd>{{% md %}}Name of the cluster as it appears in Atlas. Once the cluster is created, its name cannot be changed.
-{{% /md %}}</dd>
-    <dt class="property-optional"
+{{% /md %}}</dd><dt class="property-optional"
             title="Optional">
         <span id="num_shards_python">
 <a href="#num_shards_python" style="color: inherit; text-decoration: inherit;">num_<wbr>shards</a>
@@ -2224,8 +2189,7 @@ Do not specify this field when creating a multi-region cluster using the replica
         <span class="property-type">int</span>
     </dt>
     <dd>{{% md %}}Number of shards to deploy in the specified zone, minimum 1.
-{{% /md %}}</dd>
-    <dt class="property-optional"
+{{% /md %}}</dd><dt class="property-optional"
             title="Optional">
         <span id="pit_enabled_python">
 <a href="#pit_enabled_python" style="color: inherit; text-decoration: inherit;">pit_<wbr>enabled</a>
@@ -2234,8 +2198,7 @@ Do not specify this field when creating a multi-region cluster using the replica
         <span class="property-type">bool</span>
     </dt>
     <dd>{{% md %}}- Flag that indicates if the cluster uses Continuous Cloud Backup. If set to true, provider_backup_enabled must also be set to true.
-{{% /md %}}</dd>
-    <dt class="property-optional"
+{{% /md %}}</dd><dt class="property-optional"
             title="Optional">
         <span id="provider_auto_scaling_compute_max_instance_size_python">
 <a href="#provider_auto_scaling_compute_max_instance_size_python" style="color: inherit; text-decoration: inherit;">provider_<wbr>auto_<wbr>scaling_<wbr>compute_<wbr>max_<wbr>instance_<wbr>size</a>
@@ -2244,8 +2207,7 @@ Do not specify this field when creating a multi-region cluster using the replica
         <span class="property-type">str</span>
     </dt>
     <dd>{{% md %}}Maximum instance size to which your cluster can automatically scale (e.g., M40). Required if `autoScaling.compute.enabled` is `true`.
-{{% /md %}}</dd>
-    <dt class="property-optional"
+{{% /md %}}</dd><dt class="property-optional"
             title="Optional">
         <span id="provider_auto_scaling_compute_min_instance_size_python">
 <a href="#provider_auto_scaling_compute_min_instance_size_python" style="color: inherit; text-decoration: inherit;">provider_<wbr>auto_<wbr>scaling_<wbr>compute_<wbr>min_<wbr>instance_<wbr>size</a>
@@ -2254,8 +2216,7 @@ Do not specify this field when creating a multi-region cluster using the replica
         <span class="property-type">str</span>
     </dt>
     <dd>{{% md %}}Minimum instance size to which your cluster can automatically scale (e.g., M10). Required if `autoScaling.compute.scaleDownEnabled` is `true`.
-{{% /md %}}</dd>
-    <dt class="property-optional"
+{{% /md %}}</dd><dt class="property-optional"
             title="Optional">
         <span id="provider_backup_enabled_python">
 <a href="#provider_backup_enabled_python" style="color: inherit; text-decoration: inherit;">provider_<wbr>backup_<wbr>enabled</a>
@@ -2264,8 +2225,7 @@ Do not specify this field when creating a multi-region cluster using the replica
         <span class="property-type">bool</span>
     </dt>
     <dd>{{% md %}}Flag indicating if the cluster uses Cloud Backup for backups.
-{{% /md %}}</dd>
-    <dt class="property-optional"
+{{% /md %}}</dd><dt class="property-optional"
             title="Optional">
         <span id="provider_disk_iops_python">
 <a href="#provider_disk_iops_python" style="color: inherit; text-decoration: inherit;">provider_<wbr>disk_<wbr>iops</a>
@@ -2274,8 +2234,7 @@ Do not specify this field when creating a multi-region cluster using the replica
         <span class="property-type">int</span>
     </dt>
     <dd>{{% md %}}The maximum input/output operations per second (IOPS) the system can perform. The possible values depend on the selected `provider_instance_size_name` and `disk_size_gb`.
-{{% /md %}}</dd>
-    <dt class="property-optional"
+{{% /md %}}</dd><dt class="property-optional"
             title="Optional">
         <span id="provider_disk_type_name_python">
 <a href="#provider_disk_type_name_python" style="color: inherit; text-decoration: inherit;">provider_<wbr>disk_<wbr>type_<wbr>name</a>
@@ -2284,8 +2243,7 @@ Do not specify this field when creating a multi-region cluster using the replica
         <span class="property-type">str</span>
     </dt>
     <dd>{{% md %}}Azure disk type of the server’s root volume. If omitted, Atlas uses the default disk type for the selected providerSettings.instanceSizeName.  Example disk types and associated storage sizes: P4 - 32GB, P6 - 64GB, P10 - 128GB, P15 - 256GB, P20 - 512GB, P30 - 1024GB, P40 - 2048GB, P50 - 4095GB.  More information and the most update to date disk types/storage sizes can be located at https://docs.atlas.mongodb.com/reference/api/clusters-create-one/.
-{{% /md %}}</dd>
-    <dt class="property-optional"
+{{% /md %}}</dd><dt class="property-optional"
             title="Optional">
         <span id="provider_encrypt_ebs_volume_python">
 <a href="#provider_encrypt_ebs_volume_python" style="color: inherit; text-decoration: inherit;">provider_<wbr>encrypt_<wbr>ebs_<wbr>volume</a>
@@ -2294,8 +2252,7 @@ Do not specify this field when creating a multi-region cluster using the replica
         <span class="property-type">bool</span>
     </dt>
     <dd>{{% md %}}The default value is true.  Flag that indicates whether the Amazon EBS encryption feature encrypts the host's root volume for both data at rest within the volume and for data moving between the volume and the cluster. Note: This setting is always enabled for clusters with local NVMe SSDs. **Atlas encrypts all cluster storage and snapshot volumes, securing all cluster data on disk: a concept known as encryption at rest, by default.**.
-{{% /md %}}</dd>
-    <dt class="property-optional"
+{{% /md %}}</dd><dt class="property-optional"
             title="Optional">
         <span id="provider_region_name_python">
 <a href="#provider_region_name_python" style="color: inherit; text-decoration: inherit;">provider_<wbr>region_<wbr>name</a>
@@ -2305,8 +2262,7 @@ Do not specify this field when creating a multi-region cluster using the replica
     </dt>
     <dd>{{% md %}}Physical location of your MongoDB cluster. The region you choose can affect network latency for clients accessing your databases.  Requires the **Atlas region name**, see the reference list for [AWS](https://docs.atlas.mongodb.com/reference/amazon-aws/), [GCP](https://docs.atlas.mongodb.com/reference/google-gcp/), [Azure](https://docs.atlas.mongodb.com/reference/microsoft-azure/).
 Do not specify this field when creating a multi-region cluster using the replicationSpec document or a Global Cluster with the replicationSpecs array.
-{{% /md %}}</dd>
-    <dt class="property-optional"
+{{% /md %}}</dd><dt class="property-optional"
             title="Optional">
         <span id="provider_volume_type_python">
 <a href="#provider_volume_type_python" style="color: inherit; text-decoration: inherit;">provider_<wbr>volume_<wbr>type</a>
@@ -2315,8 +2271,7 @@ Do not specify this field when creating a multi-region cluster using the replica
         <span class="property-type">str</span>
     </dt>
     <dd>{{% md %}}The type of the volume. The possible values are: `STANDARD` and `PROVISIONED`.  `PROVISIONED` required if setting IOPS higher than the default instance IOPS.
-{{% /md %}}</dd>
-    <dt class="property-optional"
+{{% /md %}}</dd><dt class="property-optional"
             title="Optional">
         <span id="replication_factor_python">
 <a href="#replication_factor_python" style="color: inherit; text-decoration: inherit;">replication_<wbr>factor</a>
@@ -2325,8 +2280,7 @@ Do not specify this field when creating a multi-region cluster using the replica
         <span class="property-type">int</span>
     </dt>
     <dd>{{% md %}}Number of replica set members. Each member keeps a copy of your databases, providing high availability and data redundancy. The possible values are 3, 5, or 7. The default value is 3.
-{{% /md %}}</dd>
-    <dt class="property-optional"
+{{% /md %}}</dd><dt class="property-optional"
             title="Optional">
         <span id="replication_specs_python">
 <a href="#replication_specs_python" style="color: inherit; text-decoration: inherit;">replication_<wbr>specs</a>
@@ -2335,8 +2289,7 @@ Do not specify this field when creating a multi-region cluster using the replica
         <span class="property-type"><a href="#clusterreplicationspec">Sequence[Cluster<wbr>Replication<wbr>Spec<wbr>Args]</a></span>
     </dt>
     <dd>{{% md %}}Configuration for cluster regions.  See Replication Spec below for more details.
-{{% /md %}}</dd>
-</dl>
+{{% /md %}}</dd></dl>
 {{% /choosable %}}
 
 
@@ -2347,9 +2300,7 @@ All [input](#inputs) properties are implicitly available as output properties. A
 
 
 {{% choosable language csharp %}}
-<dl class="resources-properties">
-
-    <dt class="property-"
+<dl class="resources-properties"><dt class="property-"
             title="">
         <span id="clusterid_csharp">
 <a href="#clusterid_csharp" style="color: inherit; text-decoration: inherit;">Cluster<wbr>Id</a>
@@ -2358,8 +2309,7 @@ All [input](#inputs) properties are implicitly available as output properties. A
         <span class="property-type">string</span>
     </dt>
     <dd>{{% md %}}The cluster ID.
-{{% /md %}}</dd>
-    <dt class="property-"
+{{% /md %}}</dd><dt class="property-"
             title="">
         <span id="connectionstrings_csharp">
 <a href="#connectionstrings_csharp" style="color: inherit; text-decoration: inherit;">Connection<wbr>Strings</a>
@@ -2368,8 +2318,7 @@ All [input](#inputs) properties are implicitly available as output properties. A
         <span class="property-type"><a href="#clusterconnectionstrings">Cluster<wbr>Connection<wbr>Strings</a></span>
     </dt>
     <dd>{{% md %}}Set of connection strings that your applications use to connect to this cluster. More info in [Connection-strings](https://docs.mongodb.com/manual/reference/connection-string/). Use the parameters in this object to connect your applications to this cluster. To learn more about the formats of connection strings, see [Connection String Options](https://docs.atlas.mongodb.com/reference/faq/connection-changes/). NOTE: Atlas returns the contents of this object after the cluster is operational, not while it builds the cluster.
-{{% /md %}}</dd>
-    <dt class="property-"
+{{% /md %}}</dd><dt class="property-"
             title="">
         <span id="containerid_csharp">
 <a href="#containerid_csharp" style="color: inherit; text-decoration: inherit;">Container<wbr>Id</a>
@@ -2378,8 +2327,7 @@ All [input](#inputs) properties are implicitly available as output properties. A
         <span class="property-type">string</span>
     </dt>
     <dd>{{% md %}}The Network Peering Container ID. The id of the container either created programmatically by the user before any clusters existed in the project or when the first cluster in the region (AWS/Azure) or project (GCP) was created.
-{{% /md %}}</dd>
-    <dt class="property-"
+{{% /md %}}</dd><dt class="property-"
             title="">
         <span id="id_csharp">
 <a href="#id_csharp" style="color: inherit; text-decoration: inherit;">Id</a>
@@ -2387,8 +2335,7 @@ All [input](#inputs) properties are implicitly available as output properties. A
         <span class="property-indicator"></span>
         <span class="property-type">string</span>
     </dt>
-    <dd>{{% md %}}The provider-assigned unique ID for this managed resource.{{% /md %}}</dd>
-    <dt class="property-"
+    <dd>{{% md %}}The provider-assigned unique ID for this managed resource.{{% /md %}}</dd><dt class="property-"
             title="">
         <span id="mongodbversion_csharp">
 <a href="#mongodbversion_csharp" style="color: inherit; text-decoration: inherit;">Mongo<wbr>Db<wbr>Version</a>
@@ -2397,8 +2344,7 @@ All [input](#inputs) properties are implicitly available as output properties. A
         <span class="property-type">string</span>
     </dt>
     <dd>{{% md %}}Version of MongoDB the cluster runs, in `major-version`.`minor-version` format.
-{{% /md %}}</dd>
-    <dt class="property-"
+{{% /md %}}</dd><dt class="property-"
             title="">
         <span id="mongouri_csharp">
 <a href="#mongouri_csharp" style="color: inherit; text-decoration: inherit;">Mongo<wbr>Uri</a>
@@ -2407,8 +2353,7 @@ All [input](#inputs) properties are implicitly available as output properties. A
         <span class="property-type">string</span>
     </dt>
     <dd>{{% md %}}Base connection string for the cluster. Atlas only displays this field after the cluster is operational, not while it builds the cluster.
-{{% /md %}}</dd>
-    <dt class="property-"
+{{% /md %}}</dd><dt class="property-"
             title="">
         <span id="mongouriupdated_csharp">
 <a href="#mongouriupdated_csharp" style="color: inherit; text-decoration: inherit;">Mongo<wbr>Uri<wbr>Updated</a>
@@ -2417,8 +2362,7 @@ All [input](#inputs) properties are implicitly available as output properties. A
         <span class="property-type">string</span>
     </dt>
     <dd>{{% md %}}Lists when the connection string was last updated. The connection string changes, for example, if you change a replica set to a sharded cluster.
-{{% /md %}}</dd>
-    <dt class="property-"
+{{% /md %}}</dd><dt class="property-"
             title="">
         <span id="mongouriwithoptions_csharp">
 <a href="#mongouriwithoptions_csharp" style="color: inherit; text-decoration: inherit;">Mongo<wbr>Uri<wbr>With<wbr>Options</a>
@@ -2427,8 +2371,7 @@ All [input](#inputs) properties are implicitly available as output properties. A
         <span class="property-type">string</span>
     </dt>
     <dd>{{% md %}}connection string for connecting to the Atlas cluster. Includes the replicaSet, ssl, and authSource query parameters in the connection string with values appropriate for the cluster.
-{{% /md %}}</dd>
-    <dt class="property-"
+{{% /md %}}</dd><dt class="property-"
             title="">
         <span id="paused_csharp">
 <a href="#paused_csharp" style="color: inherit; text-decoration: inherit;">Paused</a>
@@ -2437,8 +2380,7 @@ All [input](#inputs) properties are implicitly available as output properties. A
         <span class="property-type">bool</span>
     </dt>
     <dd>{{% md %}}Flag that indicates whether the cluster is paused or not.
-{{% /md %}}</dd>
-    <dt class="property-"
+{{% /md %}}</dd><dt class="property-"
             title="">
         <span id="snapshotbackuppolicies_csharp">
 <a href="#snapshotbackuppolicies_csharp" style="color: inherit; text-decoration: inherit;">Snapshot<wbr>Backup<wbr>Policies</a>
@@ -2447,8 +2389,7 @@ All [input](#inputs) properties are implicitly available as output properties. A
         <span class="property-type"><a href="#clustersnapshotbackuppolicy">List&lt;Cluster<wbr>Snapshot<wbr>Backup<wbr>Policy&gt;</a></span>
     </dt>
     <dd>{{% md %}}current snapshot schedule and retention settings for the cluster.
-{{% /md %}}</dd>
-    <dt class="property-"
+{{% /md %}}</dd><dt class="property-"
             title="">
         <span id="srvaddress_csharp">
 <a href="#srvaddress_csharp" style="color: inherit; text-decoration: inherit;">Srv<wbr>Address</a>
@@ -2457,8 +2398,7 @@ All [input](#inputs) properties are implicitly available as output properties. A
         <span class="property-type">string</span>
     </dt>
     <dd>{{% md %}}Connection string for connecting to the Atlas cluster. The +srv modifier forces the connection to use TLS/SSL. See the mongoURI for additional options.
-{{% /md %}}</dd>
-    <dt class="property-"
+{{% /md %}}</dd><dt class="property-"
             title="">
         <span id="statename_csharp">
 <a href="#statename_csharp" style="color: inherit; text-decoration: inherit;">State<wbr>Name</a>
@@ -2473,14 +2413,11 @@ All [input](#inputs) properties are implicitly available as output properties. A
 - DELETING
 - DELETED
 - REPAIRING
-{{% /md %}}</dd>
-</dl>
+{{% /md %}}</dd></dl>
 {{% /choosable %}}
 
 {{% choosable language go %}}
-<dl class="resources-properties">
-
-    <dt class="property-"
+<dl class="resources-properties"><dt class="property-"
             title="">
         <span id="clusterid_go">
 <a href="#clusterid_go" style="color: inherit; text-decoration: inherit;">Cluster<wbr>Id</a>
@@ -2489,8 +2426,7 @@ All [input](#inputs) properties are implicitly available as output properties. A
         <span class="property-type">string</span>
     </dt>
     <dd>{{% md %}}The cluster ID.
-{{% /md %}}</dd>
-    <dt class="property-"
+{{% /md %}}</dd><dt class="property-"
             title="">
         <span id="connectionstrings_go">
 <a href="#connectionstrings_go" style="color: inherit; text-decoration: inherit;">Connection<wbr>Strings</a>
@@ -2499,8 +2435,7 @@ All [input](#inputs) properties are implicitly available as output properties. A
         <span class="property-type"><a href="#clusterconnectionstrings">Cluster<wbr>Connection<wbr>Strings</a></span>
     </dt>
     <dd>{{% md %}}Set of connection strings that your applications use to connect to this cluster. More info in [Connection-strings](https://docs.mongodb.com/manual/reference/connection-string/). Use the parameters in this object to connect your applications to this cluster. To learn more about the formats of connection strings, see [Connection String Options](https://docs.atlas.mongodb.com/reference/faq/connection-changes/). NOTE: Atlas returns the contents of this object after the cluster is operational, not while it builds the cluster.
-{{% /md %}}</dd>
-    <dt class="property-"
+{{% /md %}}</dd><dt class="property-"
             title="">
         <span id="containerid_go">
 <a href="#containerid_go" style="color: inherit; text-decoration: inherit;">Container<wbr>Id</a>
@@ -2509,8 +2444,7 @@ All [input](#inputs) properties are implicitly available as output properties. A
         <span class="property-type">string</span>
     </dt>
     <dd>{{% md %}}The Network Peering Container ID. The id of the container either created programmatically by the user before any clusters existed in the project or when the first cluster in the region (AWS/Azure) or project (GCP) was created.
-{{% /md %}}</dd>
-    <dt class="property-"
+{{% /md %}}</dd><dt class="property-"
             title="">
         <span id="id_go">
 <a href="#id_go" style="color: inherit; text-decoration: inherit;">Id</a>
@@ -2518,8 +2452,7 @@ All [input](#inputs) properties are implicitly available as output properties. A
         <span class="property-indicator"></span>
         <span class="property-type">string</span>
     </dt>
-    <dd>{{% md %}}The provider-assigned unique ID for this managed resource.{{% /md %}}</dd>
-    <dt class="property-"
+    <dd>{{% md %}}The provider-assigned unique ID for this managed resource.{{% /md %}}</dd><dt class="property-"
             title="">
         <span id="mongodbversion_go">
 <a href="#mongodbversion_go" style="color: inherit; text-decoration: inherit;">Mongo<wbr>Db<wbr>Version</a>
@@ -2528,8 +2461,7 @@ All [input](#inputs) properties are implicitly available as output properties. A
         <span class="property-type">string</span>
     </dt>
     <dd>{{% md %}}Version of MongoDB the cluster runs, in `major-version`.`minor-version` format.
-{{% /md %}}</dd>
-    <dt class="property-"
+{{% /md %}}</dd><dt class="property-"
             title="">
         <span id="mongouri_go">
 <a href="#mongouri_go" style="color: inherit; text-decoration: inherit;">Mongo<wbr>Uri</a>
@@ -2538,8 +2470,7 @@ All [input](#inputs) properties are implicitly available as output properties. A
         <span class="property-type">string</span>
     </dt>
     <dd>{{% md %}}Base connection string for the cluster. Atlas only displays this field after the cluster is operational, not while it builds the cluster.
-{{% /md %}}</dd>
-    <dt class="property-"
+{{% /md %}}</dd><dt class="property-"
             title="">
         <span id="mongouriupdated_go">
 <a href="#mongouriupdated_go" style="color: inherit; text-decoration: inherit;">Mongo<wbr>Uri<wbr>Updated</a>
@@ -2548,8 +2479,7 @@ All [input](#inputs) properties are implicitly available as output properties. A
         <span class="property-type">string</span>
     </dt>
     <dd>{{% md %}}Lists when the connection string was last updated. The connection string changes, for example, if you change a replica set to a sharded cluster.
-{{% /md %}}</dd>
-    <dt class="property-"
+{{% /md %}}</dd><dt class="property-"
             title="">
         <span id="mongouriwithoptions_go">
 <a href="#mongouriwithoptions_go" style="color: inherit; text-decoration: inherit;">Mongo<wbr>Uri<wbr>With<wbr>Options</a>
@@ -2558,8 +2488,7 @@ All [input](#inputs) properties are implicitly available as output properties. A
         <span class="property-type">string</span>
     </dt>
     <dd>{{% md %}}connection string for connecting to the Atlas cluster. Includes the replicaSet, ssl, and authSource query parameters in the connection string with values appropriate for the cluster.
-{{% /md %}}</dd>
-    <dt class="property-"
+{{% /md %}}</dd><dt class="property-"
             title="">
         <span id="paused_go">
 <a href="#paused_go" style="color: inherit; text-decoration: inherit;">Paused</a>
@@ -2568,8 +2497,7 @@ All [input](#inputs) properties are implicitly available as output properties. A
         <span class="property-type">bool</span>
     </dt>
     <dd>{{% md %}}Flag that indicates whether the cluster is paused or not.
-{{% /md %}}</dd>
-    <dt class="property-"
+{{% /md %}}</dd><dt class="property-"
             title="">
         <span id="snapshotbackuppolicies_go">
 <a href="#snapshotbackuppolicies_go" style="color: inherit; text-decoration: inherit;">Snapshot<wbr>Backup<wbr>Policies</a>
@@ -2578,8 +2506,7 @@ All [input](#inputs) properties are implicitly available as output properties. A
         <span class="property-type"><a href="#clustersnapshotbackuppolicy">[]Cluster<wbr>Snapshot<wbr>Backup<wbr>Policy</a></span>
     </dt>
     <dd>{{% md %}}current snapshot schedule and retention settings for the cluster.
-{{% /md %}}</dd>
-    <dt class="property-"
+{{% /md %}}</dd><dt class="property-"
             title="">
         <span id="srvaddress_go">
 <a href="#srvaddress_go" style="color: inherit; text-decoration: inherit;">Srv<wbr>Address</a>
@@ -2588,8 +2515,7 @@ All [input](#inputs) properties are implicitly available as output properties. A
         <span class="property-type">string</span>
     </dt>
     <dd>{{% md %}}Connection string for connecting to the Atlas cluster. The +srv modifier forces the connection to use TLS/SSL. See the mongoURI for additional options.
-{{% /md %}}</dd>
-    <dt class="property-"
+{{% /md %}}</dd><dt class="property-"
             title="">
         <span id="statename_go">
 <a href="#statename_go" style="color: inherit; text-decoration: inherit;">State<wbr>Name</a>
@@ -2604,14 +2530,11 @@ All [input](#inputs) properties are implicitly available as output properties. A
 - DELETING
 - DELETED
 - REPAIRING
-{{% /md %}}</dd>
-</dl>
+{{% /md %}}</dd></dl>
 {{% /choosable %}}
 
 {{% choosable language nodejs %}}
-<dl class="resources-properties">
-
-    <dt class="property-"
+<dl class="resources-properties"><dt class="property-"
             title="">
         <span id="clusterid_nodejs">
 <a href="#clusterid_nodejs" style="color: inherit; text-decoration: inherit;">cluster<wbr>Id</a>
@@ -2620,8 +2543,7 @@ All [input](#inputs) properties are implicitly available as output properties. A
         <span class="property-type">string</span>
     </dt>
     <dd>{{% md %}}The cluster ID.
-{{% /md %}}</dd>
-    <dt class="property-"
+{{% /md %}}</dd><dt class="property-"
             title="">
         <span id="connectionstrings_nodejs">
 <a href="#connectionstrings_nodejs" style="color: inherit; text-decoration: inherit;">connection<wbr>Strings</a>
@@ -2630,8 +2552,7 @@ All [input](#inputs) properties are implicitly available as output properties. A
         <span class="property-type"><a href="#clusterconnectionstrings">Cluster<wbr>Connection<wbr>Strings</a></span>
     </dt>
     <dd>{{% md %}}Set of connection strings that your applications use to connect to this cluster. More info in [Connection-strings](https://docs.mongodb.com/manual/reference/connection-string/). Use the parameters in this object to connect your applications to this cluster. To learn more about the formats of connection strings, see [Connection String Options](https://docs.atlas.mongodb.com/reference/faq/connection-changes/). NOTE: Atlas returns the contents of this object after the cluster is operational, not while it builds the cluster.
-{{% /md %}}</dd>
-    <dt class="property-"
+{{% /md %}}</dd><dt class="property-"
             title="">
         <span id="containerid_nodejs">
 <a href="#containerid_nodejs" style="color: inherit; text-decoration: inherit;">container<wbr>Id</a>
@@ -2640,8 +2561,7 @@ All [input](#inputs) properties are implicitly available as output properties. A
         <span class="property-type">string</span>
     </dt>
     <dd>{{% md %}}The Network Peering Container ID. The id of the container either created programmatically by the user before any clusters existed in the project or when the first cluster in the region (AWS/Azure) or project (GCP) was created.
-{{% /md %}}</dd>
-    <dt class="property-"
+{{% /md %}}</dd><dt class="property-"
             title="">
         <span id="id_nodejs">
 <a href="#id_nodejs" style="color: inherit; text-decoration: inherit;">id</a>
@@ -2649,8 +2569,7 @@ All [input](#inputs) properties are implicitly available as output properties. A
         <span class="property-indicator"></span>
         <span class="property-type">string</span>
     </dt>
-    <dd>{{% md %}}The provider-assigned unique ID for this managed resource.{{% /md %}}</dd>
-    <dt class="property-"
+    <dd>{{% md %}}The provider-assigned unique ID for this managed resource.{{% /md %}}</dd><dt class="property-"
             title="">
         <span id="mongodbversion_nodejs">
 <a href="#mongodbversion_nodejs" style="color: inherit; text-decoration: inherit;">mongo<wbr>Db<wbr>Version</a>
@@ -2659,8 +2578,7 @@ All [input](#inputs) properties are implicitly available as output properties. A
         <span class="property-type">string</span>
     </dt>
     <dd>{{% md %}}Version of MongoDB the cluster runs, in `major-version`.`minor-version` format.
-{{% /md %}}</dd>
-    <dt class="property-"
+{{% /md %}}</dd><dt class="property-"
             title="">
         <span id="mongouri_nodejs">
 <a href="#mongouri_nodejs" style="color: inherit; text-decoration: inherit;">mongo<wbr>Uri</a>
@@ -2669,8 +2587,7 @@ All [input](#inputs) properties are implicitly available as output properties. A
         <span class="property-type">string</span>
     </dt>
     <dd>{{% md %}}Base connection string for the cluster. Atlas only displays this field after the cluster is operational, not while it builds the cluster.
-{{% /md %}}</dd>
-    <dt class="property-"
+{{% /md %}}</dd><dt class="property-"
             title="">
         <span id="mongouriupdated_nodejs">
 <a href="#mongouriupdated_nodejs" style="color: inherit; text-decoration: inherit;">mongo<wbr>Uri<wbr>Updated</a>
@@ -2679,8 +2596,7 @@ All [input](#inputs) properties are implicitly available as output properties. A
         <span class="property-type">string</span>
     </dt>
     <dd>{{% md %}}Lists when the connection string was last updated. The connection string changes, for example, if you change a replica set to a sharded cluster.
-{{% /md %}}</dd>
-    <dt class="property-"
+{{% /md %}}</dd><dt class="property-"
             title="">
         <span id="mongouriwithoptions_nodejs">
 <a href="#mongouriwithoptions_nodejs" style="color: inherit; text-decoration: inherit;">mongo<wbr>Uri<wbr>With<wbr>Options</a>
@@ -2689,8 +2605,7 @@ All [input](#inputs) properties are implicitly available as output properties. A
         <span class="property-type">string</span>
     </dt>
     <dd>{{% md %}}connection string for connecting to the Atlas cluster. Includes the replicaSet, ssl, and authSource query parameters in the connection string with values appropriate for the cluster.
-{{% /md %}}</dd>
-    <dt class="property-"
+{{% /md %}}</dd><dt class="property-"
             title="">
         <span id="paused_nodejs">
 <a href="#paused_nodejs" style="color: inherit; text-decoration: inherit;">paused</a>
@@ -2699,8 +2614,7 @@ All [input](#inputs) properties are implicitly available as output properties. A
         <span class="property-type">boolean</span>
     </dt>
     <dd>{{% md %}}Flag that indicates whether the cluster is paused or not.
-{{% /md %}}</dd>
-    <dt class="property-"
+{{% /md %}}</dd><dt class="property-"
             title="">
         <span id="snapshotbackuppolicies_nodejs">
 <a href="#snapshotbackuppolicies_nodejs" style="color: inherit; text-decoration: inherit;">snapshot<wbr>Backup<wbr>Policies</a>
@@ -2709,8 +2623,7 @@ All [input](#inputs) properties are implicitly available as output properties. A
         <span class="property-type"><a href="#clustersnapshotbackuppolicy">Cluster<wbr>Snapshot<wbr>Backup<wbr>Policy[]</a></span>
     </dt>
     <dd>{{% md %}}current snapshot schedule and retention settings for the cluster.
-{{% /md %}}</dd>
-    <dt class="property-"
+{{% /md %}}</dd><dt class="property-"
             title="">
         <span id="srvaddress_nodejs">
 <a href="#srvaddress_nodejs" style="color: inherit; text-decoration: inherit;">srv<wbr>Address</a>
@@ -2719,8 +2632,7 @@ All [input](#inputs) properties are implicitly available as output properties. A
         <span class="property-type">string</span>
     </dt>
     <dd>{{% md %}}Connection string for connecting to the Atlas cluster. The +srv modifier forces the connection to use TLS/SSL. See the mongoURI for additional options.
-{{% /md %}}</dd>
-    <dt class="property-"
+{{% /md %}}</dd><dt class="property-"
             title="">
         <span id="statename_nodejs">
 <a href="#statename_nodejs" style="color: inherit; text-decoration: inherit;">state<wbr>Name</a>
@@ -2735,14 +2647,11 @@ All [input](#inputs) properties are implicitly available as output properties. A
 - DELETING
 - DELETED
 - REPAIRING
-{{% /md %}}</dd>
-</dl>
+{{% /md %}}</dd></dl>
 {{% /choosable %}}
 
 {{% choosable language python %}}
-<dl class="resources-properties">
-
-    <dt class="property-"
+<dl class="resources-properties"><dt class="property-"
             title="">
         <span id="cluster_id_python">
 <a href="#cluster_id_python" style="color: inherit; text-decoration: inherit;">cluster_<wbr>id</a>
@@ -2751,8 +2660,7 @@ All [input](#inputs) properties are implicitly available as output properties. A
         <span class="property-type">str</span>
     </dt>
     <dd>{{% md %}}The cluster ID.
-{{% /md %}}</dd>
-    <dt class="property-"
+{{% /md %}}</dd><dt class="property-"
             title="">
         <span id="connection_strings_python">
 <a href="#connection_strings_python" style="color: inherit; text-decoration: inherit;">connection_<wbr>strings</a>
@@ -2761,8 +2669,7 @@ All [input](#inputs) properties are implicitly available as output properties. A
         <span class="property-type"><a href="#clusterconnectionstrings">Cluster<wbr>Connection<wbr>Strings</a></span>
     </dt>
     <dd>{{% md %}}Set of connection strings that your applications use to connect to this cluster. More info in [Connection-strings](https://docs.mongodb.com/manual/reference/connection-string/). Use the parameters in this object to connect your applications to this cluster. To learn more about the formats of connection strings, see [Connection String Options](https://docs.atlas.mongodb.com/reference/faq/connection-changes/). NOTE: Atlas returns the contents of this object after the cluster is operational, not while it builds the cluster.
-{{% /md %}}</dd>
-    <dt class="property-"
+{{% /md %}}</dd><dt class="property-"
             title="">
         <span id="container_id_python">
 <a href="#container_id_python" style="color: inherit; text-decoration: inherit;">container_<wbr>id</a>
@@ -2771,8 +2678,7 @@ All [input](#inputs) properties are implicitly available as output properties. A
         <span class="property-type">str</span>
     </dt>
     <dd>{{% md %}}The Network Peering Container ID. The id of the container either created programmatically by the user before any clusters existed in the project or when the first cluster in the region (AWS/Azure) or project (GCP) was created.
-{{% /md %}}</dd>
-    <dt class="property-"
+{{% /md %}}</dd><dt class="property-"
             title="">
         <span id="id_python">
 <a href="#id_python" style="color: inherit; text-decoration: inherit;">id</a>
@@ -2780,8 +2686,7 @@ All [input](#inputs) properties are implicitly available as output properties. A
         <span class="property-indicator"></span>
         <span class="property-type">str</span>
     </dt>
-    <dd>{{% md %}}The provider-assigned unique ID for this managed resource.{{% /md %}}</dd>
-    <dt class="property-"
+    <dd>{{% md %}}The provider-assigned unique ID for this managed resource.{{% /md %}}</dd><dt class="property-"
             title="">
         <span id="mongo_db_version_python">
 <a href="#mongo_db_version_python" style="color: inherit; text-decoration: inherit;">mongo_<wbr>db_<wbr>version</a>
@@ -2790,8 +2695,7 @@ All [input](#inputs) properties are implicitly available as output properties. A
         <span class="property-type">str</span>
     </dt>
     <dd>{{% md %}}Version of MongoDB the cluster runs, in `major-version`.`minor-version` format.
-{{% /md %}}</dd>
-    <dt class="property-"
+{{% /md %}}</dd><dt class="property-"
             title="">
         <span id="mongo_uri_python">
 <a href="#mongo_uri_python" style="color: inherit; text-decoration: inherit;">mongo_<wbr>uri</a>
@@ -2800,8 +2704,7 @@ All [input](#inputs) properties are implicitly available as output properties. A
         <span class="property-type">str</span>
     </dt>
     <dd>{{% md %}}Base connection string for the cluster. Atlas only displays this field after the cluster is operational, not while it builds the cluster.
-{{% /md %}}</dd>
-    <dt class="property-"
+{{% /md %}}</dd><dt class="property-"
             title="">
         <span id="mongo_uri_updated_python">
 <a href="#mongo_uri_updated_python" style="color: inherit; text-decoration: inherit;">mongo_<wbr>uri_<wbr>updated</a>
@@ -2810,8 +2713,7 @@ All [input](#inputs) properties are implicitly available as output properties. A
         <span class="property-type">str</span>
     </dt>
     <dd>{{% md %}}Lists when the connection string was last updated. The connection string changes, for example, if you change a replica set to a sharded cluster.
-{{% /md %}}</dd>
-    <dt class="property-"
+{{% /md %}}</dd><dt class="property-"
             title="">
         <span id="mongo_uri_with_options_python">
 <a href="#mongo_uri_with_options_python" style="color: inherit; text-decoration: inherit;">mongo_<wbr>uri_<wbr>with_<wbr>options</a>
@@ -2820,8 +2722,7 @@ All [input](#inputs) properties are implicitly available as output properties. A
         <span class="property-type">str</span>
     </dt>
     <dd>{{% md %}}connection string for connecting to the Atlas cluster. Includes the replicaSet, ssl, and authSource query parameters in the connection string with values appropriate for the cluster.
-{{% /md %}}</dd>
-    <dt class="property-"
+{{% /md %}}</dd><dt class="property-"
             title="">
         <span id="paused_python">
 <a href="#paused_python" style="color: inherit; text-decoration: inherit;">paused</a>
@@ -2830,8 +2731,7 @@ All [input](#inputs) properties are implicitly available as output properties. A
         <span class="property-type">bool</span>
     </dt>
     <dd>{{% md %}}Flag that indicates whether the cluster is paused or not.
-{{% /md %}}</dd>
-    <dt class="property-"
+{{% /md %}}</dd><dt class="property-"
             title="">
         <span id="snapshot_backup_policies_python">
 <a href="#snapshot_backup_policies_python" style="color: inherit; text-decoration: inherit;">snapshot_<wbr>backup_<wbr>policies</a>
@@ -2840,8 +2740,7 @@ All [input](#inputs) properties are implicitly available as output properties. A
         <span class="property-type"><a href="#clustersnapshotbackuppolicy">Sequence[Cluster<wbr>Snapshot<wbr>Backup<wbr>Policy]</a></span>
     </dt>
     <dd>{{% md %}}current snapshot schedule and retention settings for the cluster.
-{{% /md %}}</dd>
-    <dt class="property-"
+{{% /md %}}</dd><dt class="property-"
             title="">
         <span id="srv_address_python">
 <a href="#srv_address_python" style="color: inherit; text-decoration: inherit;">srv_<wbr>address</a>
@@ -2850,8 +2749,7 @@ All [input](#inputs) properties are implicitly available as output properties. A
         <span class="property-type">str</span>
     </dt>
     <dd>{{% md %}}Connection string for connecting to the Atlas cluster. The +srv modifier forces the connection to use TLS/SSL. See the mongoURI for additional options.
-{{% /md %}}</dd>
-    <dt class="property-"
+{{% /md %}}</dd><dt class="property-"
             title="">
         <span id="state_name_python">
 <a href="#state_name_python" style="color: inherit; text-decoration: inherit;">state_<wbr>name</a>
@@ -2866,8 +2764,7 @@ All [input](#inputs) properties are implicitly available as output properties. A
 - DELETING
 - DELETED
 - REPAIRING
-{{% /md %}}</dd>
-</dl>
+{{% /md %}}</dd></dl>
 {{% /choosable %}}
 
 
@@ -2994,9 +2891,7 @@ The following state arguments are supported:
 
 
 {{% choosable language csharp %}}
-<dl class="resources-properties">
-
-    <dt class="property-optional"
+<dl class="resources-properties"><dt class="property-optional"
             title="Optional">
         <span id="state_advancedconfiguration_csharp">
 <a href="#state_advancedconfiguration_csharp" style="color: inherit; text-decoration: inherit;">Advanced<wbr>Configuration</a>
@@ -3004,8 +2899,7 @@ The following state arguments are supported:
         <span class="property-indicator"></span>
         <span class="property-type"><a href="#clusteradvancedconfiguration">Cluster<wbr>Advanced<wbr>Configuration<wbr>Args</a></span>
     </dt>
-    <dd>{{% md %}}{{% /md %}}</dd>
-    <dt class="property-optional"
+    <dd>{{% md %}}{{% /md %}}</dd><dt class="property-optional"
             title="Optional">
         <span id="state_autoscalingcomputeenabled_csharp">
 <a href="#state_autoscalingcomputeenabled_csharp" style="color: inherit; text-decoration: inherit;">Auto<wbr>Scaling<wbr>Compute<wbr>Enabled</a>
@@ -3016,8 +2910,7 @@ The following state arguments are supported:
     <dd>{{% md %}}Specifies whether cluster tier auto-scaling is enabled. The default is false.
 - Set to `true` to enable cluster tier auto-scaling. If enabled, you must specify a value for `providerSettings.autoScaling.compute.maxInstanceSize`.
 - Set to `false` to disable cluster tier auto-scaling.
-{{% /md %}}</dd>
-    <dt class="property-optional"
+{{% /md %}}</dd><dt class="property-optional"
             title="Optional">
         <span id="state_autoscalingcomputescaledownenabled_csharp">
 <a href="#state_autoscalingcomputescaledownenabled_csharp" style="color: inherit; text-decoration: inherit;">Auto<wbr>Scaling<wbr>Compute<wbr>Scale<wbr>Down<wbr>Enabled</a>
@@ -3027,8 +2920,7 @@ The following state arguments are supported:
     </dt>
     <dd>{{% md %}}Set to `true` to enable the cluster tier to scale down. This option is only available if `autoScaling.compute.enabled` is `true`.
 - If this option is enabled, you must specify a value for `providerSettings.autoScaling.compute.minInstanceSize`
-{{% /md %}}</dd>
-    <dt class="property-optional"
+{{% /md %}}</dd><dt class="property-optional"
             title="Optional">
         <span id="state_autoscalingdiskgbenabled_csharp">
 <a href="#state_autoscalingdiskgbenabled_csharp" style="color: inherit; text-decoration: inherit;">Auto<wbr>Scaling<wbr>Disk<wbr>Gb<wbr>Enabled</a>
@@ -3039,8 +2931,7 @@ The following state arguments are supported:
     <dd>{{% md %}}Specifies whether disk auto-scaling is enabled. The default is true.
 - Set to `true` to enable disk auto-scaling.
 - Set to `false` to disable disk auto-scaling.
-{{% /md %}}</dd>
-    <dt class="property-optional"
+{{% /md %}}</dd><dt class="property-optional"
             title="Optional">
         <span id="state_backingprovidername_csharp">
 <a href="#state_backingprovidername_csharp" style="color: inherit; text-decoration: inherit;">Backing<wbr>Provider<wbr>Name</a>
@@ -3049,8 +2940,7 @@ The following state arguments are supported:
         <span class="property-type">string</span>
     </dt>
     <dd>{{% md %}}Cloud service provider on which the server for a multi-tenant cluster is provisioned.
-{{% /md %}}</dd>
-    <dt class="property-optional"
+{{% /md %}}</dd><dt class="property-optional"
             title="Optional">
         <span id="state_backupenabled_csharp">
 <a href="#state_backupenabled_csharp" style="color: inherit; text-decoration: inherit;">Backup<wbr>Enabled</a>
@@ -3058,8 +2948,7 @@ The following state arguments are supported:
         <span class="property-indicator"></span>
         <span class="property-type">bool</span>
     </dt>
-    <dd>{{% md %}}{{% /md %}}</dd>
-    <dt class="property-optional"
+    <dd>{{% md %}}{{% /md %}}</dd><dt class="property-optional"
             title="Optional">
         <span id="state_biconnector_csharp">
 <a href="#state_biconnector_csharp" style="color: inherit; text-decoration: inherit;">Bi<wbr>Connector</a>
@@ -3068,8 +2957,7 @@ The following state arguments are supported:
         <span class="property-type"><a href="#clusterbiconnector">Cluster<wbr>Bi<wbr>Connector<wbr>Args</a></span>
     </dt>
     <dd>{{% md %}}Specifies BI Connector for Atlas configuration on this cluster. BI Connector for Atlas is only available for M10+ clusters. See BI Connector below for more details.
-{{% /md %}}</dd>
-    <dt class="property-optional"
+{{% /md %}}</dd><dt class="property-optional"
             title="Optional">
         <span id="state_clusterid_csharp">
 <a href="#state_clusterid_csharp" style="color: inherit; text-decoration: inherit;">Cluster<wbr>Id</a>
@@ -3078,8 +2966,7 @@ The following state arguments are supported:
         <span class="property-type">string</span>
     </dt>
     <dd>{{% md %}}The cluster ID.
-{{% /md %}}</dd>
-    <dt class="property-optional"
+{{% /md %}}</dd><dt class="property-optional"
             title="Optional">
         <span id="state_clustertype_csharp">
 <a href="#state_clustertype_csharp" style="color: inherit; text-decoration: inherit;">Cluster<wbr>Type</a>
@@ -3088,8 +2975,7 @@ The following state arguments are supported:
         <span class="property-type">string</span>
     </dt>
     <dd>{{% md %}}Specifies the type of the cluster that you want to modify. You cannot convert a sharded cluster deployment to a replica set deployment.
-{{% /md %}}</dd>
-    <dt class="property-optional"
+{{% /md %}}</dd><dt class="property-optional"
             title="Optional">
         <span id="state_connectionstrings_csharp">
 <a href="#state_connectionstrings_csharp" style="color: inherit; text-decoration: inherit;">Connection<wbr>Strings</a>
@@ -3098,8 +2984,7 @@ The following state arguments are supported:
         <span class="property-type"><a href="#clusterconnectionstrings">Cluster<wbr>Connection<wbr>Strings<wbr>Args</a></span>
     </dt>
     <dd>{{% md %}}Set of connection strings that your applications use to connect to this cluster. More info in [Connection-strings](https://docs.mongodb.com/manual/reference/connection-string/). Use the parameters in this object to connect your applications to this cluster. To learn more about the formats of connection strings, see [Connection String Options](https://docs.atlas.mongodb.com/reference/faq/connection-changes/). NOTE: Atlas returns the contents of this object after the cluster is operational, not while it builds the cluster.
-{{% /md %}}</dd>
-    <dt class="property-optional"
+{{% /md %}}</dd><dt class="property-optional"
             title="Optional">
         <span id="state_containerid_csharp">
 <a href="#state_containerid_csharp" style="color: inherit; text-decoration: inherit;">Container<wbr>Id</a>
@@ -3108,8 +2993,7 @@ The following state arguments are supported:
         <span class="property-type">string</span>
     </dt>
     <dd>{{% md %}}The Network Peering Container ID. The id of the container either created programmatically by the user before any clusters existed in the project or when the first cluster in the region (AWS/Azure) or project (GCP) was created.
-{{% /md %}}</dd>
-    <dt class="property-optional"
+{{% /md %}}</dd><dt class="property-optional"
             title="Optional">
         <span id="state_disksizegb_csharp">
 <a href="#state_disksizegb_csharp" style="color: inherit; text-decoration: inherit;">Disk<wbr>Size<wbr>Gb</a>
@@ -3122,8 +3006,7 @@ The following state arguments are supported:
 * Note: The maximum value for disk storage cannot exceed 50 times the maximum RAM for the selected cluster. If you require additional storage space beyond this limitation, consider upgrading your cluster to a higher tier.
 * Cannot be used with clusters with local NVMe SSDs
 * Cannot be used with Azure clusters
-{{% /md %}}</dd>
-    <dt class="property-optional"
+{{% /md %}}</dd><dt class="property-optional"
             title="Optional">
         <span id="state_encryptionatrestprovider_csharp">
 <a href="#state_encryptionatrestprovider_csharp" style="color: inherit; text-decoration: inherit;">Encryption<wbr>At<wbr>Rest<wbr>Provider</a>
@@ -3132,8 +3015,7 @@ The following state arguments are supported:
         <span class="property-type">string</span>
     </dt>
     <dd>{{% md %}}Possible values are AWS, GCP, AZURE or NONE.  Only needed if you desire to manage the keys, see [Encryption at Rest using Customer Key Management](https://docs.atlas.mongodb.com/security-aws-kms/) for complete documentation.  You must configure encryption at rest for the Atlas project before enabling it on any cluster in the project. For complete documentation on configuring Encryption at Rest, see Encryption at Rest using Customer Key Management. Requires M10 or greater. and for legacy backups, backup_enabled, to be false or omitted. **Note: Atlas encrypts all cluster storage and snapshot volumes, securing all cluster data on disk: a concept known as encryption at rest, by default**.
-{{% /md %}}</dd>
-    <dt class="property-optional"
+{{% /md %}}</dd><dt class="property-optional"
             title="Optional">
         <span id="state_labels_csharp">
 <a href="#state_labels_csharp" style="color: inherit; text-decoration: inherit;">Labels</a>
@@ -3141,8 +3023,7 @@ The following state arguments are supported:
         <span class="property-indicator"></span>
         <span class="property-type"><a href="#clusterlabel">List&lt;Cluster<wbr>Label<wbr>Args&gt;</a></span>
     </dt>
-    <dd>{{% md %}}{{% /md %}}</dd>
-    <dt class="property-optional"
+    <dd>{{% md %}}{{% /md %}}</dd><dt class="property-optional"
             title="Optional">
         <span id="state_mongodbmajorversion_csharp">
 <a href="#state_mongodbmajorversion_csharp" style="color: inherit; text-decoration: inherit;">Mongo<wbr>Db<wbr>Major<wbr>Version</a>
@@ -3151,8 +3032,7 @@ The following state arguments are supported:
         <span class="property-type">string</span>
     </dt>
     <dd>{{% md %}}Version of the cluster to deploy. Atlas supports the following MongoDB versions for M10+ clusters: `3.6`, `4.0`, or `4.2`. You must set this value to `4.2` if `provider_instance_size_name` is either M2 or M5.
-{{% /md %}}</dd>
-    <dt class="property-optional"
+{{% /md %}}</dd><dt class="property-optional"
             title="Optional">
         <span id="state_mongodbversion_csharp">
 <a href="#state_mongodbversion_csharp" style="color: inherit; text-decoration: inherit;">Mongo<wbr>Db<wbr>Version</a>
@@ -3161,8 +3041,7 @@ The following state arguments are supported:
         <span class="property-type">string</span>
     </dt>
     <dd>{{% md %}}Version of MongoDB the cluster runs, in `major-version`.`minor-version` format.
-{{% /md %}}</dd>
-    <dt class="property-optional"
+{{% /md %}}</dd><dt class="property-optional"
             title="Optional">
         <span id="state_mongouri_csharp">
 <a href="#state_mongouri_csharp" style="color: inherit; text-decoration: inherit;">Mongo<wbr>Uri</a>
@@ -3171,8 +3050,7 @@ The following state arguments are supported:
         <span class="property-type">string</span>
     </dt>
     <dd>{{% md %}}Base connection string for the cluster. Atlas only displays this field after the cluster is operational, not while it builds the cluster.
-{{% /md %}}</dd>
-    <dt class="property-optional"
+{{% /md %}}</dd><dt class="property-optional"
             title="Optional">
         <span id="state_mongouriupdated_csharp">
 <a href="#state_mongouriupdated_csharp" style="color: inherit; text-decoration: inherit;">Mongo<wbr>Uri<wbr>Updated</a>
@@ -3181,8 +3059,7 @@ The following state arguments are supported:
         <span class="property-type">string</span>
     </dt>
     <dd>{{% md %}}Lists when the connection string was last updated. The connection string changes, for example, if you change a replica set to a sharded cluster.
-{{% /md %}}</dd>
-    <dt class="property-optional"
+{{% /md %}}</dd><dt class="property-optional"
             title="Optional">
         <span id="state_mongouriwithoptions_csharp">
 <a href="#state_mongouriwithoptions_csharp" style="color: inherit; text-decoration: inherit;">Mongo<wbr>Uri<wbr>With<wbr>Options</a>
@@ -3191,8 +3068,7 @@ The following state arguments are supported:
         <span class="property-type">string</span>
     </dt>
     <dd>{{% md %}}connection string for connecting to the Atlas cluster. Includes the replicaSet, ssl, and authSource query parameters in the connection string with values appropriate for the cluster.
-{{% /md %}}</dd>
-    <dt class="property-optional"
+{{% /md %}}</dd><dt class="property-optional"
             title="Optional">
         <span id="state_name_csharp">
 <a href="#state_name_csharp" style="color: inherit; text-decoration: inherit;">Name</a>
@@ -3201,8 +3077,7 @@ The following state arguments are supported:
         <span class="property-type">string</span>
     </dt>
     <dd>{{% md %}}Name of the cluster as it appears in Atlas. Once the cluster is created, its name cannot be changed.
-{{% /md %}}</dd>
-    <dt class="property-optional"
+{{% /md %}}</dd><dt class="property-optional"
             title="Optional">
         <span id="state_numshards_csharp">
 <a href="#state_numshards_csharp" style="color: inherit; text-decoration: inherit;">Num<wbr>Shards</a>
@@ -3211,8 +3086,7 @@ The following state arguments are supported:
         <span class="property-type">int</span>
     </dt>
     <dd>{{% md %}}Number of shards to deploy in the specified zone, minimum 1.
-{{% /md %}}</dd>
-    <dt class="property-optional"
+{{% /md %}}</dd><dt class="property-optional"
             title="Optional">
         <span id="state_paused_csharp">
 <a href="#state_paused_csharp" style="color: inherit; text-decoration: inherit;">Paused</a>
@@ -3221,8 +3095,7 @@ The following state arguments are supported:
         <span class="property-type">bool</span>
     </dt>
     <dd>{{% md %}}Flag that indicates whether the cluster is paused or not.
-{{% /md %}}</dd>
-    <dt class="property-optional"
+{{% /md %}}</dd><dt class="property-optional"
             title="Optional">
         <span id="state_pitenabled_csharp">
 <a href="#state_pitenabled_csharp" style="color: inherit; text-decoration: inherit;">Pit<wbr>Enabled</a>
@@ -3231,8 +3104,7 @@ The following state arguments are supported:
         <span class="property-type">bool</span>
     </dt>
     <dd>{{% md %}}- Flag that indicates if the cluster uses Continuous Cloud Backup. If set to true, provider_backup_enabled must also be set to true.
-{{% /md %}}</dd>
-    <dt class="property-optional"
+{{% /md %}}</dd><dt class="property-optional"
             title="Optional">
         <span id="state_projectid_csharp">
 <a href="#state_projectid_csharp" style="color: inherit; text-decoration: inherit;">Project<wbr>Id</a>
@@ -3241,8 +3113,7 @@ The following state arguments are supported:
         <span class="property-type">string</span>
     </dt>
     <dd>{{% md %}}The unique ID for the project to create the database user.
-{{% /md %}}</dd>
-    <dt class="property-optional"
+{{% /md %}}</dd><dt class="property-optional"
             title="Optional">
         <span id="state_providerautoscalingcomputemaxinstancesize_csharp">
 <a href="#state_providerautoscalingcomputemaxinstancesize_csharp" style="color: inherit; text-decoration: inherit;">Provider<wbr>Auto<wbr>Scaling<wbr>Compute<wbr>Max<wbr>Instance<wbr>Size</a>
@@ -3251,8 +3122,7 @@ The following state arguments are supported:
         <span class="property-type">string</span>
     </dt>
     <dd>{{% md %}}Maximum instance size to which your cluster can automatically scale (e.g., M40). Required if `autoScaling.compute.enabled` is `true`.
-{{% /md %}}</dd>
-    <dt class="property-optional"
+{{% /md %}}</dd><dt class="property-optional"
             title="Optional">
         <span id="state_providerautoscalingcomputemininstancesize_csharp">
 <a href="#state_providerautoscalingcomputemininstancesize_csharp" style="color: inherit; text-decoration: inherit;">Provider<wbr>Auto<wbr>Scaling<wbr>Compute<wbr>Min<wbr>Instance<wbr>Size</a>
@@ -3261,8 +3131,7 @@ The following state arguments are supported:
         <span class="property-type">string</span>
     </dt>
     <dd>{{% md %}}Minimum instance size to which your cluster can automatically scale (e.g., M10). Required if `autoScaling.compute.scaleDownEnabled` is `true`.
-{{% /md %}}</dd>
-    <dt class="property-optional"
+{{% /md %}}</dd><dt class="property-optional"
             title="Optional">
         <span id="state_providerbackupenabled_csharp">
 <a href="#state_providerbackupenabled_csharp" style="color: inherit; text-decoration: inherit;">Provider<wbr>Backup<wbr>Enabled</a>
@@ -3271,8 +3140,7 @@ The following state arguments are supported:
         <span class="property-type">bool</span>
     </dt>
     <dd>{{% md %}}Flag indicating if the cluster uses Cloud Backup for backups.
-{{% /md %}}</dd>
-    <dt class="property-optional"
+{{% /md %}}</dd><dt class="property-optional"
             title="Optional">
         <span id="state_providerdiskiops_csharp">
 <a href="#state_providerdiskiops_csharp" style="color: inherit; text-decoration: inherit;">Provider<wbr>Disk<wbr>Iops</a>
@@ -3281,8 +3149,7 @@ The following state arguments are supported:
         <span class="property-type">int</span>
     </dt>
     <dd>{{% md %}}The maximum input/output operations per second (IOPS) the system can perform. The possible values depend on the selected `provider_instance_size_name` and `disk_size_gb`.
-{{% /md %}}</dd>
-    <dt class="property-optional"
+{{% /md %}}</dd><dt class="property-optional"
             title="Optional">
         <span id="state_providerdisktypename_csharp">
 <a href="#state_providerdisktypename_csharp" style="color: inherit; text-decoration: inherit;">Provider<wbr>Disk<wbr>Type<wbr>Name</a>
@@ -3291,8 +3158,7 @@ The following state arguments are supported:
         <span class="property-type">string</span>
     </dt>
     <dd>{{% md %}}Azure disk type of the server’s root volume. If omitted, Atlas uses the default disk type for the selected providerSettings.instanceSizeName.  Example disk types and associated storage sizes: P4 - 32GB, P6 - 64GB, P10 - 128GB, P15 - 256GB, P20 - 512GB, P30 - 1024GB, P40 - 2048GB, P50 - 4095GB.  More information and the most update to date disk types/storage sizes can be located at https://docs.atlas.mongodb.com/reference/api/clusters-create-one/.
-{{% /md %}}</dd>
-    <dt class="property-optional"
+{{% /md %}}</dd><dt class="property-optional"
             title="Optional">
         <span id="state_providerencryptebsvolume_csharp">
 <a href="#state_providerencryptebsvolume_csharp" style="color: inherit; text-decoration: inherit;">Provider<wbr>Encrypt<wbr>Ebs<wbr>Volume</a>
@@ -3301,8 +3167,7 @@ The following state arguments are supported:
         <span class="property-type">bool</span>
     </dt>
     <dd>{{% md %}}The default value is true.  Flag that indicates whether the Amazon EBS encryption feature encrypts the host's root volume for both data at rest within the volume and for data moving between the volume and the cluster. Note: This setting is always enabled for clusters with local NVMe SSDs. **Atlas encrypts all cluster storage and snapshot volumes, securing all cluster data on disk: a concept known as encryption at rest, by default.**.
-{{% /md %}}</dd>
-    <dt class="property-optional"
+{{% /md %}}</dd><dt class="property-optional"
             title="Optional">
         <span id="state_providerinstancesizename_csharp">
 <a href="#state_providerinstancesizename_csharp" style="color: inherit; text-decoration: inherit;">Provider<wbr>Instance<wbr>Size<wbr>Name</a>
@@ -3312,8 +3177,7 @@ The following state arguments are supported:
     </dt>
     <dd>{{% md %}}Atlas provides different instance sizes, each with a default storage capacity and RAM size. The instance size you select is used for all the data-bearing servers in your cluster. See [Create a Cluster](https://docs.atlas.mongodb.com/reference/api/clusters-create-one/) `providerSettings.instanceSizeName` for valid values and default resources. 
 **Note** free tier (M0) creation is not supported by the Atlas API and hence not supported by this provider.)
-{{% /md %}}</dd>
-    <dt class="property-optional"
+{{% /md %}}</dd><dt class="property-optional"
             title="Optional">
         <span id="state_providername_csharp">
 <a href="#state_providername_csharp" style="color: inherit; text-decoration: inherit;">Provider<wbr>Name</a>
@@ -3322,8 +3186,7 @@ The following state arguments are supported:
         <span class="property-type">string</span>
     </dt>
     <dd>{{% md %}}Cloud service provider on which the servers are provisioned.
-{{% /md %}}</dd>
-    <dt class="property-optional"
+{{% /md %}}</dd><dt class="property-optional"
             title="Optional">
         <span id="state_providerregionname_csharp">
 <a href="#state_providerregionname_csharp" style="color: inherit; text-decoration: inherit;">Provider<wbr>Region<wbr>Name</a>
@@ -3333,8 +3196,7 @@ The following state arguments are supported:
     </dt>
     <dd>{{% md %}}Physical location of your MongoDB cluster. The region you choose can affect network latency for clients accessing your databases.  Requires the **Atlas region name**, see the reference list for [AWS](https://docs.atlas.mongodb.com/reference/amazon-aws/), [GCP](https://docs.atlas.mongodb.com/reference/google-gcp/), [Azure](https://docs.atlas.mongodb.com/reference/microsoft-azure/).
 Do not specify this field when creating a multi-region cluster using the replicationSpec document or a Global Cluster with the replicationSpecs array.
-{{% /md %}}</dd>
-    <dt class="property-optional"
+{{% /md %}}</dd><dt class="property-optional"
             title="Optional">
         <span id="state_providervolumetype_csharp">
 <a href="#state_providervolumetype_csharp" style="color: inherit; text-decoration: inherit;">Provider<wbr>Volume<wbr>Type</a>
@@ -3343,8 +3205,7 @@ Do not specify this field when creating a multi-region cluster using the replica
         <span class="property-type">string</span>
     </dt>
     <dd>{{% md %}}The type of the volume. The possible values are: `STANDARD` and `PROVISIONED`.  `PROVISIONED` required if setting IOPS higher than the default instance IOPS.
-{{% /md %}}</dd>
-    <dt class="property-optional"
+{{% /md %}}</dd><dt class="property-optional"
             title="Optional">
         <span id="state_replicationfactor_csharp">
 <a href="#state_replicationfactor_csharp" style="color: inherit; text-decoration: inherit;">Replication<wbr>Factor</a>
@@ -3353,8 +3214,7 @@ Do not specify this field when creating a multi-region cluster using the replica
         <span class="property-type">int</span>
     </dt>
     <dd>{{% md %}}Number of replica set members. Each member keeps a copy of your databases, providing high availability and data redundancy. The possible values are 3, 5, or 7. The default value is 3.
-{{% /md %}}</dd>
-    <dt class="property-optional"
+{{% /md %}}</dd><dt class="property-optional"
             title="Optional">
         <span id="state_replicationspecs_csharp">
 <a href="#state_replicationspecs_csharp" style="color: inherit; text-decoration: inherit;">Replication<wbr>Specs</a>
@@ -3363,8 +3223,7 @@ Do not specify this field when creating a multi-region cluster using the replica
         <span class="property-type"><a href="#clusterreplicationspec">List&lt;Cluster<wbr>Replication<wbr>Spec<wbr>Args&gt;</a></span>
     </dt>
     <dd>{{% md %}}Configuration for cluster regions.  See Replication Spec below for more details.
-{{% /md %}}</dd>
-    <dt class="property-optional"
+{{% /md %}}</dd><dt class="property-optional"
             title="Optional">
         <span id="state_snapshotbackuppolicies_csharp">
 <a href="#state_snapshotbackuppolicies_csharp" style="color: inherit; text-decoration: inherit;">Snapshot<wbr>Backup<wbr>Policies</a>
@@ -3373,8 +3232,7 @@ Do not specify this field when creating a multi-region cluster using the replica
         <span class="property-type"><a href="#clustersnapshotbackuppolicy">List&lt;Cluster<wbr>Snapshot<wbr>Backup<wbr>Policy<wbr>Args&gt;</a></span>
     </dt>
     <dd>{{% md %}}current snapshot schedule and retention settings for the cluster.
-{{% /md %}}</dd>
-    <dt class="property-optional"
+{{% /md %}}</dd><dt class="property-optional"
             title="Optional">
         <span id="state_srvaddress_csharp">
 <a href="#state_srvaddress_csharp" style="color: inherit; text-decoration: inherit;">Srv<wbr>Address</a>
@@ -3383,8 +3241,7 @@ Do not specify this field when creating a multi-region cluster using the replica
         <span class="property-type">string</span>
     </dt>
     <dd>{{% md %}}Connection string for connecting to the Atlas cluster. The +srv modifier forces the connection to use TLS/SSL. See the mongoURI for additional options.
-{{% /md %}}</dd>
-    <dt class="property-optional"
+{{% /md %}}</dd><dt class="property-optional"
             title="Optional">
         <span id="state_statename_csharp">
 <a href="#state_statename_csharp" style="color: inherit; text-decoration: inherit;">State<wbr>Name</a>
@@ -3399,14 +3256,11 @@ Do not specify this field when creating a multi-region cluster using the replica
 - DELETING
 - DELETED
 - REPAIRING
-{{% /md %}}</dd>
-</dl>
+{{% /md %}}</dd></dl>
 {{% /choosable %}}
 
 {{% choosable language go %}}
-<dl class="resources-properties">
-
-    <dt class="property-optional"
+<dl class="resources-properties"><dt class="property-optional"
             title="Optional">
         <span id="state_advancedconfiguration_go">
 <a href="#state_advancedconfiguration_go" style="color: inherit; text-decoration: inherit;">Advanced<wbr>Configuration</a>
@@ -3414,8 +3268,7 @@ Do not specify this field when creating a multi-region cluster using the replica
         <span class="property-indicator"></span>
         <span class="property-type"><a href="#clusteradvancedconfiguration">Cluster<wbr>Advanced<wbr>Configuration</a></span>
     </dt>
-    <dd>{{% md %}}{{% /md %}}</dd>
-    <dt class="property-optional"
+    <dd>{{% md %}}{{% /md %}}</dd><dt class="property-optional"
             title="Optional">
         <span id="state_autoscalingcomputeenabled_go">
 <a href="#state_autoscalingcomputeenabled_go" style="color: inherit; text-decoration: inherit;">Auto<wbr>Scaling<wbr>Compute<wbr>Enabled</a>
@@ -3426,8 +3279,7 @@ Do not specify this field when creating a multi-region cluster using the replica
     <dd>{{% md %}}Specifies whether cluster tier auto-scaling is enabled. The default is false.
 - Set to `true` to enable cluster tier auto-scaling. If enabled, you must specify a value for `providerSettings.autoScaling.compute.maxInstanceSize`.
 - Set to `false` to disable cluster tier auto-scaling.
-{{% /md %}}</dd>
-    <dt class="property-optional"
+{{% /md %}}</dd><dt class="property-optional"
             title="Optional">
         <span id="state_autoscalingcomputescaledownenabled_go">
 <a href="#state_autoscalingcomputescaledownenabled_go" style="color: inherit; text-decoration: inherit;">Auto<wbr>Scaling<wbr>Compute<wbr>Scale<wbr>Down<wbr>Enabled</a>
@@ -3437,8 +3289,7 @@ Do not specify this field when creating a multi-region cluster using the replica
     </dt>
     <dd>{{% md %}}Set to `true` to enable the cluster tier to scale down. This option is only available if `autoScaling.compute.enabled` is `true`.
 - If this option is enabled, you must specify a value for `providerSettings.autoScaling.compute.minInstanceSize`
-{{% /md %}}</dd>
-    <dt class="property-optional"
+{{% /md %}}</dd><dt class="property-optional"
             title="Optional">
         <span id="state_autoscalingdiskgbenabled_go">
 <a href="#state_autoscalingdiskgbenabled_go" style="color: inherit; text-decoration: inherit;">Auto<wbr>Scaling<wbr>Disk<wbr>Gb<wbr>Enabled</a>
@@ -3449,8 +3300,7 @@ Do not specify this field when creating a multi-region cluster using the replica
     <dd>{{% md %}}Specifies whether disk auto-scaling is enabled. The default is true.
 - Set to `true` to enable disk auto-scaling.
 - Set to `false` to disable disk auto-scaling.
-{{% /md %}}</dd>
-    <dt class="property-optional"
+{{% /md %}}</dd><dt class="property-optional"
             title="Optional">
         <span id="state_backingprovidername_go">
 <a href="#state_backingprovidername_go" style="color: inherit; text-decoration: inherit;">Backing<wbr>Provider<wbr>Name</a>
@@ -3459,8 +3309,7 @@ Do not specify this field when creating a multi-region cluster using the replica
         <span class="property-type">string</span>
     </dt>
     <dd>{{% md %}}Cloud service provider on which the server for a multi-tenant cluster is provisioned.
-{{% /md %}}</dd>
-    <dt class="property-optional"
+{{% /md %}}</dd><dt class="property-optional"
             title="Optional">
         <span id="state_backupenabled_go">
 <a href="#state_backupenabled_go" style="color: inherit; text-decoration: inherit;">Backup<wbr>Enabled</a>
@@ -3468,8 +3317,7 @@ Do not specify this field when creating a multi-region cluster using the replica
         <span class="property-indicator"></span>
         <span class="property-type">bool</span>
     </dt>
-    <dd>{{% md %}}{{% /md %}}</dd>
-    <dt class="property-optional"
+    <dd>{{% md %}}{{% /md %}}</dd><dt class="property-optional"
             title="Optional">
         <span id="state_biconnector_go">
 <a href="#state_biconnector_go" style="color: inherit; text-decoration: inherit;">Bi<wbr>Connector</a>
@@ -3478,8 +3326,7 @@ Do not specify this field when creating a multi-region cluster using the replica
         <span class="property-type"><a href="#clusterbiconnector">Cluster<wbr>Bi<wbr>Connector</a></span>
     </dt>
     <dd>{{% md %}}Specifies BI Connector for Atlas configuration on this cluster. BI Connector for Atlas is only available for M10+ clusters. See BI Connector below for more details.
-{{% /md %}}</dd>
-    <dt class="property-optional"
+{{% /md %}}</dd><dt class="property-optional"
             title="Optional">
         <span id="state_clusterid_go">
 <a href="#state_clusterid_go" style="color: inherit; text-decoration: inherit;">Cluster<wbr>Id</a>
@@ -3488,8 +3335,7 @@ Do not specify this field when creating a multi-region cluster using the replica
         <span class="property-type">string</span>
     </dt>
     <dd>{{% md %}}The cluster ID.
-{{% /md %}}</dd>
-    <dt class="property-optional"
+{{% /md %}}</dd><dt class="property-optional"
             title="Optional">
         <span id="state_clustertype_go">
 <a href="#state_clustertype_go" style="color: inherit; text-decoration: inherit;">Cluster<wbr>Type</a>
@@ -3498,8 +3344,7 @@ Do not specify this field when creating a multi-region cluster using the replica
         <span class="property-type">string</span>
     </dt>
     <dd>{{% md %}}Specifies the type of the cluster that you want to modify. You cannot convert a sharded cluster deployment to a replica set deployment.
-{{% /md %}}</dd>
-    <dt class="property-optional"
+{{% /md %}}</dd><dt class="property-optional"
             title="Optional">
         <span id="state_connectionstrings_go">
 <a href="#state_connectionstrings_go" style="color: inherit; text-decoration: inherit;">Connection<wbr>Strings</a>
@@ -3508,8 +3353,7 @@ Do not specify this field when creating a multi-region cluster using the replica
         <span class="property-type"><a href="#clusterconnectionstrings">Cluster<wbr>Connection<wbr>Strings</a></span>
     </dt>
     <dd>{{% md %}}Set of connection strings that your applications use to connect to this cluster. More info in [Connection-strings](https://docs.mongodb.com/manual/reference/connection-string/). Use the parameters in this object to connect your applications to this cluster. To learn more about the formats of connection strings, see [Connection String Options](https://docs.atlas.mongodb.com/reference/faq/connection-changes/). NOTE: Atlas returns the contents of this object after the cluster is operational, not while it builds the cluster.
-{{% /md %}}</dd>
-    <dt class="property-optional"
+{{% /md %}}</dd><dt class="property-optional"
             title="Optional">
         <span id="state_containerid_go">
 <a href="#state_containerid_go" style="color: inherit; text-decoration: inherit;">Container<wbr>Id</a>
@@ -3518,8 +3362,7 @@ Do not specify this field when creating a multi-region cluster using the replica
         <span class="property-type">string</span>
     </dt>
     <dd>{{% md %}}The Network Peering Container ID. The id of the container either created programmatically by the user before any clusters existed in the project or when the first cluster in the region (AWS/Azure) or project (GCP) was created.
-{{% /md %}}</dd>
-    <dt class="property-optional"
+{{% /md %}}</dd><dt class="property-optional"
             title="Optional">
         <span id="state_disksizegb_go">
 <a href="#state_disksizegb_go" style="color: inherit; text-decoration: inherit;">Disk<wbr>Size<wbr>Gb</a>
@@ -3532,8 +3375,7 @@ Do not specify this field when creating a multi-region cluster using the replica
 * Note: The maximum value for disk storage cannot exceed 50 times the maximum RAM for the selected cluster. If you require additional storage space beyond this limitation, consider upgrading your cluster to a higher tier.
 * Cannot be used with clusters with local NVMe SSDs
 * Cannot be used with Azure clusters
-{{% /md %}}</dd>
-    <dt class="property-optional"
+{{% /md %}}</dd><dt class="property-optional"
             title="Optional">
         <span id="state_encryptionatrestprovider_go">
 <a href="#state_encryptionatrestprovider_go" style="color: inherit; text-decoration: inherit;">Encryption<wbr>At<wbr>Rest<wbr>Provider</a>
@@ -3542,8 +3384,7 @@ Do not specify this field when creating a multi-region cluster using the replica
         <span class="property-type">string</span>
     </dt>
     <dd>{{% md %}}Possible values are AWS, GCP, AZURE or NONE.  Only needed if you desire to manage the keys, see [Encryption at Rest using Customer Key Management](https://docs.atlas.mongodb.com/security-aws-kms/) for complete documentation.  You must configure encryption at rest for the Atlas project before enabling it on any cluster in the project. For complete documentation on configuring Encryption at Rest, see Encryption at Rest using Customer Key Management. Requires M10 or greater. and for legacy backups, backup_enabled, to be false or omitted. **Note: Atlas encrypts all cluster storage and snapshot volumes, securing all cluster data on disk: a concept known as encryption at rest, by default**.
-{{% /md %}}</dd>
-    <dt class="property-optional"
+{{% /md %}}</dd><dt class="property-optional"
             title="Optional">
         <span id="state_labels_go">
 <a href="#state_labels_go" style="color: inherit; text-decoration: inherit;">Labels</a>
@@ -3551,8 +3392,7 @@ Do not specify this field when creating a multi-region cluster using the replica
         <span class="property-indicator"></span>
         <span class="property-type"><a href="#clusterlabel">[]Cluster<wbr>Label</a></span>
     </dt>
-    <dd>{{% md %}}{{% /md %}}</dd>
-    <dt class="property-optional"
+    <dd>{{% md %}}{{% /md %}}</dd><dt class="property-optional"
             title="Optional">
         <span id="state_mongodbmajorversion_go">
 <a href="#state_mongodbmajorversion_go" style="color: inherit; text-decoration: inherit;">Mongo<wbr>Db<wbr>Major<wbr>Version</a>
@@ -3561,8 +3401,7 @@ Do not specify this field when creating a multi-region cluster using the replica
         <span class="property-type">string</span>
     </dt>
     <dd>{{% md %}}Version of the cluster to deploy. Atlas supports the following MongoDB versions for M10+ clusters: `3.6`, `4.0`, or `4.2`. You must set this value to `4.2` if `provider_instance_size_name` is either M2 or M5.
-{{% /md %}}</dd>
-    <dt class="property-optional"
+{{% /md %}}</dd><dt class="property-optional"
             title="Optional">
         <span id="state_mongodbversion_go">
 <a href="#state_mongodbversion_go" style="color: inherit; text-decoration: inherit;">Mongo<wbr>Db<wbr>Version</a>
@@ -3571,8 +3410,7 @@ Do not specify this field when creating a multi-region cluster using the replica
         <span class="property-type">string</span>
     </dt>
     <dd>{{% md %}}Version of MongoDB the cluster runs, in `major-version`.`minor-version` format.
-{{% /md %}}</dd>
-    <dt class="property-optional"
+{{% /md %}}</dd><dt class="property-optional"
             title="Optional">
         <span id="state_mongouri_go">
 <a href="#state_mongouri_go" style="color: inherit; text-decoration: inherit;">Mongo<wbr>Uri</a>
@@ -3581,8 +3419,7 @@ Do not specify this field when creating a multi-region cluster using the replica
         <span class="property-type">string</span>
     </dt>
     <dd>{{% md %}}Base connection string for the cluster. Atlas only displays this field after the cluster is operational, not while it builds the cluster.
-{{% /md %}}</dd>
-    <dt class="property-optional"
+{{% /md %}}</dd><dt class="property-optional"
             title="Optional">
         <span id="state_mongouriupdated_go">
 <a href="#state_mongouriupdated_go" style="color: inherit; text-decoration: inherit;">Mongo<wbr>Uri<wbr>Updated</a>
@@ -3591,8 +3428,7 @@ Do not specify this field when creating a multi-region cluster using the replica
         <span class="property-type">string</span>
     </dt>
     <dd>{{% md %}}Lists when the connection string was last updated. The connection string changes, for example, if you change a replica set to a sharded cluster.
-{{% /md %}}</dd>
-    <dt class="property-optional"
+{{% /md %}}</dd><dt class="property-optional"
             title="Optional">
         <span id="state_mongouriwithoptions_go">
 <a href="#state_mongouriwithoptions_go" style="color: inherit; text-decoration: inherit;">Mongo<wbr>Uri<wbr>With<wbr>Options</a>
@@ -3601,8 +3437,7 @@ Do not specify this field when creating a multi-region cluster using the replica
         <span class="property-type">string</span>
     </dt>
     <dd>{{% md %}}connection string for connecting to the Atlas cluster. Includes the replicaSet, ssl, and authSource query parameters in the connection string with values appropriate for the cluster.
-{{% /md %}}</dd>
-    <dt class="property-optional"
+{{% /md %}}</dd><dt class="property-optional"
             title="Optional">
         <span id="state_name_go">
 <a href="#state_name_go" style="color: inherit; text-decoration: inherit;">Name</a>
@@ -3611,8 +3446,7 @@ Do not specify this field when creating a multi-region cluster using the replica
         <span class="property-type">string</span>
     </dt>
     <dd>{{% md %}}Name of the cluster as it appears in Atlas. Once the cluster is created, its name cannot be changed.
-{{% /md %}}</dd>
-    <dt class="property-optional"
+{{% /md %}}</dd><dt class="property-optional"
             title="Optional">
         <span id="state_numshards_go">
 <a href="#state_numshards_go" style="color: inherit; text-decoration: inherit;">Num<wbr>Shards</a>
@@ -3621,8 +3455,7 @@ Do not specify this field when creating a multi-region cluster using the replica
         <span class="property-type">int</span>
     </dt>
     <dd>{{% md %}}Number of shards to deploy in the specified zone, minimum 1.
-{{% /md %}}</dd>
-    <dt class="property-optional"
+{{% /md %}}</dd><dt class="property-optional"
             title="Optional">
         <span id="state_paused_go">
 <a href="#state_paused_go" style="color: inherit; text-decoration: inherit;">Paused</a>
@@ -3631,8 +3464,7 @@ Do not specify this field when creating a multi-region cluster using the replica
         <span class="property-type">bool</span>
     </dt>
     <dd>{{% md %}}Flag that indicates whether the cluster is paused or not.
-{{% /md %}}</dd>
-    <dt class="property-optional"
+{{% /md %}}</dd><dt class="property-optional"
             title="Optional">
         <span id="state_pitenabled_go">
 <a href="#state_pitenabled_go" style="color: inherit; text-decoration: inherit;">Pit<wbr>Enabled</a>
@@ -3641,8 +3473,7 @@ Do not specify this field when creating a multi-region cluster using the replica
         <span class="property-type">bool</span>
     </dt>
     <dd>{{% md %}}- Flag that indicates if the cluster uses Continuous Cloud Backup. If set to true, provider_backup_enabled must also be set to true.
-{{% /md %}}</dd>
-    <dt class="property-optional"
+{{% /md %}}</dd><dt class="property-optional"
             title="Optional">
         <span id="state_projectid_go">
 <a href="#state_projectid_go" style="color: inherit; text-decoration: inherit;">Project<wbr>Id</a>
@@ -3651,8 +3482,7 @@ Do not specify this field when creating a multi-region cluster using the replica
         <span class="property-type">string</span>
     </dt>
     <dd>{{% md %}}The unique ID for the project to create the database user.
-{{% /md %}}</dd>
-    <dt class="property-optional"
+{{% /md %}}</dd><dt class="property-optional"
             title="Optional">
         <span id="state_providerautoscalingcomputemaxinstancesize_go">
 <a href="#state_providerautoscalingcomputemaxinstancesize_go" style="color: inherit; text-decoration: inherit;">Provider<wbr>Auto<wbr>Scaling<wbr>Compute<wbr>Max<wbr>Instance<wbr>Size</a>
@@ -3661,8 +3491,7 @@ Do not specify this field when creating a multi-region cluster using the replica
         <span class="property-type">string</span>
     </dt>
     <dd>{{% md %}}Maximum instance size to which your cluster can automatically scale (e.g., M40). Required if `autoScaling.compute.enabled` is `true`.
-{{% /md %}}</dd>
-    <dt class="property-optional"
+{{% /md %}}</dd><dt class="property-optional"
             title="Optional">
         <span id="state_providerautoscalingcomputemininstancesize_go">
 <a href="#state_providerautoscalingcomputemininstancesize_go" style="color: inherit; text-decoration: inherit;">Provider<wbr>Auto<wbr>Scaling<wbr>Compute<wbr>Min<wbr>Instance<wbr>Size</a>
@@ -3671,8 +3500,7 @@ Do not specify this field when creating a multi-region cluster using the replica
         <span class="property-type">string</span>
     </dt>
     <dd>{{% md %}}Minimum instance size to which your cluster can automatically scale (e.g., M10). Required if `autoScaling.compute.scaleDownEnabled` is `true`.
-{{% /md %}}</dd>
-    <dt class="property-optional"
+{{% /md %}}</dd><dt class="property-optional"
             title="Optional">
         <span id="state_providerbackupenabled_go">
 <a href="#state_providerbackupenabled_go" style="color: inherit; text-decoration: inherit;">Provider<wbr>Backup<wbr>Enabled</a>
@@ -3681,8 +3509,7 @@ Do not specify this field when creating a multi-region cluster using the replica
         <span class="property-type">bool</span>
     </dt>
     <dd>{{% md %}}Flag indicating if the cluster uses Cloud Backup for backups.
-{{% /md %}}</dd>
-    <dt class="property-optional"
+{{% /md %}}</dd><dt class="property-optional"
             title="Optional">
         <span id="state_providerdiskiops_go">
 <a href="#state_providerdiskiops_go" style="color: inherit; text-decoration: inherit;">Provider<wbr>Disk<wbr>Iops</a>
@@ -3691,8 +3518,7 @@ Do not specify this field when creating a multi-region cluster using the replica
         <span class="property-type">int</span>
     </dt>
     <dd>{{% md %}}The maximum input/output operations per second (IOPS) the system can perform. The possible values depend on the selected `provider_instance_size_name` and `disk_size_gb`.
-{{% /md %}}</dd>
-    <dt class="property-optional"
+{{% /md %}}</dd><dt class="property-optional"
             title="Optional">
         <span id="state_providerdisktypename_go">
 <a href="#state_providerdisktypename_go" style="color: inherit; text-decoration: inherit;">Provider<wbr>Disk<wbr>Type<wbr>Name</a>
@@ -3701,8 +3527,7 @@ Do not specify this field when creating a multi-region cluster using the replica
         <span class="property-type">string</span>
     </dt>
     <dd>{{% md %}}Azure disk type of the server’s root volume. If omitted, Atlas uses the default disk type for the selected providerSettings.instanceSizeName.  Example disk types and associated storage sizes: P4 - 32GB, P6 - 64GB, P10 - 128GB, P15 - 256GB, P20 - 512GB, P30 - 1024GB, P40 - 2048GB, P50 - 4095GB.  More information and the most update to date disk types/storage sizes can be located at https://docs.atlas.mongodb.com/reference/api/clusters-create-one/.
-{{% /md %}}</dd>
-    <dt class="property-optional"
+{{% /md %}}</dd><dt class="property-optional"
             title="Optional">
         <span id="state_providerencryptebsvolume_go">
 <a href="#state_providerencryptebsvolume_go" style="color: inherit; text-decoration: inherit;">Provider<wbr>Encrypt<wbr>Ebs<wbr>Volume</a>
@@ -3711,8 +3536,7 @@ Do not specify this field when creating a multi-region cluster using the replica
         <span class="property-type">bool</span>
     </dt>
     <dd>{{% md %}}The default value is true.  Flag that indicates whether the Amazon EBS encryption feature encrypts the host's root volume for both data at rest within the volume and for data moving between the volume and the cluster. Note: This setting is always enabled for clusters with local NVMe SSDs. **Atlas encrypts all cluster storage and snapshot volumes, securing all cluster data on disk: a concept known as encryption at rest, by default.**.
-{{% /md %}}</dd>
-    <dt class="property-optional"
+{{% /md %}}</dd><dt class="property-optional"
             title="Optional">
         <span id="state_providerinstancesizename_go">
 <a href="#state_providerinstancesizename_go" style="color: inherit; text-decoration: inherit;">Provider<wbr>Instance<wbr>Size<wbr>Name</a>
@@ -3722,8 +3546,7 @@ Do not specify this field when creating a multi-region cluster using the replica
     </dt>
     <dd>{{% md %}}Atlas provides different instance sizes, each with a default storage capacity and RAM size. The instance size you select is used for all the data-bearing servers in your cluster. See [Create a Cluster](https://docs.atlas.mongodb.com/reference/api/clusters-create-one/) `providerSettings.instanceSizeName` for valid values and default resources. 
 **Note** free tier (M0) creation is not supported by the Atlas API and hence not supported by this provider.)
-{{% /md %}}</dd>
-    <dt class="property-optional"
+{{% /md %}}</dd><dt class="property-optional"
             title="Optional">
         <span id="state_providername_go">
 <a href="#state_providername_go" style="color: inherit; text-decoration: inherit;">Provider<wbr>Name</a>
@@ -3732,8 +3555,7 @@ Do not specify this field when creating a multi-region cluster using the replica
         <span class="property-type">string</span>
     </dt>
     <dd>{{% md %}}Cloud service provider on which the servers are provisioned.
-{{% /md %}}</dd>
-    <dt class="property-optional"
+{{% /md %}}</dd><dt class="property-optional"
             title="Optional">
         <span id="state_providerregionname_go">
 <a href="#state_providerregionname_go" style="color: inherit; text-decoration: inherit;">Provider<wbr>Region<wbr>Name</a>
@@ -3743,8 +3565,7 @@ Do not specify this field when creating a multi-region cluster using the replica
     </dt>
     <dd>{{% md %}}Physical location of your MongoDB cluster. The region you choose can affect network latency for clients accessing your databases.  Requires the **Atlas region name**, see the reference list for [AWS](https://docs.atlas.mongodb.com/reference/amazon-aws/), [GCP](https://docs.atlas.mongodb.com/reference/google-gcp/), [Azure](https://docs.atlas.mongodb.com/reference/microsoft-azure/).
 Do not specify this field when creating a multi-region cluster using the replicationSpec document or a Global Cluster with the replicationSpecs array.
-{{% /md %}}</dd>
-    <dt class="property-optional"
+{{% /md %}}</dd><dt class="property-optional"
             title="Optional">
         <span id="state_providervolumetype_go">
 <a href="#state_providervolumetype_go" style="color: inherit; text-decoration: inherit;">Provider<wbr>Volume<wbr>Type</a>
@@ -3753,8 +3574,7 @@ Do not specify this field when creating a multi-region cluster using the replica
         <span class="property-type">string</span>
     </dt>
     <dd>{{% md %}}The type of the volume. The possible values are: `STANDARD` and `PROVISIONED`.  `PROVISIONED` required if setting IOPS higher than the default instance IOPS.
-{{% /md %}}</dd>
-    <dt class="property-optional"
+{{% /md %}}</dd><dt class="property-optional"
             title="Optional">
         <span id="state_replicationfactor_go">
 <a href="#state_replicationfactor_go" style="color: inherit; text-decoration: inherit;">Replication<wbr>Factor</a>
@@ -3763,8 +3583,7 @@ Do not specify this field when creating a multi-region cluster using the replica
         <span class="property-type">int</span>
     </dt>
     <dd>{{% md %}}Number of replica set members. Each member keeps a copy of your databases, providing high availability and data redundancy. The possible values are 3, 5, or 7. The default value is 3.
-{{% /md %}}</dd>
-    <dt class="property-optional"
+{{% /md %}}</dd><dt class="property-optional"
             title="Optional">
         <span id="state_replicationspecs_go">
 <a href="#state_replicationspecs_go" style="color: inherit; text-decoration: inherit;">Replication<wbr>Specs</a>
@@ -3773,8 +3592,7 @@ Do not specify this field when creating a multi-region cluster using the replica
         <span class="property-type"><a href="#clusterreplicationspec">[]Cluster<wbr>Replication<wbr>Spec</a></span>
     </dt>
     <dd>{{% md %}}Configuration for cluster regions.  See Replication Spec below for more details.
-{{% /md %}}</dd>
-    <dt class="property-optional"
+{{% /md %}}</dd><dt class="property-optional"
             title="Optional">
         <span id="state_snapshotbackuppolicies_go">
 <a href="#state_snapshotbackuppolicies_go" style="color: inherit; text-decoration: inherit;">Snapshot<wbr>Backup<wbr>Policies</a>
@@ -3783,8 +3601,7 @@ Do not specify this field when creating a multi-region cluster using the replica
         <span class="property-type"><a href="#clustersnapshotbackuppolicy">[]Cluster<wbr>Snapshot<wbr>Backup<wbr>Policy</a></span>
     </dt>
     <dd>{{% md %}}current snapshot schedule and retention settings for the cluster.
-{{% /md %}}</dd>
-    <dt class="property-optional"
+{{% /md %}}</dd><dt class="property-optional"
             title="Optional">
         <span id="state_srvaddress_go">
 <a href="#state_srvaddress_go" style="color: inherit; text-decoration: inherit;">Srv<wbr>Address</a>
@@ -3793,8 +3610,7 @@ Do not specify this field when creating a multi-region cluster using the replica
         <span class="property-type">string</span>
     </dt>
     <dd>{{% md %}}Connection string for connecting to the Atlas cluster. The +srv modifier forces the connection to use TLS/SSL. See the mongoURI for additional options.
-{{% /md %}}</dd>
-    <dt class="property-optional"
+{{% /md %}}</dd><dt class="property-optional"
             title="Optional">
         <span id="state_statename_go">
 <a href="#state_statename_go" style="color: inherit; text-decoration: inherit;">State<wbr>Name</a>
@@ -3809,14 +3625,11 @@ Do not specify this field when creating a multi-region cluster using the replica
 - DELETING
 - DELETED
 - REPAIRING
-{{% /md %}}</dd>
-</dl>
+{{% /md %}}</dd></dl>
 {{% /choosable %}}
 
 {{% choosable language nodejs %}}
-<dl class="resources-properties">
-
-    <dt class="property-optional"
+<dl class="resources-properties"><dt class="property-optional"
             title="Optional">
         <span id="state_advancedconfiguration_nodejs">
 <a href="#state_advancedconfiguration_nodejs" style="color: inherit; text-decoration: inherit;">advanced<wbr>Configuration</a>
@@ -3824,8 +3637,7 @@ Do not specify this field when creating a multi-region cluster using the replica
         <span class="property-indicator"></span>
         <span class="property-type"><a href="#clusteradvancedconfiguration">Cluster<wbr>Advanced<wbr>Configuration</a></span>
     </dt>
-    <dd>{{% md %}}{{% /md %}}</dd>
-    <dt class="property-optional"
+    <dd>{{% md %}}{{% /md %}}</dd><dt class="property-optional"
             title="Optional">
         <span id="state_autoscalingcomputeenabled_nodejs">
 <a href="#state_autoscalingcomputeenabled_nodejs" style="color: inherit; text-decoration: inherit;">auto<wbr>Scaling<wbr>Compute<wbr>Enabled</a>
@@ -3836,8 +3648,7 @@ Do not specify this field when creating a multi-region cluster using the replica
     <dd>{{% md %}}Specifies whether cluster tier auto-scaling is enabled. The default is false.
 - Set to `true` to enable cluster tier auto-scaling. If enabled, you must specify a value for `providerSettings.autoScaling.compute.maxInstanceSize`.
 - Set to `false` to disable cluster tier auto-scaling.
-{{% /md %}}</dd>
-    <dt class="property-optional"
+{{% /md %}}</dd><dt class="property-optional"
             title="Optional">
         <span id="state_autoscalingcomputescaledownenabled_nodejs">
 <a href="#state_autoscalingcomputescaledownenabled_nodejs" style="color: inherit; text-decoration: inherit;">auto<wbr>Scaling<wbr>Compute<wbr>Scale<wbr>Down<wbr>Enabled</a>
@@ -3847,8 +3658,7 @@ Do not specify this field when creating a multi-region cluster using the replica
     </dt>
     <dd>{{% md %}}Set to `true` to enable the cluster tier to scale down. This option is only available if `autoScaling.compute.enabled` is `true`.
 - If this option is enabled, you must specify a value for `providerSettings.autoScaling.compute.minInstanceSize`
-{{% /md %}}</dd>
-    <dt class="property-optional"
+{{% /md %}}</dd><dt class="property-optional"
             title="Optional">
         <span id="state_autoscalingdiskgbenabled_nodejs">
 <a href="#state_autoscalingdiskgbenabled_nodejs" style="color: inherit; text-decoration: inherit;">auto<wbr>Scaling<wbr>Disk<wbr>Gb<wbr>Enabled</a>
@@ -3859,8 +3669,7 @@ Do not specify this field when creating a multi-region cluster using the replica
     <dd>{{% md %}}Specifies whether disk auto-scaling is enabled. The default is true.
 - Set to `true` to enable disk auto-scaling.
 - Set to `false` to disable disk auto-scaling.
-{{% /md %}}</dd>
-    <dt class="property-optional"
+{{% /md %}}</dd><dt class="property-optional"
             title="Optional">
         <span id="state_backingprovidername_nodejs">
 <a href="#state_backingprovidername_nodejs" style="color: inherit; text-decoration: inherit;">backing<wbr>Provider<wbr>Name</a>
@@ -3869,8 +3678,7 @@ Do not specify this field when creating a multi-region cluster using the replica
         <span class="property-type">string</span>
     </dt>
     <dd>{{% md %}}Cloud service provider on which the server for a multi-tenant cluster is provisioned.
-{{% /md %}}</dd>
-    <dt class="property-optional"
+{{% /md %}}</dd><dt class="property-optional"
             title="Optional">
         <span id="state_backupenabled_nodejs">
 <a href="#state_backupenabled_nodejs" style="color: inherit; text-decoration: inherit;">backup<wbr>Enabled</a>
@@ -3878,8 +3686,7 @@ Do not specify this field when creating a multi-region cluster using the replica
         <span class="property-indicator"></span>
         <span class="property-type">boolean</span>
     </dt>
-    <dd>{{% md %}}{{% /md %}}</dd>
-    <dt class="property-optional"
+    <dd>{{% md %}}{{% /md %}}</dd><dt class="property-optional"
             title="Optional">
         <span id="state_biconnector_nodejs">
 <a href="#state_biconnector_nodejs" style="color: inherit; text-decoration: inherit;">bi<wbr>Connector</a>
@@ -3888,8 +3695,7 @@ Do not specify this field when creating a multi-region cluster using the replica
         <span class="property-type"><a href="#clusterbiconnector">Cluster<wbr>Bi<wbr>Connector</a></span>
     </dt>
     <dd>{{% md %}}Specifies BI Connector for Atlas configuration on this cluster. BI Connector for Atlas is only available for M10+ clusters. See BI Connector below for more details.
-{{% /md %}}</dd>
-    <dt class="property-optional"
+{{% /md %}}</dd><dt class="property-optional"
             title="Optional">
         <span id="state_clusterid_nodejs">
 <a href="#state_clusterid_nodejs" style="color: inherit; text-decoration: inherit;">cluster<wbr>Id</a>
@@ -3898,8 +3704,7 @@ Do not specify this field when creating a multi-region cluster using the replica
         <span class="property-type">string</span>
     </dt>
     <dd>{{% md %}}The cluster ID.
-{{% /md %}}</dd>
-    <dt class="property-optional"
+{{% /md %}}</dd><dt class="property-optional"
             title="Optional">
         <span id="state_clustertype_nodejs">
 <a href="#state_clustertype_nodejs" style="color: inherit; text-decoration: inherit;">cluster<wbr>Type</a>
@@ -3908,8 +3713,7 @@ Do not specify this field when creating a multi-region cluster using the replica
         <span class="property-type">string</span>
     </dt>
     <dd>{{% md %}}Specifies the type of the cluster that you want to modify. You cannot convert a sharded cluster deployment to a replica set deployment.
-{{% /md %}}</dd>
-    <dt class="property-optional"
+{{% /md %}}</dd><dt class="property-optional"
             title="Optional">
         <span id="state_connectionstrings_nodejs">
 <a href="#state_connectionstrings_nodejs" style="color: inherit; text-decoration: inherit;">connection<wbr>Strings</a>
@@ -3918,8 +3722,7 @@ Do not specify this field when creating a multi-region cluster using the replica
         <span class="property-type"><a href="#clusterconnectionstrings">Cluster<wbr>Connection<wbr>Strings</a></span>
     </dt>
     <dd>{{% md %}}Set of connection strings that your applications use to connect to this cluster. More info in [Connection-strings](https://docs.mongodb.com/manual/reference/connection-string/). Use the parameters in this object to connect your applications to this cluster. To learn more about the formats of connection strings, see [Connection String Options](https://docs.atlas.mongodb.com/reference/faq/connection-changes/). NOTE: Atlas returns the contents of this object after the cluster is operational, not while it builds the cluster.
-{{% /md %}}</dd>
-    <dt class="property-optional"
+{{% /md %}}</dd><dt class="property-optional"
             title="Optional">
         <span id="state_containerid_nodejs">
 <a href="#state_containerid_nodejs" style="color: inherit; text-decoration: inherit;">container<wbr>Id</a>
@@ -3928,8 +3731,7 @@ Do not specify this field when creating a multi-region cluster using the replica
         <span class="property-type">string</span>
     </dt>
     <dd>{{% md %}}The Network Peering Container ID. The id of the container either created programmatically by the user before any clusters existed in the project or when the first cluster in the region (AWS/Azure) or project (GCP) was created.
-{{% /md %}}</dd>
-    <dt class="property-optional"
+{{% /md %}}</dd><dt class="property-optional"
             title="Optional">
         <span id="state_disksizegb_nodejs">
 <a href="#state_disksizegb_nodejs" style="color: inherit; text-decoration: inherit;">disk<wbr>Size<wbr>Gb</a>
@@ -3942,8 +3744,7 @@ Do not specify this field when creating a multi-region cluster using the replica
 * Note: The maximum value for disk storage cannot exceed 50 times the maximum RAM for the selected cluster. If you require additional storage space beyond this limitation, consider upgrading your cluster to a higher tier.
 * Cannot be used with clusters with local NVMe SSDs
 * Cannot be used with Azure clusters
-{{% /md %}}</dd>
-    <dt class="property-optional"
+{{% /md %}}</dd><dt class="property-optional"
             title="Optional">
         <span id="state_encryptionatrestprovider_nodejs">
 <a href="#state_encryptionatrestprovider_nodejs" style="color: inherit; text-decoration: inherit;">encryption<wbr>At<wbr>Rest<wbr>Provider</a>
@@ -3952,8 +3753,7 @@ Do not specify this field when creating a multi-region cluster using the replica
         <span class="property-type">string</span>
     </dt>
     <dd>{{% md %}}Possible values are AWS, GCP, AZURE or NONE.  Only needed if you desire to manage the keys, see [Encryption at Rest using Customer Key Management](https://docs.atlas.mongodb.com/security-aws-kms/) for complete documentation.  You must configure encryption at rest for the Atlas project before enabling it on any cluster in the project. For complete documentation on configuring Encryption at Rest, see Encryption at Rest using Customer Key Management. Requires M10 or greater. and for legacy backups, backup_enabled, to be false or omitted. **Note: Atlas encrypts all cluster storage and snapshot volumes, securing all cluster data on disk: a concept known as encryption at rest, by default**.
-{{% /md %}}</dd>
-    <dt class="property-optional"
+{{% /md %}}</dd><dt class="property-optional"
             title="Optional">
         <span id="state_labels_nodejs">
 <a href="#state_labels_nodejs" style="color: inherit; text-decoration: inherit;">labels</a>
@@ -3961,8 +3761,7 @@ Do not specify this field when creating a multi-region cluster using the replica
         <span class="property-indicator"></span>
         <span class="property-type"><a href="#clusterlabel">Cluster<wbr>Label[]</a></span>
     </dt>
-    <dd>{{% md %}}{{% /md %}}</dd>
-    <dt class="property-optional"
+    <dd>{{% md %}}{{% /md %}}</dd><dt class="property-optional"
             title="Optional">
         <span id="state_mongodbmajorversion_nodejs">
 <a href="#state_mongodbmajorversion_nodejs" style="color: inherit; text-decoration: inherit;">mongo<wbr>Db<wbr>Major<wbr>Version</a>
@@ -3971,8 +3770,7 @@ Do not specify this field when creating a multi-region cluster using the replica
         <span class="property-type">string</span>
     </dt>
     <dd>{{% md %}}Version of the cluster to deploy. Atlas supports the following MongoDB versions for M10+ clusters: `3.6`, `4.0`, or `4.2`. You must set this value to `4.2` if `provider_instance_size_name` is either M2 or M5.
-{{% /md %}}</dd>
-    <dt class="property-optional"
+{{% /md %}}</dd><dt class="property-optional"
             title="Optional">
         <span id="state_mongodbversion_nodejs">
 <a href="#state_mongodbversion_nodejs" style="color: inherit; text-decoration: inherit;">mongo<wbr>Db<wbr>Version</a>
@@ -3981,8 +3779,7 @@ Do not specify this field when creating a multi-region cluster using the replica
         <span class="property-type">string</span>
     </dt>
     <dd>{{% md %}}Version of MongoDB the cluster runs, in `major-version`.`minor-version` format.
-{{% /md %}}</dd>
-    <dt class="property-optional"
+{{% /md %}}</dd><dt class="property-optional"
             title="Optional">
         <span id="state_mongouri_nodejs">
 <a href="#state_mongouri_nodejs" style="color: inherit; text-decoration: inherit;">mongo<wbr>Uri</a>
@@ -3991,8 +3788,7 @@ Do not specify this field when creating a multi-region cluster using the replica
         <span class="property-type">string</span>
     </dt>
     <dd>{{% md %}}Base connection string for the cluster. Atlas only displays this field after the cluster is operational, not while it builds the cluster.
-{{% /md %}}</dd>
-    <dt class="property-optional"
+{{% /md %}}</dd><dt class="property-optional"
             title="Optional">
         <span id="state_mongouriupdated_nodejs">
 <a href="#state_mongouriupdated_nodejs" style="color: inherit; text-decoration: inherit;">mongo<wbr>Uri<wbr>Updated</a>
@@ -4001,8 +3797,7 @@ Do not specify this field when creating a multi-region cluster using the replica
         <span class="property-type">string</span>
     </dt>
     <dd>{{% md %}}Lists when the connection string was last updated. The connection string changes, for example, if you change a replica set to a sharded cluster.
-{{% /md %}}</dd>
-    <dt class="property-optional"
+{{% /md %}}</dd><dt class="property-optional"
             title="Optional">
         <span id="state_mongouriwithoptions_nodejs">
 <a href="#state_mongouriwithoptions_nodejs" style="color: inherit; text-decoration: inherit;">mongo<wbr>Uri<wbr>With<wbr>Options</a>
@@ -4011,8 +3806,7 @@ Do not specify this field when creating a multi-region cluster using the replica
         <span class="property-type">string</span>
     </dt>
     <dd>{{% md %}}connection string for connecting to the Atlas cluster. Includes the replicaSet, ssl, and authSource query parameters in the connection string with values appropriate for the cluster.
-{{% /md %}}</dd>
-    <dt class="property-optional"
+{{% /md %}}</dd><dt class="property-optional"
             title="Optional">
         <span id="state_name_nodejs">
 <a href="#state_name_nodejs" style="color: inherit; text-decoration: inherit;">name</a>
@@ -4021,8 +3815,7 @@ Do not specify this field when creating a multi-region cluster using the replica
         <span class="property-type">string</span>
     </dt>
     <dd>{{% md %}}Name of the cluster as it appears in Atlas. Once the cluster is created, its name cannot be changed.
-{{% /md %}}</dd>
-    <dt class="property-optional"
+{{% /md %}}</dd><dt class="property-optional"
             title="Optional">
         <span id="state_numshards_nodejs">
 <a href="#state_numshards_nodejs" style="color: inherit; text-decoration: inherit;">num<wbr>Shards</a>
@@ -4031,8 +3824,7 @@ Do not specify this field when creating a multi-region cluster using the replica
         <span class="property-type">number</span>
     </dt>
     <dd>{{% md %}}Number of shards to deploy in the specified zone, minimum 1.
-{{% /md %}}</dd>
-    <dt class="property-optional"
+{{% /md %}}</dd><dt class="property-optional"
             title="Optional">
         <span id="state_paused_nodejs">
 <a href="#state_paused_nodejs" style="color: inherit; text-decoration: inherit;">paused</a>
@@ -4041,8 +3833,7 @@ Do not specify this field when creating a multi-region cluster using the replica
         <span class="property-type">boolean</span>
     </dt>
     <dd>{{% md %}}Flag that indicates whether the cluster is paused or not.
-{{% /md %}}</dd>
-    <dt class="property-optional"
+{{% /md %}}</dd><dt class="property-optional"
             title="Optional">
         <span id="state_pitenabled_nodejs">
 <a href="#state_pitenabled_nodejs" style="color: inherit; text-decoration: inherit;">pit<wbr>Enabled</a>
@@ -4051,8 +3842,7 @@ Do not specify this field when creating a multi-region cluster using the replica
         <span class="property-type">boolean</span>
     </dt>
     <dd>{{% md %}}- Flag that indicates if the cluster uses Continuous Cloud Backup. If set to true, provider_backup_enabled must also be set to true.
-{{% /md %}}</dd>
-    <dt class="property-optional"
+{{% /md %}}</dd><dt class="property-optional"
             title="Optional">
         <span id="state_projectid_nodejs">
 <a href="#state_projectid_nodejs" style="color: inherit; text-decoration: inherit;">project<wbr>Id</a>
@@ -4061,8 +3851,7 @@ Do not specify this field when creating a multi-region cluster using the replica
         <span class="property-type">string</span>
     </dt>
     <dd>{{% md %}}The unique ID for the project to create the database user.
-{{% /md %}}</dd>
-    <dt class="property-optional"
+{{% /md %}}</dd><dt class="property-optional"
             title="Optional">
         <span id="state_providerautoscalingcomputemaxinstancesize_nodejs">
 <a href="#state_providerautoscalingcomputemaxinstancesize_nodejs" style="color: inherit; text-decoration: inherit;">provider<wbr>Auto<wbr>Scaling<wbr>Compute<wbr>Max<wbr>Instance<wbr>Size</a>
@@ -4071,8 +3860,7 @@ Do not specify this field when creating a multi-region cluster using the replica
         <span class="property-type">string</span>
     </dt>
     <dd>{{% md %}}Maximum instance size to which your cluster can automatically scale (e.g., M40). Required if `autoScaling.compute.enabled` is `true`.
-{{% /md %}}</dd>
-    <dt class="property-optional"
+{{% /md %}}</dd><dt class="property-optional"
             title="Optional">
         <span id="state_providerautoscalingcomputemininstancesize_nodejs">
 <a href="#state_providerautoscalingcomputemininstancesize_nodejs" style="color: inherit; text-decoration: inherit;">provider<wbr>Auto<wbr>Scaling<wbr>Compute<wbr>Min<wbr>Instance<wbr>Size</a>
@@ -4081,8 +3869,7 @@ Do not specify this field when creating a multi-region cluster using the replica
         <span class="property-type">string</span>
     </dt>
     <dd>{{% md %}}Minimum instance size to which your cluster can automatically scale (e.g., M10). Required if `autoScaling.compute.scaleDownEnabled` is `true`.
-{{% /md %}}</dd>
-    <dt class="property-optional"
+{{% /md %}}</dd><dt class="property-optional"
             title="Optional">
         <span id="state_providerbackupenabled_nodejs">
 <a href="#state_providerbackupenabled_nodejs" style="color: inherit; text-decoration: inherit;">provider<wbr>Backup<wbr>Enabled</a>
@@ -4091,8 +3878,7 @@ Do not specify this field when creating a multi-region cluster using the replica
         <span class="property-type">boolean</span>
     </dt>
     <dd>{{% md %}}Flag indicating if the cluster uses Cloud Backup for backups.
-{{% /md %}}</dd>
-    <dt class="property-optional"
+{{% /md %}}</dd><dt class="property-optional"
             title="Optional">
         <span id="state_providerdiskiops_nodejs">
 <a href="#state_providerdiskiops_nodejs" style="color: inherit; text-decoration: inherit;">provider<wbr>Disk<wbr>Iops</a>
@@ -4101,8 +3887,7 @@ Do not specify this field when creating a multi-region cluster using the replica
         <span class="property-type">number</span>
     </dt>
     <dd>{{% md %}}The maximum input/output operations per second (IOPS) the system can perform. The possible values depend on the selected `provider_instance_size_name` and `disk_size_gb`.
-{{% /md %}}</dd>
-    <dt class="property-optional"
+{{% /md %}}</dd><dt class="property-optional"
             title="Optional">
         <span id="state_providerdisktypename_nodejs">
 <a href="#state_providerdisktypename_nodejs" style="color: inherit; text-decoration: inherit;">provider<wbr>Disk<wbr>Type<wbr>Name</a>
@@ -4111,8 +3896,7 @@ Do not specify this field when creating a multi-region cluster using the replica
         <span class="property-type">string</span>
     </dt>
     <dd>{{% md %}}Azure disk type of the server’s root volume. If omitted, Atlas uses the default disk type for the selected providerSettings.instanceSizeName.  Example disk types and associated storage sizes: P4 - 32GB, P6 - 64GB, P10 - 128GB, P15 - 256GB, P20 - 512GB, P30 - 1024GB, P40 - 2048GB, P50 - 4095GB.  More information and the most update to date disk types/storage sizes can be located at https://docs.atlas.mongodb.com/reference/api/clusters-create-one/.
-{{% /md %}}</dd>
-    <dt class="property-optional"
+{{% /md %}}</dd><dt class="property-optional"
             title="Optional">
         <span id="state_providerencryptebsvolume_nodejs">
 <a href="#state_providerencryptebsvolume_nodejs" style="color: inherit; text-decoration: inherit;">provider<wbr>Encrypt<wbr>Ebs<wbr>Volume</a>
@@ -4121,8 +3905,7 @@ Do not specify this field when creating a multi-region cluster using the replica
         <span class="property-type">boolean</span>
     </dt>
     <dd>{{% md %}}The default value is true.  Flag that indicates whether the Amazon EBS encryption feature encrypts the host's root volume for both data at rest within the volume and for data moving between the volume and the cluster. Note: This setting is always enabled for clusters with local NVMe SSDs. **Atlas encrypts all cluster storage and snapshot volumes, securing all cluster data on disk: a concept known as encryption at rest, by default.**.
-{{% /md %}}</dd>
-    <dt class="property-optional"
+{{% /md %}}</dd><dt class="property-optional"
             title="Optional">
         <span id="state_providerinstancesizename_nodejs">
 <a href="#state_providerinstancesizename_nodejs" style="color: inherit; text-decoration: inherit;">provider<wbr>Instance<wbr>Size<wbr>Name</a>
@@ -4132,8 +3915,7 @@ Do not specify this field when creating a multi-region cluster using the replica
     </dt>
     <dd>{{% md %}}Atlas provides different instance sizes, each with a default storage capacity and RAM size. The instance size you select is used for all the data-bearing servers in your cluster. See [Create a Cluster](https://docs.atlas.mongodb.com/reference/api/clusters-create-one/) `providerSettings.instanceSizeName` for valid values and default resources. 
 **Note** free tier (M0) creation is not supported by the Atlas API and hence not supported by this provider.)
-{{% /md %}}</dd>
-    <dt class="property-optional"
+{{% /md %}}</dd><dt class="property-optional"
             title="Optional">
         <span id="state_providername_nodejs">
 <a href="#state_providername_nodejs" style="color: inherit; text-decoration: inherit;">provider<wbr>Name</a>
@@ -4142,8 +3924,7 @@ Do not specify this field when creating a multi-region cluster using the replica
         <span class="property-type">string</span>
     </dt>
     <dd>{{% md %}}Cloud service provider on which the servers are provisioned.
-{{% /md %}}</dd>
-    <dt class="property-optional"
+{{% /md %}}</dd><dt class="property-optional"
             title="Optional">
         <span id="state_providerregionname_nodejs">
 <a href="#state_providerregionname_nodejs" style="color: inherit; text-decoration: inherit;">provider<wbr>Region<wbr>Name</a>
@@ -4153,8 +3934,7 @@ Do not specify this field when creating a multi-region cluster using the replica
     </dt>
     <dd>{{% md %}}Physical location of your MongoDB cluster. The region you choose can affect network latency for clients accessing your databases.  Requires the **Atlas region name**, see the reference list for [AWS](https://docs.atlas.mongodb.com/reference/amazon-aws/), [GCP](https://docs.atlas.mongodb.com/reference/google-gcp/), [Azure](https://docs.atlas.mongodb.com/reference/microsoft-azure/).
 Do not specify this field when creating a multi-region cluster using the replicationSpec document or a Global Cluster with the replicationSpecs array.
-{{% /md %}}</dd>
-    <dt class="property-optional"
+{{% /md %}}</dd><dt class="property-optional"
             title="Optional">
         <span id="state_providervolumetype_nodejs">
 <a href="#state_providervolumetype_nodejs" style="color: inherit; text-decoration: inherit;">provider<wbr>Volume<wbr>Type</a>
@@ -4163,8 +3943,7 @@ Do not specify this field when creating a multi-region cluster using the replica
         <span class="property-type">string</span>
     </dt>
     <dd>{{% md %}}The type of the volume. The possible values are: `STANDARD` and `PROVISIONED`.  `PROVISIONED` required if setting IOPS higher than the default instance IOPS.
-{{% /md %}}</dd>
-    <dt class="property-optional"
+{{% /md %}}</dd><dt class="property-optional"
             title="Optional">
         <span id="state_replicationfactor_nodejs">
 <a href="#state_replicationfactor_nodejs" style="color: inherit; text-decoration: inherit;">replication<wbr>Factor</a>
@@ -4173,8 +3952,7 @@ Do not specify this field when creating a multi-region cluster using the replica
         <span class="property-type">number</span>
     </dt>
     <dd>{{% md %}}Number of replica set members. Each member keeps a copy of your databases, providing high availability and data redundancy. The possible values are 3, 5, or 7. The default value is 3.
-{{% /md %}}</dd>
-    <dt class="property-optional"
+{{% /md %}}</dd><dt class="property-optional"
             title="Optional">
         <span id="state_replicationspecs_nodejs">
 <a href="#state_replicationspecs_nodejs" style="color: inherit; text-decoration: inherit;">replication<wbr>Specs</a>
@@ -4183,8 +3961,7 @@ Do not specify this field when creating a multi-region cluster using the replica
         <span class="property-type"><a href="#clusterreplicationspec">Cluster<wbr>Replication<wbr>Spec[]</a></span>
     </dt>
     <dd>{{% md %}}Configuration for cluster regions.  See Replication Spec below for more details.
-{{% /md %}}</dd>
-    <dt class="property-optional"
+{{% /md %}}</dd><dt class="property-optional"
             title="Optional">
         <span id="state_snapshotbackuppolicies_nodejs">
 <a href="#state_snapshotbackuppolicies_nodejs" style="color: inherit; text-decoration: inherit;">snapshot<wbr>Backup<wbr>Policies</a>
@@ -4193,8 +3970,7 @@ Do not specify this field when creating a multi-region cluster using the replica
         <span class="property-type"><a href="#clustersnapshotbackuppolicy">Cluster<wbr>Snapshot<wbr>Backup<wbr>Policy[]</a></span>
     </dt>
     <dd>{{% md %}}current snapshot schedule and retention settings for the cluster.
-{{% /md %}}</dd>
-    <dt class="property-optional"
+{{% /md %}}</dd><dt class="property-optional"
             title="Optional">
         <span id="state_srvaddress_nodejs">
 <a href="#state_srvaddress_nodejs" style="color: inherit; text-decoration: inherit;">srv<wbr>Address</a>
@@ -4203,8 +3979,7 @@ Do not specify this field when creating a multi-region cluster using the replica
         <span class="property-type">string</span>
     </dt>
     <dd>{{% md %}}Connection string for connecting to the Atlas cluster. The +srv modifier forces the connection to use TLS/SSL. See the mongoURI for additional options.
-{{% /md %}}</dd>
-    <dt class="property-optional"
+{{% /md %}}</dd><dt class="property-optional"
             title="Optional">
         <span id="state_statename_nodejs">
 <a href="#state_statename_nodejs" style="color: inherit; text-decoration: inherit;">state<wbr>Name</a>
@@ -4219,14 +3994,11 @@ Do not specify this field when creating a multi-region cluster using the replica
 - DELETING
 - DELETED
 - REPAIRING
-{{% /md %}}</dd>
-</dl>
+{{% /md %}}</dd></dl>
 {{% /choosable %}}
 
 {{% choosable language python %}}
-<dl class="resources-properties">
-
-    <dt class="property-optional"
+<dl class="resources-properties"><dt class="property-optional"
             title="Optional">
         <span id="state_advanced_configuration_python">
 <a href="#state_advanced_configuration_python" style="color: inherit; text-decoration: inherit;">advanced_<wbr>configuration</a>
@@ -4234,8 +4006,7 @@ Do not specify this field when creating a multi-region cluster using the replica
         <span class="property-indicator"></span>
         <span class="property-type"><a href="#clusteradvancedconfiguration">Cluster<wbr>Advanced<wbr>Configuration<wbr>Args</a></span>
     </dt>
-    <dd>{{% md %}}{{% /md %}}</dd>
-    <dt class="property-optional"
+    <dd>{{% md %}}{{% /md %}}</dd><dt class="property-optional"
             title="Optional">
         <span id="state_auto_scaling_compute_enabled_python">
 <a href="#state_auto_scaling_compute_enabled_python" style="color: inherit; text-decoration: inherit;">auto_<wbr>scaling_<wbr>compute_<wbr>enabled</a>
@@ -4246,8 +4017,7 @@ Do not specify this field when creating a multi-region cluster using the replica
     <dd>{{% md %}}Specifies whether cluster tier auto-scaling is enabled. The default is false.
 - Set to `true` to enable cluster tier auto-scaling. If enabled, you must specify a value for `providerSettings.autoScaling.compute.maxInstanceSize`.
 - Set to `false` to disable cluster tier auto-scaling.
-{{% /md %}}</dd>
-    <dt class="property-optional"
+{{% /md %}}</dd><dt class="property-optional"
             title="Optional">
         <span id="state_auto_scaling_compute_scale_down_enabled_python">
 <a href="#state_auto_scaling_compute_scale_down_enabled_python" style="color: inherit; text-decoration: inherit;">auto_<wbr>scaling_<wbr>compute_<wbr>scale_<wbr>down_<wbr>enabled</a>
@@ -4257,8 +4027,7 @@ Do not specify this field when creating a multi-region cluster using the replica
     </dt>
     <dd>{{% md %}}Set to `true` to enable the cluster tier to scale down. This option is only available if `autoScaling.compute.enabled` is `true`.
 - If this option is enabled, you must specify a value for `providerSettings.autoScaling.compute.minInstanceSize`
-{{% /md %}}</dd>
-    <dt class="property-optional"
+{{% /md %}}</dd><dt class="property-optional"
             title="Optional">
         <span id="state_auto_scaling_disk_gb_enabled_python">
 <a href="#state_auto_scaling_disk_gb_enabled_python" style="color: inherit; text-decoration: inherit;">auto_<wbr>scaling_<wbr>disk_<wbr>gb_<wbr>enabled</a>
@@ -4269,8 +4038,7 @@ Do not specify this field when creating a multi-region cluster using the replica
     <dd>{{% md %}}Specifies whether disk auto-scaling is enabled. The default is true.
 - Set to `true` to enable disk auto-scaling.
 - Set to `false` to disable disk auto-scaling.
-{{% /md %}}</dd>
-    <dt class="property-optional"
+{{% /md %}}</dd><dt class="property-optional"
             title="Optional">
         <span id="state_backing_provider_name_python">
 <a href="#state_backing_provider_name_python" style="color: inherit; text-decoration: inherit;">backing_<wbr>provider_<wbr>name</a>
@@ -4279,8 +4047,7 @@ Do not specify this field when creating a multi-region cluster using the replica
         <span class="property-type">str</span>
     </dt>
     <dd>{{% md %}}Cloud service provider on which the server for a multi-tenant cluster is provisioned.
-{{% /md %}}</dd>
-    <dt class="property-optional"
+{{% /md %}}</dd><dt class="property-optional"
             title="Optional">
         <span id="state_backup_enabled_python">
 <a href="#state_backup_enabled_python" style="color: inherit; text-decoration: inherit;">backup_<wbr>enabled</a>
@@ -4288,8 +4055,7 @@ Do not specify this field when creating a multi-region cluster using the replica
         <span class="property-indicator"></span>
         <span class="property-type">bool</span>
     </dt>
-    <dd>{{% md %}}{{% /md %}}</dd>
-    <dt class="property-optional"
+    <dd>{{% md %}}{{% /md %}}</dd><dt class="property-optional"
             title="Optional">
         <span id="state_bi_connector_python">
 <a href="#state_bi_connector_python" style="color: inherit; text-decoration: inherit;">bi_<wbr>connector</a>
@@ -4298,8 +4064,7 @@ Do not specify this field when creating a multi-region cluster using the replica
         <span class="property-type"><a href="#clusterbiconnector">Cluster<wbr>Bi<wbr>Connector<wbr>Args</a></span>
     </dt>
     <dd>{{% md %}}Specifies BI Connector for Atlas configuration on this cluster. BI Connector for Atlas is only available for M10+ clusters. See BI Connector below for more details.
-{{% /md %}}</dd>
-    <dt class="property-optional"
+{{% /md %}}</dd><dt class="property-optional"
             title="Optional">
         <span id="state_cluster_id_python">
 <a href="#state_cluster_id_python" style="color: inherit; text-decoration: inherit;">cluster_<wbr>id</a>
@@ -4308,8 +4073,7 @@ Do not specify this field when creating a multi-region cluster using the replica
         <span class="property-type">str</span>
     </dt>
     <dd>{{% md %}}The cluster ID.
-{{% /md %}}</dd>
-    <dt class="property-optional"
+{{% /md %}}</dd><dt class="property-optional"
             title="Optional">
         <span id="state_cluster_type_python">
 <a href="#state_cluster_type_python" style="color: inherit; text-decoration: inherit;">cluster_<wbr>type</a>
@@ -4318,8 +4082,7 @@ Do not specify this field when creating a multi-region cluster using the replica
         <span class="property-type">str</span>
     </dt>
     <dd>{{% md %}}Specifies the type of the cluster that you want to modify. You cannot convert a sharded cluster deployment to a replica set deployment.
-{{% /md %}}</dd>
-    <dt class="property-optional"
+{{% /md %}}</dd><dt class="property-optional"
             title="Optional">
         <span id="state_connection_strings_python">
 <a href="#state_connection_strings_python" style="color: inherit; text-decoration: inherit;">connection_<wbr>strings</a>
@@ -4328,8 +4091,7 @@ Do not specify this field when creating a multi-region cluster using the replica
         <span class="property-type"><a href="#clusterconnectionstrings">Cluster<wbr>Connection<wbr>Strings<wbr>Args</a></span>
     </dt>
     <dd>{{% md %}}Set of connection strings that your applications use to connect to this cluster. More info in [Connection-strings](https://docs.mongodb.com/manual/reference/connection-string/). Use the parameters in this object to connect your applications to this cluster. To learn more about the formats of connection strings, see [Connection String Options](https://docs.atlas.mongodb.com/reference/faq/connection-changes/). NOTE: Atlas returns the contents of this object after the cluster is operational, not while it builds the cluster.
-{{% /md %}}</dd>
-    <dt class="property-optional"
+{{% /md %}}</dd><dt class="property-optional"
             title="Optional">
         <span id="state_container_id_python">
 <a href="#state_container_id_python" style="color: inherit; text-decoration: inherit;">container_<wbr>id</a>
@@ -4338,8 +4100,7 @@ Do not specify this field when creating a multi-region cluster using the replica
         <span class="property-type">str</span>
     </dt>
     <dd>{{% md %}}The Network Peering Container ID. The id of the container either created programmatically by the user before any clusters existed in the project or when the first cluster in the region (AWS/Azure) or project (GCP) was created.
-{{% /md %}}</dd>
-    <dt class="property-optional"
+{{% /md %}}</dd><dt class="property-optional"
             title="Optional">
         <span id="state_disk_size_gb_python">
 <a href="#state_disk_size_gb_python" style="color: inherit; text-decoration: inherit;">disk_<wbr>size_<wbr>gb</a>
@@ -4352,8 +4113,7 @@ Do not specify this field when creating a multi-region cluster using the replica
 * Note: The maximum value for disk storage cannot exceed 50 times the maximum RAM for the selected cluster. If you require additional storage space beyond this limitation, consider upgrading your cluster to a higher tier.
 * Cannot be used with clusters with local NVMe SSDs
 * Cannot be used with Azure clusters
-{{% /md %}}</dd>
-    <dt class="property-optional"
+{{% /md %}}</dd><dt class="property-optional"
             title="Optional">
         <span id="state_encryption_at_rest_provider_python">
 <a href="#state_encryption_at_rest_provider_python" style="color: inherit; text-decoration: inherit;">encryption_<wbr>at_<wbr>rest_<wbr>provider</a>
@@ -4362,8 +4122,7 @@ Do not specify this field when creating a multi-region cluster using the replica
         <span class="property-type">str</span>
     </dt>
     <dd>{{% md %}}Possible values are AWS, GCP, AZURE or NONE.  Only needed if you desire to manage the keys, see [Encryption at Rest using Customer Key Management](https://docs.atlas.mongodb.com/security-aws-kms/) for complete documentation.  You must configure encryption at rest for the Atlas project before enabling it on any cluster in the project. For complete documentation on configuring Encryption at Rest, see Encryption at Rest using Customer Key Management. Requires M10 or greater. and for legacy backups, backup_enabled, to be false or omitted. **Note: Atlas encrypts all cluster storage and snapshot volumes, securing all cluster data on disk: a concept known as encryption at rest, by default**.
-{{% /md %}}</dd>
-    <dt class="property-optional"
+{{% /md %}}</dd><dt class="property-optional"
             title="Optional">
         <span id="state_labels_python">
 <a href="#state_labels_python" style="color: inherit; text-decoration: inherit;">labels</a>
@@ -4371,8 +4130,7 @@ Do not specify this field when creating a multi-region cluster using the replica
         <span class="property-indicator"></span>
         <span class="property-type"><a href="#clusterlabel">Sequence[Cluster<wbr>Label<wbr>Args]</a></span>
     </dt>
-    <dd>{{% md %}}{{% /md %}}</dd>
-    <dt class="property-optional"
+    <dd>{{% md %}}{{% /md %}}</dd><dt class="property-optional"
             title="Optional">
         <span id="state_mongo_db_major_version_python">
 <a href="#state_mongo_db_major_version_python" style="color: inherit; text-decoration: inherit;">mongo_<wbr>db_<wbr>major_<wbr>version</a>
@@ -4381,8 +4139,7 @@ Do not specify this field when creating a multi-region cluster using the replica
         <span class="property-type">str</span>
     </dt>
     <dd>{{% md %}}Version of the cluster to deploy. Atlas supports the following MongoDB versions for M10+ clusters: `3.6`, `4.0`, or `4.2`. You must set this value to `4.2` if `provider_instance_size_name` is either M2 or M5.
-{{% /md %}}</dd>
-    <dt class="property-optional"
+{{% /md %}}</dd><dt class="property-optional"
             title="Optional">
         <span id="state_mongo_db_version_python">
 <a href="#state_mongo_db_version_python" style="color: inherit; text-decoration: inherit;">mongo_<wbr>db_<wbr>version</a>
@@ -4391,8 +4148,7 @@ Do not specify this field when creating a multi-region cluster using the replica
         <span class="property-type">str</span>
     </dt>
     <dd>{{% md %}}Version of MongoDB the cluster runs, in `major-version`.`minor-version` format.
-{{% /md %}}</dd>
-    <dt class="property-optional"
+{{% /md %}}</dd><dt class="property-optional"
             title="Optional">
         <span id="state_mongo_uri_python">
 <a href="#state_mongo_uri_python" style="color: inherit; text-decoration: inherit;">mongo_<wbr>uri</a>
@@ -4401,8 +4157,7 @@ Do not specify this field when creating a multi-region cluster using the replica
         <span class="property-type">str</span>
     </dt>
     <dd>{{% md %}}Base connection string for the cluster. Atlas only displays this field after the cluster is operational, not while it builds the cluster.
-{{% /md %}}</dd>
-    <dt class="property-optional"
+{{% /md %}}</dd><dt class="property-optional"
             title="Optional">
         <span id="state_mongo_uri_updated_python">
 <a href="#state_mongo_uri_updated_python" style="color: inherit; text-decoration: inherit;">mongo_<wbr>uri_<wbr>updated</a>
@@ -4411,8 +4166,7 @@ Do not specify this field when creating a multi-region cluster using the replica
         <span class="property-type">str</span>
     </dt>
     <dd>{{% md %}}Lists when the connection string was last updated. The connection string changes, for example, if you change a replica set to a sharded cluster.
-{{% /md %}}</dd>
-    <dt class="property-optional"
+{{% /md %}}</dd><dt class="property-optional"
             title="Optional">
         <span id="state_mongo_uri_with_options_python">
 <a href="#state_mongo_uri_with_options_python" style="color: inherit; text-decoration: inherit;">mongo_<wbr>uri_<wbr>with_<wbr>options</a>
@@ -4421,8 +4175,7 @@ Do not specify this field when creating a multi-region cluster using the replica
         <span class="property-type">str</span>
     </dt>
     <dd>{{% md %}}connection string for connecting to the Atlas cluster. Includes the replicaSet, ssl, and authSource query parameters in the connection string with values appropriate for the cluster.
-{{% /md %}}</dd>
-    <dt class="property-optional"
+{{% /md %}}</dd><dt class="property-optional"
             title="Optional">
         <span id="state_name_python">
 <a href="#state_name_python" style="color: inherit; text-decoration: inherit;">name</a>
@@ -4431,8 +4184,7 @@ Do not specify this field when creating a multi-region cluster using the replica
         <span class="property-type">str</span>
     </dt>
     <dd>{{% md %}}Name of the cluster as it appears in Atlas. Once the cluster is created, its name cannot be changed.
-{{% /md %}}</dd>
-    <dt class="property-optional"
+{{% /md %}}</dd><dt class="property-optional"
             title="Optional">
         <span id="state_num_shards_python">
 <a href="#state_num_shards_python" style="color: inherit; text-decoration: inherit;">num_<wbr>shards</a>
@@ -4441,8 +4193,7 @@ Do not specify this field when creating a multi-region cluster using the replica
         <span class="property-type">int</span>
     </dt>
     <dd>{{% md %}}Number of shards to deploy in the specified zone, minimum 1.
-{{% /md %}}</dd>
-    <dt class="property-optional"
+{{% /md %}}</dd><dt class="property-optional"
             title="Optional">
         <span id="state_paused_python">
 <a href="#state_paused_python" style="color: inherit; text-decoration: inherit;">paused</a>
@@ -4451,8 +4202,7 @@ Do not specify this field when creating a multi-region cluster using the replica
         <span class="property-type">bool</span>
     </dt>
     <dd>{{% md %}}Flag that indicates whether the cluster is paused or not.
-{{% /md %}}</dd>
-    <dt class="property-optional"
+{{% /md %}}</dd><dt class="property-optional"
             title="Optional">
         <span id="state_pit_enabled_python">
 <a href="#state_pit_enabled_python" style="color: inherit; text-decoration: inherit;">pit_<wbr>enabled</a>
@@ -4461,8 +4211,7 @@ Do not specify this field when creating a multi-region cluster using the replica
         <span class="property-type">bool</span>
     </dt>
     <dd>{{% md %}}- Flag that indicates if the cluster uses Continuous Cloud Backup. If set to true, provider_backup_enabled must also be set to true.
-{{% /md %}}</dd>
-    <dt class="property-optional"
+{{% /md %}}</dd><dt class="property-optional"
             title="Optional">
         <span id="state_project_id_python">
 <a href="#state_project_id_python" style="color: inherit; text-decoration: inherit;">project_<wbr>id</a>
@@ -4471,8 +4220,7 @@ Do not specify this field when creating a multi-region cluster using the replica
         <span class="property-type">str</span>
     </dt>
     <dd>{{% md %}}The unique ID for the project to create the database user.
-{{% /md %}}</dd>
-    <dt class="property-optional"
+{{% /md %}}</dd><dt class="property-optional"
             title="Optional">
         <span id="state_provider_auto_scaling_compute_max_instance_size_python">
 <a href="#state_provider_auto_scaling_compute_max_instance_size_python" style="color: inherit; text-decoration: inherit;">provider_<wbr>auto_<wbr>scaling_<wbr>compute_<wbr>max_<wbr>instance_<wbr>size</a>
@@ -4481,8 +4229,7 @@ Do not specify this field when creating a multi-region cluster using the replica
         <span class="property-type">str</span>
     </dt>
     <dd>{{% md %}}Maximum instance size to which your cluster can automatically scale (e.g., M40). Required if `autoScaling.compute.enabled` is `true`.
-{{% /md %}}</dd>
-    <dt class="property-optional"
+{{% /md %}}</dd><dt class="property-optional"
             title="Optional">
         <span id="state_provider_auto_scaling_compute_min_instance_size_python">
 <a href="#state_provider_auto_scaling_compute_min_instance_size_python" style="color: inherit; text-decoration: inherit;">provider_<wbr>auto_<wbr>scaling_<wbr>compute_<wbr>min_<wbr>instance_<wbr>size</a>
@@ -4491,8 +4238,7 @@ Do not specify this field when creating a multi-region cluster using the replica
         <span class="property-type">str</span>
     </dt>
     <dd>{{% md %}}Minimum instance size to which your cluster can automatically scale (e.g., M10). Required if `autoScaling.compute.scaleDownEnabled` is `true`.
-{{% /md %}}</dd>
-    <dt class="property-optional"
+{{% /md %}}</dd><dt class="property-optional"
             title="Optional">
         <span id="state_provider_backup_enabled_python">
 <a href="#state_provider_backup_enabled_python" style="color: inherit; text-decoration: inherit;">provider_<wbr>backup_<wbr>enabled</a>
@@ -4501,8 +4247,7 @@ Do not specify this field when creating a multi-region cluster using the replica
         <span class="property-type">bool</span>
     </dt>
     <dd>{{% md %}}Flag indicating if the cluster uses Cloud Backup for backups.
-{{% /md %}}</dd>
-    <dt class="property-optional"
+{{% /md %}}</dd><dt class="property-optional"
             title="Optional">
         <span id="state_provider_disk_iops_python">
 <a href="#state_provider_disk_iops_python" style="color: inherit; text-decoration: inherit;">provider_<wbr>disk_<wbr>iops</a>
@@ -4511,8 +4256,7 @@ Do not specify this field when creating a multi-region cluster using the replica
         <span class="property-type">int</span>
     </dt>
     <dd>{{% md %}}The maximum input/output operations per second (IOPS) the system can perform. The possible values depend on the selected `provider_instance_size_name` and `disk_size_gb`.
-{{% /md %}}</dd>
-    <dt class="property-optional"
+{{% /md %}}</dd><dt class="property-optional"
             title="Optional">
         <span id="state_provider_disk_type_name_python">
 <a href="#state_provider_disk_type_name_python" style="color: inherit; text-decoration: inherit;">provider_<wbr>disk_<wbr>type_<wbr>name</a>
@@ -4521,8 +4265,7 @@ Do not specify this field when creating a multi-region cluster using the replica
         <span class="property-type">str</span>
     </dt>
     <dd>{{% md %}}Azure disk type of the server’s root volume. If omitted, Atlas uses the default disk type for the selected providerSettings.instanceSizeName.  Example disk types and associated storage sizes: P4 - 32GB, P6 - 64GB, P10 - 128GB, P15 - 256GB, P20 - 512GB, P30 - 1024GB, P40 - 2048GB, P50 - 4095GB.  More information and the most update to date disk types/storage sizes can be located at https://docs.atlas.mongodb.com/reference/api/clusters-create-one/.
-{{% /md %}}</dd>
-    <dt class="property-optional"
+{{% /md %}}</dd><dt class="property-optional"
             title="Optional">
         <span id="state_provider_encrypt_ebs_volume_python">
 <a href="#state_provider_encrypt_ebs_volume_python" style="color: inherit; text-decoration: inherit;">provider_<wbr>encrypt_<wbr>ebs_<wbr>volume</a>
@@ -4531,8 +4274,7 @@ Do not specify this field when creating a multi-region cluster using the replica
         <span class="property-type">bool</span>
     </dt>
     <dd>{{% md %}}The default value is true.  Flag that indicates whether the Amazon EBS encryption feature encrypts the host's root volume for both data at rest within the volume and for data moving between the volume and the cluster. Note: This setting is always enabled for clusters with local NVMe SSDs. **Atlas encrypts all cluster storage and snapshot volumes, securing all cluster data on disk: a concept known as encryption at rest, by default.**.
-{{% /md %}}</dd>
-    <dt class="property-optional"
+{{% /md %}}</dd><dt class="property-optional"
             title="Optional">
         <span id="state_provider_instance_size_name_python">
 <a href="#state_provider_instance_size_name_python" style="color: inherit; text-decoration: inherit;">provider_<wbr>instance_<wbr>size_<wbr>name</a>
@@ -4542,8 +4284,7 @@ Do not specify this field when creating a multi-region cluster using the replica
     </dt>
     <dd>{{% md %}}Atlas provides different instance sizes, each with a default storage capacity and RAM size. The instance size you select is used for all the data-bearing servers in your cluster. See [Create a Cluster](https://docs.atlas.mongodb.com/reference/api/clusters-create-one/) `providerSettings.instanceSizeName` for valid values and default resources. 
 **Note** free tier (M0) creation is not supported by the Atlas API and hence not supported by this provider.)
-{{% /md %}}</dd>
-    <dt class="property-optional"
+{{% /md %}}</dd><dt class="property-optional"
             title="Optional">
         <span id="state_provider_name_python">
 <a href="#state_provider_name_python" style="color: inherit; text-decoration: inherit;">provider_<wbr>name</a>
@@ -4552,8 +4293,7 @@ Do not specify this field when creating a multi-region cluster using the replica
         <span class="property-type">str</span>
     </dt>
     <dd>{{% md %}}Cloud service provider on which the servers are provisioned.
-{{% /md %}}</dd>
-    <dt class="property-optional"
+{{% /md %}}</dd><dt class="property-optional"
             title="Optional">
         <span id="state_provider_region_name_python">
 <a href="#state_provider_region_name_python" style="color: inherit; text-decoration: inherit;">provider_<wbr>region_<wbr>name</a>
@@ -4563,8 +4303,7 @@ Do not specify this field when creating a multi-region cluster using the replica
     </dt>
     <dd>{{% md %}}Physical location of your MongoDB cluster. The region you choose can affect network latency for clients accessing your databases.  Requires the **Atlas region name**, see the reference list for [AWS](https://docs.atlas.mongodb.com/reference/amazon-aws/), [GCP](https://docs.atlas.mongodb.com/reference/google-gcp/), [Azure](https://docs.atlas.mongodb.com/reference/microsoft-azure/).
 Do not specify this field when creating a multi-region cluster using the replicationSpec document or a Global Cluster with the replicationSpecs array.
-{{% /md %}}</dd>
-    <dt class="property-optional"
+{{% /md %}}</dd><dt class="property-optional"
             title="Optional">
         <span id="state_provider_volume_type_python">
 <a href="#state_provider_volume_type_python" style="color: inherit; text-decoration: inherit;">provider_<wbr>volume_<wbr>type</a>
@@ -4573,8 +4312,7 @@ Do not specify this field when creating a multi-region cluster using the replica
         <span class="property-type">str</span>
     </dt>
     <dd>{{% md %}}The type of the volume. The possible values are: `STANDARD` and `PROVISIONED`.  `PROVISIONED` required if setting IOPS higher than the default instance IOPS.
-{{% /md %}}</dd>
-    <dt class="property-optional"
+{{% /md %}}</dd><dt class="property-optional"
             title="Optional">
         <span id="state_replication_factor_python">
 <a href="#state_replication_factor_python" style="color: inherit; text-decoration: inherit;">replication_<wbr>factor</a>
@@ -4583,8 +4321,7 @@ Do not specify this field when creating a multi-region cluster using the replica
         <span class="property-type">int</span>
     </dt>
     <dd>{{% md %}}Number of replica set members. Each member keeps a copy of your databases, providing high availability and data redundancy. The possible values are 3, 5, or 7. The default value is 3.
-{{% /md %}}</dd>
-    <dt class="property-optional"
+{{% /md %}}</dd><dt class="property-optional"
             title="Optional">
         <span id="state_replication_specs_python">
 <a href="#state_replication_specs_python" style="color: inherit; text-decoration: inherit;">replication_<wbr>specs</a>
@@ -4593,8 +4330,7 @@ Do not specify this field when creating a multi-region cluster using the replica
         <span class="property-type"><a href="#clusterreplicationspec">Sequence[Cluster<wbr>Replication<wbr>Spec<wbr>Args]</a></span>
     </dt>
     <dd>{{% md %}}Configuration for cluster regions.  See Replication Spec below for more details.
-{{% /md %}}</dd>
-    <dt class="property-optional"
+{{% /md %}}</dd><dt class="property-optional"
             title="Optional">
         <span id="state_snapshot_backup_policies_python">
 <a href="#state_snapshot_backup_policies_python" style="color: inherit; text-decoration: inherit;">snapshot_<wbr>backup_<wbr>policies</a>
@@ -4603,8 +4339,7 @@ Do not specify this field when creating a multi-region cluster using the replica
         <span class="property-type"><a href="#clustersnapshotbackuppolicy">Sequence[Cluster<wbr>Snapshot<wbr>Backup<wbr>Policy<wbr>Args]</a></span>
     </dt>
     <dd>{{% md %}}current snapshot schedule and retention settings for the cluster.
-{{% /md %}}</dd>
-    <dt class="property-optional"
+{{% /md %}}</dd><dt class="property-optional"
             title="Optional">
         <span id="state_srv_address_python">
 <a href="#state_srv_address_python" style="color: inherit; text-decoration: inherit;">srv_<wbr>address</a>
@@ -4613,8 +4348,7 @@ Do not specify this field when creating a multi-region cluster using the replica
         <span class="property-type">str</span>
     </dt>
     <dd>{{% md %}}Connection string for connecting to the Atlas cluster. The +srv modifier forces the connection to use TLS/SSL. See the mongoURI for additional options.
-{{% /md %}}</dd>
-    <dt class="property-optional"
+{{% /md %}}</dd><dt class="property-optional"
             title="Optional">
         <span id="state_state_name_python">
 <a href="#state_state_name_python" style="color: inherit; text-decoration: inherit;">state_<wbr>name</a>
@@ -4629,8 +4363,7 @@ Do not specify this field when creating a multi-region cluster using the replica
 - DELETING
 - DELETED
 - REPAIRING
-{{% /md %}}</dd>
-</dl>
+{{% /md %}}</dd></dl>
 {{% /choosable %}}
 
 
@@ -4645,9 +4378,7 @@ Do not specify this field when creating a multi-region cluster using the replica
 <h4 id="clusteradvancedconfiguration">Cluster<wbr>Advanced<wbr>Configuration</h4>
 
 {{% choosable language csharp %}}
-<dl class="resources-properties">
-
-    <dt class="property-optional"
+<dl class="resources-properties"><dt class="property-optional"
             title="Optional">
         <span id="failindexkeytoolong_csharp">
 <a href="#failindexkeytoolong_csharp" style="color: inherit; text-decoration: inherit;">Fail<wbr>Index<wbr>Key<wbr>Too<wbr>Long</a>
@@ -4656,8 +4387,7 @@ Do not specify this field when creating a multi-region cluster using the replica
         <span class="property-type">bool</span>
     </dt>
     <dd>{{% md %}}When true, documents can only be updated or inserted if, for all indexed fields on the target collection, the corresponding index entries do not exceed 1024 bytes. When false, mongod writes documents that exceed the limit but does not index them.
-{{% /md %}}</dd>
-    <dt class="property-optional"
+{{% /md %}}</dd><dt class="property-optional"
             title="Optional">
         <span id="javascriptenabled_csharp">
 <a href="#javascriptenabled_csharp" style="color: inherit; text-decoration: inherit;">Javascript<wbr>Enabled</a>
@@ -4666,8 +4396,7 @@ Do not specify this field when creating a multi-region cluster using the replica
         <span class="property-type">bool</span>
     </dt>
     <dd>{{% md %}}When true, the cluster allows execution of operations that perform server-side executions of JavaScript. When false, the cluster disables execution of those operations.
-{{% /md %}}</dd>
-    <dt class="property-optional"
+{{% /md %}}</dd><dt class="property-optional"
             title="Optional">
         <span id="minimumenabledtlsprotocol_csharp">
 <a href="#minimumenabledtlsprotocol_csharp" style="color: inherit; text-decoration: inherit;">Minimum<wbr>Enabled<wbr>Tls<wbr>Protocol</a>
@@ -4676,8 +4405,7 @@ Do not specify this field when creating a multi-region cluster using the replica
         <span class="property-type">string</span>
     </dt>
     <dd>{{% md %}}Sets the minimum Transport Layer Security (TLS) version the cluster accepts for incoming connections.Valid values are:
-{{% /md %}}</dd>
-    <dt class="property-optional"
+{{% /md %}}</dd><dt class="property-optional"
             title="Optional">
         <span id="notablescan_csharp">
 <a href="#notablescan_csharp" style="color: inherit; text-decoration: inherit;">No<wbr>Table<wbr>Scan</a>
@@ -4686,8 +4414,7 @@ Do not specify this field when creating a multi-region cluster using the replica
         <span class="property-type">bool</span>
     </dt>
     <dd>{{% md %}}When true, the cluster disables the execution of any query that requires a collection scan to return results. When false, the cluster allows the execution of those operations.
-{{% /md %}}</dd>
-    <dt class="property-optional"
+{{% /md %}}</dd><dt class="property-optional"
             title="Optional">
         <span id="oplogsizemb_csharp">
 <a href="#oplogsizemb_csharp" style="color: inherit; text-decoration: inherit;">Oplog<wbr>Size<wbr>Mb</a>
@@ -4696,8 +4423,7 @@ Do not specify this field when creating a multi-region cluster using the replica
         <span class="property-type">int</span>
     </dt>
     <dd>{{% md %}}The custom oplog size of the cluster. Without a value that indicates that the cluster uses the default oplog size calculated by Atlas.
-{{% /md %}}</dd>
-    <dt class="property-optional"
+{{% /md %}}</dd><dt class="property-optional"
             title="Optional">
         <span id="samplerefreshintervalbiconnector_csharp">
 <a href="#samplerefreshintervalbiconnector_csharp" style="color: inherit; text-decoration: inherit;">Sample<wbr>Refresh<wbr>Interval<wbr>Bi<wbr>Connector</a>
@@ -4706,8 +4432,7 @@ Do not specify this field when creating a multi-region cluster using the replica
         <span class="property-type">int</span>
     </dt>
     <dd>{{% md %}}Interval in seconds at which the mongosqld process re-samples data to create its relational schema. The default value is 300. The specified value must be a positive integer. Available only for Atlas deployments in which BI Connector for Atlas is enabled.
-{{% /md %}}</dd>
-    <dt class="property-optional"
+{{% /md %}}</dd><dt class="property-optional"
             title="Optional">
         <span id="samplesizebiconnector_csharp">
 <a href="#samplesizebiconnector_csharp" style="color: inherit; text-decoration: inherit;">Sample<wbr>Size<wbr>Bi<wbr>Connector</a>
@@ -4716,14 +4441,11 @@ Do not specify this field when creating a multi-region cluster using the replica
         <span class="property-type">int</span>
     </dt>
     <dd>{{% md %}}Number of documents per database to sample when gathering schema information. Defaults to 100. Available only for Atlas deployments in which BI Connector for Atlas is enabled.
-{{% /md %}}</dd>
-</dl>
+{{% /md %}}</dd></dl>
 {{% /choosable %}}
 
 {{% choosable language go %}}
-<dl class="resources-properties">
-
-    <dt class="property-optional"
+<dl class="resources-properties"><dt class="property-optional"
             title="Optional">
         <span id="failindexkeytoolong_go">
 <a href="#failindexkeytoolong_go" style="color: inherit; text-decoration: inherit;">Fail<wbr>Index<wbr>Key<wbr>Too<wbr>Long</a>
@@ -4732,8 +4454,7 @@ Do not specify this field when creating a multi-region cluster using the replica
         <span class="property-type">bool</span>
     </dt>
     <dd>{{% md %}}When true, documents can only be updated or inserted if, for all indexed fields on the target collection, the corresponding index entries do not exceed 1024 bytes. When false, mongod writes documents that exceed the limit but does not index them.
-{{% /md %}}</dd>
-    <dt class="property-optional"
+{{% /md %}}</dd><dt class="property-optional"
             title="Optional">
         <span id="javascriptenabled_go">
 <a href="#javascriptenabled_go" style="color: inherit; text-decoration: inherit;">Javascript<wbr>Enabled</a>
@@ -4742,8 +4463,7 @@ Do not specify this field when creating a multi-region cluster using the replica
         <span class="property-type">bool</span>
     </dt>
     <dd>{{% md %}}When true, the cluster allows execution of operations that perform server-side executions of JavaScript. When false, the cluster disables execution of those operations.
-{{% /md %}}</dd>
-    <dt class="property-optional"
+{{% /md %}}</dd><dt class="property-optional"
             title="Optional">
         <span id="minimumenabledtlsprotocol_go">
 <a href="#minimumenabledtlsprotocol_go" style="color: inherit; text-decoration: inherit;">Minimum<wbr>Enabled<wbr>Tls<wbr>Protocol</a>
@@ -4752,8 +4472,7 @@ Do not specify this field when creating a multi-region cluster using the replica
         <span class="property-type">string</span>
     </dt>
     <dd>{{% md %}}Sets the minimum Transport Layer Security (TLS) version the cluster accepts for incoming connections.Valid values are:
-{{% /md %}}</dd>
-    <dt class="property-optional"
+{{% /md %}}</dd><dt class="property-optional"
             title="Optional">
         <span id="notablescan_go">
 <a href="#notablescan_go" style="color: inherit; text-decoration: inherit;">No<wbr>Table<wbr>Scan</a>
@@ -4762,8 +4481,7 @@ Do not specify this field when creating a multi-region cluster using the replica
         <span class="property-type">bool</span>
     </dt>
     <dd>{{% md %}}When true, the cluster disables the execution of any query that requires a collection scan to return results. When false, the cluster allows the execution of those operations.
-{{% /md %}}</dd>
-    <dt class="property-optional"
+{{% /md %}}</dd><dt class="property-optional"
             title="Optional">
         <span id="oplogsizemb_go">
 <a href="#oplogsizemb_go" style="color: inherit; text-decoration: inherit;">Oplog<wbr>Size<wbr>Mb</a>
@@ -4772,8 +4490,7 @@ Do not specify this field when creating a multi-region cluster using the replica
         <span class="property-type">int</span>
     </dt>
     <dd>{{% md %}}The custom oplog size of the cluster. Without a value that indicates that the cluster uses the default oplog size calculated by Atlas.
-{{% /md %}}</dd>
-    <dt class="property-optional"
+{{% /md %}}</dd><dt class="property-optional"
             title="Optional">
         <span id="samplerefreshintervalbiconnector_go">
 <a href="#samplerefreshintervalbiconnector_go" style="color: inherit; text-decoration: inherit;">Sample<wbr>Refresh<wbr>Interval<wbr>Bi<wbr>Connector</a>
@@ -4782,8 +4499,7 @@ Do not specify this field when creating a multi-region cluster using the replica
         <span class="property-type">int</span>
     </dt>
     <dd>{{% md %}}Interval in seconds at which the mongosqld process re-samples data to create its relational schema. The default value is 300. The specified value must be a positive integer. Available only for Atlas deployments in which BI Connector for Atlas is enabled.
-{{% /md %}}</dd>
-    <dt class="property-optional"
+{{% /md %}}</dd><dt class="property-optional"
             title="Optional">
         <span id="samplesizebiconnector_go">
 <a href="#samplesizebiconnector_go" style="color: inherit; text-decoration: inherit;">Sample<wbr>Size<wbr>Bi<wbr>Connector</a>
@@ -4792,14 +4508,11 @@ Do not specify this field when creating a multi-region cluster using the replica
         <span class="property-type">int</span>
     </dt>
     <dd>{{% md %}}Number of documents per database to sample when gathering schema information. Defaults to 100. Available only for Atlas deployments in which BI Connector for Atlas is enabled.
-{{% /md %}}</dd>
-</dl>
+{{% /md %}}</dd></dl>
 {{% /choosable %}}
 
 {{% choosable language nodejs %}}
-<dl class="resources-properties">
-
-    <dt class="property-optional"
+<dl class="resources-properties"><dt class="property-optional"
             title="Optional">
         <span id="failindexkeytoolong_nodejs">
 <a href="#failindexkeytoolong_nodejs" style="color: inherit; text-decoration: inherit;">fail<wbr>Index<wbr>Key<wbr>Too<wbr>Long</a>
@@ -4808,8 +4521,7 @@ Do not specify this field when creating a multi-region cluster using the replica
         <span class="property-type">boolean</span>
     </dt>
     <dd>{{% md %}}When true, documents can only be updated or inserted if, for all indexed fields on the target collection, the corresponding index entries do not exceed 1024 bytes. When false, mongod writes documents that exceed the limit but does not index them.
-{{% /md %}}</dd>
-    <dt class="property-optional"
+{{% /md %}}</dd><dt class="property-optional"
             title="Optional">
         <span id="javascriptenabled_nodejs">
 <a href="#javascriptenabled_nodejs" style="color: inherit; text-decoration: inherit;">javascript<wbr>Enabled</a>
@@ -4818,8 +4530,7 @@ Do not specify this field when creating a multi-region cluster using the replica
         <span class="property-type">boolean</span>
     </dt>
     <dd>{{% md %}}When true, the cluster allows execution of operations that perform server-side executions of JavaScript. When false, the cluster disables execution of those operations.
-{{% /md %}}</dd>
-    <dt class="property-optional"
+{{% /md %}}</dd><dt class="property-optional"
             title="Optional">
         <span id="minimumenabledtlsprotocol_nodejs">
 <a href="#minimumenabledtlsprotocol_nodejs" style="color: inherit; text-decoration: inherit;">minimum<wbr>Enabled<wbr>Tls<wbr>Protocol</a>
@@ -4828,8 +4539,7 @@ Do not specify this field when creating a multi-region cluster using the replica
         <span class="property-type">string</span>
     </dt>
     <dd>{{% md %}}Sets the minimum Transport Layer Security (TLS) version the cluster accepts for incoming connections.Valid values are:
-{{% /md %}}</dd>
-    <dt class="property-optional"
+{{% /md %}}</dd><dt class="property-optional"
             title="Optional">
         <span id="notablescan_nodejs">
 <a href="#notablescan_nodejs" style="color: inherit; text-decoration: inherit;">no<wbr>Table<wbr>Scan</a>
@@ -4838,8 +4548,7 @@ Do not specify this field when creating a multi-region cluster using the replica
         <span class="property-type">boolean</span>
     </dt>
     <dd>{{% md %}}When true, the cluster disables the execution of any query that requires a collection scan to return results. When false, the cluster allows the execution of those operations.
-{{% /md %}}</dd>
-    <dt class="property-optional"
+{{% /md %}}</dd><dt class="property-optional"
             title="Optional">
         <span id="oplogsizemb_nodejs">
 <a href="#oplogsizemb_nodejs" style="color: inherit; text-decoration: inherit;">oplog<wbr>Size<wbr>Mb</a>
@@ -4848,8 +4557,7 @@ Do not specify this field when creating a multi-region cluster using the replica
         <span class="property-type">number</span>
     </dt>
     <dd>{{% md %}}The custom oplog size of the cluster. Without a value that indicates that the cluster uses the default oplog size calculated by Atlas.
-{{% /md %}}</dd>
-    <dt class="property-optional"
+{{% /md %}}</dd><dt class="property-optional"
             title="Optional">
         <span id="samplerefreshintervalbiconnector_nodejs">
 <a href="#samplerefreshintervalbiconnector_nodejs" style="color: inherit; text-decoration: inherit;">sample<wbr>Refresh<wbr>Interval<wbr>Bi<wbr>Connector</a>
@@ -4858,8 +4566,7 @@ Do not specify this field when creating a multi-region cluster using the replica
         <span class="property-type">number</span>
     </dt>
     <dd>{{% md %}}Interval in seconds at which the mongosqld process re-samples data to create its relational schema. The default value is 300. The specified value must be a positive integer. Available only for Atlas deployments in which BI Connector for Atlas is enabled.
-{{% /md %}}</dd>
-    <dt class="property-optional"
+{{% /md %}}</dd><dt class="property-optional"
             title="Optional">
         <span id="samplesizebiconnector_nodejs">
 <a href="#samplesizebiconnector_nodejs" style="color: inherit; text-decoration: inherit;">sample<wbr>Size<wbr>Bi<wbr>Connector</a>
@@ -4868,14 +4575,11 @@ Do not specify this field when creating a multi-region cluster using the replica
         <span class="property-type">number</span>
     </dt>
     <dd>{{% md %}}Number of documents per database to sample when gathering schema information. Defaults to 100. Available only for Atlas deployments in which BI Connector for Atlas is enabled.
-{{% /md %}}</dd>
-</dl>
+{{% /md %}}</dd></dl>
 {{% /choosable %}}
 
 {{% choosable language python %}}
-<dl class="resources-properties">
-
-    <dt class="property-optional"
+<dl class="resources-properties"><dt class="property-optional"
             title="Optional">
         <span id="fail_index_key_too_long_python">
 <a href="#fail_index_key_too_long_python" style="color: inherit; text-decoration: inherit;">fail_<wbr>index_<wbr>key_<wbr>too_<wbr>long</a>
@@ -4884,8 +4588,7 @@ Do not specify this field when creating a multi-region cluster using the replica
         <span class="property-type">bool</span>
     </dt>
     <dd>{{% md %}}When true, documents can only be updated or inserted if, for all indexed fields on the target collection, the corresponding index entries do not exceed 1024 bytes. When false, mongod writes documents that exceed the limit but does not index them.
-{{% /md %}}</dd>
-    <dt class="property-optional"
+{{% /md %}}</dd><dt class="property-optional"
             title="Optional">
         <span id="javascript_enabled_python">
 <a href="#javascript_enabled_python" style="color: inherit; text-decoration: inherit;">javascript_<wbr>enabled</a>
@@ -4894,8 +4597,7 @@ Do not specify this field when creating a multi-region cluster using the replica
         <span class="property-type">bool</span>
     </dt>
     <dd>{{% md %}}When true, the cluster allows execution of operations that perform server-side executions of JavaScript. When false, the cluster disables execution of those operations.
-{{% /md %}}</dd>
-    <dt class="property-optional"
+{{% /md %}}</dd><dt class="property-optional"
             title="Optional">
         <span id="minimum_enabled_tls_protocol_python">
 <a href="#minimum_enabled_tls_protocol_python" style="color: inherit; text-decoration: inherit;">minimum_<wbr>enabled_<wbr>tls_<wbr>protocol</a>
@@ -4904,8 +4606,7 @@ Do not specify this field when creating a multi-region cluster using the replica
         <span class="property-type">str</span>
     </dt>
     <dd>{{% md %}}Sets the minimum Transport Layer Security (TLS) version the cluster accepts for incoming connections.Valid values are:
-{{% /md %}}</dd>
-    <dt class="property-optional"
+{{% /md %}}</dd><dt class="property-optional"
             title="Optional">
         <span id="no_table_scan_python">
 <a href="#no_table_scan_python" style="color: inherit; text-decoration: inherit;">no_<wbr>table_<wbr>scan</a>
@@ -4914,8 +4615,7 @@ Do not specify this field when creating a multi-region cluster using the replica
         <span class="property-type">bool</span>
     </dt>
     <dd>{{% md %}}When true, the cluster disables the execution of any query that requires a collection scan to return results. When false, the cluster allows the execution of those operations.
-{{% /md %}}</dd>
-    <dt class="property-optional"
+{{% /md %}}</dd><dt class="property-optional"
             title="Optional">
         <span id="oplog_size_mb_python">
 <a href="#oplog_size_mb_python" style="color: inherit; text-decoration: inherit;">oplog_<wbr>size_<wbr>mb</a>
@@ -4924,8 +4624,7 @@ Do not specify this field when creating a multi-region cluster using the replica
         <span class="property-type">int</span>
     </dt>
     <dd>{{% md %}}The custom oplog size of the cluster. Without a value that indicates that the cluster uses the default oplog size calculated by Atlas.
-{{% /md %}}</dd>
-    <dt class="property-optional"
+{{% /md %}}</dd><dt class="property-optional"
             title="Optional">
         <span id="sample_refresh_interval_bi_connector_python">
 <a href="#sample_refresh_interval_bi_connector_python" style="color: inherit; text-decoration: inherit;">sample_<wbr>refresh_<wbr>interval_<wbr>bi_<wbr>connector</a>
@@ -4934,8 +4633,7 @@ Do not specify this field when creating a multi-region cluster using the replica
         <span class="property-type">int</span>
     </dt>
     <dd>{{% md %}}Interval in seconds at which the mongosqld process re-samples data to create its relational schema. The default value is 300. The specified value must be a positive integer. Available only for Atlas deployments in which BI Connector for Atlas is enabled.
-{{% /md %}}</dd>
-    <dt class="property-optional"
+{{% /md %}}</dd><dt class="property-optional"
             title="Optional">
         <span id="sample_size_bi_connector_python">
 <a href="#sample_size_bi_connector_python" style="color: inherit; text-decoration: inherit;">sample_<wbr>size_<wbr>bi_<wbr>connector</a>
@@ -4944,16 +4642,13 @@ Do not specify this field when creating a multi-region cluster using the replica
         <span class="property-type">int</span>
     </dt>
     <dd>{{% md %}}Number of documents per database to sample when gathering schema information. Defaults to 100. Available only for Atlas deployments in which BI Connector for Atlas is enabled.
-{{% /md %}}</dd>
-</dl>
+{{% /md %}}</dd></dl>
 {{% /choosable %}}
 
 <h4 id="clusterbiconnector">Cluster<wbr>Bi<wbr>Connector</h4>
 
 {{% choosable language csharp %}}
-<dl class="resources-properties">
-
-    <dt class="property-optional"
+<dl class="resources-properties"><dt class="property-optional"
             title="Optional">
         <span id="enabled_csharp">
 <a href="#enabled_csharp" style="color: inherit; text-decoration: inherit;">Enabled</a>
@@ -4965,8 +4660,7 @@ Do not specify this field when creating a multi-region cluster using the replica
 *
 - Set to `true` to enable BI Connector for Atlas.
 - Set to `false` to disable BI Connector for Atlas.
-{{% /md %}}</dd>
-    <dt class="property-optional"
+{{% /md %}}</dd><dt class="property-optional"
             title="Optional">
         <span id="readpreference_csharp">
 <a href="#readpreference_csharp" style="color: inherit; text-decoration: inherit;">Read<wbr>Preference</a>
@@ -4975,14 +4669,11 @@ Do not specify this field when creating a multi-region cluster using the replica
         <span class="property-type">string</span>
     </dt>
     <dd>{{% md %}}Specifies the read preference to be used by BI Connector for Atlas on the cluster. Each BI Connector for Atlas read preference contains a distinct combination of [readPreference](https://docs.mongodb.com/manual/core/read-preference/) and [readPreferenceTags](https://docs.mongodb.com/manual/core/read-preference/#tag-sets) options. For details on BI Connector for Atlas read preferences, refer to the [BI Connector Read Preferences Table](https://docs.atlas.mongodb.com/tutorial/create-global-writes-cluster/#bic-read-preferences).
-{{% /md %}}</dd>
-</dl>
+{{% /md %}}</dd></dl>
 {{% /choosable %}}
 
 {{% choosable language go %}}
-<dl class="resources-properties">
-
-    <dt class="property-optional"
+<dl class="resources-properties"><dt class="property-optional"
             title="Optional">
         <span id="enabled_go">
 <a href="#enabled_go" style="color: inherit; text-decoration: inherit;">Enabled</a>
@@ -4994,8 +4685,7 @@ Do not specify this field when creating a multi-region cluster using the replica
 *
 - Set to `true` to enable BI Connector for Atlas.
 - Set to `false` to disable BI Connector for Atlas.
-{{% /md %}}</dd>
-    <dt class="property-optional"
+{{% /md %}}</dd><dt class="property-optional"
             title="Optional">
         <span id="readpreference_go">
 <a href="#readpreference_go" style="color: inherit; text-decoration: inherit;">Read<wbr>Preference</a>
@@ -5004,14 +4694,11 @@ Do not specify this field when creating a multi-region cluster using the replica
         <span class="property-type">string</span>
     </dt>
     <dd>{{% md %}}Specifies the read preference to be used by BI Connector for Atlas on the cluster. Each BI Connector for Atlas read preference contains a distinct combination of [readPreference](https://docs.mongodb.com/manual/core/read-preference/) and [readPreferenceTags](https://docs.mongodb.com/manual/core/read-preference/#tag-sets) options. For details on BI Connector for Atlas read preferences, refer to the [BI Connector Read Preferences Table](https://docs.atlas.mongodb.com/tutorial/create-global-writes-cluster/#bic-read-preferences).
-{{% /md %}}</dd>
-</dl>
+{{% /md %}}</dd></dl>
 {{% /choosable %}}
 
 {{% choosable language nodejs %}}
-<dl class="resources-properties">
-
-    <dt class="property-optional"
+<dl class="resources-properties"><dt class="property-optional"
             title="Optional">
         <span id="enabled_nodejs">
 <a href="#enabled_nodejs" style="color: inherit; text-decoration: inherit;">enabled</a>
@@ -5023,8 +4710,7 @@ Do not specify this field when creating a multi-region cluster using the replica
 *
 - Set to `true` to enable BI Connector for Atlas.
 - Set to `false` to disable BI Connector for Atlas.
-{{% /md %}}</dd>
-    <dt class="property-optional"
+{{% /md %}}</dd><dt class="property-optional"
             title="Optional">
         <span id="readpreference_nodejs">
 <a href="#readpreference_nodejs" style="color: inherit; text-decoration: inherit;">read<wbr>Preference</a>
@@ -5033,14 +4719,11 @@ Do not specify this field when creating a multi-region cluster using the replica
         <span class="property-type">string</span>
     </dt>
     <dd>{{% md %}}Specifies the read preference to be used by BI Connector for Atlas on the cluster. Each BI Connector for Atlas read preference contains a distinct combination of [readPreference](https://docs.mongodb.com/manual/core/read-preference/) and [readPreferenceTags](https://docs.mongodb.com/manual/core/read-preference/#tag-sets) options. For details on BI Connector for Atlas read preferences, refer to the [BI Connector Read Preferences Table](https://docs.atlas.mongodb.com/tutorial/create-global-writes-cluster/#bic-read-preferences).
-{{% /md %}}</dd>
-</dl>
+{{% /md %}}</dd></dl>
 {{% /choosable %}}
 
 {{% choosable language python %}}
-<dl class="resources-properties">
-
-    <dt class="property-optional"
+<dl class="resources-properties"><dt class="property-optional"
             title="Optional">
         <span id="enabled_python">
 <a href="#enabled_python" style="color: inherit; text-decoration: inherit;">enabled</a>
@@ -5052,8 +4735,7 @@ Do not specify this field when creating a multi-region cluster using the replica
 *
 - Set to `true` to enable BI Connector for Atlas.
 - Set to `false` to disable BI Connector for Atlas.
-{{% /md %}}</dd>
-    <dt class="property-optional"
+{{% /md %}}</dd><dt class="property-optional"
             title="Optional">
         <span id="read_preference_python">
 <a href="#read_preference_python" style="color: inherit; text-decoration: inherit;">read_<wbr>preference</a>
@@ -5062,16 +4744,13 @@ Do not specify this field when creating a multi-region cluster using the replica
         <span class="property-type">str</span>
     </dt>
     <dd>{{% md %}}Specifies the read preference to be used by BI Connector for Atlas on the cluster. Each BI Connector for Atlas read preference contains a distinct combination of [readPreference](https://docs.mongodb.com/manual/core/read-preference/) and [readPreferenceTags](https://docs.mongodb.com/manual/core/read-preference/#tag-sets) options. For details on BI Connector for Atlas read preferences, refer to the [BI Connector Read Preferences Table](https://docs.atlas.mongodb.com/tutorial/create-global-writes-cluster/#bic-read-preferences).
-{{% /md %}}</dd>
-</dl>
+{{% /md %}}</dd></dl>
 {{% /choosable %}}
 
 <h4 id="clusterconnectionstrings">Cluster<wbr>Connection<wbr>Strings</h4>
 
 {{% choosable language csharp %}}
-<dl class="resources-properties">
-
-    <dt class="property-optional property-deprecated"
+<dl class="resources-properties"><dt class="property-optional property-deprecated"
             title="Optional, Deprecated">
         <span id="awsprivatelink_csharp">
 <a href="#awsprivatelink_csharp" style="color: inherit; text-decoration: inherit;">Aws<wbr>Private<wbr>Link</a>
@@ -5079,8 +4758,7 @@ Do not specify this field when creating a multi-region cluster using the replica
         <span class="property-indicator"></span>
         <span class="property-type">Dictionary&lt;string, object&gt;</span>
     </dt>
-    <dd>{{% md %}}{{% /md %}}<p class="property-message">Deprecated: {{% md %}}This field is deprecated. Use connection_strings.private_endpoint[n].connection_string instead{{% /md %}}</p></dd>
-    <dt class="property-optional property-deprecated"
+    <dd>{{% md %}}{{% /md %}}<p class="property-message">Deprecated: {{% md %}}This field is deprecated. Use connection_strings.private_endpoint[n].connection_string instead{{% /md %}}</p></dd><dt class="property-optional property-deprecated"
             title="Optional, Deprecated">
         <span id="awsprivatelinksrv_csharp">
 <a href="#awsprivatelinksrv_csharp" style="color: inherit; text-decoration: inherit;">Aws<wbr>Private<wbr>Link<wbr>Srv</a>
@@ -5088,8 +4766,7 @@ Do not specify this field when creating a multi-region cluster using the replica
         <span class="property-indicator"></span>
         <span class="property-type">Dictionary&lt;string, object&gt;</span>
     </dt>
-    <dd>{{% md %}}{{% /md %}}<p class="property-message">Deprecated: {{% md %}}This field is deprecated. Use connection_strings.private_endpoint[n].srv_connection_string instead{{% /md %}}</p></dd>
-    <dt class="property-optional"
+    <dd>{{% md %}}{{% /md %}}<p class="property-message">Deprecated: {{% md %}}This field is deprecated. Use connection_strings.private_endpoint[n].srv_connection_string instead{{% /md %}}</p></dd><dt class="property-optional"
             title="Optional">
         <span id="private_csharp">
 <a href="#private_csharp" style="color: inherit; text-decoration: inherit;">Private</a>
@@ -5097,8 +4774,7 @@ Do not specify this field when creating a multi-region cluster using the replica
         <span class="property-indicator"></span>
         <span class="property-type">string</span>
     </dt>
-    <dd>{{% md %}}{{% /md %}}</dd>
-    <dt class="property-optional"
+    <dd>{{% md %}}{{% /md %}}</dd><dt class="property-optional"
             title="Optional">
         <span id="privateendpoints_csharp">
 <a href="#privateendpoints_csharp" style="color: inherit; text-decoration: inherit;">Private<wbr>Endpoints</a>
@@ -5106,8 +4782,7 @@ Do not specify this field when creating a multi-region cluster using the replica
         <span class="property-indicator"></span>
         <span class="property-type"><a href="#clusterconnectionstringsprivateendpoint">List&lt;Cluster<wbr>Connection<wbr>Strings<wbr>Private<wbr>Endpoint<wbr>Args&gt;</a></span>
     </dt>
-    <dd>{{% md %}}{{% /md %}}</dd>
-    <dt class="property-optional"
+    <dd>{{% md %}}{{% /md %}}</dd><dt class="property-optional"
             title="Optional">
         <span id="privatesrv_csharp">
 <a href="#privatesrv_csharp" style="color: inherit; text-decoration: inherit;">Private<wbr>Srv</a>
@@ -5115,8 +4790,7 @@ Do not specify this field when creating a multi-region cluster using the replica
         <span class="property-indicator"></span>
         <span class="property-type">string</span>
     </dt>
-    <dd>{{% md %}}{{% /md %}}</dd>
-    <dt class="property-optional"
+    <dd>{{% md %}}{{% /md %}}</dd><dt class="property-optional"
             title="Optional">
         <span id="standard_csharp">
 <a href="#standard_csharp" style="color: inherit; text-decoration: inherit;">Standard</a>
@@ -5124,8 +4798,7 @@ Do not specify this field when creating a multi-region cluster using the replica
         <span class="property-indicator"></span>
         <span class="property-type">string</span>
     </dt>
-    <dd>{{% md %}}{{% /md %}}</dd>
-    <dt class="property-optional"
+    <dd>{{% md %}}{{% /md %}}</dd><dt class="property-optional"
             title="Optional">
         <span id="standardsrv_csharp">
 <a href="#standardsrv_csharp" style="color: inherit; text-decoration: inherit;">Standard<wbr>Srv</a>
@@ -5133,14 +4806,11 @@ Do not specify this field when creating a multi-region cluster using the replica
         <span class="property-indicator"></span>
         <span class="property-type">string</span>
     </dt>
-    <dd>{{% md %}}{{% /md %}}</dd>
-</dl>
+    <dd>{{% md %}}{{% /md %}}</dd></dl>
 {{% /choosable %}}
 
 {{% choosable language go %}}
-<dl class="resources-properties">
-
-    <dt class="property-optional property-deprecated"
+<dl class="resources-properties"><dt class="property-optional property-deprecated"
             title="Optional, Deprecated">
         <span id="awsprivatelink_go">
 <a href="#awsprivatelink_go" style="color: inherit; text-decoration: inherit;">Aws<wbr>Private<wbr>Link</a>
@@ -5148,8 +4818,7 @@ Do not specify this field when creating a multi-region cluster using the replica
         <span class="property-indicator"></span>
         <span class="property-type">map[string]interface{}</span>
     </dt>
-    <dd>{{% md %}}{{% /md %}}<p class="property-message">Deprecated: {{% md %}}This field is deprecated. Use connection_strings.private_endpoint[n].connection_string instead{{% /md %}}</p></dd>
-    <dt class="property-optional property-deprecated"
+    <dd>{{% md %}}{{% /md %}}<p class="property-message">Deprecated: {{% md %}}This field is deprecated. Use connection_strings.private_endpoint[n].connection_string instead{{% /md %}}</p></dd><dt class="property-optional property-deprecated"
             title="Optional, Deprecated">
         <span id="awsprivatelinksrv_go">
 <a href="#awsprivatelinksrv_go" style="color: inherit; text-decoration: inherit;">Aws<wbr>Private<wbr>Link<wbr>Srv</a>
@@ -5157,8 +4826,7 @@ Do not specify this field when creating a multi-region cluster using the replica
         <span class="property-indicator"></span>
         <span class="property-type">map[string]interface{}</span>
     </dt>
-    <dd>{{% md %}}{{% /md %}}<p class="property-message">Deprecated: {{% md %}}This field is deprecated. Use connection_strings.private_endpoint[n].srv_connection_string instead{{% /md %}}</p></dd>
-    <dt class="property-optional"
+    <dd>{{% md %}}{{% /md %}}<p class="property-message">Deprecated: {{% md %}}This field is deprecated. Use connection_strings.private_endpoint[n].srv_connection_string instead{{% /md %}}</p></dd><dt class="property-optional"
             title="Optional">
         <span id="private_go">
 <a href="#private_go" style="color: inherit; text-decoration: inherit;">Private</a>
@@ -5166,8 +4834,7 @@ Do not specify this field when creating a multi-region cluster using the replica
         <span class="property-indicator"></span>
         <span class="property-type">string</span>
     </dt>
-    <dd>{{% md %}}{{% /md %}}</dd>
-    <dt class="property-optional"
+    <dd>{{% md %}}{{% /md %}}</dd><dt class="property-optional"
             title="Optional">
         <span id="privateendpoints_go">
 <a href="#privateendpoints_go" style="color: inherit; text-decoration: inherit;">Private<wbr>Endpoints</a>
@@ -5175,8 +4842,7 @@ Do not specify this field when creating a multi-region cluster using the replica
         <span class="property-indicator"></span>
         <span class="property-type"><a href="#clusterconnectionstringsprivateendpoint">[]Cluster<wbr>Connection<wbr>Strings<wbr>Private<wbr>Endpoint</a></span>
     </dt>
-    <dd>{{% md %}}{{% /md %}}</dd>
-    <dt class="property-optional"
+    <dd>{{% md %}}{{% /md %}}</dd><dt class="property-optional"
             title="Optional">
         <span id="privatesrv_go">
 <a href="#privatesrv_go" style="color: inherit; text-decoration: inherit;">Private<wbr>Srv</a>
@@ -5184,8 +4850,7 @@ Do not specify this field when creating a multi-region cluster using the replica
         <span class="property-indicator"></span>
         <span class="property-type">string</span>
     </dt>
-    <dd>{{% md %}}{{% /md %}}</dd>
-    <dt class="property-optional"
+    <dd>{{% md %}}{{% /md %}}</dd><dt class="property-optional"
             title="Optional">
         <span id="standard_go">
 <a href="#standard_go" style="color: inherit; text-decoration: inherit;">Standard</a>
@@ -5193,8 +4858,7 @@ Do not specify this field when creating a multi-region cluster using the replica
         <span class="property-indicator"></span>
         <span class="property-type">string</span>
     </dt>
-    <dd>{{% md %}}{{% /md %}}</dd>
-    <dt class="property-optional"
+    <dd>{{% md %}}{{% /md %}}</dd><dt class="property-optional"
             title="Optional">
         <span id="standardsrv_go">
 <a href="#standardsrv_go" style="color: inherit; text-decoration: inherit;">Standard<wbr>Srv</a>
@@ -5202,14 +4866,11 @@ Do not specify this field when creating a multi-region cluster using the replica
         <span class="property-indicator"></span>
         <span class="property-type">string</span>
     </dt>
-    <dd>{{% md %}}{{% /md %}}</dd>
-</dl>
+    <dd>{{% md %}}{{% /md %}}</dd></dl>
 {{% /choosable %}}
 
 {{% choosable language nodejs %}}
-<dl class="resources-properties">
-
-    <dt class="property-optional property-deprecated"
+<dl class="resources-properties"><dt class="property-optional property-deprecated"
             title="Optional, Deprecated">
         <span id="awsprivatelink_nodejs">
 <a href="#awsprivatelink_nodejs" style="color: inherit; text-decoration: inherit;">aws<wbr>Private<wbr>Link</a>
@@ -5217,8 +4878,7 @@ Do not specify this field when creating a multi-region cluster using the replica
         <span class="property-indicator"></span>
         <span class="property-type">{[key: string]: any}</span>
     </dt>
-    <dd>{{% md %}}{{% /md %}}<p class="property-message">Deprecated: {{% md %}}This field is deprecated. Use connection_strings.private_endpoint[n].connection_string instead{{% /md %}}</p></dd>
-    <dt class="property-optional property-deprecated"
+    <dd>{{% md %}}{{% /md %}}<p class="property-message">Deprecated: {{% md %}}This field is deprecated. Use connection_strings.private_endpoint[n].connection_string instead{{% /md %}}</p></dd><dt class="property-optional property-deprecated"
             title="Optional, Deprecated">
         <span id="awsprivatelinksrv_nodejs">
 <a href="#awsprivatelinksrv_nodejs" style="color: inherit; text-decoration: inherit;">aws<wbr>Private<wbr>Link<wbr>Srv</a>
@@ -5226,8 +4886,7 @@ Do not specify this field when creating a multi-region cluster using the replica
         <span class="property-indicator"></span>
         <span class="property-type">{[key: string]: any}</span>
     </dt>
-    <dd>{{% md %}}{{% /md %}}<p class="property-message">Deprecated: {{% md %}}This field is deprecated. Use connection_strings.private_endpoint[n].srv_connection_string instead{{% /md %}}</p></dd>
-    <dt class="property-optional"
+    <dd>{{% md %}}{{% /md %}}<p class="property-message">Deprecated: {{% md %}}This field is deprecated. Use connection_strings.private_endpoint[n].srv_connection_string instead{{% /md %}}</p></dd><dt class="property-optional"
             title="Optional">
         <span id="private_nodejs">
 <a href="#private_nodejs" style="color: inherit; text-decoration: inherit;">private</a>
@@ -5235,8 +4894,7 @@ Do not specify this field when creating a multi-region cluster using the replica
         <span class="property-indicator"></span>
         <span class="property-type">string</span>
     </dt>
-    <dd>{{% md %}}{{% /md %}}</dd>
-    <dt class="property-optional"
+    <dd>{{% md %}}{{% /md %}}</dd><dt class="property-optional"
             title="Optional">
         <span id="privateendpoints_nodejs">
 <a href="#privateendpoints_nodejs" style="color: inherit; text-decoration: inherit;">private<wbr>Endpoints</a>
@@ -5244,8 +4902,7 @@ Do not specify this field when creating a multi-region cluster using the replica
         <span class="property-indicator"></span>
         <span class="property-type"><a href="#clusterconnectionstringsprivateendpoint">Cluster<wbr>Connection<wbr>Strings<wbr>Private<wbr>Endpoint[]</a></span>
     </dt>
-    <dd>{{% md %}}{{% /md %}}</dd>
-    <dt class="property-optional"
+    <dd>{{% md %}}{{% /md %}}</dd><dt class="property-optional"
             title="Optional">
         <span id="privatesrv_nodejs">
 <a href="#privatesrv_nodejs" style="color: inherit; text-decoration: inherit;">private<wbr>Srv</a>
@@ -5253,8 +4910,7 @@ Do not specify this field when creating a multi-region cluster using the replica
         <span class="property-indicator"></span>
         <span class="property-type">string</span>
     </dt>
-    <dd>{{% md %}}{{% /md %}}</dd>
-    <dt class="property-optional"
+    <dd>{{% md %}}{{% /md %}}</dd><dt class="property-optional"
             title="Optional">
         <span id="standard_nodejs">
 <a href="#standard_nodejs" style="color: inherit; text-decoration: inherit;">standard</a>
@@ -5262,8 +4918,7 @@ Do not specify this field when creating a multi-region cluster using the replica
         <span class="property-indicator"></span>
         <span class="property-type">string</span>
     </dt>
-    <dd>{{% md %}}{{% /md %}}</dd>
-    <dt class="property-optional"
+    <dd>{{% md %}}{{% /md %}}</dd><dt class="property-optional"
             title="Optional">
         <span id="standardsrv_nodejs">
 <a href="#standardsrv_nodejs" style="color: inherit; text-decoration: inherit;">standard<wbr>Srv</a>
@@ -5271,14 +4926,11 @@ Do not specify this field when creating a multi-region cluster using the replica
         <span class="property-indicator"></span>
         <span class="property-type">string</span>
     </dt>
-    <dd>{{% md %}}{{% /md %}}</dd>
-</dl>
+    <dd>{{% md %}}{{% /md %}}</dd></dl>
 {{% /choosable %}}
 
 {{% choosable language python %}}
-<dl class="resources-properties">
-
-    <dt class="property-optional property-deprecated"
+<dl class="resources-properties"><dt class="property-optional property-deprecated"
             title="Optional, Deprecated">
         <span id="aws_private_link_python">
 <a href="#aws_private_link_python" style="color: inherit; text-decoration: inherit;">aws_<wbr>private_<wbr>link</a>
@@ -5286,8 +4938,7 @@ Do not specify this field when creating a multi-region cluster using the replica
         <span class="property-indicator"></span>
         <span class="property-type">Mapping[str, Any]</span>
     </dt>
-    <dd>{{% md %}}{{% /md %}}<p class="property-message">Deprecated: {{% md %}}This field is deprecated. Use connection_strings.private_endpoint[n].connection_string instead{{% /md %}}</p></dd>
-    <dt class="property-optional property-deprecated"
+    <dd>{{% md %}}{{% /md %}}<p class="property-message">Deprecated: {{% md %}}This field is deprecated. Use connection_strings.private_endpoint[n].connection_string instead{{% /md %}}</p></dd><dt class="property-optional property-deprecated"
             title="Optional, Deprecated">
         <span id="aws_private_link_srv_python">
 <a href="#aws_private_link_srv_python" style="color: inherit; text-decoration: inherit;">aws_<wbr>private_<wbr>link_<wbr>srv</a>
@@ -5295,8 +4946,7 @@ Do not specify this field when creating a multi-region cluster using the replica
         <span class="property-indicator"></span>
         <span class="property-type">Mapping[str, Any]</span>
     </dt>
-    <dd>{{% md %}}{{% /md %}}<p class="property-message">Deprecated: {{% md %}}This field is deprecated. Use connection_strings.private_endpoint[n].srv_connection_string instead{{% /md %}}</p></dd>
-    <dt class="property-optional"
+    <dd>{{% md %}}{{% /md %}}<p class="property-message">Deprecated: {{% md %}}This field is deprecated. Use connection_strings.private_endpoint[n].srv_connection_string instead{{% /md %}}</p></dd><dt class="property-optional"
             title="Optional">
         <span id="private_python">
 <a href="#private_python" style="color: inherit; text-decoration: inherit;">private</a>
@@ -5304,8 +4954,7 @@ Do not specify this field when creating a multi-region cluster using the replica
         <span class="property-indicator"></span>
         <span class="property-type">str</span>
     </dt>
-    <dd>{{% md %}}{{% /md %}}</dd>
-    <dt class="property-optional"
+    <dd>{{% md %}}{{% /md %}}</dd><dt class="property-optional"
             title="Optional">
         <span id="private_endpoints_python">
 <a href="#private_endpoints_python" style="color: inherit; text-decoration: inherit;">private_<wbr>endpoints</a>
@@ -5313,8 +4962,7 @@ Do not specify this field when creating a multi-region cluster using the replica
         <span class="property-indicator"></span>
         <span class="property-type"><a href="#clusterconnectionstringsprivateendpoint">Sequence[Cluster<wbr>Connection<wbr>Strings<wbr>Private<wbr>Endpoint<wbr>Args]</a></span>
     </dt>
-    <dd>{{% md %}}{{% /md %}}</dd>
-    <dt class="property-optional"
+    <dd>{{% md %}}{{% /md %}}</dd><dt class="property-optional"
             title="Optional">
         <span id="private_srv_python">
 <a href="#private_srv_python" style="color: inherit; text-decoration: inherit;">private_<wbr>srv</a>
@@ -5322,8 +4970,7 @@ Do not specify this field when creating a multi-region cluster using the replica
         <span class="property-indicator"></span>
         <span class="property-type">str</span>
     </dt>
-    <dd>{{% md %}}{{% /md %}}</dd>
-    <dt class="property-optional"
+    <dd>{{% md %}}{{% /md %}}</dd><dt class="property-optional"
             title="Optional">
         <span id="standard_python">
 <a href="#standard_python" style="color: inherit; text-decoration: inherit;">standard</a>
@@ -5331,8 +4978,7 @@ Do not specify this field when creating a multi-region cluster using the replica
         <span class="property-indicator"></span>
         <span class="property-type">str</span>
     </dt>
-    <dd>{{% md %}}{{% /md %}}</dd>
-    <dt class="property-optional"
+    <dd>{{% md %}}{{% /md %}}</dd><dt class="property-optional"
             title="Optional">
         <span id="standard_srv_python">
 <a href="#standard_srv_python" style="color: inherit; text-decoration: inherit;">standard_<wbr>srv</a>
@@ -5340,16 +4986,13 @@ Do not specify this field when creating a multi-region cluster using the replica
         <span class="property-indicator"></span>
         <span class="property-type">str</span>
     </dt>
-    <dd>{{% md %}}{{% /md %}}</dd>
-</dl>
+    <dd>{{% md %}}{{% /md %}}</dd></dl>
 {{% /choosable %}}
 
 <h4 id="clusterconnectionstringsprivateendpoint">Cluster<wbr>Connection<wbr>Strings<wbr>Private<wbr>Endpoint</h4>
 
 {{% choosable language csharp %}}
-<dl class="resources-properties">
-
-    <dt class="property-optional"
+<dl class="resources-properties"><dt class="property-optional"
             title="Optional">
         <span id="connectionstring_csharp">
 <a href="#connectionstring_csharp" style="color: inherit; text-decoration: inherit;">Connection<wbr>String</a>
@@ -5357,8 +5000,7 @@ Do not specify this field when creating a multi-region cluster using the replica
         <span class="property-indicator"></span>
         <span class="property-type">string</span>
     </dt>
-    <dd>{{% md %}}{{% /md %}}</dd>
-    <dt class="property-optional"
+    <dd>{{% md %}}{{% /md %}}</dd><dt class="property-optional"
             title="Optional">
         <span id="endpoints_csharp">
 <a href="#endpoints_csharp" style="color: inherit; text-decoration: inherit;">Endpoints</a>
@@ -5366,8 +5008,7 @@ Do not specify this field when creating a multi-region cluster using the replica
         <span class="property-indicator"></span>
         <span class="property-type"><a href="#clusterconnectionstringsprivateendpointendpoint">List&lt;Cluster<wbr>Connection<wbr>Strings<wbr>Private<wbr>Endpoint<wbr>Endpoint<wbr>Args&gt;</a></span>
     </dt>
-    <dd>{{% md %}}{{% /md %}}</dd>
-    <dt class="property-optional"
+    <dd>{{% md %}}{{% /md %}}</dd><dt class="property-optional"
             title="Optional">
         <span id="srvconnectionstring_csharp">
 <a href="#srvconnectionstring_csharp" style="color: inherit; text-decoration: inherit;">Srv<wbr>Connection<wbr>String</a>
@@ -5375,8 +5016,7 @@ Do not specify this field when creating a multi-region cluster using the replica
         <span class="property-indicator"></span>
         <span class="property-type">string</span>
     </dt>
-    <dd>{{% md %}}{{% /md %}}</dd>
-    <dt class="property-optional"
+    <dd>{{% md %}}{{% /md %}}</dd><dt class="property-optional"
             title="Optional">
         <span id="type_csharp">
 <a href="#type_csharp" style="color: inherit; text-decoration: inherit;">Type</a>
@@ -5384,14 +5024,11 @@ Do not specify this field when creating a multi-region cluster using the replica
         <span class="property-indicator"></span>
         <span class="property-type">string</span>
     </dt>
-    <dd>{{% md %}}{{% /md %}}</dd>
-</dl>
+    <dd>{{% md %}}{{% /md %}}</dd></dl>
 {{% /choosable %}}
 
 {{% choosable language go %}}
-<dl class="resources-properties">
-
-    <dt class="property-optional"
+<dl class="resources-properties"><dt class="property-optional"
             title="Optional">
         <span id="connectionstring_go">
 <a href="#connectionstring_go" style="color: inherit; text-decoration: inherit;">Connection<wbr>String</a>
@@ -5399,8 +5036,7 @@ Do not specify this field when creating a multi-region cluster using the replica
         <span class="property-indicator"></span>
         <span class="property-type">string</span>
     </dt>
-    <dd>{{% md %}}{{% /md %}}</dd>
-    <dt class="property-optional"
+    <dd>{{% md %}}{{% /md %}}</dd><dt class="property-optional"
             title="Optional">
         <span id="endpoints_go">
 <a href="#endpoints_go" style="color: inherit; text-decoration: inherit;">Endpoints</a>
@@ -5408,8 +5044,7 @@ Do not specify this field when creating a multi-region cluster using the replica
         <span class="property-indicator"></span>
         <span class="property-type"><a href="#clusterconnectionstringsprivateendpointendpoint">[]Cluster<wbr>Connection<wbr>Strings<wbr>Private<wbr>Endpoint<wbr>Endpoint</a></span>
     </dt>
-    <dd>{{% md %}}{{% /md %}}</dd>
-    <dt class="property-optional"
+    <dd>{{% md %}}{{% /md %}}</dd><dt class="property-optional"
             title="Optional">
         <span id="srvconnectionstring_go">
 <a href="#srvconnectionstring_go" style="color: inherit; text-decoration: inherit;">Srv<wbr>Connection<wbr>String</a>
@@ -5417,8 +5052,7 @@ Do not specify this field when creating a multi-region cluster using the replica
         <span class="property-indicator"></span>
         <span class="property-type">string</span>
     </dt>
-    <dd>{{% md %}}{{% /md %}}</dd>
-    <dt class="property-optional"
+    <dd>{{% md %}}{{% /md %}}</dd><dt class="property-optional"
             title="Optional">
         <span id="type_go">
 <a href="#type_go" style="color: inherit; text-decoration: inherit;">Type</a>
@@ -5426,14 +5060,11 @@ Do not specify this field when creating a multi-region cluster using the replica
         <span class="property-indicator"></span>
         <span class="property-type">string</span>
     </dt>
-    <dd>{{% md %}}{{% /md %}}</dd>
-</dl>
+    <dd>{{% md %}}{{% /md %}}</dd></dl>
 {{% /choosable %}}
 
 {{% choosable language nodejs %}}
-<dl class="resources-properties">
-
-    <dt class="property-optional"
+<dl class="resources-properties"><dt class="property-optional"
             title="Optional">
         <span id="connectionstring_nodejs">
 <a href="#connectionstring_nodejs" style="color: inherit; text-decoration: inherit;">connection<wbr>String</a>
@@ -5441,8 +5072,7 @@ Do not specify this field when creating a multi-region cluster using the replica
         <span class="property-indicator"></span>
         <span class="property-type">string</span>
     </dt>
-    <dd>{{% md %}}{{% /md %}}</dd>
-    <dt class="property-optional"
+    <dd>{{% md %}}{{% /md %}}</dd><dt class="property-optional"
             title="Optional">
         <span id="endpoints_nodejs">
 <a href="#endpoints_nodejs" style="color: inherit; text-decoration: inherit;">endpoints</a>
@@ -5450,8 +5080,7 @@ Do not specify this field when creating a multi-region cluster using the replica
         <span class="property-indicator"></span>
         <span class="property-type"><a href="#clusterconnectionstringsprivateendpointendpoint">Cluster<wbr>Connection<wbr>Strings<wbr>Private<wbr>Endpoint<wbr>Endpoint[]</a></span>
     </dt>
-    <dd>{{% md %}}{{% /md %}}</dd>
-    <dt class="property-optional"
+    <dd>{{% md %}}{{% /md %}}</dd><dt class="property-optional"
             title="Optional">
         <span id="srvconnectionstring_nodejs">
 <a href="#srvconnectionstring_nodejs" style="color: inherit; text-decoration: inherit;">srv<wbr>Connection<wbr>String</a>
@@ -5459,8 +5088,7 @@ Do not specify this field when creating a multi-region cluster using the replica
         <span class="property-indicator"></span>
         <span class="property-type">string</span>
     </dt>
-    <dd>{{% md %}}{{% /md %}}</dd>
-    <dt class="property-optional"
+    <dd>{{% md %}}{{% /md %}}</dd><dt class="property-optional"
             title="Optional">
         <span id="type_nodejs">
 <a href="#type_nodejs" style="color: inherit; text-decoration: inherit;">type</a>
@@ -5468,14 +5096,11 @@ Do not specify this field when creating a multi-region cluster using the replica
         <span class="property-indicator"></span>
         <span class="property-type">string</span>
     </dt>
-    <dd>{{% md %}}{{% /md %}}</dd>
-</dl>
+    <dd>{{% md %}}{{% /md %}}</dd></dl>
 {{% /choosable %}}
 
 {{% choosable language python %}}
-<dl class="resources-properties">
-
-    <dt class="property-optional"
+<dl class="resources-properties"><dt class="property-optional"
             title="Optional">
         <span id="connection_string_python">
 <a href="#connection_string_python" style="color: inherit; text-decoration: inherit;">connection_<wbr>string</a>
@@ -5483,8 +5108,7 @@ Do not specify this field when creating a multi-region cluster using the replica
         <span class="property-indicator"></span>
         <span class="property-type">str</span>
     </dt>
-    <dd>{{% md %}}{{% /md %}}</dd>
-    <dt class="property-optional"
+    <dd>{{% md %}}{{% /md %}}</dd><dt class="property-optional"
             title="Optional">
         <span id="endpoints_python">
 <a href="#endpoints_python" style="color: inherit; text-decoration: inherit;">endpoints</a>
@@ -5492,8 +5116,7 @@ Do not specify this field when creating a multi-region cluster using the replica
         <span class="property-indicator"></span>
         <span class="property-type"><a href="#clusterconnectionstringsprivateendpointendpoint">Sequence[Cluster<wbr>Connection<wbr>Strings<wbr>Private<wbr>Endpoint<wbr>Endpoint<wbr>Args]</a></span>
     </dt>
-    <dd>{{% md %}}{{% /md %}}</dd>
-    <dt class="property-optional"
+    <dd>{{% md %}}{{% /md %}}</dd><dt class="property-optional"
             title="Optional">
         <span id="srv_connection_string_python">
 <a href="#srv_connection_string_python" style="color: inherit; text-decoration: inherit;">srv_<wbr>connection_<wbr>string</a>
@@ -5501,8 +5124,7 @@ Do not specify this field when creating a multi-region cluster using the replica
         <span class="property-indicator"></span>
         <span class="property-type">str</span>
     </dt>
-    <dd>{{% md %}}{{% /md %}}</dd>
-    <dt class="property-optional"
+    <dd>{{% md %}}{{% /md %}}</dd><dt class="property-optional"
             title="Optional">
         <span id="type_python">
 <a href="#type_python" style="color: inherit; text-decoration: inherit;">type</a>
@@ -5510,16 +5132,13 @@ Do not specify this field when creating a multi-region cluster using the replica
         <span class="property-indicator"></span>
         <span class="property-type">str</span>
     </dt>
-    <dd>{{% md %}}{{% /md %}}</dd>
-</dl>
+    <dd>{{% md %}}{{% /md %}}</dd></dl>
 {{% /choosable %}}
 
 <h4 id="clusterconnectionstringsprivateendpointendpoint">Cluster<wbr>Connection<wbr>Strings<wbr>Private<wbr>Endpoint<wbr>Endpoint</h4>
 
 {{% choosable language csharp %}}
-<dl class="resources-properties">
-
-    <dt class="property-optional"
+<dl class="resources-properties"><dt class="property-optional"
             title="Optional">
         <span id="endpointid_csharp">
 <a href="#endpointid_csharp" style="color: inherit; text-decoration: inherit;">Endpoint<wbr>Id</a>
@@ -5527,8 +5146,7 @@ Do not specify this field when creating a multi-region cluster using the replica
         <span class="property-indicator"></span>
         <span class="property-type">string</span>
     </dt>
-    <dd>{{% md %}}{{% /md %}}</dd>
-    <dt class="property-optional"
+    <dd>{{% md %}}{{% /md %}}</dd><dt class="property-optional"
             title="Optional">
         <span id="providername_csharp">
 <a href="#providername_csharp" style="color: inherit; text-decoration: inherit;">Provider<wbr>Name</a>
@@ -5537,8 +5155,7 @@ Do not specify this field when creating a multi-region cluster using the replica
         <span class="property-type">string</span>
     </dt>
     <dd>{{% md %}}Cloud service provider on which the servers are provisioned.
-{{% /md %}}</dd>
-    <dt class="property-optional"
+{{% /md %}}</dd><dt class="property-optional"
             title="Optional">
         <span id="region_csharp">
 <a href="#region_csharp" style="color: inherit; text-decoration: inherit;">Region</a>
@@ -5546,14 +5163,11 @@ Do not specify this field when creating a multi-region cluster using the replica
         <span class="property-indicator"></span>
         <span class="property-type">string</span>
     </dt>
-    <dd>{{% md %}}{{% /md %}}</dd>
-</dl>
+    <dd>{{% md %}}{{% /md %}}</dd></dl>
 {{% /choosable %}}
 
 {{% choosable language go %}}
-<dl class="resources-properties">
-
-    <dt class="property-optional"
+<dl class="resources-properties"><dt class="property-optional"
             title="Optional">
         <span id="endpointid_go">
 <a href="#endpointid_go" style="color: inherit; text-decoration: inherit;">Endpoint<wbr>Id</a>
@@ -5561,8 +5175,7 @@ Do not specify this field when creating a multi-region cluster using the replica
         <span class="property-indicator"></span>
         <span class="property-type">string</span>
     </dt>
-    <dd>{{% md %}}{{% /md %}}</dd>
-    <dt class="property-optional"
+    <dd>{{% md %}}{{% /md %}}</dd><dt class="property-optional"
             title="Optional">
         <span id="providername_go">
 <a href="#providername_go" style="color: inherit; text-decoration: inherit;">Provider<wbr>Name</a>
@@ -5571,8 +5184,7 @@ Do not specify this field when creating a multi-region cluster using the replica
         <span class="property-type">string</span>
     </dt>
     <dd>{{% md %}}Cloud service provider on which the servers are provisioned.
-{{% /md %}}</dd>
-    <dt class="property-optional"
+{{% /md %}}</dd><dt class="property-optional"
             title="Optional">
         <span id="region_go">
 <a href="#region_go" style="color: inherit; text-decoration: inherit;">Region</a>
@@ -5580,14 +5192,11 @@ Do not specify this field when creating a multi-region cluster using the replica
         <span class="property-indicator"></span>
         <span class="property-type">string</span>
     </dt>
-    <dd>{{% md %}}{{% /md %}}</dd>
-</dl>
+    <dd>{{% md %}}{{% /md %}}</dd></dl>
 {{% /choosable %}}
 
 {{% choosable language nodejs %}}
-<dl class="resources-properties">
-
-    <dt class="property-optional"
+<dl class="resources-properties"><dt class="property-optional"
             title="Optional">
         <span id="endpointid_nodejs">
 <a href="#endpointid_nodejs" style="color: inherit; text-decoration: inherit;">endpoint<wbr>Id</a>
@@ -5595,8 +5204,7 @@ Do not specify this field when creating a multi-region cluster using the replica
         <span class="property-indicator"></span>
         <span class="property-type">string</span>
     </dt>
-    <dd>{{% md %}}{{% /md %}}</dd>
-    <dt class="property-optional"
+    <dd>{{% md %}}{{% /md %}}</dd><dt class="property-optional"
             title="Optional">
         <span id="providername_nodejs">
 <a href="#providername_nodejs" style="color: inherit; text-decoration: inherit;">provider<wbr>Name</a>
@@ -5605,8 +5213,7 @@ Do not specify this field when creating a multi-region cluster using the replica
         <span class="property-type">string</span>
     </dt>
     <dd>{{% md %}}Cloud service provider on which the servers are provisioned.
-{{% /md %}}</dd>
-    <dt class="property-optional"
+{{% /md %}}</dd><dt class="property-optional"
             title="Optional">
         <span id="region_nodejs">
 <a href="#region_nodejs" style="color: inherit; text-decoration: inherit;">region</a>
@@ -5614,14 +5221,11 @@ Do not specify this field when creating a multi-region cluster using the replica
         <span class="property-indicator"></span>
         <span class="property-type">string</span>
     </dt>
-    <dd>{{% md %}}{{% /md %}}</dd>
-</dl>
+    <dd>{{% md %}}{{% /md %}}</dd></dl>
 {{% /choosable %}}
 
 {{% choosable language python %}}
-<dl class="resources-properties">
-
-    <dt class="property-optional"
+<dl class="resources-properties"><dt class="property-optional"
             title="Optional">
         <span id="endpoint_id_python">
 <a href="#endpoint_id_python" style="color: inherit; text-decoration: inherit;">endpoint_<wbr>id</a>
@@ -5629,8 +5233,7 @@ Do not specify this field when creating a multi-region cluster using the replica
         <span class="property-indicator"></span>
         <span class="property-type">str</span>
     </dt>
-    <dd>{{% md %}}{{% /md %}}</dd>
-    <dt class="property-optional"
+    <dd>{{% md %}}{{% /md %}}</dd><dt class="property-optional"
             title="Optional">
         <span id="provider_name_python">
 <a href="#provider_name_python" style="color: inherit; text-decoration: inherit;">provider_<wbr>name</a>
@@ -5639,8 +5242,7 @@ Do not specify this field when creating a multi-region cluster using the replica
         <span class="property-type">str</span>
     </dt>
     <dd>{{% md %}}Cloud service provider on which the servers are provisioned.
-{{% /md %}}</dd>
-    <dt class="property-optional"
+{{% /md %}}</dd><dt class="property-optional"
             title="Optional">
         <span id="region_python">
 <a href="#region_python" style="color: inherit; text-decoration: inherit;">region</a>
@@ -5648,16 +5250,13 @@ Do not specify this field when creating a multi-region cluster using the replica
         <span class="property-indicator"></span>
         <span class="property-type">str</span>
     </dt>
-    <dd>{{% md %}}{{% /md %}}</dd>
-</dl>
+    <dd>{{% md %}}{{% /md %}}</dd></dl>
 {{% /choosable %}}
 
 <h4 id="clusterlabel">Cluster<wbr>Label</h4>
 
 {{% choosable language csharp %}}
-<dl class="resources-properties">
-
-    <dt class="property-optional"
+<dl class="resources-properties"><dt class="property-optional"
             title="Optional">
         <span id="key_csharp">
 <a href="#key_csharp" style="color: inherit; text-decoration: inherit;">Key</a>
@@ -5666,8 +5265,7 @@ Do not specify this field when creating a multi-region cluster using the replica
         <span class="property-type">string</span>
     </dt>
     <dd>{{% md %}}The key that you want to write.
-{{% /md %}}</dd>
-    <dt class="property-optional"
+{{% /md %}}</dd><dt class="property-optional"
             title="Optional">
         <span id="value_csharp">
 <a href="#value_csharp" style="color: inherit; text-decoration: inherit;">Value</a>
@@ -5676,14 +5274,11 @@ Do not specify this field when creating a multi-region cluster using the replica
         <span class="property-type">string</span>
     </dt>
     <dd>{{% md %}}The value that you want to write.
-{{% /md %}}</dd>
-</dl>
+{{% /md %}}</dd></dl>
 {{% /choosable %}}
 
 {{% choosable language go %}}
-<dl class="resources-properties">
-
-    <dt class="property-optional"
+<dl class="resources-properties"><dt class="property-optional"
             title="Optional">
         <span id="key_go">
 <a href="#key_go" style="color: inherit; text-decoration: inherit;">Key</a>
@@ -5692,8 +5287,7 @@ Do not specify this field when creating a multi-region cluster using the replica
         <span class="property-type">string</span>
     </dt>
     <dd>{{% md %}}The key that you want to write.
-{{% /md %}}</dd>
-    <dt class="property-optional"
+{{% /md %}}</dd><dt class="property-optional"
             title="Optional">
         <span id="value_go">
 <a href="#value_go" style="color: inherit; text-decoration: inherit;">Value</a>
@@ -5702,14 +5296,11 @@ Do not specify this field when creating a multi-region cluster using the replica
         <span class="property-type">string</span>
     </dt>
     <dd>{{% md %}}The value that you want to write.
-{{% /md %}}</dd>
-</dl>
+{{% /md %}}</dd></dl>
 {{% /choosable %}}
 
 {{% choosable language nodejs %}}
-<dl class="resources-properties">
-
-    <dt class="property-optional"
+<dl class="resources-properties"><dt class="property-optional"
             title="Optional">
         <span id="key_nodejs">
 <a href="#key_nodejs" style="color: inherit; text-decoration: inherit;">key</a>
@@ -5718,8 +5309,7 @@ Do not specify this field when creating a multi-region cluster using the replica
         <span class="property-type">string</span>
     </dt>
     <dd>{{% md %}}The key that you want to write.
-{{% /md %}}</dd>
-    <dt class="property-optional"
+{{% /md %}}</dd><dt class="property-optional"
             title="Optional">
         <span id="value_nodejs">
 <a href="#value_nodejs" style="color: inherit; text-decoration: inherit;">value</a>
@@ -5728,14 +5318,11 @@ Do not specify this field when creating a multi-region cluster using the replica
         <span class="property-type">string</span>
     </dt>
     <dd>{{% md %}}The value that you want to write.
-{{% /md %}}</dd>
-</dl>
+{{% /md %}}</dd></dl>
 {{% /choosable %}}
 
 {{% choosable language python %}}
-<dl class="resources-properties">
-
-    <dt class="property-optional"
+<dl class="resources-properties"><dt class="property-optional"
             title="Optional">
         <span id="key_python">
 <a href="#key_python" style="color: inherit; text-decoration: inherit;">key</a>
@@ -5744,8 +5331,7 @@ Do not specify this field when creating a multi-region cluster using the replica
         <span class="property-type">str</span>
     </dt>
     <dd>{{% md %}}The key that you want to write.
-{{% /md %}}</dd>
-    <dt class="property-optional"
+{{% /md %}}</dd><dt class="property-optional"
             title="Optional">
         <span id="value_python">
 <a href="#value_python" style="color: inherit; text-decoration: inherit;">value</a>
@@ -5754,16 +5340,13 @@ Do not specify this field when creating a multi-region cluster using the replica
         <span class="property-type">str</span>
     </dt>
     <dd>{{% md %}}The value that you want to write.
-{{% /md %}}</dd>
-</dl>
+{{% /md %}}</dd></dl>
 {{% /choosable %}}
 
 <h4 id="clusterreplicationspec">Cluster<wbr>Replication<wbr>Spec</h4>
 
 {{% choosable language csharp %}}
-<dl class="resources-properties">
-
-    <dt class="property-required"
+<dl class="resources-properties"><dt class="property-required"
             title="Required">
         <span id="numshards_csharp">
 <a href="#numshards_csharp" style="color: inherit; text-decoration: inherit;">Num<wbr>Shards</a>
@@ -5772,8 +5355,7 @@ Do not specify this field when creating a multi-region cluster using the replica
         <span class="property-type">int</span>
     </dt>
     <dd>{{% md %}}Number of shards to deploy in the specified zone, minimum 1.
-{{% /md %}}</dd>
-    <dt class="property-optional"
+{{% /md %}}</dd><dt class="property-optional"
             title="Optional">
         <span id="id_csharp">
 <a href="#id_csharp" style="color: inherit; text-decoration: inherit;">Id</a>
@@ -5782,8 +5364,7 @@ Do not specify this field when creating a multi-region cluster using the replica
         <span class="property-type">string</span>
     </dt>
     <dd>{{% md %}}Unique identifer of the replication document for a zone in a Global Cluster.
-{{% /md %}}</dd>
-    <dt class="property-optional"
+{{% /md %}}</dd><dt class="property-optional"
             title="Optional">
         <span id="regionsconfigs_csharp">
 <a href="#regionsconfigs_csharp" style="color: inherit; text-decoration: inherit;">Regions<wbr>Configs</a>
@@ -5792,8 +5373,7 @@ Do not specify this field when creating a multi-region cluster using the replica
         <span class="property-type"><a href="#clusterreplicationspecregionsconfig">List&lt;Cluster<wbr>Replication<wbr>Spec<wbr>Regions<wbr>Config<wbr>Args&gt;</a></span>
     </dt>
     <dd>{{% md %}}Physical location of the region. Each regionsConfig document describes the region’s priority in elections and the number and type of MongoDB nodes Atlas deploys to the region. You must order each regionsConfigs document by regionsConfig.priority, descending. See Region Config below for more details.
-{{% /md %}}</dd>
-    <dt class="property-optional"
+{{% /md %}}</dd><dt class="property-optional"
             title="Optional">
         <span id="zonename_csharp">
 <a href="#zonename_csharp" style="color: inherit; text-decoration: inherit;">Zone<wbr>Name</a>
@@ -5802,14 +5382,11 @@ Do not specify this field when creating a multi-region cluster using the replica
         <span class="property-type">string</span>
     </dt>
     <dd>{{% md %}}Name for the zone in a Global Cluster.
-{{% /md %}}</dd>
-</dl>
+{{% /md %}}</dd></dl>
 {{% /choosable %}}
 
 {{% choosable language go %}}
-<dl class="resources-properties">
-
-    <dt class="property-required"
+<dl class="resources-properties"><dt class="property-required"
             title="Required">
         <span id="numshards_go">
 <a href="#numshards_go" style="color: inherit; text-decoration: inherit;">Num<wbr>Shards</a>
@@ -5818,8 +5395,7 @@ Do not specify this field when creating a multi-region cluster using the replica
         <span class="property-type">int</span>
     </dt>
     <dd>{{% md %}}Number of shards to deploy in the specified zone, minimum 1.
-{{% /md %}}</dd>
-    <dt class="property-optional"
+{{% /md %}}</dd><dt class="property-optional"
             title="Optional">
         <span id="id_go">
 <a href="#id_go" style="color: inherit; text-decoration: inherit;">Id</a>
@@ -5828,8 +5404,7 @@ Do not specify this field when creating a multi-region cluster using the replica
         <span class="property-type">string</span>
     </dt>
     <dd>{{% md %}}Unique identifer of the replication document for a zone in a Global Cluster.
-{{% /md %}}</dd>
-    <dt class="property-optional"
+{{% /md %}}</dd><dt class="property-optional"
             title="Optional">
         <span id="regionsconfigs_go">
 <a href="#regionsconfigs_go" style="color: inherit; text-decoration: inherit;">Regions<wbr>Configs</a>
@@ -5838,8 +5413,7 @@ Do not specify this field when creating a multi-region cluster using the replica
         <span class="property-type"><a href="#clusterreplicationspecregionsconfig">[]Cluster<wbr>Replication<wbr>Spec<wbr>Regions<wbr>Config</a></span>
     </dt>
     <dd>{{% md %}}Physical location of the region. Each regionsConfig document describes the region’s priority in elections and the number and type of MongoDB nodes Atlas deploys to the region. You must order each regionsConfigs document by regionsConfig.priority, descending. See Region Config below for more details.
-{{% /md %}}</dd>
-    <dt class="property-optional"
+{{% /md %}}</dd><dt class="property-optional"
             title="Optional">
         <span id="zonename_go">
 <a href="#zonename_go" style="color: inherit; text-decoration: inherit;">Zone<wbr>Name</a>
@@ -5848,14 +5422,11 @@ Do not specify this field when creating a multi-region cluster using the replica
         <span class="property-type">string</span>
     </dt>
     <dd>{{% md %}}Name for the zone in a Global Cluster.
-{{% /md %}}</dd>
-</dl>
+{{% /md %}}</dd></dl>
 {{% /choosable %}}
 
 {{% choosable language nodejs %}}
-<dl class="resources-properties">
-
-    <dt class="property-required"
+<dl class="resources-properties"><dt class="property-required"
             title="Required">
         <span id="numshards_nodejs">
 <a href="#numshards_nodejs" style="color: inherit; text-decoration: inherit;">num<wbr>Shards</a>
@@ -5864,8 +5435,7 @@ Do not specify this field when creating a multi-region cluster using the replica
         <span class="property-type">number</span>
     </dt>
     <dd>{{% md %}}Number of shards to deploy in the specified zone, minimum 1.
-{{% /md %}}</dd>
-    <dt class="property-optional"
+{{% /md %}}</dd><dt class="property-optional"
             title="Optional">
         <span id="id_nodejs">
 <a href="#id_nodejs" style="color: inherit; text-decoration: inherit;">id</a>
@@ -5874,8 +5444,7 @@ Do not specify this field when creating a multi-region cluster using the replica
         <span class="property-type">string</span>
     </dt>
     <dd>{{% md %}}Unique identifer of the replication document for a zone in a Global Cluster.
-{{% /md %}}</dd>
-    <dt class="property-optional"
+{{% /md %}}</dd><dt class="property-optional"
             title="Optional">
         <span id="regionsconfigs_nodejs">
 <a href="#regionsconfigs_nodejs" style="color: inherit; text-decoration: inherit;">regions<wbr>Configs</a>
@@ -5884,8 +5453,7 @@ Do not specify this field when creating a multi-region cluster using the replica
         <span class="property-type"><a href="#clusterreplicationspecregionsconfig">Cluster<wbr>Replication<wbr>Spec<wbr>Regions<wbr>Config[]</a></span>
     </dt>
     <dd>{{% md %}}Physical location of the region. Each regionsConfig document describes the region’s priority in elections and the number and type of MongoDB nodes Atlas deploys to the region. You must order each regionsConfigs document by regionsConfig.priority, descending. See Region Config below for more details.
-{{% /md %}}</dd>
-    <dt class="property-optional"
+{{% /md %}}</dd><dt class="property-optional"
             title="Optional">
         <span id="zonename_nodejs">
 <a href="#zonename_nodejs" style="color: inherit; text-decoration: inherit;">zone<wbr>Name</a>
@@ -5894,14 +5462,11 @@ Do not specify this field when creating a multi-region cluster using the replica
         <span class="property-type">string</span>
     </dt>
     <dd>{{% md %}}Name for the zone in a Global Cluster.
-{{% /md %}}</dd>
-</dl>
+{{% /md %}}</dd></dl>
 {{% /choosable %}}
 
 {{% choosable language python %}}
-<dl class="resources-properties">
-
-    <dt class="property-required"
+<dl class="resources-properties"><dt class="property-required"
             title="Required">
         <span id="num_shards_python">
 <a href="#num_shards_python" style="color: inherit; text-decoration: inherit;">num_<wbr>shards</a>
@@ -5910,8 +5475,7 @@ Do not specify this field when creating a multi-region cluster using the replica
         <span class="property-type">int</span>
     </dt>
     <dd>{{% md %}}Number of shards to deploy in the specified zone, minimum 1.
-{{% /md %}}</dd>
-    <dt class="property-optional"
+{{% /md %}}</dd><dt class="property-optional"
             title="Optional">
         <span id="id_python">
 <a href="#id_python" style="color: inherit; text-decoration: inherit;">id</a>
@@ -5920,8 +5484,7 @@ Do not specify this field when creating a multi-region cluster using the replica
         <span class="property-type">str</span>
     </dt>
     <dd>{{% md %}}Unique identifer of the replication document for a zone in a Global Cluster.
-{{% /md %}}</dd>
-    <dt class="property-optional"
+{{% /md %}}</dd><dt class="property-optional"
             title="Optional">
         <span id="regions_configs_python">
 <a href="#regions_configs_python" style="color: inherit; text-decoration: inherit;">regions_<wbr>configs</a>
@@ -5930,8 +5493,7 @@ Do not specify this field when creating a multi-region cluster using the replica
         <span class="property-type"><a href="#clusterreplicationspecregionsconfig">Sequence[Cluster<wbr>Replication<wbr>Spec<wbr>Regions<wbr>Config<wbr>Args]</a></span>
     </dt>
     <dd>{{% md %}}Physical location of the region. Each regionsConfig document describes the region’s priority in elections and the number and type of MongoDB nodes Atlas deploys to the region. You must order each regionsConfigs document by regionsConfig.priority, descending. See Region Config below for more details.
-{{% /md %}}</dd>
-    <dt class="property-optional"
+{{% /md %}}</dd><dt class="property-optional"
             title="Optional">
         <span id="zone_name_python">
 <a href="#zone_name_python" style="color: inherit; text-decoration: inherit;">zone_<wbr>name</a>
@@ -5940,16 +5502,13 @@ Do not specify this field when creating a multi-region cluster using the replica
         <span class="property-type">str</span>
     </dt>
     <dd>{{% md %}}Name for the zone in a Global Cluster.
-{{% /md %}}</dd>
-</dl>
+{{% /md %}}</dd></dl>
 {{% /choosable %}}
 
 <h4 id="clusterreplicationspecregionsconfig">Cluster<wbr>Replication<wbr>Spec<wbr>Regions<wbr>Config</h4>
 
 {{% choosable language csharp %}}
-<dl class="resources-properties">
-
-    <dt class="property-optional"
+<dl class="resources-properties"><dt class="property-optional"
             title="Optional">
         <span id="analyticsnodes_csharp">
 <a href="#analyticsnodes_csharp" style="color: inherit; text-decoration: inherit;">Analytics<wbr>Nodes</a>
@@ -5958,8 +5517,7 @@ Do not specify this field when creating a multi-region cluster using the replica
         <span class="property-type">int</span>
     </dt>
     <dd>{{% md %}}The number of analytics nodes for Atlas to deploy to the region. Analytics nodes are useful for handling analytic data such as reporting queries from BI Connector for Atlas. Analytics nodes are read-only, and can never become the primary. If you do not specify this option, no analytics nodes are deployed to the region.
-{{% /md %}}</dd>
-    <dt class="property-optional"
+{{% /md %}}</dd><dt class="property-optional"
             title="Optional">
         <span id="electablenodes_csharp">
 <a href="#electablenodes_csharp" style="color: inherit; text-decoration: inherit;">Electable<wbr>Nodes</a>
@@ -5971,8 +5529,7 @@ Do not specify this field when creating a multi-region cluster using the replica
 * The total number of electableNodes across all replication spec regions  must total 3, 5, or 7.
 * Specify 0 if you do not want any electable nodes in the region.
 * You cannot create electable nodes in a region if `priority` is 0.
-{{% /md %}}</dd>
-    <dt class="property-optional"
+{{% /md %}}</dd><dt class="property-optional"
             title="Optional">
         <span id="priority_csharp">
 <a href="#priority_csharp" style="color: inherit; text-decoration: inherit;">Priority</a>
@@ -5984,8 +5541,7 @@ Do not specify this field when creating a multi-region cluster using the replica
 * For regions where `electable_nodes` is at least 1, each region must have a priority of exactly one (1) less than the previous region. The first region must have a priority of 7. The lowest possible priority is 1.
 * The priority 7 region identifies the Preferred Region of the cluster. Atlas places the primary node in the Preferred Region. Priorities 1 through 7 are exclusive - no more than one region per cluster can be assigned a given priority.
 * Example: If you have three regions, their priorities would be 7, 6, and 5 respectively. If you added two more regions for supporting electable nodes, the priorities of those regions would be 4 and 3 respectively.
-{{% /md %}}</dd>
-    <dt class="property-optional"
+{{% /md %}}</dd><dt class="property-optional"
             title="Optional">
         <span id="readonlynodes_csharp">
 <a href="#readonlynodes_csharp" style="color: inherit; text-decoration: inherit;">Read<wbr>Only<wbr>Nodes</a>
@@ -5994,8 +5550,7 @@ Do not specify this field when creating a multi-region cluster using the replica
         <span class="property-type">int</span>
     </dt>
     <dd>{{% md %}}Number of read-only nodes for Atlas to deploy to the region. Read-only nodes can never become the primary, but can facilitate local-reads. Specify 0 if you do not want any read-only nodes in the region.
-{{% /md %}}</dd>
-    <dt class="property-optional"
+{{% /md %}}</dd><dt class="property-optional"
             title="Optional">
         <span id="regionname_csharp">
 <a href="#regionname_csharp" style="color: inherit; text-decoration: inherit;">Region<wbr>Name</a>
@@ -6004,14 +5559,11 @@ Do not specify this field when creating a multi-region cluster using the replica
         <span class="property-type">string</span>
     </dt>
     <dd>{{% md %}}Physical location of your MongoDB cluster. The region you choose can affect network latency for clients accessing your databases.  Requires the **Atlas region name**, see the reference list for [AWS](https://docs.atlas.mongodb.com/reference/amazon-aws/), [GCP](https://docs.atlas.mongodb.com/reference/google-gcp/), [Azure](https://docs.atlas.mongodb.com/reference/microsoft-azure/).
-{{% /md %}}</dd>
-</dl>
+{{% /md %}}</dd></dl>
 {{% /choosable %}}
 
 {{% choosable language go %}}
-<dl class="resources-properties">
-
-    <dt class="property-optional"
+<dl class="resources-properties"><dt class="property-optional"
             title="Optional">
         <span id="analyticsnodes_go">
 <a href="#analyticsnodes_go" style="color: inherit; text-decoration: inherit;">Analytics<wbr>Nodes</a>
@@ -6020,8 +5572,7 @@ Do not specify this field when creating a multi-region cluster using the replica
         <span class="property-type">int</span>
     </dt>
     <dd>{{% md %}}The number of analytics nodes for Atlas to deploy to the region. Analytics nodes are useful for handling analytic data such as reporting queries from BI Connector for Atlas. Analytics nodes are read-only, and can never become the primary. If you do not specify this option, no analytics nodes are deployed to the region.
-{{% /md %}}</dd>
-    <dt class="property-optional"
+{{% /md %}}</dd><dt class="property-optional"
             title="Optional">
         <span id="electablenodes_go">
 <a href="#electablenodes_go" style="color: inherit; text-decoration: inherit;">Electable<wbr>Nodes</a>
@@ -6033,8 +5584,7 @@ Do not specify this field when creating a multi-region cluster using the replica
 * The total number of electableNodes across all replication spec regions  must total 3, 5, or 7.
 * Specify 0 if you do not want any electable nodes in the region.
 * You cannot create electable nodes in a region if `priority` is 0.
-{{% /md %}}</dd>
-    <dt class="property-optional"
+{{% /md %}}</dd><dt class="property-optional"
             title="Optional">
         <span id="priority_go">
 <a href="#priority_go" style="color: inherit; text-decoration: inherit;">Priority</a>
@@ -6046,8 +5596,7 @@ Do not specify this field when creating a multi-region cluster using the replica
 * For regions where `electable_nodes` is at least 1, each region must have a priority of exactly one (1) less than the previous region. The first region must have a priority of 7. The lowest possible priority is 1.
 * The priority 7 region identifies the Preferred Region of the cluster. Atlas places the primary node in the Preferred Region. Priorities 1 through 7 are exclusive - no more than one region per cluster can be assigned a given priority.
 * Example: If you have three regions, their priorities would be 7, 6, and 5 respectively. If you added two more regions for supporting electable nodes, the priorities of those regions would be 4 and 3 respectively.
-{{% /md %}}</dd>
-    <dt class="property-optional"
+{{% /md %}}</dd><dt class="property-optional"
             title="Optional">
         <span id="readonlynodes_go">
 <a href="#readonlynodes_go" style="color: inherit; text-decoration: inherit;">Read<wbr>Only<wbr>Nodes</a>
@@ -6056,8 +5605,7 @@ Do not specify this field when creating a multi-region cluster using the replica
         <span class="property-type">int</span>
     </dt>
     <dd>{{% md %}}Number of read-only nodes for Atlas to deploy to the region. Read-only nodes can never become the primary, but can facilitate local-reads. Specify 0 if you do not want any read-only nodes in the region.
-{{% /md %}}</dd>
-    <dt class="property-optional"
+{{% /md %}}</dd><dt class="property-optional"
             title="Optional">
         <span id="regionname_go">
 <a href="#regionname_go" style="color: inherit; text-decoration: inherit;">Region<wbr>Name</a>
@@ -6066,14 +5614,11 @@ Do not specify this field when creating a multi-region cluster using the replica
         <span class="property-type">string</span>
     </dt>
     <dd>{{% md %}}Physical location of your MongoDB cluster. The region you choose can affect network latency for clients accessing your databases.  Requires the **Atlas region name**, see the reference list for [AWS](https://docs.atlas.mongodb.com/reference/amazon-aws/), [GCP](https://docs.atlas.mongodb.com/reference/google-gcp/), [Azure](https://docs.atlas.mongodb.com/reference/microsoft-azure/).
-{{% /md %}}</dd>
-</dl>
+{{% /md %}}</dd></dl>
 {{% /choosable %}}
 
 {{% choosable language nodejs %}}
-<dl class="resources-properties">
-
-    <dt class="property-optional"
+<dl class="resources-properties"><dt class="property-optional"
             title="Optional">
         <span id="analyticsnodes_nodejs">
 <a href="#analyticsnodes_nodejs" style="color: inherit; text-decoration: inherit;">analytics<wbr>Nodes</a>
@@ -6082,8 +5627,7 @@ Do not specify this field when creating a multi-region cluster using the replica
         <span class="property-type">number</span>
     </dt>
     <dd>{{% md %}}The number of analytics nodes for Atlas to deploy to the region. Analytics nodes are useful for handling analytic data such as reporting queries from BI Connector for Atlas. Analytics nodes are read-only, and can never become the primary. If you do not specify this option, no analytics nodes are deployed to the region.
-{{% /md %}}</dd>
-    <dt class="property-optional"
+{{% /md %}}</dd><dt class="property-optional"
             title="Optional">
         <span id="electablenodes_nodejs">
 <a href="#electablenodes_nodejs" style="color: inherit; text-decoration: inherit;">electable<wbr>Nodes</a>
@@ -6095,8 +5639,7 @@ Do not specify this field when creating a multi-region cluster using the replica
 * The total number of electableNodes across all replication spec regions  must total 3, 5, or 7.
 * Specify 0 if you do not want any electable nodes in the region.
 * You cannot create electable nodes in a region if `priority` is 0.
-{{% /md %}}</dd>
-    <dt class="property-optional"
+{{% /md %}}</dd><dt class="property-optional"
             title="Optional">
         <span id="priority_nodejs">
 <a href="#priority_nodejs" style="color: inherit; text-decoration: inherit;">priority</a>
@@ -6108,8 +5651,7 @@ Do not specify this field when creating a multi-region cluster using the replica
 * For regions where `electable_nodes` is at least 1, each region must have a priority of exactly one (1) less than the previous region. The first region must have a priority of 7. The lowest possible priority is 1.
 * The priority 7 region identifies the Preferred Region of the cluster. Atlas places the primary node in the Preferred Region. Priorities 1 through 7 are exclusive - no more than one region per cluster can be assigned a given priority.
 * Example: If you have three regions, their priorities would be 7, 6, and 5 respectively. If you added two more regions for supporting electable nodes, the priorities of those regions would be 4 and 3 respectively.
-{{% /md %}}</dd>
-    <dt class="property-optional"
+{{% /md %}}</dd><dt class="property-optional"
             title="Optional">
         <span id="readonlynodes_nodejs">
 <a href="#readonlynodes_nodejs" style="color: inherit; text-decoration: inherit;">read<wbr>Only<wbr>Nodes</a>
@@ -6118,8 +5660,7 @@ Do not specify this field when creating a multi-region cluster using the replica
         <span class="property-type">number</span>
     </dt>
     <dd>{{% md %}}Number of read-only nodes for Atlas to deploy to the region. Read-only nodes can never become the primary, but can facilitate local-reads. Specify 0 if you do not want any read-only nodes in the region.
-{{% /md %}}</dd>
-    <dt class="property-optional"
+{{% /md %}}</dd><dt class="property-optional"
             title="Optional">
         <span id="regionname_nodejs">
 <a href="#regionname_nodejs" style="color: inherit; text-decoration: inherit;">region<wbr>Name</a>
@@ -6128,14 +5669,11 @@ Do not specify this field when creating a multi-region cluster using the replica
         <span class="property-type">string</span>
     </dt>
     <dd>{{% md %}}Physical location of your MongoDB cluster. The region you choose can affect network latency for clients accessing your databases.  Requires the **Atlas region name**, see the reference list for [AWS](https://docs.atlas.mongodb.com/reference/amazon-aws/), [GCP](https://docs.atlas.mongodb.com/reference/google-gcp/), [Azure](https://docs.atlas.mongodb.com/reference/microsoft-azure/).
-{{% /md %}}</dd>
-</dl>
+{{% /md %}}</dd></dl>
 {{% /choosable %}}
 
 {{% choosable language python %}}
-<dl class="resources-properties">
-
-    <dt class="property-optional"
+<dl class="resources-properties"><dt class="property-optional"
             title="Optional">
         <span id="analytics_nodes_python">
 <a href="#analytics_nodes_python" style="color: inherit; text-decoration: inherit;">analytics_<wbr>nodes</a>
@@ -6144,8 +5682,7 @@ Do not specify this field when creating a multi-region cluster using the replica
         <span class="property-type">int</span>
     </dt>
     <dd>{{% md %}}The number of analytics nodes for Atlas to deploy to the region. Analytics nodes are useful for handling analytic data such as reporting queries from BI Connector for Atlas. Analytics nodes are read-only, and can never become the primary. If you do not specify this option, no analytics nodes are deployed to the region.
-{{% /md %}}</dd>
-    <dt class="property-optional"
+{{% /md %}}</dd><dt class="property-optional"
             title="Optional">
         <span id="electable_nodes_python">
 <a href="#electable_nodes_python" style="color: inherit; text-decoration: inherit;">electable_<wbr>nodes</a>
@@ -6157,8 +5694,7 @@ Do not specify this field when creating a multi-region cluster using the replica
 * The total number of electableNodes across all replication spec regions  must total 3, 5, or 7.
 * Specify 0 if you do not want any electable nodes in the region.
 * You cannot create electable nodes in a region if `priority` is 0.
-{{% /md %}}</dd>
-    <dt class="property-optional"
+{{% /md %}}</dd><dt class="property-optional"
             title="Optional">
         <span id="priority_python">
 <a href="#priority_python" style="color: inherit; text-decoration: inherit;">priority</a>
@@ -6170,8 +5706,7 @@ Do not specify this field when creating a multi-region cluster using the replica
 * For regions where `electable_nodes` is at least 1, each region must have a priority of exactly one (1) less than the previous region. The first region must have a priority of 7. The lowest possible priority is 1.
 * The priority 7 region identifies the Preferred Region of the cluster. Atlas places the primary node in the Preferred Region. Priorities 1 through 7 are exclusive - no more than one region per cluster can be assigned a given priority.
 * Example: If you have three regions, their priorities would be 7, 6, and 5 respectively. If you added two more regions for supporting electable nodes, the priorities of those regions would be 4 and 3 respectively.
-{{% /md %}}</dd>
-    <dt class="property-optional"
+{{% /md %}}</dd><dt class="property-optional"
             title="Optional">
         <span id="read_only_nodes_python">
 <a href="#read_only_nodes_python" style="color: inherit; text-decoration: inherit;">read_<wbr>only_<wbr>nodes</a>
@@ -6180,8 +5715,7 @@ Do not specify this field when creating a multi-region cluster using the replica
         <span class="property-type">int</span>
     </dt>
     <dd>{{% md %}}Number of read-only nodes for Atlas to deploy to the region. Read-only nodes can never become the primary, but can facilitate local-reads. Specify 0 if you do not want any read-only nodes in the region.
-{{% /md %}}</dd>
-    <dt class="property-optional"
+{{% /md %}}</dd><dt class="property-optional"
             title="Optional">
         <span id="region_name_python">
 <a href="#region_name_python" style="color: inherit; text-decoration: inherit;">region_<wbr>name</a>
@@ -6190,16 +5724,13 @@ Do not specify this field when creating a multi-region cluster using the replica
         <span class="property-type">str</span>
     </dt>
     <dd>{{% md %}}Physical location of your MongoDB cluster. The region you choose can affect network latency for clients accessing your databases.  Requires the **Atlas region name**, see the reference list for [AWS](https://docs.atlas.mongodb.com/reference/amazon-aws/), [GCP](https://docs.atlas.mongodb.com/reference/google-gcp/), [Azure](https://docs.atlas.mongodb.com/reference/microsoft-azure/).
-{{% /md %}}</dd>
-</dl>
+{{% /md %}}</dd></dl>
 {{% /choosable %}}
 
 <h4 id="clustersnapshotbackuppolicy">Cluster<wbr>Snapshot<wbr>Backup<wbr>Policy</h4>
 
 {{% choosable language csharp %}}
-<dl class="resources-properties">
-
-    <dt class="property-optional"
+<dl class="resources-properties"><dt class="property-optional"
             title="Optional">
         <span id="clusterid_csharp">
 <a href="#clusterid_csharp" style="color: inherit; text-decoration: inherit;">Cluster<wbr>Id</a>
@@ -6208,8 +5739,7 @@ Do not specify this field when creating a multi-region cluster using the replica
         <span class="property-type">string</span>
     </dt>
     <dd>{{% md %}}The cluster ID.
-{{% /md %}}</dd>
-    <dt class="property-optional"
+{{% /md %}}</dd><dt class="property-optional"
             title="Optional">
         <span id="clustername_csharp">
 <a href="#clustername_csharp" style="color: inherit; text-decoration: inherit;">Cluster<wbr>Name</a>
@@ -6217,8 +5747,7 @@ Do not specify this field when creating a multi-region cluster using the replica
         <span class="property-indicator"></span>
         <span class="property-type">string</span>
     </dt>
-    <dd>{{% md %}}{{% /md %}}</dd>
-    <dt class="property-optional"
+    <dd>{{% md %}}{{% /md %}}</dd><dt class="property-optional"
             title="Optional">
         <span id="nextsnapshot_csharp">
 <a href="#nextsnapshot_csharp" style="color: inherit; text-decoration: inherit;">Next<wbr>Snapshot</a>
@@ -6226,8 +5755,7 @@ Do not specify this field when creating a multi-region cluster using the replica
         <span class="property-indicator"></span>
         <span class="property-type">string</span>
     </dt>
-    <dd>{{% md %}}{{% /md %}}</dd>
-    <dt class="property-optional"
+    <dd>{{% md %}}{{% /md %}}</dd><dt class="property-optional"
             title="Optional">
         <span id="policies_csharp">
 <a href="#policies_csharp" style="color: inherit; text-decoration: inherit;">Policies</a>
@@ -6235,8 +5763,7 @@ Do not specify this field when creating a multi-region cluster using the replica
         <span class="property-indicator"></span>
         <span class="property-type"><a href="#clustersnapshotbackuppolicypolicy">List&lt;Cluster<wbr>Snapshot<wbr>Backup<wbr>Policy<wbr>Policy<wbr>Args&gt;</a></span>
     </dt>
-    <dd>{{% md %}}{{% /md %}}</dd>
-    <dt class="property-optional"
+    <dd>{{% md %}}{{% /md %}}</dd><dt class="property-optional"
             title="Optional">
         <span id="referencehourofday_csharp">
 <a href="#referencehourofday_csharp" style="color: inherit; text-decoration: inherit;">Reference<wbr>Hour<wbr>Of<wbr>Day</a>
@@ -6244,8 +5771,7 @@ Do not specify this field when creating a multi-region cluster using the replica
         <span class="property-indicator"></span>
         <span class="property-type">int</span>
     </dt>
-    <dd>{{% md %}}{{% /md %}}</dd>
-    <dt class="property-optional"
+    <dd>{{% md %}}{{% /md %}}</dd><dt class="property-optional"
             title="Optional">
         <span id="referenceminuteofhour_csharp">
 <a href="#referenceminuteofhour_csharp" style="color: inherit; text-decoration: inherit;">Reference<wbr>Minute<wbr>Of<wbr>Hour</a>
@@ -6253,8 +5779,7 @@ Do not specify this field when creating a multi-region cluster using the replica
         <span class="property-indicator"></span>
         <span class="property-type">int</span>
     </dt>
-    <dd>{{% md %}}{{% /md %}}</dd>
-    <dt class="property-optional"
+    <dd>{{% md %}}{{% /md %}}</dd><dt class="property-optional"
             title="Optional">
         <span id="restorewindowdays_csharp">
 <a href="#restorewindowdays_csharp" style="color: inherit; text-decoration: inherit;">Restore<wbr>Window<wbr>Days</a>
@@ -6262,8 +5787,7 @@ Do not specify this field when creating a multi-region cluster using the replica
         <span class="property-indicator"></span>
         <span class="property-type">int</span>
     </dt>
-    <dd>{{% md %}}{{% /md %}}</dd>
-    <dt class="property-optional"
+    <dd>{{% md %}}{{% /md %}}</dd><dt class="property-optional"
             title="Optional">
         <span id="updatesnapshots_csharp">
 <a href="#updatesnapshots_csharp" style="color: inherit; text-decoration: inherit;">Update<wbr>Snapshots</a>
@@ -6271,14 +5795,11 @@ Do not specify this field when creating a multi-region cluster using the replica
         <span class="property-indicator"></span>
         <span class="property-type">bool</span>
     </dt>
-    <dd>{{% md %}}{{% /md %}}</dd>
-</dl>
+    <dd>{{% md %}}{{% /md %}}</dd></dl>
 {{% /choosable %}}
 
 {{% choosable language go %}}
-<dl class="resources-properties">
-
-    <dt class="property-optional"
+<dl class="resources-properties"><dt class="property-optional"
             title="Optional">
         <span id="clusterid_go">
 <a href="#clusterid_go" style="color: inherit; text-decoration: inherit;">Cluster<wbr>Id</a>
@@ -6287,8 +5808,7 @@ Do not specify this field when creating a multi-region cluster using the replica
         <span class="property-type">string</span>
     </dt>
     <dd>{{% md %}}The cluster ID.
-{{% /md %}}</dd>
-    <dt class="property-optional"
+{{% /md %}}</dd><dt class="property-optional"
             title="Optional">
         <span id="clustername_go">
 <a href="#clustername_go" style="color: inherit; text-decoration: inherit;">Cluster<wbr>Name</a>
@@ -6296,8 +5816,7 @@ Do not specify this field when creating a multi-region cluster using the replica
         <span class="property-indicator"></span>
         <span class="property-type">string</span>
     </dt>
-    <dd>{{% md %}}{{% /md %}}</dd>
-    <dt class="property-optional"
+    <dd>{{% md %}}{{% /md %}}</dd><dt class="property-optional"
             title="Optional">
         <span id="nextsnapshot_go">
 <a href="#nextsnapshot_go" style="color: inherit; text-decoration: inherit;">Next<wbr>Snapshot</a>
@@ -6305,8 +5824,7 @@ Do not specify this field when creating a multi-region cluster using the replica
         <span class="property-indicator"></span>
         <span class="property-type">string</span>
     </dt>
-    <dd>{{% md %}}{{% /md %}}</dd>
-    <dt class="property-optional"
+    <dd>{{% md %}}{{% /md %}}</dd><dt class="property-optional"
             title="Optional">
         <span id="policies_go">
 <a href="#policies_go" style="color: inherit; text-decoration: inherit;">Policies</a>
@@ -6314,8 +5832,7 @@ Do not specify this field when creating a multi-region cluster using the replica
         <span class="property-indicator"></span>
         <span class="property-type"><a href="#clustersnapshotbackuppolicypolicy">[]Cluster<wbr>Snapshot<wbr>Backup<wbr>Policy<wbr>Policy</a></span>
     </dt>
-    <dd>{{% md %}}{{% /md %}}</dd>
-    <dt class="property-optional"
+    <dd>{{% md %}}{{% /md %}}</dd><dt class="property-optional"
             title="Optional">
         <span id="referencehourofday_go">
 <a href="#referencehourofday_go" style="color: inherit; text-decoration: inherit;">Reference<wbr>Hour<wbr>Of<wbr>Day</a>
@@ -6323,8 +5840,7 @@ Do not specify this field when creating a multi-region cluster using the replica
         <span class="property-indicator"></span>
         <span class="property-type">int</span>
     </dt>
-    <dd>{{% md %}}{{% /md %}}</dd>
-    <dt class="property-optional"
+    <dd>{{% md %}}{{% /md %}}</dd><dt class="property-optional"
             title="Optional">
         <span id="referenceminuteofhour_go">
 <a href="#referenceminuteofhour_go" style="color: inherit; text-decoration: inherit;">Reference<wbr>Minute<wbr>Of<wbr>Hour</a>
@@ -6332,8 +5848,7 @@ Do not specify this field when creating a multi-region cluster using the replica
         <span class="property-indicator"></span>
         <span class="property-type">int</span>
     </dt>
-    <dd>{{% md %}}{{% /md %}}</dd>
-    <dt class="property-optional"
+    <dd>{{% md %}}{{% /md %}}</dd><dt class="property-optional"
             title="Optional">
         <span id="restorewindowdays_go">
 <a href="#restorewindowdays_go" style="color: inherit; text-decoration: inherit;">Restore<wbr>Window<wbr>Days</a>
@@ -6341,8 +5856,7 @@ Do not specify this field when creating a multi-region cluster using the replica
         <span class="property-indicator"></span>
         <span class="property-type">int</span>
     </dt>
-    <dd>{{% md %}}{{% /md %}}</dd>
-    <dt class="property-optional"
+    <dd>{{% md %}}{{% /md %}}</dd><dt class="property-optional"
             title="Optional">
         <span id="updatesnapshots_go">
 <a href="#updatesnapshots_go" style="color: inherit; text-decoration: inherit;">Update<wbr>Snapshots</a>
@@ -6350,14 +5864,11 @@ Do not specify this field when creating a multi-region cluster using the replica
         <span class="property-indicator"></span>
         <span class="property-type">bool</span>
     </dt>
-    <dd>{{% md %}}{{% /md %}}</dd>
-</dl>
+    <dd>{{% md %}}{{% /md %}}</dd></dl>
 {{% /choosable %}}
 
 {{% choosable language nodejs %}}
-<dl class="resources-properties">
-
-    <dt class="property-optional"
+<dl class="resources-properties"><dt class="property-optional"
             title="Optional">
         <span id="clusterid_nodejs">
 <a href="#clusterid_nodejs" style="color: inherit; text-decoration: inherit;">cluster<wbr>Id</a>
@@ -6366,8 +5877,7 @@ Do not specify this field when creating a multi-region cluster using the replica
         <span class="property-type">string</span>
     </dt>
     <dd>{{% md %}}The cluster ID.
-{{% /md %}}</dd>
-    <dt class="property-optional"
+{{% /md %}}</dd><dt class="property-optional"
             title="Optional">
         <span id="clustername_nodejs">
 <a href="#clustername_nodejs" style="color: inherit; text-decoration: inherit;">cluster<wbr>Name</a>
@@ -6375,8 +5885,7 @@ Do not specify this field when creating a multi-region cluster using the replica
         <span class="property-indicator"></span>
         <span class="property-type">string</span>
     </dt>
-    <dd>{{% md %}}{{% /md %}}</dd>
-    <dt class="property-optional"
+    <dd>{{% md %}}{{% /md %}}</dd><dt class="property-optional"
             title="Optional">
         <span id="nextsnapshot_nodejs">
 <a href="#nextsnapshot_nodejs" style="color: inherit; text-decoration: inherit;">next<wbr>Snapshot</a>
@@ -6384,8 +5893,7 @@ Do not specify this field when creating a multi-region cluster using the replica
         <span class="property-indicator"></span>
         <span class="property-type">string</span>
     </dt>
-    <dd>{{% md %}}{{% /md %}}</dd>
-    <dt class="property-optional"
+    <dd>{{% md %}}{{% /md %}}</dd><dt class="property-optional"
             title="Optional">
         <span id="policies_nodejs">
 <a href="#policies_nodejs" style="color: inherit; text-decoration: inherit;">policies</a>
@@ -6393,8 +5901,7 @@ Do not specify this field when creating a multi-region cluster using the replica
         <span class="property-indicator"></span>
         <span class="property-type"><a href="#clustersnapshotbackuppolicypolicy">Cluster<wbr>Snapshot<wbr>Backup<wbr>Policy<wbr>Policy[]</a></span>
     </dt>
-    <dd>{{% md %}}{{% /md %}}</dd>
-    <dt class="property-optional"
+    <dd>{{% md %}}{{% /md %}}</dd><dt class="property-optional"
             title="Optional">
         <span id="referencehourofday_nodejs">
 <a href="#referencehourofday_nodejs" style="color: inherit; text-decoration: inherit;">reference<wbr>Hour<wbr>Of<wbr>Day</a>
@@ -6402,8 +5909,7 @@ Do not specify this field when creating a multi-region cluster using the replica
         <span class="property-indicator"></span>
         <span class="property-type">number</span>
     </dt>
-    <dd>{{% md %}}{{% /md %}}</dd>
-    <dt class="property-optional"
+    <dd>{{% md %}}{{% /md %}}</dd><dt class="property-optional"
             title="Optional">
         <span id="referenceminuteofhour_nodejs">
 <a href="#referenceminuteofhour_nodejs" style="color: inherit; text-decoration: inherit;">reference<wbr>Minute<wbr>Of<wbr>Hour</a>
@@ -6411,8 +5917,7 @@ Do not specify this field when creating a multi-region cluster using the replica
         <span class="property-indicator"></span>
         <span class="property-type">number</span>
     </dt>
-    <dd>{{% md %}}{{% /md %}}</dd>
-    <dt class="property-optional"
+    <dd>{{% md %}}{{% /md %}}</dd><dt class="property-optional"
             title="Optional">
         <span id="restorewindowdays_nodejs">
 <a href="#restorewindowdays_nodejs" style="color: inherit; text-decoration: inherit;">restore<wbr>Window<wbr>Days</a>
@@ -6420,8 +5925,7 @@ Do not specify this field when creating a multi-region cluster using the replica
         <span class="property-indicator"></span>
         <span class="property-type">number</span>
     </dt>
-    <dd>{{% md %}}{{% /md %}}</dd>
-    <dt class="property-optional"
+    <dd>{{% md %}}{{% /md %}}</dd><dt class="property-optional"
             title="Optional">
         <span id="updatesnapshots_nodejs">
 <a href="#updatesnapshots_nodejs" style="color: inherit; text-decoration: inherit;">update<wbr>Snapshots</a>
@@ -6429,14 +5933,11 @@ Do not specify this field when creating a multi-region cluster using the replica
         <span class="property-indicator"></span>
         <span class="property-type">boolean</span>
     </dt>
-    <dd>{{% md %}}{{% /md %}}</dd>
-</dl>
+    <dd>{{% md %}}{{% /md %}}</dd></dl>
 {{% /choosable %}}
 
 {{% choosable language python %}}
-<dl class="resources-properties">
-
-    <dt class="property-optional"
+<dl class="resources-properties"><dt class="property-optional"
             title="Optional">
         <span id="cluster_id_python">
 <a href="#cluster_id_python" style="color: inherit; text-decoration: inherit;">cluster_<wbr>id</a>
@@ -6445,8 +5946,7 @@ Do not specify this field when creating a multi-region cluster using the replica
         <span class="property-type">str</span>
     </dt>
     <dd>{{% md %}}The cluster ID.
-{{% /md %}}</dd>
-    <dt class="property-optional"
+{{% /md %}}</dd><dt class="property-optional"
             title="Optional">
         <span id="cluster_name_python">
 <a href="#cluster_name_python" style="color: inherit; text-decoration: inherit;">cluster_<wbr>name</a>
@@ -6454,8 +5954,7 @@ Do not specify this field when creating a multi-region cluster using the replica
         <span class="property-indicator"></span>
         <span class="property-type">str</span>
     </dt>
-    <dd>{{% md %}}{{% /md %}}</dd>
-    <dt class="property-optional"
+    <dd>{{% md %}}{{% /md %}}</dd><dt class="property-optional"
             title="Optional">
         <span id="next_snapshot_python">
 <a href="#next_snapshot_python" style="color: inherit; text-decoration: inherit;">next_<wbr>snapshot</a>
@@ -6463,8 +5962,7 @@ Do not specify this field when creating a multi-region cluster using the replica
         <span class="property-indicator"></span>
         <span class="property-type">str</span>
     </dt>
-    <dd>{{% md %}}{{% /md %}}</dd>
-    <dt class="property-optional"
+    <dd>{{% md %}}{{% /md %}}</dd><dt class="property-optional"
             title="Optional">
         <span id="policies_python">
 <a href="#policies_python" style="color: inherit; text-decoration: inherit;">policies</a>
@@ -6472,8 +5970,7 @@ Do not specify this field when creating a multi-region cluster using the replica
         <span class="property-indicator"></span>
         <span class="property-type"><a href="#clustersnapshotbackuppolicypolicy">Sequence[Cluster<wbr>Snapshot<wbr>Backup<wbr>Policy<wbr>Policy<wbr>Args]</a></span>
     </dt>
-    <dd>{{% md %}}{{% /md %}}</dd>
-    <dt class="property-optional"
+    <dd>{{% md %}}{{% /md %}}</dd><dt class="property-optional"
             title="Optional">
         <span id="reference_hour_of_day_python">
 <a href="#reference_hour_of_day_python" style="color: inherit; text-decoration: inherit;">reference_<wbr>hour_<wbr>of_<wbr>day</a>
@@ -6481,8 +5978,7 @@ Do not specify this field when creating a multi-region cluster using the replica
         <span class="property-indicator"></span>
         <span class="property-type">int</span>
     </dt>
-    <dd>{{% md %}}{{% /md %}}</dd>
-    <dt class="property-optional"
+    <dd>{{% md %}}{{% /md %}}</dd><dt class="property-optional"
             title="Optional">
         <span id="reference_minute_of_hour_python">
 <a href="#reference_minute_of_hour_python" style="color: inherit; text-decoration: inherit;">reference_<wbr>minute_<wbr>of_<wbr>hour</a>
@@ -6490,8 +5986,7 @@ Do not specify this field when creating a multi-region cluster using the replica
         <span class="property-indicator"></span>
         <span class="property-type">int</span>
     </dt>
-    <dd>{{% md %}}{{% /md %}}</dd>
-    <dt class="property-optional"
+    <dd>{{% md %}}{{% /md %}}</dd><dt class="property-optional"
             title="Optional">
         <span id="restore_window_days_python">
 <a href="#restore_window_days_python" style="color: inherit; text-decoration: inherit;">restore_<wbr>window_<wbr>days</a>
@@ -6499,8 +5994,7 @@ Do not specify this field when creating a multi-region cluster using the replica
         <span class="property-indicator"></span>
         <span class="property-type">int</span>
     </dt>
-    <dd>{{% md %}}{{% /md %}}</dd>
-    <dt class="property-optional"
+    <dd>{{% md %}}{{% /md %}}</dd><dt class="property-optional"
             title="Optional">
         <span id="update_snapshots_python">
 <a href="#update_snapshots_python" style="color: inherit; text-decoration: inherit;">update_<wbr>snapshots</a>
@@ -6508,16 +6002,13 @@ Do not specify this field when creating a multi-region cluster using the replica
         <span class="property-indicator"></span>
         <span class="property-type">bool</span>
     </dt>
-    <dd>{{% md %}}{{% /md %}}</dd>
-</dl>
+    <dd>{{% md %}}{{% /md %}}</dd></dl>
 {{% /choosable %}}
 
 <h4 id="clustersnapshotbackuppolicypolicy">Cluster<wbr>Snapshot<wbr>Backup<wbr>Policy<wbr>Policy</h4>
 
 {{% choosable language csharp %}}
-<dl class="resources-properties">
-
-    <dt class="property-optional"
+<dl class="resources-properties"><dt class="property-optional"
             title="Optional">
         <span id="id_csharp">
 <a href="#id_csharp" style="color: inherit; text-decoration: inherit;">Id</a>
@@ -6526,8 +6017,7 @@ Do not specify this field when creating a multi-region cluster using the replica
         <span class="property-type">string</span>
     </dt>
     <dd>{{% md %}}Unique identifer of the replication document for a zone in a Global Cluster.
-{{% /md %}}</dd>
-    <dt class="property-optional"
+{{% /md %}}</dd><dt class="property-optional"
             title="Optional">
         <span id="policyitems_csharp">
 <a href="#policyitems_csharp" style="color: inherit; text-decoration: inherit;">Policy<wbr>Items</a>
@@ -6535,14 +6025,11 @@ Do not specify this field when creating a multi-region cluster using the replica
         <span class="property-indicator"></span>
         <span class="property-type"><a href="#clustersnapshotbackuppolicypolicypolicyitem">List&lt;Cluster<wbr>Snapshot<wbr>Backup<wbr>Policy<wbr>Policy<wbr>Policy<wbr>Item<wbr>Args&gt;</a></span>
     </dt>
-    <dd>{{% md %}}{{% /md %}}</dd>
-</dl>
+    <dd>{{% md %}}{{% /md %}}</dd></dl>
 {{% /choosable %}}
 
 {{% choosable language go %}}
-<dl class="resources-properties">
-
-    <dt class="property-optional"
+<dl class="resources-properties"><dt class="property-optional"
             title="Optional">
         <span id="id_go">
 <a href="#id_go" style="color: inherit; text-decoration: inherit;">Id</a>
@@ -6551,8 +6038,7 @@ Do not specify this field when creating a multi-region cluster using the replica
         <span class="property-type">string</span>
     </dt>
     <dd>{{% md %}}Unique identifer of the replication document for a zone in a Global Cluster.
-{{% /md %}}</dd>
-    <dt class="property-optional"
+{{% /md %}}</dd><dt class="property-optional"
             title="Optional">
         <span id="policyitems_go">
 <a href="#policyitems_go" style="color: inherit; text-decoration: inherit;">Policy<wbr>Items</a>
@@ -6560,14 +6046,11 @@ Do not specify this field when creating a multi-region cluster using the replica
         <span class="property-indicator"></span>
         <span class="property-type"><a href="#clustersnapshotbackuppolicypolicypolicyitem">[]Cluster<wbr>Snapshot<wbr>Backup<wbr>Policy<wbr>Policy<wbr>Policy<wbr>Item</a></span>
     </dt>
-    <dd>{{% md %}}{{% /md %}}</dd>
-</dl>
+    <dd>{{% md %}}{{% /md %}}</dd></dl>
 {{% /choosable %}}
 
 {{% choosable language nodejs %}}
-<dl class="resources-properties">
-
-    <dt class="property-optional"
+<dl class="resources-properties"><dt class="property-optional"
             title="Optional">
         <span id="id_nodejs">
 <a href="#id_nodejs" style="color: inherit; text-decoration: inherit;">id</a>
@@ -6576,8 +6059,7 @@ Do not specify this field when creating a multi-region cluster using the replica
         <span class="property-type">string</span>
     </dt>
     <dd>{{% md %}}Unique identifer of the replication document for a zone in a Global Cluster.
-{{% /md %}}</dd>
-    <dt class="property-optional"
+{{% /md %}}</dd><dt class="property-optional"
             title="Optional">
         <span id="policyitems_nodejs">
 <a href="#policyitems_nodejs" style="color: inherit; text-decoration: inherit;">policy<wbr>Items</a>
@@ -6585,14 +6067,11 @@ Do not specify this field when creating a multi-region cluster using the replica
         <span class="property-indicator"></span>
         <span class="property-type"><a href="#clustersnapshotbackuppolicypolicypolicyitem">Cluster<wbr>Snapshot<wbr>Backup<wbr>Policy<wbr>Policy<wbr>Policy<wbr>Item[]</a></span>
     </dt>
-    <dd>{{% md %}}{{% /md %}}</dd>
-</dl>
+    <dd>{{% md %}}{{% /md %}}</dd></dl>
 {{% /choosable %}}
 
 {{% choosable language python %}}
-<dl class="resources-properties">
-
-    <dt class="property-optional"
+<dl class="resources-properties"><dt class="property-optional"
             title="Optional">
         <span id="id_python">
 <a href="#id_python" style="color: inherit; text-decoration: inherit;">id</a>
@@ -6601,8 +6080,7 @@ Do not specify this field when creating a multi-region cluster using the replica
         <span class="property-type">str</span>
     </dt>
     <dd>{{% md %}}Unique identifer of the replication document for a zone in a Global Cluster.
-{{% /md %}}</dd>
-    <dt class="property-optional"
+{{% /md %}}</dd><dt class="property-optional"
             title="Optional">
         <span id="policy_items_python">
 <a href="#policy_items_python" style="color: inherit; text-decoration: inherit;">policy_<wbr>items</a>
@@ -6610,16 +6088,13 @@ Do not specify this field when creating a multi-region cluster using the replica
         <span class="property-indicator"></span>
         <span class="property-type"><a href="#clustersnapshotbackuppolicypolicypolicyitem">Sequence[Cluster<wbr>Snapshot<wbr>Backup<wbr>Policy<wbr>Policy<wbr>Policy<wbr>Item<wbr>Args]</a></span>
     </dt>
-    <dd>{{% md %}}{{% /md %}}</dd>
-</dl>
+    <dd>{{% md %}}{{% /md %}}</dd></dl>
 {{% /choosable %}}
 
 <h4 id="clustersnapshotbackuppolicypolicypolicyitem">Cluster<wbr>Snapshot<wbr>Backup<wbr>Policy<wbr>Policy<wbr>Policy<wbr>Item</h4>
 
 {{% choosable language csharp %}}
-<dl class="resources-properties">
-
-    <dt class="property-optional"
+<dl class="resources-properties"><dt class="property-optional"
             title="Optional">
         <span id="frequencyinterval_csharp">
 <a href="#frequencyinterval_csharp" style="color: inherit; text-decoration: inherit;">Frequency<wbr>Interval</a>
@@ -6627,8 +6102,7 @@ Do not specify this field when creating a multi-region cluster using the replica
         <span class="property-indicator"></span>
         <span class="property-type">int</span>
     </dt>
-    <dd>{{% md %}}{{% /md %}}</dd>
-    <dt class="property-optional"
+    <dd>{{% md %}}{{% /md %}}</dd><dt class="property-optional"
             title="Optional">
         <span id="frequencytype_csharp">
 <a href="#frequencytype_csharp" style="color: inherit; text-decoration: inherit;">Frequency<wbr>Type</a>
@@ -6636,8 +6110,7 @@ Do not specify this field when creating a multi-region cluster using the replica
         <span class="property-indicator"></span>
         <span class="property-type">string</span>
     </dt>
-    <dd>{{% md %}}{{% /md %}}</dd>
-    <dt class="property-optional"
+    <dd>{{% md %}}{{% /md %}}</dd><dt class="property-optional"
             title="Optional">
         <span id="id_csharp">
 <a href="#id_csharp" style="color: inherit; text-decoration: inherit;">Id</a>
@@ -6646,8 +6119,7 @@ Do not specify this field when creating a multi-region cluster using the replica
         <span class="property-type">string</span>
     </dt>
     <dd>{{% md %}}Unique identifer of the replication document for a zone in a Global Cluster.
-{{% /md %}}</dd>
-    <dt class="property-optional"
+{{% /md %}}</dd><dt class="property-optional"
             title="Optional">
         <span id="retentionunit_csharp">
 <a href="#retentionunit_csharp" style="color: inherit; text-decoration: inherit;">Retention<wbr>Unit</a>
@@ -6655,8 +6127,7 @@ Do not specify this field when creating a multi-region cluster using the replica
         <span class="property-indicator"></span>
         <span class="property-type">string</span>
     </dt>
-    <dd>{{% md %}}{{% /md %}}</dd>
-    <dt class="property-optional"
+    <dd>{{% md %}}{{% /md %}}</dd><dt class="property-optional"
             title="Optional">
         <span id="retentionvalue_csharp">
 <a href="#retentionvalue_csharp" style="color: inherit; text-decoration: inherit;">Retention<wbr>Value</a>
@@ -6664,14 +6135,11 @@ Do not specify this field when creating a multi-region cluster using the replica
         <span class="property-indicator"></span>
         <span class="property-type">int</span>
     </dt>
-    <dd>{{% md %}}{{% /md %}}</dd>
-</dl>
+    <dd>{{% md %}}{{% /md %}}</dd></dl>
 {{% /choosable %}}
 
 {{% choosable language go %}}
-<dl class="resources-properties">
-
-    <dt class="property-optional"
+<dl class="resources-properties"><dt class="property-optional"
             title="Optional">
         <span id="frequencyinterval_go">
 <a href="#frequencyinterval_go" style="color: inherit; text-decoration: inherit;">Frequency<wbr>Interval</a>
@@ -6679,8 +6147,7 @@ Do not specify this field when creating a multi-region cluster using the replica
         <span class="property-indicator"></span>
         <span class="property-type">int</span>
     </dt>
-    <dd>{{% md %}}{{% /md %}}</dd>
-    <dt class="property-optional"
+    <dd>{{% md %}}{{% /md %}}</dd><dt class="property-optional"
             title="Optional">
         <span id="frequencytype_go">
 <a href="#frequencytype_go" style="color: inherit; text-decoration: inherit;">Frequency<wbr>Type</a>
@@ -6688,8 +6155,7 @@ Do not specify this field when creating a multi-region cluster using the replica
         <span class="property-indicator"></span>
         <span class="property-type">string</span>
     </dt>
-    <dd>{{% md %}}{{% /md %}}</dd>
-    <dt class="property-optional"
+    <dd>{{% md %}}{{% /md %}}</dd><dt class="property-optional"
             title="Optional">
         <span id="id_go">
 <a href="#id_go" style="color: inherit; text-decoration: inherit;">Id</a>
@@ -6698,8 +6164,7 @@ Do not specify this field when creating a multi-region cluster using the replica
         <span class="property-type">string</span>
     </dt>
     <dd>{{% md %}}Unique identifer of the replication document for a zone in a Global Cluster.
-{{% /md %}}</dd>
-    <dt class="property-optional"
+{{% /md %}}</dd><dt class="property-optional"
             title="Optional">
         <span id="retentionunit_go">
 <a href="#retentionunit_go" style="color: inherit; text-decoration: inherit;">Retention<wbr>Unit</a>
@@ -6707,8 +6172,7 @@ Do not specify this field when creating a multi-region cluster using the replica
         <span class="property-indicator"></span>
         <span class="property-type">string</span>
     </dt>
-    <dd>{{% md %}}{{% /md %}}</dd>
-    <dt class="property-optional"
+    <dd>{{% md %}}{{% /md %}}</dd><dt class="property-optional"
             title="Optional">
         <span id="retentionvalue_go">
 <a href="#retentionvalue_go" style="color: inherit; text-decoration: inherit;">Retention<wbr>Value</a>
@@ -6716,14 +6180,11 @@ Do not specify this field when creating a multi-region cluster using the replica
         <span class="property-indicator"></span>
         <span class="property-type">int</span>
     </dt>
-    <dd>{{% md %}}{{% /md %}}</dd>
-</dl>
+    <dd>{{% md %}}{{% /md %}}</dd></dl>
 {{% /choosable %}}
 
 {{% choosable language nodejs %}}
-<dl class="resources-properties">
-
-    <dt class="property-optional"
+<dl class="resources-properties"><dt class="property-optional"
             title="Optional">
         <span id="frequencyinterval_nodejs">
 <a href="#frequencyinterval_nodejs" style="color: inherit; text-decoration: inherit;">frequency<wbr>Interval</a>
@@ -6731,8 +6192,7 @@ Do not specify this field when creating a multi-region cluster using the replica
         <span class="property-indicator"></span>
         <span class="property-type">number</span>
     </dt>
-    <dd>{{% md %}}{{% /md %}}</dd>
-    <dt class="property-optional"
+    <dd>{{% md %}}{{% /md %}}</dd><dt class="property-optional"
             title="Optional">
         <span id="frequencytype_nodejs">
 <a href="#frequencytype_nodejs" style="color: inherit; text-decoration: inherit;">frequency<wbr>Type</a>
@@ -6740,8 +6200,7 @@ Do not specify this field when creating a multi-region cluster using the replica
         <span class="property-indicator"></span>
         <span class="property-type">string</span>
     </dt>
-    <dd>{{% md %}}{{% /md %}}</dd>
-    <dt class="property-optional"
+    <dd>{{% md %}}{{% /md %}}</dd><dt class="property-optional"
             title="Optional">
         <span id="id_nodejs">
 <a href="#id_nodejs" style="color: inherit; text-decoration: inherit;">id</a>
@@ -6750,8 +6209,7 @@ Do not specify this field when creating a multi-region cluster using the replica
         <span class="property-type">string</span>
     </dt>
     <dd>{{% md %}}Unique identifer of the replication document for a zone in a Global Cluster.
-{{% /md %}}</dd>
-    <dt class="property-optional"
+{{% /md %}}</dd><dt class="property-optional"
             title="Optional">
         <span id="retentionunit_nodejs">
 <a href="#retentionunit_nodejs" style="color: inherit; text-decoration: inherit;">retention<wbr>Unit</a>
@@ -6759,8 +6217,7 @@ Do not specify this field when creating a multi-region cluster using the replica
         <span class="property-indicator"></span>
         <span class="property-type">string</span>
     </dt>
-    <dd>{{% md %}}{{% /md %}}</dd>
-    <dt class="property-optional"
+    <dd>{{% md %}}{{% /md %}}</dd><dt class="property-optional"
             title="Optional">
         <span id="retentionvalue_nodejs">
 <a href="#retentionvalue_nodejs" style="color: inherit; text-decoration: inherit;">retention<wbr>Value</a>
@@ -6768,14 +6225,11 @@ Do not specify this field when creating a multi-region cluster using the replica
         <span class="property-indicator"></span>
         <span class="property-type">number</span>
     </dt>
-    <dd>{{% md %}}{{% /md %}}</dd>
-</dl>
+    <dd>{{% md %}}{{% /md %}}</dd></dl>
 {{% /choosable %}}
 
 {{% choosable language python %}}
-<dl class="resources-properties">
-
-    <dt class="property-optional"
+<dl class="resources-properties"><dt class="property-optional"
             title="Optional">
         <span id="frequency_interval_python">
 <a href="#frequency_interval_python" style="color: inherit; text-decoration: inherit;">frequency_<wbr>interval</a>
@@ -6783,8 +6237,7 @@ Do not specify this field when creating a multi-region cluster using the replica
         <span class="property-indicator"></span>
         <span class="property-type">int</span>
     </dt>
-    <dd>{{% md %}}{{% /md %}}</dd>
-    <dt class="property-optional"
+    <dd>{{% md %}}{{% /md %}}</dd><dt class="property-optional"
             title="Optional">
         <span id="frequency_type_python">
 <a href="#frequency_type_python" style="color: inherit; text-decoration: inherit;">frequency_<wbr>type</a>
@@ -6792,8 +6245,7 @@ Do not specify this field when creating a multi-region cluster using the replica
         <span class="property-indicator"></span>
         <span class="property-type">str</span>
     </dt>
-    <dd>{{% md %}}{{% /md %}}</dd>
-    <dt class="property-optional"
+    <dd>{{% md %}}{{% /md %}}</dd><dt class="property-optional"
             title="Optional">
         <span id="id_python">
 <a href="#id_python" style="color: inherit; text-decoration: inherit;">id</a>
@@ -6802,8 +6254,7 @@ Do not specify this field when creating a multi-region cluster using the replica
         <span class="property-type">str</span>
     </dt>
     <dd>{{% md %}}Unique identifer of the replication document for a zone in a Global Cluster.
-{{% /md %}}</dd>
-    <dt class="property-optional"
+{{% /md %}}</dd><dt class="property-optional"
             title="Optional">
         <span id="retention_unit_python">
 <a href="#retention_unit_python" style="color: inherit; text-decoration: inherit;">retention_<wbr>unit</a>
@@ -6811,8 +6262,7 @@ Do not specify this field when creating a multi-region cluster using the replica
         <span class="property-indicator"></span>
         <span class="property-type">str</span>
     </dt>
-    <dd>{{% md %}}{{% /md %}}</dd>
-    <dt class="property-optional"
+    <dd>{{% md %}}{{% /md %}}</dd><dt class="property-optional"
             title="Optional">
         <span id="retention_value_python">
 <a href="#retention_value_python" style="color: inherit; text-decoration: inherit;">retention_<wbr>value</a>
@@ -6820,8 +6270,7 @@ Do not specify this field when creating a multi-region cluster using the replica
         <span class="property-indicator"></span>
         <span class="property-type">int</span>
     </dt>
-    <dd>{{% md %}}{{% /md %}}</dd>
-</dl>
+    <dd>{{% md %}}{{% /md %}}</dd></dl>
 {{% /choosable %}}
 ## Import
 
@@ -6844,6 +6293,6 @@ Clusters can be imported using project ID and cluster name, in the format `PROJE
 	<dt>License</dt>
 	<dd>Apache-2.0</dd>
 	<dt>Notes</dt>
-	<dd>This Pulumi package is based on the [`mongodbatlas` Terraform Provider](https://github.com/mongodb/terraform-provider-mongodbatlas).</dd>
+	<dd>{{% md %}}This Pulumi package is based on the [`mongodbatlas` Terraform Provider](https://github.com/mongodb/terraform-provider-mongodbatlas).{{% /md %}}</dd>
 </dl>
 

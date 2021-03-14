@@ -1,8 +1,8 @@
 
 ---
 title: "RandomPet"
-title_tag: "Resource RandomPet | Package Random"
-meta_desc: "Explore the RandomPet resource of the Random package, including examples, input properties, output properties, lookup functions, and supporting types. The resource `random.RandomPet` generates random pet names that are intended to be"
+title_tag: "random.RandomPet"
+meta_desc: "Documentation for the random.RandomPet resource with examples, input properties, output properties, lookup functions, and supporting types."
 ---
 
 
@@ -20,11 +20,17 @@ exist concurrently.
 
 
 {{% examples %}}
+
 ## Example Usage
 
 {{< chooser language "typescript,python,go,csharp" / >}}
 
-{{% example csharp %}}
+
+
+
+
+{{< example csharp >}}
+
 ```csharp
 using Pulumi;
 using Aws = Pulumi.Aws;
@@ -54,13 +60,19 @@ class MyStack : Stack
 }
 ```
 
-{{% /example %}}
 
-{{% example go %}}
+{{< /example >}}
+
+
+{{< example go >}}
+
 Coming soon!
-{{% /example %}}
 
-{{% example python %}}
+{{< /example >}}
+
+
+{{< example python >}}
+
 ```python
 import pulumi
 import pulumi_aws as aws
@@ -76,9 +88,12 @@ server_instance = aws.ec2.Instance("serverInstance",
     })
 ```
 
-{{% /example %}}
 
-{{% example typescript %}}
+{{< /example >}}
+
+
+{{< example typescript >}}
+
 
 ```typescript
 import * as pulumi from "@pulumi/pulumi";
@@ -99,9 +114,16 @@ const serverInstance = new aws.ec2.Instance("server", {
 });
 ```
 
-{{% /example %}}
+
+{{< /example >}}
+
+
+
+
 
 {{% /examples %}}
+
+
 
 
 ## Create a RandomPet Resource {#create}
@@ -126,9 +148,7 @@ const serverInstance = new aws.ec2.Instance("server", {
 
 {{% choosable language nodejs %}}
 
-<dl class="resources-properties">
-  
-    <dt
+<dl class="resources-properties"><dt
         class="property-required" title="Required">
         <span>name</span>
         <span class="property-indicator"></span>
@@ -136,9 +156,7 @@ const serverInstance = new aws.ec2.Instance("server", {
     </dt>
     <dd>
       The unique name of the resource.
-    </dd>
-  
-    <dt
+    </dd><dt
         class="property-optional" title="Optional">
         <span>args</span>
         <span class="property-indicator"></span>
@@ -146,9 +164,7 @@ const serverInstance = new aws.ec2.Instance("server", {
     </dt>
     <dd>
       The arguments to resource properties.
-    </dd>
-  
-    <dt
+    </dd><dt
         class="property-optional" title="Optional">
         <span>opts</span>
         <span class="property-indicator"></span>
@@ -156,10 +172,7 @@ const serverInstance = new aws.ec2.Instance("server", {
     </dt>
     <dd>
       Bag of options to control resource&#39;s behavior.
-    </dd>
-  
-
-</dl>
+    </dd></dl>
 
 {{% /choosable %}}
 
@@ -185,9 +198,7 @@ const serverInstance = new aws.ec2.Instance("server", {
 
 {{% choosable language go %}}
 
-<dl class="resources-properties">
-  
-    <dt
+<dl class="resources-properties"><dt
         class="property-optional" title="Optional">
         <span>ctx</span>
         <span class="property-indicator"></span>
@@ -195,9 +206,7 @@ const serverInstance = new aws.ec2.Instance("server", {
     </dt>
     <dd>
       Context object for the current deployment.
-    </dd>
-  
-    <dt
+    </dd><dt
         class="property-required" title="Required">
         <span>name</span>
         <span class="property-indicator"></span>
@@ -205,9 +214,7 @@ const serverInstance = new aws.ec2.Instance("server", {
     </dt>
     <dd>
       The unique name of the resource.
-    </dd>
-  
-    <dt
+    </dd><dt
         class="property-optional" title="Optional">
         <span>args</span>
         <span class="property-indicator"></span>
@@ -215,9 +222,7 @@ const serverInstance = new aws.ec2.Instance("server", {
     </dt>
     <dd>
       The arguments to resource properties.
-    </dd>
-  
-    <dt
+    </dd><dt
         class="property-optional" title="Optional">
         <span>opts</span>
         <span class="property-indicator"></span>
@@ -225,18 +230,13 @@ const serverInstance = new aws.ec2.Instance("server", {
     </dt>
     <dd>
       Bag of options to control resource&#39;s behavior.
-    </dd>
-  
-
-</dl>
+    </dd></dl>
 
 {{% /choosable %}}
 
 {{% choosable language csharp %}}
 
-<dl class="resources-properties">
-  
-    <dt
+<dl class="resources-properties"><dt
         class="property-required" title="Required">
         <span>name</span>
         <span class="property-indicator"></span>
@@ -244,9 +244,7 @@ const serverInstance = new aws.ec2.Instance("server", {
     </dt>
     <dd>
       The unique name of the resource.
-    </dd>
-  
-    <dt
+    </dd><dt
         class="property-optional" title="Optional">
         <span>args</span>
         <span class="property-indicator"></span>
@@ -254,9 +252,7 @@ const serverInstance = new aws.ec2.Instance("server", {
     </dt>
     <dd>
       The arguments to resource properties.
-    </dd>
-  
-    <dt
+    </dd><dt
         class="property-optional" title="Optional">
         <span>opts</span>
         <span class="property-indicator"></span>
@@ -264,10 +260,7 @@ const serverInstance = new aws.ec2.Instance("server", {
     </dt>
     <dd>
       Bag of options to control resource&#39;s behavior.
-    </dd>
-  
-
-</dl>
+    </dd></dl>
 
 {{% /choosable %}}
 
@@ -282,9 +275,7 @@ The RandomPet resource accepts the following [input]({{< relref "/docs/intro/con
 
 
 {{% choosable language csharp %}}
-<dl class="resources-properties">
-
-    <dt class="property-optional"
+<dl class="resources-properties"><dt class="property-optional"
             title="Optional">
         <span id="keepers_csharp">
 <a href="#keepers_csharp" style="color: inherit; text-decoration: inherit;">Keepers</a>
@@ -295,8 +286,7 @@ The RandomPet resource accepts the following [input]({{< relref "/docs/intro/con
     <dd>{{% md %}}Arbitrary map of values that, when changed, will
 trigger a new id to be generated. See
 the main provider documentation for more information.
-{{% /md %}}</dd>
-    <dt class="property-optional"
+{{% /md %}}</dd><dt class="property-optional"
             title="Optional">
         <span id="length_csharp">
 <a href="#length_csharp" style="color: inherit; text-decoration: inherit;">Length</a>
@@ -305,8 +295,7 @@ the main provider documentation for more information.
         <span class="property-type">int</span>
     </dt>
     <dd>{{% md %}}The length (in words) of the pet name.
-{{% /md %}}</dd>
-    <dt class="property-optional"
+{{% /md %}}</dd><dt class="property-optional"
             title="Optional">
         <span id="prefix_csharp">
 <a href="#prefix_csharp" style="color: inherit; text-decoration: inherit;">Prefix</a>
@@ -315,8 +304,7 @@ the main provider documentation for more information.
         <span class="property-type">string</span>
     </dt>
     <dd>{{% md %}}A string to prefix the name with.
-{{% /md %}}</dd>
-    <dt class="property-optional"
+{{% /md %}}</dd><dt class="property-optional"
             title="Optional">
         <span id="separator_csharp">
 <a href="#separator_csharp" style="color: inherit; text-decoration: inherit;">Separator</a>
@@ -325,14 +313,11 @@ the main provider documentation for more information.
         <span class="property-type">string</span>
     </dt>
     <dd>{{% md %}}The character to separate words in the pet name.
-{{% /md %}}</dd>
-</dl>
+{{% /md %}}</dd></dl>
 {{% /choosable %}}
 
 {{% choosable language go %}}
-<dl class="resources-properties">
-
-    <dt class="property-optional"
+<dl class="resources-properties"><dt class="property-optional"
             title="Optional">
         <span id="keepers_go">
 <a href="#keepers_go" style="color: inherit; text-decoration: inherit;">Keepers</a>
@@ -343,8 +328,7 @@ the main provider documentation for more information.
     <dd>{{% md %}}Arbitrary map of values that, when changed, will
 trigger a new id to be generated. See
 the main provider documentation for more information.
-{{% /md %}}</dd>
-    <dt class="property-optional"
+{{% /md %}}</dd><dt class="property-optional"
             title="Optional">
         <span id="length_go">
 <a href="#length_go" style="color: inherit; text-decoration: inherit;">Length</a>
@@ -353,8 +337,7 @@ the main provider documentation for more information.
         <span class="property-type">int</span>
     </dt>
     <dd>{{% md %}}The length (in words) of the pet name.
-{{% /md %}}</dd>
-    <dt class="property-optional"
+{{% /md %}}</dd><dt class="property-optional"
             title="Optional">
         <span id="prefix_go">
 <a href="#prefix_go" style="color: inherit; text-decoration: inherit;">Prefix</a>
@@ -363,8 +346,7 @@ the main provider documentation for more information.
         <span class="property-type">string</span>
     </dt>
     <dd>{{% md %}}A string to prefix the name with.
-{{% /md %}}</dd>
-    <dt class="property-optional"
+{{% /md %}}</dd><dt class="property-optional"
             title="Optional">
         <span id="separator_go">
 <a href="#separator_go" style="color: inherit; text-decoration: inherit;">Separator</a>
@@ -373,14 +355,11 @@ the main provider documentation for more information.
         <span class="property-type">string</span>
     </dt>
     <dd>{{% md %}}The character to separate words in the pet name.
-{{% /md %}}</dd>
-</dl>
+{{% /md %}}</dd></dl>
 {{% /choosable %}}
 
 {{% choosable language nodejs %}}
-<dl class="resources-properties">
-
-    <dt class="property-optional"
+<dl class="resources-properties"><dt class="property-optional"
             title="Optional">
         <span id="keepers_nodejs">
 <a href="#keepers_nodejs" style="color: inherit; text-decoration: inherit;">keepers</a>
@@ -391,8 +370,7 @@ the main provider documentation for more information.
     <dd>{{% md %}}Arbitrary map of values that, when changed, will
 trigger a new id to be generated. See
 the main provider documentation for more information.
-{{% /md %}}</dd>
-    <dt class="property-optional"
+{{% /md %}}</dd><dt class="property-optional"
             title="Optional">
         <span id="length_nodejs">
 <a href="#length_nodejs" style="color: inherit; text-decoration: inherit;">length</a>
@@ -401,8 +379,7 @@ the main provider documentation for more information.
         <span class="property-type">number</span>
     </dt>
     <dd>{{% md %}}The length (in words) of the pet name.
-{{% /md %}}</dd>
-    <dt class="property-optional"
+{{% /md %}}</dd><dt class="property-optional"
             title="Optional">
         <span id="prefix_nodejs">
 <a href="#prefix_nodejs" style="color: inherit; text-decoration: inherit;">prefix</a>
@@ -411,8 +388,7 @@ the main provider documentation for more information.
         <span class="property-type">string</span>
     </dt>
     <dd>{{% md %}}A string to prefix the name with.
-{{% /md %}}</dd>
-    <dt class="property-optional"
+{{% /md %}}</dd><dt class="property-optional"
             title="Optional">
         <span id="separator_nodejs">
 <a href="#separator_nodejs" style="color: inherit; text-decoration: inherit;">separator</a>
@@ -421,14 +397,11 @@ the main provider documentation for more information.
         <span class="property-type">string</span>
     </dt>
     <dd>{{% md %}}The character to separate words in the pet name.
-{{% /md %}}</dd>
-</dl>
+{{% /md %}}</dd></dl>
 {{% /choosable %}}
 
 {{% choosable language python %}}
-<dl class="resources-properties">
-
-    <dt class="property-optional"
+<dl class="resources-properties"><dt class="property-optional"
             title="Optional">
         <span id="keepers_python">
 <a href="#keepers_python" style="color: inherit; text-decoration: inherit;">keepers</a>
@@ -439,8 +412,7 @@ the main provider documentation for more information.
     <dd>{{% md %}}Arbitrary map of values that, when changed, will
 trigger a new id to be generated. See
 the main provider documentation for more information.
-{{% /md %}}</dd>
-    <dt class="property-optional"
+{{% /md %}}</dd><dt class="property-optional"
             title="Optional">
         <span id="length_python">
 <a href="#length_python" style="color: inherit; text-decoration: inherit;">length</a>
@@ -449,8 +421,7 @@ the main provider documentation for more information.
         <span class="property-type">int</span>
     </dt>
     <dd>{{% md %}}The length (in words) of the pet name.
-{{% /md %}}</dd>
-    <dt class="property-optional"
+{{% /md %}}</dd><dt class="property-optional"
             title="Optional">
         <span id="prefix_python">
 <a href="#prefix_python" style="color: inherit; text-decoration: inherit;">prefix</a>
@@ -459,8 +430,7 @@ the main provider documentation for more information.
         <span class="property-type">str</span>
     </dt>
     <dd>{{% md %}}A string to prefix the name with.
-{{% /md %}}</dd>
-    <dt class="property-optional"
+{{% /md %}}</dd><dt class="property-optional"
             title="Optional">
         <span id="separator_python">
 <a href="#separator_python" style="color: inherit; text-decoration: inherit;">separator</a>
@@ -469,8 +439,7 @@ the main provider documentation for more information.
         <span class="property-type">str</span>
     </dt>
     <dd>{{% md %}}The character to separate words in the pet name.
-{{% /md %}}</dd>
-</dl>
+{{% /md %}}</dd></dl>
 {{% /choosable %}}
 
 
@@ -481,9 +450,7 @@ All [input](#inputs) properties are implicitly available as output properties. A
 
 
 {{% choosable language csharp %}}
-<dl class="resources-properties">
-
-    <dt class="property-"
+<dl class="resources-properties"><dt class="property-"
             title="">
         <span id="id_csharp">
 <a href="#id_csharp" style="color: inherit; text-decoration: inherit;">Id</a>
@@ -491,14 +458,11 @@ All [input](#inputs) properties are implicitly available as output properties. A
         <span class="property-indicator"></span>
         <span class="property-type">string</span>
     </dt>
-    <dd>{{% md %}}The provider-assigned unique ID for this managed resource.{{% /md %}}</dd>
-</dl>
+    <dd>{{% md %}}The provider-assigned unique ID for this managed resource.{{% /md %}}</dd></dl>
 {{% /choosable %}}
 
 {{% choosable language go %}}
-<dl class="resources-properties">
-
-    <dt class="property-"
+<dl class="resources-properties"><dt class="property-"
             title="">
         <span id="id_go">
 <a href="#id_go" style="color: inherit; text-decoration: inherit;">Id</a>
@@ -506,14 +470,11 @@ All [input](#inputs) properties are implicitly available as output properties. A
         <span class="property-indicator"></span>
         <span class="property-type">string</span>
     </dt>
-    <dd>{{% md %}}The provider-assigned unique ID for this managed resource.{{% /md %}}</dd>
-</dl>
+    <dd>{{% md %}}The provider-assigned unique ID for this managed resource.{{% /md %}}</dd></dl>
 {{% /choosable %}}
 
 {{% choosable language nodejs %}}
-<dl class="resources-properties">
-
-    <dt class="property-"
+<dl class="resources-properties"><dt class="property-"
             title="">
         <span id="id_nodejs">
 <a href="#id_nodejs" style="color: inherit; text-decoration: inherit;">id</a>
@@ -521,14 +482,11 @@ All [input](#inputs) properties are implicitly available as output properties. A
         <span class="property-indicator"></span>
         <span class="property-type">string</span>
     </dt>
-    <dd>{{% md %}}The provider-assigned unique ID for this managed resource.{{% /md %}}</dd>
-</dl>
+    <dd>{{% md %}}The provider-assigned unique ID for this managed resource.{{% /md %}}</dd></dl>
 {{% /choosable %}}
 
 {{% choosable language python %}}
-<dl class="resources-properties">
-
-    <dt class="property-"
+<dl class="resources-properties"><dt class="property-"
             title="">
         <span id="id_python">
 <a href="#id_python" style="color: inherit; text-decoration: inherit;">id</a>
@@ -536,8 +494,7 @@ All [input](#inputs) properties are implicitly available as output properties. A
         <span class="property-indicator"></span>
         <span class="property-type">str</span>
     </dt>
-    <dd>{{% md %}}The provider-assigned unique ID for this managed resource.{{% /md %}}</dd>
-</dl>
+    <dd>{{% md %}}The provider-assigned unique ID for this managed resource.{{% /md %}}</dd></dl>
 {{% /choosable %}}
 
 
@@ -664,9 +621,7 @@ The following state arguments are supported:
 
 
 {{% choosable language csharp %}}
-<dl class="resources-properties">
-
-    <dt class="property-optional"
+<dl class="resources-properties"><dt class="property-optional"
             title="Optional">
         <span id="state_keepers_csharp">
 <a href="#state_keepers_csharp" style="color: inherit; text-decoration: inherit;">Keepers</a>
@@ -677,8 +632,7 @@ The following state arguments are supported:
     <dd>{{% md %}}Arbitrary map of values that, when changed, will
 trigger a new id to be generated. See
 the main provider documentation for more information.
-{{% /md %}}</dd>
-    <dt class="property-optional"
+{{% /md %}}</dd><dt class="property-optional"
             title="Optional">
         <span id="state_length_csharp">
 <a href="#state_length_csharp" style="color: inherit; text-decoration: inherit;">Length</a>
@@ -687,8 +641,7 @@ the main provider documentation for more information.
         <span class="property-type">int</span>
     </dt>
     <dd>{{% md %}}The length (in words) of the pet name.
-{{% /md %}}</dd>
-    <dt class="property-optional"
+{{% /md %}}</dd><dt class="property-optional"
             title="Optional">
         <span id="state_prefix_csharp">
 <a href="#state_prefix_csharp" style="color: inherit; text-decoration: inherit;">Prefix</a>
@@ -697,8 +650,7 @@ the main provider documentation for more information.
         <span class="property-type">string</span>
     </dt>
     <dd>{{% md %}}A string to prefix the name with.
-{{% /md %}}</dd>
-    <dt class="property-optional"
+{{% /md %}}</dd><dt class="property-optional"
             title="Optional">
         <span id="state_separator_csharp">
 <a href="#state_separator_csharp" style="color: inherit; text-decoration: inherit;">Separator</a>
@@ -707,14 +659,11 @@ the main provider documentation for more information.
         <span class="property-type">string</span>
     </dt>
     <dd>{{% md %}}The character to separate words in the pet name.
-{{% /md %}}</dd>
-</dl>
+{{% /md %}}</dd></dl>
 {{% /choosable %}}
 
 {{% choosable language go %}}
-<dl class="resources-properties">
-
-    <dt class="property-optional"
+<dl class="resources-properties"><dt class="property-optional"
             title="Optional">
         <span id="state_keepers_go">
 <a href="#state_keepers_go" style="color: inherit; text-decoration: inherit;">Keepers</a>
@@ -725,8 +674,7 @@ the main provider documentation for more information.
     <dd>{{% md %}}Arbitrary map of values that, when changed, will
 trigger a new id to be generated. See
 the main provider documentation for more information.
-{{% /md %}}</dd>
-    <dt class="property-optional"
+{{% /md %}}</dd><dt class="property-optional"
             title="Optional">
         <span id="state_length_go">
 <a href="#state_length_go" style="color: inherit; text-decoration: inherit;">Length</a>
@@ -735,8 +683,7 @@ the main provider documentation for more information.
         <span class="property-type">int</span>
     </dt>
     <dd>{{% md %}}The length (in words) of the pet name.
-{{% /md %}}</dd>
-    <dt class="property-optional"
+{{% /md %}}</dd><dt class="property-optional"
             title="Optional">
         <span id="state_prefix_go">
 <a href="#state_prefix_go" style="color: inherit; text-decoration: inherit;">Prefix</a>
@@ -745,8 +692,7 @@ the main provider documentation for more information.
         <span class="property-type">string</span>
     </dt>
     <dd>{{% md %}}A string to prefix the name with.
-{{% /md %}}</dd>
-    <dt class="property-optional"
+{{% /md %}}</dd><dt class="property-optional"
             title="Optional">
         <span id="state_separator_go">
 <a href="#state_separator_go" style="color: inherit; text-decoration: inherit;">Separator</a>
@@ -755,14 +701,11 @@ the main provider documentation for more information.
         <span class="property-type">string</span>
     </dt>
     <dd>{{% md %}}The character to separate words in the pet name.
-{{% /md %}}</dd>
-</dl>
+{{% /md %}}</dd></dl>
 {{% /choosable %}}
 
 {{% choosable language nodejs %}}
-<dl class="resources-properties">
-
-    <dt class="property-optional"
+<dl class="resources-properties"><dt class="property-optional"
             title="Optional">
         <span id="state_keepers_nodejs">
 <a href="#state_keepers_nodejs" style="color: inherit; text-decoration: inherit;">keepers</a>
@@ -773,8 +716,7 @@ the main provider documentation for more information.
     <dd>{{% md %}}Arbitrary map of values that, when changed, will
 trigger a new id to be generated. See
 the main provider documentation for more information.
-{{% /md %}}</dd>
-    <dt class="property-optional"
+{{% /md %}}</dd><dt class="property-optional"
             title="Optional">
         <span id="state_length_nodejs">
 <a href="#state_length_nodejs" style="color: inherit; text-decoration: inherit;">length</a>
@@ -783,8 +725,7 @@ the main provider documentation for more information.
         <span class="property-type">number</span>
     </dt>
     <dd>{{% md %}}The length (in words) of the pet name.
-{{% /md %}}</dd>
-    <dt class="property-optional"
+{{% /md %}}</dd><dt class="property-optional"
             title="Optional">
         <span id="state_prefix_nodejs">
 <a href="#state_prefix_nodejs" style="color: inherit; text-decoration: inherit;">prefix</a>
@@ -793,8 +734,7 @@ the main provider documentation for more information.
         <span class="property-type">string</span>
     </dt>
     <dd>{{% md %}}A string to prefix the name with.
-{{% /md %}}</dd>
-    <dt class="property-optional"
+{{% /md %}}</dd><dt class="property-optional"
             title="Optional">
         <span id="state_separator_nodejs">
 <a href="#state_separator_nodejs" style="color: inherit; text-decoration: inherit;">separator</a>
@@ -803,14 +743,11 @@ the main provider documentation for more information.
         <span class="property-type">string</span>
     </dt>
     <dd>{{% md %}}The character to separate words in the pet name.
-{{% /md %}}</dd>
-</dl>
+{{% /md %}}</dd></dl>
 {{% /choosable %}}
 
 {{% choosable language python %}}
-<dl class="resources-properties">
-
-    <dt class="property-optional"
+<dl class="resources-properties"><dt class="property-optional"
             title="Optional">
         <span id="state_keepers_python">
 <a href="#state_keepers_python" style="color: inherit; text-decoration: inherit;">keepers</a>
@@ -821,8 +758,7 @@ the main provider documentation for more information.
     <dd>{{% md %}}Arbitrary map of values that, when changed, will
 trigger a new id to be generated. See
 the main provider documentation for more information.
-{{% /md %}}</dd>
-    <dt class="property-optional"
+{{% /md %}}</dd><dt class="property-optional"
             title="Optional">
         <span id="state_length_python">
 <a href="#state_length_python" style="color: inherit; text-decoration: inherit;">length</a>
@@ -831,8 +767,7 @@ the main provider documentation for more information.
         <span class="property-type">int</span>
     </dt>
     <dd>{{% md %}}The length (in words) of the pet name.
-{{% /md %}}</dd>
-    <dt class="property-optional"
+{{% /md %}}</dd><dt class="property-optional"
             title="Optional">
         <span id="state_prefix_python">
 <a href="#state_prefix_python" style="color: inherit; text-decoration: inherit;">prefix</a>
@@ -841,8 +776,7 @@ the main provider documentation for more information.
         <span class="property-type">str</span>
     </dt>
     <dd>{{% md %}}A string to prefix the name with.
-{{% /md %}}</dd>
-    <dt class="property-optional"
+{{% /md %}}</dd><dt class="property-optional"
             title="Optional">
         <span id="state_separator_python">
 <a href="#state_separator_python" style="color: inherit; text-decoration: inherit;">separator</a>
@@ -851,8 +785,7 @@ the main provider documentation for more information.
         <span class="property-type">str</span>
     </dt>
     <dd>{{% md %}}The character to separate words in the pet name.
-{{% /md %}}</dd>
-</dl>
+{{% /md %}}</dd></dl>
 {{% /choosable %}}
 
 
@@ -868,6 +801,6 @@ the main provider documentation for more information.
 	<dt>License</dt>
 	<dd>Apache-2.0</dd>
 	<dt>Notes</dt>
-	<dd>This Pulumi package is based on the [`random` Terraform Provider](https://github.com/terraform-providers/terraform-provider-random).</dd>
+	<dd>{{% md %}}This Pulumi package is based on the [`random` Terraform Provider](https://github.com/terraform-providers/terraform-provider-random).{{% /md %}}</dd>
 </dl>
 

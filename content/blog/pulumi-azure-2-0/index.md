@@ -135,22 +135,36 @@ The 2.0 version of the provider is rigorous in checking the presence of existing
 
 To get started with Azure provider 2.0, update the versions in your package manager:
 
-{{< langchoose csharp >}}
+{{% chooser language "typescript,csharp,python,go" %}}
+
+{{% choosable language typescript %}}
 
 ```typescript
 // package.json
 "@pulumi/azure": "^2.0.0",
 ```
 
+{{% /choosable %}}
+
+{{% choosable language csharp %}}
+
 ```csharp
 // csproj/fsproj/vbproj
 <PackageReference Include="Pulumi.Azure" Version="2.1.0-preview" />
 ```
 
+{{% /choosable %}}
+
+{{% choosable language python %}}
+
 ```python
 # requirements.txt
 pulumi-azure>=2.0.0
 ```
+
+{{% /choosable %}}
+
+{{% choosable language go %}}
 
 ```go
 // Gopkg.toml
@@ -158,6 +172,8 @@ pulumi-azure>=2.0.0
   version = "v2.0.0"
   name = "github.com/pulumi/pulumi-azure"
 ```
+
+{{% /choosable %}}
 
 There are quite a few breaking changes, so you may need to adjust your code before you can run the program successfully again. Check [the upgrade guide](https://www.terraform.io/docs/providers/azurerm/guides/2.0-upgrade-guide.html) for details.
 

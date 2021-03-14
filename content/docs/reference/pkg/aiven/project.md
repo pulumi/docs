@@ -39,9 +39,7 @@ The Project resource allows the creation and management of Aiven Projects.
 
 {{% choosable language nodejs %}}
 
-<dl class="resources-properties">
-  
-    <dt
+<dl class="resources-properties"><dt
         class="property-required" title="Required">
         <span>name</span>
         <span class="property-indicator"></span>
@@ -49,9 +47,7 @@ The Project resource allows the creation and management of Aiven Projects.
     </dt>
     <dd>
       The unique name of the resource.
-    </dd>
-  
-    <dt
+    </dd><dt
         class="property-required" title="Required">
         <span>args</span>
         <span class="property-indicator"></span>
@@ -59,9 +55,7 @@ The Project resource allows the creation and management of Aiven Projects.
     </dt>
     <dd>
       The arguments to resource properties.
-    </dd>
-  
-    <dt
+    </dd><dt
         class="property-optional" title="Optional">
         <span>opts</span>
         <span class="property-indicator"></span>
@@ -69,10 +63,7 @@ The Project resource allows the creation and management of Aiven Projects.
     </dt>
     <dd>
       Bag of options to control resource&#39;s behavior.
-    </dd>
-  
-
-</dl>
+    </dd></dl>
 
 {{% /choosable %}}
 
@@ -98,9 +89,7 @@ The Project resource allows the creation and management of Aiven Projects.
 
 {{% choosable language go %}}
 
-<dl class="resources-properties">
-  
-    <dt
+<dl class="resources-properties"><dt
         class="property-optional" title="Optional">
         <span>ctx</span>
         <span class="property-indicator"></span>
@@ -108,9 +97,7 @@ The Project resource allows the creation and management of Aiven Projects.
     </dt>
     <dd>
       Context object for the current deployment.
-    </dd>
-  
-    <dt
+    </dd><dt
         class="property-required" title="Required">
         <span>name</span>
         <span class="property-indicator"></span>
@@ -118,9 +105,7 @@ The Project resource allows the creation and management of Aiven Projects.
     </dt>
     <dd>
       The unique name of the resource.
-    </dd>
-  
-    <dt
+    </dd><dt
         class="property-required" title="Required">
         <span>args</span>
         <span class="property-indicator"></span>
@@ -128,9 +113,7 @@ The Project resource allows the creation and management of Aiven Projects.
     </dt>
     <dd>
       The arguments to resource properties.
-    </dd>
-  
-    <dt
+    </dd><dt
         class="property-optional" title="Optional">
         <span>opts</span>
         <span class="property-indicator"></span>
@@ -138,18 +121,13 @@ The Project resource allows the creation and management of Aiven Projects.
     </dt>
     <dd>
       Bag of options to control resource&#39;s behavior.
-    </dd>
-  
-
-</dl>
+    </dd></dl>
 
 {{% /choosable %}}
 
 {{% choosable language csharp %}}
 
-<dl class="resources-properties">
-  
-    <dt
+<dl class="resources-properties"><dt
         class="property-required" title="Required">
         <span>name</span>
         <span class="property-indicator"></span>
@@ -157,9 +135,7 @@ The Project resource allows the creation and management of Aiven Projects.
     </dt>
     <dd>
       The unique name of the resource.
-    </dd>
-  
-    <dt
+    </dd><dt
         class="property-required" title="Required">
         <span>args</span>
         <span class="property-indicator"></span>
@@ -167,9 +143,7 @@ The Project resource allows the creation and management of Aiven Projects.
     </dt>
     <dd>
       The arguments to resource properties.
-    </dd>
-  
-    <dt
+    </dd><dt
         class="property-optional" title="Optional">
         <span>opts</span>
         <span class="property-indicator"></span>
@@ -177,10 +151,7 @@ The Project resource allows the creation and management of Aiven Projects.
     </dt>
     <dd>
       Bag of options to control resource&#39;s behavior.
-    </dd>
-  
-
-</dl>
+    </dd></dl>
 
 {{% /choosable %}}
 
@@ -195,9 +166,7 @@ The Project resource accepts the following [input]({{< relref "/docs/intro/conce
 
 
 {{% choosable language csharp %}}
-<dl class="resources-properties">
-
-    <dt class="property-required"
+<dl class="resources-properties"><dt class="property-required"
             title="Required">
         <span id="projectname_csharp">
 <a href="#projectname_csharp" style="color: inherit; text-decoration: inherit;">Project<wbr>Name</a>
@@ -208,8 +177,7 @@ The Project resource accepts the following [input]({{< relref "/docs/intro/conce
     <dd>{{% md %}}defines the name of the project. Name must be globally unique (between all
 Aiven customers) and cannot be changed later without destroying and re-creating the
 project, including all sub-resources.
-{{% /md %}}</dd>
-    <dt class="property-optional"
+{{% /md %}}</dd><dt class="property-optional"
             title="Optional">
         <span id="accountid_csharp">
 <a href="#accountid_csharp" style="color: inherit; text-decoration: inherit;">Account<wbr>Id</a>
@@ -219,8 +187,7 @@ project, including all sub-resources.
     </dt>
     <dd>{{% md %}}is an optional property to link a project to already an existing account by 
 using account ID.
-{{% /md %}}</dd>
-    <dt class="property-optional"
+{{% /md %}}</dd><dt class="property-optional"
             title="Optional">
         <span id="availablecredits_csharp">
 <a href="#availablecredits_csharp" style="color: inherit; text-decoration: inherit;">Available<wbr>Credits</a>
@@ -229,8 +196,7 @@ using account ID.
         <span class="property-type">string</span>
     </dt>
     <dd>{{% md %}}Available credits
-{{% /md %}}</dd>
-    <dt class="property-optional property-deprecated"
+{{% /md %}}</dd><dt class="property-optional property-deprecated"
             title="Optional, Deprecated">
         <span id="billingaddress_csharp">
 <a href="#billingaddress_csharp" style="color: inherit; text-decoration: inherit;">Billing<wbr>Address</a>
@@ -239,8 +205,7 @@ using account ID.
         <span class="property-type">string</span>
     </dt>
     <dd>{{% md %}}Billing name and address of the project
-{{% /md %}}<p class="property-message">Deprecated: {{% md %}}Please use aiven_billing_group resource to set this value.{{% /md %}}</p></dd>
-    <dt class="property-optional property-deprecated"
+{{% /md %}}<p class="property-message">Deprecated: {{% md %}}Please use aiven_billing_group resource to set this value.{{% /md %}}</p></dd><dt class="property-optional property-deprecated"
             title="Optional, Deprecated">
         <span id="billingcurrency_csharp">
 <a href="#billingcurrency_csharp" style="color: inherit; text-decoration: inherit;">Billing<wbr>Currency</a>
@@ -249,8 +214,7 @@ using account ID.
         <span class="property-type">string</span>
     </dt>
     <dd>{{% md %}}Billing currency
-{{% /md %}}<p class="property-message">Deprecated: {{% md %}}Please use aiven_billing_group resource to set this value.{{% /md %}}</p></dd>
-    <dt class="property-optional property-deprecated"
+{{% /md %}}<p class="property-message">Deprecated: {{% md %}}Please use aiven_billing_group resource to set this value.{{% /md %}}</p></dd><dt class="property-optional property-deprecated"
             title="Optional, Deprecated">
         <span id="billingemails_csharp">
 <a href="#billingemails_csharp" style="color: inherit; text-decoration: inherit;">Billing<wbr>Emails</a>
@@ -259,8 +223,7 @@ using account ID.
         <span class="property-type">List&lt;string&gt;</span>
     </dt>
     <dd>{{% md %}}Billing contact emails of the project
-{{% /md %}}<p class="property-message">Deprecated: {{% md %}}Please use aiven_billing_group resource to set this value.{{% /md %}}</p></dd>
-    <dt class="property-optional property-deprecated"
+{{% /md %}}<p class="property-message">Deprecated: {{% md %}}Please use aiven_billing_group resource to set this value.{{% /md %}}</p></dd><dt class="property-optional property-deprecated"
             title="Optional, Deprecated">
         <span id="billingextratext_csharp">
 <a href="#billingextratext_csharp" style="color: inherit; text-decoration: inherit;">Billing<wbr>Extra<wbr>Text</a>
@@ -269,8 +232,7 @@ using account ID.
         <span class="property-type">string</span>
     </dt>
     <dd>{{% md %}}Extra text to be included in all project invoices, e.g. purchase order or cost center number
-{{% /md %}}<p class="property-message">Deprecated: {{% md %}}Please use aiven_billing_group resource to set this value.{{% /md %}}</p></dd>
-    <dt class="property-optional"
+{{% /md %}}<p class="property-message">Deprecated: {{% md %}}Please use aiven_billing_group resource to set this value.{{% /md %}}</p></dd><dt class="property-optional"
             title="Optional">
         <span id="billinggroup_csharp">
 <a href="#billinggroup_csharp" style="color: inherit; text-decoration: inherit;">Billing<wbr>Group</a>
@@ -279,8 +241,7 @@ using account ID.
         <span class="property-type">string</span>
     </dt>
     <dd>{{% md %}}Billing group Id
-{{% /md %}}</dd>
-    <dt class="property-optional"
+{{% /md %}}</dd><dt class="property-optional"
             title="Optional">
         <span id="cacert_csharp">
 <a href="#cacert_csharp" style="color: inherit; text-decoration: inherit;">Ca<wbr>Cert</a>
@@ -291,8 +252,7 @@ using account ID.
     <dd>{{% md %}}is a computed property that can be used to read the CA certificate of the
 project. This is required for configuring clients that connect to certain services like
 Kafka. This value cannot be set, only read.
-{{% /md %}}</dd>
-    <dt class="property-optional property-deprecated"
+{{% /md %}}</dd><dt class="property-optional property-deprecated"
             title="Optional, Deprecated">
         <span id="cardid_csharp">
 <a href="#cardid_csharp" style="color: inherit; text-decoration: inherit;">Card<wbr>Id</a>
@@ -304,8 +264,7 @@ Kafka. This value cannot be set, only read.
 UUID is not shown in the UI it is typically easier to use the last 4 digits to identify
 the card. This can be omitted if `copy_from_project` is used to copy billing info from
 another project.
-{{% /md %}}<p class="property-message">Deprecated: {{% md %}}Please use aiven_billing_group resource to set this value.{{% /md %}}</p></dd>
-    <dt class="property-optional"
+{{% /md %}}<p class="property-message">Deprecated: {{% md %}}Please use aiven_billing_group resource to set this value.{{% /md %}}</p></dd><dt class="property-optional"
             title="Optional">
         <span id="copyfromproject_csharp">
 <a href="#copyfromproject_csharp" style="color: inherit; text-decoration: inherit;">Copy<wbr>From<wbr>Project</a>
@@ -318,8 +277,7 @@ some other project attributes like technical contacts from. This is mostly relev
 an existing project has billing type set to invoice and that needs to be copied over to a
 new project. (Setting billing is otherwise not allowed over the API.) This only has
 effect when the project is created.
-{{% /md %}}</dd>
-    <dt class="property-optional property-deprecated"
+{{% /md %}}</dd><dt class="property-optional property-deprecated"
             title="Optional, Deprecated">
         <span id="countrycode_csharp">
 <a href="#countrycode_csharp" style="color: inherit; text-decoration: inherit;">Country<wbr>Code</a>
@@ -328,8 +286,7 @@ effect when the project is created.
         <span class="property-type">string</span>
     </dt>
     <dd>{{% md %}}Billing country code of the project
-{{% /md %}}<p class="property-message">Deprecated: {{% md %}}Please use aiven_billing_group resource to set this value.{{% /md %}}</p></dd>
-    <dt class="property-optional"
+{{% /md %}}<p class="property-message">Deprecated: {{% md %}}Please use aiven_billing_group resource to set this value.{{% /md %}}</p></dd><dt class="property-optional"
             title="Optional">
         <span id="defaultcloud_csharp">
 <a href="#defaultcloud_csharp" style="color: inherit; text-decoration: inherit;">Default<wbr>Cloud</a>
@@ -338,8 +295,7 @@ effect when the project is created.
         <span class="property-type">string</span>
     </dt>
     <dd>{{% md %}}Default cloud for new services
-{{% /md %}}</dd>
-    <dt class="property-optional"
+{{% /md %}}</dd><dt class="property-optional"
             title="Optional">
         <span id="technicalemails_csharp">
 <a href="#technicalemails_csharp" style="color: inherit; text-decoration: inherit;">Technical<wbr>Emails</a>
@@ -348,8 +304,7 @@ effect when the project is created.
         <span class="property-type">List&lt;string&gt;</span>
     </dt>
     <dd>{{% md %}}Technical contact emails of the project
-{{% /md %}}</dd>
-    <dt class="property-optional property-deprecated"
+{{% /md %}}</dd><dt class="property-optional property-deprecated"
             title="Optional, Deprecated">
         <span id="vatid_csharp">
 <a href="#vatid_csharp" style="color: inherit; text-decoration: inherit;">Vat<wbr>Id</a>
@@ -358,14 +313,11 @@ effect when the project is created.
         <span class="property-type">string</span>
     </dt>
     <dd>{{% md %}}EU VAT Identification Number
-{{% /md %}}<p class="property-message">Deprecated: {{% md %}}Please use aiven_billing_group resource to set this value.{{% /md %}}</p></dd>
-</dl>
+{{% /md %}}<p class="property-message">Deprecated: {{% md %}}Please use aiven_billing_group resource to set this value.{{% /md %}}</p></dd></dl>
 {{% /choosable %}}
 
 {{% choosable language go %}}
-<dl class="resources-properties">
-
-    <dt class="property-required"
+<dl class="resources-properties"><dt class="property-required"
             title="Required">
         <span id="project_go">
 <a href="#project_go" style="color: inherit; text-decoration: inherit;">Project</a>
@@ -376,8 +328,7 @@ effect when the project is created.
     <dd>{{% md %}}defines the name of the project. Name must be globally unique (between all
 Aiven customers) and cannot be changed later without destroying and re-creating the
 project, including all sub-resources.
-{{% /md %}}</dd>
-    <dt class="property-optional"
+{{% /md %}}</dd><dt class="property-optional"
             title="Optional">
         <span id="accountid_go">
 <a href="#accountid_go" style="color: inherit; text-decoration: inherit;">Account<wbr>Id</a>
@@ -387,8 +338,7 @@ project, including all sub-resources.
     </dt>
     <dd>{{% md %}}is an optional property to link a project to already an existing account by 
 using account ID.
-{{% /md %}}</dd>
-    <dt class="property-optional"
+{{% /md %}}</dd><dt class="property-optional"
             title="Optional">
         <span id="availablecredits_go">
 <a href="#availablecredits_go" style="color: inherit; text-decoration: inherit;">Available<wbr>Credits</a>
@@ -397,8 +347,7 @@ using account ID.
         <span class="property-type">string</span>
     </dt>
     <dd>{{% md %}}Available credits
-{{% /md %}}</dd>
-    <dt class="property-optional property-deprecated"
+{{% /md %}}</dd><dt class="property-optional property-deprecated"
             title="Optional, Deprecated">
         <span id="billingaddress_go">
 <a href="#billingaddress_go" style="color: inherit; text-decoration: inherit;">Billing<wbr>Address</a>
@@ -407,8 +356,7 @@ using account ID.
         <span class="property-type">string</span>
     </dt>
     <dd>{{% md %}}Billing name and address of the project
-{{% /md %}}<p class="property-message">Deprecated: {{% md %}}Please use aiven_billing_group resource to set this value.{{% /md %}}</p></dd>
-    <dt class="property-optional property-deprecated"
+{{% /md %}}<p class="property-message">Deprecated: {{% md %}}Please use aiven_billing_group resource to set this value.{{% /md %}}</p></dd><dt class="property-optional property-deprecated"
             title="Optional, Deprecated">
         <span id="billingcurrency_go">
 <a href="#billingcurrency_go" style="color: inherit; text-decoration: inherit;">Billing<wbr>Currency</a>
@@ -417,8 +365,7 @@ using account ID.
         <span class="property-type">string</span>
     </dt>
     <dd>{{% md %}}Billing currency
-{{% /md %}}<p class="property-message">Deprecated: {{% md %}}Please use aiven_billing_group resource to set this value.{{% /md %}}</p></dd>
-    <dt class="property-optional property-deprecated"
+{{% /md %}}<p class="property-message">Deprecated: {{% md %}}Please use aiven_billing_group resource to set this value.{{% /md %}}</p></dd><dt class="property-optional property-deprecated"
             title="Optional, Deprecated">
         <span id="billingemails_go">
 <a href="#billingemails_go" style="color: inherit; text-decoration: inherit;">Billing<wbr>Emails</a>
@@ -427,8 +374,7 @@ using account ID.
         <span class="property-type">[]string</span>
     </dt>
     <dd>{{% md %}}Billing contact emails of the project
-{{% /md %}}<p class="property-message">Deprecated: {{% md %}}Please use aiven_billing_group resource to set this value.{{% /md %}}</p></dd>
-    <dt class="property-optional property-deprecated"
+{{% /md %}}<p class="property-message">Deprecated: {{% md %}}Please use aiven_billing_group resource to set this value.{{% /md %}}</p></dd><dt class="property-optional property-deprecated"
             title="Optional, Deprecated">
         <span id="billingextratext_go">
 <a href="#billingextratext_go" style="color: inherit; text-decoration: inherit;">Billing<wbr>Extra<wbr>Text</a>
@@ -437,8 +383,7 @@ using account ID.
         <span class="property-type">string</span>
     </dt>
     <dd>{{% md %}}Extra text to be included in all project invoices, e.g. purchase order or cost center number
-{{% /md %}}<p class="property-message">Deprecated: {{% md %}}Please use aiven_billing_group resource to set this value.{{% /md %}}</p></dd>
-    <dt class="property-optional"
+{{% /md %}}<p class="property-message">Deprecated: {{% md %}}Please use aiven_billing_group resource to set this value.{{% /md %}}</p></dd><dt class="property-optional"
             title="Optional">
         <span id="billinggroup_go">
 <a href="#billinggroup_go" style="color: inherit; text-decoration: inherit;">Billing<wbr>Group</a>
@@ -447,8 +392,7 @@ using account ID.
         <span class="property-type">string</span>
     </dt>
     <dd>{{% md %}}Billing group Id
-{{% /md %}}</dd>
-    <dt class="property-optional"
+{{% /md %}}</dd><dt class="property-optional"
             title="Optional">
         <span id="cacert_go">
 <a href="#cacert_go" style="color: inherit; text-decoration: inherit;">Ca<wbr>Cert</a>
@@ -459,8 +403,7 @@ using account ID.
     <dd>{{% md %}}is a computed property that can be used to read the CA certificate of the
 project. This is required for configuring clients that connect to certain services like
 Kafka. This value cannot be set, only read.
-{{% /md %}}</dd>
-    <dt class="property-optional property-deprecated"
+{{% /md %}}</dd><dt class="property-optional property-deprecated"
             title="Optional, Deprecated">
         <span id="cardid_go">
 <a href="#cardid_go" style="color: inherit; text-decoration: inherit;">Card<wbr>Id</a>
@@ -472,8 +415,7 @@ Kafka. This value cannot be set, only read.
 UUID is not shown in the UI it is typically easier to use the last 4 digits to identify
 the card. This can be omitted if `copy_from_project` is used to copy billing info from
 another project.
-{{% /md %}}<p class="property-message">Deprecated: {{% md %}}Please use aiven_billing_group resource to set this value.{{% /md %}}</p></dd>
-    <dt class="property-optional"
+{{% /md %}}<p class="property-message">Deprecated: {{% md %}}Please use aiven_billing_group resource to set this value.{{% /md %}}</p></dd><dt class="property-optional"
             title="Optional">
         <span id="copyfromproject_go">
 <a href="#copyfromproject_go" style="color: inherit; text-decoration: inherit;">Copy<wbr>From<wbr>Project</a>
@@ -486,8 +428,7 @@ some other project attributes like technical contacts from. This is mostly relev
 an existing project has billing type set to invoice and that needs to be copied over to a
 new project. (Setting billing is otherwise not allowed over the API.) This only has
 effect when the project is created.
-{{% /md %}}</dd>
-    <dt class="property-optional property-deprecated"
+{{% /md %}}</dd><dt class="property-optional property-deprecated"
             title="Optional, Deprecated">
         <span id="countrycode_go">
 <a href="#countrycode_go" style="color: inherit; text-decoration: inherit;">Country<wbr>Code</a>
@@ -496,8 +437,7 @@ effect when the project is created.
         <span class="property-type">string</span>
     </dt>
     <dd>{{% md %}}Billing country code of the project
-{{% /md %}}<p class="property-message">Deprecated: {{% md %}}Please use aiven_billing_group resource to set this value.{{% /md %}}</p></dd>
-    <dt class="property-optional"
+{{% /md %}}<p class="property-message">Deprecated: {{% md %}}Please use aiven_billing_group resource to set this value.{{% /md %}}</p></dd><dt class="property-optional"
             title="Optional">
         <span id="defaultcloud_go">
 <a href="#defaultcloud_go" style="color: inherit; text-decoration: inherit;">Default<wbr>Cloud</a>
@@ -506,8 +446,7 @@ effect when the project is created.
         <span class="property-type">string</span>
     </dt>
     <dd>{{% md %}}Default cloud for new services
-{{% /md %}}</dd>
-    <dt class="property-optional"
+{{% /md %}}</dd><dt class="property-optional"
             title="Optional">
         <span id="technicalemails_go">
 <a href="#technicalemails_go" style="color: inherit; text-decoration: inherit;">Technical<wbr>Emails</a>
@@ -516,8 +455,7 @@ effect when the project is created.
         <span class="property-type">[]string</span>
     </dt>
     <dd>{{% md %}}Technical contact emails of the project
-{{% /md %}}</dd>
-    <dt class="property-optional property-deprecated"
+{{% /md %}}</dd><dt class="property-optional property-deprecated"
             title="Optional, Deprecated">
         <span id="vatid_go">
 <a href="#vatid_go" style="color: inherit; text-decoration: inherit;">Vat<wbr>Id</a>
@@ -526,14 +464,11 @@ effect when the project is created.
         <span class="property-type">string</span>
     </dt>
     <dd>{{% md %}}EU VAT Identification Number
-{{% /md %}}<p class="property-message">Deprecated: {{% md %}}Please use aiven_billing_group resource to set this value.{{% /md %}}</p></dd>
-</dl>
+{{% /md %}}<p class="property-message">Deprecated: {{% md %}}Please use aiven_billing_group resource to set this value.{{% /md %}}</p></dd></dl>
 {{% /choosable %}}
 
 {{% choosable language nodejs %}}
-<dl class="resources-properties">
-
-    <dt class="property-required"
+<dl class="resources-properties"><dt class="property-required"
             title="Required">
         <span id="project_nodejs">
 <a href="#project_nodejs" style="color: inherit; text-decoration: inherit;">project</a>
@@ -544,8 +479,7 @@ effect when the project is created.
     <dd>{{% md %}}defines the name of the project. Name must be globally unique (between all
 Aiven customers) and cannot be changed later without destroying and re-creating the
 project, including all sub-resources.
-{{% /md %}}</dd>
-    <dt class="property-optional"
+{{% /md %}}</dd><dt class="property-optional"
             title="Optional">
         <span id="accountid_nodejs">
 <a href="#accountid_nodejs" style="color: inherit; text-decoration: inherit;">account<wbr>Id</a>
@@ -555,8 +489,7 @@ project, including all sub-resources.
     </dt>
     <dd>{{% md %}}is an optional property to link a project to already an existing account by 
 using account ID.
-{{% /md %}}</dd>
-    <dt class="property-optional"
+{{% /md %}}</dd><dt class="property-optional"
             title="Optional">
         <span id="availablecredits_nodejs">
 <a href="#availablecredits_nodejs" style="color: inherit; text-decoration: inherit;">available<wbr>Credits</a>
@@ -565,8 +498,7 @@ using account ID.
         <span class="property-type">string</span>
     </dt>
     <dd>{{% md %}}Available credits
-{{% /md %}}</dd>
-    <dt class="property-optional property-deprecated"
+{{% /md %}}</dd><dt class="property-optional property-deprecated"
             title="Optional, Deprecated">
         <span id="billingaddress_nodejs">
 <a href="#billingaddress_nodejs" style="color: inherit; text-decoration: inherit;">billing<wbr>Address</a>
@@ -575,8 +507,7 @@ using account ID.
         <span class="property-type">string</span>
     </dt>
     <dd>{{% md %}}Billing name and address of the project
-{{% /md %}}<p class="property-message">Deprecated: {{% md %}}Please use aiven_billing_group resource to set this value.{{% /md %}}</p></dd>
-    <dt class="property-optional property-deprecated"
+{{% /md %}}<p class="property-message">Deprecated: {{% md %}}Please use aiven_billing_group resource to set this value.{{% /md %}}</p></dd><dt class="property-optional property-deprecated"
             title="Optional, Deprecated">
         <span id="billingcurrency_nodejs">
 <a href="#billingcurrency_nodejs" style="color: inherit; text-decoration: inherit;">billing<wbr>Currency</a>
@@ -585,8 +516,7 @@ using account ID.
         <span class="property-type">string</span>
     </dt>
     <dd>{{% md %}}Billing currency
-{{% /md %}}<p class="property-message">Deprecated: {{% md %}}Please use aiven_billing_group resource to set this value.{{% /md %}}</p></dd>
-    <dt class="property-optional property-deprecated"
+{{% /md %}}<p class="property-message">Deprecated: {{% md %}}Please use aiven_billing_group resource to set this value.{{% /md %}}</p></dd><dt class="property-optional property-deprecated"
             title="Optional, Deprecated">
         <span id="billingemails_nodejs">
 <a href="#billingemails_nodejs" style="color: inherit; text-decoration: inherit;">billing<wbr>Emails</a>
@@ -595,8 +525,7 @@ using account ID.
         <span class="property-type">string[]</span>
     </dt>
     <dd>{{% md %}}Billing contact emails of the project
-{{% /md %}}<p class="property-message">Deprecated: {{% md %}}Please use aiven_billing_group resource to set this value.{{% /md %}}</p></dd>
-    <dt class="property-optional property-deprecated"
+{{% /md %}}<p class="property-message">Deprecated: {{% md %}}Please use aiven_billing_group resource to set this value.{{% /md %}}</p></dd><dt class="property-optional property-deprecated"
             title="Optional, Deprecated">
         <span id="billingextratext_nodejs">
 <a href="#billingextratext_nodejs" style="color: inherit; text-decoration: inherit;">billing<wbr>Extra<wbr>Text</a>
@@ -605,8 +534,7 @@ using account ID.
         <span class="property-type">string</span>
     </dt>
     <dd>{{% md %}}Extra text to be included in all project invoices, e.g. purchase order or cost center number
-{{% /md %}}<p class="property-message">Deprecated: {{% md %}}Please use aiven_billing_group resource to set this value.{{% /md %}}</p></dd>
-    <dt class="property-optional"
+{{% /md %}}<p class="property-message">Deprecated: {{% md %}}Please use aiven_billing_group resource to set this value.{{% /md %}}</p></dd><dt class="property-optional"
             title="Optional">
         <span id="billinggroup_nodejs">
 <a href="#billinggroup_nodejs" style="color: inherit; text-decoration: inherit;">billing<wbr>Group</a>
@@ -615,8 +543,7 @@ using account ID.
         <span class="property-type">string</span>
     </dt>
     <dd>{{% md %}}Billing group Id
-{{% /md %}}</dd>
-    <dt class="property-optional"
+{{% /md %}}</dd><dt class="property-optional"
             title="Optional">
         <span id="cacert_nodejs">
 <a href="#cacert_nodejs" style="color: inherit; text-decoration: inherit;">ca<wbr>Cert</a>
@@ -627,8 +554,7 @@ using account ID.
     <dd>{{% md %}}is a computed property that can be used to read the CA certificate of the
 project. This is required for configuring clients that connect to certain services like
 Kafka. This value cannot be set, only read.
-{{% /md %}}</dd>
-    <dt class="property-optional property-deprecated"
+{{% /md %}}</dd><dt class="property-optional property-deprecated"
             title="Optional, Deprecated">
         <span id="cardid_nodejs">
 <a href="#cardid_nodejs" style="color: inherit; text-decoration: inherit;">card<wbr>Id</a>
@@ -640,8 +566,7 @@ Kafka. This value cannot be set, only read.
 UUID is not shown in the UI it is typically easier to use the last 4 digits to identify
 the card. This can be omitted if `copy_from_project` is used to copy billing info from
 another project.
-{{% /md %}}<p class="property-message">Deprecated: {{% md %}}Please use aiven_billing_group resource to set this value.{{% /md %}}</p></dd>
-    <dt class="property-optional"
+{{% /md %}}<p class="property-message">Deprecated: {{% md %}}Please use aiven_billing_group resource to set this value.{{% /md %}}</p></dd><dt class="property-optional"
             title="Optional">
         <span id="copyfromproject_nodejs">
 <a href="#copyfromproject_nodejs" style="color: inherit; text-decoration: inherit;">copy<wbr>From<wbr>Project</a>
@@ -654,8 +579,7 @@ some other project attributes like technical contacts from. This is mostly relev
 an existing project has billing type set to invoice and that needs to be copied over to a
 new project. (Setting billing is otherwise not allowed over the API.) This only has
 effect when the project is created.
-{{% /md %}}</dd>
-    <dt class="property-optional property-deprecated"
+{{% /md %}}</dd><dt class="property-optional property-deprecated"
             title="Optional, Deprecated">
         <span id="countrycode_nodejs">
 <a href="#countrycode_nodejs" style="color: inherit; text-decoration: inherit;">country<wbr>Code</a>
@@ -664,8 +588,7 @@ effect when the project is created.
         <span class="property-type">string</span>
     </dt>
     <dd>{{% md %}}Billing country code of the project
-{{% /md %}}<p class="property-message">Deprecated: {{% md %}}Please use aiven_billing_group resource to set this value.{{% /md %}}</p></dd>
-    <dt class="property-optional"
+{{% /md %}}<p class="property-message">Deprecated: {{% md %}}Please use aiven_billing_group resource to set this value.{{% /md %}}</p></dd><dt class="property-optional"
             title="Optional">
         <span id="defaultcloud_nodejs">
 <a href="#defaultcloud_nodejs" style="color: inherit; text-decoration: inherit;">default<wbr>Cloud</a>
@@ -674,8 +597,7 @@ effect when the project is created.
         <span class="property-type">string</span>
     </dt>
     <dd>{{% md %}}Default cloud for new services
-{{% /md %}}</dd>
-    <dt class="property-optional"
+{{% /md %}}</dd><dt class="property-optional"
             title="Optional">
         <span id="technicalemails_nodejs">
 <a href="#technicalemails_nodejs" style="color: inherit; text-decoration: inherit;">technical<wbr>Emails</a>
@@ -684,8 +606,7 @@ effect when the project is created.
         <span class="property-type">string[]</span>
     </dt>
     <dd>{{% md %}}Technical contact emails of the project
-{{% /md %}}</dd>
-    <dt class="property-optional property-deprecated"
+{{% /md %}}</dd><dt class="property-optional property-deprecated"
             title="Optional, Deprecated">
         <span id="vatid_nodejs">
 <a href="#vatid_nodejs" style="color: inherit; text-decoration: inherit;">vat<wbr>Id</a>
@@ -694,14 +615,11 @@ effect when the project is created.
         <span class="property-type">string</span>
     </dt>
     <dd>{{% md %}}EU VAT Identification Number
-{{% /md %}}<p class="property-message">Deprecated: {{% md %}}Please use aiven_billing_group resource to set this value.{{% /md %}}</p></dd>
-</dl>
+{{% /md %}}<p class="property-message">Deprecated: {{% md %}}Please use aiven_billing_group resource to set this value.{{% /md %}}</p></dd></dl>
 {{% /choosable %}}
 
 {{% choosable language python %}}
-<dl class="resources-properties">
-
-    <dt class="property-required"
+<dl class="resources-properties"><dt class="property-required"
             title="Required">
         <span id="project_python">
 <a href="#project_python" style="color: inherit; text-decoration: inherit;">project</a>
@@ -712,8 +630,7 @@ effect when the project is created.
     <dd>{{% md %}}defines the name of the project. Name must be globally unique (between all
 Aiven customers) and cannot be changed later without destroying and re-creating the
 project, including all sub-resources.
-{{% /md %}}</dd>
-    <dt class="property-optional"
+{{% /md %}}</dd><dt class="property-optional"
             title="Optional">
         <span id="account_id_python">
 <a href="#account_id_python" style="color: inherit; text-decoration: inherit;">account_<wbr>id</a>
@@ -723,8 +640,7 @@ project, including all sub-resources.
     </dt>
     <dd>{{% md %}}is an optional property to link a project to already an existing account by 
 using account ID.
-{{% /md %}}</dd>
-    <dt class="property-optional"
+{{% /md %}}</dd><dt class="property-optional"
             title="Optional">
         <span id="available_credits_python">
 <a href="#available_credits_python" style="color: inherit; text-decoration: inherit;">available_<wbr>credits</a>
@@ -733,8 +649,7 @@ using account ID.
         <span class="property-type">str</span>
     </dt>
     <dd>{{% md %}}Available credits
-{{% /md %}}</dd>
-    <dt class="property-optional property-deprecated"
+{{% /md %}}</dd><dt class="property-optional property-deprecated"
             title="Optional, Deprecated">
         <span id="billing_address_python">
 <a href="#billing_address_python" style="color: inherit; text-decoration: inherit;">billing_<wbr>address</a>
@@ -743,8 +658,7 @@ using account ID.
         <span class="property-type">str</span>
     </dt>
     <dd>{{% md %}}Billing name and address of the project
-{{% /md %}}<p class="property-message">Deprecated: {{% md %}}Please use aiven_billing_group resource to set this value.{{% /md %}}</p></dd>
-    <dt class="property-optional property-deprecated"
+{{% /md %}}<p class="property-message">Deprecated: {{% md %}}Please use aiven_billing_group resource to set this value.{{% /md %}}</p></dd><dt class="property-optional property-deprecated"
             title="Optional, Deprecated">
         <span id="billing_currency_python">
 <a href="#billing_currency_python" style="color: inherit; text-decoration: inherit;">billing_<wbr>currency</a>
@@ -753,8 +667,7 @@ using account ID.
         <span class="property-type">str</span>
     </dt>
     <dd>{{% md %}}Billing currency
-{{% /md %}}<p class="property-message">Deprecated: {{% md %}}Please use aiven_billing_group resource to set this value.{{% /md %}}</p></dd>
-    <dt class="property-optional property-deprecated"
+{{% /md %}}<p class="property-message">Deprecated: {{% md %}}Please use aiven_billing_group resource to set this value.{{% /md %}}</p></dd><dt class="property-optional property-deprecated"
             title="Optional, Deprecated">
         <span id="billing_emails_python">
 <a href="#billing_emails_python" style="color: inherit; text-decoration: inherit;">billing_<wbr>emails</a>
@@ -763,8 +676,7 @@ using account ID.
         <span class="property-type">Sequence[str]</span>
     </dt>
     <dd>{{% md %}}Billing contact emails of the project
-{{% /md %}}<p class="property-message">Deprecated: {{% md %}}Please use aiven_billing_group resource to set this value.{{% /md %}}</p></dd>
-    <dt class="property-optional property-deprecated"
+{{% /md %}}<p class="property-message">Deprecated: {{% md %}}Please use aiven_billing_group resource to set this value.{{% /md %}}</p></dd><dt class="property-optional property-deprecated"
             title="Optional, Deprecated">
         <span id="billing_extra_text_python">
 <a href="#billing_extra_text_python" style="color: inherit; text-decoration: inherit;">billing_<wbr>extra_<wbr>text</a>
@@ -773,8 +685,7 @@ using account ID.
         <span class="property-type">str</span>
     </dt>
     <dd>{{% md %}}Extra text to be included in all project invoices, e.g. purchase order or cost center number
-{{% /md %}}<p class="property-message">Deprecated: {{% md %}}Please use aiven_billing_group resource to set this value.{{% /md %}}</p></dd>
-    <dt class="property-optional"
+{{% /md %}}<p class="property-message">Deprecated: {{% md %}}Please use aiven_billing_group resource to set this value.{{% /md %}}</p></dd><dt class="property-optional"
             title="Optional">
         <span id="billing_group_python">
 <a href="#billing_group_python" style="color: inherit; text-decoration: inherit;">billing_<wbr>group</a>
@@ -783,8 +694,7 @@ using account ID.
         <span class="property-type">str</span>
     </dt>
     <dd>{{% md %}}Billing group Id
-{{% /md %}}</dd>
-    <dt class="property-optional"
+{{% /md %}}</dd><dt class="property-optional"
             title="Optional">
         <span id="ca_cert_python">
 <a href="#ca_cert_python" style="color: inherit; text-decoration: inherit;">ca_<wbr>cert</a>
@@ -795,8 +705,7 @@ using account ID.
     <dd>{{% md %}}is a computed property that can be used to read the CA certificate of the
 project. This is required for configuring clients that connect to certain services like
 Kafka. This value cannot be set, only read.
-{{% /md %}}</dd>
-    <dt class="property-optional property-deprecated"
+{{% /md %}}</dd><dt class="property-optional property-deprecated"
             title="Optional, Deprecated">
         <span id="card_id_python">
 <a href="#card_id_python" style="color: inherit; text-decoration: inherit;">card_<wbr>id</a>
@@ -808,8 +717,7 @@ Kafka. This value cannot be set, only read.
 UUID is not shown in the UI it is typically easier to use the last 4 digits to identify
 the card. This can be omitted if `copy_from_project` is used to copy billing info from
 another project.
-{{% /md %}}<p class="property-message">Deprecated: {{% md %}}Please use aiven_billing_group resource to set this value.{{% /md %}}</p></dd>
-    <dt class="property-optional"
+{{% /md %}}<p class="property-message">Deprecated: {{% md %}}Please use aiven_billing_group resource to set this value.{{% /md %}}</p></dd><dt class="property-optional"
             title="Optional">
         <span id="copy_from_project_python">
 <a href="#copy_from_project_python" style="color: inherit; text-decoration: inherit;">copy_<wbr>from_<wbr>project</a>
@@ -822,8 +730,7 @@ some other project attributes like technical contacts from. This is mostly relev
 an existing project has billing type set to invoice and that needs to be copied over to a
 new project. (Setting billing is otherwise not allowed over the API.) This only has
 effect when the project is created.
-{{% /md %}}</dd>
-    <dt class="property-optional property-deprecated"
+{{% /md %}}</dd><dt class="property-optional property-deprecated"
             title="Optional, Deprecated">
         <span id="country_code_python">
 <a href="#country_code_python" style="color: inherit; text-decoration: inherit;">country_<wbr>code</a>
@@ -832,8 +739,7 @@ effect when the project is created.
         <span class="property-type">str</span>
     </dt>
     <dd>{{% md %}}Billing country code of the project
-{{% /md %}}<p class="property-message">Deprecated: {{% md %}}Please use aiven_billing_group resource to set this value.{{% /md %}}</p></dd>
-    <dt class="property-optional"
+{{% /md %}}<p class="property-message">Deprecated: {{% md %}}Please use aiven_billing_group resource to set this value.{{% /md %}}</p></dd><dt class="property-optional"
             title="Optional">
         <span id="default_cloud_python">
 <a href="#default_cloud_python" style="color: inherit; text-decoration: inherit;">default_<wbr>cloud</a>
@@ -842,8 +748,7 @@ effect when the project is created.
         <span class="property-type">str</span>
     </dt>
     <dd>{{% md %}}Default cloud for new services
-{{% /md %}}</dd>
-    <dt class="property-optional"
+{{% /md %}}</dd><dt class="property-optional"
             title="Optional">
         <span id="technical_emails_python">
 <a href="#technical_emails_python" style="color: inherit; text-decoration: inherit;">technical_<wbr>emails</a>
@@ -852,8 +757,7 @@ effect when the project is created.
         <span class="property-type">Sequence[str]</span>
     </dt>
     <dd>{{% md %}}Technical contact emails of the project
-{{% /md %}}</dd>
-    <dt class="property-optional property-deprecated"
+{{% /md %}}</dd><dt class="property-optional property-deprecated"
             title="Optional, Deprecated">
         <span id="vat_id_python">
 <a href="#vat_id_python" style="color: inherit; text-decoration: inherit;">vat_<wbr>id</a>
@@ -862,8 +766,7 @@ effect when the project is created.
         <span class="property-type">str</span>
     </dt>
     <dd>{{% md %}}EU VAT Identification Number
-{{% /md %}}<p class="property-message">Deprecated: {{% md %}}Please use aiven_billing_group resource to set this value.{{% /md %}}</p></dd>
-</dl>
+{{% /md %}}<p class="property-message">Deprecated: {{% md %}}Please use aiven_billing_group resource to set this value.{{% /md %}}</p></dd></dl>
 {{% /choosable %}}
 
 
@@ -874,9 +777,7 @@ All [input](#inputs) properties are implicitly available as output properties. A
 
 
 {{% choosable language csharp %}}
-<dl class="resources-properties">
-
-    <dt class="property- property-deprecated"
+<dl class="resources-properties"><dt class="property- property-deprecated"
             title=", Deprecated">
         <span id="country_csharp">
 <a href="#country_csharp" style="color: inherit; text-decoration: inherit;">Country</a>
@@ -885,8 +786,7 @@ All [input](#inputs) properties are implicitly available as output properties. A
         <span class="property-type">string</span>
     </dt>
     <dd>{{% md %}}Billing country
-{{% /md %}}<p class="property-message">Deprecated: {{% md %}}Please use aiven_billing_group resource to set this value.{{% /md %}}</p></dd>
-    <dt class="property-"
+{{% /md %}}<p class="property-message">Deprecated: {{% md %}}Please use aiven_billing_group resource to set this value.{{% /md %}}</p></dd><dt class="property-"
             title="">
         <span id="estimatedbalance_csharp">
 <a href="#estimatedbalance_csharp" style="color: inherit; text-decoration: inherit;">Estimated<wbr>Balance</a>
@@ -895,8 +795,7 @@ All [input](#inputs) properties are implicitly available as output properties. A
         <span class="property-type">string</span>
     </dt>
     <dd>{{% md %}}Estimated balance
-{{% /md %}}</dd>
-    <dt class="property-"
+{{% /md %}}</dd><dt class="property-"
             title="">
         <span id="id_csharp">
 <a href="#id_csharp" style="color: inherit; text-decoration: inherit;">Id</a>
@@ -904,8 +803,7 @@ All [input](#inputs) properties are implicitly available as output properties. A
         <span class="property-indicator"></span>
         <span class="property-type">string</span>
     </dt>
-    <dd>{{% md %}}The provider-assigned unique ID for this managed resource.{{% /md %}}</dd>
-    <dt class="property-"
+    <dd>{{% md %}}The provider-assigned unique ID for this managed resource.{{% /md %}}</dd><dt class="property-"
             title="">
         <span id="paymentmethod_csharp">
 <a href="#paymentmethod_csharp" style="color: inherit; text-decoration: inherit;">Payment<wbr>Method</a>
@@ -914,14 +812,11 @@ All [input](#inputs) properties are implicitly available as output properties. A
         <span class="property-type">string</span>
     </dt>
     <dd>{{% md %}}Payment method
-{{% /md %}}</dd>
-</dl>
+{{% /md %}}</dd></dl>
 {{% /choosable %}}
 
 {{% choosable language go %}}
-<dl class="resources-properties">
-
-    <dt class="property- property-deprecated"
+<dl class="resources-properties"><dt class="property- property-deprecated"
             title=", Deprecated">
         <span id="country_go">
 <a href="#country_go" style="color: inherit; text-decoration: inherit;">Country</a>
@@ -930,8 +825,7 @@ All [input](#inputs) properties are implicitly available as output properties. A
         <span class="property-type">string</span>
     </dt>
     <dd>{{% md %}}Billing country
-{{% /md %}}<p class="property-message">Deprecated: {{% md %}}Please use aiven_billing_group resource to set this value.{{% /md %}}</p></dd>
-    <dt class="property-"
+{{% /md %}}<p class="property-message">Deprecated: {{% md %}}Please use aiven_billing_group resource to set this value.{{% /md %}}</p></dd><dt class="property-"
             title="">
         <span id="estimatedbalance_go">
 <a href="#estimatedbalance_go" style="color: inherit; text-decoration: inherit;">Estimated<wbr>Balance</a>
@@ -940,8 +834,7 @@ All [input](#inputs) properties are implicitly available as output properties. A
         <span class="property-type">string</span>
     </dt>
     <dd>{{% md %}}Estimated balance
-{{% /md %}}</dd>
-    <dt class="property-"
+{{% /md %}}</dd><dt class="property-"
             title="">
         <span id="id_go">
 <a href="#id_go" style="color: inherit; text-decoration: inherit;">Id</a>
@@ -949,8 +842,7 @@ All [input](#inputs) properties are implicitly available as output properties. A
         <span class="property-indicator"></span>
         <span class="property-type">string</span>
     </dt>
-    <dd>{{% md %}}The provider-assigned unique ID for this managed resource.{{% /md %}}</dd>
-    <dt class="property-"
+    <dd>{{% md %}}The provider-assigned unique ID for this managed resource.{{% /md %}}</dd><dt class="property-"
             title="">
         <span id="paymentmethod_go">
 <a href="#paymentmethod_go" style="color: inherit; text-decoration: inherit;">Payment<wbr>Method</a>
@@ -959,14 +851,11 @@ All [input](#inputs) properties are implicitly available as output properties. A
         <span class="property-type">string</span>
     </dt>
     <dd>{{% md %}}Payment method
-{{% /md %}}</dd>
-</dl>
+{{% /md %}}</dd></dl>
 {{% /choosable %}}
 
 {{% choosable language nodejs %}}
-<dl class="resources-properties">
-
-    <dt class="property- property-deprecated"
+<dl class="resources-properties"><dt class="property- property-deprecated"
             title=", Deprecated">
         <span id="country_nodejs">
 <a href="#country_nodejs" style="color: inherit; text-decoration: inherit;">country</a>
@@ -975,8 +864,7 @@ All [input](#inputs) properties are implicitly available as output properties. A
         <span class="property-type">string</span>
     </dt>
     <dd>{{% md %}}Billing country
-{{% /md %}}<p class="property-message">Deprecated: {{% md %}}Please use aiven_billing_group resource to set this value.{{% /md %}}</p></dd>
-    <dt class="property-"
+{{% /md %}}<p class="property-message">Deprecated: {{% md %}}Please use aiven_billing_group resource to set this value.{{% /md %}}</p></dd><dt class="property-"
             title="">
         <span id="estimatedbalance_nodejs">
 <a href="#estimatedbalance_nodejs" style="color: inherit; text-decoration: inherit;">estimated<wbr>Balance</a>
@@ -985,8 +873,7 @@ All [input](#inputs) properties are implicitly available as output properties. A
         <span class="property-type">string</span>
     </dt>
     <dd>{{% md %}}Estimated balance
-{{% /md %}}</dd>
-    <dt class="property-"
+{{% /md %}}</dd><dt class="property-"
             title="">
         <span id="id_nodejs">
 <a href="#id_nodejs" style="color: inherit; text-decoration: inherit;">id</a>
@@ -994,8 +881,7 @@ All [input](#inputs) properties are implicitly available as output properties. A
         <span class="property-indicator"></span>
         <span class="property-type">string</span>
     </dt>
-    <dd>{{% md %}}The provider-assigned unique ID for this managed resource.{{% /md %}}</dd>
-    <dt class="property-"
+    <dd>{{% md %}}The provider-assigned unique ID for this managed resource.{{% /md %}}</dd><dt class="property-"
             title="">
         <span id="paymentmethod_nodejs">
 <a href="#paymentmethod_nodejs" style="color: inherit; text-decoration: inherit;">payment<wbr>Method</a>
@@ -1004,14 +890,11 @@ All [input](#inputs) properties are implicitly available as output properties. A
         <span class="property-type">string</span>
     </dt>
     <dd>{{% md %}}Payment method
-{{% /md %}}</dd>
-</dl>
+{{% /md %}}</dd></dl>
 {{% /choosable %}}
 
 {{% choosable language python %}}
-<dl class="resources-properties">
-
-    <dt class="property- property-deprecated"
+<dl class="resources-properties"><dt class="property- property-deprecated"
             title=", Deprecated">
         <span id="country_python">
 <a href="#country_python" style="color: inherit; text-decoration: inherit;">country</a>
@@ -1020,8 +903,7 @@ All [input](#inputs) properties are implicitly available as output properties. A
         <span class="property-type">str</span>
     </dt>
     <dd>{{% md %}}Billing country
-{{% /md %}}<p class="property-message">Deprecated: {{% md %}}Please use aiven_billing_group resource to set this value.{{% /md %}}</p></dd>
-    <dt class="property-"
+{{% /md %}}<p class="property-message">Deprecated: {{% md %}}Please use aiven_billing_group resource to set this value.{{% /md %}}</p></dd><dt class="property-"
             title="">
         <span id="estimated_balance_python">
 <a href="#estimated_balance_python" style="color: inherit; text-decoration: inherit;">estimated_<wbr>balance</a>
@@ -1030,8 +912,7 @@ All [input](#inputs) properties are implicitly available as output properties. A
         <span class="property-type">str</span>
     </dt>
     <dd>{{% md %}}Estimated balance
-{{% /md %}}</dd>
-    <dt class="property-"
+{{% /md %}}</dd><dt class="property-"
             title="">
         <span id="id_python">
 <a href="#id_python" style="color: inherit; text-decoration: inherit;">id</a>
@@ -1039,8 +920,7 @@ All [input](#inputs) properties are implicitly available as output properties. A
         <span class="property-indicator"></span>
         <span class="property-type">str</span>
     </dt>
-    <dd>{{% md %}}The provider-assigned unique ID for this managed resource.{{% /md %}}</dd>
-    <dt class="property-"
+    <dd>{{% md %}}The provider-assigned unique ID for this managed resource.{{% /md %}}</dd><dt class="property-"
             title="">
         <span id="payment_method_python">
 <a href="#payment_method_python" style="color: inherit; text-decoration: inherit;">payment_<wbr>method</a>
@@ -1049,8 +929,7 @@ All [input](#inputs) properties are implicitly available as output properties. A
         <span class="property-type">str</span>
     </dt>
     <dd>{{% md %}}Payment method
-{{% /md %}}</dd>
-</dl>
+{{% /md %}}</dd></dl>
 {{% /choosable %}}
 
 
@@ -1177,9 +1056,7 @@ The following state arguments are supported:
 
 
 {{% choosable language csharp %}}
-<dl class="resources-properties">
-
-    <dt class="property-optional"
+<dl class="resources-properties"><dt class="property-optional"
             title="Optional">
         <span id="state_accountid_csharp">
 <a href="#state_accountid_csharp" style="color: inherit; text-decoration: inherit;">Account<wbr>Id</a>
@@ -1189,8 +1066,7 @@ The following state arguments are supported:
     </dt>
     <dd>{{% md %}}is an optional property to link a project to already an existing account by 
 using account ID.
-{{% /md %}}</dd>
-    <dt class="property-optional"
+{{% /md %}}</dd><dt class="property-optional"
             title="Optional">
         <span id="state_availablecredits_csharp">
 <a href="#state_availablecredits_csharp" style="color: inherit; text-decoration: inherit;">Available<wbr>Credits</a>
@@ -1199,8 +1075,7 @@ using account ID.
         <span class="property-type">string</span>
     </dt>
     <dd>{{% md %}}Available credits
-{{% /md %}}</dd>
-    <dt class="property-optional property-deprecated"
+{{% /md %}}</dd><dt class="property-optional property-deprecated"
             title="Optional, Deprecated">
         <span id="state_billingaddress_csharp">
 <a href="#state_billingaddress_csharp" style="color: inherit; text-decoration: inherit;">Billing<wbr>Address</a>
@@ -1209,8 +1084,7 @@ using account ID.
         <span class="property-type">string</span>
     </dt>
     <dd>{{% md %}}Billing name and address of the project
-{{% /md %}}<p class="property-message">Deprecated: {{% md %}}Please use aiven_billing_group resource to set this value.{{% /md %}}</p></dd>
-    <dt class="property-optional property-deprecated"
+{{% /md %}}<p class="property-message">Deprecated: {{% md %}}Please use aiven_billing_group resource to set this value.{{% /md %}}</p></dd><dt class="property-optional property-deprecated"
             title="Optional, Deprecated">
         <span id="state_billingcurrency_csharp">
 <a href="#state_billingcurrency_csharp" style="color: inherit; text-decoration: inherit;">Billing<wbr>Currency</a>
@@ -1219,8 +1093,7 @@ using account ID.
         <span class="property-type">string</span>
     </dt>
     <dd>{{% md %}}Billing currency
-{{% /md %}}<p class="property-message">Deprecated: {{% md %}}Please use aiven_billing_group resource to set this value.{{% /md %}}</p></dd>
-    <dt class="property-optional property-deprecated"
+{{% /md %}}<p class="property-message">Deprecated: {{% md %}}Please use aiven_billing_group resource to set this value.{{% /md %}}</p></dd><dt class="property-optional property-deprecated"
             title="Optional, Deprecated">
         <span id="state_billingemails_csharp">
 <a href="#state_billingemails_csharp" style="color: inherit; text-decoration: inherit;">Billing<wbr>Emails</a>
@@ -1229,8 +1102,7 @@ using account ID.
         <span class="property-type">List&lt;string&gt;</span>
     </dt>
     <dd>{{% md %}}Billing contact emails of the project
-{{% /md %}}<p class="property-message">Deprecated: {{% md %}}Please use aiven_billing_group resource to set this value.{{% /md %}}</p></dd>
-    <dt class="property-optional property-deprecated"
+{{% /md %}}<p class="property-message">Deprecated: {{% md %}}Please use aiven_billing_group resource to set this value.{{% /md %}}</p></dd><dt class="property-optional property-deprecated"
             title="Optional, Deprecated">
         <span id="state_billingextratext_csharp">
 <a href="#state_billingextratext_csharp" style="color: inherit; text-decoration: inherit;">Billing<wbr>Extra<wbr>Text</a>
@@ -1239,8 +1111,7 @@ using account ID.
         <span class="property-type">string</span>
     </dt>
     <dd>{{% md %}}Extra text to be included in all project invoices, e.g. purchase order or cost center number
-{{% /md %}}<p class="property-message">Deprecated: {{% md %}}Please use aiven_billing_group resource to set this value.{{% /md %}}</p></dd>
-    <dt class="property-optional"
+{{% /md %}}<p class="property-message">Deprecated: {{% md %}}Please use aiven_billing_group resource to set this value.{{% /md %}}</p></dd><dt class="property-optional"
             title="Optional">
         <span id="state_billinggroup_csharp">
 <a href="#state_billinggroup_csharp" style="color: inherit; text-decoration: inherit;">Billing<wbr>Group</a>
@@ -1249,8 +1120,7 @@ using account ID.
         <span class="property-type">string</span>
     </dt>
     <dd>{{% md %}}Billing group Id
-{{% /md %}}</dd>
-    <dt class="property-optional"
+{{% /md %}}</dd><dt class="property-optional"
             title="Optional">
         <span id="state_cacert_csharp">
 <a href="#state_cacert_csharp" style="color: inherit; text-decoration: inherit;">Ca<wbr>Cert</a>
@@ -1261,8 +1131,7 @@ using account ID.
     <dd>{{% md %}}is a computed property that can be used to read the CA certificate of the
 project. This is required for configuring clients that connect to certain services like
 Kafka. This value cannot be set, only read.
-{{% /md %}}</dd>
-    <dt class="property-optional property-deprecated"
+{{% /md %}}</dd><dt class="property-optional property-deprecated"
             title="Optional, Deprecated">
         <span id="state_cardid_csharp">
 <a href="#state_cardid_csharp" style="color: inherit; text-decoration: inherit;">Card<wbr>Id</a>
@@ -1274,8 +1143,7 @@ Kafka. This value cannot be set, only read.
 UUID is not shown in the UI it is typically easier to use the last 4 digits to identify
 the card. This can be omitted if `copy_from_project` is used to copy billing info from
 another project.
-{{% /md %}}<p class="property-message">Deprecated: {{% md %}}Please use aiven_billing_group resource to set this value.{{% /md %}}</p></dd>
-    <dt class="property-optional"
+{{% /md %}}<p class="property-message">Deprecated: {{% md %}}Please use aiven_billing_group resource to set this value.{{% /md %}}</p></dd><dt class="property-optional"
             title="Optional">
         <span id="state_copyfromproject_csharp">
 <a href="#state_copyfromproject_csharp" style="color: inherit; text-decoration: inherit;">Copy<wbr>From<wbr>Project</a>
@@ -1288,8 +1156,7 @@ some other project attributes like technical contacts from. This is mostly relev
 an existing project has billing type set to invoice and that needs to be copied over to a
 new project. (Setting billing is otherwise not allowed over the API.) This only has
 effect when the project is created.
-{{% /md %}}</dd>
-    <dt class="property-optional property-deprecated"
+{{% /md %}}</dd><dt class="property-optional property-deprecated"
             title="Optional, Deprecated">
         <span id="state_country_csharp">
 <a href="#state_country_csharp" style="color: inherit; text-decoration: inherit;">Country</a>
@@ -1298,8 +1165,7 @@ effect when the project is created.
         <span class="property-type">string</span>
     </dt>
     <dd>{{% md %}}Billing country
-{{% /md %}}<p class="property-message">Deprecated: {{% md %}}Please use aiven_billing_group resource to set this value.{{% /md %}}</p></dd>
-    <dt class="property-optional property-deprecated"
+{{% /md %}}<p class="property-message">Deprecated: {{% md %}}Please use aiven_billing_group resource to set this value.{{% /md %}}</p></dd><dt class="property-optional property-deprecated"
             title="Optional, Deprecated">
         <span id="state_countrycode_csharp">
 <a href="#state_countrycode_csharp" style="color: inherit; text-decoration: inherit;">Country<wbr>Code</a>
@@ -1308,8 +1174,7 @@ effect when the project is created.
         <span class="property-type">string</span>
     </dt>
     <dd>{{% md %}}Billing country code of the project
-{{% /md %}}<p class="property-message">Deprecated: {{% md %}}Please use aiven_billing_group resource to set this value.{{% /md %}}</p></dd>
-    <dt class="property-optional"
+{{% /md %}}<p class="property-message">Deprecated: {{% md %}}Please use aiven_billing_group resource to set this value.{{% /md %}}</p></dd><dt class="property-optional"
             title="Optional">
         <span id="state_defaultcloud_csharp">
 <a href="#state_defaultcloud_csharp" style="color: inherit; text-decoration: inherit;">Default<wbr>Cloud</a>
@@ -1318,8 +1183,7 @@ effect when the project is created.
         <span class="property-type">string</span>
     </dt>
     <dd>{{% md %}}Default cloud for new services
-{{% /md %}}</dd>
-    <dt class="property-optional"
+{{% /md %}}</dd><dt class="property-optional"
             title="Optional">
         <span id="state_estimatedbalance_csharp">
 <a href="#state_estimatedbalance_csharp" style="color: inherit; text-decoration: inherit;">Estimated<wbr>Balance</a>
@@ -1328,8 +1192,7 @@ effect when the project is created.
         <span class="property-type">string</span>
     </dt>
     <dd>{{% md %}}Estimated balance
-{{% /md %}}</dd>
-    <dt class="property-optional"
+{{% /md %}}</dd><dt class="property-optional"
             title="Optional">
         <span id="state_paymentmethod_csharp">
 <a href="#state_paymentmethod_csharp" style="color: inherit; text-decoration: inherit;">Payment<wbr>Method</a>
@@ -1338,8 +1201,7 @@ effect when the project is created.
         <span class="property-type">string</span>
     </dt>
     <dd>{{% md %}}Payment method
-{{% /md %}}</dd>
-    <dt class="property-optional"
+{{% /md %}}</dd><dt class="property-optional"
             title="Optional">
         <span id="state_projectname_csharp">
 <a href="#state_projectname_csharp" style="color: inherit; text-decoration: inherit;">Project<wbr>Name</a>
@@ -1350,8 +1212,7 @@ effect when the project is created.
     <dd>{{% md %}}defines the name of the project. Name must be globally unique (between all
 Aiven customers) and cannot be changed later without destroying and re-creating the
 project, including all sub-resources.
-{{% /md %}}</dd>
-    <dt class="property-optional"
+{{% /md %}}</dd><dt class="property-optional"
             title="Optional">
         <span id="state_technicalemails_csharp">
 <a href="#state_technicalemails_csharp" style="color: inherit; text-decoration: inherit;">Technical<wbr>Emails</a>
@@ -1360,8 +1221,7 @@ project, including all sub-resources.
         <span class="property-type">List&lt;string&gt;</span>
     </dt>
     <dd>{{% md %}}Technical contact emails of the project
-{{% /md %}}</dd>
-    <dt class="property-optional property-deprecated"
+{{% /md %}}</dd><dt class="property-optional property-deprecated"
             title="Optional, Deprecated">
         <span id="state_vatid_csharp">
 <a href="#state_vatid_csharp" style="color: inherit; text-decoration: inherit;">Vat<wbr>Id</a>
@@ -1370,14 +1230,11 @@ project, including all sub-resources.
         <span class="property-type">string</span>
     </dt>
     <dd>{{% md %}}EU VAT Identification Number
-{{% /md %}}<p class="property-message">Deprecated: {{% md %}}Please use aiven_billing_group resource to set this value.{{% /md %}}</p></dd>
-</dl>
+{{% /md %}}<p class="property-message">Deprecated: {{% md %}}Please use aiven_billing_group resource to set this value.{{% /md %}}</p></dd></dl>
 {{% /choosable %}}
 
 {{% choosable language go %}}
-<dl class="resources-properties">
-
-    <dt class="property-optional"
+<dl class="resources-properties"><dt class="property-optional"
             title="Optional">
         <span id="state_accountid_go">
 <a href="#state_accountid_go" style="color: inherit; text-decoration: inherit;">Account<wbr>Id</a>
@@ -1387,8 +1244,7 @@ project, including all sub-resources.
     </dt>
     <dd>{{% md %}}is an optional property to link a project to already an existing account by 
 using account ID.
-{{% /md %}}</dd>
-    <dt class="property-optional"
+{{% /md %}}</dd><dt class="property-optional"
             title="Optional">
         <span id="state_availablecredits_go">
 <a href="#state_availablecredits_go" style="color: inherit; text-decoration: inherit;">Available<wbr>Credits</a>
@@ -1397,8 +1253,7 @@ using account ID.
         <span class="property-type">string</span>
     </dt>
     <dd>{{% md %}}Available credits
-{{% /md %}}</dd>
-    <dt class="property-optional property-deprecated"
+{{% /md %}}</dd><dt class="property-optional property-deprecated"
             title="Optional, Deprecated">
         <span id="state_billingaddress_go">
 <a href="#state_billingaddress_go" style="color: inherit; text-decoration: inherit;">Billing<wbr>Address</a>
@@ -1407,8 +1262,7 @@ using account ID.
         <span class="property-type">string</span>
     </dt>
     <dd>{{% md %}}Billing name and address of the project
-{{% /md %}}<p class="property-message">Deprecated: {{% md %}}Please use aiven_billing_group resource to set this value.{{% /md %}}</p></dd>
-    <dt class="property-optional property-deprecated"
+{{% /md %}}<p class="property-message">Deprecated: {{% md %}}Please use aiven_billing_group resource to set this value.{{% /md %}}</p></dd><dt class="property-optional property-deprecated"
             title="Optional, Deprecated">
         <span id="state_billingcurrency_go">
 <a href="#state_billingcurrency_go" style="color: inherit; text-decoration: inherit;">Billing<wbr>Currency</a>
@@ -1417,8 +1271,7 @@ using account ID.
         <span class="property-type">string</span>
     </dt>
     <dd>{{% md %}}Billing currency
-{{% /md %}}<p class="property-message">Deprecated: {{% md %}}Please use aiven_billing_group resource to set this value.{{% /md %}}</p></dd>
-    <dt class="property-optional property-deprecated"
+{{% /md %}}<p class="property-message">Deprecated: {{% md %}}Please use aiven_billing_group resource to set this value.{{% /md %}}</p></dd><dt class="property-optional property-deprecated"
             title="Optional, Deprecated">
         <span id="state_billingemails_go">
 <a href="#state_billingemails_go" style="color: inherit; text-decoration: inherit;">Billing<wbr>Emails</a>
@@ -1427,8 +1280,7 @@ using account ID.
         <span class="property-type">[]string</span>
     </dt>
     <dd>{{% md %}}Billing contact emails of the project
-{{% /md %}}<p class="property-message">Deprecated: {{% md %}}Please use aiven_billing_group resource to set this value.{{% /md %}}</p></dd>
-    <dt class="property-optional property-deprecated"
+{{% /md %}}<p class="property-message">Deprecated: {{% md %}}Please use aiven_billing_group resource to set this value.{{% /md %}}</p></dd><dt class="property-optional property-deprecated"
             title="Optional, Deprecated">
         <span id="state_billingextratext_go">
 <a href="#state_billingextratext_go" style="color: inherit; text-decoration: inherit;">Billing<wbr>Extra<wbr>Text</a>
@@ -1437,8 +1289,7 @@ using account ID.
         <span class="property-type">string</span>
     </dt>
     <dd>{{% md %}}Extra text to be included in all project invoices, e.g. purchase order or cost center number
-{{% /md %}}<p class="property-message">Deprecated: {{% md %}}Please use aiven_billing_group resource to set this value.{{% /md %}}</p></dd>
-    <dt class="property-optional"
+{{% /md %}}<p class="property-message">Deprecated: {{% md %}}Please use aiven_billing_group resource to set this value.{{% /md %}}</p></dd><dt class="property-optional"
             title="Optional">
         <span id="state_billinggroup_go">
 <a href="#state_billinggroup_go" style="color: inherit; text-decoration: inherit;">Billing<wbr>Group</a>
@@ -1447,8 +1298,7 @@ using account ID.
         <span class="property-type">string</span>
     </dt>
     <dd>{{% md %}}Billing group Id
-{{% /md %}}</dd>
-    <dt class="property-optional"
+{{% /md %}}</dd><dt class="property-optional"
             title="Optional">
         <span id="state_cacert_go">
 <a href="#state_cacert_go" style="color: inherit; text-decoration: inherit;">Ca<wbr>Cert</a>
@@ -1459,8 +1309,7 @@ using account ID.
     <dd>{{% md %}}is a computed property that can be used to read the CA certificate of the
 project. This is required for configuring clients that connect to certain services like
 Kafka. This value cannot be set, only read.
-{{% /md %}}</dd>
-    <dt class="property-optional property-deprecated"
+{{% /md %}}</dd><dt class="property-optional property-deprecated"
             title="Optional, Deprecated">
         <span id="state_cardid_go">
 <a href="#state_cardid_go" style="color: inherit; text-decoration: inherit;">Card<wbr>Id</a>
@@ -1472,8 +1321,7 @@ Kafka. This value cannot be set, only read.
 UUID is not shown in the UI it is typically easier to use the last 4 digits to identify
 the card. This can be omitted if `copy_from_project` is used to copy billing info from
 another project.
-{{% /md %}}<p class="property-message">Deprecated: {{% md %}}Please use aiven_billing_group resource to set this value.{{% /md %}}</p></dd>
-    <dt class="property-optional"
+{{% /md %}}<p class="property-message">Deprecated: {{% md %}}Please use aiven_billing_group resource to set this value.{{% /md %}}</p></dd><dt class="property-optional"
             title="Optional">
         <span id="state_copyfromproject_go">
 <a href="#state_copyfromproject_go" style="color: inherit; text-decoration: inherit;">Copy<wbr>From<wbr>Project</a>
@@ -1486,8 +1334,7 @@ some other project attributes like technical contacts from. This is mostly relev
 an existing project has billing type set to invoice and that needs to be copied over to a
 new project. (Setting billing is otherwise not allowed over the API.) This only has
 effect when the project is created.
-{{% /md %}}</dd>
-    <dt class="property-optional property-deprecated"
+{{% /md %}}</dd><dt class="property-optional property-deprecated"
             title="Optional, Deprecated">
         <span id="state_country_go">
 <a href="#state_country_go" style="color: inherit; text-decoration: inherit;">Country</a>
@@ -1496,8 +1343,7 @@ effect when the project is created.
         <span class="property-type">string</span>
     </dt>
     <dd>{{% md %}}Billing country
-{{% /md %}}<p class="property-message">Deprecated: {{% md %}}Please use aiven_billing_group resource to set this value.{{% /md %}}</p></dd>
-    <dt class="property-optional property-deprecated"
+{{% /md %}}<p class="property-message">Deprecated: {{% md %}}Please use aiven_billing_group resource to set this value.{{% /md %}}</p></dd><dt class="property-optional property-deprecated"
             title="Optional, Deprecated">
         <span id="state_countrycode_go">
 <a href="#state_countrycode_go" style="color: inherit; text-decoration: inherit;">Country<wbr>Code</a>
@@ -1506,8 +1352,7 @@ effect when the project is created.
         <span class="property-type">string</span>
     </dt>
     <dd>{{% md %}}Billing country code of the project
-{{% /md %}}<p class="property-message">Deprecated: {{% md %}}Please use aiven_billing_group resource to set this value.{{% /md %}}</p></dd>
-    <dt class="property-optional"
+{{% /md %}}<p class="property-message">Deprecated: {{% md %}}Please use aiven_billing_group resource to set this value.{{% /md %}}</p></dd><dt class="property-optional"
             title="Optional">
         <span id="state_defaultcloud_go">
 <a href="#state_defaultcloud_go" style="color: inherit; text-decoration: inherit;">Default<wbr>Cloud</a>
@@ -1516,8 +1361,7 @@ effect when the project is created.
         <span class="property-type">string</span>
     </dt>
     <dd>{{% md %}}Default cloud for new services
-{{% /md %}}</dd>
-    <dt class="property-optional"
+{{% /md %}}</dd><dt class="property-optional"
             title="Optional">
         <span id="state_estimatedbalance_go">
 <a href="#state_estimatedbalance_go" style="color: inherit; text-decoration: inherit;">Estimated<wbr>Balance</a>
@@ -1526,8 +1370,7 @@ effect when the project is created.
         <span class="property-type">string</span>
     </dt>
     <dd>{{% md %}}Estimated balance
-{{% /md %}}</dd>
-    <dt class="property-optional"
+{{% /md %}}</dd><dt class="property-optional"
             title="Optional">
         <span id="state_paymentmethod_go">
 <a href="#state_paymentmethod_go" style="color: inherit; text-decoration: inherit;">Payment<wbr>Method</a>
@@ -1536,8 +1379,7 @@ effect when the project is created.
         <span class="property-type">string</span>
     </dt>
     <dd>{{% md %}}Payment method
-{{% /md %}}</dd>
-    <dt class="property-optional"
+{{% /md %}}</dd><dt class="property-optional"
             title="Optional">
         <span id="state_project_go">
 <a href="#state_project_go" style="color: inherit; text-decoration: inherit;">Project</a>
@@ -1548,8 +1390,7 @@ effect when the project is created.
     <dd>{{% md %}}defines the name of the project. Name must be globally unique (between all
 Aiven customers) and cannot be changed later without destroying and re-creating the
 project, including all sub-resources.
-{{% /md %}}</dd>
-    <dt class="property-optional"
+{{% /md %}}</dd><dt class="property-optional"
             title="Optional">
         <span id="state_technicalemails_go">
 <a href="#state_technicalemails_go" style="color: inherit; text-decoration: inherit;">Technical<wbr>Emails</a>
@@ -1558,8 +1399,7 @@ project, including all sub-resources.
         <span class="property-type">[]string</span>
     </dt>
     <dd>{{% md %}}Technical contact emails of the project
-{{% /md %}}</dd>
-    <dt class="property-optional property-deprecated"
+{{% /md %}}</dd><dt class="property-optional property-deprecated"
             title="Optional, Deprecated">
         <span id="state_vatid_go">
 <a href="#state_vatid_go" style="color: inherit; text-decoration: inherit;">Vat<wbr>Id</a>
@@ -1568,14 +1408,11 @@ project, including all sub-resources.
         <span class="property-type">string</span>
     </dt>
     <dd>{{% md %}}EU VAT Identification Number
-{{% /md %}}<p class="property-message">Deprecated: {{% md %}}Please use aiven_billing_group resource to set this value.{{% /md %}}</p></dd>
-</dl>
+{{% /md %}}<p class="property-message">Deprecated: {{% md %}}Please use aiven_billing_group resource to set this value.{{% /md %}}</p></dd></dl>
 {{% /choosable %}}
 
 {{% choosable language nodejs %}}
-<dl class="resources-properties">
-
-    <dt class="property-optional"
+<dl class="resources-properties"><dt class="property-optional"
             title="Optional">
         <span id="state_accountid_nodejs">
 <a href="#state_accountid_nodejs" style="color: inherit; text-decoration: inherit;">account<wbr>Id</a>
@@ -1585,8 +1422,7 @@ project, including all sub-resources.
     </dt>
     <dd>{{% md %}}is an optional property to link a project to already an existing account by 
 using account ID.
-{{% /md %}}</dd>
-    <dt class="property-optional"
+{{% /md %}}</dd><dt class="property-optional"
             title="Optional">
         <span id="state_availablecredits_nodejs">
 <a href="#state_availablecredits_nodejs" style="color: inherit; text-decoration: inherit;">available<wbr>Credits</a>
@@ -1595,8 +1431,7 @@ using account ID.
         <span class="property-type">string</span>
     </dt>
     <dd>{{% md %}}Available credits
-{{% /md %}}</dd>
-    <dt class="property-optional property-deprecated"
+{{% /md %}}</dd><dt class="property-optional property-deprecated"
             title="Optional, Deprecated">
         <span id="state_billingaddress_nodejs">
 <a href="#state_billingaddress_nodejs" style="color: inherit; text-decoration: inherit;">billing<wbr>Address</a>
@@ -1605,8 +1440,7 @@ using account ID.
         <span class="property-type">string</span>
     </dt>
     <dd>{{% md %}}Billing name and address of the project
-{{% /md %}}<p class="property-message">Deprecated: {{% md %}}Please use aiven_billing_group resource to set this value.{{% /md %}}</p></dd>
-    <dt class="property-optional property-deprecated"
+{{% /md %}}<p class="property-message">Deprecated: {{% md %}}Please use aiven_billing_group resource to set this value.{{% /md %}}</p></dd><dt class="property-optional property-deprecated"
             title="Optional, Deprecated">
         <span id="state_billingcurrency_nodejs">
 <a href="#state_billingcurrency_nodejs" style="color: inherit; text-decoration: inherit;">billing<wbr>Currency</a>
@@ -1615,8 +1449,7 @@ using account ID.
         <span class="property-type">string</span>
     </dt>
     <dd>{{% md %}}Billing currency
-{{% /md %}}<p class="property-message">Deprecated: {{% md %}}Please use aiven_billing_group resource to set this value.{{% /md %}}</p></dd>
-    <dt class="property-optional property-deprecated"
+{{% /md %}}<p class="property-message">Deprecated: {{% md %}}Please use aiven_billing_group resource to set this value.{{% /md %}}</p></dd><dt class="property-optional property-deprecated"
             title="Optional, Deprecated">
         <span id="state_billingemails_nodejs">
 <a href="#state_billingemails_nodejs" style="color: inherit; text-decoration: inherit;">billing<wbr>Emails</a>
@@ -1625,8 +1458,7 @@ using account ID.
         <span class="property-type">string[]</span>
     </dt>
     <dd>{{% md %}}Billing contact emails of the project
-{{% /md %}}<p class="property-message">Deprecated: {{% md %}}Please use aiven_billing_group resource to set this value.{{% /md %}}</p></dd>
-    <dt class="property-optional property-deprecated"
+{{% /md %}}<p class="property-message">Deprecated: {{% md %}}Please use aiven_billing_group resource to set this value.{{% /md %}}</p></dd><dt class="property-optional property-deprecated"
             title="Optional, Deprecated">
         <span id="state_billingextratext_nodejs">
 <a href="#state_billingextratext_nodejs" style="color: inherit; text-decoration: inherit;">billing<wbr>Extra<wbr>Text</a>
@@ -1635,8 +1467,7 @@ using account ID.
         <span class="property-type">string</span>
     </dt>
     <dd>{{% md %}}Extra text to be included in all project invoices, e.g. purchase order or cost center number
-{{% /md %}}<p class="property-message">Deprecated: {{% md %}}Please use aiven_billing_group resource to set this value.{{% /md %}}</p></dd>
-    <dt class="property-optional"
+{{% /md %}}<p class="property-message">Deprecated: {{% md %}}Please use aiven_billing_group resource to set this value.{{% /md %}}</p></dd><dt class="property-optional"
             title="Optional">
         <span id="state_billinggroup_nodejs">
 <a href="#state_billinggroup_nodejs" style="color: inherit; text-decoration: inherit;">billing<wbr>Group</a>
@@ -1645,8 +1476,7 @@ using account ID.
         <span class="property-type">string</span>
     </dt>
     <dd>{{% md %}}Billing group Id
-{{% /md %}}</dd>
-    <dt class="property-optional"
+{{% /md %}}</dd><dt class="property-optional"
             title="Optional">
         <span id="state_cacert_nodejs">
 <a href="#state_cacert_nodejs" style="color: inherit; text-decoration: inherit;">ca<wbr>Cert</a>
@@ -1657,8 +1487,7 @@ using account ID.
     <dd>{{% md %}}is a computed property that can be used to read the CA certificate of the
 project. This is required for configuring clients that connect to certain services like
 Kafka. This value cannot be set, only read.
-{{% /md %}}</dd>
-    <dt class="property-optional property-deprecated"
+{{% /md %}}</dd><dt class="property-optional property-deprecated"
             title="Optional, Deprecated">
         <span id="state_cardid_nodejs">
 <a href="#state_cardid_nodejs" style="color: inherit; text-decoration: inherit;">card<wbr>Id</a>
@@ -1670,8 +1499,7 @@ Kafka. This value cannot be set, only read.
 UUID is not shown in the UI it is typically easier to use the last 4 digits to identify
 the card. This can be omitted if `copy_from_project` is used to copy billing info from
 another project.
-{{% /md %}}<p class="property-message">Deprecated: {{% md %}}Please use aiven_billing_group resource to set this value.{{% /md %}}</p></dd>
-    <dt class="property-optional"
+{{% /md %}}<p class="property-message">Deprecated: {{% md %}}Please use aiven_billing_group resource to set this value.{{% /md %}}</p></dd><dt class="property-optional"
             title="Optional">
         <span id="state_copyfromproject_nodejs">
 <a href="#state_copyfromproject_nodejs" style="color: inherit; text-decoration: inherit;">copy<wbr>From<wbr>Project</a>
@@ -1684,8 +1512,7 @@ some other project attributes like technical contacts from. This is mostly relev
 an existing project has billing type set to invoice and that needs to be copied over to a
 new project. (Setting billing is otherwise not allowed over the API.) This only has
 effect when the project is created.
-{{% /md %}}</dd>
-    <dt class="property-optional property-deprecated"
+{{% /md %}}</dd><dt class="property-optional property-deprecated"
             title="Optional, Deprecated">
         <span id="state_country_nodejs">
 <a href="#state_country_nodejs" style="color: inherit; text-decoration: inherit;">country</a>
@@ -1694,8 +1521,7 @@ effect when the project is created.
         <span class="property-type">string</span>
     </dt>
     <dd>{{% md %}}Billing country
-{{% /md %}}<p class="property-message">Deprecated: {{% md %}}Please use aiven_billing_group resource to set this value.{{% /md %}}</p></dd>
-    <dt class="property-optional property-deprecated"
+{{% /md %}}<p class="property-message">Deprecated: {{% md %}}Please use aiven_billing_group resource to set this value.{{% /md %}}</p></dd><dt class="property-optional property-deprecated"
             title="Optional, Deprecated">
         <span id="state_countrycode_nodejs">
 <a href="#state_countrycode_nodejs" style="color: inherit; text-decoration: inherit;">country<wbr>Code</a>
@@ -1704,8 +1530,7 @@ effect when the project is created.
         <span class="property-type">string</span>
     </dt>
     <dd>{{% md %}}Billing country code of the project
-{{% /md %}}<p class="property-message">Deprecated: {{% md %}}Please use aiven_billing_group resource to set this value.{{% /md %}}</p></dd>
-    <dt class="property-optional"
+{{% /md %}}<p class="property-message">Deprecated: {{% md %}}Please use aiven_billing_group resource to set this value.{{% /md %}}</p></dd><dt class="property-optional"
             title="Optional">
         <span id="state_defaultcloud_nodejs">
 <a href="#state_defaultcloud_nodejs" style="color: inherit; text-decoration: inherit;">default<wbr>Cloud</a>
@@ -1714,8 +1539,7 @@ effect when the project is created.
         <span class="property-type">string</span>
     </dt>
     <dd>{{% md %}}Default cloud for new services
-{{% /md %}}</dd>
-    <dt class="property-optional"
+{{% /md %}}</dd><dt class="property-optional"
             title="Optional">
         <span id="state_estimatedbalance_nodejs">
 <a href="#state_estimatedbalance_nodejs" style="color: inherit; text-decoration: inherit;">estimated<wbr>Balance</a>
@@ -1724,8 +1548,7 @@ effect when the project is created.
         <span class="property-type">string</span>
     </dt>
     <dd>{{% md %}}Estimated balance
-{{% /md %}}</dd>
-    <dt class="property-optional"
+{{% /md %}}</dd><dt class="property-optional"
             title="Optional">
         <span id="state_paymentmethod_nodejs">
 <a href="#state_paymentmethod_nodejs" style="color: inherit; text-decoration: inherit;">payment<wbr>Method</a>
@@ -1734,8 +1557,7 @@ effect when the project is created.
         <span class="property-type">string</span>
     </dt>
     <dd>{{% md %}}Payment method
-{{% /md %}}</dd>
-    <dt class="property-optional"
+{{% /md %}}</dd><dt class="property-optional"
             title="Optional">
         <span id="state_project_nodejs">
 <a href="#state_project_nodejs" style="color: inherit; text-decoration: inherit;">project</a>
@@ -1746,8 +1568,7 @@ effect when the project is created.
     <dd>{{% md %}}defines the name of the project. Name must be globally unique (between all
 Aiven customers) and cannot be changed later without destroying and re-creating the
 project, including all sub-resources.
-{{% /md %}}</dd>
-    <dt class="property-optional"
+{{% /md %}}</dd><dt class="property-optional"
             title="Optional">
         <span id="state_technicalemails_nodejs">
 <a href="#state_technicalemails_nodejs" style="color: inherit; text-decoration: inherit;">technical<wbr>Emails</a>
@@ -1756,8 +1577,7 @@ project, including all sub-resources.
         <span class="property-type">string[]</span>
     </dt>
     <dd>{{% md %}}Technical contact emails of the project
-{{% /md %}}</dd>
-    <dt class="property-optional property-deprecated"
+{{% /md %}}</dd><dt class="property-optional property-deprecated"
             title="Optional, Deprecated">
         <span id="state_vatid_nodejs">
 <a href="#state_vatid_nodejs" style="color: inherit; text-decoration: inherit;">vat<wbr>Id</a>
@@ -1766,14 +1586,11 @@ project, including all sub-resources.
         <span class="property-type">string</span>
     </dt>
     <dd>{{% md %}}EU VAT Identification Number
-{{% /md %}}<p class="property-message">Deprecated: {{% md %}}Please use aiven_billing_group resource to set this value.{{% /md %}}</p></dd>
-</dl>
+{{% /md %}}<p class="property-message">Deprecated: {{% md %}}Please use aiven_billing_group resource to set this value.{{% /md %}}</p></dd></dl>
 {{% /choosable %}}
 
 {{% choosable language python %}}
-<dl class="resources-properties">
-
-    <dt class="property-optional"
+<dl class="resources-properties"><dt class="property-optional"
             title="Optional">
         <span id="state_account_id_python">
 <a href="#state_account_id_python" style="color: inherit; text-decoration: inherit;">account_<wbr>id</a>
@@ -1783,8 +1600,7 @@ project, including all sub-resources.
     </dt>
     <dd>{{% md %}}is an optional property to link a project to already an existing account by 
 using account ID.
-{{% /md %}}</dd>
-    <dt class="property-optional"
+{{% /md %}}</dd><dt class="property-optional"
             title="Optional">
         <span id="state_available_credits_python">
 <a href="#state_available_credits_python" style="color: inherit; text-decoration: inherit;">available_<wbr>credits</a>
@@ -1793,8 +1609,7 @@ using account ID.
         <span class="property-type">str</span>
     </dt>
     <dd>{{% md %}}Available credits
-{{% /md %}}</dd>
-    <dt class="property-optional property-deprecated"
+{{% /md %}}</dd><dt class="property-optional property-deprecated"
             title="Optional, Deprecated">
         <span id="state_billing_address_python">
 <a href="#state_billing_address_python" style="color: inherit; text-decoration: inherit;">billing_<wbr>address</a>
@@ -1803,8 +1618,7 @@ using account ID.
         <span class="property-type">str</span>
     </dt>
     <dd>{{% md %}}Billing name and address of the project
-{{% /md %}}<p class="property-message">Deprecated: {{% md %}}Please use aiven_billing_group resource to set this value.{{% /md %}}</p></dd>
-    <dt class="property-optional property-deprecated"
+{{% /md %}}<p class="property-message">Deprecated: {{% md %}}Please use aiven_billing_group resource to set this value.{{% /md %}}</p></dd><dt class="property-optional property-deprecated"
             title="Optional, Deprecated">
         <span id="state_billing_currency_python">
 <a href="#state_billing_currency_python" style="color: inherit; text-decoration: inherit;">billing_<wbr>currency</a>
@@ -1813,8 +1627,7 @@ using account ID.
         <span class="property-type">str</span>
     </dt>
     <dd>{{% md %}}Billing currency
-{{% /md %}}<p class="property-message">Deprecated: {{% md %}}Please use aiven_billing_group resource to set this value.{{% /md %}}</p></dd>
-    <dt class="property-optional property-deprecated"
+{{% /md %}}<p class="property-message">Deprecated: {{% md %}}Please use aiven_billing_group resource to set this value.{{% /md %}}</p></dd><dt class="property-optional property-deprecated"
             title="Optional, Deprecated">
         <span id="state_billing_emails_python">
 <a href="#state_billing_emails_python" style="color: inherit; text-decoration: inherit;">billing_<wbr>emails</a>
@@ -1823,8 +1636,7 @@ using account ID.
         <span class="property-type">Sequence[str]</span>
     </dt>
     <dd>{{% md %}}Billing contact emails of the project
-{{% /md %}}<p class="property-message">Deprecated: {{% md %}}Please use aiven_billing_group resource to set this value.{{% /md %}}</p></dd>
-    <dt class="property-optional property-deprecated"
+{{% /md %}}<p class="property-message">Deprecated: {{% md %}}Please use aiven_billing_group resource to set this value.{{% /md %}}</p></dd><dt class="property-optional property-deprecated"
             title="Optional, Deprecated">
         <span id="state_billing_extra_text_python">
 <a href="#state_billing_extra_text_python" style="color: inherit; text-decoration: inherit;">billing_<wbr>extra_<wbr>text</a>
@@ -1833,8 +1645,7 @@ using account ID.
         <span class="property-type">str</span>
     </dt>
     <dd>{{% md %}}Extra text to be included in all project invoices, e.g. purchase order or cost center number
-{{% /md %}}<p class="property-message">Deprecated: {{% md %}}Please use aiven_billing_group resource to set this value.{{% /md %}}</p></dd>
-    <dt class="property-optional"
+{{% /md %}}<p class="property-message">Deprecated: {{% md %}}Please use aiven_billing_group resource to set this value.{{% /md %}}</p></dd><dt class="property-optional"
             title="Optional">
         <span id="state_billing_group_python">
 <a href="#state_billing_group_python" style="color: inherit; text-decoration: inherit;">billing_<wbr>group</a>
@@ -1843,8 +1654,7 @@ using account ID.
         <span class="property-type">str</span>
     </dt>
     <dd>{{% md %}}Billing group Id
-{{% /md %}}</dd>
-    <dt class="property-optional"
+{{% /md %}}</dd><dt class="property-optional"
             title="Optional">
         <span id="state_ca_cert_python">
 <a href="#state_ca_cert_python" style="color: inherit; text-decoration: inherit;">ca_<wbr>cert</a>
@@ -1855,8 +1665,7 @@ using account ID.
     <dd>{{% md %}}is a computed property that can be used to read the CA certificate of the
 project. This is required for configuring clients that connect to certain services like
 Kafka. This value cannot be set, only read.
-{{% /md %}}</dd>
-    <dt class="property-optional property-deprecated"
+{{% /md %}}</dd><dt class="property-optional property-deprecated"
             title="Optional, Deprecated">
         <span id="state_card_id_python">
 <a href="#state_card_id_python" style="color: inherit; text-decoration: inherit;">card_<wbr>id</a>
@@ -1868,8 +1677,7 @@ Kafka. This value cannot be set, only read.
 UUID is not shown in the UI it is typically easier to use the last 4 digits to identify
 the card. This can be omitted if `copy_from_project` is used to copy billing info from
 another project.
-{{% /md %}}<p class="property-message">Deprecated: {{% md %}}Please use aiven_billing_group resource to set this value.{{% /md %}}</p></dd>
-    <dt class="property-optional"
+{{% /md %}}<p class="property-message">Deprecated: {{% md %}}Please use aiven_billing_group resource to set this value.{{% /md %}}</p></dd><dt class="property-optional"
             title="Optional">
         <span id="state_copy_from_project_python">
 <a href="#state_copy_from_project_python" style="color: inherit; text-decoration: inherit;">copy_<wbr>from_<wbr>project</a>
@@ -1882,8 +1690,7 @@ some other project attributes like technical contacts from. This is mostly relev
 an existing project has billing type set to invoice and that needs to be copied over to a
 new project. (Setting billing is otherwise not allowed over the API.) This only has
 effect when the project is created.
-{{% /md %}}</dd>
-    <dt class="property-optional property-deprecated"
+{{% /md %}}</dd><dt class="property-optional property-deprecated"
             title="Optional, Deprecated">
         <span id="state_country_python">
 <a href="#state_country_python" style="color: inherit; text-decoration: inherit;">country</a>
@@ -1892,8 +1699,7 @@ effect when the project is created.
         <span class="property-type">str</span>
     </dt>
     <dd>{{% md %}}Billing country
-{{% /md %}}<p class="property-message">Deprecated: {{% md %}}Please use aiven_billing_group resource to set this value.{{% /md %}}</p></dd>
-    <dt class="property-optional property-deprecated"
+{{% /md %}}<p class="property-message">Deprecated: {{% md %}}Please use aiven_billing_group resource to set this value.{{% /md %}}</p></dd><dt class="property-optional property-deprecated"
             title="Optional, Deprecated">
         <span id="state_country_code_python">
 <a href="#state_country_code_python" style="color: inherit; text-decoration: inherit;">country_<wbr>code</a>
@@ -1902,8 +1708,7 @@ effect when the project is created.
         <span class="property-type">str</span>
     </dt>
     <dd>{{% md %}}Billing country code of the project
-{{% /md %}}<p class="property-message">Deprecated: {{% md %}}Please use aiven_billing_group resource to set this value.{{% /md %}}</p></dd>
-    <dt class="property-optional"
+{{% /md %}}<p class="property-message">Deprecated: {{% md %}}Please use aiven_billing_group resource to set this value.{{% /md %}}</p></dd><dt class="property-optional"
             title="Optional">
         <span id="state_default_cloud_python">
 <a href="#state_default_cloud_python" style="color: inherit; text-decoration: inherit;">default_<wbr>cloud</a>
@@ -1912,8 +1717,7 @@ effect when the project is created.
         <span class="property-type">str</span>
     </dt>
     <dd>{{% md %}}Default cloud for new services
-{{% /md %}}</dd>
-    <dt class="property-optional"
+{{% /md %}}</dd><dt class="property-optional"
             title="Optional">
         <span id="state_estimated_balance_python">
 <a href="#state_estimated_balance_python" style="color: inherit; text-decoration: inherit;">estimated_<wbr>balance</a>
@@ -1922,8 +1726,7 @@ effect when the project is created.
         <span class="property-type">str</span>
     </dt>
     <dd>{{% md %}}Estimated balance
-{{% /md %}}</dd>
-    <dt class="property-optional"
+{{% /md %}}</dd><dt class="property-optional"
             title="Optional">
         <span id="state_payment_method_python">
 <a href="#state_payment_method_python" style="color: inherit; text-decoration: inherit;">payment_<wbr>method</a>
@@ -1932,8 +1735,7 @@ effect when the project is created.
         <span class="property-type">str</span>
     </dt>
     <dd>{{% md %}}Payment method
-{{% /md %}}</dd>
-    <dt class="property-optional"
+{{% /md %}}</dd><dt class="property-optional"
             title="Optional">
         <span id="state_project_python">
 <a href="#state_project_python" style="color: inherit; text-decoration: inherit;">project</a>
@@ -1944,8 +1746,7 @@ effect when the project is created.
     <dd>{{% md %}}defines the name of the project. Name must be globally unique (between all
 Aiven customers) and cannot be changed later without destroying and re-creating the
 project, including all sub-resources.
-{{% /md %}}</dd>
-    <dt class="property-optional"
+{{% /md %}}</dd><dt class="property-optional"
             title="Optional">
         <span id="state_technical_emails_python">
 <a href="#state_technical_emails_python" style="color: inherit; text-decoration: inherit;">technical_<wbr>emails</a>
@@ -1954,8 +1755,7 @@ project, including all sub-resources.
         <span class="property-type">Sequence[str]</span>
     </dt>
     <dd>{{% md %}}Technical contact emails of the project
-{{% /md %}}</dd>
-    <dt class="property-optional property-deprecated"
+{{% /md %}}</dd><dt class="property-optional property-deprecated"
             title="Optional, Deprecated">
         <span id="state_vat_id_python">
 <a href="#state_vat_id_python" style="color: inherit; text-decoration: inherit;">vat_<wbr>id</a>
@@ -1964,8 +1764,7 @@ project, including all sub-resources.
         <span class="property-type">str</span>
     </dt>
     <dd>{{% md %}}EU VAT Identification Number
-{{% /md %}}<p class="property-message">Deprecated: {{% md %}}Please use aiven_billing_group resource to set this value.{{% /md %}}</p></dd>
-</dl>
+{{% /md %}}<p class="property-message">Deprecated: {{% md %}}Please use aiven_billing_group resource to set this value.{{% /md %}}</p></dd></dl>
 {{% /choosable %}}
 
 
@@ -1981,6 +1780,6 @@ project, including all sub-resources.
 	<dt>License</dt>
 	<dd>Apache-2.0</dd>
 	<dt>Notes</dt>
-	<dd>This Pulumi package is based on the [`aiven` Terraform Provider](https://github.com/aiven/terraform-provider-aiven).</dd>
+	<dd>{{% md %}}This Pulumi package is based on the [`aiven` Terraform Provider](https://github.com/aiven/terraform-provider-aiven).{{% /md %}}</dd>
 </dl>
 

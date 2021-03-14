@@ -50,9 +50,7 @@ The following arguments are supported:
 
 
 {{% choosable language csharp %}}
-<dl class="resources-properties">
-
-    <dt class="property-optional"
+<dl class="resources-properties"><dt class="property-optional"
             title="Optional">
         <span id="endpoint_csharp">
 <a href="#endpoint_csharp" style="color: inherit; text-decoration: inherit;">Endpoint</a>
@@ -60,14 +58,11 @@ The following arguments are supported:
         <span class="property-indicator"></span>
         <span class="property-type">string</span>
     </dt>
-    <dd>{{% md %}}Optional authentication endpoint. Defaults to the endpoint of Azure Resource Manager.{{% /md %}}</dd>
-</dl>
+    <dd>{{% md %}}Optional authentication endpoint. Defaults to the endpoint of Azure Resource Manager.{{% /md %}}</dd></dl>
 {{% /choosable %}}
 
 {{% choosable language go %}}
-<dl class="resources-properties">
-
-    <dt class="property-optional"
+<dl class="resources-properties"><dt class="property-optional"
             title="Optional">
         <span id="endpoint_go">
 <a href="#endpoint_go" style="color: inherit; text-decoration: inherit;">Endpoint</a>
@@ -75,14 +70,11 @@ The following arguments are supported:
         <span class="property-indicator"></span>
         <span class="property-type">string</span>
     </dt>
-    <dd>{{% md %}}Optional authentication endpoint. Defaults to the endpoint of Azure Resource Manager.{{% /md %}}</dd>
-</dl>
+    <dd>{{% md %}}Optional authentication endpoint. Defaults to the endpoint of Azure Resource Manager.{{% /md %}}</dd></dl>
 {{% /choosable %}}
 
 {{% choosable language nodejs %}}
-<dl class="resources-properties">
-
-    <dt class="property-optional"
+<dl class="resources-properties"><dt class="property-optional"
             title="Optional">
         <span id="endpoint_nodejs">
 <a href="#endpoint_nodejs" style="color: inherit; text-decoration: inherit;">endpoint</a>
@@ -90,14 +82,11 @@ The following arguments are supported:
         <span class="property-indicator"></span>
         <span class="property-type">string</span>
     </dt>
-    <dd>{{% md %}}Optional authentication endpoint. Defaults to the endpoint of Azure Resource Manager.{{% /md %}}</dd>
-</dl>
+    <dd>{{% md %}}Optional authentication endpoint. Defaults to the endpoint of Azure Resource Manager.{{% /md %}}</dd></dl>
 {{% /choosable %}}
 
 {{% choosable language python %}}
-<dl class="resources-properties">
-
-    <dt class="property-optional"
+<dl class="resources-properties"><dt class="property-optional"
             title="Optional">
         <span id="endpoint_python">
 <a href="#endpoint_python" style="color: inherit; text-decoration: inherit;">endpoint</a>
@@ -105,8 +94,7 @@ The following arguments are supported:
         <span class="property-indicator"></span>
         <span class="property-type">str</span>
     </dt>
-    <dd>{{% md %}}Optional authentication endpoint. Defaults to the endpoint of Azure Resource Manager.{{% /md %}}</dd>
-</dl>
+    <dd>{{% md %}}Optional authentication endpoint. Defaults to the endpoint of Azure Resource Manager.{{% /md %}}</dd></dl>
 {{% /choosable %}}
 
 
@@ -119,9 +107,7 @@ The following output properties are available:
 
 
 {{% choosable language csharp %}}
-<dl class="resources-properties">
-
-    <dt class="property-"
+<dl class="resources-properties"><dt class="property-"
             title="">
         <span id="token_csharp">
 <a href="#token_csharp" style="color: inherit; text-decoration: inherit;">Token</a>
@@ -129,14 +115,11 @@ The following output properties are available:
         <span class="property-indicator"></span>
         <span class="property-type">string</span>
     </dt>
-    <dd>{{% md %}}OAuth token for Azure Management API and SDK authentication.{{% /md %}}</dd>
-</dl>
+    <dd>{{% md %}}OAuth token for Azure Management API and SDK authentication.{{% /md %}}</dd></dl>
 {{% /choosable %}}
 
 {{% choosable language go %}}
-<dl class="resources-properties">
-
-    <dt class="property-"
+<dl class="resources-properties"><dt class="property-"
             title="">
         <span id="token_go">
 <a href="#token_go" style="color: inherit; text-decoration: inherit;">Token</a>
@@ -144,14 +127,11 @@ The following output properties are available:
         <span class="property-indicator"></span>
         <span class="property-type">string</span>
     </dt>
-    <dd>{{% md %}}OAuth token for Azure Management API and SDK authentication.{{% /md %}}</dd>
-</dl>
+    <dd>{{% md %}}OAuth token for Azure Management API and SDK authentication.{{% /md %}}</dd></dl>
 {{% /choosable %}}
 
 {{% choosable language nodejs %}}
-<dl class="resources-properties">
-
-    <dt class="property-"
+<dl class="resources-properties"><dt class="property-"
             title="">
         <span id="token_nodejs">
 <a href="#token_nodejs" style="color: inherit; text-decoration: inherit;">token</a>
@@ -159,14 +139,11 @@ The following output properties are available:
         <span class="property-indicator"></span>
         <span class="property-type">string</span>
     </dt>
-    <dd>{{% md %}}OAuth token for Azure Management API and SDK authentication.{{% /md %}}</dd>
-</dl>
+    <dd>{{% md %}}OAuth token for Azure Management API and SDK authentication.{{% /md %}}</dd></dl>
 {{% /choosable %}}
 
 {{% choosable language python %}}
-<dl class="resources-properties">
-
-    <dt class="property-"
+<dl class="resources-properties"><dt class="property-"
             title="">
         <span id="token_python">
 <a href="#token_python" style="color: inherit; text-decoration: inherit;">token</a>
@@ -174,8 +151,7 @@ The following output properties are available:
         <span class="property-indicator"></span>
         <span class="property-type">str</span>
     </dt>
-    <dd>{{% md %}}OAuth token for Azure Management API and SDK authentication.{{% /md %}}</dd>
-</dl>
+    <dd>{{% md %}}OAuth token for Azure Management API and SDK authentication.{{% /md %}}</dd></dl>
 {{% /choosable %}}
 
 

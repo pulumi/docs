@@ -40,9 +40,7 @@ construction to achieve fine-grained programmatic control over provider settings
 
 {{% choosable language nodejs %}}
 
-<dl class="resources-properties">
-  
-    <dt
+<dl class="resources-properties"><dt
         class="property-required" title="Required">
         <span>name</span>
         <span class="property-indicator"></span>
@@ -50,9 +48,7 @@ construction to achieve fine-grained programmatic control over provider settings
     </dt>
     <dd>
       The unique name of the resource.
-    </dd>
-  
-    <dt
+    </dd><dt
         class="property-required" title="Required">
         <span>args</span>
         <span class="property-indicator"></span>
@@ -60,9 +56,7 @@ construction to achieve fine-grained programmatic control over provider settings
     </dt>
     <dd>
       The arguments to resource properties.
-    </dd>
-  
-    <dt
+    </dd><dt
         class="property-optional" title="Optional">
         <span>opts</span>
         <span class="property-indicator"></span>
@@ -70,10 +64,7 @@ construction to achieve fine-grained programmatic control over provider settings
     </dt>
     <dd>
       Bag of options to control resource&#39;s behavior.
-    </dd>
-  
-
-</dl>
+    </dd></dl>
 
 {{% /choosable %}}
 
@@ -99,9 +90,7 @@ construction to achieve fine-grained programmatic control over provider settings
 
 {{% choosable language go %}}
 
-<dl class="resources-properties">
-  
-    <dt
+<dl class="resources-properties"><dt
         class="property-optional" title="Optional">
         <span>ctx</span>
         <span class="property-indicator"></span>
@@ -109,9 +98,7 @@ construction to achieve fine-grained programmatic control over provider settings
     </dt>
     <dd>
       Context object for the current deployment.
-    </dd>
-  
-    <dt
+    </dd><dt
         class="property-required" title="Required">
         <span>name</span>
         <span class="property-indicator"></span>
@@ -119,9 +106,7 @@ construction to achieve fine-grained programmatic control over provider settings
     </dt>
     <dd>
       The unique name of the resource.
-    </dd>
-  
-    <dt
+    </dd><dt
         class="property-required" title="Required">
         <span>args</span>
         <span class="property-indicator"></span>
@@ -129,9 +114,7 @@ construction to achieve fine-grained programmatic control over provider settings
     </dt>
     <dd>
       The arguments to resource properties.
-    </dd>
-  
-    <dt
+    </dd><dt
         class="property-optional" title="Optional">
         <span>opts</span>
         <span class="property-indicator"></span>
@@ -139,18 +122,13 @@ construction to achieve fine-grained programmatic control over provider settings
     </dt>
     <dd>
       Bag of options to control resource&#39;s behavior.
-    </dd>
-  
-
-</dl>
+    </dd></dl>
 
 {{% /choosable %}}
 
 {{% choosable language csharp %}}
 
-<dl class="resources-properties">
-  
-    <dt
+<dl class="resources-properties"><dt
         class="property-required" title="Required">
         <span>name</span>
         <span class="property-indicator"></span>
@@ -158,9 +136,7 @@ construction to achieve fine-grained programmatic control over provider settings
     </dt>
     <dd>
       The unique name of the resource.
-    </dd>
-  
-    <dt
+    </dd><dt
         class="property-required" title="Required">
         <span>args</span>
         <span class="property-indicator"></span>
@@ -168,9 +144,7 @@ construction to achieve fine-grained programmatic control over provider settings
     </dt>
     <dd>
       The arguments to resource properties.
-    </dd>
-  
-    <dt
+    </dd><dt
         class="property-optional" title="Optional">
         <span>opts</span>
         <span class="property-indicator"></span>
@@ -178,10 +152,7 @@ construction to achieve fine-grained programmatic control over provider settings
     </dt>
     <dd>
       Bag of options to control resource&#39;s behavior.
-    </dd>
-  
-
-</dl>
+    </dd></dl>
 
 {{% /choosable %}}
 
@@ -196,9 +167,7 @@ The Provider resource accepts the following [input]({{< relref "/docs/intro/conc
 
 
 {{% choosable language csharp %}}
-<dl class="resources-properties">
-
-    <dt class="property-required"
+<dl class="resources-properties"><dt class="property-required"
             title="Required">
         <span id="kongadminuri_csharp">
 <a href="#kongadminuri_csharp" style="color: inherit; text-decoration: inherit;">Kong<wbr>Admin<wbr>Uri</a>
@@ -207,8 +176,7 @@ The Provider resource accepts the following [input]({{< relref "/docs/intro/conc
         <span class="property-type">string</span>
     </dt>
     <dd>{{% md %}}The address of the kong admin url e.g. http://localhost:8001
-{{% /md %}}</dd>
-    <dt class="property-optional"
+{{% /md %}}</dd><dt class="property-optional"
             title="Optional">
         <span id="kongadminpassword_csharp">
 <a href="#kongadminpassword_csharp" style="color: inherit; text-decoration: inherit;">Kong<wbr>Admin<wbr>Password</a>
@@ -217,8 +185,7 @@ The Provider resource accepts the following [input]({{< relref "/docs/intro/conc
         <span class="property-type">string</span>
     </dt>
     <dd>{{% md %}}An basic auth password for kong admin
-{{% /md %}}</dd>
-    <dt class="property-optional"
+{{% /md %}}</dd><dt class="property-optional"
             title="Optional">
         <span id="kongadmintoken_csharp">
 <a href="#kongadmintoken_csharp" style="color: inherit; text-decoration: inherit;">Kong<wbr>Admin<wbr>Token</a>
@@ -227,8 +194,7 @@ The Provider resource accepts the following [input]({{< relref "/docs/intro/conc
         <span class="property-type">string</span>
     </dt>
     <dd>{{% md %}}API key for the kong api (Enterprise Edition)
-{{% /md %}}</dd>
-    <dt class="property-optional"
+{{% /md %}}</dd><dt class="property-optional"
             title="Optional">
         <span id="kongadminusername_csharp">
 <a href="#kongadminusername_csharp" style="color: inherit; text-decoration: inherit;">Kong<wbr>Admin<wbr>Username</a>
@@ -237,8 +203,7 @@ The Provider resource accepts the following [input]({{< relref "/docs/intro/conc
         <span class="property-type">string</span>
     </dt>
     <dd>{{% md %}}An basic auth user for kong admin
-{{% /md %}}</dd>
-    <dt class="property-optional"
+{{% /md %}}</dd><dt class="property-optional"
             title="Optional">
         <span id="kongapikey_csharp">
 <a href="#kongapikey_csharp" style="color: inherit; text-decoration: inherit;">Kong<wbr>Api<wbr>Key</a>
@@ -247,8 +212,7 @@ The Provider resource accepts the following [input]({{< relref "/docs/intro/conc
         <span class="property-type">string</span>
     </dt>
     <dd>{{% md %}}API key for the kong api (if you have locked it down)
-{{% /md %}}</dd>
-    <dt class="property-optional"
+{{% /md %}}</dd><dt class="property-optional"
             title="Optional">
         <span id="strictpluginsmatch_csharp">
 <a href="#strictpluginsmatch_csharp" style="color: inherit; text-decoration: inherit;">Strict<wbr>Plugins<wbr>Match</a>
@@ -257,8 +221,7 @@ The Provider resource accepts the following [input]({{< relref "/docs/intro/conc
         <span class="property-type">bool</span>
     </dt>
     <dd>{{% md %}}Should plugins `config_json` field strictly match plugin configuration
- It can also be sourced from the following environment variable: `STRICT_PLUGINS_MATCH`{{% /md %}}</dd>
-    <dt class="property-optional"
+ It can also be sourced from the following environment variable: `STRICT_PLUGINS_MATCH`{{% /md %}}</dd><dt class="property-optional"
             title="Optional">
         <span id="tlsskipverify_csharp">
 <a href="#tlsskipverify_csharp" style="color: inherit; text-decoration: inherit;">Tls<wbr>Skip<wbr>Verify</a>
@@ -267,14 +230,11 @@ The Provider resource accepts the following [input]({{< relref "/docs/intro/conc
         <span class="property-type">bool</span>
     </dt>
     <dd>{{% md %}}Whether to skip tls verify for https kong api endpoint using self signed or untrusted certs
- It can also be sourced from the following environment variable: `TLS_SKIP_VERIFY`{{% /md %}}</dd>
-</dl>
+ It can also be sourced from the following environment variable: `TLS_SKIP_VERIFY`{{% /md %}}</dd></dl>
 {{% /choosable %}}
 
 {{% choosable language go %}}
-<dl class="resources-properties">
-
-    <dt class="property-required"
+<dl class="resources-properties"><dt class="property-required"
             title="Required">
         <span id="kongadminuri_go">
 <a href="#kongadminuri_go" style="color: inherit; text-decoration: inherit;">Kong<wbr>Admin<wbr>Uri</a>
@@ -283,8 +243,7 @@ The Provider resource accepts the following [input]({{< relref "/docs/intro/conc
         <span class="property-type">string</span>
     </dt>
     <dd>{{% md %}}The address of the kong admin url e.g. http://localhost:8001
-{{% /md %}}</dd>
-    <dt class="property-optional"
+{{% /md %}}</dd><dt class="property-optional"
             title="Optional">
         <span id="kongadminpassword_go">
 <a href="#kongadminpassword_go" style="color: inherit; text-decoration: inherit;">Kong<wbr>Admin<wbr>Password</a>
@@ -293,8 +252,7 @@ The Provider resource accepts the following [input]({{< relref "/docs/intro/conc
         <span class="property-type">string</span>
     </dt>
     <dd>{{% md %}}An basic auth password for kong admin
-{{% /md %}}</dd>
-    <dt class="property-optional"
+{{% /md %}}</dd><dt class="property-optional"
             title="Optional">
         <span id="kongadmintoken_go">
 <a href="#kongadmintoken_go" style="color: inherit; text-decoration: inherit;">Kong<wbr>Admin<wbr>Token</a>
@@ -303,8 +261,7 @@ The Provider resource accepts the following [input]({{< relref "/docs/intro/conc
         <span class="property-type">string</span>
     </dt>
     <dd>{{% md %}}API key for the kong api (Enterprise Edition)
-{{% /md %}}</dd>
-    <dt class="property-optional"
+{{% /md %}}</dd><dt class="property-optional"
             title="Optional">
         <span id="kongadminusername_go">
 <a href="#kongadminusername_go" style="color: inherit; text-decoration: inherit;">Kong<wbr>Admin<wbr>Username</a>
@@ -313,8 +270,7 @@ The Provider resource accepts the following [input]({{< relref "/docs/intro/conc
         <span class="property-type">string</span>
     </dt>
     <dd>{{% md %}}An basic auth user for kong admin
-{{% /md %}}</dd>
-    <dt class="property-optional"
+{{% /md %}}</dd><dt class="property-optional"
             title="Optional">
         <span id="kongapikey_go">
 <a href="#kongapikey_go" style="color: inherit; text-decoration: inherit;">Kong<wbr>Api<wbr>Key</a>
@@ -323,8 +279,7 @@ The Provider resource accepts the following [input]({{< relref "/docs/intro/conc
         <span class="property-type">string</span>
     </dt>
     <dd>{{% md %}}API key for the kong api (if you have locked it down)
-{{% /md %}}</dd>
-    <dt class="property-optional"
+{{% /md %}}</dd><dt class="property-optional"
             title="Optional">
         <span id="strictpluginsmatch_go">
 <a href="#strictpluginsmatch_go" style="color: inherit; text-decoration: inherit;">Strict<wbr>Plugins<wbr>Match</a>
@@ -333,8 +288,7 @@ The Provider resource accepts the following [input]({{< relref "/docs/intro/conc
         <span class="property-type">bool</span>
     </dt>
     <dd>{{% md %}}Should plugins `config_json` field strictly match plugin configuration
- It can also be sourced from the following environment variable: `STRICT_PLUGINS_MATCH`{{% /md %}}</dd>
-    <dt class="property-optional"
+ It can also be sourced from the following environment variable: `STRICT_PLUGINS_MATCH`{{% /md %}}</dd><dt class="property-optional"
             title="Optional">
         <span id="tlsskipverify_go">
 <a href="#tlsskipverify_go" style="color: inherit; text-decoration: inherit;">Tls<wbr>Skip<wbr>Verify</a>
@@ -343,14 +297,11 @@ The Provider resource accepts the following [input]({{< relref "/docs/intro/conc
         <span class="property-type">bool</span>
     </dt>
     <dd>{{% md %}}Whether to skip tls verify for https kong api endpoint using self signed or untrusted certs
- It can also be sourced from the following environment variable: `TLS_SKIP_VERIFY`{{% /md %}}</dd>
-</dl>
+ It can also be sourced from the following environment variable: `TLS_SKIP_VERIFY`{{% /md %}}</dd></dl>
 {{% /choosable %}}
 
 {{% choosable language nodejs %}}
-<dl class="resources-properties">
-
-    <dt class="property-required"
+<dl class="resources-properties"><dt class="property-required"
             title="Required">
         <span id="kongadminuri_nodejs">
 <a href="#kongadminuri_nodejs" style="color: inherit; text-decoration: inherit;">kong<wbr>Admin<wbr>Uri</a>
@@ -359,8 +310,7 @@ The Provider resource accepts the following [input]({{< relref "/docs/intro/conc
         <span class="property-type">string</span>
     </dt>
     <dd>{{% md %}}The address of the kong admin url e.g. http://localhost:8001
-{{% /md %}}</dd>
-    <dt class="property-optional"
+{{% /md %}}</dd><dt class="property-optional"
             title="Optional">
         <span id="kongadminpassword_nodejs">
 <a href="#kongadminpassword_nodejs" style="color: inherit; text-decoration: inherit;">kong<wbr>Admin<wbr>Password</a>
@@ -369,8 +319,7 @@ The Provider resource accepts the following [input]({{< relref "/docs/intro/conc
         <span class="property-type">string</span>
     </dt>
     <dd>{{% md %}}An basic auth password for kong admin
-{{% /md %}}</dd>
-    <dt class="property-optional"
+{{% /md %}}</dd><dt class="property-optional"
             title="Optional">
         <span id="kongadmintoken_nodejs">
 <a href="#kongadmintoken_nodejs" style="color: inherit; text-decoration: inherit;">kong<wbr>Admin<wbr>Token</a>
@@ -379,8 +328,7 @@ The Provider resource accepts the following [input]({{< relref "/docs/intro/conc
         <span class="property-type">string</span>
     </dt>
     <dd>{{% md %}}API key for the kong api (Enterprise Edition)
-{{% /md %}}</dd>
-    <dt class="property-optional"
+{{% /md %}}</dd><dt class="property-optional"
             title="Optional">
         <span id="kongadminusername_nodejs">
 <a href="#kongadminusername_nodejs" style="color: inherit; text-decoration: inherit;">kong<wbr>Admin<wbr>Username</a>
@@ -389,8 +337,7 @@ The Provider resource accepts the following [input]({{< relref "/docs/intro/conc
         <span class="property-type">string</span>
     </dt>
     <dd>{{% md %}}An basic auth user for kong admin
-{{% /md %}}</dd>
-    <dt class="property-optional"
+{{% /md %}}</dd><dt class="property-optional"
             title="Optional">
         <span id="kongapikey_nodejs">
 <a href="#kongapikey_nodejs" style="color: inherit; text-decoration: inherit;">kong<wbr>Api<wbr>Key</a>
@@ -399,8 +346,7 @@ The Provider resource accepts the following [input]({{< relref "/docs/intro/conc
         <span class="property-type">string</span>
     </dt>
     <dd>{{% md %}}API key for the kong api (if you have locked it down)
-{{% /md %}}</dd>
-    <dt class="property-optional"
+{{% /md %}}</dd><dt class="property-optional"
             title="Optional">
         <span id="strictpluginsmatch_nodejs">
 <a href="#strictpluginsmatch_nodejs" style="color: inherit; text-decoration: inherit;">strict<wbr>Plugins<wbr>Match</a>
@@ -409,8 +355,7 @@ The Provider resource accepts the following [input]({{< relref "/docs/intro/conc
         <span class="property-type">boolean</span>
     </dt>
     <dd>{{% md %}}Should plugins `config_json` field strictly match plugin configuration
- It can also be sourced from the following environment variable: `STRICT_PLUGINS_MATCH`{{% /md %}}</dd>
-    <dt class="property-optional"
+ It can also be sourced from the following environment variable: `STRICT_PLUGINS_MATCH`{{% /md %}}</dd><dt class="property-optional"
             title="Optional">
         <span id="tlsskipverify_nodejs">
 <a href="#tlsskipverify_nodejs" style="color: inherit; text-decoration: inherit;">tls<wbr>Skip<wbr>Verify</a>
@@ -419,14 +364,11 @@ The Provider resource accepts the following [input]({{< relref "/docs/intro/conc
         <span class="property-type">boolean</span>
     </dt>
     <dd>{{% md %}}Whether to skip tls verify for https kong api endpoint using self signed or untrusted certs
- It can also be sourced from the following environment variable: `TLS_SKIP_VERIFY`{{% /md %}}</dd>
-</dl>
+ It can also be sourced from the following environment variable: `TLS_SKIP_VERIFY`{{% /md %}}</dd></dl>
 {{% /choosable %}}
 
 {{% choosable language python %}}
-<dl class="resources-properties">
-
-    <dt class="property-required"
+<dl class="resources-properties"><dt class="property-required"
             title="Required">
         <span id="kong_admin_uri_python">
 <a href="#kong_admin_uri_python" style="color: inherit; text-decoration: inherit;">kong_<wbr>admin_<wbr>uri</a>
@@ -435,8 +377,7 @@ The Provider resource accepts the following [input]({{< relref "/docs/intro/conc
         <span class="property-type">str</span>
     </dt>
     <dd>{{% md %}}The address of the kong admin url e.g. http://localhost:8001
-{{% /md %}}</dd>
-    <dt class="property-optional"
+{{% /md %}}</dd><dt class="property-optional"
             title="Optional">
         <span id="kong_admin_password_python">
 <a href="#kong_admin_password_python" style="color: inherit; text-decoration: inherit;">kong_<wbr>admin_<wbr>password</a>
@@ -445,8 +386,7 @@ The Provider resource accepts the following [input]({{< relref "/docs/intro/conc
         <span class="property-type">str</span>
     </dt>
     <dd>{{% md %}}An basic auth password for kong admin
-{{% /md %}}</dd>
-    <dt class="property-optional"
+{{% /md %}}</dd><dt class="property-optional"
             title="Optional">
         <span id="kong_admin_token_python">
 <a href="#kong_admin_token_python" style="color: inherit; text-decoration: inherit;">kong_<wbr>admin_<wbr>token</a>
@@ -455,8 +395,7 @@ The Provider resource accepts the following [input]({{< relref "/docs/intro/conc
         <span class="property-type">str</span>
     </dt>
     <dd>{{% md %}}API key for the kong api (Enterprise Edition)
-{{% /md %}}</dd>
-    <dt class="property-optional"
+{{% /md %}}</dd><dt class="property-optional"
             title="Optional">
         <span id="kong_admin_username_python">
 <a href="#kong_admin_username_python" style="color: inherit; text-decoration: inherit;">kong_<wbr>admin_<wbr>username</a>
@@ -465,8 +404,7 @@ The Provider resource accepts the following [input]({{< relref "/docs/intro/conc
         <span class="property-type">str</span>
     </dt>
     <dd>{{% md %}}An basic auth user for kong admin
-{{% /md %}}</dd>
-    <dt class="property-optional"
+{{% /md %}}</dd><dt class="property-optional"
             title="Optional">
         <span id="kong_api_key_python">
 <a href="#kong_api_key_python" style="color: inherit; text-decoration: inherit;">kong_<wbr>api_<wbr>key</a>
@@ -475,8 +413,7 @@ The Provider resource accepts the following [input]({{< relref "/docs/intro/conc
         <span class="property-type">str</span>
     </dt>
     <dd>{{% md %}}API key for the kong api (if you have locked it down)
-{{% /md %}}</dd>
-    <dt class="property-optional"
+{{% /md %}}</dd><dt class="property-optional"
             title="Optional">
         <span id="strict_plugins_match_python">
 <a href="#strict_plugins_match_python" style="color: inherit; text-decoration: inherit;">strict_<wbr>plugins_<wbr>match</a>
@@ -485,8 +422,7 @@ The Provider resource accepts the following [input]({{< relref "/docs/intro/conc
         <span class="property-type">bool</span>
     </dt>
     <dd>{{% md %}}Should plugins `config_json` field strictly match plugin configuration
- It can also be sourced from the following environment variable: `STRICT_PLUGINS_MATCH`{{% /md %}}</dd>
-    <dt class="property-optional"
+ It can also be sourced from the following environment variable: `STRICT_PLUGINS_MATCH`{{% /md %}}</dd><dt class="property-optional"
             title="Optional">
         <span id="tls_skip_verify_python">
 <a href="#tls_skip_verify_python" style="color: inherit; text-decoration: inherit;">tls_<wbr>skip_<wbr>verify</a>
@@ -495,8 +431,7 @@ The Provider resource accepts the following [input]({{< relref "/docs/intro/conc
         <span class="property-type">bool</span>
     </dt>
     <dd>{{% md %}}Whether to skip tls verify for https kong api endpoint using self signed or untrusted certs
- It can also be sourced from the following environment variable: `TLS_SKIP_VERIFY`{{% /md %}}</dd>
-</dl>
+ It can also be sourced from the following environment variable: `TLS_SKIP_VERIFY`{{% /md %}}</dd></dl>
 {{% /choosable %}}
 
 
@@ -507,9 +442,7 @@ All [input](#inputs) properties are implicitly available as output properties. A
 
 
 {{% choosable language csharp %}}
-<dl class="resources-properties">
-
-    <dt class="property-"
+<dl class="resources-properties"><dt class="property-"
             title="">
         <span id="id_csharp">
 <a href="#id_csharp" style="color: inherit; text-decoration: inherit;">Id</a>
@@ -517,14 +450,11 @@ All [input](#inputs) properties are implicitly available as output properties. A
         <span class="property-indicator"></span>
         <span class="property-type">string</span>
     </dt>
-    <dd>{{% md %}}The provider-assigned unique ID for this managed resource.{{% /md %}}</dd>
-</dl>
+    <dd>{{% md %}}The provider-assigned unique ID for this managed resource.{{% /md %}}</dd></dl>
 {{% /choosable %}}
 
 {{% choosable language go %}}
-<dl class="resources-properties">
-
-    <dt class="property-"
+<dl class="resources-properties"><dt class="property-"
             title="">
         <span id="id_go">
 <a href="#id_go" style="color: inherit; text-decoration: inherit;">Id</a>
@@ -532,14 +462,11 @@ All [input](#inputs) properties are implicitly available as output properties. A
         <span class="property-indicator"></span>
         <span class="property-type">string</span>
     </dt>
-    <dd>{{% md %}}The provider-assigned unique ID for this managed resource.{{% /md %}}</dd>
-</dl>
+    <dd>{{% md %}}The provider-assigned unique ID for this managed resource.{{% /md %}}</dd></dl>
 {{% /choosable %}}
 
 {{% choosable language nodejs %}}
-<dl class="resources-properties">
-
-    <dt class="property-"
+<dl class="resources-properties"><dt class="property-"
             title="">
         <span id="id_nodejs">
 <a href="#id_nodejs" style="color: inherit; text-decoration: inherit;">id</a>
@@ -547,14 +474,11 @@ All [input](#inputs) properties are implicitly available as output properties. A
         <span class="property-indicator"></span>
         <span class="property-type">string</span>
     </dt>
-    <dd>{{% md %}}The provider-assigned unique ID for this managed resource.{{% /md %}}</dd>
-</dl>
+    <dd>{{% md %}}The provider-assigned unique ID for this managed resource.{{% /md %}}</dd></dl>
 {{% /choosable %}}
 
 {{% choosable language python %}}
-<dl class="resources-properties">
-
-    <dt class="property-"
+<dl class="resources-properties"><dt class="property-"
             title="">
         <span id="id_python">
 <a href="#id_python" style="color: inherit; text-decoration: inherit;">id</a>
@@ -562,8 +486,7 @@ All [input](#inputs) properties are implicitly available as output properties. A
         <span class="property-indicator"></span>
         <span class="property-type">str</span>
     </dt>
-    <dd>{{% md %}}The provider-assigned unique ID for this managed resource.{{% /md %}}</dd>
-</dl>
+    <dd>{{% md %}}The provider-assigned unique ID for this managed resource.{{% /md %}}</dd></dl>
 {{% /choosable %}}
 
 
@@ -580,6 +503,6 @@ All [input](#inputs) properties are implicitly available as output properties. A
 	<dt>License</dt>
 	<dd>Apache-2.0</dd>
 	<dt>Notes</dt>
-	<dd>This Pulumi package is based on the [`kong` Terraform Provider](https://github.com/kevholditch/terraform-provider-kong).</dd>
+	<dd>{{% md %}}This Pulumi package is based on the [`kong` Terraform Provider](https://github.com/kevholditch/terraform-provider-kong).{{% /md %}}</dd>
 </dl>
 

@@ -13,11 +13,17 @@ meta_desc: "Documentation for the rancher2.ProjectAlertRule resource with exampl
 Provides a Rancher v2 Project Alert Rule resource. This can be used to create Project Alert Rule for Rancher v2 environments and retrieve their information.
 
 {{% examples %}}
+
 ## Example Usage
 
 {{< chooser language "typescript,python,go,csharp" / >}}
 
-{{% example csharp %}}
+
+
+
+
+{{< example csharp >}}
+
 ```csharp
 using Pulumi;
 using Rancher2 = Pulumi.Rancher2;
@@ -75,9 +81,12 @@ class MyStack : Stack
 }
 ```
 
-{{% /example %}}
 
-{{% example go %}}
+{{< /example >}}
+
+
+{{< example go >}}
+
 ```go
 package main
 
@@ -136,9 +145,12 @@ func main() {
 }
 ```
 
-{{% /example %}}
 
-{{% example python %}}
+{{< /example >}}
+
+
+{{< example python >}}
+
 ```python
 import pulumi
 import pulumi_rancher2 as rancher2
@@ -179,9 +191,12 @@ foo_project_alert_rule = rancher2.ProjectAlertRule("fooProjectAlertRule",
     repeat_interval_seconds=6000)
 ```
 
-{{% /example %}}
 
-{{% example typescript %}}
+{{< /example >}}
+
+
+{{< example typescript >}}
+
 
 ```typescript
 import * as pulumi from "@pulumi/pulumi";
@@ -226,9 +241,16 @@ const fooProjectAlertRule = new rancher2.ProjectAlertRule("fooProjectAlertRule",
 });
 ```
 
-{{% /example %}}
+
+{{< /example >}}
+
+
+
+
 
 {{% /examples %}}
+
+
 
 
 ## Create a ProjectAlertRule Resource {#create}
@@ -253,9 +275,7 @@ const fooProjectAlertRule = new rancher2.ProjectAlertRule("fooProjectAlertRule",
 
 {{% choosable language nodejs %}}
 
-<dl class="resources-properties">
-  
-    <dt
+<dl class="resources-properties"><dt
         class="property-required" title="Required">
         <span>name</span>
         <span class="property-indicator"></span>
@@ -263,9 +283,7 @@ const fooProjectAlertRule = new rancher2.ProjectAlertRule("fooProjectAlertRule",
     </dt>
     <dd>
       The unique name of the resource.
-    </dd>
-  
-    <dt
+    </dd><dt
         class="property-required" title="Required">
         <span>args</span>
         <span class="property-indicator"></span>
@@ -273,9 +291,7 @@ const fooProjectAlertRule = new rancher2.ProjectAlertRule("fooProjectAlertRule",
     </dt>
     <dd>
       The arguments to resource properties.
-    </dd>
-  
-    <dt
+    </dd><dt
         class="property-optional" title="Optional">
         <span>opts</span>
         <span class="property-indicator"></span>
@@ -283,10 +299,7 @@ const fooProjectAlertRule = new rancher2.ProjectAlertRule("fooProjectAlertRule",
     </dt>
     <dd>
       Bag of options to control resource&#39;s behavior.
-    </dd>
-  
-
-</dl>
+    </dd></dl>
 
 {{% /choosable %}}
 
@@ -312,9 +325,7 @@ const fooProjectAlertRule = new rancher2.ProjectAlertRule("fooProjectAlertRule",
 
 {{% choosable language go %}}
 
-<dl class="resources-properties">
-  
-    <dt
+<dl class="resources-properties"><dt
         class="property-optional" title="Optional">
         <span>ctx</span>
         <span class="property-indicator"></span>
@@ -322,9 +333,7 @@ const fooProjectAlertRule = new rancher2.ProjectAlertRule("fooProjectAlertRule",
     </dt>
     <dd>
       Context object for the current deployment.
-    </dd>
-  
-    <dt
+    </dd><dt
         class="property-required" title="Required">
         <span>name</span>
         <span class="property-indicator"></span>
@@ -332,9 +341,7 @@ const fooProjectAlertRule = new rancher2.ProjectAlertRule("fooProjectAlertRule",
     </dt>
     <dd>
       The unique name of the resource.
-    </dd>
-  
-    <dt
+    </dd><dt
         class="property-required" title="Required">
         <span>args</span>
         <span class="property-indicator"></span>
@@ -342,9 +349,7 @@ const fooProjectAlertRule = new rancher2.ProjectAlertRule("fooProjectAlertRule",
     </dt>
     <dd>
       The arguments to resource properties.
-    </dd>
-  
-    <dt
+    </dd><dt
         class="property-optional" title="Optional">
         <span>opts</span>
         <span class="property-indicator"></span>
@@ -352,18 +357,13 @@ const fooProjectAlertRule = new rancher2.ProjectAlertRule("fooProjectAlertRule",
     </dt>
     <dd>
       Bag of options to control resource&#39;s behavior.
-    </dd>
-  
-
-</dl>
+    </dd></dl>
 
 {{% /choosable %}}
 
 {{% choosable language csharp %}}
 
-<dl class="resources-properties">
-  
-    <dt
+<dl class="resources-properties"><dt
         class="property-required" title="Required">
         <span>name</span>
         <span class="property-indicator"></span>
@@ -371,9 +371,7 @@ const fooProjectAlertRule = new rancher2.ProjectAlertRule("fooProjectAlertRule",
     </dt>
     <dd>
       The unique name of the resource.
-    </dd>
-  
-    <dt
+    </dd><dt
         class="property-required" title="Required">
         <span>args</span>
         <span class="property-indicator"></span>
@@ -381,9 +379,7 @@ const fooProjectAlertRule = new rancher2.ProjectAlertRule("fooProjectAlertRule",
     </dt>
     <dd>
       The arguments to resource properties.
-    </dd>
-  
-    <dt
+    </dd><dt
         class="property-optional" title="Optional">
         <span>opts</span>
         <span class="property-indicator"></span>
@@ -391,10 +387,7 @@ const fooProjectAlertRule = new rancher2.ProjectAlertRule("fooProjectAlertRule",
     </dt>
     <dd>
       Bag of options to control resource&#39;s behavior.
-    </dd>
-  
-
-</dl>
+    </dd></dl>
 
 {{% /choosable %}}
 
@@ -409,9 +402,7 @@ The ProjectAlertRule resource accepts the following [input]({{< relref "/docs/in
 
 
 {{% choosable language csharp %}}
-<dl class="resources-properties">
-
-    <dt class="property-required"
+<dl class="resources-properties"><dt class="property-required"
             title="Required">
         <span id="groupid_csharp">
 <a href="#groupid_csharp" style="color: inherit; text-decoration: inherit;">Group<wbr>Id</a>
@@ -420,8 +411,7 @@ The ProjectAlertRule resource accepts the following [input]({{< relref "/docs/in
         <span class="property-type">string</span>
     </dt>
     <dd>{{% md %}}The project alert rule alert group ID (string)
-{{% /md %}}</dd>
-    <dt class="property-required"
+{{% /md %}}</dd><dt class="property-required"
             title="Required">
         <span id="projectid_csharp">
 <a href="#projectid_csharp" style="color: inherit; text-decoration: inherit;">Project<wbr>Id</a>
@@ -430,8 +420,7 @@ The ProjectAlertRule resource accepts the following [input]({{< relref "/docs/in
         <span class="property-type">string</span>
     </dt>
     <dd>{{% md %}}The project id where create project alert rule (string)
-{{% /md %}}</dd>
-    <dt class="property-optional"
+{{% /md %}}</dd><dt class="property-optional"
             title="Optional">
         <span id="annotations_csharp">
 <a href="#annotations_csharp" style="color: inherit; text-decoration: inherit;">Annotations</a>
@@ -440,8 +429,7 @@ The ProjectAlertRule resource accepts the following [input]({{< relref "/docs/in
         <span class="property-type">Dictionary&lt;string, object&gt;</span>
     </dt>
     <dd>{{% md %}}The project alert rule annotations (map)
-{{% /md %}}</dd>
-    <dt class="property-optional"
+{{% /md %}}</dd><dt class="property-optional"
             title="Optional">
         <span id="groupintervalseconds_csharp">
 <a href="#groupintervalseconds_csharp" style="color: inherit; text-decoration: inherit;">Group<wbr>Interval<wbr>Seconds</a>
@@ -450,8 +438,7 @@ The ProjectAlertRule resource accepts the following [input]({{< relref "/docs/in
         <span class="property-type">int</span>
     </dt>
     <dd>{{% md %}}The project alert rule group interval seconds. Default: `180` (int)
-{{% /md %}}</dd>
-    <dt class="property-optional"
+{{% /md %}}</dd><dt class="property-optional"
             title="Optional">
         <span id="groupwaitseconds_csharp">
 <a href="#groupwaitseconds_csharp" style="color: inherit; text-decoration: inherit;">Group<wbr>Wait<wbr>Seconds</a>
@@ -460,8 +447,7 @@ The ProjectAlertRule resource accepts the following [input]({{< relref "/docs/in
         <span class="property-type">int</span>
     </dt>
     <dd>{{% md %}}The project alert rule group wait seconds. Default: `180` (int)
-{{% /md %}}</dd>
-    <dt class="property-optional"
+{{% /md %}}</dd><dt class="property-optional"
             title="Optional">
         <span id="inherited_csharp">
 <a href="#inherited_csharp" style="color: inherit; text-decoration: inherit;">Inherited</a>
@@ -470,8 +456,7 @@ The ProjectAlertRule resource accepts the following [input]({{< relref "/docs/in
         <span class="property-type">bool</span>
     </dt>
     <dd>{{% md %}}The project alert rule inherited. Default: `true` (bool)
-{{% /md %}}</dd>
-    <dt class="property-optional"
+{{% /md %}}</dd><dt class="property-optional"
             title="Optional">
         <span id="labels_csharp">
 <a href="#labels_csharp" style="color: inherit; text-decoration: inherit;">Labels</a>
@@ -480,8 +465,7 @@ The ProjectAlertRule resource accepts the following [input]({{< relref "/docs/in
         <span class="property-type">Dictionary&lt;string, object&gt;</span>
     </dt>
     <dd>{{% md %}}The project alert rule labels (map)
-{{% /md %}}</dd>
-    <dt class="property-optional"
+{{% /md %}}</dd><dt class="property-optional"
             title="Optional">
         <span id="metricrule_csharp">
 <a href="#metricrule_csharp" style="color: inherit; text-decoration: inherit;">Metric<wbr>Rule</a>
@@ -490,8 +474,7 @@ The ProjectAlertRule resource accepts the following [input]({{< relref "/docs/in
         <span class="property-type"><a href="#projectalertrulemetricrule">Project<wbr>Alert<wbr>Rule<wbr>Metric<wbr>Rule<wbr>Args</a></span>
     </dt>
     <dd>{{% md %}}The project alert rule metric rule. ConflictsWith: `"pod_rule", "workload_rule"`` (list Maxitems:1)
-{{% /md %}}</dd>
-    <dt class="property-optional"
+{{% /md %}}</dd><dt class="property-optional"
             title="Optional">
         <span id="name_csharp">
 <a href="#name_csharp" style="color: inherit; text-decoration: inherit;">Name</a>
@@ -500,8 +483,7 @@ The ProjectAlertRule resource accepts the following [input]({{< relref "/docs/in
         <span class="property-type">string</span>
     </dt>
     <dd>{{% md %}}The project alert rule name (string)
-{{% /md %}}</dd>
-    <dt class="property-optional"
+{{% /md %}}</dd><dt class="property-optional"
             title="Optional">
         <span id="podrule_csharp">
 <a href="#podrule_csharp" style="color: inherit; text-decoration: inherit;">Pod<wbr>Rule</a>
@@ -510,8 +492,7 @@ The ProjectAlertRule resource accepts the following [input]({{< relref "/docs/in
         <span class="property-type"><a href="#projectalertrulepodrule">Project<wbr>Alert<wbr>Rule<wbr>Pod<wbr>Rule<wbr>Args</a></span>
     </dt>
     <dd>{{% md %}}The project alert rule pod rule. ConflictsWith: `"metric_rule", "workload_rule"`` (list Maxitems:1)
-{{% /md %}}</dd>
-    <dt class="property-optional"
+{{% /md %}}</dd><dt class="property-optional"
             title="Optional">
         <span id="repeatintervalseconds_csharp">
 <a href="#repeatintervalseconds_csharp" style="color: inherit; text-decoration: inherit;">Repeat<wbr>Interval<wbr>Seconds</a>
@@ -520,8 +501,7 @@ The ProjectAlertRule resource accepts the following [input]({{< relref "/docs/in
         <span class="property-type">int</span>
     </dt>
     <dd>{{% md %}}The project alert rule wait seconds. Default: `3600` (int)
-{{% /md %}}</dd>
-    <dt class="property-optional"
+{{% /md %}}</dd><dt class="property-optional"
             title="Optional">
         <span id="severity_csharp">
 <a href="#severity_csharp" style="color: inherit; text-decoration: inherit;">Severity</a>
@@ -530,8 +510,7 @@ The ProjectAlertRule resource accepts the following [input]({{< relref "/docs/in
         <span class="property-type">string</span>
     </dt>
     <dd>{{% md %}}The project alert rule severity. Supported values : `"critical" | "info" | "warning"`. Default: `critical` (string)
-{{% /md %}}</dd>
-    <dt class="property-optional"
+{{% /md %}}</dd><dt class="property-optional"
             title="Optional">
         <span id="workloadrule_csharp">
 <a href="#workloadrule_csharp" style="color: inherit; text-decoration: inherit;">Workload<wbr>Rule</a>
@@ -540,14 +519,11 @@ The ProjectAlertRule resource accepts the following [input]({{< relref "/docs/in
         <span class="property-type"><a href="#projectalertruleworkloadrule">Project<wbr>Alert<wbr>Rule<wbr>Workload<wbr>Rule<wbr>Args</a></span>
     </dt>
     <dd>{{% md %}}The project alert rule workload rule. ConflictsWith: `"metric_rule", "pod_rule"`` (list Maxitems:1)
-{{% /md %}}</dd>
-</dl>
+{{% /md %}}</dd></dl>
 {{% /choosable %}}
 
 {{% choosable language go %}}
-<dl class="resources-properties">
-
-    <dt class="property-required"
+<dl class="resources-properties"><dt class="property-required"
             title="Required">
         <span id="groupid_go">
 <a href="#groupid_go" style="color: inherit; text-decoration: inherit;">Group<wbr>Id</a>
@@ -556,8 +532,7 @@ The ProjectAlertRule resource accepts the following [input]({{< relref "/docs/in
         <span class="property-type">string</span>
     </dt>
     <dd>{{% md %}}The project alert rule alert group ID (string)
-{{% /md %}}</dd>
-    <dt class="property-required"
+{{% /md %}}</dd><dt class="property-required"
             title="Required">
         <span id="projectid_go">
 <a href="#projectid_go" style="color: inherit; text-decoration: inherit;">Project<wbr>Id</a>
@@ -566,8 +541,7 @@ The ProjectAlertRule resource accepts the following [input]({{< relref "/docs/in
         <span class="property-type">string</span>
     </dt>
     <dd>{{% md %}}The project id where create project alert rule (string)
-{{% /md %}}</dd>
-    <dt class="property-optional"
+{{% /md %}}</dd><dt class="property-optional"
             title="Optional">
         <span id="annotations_go">
 <a href="#annotations_go" style="color: inherit; text-decoration: inherit;">Annotations</a>
@@ -576,8 +550,7 @@ The ProjectAlertRule resource accepts the following [input]({{< relref "/docs/in
         <span class="property-type">map[string]interface{}</span>
     </dt>
     <dd>{{% md %}}The project alert rule annotations (map)
-{{% /md %}}</dd>
-    <dt class="property-optional"
+{{% /md %}}</dd><dt class="property-optional"
             title="Optional">
         <span id="groupintervalseconds_go">
 <a href="#groupintervalseconds_go" style="color: inherit; text-decoration: inherit;">Group<wbr>Interval<wbr>Seconds</a>
@@ -586,8 +559,7 @@ The ProjectAlertRule resource accepts the following [input]({{< relref "/docs/in
         <span class="property-type">int</span>
     </dt>
     <dd>{{% md %}}The project alert rule group interval seconds. Default: `180` (int)
-{{% /md %}}</dd>
-    <dt class="property-optional"
+{{% /md %}}</dd><dt class="property-optional"
             title="Optional">
         <span id="groupwaitseconds_go">
 <a href="#groupwaitseconds_go" style="color: inherit; text-decoration: inherit;">Group<wbr>Wait<wbr>Seconds</a>
@@ -596,8 +568,7 @@ The ProjectAlertRule resource accepts the following [input]({{< relref "/docs/in
         <span class="property-type">int</span>
     </dt>
     <dd>{{% md %}}The project alert rule group wait seconds. Default: `180` (int)
-{{% /md %}}</dd>
-    <dt class="property-optional"
+{{% /md %}}</dd><dt class="property-optional"
             title="Optional">
         <span id="inherited_go">
 <a href="#inherited_go" style="color: inherit; text-decoration: inherit;">Inherited</a>
@@ -606,8 +577,7 @@ The ProjectAlertRule resource accepts the following [input]({{< relref "/docs/in
         <span class="property-type">bool</span>
     </dt>
     <dd>{{% md %}}The project alert rule inherited. Default: `true` (bool)
-{{% /md %}}</dd>
-    <dt class="property-optional"
+{{% /md %}}</dd><dt class="property-optional"
             title="Optional">
         <span id="labels_go">
 <a href="#labels_go" style="color: inherit; text-decoration: inherit;">Labels</a>
@@ -616,8 +586,7 @@ The ProjectAlertRule resource accepts the following [input]({{< relref "/docs/in
         <span class="property-type">map[string]interface{}</span>
     </dt>
     <dd>{{% md %}}The project alert rule labels (map)
-{{% /md %}}</dd>
-    <dt class="property-optional"
+{{% /md %}}</dd><dt class="property-optional"
             title="Optional">
         <span id="metricrule_go">
 <a href="#metricrule_go" style="color: inherit; text-decoration: inherit;">Metric<wbr>Rule</a>
@@ -626,8 +595,7 @@ The ProjectAlertRule resource accepts the following [input]({{< relref "/docs/in
         <span class="property-type"><a href="#projectalertrulemetricrule">Project<wbr>Alert<wbr>Rule<wbr>Metric<wbr>Rule</a></span>
     </dt>
     <dd>{{% md %}}The project alert rule metric rule. ConflictsWith: `"pod_rule", "workload_rule"`` (list Maxitems:1)
-{{% /md %}}</dd>
-    <dt class="property-optional"
+{{% /md %}}</dd><dt class="property-optional"
             title="Optional">
         <span id="name_go">
 <a href="#name_go" style="color: inherit; text-decoration: inherit;">Name</a>
@@ -636,8 +604,7 @@ The ProjectAlertRule resource accepts the following [input]({{< relref "/docs/in
         <span class="property-type">string</span>
     </dt>
     <dd>{{% md %}}The project alert rule name (string)
-{{% /md %}}</dd>
-    <dt class="property-optional"
+{{% /md %}}</dd><dt class="property-optional"
             title="Optional">
         <span id="podrule_go">
 <a href="#podrule_go" style="color: inherit; text-decoration: inherit;">Pod<wbr>Rule</a>
@@ -646,8 +613,7 @@ The ProjectAlertRule resource accepts the following [input]({{< relref "/docs/in
         <span class="property-type"><a href="#projectalertrulepodrule">Project<wbr>Alert<wbr>Rule<wbr>Pod<wbr>Rule</a></span>
     </dt>
     <dd>{{% md %}}The project alert rule pod rule. ConflictsWith: `"metric_rule", "workload_rule"`` (list Maxitems:1)
-{{% /md %}}</dd>
-    <dt class="property-optional"
+{{% /md %}}</dd><dt class="property-optional"
             title="Optional">
         <span id="repeatintervalseconds_go">
 <a href="#repeatintervalseconds_go" style="color: inherit; text-decoration: inherit;">Repeat<wbr>Interval<wbr>Seconds</a>
@@ -656,8 +622,7 @@ The ProjectAlertRule resource accepts the following [input]({{< relref "/docs/in
         <span class="property-type">int</span>
     </dt>
     <dd>{{% md %}}The project alert rule wait seconds. Default: `3600` (int)
-{{% /md %}}</dd>
-    <dt class="property-optional"
+{{% /md %}}</dd><dt class="property-optional"
             title="Optional">
         <span id="severity_go">
 <a href="#severity_go" style="color: inherit; text-decoration: inherit;">Severity</a>
@@ -666,8 +631,7 @@ The ProjectAlertRule resource accepts the following [input]({{< relref "/docs/in
         <span class="property-type">string</span>
     </dt>
     <dd>{{% md %}}The project alert rule severity. Supported values : `"critical" | "info" | "warning"`. Default: `critical` (string)
-{{% /md %}}</dd>
-    <dt class="property-optional"
+{{% /md %}}</dd><dt class="property-optional"
             title="Optional">
         <span id="workloadrule_go">
 <a href="#workloadrule_go" style="color: inherit; text-decoration: inherit;">Workload<wbr>Rule</a>
@@ -676,14 +640,11 @@ The ProjectAlertRule resource accepts the following [input]({{< relref "/docs/in
         <span class="property-type"><a href="#projectalertruleworkloadrule">Project<wbr>Alert<wbr>Rule<wbr>Workload<wbr>Rule</a></span>
     </dt>
     <dd>{{% md %}}The project alert rule workload rule. ConflictsWith: `"metric_rule", "pod_rule"`` (list Maxitems:1)
-{{% /md %}}</dd>
-</dl>
+{{% /md %}}</dd></dl>
 {{% /choosable %}}
 
 {{% choosable language nodejs %}}
-<dl class="resources-properties">
-
-    <dt class="property-required"
+<dl class="resources-properties"><dt class="property-required"
             title="Required">
         <span id="groupid_nodejs">
 <a href="#groupid_nodejs" style="color: inherit; text-decoration: inherit;">group<wbr>Id</a>
@@ -692,8 +653,7 @@ The ProjectAlertRule resource accepts the following [input]({{< relref "/docs/in
         <span class="property-type">string</span>
     </dt>
     <dd>{{% md %}}The project alert rule alert group ID (string)
-{{% /md %}}</dd>
-    <dt class="property-required"
+{{% /md %}}</dd><dt class="property-required"
             title="Required">
         <span id="projectid_nodejs">
 <a href="#projectid_nodejs" style="color: inherit; text-decoration: inherit;">project<wbr>Id</a>
@@ -702,8 +662,7 @@ The ProjectAlertRule resource accepts the following [input]({{< relref "/docs/in
         <span class="property-type">string</span>
     </dt>
     <dd>{{% md %}}The project id where create project alert rule (string)
-{{% /md %}}</dd>
-    <dt class="property-optional"
+{{% /md %}}</dd><dt class="property-optional"
             title="Optional">
         <span id="annotations_nodejs">
 <a href="#annotations_nodejs" style="color: inherit; text-decoration: inherit;">annotations</a>
@@ -712,8 +671,7 @@ The ProjectAlertRule resource accepts the following [input]({{< relref "/docs/in
         <span class="property-type">{[key: string]: any}</span>
     </dt>
     <dd>{{% md %}}The project alert rule annotations (map)
-{{% /md %}}</dd>
-    <dt class="property-optional"
+{{% /md %}}</dd><dt class="property-optional"
             title="Optional">
         <span id="groupintervalseconds_nodejs">
 <a href="#groupintervalseconds_nodejs" style="color: inherit; text-decoration: inherit;">group<wbr>Interval<wbr>Seconds</a>
@@ -722,8 +680,7 @@ The ProjectAlertRule resource accepts the following [input]({{< relref "/docs/in
         <span class="property-type">number</span>
     </dt>
     <dd>{{% md %}}The project alert rule group interval seconds. Default: `180` (int)
-{{% /md %}}</dd>
-    <dt class="property-optional"
+{{% /md %}}</dd><dt class="property-optional"
             title="Optional">
         <span id="groupwaitseconds_nodejs">
 <a href="#groupwaitseconds_nodejs" style="color: inherit; text-decoration: inherit;">group<wbr>Wait<wbr>Seconds</a>
@@ -732,8 +689,7 @@ The ProjectAlertRule resource accepts the following [input]({{< relref "/docs/in
         <span class="property-type">number</span>
     </dt>
     <dd>{{% md %}}The project alert rule group wait seconds. Default: `180` (int)
-{{% /md %}}</dd>
-    <dt class="property-optional"
+{{% /md %}}</dd><dt class="property-optional"
             title="Optional">
         <span id="inherited_nodejs">
 <a href="#inherited_nodejs" style="color: inherit; text-decoration: inherit;">inherited</a>
@@ -742,8 +698,7 @@ The ProjectAlertRule resource accepts the following [input]({{< relref "/docs/in
         <span class="property-type">boolean</span>
     </dt>
     <dd>{{% md %}}The project alert rule inherited. Default: `true` (bool)
-{{% /md %}}</dd>
-    <dt class="property-optional"
+{{% /md %}}</dd><dt class="property-optional"
             title="Optional">
         <span id="labels_nodejs">
 <a href="#labels_nodejs" style="color: inherit; text-decoration: inherit;">labels</a>
@@ -752,8 +707,7 @@ The ProjectAlertRule resource accepts the following [input]({{< relref "/docs/in
         <span class="property-type">{[key: string]: any}</span>
     </dt>
     <dd>{{% md %}}The project alert rule labels (map)
-{{% /md %}}</dd>
-    <dt class="property-optional"
+{{% /md %}}</dd><dt class="property-optional"
             title="Optional">
         <span id="metricrule_nodejs">
 <a href="#metricrule_nodejs" style="color: inherit; text-decoration: inherit;">metric<wbr>Rule</a>
@@ -762,8 +716,7 @@ The ProjectAlertRule resource accepts the following [input]({{< relref "/docs/in
         <span class="property-type"><a href="#projectalertrulemetricrule">Project<wbr>Alert<wbr>Rule<wbr>Metric<wbr>Rule</a></span>
     </dt>
     <dd>{{% md %}}The project alert rule metric rule. ConflictsWith: `"pod_rule", "workload_rule"`` (list Maxitems:1)
-{{% /md %}}</dd>
-    <dt class="property-optional"
+{{% /md %}}</dd><dt class="property-optional"
             title="Optional">
         <span id="name_nodejs">
 <a href="#name_nodejs" style="color: inherit; text-decoration: inherit;">name</a>
@@ -772,8 +725,7 @@ The ProjectAlertRule resource accepts the following [input]({{< relref "/docs/in
         <span class="property-type">string</span>
     </dt>
     <dd>{{% md %}}The project alert rule name (string)
-{{% /md %}}</dd>
-    <dt class="property-optional"
+{{% /md %}}</dd><dt class="property-optional"
             title="Optional">
         <span id="podrule_nodejs">
 <a href="#podrule_nodejs" style="color: inherit; text-decoration: inherit;">pod<wbr>Rule</a>
@@ -782,8 +734,7 @@ The ProjectAlertRule resource accepts the following [input]({{< relref "/docs/in
         <span class="property-type"><a href="#projectalertrulepodrule">Project<wbr>Alert<wbr>Rule<wbr>Pod<wbr>Rule</a></span>
     </dt>
     <dd>{{% md %}}The project alert rule pod rule. ConflictsWith: `"metric_rule", "workload_rule"`` (list Maxitems:1)
-{{% /md %}}</dd>
-    <dt class="property-optional"
+{{% /md %}}</dd><dt class="property-optional"
             title="Optional">
         <span id="repeatintervalseconds_nodejs">
 <a href="#repeatintervalseconds_nodejs" style="color: inherit; text-decoration: inherit;">repeat<wbr>Interval<wbr>Seconds</a>
@@ -792,8 +743,7 @@ The ProjectAlertRule resource accepts the following [input]({{< relref "/docs/in
         <span class="property-type">number</span>
     </dt>
     <dd>{{% md %}}The project alert rule wait seconds. Default: `3600` (int)
-{{% /md %}}</dd>
-    <dt class="property-optional"
+{{% /md %}}</dd><dt class="property-optional"
             title="Optional">
         <span id="severity_nodejs">
 <a href="#severity_nodejs" style="color: inherit; text-decoration: inherit;">severity</a>
@@ -802,8 +752,7 @@ The ProjectAlertRule resource accepts the following [input]({{< relref "/docs/in
         <span class="property-type">string</span>
     </dt>
     <dd>{{% md %}}The project alert rule severity. Supported values : `"critical" | "info" | "warning"`. Default: `critical` (string)
-{{% /md %}}</dd>
-    <dt class="property-optional"
+{{% /md %}}</dd><dt class="property-optional"
             title="Optional">
         <span id="workloadrule_nodejs">
 <a href="#workloadrule_nodejs" style="color: inherit; text-decoration: inherit;">workload<wbr>Rule</a>
@@ -812,14 +761,11 @@ The ProjectAlertRule resource accepts the following [input]({{< relref "/docs/in
         <span class="property-type"><a href="#projectalertruleworkloadrule">Project<wbr>Alert<wbr>Rule<wbr>Workload<wbr>Rule</a></span>
     </dt>
     <dd>{{% md %}}The project alert rule workload rule. ConflictsWith: `"metric_rule", "pod_rule"`` (list Maxitems:1)
-{{% /md %}}</dd>
-</dl>
+{{% /md %}}</dd></dl>
 {{% /choosable %}}
 
 {{% choosable language python %}}
-<dl class="resources-properties">
-
-    <dt class="property-required"
+<dl class="resources-properties"><dt class="property-required"
             title="Required">
         <span id="group_id_python">
 <a href="#group_id_python" style="color: inherit; text-decoration: inherit;">group_<wbr>id</a>
@@ -828,8 +774,7 @@ The ProjectAlertRule resource accepts the following [input]({{< relref "/docs/in
         <span class="property-type">str</span>
     </dt>
     <dd>{{% md %}}The project alert rule alert group ID (string)
-{{% /md %}}</dd>
-    <dt class="property-required"
+{{% /md %}}</dd><dt class="property-required"
             title="Required">
         <span id="project_id_python">
 <a href="#project_id_python" style="color: inherit; text-decoration: inherit;">project_<wbr>id</a>
@@ -838,8 +783,7 @@ The ProjectAlertRule resource accepts the following [input]({{< relref "/docs/in
         <span class="property-type">str</span>
     </dt>
     <dd>{{% md %}}The project id where create project alert rule (string)
-{{% /md %}}</dd>
-    <dt class="property-optional"
+{{% /md %}}</dd><dt class="property-optional"
             title="Optional">
         <span id="annotations_python">
 <a href="#annotations_python" style="color: inherit; text-decoration: inherit;">annotations</a>
@@ -848,8 +792,7 @@ The ProjectAlertRule resource accepts the following [input]({{< relref "/docs/in
         <span class="property-type">Mapping[str, Any]</span>
     </dt>
     <dd>{{% md %}}The project alert rule annotations (map)
-{{% /md %}}</dd>
-    <dt class="property-optional"
+{{% /md %}}</dd><dt class="property-optional"
             title="Optional">
         <span id="group_interval_seconds_python">
 <a href="#group_interval_seconds_python" style="color: inherit; text-decoration: inherit;">group_<wbr>interval_<wbr>seconds</a>
@@ -858,8 +801,7 @@ The ProjectAlertRule resource accepts the following [input]({{< relref "/docs/in
         <span class="property-type">int</span>
     </dt>
     <dd>{{% md %}}The project alert rule group interval seconds. Default: `180` (int)
-{{% /md %}}</dd>
-    <dt class="property-optional"
+{{% /md %}}</dd><dt class="property-optional"
             title="Optional">
         <span id="group_wait_seconds_python">
 <a href="#group_wait_seconds_python" style="color: inherit; text-decoration: inherit;">group_<wbr>wait_<wbr>seconds</a>
@@ -868,8 +810,7 @@ The ProjectAlertRule resource accepts the following [input]({{< relref "/docs/in
         <span class="property-type">int</span>
     </dt>
     <dd>{{% md %}}The project alert rule group wait seconds. Default: `180` (int)
-{{% /md %}}</dd>
-    <dt class="property-optional"
+{{% /md %}}</dd><dt class="property-optional"
             title="Optional">
         <span id="inherited_python">
 <a href="#inherited_python" style="color: inherit; text-decoration: inherit;">inherited</a>
@@ -878,8 +819,7 @@ The ProjectAlertRule resource accepts the following [input]({{< relref "/docs/in
         <span class="property-type">bool</span>
     </dt>
     <dd>{{% md %}}The project alert rule inherited. Default: `true` (bool)
-{{% /md %}}</dd>
-    <dt class="property-optional"
+{{% /md %}}</dd><dt class="property-optional"
             title="Optional">
         <span id="labels_python">
 <a href="#labels_python" style="color: inherit; text-decoration: inherit;">labels</a>
@@ -888,8 +828,7 @@ The ProjectAlertRule resource accepts the following [input]({{< relref "/docs/in
         <span class="property-type">Mapping[str, Any]</span>
     </dt>
     <dd>{{% md %}}The project alert rule labels (map)
-{{% /md %}}</dd>
-    <dt class="property-optional"
+{{% /md %}}</dd><dt class="property-optional"
             title="Optional">
         <span id="metric_rule_python">
 <a href="#metric_rule_python" style="color: inherit; text-decoration: inherit;">metric_<wbr>rule</a>
@@ -898,8 +837,7 @@ The ProjectAlertRule resource accepts the following [input]({{< relref "/docs/in
         <span class="property-type"><a href="#projectalertrulemetricrule">Project<wbr>Alert<wbr>Rule<wbr>Metric<wbr>Rule<wbr>Args</a></span>
     </dt>
     <dd>{{% md %}}The project alert rule metric rule. ConflictsWith: `"pod_rule", "workload_rule"`` (list Maxitems:1)
-{{% /md %}}</dd>
-    <dt class="property-optional"
+{{% /md %}}</dd><dt class="property-optional"
             title="Optional">
         <span id="name_python">
 <a href="#name_python" style="color: inherit; text-decoration: inherit;">name</a>
@@ -908,8 +846,7 @@ The ProjectAlertRule resource accepts the following [input]({{< relref "/docs/in
         <span class="property-type">str</span>
     </dt>
     <dd>{{% md %}}The project alert rule name (string)
-{{% /md %}}</dd>
-    <dt class="property-optional"
+{{% /md %}}</dd><dt class="property-optional"
             title="Optional">
         <span id="pod_rule_python">
 <a href="#pod_rule_python" style="color: inherit; text-decoration: inherit;">pod_<wbr>rule</a>
@@ -918,8 +855,7 @@ The ProjectAlertRule resource accepts the following [input]({{< relref "/docs/in
         <span class="property-type"><a href="#projectalertrulepodrule">Project<wbr>Alert<wbr>Rule<wbr>Pod<wbr>Rule<wbr>Args</a></span>
     </dt>
     <dd>{{% md %}}The project alert rule pod rule. ConflictsWith: `"metric_rule", "workload_rule"`` (list Maxitems:1)
-{{% /md %}}</dd>
-    <dt class="property-optional"
+{{% /md %}}</dd><dt class="property-optional"
             title="Optional">
         <span id="repeat_interval_seconds_python">
 <a href="#repeat_interval_seconds_python" style="color: inherit; text-decoration: inherit;">repeat_<wbr>interval_<wbr>seconds</a>
@@ -928,8 +864,7 @@ The ProjectAlertRule resource accepts the following [input]({{< relref "/docs/in
         <span class="property-type">int</span>
     </dt>
     <dd>{{% md %}}The project alert rule wait seconds. Default: `3600` (int)
-{{% /md %}}</dd>
-    <dt class="property-optional"
+{{% /md %}}</dd><dt class="property-optional"
             title="Optional">
         <span id="severity_python">
 <a href="#severity_python" style="color: inherit; text-decoration: inherit;">severity</a>
@@ -938,8 +873,7 @@ The ProjectAlertRule resource accepts the following [input]({{< relref "/docs/in
         <span class="property-type">str</span>
     </dt>
     <dd>{{% md %}}The project alert rule severity. Supported values : `"critical" | "info" | "warning"`. Default: `critical` (string)
-{{% /md %}}</dd>
-    <dt class="property-optional"
+{{% /md %}}</dd><dt class="property-optional"
             title="Optional">
         <span id="workload_rule_python">
 <a href="#workload_rule_python" style="color: inherit; text-decoration: inherit;">workload_<wbr>rule</a>
@@ -948,8 +882,7 @@ The ProjectAlertRule resource accepts the following [input]({{< relref "/docs/in
         <span class="property-type"><a href="#projectalertruleworkloadrule">Project<wbr>Alert<wbr>Rule<wbr>Workload<wbr>Rule<wbr>Args</a></span>
     </dt>
     <dd>{{% md %}}The project alert rule workload rule. ConflictsWith: `"metric_rule", "pod_rule"`` (list Maxitems:1)
-{{% /md %}}</dd>
-</dl>
+{{% /md %}}</dd></dl>
 {{% /choosable %}}
 
 
@@ -960,9 +893,7 @@ All [input](#inputs) properties are implicitly available as output properties. A
 
 
 {{% choosable language csharp %}}
-<dl class="resources-properties">
-
-    <dt class="property-"
+<dl class="resources-properties"><dt class="property-"
             title="">
         <span id="id_csharp">
 <a href="#id_csharp" style="color: inherit; text-decoration: inherit;">Id</a>
@@ -970,14 +901,11 @@ All [input](#inputs) properties are implicitly available as output properties. A
         <span class="property-indicator"></span>
         <span class="property-type">string</span>
     </dt>
-    <dd>{{% md %}}The provider-assigned unique ID for this managed resource.{{% /md %}}</dd>
-</dl>
+    <dd>{{% md %}}The provider-assigned unique ID for this managed resource.{{% /md %}}</dd></dl>
 {{% /choosable %}}
 
 {{% choosable language go %}}
-<dl class="resources-properties">
-
-    <dt class="property-"
+<dl class="resources-properties"><dt class="property-"
             title="">
         <span id="id_go">
 <a href="#id_go" style="color: inherit; text-decoration: inherit;">Id</a>
@@ -985,14 +913,11 @@ All [input](#inputs) properties are implicitly available as output properties. A
         <span class="property-indicator"></span>
         <span class="property-type">string</span>
     </dt>
-    <dd>{{% md %}}The provider-assigned unique ID for this managed resource.{{% /md %}}</dd>
-</dl>
+    <dd>{{% md %}}The provider-assigned unique ID for this managed resource.{{% /md %}}</dd></dl>
 {{% /choosable %}}
 
 {{% choosable language nodejs %}}
-<dl class="resources-properties">
-
-    <dt class="property-"
+<dl class="resources-properties"><dt class="property-"
             title="">
         <span id="id_nodejs">
 <a href="#id_nodejs" style="color: inherit; text-decoration: inherit;">id</a>
@@ -1000,14 +925,11 @@ All [input](#inputs) properties are implicitly available as output properties. A
         <span class="property-indicator"></span>
         <span class="property-type">string</span>
     </dt>
-    <dd>{{% md %}}The provider-assigned unique ID for this managed resource.{{% /md %}}</dd>
-</dl>
+    <dd>{{% md %}}The provider-assigned unique ID for this managed resource.{{% /md %}}</dd></dl>
 {{% /choosable %}}
 
 {{% choosable language python %}}
-<dl class="resources-properties">
-
-    <dt class="property-"
+<dl class="resources-properties"><dt class="property-"
             title="">
         <span id="id_python">
 <a href="#id_python" style="color: inherit; text-decoration: inherit;">id</a>
@@ -1015,8 +937,7 @@ All [input](#inputs) properties are implicitly available as output properties. A
         <span class="property-indicator"></span>
         <span class="property-type">str</span>
     </dt>
-    <dd>{{% md %}}The provider-assigned unique ID for this managed resource.{{% /md %}}</dd>
-</dl>
+    <dd>{{% md %}}The provider-assigned unique ID for this managed resource.{{% /md %}}</dd></dl>
 {{% /choosable %}}
 
 
@@ -1143,9 +1064,7 @@ The following state arguments are supported:
 
 
 {{% choosable language csharp %}}
-<dl class="resources-properties">
-
-    <dt class="property-optional"
+<dl class="resources-properties"><dt class="property-optional"
             title="Optional">
         <span id="state_annotations_csharp">
 <a href="#state_annotations_csharp" style="color: inherit; text-decoration: inherit;">Annotations</a>
@@ -1154,8 +1073,7 @@ The following state arguments are supported:
         <span class="property-type">Dictionary&lt;string, object&gt;</span>
     </dt>
     <dd>{{% md %}}The project alert rule annotations (map)
-{{% /md %}}</dd>
-    <dt class="property-optional"
+{{% /md %}}</dd><dt class="property-optional"
             title="Optional">
         <span id="state_groupid_csharp">
 <a href="#state_groupid_csharp" style="color: inherit; text-decoration: inherit;">Group<wbr>Id</a>
@@ -1164,8 +1082,7 @@ The following state arguments are supported:
         <span class="property-type">string</span>
     </dt>
     <dd>{{% md %}}The project alert rule alert group ID (string)
-{{% /md %}}</dd>
-    <dt class="property-optional"
+{{% /md %}}</dd><dt class="property-optional"
             title="Optional">
         <span id="state_groupintervalseconds_csharp">
 <a href="#state_groupintervalseconds_csharp" style="color: inherit; text-decoration: inherit;">Group<wbr>Interval<wbr>Seconds</a>
@@ -1174,8 +1091,7 @@ The following state arguments are supported:
         <span class="property-type">int</span>
     </dt>
     <dd>{{% md %}}The project alert rule group interval seconds. Default: `180` (int)
-{{% /md %}}</dd>
-    <dt class="property-optional"
+{{% /md %}}</dd><dt class="property-optional"
             title="Optional">
         <span id="state_groupwaitseconds_csharp">
 <a href="#state_groupwaitseconds_csharp" style="color: inherit; text-decoration: inherit;">Group<wbr>Wait<wbr>Seconds</a>
@@ -1184,8 +1100,7 @@ The following state arguments are supported:
         <span class="property-type">int</span>
     </dt>
     <dd>{{% md %}}The project alert rule group wait seconds. Default: `180` (int)
-{{% /md %}}</dd>
-    <dt class="property-optional"
+{{% /md %}}</dd><dt class="property-optional"
             title="Optional">
         <span id="state_inherited_csharp">
 <a href="#state_inherited_csharp" style="color: inherit; text-decoration: inherit;">Inherited</a>
@@ -1194,8 +1109,7 @@ The following state arguments are supported:
         <span class="property-type">bool</span>
     </dt>
     <dd>{{% md %}}The project alert rule inherited. Default: `true` (bool)
-{{% /md %}}</dd>
-    <dt class="property-optional"
+{{% /md %}}</dd><dt class="property-optional"
             title="Optional">
         <span id="state_labels_csharp">
 <a href="#state_labels_csharp" style="color: inherit; text-decoration: inherit;">Labels</a>
@@ -1204,8 +1118,7 @@ The following state arguments are supported:
         <span class="property-type">Dictionary&lt;string, object&gt;</span>
     </dt>
     <dd>{{% md %}}The project alert rule labels (map)
-{{% /md %}}</dd>
-    <dt class="property-optional"
+{{% /md %}}</dd><dt class="property-optional"
             title="Optional">
         <span id="state_metricrule_csharp">
 <a href="#state_metricrule_csharp" style="color: inherit; text-decoration: inherit;">Metric<wbr>Rule</a>
@@ -1214,8 +1127,7 @@ The following state arguments are supported:
         <span class="property-type"><a href="#projectalertrulemetricrule">Project<wbr>Alert<wbr>Rule<wbr>Metric<wbr>Rule<wbr>Args</a></span>
     </dt>
     <dd>{{% md %}}The project alert rule metric rule. ConflictsWith: `"pod_rule", "workload_rule"`` (list Maxitems:1)
-{{% /md %}}</dd>
-    <dt class="property-optional"
+{{% /md %}}</dd><dt class="property-optional"
             title="Optional">
         <span id="state_name_csharp">
 <a href="#state_name_csharp" style="color: inherit; text-decoration: inherit;">Name</a>
@@ -1224,8 +1136,7 @@ The following state arguments are supported:
         <span class="property-type">string</span>
     </dt>
     <dd>{{% md %}}The project alert rule name (string)
-{{% /md %}}</dd>
-    <dt class="property-optional"
+{{% /md %}}</dd><dt class="property-optional"
             title="Optional">
         <span id="state_podrule_csharp">
 <a href="#state_podrule_csharp" style="color: inherit; text-decoration: inherit;">Pod<wbr>Rule</a>
@@ -1234,8 +1145,7 @@ The following state arguments are supported:
         <span class="property-type"><a href="#projectalertrulepodrule">Project<wbr>Alert<wbr>Rule<wbr>Pod<wbr>Rule<wbr>Args</a></span>
     </dt>
     <dd>{{% md %}}The project alert rule pod rule. ConflictsWith: `"metric_rule", "workload_rule"`` (list Maxitems:1)
-{{% /md %}}</dd>
-    <dt class="property-optional"
+{{% /md %}}</dd><dt class="property-optional"
             title="Optional">
         <span id="state_projectid_csharp">
 <a href="#state_projectid_csharp" style="color: inherit; text-decoration: inherit;">Project<wbr>Id</a>
@@ -1244,8 +1154,7 @@ The following state arguments are supported:
         <span class="property-type">string</span>
     </dt>
     <dd>{{% md %}}The project id where create project alert rule (string)
-{{% /md %}}</dd>
-    <dt class="property-optional"
+{{% /md %}}</dd><dt class="property-optional"
             title="Optional">
         <span id="state_repeatintervalseconds_csharp">
 <a href="#state_repeatintervalseconds_csharp" style="color: inherit; text-decoration: inherit;">Repeat<wbr>Interval<wbr>Seconds</a>
@@ -1254,8 +1163,7 @@ The following state arguments are supported:
         <span class="property-type">int</span>
     </dt>
     <dd>{{% md %}}The project alert rule wait seconds. Default: `3600` (int)
-{{% /md %}}</dd>
-    <dt class="property-optional"
+{{% /md %}}</dd><dt class="property-optional"
             title="Optional">
         <span id="state_severity_csharp">
 <a href="#state_severity_csharp" style="color: inherit; text-decoration: inherit;">Severity</a>
@@ -1264,8 +1172,7 @@ The following state arguments are supported:
         <span class="property-type">string</span>
     </dt>
     <dd>{{% md %}}The project alert rule severity. Supported values : `"critical" | "info" | "warning"`. Default: `critical` (string)
-{{% /md %}}</dd>
-    <dt class="property-optional"
+{{% /md %}}</dd><dt class="property-optional"
             title="Optional">
         <span id="state_workloadrule_csharp">
 <a href="#state_workloadrule_csharp" style="color: inherit; text-decoration: inherit;">Workload<wbr>Rule</a>
@@ -1274,14 +1181,11 @@ The following state arguments are supported:
         <span class="property-type"><a href="#projectalertruleworkloadrule">Project<wbr>Alert<wbr>Rule<wbr>Workload<wbr>Rule<wbr>Args</a></span>
     </dt>
     <dd>{{% md %}}The project alert rule workload rule. ConflictsWith: `"metric_rule", "pod_rule"`` (list Maxitems:1)
-{{% /md %}}</dd>
-</dl>
+{{% /md %}}</dd></dl>
 {{% /choosable %}}
 
 {{% choosable language go %}}
-<dl class="resources-properties">
-
-    <dt class="property-optional"
+<dl class="resources-properties"><dt class="property-optional"
             title="Optional">
         <span id="state_annotations_go">
 <a href="#state_annotations_go" style="color: inherit; text-decoration: inherit;">Annotations</a>
@@ -1290,8 +1194,7 @@ The following state arguments are supported:
         <span class="property-type">map[string]interface{}</span>
     </dt>
     <dd>{{% md %}}The project alert rule annotations (map)
-{{% /md %}}</dd>
-    <dt class="property-optional"
+{{% /md %}}</dd><dt class="property-optional"
             title="Optional">
         <span id="state_groupid_go">
 <a href="#state_groupid_go" style="color: inherit; text-decoration: inherit;">Group<wbr>Id</a>
@@ -1300,8 +1203,7 @@ The following state arguments are supported:
         <span class="property-type">string</span>
     </dt>
     <dd>{{% md %}}The project alert rule alert group ID (string)
-{{% /md %}}</dd>
-    <dt class="property-optional"
+{{% /md %}}</dd><dt class="property-optional"
             title="Optional">
         <span id="state_groupintervalseconds_go">
 <a href="#state_groupintervalseconds_go" style="color: inherit; text-decoration: inherit;">Group<wbr>Interval<wbr>Seconds</a>
@@ -1310,8 +1212,7 @@ The following state arguments are supported:
         <span class="property-type">int</span>
     </dt>
     <dd>{{% md %}}The project alert rule group interval seconds. Default: `180` (int)
-{{% /md %}}</dd>
-    <dt class="property-optional"
+{{% /md %}}</dd><dt class="property-optional"
             title="Optional">
         <span id="state_groupwaitseconds_go">
 <a href="#state_groupwaitseconds_go" style="color: inherit; text-decoration: inherit;">Group<wbr>Wait<wbr>Seconds</a>
@@ -1320,8 +1221,7 @@ The following state arguments are supported:
         <span class="property-type">int</span>
     </dt>
     <dd>{{% md %}}The project alert rule group wait seconds. Default: `180` (int)
-{{% /md %}}</dd>
-    <dt class="property-optional"
+{{% /md %}}</dd><dt class="property-optional"
             title="Optional">
         <span id="state_inherited_go">
 <a href="#state_inherited_go" style="color: inherit; text-decoration: inherit;">Inherited</a>
@@ -1330,8 +1230,7 @@ The following state arguments are supported:
         <span class="property-type">bool</span>
     </dt>
     <dd>{{% md %}}The project alert rule inherited. Default: `true` (bool)
-{{% /md %}}</dd>
-    <dt class="property-optional"
+{{% /md %}}</dd><dt class="property-optional"
             title="Optional">
         <span id="state_labels_go">
 <a href="#state_labels_go" style="color: inherit; text-decoration: inherit;">Labels</a>
@@ -1340,8 +1239,7 @@ The following state arguments are supported:
         <span class="property-type">map[string]interface{}</span>
     </dt>
     <dd>{{% md %}}The project alert rule labels (map)
-{{% /md %}}</dd>
-    <dt class="property-optional"
+{{% /md %}}</dd><dt class="property-optional"
             title="Optional">
         <span id="state_metricrule_go">
 <a href="#state_metricrule_go" style="color: inherit; text-decoration: inherit;">Metric<wbr>Rule</a>
@@ -1350,8 +1248,7 @@ The following state arguments are supported:
         <span class="property-type"><a href="#projectalertrulemetricrule">Project<wbr>Alert<wbr>Rule<wbr>Metric<wbr>Rule</a></span>
     </dt>
     <dd>{{% md %}}The project alert rule metric rule. ConflictsWith: `"pod_rule", "workload_rule"`` (list Maxitems:1)
-{{% /md %}}</dd>
-    <dt class="property-optional"
+{{% /md %}}</dd><dt class="property-optional"
             title="Optional">
         <span id="state_name_go">
 <a href="#state_name_go" style="color: inherit; text-decoration: inherit;">Name</a>
@@ -1360,8 +1257,7 @@ The following state arguments are supported:
         <span class="property-type">string</span>
     </dt>
     <dd>{{% md %}}The project alert rule name (string)
-{{% /md %}}</dd>
-    <dt class="property-optional"
+{{% /md %}}</dd><dt class="property-optional"
             title="Optional">
         <span id="state_podrule_go">
 <a href="#state_podrule_go" style="color: inherit; text-decoration: inherit;">Pod<wbr>Rule</a>
@@ -1370,8 +1266,7 @@ The following state arguments are supported:
         <span class="property-type"><a href="#projectalertrulepodrule">Project<wbr>Alert<wbr>Rule<wbr>Pod<wbr>Rule</a></span>
     </dt>
     <dd>{{% md %}}The project alert rule pod rule. ConflictsWith: `"metric_rule", "workload_rule"`` (list Maxitems:1)
-{{% /md %}}</dd>
-    <dt class="property-optional"
+{{% /md %}}</dd><dt class="property-optional"
             title="Optional">
         <span id="state_projectid_go">
 <a href="#state_projectid_go" style="color: inherit; text-decoration: inherit;">Project<wbr>Id</a>
@@ -1380,8 +1275,7 @@ The following state arguments are supported:
         <span class="property-type">string</span>
     </dt>
     <dd>{{% md %}}The project id where create project alert rule (string)
-{{% /md %}}</dd>
-    <dt class="property-optional"
+{{% /md %}}</dd><dt class="property-optional"
             title="Optional">
         <span id="state_repeatintervalseconds_go">
 <a href="#state_repeatintervalseconds_go" style="color: inherit; text-decoration: inherit;">Repeat<wbr>Interval<wbr>Seconds</a>
@@ -1390,8 +1284,7 @@ The following state arguments are supported:
         <span class="property-type">int</span>
     </dt>
     <dd>{{% md %}}The project alert rule wait seconds. Default: `3600` (int)
-{{% /md %}}</dd>
-    <dt class="property-optional"
+{{% /md %}}</dd><dt class="property-optional"
             title="Optional">
         <span id="state_severity_go">
 <a href="#state_severity_go" style="color: inherit; text-decoration: inherit;">Severity</a>
@@ -1400,8 +1293,7 @@ The following state arguments are supported:
         <span class="property-type">string</span>
     </dt>
     <dd>{{% md %}}The project alert rule severity. Supported values : `"critical" | "info" | "warning"`. Default: `critical` (string)
-{{% /md %}}</dd>
-    <dt class="property-optional"
+{{% /md %}}</dd><dt class="property-optional"
             title="Optional">
         <span id="state_workloadrule_go">
 <a href="#state_workloadrule_go" style="color: inherit; text-decoration: inherit;">Workload<wbr>Rule</a>
@@ -1410,14 +1302,11 @@ The following state arguments are supported:
         <span class="property-type"><a href="#projectalertruleworkloadrule">Project<wbr>Alert<wbr>Rule<wbr>Workload<wbr>Rule</a></span>
     </dt>
     <dd>{{% md %}}The project alert rule workload rule. ConflictsWith: `"metric_rule", "pod_rule"`` (list Maxitems:1)
-{{% /md %}}</dd>
-</dl>
+{{% /md %}}</dd></dl>
 {{% /choosable %}}
 
 {{% choosable language nodejs %}}
-<dl class="resources-properties">
-
-    <dt class="property-optional"
+<dl class="resources-properties"><dt class="property-optional"
             title="Optional">
         <span id="state_annotations_nodejs">
 <a href="#state_annotations_nodejs" style="color: inherit; text-decoration: inherit;">annotations</a>
@@ -1426,8 +1315,7 @@ The following state arguments are supported:
         <span class="property-type">{[key: string]: any}</span>
     </dt>
     <dd>{{% md %}}The project alert rule annotations (map)
-{{% /md %}}</dd>
-    <dt class="property-optional"
+{{% /md %}}</dd><dt class="property-optional"
             title="Optional">
         <span id="state_groupid_nodejs">
 <a href="#state_groupid_nodejs" style="color: inherit; text-decoration: inherit;">group<wbr>Id</a>
@@ -1436,8 +1324,7 @@ The following state arguments are supported:
         <span class="property-type">string</span>
     </dt>
     <dd>{{% md %}}The project alert rule alert group ID (string)
-{{% /md %}}</dd>
-    <dt class="property-optional"
+{{% /md %}}</dd><dt class="property-optional"
             title="Optional">
         <span id="state_groupintervalseconds_nodejs">
 <a href="#state_groupintervalseconds_nodejs" style="color: inherit; text-decoration: inherit;">group<wbr>Interval<wbr>Seconds</a>
@@ -1446,8 +1333,7 @@ The following state arguments are supported:
         <span class="property-type">number</span>
     </dt>
     <dd>{{% md %}}The project alert rule group interval seconds. Default: `180` (int)
-{{% /md %}}</dd>
-    <dt class="property-optional"
+{{% /md %}}</dd><dt class="property-optional"
             title="Optional">
         <span id="state_groupwaitseconds_nodejs">
 <a href="#state_groupwaitseconds_nodejs" style="color: inherit; text-decoration: inherit;">group<wbr>Wait<wbr>Seconds</a>
@@ -1456,8 +1342,7 @@ The following state arguments are supported:
         <span class="property-type">number</span>
     </dt>
     <dd>{{% md %}}The project alert rule group wait seconds. Default: `180` (int)
-{{% /md %}}</dd>
-    <dt class="property-optional"
+{{% /md %}}</dd><dt class="property-optional"
             title="Optional">
         <span id="state_inherited_nodejs">
 <a href="#state_inherited_nodejs" style="color: inherit; text-decoration: inherit;">inherited</a>
@@ -1466,8 +1351,7 @@ The following state arguments are supported:
         <span class="property-type">boolean</span>
     </dt>
     <dd>{{% md %}}The project alert rule inherited. Default: `true` (bool)
-{{% /md %}}</dd>
-    <dt class="property-optional"
+{{% /md %}}</dd><dt class="property-optional"
             title="Optional">
         <span id="state_labels_nodejs">
 <a href="#state_labels_nodejs" style="color: inherit; text-decoration: inherit;">labels</a>
@@ -1476,8 +1360,7 @@ The following state arguments are supported:
         <span class="property-type">{[key: string]: any}</span>
     </dt>
     <dd>{{% md %}}The project alert rule labels (map)
-{{% /md %}}</dd>
-    <dt class="property-optional"
+{{% /md %}}</dd><dt class="property-optional"
             title="Optional">
         <span id="state_metricrule_nodejs">
 <a href="#state_metricrule_nodejs" style="color: inherit; text-decoration: inherit;">metric<wbr>Rule</a>
@@ -1486,8 +1369,7 @@ The following state arguments are supported:
         <span class="property-type"><a href="#projectalertrulemetricrule">Project<wbr>Alert<wbr>Rule<wbr>Metric<wbr>Rule</a></span>
     </dt>
     <dd>{{% md %}}The project alert rule metric rule. ConflictsWith: `"pod_rule", "workload_rule"`` (list Maxitems:1)
-{{% /md %}}</dd>
-    <dt class="property-optional"
+{{% /md %}}</dd><dt class="property-optional"
             title="Optional">
         <span id="state_name_nodejs">
 <a href="#state_name_nodejs" style="color: inherit; text-decoration: inherit;">name</a>
@@ -1496,8 +1378,7 @@ The following state arguments are supported:
         <span class="property-type">string</span>
     </dt>
     <dd>{{% md %}}The project alert rule name (string)
-{{% /md %}}</dd>
-    <dt class="property-optional"
+{{% /md %}}</dd><dt class="property-optional"
             title="Optional">
         <span id="state_podrule_nodejs">
 <a href="#state_podrule_nodejs" style="color: inherit; text-decoration: inherit;">pod<wbr>Rule</a>
@@ -1506,8 +1387,7 @@ The following state arguments are supported:
         <span class="property-type"><a href="#projectalertrulepodrule">Project<wbr>Alert<wbr>Rule<wbr>Pod<wbr>Rule</a></span>
     </dt>
     <dd>{{% md %}}The project alert rule pod rule. ConflictsWith: `"metric_rule", "workload_rule"`` (list Maxitems:1)
-{{% /md %}}</dd>
-    <dt class="property-optional"
+{{% /md %}}</dd><dt class="property-optional"
             title="Optional">
         <span id="state_projectid_nodejs">
 <a href="#state_projectid_nodejs" style="color: inherit; text-decoration: inherit;">project<wbr>Id</a>
@@ -1516,8 +1396,7 @@ The following state arguments are supported:
         <span class="property-type">string</span>
     </dt>
     <dd>{{% md %}}The project id where create project alert rule (string)
-{{% /md %}}</dd>
-    <dt class="property-optional"
+{{% /md %}}</dd><dt class="property-optional"
             title="Optional">
         <span id="state_repeatintervalseconds_nodejs">
 <a href="#state_repeatintervalseconds_nodejs" style="color: inherit; text-decoration: inherit;">repeat<wbr>Interval<wbr>Seconds</a>
@@ -1526,8 +1405,7 @@ The following state arguments are supported:
         <span class="property-type">number</span>
     </dt>
     <dd>{{% md %}}The project alert rule wait seconds. Default: `3600` (int)
-{{% /md %}}</dd>
-    <dt class="property-optional"
+{{% /md %}}</dd><dt class="property-optional"
             title="Optional">
         <span id="state_severity_nodejs">
 <a href="#state_severity_nodejs" style="color: inherit; text-decoration: inherit;">severity</a>
@@ -1536,8 +1414,7 @@ The following state arguments are supported:
         <span class="property-type">string</span>
     </dt>
     <dd>{{% md %}}The project alert rule severity. Supported values : `"critical" | "info" | "warning"`. Default: `critical` (string)
-{{% /md %}}</dd>
-    <dt class="property-optional"
+{{% /md %}}</dd><dt class="property-optional"
             title="Optional">
         <span id="state_workloadrule_nodejs">
 <a href="#state_workloadrule_nodejs" style="color: inherit; text-decoration: inherit;">workload<wbr>Rule</a>
@@ -1546,14 +1423,11 @@ The following state arguments are supported:
         <span class="property-type"><a href="#projectalertruleworkloadrule">Project<wbr>Alert<wbr>Rule<wbr>Workload<wbr>Rule</a></span>
     </dt>
     <dd>{{% md %}}The project alert rule workload rule. ConflictsWith: `"metric_rule", "pod_rule"`` (list Maxitems:1)
-{{% /md %}}</dd>
-</dl>
+{{% /md %}}</dd></dl>
 {{% /choosable %}}
 
 {{% choosable language python %}}
-<dl class="resources-properties">
-
-    <dt class="property-optional"
+<dl class="resources-properties"><dt class="property-optional"
             title="Optional">
         <span id="state_annotations_python">
 <a href="#state_annotations_python" style="color: inherit; text-decoration: inherit;">annotations</a>
@@ -1562,8 +1436,7 @@ The following state arguments are supported:
         <span class="property-type">Mapping[str, Any]</span>
     </dt>
     <dd>{{% md %}}The project alert rule annotations (map)
-{{% /md %}}</dd>
-    <dt class="property-optional"
+{{% /md %}}</dd><dt class="property-optional"
             title="Optional">
         <span id="state_group_id_python">
 <a href="#state_group_id_python" style="color: inherit; text-decoration: inherit;">group_<wbr>id</a>
@@ -1572,8 +1445,7 @@ The following state arguments are supported:
         <span class="property-type">str</span>
     </dt>
     <dd>{{% md %}}The project alert rule alert group ID (string)
-{{% /md %}}</dd>
-    <dt class="property-optional"
+{{% /md %}}</dd><dt class="property-optional"
             title="Optional">
         <span id="state_group_interval_seconds_python">
 <a href="#state_group_interval_seconds_python" style="color: inherit; text-decoration: inherit;">group_<wbr>interval_<wbr>seconds</a>
@@ -1582,8 +1454,7 @@ The following state arguments are supported:
         <span class="property-type">int</span>
     </dt>
     <dd>{{% md %}}The project alert rule group interval seconds. Default: `180` (int)
-{{% /md %}}</dd>
-    <dt class="property-optional"
+{{% /md %}}</dd><dt class="property-optional"
             title="Optional">
         <span id="state_group_wait_seconds_python">
 <a href="#state_group_wait_seconds_python" style="color: inherit; text-decoration: inherit;">group_<wbr>wait_<wbr>seconds</a>
@@ -1592,8 +1463,7 @@ The following state arguments are supported:
         <span class="property-type">int</span>
     </dt>
     <dd>{{% md %}}The project alert rule group wait seconds. Default: `180` (int)
-{{% /md %}}</dd>
-    <dt class="property-optional"
+{{% /md %}}</dd><dt class="property-optional"
             title="Optional">
         <span id="state_inherited_python">
 <a href="#state_inherited_python" style="color: inherit; text-decoration: inherit;">inherited</a>
@@ -1602,8 +1472,7 @@ The following state arguments are supported:
         <span class="property-type">bool</span>
     </dt>
     <dd>{{% md %}}The project alert rule inherited. Default: `true` (bool)
-{{% /md %}}</dd>
-    <dt class="property-optional"
+{{% /md %}}</dd><dt class="property-optional"
             title="Optional">
         <span id="state_labels_python">
 <a href="#state_labels_python" style="color: inherit; text-decoration: inherit;">labels</a>
@@ -1612,8 +1481,7 @@ The following state arguments are supported:
         <span class="property-type">Mapping[str, Any]</span>
     </dt>
     <dd>{{% md %}}The project alert rule labels (map)
-{{% /md %}}</dd>
-    <dt class="property-optional"
+{{% /md %}}</dd><dt class="property-optional"
             title="Optional">
         <span id="state_metric_rule_python">
 <a href="#state_metric_rule_python" style="color: inherit; text-decoration: inherit;">metric_<wbr>rule</a>
@@ -1622,8 +1490,7 @@ The following state arguments are supported:
         <span class="property-type"><a href="#projectalertrulemetricrule">Project<wbr>Alert<wbr>Rule<wbr>Metric<wbr>Rule<wbr>Args</a></span>
     </dt>
     <dd>{{% md %}}The project alert rule metric rule. ConflictsWith: `"pod_rule", "workload_rule"`` (list Maxitems:1)
-{{% /md %}}</dd>
-    <dt class="property-optional"
+{{% /md %}}</dd><dt class="property-optional"
             title="Optional">
         <span id="state_name_python">
 <a href="#state_name_python" style="color: inherit; text-decoration: inherit;">name</a>
@@ -1632,8 +1499,7 @@ The following state arguments are supported:
         <span class="property-type">str</span>
     </dt>
     <dd>{{% md %}}The project alert rule name (string)
-{{% /md %}}</dd>
-    <dt class="property-optional"
+{{% /md %}}</dd><dt class="property-optional"
             title="Optional">
         <span id="state_pod_rule_python">
 <a href="#state_pod_rule_python" style="color: inherit; text-decoration: inherit;">pod_<wbr>rule</a>
@@ -1642,8 +1508,7 @@ The following state arguments are supported:
         <span class="property-type"><a href="#projectalertrulepodrule">Project<wbr>Alert<wbr>Rule<wbr>Pod<wbr>Rule<wbr>Args</a></span>
     </dt>
     <dd>{{% md %}}The project alert rule pod rule. ConflictsWith: `"metric_rule", "workload_rule"`` (list Maxitems:1)
-{{% /md %}}</dd>
-    <dt class="property-optional"
+{{% /md %}}</dd><dt class="property-optional"
             title="Optional">
         <span id="state_project_id_python">
 <a href="#state_project_id_python" style="color: inherit; text-decoration: inherit;">project_<wbr>id</a>
@@ -1652,8 +1517,7 @@ The following state arguments are supported:
         <span class="property-type">str</span>
     </dt>
     <dd>{{% md %}}The project id where create project alert rule (string)
-{{% /md %}}</dd>
-    <dt class="property-optional"
+{{% /md %}}</dd><dt class="property-optional"
             title="Optional">
         <span id="state_repeat_interval_seconds_python">
 <a href="#state_repeat_interval_seconds_python" style="color: inherit; text-decoration: inherit;">repeat_<wbr>interval_<wbr>seconds</a>
@@ -1662,8 +1526,7 @@ The following state arguments are supported:
         <span class="property-type">int</span>
     </dt>
     <dd>{{% md %}}The project alert rule wait seconds. Default: `3600` (int)
-{{% /md %}}</dd>
-    <dt class="property-optional"
+{{% /md %}}</dd><dt class="property-optional"
             title="Optional">
         <span id="state_severity_python">
 <a href="#state_severity_python" style="color: inherit; text-decoration: inherit;">severity</a>
@@ -1672,8 +1535,7 @@ The following state arguments are supported:
         <span class="property-type">str</span>
     </dt>
     <dd>{{% md %}}The project alert rule severity. Supported values : `"critical" | "info" | "warning"`. Default: `critical` (string)
-{{% /md %}}</dd>
-    <dt class="property-optional"
+{{% /md %}}</dd><dt class="property-optional"
             title="Optional">
         <span id="state_workload_rule_python">
 <a href="#state_workload_rule_python" style="color: inherit; text-decoration: inherit;">workload_<wbr>rule</a>
@@ -1682,8 +1544,7 @@ The following state arguments are supported:
         <span class="property-type"><a href="#projectalertruleworkloadrule">Project<wbr>Alert<wbr>Rule<wbr>Workload<wbr>Rule<wbr>Args</a></span>
     </dt>
     <dd>{{% md %}}The project alert rule workload rule. ConflictsWith: `"metric_rule", "pod_rule"`` (list Maxitems:1)
-{{% /md %}}</dd>
-</dl>
+{{% /md %}}</dd></dl>
 {{% /choosable %}}
 
 
@@ -1698,9 +1559,7 @@ The following state arguments are supported:
 <h4 id="projectalertrulemetricrule">Project<wbr>Alert<wbr>Rule<wbr>Metric<wbr>Rule</h4>
 
 {{% choosable language csharp %}}
-<dl class="resources-properties">
-
-    <dt class="property-required"
+<dl class="resources-properties"><dt class="property-required"
             title="Required">
         <span id="duration_csharp">
 <a href="#duration_csharp" style="color: inherit; text-decoration: inherit;">Duration</a>
@@ -1709,8 +1568,7 @@ The following state arguments are supported:
         <span class="property-type">string</span>
     </dt>
     <dd>{{% md %}}Metric rule duration (string)
-{{% /md %}}</dd>
-    <dt class="property-required"
+{{% /md %}}</dd><dt class="property-required"
             title="Required">
         <span id="expression_csharp">
 <a href="#expression_csharp" style="color: inherit; text-decoration: inherit;">Expression</a>
@@ -1719,8 +1577,7 @@ The following state arguments are supported:
         <span class="property-type">string</span>
     </dt>
     <dd>{{% md %}}Metric rule expression (string)
-{{% /md %}}</dd>
-    <dt class="property-required"
+{{% /md %}}</dd><dt class="property-required"
             title="Required">
         <span id="thresholdvalue_csharp">
 <a href="#thresholdvalue_csharp" style="color: inherit; text-decoration: inherit;">Threshold<wbr>Value</a>
@@ -1729,8 +1586,7 @@ The following state arguments are supported:
         <span class="property-type">double</span>
     </dt>
     <dd>{{% md %}}Metric rule threshold value (float64)
-{{% /md %}}</dd>
-    <dt class="property-optional"
+{{% /md %}}</dd><dt class="property-optional"
             title="Optional">
         <span id="comparison_csharp">
 <a href="#comparison_csharp" style="color: inherit; text-decoration: inherit;">Comparison</a>
@@ -1739,8 +1595,7 @@ The following state arguments are supported:
         <span class="property-type">string</span>
     </dt>
     <dd>{{% md %}}Metric rule comparison. Supported values : `"equal" | "greater-or-equal" | "greater-than" | "less-or-equal" | "less-than" | "not-equal" | "has-value"`. Default: `equal`  (string)
-{{% /md %}}</dd>
-    <dt class="property-optional"
+{{% /md %}}</dd><dt class="property-optional"
             title="Optional">
         <span id="description_csharp">
 <a href="#description_csharp" style="color: inherit; text-decoration: inherit;">Description</a>
@@ -1749,14 +1604,11 @@ The following state arguments are supported:
         <span class="property-type">string</span>
     </dt>
     <dd>{{% md %}}Metric rule description (string)
-{{% /md %}}</dd>
-</dl>
+{{% /md %}}</dd></dl>
 {{% /choosable %}}
 
 {{% choosable language go %}}
-<dl class="resources-properties">
-
-    <dt class="property-required"
+<dl class="resources-properties"><dt class="property-required"
             title="Required">
         <span id="duration_go">
 <a href="#duration_go" style="color: inherit; text-decoration: inherit;">Duration</a>
@@ -1765,8 +1617,7 @@ The following state arguments are supported:
         <span class="property-type">string</span>
     </dt>
     <dd>{{% md %}}Metric rule duration (string)
-{{% /md %}}</dd>
-    <dt class="property-required"
+{{% /md %}}</dd><dt class="property-required"
             title="Required">
         <span id="expression_go">
 <a href="#expression_go" style="color: inherit; text-decoration: inherit;">Expression</a>
@@ -1775,8 +1626,7 @@ The following state arguments are supported:
         <span class="property-type">string</span>
     </dt>
     <dd>{{% md %}}Metric rule expression (string)
-{{% /md %}}</dd>
-    <dt class="property-required"
+{{% /md %}}</dd><dt class="property-required"
             title="Required">
         <span id="thresholdvalue_go">
 <a href="#thresholdvalue_go" style="color: inherit; text-decoration: inherit;">Threshold<wbr>Value</a>
@@ -1785,8 +1635,7 @@ The following state arguments are supported:
         <span class="property-type">float64</span>
     </dt>
     <dd>{{% md %}}Metric rule threshold value (float64)
-{{% /md %}}</dd>
-    <dt class="property-optional"
+{{% /md %}}</dd><dt class="property-optional"
             title="Optional">
         <span id="comparison_go">
 <a href="#comparison_go" style="color: inherit; text-decoration: inherit;">Comparison</a>
@@ -1795,8 +1644,7 @@ The following state arguments are supported:
         <span class="property-type">string</span>
     </dt>
     <dd>{{% md %}}Metric rule comparison. Supported values : `"equal" | "greater-or-equal" | "greater-than" | "less-or-equal" | "less-than" | "not-equal" | "has-value"`. Default: `equal`  (string)
-{{% /md %}}</dd>
-    <dt class="property-optional"
+{{% /md %}}</dd><dt class="property-optional"
             title="Optional">
         <span id="description_go">
 <a href="#description_go" style="color: inherit; text-decoration: inherit;">Description</a>
@@ -1805,14 +1653,11 @@ The following state arguments are supported:
         <span class="property-type">string</span>
     </dt>
     <dd>{{% md %}}Metric rule description (string)
-{{% /md %}}</dd>
-</dl>
+{{% /md %}}</dd></dl>
 {{% /choosable %}}
 
 {{% choosable language nodejs %}}
-<dl class="resources-properties">
-
-    <dt class="property-required"
+<dl class="resources-properties"><dt class="property-required"
             title="Required">
         <span id="duration_nodejs">
 <a href="#duration_nodejs" style="color: inherit; text-decoration: inherit;">duration</a>
@@ -1821,8 +1666,7 @@ The following state arguments are supported:
         <span class="property-type">string</span>
     </dt>
     <dd>{{% md %}}Metric rule duration (string)
-{{% /md %}}</dd>
-    <dt class="property-required"
+{{% /md %}}</dd><dt class="property-required"
             title="Required">
         <span id="expression_nodejs">
 <a href="#expression_nodejs" style="color: inherit; text-decoration: inherit;">expression</a>
@@ -1831,8 +1675,7 @@ The following state arguments are supported:
         <span class="property-type">string</span>
     </dt>
     <dd>{{% md %}}Metric rule expression (string)
-{{% /md %}}</dd>
-    <dt class="property-required"
+{{% /md %}}</dd><dt class="property-required"
             title="Required">
         <span id="thresholdvalue_nodejs">
 <a href="#thresholdvalue_nodejs" style="color: inherit; text-decoration: inherit;">threshold<wbr>Value</a>
@@ -1841,8 +1684,7 @@ The following state arguments are supported:
         <span class="property-type">number</span>
     </dt>
     <dd>{{% md %}}Metric rule threshold value (float64)
-{{% /md %}}</dd>
-    <dt class="property-optional"
+{{% /md %}}</dd><dt class="property-optional"
             title="Optional">
         <span id="comparison_nodejs">
 <a href="#comparison_nodejs" style="color: inherit; text-decoration: inherit;">comparison</a>
@@ -1851,8 +1693,7 @@ The following state arguments are supported:
         <span class="property-type">string</span>
     </dt>
     <dd>{{% md %}}Metric rule comparison. Supported values : `"equal" | "greater-or-equal" | "greater-than" | "less-or-equal" | "less-than" | "not-equal" | "has-value"`. Default: `equal`  (string)
-{{% /md %}}</dd>
-    <dt class="property-optional"
+{{% /md %}}</dd><dt class="property-optional"
             title="Optional">
         <span id="description_nodejs">
 <a href="#description_nodejs" style="color: inherit; text-decoration: inherit;">description</a>
@@ -1861,14 +1702,11 @@ The following state arguments are supported:
         <span class="property-type">string</span>
     </dt>
     <dd>{{% md %}}Metric rule description (string)
-{{% /md %}}</dd>
-</dl>
+{{% /md %}}</dd></dl>
 {{% /choosable %}}
 
 {{% choosable language python %}}
-<dl class="resources-properties">
-
-    <dt class="property-required"
+<dl class="resources-properties"><dt class="property-required"
             title="Required">
         <span id="duration_python">
 <a href="#duration_python" style="color: inherit; text-decoration: inherit;">duration</a>
@@ -1877,8 +1715,7 @@ The following state arguments are supported:
         <span class="property-type">str</span>
     </dt>
     <dd>{{% md %}}Metric rule duration (string)
-{{% /md %}}</dd>
-    <dt class="property-required"
+{{% /md %}}</dd><dt class="property-required"
             title="Required">
         <span id="expression_python">
 <a href="#expression_python" style="color: inherit; text-decoration: inherit;">expression</a>
@@ -1887,8 +1724,7 @@ The following state arguments are supported:
         <span class="property-type">str</span>
     </dt>
     <dd>{{% md %}}Metric rule expression (string)
-{{% /md %}}</dd>
-    <dt class="property-required"
+{{% /md %}}</dd><dt class="property-required"
             title="Required">
         <span id="threshold_value_python">
 <a href="#threshold_value_python" style="color: inherit; text-decoration: inherit;">threshold_<wbr>value</a>
@@ -1897,8 +1733,7 @@ The following state arguments are supported:
         <span class="property-type">float</span>
     </dt>
     <dd>{{% md %}}Metric rule threshold value (float64)
-{{% /md %}}</dd>
-    <dt class="property-optional"
+{{% /md %}}</dd><dt class="property-optional"
             title="Optional">
         <span id="comparison_python">
 <a href="#comparison_python" style="color: inherit; text-decoration: inherit;">comparison</a>
@@ -1907,8 +1742,7 @@ The following state arguments are supported:
         <span class="property-type">str</span>
     </dt>
     <dd>{{% md %}}Metric rule comparison. Supported values : `"equal" | "greater-or-equal" | "greater-than" | "less-or-equal" | "less-than" | "not-equal" | "has-value"`. Default: `equal`  (string)
-{{% /md %}}</dd>
-    <dt class="property-optional"
+{{% /md %}}</dd><dt class="property-optional"
             title="Optional">
         <span id="description_python">
 <a href="#description_python" style="color: inherit; text-decoration: inherit;">description</a>
@@ -1917,16 +1751,13 @@ The following state arguments are supported:
         <span class="property-type">str</span>
     </dt>
     <dd>{{% md %}}Metric rule description (string)
-{{% /md %}}</dd>
-</dl>
+{{% /md %}}</dd></dl>
 {{% /choosable %}}
 
 <h4 id="projectalertrulepodrule">Project<wbr>Alert<wbr>Rule<wbr>Pod<wbr>Rule</h4>
 
 {{% choosable language csharp %}}
-<dl class="resources-properties">
-
-    <dt class="property-required"
+<dl class="resources-properties"><dt class="property-required"
             title="Required">
         <span id="podid_csharp">
 <a href="#podid_csharp" style="color: inherit; text-decoration: inherit;">Pod<wbr>Id</a>
@@ -1935,8 +1766,7 @@ The following state arguments are supported:
         <span class="property-type">string</span>
     </dt>
     <dd>{{% md %}}Pod ID (string)
-{{% /md %}}</dd>
-    <dt class="property-optional"
+{{% /md %}}</dd><dt class="property-optional"
             title="Optional">
         <span id="condition_csharp">
 <a href="#condition_csharp" style="color: inherit; text-decoration: inherit;">Condition</a>
@@ -1945,8 +1775,7 @@ The following state arguments are supported:
         <span class="property-type">string</span>
     </dt>
     <dd>{{% md %}}Pod rule condition. Supported values : `"notrunning" | "notscheduled" | "restarts"`. Default: `notrunning` (string)
-{{% /md %}}</dd>
-    <dt class="property-optional"
+{{% /md %}}</dd><dt class="property-optional"
             title="Optional">
         <span id="restartintervalseconds_csharp">
 <a href="#restartintervalseconds_csharp" style="color: inherit; text-decoration: inherit;">Restart<wbr>Interval<wbr>Seconds</a>
@@ -1955,8 +1784,7 @@ The following state arguments are supported:
         <span class="property-type">int</span>
     </dt>
     <dd>{{% md %}}Pod rule restart interval seconds. Default: `300` (int)
-{{% /md %}}</dd>
-    <dt class="property-optional"
+{{% /md %}}</dd><dt class="property-optional"
             title="Optional">
         <span id="restarttimes_csharp">
 <a href="#restarttimes_csharp" style="color: inherit; text-decoration: inherit;">Restart<wbr>Times</a>
@@ -1965,14 +1793,11 @@ The following state arguments are supported:
         <span class="property-type">int</span>
     </dt>
     <dd>{{% md %}}Pod rule restart times. Default: `3`  (int)
-{{% /md %}}</dd>
-</dl>
+{{% /md %}}</dd></dl>
 {{% /choosable %}}
 
 {{% choosable language go %}}
-<dl class="resources-properties">
-
-    <dt class="property-required"
+<dl class="resources-properties"><dt class="property-required"
             title="Required">
         <span id="podid_go">
 <a href="#podid_go" style="color: inherit; text-decoration: inherit;">Pod<wbr>Id</a>
@@ -1981,8 +1806,7 @@ The following state arguments are supported:
         <span class="property-type">string</span>
     </dt>
     <dd>{{% md %}}Pod ID (string)
-{{% /md %}}</dd>
-    <dt class="property-optional"
+{{% /md %}}</dd><dt class="property-optional"
             title="Optional">
         <span id="condition_go">
 <a href="#condition_go" style="color: inherit; text-decoration: inherit;">Condition</a>
@@ -1991,8 +1815,7 @@ The following state arguments are supported:
         <span class="property-type">string</span>
     </dt>
     <dd>{{% md %}}Pod rule condition. Supported values : `"notrunning" | "notscheduled" | "restarts"`. Default: `notrunning` (string)
-{{% /md %}}</dd>
-    <dt class="property-optional"
+{{% /md %}}</dd><dt class="property-optional"
             title="Optional">
         <span id="restartintervalseconds_go">
 <a href="#restartintervalseconds_go" style="color: inherit; text-decoration: inherit;">Restart<wbr>Interval<wbr>Seconds</a>
@@ -2001,8 +1824,7 @@ The following state arguments are supported:
         <span class="property-type">int</span>
     </dt>
     <dd>{{% md %}}Pod rule restart interval seconds. Default: `300` (int)
-{{% /md %}}</dd>
-    <dt class="property-optional"
+{{% /md %}}</dd><dt class="property-optional"
             title="Optional">
         <span id="restarttimes_go">
 <a href="#restarttimes_go" style="color: inherit; text-decoration: inherit;">Restart<wbr>Times</a>
@@ -2011,14 +1833,11 @@ The following state arguments are supported:
         <span class="property-type">int</span>
     </dt>
     <dd>{{% md %}}Pod rule restart times. Default: `3`  (int)
-{{% /md %}}</dd>
-</dl>
+{{% /md %}}</dd></dl>
 {{% /choosable %}}
 
 {{% choosable language nodejs %}}
-<dl class="resources-properties">
-
-    <dt class="property-required"
+<dl class="resources-properties"><dt class="property-required"
             title="Required">
         <span id="podid_nodejs">
 <a href="#podid_nodejs" style="color: inherit; text-decoration: inherit;">pod<wbr>Id</a>
@@ -2027,8 +1846,7 @@ The following state arguments are supported:
         <span class="property-type">string</span>
     </dt>
     <dd>{{% md %}}Pod ID (string)
-{{% /md %}}</dd>
-    <dt class="property-optional"
+{{% /md %}}</dd><dt class="property-optional"
             title="Optional">
         <span id="condition_nodejs">
 <a href="#condition_nodejs" style="color: inherit; text-decoration: inherit;">condition</a>
@@ -2037,8 +1855,7 @@ The following state arguments are supported:
         <span class="property-type">string</span>
     </dt>
     <dd>{{% md %}}Pod rule condition. Supported values : `"notrunning" | "notscheduled" | "restarts"`. Default: `notrunning` (string)
-{{% /md %}}</dd>
-    <dt class="property-optional"
+{{% /md %}}</dd><dt class="property-optional"
             title="Optional">
         <span id="restartintervalseconds_nodejs">
 <a href="#restartintervalseconds_nodejs" style="color: inherit; text-decoration: inherit;">restart<wbr>Interval<wbr>Seconds</a>
@@ -2047,8 +1864,7 @@ The following state arguments are supported:
         <span class="property-type">number</span>
     </dt>
     <dd>{{% md %}}Pod rule restart interval seconds. Default: `300` (int)
-{{% /md %}}</dd>
-    <dt class="property-optional"
+{{% /md %}}</dd><dt class="property-optional"
             title="Optional">
         <span id="restarttimes_nodejs">
 <a href="#restarttimes_nodejs" style="color: inherit; text-decoration: inherit;">restart<wbr>Times</a>
@@ -2057,14 +1873,11 @@ The following state arguments are supported:
         <span class="property-type">number</span>
     </dt>
     <dd>{{% md %}}Pod rule restart times. Default: `3`  (int)
-{{% /md %}}</dd>
-</dl>
+{{% /md %}}</dd></dl>
 {{% /choosable %}}
 
 {{% choosable language python %}}
-<dl class="resources-properties">
-
-    <dt class="property-required"
+<dl class="resources-properties"><dt class="property-required"
             title="Required">
         <span id="pod_id_python">
 <a href="#pod_id_python" style="color: inherit; text-decoration: inherit;">pod_<wbr>id</a>
@@ -2073,8 +1886,7 @@ The following state arguments are supported:
         <span class="property-type">str</span>
     </dt>
     <dd>{{% md %}}Pod ID (string)
-{{% /md %}}</dd>
-    <dt class="property-optional"
+{{% /md %}}</dd><dt class="property-optional"
             title="Optional">
         <span id="condition_python">
 <a href="#condition_python" style="color: inherit; text-decoration: inherit;">condition</a>
@@ -2083,8 +1895,7 @@ The following state arguments are supported:
         <span class="property-type">str</span>
     </dt>
     <dd>{{% md %}}Pod rule condition. Supported values : `"notrunning" | "notscheduled" | "restarts"`. Default: `notrunning` (string)
-{{% /md %}}</dd>
-    <dt class="property-optional"
+{{% /md %}}</dd><dt class="property-optional"
             title="Optional">
         <span id="restart_interval_seconds_python">
 <a href="#restart_interval_seconds_python" style="color: inherit; text-decoration: inherit;">restart_<wbr>interval_<wbr>seconds</a>
@@ -2093,8 +1904,7 @@ The following state arguments are supported:
         <span class="property-type">int</span>
     </dt>
     <dd>{{% md %}}Pod rule restart interval seconds. Default: `300` (int)
-{{% /md %}}</dd>
-    <dt class="property-optional"
+{{% /md %}}</dd><dt class="property-optional"
             title="Optional">
         <span id="restart_times_python">
 <a href="#restart_times_python" style="color: inherit; text-decoration: inherit;">restart_<wbr>times</a>
@@ -2103,16 +1913,13 @@ The following state arguments are supported:
         <span class="property-type">int</span>
     </dt>
     <dd>{{% md %}}Pod rule restart times. Default: `3`  (int)
-{{% /md %}}</dd>
-</dl>
+{{% /md %}}</dd></dl>
 {{% /choosable %}}
 
 <h4 id="projectalertruleworkloadrule">Project<wbr>Alert<wbr>Rule<wbr>Workload<wbr>Rule</h4>
 
 {{% choosable language csharp %}}
-<dl class="resources-properties">
-
-    <dt class="property-optional"
+<dl class="resources-properties"><dt class="property-optional"
             title="Optional">
         <span id="availablepercentage_csharp">
 <a href="#availablepercentage_csharp" style="color: inherit; text-decoration: inherit;">Available<wbr>Percentage</a>
@@ -2121,8 +1928,7 @@ The following state arguments are supported:
         <span class="property-type">int</span>
     </dt>
     <dd>{{% md %}}Workload rule available percentage. Default: `70` (int)
-{{% /md %}}</dd>
-    <dt class="property-optional"
+{{% /md %}}</dd><dt class="property-optional"
             title="Optional">
         <span id="selector_csharp">
 <a href="#selector_csharp" style="color: inherit; text-decoration: inherit;">Selector</a>
@@ -2131,8 +1937,7 @@ The following state arguments are supported:
         <span class="property-type">Dictionary&lt;string, object&gt;</span>
     </dt>
     <dd>{{% md %}}Workload rule selector (map)
-{{% /md %}}</dd>
-    <dt class="property-optional"
+{{% /md %}}</dd><dt class="property-optional"
             title="Optional">
         <span id="workloadid_csharp">
 <a href="#workloadid_csharp" style="color: inherit; text-decoration: inherit;">Workload<wbr>Id</a>
@@ -2141,14 +1946,11 @@ The following state arguments are supported:
         <span class="property-type">string</span>
     </dt>
     <dd>{{% md %}}Workload ID (string)
-{{% /md %}}</dd>
-</dl>
+{{% /md %}}</dd></dl>
 {{% /choosable %}}
 
 {{% choosable language go %}}
-<dl class="resources-properties">
-
-    <dt class="property-optional"
+<dl class="resources-properties"><dt class="property-optional"
             title="Optional">
         <span id="availablepercentage_go">
 <a href="#availablepercentage_go" style="color: inherit; text-decoration: inherit;">Available<wbr>Percentage</a>
@@ -2157,8 +1959,7 @@ The following state arguments are supported:
         <span class="property-type">int</span>
     </dt>
     <dd>{{% md %}}Workload rule available percentage. Default: `70` (int)
-{{% /md %}}</dd>
-    <dt class="property-optional"
+{{% /md %}}</dd><dt class="property-optional"
             title="Optional">
         <span id="selector_go">
 <a href="#selector_go" style="color: inherit; text-decoration: inherit;">Selector</a>
@@ -2167,8 +1968,7 @@ The following state arguments are supported:
         <span class="property-type">map[string]interface{}</span>
     </dt>
     <dd>{{% md %}}Workload rule selector (map)
-{{% /md %}}</dd>
-    <dt class="property-optional"
+{{% /md %}}</dd><dt class="property-optional"
             title="Optional">
         <span id="workloadid_go">
 <a href="#workloadid_go" style="color: inherit; text-decoration: inherit;">Workload<wbr>Id</a>
@@ -2177,14 +1977,11 @@ The following state arguments are supported:
         <span class="property-type">string</span>
     </dt>
     <dd>{{% md %}}Workload ID (string)
-{{% /md %}}</dd>
-</dl>
+{{% /md %}}</dd></dl>
 {{% /choosable %}}
 
 {{% choosable language nodejs %}}
-<dl class="resources-properties">
-
-    <dt class="property-optional"
+<dl class="resources-properties"><dt class="property-optional"
             title="Optional">
         <span id="availablepercentage_nodejs">
 <a href="#availablepercentage_nodejs" style="color: inherit; text-decoration: inherit;">available<wbr>Percentage</a>
@@ -2193,8 +1990,7 @@ The following state arguments are supported:
         <span class="property-type">number</span>
     </dt>
     <dd>{{% md %}}Workload rule available percentage. Default: `70` (int)
-{{% /md %}}</dd>
-    <dt class="property-optional"
+{{% /md %}}</dd><dt class="property-optional"
             title="Optional">
         <span id="selector_nodejs">
 <a href="#selector_nodejs" style="color: inherit; text-decoration: inherit;">selector</a>
@@ -2203,8 +1999,7 @@ The following state arguments are supported:
         <span class="property-type">{[key: string]: any}</span>
     </dt>
     <dd>{{% md %}}Workload rule selector (map)
-{{% /md %}}</dd>
-    <dt class="property-optional"
+{{% /md %}}</dd><dt class="property-optional"
             title="Optional">
         <span id="workloadid_nodejs">
 <a href="#workloadid_nodejs" style="color: inherit; text-decoration: inherit;">workload<wbr>Id</a>
@@ -2213,14 +2008,11 @@ The following state arguments are supported:
         <span class="property-type">string</span>
     </dt>
     <dd>{{% md %}}Workload ID (string)
-{{% /md %}}</dd>
-</dl>
+{{% /md %}}</dd></dl>
 {{% /choosable %}}
 
 {{% choosable language python %}}
-<dl class="resources-properties">
-
-    <dt class="property-optional"
+<dl class="resources-properties"><dt class="property-optional"
             title="Optional">
         <span id="available_percentage_python">
 <a href="#available_percentage_python" style="color: inherit; text-decoration: inherit;">available_<wbr>percentage</a>
@@ -2229,8 +2021,7 @@ The following state arguments are supported:
         <span class="property-type">int</span>
     </dt>
     <dd>{{% md %}}Workload rule available percentage. Default: `70` (int)
-{{% /md %}}</dd>
-    <dt class="property-optional"
+{{% /md %}}</dd><dt class="property-optional"
             title="Optional">
         <span id="selector_python">
 <a href="#selector_python" style="color: inherit; text-decoration: inherit;">selector</a>
@@ -2239,8 +2030,7 @@ The following state arguments are supported:
         <span class="property-type">Mapping[str, Any]</span>
     </dt>
     <dd>{{% md %}}Workload rule selector (map)
-{{% /md %}}</dd>
-    <dt class="property-optional"
+{{% /md %}}</dd><dt class="property-optional"
             title="Optional">
         <span id="workload_id_python">
 <a href="#workload_id_python" style="color: inherit; text-decoration: inherit;">workload_<wbr>id</a>
@@ -2249,8 +2039,7 @@ The following state arguments are supported:
         <span class="property-type">str</span>
     </dt>
     <dd>{{% md %}}Workload ID (string)
-{{% /md %}}</dd>
-</dl>
+{{% /md %}}</dd></dl>
 {{% /choosable %}}
 ## Import
 
@@ -2271,6 +2060,6 @@ Project Alert Rule can be imported using the Rancher project alert rule ID
 	<dt>License</dt>
 	<dd>Apache-2.0</dd>
 	<dt>Notes</dt>
-	<dd>This Pulumi package is based on the [`rancher2` Terraform Provider](https://github.com/rancher/terraform-provider-rancher2).</dd>
+	<dd>{{% md %}}This Pulumi package is based on the [`rancher2` Terraform Provider](https://github.com/rancher/terraform-provider-rancher2).{{% /md %}}</dd>
 </dl>
 

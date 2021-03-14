@@ -14,11 +14,17 @@ Response to put/get patch schedules for Redis cache.
 API Version: 2020-06-01.
 
 {{% examples %}}
+
 ## Example Usage
 
 {{< chooser language "typescript,python,go,csharp" / >}}
+
+
 ### RedisCachePatchSchedulesCreateOrUpdate
-{{% example csharp %}}
+
+
+{{< example csharp >}}
+
 ```csharp
 using Pulumi;
 using AzureNative = Pulumi.AzureNative;
@@ -53,9 +59,12 @@ class MyStack : Stack
 
 ```
 
-{{% /example %}}
 
-{{% example go %}}
+{{< /example >}}
+
+
+{{< example go >}}
+
 
 ```go
 package main
@@ -92,9 +101,12 @@ func main() {
 
 ```
 
-{{% /example %}}
 
-{{% example python %}}
+{{< /example >}}
+
+
+{{< example python >}}
+
 
 ```python
 import pulumi
@@ -118,9 +130,12 @@ patch_schedule = azure_native.cache.PatchSchedule("patchSchedule",
 
 ```
 
-{{% /example %}}
 
-{{% example typescript %}}
+{{< /example >}}
+
+
+{{< example typescript >}}
+
 
 ```typescript
 import * as pulumi from "@pulumi/pulumi";
@@ -145,9 +160,16 @@ const patchSchedule = new azure_native.cache.PatchSchedule("patchSchedule", {
 
 ```
 
-{{% /example %}}
+
+{{< /example >}}
+
+
+
+
 
 {{% /examples %}}
+
+
 
 
 ## Create a PatchSchedule Resource {#create}
@@ -172,9 +194,7 @@ const patchSchedule = new azure_native.cache.PatchSchedule("patchSchedule", {
 
 {{% choosable language nodejs %}}
 
-<dl class="resources-properties">
-  
-    <dt
+<dl class="resources-properties"><dt
         class="property-required" title="Required">
         <span>name</span>
         <span class="property-indicator"></span>
@@ -182,9 +202,7 @@ const patchSchedule = new azure_native.cache.PatchSchedule("patchSchedule", {
     </dt>
     <dd>
       The unique name of the resource.
-    </dd>
-  
-    <dt
+    </dd><dt
         class="property-required" title="Required">
         <span>args</span>
         <span class="property-indicator"></span>
@@ -192,9 +210,7 @@ const patchSchedule = new azure_native.cache.PatchSchedule("patchSchedule", {
     </dt>
     <dd>
       The arguments to resource properties.
-    </dd>
-  
-    <dt
+    </dd><dt
         class="property-optional" title="Optional">
         <span>opts</span>
         <span class="property-indicator"></span>
@@ -202,10 +218,7 @@ const patchSchedule = new azure_native.cache.PatchSchedule("patchSchedule", {
     </dt>
     <dd>
       Bag of options to control resource&#39;s behavior.
-    </dd>
-  
-
-</dl>
+    </dd></dl>
 
 {{% /choosable %}}
 
@@ -231,9 +244,7 @@ const patchSchedule = new azure_native.cache.PatchSchedule("patchSchedule", {
 
 {{% choosable language go %}}
 
-<dl class="resources-properties">
-  
-    <dt
+<dl class="resources-properties"><dt
         class="property-optional" title="Optional">
         <span>ctx</span>
         <span class="property-indicator"></span>
@@ -241,9 +252,7 @@ const patchSchedule = new azure_native.cache.PatchSchedule("patchSchedule", {
     </dt>
     <dd>
       Context object for the current deployment.
-    </dd>
-  
-    <dt
+    </dd><dt
         class="property-required" title="Required">
         <span>name</span>
         <span class="property-indicator"></span>
@@ -251,9 +260,7 @@ const patchSchedule = new azure_native.cache.PatchSchedule("patchSchedule", {
     </dt>
     <dd>
       The unique name of the resource.
-    </dd>
-  
-    <dt
+    </dd><dt
         class="property-required" title="Required">
         <span>args</span>
         <span class="property-indicator"></span>
@@ -261,9 +268,7 @@ const patchSchedule = new azure_native.cache.PatchSchedule("patchSchedule", {
     </dt>
     <dd>
       The arguments to resource properties.
-    </dd>
-  
-    <dt
+    </dd><dt
         class="property-optional" title="Optional">
         <span>opts</span>
         <span class="property-indicator"></span>
@@ -271,18 +276,13 @@ const patchSchedule = new azure_native.cache.PatchSchedule("patchSchedule", {
     </dt>
     <dd>
       Bag of options to control resource&#39;s behavior.
-    </dd>
-  
-
-</dl>
+    </dd></dl>
 
 {{% /choosable %}}
 
 {{% choosable language csharp %}}
 
-<dl class="resources-properties">
-  
-    <dt
+<dl class="resources-properties"><dt
         class="property-required" title="Required">
         <span>name</span>
         <span class="property-indicator"></span>
@@ -290,9 +290,7 @@ const patchSchedule = new azure_native.cache.PatchSchedule("patchSchedule", {
     </dt>
     <dd>
       The unique name of the resource.
-    </dd>
-  
-    <dt
+    </dd><dt
         class="property-required" title="Required">
         <span>args</span>
         <span class="property-indicator"></span>
@@ -300,9 +298,7 @@ const patchSchedule = new azure_native.cache.PatchSchedule("patchSchedule", {
     </dt>
     <dd>
       The arguments to resource properties.
-    </dd>
-  
-    <dt
+    </dd><dt
         class="property-optional" title="Optional">
         <span>opts</span>
         <span class="property-indicator"></span>
@@ -310,10 +306,7 @@ const patchSchedule = new azure_native.cache.PatchSchedule("patchSchedule", {
     </dt>
     <dd>
       Bag of options to control resource&#39;s behavior.
-    </dd>
-  
-
-</dl>
+    </dd></dl>
 
 {{% /choosable %}}
 
@@ -328,9 +321,7 @@ The PatchSchedule resource accepts the following [input]({{< relref "/docs/intro
 
 
 {{% choosable language csharp %}}
-<dl class="resources-properties">
-
-    <dt class="property-required"
+<dl class="resources-properties"><dt class="property-required"
             title="Required">
         <span id="name_csharp">
 <a href="#name_csharp" style="color: inherit; text-decoration: inherit;">Name</a>
@@ -338,8 +329,7 @@ The PatchSchedule resource accepts the following [input]({{< relref "/docs/intro
         <span class="property-indicator"></span>
         <span class="property-type">string</span>
     </dt>
-    <dd>{{% md %}}The name of the Redis cache.{{% /md %}}</dd>
-    <dt class="property-required"
+    <dd>{{% md %}}The name of the Redis cache.{{% /md %}}</dd><dt class="property-required"
             title="Required">
         <span id="resourcegroupname_csharp">
 <a href="#resourcegroupname_csharp" style="color: inherit; text-decoration: inherit;">Resource<wbr>Group<wbr>Name</a>
@@ -347,8 +337,7 @@ The PatchSchedule resource accepts the following [input]({{< relref "/docs/intro
         <span class="property-indicator"></span>
         <span class="property-type">string</span>
     </dt>
-    <dd>{{% md %}}The name of the resource group.{{% /md %}}</dd>
-    <dt class="property-required"
+    <dd>{{% md %}}The name of the resource group.{{% /md %}}</dd><dt class="property-required"
             title="Required">
         <span id="scheduleentries_csharp">
 <a href="#scheduleentries_csharp" style="color: inherit; text-decoration: inherit;">Schedule<wbr>Entries</a>
@@ -356,8 +345,7 @@ The PatchSchedule resource accepts the following [input]({{< relref "/docs/intro
         <span class="property-indicator"></span>
         <span class="property-type"><a href="#scheduleentry">List&lt;Pulumi.<wbr>Azure<wbr>Native.<wbr>Cache.<wbr>Inputs.<wbr>Schedule<wbr>Entry<wbr>Args&gt;</a></span>
     </dt>
-    <dd>{{% md %}}List of patch schedules for a Redis cache.{{% /md %}}</dd>
-    <dt class="property-optional"
+    <dd>{{% md %}}List of patch schedules for a Redis cache.{{% /md %}}</dd><dt class="property-optional"
             title="Optional">
         <span id="default_csharp">
 <a href="#default_csharp" style="color: inherit; text-decoration: inherit;">Default</a>
@@ -365,14 +353,11 @@ The PatchSchedule resource accepts the following [input]({{< relref "/docs/intro
         <span class="property-indicator"></span>
         <span class="property-type">string</span>
     </dt>
-    <dd>{{% md %}}Default string modeled as parameter for auto generation to work correctly.{{% /md %}}</dd>
-</dl>
+    <dd>{{% md %}}Default string modeled as parameter for auto generation to work correctly.{{% /md %}}</dd></dl>
 {{% /choosable %}}
 
 {{% choosable language go %}}
-<dl class="resources-properties">
-
-    <dt class="property-required"
+<dl class="resources-properties"><dt class="property-required"
             title="Required">
         <span id="name_go">
 <a href="#name_go" style="color: inherit; text-decoration: inherit;">Name</a>
@@ -380,8 +365,7 @@ The PatchSchedule resource accepts the following [input]({{< relref "/docs/intro
         <span class="property-indicator"></span>
         <span class="property-type">string</span>
     </dt>
-    <dd>{{% md %}}The name of the Redis cache.{{% /md %}}</dd>
-    <dt class="property-required"
+    <dd>{{% md %}}The name of the Redis cache.{{% /md %}}</dd><dt class="property-required"
             title="Required">
         <span id="resourcegroupname_go">
 <a href="#resourcegroupname_go" style="color: inherit; text-decoration: inherit;">Resource<wbr>Group<wbr>Name</a>
@@ -389,8 +373,7 @@ The PatchSchedule resource accepts the following [input]({{< relref "/docs/intro
         <span class="property-indicator"></span>
         <span class="property-type">string</span>
     </dt>
-    <dd>{{% md %}}The name of the resource group.{{% /md %}}</dd>
-    <dt class="property-required"
+    <dd>{{% md %}}The name of the resource group.{{% /md %}}</dd><dt class="property-required"
             title="Required">
         <span id="scheduleentries_go">
 <a href="#scheduleentries_go" style="color: inherit; text-decoration: inherit;">Schedule<wbr>Entries</a>
@@ -398,8 +381,7 @@ The PatchSchedule resource accepts the following [input]({{< relref "/docs/intro
         <span class="property-indicator"></span>
         <span class="property-type"><a href="#scheduleentry">[]Schedule<wbr>Entry</a></span>
     </dt>
-    <dd>{{% md %}}List of patch schedules for a Redis cache.{{% /md %}}</dd>
-    <dt class="property-optional"
+    <dd>{{% md %}}List of patch schedules for a Redis cache.{{% /md %}}</dd><dt class="property-optional"
             title="Optional">
         <span id="default_go">
 <a href="#default_go" style="color: inherit; text-decoration: inherit;">Default</a>
@@ -407,14 +389,11 @@ The PatchSchedule resource accepts the following [input]({{< relref "/docs/intro
         <span class="property-indicator"></span>
         <span class="property-type">string</span>
     </dt>
-    <dd>{{% md %}}Default string modeled as parameter for auto generation to work correctly.{{% /md %}}</dd>
-</dl>
+    <dd>{{% md %}}Default string modeled as parameter for auto generation to work correctly.{{% /md %}}</dd></dl>
 {{% /choosable %}}
 
 {{% choosable language nodejs %}}
-<dl class="resources-properties">
-
-    <dt class="property-required"
+<dl class="resources-properties"><dt class="property-required"
             title="Required">
         <span id="name_nodejs">
 <a href="#name_nodejs" style="color: inherit; text-decoration: inherit;">name</a>
@@ -422,8 +401,7 @@ The PatchSchedule resource accepts the following [input]({{< relref "/docs/intro
         <span class="property-indicator"></span>
         <span class="property-type">string</span>
     </dt>
-    <dd>{{% md %}}The name of the Redis cache.{{% /md %}}</dd>
-    <dt class="property-required"
+    <dd>{{% md %}}The name of the Redis cache.{{% /md %}}</dd><dt class="property-required"
             title="Required">
         <span id="resourcegroupname_nodejs">
 <a href="#resourcegroupname_nodejs" style="color: inherit; text-decoration: inherit;">resource<wbr>Group<wbr>Name</a>
@@ -431,8 +409,7 @@ The PatchSchedule resource accepts the following [input]({{< relref "/docs/intro
         <span class="property-indicator"></span>
         <span class="property-type">string</span>
     </dt>
-    <dd>{{% md %}}The name of the resource group.{{% /md %}}</dd>
-    <dt class="property-required"
+    <dd>{{% md %}}The name of the resource group.{{% /md %}}</dd><dt class="property-required"
             title="Required">
         <span id="scheduleentries_nodejs">
 <a href="#scheduleentries_nodejs" style="color: inherit; text-decoration: inherit;">schedule<wbr>Entries</a>
@@ -440,8 +417,7 @@ The PatchSchedule resource accepts the following [input]({{< relref "/docs/intro
         <span class="property-indicator"></span>
         <span class="property-type"><a href="#scheduleentry">Schedule<wbr>Entry[]</a></span>
     </dt>
-    <dd>{{% md %}}List of patch schedules for a Redis cache.{{% /md %}}</dd>
-    <dt class="property-optional"
+    <dd>{{% md %}}List of patch schedules for a Redis cache.{{% /md %}}</dd><dt class="property-optional"
             title="Optional">
         <span id="default_nodejs">
 <a href="#default_nodejs" style="color: inherit; text-decoration: inherit;">default</a>
@@ -449,14 +425,11 @@ The PatchSchedule resource accepts the following [input]({{< relref "/docs/intro
         <span class="property-indicator"></span>
         <span class="property-type">string</span>
     </dt>
-    <dd>{{% md %}}Default string modeled as parameter for auto generation to work correctly.{{% /md %}}</dd>
-</dl>
+    <dd>{{% md %}}Default string modeled as parameter for auto generation to work correctly.{{% /md %}}</dd></dl>
 {{% /choosable %}}
 
 {{% choosable language python %}}
-<dl class="resources-properties">
-
-    <dt class="property-required"
+<dl class="resources-properties"><dt class="property-required"
             title="Required">
         <span id="name_python">
 <a href="#name_python" style="color: inherit; text-decoration: inherit;">name</a>
@@ -464,8 +437,7 @@ The PatchSchedule resource accepts the following [input]({{< relref "/docs/intro
         <span class="property-indicator"></span>
         <span class="property-type">str</span>
     </dt>
-    <dd>{{% md %}}The name of the Redis cache.{{% /md %}}</dd>
-    <dt class="property-required"
+    <dd>{{% md %}}The name of the Redis cache.{{% /md %}}</dd><dt class="property-required"
             title="Required">
         <span id="resource_group_name_python">
 <a href="#resource_group_name_python" style="color: inherit; text-decoration: inherit;">resource_<wbr>group_<wbr>name</a>
@@ -473,8 +445,7 @@ The PatchSchedule resource accepts the following [input]({{< relref "/docs/intro
         <span class="property-indicator"></span>
         <span class="property-type">str</span>
     </dt>
-    <dd>{{% md %}}The name of the resource group.{{% /md %}}</dd>
-    <dt class="property-required"
+    <dd>{{% md %}}The name of the resource group.{{% /md %}}</dd><dt class="property-required"
             title="Required">
         <span id="schedule_entries_python">
 <a href="#schedule_entries_python" style="color: inherit; text-decoration: inherit;">schedule_<wbr>entries</a>
@@ -482,8 +453,7 @@ The PatchSchedule resource accepts the following [input]({{< relref "/docs/intro
         <span class="property-indicator"></span>
         <span class="property-type"><a href="#scheduleentry">Sequence[Schedule<wbr>Entry<wbr>Args]</a></span>
     </dt>
-    <dd>{{% md %}}List of patch schedules for a Redis cache.{{% /md %}}</dd>
-    <dt class="property-optional"
+    <dd>{{% md %}}List of patch schedules for a Redis cache.{{% /md %}}</dd><dt class="property-optional"
             title="Optional">
         <span id="default_python">
 <a href="#default_python" style="color: inherit; text-decoration: inherit;">default</a>
@@ -491,8 +461,7 @@ The PatchSchedule resource accepts the following [input]({{< relref "/docs/intro
         <span class="property-indicator"></span>
         <span class="property-type">str</span>
     </dt>
-    <dd>{{% md %}}Default string modeled as parameter for auto generation to work correctly.{{% /md %}}</dd>
-</dl>
+    <dd>{{% md %}}Default string modeled as parameter for auto generation to work correctly.{{% /md %}}</dd></dl>
 {{% /choosable %}}
 
 
@@ -503,9 +472,7 @@ All [input](#inputs) properties are implicitly available as output properties. A
 
 
 {{% choosable language csharp %}}
-<dl class="resources-properties">
-
-    <dt class="property-"
+<dl class="resources-properties"><dt class="property-"
             title="">
         <span id="id_csharp">
 <a href="#id_csharp" style="color: inherit; text-decoration: inherit;">Id</a>
@@ -513,8 +480,7 @@ All [input](#inputs) properties are implicitly available as output properties. A
         <span class="property-indicator"></span>
         <span class="property-type">string</span>
     </dt>
-    <dd>{{% md %}}The provider-assigned unique ID for this managed resource.{{% /md %}}</dd>
-    <dt class="property-"
+    <dd>{{% md %}}The provider-assigned unique ID for this managed resource.{{% /md %}}</dd><dt class="property-"
             title="">
         <span id="type_csharp">
 <a href="#type_csharp" style="color: inherit; text-decoration: inherit;">Type</a>
@@ -522,14 +488,11 @@ All [input](#inputs) properties are implicitly available as output properties. A
         <span class="property-indicator"></span>
         <span class="property-type">string</span>
     </dt>
-    <dd>{{% md %}}Resource type.{{% /md %}}</dd>
-</dl>
+    <dd>{{% md %}}Resource type.{{% /md %}}</dd></dl>
 {{% /choosable %}}
 
 {{% choosable language go %}}
-<dl class="resources-properties">
-
-    <dt class="property-"
+<dl class="resources-properties"><dt class="property-"
             title="">
         <span id="id_go">
 <a href="#id_go" style="color: inherit; text-decoration: inherit;">Id</a>
@@ -537,8 +500,7 @@ All [input](#inputs) properties are implicitly available as output properties. A
         <span class="property-indicator"></span>
         <span class="property-type">string</span>
     </dt>
-    <dd>{{% md %}}The provider-assigned unique ID for this managed resource.{{% /md %}}</dd>
-    <dt class="property-"
+    <dd>{{% md %}}The provider-assigned unique ID for this managed resource.{{% /md %}}</dd><dt class="property-"
             title="">
         <span id="type_go">
 <a href="#type_go" style="color: inherit; text-decoration: inherit;">Type</a>
@@ -546,14 +508,11 @@ All [input](#inputs) properties are implicitly available as output properties. A
         <span class="property-indicator"></span>
         <span class="property-type">string</span>
     </dt>
-    <dd>{{% md %}}Resource type.{{% /md %}}</dd>
-</dl>
+    <dd>{{% md %}}Resource type.{{% /md %}}</dd></dl>
 {{% /choosable %}}
 
 {{% choosable language nodejs %}}
-<dl class="resources-properties">
-
-    <dt class="property-"
+<dl class="resources-properties"><dt class="property-"
             title="">
         <span id="id_nodejs">
 <a href="#id_nodejs" style="color: inherit; text-decoration: inherit;">id</a>
@@ -561,8 +520,7 @@ All [input](#inputs) properties are implicitly available as output properties. A
         <span class="property-indicator"></span>
         <span class="property-type">string</span>
     </dt>
-    <dd>{{% md %}}The provider-assigned unique ID for this managed resource.{{% /md %}}</dd>
-    <dt class="property-"
+    <dd>{{% md %}}The provider-assigned unique ID for this managed resource.{{% /md %}}</dd><dt class="property-"
             title="">
         <span id="type_nodejs">
 <a href="#type_nodejs" style="color: inherit; text-decoration: inherit;">type</a>
@@ -570,14 +528,11 @@ All [input](#inputs) properties are implicitly available as output properties. A
         <span class="property-indicator"></span>
         <span class="property-type">string</span>
     </dt>
-    <dd>{{% md %}}Resource type.{{% /md %}}</dd>
-</dl>
+    <dd>{{% md %}}Resource type.{{% /md %}}</dd></dl>
 {{% /choosable %}}
 
 {{% choosable language python %}}
-<dl class="resources-properties">
-
-    <dt class="property-"
+<dl class="resources-properties"><dt class="property-"
             title="">
         <span id="id_python">
 <a href="#id_python" style="color: inherit; text-decoration: inherit;">id</a>
@@ -585,8 +540,7 @@ All [input](#inputs) properties are implicitly available as output properties. A
         <span class="property-indicator"></span>
         <span class="property-type">str</span>
     </dt>
-    <dd>{{% md %}}The provider-assigned unique ID for this managed resource.{{% /md %}}</dd>
-    <dt class="property-"
+    <dd>{{% md %}}The provider-assigned unique ID for this managed resource.{{% /md %}}</dd><dt class="property-"
             title="">
         <span id="type_python">
 <a href="#type_python" style="color: inherit; text-decoration: inherit;">type</a>
@@ -594,8 +548,7 @@ All [input](#inputs) properties are implicitly available as output properties. A
         <span class="property-indicator"></span>
         <span class="property-type">str</span>
     </dt>
-    <dd>{{% md %}}Resource type.{{% /md %}}</dd>
-</dl>
+    <dd>{{% md %}}Resource type.{{% /md %}}</dd></dl>
 {{% /choosable %}}
 
 
@@ -611,103 +564,61 @@ All [input](#inputs) properties are implicitly available as output properties. A
 <h4 id="dayofweek">Day<wbr>Of<wbr>Week</h4>
 
 {{% choosable language csharp %}}
-<dl class="tabular">
-    <dt>Monday</dt>
-    <dd>Monday</dd>
-    <dt>Tuesday</dt>
-    <dd>Tuesday</dd>
-    <dt>Wednesday</dt>
-    <dd>Wednesday</dd>
-    <dt>Thursday</dt>
-    <dd>Thursday</dd>
-    <dt>Friday</dt>
-    <dd>Friday</dd>
-    <dt>Saturday</dt>
-    <dd>Saturday</dd>
-    <dt>Sunday</dt>
-    <dd>Sunday</dd>
-    <dt>Everyday</dt>
-    <dd>Everyday</dd>
-    <dt>Weekend</dt>
-    <dd>Weekend</dd>
-</dl>
+<dl class="tabular"><dt>Monday</dt>
+    <dd>Monday</dd><dt>Tuesday</dt>
+    <dd>Tuesday</dd><dt>Wednesday</dt>
+    <dd>Wednesday</dd><dt>Thursday</dt>
+    <dd>Thursday</dd><dt>Friday</dt>
+    <dd>Friday</dd><dt>Saturday</dt>
+    <dd>Saturday</dd><dt>Sunday</dt>
+    <dd>Sunday</dd><dt>Everyday</dt>
+    <dd>Everyday</dd><dt>Weekend</dt>
+    <dd>Weekend</dd></dl>
 {{% /choosable %}}
 
 {{% choosable language go %}}
-<dl class="tabular">
-    <dt>Day<wbr>Of<wbr>Week<wbr>Monday</dt>
-    <dd>Monday</dd>
-    <dt>Day<wbr>Of<wbr>Week<wbr>Tuesday</dt>
-    <dd>Tuesday</dd>
-    <dt>Day<wbr>Of<wbr>Week<wbr>Wednesday</dt>
-    <dd>Wednesday</dd>
-    <dt>Day<wbr>Of<wbr>Week<wbr>Thursday</dt>
-    <dd>Thursday</dd>
-    <dt>Day<wbr>Of<wbr>Week<wbr>Friday</dt>
-    <dd>Friday</dd>
-    <dt>Day<wbr>Of<wbr>Week<wbr>Saturday</dt>
-    <dd>Saturday</dd>
-    <dt>Day<wbr>Of<wbr>Week<wbr>Sunday</dt>
-    <dd>Sunday</dd>
-    <dt>Day<wbr>Of<wbr>Week<wbr>Everyday</dt>
-    <dd>Everyday</dd>
-    <dt>Day<wbr>Of<wbr>Week<wbr>Weekend</dt>
-    <dd>Weekend</dd>
-</dl>
+<dl class="tabular"><dt>Day<wbr>Of<wbr>Week<wbr>Monday</dt>
+    <dd>Monday</dd><dt>Day<wbr>Of<wbr>Week<wbr>Tuesday</dt>
+    <dd>Tuesday</dd><dt>Day<wbr>Of<wbr>Week<wbr>Wednesday</dt>
+    <dd>Wednesday</dd><dt>Day<wbr>Of<wbr>Week<wbr>Thursday</dt>
+    <dd>Thursday</dd><dt>Day<wbr>Of<wbr>Week<wbr>Friday</dt>
+    <dd>Friday</dd><dt>Day<wbr>Of<wbr>Week<wbr>Saturday</dt>
+    <dd>Saturday</dd><dt>Day<wbr>Of<wbr>Week<wbr>Sunday</dt>
+    <dd>Sunday</dd><dt>Day<wbr>Of<wbr>Week<wbr>Everyday</dt>
+    <dd>Everyday</dd><dt>Day<wbr>Of<wbr>Week<wbr>Weekend</dt>
+    <dd>Weekend</dd></dl>
 {{% /choosable %}}
 
 {{% choosable language nodejs %}}
-<dl class="tabular">
-    <dt>Monday</dt>
-    <dd>Monday</dd>
-    <dt>Tuesday</dt>
-    <dd>Tuesday</dd>
-    <dt>Wednesday</dt>
-    <dd>Wednesday</dd>
-    <dt>Thursday</dt>
-    <dd>Thursday</dd>
-    <dt>Friday</dt>
-    <dd>Friday</dd>
-    <dt>Saturday</dt>
-    <dd>Saturday</dd>
-    <dt>Sunday</dt>
-    <dd>Sunday</dd>
-    <dt>Everyday</dt>
-    <dd>Everyday</dd>
-    <dt>Weekend</dt>
-    <dd>Weekend</dd>
-</dl>
+<dl class="tabular"><dt>Monday</dt>
+    <dd>Monday</dd><dt>Tuesday</dt>
+    <dd>Tuesday</dd><dt>Wednesday</dt>
+    <dd>Wednesday</dd><dt>Thursday</dt>
+    <dd>Thursday</dd><dt>Friday</dt>
+    <dd>Friday</dd><dt>Saturday</dt>
+    <dd>Saturday</dd><dt>Sunday</dt>
+    <dd>Sunday</dd><dt>Everyday</dt>
+    <dd>Everyday</dd><dt>Weekend</dt>
+    <dd>Weekend</dd></dl>
 {{% /choosable %}}
 
 {{% choosable language python %}}
-<dl class="tabular">
-    <dt>MONDAY</dt>
-    <dd>Monday</dd>
-    <dt>TUESDAY</dt>
-    <dd>Tuesday</dd>
-    <dt>WEDNESDAY</dt>
-    <dd>Wednesday</dd>
-    <dt>THURSDAY</dt>
-    <dd>Thursday</dd>
-    <dt>FRIDAY</dt>
-    <dd>Friday</dd>
-    <dt>SATURDAY</dt>
-    <dd>Saturday</dd>
-    <dt>SUNDAY</dt>
-    <dd>Sunday</dd>
-    <dt>EVERYDAY</dt>
-    <dd>Everyday</dd>
-    <dt>WEEKEND</dt>
-    <dd>Weekend</dd>
-</dl>
+<dl class="tabular"><dt>MONDAY</dt>
+    <dd>Monday</dd><dt>TUESDAY</dt>
+    <dd>Tuesday</dd><dt>WEDNESDAY</dt>
+    <dd>Wednesday</dd><dt>THURSDAY</dt>
+    <dd>Thursday</dd><dt>FRIDAY</dt>
+    <dd>Friday</dd><dt>SATURDAY</dt>
+    <dd>Saturday</dd><dt>SUNDAY</dt>
+    <dd>Sunday</dd><dt>EVERYDAY</dt>
+    <dd>Everyday</dd><dt>WEEKEND</dt>
+    <dd>Weekend</dd></dl>
 {{% /choosable %}}
 
 <h4 id="scheduleentry">Schedule<wbr>Entry</h4>
 
 {{% choosable language csharp %}}
-<dl class="resources-properties">
-
-    <dt class="property-required"
+<dl class="resources-properties"><dt class="property-required"
             title="Required">
         <span id="dayofweek_csharp">
 <a href="#dayofweek_csharp" style="color: inherit; text-decoration: inherit;">Day<wbr>Of<wbr>Week</a>
@@ -715,8 +626,7 @@ All [input](#inputs) properties are implicitly available as output properties. A
         <span class="property-indicator"></span>
         <span class="property-type"><a href="#dayofweek">Pulumi.<wbr>Azure<wbr>Native.<wbr>Cache.<wbr>Day<wbr>Of<wbr>Week</a></span>
     </dt>
-    <dd>{{% md %}}Day of the week when a cache can be patched.{{% /md %}}</dd>
-    <dt class="property-required"
+    <dd>{{% md %}}Day of the week when a cache can be patched.{{% /md %}}</dd><dt class="property-required"
             title="Required">
         <span id="starthourutc_csharp">
 <a href="#starthourutc_csharp" style="color: inherit; text-decoration: inherit;">Start<wbr>Hour<wbr>Utc</a>
@@ -724,8 +634,7 @@ All [input](#inputs) properties are implicitly available as output properties. A
         <span class="property-indicator"></span>
         <span class="property-type">int</span>
     </dt>
-    <dd>{{% md %}}Start hour after which cache patching can start.{{% /md %}}</dd>
-    <dt class="property-optional"
+    <dd>{{% md %}}Start hour after which cache patching can start.{{% /md %}}</dd><dt class="property-optional"
             title="Optional">
         <span id="maintenancewindow_csharp">
 <a href="#maintenancewindow_csharp" style="color: inherit; text-decoration: inherit;">Maintenance<wbr>Window</a>
@@ -733,14 +642,11 @@ All [input](#inputs) properties are implicitly available as output properties. A
         <span class="property-indicator"></span>
         <span class="property-type">string</span>
     </dt>
-    <dd>{{% md %}}ISO8601 timespan specifying how much time cache patching can take. {{% /md %}}</dd>
-</dl>
+    <dd>{{% md %}}ISO8601 timespan specifying how much time cache patching can take. {{% /md %}}</dd></dl>
 {{% /choosable %}}
 
 {{% choosable language go %}}
-<dl class="resources-properties">
-
-    <dt class="property-required"
+<dl class="resources-properties"><dt class="property-required"
             title="Required">
         <span id="dayofweek_go">
 <a href="#dayofweek_go" style="color: inherit; text-decoration: inherit;">Day<wbr>Of<wbr>Week</a>
@@ -748,8 +654,7 @@ All [input](#inputs) properties are implicitly available as output properties. A
         <span class="property-indicator"></span>
         <span class="property-type"><a href="#dayofweek">Day<wbr>Of<wbr>Week</a></span>
     </dt>
-    <dd>{{% md %}}Day of the week when a cache can be patched.{{% /md %}}</dd>
-    <dt class="property-required"
+    <dd>{{% md %}}Day of the week when a cache can be patched.{{% /md %}}</dd><dt class="property-required"
             title="Required">
         <span id="starthourutc_go">
 <a href="#starthourutc_go" style="color: inherit; text-decoration: inherit;">Start<wbr>Hour<wbr>Utc</a>
@@ -757,8 +662,7 @@ All [input](#inputs) properties are implicitly available as output properties. A
         <span class="property-indicator"></span>
         <span class="property-type">int</span>
     </dt>
-    <dd>{{% md %}}Start hour after which cache patching can start.{{% /md %}}</dd>
-    <dt class="property-optional"
+    <dd>{{% md %}}Start hour after which cache patching can start.{{% /md %}}</dd><dt class="property-optional"
             title="Optional">
         <span id="maintenancewindow_go">
 <a href="#maintenancewindow_go" style="color: inherit; text-decoration: inherit;">Maintenance<wbr>Window</a>
@@ -766,14 +670,11 @@ All [input](#inputs) properties are implicitly available as output properties. A
         <span class="property-indicator"></span>
         <span class="property-type">string</span>
     </dt>
-    <dd>{{% md %}}ISO8601 timespan specifying how much time cache patching can take. {{% /md %}}</dd>
-</dl>
+    <dd>{{% md %}}ISO8601 timespan specifying how much time cache patching can take. {{% /md %}}</dd></dl>
 {{% /choosable %}}
 
 {{% choosable language nodejs %}}
-<dl class="resources-properties">
-
-    <dt class="property-required"
+<dl class="resources-properties"><dt class="property-required"
             title="Required">
         <span id="dayofweek_nodejs">
 <a href="#dayofweek_nodejs" style="color: inherit; text-decoration: inherit;">day<wbr>Of<wbr>Week</a>
@@ -781,8 +682,7 @@ All [input](#inputs) properties are implicitly available as output properties. A
         <span class="property-indicator"></span>
         <span class="property-type"><a href="#dayofweek">Day<wbr>Of<wbr>Week</a></span>
     </dt>
-    <dd>{{% md %}}Day of the week when a cache can be patched.{{% /md %}}</dd>
-    <dt class="property-required"
+    <dd>{{% md %}}Day of the week when a cache can be patched.{{% /md %}}</dd><dt class="property-required"
             title="Required">
         <span id="starthourutc_nodejs">
 <a href="#starthourutc_nodejs" style="color: inherit; text-decoration: inherit;">start<wbr>Hour<wbr>Utc</a>
@@ -790,8 +690,7 @@ All [input](#inputs) properties are implicitly available as output properties. A
         <span class="property-indicator"></span>
         <span class="property-type">number</span>
     </dt>
-    <dd>{{% md %}}Start hour after which cache patching can start.{{% /md %}}</dd>
-    <dt class="property-optional"
+    <dd>{{% md %}}Start hour after which cache patching can start.{{% /md %}}</dd><dt class="property-optional"
             title="Optional">
         <span id="maintenancewindow_nodejs">
 <a href="#maintenancewindow_nodejs" style="color: inherit; text-decoration: inherit;">maintenance<wbr>Window</a>
@@ -799,14 +698,11 @@ All [input](#inputs) properties are implicitly available as output properties. A
         <span class="property-indicator"></span>
         <span class="property-type">string</span>
     </dt>
-    <dd>{{% md %}}ISO8601 timespan specifying how much time cache patching can take. {{% /md %}}</dd>
-</dl>
+    <dd>{{% md %}}ISO8601 timespan specifying how much time cache patching can take. {{% /md %}}</dd></dl>
 {{% /choosable %}}
 
 {{% choosable language python %}}
-<dl class="resources-properties">
-
-    <dt class="property-required"
+<dl class="resources-properties"><dt class="property-required"
             title="Required">
         <span id="day_of_week_python">
 <a href="#day_of_week_python" style="color: inherit; text-decoration: inherit;">day_<wbr>of_<wbr>week</a>
@@ -814,8 +710,7 @@ All [input](#inputs) properties are implicitly available as output properties. A
         <span class="property-indicator"></span>
         <span class="property-type"><a href="#dayofweek">Day<wbr>Of<wbr>Week</a></span>
     </dt>
-    <dd>{{% md %}}Day of the week when a cache can be patched.{{% /md %}}</dd>
-    <dt class="property-required"
+    <dd>{{% md %}}Day of the week when a cache can be patched.{{% /md %}}</dd><dt class="property-required"
             title="Required">
         <span id="start_hour_utc_python">
 <a href="#start_hour_utc_python" style="color: inherit; text-decoration: inherit;">start_<wbr>hour_<wbr>utc</a>
@@ -823,8 +718,7 @@ All [input](#inputs) properties are implicitly available as output properties. A
         <span class="property-indicator"></span>
         <span class="property-type">int</span>
     </dt>
-    <dd>{{% md %}}Start hour after which cache patching can start.{{% /md %}}</dd>
-    <dt class="property-optional"
+    <dd>{{% md %}}Start hour after which cache patching can start.{{% /md %}}</dd><dt class="property-optional"
             title="Optional">
         <span id="maintenance_window_python">
 <a href="#maintenance_window_python" style="color: inherit; text-decoration: inherit;">maintenance_<wbr>window</a>
@@ -832,16 +726,13 @@ All [input](#inputs) properties are implicitly available as output properties. A
         <span class="property-indicator"></span>
         <span class="property-type">str</span>
     </dt>
-    <dd>{{% md %}}ISO8601 timespan specifying how much time cache patching can take. {{% /md %}}</dd>
-</dl>
+    <dd>{{% md %}}ISO8601 timespan specifying how much time cache patching can take. {{% /md %}}</dd></dl>
 {{% /choosable %}}
 
 <h4 id="scheduleentryresponse">Schedule<wbr>Entry<wbr>Response</h4>
 
 {{% choosable language csharp %}}
-<dl class="resources-properties">
-
-    <dt class="property-required"
+<dl class="resources-properties"><dt class="property-required"
             title="Required">
         <span id="dayofweek_csharp">
 <a href="#dayofweek_csharp" style="color: inherit; text-decoration: inherit;">Day<wbr>Of<wbr>Week</a>
@@ -849,8 +740,7 @@ All [input](#inputs) properties are implicitly available as output properties. A
         <span class="property-indicator"></span>
         <span class="property-type">string</span>
     </dt>
-    <dd>{{% md %}}Day of the week when a cache can be patched.{{% /md %}}</dd>
-    <dt class="property-required"
+    <dd>{{% md %}}Day of the week when a cache can be patched.{{% /md %}}</dd><dt class="property-required"
             title="Required">
         <span id="starthourutc_csharp">
 <a href="#starthourutc_csharp" style="color: inherit; text-decoration: inherit;">Start<wbr>Hour<wbr>Utc</a>
@@ -858,8 +748,7 @@ All [input](#inputs) properties are implicitly available as output properties. A
         <span class="property-indicator"></span>
         <span class="property-type">int</span>
     </dt>
-    <dd>{{% md %}}Start hour after which cache patching can start.{{% /md %}}</dd>
-    <dt class="property-optional"
+    <dd>{{% md %}}Start hour after which cache patching can start.{{% /md %}}</dd><dt class="property-optional"
             title="Optional">
         <span id="maintenancewindow_csharp">
 <a href="#maintenancewindow_csharp" style="color: inherit; text-decoration: inherit;">Maintenance<wbr>Window</a>
@@ -867,14 +756,11 @@ All [input](#inputs) properties are implicitly available as output properties. A
         <span class="property-indicator"></span>
         <span class="property-type">string</span>
     </dt>
-    <dd>{{% md %}}ISO8601 timespan specifying how much time cache patching can take. {{% /md %}}</dd>
-</dl>
+    <dd>{{% md %}}ISO8601 timespan specifying how much time cache patching can take. {{% /md %}}</dd></dl>
 {{% /choosable %}}
 
 {{% choosable language go %}}
-<dl class="resources-properties">
-
-    <dt class="property-required"
+<dl class="resources-properties"><dt class="property-required"
             title="Required">
         <span id="dayofweek_go">
 <a href="#dayofweek_go" style="color: inherit; text-decoration: inherit;">Day<wbr>Of<wbr>Week</a>
@@ -882,8 +768,7 @@ All [input](#inputs) properties are implicitly available as output properties. A
         <span class="property-indicator"></span>
         <span class="property-type">string</span>
     </dt>
-    <dd>{{% md %}}Day of the week when a cache can be patched.{{% /md %}}</dd>
-    <dt class="property-required"
+    <dd>{{% md %}}Day of the week when a cache can be patched.{{% /md %}}</dd><dt class="property-required"
             title="Required">
         <span id="starthourutc_go">
 <a href="#starthourutc_go" style="color: inherit; text-decoration: inherit;">Start<wbr>Hour<wbr>Utc</a>
@@ -891,8 +776,7 @@ All [input](#inputs) properties are implicitly available as output properties. A
         <span class="property-indicator"></span>
         <span class="property-type">int</span>
     </dt>
-    <dd>{{% md %}}Start hour after which cache patching can start.{{% /md %}}</dd>
-    <dt class="property-optional"
+    <dd>{{% md %}}Start hour after which cache patching can start.{{% /md %}}</dd><dt class="property-optional"
             title="Optional">
         <span id="maintenancewindow_go">
 <a href="#maintenancewindow_go" style="color: inherit; text-decoration: inherit;">Maintenance<wbr>Window</a>
@@ -900,14 +784,11 @@ All [input](#inputs) properties are implicitly available as output properties. A
         <span class="property-indicator"></span>
         <span class="property-type">string</span>
     </dt>
-    <dd>{{% md %}}ISO8601 timespan specifying how much time cache patching can take. {{% /md %}}</dd>
-</dl>
+    <dd>{{% md %}}ISO8601 timespan specifying how much time cache patching can take. {{% /md %}}</dd></dl>
 {{% /choosable %}}
 
 {{% choosable language nodejs %}}
-<dl class="resources-properties">
-
-    <dt class="property-required"
+<dl class="resources-properties"><dt class="property-required"
             title="Required">
         <span id="dayofweek_nodejs">
 <a href="#dayofweek_nodejs" style="color: inherit; text-decoration: inherit;">day<wbr>Of<wbr>Week</a>
@@ -915,8 +796,7 @@ All [input](#inputs) properties are implicitly available as output properties. A
         <span class="property-indicator"></span>
         <span class="property-type">string</span>
     </dt>
-    <dd>{{% md %}}Day of the week when a cache can be patched.{{% /md %}}</dd>
-    <dt class="property-required"
+    <dd>{{% md %}}Day of the week when a cache can be patched.{{% /md %}}</dd><dt class="property-required"
             title="Required">
         <span id="starthourutc_nodejs">
 <a href="#starthourutc_nodejs" style="color: inherit; text-decoration: inherit;">start<wbr>Hour<wbr>Utc</a>
@@ -924,8 +804,7 @@ All [input](#inputs) properties are implicitly available as output properties. A
         <span class="property-indicator"></span>
         <span class="property-type">number</span>
     </dt>
-    <dd>{{% md %}}Start hour after which cache patching can start.{{% /md %}}</dd>
-    <dt class="property-optional"
+    <dd>{{% md %}}Start hour after which cache patching can start.{{% /md %}}</dd><dt class="property-optional"
             title="Optional">
         <span id="maintenancewindow_nodejs">
 <a href="#maintenancewindow_nodejs" style="color: inherit; text-decoration: inherit;">maintenance<wbr>Window</a>
@@ -933,14 +812,11 @@ All [input](#inputs) properties are implicitly available as output properties. A
         <span class="property-indicator"></span>
         <span class="property-type">string</span>
     </dt>
-    <dd>{{% md %}}ISO8601 timespan specifying how much time cache patching can take. {{% /md %}}</dd>
-</dl>
+    <dd>{{% md %}}ISO8601 timespan specifying how much time cache patching can take. {{% /md %}}</dd></dl>
 {{% /choosable %}}
 
 {{% choosable language python %}}
-<dl class="resources-properties">
-
-    <dt class="property-required"
+<dl class="resources-properties"><dt class="property-required"
             title="Required">
         <span id="day_of_week_python">
 <a href="#day_of_week_python" style="color: inherit; text-decoration: inherit;">day_<wbr>of_<wbr>week</a>
@@ -948,8 +824,7 @@ All [input](#inputs) properties are implicitly available as output properties. A
         <span class="property-indicator"></span>
         <span class="property-type">str</span>
     </dt>
-    <dd>{{% md %}}Day of the week when a cache can be patched.{{% /md %}}</dd>
-    <dt class="property-required"
+    <dd>{{% md %}}Day of the week when a cache can be patched.{{% /md %}}</dd><dt class="property-required"
             title="Required">
         <span id="start_hour_utc_python">
 <a href="#start_hour_utc_python" style="color: inherit; text-decoration: inherit;">start_<wbr>hour_<wbr>utc</a>
@@ -957,8 +832,7 @@ All [input](#inputs) properties are implicitly available as output properties. A
         <span class="property-indicator"></span>
         <span class="property-type">int</span>
     </dt>
-    <dd>{{% md %}}Start hour after which cache patching can start.{{% /md %}}</dd>
-    <dt class="property-optional"
+    <dd>{{% md %}}Start hour after which cache patching can start.{{% /md %}}</dd><dt class="property-optional"
             title="Optional">
         <span id="maintenance_window_python">
 <a href="#maintenance_window_python" style="color: inherit; text-decoration: inherit;">maintenance_<wbr>window</a>
@@ -966,8 +840,7 @@ All [input](#inputs) properties are implicitly available as output properties. A
         <span class="property-indicator"></span>
         <span class="property-type">str</span>
     </dt>
-    <dd>{{% md %}}ISO8601 timespan specifying how much time cache patching can take. {{% /md %}}</dd>
-</dl>
+    <dd>{{% md %}}ISO8601 timespan specifying how much time cache patching can take. {{% /md %}}</dd></dl>
 {{% /choosable %}}
 ## Import
 

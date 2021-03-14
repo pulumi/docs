@@ -19,11 +19,17 @@ To get more information about GameServerConfig, see:
     * [Official Documentation](https://cloud.google.com/game-servers/docs)
 
 {{% examples %}}
+
 ## Example Usage
 
 {{< chooser language "typescript,python,go,csharp" / >}}
+
+
 ### Game Service Config Basic
-{{% example csharp %}}
+
+
+{{< example csharp >}}
+
 ```csharp
 using System.Collections.Generic;
 using System.Text.Json;
@@ -139,13 +145,19 @@ class MyStack : Stack
 }
 ```
 
-{{% /example %}}
 
-{{% example go %}}
+{{< /example >}}
+
+
+{{< example go >}}
+
 Coming soon!
-{{% /example %}}
 
-{{% example python %}}
+{{< /example >}}
+
+
+{{< example python >}}
+
 ```python
 import pulumi
 import json
@@ -212,9 +224,12 @@ default_game_server_config = gcp.gameservices.GameServerConfig("defaultGameServe
     )])
 ```
 
-{{% /example %}}
 
-{{% example typescript %}}
+{{< /example >}}
+
+
+{{< example typescript >}}
+
 
 ```typescript
 import * as pulumi from "@pulumi/pulumi";
@@ -283,9 +298,16 @@ const defaultGameServerConfig = new gcp.gameservices.GameServerConfig("defaultGa
 });
 ```
 
-{{% /example %}}
+
+{{< /example >}}
+
+
+
+
 
 {{% /examples %}}
+
+
 
 
 ## Create a GameServerConfig Resource {#create}
@@ -310,9 +332,7 @@ const defaultGameServerConfig = new gcp.gameservices.GameServerConfig("defaultGa
 
 {{% choosable language nodejs %}}
 
-<dl class="resources-properties">
-  
-    <dt
+<dl class="resources-properties"><dt
         class="property-required" title="Required">
         <span>name</span>
         <span class="property-indicator"></span>
@@ -320,9 +340,7 @@ const defaultGameServerConfig = new gcp.gameservices.GameServerConfig("defaultGa
     </dt>
     <dd>
       The unique name of the resource.
-    </dd>
-  
-    <dt
+    </dd><dt
         class="property-required" title="Required">
         <span>args</span>
         <span class="property-indicator"></span>
@@ -330,9 +348,7 @@ const defaultGameServerConfig = new gcp.gameservices.GameServerConfig("defaultGa
     </dt>
     <dd>
       The arguments to resource properties.
-    </dd>
-  
-    <dt
+    </dd><dt
         class="property-optional" title="Optional">
         <span>opts</span>
         <span class="property-indicator"></span>
@@ -340,10 +356,7 @@ const defaultGameServerConfig = new gcp.gameservices.GameServerConfig("defaultGa
     </dt>
     <dd>
       Bag of options to control resource&#39;s behavior.
-    </dd>
-  
-
-</dl>
+    </dd></dl>
 
 {{% /choosable %}}
 
@@ -369,9 +382,7 @@ const defaultGameServerConfig = new gcp.gameservices.GameServerConfig("defaultGa
 
 {{% choosable language go %}}
 
-<dl class="resources-properties">
-  
-    <dt
+<dl class="resources-properties"><dt
         class="property-optional" title="Optional">
         <span>ctx</span>
         <span class="property-indicator"></span>
@@ -379,9 +390,7 @@ const defaultGameServerConfig = new gcp.gameservices.GameServerConfig("defaultGa
     </dt>
     <dd>
       Context object for the current deployment.
-    </dd>
-  
-    <dt
+    </dd><dt
         class="property-required" title="Required">
         <span>name</span>
         <span class="property-indicator"></span>
@@ -389,9 +398,7 @@ const defaultGameServerConfig = new gcp.gameservices.GameServerConfig("defaultGa
     </dt>
     <dd>
       The unique name of the resource.
-    </dd>
-  
-    <dt
+    </dd><dt
         class="property-required" title="Required">
         <span>args</span>
         <span class="property-indicator"></span>
@@ -399,9 +406,7 @@ const defaultGameServerConfig = new gcp.gameservices.GameServerConfig("defaultGa
     </dt>
     <dd>
       The arguments to resource properties.
-    </dd>
-  
-    <dt
+    </dd><dt
         class="property-optional" title="Optional">
         <span>opts</span>
         <span class="property-indicator"></span>
@@ -409,18 +414,13 @@ const defaultGameServerConfig = new gcp.gameservices.GameServerConfig("defaultGa
     </dt>
     <dd>
       Bag of options to control resource&#39;s behavior.
-    </dd>
-  
-
-</dl>
+    </dd></dl>
 
 {{% /choosable %}}
 
 {{% choosable language csharp %}}
 
-<dl class="resources-properties">
-  
-    <dt
+<dl class="resources-properties"><dt
         class="property-required" title="Required">
         <span>name</span>
         <span class="property-indicator"></span>
@@ -428,9 +428,7 @@ const defaultGameServerConfig = new gcp.gameservices.GameServerConfig("defaultGa
     </dt>
     <dd>
       The unique name of the resource.
-    </dd>
-  
-    <dt
+    </dd><dt
         class="property-required" title="Required">
         <span>args</span>
         <span class="property-indicator"></span>
@@ -438,9 +436,7 @@ const defaultGameServerConfig = new gcp.gameservices.GameServerConfig("defaultGa
     </dt>
     <dd>
       The arguments to resource properties.
-    </dd>
-  
-    <dt
+    </dd><dt
         class="property-optional" title="Optional">
         <span>opts</span>
         <span class="property-indicator"></span>
@@ -448,10 +444,7 @@ const defaultGameServerConfig = new gcp.gameservices.GameServerConfig("defaultGa
     </dt>
     <dd>
       Bag of options to control resource&#39;s behavior.
-    </dd>
-  
-
-</dl>
+    </dd></dl>
 
 {{% /choosable %}}
 
@@ -466,9 +459,7 @@ The GameServerConfig resource accepts the following [input]({{< relref "/docs/in
 
 
 {{% choosable language csharp %}}
-<dl class="resources-properties">
-
-    <dt class="property-required"
+<dl class="resources-properties"><dt class="property-required"
             title="Required">
         <span id="configid_csharp">
 <a href="#configid_csharp" style="color: inherit; text-decoration: inherit;">Config<wbr>Id</a>
@@ -477,8 +468,7 @@ The GameServerConfig resource accepts the following [input]({{< relref "/docs/in
         <span class="property-type">string</span>
     </dt>
     <dd>{{% md %}}A unique id for the deployment config.
-{{% /md %}}</dd>
-    <dt class="property-required"
+{{% /md %}}</dd><dt class="property-required"
             title="Required">
         <span id="deploymentid_csharp">
 <a href="#deploymentid_csharp" style="color: inherit; text-decoration: inherit;">Deployment<wbr>Id</a>
@@ -487,8 +477,7 @@ The GameServerConfig resource accepts the following [input]({{< relref "/docs/in
         <span class="property-type">string</span>
     </dt>
     <dd>{{% md %}}A unique id for the deployment.
-{{% /md %}}</dd>
-    <dt class="property-required"
+{{% /md %}}</dd><dt class="property-required"
             title="Required">
         <span id="fleetconfigs_csharp">
 <a href="#fleetconfigs_csharp" style="color: inherit; text-decoration: inherit;">Fleet<wbr>Configs</a>
@@ -499,8 +488,7 @@ The GameServerConfig resource accepts the following [input]({{< relref "/docs/in
     <dd>{{% md %}}The fleet config contains list of fleet specs. In the Single Cloud, there
 will be only one.
 Structure is documented below.
-{{% /md %}}</dd>
-    <dt class="property-optional"
+{{% /md %}}</dd><dt class="property-optional"
             title="Optional">
         <span id="description_csharp">
 <a href="#description_csharp" style="color: inherit; text-decoration: inherit;">Description</a>
@@ -509,8 +497,7 @@ Structure is documented below.
         <span class="property-type">string</span>
     </dt>
     <dd>{{% md %}}The description of the game server config.
-{{% /md %}}</dd>
-    <dt class="property-optional"
+{{% /md %}}</dd><dt class="property-optional"
             title="Optional">
         <span id="labels_csharp">
 <a href="#labels_csharp" style="color: inherit; text-decoration: inherit;">Labels</a>
@@ -519,8 +506,7 @@ Structure is documented below.
         <span class="property-type">Dictionary&lt;string, string&gt;</span>
     </dt>
     <dd>{{% md %}}Set of labels to group by.
-{{% /md %}}</dd>
-    <dt class="property-optional"
+{{% /md %}}</dd><dt class="property-optional"
             title="Optional">
         <span id="location_csharp">
 <a href="#location_csharp" style="color: inherit; text-decoration: inherit;">Location</a>
@@ -529,8 +515,7 @@ Structure is documented below.
         <span class="property-type">string</span>
     </dt>
     <dd>{{% md %}}Location of the Deployment.
-{{% /md %}}</dd>
-    <dt class="property-optional"
+{{% /md %}}</dd><dt class="property-optional"
             title="Optional">
         <span id="project_csharp">
 <a href="#project_csharp" style="color: inherit; text-decoration: inherit;">Project</a>
@@ -540,8 +525,7 @@ Structure is documented below.
     </dt>
     <dd>{{% md %}}The ID of the project in which the resource belongs.
 If it is not provided, the provider project is used.
-{{% /md %}}</dd>
-    <dt class="property-optional"
+{{% /md %}}</dd><dt class="property-optional"
             title="Optional">
         <span id="scalingconfigs_csharp">
 <a href="#scalingconfigs_csharp" style="color: inherit; text-decoration: inherit;">Scaling<wbr>Configs</a>
@@ -551,14 +535,11 @@ If it is not provided, the provider project is used.
     </dt>
     <dd>{{% md %}}Optional. This contains the autoscaling settings.
 Structure is documented below.
-{{% /md %}}</dd>
-</dl>
+{{% /md %}}</dd></dl>
 {{% /choosable %}}
 
 {{% choosable language go %}}
-<dl class="resources-properties">
-
-    <dt class="property-required"
+<dl class="resources-properties"><dt class="property-required"
             title="Required">
         <span id="configid_go">
 <a href="#configid_go" style="color: inherit; text-decoration: inherit;">Config<wbr>Id</a>
@@ -567,8 +548,7 @@ Structure is documented below.
         <span class="property-type">string</span>
     </dt>
     <dd>{{% md %}}A unique id for the deployment config.
-{{% /md %}}</dd>
-    <dt class="property-required"
+{{% /md %}}</dd><dt class="property-required"
             title="Required">
         <span id="deploymentid_go">
 <a href="#deploymentid_go" style="color: inherit; text-decoration: inherit;">Deployment<wbr>Id</a>
@@ -577,8 +557,7 @@ Structure is documented below.
         <span class="property-type">string</span>
     </dt>
     <dd>{{% md %}}A unique id for the deployment.
-{{% /md %}}</dd>
-    <dt class="property-required"
+{{% /md %}}</dd><dt class="property-required"
             title="Required">
         <span id="fleetconfigs_go">
 <a href="#fleetconfigs_go" style="color: inherit; text-decoration: inherit;">Fleet<wbr>Configs</a>
@@ -589,8 +568,7 @@ Structure is documented below.
     <dd>{{% md %}}The fleet config contains list of fleet specs. In the Single Cloud, there
 will be only one.
 Structure is documented below.
-{{% /md %}}</dd>
-    <dt class="property-optional"
+{{% /md %}}</dd><dt class="property-optional"
             title="Optional">
         <span id="description_go">
 <a href="#description_go" style="color: inherit; text-decoration: inherit;">Description</a>
@@ -599,8 +577,7 @@ Structure is documented below.
         <span class="property-type">string</span>
     </dt>
     <dd>{{% md %}}The description of the game server config.
-{{% /md %}}</dd>
-    <dt class="property-optional"
+{{% /md %}}</dd><dt class="property-optional"
             title="Optional">
         <span id="labels_go">
 <a href="#labels_go" style="color: inherit; text-decoration: inherit;">Labels</a>
@@ -609,8 +586,7 @@ Structure is documented below.
         <span class="property-type">map[string]string</span>
     </dt>
     <dd>{{% md %}}Set of labels to group by.
-{{% /md %}}</dd>
-    <dt class="property-optional"
+{{% /md %}}</dd><dt class="property-optional"
             title="Optional">
         <span id="location_go">
 <a href="#location_go" style="color: inherit; text-decoration: inherit;">Location</a>
@@ -619,8 +595,7 @@ Structure is documented below.
         <span class="property-type">string</span>
     </dt>
     <dd>{{% md %}}Location of the Deployment.
-{{% /md %}}</dd>
-    <dt class="property-optional"
+{{% /md %}}</dd><dt class="property-optional"
             title="Optional">
         <span id="project_go">
 <a href="#project_go" style="color: inherit; text-decoration: inherit;">Project</a>
@@ -630,8 +605,7 @@ Structure is documented below.
     </dt>
     <dd>{{% md %}}The ID of the project in which the resource belongs.
 If it is not provided, the provider project is used.
-{{% /md %}}</dd>
-    <dt class="property-optional"
+{{% /md %}}</dd><dt class="property-optional"
             title="Optional">
         <span id="scalingconfigs_go">
 <a href="#scalingconfigs_go" style="color: inherit; text-decoration: inherit;">Scaling<wbr>Configs</a>
@@ -641,14 +615,11 @@ If it is not provided, the provider project is used.
     </dt>
     <dd>{{% md %}}Optional. This contains the autoscaling settings.
 Structure is documented below.
-{{% /md %}}</dd>
-</dl>
+{{% /md %}}</dd></dl>
 {{% /choosable %}}
 
 {{% choosable language nodejs %}}
-<dl class="resources-properties">
-
-    <dt class="property-required"
+<dl class="resources-properties"><dt class="property-required"
             title="Required">
         <span id="configid_nodejs">
 <a href="#configid_nodejs" style="color: inherit; text-decoration: inherit;">config<wbr>Id</a>
@@ -657,8 +628,7 @@ Structure is documented below.
         <span class="property-type">string</span>
     </dt>
     <dd>{{% md %}}A unique id for the deployment config.
-{{% /md %}}</dd>
-    <dt class="property-required"
+{{% /md %}}</dd><dt class="property-required"
             title="Required">
         <span id="deploymentid_nodejs">
 <a href="#deploymentid_nodejs" style="color: inherit; text-decoration: inherit;">deployment<wbr>Id</a>
@@ -667,8 +637,7 @@ Structure is documented below.
         <span class="property-type">string</span>
     </dt>
     <dd>{{% md %}}A unique id for the deployment.
-{{% /md %}}</dd>
-    <dt class="property-required"
+{{% /md %}}</dd><dt class="property-required"
             title="Required">
         <span id="fleetconfigs_nodejs">
 <a href="#fleetconfigs_nodejs" style="color: inherit; text-decoration: inherit;">fleet<wbr>Configs</a>
@@ -679,8 +648,7 @@ Structure is documented below.
     <dd>{{% md %}}The fleet config contains list of fleet specs. In the Single Cloud, there
 will be only one.
 Structure is documented below.
-{{% /md %}}</dd>
-    <dt class="property-optional"
+{{% /md %}}</dd><dt class="property-optional"
             title="Optional">
         <span id="description_nodejs">
 <a href="#description_nodejs" style="color: inherit; text-decoration: inherit;">description</a>
@@ -689,8 +657,7 @@ Structure is documented below.
         <span class="property-type">string</span>
     </dt>
     <dd>{{% md %}}The description of the game server config.
-{{% /md %}}</dd>
-    <dt class="property-optional"
+{{% /md %}}</dd><dt class="property-optional"
             title="Optional">
         <span id="labels_nodejs">
 <a href="#labels_nodejs" style="color: inherit; text-decoration: inherit;">labels</a>
@@ -699,8 +666,7 @@ Structure is documented below.
         <span class="property-type">{[key: string]: string}</span>
     </dt>
     <dd>{{% md %}}Set of labels to group by.
-{{% /md %}}</dd>
-    <dt class="property-optional"
+{{% /md %}}</dd><dt class="property-optional"
             title="Optional">
         <span id="location_nodejs">
 <a href="#location_nodejs" style="color: inherit; text-decoration: inherit;">location</a>
@@ -709,8 +675,7 @@ Structure is documented below.
         <span class="property-type">string</span>
     </dt>
     <dd>{{% md %}}Location of the Deployment.
-{{% /md %}}</dd>
-    <dt class="property-optional"
+{{% /md %}}</dd><dt class="property-optional"
             title="Optional">
         <span id="project_nodejs">
 <a href="#project_nodejs" style="color: inherit; text-decoration: inherit;">project</a>
@@ -720,8 +685,7 @@ Structure is documented below.
     </dt>
     <dd>{{% md %}}The ID of the project in which the resource belongs.
 If it is not provided, the provider project is used.
-{{% /md %}}</dd>
-    <dt class="property-optional"
+{{% /md %}}</dd><dt class="property-optional"
             title="Optional">
         <span id="scalingconfigs_nodejs">
 <a href="#scalingconfigs_nodejs" style="color: inherit; text-decoration: inherit;">scaling<wbr>Configs</a>
@@ -731,14 +695,11 @@ If it is not provided, the provider project is used.
     </dt>
     <dd>{{% md %}}Optional. This contains the autoscaling settings.
 Structure is documented below.
-{{% /md %}}</dd>
-</dl>
+{{% /md %}}</dd></dl>
 {{% /choosable %}}
 
 {{% choosable language python %}}
-<dl class="resources-properties">
-
-    <dt class="property-required"
+<dl class="resources-properties"><dt class="property-required"
             title="Required">
         <span id="config_id_python">
 <a href="#config_id_python" style="color: inherit; text-decoration: inherit;">config_<wbr>id</a>
@@ -747,8 +708,7 @@ Structure is documented below.
         <span class="property-type">str</span>
     </dt>
     <dd>{{% md %}}A unique id for the deployment config.
-{{% /md %}}</dd>
-    <dt class="property-required"
+{{% /md %}}</dd><dt class="property-required"
             title="Required">
         <span id="deployment_id_python">
 <a href="#deployment_id_python" style="color: inherit; text-decoration: inherit;">deployment_<wbr>id</a>
@@ -757,8 +717,7 @@ Structure is documented below.
         <span class="property-type">str</span>
     </dt>
     <dd>{{% md %}}A unique id for the deployment.
-{{% /md %}}</dd>
-    <dt class="property-required"
+{{% /md %}}</dd><dt class="property-required"
             title="Required">
         <span id="fleet_configs_python">
 <a href="#fleet_configs_python" style="color: inherit; text-decoration: inherit;">fleet_<wbr>configs</a>
@@ -769,8 +728,7 @@ Structure is documented below.
     <dd>{{% md %}}The fleet config contains list of fleet specs. In the Single Cloud, there
 will be only one.
 Structure is documented below.
-{{% /md %}}</dd>
-    <dt class="property-optional"
+{{% /md %}}</dd><dt class="property-optional"
             title="Optional">
         <span id="description_python">
 <a href="#description_python" style="color: inherit; text-decoration: inherit;">description</a>
@@ -779,8 +737,7 @@ Structure is documented below.
         <span class="property-type">str</span>
     </dt>
     <dd>{{% md %}}The description of the game server config.
-{{% /md %}}</dd>
-    <dt class="property-optional"
+{{% /md %}}</dd><dt class="property-optional"
             title="Optional">
         <span id="labels_python">
 <a href="#labels_python" style="color: inherit; text-decoration: inherit;">labels</a>
@@ -789,8 +746,7 @@ Structure is documented below.
         <span class="property-type">Mapping[str, str]</span>
     </dt>
     <dd>{{% md %}}Set of labels to group by.
-{{% /md %}}</dd>
-    <dt class="property-optional"
+{{% /md %}}</dd><dt class="property-optional"
             title="Optional">
         <span id="location_python">
 <a href="#location_python" style="color: inherit; text-decoration: inherit;">location</a>
@@ -799,8 +755,7 @@ Structure is documented below.
         <span class="property-type">str</span>
     </dt>
     <dd>{{% md %}}Location of the Deployment.
-{{% /md %}}</dd>
-    <dt class="property-optional"
+{{% /md %}}</dd><dt class="property-optional"
             title="Optional">
         <span id="project_python">
 <a href="#project_python" style="color: inherit; text-decoration: inherit;">project</a>
@@ -810,8 +765,7 @@ Structure is documented below.
     </dt>
     <dd>{{% md %}}The ID of the project in which the resource belongs.
 If it is not provided, the provider project is used.
-{{% /md %}}</dd>
-    <dt class="property-optional"
+{{% /md %}}</dd><dt class="property-optional"
             title="Optional">
         <span id="scaling_configs_python">
 <a href="#scaling_configs_python" style="color: inherit; text-decoration: inherit;">scaling_<wbr>configs</a>
@@ -821,8 +775,7 @@ If it is not provided, the provider project is used.
     </dt>
     <dd>{{% md %}}Optional. This contains the autoscaling settings.
 Structure is documented below.
-{{% /md %}}</dd>
-</dl>
+{{% /md %}}</dd></dl>
 {{% /choosable %}}
 
 
@@ -833,9 +786,7 @@ All [input](#inputs) properties are implicitly available as output properties. A
 
 
 {{% choosable language csharp %}}
-<dl class="resources-properties">
-
-    <dt class="property-"
+<dl class="resources-properties"><dt class="property-"
             title="">
         <span id="id_csharp">
 <a href="#id_csharp" style="color: inherit; text-decoration: inherit;">Id</a>
@@ -843,8 +794,7 @@ All [input](#inputs) properties are implicitly available as output properties. A
         <span class="property-indicator"></span>
         <span class="property-type">string</span>
     </dt>
-    <dd>{{% md %}}The provider-assigned unique ID for this managed resource.{{% /md %}}</dd>
-    <dt class="property-"
+    <dd>{{% md %}}The provider-assigned unique ID for this managed resource.{{% /md %}}</dd><dt class="property-"
             title="">
         <span id="name_csharp">
 <a href="#name_csharp" style="color: inherit; text-decoration: inherit;">Name</a>
@@ -853,14 +803,11 @@ All [input](#inputs) properties are implicitly available as output properties. A
         <span class="property-type">string</span>
     </dt>
     <dd>{{% md %}}The name of the ScalingConfig
-{{% /md %}}</dd>
-</dl>
+{{% /md %}}</dd></dl>
 {{% /choosable %}}
 
 {{% choosable language go %}}
-<dl class="resources-properties">
-
-    <dt class="property-"
+<dl class="resources-properties"><dt class="property-"
             title="">
         <span id="id_go">
 <a href="#id_go" style="color: inherit; text-decoration: inherit;">Id</a>
@@ -868,8 +815,7 @@ All [input](#inputs) properties are implicitly available as output properties. A
         <span class="property-indicator"></span>
         <span class="property-type">string</span>
     </dt>
-    <dd>{{% md %}}The provider-assigned unique ID for this managed resource.{{% /md %}}</dd>
-    <dt class="property-"
+    <dd>{{% md %}}The provider-assigned unique ID for this managed resource.{{% /md %}}</dd><dt class="property-"
             title="">
         <span id="name_go">
 <a href="#name_go" style="color: inherit; text-decoration: inherit;">Name</a>
@@ -878,14 +824,11 @@ All [input](#inputs) properties are implicitly available as output properties. A
         <span class="property-type">string</span>
     </dt>
     <dd>{{% md %}}The name of the ScalingConfig
-{{% /md %}}</dd>
-</dl>
+{{% /md %}}</dd></dl>
 {{% /choosable %}}
 
 {{% choosable language nodejs %}}
-<dl class="resources-properties">
-
-    <dt class="property-"
+<dl class="resources-properties"><dt class="property-"
             title="">
         <span id="id_nodejs">
 <a href="#id_nodejs" style="color: inherit; text-decoration: inherit;">id</a>
@@ -893,8 +836,7 @@ All [input](#inputs) properties are implicitly available as output properties. A
         <span class="property-indicator"></span>
         <span class="property-type">string</span>
     </dt>
-    <dd>{{% md %}}The provider-assigned unique ID for this managed resource.{{% /md %}}</dd>
-    <dt class="property-"
+    <dd>{{% md %}}The provider-assigned unique ID for this managed resource.{{% /md %}}</dd><dt class="property-"
             title="">
         <span id="name_nodejs">
 <a href="#name_nodejs" style="color: inherit; text-decoration: inherit;">name</a>
@@ -903,14 +845,11 @@ All [input](#inputs) properties are implicitly available as output properties. A
         <span class="property-type">string</span>
     </dt>
     <dd>{{% md %}}The name of the ScalingConfig
-{{% /md %}}</dd>
-</dl>
+{{% /md %}}</dd></dl>
 {{% /choosable %}}
 
 {{% choosable language python %}}
-<dl class="resources-properties">
-
-    <dt class="property-"
+<dl class="resources-properties"><dt class="property-"
             title="">
         <span id="id_python">
 <a href="#id_python" style="color: inherit; text-decoration: inherit;">id</a>
@@ -918,8 +857,7 @@ All [input](#inputs) properties are implicitly available as output properties. A
         <span class="property-indicator"></span>
         <span class="property-type">str</span>
     </dt>
-    <dd>{{% md %}}The provider-assigned unique ID for this managed resource.{{% /md %}}</dd>
-    <dt class="property-"
+    <dd>{{% md %}}The provider-assigned unique ID for this managed resource.{{% /md %}}</dd><dt class="property-"
             title="">
         <span id="name_python">
 <a href="#name_python" style="color: inherit; text-decoration: inherit;">name</a>
@@ -928,8 +866,7 @@ All [input](#inputs) properties are implicitly available as output properties. A
         <span class="property-type">str</span>
     </dt>
     <dd>{{% md %}}The name of the ScalingConfig
-{{% /md %}}</dd>
-</dl>
+{{% /md %}}</dd></dl>
 {{% /choosable %}}
 
 
@@ -1056,9 +993,7 @@ The following state arguments are supported:
 
 
 {{% choosable language csharp %}}
-<dl class="resources-properties">
-
-    <dt class="property-optional"
+<dl class="resources-properties"><dt class="property-optional"
             title="Optional">
         <span id="state_configid_csharp">
 <a href="#state_configid_csharp" style="color: inherit; text-decoration: inherit;">Config<wbr>Id</a>
@@ -1067,8 +1002,7 @@ The following state arguments are supported:
         <span class="property-type">string</span>
     </dt>
     <dd>{{% md %}}A unique id for the deployment config.
-{{% /md %}}</dd>
-    <dt class="property-optional"
+{{% /md %}}</dd><dt class="property-optional"
             title="Optional">
         <span id="state_deploymentid_csharp">
 <a href="#state_deploymentid_csharp" style="color: inherit; text-decoration: inherit;">Deployment<wbr>Id</a>
@@ -1077,8 +1011,7 @@ The following state arguments are supported:
         <span class="property-type">string</span>
     </dt>
     <dd>{{% md %}}A unique id for the deployment.
-{{% /md %}}</dd>
-    <dt class="property-optional"
+{{% /md %}}</dd><dt class="property-optional"
             title="Optional">
         <span id="state_description_csharp">
 <a href="#state_description_csharp" style="color: inherit; text-decoration: inherit;">Description</a>
@@ -1087,8 +1020,7 @@ The following state arguments are supported:
         <span class="property-type">string</span>
     </dt>
     <dd>{{% md %}}The description of the game server config.
-{{% /md %}}</dd>
-    <dt class="property-optional"
+{{% /md %}}</dd><dt class="property-optional"
             title="Optional">
         <span id="state_fleetconfigs_csharp">
 <a href="#state_fleetconfigs_csharp" style="color: inherit; text-decoration: inherit;">Fleet<wbr>Configs</a>
@@ -1099,8 +1031,7 @@ The following state arguments are supported:
     <dd>{{% md %}}The fleet config contains list of fleet specs. In the Single Cloud, there
 will be only one.
 Structure is documented below.
-{{% /md %}}</dd>
-    <dt class="property-optional"
+{{% /md %}}</dd><dt class="property-optional"
             title="Optional">
         <span id="state_labels_csharp">
 <a href="#state_labels_csharp" style="color: inherit; text-decoration: inherit;">Labels</a>
@@ -1109,8 +1040,7 @@ Structure is documented below.
         <span class="property-type">Dictionary&lt;string, string&gt;</span>
     </dt>
     <dd>{{% md %}}Set of labels to group by.
-{{% /md %}}</dd>
-    <dt class="property-optional"
+{{% /md %}}</dd><dt class="property-optional"
             title="Optional">
         <span id="state_location_csharp">
 <a href="#state_location_csharp" style="color: inherit; text-decoration: inherit;">Location</a>
@@ -1119,8 +1049,7 @@ Structure is documented below.
         <span class="property-type">string</span>
     </dt>
     <dd>{{% md %}}Location of the Deployment.
-{{% /md %}}</dd>
-    <dt class="property-optional"
+{{% /md %}}</dd><dt class="property-optional"
             title="Optional">
         <span id="state_name_csharp">
 <a href="#state_name_csharp" style="color: inherit; text-decoration: inherit;">Name</a>
@@ -1129,8 +1058,7 @@ Structure is documented below.
         <span class="property-type">string</span>
     </dt>
     <dd>{{% md %}}The name of the ScalingConfig
-{{% /md %}}</dd>
-    <dt class="property-optional"
+{{% /md %}}</dd><dt class="property-optional"
             title="Optional">
         <span id="state_project_csharp">
 <a href="#state_project_csharp" style="color: inherit; text-decoration: inherit;">Project</a>
@@ -1140,8 +1068,7 @@ Structure is documented below.
     </dt>
     <dd>{{% md %}}The ID of the project in which the resource belongs.
 If it is not provided, the provider project is used.
-{{% /md %}}</dd>
-    <dt class="property-optional"
+{{% /md %}}</dd><dt class="property-optional"
             title="Optional">
         <span id="state_scalingconfigs_csharp">
 <a href="#state_scalingconfigs_csharp" style="color: inherit; text-decoration: inherit;">Scaling<wbr>Configs</a>
@@ -1151,14 +1078,11 @@ If it is not provided, the provider project is used.
     </dt>
     <dd>{{% md %}}Optional. This contains the autoscaling settings.
 Structure is documented below.
-{{% /md %}}</dd>
-</dl>
+{{% /md %}}</dd></dl>
 {{% /choosable %}}
 
 {{% choosable language go %}}
-<dl class="resources-properties">
-
-    <dt class="property-optional"
+<dl class="resources-properties"><dt class="property-optional"
             title="Optional">
         <span id="state_configid_go">
 <a href="#state_configid_go" style="color: inherit; text-decoration: inherit;">Config<wbr>Id</a>
@@ -1167,8 +1091,7 @@ Structure is documented below.
         <span class="property-type">string</span>
     </dt>
     <dd>{{% md %}}A unique id for the deployment config.
-{{% /md %}}</dd>
-    <dt class="property-optional"
+{{% /md %}}</dd><dt class="property-optional"
             title="Optional">
         <span id="state_deploymentid_go">
 <a href="#state_deploymentid_go" style="color: inherit; text-decoration: inherit;">Deployment<wbr>Id</a>
@@ -1177,8 +1100,7 @@ Structure is documented below.
         <span class="property-type">string</span>
     </dt>
     <dd>{{% md %}}A unique id for the deployment.
-{{% /md %}}</dd>
-    <dt class="property-optional"
+{{% /md %}}</dd><dt class="property-optional"
             title="Optional">
         <span id="state_description_go">
 <a href="#state_description_go" style="color: inherit; text-decoration: inherit;">Description</a>
@@ -1187,8 +1109,7 @@ Structure is documented below.
         <span class="property-type">string</span>
     </dt>
     <dd>{{% md %}}The description of the game server config.
-{{% /md %}}</dd>
-    <dt class="property-optional"
+{{% /md %}}</dd><dt class="property-optional"
             title="Optional">
         <span id="state_fleetconfigs_go">
 <a href="#state_fleetconfigs_go" style="color: inherit; text-decoration: inherit;">Fleet<wbr>Configs</a>
@@ -1199,8 +1120,7 @@ Structure is documented below.
     <dd>{{% md %}}The fleet config contains list of fleet specs. In the Single Cloud, there
 will be only one.
 Structure is documented below.
-{{% /md %}}</dd>
-    <dt class="property-optional"
+{{% /md %}}</dd><dt class="property-optional"
             title="Optional">
         <span id="state_labels_go">
 <a href="#state_labels_go" style="color: inherit; text-decoration: inherit;">Labels</a>
@@ -1209,8 +1129,7 @@ Structure is documented below.
         <span class="property-type">map[string]string</span>
     </dt>
     <dd>{{% md %}}Set of labels to group by.
-{{% /md %}}</dd>
-    <dt class="property-optional"
+{{% /md %}}</dd><dt class="property-optional"
             title="Optional">
         <span id="state_location_go">
 <a href="#state_location_go" style="color: inherit; text-decoration: inherit;">Location</a>
@@ -1219,8 +1138,7 @@ Structure is documented below.
         <span class="property-type">string</span>
     </dt>
     <dd>{{% md %}}Location of the Deployment.
-{{% /md %}}</dd>
-    <dt class="property-optional"
+{{% /md %}}</dd><dt class="property-optional"
             title="Optional">
         <span id="state_name_go">
 <a href="#state_name_go" style="color: inherit; text-decoration: inherit;">Name</a>
@@ -1229,8 +1147,7 @@ Structure is documented below.
         <span class="property-type">string</span>
     </dt>
     <dd>{{% md %}}The name of the ScalingConfig
-{{% /md %}}</dd>
-    <dt class="property-optional"
+{{% /md %}}</dd><dt class="property-optional"
             title="Optional">
         <span id="state_project_go">
 <a href="#state_project_go" style="color: inherit; text-decoration: inherit;">Project</a>
@@ -1240,8 +1157,7 @@ Structure is documented below.
     </dt>
     <dd>{{% md %}}The ID of the project in which the resource belongs.
 If it is not provided, the provider project is used.
-{{% /md %}}</dd>
-    <dt class="property-optional"
+{{% /md %}}</dd><dt class="property-optional"
             title="Optional">
         <span id="state_scalingconfigs_go">
 <a href="#state_scalingconfigs_go" style="color: inherit; text-decoration: inherit;">Scaling<wbr>Configs</a>
@@ -1251,14 +1167,11 @@ If it is not provided, the provider project is used.
     </dt>
     <dd>{{% md %}}Optional. This contains the autoscaling settings.
 Structure is documented below.
-{{% /md %}}</dd>
-</dl>
+{{% /md %}}</dd></dl>
 {{% /choosable %}}
 
 {{% choosable language nodejs %}}
-<dl class="resources-properties">
-
-    <dt class="property-optional"
+<dl class="resources-properties"><dt class="property-optional"
             title="Optional">
         <span id="state_configid_nodejs">
 <a href="#state_configid_nodejs" style="color: inherit; text-decoration: inherit;">config<wbr>Id</a>
@@ -1267,8 +1180,7 @@ Structure is documented below.
         <span class="property-type">string</span>
     </dt>
     <dd>{{% md %}}A unique id for the deployment config.
-{{% /md %}}</dd>
-    <dt class="property-optional"
+{{% /md %}}</dd><dt class="property-optional"
             title="Optional">
         <span id="state_deploymentid_nodejs">
 <a href="#state_deploymentid_nodejs" style="color: inherit; text-decoration: inherit;">deployment<wbr>Id</a>
@@ -1277,8 +1189,7 @@ Structure is documented below.
         <span class="property-type">string</span>
     </dt>
     <dd>{{% md %}}A unique id for the deployment.
-{{% /md %}}</dd>
-    <dt class="property-optional"
+{{% /md %}}</dd><dt class="property-optional"
             title="Optional">
         <span id="state_description_nodejs">
 <a href="#state_description_nodejs" style="color: inherit; text-decoration: inherit;">description</a>
@@ -1287,8 +1198,7 @@ Structure is documented below.
         <span class="property-type">string</span>
     </dt>
     <dd>{{% md %}}The description of the game server config.
-{{% /md %}}</dd>
-    <dt class="property-optional"
+{{% /md %}}</dd><dt class="property-optional"
             title="Optional">
         <span id="state_fleetconfigs_nodejs">
 <a href="#state_fleetconfigs_nodejs" style="color: inherit; text-decoration: inherit;">fleet<wbr>Configs</a>
@@ -1299,8 +1209,7 @@ Structure is documented below.
     <dd>{{% md %}}The fleet config contains list of fleet specs. In the Single Cloud, there
 will be only one.
 Structure is documented below.
-{{% /md %}}</dd>
-    <dt class="property-optional"
+{{% /md %}}</dd><dt class="property-optional"
             title="Optional">
         <span id="state_labels_nodejs">
 <a href="#state_labels_nodejs" style="color: inherit; text-decoration: inherit;">labels</a>
@@ -1309,8 +1218,7 @@ Structure is documented below.
         <span class="property-type">{[key: string]: string}</span>
     </dt>
     <dd>{{% md %}}Set of labels to group by.
-{{% /md %}}</dd>
-    <dt class="property-optional"
+{{% /md %}}</dd><dt class="property-optional"
             title="Optional">
         <span id="state_location_nodejs">
 <a href="#state_location_nodejs" style="color: inherit; text-decoration: inherit;">location</a>
@@ -1319,8 +1227,7 @@ Structure is documented below.
         <span class="property-type">string</span>
     </dt>
     <dd>{{% md %}}Location of the Deployment.
-{{% /md %}}</dd>
-    <dt class="property-optional"
+{{% /md %}}</dd><dt class="property-optional"
             title="Optional">
         <span id="state_name_nodejs">
 <a href="#state_name_nodejs" style="color: inherit; text-decoration: inherit;">name</a>
@@ -1329,8 +1236,7 @@ Structure is documented below.
         <span class="property-type">string</span>
     </dt>
     <dd>{{% md %}}The name of the ScalingConfig
-{{% /md %}}</dd>
-    <dt class="property-optional"
+{{% /md %}}</dd><dt class="property-optional"
             title="Optional">
         <span id="state_project_nodejs">
 <a href="#state_project_nodejs" style="color: inherit; text-decoration: inherit;">project</a>
@@ -1340,8 +1246,7 @@ Structure is documented below.
     </dt>
     <dd>{{% md %}}The ID of the project in which the resource belongs.
 If it is not provided, the provider project is used.
-{{% /md %}}</dd>
-    <dt class="property-optional"
+{{% /md %}}</dd><dt class="property-optional"
             title="Optional">
         <span id="state_scalingconfigs_nodejs">
 <a href="#state_scalingconfigs_nodejs" style="color: inherit; text-decoration: inherit;">scaling<wbr>Configs</a>
@@ -1351,14 +1256,11 @@ If it is not provided, the provider project is used.
     </dt>
     <dd>{{% md %}}Optional. This contains the autoscaling settings.
 Structure is documented below.
-{{% /md %}}</dd>
-</dl>
+{{% /md %}}</dd></dl>
 {{% /choosable %}}
 
 {{% choosable language python %}}
-<dl class="resources-properties">
-
-    <dt class="property-optional"
+<dl class="resources-properties"><dt class="property-optional"
             title="Optional">
         <span id="state_config_id_python">
 <a href="#state_config_id_python" style="color: inherit; text-decoration: inherit;">config_<wbr>id</a>
@@ -1367,8 +1269,7 @@ Structure is documented below.
         <span class="property-type">str</span>
     </dt>
     <dd>{{% md %}}A unique id for the deployment config.
-{{% /md %}}</dd>
-    <dt class="property-optional"
+{{% /md %}}</dd><dt class="property-optional"
             title="Optional">
         <span id="state_deployment_id_python">
 <a href="#state_deployment_id_python" style="color: inherit; text-decoration: inherit;">deployment_<wbr>id</a>
@@ -1377,8 +1278,7 @@ Structure is documented below.
         <span class="property-type">str</span>
     </dt>
     <dd>{{% md %}}A unique id for the deployment.
-{{% /md %}}</dd>
-    <dt class="property-optional"
+{{% /md %}}</dd><dt class="property-optional"
             title="Optional">
         <span id="state_description_python">
 <a href="#state_description_python" style="color: inherit; text-decoration: inherit;">description</a>
@@ -1387,8 +1287,7 @@ Structure is documented below.
         <span class="property-type">str</span>
     </dt>
     <dd>{{% md %}}The description of the game server config.
-{{% /md %}}</dd>
-    <dt class="property-optional"
+{{% /md %}}</dd><dt class="property-optional"
             title="Optional">
         <span id="state_fleet_configs_python">
 <a href="#state_fleet_configs_python" style="color: inherit; text-decoration: inherit;">fleet_<wbr>configs</a>
@@ -1399,8 +1298,7 @@ Structure is documented below.
     <dd>{{% md %}}The fleet config contains list of fleet specs. In the Single Cloud, there
 will be only one.
 Structure is documented below.
-{{% /md %}}</dd>
-    <dt class="property-optional"
+{{% /md %}}</dd><dt class="property-optional"
             title="Optional">
         <span id="state_labels_python">
 <a href="#state_labels_python" style="color: inherit; text-decoration: inherit;">labels</a>
@@ -1409,8 +1307,7 @@ Structure is documented below.
         <span class="property-type">Mapping[str, str]</span>
     </dt>
     <dd>{{% md %}}Set of labels to group by.
-{{% /md %}}</dd>
-    <dt class="property-optional"
+{{% /md %}}</dd><dt class="property-optional"
             title="Optional">
         <span id="state_location_python">
 <a href="#state_location_python" style="color: inherit; text-decoration: inherit;">location</a>
@@ -1419,8 +1316,7 @@ Structure is documented below.
         <span class="property-type">str</span>
     </dt>
     <dd>{{% md %}}Location of the Deployment.
-{{% /md %}}</dd>
-    <dt class="property-optional"
+{{% /md %}}</dd><dt class="property-optional"
             title="Optional">
         <span id="state_name_python">
 <a href="#state_name_python" style="color: inherit; text-decoration: inherit;">name</a>
@@ -1429,8 +1325,7 @@ Structure is documented below.
         <span class="property-type">str</span>
     </dt>
     <dd>{{% md %}}The name of the ScalingConfig
-{{% /md %}}</dd>
-    <dt class="property-optional"
+{{% /md %}}</dd><dt class="property-optional"
             title="Optional">
         <span id="state_project_python">
 <a href="#state_project_python" style="color: inherit; text-decoration: inherit;">project</a>
@@ -1440,8 +1335,7 @@ Structure is documented below.
     </dt>
     <dd>{{% md %}}The ID of the project in which the resource belongs.
 If it is not provided, the provider project is used.
-{{% /md %}}</dd>
-    <dt class="property-optional"
+{{% /md %}}</dd><dt class="property-optional"
             title="Optional">
         <span id="state_scaling_configs_python">
 <a href="#state_scaling_configs_python" style="color: inherit; text-decoration: inherit;">scaling_<wbr>configs</a>
@@ -1451,8 +1345,7 @@ If it is not provided, the provider project is used.
     </dt>
     <dd>{{% md %}}Optional. This contains the autoscaling settings.
 Structure is documented below.
-{{% /md %}}</dd>
-</dl>
+{{% /md %}}</dd></dl>
 {{% /choosable %}}
 
 
@@ -1467,9 +1360,7 @@ Structure is documented below.
 <h4 id="gameserverconfigfleetconfig">Game<wbr>Server<wbr>Config<wbr>Fleet<wbr>Config</h4>
 
 {{% choosable language csharp %}}
-<dl class="resources-properties">
-
-    <dt class="property-required"
+<dl class="resources-properties"><dt class="property-required"
             title="Required">
         <span id="fleetspec_csharp">
 <a href="#fleetspec_csharp" style="color: inherit; text-decoration: inherit;">Fleet<wbr>Spec</a>
@@ -1484,8 +1375,7 @@ instead. File references can contain the json or yaml format of the fleet spec. 
 * fleet_spec = file("fleet_configs.json")
 The format of the spec can be found :
 `https://agones.dev/site/docs/reference/fleet/`.
-{{% /md %}}</dd>
-    <dt class="property-optional"
+{{% /md %}}</dd><dt class="property-optional"
             title="Optional">
         <span id="name_csharp">
 <a href="#name_csharp" style="color: inherit; text-decoration: inherit;">Name</a>
@@ -1494,14 +1384,11 @@ The format of the spec can be found :
         <span class="property-type">string</span>
     </dt>
     <dd>{{% md %}}The name of the ScalingConfig
-{{% /md %}}</dd>
-</dl>
+{{% /md %}}</dd></dl>
 {{% /choosable %}}
 
 {{% choosable language go %}}
-<dl class="resources-properties">
-
-    <dt class="property-required"
+<dl class="resources-properties"><dt class="property-required"
             title="Required">
         <span id="fleetspec_go">
 <a href="#fleetspec_go" style="color: inherit; text-decoration: inherit;">Fleet<wbr>Spec</a>
@@ -1516,8 +1403,7 @@ instead. File references can contain the json or yaml format of the fleet spec. 
 * fleet_spec = file("fleet_configs.json")
 The format of the spec can be found :
 `https://agones.dev/site/docs/reference/fleet/`.
-{{% /md %}}</dd>
-    <dt class="property-optional"
+{{% /md %}}</dd><dt class="property-optional"
             title="Optional">
         <span id="name_go">
 <a href="#name_go" style="color: inherit; text-decoration: inherit;">Name</a>
@@ -1526,14 +1412,11 @@ The format of the spec can be found :
         <span class="property-type">string</span>
     </dt>
     <dd>{{% md %}}The name of the ScalingConfig
-{{% /md %}}</dd>
-</dl>
+{{% /md %}}</dd></dl>
 {{% /choosable %}}
 
 {{% choosable language nodejs %}}
-<dl class="resources-properties">
-
-    <dt class="property-required"
+<dl class="resources-properties"><dt class="property-required"
             title="Required">
         <span id="fleetspec_nodejs">
 <a href="#fleetspec_nodejs" style="color: inherit; text-decoration: inherit;">fleet<wbr>Spec</a>
@@ -1548,8 +1431,7 @@ instead. File references can contain the json or yaml format of the fleet spec. 
 * fleet_spec = file("fleet_configs.json")
 The format of the spec can be found :
 `https://agones.dev/site/docs/reference/fleet/`.
-{{% /md %}}</dd>
-    <dt class="property-optional"
+{{% /md %}}</dd><dt class="property-optional"
             title="Optional">
         <span id="name_nodejs">
 <a href="#name_nodejs" style="color: inherit; text-decoration: inherit;">name</a>
@@ -1558,14 +1440,11 @@ The format of the spec can be found :
         <span class="property-type">string</span>
     </dt>
     <dd>{{% md %}}The name of the ScalingConfig
-{{% /md %}}</dd>
-</dl>
+{{% /md %}}</dd></dl>
 {{% /choosable %}}
 
 {{% choosable language python %}}
-<dl class="resources-properties">
-
-    <dt class="property-required"
+<dl class="resources-properties"><dt class="property-required"
             title="Required">
         <span id="fleet_spec_python">
 <a href="#fleet_spec_python" style="color: inherit; text-decoration: inherit;">fleet_<wbr>spec</a>
@@ -1580,8 +1459,7 @@ instead. File references can contain the json or yaml format of the fleet spec. 
 * fleet_spec = file("fleet_configs.json")
 The format of the spec can be found :
 `https://agones.dev/site/docs/reference/fleet/`.
-{{% /md %}}</dd>
-    <dt class="property-optional"
+{{% /md %}}</dd><dt class="property-optional"
             title="Optional">
         <span id="name_python">
 <a href="#name_python" style="color: inherit; text-decoration: inherit;">name</a>
@@ -1590,16 +1468,13 @@ The format of the spec can be found :
         <span class="property-type">str</span>
     </dt>
     <dd>{{% md %}}The name of the ScalingConfig
-{{% /md %}}</dd>
-</dl>
+{{% /md %}}</dd></dl>
 {{% /choosable %}}
 
 <h4 id="gameserverconfigscalingconfig">Game<wbr>Server<wbr>Config<wbr>Scaling<wbr>Config</h4>
 
 {{% choosable language csharp %}}
-<dl class="resources-properties">
-
-    <dt class="property-required"
+<dl class="resources-properties"><dt class="property-required"
             title="Required">
         <span id="fleetautoscalerspec_csharp">
 <a href="#fleetautoscalerspec_csharp" style="color: inherit; text-decoration: inherit;">Fleet<wbr>Autoscaler<wbr>Spec</a>
@@ -1610,8 +1485,7 @@ The format of the spec can be found :
     <dd>{{% md %}}Fleet autoscaler spec, which is sent to Agones.
 Example spec can be found :
 https://agones.dev/site/docs/reference/fleetautoscaler/
-{{% /md %}}</dd>
-    <dt class="property-required"
+{{% /md %}}</dd><dt class="property-required"
             title="Required">
         <span id="name_csharp">
 <a href="#name_csharp" style="color: inherit; text-decoration: inherit;">Name</a>
@@ -1620,8 +1494,7 @@ https://agones.dev/site/docs/reference/fleetautoscaler/
         <span class="property-type">string</span>
     </dt>
     <dd>{{% md %}}The name of the ScalingConfig
-{{% /md %}}</dd>
-    <dt class="property-optional"
+{{% /md %}}</dd><dt class="property-optional"
             title="Optional">
         <span id="schedules_csharp">
 <a href="#schedules_csharp" style="color: inherit; text-decoration: inherit;">Schedules</a>
@@ -1631,8 +1504,7 @@ https://agones.dev/site/docs/reference/fleetautoscaler/
     </dt>
     <dd>{{% md %}}The schedules to which this scaling config applies.
 Structure is documented below.
-{{% /md %}}</dd>
-    <dt class="property-optional"
+{{% /md %}}</dd><dt class="property-optional"
             title="Optional">
         <span id="selectors_csharp">
 <a href="#selectors_csharp" style="color: inherit; text-decoration: inherit;">Selectors</a>
@@ -1644,14 +1516,11 @@ Structure is documented below.
 applies. A cluster is subject to this scaling config if its labels match
 any of the selector entries.
 Structure is documented below.
-{{% /md %}}</dd>
-</dl>
+{{% /md %}}</dd></dl>
 {{% /choosable %}}
 
 {{% choosable language go %}}
-<dl class="resources-properties">
-
-    <dt class="property-required"
+<dl class="resources-properties"><dt class="property-required"
             title="Required">
         <span id="fleetautoscalerspec_go">
 <a href="#fleetautoscalerspec_go" style="color: inherit; text-decoration: inherit;">Fleet<wbr>Autoscaler<wbr>Spec</a>
@@ -1662,8 +1531,7 @@ Structure is documented below.
     <dd>{{% md %}}Fleet autoscaler spec, which is sent to Agones.
 Example spec can be found :
 https://agones.dev/site/docs/reference/fleetautoscaler/
-{{% /md %}}</dd>
-    <dt class="property-required"
+{{% /md %}}</dd><dt class="property-required"
             title="Required">
         <span id="name_go">
 <a href="#name_go" style="color: inherit; text-decoration: inherit;">Name</a>
@@ -1672,8 +1540,7 @@ https://agones.dev/site/docs/reference/fleetautoscaler/
         <span class="property-type">string</span>
     </dt>
     <dd>{{% md %}}The name of the ScalingConfig
-{{% /md %}}</dd>
-    <dt class="property-optional"
+{{% /md %}}</dd><dt class="property-optional"
             title="Optional">
         <span id="schedules_go">
 <a href="#schedules_go" style="color: inherit; text-decoration: inherit;">Schedules</a>
@@ -1683,8 +1550,7 @@ https://agones.dev/site/docs/reference/fleetautoscaler/
     </dt>
     <dd>{{% md %}}The schedules to which this scaling config applies.
 Structure is documented below.
-{{% /md %}}</dd>
-    <dt class="property-optional"
+{{% /md %}}</dd><dt class="property-optional"
             title="Optional">
         <span id="selectors_go">
 <a href="#selectors_go" style="color: inherit; text-decoration: inherit;">Selectors</a>
@@ -1696,14 +1562,11 @@ Structure is documented below.
 applies. A cluster is subject to this scaling config if its labels match
 any of the selector entries.
 Structure is documented below.
-{{% /md %}}</dd>
-</dl>
+{{% /md %}}</dd></dl>
 {{% /choosable %}}
 
 {{% choosable language nodejs %}}
-<dl class="resources-properties">
-
-    <dt class="property-required"
+<dl class="resources-properties"><dt class="property-required"
             title="Required">
         <span id="fleetautoscalerspec_nodejs">
 <a href="#fleetautoscalerspec_nodejs" style="color: inherit; text-decoration: inherit;">fleet<wbr>Autoscaler<wbr>Spec</a>
@@ -1714,8 +1577,7 @@ Structure is documented below.
     <dd>{{% md %}}Fleet autoscaler spec, which is sent to Agones.
 Example spec can be found :
 https://agones.dev/site/docs/reference/fleetautoscaler/
-{{% /md %}}</dd>
-    <dt class="property-required"
+{{% /md %}}</dd><dt class="property-required"
             title="Required">
         <span id="name_nodejs">
 <a href="#name_nodejs" style="color: inherit; text-decoration: inherit;">name</a>
@@ -1724,8 +1586,7 @@ https://agones.dev/site/docs/reference/fleetautoscaler/
         <span class="property-type">string</span>
     </dt>
     <dd>{{% md %}}The name of the ScalingConfig
-{{% /md %}}</dd>
-    <dt class="property-optional"
+{{% /md %}}</dd><dt class="property-optional"
             title="Optional">
         <span id="schedules_nodejs">
 <a href="#schedules_nodejs" style="color: inherit; text-decoration: inherit;">schedules</a>
@@ -1735,8 +1596,7 @@ https://agones.dev/site/docs/reference/fleetautoscaler/
     </dt>
     <dd>{{% md %}}The schedules to which this scaling config applies.
 Structure is documented below.
-{{% /md %}}</dd>
-    <dt class="property-optional"
+{{% /md %}}</dd><dt class="property-optional"
             title="Optional">
         <span id="selectors_nodejs">
 <a href="#selectors_nodejs" style="color: inherit; text-decoration: inherit;">selectors</a>
@@ -1748,14 +1608,11 @@ Structure is documented below.
 applies. A cluster is subject to this scaling config if its labels match
 any of the selector entries.
 Structure is documented below.
-{{% /md %}}</dd>
-</dl>
+{{% /md %}}</dd></dl>
 {{% /choosable %}}
 
 {{% choosable language python %}}
-<dl class="resources-properties">
-
-    <dt class="property-required"
+<dl class="resources-properties"><dt class="property-required"
             title="Required">
         <span id="fleet_autoscaler_spec_python">
 <a href="#fleet_autoscaler_spec_python" style="color: inherit; text-decoration: inherit;">fleet_<wbr>autoscaler_<wbr>spec</a>
@@ -1766,8 +1623,7 @@ Structure is documented below.
     <dd>{{% md %}}Fleet autoscaler spec, which is sent to Agones.
 Example spec can be found :
 https://agones.dev/site/docs/reference/fleetautoscaler/
-{{% /md %}}</dd>
-    <dt class="property-required"
+{{% /md %}}</dd><dt class="property-required"
             title="Required">
         <span id="name_python">
 <a href="#name_python" style="color: inherit; text-decoration: inherit;">name</a>
@@ -1776,8 +1632,7 @@ https://agones.dev/site/docs/reference/fleetautoscaler/
         <span class="property-type">str</span>
     </dt>
     <dd>{{% md %}}The name of the ScalingConfig
-{{% /md %}}</dd>
-    <dt class="property-optional"
+{{% /md %}}</dd><dt class="property-optional"
             title="Optional">
         <span id="schedules_python">
 <a href="#schedules_python" style="color: inherit; text-decoration: inherit;">schedules</a>
@@ -1787,8 +1642,7 @@ https://agones.dev/site/docs/reference/fleetautoscaler/
     </dt>
     <dd>{{% md %}}The schedules to which this scaling config applies.
 Structure is documented below.
-{{% /md %}}</dd>
-    <dt class="property-optional"
+{{% /md %}}</dd><dt class="property-optional"
             title="Optional">
         <span id="selectors_python">
 <a href="#selectors_python" style="color: inherit; text-decoration: inherit;">selectors</a>
@@ -1800,16 +1654,13 @@ Structure is documented below.
 applies. A cluster is subject to this scaling config if its labels match
 any of the selector entries.
 Structure is documented below.
-{{% /md %}}</dd>
-</dl>
+{{% /md %}}</dd></dl>
 {{% /choosable %}}
 
 <h4 id="gameserverconfigscalingconfigschedule">Game<wbr>Server<wbr>Config<wbr>Scaling<wbr>Config<wbr>Schedule</h4>
 
 {{% choosable language csharp %}}
-<dl class="resources-properties">
-
-    <dt class="property-optional"
+<dl class="resources-properties"><dt class="property-optional"
             title="Optional">
         <span id="cronjobduration_csharp">
 <a href="#cronjobduration_csharp" style="color: inherit; text-decoration: inherit;">Cron<wbr>Job<wbr>Duration</a>
@@ -1820,8 +1671,7 @@ Structure is documented below.
     <dd>{{% md %}}The duration for the cron job event. The duration of the event is effective
 after the cron job's start time.
 A duration in seconds with up to nine fractional digits, terminated by 's'. Example: "3.5s".
-{{% /md %}}</dd>
-    <dt class="property-optional"
+{{% /md %}}</dd><dt class="property-optional"
             title="Optional">
         <span id="cronspec_csharp">
 <a href="#cronspec_csharp" style="color: inherit; text-decoration: inherit;">Cron<wbr>Spec</a>
@@ -1832,8 +1682,7 @@ A duration in seconds with up to nine fractional digits, terminated by 's'. Exam
     <dd>{{% md %}}The cron definition of the scheduled event. See
 https://en.wikipedia.org/wiki/Cron. Cron spec specifies the local time as
 defined by the realm.
-{{% /md %}}</dd>
-    <dt class="property-optional"
+{{% /md %}}</dd><dt class="property-optional"
             title="Optional">
         <span id="endtime_csharp">
 <a href="#endtime_csharp" style="color: inherit; text-decoration: inherit;">End<wbr>Time</a>
@@ -1843,8 +1692,7 @@ defined by the realm.
     </dt>
     <dd>{{% md %}}The end time of the event.
 A timestamp in RFC3339 UTC "Zulu" format, accurate to nanoseconds. Example: "2014-10-02T15:01:23.045123456Z".
-{{% /md %}}</dd>
-    <dt class="property-optional"
+{{% /md %}}</dd><dt class="property-optional"
             title="Optional">
         <span id="starttime_csharp">
 <a href="#starttime_csharp" style="color: inherit; text-decoration: inherit;">Start<wbr>Time</a>
@@ -1854,14 +1702,11 @@ A timestamp in RFC3339 UTC "Zulu" format, accurate to nanoseconds. Example: "201
     </dt>
     <dd>{{% md %}}The start time of the event.
 A timestamp in RFC3339 UTC "Zulu" format, accurate to nanoseconds. Example: "2014-10-02T15:01:23.045123456Z".
-{{% /md %}}</dd>
-</dl>
+{{% /md %}}</dd></dl>
 {{% /choosable %}}
 
 {{% choosable language go %}}
-<dl class="resources-properties">
-
-    <dt class="property-optional"
+<dl class="resources-properties"><dt class="property-optional"
             title="Optional">
         <span id="cronjobduration_go">
 <a href="#cronjobduration_go" style="color: inherit; text-decoration: inherit;">Cron<wbr>Job<wbr>Duration</a>
@@ -1872,8 +1717,7 @@ A timestamp in RFC3339 UTC "Zulu" format, accurate to nanoseconds. Example: "201
     <dd>{{% md %}}The duration for the cron job event. The duration of the event is effective
 after the cron job's start time.
 A duration in seconds with up to nine fractional digits, terminated by 's'. Example: "3.5s".
-{{% /md %}}</dd>
-    <dt class="property-optional"
+{{% /md %}}</dd><dt class="property-optional"
             title="Optional">
         <span id="cronspec_go">
 <a href="#cronspec_go" style="color: inherit; text-decoration: inherit;">Cron<wbr>Spec</a>
@@ -1884,8 +1728,7 @@ A duration in seconds with up to nine fractional digits, terminated by 's'. Exam
     <dd>{{% md %}}The cron definition of the scheduled event. See
 https://en.wikipedia.org/wiki/Cron. Cron spec specifies the local time as
 defined by the realm.
-{{% /md %}}</dd>
-    <dt class="property-optional"
+{{% /md %}}</dd><dt class="property-optional"
             title="Optional">
         <span id="endtime_go">
 <a href="#endtime_go" style="color: inherit; text-decoration: inherit;">End<wbr>Time</a>
@@ -1895,8 +1738,7 @@ defined by the realm.
     </dt>
     <dd>{{% md %}}The end time of the event.
 A timestamp in RFC3339 UTC "Zulu" format, accurate to nanoseconds. Example: "2014-10-02T15:01:23.045123456Z".
-{{% /md %}}</dd>
-    <dt class="property-optional"
+{{% /md %}}</dd><dt class="property-optional"
             title="Optional">
         <span id="starttime_go">
 <a href="#starttime_go" style="color: inherit; text-decoration: inherit;">Start<wbr>Time</a>
@@ -1906,14 +1748,11 @@ A timestamp in RFC3339 UTC "Zulu" format, accurate to nanoseconds. Example: "201
     </dt>
     <dd>{{% md %}}The start time of the event.
 A timestamp in RFC3339 UTC "Zulu" format, accurate to nanoseconds. Example: "2014-10-02T15:01:23.045123456Z".
-{{% /md %}}</dd>
-</dl>
+{{% /md %}}</dd></dl>
 {{% /choosable %}}
 
 {{% choosable language nodejs %}}
-<dl class="resources-properties">
-
-    <dt class="property-optional"
+<dl class="resources-properties"><dt class="property-optional"
             title="Optional">
         <span id="cronjobduration_nodejs">
 <a href="#cronjobduration_nodejs" style="color: inherit; text-decoration: inherit;">cron<wbr>Job<wbr>Duration</a>
@@ -1924,8 +1763,7 @@ A timestamp in RFC3339 UTC "Zulu" format, accurate to nanoseconds. Example: "201
     <dd>{{% md %}}The duration for the cron job event. The duration of the event is effective
 after the cron job's start time.
 A duration in seconds with up to nine fractional digits, terminated by 's'. Example: "3.5s".
-{{% /md %}}</dd>
-    <dt class="property-optional"
+{{% /md %}}</dd><dt class="property-optional"
             title="Optional">
         <span id="cronspec_nodejs">
 <a href="#cronspec_nodejs" style="color: inherit; text-decoration: inherit;">cron<wbr>Spec</a>
@@ -1936,8 +1774,7 @@ A duration in seconds with up to nine fractional digits, terminated by 's'. Exam
     <dd>{{% md %}}The cron definition of the scheduled event. See
 https://en.wikipedia.org/wiki/Cron. Cron spec specifies the local time as
 defined by the realm.
-{{% /md %}}</dd>
-    <dt class="property-optional"
+{{% /md %}}</dd><dt class="property-optional"
             title="Optional">
         <span id="endtime_nodejs">
 <a href="#endtime_nodejs" style="color: inherit; text-decoration: inherit;">end<wbr>Time</a>
@@ -1947,8 +1784,7 @@ defined by the realm.
     </dt>
     <dd>{{% md %}}The end time of the event.
 A timestamp in RFC3339 UTC "Zulu" format, accurate to nanoseconds. Example: "2014-10-02T15:01:23.045123456Z".
-{{% /md %}}</dd>
-    <dt class="property-optional"
+{{% /md %}}</dd><dt class="property-optional"
             title="Optional">
         <span id="starttime_nodejs">
 <a href="#starttime_nodejs" style="color: inherit; text-decoration: inherit;">start<wbr>Time</a>
@@ -1958,14 +1794,11 @@ A timestamp in RFC3339 UTC "Zulu" format, accurate to nanoseconds. Example: "201
     </dt>
     <dd>{{% md %}}The start time of the event.
 A timestamp in RFC3339 UTC "Zulu" format, accurate to nanoseconds. Example: "2014-10-02T15:01:23.045123456Z".
-{{% /md %}}</dd>
-</dl>
+{{% /md %}}</dd></dl>
 {{% /choosable %}}
 
 {{% choosable language python %}}
-<dl class="resources-properties">
-
-    <dt class="property-optional"
+<dl class="resources-properties"><dt class="property-optional"
             title="Optional">
         <span id="cron_job_duration_python">
 <a href="#cron_job_duration_python" style="color: inherit; text-decoration: inherit;">cron_<wbr>job_<wbr>duration</a>
@@ -1976,8 +1809,7 @@ A timestamp in RFC3339 UTC "Zulu" format, accurate to nanoseconds. Example: "201
     <dd>{{% md %}}The duration for the cron job event. The duration of the event is effective
 after the cron job's start time.
 A duration in seconds with up to nine fractional digits, terminated by 's'. Example: "3.5s".
-{{% /md %}}</dd>
-    <dt class="property-optional"
+{{% /md %}}</dd><dt class="property-optional"
             title="Optional">
         <span id="cron_spec_python">
 <a href="#cron_spec_python" style="color: inherit; text-decoration: inherit;">cron_<wbr>spec</a>
@@ -1988,8 +1820,7 @@ A duration in seconds with up to nine fractional digits, terminated by 's'. Exam
     <dd>{{% md %}}The cron definition of the scheduled event. See
 https://en.wikipedia.org/wiki/Cron. Cron spec specifies the local time as
 defined by the realm.
-{{% /md %}}</dd>
-    <dt class="property-optional"
+{{% /md %}}</dd><dt class="property-optional"
             title="Optional">
         <span id="end_time_python">
 <a href="#end_time_python" style="color: inherit; text-decoration: inherit;">end_<wbr>time</a>
@@ -1999,8 +1830,7 @@ defined by the realm.
     </dt>
     <dd>{{% md %}}The end time of the event.
 A timestamp in RFC3339 UTC "Zulu" format, accurate to nanoseconds. Example: "2014-10-02T15:01:23.045123456Z".
-{{% /md %}}</dd>
-    <dt class="property-optional"
+{{% /md %}}</dd><dt class="property-optional"
             title="Optional">
         <span id="start_time_python">
 <a href="#start_time_python" style="color: inherit; text-decoration: inherit;">start_<wbr>time</a>
@@ -2010,16 +1840,13 @@ A timestamp in RFC3339 UTC "Zulu" format, accurate to nanoseconds. Example: "201
     </dt>
     <dd>{{% md %}}The start time of the event.
 A timestamp in RFC3339 UTC "Zulu" format, accurate to nanoseconds. Example: "2014-10-02T15:01:23.045123456Z".
-{{% /md %}}</dd>
-</dl>
+{{% /md %}}</dd></dl>
 {{% /choosable %}}
 
 <h4 id="gameserverconfigscalingconfigselector">Game<wbr>Server<wbr>Config<wbr>Scaling<wbr>Config<wbr>Selector</h4>
 
 {{% choosable language csharp %}}
-<dl class="resources-properties">
-
-    <dt class="property-optional"
+<dl class="resources-properties"><dt class="property-optional"
             title="Optional">
         <span id="labels_csharp">
 <a href="#labels_csharp" style="color: inherit; text-decoration: inherit;">Labels</a>
@@ -2028,14 +1855,11 @@ A timestamp in RFC3339 UTC "Zulu" format, accurate to nanoseconds. Example: "201
         <span class="property-type">Dictionary&lt;string, string&gt;</span>
     </dt>
     <dd>{{% md %}}Set of labels to group by.
-{{% /md %}}</dd>
-</dl>
+{{% /md %}}</dd></dl>
 {{% /choosable %}}
 
 {{% choosable language go %}}
-<dl class="resources-properties">
-
-    <dt class="property-optional"
+<dl class="resources-properties"><dt class="property-optional"
             title="Optional">
         <span id="labels_go">
 <a href="#labels_go" style="color: inherit; text-decoration: inherit;">Labels</a>
@@ -2044,14 +1868,11 @@ A timestamp in RFC3339 UTC "Zulu" format, accurate to nanoseconds. Example: "201
         <span class="property-type">map[string]string</span>
     </dt>
     <dd>{{% md %}}Set of labels to group by.
-{{% /md %}}</dd>
-</dl>
+{{% /md %}}</dd></dl>
 {{% /choosable %}}
 
 {{% choosable language nodejs %}}
-<dl class="resources-properties">
-
-    <dt class="property-optional"
+<dl class="resources-properties"><dt class="property-optional"
             title="Optional">
         <span id="labels_nodejs">
 <a href="#labels_nodejs" style="color: inherit; text-decoration: inherit;">labels</a>
@@ -2060,14 +1881,11 @@ A timestamp in RFC3339 UTC "Zulu" format, accurate to nanoseconds. Example: "201
         <span class="property-type">{[key: string]: string}</span>
     </dt>
     <dd>{{% md %}}Set of labels to group by.
-{{% /md %}}</dd>
-</dl>
+{{% /md %}}</dd></dl>
 {{% /choosable %}}
 
 {{% choosable language python %}}
-<dl class="resources-properties">
-
-    <dt class="property-optional"
+<dl class="resources-properties"><dt class="property-optional"
             title="Optional">
         <span id="labels_python">
 <a href="#labels_python" style="color: inherit; text-decoration: inherit;">labels</a>
@@ -2076,8 +1894,7 @@ A timestamp in RFC3339 UTC "Zulu" format, accurate to nanoseconds. Example: "201
         <span class="property-type">Mapping[str, str]</span>
     </dt>
     <dd>{{% md %}}Set of labels to group by.
-{{% /md %}}</dd>
-</dl>
+{{% /md %}}</dd></dl>
 {{% /choosable %}}
 ## Import
 
@@ -2106,6 +1923,6 @@ GameServerConfig can be imported using any of these accepted formats
 	<dt>License</dt>
 	<dd>Apache-2.0</dd>
 	<dt>Notes</dt>
-	<dd>This Pulumi package is based on the [`google-beta` Terraform Provider](https://github.com/hashicorp/terraform-provider-google-beta).</dd>
+	<dd>{{% md %}}This Pulumi package is based on the [`google-beta` Terraform Provider](https://github.com/hashicorp/terraform-provider-google-beta).{{% /md %}}</dd>
 </dl>
 

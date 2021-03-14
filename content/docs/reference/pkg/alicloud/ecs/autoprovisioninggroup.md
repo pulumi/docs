@@ -23,11 +23,17 @@ The config mapping supports the following:
 * `priority` - (Optional) The priority of the instance type specified in the Nth extended configurations of the launch template. A value of 0 indicates the highest priority.
 
 {{% examples %}}
+
 ## Example Usage
 
 {{< chooser language "typescript,python,go,csharp" / >}}
 
-{{% example csharp %}}
+
+
+
+
+{{< example csharp >}}
+
 ```csharp
 using Pulumi;
 using AliCloud = Pulumi.AliCloud;
@@ -91,9 +97,12 @@ class MyStack : Stack
 }
 ```
 
-{{% /example %}}
 
-{{% example go %}}
+{{< /example >}}
+
+
+{{< example go >}}
+
 ```go
 package main
 
@@ -182,9 +191,12 @@ func main() {
 }
 ```
 
-{{% /example %}}
 
-{{% example python %}}
+{{< /example >}}
+
+
+{{< example python >}}
+
 ```python
 import pulumi
 import pulumi_alicloud as alicloud
@@ -221,9 +233,12 @@ default_auto_provisioning_group = alicloud.ecs.AutoProvisioningGroup("defaultAut
     )])
 ```
 
-{{% /example %}}
 
-{{% example typescript %}}
+{{< /example >}}
+
+
+{{< example typescript >}}
+
 
 ```typescript
 import * as pulumi from "@pulumi/pulumi";
@@ -266,9 +281,16 @@ const defaultAutoProvisioningGroup = new alicloud.ecs.AutoProvisioningGroup("def
 });
 ```
 
-{{% /example %}}
+
+{{< /example >}}
+
+
+
+
 
 {{% /examples %}}
+
+
 
 
 ## Create a AutoProvisioningGroup Resource {#create}
@@ -293,9 +315,7 @@ const defaultAutoProvisioningGroup = new alicloud.ecs.AutoProvisioningGroup("def
 
 {{% choosable language nodejs %}}
 
-<dl class="resources-properties">
-  
-    <dt
+<dl class="resources-properties"><dt
         class="property-required" title="Required">
         <span>name</span>
         <span class="property-indicator"></span>
@@ -303,9 +323,7 @@ const defaultAutoProvisioningGroup = new alicloud.ecs.AutoProvisioningGroup("def
     </dt>
     <dd>
       The unique name of the resource.
-    </dd>
-  
-    <dt
+    </dd><dt
         class="property-required" title="Required">
         <span>args</span>
         <span class="property-indicator"></span>
@@ -313,9 +331,7 @@ const defaultAutoProvisioningGroup = new alicloud.ecs.AutoProvisioningGroup("def
     </dt>
     <dd>
       The arguments to resource properties.
-    </dd>
-  
-    <dt
+    </dd><dt
         class="property-optional" title="Optional">
         <span>opts</span>
         <span class="property-indicator"></span>
@@ -323,10 +339,7 @@ const defaultAutoProvisioningGroup = new alicloud.ecs.AutoProvisioningGroup("def
     </dt>
     <dd>
       Bag of options to control resource&#39;s behavior.
-    </dd>
-  
-
-</dl>
+    </dd></dl>
 
 {{% /choosable %}}
 
@@ -352,9 +365,7 @@ const defaultAutoProvisioningGroup = new alicloud.ecs.AutoProvisioningGroup("def
 
 {{% choosable language go %}}
 
-<dl class="resources-properties">
-  
-    <dt
+<dl class="resources-properties"><dt
         class="property-optional" title="Optional">
         <span>ctx</span>
         <span class="property-indicator"></span>
@@ -362,9 +373,7 @@ const defaultAutoProvisioningGroup = new alicloud.ecs.AutoProvisioningGroup("def
     </dt>
     <dd>
       Context object for the current deployment.
-    </dd>
-  
-    <dt
+    </dd><dt
         class="property-required" title="Required">
         <span>name</span>
         <span class="property-indicator"></span>
@@ -372,9 +381,7 @@ const defaultAutoProvisioningGroup = new alicloud.ecs.AutoProvisioningGroup("def
     </dt>
     <dd>
       The unique name of the resource.
-    </dd>
-  
-    <dt
+    </dd><dt
         class="property-required" title="Required">
         <span>args</span>
         <span class="property-indicator"></span>
@@ -382,9 +389,7 @@ const defaultAutoProvisioningGroup = new alicloud.ecs.AutoProvisioningGroup("def
     </dt>
     <dd>
       The arguments to resource properties.
-    </dd>
-  
-    <dt
+    </dd><dt
         class="property-optional" title="Optional">
         <span>opts</span>
         <span class="property-indicator"></span>
@@ -392,18 +397,13 @@ const defaultAutoProvisioningGroup = new alicloud.ecs.AutoProvisioningGroup("def
     </dt>
     <dd>
       Bag of options to control resource&#39;s behavior.
-    </dd>
-  
-
-</dl>
+    </dd></dl>
 
 {{% /choosable %}}
 
 {{% choosable language csharp %}}
 
-<dl class="resources-properties">
-  
-    <dt
+<dl class="resources-properties"><dt
         class="property-required" title="Required">
         <span>name</span>
         <span class="property-indicator"></span>
@@ -411,9 +411,7 @@ const defaultAutoProvisioningGroup = new alicloud.ecs.AutoProvisioningGroup("def
     </dt>
     <dd>
       The unique name of the resource.
-    </dd>
-  
-    <dt
+    </dd><dt
         class="property-required" title="Required">
         <span>args</span>
         <span class="property-indicator"></span>
@@ -421,9 +419,7 @@ const defaultAutoProvisioningGroup = new alicloud.ecs.AutoProvisioningGroup("def
     </dt>
     <dd>
       The arguments to resource properties.
-    </dd>
-  
-    <dt
+    </dd><dt
         class="property-optional" title="Optional">
         <span>opts</span>
         <span class="property-indicator"></span>
@@ -431,10 +427,7 @@ const defaultAutoProvisioningGroup = new alicloud.ecs.AutoProvisioningGroup("def
     </dt>
     <dd>
       Bag of options to control resource&#39;s behavior.
-    </dd>
-  
-
-</dl>
+    </dd></dl>
 
 {{% /choosable %}}
 
@@ -449,9 +442,7 @@ The AutoProvisioningGroup resource accepts the following [input]({{< relref "/do
 
 
 {{% choosable language csharp %}}
-<dl class="resources-properties">
-
-    <dt class="property-required"
+<dl class="resources-properties"><dt class="property-required"
             title="Required">
         <span id="launchtemplateconfigs_csharp">
 <a href="#launchtemplateconfigs_csharp" style="color: inherit; text-decoration: inherit;">Launch<wbr>Template<wbr>Configs</a>
@@ -460,8 +451,7 @@ The AutoProvisioningGroup resource accepts the following [input]({{< relref "/do
         <span class="property-type"><a href="#autoprovisioninggrouplaunchtemplateconfig">List&lt;Pulumi.<wbr>Ali<wbr>Cloud.<wbr>Ecs.<wbr>Inputs.<wbr>Auto<wbr>Provisioning<wbr>Group<wbr>Launch<wbr>Template<wbr>Config<wbr>Args&gt;</a></span>
     </dt>
     <dd>{{% md %}}DataDisk mappings to attach to ecs instance. See Block config below for details.
-{{% /md %}}</dd>
-    <dt class="property-required"
+{{% /md %}}</dd><dt class="property-required"
             title="Required">
         <span id="launchtemplateid_csharp">
 <a href="#launchtemplateid_csharp" style="color: inherit; text-decoration: inherit;">Launch<wbr>Template<wbr>Id</a>
@@ -470,8 +460,7 @@ The AutoProvisioningGroup resource accepts the following [input]({{< relref "/do
         <span class="property-type">string</span>
     </dt>
     <dd>{{% md %}}The ID of the instance launch template associated with the auto provisioning group.
-{{% /md %}}</dd>
-    <dt class="property-required"
+{{% /md %}}</dd><dt class="property-required"
             title="Required">
         <span id="totaltargetcapacity_csharp">
 <a href="#totaltargetcapacity_csharp" style="color: inherit; text-decoration: inherit;">Total<wbr>Target<wbr>Capacity</a>
@@ -480,8 +469,7 @@ The AutoProvisioningGroup resource accepts the following [input]({{< relref "/do
         <span class="property-type">string</span>
     </dt>
     <dd>{{% md %}}The total target capacity of the auto provisioning group. The target capacity consists of the following three parts:PayAsYouGoTargetCapacity,SpotTargetCapacity and the supplemental capacity besides PayAsYouGoTargetCapacity and SpotTargetCapacity.
-{{% /md %}}</dd>
-    <dt class="property-optional"
+{{% /md %}}</dd><dt class="property-optional"
             title="Optional">
         <span id="autoprovisioninggroupname_csharp">
 <a href="#autoprovisioninggroupname_csharp" style="color: inherit; text-decoration: inherit;">Auto<wbr>Provisioning<wbr>Group<wbr>Name</a>
@@ -490,8 +478,7 @@ The AutoProvisioningGroup resource accepts the following [input]({{< relref "/do
         <span class="property-type">string</span>
     </dt>
     <dd>{{% md %}}The name of the auto provisioning group to be created. It must be 2 to 128 characters in length. It must start with a letter but cannot start with http:// or https://. It can contain letters, digits, colons (:), underscores (_), and hyphens (-)
-{{% /md %}}</dd>
-    <dt class="property-optional"
+{{% /md %}}</dd><dt class="property-optional"
             title="Optional">
         <span id="autoprovisioninggrouptype_csharp">
 <a href="#autoprovisioninggrouptype_csharp" style="color: inherit; text-decoration: inherit;">Auto<wbr>Provisioning<wbr>Group<wbr>Type</a>
@@ -500,8 +487,7 @@ The AutoProvisioningGroup resource accepts the following [input]({{< relref "/do
         <span class="property-type">string</span>
     </dt>
     <dd>{{% md %}}The type of the auto provisioning group. Valid values:`request` and `maintain`,Default value: `maintain`.
-{{% /md %}}</dd>
-    <dt class="property-optional"
+{{% /md %}}</dd><dt class="property-optional"
             title="Optional">
         <span id="defaulttargetcapacitytype_csharp">
 <a href="#defaulttargetcapacitytype_csharp" style="color: inherit; text-decoration: inherit;">Default<wbr>Target<wbr>Capacity<wbr>Type</a>
@@ -510,8 +496,7 @@ The AutoProvisioningGroup resource accepts the following [input]({{< relref "/do
         <span class="property-type">string</span>
     </dt>
     <dd>{{% md %}}The type of supplemental instances. When the total value of `PayAsYouGoTargetCapacity` and `SpotTargetCapacity` is smaller than the value of TotalTargetCapacity, the auto provisioning group will create instances of the specified type to meet the capacity requirements. Valid values:`PayAsYouGo`: Pay-as-you-go instances; `Spot`: Preemptible instances, Default value: `Spot`.
-{{% /md %}}</dd>
-    <dt class="property-optional"
+{{% /md %}}</dd><dt class="property-optional"
             title="Optional">
         <span id="description_csharp">
 <a href="#description_csharp" style="color: inherit; text-decoration: inherit;">Description</a>
@@ -520,8 +505,7 @@ The AutoProvisioningGroup resource accepts the following [input]({{< relref "/do
         <span class="property-type">string</span>
     </dt>
     <dd>{{% md %}}The description of the auto provisioning group.
-{{% /md %}}</dd>
-    <dt class="property-optional"
+{{% /md %}}</dd><dt class="property-optional"
             title="Optional">
         <span id="excesscapacityterminationpolicy_csharp">
 <a href="#excesscapacityterminationpolicy_csharp" style="color: inherit; text-decoration: inherit;">Excess<wbr>Capacity<wbr>Termination<wbr>Policy</a>
@@ -530,8 +514,7 @@ The AutoProvisioningGroup resource accepts the following [input]({{< relref "/do
         <span class="property-type">string</span>
     </dt>
     <dd>{{% md %}}The shutdown policy for excess preemptible instances followed when the capacity of the auto provisioning group exceeds the target capacity. Valid values: `no-termination` and `termination`,Default value: `no-termination`.
-{{% /md %}}</dd>
-    <dt class="property-optional"
+{{% /md %}}</dd><dt class="property-optional"
             title="Optional">
         <span id="launchtemplateversion_csharp">
 <a href="#launchtemplateversion_csharp" style="color: inherit; text-decoration: inherit;">Launch<wbr>Template<wbr>Version</a>
@@ -540,8 +523,7 @@ The AutoProvisioningGroup resource accepts the following [input]({{< relref "/do
         <span class="property-type">string</span>
     </dt>
     <dd>{{% md %}}The version of the instance launch template associated with the auto provisioning group.
-{{% /md %}}</dd>
-    <dt class="property-optional"
+{{% /md %}}</dd><dt class="property-optional"
             title="Optional">
         <span id="maxspotprice_csharp">
 <a href="#maxspotprice_csharp" style="color: inherit; text-decoration: inherit;">Max<wbr>Spot<wbr>Price</a>
@@ -550,8 +532,7 @@ The AutoProvisioningGroup resource accepts the following [input]({{< relref "/do
         <span class="property-type">double</span>
     </dt>
     <dd>{{% md %}}The global maximum price for preemptible instances in the auto provisioning group. If both the `MaxSpotPrice` and `LaunchTemplateConfig.N.MaxPrice` parameters are specified, the maximum price is the lower value of the two.
-{{% /md %}}</dd>
-    <dt class="property-optional"
+{{% /md %}}</dd><dt class="property-optional"
             title="Optional">
         <span id="payasyougoallocationstrategy_csharp">
 <a href="#payasyougoallocationstrategy_csharp" style="color: inherit; text-decoration: inherit;">Pay<wbr>As<wbr>You<wbr>Go<wbr>Allocation<wbr>Strategy</a>
@@ -560,8 +541,7 @@ The AutoProvisioningGroup resource accepts the following [input]({{< relref "/do
         <span class="property-type">string</span>
     </dt>
     <dd>{{% md %}}The scale-out policy for pay-as-you-go instances. Valid values: `lowest-price` and `prioritized`,Default value: `lowest-price`.
-{{% /md %}}</dd>
-    <dt class="property-optional"
+{{% /md %}}</dd><dt class="property-optional"
             title="Optional">
         <span id="payasyougotargetcapacity_csharp">
 <a href="#payasyougotargetcapacity_csharp" style="color: inherit; text-decoration: inherit;">Pay<wbr>As<wbr>You<wbr>Go<wbr>Target<wbr>Capacity</a>
@@ -570,8 +550,7 @@ The AutoProvisioningGroup resource accepts the following [input]({{< relref "/do
         <span class="property-type">string</span>
     </dt>
     <dd>{{% md %}}The target capacity of pay-as-you-go instances in the auto provisioning group.
-{{% /md %}}</dd>
-    <dt class="property-optional"
+{{% /md %}}</dd><dt class="property-optional"
             title="Optional">
         <span id="spotallocationstrategy_csharp">
 <a href="#spotallocationstrategy_csharp" style="color: inherit; text-decoration: inherit;">Spot<wbr>Allocation<wbr>Strategy</a>
@@ -580,8 +559,7 @@ The AutoProvisioningGroup resource accepts the following [input]({{< relref "/do
         <span class="property-type">string</span>
     </dt>
     <dd>{{% md %}}The scale-out policy for preemptible instances. Valid values:`lowest-price` and `diversified`,Default value: `lowest-price`.
-{{% /md %}}</dd>
-    <dt class="property-optional"
+{{% /md %}}</dd><dt class="property-optional"
             title="Optional">
         <span id="spotinstanceinterruptionbehavior_csharp">
 <a href="#spotinstanceinterruptionbehavior_csharp" style="color: inherit; text-decoration: inherit;">Spot<wbr>Instance<wbr>Interruption<wbr>Behavior</a>
@@ -590,8 +568,7 @@ The AutoProvisioningGroup resource accepts the following [input]({{< relref "/do
         <span class="property-type">string</span>
     </dt>
     <dd>{{% md %}}The default behavior after preemptible instances are shut down. Value values: `stop` and `terminate`,Default value: `stop`.
-{{% /md %}}</dd>
-    <dt class="property-optional"
+{{% /md %}}</dd><dt class="property-optional"
             title="Optional">
         <span id="spotinstancepoolstousecount_csharp">
 <a href="#spotinstancepoolstousecount_csharp" style="color: inherit; text-decoration: inherit;">Spot<wbr>Instance<wbr>Pools<wbr>To<wbr>Use<wbr>Count</a>
@@ -600,8 +577,7 @@ The AutoProvisioningGroup resource accepts the following [input]({{< relref "/do
         <span class="property-type">int</span>
     </dt>
     <dd>{{% md %}}This parameter takes effect when the `SpotAllocationStrategy` parameter is set to `lowest-price`. The auto provisioning group selects instance types of the lowest cost to create instances.
-{{% /md %}}</dd>
-    <dt class="property-optional"
+{{% /md %}}</dd><dt class="property-optional"
             title="Optional">
         <span id="spottargetcapacity_csharp">
 <a href="#spottargetcapacity_csharp" style="color: inherit; text-decoration: inherit;">Spot<wbr>Target<wbr>Capacity</a>
@@ -610,8 +586,7 @@ The AutoProvisioningGroup resource accepts the following [input]({{< relref "/do
         <span class="property-type">string</span>
     </dt>
     <dd>{{% md %}}The target capacity of preemptible instances in the auto provisioning group.
-{{% /md %}}</dd>
-    <dt class="property-optional"
+{{% /md %}}</dd><dt class="property-optional"
             title="Optional">
         <span id="terminateinstances_csharp">
 <a href="#terminateinstances_csharp" style="color: inherit; text-decoration: inherit;">Terminate<wbr>Instances</a>
@@ -620,8 +595,7 @@ The AutoProvisioningGroup resource accepts the following [input]({{< relref "/do
         <span class="property-type">bool</span>
     </dt>
     <dd>{{% md %}}Specifies whether to release instances of the auto provisioning group. Valid values:`false` and `true`, default value: `false`.
-{{% /md %}}</dd>
-    <dt class="property-optional"
+{{% /md %}}</dd><dt class="property-optional"
             title="Optional">
         <span id="terminateinstanceswithexpiration_csharp">
 <a href="#terminateinstanceswithexpiration_csharp" style="color: inherit; text-decoration: inherit;">Terminate<wbr>Instances<wbr>With<wbr>Expiration</a>
@@ -630,8 +604,7 @@ The AutoProvisioningGroup resource accepts the following [input]({{< relref "/do
         <span class="property-type">bool</span>
     </dt>
     <dd>{{% md %}}The shutdown policy for preemptible instances when the auto provisioning group expires. Valid values: `false` and `true`, default value: `false`.
-{{% /md %}}</dd>
-    <dt class="property-optional"
+{{% /md %}}</dd><dt class="property-optional"
             title="Optional">
         <span id="validfrom_csharp">
 <a href="#validfrom_csharp" style="color: inherit; text-decoration: inherit;">Valid<wbr>From</a>
@@ -640,8 +613,7 @@ The AutoProvisioningGroup resource accepts the following [input]({{< relref "/do
         <span class="property-type">string</span>
     </dt>
     <dd>{{% md %}}The time when the auto provisioning group is started. The period of time between this point in time and the point in time specified by the `valid_until` parameter is the effective time period of the auto provisioning group.By default, an auto provisioning group is immediately started after creation.
-{{% /md %}}</dd>
-    <dt class="property-optional"
+{{% /md %}}</dd><dt class="property-optional"
             title="Optional">
         <span id="validuntil_csharp">
 <a href="#validuntil_csharp" style="color: inherit; text-decoration: inherit;">Valid<wbr>Until</a>
@@ -650,14 +622,11 @@ The AutoProvisioningGroup resource accepts the following [input]({{< relref "/do
         <span class="property-type">string</span>
     </dt>
     <dd>{{% md %}}The time when the auto provisioning group expires. The period of time between this point in time and the point in time specified by the `valid_from` parameter is the effective time period of the auto provisioning group.By default, an auto provisioning group never expires.
-{{% /md %}}</dd>
-</dl>
+{{% /md %}}</dd></dl>
 {{% /choosable %}}
 
 {{% choosable language go %}}
-<dl class="resources-properties">
-
-    <dt class="property-required"
+<dl class="resources-properties"><dt class="property-required"
             title="Required">
         <span id="launchtemplateconfigs_go">
 <a href="#launchtemplateconfigs_go" style="color: inherit; text-decoration: inherit;">Launch<wbr>Template<wbr>Configs</a>
@@ -666,8 +635,7 @@ The AutoProvisioningGroup resource accepts the following [input]({{< relref "/do
         <span class="property-type"><a href="#autoprovisioninggrouplaunchtemplateconfig">[]Auto<wbr>Provisioning<wbr>Group<wbr>Launch<wbr>Template<wbr>Config</a></span>
     </dt>
     <dd>{{% md %}}DataDisk mappings to attach to ecs instance. See Block config below for details.
-{{% /md %}}</dd>
-    <dt class="property-required"
+{{% /md %}}</dd><dt class="property-required"
             title="Required">
         <span id="launchtemplateid_go">
 <a href="#launchtemplateid_go" style="color: inherit; text-decoration: inherit;">Launch<wbr>Template<wbr>Id</a>
@@ -676,8 +644,7 @@ The AutoProvisioningGroup resource accepts the following [input]({{< relref "/do
         <span class="property-type">string</span>
     </dt>
     <dd>{{% md %}}The ID of the instance launch template associated with the auto provisioning group.
-{{% /md %}}</dd>
-    <dt class="property-required"
+{{% /md %}}</dd><dt class="property-required"
             title="Required">
         <span id="totaltargetcapacity_go">
 <a href="#totaltargetcapacity_go" style="color: inherit; text-decoration: inherit;">Total<wbr>Target<wbr>Capacity</a>
@@ -686,8 +653,7 @@ The AutoProvisioningGroup resource accepts the following [input]({{< relref "/do
         <span class="property-type">string</span>
     </dt>
     <dd>{{% md %}}The total target capacity of the auto provisioning group. The target capacity consists of the following three parts:PayAsYouGoTargetCapacity,SpotTargetCapacity and the supplemental capacity besides PayAsYouGoTargetCapacity and SpotTargetCapacity.
-{{% /md %}}</dd>
-    <dt class="property-optional"
+{{% /md %}}</dd><dt class="property-optional"
             title="Optional">
         <span id="autoprovisioninggroupname_go">
 <a href="#autoprovisioninggroupname_go" style="color: inherit; text-decoration: inherit;">Auto<wbr>Provisioning<wbr>Group<wbr>Name</a>
@@ -696,8 +662,7 @@ The AutoProvisioningGroup resource accepts the following [input]({{< relref "/do
         <span class="property-type">string</span>
     </dt>
     <dd>{{% md %}}The name of the auto provisioning group to be created. It must be 2 to 128 characters in length. It must start with a letter but cannot start with http:// or https://. It can contain letters, digits, colons (:), underscores (_), and hyphens (-)
-{{% /md %}}</dd>
-    <dt class="property-optional"
+{{% /md %}}</dd><dt class="property-optional"
             title="Optional">
         <span id="autoprovisioninggrouptype_go">
 <a href="#autoprovisioninggrouptype_go" style="color: inherit; text-decoration: inherit;">Auto<wbr>Provisioning<wbr>Group<wbr>Type</a>
@@ -706,8 +671,7 @@ The AutoProvisioningGroup resource accepts the following [input]({{< relref "/do
         <span class="property-type">string</span>
     </dt>
     <dd>{{% md %}}The type of the auto provisioning group. Valid values:`request` and `maintain`,Default value: `maintain`.
-{{% /md %}}</dd>
-    <dt class="property-optional"
+{{% /md %}}</dd><dt class="property-optional"
             title="Optional">
         <span id="defaulttargetcapacitytype_go">
 <a href="#defaulttargetcapacitytype_go" style="color: inherit; text-decoration: inherit;">Default<wbr>Target<wbr>Capacity<wbr>Type</a>
@@ -716,8 +680,7 @@ The AutoProvisioningGroup resource accepts the following [input]({{< relref "/do
         <span class="property-type">string</span>
     </dt>
     <dd>{{% md %}}The type of supplemental instances. When the total value of `PayAsYouGoTargetCapacity` and `SpotTargetCapacity` is smaller than the value of TotalTargetCapacity, the auto provisioning group will create instances of the specified type to meet the capacity requirements. Valid values:`PayAsYouGo`: Pay-as-you-go instances; `Spot`: Preemptible instances, Default value: `Spot`.
-{{% /md %}}</dd>
-    <dt class="property-optional"
+{{% /md %}}</dd><dt class="property-optional"
             title="Optional">
         <span id="description_go">
 <a href="#description_go" style="color: inherit; text-decoration: inherit;">Description</a>
@@ -726,8 +689,7 @@ The AutoProvisioningGroup resource accepts the following [input]({{< relref "/do
         <span class="property-type">string</span>
     </dt>
     <dd>{{% md %}}The description of the auto provisioning group.
-{{% /md %}}</dd>
-    <dt class="property-optional"
+{{% /md %}}</dd><dt class="property-optional"
             title="Optional">
         <span id="excesscapacityterminationpolicy_go">
 <a href="#excesscapacityterminationpolicy_go" style="color: inherit; text-decoration: inherit;">Excess<wbr>Capacity<wbr>Termination<wbr>Policy</a>
@@ -736,8 +698,7 @@ The AutoProvisioningGroup resource accepts the following [input]({{< relref "/do
         <span class="property-type">string</span>
     </dt>
     <dd>{{% md %}}The shutdown policy for excess preemptible instances followed when the capacity of the auto provisioning group exceeds the target capacity. Valid values: `no-termination` and `termination`,Default value: `no-termination`.
-{{% /md %}}</dd>
-    <dt class="property-optional"
+{{% /md %}}</dd><dt class="property-optional"
             title="Optional">
         <span id="launchtemplateversion_go">
 <a href="#launchtemplateversion_go" style="color: inherit; text-decoration: inherit;">Launch<wbr>Template<wbr>Version</a>
@@ -746,8 +707,7 @@ The AutoProvisioningGroup resource accepts the following [input]({{< relref "/do
         <span class="property-type">string</span>
     </dt>
     <dd>{{% md %}}The version of the instance launch template associated with the auto provisioning group.
-{{% /md %}}</dd>
-    <dt class="property-optional"
+{{% /md %}}</dd><dt class="property-optional"
             title="Optional">
         <span id="maxspotprice_go">
 <a href="#maxspotprice_go" style="color: inherit; text-decoration: inherit;">Max<wbr>Spot<wbr>Price</a>
@@ -756,8 +716,7 @@ The AutoProvisioningGroup resource accepts the following [input]({{< relref "/do
         <span class="property-type">float64</span>
     </dt>
     <dd>{{% md %}}The global maximum price for preemptible instances in the auto provisioning group. If both the `MaxSpotPrice` and `LaunchTemplateConfig.N.MaxPrice` parameters are specified, the maximum price is the lower value of the two.
-{{% /md %}}</dd>
-    <dt class="property-optional"
+{{% /md %}}</dd><dt class="property-optional"
             title="Optional">
         <span id="payasyougoallocationstrategy_go">
 <a href="#payasyougoallocationstrategy_go" style="color: inherit; text-decoration: inherit;">Pay<wbr>As<wbr>You<wbr>Go<wbr>Allocation<wbr>Strategy</a>
@@ -766,8 +725,7 @@ The AutoProvisioningGroup resource accepts the following [input]({{< relref "/do
         <span class="property-type">string</span>
     </dt>
     <dd>{{% md %}}The scale-out policy for pay-as-you-go instances. Valid values: `lowest-price` and `prioritized`,Default value: `lowest-price`.
-{{% /md %}}</dd>
-    <dt class="property-optional"
+{{% /md %}}</dd><dt class="property-optional"
             title="Optional">
         <span id="payasyougotargetcapacity_go">
 <a href="#payasyougotargetcapacity_go" style="color: inherit; text-decoration: inherit;">Pay<wbr>As<wbr>You<wbr>Go<wbr>Target<wbr>Capacity</a>
@@ -776,8 +734,7 @@ The AutoProvisioningGroup resource accepts the following [input]({{< relref "/do
         <span class="property-type">string</span>
     </dt>
     <dd>{{% md %}}The target capacity of pay-as-you-go instances in the auto provisioning group.
-{{% /md %}}</dd>
-    <dt class="property-optional"
+{{% /md %}}</dd><dt class="property-optional"
             title="Optional">
         <span id="spotallocationstrategy_go">
 <a href="#spotallocationstrategy_go" style="color: inherit; text-decoration: inherit;">Spot<wbr>Allocation<wbr>Strategy</a>
@@ -786,8 +743,7 @@ The AutoProvisioningGroup resource accepts the following [input]({{< relref "/do
         <span class="property-type">string</span>
     </dt>
     <dd>{{% md %}}The scale-out policy for preemptible instances. Valid values:`lowest-price` and `diversified`,Default value: `lowest-price`.
-{{% /md %}}</dd>
-    <dt class="property-optional"
+{{% /md %}}</dd><dt class="property-optional"
             title="Optional">
         <span id="spotinstanceinterruptionbehavior_go">
 <a href="#spotinstanceinterruptionbehavior_go" style="color: inherit; text-decoration: inherit;">Spot<wbr>Instance<wbr>Interruption<wbr>Behavior</a>
@@ -796,8 +752,7 @@ The AutoProvisioningGroup resource accepts the following [input]({{< relref "/do
         <span class="property-type">string</span>
     </dt>
     <dd>{{% md %}}The default behavior after preemptible instances are shut down. Value values: `stop` and `terminate`,Default value: `stop`.
-{{% /md %}}</dd>
-    <dt class="property-optional"
+{{% /md %}}</dd><dt class="property-optional"
             title="Optional">
         <span id="spotinstancepoolstousecount_go">
 <a href="#spotinstancepoolstousecount_go" style="color: inherit; text-decoration: inherit;">Spot<wbr>Instance<wbr>Pools<wbr>To<wbr>Use<wbr>Count</a>
@@ -806,8 +761,7 @@ The AutoProvisioningGroup resource accepts the following [input]({{< relref "/do
         <span class="property-type">int</span>
     </dt>
     <dd>{{% md %}}This parameter takes effect when the `SpotAllocationStrategy` parameter is set to `lowest-price`. The auto provisioning group selects instance types of the lowest cost to create instances.
-{{% /md %}}</dd>
-    <dt class="property-optional"
+{{% /md %}}</dd><dt class="property-optional"
             title="Optional">
         <span id="spottargetcapacity_go">
 <a href="#spottargetcapacity_go" style="color: inherit; text-decoration: inherit;">Spot<wbr>Target<wbr>Capacity</a>
@@ -816,8 +770,7 @@ The AutoProvisioningGroup resource accepts the following [input]({{< relref "/do
         <span class="property-type">string</span>
     </dt>
     <dd>{{% md %}}The target capacity of preemptible instances in the auto provisioning group.
-{{% /md %}}</dd>
-    <dt class="property-optional"
+{{% /md %}}</dd><dt class="property-optional"
             title="Optional">
         <span id="terminateinstances_go">
 <a href="#terminateinstances_go" style="color: inherit; text-decoration: inherit;">Terminate<wbr>Instances</a>
@@ -826,8 +779,7 @@ The AutoProvisioningGroup resource accepts the following [input]({{< relref "/do
         <span class="property-type">bool</span>
     </dt>
     <dd>{{% md %}}Specifies whether to release instances of the auto provisioning group. Valid values:`false` and `true`, default value: `false`.
-{{% /md %}}</dd>
-    <dt class="property-optional"
+{{% /md %}}</dd><dt class="property-optional"
             title="Optional">
         <span id="terminateinstanceswithexpiration_go">
 <a href="#terminateinstanceswithexpiration_go" style="color: inherit; text-decoration: inherit;">Terminate<wbr>Instances<wbr>With<wbr>Expiration</a>
@@ -836,8 +788,7 @@ The AutoProvisioningGroup resource accepts the following [input]({{< relref "/do
         <span class="property-type">bool</span>
     </dt>
     <dd>{{% md %}}The shutdown policy for preemptible instances when the auto provisioning group expires. Valid values: `false` and `true`, default value: `false`.
-{{% /md %}}</dd>
-    <dt class="property-optional"
+{{% /md %}}</dd><dt class="property-optional"
             title="Optional">
         <span id="validfrom_go">
 <a href="#validfrom_go" style="color: inherit; text-decoration: inherit;">Valid<wbr>From</a>
@@ -846,8 +797,7 @@ The AutoProvisioningGroup resource accepts the following [input]({{< relref "/do
         <span class="property-type">string</span>
     </dt>
     <dd>{{% md %}}The time when the auto provisioning group is started. The period of time between this point in time and the point in time specified by the `valid_until` parameter is the effective time period of the auto provisioning group.By default, an auto provisioning group is immediately started after creation.
-{{% /md %}}</dd>
-    <dt class="property-optional"
+{{% /md %}}</dd><dt class="property-optional"
             title="Optional">
         <span id="validuntil_go">
 <a href="#validuntil_go" style="color: inherit; text-decoration: inherit;">Valid<wbr>Until</a>
@@ -856,14 +806,11 @@ The AutoProvisioningGroup resource accepts the following [input]({{< relref "/do
         <span class="property-type">string</span>
     </dt>
     <dd>{{% md %}}The time when the auto provisioning group expires. The period of time between this point in time and the point in time specified by the `valid_from` parameter is the effective time period of the auto provisioning group.By default, an auto provisioning group never expires.
-{{% /md %}}</dd>
-</dl>
+{{% /md %}}</dd></dl>
 {{% /choosable %}}
 
 {{% choosable language nodejs %}}
-<dl class="resources-properties">
-
-    <dt class="property-required"
+<dl class="resources-properties"><dt class="property-required"
             title="Required">
         <span id="launchtemplateconfigs_nodejs">
 <a href="#launchtemplateconfigs_nodejs" style="color: inherit; text-decoration: inherit;">launch<wbr>Template<wbr>Configs</a>
@@ -872,8 +819,7 @@ The AutoProvisioningGroup resource accepts the following [input]({{< relref "/do
         <span class="property-type"><a href="#autoprovisioninggrouplaunchtemplateconfig">Auto<wbr>Provisioning<wbr>Group<wbr>Launch<wbr>Template<wbr>Config[]</a></span>
     </dt>
     <dd>{{% md %}}DataDisk mappings to attach to ecs instance. See Block config below for details.
-{{% /md %}}</dd>
-    <dt class="property-required"
+{{% /md %}}</dd><dt class="property-required"
             title="Required">
         <span id="launchtemplateid_nodejs">
 <a href="#launchtemplateid_nodejs" style="color: inherit; text-decoration: inherit;">launch<wbr>Template<wbr>Id</a>
@@ -882,8 +828,7 @@ The AutoProvisioningGroup resource accepts the following [input]({{< relref "/do
         <span class="property-type">string</span>
     </dt>
     <dd>{{% md %}}The ID of the instance launch template associated with the auto provisioning group.
-{{% /md %}}</dd>
-    <dt class="property-required"
+{{% /md %}}</dd><dt class="property-required"
             title="Required">
         <span id="totaltargetcapacity_nodejs">
 <a href="#totaltargetcapacity_nodejs" style="color: inherit; text-decoration: inherit;">total<wbr>Target<wbr>Capacity</a>
@@ -892,8 +837,7 @@ The AutoProvisioningGroup resource accepts the following [input]({{< relref "/do
         <span class="property-type">string</span>
     </dt>
     <dd>{{% md %}}The total target capacity of the auto provisioning group. The target capacity consists of the following three parts:PayAsYouGoTargetCapacity,SpotTargetCapacity and the supplemental capacity besides PayAsYouGoTargetCapacity and SpotTargetCapacity.
-{{% /md %}}</dd>
-    <dt class="property-optional"
+{{% /md %}}</dd><dt class="property-optional"
             title="Optional">
         <span id="autoprovisioninggroupname_nodejs">
 <a href="#autoprovisioninggroupname_nodejs" style="color: inherit; text-decoration: inherit;">auto<wbr>Provisioning<wbr>Group<wbr>Name</a>
@@ -902,8 +846,7 @@ The AutoProvisioningGroup resource accepts the following [input]({{< relref "/do
         <span class="property-type">string</span>
     </dt>
     <dd>{{% md %}}The name of the auto provisioning group to be created. It must be 2 to 128 characters in length. It must start with a letter but cannot start with http:// or https://. It can contain letters, digits, colons (:), underscores (_), and hyphens (-)
-{{% /md %}}</dd>
-    <dt class="property-optional"
+{{% /md %}}</dd><dt class="property-optional"
             title="Optional">
         <span id="autoprovisioninggrouptype_nodejs">
 <a href="#autoprovisioninggrouptype_nodejs" style="color: inherit; text-decoration: inherit;">auto<wbr>Provisioning<wbr>Group<wbr>Type</a>
@@ -912,8 +855,7 @@ The AutoProvisioningGroup resource accepts the following [input]({{< relref "/do
         <span class="property-type">string</span>
     </dt>
     <dd>{{% md %}}The type of the auto provisioning group. Valid values:`request` and `maintain`,Default value: `maintain`.
-{{% /md %}}</dd>
-    <dt class="property-optional"
+{{% /md %}}</dd><dt class="property-optional"
             title="Optional">
         <span id="defaulttargetcapacitytype_nodejs">
 <a href="#defaulttargetcapacitytype_nodejs" style="color: inherit; text-decoration: inherit;">default<wbr>Target<wbr>Capacity<wbr>Type</a>
@@ -922,8 +864,7 @@ The AutoProvisioningGroup resource accepts the following [input]({{< relref "/do
         <span class="property-type">string</span>
     </dt>
     <dd>{{% md %}}The type of supplemental instances. When the total value of `PayAsYouGoTargetCapacity` and `SpotTargetCapacity` is smaller than the value of TotalTargetCapacity, the auto provisioning group will create instances of the specified type to meet the capacity requirements. Valid values:`PayAsYouGo`: Pay-as-you-go instances; `Spot`: Preemptible instances, Default value: `Spot`.
-{{% /md %}}</dd>
-    <dt class="property-optional"
+{{% /md %}}</dd><dt class="property-optional"
             title="Optional">
         <span id="description_nodejs">
 <a href="#description_nodejs" style="color: inherit; text-decoration: inherit;">description</a>
@@ -932,8 +873,7 @@ The AutoProvisioningGroup resource accepts the following [input]({{< relref "/do
         <span class="property-type">string</span>
     </dt>
     <dd>{{% md %}}The description of the auto provisioning group.
-{{% /md %}}</dd>
-    <dt class="property-optional"
+{{% /md %}}</dd><dt class="property-optional"
             title="Optional">
         <span id="excesscapacityterminationpolicy_nodejs">
 <a href="#excesscapacityterminationpolicy_nodejs" style="color: inherit; text-decoration: inherit;">excess<wbr>Capacity<wbr>Termination<wbr>Policy</a>
@@ -942,8 +882,7 @@ The AutoProvisioningGroup resource accepts the following [input]({{< relref "/do
         <span class="property-type">string</span>
     </dt>
     <dd>{{% md %}}The shutdown policy for excess preemptible instances followed when the capacity of the auto provisioning group exceeds the target capacity. Valid values: `no-termination` and `termination`,Default value: `no-termination`.
-{{% /md %}}</dd>
-    <dt class="property-optional"
+{{% /md %}}</dd><dt class="property-optional"
             title="Optional">
         <span id="launchtemplateversion_nodejs">
 <a href="#launchtemplateversion_nodejs" style="color: inherit; text-decoration: inherit;">launch<wbr>Template<wbr>Version</a>
@@ -952,8 +891,7 @@ The AutoProvisioningGroup resource accepts the following [input]({{< relref "/do
         <span class="property-type">string</span>
     </dt>
     <dd>{{% md %}}The version of the instance launch template associated with the auto provisioning group.
-{{% /md %}}</dd>
-    <dt class="property-optional"
+{{% /md %}}</dd><dt class="property-optional"
             title="Optional">
         <span id="maxspotprice_nodejs">
 <a href="#maxspotprice_nodejs" style="color: inherit; text-decoration: inherit;">max<wbr>Spot<wbr>Price</a>
@@ -962,8 +900,7 @@ The AutoProvisioningGroup resource accepts the following [input]({{< relref "/do
         <span class="property-type">number</span>
     </dt>
     <dd>{{% md %}}The global maximum price for preemptible instances in the auto provisioning group. If both the `MaxSpotPrice` and `LaunchTemplateConfig.N.MaxPrice` parameters are specified, the maximum price is the lower value of the two.
-{{% /md %}}</dd>
-    <dt class="property-optional"
+{{% /md %}}</dd><dt class="property-optional"
             title="Optional">
         <span id="payasyougoallocationstrategy_nodejs">
 <a href="#payasyougoallocationstrategy_nodejs" style="color: inherit; text-decoration: inherit;">pay<wbr>As<wbr>You<wbr>Go<wbr>Allocation<wbr>Strategy</a>
@@ -972,8 +909,7 @@ The AutoProvisioningGroup resource accepts the following [input]({{< relref "/do
         <span class="property-type">string</span>
     </dt>
     <dd>{{% md %}}The scale-out policy for pay-as-you-go instances. Valid values: `lowest-price` and `prioritized`,Default value: `lowest-price`.
-{{% /md %}}</dd>
-    <dt class="property-optional"
+{{% /md %}}</dd><dt class="property-optional"
             title="Optional">
         <span id="payasyougotargetcapacity_nodejs">
 <a href="#payasyougotargetcapacity_nodejs" style="color: inherit; text-decoration: inherit;">pay<wbr>As<wbr>You<wbr>Go<wbr>Target<wbr>Capacity</a>
@@ -982,8 +918,7 @@ The AutoProvisioningGroup resource accepts the following [input]({{< relref "/do
         <span class="property-type">string</span>
     </dt>
     <dd>{{% md %}}The target capacity of pay-as-you-go instances in the auto provisioning group.
-{{% /md %}}</dd>
-    <dt class="property-optional"
+{{% /md %}}</dd><dt class="property-optional"
             title="Optional">
         <span id="spotallocationstrategy_nodejs">
 <a href="#spotallocationstrategy_nodejs" style="color: inherit; text-decoration: inherit;">spot<wbr>Allocation<wbr>Strategy</a>
@@ -992,8 +927,7 @@ The AutoProvisioningGroup resource accepts the following [input]({{< relref "/do
         <span class="property-type">string</span>
     </dt>
     <dd>{{% md %}}The scale-out policy for preemptible instances. Valid values:`lowest-price` and `diversified`,Default value: `lowest-price`.
-{{% /md %}}</dd>
-    <dt class="property-optional"
+{{% /md %}}</dd><dt class="property-optional"
             title="Optional">
         <span id="spotinstanceinterruptionbehavior_nodejs">
 <a href="#spotinstanceinterruptionbehavior_nodejs" style="color: inherit; text-decoration: inherit;">spot<wbr>Instance<wbr>Interruption<wbr>Behavior</a>
@@ -1002,8 +936,7 @@ The AutoProvisioningGroup resource accepts the following [input]({{< relref "/do
         <span class="property-type">string</span>
     </dt>
     <dd>{{% md %}}The default behavior after preemptible instances are shut down. Value values: `stop` and `terminate`,Default value: `stop`.
-{{% /md %}}</dd>
-    <dt class="property-optional"
+{{% /md %}}</dd><dt class="property-optional"
             title="Optional">
         <span id="spotinstancepoolstousecount_nodejs">
 <a href="#spotinstancepoolstousecount_nodejs" style="color: inherit; text-decoration: inherit;">spot<wbr>Instance<wbr>Pools<wbr>To<wbr>Use<wbr>Count</a>
@@ -1012,8 +945,7 @@ The AutoProvisioningGroup resource accepts the following [input]({{< relref "/do
         <span class="property-type">number</span>
     </dt>
     <dd>{{% md %}}This parameter takes effect when the `SpotAllocationStrategy` parameter is set to `lowest-price`. The auto provisioning group selects instance types of the lowest cost to create instances.
-{{% /md %}}</dd>
-    <dt class="property-optional"
+{{% /md %}}</dd><dt class="property-optional"
             title="Optional">
         <span id="spottargetcapacity_nodejs">
 <a href="#spottargetcapacity_nodejs" style="color: inherit; text-decoration: inherit;">spot<wbr>Target<wbr>Capacity</a>
@@ -1022,8 +954,7 @@ The AutoProvisioningGroup resource accepts the following [input]({{< relref "/do
         <span class="property-type">string</span>
     </dt>
     <dd>{{% md %}}The target capacity of preemptible instances in the auto provisioning group.
-{{% /md %}}</dd>
-    <dt class="property-optional"
+{{% /md %}}</dd><dt class="property-optional"
             title="Optional">
         <span id="terminateinstances_nodejs">
 <a href="#terminateinstances_nodejs" style="color: inherit; text-decoration: inherit;">terminate<wbr>Instances</a>
@@ -1032,8 +963,7 @@ The AutoProvisioningGroup resource accepts the following [input]({{< relref "/do
         <span class="property-type">boolean</span>
     </dt>
     <dd>{{% md %}}Specifies whether to release instances of the auto provisioning group. Valid values:`false` and `true`, default value: `false`.
-{{% /md %}}</dd>
-    <dt class="property-optional"
+{{% /md %}}</dd><dt class="property-optional"
             title="Optional">
         <span id="terminateinstanceswithexpiration_nodejs">
 <a href="#terminateinstanceswithexpiration_nodejs" style="color: inherit; text-decoration: inherit;">terminate<wbr>Instances<wbr>With<wbr>Expiration</a>
@@ -1042,8 +972,7 @@ The AutoProvisioningGroup resource accepts the following [input]({{< relref "/do
         <span class="property-type">boolean</span>
     </dt>
     <dd>{{% md %}}The shutdown policy for preemptible instances when the auto provisioning group expires. Valid values: `false` and `true`, default value: `false`.
-{{% /md %}}</dd>
-    <dt class="property-optional"
+{{% /md %}}</dd><dt class="property-optional"
             title="Optional">
         <span id="validfrom_nodejs">
 <a href="#validfrom_nodejs" style="color: inherit; text-decoration: inherit;">valid<wbr>From</a>
@@ -1052,8 +981,7 @@ The AutoProvisioningGroup resource accepts the following [input]({{< relref "/do
         <span class="property-type">string</span>
     </dt>
     <dd>{{% md %}}The time when the auto provisioning group is started. The period of time between this point in time and the point in time specified by the `valid_until` parameter is the effective time period of the auto provisioning group.By default, an auto provisioning group is immediately started after creation.
-{{% /md %}}</dd>
-    <dt class="property-optional"
+{{% /md %}}</dd><dt class="property-optional"
             title="Optional">
         <span id="validuntil_nodejs">
 <a href="#validuntil_nodejs" style="color: inherit; text-decoration: inherit;">valid<wbr>Until</a>
@@ -1062,14 +990,11 @@ The AutoProvisioningGroup resource accepts the following [input]({{< relref "/do
         <span class="property-type">string</span>
     </dt>
     <dd>{{% md %}}The time when the auto provisioning group expires. The period of time between this point in time and the point in time specified by the `valid_from` parameter is the effective time period of the auto provisioning group.By default, an auto provisioning group never expires.
-{{% /md %}}</dd>
-</dl>
+{{% /md %}}</dd></dl>
 {{% /choosable %}}
 
 {{% choosable language python %}}
-<dl class="resources-properties">
-
-    <dt class="property-required"
+<dl class="resources-properties"><dt class="property-required"
             title="Required">
         <span id="launch_template_configs_python">
 <a href="#launch_template_configs_python" style="color: inherit; text-decoration: inherit;">launch_<wbr>template_<wbr>configs</a>
@@ -1078,8 +1003,7 @@ The AutoProvisioningGroup resource accepts the following [input]({{< relref "/do
         <span class="property-type"><a href="#autoprovisioninggrouplaunchtemplateconfig">Sequence[Auto<wbr>Provisioning<wbr>Group<wbr>Launch<wbr>Template<wbr>Config<wbr>Args]</a></span>
     </dt>
     <dd>{{% md %}}DataDisk mappings to attach to ecs instance. See Block config below for details.
-{{% /md %}}</dd>
-    <dt class="property-required"
+{{% /md %}}</dd><dt class="property-required"
             title="Required">
         <span id="launch_template_id_python">
 <a href="#launch_template_id_python" style="color: inherit; text-decoration: inherit;">launch_<wbr>template_<wbr>id</a>
@@ -1088,8 +1012,7 @@ The AutoProvisioningGroup resource accepts the following [input]({{< relref "/do
         <span class="property-type">str</span>
     </dt>
     <dd>{{% md %}}The ID of the instance launch template associated with the auto provisioning group.
-{{% /md %}}</dd>
-    <dt class="property-required"
+{{% /md %}}</dd><dt class="property-required"
             title="Required">
         <span id="total_target_capacity_python">
 <a href="#total_target_capacity_python" style="color: inherit; text-decoration: inherit;">total_<wbr>target_<wbr>capacity</a>
@@ -1098,8 +1021,7 @@ The AutoProvisioningGroup resource accepts the following [input]({{< relref "/do
         <span class="property-type">str</span>
     </dt>
     <dd>{{% md %}}The total target capacity of the auto provisioning group. The target capacity consists of the following three parts:PayAsYouGoTargetCapacity,SpotTargetCapacity and the supplemental capacity besides PayAsYouGoTargetCapacity and SpotTargetCapacity.
-{{% /md %}}</dd>
-    <dt class="property-optional"
+{{% /md %}}</dd><dt class="property-optional"
             title="Optional">
         <span id="auto_provisioning_group_name_python">
 <a href="#auto_provisioning_group_name_python" style="color: inherit; text-decoration: inherit;">auto_<wbr>provisioning_<wbr>group_<wbr>name</a>
@@ -1108,8 +1030,7 @@ The AutoProvisioningGroup resource accepts the following [input]({{< relref "/do
         <span class="property-type">str</span>
     </dt>
     <dd>{{% md %}}The name of the auto provisioning group to be created. It must be 2 to 128 characters in length. It must start with a letter but cannot start with http:// or https://. It can contain letters, digits, colons (:), underscores (_), and hyphens (-)
-{{% /md %}}</dd>
-    <dt class="property-optional"
+{{% /md %}}</dd><dt class="property-optional"
             title="Optional">
         <span id="auto_provisioning_group_type_python">
 <a href="#auto_provisioning_group_type_python" style="color: inherit; text-decoration: inherit;">auto_<wbr>provisioning_<wbr>group_<wbr>type</a>
@@ -1118,8 +1039,7 @@ The AutoProvisioningGroup resource accepts the following [input]({{< relref "/do
         <span class="property-type">str</span>
     </dt>
     <dd>{{% md %}}The type of the auto provisioning group. Valid values:`request` and `maintain`,Default value: `maintain`.
-{{% /md %}}</dd>
-    <dt class="property-optional"
+{{% /md %}}</dd><dt class="property-optional"
             title="Optional">
         <span id="default_target_capacity_type_python">
 <a href="#default_target_capacity_type_python" style="color: inherit; text-decoration: inherit;">default_<wbr>target_<wbr>capacity_<wbr>type</a>
@@ -1128,8 +1048,7 @@ The AutoProvisioningGroup resource accepts the following [input]({{< relref "/do
         <span class="property-type">str</span>
     </dt>
     <dd>{{% md %}}The type of supplemental instances. When the total value of `PayAsYouGoTargetCapacity` and `SpotTargetCapacity` is smaller than the value of TotalTargetCapacity, the auto provisioning group will create instances of the specified type to meet the capacity requirements. Valid values:`PayAsYouGo`: Pay-as-you-go instances; `Spot`: Preemptible instances, Default value: `Spot`.
-{{% /md %}}</dd>
-    <dt class="property-optional"
+{{% /md %}}</dd><dt class="property-optional"
             title="Optional">
         <span id="description_python">
 <a href="#description_python" style="color: inherit; text-decoration: inherit;">description</a>
@@ -1138,8 +1057,7 @@ The AutoProvisioningGroup resource accepts the following [input]({{< relref "/do
         <span class="property-type">str</span>
     </dt>
     <dd>{{% md %}}The description of the auto provisioning group.
-{{% /md %}}</dd>
-    <dt class="property-optional"
+{{% /md %}}</dd><dt class="property-optional"
             title="Optional">
         <span id="excess_capacity_termination_policy_python">
 <a href="#excess_capacity_termination_policy_python" style="color: inherit; text-decoration: inherit;">excess_<wbr>capacity_<wbr>termination_<wbr>policy</a>
@@ -1148,8 +1066,7 @@ The AutoProvisioningGroup resource accepts the following [input]({{< relref "/do
         <span class="property-type">str</span>
     </dt>
     <dd>{{% md %}}The shutdown policy for excess preemptible instances followed when the capacity of the auto provisioning group exceeds the target capacity. Valid values: `no-termination` and `termination`,Default value: `no-termination`.
-{{% /md %}}</dd>
-    <dt class="property-optional"
+{{% /md %}}</dd><dt class="property-optional"
             title="Optional">
         <span id="launch_template_version_python">
 <a href="#launch_template_version_python" style="color: inherit; text-decoration: inherit;">launch_<wbr>template_<wbr>version</a>
@@ -1158,8 +1075,7 @@ The AutoProvisioningGroup resource accepts the following [input]({{< relref "/do
         <span class="property-type">str</span>
     </dt>
     <dd>{{% md %}}The version of the instance launch template associated with the auto provisioning group.
-{{% /md %}}</dd>
-    <dt class="property-optional"
+{{% /md %}}</dd><dt class="property-optional"
             title="Optional">
         <span id="max_spot_price_python">
 <a href="#max_spot_price_python" style="color: inherit; text-decoration: inherit;">max_<wbr>spot_<wbr>price</a>
@@ -1168,8 +1084,7 @@ The AutoProvisioningGroup resource accepts the following [input]({{< relref "/do
         <span class="property-type">float</span>
     </dt>
     <dd>{{% md %}}The global maximum price for preemptible instances in the auto provisioning group. If both the `MaxSpotPrice` and `LaunchTemplateConfig.N.MaxPrice` parameters are specified, the maximum price is the lower value of the two.
-{{% /md %}}</dd>
-    <dt class="property-optional"
+{{% /md %}}</dd><dt class="property-optional"
             title="Optional">
         <span id="pay_as_you_go_allocation_strategy_python">
 <a href="#pay_as_you_go_allocation_strategy_python" style="color: inherit; text-decoration: inherit;">pay_<wbr>as_<wbr>you_<wbr>go_<wbr>allocation_<wbr>strategy</a>
@@ -1178,8 +1093,7 @@ The AutoProvisioningGroup resource accepts the following [input]({{< relref "/do
         <span class="property-type">str</span>
     </dt>
     <dd>{{% md %}}The scale-out policy for pay-as-you-go instances. Valid values: `lowest-price` and `prioritized`,Default value: `lowest-price`.
-{{% /md %}}</dd>
-    <dt class="property-optional"
+{{% /md %}}</dd><dt class="property-optional"
             title="Optional">
         <span id="pay_as_you_go_target_capacity_python">
 <a href="#pay_as_you_go_target_capacity_python" style="color: inherit; text-decoration: inherit;">pay_<wbr>as_<wbr>you_<wbr>go_<wbr>target_<wbr>capacity</a>
@@ -1188,8 +1102,7 @@ The AutoProvisioningGroup resource accepts the following [input]({{< relref "/do
         <span class="property-type">str</span>
     </dt>
     <dd>{{% md %}}The target capacity of pay-as-you-go instances in the auto provisioning group.
-{{% /md %}}</dd>
-    <dt class="property-optional"
+{{% /md %}}</dd><dt class="property-optional"
             title="Optional">
         <span id="spot_allocation_strategy_python">
 <a href="#spot_allocation_strategy_python" style="color: inherit; text-decoration: inherit;">spot_<wbr>allocation_<wbr>strategy</a>
@@ -1198,8 +1111,7 @@ The AutoProvisioningGroup resource accepts the following [input]({{< relref "/do
         <span class="property-type">str</span>
     </dt>
     <dd>{{% md %}}The scale-out policy for preemptible instances. Valid values:`lowest-price` and `diversified`,Default value: `lowest-price`.
-{{% /md %}}</dd>
-    <dt class="property-optional"
+{{% /md %}}</dd><dt class="property-optional"
             title="Optional">
         <span id="spot_instance_interruption_behavior_python">
 <a href="#spot_instance_interruption_behavior_python" style="color: inherit; text-decoration: inherit;">spot_<wbr>instance_<wbr>interruption_<wbr>behavior</a>
@@ -1208,8 +1120,7 @@ The AutoProvisioningGroup resource accepts the following [input]({{< relref "/do
         <span class="property-type">str</span>
     </dt>
     <dd>{{% md %}}The default behavior after preemptible instances are shut down. Value values: `stop` and `terminate`,Default value: `stop`.
-{{% /md %}}</dd>
-    <dt class="property-optional"
+{{% /md %}}</dd><dt class="property-optional"
             title="Optional">
         <span id="spot_instance_pools_to_use_count_python">
 <a href="#spot_instance_pools_to_use_count_python" style="color: inherit; text-decoration: inherit;">spot_<wbr>instance_<wbr>pools_<wbr>to_<wbr>use_<wbr>count</a>
@@ -1218,8 +1129,7 @@ The AutoProvisioningGroup resource accepts the following [input]({{< relref "/do
         <span class="property-type">int</span>
     </dt>
     <dd>{{% md %}}This parameter takes effect when the `SpotAllocationStrategy` parameter is set to `lowest-price`. The auto provisioning group selects instance types of the lowest cost to create instances.
-{{% /md %}}</dd>
-    <dt class="property-optional"
+{{% /md %}}</dd><dt class="property-optional"
             title="Optional">
         <span id="spot_target_capacity_python">
 <a href="#spot_target_capacity_python" style="color: inherit; text-decoration: inherit;">spot_<wbr>target_<wbr>capacity</a>
@@ -1228,8 +1138,7 @@ The AutoProvisioningGroup resource accepts the following [input]({{< relref "/do
         <span class="property-type">str</span>
     </dt>
     <dd>{{% md %}}The target capacity of preemptible instances in the auto provisioning group.
-{{% /md %}}</dd>
-    <dt class="property-optional"
+{{% /md %}}</dd><dt class="property-optional"
             title="Optional">
         <span id="terminate_instances_python">
 <a href="#terminate_instances_python" style="color: inherit; text-decoration: inherit;">terminate_<wbr>instances</a>
@@ -1238,8 +1147,7 @@ The AutoProvisioningGroup resource accepts the following [input]({{< relref "/do
         <span class="property-type">bool</span>
     </dt>
     <dd>{{% md %}}Specifies whether to release instances of the auto provisioning group. Valid values:`false` and `true`, default value: `false`.
-{{% /md %}}</dd>
-    <dt class="property-optional"
+{{% /md %}}</dd><dt class="property-optional"
             title="Optional">
         <span id="terminate_instances_with_expiration_python">
 <a href="#terminate_instances_with_expiration_python" style="color: inherit; text-decoration: inherit;">terminate_<wbr>instances_<wbr>with_<wbr>expiration</a>
@@ -1248,8 +1156,7 @@ The AutoProvisioningGroup resource accepts the following [input]({{< relref "/do
         <span class="property-type">bool</span>
     </dt>
     <dd>{{% md %}}The shutdown policy for preemptible instances when the auto provisioning group expires. Valid values: `false` and `true`, default value: `false`.
-{{% /md %}}</dd>
-    <dt class="property-optional"
+{{% /md %}}</dd><dt class="property-optional"
             title="Optional">
         <span id="valid_from_python">
 <a href="#valid_from_python" style="color: inherit; text-decoration: inherit;">valid_<wbr>from</a>
@@ -1258,8 +1165,7 @@ The AutoProvisioningGroup resource accepts the following [input]({{< relref "/do
         <span class="property-type">str</span>
     </dt>
     <dd>{{% md %}}The time when the auto provisioning group is started. The period of time between this point in time and the point in time specified by the `valid_until` parameter is the effective time period of the auto provisioning group.By default, an auto provisioning group is immediately started after creation.
-{{% /md %}}</dd>
-    <dt class="property-optional"
+{{% /md %}}</dd><dt class="property-optional"
             title="Optional">
         <span id="valid_until_python">
 <a href="#valid_until_python" style="color: inherit; text-decoration: inherit;">valid_<wbr>until</a>
@@ -1268,8 +1174,7 @@ The AutoProvisioningGroup resource accepts the following [input]({{< relref "/do
         <span class="property-type">str</span>
     </dt>
     <dd>{{% md %}}The time when the auto provisioning group expires. The period of time between this point in time and the point in time specified by the `valid_from` parameter is the effective time period of the auto provisioning group.By default, an auto provisioning group never expires.
-{{% /md %}}</dd>
-</dl>
+{{% /md %}}</dd></dl>
 {{% /choosable %}}
 
 
@@ -1280,9 +1185,7 @@ All [input](#inputs) properties are implicitly available as output properties. A
 
 
 {{% choosable language csharp %}}
-<dl class="resources-properties">
-
-    <dt class="property-"
+<dl class="resources-properties"><dt class="property-"
             title="">
         <span id="id_csharp">
 <a href="#id_csharp" style="color: inherit; text-decoration: inherit;">Id</a>
@@ -1290,14 +1193,11 @@ All [input](#inputs) properties are implicitly available as output properties. A
         <span class="property-indicator"></span>
         <span class="property-type">string</span>
     </dt>
-    <dd>{{% md %}}The provider-assigned unique ID for this managed resource.{{% /md %}}</dd>
-</dl>
+    <dd>{{% md %}}The provider-assigned unique ID for this managed resource.{{% /md %}}</dd></dl>
 {{% /choosable %}}
 
 {{% choosable language go %}}
-<dl class="resources-properties">
-
-    <dt class="property-"
+<dl class="resources-properties"><dt class="property-"
             title="">
         <span id="id_go">
 <a href="#id_go" style="color: inherit; text-decoration: inherit;">Id</a>
@@ -1305,14 +1205,11 @@ All [input](#inputs) properties are implicitly available as output properties. A
         <span class="property-indicator"></span>
         <span class="property-type">string</span>
     </dt>
-    <dd>{{% md %}}The provider-assigned unique ID for this managed resource.{{% /md %}}</dd>
-</dl>
+    <dd>{{% md %}}The provider-assigned unique ID for this managed resource.{{% /md %}}</dd></dl>
 {{% /choosable %}}
 
 {{% choosable language nodejs %}}
-<dl class="resources-properties">
-
-    <dt class="property-"
+<dl class="resources-properties"><dt class="property-"
             title="">
         <span id="id_nodejs">
 <a href="#id_nodejs" style="color: inherit; text-decoration: inherit;">id</a>
@@ -1320,14 +1217,11 @@ All [input](#inputs) properties are implicitly available as output properties. A
         <span class="property-indicator"></span>
         <span class="property-type">string</span>
     </dt>
-    <dd>{{% md %}}The provider-assigned unique ID for this managed resource.{{% /md %}}</dd>
-</dl>
+    <dd>{{% md %}}The provider-assigned unique ID for this managed resource.{{% /md %}}</dd></dl>
 {{% /choosable %}}
 
 {{% choosable language python %}}
-<dl class="resources-properties">
-
-    <dt class="property-"
+<dl class="resources-properties"><dt class="property-"
             title="">
         <span id="id_python">
 <a href="#id_python" style="color: inherit; text-decoration: inherit;">id</a>
@@ -1335,8 +1229,7 @@ All [input](#inputs) properties are implicitly available as output properties. A
         <span class="property-indicator"></span>
         <span class="property-type">str</span>
     </dt>
-    <dd>{{% md %}}The provider-assigned unique ID for this managed resource.{{% /md %}}</dd>
-</dl>
+    <dd>{{% md %}}The provider-assigned unique ID for this managed resource.{{% /md %}}</dd></dl>
 {{% /choosable %}}
 
 
@@ -1463,9 +1356,7 @@ The following state arguments are supported:
 
 
 {{% choosable language csharp %}}
-<dl class="resources-properties">
-
-    <dt class="property-optional"
+<dl class="resources-properties"><dt class="property-optional"
             title="Optional">
         <span id="state_autoprovisioninggroupname_csharp">
 <a href="#state_autoprovisioninggroupname_csharp" style="color: inherit; text-decoration: inherit;">Auto<wbr>Provisioning<wbr>Group<wbr>Name</a>
@@ -1474,8 +1365,7 @@ The following state arguments are supported:
         <span class="property-type">string</span>
     </dt>
     <dd>{{% md %}}The name of the auto provisioning group to be created. It must be 2 to 128 characters in length. It must start with a letter but cannot start with http:// or https://. It can contain letters, digits, colons (:), underscores (_), and hyphens (-)
-{{% /md %}}</dd>
-    <dt class="property-optional"
+{{% /md %}}</dd><dt class="property-optional"
             title="Optional">
         <span id="state_autoprovisioninggrouptype_csharp">
 <a href="#state_autoprovisioninggrouptype_csharp" style="color: inherit; text-decoration: inherit;">Auto<wbr>Provisioning<wbr>Group<wbr>Type</a>
@@ -1484,8 +1374,7 @@ The following state arguments are supported:
         <span class="property-type">string</span>
     </dt>
     <dd>{{% md %}}The type of the auto provisioning group. Valid values:`request` and `maintain`,Default value: `maintain`.
-{{% /md %}}</dd>
-    <dt class="property-optional"
+{{% /md %}}</dd><dt class="property-optional"
             title="Optional">
         <span id="state_defaulttargetcapacitytype_csharp">
 <a href="#state_defaulttargetcapacitytype_csharp" style="color: inherit; text-decoration: inherit;">Default<wbr>Target<wbr>Capacity<wbr>Type</a>
@@ -1494,8 +1383,7 @@ The following state arguments are supported:
         <span class="property-type">string</span>
     </dt>
     <dd>{{% md %}}The type of supplemental instances. When the total value of `PayAsYouGoTargetCapacity` and `SpotTargetCapacity` is smaller than the value of TotalTargetCapacity, the auto provisioning group will create instances of the specified type to meet the capacity requirements. Valid values:`PayAsYouGo`: Pay-as-you-go instances; `Spot`: Preemptible instances, Default value: `Spot`.
-{{% /md %}}</dd>
-    <dt class="property-optional"
+{{% /md %}}</dd><dt class="property-optional"
             title="Optional">
         <span id="state_description_csharp">
 <a href="#state_description_csharp" style="color: inherit; text-decoration: inherit;">Description</a>
@@ -1504,8 +1392,7 @@ The following state arguments are supported:
         <span class="property-type">string</span>
     </dt>
     <dd>{{% md %}}The description of the auto provisioning group.
-{{% /md %}}</dd>
-    <dt class="property-optional"
+{{% /md %}}</dd><dt class="property-optional"
             title="Optional">
         <span id="state_excesscapacityterminationpolicy_csharp">
 <a href="#state_excesscapacityterminationpolicy_csharp" style="color: inherit; text-decoration: inherit;">Excess<wbr>Capacity<wbr>Termination<wbr>Policy</a>
@@ -1514,8 +1401,7 @@ The following state arguments are supported:
         <span class="property-type">string</span>
     </dt>
     <dd>{{% md %}}The shutdown policy for excess preemptible instances followed when the capacity of the auto provisioning group exceeds the target capacity. Valid values: `no-termination` and `termination`,Default value: `no-termination`.
-{{% /md %}}</dd>
-    <dt class="property-optional"
+{{% /md %}}</dd><dt class="property-optional"
             title="Optional">
         <span id="state_launchtemplateconfigs_csharp">
 <a href="#state_launchtemplateconfigs_csharp" style="color: inherit; text-decoration: inherit;">Launch<wbr>Template<wbr>Configs</a>
@@ -1524,8 +1410,7 @@ The following state arguments are supported:
         <span class="property-type"><a href="#autoprovisioninggrouplaunchtemplateconfig">List&lt;Pulumi.<wbr>Ali<wbr>Cloud.<wbr>Ecs.<wbr>Inputs.<wbr>Auto<wbr>Provisioning<wbr>Group<wbr>Launch<wbr>Template<wbr>Config<wbr>Args&gt;</a></span>
     </dt>
     <dd>{{% md %}}DataDisk mappings to attach to ecs instance. See Block config below for details.
-{{% /md %}}</dd>
-    <dt class="property-optional"
+{{% /md %}}</dd><dt class="property-optional"
             title="Optional">
         <span id="state_launchtemplateid_csharp">
 <a href="#state_launchtemplateid_csharp" style="color: inherit; text-decoration: inherit;">Launch<wbr>Template<wbr>Id</a>
@@ -1534,8 +1419,7 @@ The following state arguments are supported:
         <span class="property-type">string</span>
     </dt>
     <dd>{{% md %}}The ID of the instance launch template associated with the auto provisioning group.
-{{% /md %}}</dd>
-    <dt class="property-optional"
+{{% /md %}}</dd><dt class="property-optional"
             title="Optional">
         <span id="state_launchtemplateversion_csharp">
 <a href="#state_launchtemplateversion_csharp" style="color: inherit; text-decoration: inherit;">Launch<wbr>Template<wbr>Version</a>
@@ -1544,8 +1428,7 @@ The following state arguments are supported:
         <span class="property-type">string</span>
     </dt>
     <dd>{{% md %}}The version of the instance launch template associated with the auto provisioning group.
-{{% /md %}}</dd>
-    <dt class="property-optional"
+{{% /md %}}</dd><dt class="property-optional"
             title="Optional">
         <span id="state_maxspotprice_csharp">
 <a href="#state_maxspotprice_csharp" style="color: inherit; text-decoration: inherit;">Max<wbr>Spot<wbr>Price</a>
@@ -1554,8 +1437,7 @@ The following state arguments are supported:
         <span class="property-type">double</span>
     </dt>
     <dd>{{% md %}}The global maximum price for preemptible instances in the auto provisioning group. If both the `MaxSpotPrice` and `LaunchTemplateConfig.N.MaxPrice` parameters are specified, the maximum price is the lower value of the two.
-{{% /md %}}</dd>
-    <dt class="property-optional"
+{{% /md %}}</dd><dt class="property-optional"
             title="Optional">
         <span id="state_payasyougoallocationstrategy_csharp">
 <a href="#state_payasyougoallocationstrategy_csharp" style="color: inherit; text-decoration: inherit;">Pay<wbr>As<wbr>You<wbr>Go<wbr>Allocation<wbr>Strategy</a>
@@ -1564,8 +1446,7 @@ The following state arguments are supported:
         <span class="property-type">string</span>
     </dt>
     <dd>{{% md %}}The scale-out policy for pay-as-you-go instances. Valid values: `lowest-price` and `prioritized`,Default value: `lowest-price`.
-{{% /md %}}</dd>
-    <dt class="property-optional"
+{{% /md %}}</dd><dt class="property-optional"
             title="Optional">
         <span id="state_payasyougotargetcapacity_csharp">
 <a href="#state_payasyougotargetcapacity_csharp" style="color: inherit; text-decoration: inherit;">Pay<wbr>As<wbr>You<wbr>Go<wbr>Target<wbr>Capacity</a>
@@ -1574,8 +1455,7 @@ The following state arguments are supported:
         <span class="property-type">string</span>
     </dt>
     <dd>{{% md %}}The target capacity of pay-as-you-go instances in the auto provisioning group.
-{{% /md %}}</dd>
-    <dt class="property-optional"
+{{% /md %}}</dd><dt class="property-optional"
             title="Optional">
         <span id="state_spotallocationstrategy_csharp">
 <a href="#state_spotallocationstrategy_csharp" style="color: inherit; text-decoration: inherit;">Spot<wbr>Allocation<wbr>Strategy</a>
@@ -1584,8 +1464,7 @@ The following state arguments are supported:
         <span class="property-type">string</span>
     </dt>
     <dd>{{% md %}}The scale-out policy for preemptible instances. Valid values:`lowest-price` and `diversified`,Default value: `lowest-price`.
-{{% /md %}}</dd>
-    <dt class="property-optional"
+{{% /md %}}</dd><dt class="property-optional"
             title="Optional">
         <span id="state_spotinstanceinterruptionbehavior_csharp">
 <a href="#state_spotinstanceinterruptionbehavior_csharp" style="color: inherit; text-decoration: inherit;">Spot<wbr>Instance<wbr>Interruption<wbr>Behavior</a>
@@ -1594,8 +1473,7 @@ The following state arguments are supported:
         <span class="property-type">string</span>
     </dt>
     <dd>{{% md %}}The default behavior after preemptible instances are shut down. Value values: `stop` and `terminate`,Default value: `stop`.
-{{% /md %}}</dd>
-    <dt class="property-optional"
+{{% /md %}}</dd><dt class="property-optional"
             title="Optional">
         <span id="state_spotinstancepoolstousecount_csharp">
 <a href="#state_spotinstancepoolstousecount_csharp" style="color: inherit; text-decoration: inherit;">Spot<wbr>Instance<wbr>Pools<wbr>To<wbr>Use<wbr>Count</a>
@@ -1604,8 +1482,7 @@ The following state arguments are supported:
         <span class="property-type">int</span>
     </dt>
     <dd>{{% md %}}This parameter takes effect when the `SpotAllocationStrategy` parameter is set to `lowest-price`. The auto provisioning group selects instance types of the lowest cost to create instances.
-{{% /md %}}</dd>
-    <dt class="property-optional"
+{{% /md %}}</dd><dt class="property-optional"
             title="Optional">
         <span id="state_spottargetcapacity_csharp">
 <a href="#state_spottargetcapacity_csharp" style="color: inherit; text-decoration: inherit;">Spot<wbr>Target<wbr>Capacity</a>
@@ -1614,8 +1491,7 @@ The following state arguments are supported:
         <span class="property-type">string</span>
     </dt>
     <dd>{{% md %}}The target capacity of preemptible instances in the auto provisioning group.
-{{% /md %}}</dd>
-    <dt class="property-optional"
+{{% /md %}}</dd><dt class="property-optional"
             title="Optional">
         <span id="state_terminateinstances_csharp">
 <a href="#state_terminateinstances_csharp" style="color: inherit; text-decoration: inherit;">Terminate<wbr>Instances</a>
@@ -1624,8 +1500,7 @@ The following state arguments are supported:
         <span class="property-type">bool</span>
     </dt>
     <dd>{{% md %}}Specifies whether to release instances of the auto provisioning group. Valid values:`false` and `true`, default value: `false`.
-{{% /md %}}</dd>
-    <dt class="property-optional"
+{{% /md %}}</dd><dt class="property-optional"
             title="Optional">
         <span id="state_terminateinstanceswithexpiration_csharp">
 <a href="#state_terminateinstanceswithexpiration_csharp" style="color: inherit; text-decoration: inherit;">Terminate<wbr>Instances<wbr>With<wbr>Expiration</a>
@@ -1634,8 +1509,7 @@ The following state arguments are supported:
         <span class="property-type">bool</span>
     </dt>
     <dd>{{% md %}}The shutdown policy for preemptible instances when the auto provisioning group expires. Valid values: `false` and `true`, default value: `false`.
-{{% /md %}}</dd>
-    <dt class="property-optional"
+{{% /md %}}</dd><dt class="property-optional"
             title="Optional">
         <span id="state_totaltargetcapacity_csharp">
 <a href="#state_totaltargetcapacity_csharp" style="color: inherit; text-decoration: inherit;">Total<wbr>Target<wbr>Capacity</a>
@@ -1644,8 +1518,7 @@ The following state arguments are supported:
         <span class="property-type">string</span>
     </dt>
     <dd>{{% md %}}The total target capacity of the auto provisioning group. The target capacity consists of the following three parts:PayAsYouGoTargetCapacity,SpotTargetCapacity and the supplemental capacity besides PayAsYouGoTargetCapacity and SpotTargetCapacity.
-{{% /md %}}</dd>
-    <dt class="property-optional"
+{{% /md %}}</dd><dt class="property-optional"
             title="Optional">
         <span id="state_validfrom_csharp">
 <a href="#state_validfrom_csharp" style="color: inherit; text-decoration: inherit;">Valid<wbr>From</a>
@@ -1654,8 +1527,7 @@ The following state arguments are supported:
         <span class="property-type">string</span>
     </dt>
     <dd>{{% md %}}The time when the auto provisioning group is started. The period of time between this point in time and the point in time specified by the `valid_until` parameter is the effective time period of the auto provisioning group.By default, an auto provisioning group is immediately started after creation.
-{{% /md %}}</dd>
-    <dt class="property-optional"
+{{% /md %}}</dd><dt class="property-optional"
             title="Optional">
         <span id="state_validuntil_csharp">
 <a href="#state_validuntil_csharp" style="color: inherit; text-decoration: inherit;">Valid<wbr>Until</a>
@@ -1664,14 +1536,11 @@ The following state arguments are supported:
         <span class="property-type">string</span>
     </dt>
     <dd>{{% md %}}The time when the auto provisioning group expires. The period of time between this point in time and the point in time specified by the `valid_from` parameter is the effective time period of the auto provisioning group.By default, an auto provisioning group never expires.
-{{% /md %}}</dd>
-</dl>
+{{% /md %}}</dd></dl>
 {{% /choosable %}}
 
 {{% choosable language go %}}
-<dl class="resources-properties">
-
-    <dt class="property-optional"
+<dl class="resources-properties"><dt class="property-optional"
             title="Optional">
         <span id="state_autoprovisioninggroupname_go">
 <a href="#state_autoprovisioninggroupname_go" style="color: inherit; text-decoration: inherit;">Auto<wbr>Provisioning<wbr>Group<wbr>Name</a>
@@ -1680,8 +1549,7 @@ The following state arguments are supported:
         <span class="property-type">string</span>
     </dt>
     <dd>{{% md %}}The name of the auto provisioning group to be created. It must be 2 to 128 characters in length. It must start with a letter but cannot start with http:// or https://. It can contain letters, digits, colons (:), underscores (_), and hyphens (-)
-{{% /md %}}</dd>
-    <dt class="property-optional"
+{{% /md %}}</dd><dt class="property-optional"
             title="Optional">
         <span id="state_autoprovisioninggrouptype_go">
 <a href="#state_autoprovisioninggrouptype_go" style="color: inherit; text-decoration: inherit;">Auto<wbr>Provisioning<wbr>Group<wbr>Type</a>
@@ -1690,8 +1558,7 @@ The following state arguments are supported:
         <span class="property-type">string</span>
     </dt>
     <dd>{{% md %}}The type of the auto provisioning group. Valid values:`request` and `maintain`,Default value: `maintain`.
-{{% /md %}}</dd>
-    <dt class="property-optional"
+{{% /md %}}</dd><dt class="property-optional"
             title="Optional">
         <span id="state_defaulttargetcapacitytype_go">
 <a href="#state_defaulttargetcapacitytype_go" style="color: inherit; text-decoration: inherit;">Default<wbr>Target<wbr>Capacity<wbr>Type</a>
@@ -1700,8 +1567,7 @@ The following state arguments are supported:
         <span class="property-type">string</span>
     </dt>
     <dd>{{% md %}}The type of supplemental instances. When the total value of `PayAsYouGoTargetCapacity` and `SpotTargetCapacity` is smaller than the value of TotalTargetCapacity, the auto provisioning group will create instances of the specified type to meet the capacity requirements. Valid values:`PayAsYouGo`: Pay-as-you-go instances; `Spot`: Preemptible instances, Default value: `Spot`.
-{{% /md %}}</dd>
-    <dt class="property-optional"
+{{% /md %}}</dd><dt class="property-optional"
             title="Optional">
         <span id="state_description_go">
 <a href="#state_description_go" style="color: inherit; text-decoration: inherit;">Description</a>
@@ -1710,8 +1576,7 @@ The following state arguments are supported:
         <span class="property-type">string</span>
     </dt>
     <dd>{{% md %}}The description of the auto provisioning group.
-{{% /md %}}</dd>
-    <dt class="property-optional"
+{{% /md %}}</dd><dt class="property-optional"
             title="Optional">
         <span id="state_excesscapacityterminationpolicy_go">
 <a href="#state_excesscapacityterminationpolicy_go" style="color: inherit; text-decoration: inherit;">Excess<wbr>Capacity<wbr>Termination<wbr>Policy</a>
@@ -1720,8 +1585,7 @@ The following state arguments are supported:
         <span class="property-type">string</span>
     </dt>
     <dd>{{% md %}}The shutdown policy for excess preemptible instances followed when the capacity of the auto provisioning group exceeds the target capacity. Valid values: `no-termination` and `termination`,Default value: `no-termination`.
-{{% /md %}}</dd>
-    <dt class="property-optional"
+{{% /md %}}</dd><dt class="property-optional"
             title="Optional">
         <span id="state_launchtemplateconfigs_go">
 <a href="#state_launchtemplateconfigs_go" style="color: inherit; text-decoration: inherit;">Launch<wbr>Template<wbr>Configs</a>
@@ -1730,8 +1594,7 @@ The following state arguments are supported:
         <span class="property-type"><a href="#autoprovisioninggrouplaunchtemplateconfig">[]Auto<wbr>Provisioning<wbr>Group<wbr>Launch<wbr>Template<wbr>Config</a></span>
     </dt>
     <dd>{{% md %}}DataDisk mappings to attach to ecs instance. See Block config below for details.
-{{% /md %}}</dd>
-    <dt class="property-optional"
+{{% /md %}}</dd><dt class="property-optional"
             title="Optional">
         <span id="state_launchtemplateid_go">
 <a href="#state_launchtemplateid_go" style="color: inherit; text-decoration: inherit;">Launch<wbr>Template<wbr>Id</a>
@@ -1740,8 +1603,7 @@ The following state arguments are supported:
         <span class="property-type">string</span>
     </dt>
     <dd>{{% md %}}The ID of the instance launch template associated with the auto provisioning group.
-{{% /md %}}</dd>
-    <dt class="property-optional"
+{{% /md %}}</dd><dt class="property-optional"
             title="Optional">
         <span id="state_launchtemplateversion_go">
 <a href="#state_launchtemplateversion_go" style="color: inherit; text-decoration: inherit;">Launch<wbr>Template<wbr>Version</a>
@@ -1750,8 +1612,7 @@ The following state arguments are supported:
         <span class="property-type">string</span>
     </dt>
     <dd>{{% md %}}The version of the instance launch template associated with the auto provisioning group.
-{{% /md %}}</dd>
-    <dt class="property-optional"
+{{% /md %}}</dd><dt class="property-optional"
             title="Optional">
         <span id="state_maxspotprice_go">
 <a href="#state_maxspotprice_go" style="color: inherit; text-decoration: inherit;">Max<wbr>Spot<wbr>Price</a>
@@ -1760,8 +1621,7 @@ The following state arguments are supported:
         <span class="property-type">float64</span>
     </dt>
     <dd>{{% md %}}The global maximum price for preemptible instances in the auto provisioning group. If both the `MaxSpotPrice` and `LaunchTemplateConfig.N.MaxPrice` parameters are specified, the maximum price is the lower value of the two.
-{{% /md %}}</dd>
-    <dt class="property-optional"
+{{% /md %}}</dd><dt class="property-optional"
             title="Optional">
         <span id="state_payasyougoallocationstrategy_go">
 <a href="#state_payasyougoallocationstrategy_go" style="color: inherit; text-decoration: inherit;">Pay<wbr>As<wbr>You<wbr>Go<wbr>Allocation<wbr>Strategy</a>
@@ -1770,8 +1630,7 @@ The following state arguments are supported:
         <span class="property-type">string</span>
     </dt>
     <dd>{{% md %}}The scale-out policy for pay-as-you-go instances. Valid values: `lowest-price` and `prioritized`,Default value: `lowest-price`.
-{{% /md %}}</dd>
-    <dt class="property-optional"
+{{% /md %}}</dd><dt class="property-optional"
             title="Optional">
         <span id="state_payasyougotargetcapacity_go">
 <a href="#state_payasyougotargetcapacity_go" style="color: inherit; text-decoration: inherit;">Pay<wbr>As<wbr>You<wbr>Go<wbr>Target<wbr>Capacity</a>
@@ -1780,8 +1639,7 @@ The following state arguments are supported:
         <span class="property-type">string</span>
     </dt>
     <dd>{{% md %}}The target capacity of pay-as-you-go instances in the auto provisioning group.
-{{% /md %}}</dd>
-    <dt class="property-optional"
+{{% /md %}}</dd><dt class="property-optional"
             title="Optional">
         <span id="state_spotallocationstrategy_go">
 <a href="#state_spotallocationstrategy_go" style="color: inherit; text-decoration: inherit;">Spot<wbr>Allocation<wbr>Strategy</a>
@@ -1790,8 +1648,7 @@ The following state arguments are supported:
         <span class="property-type">string</span>
     </dt>
     <dd>{{% md %}}The scale-out policy for preemptible instances. Valid values:`lowest-price` and `diversified`,Default value: `lowest-price`.
-{{% /md %}}</dd>
-    <dt class="property-optional"
+{{% /md %}}</dd><dt class="property-optional"
             title="Optional">
         <span id="state_spotinstanceinterruptionbehavior_go">
 <a href="#state_spotinstanceinterruptionbehavior_go" style="color: inherit; text-decoration: inherit;">Spot<wbr>Instance<wbr>Interruption<wbr>Behavior</a>
@@ -1800,8 +1657,7 @@ The following state arguments are supported:
         <span class="property-type">string</span>
     </dt>
     <dd>{{% md %}}The default behavior after preemptible instances are shut down. Value values: `stop` and `terminate`,Default value: `stop`.
-{{% /md %}}</dd>
-    <dt class="property-optional"
+{{% /md %}}</dd><dt class="property-optional"
             title="Optional">
         <span id="state_spotinstancepoolstousecount_go">
 <a href="#state_spotinstancepoolstousecount_go" style="color: inherit; text-decoration: inherit;">Spot<wbr>Instance<wbr>Pools<wbr>To<wbr>Use<wbr>Count</a>
@@ -1810,8 +1666,7 @@ The following state arguments are supported:
         <span class="property-type">int</span>
     </dt>
     <dd>{{% md %}}This parameter takes effect when the `SpotAllocationStrategy` parameter is set to `lowest-price`. The auto provisioning group selects instance types of the lowest cost to create instances.
-{{% /md %}}</dd>
-    <dt class="property-optional"
+{{% /md %}}</dd><dt class="property-optional"
             title="Optional">
         <span id="state_spottargetcapacity_go">
 <a href="#state_spottargetcapacity_go" style="color: inherit; text-decoration: inherit;">Spot<wbr>Target<wbr>Capacity</a>
@@ -1820,8 +1675,7 @@ The following state arguments are supported:
         <span class="property-type">string</span>
     </dt>
     <dd>{{% md %}}The target capacity of preemptible instances in the auto provisioning group.
-{{% /md %}}</dd>
-    <dt class="property-optional"
+{{% /md %}}</dd><dt class="property-optional"
             title="Optional">
         <span id="state_terminateinstances_go">
 <a href="#state_terminateinstances_go" style="color: inherit; text-decoration: inherit;">Terminate<wbr>Instances</a>
@@ -1830,8 +1684,7 @@ The following state arguments are supported:
         <span class="property-type">bool</span>
     </dt>
     <dd>{{% md %}}Specifies whether to release instances of the auto provisioning group. Valid values:`false` and `true`, default value: `false`.
-{{% /md %}}</dd>
-    <dt class="property-optional"
+{{% /md %}}</dd><dt class="property-optional"
             title="Optional">
         <span id="state_terminateinstanceswithexpiration_go">
 <a href="#state_terminateinstanceswithexpiration_go" style="color: inherit; text-decoration: inherit;">Terminate<wbr>Instances<wbr>With<wbr>Expiration</a>
@@ -1840,8 +1693,7 @@ The following state arguments are supported:
         <span class="property-type">bool</span>
     </dt>
     <dd>{{% md %}}The shutdown policy for preemptible instances when the auto provisioning group expires. Valid values: `false` and `true`, default value: `false`.
-{{% /md %}}</dd>
-    <dt class="property-optional"
+{{% /md %}}</dd><dt class="property-optional"
             title="Optional">
         <span id="state_totaltargetcapacity_go">
 <a href="#state_totaltargetcapacity_go" style="color: inherit; text-decoration: inherit;">Total<wbr>Target<wbr>Capacity</a>
@@ -1850,8 +1702,7 @@ The following state arguments are supported:
         <span class="property-type">string</span>
     </dt>
     <dd>{{% md %}}The total target capacity of the auto provisioning group. The target capacity consists of the following three parts:PayAsYouGoTargetCapacity,SpotTargetCapacity and the supplemental capacity besides PayAsYouGoTargetCapacity and SpotTargetCapacity.
-{{% /md %}}</dd>
-    <dt class="property-optional"
+{{% /md %}}</dd><dt class="property-optional"
             title="Optional">
         <span id="state_validfrom_go">
 <a href="#state_validfrom_go" style="color: inherit; text-decoration: inherit;">Valid<wbr>From</a>
@@ -1860,8 +1711,7 @@ The following state arguments are supported:
         <span class="property-type">string</span>
     </dt>
     <dd>{{% md %}}The time when the auto provisioning group is started. The period of time between this point in time and the point in time specified by the `valid_until` parameter is the effective time period of the auto provisioning group.By default, an auto provisioning group is immediately started after creation.
-{{% /md %}}</dd>
-    <dt class="property-optional"
+{{% /md %}}</dd><dt class="property-optional"
             title="Optional">
         <span id="state_validuntil_go">
 <a href="#state_validuntil_go" style="color: inherit; text-decoration: inherit;">Valid<wbr>Until</a>
@@ -1870,14 +1720,11 @@ The following state arguments are supported:
         <span class="property-type">string</span>
     </dt>
     <dd>{{% md %}}The time when the auto provisioning group expires. The period of time between this point in time and the point in time specified by the `valid_from` parameter is the effective time period of the auto provisioning group.By default, an auto provisioning group never expires.
-{{% /md %}}</dd>
-</dl>
+{{% /md %}}</dd></dl>
 {{% /choosable %}}
 
 {{% choosable language nodejs %}}
-<dl class="resources-properties">
-
-    <dt class="property-optional"
+<dl class="resources-properties"><dt class="property-optional"
             title="Optional">
         <span id="state_autoprovisioninggroupname_nodejs">
 <a href="#state_autoprovisioninggroupname_nodejs" style="color: inherit; text-decoration: inherit;">auto<wbr>Provisioning<wbr>Group<wbr>Name</a>
@@ -1886,8 +1733,7 @@ The following state arguments are supported:
         <span class="property-type">string</span>
     </dt>
     <dd>{{% md %}}The name of the auto provisioning group to be created. It must be 2 to 128 characters in length. It must start with a letter but cannot start with http:// or https://. It can contain letters, digits, colons (:), underscores (_), and hyphens (-)
-{{% /md %}}</dd>
-    <dt class="property-optional"
+{{% /md %}}</dd><dt class="property-optional"
             title="Optional">
         <span id="state_autoprovisioninggrouptype_nodejs">
 <a href="#state_autoprovisioninggrouptype_nodejs" style="color: inherit; text-decoration: inherit;">auto<wbr>Provisioning<wbr>Group<wbr>Type</a>
@@ -1896,8 +1742,7 @@ The following state arguments are supported:
         <span class="property-type">string</span>
     </dt>
     <dd>{{% md %}}The type of the auto provisioning group. Valid values:`request` and `maintain`,Default value: `maintain`.
-{{% /md %}}</dd>
-    <dt class="property-optional"
+{{% /md %}}</dd><dt class="property-optional"
             title="Optional">
         <span id="state_defaulttargetcapacitytype_nodejs">
 <a href="#state_defaulttargetcapacitytype_nodejs" style="color: inherit; text-decoration: inherit;">default<wbr>Target<wbr>Capacity<wbr>Type</a>
@@ -1906,8 +1751,7 @@ The following state arguments are supported:
         <span class="property-type">string</span>
     </dt>
     <dd>{{% md %}}The type of supplemental instances. When the total value of `PayAsYouGoTargetCapacity` and `SpotTargetCapacity` is smaller than the value of TotalTargetCapacity, the auto provisioning group will create instances of the specified type to meet the capacity requirements. Valid values:`PayAsYouGo`: Pay-as-you-go instances; `Spot`: Preemptible instances, Default value: `Spot`.
-{{% /md %}}</dd>
-    <dt class="property-optional"
+{{% /md %}}</dd><dt class="property-optional"
             title="Optional">
         <span id="state_description_nodejs">
 <a href="#state_description_nodejs" style="color: inherit; text-decoration: inherit;">description</a>
@@ -1916,8 +1760,7 @@ The following state arguments are supported:
         <span class="property-type">string</span>
     </dt>
     <dd>{{% md %}}The description of the auto provisioning group.
-{{% /md %}}</dd>
-    <dt class="property-optional"
+{{% /md %}}</dd><dt class="property-optional"
             title="Optional">
         <span id="state_excesscapacityterminationpolicy_nodejs">
 <a href="#state_excesscapacityterminationpolicy_nodejs" style="color: inherit; text-decoration: inherit;">excess<wbr>Capacity<wbr>Termination<wbr>Policy</a>
@@ -1926,8 +1769,7 @@ The following state arguments are supported:
         <span class="property-type">string</span>
     </dt>
     <dd>{{% md %}}The shutdown policy for excess preemptible instances followed when the capacity of the auto provisioning group exceeds the target capacity. Valid values: `no-termination` and `termination`,Default value: `no-termination`.
-{{% /md %}}</dd>
-    <dt class="property-optional"
+{{% /md %}}</dd><dt class="property-optional"
             title="Optional">
         <span id="state_launchtemplateconfigs_nodejs">
 <a href="#state_launchtemplateconfigs_nodejs" style="color: inherit; text-decoration: inherit;">launch<wbr>Template<wbr>Configs</a>
@@ -1936,8 +1778,7 @@ The following state arguments are supported:
         <span class="property-type"><a href="#autoprovisioninggrouplaunchtemplateconfig">Auto<wbr>Provisioning<wbr>Group<wbr>Launch<wbr>Template<wbr>Config[]</a></span>
     </dt>
     <dd>{{% md %}}DataDisk mappings to attach to ecs instance. See Block config below for details.
-{{% /md %}}</dd>
-    <dt class="property-optional"
+{{% /md %}}</dd><dt class="property-optional"
             title="Optional">
         <span id="state_launchtemplateid_nodejs">
 <a href="#state_launchtemplateid_nodejs" style="color: inherit; text-decoration: inherit;">launch<wbr>Template<wbr>Id</a>
@@ -1946,8 +1787,7 @@ The following state arguments are supported:
         <span class="property-type">string</span>
     </dt>
     <dd>{{% md %}}The ID of the instance launch template associated with the auto provisioning group.
-{{% /md %}}</dd>
-    <dt class="property-optional"
+{{% /md %}}</dd><dt class="property-optional"
             title="Optional">
         <span id="state_launchtemplateversion_nodejs">
 <a href="#state_launchtemplateversion_nodejs" style="color: inherit; text-decoration: inherit;">launch<wbr>Template<wbr>Version</a>
@@ -1956,8 +1796,7 @@ The following state arguments are supported:
         <span class="property-type">string</span>
     </dt>
     <dd>{{% md %}}The version of the instance launch template associated with the auto provisioning group.
-{{% /md %}}</dd>
-    <dt class="property-optional"
+{{% /md %}}</dd><dt class="property-optional"
             title="Optional">
         <span id="state_maxspotprice_nodejs">
 <a href="#state_maxspotprice_nodejs" style="color: inherit; text-decoration: inherit;">max<wbr>Spot<wbr>Price</a>
@@ -1966,8 +1805,7 @@ The following state arguments are supported:
         <span class="property-type">number</span>
     </dt>
     <dd>{{% md %}}The global maximum price for preemptible instances in the auto provisioning group. If both the `MaxSpotPrice` and `LaunchTemplateConfig.N.MaxPrice` parameters are specified, the maximum price is the lower value of the two.
-{{% /md %}}</dd>
-    <dt class="property-optional"
+{{% /md %}}</dd><dt class="property-optional"
             title="Optional">
         <span id="state_payasyougoallocationstrategy_nodejs">
 <a href="#state_payasyougoallocationstrategy_nodejs" style="color: inherit; text-decoration: inherit;">pay<wbr>As<wbr>You<wbr>Go<wbr>Allocation<wbr>Strategy</a>
@@ -1976,8 +1814,7 @@ The following state arguments are supported:
         <span class="property-type">string</span>
     </dt>
     <dd>{{% md %}}The scale-out policy for pay-as-you-go instances. Valid values: `lowest-price` and `prioritized`,Default value: `lowest-price`.
-{{% /md %}}</dd>
-    <dt class="property-optional"
+{{% /md %}}</dd><dt class="property-optional"
             title="Optional">
         <span id="state_payasyougotargetcapacity_nodejs">
 <a href="#state_payasyougotargetcapacity_nodejs" style="color: inherit; text-decoration: inherit;">pay<wbr>As<wbr>You<wbr>Go<wbr>Target<wbr>Capacity</a>
@@ -1986,8 +1823,7 @@ The following state arguments are supported:
         <span class="property-type">string</span>
     </dt>
     <dd>{{% md %}}The target capacity of pay-as-you-go instances in the auto provisioning group.
-{{% /md %}}</dd>
-    <dt class="property-optional"
+{{% /md %}}</dd><dt class="property-optional"
             title="Optional">
         <span id="state_spotallocationstrategy_nodejs">
 <a href="#state_spotallocationstrategy_nodejs" style="color: inherit; text-decoration: inherit;">spot<wbr>Allocation<wbr>Strategy</a>
@@ -1996,8 +1832,7 @@ The following state arguments are supported:
         <span class="property-type">string</span>
     </dt>
     <dd>{{% md %}}The scale-out policy for preemptible instances. Valid values:`lowest-price` and `diversified`,Default value: `lowest-price`.
-{{% /md %}}</dd>
-    <dt class="property-optional"
+{{% /md %}}</dd><dt class="property-optional"
             title="Optional">
         <span id="state_spotinstanceinterruptionbehavior_nodejs">
 <a href="#state_spotinstanceinterruptionbehavior_nodejs" style="color: inherit; text-decoration: inherit;">spot<wbr>Instance<wbr>Interruption<wbr>Behavior</a>
@@ -2006,8 +1841,7 @@ The following state arguments are supported:
         <span class="property-type">string</span>
     </dt>
     <dd>{{% md %}}The default behavior after preemptible instances are shut down. Value values: `stop` and `terminate`,Default value: `stop`.
-{{% /md %}}</dd>
-    <dt class="property-optional"
+{{% /md %}}</dd><dt class="property-optional"
             title="Optional">
         <span id="state_spotinstancepoolstousecount_nodejs">
 <a href="#state_spotinstancepoolstousecount_nodejs" style="color: inherit; text-decoration: inherit;">spot<wbr>Instance<wbr>Pools<wbr>To<wbr>Use<wbr>Count</a>
@@ -2016,8 +1850,7 @@ The following state arguments are supported:
         <span class="property-type">number</span>
     </dt>
     <dd>{{% md %}}This parameter takes effect when the `SpotAllocationStrategy` parameter is set to `lowest-price`. The auto provisioning group selects instance types of the lowest cost to create instances.
-{{% /md %}}</dd>
-    <dt class="property-optional"
+{{% /md %}}</dd><dt class="property-optional"
             title="Optional">
         <span id="state_spottargetcapacity_nodejs">
 <a href="#state_spottargetcapacity_nodejs" style="color: inherit; text-decoration: inherit;">spot<wbr>Target<wbr>Capacity</a>
@@ -2026,8 +1859,7 @@ The following state arguments are supported:
         <span class="property-type">string</span>
     </dt>
     <dd>{{% md %}}The target capacity of preemptible instances in the auto provisioning group.
-{{% /md %}}</dd>
-    <dt class="property-optional"
+{{% /md %}}</dd><dt class="property-optional"
             title="Optional">
         <span id="state_terminateinstances_nodejs">
 <a href="#state_terminateinstances_nodejs" style="color: inherit; text-decoration: inherit;">terminate<wbr>Instances</a>
@@ -2036,8 +1868,7 @@ The following state arguments are supported:
         <span class="property-type">boolean</span>
     </dt>
     <dd>{{% md %}}Specifies whether to release instances of the auto provisioning group. Valid values:`false` and `true`, default value: `false`.
-{{% /md %}}</dd>
-    <dt class="property-optional"
+{{% /md %}}</dd><dt class="property-optional"
             title="Optional">
         <span id="state_terminateinstanceswithexpiration_nodejs">
 <a href="#state_terminateinstanceswithexpiration_nodejs" style="color: inherit; text-decoration: inherit;">terminate<wbr>Instances<wbr>With<wbr>Expiration</a>
@@ -2046,8 +1877,7 @@ The following state arguments are supported:
         <span class="property-type">boolean</span>
     </dt>
     <dd>{{% md %}}The shutdown policy for preemptible instances when the auto provisioning group expires. Valid values: `false` and `true`, default value: `false`.
-{{% /md %}}</dd>
-    <dt class="property-optional"
+{{% /md %}}</dd><dt class="property-optional"
             title="Optional">
         <span id="state_totaltargetcapacity_nodejs">
 <a href="#state_totaltargetcapacity_nodejs" style="color: inherit; text-decoration: inherit;">total<wbr>Target<wbr>Capacity</a>
@@ -2056,8 +1886,7 @@ The following state arguments are supported:
         <span class="property-type">string</span>
     </dt>
     <dd>{{% md %}}The total target capacity of the auto provisioning group. The target capacity consists of the following three parts:PayAsYouGoTargetCapacity,SpotTargetCapacity and the supplemental capacity besides PayAsYouGoTargetCapacity and SpotTargetCapacity.
-{{% /md %}}</dd>
-    <dt class="property-optional"
+{{% /md %}}</dd><dt class="property-optional"
             title="Optional">
         <span id="state_validfrom_nodejs">
 <a href="#state_validfrom_nodejs" style="color: inherit; text-decoration: inherit;">valid<wbr>From</a>
@@ -2066,8 +1895,7 @@ The following state arguments are supported:
         <span class="property-type">string</span>
     </dt>
     <dd>{{% md %}}The time when the auto provisioning group is started. The period of time between this point in time and the point in time specified by the `valid_until` parameter is the effective time period of the auto provisioning group.By default, an auto provisioning group is immediately started after creation.
-{{% /md %}}</dd>
-    <dt class="property-optional"
+{{% /md %}}</dd><dt class="property-optional"
             title="Optional">
         <span id="state_validuntil_nodejs">
 <a href="#state_validuntil_nodejs" style="color: inherit; text-decoration: inherit;">valid<wbr>Until</a>
@@ -2076,14 +1904,11 @@ The following state arguments are supported:
         <span class="property-type">string</span>
     </dt>
     <dd>{{% md %}}The time when the auto provisioning group expires. The period of time between this point in time and the point in time specified by the `valid_from` parameter is the effective time period of the auto provisioning group.By default, an auto provisioning group never expires.
-{{% /md %}}</dd>
-</dl>
+{{% /md %}}</dd></dl>
 {{% /choosable %}}
 
 {{% choosable language python %}}
-<dl class="resources-properties">
-
-    <dt class="property-optional"
+<dl class="resources-properties"><dt class="property-optional"
             title="Optional">
         <span id="state_auto_provisioning_group_name_python">
 <a href="#state_auto_provisioning_group_name_python" style="color: inherit; text-decoration: inherit;">auto_<wbr>provisioning_<wbr>group_<wbr>name</a>
@@ -2092,8 +1917,7 @@ The following state arguments are supported:
         <span class="property-type">str</span>
     </dt>
     <dd>{{% md %}}The name of the auto provisioning group to be created. It must be 2 to 128 characters in length. It must start with a letter but cannot start with http:// or https://. It can contain letters, digits, colons (:), underscores (_), and hyphens (-)
-{{% /md %}}</dd>
-    <dt class="property-optional"
+{{% /md %}}</dd><dt class="property-optional"
             title="Optional">
         <span id="state_auto_provisioning_group_type_python">
 <a href="#state_auto_provisioning_group_type_python" style="color: inherit; text-decoration: inherit;">auto_<wbr>provisioning_<wbr>group_<wbr>type</a>
@@ -2102,8 +1926,7 @@ The following state arguments are supported:
         <span class="property-type">str</span>
     </dt>
     <dd>{{% md %}}The type of the auto provisioning group. Valid values:`request` and `maintain`,Default value: `maintain`.
-{{% /md %}}</dd>
-    <dt class="property-optional"
+{{% /md %}}</dd><dt class="property-optional"
             title="Optional">
         <span id="state_default_target_capacity_type_python">
 <a href="#state_default_target_capacity_type_python" style="color: inherit; text-decoration: inherit;">default_<wbr>target_<wbr>capacity_<wbr>type</a>
@@ -2112,8 +1935,7 @@ The following state arguments are supported:
         <span class="property-type">str</span>
     </dt>
     <dd>{{% md %}}The type of supplemental instances. When the total value of `PayAsYouGoTargetCapacity` and `SpotTargetCapacity` is smaller than the value of TotalTargetCapacity, the auto provisioning group will create instances of the specified type to meet the capacity requirements. Valid values:`PayAsYouGo`: Pay-as-you-go instances; `Spot`: Preemptible instances, Default value: `Spot`.
-{{% /md %}}</dd>
-    <dt class="property-optional"
+{{% /md %}}</dd><dt class="property-optional"
             title="Optional">
         <span id="state_description_python">
 <a href="#state_description_python" style="color: inherit; text-decoration: inherit;">description</a>
@@ -2122,8 +1944,7 @@ The following state arguments are supported:
         <span class="property-type">str</span>
     </dt>
     <dd>{{% md %}}The description of the auto provisioning group.
-{{% /md %}}</dd>
-    <dt class="property-optional"
+{{% /md %}}</dd><dt class="property-optional"
             title="Optional">
         <span id="state_excess_capacity_termination_policy_python">
 <a href="#state_excess_capacity_termination_policy_python" style="color: inherit; text-decoration: inherit;">excess_<wbr>capacity_<wbr>termination_<wbr>policy</a>
@@ -2132,8 +1953,7 @@ The following state arguments are supported:
         <span class="property-type">str</span>
     </dt>
     <dd>{{% md %}}The shutdown policy for excess preemptible instances followed when the capacity of the auto provisioning group exceeds the target capacity. Valid values: `no-termination` and `termination`,Default value: `no-termination`.
-{{% /md %}}</dd>
-    <dt class="property-optional"
+{{% /md %}}</dd><dt class="property-optional"
             title="Optional">
         <span id="state_launch_template_configs_python">
 <a href="#state_launch_template_configs_python" style="color: inherit; text-decoration: inherit;">launch_<wbr>template_<wbr>configs</a>
@@ -2142,8 +1962,7 @@ The following state arguments are supported:
         <span class="property-type"><a href="#autoprovisioninggrouplaunchtemplateconfig">Sequence[Auto<wbr>Provisioning<wbr>Group<wbr>Launch<wbr>Template<wbr>Config<wbr>Args]</a></span>
     </dt>
     <dd>{{% md %}}DataDisk mappings to attach to ecs instance. See Block config below for details.
-{{% /md %}}</dd>
-    <dt class="property-optional"
+{{% /md %}}</dd><dt class="property-optional"
             title="Optional">
         <span id="state_launch_template_id_python">
 <a href="#state_launch_template_id_python" style="color: inherit; text-decoration: inherit;">launch_<wbr>template_<wbr>id</a>
@@ -2152,8 +1971,7 @@ The following state arguments are supported:
         <span class="property-type">str</span>
     </dt>
     <dd>{{% md %}}The ID of the instance launch template associated with the auto provisioning group.
-{{% /md %}}</dd>
-    <dt class="property-optional"
+{{% /md %}}</dd><dt class="property-optional"
             title="Optional">
         <span id="state_launch_template_version_python">
 <a href="#state_launch_template_version_python" style="color: inherit; text-decoration: inherit;">launch_<wbr>template_<wbr>version</a>
@@ -2162,8 +1980,7 @@ The following state arguments are supported:
         <span class="property-type">str</span>
     </dt>
     <dd>{{% md %}}The version of the instance launch template associated with the auto provisioning group.
-{{% /md %}}</dd>
-    <dt class="property-optional"
+{{% /md %}}</dd><dt class="property-optional"
             title="Optional">
         <span id="state_max_spot_price_python">
 <a href="#state_max_spot_price_python" style="color: inherit; text-decoration: inherit;">max_<wbr>spot_<wbr>price</a>
@@ -2172,8 +1989,7 @@ The following state arguments are supported:
         <span class="property-type">float</span>
     </dt>
     <dd>{{% md %}}The global maximum price for preemptible instances in the auto provisioning group. If both the `MaxSpotPrice` and `LaunchTemplateConfig.N.MaxPrice` parameters are specified, the maximum price is the lower value of the two.
-{{% /md %}}</dd>
-    <dt class="property-optional"
+{{% /md %}}</dd><dt class="property-optional"
             title="Optional">
         <span id="state_pay_as_you_go_allocation_strategy_python">
 <a href="#state_pay_as_you_go_allocation_strategy_python" style="color: inherit; text-decoration: inherit;">pay_<wbr>as_<wbr>you_<wbr>go_<wbr>allocation_<wbr>strategy</a>
@@ -2182,8 +1998,7 @@ The following state arguments are supported:
         <span class="property-type">str</span>
     </dt>
     <dd>{{% md %}}The scale-out policy for pay-as-you-go instances. Valid values: `lowest-price` and `prioritized`,Default value: `lowest-price`.
-{{% /md %}}</dd>
-    <dt class="property-optional"
+{{% /md %}}</dd><dt class="property-optional"
             title="Optional">
         <span id="state_pay_as_you_go_target_capacity_python">
 <a href="#state_pay_as_you_go_target_capacity_python" style="color: inherit; text-decoration: inherit;">pay_<wbr>as_<wbr>you_<wbr>go_<wbr>target_<wbr>capacity</a>
@@ -2192,8 +2007,7 @@ The following state arguments are supported:
         <span class="property-type">str</span>
     </dt>
     <dd>{{% md %}}The target capacity of pay-as-you-go instances in the auto provisioning group.
-{{% /md %}}</dd>
-    <dt class="property-optional"
+{{% /md %}}</dd><dt class="property-optional"
             title="Optional">
         <span id="state_spot_allocation_strategy_python">
 <a href="#state_spot_allocation_strategy_python" style="color: inherit; text-decoration: inherit;">spot_<wbr>allocation_<wbr>strategy</a>
@@ -2202,8 +2016,7 @@ The following state arguments are supported:
         <span class="property-type">str</span>
     </dt>
     <dd>{{% md %}}The scale-out policy for preemptible instances. Valid values:`lowest-price` and `diversified`,Default value: `lowest-price`.
-{{% /md %}}</dd>
-    <dt class="property-optional"
+{{% /md %}}</dd><dt class="property-optional"
             title="Optional">
         <span id="state_spot_instance_interruption_behavior_python">
 <a href="#state_spot_instance_interruption_behavior_python" style="color: inherit; text-decoration: inherit;">spot_<wbr>instance_<wbr>interruption_<wbr>behavior</a>
@@ -2212,8 +2025,7 @@ The following state arguments are supported:
         <span class="property-type">str</span>
     </dt>
     <dd>{{% md %}}The default behavior after preemptible instances are shut down. Value values: `stop` and `terminate`,Default value: `stop`.
-{{% /md %}}</dd>
-    <dt class="property-optional"
+{{% /md %}}</dd><dt class="property-optional"
             title="Optional">
         <span id="state_spot_instance_pools_to_use_count_python">
 <a href="#state_spot_instance_pools_to_use_count_python" style="color: inherit; text-decoration: inherit;">spot_<wbr>instance_<wbr>pools_<wbr>to_<wbr>use_<wbr>count</a>
@@ -2222,8 +2034,7 @@ The following state arguments are supported:
         <span class="property-type">int</span>
     </dt>
     <dd>{{% md %}}This parameter takes effect when the `SpotAllocationStrategy` parameter is set to `lowest-price`. The auto provisioning group selects instance types of the lowest cost to create instances.
-{{% /md %}}</dd>
-    <dt class="property-optional"
+{{% /md %}}</dd><dt class="property-optional"
             title="Optional">
         <span id="state_spot_target_capacity_python">
 <a href="#state_spot_target_capacity_python" style="color: inherit; text-decoration: inherit;">spot_<wbr>target_<wbr>capacity</a>
@@ -2232,8 +2043,7 @@ The following state arguments are supported:
         <span class="property-type">str</span>
     </dt>
     <dd>{{% md %}}The target capacity of preemptible instances in the auto provisioning group.
-{{% /md %}}</dd>
-    <dt class="property-optional"
+{{% /md %}}</dd><dt class="property-optional"
             title="Optional">
         <span id="state_terminate_instances_python">
 <a href="#state_terminate_instances_python" style="color: inherit; text-decoration: inherit;">terminate_<wbr>instances</a>
@@ -2242,8 +2052,7 @@ The following state arguments are supported:
         <span class="property-type">bool</span>
     </dt>
     <dd>{{% md %}}Specifies whether to release instances of the auto provisioning group. Valid values:`false` and `true`, default value: `false`.
-{{% /md %}}</dd>
-    <dt class="property-optional"
+{{% /md %}}</dd><dt class="property-optional"
             title="Optional">
         <span id="state_terminate_instances_with_expiration_python">
 <a href="#state_terminate_instances_with_expiration_python" style="color: inherit; text-decoration: inherit;">terminate_<wbr>instances_<wbr>with_<wbr>expiration</a>
@@ -2252,8 +2061,7 @@ The following state arguments are supported:
         <span class="property-type">bool</span>
     </dt>
     <dd>{{% md %}}The shutdown policy for preemptible instances when the auto provisioning group expires. Valid values: `false` and `true`, default value: `false`.
-{{% /md %}}</dd>
-    <dt class="property-optional"
+{{% /md %}}</dd><dt class="property-optional"
             title="Optional">
         <span id="state_total_target_capacity_python">
 <a href="#state_total_target_capacity_python" style="color: inherit; text-decoration: inherit;">total_<wbr>target_<wbr>capacity</a>
@@ -2262,8 +2070,7 @@ The following state arguments are supported:
         <span class="property-type">str</span>
     </dt>
     <dd>{{% md %}}The total target capacity of the auto provisioning group. The target capacity consists of the following three parts:PayAsYouGoTargetCapacity,SpotTargetCapacity and the supplemental capacity besides PayAsYouGoTargetCapacity and SpotTargetCapacity.
-{{% /md %}}</dd>
-    <dt class="property-optional"
+{{% /md %}}</dd><dt class="property-optional"
             title="Optional">
         <span id="state_valid_from_python">
 <a href="#state_valid_from_python" style="color: inherit; text-decoration: inherit;">valid_<wbr>from</a>
@@ -2272,8 +2079,7 @@ The following state arguments are supported:
         <span class="property-type">str</span>
     </dt>
     <dd>{{% md %}}The time when the auto provisioning group is started. The period of time between this point in time and the point in time specified by the `valid_until` parameter is the effective time period of the auto provisioning group.By default, an auto provisioning group is immediately started after creation.
-{{% /md %}}</dd>
-    <dt class="property-optional"
+{{% /md %}}</dd><dt class="property-optional"
             title="Optional">
         <span id="state_valid_until_python">
 <a href="#state_valid_until_python" style="color: inherit; text-decoration: inherit;">valid_<wbr>until</a>
@@ -2282,8 +2088,7 @@ The following state arguments are supported:
         <span class="property-type">str</span>
     </dt>
     <dd>{{% md %}}The time when the auto provisioning group expires. The period of time between this point in time and the point in time specified by the `valid_from` parameter is the effective time period of the auto provisioning group.By default, an auto provisioning group never expires.
-{{% /md %}}</dd>
-</dl>
+{{% /md %}}</dd></dl>
 {{% /choosable %}}
 
 
@@ -2298,9 +2103,7 @@ The following state arguments are supported:
 <h4 id="autoprovisioninggrouplaunchtemplateconfig">Auto<wbr>Provisioning<wbr>Group<wbr>Launch<wbr>Template<wbr>Config</h4>
 
 {{% choosable language csharp %}}
-<dl class="resources-properties">
-
-    <dt class="property-required"
+<dl class="resources-properties"><dt class="property-required"
             title="Required">
         <span id="maxprice_csharp">
 <a href="#maxprice_csharp" style="color: inherit; text-decoration: inherit;">Max<wbr>Price</a>
@@ -2308,8 +2111,7 @@ The following state arguments are supported:
         <span class="property-indicator"></span>
         <span class="property-type">string</span>
     </dt>
-    <dd>{{% md %}}{{% /md %}}</dd>
-    <dt class="property-required"
+    <dd>{{% md %}}{{% /md %}}</dd><dt class="property-required"
             title="Required">
         <span id="vswitchid_csharp">
 <a href="#vswitchid_csharp" style="color: inherit; text-decoration: inherit;">Vswitch<wbr>Id</a>
@@ -2317,8 +2119,7 @@ The following state arguments are supported:
         <span class="property-indicator"></span>
         <span class="property-type">string</span>
     </dt>
-    <dd>{{% md %}}{{% /md %}}</dd>
-    <dt class="property-required"
+    <dd>{{% md %}}{{% /md %}}</dd><dt class="property-required"
             title="Required">
         <span id="weightedcapacity_csharp">
 <a href="#weightedcapacity_csharp" style="color: inherit; text-decoration: inherit;">Weighted<wbr>Capacity</a>
@@ -2326,8 +2127,7 @@ The following state arguments are supported:
         <span class="property-indicator"></span>
         <span class="property-type">string</span>
     </dt>
-    <dd>{{% md %}}{{% /md %}}</dd>
-    <dt class="property-optional"
+    <dd>{{% md %}}{{% /md %}}</dd><dt class="property-optional"
             title="Optional">
         <span id="instancetype_csharp">
 <a href="#instancetype_csharp" style="color: inherit; text-decoration: inherit;">Instance<wbr>Type</a>
@@ -2335,8 +2135,7 @@ The following state arguments are supported:
         <span class="property-indicator"></span>
         <span class="property-type">string</span>
     </dt>
-    <dd>{{% md %}}{{% /md %}}</dd>
-    <dt class="property-optional"
+    <dd>{{% md %}}{{% /md %}}</dd><dt class="property-optional"
             title="Optional">
         <span id="priority_csharp">
 <a href="#priority_csharp" style="color: inherit; text-decoration: inherit;">Priority</a>
@@ -2344,14 +2143,11 @@ The following state arguments are supported:
         <span class="property-indicator"></span>
         <span class="property-type">string</span>
     </dt>
-    <dd>{{% md %}}{{% /md %}}</dd>
-</dl>
+    <dd>{{% md %}}{{% /md %}}</dd></dl>
 {{% /choosable %}}
 
 {{% choosable language go %}}
-<dl class="resources-properties">
-
-    <dt class="property-required"
+<dl class="resources-properties"><dt class="property-required"
             title="Required">
         <span id="maxprice_go">
 <a href="#maxprice_go" style="color: inherit; text-decoration: inherit;">Max<wbr>Price</a>
@@ -2359,8 +2155,7 @@ The following state arguments are supported:
         <span class="property-indicator"></span>
         <span class="property-type">string</span>
     </dt>
-    <dd>{{% md %}}{{% /md %}}</dd>
-    <dt class="property-required"
+    <dd>{{% md %}}{{% /md %}}</dd><dt class="property-required"
             title="Required">
         <span id="vswitchid_go">
 <a href="#vswitchid_go" style="color: inherit; text-decoration: inherit;">Vswitch<wbr>Id</a>
@@ -2368,8 +2163,7 @@ The following state arguments are supported:
         <span class="property-indicator"></span>
         <span class="property-type">string</span>
     </dt>
-    <dd>{{% md %}}{{% /md %}}</dd>
-    <dt class="property-required"
+    <dd>{{% md %}}{{% /md %}}</dd><dt class="property-required"
             title="Required">
         <span id="weightedcapacity_go">
 <a href="#weightedcapacity_go" style="color: inherit; text-decoration: inherit;">Weighted<wbr>Capacity</a>
@@ -2377,8 +2171,7 @@ The following state arguments are supported:
         <span class="property-indicator"></span>
         <span class="property-type">string</span>
     </dt>
-    <dd>{{% md %}}{{% /md %}}</dd>
-    <dt class="property-optional"
+    <dd>{{% md %}}{{% /md %}}</dd><dt class="property-optional"
             title="Optional">
         <span id="instancetype_go">
 <a href="#instancetype_go" style="color: inherit; text-decoration: inherit;">Instance<wbr>Type</a>
@@ -2386,8 +2179,7 @@ The following state arguments are supported:
         <span class="property-indicator"></span>
         <span class="property-type">string</span>
     </dt>
-    <dd>{{% md %}}{{% /md %}}</dd>
-    <dt class="property-optional"
+    <dd>{{% md %}}{{% /md %}}</dd><dt class="property-optional"
             title="Optional">
         <span id="priority_go">
 <a href="#priority_go" style="color: inherit; text-decoration: inherit;">Priority</a>
@@ -2395,14 +2187,11 @@ The following state arguments are supported:
         <span class="property-indicator"></span>
         <span class="property-type">string</span>
     </dt>
-    <dd>{{% md %}}{{% /md %}}</dd>
-</dl>
+    <dd>{{% md %}}{{% /md %}}</dd></dl>
 {{% /choosable %}}
 
 {{% choosable language nodejs %}}
-<dl class="resources-properties">
-
-    <dt class="property-required"
+<dl class="resources-properties"><dt class="property-required"
             title="Required">
         <span id="maxprice_nodejs">
 <a href="#maxprice_nodejs" style="color: inherit; text-decoration: inherit;">max<wbr>Price</a>
@@ -2410,8 +2199,7 @@ The following state arguments are supported:
         <span class="property-indicator"></span>
         <span class="property-type">string</span>
     </dt>
-    <dd>{{% md %}}{{% /md %}}</dd>
-    <dt class="property-required"
+    <dd>{{% md %}}{{% /md %}}</dd><dt class="property-required"
             title="Required">
         <span id="vswitchid_nodejs">
 <a href="#vswitchid_nodejs" style="color: inherit; text-decoration: inherit;">vswitch<wbr>Id</a>
@@ -2419,8 +2207,7 @@ The following state arguments are supported:
         <span class="property-indicator"></span>
         <span class="property-type">string</span>
     </dt>
-    <dd>{{% md %}}{{% /md %}}</dd>
-    <dt class="property-required"
+    <dd>{{% md %}}{{% /md %}}</dd><dt class="property-required"
             title="Required">
         <span id="weightedcapacity_nodejs">
 <a href="#weightedcapacity_nodejs" style="color: inherit; text-decoration: inherit;">weighted<wbr>Capacity</a>
@@ -2428,8 +2215,7 @@ The following state arguments are supported:
         <span class="property-indicator"></span>
         <span class="property-type">string</span>
     </dt>
-    <dd>{{% md %}}{{% /md %}}</dd>
-    <dt class="property-optional"
+    <dd>{{% md %}}{{% /md %}}</dd><dt class="property-optional"
             title="Optional">
         <span id="instancetype_nodejs">
 <a href="#instancetype_nodejs" style="color: inherit; text-decoration: inherit;">instance<wbr>Type</a>
@@ -2437,8 +2223,7 @@ The following state arguments are supported:
         <span class="property-indicator"></span>
         <span class="property-type">string</span>
     </dt>
-    <dd>{{% md %}}{{% /md %}}</dd>
-    <dt class="property-optional"
+    <dd>{{% md %}}{{% /md %}}</dd><dt class="property-optional"
             title="Optional">
         <span id="priority_nodejs">
 <a href="#priority_nodejs" style="color: inherit; text-decoration: inherit;">priority</a>
@@ -2446,14 +2231,11 @@ The following state arguments are supported:
         <span class="property-indicator"></span>
         <span class="property-type">string</span>
     </dt>
-    <dd>{{% md %}}{{% /md %}}</dd>
-</dl>
+    <dd>{{% md %}}{{% /md %}}</dd></dl>
 {{% /choosable %}}
 
 {{% choosable language python %}}
-<dl class="resources-properties">
-
-    <dt class="property-required"
+<dl class="resources-properties"><dt class="property-required"
             title="Required">
         <span id="max_price_python">
 <a href="#max_price_python" style="color: inherit; text-decoration: inherit;">max_<wbr>price</a>
@@ -2461,8 +2243,7 @@ The following state arguments are supported:
         <span class="property-indicator"></span>
         <span class="property-type">str</span>
     </dt>
-    <dd>{{% md %}}{{% /md %}}</dd>
-    <dt class="property-required"
+    <dd>{{% md %}}{{% /md %}}</dd><dt class="property-required"
             title="Required">
         <span id="vswitch_id_python">
 <a href="#vswitch_id_python" style="color: inherit; text-decoration: inherit;">vswitch_<wbr>id</a>
@@ -2470,8 +2251,7 @@ The following state arguments are supported:
         <span class="property-indicator"></span>
         <span class="property-type">str</span>
     </dt>
-    <dd>{{% md %}}{{% /md %}}</dd>
-    <dt class="property-required"
+    <dd>{{% md %}}{{% /md %}}</dd><dt class="property-required"
             title="Required">
         <span id="weighted_capacity_python">
 <a href="#weighted_capacity_python" style="color: inherit; text-decoration: inherit;">weighted_<wbr>capacity</a>
@@ -2479,8 +2259,7 @@ The following state arguments are supported:
         <span class="property-indicator"></span>
         <span class="property-type">str</span>
     </dt>
-    <dd>{{% md %}}{{% /md %}}</dd>
-    <dt class="property-optional"
+    <dd>{{% md %}}{{% /md %}}</dd><dt class="property-optional"
             title="Optional">
         <span id="instance_type_python">
 <a href="#instance_type_python" style="color: inherit; text-decoration: inherit;">instance_<wbr>type</a>
@@ -2488,8 +2267,7 @@ The following state arguments are supported:
         <span class="property-indicator"></span>
         <span class="property-type">str</span>
     </dt>
-    <dd>{{% md %}}{{% /md %}}</dd>
-    <dt class="property-optional"
+    <dd>{{% md %}}{{% /md %}}</dd><dt class="property-optional"
             title="Optional">
         <span id="priority_python">
 <a href="#priority_python" style="color: inherit; text-decoration: inherit;">priority</a>
@@ -2497,8 +2275,7 @@ The following state arguments are supported:
         <span class="property-indicator"></span>
         <span class="property-type">str</span>
     </dt>
-    <dd>{{% md %}}{{% /md %}}</dd>
-</dl>
+    <dd>{{% md %}}{{% /md %}}</dd></dl>
 {{% /choosable %}}
 ## Import
 
@@ -2519,6 +2296,6 @@ ECS auto provisioning group can be imported using the id, e.g.
 	<dt>License</dt>
 	<dd>Apache-2.0</dd>
 	<dt>Notes</dt>
-	<dd>This Pulumi package is based on the [`alicloud` Terraform Provider](https://github.com/aliyun/terraform-provider-alicloud).</dd>
+	<dd>{{% md %}}This Pulumi package is based on the [`alicloud` Terraform Provider](https://github.com/aliyun/terraform-provider-alicloud).{{% /md %}}</dd>
 </dl>
 

@@ -21,11 +21,17 @@ To get more information about ConsumerQuotaOverride, see:
     * [REST API documentation](https://cloud.google.com/service-usage/docs/reference/rest/v1beta1/services.consumerQuotaMetrics.limits.consumerOverrides)
 
 {{% examples %}}
+
 ## Example Usage
 
 {{< chooser language "typescript,python,go,csharp" / >}}
+
+
 ### Consumer Quota Override
-{{% example csharp %}}
+
+
+{{< example csharp >}}
+
 ```csharp
 using Pulumi;
 using Gcp = Pulumi.Gcp;
@@ -59,9 +65,12 @@ class MyStack : Stack
 }
 ```
 
-{{% /example %}}
 
-{{% example go %}}
+{{< /example >}}
+
+
+{{< example go >}}
+
 ```go
 package main
 
@@ -98,9 +107,12 @@ func main() {
 }
 ```
 
-{{% /example %}}
 
-{{% example python %}}
+{{< /example >}}
+
+
+{{< example python >}}
+
 ```python
 import pulumi
 import pulumi_gcp as gcp
@@ -119,9 +131,12 @@ override = gcp.serviceusage.ConsumerQuotaOverride("override",
     opts=pulumi.ResourceOptions(provider=google_beta))
 ```
 
-{{% /example %}}
 
-{{% example typescript %}}
+{{< /example >}}
+
+
+{{< example typescript >}}
+
 
 ```typescript
 import * as pulumi from "@pulumi/pulumi";
@@ -145,9 +160,16 @@ const override = new gcp.serviceusage.ConsumerQuotaOverride("override", {
 });
 ```
 
-{{% /example %}}
+
+{{< /example >}}
+
+
+
+
 
 {{% /examples %}}
+
+
 
 
 ## Create a ConsumerQuotaOverride Resource {#create}
@@ -172,9 +194,7 @@ const override = new gcp.serviceusage.ConsumerQuotaOverride("override", {
 
 {{% choosable language nodejs %}}
 
-<dl class="resources-properties">
-  
-    <dt
+<dl class="resources-properties"><dt
         class="property-required" title="Required">
         <span>name</span>
         <span class="property-indicator"></span>
@@ -182,9 +202,7 @@ const override = new gcp.serviceusage.ConsumerQuotaOverride("override", {
     </dt>
     <dd>
       The unique name of the resource.
-    </dd>
-  
-    <dt
+    </dd><dt
         class="property-required" title="Required">
         <span>args</span>
         <span class="property-indicator"></span>
@@ -192,9 +210,7 @@ const override = new gcp.serviceusage.ConsumerQuotaOverride("override", {
     </dt>
     <dd>
       The arguments to resource properties.
-    </dd>
-  
-    <dt
+    </dd><dt
         class="property-optional" title="Optional">
         <span>opts</span>
         <span class="property-indicator"></span>
@@ -202,10 +218,7 @@ const override = new gcp.serviceusage.ConsumerQuotaOverride("override", {
     </dt>
     <dd>
       Bag of options to control resource&#39;s behavior.
-    </dd>
-  
-
-</dl>
+    </dd></dl>
 
 {{% /choosable %}}
 
@@ -231,9 +244,7 @@ const override = new gcp.serviceusage.ConsumerQuotaOverride("override", {
 
 {{% choosable language go %}}
 
-<dl class="resources-properties">
-  
-    <dt
+<dl class="resources-properties"><dt
         class="property-optional" title="Optional">
         <span>ctx</span>
         <span class="property-indicator"></span>
@@ -241,9 +252,7 @@ const override = new gcp.serviceusage.ConsumerQuotaOverride("override", {
     </dt>
     <dd>
       Context object for the current deployment.
-    </dd>
-  
-    <dt
+    </dd><dt
         class="property-required" title="Required">
         <span>name</span>
         <span class="property-indicator"></span>
@@ -251,9 +260,7 @@ const override = new gcp.serviceusage.ConsumerQuotaOverride("override", {
     </dt>
     <dd>
       The unique name of the resource.
-    </dd>
-  
-    <dt
+    </dd><dt
         class="property-required" title="Required">
         <span>args</span>
         <span class="property-indicator"></span>
@@ -261,9 +268,7 @@ const override = new gcp.serviceusage.ConsumerQuotaOverride("override", {
     </dt>
     <dd>
       The arguments to resource properties.
-    </dd>
-  
-    <dt
+    </dd><dt
         class="property-optional" title="Optional">
         <span>opts</span>
         <span class="property-indicator"></span>
@@ -271,18 +276,13 @@ const override = new gcp.serviceusage.ConsumerQuotaOverride("override", {
     </dt>
     <dd>
       Bag of options to control resource&#39;s behavior.
-    </dd>
-  
-
-</dl>
+    </dd></dl>
 
 {{% /choosable %}}
 
 {{% choosable language csharp %}}
 
-<dl class="resources-properties">
-  
-    <dt
+<dl class="resources-properties"><dt
         class="property-required" title="Required">
         <span>name</span>
         <span class="property-indicator"></span>
@@ -290,9 +290,7 @@ const override = new gcp.serviceusage.ConsumerQuotaOverride("override", {
     </dt>
     <dd>
       The unique name of the resource.
-    </dd>
-  
-    <dt
+    </dd><dt
         class="property-required" title="Required">
         <span>args</span>
         <span class="property-indicator"></span>
@@ -300,9 +298,7 @@ const override = new gcp.serviceusage.ConsumerQuotaOverride("override", {
     </dt>
     <dd>
       The arguments to resource properties.
-    </dd>
-  
-    <dt
+    </dd><dt
         class="property-optional" title="Optional">
         <span>opts</span>
         <span class="property-indicator"></span>
@@ -310,10 +306,7 @@ const override = new gcp.serviceusage.ConsumerQuotaOverride("override", {
     </dt>
     <dd>
       Bag of options to control resource&#39;s behavior.
-    </dd>
-  
-
-</dl>
+    </dd></dl>
 
 {{% /choosable %}}
 
@@ -328,9 +321,7 @@ The ConsumerQuotaOverride resource accepts the following [input]({{< relref "/do
 
 
 {{% choosable language csharp %}}
-<dl class="resources-properties">
-
-    <dt class="property-required"
+<dl class="resources-properties"><dt class="property-required"
             title="Required">
         <span id="limit_csharp">
 <a href="#limit_csharp" style="color: inherit; text-decoration: inherit;">Limit</a>
@@ -339,8 +330,7 @@ The ConsumerQuotaOverride resource accepts the following [input]({{< relref "/do
         <span class="property-type">string</span>
     </dt>
     <dd>{{% md %}}The limit on the metric, e.g. `/project/region`.
-{{% /md %}}</dd>
-    <dt class="property-required"
+{{% /md %}}</dd><dt class="property-required"
             title="Required">
         <span id="metric_csharp">
 <a href="#metric_csharp" style="color: inherit; text-decoration: inherit;">Metric</a>
@@ -349,8 +339,7 @@ The ConsumerQuotaOverride resource accepts the following [input]({{< relref "/do
         <span class="property-type">string</span>
     </dt>
     <dd>{{% md %}}The metric that should be limited, e.g. `compute.googleapis.com/cpus`.
-{{% /md %}}</dd>
-    <dt class="property-required"
+{{% /md %}}</dd><dt class="property-required"
             title="Required">
         <span id="overridevalue_csharp">
 <a href="#overridevalue_csharp" style="color: inherit; text-decoration: inherit;">Override<wbr>Value</a>
@@ -359,8 +348,7 @@ The ConsumerQuotaOverride resource accepts the following [input]({{< relref "/do
         <span class="property-type">string</span>
     </dt>
     <dd>{{% md %}}The overriding quota limit value. Can be any nonnegative integer, or -1 (unlimited quota).
-{{% /md %}}</dd>
-    <dt class="property-required"
+{{% /md %}}</dd><dt class="property-required"
             title="Required">
         <span id="service_csharp">
 <a href="#service_csharp" style="color: inherit; text-decoration: inherit;">Service</a>
@@ -369,8 +357,7 @@ The ConsumerQuotaOverride resource accepts the following [input]({{< relref "/do
         <span class="property-type">string</span>
     </dt>
     <dd>{{% md %}}The service that the metrics belong to, e.g. `compute.googleapis.com`.
-{{% /md %}}</dd>
-    <dt class="property-optional"
+{{% /md %}}</dd><dt class="property-optional"
             title="Optional">
         <span id="dimensions_csharp">
 <a href="#dimensions_csharp" style="color: inherit; text-decoration: inherit;">Dimensions</a>
@@ -379,8 +366,7 @@ The ConsumerQuotaOverride resource accepts the following [input]({{< relref "/do
         <span class="property-type">Dictionary&lt;string, string&gt;</span>
     </dt>
     <dd>{{% md %}}If this map is nonempty, then this override applies only to specific values for dimensions defined in the limit unit.
-{{% /md %}}</dd>
-    <dt class="property-optional"
+{{% /md %}}</dd><dt class="property-optional"
             title="Optional">
         <span id="force_csharp">
 <a href="#force_csharp" style="color: inherit; text-decoration: inherit;">Force</a>
@@ -390,8 +376,7 @@ The ConsumerQuotaOverride resource accepts the following [input]({{< relref "/do
     </dt>
     <dd>{{% md %}}If the new quota would decrease the existing quota by more than 10%, the request is rejected.
 If `force` is `true`, that safety check is ignored.
-{{% /md %}}</dd>
-    <dt class="property-optional"
+{{% /md %}}</dd><dt class="property-optional"
             title="Optional">
         <span id="project_csharp">
 <a href="#project_csharp" style="color: inherit; text-decoration: inherit;">Project</a>
@@ -401,14 +386,11 @@ If `force` is `true`, that safety check is ignored.
     </dt>
     <dd>{{% md %}}The ID of the project in which the resource belongs.
 If it is not provided, the provider project is used.
-{{% /md %}}</dd>
-</dl>
+{{% /md %}}</dd></dl>
 {{% /choosable %}}
 
 {{% choosable language go %}}
-<dl class="resources-properties">
-
-    <dt class="property-required"
+<dl class="resources-properties"><dt class="property-required"
             title="Required">
         <span id="limit_go">
 <a href="#limit_go" style="color: inherit; text-decoration: inherit;">Limit</a>
@@ -417,8 +399,7 @@ If it is not provided, the provider project is used.
         <span class="property-type">string</span>
     </dt>
     <dd>{{% md %}}The limit on the metric, e.g. `/project/region`.
-{{% /md %}}</dd>
-    <dt class="property-required"
+{{% /md %}}</dd><dt class="property-required"
             title="Required">
         <span id="metric_go">
 <a href="#metric_go" style="color: inherit; text-decoration: inherit;">Metric</a>
@@ -427,8 +408,7 @@ If it is not provided, the provider project is used.
         <span class="property-type">string</span>
     </dt>
     <dd>{{% md %}}The metric that should be limited, e.g. `compute.googleapis.com/cpus`.
-{{% /md %}}</dd>
-    <dt class="property-required"
+{{% /md %}}</dd><dt class="property-required"
             title="Required">
         <span id="overridevalue_go">
 <a href="#overridevalue_go" style="color: inherit; text-decoration: inherit;">Override<wbr>Value</a>
@@ -437,8 +417,7 @@ If it is not provided, the provider project is used.
         <span class="property-type">string</span>
     </dt>
     <dd>{{% md %}}The overriding quota limit value. Can be any nonnegative integer, or -1 (unlimited quota).
-{{% /md %}}</dd>
-    <dt class="property-required"
+{{% /md %}}</dd><dt class="property-required"
             title="Required">
         <span id="service_go">
 <a href="#service_go" style="color: inherit; text-decoration: inherit;">Service</a>
@@ -447,8 +426,7 @@ If it is not provided, the provider project is used.
         <span class="property-type">string</span>
     </dt>
     <dd>{{% md %}}The service that the metrics belong to, e.g. `compute.googleapis.com`.
-{{% /md %}}</dd>
-    <dt class="property-optional"
+{{% /md %}}</dd><dt class="property-optional"
             title="Optional">
         <span id="dimensions_go">
 <a href="#dimensions_go" style="color: inherit; text-decoration: inherit;">Dimensions</a>
@@ -457,8 +435,7 @@ If it is not provided, the provider project is used.
         <span class="property-type">map[string]string</span>
     </dt>
     <dd>{{% md %}}If this map is nonempty, then this override applies only to specific values for dimensions defined in the limit unit.
-{{% /md %}}</dd>
-    <dt class="property-optional"
+{{% /md %}}</dd><dt class="property-optional"
             title="Optional">
         <span id="force_go">
 <a href="#force_go" style="color: inherit; text-decoration: inherit;">Force</a>
@@ -468,8 +445,7 @@ If it is not provided, the provider project is used.
     </dt>
     <dd>{{% md %}}If the new quota would decrease the existing quota by more than 10%, the request is rejected.
 If `force` is `true`, that safety check is ignored.
-{{% /md %}}</dd>
-    <dt class="property-optional"
+{{% /md %}}</dd><dt class="property-optional"
             title="Optional">
         <span id="project_go">
 <a href="#project_go" style="color: inherit; text-decoration: inherit;">Project</a>
@@ -479,14 +455,11 @@ If `force` is `true`, that safety check is ignored.
     </dt>
     <dd>{{% md %}}The ID of the project in which the resource belongs.
 If it is not provided, the provider project is used.
-{{% /md %}}</dd>
-</dl>
+{{% /md %}}</dd></dl>
 {{% /choosable %}}
 
 {{% choosable language nodejs %}}
-<dl class="resources-properties">
-
-    <dt class="property-required"
+<dl class="resources-properties"><dt class="property-required"
             title="Required">
         <span id="limit_nodejs">
 <a href="#limit_nodejs" style="color: inherit; text-decoration: inherit;">limit</a>
@@ -495,8 +468,7 @@ If it is not provided, the provider project is used.
         <span class="property-type">string</span>
     </dt>
     <dd>{{% md %}}The limit on the metric, e.g. `/project/region`.
-{{% /md %}}</dd>
-    <dt class="property-required"
+{{% /md %}}</dd><dt class="property-required"
             title="Required">
         <span id="metric_nodejs">
 <a href="#metric_nodejs" style="color: inherit; text-decoration: inherit;">metric</a>
@@ -505,8 +477,7 @@ If it is not provided, the provider project is used.
         <span class="property-type">string</span>
     </dt>
     <dd>{{% md %}}The metric that should be limited, e.g. `compute.googleapis.com/cpus`.
-{{% /md %}}</dd>
-    <dt class="property-required"
+{{% /md %}}</dd><dt class="property-required"
             title="Required">
         <span id="overridevalue_nodejs">
 <a href="#overridevalue_nodejs" style="color: inherit; text-decoration: inherit;">override<wbr>Value</a>
@@ -515,8 +486,7 @@ If it is not provided, the provider project is used.
         <span class="property-type">string</span>
     </dt>
     <dd>{{% md %}}The overriding quota limit value. Can be any nonnegative integer, or -1 (unlimited quota).
-{{% /md %}}</dd>
-    <dt class="property-required"
+{{% /md %}}</dd><dt class="property-required"
             title="Required">
         <span id="service_nodejs">
 <a href="#service_nodejs" style="color: inherit; text-decoration: inherit;">service</a>
@@ -525,8 +495,7 @@ If it is not provided, the provider project is used.
         <span class="property-type">string</span>
     </dt>
     <dd>{{% md %}}The service that the metrics belong to, e.g. `compute.googleapis.com`.
-{{% /md %}}</dd>
-    <dt class="property-optional"
+{{% /md %}}</dd><dt class="property-optional"
             title="Optional">
         <span id="dimensions_nodejs">
 <a href="#dimensions_nodejs" style="color: inherit; text-decoration: inherit;">dimensions</a>
@@ -535,8 +504,7 @@ If it is not provided, the provider project is used.
         <span class="property-type">{[key: string]: string}</span>
     </dt>
     <dd>{{% md %}}If this map is nonempty, then this override applies only to specific values for dimensions defined in the limit unit.
-{{% /md %}}</dd>
-    <dt class="property-optional"
+{{% /md %}}</dd><dt class="property-optional"
             title="Optional">
         <span id="force_nodejs">
 <a href="#force_nodejs" style="color: inherit; text-decoration: inherit;">force</a>
@@ -546,8 +514,7 @@ If it is not provided, the provider project is used.
     </dt>
     <dd>{{% md %}}If the new quota would decrease the existing quota by more than 10%, the request is rejected.
 If `force` is `true`, that safety check is ignored.
-{{% /md %}}</dd>
-    <dt class="property-optional"
+{{% /md %}}</dd><dt class="property-optional"
             title="Optional">
         <span id="project_nodejs">
 <a href="#project_nodejs" style="color: inherit; text-decoration: inherit;">project</a>
@@ -557,14 +524,11 @@ If `force` is `true`, that safety check is ignored.
     </dt>
     <dd>{{% md %}}The ID of the project in which the resource belongs.
 If it is not provided, the provider project is used.
-{{% /md %}}</dd>
-</dl>
+{{% /md %}}</dd></dl>
 {{% /choosable %}}
 
 {{% choosable language python %}}
-<dl class="resources-properties">
-
-    <dt class="property-required"
+<dl class="resources-properties"><dt class="property-required"
             title="Required">
         <span id="limit_python">
 <a href="#limit_python" style="color: inherit; text-decoration: inherit;">limit</a>
@@ -573,8 +537,7 @@ If it is not provided, the provider project is used.
         <span class="property-type">str</span>
     </dt>
     <dd>{{% md %}}The limit on the metric, e.g. `/project/region`.
-{{% /md %}}</dd>
-    <dt class="property-required"
+{{% /md %}}</dd><dt class="property-required"
             title="Required">
         <span id="metric_python">
 <a href="#metric_python" style="color: inherit; text-decoration: inherit;">metric</a>
@@ -583,8 +546,7 @@ If it is not provided, the provider project is used.
         <span class="property-type">str</span>
     </dt>
     <dd>{{% md %}}The metric that should be limited, e.g. `compute.googleapis.com/cpus`.
-{{% /md %}}</dd>
-    <dt class="property-required"
+{{% /md %}}</dd><dt class="property-required"
             title="Required">
         <span id="override_value_python">
 <a href="#override_value_python" style="color: inherit; text-decoration: inherit;">override_<wbr>value</a>
@@ -593,8 +555,7 @@ If it is not provided, the provider project is used.
         <span class="property-type">str</span>
     </dt>
     <dd>{{% md %}}The overriding quota limit value. Can be any nonnegative integer, or -1 (unlimited quota).
-{{% /md %}}</dd>
-    <dt class="property-required"
+{{% /md %}}</dd><dt class="property-required"
             title="Required">
         <span id="service_python">
 <a href="#service_python" style="color: inherit; text-decoration: inherit;">service</a>
@@ -603,8 +564,7 @@ If it is not provided, the provider project is used.
         <span class="property-type">str</span>
     </dt>
     <dd>{{% md %}}The service that the metrics belong to, e.g. `compute.googleapis.com`.
-{{% /md %}}</dd>
-    <dt class="property-optional"
+{{% /md %}}</dd><dt class="property-optional"
             title="Optional">
         <span id="dimensions_python">
 <a href="#dimensions_python" style="color: inherit; text-decoration: inherit;">dimensions</a>
@@ -613,8 +573,7 @@ If it is not provided, the provider project is used.
         <span class="property-type">Mapping[str, str]</span>
     </dt>
     <dd>{{% md %}}If this map is nonempty, then this override applies only to specific values for dimensions defined in the limit unit.
-{{% /md %}}</dd>
-    <dt class="property-optional"
+{{% /md %}}</dd><dt class="property-optional"
             title="Optional">
         <span id="force_python">
 <a href="#force_python" style="color: inherit; text-decoration: inherit;">force</a>
@@ -624,8 +583,7 @@ If it is not provided, the provider project is used.
     </dt>
     <dd>{{% md %}}If the new quota would decrease the existing quota by more than 10%, the request is rejected.
 If `force` is `true`, that safety check is ignored.
-{{% /md %}}</dd>
-    <dt class="property-optional"
+{{% /md %}}</dd><dt class="property-optional"
             title="Optional">
         <span id="project_python">
 <a href="#project_python" style="color: inherit; text-decoration: inherit;">project</a>
@@ -635,8 +593,7 @@ If `force` is `true`, that safety check is ignored.
     </dt>
     <dd>{{% md %}}The ID of the project in which the resource belongs.
 If it is not provided, the provider project is used.
-{{% /md %}}</dd>
-</dl>
+{{% /md %}}</dd></dl>
 {{% /choosable %}}
 
 
@@ -647,9 +604,7 @@ All [input](#inputs) properties are implicitly available as output properties. A
 
 
 {{% choosable language csharp %}}
-<dl class="resources-properties">
-
-    <dt class="property-"
+<dl class="resources-properties"><dt class="property-"
             title="">
         <span id="id_csharp">
 <a href="#id_csharp" style="color: inherit; text-decoration: inherit;">Id</a>
@@ -657,8 +612,7 @@ All [input](#inputs) properties are implicitly available as output properties. A
         <span class="property-indicator"></span>
         <span class="property-type">string</span>
     </dt>
-    <dd>{{% md %}}The provider-assigned unique ID for this managed resource.{{% /md %}}</dd>
-    <dt class="property-"
+    <dd>{{% md %}}The provider-assigned unique ID for this managed resource.{{% /md %}}</dd><dt class="property-"
             title="">
         <span id="name_csharp">
 <a href="#name_csharp" style="color: inherit; text-decoration: inherit;">Name</a>
@@ -667,14 +621,11 @@ All [input](#inputs) properties are implicitly available as output properties. A
         <span class="property-type">string</span>
     </dt>
     <dd>{{% md %}}The server-generated name of the quota override.
-{{% /md %}}</dd>
-</dl>
+{{% /md %}}</dd></dl>
 {{% /choosable %}}
 
 {{% choosable language go %}}
-<dl class="resources-properties">
-
-    <dt class="property-"
+<dl class="resources-properties"><dt class="property-"
             title="">
         <span id="id_go">
 <a href="#id_go" style="color: inherit; text-decoration: inherit;">Id</a>
@@ -682,8 +633,7 @@ All [input](#inputs) properties are implicitly available as output properties. A
         <span class="property-indicator"></span>
         <span class="property-type">string</span>
     </dt>
-    <dd>{{% md %}}The provider-assigned unique ID for this managed resource.{{% /md %}}</dd>
-    <dt class="property-"
+    <dd>{{% md %}}The provider-assigned unique ID for this managed resource.{{% /md %}}</dd><dt class="property-"
             title="">
         <span id="name_go">
 <a href="#name_go" style="color: inherit; text-decoration: inherit;">Name</a>
@@ -692,14 +642,11 @@ All [input](#inputs) properties are implicitly available as output properties. A
         <span class="property-type">string</span>
     </dt>
     <dd>{{% md %}}The server-generated name of the quota override.
-{{% /md %}}</dd>
-</dl>
+{{% /md %}}</dd></dl>
 {{% /choosable %}}
 
 {{% choosable language nodejs %}}
-<dl class="resources-properties">
-
-    <dt class="property-"
+<dl class="resources-properties"><dt class="property-"
             title="">
         <span id="id_nodejs">
 <a href="#id_nodejs" style="color: inherit; text-decoration: inherit;">id</a>
@@ -707,8 +654,7 @@ All [input](#inputs) properties are implicitly available as output properties. A
         <span class="property-indicator"></span>
         <span class="property-type">string</span>
     </dt>
-    <dd>{{% md %}}The provider-assigned unique ID for this managed resource.{{% /md %}}</dd>
-    <dt class="property-"
+    <dd>{{% md %}}The provider-assigned unique ID for this managed resource.{{% /md %}}</dd><dt class="property-"
             title="">
         <span id="name_nodejs">
 <a href="#name_nodejs" style="color: inherit; text-decoration: inherit;">name</a>
@@ -717,14 +663,11 @@ All [input](#inputs) properties are implicitly available as output properties. A
         <span class="property-type">string</span>
     </dt>
     <dd>{{% md %}}The server-generated name of the quota override.
-{{% /md %}}</dd>
-</dl>
+{{% /md %}}</dd></dl>
 {{% /choosable %}}
 
 {{% choosable language python %}}
-<dl class="resources-properties">
-
-    <dt class="property-"
+<dl class="resources-properties"><dt class="property-"
             title="">
         <span id="id_python">
 <a href="#id_python" style="color: inherit; text-decoration: inherit;">id</a>
@@ -732,8 +675,7 @@ All [input](#inputs) properties are implicitly available as output properties. A
         <span class="property-indicator"></span>
         <span class="property-type">str</span>
     </dt>
-    <dd>{{% md %}}The provider-assigned unique ID for this managed resource.{{% /md %}}</dd>
-    <dt class="property-"
+    <dd>{{% md %}}The provider-assigned unique ID for this managed resource.{{% /md %}}</dd><dt class="property-"
             title="">
         <span id="name_python">
 <a href="#name_python" style="color: inherit; text-decoration: inherit;">name</a>
@@ -742,8 +684,7 @@ All [input](#inputs) properties are implicitly available as output properties. A
         <span class="property-type">str</span>
     </dt>
     <dd>{{% md %}}The server-generated name of the quota override.
-{{% /md %}}</dd>
-</dl>
+{{% /md %}}</dd></dl>
 {{% /choosable %}}
 
 
@@ -870,9 +811,7 @@ The following state arguments are supported:
 
 
 {{% choosable language csharp %}}
-<dl class="resources-properties">
-
-    <dt class="property-optional"
+<dl class="resources-properties"><dt class="property-optional"
             title="Optional">
         <span id="state_dimensions_csharp">
 <a href="#state_dimensions_csharp" style="color: inherit; text-decoration: inherit;">Dimensions</a>
@@ -881,8 +820,7 @@ The following state arguments are supported:
         <span class="property-type">Dictionary&lt;string, string&gt;</span>
     </dt>
     <dd>{{% md %}}If this map is nonempty, then this override applies only to specific values for dimensions defined in the limit unit.
-{{% /md %}}</dd>
-    <dt class="property-optional"
+{{% /md %}}</dd><dt class="property-optional"
             title="Optional">
         <span id="state_force_csharp">
 <a href="#state_force_csharp" style="color: inherit; text-decoration: inherit;">Force</a>
@@ -892,8 +830,7 @@ The following state arguments are supported:
     </dt>
     <dd>{{% md %}}If the new quota would decrease the existing quota by more than 10%, the request is rejected.
 If `force` is `true`, that safety check is ignored.
-{{% /md %}}</dd>
-    <dt class="property-optional"
+{{% /md %}}</dd><dt class="property-optional"
             title="Optional">
         <span id="state_limit_csharp">
 <a href="#state_limit_csharp" style="color: inherit; text-decoration: inherit;">Limit</a>
@@ -902,8 +839,7 @@ If `force` is `true`, that safety check is ignored.
         <span class="property-type">string</span>
     </dt>
     <dd>{{% md %}}The limit on the metric, e.g. `/project/region`.
-{{% /md %}}</dd>
-    <dt class="property-optional"
+{{% /md %}}</dd><dt class="property-optional"
             title="Optional">
         <span id="state_metric_csharp">
 <a href="#state_metric_csharp" style="color: inherit; text-decoration: inherit;">Metric</a>
@@ -912,8 +848,7 @@ If `force` is `true`, that safety check is ignored.
         <span class="property-type">string</span>
     </dt>
     <dd>{{% md %}}The metric that should be limited, e.g. `compute.googleapis.com/cpus`.
-{{% /md %}}</dd>
-    <dt class="property-optional"
+{{% /md %}}</dd><dt class="property-optional"
             title="Optional">
         <span id="state_name_csharp">
 <a href="#state_name_csharp" style="color: inherit; text-decoration: inherit;">Name</a>
@@ -922,8 +857,7 @@ If `force` is `true`, that safety check is ignored.
         <span class="property-type">string</span>
     </dt>
     <dd>{{% md %}}The server-generated name of the quota override.
-{{% /md %}}</dd>
-    <dt class="property-optional"
+{{% /md %}}</dd><dt class="property-optional"
             title="Optional">
         <span id="state_overridevalue_csharp">
 <a href="#state_overridevalue_csharp" style="color: inherit; text-decoration: inherit;">Override<wbr>Value</a>
@@ -932,8 +866,7 @@ If `force` is `true`, that safety check is ignored.
         <span class="property-type">string</span>
     </dt>
     <dd>{{% md %}}The overriding quota limit value. Can be any nonnegative integer, or -1 (unlimited quota).
-{{% /md %}}</dd>
-    <dt class="property-optional"
+{{% /md %}}</dd><dt class="property-optional"
             title="Optional">
         <span id="state_project_csharp">
 <a href="#state_project_csharp" style="color: inherit; text-decoration: inherit;">Project</a>
@@ -943,8 +876,7 @@ If `force` is `true`, that safety check is ignored.
     </dt>
     <dd>{{% md %}}The ID of the project in which the resource belongs.
 If it is not provided, the provider project is used.
-{{% /md %}}</dd>
-    <dt class="property-optional"
+{{% /md %}}</dd><dt class="property-optional"
             title="Optional">
         <span id="state_service_csharp">
 <a href="#state_service_csharp" style="color: inherit; text-decoration: inherit;">Service</a>
@@ -953,14 +885,11 @@ If it is not provided, the provider project is used.
         <span class="property-type">string</span>
     </dt>
     <dd>{{% md %}}The service that the metrics belong to, e.g. `compute.googleapis.com`.
-{{% /md %}}</dd>
-</dl>
+{{% /md %}}</dd></dl>
 {{% /choosable %}}
 
 {{% choosable language go %}}
-<dl class="resources-properties">
-
-    <dt class="property-optional"
+<dl class="resources-properties"><dt class="property-optional"
             title="Optional">
         <span id="state_dimensions_go">
 <a href="#state_dimensions_go" style="color: inherit; text-decoration: inherit;">Dimensions</a>
@@ -969,8 +898,7 @@ If it is not provided, the provider project is used.
         <span class="property-type">map[string]string</span>
     </dt>
     <dd>{{% md %}}If this map is nonempty, then this override applies only to specific values for dimensions defined in the limit unit.
-{{% /md %}}</dd>
-    <dt class="property-optional"
+{{% /md %}}</dd><dt class="property-optional"
             title="Optional">
         <span id="state_force_go">
 <a href="#state_force_go" style="color: inherit; text-decoration: inherit;">Force</a>
@@ -980,8 +908,7 @@ If it is not provided, the provider project is used.
     </dt>
     <dd>{{% md %}}If the new quota would decrease the existing quota by more than 10%, the request is rejected.
 If `force` is `true`, that safety check is ignored.
-{{% /md %}}</dd>
-    <dt class="property-optional"
+{{% /md %}}</dd><dt class="property-optional"
             title="Optional">
         <span id="state_limit_go">
 <a href="#state_limit_go" style="color: inherit; text-decoration: inherit;">Limit</a>
@@ -990,8 +917,7 @@ If `force` is `true`, that safety check is ignored.
         <span class="property-type">string</span>
     </dt>
     <dd>{{% md %}}The limit on the metric, e.g. `/project/region`.
-{{% /md %}}</dd>
-    <dt class="property-optional"
+{{% /md %}}</dd><dt class="property-optional"
             title="Optional">
         <span id="state_metric_go">
 <a href="#state_metric_go" style="color: inherit; text-decoration: inherit;">Metric</a>
@@ -1000,8 +926,7 @@ If `force` is `true`, that safety check is ignored.
         <span class="property-type">string</span>
     </dt>
     <dd>{{% md %}}The metric that should be limited, e.g. `compute.googleapis.com/cpus`.
-{{% /md %}}</dd>
-    <dt class="property-optional"
+{{% /md %}}</dd><dt class="property-optional"
             title="Optional">
         <span id="state_name_go">
 <a href="#state_name_go" style="color: inherit; text-decoration: inherit;">Name</a>
@@ -1010,8 +935,7 @@ If `force` is `true`, that safety check is ignored.
         <span class="property-type">string</span>
     </dt>
     <dd>{{% md %}}The server-generated name of the quota override.
-{{% /md %}}</dd>
-    <dt class="property-optional"
+{{% /md %}}</dd><dt class="property-optional"
             title="Optional">
         <span id="state_overridevalue_go">
 <a href="#state_overridevalue_go" style="color: inherit; text-decoration: inherit;">Override<wbr>Value</a>
@@ -1020,8 +944,7 @@ If `force` is `true`, that safety check is ignored.
         <span class="property-type">string</span>
     </dt>
     <dd>{{% md %}}The overriding quota limit value. Can be any nonnegative integer, or -1 (unlimited quota).
-{{% /md %}}</dd>
-    <dt class="property-optional"
+{{% /md %}}</dd><dt class="property-optional"
             title="Optional">
         <span id="state_project_go">
 <a href="#state_project_go" style="color: inherit; text-decoration: inherit;">Project</a>
@@ -1031,8 +954,7 @@ If `force` is `true`, that safety check is ignored.
     </dt>
     <dd>{{% md %}}The ID of the project in which the resource belongs.
 If it is not provided, the provider project is used.
-{{% /md %}}</dd>
-    <dt class="property-optional"
+{{% /md %}}</dd><dt class="property-optional"
             title="Optional">
         <span id="state_service_go">
 <a href="#state_service_go" style="color: inherit; text-decoration: inherit;">Service</a>
@@ -1041,14 +963,11 @@ If it is not provided, the provider project is used.
         <span class="property-type">string</span>
     </dt>
     <dd>{{% md %}}The service that the metrics belong to, e.g. `compute.googleapis.com`.
-{{% /md %}}</dd>
-</dl>
+{{% /md %}}</dd></dl>
 {{% /choosable %}}
 
 {{% choosable language nodejs %}}
-<dl class="resources-properties">
-
-    <dt class="property-optional"
+<dl class="resources-properties"><dt class="property-optional"
             title="Optional">
         <span id="state_dimensions_nodejs">
 <a href="#state_dimensions_nodejs" style="color: inherit; text-decoration: inherit;">dimensions</a>
@@ -1057,8 +976,7 @@ If it is not provided, the provider project is used.
         <span class="property-type">{[key: string]: string}</span>
     </dt>
     <dd>{{% md %}}If this map is nonempty, then this override applies only to specific values for dimensions defined in the limit unit.
-{{% /md %}}</dd>
-    <dt class="property-optional"
+{{% /md %}}</dd><dt class="property-optional"
             title="Optional">
         <span id="state_force_nodejs">
 <a href="#state_force_nodejs" style="color: inherit; text-decoration: inherit;">force</a>
@@ -1068,8 +986,7 @@ If it is not provided, the provider project is used.
     </dt>
     <dd>{{% md %}}If the new quota would decrease the existing quota by more than 10%, the request is rejected.
 If `force` is `true`, that safety check is ignored.
-{{% /md %}}</dd>
-    <dt class="property-optional"
+{{% /md %}}</dd><dt class="property-optional"
             title="Optional">
         <span id="state_limit_nodejs">
 <a href="#state_limit_nodejs" style="color: inherit; text-decoration: inherit;">limit</a>
@@ -1078,8 +995,7 @@ If `force` is `true`, that safety check is ignored.
         <span class="property-type">string</span>
     </dt>
     <dd>{{% md %}}The limit on the metric, e.g. `/project/region`.
-{{% /md %}}</dd>
-    <dt class="property-optional"
+{{% /md %}}</dd><dt class="property-optional"
             title="Optional">
         <span id="state_metric_nodejs">
 <a href="#state_metric_nodejs" style="color: inherit; text-decoration: inherit;">metric</a>
@@ -1088,8 +1004,7 @@ If `force` is `true`, that safety check is ignored.
         <span class="property-type">string</span>
     </dt>
     <dd>{{% md %}}The metric that should be limited, e.g. `compute.googleapis.com/cpus`.
-{{% /md %}}</dd>
-    <dt class="property-optional"
+{{% /md %}}</dd><dt class="property-optional"
             title="Optional">
         <span id="state_name_nodejs">
 <a href="#state_name_nodejs" style="color: inherit; text-decoration: inherit;">name</a>
@@ -1098,8 +1013,7 @@ If `force` is `true`, that safety check is ignored.
         <span class="property-type">string</span>
     </dt>
     <dd>{{% md %}}The server-generated name of the quota override.
-{{% /md %}}</dd>
-    <dt class="property-optional"
+{{% /md %}}</dd><dt class="property-optional"
             title="Optional">
         <span id="state_overridevalue_nodejs">
 <a href="#state_overridevalue_nodejs" style="color: inherit; text-decoration: inherit;">override<wbr>Value</a>
@@ -1108,8 +1022,7 @@ If `force` is `true`, that safety check is ignored.
         <span class="property-type">string</span>
     </dt>
     <dd>{{% md %}}The overriding quota limit value. Can be any nonnegative integer, or -1 (unlimited quota).
-{{% /md %}}</dd>
-    <dt class="property-optional"
+{{% /md %}}</dd><dt class="property-optional"
             title="Optional">
         <span id="state_project_nodejs">
 <a href="#state_project_nodejs" style="color: inherit; text-decoration: inherit;">project</a>
@@ -1119,8 +1032,7 @@ If `force` is `true`, that safety check is ignored.
     </dt>
     <dd>{{% md %}}The ID of the project in which the resource belongs.
 If it is not provided, the provider project is used.
-{{% /md %}}</dd>
-    <dt class="property-optional"
+{{% /md %}}</dd><dt class="property-optional"
             title="Optional">
         <span id="state_service_nodejs">
 <a href="#state_service_nodejs" style="color: inherit; text-decoration: inherit;">service</a>
@@ -1129,14 +1041,11 @@ If it is not provided, the provider project is used.
         <span class="property-type">string</span>
     </dt>
     <dd>{{% md %}}The service that the metrics belong to, e.g. `compute.googleapis.com`.
-{{% /md %}}</dd>
-</dl>
+{{% /md %}}</dd></dl>
 {{% /choosable %}}
 
 {{% choosable language python %}}
-<dl class="resources-properties">
-
-    <dt class="property-optional"
+<dl class="resources-properties"><dt class="property-optional"
             title="Optional">
         <span id="state_dimensions_python">
 <a href="#state_dimensions_python" style="color: inherit; text-decoration: inherit;">dimensions</a>
@@ -1145,8 +1054,7 @@ If it is not provided, the provider project is used.
         <span class="property-type">Mapping[str, str]</span>
     </dt>
     <dd>{{% md %}}If this map is nonempty, then this override applies only to specific values for dimensions defined in the limit unit.
-{{% /md %}}</dd>
-    <dt class="property-optional"
+{{% /md %}}</dd><dt class="property-optional"
             title="Optional">
         <span id="state_force_python">
 <a href="#state_force_python" style="color: inherit; text-decoration: inherit;">force</a>
@@ -1156,8 +1064,7 @@ If it is not provided, the provider project is used.
     </dt>
     <dd>{{% md %}}If the new quota would decrease the existing quota by more than 10%, the request is rejected.
 If `force` is `true`, that safety check is ignored.
-{{% /md %}}</dd>
-    <dt class="property-optional"
+{{% /md %}}</dd><dt class="property-optional"
             title="Optional">
         <span id="state_limit_python">
 <a href="#state_limit_python" style="color: inherit; text-decoration: inherit;">limit</a>
@@ -1166,8 +1073,7 @@ If `force` is `true`, that safety check is ignored.
         <span class="property-type">str</span>
     </dt>
     <dd>{{% md %}}The limit on the metric, e.g. `/project/region`.
-{{% /md %}}</dd>
-    <dt class="property-optional"
+{{% /md %}}</dd><dt class="property-optional"
             title="Optional">
         <span id="state_metric_python">
 <a href="#state_metric_python" style="color: inherit; text-decoration: inherit;">metric</a>
@@ -1176,8 +1082,7 @@ If `force` is `true`, that safety check is ignored.
         <span class="property-type">str</span>
     </dt>
     <dd>{{% md %}}The metric that should be limited, e.g. `compute.googleapis.com/cpus`.
-{{% /md %}}</dd>
-    <dt class="property-optional"
+{{% /md %}}</dd><dt class="property-optional"
             title="Optional">
         <span id="state_name_python">
 <a href="#state_name_python" style="color: inherit; text-decoration: inherit;">name</a>
@@ -1186,8 +1091,7 @@ If `force` is `true`, that safety check is ignored.
         <span class="property-type">str</span>
     </dt>
     <dd>{{% md %}}The server-generated name of the quota override.
-{{% /md %}}</dd>
-    <dt class="property-optional"
+{{% /md %}}</dd><dt class="property-optional"
             title="Optional">
         <span id="state_override_value_python">
 <a href="#state_override_value_python" style="color: inherit; text-decoration: inherit;">override_<wbr>value</a>
@@ -1196,8 +1100,7 @@ If `force` is `true`, that safety check is ignored.
         <span class="property-type">str</span>
     </dt>
     <dd>{{% md %}}The overriding quota limit value. Can be any nonnegative integer, or -1 (unlimited quota).
-{{% /md %}}</dd>
-    <dt class="property-optional"
+{{% /md %}}</dd><dt class="property-optional"
             title="Optional">
         <span id="state_project_python">
 <a href="#state_project_python" style="color: inherit; text-decoration: inherit;">project</a>
@@ -1207,8 +1110,7 @@ If `force` is `true`, that safety check is ignored.
     </dt>
     <dd>{{% md %}}The ID of the project in which the resource belongs.
 If it is not provided, the provider project is used.
-{{% /md %}}</dd>
-    <dt class="property-optional"
+{{% /md %}}</dd><dt class="property-optional"
             title="Optional">
         <span id="state_service_python">
 <a href="#state_service_python" style="color: inherit; text-decoration: inherit;">service</a>
@@ -1217,8 +1119,7 @@ If it is not provided, the provider project is used.
         <span class="property-type">str</span>
     </dt>
     <dd>{{% md %}}The service that the metrics belong to, e.g. `compute.googleapis.com`.
-{{% /md %}}</dd>
-</dl>
+{{% /md %}}</dd></dl>
 {{% /choosable %}}
 
 
@@ -1252,6 +1153,6 @@ ConsumerQuotaOverride can be imported using any of these accepted formats
 	<dt>License</dt>
 	<dd>Apache-2.0</dd>
 	<dt>Notes</dt>
-	<dd>This Pulumi package is based on the [`google-beta` Terraform Provider](https://github.com/hashicorp/terraform-provider-google-beta).</dd>
+	<dd>{{% md %}}This Pulumi package is based on the [`google-beta` Terraform Provider](https://github.com/hashicorp/terraform-provider-google-beta).{{% /md %}}</dd>
 </dl>
 

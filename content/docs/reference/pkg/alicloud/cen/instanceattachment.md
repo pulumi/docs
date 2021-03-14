@@ -15,11 +15,17 @@ Provides a CEN child instance attachment resource that associate the network(VPC
 ->**NOTE:** Available in 1.42.0+
 
 {{% examples %}}
+
 ## Example Usage
 
 {{< chooser language "typescript,python,go,csharp" / >}}
 
-{{% example csharp %}}
+
+
+
+
+{{< example csharp >}}
+
 ```csharp
 using Pulumi;
 using AliCloud = Pulumi.AliCloud;
@@ -50,9 +56,12 @@ class MyStack : Stack
 }
 ```
 
-{{% /example %}}
 
-{{% example go %}}
+{{< /example >}}
+
+
+{{< example go >}}
+
 ```go
 package main
 
@@ -96,9 +105,12 @@ func main() {
 }
 ```
 
-{{% /example %}}
 
-{{% example python %}}
+{{< /example >}}
+
+
+{{< example python >}}
+
 ```python
 import pulumi
 import pulumi_alicloud as alicloud
@@ -116,9 +128,12 @@ foo = alicloud.cen.InstanceAttachment("foo",
     child_instance_region_id="cn-beijing")
 ```
 
-{{% /example %}}
 
-{{% example typescript %}}
+{{< /example >}}
+
+
+{{< example typescript >}}
+
 
 ```typescript
 import * as pulumi from "@pulumi/pulumi";
@@ -136,9 +151,16 @@ const foo = new alicloud.cen.InstanceAttachment("foo", {
 });
 ```
 
-{{% /example %}}
+
+{{< /example >}}
+
+
+
+
 
 {{% /examples %}}
+
+
 
 
 ## Create a InstanceAttachment Resource {#create}
@@ -163,9 +185,7 @@ const foo = new alicloud.cen.InstanceAttachment("foo", {
 
 {{% choosable language nodejs %}}
 
-<dl class="resources-properties">
-  
-    <dt
+<dl class="resources-properties"><dt
         class="property-required" title="Required">
         <span>name</span>
         <span class="property-indicator"></span>
@@ -173,9 +193,7 @@ const foo = new alicloud.cen.InstanceAttachment("foo", {
     </dt>
     <dd>
       The unique name of the resource.
-    </dd>
-  
-    <dt
+    </dd><dt
         class="property-required" title="Required">
         <span>args</span>
         <span class="property-indicator"></span>
@@ -183,9 +201,7 @@ const foo = new alicloud.cen.InstanceAttachment("foo", {
     </dt>
     <dd>
       The arguments to resource properties.
-    </dd>
-  
-    <dt
+    </dd><dt
         class="property-optional" title="Optional">
         <span>opts</span>
         <span class="property-indicator"></span>
@@ -193,10 +209,7 @@ const foo = new alicloud.cen.InstanceAttachment("foo", {
     </dt>
     <dd>
       Bag of options to control resource&#39;s behavior.
-    </dd>
-  
-
-</dl>
+    </dd></dl>
 
 {{% /choosable %}}
 
@@ -222,9 +235,7 @@ const foo = new alicloud.cen.InstanceAttachment("foo", {
 
 {{% choosable language go %}}
 
-<dl class="resources-properties">
-  
-    <dt
+<dl class="resources-properties"><dt
         class="property-optional" title="Optional">
         <span>ctx</span>
         <span class="property-indicator"></span>
@@ -232,9 +243,7 @@ const foo = new alicloud.cen.InstanceAttachment("foo", {
     </dt>
     <dd>
       Context object for the current deployment.
-    </dd>
-  
-    <dt
+    </dd><dt
         class="property-required" title="Required">
         <span>name</span>
         <span class="property-indicator"></span>
@@ -242,9 +251,7 @@ const foo = new alicloud.cen.InstanceAttachment("foo", {
     </dt>
     <dd>
       The unique name of the resource.
-    </dd>
-  
-    <dt
+    </dd><dt
         class="property-required" title="Required">
         <span>args</span>
         <span class="property-indicator"></span>
@@ -252,9 +259,7 @@ const foo = new alicloud.cen.InstanceAttachment("foo", {
     </dt>
     <dd>
       The arguments to resource properties.
-    </dd>
-  
-    <dt
+    </dd><dt
         class="property-optional" title="Optional">
         <span>opts</span>
         <span class="property-indicator"></span>
@@ -262,18 +267,13 @@ const foo = new alicloud.cen.InstanceAttachment("foo", {
     </dt>
     <dd>
       Bag of options to control resource&#39;s behavior.
-    </dd>
-  
-
-</dl>
+    </dd></dl>
 
 {{% /choosable %}}
 
 {{% choosable language csharp %}}
 
-<dl class="resources-properties">
-  
-    <dt
+<dl class="resources-properties"><dt
         class="property-required" title="Required">
         <span>name</span>
         <span class="property-indicator"></span>
@@ -281,9 +281,7 @@ const foo = new alicloud.cen.InstanceAttachment("foo", {
     </dt>
     <dd>
       The unique name of the resource.
-    </dd>
-  
-    <dt
+    </dd><dt
         class="property-required" title="Required">
         <span>args</span>
         <span class="property-indicator"></span>
@@ -291,9 +289,7 @@ const foo = new alicloud.cen.InstanceAttachment("foo", {
     </dt>
     <dd>
       The arguments to resource properties.
-    </dd>
-  
-    <dt
+    </dd><dt
         class="property-optional" title="Optional">
         <span>opts</span>
         <span class="property-indicator"></span>
@@ -301,10 +297,7 @@ const foo = new alicloud.cen.InstanceAttachment("foo", {
     </dt>
     <dd>
       Bag of options to control resource&#39;s behavior.
-    </dd>
-  
-
-</dl>
+    </dd></dl>
 
 {{% /choosable %}}
 
@@ -319,9 +312,7 @@ The InstanceAttachment resource accepts the following [input]({{< relref "/docs/
 
 
 {{% choosable language csharp %}}
-<dl class="resources-properties">
-
-    <dt class="property-required"
+<dl class="resources-properties"><dt class="property-required"
             title="Required">
         <span id="childinstanceid_csharp">
 <a href="#childinstanceid_csharp" style="color: inherit; text-decoration: inherit;">Child<wbr>Instance<wbr>Id</a>
@@ -330,8 +321,7 @@ The InstanceAttachment resource accepts the following [input]({{< relref "/docs/
         <span class="property-type">string</span>
     </dt>
     <dd>{{% md %}}The ID of the child instance to attach.
-{{% /md %}}</dd>
-    <dt class="property-required"
+{{% /md %}}</dd><dt class="property-required"
             title="Required">
         <span id="childinstanceregionid_csharp">
 <a href="#childinstanceregionid_csharp" style="color: inherit; text-decoration: inherit;">Child<wbr>Instance<wbr>Region<wbr>Id</a>
@@ -340,8 +330,7 @@ The InstanceAttachment resource accepts the following [input]({{< relref "/docs/
         <span class="property-type">string</span>
     </dt>
     <dd>{{% md %}}The region ID of the child instance to attach.
-{{% /md %}}</dd>
-    <dt class="property-required"
+{{% /md %}}</dd><dt class="property-required"
             title="Required">
         <span id="childinstancetype_csharp">
 <a href="#childinstancetype_csharp" style="color: inherit; text-decoration: inherit;">Child<wbr>Instance<wbr>Type</a>
@@ -350,8 +339,7 @@ The InstanceAttachment resource accepts the following [input]({{< relref "/docs/
         <span class="property-type">string</span>
     </dt>
     <dd>{{% md %}}The type of the associated network. Valid values: `VPC`, `VBR` and `CCN`.
-{{% /md %}}</dd>
-    <dt class="property-required"
+{{% /md %}}</dd><dt class="property-required"
             title="Required">
         <span id="instanceid_csharp">
 <a href="#instanceid_csharp" style="color: inherit; text-decoration: inherit;">Instance<wbr>Id</a>
@@ -360,8 +348,7 @@ The InstanceAttachment resource accepts the following [input]({{< relref "/docs/
         <span class="property-type">string</span>
     </dt>
     <dd>{{% md %}}The ID of the CEN.
-{{% /md %}}</dd>
-    <dt class="property-optional"
+{{% /md %}}</dd><dt class="property-optional"
             title="Optional">
         <span id="cenownerid_csharp">
 <a href="#cenownerid_csharp" style="color: inherit; text-decoration: inherit;">Cen<wbr>Owner<wbr>Id</a>
@@ -370,8 +357,7 @@ The InstanceAttachment resource accepts the following [input]({{< relref "/docs/
         <span class="property-type">int</span>
     </dt>
     <dd>{{% md %}}The account ID to which the CEN instance belongs.
-{{% /md %}}</dd>
-    <dt class="property-optional"
+{{% /md %}}</dd><dt class="property-optional"
             title="Optional">
         <span id="childinstanceownerid_csharp">
 <a href="#childinstanceownerid_csharp" style="color: inherit; text-decoration: inherit;">Child<wbr>Instance<wbr>Owner<wbr>Id</a>
@@ -380,14 +366,11 @@ The InstanceAttachment resource accepts the following [input]({{< relref "/docs/
         <span class="property-type">int</span>
     </dt>
     <dd>{{% md %}}The uid of the child instance. Only used when attach a child instance of other account.
-{{% /md %}}</dd>
-</dl>
+{{% /md %}}</dd></dl>
 {{% /choosable %}}
 
 {{% choosable language go %}}
-<dl class="resources-properties">
-
-    <dt class="property-required"
+<dl class="resources-properties"><dt class="property-required"
             title="Required">
         <span id="childinstanceid_go">
 <a href="#childinstanceid_go" style="color: inherit; text-decoration: inherit;">Child<wbr>Instance<wbr>Id</a>
@@ -396,8 +379,7 @@ The InstanceAttachment resource accepts the following [input]({{< relref "/docs/
         <span class="property-type">string</span>
     </dt>
     <dd>{{% md %}}The ID of the child instance to attach.
-{{% /md %}}</dd>
-    <dt class="property-required"
+{{% /md %}}</dd><dt class="property-required"
             title="Required">
         <span id="childinstanceregionid_go">
 <a href="#childinstanceregionid_go" style="color: inherit; text-decoration: inherit;">Child<wbr>Instance<wbr>Region<wbr>Id</a>
@@ -406,8 +388,7 @@ The InstanceAttachment resource accepts the following [input]({{< relref "/docs/
         <span class="property-type">string</span>
     </dt>
     <dd>{{% md %}}The region ID of the child instance to attach.
-{{% /md %}}</dd>
-    <dt class="property-required"
+{{% /md %}}</dd><dt class="property-required"
             title="Required">
         <span id="childinstancetype_go">
 <a href="#childinstancetype_go" style="color: inherit; text-decoration: inherit;">Child<wbr>Instance<wbr>Type</a>
@@ -416,8 +397,7 @@ The InstanceAttachment resource accepts the following [input]({{< relref "/docs/
         <span class="property-type">string</span>
     </dt>
     <dd>{{% md %}}The type of the associated network. Valid values: `VPC`, `VBR` and `CCN`.
-{{% /md %}}</dd>
-    <dt class="property-required"
+{{% /md %}}</dd><dt class="property-required"
             title="Required">
         <span id="instanceid_go">
 <a href="#instanceid_go" style="color: inherit; text-decoration: inherit;">Instance<wbr>Id</a>
@@ -426,8 +406,7 @@ The InstanceAttachment resource accepts the following [input]({{< relref "/docs/
         <span class="property-type">string</span>
     </dt>
     <dd>{{% md %}}The ID of the CEN.
-{{% /md %}}</dd>
-    <dt class="property-optional"
+{{% /md %}}</dd><dt class="property-optional"
             title="Optional">
         <span id="cenownerid_go">
 <a href="#cenownerid_go" style="color: inherit; text-decoration: inherit;">Cen<wbr>Owner<wbr>Id</a>
@@ -436,8 +415,7 @@ The InstanceAttachment resource accepts the following [input]({{< relref "/docs/
         <span class="property-type">int</span>
     </dt>
     <dd>{{% md %}}The account ID to which the CEN instance belongs.
-{{% /md %}}</dd>
-    <dt class="property-optional"
+{{% /md %}}</dd><dt class="property-optional"
             title="Optional">
         <span id="childinstanceownerid_go">
 <a href="#childinstanceownerid_go" style="color: inherit; text-decoration: inherit;">Child<wbr>Instance<wbr>Owner<wbr>Id</a>
@@ -446,14 +424,11 @@ The InstanceAttachment resource accepts the following [input]({{< relref "/docs/
         <span class="property-type">int</span>
     </dt>
     <dd>{{% md %}}The uid of the child instance. Only used when attach a child instance of other account.
-{{% /md %}}</dd>
-</dl>
+{{% /md %}}</dd></dl>
 {{% /choosable %}}
 
 {{% choosable language nodejs %}}
-<dl class="resources-properties">
-
-    <dt class="property-required"
+<dl class="resources-properties"><dt class="property-required"
             title="Required">
         <span id="childinstanceid_nodejs">
 <a href="#childinstanceid_nodejs" style="color: inherit; text-decoration: inherit;">child<wbr>Instance<wbr>Id</a>
@@ -462,8 +437,7 @@ The InstanceAttachment resource accepts the following [input]({{< relref "/docs/
         <span class="property-type">string</span>
     </dt>
     <dd>{{% md %}}The ID of the child instance to attach.
-{{% /md %}}</dd>
-    <dt class="property-required"
+{{% /md %}}</dd><dt class="property-required"
             title="Required">
         <span id="childinstanceregionid_nodejs">
 <a href="#childinstanceregionid_nodejs" style="color: inherit; text-decoration: inherit;">child<wbr>Instance<wbr>Region<wbr>Id</a>
@@ -472,8 +446,7 @@ The InstanceAttachment resource accepts the following [input]({{< relref "/docs/
         <span class="property-type">string</span>
     </dt>
     <dd>{{% md %}}The region ID of the child instance to attach.
-{{% /md %}}</dd>
-    <dt class="property-required"
+{{% /md %}}</dd><dt class="property-required"
             title="Required">
         <span id="childinstancetype_nodejs">
 <a href="#childinstancetype_nodejs" style="color: inherit; text-decoration: inherit;">child<wbr>Instance<wbr>Type</a>
@@ -482,8 +455,7 @@ The InstanceAttachment resource accepts the following [input]({{< relref "/docs/
         <span class="property-type">string</span>
     </dt>
     <dd>{{% md %}}The type of the associated network. Valid values: `VPC`, `VBR` and `CCN`.
-{{% /md %}}</dd>
-    <dt class="property-required"
+{{% /md %}}</dd><dt class="property-required"
             title="Required">
         <span id="instanceid_nodejs">
 <a href="#instanceid_nodejs" style="color: inherit; text-decoration: inherit;">instance<wbr>Id</a>
@@ -492,8 +464,7 @@ The InstanceAttachment resource accepts the following [input]({{< relref "/docs/
         <span class="property-type">string</span>
     </dt>
     <dd>{{% md %}}The ID of the CEN.
-{{% /md %}}</dd>
-    <dt class="property-optional"
+{{% /md %}}</dd><dt class="property-optional"
             title="Optional">
         <span id="cenownerid_nodejs">
 <a href="#cenownerid_nodejs" style="color: inherit; text-decoration: inherit;">cen<wbr>Owner<wbr>Id</a>
@@ -502,8 +473,7 @@ The InstanceAttachment resource accepts the following [input]({{< relref "/docs/
         <span class="property-type">number</span>
     </dt>
     <dd>{{% md %}}The account ID to which the CEN instance belongs.
-{{% /md %}}</dd>
-    <dt class="property-optional"
+{{% /md %}}</dd><dt class="property-optional"
             title="Optional">
         <span id="childinstanceownerid_nodejs">
 <a href="#childinstanceownerid_nodejs" style="color: inherit; text-decoration: inherit;">child<wbr>Instance<wbr>Owner<wbr>Id</a>
@@ -512,14 +482,11 @@ The InstanceAttachment resource accepts the following [input]({{< relref "/docs/
         <span class="property-type">number</span>
     </dt>
     <dd>{{% md %}}The uid of the child instance. Only used when attach a child instance of other account.
-{{% /md %}}</dd>
-</dl>
+{{% /md %}}</dd></dl>
 {{% /choosable %}}
 
 {{% choosable language python %}}
-<dl class="resources-properties">
-
-    <dt class="property-required"
+<dl class="resources-properties"><dt class="property-required"
             title="Required">
         <span id="child_instance_id_python">
 <a href="#child_instance_id_python" style="color: inherit; text-decoration: inherit;">child_<wbr>instance_<wbr>id</a>
@@ -528,8 +495,7 @@ The InstanceAttachment resource accepts the following [input]({{< relref "/docs/
         <span class="property-type">str</span>
     </dt>
     <dd>{{% md %}}The ID of the child instance to attach.
-{{% /md %}}</dd>
-    <dt class="property-required"
+{{% /md %}}</dd><dt class="property-required"
             title="Required">
         <span id="child_instance_region_id_python">
 <a href="#child_instance_region_id_python" style="color: inherit; text-decoration: inherit;">child_<wbr>instance_<wbr>region_<wbr>id</a>
@@ -538,8 +504,7 @@ The InstanceAttachment resource accepts the following [input]({{< relref "/docs/
         <span class="property-type">str</span>
     </dt>
     <dd>{{% md %}}The region ID of the child instance to attach.
-{{% /md %}}</dd>
-    <dt class="property-required"
+{{% /md %}}</dd><dt class="property-required"
             title="Required">
         <span id="child_instance_type_python">
 <a href="#child_instance_type_python" style="color: inherit; text-decoration: inherit;">child_<wbr>instance_<wbr>type</a>
@@ -548,8 +513,7 @@ The InstanceAttachment resource accepts the following [input]({{< relref "/docs/
         <span class="property-type">str</span>
     </dt>
     <dd>{{% md %}}The type of the associated network. Valid values: `VPC`, `VBR` and `CCN`.
-{{% /md %}}</dd>
-    <dt class="property-required"
+{{% /md %}}</dd><dt class="property-required"
             title="Required">
         <span id="instance_id_python">
 <a href="#instance_id_python" style="color: inherit; text-decoration: inherit;">instance_<wbr>id</a>
@@ -558,8 +522,7 @@ The InstanceAttachment resource accepts the following [input]({{< relref "/docs/
         <span class="property-type">str</span>
     </dt>
     <dd>{{% md %}}The ID of the CEN.
-{{% /md %}}</dd>
-    <dt class="property-optional"
+{{% /md %}}</dd><dt class="property-optional"
             title="Optional">
         <span id="cen_owner_id_python">
 <a href="#cen_owner_id_python" style="color: inherit; text-decoration: inherit;">cen_<wbr>owner_<wbr>id</a>
@@ -568,8 +531,7 @@ The InstanceAttachment resource accepts the following [input]({{< relref "/docs/
         <span class="property-type">int</span>
     </dt>
     <dd>{{% md %}}The account ID to which the CEN instance belongs.
-{{% /md %}}</dd>
-    <dt class="property-optional"
+{{% /md %}}</dd><dt class="property-optional"
             title="Optional">
         <span id="child_instance_owner_id_python">
 <a href="#child_instance_owner_id_python" style="color: inherit; text-decoration: inherit;">child_<wbr>instance_<wbr>owner_<wbr>id</a>
@@ -578,8 +540,7 @@ The InstanceAttachment resource accepts the following [input]({{< relref "/docs/
         <span class="property-type">int</span>
     </dt>
     <dd>{{% md %}}The uid of the child instance. Only used when attach a child instance of other account.
-{{% /md %}}</dd>
-</dl>
+{{% /md %}}</dd></dl>
 {{% /choosable %}}
 
 
@@ -590,9 +551,7 @@ All [input](#inputs) properties are implicitly available as output properties. A
 
 
 {{% choosable language csharp %}}
-<dl class="resources-properties">
-
-    <dt class="property-"
+<dl class="resources-properties"><dt class="property-"
             title="">
         <span id="id_csharp">
 <a href="#id_csharp" style="color: inherit; text-decoration: inherit;">Id</a>
@@ -600,8 +559,7 @@ All [input](#inputs) properties are implicitly available as output properties. A
         <span class="property-indicator"></span>
         <span class="property-type">string</span>
     </dt>
-    <dd>{{% md %}}The provider-assigned unique ID for this managed resource.{{% /md %}}</dd>
-    <dt class="property-"
+    <dd>{{% md %}}The provider-assigned unique ID for this managed resource.{{% /md %}}</dd><dt class="property-"
             title="">
         <span id="status_csharp">
 <a href="#status_csharp" style="color: inherit; text-decoration: inherit;">Status</a>
@@ -610,14 +568,11 @@ All [input](#inputs) properties are implicitly available as output properties. A
         <span class="property-type">string</span>
     </dt>
     <dd>{{% md %}}The associating status of the network.
-{{% /md %}}</dd>
-</dl>
+{{% /md %}}</dd></dl>
 {{% /choosable %}}
 
 {{% choosable language go %}}
-<dl class="resources-properties">
-
-    <dt class="property-"
+<dl class="resources-properties"><dt class="property-"
             title="">
         <span id="id_go">
 <a href="#id_go" style="color: inherit; text-decoration: inherit;">Id</a>
@@ -625,8 +580,7 @@ All [input](#inputs) properties are implicitly available as output properties. A
         <span class="property-indicator"></span>
         <span class="property-type">string</span>
     </dt>
-    <dd>{{% md %}}The provider-assigned unique ID for this managed resource.{{% /md %}}</dd>
-    <dt class="property-"
+    <dd>{{% md %}}The provider-assigned unique ID for this managed resource.{{% /md %}}</dd><dt class="property-"
             title="">
         <span id="status_go">
 <a href="#status_go" style="color: inherit; text-decoration: inherit;">Status</a>
@@ -635,14 +589,11 @@ All [input](#inputs) properties are implicitly available as output properties. A
         <span class="property-type">string</span>
     </dt>
     <dd>{{% md %}}The associating status of the network.
-{{% /md %}}</dd>
-</dl>
+{{% /md %}}</dd></dl>
 {{% /choosable %}}
 
 {{% choosable language nodejs %}}
-<dl class="resources-properties">
-
-    <dt class="property-"
+<dl class="resources-properties"><dt class="property-"
             title="">
         <span id="id_nodejs">
 <a href="#id_nodejs" style="color: inherit; text-decoration: inherit;">id</a>
@@ -650,8 +601,7 @@ All [input](#inputs) properties are implicitly available as output properties. A
         <span class="property-indicator"></span>
         <span class="property-type">string</span>
     </dt>
-    <dd>{{% md %}}The provider-assigned unique ID for this managed resource.{{% /md %}}</dd>
-    <dt class="property-"
+    <dd>{{% md %}}The provider-assigned unique ID for this managed resource.{{% /md %}}</dd><dt class="property-"
             title="">
         <span id="status_nodejs">
 <a href="#status_nodejs" style="color: inherit; text-decoration: inherit;">status</a>
@@ -660,14 +610,11 @@ All [input](#inputs) properties are implicitly available as output properties. A
         <span class="property-type">string</span>
     </dt>
     <dd>{{% md %}}The associating status of the network.
-{{% /md %}}</dd>
-</dl>
+{{% /md %}}</dd></dl>
 {{% /choosable %}}
 
 {{% choosable language python %}}
-<dl class="resources-properties">
-
-    <dt class="property-"
+<dl class="resources-properties"><dt class="property-"
             title="">
         <span id="id_python">
 <a href="#id_python" style="color: inherit; text-decoration: inherit;">id</a>
@@ -675,8 +622,7 @@ All [input](#inputs) properties are implicitly available as output properties. A
         <span class="property-indicator"></span>
         <span class="property-type">str</span>
     </dt>
-    <dd>{{% md %}}The provider-assigned unique ID for this managed resource.{{% /md %}}</dd>
-    <dt class="property-"
+    <dd>{{% md %}}The provider-assigned unique ID for this managed resource.{{% /md %}}</dd><dt class="property-"
             title="">
         <span id="status_python">
 <a href="#status_python" style="color: inherit; text-decoration: inherit;">status</a>
@@ -685,8 +631,7 @@ All [input](#inputs) properties are implicitly available as output properties. A
         <span class="property-type">str</span>
     </dt>
     <dd>{{% md %}}The associating status of the network.
-{{% /md %}}</dd>
-</dl>
+{{% /md %}}</dd></dl>
 {{% /choosable %}}
 
 
@@ -813,9 +758,7 @@ The following state arguments are supported:
 
 
 {{% choosable language csharp %}}
-<dl class="resources-properties">
-
-    <dt class="property-optional"
+<dl class="resources-properties"><dt class="property-optional"
             title="Optional">
         <span id="state_cenownerid_csharp">
 <a href="#state_cenownerid_csharp" style="color: inherit; text-decoration: inherit;">Cen<wbr>Owner<wbr>Id</a>
@@ -824,8 +767,7 @@ The following state arguments are supported:
         <span class="property-type">int</span>
     </dt>
     <dd>{{% md %}}The account ID to which the CEN instance belongs.
-{{% /md %}}</dd>
-    <dt class="property-optional"
+{{% /md %}}</dd><dt class="property-optional"
             title="Optional">
         <span id="state_childinstanceid_csharp">
 <a href="#state_childinstanceid_csharp" style="color: inherit; text-decoration: inherit;">Child<wbr>Instance<wbr>Id</a>
@@ -834,8 +776,7 @@ The following state arguments are supported:
         <span class="property-type">string</span>
     </dt>
     <dd>{{% md %}}The ID of the child instance to attach.
-{{% /md %}}</dd>
-    <dt class="property-optional"
+{{% /md %}}</dd><dt class="property-optional"
             title="Optional">
         <span id="state_childinstanceownerid_csharp">
 <a href="#state_childinstanceownerid_csharp" style="color: inherit; text-decoration: inherit;">Child<wbr>Instance<wbr>Owner<wbr>Id</a>
@@ -844,8 +785,7 @@ The following state arguments are supported:
         <span class="property-type">int</span>
     </dt>
     <dd>{{% md %}}The uid of the child instance. Only used when attach a child instance of other account.
-{{% /md %}}</dd>
-    <dt class="property-optional"
+{{% /md %}}</dd><dt class="property-optional"
             title="Optional">
         <span id="state_childinstanceregionid_csharp">
 <a href="#state_childinstanceregionid_csharp" style="color: inherit; text-decoration: inherit;">Child<wbr>Instance<wbr>Region<wbr>Id</a>
@@ -854,8 +794,7 @@ The following state arguments are supported:
         <span class="property-type">string</span>
     </dt>
     <dd>{{% md %}}The region ID of the child instance to attach.
-{{% /md %}}</dd>
-    <dt class="property-optional"
+{{% /md %}}</dd><dt class="property-optional"
             title="Optional">
         <span id="state_childinstancetype_csharp">
 <a href="#state_childinstancetype_csharp" style="color: inherit; text-decoration: inherit;">Child<wbr>Instance<wbr>Type</a>
@@ -864,8 +803,7 @@ The following state arguments are supported:
         <span class="property-type">string</span>
     </dt>
     <dd>{{% md %}}The type of the associated network. Valid values: `VPC`, `VBR` and `CCN`.
-{{% /md %}}</dd>
-    <dt class="property-optional"
+{{% /md %}}</dd><dt class="property-optional"
             title="Optional">
         <span id="state_instanceid_csharp">
 <a href="#state_instanceid_csharp" style="color: inherit; text-decoration: inherit;">Instance<wbr>Id</a>
@@ -874,8 +812,7 @@ The following state arguments are supported:
         <span class="property-type">string</span>
     </dt>
     <dd>{{% md %}}The ID of the CEN.
-{{% /md %}}</dd>
-    <dt class="property-optional"
+{{% /md %}}</dd><dt class="property-optional"
             title="Optional">
         <span id="state_status_csharp">
 <a href="#state_status_csharp" style="color: inherit; text-decoration: inherit;">Status</a>
@@ -884,14 +821,11 @@ The following state arguments are supported:
         <span class="property-type">string</span>
     </dt>
     <dd>{{% md %}}The associating status of the network.
-{{% /md %}}</dd>
-</dl>
+{{% /md %}}</dd></dl>
 {{% /choosable %}}
 
 {{% choosable language go %}}
-<dl class="resources-properties">
-
-    <dt class="property-optional"
+<dl class="resources-properties"><dt class="property-optional"
             title="Optional">
         <span id="state_cenownerid_go">
 <a href="#state_cenownerid_go" style="color: inherit; text-decoration: inherit;">Cen<wbr>Owner<wbr>Id</a>
@@ -900,8 +834,7 @@ The following state arguments are supported:
         <span class="property-type">int</span>
     </dt>
     <dd>{{% md %}}The account ID to which the CEN instance belongs.
-{{% /md %}}</dd>
-    <dt class="property-optional"
+{{% /md %}}</dd><dt class="property-optional"
             title="Optional">
         <span id="state_childinstanceid_go">
 <a href="#state_childinstanceid_go" style="color: inherit; text-decoration: inherit;">Child<wbr>Instance<wbr>Id</a>
@@ -910,8 +843,7 @@ The following state arguments are supported:
         <span class="property-type">string</span>
     </dt>
     <dd>{{% md %}}The ID of the child instance to attach.
-{{% /md %}}</dd>
-    <dt class="property-optional"
+{{% /md %}}</dd><dt class="property-optional"
             title="Optional">
         <span id="state_childinstanceownerid_go">
 <a href="#state_childinstanceownerid_go" style="color: inherit; text-decoration: inherit;">Child<wbr>Instance<wbr>Owner<wbr>Id</a>
@@ -920,8 +852,7 @@ The following state arguments are supported:
         <span class="property-type">int</span>
     </dt>
     <dd>{{% md %}}The uid of the child instance. Only used when attach a child instance of other account.
-{{% /md %}}</dd>
-    <dt class="property-optional"
+{{% /md %}}</dd><dt class="property-optional"
             title="Optional">
         <span id="state_childinstanceregionid_go">
 <a href="#state_childinstanceregionid_go" style="color: inherit; text-decoration: inherit;">Child<wbr>Instance<wbr>Region<wbr>Id</a>
@@ -930,8 +861,7 @@ The following state arguments are supported:
         <span class="property-type">string</span>
     </dt>
     <dd>{{% md %}}The region ID of the child instance to attach.
-{{% /md %}}</dd>
-    <dt class="property-optional"
+{{% /md %}}</dd><dt class="property-optional"
             title="Optional">
         <span id="state_childinstancetype_go">
 <a href="#state_childinstancetype_go" style="color: inherit; text-decoration: inherit;">Child<wbr>Instance<wbr>Type</a>
@@ -940,8 +870,7 @@ The following state arguments are supported:
         <span class="property-type">string</span>
     </dt>
     <dd>{{% md %}}The type of the associated network. Valid values: `VPC`, `VBR` and `CCN`.
-{{% /md %}}</dd>
-    <dt class="property-optional"
+{{% /md %}}</dd><dt class="property-optional"
             title="Optional">
         <span id="state_instanceid_go">
 <a href="#state_instanceid_go" style="color: inherit; text-decoration: inherit;">Instance<wbr>Id</a>
@@ -950,8 +879,7 @@ The following state arguments are supported:
         <span class="property-type">string</span>
     </dt>
     <dd>{{% md %}}The ID of the CEN.
-{{% /md %}}</dd>
-    <dt class="property-optional"
+{{% /md %}}</dd><dt class="property-optional"
             title="Optional">
         <span id="state_status_go">
 <a href="#state_status_go" style="color: inherit; text-decoration: inherit;">Status</a>
@@ -960,14 +888,11 @@ The following state arguments are supported:
         <span class="property-type">string</span>
     </dt>
     <dd>{{% md %}}The associating status of the network.
-{{% /md %}}</dd>
-</dl>
+{{% /md %}}</dd></dl>
 {{% /choosable %}}
 
 {{% choosable language nodejs %}}
-<dl class="resources-properties">
-
-    <dt class="property-optional"
+<dl class="resources-properties"><dt class="property-optional"
             title="Optional">
         <span id="state_cenownerid_nodejs">
 <a href="#state_cenownerid_nodejs" style="color: inherit; text-decoration: inherit;">cen<wbr>Owner<wbr>Id</a>
@@ -976,8 +901,7 @@ The following state arguments are supported:
         <span class="property-type">number</span>
     </dt>
     <dd>{{% md %}}The account ID to which the CEN instance belongs.
-{{% /md %}}</dd>
-    <dt class="property-optional"
+{{% /md %}}</dd><dt class="property-optional"
             title="Optional">
         <span id="state_childinstanceid_nodejs">
 <a href="#state_childinstanceid_nodejs" style="color: inherit; text-decoration: inherit;">child<wbr>Instance<wbr>Id</a>
@@ -986,8 +910,7 @@ The following state arguments are supported:
         <span class="property-type">string</span>
     </dt>
     <dd>{{% md %}}The ID of the child instance to attach.
-{{% /md %}}</dd>
-    <dt class="property-optional"
+{{% /md %}}</dd><dt class="property-optional"
             title="Optional">
         <span id="state_childinstanceownerid_nodejs">
 <a href="#state_childinstanceownerid_nodejs" style="color: inherit; text-decoration: inherit;">child<wbr>Instance<wbr>Owner<wbr>Id</a>
@@ -996,8 +919,7 @@ The following state arguments are supported:
         <span class="property-type">number</span>
     </dt>
     <dd>{{% md %}}The uid of the child instance. Only used when attach a child instance of other account.
-{{% /md %}}</dd>
-    <dt class="property-optional"
+{{% /md %}}</dd><dt class="property-optional"
             title="Optional">
         <span id="state_childinstanceregionid_nodejs">
 <a href="#state_childinstanceregionid_nodejs" style="color: inherit; text-decoration: inherit;">child<wbr>Instance<wbr>Region<wbr>Id</a>
@@ -1006,8 +928,7 @@ The following state arguments are supported:
         <span class="property-type">string</span>
     </dt>
     <dd>{{% md %}}The region ID of the child instance to attach.
-{{% /md %}}</dd>
-    <dt class="property-optional"
+{{% /md %}}</dd><dt class="property-optional"
             title="Optional">
         <span id="state_childinstancetype_nodejs">
 <a href="#state_childinstancetype_nodejs" style="color: inherit; text-decoration: inherit;">child<wbr>Instance<wbr>Type</a>
@@ -1016,8 +937,7 @@ The following state arguments are supported:
         <span class="property-type">string</span>
     </dt>
     <dd>{{% md %}}The type of the associated network. Valid values: `VPC`, `VBR` and `CCN`.
-{{% /md %}}</dd>
-    <dt class="property-optional"
+{{% /md %}}</dd><dt class="property-optional"
             title="Optional">
         <span id="state_instanceid_nodejs">
 <a href="#state_instanceid_nodejs" style="color: inherit; text-decoration: inherit;">instance<wbr>Id</a>
@@ -1026,8 +946,7 @@ The following state arguments are supported:
         <span class="property-type">string</span>
     </dt>
     <dd>{{% md %}}The ID of the CEN.
-{{% /md %}}</dd>
-    <dt class="property-optional"
+{{% /md %}}</dd><dt class="property-optional"
             title="Optional">
         <span id="state_status_nodejs">
 <a href="#state_status_nodejs" style="color: inherit; text-decoration: inherit;">status</a>
@@ -1036,14 +955,11 @@ The following state arguments are supported:
         <span class="property-type">string</span>
     </dt>
     <dd>{{% md %}}The associating status of the network.
-{{% /md %}}</dd>
-</dl>
+{{% /md %}}</dd></dl>
 {{% /choosable %}}
 
 {{% choosable language python %}}
-<dl class="resources-properties">
-
-    <dt class="property-optional"
+<dl class="resources-properties"><dt class="property-optional"
             title="Optional">
         <span id="state_cen_owner_id_python">
 <a href="#state_cen_owner_id_python" style="color: inherit; text-decoration: inherit;">cen_<wbr>owner_<wbr>id</a>
@@ -1052,8 +968,7 @@ The following state arguments are supported:
         <span class="property-type">int</span>
     </dt>
     <dd>{{% md %}}The account ID to which the CEN instance belongs.
-{{% /md %}}</dd>
-    <dt class="property-optional"
+{{% /md %}}</dd><dt class="property-optional"
             title="Optional">
         <span id="state_child_instance_id_python">
 <a href="#state_child_instance_id_python" style="color: inherit; text-decoration: inherit;">child_<wbr>instance_<wbr>id</a>
@@ -1062,8 +977,7 @@ The following state arguments are supported:
         <span class="property-type">str</span>
     </dt>
     <dd>{{% md %}}The ID of the child instance to attach.
-{{% /md %}}</dd>
-    <dt class="property-optional"
+{{% /md %}}</dd><dt class="property-optional"
             title="Optional">
         <span id="state_child_instance_owner_id_python">
 <a href="#state_child_instance_owner_id_python" style="color: inherit; text-decoration: inherit;">child_<wbr>instance_<wbr>owner_<wbr>id</a>
@@ -1072,8 +986,7 @@ The following state arguments are supported:
         <span class="property-type">int</span>
     </dt>
     <dd>{{% md %}}The uid of the child instance. Only used when attach a child instance of other account.
-{{% /md %}}</dd>
-    <dt class="property-optional"
+{{% /md %}}</dd><dt class="property-optional"
             title="Optional">
         <span id="state_child_instance_region_id_python">
 <a href="#state_child_instance_region_id_python" style="color: inherit; text-decoration: inherit;">child_<wbr>instance_<wbr>region_<wbr>id</a>
@@ -1082,8 +995,7 @@ The following state arguments are supported:
         <span class="property-type">str</span>
     </dt>
     <dd>{{% md %}}The region ID of the child instance to attach.
-{{% /md %}}</dd>
-    <dt class="property-optional"
+{{% /md %}}</dd><dt class="property-optional"
             title="Optional">
         <span id="state_child_instance_type_python">
 <a href="#state_child_instance_type_python" style="color: inherit; text-decoration: inherit;">child_<wbr>instance_<wbr>type</a>
@@ -1092,8 +1004,7 @@ The following state arguments are supported:
         <span class="property-type">str</span>
     </dt>
     <dd>{{% md %}}The type of the associated network. Valid values: `VPC`, `VBR` and `CCN`.
-{{% /md %}}</dd>
-    <dt class="property-optional"
+{{% /md %}}</dd><dt class="property-optional"
             title="Optional">
         <span id="state_instance_id_python">
 <a href="#state_instance_id_python" style="color: inherit; text-decoration: inherit;">instance_<wbr>id</a>
@@ -1102,8 +1013,7 @@ The following state arguments are supported:
         <span class="property-type">str</span>
     </dt>
     <dd>{{% md %}}The ID of the CEN.
-{{% /md %}}</dd>
-    <dt class="property-optional"
+{{% /md %}}</dd><dt class="property-optional"
             title="Optional">
         <span id="state_status_python">
 <a href="#state_status_python" style="color: inherit; text-decoration: inherit;">status</a>
@@ -1112,8 +1022,7 @@ The following state arguments are supported:
         <span class="property-type">str</span>
     </dt>
     <dd>{{% md %}}The associating status of the network.
-{{% /md %}}</dd>
-</dl>
+{{% /md %}}</dd></dl>
 {{% /choosable %}}
 
 
@@ -1139,6 +1048,6 @@ CEN instance can be imported using the id, e.g.
 	<dt>License</dt>
 	<dd>Apache-2.0</dd>
 	<dt>Notes</dt>
-	<dd>This Pulumi package is based on the [`alicloud` Terraform Provider](https://github.com/aliyun/terraform-provider-alicloud).</dd>
+	<dd>{{% md %}}This Pulumi package is based on the [`alicloud` Terraform Provider](https://github.com/aliyun/terraform-provider-alicloud).{{% /md %}}</dd>
 </dl>
 

@@ -51,9 +51,7 @@ The following arguments are supported:
 
 
 {{% choosable language csharp %}}
-<dl class="resources-properties">
-
-    <dt class="property-required"
+<dl class="resources-properties"><dt class="property-required"
             title="Required">
         <span id="managername_csharp">
 <a href="#managername_csharp" style="color: inherit; text-decoration: inherit;">Manager<wbr>Name</a>
@@ -61,8 +59,7 @@ The following arguments are supported:
         <span class="property-indicator"></span>
         <span class="property-type">string</span>
     </dt>
-    <dd>{{% md %}}The manager name{{% /md %}}</dd>
-    <dt class="property-required"
+    <dd>{{% md %}}The manager name{{% /md %}}</dd><dt class="property-required"
             title="Required">
         <span id="resourcegroupname_csharp">
 <a href="#resourcegroupname_csharp" style="color: inherit; text-decoration: inherit;">Resource<wbr>Group<wbr>Name</a>
@@ -70,14 +67,11 @@ The following arguments are supported:
         <span class="property-indicator"></span>
         <span class="property-type">string</span>
     </dt>
-    <dd>{{% md %}}The resource group name{{% /md %}}</dd>
-</dl>
+    <dd>{{% md %}}The resource group name{{% /md %}}</dd></dl>
 {{% /choosable %}}
 
 {{% choosable language go %}}
-<dl class="resources-properties">
-
-    <dt class="property-required"
+<dl class="resources-properties"><dt class="property-required"
             title="Required">
         <span id="managername_go">
 <a href="#managername_go" style="color: inherit; text-decoration: inherit;">Manager<wbr>Name</a>
@@ -85,8 +79,7 @@ The following arguments are supported:
         <span class="property-indicator"></span>
         <span class="property-type">string</span>
     </dt>
-    <dd>{{% md %}}The manager name{{% /md %}}</dd>
-    <dt class="property-required"
+    <dd>{{% md %}}The manager name{{% /md %}}</dd><dt class="property-required"
             title="Required">
         <span id="resourcegroupname_go">
 <a href="#resourcegroupname_go" style="color: inherit; text-decoration: inherit;">Resource<wbr>Group<wbr>Name</a>
@@ -94,14 +87,11 @@ The following arguments are supported:
         <span class="property-indicator"></span>
         <span class="property-type">string</span>
     </dt>
-    <dd>{{% md %}}The resource group name{{% /md %}}</dd>
-</dl>
+    <dd>{{% md %}}The resource group name{{% /md %}}</dd></dl>
 {{% /choosable %}}
 
 {{% choosable language nodejs %}}
-<dl class="resources-properties">
-
-    <dt class="property-required"
+<dl class="resources-properties"><dt class="property-required"
             title="Required">
         <span id="managername_nodejs">
 <a href="#managername_nodejs" style="color: inherit; text-decoration: inherit;">manager<wbr>Name</a>
@@ -109,8 +99,7 @@ The following arguments are supported:
         <span class="property-indicator"></span>
         <span class="property-type">string</span>
     </dt>
-    <dd>{{% md %}}The manager name{{% /md %}}</dd>
-    <dt class="property-required"
+    <dd>{{% md %}}The manager name{{% /md %}}</dd><dt class="property-required"
             title="Required">
         <span id="resourcegroupname_nodejs">
 <a href="#resourcegroupname_nodejs" style="color: inherit; text-decoration: inherit;">resource<wbr>Group<wbr>Name</a>
@@ -118,14 +107,11 @@ The following arguments are supported:
         <span class="property-indicator"></span>
         <span class="property-type">string</span>
     </dt>
-    <dd>{{% md %}}The resource group name{{% /md %}}</dd>
-</dl>
+    <dd>{{% md %}}The resource group name{{% /md %}}</dd></dl>
 {{% /choosable %}}
 
 {{% choosable language python %}}
-<dl class="resources-properties">
-
-    <dt class="property-required"
+<dl class="resources-properties"><dt class="property-required"
             title="Required">
         <span id="manager_name_python">
 <a href="#manager_name_python" style="color: inherit; text-decoration: inherit;">manager_<wbr>name</a>
@@ -133,8 +119,7 @@ The following arguments are supported:
         <span class="property-indicator"></span>
         <span class="property-type">str</span>
     </dt>
-    <dd>{{% md %}}The manager name{{% /md %}}</dd>
-    <dt class="property-required"
+    <dd>{{% md %}}The manager name{{% /md %}}</dd><dt class="property-required"
             title="Required">
         <span id="resource_group_name_python">
 <a href="#resource_group_name_python" style="color: inherit; text-decoration: inherit;">resource_<wbr>group_<wbr>name</a>
@@ -142,8 +127,7 @@ The following arguments are supported:
         <span class="property-indicator"></span>
         <span class="property-type">str</span>
     </dt>
-    <dd>{{% md %}}The resource group name{{% /md %}}</dd>
-</dl>
+    <dd>{{% md %}}The resource group name{{% /md %}}</dd></dl>
 {{% /choosable %}}
 
 
@@ -156,9 +140,7 @@ The following output properties are available:
 
 
 {{% choosable language csharp %}}
-<dl class="resources-properties">
-
-    <dt class="property-"
+<dl class="resources-properties"><dt class="property-"
             title="">
         <span id="algorithm_csharp">
 <a href="#algorithm_csharp" style="color: inherit; text-decoration: inherit;">Algorithm</a>
@@ -166,8 +148,7 @@ The following output properties are available:
         <span class="property-indicator"></span>
         <span class="property-type">string</span>
     </dt>
-    <dd>{{% md %}}Represents the encryption algorithm used to encrypt the keys. None - if Key is saved in plain text format. Algorithm name - if key is encrypted{{% /md %}}</dd>
-    <dt class="property-"
+    <dd>{{% md %}}Represents the encryption algorithm used to encrypt the keys. None - if Key is saved in plain text format. Algorithm name - if key is encrypted{{% /md %}}</dd><dt class="property-"
             title="">
         <span id="id_csharp">
 <a href="#id_csharp" style="color: inherit; text-decoration: inherit;">Id</a>
@@ -175,8 +156,7 @@ The following output properties are available:
         <span class="property-indicator"></span>
         <span class="property-type">string</span>
     </dt>
-    <dd>{{% md %}}The path ID that uniquely identifies the object.{{% /md %}}</dd>
-    <dt class="property-"
+    <dd>{{% md %}}The path ID that uniquely identifies the object.{{% /md %}}</dd><dt class="property-"
             title="">
         <span id="integritykey_csharp">
 <a href="#integritykey_csharp" style="color: inherit; text-decoration: inherit;">Integrity<wbr>Key</a>
@@ -184,8 +164,7 @@ The following output properties are available:
         <span class="property-indicator"></span>
         <span class="property-type">string</span>
     </dt>
-    <dd>{{% md %}}Represents the CIK of the resource.{{% /md %}}</dd>
-    <dt class="property-"
+    <dd>{{% md %}}Represents the CIK of the resource.{{% /md %}}</dd><dt class="property-"
             title="">
         <span id="name_csharp">
 <a href="#name_csharp" style="color: inherit; text-decoration: inherit;">Name</a>
@@ -193,8 +172,7 @@ The following output properties are available:
         <span class="property-indicator"></span>
         <span class="property-type">string</span>
     </dt>
-    <dd>{{% md %}}The name of the object.{{% /md %}}</dd>
-    <dt class="property-"
+    <dd>{{% md %}}The name of the object.{{% /md %}}</dd><dt class="property-"
             title="">
         <span id="type_csharp">
 <a href="#type_csharp" style="color: inherit; text-decoration: inherit;">Type</a>
@@ -202,8 +180,7 @@ The following output properties are available:
         <span class="property-indicator"></span>
         <span class="property-type">string</span>
     </dt>
-    <dd>{{% md %}}The hierarchical type of the object.{{% /md %}}</dd>
-    <dt class="property-"
+    <dd>{{% md %}}The hierarchical type of the object.{{% /md %}}</dd><dt class="property-"
             title="">
         <span id="encryptionkey_csharp">
 <a href="#encryptionkey_csharp" style="color: inherit; text-decoration: inherit;">Encryption<wbr>Key</a>
@@ -211,8 +188,7 @@ The following output properties are available:
         <span class="property-indicator"></span>
         <span class="property-type">string</span>
     </dt>
-    <dd>{{% md %}}Represents the CEK of the resource.{{% /md %}}</dd>
-    <dt class="property-"
+    <dd>{{% md %}}Represents the CEK of the resource.{{% /md %}}</dd><dt class="property-"
             title="">
         <span id="encryptionkeythumbprint_csharp">
 <a href="#encryptionkeythumbprint_csharp" style="color: inherit; text-decoration: inherit;">Encryption<wbr>Key<wbr>Thumbprint</a>
@@ -220,8 +196,7 @@ The following output properties are available:
         <span class="property-indicator"></span>
         <span class="property-type">string</span>
     </dt>
-    <dd>{{% md %}}Represents the Cert thumbprint that was used to encrypt the CEK.{{% /md %}}</dd>
-    <dt class="property-"
+    <dd>{{% md %}}Represents the Cert thumbprint that was used to encrypt the CEK.{{% /md %}}</dd><dt class="property-"
             title="">
         <span id="etag_csharp">
 <a href="#etag_csharp" style="color: inherit; text-decoration: inherit;">Etag</a>
@@ -229,8 +204,7 @@ The following output properties are available:
         <span class="property-indicator"></span>
         <span class="property-type">string</span>
     </dt>
-    <dd>{{% md %}}The etag of the resource.{{% /md %}}</dd>
-    <dt class="property-"
+    <dd>{{% md %}}The etag of the resource.{{% /md %}}</dd><dt class="property-"
             title="">
         <span id="kind_csharp">
 <a href="#kind_csharp" style="color: inherit; text-decoration: inherit;">Kind</a>
@@ -238,8 +212,7 @@ The following output properties are available:
         <span class="property-indicator"></span>
         <span class="property-type">string</span>
     </dt>
-    <dd>{{% md %}}The Kind of the object. Currently only Series8000 is supported{{% /md %}}</dd>
-    <dt class="property-"
+    <dd>{{% md %}}The Kind of the object. Currently only Series8000 is supported{{% /md %}}</dd><dt class="property-"
             title="">
         <span id="portalcertificatethumbprint_csharp">
 <a href="#portalcertificatethumbprint_csharp" style="color: inherit; text-decoration: inherit;">Portal<wbr>Certificate<wbr>Thumbprint</a>
@@ -247,8 +220,7 @@ The following output properties are available:
         <span class="property-indicator"></span>
         <span class="property-type">string</span>
     </dt>
-    <dd>{{% md %}}Represents the portal thumbprint which can be used optionally to encrypt the entire data before storing it.{{% /md %}}</dd>
-    <dt class="property-"
+    <dd>{{% md %}}Represents the portal thumbprint which can be used optionally to encrypt the entire data before storing it.{{% /md %}}</dd><dt class="property-"
             title="">
         <span id="version_csharp">
 <a href="#version_csharp" style="color: inherit; text-decoration: inherit;">Version</a>
@@ -256,14 +228,11 @@ The following output properties are available:
         <span class="property-indicator"></span>
         <span class="property-type">string</span>
     </dt>
-    <dd>{{% md %}}The version of the extended info being persisted.{{% /md %}}</dd>
-</dl>
+    <dd>{{% md %}}The version of the extended info being persisted.{{% /md %}}</dd></dl>
 {{% /choosable %}}
 
 {{% choosable language go %}}
-<dl class="resources-properties">
-
-    <dt class="property-"
+<dl class="resources-properties"><dt class="property-"
             title="">
         <span id="algorithm_go">
 <a href="#algorithm_go" style="color: inherit; text-decoration: inherit;">Algorithm</a>
@@ -271,8 +240,7 @@ The following output properties are available:
         <span class="property-indicator"></span>
         <span class="property-type">string</span>
     </dt>
-    <dd>{{% md %}}Represents the encryption algorithm used to encrypt the keys. None - if Key is saved in plain text format. Algorithm name - if key is encrypted{{% /md %}}</dd>
-    <dt class="property-"
+    <dd>{{% md %}}Represents the encryption algorithm used to encrypt the keys. None - if Key is saved in plain text format. Algorithm name - if key is encrypted{{% /md %}}</dd><dt class="property-"
             title="">
         <span id="id_go">
 <a href="#id_go" style="color: inherit; text-decoration: inherit;">Id</a>
@@ -280,8 +248,7 @@ The following output properties are available:
         <span class="property-indicator"></span>
         <span class="property-type">string</span>
     </dt>
-    <dd>{{% md %}}The path ID that uniquely identifies the object.{{% /md %}}</dd>
-    <dt class="property-"
+    <dd>{{% md %}}The path ID that uniquely identifies the object.{{% /md %}}</dd><dt class="property-"
             title="">
         <span id="integritykey_go">
 <a href="#integritykey_go" style="color: inherit; text-decoration: inherit;">Integrity<wbr>Key</a>
@@ -289,8 +256,7 @@ The following output properties are available:
         <span class="property-indicator"></span>
         <span class="property-type">string</span>
     </dt>
-    <dd>{{% md %}}Represents the CIK of the resource.{{% /md %}}</dd>
-    <dt class="property-"
+    <dd>{{% md %}}Represents the CIK of the resource.{{% /md %}}</dd><dt class="property-"
             title="">
         <span id="name_go">
 <a href="#name_go" style="color: inherit; text-decoration: inherit;">Name</a>
@@ -298,8 +264,7 @@ The following output properties are available:
         <span class="property-indicator"></span>
         <span class="property-type">string</span>
     </dt>
-    <dd>{{% md %}}The name of the object.{{% /md %}}</dd>
-    <dt class="property-"
+    <dd>{{% md %}}The name of the object.{{% /md %}}</dd><dt class="property-"
             title="">
         <span id="type_go">
 <a href="#type_go" style="color: inherit; text-decoration: inherit;">Type</a>
@@ -307,8 +272,7 @@ The following output properties are available:
         <span class="property-indicator"></span>
         <span class="property-type">string</span>
     </dt>
-    <dd>{{% md %}}The hierarchical type of the object.{{% /md %}}</dd>
-    <dt class="property-"
+    <dd>{{% md %}}The hierarchical type of the object.{{% /md %}}</dd><dt class="property-"
             title="">
         <span id="encryptionkey_go">
 <a href="#encryptionkey_go" style="color: inherit; text-decoration: inherit;">Encryption<wbr>Key</a>
@@ -316,8 +280,7 @@ The following output properties are available:
         <span class="property-indicator"></span>
         <span class="property-type">string</span>
     </dt>
-    <dd>{{% md %}}Represents the CEK of the resource.{{% /md %}}</dd>
-    <dt class="property-"
+    <dd>{{% md %}}Represents the CEK of the resource.{{% /md %}}</dd><dt class="property-"
             title="">
         <span id="encryptionkeythumbprint_go">
 <a href="#encryptionkeythumbprint_go" style="color: inherit; text-decoration: inherit;">Encryption<wbr>Key<wbr>Thumbprint</a>
@@ -325,8 +288,7 @@ The following output properties are available:
         <span class="property-indicator"></span>
         <span class="property-type">string</span>
     </dt>
-    <dd>{{% md %}}Represents the Cert thumbprint that was used to encrypt the CEK.{{% /md %}}</dd>
-    <dt class="property-"
+    <dd>{{% md %}}Represents the Cert thumbprint that was used to encrypt the CEK.{{% /md %}}</dd><dt class="property-"
             title="">
         <span id="etag_go">
 <a href="#etag_go" style="color: inherit; text-decoration: inherit;">Etag</a>
@@ -334,8 +296,7 @@ The following output properties are available:
         <span class="property-indicator"></span>
         <span class="property-type">string</span>
     </dt>
-    <dd>{{% md %}}The etag of the resource.{{% /md %}}</dd>
-    <dt class="property-"
+    <dd>{{% md %}}The etag of the resource.{{% /md %}}</dd><dt class="property-"
             title="">
         <span id="kind_go">
 <a href="#kind_go" style="color: inherit; text-decoration: inherit;">Kind</a>
@@ -343,8 +304,7 @@ The following output properties are available:
         <span class="property-indicator"></span>
         <span class="property-type">string</span>
     </dt>
-    <dd>{{% md %}}The Kind of the object. Currently only Series8000 is supported{{% /md %}}</dd>
-    <dt class="property-"
+    <dd>{{% md %}}The Kind of the object. Currently only Series8000 is supported{{% /md %}}</dd><dt class="property-"
             title="">
         <span id="portalcertificatethumbprint_go">
 <a href="#portalcertificatethumbprint_go" style="color: inherit; text-decoration: inherit;">Portal<wbr>Certificate<wbr>Thumbprint</a>
@@ -352,8 +312,7 @@ The following output properties are available:
         <span class="property-indicator"></span>
         <span class="property-type">string</span>
     </dt>
-    <dd>{{% md %}}Represents the portal thumbprint which can be used optionally to encrypt the entire data before storing it.{{% /md %}}</dd>
-    <dt class="property-"
+    <dd>{{% md %}}Represents the portal thumbprint which can be used optionally to encrypt the entire data before storing it.{{% /md %}}</dd><dt class="property-"
             title="">
         <span id="version_go">
 <a href="#version_go" style="color: inherit; text-decoration: inherit;">Version</a>
@@ -361,14 +320,11 @@ The following output properties are available:
         <span class="property-indicator"></span>
         <span class="property-type">string</span>
     </dt>
-    <dd>{{% md %}}The version of the extended info being persisted.{{% /md %}}</dd>
-</dl>
+    <dd>{{% md %}}The version of the extended info being persisted.{{% /md %}}</dd></dl>
 {{% /choosable %}}
 
 {{% choosable language nodejs %}}
-<dl class="resources-properties">
-
-    <dt class="property-"
+<dl class="resources-properties"><dt class="property-"
             title="">
         <span id="algorithm_nodejs">
 <a href="#algorithm_nodejs" style="color: inherit; text-decoration: inherit;">algorithm</a>
@@ -376,8 +332,7 @@ The following output properties are available:
         <span class="property-indicator"></span>
         <span class="property-type">string</span>
     </dt>
-    <dd>{{% md %}}Represents the encryption algorithm used to encrypt the keys. None - if Key is saved in plain text format. Algorithm name - if key is encrypted{{% /md %}}</dd>
-    <dt class="property-"
+    <dd>{{% md %}}Represents the encryption algorithm used to encrypt the keys. None - if Key is saved in plain text format. Algorithm name - if key is encrypted{{% /md %}}</dd><dt class="property-"
             title="">
         <span id="id_nodejs">
 <a href="#id_nodejs" style="color: inherit; text-decoration: inherit;">id</a>
@@ -385,8 +340,7 @@ The following output properties are available:
         <span class="property-indicator"></span>
         <span class="property-type">string</span>
     </dt>
-    <dd>{{% md %}}The path ID that uniquely identifies the object.{{% /md %}}</dd>
-    <dt class="property-"
+    <dd>{{% md %}}The path ID that uniquely identifies the object.{{% /md %}}</dd><dt class="property-"
             title="">
         <span id="integritykey_nodejs">
 <a href="#integritykey_nodejs" style="color: inherit; text-decoration: inherit;">integrity<wbr>Key</a>
@@ -394,8 +348,7 @@ The following output properties are available:
         <span class="property-indicator"></span>
         <span class="property-type">string</span>
     </dt>
-    <dd>{{% md %}}Represents the CIK of the resource.{{% /md %}}</dd>
-    <dt class="property-"
+    <dd>{{% md %}}Represents the CIK of the resource.{{% /md %}}</dd><dt class="property-"
             title="">
         <span id="name_nodejs">
 <a href="#name_nodejs" style="color: inherit; text-decoration: inherit;">name</a>
@@ -403,8 +356,7 @@ The following output properties are available:
         <span class="property-indicator"></span>
         <span class="property-type">string</span>
     </dt>
-    <dd>{{% md %}}The name of the object.{{% /md %}}</dd>
-    <dt class="property-"
+    <dd>{{% md %}}The name of the object.{{% /md %}}</dd><dt class="property-"
             title="">
         <span id="type_nodejs">
 <a href="#type_nodejs" style="color: inherit; text-decoration: inherit;">type</a>
@@ -412,8 +364,7 @@ The following output properties are available:
         <span class="property-indicator"></span>
         <span class="property-type">string</span>
     </dt>
-    <dd>{{% md %}}The hierarchical type of the object.{{% /md %}}</dd>
-    <dt class="property-"
+    <dd>{{% md %}}The hierarchical type of the object.{{% /md %}}</dd><dt class="property-"
             title="">
         <span id="encryptionkey_nodejs">
 <a href="#encryptionkey_nodejs" style="color: inherit; text-decoration: inherit;">encryption<wbr>Key</a>
@@ -421,8 +372,7 @@ The following output properties are available:
         <span class="property-indicator"></span>
         <span class="property-type">string</span>
     </dt>
-    <dd>{{% md %}}Represents the CEK of the resource.{{% /md %}}</dd>
-    <dt class="property-"
+    <dd>{{% md %}}Represents the CEK of the resource.{{% /md %}}</dd><dt class="property-"
             title="">
         <span id="encryptionkeythumbprint_nodejs">
 <a href="#encryptionkeythumbprint_nodejs" style="color: inherit; text-decoration: inherit;">encryption<wbr>Key<wbr>Thumbprint</a>
@@ -430,8 +380,7 @@ The following output properties are available:
         <span class="property-indicator"></span>
         <span class="property-type">string</span>
     </dt>
-    <dd>{{% md %}}Represents the Cert thumbprint that was used to encrypt the CEK.{{% /md %}}</dd>
-    <dt class="property-"
+    <dd>{{% md %}}Represents the Cert thumbprint that was used to encrypt the CEK.{{% /md %}}</dd><dt class="property-"
             title="">
         <span id="etag_nodejs">
 <a href="#etag_nodejs" style="color: inherit; text-decoration: inherit;">etag</a>
@@ -439,8 +388,7 @@ The following output properties are available:
         <span class="property-indicator"></span>
         <span class="property-type">string</span>
     </dt>
-    <dd>{{% md %}}The etag of the resource.{{% /md %}}</dd>
-    <dt class="property-"
+    <dd>{{% md %}}The etag of the resource.{{% /md %}}</dd><dt class="property-"
             title="">
         <span id="kind_nodejs">
 <a href="#kind_nodejs" style="color: inherit; text-decoration: inherit;">kind</a>
@@ -448,8 +396,7 @@ The following output properties are available:
         <span class="property-indicator"></span>
         <span class="property-type">string</span>
     </dt>
-    <dd>{{% md %}}The Kind of the object. Currently only Series8000 is supported{{% /md %}}</dd>
-    <dt class="property-"
+    <dd>{{% md %}}The Kind of the object. Currently only Series8000 is supported{{% /md %}}</dd><dt class="property-"
             title="">
         <span id="portalcertificatethumbprint_nodejs">
 <a href="#portalcertificatethumbprint_nodejs" style="color: inherit; text-decoration: inherit;">portal<wbr>Certificate<wbr>Thumbprint</a>
@@ -457,8 +404,7 @@ The following output properties are available:
         <span class="property-indicator"></span>
         <span class="property-type">string</span>
     </dt>
-    <dd>{{% md %}}Represents the portal thumbprint which can be used optionally to encrypt the entire data before storing it.{{% /md %}}</dd>
-    <dt class="property-"
+    <dd>{{% md %}}Represents the portal thumbprint which can be used optionally to encrypt the entire data before storing it.{{% /md %}}</dd><dt class="property-"
             title="">
         <span id="version_nodejs">
 <a href="#version_nodejs" style="color: inherit; text-decoration: inherit;">version</a>
@@ -466,14 +412,11 @@ The following output properties are available:
         <span class="property-indicator"></span>
         <span class="property-type">string</span>
     </dt>
-    <dd>{{% md %}}The version of the extended info being persisted.{{% /md %}}</dd>
-</dl>
+    <dd>{{% md %}}The version of the extended info being persisted.{{% /md %}}</dd></dl>
 {{% /choosable %}}
 
 {{% choosable language python %}}
-<dl class="resources-properties">
-
-    <dt class="property-"
+<dl class="resources-properties"><dt class="property-"
             title="">
         <span id="algorithm_python">
 <a href="#algorithm_python" style="color: inherit; text-decoration: inherit;">algorithm</a>
@@ -481,8 +424,7 @@ The following output properties are available:
         <span class="property-indicator"></span>
         <span class="property-type">str</span>
     </dt>
-    <dd>{{% md %}}Represents the encryption algorithm used to encrypt the keys. None - if Key is saved in plain text format. Algorithm name - if key is encrypted{{% /md %}}</dd>
-    <dt class="property-"
+    <dd>{{% md %}}Represents the encryption algorithm used to encrypt the keys. None - if Key is saved in plain text format. Algorithm name - if key is encrypted{{% /md %}}</dd><dt class="property-"
             title="">
         <span id="id_python">
 <a href="#id_python" style="color: inherit; text-decoration: inherit;">id</a>
@@ -490,8 +432,7 @@ The following output properties are available:
         <span class="property-indicator"></span>
         <span class="property-type">str</span>
     </dt>
-    <dd>{{% md %}}The path ID that uniquely identifies the object.{{% /md %}}</dd>
-    <dt class="property-"
+    <dd>{{% md %}}The path ID that uniquely identifies the object.{{% /md %}}</dd><dt class="property-"
             title="">
         <span id="integrity_key_python">
 <a href="#integrity_key_python" style="color: inherit; text-decoration: inherit;">integrity_<wbr>key</a>
@@ -499,8 +440,7 @@ The following output properties are available:
         <span class="property-indicator"></span>
         <span class="property-type">str</span>
     </dt>
-    <dd>{{% md %}}Represents the CIK of the resource.{{% /md %}}</dd>
-    <dt class="property-"
+    <dd>{{% md %}}Represents the CIK of the resource.{{% /md %}}</dd><dt class="property-"
             title="">
         <span id="name_python">
 <a href="#name_python" style="color: inherit; text-decoration: inherit;">name</a>
@@ -508,8 +448,7 @@ The following output properties are available:
         <span class="property-indicator"></span>
         <span class="property-type">str</span>
     </dt>
-    <dd>{{% md %}}The name of the object.{{% /md %}}</dd>
-    <dt class="property-"
+    <dd>{{% md %}}The name of the object.{{% /md %}}</dd><dt class="property-"
             title="">
         <span id="type_python">
 <a href="#type_python" style="color: inherit; text-decoration: inherit;">type</a>
@@ -517,8 +456,7 @@ The following output properties are available:
         <span class="property-indicator"></span>
         <span class="property-type">str</span>
     </dt>
-    <dd>{{% md %}}The hierarchical type of the object.{{% /md %}}</dd>
-    <dt class="property-"
+    <dd>{{% md %}}The hierarchical type of the object.{{% /md %}}</dd><dt class="property-"
             title="">
         <span id="encryption_key_python">
 <a href="#encryption_key_python" style="color: inherit; text-decoration: inherit;">encryption_<wbr>key</a>
@@ -526,8 +464,7 @@ The following output properties are available:
         <span class="property-indicator"></span>
         <span class="property-type">str</span>
     </dt>
-    <dd>{{% md %}}Represents the CEK of the resource.{{% /md %}}</dd>
-    <dt class="property-"
+    <dd>{{% md %}}Represents the CEK of the resource.{{% /md %}}</dd><dt class="property-"
             title="">
         <span id="encryption_key_thumbprint_python">
 <a href="#encryption_key_thumbprint_python" style="color: inherit; text-decoration: inherit;">encryption_<wbr>key_<wbr>thumbprint</a>
@@ -535,8 +472,7 @@ The following output properties are available:
         <span class="property-indicator"></span>
         <span class="property-type">str</span>
     </dt>
-    <dd>{{% md %}}Represents the Cert thumbprint that was used to encrypt the CEK.{{% /md %}}</dd>
-    <dt class="property-"
+    <dd>{{% md %}}Represents the Cert thumbprint that was used to encrypt the CEK.{{% /md %}}</dd><dt class="property-"
             title="">
         <span id="etag_python">
 <a href="#etag_python" style="color: inherit; text-decoration: inherit;">etag</a>
@@ -544,8 +480,7 @@ The following output properties are available:
         <span class="property-indicator"></span>
         <span class="property-type">str</span>
     </dt>
-    <dd>{{% md %}}The etag of the resource.{{% /md %}}</dd>
-    <dt class="property-"
+    <dd>{{% md %}}The etag of the resource.{{% /md %}}</dd><dt class="property-"
             title="">
         <span id="kind_python">
 <a href="#kind_python" style="color: inherit; text-decoration: inherit;">kind</a>
@@ -553,8 +488,7 @@ The following output properties are available:
         <span class="property-indicator"></span>
         <span class="property-type">str</span>
     </dt>
-    <dd>{{% md %}}The Kind of the object. Currently only Series8000 is supported{{% /md %}}</dd>
-    <dt class="property-"
+    <dd>{{% md %}}The Kind of the object. Currently only Series8000 is supported{{% /md %}}</dd><dt class="property-"
             title="">
         <span id="portal_certificate_thumbprint_python">
 <a href="#portal_certificate_thumbprint_python" style="color: inherit; text-decoration: inherit;">portal_<wbr>certificate_<wbr>thumbprint</a>
@@ -562,8 +496,7 @@ The following output properties are available:
         <span class="property-indicator"></span>
         <span class="property-type">str</span>
     </dt>
-    <dd>{{% md %}}Represents the portal thumbprint which can be used optionally to encrypt the entire data before storing it.{{% /md %}}</dd>
-    <dt class="property-"
+    <dd>{{% md %}}Represents the portal thumbprint which can be used optionally to encrypt the entire data before storing it.{{% /md %}}</dd><dt class="property-"
             title="">
         <span id="version_python">
 <a href="#version_python" style="color: inherit; text-decoration: inherit;">version</a>
@@ -571,8 +504,7 @@ The following output properties are available:
         <span class="property-indicator"></span>
         <span class="property-type">str</span>
     </dt>
-    <dd>{{% md %}}The version of the extended info being persisted.{{% /md %}}</dd>
-</dl>
+    <dd>{{% md %}}The version of the extended info being persisted.{{% /md %}}</dd></dl>
 {{% /choosable %}}
 
 

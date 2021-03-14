@@ -13,11 +13,17 @@ meta_desc: "Documentation for the gcp.sql.SslCert resource with examples, input 
 Creates a new Google SQL SSL Cert on a Google SQL Instance. For more information, see the [official documentation](https://cloud.google.com/sql/), or the [JSON API](https://cloud.google.com/sql/docs/mysql/admin-api/v1beta4/sslCerts).
 
 {{% examples %}}
+
 ## Example Usage
 
 {{< chooser language "typescript,python,go,csharp" / >}}
 
-{{% example csharp %}}
+
+
+
+
+{{< example csharp >}}
+
 ```csharp
 using Pulumi;
 using Gcp = Pulumi.Gcp;
@@ -48,9 +54,12 @@ class MyStack : Stack
 }
 ```
 
-{{% /example %}}
 
-{{% example go %}}
+{{< /example >}}
+
+
+{{< example go >}}
+
 ```go
 package main
 
@@ -88,9 +97,12 @@ func main() {
 }
 ```
 
-{{% /example %}}
 
-{{% example python %}}
+{{< /example >}}
+
+
+{{< example python >}}
+
 ```python
 import pulumi
 import pulumi_gcp as gcp
@@ -105,9 +117,12 @@ client_cert = gcp.sql.SslCert("clientCert",
     instance=master.name)
 ```
 
-{{% /example %}}
 
-{{% example typescript %}}
+{{< /example >}}
+
+
+{{< example typescript >}}
+
 
 ```typescript
 import * as pulumi from "@pulumi/pulumi";
@@ -124,9 +139,16 @@ const clientCert = new gcp.sql.SslCert("clientCert", {
 });
 ```
 
-{{% /example %}}
+
+{{< /example >}}
+
+
+
+
 
 {{% /examples %}}
+
+
 
 
 ## Create a SslCert Resource {#create}
@@ -151,9 +173,7 @@ const clientCert = new gcp.sql.SslCert("clientCert", {
 
 {{% choosable language nodejs %}}
 
-<dl class="resources-properties">
-  
-    <dt
+<dl class="resources-properties"><dt
         class="property-required" title="Required">
         <span>name</span>
         <span class="property-indicator"></span>
@@ -161,9 +181,7 @@ const clientCert = new gcp.sql.SslCert("clientCert", {
     </dt>
     <dd>
       The unique name of the resource.
-    </dd>
-  
-    <dt
+    </dd><dt
         class="property-required" title="Required">
         <span>args</span>
         <span class="property-indicator"></span>
@@ -171,9 +189,7 @@ const clientCert = new gcp.sql.SslCert("clientCert", {
     </dt>
     <dd>
       The arguments to resource properties.
-    </dd>
-  
-    <dt
+    </dd><dt
         class="property-optional" title="Optional">
         <span>opts</span>
         <span class="property-indicator"></span>
@@ -181,10 +197,7 @@ const clientCert = new gcp.sql.SslCert("clientCert", {
     </dt>
     <dd>
       Bag of options to control resource&#39;s behavior.
-    </dd>
-  
-
-</dl>
+    </dd></dl>
 
 {{% /choosable %}}
 
@@ -210,9 +223,7 @@ const clientCert = new gcp.sql.SslCert("clientCert", {
 
 {{% choosable language go %}}
 
-<dl class="resources-properties">
-  
-    <dt
+<dl class="resources-properties"><dt
         class="property-optional" title="Optional">
         <span>ctx</span>
         <span class="property-indicator"></span>
@@ -220,9 +231,7 @@ const clientCert = new gcp.sql.SslCert("clientCert", {
     </dt>
     <dd>
       Context object for the current deployment.
-    </dd>
-  
-    <dt
+    </dd><dt
         class="property-required" title="Required">
         <span>name</span>
         <span class="property-indicator"></span>
@@ -230,9 +239,7 @@ const clientCert = new gcp.sql.SslCert("clientCert", {
     </dt>
     <dd>
       The unique name of the resource.
-    </dd>
-  
-    <dt
+    </dd><dt
         class="property-required" title="Required">
         <span>args</span>
         <span class="property-indicator"></span>
@@ -240,9 +247,7 @@ const clientCert = new gcp.sql.SslCert("clientCert", {
     </dt>
     <dd>
       The arguments to resource properties.
-    </dd>
-  
-    <dt
+    </dd><dt
         class="property-optional" title="Optional">
         <span>opts</span>
         <span class="property-indicator"></span>
@@ -250,18 +255,13 @@ const clientCert = new gcp.sql.SslCert("clientCert", {
     </dt>
     <dd>
       Bag of options to control resource&#39;s behavior.
-    </dd>
-  
-
-</dl>
+    </dd></dl>
 
 {{% /choosable %}}
 
 {{% choosable language csharp %}}
 
-<dl class="resources-properties">
-  
-    <dt
+<dl class="resources-properties"><dt
         class="property-required" title="Required">
         <span>name</span>
         <span class="property-indicator"></span>
@@ -269,9 +269,7 @@ const clientCert = new gcp.sql.SslCert("clientCert", {
     </dt>
     <dd>
       The unique name of the resource.
-    </dd>
-  
-    <dt
+    </dd><dt
         class="property-required" title="Required">
         <span>args</span>
         <span class="property-indicator"></span>
@@ -279,9 +277,7 @@ const clientCert = new gcp.sql.SslCert("clientCert", {
     </dt>
     <dd>
       The arguments to resource properties.
-    </dd>
-  
-    <dt
+    </dd><dt
         class="property-optional" title="Optional">
         <span>opts</span>
         <span class="property-indicator"></span>
@@ -289,10 +285,7 @@ const clientCert = new gcp.sql.SslCert("clientCert", {
     </dt>
     <dd>
       Bag of options to control resource&#39;s behavior.
-    </dd>
-  
-
-</dl>
+    </dd></dl>
 
 {{% /choosable %}}
 
@@ -307,9 +300,7 @@ The SslCert resource accepts the following [input]({{< relref "/docs/intro/conce
 
 
 {{% choosable language csharp %}}
-<dl class="resources-properties">
-
-    <dt class="property-required"
+<dl class="resources-properties"><dt class="property-required"
             title="Required">
         <span id="commonname_csharp">
 <a href="#commonname_csharp" style="color: inherit; text-decoration: inherit;">Common<wbr>Name</a>
@@ -319,8 +310,7 @@ The SslCert resource accepts the following [input]({{< relref "/docs/intro/conce
     </dt>
     <dd>{{% md %}}The common name to be used in the certificate to identify the
 client. Constrained to [a-zA-Z.-_ ]+. Changing this forces a new resource to be created.
-{{% /md %}}</dd>
-    <dt class="property-required"
+{{% /md %}}</dd><dt class="property-required"
             title="Required">
         <span id="instance_csharp">
 <a href="#instance_csharp" style="color: inherit; text-decoration: inherit;">Instance</a>
@@ -330,8 +320,7 @@ client. Constrained to [a-zA-Z.-_ ]+. Changing this forces a new resource to be 
     </dt>
     <dd>{{% md %}}The name of the Cloud SQL instance. Changing this
 forces a new resource to be created.
-{{% /md %}}</dd>
-    <dt class="property-optional"
+{{% /md %}}</dd><dt class="property-optional"
             title="Optional">
         <span id="project_csharp">
 <a href="#project_csharp" style="color: inherit; text-decoration: inherit;">Project</a>
@@ -341,14 +330,11 @@ forces a new resource to be created.
     </dt>
     <dd>{{% md %}}The ID of the project in which the resource belongs. If it
 is not provided, the provider project is used.
-{{% /md %}}</dd>
-</dl>
+{{% /md %}}</dd></dl>
 {{% /choosable %}}
 
 {{% choosable language go %}}
-<dl class="resources-properties">
-
-    <dt class="property-required"
+<dl class="resources-properties"><dt class="property-required"
             title="Required">
         <span id="commonname_go">
 <a href="#commonname_go" style="color: inherit; text-decoration: inherit;">Common<wbr>Name</a>
@@ -358,8 +344,7 @@ is not provided, the provider project is used.
     </dt>
     <dd>{{% md %}}The common name to be used in the certificate to identify the
 client. Constrained to [a-zA-Z.-_ ]+. Changing this forces a new resource to be created.
-{{% /md %}}</dd>
-    <dt class="property-required"
+{{% /md %}}</dd><dt class="property-required"
             title="Required">
         <span id="instance_go">
 <a href="#instance_go" style="color: inherit; text-decoration: inherit;">Instance</a>
@@ -369,8 +354,7 @@ client. Constrained to [a-zA-Z.-_ ]+. Changing this forces a new resource to be 
     </dt>
     <dd>{{% md %}}The name of the Cloud SQL instance. Changing this
 forces a new resource to be created.
-{{% /md %}}</dd>
-    <dt class="property-optional"
+{{% /md %}}</dd><dt class="property-optional"
             title="Optional">
         <span id="project_go">
 <a href="#project_go" style="color: inherit; text-decoration: inherit;">Project</a>
@@ -380,14 +364,11 @@ forces a new resource to be created.
     </dt>
     <dd>{{% md %}}The ID of the project in which the resource belongs. If it
 is not provided, the provider project is used.
-{{% /md %}}</dd>
-</dl>
+{{% /md %}}</dd></dl>
 {{% /choosable %}}
 
 {{% choosable language nodejs %}}
-<dl class="resources-properties">
-
-    <dt class="property-required"
+<dl class="resources-properties"><dt class="property-required"
             title="Required">
         <span id="commonname_nodejs">
 <a href="#commonname_nodejs" style="color: inherit; text-decoration: inherit;">common<wbr>Name</a>
@@ -397,8 +378,7 @@ is not provided, the provider project is used.
     </dt>
     <dd>{{% md %}}The common name to be used in the certificate to identify the
 client. Constrained to [a-zA-Z.-_ ]+. Changing this forces a new resource to be created.
-{{% /md %}}</dd>
-    <dt class="property-required"
+{{% /md %}}</dd><dt class="property-required"
             title="Required">
         <span id="instance_nodejs">
 <a href="#instance_nodejs" style="color: inherit; text-decoration: inherit;">instance</a>
@@ -408,8 +388,7 @@ client. Constrained to [a-zA-Z.-_ ]+. Changing this forces a new resource to be 
     </dt>
     <dd>{{% md %}}The name of the Cloud SQL instance. Changing this
 forces a new resource to be created.
-{{% /md %}}</dd>
-    <dt class="property-optional"
+{{% /md %}}</dd><dt class="property-optional"
             title="Optional">
         <span id="project_nodejs">
 <a href="#project_nodejs" style="color: inherit; text-decoration: inherit;">project</a>
@@ -419,14 +398,11 @@ forces a new resource to be created.
     </dt>
     <dd>{{% md %}}The ID of the project in which the resource belongs. If it
 is not provided, the provider project is used.
-{{% /md %}}</dd>
-</dl>
+{{% /md %}}</dd></dl>
 {{% /choosable %}}
 
 {{% choosable language python %}}
-<dl class="resources-properties">
-
-    <dt class="property-required"
+<dl class="resources-properties"><dt class="property-required"
             title="Required">
         <span id="common_name_python">
 <a href="#common_name_python" style="color: inherit; text-decoration: inherit;">common_<wbr>name</a>
@@ -436,8 +412,7 @@ is not provided, the provider project is used.
     </dt>
     <dd>{{% md %}}The common name to be used in the certificate to identify the
 client. Constrained to [a-zA-Z.-_ ]+. Changing this forces a new resource to be created.
-{{% /md %}}</dd>
-    <dt class="property-required"
+{{% /md %}}</dd><dt class="property-required"
             title="Required">
         <span id="instance_python">
 <a href="#instance_python" style="color: inherit; text-decoration: inherit;">instance</a>
@@ -447,8 +422,7 @@ client. Constrained to [a-zA-Z.-_ ]+. Changing this forces a new resource to be 
     </dt>
     <dd>{{% md %}}The name of the Cloud SQL instance. Changing this
 forces a new resource to be created.
-{{% /md %}}</dd>
-    <dt class="property-optional"
+{{% /md %}}</dd><dt class="property-optional"
             title="Optional">
         <span id="project_python">
 <a href="#project_python" style="color: inherit; text-decoration: inherit;">project</a>
@@ -458,8 +432,7 @@ forces a new resource to be created.
     </dt>
     <dd>{{% md %}}The ID of the project in which the resource belongs. If it
 is not provided, the provider project is used.
-{{% /md %}}</dd>
-</dl>
+{{% /md %}}</dd></dl>
 {{% /choosable %}}
 
 
@@ -470,9 +443,7 @@ All [input](#inputs) properties are implicitly available as output properties. A
 
 
 {{% choosable language csharp %}}
-<dl class="resources-properties">
-
-    <dt class="property-"
+<dl class="resources-properties"><dt class="property-"
             title="">
         <span id="cert_csharp">
 <a href="#cert_csharp" style="color: inherit; text-decoration: inherit;">Cert</a>
@@ -481,8 +452,7 @@ All [input](#inputs) properties are implicitly available as output properties. A
         <span class="property-type">string</span>
     </dt>
     <dd>{{% md %}}The actual certificate data for this client certificate.
-{{% /md %}}</dd>
-    <dt class="property-"
+{{% /md %}}</dd><dt class="property-"
             title="">
         <span id="certserialnumber_csharp">
 <a href="#certserialnumber_csharp" style="color: inherit; text-decoration: inherit;">Cert<wbr>Serial<wbr>Number</a>
@@ -491,8 +461,7 @@ All [input](#inputs) properties are implicitly available as output properties. A
         <span class="property-type">string</span>
     </dt>
     <dd>{{% md %}}The serial number extracted from the certificate data.
-{{% /md %}}</dd>
-    <dt class="property-"
+{{% /md %}}</dd><dt class="property-"
             title="">
         <span id="createtime_csharp">
 <a href="#createtime_csharp" style="color: inherit; text-decoration: inherit;">Create<wbr>Time</a>
@@ -502,8 +471,7 @@ All [input](#inputs) properties are implicitly available as output properties. A
     </dt>
     <dd>{{% md %}}The time when the certificate was created in RFC 3339 format,
 for example 2012-11-15T16:19:00.094Z.
-{{% /md %}}</dd>
-    <dt class="property-"
+{{% /md %}}</dd><dt class="property-"
             title="">
         <span id="expirationtime_csharp">
 <a href="#expirationtime_csharp" style="color: inherit; text-decoration: inherit;">Expiration<wbr>Time</a>
@@ -513,8 +481,7 @@ for example 2012-11-15T16:19:00.094Z.
     </dt>
     <dd>{{% md %}}The time when the certificate expires in RFC 3339 format,
 for example 2012-11-15T16:19:00.094Z.
-{{% /md %}}</dd>
-    <dt class="property-"
+{{% /md %}}</dd><dt class="property-"
             title="">
         <span id="id_csharp">
 <a href="#id_csharp" style="color: inherit; text-decoration: inherit;">Id</a>
@@ -522,8 +489,7 @@ for example 2012-11-15T16:19:00.094Z.
         <span class="property-indicator"></span>
         <span class="property-type">string</span>
     </dt>
-    <dd>{{% md %}}The provider-assigned unique ID for this managed resource.{{% /md %}}</dd>
-    <dt class="property-"
+    <dd>{{% md %}}The provider-assigned unique ID for this managed resource.{{% /md %}}</dd><dt class="property-"
             title="">
         <span id="privatekey_csharp">
 <a href="#privatekey_csharp" style="color: inherit; text-decoration: inherit;">Private<wbr>Key</a>
@@ -532,8 +498,7 @@ for example 2012-11-15T16:19:00.094Z.
         <span class="property-type">string</span>
     </dt>
     <dd>{{% md %}}The private key associated with the client certificate.
-{{% /md %}}</dd>
-    <dt class="property-"
+{{% /md %}}</dd><dt class="property-"
             title="">
         <span id="servercacert_csharp">
 <a href="#servercacert_csharp" style="color: inherit; text-decoration: inherit;">Server<wbr>Ca<wbr>Cert</a>
@@ -542,8 +507,7 @@ for example 2012-11-15T16:19:00.094Z.
         <span class="property-type">string</span>
     </dt>
     <dd>{{% md %}}The CA cert of the server this client cert was generated from.
-{{% /md %}}</dd>
-    <dt class="property-"
+{{% /md %}}</dd><dt class="property-"
             title="">
         <span id="sha1fingerprint_csharp">
 <a href="#sha1fingerprint_csharp" style="color: inherit; text-decoration: inherit;">Sha1Fingerprint</a>
@@ -552,14 +516,11 @@ for example 2012-11-15T16:19:00.094Z.
         <span class="property-type">string</span>
     </dt>
     <dd>{{% md %}}The SHA1 Fingerprint of the certificate.
-{{% /md %}}</dd>
-</dl>
+{{% /md %}}</dd></dl>
 {{% /choosable %}}
 
 {{% choosable language go %}}
-<dl class="resources-properties">
-
-    <dt class="property-"
+<dl class="resources-properties"><dt class="property-"
             title="">
         <span id="cert_go">
 <a href="#cert_go" style="color: inherit; text-decoration: inherit;">Cert</a>
@@ -568,8 +529,7 @@ for example 2012-11-15T16:19:00.094Z.
         <span class="property-type">string</span>
     </dt>
     <dd>{{% md %}}The actual certificate data for this client certificate.
-{{% /md %}}</dd>
-    <dt class="property-"
+{{% /md %}}</dd><dt class="property-"
             title="">
         <span id="certserialnumber_go">
 <a href="#certserialnumber_go" style="color: inherit; text-decoration: inherit;">Cert<wbr>Serial<wbr>Number</a>
@@ -578,8 +538,7 @@ for example 2012-11-15T16:19:00.094Z.
         <span class="property-type">string</span>
     </dt>
     <dd>{{% md %}}The serial number extracted from the certificate data.
-{{% /md %}}</dd>
-    <dt class="property-"
+{{% /md %}}</dd><dt class="property-"
             title="">
         <span id="createtime_go">
 <a href="#createtime_go" style="color: inherit; text-decoration: inherit;">Create<wbr>Time</a>
@@ -589,8 +548,7 @@ for example 2012-11-15T16:19:00.094Z.
     </dt>
     <dd>{{% md %}}The time when the certificate was created in RFC 3339 format,
 for example 2012-11-15T16:19:00.094Z.
-{{% /md %}}</dd>
-    <dt class="property-"
+{{% /md %}}</dd><dt class="property-"
             title="">
         <span id="expirationtime_go">
 <a href="#expirationtime_go" style="color: inherit; text-decoration: inherit;">Expiration<wbr>Time</a>
@@ -600,8 +558,7 @@ for example 2012-11-15T16:19:00.094Z.
     </dt>
     <dd>{{% md %}}The time when the certificate expires in RFC 3339 format,
 for example 2012-11-15T16:19:00.094Z.
-{{% /md %}}</dd>
-    <dt class="property-"
+{{% /md %}}</dd><dt class="property-"
             title="">
         <span id="id_go">
 <a href="#id_go" style="color: inherit; text-decoration: inherit;">Id</a>
@@ -609,8 +566,7 @@ for example 2012-11-15T16:19:00.094Z.
         <span class="property-indicator"></span>
         <span class="property-type">string</span>
     </dt>
-    <dd>{{% md %}}The provider-assigned unique ID for this managed resource.{{% /md %}}</dd>
-    <dt class="property-"
+    <dd>{{% md %}}The provider-assigned unique ID for this managed resource.{{% /md %}}</dd><dt class="property-"
             title="">
         <span id="privatekey_go">
 <a href="#privatekey_go" style="color: inherit; text-decoration: inherit;">Private<wbr>Key</a>
@@ -619,8 +575,7 @@ for example 2012-11-15T16:19:00.094Z.
         <span class="property-type">string</span>
     </dt>
     <dd>{{% md %}}The private key associated with the client certificate.
-{{% /md %}}</dd>
-    <dt class="property-"
+{{% /md %}}</dd><dt class="property-"
             title="">
         <span id="servercacert_go">
 <a href="#servercacert_go" style="color: inherit; text-decoration: inherit;">Server<wbr>Ca<wbr>Cert</a>
@@ -629,8 +584,7 @@ for example 2012-11-15T16:19:00.094Z.
         <span class="property-type">string</span>
     </dt>
     <dd>{{% md %}}The CA cert of the server this client cert was generated from.
-{{% /md %}}</dd>
-    <dt class="property-"
+{{% /md %}}</dd><dt class="property-"
             title="">
         <span id="sha1fingerprint_go">
 <a href="#sha1fingerprint_go" style="color: inherit; text-decoration: inherit;">Sha1Fingerprint</a>
@@ -639,14 +593,11 @@ for example 2012-11-15T16:19:00.094Z.
         <span class="property-type">string</span>
     </dt>
     <dd>{{% md %}}The SHA1 Fingerprint of the certificate.
-{{% /md %}}</dd>
-</dl>
+{{% /md %}}</dd></dl>
 {{% /choosable %}}
 
 {{% choosable language nodejs %}}
-<dl class="resources-properties">
-
-    <dt class="property-"
+<dl class="resources-properties"><dt class="property-"
             title="">
         <span id="cert_nodejs">
 <a href="#cert_nodejs" style="color: inherit; text-decoration: inherit;">cert</a>
@@ -655,8 +606,7 @@ for example 2012-11-15T16:19:00.094Z.
         <span class="property-type">string</span>
     </dt>
     <dd>{{% md %}}The actual certificate data for this client certificate.
-{{% /md %}}</dd>
-    <dt class="property-"
+{{% /md %}}</dd><dt class="property-"
             title="">
         <span id="certserialnumber_nodejs">
 <a href="#certserialnumber_nodejs" style="color: inherit; text-decoration: inherit;">cert<wbr>Serial<wbr>Number</a>
@@ -665,8 +615,7 @@ for example 2012-11-15T16:19:00.094Z.
         <span class="property-type">string</span>
     </dt>
     <dd>{{% md %}}The serial number extracted from the certificate data.
-{{% /md %}}</dd>
-    <dt class="property-"
+{{% /md %}}</dd><dt class="property-"
             title="">
         <span id="createtime_nodejs">
 <a href="#createtime_nodejs" style="color: inherit; text-decoration: inherit;">create<wbr>Time</a>
@@ -676,8 +625,7 @@ for example 2012-11-15T16:19:00.094Z.
     </dt>
     <dd>{{% md %}}The time when the certificate was created in RFC 3339 format,
 for example 2012-11-15T16:19:00.094Z.
-{{% /md %}}</dd>
-    <dt class="property-"
+{{% /md %}}</dd><dt class="property-"
             title="">
         <span id="expirationtime_nodejs">
 <a href="#expirationtime_nodejs" style="color: inherit; text-decoration: inherit;">expiration<wbr>Time</a>
@@ -687,8 +635,7 @@ for example 2012-11-15T16:19:00.094Z.
     </dt>
     <dd>{{% md %}}The time when the certificate expires in RFC 3339 format,
 for example 2012-11-15T16:19:00.094Z.
-{{% /md %}}</dd>
-    <dt class="property-"
+{{% /md %}}</dd><dt class="property-"
             title="">
         <span id="id_nodejs">
 <a href="#id_nodejs" style="color: inherit; text-decoration: inherit;">id</a>
@@ -696,8 +643,7 @@ for example 2012-11-15T16:19:00.094Z.
         <span class="property-indicator"></span>
         <span class="property-type">string</span>
     </dt>
-    <dd>{{% md %}}The provider-assigned unique ID for this managed resource.{{% /md %}}</dd>
-    <dt class="property-"
+    <dd>{{% md %}}The provider-assigned unique ID for this managed resource.{{% /md %}}</dd><dt class="property-"
             title="">
         <span id="privatekey_nodejs">
 <a href="#privatekey_nodejs" style="color: inherit; text-decoration: inherit;">private<wbr>Key</a>
@@ -706,8 +652,7 @@ for example 2012-11-15T16:19:00.094Z.
         <span class="property-type">string</span>
     </dt>
     <dd>{{% md %}}The private key associated with the client certificate.
-{{% /md %}}</dd>
-    <dt class="property-"
+{{% /md %}}</dd><dt class="property-"
             title="">
         <span id="servercacert_nodejs">
 <a href="#servercacert_nodejs" style="color: inherit; text-decoration: inherit;">server<wbr>Ca<wbr>Cert</a>
@@ -716,8 +661,7 @@ for example 2012-11-15T16:19:00.094Z.
         <span class="property-type">string</span>
     </dt>
     <dd>{{% md %}}The CA cert of the server this client cert was generated from.
-{{% /md %}}</dd>
-    <dt class="property-"
+{{% /md %}}</dd><dt class="property-"
             title="">
         <span id="sha1fingerprint_nodejs">
 <a href="#sha1fingerprint_nodejs" style="color: inherit; text-decoration: inherit;">sha1Fingerprint</a>
@@ -726,14 +670,11 @@ for example 2012-11-15T16:19:00.094Z.
         <span class="property-type">string</span>
     </dt>
     <dd>{{% md %}}The SHA1 Fingerprint of the certificate.
-{{% /md %}}</dd>
-</dl>
+{{% /md %}}</dd></dl>
 {{% /choosable %}}
 
 {{% choosable language python %}}
-<dl class="resources-properties">
-
-    <dt class="property-"
+<dl class="resources-properties"><dt class="property-"
             title="">
         <span id="cert_python">
 <a href="#cert_python" style="color: inherit; text-decoration: inherit;">cert</a>
@@ -742,8 +683,7 @@ for example 2012-11-15T16:19:00.094Z.
         <span class="property-type">str</span>
     </dt>
     <dd>{{% md %}}The actual certificate data for this client certificate.
-{{% /md %}}</dd>
-    <dt class="property-"
+{{% /md %}}</dd><dt class="property-"
             title="">
         <span id="cert_serial_number_python">
 <a href="#cert_serial_number_python" style="color: inherit; text-decoration: inherit;">cert_<wbr>serial_<wbr>number</a>
@@ -752,8 +692,7 @@ for example 2012-11-15T16:19:00.094Z.
         <span class="property-type">str</span>
     </dt>
     <dd>{{% md %}}The serial number extracted from the certificate data.
-{{% /md %}}</dd>
-    <dt class="property-"
+{{% /md %}}</dd><dt class="property-"
             title="">
         <span id="create_time_python">
 <a href="#create_time_python" style="color: inherit; text-decoration: inherit;">create_<wbr>time</a>
@@ -763,8 +702,7 @@ for example 2012-11-15T16:19:00.094Z.
     </dt>
     <dd>{{% md %}}The time when the certificate was created in RFC 3339 format,
 for example 2012-11-15T16:19:00.094Z.
-{{% /md %}}</dd>
-    <dt class="property-"
+{{% /md %}}</dd><dt class="property-"
             title="">
         <span id="expiration_time_python">
 <a href="#expiration_time_python" style="color: inherit; text-decoration: inherit;">expiration_<wbr>time</a>
@@ -774,8 +712,7 @@ for example 2012-11-15T16:19:00.094Z.
     </dt>
     <dd>{{% md %}}The time when the certificate expires in RFC 3339 format,
 for example 2012-11-15T16:19:00.094Z.
-{{% /md %}}</dd>
-    <dt class="property-"
+{{% /md %}}</dd><dt class="property-"
             title="">
         <span id="id_python">
 <a href="#id_python" style="color: inherit; text-decoration: inherit;">id</a>
@@ -783,8 +720,7 @@ for example 2012-11-15T16:19:00.094Z.
         <span class="property-indicator"></span>
         <span class="property-type">str</span>
     </dt>
-    <dd>{{% md %}}The provider-assigned unique ID for this managed resource.{{% /md %}}</dd>
-    <dt class="property-"
+    <dd>{{% md %}}The provider-assigned unique ID for this managed resource.{{% /md %}}</dd><dt class="property-"
             title="">
         <span id="private_key_python">
 <a href="#private_key_python" style="color: inherit; text-decoration: inherit;">private_<wbr>key</a>
@@ -793,8 +729,7 @@ for example 2012-11-15T16:19:00.094Z.
         <span class="property-type">str</span>
     </dt>
     <dd>{{% md %}}The private key associated with the client certificate.
-{{% /md %}}</dd>
-    <dt class="property-"
+{{% /md %}}</dd><dt class="property-"
             title="">
         <span id="server_ca_cert_python">
 <a href="#server_ca_cert_python" style="color: inherit; text-decoration: inherit;">server_<wbr>ca_<wbr>cert</a>
@@ -803,8 +738,7 @@ for example 2012-11-15T16:19:00.094Z.
         <span class="property-type">str</span>
     </dt>
     <dd>{{% md %}}The CA cert of the server this client cert was generated from.
-{{% /md %}}</dd>
-    <dt class="property-"
+{{% /md %}}</dd><dt class="property-"
             title="">
         <span id="sha1_fingerprint_python">
 <a href="#sha1_fingerprint_python" style="color: inherit; text-decoration: inherit;">sha1_<wbr>fingerprint</a>
@@ -813,8 +747,7 @@ for example 2012-11-15T16:19:00.094Z.
         <span class="property-type">str</span>
     </dt>
     <dd>{{% md %}}The SHA1 Fingerprint of the certificate.
-{{% /md %}}</dd>
-</dl>
+{{% /md %}}</dd></dl>
 {{% /choosable %}}
 
 
@@ -941,9 +874,7 @@ The following state arguments are supported:
 
 
 {{% choosable language csharp %}}
-<dl class="resources-properties">
-
-    <dt class="property-optional"
+<dl class="resources-properties"><dt class="property-optional"
             title="Optional">
         <span id="state_cert_csharp">
 <a href="#state_cert_csharp" style="color: inherit; text-decoration: inherit;">Cert</a>
@@ -952,8 +883,7 @@ The following state arguments are supported:
         <span class="property-type">string</span>
     </dt>
     <dd>{{% md %}}The actual certificate data for this client certificate.
-{{% /md %}}</dd>
-    <dt class="property-optional"
+{{% /md %}}</dd><dt class="property-optional"
             title="Optional">
         <span id="state_certserialnumber_csharp">
 <a href="#state_certserialnumber_csharp" style="color: inherit; text-decoration: inherit;">Cert<wbr>Serial<wbr>Number</a>
@@ -962,8 +892,7 @@ The following state arguments are supported:
         <span class="property-type">string</span>
     </dt>
     <dd>{{% md %}}The serial number extracted from the certificate data.
-{{% /md %}}</dd>
-    <dt class="property-optional"
+{{% /md %}}</dd><dt class="property-optional"
             title="Optional">
         <span id="state_commonname_csharp">
 <a href="#state_commonname_csharp" style="color: inherit; text-decoration: inherit;">Common<wbr>Name</a>
@@ -973,8 +902,7 @@ The following state arguments are supported:
     </dt>
     <dd>{{% md %}}The common name to be used in the certificate to identify the
 client. Constrained to [a-zA-Z.-_ ]+. Changing this forces a new resource to be created.
-{{% /md %}}</dd>
-    <dt class="property-optional"
+{{% /md %}}</dd><dt class="property-optional"
             title="Optional">
         <span id="state_createtime_csharp">
 <a href="#state_createtime_csharp" style="color: inherit; text-decoration: inherit;">Create<wbr>Time</a>
@@ -984,8 +912,7 @@ client. Constrained to [a-zA-Z.-_ ]+. Changing this forces a new resource to be 
     </dt>
     <dd>{{% md %}}The time when the certificate was created in RFC 3339 format,
 for example 2012-11-15T16:19:00.094Z.
-{{% /md %}}</dd>
-    <dt class="property-optional"
+{{% /md %}}</dd><dt class="property-optional"
             title="Optional">
         <span id="state_expirationtime_csharp">
 <a href="#state_expirationtime_csharp" style="color: inherit; text-decoration: inherit;">Expiration<wbr>Time</a>
@@ -995,8 +922,7 @@ for example 2012-11-15T16:19:00.094Z.
     </dt>
     <dd>{{% md %}}The time when the certificate expires in RFC 3339 format,
 for example 2012-11-15T16:19:00.094Z.
-{{% /md %}}</dd>
-    <dt class="property-optional"
+{{% /md %}}</dd><dt class="property-optional"
             title="Optional">
         <span id="state_instance_csharp">
 <a href="#state_instance_csharp" style="color: inherit; text-decoration: inherit;">Instance</a>
@@ -1006,8 +932,7 @@ for example 2012-11-15T16:19:00.094Z.
     </dt>
     <dd>{{% md %}}The name of the Cloud SQL instance. Changing this
 forces a new resource to be created.
-{{% /md %}}</dd>
-    <dt class="property-optional"
+{{% /md %}}</dd><dt class="property-optional"
             title="Optional">
         <span id="state_privatekey_csharp">
 <a href="#state_privatekey_csharp" style="color: inherit; text-decoration: inherit;">Private<wbr>Key</a>
@@ -1016,8 +941,7 @@ forces a new resource to be created.
         <span class="property-type">string</span>
     </dt>
     <dd>{{% md %}}The private key associated with the client certificate.
-{{% /md %}}</dd>
-    <dt class="property-optional"
+{{% /md %}}</dd><dt class="property-optional"
             title="Optional">
         <span id="state_project_csharp">
 <a href="#state_project_csharp" style="color: inherit; text-decoration: inherit;">Project</a>
@@ -1027,8 +951,7 @@ forces a new resource to be created.
     </dt>
     <dd>{{% md %}}The ID of the project in which the resource belongs. If it
 is not provided, the provider project is used.
-{{% /md %}}</dd>
-    <dt class="property-optional"
+{{% /md %}}</dd><dt class="property-optional"
             title="Optional">
         <span id="state_servercacert_csharp">
 <a href="#state_servercacert_csharp" style="color: inherit; text-decoration: inherit;">Server<wbr>Ca<wbr>Cert</a>
@@ -1037,8 +960,7 @@ is not provided, the provider project is used.
         <span class="property-type">string</span>
     </dt>
     <dd>{{% md %}}The CA cert of the server this client cert was generated from.
-{{% /md %}}</dd>
-    <dt class="property-optional"
+{{% /md %}}</dd><dt class="property-optional"
             title="Optional">
         <span id="state_sha1fingerprint_csharp">
 <a href="#state_sha1fingerprint_csharp" style="color: inherit; text-decoration: inherit;">Sha1Fingerprint</a>
@@ -1047,14 +969,11 @@ is not provided, the provider project is used.
         <span class="property-type">string</span>
     </dt>
     <dd>{{% md %}}The SHA1 Fingerprint of the certificate.
-{{% /md %}}</dd>
-</dl>
+{{% /md %}}</dd></dl>
 {{% /choosable %}}
 
 {{% choosable language go %}}
-<dl class="resources-properties">
-
-    <dt class="property-optional"
+<dl class="resources-properties"><dt class="property-optional"
             title="Optional">
         <span id="state_cert_go">
 <a href="#state_cert_go" style="color: inherit; text-decoration: inherit;">Cert</a>
@@ -1063,8 +982,7 @@ is not provided, the provider project is used.
         <span class="property-type">string</span>
     </dt>
     <dd>{{% md %}}The actual certificate data for this client certificate.
-{{% /md %}}</dd>
-    <dt class="property-optional"
+{{% /md %}}</dd><dt class="property-optional"
             title="Optional">
         <span id="state_certserialnumber_go">
 <a href="#state_certserialnumber_go" style="color: inherit; text-decoration: inherit;">Cert<wbr>Serial<wbr>Number</a>
@@ -1073,8 +991,7 @@ is not provided, the provider project is used.
         <span class="property-type">string</span>
     </dt>
     <dd>{{% md %}}The serial number extracted from the certificate data.
-{{% /md %}}</dd>
-    <dt class="property-optional"
+{{% /md %}}</dd><dt class="property-optional"
             title="Optional">
         <span id="state_commonname_go">
 <a href="#state_commonname_go" style="color: inherit; text-decoration: inherit;">Common<wbr>Name</a>
@@ -1084,8 +1001,7 @@ is not provided, the provider project is used.
     </dt>
     <dd>{{% md %}}The common name to be used in the certificate to identify the
 client. Constrained to [a-zA-Z.-_ ]+. Changing this forces a new resource to be created.
-{{% /md %}}</dd>
-    <dt class="property-optional"
+{{% /md %}}</dd><dt class="property-optional"
             title="Optional">
         <span id="state_createtime_go">
 <a href="#state_createtime_go" style="color: inherit; text-decoration: inherit;">Create<wbr>Time</a>
@@ -1095,8 +1011,7 @@ client. Constrained to [a-zA-Z.-_ ]+. Changing this forces a new resource to be 
     </dt>
     <dd>{{% md %}}The time when the certificate was created in RFC 3339 format,
 for example 2012-11-15T16:19:00.094Z.
-{{% /md %}}</dd>
-    <dt class="property-optional"
+{{% /md %}}</dd><dt class="property-optional"
             title="Optional">
         <span id="state_expirationtime_go">
 <a href="#state_expirationtime_go" style="color: inherit; text-decoration: inherit;">Expiration<wbr>Time</a>
@@ -1106,8 +1021,7 @@ for example 2012-11-15T16:19:00.094Z.
     </dt>
     <dd>{{% md %}}The time when the certificate expires in RFC 3339 format,
 for example 2012-11-15T16:19:00.094Z.
-{{% /md %}}</dd>
-    <dt class="property-optional"
+{{% /md %}}</dd><dt class="property-optional"
             title="Optional">
         <span id="state_instance_go">
 <a href="#state_instance_go" style="color: inherit; text-decoration: inherit;">Instance</a>
@@ -1117,8 +1031,7 @@ for example 2012-11-15T16:19:00.094Z.
     </dt>
     <dd>{{% md %}}The name of the Cloud SQL instance. Changing this
 forces a new resource to be created.
-{{% /md %}}</dd>
-    <dt class="property-optional"
+{{% /md %}}</dd><dt class="property-optional"
             title="Optional">
         <span id="state_privatekey_go">
 <a href="#state_privatekey_go" style="color: inherit; text-decoration: inherit;">Private<wbr>Key</a>
@@ -1127,8 +1040,7 @@ forces a new resource to be created.
         <span class="property-type">string</span>
     </dt>
     <dd>{{% md %}}The private key associated with the client certificate.
-{{% /md %}}</dd>
-    <dt class="property-optional"
+{{% /md %}}</dd><dt class="property-optional"
             title="Optional">
         <span id="state_project_go">
 <a href="#state_project_go" style="color: inherit; text-decoration: inherit;">Project</a>
@@ -1138,8 +1050,7 @@ forces a new resource to be created.
     </dt>
     <dd>{{% md %}}The ID of the project in which the resource belongs. If it
 is not provided, the provider project is used.
-{{% /md %}}</dd>
-    <dt class="property-optional"
+{{% /md %}}</dd><dt class="property-optional"
             title="Optional">
         <span id="state_servercacert_go">
 <a href="#state_servercacert_go" style="color: inherit; text-decoration: inherit;">Server<wbr>Ca<wbr>Cert</a>
@@ -1148,8 +1059,7 @@ is not provided, the provider project is used.
         <span class="property-type">string</span>
     </dt>
     <dd>{{% md %}}The CA cert of the server this client cert was generated from.
-{{% /md %}}</dd>
-    <dt class="property-optional"
+{{% /md %}}</dd><dt class="property-optional"
             title="Optional">
         <span id="state_sha1fingerprint_go">
 <a href="#state_sha1fingerprint_go" style="color: inherit; text-decoration: inherit;">Sha1Fingerprint</a>
@@ -1158,14 +1068,11 @@ is not provided, the provider project is used.
         <span class="property-type">string</span>
     </dt>
     <dd>{{% md %}}The SHA1 Fingerprint of the certificate.
-{{% /md %}}</dd>
-</dl>
+{{% /md %}}</dd></dl>
 {{% /choosable %}}
 
 {{% choosable language nodejs %}}
-<dl class="resources-properties">
-
-    <dt class="property-optional"
+<dl class="resources-properties"><dt class="property-optional"
             title="Optional">
         <span id="state_cert_nodejs">
 <a href="#state_cert_nodejs" style="color: inherit; text-decoration: inherit;">cert</a>
@@ -1174,8 +1081,7 @@ is not provided, the provider project is used.
         <span class="property-type">string</span>
     </dt>
     <dd>{{% md %}}The actual certificate data for this client certificate.
-{{% /md %}}</dd>
-    <dt class="property-optional"
+{{% /md %}}</dd><dt class="property-optional"
             title="Optional">
         <span id="state_certserialnumber_nodejs">
 <a href="#state_certserialnumber_nodejs" style="color: inherit; text-decoration: inherit;">cert<wbr>Serial<wbr>Number</a>
@@ -1184,8 +1090,7 @@ is not provided, the provider project is used.
         <span class="property-type">string</span>
     </dt>
     <dd>{{% md %}}The serial number extracted from the certificate data.
-{{% /md %}}</dd>
-    <dt class="property-optional"
+{{% /md %}}</dd><dt class="property-optional"
             title="Optional">
         <span id="state_commonname_nodejs">
 <a href="#state_commonname_nodejs" style="color: inherit; text-decoration: inherit;">common<wbr>Name</a>
@@ -1195,8 +1100,7 @@ is not provided, the provider project is used.
     </dt>
     <dd>{{% md %}}The common name to be used in the certificate to identify the
 client. Constrained to [a-zA-Z.-_ ]+. Changing this forces a new resource to be created.
-{{% /md %}}</dd>
-    <dt class="property-optional"
+{{% /md %}}</dd><dt class="property-optional"
             title="Optional">
         <span id="state_createtime_nodejs">
 <a href="#state_createtime_nodejs" style="color: inherit; text-decoration: inherit;">create<wbr>Time</a>
@@ -1206,8 +1110,7 @@ client. Constrained to [a-zA-Z.-_ ]+. Changing this forces a new resource to be 
     </dt>
     <dd>{{% md %}}The time when the certificate was created in RFC 3339 format,
 for example 2012-11-15T16:19:00.094Z.
-{{% /md %}}</dd>
-    <dt class="property-optional"
+{{% /md %}}</dd><dt class="property-optional"
             title="Optional">
         <span id="state_expirationtime_nodejs">
 <a href="#state_expirationtime_nodejs" style="color: inherit; text-decoration: inherit;">expiration<wbr>Time</a>
@@ -1217,8 +1120,7 @@ for example 2012-11-15T16:19:00.094Z.
     </dt>
     <dd>{{% md %}}The time when the certificate expires in RFC 3339 format,
 for example 2012-11-15T16:19:00.094Z.
-{{% /md %}}</dd>
-    <dt class="property-optional"
+{{% /md %}}</dd><dt class="property-optional"
             title="Optional">
         <span id="state_instance_nodejs">
 <a href="#state_instance_nodejs" style="color: inherit; text-decoration: inherit;">instance</a>
@@ -1228,8 +1130,7 @@ for example 2012-11-15T16:19:00.094Z.
     </dt>
     <dd>{{% md %}}The name of the Cloud SQL instance. Changing this
 forces a new resource to be created.
-{{% /md %}}</dd>
-    <dt class="property-optional"
+{{% /md %}}</dd><dt class="property-optional"
             title="Optional">
         <span id="state_privatekey_nodejs">
 <a href="#state_privatekey_nodejs" style="color: inherit; text-decoration: inherit;">private<wbr>Key</a>
@@ -1238,8 +1139,7 @@ forces a new resource to be created.
         <span class="property-type">string</span>
     </dt>
     <dd>{{% md %}}The private key associated with the client certificate.
-{{% /md %}}</dd>
-    <dt class="property-optional"
+{{% /md %}}</dd><dt class="property-optional"
             title="Optional">
         <span id="state_project_nodejs">
 <a href="#state_project_nodejs" style="color: inherit; text-decoration: inherit;">project</a>
@@ -1249,8 +1149,7 @@ forces a new resource to be created.
     </dt>
     <dd>{{% md %}}The ID of the project in which the resource belongs. If it
 is not provided, the provider project is used.
-{{% /md %}}</dd>
-    <dt class="property-optional"
+{{% /md %}}</dd><dt class="property-optional"
             title="Optional">
         <span id="state_servercacert_nodejs">
 <a href="#state_servercacert_nodejs" style="color: inherit; text-decoration: inherit;">server<wbr>Ca<wbr>Cert</a>
@@ -1259,8 +1158,7 @@ is not provided, the provider project is used.
         <span class="property-type">string</span>
     </dt>
     <dd>{{% md %}}The CA cert of the server this client cert was generated from.
-{{% /md %}}</dd>
-    <dt class="property-optional"
+{{% /md %}}</dd><dt class="property-optional"
             title="Optional">
         <span id="state_sha1fingerprint_nodejs">
 <a href="#state_sha1fingerprint_nodejs" style="color: inherit; text-decoration: inherit;">sha1Fingerprint</a>
@@ -1269,14 +1167,11 @@ is not provided, the provider project is used.
         <span class="property-type">string</span>
     </dt>
     <dd>{{% md %}}The SHA1 Fingerprint of the certificate.
-{{% /md %}}</dd>
-</dl>
+{{% /md %}}</dd></dl>
 {{% /choosable %}}
 
 {{% choosable language python %}}
-<dl class="resources-properties">
-
-    <dt class="property-optional"
+<dl class="resources-properties"><dt class="property-optional"
             title="Optional">
         <span id="state_cert_python">
 <a href="#state_cert_python" style="color: inherit; text-decoration: inherit;">cert</a>
@@ -1285,8 +1180,7 @@ is not provided, the provider project is used.
         <span class="property-type">str</span>
     </dt>
     <dd>{{% md %}}The actual certificate data for this client certificate.
-{{% /md %}}</dd>
-    <dt class="property-optional"
+{{% /md %}}</dd><dt class="property-optional"
             title="Optional">
         <span id="state_cert_serial_number_python">
 <a href="#state_cert_serial_number_python" style="color: inherit; text-decoration: inherit;">cert_<wbr>serial_<wbr>number</a>
@@ -1295,8 +1189,7 @@ is not provided, the provider project is used.
         <span class="property-type">str</span>
     </dt>
     <dd>{{% md %}}The serial number extracted from the certificate data.
-{{% /md %}}</dd>
-    <dt class="property-optional"
+{{% /md %}}</dd><dt class="property-optional"
             title="Optional">
         <span id="state_common_name_python">
 <a href="#state_common_name_python" style="color: inherit; text-decoration: inherit;">common_<wbr>name</a>
@@ -1306,8 +1199,7 @@ is not provided, the provider project is used.
     </dt>
     <dd>{{% md %}}The common name to be used in the certificate to identify the
 client. Constrained to [a-zA-Z.-_ ]+. Changing this forces a new resource to be created.
-{{% /md %}}</dd>
-    <dt class="property-optional"
+{{% /md %}}</dd><dt class="property-optional"
             title="Optional">
         <span id="state_create_time_python">
 <a href="#state_create_time_python" style="color: inherit; text-decoration: inherit;">create_<wbr>time</a>
@@ -1317,8 +1209,7 @@ client. Constrained to [a-zA-Z.-_ ]+. Changing this forces a new resource to be 
     </dt>
     <dd>{{% md %}}The time when the certificate was created in RFC 3339 format,
 for example 2012-11-15T16:19:00.094Z.
-{{% /md %}}</dd>
-    <dt class="property-optional"
+{{% /md %}}</dd><dt class="property-optional"
             title="Optional">
         <span id="state_expiration_time_python">
 <a href="#state_expiration_time_python" style="color: inherit; text-decoration: inherit;">expiration_<wbr>time</a>
@@ -1328,8 +1219,7 @@ for example 2012-11-15T16:19:00.094Z.
     </dt>
     <dd>{{% md %}}The time when the certificate expires in RFC 3339 format,
 for example 2012-11-15T16:19:00.094Z.
-{{% /md %}}</dd>
-    <dt class="property-optional"
+{{% /md %}}</dd><dt class="property-optional"
             title="Optional">
         <span id="state_instance_python">
 <a href="#state_instance_python" style="color: inherit; text-decoration: inherit;">instance</a>
@@ -1339,8 +1229,7 @@ for example 2012-11-15T16:19:00.094Z.
     </dt>
     <dd>{{% md %}}The name of the Cloud SQL instance. Changing this
 forces a new resource to be created.
-{{% /md %}}</dd>
-    <dt class="property-optional"
+{{% /md %}}</dd><dt class="property-optional"
             title="Optional">
         <span id="state_private_key_python">
 <a href="#state_private_key_python" style="color: inherit; text-decoration: inherit;">private_<wbr>key</a>
@@ -1349,8 +1238,7 @@ forces a new resource to be created.
         <span class="property-type">str</span>
     </dt>
     <dd>{{% md %}}The private key associated with the client certificate.
-{{% /md %}}</dd>
-    <dt class="property-optional"
+{{% /md %}}</dd><dt class="property-optional"
             title="Optional">
         <span id="state_project_python">
 <a href="#state_project_python" style="color: inherit; text-decoration: inherit;">project</a>
@@ -1360,8 +1248,7 @@ forces a new resource to be created.
     </dt>
     <dd>{{% md %}}The ID of the project in which the resource belongs. If it
 is not provided, the provider project is used.
-{{% /md %}}</dd>
-    <dt class="property-optional"
+{{% /md %}}</dd><dt class="property-optional"
             title="Optional">
         <span id="state_server_ca_cert_python">
 <a href="#state_server_ca_cert_python" style="color: inherit; text-decoration: inherit;">server_<wbr>ca_<wbr>cert</a>
@@ -1370,8 +1257,7 @@ is not provided, the provider project is used.
         <span class="property-type">str</span>
     </dt>
     <dd>{{% md %}}The CA cert of the server this client cert was generated from.
-{{% /md %}}</dd>
-    <dt class="property-optional"
+{{% /md %}}</dd><dt class="property-optional"
             title="Optional">
         <span id="state_sha1_fingerprint_python">
 <a href="#state_sha1_fingerprint_python" style="color: inherit; text-decoration: inherit;">sha1_<wbr>fingerprint</a>
@@ -1380,8 +1266,7 @@ is not provided, the provider project is used.
         <span class="property-type">str</span>
     </dt>
     <dd>{{% md %}}The SHA1 Fingerprint of the certificate.
-{{% /md %}}</dd>
-</dl>
+{{% /md %}}</dd></dl>
 {{% /choosable %}}
 
 
@@ -1403,6 +1288,6 @@ Since the contents of the certificate cannot be accessed after its creation, thi
 	<dt>License</dt>
 	<dd>Apache-2.0</dd>
 	<dt>Notes</dt>
-	<dd>This Pulumi package is based on the [`google-beta` Terraform Provider](https://github.com/hashicorp/terraform-provider-google-beta).</dd>
+	<dd>{{% md %}}This Pulumi package is based on the [`google-beta` Terraform Provider](https://github.com/hashicorp/terraform-provider-google-beta).{{% /md %}}</dd>
 </dl>
 

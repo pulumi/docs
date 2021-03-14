@@ -35,9 +35,7 @@ meta_desc: "Documentation for the openstack.database.Instance resource with exam
 
 {{% choosable language nodejs %}}
 
-<dl class="resources-properties">
-  
-    <dt
+<dl class="resources-properties"><dt
         class="property-required" title="Required">
         <span>name</span>
         <span class="property-indicator"></span>
@@ -45,9 +43,7 @@ meta_desc: "Documentation for the openstack.database.Instance resource with exam
     </dt>
     <dd>
       The unique name of the resource.
-    </dd>
-  
-    <dt
+    </dd><dt
         class="property-required" title="Required">
         <span>args</span>
         <span class="property-indicator"></span>
@@ -55,9 +51,7 @@ meta_desc: "Documentation for the openstack.database.Instance resource with exam
     </dt>
     <dd>
       The arguments to resource properties.
-    </dd>
-  
-    <dt
+    </dd><dt
         class="property-optional" title="Optional">
         <span>opts</span>
         <span class="property-indicator"></span>
@@ -65,10 +59,7 @@ meta_desc: "Documentation for the openstack.database.Instance resource with exam
     </dt>
     <dd>
       Bag of options to control resource&#39;s behavior.
-    </dd>
-  
-
-</dl>
+    </dd></dl>
 
 {{% /choosable %}}
 
@@ -94,9 +85,7 @@ meta_desc: "Documentation for the openstack.database.Instance resource with exam
 
 {{% choosable language go %}}
 
-<dl class="resources-properties">
-  
-    <dt
+<dl class="resources-properties"><dt
         class="property-optional" title="Optional">
         <span>ctx</span>
         <span class="property-indicator"></span>
@@ -104,9 +93,7 @@ meta_desc: "Documentation for the openstack.database.Instance resource with exam
     </dt>
     <dd>
       Context object for the current deployment.
-    </dd>
-  
-    <dt
+    </dd><dt
         class="property-required" title="Required">
         <span>name</span>
         <span class="property-indicator"></span>
@@ -114,9 +101,7 @@ meta_desc: "Documentation for the openstack.database.Instance resource with exam
     </dt>
     <dd>
       The unique name of the resource.
-    </dd>
-  
-    <dt
+    </dd><dt
         class="property-required" title="Required">
         <span>args</span>
         <span class="property-indicator"></span>
@@ -124,9 +109,7 @@ meta_desc: "Documentation for the openstack.database.Instance resource with exam
     </dt>
     <dd>
       The arguments to resource properties.
-    </dd>
-  
-    <dt
+    </dd><dt
         class="property-optional" title="Optional">
         <span>opts</span>
         <span class="property-indicator"></span>
@@ -134,18 +117,13 @@ meta_desc: "Documentation for the openstack.database.Instance resource with exam
     </dt>
     <dd>
       Bag of options to control resource&#39;s behavior.
-    </dd>
-  
-
-</dl>
+    </dd></dl>
 
 {{% /choosable %}}
 
 {{% choosable language csharp %}}
 
-<dl class="resources-properties">
-  
-    <dt
+<dl class="resources-properties"><dt
         class="property-required" title="Required">
         <span>name</span>
         <span class="property-indicator"></span>
@@ -153,9 +131,7 @@ meta_desc: "Documentation for the openstack.database.Instance resource with exam
     </dt>
     <dd>
       The unique name of the resource.
-    </dd>
-  
-    <dt
+    </dd><dt
         class="property-required" title="Required">
         <span>args</span>
         <span class="property-indicator"></span>
@@ -163,9 +139,7 @@ meta_desc: "Documentation for the openstack.database.Instance resource with exam
     </dt>
     <dd>
       The arguments to resource properties.
-    </dd>
-  
-    <dt
+    </dd><dt
         class="property-optional" title="Optional">
         <span>opts</span>
         <span class="property-indicator"></span>
@@ -173,10 +147,7 @@ meta_desc: "Documentation for the openstack.database.Instance resource with exam
     </dt>
     <dd>
       Bag of options to control resource&#39;s behavior.
-    </dd>
-  
-
-</dl>
+    </dd></dl>
 
 {{% /choosable %}}
 
@@ -191,9 +162,7 @@ The Instance resource accepts the following [input]({{< relref "/docs/intro/conc
 
 
 {{% choosable language csharp %}}
-<dl class="resources-properties">
-
-    <dt class="property-required"
+<dl class="resources-properties"><dt class="property-required"
             title="Required">
         <span id="datastore_csharp">
 <a href="#datastore_csharp" style="color: inherit; text-decoration: inherit;">Datastore</a>
@@ -203,8 +172,7 @@ The Instance resource accepts the following [input]({{< relref "/docs/intro/conc
     </dt>
     <dd>{{% md %}}An array of database engine type and version. The datastore
 object structure is documented below. Changing this creates a new instance.
-{{% /md %}}</dd>
-    <dt class="property-required"
+{{% /md %}}</dd><dt class="property-required"
             title="Required">
         <span id="size_csharp">
 <a href="#size_csharp" style="color: inherit; text-decoration: inherit;">Size</a>
@@ -213,8 +181,7 @@ object structure is documented below. Changing this creates a new instance.
         <span class="property-type">int</span>
     </dt>
     <dd>{{% md %}}Specifies the volume size in GB. Changing this creates new instance.
-{{% /md %}}</dd>
-    <dt class="property-optional"
+{{% /md %}}</dd><dt class="property-optional"
             title="Optional">
         <span id="configurationid_csharp">
 <a href="#configurationid_csharp" style="color: inherit; text-decoration: inherit;">Configuration<wbr>Id</a>
@@ -224,8 +191,7 @@ object structure is documented below. Changing this creates a new instance.
     </dt>
     <dd>{{% md %}}Configuration ID to be attached to the instance. Database instance
 will be rebooted when configuration is detached.
-{{% /md %}}</dd>
-    <dt class="property-optional"
+{{% /md %}}</dd><dt class="property-optional"
             title="Optional">
         <span id="databases_csharp">
 <a href="#databases_csharp" style="color: inherit; text-decoration: inherit;">Databases</a>
@@ -235,8 +201,7 @@ will be rebooted when configuration is detached.
     </dt>
     <dd>{{% md %}}An array of database name, charset and collate. The database
 object structure is documented below.
-{{% /md %}}</dd>
-    <dt class="property-optional"
+{{% /md %}}</dd><dt class="property-optional"
             title="Optional">
         <span id="flavorid_csharp">
 <a href="#flavorid_csharp" style="color: inherit; text-decoration: inherit;">Flavor<wbr>Id</a>
@@ -246,8 +211,7 @@ object structure is documented below.
     </dt>
     <dd>{{% md %}}The flavor ID of the desired flavor for the instance.
 Changing this creates new instance.
-{{% /md %}}</dd>
-    <dt class="property-optional"
+{{% /md %}}</dd><dt class="property-optional"
             title="Optional">
         <span id="name_csharp">
 <a href="#name_csharp" style="color: inherit; text-decoration: inherit;">Name</a>
@@ -257,8 +221,7 @@ Changing this creates new instance.
     </dt>
     <dd>{{% md %}}Database to be created on new instance. Changing this creates a
 new instance.
-{{% /md %}}</dd>
-    <dt class="property-optional"
+{{% /md %}}</dd><dt class="property-optional"
             title="Optional">
         <span id="networks_csharp">
 <a href="#networks_csharp" style="color: inherit; text-decoration: inherit;">Networks</a>
@@ -269,8 +232,7 @@ new instance.
     <dd>{{% md %}}An array of one or more networks to attach to the
 instance. The network object structure is documented below. Changing this
 creates a new instance.
-{{% /md %}}</dd>
-    <dt class="property-optional"
+{{% /md %}}</dd><dt class="property-optional"
             title="Optional">
         <span id="region_csharp">
 <a href="#region_csharp" style="color: inherit; text-decoration: inherit;">Region</a>
@@ -280,8 +242,7 @@ creates a new instance.
     </dt>
     <dd>{{% md %}}The region in which to create the db instance. Changing this
 creates a new instance.
-{{% /md %}}</dd>
-    <dt class="property-optional"
+{{% /md %}}</dd><dt class="property-optional"
             title="Optional">
         <span id="users_csharp">
 <a href="#users_csharp" style="color: inherit; text-decoration: inherit;">Users</a>
@@ -291,14 +252,11 @@ creates a new instance.
     </dt>
     <dd>{{% md %}}An array of username, password, host and databases. The user
 object structure is documented below.
-{{% /md %}}</dd>
-</dl>
+{{% /md %}}</dd></dl>
 {{% /choosable %}}
 
 {{% choosable language go %}}
-<dl class="resources-properties">
-
-    <dt class="property-required"
+<dl class="resources-properties"><dt class="property-required"
             title="Required">
         <span id="datastore_go">
 <a href="#datastore_go" style="color: inherit; text-decoration: inherit;">Datastore</a>
@@ -308,8 +266,7 @@ object structure is documented below.
     </dt>
     <dd>{{% md %}}An array of database engine type and version. The datastore
 object structure is documented below. Changing this creates a new instance.
-{{% /md %}}</dd>
-    <dt class="property-required"
+{{% /md %}}</dd><dt class="property-required"
             title="Required">
         <span id="size_go">
 <a href="#size_go" style="color: inherit; text-decoration: inherit;">Size</a>
@@ -318,8 +275,7 @@ object structure is documented below. Changing this creates a new instance.
         <span class="property-type">int</span>
     </dt>
     <dd>{{% md %}}Specifies the volume size in GB. Changing this creates new instance.
-{{% /md %}}</dd>
-    <dt class="property-optional"
+{{% /md %}}</dd><dt class="property-optional"
             title="Optional">
         <span id="configurationid_go">
 <a href="#configurationid_go" style="color: inherit; text-decoration: inherit;">Configuration<wbr>Id</a>
@@ -329,8 +285,7 @@ object structure is documented below. Changing this creates a new instance.
     </dt>
     <dd>{{% md %}}Configuration ID to be attached to the instance. Database instance
 will be rebooted when configuration is detached.
-{{% /md %}}</dd>
-    <dt class="property-optional"
+{{% /md %}}</dd><dt class="property-optional"
             title="Optional">
         <span id="databases_go">
 <a href="#databases_go" style="color: inherit; text-decoration: inherit;">Databases</a>
@@ -340,8 +295,7 @@ will be rebooted when configuration is detached.
     </dt>
     <dd>{{% md %}}An array of database name, charset and collate. The database
 object structure is documented below.
-{{% /md %}}</dd>
-    <dt class="property-optional"
+{{% /md %}}</dd><dt class="property-optional"
             title="Optional">
         <span id="flavorid_go">
 <a href="#flavorid_go" style="color: inherit; text-decoration: inherit;">Flavor<wbr>Id</a>
@@ -351,8 +305,7 @@ object structure is documented below.
     </dt>
     <dd>{{% md %}}The flavor ID of the desired flavor for the instance.
 Changing this creates new instance.
-{{% /md %}}</dd>
-    <dt class="property-optional"
+{{% /md %}}</dd><dt class="property-optional"
             title="Optional">
         <span id="name_go">
 <a href="#name_go" style="color: inherit; text-decoration: inherit;">Name</a>
@@ -362,8 +315,7 @@ Changing this creates new instance.
     </dt>
     <dd>{{% md %}}Database to be created on new instance. Changing this creates a
 new instance.
-{{% /md %}}</dd>
-    <dt class="property-optional"
+{{% /md %}}</dd><dt class="property-optional"
             title="Optional">
         <span id="networks_go">
 <a href="#networks_go" style="color: inherit; text-decoration: inherit;">Networks</a>
@@ -374,8 +326,7 @@ new instance.
     <dd>{{% md %}}An array of one or more networks to attach to the
 instance. The network object structure is documented below. Changing this
 creates a new instance.
-{{% /md %}}</dd>
-    <dt class="property-optional"
+{{% /md %}}</dd><dt class="property-optional"
             title="Optional">
         <span id="region_go">
 <a href="#region_go" style="color: inherit; text-decoration: inherit;">Region</a>
@@ -385,8 +336,7 @@ creates a new instance.
     </dt>
     <dd>{{% md %}}The region in which to create the db instance. Changing this
 creates a new instance.
-{{% /md %}}</dd>
-    <dt class="property-optional"
+{{% /md %}}</dd><dt class="property-optional"
             title="Optional">
         <span id="users_go">
 <a href="#users_go" style="color: inherit; text-decoration: inherit;">Users</a>
@@ -396,14 +346,11 @@ creates a new instance.
     </dt>
     <dd>{{% md %}}An array of username, password, host and databases. The user
 object structure is documented below.
-{{% /md %}}</dd>
-</dl>
+{{% /md %}}</dd></dl>
 {{% /choosable %}}
 
 {{% choosable language nodejs %}}
-<dl class="resources-properties">
-
-    <dt class="property-required"
+<dl class="resources-properties"><dt class="property-required"
             title="Required">
         <span id="datastore_nodejs">
 <a href="#datastore_nodejs" style="color: inherit; text-decoration: inherit;">datastore</a>
@@ -413,8 +360,7 @@ object structure is documented below.
     </dt>
     <dd>{{% md %}}An array of database engine type and version. The datastore
 object structure is documented below. Changing this creates a new instance.
-{{% /md %}}</dd>
-    <dt class="property-required"
+{{% /md %}}</dd><dt class="property-required"
             title="Required">
         <span id="size_nodejs">
 <a href="#size_nodejs" style="color: inherit; text-decoration: inherit;">size</a>
@@ -423,8 +369,7 @@ object structure is documented below. Changing this creates a new instance.
         <span class="property-type">number</span>
     </dt>
     <dd>{{% md %}}Specifies the volume size in GB. Changing this creates new instance.
-{{% /md %}}</dd>
-    <dt class="property-optional"
+{{% /md %}}</dd><dt class="property-optional"
             title="Optional">
         <span id="configurationid_nodejs">
 <a href="#configurationid_nodejs" style="color: inherit; text-decoration: inherit;">configuration<wbr>Id</a>
@@ -434,8 +379,7 @@ object structure is documented below. Changing this creates a new instance.
     </dt>
     <dd>{{% md %}}Configuration ID to be attached to the instance. Database instance
 will be rebooted when configuration is detached.
-{{% /md %}}</dd>
-    <dt class="property-optional"
+{{% /md %}}</dd><dt class="property-optional"
             title="Optional">
         <span id="databases_nodejs">
 <a href="#databases_nodejs" style="color: inherit; text-decoration: inherit;">databases</a>
@@ -445,8 +389,7 @@ will be rebooted when configuration is detached.
     </dt>
     <dd>{{% md %}}An array of database name, charset and collate. The database
 object structure is documented below.
-{{% /md %}}</dd>
-    <dt class="property-optional"
+{{% /md %}}</dd><dt class="property-optional"
             title="Optional">
         <span id="flavorid_nodejs">
 <a href="#flavorid_nodejs" style="color: inherit; text-decoration: inherit;">flavor<wbr>Id</a>
@@ -456,8 +399,7 @@ object structure is documented below.
     </dt>
     <dd>{{% md %}}The flavor ID of the desired flavor for the instance.
 Changing this creates new instance.
-{{% /md %}}</dd>
-    <dt class="property-optional"
+{{% /md %}}</dd><dt class="property-optional"
             title="Optional">
         <span id="name_nodejs">
 <a href="#name_nodejs" style="color: inherit; text-decoration: inherit;">name</a>
@@ -467,8 +409,7 @@ Changing this creates new instance.
     </dt>
     <dd>{{% md %}}Database to be created on new instance. Changing this creates a
 new instance.
-{{% /md %}}</dd>
-    <dt class="property-optional"
+{{% /md %}}</dd><dt class="property-optional"
             title="Optional">
         <span id="networks_nodejs">
 <a href="#networks_nodejs" style="color: inherit; text-decoration: inherit;">networks</a>
@@ -479,8 +420,7 @@ new instance.
     <dd>{{% md %}}An array of one or more networks to attach to the
 instance. The network object structure is documented below. Changing this
 creates a new instance.
-{{% /md %}}</dd>
-    <dt class="property-optional"
+{{% /md %}}</dd><dt class="property-optional"
             title="Optional">
         <span id="region_nodejs">
 <a href="#region_nodejs" style="color: inherit; text-decoration: inherit;">region</a>
@@ -490,8 +430,7 @@ creates a new instance.
     </dt>
     <dd>{{% md %}}The region in which to create the db instance. Changing this
 creates a new instance.
-{{% /md %}}</dd>
-    <dt class="property-optional"
+{{% /md %}}</dd><dt class="property-optional"
             title="Optional">
         <span id="users_nodejs">
 <a href="#users_nodejs" style="color: inherit; text-decoration: inherit;">users</a>
@@ -501,14 +440,11 @@ creates a new instance.
     </dt>
     <dd>{{% md %}}An array of username, password, host and databases. The user
 object structure is documented below.
-{{% /md %}}</dd>
-</dl>
+{{% /md %}}</dd></dl>
 {{% /choosable %}}
 
 {{% choosable language python %}}
-<dl class="resources-properties">
-
-    <dt class="property-required"
+<dl class="resources-properties"><dt class="property-required"
             title="Required">
         <span id="datastore_python">
 <a href="#datastore_python" style="color: inherit; text-decoration: inherit;">datastore</a>
@@ -518,8 +454,7 @@ object structure is documented below.
     </dt>
     <dd>{{% md %}}An array of database engine type and version. The datastore
 object structure is documented below. Changing this creates a new instance.
-{{% /md %}}</dd>
-    <dt class="property-required"
+{{% /md %}}</dd><dt class="property-required"
             title="Required">
         <span id="size_python">
 <a href="#size_python" style="color: inherit; text-decoration: inherit;">size</a>
@@ -528,8 +463,7 @@ object structure is documented below. Changing this creates a new instance.
         <span class="property-type">int</span>
     </dt>
     <dd>{{% md %}}Specifies the volume size in GB. Changing this creates new instance.
-{{% /md %}}</dd>
-    <dt class="property-optional"
+{{% /md %}}</dd><dt class="property-optional"
             title="Optional">
         <span id="configuration_id_python">
 <a href="#configuration_id_python" style="color: inherit; text-decoration: inherit;">configuration_<wbr>id</a>
@@ -539,8 +473,7 @@ object structure is documented below. Changing this creates a new instance.
     </dt>
     <dd>{{% md %}}Configuration ID to be attached to the instance. Database instance
 will be rebooted when configuration is detached.
-{{% /md %}}</dd>
-    <dt class="property-optional"
+{{% /md %}}</dd><dt class="property-optional"
             title="Optional">
         <span id="databases_python">
 <a href="#databases_python" style="color: inherit; text-decoration: inherit;">databases</a>
@@ -550,8 +483,7 @@ will be rebooted when configuration is detached.
     </dt>
     <dd>{{% md %}}An array of database name, charset and collate. The database
 object structure is documented below.
-{{% /md %}}</dd>
-    <dt class="property-optional"
+{{% /md %}}</dd><dt class="property-optional"
             title="Optional">
         <span id="flavor_id_python">
 <a href="#flavor_id_python" style="color: inherit; text-decoration: inherit;">flavor_<wbr>id</a>
@@ -561,8 +493,7 @@ object structure is documented below.
     </dt>
     <dd>{{% md %}}The flavor ID of the desired flavor for the instance.
 Changing this creates new instance.
-{{% /md %}}</dd>
-    <dt class="property-optional"
+{{% /md %}}</dd><dt class="property-optional"
             title="Optional">
         <span id="name_python">
 <a href="#name_python" style="color: inherit; text-decoration: inherit;">name</a>
@@ -572,8 +503,7 @@ Changing this creates new instance.
     </dt>
     <dd>{{% md %}}Database to be created on new instance. Changing this creates a
 new instance.
-{{% /md %}}</dd>
-    <dt class="property-optional"
+{{% /md %}}</dd><dt class="property-optional"
             title="Optional">
         <span id="networks_python">
 <a href="#networks_python" style="color: inherit; text-decoration: inherit;">networks</a>
@@ -584,8 +514,7 @@ new instance.
     <dd>{{% md %}}An array of one or more networks to attach to the
 instance. The network object structure is documented below. Changing this
 creates a new instance.
-{{% /md %}}</dd>
-    <dt class="property-optional"
+{{% /md %}}</dd><dt class="property-optional"
             title="Optional">
         <span id="region_python">
 <a href="#region_python" style="color: inherit; text-decoration: inherit;">region</a>
@@ -595,8 +524,7 @@ creates a new instance.
     </dt>
     <dd>{{% md %}}The region in which to create the db instance. Changing this
 creates a new instance.
-{{% /md %}}</dd>
-    <dt class="property-optional"
+{{% /md %}}</dd><dt class="property-optional"
             title="Optional">
         <span id="users_python">
 <a href="#users_python" style="color: inherit; text-decoration: inherit;">users</a>
@@ -606,8 +534,7 @@ creates a new instance.
     </dt>
     <dd>{{% md %}}An array of username, password, host and databases. The user
 object structure is documented below.
-{{% /md %}}</dd>
-</dl>
+{{% /md %}}</dd></dl>
 {{% /choosable %}}
 
 
@@ -618,9 +545,7 @@ All [input](#inputs) properties are implicitly available as output properties. A
 
 
 {{% choosable language csharp %}}
-<dl class="resources-properties">
-
-    <dt class="property-"
+<dl class="resources-properties"><dt class="property-"
             title="">
         <span id="id_csharp">
 <a href="#id_csharp" style="color: inherit; text-decoration: inherit;">Id</a>
@@ -628,14 +553,11 @@ All [input](#inputs) properties are implicitly available as output properties. A
         <span class="property-indicator"></span>
         <span class="property-type">string</span>
     </dt>
-    <dd>{{% md %}}The provider-assigned unique ID for this managed resource.{{% /md %}}</dd>
-</dl>
+    <dd>{{% md %}}The provider-assigned unique ID for this managed resource.{{% /md %}}</dd></dl>
 {{% /choosable %}}
 
 {{% choosable language go %}}
-<dl class="resources-properties">
-
-    <dt class="property-"
+<dl class="resources-properties"><dt class="property-"
             title="">
         <span id="id_go">
 <a href="#id_go" style="color: inherit; text-decoration: inherit;">Id</a>
@@ -643,14 +565,11 @@ All [input](#inputs) properties are implicitly available as output properties. A
         <span class="property-indicator"></span>
         <span class="property-type">string</span>
     </dt>
-    <dd>{{% md %}}The provider-assigned unique ID for this managed resource.{{% /md %}}</dd>
-</dl>
+    <dd>{{% md %}}The provider-assigned unique ID for this managed resource.{{% /md %}}</dd></dl>
 {{% /choosable %}}
 
 {{% choosable language nodejs %}}
-<dl class="resources-properties">
-
-    <dt class="property-"
+<dl class="resources-properties"><dt class="property-"
             title="">
         <span id="id_nodejs">
 <a href="#id_nodejs" style="color: inherit; text-decoration: inherit;">id</a>
@@ -658,14 +577,11 @@ All [input](#inputs) properties are implicitly available as output properties. A
         <span class="property-indicator"></span>
         <span class="property-type">string</span>
     </dt>
-    <dd>{{% md %}}The provider-assigned unique ID for this managed resource.{{% /md %}}</dd>
-</dl>
+    <dd>{{% md %}}The provider-assigned unique ID for this managed resource.{{% /md %}}</dd></dl>
 {{% /choosable %}}
 
 {{% choosable language python %}}
-<dl class="resources-properties">
-
-    <dt class="property-"
+<dl class="resources-properties"><dt class="property-"
             title="">
         <span id="id_python">
 <a href="#id_python" style="color: inherit; text-decoration: inherit;">id</a>
@@ -673,8 +589,7 @@ All [input](#inputs) properties are implicitly available as output properties. A
         <span class="property-indicator"></span>
         <span class="property-type">str</span>
     </dt>
-    <dd>{{% md %}}The provider-assigned unique ID for this managed resource.{{% /md %}}</dd>
-</dl>
+    <dd>{{% md %}}The provider-assigned unique ID for this managed resource.{{% /md %}}</dd></dl>
 {{% /choosable %}}
 
 
@@ -801,9 +716,7 @@ The following state arguments are supported:
 
 
 {{% choosable language csharp %}}
-<dl class="resources-properties">
-
-    <dt class="property-optional"
+<dl class="resources-properties"><dt class="property-optional"
             title="Optional">
         <span id="state_configurationid_csharp">
 <a href="#state_configurationid_csharp" style="color: inherit; text-decoration: inherit;">Configuration<wbr>Id</a>
@@ -813,8 +726,7 @@ The following state arguments are supported:
     </dt>
     <dd>{{% md %}}Configuration ID to be attached to the instance. Database instance
 will be rebooted when configuration is detached.
-{{% /md %}}</dd>
-    <dt class="property-optional"
+{{% /md %}}</dd><dt class="property-optional"
             title="Optional">
         <span id="state_databases_csharp">
 <a href="#state_databases_csharp" style="color: inherit; text-decoration: inherit;">Databases</a>
@@ -824,8 +736,7 @@ will be rebooted when configuration is detached.
     </dt>
     <dd>{{% md %}}An array of database name, charset and collate. The database
 object structure is documented below.
-{{% /md %}}</dd>
-    <dt class="property-optional"
+{{% /md %}}</dd><dt class="property-optional"
             title="Optional">
         <span id="state_datastore_csharp">
 <a href="#state_datastore_csharp" style="color: inherit; text-decoration: inherit;">Datastore</a>
@@ -835,8 +746,7 @@ object structure is documented below.
     </dt>
     <dd>{{% md %}}An array of database engine type and version. The datastore
 object structure is documented below. Changing this creates a new instance.
-{{% /md %}}</dd>
-    <dt class="property-optional"
+{{% /md %}}</dd><dt class="property-optional"
             title="Optional">
         <span id="state_flavorid_csharp">
 <a href="#state_flavorid_csharp" style="color: inherit; text-decoration: inherit;">Flavor<wbr>Id</a>
@@ -846,8 +756,7 @@ object structure is documented below. Changing this creates a new instance.
     </dt>
     <dd>{{% md %}}The flavor ID of the desired flavor for the instance.
 Changing this creates new instance.
-{{% /md %}}</dd>
-    <dt class="property-optional"
+{{% /md %}}</dd><dt class="property-optional"
             title="Optional">
         <span id="state_name_csharp">
 <a href="#state_name_csharp" style="color: inherit; text-decoration: inherit;">Name</a>
@@ -857,8 +766,7 @@ Changing this creates new instance.
     </dt>
     <dd>{{% md %}}Database to be created on new instance. Changing this creates a
 new instance.
-{{% /md %}}</dd>
-    <dt class="property-optional"
+{{% /md %}}</dd><dt class="property-optional"
             title="Optional">
         <span id="state_networks_csharp">
 <a href="#state_networks_csharp" style="color: inherit; text-decoration: inherit;">Networks</a>
@@ -869,8 +777,7 @@ new instance.
     <dd>{{% md %}}An array of one or more networks to attach to the
 instance. The network object structure is documented below. Changing this
 creates a new instance.
-{{% /md %}}</dd>
-    <dt class="property-optional"
+{{% /md %}}</dd><dt class="property-optional"
             title="Optional">
         <span id="state_region_csharp">
 <a href="#state_region_csharp" style="color: inherit; text-decoration: inherit;">Region</a>
@@ -880,8 +787,7 @@ creates a new instance.
     </dt>
     <dd>{{% md %}}The region in which to create the db instance. Changing this
 creates a new instance.
-{{% /md %}}</dd>
-    <dt class="property-optional"
+{{% /md %}}</dd><dt class="property-optional"
             title="Optional">
         <span id="state_size_csharp">
 <a href="#state_size_csharp" style="color: inherit; text-decoration: inherit;">Size</a>
@@ -890,8 +796,7 @@ creates a new instance.
         <span class="property-type">int</span>
     </dt>
     <dd>{{% md %}}Specifies the volume size in GB. Changing this creates new instance.
-{{% /md %}}</dd>
-    <dt class="property-optional"
+{{% /md %}}</dd><dt class="property-optional"
             title="Optional">
         <span id="state_users_csharp">
 <a href="#state_users_csharp" style="color: inherit; text-decoration: inherit;">Users</a>
@@ -901,14 +806,11 @@ creates a new instance.
     </dt>
     <dd>{{% md %}}An array of username, password, host and databases. The user
 object structure is documented below.
-{{% /md %}}</dd>
-</dl>
+{{% /md %}}</dd></dl>
 {{% /choosable %}}
 
 {{% choosable language go %}}
-<dl class="resources-properties">
-
-    <dt class="property-optional"
+<dl class="resources-properties"><dt class="property-optional"
             title="Optional">
         <span id="state_configurationid_go">
 <a href="#state_configurationid_go" style="color: inherit; text-decoration: inherit;">Configuration<wbr>Id</a>
@@ -918,8 +820,7 @@ object structure is documented below.
     </dt>
     <dd>{{% md %}}Configuration ID to be attached to the instance. Database instance
 will be rebooted when configuration is detached.
-{{% /md %}}</dd>
-    <dt class="property-optional"
+{{% /md %}}</dd><dt class="property-optional"
             title="Optional">
         <span id="state_databases_go">
 <a href="#state_databases_go" style="color: inherit; text-decoration: inherit;">Databases</a>
@@ -929,8 +830,7 @@ will be rebooted when configuration is detached.
     </dt>
     <dd>{{% md %}}An array of database name, charset and collate. The database
 object structure is documented below.
-{{% /md %}}</dd>
-    <dt class="property-optional"
+{{% /md %}}</dd><dt class="property-optional"
             title="Optional">
         <span id="state_datastore_go">
 <a href="#state_datastore_go" style="color: inherit; text-decoration: inherit;">Datastore</a>
@@ -940,8 +840,7 @@ object structure is documented below.
     </dt>
     <dd>{{% md %}}An array of database engine type and version. The datastore
 object structure is documented below. Changing this creates a new instance.
-{{% /md %}}</dd>
-    <dt class="property-optional"
+{{% /md %}}</dd><dt class="property-optional"
             title="Optional">
         <span id="state_flavorid_go">
 <a href="#state_flavorid_go" style="color: inherit; text-decoration: inherit;">Flavor<wbr>Id</a>
@@ -951,8 +850,7 @@ object structure is documented below. Changing this creates a new instance.
     </dt>
     <dd>{{% md %}}The flavor ID of the desired flavor for the instance.
 Changing this creates new instance.
-{{% /md %}}</dd>
-    <dt class="property-optional"
+{{% /md %}}</dd><dt class="property-optional"
             title="Optional">
         <span id="state_name_go">
 <a href="#state_name_go" style="color: inherit; text-decoration: inherit;">Name</a>
@@ -962,8 +860,7 @@ Changing this creates new instance.
     </dt>
     <dd>{{% md %}}Database to be created on new instance. Changing this creates a
 new instance.
-{{% /md %}}</dd>
-    <dt class="property-optional"
+{{% /md %}}</dd><dt class="property-optional"
             title="Optional">
         <span id="state_networks_go">
 <a href="#state_networks_go" style="color: inherit; text-decoration: inherit;">Networks</a>
@@ -974,8 +871,7 @@ new instance.
     <dd>{{% md %}}An array of one or more networks to attach to the
 instance. The network object structure is documented below. Changing this
 creates a new instance.
-{{% /md %}}</dd>
-    <dt class="property-optional"
+{{% /md %}}</dd><dt class="property-optional"
             title="Optional">
         <span id="state_region_go">
 <a href="#state_region_go" style="color: inherit; text-decoration: inherit;">Region</a>
@@ -985,8 +881,7 @@ creates a new instance.
     </dt>
     <dd>{{% md %}}The region in which to create the db instance. Changing this
 creates a new instance.
-{{% /md %}}</dd>
-    <dt class="property-optional"
+{{% /md %}}</dd><dt class="property-optional"
             title="Optional">
         <span id="state_size_go">
 <a href="#state_size_go" style="color: inherit; text-decoration: inherit;">Size</a>
@@ -995,8 +890,7 @@ creates a new instance.
         <span class="property-type">int</span>
     </dt>
     <dd>{{% md %}}Specifies the volume size in GB. Changing this creates new instance.
-{{% /md %}}</dd>
-    <dt class="property-optional"
+{{% /md %}}</dd><dt class="property-optional"
             title="Optional">
         <span id="state_users_go">
 <a href="#state_users_go" style="color: inherit; text-decoration: inherit;">Users</a>
@@ -1006,14 +900,11 @@ creates a new instance.
     </dt>
     <dd>{{% md %}}An array of username, password, host and databases. The user
 object structure is documented below.
-{{% /md %}}</dd>
-</dl>
+{{% /md %}}</dd></dl>
 {{% /choosable %}}
 
 {{% choosable language nodejs %}}
-<dl class="resources-properties">
-
-    <dt class="property-optional"
+<dl class="resources-properties"><dt class="property-optional"
             title="Optional">
         <span id="state_configurationid_nodejs">
 <a href="#state_configurationid_nodejs" style="color: inherit; text-decoration: inherit;">configuration<wbr>Id</a>
@@ -1023,8 +914,7 @@ object structure is documented below.
     </dt>
     <dd>{{% md %}}Configuration ID to be attached to the instance. Database instance
 will be rebooted when configuration is detached.
-{{% /md %}}</dd>
-    <dt class="property-optional"
+{{% /md %}}</dd><dt class="property-optional"
             title="Optional">
         <span id="state_databases_nodejs">
 <a href="#state_databases_nodejs" style="color: inherit; text-decoration: inherit;">databases</a>
@@ -1034,8 +924,7 @@ will be rebooted when configuration is detached.
     </dt>
     <dd>{{% md %}}An array of database name, charset and collate. The database
 object structure is documented below.
-{{% /md %}}</dd>
-    <dt class="property-optional"
+{{% /md %}}</dd><dt class="property-optional"
             title="Optional">
         <span id="state_datastore_nodejs">
 <a href="#state_datastore_nodejs" style="color: inherit; text-decoration: inherit;">datastore</a>
@@ -1045,8 +934,7 @@ object structure is documented below.
     </dt>
     <dd>{{% md %}}An array of database engine type and version. The datastore
 object structure is documented below. Changing this creates a new instance.
-{{% /md %}}</dd>
-    <dt class="property-optional"
+{{% /md %}}</dd><dt class="property-optional"
             title="Optional">
         <span id="state_flavorid_nodejs">
 <a href="#state_flavorid_nodejs" style="color: inherit; text-decoration: inherit;">flavor<wbr>Id</a>
@@ -1056,8 +944,7 @@ object structure is documented below. Changing this creates a new instance.
     </dt>
     <dd>{{% md %}}The flavor ID of the desired flavor for the instance.
 Changing this creates new instance.
-{{% /md %}}</dd>
-    <dt class="property-optional"
+{{% /md %}}</dd><dt class="property-optional"
             title="Optional">
         <span id="state_name_nodejs">
 <a href="#state_name_nodejs" style="color: inherit; text-decoration: inherit;">name</a>
@@ -1067,8 +954,7 @@ Changing this creates new instance.
     </dt>
     <dd>{{% md %}}Database to be created on new instance. Changing this creates a
 new instance.
-{{% /md %}}</dd>
-    <dt class="property-optional"
+{{% /md %}}</dd><dt class="property-optional"
             title="Optional">
         <span id="state_networks_nodejs">
 <a href="#state_networks_nodejs" style="color: inherit; text-decoration: inherit;">networks</a>
@@ -1079,8 +965,7 @@ new instance.
     <dd>{{% md %}}An array of one or more networks to attach to the
 instance. The network object structure is documented below. Changing this
 creates a new instance.
-{{% /md %}}</dd>
-    <dt class="property-optional"
+{{% /md %}}</dd><dt class="property-optional"
             title="Optional">
         <span id="state_region_nodejs">
 <a href="#state_region_nodejs" style="color: inherit; text-decoration: inherit;">region</a>
@@ -1090,8 +975,7 @@ creates a new instance.
     </dt>
     <dd>{{% md %}}The region in which to create the db instance. Changing this
 creates a new instance.
-{{% /md %}}</dd>
-    <dt class="property-optional"
+{{% /md %}}</dd><dt class="property-optional"
             title="Optional">
         <span id="state_size_nodejs">
 <a href="#state_size_nodejs" style="color: inherit; text-decoration: inherit;">size</a>
@@ -1100,8 +984,7 @@ creates a new instance.
         <span class="property-type">number</span>
     </dt>
     <dd>{{% md %}}Specifies the volume size in GB. Changing this creates new instance.
-{{% /md %}}</dd>
-    <dt class="property-optional"
+{{% /md %}}</dd><dt class="property-optional"
             title="Optional">
         <span id="state_users_nodejs">
 <a href="#state_users_nodejs" style="color: inherit; text-decoration: inherit;">users</a>
@@ -1111,14 +994,11 @@ creates a new instance.
     </dt>
     <dd>{{% md %}}An array of username, password, host and databases. The user
 object structure is documented below.
-{{% /md %}}</dd>
-</dl>
+{{% /md %}}</dd></dl>
 {{% /choosable %}}
 
 {{% choosable language python %}}
-<dl class="resources-properties">
-
-    <dt class="property-optional"
+<dl class="resources-properties"><dt class="property-optional"
             title="Optional">
         <span id="state_configuration_id_python">
 <a href="#state_configuration_id_python" style="color: inherit; text-decoration: inherit;">configuration_<wbr>id</a>
@@ -1128,8 +1008,7 @@ object structure is documented below.
     </dt>
     <dd>{{% md %}}Configuration ID to be attached to the instance. Database instance
 will be rebooted when configuration is detached.
-{{% /md %}}</dd>
-    <dt class="property-optional"
+{{% /md %}}</dd><dt class="property-optional"
             title="Optional">
         <span id="state_databases_python">
 <a href="#state_databases_python" style="color: inherit; text-decoration: inherit;">databases</a>
@@ -1139,8 +1018,7 @@ will be rebooted when configuration is detached.
     </dt>
     <dd>{{% md %}}An array of database name, charset and collate. The database
 object structure is documented below.
-{{% /md %}}</dd>
-    <dt class="property-optional"
+{{% /md %}}</dd><dt class="property-optional"
             title="Optional">
         <span id="state_datastore_python">
 <a href="#state_datastore_python" style="color: inherit; text-decoration: inherit;">datastore</a>
@@ -1150,8 +1028,7 @@ object structure is documented below.
     </dt>
     <dd>{{% md %}}An array of database engine type and version. The datastore
 object structure is documented below. Changing this creates a new instance.
-{{% /md %}}</dd>
-    <dt class="property-optional"
+{{% /md %}}</dd><dt class="property-optional"
             title="Optional">
         <span id="state_flavor_id_python">
 <a href="#state_flavor_id_python" style="color: inherit; text-decoration: inherit;">flavor_<wbr>id</a>
@@ -1161,8 +1038,7 @@ object structure is documented below. Changing this creates a new instance.
     </dt>
     <dd>{{% md %}}The flavor ID of the desired flavor for the instance.
 Changing this creates new instance.
-{{% /md %}}</dd>
-    <dt class="property-optional"
+{{% /md %}}</dd><dt class="property-optional"
             title="Optional">
         <span id="state_name_python">
 <a href="#state_name_python" style="color: inherit; text-decoration: inherit;">name</a>
@@ -1172,8 +1048,7 @@ Changing this creates new instance.
     </dt>
     <dd>{{% md %}}Database to be created on new instance. Changing this creates a
 new instance.
-{{% /md %}}</dd>
-    <dt class="property-optional"
+{{% /md %}}</dd><dt class="property-optional"
             title="Optional">
         <span id="state_networks_python">
 <a href="#state_networks_python" style="color: inherit; text-decoration: inherit;">networks</a>
@@ -1184,8 +1059,7 @@ new instance.
     <dd>{{% md %}}An array of one or more networks to attach to the
 instance. The network object structure is documented below. Changing this
 creates a new instance.
-{{% /md %}}</dd>
-    <dt class="property-optional"
+{{% /md %}}</dd><dt class="property-optional"
             title="Optional">
         <span id="state_region_python">
 <a href="#state_region_python" style="color: inherit; text-decoration: inherit;">region</a>
@@ -1195,8 +1069,7 @@ creates a new instance.
     </dt>
     <dd>{{% md %}}The region in which to create the db instance. Changing this
 creates a new instance.
-{{% /md %}}</dd>
-    <dt class="property-optional"
+{{% /md %}}</dd><dt class="property-optional"
             title="Optional">
         <span id="state_size_python">
 <a href="#state_size_python" style="color: inherit; text-decoration: inherit;">size</a>
@@ -1205,8 +1078,7 @@ creates a new instance.
         <span class="property-type">int</span>
     </dt>
     <dd>{{% md %}}Specifies the volume size in GB. Changing this creates new instance.
-{{% /md %}}</dd>
-    <dt class="property-optional"
+{{% /md %}}</dd><dt class="property-optional"
             title="Optional">
         <span id="state_users_python">
 <a href="#state_users_python" style="color: inherit; text-decoration: inherit;">users</a>
@@ -1216,8 +1088,7 @@ creates a new instance.
     </dt>
     <dd>{{% md %}}An array of username, password, host and databases. The user
 object structure is documented below.
-{{% /md %}}</dd>
-</dl>
+{{% /md %}}</dd></dl>
 {{% /choosable %}}
 
 
@@ -1232,9 +1103,7 @@ object structure is documented below.
 <h4 id="instancedatabase">Instance<wbr>Database</h4>
 
 {{% choosable language csharp %}}
-<dl class="resources-properties">
-
-    <dt class="property-required"
+<dl class="resources-properties"><dt class="property-required"
             title="Required">
         <span id="name_csharp">
 <a href="#name_csharp" style="color: inherit; text-decoration: inherit;">Name</a>
@@ -1244,8 +1113,7 @@ object structure is documented below.
     </dt>
     <dd>{{% md %}}Database to be created on new instance. Changing this creates a
 new instance.
-{{% /md %}}</dd>
-    <dt class="property-optional"
+{{% /md %}}</dd><dt class="property-optional"
             title="Optional">
         <span id="charset_csharp">
 <a href="#charset_csharp" style="color: inherit; text-decoration: inherit;">Charset</a>
@@ -1255,8 +1123,7 @@ new instance.
     </dt>
     <dd>{{% md %}}Database character set. Changing this creates a
 new instance.
-{{% /md %}}</dd>
-    <dt class="property-optional"
+{{% /md %}}</dd><dt class="property-optional"
             title="Optional">
         <span id="collate_csharp">
 <a href="#collate_csharp" style="color: inherit; text-decoration: inherit;">Collate</a>
@@ -1265,14 +1132,11 @@ new instance.
         <span class="property-type">string</span>
     </dt>
     <dd>{{% md %}}Database collation. Changing this creates a new instance.
-{{% /md %}}</dd>
-</dl>
+{{% /md %}}</dd></dl>
 {{% /choosable %}}
 
 {{% choosable language go %}}
-<dl class="resources-properties">
-
-    <dt class="property-required"
+<dl class="resources-properties"><dt class="property-required"
             title="Required">
         <span id="name_go">
 <a href="#name_go" style="color: inherit; text-decoration: inherit;">Name</a>
@@ -1282,8 +1146,7 @@ new instance.
     </dt>
     <dd>{{% md %}}Database to be created on new instance. Changing this creates a
 new instance.
-{{% /md %}}</dd>
-    <dt class="property-optional"
+{{% /md %}}</dd><dt class="property-optional"
             title="Optional">
         <span id="charset_go">
 <a href="#charset_go" style="color: inherit; text-decoration: inherit;">Charset</a>
@@ -1293,8 +1156,7 @@ new instance.
     </dt>
     <dd>{{% md %}}Database character set. Changing this creates a
 new instance.
-{{% /md %}}</dd>
-    <dt class="property-optional"
+{{% /md %}}</dd><dt class="property-optional"
             title="Optional">
         <span id="collate_go">
 <a href="#collate_go" style="color: inherit; text-decoration: inherit;">Collate</a>
@@ -1303,14 +1165,11 @@ new instance.
         <span class="property-type">string</span>
     </dt>
     <dd>{{% md %}}Database collation. Changing this creates a new instance.
-{{% /md %}}</dd>
-</dl>
+{{% /md %}}</dd></dl>
 {{% /choosable %}}
 
 {{% choosable language nodejs %}}
-<dl class="resources-properties">
-
-    <dt class="property-required"
+<dl class="resources-properties"><dt class="property-required"
             title="Required">
         <span id="name_nodejs">
 <a href="#name_nodejs" style="color: inherit; text-decoration: inherit;">name</a>
@@ -1320,8 +1179,7 @@ new instance.
     </dt>
     <dd>{{% md %}}Database to be created on new instance. Changing this creates a
 new instance.
-{{% /md %}}</dd>
-    <dt class="property-optional"
+{{% /md %}}</dd><dt class="property-optional"
             title="Optional">
         <span id="charset_nodejs">
 <a href="#charset_nodejs" style="color: inherit; text-decoration: inherit;">charset</a>
@@ -1331,8 +1189,7 @@ new instance.
     </dt>
     <dd>{{% md %}}Database character set. Changing this creates a
 new instance.
-{{% /md %}}</dd>
-    <dt class="property-optional"
+{{% /md %}}</dd><dt class="property-optional"
             title="Optional">
         <span id="collate_nodejs">
 <a href="#collate_nodejs" style="color: inherit; text-decoration: inherit;">collate</a>
@@ -1341,14 +1198,11 @@ new instance.
         <span class="property-type">string</span>
     </dt>
     <dd>{{% md %}}Database collation. Changing this creates a new instance.
-{{% /md %}}</dd>
-</dl>
+{{% /md %}}</dd></dl>
 {{% /choosable %}}
 
 {{% choosable language python %}}
-<dl class="resources-properties">
-
-    <dt class="property-required"
+<dl class="resources-properties"><dt class="property-required"
             title="Required">
         <span id="name_python">
 <a href="#name_python" style="color: inherit; text-decoration: inherit;">name</a>
@@ -1358,8 +1212,7 @@ new instance.
     </dt>
     <dd>{{% md %}}Database to be created on new instance. Changing this creates a
 new instance.
-{{% /md %}}</dd>
-    <dt class="property-optional"
+{{% /md %}}</dd><dt class="property-optional"
             title="Optional">
         <span id="charset_python">
 <a href="#charset_python" style="color: inherit; text-decoration: inherit;">charset</a>
@@ -1369,8 +1222,7 @@ new instance.
     </dt>
     <dd>{{% md %}}Database character set. Changing this creates a
 new instance.
-{{% /md %}}</dd>
-    <dt class="property-optional"
+{{% /md %}}</dd><dt class="property-optional"
             title="Optional">
         <span id="collate_python">
 <a href="#collate_python" style="color: inherit; text-decoration: inherit;">collate</a>
@@ -1379,16 +1231,13 @@ new instance.
         <span class="property-type">str</span>
     </dt>
     <dd>{{% md %}}Database collation. Changing this creates a new instance.
-{{% /md %}}</dd>
-</dl>
+{{% /md %}}</dd></dl>
 {{% /choosable %}}
 
 <h4 id="instancedatastore">Instance<wbr>Datastore</h4>
 
 {{% choosable language csharp %}}
-<dl class="resources-properties">
-
-    <dt class="property-required"
+<dl class="resources-properties"><dt class="property-required"
             title="Required">
         <span id="type_csharp">
 <a href="#type_csharp" style="color: inherit; text-decoration: inherit;">Type</a>
@@ -1398,8 +1247,7 @@ new instance.
     </dt>
     <dd>{{% md %}}Database engine type to be used in new instance. Changing this
 creates a new instance.
-{{% /md %}}</dd>
-    <dt class="property-required"
+{{% /md %}}</dd><dt class="property-required"
             title="Required">
         <span id="version_csharp">
 <a href="#version_csharp" style="color: inherit; text-decoration: inherit;">Version</a>
@@ -1409,14 +1257,11 @@ creates a new instance.
     </dt>
     <dd>{{% md %}}Version of database engine type to be used in new instance.
 Changing this creates a new instance.
-{{% /md %}}</dd>
-</dl>
+{{% /md %}}</dd></dl>
 {{% /choosable %}}
 
 {{% choosable language go %}}
-<dl class="resources-properties">
-
-    <dt class="property-required"
+<dl class="resources-properties"><dt class="property-required"
             title="Required">
         <span id="type_go">
 <a href="#type_go" style="color: inherit; text-decoration: inherit;">Type</a>
@@ -1426,8 +1271,7 @@ Changing this creates a new instance.
     </dt>
     <dd>{{% md %}}Database engine type to be used in new instance. Changing this
 creates a new instance.
-{{% /md %}}</dd>
-    <dt class="property-required"
+{{% /md %}}</dd><dt class="property-required"
             title="Required">
         <span id="version_go">
 <a href="#version_go" style="color: inherit; text-decoration: inherit;">Version</a>
@@ -1437,14 +1281,11 @@ creates a new instance.
     </dt>
     <dd>{{% md %}}Version of database engine type to be used in new instance.
 Changing this creates a new instance.
-{{% /md %}}</dd>
-</dl>
+{{% /md %}}</dd></dl>
 {{% /choosable %}}
 
 {{% choosable language nodejs %}}
-<dl class="resources-properties">
-
-    <dt class="property-required"
+<dl class="resources-properties"><dt class="property-required"
             title="Required">
         <span id="type_nodejs">
 <a href="#type_nodejs" style="color: inherit; text-decoration: inherit;">type</a>
@@ -1454,8 +1295,7 @@ Changing this creates a new instance.
     </dt>
     <dd>{{% md %}}Database engine type to be used in new instance. Changing this
 creates a new instance.
-{{% /md %}}</dd>
-    <dt class="property-required"
+{{% /md %}}</dd><dt class="property-required"
             title="Required">
         <span id="version_nodejs">
 <a href="#version_nodejs" style="color: inherit; text-decoration: inherit;">version</a>
@@ -1465,14 +1305,11 @@ creates a new instance.
     </dt>
     <dd>{{% md %}}Version of database engine type to be used in new instance.
 Changing this creates a new instance.
-{{% /md %}}</dd>
-</dl>
+{{% /md %}}</dd></dl>
 {{% /choosable %}}
 
 {{% choosable language python %}}
-<dl class="resources-properties">
-
-    <dt class="property-required"
+<dl class="resources-properties"><dt class="property-required"
             title="Required">
         <span id="type_python">
 <a href="#type_python" style="color: inherit; text-decoration: inherit;">type</a>
@@ -1482,8 +1319,7 @@ Changing this creates a new instance.
     </dt>
     <dd>{{% md %}}Database engine type to be used in new instance. Changing this
 creates a new instance.
-{{% /md %}}</dd>
-    <dt class="property-required"
+{{% /md %}}</dd><dt class="property-required"
             title="Required">
         <span id="version_python">
 <a href="#version_python" style="color: inherit; text-decoration: inherit;">version</a>
@@ -1493,16 +1329,13 @@ creates a new instance.
     </dt>
     <dd>{{% md %}}Version of database engine type to be used in new instance.
 Changing this creates a new instance.
-{{% /md %}}</dd>
-</dl>
+{{% /md %}}</dd></dl>
 {{% /choosable %}}
 
 <h4 id="instancenetwork">Instance<wbr>Network</h4>
 
 {{% choosable language csharp %}}
-<dl class="resources-properties">
-
-    <dt class="property-optional"
+<dl class="resources-properties"><dt class="property-optional"
             title="Optional">
         <span id="fixedipv4_csharp">
 <a href="#fixedipv4_csharp" style="color: inherit; text-decoration: inherit;">Fixed<wbr>Ip<wbr>V4</a>
@@ -1512,8 +1345,7 @@ Changing this creates a new instance.
     </dt>
     <dd>{{% md %}}Specifies a fixed IPv4 address to be used on this
 network. Changing this creates a new instance.
-{{% /md %}}</dd>
-    <dt class="property-optional"
+{{% /md %}}</dd><dt class="property-optional"
             title="Optional">
         <span id="fixedipv6_csharp">
 <a href="#fixedipv6_csharp" style="color: inherit; text-decoration: inherit;">Fixed<wbr>Ip<wbr>V6</a>
@@ -1523,8 +1355,7 @@ network. Changing this creates a new instance.
     </dt>
     <dd>{{% md %}}Specifies a fixed IPv6 address to be used on this
 network. Changing this creates a new instance.
-{{% /md %}}</dd>
-    <dt class="property-optional"
+{{% /md %}}</dd><dt class="property-optional"
             title="Optional">
         <span id="port_csharp">
 <a href="#port_csharp" style="color: inherit; text-decoration: inherit;">Port</a>
@@ -1534,8 +1365,7 @@ network. Changing this creates a new instance.
     </dt>
     <dd>{{% md %}}The port UUID of a
 network to attach to the instance. Changing this creates a new instance.
-{{% /md %}}</dd>
-    <dt class="property-optional"
+{{% /md %}}</dd><dt class="property-optional"
             title="Optional">
         <span id="uuid_csharp">
 <a href="#uuid_csharp" style="color: inherit; text-decoration: inherit;">Uuid</a>
@@ -1545,14 +1375,11 @@ network to attach to the instance. Changing this creates a new instance.
     </dt>
     <dd>{{% md %}}The network UUID to
 attach to the instance. Changing this creates a new instance.
-{{% /md %}}</dd>
-</dl>
+{{% /md %}}</dd></dl>
 {{% /choosable %}}
 
 {{% choosable language go %}}
-<dl class="resources-properties">
-
-    <dt class="property-optional"
+<dl class="resources-properties"><dt class="property-optional"
             title="Optional">
         <span id="fixedipv4_go">
 <a href="#fixedipv4_go" style="color: inherit; text-decoration: inherit;">Fixed<wbr>Ip<wbr>V4</a>
@@ -1562,8 +1389,7 @@ attach to the instance. Changing this creates a new instance.
     </dt>
     <dd>{{% md %}}Specifies a fixed IPv4 address to be used on this
 network. Changing this creates a new instance.
-{{% /md %}}</dd>
-    <dt class="property-optional"
+{{% /md %}}</dd><dt class="property-optional"
             title="Optional">
         <span id="fixedipv6_go">
 <a href="#fixedipv6_go" style="color: inherit; text-decoration: inherit;">Fixed<wbr>Ip<wbr>V6</a>
@@ -1573,8 +1399,7 @@ network. Changing this creates a new instance.
     </dt>
     <dd>{{% md %}}Specifies a fixed IPv6 address to be used on this
 network. Changing this creates a new instance.
-{{% /md %}}</dd>
-    <dt class="property-optional"
+{{% /md %}}</dd><dt class="property-optional"
             title="Optional">
         <span id="port_go">
 <a href="#port_go" style="color: inherit; text-decoration: inherit;">Port</a>
@@ -1584,8 +1409,7 @@ network. Changing this creates a new instance.
     </dt>
     <dd>{{% md %}}The port UUID of a
 network to attach to the instance. Changing this creates a new instance.
-{{% /md %}}</dd>
-    <dt class="property-optional"
+{{% /md %}}</dd><dt class="property-optional"
             title="Optional">
         <span id="uuid_go">
 <a href="#uuid_go" style="color: inherit; text-decoration: inherit;">Uuid</a>
@@ -1595,14 +1419,11 @@ network to attach to the instance. Changing this creates a new instance.
     </dt>
     <dd>{{% md %}}The network UUID to
 attach to the instance. Changing this creates a new instance.
-{{% /md %}}</dd>
-</dl>
+{{% /md %}}</dd></dl>
 {{% /choosable %}}
 
 {{% choosable language nodejs %}}
-<dl class="resources-properties">
-
-    <dt class="property-optional"
+<dl class="resources-properties"><dt class="property-optional"
             title="Optional">
         <span id="fixedipv4_nodejs">
 <a href="#fixedipv4_nodejs" style="color: inherit; text-decoration: inherit;">fixed<wbr>Ip<wbr>V4</a>
@@ -1612,8 +1433,7 @@ attach to the instance. Changing this creates a new instance.
     </dt>
     <dd>{{% md %}}Specifies a fixed IPv4 address to be used on this
 network. Changing this creates a new instance.
-{{% /md %}}</dd>
-    <dt class="property-optional"
+{{% /md %}}</dd><dt class="property-optional"
             title="Optional">
         <span id="fixedipv6_nodejs">
 <a href="#fixedipv6_nodejs" style="color: inherit; text-decoration: inherit;">fixed<wbr>Ip<wbr>V6</a>
@@ -1623,8 +1443,7 @@ network. Changing this creates a new instance.
     </dt>
     <dd>{{% md %}}Specifies a fixed IPv6 address to be used on this
 network. Changing this creates a new instance.
-{{% /md %}}</dd>
-    <dt class="property-optional"
+{{% /md %}}</dd><dt class="property-optional"
             title="Optional">
         <span id="port_nodejs">
 <a href="#port_nodejs" style="color: inherit; text-decoration: inherit;">port</a>
@@ -1634,8 +1453,7 @@ network. Changing this creates a new instance.
     </dt>
     <dd>{{% md %}}The port UUID of a
 network to attach to the instance. Changing this creates a new instance.
-{{% /md %}}</dd>
-    <dt class="property-optional"
+{{% /md %}}</dd><dt class="property-optional"
             title="Optional">
         <span id="uuid_nodejs">
 <a href="#uuid_nodejs" style="color: inherit; text-decoration: inherit;">uuid</a>
@@ -1645,14 +1463,11 @@ network to attach to the instance. Changing this creates a new instance.
     </dt>
     <dd>{{% md %}}The network UUID to
 attach to the instance. Changing this creates a new instance.
-{{% /md %}}</dd>
-</dl>
+{{% /md %}}</dd></dl>
 {{% /choosable %}}
 
 {{% choosable language python %}}
-<dl class="resources-properties">
-
-    <dt class="property-optional"
+<dl class="resources-properties"><dt class="property-optional"
             title="Optional">
         <span id="fixed_ip_v4_python">
 <a href="#fixed_ip_v4_python" style="color: inherit; text-decoration: inherit;">fixed_<wbr>ip_<wbr>v4</a>
@@ -1662,8 +1477,7 @@ attach to the instance. Changing this creates a new instance.
     </dt>
     <dd>{{% md %}}Specifies a fixed IPv4 address to be used on this
 network. Changing this creates a new instance.
-{{% /md %}}</dd>
-    <dt class="property-optional"
+{{% /md %}}</dd><dt class="property-optional"
             title="Optional">
         <span id="fixed_ip_v6_python">
 <a href="#fixed_ip_v6_python" style="color: inherit; text-decoration: inherit;">fixed_<wbr>ip_<wbr>v6</a>
@@ -1673,8 +1487,7 @@ network. Changing this creates a new instance.
     </dt>
     <dd>{{% md %}}Specifies a fixed IPv6 address to be used on this
 network. Changing this creates a new instance.
-{{% /md %}}</dd>
-    <dt class="property-optional"
+{{% /md %}}</dd><dt class="property-optional"
             title="Optional">
         <span id="port_python">
 <a href="#port_python" style="color: inherit; text-decoration: inherit;">port</a>
@@ -1684,8 +1497,7 @@ network. Changing this creates a new instance.
     </dt>
     <dd>{{% md %}}The port UUID of a
 network to attach to the instance. Changing this creates a new instance.
-{{% /md %}}</dd>
-    <dt class="property-optional"
+{{% /md %}}</dd><dt class="property-optional"
             title="Optional">
         <span id="uuid_python">
 <a href="#uuid_python" style="color: inherit; text-decoration: inherit;">uuid</a>
@@ -1695,16 +1507,13 @@ network to attach to the instance. Changing this creates a new instance.
     </dt>
     <dd>{{% md %}}The network UUID to
 attach to the instance. Changing this creates a new instance.
-{{% /md %}}</dd>
-</dl>
+{{% /md %}}</dd></dl>
 {{% /choosable %}}
 
 <h4 id="instanceuser">Instance<wbr>User</h4>
 
 {{% choosable language csharp %}}
-<dl class="resources-properties">
-
-    <dt class="property-required"
+<dl class="resources-properties"><dt class="property-required"
             title="Required">
         <span id="name_csharp">
 <a href="#name_csharp" style="color: inherit; text-decoration: inherit;">Name</a>
@@ -1714,8 +1523,7 @@ attach to the instance. Changing this creates a new instance.
     </dt>
     <dd>{{% md %}}Database to be created on new instance. Changing this creates a
 new instance.
-{{% /md %}}</dd>
-    <dt class="property-optional"
+{{% /md %}}</dd><dt class="property-optional"
             title="Optional">
         <span id="databases_csharp">
 <a href="#databases_csharp" style="color: inherit; text-decoration: inherit;">Databases</a>
@@ -1725,8 +1533,7 @@ new instance.
     </dt>
     <dd>{{% md %}}A list of databases that user will have access to. If not specified, 
 user has access to all databases on th einstance. Changing this creates a new instance.
-{{% /md %}}</dd>
-    <dt class="property-optional"
+{{% /md %}}</dd><dt class="property-optional"
             title="Optional">
         <span id="host_csharp">
 <a href="#host_csharp" style="color: inherit; text-decoration: inherit;">Host</a>
@@ -1736,8 +1543,7 @@ user has access to all databases on th einstance. Changing this creates a new in
     </dt>
     <dd>{{% md %}}An ip address or % sign indicating what ip addresses can connect with
 this user credentials. Changing this creates a new instance.
-{{% /md %}}</dd>
-    <dt class="property-optional"
+{{% /md %}}</dd><dt class="property-optional"
             title="Optional">
         <span id="password_csharp">
 <a href="#password_csharp" style="color: inherit; text-decoration: inherit;">Password</a>
@@ -1747,14 +1553,11 @@ this user credentials. Changing this creates a new instance.
     </dt>
     <dd>{{% md %}}User's password. Changing this creates a
 new instance.
-{{% /md %}}</dd>
-</dl>
+{{% /md %}}</dd></dl>
 {{% /choosable %}}
 
 {{% choosable language go %}}
-<dl class="resources-properties">
-
-    <dt class="property-required"
+<dl class="resources-properties"><dt class="property-required"
             title="Required">
         <span id="name_go">
 <a href="#name_go" style="color: inherit; text-decoration: inherit;">Name</a>
@@ -1764,8 +1567,7 @@ new instance.
     </dt>
     <dd>{{% md %}}Database to be created on new instance. Changing this creates a
 new instance.
-{{% /md %}}</dd>
-    <dt class="property-optional"
+{{% /md %}}</dd><dt class="property-optional"
             title="Optional">
         <span id="databases_go">
 <a href="#databases_go" style="color: inherit; text-decoration: inherit;">Databases</a>
@@ -1775,8 +1577,7 @@ new instance.
     </dt>
     <dd>{{% md %}}A list of databases that user will have access to. If not specified, 
 user has access to all databases on th einstance. Changing this creates a new instance.
-{{% /md %}}</dd>
-    <dt class="property-optional"
+{{% /md %}}</dd><dt class="property-optional"
             title="Optional">
         <span id="host_go">
 <a href="#host_go" style="color: inherit; text-decoration: inherit;">Host</a>
@@ -1786,8 +1587,7 @@ user has access to all databases on th einstance. Changing this creates a new in
     </dt>
     <dd>{{% md %}}An ip address or % sign indicating what ip addresses can connect with
 this user credentials. Changing this creates a new instance.
-{{% /md %}}</dd>
-    <dt class="property-optional"
+{{% /md %}}</dd><dt class="property-optional"
             title="Optional">
         <span id="password_go">
 <a href="#password_go" style="color: inherit; text-decoration: inherit;">Password</a>
@@ -1797,14 +1597,11 @@ this user credentials. Changing this creates a new instance.
     </dt>
     <dd>{{% md %}}User's password. Changing this creates a
 new instance.
-{{% /md %}}</dd>
-</dl>
+{{% /md %}}</dd></dl>
 {{% /choosable %}}
 
 {{% choosable language nodejs %}}
-<dl class="resources-properties">
-
-    <dt class="property-required"
+<dl class="resources-properties"><dt class="property-required"
             title="Required">
         <span id="name_nodejs">
 <a href="#name_nodejs" style="color: inherit; text-decoration: inherit;">name</a>
@@ -1814,8 +1611,7 @@ new instance.
     </dt>
     <dd>{{% md %}}Database to be created on new instance. Changing this creates a
 new instance.
-{{% /md %}}</dd>
-    <dt class="property-optional"
+{{% /md %}}</dd><dt class="property-optional"
             title="Optional">
         <span id="databases_nodejs">
 <a href="#databases_nodejs" style="color: inherit; text-decoration: inherit;">databases</a>
@@ -1825,8 +1621,7 @@ new instance.
     </dt>
     <dd>{{% md %}}A list of databases that user will have access to. If not specified, 
 user has access to all databases on th einstance. Changing this creates a new instance.
-{{% /md %}}</dd>
-    <dt class="property-optional"
+{{% /md %}}</dd><dt class="property-optional"
             title="Optional">
         <span id="host_nodejs">
 <a href="#host_nodejs" style="color: inherit; text-decoration: inherit;">host</a>
@@ -1836,8 +1631,7 @@ user has access to all databases on th einstance. Changing this creates a new in
     </dt>
     <dd>{{% md %}}An ip address or % sign indicating what ip addresses can connect with
 this user credentials. Changing this creates a new instance.
-{{% /md %}}</dd>
-    <dt class="property-optional"
+{{% /md %}}</dd><dt class="property-optional"
             title="Optional">
         <span id="password_nodejs">
 <a href="#password_nodejs" style="color: inherit; text-decoration: inherit;">password</a>
@@ -1847,14 +1641,11 @@ this user credentials. Changing this creates a new instance.
     </dt>
     <dd>{{% md %}}User's password. Changing this creates a
 new instance.
-{{% /md %}}</dd>
-</dl>
+{{% /md %}}</dd></dl>
 {{% /choosable %}}
 
 {{% choosable language python %}}
-<dl class="resources-properties">
-
-    <dt class="property-required"
+<dl class="resources-properties"><dt class="property-required"
             title="Required">
         <span id="name_python">
 <a href="#name_python" style="color: inherit; text-decoration: inherit;">name</a>
@@ -1864,8 +1655,7 @@ new instance.
     </dt>
     <dd>{{% md %}}Database to be created on new instance. Changing this creates a
 new instance.
-{{% /md %}}</dd>
-    <dt class="property-optional"
+{{% /md %}}</dd><dt class="property-optional"
             title="Optional">
         <span id="databases_python">
 <a href="#databases_python" style="color: inherit; text-decoration: inherit;">databases</a>
@@ -1875,8 +1665,7 @@ new instance.
     </dt>
     <dd>{{% md %}}A list of databases that user will have access to. If not specified, 
 user has access to all databases on th einstance. Changing this creates a new instance.
-{{% /md %}}</dd>
-    <dt class="property-optional"
+{{% /md %}}</dd><dt class="property-optional"
             title="Optional">
         <span id="host_python">
 <a href="#host_python" style="color: inherit; text-decoration: inherit;">host</a>
@@ -1886,8 +1675,7 @@ user has access to all databases on th einstance. Changing this creates a new in
     </dt>
     <dd>{{% md %}}An ip address or % sign indicating what ip addresses can connect with
 this user credentials. Changing this creates a new instance.
-{{% /md %}}</dd>
-    <dt class="property-optional"
+{{% /md %}}</dd><dt class="property-optional"
             title="Optional">
         <span id="password_python">
 <a href="#password_python" style="color: inherit; text-decoration: inherit;">password</a>
@@ -1897,8 +1685,7 @@ this user credentials. Changing this creates a new instance.
     </dt>
     <dd>{{% md %}}User's password. Changing this creates a
 new instance.
-{{% /md %}}</dd>
-</dl>
+{{% /md %}}</dd></dl>
 {{% /choosable %}}
 
 
@@ -1909,6 +1696,6 @@ new instance.
 	<dt>License</dt>
 	<dd>Apache-2.0</dd>
 	<dt>Notes</dt>
-	<dd>This Pulumi package is based on the [`openstack` Terraform Provider](https://github.com/terraform-provider-openstack/terraform-provider-openstack).</dd>
+	<dd>{{% md %}}This Pulumi package is based on the [`openstack` Terraform Provider](https://github.com/terraform-provider-openstack/terraform-provider-openstack).{{% /md %}}</dd>
 </dl>
 

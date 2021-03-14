@@ -51,9 +51,7 @@ The following arguments are supported:
 
 
 {{% choosable language csharp %}}
-<dl class="resources-properties">
-
-    <dt class="property-required"
+<dl class="resources-properties"><dt class="property-required"
             title="Required">
         <span id="lockname_csharp">
 <a href="#lockname_csharp" style="color: inherit; text-decoration: inherit;">Lock<wbr>Name</a>
@@ -61,8 +59,7 @@ The following arguments are supported:
         <span class="property-indicator"></span>
         <span class="property-type">string</span>
     </dt>
-    <dd>{{% md %}}The name of lock.{{% /md %}}</dd>
-    <dt class="property-required"
+    <dd>{{% md %}}The name of lock.{{% /md %}}</dd><dt class="property-required"
             title="Required">
         <span id="parentresourcepath_csharp">
 <a href="#parentresourcepath_csharp" style="color: inherit; text-decoration: inherit;">Parent<wbr>Resource<wbr>Path</a>
@@ -70,8 +67,7 @@ The following arguments are supported:
         <span class="property-indicator"></span>
         <span class="property-type">string</span>
     </dt>
-    <dd>{{% md %}}An extra path parameter needed in some services, like SQL Databases.{{% /md %}}</dd>
-    <dt class="property-required"
+    <dd>{{% md %}}An extra path parameter needed in some services, like SQL Databases.{{% /md %}}</dd><dt class="property-required"
             title="Required">
         <span id="resourcegroupname_csharp">
 <a href="#resourcegroupname_csharp" style="color: inherit; text-decoration: inherit;">Resource<wbr>Group<wbr>Name</a>
@@ -79,8 +75,7 @@ The following arguments are supported:
         <span class="property-indicator"></span>
         <span class="property-type">string</span>
     </dt>
-    <dd>{{% md %}}The name of the resource group. {{% /md %}}</dd>
-    <dt class="property-required"
+    <dd>{{% md %}}The name of the resource group. {{% /md %}}</dd><dt class="property-required"
             title="Required">
         <span id="resourcename_csharp">
 <a href="#resourcename_csharp" style="color: inherit; text-decoration: inherit;">Resource<wbr>Name</a>
@@ -88,8 +83,7 @@ The following arguments are supported:
         <span class="property-indicator"></span>
         <span class="property-type">string</span>
     </dt>
-    <dd>{{% md %}}The name of the resource.{{% /md %}}</dd>
-    <dt class="property-required"
+    <dd>{{% md %}}The name of the resource.{{% /md %}}</dd><dt class="property-required"
             title="Required">
         <span id="resourceprovidernamespace_csharp">
 <a href="#resourceprovidernamespace_csharp" style="color: inherit; text-decoration: inherit;">Resource<wbr>Provider<wbr>Namespace</a>
@@ -97,8 +91,7 @@ The following arguments are supported:
         <span class="property-indicator"></span>
         <span class="property-type">string</span>
     </dt>
-    <dd>{{% md %}}The namespace of the resource provider.{{% /md %}}</dd>
-    <dt class="property-required"
+    <dd>{{% md %}}The namespace of the resource provider.{{% /md %}}</dd><dt class="property-required"
             title="Required">
         <span id="resourcetype_csharp">
 <a href="#resourcetype_csharp" style="color: inherit; text-decoration: inherit;">Resource<wbr>Type</a>
@@ -106,14 +99,11 @@ The following arguments are supported:
         <span class="property-indicator"></span>
         <span class="property-type">string</span>
     </dt>
-    <dd>{{% md %}}The type of the resource.{{% /md %}}</dd>
-</dl>
+    <dd>{{% md %}}The type of the resource.{{% /md %}}</dd></dl>
 {{% /choosable %}}
 
 {{% choosable language go %}}
-<dl class="resources-properties">
-
-    <dt class="property-required"
+<dl class="resources-properties"><dt class="property-required"
             title="Required">
         <span id="lockname_go">
 <a href="#lockname_go" style="color: inherit; text-decoration: inherit;">Lock<wbr>Name</a>
@@ -121,8 +111,7 @@ The following arguments are supported:
         <span class="property-indicator"></span>
         <span class="property-type">string</span>
     </dt>
-    <dd>{{% md %}}The name of lock.{{% /md %}}</dd>
-    <dt class="property-required"
+    <dd>{{% md %}}The name of lock.{{% /md %}}</dd><dt class="property-required"
             title="Required">
         <span id="parentresourcepath_go">
 <a href="#parentresourcepath_go" style="color: inherit; text-decoration: inherit;">Parent<wbr>Resource<wbr>Path</a>
@@ -130,8 +119,7 @@ The following arguments are supported:
         <span class="property-indicator"></span>
         <span class="property-type">string</span>
     </dt>
-    <dd>{{% md %}}An extra path parameter needed in some services, like SQL Databases.{{% /md %}}</dd>
-    <dt class="property-required"
+    <dd>{{% md %}}An extra path parameter needed in some services, like SQL Databases.{{% /md %}}</dd><dt class="property-required"
             title="Required">
         <span id="resourcegroupname_go">
 <a href="#resourcegroupname_go" style="color: inherit; text-decoration: inherit;">Resource<wbr>Group<wbr>Name</a>
@@ -139,8 +127,7 @@ The following arguments are supported:
         <span class="property-indicator"></span>
         <span class="property-type">string</span>
     </dt>
-    <dd>{{% md %}}The name of the resource group. {{% /md %}}</dd>
-    <dt class="property-required"
+    <dd>{{% md %}}The name of the resource group. {{% /md %}}</dd><dt class="property-required"
             title="Required">
         <span id="resourcename_go">
 <a href="#resourcename_go" style="color: inherit; text-decoration: inherit;">Resource<wbr>Name</a>
@@ -148,8 +135,7 @@ The following arguments are supported:
         <span class="property-indicator"></span>
         <span class="property-type">string</span>
     </dt>
-    <dd>{{% md %}}The name of the resource.{{% /md %}}</dd>
-    <dt class="property-required"
+    <dd>{{% md %}}The name of the resource.{{% /md %}}</dd><dt class="property-required"
             title="Required">
         <span id="resourceprovidernamespace_go">
 <a href="#resourceprovidernamespace_go" style="color: inherit; text-decoration: inherit;">Resource<wbr>Provider<wbr>Namespace</a>
@@ -157,8 +143,7 @@ The following arguments are supported:
         <span class="property-indicator"></span>
         <span class="property-type">string</span>
     </dt>
-    <dd>{{% md %}}The namespace of the resource provider.{{% /md %}}</dd>
-    <dt class="property-required"
+    <dd>{{% md %}}The namespace of the resource provider.{{% /md %}}</dd><dt class="property-required"
             title="Required">
         <span id="resourcetype_go">
 <a href="#resourcetype_go" style="color: inherit; text-decoration: inherit;">Resource<wbr>Type</a>
@@ -166,14 +151,11 @@ The following arguments are supported:
         <span class="property-indicator"></span>
         <span class="property-type">string</span>
     </dt>
-    <dd>{{% md %}}The type of the resource.{{% /md %}}</dd>
-</dl>
+    <dd>{{% md %}}The type of the resource.{{% /md %}}</dd></dl>
 {{% /choosable %}}
 
 {{% choosable language nodejs %}}
-<dl class="resources-properties">
-
-    <dt class="property-required"
+<dl class="resources-properties"><dt class="property-required"
             title="Required">
         <span id="lockname_nodejs">
 <a href="#lockname_nodejs" style="color: inherit; text-decoration: inherit;">lock<wbr>Name</a>
@@ -181,8 +163,7 @@ The following arguments are supported:
         <span class="property-indicator"></span>
         <span class="property-type">string</span>
     </dt>
-    <dd>{{% md %}}The name of lock.{{% /md %}}</dd>
-    <dt class="property-required"
+    <dd>{{% md %}}The name of lock.{{% /md %}}</dd><dt class="property-required"
             title="Required">
         <span id="parentresourcepath_nodejs">
 <a href="#parentresourcepath_nodejs" style="color: inherit; text-decoration: inherit;">parent<wbr>Resource<wbr>Path</a>
@@ -190,8 +171,7 @@ The following arguments are supported:
         <span class="property-indicator"></span>
         <span class="property-type">string</span>
     </dt>
-    <dd>{{% md %}}An extra path parameter needed in some services, like SQL Databases.{{% /md %}}</dd>
-    <dt class="property-required"
+    <dd>{{% md %}}An extra path parameter needed in some services, like SQL Databases.{{% /md %}}</dd><dt class="property-required"
             title="Required">
         <span id="resourcegroupname_nodejs">
 <a href="#resourcegroupname_nodejs" style="color: inherit; text-decoration: inherit;">resource<wbr>Group<wbr>Name</a>
@@ -199,8 +179,7 @@ The following arguments are supported:
         <span class="property-indicator"></span>
         <span class="property-type">string</span>
     </dt>
-    <dd>{{% md %}}The name of the resource group. {{% /md %}}</dd>
-    <dt class="property-required"
+    <dd>{{% md %}}The name of the resource group. {{% /md %}}</dd><dt class="property-required"
             title="Required">
         <span id="resourcename_nodejs">
 <a href="#resourcename_nodejs" style="color: inherit; text-decoration: inherit;">resource<wbr>Name</a>
@@ -208,8 +187,7 @@ The following arguments are supported:
         <span class="property-indicator"></span>
         <span class="property-type">string</span>
     </dt>
-    <dd>{{% md %}}The name of the resource.{{% /md %}}</dd>
-    <dt class="property-required"
+    <dd>{{% md %}}The name of the resource.{{% /md %}}</dd><dt class="property-required"
             title="Required">
         <span id="resourceprovidernamespace_nodejs">
 <a href="#resourceprovidernamespace_nodejs" style="color: inherit; text-decoration: inherit;">resource<wbr>Provider<wbr>Namespace</a>
@@ -217,8 +195,7 @@ The following arguments are supported:
         <span class="property-indicator"></span>
         <span class="property-type">string</span>
     </dt>
-    <dd>{{% md %}}The namespace of the resource provider.{{% /md %}}</dd>
-    <dt class="property-required"
+    <dd>{{% md %}}The namespace of the resource provider.{{% /md %}}</dd><dt class="property-required"
             title="Required">
         <span id="resourcetype_nodejs">
 <a href="#resourcetype_nodejs" style="color: inherit; text-decoration: inherit;">resource<wbr>Type</a>
@@ -226,14 +203,11 @@ The following arguments are supported:
         <span class="property-indicator"></span>
         <span class="property-type">string</span>
     </dt>
-    <dd>{{% md %}}The type of the resource.{{% /md %}}</dd>
-</dl>
+    <dd>{{% md %}}The type of the resource.{{% /md %}}</dd></dl>
 {{% /choosable %}}
 
 {{% choosable language python %}}
-<dl class="resources-properties">
-
-    <dt class="property-required"
+<dl class="resources-properties"><dt class="property-required"
             title="Required">
         <span id="lock_name_python">
 <a href="#lock_name_python" style="color: inherit; text-decoration: inherit;">lock_<wbr>name</a>
@@ -241,8 +215,7 @@ The following arguments are supported:
         <span class="property-indicator"></span>
         <span class="property-type">str</span>
     </dt>
-    <dd>{{% md %}}The name of lock.{{% /md %}}</dd>
-    <dt class="property-required"
+    <dd>{{% md %}}The name of lock.{{% /md %}}</dd><dt class="property-required"
             title="Required">
         <span id="parent_resource_path_python">
 <a href="#parent_resource_path_python" style="color: inherit; text-decoration: inherit;">parent_<wbr>resource_<wbr>path</a>
@@ -250,8 +223,7 @@ The following arguments are supported:
         <span class="property-indicator"></span>
         <span class="property-type">str</span>
     </dt>
-    <dd>{{% md %}}An extra path parameter needed in some services, like SQL Databases.{{% /md %}}</dd>
-    <dt class="property-required"
+    <dd>{{% md %}}An extra path parameter needed in some services, like SQL Databases.{{% /md %}}</dd><dt class="property-required"
             title="Required">
         <span id="resource_group_name_python">
 <a href="#resource_group_name_python" style="color: inherit; text-decoration: inherit;">resource_<wbr>group_<wbr>name</a>
@@ -259,8 +231,7 @@ The following arguments are supported:
         <span class="property-indicator"></span>
         <span class="property-type">str</span>
     </dt>
-    <dd>{{% md %}}The name of the resource group. {{% /md %}}</dd>
-    <dt class="property-required"
+    <dd>{{% md %}}The name of the resource group. {{% /md %}}</dd><dt class="property-required"
             title="Required">
         <span id="resource_name_python">
 <a href="#resource_name_python" style="color: inherit; text-decoration: inherit;">resource_<wbr>name</a>
@@ -268,8 +239,7 @@ The following arguments are supported:
         <span class="property-indicator"></span>
         <span class="property-type">str</span>
     </dt>
-    <dd>{{% md %}}The name of the resource.{{% /md %}}</dd>
-    <dt class="property-required"
+    <dd>{{% md %}}The name of the resource.{{% /md %}}</dd><dt class="property-required"
             title="Required">
         <span id="resource_provider_namespace_python">
 <a href="#resource_provider_namespace_python" style="color: inherit; text-decoration: inherit;">resource_<wbr>provider_<wbr>namespace</a>
@@ -277,8 +247,7 @@ The following arguments are supported:
         <span class="property-indicator"></span>
         <span class="property-type">str</span>
     </dt>
-    <dd>{{% md %}}The namespace of the resource provider.{{% /md %}}</dd>
-    <dt class="property-required"
+    <dd>{{% md %}}The namespace of the resource provider.{{% /md %}}</dd><dt class="property-required"
             title="Required">
         <span id="resource_type_python">
 <a href="#resource_type_python" style="color: inherit; text-decoration: inherit;">resource_<wbr>type</a>
@@ -286,8 +255,7 @@ The following arguments are supported:
         <span class="property-indicator"></span>
         <span class="property-type">str</span>
     </dt>
-    <dd>{{% md %}}The type of the resource.{{% /md %}}</dd>
-</dl>
+    <dd>{{% md %}}The type of the resource.{{% /md %}}</dd></dl>
 {{% /choosable %}}
 
 
@@ -300,9 +268,7 @@ The following output properties are available:
 
 
 {{% choosable language csharp %}}
-<dl class="resources-properties">
-
-    <dt class="property-"
+<dl class="resources-properties"><dt class="property-"
             title="">
         <span id="id_csharp">
 <a href="#id_csharp" style="color: inherit; text-decoration: inherit;">Id</a>
@@ -310,8 +276,7 @@ The following output properties are available:
         <span class="property-indicator"></span>
         <span class="property-type">string</span>
     </dt>
-    <dd>{{% md %}}The resource ID of the lock.{{% /md %}}</dd>
-    <dt class="property-"
+    <dd>{{% md %}}The resource ID of the lock.{{% /md %}}</dd><dt class="property-"
             title="">
         <span id="level_csharp">
 <a href="#level_csharp" style="color: inherit; text-decoration: inherit;">Level</a>
@@ -319,8 +284,7 @@ The following output properties are available:
         <span class="property-indicator"></span>
         <span class="property-type">string</span>
     </dt>
-    <dd>{{% md %}}The level of the lock. Possible values are: NotSpecified, CanNotDelete, ReadOnly. CanNotDelete means authorized users are able to read and modify the resources, but not delete. ReadOnly means authorized users can only read from a resource, but they can't modify or delete it.{{% /md %}}</dd>
-    <dt class="property-"
+    <dd>{{% md %}}The level of the lock. Possible values are: NotSpecified, CanNotDelete, ReadOnly. CanNotDelete means authorized users are able to read and modify the resources, but not delete. ReadOnly means authorized users can only read from a resource, but they can't modify or delete it.{{% /md %}}</dd><dt class="property-"
             title="">
         <span id="name_csharp">
 <a href="#name_csharp" style="color: inherit; text-decoration: inherit;">Name</a>
@@ -328,8 +292,7 @@ The following output properties are available:
         <span class="property-indicator"></span>
         <span class="property-type">string</span>
     </dt>
-    <dd>{{% md %}}The name of the lock.{{% /md %}}</dd>
-    <dt class="property-"
+    <dd>{{% md %}}The name of the lock.{{% /md %}}</dd><dt class="property-"
             title="">
         <span id="type_csharp">
 <a href="#type_csharp" style="color: inherit; text-decoration: inherit;">Type</a>
@@ -337,8 +300,7 @@ The following output properties are available:
         <span class="property-indicator"></span>
         <span class="property-type">string</span>
     </dt>
-    <dd>{{% md %}}The resource type of the lock - Microsoft.Authorization/locks.{{% /md %}}</dd>
-    <dt class="property-"
+    <dd>{{% md %}}The resource type of the lock - Microsoft.Authorization/locks.{{% /md %}}</dd><dt class="property-"
             title="">
         <span id="notes_csharp">
 <a href="#notes_csharp" style="color: inherit; text-decoration: inherit;">Notes</a>
@@ -346,8 +308,7 @@ The following output properties are available:
         <span class="property-indicator"></span>
         <span class="property-type">string</span>
     </dt>
-    <dd>{{% md %}}Notes about the lock. Maximum of 512 characters.{{% /md %}}</dd>
-    <dt class="property-"
+    <dd>{{% md %}}Notes about the lock. Maximum of 512 characters.{{% /md %}}</dd><dt class="property-"
             title="">
         <span id="owners_csharp">
 <a href="#owners_csharp" style="color: inherit; text-decoration: inherit;">Owners</a>
@@ -355,14 +316,11 @@ The following output properties are available:
         <span class="property-indicator"></span>
         <span class="property-type"><a href="#managementlockownerresponse">List&lt;Pulumi.<wbr>Azure<wbr>Native.<wbr>Authorization.<wbr>Outputs.<wbr>Management<wbr>Lock<wbr>Owner<wbr>Response&gt;</a></span>
     </dt>
-    <dd>{{% md %}}The owners of the lock.{{% /md %}}</dd>
-</dl>
+    <dd>{{% md %}}The owners of the lock.{{% /md %}}</dd></dl>
 {{% /choosable %}}
 
 {{% choosable language go %}}
-<dl class="resources-properties">
-
-    <dt class="property-"
+<dl class="resources-properties"><dt class="property-"
             title="">
         <span id="id_go">
 <a href="#id_go" style="color: inherit; text-decoration: inherit;">Id</a>
@@ -370,8 +328,7 @@ The following output properties are available:
         <span class="property-indicator"></span>
         <span class="property-type">string</span>
     </dt>
-    <dd>{{% md %}}The resource ID of the lock.{{% /md %}}</dd>
-    <dt class="property-"
+    <dd>{{% md %}}The resource ID of the lock.{{% /md %}}</dd><dt class="property-"
             title="">
         <span id="level_go">
 <a href="#level_go" style="color: inherit; text-decoration: inherit;">Level</a>
@@ -379,8 +336,7 @@ The following output properties are available:
         <span class="property-indicator"></span>
         <span class="property-type">string</span>
     </dt>
-    <dd>{{% md %}}The level of the lock. Possible values are: NotSpecified, CanNotDelete, ReadOnly. CanNotDelete means authorized users are able to read and modify the resources, but not delete. ReadOnly means authorized users can only read from a resource, but they can't modify or delete it.{{% /md %}}</dd>
-    <dt class="property-"
+    <dd>{{% md %}}The level of the lock. Possible values are: NotSpecified, CanNotDelete, ReadOnly. CanNotDelete means authorized users are able to read and modify the resources, but not delete. ReadOnly means authorized users can only read from a resource, but they can't modify or delete it.{{% /md %}}</dd><dt class="property-"
             title="">
         <span id="name_go">
 <a href="#name_go" style="color: inherit; text-decoration: inherit;">Name</a>
@@ -388,8 +344,7 @@ The following output properties are available:
         <span class="property-indicator"></span>
         <span class="property-type">string</span>
     </dt>
-    <dd>{{% md %}}The name of the lock.{{% /md %}}</dd>
-    <dt class="property-"
+    <dd>{{% md %}}The name of the lock.{{% /md %}}</dd><dt class="property-"
             title="">
         <span id="type_go">
 <a href="#type_go" style="color: inherit; text-decoration: inherit;">Type</a>
@@ -397,8 +352,7 @@ The following output properties are available:
         <span class="property-indicator"></span>
         <span class="property-type">string</span>
     </dt>
-    <dd>{{% md %}}The resource type of the lock - Microsoft.Authorization/locks.{{% /md %}}</dd>
-    <dt class="property-"
+    <dd>{{% md %}}The resource type of the lock - Microsoft.Authorization/locks.{{% /md %}}</dd><dt class="property-"
             title="">
         <span id="notes_go">
 <a href="#notes_go" style="color: inherit; text-decoration: inherit;">Notes</a>
@@ -406,8 +360,7 @@ The following output properties are available:
         <span class="property-indicator"></span>
         <span class="property-type">string</span>
     </dt>
-    <dd>{{% md %}}Notes about the lock. Maximum of 512 characters.{{% /md %}}</dd>
-    <dt class="property-"
+    <dd>{{% md %}}Notes about the lock. Maximum of 512 characters.{{% /md %}}</dd><dt class="property-"
             title="">
         <span id="owners_go">
 <a href="#owners_go" style="color: inherit; text-decoration: inherit;">Owners</a>
@@ -415,14 +368,11 @@ The following output properties are available:
         <span class="property-indicator"></span>
         <span class="property-type"><a href="#managementlockownerresponse">[]Management<wbr>Lock<wbr>Owner<wbr>Response</a></span>
     </dt>
-    <dd>{{% md %}}The owners of the lock.{{% /md %}}</dd>
-</dl>
+    <dd>{{% md %}}The owners of the lock.{{% /md %}}</dd></dl>
 {{% /choosable %}}
 
 {{% choosable language nodejs %}}
-<dl class="resources-properties">
-
-    <dt class="property-"
+<dl class="resources-properties"><dt class="property-"
             title="">
         <span id="id_nodejs">
 <a href="#id_nodejs" style="color: inherit; text-decoration: inherit;">id</a>
@@ -430,8 +380,7 @@ The following output properties are available:
         <span class="property-indicator"></span>
         <span class="property-type">string</span>
     </dt>
-    <dd>{{% md %}}The resource ID of the lock.{{% /md %}}</dd>
-    <dt class="property-"
+    <dd>{{% md %}}The resource ID of the lock.{{% /md %}}</dd><dt class="property-"
             title="">
         <span id="level_nodejs">
 <a href="#level_nodejs" style="color: inherit; text-decoration: inherit;">level</a>
@@ -439,8 +388,7 @@ The following output properties are available:
         <span class="property-indicator"></span>
         <span class="property-type">string</span>
     </dt>
-    <dd>{{% md %}}The level of the lock. Possible values are: NotSpecified, CanNotDelete, ReadOnly. CanNotDelete means authorized users are able to read and modify the resources, but not delete. ReadOnly means authorized users can only read from a resource, but they can't modify or delete it.{{% /md %}}</dd>
-    <dt class="property-"
+    <dd>{{% md %}}The level of the lock. Possible values are: NotSpecified, CanNotDelete, ReadOnly. CanNotDelete means authorized users are able to read and modify the resources, but not delete. ReadOnly means authorized users can only read from a resource, but they can't modify or delete it.{{% /md %}}</dd><dt class="property-"
             title="">
         <span id="name_nodejs">
 <a href="#name_nodejs" style="color: inherit; text-decoration: inherit;">name</a>
@@ -448,8 +396,7 @@ The following output properties are available:
         <span class="property-indicator"></span>
         <span class="property-type">string</span>
     </dt>
-    <dd>{{% md %}}The name of the lock.{{% /md %}}</dd>
-    <dt class="property-"
+    <dd>{{% md %}}The name of the lock.{{% /md %}}</dd><dt class="property-"
             title="">
         <span id="type_nodejs">
 <a href="#type_nodejs" style="color: inherit; text-decoration: inherit;">type</a>
@@ -457,8 +404,7 @@ The following output properties are available:
         <span class="property-indicator"></span>
         <span class="property-type">string</span>
     </dt>
-    <dd>{{% md %}}The resource type of the lock - Microsoft.Authorization/locks.{{% /md %}}</dd>
-    <dt class="property-"
+    <dd>{{% md %}}The resource type of the lock - Microsoft.Authorization/locks.{{% /md %}}</dd><dt class="property-"
             title="">
         <span id="notes_nodejs">
 <a href="#notes_nodejs" style="color: inherit; text-decoration: inherit;">notes</a>
@@ -466,8 +412,7 @@ The following output properties are available:
         <span class="property-indicator"></span>
         <span class="property-type">string</span>
     </dt>
-    <dd>{{% md %}}Notes about the lock. Maximum of 512 characters.{{% /md %}}</dd>
-    <dt class="property-"
+    <dd>{{% md %}}Notes about the lock. Maximum of 512 characters.{{% /md %}}</dd><dt class="property-"
             title="">
         <span id="owners_nodejs">
 <a href="#owners_nodejs" style="color: inherit; text-decoration: inherit;">owners</a>
@@ -475,14 +420,11 @@ The following output properties are available:
         <span class="property-indicator"></span>
         <span class="property-type"><a href="#managementlockownerresponse">Management<wbr>Lock<wbr>Owner<wbr>Response[]</a></span>
     </dt>
-    <dd>{{% md %}}The owners of the lock.{{% /md %}}</dd>
-</dl>
+    <dd>{{% md %}}The owners of the lock.{{% /md %}}</dd></dl>
 {{% /choosable %}}
 
 {{% choosable language python %}}
-<dl class="resources-properties">
-
-    <dt class="property-"
+<dl class="resources-properties"><dt class="property-"
             title="">
         <span id="id_python">
 <a href="#id_python" style="color: inherit; text-decoration: inherit;">id</a>
@@ -490,8 +432,7 @@ The following output properties are available:
         <span class="property-indicator"></span>
         <span class="property-type">str</span>
     </dt>
-    <dd>{{% md %}}The resource ID of the lock.{{% /md %}}</dd>
-    <dt class="property-"
+    <dd>{{% md %}}The resource ID of the lock.{{% /md %}}</dd><dt class="property-"
             title="">
         <span id="level_python">
 <a href="#level_python" style="color: inherit; text-decoration: inherit;">level</a>
@@ -499,8 +440,7 @@ The following output properties are available:
         <span class="property-indicator"></span>
         <span class="property-type">str</span>
     </dt>
-    <dd>{{% md %}}The level of the lock. Possible values are: NotSpecified, CanNotDelete, ReadOnly. CanNotDelete means authorized users are able to read and modify the resources, but not delete. ReadOnly means authorized users can only read from a resource, but they can't modify or delete it.{{% /md %}}</dd>
-    <dt class="property-"
+    <dd>{{% md %}}The level of the lock. Possible values are: NotSpecified, CanNotDelete, ReadOnly. CanNotDelete means authorized users are able to read and modify the resources, but not delete. ReadOnly means authorized users can only read from a resource, but they can't modify or delete it.{{% /md %}}</dd><dt class="property-"
             title="">
         <span id="name_python">
 <a href="#name_python" style="color: inherit; text-decoration: inherit;">name</a>
@@ -508,8 +448,7 @@ The following output properties are available:
         <span class="property-indicator"></span>
         <span class="property-type">str</span>
     </dt>
-    <dd>{{% md %}}The name of the lock.{{% /md %}}</dd>
-    <dt class="property-"
+    <dd>{{% md %}}The name of the lock.{{% /md %}}</dd><dt class="property-"
             title="">
         <span id="type_python">
 <a href="#type_python" style="color: inherit; text-decoration: inherit;">type</a>
@@ -517,8 +456,7 @@ The following output properties are available:
         <span class="property-indicator"></span>
         <span class="property-type">str</span>
     </dt>
-    <dd>{{% md %}}The resource type of the lock - Microsoft.Authorization/locks.{{% /md %}}</dd>
-    <dt class="property-"
+    <dd>{{% md %}}The resource type of the lock - Microsoft.Authorization/locks.{{% /md %}}</dd><dt class="property-"
             title="">
         <span id="notes_python">
 <a href="#notes_python" style="color: inherit; text-decoration: inherit;">notes</a>
@@ -526,8 +464,7 @@ The following output properties are available:
         <span class="property-indicator"></span>
         <span class="property-type">str</span>
     </dt>
-    <dd>{{% md %}}Notes about the lock. Maximum of 512 characters.{{% /md %}}</dd>
-    <dt class="property-"
+    <dd>{{% md %}}Notes about the lock. Maximum of 512 characters.{{% /md %}}</dd><dt class="property-"
             title="">
         <span id="owners_python">
 <a href="#owners_python" style="color: inherit; text-decoration: inherit;">owners</a>
@@ -535,8 +472,7 @@ The following output properties are available:
         <span class="property-indicator"></span>
         <span class="property-type"><a href="#managementlockownerresponse">Sequence[Management<wbr>Lock<wbr>Owner<wbr>Response]</a></span>
     </dt>
-    <dd>{{% md %}}The owners of the lock.{{% /md %}}</dd>
-</dl>
+    <dd>{{% md %}}The owners of the lock.{{% /md %}}</dd></dl>
 {{% /choosable %}}
 
 
@@ -550,9 +486,7 @@ The following output properties are available:
 
 
 {{% choosable language csharp %}}
-<dl class="resources-properties">
-
-    <dt class="property-optional"
+<dl class="resources-properties"><dt class="property-optional"
             title="Optional">
         <span id="applicationid_csharp">
 <a href="#applicationid_csharp" style="color: inherit; text-decoration: inherit;">Application<wbr>Id</a>
@@ -560,14 +494,11 @@ The following output properties are available:
         <span class="property-indicator"></span>
         <span class="property-type">string</span>
     </dt>
-    <dd>{{% md %}}The application ID of the lock owner.{{% /md %}}</dd>
-</dl>
+    <dd>{{% md %}}The application ID of the lock owner.{{% /md %}}</dd></dl>
 {{% /choosable %}}
 
 {{% choosable language go %}}
-<dl class="resources-properties">
-
-    <dt class="property-optional"
+<dl class="resources-properties"><dt class="property-optional"
             title="Optional">
         <span id="applicationid_go">
 <a href="#applicationid_go" style="color: inherit; text-decoration: inherit;">Application<wbr>Id</a>
@@ -575,14 +506,11 @@ The following output properties are available:
         <span class="property-indicator"></span>
         <span class="property-type">string</span>
     </dt>
-    <dd>{{% md %}}The application ID of the lock owner.{{% /md %}}</dd>
-</dl>
+    <dd>{{% md %}}The application ID of the lock owner.{{% /md %}}</dd></dl>
 {{% /choosable %}}
 
 {{% choosable language nodejs %}}
-<dl class="resources-properties">
-
-    <dt class="property-optional"
+<dl class="resources-properties"><dt class="property-optional"
             title="Optional">
         <span id="applicationid_nodejs">
 <a href="#applicationid_nodejs" style="color: inherit; text-decoration: inherit;">application<wbr>Id</a>
@@ -590,14 +518,11 @@ The following output properties are available:
         <span class="property-indicator"></span>
         <span class="property-type">string</span>
     </dt>
-    <dd>{{% md %}}The application ID of the lock owner.{{% /md %}}</dd>
-</dl>
+    <dd>{{% md %}}The application ID of the lock owner.{{% /md %}}</dd></dl>
 {{% /choosable %}}
 
 {{% choosable language python %}}
-<dl class="resources-properties">
-
-    <dt class="property-optional"
+<dl class="resources-properties"><dt class="property-optional"
             title="Optional">
         <span id="application_id_python">
 <a href="#application_id_python" style="color: inherit; text-decoration: inherit;">application_<wbr>id</a>
@@ -605,8 +530,7 @@ The following output properties are available:
         <span class="property-indicator"></span>
         <span class="property-type">str</span>
     </dt>
-    <dd>{{% md %}}The application ID of the lock owner.{{% /md %}}</dd>
-</dl>
+    <dd>{{% md %}}The application ID of the lock owner.{{% /md %}}</dd></dl>
 {{% /choosable %}}
 
 

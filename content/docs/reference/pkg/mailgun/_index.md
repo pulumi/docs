@@ -26,7 +26,7 @@ A Pulumi package for creating and managing Mailgun resources.
 	<dt>License</dt>
 	<dd>Apache-2.0</dd>
 	<dt>Notes</dt>
-	<dd>This Pulumi package is based on the [`mailgun` Terraform Provider](https://github.com/terraform-providers/terraform-provider-mailgun).</dd>
+	<dd>{{% md %}}This Pulumi package is based on the [`mailgun` Terraform Provider](https://github.com/terraform-providers/terraform-provider-mailgun).{{% /md %}}</dd>
 	<dt>Version</dt>
 	<dd>2.4.1</dd>
 </dl>

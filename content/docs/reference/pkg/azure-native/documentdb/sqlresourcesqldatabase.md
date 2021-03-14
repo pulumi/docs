@@ -14,11 +14,17 @@ An Azure Cosmos DB SQL database.
 API Version: 2021-01-15.
 
 {{% examples %}}
+
 ## Example Usage
 
 {{< chooser language "typescript,python,go,csharp" / >}}
+
+
 ### CosmosDBSqlDatabaseCreateUpdate
-{{% example csharp %}}
+
+
+{{< example csharp >}}
+
 ```csharp
 using Pulumi;
 using AzureNative = Pulumi.AzureNative;
@@ -46,9 +52,12 @@ class MyStack : Stack
 
 ```
 
-{{% /example %}}
 
-{{% example go %}}
+{{< /example >}}
+
+
+{{< example go >}}
+
 
 ```go
 package main
@@ -80,9 +89,12 @@ func main() {
 
 ```
 
-{{% /example %}}
 
-{{% example python %}}
+{{< /example >}}
+
+
+{{< example python >}}
+
 
 ```python
 import pulumi
@@ -101,9 +113,12 @@ sql_resource_sql_database = azure_native.documentdb.SqlResourceSqlDatabase("sqlR
 
 ```
 
-{{% /example %}}
 
-{{% example typescript %}}
+{{< /example >}}
+
+
+{{< example typescript >}}
+
 
 ```typescript
 import * as pulumi from "@pulumi/pulumi";
@@ -123,9 +138,16 @@ const sqlResourceSqlDatabase = new azure_native.documentdb.SqlResourceSqlDatabas
 
 ```
 
-{{% /example %}}
+
+{{< /example >}}
+
+
+
+
 
 {{% /examples %}}
+
+
 
 
 ## Create a SqlResourceSqlDatabase Resource {#create}
@@ -150,9 +172,7 @@ const sqlResourceSqlDatabase = new azure_native.documentdb.SqlResourceSqlDatabas
 
 {{% choosable language nodejs %}}
 
-<dl class="resources-properties">
-  
-    <dt
+<dl class="resources-properties"><dt
         class="property-required" title="Required">
         <span>name</span>
         <span class="property-indicator"></span>
@@ -160,9 +180,7 @@ const sqlResourceSqlDatabase = new azure_native.documentdb.SqlResourceSqlDatabas
     </dt>
     <dd>
       The unique name of the resource.
-    </dd>
-  
-    <dt
+    </dd><dt
         class="property-required" title="Required">
         <span>args</span>
         <span class="property-indicator"></span>
@@ -170,9 +188,7 @@ const sqlResourceSqlDatabase = new azure_native.documentdb.SqlResourceSqlDatabas
     </dt>
     <dd>
       The arguments to resource properties.
-    </dd>
-  
-    <dt
+    </dd><dt
         class="property-optional" title="Optional">
         <span>opts</span>
         <span class="property-indicator"></span>
@@ -180,10 +196,7 @@ const sqlResourceSqlDatabase = new azure_native.documentdb.SqlResourceSqlDatabas
     </dt>
     <dd>
       Bag of options to control resource&#39;s behavior.
-    </dd>
-  
-
-</dl>
+    </dd></dl>
 
 {{% /choosable %}}
 
@@ -209,9 +222,7 @@ const sqlResourceSqlDatabase = new azure_native.documentdb.SqlResourceSqlDatabas
 
 {{% choosable language go %}}
 
-<dl class="resources-properties">
-  
-    <dt
+<dl class="resources-properties"><dt
         class="property-optional" title="Optional">
         <span>ctx</span>
         <span class="property-indicator"></span>
@@ -219,9 +230,7 @@ const sqlResourceSqlDatabase = new azure_native.documentdb.SqlResourceSqlDatabas
     </dt>
     <dd>
       Context object for the current deployment.
-    </dd>
-  
-    <dt
+    </dd><dt
         class="property-required" title="Required">
         <span>name</span>
         <span class="property-indicator"></span>
@@ -229,9 +238,7 @@ const sqlResourceSqlDatabase = new azure_native.documentdb.SqlResourceSqlDatabas
     </dt>
     <dd>
       The unique name of the resource.
-    </dd>
-  
-    <dt
+    </dd><dt
         class="property-required" title="Required">
         <span>args</span>
         <span class="property-indicator"></span>
@@ -239,9 +246,7 @@ const sqlResourceSqlDatabase = new azure_native.documentdb.SqlResourceSqlDatabas
     </dt>
     <dd>
       The arguments to resource properties.
-    </dd>
-  
-    <dt
+    </dd><dt
         class="property-optional" title="Optional">
         <span>opts</span>
         <span class="property-indicator"></span>
@@ -249,18 +254,13 @@ const sqlResourceSqlDatabase = new azure_native.documentdb.SqlResourceSqlDatabas
     </dt>
     <dd>
       Bag of options to control resource&#39;s behavior.
-    </dd>
-  
-
-</dl>
+    </dd></dl>
 
 {{% /choosable %}}
 
 {{% choosable language csharp %}}
 
-<dl class="resources-properties">
-  
-    <dt
+<dl class="resources-properties"><dt
         class="property-required" title="Required">
         <span>name</span>
         <span class="property-indicator"></span>
@@ -268,9 +268,7 @@ const sqlResourceSqlDatabase = new azure_native.documentdb.SqlResourceSqlDatabas
     </dt>
     <dd>
       The unique name of the resource.
-    </dd>
-  
-    <dt
+    </dd><dt
         class="property-required" title="Required">
         <span>args</span>
         <span class="property-indicator"></span>
@@ -278,9 +276,7 @@ const sqlResourceSqlDatabase = new azure_native.documentdb.SqlResourceSqlDatabas
     </dt>
     <dd>
       The arguments to resource properties.
-    </dd>
-  
-    <dt
+    </dd><dt
         class="property-optional" title="Optional">
         <span>opts</span>
         <span class="property-indicator"></span>
@@ -288,10 +284,7 @@ const sqlResourceSqlDatabase = new azure_native.documentdb.SqlResourceSqlDatabas
     </dt>
     <dd>
       Bag of options to control resource&#39;s behavior.
-    </dd>
-  
-
-</dl>
+    </dd></dl>
 
 {{% /choosable %}}
 
@@ -306,9 +299,7 @@ The SqlResourceSqlDatabase resource accepts the following [input]({{< relref "/d
 
 
 {{% choosable language csharp %}}
-<dl class="resources-properties">
-
-    <dt class="property-required"
+<dl class="resources-properties"><dt class="property-required"
             title="Required">
         <span id="accountname_csharp">
 <a href="#accountname_csharp" style="color: inherit; text-decoration: inherit;">Account<wbr>Name</a>
@@ -316,8 +307,7 @@ The SqlResourceSqlDatabase resource accepts the following [input]({{< relref "/d
         <span class="property-indicator"></span>
         <span class="property-type">string</span>
     </dt>
-    <dd>{{% md %}}Cosmos DB database account name.{{% /md %}}</dd>
-    <dt class="property-required"
+    <dd>{{% md %}}Cosmos DB database account name.{{% /md %}}</dd><dt class="property-required"
             title="Required">
         <span id="resource_csharp">
 <a href="#resource_csharp" style="color: inherit; text-decoration: inherit;">Resource</a>
@@ -325,8 +315,7 @@ The SqlResourceSqlDatabase resource accepts the following [input]({{< relref "/d
         <span class="property-indicator"></span>
         <span class="property-type"><a href="#sqldatabaseresource">Pulumi.<wbr>Azure<wbr>Native.<wbr>Document<wbr>DB.<wbr>Inputs.<wbr>Sql<wbr>Database<wbr>Resource<wbr>Args</a></span>
     </dt>
-    <dd>{{% md %}}The standard JSON format of a SQL database{{% /md %}}</dd>
-    <dt class="property-required"
+    <dd>{{% md %}}The standard JSON format of a SQL database{{% /md %}}</dd><dt class="property-required"
             title="Required">
         <span id="resourcegroupname_csharp">
 <a href="#resourcegroupname_csharp" style="color: inherit; text-decoration: inherit;">Resource<wbr>Group<wbr>Name</a>
@@ -334,8 +323,7 @@ The SqlResourceSqlDatabase resource accepts the following [input]({{< relref "/d
         <span class="property-indicator"></span>
         <span class="property-type">string</span>
     </dt>
-    <dd>{{% md %}}The name of the resource group. The name is case insensitive.{{% /md %}}</dd>
-    <dt class="property-optional"
+    <dd>{{% md %}}The name of the resource group. The name is case insensitive.{{% /md %}}</dd><dt class="property-optional"
             title="Optional">
         <span id="databasename_csharp">
 <a href="#databasename_csharp" style="color: inherit; text-decoration: inherit;">Database<wbr>Name</a>
@@ -343,8 +331,7 @@ The SqlResourceSqlDatabase resource accepts the following [input]({{< relref "/d
         <span class="property-indicator"></span>
         <span class="property-type">string</span>
     </dt>
-    <dd>{{% md %}}Cosmos DB database name.{{% /md %}}</dd>
-    <dt class="property-optional"
+    <dd>{{% md %}}Cosmos DB database name.{{% /md %}}</dd><dt class="property-optional"
             title="Optional">
         <span id="location_csharp">
 <a href="#location_csharp" style="color: inherit; text-decoration: inherit;">Location</a>
@@ -352,8 +339,7 @@ The SqlResourceSqlDatabase resource accepts the following [input]({{< relref "/d
         <span class="property-indicator"></span>
         <span class="property-type">string</span>
     </dt>
-    <dd>{{% md %}}The location of the resource group to which the resource belongs.{{% /md %}}</dd>
-    <dt class="property-optional"
+    <dd>{{% md %}}The location of the resource group to which the resource belongs.{{% /md %}}</dd><dt class="property-optional"
             title="Optional">
         <span id="options_csharp">
 <a href="#options_csharp" style="color: inherit; text-decoration: inherit;">Options</a>
@@ -361,8 +347,7 @@ The SqlResourceSqlDatabase resource accepts the following [input]({{< relref "/d
         <span class="property-indicator"></span>
         <span class="property-type"><a href="#createupdateoptions">Pulumi.<wbr>Azure<wbr>Native.<wbr>Document<wbr>DB.<wbr>Inputs.<wbr>Create<wbr>Update<wbr>Options<wbr>Args</a></span>
     </dt>
-    <dd>{{% md %}}A key-value pair of options to be applied for the request. This corresponds to the headers sent with the request.{{% /md %}}</dd>
-    <dt class="property-optional"
+    <dd>{{% md %}}A key-value pair of options to be applied for the request. This corresponds to the headers sent with the request.{{% /md %}}</dd><dt class="property-optional"
             title="Optional">
         <span id="tags_csharp">
 <a href="#tags_csharp" style="color: inherit; text-decoration: inherit;">Tags</a>
@@ -370,14 +355,11 @@ The SqlResourceSqlDatabase resource accepts the following [input]({{< relref "/d
         <span class="property-indicator"></span>
         <span class="property-type">Dictionary&lt;string, string&gt;</span>
     </dt>
-    <dd>{{% md %}}Tags are a list of key-value pairs that describe the resource. These tags can be used in viewing and grouping this resource (across resource groups). A maximum of 15 tags can be provided for a resource. Each tag must have a key no greater than 128 characters and value no greater than 256 characters. For example, the default experience for a template type is set with "defaultExperience": "Cassandra". Current "defaultExperience" values also include "Table", "Graph", "DocumentDB", and "MongoDB".{{% /md %}}</dd>
-</dl>
+    <dd>{{% md %}}Tags are a list of key-value pairs that describe the resource. These tags can be used in viewing and grouping this resource (across resource groups). A maximum of 15 tags can be provided for a resource. Each tag must have a key no greater than 128 characters and value no greater than 256 characters. For example, the default experience for a template type is set with "defaultExperience": "Cassandra". Current "defaultExperience" values also include "Table", "Graph", "DocumentDB", and "MongoDB".{{% /md %}}</dd></dl>
 {{% /choosable %}}
 
 {{% choosable language go %}}
-<dl class="resources-properties">
-
-    <dt class="property-required"
+<dl class="resources-properties"><dt class="property-required"
             title="Required">
         <span id="accountname_go">
 <a href="#accountname_go" style="color: inherit; text-decoration: inherit;">Account<wbr>Name</a>
@@ -385,8 +367,7 @@ The SqlResourceSqlDatabase resource accepts the following [input]({{< relref "/d
         <span class="property-indicator"></span>
         <span class="property-type">string</span>
     </dt>
-    <dd>{{% md %}}Cosmos DB database account name.{{% /md %}}</dd>
-    <dt class="property-required"
+    <dd>{{% md %}}Cosmos DB database account name.{{% /md %}}</dd><dt class="property-required"
             title="Required">
         <span id="resource_go">
 <a href="#resource_go" style="color: inherit; text-decoration: inherit;">Resource</a>
@@ -394,8 +375,7 @@ The SqlResourceSqlDatabase resource accepts the following [input]({{< relref "/d
         <span class="property-indicator"></span>
         <span class="property-type"><a href="#sqldatabaseresource">Sql<wbr>Database<wbr>Resource</a></span>
     </dt>
-    <dd>{{% md %}}The standard JSON format of a SQL database{{% /md %}}</dd>
-    <dt class="property-required"
+    <dd>{{% md %}}The standard JSON format of a SQL database{{% /md %}}</dd><dt class="property-required"
             title="Required">
         <span id="resourcegroupname_go">
 <a href="#resourcegroupname_go" style="color: inherit; text-decoration: inherit;">Resource<wbr>Group<wbr>Name</a>
@@ -403,8 +383,7 @@ The SqlResourceSqlDatabase resource accepts the following [input]({{< relref "/d
         <span class="property-indicator"></span>
         <span class="property-type">string</span>
     </dt>
-    <dd>{{% md %}}The name of the resource group. The name is case insensitive.{{% /md %}}</dd>
-    <dt class="property-optional"
+    <dd>{{% md %}}The name of the resource group. The name is case insensitive.{{% /md %}}</dd><dt class="property-optional"
             title="Optional">
         <span id="databasename_go">
 <a href="#databasename_go" style="color: inherit; text-decoration: inherit;">Database<wbr>Name</a>
@@ -412,8 +391,7 @@ The SqlResourceSqlDatabase resource accepts the following [input]({{< relref "/d
         <span class="property-indicator"></span>
         <span class="property-type">string</span>
     </dt>
-    <dd>{{% md %}}Cosmos DB database name.{{% /md %}}</dd>
-    <dt class="property-optional"
+    <dd>{{% md %}}Cosmos DB database name.{{% /md %}}</dd><dt class="property-optional"
             title="Optional">
         <span id="location_go">
 <a href="#location_go" style="color: inherit; text-decoration: inherit;">Location</a>
@@ -421,8 +399,7 @@ The SqlResourceSqlDatabase resource accepts the following [input]({{< relref "/d
         <span class="property-indicator"></span>
         <span class="property-type">string</span>
     </dt>
-    <dd>{{% md %}}The location of the resource group to which the resource belongs.{{% /md %}}</dd>
-    <dt class="property-optional"
+    <dd>{{% md %}}The location of the resource group to which the resource belongs.{{% /md %}}</dd><dt class="property-optional"
             title="Optional">
         <span id="options_go">
 <a href="#options_go" style="color: inherit; text-decoration: inherit;">Options</a>
@@ -430,8 +407,7 @@ The SqlResourceSqlDatabase resource accepts the following [input]({{< relref "/d
         <span class="property-indicator"></span>
         <span class="property-type"><a href="#createupdateoptions">Create<wbr>Update<wbr>Options</a></span>
     </dt>
-    <dd>{{% md %}}A key-value pair of options to be applied for the request. This corresponds to the headers sent with the request.{{% /md %}}</dd>
-    <dt class="property-optional"
+    <dd>{{% md %}}A key-value pair of options to be applied for the request. This corresponds to the headers sent with the request.{{% /md %}}</dd><dt class="property-optional"
             title="Optional">
         <span id="tags_go">
 <a href="#tags_go" style="color: inherit; text-decoration: inherit;">Tags</a>
@@ -439,14 +415,11 @@ The SqlResourceSqlDatabase resource accepts the following [input]({{< relref "/d
         <span class="property-indicator"></span>
         <span class="property-type">map[string]string</span>
     </dt>
-    <dd>{{% md %}}Tags are a list of key-value pairs that describe the resource. These tags can be used in viewing and grouping this resource (across resource groups). A maximum of 15 tags can be provided for a resource. Each tag must have a key no greater than 128 characters and value no greater than 256 characters. For example, the default experience for a template type is set with "defaultExperience": "Cassandra". Current "defaultExperience" values also include "Table", "Graph", "DocumentDB", and "MongoDB".{{% /md %}}</dd>
-</dl>
+    <dd>{{% md %}}Tags are a list of key-value pairs that describe the resource. These tags can be used in viewing and grouping this resource (across resource groups). A maximum of 15 tags can be provided for a resource. Each tag must have a key no greater than 128 characters and value no greater than 256 characters. For example, the default experience for a template type is set with "defaultExperience": "Cassandra". Current "defaultExperience" values also include "Table", "Graph", "DocumentDB", and "MongoDB".{{% /md %}}</dd></dl>
 {{% /choosable %}}
 
 {{% choosable language nodejs %}}
-<dl class="resources-properties">
-
-    <dt class="property-required"
+<dl class="resources-properties"><dt class="property-required"
             title="Required">
         <span id="accountname_nodejs">
 <a href="#accountname_nodejs" style="color: inherit; text-decoration: inherit;">account<wbr>Name</a>
@@ -454,8 +427,7 @@ The SqlResourceSqlDatabase resource accepts the following [input]({{< relref "/d
         <span class="property-indicator"></span>
         <span class="property-type">string</span>
     </dt>
-    <dd>{{% md %}}Cosmos DB database account name.{{% /md %}}</dd>
-    <dt class="property-required"
+    <dd>{{% md %}}Cosmos DB database account name.{{% /md %}}</dd><dt class="property-required"
             title="Required">
         <span id="resource_nodejs">
 <a href="#resource_nodejs" style="color: inherit; text-decoration: inherit;">resource</a>
@@ -463,8 +435,7 @@ The SqlResourceSqlDatabase resource accepts the following [input]({{< relref "/d
         <span class="property-indicator"></span>
         <span class="property-type"><a href="#sqldatabaseresource">Sql<wbr>Database<wbr>Resource</a></span>
     </dt>
-    <dd>{{% md %}}The standard JSON format of a SQL database{{% /md %}}</dd>
-    <dt class="property-required"
+    <dd>{{% md %}}The standard JSON format of a SQL database{{% /md %}}</dd><dt class="property-required"
             title="Required">
         <span id="resourcegroupname_nodejs">
 <a href="#resourcegroupname_nodejs" style="color: inherit; text-decoration: inherit;">resource<wbr>Group<wbr>Name</a>
@@ -472,8 +443,7 @@ The SqlResourceSqlDatabase resource accepts the following [input]({{< relref "/d
         <span class="property-indicator"></span>
         <span class="property-type">string</span>
     </dt>
-    <dd>{{% md %}}The name of the resource group. The name is case insensitive.{{% /md %}}</dd>
-    <dt class="property-optional"
+    <dd>{{% md %}}The name of the resource group. The name is case insensitive.{{% /md %}}</dd><dt class="property-optional"
             title="Optional">
         <span id="databasename_nodejs">
 <a href="#databasename_nodejs" style="color: inherit; text-decoration: inherit;">database<wbr>Name</a>
@@ -481,8 +451,7 @@ The SqlResourceSqlDatabase resource accepts the following [input]({{< relref "/d
         <span class="property-indicator"></span>
         <span class="property-type">string</span>
     </dt>
-    <dd>{{% md %}}Cosmos DB database name.{{% /md %}}</dd>
-    <dt class="property-optional"
+    <dd>{{% md %}}Cosmos DB database name.{{% /md %}}</dd><dt class="property-optional"
             title="Optional">
         <span id="location_nodejs">
 <a href="#location_nodejs" style="color: inherit; text-decoration: inherit;">location</a>
@@ -490,8 +459,7 @@ The SqlResourceSqlDatabase resource accepts the following [input]({{< relref "/d
         <span class="property-indicator"></span>
         <span class="property-type">string</span>
     </dt>
-    <dd>{{% md %}}The location of the resource group to which the resource belongs.{{% /md %}}</dd>
-    <dt class="property-optional"
+    <dd>{{% md %}}The location of the resource group to which the resource belongs.{{% /md %}}</dd><dt class="property-optional"
             title="Optional">
         <span id="options_nodejs">
 <a href="#options_nodejs" style="color: inherit; text-decoration: inherit;">options</a>
@@ -499,8 +467,7 @@ The SqlResourceSqlDatabase resource accepts the following [input]({{< relref "/d
         <span class="property-indicator"></span>
         <span class="property-type"><a href="#createupdateoptions">Create<wbr>Update<wbr>Options</a></span>
     </dt>
-    <dd>{{% md %}}A key-value pair of options to be applied for the request. This corresponds to the headers sent with the request.{{% /md %}}</dd>
-    <dt class="property-optional"
+    <dd>{{% md %}}A key-value pair of options to be applied for the request. This corresponds to the headers sent with the request.{{% /md %}}</dd><dt class="property-optional"
             title="Optional">
         <span id="tags_nodejs">
 <a href="#tags_nodejs" style="color: inherit; text-decoration: inherit;">tags</a>
@@ -508,14 +475,11 @@ The SqlResourceSqlDatabase resource accepts the following [input]({{< relref "/d
         <span class="property-indicator"></span>
         <span class="property-type">{[key: string]: string}</span>
     </dt>
-    <dd>{{% md %}}Tags are a list of key-value pairs that describe the resource. These tags can be used in viewing and grouping this resource (across resource groups). A maximum of 15 tags can be provided for a resource. Each tag must have a key no greater than 128 characters and value no greater than 256 characters. For example, the default experience for a template type is set with "defaultExperience": "Cassandra". Current "defaultExperience" values also include "Table", "Graph", "DocumentDB", and "MongoDB".{{% /md %}}</dd>
-</dl>
+    <dd>{{% md %}}Tags are a list of key-value pairs that describe the resource. These tags can be used in viewing and grouping this resource (across resource groups). A maximum of 15 tags can be provided for a resource. Each tag must have a key no greater than 128 characters and value no greater than 256 characters. For example, the default experience for a template type is set with "defaultExperience": "Cassandra". Current "defaultExperience" values also include "Table", "Graph", "DocumentDB", and "MongoDB".{{% /md %}}</dd></dl>
 {{% /choosable %}}
 
 {{% choosable language python %}}
-<dl class="resources-properties">
-
-    <dt class="property-required"
+<dl class="resources-properties"><dt class="property-required"
             title="Required">
         <span id="account_name_python">
 <a href="#account_name_python" style="color: inherit; text-decoration: inherit;">account_<wbr>name</a>
@@ -523,8 +487,7 @@ The SqlResourceSqlDatabase resource accepts the following [input]({{< relref "/d
         <span class="property-indicator"></span>
         <span class="property-type">str</span>
     </dt>
-    <dd>{{% md %}}Cosmos DB database account name.{{% /md %}}</dd>
-    <dt class="property-required"
+    <dd>{{% md %}}Cosmos DB database account name.{{% /md %}}</dd><dt class="property-required"
             title="Required">
         <span id="resource_python">
 <a href="#resource_python" style="color: inherit; text-decoration: inherit;">resource</a>
@@ -532,8 +495,7 @@ The SqlResourceSqlDatabase resource accepts the following [input]({{< relref "/d
         <span class="property-indicator"></span>
         <span class="property-type"><a href="#sqldatabaseresource">Sql<wbr>Database<wbr>Resource<wbr>Args</a></span>
     </dt>
-    <dd>{{% md %}}The standard JSON format of a SQL database{{% /md %}}</dd>
-    <dt class="property-required"
+    <dd>{{% md %}}The standard JSON format of a SQL database{{% /md %}}</dd><dt class="property-required"
             title="Required">
         <span id="resource_group_name_python">
 <a href="#resource_group_name_python" style="color: inherit; text-decoration: inherit;">resource_<wbr>group_<wbr>name</a>
@@ -541,8 +503,7 @@ The SqlResourceSqlDatabase resource accepts the following [input]({{< relref "/d
         <span class="property-indicator"></span>
         <span class="property-type">str</span>
     </dt>
-    <dd>{{% md %}}The name of the resource group. The name is case insensitive.{{% /md %}}</dd>
-    <dt class="property-optional"
+    <dd>{{% md %}}The name of the resource group. The name is case insensitive.{{% /md %}}</dd><dt class="property-optional"
             title="Optional">
         <span id="database_name_python">
 <a href="#database_name_python" style="color: inherit; text-decoration: inherit;">database_<wbr>name</a>
@@ -550,8 +511,7 @@ The SqlResourceSqlDatabase resource accepts the following [input]({{< relref "/d
         <span class="property-indicator"></span>
         <span class="property-type">str</span>
     </dt>
-    <dd>{{% md %}}Cosmos DB database name.{{% /md %}}</dd>
-    <dt class="property-optional"
+    <dd>{{% md %}}Cosmos DB database name.{{% /md %}}</dd><dt class="property-optional"
             title="Optional">
         <span id="location_python">
 <a href="#location_python" style="color: inherit; text-decoration: inherit;">location</a>
@@ -559,8 +519,7 @@ The SqlResourceSqlDatabase resource accepts the following [input]({{< relref "/d
         <span class="property-indicator"></span>
         <span class="property-type">str</span>
     </dt>
-    <dd>{{% md %}}The location of the resource group to which the resource belongs.{{% /md %}}</dd>
-    <dt class="property-optional"
+    <dd>{{% md %}}The location of the resource group to which the resource belongs.{{% /md %}}</dd><dt class="property-optional"
             title="Optional">
         <span id="options_python">
 <a href="#options_python" style="color: inherit; text-decoration: inherit;">options</a>
@@ -568,8 +527,7 @@ The SqlResourceSqlDatabase resource accepts the following [input]({{< relref "/d
         <span class="property-indicator"></span>
         <span class="property-type"><a href="#createupdateoptions">Create<wbr>Update<wbr>Options<wbr>Args</a></span>
     </dt>
-    <dd>{{% md %}}A key-value pair of options to be applied for the request. This corresponds to the headers sent with the request.{{% /md %}}</dd>
-    <dt class="property-optional"
+    <dd>{{% md %}}A key-value pair of options to be applied for the request. This corresponds to the headers sent with the request.{{% /md %}}</dd><dt class="property-optional"
             title="Optional">
         <span id="tags_python">
 <a href="#tags_python" style="color: inherit; text-decoration: inherit;">tags</a>
@@ -577,8 +535,7 @@ The SqlResourceSqlDatabase resource accepts the following [input]({{< relref "/d
         <span class="property-indicator"></span>
         <span class="property-type">Mapping[str, str]</span>
     </dt>
-    <dd>{{% md %}}Tags are a list of key-value pairs that describe the resource. These tags can be used in viewing and grouping this resource (across resource groups). A maximum of 15 tags can be provided for a resource. Each tag must have a key no greater than 128 characters and value no greater than 256 characters. For example, the default experience for a template type is set with "defaultExperience": "Cassandra". Current "defaultExperience" values also include "Table", "Graph", "DocumentDB", and "MongoDB".{{% /md %}}</dd>
-</dl>
+    <dd>{{% md %}}Tags are a list of key-value pairs that describe the resource. These tags can be used in viewing and grouping this resource (across resource groups). A maximum of 15 tags can be provided for a resource. Each tag must have a key no greater than 128 characters and value no greater than 256 characters. For example, the default experience for a template type is set with "defaultExperience": "Cassandra". Current "defaultExperience" values also include "Table", "Graph", "DocumentDB", and "MongoDB".{{% /md %}}</dd></dl>
 {{% /choosable %}}
 
 
@@ -589,9 +546,7 @@ All [input](#inputs) properties are implicitly available as output properties. A
 
 
 {{% choosable language csharp %}}
-<dl class="resources-properties">
-
-    <dt class="property-"
+<dl class="resources-properties"><dt class="property-"
             title="">
         <span id="id_csharp">
 <a href="#id_csharp" style="color: inherit; text-decoration: inherit;">Id</a>
@@ -599,8 +554,7 @@ All [input](#inputs) properties are implicitly available as output properties. A
         <span class="property-indicator"></span>
         <span class="property-type">string</span>
     </dt>
-    <dd>{{% md %}}The provider-assigned unique ID for this managed resource.{{% /md %}}</dd>
-    <dt class="property-"
+    <dd>{{% md %}}The provider-assigned unique ID for this managed resource.{{% /md %}}</dd><dt class="property-"
             title="">
         <span id="name_csharp">
 <a href="#name_csharp" style="color: inherit; text-decoration: inherit;">Name</a>
@@ -608,8 +562,7 @@ All [input](#inputs) properties are implicitly available as output properties. A
         <span class="property-indicator"></span>
         <span class="property-type">string</span>
     </dt>
-    <dd>{{% md %}}The name of the ARM resource.{{% /md %}}</dd>
-    <dt class="property-"
+    <dd>{{% md %}}The name of the ARM resource.{{% /md %}}</dd><dt class="property-"
             title="">
         <span id="type_csharp">
 <a href="#type_csharp" style="color: inherit; text-decoration: inherit;">Type</a>
@@ -617,14 +570,11 @@ All [input](#inputs) properties are implicitly available as output properties. A
         <span class="property-indicator"></span>
         <span class="property-type">string</span>
     </dt>
-    <dd>{{% md %}}The type of Azure resource.{{% /md %}}</dd>
-</dl>
+    <dd>{{% md %}}The type of Azure resource.{{% /md %}}</dd></dl>
 {{% /choosable %}}
 
 {{% choosable language go %}}
-<dl class="resources-properties">
-
-    <dt class="property-"
+<dl class="resources-properties"><dt class="property-"
             title="">
         <span id="id_go">
 <a href="#id_go" style="color: inherit; text-decoration: inherit;">Id</a>
@@ -632,8 +582,7 @@ All [input](#inputs) properties are implicitly available as output properties. A
         <span class="property-indicator"></span>
         <span class="property-type">string</span>
     </dt>
-    <dd>{{% md %}}The provider-assigned unique ID for this managed resource.{{% /md %}}</dd>
-    <dt class="property-"
+    <dd>{{% md %}}The provider-assigned unique ID for this managed resource.{{% /md %}}</dd><dt class="property-"
             title="">
         <span id="name_go">
 <a href="#name_go" style="color: inherit; text-decoration: inherit;">Name</a>
@@ -641,8 +590,7 @@ All [input](#inputs) properties are implicitly available as output properties. A
         <span class="property-indicator"></span>
         <span class="property-type">string</span>
     </dt>
-    <dd>{{% md %}}The name of the ARM resource.{{% /md %}}</dd>
-    <dt class="property-"
+    <dd>{{% md %}}The name of the ARM resource.{{% /md %}}</dd><dt class="property-"
             title="">
         <span id="type_go">
 <a href="#type_go" style="color: inherit; text-decoration: inherit;">Type</a>
@@ -650,14 +598,11 @@ All [input](#inputs) properties are implicitly available as output properties. A
         <span class="property-indicator"></span>
         <span class="property-type">string</span>
     </dt>
-    <dd>{{% md %}}The type of Azure resource.{{% /md %}}</dd>
-</dl>
+    <dd>{{% md %}}The type of Azure resource.{{% /md %}}</dd></dl>
 {{% /choosable %}}
 
 {{% choosable language nodejs %}}
-<dl class="resources-properties">
-
-    <dt class="property-"
+<dl class="resources-properties"><dt class="property-"
             title="">
         <span id="id_nodejs">
 <a href="#id_nodejs" style="color: inherit; text-decoration: inherit;">id</a>
@@ -665,8 +610,7 @@ All [input](#inputs) properties are implicitly available as output properties. A
         <span class="property-indicator"></span>
         <span class="property-type">string</span>
     </dt>
-    <dd>{{% md %}}The provider-assigned unique ID for this managed resource.{{% /md %}}</dd>
-    <dt class="property-"
+    <dd>{{% md %}}The provider-assigned unique ID for this managed resource.{{% /md %}}</dd><dt class="property-"
             title="">
         <span id="name_nodejs">
 <a href="#name_nodejs" style="color: inherit; text-decoration: inherit;">name</a>
@@ -674,8 +618,7 @@ All [input](#inputs) properties are implicitly available as output properties. A
         <span class="property-indicator"></span>
         <span class="property-type">string</span>
     </dt>
-    <dd>{{% md %}}The name of the ARM resource.{{% /md %}}</dd>
-    <dt class="property-"
+    <dd>{{% md %}}The name of the ARM resource.{{% /md %}}</dd><dt class="property-"
             title="">
         <span id="type_nodejs">
 <a href="#type_nodejs" style="color: inherit; text-decoration: inherit;">type</a>
@@ -683,14 +626,11 @@ All [input](#inputs) properties are implicitly available as output properties. A
         <span class="property-indicator"></span>
         <span class="property-type">string</span>
     </dt>
-    <dd>{{% md %}}The type of Azure resource.{{% /md %}}</dd>
-</dl>
+    <dd>{{% md %}}The type of Azure resource.{{% /md %}}</dd></dl>
 {{% /choosable %}}
 
 {{% choosable language python %}}
-<dl class="resources-properties">
-
-    <dt class="property-"
+<dl class="resources-properties"><dt class="property-"
             title="">
         <span id="id_python">
 <a href="#id_python" style="color: inherit; text-decoration: inherit;">id</a>
@@ -698,8 +638,7 @@ All [input](#inputs) properties are implicitly available as output properties. A
         <span class="property-indicator"></span>
         <span class="property-type">str</span>
     </dt>
-    <dd>{{% md %}}The provider-assigned unique ID for this managed resource.{{% /md %}}</dd>
-    <dt class="property-"
+    <dd>{{% md %}}The provider-assigned unique ID for this managed resource.{{% /md %}}</dd><dt class="property-"
             title="">
         <span id="name_python">
 <a href="#name_python" style="color: inherit; text-decoration: inherit;">name</a>
@@ -707,8 +646,7 @@ All [input](#inputs) properties are implicitly available as output properties. A
         <span class="property-indicator"></span>
         <span class="property-type">str</span>
     </dt>
-    <dd>{{% md %}}The name of the ARM resource.{{% /md %}}</dd>
-    <dt class="property-"
+    <dd>{{% md %}}The name of the ARM resource.{{% /md %}}</dd><dt class="property-"
             title="">
         <span id="type_python">
 <a href="#type_python" style="color: inherit; text-decoration: inherit;">type</a>
@@ -716,8 +654,7 @@ All [input](#inputs) properties are implicitly available as output properties. A
         <span class="property-indicator"></span>
         <span class="property-type">str</span>
     </dt>
-    <dd>{{% md %}}The type of Azure resource.{{% /md %}}</dd>
-</dl>
+    <dd>{{% md %}}The type of Azure resource.{{% /md %}}</dd></dl>
 {{% /choosable %}}
 
 
@@ -733,9 +670,7 @@ All [input](#inputs) properties are implicitly available as output properties. A
 <h4 id="autoscalesettings">Autoscale<wbr>Settings</h4>
 
 {{% choosable language csharp %}}
-<dl class="resources-properties">
-
-    <dt class="property-optional"
+<dl class="resources-properties"><dt class="property-optional"
             title="Optional">
         <span id="maxthroughput_csharp">
 <a href="#maxthroughput_csharp" style="color: inherit; text-decoration: inherit;">Max<wbr>Throughput</a>
@@ -743,14 +678,11 @@ All [input](#inputs) properties are implicitly available as output properties. A
         <span class="property-indicator"></span>
         <span class="property-type">int</span>
     </dt>
-    <dd>{{% md %}}Represents maximum throughput, the resource can scale up to.{{% /md %}}</dd>
-</dl>
+    <dd>{{% md %}}Represents maximum throughput, the resource can scale up to.{{% /md %}}</dd></dl>
 {{% /choosable %}}
 
 {{% choosable language go %}}
-<dl class="resources-properties">
-
-    <dt class="property-optional"
+<dl class="resources-properties"><dt class="property-optional"
             title="Optional">
         <span id="maxthroughput_go">
 <a href="#maxthroughput_go" style="color: inherit; text-decoration: inherit;">Max<wbr>Throughput</a>
@@ -758,14 +690,11 @@ All [input](#inputs) properties are implicitly available as output properties. A
         <span class="property-indicator"></span>
         <span class="property-type">int</span>
     </dt>
-    <dd>{{% md %}}Represents maximum throughput, the resource can scale up to.{{% /md %}}</dd>
-</dl>
+    <dd>{{% md %}}Represents maximum throughput, the resource can scale up to.{{% /md %}}</dd></dl>
 {{% /choosable %}}
 
 {{% choosable language nodejs %}}
-<dl class="resources-properties">
-
-    <dt class="property-optional"
+<dl class="resources-properties"><dt class="property-optional"
             title="Optional">
         <span id="maxthroughput_nodejs">
 <a href="#maxthroughput_nodejs" style="color: inherit; text-decoration: inherit;">max<wbr>Throughput</a>
@@ -773,14 +702,11 @@ All [input](#inputs) properties are implicitly available as output properties. A
         <span class="property-indicator"></span>
         <span class="property-type">number</span>
     </dt>
-    <dd>{{% md %}}Represents maximum throughput, the resource can scale up to.{{% /md %}}</dd>
-</dl>
+    <dd>{{% md %}}Represents maximum throughput, the resource can scale up to.{{% /md %}}</dd></dl>
 {{% /choosable %}}
 
 {{% choosable language python %}}
-<dl class="resources-properties">
-
-    <dt class="property-optional"
+<dl class="resources-properties"><dt class="property-optional"
             title="Optional">
         <span id="max_throughput_python">
 <a href="#max_throughput_python" style="color: inherit; text-decoration: inherit;">max_<wbr>throughput</a>
@@ -788,16 +714,13 @@ All [input](#inputs) properties are implicitly available as output properties. A
         <span class="property-indicator"></span>
         <span class="property-type">int</span>
     </dt>
-    <dd>{{% md %}}Represents maximum throughput, the resource can scale up to.{{% /md %}}</dd>
-</dl>
+    <dd>{{% md %}}Represents maximum throughput, the resource can scale up to.{{% /md %}}</dd></dl>
 {{% /choosable %}}
 
 <h4 id="autoscalesettingsresponse">Autoscale<wbr>Settings<wbr>Response</h4>
 
 {{% choosable language csharp %}}
-<dl class="resources-properties">
-
-    <dt class="property-optional"
+<dl class="resources-properties"><dt class="property-optional"
             title="Optional">
         <span id="maxthroughput_csharp">
 <a href="#maxthroughput_csharp" style="color: inherit; text-decoration: inherit;">Max<wbr>Throughput</a>
@@ -805,14 +728,11 @@ All [input](#inputs) properties are implicitly available as output properties. A
         <span class="property-indicator"></span>
         <span class="property-type">int</span>
     </dt>
-    <dd>{{% md %}}Represents maximum throughput, the resource can scale up to.{{% /md %}}</dd>
-</dl>
+    <dd>{{% md %}}Represents maximum throughput, the resource can scale up to.{{% /md %}}</dd></dl>
 {{% /choosable %}}
 
 {{% choosable language go %}}
-<dl class="resources-properties">
-
-    <dt class="property-optional"
+<dl class="resources-properties"><dt class="property-optional"
             title="Optional">
         <span id="maxthroughput_go">
 <a href="#maxthroughput_go" style="color: inherit; text-decoration: inherit;">Max<wbr>Throughput</a>
@@ -820,14 +740,11 @@ All [input](#inputs) properties are implicitly available as output properties. A
         <span class="property-indicator"></span>
         <span class="property-type">int</span>
     </dt>
-    <dd>{{% md %}}Represents maximum throughput, the resource can scale up to.{{% /md %}}</dd>
-</dl>
+    <dd>{{% md %}}Represents maximum throughput, the resource can scale up to.{{% /md %}}</dd></dl>
 {{% /choosable %}}
 
 {{% choosable language nodejs %}}
-<dl class="resources-properties">
-
-    <dt class="property-optional"
+<dl class="resources-properties"><dt class="property-optional"
             title="Optional">
         <span id="maxthroughput_nodejs">
 <a href="#maxthroughput_nodejs" style="color: inherit; text-decoration: inherit;">max<wbr>Throughput</a>
@@ -835,14 +752,11 @@ All [input](#inputs) properties are implicitly available as output properties. A
         <span class="property-indicator"></span>
         <span class="property-type">number</span>
     </dt>
-    <dd>{{% md %}}Represents maximum throughput, the resource can scale up to.{{% /md %}}</dd>
-</dl>
+    <dd>{{% md %}}Represents maximum throughput, the resource can scale up to.{{% /md %}}</dd></dl>
 {{% /choosable %}}
 
 {{% choosable language python %}}
-<dl class="resources-properties">
-
-    <dt class="property-optional"
+<dl class="resources-properties"><dt class="property-optional"
             title="Optional">
         <span id="max_throughput_python">
 <a href="#max_throughput_python" style="color: inherit; text-decoration: inherit;">max_<wbr>throughput</a>
@@ -850,16 +764,13 @@ All [input](#inputs) properties are implicitly available as output properties. A
         <span class="property-indicator"></span>
         <span class="property-type">int</span>
     </dt>
-    <dd>{{% md %}}Represents maximum throughput, the resource can scale up to.{{% /md %}}</dd>
-</dl>
+    <dd>{{% md %}}Represents maximum throughput, the resource can scale up to.{{% /md %}}</dd></dl>
 {{% /choosable %}}
 
 <h4 id="createupdateoptions">Create<wbr>Update<wbr>Options</h4>
 
 {{% choosable language csharp %}}
-<dl class="resources-properties">
-
-    <dt class="property-optional"
+<dl class="resources-properties"><dt class="property-optional"
             title="Optional">
         <span id="autoscalesettings_csharp">
 <a href="#autoscalesettings_csharp" style="color: inherit; text-decoration: inherit;">Autoscale<wbr>Settings</a>
@@ -867,8 +778,7 @@ All [input](#inputs) properties are implicitly available as output properties. A
         <span class="property-indicator"></span>
         <span class="property-type"><a href="#autoscalesettings">Pulumi.<wbr>Azure<wbr>Native.<wbr>Document<wbr>DB.<wbr>Inputs.<wbr>Autoscale<wbr>Settings<wbr>Args</a></span>
     </dt>
-    <dd>{{% md %}}Specifies the Autoscale settings.{{% /md %}}</dd>
-    <dt class="property-optional"
+    <dd>{{% md %}}Specifies the Autoscale settings.{{% /md %}}</dd><dt class="property-optional"
             title="Optional">
         <span id="throughput_csharp">
 <a href="#throughput_csharp" style="color: inherit; text-decoration: inherit;">Throughput</a>
@@ -876,14 +786,11 @@ All [input](#inputs) properties are implicitly available as output properties. A
         <span class="property-indicator"></span>
         <span class="property-type">int</span>
     </dt>
-    <dd>{{% md %}}Request Units per second. For example, "throughput": 10000.{{% /md %}}</dd>
-</dl>
+    <dd>{{% md %}}Request Units per second. For example, "throughput": 10000.{{% /md %}}</dd></dl>
 {{% /choosable %}}
 
 {{% choosable language go %}}
-<dl class="resources-properties">
-
-    <dt class="property-optional"
+<dl class="resources-properties"><dt class="property-optional"
             title="Optional">
         <span id="autoscalesettings_go">
 <a href="#autoscalesettings_go" style="color: inherit; text-decoration: inherit;">Autoscale<wbr>Settings</a>
@@ -891,8 +798,7 @@ All [input](#inputs) properties are implicitly available as output properties. A
         <span class="property-indicator"></span>
         <span class="property-type"><a href="#autoscalesettings">Autoscale<wbr>Settings</a></span>
     </dt>
-    <dd>{{% md %}}Specifies the Autoscale settings.{{% /md %}}</dd>
-    <dt class="property-optional"
+    <dd>{{% md %}}Specifies the Autoscale settings.{{% /md %}}</dd><dt class="property-optional"
             title="Optional">
         <span id="throughput_go">
 <a href="#throughput_go" style="color: inherit; text-decoration: inherit;">Throughput</a>
@@ -900,14 +806,11 @@ All [input](#inputs) properties are implicitly available as output properties. A
         <span class="property-indicator"></span>
         <span class="property-type">int</span>
     </dt>
-    <dd>{{% md %}}Request Units per second. For example, "throughput": 10000.{{% /md %}}</dd>
-</dl>
+    <dd>{{% md %}}Request Units per second. For example, "throughput": 10000.{{% /md %}}</dd></dl>
 {{% /choosable %}}
 
 {{% choosable language nodejs %}}
-<dl class="resources-properties">
-
-    <dt class="property-optional"
+<dl class="resources-properties"><dt class="property-optional"
             title="Optional">
         <span id="autoscalesettings_nodejs">
 <a href="#autoscalesettings_nodejs" style="color: inherit; text-decoration: inherit;">autoscale<wbr>Settings</a>
@@ -915,8 +818,7 @@ All [input](#inputs) properties are implicitly available as output properties. A
         <span class="property-indicator"></span>
         <span class="property-type"><a href="#autoscalesettings">Autoscale<wbr>Settings</a></span>
     </dt>
-    <dd>{{% md %}}Specifies the Autoscale settings.{{% /md %}}</dd>
-    <dt class="property-optional"
+    <dd>{{% md %}}Specifies the Autoscale settings.{{% /md %}}</dd><dt class="property-optional"
             title="Optional">
         <span id="throughput_nodejs">
 <a href="#throughput_nodejs" style="color: inherit; text-decoration: inherit;">throughput</a>
@@ -924,14 +826,11 @@ All [input](#inputs) properties are implicitly available as output properties. A
         <span class="property-indicator"></span>
         <span class="property-type">number</span>
     </dt>
-    <dd>{{% md %}}Request Units per second. For example, "throughput": 10000.{{% /md %}}</dd>
-</dl>
+    <dd>{{% md %}}Request Units per second. For example, "throughput": 10000.{{% /md %}}</dd></dl>
 {{% /choosable %}}
 
 {{% choosable language python %}}
-<dl class="resources-properties">
-
-    <dt class="property-optional"
+<dl class="resources-properties"><dt class="property-optional"
             title="Optional">
         <span id="autoscale_settings_python">
 <a href="#autoscale_settings_python" style="color: inherit; text-decoration: inherit;">autoscale_<wbr>settings</a>
@@ -939,8 +838,7 @@ All [input](#inputs) properties are implicitly available as output properties. A
         <span class="property-indicator"></span>
         <span class="property-type"><a href="#autoscalesettings">Autoscale<wbr>Settings<wbr>Args</a></span>
     </dt>
-    <dd>{{% md %}}Specifies the Autoscale settings.{{% /md %}}</dd>
-    <dt class="property-optional"
+    <dd>{{% md %}}Specifies the Autoscale settings.{{% /md %}}</dd><dt class="property-optional"
             title="Optional">
         <span id="throughput_python">
 <a href="#throughput_python" style="color: inherit; text-decoration: inherit;">throughput</a>
@@ -948,16 +846,13 @@ All [input](#inputs) properties are implicitly available as output properties. A
         <span class="property-indicator"></span>
         <span class="property-type">int</span>
     </dt>
-    <dd>{{% md %}}Request Units per second. For example, "throughput": 10000.{{% /md %}}</dd>
-</dl>
+    <dd>{{% md %}}Request Units per second. For example, "throughput": 10000.{{% /md %}}</dd></dl>
 {{% /choosable %}}
 
 <h4 id="sqldatabasegetpropertiesresponseoptions">Sql<wbr>Database<wbr>Get<wbr>Properties<wbr>Response<wbr>Options</h4>
 
 {{% choosable language csharp %}}
-<dl class="resources-properties">
-
-    <dt class="property-optional"
+<dl class="resources-properties"><dt class="property-optional"
             title="Optional">
         <span id="autoscalesettings_csharp">
 <a href="#autoscalesettings_csharp" style="color: inherit; text-decoration: inherit;">Autoscale<wbr>Settings</a>
@@ -965,8 +860,7 @@ All [input](#inputs) properties are implicitly available as output properties. A
         <span class="property-indicator"></span>
         <span class="property-type"><a href="#autoscalesettingsresponse">Pulumi.<wbr>Azure<wbr>Native.<wbr>Document<wbr>DB.<wbr>Inputs.<wbr>Autoscale<wbr>Settings<wbr>Response<wbr>Args</a></span>
     </dt>
-    <dd>{{% md %}}Specifies the Autoscale settings.{{% /md %}}</dd>
-    <dt class="property-optional"
+    <dd>{{% md %}}Specifies the Autoscale settings.{{% /md %}}</dd><dt class="property-optional"
             title="Optional">
         <span id="throughput_csharp">
 <a href="#throughput_csharp" style="color: inherit; text-decoration: inherit;">Throughput</a>
@@ -974,14 +868,11 @@ All [input](#inputs) properties are implicitly available as output properties. A
         <span class="property-indicator"></span>
         <span class="property-type">int</span>
     </dt>
-    <dd>{{% md %}}Value of the Cosmos DB resource throughput or autoscaleSettings. Use the ThroughputSetting resource when retrieving offer details.{{% /md %}}</dd>
-</dl>
+    <dd>{{% md %}}Value of the Cosmos DB resource throughput or autoscaleSettings. Use the ThroughputSetting resource when retrieving offer details.{{% /md %}}</dd></dl>
 {{% /choosable %}}
 
 {{% choosable language go %}}
-<dl class="resources-properties">
-
-    <dt class="property-optional"
+<dl class="resources-properties"><dt class="property-optional"
             title="Optional">
         <span id="autoscalesettings_go">
 <a href="#autoscalesettings_go" style="color: inherit; text-decoration: inherit;">Autoscale<wbr>Settings</a>
@@ -989,8 +880,7 @@ All [input](#inputs) properties are implicitly available as output properties. A
         <span class="property-indicator"></span>
         <span class="property-type"><a href="#autoscalesettingsresponse">Autoscale<wbr>Settings<wbr>Response</a></span>
     </dt>
-    <dd>{{% md %}}Specifies the Autoscale settings.{{% /md %}}</dd>
-    <dt class="property-optional"
+    <dd>{{% md %}}Specifies the Autoscale settings.{{% /md %}}</dd><dt class="property-optional"
             title="Optional">
         <span id="throughput_go">
 <a href="#throughput_go" style="color: inherit; text-decoration: inherit;">Throughput</a>
@@ -998,14 +888,11 @@ All [input](#inputs) properties are implicitly available as output properties. A
         <span class="property-indicator"></span>
         <span class="property-type">int</span>
     </dt>
-    <dd>{{% md %}}Value of the Cosmos DB resource throughput or autoscaleSettings. Use the ThroughputSetting resource when retrieving offer details.{{% /md %}}</dd>
-</dl>
+    <dd>{{% md %}}Value of the Cosmos DB resource throughput or autoscaleSettings. Use the ThroughputSetting resource when retrieving offer details.{{% /md %}}</dd></dl>
 {{% /choosable %}}
 
 {{% choosable language nodejs %}}
-<dl class="resources-properties">
-
-    <dt class="property-optional"
+<dl class="resources-properties"><dt class="property-optional"
             title="Optional">
         <span id="autoscalesettings_nodejs">
 <a href="#autoscalesettings_nodejs" style="color: inherit; text-decoration: inherit;">autoscale<wbr>Settings</a>
@@ -1013,8 +900,7 @@ All [input](#inputs) properties are implicitly available as output properties. A
         <span class="property-indicator"></span>
         <span class="property-type"><a href="#autoscalesettingsresponse">Autoscale<wbr>Settings<wbr>Response</a></span>
     </dt>
-    <dd>{{% md %}}Specifies the Autoscale settings.{{% /md %}}</dd>
-    <dt class="property-optional"
+    <dd>{{% md %}}Specifies the Autoscale settings.{{% /md %}}</dd><dt class="property-optional"
             title="Optional">
         <span id="throughput_nodejs">
 <a href="#throughput_nodejs" style="color: inherit; text-decoration: inherit;">throughput</a>
@@ -1022,14 +908,11 @@ All [input](#inputs) properties are implicitly available as output properties. A
         <span class="property-indicator"></span>
         <span class="property-type">number</span>
     </dt>
-    <dd>{{% md %}}Value of the Cosmos DB resource throughput or autoscaleSettings. Use the ThroughputSetting resource when retrieving offer details.{{% /md %}}</dd>
-</dl>
+    <dd>{{% md %}}Value of the Cosmos DB resource throughput or autoscaleSettings. Use the ThroughputSetting resource when retrieving offer details.{{% /md %}}</dd></dl>
 {{% /choosable %}}
 
 {{% choosable language python %}}
-<dl class="resources-properties">
-
-    <dt class="property-optional"
+<dl class="resources-properties"><dt class="property-optional"
             title="Optional">
         <span id="autoscale_settings_python">
 <a href="#autoscale_settings_python" style="color: inherit; text-decoration: inherit;">autoscale_<wbr>settings</a>
@@ -1037,8 +920,7 @@ All [input](#inputs) properties are implicitly available as output properties. A
         <span class="property-indicator"></span>
         <span class="property-type"><a href="#autoscalesettingsresponse">Autoscale<wbr>Settings<wbr>Response<wbr>Args</a></span>
     </dt>
-    <dd>{{% md %}}Specifies the Autoscale settings.{{% /md %}}</dd>
-    <dt class="property-optional"
+    <dd>{{% md %}}Specifies the Autoscale settings.{{% /md %}}</dd><dt class="property-optional"
             title="Optional">
         <span id="throughput_python">
 <a href="#throughput_python" style="color: inherit; text-decoration: inherit;">throughput</a>
@@ -1046,16 +928,13 @@ All [input](#inputs) properties are implicitly available as output properties. A
         <span class="property-indicator"></span>
         <span class="property-type">int</span>
     </dt>
-    <dd>{{% md %}}Value of the Cosmos DB resource throughput or autoscaleSettings. Use the ThroughputSetting resource when retrieving offer details.{{% /md %}}</dd>
-</dl>
+    <dd>{{% md %}}Value of the Cosmos DB resource throughput or autoscaleSettings. Use the ThroughputSetting resource when retrieving offer details.{{% /md %}}</dd></dl>
 {{% /choosable %}}
 
 <h4 id="sqldatabasegetpropertiesresponseresource">Sql<wbr>Database<wbr>Get<wbr>Properties<wbr>Response<wbr>Resource</h4>
 
 {{% choosable language csharp %}}
-<dl class="resources-properties">
-
-    <dt class="property-required"
+<dl class="resources-properties"><dt class="property-required"
             title="Required">
         <span id="etag_csharp">
 <a href="#etag_csharp" style="color: inherit; text-decoration: inherit;">Etag</a>
@@ -1063,8 +942,7 @@ All [input](#inputs) properties are implicitly available as output properties. A
         <span class="property-indicator"></span>
         <span class="property-type">string</span>
     </dt>
-    <dd>{{% md %}}A system generated property representing the resource etag required for optimistic concurrency control.{{% /md %}}</dd>
-    <dt class="property-required"
+    <dd>{{% md %}}A system generated property representing the resource etag required for optimistic concurrency control.{{% /md %}}</dd><dt class="property-required"
             title="Required">
         <span id="id_csharp">
 <a href="#id_csharp" style="color: inherit; text-decoration: inherit;">Id</a>
@@ -1072,8 +950,7 @@ All [input](#inputs) properties are implicitly available as output properties. A
         <span class="property-indicator"></span>
         <span class="property-type">string</span>
     </dt>
-    <dd>{{% md %}}Name of the Cosmos DB SQL database{{% /md %}}</dd>
-    <dt class="property-required"
+    <dd>{{% md %}}Name of the Cosmos DB SQL database{{% /md %}}</dd><dt class="property-required"
             title="Required">
         <span id="rid_csharp">
 <a href="#rid_csharp" style="color: inherit; text-decoration: inherit;">Rid</a>
@@ -1081,8 +958,7 @@ All [input](#inputs) properties are implicitly available as output properties. A
         <span class="property-indicator"></span>
         <span class="property-type">string</span>
     </dt>
-    <dd>{{% md %}}A system generated property. A unique identifier.{{% /md %}}</dd>
-    <dt class="property-required"
+    <dd>{{% md %}}A system generated property. A unique identifier.{{% /md %}}</dd><dt class="property-required"
             title="Required">
         <span id="ts_csharp">
 <a href="#ts_csharp" style="color: inherit; text-decoration: inherit;">Ts</a>
@@ -1090,8 +966,7 @@ All [input](#inputs) properties are implicitly available as output properties. A
         <span class="property-indicator"></span>
         <span class="property-type">double</span>
     </dt>
-    <dd>{{% md %}}A system generated property that denotes the last updated timestamp of the resource.{{% /md %}}</dd>
-    <dt class="property-optional"
+    <dd>{{% md %}}A system generated property that denotes the last updated timestamp of the resource.{{% /md %}}</dd><dt class="property-optional"
             title="Optional">
         <span id="colls_csharp">
 <a href="#colls_csharp" style="color: inherit; text-decoration: inherit;">Colls</a>
@@ -1099,8 +974,7 @@ All [input](#inputs) properties are implicitly available as output properties. A
         <span class="property-indicator"></span>
         <span class="property-type">string</span>
     </dt>
-    <dd>{{% md %}}A system generated property that specified the addressable path of the collections resource.{{% /md %}}</dd>
-    <dt class="property-optional"
+    <dd>{{% md %}}A system generated property that specified the addressable path of the collections resource.{{% /md %}}</dd><dt class="property-optional"
             title="Optional">
         <span id="users_csharp">
 <a href="#users_csharp" style="color: inherit; text-decoration: inherit;">Users</a>
@@ -1108,14 +982,11 @@ All [input](#inputs) properties are implicitly available as output properties. A
         <span class="property-indicator"></span>
         <span class="property-type">string</span>
     </dt>
-    <dd>{{% md %}}A system generated property that specifies the addressable path of the users resource.{{% /md %}}</dd>
-</dl>
+    <dd>{{% md %}}A system generated property that specifies the addressable path of the users resource.{{% /md %}}</dd></dl>
 {{% /choosable %}}
 
 {{% choosable language go %}}
-<dl class="resources-properties">
-
-    <dt class="property-required"
+<dl class="resources-properties"><dt class="property-required"
             title="Required">
         <span id="etag_go">
 <a href="#etag_go" style="color: inherit; text-decoration: inherit;">Etag</a>
@@ -1123,8 +994,7 @@ All [input](#inputs) properties are implicitly available as output properties. A
         <span class="property-indicator"></span>
         <span class="property-type">string</span>
     </dt>
-    <dd>{{% md %}}A system generated property representing the resource etag required for optimistic concurrency control.{{% /md %}}</dd>
-    <dt class="property-required"
+    <dd>{{% md %}}A system generated property representing the resource etag required for optimistic concurrency control.{{% /md %}}</dd><dt class="property-required"
             title="Required">
         <span id="id_go">
 <a href="#id_go" style="color: inherit; text-decoration: inherit;">Id</a>
@@ -1132,8 +1002,7 @@ All [input](#inputs) properties are implicitly available as output properties. A
         <span class="property-indicator"></span>
         <span class="property-type">string</span>
     </dt>
-    <dd>{{% md %}}Name of the Cosmos DB SQL database{{% /md %}}</dd>
-    <dt class="property-required"
+    <dd>{{% md %}}Name of the Cosmos DB SQL database{{% /md %}}</dd><dt class="property-required"
             title="Required">
         <span id="rid_go">
 <a href="#rid_go" style="color: inherit; text-decoration: inherit;">Rid</a>
@@ -1141,8 +1010,7 @@ All [input](#inputs) properties are implicitly available as output properties. A
         <span class="property-indicator"></span>
         <span class="property-type">string</span>
     </dt>
-    <dd>{{% md %}}A system generated property. A unique identifier.{{% /md %}}</dd>
-    <dt class="property-required"
+    <dd>{{% md %}}A system generated property. A unique identifier.{{% /md %}}</dd><dt class="property-required"
             title="Required">
         <span id="ts_go">
 <a href="#ts_go" style="color: inherit; text-decoration: inherit;">Ts</a>
@@ -1150,8 +1018,7 @@ All [input](#inputs) properties are implicitly available as output properties. A
         <span class="property-indicator"></span>
         <span class="property-type">float64</span>
     </dt>
-    <dd>{{% md %}}A system generated property that denotes the last updated timestamp of the resource.{{% /md %}}</dd>
-    <dt class="property-optional"
+    <dd>{{% md %}}A system generated property that denotes the last updated timestamp of the resource.{{% /md %}}</dd><dt class="property-optional"
             title="Optional">
         <span id="colls_go">
 <a href="#colls_go" style="color: inherit; text-decoration: inherit;">Colls</a>
@@ -1159,8 +1026,7 @@ All [input](#inputs) properties are implicitly available as output properties. A
         <span class="property-indicator"></span>
         <span class="property-type">string</span>
     </dt>
-    <dd>{{% md %}}A system generated property that specified the addressable path of the collections resource.{{% /md %}}</dd>
-    <dt class="property-optional"
+    <dd>{{% md %}}A system generated property that specified the addressable path of the collections resource.{{% /md %}}</dd><dt class="property-optional"
             title="Optional">
         <span id="users_go">
 <a href="#users_go" style="color: inherit; text-decoration: inherit;">Users</a>
@@ -1168,14 +1034,11 @@ All [input](#inputs) properties are implicitly available as output properties. A
         <span class="property-indicator"></span>
         <span class="property-type">string</span>
     </dt>
-    <dd>{{% md %}}A system generated property that specifies the addressable path of the users resource.{{% /md %}}</dd>
-</dl>
+    <dd>{{% md %}}A system generated property that specifies the addressable path of the users resource.{{% /md %}}</dd></dl>
 {{% /choosable %}}
 
 {{% choosable language nodejs %}}
-<dl class="resources-properties">
-
-    <dt class="property-required"
+<dl class="resources-properties"><dt class="property-required"
             title="Required">
         <span id="etag_nodejs">
 <a href="#etag_nodejs" style="color: inherit; text-decoration: inherit;">etag</a>
@@ -1183,8 +1046,7 @@ All [input](#inputs) properties are implicitly available as output properties. A
         <span class="property-indicator"></span>
         <span class="property-type">string</span>
     </dt>
-    <dd>{{% md %}}A system generated property representing the resource etag required for optimistic concurrency control.{{% /md %}}</dd>
-    <dt class="property-required"
+    <dd>{{% md %}}A system generated property representing the resource etag required for optimistic concurrency control.{{% /md %}}</dd><dt class="property-required"
             title="Required">
         <span id="id_nodejs">
 <a href="#id_nodejs" style="color: inherit; text-decoration: inherit;">id</a>
@@ -1192,8 +1054,7 @@ All [input](#inputs) properties are implicitly available as output properties. A
         <span class="property-indicator"></span>
         <span class="property-type">string</span>
     </dt>
-    <dd>{{% md %}}Name of the Cosmos DB SQL database{{% /md %}}</dd>
-    <dt class="property-required"
+    <dd>{{% md %}}Name of the Cosmos DB SQL database{{% /md %}}</dd><dt class="property-required"
             title="Required">
         <span id="rid_nodejs">
 <a href="#rid_nodejs" style="color: inherit; text-decoration: inherit;">rid</a>
@@ -1201,8 +1062,7 @@ All [input](#inputs) properties are implicitly available as output properties. A
         <span class="property-indicator"></span>
         <span class="property-type">string</span>
     </dt>
-    <dd>{{% md %}}A system generated property. A unique identifier.{{% /md %}}</dd>
-    <dt class="property-required"
+    <dd>{{% md %}}A system generated property. A unique identifier.{{% /md %}}</dd><dt class="property-required"
             title="Required">
         <span id="ts_nodejs">
 <a href="#ts_nodejs" style="color: inherit; text-decoration: inherit;">ts</a>
@@ -1210,8 +1070,7 @@ All [input](#inputs) properties are implicitly available as output properties. A
         <span class="property-indicator"></span>
         <span class="property-type">number</span>
     </dt>
-    <dd>{{% md %}}A system generated property that denotes the last updated timestamp of the resource.{{% /md %}}</dd>
-    <dt class="property-optional"
+    <dd>{{% md %}}A system generated property that denotes the last updated timestamp of the resource.{{% /md %}}</dd><dt class="property-optional"
             title="Optional">
         <span id="colls_nodejs">
 <a href="#colls_nodejs" style="color: inherit; text-decoration: inherit;">colls</a>
@@ -1219,8 +1078,7 @@ All [input](#inputs) properties are implicitly available as output properties. A
         <span class="property-indicator"></span>
         <span class="property-type">string</span>
     </dt>
-    <dd>{{% md %}}A system generated property that specified the addressable path of the collections resource.{{% /md %}}</dd>
-    <dt class="property-optional"
+    <dd>{{% md %}}A system generated property that specified the addressable path of the collections resource.{{% /md %}}</dd><dt class="property-optional"
             title="Optional">
         <span id="users_nodejs">
 <a href="#users_nodejs" style="color: inherit; text-decoration: inherit;">users</a>
@@ -1228,14 +1086,11 @@ All [input](#inputs) properties are implicitly available as output properties. A
         <span class="property-indicator"></span>
         <span class="property-type">string</span>
     </dt>
-    <dd>{{% md %}}A system generated property that specifies the addressable path of the users resource.{{% /md %}}</dd>
-</dl>
+    <dd>{{% md %}}A system generated property that specifies the addressable path of the users resource.{{% /md %}}</dd></dl>
 {{% /choosable %}}
 
 {{% choosable language python %}}
-<dl class="resources-properties">
-
-    <dt class="property-required"
+<dl class="resources-properties"><dt class="property-required"
             title="Required">
         <span id="etag_python">
 <a href="#etag_python" style="color: inherit; text-decoration: inherit;">etag</a>
@@ -1243,8 +1098,7 @@ All [input](#inputs) properties are implicitly available as output properties. A
         <span class="property-indicator"></span>
         <span class="property-type">str</span>
     </dt>
-    <dd>{{% md %}}A system generated property representing the resource etag required for optimistic concurrency control.{{% /md %}}</dd>
-    <dt class="property-required"
+    <dd>{{% md %}}A system generated property representing the resource etag required for optimistic concurrency control.{{% /md %}}</dd><dt class="property-required"
             title="Required">
         <span id="id_python">
 <a href="#id_python" style="color: inherit; text-decoration: inherit;">id</a>
@@ -1252,8 +1106,7 @@ All [input](#inputs) properties are implicitly available as output properties. A
         <span class="property-indicator"></span>
         <span class="property-type">str</span>
     </dt>
-    <dd>{{% md %}}Name of the Cosmos DB SQL database{{% /md %}}</dd>
-    <dt class="property-required"
+    <dd>{{% md %}}Name of the Cosmos DB SQL database{{% /md %}}</dd><dt class="property-required"
             title="Required">
         <span id="rid_python">
 <a href="#rid_python" style="color: inherit; text-decoration: inherit;">rid</a>
@@ -1261,8 +1114,7 @@ All [input](#inputs) properties are implicitly available as output properties. A
         <span class="property-indicator"></span>
         <span class="property-type">str</span>
     </dt>
-    <dd>{{% md %}}A system generated property. A unique identifier.{{% /md %}}</dd>
-    <dt class="property-required"
+    <dd>{{% md %}}A system generated property. A unique identifier.{{% /md %}}</dd><dt class="property-required"
             title="Required">
         <span id="ts_python">
 <a href="#ts_python" style="color: inherit; text-decoration: inherit;">ts</a>
@@ -1270,8 +1122,7 @@ All [input](#inputs) properties are implicitly available as output properties. A
         <span class="property-indicator"></span>
         <span class="property-type">float</span>
     </dt>
-    <dd>{{% md %}}A system generated property that denotes the last updated timestamp of the resource.{{% /md %}}</dd>
-    <dt class="property-optional"
+    <dd>{{% md %}}A system generated property that denotes the last updated timestamp of the resource.{{% /md %}}</dd><dt class="property-optional"
             title="Optional">
         <span id="colls_python">
 <a href="#colls_python" style="color: inherit; text-decoration: inherit;">colls</a>
@@ -1279,8 +1130,7 @@ All [input](#inputs) properties are implicitly available as output properties. A
         <span class="property-indicator"></span>
         <span class="property-type">str</span>
     </dt>
-    <dd>{{% md %}}A system generated property that specified the addressable path of the collections resource.{{% /md %}}</dd>
-    <dt class="property-optional"
+    <dd>{{% md %}}A system generated property that specified the addressable path of the collections resource.{{% /md %}}</dd><dt class="property-optional"
             title="Optional">
         <span id="users_python">
 <a href="#users_python" style="color: inherit; text-decoration: inherit;">users</a>
@@ -1288,16 +1138,13 @@ All [input](#inputs) properties are implicitly available as output properties. A
         <span class="property-indicator"></span>
         <span class="property-type">str</span>
     </dt>
-    <dd>{{% md %}}A system generated property that specifies the addressable path of the users resource.{{% /md %}}</dd>
-</dl>
+    <dd>{{% md %}}A system generated property that specifies the addressable path of the users resource.{{% /md %}}</dd></dl>
 {{% /choosable %}}
 
 <h4 id="sqldatabaseresource">Sql<wbr>Database<wbr>Resource</h4>
 
 {{% choosable language csharp %}}
-<dl class="resources-properties">
-
-    <dt class="property-required"
+<dl class="resources-properties"><dt class="property-required"
             title="Required">
         <span id="id_csharp">
 <a href="#id_csharp" style="color: inherit; text-decoration: inherit;">Id</a>
@@ -1305,14 +1152,11 @@ All [input](#inputs) properties are implicitly available as output properties. A
         <span class="property-indicator"></span>
         <span class="property-type">string</span>
     </dt>
-    <dd>{{% md %}}Name of the Cosmos DB SQL database{{% /md %}}</dd>
-</dl>
+    <dd>{{% md %}}Name of the Cosmos DB SQL database{{% /md %}}</dd></dl>
 {{% /choosable %}}
 
 {{% choosable language go %}}
-<dl class="resources-properties">
-
-    <dt class="property-required"
+<dl class="resources-properties"><dt class="property-required"
             title="Required">
         <span id="id_go">
 <a href="#id_go" style="color: inherit; text-decoration: inherit;">Id</a>
@@ -1320,14 +1164,11 @@ All [input](#inputs) properties are implicitly available as output properties. A
         <span class="property-indicator"></span>
         <span class="property-type">string</span>
     </dt>
-    <dd>{{% md %}}Name of the Cosmos DB SQL database{{% /md %}}</dd>
-</dl>
+    <dd>{{% md %}}Name of the Cosmos DB SQL database{{% /md %}}</dd></dl>
 {{% /choosable %}}
 
 {{% choosable language nodejs %}}
-<dl class="resources-properties">
-
-    <dt class="property-required"
+<dl class="resources-properties"><dt class="property-required"
             title="Required">
         <span id="id_nodejs">
 <a href="#id_nodejs" style="color: inherit; text-decoration: inherit;">id</a>
@@ -1335,14 +1176,11 @@ All [input](#inputs) properties are implicitly available as output properties. A
         <span class="property-indicator"></span>
         <span class="property-type">string</span>
     </dt>
-    <dd>{{% md %}}Name of the Cosmos DB SQL database{{% /md %}}</dd>
-</dl>
+    <dd>{{% md %}}Name of the Cosmos DB SQL database{{% /md %}}</dd></dl>
 {{% /choosable %}}
 
 {{% choosable language python %}}
-<dl class="resources-properties">
-
-    <dt class="property-required"
+<dl class="resources-properties"><dt class="property-required"
             title="Required">
         <span id="id_python">
 <a href="#id_python" style="color: inherit; text-decoration: inherit;">id</a>
@@ -1350,8 +1188,7 @@ All [input](#inputs) properties are implicitly available as output properties. A
         <span class="property-indicator"></span>
         <span class="property-type">str</span>
     </dt>
-    <dd>{{% md %}}Name of the Cosmos DB SQL database{{% /md %}}</dd>
-</dl>
+    <dd>{{% md %}}Name of the Cosmos DB SQL database{{% /md %}}</dd></dl>
 {{% /choosable %}}
 ## Import
 

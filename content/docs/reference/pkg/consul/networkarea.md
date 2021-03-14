@@ -22,11 +22,17 @@ complex topologies among Consul datacenters like hub/spoke and more general tree
 
 
 {{% examples %}}
+
 ## Example Usage
 
 {{< chooser language "typescript,python,go,csharp" / >}}
 
-{{% example csharp %}}
+
+
+
+
+{{< example csharp >}}
+
 ```csharp
 using Pulumi;
 using Consul = Pulumi.Consul;
@@ -49,9 +55,12 @@ class MyStack : Stack
 }
 ```
 
-{{% /example %}}
 
-{{% example go %}}
+{{< /example >}}
+
+
+{{< example go >}}
+
 ```go
 package main
 
@@ -77,9 +86,12 @@ func main() {
 }
 ```
 
-{{% /example %}}
 
-{{% example python %}}
+{{< /example >}}
+
+
+{{< example python >}}
+
 ```python
 import pulumi
 import pulumi_consul as consul
@@ -90,9 +102,12 @@ dc2 = consul.NetworkArea("dc2",
     use_tls=True)
 ```
 
-{{% /example %}}
 
-{{% example typescript %}}
+{{< /example >}}
+
+
+{{< example typescript >}}
+
 
 ```typescript
 import * as pulumi from "@pulumi/pulumi";
@@ -105,9 +120,16 @@ const dc2 = new consul.NetworkArea("dc2", {
 });
 ```
 
-{{% /example %}}
+
+{{< /example >}}
+
+
+
+
 
 {{% /examples %}}
+
+
 
 
 ## Create a NetworkArea Resource {#create}
@@ -132,9 +154,7 @@ const dc2 = new consul.NetworkArea("dc2", {
 
 {{% choosable language nodejs %}}
 
-<dl class="resources-properties">
-  
-    <dt
+<dl class="resources-properties"><dt
         class="property-required" title="Required">
         <span>name</span>
         <span class="property-indicator"></span>
@@ -142,9 +162,7 @@ const dc2 = new consul.NetworkArea("dc2", {
     </dt>
     <dd>
       The unique name of the resource.
-    </dd>
-  
-    <dt
+    </dd><dt
         class="property-required" title="Required">
         <span>args</span>
         <span class="property-indicator"></span>
@@ -152,9 +170,7 @@ const dc2 = new consul.NetworkArea("dc2", {
     </dt>
     <dd>
       The arguments to resource properties.
-    </dd>
-  
-    <dt
+    </dd><dt
         class="property-optional" title="Optional">
         <span>opts</span>
         <span class="property-indicator"></span>
@@ -162,10 +178,7 @@ const dc2 = new consul.NetworkArea("dc2", {
     </dt>
     <dd>
       Bag of options to control resource&#39;s behavior.
-    </dd>
-  
-
-</dl>
+    </dd></dl>
 
 {{% /choosable %}}
 
@@ -191,9 +204,7 @@ const dc2 = new consul.NetworkArea("dc2", {
 
 {{% choosable language go %}}
 
-<dl class="resources-properties">
-  
-    <dt
+<dl class="resources-properties"><dt
         class="property-optional" title="Optional">
         <span>ctx</span>
         <span class="property-indicator"></span>
@@ -201,9 +212,7 @@ const dc2 = new consul.NetworkArea("dc2", {
     </dt>
     <dd>
       Context object for the current deployment.
-    </dd>
-  
-    <dt
+    </dd><dt
         class="property-required" title="Required">
         <span>name</span>
         <span class="property-indicator"></span>
@@ -211,9 +220,7 @@ const dc2 = new consul.NetworkArea("dc2", {
     </dt>
     <dd>
       The unique name of the resource.
-    </dd>
-  
-    <dt
+    </dd><dt
         class="property-required" title="Required">
         <span>args</span>
         <span class="property-indicator"></span>
@@ -221,9 +228,7 @@ const dc2 = new consul.NetworkArea("dc2", {
     </dt>
     <dd>
       The arguments to resource properties.
-    </dd>
-  
-    <dt
+    </dd><dt
         class="property-optional" title="Optional">
         <span>opts</span>
         <span class="property-indicator"></span>
@@ -231,18 +236,13 @@ const dc2 = new consul.NetworkArea("dc2", {
     </dt>
     <dd>
       Bag of options to control resource&#39;s behavior.
-    </dd>
-  
-
-</dl>
+    </dd></dl>
 
 {{% /choosable %}}
 
 {{% choosable language csharp %}}
 
-<dl class="resources-properties">
-  
-    <dt
+<dl class="resources-properties"><dt
         class="property-required" title="Required">
         <span>name</span>
         <span class="property-indicator"></span>
@@ -250,9 +250,7 @@ const dc2 = new consul.NetworkArea("dc2", {
     </dt>
     <dd>
       The unique name of the resource.
-    </dd>
-  
-    <dt
+    </dd><dt
         class="property-required" title="Required">
         <span>args</span>
         <span class="property-indicator"></span>
@@ -260,9 +258,7 @@ const dc2 = new consul.NetworkArea("dc2", {
     </dt>
     <dd>
       The arguments to resource properties.
-    </dd>
-  
-    <dt
+    </dd><dt
         class="property-optional" title="Optional">
         <span>opts</span>
         <span class="property-indicator"></span>
@@ -270,10 +266,7 @@ const dc2 = new consul.NetworkArea("dc2", {
     </dt>
     <dd>
       Bag of options to control resource&#39;s behavior.
-    </dd>
-  
-
-</dl>
+    </dd></dl>
 
 {{% /choosable %}}
 
@@ -288,9 +281,7 @@ The NetworkArea resource accepts the following [input]({{< relref "/docs/intro/c
 
 
 {{% choosable language csharp %}}
-<dl class="resources-properties">
-
-    <dt class="property-required"
+<dl class="resources-properties"><dt class="property-required"
             title="Required">
         <span id="peerdatacenter_csharp">
 <a href="#peerdatacenter_csharp" style="color: inherit; text-decoration: inherit;">Peer<wbr>Datacenter</a>
@@ -300,8 +291,7 @@ The NetworkArea resource accepts the following [input]({{< relref "/docs/intro/c
     </dt>
     <dd>{{% md %}}The name of the Consul datacenter that will be
 joined to form the area.
-{{% /md %}}</dd>
-    <dt class="property-optional"
+{{% /md %}}</dd><dt class="property-optional"
             title="Optional">
         <span id="datacenter_csharp">
 <a href="#datacenter_csharp" style="color: inherit; text-decoration: inherit;">Datacenter</a>
@@ -311,8 +301,7 @@ joined to form the area.
     </dt>
     <dd>{{% md %}}The datacenter to use. This overrides the
 agent's default datacenter and the datacenter in the provider setup.
-{{% /md %}}</dd>
-    <dt class="property-optional"
+{{% /md %}}</dd><dt class="property-optional"
             title="Optional">
         <span id="retryjoins_csharp">
 <a href="#retryjoins_csharp" style="color: inherit; text-decoration: inherit;">Retry<wbr>Joins</a>
@@ -322,8 +311,7 @@ agent's default datacenter and the datacenter in the provider setup.
     </dt>
     <dd>{{% md %}}Specifies a list of Consul servers to attempt to
 join. Servers can be given as `IP`, `IP:port`, `hostname`, or `hostname:port`.
-{{% /md %}}</dd>
-    <dt class="property-optional"
+{{% /md %}}</dd><dt class="property-optional"
             title="Optional">
         <span id="token_csharp">
 <a href="#token_csharp" style="color: inherit; text-decoration: inherit;">Token</a>
@@ -333,8 +321,7 @@ join. Servers can be given as `IP`, `IP:port`, `hostname`, or `hostname:port`.
     </dt>
     <dd>{{% md %}}The ACL token to use. This overrides the
 token that the agent provides by default.
-{{% /md %}}</dd>
-    <dt class="property-optional"
+{{% /md %}}</dd><dt class="property-optional"
             title="Optional">
         <span id="usetls_csharp">
 <a href="#usetls_csharp" style="color: inherit; text-decoration: inherit;">Use<wbr>Tls</a>
@@ -344,14 +331,11 @@ token that the agent provides by default.
     </dt>
     <dd>{{% md %}}Specifies whether gossip over this area should be
 encrypted with TLS if possible. Defaults to `false`.
-{{% /md %}}</dd>
-</dl>
+{{% /md %}}</dd></dl>
 {{% /choosable %}}
 
 {{% choosable language go %}}
-<dl class="resources-properties">
-
-    <dt class="property-required"
+<dl class="resources-properties"><dt class="property-required"
             title="Required">
         <span id="peerdatacenter_go">
 <a href="#peerdatacenter_go" style="color: inherit; text-decoration: inherit;">Peer<wbr>Datacenter</a>
@@ -361,8 +345,7 @@ encrypted with TLS if possible. Defaults to `false`.
     </dt>
     <dd>{{% md %}}The name of the Consul datacenter that will be
 joined to form the area.
-{{% /md %}}</dd>
-    <dt class="property-optional"
+{{% /md %}}</dd><dt class="property-optional"
             title="Optional">
         <span id="datacenter_go">
 <a href="#datacenter_go" style="color: inherit; text-decoration: inherit;">Datacenter</a>
@@ -372,8 +355,7 @@ joined to form the area.
     </dt>
     <dd>{{% md %}}The datacenter to use. This overrides the
 agent's default datacenter and the datacenter in the provider setup.
-{{% /md %}}</dd>
-    <dt class="property-optional"
+{{% /md %}}</dd><dt class="property-optional"
             title="Optional">
         <span id="retryjoins_go">
 <a href="#retryjoins_go" style="color: inherit; text-decoration: inherit;">Retry<wbr>Joins</a>
@@ -383,8 +365,7 @@ agent's default datacenter and the datacenter in the provider setup.
     </dt>
     <dd>{{% md %}}Specifies a list of Consul servers to attempt to
 join. Servers can be given as `IP`, `IP:port`, `hostname`, or `hostname:port`.
-{{% /md %}}</dd>
-    <dt class="property-optional"
+{{% /md %}}</dd><dt class="property-optional"
             title="Optional">
         <span id="token_go">
 <a href="#token_go" style="color: inherit; text-decoration: inherit;">Token</a>
@@ -394,8 +375,7 @@ join. Servers can be given as `IP`, `IP:port`, `hostname`, or `hostname:port`.
     </dt>
     <dd>{{% md %}}The ACL token to use. This overrides the
 token that the agent provides by default.
-{{% /md %}}</dd>
-    <dt class="property-optional"
+{{% /md %}}</dd><dt class="property-optional"
             title="Optional">
         <span id="usetls_go">
 <a href="#usetls_go" style="color: inherit; text-decoration: inherit;">Use<wbr>Tls</a>
@@ -405,14 +385,11 @@ token that the agent provides by default.
     </dt>
     <dd>{{% md %}}Specifies whether gossip over this area should be
 encrypted with TLS if possible. Defaults to `false`.
-{{% /md %}}</dd>
-</dl>
+{{% /md %}}</dd></dl>
 {{% /choosable %}}
 
 {{% choosable language nodejs %}}
-<dl class="resources-properties">
-
-    <dt class="property-required"
+<dl class="resources-properties"><dt class="property-required"
             title="Required">
         <span id="peerdatacenter_nodejs">
 <a href="#peerdatacenter_nodejs" style="color: inherit; text-decoration: inherit;">peer<wbr>Datacenter</a>
@@ -422,8 +399,7 @@ encrypted with TLS if possible. Defaults to `false`.
     </dt>
     <dd>{{% md %}}The name of the Consul datacenter that will be
 joined to form the area.
-{{% /md %}}</dd>
-    <dt class="property-optional"
+{{% /md %}}</dd><dt class="property-optional"
             title="Optional">
         <span id="datacenter_nodejs">
 <a href="#datacenter_nodejs" style="color: inherit; text-decoration: inherit;">datacenter</a>
@@ -433,8 +409,7 @@ joined to form the area.
     </dt>
     <dd>{{% md %}}The datacenter to use. This overrides the
 agent's default datacenter and the datacenter in the provider setup.
-{{% /md %}}</dd>
-    <dt class="property-optional"
+{{% /md %}}</dd><dt class="property-optional"
             title="Optional">
         <span id="retryjoins_nodejs">
 <a href="#retryjoins_nodejs" style="color: inherit; text-decoration: inherit;">retry<wbr>Joins</a>
@@ -444,8 +419,7 @@ agent's default datacenter and the datacenter in the provider setup.
     </dt>
     <dd>{{% md %}}Specifies a list of Consul servers to attempt to
 join. Servers can be given as `IP`, `IP:port`, `hostname`, or `hostname:port`.
-{{% /md %}}</dd>
-    <dt class="property-optional"
+{{% /md %}}</dd><dt class="property-optional"
             title="Optional">
         <span id="token_nodejs">
 <a href="#token_nodejs" style="color: inherit; text-decoration: inherit;">token</a>
@@ -455,8 +429,7 @@ join. Servers can be given as `IP`, `IP:port`, `hostname`, or `hostname:port`.
     </dt>
     <dd>{{% md %}}The ACL token to use. This overrides the
 token that the agent provides by default.
-{{% /md %}}</dd>
-    <dt class="property-optional"
+{{% /md %}}</dd><dt class="property-optional"
             title="Optional">
         <span id="usetls_nodejs">
 <a href="#usetls_nodejs" style="color: inherit; text-decoration: inherit;">use<wbr>Tls</a>
@@ -466,14 +439,11 @@ token that the agent provides by default.
     </dt>
     <dd>{{% md %}}Specifies whether gossip over this area should be
 encrypted with TLS if possible. Defaults to `false`.
-{{% /md %}}</dd>
-</dl>
+{{% /md %}}</dd></dl>
 {{% /choosable %}}
 
 {{% choosable language python %}}
-<dl class="resources-properties">
-
-    <dt class="property-required"
+<dl class="resources-properties"><dt class="property-required"
             title="Required">
         <span id="peer_datacenter_python">
 <a href="#peer_datacenter_python" style="color: inherit; text-decoration: inherit;">peer_<wbr>datacenter</a>
@@ -483,8 +453,7 @@ encrypted with TLS if possible. Defaults to `false`.
     </dt>
     <dd>{{% md %}}The name of the Consul datacenter that will be
 joined to form the area.
-{{% /md %}}</dd>
-    <dt class="property-optional"
+{{% /md %}}</dd><dt class="property-optional"
             title="Optional">
         <span id="datacenter_python">
 <a href="#datacenter_python" style="color: inherit; text-decoration: inherit;">datacenter</a>
@@ -494,8 +463,7 @@ joined to form the area.
     </dt>
     <dd>{{% md %}}The datacenter to use. This overrides the
 agent's default datacenter and the datacenter in the provider setup.
-{{% /md %}}</dd>
-    <dt class="property-optional"
+{{% /md %}}</dd><dt class="property-optional"
             title="Optional">
         <span id="retry_joins_python">
 <a href="#retry_joins_python" style="color: inherit; text-decoration: inherit;">retry_<wbr>joins</a>
@@ -505,8 +473,7 @@ agent's default datacenter and the datacenter in the provider setup.
     </dt>
     <dd>{{% md %}}Specifies a list of Consul servers to attempt to
 join. Servers can be given as `IP`, `IP:port`, `hostname`, or `hostname:port`.
-{{% /md %}}</dd>
-    <dt class="property-optional"
+{{% /md %}}</dd><dt class="property-optional"
             title="Optional">
         <span id="token_python">
 <a href="#token_python" style="color: inherit; text-decoration: inherit;">token</a>
@@ -516,8 +483,7 @@ join. Servers can be given as `IP`, `IP:port`, `hostname`, or `hostname:port`.
     </dt>
     <dd>{{% md %}}The ACL token to use. This overrides the
 token that the agent provides by default.
-{{% /md %}}</dd>
-    <dt class="property-optional"
+{{% /md %}}</dd><dt class="property-optional"
             title="Optional">
         <span id="use_tls_python">
 <a href="#use_tls_python" style="color: inherit; text-decoration: inherit;">use_<wbr>tls</a>
@@ -527,8 +493,7 @@ token that the agent provides by default.
     </dt>
     <dd>{{% md %}}Specifies whether gossip over this area should be
 encrypted with TLS if possible. Defaults to `false`.
-{{% /md %}}</dd>
-</dl>
+{{% /md %}}</dd></dl>
 {{% /choosable %}}
 
 
@@ -539,9 +504,7 @@ All [input](#inputs) properties are implicitly available as output properties. A
 
 
 {{% choosable language csharp %}}
-<dl class="resources-properties">
-
-    <dt class="property-"
+<dl class="resources-properties"><dt class="property-"
             title="">
         <span id="id_csharp">
 <a href="#id_csharp" style="color: inherit; text-decoration: inherit;">Id</a>
@@ -549,14 +512,11 @@ All [input](#inputs) properties are implicitly available as output properties. A
         <span class="property-indicator"></span>
         <span class="property-type">string</span>
     </dt>
-    <dd>{{% md %}}The provider-assigned unique ID for this managed resource.{{% /md %}}</dd>
-</dl>
+    <dd>{{% md %}}The provider-assigned unique ID for this managed resource.{{% /md %}}</dd></dl>
 {{% /choosable %}}
 
 {{% choosable language go %}}
-<dl class="resources-properties">
-
-    <dt class="property-"
+<dl class="resources-properties"><dt class="property-"
             title="">
         <span id="id_go">
 <a href="#id_go" style="color: inherit; text-decoration: inherit;">Id</a>
@@ -564,14 +524,11 @@ All [input](#inputs) properties are implicitly available as output properties. A
         <span class="property-indicator"></span>
         <span class="property-type">string</span>
     </dt>
-    <dd>{{% md %}}The provider-assigned unique ID for this managed resource.{{% /md %}}</dd>
-</dl>
+    <dd>{{% md %}}The provider-assigned unique ID for this managed resource.{{% /md %}}</dd></dl>
 {{% /choosable %}}
 
 {{% choosable language nodejs %}}
-<dl class="resources-properties">
-
-    <dt class="property-"
+<dl class="resources-properties"><dt class="property-"
             title="">
         <span id="id_nodejs">
 <a href="#id_nodejs" style="color: inherit; text-decoration: inherit;">id</a>
@@ -579,14 +536,11 @@ All [input](#inputs) properties are implicitly available as output properties. A
         <span class="property-indicator"></span>
         <span class="property-type">string</span>
     </dt>
-    <dd>{{% md %}}The provider-assigned unique ID for this managed resource.{{% /md %}}</dd>
-</dl>
+    <dd>{{% md %}}The provider-assigned unique ID for this managed resource.{{% /md %}}</dd></dl>
 {{% /choosable %}}
 
 {{% choosable language python %}}
-<dl class="resources-properties">
-
-    <dt class="property-"
+<dl class="resources-properties"><dt class="property-"
             title="">
         <span id="id_python">
 <a href="#id_python" style="color: inherit; text-decoration: inherit;">id</a>
@@ -594,8 +548,7 @@ All [input](#inputs) properties are implicitly available as output properties. A
         <span class="property-indicator"></span>
         <span class="property-type">str</span>
     </dt>
-    <dd>{{% md %}}The provider-assigned unique ID for this managed resource.{{% /md %}}</dd>
-</dl>
+    <dd>{{% md %}}The provider-assigned unique ID for this managed resource.{{% /md %}}</dd></dl>
 {{% /choosable %}}
 
 
@@ -722,9 +675,7 @@ The following state arguments are supported:
 
 
 {{% choosable language csharp %}}
-<dl class="resources-properties">
-
-    <dt class="property-optional"
+<dl class="resources-properties"><dt class="property-optional"
             title="Optional">
         <span id="state_datacenter_csharp">
 <a href="#state_datacenter_csharp" style="color: inherit; text-decoration: inherit;">Datacenter</a>
@@ -734,8 +685,7 @@ The following state arguments are supported:
     </dt>
     <dd>{{% md %}}The datacenter to use. This overrides the
 agent's default datacenter and the datacenter in the provider setup.
-{{% /md %}}</dd>
-    <dt class="property-optional"
+{{% /md %}}</dd><dt class="property-optional"
             title="Optional">
         <span id="state_peerdatacenter_csharp">
 <a href="#state_peerdatacenter_csharp" style="color: inherit; text-decoration: inherit;">Peer<wbr>Datacenter</a>
@@ -745,8 +695,7 @@ agent's default datacenter and the datacenter in the provider setup.
     </dt>
     <dd>{{% md %}}The name of the Consul datacenter that will be
 joined to form the area.
-{{% /md %}}</dd>
-    <dt class="property-optional"
+{{% /md %}}</dd><dt class="property-optional"
             title="Optional">
         <span id="state_retryjoins_csharp">
 <a href="#state_retryjoins_csharp" style="color: inherit; text-decoration: inherit;">Retry<wbr>Joins</a>
@@ -756,8 +705,7 @@ joined to form the area.
     </dt>
     <dd>{{% md %}}Specifies a list of Consul servers to attempt to
 join. Servers can be given as `IP`, `IP:port`, `hostname`, or `hostname:port`.
-{{% /md %}}</dd>
-    <dt class="property-optional"
+{{% /md %}}</dd><dt class="property-optional"
             title="Optional">
         <span id="state_token_csharp">
 <a href="#state_token_csharp" style="color: inherit; text-decoration: inherit;">Token</a>
@@ -767,8 +715,7 @@ join. Servers can be given as `IP`, `IP:port`, `hostname`, or `hostname:port`.
     </dt>
     <dd>{{% md %}}The ACL token to use. This overrides the
 token that the agent provides by default.
-{{% /md %}}</dd>
-    <dt class="property-optional"
+{{% /md %}}</dd><dt class="property-optional"
             title="Optional">
         <span id="state_usetls_csharp">
 <a href="#state_usetls_csharp" style="color: inherit; text-decoration: inherit;">Use<wbr>Tls</a>
@@ -778,14 +725,11 @@ token that the agent provides by default.
     </dt>
     <dd>{{% md %}}Specifies whether gossip over this area should be
 encrypted with TLS if possible. Defaults to `false`.
-{{% /md %}}</dd>
-</dl>
+{{% /md %}}</dd></dl>
 {{% /choosable %}}
 
 {{% choosable language go %}}
-<dl class="resources-properties">
-
-    <dt class="property-optional"
+<dl class="resources-properties"><dt class="property-optional"
             title="Optional">
         <span id="state_datacenter_go">
 <a href="#state_datacenter_go" style="color: inherit; text-decoration: inherit;">Datacenter</a>
@@ -795,8 +739,7 @@ encrypted with TLS if possible. Defaults to `false`.
     </dt>
     <dd>{{% md %}}The datacenter to use. This overrides the
 agent's default datacenter and the datacenter in the provider setup.
-{{% /md %}}</dd>
-    <dt class="property-optional"
+{{% /md %}}</dd><dt class="property-optional"
             title="Optional">
         <span id="state_peerdatacenter_go">
 <a href="#state_peerdatacenter_go" style="color: inherit; text-decoration: inherit;">Peer<wbr>Datacenter</a>
@@ -806,8 +749,7 @@ agent's default datacenter and the datacenter in the provider setup.
     </dt>
     <dd>{{% md %}}The name of the Consul datacenter that will be
 joined to form the area.
-{{% /md %}}</dd>
-    <dt class="property-optional"
+{{% /md %}}</dd><dt class="property-optional"
             title="Optional">
         <span id="state_retryjoins_go">
 <a href="#state_retryjoins_go" style="color: inherit; text-decoration: inherit;">Retry<wbr>Joins</a>
@@ -817,8 +759,7 @@ joined to form the area.
     </dt>
     <dd>{{% md %}}Specifies a list of Consul servers to attempt to
 join. Servers can be given as `IP`, `IP:port`, `hostname`, or `hostname:port`.
-{{% /md %}}</dd>
-    <dt class="property-optional"
+{{% /md %}}</dd><dt class="property-optional"
             title="Optional">
         <span id="state_token_go">
 <a href="#state_token_go" style="color: inherit; text-decoration: inherit;">Token</a>
@@ -828,8 +769,7 @@ join. Servers can be given as `IP`, `IP:port`, `hostname`, or `hostname:port`.
     </dt>
     <dd>{{% md %}}The ACL token to use. This overrides the
 token that the agent provides by default.
-{{% /md %}}</dd>
-    <dt class="property-optional"
+{{% /md %}}</dd><dt class="property-optional"
             title="Optional">
         <span id="state_usetls_go">
 <a href="#state_usetls_go" style="color: inherit; text-decoration: inherit;">Use<wbr>Tls</a>
@@ -839,14 +779,11 @@ token that the agent provides by default.
     </dt>
     <dd>{{% md %}}Specifies whether gossip over this area should be
 encrypted with TLS if possible. Defaults to `false`.
-{{% /md %}}</dd>
-</dl>
+{{% /md %}}</dd></dl>
 {{% /choosable %}}
 
 {{% choosable language nodejs %}}
-<dl class="resources-properties">
-
-    <dt class="property-optional"
+<dl class="resources-properties"><dt class="property-optional"
             title="Optional">
         <span id="state_datacenter_nodejs">
 <a href="#state_datacenter_nodejs" style="color: inherit; text-decoration: inherit;">datacenter</a>
@@ -856,8 +793,7 @@ encrypted with TLS if possible. Defaults to `false`.
     </dt>
     <dd>{{% md %}}The datacenter to use. This overrides the
 agent's default datacenter and the datacenter in the provider setup.
-{{% /md %}}</dd>
-    <dt class="property-optional"
+{{% /md %}}</dd><dt class="property-optional"
             title="Optional">
         <span id="state_peerdatacenter_nodejs">
 <a href="#state_peerdatacenter_nodejs" style="color: inherit; text-decoration: inherit;">peer<wbr>Datacenter</a>
@@ -867,8 +803,7 @@ agent's default datacenter and the datacenter in the provider setup.
     </dt>
     <dd>{{% md %}}The name of the Consul datacenter that will be
 joined to form the area.
-{{% /md %}}</dd>
-    <dt class="property-optional"
+{{% /md %}}</dd><dt class="property-optional"
             title="Optional">
         <span id="state_retryjoins_nodejs">
 <a href="#state_retryjoins_nodejs" style="color: inherit; text-decoration: inherit;">retry<wbr>Joins</a>
@@ -878,8 +813,7 @@ joined to form the area.
     </dt>
     <dd>{{% md %}}Specifies a list of Consul servers to attempt to
 join. Servers can be given as `IP`, `IP:port`, `hostname`, or `hostname:port`.
-{{% /md %}}</dd>
-    <dt class="property-optional"
+{{% /md %}}</dd><dt class="property-optional"
             title="Optional">
         <span id="state_token_nodejs">
 <a href="#state_token_nodejs" style="color: inherit; text-decoration: inherit;">token</a>
@@ -889,8 +823,7 @@ join. Servers can be given as `IP`, `IP:port`, `hostname`, or `hostname:port`.
     </dt>
     <dd>{{% md %}}The ACL token to use. This overrides the
 token that the agent provides by default.
-{{% /md %}}</dd>
-    <dt class="property-optional"
+{{% /md %}}</dd><dt class="property-optional"
             title="Optional">
         <span id="state_usetls_nodejs">
 <a href="#state_usetls_nodejs" style="color: inherit; text-decoration: inherit;">use<wbr>Tls</a>
@@ -900,14 +833,11 @@ token that the agent provides by default.
     </dt>
     <dd>{{% md %}}Specifies whether gossip over this area should be
 encrypted with TLS if possible. Defaults to `false`.
-{{% /md %}}</dd>
-</dl>
+{{% /md %}}</dd></dl>
 {{% /choosable %}}
 
 {{% choosable language python %}}
-<dl class="resources-properties">
-
-    <dt class="property-optional"
+<dl class="resources-properties"><dt class="property-optional"
             title="Optional">
         <span id="state_datacenter_python">
 <a href="#state_datacenter_python" style="color: inherit; text-decoration: inherit;">datacenter</a>
@@ -917,8 +847,7 @@ encrypted with TLS if possible. Defaults to `false`.
     </dt>
     <dd>{{% md %}}The datacenter to use. This overrides the
 agent's default datacenter and the datacenter in the provider setup.
-{{% /md %}}</dd>
-    <dt class="property-optional"
+{{% /md %}}</dd><dt class="property-optional"
             title="Optional">
         <span id="state_peer_datacenter_python">
 <a href="#state_peer_datacenter_python" style="color: inherit; text-decoration: inherit;">peer_<wbr>datacenter</a>
@@ -928,8 +857,7 @@ agent's default datacenter and the datacenter in the provider setup.
     </dt>
     <dd>{{% md %}}The name of the Consul datacenter that will be
 joined to form the area.
-{{% /md %}}</dd>
-    <dt class="property-optional"
+{{% /md %}}</dd><dt class="property-optional"
             title="Optional">
         <span id="state_retry_joins_python">
 <a href="#state_retry_joins_python" style="color: inherit; text-decoration: inherit;">retry_<wbr>joins</a>
@@ -939,8 +867,7 @@ joined to form the area.
     </dt>
     <dd>{{% md %}}Specifies a list of Consul servers to attempt to
 join. Servers can be given as `IP`, `IP:port`, `hostname`, or `hostname:port`.
-{{% /md %}}</dd>
-    <dt class="property-optional"
+{{% /md %}}</dd><dt class="property-optional"
             title="Optional">
         <span id="state_token_python">
 <a href="#state_token_python" style="color: inherit; text-decoration: inherit;">token</a>
@@ -950,8 +877,7 @@ join. Servers can be given as `IP`, `IP:port`, `hostname`, or `hostname:port`.
     </dt>
     <dd>{{% md %}}The ACL token to use. This overrides the
 token that the agent provides by default.
-{{% /md %}}</dd>
-    <dt class="property-optional"
+{{% /md %}}</dd><dt class="property-optional"
             title="Optional">
         <span id="state_use_tls_python">
 <a href="#state_use_tls_python" style="color: inherit; text-decoration: inherit;">use_<wbr>tls</a>
@@ -961,8 +887,7 @@ token that the agent provides by default.
     </dt>
     <dd>{{% md %}}Specifies whether gossip over this area should be
 encrypted with TLS if possible. Defaults to `false`.
-{{% /md %}}</dd>
-</dl>
+{{% /md %}}</dd></dl>
 {{% /choosable %}}
 
 
@@ -978,6 +903,6 @@ encrypted with TLS if possible. Defaults to `false`.
 	<dt>License</dt>
 	<dd>Apache-2.0</dd>
 	<dt>Notes</dt>
-	<dd>This Pulumi package is based on the [`consul` Terraform Provider](https://github.com/hashicorp/terraform-provider-consul).</dd>
+	<dd>{{% md %}}This Pulumi package is based on the [`consul` Terraform Provider](https://github.com/hashicorp/terraform-provider-consul).{{% /md %}}</dd>
 </dl>
 

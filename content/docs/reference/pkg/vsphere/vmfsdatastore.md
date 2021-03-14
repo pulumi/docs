@@ -35,9 +35,7 @@ meta_desc: "Documentation for the vsphere.VmfsDatastore resource with examples, 
 
 {{% choosable language nodejs %}}
 
-<dl class="resources-properties">
-  
-    <dt
+<dl class="resources-properties"><dt
         class="property-required" title="Required">
         <span>name</span>
         <span class="property-indicator"></span>
@@ -45,9 +43,7 @@ meta_desc: "Documentation for the vsphere.VmfsDatastore resource with examples, 
     </dt>
     <dd>
       The unique name of the resource.
-    </dd>
-  
-    <dt
+    </dd><dt
         class="property-required" title="Required">
         <span>args</span>
         <span class="property-indicator"></span>
@@ -55,9 +51,7 @@ meta_desc: "Documentation for the vsphere.VmfsDatastore resource with examples, 
     </dt>
     <dd>
       The arguments to resource properties.
-    </dd>
-  
-    <dt
+    </dd><dt
         class="property-optional" title="Optional">
         <span>opts</span>
         <span class="property-indicator"></span>
@@ -65,10 +59,7 @@ meta_desc: "Documentation for the vsphere.VmfsDatastore resource with examples, 
     </dt>
     <dd>
       Bag of options to control resource&#39;s behavior.
-    </dd>
-  
-
-</dl>
+    </dd></dl>
 
 {{% /choosable %}}
 
@@ -94,9 +85,7 @@ meta_desc: "Documentation for the vsphere.VmfsDatastore resource with examples, 
 
 {{% choosable language go %}}
 
-<dl class="resources-properties">
-  
-    <dt
+<dl class="resources-properties"><dt
         class="property-optional" title="Optional">
         <span>ctx</span>
         <span class="property-indicator"></span>
@@ -104,9 +93,7 @@ meta_desc: "Documentation for the vsphere.VmfsDatastore resource with examples, 
     </dt>
     <dd>
       Context object for the current deployment.
-    </dd>
-  
-    <dt
+    </dd><dt
         class="property-required" title="Required">
         <span>name</span>
         <span class="property-indicator"></span>
@@ -114,9 +101,7 @@ meta_desc: "Documentation for the vsphere.VmfsDatastore resource with examples, 
     </dt>
     <dd>
       The unique name of the resource.
-    </dd>
-  
-    <dt
+    </dd><dt
         class="property-required" title="Required">
         <span>args</span>
         <span class="property-indicator"></span>
@@ -124,9 +109,7 @@ meta_desc: "Documentation for the vsphere.VmfsDatastore resource with examples, 
     </dt>
     <dd>
       The arguments to resource properties.
-    </dd>
-  
-    <dt
+    </dd><dt
         class="property-optional" title="Optional">
         <span>opts</span>
         <span class="property-indicator"></span>
@@ -134,18 +117,13 @@ meta_desc: "Documentation for the vsphere.VmfsDatastore resource with examples, 
     </dt>
     <dd>
       Bag of options to control resource&#39;s behavior.
-    </dd>
-  
-
-</dl>
+    </dd></dl>
 
 {{% /choosable %}}
 
 {{% choosable language csharp %}}
 
-<dl class="resources-properties">
-  
-    <dt
+<dl class="resources-properties"><dt
         class="property-required" title="Required">
         <span>name</span>
         <span class="property-indicator"></span>
@@ -153,9 +131,7 @@ meta_desc: "Documentation for the vsphere.VmfsDatastore resource with examples, 
     </dt>
     <dd>
       The unique name of the resource.
-    </dd>
-  
-    <dt
+    </dd><dt
         class="property-required" title="Required">
         <span>args</span>
         <span class="property-indicator"></span>
@@ -163,9 +139,7 @@ meta_desc: "Documentation for the vsphere.VmfsDatastore resource with examples, 
     </dt>
     <dd>
       The arguments to resource properties.
-    </dd>
-  
-    <dt
+    </dd><dt
         class="property-optional" title="Optional">
         <span>opts</span>
         <span class="property-indicator"></span>
@@ -173,10 +147,7 @@ meta_desc: "Documentation for the vsphere.VmfsDatastore resource with examples, 
     </dt>
     <dd>
       Bag of options to control resource&#39;s behavior.
-    </dd>
-  
-
-</dl>
+    </dd></dl>
 
 {{% /choosable %}}
 
@@ -191,9 +162,7 @@ The VmfsDatastore resource accepts the following [input]({{< relref "/docs/intro
 
 
 {{% choosable language csharp %}}
-<dl class="resources-properties">
-
-    <dt class="property-required"
+<dl class="resources-properties"><dt class="property-required"
             title="Required">
         <span id="disks_csharp">
 <a href="#disks_csharp" style="color: inherit; text-decoration: inherit;">Disks</a>
@@ -202,8 +171,7 @@ The VmfsDatastore resource accepts the following [input]({{< relref "/docs/intro
         <span class="property-type">List&lt;string&gt;</span>
     </dt>
     <dd>{{% md %}}The disks to use with the datastore.
-{{% /md %}}</dd>
-    <dt class="property-required"
+{{% /md %}}</dd><dt class="property-required"
             title="Required">
         <span id="hostsystemid_csharp">
 <a href="#hostsystemid_csharp" style="color: inherit; text-decoration: inherit;">Host<wbr>System<wbr>Id</a>
@@ -216,8 +184,7 @@ the host to set the datastore up on. Note that this is not necessarily the
 only host that the datastore will be set up on - see
 here for more info. Forces a
 new resource if changed.
-{{% /md %}}</dd>
-    <dt class="property-optional"
+{{% /md %}}</dd><dt class="property-optional"
             title="Optional">
         <span id="customattributes_csharp">
 <a href="#customattributes_csharp" style="color: inherit; text-decoration: inherit;">Custom<wbr>Attributes</a>
@@ -227,8 +194,7 @@ new resource if changed.
     </dt>
     <dd>{{% md %}}Map of custom attribute ids to attribute 
 value string to set on datastore resource.
-{{% /md %}}</dd>
-    <dt class="property-optional"
+{{% /md %}}</dd><dt class="property-optional"
             title="Optional">
         <span id="datastoreclusterid_csharp">
 <a href="#datastoreclusterid_csharp" style="color: inherit; text-decoration: inherit;">Datastore<wbr>Cluster<wbr>Id</a>
@@ -239,8 +205,7 @@ value string to set on datastore resource.
     <dd>{{% md %}}The managed object
 ID of a datastore cluster to put this datastore in.
 Conflicts with `folder`.
-{{% /md %}}</dd>
-    <dt class="property-optional"
+{{% /md %}}</dd><dt class="property-optional"
             title="Optional">
         <span id="folder_csharp">
 <a href="#folder_csharp" style="color: inherit; text-decoration: inherit;">Folder</a>
@@ -255,8 +220,7 @@ The provider will place a datastore named `test` in a datastore folder
 located at `/dc1/datastore/foo/bar`, with the final inventory path being
 `/dc1/datastore/foo/bar/test`. Conflicts with
 `datastore_cluster_id`.
-{{% /md %}}</dd>
-    <dt class="property-optional"
+{{% /md %}}</dd><dt class="property-optional"
             title="Optional">
         <span id="name_csharp">
 <a href="#name_csharp" style="color: inherit; text-decoration: inherit;">Name</a>
@@ -266,8 +230,7 @@ located at `/dc1/datastore/foo/bar`, with the final inventory path being
     </dt>
     <dd>{{% md %}}The name of the datastore. Forces a new resource if
 changed.
-{{% /md %}}</dd>
-    <dt class="property-optional"
+{{% /md %}}</dd><dt class="property-optional"
             title="Optional">
         <span id="tags_csharp">
 <a href="#tags_csharp" style="color: inherit; text-decoration: inherit;">Tags</a>
@@ -276,14 +239,11 @@ changed.
         <span class="property-type">List&lt;string&gt;</span>
     </dt>
     <dd>{{% md %}}The IDs of any tags to attach to this resource.
-{{% /md %}}</dd>
-</dl>
+{{% /md %}}</dd></dl>
 {{% /choosable %}}
 
 {{% choosable language go %}}
-<dl class="resources-properties">
-
-    <dt class="property-required"
+<dl class="resources-properties"><dt class="property-required"
             title="Required">
         <span id="disks_go">
 <a href="#disks_go" style="color: inherit; text-decoration: inherit;">Disks</a>
@@ -292,8 +252,7 @@ changed.
         <span class="property-type">[]string</span>
     </dt>
     <dd>{{% md %}}The disks to use with the datastore.
-{{% /md %}}</dd>
-    <dt class="property-required"
+{{% /md %}}</dd><dt class="property-required"
             title="Required">
         <span id="hostsystemid_go">
 <a href="#hostsystemid_go" style="color: inherit; text-decoration: inherit;">Host<wbr>System<wbr>Id</a>
@@ -306,8 +265,7 @@ the host to set the datastore up on. Note that this is not necessarily the
 only host that the datastore will be set up on - see
 here for more info. Forces a
 new resource if changed.
-{{% /md %}}</dd>
-    <dt class="property-optional"
+{{% /md %}}</dd><dt class="property-optional"
             title="Optional">
         <span id="customattributes_go">
 <a href="#customattributes_go" style="color: inherit; text-decoration: inherit;">Custom<wbr>Attributes</a>
@@ -317,8 +275,7 @@ new resource if changed.
     </dt>
     <dd>{{% md %}}Map of custom attribute ids to attribute 
 value string to set on datastore resource.
-{{% /md %}}</dd>
-    <dt class="property-optional"
+{{% /md %}}</dd><dt class="property-optional"
             title="Optional">
         <span id="datastoreclusterid_go">
 <a href="#datastoreclusterid_go" style="color: inherit; text-decoration: inherit;">Datastore<wbr>Cluster<wbr>Id</a>
@@ -329,8 +286,7 @@ value string to set on datastore resource.
     <dd>{{% md %}}The managed object
 ID of a datastore cluster to put this datastore in.
 Conflicts with `folder`.
-{{% /md %}}</dd>
-    <dt class="property-optional"
+{{% /md %}}</dd><dt class="property-optional"
             title="Optional">
         <span id="folder_go">
 <a href="#folder_go" style="color: inherit; text-decoration: inherit;">Folder</a>
@@ -345,8 +301,7 @@ The provider will place a datastore named `test` in a datastore folder
 located at `/dc1/datastore/foo/bar`, with the final inventory path being
 `/dc1/datastore/foo/bar/test`. Conflicts with
 `datastore_cluster_id`.
-{{% /md %}}</dd>
-    <dt class="property-optional"
+{{% /md %}}</dd><dt class="property-optional"
             title="Optional">
         <span id="name_go">
 <a href="#name_go" style="color: inherit; text-decoration: inherit;">Name</a>
@@ -356,8 +311,7 @@ located at `/dc1/datastore/foo/bar`, with the final inventory path being
     </dt>
     <dd>{{% md %}}The name of the datastore. Forces a new resource if
 changed.
-{{% /md %}}</dd>
-    <dt class="property-optional"
+{{% /md %}}</dd><dt class="property-optional"
             title="Optional">
         <span id="tags_go">
 <a href="#tags_go" style="color: inherit; text-decoration: inherit;">Tags</a>
@@ -366,14 +320,11 @@ changed.
         <span class="property-type">[]string</span>
     </dt>
     <dd>{{% md %}}The IDs of any tags to attach to this resource.
-{{% /md %}}</dd>
-</dl>
+{{% /md %}}</dd></dl>
 {{% /choosable %}}
 
 {{% choosable language nodejs %}}
-<dl class="resources-properties">
-
-    <dt class="property-required"
+<dl class="resources-properties"><dt class="property-required"
             title="Required">
         <span id="disks_nodejs">
 <a href="#disks_nodejs" style="color: inherit; text-decoration: inherit;">disks</a>
@@ -382,8 +333,7 @@ changed.
         <span class="property-type">string[]</span>
     </dt>
     <dd>{{% md %}}The disks to use with the datastore.
-{{% /md %}}</dd>
-    <dt class="property-required"
+{{% /md %}}</dd><dt class="property-required"
             title="Required">
         <span id="hostsystemid_nodejs">
 <a href="#hostsystemid_nodejs" style="color: inherit; text-decoration: inherit;">host<wbr>System<wbr>Id</a>
@@ -396,8 +346,7 @@ the host to set the datastore up on. Note that this is not necessarily the
 only host that the datastore will be set up on - see
 here for more info. Forces a
 new resource if changed.
-{{% /md %}}</dd>
-    <dt class="property-optional"
+{{% /md %}}</dd><dt class="property-optional"
             title="Optional">
         <span id="customattributes_nodejs">
 <a href="#customattributes_nodejs" style="color: inherit; text-decoration: inherit;">custom<wbr>Attributes</a>
@@ -407,8 +356,7 @@ new resource if changed.
     </dt>
     <dd>{{% md %}}Map of custom attribute ids to attribute 
 value string to set on datastore resource.
-{{% /md %}}</dd>
-    <dt class="property-optional"
+{{% /md %}}</dd><dt class="property-optional"
             title="Optional">
         <span id="datastoreclusterid_nodejs">
 <a href="#datastoreclusterid_nodejs" style="color: inherit; text-decoration: inherit;">datastore<wbr>Cluster<wbr>Id</a>
@@ -419,8 +367,7 @@ value string to set on datastore resource.
     <dd>{{% md %}}The managed object
 ID of a datastore cluster to put this datastore in.
 Conflicts with `folder`.
-{{% /md %}}</dd>
-    <dt class="property-optional"
+{{% /md %}}</dd><dt class="property-optional"
             title="Optional">
         <span id="folder_nodejs">
 <a href="#folder_nodejs" style="color: inherit; text-decoration: inherit;">folder</a>
@@ -435,8 +382,7 @@ The provider will place a datastore named `test` in a datastore folder
 located at `/dc1/datastore/foo/bar`, with the final inventory path being
 `/dc1/datastore/foo/bar/test`. Conflicts with
 `datastore_cluster_id`.
-{{% /md %}}</dd>
-    <dt class="property-optional"
+{{% /md %}}</dd><dt class="property-optional"
             title="Optional">
         <span id="name_nodejs">
 <a href="#name_nodejs" style="color: inherit; text-decoration: inherit;">name</a>
@@ -446,8 +392,7 @@ located at `/dc1/datastore/foo/bar`, with the final inventory path being
     </dt>
     <dd>{{% md %}}The name of the datastore. Forces a new resource if
 changed.
-{{% /md %}}</dd>
-    <dt class="property-optional"
+{{% /md %}}</dd><dt class="property-optional"
             title="Optional">
         <span id="tags_nodejs">
 <a href="#tags_nodejs" style="color: inherit; text-decoration: inherit;">tags</a>
@@ -456,14 +401,11 @@ changed.
         <span class="property-type">string[]</span>
     </dt>
     <dd>{{% md %}}The IDs of any tags to attach to this resource.
-{{% /md %}}</dd>
-</dl>
+{{% /md %}}</dd></dl>
 {{% /choosable %}}
 
 {{% choosable language python %}}
-<dl class="resources-properties">
-
-    <dt class="property-required"
+<dl class="resources-properties"><dt class="property-required"
             title="Required">
         <span id="disks_python">
 <a href="#disks_python" style="color: inherit; text-decoration: inherit;">disks</a>
@@ -472,8 +414,7 @@ changed.
         <span class="property-type">Sequence[str]</span>
     </dt>
     <dd>{{% md %}}The disks to use with the datastore.
-{{% /md %}}</dd>
-    <dt class="property-required"
+{{% /md %}}</dd><dt class="property-required"
             title="Required">
         <span id="host_system_id_python">
 <a href="#host_system_id_python" style="color: inherit; text-decoration: inherit;">host_<wbr>system_<wbr>id</a>
@@ -486,8 +427,7 @@ the host to set the datastore up on. Note that this is not necessarily the
 only host that the datastore will be set up on - see
 here for more info. Forces a
 new resource if changed.
-{{% /md %}}</dd>
-    <dt class="property-optional"
+{{% /md %}}</dd><dt class="property-optional"
             title="Optional">
         <span id="custom_attributes_python">
 <a href="#custom_attributes_python" style="color: inherit; text-decoration: inherit;">custom_<wbr>attributes</a>
@@ -497,8 +437,7 @@ new resource if changed.
     </dt>
     <dd>{{% md %}}Map of custom attribute ids to attribute 
 value string to set on datastore resource.
-{{% /md %}}</dd>
-    <dt class="property-optional"
+{{% /md %}}</dd><dt class="property-optional"
             title="Optional">
         <span id="datastore_cluster_id_python">
 <a href="#datastore_cluster_id_python" style="color: inherit; text-decoration: inherit;">datastore_<wbr>cluster_<wbr>id</a>
@@ -509,8 +448,7 @@ value string to set on datastore resource.
     <dd>{{% md %}}The managed object
 ID of a datastore cluster to put this datastore in.
 Conflicts with `folder`.
-{{% /md %}}</dd>
-    <dt class="property-optional"
+{{% /md %}}</dd><dt class="property-optional"
             title="Optional">
         <span id="folder_python">
 <a href="#folder_python" style="color: inherit; text-decoration: inherit;">folder</a>
@@ -525,8 +463,7 @@ The provider will place a datastore named `test` in a datastore folder
 located at `/dc1/datastore/foo/bar`, with the final inventory path being
 `/dc1/datastore/foo/bar/test`. Conflicts with
 `datastore_cluster_id`.
-{{% /md %}}</dd>
-    <dt class="property-optional"
+{{% /md %}}</dd><dt class="property-optional"
             title="Optional">
         <span id="name_python">
 <a href="#name_python" style="color: inherit; text-decoration: inherit;">name</a>
@@ -536,8 +473,7 @@ located at `/dc1/datastore/foo/bar`, with the final inventory path being
     </dt>
     <dd>{{% md %}}The name of the datastore. Forces a new resource if
 changed.
-{{% /md %}}</dd>
-    <dt class="property-optional"
+{{% /md %}}</dd><dt class="property-optional"
             title="Optional">
         <span id="tags_python">
 <a href="#tags_python" style="color: inherit; text-decoration: inherit;">tags</a>
@@ -546,8 +482,7 @@ changed.
         <span class="property-type">Sequence[str]</span>
     </dt>
     <dd>{{% md %}}The IDs of any tags to attach to this resource.
-{{% /md %}}</dd>
-</dl>
+{{% /md %}}</dd></dl>
 {{% /choosable %}}
 
 
@@ -558,9 +493,7 @@ All [input](#inputs) properties are implicitly available as output properties. A
 
 
 {{% choosable language csharp %}}
-<dl class="resources-properties">
-
-    <dt class="property-"
+<dl class="resources-properties"><dt class="property-"
             title="">
         <span id="accessible_csharp">
 <a href="#accessible_csharp" style="color: inherit; text-decoration: inherit;">Accessible</a>
@@ -570,8 +503,7 @@ All [input](#inputs) properties are implicitly available as output properties. A
     </dt>
     <dd>{{% md %}}The connectivity status of the datastore. If this is `false`,
 some other computed attributes may be out of date.
-{{% /md %}}</dd>
-    <dt class="property-"
+{{% /md %}}</dd><dt class="property-"
             title="">
         <span id="capacity_csharp">
 <a href="#capacity_csharp" style="color: inherit; text-decoration: inherit;">Capacity</a>
@@ -580,8 +512,7 @@ some other computed attributes may be out of date.
         <span class="property-type">int</span>
     </dt>
     <dd>{{% md %}}Maximum capacity of the datastore, in megabytes.
-{{% /md %}}</dd>
-    <dt class="property-"
+{{% /md %}}</dd><dt class="property-"
             title="">
         <span id="freespace_csharp">
 <a href="#freespace_csharp" style="color: inherit; text-decoration: inherit;">Free<wbr>Space</a>
@@ -590,8 +521,7 @@ some other computed attributes may be out of date.
         <span class="property-type">int</span>
     </dt>
     <dd>{{% md %}}Available space of this datastore, in megabytes.
-{{% /md %}}</dd>
-    <dt class="property-"
+{{% /md %}}</dd><dt class="property-"
             title="">
         <span id="id_csharp">
 <a href="#id_csharp" style="color: inherit; text-decoration: inherit;">Id</a>
@@ -599,8 +529,7 @@ some other computed attributes may be out of date.
         <span class="property-indicator"></span>
         <span class="property-type">string</span>
     </dt>
-    <dd>{{% md %}}The provider-assigned unique ID for this managed resource.{{% /md %}}</dd>
-    <dt class="property-"
+    <dd>{{% md %}}The provider-assigned unique ID for this managed resource.{{% /md %}}</dd><dt class="property-"
             title="">
         <span id="maintenancemode_csharp">
 <a href="#maintenancemode_csharp" style="color: inherit; text-decoration: inherit;">Maintenance<wbr>Mode</a>
@@ -609,8 +538,7 @@ some other computed attributes may be out of date.
         <span class="property-type">string</span>
     </dt>
     <dd>{{% md %}}The current maintenance mode state of the datastore.
-{{% /md %}}</dd>
-    <dt class="property-"
+{{% /md %}}</dd><dt class="property-"
             title="">
         <span id="multiplehostaccess_csharp">
 <a href="#multiplehostaccess_csharp" style="color: inherit; text-decoration: inherit;">Multiple<wbr>Host<wbr>Access</a>
@@ -620,8 +548,7 @@ some other computed attributes may be out of date.
     </dt>
     <dd>{{% md %}}If `true`, more than one host in the datacenter has
 been configured with access to the datastore.
-{{% /md %}}</dd>
-    <dt class="property-"
+{{% /md %}}</dd><dt class="property-"
             title="">
         <span id="uncommittedspace_csharp">
 <a href="#uncommittedspace_csharp" style="color: inherit; text-decoration: inherit;">Uncommitted<wbr>Space</a>
@@ -631,8 +558,7 @@ been configured with access to the datastore.
     </dt>
     <dd>{{% md %}}Total additional storage space, in megabytes,
 potentially used by all virtual machines on this datastore.
-{{% /md %}}</dd>
-    <dt class="property-"
+{{% /md %}}</dd><dt class="property-"
             title="">
         <span id="url_csharp">
 <a href="#url_csharp" style="color: inherit; text-decoration: inherit;">Url</a>
@@ -641,14 +567,11 @@ potentially used by all virtual machines on this datastore.
         <span class="property-type">string</span>
     </dt>
     <dd>{{% md %}}The unique locator for the datastore.
-{{% /md %}}</dd>
-</dl>
+{{% /md %}}</dd></dl>
 {{% /choosable %}}
 
 {{% choosable language go %}}
-<dl class="resources-properties">
-
-    <dt class="property-"
+<dl class="resources-properties"><dt class="property-"
             title="">
         <span id="accessible_go">
 <a href="#accessible_go" style="color: inherit; text-decoration: inherit;">Accessible</a>
@@ -658,8 +581,7 @@ potentially used by all virtual machines on this datastore.
     </dt>
     <dd>{{% md %}}The connectivity status of the datastore. If this is `false`,
 some other computed attributes may be out of date.
-{{% /md %}}</dd>
-    <dt class="property-"
+{{% /md %}}</dd><dt class="property-"
             title="">
         <span id="capacity_go">
 <a href="#capacity_go" style="color: inherit; text-decoration: inherit;">Capacity</a>
@@ -668,8 +590,7 @@ some other computed attributes may be out of date.
         <span class="property-type">int</span>
     </dt>
     <dd>{{% md %}}Maximum capacity of the datastore, in megabytes.
-{{% /md %}}</dd>
-    <dt class="property-"
+{{% /md %}}</dd><dt class="property-"
             title="">
         <span id="freespace_go">
 <a href="#freespace_go" style="color: inherit; text-decoration: inherit;">Free<wbr>Space</a>
@@ -678,8 +599,7 @@ some other computed attributes may be out of date.
         <span class="property-type">int</span>
     </dt>
     <dd>{{% md %}}Available space of this datastore, in megabytes.
-{{% /md %}}</dd>
-    <dt class="property-"
+{{% /md %}}</dd><dt class="property-"
             title="">
         <span id="id_go">
 <a href="#id_go" style="color: inherit; text-decoration: inherit;">Id</a>
@@ -687,8 +607,7 @@ some other computed attributes may be out of date.
         <span class="property-indicator"></span>
         <span class="property-type">string</span>
     </dt>
-    <dd>{{% md %}}The provider-assigned unique ID for this managed resource.{{% /md %}}</dd>
-    <dt class="property-"
+    <dd>{{% md %}}The provider-assigned unique ID for this managed resource.{{% /md %}}</dd><dt class="property-"
             title="">
         <span id="maintenancemode_go">
 <a href="#maintenancemode_go" style="color: inherit; text-decoration: inherit;">Maintenance<wbr>Mode</a>
@@ -697,8 +616,7 @@ some other computed attributes may be out of date.
         <span class="property-type">string</span>
     </dt>
     <dd>{{% md %}}The current maintenance mode state of the datastore.
-{{% /md %}}</dd>
-    <dt class="property-"
+{{% /md %}}</dd><dt class="property-"
             title="">
         <span id="multiplehostaccess_go">
 <a href="#multiplehostaccess_go" style="color: inherit; text-decoration: inherit;">Multiple<wbr>Host<wbr>Access</a>
@@ -708,8 +626,7 @@ some other computed attributes may be out of date.
     </dt>
     <dd>{{% md %}}If `true`, more than one host in the datacenter has
 been configured with access to the datastore.
-{{% /md %}}</dd>
-    <dt class="property-"
+{{% /md %}}</dd><dt class="property-"
             title="">
         <span id="uncommittedspace_go">
 <a href="#uncommittedspace_go" style="color: inherit; text-decoration: inherit;">Uncommitted<wbr>Space</a>
@@ -719,8 +636,7 @@ been configured with access to the datastore.
     </dt>
     <dd>{{% md %}}Total additional storage space, in megabytes,
 potentially used by all virtual machines on this datastore.
-{{% /md %}}</dd>
-    <dt class="property-"
+{{% /md %}}</dd><dt class="property-"
             title="">
         <span id="url_go">
 <a href="#url_go" style="color: inherit; text-decoration: inherit;">Url</a>
@@ -729,14 +645,11 @@ potentially used by all virtual machines on this datastore.
         <span class="property-type">string</span>
     </dt>
     <dd>{{% md %}}The unique locator for the datastore.
-{{% /md %}}</dd>
-</dl>
+{{% /md %}}</dd></dl>
 {{% /choosable %}}
 
 {{% choosable language nodejs %}}
-<dl class="resources-properties">
-
-    <dt class="property-"
+<dl class="resources-properties"><dt class="property-"
             title="">
         <span id="accessible_nodejs">
 <a href="#accessible_nodejs" style="color: inherit; text-decoration: inherit;">accessible</a>
@@ -746,8 +659,7 @@ potentially used by all virtual machines on this datastore.
     </dt>
     <dd>{{% md %}}The connectivity status of the datastore. If this is `false`,
 some other computed attributes may be out of date.
-{{% /md %}}</dd>
-    <dt class="property-"
+{{% /md %}}</dd><dt class="property-"
             title="">
         <span id="capacity_nodejs">
 <a href="#capacity_nodejs" style="color: inherit; text-decoration: inherit;">capacity</a>
@@ -756,8 +668,7 @@ some other computed attributes may be out of date.
         <span class="property-type">number</span>
     </dt>
     <dd>{{% md %}}Maximum capacity of the datastore, in megabytes.
-{{% /md %}}</dd>
-    <dt class="property-"
+{{% /md %}}</dd><dt class="property-"
             title="">
         <span id="freespace_nodejs">
 <a href="#freespace_nodejs" style="color: inherit; text-decoration: inherit;">free<wbr>Space</a>
@@ -766,8 +677,7 @@ some other computed attributes may be out of date.
         <span class="property-type">number</span>
     </dt>
     <dd>{{% md %}}Available space of this datastore, in megabytes.
-{{% /md %}}</dd>
-    <dt class="property-"
+{{% /md %}}</dd><dt class="property-"
             title="">
         <span id="id_nodejs">
 <a href="#id_nodejs" style="color: inherit; text-decoration: inherit;">id</a>
@@ -775,8 +685,7 @@ some other computed attributes may be out of date.
         <span class="property-indicator"></span>
         <span class="property-type">string</span>
     </dt>
-    <dd>{{% md %}}The provider-assigned unique ID for this managed resource.{{% /md %}}</dd>
-    <dt class="property-"
+    <dd>{{% md %}}The provider-assigned unique ID for this managed resource.{{% /md %}}</dd><dt class="property-"
             title="">
         <span id="maintenancemode_nodejs">
 <a href="#maintenancemode_nodejs" style="color: inherit; text-decoration: inherit;">maintenance<wbr>Mode</a>
@@ -785,8 +694,7 @@ some other computed attributes may be out of date.
         <span class="property-type">string</span>
     </dt>
     <dd>{{% md %}}The current maintenance mode state of the datastore.
-{{% /md %}}</dd>
-    <dt class="property-"
+{{% /md %}}</dd><dt class="property-"
             title="">
         <span id="multiplehostaccess_nodejs">
 <a href="#multiplehostaccess_nodejs" style="color: inherit; text-decoration: inherit;">multiple<wbr>Host<wbr>Access</a>
@@ -796,8 +704,7 @@ some other computed attributes may be out of date.
     </dt>
     <dd>{{% md %}}If `true`, more than one host in the datacenter has
 been configured with access to the datastore.
-{{% /md %}}</dd>
-    <dt class="property-"
+{{% /md %}}</dd><dt class="property-"
             title="">
         <span id="uncommittedspace_nodejs">
 <a href="#uncommittedspace_nodejs" style="color: inherit; text-decoration: inherit;">uncommitted<wbr>Space</a>
@@ -807,8 +714,7 @@ been configured with access to the datastore.
     </dt>
     <dd>{{% md %}}Total additional storage space, in megabytes,
 potentially used by all virtual machines on this datastore.
-{{% /md %}}</dd>
-    <dt class="property-"
+{{% /md %}}</dd><dt class="property-"
             title="">
         <span id="url_nodejs">
 <a href="#url_nodejs" style="color: inherit; text-decoration: inherit;">url</a>
@@ -817,14 +723,11 @@ potentially used by all virtual machines on this datastore.
         <span class="property-type">string</span>
     </dt>
     <dd>{{% md %}}The unique locator for the datastore.
-{{% /md %}}</dd>
-</dl>
+{{% /md %}}</dd></dl>
 {{% /choosable %}}
 
 {{% choosable language python %}}
-<dl class="resources-properties">
-
-    <dt class="property-"
+<dl class="resources-properties"><dt class="property-"
             title="">
         <span id="accessible_python">
 <a href="#accessible_python" style="color: inherit; text-decoration: inherit;">accessible</a>
@@ -834,8 +737,7 @@ potentially used by all virtual machines on this datastore.
     </dt>
     <dd>{{% md %}}The connectivity status of the datastore. If this is `false`,
 some other computed attributes may be out of date.
-{{% /md %}}</dd>
-    <dt class="property-"
+{{% /md %}}</dd><dt class="property-"
             title="">
         <span id="capacity_python">
 <a href="#capacity_python" style="color: inherit; text-decoration: inherit;">capacity</a>
@@ -844,8 +746,7 @@ some other computed attributes may be out of date.
         <span class="property-type">int</span>
     </dt>
     <dd>{{% md %}}Maximum capacity of the datastore, in megabytes.
-{{% /md %}}</dd>
-    <dt class="property-"
+{{% /md %}}</dd><dt class="property-"
             title="">
         <span id="free_space_python">
 <a href="#free_space_python" style="color: inherit; text-decoration: inherit;">free_<wbr>space</a>
@@ -854,8 +755,7 @@ some other computed attributes may be out of date.
         <span class="property-type">int</span>
     </dt>
     <dd>{{% md %}}Available space of this datastore, in megabytes.
-{{% /md %}}</dd>
-    <dt class="property-"
+{{% /md %}}</dd><dt class="property-"
             title="">
         <span id="id_python">
 <a href="#id_python" style="color: inherit; text-decoration: inherit;">id</a>
@@ -863,8 +763,7 @@ some other computed attributes may be out of date.
         <span class="property-indicator"></span>
         <span class="property-type">str</span>
     </dt>
-    <dd>{{% md %}}The provider-assigned unique ID for this managed resource.{{% /md %}}</dd>
-    <dt class="property-"
+    <dd>{{% md %}}The provider-assigned unique ID for this managed resource.{{% /md %}}</dd><dt class="property-"
             title="">
         <span id="maintenance_mode_python">
 <a href="#maintenance_mode_python" style="color: inherit; text-decoration: inherit;">maintenance_<wbr>mode</a>
@@ -873,8 +772,7 @@ some other computed attributes may be out of date.
         <span class="property-type">str</span>
     </dt>
     <dd>{{% md %}}The current maintenance mode state of the datastore.
-{{% /md %}}</dd>
-    <dt class="property-"
+{{% /md %}}</dd><dt class="property-"
             title="">
         <span id="multiple_host_access_python">
 <a href="#multiple_host_access_python" style="color: inherit; text-decoration: inherit;">multiple_<wbr>host_<wbr>access</a>
@@ -884,8 +782,7 @@ some other computed attributes may be out of date.
     </dt>
     <dd>{{% md %}}If `true`, more than one host in the datacenter has
 been configured with access to the datastore.
-{{% /md %}}</dd>
-    <dt class="property-"
+{{% /md %}}</dd><dt class="property-"
             title="">
         <span id="uncommitted_space_python">
 <a href="#uncommitted_space_python" style="color: inherit; text-decoration: inherit;">uncommitted_<wbr>space</a>
@@ -895,8 +792,7 @@ been configured with access to the datastore.
     </dt>
     <dd>{{% md %}}Total additional storage space, in megabytes,
 potentially used by all virtual machines on this datastore.
-{{% /md %}}</dd>
-    <dt class="property-"
+{{% /md %}}</dd><dt class="property-"
             title="">
         <span id="url_python">
 <a href="#url_python" style="color: inherit; text-decoration: inherit;">url</a>
@@ -905,8 +801,7 @@ potentially used by all virtual machines on this datastore.
         <span class="property-type">str</span>
     </dt>
     <dd>{{% md %}}The unique locator for the datastore.
-{{% /md %}}</dd>
-</dl>
+{{% /md %}}</dd></dl>
 {{% /choosable %}}
 
 
@@ -1033,9 +928,7 @@ The following state arguments are supported:
 
 
 {{% choosable language csharp %}}
-<dl class="resources-properties">
-
-    <dt class="property-optional"
+<dl class="resources-properties"><dt class="property-optional"
             title="Optional">
         <span id="state_accessible_csharp">
 <a href="#state_accessible_csharp" style="color: inherit; text-decoration: inherit;">Accessible</a>
@@ -1045,8 +938,7 @@ The following state arguments are supported:
     </dt>
     <dd>{{% md %}}The connectivity status of the datastore. If this is `false`,
 some other computed attributes may be out of date.
-{{% /md %}}</dd>
-    <dt class="property-optional"
+{{% /md %}}</dd><dt class="property-optional"
             title="Optional">
         <span id="state_capacity_csharp">
 <a href="#state_capacity_csharp" style="color: inherit; text-decoration: inherit;">Capacity</a>
@@ -1055,8 +947,7 @@ some other computed attributes may be out of date.
         <span class="property-type">int</span>
     </dt>
     <dd>{{% md %}}Maximum capacity of the datastore, in megabytes.
-{{% /md %}}</dd>
-    <dt class="property-optional"
+{{% /md %}}</dd><dt class="property-optional"
             title="Optional">
         <span id="state_customattributes_csharp">
 <a href="#state_customattributes_csharp" style="color: inherit; text-decoration: inherit;">Custom<wbr>Attributes</a>
@@ -1066,8 +957,7 @@ some other computed attributes may be out of date.
     </dt>
     <dd>{{% md %}}Map of custom attribute ids to attribute 
 value string to set on datastore resource.
-{{% /md %}}</dd>
-    <dt class="property-optional"
+{{% /md %}}</dd><dt class="property-optional"
             title="Optional">
         <span id="state_datastoreclusterid_csharp">
 <a href="#state_datastoreclusterid_csharp" style="color: inherit; text-decoration: inherit;">Datastore<wbr>Cluster<wbr>Id</a>
@@ -1078,8 +968,7 @@ value string to set on datastore resource.
     <dd>{{% md %}}The managed object
 ID of a datastore cluster to put this datastore in.
 Conflicts with `folder`.
-{{% /md %}}</dd>
-    <dt class="property-optional"
+{{% /md %}}</dd><dt class="property-optional"
             title="Optional">
         <span id="state_disks_csharp">
 <a href="#state_disks_csharp" style="color: inherit; text-decoration: inherit;">Disks</a>
@@ -1088,8 +977,7 @@ Conflicts with `folder`.
         <span class="property-type">List&lt;string&gt;</span>
     </dt>
     <dd>{{% md %}}The disks to use with the datastore.
-{{% /md %}}</dd>
-    <dt class="property-optional"
+{{% /md %}}</dd><dt class="property-optional"
             title="Optional">
         <span id="state_folder_csharp">
 <a href="#state_folder_csharp" style="color: inherit; text-decoration: inherit;">Folder</a>
@@ -1104,8 +992,7 @@ The provider will place a datastore named `test` in a datastore folder
 located at `/dc1/datastore/foo/bar`, with the final inventory path being
 `/dc1/datastore/foo/bar/test`. Conflicts with
 `datastore_cluster_id`.
-{{% /md %}}</dd>
-    <dt class="property-optional"
+{{% /md %}}</dd><dt class="property-optional"
             title="Optional">
         <span id="state_freespace_csharp">
 <a href="#state_freespace_csharp" style="color: inherit; text-decoration: inherit;">Free<wbr>Space</a>
@@ -1114,8 +1001,7 @@ located at `/dc1/datastore/foo/bar`, with the final inventory path being
         <span class="property-type">int</span>
     </dt>
     <dd>{{% md %}}Available space of this datastore, in megabytes.
-{{% /md %}}</dd>
-    <dt class="property-optional"
+{{% /md %}}</dd><dt class="property-optional"
             title="Optional">
         <span id="state_hostsystemid_csharp">
 <a href="#state_hostsystemid_csharp" style="color: inherit; text-decoration: inherit;">Host<wbr>System<wbr>Id</a>
@@ -1128,8 +1014,7 @@ the host to set the datastore up on. Note that this is not necessarily the
 only host that the datastore will be set up on - see
 here for more info. Forces a
 new resource if changed.
-{{% /md %}}</dd>
-    <dt class="property-optional"
+{{% /md %}}</dd><dt class="property-optional"
             title="Optional">
         <span id="state_maintenancemode_csharp">
 <a href="#state_maintenancemode_csharp" style="color: inherit; text-decoration: inherit;">Maintenance<wbr>Mode</a>
@@ -1138,8 +1023,7 @@ new resource if changed.
         <span class="property-type">string</span>
     </dt>
     <dd>{{% md %}}The current maintenance mode state of the datastore.
-{{% /md %}}</dd>
-    <dt class="property-optional"
+{{% /md %}}</dd><dt class="property-optional"
             title="Optional">
         <span id="state_multiplehostaccess_csharp">
 <a href="#state_multiplehostaccess_csharp" style="color: inherit; text-decoration: inherit;">Multiple<wbr>Host<wbr>Access</a>
@@ -1149,8 +1033,7 @@ new resource if changed.
     </dt>
     <dd>{{% md %}}If `true`, more than one host in the datacenter has
 been configured with access to the datastore.
-{{% /md %}}</dd>
-    <dt class="property-optional"
+{{% /md %}}</dd><dt class="property-optional"
             title="Optional">
         <span id="state_name_csharp">
 <a href="#state_name_csharp" style="color: inherit; text-decoration: inherit;">Name</a>
@@ -1160,8 +1043,7 @@ been configured with access to the datastore.
     </dt>
     <dd>{{% md %}}The name of the datastore. Forces a new resource if
 changed.
-{{% /md %}}</dd>
-    <dt class="property-optional"
+{{% /md %}}</dd><dt class="property-optional"
             title="Optional">
         <span id="state_tags_csharp">
 <a href="#state_tags_csharp" style="color: inherit; text-decoration: inherit;">Tags</a>
@@ -1170,8 +1052,7 @@ changed.
         <span class="property-type">List&lt;string&gt;</span>
     </dt>
     <dd>{{% md %}}The IDs of any tags to attach to this resource.
-{{% /md %}}</dd>
-    <dt class="property-optional"
+{{% /md %}}</dd><dt class="property-optional"
             title="Optional">
         <span id="state_uncommittedspace_csharp">
 <a href="#state_uncommittedspace_csharp" style="color: inherit; text-decoration: inherit;">Uncommitted<wbr>Space</a>
@@ -1181,8 +1062,7 @@ changed.
     </dt>
     <dd>{{% md %}}Total additional storage space, in megabytes,
 potentially used by all virtual machines on this datastore.
-{{% /md %}}</dd>
-    <dt class="property-optional"
+{{% /md %}}</dd><dt class="property-optional"
             title="Optional">
         <span id="state_url_csharp">
 <a href="#state_url_csharp" style="color: inherit; text-decoration: inherit;">Url</a>
@@ -1191,14 +1071,11 @@ potentially used by all virtual machines on this datastore.
         <span class="property-type">string</span>
     </dt>
     <dd>{{% md %}}The unique locator for the datastore.
-{{% /md %}}</dd>
-</dl>
+{{% /md %}}</dd></dl>
 {{% /choosable %}}
 
 {{% choosable language go %}}
-<dl class="resources-properties">
-
-    <dt class="property-optional"
+<dl class="resources-properties"><dt class="property-optional"
             title="Optional">
         <span id="state_accessible_go">
 <a href="#state_accessible_go" style="color: inherit; text-decoration: inherit;">Accessible</a>
@@ -1208,8 +1085,7 @@ potentially used by all virtual machines on this datastore.
     </dt>
     <dd>{{% md %}}The connectivity status of the datastore. If this is `false`,
 some other computed attributes may be out of date.
-{{% /md %}}</dd>
-    <dt class="property-optional"
+{{% /md %}}</dd><dt class="property-optional"
             title="Optional">
         <span id="state_capacity_go">
 <a href="#state_capacity_go" style="color: inherit; text-decoration: inherit;">Capacity</a>
@@ -1218,8 +1094,7 @@ some other computed attributes may be out of date.
         <span class="property-type">int</span>
     </dt>
     <dd>{{% md %}}Maximum capacity of the datastore, in megabytes.
-{{% /md %}}</dd>
-    <dt class="property-optional"
+{{% /md %}}</dd><dt class="property-optional"
             title="Optional">
         <span id="state_customattributes_go">
 <a href="#state_customattributes_go" style="color: inherit; text-decoration: inherit;">Custom<wbr>Attributes</a>
@@ -1229,8 +1104,7 @@ some other computed attributes may be out of date.
     </dt>
     <dd>{{% md %}}Map of custom attribute ids to attribute 
 value string to set on datastore resource.
-{{% /md %}}</dd>
-    <dt class="property-optional"
+{{% /md %}}</dd><dt class="property-optional"
             title="Optional">
         <span id="state_datastoreclusterid_go">
 <a href="#state_datastoreclusterid_go" style="color: inherit; text-decoration: inherit;">Datastore<wbr>Cluster<wbr>Id</a>
@@ -1241,8 +1115,7 @@ value string to set on datastore resource.
     <dd>{{% md %}}The managed object
 ID of a datastore cluster to put this datastore in.
 Conflicts with `folder`.
-{{% /md %}}</dd>
-    <dt class="property-optional"
+{{% /md %}}</dd><dt class="property-optional"
             title="Optional">
         <span id="state_disks_go">
 <a href="#state_disks_go" style="color: inherit; text-decoration: inherit;">Disks</a>
@@ -1251,8 +1124,7 @@ Conflicts with `folder`.
         <span class="property-type">[]string</span>
     </dt>
     <dd>{{% md %}}The disks to use with the datastore.
-{{% /md %}}</dd>
-    <dt class="property-optional"
+{{% /md %}}</dd><dt class="property-optional"
             title="Optional">
         <span id="state_folder_go">
 <a href="#state_folder_go" style="color: inherit; text-decoration: inherit;">Folder</a>
@@ -1267,8 +1139,7 @@ The provider will place a datastore named `test` in a datastore folder
 located at `/dc1/datastore/foo/bar`, with the final inventory path being
 `/dc1/datastore/foo/bar/test`. Conflicts with
 `datastore_cluster_id`.
-{{% /md %}}</dd>
-    <dt class="property-optional"
+{{% /md %}}</dd><dt class="property-optional"
             title="Optional">
         <span id="state_freespace_go">
 <a href="#state_freespace_go" style="color: inherit; text-decoration: inherit;">Free<wbr>Space</a>
@@ -1277,8 +1148,7 @@ located at `/dc1/datastore/foo/bar`, with the final inventory path being
         <span class="property-type">int</span>
     </dt>
     <dd>{{% md %}}Available space of this datastore, in megabytes.
-{{% /md %}}</dd>
-    <dt class="property-optional"
+{{% /md %}}</dd><dt class="property-optional"
             title="Optional">
         <span id="state_hostsystemid_go">
 <a href="#state_hostsystemid_go" style="color: inherit; text-decoration: inherit;">Host<wbr>System<wbr>Id</a>
@@ -1291,8 +1161,7 @@ the host to set the datastore up on. Note that this is not necessarily the
 only host that the datastore will be set up on - see
 here for more info. Forces a
 new resource if changed.
-{{% /md %}}</dd>
-    <dt class="property-optional"
+{{% /md %}}</dd><dt class="property-optional"
             title="Optional">
         <span id="state_maintenancemode_go">
 <a href="#state_maintenancemode_go" style="color: inherit; text-decoration: inherit;">Maintenance<wbr>Mode</a>
@@ -1301,8 +1170,7 @@ new resource if changed.
         <span class="property-type">string</span>
     </dt>
     <dd>{{% md %}}The current maintenance mode state of the datastore.
-{{% /md %}}</dd>
-    <dt class="property-optional"
+{{% /md %}}</dd><dt class="property-optional"
             title="Optional">
         <span id="state_multiplehostaccess_go">
 <a href="#state_multiplehostaccess_go" style="color: inherit; text-decoration: inherit;">Multiple<wbr>Host<wbr>Access</a>
@@ -1312,8 +1180,7 @@ new resource if changed.
     </dt>
     <dd>{{% md %}}If `true`, more than one host in the datacenter has
 been configured with access to the datastore.
-{{% /md %}}</dd>
-    <dt class="property-optional"
+{{% /md %}}</dd><dt class="property-optional"
             title="Optional">
         <span id="state_name_go">
 <a href="#state_name_go" style="color: inherit; text-decoration: inherit;">Name</a>
@@ -1323,8 +1190,7 @@ been configured with access to the datastore.
     </dt>
     <dd>{{% md %}}The name of the datastore. Forces a new resource if
 changed.
-{{% /md %}}</dd>
-    <dt class="property-optional"
+{{% /md %}}</dd><dt class="property-optional"
             title="Optional">
         <span id="state_tags_go">
 <a href="#state_tags_go" style="color: inherit; text-decoration: inherit;">Tags</a>
@@ -1333,8 +1199,7 @@ changed.
         <span class="property-type">[]string</span>
     </dt>
     <dd>{{% md %}}The IDs of any tags to attach to this resource.
-{{% /md %}}</dd>
-    <dt class="property-optional"
+{{% /md %}}</dd><dt class="property-optional"
             title="Optional">
         <span id="state_uncommittedspace_go">
 <a href="#state_uncommittedspace_go" style="color: inherit; text-decoration: inherit;">Uncommitted<wbr>Space</a>
@@ -1344,8 +1209,7 @@ changed.
     </dt>
     <dd>{{% md %}}Total additional storage space, in megabytes,
 potentially used by all virtual machines on this datastore.
-{{% /md %}}</dd>
-    <dt class="property-optional"
+{{% /md %}}</dd><dt class="property-optional"
             title="Optional">
         <span id="state_url_go">
 <a href="#state_url_go" style="color: inherit; text-decoration: inherit;">Url</a>
@@ -1354,14 +1218,11 @@ potentially used by all virtual machines on this datastore.
         <span class="property-type">string</span>
     </dt>
     <dd>{{% md %}}The unique locator for the datastore.
-{{% /md %}}</dd>
-</dl>
+{{% /md %}}</dd></dl>
 {{% /choosable %}}
 
 {{% choosable language nodejs %}}
-<dl class="resources-properties">
-
-    <dt class="property-optional"
+<dl class="resources-properties"><dt class="property-optional"
             title="Optional">
         <span id="state_accessible_nodejs">
 <a href="#state_accessible_nodejs" style="color: inherit; text-decoration: inherit;">accessible</a>
@@ -1371,8 +1232,7 @@ potentially used by all virtual machines on this datastore.
     </dt>
     <dd>{{% md %}}The connectivity status of the datastore. If this is `false`,
 some other computed attributes may be out of date.
-{{% /md %}}</dd>
-    <dt class="property-optional"
+{{% /md %}}</dd><dt class="property-optional"
             title="Optional">
         <span id="state_capacity_nodejs">
 <a href="#state_capacity_nodejs" style="color: inherit; text-decoration: inherit;">capacity</a>
@@ -1381,8 +1241,7 @@ some other computed attributes may be out of date.
         <span class="property-type">number</span>
     </dt>
     <dd>{{% md %}}Maximum capacity of the datastore, in megabytes.
-{{% /md %}}</dd>
-    <dt class="property-optional"
+{{% /md %}}</dd><dt class="property-optional"
             title="Optional">
         <span id="state_customattributes_nodejs">
 <a href="#state_customattributes_nodejs" style="color: inherit; text-decoration: inherit;">custom<wbr>Attributes</a>
@@ -1392,8 +1251,7 @@ some other computed attributes may be out of date.
     </dt>
     <dd>{{% md %}}Map of custom attribute ids to attribute 
 value string to set on datastore resource.
-{{% /md %}}</dd>
-    <dt class="property-optional"
+{{% /md %}}</dd><dt class="property-optional"
             title="Optional">
         <span id="state_datastoreclusterid_nodejs">
 <a href="#state_datastoreclusterid_nodejs" style="color: inherit; text-decoration: inherit;">datastore<wbr>Cluster<wbr>Id</a>
@@ -1404,8 +1262,7 @@ value string to set on datastore resource.
     <dd>{{% md %}}The managed object
 ID of a datastore cluster to put this datastore in.
 Conflicts with `folder`.
-{{% /md %}}</dd>
-    <dt class="property-optional"
+{{% /md %}}</dd><dt class="property-optional"
             title="Optional">
         <span id="state_disks_nodejs">
 <a href="#state_disks_nodejs" style="color: inherit; text-decoration: inherit;">disks</a>
@@ -1414,8 +1271,7 @@ Conflicts with `folder`.
         <span class="property-type">string[]</span>
     </dt>
     <dd>{{% md %}}The disks to use with the datastore.
-{{% /md %}}</dd>
-    <dt class="property-optional"
+{{% /md %}}</dd><dt class="property-optional"
             title="Optional">
         <span id="state_folder_nodejs">
 <a href="#state_folder_nodejs" style="color: inherit; text-decoration: inherit;">folder</a>
@@ -1430,8 +1286,7 @@ The provider will place a datastore named `test` in a datastore folder
 located at `/dc1/datastore/foo/bar`, with the final inventory path being
 `/dc1/datastore/foo/bar/test`. Conflicts with
 `datastore_cluster_id`.
-{{% /md %}}</dd>
-    <dt class="property-optional"
+{{% /md %}}</dd><dt class="property-optional"
             title="Optional">
         <span id="state_freespace_nodejs">
 <a href="#state_freespace_nodejs" style="color: inherit; text-decoration: inherit;">free<wbr>Space</a>
@@ -1440,8 +1295,7 @@ located at `/dc1/datastore/foo/bar`, with the final inventory path being
         <span class="property-type">number</span>
     </dt>
     <dd>{{% md %}}Available space of this datastore, in megabytes.
-{{% /md %}}</dd>
-    <dt class="property-optional"
+{{% /md %}}</dd><dt class="property-optional"
             title="Optional">
         <span id="state_hostsystemid_nodejs">
 <a href="#state_hostsystemid_nodejs" style="color: inherit; text-decoration: inherit;">host<wbr>System<wbr>Id</a>
@@ -1454,8 +1308,7 @@ the host to set the datastore up on. Note that this is not necessarily the
 only host that the datastore will be set up on - see
 here for more info. Forces a
 new resource if changed.
-{{% /md %}}</dd>
-    <dt class="property-optional"
+{{% /md %}}</dd><dt class="property-optional"
             title="Optional">
         <span id="state_maintenancemode_nodejs">
 <a href="#state_maintenancemode_nodejs" style="color: inherit; text-decoration: inherit;">maintenance<wbr>Mode</a>
@@ -1464,8 +1317,7 @@ new resource if changed.
         <span class="property-type">string</span>
     </dt>
     <dd>{{% md %}}The current maintenance mode state of the datastore.
-{{% /md %}}</dd>
-    <dt class="property-optional"
+{{% /md %}}</dd><dt class="property-optional"
             title="Optional">
         <span id="state_multiplehostaccess_nodejs">
 <a href="#state_multiplehostaccess_nodejs" style="color: inherit; text-decoration: inherit;">multiple<wbr>Host<wbr>Access</a>
@@ -1475,8 +1327,7 @@ new resource if changed.
     </dt>
     <dd>{{% md %}}If `true`, more than one host in the datacenter has
 been configured with access to the datastore.
-{{% /md %}}</dd>
-    <dt class="property-optional"
+{{% /md %}}</dd><dt class="property-optional"
             title="Optional">
         <span id="state_name_nodejs">
 <a href="#state_name_nodejs" style="color: inherit; text-decoration: inherit;">name</a>
@@ -1486,8 +1337,7 @@ been configured with access to the datastore.
     </dt>
     <dd>{{% md %}}The name of the datastore. Forces a new resource if
 changed.
-{{% /md %}}</dd>
-    <dt class="property-optional"
+{{% /md %}}</dd><dt class="property-optional"
             title="Optional">
         <span id="state_tags_nodejs">
 <a href="#state_tags_nodejs" style="color: inherit; text-decoration: inherit;">tags</a>
@@ -1496,8 +1346,7 @@ changed.
         <span class="property-type">string[]</span>
     </dt>
     <dd>{{% md %}}The IDs of any tags to attach to this resource.
-{{% /md %}}</dd>
-    <dt class="property-optional"
+{{% /md %}}</dd><dt class="property-optional"
             title="Optional">
         <span id="state_uncommittedspace_nodejs">
 <a href="#state_uncommittedspace_nodejs" style="color: inherit; text-decoration: inherit;">uncommitted<wbr>Space</a>
@@ -1507,8 +1356,7 @@ changed.
     </dt>
     <dd>{{% md %}}Total additional storage space, in megabytes,
 potentially used by all virtual machines on this datastore.
-{{% /md %}}</dd>
-    <dt class="property-optional"
+{{% /md %}}</dd><dt class="property-optional"
             title="Optional">
         <span id="state_url_nodejs">
 <a href="#state_url_nodejs" style="color: inherit; text-decoration: inherit;">url</a>
@@ -1517,14 +1365,11 @@ potentially used by all virtual machines on this datastore.
         <span class="property-type">string</span>
     </dt>
     <dd>{{% md %}}The unique locator for the datastore.
-{{% /md %}}</dd>
-</dl>
+{{% /md %}}</dd></dl>
 {{% /choosable %}}
 
 {{% choosable language python %}}
-<dl class="resources-properties">
-
-    <dt class="property-optional"
+<dl class="resources-properties"><dt class="property-optional"
             title="Optional">
         <span id="state_accessible_python">
 <a href="#state_accessible_python" style="color: inherit; text-decoration: inherit;">accessible</a>
@@ -1534,8 +1379,7 @@ potentially used by all virtual machines on this datastore.
     </dt>
     <dd>{{% md %}}The connectivity status of the datastore. If this is `false`,
 some other computed attributes may be out of date.
-{{% /md %}}</dd>
-    <dt class="property-optional"
+{{% /md %}}</dd><dt class="property-optional"
             title="Optional">
         <span id="state_capacity_python">
 <a href="#state_capacity_python" style="color: inherit; text-decoration: inherit;">capacity</a>
@@ -1544,8 +1388,7 @@ some other computed attributes may be out of date.
         <span class="property-type">int</span>
     </dt>
     <dd>{{% md %}}Maximum capacity of the datastore, in megabytes.
-{{% /md %}}</dd>
-    <dt class="property-optional"
+{{% /md %}}</dd><dt class="property-optional"
             title="Optional">
         <span id="state_custom_attributes_python">
 <a href="#state_custom_attributes_python" style="color: inherit; text-decoration: inherit;">custom_<wbr>attributes</a>
@@ -1555,8 +1398,7 @@ some other computed attributes may be out of date.
     </dt>
     <dd>{{% md %}}Map of custom attribute ids to attribute 
 value string to set on datastore resource.
-{{% /md %}}</dd>
-    <dt class="property-optional"
+{{% /md %}}</dd><dt class="property-optional"
             title="Optional">
         <span id="state_datastore_cluster_id_python">
 <a href="#state_datastore_cluster_id_python" style="color: inherit; text-decoration: inherit;">datastore_<wbr>cluster_<wbr>id</a>
@@ -1567,8 +1409,7 @@ value string to set on datastore resource.
     <dd>{{% md %}}The managed object
 ID of a datastore cluster to put this datastore in.
 Conflicts with `folder`.
-{{% /md %}}</dd>
-    <dt class="property-optional"
+{{% /md %}}</dd><dt class="property-optional"
             title="Optional">
         <span id="state_disks_python">
 <a href="#state_disks_python" style="color: inherit; text-decoration: inherit;">disks</a>
@@ -1577,8 +1418,7 @@ Conflicts with `folder`.
         <span class="property-type">Sequence[str]</span>
     </dt>
     <dd>{{% md %}}The disks to use with the datastore.
-{{% /md %}}</dd>
-    <dt class="property-optional"
+{{% /md %}}</dd><dt class="property-optional"
             title="Optional">
         <span id="state_folder_python">
 <a href="#state_folder_python" style="color: inherit; text-decoration: inherit;">folder</a>
@@ -1593,8 +1433,7 @@ The provider will place a datastore named `test` in a datastore folder
 located at `/dc1/datastore/foo/bar`, with the final inventory path being
 `/dc1/datastore/foo/bar/test`. Conflicts with
 `datastore_cluster_id`.
-{{% /md %}}</dd>
-    <dt class="property-optional"
+{{% /md %}}</dd><dt class="property-optional"
             title="Optional">
         <span id="state_free_space_python">
 <a href="#state_free_space_python" style="color: inherit; text-decoration: inherit;">free_<wbr>space</a>
@@ -1603,8 +1442,7 @@ located at `/dc1/datastore/foo/bar`, with the final inventory path being
         <span class="property-type">int</span>
     </dt>
     <dd>{{% md %}}Available space of this datastore, in megabytes.
-{{% /md %}}</dd>
-    <dt class="property-optional"
+{{% /md %}}</dd><dt class="property-optional"
             title="Optional">
         <span id="state_host_system_id_python">
 <a href="#state_host_system_id_python" style="color: inherit; text-decoration: inherit;">host_<wbr>system_<wbr>id</a>
@@ -1617,8 +1455,7 @@ the host to set the datastore up on. Note that this is not necessarily the
 only host that the datastore will be set up on - see
 here for more info. Forces a
 new resource if changed.
-{{% /md %}}</dd>
-    <dt class="property-optional"
+{{% /md %}}</dd><dt class="property-optional"
             title="Optional">
         <span id="state_maintenance_mode_python">
 <a href="#state_maintenance_mode_python" style="color: inherit; text-decoration: inherit;">maintenance_<wbr>mode</a>
@@ -1627,8 +1464,7 @@ new resource if changed.
         <span class="property-type">str</span>
     </dt>
     <dd>{{% md %}}The current maintenance mode state of the datastore.
-{{% /md %}}</dd>
-    <dt class="property-optional"
+{{% /md %}}</dd><dt class="property-optional"
             title="Optional">
         <span id="state_multiple_host_access_python">
 <a href="#state_multiple_host_access_python" style="color: inherit; text-decoration: inherit;">multiple_<wbr>host_<wbr>access</a>
@@ -1638,8 +1474,7 @@ new resource if changed.
     </dt>
     <dd>{{% md %}}If `true`, more than one host in the datacenter has
 been configured with access to the datastore.
-{{% /md %}}</dd>
-    <dt class="property-optional"
+{{% /md %}}</dd><dt class="property-optional"
             title="Optional">
         <span id="state_name_python">
 <a href="#state_name_python" style="color: inherit; text-decoration: inherit;">name</a>
@@ -1649,8 +1484,7 @@ been configured with access to the datastore.
     </dt>
     <dd>{{% md %}}The name of the datastore. Forces a new resource if
 changed.
-{{% /md %}}</dd>
-    <dt class="property-optional"
+{{% /md %}}</dd><dt class="property-optional"
             title="Optional">
         <span id="state_tags_python">
 <a href="#state_tags_python" style="color: inherit; text-decoration: inherit;">tags</a>
@@ -1659,8 +1493,7 @@ changed.
         <span class="property-type">Sequence[str]</span>
     </dt>
     <dd>{{% md %}}The IDs of any tags to attach to this resource.
-{{% /md %}}</dd>
-    <dt class="property-optional"
+{{% /md %}}</dd><dt class="property-optional"
             title="Optional">
         <span id="state_uncommitted_space_python">
 <a href="#state_uncommitted_space_python" style="color: inherit; text-decoration: inherit;">uncommitted_<wbr>space</a>
@@ -1670,8 +1503,7 @@ changed.
     </dt>
     <dd>{{% md %}}Total additional storage space, in megabytes,
 potentially used by all virtual machines on this datastore.
-{{% /md %}}</dd>
-    <dt class="property-optional"
+{{% /md %}}</dd><dt class="property-optional"
             title="Optional">
         <span id="state_url_python">
 <a href="#state_url_python" style="color: inherit; text-decoration: inherit;">url</a>
@@ -1680,8 +1512,7 @@ potentially used by all virtual machines on this datastore.
         <span class="property-type">str</span>
     </dt>
     <dd>{{% md %}}The unique locator for the datastore.
-{{% /md %}}</dd>
-</dl>
+{{% /md %}}</dd></dl>
 {{% /choosable %}}
 
 
@@ -1697,6 +1528,6 @@ potentially used by all virtual machines on this datastore.
 	<dt>License</dt>
 	<dd>Apache-2.0</dd>
 	<dt>Notes</dt>
-	<dd>This Pulumi package is based on the [`vsphere` Terraform Provider](https://github.com/hashicorp/terraform-provider-vsphere).</dd>
+	<dd>{{% md %}}This Pulumi package is based on the [`vsphere` Terraform Provider](https://github.com/hashicorp/terraform-provider-vsphere).{{% /md %}}</dd>
 </dl>
 

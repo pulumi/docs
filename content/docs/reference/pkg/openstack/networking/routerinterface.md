@@ -13,11 +13,17 @@ meta_desc: "Documentation for the openstack.networking.RouterInterface resource 
 Manages a V2 router interface resource within OpenStack.
 
 {{% examples %}}
+
 ## Example Usage
 
 {{< chooser language "typescript,python,go,csharp" / >}}
 
-{{% example csharp %}}
+
+
+
+
+{{< example csharp >}}
+
 ```csharp
 using Pulumi;
 using OpenStack = Pulumi.OpenStack;
@@ -50,9 +56,12 @@ class MyStack : Stack
 }
 ```
 
-{{% /example %}}
 
-{{% example go %}}
+{{< /example >}}
+
+
+{{< example go >}}
+
 ```go
 package main
 
@@ -95,9 +104,12 @@ func main() {
 }
 ```
 
-{{% /example %}}
 
-{{% example python %}}
+{{< /example >}}
+
+
+{{< example python >}}
+
 ```python
 import pulumi
 import pulumi_openstack as openstack
@@ -113,9 +125,12 @@ router_interface1 = openstack.networking.RouterInterface("routerInterface1",
     subnet_id=subnet1.id)
 ```
 
-{{% /example %}}
 
-{{% example typescript %}}
+{{< /example >}}
+
+
+{{< example typescript >}}
+
 
 ```typescript
 import * as pulumi from "@pulumi/pulumi";
@@ -138,9 +153,16 @@ const routerInterface1 = new openstack.networking.RouterInterface("router_interf
 });
 ```
 
-{{% /example %}}
+
+{{< /example >}}
+
+
+
+
 
 {{% /examples %}}
+
+
 
 
 ## Create a RouterInterface Resource {#create}
@@ -165,9 +187,7 @@ const routerInterface1 = new openstack.networking.RouterInterface("router_interf
 
 {{% choosable language nodejs %}}
 
-<dl class="resources-properties">
-  
-    <dt
+<dl class="resources-properties"><dt
         class="property-required" title="Required">
         <span>name</span>
         <span class="property-indicator"></span>
@@ -175,9 +195,7 @@ const routerInterface1 = new openstack.networking.RouterInterface("router_interf
     </dt>
     <dd>
       The unique name of the resource.
-    </dd>
-  
-    <dt
+    </dd><dt
         class="property-required" title="Required">
         <span>args</span>
         <span class="property-indicator"></span>
@@ -185,9 +203,7 @@ const routerInterface1 = new openstack.networking.RouterInterface("router_interf
     </dt>
     <dd>
       The arguments to resource properties.
-    </dd>
-  
-    <dt
+    </dd><dt
         class="property-optional" title="Optional">
         <span>opts</span>
         <span class="property-indicator"></span>
@@ -195,10 +211,7 @@ const routerInterface1 = new openstack.networking.RouterInterface("router_interf
     </dt>
     <dd>
       Bag of options to control resource&#39;s behavior.
-    </dd>
-  
-
-</dl>
+    </dd></dl>
 
 {{% /choosable %}}
 
@@ -224,9 +237,7 @@ const routerInterface1 = new openstack.networking.RouterInterface("router_interf
 
 {{% choosable language go %}}
 
-<dl class="resources-properties">
-  
-    <dt
+<dl class="resources-properties"><dt
         class="property-optional" title="Optional">
         <span>ctx</span>
         <span class="property-indicator"></span>
@@ -234,9 +245,7 @@ const routerInterface1 = new openstack.networking.RouterInterface("router_interf
     </dt>
     <dd>
       Context object for the current deployment.
-    </dd>
-  
-    <dt
+    </dd><dt
         class="property-required" title="Required">
         <span>name</span>
         <span class="property-indicator"></span>
@@ -244,9 +253,7 @@ const routerInterface1 = new openstack.networking.RouterInterface("router_interf
     </dt>
     <dd>
       The unique name of the resource.
-    </dd>
-  
-    <dt
+    </dd><dt
         class="property-required" title="Required">
         <span>args</span>
         <span class="property-indicator"></span>
@@ -254,9 +261,7 @@ const routerInterface1 = new openstack.networking.RouterInterface("router_interf
     </dt>
     <dd>
       The arguments to resource properties.
-    </dd>
-  
-    <dt
+    </dd><dt
         class="property-optional" title="Optional">
         <span>opts</span>
         <span class="property-indicator"></span>
@@ -264,18 +269,13 @@ const routerInterface1 = new openstack.networking.RouterInterface("router_interf
     </dt>
     <dd>
       Bag of options to control resource&#39;s behavior.
-    </dd>
-  
-
-</dl>
+    </dd></dl>
 
 {{% /choosable %}}
 
 {{% choosable language csharp %}}
 
-<dl class="resources-properties">
-  
-    <dt
+<dl class="resources-properties"><dt
         class="property-required" title="Required">
         <span>name</span>
         <span class="property-indicator"></span>
@@ -283,9 +283,7 @@ const routerInterface1 = new openstack.networking.RouterInterface("router_interf
     </dt>
     <dd>
       The unique name of the resource.
-    </dd>
-  
-    <dt
+    </dd><dt
         class="property-required" title="Required">
         <span>args</span>
         <span class="property-indicator"></span>
@@ -293,9 +291,7 @@ const routerInterface1 = new openstack.networking.RouterInterface("router_interf
     </dt>
     <dd>
       The arguments to resource properties.
-    </dd>
-  
-    <dt
+    </dd><dt
         class="property-optional" title="Optional">
         <span>opts</span>
         <span class="property-indicator"></span>
@@ -303,10 +299,7 @@ const routerInterface1 = new openstack.networking.RouterInterface("router_interf
     </dt>
     <dd>
       Bag of options to control resource&#39;s behavior.
-    </dd>
-  
-
-</dl>
+    </dd></dl>
 
 {{% /choosable %}}
 
@@ -321,9 +314,7 @@ The RouterInterface resource accepts the following [input]({{< relref "/docs/int
 
 
 {{% choosable language csharp %}}
-<dl class="resources-properties">
-
-    <dt class="property-required"
+<dl class="resources-properties"><dt class="property-required"
             title="Required">
         <span id="routerid_csharp">
 <a href="#routerid_csharp" style="color: inherit; text-decoration: inherit;">Router<wbr>Id</a>
@@ -333,8 +324,7 @@ The RouterInterface resource accepts the following [input]({{< relref "/docs/int
     </dt>
     <dd>{{% md %}}ID of the router this interface belongs to. Changing
 this creates a new router interface.
-{{% /md %}}</dd>
-    <dt class="property-optional"
+{{% /md %}}</dd><dt class="property-optional"
             title="Optional">
         <span id="portid_csharp">
 <a href="#portid_csharp" style="color: inherit; text-decoration: inherit;">Port<wbr>Id</a>
@@ -344,8 +334,7 @@ this creates a new router interface.
     </dt>
     <dd>{{% md %}}ID of the port this interface connects to. Changing
 this creates a new router interface.
-{{% /md %}}</dd>
-    <dt class="property-optional"
+{{% /md %}}</dd><dt class="property-optional"
             title="Optional">
         <span id="region_csharp">
 <a href="#region_csharp" style="color: inherit; text-decoration: inherit;">Region</a>
@@ -357,8 +346,7 @@ this creates a new router interface.
 A networking client is needed to create a router. If omitted, the
 `region` argument of the provider is used. Changing this creates a new
 router interface.
-{{% /md %}}</dd>
-    <dt class="property-optional"
+{{% /md %}}</dd><dt class="property-optional"
             title="Optional">
         <span id="subnetid_csharp">
 <a href="#subnetid_csharp" style="color: inherit; text-decoration: inherit;">Subnet<wbr>Id</a>
@@ -368,14 +356,11 @@ router interface.
     </dt>
     <dd>{{% md %}}ID of the subnet this interface connects to. Changing
 this creates a new router interface.
-{{% /md %}}</dd>
-</dl>
+{{% /md %}}</dd></dl>
 {{% /choosable %}}
 
 {{% choosable language go %}}
-<dl class="resources-properties">
-
-    <dt class="property-required"
+<dl class="resources-properties"><dt class="property-required"
             title="Required">
         <span id="routerid_go">
 <a href="#routerid_go" style="color: inherit; text-decoration: inherit;">Router<wbr>Id</a>
@@ -385,8 +370,7 @@ this creates a new router interface.
     </dt>
     <dd>{{% md %}}ID of the router this interface belongs to. Changing
 this creates a new router interface.
-{{% /md %}}</dd>
-    <dt class="property-optional"
+{{% /md %}}</dd><dt class="property-optional"
             title="Optional">
         <span id="portid_go">
 <a href="#portid_go" style="color: inherit; text-decoration: inherit;">Port<wbr>Id</a>
@@ -396,8 +380,7 @@ this creates a new router interface.
     </dt>
     <dd>{{% md %}}ID of the port this interface connects to. Changing
 this creates a new router interface.
-{{% /md %}}</dd>
-    <dt class="property-optional"
+{{% /md %}}</dd><dt class="property-optional"
             title="Optional">
         <span id="region_go">
 <a href="#region_go" style="color: inherit; text-decoration: inherit;">Region</a>
@@ -409,8 +392,7 @@ this creates a new router interface.
 A networking client is needed to create a router. If omitted, the
 `region` argument of the provider is used. Changing this creates a new
 router interface.
-{{% /md %}}</dd>
-    <dt class="property-optional"
+{{% /md %}}</dd><dt class="property-optional"
             title="Optional">
         <span id="subnetid_go">
 <a href="#subnetid_go" style="color: inherit; text-decoration: inherit;">Subnet<wbr>Id</a>
@@ -420,14 +402,11 @@ router interface.
     </dt>
     <dd>{{% md %}}ID of the subnet this interface connects to. Changing
 this creates a new router interface.
-{{% /md %}}</dd>
-</dl>
+{{% /md %}}</dd></dl>
 {{% /choosable %}}
 
 {{% choosable language nodejs %}}
-<dl class="resources-properties">
-
-    <dt class="property-required"
+<dl class="resources-properties"><dt class="property-required"
             title="Required">
         <span id="routerid_nodejs">
 <a href="#routerid_nodejs" style="color: inherit; text-decoration: inherit;">router<wbr>Id</a>
@@ -437,8 +416,7 @@ this creates a new router interface.
     </dt>
     <dd>{{% md %}}ID of the router this interface belongs to. Changing
 this creates a new router interface.
-{{% /md %}}</dd>
-    <dt class="property-optional"
+{{% /md %}}</dd><dt class="property-optional"
             title="Optional">
         <span id="portid_nodejs">
 <a href="#portid_nodejs" style="color: inherit; text-decoration: inherit;">port<wbr>Id</a>
@@ -448,8 +426,7 @@ this creates a new router interface.
     </dt>
     <dd>{{% md %}}ID of the port this interface connects to. Changing
 this creates a new router interface.
-{{% /md %}}</dd>
-    <dt class="property-optional"
+{{% /md %}}</dd><dt class="property-optional"
             title="Optional">
         <span id="region_nodejs">
 <a href="#region_nodejs" style="color: inherit; text-decoration: inherit;">region</a>
@@ -461,8 +438,7 @@ this creates a new router interface.
 A networking client is needed to create a router. If omitted, the
 `region` argument of the provider is used. Changing this creates a new
 router interface.
-{{% /md %}}</dd>
-    <dt class="property-optional"
+{{% /md %}}</dd><dt class="property-optional"
             title="Optional">
         <span id="subnetid_nodejs">
 <a href="#subnetid_nodejs" style="color: inherit; text-decoration: inherit;">subnet<wbr>Id</a>
@@ -472,14 +448,11 @@ router interface.
     </dt>
     <dd>{{% md %}}ID of the subnet this interface connects to. Changing
 this creates a new router interface.
-{{% /md %}}</dd>
-</dl>
+{{% /md %}}</dd></dl>
 {{% /choosable %}}
 
 {{% choosable language python %}}
-<dl class="resources-properties">
-
-    <dt class="property-required"
+<dl class="resources-properties"><dt class="property-required"
             title="Required">
         <span id="router_id_python">
 <a href="#router_id_python" style="color: inherit; text-decoration: inherit;">router_<wbr>id</a>
@@ -489,8 +462,7 @@ this creates a new router interface.
     </dt>
     <dd>{{% md %}}ID of the router this interface belongs to. Changing
 this creates a new router interface.
-{{% /md %}}</dd>
-    <dt class="property-optional"
+{{% /md %}}</dd><dt class="property-optional"
             title="Optional">
         <span id="port_id_python">
 <a href="#port_id_python" style="color: inherit; text-decoration: inherit;">port_<wbr>id</a>
@@ -500,8 +472,7 @@ this creates a new router interface.
     </dt>
     <dd>{{% md %}}ID of the port this interface connects to. Changing
 this creates a new router interface.
-{{% /md %}}</dd>
-    <dt class="property-optional"
+{{% /md %}}</dd><dt class="property-optional"
             title="Optional">
         <span id="region_python">
 <a href="#region_python" style="color: inherit; text-decoration: inherit;">region</a>
@@ -513,8 +484,7 @@ this creates a new router interface.
 A networking client is needed to create a router. If omitted, the
 `region` argument of the provider is used. Changing this creates a new
 router interface.
-{{% /md %}}</dd>
-    <dt class="property-optional"
+{{% /md %}}</dd><dt class="property-optional"
             title="Optional">
         <span id="subnet_id_python">
 <a href="#subnet_id_python" style="color: inherit; text-decoration: inherit;">subnet_<wbr>id</a>
@@ -524,8 +494,7 @@ router interface.
     </dt>
     <dd>{{% md %}}ID of the subnet this interface connects to. Changing
 this creates a new router interface.
-{{% /md %}}</dd>
-</dl>
+{{% /md %}}</dd></dl>
 {{% /choosable %}}
 
 
@@ -536,9 +505,7 @@ All [input](#inputs) properties are implicitly available as output properties. A
 
 
 {{% choosable language csharp %}}
-<dl class="resources-properties">
-
-    <dt class="property-"
+<dl class="resources-properties"><dt class="property-"
             title="">
         <span id="id_csharp">
 <a href="#id_csharp" style="color: inherit; text-decoration: inherit;">Id</a>
@@ -546,14 +513,11 @@ All [input](#inputs) properties are implicitly available as output properties. A
         <span class="property-indicator"></span>
         <span class="property-type">string</span>
     </dt>
-    <dd>{{% md %}}The provider-assigned unique ID for this managed resource.{{% /md %}}</dd>
-</dl>
+    <dd>{{% md %}}The provider-assigned unique ID for this managed resource.{{% /md %}}</dd></dl>
 {{% /choosable %}}
 
 {{% choosable language go %}}
-<dl class="resources-properties">
-
-    <dt class="property-"
+<dl class="resources-properties"><dt class="property-"
             title="">
         <span id="id_go">
 <a href="#id_go" style="color: inherit; text-decoration: inherit;">Id</a>
@@ -561,14 +525,11 @@ All [input](#inputs) properties are implicitly available as output properties. A
         <span class="property-indicator"></span>
         <span class="property-type">string</span>
     </dt>
-    <dd>{{% md %}}The provider-assigned unique ID for this managed resource.{{% /md %}}</dd>
-</dl>
+    <dd>{{% md %}}The provider-assigned unique ID for this managed resource.{{% /md %}}</dd></dl>
 {{% /choosable %}}
 
 {{% choosable language nodejs %}}
-<dl class="resources-properties">
-
-    <dt class="property-"
+<dl class="resources-properties"><dt class="property-"
             title="">
         <span id="id_nodejs">
 <a href="#id_nodejs" style="color: inherit; text-decoration: inherit;">id</a>
@@ -576,14 +537,11 @@ All [input](#inputs) properties are implicitly available as output properties. A
         <span class="property-indicator"></span>
         <span class="property-type">string</span>
     </dt>
-    <dd>{{% md %}}The provider-assigned unique ID for this managed resource.{{% /md %}}</dd>
-</dl>
+    <dd>{{% md %}}The provider-assigned unique ID for this managed resource.{{% /md %}}</dd></dl>
 {{% /choosable %}}
 
 {{% choosable language python %}}
-<dl class="resources-properties">
-
-    <dt class="property-"
+<dl class="resources-properties"><dt class="property-"
             title="">
         <span id="id_python">
 <a href="#id_python" style="color: inherit; text-decoration: inherit;">id</a>
@@ -591,8 +549,7 @@ All [input](#inputs) properties are implicitly available as output properties. A
         <span class="property-indicator"></span>
         <span class="property-type">str</span>
     </dt>
-    <dd>{{% md %}}The provider-assigned unique ID for this managed resource.{{% /md %}}</dd>
-</dl>
+    <dd>{{% md %}}The provider-assigned unique ID for this managed resource.{{% /md %}}</dd></dl>
 {{% /choosable %}}
 
 
@@ -719,9 +676,7 @@ The following state arguments are supported:
 
 
 {{% choosable language csharp %}}
-<dl class="resources-properties">
-
-    <dt class="property-optional"
+<dl class="resources-properties"><dt class="property-optional"
             title="Optional">
         <span id="state_portid_csharp">
 <a href="#state_portid_csharp" style="color: inherit; text-decoration: inherit;">Port<wbr>Id</a>
@@ -731,8 +686,7 @@ The following state arguments are supported:
     </dt>
     <dd>{{% md %}}ID of the port this interface connects to. Changing
 this creates a new router interface.
-{{% /md %}}</dd>
-    <dt class="property-optional"
+{{% /md %}}</dd><dt class="property-optional"
             title="Optional">
         <span id="state_region_csharp">
 <a href="#state_region_csharp" style="color: inherit; text-decoration: inherit;">Region</a>
@@ -744,8 +698,7 @@ this creates a new router interface.
 A networking client is needed to create a router. If omitted, the
 `region` argument of the provider is used. Changing this creates a new
 router interface.
-{{% /md %}}</dd>
-    <dt class="property-optional"
+{{% /md %}}</dd><dt class="property-optional"
             title="Optional">
         <span id="state_routerid_csharp">
 <a href="#state_routerid_csharp" style="color: inherit; text-decoration: inherit;">Router<wbr>Id</a>
@@ -755,8 +708,7 @@ router interface.
     </dt>
     <dd>{{% md %}}ID of the router this interface belongs to. Changing
 this creates a new router interface.
-{{% /md %}}</dd>
-    <dt class="property-optional"
+{{% /md %}}</dd><dt class="property-optional"
             title="Optional">
         <span id="state_subnetid_csharp">
 <a href="#state_subnetid_csharp" style="color: inherit; text-decoration: inherit;">Subnet<wbr>Id</a>
@@ -766,14 +718,11 @@ this creates a new router interface.
     </dt>
     <dd>{{% md %}}ID of the subnet this interface connects to. Changing
 this creates a new router interface.
-{{% /md %}}</dd>
-</dl>
+{{% /md %}}</dd></dl>
 {{% /choosable %}}
 
 {{% choosable language go %}}
-<dl class="resources-properties">
-
-    <dt class="property-optional"
+<dl class="resources-properties"><dt class="property-optional"
             title="Optional">
         <span id="state_portid_go">
 <a href="#state_portid_go" style="color: inherit; text-decoration: inherit;">Port<wbr>Id</a>
@@ -783,8 +732,7 @@ this creates a new router interface.
     </dt>
     <dd>{{% md %}}ID of the port this interface connects to. Changing
 this creates a new router interface.
-{{% /md %}}</dd>
-    <dt class="property-optional"
+{{% /md %}}</dd><dt class="property-optional"
             title="Optional">
         <span id="state_region_go">
 <a href="#state_region_go" style="color: inherit; text-decoration: inherit;">Region</a>
@@ -796,8 +744,7 @@ this creates a new router interface.
 A networking client is needed to create a router. If omitted, the
 `region` argument of the provider is used. Changing this creates a new
 router interface.
-{{% /md %}}</dd>
-    <dt class="property-optional"
+{{% /md %}}</dd><dt class="property-optional"
             title="Optional">
         <span id="state_routerid_go">
 <a href="#state_routerid_go" style="color: inherit; text-decoration: inherit;">Router<wbr>Id</a>
@@ -807,8 +754,7 @@ router interface.
     </dt>
     <dd>{{% md %}}ID of the router this interface belongs to. Changing
 this creates a new router interface.
-{{% /md %}}</dd>
-    <dt class="property-optional"
+{{% /md %}}</dd><dt class="property-optional"
             title="Optional">
         <span id="state_subnetid_go">
 <a href="#state_subnetid_go" style="color: inherit; text-decoration: inherit;">Subnet<wbr>Id</a>
@@ -818,14 +764,11 @@ this creates a new router interface.
     </dt>
     <dd>{{% md %}}ID of the subnet this interface connects to. Changing
 this creates a new router interface.
-{{% /md %}}</dd>
-</dl>
+{{% /md %}}</dd></dl>
 {{% /choosable %}}
 
 {{% choosable language nodejs %}}
-<dl class="resources-properties">
-
-    <dt class="property-optional"
+<dl class="resources-properties"><dt class="property-optional"
             title="Optional">
         <span id="state_portid_nodejs">
 <a href="#state_portid_nodejs" style="color: inherit; text-decoration: inherit;">port<wbr>Id</a>
@@ -835,8 +778,7 @@ this creates a new router interface.
     </dt>
     <dd>{{% md %}}ID of the port this interface connects to. Changing
 this creates a new router interface.
-{{% /md %}}</dd>
-    <dt class="property-optional"
+{{% /md %}}</dd><dt class="property-optional"
             title="Optional">
         <span id="state_region_nodejs">
 <a href="#state_region_nodejs" style="color: inherit; text-decoration: inherit;">region</a>
@@ -848,8 +790,7 @@ this creates a new router interface.
 A networking client is needed to create a router. If omitted, the
 `region` argument of the provider is used. Changing this creates a new
 router interface.
-{{% /md %}}</dd>
-    <dt class="property-optional"
+{{% /md %}}</dd><dt class="property-optional"
             title="Optional">
         <span id="state_routerid_nodejs">
 <a href="#state_routerid_nodejs" style="color: inherit; text-decoration: inherit;">router<wbr>Id</a>
@@ -859,8 +800,7 @@ router interface.
     </dt>
     <dd>{{% md %}}ID of the router this interface belongs to. Changing
 this creates a new router interface.
-{{% /md %}}</dd>
-    <dt class="property-optional"
+{{% /md %}}</dd><dt class="property-optional"
             title="Optional">
         <span id="state_subnetid_nodejs">
 <a href="#state_subnetid_nodejs" style="color: inherit; text-decoration: inherit;">subnet<wbr>Id</a>
@@ -870,14 +810,11 @@ this creates a new router interface.
     </dt>
     <dd>{{% md %}}ID of the subnet this interface connects to. Changing
 this creates a new router interface.
-{{% /md %}}</dd>
-</dl>
+{{% /md %}}</dd></dl>
 {{% /choosable %}}
 
 {{% choosable language python %}}
-<dl class="resources-properties">
-
-    <dt class="property-optional"
+<dl class="resources-properties"><dt class="property-optional"
             title="Optional">
         <span id="state_port_id_python">
 <a href="#state_port_id_python" style="color: inherit; text-decoration: inherit;">port_<wbr>id</a>
@@ -887,8 +824,7 @@ this creates a new router interface.
     </dt>
     <dd>{{% md %}}ID of the port this interface connects to. Changing
 this creates a new router interface.
-{{% /md %}}</dd>
-    <dt class="property-optional"
+{{% /md %}}</dd><dt class="property-optional"
             title="Optional">
         <span id="state_region_python">
 <a href="#state_region_python" style="color: inherit; text-decoration: inherit;">region</a>
@@ -900,8 +836,7 @@ this creates a new router interface.
 A networking client is needed to create a router. If omitted, the
 `region` argument of the provider is used. Changing this creates a new
 router interface.
-{{% /md %}}</dd>
-    <dt class="property-optional"
+{{% /md %}}</dd><dt class="property-optional"
             title="Optional">
         <span id="state_router_id_python">
 <a href="#state_router_id_python" style="color: inherit; text-decoration: inherit;">router_<wbr>id</a>
@@ -911,8 +846,7 @@ router interface.
     </dt>
     <dd>{{% md %}}ID of the router this interface belongs to. Changing
 this creates a new router interface.
-{{% /md %}}</dd>
-    <dt class="property-optional"
+{{% /md %}}</dd><dt class="property-optional"
             title="Optional">
         <span id="state_subnet_id_python">
 <a href="#state_subnet_id_python" style="color: inherit; text-decoration: inherit;">subnet_<wbr>id</a>
@@ -922,8 +856,7 @@ this creates a new router interface.
     </dt>
     <dd>{{% md %}}ID of the subnet this interface connects to. Changing
 this creates a new router interface.
-{{% /md %}}</dd>
-</dl>
+{{% /md %}}</dd></dl>
 {{% /choosable %}}
 
 
@@ -949,6 +882,6 @@ Router Interfaces can be imported using the port `id`, e.g. $ openstack port lis
 	<dt>License</dt>
 	<dd>Apache-2.0</dd>
 	<dt>Notes</dt>
-	<dd>This Pulumi package is based on the [`openstack` Terraform Provider](https://github.com/terraform-provider-openstack/terraform-provider-openstack).</dd>
+	<dd>{{% md %}}This Pulumi package is based on the [`openstack` Terraform Provider](https://github.com/terraform-provider-openstack/terraform-provider-openstack).{{% /md %}}</dd>
 </dl>
 

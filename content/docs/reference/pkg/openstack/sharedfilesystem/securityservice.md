@@ -24,11 +24,17 @@ Microsoft Active Directory.
 Minimum supported Manila microversion is 2.7.
 
 {{% examples %}}
+
 ## Example Usage
 
 {{< chooser language "typescript,python,go,csharp" / >}}
 
-{{% example csharp %}}
+
+
+
+
+{{< example csharp >}}
+
 ```csharp
 using Pulumi;
 using OpenStack = Pulumi.OpenStack;
@@ -53,9 +59,12 @@ class MyStack : Stack
 }
 ```
 
-{{% /example %}}
 
-{{% example go %}}
+{{< /example >}}
+
+
+{{< example go >}}
+
 ```go
 package main
 
@@ -84,9 +93,12 @@ func main() {
 }
 ```
 
-{{% /example %}}
 
-{{% example python %}}
+{{< /example >}}
+
+
+{{< example python >}}
+
 ```python
 import pulumi
 import pulumi_openstack as openstack
@@ -102,9 +114,12 @@ securityservice1 = openstack.sharedfilesystem.SecurityService("securityservice1"
     user="joinDomainUser")
 ```
 
-{{% /example %}}
 
-{{% example typescript %}}
+{{< /example >}}
+
+
+{{< example typescript >}}
+
 
 ```typescript
 import * as pulumi from "@pulumi/pulumi";
@@ -122,9 +137,16 @@ const securityservice1 = new openstack.sharedfilesystem.SecurityService("securit
 });
 ```
 
-{{% /example %}}
+
+{{< /example >}}
+
+
+
+
 
 {{% /examples %}}
+
+
 
 
 ## Create a SecurityService Resource {#create}
@@ -149,9 +171,7 @@ const securityservice1 = new openstack.sharedfilesystem.SecurityService("securit
 
 {{% choosable language nodejs %}}
 
-<dl class="resources-properties">
-  
-    <dt
+<dl class="resources-properties"><dt
         class="property-required" title="Required">
         <span>name</span>
         <span class="property-indicator"></span>
@@ -159,9 +179,7 @@ const securityservice1 = new openstack.sharedfilesystem.SecurityService("securit
     </dt>
     <dd>
       The unique name of the resource.
-    </dd>
-  
-    <dt
+    </dd><dt
         class="property-required" title="Required">
         <span>args</span>
         <span class="property-indicator"></span>
@@ -169,9 +187,7 @@ const securityservice1 = new openstack.sharedfilesystem.SecurityService("securit
     </dt>
     <dd>
       The arguments to resource properties.
-    </dd>
-  
-    <dt
+    </dd><dt
         class="property-optional" title="Optional">
         <span>opts</span>
         <span class="property-indicator"></span>
@@ -179,10 +195,7 @@ const securityservice1 = new openstack.sharedfilesystem.SecurityService("securit
     </dt>
     <dd>
       Bag of options to control resource&#39;s behavior.
-    </dd>
-  
-
-</dl>
+    </dd></dl>
 
 {{% /choosable %}}
 
@@ -208,9 +221,7 @@ const securityservice1 = new openstack.sharedfilesystem.SecurityService("securit
 
 {{% choosable language go %}}
 
-<dl class="resources-properties">
-  
-    <dt
+<dl class="resources-properties"><dt
         class="property-optional" title="Optional">
         <span>ctx</span>
         <span class="property-indicator"></span>
@@ -218,9 +229,7 @@ const securityservice1 = new openstack.sharedfilesystem.SecurityService("securit
     </dt>
     <dd>
       Context object for the current deployment.
-    </dd>
-  
-    <dt
+    </dd><dt
         class="property-required" title="Required">
         <span>name</span>
         <span class="property-indicator"></span>
@@ -228,9 +237,7 @@ const securityservice1 = new openstack.sharedfilesystem.SecurityService("securit
     </dt>
     <dd>
       The unique name of the resource.
-    </dd>
-  
-    <dt
+    </dd><dt
         class="property-required" title="Required">
         <span>args</span>
         <span class="property-indicator"></span>
@@ -238,9 +245,7 @@ const securityservice1 = new openstack.sharedfilesystem.SecurityService("securit
     </dt>
     <dd>
       The arguments to resource properties.
-    </dd>
-  
-    <dt
+    </dd><dt
         class="property-optional" title="Optional">
         <span>opts</span>
         <span class="property-indicator"></span>
@@ -248,18 +253,13 @@ const securityservice1 = new openstack.sharedfilesystem.SecurityService("securit
     </dt>
     <dd>
       Bag of options to control resource&#39;s behavior.
-    </dd>
-  
-
-</dl>
+    </dd></dl>
 
 {{% /choosable %}}
 
 {{% choosable language csharp %}}
 
-<dl class="resources-properties">
-  
-    <dt
+<dl class="resources-properties"><dt
         class="property-required" title="Required">
         <span>name</span>
         <span class="property-indicator"></span>
@@ -267,9 +267,7 @@ const securityservice1 = new openstack.sharedfilesystem.SecurityService("securit
     </dt>
     <dd>
       The unique name of the resource.
-    </dd>
-  
-    <dt
+    </dd><dt
         class="property-required" title="Required">
         <span>args</span>
         <span class="property-indicator"></span>
@@ -277,9 +275,7 @@ const securityservice1 = new openstack.sharedfilesystem.SecurityService("securit
     </dt>
     <dd>
       The arguments to resource properties.
-    </dd>
-  
-    <dt
+    </dd><dt
         class="property-optional" title="Optional">
         <span>opts</span>
         <span class="property-indicator"></span>
@@ -287,10 +283,7 @@ const securityservice1 = new openstack.sharedfilesystem.SecurityService("securit
     </dt>
     <dd>
       Bag of options to control resource&#39;s behavior.
-    </dd>
-  
-
-</dl>
+    </dd></dl>
 
 {{% /choosable %}}
 
@@ -305,9 +298,7 @@ The SecurityService resource accepts the following [input]({{< relref "/docs/int
 
 
 {{% choosable language csharp %}}
-<dl class="resources-properties">
-
-    <dt class="property-required"
+<dl class="resources-properties"><dt class="property-required"
             title="Required">
         <span id="type_csharp">
 <a href="#type_csharp" style="color: inherit; text-decoration: inherit;">Type</a>
@@ -317,8 +308,7 @@ The SecurityService resource accepts the following [input]({{< relref "/docs/int
     </dt>
     <dd>{{% md %}}The security service type - can either be active\_directory,
 kerberos or ldap.  Changing this updates the existing security service.
-{{% /md %}}</dd>
-    <dt class="property-optional"
+{{% /md %}}</dd><dt class="property-optional"
             title="Optional">
         <span id="description_csharp">
 <a href="#description_csharp" style="color: inherit; text-decoration: inherit;">Description</a>
@@ -328,8 +318,7 @@ kerberos or ldap.  Changing this updates the existing security service.
     </dt>
     <dd>{{% md %}}The human-readable description for the security service.
 Changing this updates the description of the existing security service.
-{{% /md %}}</dd>
-    <dt class="property-optional"
+{{% /md %}}</dd><dt class="property-optional"
             title="Optional">
         <span id="dnsip_csharp">
 <a href="#dnsip_csharp" style="color: inherit; text-decoration: inherit;">Dns<wbr>Ip</a>
@@ -339,8 +328,7 @@ Changing this updates the description of the existing security service.
     </dt>
     <dd>{{% md %}}The security service DNS IP address that is used inside the
 tenant network.
-{{% /md %}}</dd>
-    <dt class="property-optional"
+{{% /md %}}</dd><dt class="property-optional"
             title="Optional">
         <span id="domain_csharp">
 <a href="#domain_csharp" style="color: inherit; text-decoration: inherit;">Domain</a>
@@ -349,8 +337,7 @@ tenant network.
         <span class="property-type">string</span>
     </dt>
     <dd>{{% md %}}The security service domain.
-{{% /md %}}</dd>
-    <dt class="property-optional"
+{{% /md %}}</dd><dt class="property-optional"
             title="Optional">
         <span id="name_csharp">
 <a href="#name_csharp" style="color: inherit; text-decoration: inherit;">Name</a>
@@ -360,8 +347,7 @@ tenant network.
     </dt>
     <dd>{{% md %}}The name of the security service. Changing this updates the name
 of the existing security service.
-{{% /md %}}</dd>
-    <dt class="property-optional"
+{{% /md %}}</dd><dt class="property-optional"
             title="Optional">
         <span id="ou_csharp">
 <a href="#ou_csharp" style="color: inherit; text-decoration: inherit;">Ou</a>
@@ -371,8 +357,7 @@ of the existing security service.
     </dt>
     <dd>{{% md %}}The security service ou. An organizational unit can be added to
 specify where the share ends up. New in Manila microversion 2.44.
-{{% /md %}}</dd>
-    <dt class="property-optional"
+{{% /md %}}</dd><dt class="property-optional"
             title="Optional">
         <span id="password_csharp">
 <a href="#password_csharp" style="color: inherit; text-decoration: inherit;">Password</a>
@@ -381,8 +366,7 @@ specify where the share ends up. New in Manila microversion 2.44.
         <span class="property-type">string</span>
     </dt>
     <dd>{{% md %}}The user password, if you specify a user.
-{{% /md %}}</dd>
-    <dt class="property-optional"
+{{% /md %}}</dd><dt class="property-optional"
             title="Optional">
         <span id="region_csharp">
 <a href="#region_csharp" style="color: inherit; text-decoration: inherit;">Region</a>
@@ -394,8 +378,7 @@ specify where the share ends up. New in Manila microversion 2.44.
 A Shared File System client is needed to create a security service. If omitted, the
 `region` argument of the provider is used. Changing this creates a new
 security service.
-{{% /md %}}</dd>
-    <dt class="property-optional"
+{{% /md %}}</dd><dt class="property-optional"
             title="Optional">
         <span id="server_csharp">
 <a href="#server_csharp" style="color: inherit; text-decoration: inherit;">Server</a>
@@ -404,8 +387,7 @@ security service.
         <span class="property-type">string</span>
     </dt>
     <dd>{{% md %}}The security service host name or IP address.
-{{% /md %}}</dd>
-    <dt class="property-optional"
+{{% /md %}}</dd><dt class="property-optional"
             title="Optional">
         <span id="user_csharp">
 <a href="#user_csharp" style="color: inherit; text-decoration: inherit;">User</a>
@@ -415,14 +397,11 @@ security service.
     </dt>
     <dd>{{% md %}}The security service user or group name that is used by the
 tenant.
-{{% /md %}}</dd>
-</dl>
+{{% /md %}}</dd></dl>
 {{% /choosable %}}
 
 {{% choosable language go %}}
-<dl class="resources-properties">
-
-    <dt class="property-required"
+<dl class="resources-properties"><dt class="property-required"
             title="Required">
         <span id="type_go">
 <a href="#type_go" style="color: inherit; text-decoration: inherit;">Type</a>
@@ -432,8 +411,7 @@ tenant.
     </dt>
     <dd>{{% md %}}The security service type - can either be active\_directory,
 kerberos or ldap.  Changing this updates the existing security service.
-{{% /md %}}</dd>
-    <dt class="property-optional"
+{{% /md %}}</dd><dt class="property-optional"
             title="Optional">
         <span id="description_go">
 <a href="#description_go" style="color: inherit; text-decoration: inherit;">Description</a>
@@ -443,8 +421,7 @@ kerberos or ldap.  Changing this updates the existing security service.
     </dt>
     <dd>{{% md %}}The human-readable description for the security service.
 Changing this updates the description of the existing security service.
-{{% /md %}}</dd>
-    <dt class="property-optional"
+{{% /md %}}</dd><dt class="property-optional"
             title="Optional">
         <span id="dnsip_go">
 <a href="#dnsip_go" style="color: inherit; text-decoration: inherit;">Dns<wbr>Ip</a>
@@ -454,8 +431,7 @@ Changing this updates the description of the existing security service.
     </dt>
     <dd>{{% md %}}The security service DNS IP address that is used inside the
 tenant network.
-{{% /md %}}</dd>
-    <dt class="property-optional"
+{{% /md %}}</dd><dt class="property-optional"
             title="Optional">
         <span id="domain_go">
 <a href="#domain_go" style="color: inherit; text-decoration: inherit;">Domain</a>
@@ -464,8 +440,7 @@ tenant network.
         <span class="property-type">string</span>
     </dt>
     <dd>{{% md %}}The security service domain.
-{{% /md %}}</dd>
-    <dt class="property-optional"
+{{% /md %}}</dd><dt class="property-optional"
             title="Optional">
         <span id="name_go">
 <a href="#name_go" style="color: inherit; text-decoration: inherit;">Name</a>
@@ -475,8 +450,7 @@ tenant network.
     </dt>
     <dd>{{% md %}}The name of the security service. Changing this updates the name
 of the existing security service.
-{{% /md %}}</dd>
-    <dt class="property-optional"
+{{% /md %}}</dd><dt class="property-optional"
             title="Optional">
         <span id="ou_go">
 <a href="#ou_go" style="color: inherit; text-decoration: inherit;">Ou</a>
@@ -486,8 +460,7 @@ of the existing security service.
     </dt>
     <dd>{{% md %}}The security service ou. An organizational unit can be added to
 specify where the share ends up. New in Manila microversion 2.44.
-{{% /md %}}</dd>
-    <dt class="property-optional"
+{{% /md %}}</dd><dt class="property-optional"
             title="Optional">
         <span id="password_go">
 <a href="#password_go" style="color: inherit; text-decoration: inherit;">Password</a>
@@ -496,8 +469,7 @@ specify where the share ends up. New in Manila microversion 2.44.
         <span class="property-type">string</span>
     </dt>
     <dd>{{% md %}}The user password, if you specify a user.
-{{% /md %}}</dd>
-    <dt class="property-optional"
+{{% /md %}}</dd><dt class="property-optional"
             title="Optional">
         <span id="region_go">
 <a href="#region_go" style="color: inherit; text-decoration: inherit;">Region</a>
@@ -509,8 +481,7 @@ specify where the share ends up. New in Manila microversion 2.44.
 A Shared File System client is needed to create a security service. If omitted, the
 `region` argument of the provider is used. Changing this creates a new
 security service.
-{{% /md %}}</dd>
-    <dt class="property-optional"
+{{% /md %}}</dd><dt class="property-optional"
             title="Optional">
         <span id="server_go">
 <a href="#server_go" style="color: inherit; text-decoration: inherit;">Server</a>
@@ -519,8 +490,7 @@ security service.
         <span class="property-type">string</span>
     </dt>
     <dd>{{% md %}}The security service host name or IP address.
-{{% /md %}}</dd>
-    <dt class="property-optional"
+{{% /md %}}</dd><dt class="property-optional"
             title="Optional">
         <span id="user_go">
 <a href="#user_go" style="color: inherit; text-decoration: inherit;">User</a>
@@ -530,14 +500,11 @@ security service.
     </dt>
     <dd>{{% md %}}The security service user or group name that is used by the
 tenant.
-{{% /md %}}</dd>
-</dl>
+{{% /md %}}</dd></dl>
 {{% /choosable %}}
 
 {{% choosable language nodejs %}}
-<dl class="resources-properties">
-
-    <dt class="property-required"
+<dl class="resources-properties"><dt class="property-required"
             title="Required">
         <span id="type_nodejs">
 <a href="#type_nodejs" style="color: inherit; text-decoration: inherit;">type</a>
@@ -547,8 +514,7 @@ tenant.
     </dt>
     <dd>{{% md %}}The security service type - can either be active\_directory,
 kerberos or ldap.  Changing this updates the existing security service.
-{{% /md %}}</dd>
-    <dt class="property-optional"
+{{% /md %}}</dd><dt class="property-optional"
             title="Optional">
         <span id="description_nodejs">
 <a href="#description_nodejs" style="color: inherit; text-decoration: inherit;">description</a>
@@ -558,8 +524,7 @@ kerberos or ldap.  Changing this updates the existing security service.
     </dt>
     <dd>{{% md %}}The human-readable description for the security service.
 Changing this updates the description of the existing security service.
-{{% /md %}}</dd>
-    <dt class="property-optional"
+{{% /md %}}</dd><dt class="property-optional"
             title="Optional">
         <span id="dnsip_nodejs">
 <a href="#dnsip_nodejs" style="color: inherit; text-decoration: inherit;">dns<wbr>Ip</a>
@@ -569,8 +534,7 @@ Changing this updates the description of the existing security service.
     </dt>
     <dd>{{% md %}}The security service DNS IP address that is used inside the
 tenant network.
-{{% /md %}}</dd>
-    <dt class="property-optional"
+{{% /md %}}</dd><dt class="property-optional"
             title="Optional">
         <span id="domain_nodejs">
 <a href="#domain_nodejs" style="color: inherit; text-decoration: inherit;">domain</a>
@@ -579,8 +543,7 @@ tenant network.
         <span class="property-type">string</span>
     </dt>
     <dd>{{% md %}}The security service domain.
-{{% /md %}}</dd>
-    <dt class="property-optional"
+{{% /md %}}</dd><dt class="property-optional"
             title="Optional">
         <span id="name_nodejs">
 <a href="#name_nodejs" style="color: inherit; text-decoration: inherit;">name</a>
@@ -590,8 +553,7 @@ tenant network.
     </dt>
     <dd>{{% md %}}The name of the security service. Changing this updates the name
 of the existing security service.
-{{% /md %}}</dd>
-    <dt class="property-optional"
+{{% /md %}}</dd><dt class="property-optional"
             title="Optional">
         <span id="ou_nodejs">
 <a href="#ou_nodejs" style="color: inherit; text-decoration: inherit;">ou</a>
@@ -601,8 +563,7 @@ of the existing security service.
     </dt>
     <dd>{{% md %}}The security service ou. An organizational unit can be added to
 specify where the share ends up. New in Manila microversion 2.44.
-{{% /md %}}</dd>
-    <dt class="property-optional"
+{{% /md %}}</dd><dt class="property-optional"
             title="Optional">
         <span id="password_nodejs">
 <a href="#password_nodejs" style="color: inherit; text-decoration: inherit;">password</a>
@@ -611,8 +572,7 @@ specify where the share ends up. New in Manila microversion 2.44.
         <span class="property-type">string</span>
     </dt>
     <dd>{{% md %}}The user password, if you specify a user.
-{{% /md %}}</dd>
-    <dt class="property-optional"
+{{% /md %}}</dd><dt class="property-optional"
             title="Optional">
         <span id="region_nodejs">
 <a href="#region_nodejs" style="color: inherit; text-decoration: inherit;">region</a>
@@ -624,8 +584,7 @@ specify where the share ends up. New in Manila microversion 2.44.
 A Shared File System client is needed to create a security service. If omitted, the
 `region` argument of the provider is used. Changing this creates a new
 security service.
-{{% /md %}}</dd>
-    <dt class="property-optional"
+{{% /md %}}</dd><dt class="property-optional"
             title="Optional">
         <span id="server_nodejs">
 <a href="#server_nodejs" style="color: inherit; text-decoration: inherit;">server</a>
@@ -634,8 +593,7 @@ security service.
         <span class="property-type">string</span>
     </dt>
     <dd>{{% md %}}The security service host name or IP address.
-{{% /md %}}</dd>
-    <dt class="property-optional"
+{{% /md %}}</dd><dt class="property-optional"
             title="Optional">
         <span id="user_nodejs">
 <a href="#user_nodejs" style="color: inherit; text-decoration: inherit;">user</a>
@@ -645,14 +603,11 @@ security service.
     </dt>
     <dd>{{% md %}}The security service user or group name that is used by the
 tenant.
-{{% /md %}}</dd>
-</dl>
+{{% /md %}}</dd></dl>
 {{% /choosable %}}
 
 {{% choosable language python %}}
-<dl class="resources-properties">
-
-    <dt class="property-required"
+<dl class="resources-properties"><dt class="property-required"
             title="Required">
         <span id="type_python">
 <a href="#type_python" style="color: inherit; text-decoration: inherit;">type</a>
@@ -662,8 +617,7 @@ tenant.
     </dt>
     <dd>{{% md %}}The security service type - can either be active\_directory,
 kerberos or ldap.  Changing this updates the existing security service.
-{{% /md %}}</dd>
-    <dt class="property-optional"
+{{% /md %}}</dd><dt class="property-optional"
             title="Optional">
         <span id="description_python">
 <a href="#description_python" style="color: inherit; text-decoration: inherit;">description</a>
@@ -673,8 +627,7 @@ kerberos or ldap.  Changing this updates the existing security service.
     </dt>
     <dd>{{% md %}}The human-readable description for the security service.
 Changing this updates the description of the existing security service.
-{{% /md %}}</dd>
-    <dt class="property-optional"
+{{% /md %}}</dd><dt class="property-optional"
             title="Optional">
         <span id="dns_ip_python">
 <a href="#dns_ip_python" style="color: inherit; text-decoration: inherit;">dns_<wbr>ip</a>
@@ -684,8 +637,7 @@ Changing this updates the description of the existing security service.
     </dt>
     <dd>{{% md %}}The security service DNS IP address that is used inside the
 tenant network.
-{{% /md %}}</dd>
-    <dt class="property-optional"
+{{% /md %}}</dd><dt class="property-optional"
             title="Optional">
         <span id="domain_python">
 <a href="#domain_python" style="color: inherit; text-decoration: inherit;">domain</a>
@@ -694,8 +646,7 @@ tenant network.
         <span class="property-type">str</span>
     </dt>
     <dd>{{% md %}}The security service domain.
-{{% /md %}}</dd>
-    <dt class="property-optional"
+{{% /md %}}</dd><dt class="property-optional"
             title="Optional">
         <span id="name_python">
 <a href="#name_python" style="color: inherit; text-decoration: inherit;">name</a>
@@ -705,8 +656,7 @@ tenant network.
     </dt>
     <dd>{{% md %}}The name of the security service. Changing this updates the name
 of the existing security service.
-{{% /md %}}</dd>
-    <dt class="property-optional"
+{{% /md %}}</dd><dt class="property-optional"
             title="Optional">
         <span id="ou_python">
 <a href="#ou_python" style="color: inherit; text-decoration: inherit;">ou</a>
@@ -716,8 +666,7 @@ of the existing security service.
     </dt>
     <dd>{{% md %}}The security service ou. An organizational unit can be added to
 specify where the share ends up. New in Manila microversion 2.44.
-{{% /md %}}</dd>
-    <dt class="property-optional"
+{{% /md %}}</dd><dt class="property-optional"
             title="Optional">
         <span id="password_python">
 <a href="#password_python" style="color: inherit; text-decoration: inherit;">password</a>
@@ -726,8 +675,7 @@ specify where the share ends up. New in Manila microversion 2.44.
         <span class="property-type">str</span>
     </dt>
     <dd>{{% md %}}The user password, if you specify a user.
-{{% /md %}}</dd>
-    <dt class="property-optional"
+{{% /md %}}</dd><dt class="property-optional"
             title="Optional">
         <span id="region_python">
 <a href="#region_python" style="color: inherit; text-decoration: inherit;">region</a>
@@ -739,8 +687,7 @@ specify where the share ends up. New in Manila microversion 2.44.
 A Shared File System client is needed to create a security service. If omitted, the
 `region` argument of the provider is used. Changing this creates a new
 security service.
-{{% /md %}}</dd>
-    <dt class="property-optional"
+{{% /md %}}</dd><dt class="property-optional"
             title="Optional">
         <span id="server_python">
 <a href="#server_python" style="color: inherit; text-decoration: inherit;">server</a>
@@ -749,8 +696,7 @@ security service.
         <span class="property-type">str</span>
     </dt>
     <dd>{{% md %}}The security service host name or IP address.
-{{% /md %}}</dd>
-    <dt class="property-optional"
+{{% /md %}}</dd><dt class="property-optional"
             title="Optional">
         <span id="user_python">
 <a href="#user_python" style="color: inherit; text-decoration: inherit;">user</a>
@@ -760,8 +706,7 @@ security service.
     </dt>
     <dd>{{% md %}}The security service user or group name that is used by the
 tenant.
-{{% /md %}}</dd>
-</dl>
+{{% /md %}}</dd></dl>
 {{% /choosable %}}
 
 
@@ -772,9 +717,7 @@ All [input](#inputs) properties are implicitly available as output properties. A
 
 
 {{% choosable language csharp %}}
-<dl class="resources-properties">
-
-    <dt class="property-"
+<dl class="resources-properties"><dt class="property-"
             title="">
         <span id="id_csharp">
 <a href="#id_csharp" style="color: inherit; text-decoration: inherit;">Id</a>
@@ -782,8 +725,7 @@ All [input](#inputs) properties are implicitly available as output properties. A
         <span class="property-indicator"></span>
         <span class="property-type">string</span>
     </dt>
-    <dd>{{% md %}}The provider-assigned unique ID for this managed resource.{{% /md %}}</dd>
-    <dt class="property-"
+    <dd>{{% md %}}The provider-assigned unique ID for this managed resource.{{% /md %}}</dd><dt class="property-"
             title="">
         <span id="projectid_csharp">
 <a href="#projectid_csharp" style="color: inherit; text-decoration: inherit;">Project<wbr>Id</a>
@@ -792,14 +734,11 @@ All [input](#inputs) properties are implicitly available as output properties. A
         <span class="property-type">string</span>
     </dt>
     <dd>{{% md %}}The owner of the Security Service.
-{{% /md %}}</dd>
-</dl>
+{{% /md %}}</dd></dl>
 {{% /choosable %}}
 
 {{% choosable language go %}}
-<dl class="resources-properties">
-
-    <dt class="property-"
+<dl class="resources-properties"><dt class="property-"
             title="">
         <span id="id_go">
 <a href="#id_go" style="color: inherit; text-decoration: inherit;">Id</a>
@@ -807,8 +746,7 @@ All [input](#inputs) properties are implicitly available as output properties. A
         <span class="property-indicator"></span>
         <span class="property-type">string</span>
     </dt>
-    <dd>{{% md %}}The provider-assigned unique ID for this managed resource.{{% /md %}}</dd>
-    <dt class="property-"
+    <dd>{{% md %}}The provider-assigned unique ID for this managed resource.{{% /md %}}</dd><dt class="property-"
             title="">
         <span id="projectid_go">
 <a href="#projectid_go" style="color: inherit; text-decoration: inherit;">Project<wbr>Id</a>
@@ -817,14 +755,11 @@ All [input](#inputs) properties are implicitly available as output properties. A
         <span class="property-type">string</span>
     </dt>
     <dd>{{% md %}}The owner of the Security Service.
-{{% /md %}}</dd>
-</dl>
+{{% /md %}}</dd></dl>
 {{% /choosable %}}
 
 {{% choosable language nodejs %}}
-<dl class="resources-properties">
-
-    <dt class="property-"
+<dl class="resources-properties"><dt class="property-"
             title="">
         <span id="id_nodejs">
 <a href="#id_nodejs" style="color: inherit; text-decoration: inherit;">id</a>
@@ -832,8 +767,7 @@ All [input](#inputs) properties are implicitly available as output properties. A
         <span class="property-indicator"></span>
         <span class="property-type">string</span>
     </dt>
-    <dd>{{% md %}}The provider-assigned unique ID for this managed resource.{{% /md %}}</dd>
-    <dt class="property-"
+    <dd>{{% md %}}The provider-assigned unique ID for this managed resource.{{% /md %}}</dd><dt class="property-"
             title="">
         <span id="projectid_nodejs">
 <a href="#projectid_nodejs" style="color: inherit; text-decoration: inherit;">project<wbr>Id</a>
@@ -842,14 +776,11 @@ All [input](#inputs) properties are implicitly available as output properties. A
         <span class="property-type">string</span>
     </dt>
     <dd>{{% md %}}The owner of the Security Service.
-{{% /md %}}</dd>
-</dl>
+{{% /md %}}</dd></dl>
 {{% /choosable %}}
 
 {{% choosable language python %}}
-<dl class="resources-properties">
-
-    <dt class="property-"
+<dl class="resources-properties"><dt class="property-"
             title="">
         <span id="id_python">
 <a href="#id_python" style="color: inherit; text-decoration: inherit;">id</a>
@@ -857,8 +788,7 @@ All [input](#inputs) properties are implicitly available as output properties. A
         <span class="property-indicator"></span>
         <span class="property-type">str</span>
     </dt>
-    <dd>{{% md %}}The provider-assigned unique ID for this managed resource.{{% /md %}}</dd>
-    <dt class="property-"
+    <dd>{{% md %}}The provider-assigned unique ID for this managed resource.{{% /md %}}</dd><dt class="property-"
             title="">
         <span id="project_id_python">
 <a href="#project_id_python" style="color: inherit; text-decoration: inherit;">project_<wbr>id</a>
@@ -867,8 +797,7 @@ All [input](#inputs) properties are implicitly available as output properties. A
         <span class="property-type">str</span>
     </dt>
     <dd>{{% md %}}The owner of the Security Service.
-{{% /md %}}</dd>
-</dl>
+{{% /md %}}</dd></dl>
 {{% /choosable %}}
 
 
@@ -995,9 +924,7 @@ The following state arguments are supported:
 
 
 {{% choosable language csharp %}}
-<dl class="resources-properties">
-
-    <dt class="property-optional"
+<dl class="resources-properties"><dt class="property-optional"
             title="Optional">
         <span id="state_description_csharp">
 <a href="#state_description_csharp" style="color: inherit; text-decoration: inherit;">Description</a>
@@ -1007,8 +934,7 @@ The following state arguments are supported:
     </dt>
     <dd>{{% md %}}The human-readable description for the security service.
 Changing this updates the description of the existing security service.
-{{% /md %}}</dd>
-    <dt class="property-optional"
+{{% /md %}}</dd><dt class="property-optional"
             title="Optional">
         <span id="state_dnsip_csharp">
 <a href="#state_dnsip_csharp" style="color: inherit; text-decoration: inherit;">Dns<wbr>Ip</a>
@@ -1018,8 +944,7 @@ Changing this updates the description of the existing security service.
     </dt>
     <dd>{{% md %}}The security service DNS IP address that is used inside the
 tenant network.
-{{% /md %}}</dd>
-    <dt class="property-optional"
+{{% /md %}}</dd><dt class="property-optional"
             title="Optional">
         <span id="state_domain_csharp">
 <a href="#state_domain_csharp" style="color: inherit; text-decoration: inherit;">Domain</a>
@@ -1028,8 +953,7 @@ tenant network.
         <span class="property-type">string</span>
     </dt>
     <dd>{{% md %}}The security service domain.
-{{% /md %}}</dd>
-    <dt class="property-optional"
+{{% /md %}}</dd><dt class="property-optional"
             title="Optional">
         <span id="state_name_csharp">
 <a href="#state_name_csharp" style="color: inherit; text-decoration: inherit;">Name</a>
@@ -1039,8 +963,7 @@ tenant network.
     </dt>
     <dd>{{% md %}}The name of the security service. Changing this updates the name
 of the existing security service.
-{{% /md %}}</dd>
-    <dt class="property-optional"
+{{% /md %}}</dd><dt class="property-optional"
             title="Optional">
         <span id="state_ou_csharp">
 <a href="#state_ou_csharp" style="color: inherit; text-decoration: inherit;">Ou</a>
@@ -1050,8 +973,7 @@ of the existing security service.
     </dt>
     <dd>{{% md %}}The security service ou. An organizational unit can be added to
 specify where the share ends up. New in Manila microversion 2.44.
-{{% /md %}}</dd>
-    <dt class="property-optional"
+{{% /md %}}</dd><dt class="property-optional"
             title="Optional">
         <span id="state_password_csharp">
 <a href="#state_password_csharp" style="color: inherit; text-decoration: inherit;">Password</a>
@@ -1060,8 +982,7 @@ specify where the share ends up. New in Manila microversion 2.44.
         <span class="property-type">string</span>
     </dt>
     <dd>{{% md %}}The user password, if you specify a user.
-{{% /md %}}</dd>
-    <dt class="property-optional"
+{{% /md %}}</dd><dt class="property-optional"
             title="Optional">
         <span id="state_projectid_csharp">
 <a href="#state_projectid_csharp" style="color: inherit; text-decoration: inherit;">Project<wbr>Id</a>
@@ -1070,8 +991,7 @@ specify where the share ends up. New in Manila microversion 2.44.
         <span class="property-type">string</span>
     </dt>
     <dd>{{% md %}}The owner of the Security Service.
-{{% /md %}}</dd>
-    <dt class="property-optional"
+{{% /md %}}</dd><dt class="property-optional"
             title="Optional">
         <span id="state_region_csharp">
 <a href="#state_region_csharp" style="color: inherit; text-decoration: inherit;">Region</a>
@@ -1083,8 +1003,7 @@ specify where the share ends up. New in Manila microversion 2.44.
 A Shared File System client is needed to create a security service. If omitted, the
 `region` argument of the provider is used. Changing this creates a new
 security service.
-{{% /md %}}</dd>
-    <dt class="property-optional"
+{{% /md %}}</dd><dt class="property-optional"
             title="Optional">
         <span id="state_server_csharp">
 <a href="#state_server_csharp" style="color: inherit; text-decoration: inherit;">Server</a>
@@ -1093,8 +1012,7 @@ security service.
         <span class="property-type">string</span>
     </dt>
     <dd>{{% md %}}The security service host name or IP address.
-{{% /md %}}</dd>
-    <dt class="property-optional"
+{{% /md %}}</dd><dt class="property-optional"
             title="Optional">
         <span id="state_type_csharp">
 <a href="#state_type_csharp" style="color: inherit; text-decoration: inherit;">Type</a>
@@ -1104,8 +1022,7 @@ security service.
     </dt>
     <dd>{{% md %}}The security service type - can either be active\_directory,
 kerberos or ldap.  Changing this updates the existing security service.
-{{% /md %}}</dd>
-    <dt class="property-optional"
+{{% /md %}}</dd><dt class="property-optional"
             title="Optional">
         <span id="state_user_csharp">
 <a href="#state_user_csharp" style="color: inherit; text-decoration: inherit;">User</a>
@@ -1115,14 +1032,11 @@ kerberos or ldap.  Changing this updates the existing security service.
     </dt>
     <dd>{{% md %}}The security service user or group name that is used by the
 tenant.
-{{% /md %}}</dd>
-</dl>
+{{% /md %}}</dd></dl>
 {{% /choosable %}}
 
 {{% choosable language go %}}
-<dl class="resources-properties">
-
-    <dt class="property-optional"
+<dl class="resources-properties"><dt class="property-optional"
             title="Optional">
         <span id="state_description_go">
 <a href="#state_description_go" style="color: inherit; text-decoration: inherit;">Description</a>
@@ -1132,8 +1046,7 @@ tenant.
     </dt>
     <dd>{{% md %}}The human-readable description for the security service.
 Changing this updates the description of the existing security service.
-{{% /md %}}</dd>
-    <dt class="property-optional"
+{{% /md %}}</dd><dt class="property-optional"
             title="Optional">
         <span id="state_dnsip_go">
 <a href="#state_dnsip_go" style="color: inherit; text-decoration: inherit;">Dns<wbr>Ip</a>
@@ -1143,8 +1056,7 @@ Changing this updates the description of the existing security service.
     </dt>
     <dd>{{% md %}}The security service DNS IP address that is used inside the
 tenant network.
-{{% /md %}}</dd>
-    <dt class="property-optional"
+{{% /md %}}</dd><dt class="property-optional"
             title="Optional">
         <span id="state_domain_go">
 <a href="#state_domain_go" style="color: inherit; text-decoration: inherit;">Domain</a>
@@ -1153,8 +1065,7 @@ tenant network.
         <span class="property-type">string</span>
     </dt>
     <dd>{{% md %}}The security service domain.
-{{% /md %}}</dd>
-    <dt class="property-optional"
+{{% /md %}}</dd><dt class="property-optional"
             title="Optional">
         <span id="state_name_go">
 <a href="#state_name_go" style="color: inherit; text-decoration: inherit;">Name</a>
@@ -1164,8 +1075,7 @@ tenant network.
     </dt>
     <dd>{{% md %}}The name of the security service. Changing this updates the name
 of the existing security service.
-{{% /md %}}</dd>
-    <dt class="property-optional"
+{{% /md %}}</dd><dt class="property-optional"
             title="Optional">
         <span id="state_ou_go">
 <a href="#state_ou_go" style="color: inherit; text-decoration: inherit;">Ou</a>
@@ -1175,8 +1085,7 @@ of the existing security service.
     </dt>
     <dd>{{% md %}}The security service ou. An organizational unit can be added to
 specify where the share ends up. New in Manila microversion 2.44.
-{{% /md %}}</dd>
-    <dt class="property-optional"
+{{% /md %}}</dd><dt class="property-optional"
             title="Optional">
         <span id="state_password_go">
 <a href="#state_password_go" style="color: inherit; text-decoration: inherit;">Password</a>
@@ -1185,8 +1094,7 @@ specify where the share ends up. New in Manila microversion 2.44.
         <span class="property-type">string</span>
     </dt>
     <dd>{{% md %}}The user password, if you specify a user.
-{{% /md %}}</dd>
-    <dt class="property-optional"
+{{% /md %}}</dd><dt class="property-optional"
             title="Optional">
         <span id="state_projectid_go">
 <a href="#state_projectid_go" style="color: inherit; text-decoration: inherit;">Project<wbr>Id</a>
@@ -1195,8 +1103,7 @@ specify where the share ends up. New in Manila microversion 2.44.
         <span class="property-type">string</span>
     </dt>
     <dd>{{% md %}}The owner of the Security Service.
-{{% /md %}}</dd>
-    <dt class="property-optional"
+{{% /md %}}</dd><dt class="property-optional"
             title="Optional">
         <span id="state_region_go">
 <a href="#state_region_go" style="color: inherit; text-decoration: inherit;">Region</a>
@@ -1208,8 +1115,7 @@ specify where the share ends up. New in Manila microversion 2.44.
 A Shared File System client is needed to create a security service. If omitted, the
 `region` argument of the provider is used. Changing this creates a new
 security service.
-{{% /md %}}</dd>
-    <dt class="property-optional"
+{{% /md %}}</dd><dt class="property-optional"
             title="Optional">
         <span id="state_server_go">
 <a href="#state_server_go" style="color: inherit; text-decoration: inherit;">Server</a>
@@ -1218,8 +1124,7 @@ security service.
         <span class="property-type">string</span>
     </dt>
     <dd>{{% md %}}The security service host name or IP address.
-{{% /md %}}</dd>
-    <dt class="property-optional"
+{{% /md %}}</dd><dt class="property-optional"
             title="Optional">
         <span id="state_type_go">
 <a href="#state_type_go" style="color: inherit; text-decoration: inherit;">Type</a>
@@ -1229,8 +1134,7 @@ security service.
     </dt>
     <dd>{{% md %}}The security service type - can either be active\_directory,
 kerberos or ldap.  Changing this updates the existing security service.
-{{% /md %}}</dd>
-    <dt class="property-optional"
+{{% /md %}}</dd><dt class="property-optional"
             title="Optional">
         <span id="state_user_go">
 <a href="#state_user_go" style="color: inherit; text-decoration: inherit;">User</a>
@@ -1240,14 +1144,11 @@ kerberos or ldap.  Changing this updates the existing security service.
     </dt>
     <dd>{{% md %}}The security service user or group name that is used by the
 tenant.
-{{% /md %}}</dd>
-</dl>
+{{% /md %}}</dd></dl>
 {{% /choosable %}}
 
 {{% choosable language nodejs %}}
-<dl class="resources-properties">
-
-    <dt class="property-optional"
+<dl class="resources-properties"><dt class="property-optional"
             title="Optional">
         <span id="state_description_nodejs">
 <a href="#state_description_nodejs" style="color: inherit; text-decoration: inherit;">description</a>
@@ -1257,8 +1158,7 @@ tenant.
     </dt>
     <dd>{{% md %}}The human-readable description for the security service.
 Changing this updates the description of the existing security service.
-{{% /md %}}</dd>
-    <dt class="property-optional"
+{{% /md %}}</dd><dt class="property-optional"
             title="Optional">
         <span id="state_dnsip_nodejs">
 <a href="#state_dnsip_nodejs" style="color: inherit; text-decoration: inherit;">dns<wbr>Ip</a>
@@ -1268,8 +1168,7 @@ Changing this updates the description of the existing security service.
     </dt>
     <dd>{{% md %}}The security service DNS IP address that is used inside the
 tenant network.
-{{% /md %}}</dd>
-    <dt class="property-optional"
+{{% /md %}}</dd><dt class="property-optional"
             title="Optional">
         <span id="state_domain_nodejs">
 <a href="#state_domain_nodejs" style="color: inherit; text-decoration: inherit;">domain</a>
@@ -1278,8 +1177,7 @@ tenant network.
         <span class="property-type">string</span>
     </dt>
     <dd>{{% md %}}The security service domain.
-{{% /md %}}</dd>
-    <dt class="property-optional"
+{{% /md %}}</dd><dt class="property-optional"
             title="Optional">
         <span id="state_name_nodejs">
 <a href="#state_name_nodejs" style="color: inherit; text-decoration: inherit;">name</a>
@@ -1289,8 +1187,7 @@ tenant network.
     </dt>
     <dd>{{% md %}}The name of the security service. Changing this updates the name
 of the existing security service.
-{{% /md %}}</dd>
-    <dt class="property-optional"
+{{% /md %}}</dd><dt class="property-optional"
             title="Optional">
         <span id="state_ou_nodejs">
 <a href="#state_ou_nodejs" style="color: inherit; text-decoration: inherit;">ou</a>
@@ -1300,8 +1197,7 @@ of the existing security service.
     </dt>
     <dd>{{% md %}}The security service ou. An organizational unit can be added to
 specify where the share ends up. New in Manila microversion 2.44.
-{{% /md %}}</dd>
-    <dt class="property-optional"
+{{% /md %}}</dd><dt class="property-optional"
             title="Optional">
         <span id="state_password_nodejs">
 <a href="#state_password_nodejs" style="color: inherit; text-decoration: inherit;">password</a>
@@ -1310,8 +1206,7 @@ specify where the share ends up. New in Manila microversion 2.44.
         <span class="property-type">string</span>
     </dt>
     <dd>{{% md %}}The user password, if you specify a user.
-{{% /md %}}</dd>
-    <dt class="property-optional"
+{{% /md %}}</dd><dt class="property-optional"
             title="Optional">
         <span id="state_projectid_nodejs">
 <a href="#state_projectid_nodejs" style="color: inherit; text-decoration: inherit;">project<wbr>Id</a>
@@ -1320,8 +1215,7 @@ specify where the share ends up. New in Manila microversion 2.44.
         <span class="property-type">string</span>
     </dt>
     <dd>{{% md %}}The owner of the Security Service.
-{{% /md %}}</dd>
-    <dt class="property-optional"
+{{% /md %}}</dd><dt class="property-optional"
             title="Optional">
         <span id="state_region_nodejs">
 <a href="#state_region_nodejs" style="color: inherit; text-decoration: inherit;">region</a>
@@ -1333,8 +1227,7 @@ specify where the share ends up. New in Manila microversion 2.44.
 A Shared File System client is needed to create a security service. If omitted, the
 `region` argument of the provider is used. Changing this creates a new
 security service.
-{{% /md %}}</dd>
-    <dt class="property-optional"
+{{% /md %}}</dd><dt class="property-optional"
             title="Optional">
         <span id="state_server_nodejs">
 <a href="#state_server_nodejs" style="color: inherit; text-decoration: inherit;">server</a>
@@ -1343,8 +1236,7 @@ security service.
         <span class="property-type">string</span>
     </dt>
     <dd>{{% md %}}The security service host name or IP address.
-{{% /md %}}</dd>
-    <dt class="property-optional"
+{{% /md %}}</dd><dt class="property-optional"
             title="Optional">
         <span id="state_type_nodejs">
 <a href="#state_type_nodejs" style="color: inherit; text-decoration: inherit;">type</a>
@@ -1354,8 +1246,7 @@ security service.
     </dt>
     <dd>{{% md %}}The security service type - can either be active\_directory,
 kerberos or ldap.  Changing this updates the existing security service.
-{{% /md %}}</dd>
-    <dt class="property-optional"
+{{% /md %}}</dd><dt class="property-optional"
             title="Optional">
         <span id="state_user_nodejs">
 <a href="#state_user_nodejs" style="color: inherit; text-decoration: inherit;">user</a>
@@ -1365,14 +1256,11 @@ kerberos or ldap.  Changing this updates the existing security service.
     </dt>
     <dd>{{% md %}}The security service user or group name that is used by the
 tenant.
-{{% /md %}}</dd>
-</dl>
+{{% /md %}}</dd></dl>
 {{% /choosable %}}
 
 {{% choosable language python %}}
-<dl class="resources-properties">
-
-    <dt class="property-optional"
+<dl class="resources-properties"><dt class="property-optional"
             title="Optional">
         <span id="state_description_python">
 <a href="#state_description_python" style="color: inherit; text-decoration: inherit;">description</a>
@@ -1382,8 +1270,7 @@ tenant.
     </dt>
     <dd>{{% md %}}The human-readable description for the security service.
 Changing this updates the description of the existing security service.
-{{% /md %}}</dd>
-    <dt class="property-optional"
+{{% /md %}}</dd><dt class="property-optional"
             title="Optional">
         <span id="state_dns_ip_python">
 <a href="#state_dns_ip_python" style="color: inherit; text-decoration: inherit;">dns_<wbr>ip</a>
@@ -1393,8 +1280,7 @@ Changing this updates the description of the existing security service.
     </dt>
     <dd>{{% md %}}The security service DNS IP address that is used inside the
 tenant network.
-{{% /md %}}</dd>
-    <dt class="property-optional"
+{{% /md %}}</dd><dt class="property-optional"
             title="Optional">
         <span id="state_domain_python">
 <a href="#state_domain_python" style="color: inherit; text-decoration: inherit;">domain</a>
@@ -1403,8 +1289,7 @@ tenant network.
         <span class="property-type">str</span>
     </dt>
     <dd>{{% md %}}The security service domain.
-{{% /md %}}</dd>
-    <dt class="property-optional"
+{{% /md %}}</dd><dt class="property-optional"
             title="Optional">
         <span id="state_name_python">
 <a href="#state_name_python" style="color: inherit; text-decoration: inherit;">name</a>
@@ -1414,8 +1299,7 @@ tenant network.
     </dt>
     <dd>{{% md %}}The name of the security service. Changing this updates the name
 of the existing security service.
-{{% /md %}}</dd>
-    <dt class="property-optional"
+{{% /md %}}</dd><dt class="property-optional"
             title="Optional">
         <span id="state_ou_python">
 <a href="#state_ou_python" style="color: inherit; text-decoration: inherit;">ou</a>
@@ -1425,8 +1309,7 @@ of the existing security service.
     </dt>
     <dd>{{% md %}}The security service ou. An organizational unit can be added to
 specify where the share ends up. New in Manila microversion 2.44.
-{{% /md %}}</dd>
-    <dt class="property-optional"
+{{% /md %}}</dd><dt class="property-optional"
             title="Optional">
         <span id="state_password_python">
 <a href="#state_password_python" style="color: inherit; text-decoration: inherit;">password</a>
@@ -1435,8 +1318,7 @@ specify where the share ends up. New in Manila microversion 2.44.
         <span class="property-type">str</span>
     </dt>
     <dd>{{% md %}}The user password, if you specify a user.
-{{% /md %}}</dd>
-    <dt class="property-optional"
+{{% /md %}}</dd><dt class="property-optional"
             title="Optional">
         <span id="state_project_id_python">
 <a href="#state_project_id_python" style="color: inherit; text-decoration: inherit;">project_<wbr>id</a>
@@ -1445,8 +1327,7 @@ specify where the share ends up. New in Manila microversion 2.44.
         <span class="property-type">str</span>
     </dt>
     <dd>{{% md %}}The owner of the Security Service.
-{{% /md %}}</dd>
-    <dt class="property-optional"
+{{% /md %}}</dd><dt class="property-optional"
             title="Optional">
         <span id="state_region_python">
 <a href="#state_region_python" style="color: inherit; text-decoration: inherit;">region</a>
@@ -1458,8 +1339,7 @@ specify where the share ends up. New in Manila microversion 2.44.
 A Shared File System client is needed to create a security service. If omitted, the
 `region` argument of the provider is used. Changing this creates a new
 security service.
-{{% /md %}}</dd>
-    <dt class="property-optional"
+{{% /md %}}</dd><dt class="property-optional"
             title="Optional">
         <span id="state_server_python">
 <a href="#state_server_python" style="color: inherit; text-decoration: inherit;">server</a>
@@ -1468,8 +1348,7 @@ security service.
         <span class="property-type">str</span>
     </dt>
     <dd>{{% md %}}The security service host name or IP address.
-{{% /md %}}</dd>
-    <dt class="property-optional"
+{{% /md %}}</dd><dt class="property-optional"
             title="Optional">
         <span id="state_type_python">
 <a href="#state_type_python" style="color: inherit; text-decoration: inherit;">type</a>
@@ -1479,8 +1358,7 @@ security service.
     </dt>
     <dd>{{% md %}}The security service type - can either be active\_directory,
 kerberos or ldap.  Changing this updates the existing security service.
-{{% /md %}}</dd>
-    <dt class="property-optional"
+{{% /md %}}</dd><dt class="property-optional"
             title="Optional">
         <span id="state_user_python">
 <a href="#state_user_python" style="color: inherit; text-decoration: inherit;">user</a>
@@ -1490,8 +1368,7 @@ kerberos or ldap.  Changing this updates the existing security service.
     </dt>
     <dd>{{% md %}}The security service user or group name that is used by the
 tenant.
-{{% /md %}}</dd>
-</dl>
+{{% /md %}}</dd></dl>
 {{% /choosable %}}
 
 
@@ -1517,6 +1394,6 @@ This resource can be imported by specifying the ID of the security service
 	<dt>License</dt>
 	<dd>Apache-2.0</dd>
 	<dt>Notes</dt>
-	<dd>This Pulumi package is based on the [`openstack` Terraform Provider](https://github.com/terraform-provider-openstack/terraform-provider-openstack).</dd>
+	<dd>{{% md %}}This Pulumi package is based on the [`openstack` Terraform Provider](https://github.com/terraform-provider-openstack/terraform-provider-openstack).{{% /md %}}</dd>
 </dl>
 

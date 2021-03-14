@@ -20,11 +20,17 @@ To get more information about FhirStore, see:
     * [Creating a FHIR store](https://cloud.google.com/healthcare/docs/how-tos/fhir)
 
 {{% examples %}}
+
 ## Example Usage
 
 {{< chooser language "typescript,python,go,csharp" / >}}
+
+
 ### Healthcare Fhir Store Basic
-{{% example csharp %}}
+
+
+{{< example csharp >}}
+
 ```csharp
 using Pulumi;
 using Gcp = Pulumi.Gcp;
@@ -62,9 +68,12 @@ class MyStack : Stack
 }
 ```
 
-{{% /example %}}
 
-{{% example go %}}
+{{< /example >}}
+
+
+{{< example go >}}
+
 ```go
 package main
 
@@ -108,9 +117,12 @@ func main() {
 }
 ```
 
-{{% /example %}}
 
-{{% example python %}}
+{{< /example >}}
+
+
+{{< example python >}}
+
 ```python
 import pulumi
 import pulumi_gcp as gcp
@@ -132,9 +144,12 @@ default = gcp.healthcare.FhirStore("default",
     })
 ```
 
-{{% /example %}}
 
-{{% example typescript %}}
+{{< /example >}}
+
+
+{{< example typescript >}}
+
 
 ```typescript
 import * as pulumi from "@pulumi/pulumi";
@@ -158,10 +173,17 @@ const _default = new gcp.healthcare.FhirStore("default", {
 });
 ```
 
-{{% /example %}}
+
+{{< /example >}}
+
+
+
 
 ### Healthcare Fhir Store Streaming Config
-{{% example csharp %}}
+
+
+{{< example csharp >}}
+
 ```csharp
 using Pulumi;
 using Gcp = Pulumi.Gcp;
@@ -226,9 +248,12 @@ class MyStack : Stack
 }
 ```
 
-{{% /example %}}
 
-{{% example go %}}
+{{< /example >}}
+
+
+{{< example go >}}
+
 ```go
 package main
 
@@ -299,9 +324,12 @@ func main() {
 }
 ```
 
-{{% /example %}}
 
-{{% example python %}}
+{{< /example >}}
+
+
+{{< example python >}}
+
 ```python
 import pulumi
 import pulumi_gcp as gcp
@@ -335,9 +363,12 @@ default = gcp.healthcare.FhirStore("default",
 topic = gcp.pubsub.Topic("topic")
 ```
 
-{{% /example %}}
 
-{{% example typescript %}}
+{{< /example >}}
+
+
+{{< example typescript >}}
+
 
 ```typescript
 import * as pulumi from "@pulumi/pulumi";
@@ -374,9 +405,16 @@ const _default = new gcp.healthcare.FhirStore("default", {
 const topic = new gcp.pubsub.Topic("topic", {});
 ```
 
-{{% /example %}}
+
+{{< /example >}}
+
+
+
+
 
 {{% /examples %}}
+
+
 
 
 ## Create a FhirStore Resource {#create}
@@ -401,9 +439,7 @@ const topic = new gcp.pubsub.Topic("topic", {});
 
 {{% choosable language nodejs %}}
 
-<dl class="resources-properties">
-  
-    <dt
+<dl class="resources-properties"><dt
         class="property-required" title="Required">
         <span>name</span>
         <span class="property-indicator"></span>
@@ -411,9 +447,7 @@ const topic = new gcp.pubsub.Topic("topic", {});
     </dt>
     <dd>
       The unique name of the resource.
-    </dd>
-  
-    <dt
+    </dd><dt
         class="property-required" title="Required">
         <span>args</span>
         <span class="property-indicator"></span>
@@ -421,9 +455,7 @@ const topic = new gcp.pubsub.Topic("topic", {});
     </dt>
     <dd>
       The arguments to resource properties.
-    </dd>
-  
-    <dt
+    </dd><dt
         class="property-optional" title="Optional">
         <span>opts</span>
         <span class="property-indicator"></span>
@@ -431,10 +463,7 @@ const topic = new gcp.pubsub.Topic("topic", {});
     </dt>
     <dd>
       Bag of options to control resource&#39;s behavior.
-    </dd>
-  
-
-</dl>
+    </dd></dl>
 
 {{% /choosable %}}
 
@@ -460,9 +489,7 @@ const topic = new gcp.pubsub.Topic("topic", {});
 
 {{% choosable language go %}}
 
-<dl class="resources-properties">
-  
-    <dt
+<dl class="resources-properties"><dt
         class="property-optional" title="Optional">
         <span>ctx</span>
         <span class="property-indicator"></span>
@@ -470,9 +497,7 @@ const topic = new gcp.pubsub.Topic("topic", {});
     </dt>
     <dd>
       Context object for the current deployment.
-    </dd>
-  
-    <dt
+    </dd><dt
         class="property-required" title="Required">
         <span>name</span>
         <span class="property-indicator"></span>
@@ -480,9 +505,7 @@ const topic = new gcp.pubsub.Topic("topic", {});
     </dt>
     <dd>
       The unique name of the resource.
-    </dd>
-  
-    <dt
+    </dd><dt
         class="property-required" title="Required">
         <span>args</span>
         <span class="property-indicator"></span>
@@ -490,9 +513,7 @@ const topic = new gcp.pubsub.Topic("topic", {});
     </dt>
     <dd>
       The arguments to resource properties.
-    </dd>
-  
-    <dt
+    </dd><dt
         class="property-optional" title="Optional">
         <span>opts</span>
         <span class="property-indicator"></span>
@@ -500,18 +521,13 @@ const topic = new gcp.pubsub.Topic("topic", {});
     </dt>
     <dd>
       Bag of options to control resource&#39;s behavior.
-    </dd>
-  
-
-</dl>
+    </dd></dl>
 
 {{% /choosable %}}
 
 {{% choosable language csharp %}}
 
-<dl class="resources-properties">
-  
-    <dt
+<dl class="resources-properties"><dt
         class="property-required" title="Required">
         <span>name</span>
         <span class="property-indicator"></span>
@@ -519,9 +535,7 @@ const topic = new gcp.pubsub.Topic("topic", {});
     </dt>
     <dd>
       The unique name of the resource.
-    </dd>
-  
-    <dt
+    </dd><dt
         class="property-required" title="Required">
         <span>args</span>
         <span class="property-indicator"></span>
@@ -529,9 +543,7 @@ const topic = new gcp.pubsub.Topic("topic", {});
     </dt>
     <dd>
       The arguments to resource properties.
-    </dd>
-  
-    <dt
+    </dd><dt
         class="property-optional" title="Optional">
         <span>opts</span>
         <span class="property-indicator"></span>
@@ -539,10 +551,7 @@ const topic = new gcp.pubsub.Topic("topic", {});
     </dt>
     <dd>
       Bag of options to control resource&#39;s behavior.
-    </dd>
-  
-
-</dl>
+    </dd></dl>
 
 {{% /choosable %}}
 
@@ -557,9 +566,7 @@ The FhirStore resource accepts the following [input]({{< relref "/docs/intro/con
 
 
 {{% choosable language csharp %}}
-<dl class="resources-properties">
-
-    <dt class="property-required"
+<dl class="resources-properties"><dt class="property-required"
             title="Required">
         <span id="dataset_csharp">
 <a href="#dataset_csharp" style="color: inherit; text-decoration: inherit;">Dataset</a>
@@ -569,8 +576,7 @@ The FhirStore resource accepts the following [input]({{< relref "/docs/intro/con
     </dt>
     <dd>{{% md %}}Identifies the dataset addressed by this request. Must be in the format
 'projects/{project}/locations/{location}/datasets/{dataset}'
-{{% /md %}}</dd>
-    <dt class="property-optional"
+{{% /md %}}</dd><dt class="property-optional"
             title="Optional">
         <span id="disablereferentialintegrity_csharp">
 <a href="#disablereferentialintegrity_csharp" style="color: inherit; text-decoration: inherit;">Disable<wbr>Referential<wbr>Integrity</a>
@@ -584,8 +590,7 @@ requests that will result in inconsistent state in the FHIR store. When this fie
 will skip referential integrity check. Consequently, operations that rely on references, such as
 Patient.get$everything, will not return all the results if broken references exist.
 ** Changing this property may recreate the FHIR store (removing all data) **
-{{% /md %}}</dd>
-    <dt class="property-optional"
+{{% /md %}}</dd><dt class="property-optional"
             title="Optional">
         <span id="disableresourceversioning_csharp">
 <a href="#disableresourceversioning_csharp" style="color: inherit; text-decoration: inherit;">Disable<wbr>Resource<wbr>Versioning</a>
@@ -599,8 +604,7 @@ versions to be recorded automatically. The historical versions can be fetched th
 cannot be updated. If set to true, no historical versions will be kept. The server will send back errors for
 attempts to read the historical versions.
 ** Changing this property may recreate the FHIR store (removing all data) **
-{{% /md %}}</dd>
-    <dt class="property-optional"
+{{% /md %}}</dd><dt class="property-optional"
             title="Optional">
         <span id="enablehistoryimport_csharp">
 <a href="#enablehistoryimport_csharp" style="color: inherit; text-decoration: inherit;">Enable<wbr>History<wbr>Import</a>
@@ -614,8 +618,7 @@ occurred in the past, which clients may not want to allow. If set to false, hist
 will fail with an error.
 ** Changing this property may recreate the FHIR store (removing all data) **
 ** This property can be changed manually in the Google Cloud Healthcare admin console without recreating the FHIR store **
-{{% /md %}}</dd>
-    <dt class="property-optional"
+{{% /md %}}</dd><dt class="property-optional"
             title="Optional">
         <span id="enableupdatecreate_csharp">
 <a href="#enableupdatecreate_csharp" style="color: inherit; text-decoration: inherit;">Enable<wbr>Update<wbr>Create</a>
@@ -629,8 +632,7 @@ the Create operation and attempts to Update a non-existent resource will return 
 logs with appropriate levels of care if client-specified resource IDs contain sensitive data such as patient
 identifiers, those IDs will be part of the FHIR resource path recorded in Cloud audit logs and Cloud Pub/Sub
 notifications.
-{{% /md %}}</dd>
-    <dt class="property-optional"
+{{% /md %}}</dd><dt class="property-optional"
             title="Optional">
         <span id="labels_csharp">
 <a href="#labels_csharp" style="color: inherit; text-decoration: inherit;">Labels</a>
@@ -646,8 +648,7 @@ bytes, and must conform to the following PCRE regular expression: [\p{Ll}\p{Lo}\
 No more than 64 labels can be associated with a given store.
 An object containing a list of "key": value pairs.
 Example: { "name": "wrench", "mass": "1.3kg", "count": "3" }.
-{{% /md %}}</dd>
-    <dt class="property-optional"
+{{% /md %}}</dd><dt class="property-optional"
             title="Optional">
         <span id="name_csharp">
 <a href="#name_csharp" style="color: inherit; text-decoration: inherit;">Name</a>
@@ -657,8 +658,7 @@ Example: { "name": "wrench", "mass": "1.3kg", "count": "3" }.
     </dt>
     <dd>{{% md %}}The resource name for the FhirStore.
 ** Changing this property may recreate the FHIR store (removing all data) **
-{{% /md %}}</dd>
-    <dt class="property-optional"
+{{% /md %}}</dd><dt class="property-optional"
             title="Optional">
         <span id="notificationconfig_csharp">
 <a href="#notificationconfig_csharp" style="color: inherit; text-decoration: inherit;">Notification<wbr>Config</a>
@@ -668,8 +668,7 @@ Example: { "name": "wrench", "mass": "1.3kg", "count": "3" }.
     </dt>
     <dd>{{% md %}}A nested object resource
 Structure is documented below.
-{{% /md %}}</dd>
-    <dt class="property-optional"
+{{% /md %}}</dd><dt class="property-optional"
             title="Optional">
         <span id="streamconfigs_csharp">
 <a href="#streamconfigs_csharp" style="color: inherit; text-decoration: inherit;">Stream<wbr>Configs</a>
@@ -684,8 +683,7 @@ from the list, the server stops streaming to that location. Before adding a new 
 bigquery.dataEditor role to your project's Cloud Healthcare Service Agent service account. Some lag (typically on
 the order of dozens of seconds) is expected before the results show up in the streaming destination.
 Structure is documented below.
-{{% /md %}}</dd>
-    <dt class="property-optional"
+{{% /md %}}</dd><dt class="property-optional"
             title="Optional">
         <span id="version_csharp">
 <a href="#version_csharp" style="color: inherit; text-decoration: inherit;">Version</a>
@@ -696,14 +694,11 @@ Structure is documented below.
     <dd>{{% md %}}The FHIR specification version.
 Default value is `STU3`.
 Possible values are `DSTU2`, `STU3`, and `R4`.
-{{% /md %}}</dd>
-</dl>
+{{% /md %}}</dd></dl>
 {{% /choosable %}}
 
 {{% choosable language go %}}
-<dl class="resources-properties">
-
-    <dt class="property-required"
+<dl class="resources-properties"><dt class="property-required"
             title="Required">
         <span id="dataset_go">
 <a href="#dataset_go" style="color: inherit; text-decoration: inherit;">Dataset</a>
@@ -713,8 +708,7 @@ Possible values are `DSTU2`, `STU3`, and `R4`.
     </dt>
     <dd>{{% md %}}Identifies the dataset addressed by this request. Must be in the format
 'projects/{project}/locations/{location}/datasets/{dataset}'
-{{% /md %}}</dd>
-    <dt class="property-optional"
+{{% /md %}}</dd><dt class="property-optional"
             title="Optional">
         <span id="disablereferentialintegrity_go">
 <a href="#disablereferentialintegrity_go" style="color: inherit; text-decoration: inherit;">Disable<wbr>Referential<wbr>Integrity</a>
@@ -728,8 +722,7 @@ requests that will result in inconsistent state in the FHIR store. When this fie
 will skip referential integrity check. Consequently, operations that rely on references, such as
 Patient.get$everything, will not return all the results if broken references exist.
 ** Changing this property may recreate the FHIR store (removing all data) **
-{{% /md %}}</dd>
-    <dt class="property-optional"
+{{% /md %}}</dd><dt class="property-optional"
             title="Optional">
         <span id="disableresourceversioning_go">
 <a href="#disableresourceversioning_go" style="color: inherit; text-decoration: inherit;">Disable<wbr>Resource<wbr>Versioning</a>
@@ -743,8 +736,7 @@ versions to be recorded automatically. The historical versions can be fetched th
 cannot be updated. If set to true, no historical versions will be kept. The server will send back errors for
 attempts to read the historical versions.
 ** Changing this property may recreate the FHIR store (removing all data) **
-{{% /md %}}</dd>
-    <dt class="property-optional"
+{{% /md %}}</dd><dt class="property-optional"
             title="Optional">
         <span id="enablehistoryimport_go">
 <a href="#enablehistoryimport_go" style="color: inherit; text-decoration: inherit;">Enable<wbr>History<wbr>Import</a>
@@ -758,8 +750,7 @@ occurred in the past, which clients may not want to allow. If set to false, hist
 will fail with an error.
 ** Changing this property may recreate the FHIR store (removing all data) **
 ** This property can be changed manually in the Google Cloud Healthcare admin console without recreating the FHIR store **
-{{% /md %}}</dd>
-    <dt class="property-optional"
+{{% /md %}}</dd><dt class="property-optional"
             title="Optional">
         <span id="enableupdatecreate_go">
 <a href="#enableupdatecreate_go" style="color: inherit; text-decoration: inherit;">Enable<wbr>Update<wbr>Create</a>
@@ -773,8 +764,7 @@ the Create operation and attempts to Update a non-existent resource will return 
 logs with appropriate levels of care if client-specified resource IDs contain sensitive data such as patient
 identifiers, those IDs will be part of the FHIR resource path recorded in Cloud audit logs and Cloud Pub/Sub
 notifications.
-{{% /md %}}</dd>
-    <dt class="property-optional"
+{{% /md %}}</dd><dt class="property-optional"
             title="Optional">
         <span id="labels_go">
 <a href="#labels_go" style="color: inherit; text-decoration: inherit;">Labels</a>
@@ -790,8 +780,7 @@ bytes, and must conform to the following PCRE regular expression: [\p{Ll}\p{Lo}\
 No more than 64 labels can be associated with a given store.
 An object containing a list of "key": value pairs.
 Example: { "name": "wrench", "mass": "1.3kg", "count": "3" }.
-{{% /md %}}</dd>
-    <dt class="property-optional"
+{{% /md %}}</dd><dt class="property-optional"
             title="Optional">
         <span id="name_go">
 <a href="#name_go" style="color: inherit; text-decoration: inherit;">Name</a>
@@ -801,8 +790,7 @@ Example: { "name": "wrench", "mass": "1.3kg", "count": "3" }.
     </dt>
     <dd>{{% md %}}The resource name for the FhirStore.
 ** Changing this property may recreate the FHIR store (removing all data) **
-{{% /md %}}</dd>
-    <dt class="property-optional"
+{{% /md %}}</dd><dt class="property-optional"
             title="Optional">
         <span id="notificationconfig_go">
 <a href="#notificationconfig_go" style="color: inherit; text-decoration: inherit;">Notification<wbr>Config</a>
@@ -812,8 +800,7 @@ Example: { "name": "wrench", "mass": "1.3kg", "count": "3" }.
     </dt>
     <dd>{{% md %}}A nested object resource
 Structure is documented below.
-{{% /md %}}</dd>
-    <dt class="property-optional"
+{{% /md %}}</dd><dt class="property-optional"
             title="Optional">
         <span id="streamconfigs_go">
 <a href="#streamconfigs_go" style="color: inherit; text-decoration: inherit;">Stream<wbr>Configs</a>
@@ -828,8 +815,7 @@ from the list, the server stops streaming to that location. Before adding a new 
 bigquery.dataEditor role to your project's Cloud Healthcare Service Agent service account. Some lag (typically on
 the order of dozens of seconds) is expected before the results show up in the streaming destination.
 Structure is documented below.
-{{% /md %}}</dd>
-    <dt class="property-optional"
+{{% /md %}}</dd><dt class="property-optional"
             title="Optional">
         <span id="version_go">
 <a href="#version_go" style="color: inherit; text-decoration: inherit;">Version</a>
@@ -840,14 +826,11 @@ Structure is documented below.
     <dd>{{% md %}}The FHIR specification version.
 Default value is `STU3`.
 Possible values are `DSTU2`, `STU3`, and `R4`.
-{{% /md %}}</dd>
-</dl>
+{{% /md %}}</dd></dl>
 {{% /choosable %}}
 
 {{% choosable language nodejs %}}
-<dl class="resources-properties">
-
-    <dt class="property-required"
+<dl class="resources-properties"><dt class="property-required"
             title="Required">
         <span id="dataset_nodejs">
 <a href="#dataset_nodejs" style="color: inherit; text-decoration: inherit;">dataset</a>
@@ -857,8 +840,7 @@ Possible values are `DSTU2`, `STU3`, and `R4`.
     </dt>
     <dd>{{% md %}}Identifies the dataset addressed by this request. Must be in the format
 'projects/{project}/locations/{location}/datasets/{dataset}'
-{{% /md %}}</dd>
-    <dt class="property-optional"
+{{% /md %}}</dd><dt class="property-optional"
             title="Optional">
         <span id="disablereferentialintegrity_nodejs">
 <a href="#disablereferentialintegrity_nodejs" style="color: inherit; text-decoration: inherit;">disable<wbr>Referential<wbr>Integrity</a>
@@ -872,8 +854,7 @@ requests that will result in inconsistent state in the FHIR store. When this fie
 will skip referential integrity check. Consequently, operations that rely on references, such as
 Patient.get$everything, will not return all the results if broken references exist.
 ** Changing this property may recreate the FHIR store (removing all data) **
-{{% /md %}}</dd>
-    <dt class="property-optional"
+{{% /md %}}</dd><dt class="property-optional"
             title="Optional">
         <span id="disableresourceversioning_nodejs">
 <a href="#disableresourceversioning_nodejs" style="color: inherit; text-decoration: inherit;">disable<wbr>Resource<wbr>Versioning</a>
@@ -887,8 +868,7 @@ versions to be recorded automatically. The historical versions can be fetched th
 cannot be updated. If set to true, no historical versions will be kept. The server will send back errors for
 attempts to read the historical versions.
 ** Changing this property may recreate the FHIR store (removing all data) **
-{{% /md %}}</dd>
-    <dt class="property-optional"
+{{% /md %}}</dd><dt class="property-optional"
             title="Optional">
         <span id="enablehistoryimport_nodejs">
 <a href="#enablehistoryimport_nodejs" style="color: inherit; text-decoration: inherit;">enable<wbr>History<wbr>Import</a>
@@ -902,8 +882,7 @@ occurred in the past, which clients may not want to allow. If set to false, hist
 will fail with an error.
 ** Changing this property may recreate the FHIR store (removing all data) **
 ** This property can be changed manually in the Google Cloud Healthcare admin console without recreating the FHIR store **
-{{% /md %}}</dd>
-    <dt class="property-optional"
+{{% /md %}}</dd><dt class="property-optional"
             title="Optional">
         <span id="enableupdatecreate_nodejs">
 <a href="#enableupdatecreate_nodejs" style="color: inherit; text-decoration: inherit;">enable<wbr>Update<wbr>Create</a>
@@ -917,8 +896,7 @@ the Create operation and attempts to Update a non-existent resource will return 
 logs with appropriate levels of care if client-specified resource IDs contain sensitive data such as patient
 identifiers, those IDs will be part of the FHIR resource path recorded in Cloud audit logs and Cloud Pub/Sub
 notifications.
-{{% /md %}}</dd>
-    <dt class="property-optional"
+{{% /md %}}</dd><dt class="property-optional"
             title="Optional">
         <span id="labels_nodejs">
 <a href="#labels_nodejs" style="color: inherit; text-decoration: inherit;">labels</a>
@@ -934,8 +912,7 @@ bytes, and must conform to the following PCRE regular expression: [\p{Ll}\p{Lo}\
 No more than 64 labels can be associated with a given store.
 An object containing a list of "key": value pairs.
 Example: { "name": "wrench", "mass": "1.3kg", "count": "3" }.
-{{% /md %}}</dd>
-    <dt class="property-optional"
+{{% /md %}}</dd><dt class="property-optional"
             title="Optional">
         <span id="name_nodejs">
 <a href="#name_nodejs" style="color: inherit; text-decoration: inherit;">name</a>
@@ -945,8 +922,7 @@ Example: { "name": "wrench", "mass": "1.3kg", "count": "3" }.
     </dt>
     <dd>{{% md %}}The resource name for the FhirStore.
 ** Changing this property may recreate the FHIR store (removing all data) **
-{{% /md %}}</dd>
-    <dt class="property-optional"
+{{% /md %}}</dd><dt class="property-optional"
             title="Optional">
         <span id="notificationconfig_nodejs">
 <a href="#notificationconfig_nodejs" style="color: inherit; text-decoration: inherit;">notification<wbr>Config</a>
@@ -956,8 +932,7 @@ Example: { "name": "wrench", "mass": "1.3kg", "count": "3" }.
     </dt>
     <dd>{{% md %}}A nested object resource
 Structure is documented below.
-{{% /md %}}</dd>
-    <dt class="property-optional"
+{{% /md %}}</dd><dt class="property-optional"
             title="Optional">
         <span id="streamconfigs_nodejs">
 <a href="#streamconfigs_nodejs" style="color: inherit; text-decoration: inherit;">stream<wbr>Configs</a>
@@ -972,8 +947,7 @@ from the list, the server stops streaming to that location. Before adding a new 
 bigquery.dataEditor role to your project's Cloud Healthcare Service Agent service account. Some lag (typically on
 the order of dozens of seconds) is expected before the results show up in the streaming destination.
 Structure is documented below.
-{{% /md %}}</dd>
-    <dt class="property-optional"
+{{% /md %}}</dd><dt class="property-optional"
             title="Optional">
         <span id="version_nodejs">
 <a href="#version_nodejs" style="color: inherit; text-decoration: inherit;">version</a>
@@ -984,14 +958,11 @@ Structure is documented below.
     <dd>{{% md %}}The FHIR specification version.
 Default value is `STU3`.
 Possible values are `DSTU2`, `STU3`, and `R4`.
-{{% /md %}}</dd>
-</dl>
+{{% /md %}}</dd></dl>
 {{% /choosable %}}
 
 {{% choosable language python %}}
-<dl class="resources-properties">
-
-    <dt class="property-required"
+<dl class="resources-properties"><dt class="property-required"
             title="Required">
         <span id="dataset_python">
 <a href="#dataset_python" style="color: inherit; text-decoration: inherit;">dataset</a>
@@ -1001,8 +972,7 @@ Possible values are `DSTU2`, `STU3`, and `R4`.
     </dt>
     <dd>{{% md %}}Identifies the dataset addressed by this request. Must be in the format
 'projects/{project}/locations/{location}/datasets/{dataset}'
-{{% /md %}}</dd>
-    <dt class="property-optional"
+{{% /md %}}</dd><dt class="property-optional"
             title="Optional">
         <span id="disable_referential_integrity_python">
 <a href="#disable_referential_integrity_python" style="color: inherit; text-decoration: inherit;">disable_<wbr>referential_<wbr>integrity</a>
@@ -1016,8 +986,7 @@ requests that will result in inconsistent state in the FHIR store. When this fie
 will skip referential integrity check. Consequently, operations that rely on references, such as
 Patient.get$everything, will not return all the results if broken references exist.
 ** Changing this property may recreate the FHIR store (removing all data) **
-{{% /md %}}</dd>
-    <dt class="property-optional"
+{{% /md %}}</dd><dt class="property-optional"
             title="Optional">
         <span id="disable_resource_versioning_python">
 <a href="#disable_resource_versioning_python" style="color: inherit; text-decoration: inherit;">disable_<wbr>resource_<wbr>versioning</a>
@@ -1031,8 +1000,7 @@ versions to be recorded automatically. The historical versions can be fetched th
 cannot be updated. If set to true, no historical versions will be kept. The server will send back errors for
 attempts to read the historical versions.
 ** Changing this property may recreate the FHIR store (removing all data) **
-{{% /md %}}</dd>
-    <dt class="property-optional"
+{{% /md %}}</dd><dt class="property-optional"
             title="Optional">
         <span id="enable_history_import_python">
 <a href="#enable_history_import_python" style="color: inherit; text-decoration: inherit;">enable_<wbr>history_<wbr>import</a>
@@ -1046,8 +1014,7 @@ occurred in the past, which clients may not want to allow. If set to false, hist
 will fail with an error.
 ** Changing this property may recreate the FHIR store (removing all data) **
 ** This property can be changed manually in the Google Cloud Healthcare admin console without recreating the FHIR store **
-{{% /md %}}</dd>
-    <dt class="property-optional"
+{{% /md %}}</dd><dt class="property-optional"
             title="Optional">
         <span id="enable_update_create_python">
 <a href="#enable_update_create_python" style="color: inherit; text-decoration: inherit;">enable_<wbr>update_<wbr>create</a>
@@ -1061,8 +1028,7 @@ the Create operation and attempts to Update a non-existent resource will return 
 logs with appropriate levels of care if client-specified resource IDs contain sensitive data such as patient
 identifiers, those IDs will be part of the FHIR resource path recorded in Cloud audit logs and Cloud Pub/Sub
 notifications.
-{{% /md %}}</dd>
-    <dt class="property-optional"
+{{% /md %}}</dd><dt class="property-optional"
             title="Optional">
         <span id="labels_python">
 <a href="#labels_python" style="color: inherit; text-decoration: inherit;">labels</a>
@@ -1078,8 +1044,7 @@ bytes, and must conform to the following PCRE regular expression: [\p{Ll}\p{Lo}\
 No more than 64 labels can be associated with a given store.
 An object containing a list of "key": value pairs.
 Example: { "name": "wrench", "mass": "1.3kg", "count": "3" }.
-{{% /md %}}</dd>
-    <dt class="property-optional"
+{{% /md %}}</dd><dt class="property-optional"
             title="Optional">
         <span id="name_python">
 <a href="#name_python" style="color: inherit; text-decoration: inherit;">name</a>
@@ -1089,8 +1054,7 @@ Example: { "name": "wrench", "mass": "1.3kg", "count": "3" }.
     </dt>
     <dd>{{% md %}}The resource name for the FhirStore.
 ** Changing this property may recreate the FHIR store (removing all data) **
-{{% /md %}}</dd>
-    <dt class="property-optional"
+{{% /md %}}</dd><dt class="property-optional"
             title="Optional">
         <span id="notification_config_python">
 <a href="#notification_config_python" style="color: inherit; text-decoration: inherit;">notification_<wbr>config</a>
@@ -1100,8 +1064,7 @@ Example: { "name": "wrench", "mass": "1.3kg", "count": "3" }.
     </dt>
     <dd>{{% md %}}A nested object resource
 Structure is documented below.
-{{% /md %}}</dd>
-    <dt class="property-optional"
+{{% /md %}}</dd><dt class="property-optional"
             title="Optional">
         <span id="stream_configs_python">
 <a href="#stream_configs_python" style="color: inherit; text-decoration: inherit;">stream_<wbr>configs</a>
@@ -1116,8 +1079,7 @@ from the list, the server stops streaming to that location. Before adding a new 
 bigquery.dataEditor role to your project's Cloud Healthcare Service Agent service account. Some lag (typically on
 the order of dozens of seconds) is expected before the results show up in the streaming destination.
 Structure is documented below.
-{{% /md %}}</dd>
-    <dt class="property-optional"
+{{% /md %}}</dd><dt class="property-optional"
             title="Optional">
         <span id="version_python">
 <a href="#version_python" style="color: inherit; text-decoration: inherit;">version</a>
@@ -1128,8 +1090,7 @@ Structure is documented below.
     <dd>{{% md %}}The FHIR specification version.
 Default value is `STU3`.
 Possible values are `DSTU2`, `STU3`, and `R4`.
-{{% /md %}}</dd>
-</dl>
+{{% /md %}}</dd></dl>
 {{% /choosable %}}
 
 
@@ -1140,9 +1101,7 @@ All [input](#inputs) properties are implicitly available as output properties. A
 
 
 {{% choosable language csharp %}}
-<dl class="resources-properties">
-
-    <dt class="property-"
+<dl class="resources-properties"><dt class="property-"
             title="">
         <span id="id_csharp">
 <a href="#id_csharp" style="color: inherit; text-decoration: inherit;">Id</a>
@@ -1150,8 +1109,7 @@ All [input](#inputs) properties are implicitly available as output properties. A
         <span class="property-indicator"></span>
         <span class="property-type">string</span>
     </dt>
-    <dd>{{% md %}}The provider-assigned unique ID for this managed resource.{{% /md %}}</dd>
-    <dt class="property-"
+    <dd>{{% md %}}The provider-assigned unique ID for this managed resource.{{% /md %}}</dd><dt class="property-"
             title="">
         <span id="selflink_csharp">
 <a href="#selflink_csharp" style="color: inherit; text-decoration: inherit;">Self<wbr>Link</a>
@@ -1160,14 +1118,11 @@ All [input](#inputs) properties are implicitly available as output properties. A
         <span class="property-type">string</span>
     </dt>
     <dd>{{% md %}}The fully qualified name of this dataset
-{{% /md %}}</dd>
-</dl>
+{{% /md %}}</dd></dl>
 {{% /choosable %}}
 
 {{% choosable language go %}}
-<dl class="resources-properties">
-
-    <dt class="property-"
+<dl class="resources-properties"><dt class="property-"
             title="">
         <span id="id_go">
 <a href="#id_go" style="color: inherit; text-decoration: inherit;">Id</a>
@@ -1175,8 +1130,7 @@ All [input](#inputs) properties are implicitly available as output properties. A
         <span class="property-indicator"></span>
         <span class="property-type">string</span>
     </dt>
-    <dd>{{% md %}}The provider-assigned unique ID for this managed resource.{{% /md %}}</dd>
-    <dt class="property-"
+    <dd>{{% md %}}The provider-assigned unique ID for this managed resource.{{% /md %}}</dd><dt class="property-"
             title="">
         <span id="selflink_go">
 <a href="#selflink_go" style="color: inherit; text-decoration: inherit;">Self<wbr>Link</a>
@@ -1185,14 +1139,11 @@ All [input](#inputs) properties are implicitly available as output properties. A
         <span class="property-type">string</span>
     </dt>
     <dd>{{% md %}}The fully qualified name of this dataset
-{{% /md %}}</dd>
-</dl>
+{{% /md %}}</dd></dl>
 {{% /choosable %}}
 
 {{% choosable language nodejs %}}
-<dl class="resources-properties">
-
-    <dt class="property-"
+<dl class="resources-properties"><dt class="property-"
             title="">
         <span id="id_nodejs">
 <a href="#id_nodejs" style="color: inherit; text-decoration: inherit;">id</a>
@@ -1200,8 +1151,7 @@ All [input](#inputs) properties are implicitly available as output properties. A
         <span class="property-indicator"></span>
         <span class="property-type">string</span>
     </dt>
-    <dd>{{% md %}}The provider-assigned unique ID for this managed resource.{{% /md %}}</dd>
-    <dt class="property-"
+    <dd>{{% md %}}The provider-assigned unique ID for this managed resource.{{% /md %}}</dd><dt class="property-"
             title="">
         <span id="selflink_nodejs">
 <a href="#selflink_nodejs" style="color: inherit; text-decoration: inherit;">self<wbr>Link</a>
@@ -1210,14 +1160,11 @@ All [input](#inputs) properties are implicitly available as output properties. A
         <span class="property-type">string</span>
     </dt>
     <dd>{{% md %}}The fully qualified name of this dataset
-{{% /md %}}</dd>
-</dl>
+{{% /md %}}</dd></dl>
 {{% /choosable %}}
 
 {{% choosable language python %}}
-<dl class="resources-properties">
-
-    <dt class="property-"
+<dl class="resources-properties"><dt class="property-"
             title="">
         <span id="id_python">
 <a href="#id_python" style="color: inherit; text-decoration: inherit;">id</a>
@@ -1225,8 +1172,7 @@ All [input](#inputs) properties are implicitly available as output properties. A
         <span class="property-indicator"></span>
         <span class="property-type">str</span>
     </dt>
-    <dd>{{% md %}}The provider-assigned unique ID for this managed resource.{{% /md %}}</dd>
-    <dt class="property-"
+    <dd>{{% md %}}The provider-assigned unique ID for this managed resource.{{% /md %}}</dd><dt class="property-"
             title="">
         <span id="self_link_python">
 <a href="#self_link_python" style="color: inherit; text-decoration: inherit;">self_<wbr>link</a>
@@ -1235,8 +1181,7 @@ All [input](#inputs) properties are implicitly available as output properties. A
         <span class="property-type">str</span>
     </dt>
     <dd>{{% md %}}The fully qualified name of this dataset
-{{% /md %}}</dd>
-</dl>
+{{% /md %}}</dd></dl>
 {{% /choosable %}}
 
 
@@ -1363,9 +1308,7 @@ The following state arguments are supported:
 
 
 {{% choosable language csharp %}}
-<dl class="resources-properties">
-
-    <dt class="property-optional"
+<dl class="resources-properties"><dt class="property-optional"
             title="Optional">
         <span id="state_dataset_csharp">
 <a href="#state_dataset_csharp" style="color: inherit; text-decoration: inherit;">Dataset</a>
@@ -1375,8 +1318,7 @@ The following state arguments are supported:
     </dt>
     <dd>{{% md %}}Identifies the dataset addressed by this request. Must be in the format
 'projects/{project}/locations/{location}/datasets/{dataset}'
-{{% /md %}}</dd>
-    <dt class="property-optional"
+{{% /md %}}</dd><dt class="property-optional"
             title="Optional">
         <span id="state_disablereferentialintegrity_csharp">
 <a href="#state_disablereferentialintegrity_csharp" style="color: inherit; text-decoration: inherit;">Disable<wbr>Referential<wbr>Integrity</a>
@@ -1390,8 +1332,7 @@ requests that will result in inconsistent state in the FHIR store. When this fie
 will skip referential integrity check. Consequently, operations that rely on references, such as
 Patient.get$everything, will not return all the results if broken references exist.
 ** Changing this property may recreate the FHIR store (removing all data) **
-{{% /md %}}</dd>
-    <dt class="property-optional"
+{{% /md %}}</dd><dt class="property-optional"
             title="Optional">
         <span id="state_disableresourceversioning_csharp">
 <a href="#state_disableresourceversioning_csharp" style="color: inherit; text-decoration: inherit;">Disable<wbr>Resource<wbr>Versioning</a>
@@ -1405,8 +1346,7 @@ versions to be recorded automatically. The historical versions can be fetched th
 cannot be updated. If set to true, no historical versions will be kept. The server will send back errors for
 attempts to read the historical versions.
 ** Changing this property may recreate the FHIR store (removing all data) **
-{{% /md %}}</dd>
-    <dt class="property-optional"
+{{% /md %}}</dd><dt class="property-optional"
             title="Optional">
         <span id="state_enablehistoryimport_csharp">
 <a href="#state_enablehistoryimport_csharp" style="color: inherit; text-decoration: inherit;">Enable<wbr>History<wbr>Import</a>
@@ -1420,8 +1360,7 @@ occurred in the past, which clients may not want to allow. If set to false, hist
 will fail with an error.
 ** Changing this property may recreate the FHIR store (removing all data) **
 ** This property can be changed manually in the Google Cloud Healthcare admin console without recreating the FHIR store **
-{{% /md %}}</dd>
-    <dt class="property-optional"
+{{% /md %}}</dd><dt class="property-optional"
             title="Optional">
         <span id="state_enableupdatecreate_csharp">
 <a href="#state_enableupdatecreate_csharp" style="color: inherit; text-decoration: inherit;">Enable<wbr>Update<wbr>Create</a>
@@ -1435,8 +1374,7 @@ the Create operation and attempts to Update a non-existent resource will return 
 logs with appropriate levels of care if client-specified resource IDs contain sensitive data such as patient
 identifiers, those IDs will be part of the FHIR resource path recorded in Cloud audit logs and Cloud Pub/Sub
 notifications.
-{{% /md %}}</dd>
-    <dt class="property-optional"
+{{% /md %}}</dd><dt class="property-optional"
             title="Optional">
         <span id="state_labels_csharp">
 <a href="#state_labels_csharp" style="color: inherit; text-decoration: inherit;">Labels</a>
@@ -1452,8 +1390,7 @@ bytes, and must conform to the following PCRE regular expression: [\p{Ll}\p{Lo}\
 No more than 64 labels can be associated with a given store.
 An object containing a list of "key": value pairs.
 Example: { "name": "wrench", "mass": "1.3kg", "count": "3" }.
-{{% /md %}}</dd>
-    <dt class="property-optional"
+{{% /md %}}</dd><dt class="property-optional"
             title="Optional">
         <span id="state_name_csharp">
 <a href="#state_name_csharp" style="color: inherit; text-decoration: inherit;">Name</a>
@@ -1463,8 +1400,7 @@ Example: { "name": "wrench", "mass": "1.3kg", "count": "3" }.
     </dt>
     <dd>{{% md %}}The resource name for the FhirStore.
 ** Changing this property may recreate the FHIR store (removing all data) **
-{{% /md %}}</dd>
-    <dt class="property-optional"
+{{% /md %}}</dd><dt class="property-optional"
             title="Optional">
         <span id="state_notificationconfig_csharp">
 <a href="#state_notificationconfig_csharp" style="color: inherit; text-decoration: inherit;">Notification<wbr>Config</a>
@@ -1474,8 +1410,7 @@ Example: { "name": "wrench", "mass": "1.3kg", "count": "3" }.
     </dt>
     <dd>{{% md %}}A nested object resource
 Structure is documented below.
-{{% /md %}}</dd>
-    <dt class="property-optional"
+{{% /md %}}</dd><dt class="property-optional"
             title="Optional">
         <span id="state_selflink_csharp">
 <a href="#state_selflink_csharp" style="color: inherit; text-decoration: inherit;">Self<wbr>Link</a>
@@ -1484,8 +1419,7 @@ Structure is documented below.
         <span class="property-type">string</span>
     </dt>
     <dd>{{% md %}}The fully qualified name of this dataset
-{{% /md %}}</dd>
-    <dt class="property-optional"
+{{% /md %}}</dd><dt class="property-optional"
             title="Optional">
         <span id="state_streamconfigs_csharp">
 <a href="#state_streamconfigs_csharp" style="color: inherit; text-decoration: inherit;">Stream<wbr>Configs</a>
@@ -1500,8 +1434,7 @@ from the list, the server stops streaming to that location. Before adding a new 
 bigquery.dataEditor role to your project's Cloud Healthcare Service Agent service account. Some lag (typically on
 the order of dozens of seconds) is expected before the results show up in the streaming destination.
 Structure is documented below.
-{{% /md %}}</dd>
-    <dt class="property-optional"
+{{% /md %}}</dd><dt class="property-optional"
             title="Optional">
         <span id="state_version_csharp">
 <a href="#state_version_csharp" style="color: inherit; text-decoration: inherit;">Version</a>
@@ -1512,14 +1445,11 @@ Structure is documented below.
     <dd>{{% md %}}The FHIR specification version.
 Default value is `STU3`.
 Possible values are `DSTU2`, `STU3`, and `R4`.
-{{% /md %}}</dd>
-</dl>
+{{% /md %}}</dd></dl>
 {{% /choosable %}}
 
 {{% choosable language go %}}
-<dl class="resources-properties">
-
-    <dt class="property-optional"
+<dl class="resources-properties"><dt class="property-optional"
             title="Optional">
         <span id="state_dataset_go">
 <a href="#state_dataset_go" style="color: inherit; text-decoration: inherit;">Dataset</a>
@@ -1529,8 +1459,7 @@ Possible values are `DSTU2`, `STU3`, and `R4`.
     </dt>
     <dd>{{% md %}}Identifies the dataset addressed by this request. Must be in the format
 'projects/{project}/locations/{location}/datasets/{dataset}'
-{{% /md %}}</dd>
-    <dt class="property-optional"
+{{% /md %}}</dd><dt class="property-optional"
             title="Optional">
         <span id="state_disablereferentialintegrity_go">
 <a href="#state_disablereferentialintegrity_go" style="color: inherit; text-decoration: inherit;">Disable<wbr>Referential<wbr>Integrity</a>
@@ -1544,8 +1473,7 @@ requests that will result in inconsistent state in the FHIR store. When this fie
 will skip referential integrity check. Consequently, operations that rely on references, such as
 Patient.get$everything, will not return all the results if broken references exist.
 ** Changing this property may recreate the FHIR store (removing all data) **
-{{% /md %}}</dd>
-    <dt class="property-optional"
+{{% /md %}}</dd><dt class="property-optional"
             title="Optional">
         <span id="state_disableresourceversioning_go">
 <a href="#state_disableresourceversioning_go" style="color: inherit; text-decoration: inherit;">Disable<wbr>Resource<wbr>Versioning</a>
@@ -1559,8 +1487,7 @@ versions to be recorded automatically. The historical versions can be fetched th
 cannot be updated. If set to true, no historical versions will be kept. The server will send back errors for
 attempts to read the historical versions.
 ** Changing this property may recreate the FHIR store (removing all data) **
-{{% /md %}}</dd>
-    <dt class="property-optional"
+{{% /md %}}</dd><dt class="property-optional"
             title="Optional">
         <span id="state_enablehistoryimport_go">
 <a href="#state_enablehistoryimport_go" style="color: inherit; text-decoration: inherit;">Enable<wbr>History<wbr>Import</a>
@@ -1574,8 +1501,7 @@ occurred in the past, which clients may not want to allow. If set to false, hist
 will fail with an error.
 ** Changing this property may recreate the FHIR store (removing all data) **
 ** This property can be changed manually in the Google Cloud Healthcare admin console without recreating the FHIR store **
-{{% /md %}}</dd>
-    <dt class="property-optional"
+{{% /md %}}</dd><dt class="property-optional"
             title="Optional">
         <span id="state_enableupdatecreate_go">
 <a href="#state_enableupdatecreate_go" style="color: inherit; text-decoration: inherit;">Enable<wbr>Update<wbr>Create</a>
@@ -1589,8 +1515,7 @@ the Create operation and attempts to Update a non-existent resource will return 
 logs with appropriate levels of care if client-specified resource IDs contain sensitive data such as patient
 identifiers, those IDs will be part of the FHIR resource path recorded in Cloud audit logs and Cloud Pub/Sub
 notifications.
-{{% /md %}}</dd>
-    <dt class="property-optional"
+{{% /md %}}</dd><dt class="property-optional"
             title="Optional">
         <span id="state_labels_go">
 <a href="#state_labels_go" style="color: inherit; text-decoration: inherit;">Labels</a>
@@ -1606,8 +1531,7 @@ bytes, and must conform to the following PCRE regular expression: [\p{Ll}\p{Lo}\
 No more than 64 labels can be associated with a given store.
 An object containing a list of "key": value pairs.
 Example: { "name": "wrench", "mass": "1.3kg", "count": "3" }.
-{{% /md %}}</dd>
-    <dt class="property-optional"
+{{% /md %}}</dd><dt class="property-optional"
             title="Optional">
         <span id="state_name_go">
 <a href="#state_name_go" style="color: inherit; text-decoration: inherit;">Name</a>
@@ -1617,8 +1541,7 @@ Example: { "name": "wrench", "mass": "1.3kg", "count": "3" }.
     </dt>
     <dd>{{% md %}}The resource name for the FhirStore.
 ** Changing this property may recreate the FHIR store (removing all data) **
-{{% /md %}}</dd>
-    <dt class="property-optional"
+{{% /md %}}</dd><dt class="property-optional"
             title="Optional">
         <span id="state_notificationconfig_go">
 <a href="#state_notificationconfig_go" style="color: inherit; text-decoration: inherit;">Notification<wbr>Config</a>
@@ -1628,8 +1551,7 @@ Example: { "name": "wrench", "mass": "1.3kg", "count": "3" }.
     </dt>
     <dd>{{% md %}}A nested object resource
 Structure is documented below.
-{{% /md %}}</dd>
-    <dt class="property-optional"
+{{% /md %}}</dd><dt class="property-optional"
             title="Optional">
         <span id="state_selflink_go">
 <a href="#state_selflink_go" style="color: inherit; text-decoration: inherit;">Self<wbr>Link</a>
@@ -1638,8 +1560,7 @@ Structure is documented below.
         <span class="property-type">string</span>
     </dt>
     <dd>{{% md %}}The fully qualified name of this dataset
-{{% /md %}}</dd>
-    <dt class="property-optional"
+{{% /md %}}</dd><dt class="property-optional"
             title="Optional">
         <span id="state_streamconfigs_go">
 <a href="#state_streamconfigs_go" style="color: inherit; text-decoration: inherit;">Stream<wbr>Configs</a>
@@ -1654,8 +1575,7 @@ from the list, the server stops streaming to that location. Before adding a new 
 bigquery.dataEditor role to your project's Cloud Healthcare Service Agent service account. Some lag (typically on
 the order of dozens of seconds) is expected before the results show up in the streaming destination.
 Structure is documented below.
-{{% /md %}}</dd>
-    <dt class="property-optional"
+{{% /md %}}</dd><dt class="property-optional"
             title="Optional">
         <span id="state_version_go">
 <a href="#state_version_go" style="color: inherit; text-decoration: inherit;">Version</a>
@@ -1666,14 +1586,11 @@ Structure is documented below.
     <dd>{{% md %}}The FHIR specification version.
 Default value is `STU3`.
 Possible values are `DSTU2`, `STU3`, and `R4`.
-{{% /md %}}</dd>
-</dl>
+{{% /md %}}</dd></dl>
 {{% /choosable %}}
 
 {{% choosable language nodejs %}}
-<dl class="resources-properties">
-
-    <dt class="property-optional"
+<dl class="resources-properties"><dt class="property-optional"
             title="Optional">
         <span id="state_dataset_nodejs">
 <a href="#state_dataset_nodejs" style="color: inherit; text-decoration: inherit;">dataset</a>
@@ -1683,8 +1600,7 @@ Possible values are `DSTU2`, `STU3`, and `R4`.
     </dt>
     <dd>{{% md %}}Identifies the dataset addressed by this request. Must be in the format
 'projects/{project}/locations/{location}/datasets/{dataset}'
-{{% /md %}}</dd>
-    <dt class="property-optional"
+{{% /md %}}</dd><dt class="property-optional"
             title="Optional">
         <span id="state_disablereferentialintegrity_nodejs">
 <a href="#state_disablereferentialintegrity_nodejs" style="color: inherit; text-decoration: inherit;">disable<wbr>Referential<wbr>Integrity</a>
@@ -1698,8 +1614,7 @@ requests that will result in inconsistent state in the FHIR store. When this fie
 will skip referential integrity check. Consequently, operations that rely on references, such as
 Patient.get$everything, will not return all the results if broken references exist.
 ** Changing this property may recreate the FHIR store (removing all data) **
-{{% /md %}}</dd>
-    <dt class="property-optional"
+{{% /md %}}</dd><dt class="property-optional"
             title="Optional">
         <span id="state_disableresourceversioning_nodejs">
 <a href="#state_disableresourceversioning_nodejs" style="color: inherit; text-decoration: inherit;">disable<wbr>Resource<wbr>Versioning</a>
@@ -1713,8 +1628,7 @@ versions to be recorded automatically. The historical versions can be fetched th
 cannot be updated. If set to true, no historical versions will be kept. The server will send back errors for
 attempts to read the historical versions.
 ** Changing this property may recreate the FHIR store (removing all data) **
-{{% /md %}}</dd>
-    <dt class="property-optional"
+{{% /md %}}</dd><dt class="property-optional"
             title="Optional">
         <span id="state_enablehistoryimport_nodejs">
 <a href="#state_enablehistoryimport_nodejs" style="color: inherit; text-decoration: inherit;">enable<wbr>History<wbr>Import</a>
@@ -1728,8 +1642,7 @@ occurred in the past, which clients may not want to allow. If set to false, hist
 will fail with an error.
 ** Changing this property may recreate the FHIR store (removing all data) **
 ** This property can be changed manually in the Google Cloud Healthcare admin console without recreating the FHIR store **
-{{% /md %}}</dd>
-    <dt class="property-optional"
+{{% /md %}}</dd><dt class="property-optional"
             title="Optional">
         <span id="state_enableupdatecreate_nodejs">
 <a href="#state_enableupdatecreate_nodejs" style="color: inherit; text-decoration: inherit;">enable<wbr>Update<wbr>Create</a>
@@ -1743,8 +1656,7 @@ the Create operation and attempts to Update a non-existent resource will return 
 logs with appropriate levels of care if client-specified resource IDs contain sensitive data such as patient
 identifiers, those IDs will be part of the FHIR resource path recorded in Cloud audit logs and Cloud Pub/Sub
 notifications.
-{{% /md %}}</dd>
-    <dt class="property-optional"
+{{% /md %}}</dd><dt class="property-optional"
             title="Optional">
         <span id="state_labels_nodejs">
 <a href="#state_labels_nodejs" style="color: inherit; text-decoration: inherit;">labels</a>
@@ -1760,8 +1672,7 @@ bytes, and must conform to the following PCRE regular expression: [\p{Ll}\p{Lo}\
 No more than 64 labels can be associated with a given store.
 An object containing a list of "key": value pairs.
 Example: { "name": "wrench", "mass": "1.3kg", "count": "3" }.
-{{% /md %}}</dd>
-    <dt class="property-optional"
+{{% /md %}}</dd><dt class="property-optional"
             title="Optional">
         <span id="state_name_nodejs">
 <a href="#state_name_nodejs" style="color: inherit; text-decoration: inherit;">name</a>
@@ -1771,8 +1682,7 @@ Example: { "name": "wrench", "mass": "1.3kg", "count": "3" }.
     </dt>
     <dd>{{% md %}}The resource name for the FhirStore.
 ** Changing this property may recreate the FHIR store (removing all data) **
-{{% /md %}}</dd>
-    <dt class="property-optional"
+{{% /md %}}</dd><dt class="property-optional"
             title="Optional">
         <span id="state_notificationconfig_nodejs">
 <a href="#state_notificationconfig_nodejs" style="color: inherit; text-decoration: inherit;">notification<wbr>Config</a>
@@ -1782,8 +1692,7 @@ Example: { "name": "wrench", "mass": "1.3kg", "count": "3" }.
     </dt>
     <dd>{{% md %}}A nested object resource
 Structure is documented below.
-{{% /md %}}</dd>
-    <dt class="property-optional"
+{{% /md %}}</dd><dt class="property-optional"
             title="Optional">
         <span id="state_selflink_nodejs">
 <a href="#state_selflink_nodejs" style="color: inherit; text-decoration: inherit;">self<wbr>Link</a>
@@ -1792,8 +1701,7 @@ Structure is documented below.
         <span class="property-type">string</span>
     </dt>
     <dd>{{% md %}}The fully qualified name of this dataset
-{{% /md %}}</dd>
-    <dt class="property-optional"
+{{% /md %}}</dd><dt class="property-optional"
             title="Optional">
         <span id="state_streamconfigs_nodejs">
 <a href="#state_streamconfigs_nodejs" style="color: inherit; text-decoration: inherit;">stream<wbr>Configs</a>
@@ -1808,8 +1716,7 @@ from the list, the server stops streaming to that location. Before adding a new 
 bigquery.dataEditor role to your project's Cloud Healthcare Service Agent service account. Some lag (typically on
 the order of dozens of seconds) is expected before the results show up in the streaming destination.
 Structure is documented below.
-{{% /md %}}</dd>
-    <dt class="property-optional"
+{{% /md %}}</dd><dt class="property-optional"
             title="Optional">
         <span id="state_version_nodejs">
 <a href="#state_version_nodejs" style="color: inherit; text-decoration: inherit;">version</a>
@@ -1820,14 +1727,11 @@ Structure is documented below.
     <dd>{{% md %}}The FHIR specification version.
 Default value is `STU3`.
 Possible values are `DSTU2`, `STU3`, and `R4`.
-{{% /md %}}</dd>
-</dl>
+{{% /md %}}</dd></dl>
 {{% /choosable %}}
 
 {{% choosable language python %}}
-<dl class="resources-properties">
-
-    <dt class="property-optional"
+<dl class="resources-properties"><dt class="property-optional"
             title="Optional">
         <span id="state_dataset_python">
 <a href="#state_dataset_python" style="color: inherit; text-decoration: inherit;">dataset</a>
@@ -1837,8 +1741,7 @@ Possible values are `DSTU2`, `STU3`, and `R4`.
     </dt>
     <dd>{{% md %}}Identifies the dataset addressed by this request. Must be in the format
 'projects/{project}/locations/{location}/datasets/{dataset}'
-{{% /md %}}</dd>
-    <dt class="property-optional"
+{{% /md %}}</dd><dt class="property-optional"
             title="Optional">
         <span id="state_disable_referential_integrity_python">
 <a href="#state_disable_referential_integrity_python" style="color: inherit; text-decoration: inherit;">disable_<wbr>referential_<wbr>integrity</a>
@@ -1852,8 +1755,7 @@ requests that will result in inconsistent state in the FHIR store. When this fie
 will skip referential integrity check. Consequently, operations that rely on references, such as
 Patient.get$everything, will not return all the results if broken references exist.
 ** Changing this property may recreate the FHIR store (removing all data) **
-{{% /md %}}</dd>
-    <dt class="property-optional"
+{{% /md %}}</dd><dt class="property-optional"
             title="Optional">
         <span id="state_disable_resource_versioning_python">
 <a href="#state_disable_resource_versioning_python" style="color: inherit; text-decoration: inherit;">disable_<wbr>resource_<wbr>versioning</a>
@@ -1867,8 +1769,7 @@ versions to be recorded automatically. The historical versions can be fetched th
 cannot be updated. If set to true, no historical versions will be kept. The server will send back errors for
 attempts to read the historical versions.
 ** Changing this property may recreate the FHIR store (removing all data) **
-{{% /md %}}</dd>
-    <dt class="property-optional"
+{{% /md %}}</dd><dt class="property-optional"
             title="Optional">
         <span id="state_enable_history_import_python">
 <a href="#state_enable_history_import_python" style="color: inherit; text-decoration: inherit;">enable_<wbr>history_<wbr>import</a>
@@ -1882,8 +1783,7 @@ occurred in the past, which clients may not want to allow. If set to false, hist
 will fail with an error.
 ** Changing this property may recreate the FHIR store (removing all data) **
 ** This property can be changed manually in the Google Cloud Healthcare admin console without recreating the FHIR store **
-{{% /md %}}</dd>
-    <dt class="property-optional"
+{{% /md %}}</dd><dt class="property-optional"
             title="Optional">
         <span id="state_enable_update_create_python">
 <a href="#state_enable_update_create_python" style="color: inherit; text-decoration: inherit;">enable_<wbr>update_<wbr>create</a>
@@ -1897,8 +1797,7 @@ the Create operation and attempts to Update a non-existent resource will return 
 logs with appropriate levels of care if client-specified resource IDs contain sensitive data such as patient
 identifiers, those IDs will be part of the FHIR resource path recorded in Cloud audit logs and Cloud Pub/Sub
 notifications.
-{{% /md %}}</dd>
-    <dt class="property-optional"
+{{% /md %}}</dd><dt class="property-optional"
             title="Optional">
         <span id="state_labels_python">
 <a href="#state_labels_python" style="color: inherit; text-decoration: inherit;">labels</a>
@@ -1914,8 +1813,7 @@ bytes, and must conform to the following PCRE regular expression: [\p{Ll}\p{Lo}\
 No more than 64 labels can be associated with a given store.
 An object containing a list of "key": value pairs.
 Example: { "name": "wrench", "mass": "1.3kg", "count": "3" }.
-{{% /md %}}</dd>
-    <dt class="property-optional"
+{{% /md %}}</dd><dt class="property-optional"
             title="Optional">
         <span id="state_name_python">
 <a href="#state_name_python" style="color: inherit; text-decoration: inherit;">name</a>
@@ -1925,8 +1823,7 @@ Example: { "name": "wrench", "mass": "1.3kg", "count": "3" }.
     </dt>
     <dd>{{% md %}}The resource name for the FhirStore.
 ** Changing this property may recreate the FHIR store (removing all data) **
-{{% /md %}}</dd>
-    <dt class="property-optional"
+{{% /md %}}</dd><dt class="property-optional"
             title="Optional">
         <span id="state_notification_config_python">
 <a href="#state_notification_config_python" style="color: inherit; text-decoration: inherit;">notification_<wbr>config</a>
@@ -1936,8 +1833,7 @@ Example: { "name": "wrench", "mass": "1.3kg", "count": "3" }.
     </dt>
     <dd>{{% md %}}A nested object resource
 Structure is documented below.
-{{% /md %}}</dd>
-    <dt class="property-optional"
+{{% /md %}}</dd><dt class="property-optional"
             title="Optional">
         <span id="state_self_link_python">
 <a href="#state_self_link_python" style="color: inherit; text-decoration: inherit;">self_<wbr>link</a>
@@ -1946,8 +1842,7 @@ Structure is documented below.
         <span class="property-type">str</span>
     </dt>
     <dd>{{% md %}}The fully qualified name of this dataset
-{{% /md %}}</dd>
-    <dt class="property-optional"
+{{% /md %}}</dd><dt class="property-optional"
             title="Optional">
         <span id="state_stream_configs_python">
 <a href="#state_stream_configs_python" style="color: inherit; text-decoration: inherit;">stream_<wbr>configs</a>
@@ -1962,8 +1857,7 @@ from the list, the server stops streaming to that location. Before adding a new 
 bigquery.dataEditor role to your project's Cloud Healthcare Service Agent service account. Some lag (typically on
 the order of dozens of seconds) is expected before the results show up in the streaming destination.
 Structure is documented below.
-{{% /md %}}</dd>
-    <dt class="property-optional"
+{{% /md %}}</dd><dt class="property-optional"
             title="Optional">
         <span id="state_version_python">
 <a href="#state_version_python" style="color: inherit; text-decoration: inherit;">version</a>
@@ -1974,8 +1868,7 @@ Structure is documented below.
     <dd>{{% md %}}The FHIR specification version.
 Default value is `STU3`.
 Possible values are `DSTU2`, `STU3`, and `R4`.
-{{% /md %}}</dd>
-</dl>
+{{% /md %}}</dd></dl>
 {{% /choosable %}}
 
 
@@ -1990,9 +1883,7 @@ Possible values are `DSTU2`, `STU3`, and `R4`.
 <h4 id="fhirstorenotificationconfig">Fhir<wbr>Store<wbr>Notification<wbr>Config</h4>
 
 {{% choosable language csharp %}}
-<dl class="resources-properties">
-
-    <dt class="property-required"
+<dl class="resources-properties"><dt class="property-required"
             title="Required">
         <span id="pubsubtopic_csharp">
 <a href="#pubsubtopic_csharp" style="color: inherit; text-decoration: inherit;">Pubsub<wbr>Topic</a>
@@ -2006,14 +1897,11 @@ It is guaranteed to be unique within the topic. PubsubMessage.PublishTime is the
 was published. Notifications are only sent if the topic is non-empty. Topic names must be scoped to a
 project. cloud-healthcare@system.gserviceaccount.com must have publisher permissions on the given
 Cloud Pub/Sub topic. Not having adequate permissions will cause the calls that send notifications to fail.
-{{% /md %}}</dd>
-</dl>
+{{% /md %}}</dd></dl>
 {{% /choosable %}}
 
 {{% choosable language go %}}
-<dl class="resources-properties">
-
-    <dt class="property-required"
+<dl class="resources-properties"><dt class="property-required"
             title="Required">
         <span id="pubsubtopic_go">
 <a href="#pubsubtopic_go" style="color: inherit; text-decoration: inherit;">Pubsub<wbr>Topic</a>
@@ -2027,14 +1915,11 @@ It is guaranteed to be unique within the topic. PubsubMessage.PublishTime is the
 was published. Notifications are only sent if the topic is non-empty. Topic names must be scoped to a
 project. cloud-healthcare@system.gserviceaccount.com must have publisher permissions on the given
 Cloud Pub/Sub topic. Not having adequate permissions will cause the calls that send notifications to fail.
-{{% /md %}}</dd>
-</dl>
+{{% /md %}}</dd></dl>
 {{% /choosable %}}
 
 {{% choosable language nodejs %}}
-<dl class="resources-properties">
-
-    <dt class="property-required"
+<dl class="resources-properties"><dt class="property-required"
             title="Required">
         <span id="pubsubtopic_nodejs">
 <a href="#pubsubtopic_nodejs" style="color: inherit; text-decoration: inherit;">pubsub<wbr>Topic</a>
@@ -2048,14 +1933,11 @@ It is guaranteed to be unique within the topic. PubsubMessage.PublishTime is the
 was published. Notifications are only sent if the topic is non-empty. Topic names must be scoped to a
 project. cloud-healthcare@system.gserviceaccount.com must have publisher permissions on the given
 Cloud Pub/Sub topic. Not having adequate permissions will cause the calls that send notifications to fail.
-{{% /md %}}</dd>
-</dl>
+{{% /md %}}</dd></dl>
 {{% /choosable %}}
 
 {{% choosable language python %}}
-<dl class="resources-properties">
-
-    <dt class="property-required"
+<dl class="resources-properties"><dt class="property-required"
             title="Required">
         <span id="pubsub_topic_python">
 <a href="#pubsub_topic_python" style="color: inherit; text-decoration: inherit;">pubsub_<wbr>topic</a>
@@ -2069,16 +1951,13 @@ It is guaranteed to be unique within the topic. PubsubMessage.PublishTime is the
 was published. Notifications are only sent if the topic is non-empty. Topic names must be scoped to a
 project. cloud-healthcare@system.gserviceaccount.com must have publisher permissions on the given
 Cloud Pub/Sub topic. Not having adequate permissions will cause the calls that send notifications to fail.
-{{% /md %}}</dd>
-</dl>
+{{% /md %}}</dd></dl>
 {{% /choosable %}}
 
 <h4 id="fhirstorestreamconfig">Fhir<wbr>Store<wbr>Stream<wbr>Config</h4>
 
 {{% choosable language csharp %}}
-<dl class="resources-properties">
-
-    <dt class="property-required"
+<dl class="resources-properties"><dt class="property-required"
             title="Required">
         <span id="bigquerydestination_csharp">
 <a href="#bigquerydestination_csharp" style="color: inherit; text-decoration: inherit;">Bigquery<wbr>Destination</a>
@@ -2092,8 +1971,7 @@ are named after the resource types, e.g. "Patient", "Observation". When there is
 resource type, the server attempts to create one.
 See the [streaming config reference](https://cloud.google.com/healthcare/docs/reference/rest/v1beta1/projects.locations.datasets.fhirStores#streamconfig) for more details.
 Structure is documented below.
-{{% /md %}}</dd>
-    <dt class="property-optional"
+{{% /md %}}</dd><dt class="property-optional"
             title="Optional">
         <span id="resourcetypes_csharp">
 <a href="#resourcetypes_csharp" style="color: inherit; text-decoration: inherit;">Resource<wbr>Types</a>
@@ -2104,14 +1982,11 @@ Structure is documented below.
     <dd>{{% md %}}Supply a FHIR resource type (such as "Patient" or "Observation"). See
 https://www.hl7.org/fhir/valueset-resource-types.html for a list of all FHIR resource types. The server treats
 an empty list as an intent to stream all the supported resource types in this FHIR store.
-{{% /md %}}</dd>
-</dl>
+{{% /md %}}</dd></dl>
 {{% /choosable %}}
 
 {{% choosable language go %}}
-<dl class="resources-properties">
-
-    <dt class="property-required"
+<dl class="resources-properties"><dt class="property-required"
             title="Required">
         <span id="bigquerydestination_go">
 <a href="#bigquerydestination_go" style="color: inherit; text-decoration: inherit;">Bigquery<wbr>Destination</a>
@@ -2125,8 +2000,7 @@ are named after the resource types, e.g. "Patient", "Observation". When there is
 resource type, the server attempts to create one.
 See the [streaming config reference](https://cloud.google.com/healthcare/docs/reference/rest/v1beta1/projects.locations.datasets.fhirStores#streamconfig) for more details.
 Structure is documented below.
-{{% /md %}}</dd>
-    <dt class="property-optional"
+{{% /md %}}</dd><dt class="property-optional"
             title="Optional">
         <span id="resourcetypes_go">
 <a href="#resourcetypes_go" style="color: inherit; text-decoration: inherit;">Resource<wbr>Types</a>
@@ -2137,14 +2011,11 @@ Structure is documented below.
     <dd>{{% md %}}Supply a FHIR resource type (such as "Patient" or "Observation"). See
 https://www.hl7.org/fhir/valueset-resource-types.html for a list of all FHIR resource types. The server treats
 an empty list as an intent to stream all the supported resource types in this FHIR store.
-{{% /md %}}</dd>
-</dl>
+{{% /md %}}</dd></dl>
 {{% /choosable %}}
 
 {{% choosable language nodejs %}}
-<dl class="resources-properties">
-
-    <dt class="property-required"
+<dl class="resources-properties"><dt class="property-required"
             title="Required">
         <span id="bigquerydestination_nodejs">
 <a href="#bigquerydestination_nodejs" style="color: inherit; text-decoration: inherit;">bigquery<wbr>Destination</a>
@@ -2158,8 +2029,7 @@ are named after the resource types, e.g. "Patient", "Observation". When there is
 resource type, the server attempts to create one.
 See the [streaming config reference](https://cloud.google.com/healthcare/docs/reference/rest/v1beta1/projects.locations.datasets.fhirStores#streamconfig) for more details.
 Structure is documented below.
-{{% /md %}}</dd>
-    <dt class="property-optional"
+{{% /md %}}</dd><dt class="property-optional"
             title="Optional">
         <span id="resourcetypes_nodejs">
 <a href="#resourcetypes_nodejs" style="color: inherit; text-decoration: inherit;">resource<wbr>Types</a>
@@ -2170,14 +2040,11 @@ Structure is documented below.
     <dd>{{% md %}}Supply a FHIR resource type (such as "Patient" or "Observation"). See
 https://www.hl7.org/fhir/valueset-resource-types.html for a list of all FHIR resource types. The server treats
 an empty list as an intent to stream all the supported resource types in this FHIR store.
-{{% /md %}}</dd>
-</dl>
+{{% /md %}}</dd></dl>
 {{% /choosable %}}
 
 {{% choosable language python %}}
-<dl class="resources-properties">
-
-    <dt class="property-required"
+<dl class="resources-properties"><dt class="property-required"
             title="Required">
         <span id="bigquery_destination_python">
 <a href="#bigquery_destination_python" style="color: inherit; text-decoration: inherit;">bigquery_<wbr>destination</a>
@@ -2191,8 +2058,7 @@ are named after the resource types, e.g. "Patient", "Observation". When there is
 resource type, the server attempts to create one.
 See the [streaming config reference](https://cloud.google.com/healthcare/docs/reference/rest/v1beta1/projects.locations.datasets.fhirStores#streamconfig) for more details.
 Structure is documented below.
-{{% /md %}}</dd>
-    <dt class="property-optional"
+{{% /md %}}</dd><dt class="property-optional"
             title="Optional">
         <span id="resource_types_python">
 <a href="#resource_types_python" style="color: inherit; text-decoration: inherit;">resource_<wbr>types</a>
@@ -2203,16 +2069,13 @@ Structure is documented below.
     <dd>{{% md %}}Supply a FHIR resource type (such as "Patient" or "Observation"). See
 https://www.hl7.org/fhir/valueset-resource-types.html for a list of all FHIR resource types. The server treats
 an empty list as an intent to stream all the supported resource types in this FHIR store.
-{{% /md %}}</dd>
-</dl>
+{{% /md %}}</dd></dl>
 {{% /choosable %}}
 
 <h4 id="fhirstorestreamconfigbigquerydestination">Fhir<wbr>Store<wbr>Stream<wbr>Config<wbr>Bigquery<wbr>Destination</h4>
 
 {{% choosable language csharp %}}
-<dl class="resources-properties">
-
-    <dt class="property-required"
+<dl class="resources-properties"><dt class="property-required"
             title="Required">
         <span id="dataseturi_csharp">
 <a href="#dataseturi_csharp" style="color: inherit; text-decoration: inherit;">Dataset<wbr>Uri</a>
@@ -2221,8 +2084,7 @@ an empty list as an intent to stream all the supported resource types in this FH
         <span class="property-type">string</span>
     </dt>
     <dd>{{% md %}}BigQuery URI to a dataset, up to 2000 characters long, in the format bq://projectId.bqDatasetId
-{{% /md %}}</dd>
-    <dt class="property-required"
+{{% /md %}}</dd><dt class="property-required"
             title="Required">
         <span id="schemaconfig_csharp">
 <a href="#schemaconfig_csharp" style="color: inherit; text-decoration: inherit;">Schema<wbr>Config</a>
@@ -2232,14 +2094,11 @@ an empty list as an intent to stream all the supported resource types in this FH
     </dt>
     <dd>{{% md %}}The configuration for the exported BigQuery schema.
 Structure is documented below.
-{{% /md %}}</dd>
-</dl>
+{{% /md %}}</dd></dl>
 {{% /choosable %}}
 
 {{% choosable language go %}}
-<dl class="resources-properties">
-
-    <dt class="property-required"
+<dl class="resources-properties"><dt class="property-required"
             title="Required">
         <span id="dataseturi_go">
 <a href="#dataseturi_go" style="color: inherit; text-decoration: inherit;">Dataset<wbr>Uri</a>
@@ -2248,8 +2107,7 @@ Structure is documented below.
         <span class="property-type">string</span>
     </dt>
     <dd>{{% md %}}BigQuery URI to a dataset, up to 2000 characters long, in the format bq://projectId.bqDatasetId
-{{% /md %}}</dd>
-    <dt class="property-required"
+{{% /md %}}</dd><dt class="property-required"
             title="Required">
         <span id="schemaconfig_go">
 <a href="#schemaconfig_go" style="color: inherit; text-decoration: inherit;">Schema<wbr>Config</a>
@@ -2259,14 +2117,11 @@ Structure is documented below.
     </dt>
     <dd>{{% md %}}The configuration for the exported BigQuery schema.
 Structure is documented below.
-{{% /md %}}</dd>
-</dl>
+{{% /md %}}</dd></dl>
 {{% /choosable %}}
 
 {{% choosable language nodejs %}}
-<dl class="resources-properties">
-
-    <dt class="property-required"
+<dl class="resources-properties"><dt class="property-required"
             title="Required">
         <span id="dataseturi_nodejs">
 <a href="#dataseturi_nodejs" style="color: inherit; text-decoration: inherit;">dataset<wbr>Uri</a>
@@ -2275,8 +2130,7 @@ Structure is documented below.
         <span class="property-type">string</span>
     </dt>
     <dd>{{% md %}}BigQuery URI to a dataset, up to 2000 characters long, in the format bq://projectId.bqDatasetId
-{{% /md %}}</dd>
-    <dt class="property-required"
+{{% /md %}}</dd><dt class="property-required"
             title="Required">
         <span id="schemaconfig_nodejs">
 <a href="#schemaconfig_nodejs" style="color: inherit; text-decoration: inherit;">schema<wbr>Config</a>
@@ -2286,14 +2140,11 @@ Structure is documented below.
     </dt>
     <dd>{{% md %}}The configuration for the exported BigQuery schema.
 Structure is documented below.
-{{% /md %}}</dd>
-</dl>
+{{% /md %}}</dd></dl>
 {{% /choosable %}}
 
 {{% choosable language python %}}
-<dl class="resources-properties">
-
-    <dt class="property-required"
+<dl class="resources-properties"><dt class="property-required"
             title="Required">
         <span id="dataset_uri_python">
 <a href="#dataset_uri_python" style="color: inherit; text-decoration: inherit;">dataset_<wbr>uri</a>
@@ -2302,8 +2153,7 @@ Structure is documented below.
         <span class="property-type">str</span>
     </dt>
     <dd>{{% md %}}BigQuery URI to a dataset, up to 2000 characters long, in the format bq://projectId.bqDatasetId
-{{% /md %}}</dd>
-    <dt class="property-required"
+{{% /md %}}</dd><dt class="property-required"
             title="Required">
         <span id="schema_config_python">
 <a href="#schema_config_python" style="color: inherit; text-decoration: inherit;">schema_<wbr>config</a>
@@ -2313,16 +2163,13 @@ Structure is documented below.
     </dt>
     <dd>{{% md %}}The configuration for the exported BigQuery schema.
 Structure is documented below.
-{{% /md %}}</dd>
-</dl>
+{{% /md %}}</dd></dl>
 {{% /choosable %}}
 
 <h4 id="fhirstorestreamconfigbigquerydestinationschemaconfig">Fhir<wbr>Store<wbr>Stream<wbr>Config<wbr>Bigquery<wbr>Destination<wbr>Schema<wbr>Config</h4>
 
 {{% choosable language csharp %}}
-<dl class="resources-properties">
-
-    <dt class="property-required"
+<dl class="resources-properties"><dt class="property-required"
             title="Required">
         <span id="recursivestructuredepth_csharp">
 <a href="#recursivestructuredepth_csharp" style="color: inherit; text-decoration: inherit;">Recursive<wbr>Structure<wbr>Depth</a>
@@ -2334,8 +2181,7 @@ Structure is documented below.
 resource is a recursive structure; when the depth is 2, the CodeSystem table will have a column called
 concept.concept but not concept.concept.concept. If not specified or set to 0, the server will use the default
 value 2. The maximum depth allowed is 5.
-{{% /md %}}</dd>
-    <dt class="property-optional"
+{{% /md %}}</dd><dt class="property-optional"
             title="Optional">
         <span id="schematype_csharp">
 <a href="#schematype_csharp" style="color: inherit; text-decoration: inherit;">Schema<wbr>Type</a>
@@ -2348,14 +2194,11 @@ value 2. The maximum depth allowed is 5.
 See https://github.com/FHIR/sql-on-fhir/blob/master/sql-on-fhir.md.
 Default value is `ANALYTICS`.
 Possible values are `ANALYTICS`.
-{{% /md %}}</dd>
-</dl>
+{{% /md %}}</dd></dl>
 {{% /choosable %}}
 
 {{% choosable language go %}}
-<dl class="resources-properties">
-
-    <dt class="property-required"
+<dl class="resources-properties"><dt class="property-required"
             title="Required">
         <span id="recursivestructuredepth_go">
 <a href="#recursivestructuredepth_go" style="color: inherit; text-decoration: inherit;">Recursive<wbr>Structure<wbr>Depth</a>
@@ -2367,8 +2210,7 @@ Possible values are `ANALYTICS`.
 resource is a recursive structure; when the depth is 2, the CodeSystem table will have a column called
 concept.concept but not concept.concept.concept. If not specified or set to 0, the server will use the default
 value 2. The maximum depth allowed is 5.
-{{% /md %}}</dd>
-    <dt class="property-optional"
+{{% /md %}}</dd><dt class="property-optional"
             title="Optional">
         <span id="schematype_go">
 <a href="#schematype_go" style="color: inherit; text-decoration: inherit;">Schema<wbr>Type</a>
@@ -2381,14 +2223,11 @@ value 2. The maximum depth allowed is 5.
 See https://github.com/FHIR/sql-on-fhir/blob/master/sql-on-fhir.md.
 Default value is `ANALYTICS`.
 Possible values are `ANALYTICS`.
-{{% /md %}}</dd>
-</dl>
+{{% /md %}}</dd></dl>
 {{% /choosable %}}
 
 {{% choosable language nodejs %}}
-<dl class="resources-properties">
-
-    <dt class="property-required"
+<dl class="resources-properties"><dt class="property-required"
             title="Required">
         <span id="recursivestructuredepth_nodejs">
 <a href="#recursivestructuredepth_nodejs" style="color: inherit; text-decoration: inherit;">recursive<wbr>Structure<wbr>Depth</a>
@@ -2400,8 +2239,7 @@ Possible values are `ANALYTICS`.
 resource is a recursive structure; when the depth is 2, the CodeSystem table will have a column called
 concept.concept but not concept.concept.concept. If not specified or set to 0, the server will use the default
 value 2. The maximum depth allowed is 5.
-{{% /md %}}</dd>
-    <dt class="property-optional"
+{{% /md %}}</dd><dt class="property-optional"
             title="Optional">
         <span id="schematype_nodejs">
 <a href="#schematype_nodejs" style="color: inherit; text-decoration: inherit;">schema<wbr>Type</a>
@@ -2414,14 +2252,11 @@ value 2. The maximum depth allowed is 5.
 See https://github.com/FHIR/sql-on-fhir/blob/master/sql-on-fhir.md.
 Default value is `ANALYTICS`.
 Possible values are `ANALYTICS`.
-{{% /md %}}</dd>
-</dl>
+{{% /md %}}</dd></dl>
 {{% /choosable %}}
 
 {{% choosable language python %}}
-<dl class="resources-properties">
-
-    <dt class="property-required"
+<dl class="resources-properties"><dt class="property-required"
             title="Required">
         <span id="recursive_structure_depth_python">
 <a href="#recursive_structure_depth_python" style="color: inherit; text-decoration: inherit;">recursive_<wbr>structure_<wbr>depth</a>
@@ -2433,8 +2268,7 @@ Possible values are `ANALYTICS`.
 resource is a recursive structure; when the depth is 2, the CodeSystem table will have a column called
 concept.concept but not concept.concept.concept. If not specified or set to 0, the server will use the default
 value 2. The maximum depth allowed is 5.
-{{% /md %}}</dd>
-    <dt class="property-optional"
+{{% /md %}}</dd><dt class="property-optional"
             title="Optional">
         <span id="schema_type_python">
 <a href="#schema_type_python" style="color: inherit; text-decoration: inherit;">schema_<wbr>type</a>
@@ -2447,8 +2281,7 @@ value 2. The maximum depth allowed is 5.
 See https://github.com/FHIR/sql-on-fhir/blob/master/sql-on-fhir.md.
 Default value is `ANALYTICS`.
 Possible values are `ANALYTICS`.
-{{% /md %}}</dd>
-</dl>
+{{% /md %}}</dd></dl>
 {{% /choosable %}}
 ## Import
 
@@ -2473,6 +2306,6 @@ FhirStore can be imported using any of these accepted formats
 	<dt>License</dt>
 	<dd>Apache-2.0</dd>
 	<dt>Notes</dt>
-	<dd>This Pulumi package is based on the [`google-beta` Terraform Provider](https://github.com/hashicorp/terraform-provider-google-beta).</dd>
+	<dd>{{% md %}}This Pulumi package is based on the [`google-beta` Terraform Provider](https://github.com/hashicorp/terraform-provider-google-beta).{{% /md %}}</dd>
 </dl>
 

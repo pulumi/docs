@@ -51,9 +51,7 @@ The following arguments are supported:
 
 
 {{% choosable language csharp %}}
-<dl class="resources-properties">
-
-    <dt class="property-required"
+<dl class="resources-properties"><dt class="property-required"
             title="Required">
         <span id="endtime_csharp">
 <a href="#endtime_csharp" style="color: inherit; text-decoration: inherit;">End<wbr>Time</a>
@@ -61,8 +59,7 @@ The following arguments are supported:
         <span class="property-indicator"></span>
         <span class="property-type">string</span>
     </dt>
-    <dd>{{% md %}}The end timeline date, so the results returned are before this date.{{% /md %}}</dd>
-    <dt class="property-required"
+    <dd>{{% md %}}The end timeline date, so the results returned are before this date.{{% /md %}}</dd><dt class="property-required"
             title="Required">
         <span id="entityid_csharp">
 <a href="#entityid_csharp" style="color: inherit; text-decoration: inherit;">Entity<wbr>Id</a>
@@ -70,8 +67,7 @@ The following arguments are supported:
         <span class="property-indicator"></span>
         <span class="property-type">string</span>
     </dt>
-    <dd>{{% md %}}entity ID{{% /md %}}</dd>
-    <dt class="property-required"
+    <dd>{{% md %}}entity ID{{% /md %}}</dd><dt class="property-required"
             title="Required">
         <span id="operationalinsightsresourceprovider_csharp">
 <a href="#operationalinsightsresourceprovider_csharp" style="color: inherit; text-decoration: inherit;">Operational<wbr>Insights<wbr>Resource<wbr>Provider</a>
@@ -79,8 +75,7 @@ The following arguments are supported:
         <span class="property-indicator"></span>
         <span class="property-type">string</span>
     </dt>
-    <dd>{{% md %}}The namespace of workspaces resource provider- Microsoft.OperationalInsights.{{% /md %}}</dd>
-    <dt class="property-required"
+    <dd>{{% md %}}The namespace of workspaces resource provider- Microsoft.OperationalInsights.{{% /md %}}</dd><dt class="property-required"
             title="Required">
         <span id="resourcegroupname_csharp">
 <a href="#resourcegroupname_csharp" style="color: inherit; text-decoration: inherit;">Resource<wbr>Group<wbr>Name</a>
@@ -88,8 +83,7 @@ The following arguments are supported:
         <span class="property-indicator"></span>
         <span class="property-type">string</span>
     </dt>
-    <dd>{{% md %}}The name of the resource group within the user's subscription. The name is case insensitive.{{% /md %}}</dd>
-    <dt class="property-required"
+    <dd>{{% md %}}The name of the resource group within the user's subscription. The name is case insensitive.{{% /md %}}</dd><dt class="property-required"
             title="Required">
         <span id="starttime_csharp">
 <a href="#starttime_csharp" style="color: inherit; text-decoration: inherit;">Start<wbr>Time</a>
@@ -97,8 +91,7 @@ The following arguments are supported:
         <span class="property-indicator"></span>
         <span class="property-type">string</span>
     </dt>
-    <dd>{{% md %}}The start timeline date, so the results returned are after this date.{{% /md %}}</dd>
-    <dt class="property-required"
+    <dd>{{% md %}}The start timeline date, so the results returned are after this date.{{% /md %}}</dd><dt class="property-required"
             title="Required">
         <span id="workspacename_csharp">
 <a href="#workspacename_csharp" style="color: inherit; text-decoration: inherit;">Workspace<wbr>Name</a>
@@ -106,8 +99,7 @@ The following arguments are supported:
         <span class="property-indicator"></span>
         <span class="property-type">string</span>
     </dt>
-    <dd>{{% md %}}The name of the workspace.{{% /md %}}</dd>
-    <dt class="property-optional"
+    <dd>{{% md %}}The name of the workspace.{{% /md %}}</dd><dt class="property-optional"
             title="Optional">
         <span id="kinds_csharp">
 <a href="#kinds_csharp" style="color: inherit; text-decoration: inherit;">Kinds</a>
@@ -115,8 +107,7 @@ The following arguments are supported:
         <span class="property-indicator"></span>
         <span class="property-type">List&lt;Union&lt;string, Pulumi.<wbr>Azure<wbr>Native.<wbr>Security<wbr>Insights.<wbr>Entity<wbr>Timeline<wbr>Kind&gt;&gt;</span>
     </dt>
-    <dd>{{% md %}}Array of timeline Item kinds.{{% /md %}}</dd>
-    <dt class="property-optional"
+    <dd>{{% md %}}Array of timeline Item kinds.{{% /md %}}</dd><dt class="property-optional"
             title="Optional">
         <span id="numberofbucket_csharp">
 <a href="#numberofbucket_csharp" style="color: inherit; text-decoration: inherit;">Number<wbr>Of<wbr>Bucket</a>
@@ -124,14 +115,11 @@ The following arguments are supported:
         <span class="property-indicator"></span>
         <span class="property-type">int</span>
     </dt>
-    <dd>{{% md %}}The number of bucket for timeline queries aggregation.{{% /md %}}</dd>
-</dl>
+    <dd>{{% md %}}The number of bucket for timeline queries aggregation.{{% /md %}}</dd></dl>
 {{% /choosable %}}
 
 {{% choosable language go %}}
-<dl class="resources-properties">
-
-    <dt class="property-required"
+<dl class="resources-properties"><dt class="property-required"
             title="Required">
         <span id="endtime_go">
 <a href="#endtime_go" style="color: inherit; text-decoration: inherit;">End<wbr>Time</a>
@@ -139,8 +127,7 @@ The following arguments are supported:
         <span class="property-indicator"></span>
         <span class="property-type">string</span>
     </dt>
-    <dd>{{% md %}}The end timeline date, so the results returned are before this date.{{% /md %}}</dd>
-    <dt class="property-required"
+    <dd>{{% md %}}The end timeline date, so the results returned are before this date.{{% /md %}}</dd><dt class="property-required"
             title="Required">
         <span id="entityid_go">
 <a href="#entityid_go" style="color: inherit; text-decoration: inherit;">Entity<wbr>Id</a>
@@ -148,8 +135,7 @@ The following arguments are supported:
         <span class="property-indicator"></span>
         <span class="property-type">string</span>
     </dt>
-    <dd>{{% md %}}entity ID{{% /md %}}</dd>
-    <dt class="property-required"
+    <dd>{{% md %}}entity ID{{% /md %}}</dd><dt class="property-required"
             title="Required">
         <span id="operationalinsightsresourceprovider_go">
 <a href="#operationalinsightsresourceprovider_go" style="color: inherit; text-decoration: inherit;">Operational<wbr>Insights<wbr>Resource<wbr>Provider</a>
@@ -157,8 +143,7 @@ The following arguments are supported:
         <span class="property-indicator"></span>
         <span class="property-type">string</span>
     </dt>
-    <dd>{{% md %}}The namespace of workspaces resource provider- Microsoft.OperationalInsights.{{% /md %}}</dd>
-    <dt class="property-required"
+    <dd>{{% md %}}The namespace of workspaces resource provider- Microsoft.OperationalInsights.{{% /md %}}</dd><dt class="property-required"
             title="Required">
         <span id="resourcegroupname_go">
 <a href="#resourcegroupname_go" style="color: inherit; text-decoration: inherit;">Resource<wbr>Group<wbr>Name</a>
@@ -166,8 +151,7 @@ The following arguments are supported:
         <span class="property-indicator"></span>
         <span class="property-type">string</span>
     </dt>
-    <dd>{{% md %}}The name of the resource group within the user's subscription. The name is case insensitive.{{% /md %}}</dd>
-    <dt class="property-required"
+    <dd>{{% md %}}The name of the resource group within the user's subscription. The name is case insensitive.{{% /md %}}</dd><dt class="property-required"
             title="Required">
         <span id="starttime_go">
 <a href="#starttime_go" style="color: inherit; text-decoration: inherit;">Start<wbr>Time</a>
@@ -175,8 +159,7 @@ The following arguments are supported:
         <span class="property-indicator"></span>
         <span class="property-type">string</span>
     </dt>
-    <dd>{{% md %}}The start timeline date, so the results returned are after this date.{{% /md %}}</dd>
-    <dt class="property-required"
+    <dd>{{% md %}}The start timeline date, so the results returned are after this date.{{% /md %}}</dd><dt class="property-required"
             title="Required">
         <span id="workspacename_go">
 <a href="#workspacename_go" style="color: inherit; text-decoration: inherit;">Workspace<wbr>Name</a>
@@ -184,8 +167,7 @@ The following arguments are supported:
         <span class="property-indicator"></span>
         <span class="property-type">string</span>
     </dt>
-    <dd>{{% md %}}The name of the workspace.{{% /md %}}</dd>
-    <dt class="property-optional"
+    <dd>{{% md %}}The name of the workspace.{{% /md %}}</dd><dt class="property-optional"
             title="Optional">
         <span id="kinds_go">
 <a href="#kinds_go" style="color: inherit; text-decoration: inherit;">Kinds</a>
@@ -193,8 +175,7 @@ The following arguments are supported:
         <span class="property-indicator"></span>
         <span class="property-type">[]string</span>
     </dt>
-    <dd>{{% md %}}Array of timeline Item kinds.{{% /md %}}</dd>
-    <dt class="property-optional"
+    <dd>{{% md %}}Array of timeline Item kinds.{{% /md %}}</dd><dt class="property-optional"
             title="Optional">
         <span id="numberofbucket_go">
 <a href="#numberofbucket_go" style="color: inherit; text-decoration: inherit;">Number<wbr>Of<wbr>Bucket</a>
@@ -202,14 +183,11 @@ The following arguments are supported:
         <span class="property-indicator"></span>
         <span class="property-type">int</span>
     </dt>
-    <dd>{{% md %}}The number of bucket for timeline queries aggregation.{{% /md %}}</dd>
-</dl>
+    <dd>{{% md %}}The number of bucket for timeline queries aggregation.{{% /md %}}</dd></dl>
 {{% /choosable %}}
 
 {{% choosable language nodejs %}}
-<dl class="resources-properties">
-
-    <dt class="property-required"
+<dl class="resources-properties"><dt class="property-required"
             title="Required">
         <span id="endtime_nodejs">
 <a href="#endtime_nodejs" style="color: inherit; text-decoration: inherit;">end<wbr>Time</a>
@@ -217,8 +195,7 @@ The following arguments are supported:
         <span class="property-indicator"></span>
         <span class="property-type">string</span>
     </dt>
-    <dd>{{% md %}}The end timeline date, so the results returned are before this date.{{% /md %}}</dd>
-    <dt class="property-required"
+    <dd>{{% md %}}The end timeline date, so the results returned are before this date.{{% /md %}}</dd><dt class="property-required"
             title="Required">
         <span id="entityid_nodejs">
 <a href="#entityid_nodejs" style="color: inherit; text-decoration: inherit;">entity<wbr>Id</a>
@@ -226,8 +203,7 @@ The following arguments are supported:
         <span class="property-indicator"></span>
         <span class="property-type">string</span>
     </dt>
-    <dd>{{% md %}}entity ID{{% /md %}}</dd>
-    <dt class="property-required"
+    <dd>{{% md %}}entity ID{{% /md %}}</dd><dt class="property-required"
             title="Required">
         <span id="operationalinsightsresourceprovider_nodejs">
 <a href="#operationalinsightsresourceprovider_nodejs" style="color: inherit; text-decoration: inherit;">operational<wbr>Insights<wbr>Resource<wbr>Provider</a>
@@ -235,8 +211,7 @@ The following arguments are supported:
         <span class="property-indicator"></span>
         <span class="property-type">string</span>
     </dt>
-    <dd>{{% md %}}The namespace of workspaces resource provider- Microsoft.OperationalInsights.{{% /md %}}</dd>
-    <dt class="property-required"
+    <dd>{{% md %}}The namespace of workspaces resource provider- Microsoft.OperationalInsights.{{% /md %}}</dd><dt class="property-required"
             title="Required">
         <span id="resourcegroupname_nodejs">
 <a href="#resourcegroupname_nodejs" style="color: inherit; text-decoration: inherit;">resource<wbr>Group<wbr>Name</a>
@@ -244,8 +219,7 @@ The following arguments are supported:
         <span class="property-indicator"></span>
         <span class="property-type">string</span>
     </dt>
-    <dd>{{% md %}}The name of the resource group within the user's subscription. The name is case insensitive.{{% /md %}}</dd>
-    <dt class="property-required"
+    <dd>{{% md %}}The name of the resource group within the user's subscription. The name is case insensitive.{{% /md %}}</dd><dt class="property-required"
             title="Required">
         <span id="starttime_nodejs">
 <a href="#starttime_nodejs" style="color: inherit; text-decoration: inherit;">start<wbr>Time</a>
@@ -253,8 +227,7 @@ The following arguments are supported:
         <span class="property-indicator"></span>
         <span class="property-type">string</span>
     </dt>
-    <dd>{{% md %}}The start timeline date, so the results returned are after this date.{{% /md %}}</dd>
-    <dt class="property-required"
+    <dd>{{% md %}}The start timeline date, so the results returned are after this date.{{% /md %}}</dd><dt class="property-required"
             title="Required">
         <span id="workspacename_nodejs">
 <a href="#workspacename_nodejs" style="color: inherit; text-decoration: inherit;">workspace<wbr>Name</a>
@@ -262,8 +235,7 @@ The following arguments are supported:
         <span class="property-indicator"></span>
         <span class="property-type">string</span>
     </dt>
-    <dd>{{% md %}}The name of the workspace.{{% /md %}}</dd>
-    <dt class="property-optional"
+    <dd>{{% md %}}The name of the workspace.{{% /md %}}</dd><dt class="property-optional"
             title="Optional">
         <span id="kinds_nodejs">
 <a href="#kinds_nodejs" style="color: inherit; text-decoration: inherit;">kinds</a>
@@ -271,8 +243,7 @@ The following arguments are supported:
         <span class="property-indicator"></span>
         <span class="property-type">string | Entity<wbr>Timeline<wbr>Kind[]</span>
     </dt>
-    <dd>{{% md %}}Array of timeline Item kinds.{{% /md %}}</dd>
-    <dt class="property-optional"
+    <dd>{{% md %}}Array of timeline Item kinds.{{% /md %}}</dd><dt class="property-optional"
             title="Optional">
         <span id="numberofbucket_nodejs">
 <a href="#numberofbucket_nodejs" style="color: inherit; text-decoration: inherit;">number<wbr>Of<wbr>Bucket</a>
@@ -280,14 +251,11 @@ The following arguments are supported:
         <span class="property-indicator"></span>
         <span class="property-type">number</span>
     </dt>
-    <dd>{{% md %}}The number of bucket for timeline queries aggregation.{{% /md %}}</dd>
-</dl>
+    <dd>{{% md %}}The number of bucket for timeline queries aggregation.{{% /md %}}</dd></dl>
 {{% /choosable %}}
 
 {{% choosable language python %}}
-<dl class="resources-properties">
-
-    <dt class="property-required"
+<dl class="resources-properties"><dt class="property-required"
             title="Required">
         <span id="end_time_python">
 <a href="#end_time_python" style="color: inherit; text-decoration: inherit;">end_<wbr>time</a>
@@ -295,8 +263,7 @@ The following arguments are supported:
         <span class="property-indicator"></span>
         <span class="property-type">str</span>
     </dt>
-    <dd>{{% md %}}The end timeline date, so the results returned are before this date.{{% /md %}}</dd>
-    <dt class="property-required"
+    <dd>{{% md %}}The end timeline date, so the results returned are before this date.{{% /md %}}</dd><dt class="property-required"
             title="Required">
         <span id="entity_id_python">
 <a href="#entity_id_python" style="color: inherit; text-decoration: inherit;">entity_<wbr>id</a>
@@ -304,8 +271,7 @@ The following arguments are supported:
         <span class="property-indicator"></span>
         <span class="property-type">str</span>
     </dt>
-    <dd>{{% md %}}entity ID{{% /md %}}</dd>
-    <dt class="property-required"
+    <dd>{{% md %}}entity ID{{% /md %}}</dd><dt class="property-required"
             title="Required">
         <span id="operational_insights_resource_provider_python">
 <a href="#operational_insights_resource_provider_python" style="color: inherit; text-decoration: inherit;">operational_<wbr>insights_<wbr>resource_<wbr>provider</a>
@@ -313,8 +279,7 @@ The following arguments are supported:
         <span class="property-indicator"></span>
         <span class="property-type">str</span>
     </dt>
-    <dd>{{% md %}}The namespace of workspaces resource provider- Microsoft.OperationalInsights.{{% /md %}}</dd>
-    <dt class="property-required"
+    <dd>{{% md %}}The namespace of workspaces resource provider- Microsoft.OperationalInsights.{{% /md %}}</dd><dt class="property-required"
             title="Required">
         <span id="resource_group_name_python">
 <a href="#resource_group_name_python" style="color: inherit; text-decoration: inherit;">resource_<wbr>group_<wbr>name</a>
@@ -322,8 +287,7 @@ The following arguments are supported:
         <span class="property-indicator"></span>
         <span class="property-type">str</span>
     </dt>
-    <dd>{{% md %}}The name of the resource group within the user's subscription. The name is case insensitive.{{% /md %}}</dd>
-    <dt class="property-required"
+    <dd>{{% md %}}The name of the resource group within the user's subscription. The name is case insensitive.{{% /md %}}</dd><dt class="property-required"
             title="Required">
         <span id="start_time_python">
 <a href="#start_time_python" style="color: inherit; text-decoration: inherit;">start_<wbr>time</a>
@@ -331,8 +295,7 @@ The following arguments are supported:
         <span class="property-indicator"></span>
         <span class="property-type">str</span>
     </dt>
-    <dd>{{% md %}}The start timeline date, so the results returned are after this date.{{% /md %}}</dd>
-    <dt class="property-required"
+    <dd>{{% md %}}The start timeline date, so the results returned are after this date.{{% /md %}}</dd><dt class="property-required"
             title="Required">
         <span id="workspace_name_python">
 <a href="#workspace_name_python" style="color: inherit; text-decoration: inherit;">workspace_<wbr>name</a>
@@ -340,8 +303,7 @@ The following arguments are supported:
         <span class="property-indicator"></span>
         <span class="property-type">str</span>
     </dt>
-    <dd>{{% md %}}The name of the workspace.{{% /md %}}</dd>
-    <dt class="property-optional"
+    <dd>{{% md %}}The name of the workspace.{{% /md %}}</dd><dt class="property-optional"
             title="Optional">
         <span id="kinds_python">
 <a href="#kinds_python" style="color: inherit; text-decoration: inherit;">kinds</a>
@@ -349,8 +311,7 @@ The following arguments are supported:
         <span class="property-indicator"></span>
         <span class="property-type">Sequence[Union[str, Entity<wbr>Timeline<wbr>Kind]]</span>
     </dt>
-    <dd>{{% md %}}Array of timeline Item kinds.{{% /md %}}</dd>
-    <dt class="property-optional"
+    <dd>{{% md %}}Array of timeline Item kinds.{{% /md %}}</dd><dt class="property-optional"
             title="Optional">
         <span id="number_of_bucket_python">
 <a href="#number_of_bucket_python" style="color: inherit; text-decoration: inherit;">number_<wbr>of_<wbr>bucket</a>
@@ -358,8 +319,7 @@ The following arguments are supported:
         <span class="property-indicator"></span>
         <span class="property-type">int</span>
     </dt>
-    <dd>{{% md %}}The number of bucket for timeline queries aggregation.{{% /md %}}</dd>
-</dl>
+    <dd>{{% md %}}The number of bucket for timeline queries aggregation.{{% /md %}}</dd></dl>
 {{% /choosable %}}
 
 
@@ -372,9 +332,7 @@ The following output properties are available:
 
 
 {{% choosable language csharp %}}
-<dl class="resources-properties">
-
-    <dt class="property-"
+<dl class="resources-properties"><dt class="property-"
             title="">
         <span id="metadata_csharp">
 <a href="#metadata_csharp" style="color: inherit; text-decoration: inherit;">Meta<wbr>Data</a>
@@ -382,8 +340,7 @@ The following output properties are available:
         <span class="property-indicator"></span>
         <span class="property-type"><a href="#timelineresultsmetadataresponse">Pulumi.<wbr>Azure<wbr>Native.<wbr>Security<wbr>Insights.<wbr>Outputs.<wbr>Timeline<wbr>Results<wbr>Metadata<wbr>Response</a></span>
     </dt>
-    <dd>{{% md %}}The metadata from the timeline operation results.{{% /md %}}</dd>
-    <dt class="property-"
+    <dd>{{% md %}}The metadata from the timeline operation results.{{% /md %}}</dd><dt class="property-"
             title="">
         <span id="value_csharp">
 <a href="#value_csharp" style="color: inherit; text-decoration: inherit;">Value</a>
@@ -391,14 +348,11 @@ The following output properties are available:
         <span class="property-indicator"></span>
         <span class="property-type">List&lt;object&gt;</span>
     </dt>
-    <dd>{{% md %}}The timeline result values.{{% /md %}}</dd>
-</dl>
+    <dd>{{% md %}}The timeline result values.{{% /md %}}</dd></dl>
 {{% /choosable %}}
 
 {{% choosable language go %}}
-<dl class="resources-properties">
-
-    <dt class="property-"
+<dl class="resources-properties"><dt class="property-"
             title="">
         <span id="metadata_go">
 <a href="#metadata_go" style="color: inherit; text-decoration: inherit;">Meta<wbr>Data</a>
@@ -406,8 +360,7 @@ The following output properties are available:
         <span class="property-indicator"></span>
         <span class="property-type"><a href="#timelineresultsmetadataresponse">Timeline<wbr>Results<wbr>Metadata<wbr>Response</a></span>
     </dt>
-    <dd>{{% md %}}The metadata from the timeline operation results.{{% /md %}}</dd>
-    <dt class="property-"
+    <dd>{{% md %}}The metadata from the timeline operation results.{{% /md %}}</dd><dt class="property-"
             title="">
         <span id="value_go">
 <a href="#value_go" style="color: inherit; text-decoration: inherit;">Value</a>
@@ -415,14 +368,11 @@ The following output properties are available:
         <span class="property-indicator"></span>
         <span class="property-type">[]interface{}</span>
     </dt>
-    <dd>{{% md %}}The timeline result values.{{% /md %}}</dd>
-</dl>
+    <dd>{{% md %}}The timeline result values.{{% /md %}}</dd></dl>
 {{% /choosable %}}
 
 {{% choosable language nodejs %}}
-<dl class="resources-properties">
-
-    <dt class="property-"
+<dl class="resources-properties"><dt class="property-"
             title="">
         <span id="metadata_nodejs">
 <a href="#metadata_nodejs" style="color: inherit; text-decoration: inherit;">meta<wbr>Data</a>
@@ -430,8 +380,7 @@ The following output properties are available:
         <span class="property-indicator"></span>
         <span class="property-type"><a href="#timelineresultsmetadataresponse">Timeline<wbr>Results<wbr>Metadata<wbr>Response</a></span>
     </dt>
-    <dd>{{% md %}}The metadata from the timeline operation results.{{% /md %}}</dd>
-    <dt class="property-"
+    <dd>{{% md %}}The metadata from the timeline operation results.{{% /md %}}</dd><dt class="property-"
             title="">
         <span id="value_nodejs">
 <a href="#value_nodejs" style="color: inherit; text-decoration: inherit;">value</a>
@@ -439,14 +388,11 @@ The following output properties are available:
         <span class="property-indicator"></span>
         <span class="property-type">Activity<wbr>Timeline<wbr>Item<wbr>Response | Bookmark<wbr>Timeline<wbr>Item<wbr>Response | Security<wbr>Alert<wbr>Timeline<wbr>Item<wbr>Response[]</span>
     </dt>
-    <dd>{{% md %}}The timeline result values.{{% /md %}}</dd>
-</dl>
+    <dd>{{% md %}}The timeline result values.{{% /md %}}</dd></dl>
 {{% /choosable %}}
 
 {{% choosable language python %}}
-<dl class="resources-properties">
-
-    <dt class="property-"
+<dl class="resources-properties"><dt class="property-"
             title="">
         <span id="meta_data_python">
 <a href="#meta_data_python" style="color: inherit; text-decoration: inherit;">meta_<wbr>data</a>
@@ -454,8 +400,7 @@ The following output properties are available:
         <span class="property-indicator"></span>
         <span class="property-type"><a href="#timelineresultsmetadataresponse">Timeline<wbr>Results<wbr>Metadata<wbr>Response</a></span>
     </dt>
-    <dd>{{% md %}}The metadata from the timeline operation results.{{% /md %}}</dd>
-    <dt class="property-"
+    <dd>{{% md %}}The metadata from the timeline operation results.{{% /md %}}</dd><dt class="property-"
             title="">
         <span id="value_python">
 <a href="#value_python" style="color: inherit; text-decoration: inherit;">value</a>
@@ -463,8 +408,7 @@ The following output properties are available:
         <span class="property-indicator"></span>
         <span class="property-type">Sequence[Any]</span>
     </dt>
-    <dd>{{% md %}}The timeline result values.{{% /md %}}</dd>
-</dl>
+    <dd>{{% md %}}The timeline result values.{{% /md %}}</dd></dl>
 {{% /choosable %}}
 
 
@@ -478,9 +422,7 @@ The following output properties are available:
 
 
 {{% choosable language csharp %}}
-<dl class="resources-properties">
-
-    <dt class="property-required"
+<dl class="resources-properties"><dt class="property-required"
             title="Required">
         <span id="bucketendtimeutc_csharp">
 <a href="#bucketendtimeutc_csharp" style="color: inherit; text-decoration: inherit;">Bucket<wbr>End<wbr>Time<wbr>UTC</a>
@@ -488,8 +430,7 @@ The following output properties are available:
         <span class="property-indicator"></span>
         <span class="property-type">string</span>
     </dt>
-    <dd>{{% md %}}The grouping bucket end time.{{% /md %}}</dd>
-    <dt class="property-required"
+    <dd>{{% md %}}The grouping bucket end time.{{% /md %}}</dd><dt class="property-required"
             title="Required">
         <span id="bucketstarttimeutc_csharp">
 <a href="#bucketstarttimeutc_csharp" style="color: inherit; text-decoration: inherit;">Bucket<wbr>Start<wbr>Time<wbr>UTC</a>
@@ -497,8 +438,7 @@ The following output properties are available:
         <span class="property-indicator"></span>
         <span class="property-type">string</span>
     </dt>
-    <dd>{{% md %}}The grouping bucket start time.{{% /md %}}</dd>
-    <dt class="property-required"
+    <dd>{{% md %}}The grouping bucket start time.{{% /md %}}</dd><dt class="property-required"
             title="Required">
         <span id="content_csharp">
 <a href="#content_csharp" style="color: inherit; text-decoration: inherit;">Content</a>
@@ -506,8 +446,7 @@ The following output properties are available:
         <span class="property-indicator"></span>
         <span class="property-type">string</span>
     </dt>
-    <dd>{{% md %}}The activity timeline content.{{% /md %}}</dd>
-    <dt class="property-required"
+    <dd>{{% md %}}The activity timeline content.{{% /md %}}</dd><dt class="property-required"
             title="Required">
         <span id="firstactivitytimeutc_csharp">
 <a href="#firstactivitytimeutc_csharp" style="color: inherit; text-decoration: inherit;">First<wbr>Activity<wbr>Time<wbr>UTC</a>
@@ -515,8 +454,7 @@ The following output properties are available:
         <span class="property-indicator"></span>
         <span class="property-type">string</span>
     </dt>
-    <dd>{{% md %}}The time of the first activity in the grouping bucket.{{% /md %}}</dd>
-    <dt class="property-required"
+    <dd>{{% md %}}The time of the first activity in the grouping bucket.{{% /md %}}</dd><dt class="property-required"
             title="Required">
         <span id="lastactivitytimeutc_csharp">
 <a href="#lastactivitytimeutc_csharp" style="color: inherit; text-decoration: inherit;">Last<wbr>Activity<wbr>Time<wbr>UTC</a>
@@ -524,8 +462,7 @@ The following output properties are available:
         <span class="property-indicator"></span>
         <span class="property-type">string</span>
     </dt>
-    <dd>{{% md %}}The time of the last activity in the grouping bucket.{{% /md %}}</dd>
-    <dt class="property-required"
+    <dd>{{% md %}}The time of the last activity in the grouping bucket.{{% /md %}}</dd><dt class="property-required"
             title="Required">
         <span id="queryid_csharp">
 <a href="#queryid_csharp" style="color: inherit; text-decoration: inherit;">Query<wbr>Id</a>
@@ -533,8 +470,7 @@ The following output properties are available:
         <span class="property-indicator"></span>
         <span class="property-type">string</span>
     </dt>
-    <dd>{{% md %}}The activity query id.{{% /md %}}</dd>
-    <dt class="property-required"
+    <dd>{{% md %}}The activity query id.{{% /md %}}</dd><dt class="property-required"
             title="Required">
         <span id="title_csharp">
 <a href="#title_csharp" style="color: inherit; text-decoration: inherit;">Title</a>
@@ -542,14 +478,11 @@ The following output properties are available:
         <span class="property-indicator"></span>
         <span class="property-type">string</span>
     </dt>
-    <dd>{{% md %}}The activity timeline title.{{% /md %}}</dd>
-</dl>
+    <dd>{{% md %}}The activity timeline title.{{% /md %}}</dd></dl>
 {{% /choosable %}}
 
 {{% choosable language go %}}
-<dl class="resources-properties">
-
-    <dt class="property-required"
+<dl class="resources-properties"><dt class="property-required"
             title="Required">
         <span id="bucketendtimeutc_go">
 <a href="#bucketendtimeutc_go" style="color: inherit; text-decoration: inherit;">Bucket<wbr>End<wbr>Time<wbr>UTC</a>
@@ -557,8 +490,7 @@ The following output properties are available:
         <span class="property-indicator"></span>
         <span class="property-type">string</span>
     </dt>
-    <dd>{{% md %}}The grouping bucket end time.{{% /md %}}</dd>
-    <dt class="property-required"
+    <dd>{{% md %}}The grouping bucket end time.{{% /md %}}</dd><dt class="property-required"
             title="Required">
         <span id="bucketstarttimeutc_go">
 <a href="#bucketstarttimeutc_go" style="color: inherit; text-decoration: inherit;">Bucket<wbr>Start<wbr>Time<wbr>UTC</a>
@@ -566,8 +498,7 @@ The following output properties are available:
         <span class="property-indicator"></span>
         <span class="property-type">string</span>
     </dt>
-    <dd>{{% md %}}The grouping bucket start time.{{% /md %}}</dd>
-    <dt class="property-required"
+    <dd>{{% md %}}The grouping bucket start time.{{% /md %}}</dd><dt class="property-required"
             title="Required">
         <span id="content_go">
 <a href="#content_go" style="color: inherit; text-decoration: inherit;">Content</a>
@@ -575,8 +506,7 @@ The following output properties are available:
         <span class="property-indicator"></span>
         <span class="property-type">string</span>
     </dt>
-    <dd>{{% md %}}The activity timeline content.{{% /md %}}</dd>
-    <dt class="property-required"
+    <dd>{{% md %}}The activity timeline content.{{% /md %}}</dd><dt class="property-required"
             title="Required">
         <span id="firstactivitytimeutc_go">
 <a href="#firstactivitytimeutc_go" style="color: inherit; text-decoration: inherit;">First<wbr>Activity<wbr>Time<wbr>UTC</a>
@@ -584,8 +514,7 @@ The following output properties are available:
         <span class="property-indicator"></span>
         <span class="property-type">string</span>
     </dt>
-    <dd>{{% md %}}The time of the first activity in the grouping bucket.{{% /md %}}</dd>
-    <dt class="property-required"
+    <dd>{{% md %}}The time of the first activity in the grouping bucket.{{% /md %}}</dd><dt class="property-required"
             title="Required">
         <span id="lastactivitytimeutc_go">
 <a href="#lastactivitytimeutc_go" style="color: inherit; text-decoration: inherit;">Last<wbr>Activity<wbr>Time<wbr>UTC</a>
@@ -593,8 +522,7 @@ The following output properties are available:
         <span class="property-indicator"></span>
         <span class="property-type">string</span>
     </dt>
-    <dd>{{% md %}}The time of the last activity in the grouping bucket.{{% /md %}}</dd>
-    <dt class="property-required"
+    <dd>{{% md %}}The time of the last activity in the grouping bucket.{{% /md %}}</dd><dt class="property-required"
             title="Required">
         <span id="queryid_go">
 <a href="#queryid_go" style="color: inherit; text-decoration: inherit;">Query<wbr>Id</a>
@@ -602,8 +530,7 @@ The following output properties are available:
         <span class="property-indicator"></span>
         <span class="property-type">string</span>
     </dt>
-    <dd>{{% md %}}The activity query id.{{% /md %}}</dd>
-    <dt class="property-required"
+    <dd>{{% md %}}The activity query id.{{% /md %}}</dd><dt class="property-required"
             title="Required">
         <span id="title_go">
 <a href="#title_go" style="color: inherit; text-decoration: inherit;">Title</a>
@@ -611,14 +538,11 @@ The following output properties are available:
         <span class="property-indicator"></span>
         <span class="property-type">string</span>
     </dt>
-    <dd>{{% md %}}The activity timeline title.{{% /md %}}</dd>
-</dl>
+    <dd>{{% md %}}The activity timeline title.{{% /md %}}</dd></dl>
 {{% /choosable %}}
 
 {{% choosable language nodejs %}}
-<dl class="resources-properties">
-
-    <dt class="property-required"
+<dl class="resources-properties"><dt class="property-required"
             title="Required">
         <span id="bucketendtimeutc_nodejs">
 <a href="#bucketendtimeutc_nodejs" style="color: inherit; text-decoration: inherit;">bucket<wbr>End<wbr>Time<wbr>UTC</a>
@@ -626,8 +550,7 @@ The following output properties are available:
         <span class="property-indicator"></span>
         <span class="property-type">string</span>
     </dt>
-    <dd>{{% md %}}The grouping bucket end time.{{% /md %}}</dd>
-    <dt class="property-required"
+    <dd>{{% md %}}The grouping bucket end time.{{% /md %}}</dd><dt class="property-required"
             title="Required">
         <span id="bucketstarttimeutc_nodejs">
 <a href="#bucketstarttimeutc_nodejs" style="color: inherit; text-decoration: inherit;">bucket<wbr>Start<wbr>Time<wbr>UTC</a>
@@ -635,8 +558,7 @@ The following output properties are available:
         <span class="property-indicator"></span>
         <span class="property-type">string</span>
     </dt>
-    <dd>{{% md %}}The grouping bucket start time.{{% /md %}}</dd>
-    <dt class="property-required"
+    <dd>{{% md %}}The grouping bucket start time.{{% /md %}}</dd><dt class="property-required"
             title="Required">
         <span id="content_nodejs">
 <a href="#content_nodejs" style="color: inherit; text-decoration: inherit;">content</a>
@@ -644,8 +566,7 @@ The following output properties are available:
         <span class="property-indicator"></span>
         <span class="property-type">string</span>
     </dt>
-    <dd>{{% md %}}The activity timeline content.{{% /md %}}</dd>
-    <dt class="property-required"
+    <dd>{{% md %}}The activity timeline content.{{% /md %}}</dd><dt class="property-required"
             title="Required">
         <span id="firstactivitytimeutc_nodejs">
 <a href="#firstactivitytimeutc_nodejs" style="color: inherit; text-decoration: inherit;">first<wbr>Activity<wbr>Time<wbr>UTC</a>
@@ -653,8 +574,7 @@ The following output properties are available:
         <span class="property-indicator"></span>
         <span class="property-type">string</span>
     </dt>
-    <dd>{{% md %}}The time of the first activity in the grouping bucket.{{% /md %}}</dd>
-    <dt class="property-required"
+    <dd>{{% md %}}The time of the first activity in the grouping bucket.{{% /md %}}</dd><dt class="property-required"
             title="Required">
         <span id="lastactivitytimeutc_nodejs">
 <a href="#lastactivitytimeutc_nodejs" style="color: inherit; text-decoration: inherit;">last<wbr>Activity<wbr>Time<wbr>UTC</a>
@@ -662,8 +582,7 @@ The following output properties are available:
         <span class="property-indicator"></span>
         <span class="property-type">string</span>
     </dt>
-    <dd>{{% md %}}The time of the last activity in the grouping bucket.{{% /md %}}</dd>
-    <dt class="property-required"
+    <dd>{{% md %}}The time of the last activity in the grouping bucket.{{% /md %}}</dd><dt class="property-required"
             title="Required">
         <span id="queryid_nodejs">
 <a href="#queryid_nodejs" style="color: inherit; text-decoration: inherit;">query<wbr>Id</a>
@@ -671,8 +590,7 @@ The following output properties are available:
         <span class="property-indicator"></span>
         <span class="property-type">string</span>
     </dt>
-    <dd>{{% md %}}The activity query id.{{% /md %}}</dd>
-    <dt class="property-required"
+    <dd>{{% md %}}The activity query id.{{% /md %}}</dd><dt class="property-required"
             title="Required">
         <span id="title_nodejs">
 <a href="#title_nodejs" style="color: inherit; text-decoration: inherit;">title</a>
@@ -680,14 +598,11 @@ The following output properties are available:
         <span class="property-indicator"></span>
         <span class="property-type">string</span>
     </dt>
-    <dd>{{% md %}}The activity timeline title.{{% /md %}}</dd>
-</dl>
+    <dd>{{% md %}}The activity timeline title.{{% /md %}}</dd></dl>
 {{% /choosable %}}
 
 {{% choosable language python %}}
-<dl class="resources-properties">
-
-    <dt class="property-required"
+<dl class="resources-properties"><dt class="property-required"
             title="Required">
         <span id="bucket_end_time_utc_python">
 <a href="#bucket_end_time_utc_python" style="color: inherit; text-decoration: inherit;">bucket_<wbr>end_<wbr>time_<wbr>utc</a>
@@ -695,8 +610,7 @@ The following output properties are available:
         <span class="property-indicator"></span>
         <span class="property-type">str</span>
     </dt>
-    <dd>{{% md %}}The grouping bucket end time.{{% /md %}}</dd>
-    <dt class="property-required"
+    <dd>{{% md %}}The grouping bucket end time.{{% /md %}}</dd><dt class="property-required"
             title="Required">
         <span id="bucket_start_time_utc_python">
 <a href="#bucket_start_time_utc_python" style="color: inherit; text-decoration: inherit;">bucket_<wbr>start_<wbr>time_<wbr>utc</a>
@@ -704,8 +618,7 @@ The following output properties are available:
         <span class="property-indicator"></span>
         <span class="property-type">str</span>
     </dt>
-    <dd>{{% md %}}The grouping bucket start time.{{% /md %}}</dd>
-    <dt class="property-required"
+    <dd>{{% md %}}The grouping bucket start time.{{% /md %}}</dd><dt class="property-required"
             title="Required">
         <span id="content_python">
 <a href="#content_python" style="color: inherit; text-decoration: inherit;">content</a>
@@ -713,8 +626,7 @@ The following output properties are available:
         <span class="property-indicator"></span>
         <span class="property-type">str</span>
     </dt>
-    <dd>{{% md %}}The activity timeline content.{{% /md %}}</dd>
-    <dt class="property-required"
+    <dd>{{% md %}}The activity timeline content.{{% /md %}}</dd><dt class="property-required"
             title="Required">
         <span id="first_activity_time_utc_python">
 <a href="#first_activity_time_utc_python" style="color: inherit; text-decoration: inherit;">first_<wbr>activity_<wbr>time_<wbr>utc</a>
@@ -722,8 +634,7 @@ The following output properties are available:
         <span class="property-indicator"></span>
         <span class="property-type">str</span>
     </dt>
-    <dd>{{% md %}}The time of the first activity in the grouping bucket.{{% /md %}}</dd>
-    <dt class="property-required"
+    <dd>{{% md %}}The time of the first activity in the grouping bucket.{{% /md %}}</dd><dt class="property-required"
             title="Required">
         <span id="last_activity_time_utc_python">
 <a href="#last_activity_time_utc_python" style="color: inherit; text-decoration: inherit;">last_<wbr>activity_<wbr>time_<wbr>utc</a>
@@ -731,8 +642,7 @@ The following output properties are available:
         <span class="property-indicator"></span>
         <span class="property-type">str</span>
     </dt>
-    <dd>{{% md %}}The time of the last activity in the grouping bucket.{{% /md %}}</dd>
-    <dt class="property-required"
+    <dd>{{% md %}}The time of the last activity in the grouping bucket.{{% /md %}}</dd><dt class="property-required"
             title="Required">
         <span id="query_id_python">
 <a href="#query_id_python" style="color: inherit; text-decoration: inherit;">query_<wbr>id</a>
@@ -740,8 +650,7 @@ The following output properties are available:
         <span class="property-indicator"></span>
         <span class="property-type">str</span>
     </dt>
-    <dd>{{% md %}}The activity query id.{{% /md %}}</dd>
-    <dt class="property-required"
+    <dd>{{% md %}}The activity query id.{{% /md %}}</dd><dt class="property-required"
             title="Required">
         <span id="title_python">
 <a href="#title_python" style="color: inherit; text-decoration: inherit;">title</a>
@@ -749,8 +658,7 @@ The following output properties are available:
         <span class="property-indicator"></span>
         <span class="property-type">str</span>
     </dt>
-    <dd>{{% md %}}The activity timeline title.{{% /md %}}</dd>
-</dl>
+    <dd>{{% md %}}The activity timeline title.{{% /md %}}</dd></dl>
 {{% /choosable %}}
 
 <h4 id="bookmarktimelineitemresponse">Bookmark<wbr>Timeline<wbr>Item<wbr>Response</h4>
@@ -758,9 +666,7 @@ The following output properties are available:
 
 
 {{% choosable language csharp %}}
-<dl class="resources-properties">
-
-    <dt class="property-required"
+<dl class="resources-properties"><dt class="property-required"
             title="Required">
         <span id="azureresourceid_csharp">
 <a href="#azureresourceid_csharp" style="color: inherit; text-decoration: inherit;">Azure<wbr>Resource<wbr>Id</a>
@@ -768,8 +674,7 @@ The following output properties are available:
         <span class="property-indicator"></span>
         <span class="property-type">string</span>
     </dt>
-    <dd>{{% md %}}The bookmark azure resource id.{{% /md %}}</dd>
-    <dt class="property-optional"
+    <dd>{{% md %}}The bookmark azure resource id.{{% /md %}}</dd><dt class="property-optional"
             title="Optional">
         <span id="createdby_csharp">
 <a href="#createdby_csharp" style="color: inherit; text-decoration: inherit;">Created<wbr>By</a>
@@ -777,8 +682,7 @@ The following output properties are available:
         <span class="property-indicator"></span>
         <span class="property-type"><a href="#userinforesponse">Pulumi.<wbr>Azure<wbr>Native.<wbr>Security<wbr>Insights.<wbr>Inputs.<wbr>User<wbr>Info<wbr>Response<wbr>Args</a></span>
     </dt>
-    <dd>{{% md %}}Describes a user that created the bookmark{{% /md %}}</dd>
-    <dt class="property-optional"
+    <dd>{{% md %}}Describes a user that created the bookmark{{% /md %}}</dd><dt class="property-optional"
             title="Optional">
         <span id="displayname_csharp">
 <a href="#displayname_csharp" style="color: inherit; text-decoration: inherit;">Display<wbr>Name</a>
@@ -786,8 +690,7 @@ The following output properties are available:
         <span class="property-indicator"></span>
         <span class="property-type">string</span>
     </dt>
-    <dd>{{% md %}}The bookmark display name.{{% /md %}}</dd>
-    <dt class="property-optional"
+    <dd>{{% md %}}The bookmark display name.{{% /md %}}</dd><dt class="property-optional"
             title="Optional">
         <span id="endtimeutc_csharp">
 <a href="#endtimeutc_csharp" style="color: inherit; text-decoration: inherit;">End<wbr>Time<wbr>Utc</a>
@@ -795,8 +698,7 @@ The following output properties are available:
         <span class="property-indicator"></span>
         <span class="property-type">string</span>
     </dt>
-    <dd>{{% md %}}The bookmark end time.{{% /md %}}</dd>
-    <dt class="property-optional"
+    <dd>{{% md %}}The bookmark end time.{{% /md %}}</dd><dt class="property-optional"
             title="Optional">
         <span id="eventtime_csharp">
 <a href="#eventtime_csharp" style="color: inherit; text-decoration: inherit;">Event<wbr>Time</a>
@@ -804,8 +706,7 @@ The following output properties are available:
         <span class="property-indicator"></span>
         <span class="property-type">string</span>
     </dt>
-    <dd>{{% md %}}The bookmark event time.{{% /md %}}</dd>
-    <dt class="property-optional"
+    <dd>{{% md %}}The bookmark event time.{{% /md %}}</dd><dt class="property-optional"
             title="Optional">
         <span id="labels_csharp">
 <a href="#labels_csharp" style="color: inherit; text-decoration: inherit;">Labels</a>
@@ -813,8 +714,7 @@ The following output properties are available:
         <span class="property-indicator"></span>
         <span class="property-type">List&lt;string&gt;</span>
     </dt>
-    <dd>{{% md %}}List of labels relevant to this bookmark{{% /md %}}</dd>
-    <dt class="property-optional"
+    <dd>{{% md %}}List of labels relevant to this bookmark{{% /md %}}</dd><dt class="property-optional"
             title="Optional">
         <span id="notes_csharp">
 <a href="#notes_csharp" style="color: inherit; text-decoration: inherit;">Notes</a>
@@ -822,8 +722,7 @@ The following output properties are available:
         <span class="property-indicator"></span>
         <span class="property-type">string</span>
     </dt>
-    <dd>{{% md %}}The notes of the bookmark{{% /md %}}</dd>
-    <dt class="property-optional"
+    <dd>{{% md %}}The notes of the bookmark{{% /md %}}</dd><dt class="property-optional"
             title="Optional">
         <span id="starttimeutc_csharp">
 <a href="#starttimeutc_csharp" style="color: inherit; text-decoration: inherit;">Start<wbr>Time<wbr>Utc</a>
@@ -831,14 +730,11 @@ The following output properties are available:
         <span class="property-indicator"></span>
         <span class="property-type">string</span>
     </dt>
-    <dd>{{% md %}}TThe bookmark start time.{{% /md %}}</dd>
-</dl>
+    <dd>{{% md %}}TThe bookmark start time.{{% /md %}}</dd></dl>
 {{% /choosable %}}
 
 {{% choosable language go %}}
-<dl class="resources-properties">
-
-    <dt class="property-required"
+<dl class="resources-properties"><dt class="property-required"
             title="Required">
         <span id="azureresourceid_go">
 <a href="#azureresourceid_go" style="color: inherit; text-decoration: inherit;">Azure<wbr>Resource<wbr>Id</a>
@@ -846,8 +742,7 @@ The following output properties are available:
         <span class="property-indicator"></span>
         <span class="property-type">string</span>
     </dt>
-    <dd>{{% md %}}The bookmark azure resource id.{{% /md %}}</dd>
-    <dt class="property-optional"
+    <dd>{{% md %}}The bookmark azure resource id.{{% /md %}}</dd><dt class="property-optional"
             title="Optional">
         <span id="createdby_go">
 <a href="#createdby_go" style="color: inherit; text-decoration: inherit;">Created<wbr>By</a>
@@ -855,8 +750,7 @@ The following output properties are available:
         <span class="property-indicator"></span>
         <span class="property-type"><a href="#userinforesponse">User<wbr>Info<wbr>Response</a></span>
     </dt>
-    <dd>{{% md %}}Describes a user that created the bookmark{{% /md %}}</dd>
-    <dt class="property-optional"
+    <dd>{{% md %}}Describes a user that created the bookmark{{% /md %}}</dd><dt class="property-optional"
             title="Optional">
         <span id="displayname_go">
 <a href="#displayname_go" style="color: inherit; text-decoration: inherit;">Display<wbr>Name</a>
@@ -864,8 +758,7 @@ The following output properties are available:
         <span class="property-indicator"></span>
         <span class="property-type">string</span>
     </dt>
-    <dd>{{% md %}}The bookmark display name.{{% /md %}}</dd>
-    <dt class="property-optional"
+    <dd>{{% md %}}The bookmark display name.{{% /md %}}</dd><dt class="property-optional"
             title="Optional">
         <span id="endtimeutc_go">
 <a href="#endtimeutc_go" style="color: inherit; text-decoration: inherit;">End<wbr>Time<wbr>Utc</a>
@@ -873,8 +766,7 @@ The following output properties are available:
         <span class="property-indicator"></span>
         <span class="property-type">string</span>
     </dt>
-    <dd>{{% md %}}The bookmark end time.{{% /md %}}</dd>
-    <dt class="property-optional"
+    <dd>{{% md %}}The bookmark end time.{{% /md %}}</dd><dt class="property-optional"
             title="Optional">
         <span id="eventtime_go">
 <a href="#eventtime_go" style="color: inherit; text-decoration: inherit;">Event<wbr>Time</a>
@@ -882,8 +774,7 @@ The following output properties are available:
         <span class="property-indicator"></span>
         <span class="property-type">string</span>
     </dt>
-    <dd>{{% md %}}The bookmark event time.{{% /md %}}</dd>
-    <dt class="property-optional"
+    <dd>{{% md %}}The bookmark event time.{{% /md %}}</dd><dt class="property-optional"
             title="Optional">
         <span id="labels_go">
 <a href="#labels_go" style="color: inherit; text-decoration: inherit;">Labels</a>
@@ -891,8 +782,7 @@ The following output properties are available:
         <span class="property-indicator"></span>
         <span class="property-type">[]string</span>
     </dt>
-    <dd>{{% md %}}List of labels relevant to this bookmark{{% /md %}}</dd>
-    <dt class="property-optional"
+    <dd>{{% md %}}List of labels relevant to this bookmark{{% /md %}}</dd><dt class="property-optional"
             title="Optional">
         <span id="notes_go">
 <a href="#notes_go" style="color: inherit; text-decoration: inherit;">Notes</a>
@@ -900,8 +790,7 @@ The following output properties are available:
         <span class="property-indicator"></span>
         <span class="property-type">string</span>
     </dt>
-    <dd>{{% md %}}The notes of the bookmark{{% /md %}}</dd>
-    <dt class="property-optional"
+    <dd>{{% md %}}The notes of the bookmark{{% /md %}}</dd><dt class="property-optional"
             title="Optional">
         <span id="starttimeutc_go">
 <a href="#starttimeutc_go" style="color: inherit; text-decoration: inherit;">Start<wbr>Time<wbr>Utc</a>
@@ -909,14 +798,11 @@ The following output properties are available:
         <span class="property-indicator"></span>
         <span class="property-type">string</span>
     </dt>
-    <dd>{{% md %}}TThe bookmark start time.{{% /md %}}</dd>
-</dl>
+    <dd>{{% md %}}TThe bookmark start time.{{% /md %}}</dd></dl>
 {{% /choosable %}}
 
 {{% choosable language nodejs %}}
-<dl class="resources-properties">
-
-    <dt class="property-required"
+<dl class="resources-properties"><dt class="property-required"
             title="Required">
         <span id="azureresourceid_nodejs">
 <a href="#azureresourceid_nodejs" style="color: inherit; text-decoration: inherit;">azure<wbr>Resource<wbr>Id</a>
@@ -924,8 +810,7 @@ The following output properties are available:
         <span class="property-indicator"></span>
         <span class="property-type">string</span>
     </dt>
-    <dd>{{% md %}}The bookmark azure resource id.{{% /md %}}</dd>
-    <dt class="property-optional"
+    <dd>{{% md %}}The bookmark azure resource id.{{% /md %}}</dd><dt class="property-optional"
             title="Optional">
         <span id="createdby_nodejs">
 <a href="#createdby_nodejs" style="color: inherit; text-decoration: inherit;">created<wbr>By</a>
@@ -933,8 +818,7 @@ The following output properties are available:
         <span class="property-indicator"></span>
         <span class="property-type"><a href="#userinforesponse">User<wbr>Info<wbr>Response</a></span>
     </dt>
-    <dd>{{% md %}}Describes a user that created the bookmark{{% /md %}}</dd>
-    <dt class="property-optional"
+    <dd>{{% md %}}Describes a user that created the bookmark{{% /md %}}</dd><dt class="property-optional"
             title="Optional">
         <span id="displayname_nodejs">
 <a href="#displayname_nodejs" style="color: inherit; text-decoration: inherit;">display<wbr>Name</a>
@@ -942,8 +826,7 @@ The following output properties are available:
         <span class="property-indicator"></span>
         <span class="property-type">string</span>
     </dt>
-    <dd>{{% md %}}The bookmark display name.{{% /md %}}</dd>
-    <dt class="property-optional"
+    <dd>{{% md %}}The bookmark display name.{{% /md %}}</dd><dt class="property-optional"
             title="Optional">
         <span id="endtimeutc_nodejs">
 <a href="#endtimeutc_nodejs" style="color: inherit; text-decoration: inherit;">end<wbr>Time<wbr>Utc</a>
@@ -951,8 +834,7 @@ The following output properties are available:
         <span class="property-indicator"></span>
         <span class="property-type">string</span>
     </dt>
-    <dd>{{% md %}}The bookmark end time.{{% /md %}}</dd>
-    <dt class="property-optional"
+    <dd>{{% md %}}The bookmark end time.{{% /md %}}</dd><dt class="property-optional"
             title="Optional">
         <span id="eventtime_nodejs">
 <a href="#eventtime_nodejs" style="color: inherit; text-decoration: inherit;">event<wbr>Time</a>
@@ -960,8 +842,7 @@ The following output properties are available:
         <span class="property-indicator"></span>
         <span class="property-type">string</span>
     </dt>
-    <dd>{{% md %}}The bookmark event time.{{% /md %}}</dd>
-    <dt class="property-optional"
+    <dd>{{% md %}}The bookmark event time.{{% /md %}}</dd><dt class="property-optional"
             title="Optional">
         <span id="labels_nodejs">
 <a href="#labels_nodejs" style="color: inherit; text-decoration: inherit;">labels</a>
@@ -969,8 +850,7 @@ The following output properties are available:
         <span class="property-indicator"></span>
         <span class="property-type">string[]</span>
     </dt>
-    <dd>{{% md %}}List of labels relevant to this bookmark{{% /md %}}</dd>
-    <dt class="property-optional"
+    <dd>{{% md %}}List of labels relevant to this bookmark{{% /md %}}</dd><dt class="property-optional"
             title="Optional">
         <span id="notes_nodejs">
 <a href="#notes_nodejs" style="color: inherit; text-decoration: inherit;">notes</a>
@@ -978,8 +858,7 @@ The following output properties are available:
         <span class="property-indicator"></span>
         <span class="property-type">string</span>
     </dt>
-    <dd>{{% md %}}The notes of the bookmark{{% /md %}}</dd>
-    <dt class="property-optional"
+    <dd>{{% md %}}The notes of the bookmark{{% /md %}}</dd><dt class="property-optional"
             title="Optional">
         <span id="starttimeutc_nodejs">
 <a href="#starttimeutc_nodejs" style="color: inherit; text-decoration: inherit;">start<wbr>Time<wbr>Utc</a>
@@ -987,14 +866,11 @@ The following output properties are available:
         <span class="property-indicator"></span>
         <span class="property-type">string</span>
     </dt>
-    <dd>{{% md %}}TThe bookmark start time.{{% /md %}}</dd>
-</dl>
+    <dd>{{% md %}}TThe bookmark start time.{{% /md %}}</dd></dl>
 {{% /choosable %}}
 
 {{% choosable language python %}}
-<dl class="resources-properties">
-
-    <dt class="property-required"
+<dl class="resources-properties"><dt class="property-required"
             title="Required">
         <span id="azure_resource_id_python">
 <a href="#azure_resource_id_python" style="color: inherit; text-decoration: inherit;">azure_<wbr>resource_<wbr>id</a>
@@ -1002,8 +878,7 @@ The following output properties are available:
         <span class="property-indicator"></span>
         <span class="property-type">str</span>
     </dt>
-    <dd>{{% md %}}The bookmark azure resource id.{{% /md %}}</dd>
-    <dt class="property-optional"
+    <dd>{{% md %}}The bookmark azure resource id.{{% /md %}}</dd><dt class="property-optional"
             title="Optional">
         <span id="created_by_python">
 <a href="#created_by_python" style="color: inherit; text-decoration: inherit;">created_<wbr>by</a>
@@ -1011,8 +886,7 @@ The following output properties are available:
         <span class="property-indicator"></span>
         <span class="property-type"><a href="#userinforesponse">User<wbr>Info<wbr>Response<wbr>Args</a></span>
     </dt>
-    <dd>{{% md %}}Describes a user that created the bookmark{{% /md %}}</dd>
-    <dt class="property-optional"
+    <dd>{{% md %}}Describes a user that created the bookmark{{% /md %}}</dd><dt class="property-optional"
             title="Optional">
         <span id="display_name_python">
 <a href="#display_name_python" style="color: inherit; text-decoration: inherit;">display_<wbr>name</a>
@@ -1020,8 +894,7 @@ The following output properties are available:
         <span class="property-indicator"></span>
         <span class="property-type">str</span>
     </dt>
-    <dd>{{% md %}}The bookmark display name.{{% /md %}}</dd>
-    <dt class="property-optional"
+    <dd>{{% md %}}The bookmark display name.{{% /md %}}</dd><dt class="property-optional"
             title="Optional">
         <span id="end_time_utc_python">
 <a href="#end_time_utc_python" style="color: inherit; text-decoration: inherit;">end_<wbr>time_<wbr>utc</a>
@@ -1029,8 +902,7 @@ The following output properties are available:
         <span class="property-indicator"></span>
         <span class="property-type">str</span>
     </dt>
-    <dd>{{% md %}}The bookmark end time.{{% /md %}}</dd>
-    <dt class="property-optional"
+    <dd>{{% md %}}The bookmark end time.{{% /md %}}</dd><dt class="property-optional"
             title="Optional">
         <span id="event_time_python">
 <a href="#event_time_python" style="color: inherit; text-decoration: inherit;">event_<wbr>time</a>
@@ -1038,8 +910,7 @@ The following output properties are available:
         <span class="property-indicator"></span>
         <span class="property-type">str</span>
     </dt>
-    <dd>{{% md %}}The bookmark event time.{{% /md %}}</dd>
-    <dt class="property-optional"
+    <dd>{{% md %}}The bookmark event time.{{% /md %}}</dd><dt class="property-optional"
             title="Optional">
         <span id="labels_python">
 <a href="#labels_python" style="color: inherit; text-decoration: inherit;">labels</a>
@@ -1047,8 +918,7 @@ The following output properties are available:
         <span class="property-indicator"></span>
         <span class="property-type">Sequence[str]</span>
     </dt>
-    <dd>{{% md %}}List of labels relevant to this bookmark{{% /md %}}</dd>
-    <dt class="property-optional"
+    <dd>{{% md %}}List of labels relevant to this bookmark{{% /md %}}</dd><dt class="property-optional"
             title="Optional">
         <span id="notes_python">
 <a href="#notes_python" style="color: inherit; text-decoration: inherit;">notes</a>
@@ -1056,8 +926,7 @@ The following output properties are available:
         <span class="property-indicator"></span>
         <span class="property-type">str</span>
     </dt>
-    <dd>{{% md %}}The notes of the bookmark{{% /md %}}</dd>
-    <dt class="property-optional"
+    <dd>{{% md %}}The notes of the bookmark{{% /md %}}</dd><dt class="property-optional"
             title="Optional">
         <span id="start_time_utc_python">
 <a href="#start_time_utc_python" style="color: inherit; text-decoration: inherit;">start_<wbr>time_<wbr>utc</a>
@@ -1065,8 +934,7 @@ The following output properties are available:
         <span class="property-indicator"></span>
         <span class="property-type">str</span>
     </dt>
-    <dd>{{% md %}}TThe bookmark start time.{{% /md %}}</dd>
-</dl>
+    <dd>{{% md %}}TThe bookmark start time.{{% /md %}}</dd></dl>
 {{% /choosable %}}
 
 <h4 id="entitytimelinekind">Entity<wbr>Timeline<wbr>Kind</h4>
@@ -1078,9 +946,7 @@ The following output properties are available:
 
 
 {{% choosable language csharp %}}
-<dl class="resources-properties">
-
-    <dt class="property-required"
+<dl class="resources-properties"><dt class="property-required"
             title="Required">
         <span id="alerttype_csharp">
 <a href="#alerttype_csharp" style="color: inherit; text-decoration: inherit;">Alert<wbr>Type</a>
@@ -1088,8 +954,7 @@ The following output properties are available:
         <span class="property-indicator"></span>
         <span class="property-type">string</span>
     </dt>
-    <dd>{{% md %}}The name of the alert type.{{% /md %}}</dd>
-    <dt class="property-required"
+    <dd>{{% md %}}The name of the alert type.{{% /md %}}</dd><dt class="property-required"
             title="Required">
         <span id="azureresourceid_csharp">
 <a href="#azureresourceid_csharp" style="color: inherit; text-decoration: inherit;">Azure<wbr>Resource<wbr>Id</a>
@@ -1097,8 +962,7 @@ The following output properties are available:
         <span class="property-indicator"></span>
         <span class="property-type">string</span>
     </dt>
-    <dd>{{% md %}}The alert azure resource id.{{% /md %}}</dd>
-    <dt class="property-required"
+    <dd>{{% md %}}The alert azure resource id.{{% /md %}}</dd><dt class="property-required"
             title="Required">
         <span id="displayname_csharp">
 <a href="#displayname_csharp" style="color: inherit; text-decoration: inherit;">Display<wbr>Name</a>
@@ -1106,8 +970,7 @@ The following output properties are available:
         <span class="property-indicator"></span>
         <span class="property-type">string</span>
     </dt>
-    <dd>{{% md %}}The alert name.{{% /md %}}</dd>
-    <dt class="property-required"
+    <dd>{{% md %}}The alert name.{{% /md %}}</dd><dt class="property-required"
             title="Required">
         <span id="endtimeutc_csharp">
 <a href="#endtimeutc_csharp" style="color: inherit; text-decoration: inherit;">End<wbr>Time<wbr>Utc</a>
@@ -1115,8 +978,7 @@ The following output properties are available:
         <span class="property-indicator"></span>
         <span class="property-type">string</span>
     </dt>
-    <dd>{{% md %}}The alert end time.{{% /md %}}</dd>
-    <dt class="property-required"
+    <dd>{{% md %}}The alert end time.{{% /md %}}</dd><dt class="property-required"
             title="Required">
         <span id="severity_csharp">
 <a href="#severity_csharp" style="color: inherit; text-decoration: inherit;">Severity</a>
@@ -1124,8 +986,7 @@ The following output properties are available:
         <span class="property-indicator"></span>
         <span class="property-type">string</span>
     </dt>
-    <dd>{{% md %}}The alert severity.{{% /md %}}</dd>
-    <dt class="property-required"
+    <dd>{{% md %}}The alert severity.{{% /md %}}</dd><dt class="property-required"
             title="Required">
         <span id="starttimeutc_csharp">
 <a href="#starttimeutc_csharp" style="color: inherit; text-decoration: inherit;">Start<wbr>Time<wbr>Utc</a>
@@ -1133,8 +994,7 @@ The following output properties are available:
         <span class="property-indicator"></span>
         <span class="property-type">string</span>
     </dt>
-    <dd>{{% md %}}The alert start time.{{% /md %}}</dd>
-    <dt class="property-required"
+    <dd>{{% md %}}The alert start time.{{% /md %}}</dd><dt class="property-required"
             title="Required">
         <span id="timegenerated_csharp">
 <a href="#timegenerated_csharp" style="color: inherit; text-decoration: inherit;">Time<wbr>Generated</a>
@@ -1142,8 +1002,7 @@ The following output properties are available:
         <span class="property-indicator"></span>
         <span class="property-type">string</span>
     </dt>
-    <dd>{{% md %}}The alert generated time.{{% /md %}}</dd>
-    <dt class="property-optional"
+    <dd>{{% md %}}The alert generated time.{{% /md %}}</dd><dt class="property-optional"
             title="Optional">
         <span id="description_csharp">
 <a href="#description_csharp" style="color: inherit; text-decoration: inherit;">Description</a>
@@ -1151,8 +1010,7 @@ The following output properties are available:
         <span class="property-indicator"></span>
         <span class="property-type">string</span>
     </dt>
-    <dd>{{% md %}}The alert description.{{% /md %}}</dd>
-    <dt class="property-optional"
+    <dd>{{% md %}}The alert description.{{% /md %}}</dd><dt class="property-optional"
             title="Optional">
         <span id="productname_csharp">
 <a href="#productname_csharp" style="color: inherit; text-decoration: inherit;">Product<wbr>Name</a>
@@ -1160,14 +1018,11 @@ The following output properties are available:
         <span class="property-indicator"></span>
         <span class="property-type">string</span>
     </dt>
-    <dd>{{% md %}}The alert product name.{{% /md %}}</dd>
-</dl>
+    <dd>{{% md %}}The alert product name.{{% /md %}}</dd></dl>
 {{% /choosable %}}
 
 {{% choosable language go %}}
-<dl class="resources-properties">
-
-    <dt class="property-required"
+<dl class="resources-properties"><dt class="property-required"
             title="Required">
         <span id="alerttype_go">
 <a href="#alerttype_go" style="color: inherit; text-decoration: inherit;">Alert<wbr>Type</a>
@@ -1175,8 +1030,7 @@ The following output properties are available:
         <span class="property-indicator"></span>
         <span class="property-type">string</span>
     </dt>
-    <dd>{{% md %}}The name of the alert type.{{% /md %}}</dd>
-    <dt class="property-required"
+    <dd>{{% md %}}The name of the alert type.{{% /md %}}</dd><dt class="property-required"
             title="Required">
         <span id="azureresourceid_go">
 <a href="#azureresourceid_go" style="color: inherit; text-decoration: inherit;">Azure<wbr>Resource<wbr>Id</a>
@@ -1184,8 +1038,7 @@ The following output properties are available:
         <span class="property-indicator"></span>
         <span class="property-type">string</span>
     </dt>
-    <dd>{{% md %}}The alert azure resource id.{{% /md %}}</dd>
-    <dt class="property-required"
+    <dd>{{% md %}}The alert azure resource id.{{% /md %}}</dd><dt class="property-required"
             title="Required">
         <span id="displayname_go">
 <a href="#displayname_go" style="color: inherit; text-decoration: inherit;">Display<wbr>Name</a>
@@ -1193,8 +1046,7 @@ The following output properties are available:
         <span class="property-indicator"></span>
         <span class="property-type">string</span>
     </dt>
-    <dd>{{% md %}}The alert name.{{% /md %}}</dd>
-    <dt class="property-required"
+    <dd>{{% md %}}The alert name.{{% /md %}}</dd><dt class="property-required"
             title="Required">
         <span id="endtimeutc_go">
 <a href="#endtimeutc_go" style="color: inherit; text-decoration: inherit;">End<wbr>Time<wbr>Utc</a>
@@ -1202,8 +1054,7 @@ The following output properties are available:
         <span class="property-indicator"></span>
         <span class="property-type">string</span>
     </dt>
-    <dd>{{% md %}}The alert end time.{{% /md %}}</dd>
-    <dt class="property-required"
+    <dd>{{% md %}}The alert end time.{{% /md %}}</dd><dt class="property-required"
             title="Required">
         <span id="severity_go">
 <a href="#severity_go" style="color: inherit; text-decoration: inherit;">Severity</a>
@@ -1211,8 +1062,7 @@ The following output properties are available:
         <span class="property-indicator"></span>
         <span class="property-type">string</span>
     </dt>
-    <dd>{{% md %}}The alert severity.{{% /md %}}</dd>
-    <dt class="property-required"
+    <dd>{{% md %}}The alert severity.{{% /md %}}</dd><dt class="property-required"
             title="Required">
         <span id="starttimeutc_go">
 <a href="#starttimeutc_go" style="color: inherit; text-decoration: inherit;">Start<wbr>Time<wbr>Utc</a>
@@ -1220,8 +1070,7 @@ The following output properties are available:
         <span class="property-indicator"></span>
         <span class="property-type">string</span>
     </dt>
-    <dd>{{% md %}}The alert start time.{{% /md %}}</dd>
-    <dt class="property-required"
+    <dd>{{% md %}}The alert start time.{{% /md %}}</dd><dt class="property-required"
             title="Required">
         <span id="timegenerated_go">
 <a href="#timegenerated_go" style="color: inherit; text-decoration: inherit;">Time<wbr>Generated</a>
@@ -1229,8 +1078,7 @@ The following output properties are available:
         <span class="property-indicator"></span>
         <span class="property-type">string</span>
     </dt>
-    <dd>{{% md %}}The alert generated time.{{% /md %}}</dd>
-    <dt class="property-optional"
+    <dd>{{% md %}}The alert generated time.{{% /md %}}</dd><dt class="property-optional"
             title="Optional">
         <span id="description_go">
 <a href="#description_go" style="color: inherit; text-decoration: inherit;">Description</a>
@@ -1238,8 +1086,7 @@ The following output properties are available:
         <span class="property-indicator"></span>
         <span class="property-type">string</span>
     </dt>
-    <dd>{{% md %}}The alert description.{{% /md %}}</dd>
-    <dt class="property-optional"
+    <dd>{{% md %}}The alert description.{{% /md %}}</dd><dt class="property-optional"
             title="Optional">
         <span id="productname_go">
 <a href="#productname_go" style="color: inherit; text-decoration: inherit;">Product<wbr>Name</a>
@@ -1247,14 +1094,11 @@ The following output properties are available:
         <span class="property-indicator"></span>
         <span class="property-type">string</span>
     </dt>
-    <dd>{{% md %}}The alert product name.{{% /md %}}</dd>
-</dl>
+    <dd>{{% md %}}The alert product name.{{% /md %}}</dd></dl>
 {{% /choosable %}}
 
 {{% choosable language nodejs %}}
-<dl class="resources-properties">
-
-    <dt class="property-required"
+<dl class="resources-properties"><dt class="property-required"
             title="Required">
         <span id="alerttype_nodejs">
 <a href="#alerttype_nodejs" style="color: inherit; text-decoration: inherit;">alert<wbr>Type</a>
@@ -1262,8 +1106,7 @@ The following output properties are available:
         <span class="property-indicator"></span>
         <span class="property-type">string</span>
     </dt>
-    <dd>{{% md %}}The name of the alert type.{{% /md %}}</dd>
-    <dt class="property-required"
+    <dd>{{% md %}}The name of the alert type.{{% /md %}}</dd><dt class="property-required"
             title="Required">
         <span id="azureresourceid_nodejs">
 <a href="#azureresourceid_nodejs" style="color: inherit; text-decoration: inherit;">azure<wbr>Resource<wbr>Id</a>
@@ -1271,8 +1114,7 @@ The following output properties are available:
         <span class="property-indicator"></span>
         <span class="property-type">string</span>
     </dt>
-    <dd>{{% md %}}The alert azure resource id.{{% /md %}}</dd>
-    <dt class="property-required"
+    <dd>{{% md %}}The alert azure resource id.{{% /md %}}</dd><dt class="property-required"
             title="Required">
         <span id="displayname_nodejs">
 <a href="#displayname_nodejs" style="color: inherit; text-decoration: inherit;">display<wbr>Name</a>
@@ -1280,8 +1122,7 @@ The following output properties are available:
         <span class="property-indicator"></span>
         <span class="property-type">string</span>
     </dt>
-    <dd>{{% md %}}The alert name.{{% /md %}}</dd>
-    <dt class="property-required"
+    <dd>{{% md %}}The alert name.{{% /md %}}</dd><dt class="property-required"
             title="Required">
         <span id="endtimeutc_nodejs">
 <a href="#endtimeutc_nodejs" style="color: inherit; text-decoration: inherit;">end<wbr>Time<wbr>Utc</a>
@@ -1289,8 +1130,7 @@ The following output properties are available:
         <span class="property-indicator"></span>
         <span class="property-type">string</span>
     </dt>
-    <dd>{{% md %}}The alert end time.{{% /md %}}</dd>
-    <dt class="property-required"
+    <dd>{{% md %}}The alert end time.{{% /md %}}</dd><dt class="property-required"
             title="Required">
         <span id="severity_nodejs">
 <a href="#severity_nodejs" style="color: inherit; text-decoration: inherit;">severity</a>
@@ -1298,8 +1138,7 @@ The following output properties are available:
         <span class="property-indicator"></span>
         <span class="property-type">string</span>
     </dt>
-    <dd>{{% md %}}The alert severity.{{% /md %}}</dd>
-    <dt class="property-required"
+    <dd>{{% md %}}The alert severity.{{% /md %}}</dd><dt class="property-required"
             title="Required">
         <span id="starttimeutc_nodejs">
 <a href="#starttimeutc_nodejs" style="color: inherit; text-decoration: inherit;">start<wbr>Time<wbr>Utc</a>
@@ -1307,8 +1146,7 @@ The following output properties are available:
         <span class="property-indicator"></span>
         <span class="property-type">string</span>
     </dt>
-    <dd>{{% md %}}The alert start time.{{% /md %}}</dd>
-    <dt class="property-required"
+    <dd>{{% md %}}The alert start time.{{% /md %}}</dd><dt class="property-required"
             title="Required">
         <span id="timegenerated_nodejs">
 <a href="#timegenerated_nodejs" style="color: inherit; text-decoration: inherit;">time<wbr>Generated</a>
@@ -1316,8 +1154,7 @@ The following output properties are available:
         <span class="property-indicator"></span>
         <span class="property-type">string</span>
     </dt>
-    <dd>{{% md %}}The alert generated time.{{% /md %}}</dd>
-    <dt class="property-optional"
+    <dd>{{% md %}}The alert generated time.{{% /md %}}</dd><dt class="property-optional"
             title="Optional">
         <span id="description_nodejs">
 <a href="#description_nodejs" style="color: inherit; text-decoration: inherit;">description</a>
@@ -1325,8 +1162,7 @@ The following output properties are available:
         <span class="property-indicator"></span>
         <span class="property-type">string</span>
     </dt>
-    <dd>{{% md %}}The alert description.{{% /md %}}</dd>
-    <dt class="property-optional"
+    <dd>{{% md %}}The alert description.{{% /md %}}</dd><dt class="property-optional"
             title="Optional">
         <span id="productname_nodejs">
 <a href="#productname_nodejs" style="color: inherit; text-decoration: inherit;">product<wbr>Name</a>
@@ -1334,14 +1170,11 @@ The following output properties are available:
         <span class="property-indicator"></span>
         <span class="property-type">string</span>
     </dt>
-    <dd>{{% md %}}The alert product name.{{% /md %}}</dd>
-</dl>
+    <dd>{{% md %}}The alert product name.{{% /md %}}</dd></dl>
 {{% /choosable %}}
 
 {{% choosable language python %}}
-<dl class="resources-properties">
-
-    <dt class="property-required"
+<dl class="resources-properties"><dt class="property-required"
             title="Required">
         <span id="alert_type_python">
 <a href="#alert_type_python" style="color: inherit; text-decoration: inherit;">alert_<wbr>type</a>
@@ -1349,8 +1182,7 @@ The following output properties are available:
         <span class="property-indicator"></span>
         <span class="property-type">str</span>
     </dt>
-    <dd>{{% md %}}The name of the alert type.{{% /md %}}</dd>
-    <dt class="property-required"
+    <dd>{{% md %}}The name of the alert type.{{% /md %}}</dd><dt class="property-required"
             title="Required">
         <span id="azure_resource_id_python">
 <a href="#azure_resource_id_python" style="color: inherit; text-decoration: inherit;">azure_<wbr>resource_<wbr>id</a>
@@ -1358,8 +1190,7 @@ The following output properties are available:
         <span class="property-indicator"></span>
         <span class="property-type">str</span>
     </dt>
-    <dd>{{% md %}}The alert azure resource id.{{% /md %}}</dd>
-    <dt class="property-required"
+    <dd>{{% md %}}The alert azure resource id.{{% /md %}}</dd><dt class="property-required"
             title="Required">
         <span id="display_name_python">
 <a href="#display_name_python" style="color: inherit; text-decoration: inherit;">display_<wbr>name</a>
@@ -1367,8 +1198,7 @@ The following output properties are available:
         <span class="property-indicator"></span>
         <span class="property-type">str</span>
     </dt>
-    <dd>{{% md %}}The alert name.{{% /md %}}</dd>
-    <dt class="property-required"
+    <dd>{{% md %}}The alert name.{{% /md %}}</dd><dt class="property-required"
             title="Required">
         <span id="end_time_utc_python">
 <a href="#end_time_utc_python" style="color: inherit; text-decoration: inherit;">end_<wbr>time_<wbr>utc</a>
@@ -1376,8 +1206,7 @@ The following output properties are available:
         <span class="property-indicator"></span>
         <span class="property-type">str</span>
     </dt>
-    <dd>{{% md %}}The alert end time.{{% /md %}}</dd>
-    <dt class="property-required"
+    <dd>{{% md %}}The alert end time.{{% /md %}}</dd><dt class="property-required"
             title="Required">
         <span id="severity_python">
 <a href="#severity_python" style="color: inherit; text-decoration: inherit;">severity</a>
@@ -1385,8 +1214,7 @@ The following output properties are available:
         <span class="property-indicator"></span>
         <span class="property-type">str</span>
     </dt>
-    <dd>{{% md %}}The alert severity.{{% /md %}}</dd>
-    <dt class="property-required"
+    <dd>{{% md %}}The alert severity.{{% /md %}}</dd><dt class="property-required"
             title="Required">
         <span id="start_time_utc_python">
 <a href="#start_time_utc_python" style="color: inherit; text-decoration: inherit;">start_<wbr>time_<wbr>utc</a>
@@ -1394,8 +1222,7 @@ The following output properties are available:
         <span class="property-indicator"></span>
         <span class="property-type">str</span>
     </dt>
-    <dd>{{% md %}}The alert start time.{{% /md %}}</dd>
-    <dt class="property-required"
+    <dd>{{% md %}}The alert start time.{{% /md %}}</dd><dt class="property-required"
             title="Required">
         <span id="time_generated_python">
 <a href="#time_generated_python" style="color: inherit; text-decoration: inherit;">time_<wbr>generated</a>
@@ -1403,8 +1230,7 @@ The following output properties are available:
         <span class="property-indicator"></span>
         <span class="property-type">str</span>
     </dt>
-    <dd>{{% md %}}The alert generated time.{{% /md %}}</dd>
-    <dt class="property-optional"
+    <dd>{{% md %}}The alert generated time.{{% /md %}}</dd><dt class="property-optional"
             title="Optional">
         <span id="description_python">
 <a href="#description_python" style="color: inherit; text-decoration: inherit;">description</a>
@@ -1412,8 +1238,7 @@ The following output properties are available:
         <span class="property-indicator"></span>
         <span class="property-type">str</span>
     </dt>
-    <dd>{{% md %}}The alert description.{{% /md %}}</dd>
-    <dt class="property-optional"
+    <dd>{{% md %}}The alert description.{{% /md %}}</dd><dt class="property-optional"
             title="Optional">
         <span id="product_name_python">
 <a href="#product_name_python" style="color: inherit; text-decoration: inherit;">product_<wbr>name</a>
@@ -1421,8 +1246,7 @@ The following output properties are available:
         <span class="property-indicator"></span>
         <span class="property-type">str</span>
     </dt>
-    <dd>{{% md %}}The alert product name.{{% /md %}}</dd>
-</dl>
+    <dd>{{% md %}}The alert product name.{{% /md %}}</dd></dl>
 {{% /choosable %}}
 
 <h4 id="timelineaggregationresponse">Timeline<wbr>Aggregation<wbr>Response</h4>
@@ -1430,9 +1254,7 @@ The following output properties are available:
 
 
 {{% choosable language csharp %}}
-<dl class="resources-properties">
-
-    <dt class="property-required"
+<dl class="resources-properties"><dt class="property-required"
             title="Required">
         <span id="count_csharp">
 <a href="#count_csharp" style="color: inherit; text-decoration: inherit;">Count</a>
@@ -1440,8 +1262,7 @@ The following output properties are available:
         <span class="property-indicator"></span>
         <span class="property-type">int</span>
     </dt>
-    <dd>{{% md %}}the total items found for a kind{{% /md %}}</dd>
-    <dt class="property-required"
+    <dd>{{% md %}}the total items found for a kind{{% /md %}}</dd><dt class="property-required"
             title="Required">
         <span id="kind_csharp">
 <a href="#kind_csharp" style="color: inherit; text-decoration: inherit;">Kind</a>
@@ -1449,14 +1270,11 @@ The following output properties are available:
         <span class="property-indicator"></span>
         <span class="property-type">string</span>
     </dt>
-    <dd>{{% md %}}the query kind{{% /md %}}</dd>
-</dl>
+    <dd>{{% md %}}the query kind{{% /md %}}</dd></dl>
 {{% /choosable %}}
 
 {{% choosable language go %}}
-<dl class="resources-properties">
-
-    <dt class="property-required"
+<dl class="resources-properties"><dt class="property-required"
             title="Required">
         <span id="count_go">
 <a href="#count_go" style="color: inherit; text-decoration: inherit;">Count</a>
@@ -1464,8 +1282,7 @@ The following output properties are available:
         <span class="property-indicator"></span>
         <span class="property-type">int</span>
     </dt>
-    <dd>{{% md %}}the total items found for a kind{{% /md %}}</dd>
-    <dt class="property-required"
+    <dd>{{% md %}}the total items found for a kind{{% /md %}}</dd><dt class="property-required"
             title="Required">
         <span id="kind_go">
 <a href="#kind_go" style="color: inherit; text-decoration: inherit;">Kind</a>
@@ -1473,14 +1290,11 @@ The following output properties are available:
         <span class="property-indicator"></span>
         <span class="property-type">string</span>
     </dt>
-    <dd>{{% md %}}the query kind{{% /md %}}</dd>
-</dl>
+    <dd>{{% md %}}the query kind{{% /md %}}</dd></dl>
 {{% /choosable %}}
 
 {{% choosable language nodejs %}}
-<dl class="resources-properties">
-
-    <dt class="property-required"
+<dl class="resources-properties"><dt class="property-required"
             title="Required">
         <span id="count_nodejs">
 <a href="#count_nodejs" style="color: inherit; text-decoration: inherit;">count</a>
@@ -1488,8 +1302,7 @@ The following output properties are available:
         <span class="property-indicator"></span>
         <span class="property-type">number</span>
     </dt>
-    <dd>{{% md %}}the total items found for a kind{{% /md %}}</dd>
-    <dt class="property-required"
+    <dd>{{% md %}}the total items found for a kind{{% /md %}}</dd><dt class="property-required"
             title="Required">
         <span id="kind_nodejs">
 <a href="#kind_nodejs" style="color: inherit; text-decoration: inherit;">kind</a>
@@ -1497,14 +1310,11 @@ The following output properties are available:
         <span class="property-indicator"></span>
         <span class="property-type">string</span>
     </dt>
-    <dd>{{% md %}}the query kind{{% /md %}}</dd>
-</dl>
+    <dd>{{% md %}}the query kind{{% /md %}}</dd></dl>
 {{% /choosable %}}
 
 {{% choosable language python %}}
-<dl class="resources-properties">
-
-    <dt class="property-required"
+<dl class="resources-properties"><dt class="property-required"
             title="Required">
         <span id="count_python">
 <a href="#count_python" style="color: inherit; text-decoration: inherit;">count</a>
@@ -1512,8 +1322,7 @@ The following output properties are available:
         <span class="property-indicator"></span>
         <span class="property-type">int</span>
     </dt>
-    <dd>{{% md %}}the total items found for a kind{{% /md %}}</dd>
-    <dt class="property-required"
+    <dd>{{% md %}}the total items found for a kind{{% /md %}}</dd><dt class="property-required"
             title="Required">
         <span id="kind_python">
 <a href="#kind_python" style="color: inherit; text-decoration: inherit;">kind</a>
@@ -1521,8 +1330,7 @@ The following output properties are available:
         <span class="property-indicator"></span>
         <span class="property-type">str</span>
     </dt>
-    <dd>{{% md %}}the query kind{{% /md %}}</dd>
-</dl>
+    <dd>{{% md %}}the query kind{{% /md %}}</dd></dl>
 {{% /choosable %}}
 
 <h4 id="timelineerrorresponse">Timeline<wbr>Error<wbr>Response</h4>
@@ -1530,9 +1338,7 @@ The following output properties are available:
 
 
 {{% choosable language csharp %}}
-<dl class="resources-properties">
-
-    <dt class="property-required"
+<dl class="resources-properties"><dt class="property-required"
             title="Required">
         <span id="errormessage_csharp">
 <a href="#errormessage_csharp" style="color: inherit; text-decoration: inherit;">Error<wbr>Message</a>
@@ -1540,8 +1346,7 @@ The following output properties are available:
         <span class="property-indicator"></span>
         <span class="property-type">string</span>
     </dt>
-    <dd>{{% md %}}the error message{{% /md %}}</dd>
-    <dt class="property-required"
+    <dd>{{% md %}}the error message{{% /md %}}</dd><dt class="property-required"
             title="Required">
         <span id="kind_csharp">
 <a href="#kind_csharp" style="color: inherit; text-decoration: inherit;">Kind</a>
@@ -1549,8 +1354,7 @@ The following output properties are available:
         <span class="property-indicator"></span>
         <span class="property-type">string</span>
     </dt>
-    <dd>{{% md %}}the query kind{{% /md %}}</dd>
-    <dt class="property-optional"
+    <dd>{{% md %}}the query kind{{% /md %}}</dd><dt class="property-optional"
             title="Optional">
         <span id="queryid_csharp">
 <a href="#queryid_csharp" style="color: inherit; text-decoration: inherit;">Query<wbr>Id</a>
@@ -1558,14 +1362,11 @@ The following output properties are available:
         <span class="property-indicator"></span>
         <span class="property-type">string</span>
     </dt>
-    <dd>{{% md %}}the query id{{% /md %}}</dd>
-</dl>
+    <dd>{{% md %}}the query id{{% /md %}}</dd></dl>
 {{% /choosable %}}
 
 {{% choosable language go %}}
-<dl class="resources-properties">
-
-    <dt class="property-required"
+<dl class="resources-properties"><dt class="property-required"
             title="Required">
         <span id="errormessage_go">
 <a href="#errormessage_go" style="color: inherit; text-decoration: inherit;">Error<wbr>Message</a>
@@ -1573,8 +1374,7 @@ The following output properties are available:
         <span class="property-indicator"></span>
         <span class="property-type">string</span>
     </dt>
-    <dd>{{% md %}}the error message{{% /md %}}</dd>
-    <dt class="property-required"
+    <dd>{{% md %}}the error message{{% /md %}}</dd><dt class="property-required"
             title="Required">
         <span id="kind_go">
 <a href="#kind_go" style="color: inherit; text-decoration: inherit;">Kind</a>
@@ -1582,8 +1382,7 @@ The following output properties are available:
         <span class="property-indicator"></span>
         <span class="property-type">string</span>
     </dt>
-    <dd>{{% md %}}the query kind{{% /md %}}</dd>
-    <dt class="property-optional"
+    <dd>{{% md %}}the query kind{{% /md %}}</dd><dt class="property-optional"
             title="Optional">
         <span id="queryid_go">
 <a href="#queryid_go" style="color: inherit; text-decoration: inherit;">Query<wbr>Id</a>
@@ -1591,14 +1390,11 @@ The following output properties are available:
         <span class="property-indicator"></span>
         <span class="property-type">string</span>
     </dt>
-    <dd>{{% md %}}the query id{{% /md %}}</dd>
-</dl>
+    <dd>{{% md %}}the query id{{% /md %}}</dd></dl>
 {{% /choosable %}}
 
 {{% choosable language nodejs %}}
-<dl class="resources-properties">
-
-    <dt class="property-required"
+<dl class="resources-properties"><dt class="property-required"
             title="Required">
         <span id="errormessage_nodejs">
 <a href="#errormessage_nodejs" style="color: inherit; text-decoration: inherit;">error<wbr>Message</a>
@@ -1606,8 +1402,7 @@ The following output properties are available:
         <span class="property-indicator"></span>
         <span class="property-type">string</span>
     </dt>
-    <dd>{{% md %}}the error message{{% /md %}}</dd>
-    <dt class="property-required"
+    <dd>{{% md %}}the error message{{% /md %}}</dd><dt class="property-required"
             title="Required">
         <span id="kind_nodejs">
 <a href="#kind_nodejs" style="color: inherit; text-decoration: inherit;">kind</a>
@@ -1615,8 +1410,7 @@ The following output properties are available:
         <span class="property-indicator"></span>
         <span class="property-type">string</span>
     </dt>
-    <dd>{{% md %}}the query kind{{% /md %}}</dd>
-    <dt class="property-optional"
+    <dd>{{% md %}}the query kind{{% /md %}}</dd><dt class="property-optional"
             title="Optional">
         <span id="queryid_nodejs">
 <a href="#queryid_nodejs" style="color: inherit; text-decoration: inherit;">query<wbr>Id</a>
@@ -1624,14 +1418,11 @@ The following output properties are available:
         <span class="property-indicator"></span>
         <span class="property-type">string</span>
     </dt>
-    <dd>{{% md %}}the query id{{% /md %}}</dd>
-</dl>
+    <dd>{{% md %}}the query id{{% /md %}}</dd></dl>
 {{% /choosable %}}
 
 {{% choosable language python %}}
-<dl class="resources-properties">
-
-    <dt class="property-required"
+<dl class="resources-properties"><dt class="property-required"
             title="Required">
         <span id="error_message_python">
 <a href="#error_message_python" style="color: inherit; text-decoration: inherit;">error_<wbr>message</a>
@@ -1639,8 +1430,7 @@ The following output properties are available:
         <span class="property-indicator"></span>
         <span class="property-type">str</span>
     </dt>
-    <dd>{{% md %}}the error message{{% /md %}}</dd>
-    <dt class="property-required"
+    <dd>{{% md %}}the error message{{% /md %}}</dd><dt class="property-required"
             title="Required">
         <span id="kind_python">
 <a href="#kind_python" style="color: inherit; text-decoration: inherit;">kind</a>
@@ -1648,8 +1438,7 @@ The following output properties are available:
         <span class="property-indicator"></span>
         <span class="property-type">str</span>
     </dt>
-    <dd>{{% md %}}the query kind{{% /md %}}</dd>
-    <dt class="property-optional"
+    <dd>{{% md %}}the query kind{{% /md %}}</dd><dt class="property-optional"
             title="Optional">
         <span id="query_id_python">
 <a href="#query_id_python" style="color: inherit; text-decoration: inherit;">query_<wbr>id</a>
@@ -1657,8 +1446,7 @@ The following output properties are available:
         <span class="property-indicator"></span>
         <span class="property-type">str</span>
     </dt>
-    <dd>{{% md %}}the query id{{% /md %}}</dd>
-</dl>
+    <dd>{{% md %}}the query id{{% /md %}}</dd></dl>
 {{% /choosable %}}
 
 <h4 id="timelineresultsmetadataresponse">Timeline<wbr>Results<wbr>Metadata<wbr>Response</h4>
@@ -1666,9 +1454,7 @@ The following output properties are available:
 
 
 {{% choosable language csharp %}}
-<dl class="resources-properties">
-
-    <dt class="property-required"
+<dl class="resources-properties"><dt class="property-required"
             title="Required">
         <span id="aggregations_csharp">
 <a href="#aggregations_csharp" style="color: inherit; text-decoration: inherit;">Aggregations</a>
@@ -1676,8 +1462,7 @@ The following output properties are available:
         <span class="property-indicator"></span>
         <span class="property-type"><a href="#timelineaggregationresponse">List&lt;Pulumi.<wbr>Azure<wbr>Native.<wbr>Security<wbr>Insights.<wbr>Inputs.<wbr>Timeline<wbr>Aggregation<wbr>Response<wbr>Args&gt;</a></span>
     </dt>
-    <dd>{{% md %}}timeline aggregation per kind{{% /md %}}</dd>
-    <dt class="property-required"
+    <dd>{{% md %}}timeline aggregation per kind{{% /md %}}</dd><dt class="property-required"
             title="Required">
         <span id="totalcount_csharp">
 <a href="#totalcount_csharp" style="color: inherit; text-decoration: inherit;">Total<wbr>Count</a>
@@ -1685,8 +1470,7 @@ The following output properties are available:
         <span class="property-indicator"></span>
         <span class="property-type">int</span>
     </dt>
-    <dd>{{% md %}}the total items found for the timeline request{{% /md %}}</dd>
-    <dt class="property-optional"
+    <dd>{{% md %}}the total items found for the timeline request{{% /md %}}</dd><dt class="property-optional"
             title="Optional">
         <span id="errors_csharp">
 <a href="#errors_csharp" style="color: inherit; text-decoration: inherit;">Errors</a>
@@ -1694,14 +1478,11 @@ The following output properties are available:
         <span class="property-indicator"></span>
         <span class="property-type"><a href="#timelineerrorresponse">List&lt;Pulumi.<wbr>Azure<wbr>Native.<wbr>Security<wbr>Insights.<wbr>Inputs.<wbr>Timeline<wbr>Error<wbr>Response<wbr>Args&gt;</a></span>
     </dt>
-    <dd>{{% md %}}information about the failure queries{{% /md %}}</dd>
-</dl>
+    <dd>{{% md %}}information about the failure queries{{% /md %}}</dd></dl>
 {{% /choosable %}}
 
 {{% choosable language go %}}
-<dl class="resources-properties">
-
-    <dt class="property-required"
+<dl class="resources-properties"><dt class="property-required"
             title="Required">
         <span id="aggregations_go">
 <a href="#aggregations_go" style="color: inherit; text-decoration: inherit;">Aggregations</a>
@@ -1709,8 +1490,7 @@ The following output properties are available:
         <span class="property-indicator"></span>
         <span class="property-type"><a href="#timelineaggregationresponse">[]Timeline<wbr>Aggregation<wbr>Response</a></span>
     </dt>
-    <dd>{{% md %}}timeline aggregation per kind{{% /md %}}</dd>
-    <dt class="property-required"
+    <dd>{{% md %}}timeline aggregation per kind{{% /md %}}</dd><dt class="property-required"
             title="Required">
         <span id="totalcount_go">
 <a href="#totalcount_go" style="color: inherit; text-decoration: inherit;">Total<wbr>Count</a>
@@ -1718,8 +1498,7 @@ The following output properties are available:
         <span class="property-indicator"></span>
         <span class="property-type">int</span>
     </dt>
-    <dd>{{% md %}}the total items found for the timeline request{{% /md %}}</dd>
-    <dt class="property-optional"
+    <dd>{{% md %}}the total items found for the timeline request{{% /md %}}</dd><dt class="property-optional"
             title="Optional">
         <span id="errors_go">
 <a href="#errors_go" style="color: inherit; text-decoration: inherit;">Errors</a>
@@ -1727,14 +1506,11 @@ The following output properties are available:
         <span class="property-indicator"></span>
         <span class="property-type"><a href="#timelineerrorresponse">[]Timeline<wbr>Error<wbr>Response</a></span>
     </dt>
-    <dd>{{% md %}}information about the failure queries{{% /md %}}</dd>
-</dl>
+    <dd>{{% md %}}information about the failure queries{{% /md %}}</dd></dl>
 {{% /choosable %}}
 
 {{% choosable language nodejs %}}
-<dl class="resources-properties">
-
-    <dt class="property-required"
+<dl class="resources-properties"><dt class="property-required"
             title="Required">
         <span id="aggregations_nodejs">
 <a href="#aggregations_nodejs" style="color: inherit; text-decoration: inherit;">aggregations</a>
@@ -1742,8 +1518,7 @@ The following output properties are available:
         <span class="property-indicator"></span>
         <span class="property-type"><a href="#timelineaggregationresponse">Timeline<wbr>Aggregation<wbr>Response[]</a></span>
     </dt>
-    <dd>{{% md %}}timeline aggregation per kind{{% /md %}}</dd>
-    <dt class="property-required"
+    <dd>{{% md %}}timeline aggregation per kind{{% /md %}}</dd><dt class="property-required"
             title="Required">
         <span id="totalcount_nodejs">
 <a href="#totalcount_nodejs" style="color: inherit; text-decoration: inherit;">total<wbr>Count</a>
@@ -1751,8 +1526,7 @@ The following output properties are available:
         <span class="property-indicator"></span>
         <span class="property-type">number</span>
     </dt>
-    <dd>{{% md %}}the total items found for the timeline request{{% /md %}}</dd>
-    <dt class="property-optional"
+    <dd>{{% md %}}the total items found for the timeline request{{% /md %}}</dd><dt class="property-optional"
             title="Optional">
         <span id="errors_nodejs">
 <a href="#errors_nodejs" style="color: inherit; text-decoration: inherit;">errors</a>
@@ -1760,14 +1534,11 @@ The following output properties are available:
         <span class="property-indicator"></span>
         <span class="property-type"><a href="#timelineerrorresponse">Timeline<wbr>Error<wbr>Response[]</a></span>
     </dt>
-    <dd>{{% md %}}information about the failure queries{{% /md %}}</dd>
-</dl>
+    <dd>{{% md %}}information about the failure queries{{% /md %}}</dd></dl>
 {{% /choosable %}}
 
 {{% choosable language python %}}
-<dl class="resources-properties">
-
-    <dt class="property-required"
+<dl class="resources-properties"><dt class="property-required"
             title="Required">
         <span id="aggregations_python">
 <a href="#aggregations_python" style="color: inherit; text-decoration: inherit;">aggregations</a>
@@ -1775,8 +1546,7 @@ The following output properties are available:
         <span class="property-indicator"></span>
         <span class="property-type"><a href="#timelineaggregationresponse">Sequence[Timeline<wbr>Aggregation<wbr>Response<wbr>Args]</a></span>
     </dt>
-    <dd>{{% md %}}timeline aggregation per kind{{% /md %}}</dd>
-    <dt class="property-required"
+    <dd>{{% md %}}timeline aggregation per kind{{% /md %}}</dd><dt class="property-required"
             title="Required">
         <span id="total_count_python">
 <a href="#total_count_python" style="color: inherit; text-decoration: inherit;">total_<wbr>count</a>
@@ -1784,8 +1554,7 @@ The following output properties are available:
         <span class="property-indicator"></span>
         <span class="property-type">int</span>
     </dt>
-    <dd>{{% md %}}the total items found for the timeline request{{% /md %}}</dd>
-    <dt class="property-optional"
+    <dd>{{% md %}}the total items found for the timeline request{{% /md %}}</dd><dt class="property-optional"
             title="Optional">
         <span id="errors_python">
 <a href="#errors_python" style="color: inherit; text-decoration: inherit;">errors</a>
@@ -1793,8 +1562,7 @@ The following output properties are available:
         <span class="property-indicator"></span>
         <span class="property-type"><a href="#timelineerrorresponse">Sequence[Timeline<wbr>Error<wbr>Response<wbr>Args]</a></span>
     </dt>
-    <dd>{{% md %}}information about the failure queries{{% /md %}}</dd>
-</dl>
+    <dd>{{% md %}}information about the failure queries{{% /md %}}</dd></dl>
 {{% /choosable %}}
 
 <h4 id="userinforesponse">User<wbr>Info<wbr>Response</h4>
@@ -1802,9 +1570,7 @@ The following output properties are available:
 
 
 {{% choosable language csharp %}}
-<dl class="resources-properties">
-
-    <dt class="property-required"
+<dl class="resources-properties"><dt class="property-required"
             title="Required">
         <span id="email_csharp">
 <a href="#email_csharp" style="color: inherit; text-decoration: inherit;">Email</a>
@@ -1812,8 +1578,7 @@ The following output properties are available:
         <span class="property-indicator"></span>
         <span class="property-type">string</span>
     </dt>
-    <dd>{{% md %}}The email of the user.{{% /md %}}</dd>
-    <dt class="property-required"
+    <dd>{{% md %}}The email of the user.{{% /md %}}</dd><dt class="property-required"
             title="Required">
         <span id="name_csharp">
 <a href="#name_csharp" style="color: inherit; text-decoration: inherit;">Name</a>
@@ -1821,8 +1586,7 @@ The following output properties are available:
         <span class="property-indicator"></span>
         <span class="property-type">string</span>
     </dt>
-    <dd>{{% md %}}The name of the user.{{% /md %}}</dd>
-    <dt class="property-optional"
+    <dd>{{% md %}}The name of the user.{{% /md %}}</dd><dt class="property-optional"
             title="Optional">
         <span id="objectid_csharp">
 <a href="#objectid_csharp" style="color: inherit; text-decoration: inherit;">Object<wbr>Id</a>
@@ -1830,14 +1594,11 @@ The following output properties are available:
         <span class="property-indicator"></span>
         <span class="property-type">string</span>
     </dt>
-    <dd>{{% md %}}The object id of the user.{{% /md %}}</dd>
-</dl>
+    <dd>{{% md %}}The object id of the user.{{% /md %}}</dd></dl>
 {{% /choosable %}}
 
 {{% choosable language go %}}
-<dl class="resources-properties">
-
-    <dt class="property-required"
+<dl class="resources-properties"><dt class="property-required"
             title="Required">
         <span id="email_go">
 <a href="#email_go" style="color: inherit; text-decoration: inherit;">Email</a>
@@ -1845,8 +1606,7 @@ The following output properties are available:
         <span class="property-indicator"></span>
         <span class="property-type">string</span>
     </dt>
-    <dd>{{% md %}}The email of the user.{{% /md %}}</dd>
-    <dt class="property-required"
+    <dd>{{% md %}}The email of the user.{{% /md %}}</dd><dt class="property-required"
             title="Required">
         <span id="name_go">
 <a href="#name_go" style="color: inherit; text-decoration: inherit;">Name</a>
@@ -1854,8 +1614,7 @@ The following output properties are available:
         <span class="property-indicator"></span>
         <span class="property-type">string</span>
     </dt>
-    <dd>{{% md %}}The name of the user.{{% /md %}}</dd>
-    <dt class="property-optional"
+    <dd>{{% md %}}The name of the user.{{% /md %}}</dd><dt class="property-optional"
             title="Optional">
         <span id="objectid_go">
 <a href="#objectid_go" style="color: inherit; text-decoration: inherit;">Object<wbr>Id</a>
@@ -1863,14 +1622,11 @@ The following output properties are available:
         <span class="property-indicator"></span>
         <span class="property-type">string</span>
     </dt>
-    <dd>{{% md %}}The object id of the user.{{% /md %}}</dd>
-</dl>
+    <dd>{{% md %}}The object id of the user.{{% /md %}}</dd></dl>
 {{% /choosable %}}
 
 {{% choosable language nodejs %}}
-<dl class="resources-properties">
-
-    <dt class="property-required"
+<dl class="resources-properties"><dt class="property-required"
             title="Required">
         <span id="email_nodejs">
 <a href="#email_nodejs" style="color: inherit; text-decoration: inherit;">email</a>
@@ -1878,8 +1634,7 @@ The following output properties are available:
         <span class="property-indicator"></span>
         <span class="property-type">string</span>
     </dt>
-    <dd>{{% md %}}The email of the user.{{% /md %}}</dd>
-    <dt class="property-required"
+    <dd>{{% md %}}The email of the user.{{% /md %}}</dd><dt class="property-required"
             title="Required">
         <span id="name_nodejs">
 <a href="#name_nodejs" style="color: inherit; text-decoration: inherit;">name</a>
@@ -1887,8 +1642,7 @@ The following output properties are available:
         <span class="property-indicator"></span>
         <span class="property-type">string</span>
     </dt>
-    <dd>{{% md %}}The name of the user.{{% /md %}}</dd>
-    <dt class="property-optional"
+    <dd>{{% md %}}The name of the user.{{% /md %}}</dd><dt class="property-optional"
             title="Optional">
         <span id="objectid_nodejs">
 <a href="#objectid_nodejs" style="color: inherit; text-decoration: inherit;">object<wbr>Id</a>
@@ -1896,14 +1650,11 @@ The following output properties are available:
         <span class="property-indicator"></span>
         <span class="property-type">string</span>
     </dt>
-    <dd>{{% md %}}The object id of the user.{{% /md %}}</dd>
-</dl>
+    <dd>{{% md %}}The object id of the user.{{% /md %}}</dd></dl>
 {{% /choosable %}}
 
 {{% choosable language python %}}
-<dl class="resources-properties">
-
-    <dt class="property-required"
+<dl class="resources-properties"><dt class="property-required"
             title="Required">
         <span id="email_python">
 <a href="#email_python" style="color: inherit; text-decoration: inherit;">email</a>
@@ -1911,8 +1662,7 @@ The following output properties are available:
         <span class="property-indicator"></span>
         <span class="property-type">str</span>
     </dt>
-    <dd>{{% md %}}The email of the user.{{% /md %}}</dd>
-    <dt class="property-required"
+    <dd>{{% md %}}The email of the user.{{% /md %}}</dd><dt class="property-required"
             title="Required">
         <span id="name_python">
 <a href="#name_python" style="color: inherit; text-decoration: inherit;">name</a>
@@ -1920,8 +1670,7 @@ The following output properties are available:
         <span class="property-indicator"></span>
         <span class="property-type">str</span>
     </dt>
-    <dd>{{% md %}}The name of the user.{{% /md %}}</dd>
-    <dt class="property-optional"
+    <dd>{{% md %}}The name of the user.{{% /md %}}</dd><dt class="property-optional"
             title="Optional">
         <span id="object_id_python">
 <a href="#object_id_python" style="color: inherit; text-decoration: inherit;">object_<wbr>id</a>
@@ -1929,8 +1678,7 @@ The following output properties are available:
         <span class="property-indicator"></span>
         <span class="property-type">str</span>
     </dt>
-    <dd>{{% md %}}The object id of the user.{{% /md %}}</dd>
-</dl>
+    <dd>{{% md %}}The object id of the user.{{% /md %}}</dd></dl>
 {{% /choosable %}}
 
 

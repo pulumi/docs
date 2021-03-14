@@ -14,11 +14,17 @@ Data store.
 API Version: 2019-06-01.
 
 {{% examples %}}
+
 ## Example Usage
 
 {{< chooser language "typescript,python,go,csharp" / >}}
+
+
 ### DataStores_CreateOrUpdate_DataSinkPUT162
-{{% example csharp %}}
+
+
+{{< example csharp >}}
+
 ```csharp
 using Pulumi;
 using AzureNative = Pulumi.AzureNative;
@@ -63,13 +69,19 @@ class MyStack : Stack
 
 ```
 
-{{% /example %}}
 
-{{% example go %}}
+{{< /example >}}
+
+
+{{< example go >}}
+
 Coming soon!
-{{% /example %}}
 
-{{% example python %}}
+{{< /example >}}
+
+
+{{< example python >}}
+
 
 ```python
 import pulumi
@@ -102,9 +114,12 @@ data_store = azure_native.hybriddata.DataStore("dataStore",
 
 ```
 
-{{% /example %}}
 
-{{% example typescript %}}
+{{< /example >}}
+
+
+{{< example typescript >}}
+
 
 ```typescript
 import * as pulumi from "@pulumi/pulumi";
@@ -138,10 +153,17 @@ const dataStore = new azure_native.hybriddata.DataStore("dataStore", {
 
 ```
 
-{{% /example %}}
+
+{{< /example >}}
+
+
+
 
 ### DataStores_CreateOrUpdate_DataSourcePUT162
-{{% example csharp %}}
+
+
+{{< example csharp >}}
+
 ```csharp
 using Pulumi;
 using AzureNative = Pulumi.AzureNative;
@@ -179,13 +201,19 @@ class MyStack : Stack
 
 ```
 
-{{% /example %}}
 
-{{% example go %}}
+{{< /example >}}
+
+
+{{< example go >}}
+
 Coming soon!
-{{% /example %}}
 
-{{% example python %}}
+{{< /example >}}
+
+
+{{< example python >}}
+
 
 ```python
 import pulumi
@@ -210,9 +238,12 @@ data_store = azure_native.hybriddata.DataStore("dataStore",
 
 ```
 
-{{% /example %}}
 
-{{% example typescript %}}
+{{< /example >}}
+
+
+{{< example typescript >}}
+
 
 ```typescript
 import * as pulumi from "@pulumi/pulumi";
@@ -238,9 +269,16 @@ const dataStore = new azure_native.hybriddata.DataStore("dataStore", {
 
 ```
 
-{{% /example %}}
+
+{{< /example >}}
+
+
+
+
 
 {{% /examples %}}
+
+
 
 
 ## Create a DataStore Resource {#create}
@@ -265,9 +303,7 @@ const dataStore = new azure_native.hybriddata.DataStore("dataStore", {
 
 {{% choosable language nodejs %}}
 
-<dl class="resources-properties">
-  
-    <dt
+<dl class="resources-properties"><dt
         class="property-required" title="Required">
         <span>name</span>
         <span class="property-indicator"></span>
@@ -275,9 +311,7 @@ const dataStore = new azure_native.hybriddata.DataStore("dataStore", {
     </dt>
     <dd>
       The unique name of the resource.
-    </dd>
-  
-    <dt
+    </dd><dt
         class="property-required" title="Required">
         <span>args</span>
         <span class="property-indicator"></span>
@@ -285,9 +319,7 @@ const dataStore = new azure_native.hybriddata.DataStore("dataStore", {
     </dt>
     <dd>
       The arguments to resource properties.
-    </dd>
-  
-    <dt
+    </dd><dt
         class="property-optional" title="Optional">
         <span>opts</span>
         <span class="property-indicator"></span>
@@ -295,10 +327,7 @@ const dataStore = new azure_native.hybriddata.DataStore("dataStore", {
     </dt>
     <dd>
       Bag of options to control resource&#39;s behavior.
-    </dd>
-  
-
-</dl>
+    </dd></dl>
 
 {{% /choosable %}}
 
@@ -324,9 +353,7 @@ const dataStore = new azure_native.hybriddata.DataStore("dataStore", {
 
 {{% choosable language go %}}
 
-<dl class="resources-properties">
-  
-    <dt
+<dl class="resources-properties"><dt
         class="property-optional" title="Optional">
         <span>ctx</span>
         <span class="property-indicator"></span>
@@ -334,9 +361,7 @@ const dataStore = new azure_native.hybriddata.DataStore("dataStore", {
     </dt>
     <dd>
       Context object for the current deployment.
-    </dd>
-  
-    <dt
+    </dd><dt
         class="property-required" title="Required">
         <span>name</span>
         <span class="property-indicator"></span>
@@ -344,9 +369,7 @@ const dataStore = new azure_native.hybriddata.DataStore("dataStore", {
     </dt>
     <dd>
       The unique name of the resource.
-    </dd>
-  
-    <dt
+    </dd><dt
         class="property-required" title="Required">
         <span>args</span>
         <span class="property-indicator"></span>
@@ -354,9 +377,7 @@ const dataStore = new azure_native.hybriddata.DataStore("dataStore", {
     </dt>
     <dd>
       The arguments to resource properties.
-    </dd>
-  
-    <dt
+    </dd><dt
         class="property-optional" title="Optional">
         <span>opts</span>
         <span class="property-indicator"></span>
@@ -364,18 +385,13 @@ const dataStore = new azure_native.hybriddata.DataStore("dataStore", {
     </dt>
     <dd>
       Bag of options to control resource&#39;s behavior.
-    </dd>
-  
-
-</dl>
+    </dd></dl>
 
 {{% /choosable %}}
 
 {{% choosable language csharp %}}
 
-<dl class="resources-properties">
-  
-    <dt
+<dl class="resources-properties"><dt
         class="property-required" title="Required">
         <span>name</span>
         <span class="property-indicator"></span>
@@ -383,9 +399,7 @@ const dataStore = new azure_native.hybriddata.DataStore("dataStore", {
     </dt>
     <dd>
       The unique name of the resource.
-    </dd>
-  
-    <dt
+    </dd><dt
         class="property-required" title="Required">
         <span>args</span>
         <span class="property-indicator"></span>
@@ -393,9 +407,7 @@ const dataStore = new azure_native.hybriddata.DataStore("dataStore", {
     </dt>
     <dd>
       The arguments to resource properties.
-    </dd>
-  
-    <dt
+    </dd><dt
         class="property-optional" title="Optional">
         <span>opts</span>
         <span class="property-indicator"></span>
@@ -403,10 +415,7 @@ const dataStore = new azure_native.hybriddata.DataStore("dataStore", {
     </dt>
     <dd>
       Bag of options to control resource&#39;s behavior.
-    </dd>
-  
-
-</dl>
+    </dd></dl>
 
 {{% /choosable %}}
 
@@ -421,9 +430,7 @@ The DataStore resource accepts the following [input]({{< relref "/docs/intro/con
 
 
 {{% choosable language csharp %}}
-<dl class="resources-properties">
-
-    <dt class="property-required"
+<dl class="resources-properties"><dt class="property-required"
             title="Required">
         <span id="datamanagername_csharp">
 <a href="#datamanagername_csharp" style="color: inherit; text-decoration: inherit;">Data<wbr>Manager<wbr>Name</a>
@@ -431,8 +438,7 @@ The DataStore resource accepts the following [input]({{< relref "/docs/intro/con
         <span class="property-indicator"></span>
         <span class="property-type">string</span>
     </dt>
-    <dd>{{% md %}}The name of the DataManager Resource within the specified resource group. DataManager names must be between 3 and 24 characters in length and use any alphanumeric and underscore only{{% /md %}}</dd>
-    <dt class="property-required"
+    <dd>{{% md %}}The name of the DataManager Resource within the specified resource group. DataManager names must be between 3 and 24 characters in length and use any alphanumeric and underscore only{{% /md %}}</dd><dt class="property-required"
             title="Required">
         <span id="datastoretypeid_csharp">
 <a href="#datastoretypeid_csharp" style="color: inherit; text-decoration: inherit;">Data<wbr>Store<wbr>Type<wbr>Id</a>
@@ -440,8 +446,7 @@ The DataStore resource accepts the following [input]({{< relref "/docs/intro/con
         <span class="property-indicator"></span>
         <span class="property-type">string</span>
     </dt>
-    <dd>{{% md %}}The arm id of the data store type.{{% /md %}}</dd>
-    <dt class="property-required"
+    <dd>{{% md %}}The arm id of the data store type.{{% /md %}}</dd><dt class="property-required"
             title="Required">
         <span id="resourcegroupname_csharp">
 <a href="#resourcegroupname_csharp" style="color: inherit; text-decoration: inherit;">Resource<wbr>Group<wbr>Name</a>
@@ -449,8 +454,7 @@ The DataStore resource accepts the following [input]({{< relref "/docs/intro/con
         <span class="property-indicator"></span>
         <span class="property-type">string</span>
     </dt>
-    <dd>{{% md %}}The Resource Group Name{{% /md %}}</dd>
-    <dt class="property-required"
+    <dd>{{% md %}}The Resource Group Name{{% /md %}}</dd><dt class="property-required"
             title="Required">
         <span id="state_csharp">
 <a href="#state_csharp" style="color: inherit; text-decoration: inherit;">State</a>
@@ -458,8 +462,7 @@ The DataStore resource accepts the following [input]({{< relref "/docs/intro/con
         <span class="property-indicator"></span>
         <span class="property-type"><a href="#state">Pulumi.<wbr>Azure<wbr>Native.<wbr>Hybrid<wbr>Data.<wbr>State</a></span>
     </dt>
-    <dd>{{% md %}}State of the data source.{{% /md %}}</dd>
-    <dt class="property-optional"
+    <dd>{{% md %}}State of the data source.{{% /md %}}</dd><dt class="property-optional"
             title="Optional">
         <span id="customersecrets_csharp">
 <a href="#customersecrets_csharp" style="color: inherit; text-decoration: inherit;">Customer<wbr>Secrets</a>
@@ -467,8 +470,7 @@ The DataStore resource accepts the following [input]({{< relref "/docs/intro/con
         <span class="property-indicator"></span>
         <span class="property-type"><a href="#customersecret">List&lt;Pulumi.<wbr>Azure<wbr>Native.<wbr>Hybrid<wbr>Data.<wbr>Inputs.<wbr>Customer<wbr>Secret<wbr>Args&gt;</a></span>
     </dt>
-    <dd>{{% md %}}List of customer secrets containing a key identifier and key value. The key identifier is a way for the specific data source to understand the key. Value contains customer secret encrypted by the encryptionKeys.{{% /md %}}</dd>
-    <dt class="property-optional"
+    <dd>{{% md %}}List of customer secrets containing a key identifier and key value. The key identifier is a way for the specific data source to understand the key. Value contains customer secret encrypted by the encryptionKeys.{{% /md %}}</dd><dt class="property-optional"
             title="Optional">
         <span id="datastorename_csharp">
 <a href="#datastorename_csharp" style="color: inherit; text-decoration: inherit;">Data<wbr>Store<wbr>Name</a>
@@ -476,8 +478,7 @@ The DataStore resource accepts the following [input]({{< relref "/docs/intro/con
         <span class="property-indicator"></span>
         <span class="property-type">string</span>
     </dt>
-    <dd>{{% md %}}The data store/repository name to be created or updated.{{% /md %}}</dd>
-    <dt class="property-optional"
+    <dd>{{% md %}}The data store/repository name to be created or updated.{{% /md %}}</dd><dt class="property-optional"
             title="Optional">
         <span id="extendedproperties_csharp">
 <a href="#extendedproperties_csharp" style="color: inherit; text-decoration: inherit;">Extended<wbr>Properties</a>
@@ -485,8 +486,7 @@ The DataStore resource accepts the following [input]({{< relref "/docs/intro/con
         <span class="property-indicator"></span>
         <span class="property-type">object</span>
     </dt>
-    <dd>{{% md %}}A generic json used differently by each data source type.{{% /md %}}</dd>
-    <dt class="property-optional"
+    <dd>{{% md %}}A generic json used differently by each data source type.{{% /md %}}</dd><dt class="property-optional"
             title="Optional">
         <span id="repositoryid_csharp">
 <a href="#repositoryid_csharp" style="color: inherit; text-decoration: inherit;">Repository<wbr>Id</a>
@@ -494,14 +494,11 @@ The DataStore resource accepts the following [input]({{< relref "/docs/intro/con
         <span class="property-indicator"></span>
         <span class="property-type">string</span>
     </dt>
-    <dd>{{% md %}}Arm Id for the manager resource to which the data source is associated. This is optional.{{% /md %}}</dd>
-</dl>
+    <dd>{{% md %}}Arm Id for the manager resource to which the data source is associated. This is optional.{{% /md %}}</dd></dl>
 {{% /choosable %}}
 
 {{% choosable language go %}}
-<dl class="resources-properties">
-
-    <dt class="property-required"
+<dl class="resources-properties"><dt class="property-required"
             title="Required">
         <span id="datamanagername_go">
 <a href="#datamanagername_go" style="color: inherit; text-decoration: inherit;">Data<wbr>Manager<wbr>Name</a>
@@ -509,8 +506,7 @@ The DataStore resource accepts the following [input]({{< relref "/docs/intro/con
         <span class="property-indicator"></span>
         <span class="property-type">string</span>
     </dt>
-    <dd>{{% md %}}The name of the DataManager Resource within the specified resource group. DataManager names must be between 3 and 24 characters in length and use any alphanumeric and underscore only{{% /md %}}</dd>
-    <dt class="property-required"
+    <dd>{{% md %}}The name of the DataManager Resource within the specified resource group. DataManager names must be between 3 and 24 characters in length and use any alphanumeric and underscore only{{% /md %}}</dd><dt class="property-required"
             title="Required">
         <span id="datastoretypeid_go">
 <a href="#datastoretypeid_go" style="color: inherit; text-decoration: inherit;">Data<wbr>Store<wbr>Type<wbr>Id</a>
@@ -518,8 +514,7 @@ The DataStore resource accepts the following [input]({{< relref "/docs/intro/con
         <span class="property-indicator"></span>
         <span class="property-type">string</span>
     </dt>
-    <dd>{{% md %}}The arm id of the data store type.{{% /md %}}</dd>
-    <dt class="property-required"
+    <dd>{{% md %}}The arm id of the data store type.{{% /md %}}</dd><dt class="property-required"
             title="Required">
         <span id="resourcegroupname_go">
 <a href="#resourcegroupname_go" style="color: inherit; text-decoration: inherit;">Resource<wbr>Group<wbr>Name</a>
@@ -527,8 +522,7 @@ The DataStore resource accepts the following [input]({{< relref "/docs/intro/con
         <span class="property-indicator"></span>
         <span class="property-type">string</span>
     </dt>
-    <dd>{{% md %}}The Resource Group Name{{% /md %}}</dd>
-    <dt class="property-required"
+    <dd>{{% md %}}The Resource Group Name{{% /md %}}</dd><dt class="property-required"
             title="Required">
         <span id="state_go">
 <a href="#state_go" style="color: inherit; text-decoration: inherit;">State</a>
@@ -536,8 +530,7 @@ The DataStore resource accepts the following [input]({{< relref "/docs/intro/con
         <span class="property-indicator"></span>
         <span class="property-type"><a href="#state">State</a></span>
     </dt>
-    <dd>{{% md %}}State of the data source.{{% /md %}}</dd>
-    <dt class="property-optional"
+    <dd>{{% md %}}State of the data source.{{% /md %}}</dd><dt class="property-optional"
             title="Optional">
         <span id="customersecrets_go">
 <a href="#customersecrets_go" style="color: inherit; text-decoration: inherit;">Customer<wbr>Secrets</a>
@@ -545,8 +538,7 @@ The DataStore resource accepts the following [input]({{< relref "/docs/intro/con
         <span class="property-indicator"></span>
         <span class="property-type"><a href="#customersecret">[]Customer<wbr>Secret</a></span>
     </dt>
-    <dd>{{% md %}}List of customer secrets containing a key identifier and key value. The key identifier is a way for the specific data source to understand the key. Value contains customer secret encrypted by the encryptionKeys.{{% /md %}}</dd>
-    <dt class="property-optional"
+    <dd>{{% md %}}List of customer secrets containing a key identifier and key value. The key identifier is a way for the specific data source to understand the key. Value contains customer secret encrypted by the encryptionKeys.{{% /md %}}</dd><dt class="property-optional"
             title="Optional">
         <span id="datastorename_go">
 <a href="#datastorename_go" style="color: inherit; text-decoration: inherit;">Data<wbr>Store<wbr>Name</a>
@@ -554,8 +546,7 @@ The DataStore resource accepts the following [input]({{< relref "/docs/intro/con
         <span class="property-indicator"></span>
         <span class="property-type">string</span>
     </dt>
-    <dd>{{% md %}}The data store/repository name to be created or updated.{{% /md %}}</dd>
-    <dt class="property-optional"
+    <dd>{{% md %}}The data store/repository name to be created or updated.{{% /md %}}</dd><dt class="property-optional"
             title="Optional">
         <span id="extendedproperties_go">
 <a href="#extendedproperties_go" style="color: inherit; text-decoration: inherit;">Extended<wbr>Properties</a>
@@ -563,8 +554,7 @@ The DataStore resource accepts the following [input]({{< relref "/docs/intro/con
         <span class="property-indicator"></span>
         <span class="property-type">interface{}</span>
     </dt>
-    <dd>{{% md %}}A generic json used differently by each data source type.{{% /md %}}</dd>
-    <dt class="property-optional"
+    <dd>{{% md %}}A generic json used differently by each data source type.{{% /md %}}</dd><dt class="property-optional"
             title="Optional">
         <span id="repositoryid_go">
 <a href="#repositoryid_go" style="color: inherit; text-decoration: inherit;">Repository<wbr>Id</a>
@@ -572,14 +562,11 @@ The DataStore resource accepts the following [input]({{< relref "/docs/intro/con
         <span class="property-indicator"></span>
         <span class="property-type">string</span>
     </dt>
-    <dd>{{% md %}}Arm Id for the manager resource to which the data source is associated. This is optional.{{% /md %}}</dd>
-</dl>
+    <dd>{{% md %}}Arm Id for the manager resource to which the data source is associated. This is optional.{{% /md %}}</dd></dl>
 {{% /choosable %}}
 
 {{% choosable language nodejs %}}
-<dl class="resources-properties">
-
-    <dt class="property-required"
+<dl class="resources-properties"><dt class="property-required"
             title="Required">
         <span id="datamanagername_nodejs">
 <a href="#datamanagername_nodejs" style="color: inherit; text-decoration: inherit;">data<wbr>Manager<wbr>Name</a>
@@ -587,8 +574,7 @@ The DataStore resource accepts the following [input]({{< relref "/docs/intro/con
         <span class="property-indicator"></span>
         <span class="property-type">string</span>
     </dt>
-    <dd>{{% md %}}The name of the DataManager Resource within the specified resource group. DataManager names must be between 3 and 24 characters in length and use any alphanumeric and underscore only{{% /md %}}</dd>
-    <dt class="property-required"
+    <dd>{{% md %}}The name of the DataManager Resource within the specified resource group. DataManager names must be between 3 and 24 characters in length and use any alphanumeric and underscore only{{% /md %}}</dd><dt class="property-required"
             title="Required">
         <span id="datastoretypeid_nodejs">
 <a href="#datastoretypeid_nodejs" style="color: inherit; text-decoration: inherit;">data<wbr>Store<wbr>Type<wbr>Id</a>
@@ -596,8 +582,7 @@ The DataStore resource accepts the following [input]({{< relref "/docs/intro/con
         <span class="property-indicator"></span>
         <span class="property-type">string</span>
     </dt>
-    <dd>{{% md %}}The arm id of the data store type.{{% /md %}}</dd>
-    <dt class="property-required"
+    <dd>{{% md %}}The arm id of the data store type.{{% /md %}}</dd><dt class="property-required"
             title="Required">
         <span id="resourcegroupname_nodejs">
 <a href="#resourcegroupname_nodejs" style="color: inherit; text-decoration: inherit;">resource<wbr>Group<wbr>Name</a>
@@ -605,8 +590,7 @@ The DataStore resource accepts the following [input]({{< relref "/docs/intro/con
         <span class="property-indicator"></span>
         <span class="property-type">string</span>
     </dt>
-    <dd>{{% md %}}The Resource Group Name{{% /md %}}</dd>
-    <dt class="property-required"
+    <dd>{{% md %}}The Resource Group Name{{% /md %}}</dd><dt class="property-required"
             title="Required">
         <span id="state_nodejs">
 <a href="#state_nodejs" style="color: inherit; text-decoration: inherit;">state</a>
@@ -614,8 +598,7 @@ The DataStore resource accepts the following [input]({{< relref "/docs/intro/con
         <span class="property-indicator"></span>
         <span class="property-type"><a href="#state">State</a></span>
     </dt>
-    <dd>{{% md %}}State of the data source.{{% /md %}}</dd>
-    <dt class="property-optional"
+    <dd>{{% md %}}State of the data source.{{% /md %}}</dd><dt class="property-optional"
             title="Optional">
         <span id="customersecrets_nodejs">
 <a href="#customersecrets_nodejs" style="color: inherit; text-decoration: inherit;">customer<wbr>Secrets</a>
@@ -623,8 +606,7 @@ The DataStore resource accepts the following [input]({{< relref "/docs/intro/con
         <span class="property-indicator"></span>
         <span class="property-type"><a href="#customersecret">Customer<wbr>Secret[]</a></span>
     </dt>
-    <dd>{{% md %}}List of customer secrets containing a key identifier and key value. The key identifier is a way for the specific data source to understand the key. Value contains customer secret encrypted by the encryptionKeys.{{% /md %}}</dd>
-    <dt class="property-optional"
+    <dd>{{% md %}}List of customer secrets containing a key identifier and key value. The key identifier is a way for the specific data source to understand the key. Value contains customer secret encrypted by the encryptionKeys.{{% /md %}}</dd><dt class="property-optional"
             title="Optional">
         <span id="datastorename_nodejs">
 <a href="#datastorename_nodejs" style="color: inherit; text-decoration: inherit;">data<wbr>Store<wbr>Name</a>
@@ -632,8 +614,7 @@ The DataStore resource accepts the following [input]({{< relref "/docs/intro/con
         <span class="property-indicator"></span>
         <span class="property-type">string</span>
     </dt>
-    <dd>{{% md %}}The data store/repository name to be created or updated.{{% /md %}}</dd>
-    <dt class="property-optional"
+    <dd>{{% md %}}The data store/repository name to be created or updated.{{% /md %}}</dd><dt class="property-optional"
             title="Optional">
         <span id="extendedproperties_nodejs">
 <a href="#extendedproperties_nodejs" style="color: inherit; text-decoration: inherit;">extended<wbr>Properties</a>
@@ -641,8 +622,7 @@ The DataStore resource accepts the following [input]({{< relref "/docs/intro/con
         <span class="property-indicator"></span>
         <span class="property-type">any</span>
     </dt>
-    <dd>{{% md %}}A generic json used differently by each data source type.{{% /md %}}</dd>
-    <dt class="property-optional"
+    <dd>{{% md %}}A generic json used differently by each data source type.{{% /md %}}</dd><dt class="property-optional"
             title="Optional">
         <span id="repositoryid_nodejs">
 <a href="#repositoryid_nodejs" style="color: inherit; text-decoration: inherit;">repository<wbr>Id</a>
@@ -650,14 +630,11 @@ The DataStore resource accepts the following [input]({{< relref "/docs/intro/con
         <span class="property-indicator"></span>
         <span class="property-type">string</span>
     </dt>
-    <dd>{{% md %}}Arm Id for the manager resource to which the data source is associated. This is optional.{{% /md %}}</dd>
-</dl>
+    <dd>{{% md %}}Arm Id for the manager resource to which the data source is associated. This is optional.{{% /md %}}</dd></dl>
 {{% /choosable %}}
 
 {{% choosable language python %}}
-<dl class="resources-properties">
-
-    <dt class="property-required"
+<dl class="resources-properties"><dt class="property-required"
             title="Required">
         <span id="data_manager_name_python">
 <a href="#data_manager_name_python" style="color: inherit; text-decoration: inherit;">data_<wbr>manager_<wbr>name</a>
@@ -665,8 +642,7 @@ The DataStore resource accepts the following [input]({{< relref "/docs/intro/con
         <span class="property-indicator"></span>
         <span class="property-type">str</span>
     </dt>
-    <dd>{{% md %}}The name of the DataManager Resource within the specified resource group. DataManager names must be between 3 and 24 characters in length and use any alphanumeric and underscore only{{% /md %}}</dd>
-    <dt class="property-required"
+    <dd>{{% md %}}The name of the DataManager Resource within the specified resource group. DataManager names must be between 3 and 24 characters in length and use any alphanumeric and underscore only{{% /md %}}</dd><dt class="property-required"
             title="Required">
         <span id="data_store_type_id_python">
 <a href="#data_store_type_id_python" style="color: inherit; text-decoration: inherit;">data_<wbr>store_<wbr>type_<wbr>id</a>
@@ -674,8 +650,7 @@ The DataStore resource accepts the following [input]({{< relref "/docs/intro/con
         <span class="property-indicator"></span>
         <span class="property-type">str</span>
     </dt>
-    <dd>{{% md %}}The arm id of the data store type.{{% /md %}}</dd>
-    <dt class="property-required"
+    <dd>{{% md %}}The arm id of the data store type.{{% /md %}}</dd><dt class="property-required"
             title="Required">
         <span id="resource_group_name_python">
 <a href="#resource_group_name_python" style="color: inherit; text-decoration: inherit;">resource_<wbr>group_<wbr>name</a>
@@ -683,8 +658,7 @@ The DataStore resource accepts the following [input]({{< relref "/docs/intro/con
         <span class="property-indicator"></span>
         <span class="property-type">str</span>
     </dt>
-    <dd>{{% md %}}The Resource Group Name{{% /md %}}</dd>
-    <dt class="property-required"
+    <dd>{{% md %}}The Resource Group Name{{% /md %}}</dd><dt class="property-required"
             title="Required">
         <span id="state_python">
 <a href="#state_python" style="color: inherit; text-decoration: inherit;">state</a>
@@ -692,8 +666,7 @@ The DataStore resource accepts the following [input]({{< relref "/docs/intro/con
         <span class="property-indicator"></span>
         <span class="property-type"><a href="#state">State</a></span>
     </dt>
-    <dd>{{% md %}}State of the data source.{{% /md %}}</dd>
-    <dt class="property-optional"
+    <dd>{{% md %}}State of the data source.{{% /md %}}</dd><dt class="property-optional"
             title="Optional">
         <span id="customer_secrets_python">
 <a href="#customer_secrets_python" style="color: inherit; text-decoration: inherit;">customer_<wbr>secrets</a>
@@ -701,8 +674,7 @@ The DataStore resource accepts the following [input]({{< relref "/docs/intro/con
         <span class="property-indicator"></span>
         <span class="property-type"><a href="#customersecret">Sequence[Customer<wbr>Secret<wbr>Args]</a></span>
     </dt>
-    <dd>{{% md %}}List of customer secrets containing a key identifier and key value. The key identifier is a way for the specific data source to understand the key. Value contains customer secret encrypted by the encryptionKeys.{{% /md %}}</dd>
-    <dt class="property-optional"
+    <dd>{{% md %}}List of customer secrets containing a key identifier and key value. The key identifier is a way for the specific data source to understand the key. Value contains customer secret encrypted by the encryptionKeys.{{% /md %}}</dd><dt class="property-optional"
             title="Optional">
         <span id="data_store_name_python">
 <a href="#data_store_name_python" style="color: inherit; text-decoration: inherit;">data_<wbr>store_<wbr>name</a>
@@ -710,8 +682,7 @@ The DataStore resource accepts the following [input]({{< relref "/docs/intro/con
         <span class="property-indicator"></span>
         <span class="property-type">str</span>
     </dt>
-    <dd>{{% md %}}The data store/repository name to be created or updated.{{% /md %}}</dd>
-    <dt class="property-optional"
+    <dd>{{% md %}}The data store/repository name to be created or updated.{{% /md %}}</dd><dt class="property-optional"
             title="Optional">
         <span id="extended_properties_python">
 <a href="#extended_properties_python" style="color: inherit; text-decoration: inherit;">extended_<wbr>properties</a>
@@ -719,8 +690,7 @@ The DataStore resource accepts the following [input]({{< relref "/docs/intro/con
         <span class="property-indicator"></span>
         <span class="property-type">Any</span>
     </dt>
-    <dd>{{% md %}}A generic json used differently by each data source type.{{% /md %}}</dd>
-    <dt class="property-optional"
+    <dd>{{% md %}}A generic json used differently by each data source type.{{% /md %}}</dd><dt class="property-optional"
             title="Optional">
         <span id="repository_id_python">
 <a href="#repository_id_python" style="color: inherit; text-decoration: inherit;">repository_<wbr>id</a>
@@ -728,8 +698,7 @@ The DataStore resource accepts the following [input]({{< relref "/docs/intro/con
         <span class="property-indicator"></span>
         <span class="property-type">str</span>
     </dt>
-    <dd>{{% md %}}Arm Id for the manager resource to which the data source is associated. This is optional.{{% /md %}}</dd>
-</dl>
+    <dd>{{% md %}}Arm Id for the manager resource to which the data source is associated. This is optional.{{% /md %}}</dd></dl>
 {{% /choosable %}}
 
 
@@ -740,9 +709,7 @@ All [input](#inputs) properties are implicitly available as output properties. A
 
 
 {{% choosable language csharp %}}
-<dl class="resources-properties">
-
-    <dt class="property-"
+<dl class="resources-properties"><dt class="property-"
             title="">
         <span id="id_csharp">
 <a href="#id_csharp" style="color: inherit; text-decoration: inherit;">Id</a>
@@ -750,8 +717,7 @@ All [input](#inputs) properties are implicitly available as output properties. A
         <span class="property-indicator"></span>
         <span class="property-type">string</span>
     </dt>
-    <dd>{{% md %}}The provider-assigned unique ID for this managed resource.{{% /md %}}</dd>
-    <dt class="property-"
+    <dd>{{% md %}}The provider-assigned unique ID for this managed resource.{{% /md %}}</dd><dt class="property-"
             title="">
         <span id="name_csharp">
 <a href="#name_csharp" style="color: inherit; text-decoration: inherit;">Name</a>
@@ -759,8 +725,7 @@ All [input](#inputs) properties are implicitly available as output properties. A
         <span class="property-indicator"></span>
         <span class="property-type">string</span>
     </dt>
-    <dd>{{% md %}}Name of the object.{{% /md %}}</dd>
-    <dt class="property-"
+    <dd>{{% md %}}Name of the object.{{% /md %}}</dd><dt class="property-"
             title="">
         <span id="type_csharp">
 <a href="#type_csharp" style="color: inherit; text-decoration: inherit;">Type</a>
@@ -768,14 +733,11 @@ All [input](#inputs) properties are implicitly available as output properties. A
         <span class="property-indicator"></span>
         <span class="property-type">string</span>
     </dt>
-    <dd>{{% md %}}Type of the object.{{% /md %}}</dd>
-</dl>
+    <dd>{{% md %}}Type of the object.{{% /md %}}</dd></dl>
 {{% /choosable %}}
 
 {{% choosable language go %}}
-<dl class="resources-properties">
-
-    <dt class="property-"
+<dl class="resources-properties"><dt class="property-"
             title="">
         <span id="id_go">
 <a href="#id_go" style="color: inherit; text-decoration: inherit;">Id</a>
@@ -783,8 +745,7 @@ All [input](#inputs) properties are implicitly available as output properties. A
         <span class="property-indicator"></span>
         <span class="property-type">string</span>
     </dt>
-    <dd>{{% md %}}The provider-assigned unique ID for this managed resource.{{% /md %}}</dd>
-    <dt class="property-"
+    <dd>{{% md %}}The provider-assigned unique ID for this managed resource.{{% /md %}}</dd><dt class="property-"
             title="">
         <span id="name_go">
 <a href="#name_go" style="color: inherit; text-decoration: inherit;">Name</a>
@@ -792,8 +753,7 @@ All [input](#inputs) properties are implicitly available as output properties. A
         <span class="property-indicator"></span>
         <span class="property-type">string</span>
     </dt>
-    <dd>{{% md %}}Name of the object.{{% /md %}}</dd>
-    <dt class="property-"
+    <dd>{{% md %}}Name of the object.{{% /md %}}</dd><dt class="property-"
             title="">
         <span id="type_go">
 <a href="#type_go" style="color: inherit; text-decoration: inherit;">Type</a>
@@ -801,14 +761,11 @@ All [input](#inputs) properties are implicitly available as output properties. A
         <span class="property-indicator"></span>
         <span class="property-type">string</span>
     </dt>
-    <dd>{{% md %}}Type of the object.{{% /md %}}</dd>
-</dl>
+    <dd>{{% md %}}Type of the object.{{% /md %}}</dd></dl>
 {{% /choosable %}}
 
 {{% choosable language nodejs %}}
-<dl class="resources-properties">
-
-    <dt class="property-"
+<dl class="resources-properties"><dt class="property-"
             title="">
         <span id="id_nodejs">
 <a href="#id_nodejs" style="color: inherit; text-decoration: inherit;">id</a>
@@ -816,8 +773,7 @@ All [input](#inputs) properties are implicitly available as output properties. A
         <span class="property-indicator"></span>
         <span class="property-type">string</span>
     </dt>
-    <dd>{{% md %}}The provider-assigned unique ID for this managed resource.{{% /md %}}</dd>
-    <dt class="property-"
+    <dd>{{% md %}}The provider-assigned unique ID for this managed resource.{{% /md %}}</dd><dt class="property-"
             title="">
         <span id="name_nodejs">
 <a href="#name_nodejs" style="color: inherit; text-decoration: inherit;">name</a>
@@ -825,8 +781,7 @@ All [input](#inputs) properties are implicitly available as output properties. A
         <span class="property-indicator"></span>
         <span class="property-type">string</span>
     </dt>
-    <dd>{{% md %}}Name of the object.{{% /md %}}</dd>
-    <dt class="property-"
+    <dd>{{% md %}}Name of the object.{{% /md %}}</dd><dt class="property-"
             title="">
         <span id="type_nodejs">
 <a href="#type_nodejs" style="color: inherit; text-decoration: inherit;">type</a>
@@ -834,14 +789,11 @@ All [input](#inputs) properties are implicitly available as output properties. A
         <span class="property-indicator"></span>
         <span class="property-type">string</span>
     </dt>
-    <dd>{{% md %}}Type of the object.{{% /md %}}</dd>
-</dl>
+    <dd>{{% md %}}Type of the object.{{% /md %}}</dd></dl>
 {{% /choosable %}}
 
 {{% choosable language python %}}
-<dl class="resources-properties">
-
-    <dt class="property-"
+<dl class="resources-properties"><dt class="property-"
             title="">
         <span id="id_python">
 <a href="#id_python" style="color: inherit; text-decoration: inherit;">id</a>
@@ -849,8 +801,7 @@ All [input](#inputs) properties are implicitly available as output properties. A
         <span class="property-indicator"></span>
         <span class="property-type">str</span>
     </dt>
-    <dd>{{% md %}}The provider-assigned unique ID for this managed resource.{{% /md %}}</dd>
-    <dt class="property-"
+    <dd>{{% md %}}The provider-assigned unique ID for this managed resource.{{% /md %}}</dd><dt class="property-"
             title="">
         <span id="name_python">
 <a href="#name_python" style="color: inherit; text-decoration: inherit;">name</a>
@@ -858,8 +809,7 @@ All [input](#inputs) properties are implicitly available as output properties. A
         <span class="property-indicator"></span>
         <span class="property-type">str</span>
     </dt>
-    <dd>{{% md %}}Name of the object.{{% /md %}}</dd>
-    <dt class="property-"
+    <dd>{{% md %}}Name of the object.{{% /md %}}</dd><dt class="property-"
             title="">
         <span id="type_python">
 <a href="#type_python" style="color: inherit; text-decoration: inherit;">type</a>
@@ -867,8 +817,7 @@ All [input](#inputs) properties are implicitly available as output properties. A
         <span class="property-indicator"></span>
         <span class="property-type">str</span>
     </dt>
-    <dd>{{% md %}}Type of the object.{{% /md %}}</dd>
-</dl>
+    <dd>{{% md %}}Type of the object.{{% /md %}}</dd></dl>
 {{% /choosable %}}
 
 
@@ -884,9 +833,7 @@ All [input](#inputs) properties are implicitly available as output properties. A
 <h4 id="customersecret">Customer<wbr>Secret</h4>
 
 {{% choosable language csharp %}}
-<dl class="resources-properties">
-
-    <dt class="property-required"
+<dl class="resources-properties"><dt class="property-required"
             title="Required">
         <span id="algorithm_csharp">
 <a href="#algorithm_csharp" style="color: inherit; text-decoration: inherit;">Algorithm</a>
@@ -894,8 +841,7 @@ All [input](#inputs) properties are implicitly available as output properties. A
         <span class="property-indicator"></span>
         <span class="property-type"><a href="#supportedalgorithm">Pulumi.<wbr>Azure<wbr>Native.<wbr>Hybrid<wbr>Data.<wbr>Supported<wbr>Algorithm</a></span>
     </dt>
-    <dd>{{% md %}}The encryption algorithm used to encrypt data.{{% /md %}}</dd>
-    <dt class="property-required"
+    <dd>{{% md %}}The encryption algorithm used to encrypt data.{{% /md %}}</dd><dt class="property-required"
             title="Required">
         <span id="keyidentifier_csharp">
 <a href="#keyidentifier_csharp" style="color: inherit; text-decoration: inherit;">Key<wbr>Identifier</a>
@@ -903,8 +849,7 @@ All [input](#inputs) properties are implicitly available as output properties. A
         <span class="property-indicator"></span>
         <span class="property-type">string</span>
     </dt>
-    <dd>{{% md %}}The identifier to the data service input object which this secret corresponds to.{{% /md %}}</dd>
-    <dt class="property-required"
+    <dd>{{% md %}}The identifier to the data service input object which this secret corresponds to.{{% /md %}}</dd><dt class="property-required"
             title="Required">
         <span id="keyvalue_csharp">
 <a href="#keyvalue_csharp" style="color: inherit; text-decoration: inherit;">Key<wbr>Value</a>
@@ -912,14 +857,11 @@ All [input](#inputs) properties are implicitly available as output properties. A
         <span class="property-indicator"></span>
         <span class="property-type">string</span>
     </dt>
-    <dd>{{% md %}}It contains the encrypted customer secret.{{% /md %}}</dd>
-</dl>
+    <dd>{{% md %}}It contains the encrypted customer secret.{{% /md %}}</dd></dl>
 {{% /choosable %}}
 
 {{% choosable language go %}}
-<dl class="resources-properties">
-
-    <dt class="property-required"
+<dl class="resources-properties"><dt class="property-required"
             title="Required">
         <span id="algorithm_go">
 <a href="#algorithm_go" style="color: inherit; text-decoration: inherit;">Algorithm</a>
@@ -927,8 +869,7 @@ All [input](#inputs) properties are implicitly available as output properties. A
         <span class="property-indicator"></span>
         <span class="property-type"><a href="#supportedalgorithm">Supported<wbr>Algorithm</a></span>
     </dt>
-    <dd>{{% md %}}The encryption algorithm used to encrypt data.{{% /md %}}</dd>
-    <dt class="property-required"
+    <dd>{{% md %}}The encryption algorithm used to encrypt data.{{% /md %}}</dd><dt class="property-required"
             title="Required">
         <span id="keyidentifier_go">
 <a href="#keyidentifier_go" style="color: inherit; text-decoration: inherit;">Key<wbr>Identifier</a>
@@ -936,8 +877,7 @@ All [input](#inputs) properties are implicitly available as output properties. A
         <span class="property-indicator"></span>
         <span class="property-type">string</span>
     </dt>
-    <dd>{{% md %}}The identifier to the data service input object which this secret corresponds to.{{% /md %}}</dd>
-    <dt class="property-required"
+    <dd>{{% md %}}The identifier to the data service input object which this secret corresponds to.{{% /md %}}</dd><dt class="property-required"
             title="Required">
         <span id="keyvalue_go">
 <a href="#keyvalue_go" style="color: inherit; text-decoration: inherit;">Key<wbr>Value</a>
@@ -945,14 +885,11 @@ All [input](#inputs) properties are implicitly available as output properties. A
         <span class="property-indicator"></span>
         <span class="property-type">string</span>
     </dt>
-    <dd>{{% md %}}It contains the encrypted customer secret.{{% /md %}}</dd>
-</dl>
+    <dd>{{% md %}}It contains the encrypted customer secret.{{% /md %}}</dd></dl>
 {{% /choosable %}}
 
 {{% choosable language nodejs %}}
-<dl class="resources-properties">
-
-    <dt class="property-required"
+<dl class="resources-properties"><dt class="property-required"
             title="Required">
         <span id="algorithm_nodejs">
 <a href="#algorithm_nodejs" style="color: inherit; text-decoration: inherit;">algorithm</a>
@@ -960,8 +897,7 @@ All [input](#inputs) properties are implicitly available as output properties. A
         <span class="property-indicator"></span>
         <span class="property-type"><a href="#supportedalgorithm">Supported<wbr>Algorithm</a></span>
     </dt>
-    <dd>{{% md %}}The encryption algorithm used to encrypt data.{{% /md %}}</dd>
-    <dt class="property-required"
+    <dd>{{% md %}}The encryption algorithm used to encrypt data.{{% /md %}}</dd><dt class="property-required"
             title="Required">
         <span id="keyidentifier_nodejs">
 <a href="#keyidentifier_nodejs" style="color: inherit; text-decoration: inherit;">key<wbr>Identifier</a>
@@ -969,8 +905,7 @@ All [input](#inputs) properties are implicitly available as output properties. A
         <span class="property-indicator"></span>
         <span class="property-type">string</span>
     </dt>
-    <dd>{{% md %}}The identifier to the data service input object which this secret corresponds to.{{% /md %}}</dd>
-    <dt class="property-required"
+    <dd>{{% md %}}The identifier to the data service input object which this secret corresponds to.{{% /md %}}</dd><dt class="property-required"
             title="Required">
         <span id="keyvalue_nodejs">
 <a href="#keyvalue_nodejs" style="color: inherit; text-decoration: inherit;">key<wbr>Value</a>
@@ -978,14 +913,11 @@ All [input](#inputs) properties are implicitly available as output properties. A
         <span class="property-indicator"></span>
         <span class="property-type">string</span>
     </dt>
-    <dd>{{% md %}}It contains the encrypted customer secret.{{% /md %}}</dd>
-</dl>
+    <dd>{{% md %}}It contains the encrypted customer secret.{{% /md %}}</dd></dl>
 {{% /choosable %}}
 
 {{% choosable language python %}}
-<dl class="resources-properties">
-
-    <dt class="property-required"
+<dl class="resources-properties"><dt class="property-required"
             title="Required">
         <span id="algorithm_python">
 <a href="#algorithm_python" style="color: inherit; text-decoration: inherit;">algorithm</a>
@@ -993,8 +925,7 @@ All [input](#inputs) properties are implicitly available as output properties. A
         <span class="property-indicator"></span>
         <span class="property-type"><a href="#supportedalgorithm">Supported<wbr>Algorithm</a></span>
     </dt>
-    <dd>{{% md %}}The encryption algorithm used to encrypt data.{{% /md %}}</dd>
-    <dt class="property-required"
+    <dd>{{% md %}}The encryption algorithm used to encrypt data.{{% /md %}}</dd><dt class="property-required"
             title="Required">
         <span id="key_identifier_python">
 <a href="#key_identifier_python" style="color: inherit; text-decoration: inherit;">key_<wbr>identifier</a>
@@ -1002,8 +933,7 @@ All [input](#inputs) properties are implicitly available as output properties. A
         <span class="property-indicator"></span>
         <span class="property-type">str</span>
     </dt>
-    <dd>{{% md %}}The identifier to the data service input object which this secret corresponds to.{{% /md %}}</dd>
-    <dt class="property-required"
+    <dd>{{% md %}}The identifier to the data service input object which this secret corresponds to.{{% /md %}}</dd><dt class="property-required"
             title="Required">
         <span id="key_value_python">
 <a href="#key_value_python" style="color: inherit; text-decoration: inherit;">key_<wbr>value</a>
@@ -1011,16 +941,13 @@ All [input](#inputs) properties are implicitly available as output properties. A
         <span class="property-indicator"></span>
         <span class="property-type">str</span>
     </dt>
-    <dd>{{% md %}}It contains the encrypted customer secret.{{% /md %}}</dd>
-</dl>
+    <dd>{{% md %}}It contains the encrypted customer secret.{{% /md %}}</dd></dl>
 {{% /choosable %}}
 
 <h4 id="customersecretresponse">Customer<wbr>Secret<wbr>Response</h4>
 
 {{% choosable language csharp %}}
-<dl class="resources-properties">
-
-    <dt class="property-required"
+<dl class="resources-properties"><dt class="property-required"
             title="Required">
         <span id="algorithm_csharp">
 <a href="#algorithm_csharp" style="color: inherit; text-decoration: inherit;">Algorithm</a>
@@ -1028,8 +955,7 @@ All [input](#inputs) properties are implicitly available as output properties. A
         <span class="property-indicator"></span>
         <span class="property-type">string</span>
     </dt>
-    <dd>{{% md %}}The encryption algorithm used to encrypt data.{{% /md %}}</dd>
-    <dt class="property-required"
+    <dd>{{% md %}}The encryption algorithm used to encrypt data.{{% /md %}}</dd><dt class="property-required"
             title="Required">
         <span id="keyidentifier_csharp">
 <a href="#keyidentifier_csharp" style="color: inherit; text-decoration: inherit;">Key<wbr>Identifier</a>
@@ -1037,8 +963,7 @@ All [input](#inputs) properties are implicitly available as output properties. A
         <span class="property-indicator"></span>
         <span class="property-type">string</span>
     </dt>
-    <dd>{{% md %}}The identifier to the data service input object which this secret corresponds to.{{% /md %}}</dd>
-    <dt class="property-required"
+    <dd>{{% md %}}The identifier to the data service input object which this secret corresponds to.{{% /md %}}</dd><dt class="property-required"
             title="Required">
         <span id="keyvalue_csharp">
 <a href="#keyvalue_csharp" style="color: inherit; text-decoration: inherit;">Key<wbr>Value</a>
@@ -1046,14 +971,11 @@ All [input](#inputs) properties are implicitly available as output properties. A
         <span class="property-indicator"></span>
         <span class="property-type">string</span>
     </dt>
-    <dd>{{% md %}}It contains the encrypted customer secret.{{% /md %}}</dd>
-</dl>
+    <dd>{{% md %}}It contains the encrypted customer secret.{{% /md %}}</dd></dl>
 {{% /choosable %}}
 
 {{% choosable language go %}}
-<dl class="resources-properties">
-
-    <dt class="property-required"
+<dl class="resources-properties"><dt class="property-required"
             title="Required">
         <span id="algorithm_go">
 <a href="#algorithm_go" style="color: inherit; text-decoration: inherit;">Algorithm</a>
@@ -1061,8 +983,7 @@ All [input](#inputs) properties are implicitly available as output properties. A
         <span class="property-indicator"></span>
         <span class="property-type">string</span>
     </dt>
-    <dd>{{% md %}}The encryption algorithm used to encrypt data.{{% /md %}}</dd>
-    <dt class="property-required"
+    <dd>{{% md %}}The encryption algorithm used to encrypt data.{{% /md %}}</dd><dt class="property-required"
             title="Required">
         <span id="keyidentifier_go">
 <a href="#keyidentifier_go" style="color: inherit; text-decoration: inherit;">Key<wbr>Identifier</a>
@@ -1070,8 +991,7 @@ All [input](#inputs) properties are implicitly available as output properties. A
         <span class="property-indicator"></span>
         <span class="property-type">string</span>
     </dt>
-    <dd>{{% md %}}The identifier to the data service input object which this secret corresponds to.{{% /md %}}</dd>
-    <dt class="property-required"
+    <dd>{{% md %}}The identifier to the data service input object which this secret corresponds to.{{% /md %}}</dd><dt class="property-required"
             title="Required">
         <span id="keyvalue_go">
 <a href="#keyvalue_go" style="color: inherit; text-decoration: inherit;">Key<wbr>Value</a>
@@ -1079,14 +999,11 @@ All [input](#inputs) properties are implicitly available as output properties. A
         <span class="property-indicator"></span>
         <span class="property-type">string</span>
     </dt>
-    <dd>{{% md %}}It contains the encrypted customer secret.{{% /md %}}</dd>
-</dl>
+    <dd>{{% md %}}It contains the encrypted customer secret.{{% /md %}}</dd></dl>
 {{% /choosable %}}
 
 {{% choosable language nodejs %}}
-<dl class="resources-properties">
-
-    <dt class="property-required"
+<dl class="resources-properties"><dt class="property-required"
             title="Required">
         <span id="algorithm_nodejs">
 <a href="#algorithm_nodejs" style="color: inherit; text-decoration: inherit;">algorithm</a>
@@ -1094,8 +1011,7 @@ All [input](#inputs) properties are implicitly available as output properties. A
         <span class="property-indicator"></span>
         <span class="property-type">string</span>
     </dt>
-    <dd>{{% md %}}The encryption algorithm used to encrypt data.{{% /md %}}</dd>
-    <dt class="property-required"
+    <dd>{{% md %}}The encryption algorithm used to encrypt data.{{% /md %}}</dd><dt class="property-required"
             title="Required">
         <span id="keyidentifier_nodejs">
 <a href="#keyidentifier_nodejs" style="color: inherit; text-decoration: inherit;">key<wbr>Identifier</a>
@@ -1103,8 +1019,7 @@ All [input](#inputs) properties are implicitly available as output properties. A
         <span class="property-indicator"></span>
         <span class="property-type">string</span>
     </dt>
-    <dd>{{% md %}}The identifier to the data service input object which this secret corresponds to.{{% /md %}}</dd>
-    <dt class="property-required"
+    <dd>{{% md %}}The identifier to the data service input object which this secret corresponds to.{{% /md %}}</dd><dt class="property-required"
             title="Required">
         <span id="keyvalue_nodejs">
 <a href="#keyvalue_nodejs" style="color: inherit; text-decoration: inherit;">key<wbr>Value</a>
@@ -1112,14 +1027,11 @@ All [input](#inputs) properties are implicitly available as output properties. A
         <span class="property-indicator"></span>
         <span class="property-type">string</span>
     </dt>
-    <dd>{{% md %}}It contains the encrypted customer secret.{{% /md %}}</dd>
-</dl>
+    <dd>{{% md %}}It contains the encrypted customer secret.{{% /md %}}</dd></dl>
 {{% /choosable %}}
 
 {{% choosable language python %}}
-<dl class="resources-properties">
-
-    <dt class="property-required"
+<dl class="resources-properties"><dt class="property-required"
             title="Required">
         <span id="algorithm_python">
 <a href="#algorithm_python" style="color: inherit; text-decoration: inherit;">algorithm</a>
@@ -1127,8 +1039,7 @@ All [input](#inputs) properties are implicitly available as output properties. A
         <span class="property-indicator"></span>
         <span class="property-type">str</span>
     </dt>
-    <dd>{{% md %}}The encryption algorithm used to encrypt data.{{% /md %}}</dd>
-    <dt class="property-required"
+    <dd>{{% md %}}The encryption algorithm used to encrypt data.{{% /md %}}</dd><dt class="property-required"
             title="Required">
         <span id="key_identifier_python">
 <a href="#key_identifier_python" style="color: inherit; text-decoration: inherit;">key_<wbr>identifier</a>
@@ -1136,8 +1047,7 @@ All [input](#inputs) properties are implicitly available as output properties. A
         <span class="property-indicator"></span>
         <span class="property-type">str</span>
     </dt>
-    <dd>{{% md %}}The identifier to the data service input object which this secret corresponds to.{{% /md %}}</dd>
-    <dt class="property-required"
+    <dd>{{% md %}}The identifier to the data service input object which this secret corresponds to.{{% /md %}}</dd><dt class="property-required"
             title="Required">
         <span id="key_value_python">
 <a href="#key_value_python" style="color: inherit; text-decoration: inherit;">key_<wbr>value</a>
@@ -1145,108 +1055,71 @@ All [input](#inputs) properties are implicitly available as output properties. A
         <span class="property-indicator"></span>
         <span class="property-type">str</span>
     </dt>
-    <dd>{{% md %}}It contains the encrypted customer secret.{{% /md %}}</dd>
-</dl>
+    <dd>{{% md %}}It contains the encrypted customer secret.{{% /md %}}</dd></dl>
 {{% /choosable %}}
 
 <h4 id="state">State</h4>
 
 {{% choosable language csharp %}}
-<dl class="tabular">
-    <dt>Disabled</dt>
-    <dd>Disabled</dd>
-    <dt>Enabled</dt>
-    <dd>Enabled</dd>
-    <dt>Supported</dt>
-    <dd>Supported</dd>
-</dl>
+<dl class="tabular"><dt>Disabled</dt>
+    <dd>Disabled</dd><dt>Enabled</dt>
+    <dd>Enabled</dd><dt>Supported</dt>
+    <dd>Supported</dd></dl>
 {{% /choosable %}}
 
 {{% choosable language go %}}
-<dl class="tabular">
-    <dt>State<wbr>Disabled</dt>
-    <dd>Disabled</dd>
-    <dt>State<wbr>Enabled</dt>
-    <dd>Enabled</dd>
-    <dt>State<wbr>Supported</dt>
-    <dd>Supported</dd>
-</dl>
+<dl class="tabular"><dt>State<wbr>Disabled</dt>
+    <dd>Disabled</dd><dt>State<wbr>Enabled</dt>
+    <dd>Enabled</dd><dt>State<wbr>Supported</dt>
+    <dd>Supported</dd></dl>
 {{% /choosable %}}
 
 {{% choosable language nodejs %}}
-<dl class="tabular">
-    <dt>Disabled</dt>
-    <dd>Disabled</dd>
-    <dt>Enabled</dt>
-    <dd>Enabled</dd>
-    <dt>Supported</dt>
-    <dd>Supported</dd>
-</dl>
+<dl class="tabular"><dt>Disabled</dt>
+    <dd>Disabled</dd><dt>Enabled</dt>
+    <dd>Enabled</dd><dt>Supported</dt>
+    <dd>Supported</dd></dl>
 {{% /choosable %}}
 
 {{% choosable language python %}}
-<dl class="tabular">
-    <dt>DISABLED</dt>
-    <dd>Disabled</dd>
-    <dt>ENABLED</dt>
-    <dd>Enabled</dd>
-    <dt>SUPPORTED</dt>
-    <dd>Supported</dd>
-</dl>
+<dl class="tabular"><dt>DISABLED</dt>
+    <dd>Disabled</dd><dt>ENABLED</dt>
+    <dd>Enabled</dd><dt>SUPPORTED</dt>
+    <dd>Supported</dd></dl>
 {{% /choosable %}}
 
 <h4 id="supportedalgorithm">Supported<wbr>Algorithm</h4>
 
 {{% choosable language csharp %}}
-<dl class="tabular">
-    <dt>None</dt>
-    <dd>None</dd>
-    <dt>RSA1_5</dt>
-    <dd>RSA1_5</dd>
-    <dt>RSA_OAEP</dt>
-    <dd>RSA_OAEP</dd>
-    <dt>Plain<wbr>Text</dt>
-    <dd>PlainText</dd>
-</dl>
+<dl class="tabular"><dt>None</dt>
+    <dd>None</dd><dt>RSA1_5</dt>
+    <dd>RSA1_5</dd><dt>RSA_OAEP</dt>
+    <dd>RSA_OAEP</dd><dt>Plain<wbr>Text</dt>
+    <dd>PlainText</dd></dl>
 {{% /choosable %}}
 
 {{% choosable language go %}}
-<dl class="tabular">
-    <dt>Supported<wbr>Algorithm<wbr>None</dt>
-    <dd>None</dd>
-    <dt>Supported<wbr>Algorithm_RSA1_5</dt>
-    <dd>RSA1_5</dd>
-    <dt>Supported<wbr>Algorithm_RSA_OAEP</dt>
-    <dd>RSA_OAEP</dd>
-    <dt>Supported<wbr>Algorithm<wbr>Plain<wbr>Text</dt>
-    <dd>PlainText</dd>
-</dl>
+<dl class="tabular"><dt>Supported<wbr>Algorithm<wbr>None</dt>
+    <dd>None</dd><dt>Supported<wbr>Algorithm_RSA1_5</dt>
+    <dd>RSA1_5</dd><dt>Supported<wbr>Algorithm_RSA_OAEP</dt>
+    <dd>RSA_OAEP</dd><dt>Supported<wbr>Algorithm<wbr>Plain<wbr>Text</dt>
+    <dd>PlainText</dd></dl>
 {{% /choosable %}}
 
 {{% choosable language nodejs %}}
-<dl class="tabular">
-    <dt>None</dt>
-    <dd>None</dd>
-    <dt>RSA1_5</dt>
-    <dd>RSA1_5</dd>
-    <dt>RSA_OAEP</dt>
-    <dd>RSA_OAEP</dd>
-    <dt>Plain<wbr>Text</dt>
-    <dd>PlainText</dd>
-</dl>
+<dl class="tabular"><dt>None</dt>
+    <dd>None</dd><dt>RSA1_5</dt>
+    <dd>RSA1_5</dd><dt>RSA_OAEP</dt>
+    <dd>RSA_OAEP</dd><dt>Plain<wbr>Text</dt>
+    <dd>PlainText</dd></dl>
 {{% /choosable %}}
 
 {{% choosable language python %}}
-<dl class="tabular">
-    <dt>NONE</dt>
-    <dd>None</dd>
-    <dt>RSA1_5</dt>
-    <dd>RSA1_5</dd>
-    <dt>RS_A_OAEP</dt>
-    <dd>RSA_OAEP</dd>
-    <dt>PLAIN_TEXT</dt>
-    <dd>PlainText</dd>
-</dl>
+<dl class="tabular"><dt>NONE</dt>
+    <dd>None</dd><dt>RSA1_5</dt>
+    <dd>RSA1_5</dd><dt>RS_A_OAEP</dt>
+    <dd>RSA_OAEP</dd><dt>PLAIN_TEXT</dt>
+    <dd>PlainText</dd></dl>
 {{% /choosable %}}
 ## Import
 

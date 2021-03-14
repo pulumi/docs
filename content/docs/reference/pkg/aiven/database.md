@@ -16,11 +16,17 @@ The Database resource allows the creation and management of Aiven Databases.
 
 
 {{% examples %}}
+
 ## Example Usage
 
 {{< chooser language "typescript,python,go,csharp" / >}}
 
-{{% example csharp %}}
+
+
+
+
+{{< example csharp >}}
+
 ```csharp
 using Pulumi;
 using Aiven = Pulumi.Aiven;
@@ -40,9 +46,12 @@ class MyStack : Stack
 }
 ```
 
-{{% /example %}}
 
-{{% example go %}}
+{{< /example >}}
+
+
+{{< example go >}}
+
 ```go
 package main
 
@@ -66,9 +75,12 @@ func main() {
 }
 ```
 
-{{% /example %}}
 
-{{% example python %}}
+{{< /example >}}
+
+
+{{< example python >}}
+
 ```python
 import pulumi
 import pulumi_aiven as aiven
@@ -79,9 +91,12 @@ mydatabase = aiven.Database("mydatabase",
     service_name=aiven_service["myservice"]["service_name"])
 ```
 
-{{% /example %}}
 
-{{% example typescript %}}
+{{< /example >}}
+
+
+{{< example typescript >}}
+
 
 ```typescript
 import * as pulumi from "@pulumi/pulumi";
@@ -94,9 +109,16 @@ const mydatabase = new aiven.Database("mydatabase", {
 });
 ```
 
-{{% /example %}}
+
+{{< /example >}}
+
+
+
+
 
 {{% /examples %}}
+
+
 
 
 ## Create a Database Resource {#create}
@@ -121,9 +143,7 @@ const mydatabase = new aiven.Database("mydatabase", {
 
 {{% choosable language nodejs %}}
 
-<dl class="resources-properties">
-  
-    <dt
+<dl class="resources-properties"><dt
         class="property-required" title="Required">
         <span>name</span>
         <span class="property-indicator"></span>
@@ -131,9 +151,7 @@ const mydatabase = new aiven.Database("mydatabase", {
     </dt>
     <dd>
       The unique name of the resource.
-    </dd>
-  
-    <dt
+    </dd><dt
         class="property-required" title="Required">
         <span>args</span>
         <span class="property-indicator"></span>
@@ -141,9 +159,7 @@ const mydatabase = new aiven.Database("mydatabase", {
     </dt>
     <dd>
       The arguments to resource properties.
-    </dd>
-  
-    <dt
+    </dd><dt
         class="property-optional" title="Optional">
         <span>opts</span>
         <span class="property-indicator"></span>
@@ -151,10 +167,7 @@ const mydatabase = new aiven.Database("mydatabase", {
     </dt>
     <dd>
       Bag of options to control resource&#39;s behavior.
-    </dd>
-  
-
-</dl>
+    </dd></dl>
 
 {{% /choosable %}}
 
@@ -180,9 +193,7 @@ const mydatabase = new aiven.Database("mydatabase", {
 
 {{% choosable language go %}}
 
-<dl class="resources-properties">
-  
-    <dt
+<dl class="resources-properties"><dt
         class="property-optional" title="Optional">
         <span>ctx</span>
         <span class="property-indicator"></span>
@@ -190,9 +201,7 @@ const mydatabase = new aiven.Database("mydatabase", {
     </dt>
     <dd>
       Context object for the current deployment.
-    </dd>
-  
-    <dt
+    </dd><dt
         class="property-required" title="Required">
         <span>name</span>
         <span class="property-indicator"></span>
@@ -200,9 +209,7 @@ const mydatabase = new aiven.Database("mydatabase", {
     </dt>
     <dd>
       The unique name of the resource.
-    </dd>
-  
-    <dt
+    </dd><dt
         class="property-required" title="Required">
         <span>args</span>
         <span class="property-indicator"></span>
@@ -210,9 +217,7 @@ const mydatabase = new aiven.Database("mydatabase", {
     </dt>
     <dd>
       The arguments to resource properties.
-    </dd>
-  
-    <dt
+    </dd><dt
         class="property-optional" title="Optional">
         <span>opts</span>
         <span class="property-indicator"></span>
@@ -220,18 +225,13 @@ const mydatabase = new aiven.Database("mydatabase", {
     </dt>
     <dd>
       Bag of options to control resource&#39;s behavior.
-    </dd>
-  
-
-</dl>
+    </dd></dl>
 
 {{% /choosable %}}
 
 {{% choosable language csharp %}}
 
-<dl class="resources-properties">
-  
-    <dt
+<dl class="resources-properties"><dt
         class="property-required" title="Required">
         <span>name</span>
         <span class="property-indicator"></span>
@@ -239,9 +239,7 @@ const mydatabase = new aiven.Database("mydatabase", {
     </dt>
     <dd>
       The unique name of the resource.
-    </dd>
-  
-    <dt
+    </dd><dt
         class="property-required" title="Required">
         <span>args</span>
         <span class="property-indicator"></span>
@@ -249,9 +247,7 @@ const mydatabase = new aiven.Database("mydatabase", {
     </dt>
     <dd>
       The arguments to resource properties.
-    </dd>
-  
-    <dt
+    </dd><dt
         class="property-optional" title="Optional">
         <span>opts</span>
         <span class="property-indicator"></span>
@@ -259,10 +255,7 @@ const mydatabase = new aiven.Database("mydatabase", {
     </dt>
     <dd>
       Bag of options to control resource&#39;s behavior.
-    </dd>
-  
-
-</dl>
+    </dd></dl>
 
 {{% /choosable %}}
 
@@ -277,9 +270,7 @@ The Database resource accepts the following [input]({{< relref "/docs/intro/conc
 
 
 {{% choosable language csharp %}}
-<dl class="resources-properties">
-
-    <dt class="property-required"
+<dl class="resources-properties"><dt class="property-required"
             title="Required">
         <span id="databasename_csharp">
 <a href="#databasename_csharp" style="color: inherit; text-decoration: inherit;">Database<wbr>Name</a>
@@ -288,8 +279,7 @@ The Database resource accepts the following [input]({{< relref "/docs/intro/conc
         <span class="property-type">string</span>
     </dt>
     <dd>{{% md %}}is the actual name of the database.
-{{% /md %}}</dd>
-    <dt class="property-required"
+{{% /md %}}</dd><dt class="property-required"
             title="Required">
         <span id="project_csharp">
 <a href="#project_csharp" style="color: inherit; text-decoration: inherit;">Project</a>
@@ -299,8 +289,7 @@ The Database resource accepts the following [input]({{< relref "/docs/intro/conc
     </dt>
     <dd>{{% md %}}and `service_name` - (Required) define the project and service the database belongs to.
 They should be defined using reference as shown above to set up dependencies correctly.
-{{% /md %}}</dd>
-    <dt class="property-required"
+{{% /md %}}</dd><dt class="property-required"
             title="Required">
         <span id="servicename_csharp">
 <a href="#servicename_csharp" style="color: inherit; text-decoration: inherit;">Service<wbr>Name</a>
@@ -309,8 +298,7 @@ They should be defined using reference as shown above to set up dependencies cor
         <span class="property-type">string</span>
     </dt>
     <dd>{{% md %}}Service to link the database to
-{{% /md %}}</dd>
-    <dt class="property-optional"
+{{% /md %}}</dd><dt class="property-optional"
             title="Optional">
         <span id="lccollate_csharp">
 <a href="#lccollate_csharp" style="color: inherit; text-decoration: inherit;">Lc<wbr>Collate</a>
@@ -319,8 +307,7 @@ They should be defined using reference as shown above to set up dependencies cor
         <span class="property-type">string</span>
     </dt>
     <dd>{{% md %}}default string sort order (LC_COLLATE) of the database. Default value: en_US.UTF-8.
-{{% /md %}}</dd>
-    <dt class="property-optional"
+{{% /md %}}</dd><dt class="property-optional"
             title="Optional">
         <span id="lcctype_csharp">
 <a href="#lcctype_csharp" style="color: inherit; text-decoration: inherit;">Lc<wbr>Ctype</a>
@@ -329,8 +316,7 @@ They should be defined using reference as shown above to set up dependencies cor
         <span class="property-type">string</span>
     </dt>
     <dd>{{% md %}}default character classification (LC_CTYPE) of the database. Default value: en_US.UTF-8.
-{{% /md %}}</dd>
-    <dt class="property-optional"
+{{% /md %}}</dd><dt class="property-optional"
             title="Optional">
         <span id="terminationprotection_csharp">
 <a href="#terminationprotection_csharp" style="color: inherit; text-decoration: inherit;">Termination<wbr>Protection</a>
@@ -340,14 +326,11 @@ They should be defined using reference as shown above to set up dependencies cor
     </dt>
     <dd>{{% md %}}It is a Terraform client-side deletion protections, which prevents the database from being deleted by Terraform. It is
 recommended to enable this for any production databases containing critical data.
-{{% /md %}}</dd>
-</dl>
+{{% /md %}}</dd></dl>
 {{% /choosable %}}
 
 {{% choosable language go %}}
-<dl class="resources-properties">
-
-    <dt class="property-required"
+<dl class="resources-properties"><dt class="property-required"
             title="Required">
         <span id="databasename_go">
 <a href="#databasename_go" style="color: inherit; text-decoration: inherit;">Database<wbr>Name</a>
@@ -356,8 +339,7 @@ recommended to enable this for any production databases containing critical data
         <span class="property-type">string</span>
     </dt>
     <dd>{{% md %}}is the actual name of the database.
-{{% /md %}}</dd>
-    <dt class="property-required"
+{{% /md %}}</dd><dt class="property-required"
             title="Required">
         <span id="project_go">
 <a href="#project_go" style="color: inherit; text-decoration: inherit;">Project</a>
@@ -367,8 +349,7 @@ recommended to enable this for any production databases containing critical data
     </dt>
     <dd>{{% md %}}and `service_name` - (Required) define the project and service the database belongs to.
 They should be defined using reference as shown above to set up dependencies correctly.
-{{% /md %}}</dd>
-    <dt class="property-required"
+{{% /md %}}</dd><dt class="property-required"
             title="Required">
         <span id="servicename_go">
 <a href="#servicename_go" style="color: inherit; text-decoration: inherit;">Service<wbr>Name</a>
@@ -377,8 +358,7 @@ They should be defined using reference as shown above to set up dependencies cor
         <span class="property-type">string</span>
     </dt>
     <dd>{{% md %}}Service to link the database to
-{{% /md %}}</dd>
-    <dt class="property-optional"
+{{% /md %}}</dd><dt class="property-optional"
             title="Optional">
         <span id="lccollate_go">
 <a href="#lccollate_go" style="color: inherit; text-decoration: inherit;">Lc<wbr>Collate</a>
@@ -387,8 +367,7 @@ They should be defined using reference as shown above to set up dependencies cor
         <span class="property-type">string</span>
     </dt>
     <dd>{{% md %}}default string sort order (LC_COLLATE) of the database. Default value: en_US.UTF-8.
-{{% /md %}}</dd>
-    <dt class="property-optional"
+{{% /md %}}</dd><dt class="property-optional"
             title="Optional">
         <span id="lcctype_go">
 <a href="#lcctype_go" style="color: inherit; text-decoration: inherit;">Lc<wbr>Ctype</a>
@@ -397,8 +376,7 @@ They should be defined using reference as shown above to set up dependencies cor
         <span class="property-type">string</span>
     </dt>
     <dd>{{% md %}}default character classification (LC_CTYPE) of the database. Default value: en_US.UTF-8.
-{{% /md %}}</dd>
-    <dt class="property-optional"
+{{% /md %}}</dd><dt class="property-optional"
             title="Optional">
         <span id="terminationprotection_go">
 <a href="#terminationprotection_go" style="color: inherit; text-decoration: inherit;">Termination<wbr>Protection</a>
@@ -408,14 +386,11 @@ They should be defined using reference as shown above to set up dependencies cor
     </dt>
     <dd>{{% md %}}It is a Terraform client-side deletion protections, which prevents the database from being deleted by Terraform. It is
 recommended to enable this for any production databases containing critical data.
-{{% /md %}}</dd>
-</dl>
+{{% /md %}}</dd></dl>
 {{% /choosable %}}
 
 {{% choosable language nodejs %}}
-<dl class="resources-properties">
-
-    <dt class="property-required"
+<dl class="resources-properties"><dt class="property-required"
             title="Required">
         <span id="databasename_nodejs">
 <a href="#databasename_nodejs" style="color: inherit; text-decoration: inherit;">database<wbr>Name</a>
@@ -424,8 +399,7 @@ recommended to enable this for any production databases containing critical data
         <span class="property-type">string</span>
     </dt>
     <dd>{{% md %}}is the actual name of the database.
-{{% /md %}}</dd>
-    <dt class="property-required"
+{{% /md %}}</dd><dt class="property-required"
             title="Required">
         <span id="project_nodejs">
 <a href="#project_nodejs" style="color: inherit; text-decoration: inherit;">project</a>
@@ -435,8 +409,7 @@ recommended to enable this for any production databases containing critical data
     </dt>
     <dd>{{% md %}}and `service_name` - (Required) define the project and service the database belongs to.
 They should be defined using reference as shown above to set up dependencies correctly.
-{{% /md %}}</dd>
-    <dt class="property-required"
+{{% /md %}}</dd><dt class="property-required"
             title="Required">
         <span id="servicename_nodejs">
 <a href="#servicename_nodejs" style="color: inherit; text-decoration: inherit;">service<wbr>Name</a>
@@ -445,8 +418,7 @@ They should be defined using reference as shown above to set up dependencies cor
         <span class="property-type">string</span>
     </dt>
     <dd>{{% md %}}Service to link the database to
-{{% /md %}}</dd>
-    <dt class="property-optional"
+{{% /md %}}</dd><dt class="property-optional"
             title="Optional">
         <span id="lccollate_nodejs">
 <a href="#lccollate_nodejs" style="color: inherit; text-decoration: inherit;">lc<wbr>Collate</a>
@@ -455,8 +427,7 @@ They should be defined using reference as shown above to set up dependencies cor
         <span class="property-type">string</span>
     </dt>
     <dd>{{% md %}}default string sort order (LC_COLLATE) of the database. Default value: en_US.UTF-8.
-{{% /md %}}</dd>
-    <dt class="property-optional"
+{{% /md %}}</dd><dt class="property-optional"
             title="Optional">
         <span id="lcctype_nodejs">
 <a href="#lcctype_nodejs" style="color: inherit; text-decoration: inherit;">lc<wbr>Ctype</a>
@@ -465,8 +436,7 @@ They should be defined using reference as shown above to set up dependencies cor
         <span class="property-type">string</span>
     </dt>
     <dd>{{% md %}}default character classification (LC_CTYPE) of the database. Default value: en_US.UTF-8.
-{{% /md %}}</dd>
-    <dt class="property-optional"
+{{% /md %}}</dd><dt class="property-optional"
             title="Optional">
         <span id="terminationprotection_nodejs">
 <a href="#terminationprotection_nodejs" style="color: inherit; text-decoration: inherit;">termination<wbr>Protection</a>
@@ -476,14 +446,11 @@ They should be defined using reference as shown above to set up dependencies cor
     </dt>
     <dd>{{% md %}}It is a Terraform client-side deletion protections, which prevents the database from being deleted by Terraform. It is
 recommended to enable this for any production databases containing critical data.
-{{% /md %}}</dd>
-</dl>
+{{% /md %}}</dd></dl>
 {{% /choosable %}}
 
 {{% choosable language python %}}
-<dl class="resources-properties">
-
-    <dt class="property-required"
+<dl class="resources-properties"><dt class="property-required"
             title="Required">
         <span id="database_name_python">
 <a href="#database_name_python" style="color: inherit; text-decoration: inherit;">database_<wbr>name</a>
@@ -492,8 +459,7 @@ recommended to enable this for any production databases containing critical data
         <span class="property-type">str</span>
     </dt>
     <dd>{{% md %}}is the actual name of the database.
-{{% /md %}}</dd>
-    <dt class="property-required"
+{{% /md %}}</dd><dt class="property-required"
             title="Required">
         <span id="project_python">
 <a href="#project_python" style="color: inherit; text-decoration: inherit;">project</a>
@@ -503,8 +469,7 @@ recommended to enable this for any production databases containing critical data
     </dt>
     <dd>{{% md %}}and `service_name` - (Required) define the project and service the database belongs to.
 They should be defined using reference as shown above to set up dependencies correctly.
-{{% /md %}}</dd>
-    <dt class="property-required"
+{{% /md %}}</dd><dt class="property-required"
             title="Required">
         <span id="service_name_python">
 <a href="#service_name_python" style="color: inherit; text-decoration: inherit;">service_<wbr>name</a>
@@ -513,8 +478,7 @@ They should be defined using reference as shown above to set up dependencies cor
         <span class="property-type">str</span>
     </dt>
     <dd>{{% md %}}Service to link the database to
-{{% /md %}}</dd>
-    <dt class="property-optional"
+{{% /md %}}</dd><dt class="property-optional"
             title="Optional">
         <span id="lc_collate_python">
 <a href="#lc_collate_python" style="color: inherit; text-decoration: inherit;">lc_<wbr>collate</a>
@@ -523,8 +487,7 @@ They should be defined using reference as shown above to set up dependencies cor
         <span class="property-type">str</span>
     </dt>
     <dd>{{% md %}}default string sort order (LC_COLLATE) of the database. Default value: en_US.UTF-8.
-{{% /md %}}</dd>
-    <dt class="property-optional"
+{{% /md %}}</dd><dt class="property-optional"
             title="Optional">
         <span id="lc_ctype_python">
 <a href="#lc_ctype_python" style="color: inherit; text-decoration: inherit;">lc_<wbr>ctype</a>
@@ -533,8 +496,7 @@ They should be defined using reference as shown above to set up dependencies cor
         <span class="property-type">str</span>
     </dt>
     <dd>{{% md %}}default character classification (LC_CTYPE) of the database. Default value: en_US.UTF-8.
-{{% /md %}}</dd>
-    <dt class="property-optional"
+{{% /md %}}</dd><dt class="property-optional"
             title="Optional">
         <span id="termination_protection_python">
 <a href="#termination_protection_python" style="color: inherit; text-decoration: inherit;">termination_<wbr>protection</a>
@@ -544,8 +506,7 @@ They should be defined using reference as shown above to set up dependencies cor
     </dt>
     <dd>{{% md %}}It is a Terraform client-side deletion protections, which prevents the database from being deleted by Terraform. It is
 recommended to enable this for any production databases containing critical data.
-{{% /md %}}</dd>
-</dl>
+{{% /md %}}</dd></dl>
 {{% /choosable %}}
 
 
@@ -556,9 +517,7 @@ All [input](#inputs) properties are implicitly available as output properties. A
 
 
 {{% choosable language csharp %}}
-<dl class="resources-properties">
-
-    <dt class="property-"
+<dl class="resources-properties"><dt class="property-"
             title="">
         <span id="id_csharp">
 <a href="#id_csharp" style="color: inherit; text-decoration: inherit;">Id</a>
@@ -566,14 +525,11 @@ All [input](#inputs) properties are implicitly available as output properties. A
         <span class="property-indicator"></span>
         <span class="property-type">string</span>
     </dt>
-    <dd>{{% md %}}The provider-assigned unique ID for this managed resource.{{% /md %}}</dd>
-</dl>
+    <dd>{{% md %}}The provider-assigned unique ID for this managed resource.{{% /md %}}</dd></dl>
 {{% /choosable %}}
 
 {{% choosable language go %}}
-<dl class="resources-properties">
-
-    <dt class="property-"
+<dl class="resources-properties"><dt class="property-"
             title="">
         <span id="id_go">
 <a href="#id_go" style="color: inherit; text-decoration: inherit;">Id</a>
@@ -581,14 +537,11 @@ All [input](#inputs) properties are implicitly available as output properties. A
         <span class="property-indicator"></span>
         <span class="property-type">string</span>
     </dt>
-    <dd>{{% md %}}The provider-assigned unique ID for this managed resource.{{% /md %}}</dd>
-</dl>
+    <dd>{{% md %}}The provider-assigned unique ID for this managed resource.{{% /md %}}</dd></dl>
 {{% /choosable %}}
 
 {{% choosable language nodejs %}}
-<dl class="resources-properties">
-
-    <dt class="property-"
+<dl class="resources-properties"><dt class="property-"
             title="">
         <span id="id_nodejs">
 <a href="#id_nodejs" style="color: inherit; text-decoration: inherit;">id</a>
@@ -596,14 +549,11 @@ All [input](#inputs) properties are implicitly available as output properties. A
         <span class="property-indicator"></span>
         <span class="property-type">string</span>
     </dt>
-    <dd>{{% md %}}The provider-assigned unique ID for this managed resource.{{% /md %}}</dd>
-</dl>
+    <dd>{{% md %}}The provider-assigned unique ID for this managed resource.{{% /md %}}</dd></dl>
 {{% /choosable %}}
 
 {{% choosable language python %}}
-<dl class="resources-properties">
-
-    <dt class="property-"
+<dl class="resources-properties"><dt class="property-"
             title="">
         <span id="id_python">
 <a href="#id_python" style="color: inherit; text-decoration: inherit;">id</a>
@@ -611,8 +561,7 @@ All [input](#inputs) properties are implicitly available as output properties. A
         <span class="property-indicator"></span>
         <span class="property-type">str</span>
     </dt>
-    <dd>{{% md %}}The provider-assigned unique ID for this managed resource.{{% /md %}}</dd>
-</dl>
+    <dd>{{% md %}}The provider-assigned unique ID for this managed resource.{{% /md %}}</dd></dl>
 {{% /choosable %}}
 
 
@@ -739,9 +688,7 @@ The following state arguments are supported:
 
 
 {{% choosable language csharp %}}
-<dl class="resources-properties">
-
-    <dt class="property-optional"
+<dl class="resources-properties"><dt class="property-optional"
             title="Optional">
         <span id="state_databasename_csharp">
 <a href="#state_databasename_csharp" style="color: inherit; text-decoration: inherit;">Database<wbr>Name</a>
@@ -750,8 +697,7 @@ The following state arguments are supported:
         <span class="property-type">string</span>
     </dt>
     <dd>{{% md %}}is the actual name of the database.
-{{% /md %}}</dd>
-    <dt class="property-optional"
+{{% /md %}}</dd><dt class="property-optional"
             title="Optional">
         <span id="state_lccollate_csharp">
 <a href="#state_lccollate_csharp" style="color: inherit; text-decoration: inherit;">Lc<wbr>Collate</a>
@@ -760,8 +706,7 @@ The following state arguments are supported:
         <span class="property-type">string</span>
     </dt>
     <dd>{{% md %}}default string sort order (LC_COLLATE) of the database. Default value: en_US.UTF-8.
-{{% /md %}}</dd>
-    <dt class="property-optional"
+{{% /md %}}</dd><dt class="property-optional"
             title="Optional">
         <span id="state_lcctype_csharp">
 <a href="#state_lcctype_csharp" style="color: inherit; text-decoration: inherit;">Lc<wbr>Ctype</a>
@@ -770,8 +715,7 @@ The following state arguments are supported:
         <span class="property-type">string</span>
     </dt>
     <dd>{{% md %}}default character classification (LC_CTYPE) of the database. Default value: en_US.UTF-8.
-{{% /md %}}</dd>
-    <dt class="property-optional"
+{{% /md %}}</dd><dt class="property-optional"
             title="Optional">
         <span id="state_project_csharp">
 <a href="#state_project_csharp" style="color: inherit; text-decoration: inherit;">Project</a>
@@ -781,8 +725,7 @@ The following state arguments are supported:
     </dt>
     <dd>{{% md %}}and `service_name` - (Required) define the project and service the database belongs to.
 They should be defined using reference as shown above to set up dependencies correctly.
-{{% /md %}}</dd>
-    <dt class="property-optional"
+{{% /md %}}</dd><dt class="property-optional"
             title="Optional">
         <span id="state_servicename_csharp">
 <a href="#state_servicename_csharp" style="color: inherit; text-decoration: inherit;">Service<wbr>Name</a>
@@ -791,8 +734,7 @@ They should be defined using reference as shown above to set up dependencies cor
         <span class="property-type">string</span>
     </dt>
     <dd>{{% md %}}Service to link the database to
-{{% /md %}}</dd>
-    <dt class="property-optional"
+{{% /md %}}</dd><dt class="property-optional"
             title="Optional">
         <span id="state_terminationprotection_csharp">
 <a href="#state_terminationprotection_csharp" style="color: inherit; text-decoration: inherit;">Termination<wbr>Protection</a>
@@ -802,14 +744,11 @@ They should be defined using reference as shown above to set up dependencies cor
     </dt>
     <dd>{{% md %}}It is a Terraform client-side deletion protections, which prevents the database from being deleted by Terraform. It is
 recommended to enable this for any production databases containing critical data.
-{{% /md %}}</dd>
-</dl>
+{{% /md %}}</dd></dl>
 {{% /choosable %}}
 
 {{% choosable language go %}}
-<dl class="resources-properties">
-
-    <dt class="property-optional"
+<dl class="resources-properties"><dt class="property-optional"
             title="Optional">
         <span id="state_databasename_go">
 <a href="#state_databasename_go" style="color: inherit; text-decoration: inherit;">Database<wbr>Name</a>
@@ -818,8 +757,7 @@ recommended to enable this for any production databases containing critical data
         <span class="property-type">string</span>
     </dt>
     <dd>{{% md %}}is the actual name of the database.
-{{% /md %}}</dd>
-    <dt class="property-optional"
+{{% /md %}}</dd><dt class="property-optional"
             title="Optional">
         <span id="state_lccollate_go">
 <a href="#state_lccollate_go" style="color: inherit; text-decoration: inherit;">Lc<wbr>Collate</a>
@@ -828,8 +766,7 @@ recommended to enable this for any production databases containing critical data
         <span class="property-type">string</span>
     </dt>
     <dd>{{% md %}}default string sort order (LC_COLLATE) of the database. Default value: en_US.UTF-8.
-{{% /md %}}</dd>
-    <dt class="property-optional"
+{{% /md %}}</dd><dt class="property-optional"
             title="Optional">
         <span id="state_lcctype_go">
 <a href="#state_lcctype_go" style="color: inherit; text-decoration: inherit;">Lc<wbr>Ctype</a>
@@ -838,8 +775,7 @@ recommended to enable this for any production databases containing critical data
         <span class="property-type">string</span>
     </dt>
     <dd>{{% md %}}default character classification (LC_CTYPE) of the database. Default value: en_US.UTF-8.
-{{% /md %}}</dd>
-    <dt class="property-optional"
+{{% /md %}}</dd><dt class="property-optional"
             title="Optional">
         <span id="state_project_go">
 <a href="#state_project_go" style="color: inherit; text-decoration: inherit;">Project</a>
@@ -849,8 +785,7 @@ recommended to enable this for any production databases containing critical data
     </dt>
     <dd>{{% md %}}and `service_name` - (Required) define the project and service the database belongs to.
 They should be defined using reference as shown above to set up dependencies correctly.
-{{% /md %}}</dd>
-    <dt class="property-optional"
+{{% /md %}}</dd><dt class="property-optional"
             title="Optional">
         <span id="state_servicename_go">
 <a href="#state_servicename_go" style="color: inherit; text-decoration: inherit;">Service<wbr>Name</a>
@@ -859,8 +794,7 @@ They should be defined using reference as shown above to set up dependencies cor
         <span class="property-type">string</span>
     </dt>
     <dd>{{% md %}}Service to link the database to
-{{% /md %}}</dd>
-    <dt class="property-optional"
+{{% /md %}}</dd><dt class="property-optional"
             title="Optional">
         <span id="state_terminationprotection_go">
 <a href="#state_terminationprotection_go" style="color: inherit; text-decoration: inherit;">Termination<wbr>Protection</a>
@@ -870,14 +804,11 @@ They should be defined using reference as shown above to set up dependencies cor
     </dt>
     <dd>{{% md %}}It is a Terraform client-side deletion protections, which prevents the database from being deleted by Terraform. It is
 recommended to enable this for any production databases containing critical data.
-{{% /md %}}</dd>
-</dl>
+{{% /md %}}</dd></dl>
 {{% /choosable %}}
 
 {{% choosable language nodejs %}}
-<dl class="resources-properties">
-
-    <dt class="property-optional"
+<dl class="resources-properties"><dt class="property-optional"
             title="Optional">
         <span id="state_databasename_nodejs">
 <a href="#state_databasename_nodejs" style="color: inherit; text-decoration: inherit;">database<wbr>Name</a>
@@ -886,8 +817,7 @@ recommended to enable this for any production databases containing critical data
         <span class="property-type">string</span>
     </dt>
     <dd>{{% md %}}is the actual name of the database.
-{{% /md %}}</dd>
-    <dt class="property-optional"
+{{% /md %}}</dd><dt class="property-optional"
             title="Optional">
         <span id="state_lccollate_nodejs">
 <a href="#state_lccollate_nodejs" style="color: inherit; text-decoration: inherit;">lc<wbr>Collate</a>
@@ -896,8 +826,7 @@ recommended to enable this for any production databases containing critical data
         <span class="property-type">string</span>
     </dt>
     <dd>{{% md %}}default string sort order (LC_COLLATE) of the database. Default value: en_US.UTF-8.
-{{% /md %}}</dd>
-    <dt class="property-optional"
+{{% /md %}}</dd><dt class="property-optional"
             title="Optional">
         <span id="state_lcctype_nodejs">
 <a href="#state_lcctype_nodejs" style="color: inherit; text-decoration: inherit;">lc<wbr>Ctype</a>
@@ -906,8 +835,7 @@ recommended to enable this for any production databases containing critical data
         <span class="property-type">string</span>
     </dt>
     <dd>{{% md %}}default character classification (LC_CTYPE) of the database. Default value: en_US.UTF-8.
-{{% /md %}}</dd>
-    <dt class="property-optional"
+{{% /md %}}</dd><dt class="property-optional"
             title="Optional">
         <span id="state_project_nodejs">
 <a href="#state_project_nodejs" style="color: inherit; text-decoration: inherit;">project</a>
@@ -917,8 +845,7 @@ recommended to enable this for any production databases containing critical data
     </dt>
     <dd>{{% md %}}and `service_name` - (Required) define the project and service the database belongs to.
 They should be defined using reference as shown above to set up dependencies correctly.
-{{% /md %}}</dd>
-    <dt class="property-optional"
+{{% /md %}}</dd><dt class="property-optional"
             title="Optional">
         <span id="state_servicename_nodejs">
 <a href="#state_servicename_nodejs" style="color: inherit; text-decoration: inherit;">service<wbr>Name</a>
@@ -927,8 +854,7 @@ They should be defined using reference as shown above to set up dependencies cor
         <span class="property-type">string</span>
     </dt>
     <dd>{{% md %}}Service to link the database to
-{{% /md %}}</dd>
-    <dt class="property-optional"
+{{% /md %}}</dd><dt class="property-optional"
             title="Optional">
         <span id="state_terminationprotection_nodejs">
 <a href="#state_terminationprotection_nodejs" style="color: inherit; text-decoration: inherit;">termination<wbr>Protection</a>
@@ -938,14 +864,11 @@ They should be defined using reference as shown above to set up dependencies cor
     </dt>
     <dd>{{% md %}}It is a Terraform client-side deletion protections, which prevents the database from being deleted by Terraform. It is
 recommended to enable this for any production databases containing critical data.
-{{% /md %}}</dd>
-</dl>
+{{% /md %}}</dd></dl>
 {{% /choosable %}}
 
 {{% choosable language python %}}
-<dl class="resources-properties">
-
-    <dt class="property-optional"
+<dl class="resources-properties"><dt class="property-optional"
             title="Optional">
         <span id="state_database_name_python">
 <a href="#state_database_name_python" style="color: inherit; text-decoration: inherit;">database_<wbr>name</a>
@@ -954,8 +877,7 @@ recommended to enable this for any production databases containing critical data
         <span class="property-type">str</span>
     </dt>
     <dd>{{% md %}}is the actual name of the database.
-{{% /md %}}</dd>
-    <dt class="property-optional"
+{{% /md %}}</dd><dt class="property-optional"
             title="Optional">
         <span id="state_lc_collate_python">
 <a href="#state_lc_collate_python" style="color: inherit; text-decoration: inherit;">lc_<wbr>collate</a>
@@ -964,8 +886,7 @@ recommended to enable this for any production databases containing critical data
         <span class="property-type">str</span>
     </dt>
     <dd>{{% md %}}default string sort order (LC_COLLATE) of the database. Default value: en_US.UTF-8.
-{{% /md %}}</dd>
-    <dt class="property-optional"
+{{% /md %}}</dd><dt class="property-optional"
             title="Optional">
         <span id="state_lc_ctype_python">
 <a href="#state_lc_ctype_python" style="color: inherit; text-decoration: inherit;">lc_<wbr>ctype</a>
@@ -974,8 +895,7 @@ recommended to enable this for any production databases containing critical data
         <span class="property-type">str</span>
     </dt>
     <dd>{{% md %}}default character classification (LC_CTYPE) of the database. Default value: en_US.UTF-8.
-{{% /md %}}</dd>
-    <dt class="property-optional"
+{{% /md %}}</dd><dt class="property-optional"
             title="Optional">
         <span id="state_project_python">
 <a href="#state_project_python" style="color: inherit; text-decoration: inherit;">project</a>
@@ -985,8 +905,7 @@ recommended to enable this for any production databases containing critical data
     </dt>
     <dd>{{% md %}}and `service_name` - (Required) define the project and service the database belongs to.
 They should be defined using reference as shown above to set up dependencies correctly.
-{{% /md %}}</dd>
-    <dt class="property-optional"
+{{% /md %}}</dd><dt class="property-optional"
             title="Optional">
         <span id="state_service_name_python">
 <a href="#state_service_name_python" style="color: inherit; text-decoration: inherit;">service_<wbr>name</a>
@@ -995,8 +914,7 @@ They should be defined using reference as shown above to set up dependencies cor
         <span class="property-type">str</span>
     </dt>
     <dd>{{% md %}}Service to link the database to
-{{% /md %}}</dd>
-    <dt class="property-optional"
+{{% /md %}}</dd><dt class="property-optional"
             title="Optional">
         <span id="state_termination_protection_python">
 <a href="#state_termination_protection_python" style="color: inherit; text-decoration: inherit;">termination_<wbr>protection</a>
@@ -1006,8 +924,7 @@ They should be defined using reference as shown above to set up dependencies cor
     </dt>
     <dd>{{% md %}}It is a Terraform client-side deletion protections, which prevents the database from being deleted by Terraform. It is
 recommended to enable this for any production databases containing critical data.
-{{% /md %}}</dd>
-</dl>
+{{% /md %}}</dd></dl>
 {{% /choosable %}}
 
 
@@ -1023,6 +940,6 @@ recommended to enable this for any production databases containing critical data
 	<dt>License</dt>
 	<dd>Apache-2.0</dd>
 	<dt>Notes</dt>
-	<dd>This Pulumi package is based on the [`aiven` Terraform Provider](https://github.com/aiven/terraform-provider-aiven).</dd>
+	<dd>{{% md %}}This Pulumi package is based on the [`aiven` Terraform Provider](https://github.com/aiven/terraform-provider-aiven).{{% /md %}}</dd>
 </dl>
 

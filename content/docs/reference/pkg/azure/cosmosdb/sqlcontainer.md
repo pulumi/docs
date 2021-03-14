@@ -13,11 +13,17 @@ meta_desc: "Documentation for the azure.cosmosdb.SqlContainer resource with exam
 Manages a SQL Container within a Cosmos DB Account.
 
 {{% examples %}}
+
 ## Example Usage
 
 {{< chooser language "typescript,python,go,csharp" / >}}
 
-{{% example csharp %}}
+
+
+
+
+{{< example csharp >}}
+
 ```csharp
 using Pulumi;
 using Azure = Pulumi.Azure;
@@ -73,9 +79,12 @@ class MyStack : Stack
 }
 ```
 
-{{% /example %}}
 
-{{% example go %}}
+{{< /example >}}
+
+
+{{< example go >}}
+
 ```go
 package main
 
@@ -126,9 +135,12 @@ func main() {
 }
 ```
 
-{{% /example %}}
 
-{{% example python %}}
+{{< /example >}}
+
+
+{{< example python >}}
+
 ```python
 import pulumi
 import pulumi_azure as azure
@@ -162,9 +174,12 @@ example = azure.cosmosdb.SqlContainer("example",
     )])
 ```
 
-{{% /example %}}
 
-{{% example typescript %}}
+{{< /example >}}
+
+
+{{< example typescript >}}
+
 
 ```typescript
 import * as pulumi from "@pulumi/pulumi";
@@ -200,9 +215,16 @@ const example = new azure.cosmosdb.SqlContainer("example", {
 });
 ```
 
-{{% /example %}}
+
+{{< /example >}}
+
+
+
+
 
 {{% /examples %}}
+
+
 
 
 ## Create a SqlContainer Resource {#create}
@@ -227,9 +249,7 @@ const example = new azure.cosmosdb.SqlContainer("example", {
 
 {{% choosable language nodejs %}}
 
-<dl class="resources-properties">
-  
-    <dt
+<dl class="resources-properties"><dt
         class="property-required" title="Required">
         <span>name</span>
         <span class="property-indicator"></span>
@@ -237,9 +257,7 @@ const example = new azure.cosmosdb.SqlContainer("example", {
     </dt>
     <dd>
       The unique name of the resource.
-    </dd>
-  
-    <dt
+    </dd><dt
         class="property-required" title="Required">
         <span>args</span>
         <span class="property-indicator"></span>
@@ -247,9 +265,7 @@ const example = new azure.cosmosdb.SqlContainer("example", {
     </dt>
     <dd>
       The arguments to resource properties.
-    </dd>
-  
-    <dt
+    </dd><dt
         class="property-optional" title="Optional">
         <span>opts</span>
         <span class="property-indicator"></span>
@@ -257,10 +273,7 @@ const example = new azure.cosmosdb.SqlContainer("example", {
     </dt>
     <dd>
       Bag of options to control resource&#39;s behavior.
-    </dd>
-  
-
-</dl>
+    </dd></dl>
 
 {{% /choosable %}}
 
@@ -286,9 +299,7 @@ const example = new azure.cosmosdb.SqlContainer("example", {
 
 {{% choosable language go %}}
 
-<dl class="resources-properties">
-  
-    <dt
+<dl class="resources-properties"><dt
         class="property-optional" title="Optional">
         <span>ctx</span>
         <span class="property-indicator"></span>
@@ -296,9 +307,7 @@ const example = new azure.cosmosdb.SqlContainer("example", {
     </dt>
     <dd>
       Context object for the current deployment.
-    </dd>
-  
-    <dt
+    </dd><dt
         class="property-required" title="Required">
         <span>name</span>
         <span class="property-indicator"></span>
@@ -306,9 +315,7 @@ const example = new azure.cosmosdb.SqlContainer("example", {
     </dt>
     <dd>
       The unique name of the resource.
-    </dd>
-  
-    <dt
+    </dd><dt
         class="property-required" title="Required">
         <span>args</span>
         <span class="property-indicator"></span>
@@ -316,9 +323,7 @@ const example = new azure.cosmosdb.SqlContainer("example", {
     </dt>
     <dd>
       The arguments to resource properties.
-    </dd>
-  
-    <dt
+    </dd><dt
         class="property-optional" title="Optional">
         <span>opts</span>
         <span class="property-indicator"></span>
@@ -326,18 +331,13 @@ const example = new azure.cosmosdb.SqlContainer("example", {
     </dt>
     <dd>
       Bag of options to control resource&#39;s behavior.
-    </dd>
-  
-
-</dl>
+    </dd></dl>
 
 {{% /choosable %}}
 
 {{% choosable language csharp %}}
 
-<dl class="resources-properties">
-  
-    <dt
+<dl class="resources-properties"><dt
         class="property-required" title="Required">
         <span>name</span>
         <span class="property-indicator"></span>
@@ -345,9 +345,7 @@ const example = new azure.cosmosdb.SqlContainer("example", {
     </dt>
     <dd>
       The unique name of the resource.
-    </dd>
-  
-    <dt
+    </dd><dt
         class="property-required" title="Required">
         <span>args</span>
         <span class="property-indicator"></span>
@@ -355,9 +353,7 @@ const example = new azure.cosmosdb.SqlContainer("example", {
     </dt>
     <dd>
       The arguments to resource properties.
-    </dd>
-  
-    <dt
+    </dd><dt
         class="property-optional" title="Optional">
         <span>opts</span>
         <span class="property-indicator"></span>
@@ -365,10 +361,7 @@ const example = new azure.cosmosdb.SqlContainer("example", {
     </dt>
     <dd>
       Bag of options to control resource&#39;s behavior.
-    </dd>
-  
-
-</dl>
+    </dd></dl>
 
 {{% /choosable %}}
 
@@ -383,9 +376,7 @@ The SqlContainer resource accepts the following [input]({{< relref "/docs/intro/
 
 
 {{% choosable language csharp %}}
-<dl class="resources-properties">
-
-    <dt class="property-required"
+<dl class="resources-properties"><dt class="property-required"
             title="Required">
         <span id="accountname_csharp">
 <a href="#accountname_csharp" style="color: inherit; text-decoration: inherit;">Account<wbr>Name</a>
@@ -394,8 +385,7 @@ The SqlContainer resource accepts the following [input]({{< relref "/docs/intro/
         <span class="property-type">string</span>
     </dt>
     <dd>{{% md %}}The name of the Cosmos DB Account to create the container within. Changing this forces a new resource to be created.
-{{% /md %}}</dd>
-    <dt class="property-required"
+{{% /md %}}</dd><dt class="property-required"
             title="Required">
         <span id="databasename_csharp">
 <a href="#databasename_csharp" style="color: inherit; text-decoration: inherit;">Database<wbr>Name</a>
@@ -404,8 +394,7 @@ The SqlContainer resource accepts the following [input]({{< relref "/docs/intro/
         <span class="property-type">string</span>
     </dt>
     <dd>{{% md %}}The name of the Cosmos DB SQL Database to create the container within. Changing this forces a new resource to be created.
-{{% /md %}}</dd>
-    <dt class="property-required"
+{{% /md %}}</dd><dt class="property-required"
             title="Required">
         <span id="resourcegroupname_csharp">
 <a href="#resourcegroupname_csharp" style="color: inherit; text-decoration: inherit;">Resource<wbr>Group<wbr>Name</a>
@@ -414,8 +403,7 @@ The SqlContainer resource accepts the following [input]({{< relref "/docs/intro/
         <span class="property-type">string</span>
     </dt>
     <dd>{{% md %}}The name of the resource group in which the Cosmos DB SQL Container is created. Changing this forces a new resource to be created.
-{{% /md %}}</dd>
-    <dt class="property-optional"
+{{% /md %}}</dd><dt class="property-optional"
             title="Optional">
         <span id="autoscalesettings_csharp">
 <a href="#autoscalesettings_csharp" style="color: inherit; text-decoration: inherit;">Autoscale<wbr>Settings</a>
@@ -424,8 +412,7 @@ The SqlContainer resource accepts the following [input]({{< relref "/docs/intro/
         <span class="property-type"><a href="#sqlcontainerautoscalesettings">Sql<wbr>Container<wbr>Autoscale<wbr>Settings<wbr>Args</a></span>
     </dt>
     <dd>{{% md %}}An `autoscale_settings` block as defined below. This must be set upon database creation otherwise it cannot be updated without a manual destroy-apply. Requires `partition_key_path` to be set.
-{{% /md %}}</dd>
-    <dt class="property-optional"
+{{% /md %}}</dd><dt class="property-optional"
             title="Optional">
         <span id="defaultttl_csharp">
 <a href="#defaultttl_csharp" style="color: inherit; text-decoration: inherit;">Default<wbr>Ttl</a>
@@ -434,8 +421,7 @@ The SqlContainer resource accepts the following [input]({{< relref "/docs/intro/
         <span class="property-type">int</span>
     </dt>
     <dd>{{% md %}}The default time to live of SQL container. If missing, items are not expired automatically. If present and the value is set to `-1`, it is equal to infinity, and items don’t expire by default. If present and the value is set to some number `n` – items will expire `n` seconds after their last modified time.
-{{% /md %}}</dd>
-    <dt class="property-optional"
+{{% /md %}}</dd><dt class="property-optional"
             title="Optional">
         <span id="indexingpolicy_csharp">
 <a href="#indexingpolicy_csharp" style="color: inherit; text-decoration: inherit;">Indexing<wbr>Policy</a>
@@ -444,8 +430,7 @@ The SqlContainer resource accepts the following [input]({{< relref "/docs/intro/
         <span class="property-type"><a href="#sqlcontainerindexingpolicy">Sql<wbr>Container<wbr>Indexing<wbr>Policy<wbr>Args</a></span>
     </dt>
     <dd>{{% md %}}An `indexing_policy` block as defined below.
-{{% /md %}}</dd>
-    <dt class="property-optional"
+{{% /md %}}</dd><dt class="property-optional"
             title="Optional">
         <span id="name_csharp">
 <a href="#name_csharp" style="color: inherit; text-decoration: inherit;">Name</a>
@@ -454,8 +439,7 @@ The SqlContainer resource accepts the following [input]({{< relref "/docs/intro/
         <span class="property-type">string</span>
     </dt>
     <dd>{{% md %}}Specifies the name of the Cosmos DB SQL Container. Changing this forces a new resource to be created.
-{{% /md %}}</dd>
-    <dt class="property-optional"
+{{% /md %}}</dd><dt class="property-optional"
             title="Optional">
         <span id="partitionkeypath_csharp">
 <a href="#partitionkeypath_csharp" style="color: inherit; text-decoration: inherit;">Partition<wbr>Key<wbr>Path</a>
@@ -464,8 +448,7 @@ The SqlContainer resource accepts the following [input]({{< relref "/docs/intro/
         <span class="property-type">string</span>
     </dt>
     <dd>{{% md %}}Define a partition key. Changing this forces a new resource to be created.
-{{% /md %}}</dd>
-    <dt class="property-optional"
+{{% /md %}}</dd><dt class="property-optional"
             title="Optional">
         <span id="partitionkeyversion_csharp">
 <a href="#partitionkeyversion_csharp" style="color: inherit; text-decoration: inherit;">Partition<wbr>Key<wbr>Version</a>
@@ -474,8 +457,7 @@ The SqlContainer resource accepts the following [input]({{< relref "/docs/intro/
         <span class="property-type">int</span>
     </dt>
     <dd>{{% md %}}Define a partition key version. Changing this forces a new resource to be created. Possible values are `1 `and `2`. This should be set to `2` in order to use large partition keys.
-{{% /md %}}</dd>
-    <dt class="property-optional"
+{{% /md %}}</dd><dt class="property-optional"
             title="Optional">
         <span id="throughput_csharp">
 <a href="#throughput_csharp" style="color: inherit; text-decoration: inherit;">Throughput</a>
@@ -484,8 +466,7 @@ The SqlContainer resource accepts the following [input]({{< relref "/docs/intro/
         <span class="property-type">int</span>
     </dt>
     <dd>{{% md %}}The throughput of SQL container (RU/s). Must be set in increments of `100`. The minimum value is `400`. This must be set upon container creation otherwise it cannot be updated without a manual resource destroy-apply.
-{{% /md %}}</dd>
-    <dt class="property-optional"
+{{% /md %}}</dd><dt class="property-optional"
             title="Optional">
         <span id="uniquekeys_csharp">
 <a href="#uniquekeys_csharp" style="color: inherit; text-decoration: inherit;">Unique<wbr>Keys</a>
@@ -494,14 +475,11 @@ The SqlContainer resource accepts the following [input]({{< relref "/docs/intro/
         <span class="property-type"><a href="#sqlcontaineruniquekey">List&lt;Sql<wbr>Container<wbr>Unique<wbr>Key<wbr>Args&gt;</a></span>
     </dt>
     <dd>{{% md %}}One or more `unique_key` blocks as defined below. Changing this forces a new resource to be created.
-{{% /md %}}</dd>
-</dl>
+{{% /md %}}</dd></dl>
 {{% /choosable %}}
 
 {{% choosable language go %}}
-<dl class="resources-properties">
-
-    <dt class="property-required"
+<dl class="resources-properties"><dt class="property-required"
             title="Required">
         <span id="accountname_go">
 <a href="#accountname_go" style="color: inherit; text-decoration: inherit;">Account<wbr>Name</a>
@@ -510,8 +488,7 @@ The SqlContainer resource accepts the following [input]({{< relref "/docs/intro/
         <span class="property-type">string</span>
     </dt>
     <dd>{{% md %}}The name of the Cosmos DB Account to create the container within. Changing this forces a new resource to be created.
-{{% /md %}}</dd>
-    <dt class="property-required"
+{{% /md %}}</dd><dt class="property-required"
             title="Required">
         <span id="databasename_go">
 <a href="#databasename_go" style="color: inherit; text-decoration: inherit;">Database<wbr>Name</a>
@@ -520,8 +497,7 @@ The SqlContainer resource accepts the following [input]({{< relref "/docs/intro/
         <span class="property-type">string</span>
     </dt>
     <dd>{{% md %}}The name of the Cosmos DB SQL Database to create the container within. Changing this forces a new resource to be created.
-{{% /md %}}</dd>
-    <dt class="property-required"
+{{% /md %}}</dd><dt class="property-required"
             title="Required">
         <span id="resourcegroupname_go">
 <a href="#resourcegroupname_go" style="color: inherit; text-decoration: inherit;">Resource<wbr>Group<wbr>Name</a>
@@ -530,8 +506,7 @@ The SqlContainer resource accepts the following [input]({{< relref "/docs/intro/
         <span class="property-type">string</span>
     </dt>
     <dd>{{% md %}}The name of the resource group in which the Cosmos DB SQL Container is created. Changing this forces a new resource to be created.
-{{% /md %}}</dd>
-    <dt class="property-optional"
+{{% /md %}}</dd><dt class="property-optional"
             title="Optional">
         <span id="autoscalesettings_go">
 <a href="#autoscalesettings_go" style="color: inherit; text-decoration: inherit;">Autoscale<wbr>Settings</a>
@@ -540,8 +515,7 @@ The SqlContainer resource accepts the following [input]({{< relref "/docs/intro/
         <span class="property-type"><a href="#sqlcontainerautoscalesettings">Sql<wbr>Container<wbr>Autoscale<wbr>Settings</a></span>
     </dt>
     <dd>{{% md %}}An `autoscale_settings` block as defined below. This must be set upon database creation otherwise it cannot be updated without a manual destroy-apply. Requires `partition_key_path` to be set.
-{{% /md %}}</dd>
-    <dt class="property-optional"
+{{% /md %}}</dd><dt class="property-optional"
             title="Optional">
         <span id="defaultttl_go">
 <a href="#defaultttl_go" style="color: inherit; text-decoration: inherit;">Default<wbr>Ttl</a>
@@ -550,8 +524,7 @@ The SqlContainer resource accepts the following [input]({{< relref "/docs/intro/
         <span class="property-type">int</span>
     </dt>
     <dd>{{% md %}}The default time to live of SQL container. If missing, items are not expired automatically. If present and the value is set to `-1`, it is equal to infinity, and items don’t expire by default. If present and the value is set to some number `n` – items will expire `n` seconds after their last modified time.
-{{% /md %}}</dd>
-    <dt class="property-optional"
+{{% /md %}}</dd><dt class="property-optional"
             title="Optional">
         <span id="indexingpolicy_go">
 <a href="#indexingpolicy_go" style="color: inherit; text-decoration: inherit;">Indexing<wbr>Policy</a>
@@ -560,8 +533,7 @@ The SqlContainer resource accepts the following [input]({{< relref "/docs/intro/
         <span class="property-type"><a href="#sqlcontainerindexingpolicy">Sql<wbr>Container<wbr>Indexing<wbr>Policy</a></span>
     </dt>
     <dd>{{% md %}}An `indexing_policy` block as defined below.
-{{% /md %}}</dd>
-    <dt class="property-optional"
+{{% /md %}}</dd><dt class="property-optional"
             title="Optional">
         <span id="name_go">
 <a href="#name_go" style="color: inherit; text-decoration: inherit;">Name</a>
@@ -570,8 +542,7 @@ The SqlContainer resource accepts the following [input]({{< relref "/docs/intro/
         <span class="property-type">string</span>
     </dt>
     <dd>{{% md %}}Specifies the name of the Cosmos DB SQL Container. Changing this forces a new resource to be created.
-{{% /md %}}</dd>
-    <dt class="property-optional"
+{{% /md %}}</dd><dt class="property-optional"
             title="Optional">
         <span id="partitionkeypath_go">
 <a href="#partitionkeypath_go" style="color: inherit; text-decoration: inherit;">Partition<wbr>Key<wbr>Path</a>
@@ -580,8 +551,7 @@ The SqlContainer resource accepts the following [input]({{< relref "/docs/intro/
         <span class="property-type">string</span>
     </dt>
     <dd>{{% md %}}Define a partition key. Changing this forces a new resource to be created.
-{{% /md %}}</dd>
-    <dt class="property-optional"
+{{% /md %}}</dd><dt class="property-optional"
             title="Optional">
         <span id="partitionkeyversion_go">
 <a href="#partitionkeyversion_go" style="color: inherit; text-decoration: inherit;">Partition<wbr>Key<wbr>Version</a>
@@ -590,8 +560,7 @@ The SqlContainer resource accepts the following [input]({{< relref "/docs/intro/
         <span class="property-type">int</span>
     </dt>
     <dd>{{% md %}}Define a partition key version. Changing this forces a new resource to be created. Possible values are `1 `and `2`. This should be set to `2` in order to use large partition keys.
-{{% /md %}}</dd>
-    <dt class="property-optional"
+{{% /md %}}</dd><dt class="property-optional"
             title="Optional">
         <span id="throughput_go">
 <a href="#throughput_go" style="color: inherit; text-decoration: inherit;">Throughput</a>
@@ -600,8 +569,7 @@ The SqlContainer resource accepts the following [input]({{< relref "/docs/intro/
         <span class="property-type">int</span>
     </dt>
     <dd>{{% md %}}The throughput of SQL container (RU/s). Must be set in increments of `100`. The minimum value is `400`. This must be set upon container creation otherwise it cannot be updated without a manual resource destroy-apply.
-{{% /md %}}</dd>
-    <dt class="property-optional"
+{{% /md %}}</dd><dt class="property-optional"
             title="Optional">
         <span id="uniquekeys_go">
 <a href="#uniquekeys_go" style="color: inherit; text-decoration: inherit;">Unique<wbr>Keys</a>
@@ -610,14 +578,11 @@ The SqlContainer resource accepts the following [input]({{< relref "/docs/intro/
         <span class="property-type"><a href="#sqlcontaineruniquekey">[]Sql<wbr>Container<wbr>Unique<wbr>Key</a></span>
     </dt>
     <dd>{{% md %}}One or more `unique_key` blocks as defined below. Changing this forces a new resource to be created.
-{{% /md %}}</dd>
-</dl>
+{{% /md %}}</dd></dl>
 {{% /choosable %}}
 
 {{% choosable language nodejs %}}
-<dl class="resources-properties">
-
-    <dt class="property-required"
+<dl class="resources-properties"><dt class="property-required"
             title="Required">
         <span id="accountname_nodejs">
 <a href="#accountname_nodejs" style="color: inherit; text-decoration: inherit;">account<wbr>Name</a>
@@ -626,8 +591,7 @@ The SqlContainer resource accepts the following [input]({{< relref "/docs/intro/
         <span class="property-type">string</span>
     </dt>
     <dd>{{% md %}}The name of the Cosmos DB Account to create the container within. Changing this forces a new resource to be created.
-{{% /md %}}</dd>
-    <dt class="property-required"
+{{% /md %}}</dd><dt class="property-required"
             title="Required">
         <span id="databasename_nodejs">
 <a href="#databasename_nodejs" style="color: inherit; text-decoration: inherit;">database<wbr>Name</a>
@@ -636,8 +600,7 @@ The SqlContainer resource accepts the following [input]({{< relref "/docs/intro/
         <span class="property-type">string</span>
     </dt>
     <dd>{{% md %}}The name of the Cosmos DB SQL Database to create the container within. Changing this forces a new resource to be created.
-{{% /md %}}</dd>
-    <dt class="property-required"
+{{% /md %}}</dd><dt class="property-required"
             title="Required">
         <span id="resourcegroupname_nodejs">
 <a href="#resourcegroupname_nodejs" style="color: inherit; text-decoration: inherit;">resource<wbr>Group<wbr>Name</a>
@@ -646,8 +609,7 @@ The SqlContainer resource accepts the following [input]({{< relref "/docs/intro/
         <span class="property-type">string</span>
     </dt>
     <dd>{{% md %}}The name of the resource group in which the Cosmos DB SQL Container is created. Changing this forces a new resource to be created.
-{{% /md %}}</dd>
-    <dt class="property-optional"
+{{% /md %}}</dd><dt class="property-optional"
             title="Optional">
         <span id="autoscalesettings_nodejs">
 <a href="#autoscalesettings_nodejs" style="color: inherit; text-decoration: inherit;">autoscale<wbr>Settings</a>
@@ -656,8 +618,7 @@ The SqlContainer resource accepts the following [input]({{< relref "/docs/intro/
         <span class="property-type"><a href="#sqlcontainerautoscalesettings">Sql<wbr>Container<wbr>Autoscale<wbr>Settings</a></span>
     </dt>
     <dd>{{% md %}}An `autoscale_settings` block as defined below. This must be set upon database creation otherwise it cannot be updated without a manual destroy-apply. Requires `partition_key_path` to be set.
-{{% /md %}}</dd>
-    <dt class="property-optional"
+{{% /md %}}</dd><dt class="property-optional"
             title="Optional">
         <span id="defaultttl_nodejs">
 <a href="#defaultttl_nodejs" style="color: inherit; text-decoration: inherit;">default<wbr>Ttl</a>
@@ -666,8 +627,7 @@ The SqlContainer resource accepts the following [input]({{< relref "/docs/intro/
         <span class="property-type">number</span>
     </dt>
     <dd>{{% md %}}The default time to live of SQL container. If missing, items are not expired automatically. If present and the value is set to `-1`, it is equal to infinity, and items don’t expire by default. If present and the value is set to some number `n` – items will expire `n` seconds after their last modified time.
-{{% /md %}}</dd>
-    <dt class="property-optional"
+{{% /md %}}</dd><dt class="property-optional"
             title="Optional">
         <span id="indexingpolicy_nodejs">
 <a href="#indexingpolicy_nodejs" style="color: inherit; text-decoration: inherit;">indexing<wbr>Policy</a>
@@ -676,8 +636,7 @@ The SqlContainer resource accepts the following [input]({{< relref "/docs/intro/
         <span class="property-type"><a href="#sqlcontainerindexingpolicy">Sql<wbr>Container<wbr>Indexing<wbr>Policy</a></span>
     </dt>
     <dd>{{% md %}}An `indexing_policy` block as defined below.
-{{% /md %}}</dd>
-    <dt class="property-optional"
+{{% /md %}}</dd><dt class="property-optional"
             title="Optional">
         <span id="name_nodejs">
 <a href="#name_nodejs" style="color: inherit; text-decoration: inherit;">name</a>
@@ -686,8 +645,7 @@ The SqlContainer resource accepts the following [input]({{< relref "/docs/intro/
         <span class="property-type">string</span>
     </dt>
     <dd>{{% md %}}Specifies the name of the Cosmos DB SQL Container. Changing this forces a new resource to be created.
-{{% /md %}}</dd>
-    <dt class="property-optional"
+{{% /md %}}</dd><dt class="property-optional"
             title="Optional">
         <span id="partitionkeypath_nodejs">
 <a href="#partitionkeypath_nodejs" style="color: inherit; text-decoration: inherit;">partition<wbr>Key<wbr>Path</a>
@@ -696,8 +654,7 @@ The SqlContainer resource accepts the following [input]({{< relref "/docs/intro/
         <span class="property-type">string</span>
     </dt>
     <dd>{{% md %}}Define a partition key. Changing this forces a new resource to be created.
-{{% /md %}}</dd>
-    <dt class="property-optional"
+{{% /md %}}</dd><dt class="property-optional"
             title="Optional">
         <span id="partitionkeyversion_nodejs">
 <a href="#partitionkeyversion_nodejs" style="color: inherit; text-decoration: inherit;">partition<wbr>Key<wbr>Version</a>
@@ -706,8 +663,7 @@ The SqlContainer resource accepts the following [input]({{< relref "/docs/intro/
         <span class="property-type">number</span>
     </dt>
     <dd>{{% md %}}Define a partition key version. Changing this forces a new resource to be created. Possible values are `1 `and `2`. This should be set to `2` in order to use large partition keys.
-{{% /md %}}</dd>
-    <dt class="property-optional"
+{{% /md %}}</dd><dt class="property-optional"
             title="Optional">
         <span id="throughput_nodejs">
 <a href="#throughput_nodejs" style="color: inherit; text-decoration: inherit;">throughput</a>
@@ -716,8 +672,7 @@ The SqlContainer resource accepts the following [input]({{< relref "/docs/intro/
         <span class="property-type">number</span>
     </dt>
     <dd>{{% md %}}The throughput of SQL container (RU/s). Must be set in increments of `100`. The minimum value is `400`. This must be set upon container creation otherwise it cannot be updated without a manual resource destroy-apply.
-{{% /md %}}</dd>
-    <dt class="property-optional"
+{{% /md %}}</dd><dt class="property-optional"
             title="Optional">
         <span id="uniquekeys_nodejs">
 <a href="#uniquekeys_nodejs" style="color: inherit; text-decoration: inherit;">unique<wbr>Keys</a>
@@ -726,14 +681,11 @@ The SqlContainer resource accepts the following [input]({{< relref "/docs/intro/
         <span class="property-type"><a href="#sqlcontaineruniquekey">Sql<wbr>Container<wbr>Unique<wbr>Key[]</a></span>
     </dt>
     <dd>{{% md %}}One or more `unique_key` blocks as defined below. Changing this forces a new resource to be created.
-{{% /md %}}</dd>
-</dl>
+{{% /md %}}</dd></dl>
 {{% /choosable %}}
 
 {{% choosable language python %}}
-<dl class="resources-properties">
-
-    <dt class="property-required"
+<dl class="resources-properties"><dt class="property-required"
             title="Required">
         <span id="account_name_python">
 <a href="#account_name_python" style="color: inherit; text-decoration: inherit;">account_<wbr>name</a>
@@ -742,8 +694,7 @@ The SqlContainer resource accepts the following [input]({{< relref "/docs/intro/
         <span class="property-type">str</span>
     </dt>
     <dd>{{% md %}}The name of the Cosmos DB Account to create the container within. Changing this forces a new resource to be created.
-{{% /md %}}</dd>
-    <dt class="property-required"
+{{% /md %}}</dd><dt class="property-required"
             title="Required">
         <span id="database_name_python">
 <a href="#database_name_python" style="color: inherit; text-decoration: inherit;">database_<wbr>name</a>
@@ -752,8 +703,7 @@ The SqlContainer resource accepts the following [input]({{< relref "/docs/intro/
         <span class="property-type">str</span>
     </dt>
     <dd>{{% md %}}The name of the Cosmos DB SQL Database to create the container within. Changing this forces a new resource to be created.
-{{% /md %}}</dd>
-    <dt class="property-required"
+{{% /md %}}</dd><dt class="property-required"
             title="Required">
         <span id="resource_group_name_python">
 <a href="#resource_group_name_python" style="color: inherit; text-decoration: inherit;">resource_<wbr>group_<wbr>name</a>
@@ -762,8 +712,7 @@ The SqlContainer resource accepts the following [input]({{< relref "/docs/intro/
         <span class="property-type">str</span>
     </dt>
     <dd>{{% md %}}The name of the resource group in which the Cosmos DB SQL Container is created. Changing this forces a new resource to be created.
-{{% /md %}}</dd>
-    <dt class="property-optional"
+{{% /md %}}</dd><dt class="property-optional"
             title="Optional">
         <span id="autoscale_settings_python">
 <a href="#autoscale_settings_python" style="color: inherit; text-decoration: inherit;">autoscale_<wbr>settings</a>
@@ -772,8 +721,7 @@ The SqlContainer resource accepts the following [input]({{< relref "/docs/intro/
         <span class="property-type"><a href="#sqlcontainerautoscalesettings">Sql<wbr>Container<wbr>Autoscale<wbr>Settings<wbr>Args</a></span>
     </dt>
     <dd>{{% md %}}An `autoscale_settings` block as defined below. This must be set upon database creation otherwise it cannot be updated without a manual destroy-apply. Requires `partition_key_path` to be set.
-{{% /md %}}</dd>
-    <dt class="property-optional"
+{{% /md %}}</dd><dt class="property-optional"
             title="Optional">
         <span id="default_ttl_python">
 <a href="#default_ttl_python" style="color: inherit; text-decoration: inherit;">default_<wbr>ttl</a>
@@ -782,8 +730,7 @@ The SqlContainer resource accepts the following [input]({{< relref "/docs/intro/
         <span class="property-type">int</span>
     </dt>
     <dd>{{% md %}}The default time to live of SQL container. If missing, items are not expired automatically. If present and the value is set to `-1`, it is equal to infinity, and items don’t expire by default. If present and the value is set to some number `n` – items will expire `n` seconds after their last modified time.
-{{% /md %}}</dd>
-    <dt class="property-optional"
+{{% /md %}}</dd><dt class="property-optional"
             title="Optional">
         <span id="indexing_policy_python">
 <a href="#indexing_policy_python" style="color: inherit; text-decoration: inherit;">indexing_<wbr>policy</a>
@@ -792,8 +739,7 @@ The SqlContainer resource accepts the following [input]({{< relref "/docs/intro/
         <span class="property-type"><a href="#sqlcontainerindexingpolicy">Sql<wbr>Container<wbr>Indexing<wbr>Policy<wbr>Args</a></span>
     </dt>
     <dd>{{% md %}}An `indexing_policy` block as defined below.
-{{% /md %}}</dd>
-    <dt class="property-optional"
+{{% /md %}}</dd><dt class="property-optional"
             title="Optional">
         <span id="name_python">
 <a href="#name_python" style="color: inherit; text-decoration: inherit;">name</a>
@@ -802,8 +748,7 @@ The SqlContainer resource accepts the following [input]({{< relref "/docs/intro/
         <span class="property-type">str</span>
     </dt>
     <dd>{{% md %}}Specifies the name of the Cosmos DB SQL Container. Changing this forces a new resource to be created.
-{{% /md %}}</dd>
-    <dt class="property-optional"
+{{% /md %}}</dd><dt class="property-optional"
             title="Optional">
         <span id="partition_key_path_python">
 <a href="#partition_key_path_python" style="color: inherit; text-decoration: inherit;">partition_<wbr>key_<wbr>path</a>
@@ -812,8 +757,7 @@ The SqlContainer resource accepts the following [input]({{< relref "/docs/intro/
         <span class="property-type">str</span>
     </dt>
     <dd>{{% md %}}Define a partition key. Changing this forces a new resource to be created.
-{{% /md %}}</dd>
-    <dt class="property-optional"
+{{% /md %}}</dd><dt class="property-optional"
             title="Optional">
         <span id="partition_key_version_python">
 <a href="#partition_key_version_python" style="color: inherit; text-decoration: inherit;">partition_<wbr>key_<wbr>version</a>
@@ -822,8 +766,7 @@ The SqlContainer resource accepts the following [input]({{< relref "/docs/intro/
         <span class="property-type">int</span>
     </dt>
     <dd>{{% md %}}Define a partition key version. Changing this forces a new resource to be created. Possible values are `1 `and `2`. This should be set to `2` in order to use large partition keys.
-{{% /md %}}</dd>
-    <dt class="property-optional"
+{{% /md %}}</dd><dt class="property-optional"
             title="Optional">
         <span id="throughput_python">
 <a href="#throughput_python" style="color: inherit; text-decoration: inherit;">throughput</a>
@@ -832,8 +775,7 @@ The SqlContainer resource accepts the following [input]({{< relref "/docs/intro/
         <span class="property-type">int</span>
     </dt>
     <dd>{{% md %}}The throughput of SQL container (RU/s). Must be set in increments of `100`. The minimum value is `400`. This must be set upon container creation otherwise it cannot be updated without a manual resource destroy-apply.
-{{% /md %}}</dd>
-    <dt class="property-optional"
+{{% /md %}}</dd><dt class="property-optional"
             title="Optional">
         <span id="unique_keys_python">
 <a href="#unique_keys_python" style="color: inherit; text-decoration: inherit;">unique_<wbr>keys</a>
@@ -842,8 +784,7 @@ The SqlContainer resource accepts the following [input]({{< relref "/docs/intro/
         <span class="property-type"><a href="#sqlcontaineruniquekey">Sequence[Sql<wbr>Container<wbr>Unique<wbr>Key<wbr>Args]</a></span>
     </dt>
     <dd>{{% md %}}One or more `unique_key` blocks as defined below. Changing this forces a new resource to be created.
-{{% /md %}}</dd>
-</dl>
+{{% /md %}}</dd></dl>
 {{% /choosable %}}
 
 
@@ -854,9 +795,7 @@ All [input](#inputs) properties are implicitly available as output properties. A
 
 
 {{% choosable language csharp %}}
-<dl class="resources-properties">
-
-    <dt class="property-"
+<dl class="resources-properties"><dt class="property-"
             title="">
         <span id="id_csharp">
 <a href="#id_csharp" style="color: inherit; text-decoration: inherit;">Id</a>
@@ -864,14 +803,11 @@ All [input](#inputs) properties are implicitly available as output properties. A
         <span class="property-indicator"></span>
         <span class="property-type">string</span>
     </dt>
-    <dd>{{% md %}}The provider-assigned unique ID for this managed resource.{{% /md %}}</dd>
-</dl>
+    <dd>{{% md %}}The provider-assigned unique ID for this managed resource.{{% /md %}}</dd></dl>
 {{% /choosable %}}
 
 {{% choosable language go %}}
-<dl class="resources-properties">
-
-    <dt class="property-"
+<dl class="resources-properties"><dt class="property-"
             title="">
         <span id="id_go">
 <a href="#id_go" style="color: inherit; text-decoration: inherit;">Id</a>
@@ -879,14 +815,11 @@ All [input](#inputs) properties are implicitly available as output properties. A
         <span class="property-indicator"></span>
         <span class="property-type">string</span>
     </dt>
-    <dd>{{% md %}}The provider-assigned unique ID for this managed resource.{{% /md %}}</dd>
-</dl>
+    <dd>{{% md %}}The provider-assigned unique ID for this managed resource.{{% /md %}}</dd></dl>
 {{% /choosable %}}
 
 {{% choosable language nodejs %}}
-<dl class="resources-properties">
-
-    <dt class="property-"
+<dl class="resources-properties"><dt class="property-"
             title="">
         <span id="id_nodejs">
 <a href="#id_nodejs" style="color: inherit; text-decoration: inherit;">id</a>
@@ -894,14 +827,11 @@ All [input](#inputs) properties are implicitly available as output properties. A
         <span class="property-indicator"></span>
         <span class="property-type">string</span>
     </dt>
-    <dd>{{% md %}}The provider-assigned unique ID for this managed resource.{{% /md %}}</dd>
-</dl>
+    <dd>{{% md %}}The provider-assigned unique ID for this managed resource.{{% /md %}}</dd></dl>
 {{% /choosable %}}
 
 {{% choosable language python %}}
-<dl class="resources-properties">
-
-    <dt class="property-"
+<dl class="resources-properties"><dt class="property-"
             title="">
         <span id="id_python">
 <a href="#id_python" style="color: inherit; text-decoration: inherit;">id</a>
@@ -909,8 +839,7 @@ All [input](#inputs) properties are implicitly available as output properties. A
         <span class="property-indicator"></span>
         <span class="property-type">str</span>
     </dt>
-    <dd>{{% md %}}The provider-assigned unique ID for this managed resource.{{% /md %}}</dd>
-</dl>
+    <dd>{{% md %}}The provider-assigned unique ID for this managed resource.{{% /md %}}</dd></dl>
 {{% /choosable %}}
 
 
@@ -1037,9 +966,7 @@ The following state arguments are supported:
 
 
 {{% choosable language csharp %}}
-<dl class="resources-properties">
-
-    <dt class="property-optional"
+<dl class="resources-properties"><dt class="property-optional"
             title="Optional">
         <span id="state_accountname_csharp">
 <a href="#state_accountname_csharp" style="color: inherit; text-decoration: inherit;">Account<wbr>Name</a>
@@ -1048,8 +975,7 @@ The following state arguments are supported:
         <span class="property-type">string</span>
     </dt>
     <dd>{{% md %}}The name of the Cosmos DB Account to create the container within. Changing this forces a new resource to be created.
-{{% /md %}}</dd>
-    <dt class="property-optional"
+{{% /md %}}</dd><dt class="property-optional"
             title="Optional">
         <span id="state_autoscalesettings_csharp">
 <a href="#state_autoscalesettings_csharp" style="color: inherit; text-decoration: inherit;">Autoscale<wbr>Settings</a>
@@ -1058,8 +984,7 @@ The following state arguments are supported:
         <span class="property-type"><a href="#sqlcontainerautoscalesettings">Sql<wbr>Container<wbr>Autoscale<wbr>Settings<wbr>Args</a></span>
     </dt>
     <dd>{{% md %}}An `autoscale_settings` block as defined below. This must be set upon database creation otherwise it cannot be updated without a manual destroy-apply. Requires `partition_key_path` to be set.
-{{% /md %}}</dd>
-    <dt class="property-optional"
+{{% /md %}}</dd><dt class="property-optional"
             title="Optional">
         <span id="state_databasename_csharp">
 <a href="#state_databasename_csharp" style="color: inherit; text-decoration: inherit;">Database<wbr>Name</a>
@@ -1068,8 +993,7 @@ The following state arguments are supported:
         <span class="property-type">string</span>
     </dt>
     <dd>{{% md %}}The name of the Cosmos DB SQL Database to create the container within. Changing this forces a new resource to be created.
-{{% /md %}}</dd>
-    <dt class="property-optional"
+{{% /md %}}</dd><dt class="property-optional"
             title="Optional">
         <span id="state_defaultttl_csharp">
 <a href="#state_defaultttl_csharp" style="color: inherit; text-decoration: inherit;">Default<wbr>Ttl</a>
@@ -1078,8 +1002,7 @@ The following state arguments are supported:
         <span class="property-type">int</span>
     </dt>
     <dd>{{% md %}}The default time to live of SQL container. If missing, items are not expired automatically. If present and the value is set to `-1`, it is equal to infinity, and items don’t expire by default. If present and the value is set to some number `n` – items will expire `n` seconds after their last modified time.
-{{% /md %}}</dd>
-    <dt class="property-optional"
+{{% /md %}}</dd><dt class="property-optional"
             title="Optional">
         <span id="state_indexingpolicy_csharp">
 <a href="#state_indexingpolicy_csharp" style="color: inherit; text-decoration: inherit;">Indexing<wbr>Policy</a>
@@ -1088,8 +1011,7 @@ The following state arguments are supported:
         <span class="property-type"><a href="#sqlcontainerindexingpolicy">Sql<wbr>Container<wbr>Indexing<wbr>Policy<wbr>Args</a></span>
     </dt>
     <dd>{{% md %}}An `indexing_policy` block as defined below.
-{{% /md %}}</dd>
-    <dt class="property-optional"
+{{% /md %}}</dd><dt class="property-optional"
             title="Optional">
         <span id="state_name_csharp">
 <a href="#state_name_csharp" style="color: inherit; text-decoration: inherit;">Name</a>
@@ -1098,8 +1020,7 @@ The following state arguments are supported:
         <span class="property-type">string</span>
     </dt>
     <dd>{{% md %}}Specifies the name of the Cosmos DB SQL Container. Changing this forces a new resource to be created.
-{{% /md %}}</dd>
-    <dt class="property-optional"
+{{% /md %}}</dd><dt class="property-optional"
             title="Optional">
         <span id="state_partitionkeypath_csharp">
 <a href="#state_partitionkeypath_csharp" style="color: inherit; text-decoration: inherit;">Partition<wbr>Key<wbr>Path</a>
@@ -1108,8 +1029,7 @@ The following state arguments are supported:
         <span class="property-type">string</span>
     </dt>
     <dd>{{% md %}}Define a partition key. Changing this forces a new resource to be created.
-{{% /md %}}</dd>
-    <dt class="property-optional"
+{{% /md %}}</dd><dt class="property-optional"
             title="Optional">
         <span id="state_partitionkeyversion_csharp">
 <a href="#state_partitionkeyversion_csharp" style="color: inherit; text-decoration: inherit;">Partition<wbr>Key<wbr>Version</a>
@@ -1118,8 +1038,7 @@ The following state arguments are supported:
         <span class="property-type">int</span>
     </dt>
     <dd>{{% md %}}Define a partition key version. Changing this forces a new resource to be created. Possible values are `1 `and `2`. This should be set to `2` in order to use large partition keys.
-{{% /md %}}</dd>
-    <dt class="property-optional"
+{{% /md %}}</dd><dt class="property-optional"
             title="Optional">
         <span id="state_resourcegroupname_csharp">
 <a href="#state_resourcegroupname_csharp" style="color: inherit; text-decoration: inherit;">Resource<wbr>Group<wbr>Name</a>
@@ -1128,8 +1047,7 @@ The following state arguments are supported:
         <span class="property-type">string</span>
     </dt>
     <dd>{{% md %}}The name of the resource group in which the Cosmos DB SQL Container is created. Changing this forces a new resource to be created.
-{{% /md %}}</dd>
-    <dt class="property-optional"
+{{% /md %}}</dd><dt class="property-optional"
             title="Optional">
         <span id="state_throughput_csharp">
 <a href="#state_throughput_csharp" style="color: inherit; text-decoration: inherit;">Throughput</a>
@@ -1138,8 +1056,7 @@ The following state arguments are supported:
         <span class="property-type">int</span>
     </dt>
     <dd>{{% md %}}The throughput of SQL container (RU/s). Must be set in increments of `100`. The minimum value is `400`. This must be set upon container creation otherwise it cannot be updated without a manual resource destroy-apply.
-{{% /md %}}</dd>
-    <dt class="property-optional"
+{{% /md %}}</dd><dt class="property-optional"
             title="Optional">
         <span id="state_uniquekeys_csharp">
 <a href="#state_uniquekeys_csharp" style="color: inherit; text-decoration: inherit;">Unique<wbr>Keys</a>
@@ -1148,14 +1065,11 @@ The following state arguments are supported:
         <span class="property-type"><a href="#sqlcontaineruniquekey">List&lt;Sql<wbr>Container<wbr>Unique<wbr>Key<wbr>Args&gt;</a></span>
     </dt>
     <dd>{{% md %}}One or more `unique_key` blocks as defined below. Changing this forces a new resource to be created.
-{{% /md %}}</dd>
-</dl>
+{{% /md %}}</dd></dl>
 {{% /choosable %}}
 
 {{% choosable language go %}}
-<dl class="resources-properties">
-
-    <dt class="property-optional"
+<dl class="resources-properties"><dt class="property-optional"
             title="Optional">
         <span id="state_accountname_go">
 <a href="#state_accountname_go" style="color: inherit; text-decoration: inherit;">Account<wbr>Name</a>
@@ -1164,8 +1078,7 @@ The following state arguments are supported:
         <span class="property-type">string</span>
     </dt>
     <dd>{{% md %}}The name of the Cosmos DB Account to create the container within. Changing this forces a new resource to be created.
-{{% /md %}}</dd>
-    <dt class="property-optional"
+{{% /md %}}</dd><dt class="property-optional"
             title="Optional">
         <span id="state_autoscalesettings_go">
 <a href="#state_autoscalesettings_go" style="color: inherit; text-decoration: inherit;">Autoscale<wbr>Settings</a>
@@ -1174,8 +1087,7 @@ The following state arguments are supported:
         <span class="property-type"><a href="#sqlcontainerautoscalesettings">Sql<wbr>Container<wbr>Autoscale<wbr>Settings</a></span>
     </dt>
     <dd>{{% md %}}An `autoscale_settings` block as defined below. This must be set upon database creation otherwise it cannot be updated without a manual destroy-apply. Requires `partition_key_path` to be set.
-{{% /md %}}</dd>
-    <dt class="property-optional"
+{{% /md %}}</dd><dt class="property-optional"
             title="Optional">
         <span id="state_databasename_go">
 <a href="#state_databasename_go" style="color: inherit; text-decoration: inherit;">Database<wbr>Name</a>
@@ -1184,8 +1096,7 @@ The following state arguments are supported:
         <span class="property-type">string</span>
     </dt>
     <dd>{{% md %}}The name of the Cosmos DB SQL Database to create the container within. Changing this forces a new resource to be created.
-{{% /md %}}</dd>
-    <dt class="property-optional"
+{{% /md %}}</dd><dt class="property-optional"
             title="Optional">
         <span id="state_defaultttl_go">
 <a href="#state_defaultttl_go" style="color: inherit; text-decoration: inherit;">Default<wbr>Ttl</a>
@@ -1194,8 +1105,7 @@ The following state arguments are supported:
         <span class="property-type">int</span>
     </dt>
     <dd>{{% md %}}The default time to live of SQL container. If missing, items are not expired automatically. If present and the value is set to `-1`, it is equal to infinity, and items don’t expire by default. If present and the value is set to some number `n` – items will expire `n` seconds after their last modified time.
-{{% /md %}}</dd>
-    <dt class="property-optional"
+{{% /md %}}</dd><dt class="property-optional"
             title="Optional">
         <span id="state_indexingpolicy_go">
 <a href="#state_indexingpolicy_go" style="color: inherit; text-decoration: inherit;">Indexing<wbr>Policy</a>
@@ -1204,8 +1114,7 @@ The following state arguments are supported:
         <span class="property-type"><a href="#sqlcontainerindexingpolicy">Sql<wbr>Container<wbr>Indexing<wbr>Policy</a></span>
     </dt>
     <dd>{{% md %}}An `indexing_policy` block as defined below.
-{{% /md %}}</dd>
-    <dt class="property-optional"
+{{% /md %}}</dd><dt class="property-optional"
             title="Optional">
         <span id="state_name_go">
 <a href="#state_name_go" style="color: inherit; text-decoration: inherit;">Name</a>
@@ -1214,8 +1123,7 @@ The following state arguments are supported:
         <span class="property-type">string</span>
     </dt>
     <dd>{{% md %}}Specifies the name of the Cosmos DB SQL Container. Changing this forces a new resource to be created.
-{{% /md %}}</dd>
-    <dt class="property-optional"
+{{% /md %}}</dd><dt class="property-optional"
             title="Optional">
         <span id="state_partitionkeypath_go">
 <a href="#state_partitionkeypath_go" style="color: inherit; text-decoration: inherit;">Partition<wbr>Key<wbr>Path</a>
@@ -1224,8 +1132,7 @@ The following state arguments are supported:
         <span class="property-type">string</span>
     </dt>
     <dd>{{% md %}}Define a partition key. Changing this forces a new resource to be created.
-{{% /md %}}</dd>
-    <dt class="property-optional"
+{{% /md %}}</dd><dt class="property-optional"
             title="Optional">
         <span id="state_partitionkeyversion_go">
 <a href="#state_partitionkeyversion_go" style="color: inherit; text-decoration: inherit;">Partition<wbr>Key<wbr>Version</a>
@@ -1234,8 +1141,7 @@ The following state arguments are supported:
         <span class="property-type">int</span>
     </dt>
     <dd>{{% md %}}Define a partition key version. Changing this forces a new resource to be created. Possible values are `1 `and `2`. This should be set to `2` in order to use large partition keys.
-{{% /md %}}</dd>
-    <dt class="property-optional"
+{{% /md %}}</dd><dt class="property-optional"
             title="Optional">
         <span id="state_resourcegroupname_go">
 <a href="#state_resourcegroupname_go" style="color: inherit; text-decoration: inherit;">Resource<wbr>Group<wbr>Name</a>
@@ -1244,8 +1150,7 @@ The following state arguments are supported:
         <span class="property-type">string</span>
     </dt>
     <dd>{{% md %}}The name of the resource group in which the Cosmos DB SQL Container is created. Changing this forces a new resource to be created.
-{{% /md %}}</dd>
-    <dt class="property-optional"
+{{% /md %}}</dd><dt class="property-optional"
             title="Optional">
         <span id="state_throughput_go">
 <a href="#state_throughput_go" style="color: inherit; text-decoration: inherit;">Throughput</a>
@@ -1254,8 +1159,7 @@ The following state arguments are supported:
         <span class="property-type">int</span>
     </dt>
     <dd>{{% md %}}The throughput of SQL container (RU/s). Must be set in increments of `100`. The minimum value is `400`. This must be set upon container creation otherwise it cannot be updated without a manual resource destroy-apply.
-{{% /md %}}</dd>
-    <dt class="property-optional"
+{{% /md %}}</dd><dt class="property-optional"
             title="Optional">
         <span id="state_uniquekeys_go">
 <a href="#state_uniquekeys_go" style="color: inherit; text-decoration: inherit;">Unique<wbr>Keys</a>
@@ -1264,14 +1168,11 @@ The following state arguments are supported:
         <span class="property-type"><a href="#sqlcontaineruniquekey">[]Sql<wbr>Container<wbr>Unique<wbr>Key</a></span>
     </dt>
     <dd>{{% md %}}One or more `unique_key` blocks as defined below. Changing this forces a new resource to be created.
-{{% /md %}}</dd>
-</dl>
+{{% /md %}}</dd></dl>
 {{% /choosable %}}
 
 {{% choosable language nodejs %}}
-<dl class="resources-properties">
-
-    <dt class="property-optional"
+<dl class="resources-properties"><dt class="property-optional"
             title="Optional">
         <span id="state_accountname_nodejs">
 <a href="#state_accountname_nodejs" style="color: inherit; text-decoration: inherit;">account<wbr>Name</a>
@@ -1280,8 +1181,7 @@ The following state arguments are supported:
         <span class="property-type">string</span>
     </dt>
     <dd>{{% md %}}The name of the Cosmos DB Account to create the container within. Changing this forces a new resource to be created.
-{{% /md %}}</dd>
-    <dt class="property-optional"
+{{% /md %}}</dd><dt class="property-optional"
             title="Optional">
         <span id="state_autoscalesettings_nodejs">
 <a href="#state_autoscalesettings_nodejs" style="color: inherit; text-decoration: inherit;">autoscale<wbr>Settings</a>
@@ -1290,8 +1190,7 @@ The following state arguments are supported:
         <span class="property-type"><a href="#sqlcontainerautoscalesettings">Sql<wbr>Container<wbr>Autoscale<wbr>Settings</a></span>
     </dt>
     <dd>{{% md %}}An `autoscale_settings` block as defined below. This must be set upon database creation otherwise it cannot be updated without a manual destroy-apply. Requires `partition_key_path` to be set.
-{{% /md %}}</dd>
-    <dt class="property-optional"
+{{% /md %}}</dd><dt class="property-optional"
             title="Optional">
         <span id="state_databasename_nodejs">
 <a href="#state_databasename_nodejs" style="color: inherit; text-decoration: inherit;">database<wbr>Name</a>
@@ -1300,8 +1199,7 @@ The following state arguments are supported:
         <span class="property-type">string</span>
     </dt>
     <dd>{{% md %}}The name of the Cosmos DB SQL Database to create the container within. Changing this forces a new resource to be created.
-{{% /md %}}</dd>
-    <dt class="property-optional"
+{{% /md %}}</dd><dt class="property-optional"
             title="Optional">
         <span id="state_defaultttl_nodejs">
 <a href="#state_defaultttl_nodejs" style="color: inherit; text-decoration: inherit;">default<wbr>Ttl</a>
@@ -1310,8 +1208,7 @@ The following state arguments are supported:
         <span class="property-type">number</span>
     </dt>
     <dd>{{% md %}}The default time to live of SQL container. If missing, items are not expired automatically. If present and the value is set to `-1`, it is equal to infinity, and items don’t expire by default. If present and the value is set to some number `n` – items will expire `n` seconds after their last modified time.
-{{% /md %}}</dd>
-    <dt class="property-optional"
+{{% /md %}}</dd><dt class="property-optional"
             title="Optional">
         <span id="state_indexingpolicy_nodejs">
 <a href="#state_indexingpolicy_nodejs" style="color: inherit; text-decoration: inherit;">indexing<wbr>Policy</a>
@@ -1320,8 +1217,7 @@ The following state arguments are supported:
         <span class="property-type"><a href="#sqlcontainerindexingpolicy">Sql<wbr>Container<wbr>Indexing<wbr>Policy</a></span>
     </dt>
     <dd>{{% md %}}An `indexing_policy` block as defined below.
-{{% /md %}}</dd>
-    <dt class="property-optional"
+{{% /md %}}</dd><dt class="property-optional"
             title="Optional">
         <span id="state_name_nodejs">
 <a href="#state_name_nodejs" style="color: inherit; text-decoration: inherit;">name</a>
@@ -1330,8 +1226,7 @@ The following state arguments are supported:
         <span class="property-type">string</span>
     </dt>
     <dd>{{% md %}}Specifies the name of the Cosmos DB SQL Container. Changing this forces a new resource to be created.
-{{% /md %}}</dd>
-    <dt class="property-optional"
+{{% /md %}}</dd><dt class="property-optional"
             title="Optional">
         <span id="state_partitionkeypath_nodejs">
 <a href="#state_partitionkeypath_nodejs" style="color: inherit; text-decoration: inherit;">partition<wbr>Key<wbr>Path</a>
@@ -1340,8 +1235,7 @@ The following state arguments are supported:
         <span class="property-type">string</span>
     </dt>
     <dd>{{% md %}}Define a partition key. Changing this forces a new resource to be created.
-{{% /md %}}</dd>
-    <dt class="property-optional"
+{{% /md %}}</dd><dt class="property-optional"
             title="Optional">
         <span id="state_partitionkeyversion_nodejs">
 <a href="#state_partitionkeyversion_nodejs" style="color: inherit; text-decoration: inherit;">partition<wbr>Key<wbr>Version</a>
@@ -1350,8 +1244,7 @@ The following state arguments are supported:
         <span class="property-type">number</span>
     </dt>
     <dd>{{% md %}}Define a partition key version. Changing this forces a new resource to be created. Possible values are `1 `and `2`. This should be set to `2` in order to use large partition keys.
-{{% /md %}}</dd>
-    <dt class="property-optional"
+{{% /md %}}</dd><dt class="property-optional"
             title="Optional">
         <span id="state_resourcegroupname_nodejs">
 <a href="#state_resourcegroupname_nodejs" style="color: inherit; text-decoration: inherit;">resource<wbr>Group<wbr>Name</a>
@@ -1360,8 +1253,7 @@ The following state arguments are supported:
         <span class="property-type">string</span>
     </dt>
     <dd>{{% md %}}The name of the resource group in which the Cosmos DB SQL Container is created. Changing this forces a new resource to be created.
-{{% /md %}}</dd>
-    <dt class="property-optional"
+{{% /md %}}</dd><dt class="property-optional"
             title="Optional">
         <span id="state_throughput_nodejs">
 <a href="#state_throughput_nodejs" style="color: inherit; text-decoration: inherit;">throughput</a>
@@ -1370,8 +1262,7 @@ The following state arguments are supported:
         <span class="property-type">number</span>
     </dt>
     <dd>{{% md %}}The throughput of SQL container (RU/s). Must be set in increments of `100`. The minimum value is `400`. This must be set upon container creation otherwise it cannot be updated without a manual resource destroy-apply.
-{{% /md %}}</dd>
-    <dt class="property-optional"
+{{% /md %}}</dd><dt class="property-optional"
             title="Optional">
         <span id="state_uniquekeys_nodejs">
 <a href="#state_uniquekeys_nodejs" style="color: inherit; text-decoration: inherit;">unique<wbr>Keys</a>
@@ -1380,14 +1271,11 @@ The following state arguments are supported:
         <span class="property-type"><a href="#sqlcontaineruniquekey">Sql<wbr>Container<wbr>Unique<wbr>Key[]</a></span>
     </dt>
     <dd>{{% md %}}One or more `unique_key` blocks as defined below. Changing this forces a new resource to be created.
-{{% /md %}}</dd>
-</dl>
+{{% /md %}}</dd></dl>
 {{% /choosable %}}
 
 {{% choosable language python %}}
-<dl class="resources-properties">
-
-    <dt class="property-optional"
+<dl class="resources-properties"><dt class="property-optional"
             title="Optional">
         <span id="state_account_name_python">
 <a href="#state_account_name_python" style="color: inherit; text-decoration: inherit;">account_<wbr>name</a>
@@ -1396,8 +1284,7 @@ The following state arguments are supported:
         <span class="property-type">str</span>
     </dt>
     <dd>{{% md %}}The name of the Cosmos DB Account to create the container within. Changing this forces a new resource to be created.
-{{% /md %}}</dd>
-    <dt class="property-optional"
+{{% /md %}}</dd><dt class="property-optional"
             title="Optional">
         <span id="state_autoscale_settings_python">
 <a href="#state_autoscale_settings_python" style="color: inherit; text-decoration: inherit;">autoscale_<wbr>settings</a>
@@ -1406,8 +1293,7 @@ The following state arguments are supported:
         <span class="property-type"><a href="#sqlcontainerautoscalesettings">Sql<wbr>Container<wbr>Autoscale<wbr>Settings<wbr>Args</a></span>
     </dt>
     <dd>{{% md %}}An `autoscale_settings` block as defined below. This must be set upon database creation otherwise it cannot be updated without a manual destroy-apply. Requires `partition_key_path` to be set.
-{{% /md %}}</dd>
-    <dt class="property-optional"
+{{% /md %}}</dd><dt class="property-optional"
             title="Optional">
         <span id="state_database_name_python">
 <a href="#state_database_name_python" style="color: inherit; text-decoration: inherit;">database_<wbr>name</a>
@@ -1416,8 +1302,7 @@ The following state arguments are supported:
         <span class="property-type">str</span>
     </dt>
     <dd>{{% md %}}The name of the Cosmos DB SQL Database to create the container within. Changing this forces a new resource to be created.
-{{% /md %}}</dd>
-    <dt class="property-optional"
+{{% /md %}}</dd><dt class="property-optional"
             title="Optional">
         <span id="state_default_ttl_python">
 <a href="#state_default_ttl_python" style="color: inherit; text-decoration: inherit;">default_<wbr>ttl</a>
@@ -1426,8 +1311,7 @@ The following state arguments are supported:
         <span class="property-type">int</span>
     </dt>
     <dd>{{% md %}}The default time to live of SQL container. If missing, items are not expired automatically. If present and the value is set to `-1`, it is equal to infinity, and items don’t expire by default. If present and the value is set to some number `n` – items will expire `n` seconds after their last modified time.
-{{% /md %}}</dd>
-    <dt class="property-optional"
+{{% /md %}}</dd><dt class="property-optional"
             title="Optional">
         <span id="state_indexing_policy_python">
 <a href="#state_indexing_policy_python" style="color: inherit; text-decoration: inherit;">indexing_<wbr>policy</a>
@@ -1436,8 +1320,7 @@ The following state arguments are supported:
         <span class="property-type"><a href="#sqlcontainerindexingpolicy">Sql<wbr>Container<wbr>Indexing<wbr>Policy<wbr>Args</a></span>
     </dt>
     <dd>{{% md %}}An `indexing_policy` block as defined below.
-{{% /md %}}</dd>
-    <dt class="property-optional"
+{{% /md %}}</dd><dt class="property-optional"
             title="Optional">
         <span id="state_name_python">
 <a href="#state_name_python" style="color: inherit; text-decoration: inherit;">name</a>
@@ -1446,8 +1329,7 @@ The following state arguments are supported:
         <span class="property-type">str</span>
     </dt>
     <dd>{{% md %}}Specifies the name of the Cosmos DB SQL Container. Changing this forces a new resource to be created.
-{{% /md %}}</dd>
-    <dt class="property-optional"
+{{% /md %}}</dd><dt class="property-optional"
             title="Optional">
         <span id="state_partition_key_path_python">
 <a href="#state_partition_key_path_python" style="color: inherit; text-decoration: inherit;">partition_<wbr>key_<wbr>path</a>
@@ -1456,8 +1338,7 @@ The following state arguments are supported:
         <span class="property-type">str</span>
     </dt>
     <dd>{{% md %}}Define a partition key. Changing this forces a new resource to be created.
-{{% /md %}}</dd>
-    <dt class="property-optional"
+{{% /md %}}</dd><dt class="property-optional"
             title="Optional">
         <span id="state_partition_key_version_python">
 <a href="#state_partition_key_version_python" style="color: inherit; text-decoration: inherit;">partition_<wbr>key_<wbr>version</a>
@@ -1466,8 +1347,7 @@ The following state arguments are supported:
         <span class="property-type">int</span>
     </dt>
     <dd>{{% md %}}Define a partition key version. Changing this forces a new resource to be created. Possible values are `1 `and `2`. This should be set to `2` in order to use large partition keys.
-{{% /md %}}</dd>
-    <dt class="property-optional"
+{{% /md %}}</dd><dt class="property-optional"
             title="Optional">
         <span id="state_resource_group_name_python">
 <a href="#state_resource_group_name_python" style="color: inherit; text-decoration: inherit;">resource_<wbr>group_<wbr>name</a>
@@ -1476,8 +1356,7 @@ The following state arguments are supported:
         <span class="property-type">str</span>
     </dt>
     <dd>{{% md %}}The name of the resource group in which the Cosmos DB SQL Container is created. Changing this forces a new resource to be created.
-{{% /md %}}</dd>
-    <dt class="property-optional"
+{{% /md %}}</dd><dt class="property-optional"
             title="Optional">
         <span id="state_throughput_python">
 <a href="#state_throughput_python" style="color: inherit; text-decoration: inherit;">throughput</a>
@@ -1486,8 +1365,7 @@ The following state arguments are supported:
         <span class="property-type">int</span>
     </dt>
     <dd>{{% md %}}The throughput of SQL container (RU/s). Must be set in increments of `100`. The minimum value is `400`. This must be set upon container creation otherwise it cannot be updated without a manual resource destroy-apply.
-{{% /md %}}</dd>
-    <dt class="property-optional"
+{{% /md %}}</dd><dt class="property-optional"
             title="Optional">
         <span id="state_unique_keys_python">
 <a href="#state_unique_keys_python" style="color: inherit; text-decoration: inherit;">unique_<wbr>keys</a>
@@ -1496,8 +1374,7 @@ The following state arguments are supported:
         <span class="property-type"><a href="#sqlcontaineruniquekey">Sequence[Sql<wbr>Container<wbr>Unique<wbr>Key<wbr>Args]</a></span>
     </dt>
     <dd>{{% md %}}One or more `unique_key` blocks as defined below. Changing this forces a new resource to be created.
-{{% /md %}}</dd>
-</dl>
+{{% /md %}}</dd></dl>
 {{% /choosable %}}
 
 
@@ -1512,9 +1389,7 @@ The following state arguments are supported:
 <h4 id="sqlcontainerautoscalesettings">Sql<wbr>Container<wbr>Autoscale<wbr>Settings</h4>
 
 {{% choosable language csharp %}}
-<dl class="resources-properties">
-
-    <dt class="property-optional"
+<dl class="resources-properties"><dt class="property-optional"
             title="Optional">
         <span id="maxthroughput_csharp">
 <a href="#maxthroughput_csharp" style="color: inherit; text-decoration: inherit;">Max<wbr>Throughput</a>
@@ -1523,14 +1398,11 @@ The following state arguments are supported:
         <span class="property-type">int</span>
     </dt>
     <dd>{{% md %}}The maximum throughput of the SQL container (RU/s). Must be between `4,000` and `1,000,000`. Must be set in increments of `1,000`. Conflicts with `throughput`.
-{{% /md %}}</dd>
-</dl>
+{{% /md %}}</dd></dl>
 {{% /choosable %}}
 
 {{% choosable language go %}}
-<dl class="resources-properties">
-
-    <dt class="property-optional"
+<dl class="resources-properties"><dt class="property-optional"
             title="Optional">
         <span id="maxthroughput_go">
 <a href="#maxthroughput_go" style="color: inherit; text-decoration: inherit;">Max<wbr>Throughput</a>
@@ -1539,14 +1411,11 @@ The following state arguments are supported:
         <span class="property-type">int</span>
     </dt>
     <dd>{{% md %}}The maximum throughput of the SQL container (RU/s). Must be between `4,000` and `1,000,000`. Must be set in increments of `1,000`. Conflicts with `throughput`.
-{{% /md %}}</dd>
-</dl>
+{{% /md %}}</dd></dl>
 {{% /choosable %}}
 
 {{% choosable language nodejs %}}
-<dl class="resources-properties">
-
-    <dt class="property-optional"
+<dl class="resources-properties"><dt class="property-optional"
             title="Optional">
         <span id="maxthroughput_nodejs">
 <a href="#maxthroughput_nodejs" style="color: inherit; text-decoration: inherit;">max<wbr>Throughput</a>
@@ -1555,14 +1424,11 @@ The following state arguments are supported:
         <span class="property-type">number</span>
     </dt>
     <dd>{{% md %}}The maximum throughput of the SQL container (RU/s). Must be between `4,000` and `1,000,000`. Must be set in increments of `1,000`. Conflicts with `throughput`.
-{{% /md %}}</dd>
-</dl>
+{{% /md %}}</dd></dl>
 {{% /choosable %}}
 
 {{% choosable language python %}}
-<dl class="resources-properties">
-
-    <dt class="property-optional"
+<dl class="resources-properties"><dt class="property-optional"
             title="Optional">
         <span id="max_throughput_python">
 <a href="#max_throughput_python" style="color: inherit; text-decoration: inherit;">max_<wbr>throughput</a>
@@ -1571,16 +1437,13 @@ The following state arguments are supported:
         <span class="property-type">int</span>
     </dt>
     <dd>{{% md %}}The maximum throughput of the SQL container (RU/s). Must be between `4,000` and `1,000,000`. Must be set in increments of `1,000`. Conflicts with `throughput`.
-{{% /md %}}</dd>
-</dl>
+{{% /md %}}</dd></dl>
 {{% /choosable %}}
 
 <h4 id="sqlcontainerindexingpolicy">Sql<wbr>Container<wbr>Indexing<wbr>Policy</h4>
 
 {{% choosable language csharp %}}
-<dl class="resources-properties">
-
-    <dt class="property-optional"
+<dl class="resources-properties"><dt class="property-optional"
             title="Optional">
         <span id="compositeindices_csharp">
 <a href="#compositeindices_csharp" style="color: inherit; text-decoration: inherit;">Composite<wbr>Indices</a>
@@ -1589,8 +1452,7 @@ The following state arguments are supported:
         <span class="property-type"><a href="#sqlcontainerindexingpolicycompositeindex">List&lt;Sql<wbr>Container<wbr>Indexing<wbr>Policy<wbr>Composite<wbr>Index<wbr>Args&gt;</a></span>
     </dt>
     <dd>{{% md %}}One or more `composite_index` blocks as defined below.
-{{% /md %}}</dd>
-    <dt class="property-optional"
+{{% /md %}}</dd><dt class="property-optional"
             title="Optional">
         <span id="excludedpaths_csharp">
 <a href="#excludedpaths_csharp" style="color: inherit; text-decoration: inherit;">Excluded<wbr>Paths</a>
@@ -1599,8 +1461,7 @@ The following state arguments are supported:
         <span class="property-type"><a href="#sqlcontainerindexingpolicyexcludedpath">List&lt;Sql<wbr>Container<wbr>Indexing<wbr>Policy<wbr>Excluded<wbr>Path<wbr>Args&gt;</a></span>
     </dt>
     <dd>{{% md %}}One or more `excluded_path` blocks as defined below. Either `included_path` or `excluded_path` must contain the `path` `/*`
-{{% /md %}}</dd>
-    <dt class="property-optional"
+{{% /md %}}</dd><dt class="property-optional"
             title="Optional">
         <span id="includedpaths_csharp">
 <a href="#includedpaths_csharp" style="color: inherit; text-decoration: inherit;">Included<wbr>Paths</a>
@@ -1609,8 +1470,7 @@ The following state arguments are supported:
         <span class="property-type"><a href="#sqlcontainerindexingpolicyincludedpath">List&lt;Sql<wbr>Container<wbr>Indexing<wbr>Policy<wbr>Included<wbr>Path<wbr>Args&gt;</a></span>
     </dt>
     <dd>{{% md %}}One or more `included_path` blocks as defined below. Either `included_path` or `excluded_path` must contain the `path` `/*`
-{{% /md %}}</dd>
-    <dt class="property-optional"
+{{% /md %}}</dd><dt class="property-optional"
             title="Optional">
         <span id="indexingmode_csharp">
 <a href="#indexingmode_csharp" style="color: inherit; text-decoration: inherit;">Indexing<wbr>Mode</a>
@@ -1619,14 +1479,11 @@ The following state arguments are supported:
         <span class="property-type">string</span>
     </dt>
     <dd>{{% md %}}Indicates the indexing mode. Possible values include: `Consistent` and `None`. Defaults to `Consistent`.
-{{% /md %}}</dd>
-</dl>
+{{% /md %}}</dd></dl>
 {{% /choosable %}}
 
 {{% choosable language go %}}
-<dl class="resources-properties">
-
-    <dt class="property-optional"
+<dl class="resources-properties"><dt class="property-optional"
             title="Optional">
         <span id="compositeindices_go">
 <a href="#compositeindices_go" style="color: inherit; text-decoration: inherit;">Composite<wbr>Indices</a>
@@ -1635,8 +1492,7 @@ The following state arguments are supported:
         <span class="property-type"><a href="#sqlcontainerindexingpolicycompositeindex">[]Sql<wbr>Container<wbr>Indexing<wbr>Policy<wbr>Composite<wbr>Index</a></span>
     </dt>
     <dd>{{% md %}}One or more `composite_index` blocks as defined below.
-{{% /md %}}</dd>
-    <dt class="property-optional"
+{{% /md %}}</dd><dt class="property-optional"
             title="Optional">
         <span id="excludedpaths_go">
 <a href="#excludedpaths_go" style="color: inherit; text-decoration: inherit;">Excluded<wbr>Paths</a>
@@ -1645,8 +1501,7 @@ The following state arguments are supported:
         <span class="property-type"><a href="#sqlcontainerindexingpolicyexcludedpath">[]Sql<wbr>Container<wbr>Indexing<wbr>Policy<wbr>Excluded<wbr>Path</a></span>
     </dt>
     <dd>{{% md %}}One or more `excluded_path` blocks as defined below. Either `included_path` or `excluded_path` must contain the `path` `/*`
-{{% /md %}}</dd>
-    <dt class="property-optional"
+{{% /md %}}</dd><dt class="property-optional"
             title="Optional">
         <span id="includedpaths_go">
 <a href="#includedpaths_go" style="color: inherit; text-decoration: inherit;">Included<wbr>Paths</a>
@@ -1655,8 +1510,7 @@ The following state arguments are supported:
         <span class="property-type"><a href="#sqlcontainerindexingpolicyincludedpath">[]Sql<wbr>Container<wbr>Indexing<wbr>Policy<wbr>Included<wbr>Path</a></span>
     </dt>
     <dd>{{% md %}}One or more `included_path` blocks as defined below. Either `included_path` or `excluded_path` must contain the `path` `/*`
-{{% /md %}}</dd>
-    <dt class="property-optional"
+{{% /md %}}</dd><dt class="property-optional"
             title="Optional">
         <span id="indexingmode_go">
 <a href="#indexingmode_go" style="color: inherit; text-decoration: inherit;">Indexing<wbr>Mode</a>
@@ -1665,14 +1519,11 @@ The following state arguments are supported:
         <span class="property-type">string</span>
     </dt>
     <dd>{{% md %}}Indicates the indexing mode. Possible values include: `Consistent` and `None`. Defaults to `Consistent`.
-{{% /md %}}</dd>
-</dl>
+{{% /md %}}</dd></dl>
 {{% /choosable %}}
 
 {{% choosable language nodejs %}}
-<dl class="resources-properties">
-
-    <dt class="property-optional"
+<dl class="resources-properties"><dt class="property-optional"
             title="Optional">
         <span id="compositeindices_nodejs">
 <a href="#compositeindices_nodejs" style="color: inherit; text-decoration: inherit;">composite<wbr>Indices</a>
@@ -1681,8 +1532,7 @@ The following state arguments are supported:
         <span class="property-type"><a href="#sqlcontainerindexingpolicycompositeindex">Sql<wbr>Container<wbr>Indexing<wbr>Policy<wbr>Composite<wbr>Index[]</a></span>
     </dt>
     <dd>{{% md %}}One or more `composite_index` blocks as defined below.
-{{% /md %}}</dd>
-    <dt class="property-optional"
+{{% /md %}}</dd><dt class="property-optional"
             title="Optional">
         <span id="excludedpaths_nodejs">
 <a href="#excludedpaths_nodejs" style="color: inherit; text-decoration: inherit;">excluded<wbr>Paths</a>
@@ -1691,8 +1541,7 @@ The following state arguments are supported:
         <span class="property-type"><a href="#sqlcontainerindexingpolicyexcludedpath">Sql<wbr>Container<wbr>Indexing<wbr>Policy<wbr>Excluded<wbr>Path[]</a></span>
     </dt>
     <dd>{{% md %}}One or more `excluded_path` blocks as defined below. Either `included_path` or `excluded_path` must contain the `path` `/*`
-{{% /md %}}</dd>
-    <dt class="property-optional"
+{{% /md %}}</dd><dt class="property-optional"
             title="Optional">
         <span id="includedpaths_nodejs">
 <a href="#includedpaths_nodejs" style="color: inherit; text-decoration: inherit;">included<wbr>Paths</a>
@@ -1701,8 +1550,7 @@ The following state arguments are supported:
         <span class="property-type"><a href="#sqlcontainerindexingpolicyincludedpath">Sql<wbr>Container<wbr>Indexing<wbr>Policy<wbr>Included<wbr>Path[]</a></span>
     </dt>
     <dd>{{% md %}}One or more `included_path` blocks as defined below. Either `included_path` or `excluded_path` must contain the `path` `/*`
-{{% /md %}}</dd>
-    <dt class="property-optional"
+{{% /md %}}</dd><dt class="property-optional"
             title="Optional">
         <span id="indexingmode_nodejs">
 <a href="#indexingmode_nodejs" style="color: inherit; text-decoration: inherit;">indexing<wbr>Mode</a>
@@ -1711,14 +1559,11 @@ The following state arguments are supported:
         <span class="property-type">string</span>
     </dt>
     <dd>{{% md %}}Indicates the indexing mode. Possible values include: `Consistent` and `None`. Defaults to `Consistent`.
-{{% /md %}}</dd>
-</dl>
+{{% /md %}}</dd></dl>
 {{% /choosable %}}
 
 {{% choosable language python %}}
-<dl class="resources-properties">
-
-    <dt class="property-optional"
+<dl class="resources-properties"><dt class="property-optional"
             title="Optional">
         <span id="composite_indices_python">
 <a href="#composite_indices_python" style="color: inherit; text-decoration: inherit;">composite_<wbr>indices</a>
@@ -1727,8 +1572,7 @@ The following state arguments are supported:
         <span class="property-type"><a href="#sqlcontainerindexingpolicycompositeindex">Sequence[Sql<wbr>Container<wbr>Indexing<wbr>Policy<wbr>Composite<wbr>Index<wbr>Args]</a></span>
     </dt>
     <dd>{{% md %}}One or more `composite_index` blocks as defined below.
-{{% /md %}}</dd>
-    <dt class="property-optional"
+{{% /md %}}</dd><dt class="property-optional"
             title="Optional">
         <span id="excluded_paths_python">
 <a href="#excluded_paths_python" style="color: inherit; text-decoration: inherit;">excluded_<wbr>paths</a>
@@ -1737,8 +1581,7 @@ The following state arguments are supported:
         <span class="property-type"><a href="#sqlcontainerindexingpolicyexcludedpath">Sequence[Sql<wbr>Container<wbr>Indexing<wbr>Policy<wbr>Excluded<wbr>Path<wbr>Args]</a></span>
     </dt>
     <dd>{{% md %}}One or more `excluded_path` blocks as defined below. Either `included_path` or `excluded_path` must contain the `path` `/*`
-{{% /md %}}</dd>
-    <dt class="property-optional"
+{{% /md %}}</dd><dt class="property-optional"
             title="Optional">
         <span id="included_paths_python">
 <a href="#included_paths_python" style="color: inherit; text-decoration: inherit;">included_<wbr>paths</a>
@@ -1747,8 +1590,7 @@ The following state arguments are supported:
         <span class="property-type"><a href="#sqlcontainerindexingpolicyincludedpath">Sequence[Sql<wbr>Container<wbr>Indexing<wbr>Policy<wbr>Included<wbr>Path<wbr>Args]</a></span>
     </dt>
     <dd>{{% md %}}One or more `included_path` blocks as defined below. Either `included_path` or `excluded_path` must contain the `path` `/*`
-{{% /md %}}</dd>
-    <dt class="property-optional"
+{{% /md %}}</dd><dt class="property-optional"
             title="Optional">
         <span id="indexing_mode_python">
 <a href="#indexing_mode_python" style="color: inherit; text-decoration: inherit;">indexing_<wbr>mode</a>
@@ -1757,16 +1599,13 @@ The following state arguments are supported:
         <span class="property-type">str</span>
     </dt>
     <dd>{{% md %}}Indicates the indexing mode. Possible values include: `Consistent` and `None`. Defaults to `Consistent`.
-{{% /md %}}</dd>
-</dl>
+{{% /md %}}</dd></dl>
 {{% /choosable %}}
 
 <h4 id="sqlcontainerindexingpolicycompositeindex">Sql<wbr>Container<wbr>Indexing<wbr>Policy<wbr>Composite<wbr>Index</h4>
 
 {{% choosable language csharp %}}
-<dl class="resources-properties">
-
-    <dt class="property-required"
+<dl class="resources-properties"><dt class="property-required"
             title="Required">
         <span id="indices_csharp">
 <a href="#indices_csharp" style="color: inherit; text-decoration: inherit;">Indices</a>
@@ -1775,14 +1614,11 @@ The following state arguments are supported:
         <span class="property-type"><a href="#sqlcontainerindexingpolicycompositeindexindex">List&lt;Sql<wbr>Container<wbr>Indexing<wbr>Policy<wbr>Composite<wbr>Index<wbr>Index<wbr>Args&gt;</a></span>
     </dt>
     <dd>{{% md %}}One or more `index` blocks as defined below.
-{{% /md %}}</dd>
-</dl>
+{{% /md %}}</dd></dl>
 {{% /choosable %}}
 
 {{% choosable language go %}}
-<dl class="resources-properties">
-
-    <dt class="property-required"
+<dl class="resources-properties"><dt class="property-required"
             title="Required">
         <span id="indices_go">
 <a href="#indices_go" style="color: inherit; text-decoration: inherit;">Indices</a>
@@ -1791,14 +1627,11 @@ The following state arguments are supported:
         <span class="property-type"><a href="#sqlcontainerindexingpolicycompositeindexindex">[]Sql<wbr>Container<wbr>Indexing<wbr>Policy<wbr>Composite<wbr>Index<wbr>Index</a></span>
     </dt>
     <dd>{{% md %}}One or more `index` blocks as defined below.
-{{% /md %}}</dd>
-</dl>
+{{% /md %}}</dd></dl>
 {{% /choosable %}}
 
 {{% choosable language nodejs %}}
-<dl class="resources-properties">
-
-    <dt class="property-required"
+<dl class="resources-properties"><dt class="property-required"
             title="Required">
         <span id="indices_nodejs">
 <a href="#indices_nodejs" style="color: inherit; text-decoration: inherit;">indices</a>
@@ -1807,14 +1640,11 @@ The following state arguments are supported:
         <span class="property-type"><a href="#sqlcontainerindexingpolicycompositeindexindex">Sql<wbr>Container<wbr>Indexing<wbr>Policy<wbr>Composite<wbr>Index<wbr>Index[]</a></span>
     </dt>
     <dd>{{% md %}}One or more `index` blocks as defined below.
-{{% /md %}}</dd>
-</dl>
+{{% /md %}}</dd></dl>
 {{% /choosable %}}
 
 {{% choosable language python %}}
-<dl class="resources-properties">
-
-    <dt class="property-required"
+<dl class="resources-properties"><dt class="property-required"
             title="Required">
         <span id="indices_python">
 <a href="#indices_python" style="color: inherit; text-decoration: inherit;">indices</a>
@@ -1823,16 +1653,13 @@ The following state arguments are supported:
         <span class="property-type"><a href="#sqlcontainerindexingpolicycompositeindexindex">Sequence[Sql<wbr>Container<wbr>Indexing<wbr>Policy<wbr>Composite<wbr>Index<wbr>Index<wbr>Args]</a></span>
     </dt>
     <dd>{{% md %}}One or more `index` blocks as defined below.
-{{% /md %}}</dd>
-</dl>
+{{% /md %}}</dd></dl>
 {{% /choosable %}}
 
 <h4 id="sqlcontainerindexingpolicycompositeindexindex">Sql<wbr>Container<wbr>Indexing<wbr>Policy<wbr>Composite<wbr>Index<wbr>Index</h4>
 
 {{% choosable language csharp %}}
-<dl class="resources-properties">
-
-    <dt class="property-required"
+<dl class="resources-properties"><dt class="property-required"
             title="Required">
         <span id="order_csharp">
 <a href="#order_csharp" style="color: inherit; text-decoration: inherit;">Order</a>
@@ -1841,8 +1668,7 @@ The following state arguments are supported:
         <span class="property-type">string</span>
     </dt>
     <dd>{{% md %}}Order of the index. Possible values are `Ascending` or `Descending`.
-{{% /md %}}</dd>
-    <dt class="property-required"
+{{% /md %}}</dd><dt class="property-required"
             title="Required">
         <span id="path_csharp">
 <a href="#path_csharp" style="color: inherit; text-decoration: inherit;">Path</a>
@@ -1851,14 +1677,11 @@ The following state arguments are supported:
         <span class="property-type">string</span>
     </dt>
     <dd>{{% md %}}Path for which the indexing behaviour applies to.
-{{% /md %}}</dd>
-</dl>
+{{% /md %}}</dd></dl>
 {{% /choosable %}}
 
 {{% choosable language go %}}
-<dl class="resources-properties">
-
-    <dt class="property-required"
+<dl class="resources-properties"><dt class="property-required"
             title="Required">
         <span id="order_go">
 <a href="#order_go" style="color: inherit; text-decoration: inherit;">Order</a>
@@ -1867,8 +1690,7 @@ The following state arguments are supported:
         <span class="property-type">string</span>
     </dt>
     <dd>{{% md %}}Order of the index. Possible values are `Ascending` or `Descending`.
-{{% /md %}}</dd>
-    <dt class="property-required"
+{{% /md %}}</dd><dt class="property-required"
             title="Required">
         <span id="path_go">
 <a href="#path_go" style="color: inherit; text-decoration: inherit;">Path</a>
@@ -1877,14 +1699,11 @@ The following state arguments are supported:
         <span class="property-type">string</span>
     </dt>
     <dd>{{% md %}}Path for which the indexing behaviour applies to.
-{{% /md %}}</dd>
-</dl>
+{{% /md %}}</dd></dl>
 {{% /choosable %}}
 
 {{% choosable language nodejs %}}
-<dl class="resources-properties">
-
-    <dt class="property-required"
+<dl class="resources-properties"><dt class="property-required"
             title="Required">
         <span id="order_nodejs">
 <a href="#order_nodejs" style="color: inherit; text-decoration: inherit;">order</a>
@@ -1893,8 +1712,7 @@ The following state arguments are supported:
         <span class="property-type">string</span>
     </dt>
     <dd>{{% md %}}Order of the index. Possible values are `Ascending` or `Descending`.
-{{% /md %}}</dd>
-    <dt class="property-required"
+{{% /md %}}</dd><dt class="property-required"
             title="Required">
         <span id="path_nodejs">
 <a href="#path_nodejs" style="color: inherit; text-decoration: inherit;">path</a>
@@ -1903,14 +1721,11 @@ The following state arguments are supported:
         <span class="property-type">string</span>
     </dt>
     <dd>{{% md %}}Path for which the indexing behaviour applies to.
-{{% /md %}}</dd>
-</dl>
+{{% /md %}}</dd></dl>
 {{% /choosable %}}
 
 {{% choosable language python %}}
-<dl class="resources-properties">
-
-    <dt class="property-required"
+<dl class="resources-properties"><dt class="property-required"
             title="Required">
         <span id="order_python">
 <a href="#order_python" style="color: inherit; text-decoration: inherit;">order</a>
@@ -1919,8 +1734,7 @@ The following state arguments are supported:
         <span class="property-type">str</span>
     </dt>
     <dd>{{% md %}}Order of the index. Possible values are `Ascending` or `Descending`.
-{{% /md %}}</dd>
-    <dt class="property-required"
+{{% /md %}}</dd><dt class="property-required"
             title="Required">
         <span id="path_python">
 <a href="#path_python" style="color: inherit; text-decoration: inherit;">path</a>
@@ -1929,16 +1743,13 @@ The following state arguments are supported:
         <span class="property-type">str</span>
     </dt>
     <dd>{{% md %}}Path for which the indexing behaviour applies to.
-{{% /md %}}</dd>
-</dl>
+{{% /md %}}</dd></dl>
 {{% /choosable %}}
 
 <h4 id="sqlcontainerindexingpolicyexcludedpath">Sql<wbr>Container<wbr>Indexing<wbr>Policy<wbr>Excluded<wbr>Path</h4>
 
 {{% choosable language csharp %}}
-<dl class="resources-properties">
-
-    <dt class="property-required"
+<dl class="resources-properties"><dt class="property-required"
             title="Required">
         <span id="path_csharp">
 <a href="#path_csharp" style="color: inherit; text-decoration: inherit;">Path</a>
@@ -1947,14 +1758,11 @@ The following state arguments are supported:
         <span class="property-type">string</span>
     </dt>
     <dd>{{% md %}}Path that is excluded from indexing.
-{{% /md %}}</dd>
-</dl>
+{{% /md %}}</dd></dl>
 {{% /choosable %}}
 
 {{% choosable language go %}}
-<dl class="resources-properties">
-
-    <dt class="property-required"
+<dl class="resources-properties"><dt class="property-required"
             title="Required">
         <span id="path_go">
 <a href="#path_go" style="color: inherit; text-decoration: inherit;">Path</a>
@@ -1963,14 +1771,11 @@ The following state arguments are supported:
         <span class="property-type">string</span>
     </dt>
     <dd>{{% md %}}Path that is excluded from indexing.
-{{% /md %}}</dd>
-</dl>
+{{% /md %}}</dd></dl>
 {{% /choosable %}}
 
 {{% choosable language nodejs %}}
-<dl class="resources-properties">
-
-    <dt class="property-required"
+<dl class="resources-properties"><dt class="property-required"
             title="Required">
         <span id="path_nodejs">
 <a href="#path_nodejs" style="color: inherit; text-decoration: inherit;">path</a>
@@ -1979,14 +1784,11 @@ The following state arguments are supported:
         <span class="property-type">string</span>
     </dt>
     <dd>{{% md %}}Path that is excluded from indexing.
-{{% /md %}}</dd>
-</dl>
+{{% /md %}}</dd></dl>
 {{% /choosable %}}
 
 {{% choosable language python %}}
-<dl class="resources-properties">
-
-    <dt class="property-required"
+<dl class="resources-properties"><dt class="property-required"
             title="Required">
         <span id="path_python">
 <a href="#path_python" style="color: inherit; text-decoration: inherit;">path</a>
@@ -1995,16 +1797,13 @@ The following state arguments are supported:
         <span class="property-type">str</span>
     </dt>
     <dd>{{% md %}}Path that is excluded from indexing.
-{{% /md %}}</dd>
-</dl>
+{{% /md %}}</dd></dl>
 {{% /choosable %}}
 
 <h4 id="sqlcontainerindexingpolicyincludedpath">Sql<wbr>Container<wbr>Indexing<wbr>Policy<wbr>Included<wbr>Path</h4>
 
 {{% choosable language csharp %}}
-<dl class="resources-properties">
-
-    <dt class="property-required"
+<dl class="resources-properties"><dt class="property-required"
             title="Required">
         <span id="path_csharp">
 <a href="#path_csharp" style="color: inherit; text-decoration: inherit;">Path</a>
@@ -2013,14 +1812,11 @@ The following state arguments are supported:
         <span class="property-type">string</span>
     </dt>
     <dd>{{% md %}}Path for which the indexing behaviour applies to.
-{{% /md %}}</dd>
-</dl>
+{{% /md %}}</dd></dl>
 {{% /choosable %}}
 
 {{% choosable language go %}}
-<dl class="resources-properties">
-
-    <dt class="property-required"
+<dl class="resources-properties"><dt class="property-required"
             title="Required">
         <span id="path_go">
 <a href="#path_go" style="color: inherit; text-decoration: inherit;">Path</a>
@@ -2029,14 +1825,11 @@ The following state arguments are supported:
         <span class="property-type">string</span>
     </dt>
     <dd>{{% md %}}Path for which the indexing behaviour applies to.
-{{% /md %}}</dd>
-</dl>
+{{% /md %}}</dd></dl>
 {{% /choosable %}}
 
 {{% choosable language nodejs %}}
-<dl class="resources-properties">
-
-    <dt class="property-required"
+<dl class="resources-properties"><dt class="property-required"
             title="Required">
         <span id="path_nodejs">
 <a href="#path_nodejs" style="color: inherit; text-decoration: inherit;">path</a>
@@ -2045,14 +1838,11 @@ The following state arguments are supported:
         <span class="property-type">string</span>
     </dt>
     <dd>{{% md %}}Path for which the indexing behaviour applies to.
-{{% /md %}}</dd>
-</dl>
+{{% /md %}}</dd></dl>
 {{% /choosable %}}
 
 {{% choosable language python %}}
-<dl class="resources-properties">
-
-    <dt class="property-required"
+<dl class="resources-properties"><dt class="property-required"
             title="Required">
         <span id="path_python">
 <a href="#path_python" style="color: inherit; text-decoration: inherit;">path</a>
@@ -2061,16 +1851,13 @@ The following state arguments are supported:
         <span class="property-type">str</span>
     </dt>
     <dd>{{% md %}}Path for which the indexing behaviour applies to.
-{{% /md %}}</dd>
-</dl>
+{{% /md %}}</dd></dl>
 {{% /choosable %}}
 
 <h4 id="sqlcontaineruniquekey">Sql<wbr>Container<wbr>Unique<wbr>Key</h4>
 
 {{% choosable language csharp %}}
-<dl class="resources-properties">
-
-    <dt class="property-required"
+<dl class="resources-properties"><dt class="property-required"
             title="Required">
         <span id="paths_csharp">
 <a href="#paths_csharp" style="color: inherit; text-decoration: inherit;">Paths</a>
@@ -2079,14 +1866,11 @@ The following state arguments are supported:
         <span class="property-type">List&lt;string&gt;</span>
     </dt>
     <dd>{{% md %}}A list of paths to use for this unique key.
-{{% /md %}}</dd>
-</dl>
+{{% /md %}}</dd></dl>
 {{% /choosable %}}
 
 {{% choosable language go %}}
-<dl class="resources-properties">
-
-    <dt class="property-required"
+<dl class="resources-properties"><dt class="property-required"
             title="Required">
         <span id="paths_go">
 <a href="#paths_go" style="color: inherit; text-decoration: inherit;">Paths</a>
@@ -2095,14 +1879,11 @@ The following state arguments are supported:
         <span class="property-type">[]string</span>
     </dt>
     <dd>{{% md %}}A list of paths to use for this unique key.
-{{% /md %}}</dd>
-</dl>
+{{% /md %}}</dd></dl>
 {{% /choosable %}}
 
 {{% choosable language nodejs %}}
-<dl class="resources-properties">
-
-    <dt class="property-required"
+<dl class="resources-properties"><dt class="property-required"
             title="Required">
         <span id="paths_nodejs">
 <a href="#paths_nodejs" style="color: inherit; text-decoration: inherit;">paths</a>
@@ -2111,14 +1892,11 @@ The following state arguments are supported:
         <span class="property-type">string[]</span>
     </dt>
     <dd>{{% md %}}A list of paths to use for this unique key.
-{{% /md %}}</dd>
-</dl>
+{{% /md %}}</dd></dl>
 {{% /choosable %}}
 
 {{% choosable language python %}}
-<dl class="resources-properties">
-
-    <dt class="property-required"
+<dl class="resources-properties"><dt class="property-required"
             title="Required">
         <span id="paths_python">
 <a href="#paths_python" style="color: inherit; text-decoration: inherit;">paths</a>
@@ -2127,8 +1905,7 @@ The following state arguments are supported:
         <span class="property-type">Sequence[str]</span>
     </dt>
     <dd>{{% md %}}A list of paths to use for this unique key.
-{{% /md %}}</dd>
-</dl>
+{{% /md %}}</dd></dl>
 {{% /choosable %}}
 ## Import
 
@@ -2149,6 +1926,6 @@ Cosmos SQL Containers can be imported using the `resource id`, e.g.
 	<dt>License</dt>
 	<dd>Apache-2.0</dd>
 	<dt>Notes</dt>
-	<dd>This Pulumi package is based on the [`azurerm` Terraform Provider](https://github.com/terraform-providers/terraform-provider-azurerm).</dd>
+	<dd>{{% md %}}This Pulumi package is based on the [`azurerm` Terraform Provider](https://github.com/terraform-providers/terraform-provider-azurerm).{{% /md %}}</dd>
 </dl>
 

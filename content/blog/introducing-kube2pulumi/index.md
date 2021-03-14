@@ -43,16 +43,14 @@ metadata:
 
 {{< chooser language "typescript,python,csharp,go" >}}
 
-{{< choosable language typescript >}}
-{{% md %}}
+{{% choosable language typescript %}}
+
 Here, we choose TypeScript and select our YAML manifest.
 
 ```sh
 $ kube2pulumi typescript -f namespace.yaml
 Conversion successful! Generated File: namespace.ts
 ```
-
-{{% /md %}}
 
 ```typescript
 import * as pulumi from "@pulumi/pulumi";
@@ -67,18 +65,16 @@ const fooNamespace = new kubernetes.core.v1.Namespace("fooNamespace", {
 });
 ```
 
-{{< /choosable >}}
+{{% /choosable %}}
 
-{{< choosable language python >}}
-{{% md %}}
+{{% choosable language python %}}
+
 Here, we choose Python and select our YAML manifest.
 
 ```sh
 $ kube2pulumi python -f namespace.yaml
 Conversion successful! Generated File: `__main__.py`
 ```
-
-{{% /md %}}
 
 ```python
 import pulumi
@@ -92,18 +88,16 @@ foo_namespace = kubernetes.core.v1.Namespace("fooNamespace",
     })
 ```
 
-{{< /choosable >}}
+{{% /choosable %}}
 
-{{< choosable language csharp >}}
-{{% md %}}
+{{% choosable language csharp %}}
+
 Here, we choose C# and select our YAML manifest.
 
 ```sh
 $ kube2pulumi csharp -f namespace.yaml
 Conversion successful! Generated File: Program.cs
 ```
-
-{{% /md %}}
 
 ```csharp
 using Pulumi;
@@ -127,18 +121,16 @@ class MyStack : Stack
 }
 ```
 
-{{< /choosable >}}
+{{% /choosable %}}
 
-{{< choosable language go >}}
-{{% md %}}
+{{% choosable language go %}}
+
 Here, we choose Go and select our YAML manifest.
 
 ```sh
 $ kube2pulumi go -f namespace.yaml
 Conversion successful! Generated File: main.go
 ```
-
-{{% /md %}}
 
 ```go
 package main
@@ -166,9 +158,9 @@ func main() {
 }
 ```
 
-{{< /choosable >}}
+{{% /choosable %}}
 
-{{< /chooser >}}
+{{% /chooser %}}
 
 ## Multi-resource Example
 

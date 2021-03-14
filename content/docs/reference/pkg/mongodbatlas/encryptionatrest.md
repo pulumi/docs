@@ -28,11 +28,17 @@ See [Encryption at Rest](https://docs.atlas.mongodb.com/security-kms-encryption/
 
 
 {{% examples %}}
+
 ## Example Usage
 
 {{< chooser language "typescript,python,go,csharp" / >}}
 
-{{% example csharp %}}
+
+
+
+
+{{< example csharp >}}
+
 ```csharp
 using Pulumi;
 using Mongodbatlas = Pulumi.Mongodbatlas;
@@ -76,9 +82,12 @@ class MyStack : Stack
 }
 ```
 
-{{% /example %}}
 
-{{% example go %}}
+{{< /example >}}
+
+
+{{< example go >}}
+
 ```go
 package main
 
@@ -125,9 +134,12 @@ func main() {
 }
 ```
 
-{{% /example %}}
 
-{{% example python %}}
+{{< /example >}}
+
+
+{{< example python >}}
+
 ```python
 import pulumi
 import pulumi_mongodbatlas as mongodbatlas
@@ -159,9 +171,12 @@ test = mongodbatlas.EncryptionAtRest("test",
     project_id="<PROJECT-ID>")
 ```
 
-{{% /example %}}
 
-{{% example typescript %}}
+{{< /example >}}
+
+
+{{< example typescript >}}
+
 
 ```typescript
 import * as pulumi from "@pulumi/pulumi";
@@ -195,9 +210,16 @@ const test = new mongodbatlas.EncryptionAtRest("test", {
 });
 ```
 
-{{% /example %}}
+
+{{< /example >}}
+
+
+
+
 
 {{% /examples %}}
+
+
 
 
 ## Create a EncryptionAtRest Resource {#create}
@@ -222,9 +244,7 @@ const test = new mongodbatlas.EncryptionAtRest("test", {
 
 {{% choosable language nodejs %}}
 
-<dl class="resources-properties">
-  
-    <dt
+<dl class="resources-properties"><dt
         class="property-required" title="Required">
         <span>name</span>
         <span class="property-indicator"></span>
@@ -232,9 +252,7 @@ const test = new mongodbatlas.EncryptionAtRest("test", {
     </dt>
     <dd>
       The unique name of the resource.
-    </dd>
-  
-    <dt
+    </dd><dt
         class="property-required" title="Required">
         <span>args</span>
         <span class="property-indicator"></span>
@@ -242,9 +260,7 @@ const test = new mongodbatlas.EncryptionAtRest("test", {
     </dt>
     <dd>
       The arguments to resource properties.
-    </dd>
-  
-    <dt
+    </dd><dt
         class="property-optional" title="Optional">
         <span>opts</span>
         <span class="property-indicator"></span>
@@ -252,10 +268,7 @@ const test = new mongodbatlas.EncryptionAtRest("test", {
     </dt>
     <dd>
       Bag of options to control resource&#39;s behavior.
-    </dd>
-  
-
-</dl>
+    </dd></dl>
 
 {{% /choosable %}}
 
@@ -281,9 +294,7 @@ const test = new mongodbatlas.EncryptionAtRest("test", {
 
 {{% choosable language go %}}
 
-<dl class="resources-properties">
-  
-    <dt
+<dl class="resources-properties"><dt
         class="property-optional" title="Optional">
         <span>ctx</span>
         <span class="property-indicator"></span>
@@ -291,9 +302,7 @@ const test = new mongodbatlas.EncryptionAtRest("test", {
     </dt>
     <dd>
       Context object for the current deployment.
-    </dd>
-  
-    <dt
+    </dd><dt
         class="property-required" title="Required">
         <span>name</span>
         <span class="property-indicator"></span>
@@ -301,9 +310,7 @@ const test = new mongodbatlas.EncryptionAtRest("test", {
     </dt>
     <dd>
       The unique name of the resource.
-    </dd>
-  
-    <dt
+    </dd><dt
         class="property-required" title="Required">
         <span>args</span>
         <span class="property-indicator"></span>
@@ -311,9 +318,7 @@ const test = new mongodbatlas.EncryptionAtRest("test", {
     </dt>
     <dd>
       The arguments to resource properties.
-    </dd>
-  
-    <dt
+    </dd><dt
         class="property-optional" title="Optional">
         <span>opts</span>
         <span class="property-indicator"></span>
@@ -321,18 +326,13 @@ const test = new mongodbatlas.EncryptionAtRest("test", {
     </dt>
     <dd>
       Bag of options to control resource&#39;s behavior.
-    </dd>
-  
-
-</dl>
+    </dd></dl>
 
 {{% /choosable %}}
 
 {{% choosable language csharp %}}
 
-<dl class="resources-properties">
-  
-    <dt
+<dl class="resources-properties"><dt
         class="property-required" title="Required">
         <span>name</span>
         <span class="property-indicator"></span>
@@ -340,9 +340,7 @@ const test = new mongodbatlas.EncryptionAtRest("test", {
     </dt>
     <dd>
       The unique name of the resource.
-    </dd>
-  
-    <dt
+    </dd><dt
         class="property-required" title="Required">
         <span>args</span>
         <span class="property-indicator"></span>
@@ -350,9 +348,7 @@ const test = new mongodbatlas.EncryptionAtRest("test", {
     </dt>
     <dd>
       The arguments to resource properties.
-    </dd>
-  
-    <dt
+    </dd><dt
         class="property-optional" title="Optional">
         <span>opts</span>
         <span class="property-indicator"></span>
@@ -360,10 +356,7 @@ const test = new mongodbatlas.EncryptionAtRest("test", {
     </dt>
     <dd>
       Bag of options to control resource&#39;s behavior.
-    </dd>
-  
-
-</dl>
+    </dd></dl>
 
 {{% /choosable %}}
 
@@ -378,9 +371,7 @@ The EncryptionAtRest resource accepts the following [input]({{< relref "/docs/in
 
 
 {{% choosable language csharp %}}
-<dl class="resources-properties">
-
-    <dt class="property-required"
+<dl class="resources-properties"><dt class="property-required"
             title="Required">
         <span id="projectid_csharp">
 <a href="#projectid_csharp" style="color: inherit; text-decoration: inherit;">Project<wbr>Id</a>
@@ -389,8 +380,7 @@ The EncryptionAtRest resource accepts the following [input]({{< relref "/docs/in
         <span class="property-type">string</span>
     </dt>
     <dd>{{% md %}}The unique identifier for the project.
-{{% /md %}}</dd>
-    <dt class="property-optional"
+{{% /md %}}</dd><dt class="property-optional"
             title="Optional">
         <span id="awskms_csharp">
 <a href="#awskms_csharp" style="color: inherit; text-decoration: inherit;">Aws<wbr>Kms</a>
@@ -399,8 +389,7 @@ The EncryptionAtRest resource accepts the following [input]({{< relref "/docs/in
         <span class="property-type"><a href="#encryptionatrestawskms">Encryption<wbr>At<wbr>Rest<wbr>Aws<wbr>Kms<wbr>Args</a></span>
     </dt>
     <dd>{{% md %}}Specifies AWS KMS configuration details and whether Encryption at Rest is enabled for an Atlas project.
-{{% /md %}}</dd>
-    <dt class="property-optional"
+{{% /md %}}</dd><dt class="property-optional"
             title="Optional">
         <span id="azurekeyvault_csharp">
 <a href="#azurekeyvault_csharp" style="color: inherit; text-decoration: inherit;">Azure<wbr>Key<wbr>Vault</a>
@@ -409,8 +398,7 @@ The EncryptionAtRest resource accepts the following [input]({{< relref "/docs/in
         <span class="property-type"><a href="#encryptionatrestazurekeyvault">Encryption<wbr>At<wbr>Rest<wbr>Azure<wbr>Key<wbr>Vault<wbr>Args</a></span>
     </dt>
     <dd>{{% md %}}Specifies Azure Key Vault configuration details and whether Encryption at Rest is enabled for an Atlas project.
-{{% /md %}}</dd>
-    <dt class="property-optional"
+{{% /md %}}</dd><dt class="property-optional"
             title="Optional">
         <span id="googlecloudkms_csharp">
 <a href="#googlecloudkms_csharp" style="color: inherit; text-decoration: inherit;">Google<wbr>Cloud<wbr>Kms</a>
@@ -419,14 +407,11 @@ The EncryptionAtRest resource accepts the following [input]({{< relref "/docs/in
         <span class="property-type"><a href="#encryptionatrestgooglecloudkms">Encryption<wbr>At<wbr>Rest<wbr>Google<wbr>Cloud<wbr>Kms<wbr>Args</a></span>
     </dt>
     <dd>{{% md %}}Specifies GCP KMS configuration details and whether Encryption at Rest is enabled for an Atlas project.
-{{% /md %}}</dd>
-</dl>
+{{% /md %}}</dd></dl>
 {{% /choosable %}}
 
 {{% choosable language go %}}
-<dl class="resources-properties">
-
-    <dt class="property-required"
+<dl class="resources-properties"><dt class="property-required"
             title="Required">
         <span id="projectid_go">
 <a href="#projectid_go" style="color: inherit; text-decoration: inherit;">Project<wbr>Id</a>
@@ -435,8 +420,7 @@ The EncryptionAtRest resource accepts the following [input]({{< relref "/docs/in
         <span class="property-type">string</span>
     </dt>
     <dd>{{% md %}}The unique identifier for the project.
-{{% /md %}}</dd>
-    <dt class="property-optional"
+{{% /md %}}</dd><dt class="property-optional"
             title="Optional">
         <span id="awskms_go">
 <a href="#awskms_go" style="color: inherit; text-decoration: inherit;">Aws<wbr>Kms</a>
@@ -445,8 +429,7 @@ The EncryptionAtRest resource accepts the following [input]({{< relref "/docs/in
         <span class="property-type"><a href="#encryptionatrestawskms">Encryption<wbr>At<wbr>Rest<wbr>Aws<wbr>Kms</a></span>
     </dt>
     <dd>{{% md %}}Specifies AWS KMS configuration details and whether Encryption at Rest is enabled for an Atlas project.
-{{% /md %}}</dd>
-    <dt class="property-optional"
+{{% /md %}}</dd><dt class="property-optional"
             title="Optional">
         <span id="azurekeyvault_go">
 <a href="#azurekeyvault_go" style="color: inherit; text-decoration: inherit;">Azure<wbr>Key<wbr>Vault</a>
@@ -455,8 +438,7 @@ The EncryptionAtRest resource accepts the following [input]({{< relref "/docs/in
         <span class="property-type"><a href="#encryptionatrestazurekeyvault">Encryption<wbr>At<wbr>Rest<wbr>Azure<wbr>Key<wbr>Vault</a></span>
     </dt>
     <dd>{{% md %}}Specifies Azure Key Vault configuration details and whether Encryption at Rest is enabled for an Atlas project.
-{{% /md %}}</dd>
-    <dt class="property-optional"
+{{% /md %}}</dd><dt class="property-optional"
             title="Optional">
         <span id="googlecloudkms_go">
 <a href="#googlecloudkms_go" style="color: inherit; text-decoration: inherit;">Google<wbr>Cloud<wbr>Kms</a>
@@ -465,14 +447,11 @@ The EncryptionAtRest resource accepts the following [input]({{< relref "/docs/in
         <span class="property-type"><a href="#encryptionatrestgooglecloudkms">Encryption<wbr>At<wbr>Rest<wbr>Google<wbr>Cloud<wbr>Kms</a></span>
     </dt>
     <dd>{{% md %}}Specifies GCP KMS configuration details and whether Encryption at Rest is enabled for an Atlas project.
-{{% /md %}}</dd>
-</dl>
+{{% /md %}}</dd></dl>
 {{% /choosable %}}
 
 {{% choosable language nodejs %}}
-<dl class="resources-properties">
-
-    <dt class="property-required"
+<dl class="resources-properties"><dt class="property-required"
             title="Required">
         <span id="projectid_nodejs">
 <a href="#projectid_nodejs" style="color: inherit; text-decoration: inherit;">project<wbr>Id</a>
@@ -481,8 +460,7 @@ The EncryptionAtRest resource accepts the following [input]({{< relref "/docs/in
         <span class="property-type">string</span>
     </dt>
     <dd>{{% md %}}The unique identifier for the project.
-{{% /md %}}</dd>
-    <dt class="property-optional"
+{{% /md %}}</dd><dt class="property-optional"
             title="Optional">
         <span id="awskms_nodejs">
 <a href="#awskms_nodejs" style="color: inherit; text-decoration: inherit;">aws<wbr>Kms</a>
@@ -491,8 +469,7 @@ The EncryptionAtRest resource accepts the following [input]({{< relref "/docs/in
         <span class="property-type"><a href="#encryptionatrestawskms">Encryption<wbr>At<wbr>Rest<wbr>Aws<wbr>Kms</a></span>
     </dt>
     <dd>{{% md %}}Specifies AWS KMS configuration details and whether Encryption at Rest is enabled for an Atlas project.
-{{% /md %}}</dd>
-    <dt class="property-optional"
+{{% /md %}}</dd><dt class="property-optional"
             title="Optional">
         <span id="azurekeyvault_nodejs">
 <a href="#azurekeyvault_nodejs" style="color: inherit; text-decoration: inherit;">azure<wbr>Key<wbr>Vault</a>
@@ -501,8 +478,7 @@ The EncryptionAtRest resource accepts the following [input]({{< relref "/docs/in
         <span class="property-type"><a href="#encryptionatrestazurekeyvault">Encryption<wbr>At<wbr>Rest<wbr>Azure<wbr>Key<wbr>Vault</a></span>
     </dt>
     <dd>{{% md %}}Specifies Azure Key Vault configuration details and whether Encryption at Rest is enabled for an Atlas project.
-{{% /md %}}</dd>
-    <dt class="property-optional"
+{{% /md %}}</dd><dt class="property-optional"
             title="Optional">
         <span id="googlecloudkms_nodejs">
 <a href="#googlecloudkms_nodejs" style="color: inherit; text-decoration: inherit;">google<wbr>Cloud<wbr>Kms</a>
@@ -511,14 +487,11 @@ The EncryptionAtRest resource accepts the following [input]({{< relref "/docs/in
         <span class="property-type"><a href="#encryptionatrestgooglecloudkms">Encryption<wbr>At<wbr>Rest<wbr>Google<wbr>Cloud<wbr>Kms</a></span>
     </dt>
     <dd>{{% md %}}Specifies GCP KMS configuration details and whether Encryption at Rest is enabled for an Atlas project.
-{{% /md %}}</dd>
-</dl>
+{{% /md %}}</dd></dl>
 {{% /choosable %}}
 
 {{% choosable language python %}}
-<dl class="resources-properties">
-
-    <dt class="property-required"
+<dl class="resources-properties"><dt class="property-required"
             title="Required">
         <span id="project_id_python">
 <a href="#project_id_python" style="color: inherit; text-decoration: inherit;">project_<wbr>id</a>
@@ -527,8 +500,7 @@ The EncryptionAtRest resource accepts the following [input]({{< relref "/docs/in
         <span class="property-type">str</span>
     </dt>
     <dd>{{% md %}}The unique identifier for the project.
-{{% /md %}}</dd>
-    <dt class="property-optional"
+{{% /md %}}</dd><dt class="property-optional"
             title="Optional">
         <span id="aws_kms_python">
 <a href="#aws_kms_python" style="color: inherit; text-decoration: inherit;">aws_<wbr>kms</a>
@@ -537,8 +509,7 @@ The EncryptionAtRest resource accepts the following [input]({{< relref "/docs/in
         <span class="property-type"><a href="#encryptionatrestawskms">Encryption<wbr>At<wbr>Rest<wbr>Aws<wbr>Kms<wbr>Args</a></span>
     </dt>
     <dd>{{% md %}}Specifies AWS KMS configuration details and whether Encryption at Rest is enabled for an Atlas project.
-{{% /md %}}</dd>
-    <dt class="property-optional"
+{{% /md %}}</dd><dt class="property-optional"
             title="Optional">
         <span id="azure_key_vault_python">
 <a href="#azure_key_vault_python" style="color: inherit; text-decoration: inherit;">azure_<wbr>key_<wbr>vault</a>
@@ -547,8 +518,7 @@ The EncryptionAtRest resource accepts the following [input]({{< relref "/docs/in
         <span class="property-type"><a href="#encryptionatrestazurekeyvault">Encryption<wbr>At<wbr>Rest<wbr>Azure<wbr>Key<wbr>Vault<wbr>Args</a></span>
     </dt>
     <dd>{{% md %}}Specifies Azure Key Vault configuration details and whether Encryption at Rest is enabled for an Atlas project.
-{{% /md %}}</dd>
-    <dt class="property-optional"
+{{% /md %}}</dd><dt class="property-optional"
             title="Optional">
         <span id="google_cloud_kms_python">
 <a href="#google_cloud_kms_python" style="color: inherit; text-decoration: inherit;">google_<wbr>cloud_<wbr>kms</a>
@@ -557,8 +527,7 @@ The EncryptionAtRest resource accepts the following [input]({{< relref "/docs/in
         <span class="property-type"><a href="#encryptionatrestgooglecloudkms">Encryption<wbr>At<wbr>Rest<wbr>Google<wbr>Cloud<wbr>Kms<wbr>Args</a></span>
     </dt>
     <dd>{{% md %}}Specifies GCP KMS configuration details and whether Encryption at Rest is enabled for an Atlas project.
-{{% /md %}}</dd>
-</dl>
+{{% /md %}}</dd></dl>
 {{% /choosable %}}
 
 
@@ -569,9 +538,7 @@ All [input](#inputs) properties are implicitly available as output properties. A
 
 
 {{% choosable language csharp %}}
-<dl class="resources-properties">
-
-    <dt class="property-"
+<dl class="resources-properties"><dt class="property-"
             title="">
         <span id="id_csharp">
 <a href="#id_csharp" style="color: inherit; text-decoration: inherit;">Id</a>
@@ -579,14 +546,11 @@ All [input](#inputs) properties are implicitly available as output properties. A
         <span class="property-indicator"></span>
         <span class="property-type">string</span>
     </dt>
-    <dd>{{% md %}}The provider-assigned unique ID for this managed resource.{{% /md %}}</dd>
-</dl>
+    <dd>{{% md %}}The provider-assigned unique ID for this managed resource.{{% /md %}}</dd></dl>
 {{% /choosable %}}
 
 {{% choosable language go %}}
-<dl class="resources-properties">
-
-    <dt class="property-"
+<dl class="resources-properties"><dt class="property-"
             title="">
         <span id="id_go">
 <a href="#id_go" style="color: inherit; text-decoration: inherit;">Id</a>
@@ -594,14 +558,11 @@ All [input](#inputs) properties are implicitly available as output properties. A
         <span class="property-indicator"></span>
         <span class="property-type">string</span>
     </dt>
-    <dd>{{% md %}}The provider-assigned unique ID for this managed resource.{{% /md %}}</dd>
-</dl>
+    <dd>{{% md %}}The provider-assigned unique ID for this managed resource.{{% /md %}}</dd></dl>
 {{% /choosable %}}
 
 {{% choosable language nodejs %}}
-<dl class="resources-properties">
-
-    <dt class="property-"
+<dl class="resources-properties"><dt class="property-"
             title="">
         <span id="id_nodejs">
 <a href="#id_nodejs" style="color: inherit; text-decoration: inherit;">id</a>
@@ -609,14 +570,11 @@ All [input](#inputs) properties are implicitly available as output properties. A
         <span class="property-indicator"></span>
         <span class="property-type">string</span>
     </dt>
-    <dd>{{% md %}}The provider-assigned unique ID for this managed resource.{{% /md %}}</dd>
-</dl>
+    <dd>{{% md %}}The provider-assigned unique ID for this managed resource.{{% /md %}}</dd></dl>
 {{% /choosable %}}
 
 {{% choosable language python %}}
-<dl class="resources-properties">
-
-    <dt class="property-"
+<dl class="resources-properties"><dt class="property-"
             title="">
         <span id="id_python">
 <a href="#id_python" style="color: inherit; text-decoration: inherit;">id</a>
@@ -624,8 +582,7 @@ All [input](#inputs) properties are implicitly available as output properties. A
         <span class="property-indicator"></span>
         <span class="property-type">str</span>
     </dt>
-    <dd>{{% md %}}The provider-assigned unique ID for this managed resource.{{% /md %}}</dd>
-</dl>
+    <dd>{{% md %}}The provider-assigned unique ID for this managed resource.{{% /md %}}</dd></dl>
 {{% /choosable %}}
 
 
@@ -752,9 +709,7 @@ The following state arguments are supported:
 
 
 {{% choosable language csharp %}}
-<dl class="resources-properties">
-
-    <dt class="property-optional"
+<dl class="resources-properties"><dt class="property-optional"
             title="Optional">
         <span id="state_awskms_csharp">
 <a href="#state_awskms_csharp" style="color: inherit; text-decoration: inherit;">Aws<wbr>Kms</a>
@@ -763,8 +718,7 @@ The following state arguments are supported:
         <span class="property-type"><a href="#encryptionatrestawskms">Encryption<wbr>At<wbr>Rest<wbr>Aws<wbr>Kms<wbr>Args</a></span>
     </dt>
     <dd>{{% md %}}Specifies AWS KMS configuration details and whether Encryption at Rest is enabled for an Atlas project.
-{{% /md %}}</dd>
-    <dt class="property-optional"
+{{% /md %}}</dd><dt class="property-optional"
             title="Optional">
         <span id="state_azurekeyvault_csharp">
 <a href="#state_azurekeyvault_csharp" style="color: inherit; text-decoration: inherit;">Azure<wbr>Key<wbr>Vault</a>
@@ -773,8 +727,7 @@ The following state arguments are supported:
         <span class="property-type"><a href="#encryptionatrestazurekeyvault">Encryption<wbr>At<wbr>Rest<wbr>Azure<wbr>Key<wbr>Vault<wbr>Args</a></span>
     </dt>
     <dd>{{% md %}}Specifies Azure Key Vault configuration details and whether Encryption at Rest is enabled for an Atlas project.
-{{% /md %}}</dd>
-    <dt class="property-optional"
+{{% /md %}}</dd><dt class="property-optional"
             title="Optional">
         <span id="state_googlecloudkms_csharp">
 <a href="#state_googlecloudkms_csharp" style="color: inherit; text-decoration: inherit;">Google<wbr>Cloud<wbr>Kms</a>
@@ -783,8 +736,7 @@ The following state arguments are supported:
         <span class="property-type"><a href="#encryptionatrestgooglecloudkms">Encryption<wbr>At<wbr>Rest<wbr>Google<wbr>Cloud<wbr>Kms<wbr>Args</a></span>
     </dt>
     <dd>{{% md %}}Specifies GCP KMS configuration details and whether Encryption at Rest is enabled for an Atlas project.
-{{% /md %}}</dd>
-    <dt class="property-optional"
+{{% /md %}}</dd><dt class="property-optional"
             title="Optional">
         <span id="state_projectid_csharp">
 <a href="#state_projectid_csharp" style="color: inherit; text-decoration: inherit;">Project<wbr>Id</a>
@@ -793,14 +745,11 @@ The following state arguments are supported:
         <span class="property-type">string</span>
     </dt>
     <dd>{{% md %}}The unique identifier for the project.
-{{% /md %}}</dd>
-</dl>
+{{% /md %}}</dd></dl>
 {{% /choosable %}}
 
 {{% choosable language go %}}
-<dl class="resources-properties">
-
-    <dt class="property-optional"
+<dl class="resources-properties"><dt class="property-optional"
             title="Optional">
         <span id="state_awskms_go">
 <a href="#state_awskms_go" style="color: inherit; text-decoration: inherit;">Aws<wbr>Kms</a>
@@ -809,8 +758,7 @@ The following state arguments are supported:
         <span class="property-type"><a href="#encryptionatrestawskms">Encryption<wbr>At<wbr>Rest<wbr>Aws<wbr>Kms</a></span>
     </dt>
     <dd>{{% md %}}Specifies AWS KMS configuration details and whether Encryption at Rest is enabled for an Atlas project.
-{{% /md %}}</dd>
-    <dt class="property-optional"
+{{% /md %}}</dd><dt class="property-optional"
             title="Optional">
         <span id="state_azurekeyvault_go">
 <a href="#state_azurekeyvault_go" style="color: inherit; text-decoration: inherit;">Azure<wbr>Key<wbr>Vault</a>
@@ -819,8 +767,7 @@ The following state arguments are supported:
         <span class="property-type"><a href="#encryptionatrestazurekeyvault">Encryption<wbr>At<wbr>Rest<wbr>Azure<wbr>Key<wbr>Vault</a></span>
     </dt>
     <dd>{{% md %}}Specifies Azure Key Vault configuration details and whether Encryption at Rest is enabled for an Atlas project.
-{{% /md %}}</dd>
-    <dt class="property-optional"
+{{% /md %}}</dd><dt class="property-optional"
             title="Optional">
         <span id="state_googlecloudkms_go">
 <a href="#state_googlecloudkms_go" style="color: inherit; text-decoration: inherit;">Google<wbr>Cloud<wbr>Kms</a>
@@ -829,8 +776,7 @@ The following state arguments are supported:
         <span class="property-type"><a href="#encryptionatrestgooglecloudkms">Encryption<wbr>At<wbr>Rest<wbr>Google<wbr>Cloud<wbr>Kms</a></span>
     </dt>
     <dd>{{% md %}}Specifies GCP KMS configuration details and whether Encryption at Rest is enabled for an Atlas project.
-{{% /md %}}</dd>
-    <dt class="property-optional"
+{{% /md %}}</dd><dt class="property-optional"
             title="Optional">
         <span id="state_projectid_go">
 <a href="#state_projectid_go" style="color: inherit; text-decoration: inherit;">Project<wbr>Id</a>
@@ -839,14 +785,11 @@ The following state arguments are supported:
         <span class="property-type">string</span>
     </dt>
     <dd>{{% md %}}The unique identifier for the project.
-{{% /md %}}</dd>
-</dl>
+{{% /md %}}</dd></dl>
 {{% /choosable %}}
 
 {{% choosable language nodejs %}}
-<dl class="resources-properties">
-
-    <dt class="property-optional"
+<dl class="resources-properties"><dt class="property-optional"
             title="Optional">
         <span id="state_awskms_nodejs">
 <a href="#state_awskms_nodejs" style="color: inherit; text-decoration: inherit;">aws<wbr>Kms</a>
@@ -855,8 +798,7 @@ The following state arguments are supported:
         <span class="property-type"><a href="#encryptionatrestawskms">Encryption<wbr>At<wbr>Rest<wbr>Aws<wbr>Kms</a></span>
     </dt>
     <dd>{{% md %}}Specifies AWS KMS configuration details and whether Encryption at Rest is enabled for an Atlas project.
-{{% /md %}}</dd>
-    <dt class="property-optional"
+{{% /md %}}</dd><dt class="property-optional"
             title="Optional">
         <span id="state_azurekeyvault_nodejs">
 <a href="#state_azurekeyvault_nodejs" style="color: inherit; text-decoration: inherit;">azure<wbr>Key<wbr>Vault</a>
@@ -865,8 +807,7 @@ The following state arguments are supported:
         <span class="property-type"><a href="#encryptionatrestazurekeyvault">Encryption<wbr>At<wbr>Rest<wbr>Azure<wbr>Key<wbr>Vault</a></span>
     </dt>
     <dd>{{% md %}}Specifies Azure Key Vault configuration details and whether Encryption at Rest is enabled for an Atlas project.
-{{% /md %}}</dd>
-    <dt class="property-optional"
+{{% /md %}}</dd><dt class="property-optional"
             title="Optional">
         <span id="state_googlecloudkms_nodejs">
 <a href="#state_googlecloudkms_nodejs" style="color: inherit; text-decoration: inherit;">google<wbr>Cloud<wbr>Kms</a>
@@ -875,8 +816,7 @@ The following state arguments are supported:
         <span class="property-type"><a href="#encryptionatrestgooglecloudkms">Encryption<wbr>At<wbr>Rest<wbr>Google<wbr>Cloud<wbr>Kms</a></span>
     </dt>
     <dd>{{% md %}}Specifies GCP KMS configuration details and whether Encryption at Rest is enabled for an Atlas project.
-{{% /md %}}</dd>
-    <dt class="property-optional"
+{{% /md %}}</dd><dt class="property-optional"
             title="Optional">
         <span id="state_projectid_nodejs">
 <a href="#state_projectid_nodejs" style="color: inherit; text-decoration: inherit;">project<wbr>Id</a>
@@ -885,14 +825,11 @@ The following state arguments are supported:
         <span class="property-type">string</span>
     </dt>
     <dd>{{% md %}}The unique identifier for the project.
-{{% /md %}}</dd>
-</dl>
+{{% /md %}}</dd></dl>
 {{% /choosable %}}
 
 {{% choosable language python %}}
-<dl class="resources-properties">
-
-    <dt class="property-optional"
+<dl class="resources-properties"><dt class="property-optional"
             title="Optional">
         <span id="state_aws_kms_python">
 <a href="#state_aws_kms_python" style="color: inherit; text-decoration: inherit;">aws_<wbr>kms</a>
@@ -901,8 +838,7 @@ The following state arguments are supported:
         <span class="property-type"><a href="#encryptionatrestawskms">Encryption<wbr>At<wbr>Rest<wbr>Aws<wbr>Kms<wbr>Args</a></span>
     </dt>
     <dd>{{% md %}}Specifies AWS KMS configuration details and whether Encryption at Rest is enabled for an Atlas project.
-{{% /md %}}</dd>
-    <dt class="property-optional"
+{{% /md %}}</dd><dt class="property-optional"
             title="Optional">
         <span id="state_azure_key_vault_python">
 <a href="#state_azure_key_vault_python" style="color: inherit; text-decoration: inherit;">azure_<wbr>key_<wbr>vault</a>
@@ -911,8 +847,7 @@ The following state arguments are supported:
         <span class="property-type"><a href="#encryptionatrestazurekeyvault">Encryption<wbr>At<wbr>Rest<wbr>Azure<wbr>Key<wbr>Vault<wbr>Args</a></span>
     </dt>
     <dd>{{% md %}}Specifies Azure Key Vault configuration details and whether Encryption at Rest is enabled for an Atlas project.
-{{% /md %}}</dd>
-    <dt class="property-optional"
+{{% /md %}}</dd><dt class="property-optional"
             title="Optional">
         <span id="state_google_cloud_kms_python">
 <a href="#state_google_cloud_kms_python" style="color: inherit; text-decoration: inherit;">google_<wbr>cloud_<wbr>kms</a>
@@ -921,8 +856,7 @@ The following state arguments are supported:
         <span class="property-type"><a href="#encryptionatrestgooglecloudkms">Encryption<wbr>At<wbr>Rest<wbr>Google<wbr>Cloud<wbr>Kms<wbr>Args</a></span>
     </dt>
     <dd>{{% md %}}Specifies GCP KMS configuration details and whether Encryption at Rest is enabled for an Atlas project.
-{{% /md %}}</dd>
-    <dt class="property-optional"
+{{% /md %}}</dd><dt class="property-optional"
             title="Optional">
         <span id="state_project_id_python">
 <a href="#state_project_id_python" style="color: inherit; text-decoration: inherit;">project_<wbr>id</a>
@@ -931,8 +865,7 @@ The following state arguments are supported:
         <span class="property-type">str</span>
     </dt>
     <dd>{{% md %}}The unique identifier for the project.
-{{% /md %}}</dd>
-</dl>
+{{% /md %}}</dd></dl>
 {{% /choosable %}}
 
 
@@ -947,9 +880,7 @@ The following state arguments are supported:
 <h4 id="encryptionatrestawskms">Encryption<wbr>At<wbr>Rest<wbr>Aws<wbr>Kms</h4>
 
 {{% choosable language csharp %}}
-<dl class="resources-properties">
-
-    <dt class="property-optional"
+<dl class="resources-properties"><dt class="property-optional"
             title="Optional">
         <span id="accesskeyid_csharp">
 <a href="#accesskeyid_csharp" style="color: inherit; text-decoration: inherit;">Access<wbr>Key<wbr>Id</a>
@@ -958,8 +889,7 @@ The following state arguments are supported:
         <span class="property-type">string</span>
     </dt>
     <dd>{{% md %}}The IAM access key ID with permissions to access the customer master key specified by customerMasterKeyID.
-{{% /md %}}</dd>
-    <dt class="property-optional"
+{{% /md %}}</dd><dt class="property-optional"
             title="Optional">
         <span id="customermasterkeyid_csharp">
 <a href="#customermasterkeyid_csharp" style="color: inherit; text-decoration: inherit;">Customer<wbr>Master<wbr>Key<wbr>Id</a>
@@ -968,8 +898,7 @@ The following state arguments are supported:
         <span class="property-type">string</span>
     </dt>
     <dd>{{% md %}}The AWS customer master key used to encrypt and decrypt the MongoDB master keys.
-{{% /md %}}</dd>
-    <dt class="property-optional"
+{{% /md %}}</dd><dt class="property-optional"
             title="Optional">
         <span id="enabled_csharp">
 <a href="#enabled_csharp" style="color: inherit; text-decoration: inherit;">Enabled</a>
@@ -978,8 +907,7 @@ The following state arguments are supported:
         <span class="property-type">bool</span>
     </dt>
     <dd>{{% md %}}Specifies whether Encryption at Rest is enabled for an Atlas project. To disable Encryption at Rest, pass only this parameter with a value of false. When you disable Encryption at Rest, Atlas also removes the configuration details.
-{{% /md %}}</dd>
-    <dt class="property-optional"
+{{% /md %}}</dd><dt class="property-optional"
             title="Optional">
         <span id="region_csharp">
 <a href="#region_csharp" style="color: inherit; text-decoration: inherit;">Region</a>
@@ -988,8 +916,7 @@ The following state arguments are supported:
         <span class="property-type">string</span>
     </dt>
     <dd>{{% md %}}The AWS region in which the AWS customer master key exists: CA_CENTRAL_1, US_EAST_1, US_EAST_2, US_WEST_1, US_WEST_2, SA_EAST_1
-{{% /md %}}</dd>
-    <dt class="property-optional"
+{{% /md %}}</dd><dt class="property-optional"
             title="Optional">
         <span id="roleid_csharp">
 <a href="#roleid_csharp" style="color: inherit; text-decoration: inherit;">Role<wbr>Id</a>
@@ -998,8 +925,7 @@ The following state arguments are supported:
         <span class="property-type">string</span>
     </dt>
     <dd>{{% md %}}ID of an AWS IAM role authorized to manage an AWS customer master key. To find the ID for an existing IAM role check the `role_id` attribute of the `mongodbatlas.CloudProviderAccess` resource.
-{{% /md %}}</dd>
-    <dt class="property-optional"
+{{% /md %}}</dd><dt class="property-optional"
             title="Optional">
         <span id="secretaccesskey_csharp">
 <a href="#secretaccesskey_csharp" style="color: inherit; text-decoration: inherit;">Secret<wbr>Access<wbr>Key</a>
@@ -1008,14 +934,11 @@ The following state arguments are supported:
         <span class="property-type">string</span>
     </dt>
     <dd>{{% md %}}The IAM secret access key with permissions to access the customer master key specified by customerMasterKeyID.
-{{% /md %}}</dd>
-</dl>
+{{% /md %}}</dd></dl>
 {{% /choosable %}}
 
 {{% choosable language go %}}
-<dl class="resources-properties">
-
-    <dt class="property-optional"
+<dl class="resources-properties"><dt class="property-optional"
             title="Optional">
         <span id="accesskeyid_go">
 <a href="#accesskeyid_go" style="color: inherit; text-decoration: inherit;">Access<wbr>Key<wbr>Id</a>
@@ -1024,8 +947,7 @@ The following state arguments are supported:
         <span class="property-type">string</span>
     </dt>
     <dd>{{% md %}}The IAM access key ID with permissions to access the customer master key specified by customerMasterKeyID.
-{{% /md %}}</dd>
-    <dt class="property-optional"
+{{% /md %}}</dd><dt class="property-optional"
             title="Optional">
         <span id="customermasterkeyid_go">
 <a href="#customermasterkeyid_go" style="color: inherit; text-decoration: inherit;">Customer<wbr>Master<wbr>Key<wbr>Id</a>
@@ -1034,8 +956,7 @@ The following state arguments are supported:
         <span class="property-type">string</span>
     </dt>
     <dd>{{% md %}}The AWS customer master key used to encrypt and decrypt the MongoDB master keys.
-{{% /md %}}</dd>
-    <dt class="property-optional"
+{{% /md %}}</dd><dt class="property-optional"
             title="Optional">
         <span id="enabled_go">
 <a href="#enabled_go" style="color: inherit; text-decoration: inherit;">Enabled</a>
@@ -1044,8 +965,7 @@ The following state arguments are supported:
         <span class="property-type">bool</span>
     </dt>
     <dd>{{% md %}}Specifies whether Encryption at Rest is enabled for an Atlas project. To disable Encryption at Rest, pass only this parameter with a value of false. When you disable Encryption at Rest, Atlas also removes the configuration details.
-{{% /md %}}</dd>
-    <dt class="property-optional"
+{{% /md %}}</dd><dt class="property-optional"
             title="Optional">
         <span id="region_go">
 <a href="#region_go" style="color: inherit; text-decoration: inherit;">Region</a>
@@ -1054,8 +974,7 @@ The following state arguments are supported:
         <span class="property-type">string</span>
     </dt>
     <dd>{{% md %}}The AWS region in which the AWS customer master key exists: CA_CENTRAL_1, US_EAST_1, US_EAST_2, US_WEST_1, US_WEST_2, SA_EAST_1
-{{% /md %}}</dd>
-    <dt class="property-optional"
+{{% /md %}}</dd><dt class="property-optional"
             title="Optional">
         <span id="roleid_go">
 <a href="#roleid_go" style="color: inherit; text-decoration: inherit;">Role<wbr>Id</a>
@@ -1064,8 +983,7 @@ The following state arguments are supported:
         <span class="property-type">string</span>
     </dt>
     <dd>{{% md %}}ID of an AWS IAM role authorized to manage an AWS customer master key. To find the ID for an existing IAM role check the `role_id` attribute of the `mongodbatlas.CloudProviderAccess` resource.
-{{% /md %}}</dd>
-    <dt class="property-optional"
+{{% /md %}}</dd><dt class="property-optional"
             title="Optional">
         <span id="secretaccesskey_go">
 <a href="#secretaccesskey_go" style="color: inherit; text-decoration: inherit;">Secret<wbr>Access<wbr>Key</a>
@@ -1074,14 +992,11 @@ The following state arguments are supported:
         <span class="property-type">string</span>
     </dt>
     <dd>{{% md %}}The IAM secret access key with permissions to access the customer master key specified by customerMasterKeyID.
-{{% /md %}}</dd>
-</dl>
+{{% /md %}}</dd></dl>
 {{% /choosable %}}
 
 {{% choosable language nodejs %}}
-<dl class="resources-properties">
-
-    <dt class="property-optional"
+<dl class="resources-properties"><dt class="property-optional"
             title="Optional">
         <span id="accesskeyid_nodejs">
 <a href="#accesskeyid_nodejs" style="color: inherit; text-decoration: inherit;">access<wbr>Key<wbr>Id</a>
@@ -1090,8 +1005,7 @@ The following state arguments are supported:
         <span class="property-type">string</span>
     </dt>
     <dd>{{% md %}}The IAM access key ID with permissions to access the customer master key specified by customerMasterKeyID.
-{{% /md %}}</dd>
-    <dt class="property-optional"
+{{% /md %}}</dd><dt class="property-optional"
             title="Optional">
         <span id="customermasterkeyid_nodejs">
 <a href="#customermasterkeyid_nodejs" style="color: inherit; text-decoration: inherit;">customer<wbr>Master<wbr>Key<wbr>Id</a>
@@ -1100,8 +1014,7 @@ The following state arguments are supported:
         <span class="property-type">string</span>
     </dt>
     <dd>{{% md %}}The AWS customer master key used to encrypt and decrypt the MongoDB master keys.
-{{% /md %}}</dd>
-    <dt class="property-optional"
+{{% /md %}}</dd><dt class="property-optional"
             title="Optional">
         <span id="enabled_nodejs">
 <a href="#enabled_nodejs" style="color: inherit; text-decoration: inherit;">enabled</a>
@@ -1110,8 +1023,7 @@ The following state arguments are supported:
         <span class="property-type">boolean</span>
     </dt>
     <dd>{{% md %}}Specifies whether Encryption at Rest is enabled for an Atlas project. To disable Encryption at Rest, pass only this parameter with a value of false. When you disable Encryption at Rest, Atlas also removes the configuration details.
-{{% /md %}}</dd>
-    <dt class="property-optional"
+{{% /md %}}</dd><dt class="property-optional"
             title="Optional">
         <span id="region_nodejs">
 <a href="#region_nodejs" style="color: inherit; text-decoration: inherit;">region</a>
@@ -1120,8 +1032,7 @@ The following state arguments are supported:
         <span class="property-type">string</span>
     </dt>
     <dd>{{% md %}}The AWS region in which the AWS customer master key exists: CA_CENTRAL_1, US_EAST_1, US_EAST_2, US_WEST_1, US_WEST_2, SA_EAST_1
-{{% /md %}}</dd>
-    <dt class="property-optional"
+{{% /md %}}</dd><dt class="property-optional"
             title="Optional">
         <span id="roleid_nodejs">
 <a href="#roleid_nodejs" style="color: inherit; text-decoration: inherit;">role<wbr>Id</a>
@@ -1130,8 +1041,7 @@ The following state arguments are supported:
         <span class="property-type">string</span>
     </dt>
     <dd>{{% md %}}ID of an AWS IAM role authorized to manage an AWS customer master key. To find the ID for an existing IAM role check the `role_id` attribute of the `mongodbatlas.CloudProviderAccess` resource.
-{{% /md %}}</dd>
-    <dt class="property-optional"
+{{% /md %}}</dd><dt class="property-optional"
             title="Optional">
         <span id="secretaccesskey_nodejs">
 <a href="#secretaccesskey_nodejs" style="color: inherit; text-decoration: inherit;">secret<wbr>Access<wbr>Key</a>
@@ -1140,14 +1050,11 @@ The following state arguments are supported:
         <span class="property-type">string</span>
     </dt>
     <dd>{{% md %}}The IAM secret access key with permissions to access the customer master key specified by customerMasterKeyID.
-{{% /md %}}</dd>
-</dl>
+{{% /md %}}</dd></dl>
 {{% /choosable %}}
 
 {{% choosable language python %}}
-<dl class="resources-properties">
-
-    <dt class="property-optional"
+<dl class="resources-properties"><dt class="property-optional"
             title="Optional">
         <span id="access_key_id_python">
 <a href="#access_key_id_python" style="color: inherit; text-decoration: inherit;">access_<wbr>key_<wbr>id</a>
@@ -1156,8 +1063,7 @@ The following state arguments are supported:
         <span class="property-type">str</span>
     </dt>
     <dd>{{% md %}}The IAM access key ID with permissions to access the customer master key specified by customerMasterKeyID.
-{{% /md %}}</dd>
-    <dt class="property-optional"
+{{% /md %}}</dd><dt class="property-optional"
             title="Optional">
         <span id="customer_master_key_id_python">
 <a href="#customer_master_key_id_python" style="color: inherit; text-decoration: inherit;">customer_<wbr>master_<wbr>key_<wbr>id</a>
@@ -1166,8 +1072,7 @@ The following state arguments are supported:
         <span class="property-type">str</span>
     </dt>
     <dd>{{% md %}}The AWS customer master key used to encrypt and decrypt the MongoDB master keys.
-{{% /md %}}</dd>
-    <dt class="property-optional"
+{{% /md %}}</dd><dt class="property-optional"
             title="Optional">
         <span id="enabled_python">
 <a href="#enabled_python" style="color: inherit; text-decoration: inherit;">enabled</a>
@@ -1176,8 +1081,7 @@ The following state arguments are supported:
         <span class="property-type">bool</span>
     </dt>
     <dd>{{% md %}}Specifies whether Encryption at Rest is enabled for an Atlas project. To disable Encryption at Rest, pass only this parameter with a value of false. When you disable Encryption at Rest, Atlas also removes the configuration details.
-{{% /md %}}</dd>
-    <dt class="property-optional"
+{{% /md %}}</dd><dt class="property-optional"
             title="Optional">
         <span id="region_python">
 <a href="#region_python" style="color: inherit; text-decoration: inherit;">region</a>
@@ -1186,8 +1090,7 @@ The following state arguments are supported:
         <span class="property-type">str</span>
     </dt>
     <dd>{{% md %}}The AWS region in which the AWS customer master key exists: CA_CENTRAL_1, US_EAST_1, US_EAST_2, US_WEST_1, US_WEST_2, SA_EAST_1
-{{% /md %}}</dd>
-    <dt class="property-optional"
+{{% /md %}}</dd><dt class="property-optional"
             title="Optional">
         <span id="role_id_python">
 <a href="#role_id_python" style="color: inherit; text-decoration: inherit;">role_<wbr>id</a>
@@ -1196,8 +1099,7 @@ The following state arguments are supported:
         <span class="property-type">str</span>
     </dt>
     <dd>{{% md %}}ID of an AWS IAM role authorized to manage an AWS customer master key. To find the ID for an existing IAM role check the `role_id` attribute of the `mongodbatlas.CloudProviderAccess` resource.
-{{% /md %}}</dd>
-    <dt class="property-optional"
+{{% /md %}}</dd><dt class="property-optional"
             title="Optional">
         <span id="secret_access_key_python">
 <a href="#secret_access_key_python" style="color: inherit; text-decoration: inherit;">secret_<wbr>access_<wbr>key</a>
@@ -1206,16 +1108,13 @@ The following state arguments are supported:
         <span class="property-type">str</span>
     </dt>
     <dd>{{% md %}}The IAM secret access key with permissions to access the customer master key specified by customerMasterKeyID.
-{{% /md %}}</dd>
-</dl>
+{{% /md %}}</dd></dl>
 {{% /choosable %}}
 
 <h4 id="encryptionatrestazurekeyvault">Encryption<wbr>At<wbr>Rest<wbr>Azure<wbr>Key<wbr>Vault</h4>
 
 {{% choosable language csharp %}}
-<dl class="resources-properties">
-
-    <dt class="property-required"
+<dl class="resources-properties"><dt class="property-required"
             title="Required">
         <span id="enabled_csharp">
 <a href="#enabled_csharp" style="color: inherit; text-decoration: inherit;">Enabled</a>
@@ -1224,8 +1123,7 @@ The following state arguments are supported:
         <span class="property-type">bool</span>
     </dt>
     <dd>{{% md %}}Specifies whether Encryption at Rest is enabled for an Atlas project. To disable Encryption at Rest, pass only this parameter with a value of false. When you disable Encryption at Rest, Atlas also removes the configuration details.
-{{% /md %}}</dd>
-    <dt class="property-optional"
+{{% /md %}}</dd><dt class="property-optional"
             title="Optional">
         <span id="azureenvironment_csharp">
 <a href="#azureenvironment_csharp" style="color: inherit; text-decoration: inherit;">Azure<wbr>Environment</a>
@@ -1234,8 +1132,7 @@ The following state arguments are supported:
         <span class="property-type">string</span>
     </dt>
     <dd>{{% md %}}The Azure environment where the Azure account credentials reside. Valid values are the following: AZURE, AZURE_CHINA, AZURE_GERMANY
-{{% /md %}}</dd>
-    <dt class="property-optional"
+{{% /md %}}</dd><dt class="property-optional"
             title="Optional">
         <span id="clientid_csharp">
 <a href="#clientid_csharp" style="color: inherit; text-decoration: inherit;">Client<wbr>Id</a>
@@ -1244,8 +1141,7 @@ The following state arguments are supported:
         <span class="property-type">string</span>
     </dt>
     <dd>{{% md %}}The client ID, also known as the application ID, for an Azure application associated with the Azure AD tenant.
-{{% /md %}}</dd>
-    <dt class="property-optional"
+{{% /md %}}</dd><dt class="property-optional"
             title="Optional">
         <span id="keyidentifier_csharp">
 <a href="#keyidentifier_csharp" style="color: inherit; text-decoration: inherit;">Key<wbr>Identifier</a>
@@ -1254,8 +1150,7 @@ The following state arguments are supported:
         <span class="property-type">string</span>
     </dt>
     <dd>{{% md %}}The unique identifier of a key in an Azure Key Vault.
-{{% /md %}}</dd>
-    <dt class="property-optional"
+{{% /md %}}</dd><dt class="property-optional"
             title="Optional">
         <span id="keyvaultname_csharp">
 <a href="#keyvaultname_csharp" style="color: inherit; text-decoration: inherit;">Key<wbr>Vault<wbr>Name</a>
@@ -1264,8 +1159,7 @@ The following state arguments are supported:
         <span class="property-type">string</span>
     </dt>
     <dd>{{% md %}}The name of an Azure Key Vault containing your key.
-{{% /md %}}</dd>
-    <dt class="property-optional"
+{{% /md %}}</dd><dt class="property-optional"
             title="Optional">
         <span id="resourcegroupname_csharp">
 <a href="#resourcegroupname_csharp" style="color: inherit; text-decoration: inherit;">Resource<wbr>Group<wbr>Name</a>
@@ -1274,8 +1168,7 @@ The following state arguments are supported:
         <span class="property-type">string</span>
     </dt>
     <dd>{{% md %}}The name of the Azure Resource group that contains an Azure Key Vault.
-{{% /md %}}</dd>
-    <dt class="property-optional"
+{{% /md %}}</dd><dt class="property-optional"
             title="Optional">
         <span id="secret_csharp">
 <a href="#secret_csharp" style="color: inherit; text-decoration: inherit;">Secret</a>
@@ -1284,8 +1177,7 @@ The following state arguments are supported:
         <span class="property-type">string</span>
     </dt>
     <dd>{{% md %}}The secret associated with the Azure Key Vault specified by azureKeyVault.tenantID.
-{{% /md %}}</dd>
-    <dt class="property-optional"
+{{% /md %}}</dd><dt class="property-optional"
             title="Optional">
         <span id="subscriptionid_csharp">
 <a href="#subscriptionid_csharp" style="color: inherit; text-decoration: inherit;">Subscription<wbr>Id</a>
@@ -1294,8 +1186,7 @@ The following state arguments are supported:
         <span class="property-type">string</span>
     </dt>
     <dd>{{% md %}}The unique identifier associated with an Azure subscription.
-{{% /md %}}</dd>
-    <dt class="property-optional"
+{{% /md %}}</dd><dt class="property-optional"
             title="Optional">
         <span id="tenantid_csharp">
 <a href="#tenantid_csharp" style="color: inherit; text-decoration: inherit;">Tenant<wbr>Id</a>
@@ -1304,14 +1195,11 @@ The following state arguments are supported:
         <span class="property-type">string</span>
     </dt>
     <dd>{{% md %}}The unique identifier for an Azure AD tenant within an Azure subscription.
-{{% /md %}}</dd>
-</dl>
+{{% /md %}}</dd></dl>
 {{% /choosable %}}
 
 {{% choosable language go %}}
-<dl class="resources-properties">
-
-    <dt class="property-required"
+<dl class="resources-properties"><dt class="property-required"
             title="Required">
         <span id="enabled_go">
 <a href="#enabled_go" style="color: inherit; text-decoration: inherit;">Enabled</a>
@@ -1320,8 +1208,7 @@ The following state arguments are supported:
         <span class="property-type">bool</span>
     </dt>
     <dd>{{% md %}}Specifies whether Encryption at Rest is enabled for an Atlas project. To disable Encryption at Rest, pass only this parameter with a value of false. When you disable Encryption at Rest, Atlas also removes the configuration details.
-{{% /md %}}</dd>
-    <dt class="property-optional"
+{{% /md %}}</dd><dt class="property-optional"
             title="Optional">
         <span id="azureenvironment_go">
 <a href="#azureenvironment_go" style="color: inherit; text-decoration: inherit;">Azure<wbr>Environment</a>
@@ -1330,8 +1217,7 @@ The following state arguments are supported:
         <span class="property-type">string</span>
     </dt>
     <dd>{{% md %}}The Azure environment where the Azure account credentials reside. Valid values are the following: AZURE, AZURE_CHINA, AZURE_GERMANY
-{{% /md %}}</dd>
-    <dt class="property-optional"
+{{% /md %}}</dd><dt class="property-optional"
             title="Optional">
         <span id="clientid_go">
 <a href="#clientid_go" style="color: inherit; text-decoration: inherit;">Client<wbr>Id</a>
@@ -1340,8 +1226,7 @@ The following state arguments are supported:
         <span class="property-type">string</span>
     </dt>
     <dd>{{% md %}}The client ID, also known as the application ID, for an Azure application associated with the Azure AD tenant.
-{{% /md %}}</dd>
-    <dt class="property-optional"
+{{% /md %}}</dd><dt class="property-optional"
             title="Optional">
         <span id="keyidentifier_go">
 <a href="#keyidentifier_go" style="color: inherit; text-decoration: inherit;">Key<wbr>Identifier</a>
@@ -1350,8 +1235,7 @@ The following state arguments are supported:
         <span class="property-type">string</span>
     </dt>
     <dd>{{% md %}}The unique identifier of a key in an Azure Key Vault.
-{{% /md %}}</dd>
-    <dt class="property-optional"
+{{% /md %}}</dd><dt class="property-optional"
             title="Optional">
         <span id="keyvaultname_go">
 <a href="#keyvaultname_go" style="color: inherit; text-decoration: inherit;">Key<wbr>Vault<wbr>Name</a>
@@ -1360,8 +1244,7 @@ The following state arguments are supported:
         <span class="property-type">string</span>
     </dt>
     <dd>{{% md %}}The name of an Azure Key Vault containing your key.
-{{% /md %}}</dd>
-    <dt class="property-optional"
+{{% /md %}}</dd><dt class="property-optional"
             title="Optional">
         <span id="resourcegroupname_go">
 <a href="#resourcegroupname_go" style="color: inherit; text-decoration: inherit;">Resource<wbr>Group<wbr>Name</a>
@@ -1370,8 +1253,7 @@ The following state arguments are supported:
         <span class="property-type">string</span>
     </dt>
     <dd>{{% md %}}The name of the Azure Resource group that contains an Azure Key Vault.
-{{% /md %}}</dd>
-    <dt class="property-optional"
+{{% /md %}}</dd><dt class="property-optional"
             title="Optional">
         <span id="secret_go">
 <a href="#secret_go" style="color: inherit; text-decoration: inherit;">Secret</a>
@@ -1380,8 +1262,7 @@ The following state arguments are supported:
         <span class="property-type">string</span>
     </dt>
     <dd>{{% md %}}The secret associated with the Azure Key Vault specified by azureKeyVault.tenantID.
-{{% /md %}}</dd>
-    <dt class="property-optional"
+{{% /md %}}</dd><dt class="property-optional"
             title="Optional">
         <span id="subscriptionid_go">
 <a href="#subscriptionid_go" style="color: inherit; text-decoration: inherit;">Subscription<wbr>Id</a>
@@ -1390,8 +1271,7 @@ The following state arguments are supported:
         <span class="property-type">string</span>
     </dt>
     <dd>{{% md %}}The unique identifier associated with an Azure subscription.
-{{% /md %}}</dd>
-    <dt class="property-optional"
+{{% /md %}}</dd><dt class="property-optional"
             title="Optional">
         <span id="tenantid_go">
 <a href="#tenantid_go" style="color: inherit; text-decoration: inherit;">Tenant<wbr>Id</a>
@@ -1400,14 +1280,11 @@ The following state arguments are supported:
         <span class="property-type">string</span>
     </dt>
     <dd>{{% md %}}The unique identifier for an Azure AD tenant within an Azure subscription.
-{{% /md %}}</dd>
-</dl>
+{{% /md %}}</dd></dl>
 {{% /choosable %}}
 
 {{% choosable language nodejs %}}
-<dl class="resources-properties">
-
-    <dt class="property-required"
+<dl class="resources-properties"><dt class="property-required"
             title="Required">
         <span id="enabled_nodejs">
 <a href="#enabled_nodejs" style="color: inherit; text-decoration: inherit;">enabled</a>
@@ -1416,8 +1293,7 @@ The following state arguments are supported:
         <span class="property-type">boolean</span>
     </dt>
     <dd>{{% md %}}Specifies whether Encryption at Rest is enabled for an Atlas project. To disable Encryption at Rest, pass only this parameter with a value of false. When you disable Encryption at Rest, Atlas also removes the configuration details.
-{{% /md %}}</dd>
-    <dt class="property-optional"
+{{% /md %}}</dd><dt class="property-optional"
             title="Optional">
         <span id="azureenvironment_nodejs">
 <a href="#azureenvironment_nodejs" style="color: inherit; text-decoration: inherit;">azure<wbr>Environment</a>
@@ -1426,8 +1302,7 @@ The following state arguments are supported:
         <span class="property-type">string</span>
     </dt>
     <dd>{{% md %}}The Azure environment where the Azure account credentials reside. Valid values are the following: AZURE, AZURE_CHINA, AZURE_GERMANY
-{{% /md %}}</dd>
-    <dt class="property-optional"
+{{% /md %}}</dd><dt class="property-optional"
             title="Optional">
         <span id="clientid_nodejs">
 <a href="#clientid_nodejs" style="color: inherit; text-decoration: inherit;">client<wbr>Id</a>
@@ -1436,8 +1311,7 @@ The following state arguments are supported:
         <span class="property-type">string</span>
     </dt>
     <dd>{{% md %}}The client ID, also known as the application ID, for an Azure application associated with the Azure AD tenant.
-{{% /md %}}</dd>
-    <dt class="property-optional"
+{{% /md %}}</dd><dt class="property-optional"
             title="Optional">
         <span id="keyidentifier_nodejs">
 <a href="#keyidentifier_nodejs" style="color: inherit; text-decoration: inherit;">key<wbr>Identifier</a>
@@ -1446,8 +1320,7 @@ The following state arguments are supported:
         <span class="property-type">string</span>
     </dt>
     <dd>{{% md %}}The unique identifier of a key in an Azure Key Vault.
-{{% /md %}}</dd>
-    <dt class="property-optional"
+{{% /md %}}</dd><dt class="property-optional"
             title="Optional">
         <span id="keyvaultname_nodejs">
 <a href="#keyvaultname_nodejs" style="color: inherit; text-decoration: inherit;">key<wbr>Vault<wbr>Name</a>
@@ -1456,8 +1329,7 @@ The following state arguments are supported:
         <span class="property-type">string</span>
     </dt>
     <dd>{{% md %}}The name of an Azure Key Vault containing your key.
-{{% /md %}}</dd>
-    <dt class="property-optional"
+{{% /md %}}</dd><dt class="property-optional"
             title="Optional">
         <span id="resourcegroupname_nodejs">
 <a href="#resourcegroupname_nodejs" style="color: inherit; text-decoration: inherit;">resource<wbr>Group<wbr>Name</a>
@@ -1466,8 +1338,7 @@ The following state arguments are supported:
         <span class="property-type">string</span>
     </dt>
     <dd>{{% md %}}The name of the Azure Resource group that contains an Azure Key Vault.
-{{% /md %}}</dd>
-    <dt class="property-optional"
+{{% /md %}}</dd><dt class="property-optional"
             title="Optional">
         <span id="secret_nodejs">
 <a href="#secret_nodejs" style="color: inherit; text-decoration: inherit;">secret</a>
@@ -1476,8 +1347,7 @@ The following state arguments are supported:
         <span class="property-type">string</span>
     </dt>
     <dd>{{% md %}}The secret associated with the Azure Key Vault specified by azureKeyVault.tenantID.
-{{% /md %}}</dd>
-    <dt class="property-optional"
+{{% /md %}}</dd><dt class="property-optional"
             title="Optional">
         <span id="subscriptionid_nodejs">
 <a href="#subscriptionid_nodejs" style="color: inherit; text-decoration: inherit;">subscription<wbr>Id</a>
@@ -1486,8 +1356,7 @@ The following state arguments are supported:
         <span class="property-type">string</span>
     </dt>
     <dd>{{% md %}}The unique identifier associated with an Azure subscription.
-{{% /md %}}</dd>
-    <dt class="property-optional"
+{{% /md %}}</dd><dt class="property-optional"
             title="Optional">
         <span id="tenantid_nodejs">
 <a href="#tenantid_nodejs" style="color: inherit; text-decoration: inherit;">tenant<wbr>Id</a>
@@ -1496,14 +1365,11 @@ The following state arguments are supported:
         <span class="property-type">string</span>
     </dt>
     <dd>{{% md %}}The unique identifier for an Azure AD tenant within an Azure subscription.
-{{% /md %}}</dd>
-</dl>
+{{% /md %}}</dd></dl>
 {{% /choosable %}}
 
 {{% choosable language python %}}
-<dl class="resources-properties">
-
-    <dt class="property-required"
+<dl class="resources-properties"><dt class="property-required"
             title="Required">
         <span id="enabled_python">
 <a href="#enabled_python" style="color: inherit; text-decoration: inherit;">enabled</a>
@@ -1512,8 +1378,7 @@ The following state arguments are supported:
         <span class="property-type">bool</span>
     </dt>
     <dd>{{% md %}}Specifies whether Encryption at Rest is enabled for an Atlas project. To disable Encryption at Rest, pass only this parameter with a value of false. When you disable Encryption at Rest, Atlas also removes the configuration details.
-{{% /md %}}</dd>
-    <dt class="property-optional"
+{{% /md %}}</dd><dt class="property-optional"
             title="Optional">
         <span id="azure_environment_python">
 <a href="#azure_environment_python" style="color: inherit; text-decoration: inherit;">azure_<wbr>environment</a>
@@ -1522,8 +1387,7 @@ The following state arguments are supported:
         <span class="property-type">str</span>
     </dt>
     <dd>{{% md %}}The Azure environment where the Azure account credentials reside. Valid values are the following: AZURE, AZURE_CHINA, AZURE_GERMANY
-{{% /md %}}</dd>
-    <dt class="property-optional"
+{{% /md %}}</dd><dt class="property-optional"
             title="Optional">
         <span id="client_id_python">
 <a href="#client_id_python" style="color: inherit; text-decoration: inherit;">client_<wbr>id</a>
@@ -1532,8 +1396,7 @@ The following state arguments are supported:
         <span class="property-type">str</span>
     </dt>
     <dd>{{% md %}}The client ID, also known as the application ID, for an Azure application associated with the Azure AD tenant.
-{{% /md %}}</dd>
-    <dt class="property-optional"
+{{% /md %}}</dd><dt class="property-optional"
             title="Optional">
         <span id="key_identifier_python">
 <a href="#key_identifier_python" style="color: inherit; text-decoration: inherit;">key_<wbr>identifier</a>
@@ -1542,8 +1405,7 @@ The following state arguments are supported:
         <span class="property-type">str</span>
     </dt>
     <dd>{{% md %}}The unique identifier of a key in an Azure Key Vault.
-{{% /md %}}</dd>
-    <dt class="property-optional"
+{{% /md %}}</dd><dt class="property-optional"
             title="Optional">
         <span id="key_vault_name_python">
 <a href="#key_vault_name_python" style="color: inherit; text-decoration: inherit;">key_<wbr>vault_<wbr>name</a>
@@ -1552,8 +1414,7 @@ The following state arguments are supported:
         <span class="property-type">str</span>
     </dt>
     <dd>{{% md %}}The name of an Azure Key Vault containing your key.
-{{% /md %}}</dd>
-    <dt class="property-optional"
+{{% /md %}}</dd><dt class="property-optional"
             title="Optional">
         <span id="resource_group_name_python">
 <a href="#resource_group_name_python" style="color: inherit; text-decoration: inherit;">resource_<wbr>group_<wbr>name</a>
@@ -1562,8 +1423,7 @@ The following state arguments are supported:
         <span class="property-type">str</span>
     </dt>
     <dd>{{% md %}}The name of the Azure Resource group that contains an Azure Key Vault.
-{{% /md %}}</dd>
-    <dt class="property-optional"
+{{% /md %}}</dd><dt class="property-optional"
             title="Optional">
         <span id="secret_python">
 <a href="#secret_python" style="color: inherit; text-decoration: inherit;">secret</a>
@@ -1572,8 +1432,7 @@ The following state arguments are supported:
         <span class="property-type">str</span>
     </dt>
     <dd>{{% md %}}The secret associated with the Azure Key Vault specified by azureKeyVault.tenantID.
-{{% /md %}}</dd>
-    <dt class="property-optional"
+{{% /md %}}</dd><dt class="property-optional"
             title="Optional">
         <span id="subscription_id_python">
 <a href="#subscription_id_python" style="color: inherit; text-decoration: inherit;">subscription_<wbr>id</a>
@@ -1582,8 +1441,7 @@ The following state arguments are supported:
         <span class="property-type">str</span>
     </dt>
     <dd>{{% md %}}The unique identifier associated with an Azure subscription.
-{{% /md %}}</dd>
-    <dt class="property-optional"
+{{% /md %}}</dd><dt class="property-optional"
             title="Optional">
         <span id="tenant_id_python">
 <a href="#tenant_id_python" style="color: inherit; text-decoration: inherit;">tenant_<wbr>id</a>
@@ -1592,16 +1450,13 @@ The following state arguments are supported:
         <span class="property-type">str</span>
     </dt>
     <dd>{{% md %}}The unique identifier for an Azure AD tenant within an Azure subscription.
-{{% /md %}}</dd>
-</dl>
+{{% /md %}}</dd></dl>
 {{% /choosable %}}
 
 <h4 id="encryptionatrestgooglecloudkms">Encryption<wbr>At<wbr>Rest<wbr>Google<wbr>Cloud<wbr>Kms</h4>
 
 {{% choosable language csharp %}}
-<dl class="resources-properties">
-
-    <dt class="property-optional"
+<dl class="resources-properties"><dt class="property-optional"
             title="Optional">
         <span id="enabled_csharp">
 <a href="#enabled_csharp" style="color: inherit; text-decoration: inherit;">Enabled</a>
@@ -1610,8 +1465,7 @@ The following state arguments are supported:
         <span class="property-type">bool</span>
     </dt>
     <dd>{{% md %}}Specifies whether Encryption at Rest is enabled for an Atlas project. To disable Encryption at Rest, pass only this parameter with a value of false. When you disable Encryption at Rest, Atlas also removes the configuration details.
-{{% /md %}}</dd>
-    <dt class="property-optional"
+{{% /md %}}</dd><dt class="property-optional"
             title="Optional">
         <span id="keyversionresourceid_csharp">
 <a href="#keyversionresourceid_csharp" style="color: inherit; text-decoration: inherit;">Key<wbr>Version<wbr>Resource<wbr>Id</a>
@@ -1620,8 +1474,7 @@ The following state arguments are supported:
         <span class="property-type">string</span>
     </dt>
     <dd>{{% md %}}The Key Version Resource ID from your GCP account.
-{{% /md %}}</dd>
-    <dt class="property-optional"
+{{% /md %}}</dd><dt class="property-optional"
             title="Optional">
         <span id="serviceaccountkey_csharp">
 <a href="#serviceaccountkey_csharp" style="color: inherit; text-decoration: inherit;">Service<wbr>Account<wbr>Key</a>
@@ -1630,14 +1483,11 @@ The following state arguments are supported:
         <span class="property-type">string</span>
     </dt>
     <dd>{{% md %}}String-formatted JSON object containing GCP KMS credentials from your GCP account.
-{{% /md %}}</dd>
-</dl>
+{{% /md %}}</dd></dl>
 {{% /choosable %}}
 
 {{% choosable language go %}}
-<dl class="resources-properties">
-
-    <dt class="property-optional"
+<dl class="resources-properties"><dt class="property-optional"
             title="Optional">
         <span id="enabled_go">
 <a href="#enabled_go" style="color: inherit; text-decoration: inherit;">Enabled</a>
@@ -1646,8 +1496,7 @@ The following state arguments are supported:
         <span class="property-type">bool</span>
     </dt>
     <dd>{{% md %}}Specifies whether Encryption at Rest is enabled for an Atlas project. To disable Encryption at Rest, pass only this parameter with a value of false. When you disable Encryption at Rest, Atlas also removes the configuration details.
-{{% /md %}}</dd>
-    <dt class="property-optional"
+{{% /md %}}</dd><dt class="property-optional"
             title="Optional">
         <span id="keyversionresourceid_go">
 <a href="#keyversionresourceid_go" style="color: inherit; text-decoration: inherit;">Key<wbr>Version<wbr>Resource<wbr>Id</a>
@@ -1656,8 +1505,7 @@ The following state arguments are supported:
         <span class="property-type">string</span>
     </dt>
     <dd>{{% md %}}The Key Version Resource ID from your GCP account.
-{{% /md %}}</dd>
-    <dt class="property-optional"
+{{% /md %}}</dd><dt class="property-optional"
             title="Optional">
         <span id="serviceaccountkey_go">
 <a href="#serviceaccountkey_go" style="color: inherit; text-decoration: inherit;">Service<wbr>Account<wbr>Key</a>
@@ -1666,14 +1514,11 @@ The following state arguments are supported:
         <span class="property-type">string</span>
     </dt>
     <dd>{{% md %}}String-formatted JSON object containing GCP KMS credentials from your GCP account.
-{{% /md %}}</dd>
-</dl>
+{{% /md %}}</dd></dl>
 {{% /choosable %}}
 
 {{% choosable language nodejs %}}
-<dl class="resources-properties">
-
-    <dt class="property-optional"
+<dl class="resources-properties"><dt class="property-optional"
             title="Optional">
         <span id="enabled_nodejs">
 <a href="#enabled_nodejs" style="color: inherit; text-decoration: inherit;">enabled</a>
@@ -1682,8 +1527,7 @@ The following state arguments are supported:
         <span class="property-type">boolean</span>
     </dt>
     <dd>{{% md %}}Specifies whether Encryption at Rest is enabled for an Atlas project. To disable Encryption at Rest, pass only this parameter with a value of false. When you disable Encryption at Rest, Atlas also removes the configuration details.
-{{% /md %}}</dd>
-    <dt class="property-optional"
+{{% /md %}}</dd><dt class="property-optional"
             title="Optional">
         <span id="keyversionresourceid_nodejs">
 <a href="#keyversionresourceid_nodejs" style="color: inherit; text-decoration: inherit;">key<wbr>Version<wbr>Resource<wbr>Id</a>
@@ -1692,8 +1536,7 @@ The following state arguments are supported:
         <span class="property-type">string</span>
     </dt>
     <dd>{{% md %}}The Key Version Resource ID from your GCP account.
-{{% /md %}}</dd>
-    <dt class="property-optional"
+{{% /md %}}</dd><dt class="property-optional"
             title="Optional">
         <span id="serviceaccountkey_nodejs">
 <a href="#serviceaccountkey_nodejs" style="color: inherit; text-decoration: inherit;">service<wbr>Account<wbr>Key</a>
@@ -1702,14 +1545,11 @@ The following state arguments are supported:
         <span class="property-type">string</span>
     </dt>
     <dd>{{% md %}}String-formatted JSON object containing GCP KMS credentials from your GCP account.
-{{% /md %}}</dd>
-</dl>
+{{% /md %}}</dd></dl>
 {{% /choosable %}}
 
 {{% choosable language python %}}
-<dl class="resources-properties">
-
-    <dt class="property-optional"
+<dl class="resources-properties"><dt class="property-optional"
             title="Optional">
         <span id="enabled_python">
 <a href="#enabled_python" style="color: inherit; text-decoration: inherit;">enabled</a>
@@ -1718,8 +1558,7 @@ The following state arguments are supported:
         <span class="property-type">bool</span>
     </dt>
     <dd>{{% md %}}Specifies whether Encryption at Rest is enabled for an Atlas project. To disable Encryption at Rest, pass only this parameter with a value of false. When you disable Encryption at Rest, Atlas also removes the configuration details.
-{{% /md %}}</dd>
-    <dt class="property-optional"
+{{% /md %}}</dd><dt class="property-optional"
             title="Optional">
         <span id="key_version_resource_id_python">
 <a href="#key_version_resource_id_python" style="color: inherit; text-decoration: inherit;">key_<wbr>version_<wbr>resource_<wbr>id</a>
@@ -1728,8 +1567,7 @@ The following state arguments are supported:
         <span class="property-type">str</span>
     </dt>
     <dd>{{% md %}}The Key Version Resource ID from your GCP account.
-{{% /md %}}</dd>
-    <dt class="property-optional"
+{{% /md %}}</dd><dt class="property-optional"
             title="Optional">
         <span id="service_account_key_python">
 <a href="#service_account_key_python" style="color: inherit; text-decoration: inherit;">service_<wbr>account_<wbr>key</a>
@@ -1738,8 +1576,7 @@ The following state arguments are supported:
         <span class="property-type">str</span>
     </dt>
     <dd>{{% md %}}String-formatted JSON object containing GCP KMS credentials from your GCP account.
-{{% /md %}}</dd>
-</dl>
+{{% /md %}}</dd></dl>
 {{% /choosable %}}
 
 
@@ -1750,6 +1587,6 @@ The following state arguments are supported:
 	<dt>License</dt>
 	<dd>Apache-2.0</dd>
 	<dt>Notes</dt>
-	<dd>This Pulumi package is based on the [`mongodbatlas` Terraform Provider](https://github.com/mongodb/terraform-provider-mongodbatlas).</dd>
+	<dd>{{% md %}}This Pulumi package is based on the [`mongodbatlas` Terraform Provider](https://github.com/mongodb/terraform-provider-mongodbatlas).{{% /md %}}</dd>
 </dl>
 

@@ -36,16 +36,8 @@ The following commands use the package manager, [Homebrew](https://brew.sh/).
 
 ##### Install Hugo
 
-If you already have Hugo installed, uninstall it:
-
 ```bash
-brew uninstall hugo
-```
-
-Install Hugo v0.55.4:
-
-```bash
-brew install pulumi/tap/hugo@0.55.4
+brew install hugo
 ```
 
 ##### Install Go

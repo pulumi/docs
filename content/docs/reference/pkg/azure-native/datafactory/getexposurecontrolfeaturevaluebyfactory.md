@@ -51,9 +51,7 @@ The following arguments are supported:
 
 
 {{% choosable language csharp %}}
-<dl class="resources-properties">
-
-    <dt class="property-required"
+<dl class="resources-properties"><dt class="property-required"
             title="Required">
         <span id="factoryname_csharp">
 <a href="#factoryname_csharp" style="color: inherit; text-decoration: inherit;">Factory<wbr>Name</a>
@@ -61,8 +59,7 @@ The following arguments are supported:
         <span class="property-indicator"></span>
         <span class="property-type">string</span>
     </dt>
-    <dd>{{% md %}}The factory name.{{% /md %}}</dd>
-    <dt class="property-required"
+    <dd>{{% md %}}The factory name.{{% /md %}}</dd><dt class="property-required"
             title="Required">
         <span id="resourcegroupname_csharp">
 <a href="#resourcegroupname_csharp" style="color: inherit; text-decoration: inherit;">Resource<wbr>Group<wbr>Name</a>
@@ -70,8 +67,7 @@ The following arguments are supported:
         <span class="property-indicator"></span>
         <span class="property-type">string</span>
     </dt>
-    <dd>{{% md %}}The resource group name.{{% /md %}}</dd>
-    <dt class="property-optional"
+    <dd>{{% md %}}The resource group name.{{% /md %}}</dd><dt class="property-optional"
             title="Optional">
         <span id="featurename_csharp">
 <a href="#featurename_csharp" style="color: inherit; text-decoration: inherit;">Feature<wbr>Name</a>
@@ -79,8 +75,7 @@ The following arguments are supported:
         <span class="property-indicator"></span>
         <span class="property-type">string</span>
     </dt>
-    <dd>{{% md %}}The feature name.{{% /md %}}</dd>
-    <dt class="property-optional"
+    <dd>{{% md %}}The feature name.{{% /md %}}</dd><dt class="property-optional"
             title="Optional">
         <span id="featuretype_csharp">
 <a href="#featuretype_csharp" style="color: inherit; text-decoration: inherit;">Feature<wbr>Type</a>
@@ -88,14 +83,11 @@ The following arguments are supported:
         <span class="property-indicator"></span>
         <span class="property-type">string</span>
     </dt>
-    <dd>{{% md %}}The feature type.{{% /md %}}</dd>
-</dl>
+    <dd>{{% md %}}The feature type.{{% /md %}}</dd></dl>
 {{% /choosable %}}
 
 {{% choosable language go %}}
-<dl class="resources-properties">
-
-    <dt class="property-required"
+<dl class="resources-properties"><dt class="property-required"
             title="Required">
         <span id="factoryname_go">
 <a href="#factoryname_go" style="color: inherit; text-decoration: inherit;">Factory<wbr>Name</a>
@@ -103,8 +95,7 @@ The following arguments are supported:
         <span class="property-indicator"></span>
         <span class="property-type">string</span>
     </dt>
-    <dd>{{% md %}}The factory name.{{% /md %}}</dd>
-    <dt class="property-required"
+    <dd>{{% md %}}The factory name.{{% /md %}}</dd><dt class="property-required"
             title="Required">
         <span id="resourcegroupname_go">
 <a href="#resourcegroupname_go" style="color: inherit; text-decoration: inherit;">Resource<wbr>Group<wbr>Name</a>
@@ -112,8 +103,7 @@ The following arguments are supported:
         <span class="property-indicator"></span>
         <span class="property-type">string</span>
     </dt>
-    <dd>{{% md %}}The resource group name.{{% /md %}}</dd>
-    <dt class="property-optional"
+    <dd>{{% md %}}The resource group name.{{% /md %}}</dd><dt class="property-optional"
             title="Optional">
         <span id="featurename_go">
 <a href="#featurename_go" style="color: inherit; text-decoration: inherit;">Feature<wbr>Name</a>
@@ -121,8 +111,7 @@ The following arguments are supported:
         <span class="property-indicator"></span>
         <span class="property-type">string</span>
     </dt>
-    <dd>{{% md %}}The feature name.{{% /md %}}</dd>
-    <dt class="property-optional"
+    <dd>{{% md %}}The feature name.{{% /md %}}</dd><dt class="property-optional"
             title="Optional">
         <span id="featuretype_go">
 <a href="#featuretype_go" style="color: inherit; text-decoration: inherit;">Feature<wbr>Type</a>
@@ -130,14 +119,11 @@ The following arguments are supported:
         <span class="property-indicator"></span>
         <span class="property-type">string</span>
     </dt>
-    <dd>{{% md %}}The feature type.{{% /md %}}</dd>
-</dl>
+    <dd>{{% md %}}The feature type.{{% /md %}}</dd></dl>
 {{% /choosable %}}
 
 {{% choosable language nodejs %}}
-<dl class="resources-properties">
-
-    <dt class="property-required"
+<dl class="resources-properties"><dt class="property-required"
             title="Required">
         <span id="factoryname_nodejs">
 <a href="#factoryname_nodejs" style="color: inherit; text-decoration: inherit;">factory<wbr>Name</a>
@@ -145,8 +131,7 @@ The following arguments are supported:
         <span class="property-indicator"></span>
         <span class="property-type">string</span>
     </dt>
-    <dd>{{% md %}}The factory name.{{% /md %}}</dd>
-    <dt class="property-required"
+    <dd>{{% md %}}The factory name.{{% /md %}}</dd><dt class="property-required"
             title="Required">
         <span id="resourcegroupname_nodejs">
 <a href="#resourcegroupname_nodejs" style="color: inherit; text-decoration: inherit;">resource<wbr>Group<wbr>Name</a>
@@ -154,8 +139,7 @@ The following arguments are supported:
         <span class="property-indicator"></span>
         <span class="property-type">string</span>
     </dt>
-    <dd>{{% md %}}The resource group name.{{% /md %}}</dd>
-    <dt class="property-optional"
+    <dd>{{% md %}}The resource group name.{{% /md %}}</dd><dt class="property-optional"
             title="Optional">
         <span id="featurename_nodejs">
 <a href="#featurename_nodejs" style="color: inherit; text-decoration: inherit;">feature<wbr>Name</a>
@@ -163,8 +147,7 @@ The following arguments are supported:
         <span class="property-indicator"></span>
         <span class="property-type">string</span>
     </dt>
-    <dd>{{% md %}}The feature name.{{% /md %}}</dd>
-    <dt class="property-optional"
+    <dd>{{% md %}}The feature name.{{% /md %}}</dd><dt class="property-optional"
             title="Optional">
         <span id="featuretype_nodejs">
 <a href="#featuretype_nodejs" style="color: inherit; text-decoration: inherit;">feature<wbr>Type</a>
@@ -172,14 +155,11 @@ The following arguments are supported:
         <span class="property-indicator"></span>
         <span class="property-type">string</span>
     </dt>
-    <dd>{{% md %}}The feature type.{{% /md %}}</dd>
-</dl>
+    <dd>{{% md %}}The feature type.{{% /md %}}</dd></dl>
 {{% /choosable %}}
 
 {{% choosable language python %}}
-<dl class="resources-properties">
-
-    <dt class="property-required"
+<dl class="resources-properties"><dt class="property-required"
             title="Required">
         <span id="factory_name_python">
 <a href="#factory_name_python" style="color: inherit; text-decoration: inherit;">factory_<wbr>name</a>
@@ -187,8 +167,7 @@ The following arguments are supported:
         <span class="property-indicator"></span>
         <span class="property-type">str</span>
     </dt>
-    <dd>{{% md %}}The factory name.{{% /md %}}</dd>
-    <dt class="property-required"
+    <dd>{{% md %}}The factory name.{{% /md %}}</dd><dt class="property-required"
             title="Required">
         <span id="resource_group_name_python">
 <a href="#resource_group_name_python" style="color: inherit; text-decoration: inherit;">resource_<wbr>group_<wbr>name</a>
@@ -196,8 +175,7 @@ The following arguments are supported:
         <span class="property-indicator"></span>
         <span class="property-type">str</span>
     </dt>
-    <dd>{{% md %}}The resource group name.{{% /md %}}</dd>
-    <dt class="property-optional"
+    <dd>{{% md %}}The resource group name.{{% /md %}}</dd><dt class="property-optional"
             title="Optional">
         <span id="feature_name_python">
 <a href="#feature_name_python" style="color: inherit; text-decoration: inherit;">feature_<wbr>name</a>
@@ -205,8 +183,7 @@ The following arguments are supported:
         <span class="property-indicator"></span>
         <span class="property-type">str</span>
     </dt>
-    <dd>{{% md %}}The feature name.{{% /md %}}</dd>
-    <dt class="property-optional"
+    <dd>{{% md %}}The feature name.{{% /md %}}</dd><dt class="property-optional"
             title="Optional">
         <span id="feature_type_python">
 <a href="#feature_type_python" style="color: inherit; text-decoration: inherit;">feature_<wbr>type</a>
@@ -214,8 +191,7 @@ The following arguments are supported:
         <span class="property-indicator"></span>
         <span class="property-type">str</span>
     </dt>
-    <dd>{{% md %}}The feature type.{{% /md %}}</dd>
-</dl>
+    <dd>{{% md %}}The feature type.{{% /md %}}</dd></dl>
 {{% /choosable %}}
 
 
@@ -228,9 +204,7 @@ The following output properties are available:
 
 
 {{% choosable language csharp %}}
-<dl class="resources-properties">
-
-    <dt class="property-"
+<dl class="resources-properties"><dt class="property-"
             title="">
         <span id="featurename_csharp">
 <a href="#featurename_csharp" style="color: inherit; text-decoration: inherit;">Feature<wbr>Name</a>
@@ -238,8 +212,7 @@ The following output properties are available:
         <span class="property-indicator"></span>
         <span class="property-type">string</span>
     </dt>
-    <dd>{{% md %}}The feature name.{{% /md %}}</dd>
-    <dt class="property-"
+    <dd>{{% md %}}The feature name.{{% /md %}}</dd><dt class="property-"
             title="">
         <span id="value_csharp">
 <a href="#value_csharp" style="color: inherit; text-decoration: inherit;">Value</a>
@@ -247,14 +220,11 @@ The following output properties are available:
         <span class="property-indicator"></span>
         <span class="property-type">string</span>
     </dt>
-    <dd>{{% md %}}The feature value.{{% /md %}}</dd>
-</dl>
+    <dd>{{% md %}}The feature value.{{% /md %}}</dd></dl>
 {{% /choosable %}}
 
 {{% choosable language go %}}
-<dl class="resources-properties">
-
-    <dt class="property-"
+<dl class="resources-properties"><dt class="property-"
             title="">
         <span id="featurename_go">
 <a href="#featurename_go" style="color: inherit; text-decoration: inherit;">Feature<wbr>Name</a>
@@ -262,8 +232,7 @@ The following output properties are available:
         <span class="property-indicator"></span>
         <span class="property-type">string</span>
     </dt>
-    <dd>{{% md %}}The feature name.{{% /md %}}</dd>
-    <dt class="property-"
+    <dd>{{% md %}}The feature name.{{% /md %}}</dd><dt class="property-"
             title="">
         <span id="value_go">
 <a href="#value_go" style="color: inherit; text-decoration: inherit;">Value</a>
@@ -271,14 +240,11 @@ The following output properties are available:
         <span class="property-indicator"></span>
         <span class="property-type">string</span>
     </dt>
-    <dd>{{% md %}}The feature value.{{% /md %}}</dd>
-</dl>
+    <dd>{{% md %}}The feature value.{{% /md %}}</dd></dl>
 {{% /choosable %}}
 
 {{% choosable language nodejs %}}
-<dl class="resources-properties">
-
-    <dt class="property-"
+<dl class="resources-properties"><dt class="property-"
             title="">
         <span id="featurename_nodejs">
 <a href="#featurename_nodejs" style="color: inherit; text-decoration: inherit;">feature<wbr>Name</a>
@@ -286,8 +252,7 @@ The following output properties are available:
         <span class="property-indicator"></span>
         <span class="property-type">string</span>
     </dt>
-    <dd>{{% md %}}The feature name.{{% /md %}}</dd>
-    <dt class="property-"
+    <dd>{{% md %}}The feature name.{{% /md %}}</dd><dt class="property-"
             title="">
         <span id="value_nodejs">
 <a href="#value_nodejs" style="color: inherit; text-decoration: inherit;">value</a>
@@ -295,14 +260,11 @@ The following output properties are available:
         <span class="property-indicator"></span>
         <span class="property-type">string</span>
     </dt>
-    <dd>{{% md %}}The feature value.{{% /md %}}</dd>
-</dl>
+    <dd>{{% md %}}The feature value.{{% /md %}}</dd></dl>
 {{% /choosable %}}
 
 {{% choosable language python %}}
-<dl class="resources-properties">
-
-    <dt class="property-"
+<dl class="resources-properties"><dt class="property-"
             title="">
         <span id="feature_name_python">
 <a href="#feature_name_python" style="color: inherit; text-decoration: inherit;">feature_<wbr>name</a>
@@ -310,8 +272,7 @@ The following output properties are available:
         <span class="property-indicator"></span>
         <span class="property-type">str</span>
     </dt>
-    <dd>{{% md %}}The feature name.{{% /md %}}</dd>
-    <dt class="property-"
+    <dd>{{% md %}}The feature name.{{% /md %}}</dd><dt class="property-"
             title="">
         <span id="value_python">
 <a href="#value_python" style="color: inherit; text-decoration: inherit;">value</a>
@@ -319,8 +280,7 @@ The following output properties are available:
         <span class="property-indicator"></span>
         <span class="property-type">str</span>
     </dt>
-    <dd>{{% md %}}The feature value.{{% /md %}}</dd>
-</dl>
+    <dd>{{% md %}}The feature value.{{% /md %}}</dd></dl>
 {{% /choosable %}}
 
 

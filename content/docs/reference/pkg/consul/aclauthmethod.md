@@ -15,11 +15,17 @@ managed [Consul ACL auth methods](https://www.consul.io/docs/acl/auth-methods).
 
 
 {{% examples %}}
+
 ## Example Usage
 
 {{< chooser language "typescript,python,go,csharp" / >}}
 
-{{% example csharp %}}
+
+
+
+
+{{< example csharp >}}
+
 ```csharp
 using System.Collections.Generic;
 using System.Text.Json;
@@ -48,9 +54,12 @@ class MyStack : Stack
 }
 ```
 
-{{% /example %}}
 
-{{% example go %}}
+{{< /example >}}
+
+
+{{< example go >}}
+
 ```go
 package main
 
@@ -85,9 +94,12 @@ func main() {
 }
 ```
 
-{{% /example %}}
 
-{{% example python %}}
+{{< /example >}}
+
+
+{{< example python >}}
+
 ```python
 import pulumi
 import json
@@ -105,9 +117,12 @@ minikube = consul.AclAuthMethod("minikube",
     }))
 ```
 
-{{% /example %}}
 
-{{% example typescript %}}
+{{< /example >}}
+
+
+{{< example typescript >}}
+
 ```typescript
 import * as pulumi from "@pulumi/pulumi";
 import * as consul from "@pulumi/consul";
@@ -125,9 +140,16 @@ const minikube = new consul.AclAuthMethod("minikube", {
 });
 ```
 
-{{% /example %}}
+
+{{< /example >}}
+
+
+
+
 
 {{% /examples %}}
+
+
 
 
 ## Create a AclAuthMethod Resource {#create}
@@ -152,9 +174,7 @@ const minikube = new consul.AclAuthMethod("minikube", {
 
 {{% choosable language nodejs %}}
 
-<dl class="resources-properties">
-  
-    <dt
+<dl class="resources-properties"><dt
         class="property-required" title="Required">
         <span>name</span>
         <span class="property-indicator"></span>
@@ -162,9 +182,7 @@ const minikube = new consul.AclAuthMethod("minikube", {
     </dt>
     <dd>
       The unique name of the resource.
-    </dd>
-  
-    <dt
+    </dd><dt
         class="property-required" title="Required">
         <span>args</span>
         <span class="property-indicator"></span>
@@ -172,9 +190,7 @@ const minikube = new consul.AclAuthMethod("minikube", {
     </dt>
     <dd>
       The arguments to resource properties.
-    </dd>
-  
-    <dt
+    </dd><dt
         class="property-optional" title="Optional">
         <span>opts</span>
         <span class="property-indicator"></span>
@@ -182,10 +198,7 @@ const minikube = new consul.AclAuthMethod("minikube", {
     </dt>
     <dd>
       Bag of options to control resource&#39;s behavior.
-    </dd>
-  
-
-</dl>
+    </dd></dl>
 
 {{% /choosable %}}
 
@@ -211,9 +224,7 @@ const minikube = new consul.AclAuthMethod("minikube", {
 
 {{% choosable language go %}}
 
-<dl class="resources-properties">
-  
-    <dt
+<dl class="resources-properties"><dt
         class="property-optional" title="Optional">
         <span>ctx</span>
         <span class="property-indicator"></span>
@@ -221,9 +232,7 @@ const minikube = new consul.AclAuthMethod("minikube", {
     </dt>
     <dd>
       Context object for the current deployment.
-    </dd>
-  
-    <dt
+    </dd><dt
         class="property-required" title="Required">
         <span>name</span>
         <span class="property-indicator"></span>
@@ -231,9 +240,7 @@ const minikube = new consul.AclAuthMethod("minikube", {
     </dt>
     <dd>
       The unique name of the resource.
-    </dd>
-  
-    <dt
+    </dd><dt
         class="property-required" title="Required">
         <span>args</span>
         <span class="property-indicator"></span>
@@ -241,9 +248,7 @@ const minikube = new consul.AclAuthMethod("minikube", {
     </dt>
     <dd>
       The arguments to resource properties.
-    </dd>
-  
-    <dt
+    </dd><dt
         class="property-optional" title="Optional">
         <span>opts</span>
         <span class="property-indicator"></span>
@@ -251,18 +256,13 @@ const minikube = new consul.AclAuthMethod("minikube", {
     </dt>
     <dd>
       Bag of options to control resource&#39;s behavior.
-    </dd>
-  
-
-</dl>
+    </dd></dl>
 
 {{% /choosable %}}
 
 {{% choosable language csharp %}}
 
-<dl class="resources-properties">
-  
-    <dt
+<dl class="resources-properties"><dt
         class="property-required" title="Required">
         <span>name</span>
         <span class="property-indicator"></span>
@@ -270,9 +270,7 @@ const minikube = new consul.AclAuthMethod("minikube", {
     </dt>
     <dd>
       The unique name of the resource.
-    </dd>
-  
-    <dt
+    </dd><dt
         class="property-required" title="Required">
         <span>args</span>
         <span class="property-indicator"></span>
@@ -280,9 +278,7 @@ const minikube = new consul.AclAuthMethod("minikube", {
     </dt>
     <dd>
       The arguments to resource properties.
-    </dd>
-  
-    <dt
+    </dd><dt
         class="property-optional" title="Optional">
         <span>opts</span>
         <span class="property-indicator"></span>
@@ -290,10 +286,7 @@ const minikube = new consul.AclAuthMethod("minikube", {
     </dt>
     <dd>
       Bag of options to control resource&#39;s behavior.
-    </dd>
-  
-
-</dl>
+    </dd></dl>
 
 {{% /choosable %}}
 
@@ -308,9 +301,7 @@ The AclAuthMethod resource accepts the following [input]({{< relref "/docs/intro
 
 
 {{% choosable language csharp %}}
-<dl class="resources-properties">
-
-    <dt class="property-required"
+<dl class="resources-properties"><dt class="property-required"
             title="Required">
         <span id="type_csharp">
 <a href="#type_csharp" style="color: inherit; text-decoration: inherit;">Type</a>
@@ -319,8 +310,7 @@ The AclAuthMethod resource accepts the following [input]({{< relref "/docs/intro
         <span class="property-type">string</span>
     </dt>
     <dd>{{% md %}}The type of the ACL auth method.
-{{% /md %}}</dd>
-    <dt class="property-optional property-deprecated"
+{{% /md %}}</dd><dt class="property-optional property-deprecated"
             title="Optional, Deprecated">
         <span id="config_csharp">
 <a href="#config_csharp" style="color: inherit; text-decoration: inherit;">Config</a>
@@ -331,8 +321,7 @@ The AclAuthMethod resource accepts the following [input]({{< relref "/docs/intro
     <dd>{{% md %}}The raw configuration for this ACL auth method. This
 attribute is deprecated and will be removed in a future version. `config_json`
 should be used instead.
-{{% /md %}}<p class="property-message">Deprecated: {{% md %}}The config attribute is deprecated, please use config_json instead.{{% /md %}}</p></dd>
-    <dt class="property-optional"
+{{% /md %}}<p class="property-message">Deprecated: {{% md %}}The config attribute is deprecated, please use config_json instead.{{% /md %}}</p></dd><dt class="property-optional"
             title="Optional">
         <span id="configjson_csharp">
 <a href="#configjson_csharp" style="color: inherit; text-decoration: inherit;">Config<wbr>Json</a>
@@ -341,8 +330,7 @@ should be used instead.
         <span class="property-type">string</span>
     </dt>
     <dd>{{% md %}}The raw configuration for this ACL auth method.
-{{% /md %}}</dd>
-    <dt class="property-optional"
+{{% /md %}}</dd><dt class="property-optional"
             title="Optional">
         <span id="description_csharp">
 <a href="#description_csharp" style="color: inherit; text-decoration: inherit;">Description</a>
@@ -351,8 +339,7 @@ should be used instead.
         <span class="property-type">string</span>
     </dt>
     <dd>{{% md %}}A free form human readable description of the auth method.
-{{% /md %}}</dd>
-    <dt class="property-optional"
+{{% /md %}}</dd><dt class="property-optional"
             title="Optional">
         <span id="displayname_csharp">
 <a href="#displayname_csharp" style="color: inherit; text-decoration: inherit;">Display<wbr>Name</a>
@@ -362,8 +349,7 @@ should be used instead.
     </dt>
     <dd>{{% md %}}An optional name to use instead of the name
 attribute when displaying information about this auth method.
-{{% /md %}}</dd>
-    <dt class="property-optional"
+{{% /md %}}</dd><dt class="property-optional"
             title="Optional">
         <span id="maxtokenttl_csharp">
 <a href="#maxtokenttl_csharp" style="color: inherit; text-decoration: inherit;">Max<wbr>Token<wbr>Ttl</a>
@@ -373,8 +359,7 @@ attribute when displaying information about this auth method.
     </dt>
     <dd>{{% md %}}The maximum life of any token created by this
 auth method.
-{{% /md %}}</dd>
-    <dt class="property-optional"
+{{% /md %}}</dd><dt class="property-optional"
             title="Optional">
         <span id="name_csharp">
 <a href="#name_csharp" style="color: inherit; text-decoration: inherit;">Name</a>
@@ -383,8 +368,7 @@ auth method.
         <span class="property-type">string</span>
     </dt>
     <dd>{{% md %}}The name of the ACL auth method.
-{{% /md %}}</dd>
-    <dt class="property-optional"
+{{% /md %}}</dd><dt class="property-optional"
             title="Optional">
         <span id="namespace_csharp">
 <a href="#namespace_csharp" style="color: inherit; text-decoration: inherit;">Namespace</a>
@@ -393,8 +377,7 @@ auth method.
         <span class="property-type">string</span>
     </dt>
     <dd>{{% md %}}The namespace to create the policy within.
-{{% /md %}}</dd>
-    <dt class="property-optional"
+{{% /md %}}</dd><dt class="property-optional"
             title="Optional">
         <span id="namespacerules_csharp">
 <a href="#namespacerules_csharp" style="color: inherit; text-decoration: inherit;">Namespace<wbr>Rules</a>
@@ -404,8 +387,7 @@ auth method.
     </dt>
     <dd>{{% md %}}A set of rules that control
 which namespace tokens created via this auth method will be created within.
-{{% /md %}}</dd>
-    <dt class="property-optional"
+{{% /md %}}</dd><dt class="property-optional"
             title="Optional">
         <span id="tokenlocality_csharp">
 <a href="#tokenlocality_csharp" style="color: inherit; text-decoration: inherit;">Token<wbr>Locality</a>
@@ -415,14 +397,11 @@ which namespace tokens created via this auth method will be created within.
     </dt>
     <dd>{{% md %}}The kind of token that this auth method
 produces. This can be either 'local' or 'global'.
-{{% /md %}}</dd>
-</dl>
+{{% /md %}}</dd></dl>
 {{% /choosable %}}
 
 {{% choosable language go %}}
-<dl class="resources-properties">
-
-    <dt class="property-required"
+<dl class="resources-properties"><dt class="property-required"
             title="Required">
         <span id="type_go">
 <a href="#type_go" style="color: inherit; text-decoration: inherit;">Type</a>
@@ -431,8 +410,7 @@ produces. This can be either 'local' or 'global'.
         <span class="property-type">string</span>
     </dt>
     <dd>{{% md %}}The type of the ACL auth method.
-{{% /md %}}</dd>
-    <dt class="property-optional property-deprecated"
+{{% /md %}}</dd><dt class="property-optional property-deprecated"
             title="Optional, Deprecated">
         <span id="config_go">
 <a href="#config_go" style="color: inherit; text-decoration: inherit;">Config</a>
@@ -443,8 +421,7 @@ produces. This can be either 'local' or 'global'.
     <dd>{{% md %}}The raw configuration for this ACL auth method. This
 attribute is deprecated and will be removed in a future version. `config_json`
 should be used instead.
-{{% /md %}}<p class="property-message">Deprecated: {{% md %}}The config attribute is deprecated, please use config_json instead.{{% /md %}}</p></dd>
-    <dt class="property-optional"
+{{% /md %}}<p class="property-message">Deprecated: {{% md %}}The config attribute is deprecated, please use config_json instead.{{% /md %}}</p></dd><dt class="property-optional"
             title="Optional">
         <span id="configjson_go">
 <a href="#configjson_go" style="color: inherit; text-decoration: inherit;">Config<wbr>Json</a>
@@ -453,8 +430,7 @@ should be used instead.
         <span class="property-type">string</span>
     </dt>
     <dd>{{% md %}}The raw configuration for this ACL auth method.
-{{% /md %}}</dd>
-    <dt class="property-optional"
+{{% /md %}}</dd><dt class="property-optional"
             title="Optional">
         <span id="description_go">
 <a href="#description_go" style="color: inherit; text-decoration: inherit;">Description</a>
@@ -463,8 +439,7 @@ should be used instead.
         <span class="property-type">string</span>
     </dt>
     <dd>{{% md %}}A free form human readable description of the auth method.
-{{% /md %}}</dd>
-    <dt class="property-optional"
+{{% /md %}}</dd><dt class="property-optional"
             title="Optional">
         <span id="displayname_go">
 <a href="#displayname_go" style="color: inherit; text-decoration: inherit;">Display<wbr>Name</a>
@@ -474,8 +449,7 @@ should be used instead.
     </dt>
     <dd>{{% md %}}An optional name to use instead of the name
 attribute when displaying information about this auth method.
-{{% /md %}}</dd>
-    <dt class="property-optional"
+{{% /md %}}</dd><dt class="property-optional"
             title="Optional">
         <span id="maxtokenttl_go">
 <a href="#maxtokenttl_go" style="color: inherit; text-decoration: inherit;">Max<wbr>Token<wbr>Ttl</a>
@@ -485,8 +459,7 @@ attribute when displaying information about this auth method.
     </dt>
     <dd>{{% md %}}The maximum life of any token created by this
 auth method.
-{{% /md %}}</dd>
-    <dt class="property-optional"
+{{% /md %}}</dd><dt class="property-optional"
             title="Optional">
         <span id="name_go">
 <a href="#name_go" style="color: inherit; text-decoration: inherit;">Name</a>
@@ -495,8 +468,7 @@ auth method.
         <span class="property-type">string</span>
     </dt>
     <dd>{{% md %}}The name of the ACL auth method.
-{{% /md %}}</dd>
-    <dt class="property-optional"
+{{% /md %}}</dd><dt class="property-optional"
             title="Optional">
         <span id="namespace_go">
 <a href="#namespace_go" style="color: inherit; text-decoration: inherit;">Namespace</a>
@@ -505,8 +477,7 @@ auth method.
         <span class="property-type">string</span>
     </dt>
     <dd>{{% md %}}The namespace to create the policy within.
-{{% /md %}}</dd>
-    <dt class="property-optional"
+{{% /md %}}</dd><dt class="property-optional"
             title="Optional">
         <span id="namespacerules_go">
 <a href="#namespacerules_go" style="color: inherit; text-decoration: inherit;">Namespace<wbr>Rules</a>
@@ -516,8 +487,7 @@ auth method.
     </dt>
     <dd>{{% md %}}A set of rules that control
 which namespace tokens created via this auth method will be created within.
-{{% /md %}}</dd>
-    <dt class="property-optional"
+{{% /md %}}</dd><dt class="property-optional"
             title="Optional">
         <span id="tokenlocality_go">
 <a href="#tokenlocality_go" style="color: inherit; text-decoration: inherit;">Token<wbr>Locality</a>
@@ -527,14 +497,11 @@ which namespace tokens created via this auth method will be created within.
     </dt>
     <dd>{{% md %}}The kind of token that this auth method
 produces. This can be either 'local' or 'global'.
-{{% /md %}}</dd>
-</dl>
+{{% /md %}}</dd></dl>
 {{% /choosable %}}
 
 {{% choosable language nodejs %}}
-<dl class="resources-properties">
-
-    <dt class="property-required"
+<dl class="resources-properties"><dt class="property-required"
             title="Required">
         <span id="type_nodejs">
 <a href="#type_nodejs" style="color: inherit; text-decoration: inherit;">type</a>
@@ -543,8 +510,7 @@ produces. This can be either 'local' or 'global'.
         <span class="property-type">string</span>
     </dt>
     <dd>{{% md %}}The type of the ACL auth method.
-{{% /md %}}</dd>
-    <dt class="property-optional property-deprecated"
+{{% /md %}}</dd><dt class="property-optional property-deprecated"
             title="Optional, Deprecated">
         <span id="config_nodejs">
 <a href="#config_nodejs" style="color: inherit; text-decoration: inherit;">config</a>
@@ -555,8 +521,7 @@ produces. This can be either 'local' or 'global'.
     <dd>{{% md %}}The raw configuration for this ACL auth method. This
 attribute is deprecated and will be removed in a future version. `config_json`
 should be used instead.
-{{% /md %}}<p class="property-message">Deprecated: {{% md %}}The config attribute is deprecated, please use config_json instead.{{% /md %}}</p></dd>
-    <dt class="property-optional"
+{{% /md %}}<p class="property-message">Deprecated: {{% md %}}The config attribute is deprecated, please use config_json instead.{{% /md %}}</p></dd><dt class="property-optional"
             title="Optional">
         <span id="configjson_nodejs">
 <a href="#configjson_nodejs" style="color: inherit; text-decoration: inherit;">config<wbr>Json</a>
@@ -565,8 +530,7 @@ should be used instead.
         <span class="property-type">string</span>
     </dt>
     <dd>{{% md %}}The raw configuration for this ACL auth method.
-{{% /md %}}</dd>
-    <dt class="property-optional"
+{{% /md %}}</dd><dt class="property-optional"
             title="Optional">
         <span id="description_nodejs">
 <a href="#description_nodejs" style="color: inherit; text-decoration: inherit;">description</a>
@@ -575,8 +539,7 @@ should be used instead.
         <span class="property-type">string</span>
     </dt>
     <dd>{{% md %}}A free form human readable description of the auth method.
-{{% /md %}}</dd>
-    <dt class="property-optional"
+{{% /md %}}</dd><dt class="property-optional"
             title="Optional">
         <span id="displayname_nodejs">
 <a href="#displayname_nodejs" style="color: inherit; text-decoration: inherit;">display<wbr>Name</a>
@@ -586,8 +549,7 @@ should be used instead.
     </dt>
     <dd>{{% md %}}An optional name to use instead of the name
 attribute when displaying information about this auth method.
-{{% /md %}}</dd>
-    <dt class="property-optional"
+{{% /md %}}</dd><dt class="property-optional"
             title="Optional">
         <span id="maxtokenttl_nodejs">
 <a href="#maxtokenttl_nodejs" style="color: inherit; text-decoration: inherit;">max<wbr>Token<wbr>Ttl</a>
@@ -597,8 +559,7 @@ attribute when displaying information about this auth method.
     </dt>
     <dd>{{% md %}}The maximum life of any token created by this
 auth method.
-{{% /md %}}</dd>
-    <dt class="property-optional"
+{{% /md %}}</dd><dt class="property-optional"
             title="Optional">
         <span id="name_nodejs">
 <a href="#name_nodejs" style="color: inherit; text-decoration: inherit;">name</a>
@@ -607,8 +568,7 @@ auth method.
         <span class="property-type">string</span>
     </dt>
     <dd>{{% md %}}The name of the ACL auth method.
-{{% /md %}}</dd>
-    <dt class="property-optional"
+{{% /md %}}</dd><dt class="property-optional"
             title="Optional">
         <span id="namespace_nodejs">
 <a href="#namespace_nodejs" style="color: inherit; text-decoration: inherit;">namespace</a>
@@ -617,8 +577,7 @@ auth method.
         <span class="property-type">string</span>
     </dt>
     <dd>{{% md %}}The namespace to create the policy within.
-{{% /md %}}</dd>
-    <dt class="property-optional"
+{{% /md %}}</dd><dt class="property-optional"
             title="Optional">
         <span id="namespacerules_nodejs">
 <a href="#namespacerules_nodejs" style="color: inherit; text-decoration: inherit;">namespace<wbr>Rules</a>
@@ -628,8 +587,7 @@ auth method.
     </dt>
     <dd>{{% md %}}A set of rules that control
 which namespace tokens created via this auth method will be created within.
-{{% /md %}}</dd>
-    <dt class="property-optional"
+{{% /md %}}</dd><dt class="property-optional"
             title="Optional">
         <span id="tokenlocality_nodejs">
 <a href="#tokenlocality_nodejs" style="color: inherit; text-decoration: inherit;">token<wbr>Locality</a>
@@ -639,14 +597,11 @@ which namespace tokens created via this auth method will be created within.
     </dt>
     <dd>{{% md %}}The kind of token that this auth method
 produces. This can be either 'local' or 'global'.
-{{% /md %}}</dd>
-</dl>
+{{% /md %}}</dd></dl>
 {{% /choosable %}}
 
 {{% choosable language python %}}
-<dl class="resources-properties">
-
-    <dt class="property-required"
+<dl class="resources-properties"><dt class="property-required"
             title="Required">
         <span id="type_python">
 <a href="#type_python" style="color: inherit; text-decoration: inherit;">type</a>
@@ -655,8 +610,7 @@ produces. This can be either 'local' or 'global'.
         <span class="property-type">str</span>
     </dt>
     <dd>{{% md %}}The type of the ACL auth method.
-{{% /md %}}</dd>
-    <dt class="property-optional property-deprecated"
+{{% /md %}}</dd><dt class="property-optional property-deprecated"
             title="Optional, Deprecated">
         <span id="config_python">
 <a href="#config_python" style="color: inherit; text-decoration: inherit;">config</a>
@@ -667,8 +621,7 @@ produces. This can be either 'local' or 'global'.
     <dd>{{% md %}}The raw configuration for this ACL auth method. This
 attribute is deprecated and will be removed in a future version. `config_json`
 should be used instead.
-{{% /md %}}<p class="property-message">Deprecated: {{% md %}}The config attribute is deprecated, please use config_json instead.{{% /md %}}</p></dd>
-    <dt class="property-optional"
+{{% /md %}}<p class="property-message">Deprecated: {{% md %}}The config attribute is deprecated, please use config_json instead.{{% /md %}}</p></dd><dt class="property-optional"
             title="Optional">
         <span id="config_json_python">
 <a href="#config_json_python" style="color: inherit; text-decoration: inherit;">config_<wbr>json</a>
@@ -677,8 +630,7 @@ should be used instead.
         <span class="property-type">str</span>
     </dt>
     <dd>{{% md %}}The raw configuration for this ACL auth method.
-{{% /md %}}</dd>
-    <dt class="property-optional"
+{{% /md %}}</dd><dt class="property-optional"
             title="Optional">
         <span id="description_python">
 <a href="#description_python" style="color: inherit; text-decoration: inherit;">description</a>
@@ -687,8 +639,7 @@ should be used instead.
         <span class="property-type">str</span>
     </dt>
     <dd>{{% md %}}A free form human readable description of the auth method.
-{{% /md %}}</dd>
-    <dt class="property-optional"
+{{% /md %}}</dd><dt class="property-optional"
             title="Optional">
         <span id="display_name_python">
 <a href="#display_name_python" style="color: inherit; text-decoration: inherit;">display_<wbr>name</a>
@@ -698,8 +649,7 @@ should be used instead.
     </dt>
     <dd>{{% md %}}An optional name to use instead of the name
 attribute when displaying information about this auth method.
-{{% /md %}}</dd>
-    <dt class="property-optional"
+{{% /md %}}</dd><dt class="property-optional"
             title="Optional">
         <span id="max_token_ttl_python">
 <a href="#max_token_ttl_python" style="color: inherit; text-decoration: inherit;">max_<wbr>token_<wbr>ttl</a>
@@ -709,8 +659,7 @@ attribute when displaying information about this auth method.
     </dt>
     <dd>{{% md %}}The maximum life of any token created by this
 auth method.
-{{% /md %}}</dd>
-    <dt class="property-optional"
+{{% /md %}}</dd><dt class="property-optional"
             title="Optional">
         <span id="name_python">
 <a href="#name_python" style="color: inherit; text-decoration: inherit;">name</a>
@@ -719,8 +668,7 @@ auth method.
         <span class="property-type">str</span>
     </dt>
     <dd>{{% md %}}The name of the ACL auth method.
-{{% /md %}}</dd>
-    <dt class="property-optional"
+{{% /md %}}</dd><dt class="property-optional"
             title="Optional">
         <span id="namespace_python">
 <a href="#namespace_python" style="color: inherit; text-decoration: inherit;">namespace</a>
@@ -729,8 +677,7 @@ auth method.
         <span class="property-type">str</span>
     </dt>
     <dd>{{% md %}}The namespace to create the policy within.
-{{% /md %}}</dd>
-    <dt class="property-optional"
+{{% /md %}}</dd><dt class="property-optional"
             title="Optional">
         <span id="namespace_rules_python">
 <a href="#namespace_rules_python" style="color: inherit; text-decoration: inherit;">namespace_<wbr>rules</a>
@@ -740,8 +687,7 @@ auth method.
     </dt>
     <dd>{{% md %}}A set of rules that control
 which namespace tokens created via this auth method will be created within.
-{{% /md %}}</dd>
-    <dt class="property-optional"
+{{% /md %}}</dd><dt class="property-optional"
             title="Optional">
         <span id="token_locality_python">
 <a href="#token_locality_python" style="color: inherit; text-decoration: inherit;">token_<wbr>locality</a>
@@ -751,8 +697,7 @@ which namespace tokens created via this auth method will be created within.
     </dt>
     <dd>{{% md %}}The kind of token that this auth method
 produces. This can be either 'local' or 'global'.
-{{% /md %}}</dd>
-</dl>
+{{% /md %}}</dd></dl>
 {{% /choosable %}}
 
 
@@ -763,9 +708,7 @@ All [input](#inputs) properties are implicitly available as output properties. A
 
 
 {{% choosable language csharp %}}
-<dl class="resources-properties">
-
-    <dt class="property-"
+<dl class="resources-properties"><dt class="property-"
             title="">
         <span id="id_csharp">
 <a href="#id_csharp" style="color: inherit; text-decoration: inherit;">Id</a>
@@ -773,14 +716,11 @@ All [input](#inputs) properties are implicitly available as output properties. A
         <span class="property-indicator"></span>
         <span class="property-type">string</span>
     </dt>
-    <dd>{{% md %}}The provider-assigned unique ID for this managed resource.{{% /md %}}</dd>
-</dl>
+    <dd>{{% md %}}The provider-assigned unique ID for this managed resource.{{% /md %}}</dd></dl>
 {{% /choosable %}}
 
 {{% choosable language go %}}
-<dl class="resources-properties">
-
-    <dt class="property-"
+<dl class="resources-properties"><dt class="property-"
             title="">
         <span id="id_go">
 <a href="#id_go" style="color: inherit; text-decoration: inherit;">Id</a>
@@ -788,14 +728,11 @@ All [input](#inputs) properties are implicitly available as output properties. A
         <span class="property-indicator"></span>
         <span class="property-type">string</span>
     </dt>
-    <dd>{{% md %}}The provider-assigned unique ID for this managed resource.{{% /md %}}</dd>
-</dl>
+    <dd>{{% md %}}The provider-assigned unique ID for this managed resource.{{% /md %}}</dd></dl>
 {{% /choosable %}}
 
 {{% choosable language nodejs %}}
-<dl class="resources-properties">
-
-    <dt class="property-"
+<dl class="resources-properties"><dt class="property-"
             title="">
         <span id="id_nodejs">
 <a href="#id_nodejs" style="color: inherit; text-decoration: inherit;">id</a>
@@ -803,14 +740,11 @@ All [input](#inputs) properties are implicitly available as output properties. A
         <span class="property-indicator"></span>
         <span class="property-type">string</span>
     </dt>
-    <dd>{{% md %}}The provider-assigned unique ID for this managed resource.{{% /md %}}</dd>
-</dl>
+    <dd>{{% md %}}The provider-assigned unique ID for this managed resource.{{% /md %}}</dd></dl>
 {{% /choosable %}}
 
 {{% choosable language python %}}
-<dl class="resources-properties">
-
-    <dt class="property-"
+<dl class="resources-properties"><dt class="property-"
             title="">
         <span id="id_python">
 <a href="#id_python" style="color: inherit; text-decoration: inherit;">id</a>
@@ -818,8 +752,7 @@ All [input](#inputs) properties are implicitly available as output properties. A
         <span class="property-indicator"></span>
         <span class="property-type">str</span>
     </dt>
-    <dd>{{% md %}}The provider-assigned unique ID for this managed resource.{{% /md %}}</dd>
-</dl>
+    <dd>{{% md %}}The provider-assigned unique ID for this managed resource.{{% /md %}}</dd></dl>
 {{% /choosable %}}
 
 
@@ -946,9 +879,7 @@ The following state arguments are supported:
 
 
 {{% choosable language csharp %}}
-<dl class="resources-properties">
-
-    <dt class="property-optional property-deprecated"
+<dl class="resources-properties"><dt class="property-optional property-deprecated"
             title="Optional, Deprecated">
         <span id="state_config_csharp">
 <a href="#state_config_csharp" style="color: inherit; text-decoration: inherit;">Config</a>
@@ -959,8 +890,7 @@ The following state arguments are supported:
     <dd>{{% md %}}The raw configuration for this ACL auth method. This
 attribute is deprecated and will be removed in a future version. `config_json`
 should be used instead.
-{{% /md %}}<p class="property-message">Deprecated: {{% md %}}The config attribute is deprecated, please use config_json instead.{{% /md %}}</p></dd>
-    <dt class="property-optional"
+{{% /md %}}<p class="property-message">Deprecated: {{% md %}}The config attribute is deprecated, please use config_json instead.{{% /md %}}</p></dd><dt class="property-optional"
             title="Optional">
         <span id="state_configjson_csharp">
 <a href="#state_configjson_csharp" style="color: inherit; text-decoration: inherit;">Config<wbr>Json</a>
@@ -969,8 +899,7 @@ should be used instead.
         <span class="property-type">string</span>
     </dt>
     <dd>{{% md %}}The raw configuration for this ACL auth method.
-{{% /md %}}</dd>
-    <dt class="property-optional"
+{{% /md %}}</dd><dt class="property-optional"
             title="Optional">
         <span id="state_description_csharp">
 <a href="#state_description_csharp" style="color: inherit; text-decoration: inherit;">Description</a>
@@ -979,8 +908,7 @@ should be used instead.
         <span class="property-type">string</span>
     </dt>
     <dd>{{% md %}}A free form human readable description of the auth method.
-{{% /md %}}</dd>
-    <dt class="property-optional"
+{{% /md %}}</dd><dt class="property-optional"
             title="Optional">
         <span id="state_displayname_csharp">
 <a href="#state_displayname_csharp" style="color: inherit; text-decoration: inherit;">Display<wbr>Name</a>
@@ -990,8 +918,7 @@ should be used instead.
     </dt>
     <dd>{{% md %}}An optional name to use instead of the name
 attribute when displaying information about this auth method.
-{{% /md %}}</dd>
-    <dt class="property-optional"
+{{% /md %}}</dd><dt class="property-optional"
             title="Optional">
         <span id="state_maxtokenttl_csharp">
 <a href="#state_maxtokenttl_csharp" style="color: inherit; text-decoration: inherit;">Max<wbr>Token<wbr>Ttl</a>
@@ -1001,8 +928,7 @@ attribute when displaying information about this auth method.
     </dt>
     <dd>{{% md %}}The maximum life of any token created by this
 auth method.
-{{% /md %}}</dd>
-    <dt class="property-optional"
+{{% /md %}}</dd><dt class="property-optional"
             title="Optional">
         <span id="state_name_csharp">
 <a href="#state_name_csharp" style="color: inherit; text-decoration: inherit;">Name</a>
@@ -1011,8 +937,7 @@ auth method.
         <span class="property-type">string</span>
     </dt>
     <dd>{{% md %}}The name of the ACL auth method.
-{{% /md %}}</dd>
-    <dt class="property-optional"
+{{% /md %}}</dd><dt class="property-optional"
             title="Optional">
         <span id="state_namespace_csharp">
 <a href="#state_namespace_csharp" style="color: inherit; text-decoration: inherit;">Namespace</a>
@@ -1021,8 +946,7 @@ auth method.
         <span class="property-type">string</span>
     </dt>
     <dd>{{% md %}}The namespace to create the policy within.
-{{% /md %}}</dd>
-    <dt class="property-optional"
+{{% /md %}}</dd><dt class="property-optional"
             title="Optional">
         <span id="state_namespacerules_csharp">
 <a href="#state_namespacerules_csharp" style="color: inherit; text-decoration: inherit;">Namespace<wbr>Rules</a>
@@ -1032,8 +956,7 @@ auth method.
     </dt>
     <dd>{{% md %}}A set of rules that control
 which namespace tokens created via this auth method will be created within.
-{{% /md %}}</dd>
-    <dt class="property-optional"
+{{% /md %}}</dd><dt class="property-optional"
             title="Optional">
         <span id="state_tokenlocality_csharp">
 <a href="#state_tokenlocality_csharp" style="color: inherit; text-decoration: inherit;">Token<wbr>Locality</a>
@@ -1043,8 +966,7 @@ which namespace tokens created via this auth method will be created within.
     </dt>
     <dd>{{% md %}}The kind of token that this auth method
 produces. This can be either 'local' or 'global'.
-{{% /md %}}</dd>
-    <dt class="property-optional"
+{{% /md %}}</dd><dt class="property-optional"
             title="Optional">
         <span id="state_type_csharp">
 <a href="#state_type_csharp" style="color: inherit; text-decoration: inherit;">Type</a>
@@ -1053,14 +975,11 @@ produces. This can be either 'local' or 'global'.
         <span class="property-type">string</span>
     </dt>
     <dd>{{% md %}}The type of the ACL auth method.
-{{% /md %}}</dd>
-</dl>
+{{% /md %}}</dd></dl>
 {{% /choosable %}}
 
 {{% choosable language go %}}
-<dl class="resources-properties">
-
-    <dt class="property-optional property-deprecated"
+<dl class="resources-properties"><dt class="property-optional property-deprecated"
             title="Optional, Deprecated">
         <span id="state_config_go">
 <a href="#state_config_go" style="color: inherit; text-decoration: inherit;">Config</a>
@@ -1071,8 +990,7 @@ produces. This can be either 'local' or 'global'.
     <dd>{{% md %}}The raw configuration for this ACL auth method. This
 attribute is deprecated and will be removed in a future version. `config_json`
 should be used instead.
-{{% /md %}}<p class="property-message">Deprecated: {{% md %}}The config attribute is deprecated, please use config_json instead.{{% /md %}}</p></dd>
-    <dt class="property-optional"
+{{% /md %}}<p class="property-message">Deprecated: {{% md %}}The config attribute is deprecated, please use config_json instead.{{% /md %}}</p></dd><dt class="property-optional"
             title="Optional">
         <span id="state_configjson_go">
 <a href="#state_configjson_go" style="color: inherit; text-decoration: inherit;">Config<wbr>Json</a>
@@ -1081,8 +999,7 @@ should be used instead.
         <span class="property-type">string</span>
     </dt>
     <dd>{{% md %}}The raw configuration for this ACL auth method.
-{{% /md %}}</dd>
-    <dt class="property-optional"
+{{% /md %}}</dd><dt class="property-optional"
             title="Optional">
         <span id="state_description_go">
 <a href="#state_description_go" style="color: inherit; text-decoration: inherit;">Description</a>
@@ -1091,8 +1008,7 @@ should be used instead.
         <span class="property-type">string</span>
     </dt>
     <dd>{{% md %}}A free form human readable description of the auth method.
-{{% /md %}}</dd>
-    <dt class="property-optional"
+{{% /md %}}</dd><dt class="property-optional"
             title="Optional">
         <span id="state_displayname_go">
 <a href="#state_displayname_go" style="color: inherit; text-decoration: inherit;">Display<wbr>Name</a>
@@ -1102,8 +1018,7 @@ should be used instead.
     </dt>
     <dd>{{% md %}}An optional name to use instead of the name
 attribute when displaying information about this auth method.
-{{% /md %}}</dd>
-    <dt class="property-optional"
+{{% /md %}}</dd><dt class="property-optional"
             title="Optional">
         <span id="state_maxtokenttl_go">
 <a href="#state_maxtokenttl_go" style="color: inherit; text-decoration: inherit;">Max<wbr>Token<wbr>Ttl</a>
@@ -1113,8 +1028,7 @@ attribute when displaying information about this auth method.
     </dt>
     <dd>{{% md %}}The maximum life of any token created by this
 auth method.
-{{% /md %}}</dd>
-    <dt class="property-optional"
+{{% /md %}}</dd><dt class="property-optional"
             title="Optional">
         <span id="state_name_go">
 <a href="#state_name_go" style="color: inherit; text-decoration: inherit;">Name</a>
@@ -1123,8 +1037,7 @@ auth method.
         <span class="property-type">string</span>
     </dt>
     <dd>{{% md %}}The name of the ACL auth method.
-{{% /md %}}</dd>
-    <dt class="property-optional"
+{{% /md %}}</dd><dt class="property-optional"
             title="Optional">
         <span id="state_namespace_go">
 <a href="#state_namespace_go" style="color: inherit; text-decoration: inherit;">Namespace</a>
@@ -1133,8 +1046,7 @@ auth method.
         <span class="property-type">string</span>
     </dt>
     <dd>{{% md %}}The namespace to create the policy within.
-{{% /md %}}</dd>
-    <dt class="property-optional"
+{{% /md %}}</dd><dt class="property-optional"
             title="Optional">
         <span id="state_namespacerules_go">
 <a href="#state_namespacerules_go" style="color: inherit; text-decoration: inherit;">Namespace<wbr>Rules</a>
@@ -1144,8 +1056,7 @@ auth method.
     </dt>
     <dd>{{% md %}}A set of rules that control
 which namespace tokens created via this auth method will be created within.
-{{% /md %}}</dd>
-    <dt class="property-optional"
+{{% /md %}}</dd><dt class="property-optional"
             title="Optional">
         <span id="state_tokenlocality_go">
 <a href="#state_tokenlocality_go" style="color: inherit; text-decoration: inherit;">Token<wbr>Locality</a>
@@ -1155,8 +1066,7 @@ which namespace tokens created via this auth method will be created within.
     </dt>
     <dd>{{% md %}}The kind of token that this auth method
 produces. This can be either 'local' or 'global'.
-{{% /md %}}</dd>
-    <dt class="property-optional"
+{{% /md %}}</dd><dt class="property-optional"
             title="Optional">
         <span id="state_type_go">
 <a href="#state_type_go" style="color: inherit; text-decoration: inherit;">Type</a>
@@ -1165,14 +1075,11 @@ produces. This can be either 'local' or 'global'.
         <span class="property-type">string</span>
     </dt>
     <dd>{{% md %}}The type of the ACL auth method.
-{{% /md %}}</dd>
-</dl>
+{{% /md %}}</dd></dl>
 {{% /choosable %}}
 
 {{% choosable language nodejs %}}
-<dl class="resources-properties">
-
-    <dt class="property-optional property-deprecated"
+<dl class="resources-properties"><dt class="property-optional property-deprecated"
             title="Optional, Deprecated">
         <span id="state_config_nodejs">
 <a href="#state_config_nodejs" style="color: inherit; text-decoration: inherit;">config</a>
@@ -1183,8 +1090,7 @@ produces. This can be either 'local' or 'global'.
     <dd>{{% md %}}The raw configuration for this ACL auth method. This
 attribute is deprecated and will be removed in a future version. `config_json`
 should be used instead.
-{{% /md %}}<p class="property-message">Deprecated: {{% md %}}The config attribute is deprecated, please use config_json instead.{{% /md %}}</p></dd>
-    <dt class="property-optional"
+{{% /md %}}<p class="property-message">Deprecated: {{% md %}}The config attribute is deprecated, please use config_json instead.{{% /md %}}</p></dd><dt class="property-optional"
             title="Optional">
         <span id="state_configjson_nodejs">
 <a href="#state_configjson_nodejs" style="color: inherit; text-decoration: inherit;">config<wbr>Json</a>
@@ -1193,8 +1099,7 @@ should be used instead.
         <span class="property-type">string</span>
     </dt>
     <dd>{{% md %}}The raw configuration for this ACL auth method.
-{{% /md %}}</dd>
-    <dt class="property-optional"
+{{% /md %}}</dd><dt class="property-optional"
             title="Optional">
         <span id="state_description_nodejs">
 <a href="#state_description_nodejs" style="color: inherit; text-decoration: inherit;">description</a>
@@ -1203,8 +1108,7 @@ should be used instead.
         <span class="property-type">string</span>
     </dt>
     <dd>{{% md %}}A free form human readable description of the auth method.
-{{% /md %}}</dd>
-    <dt class="property-optional"
+{{% /md %}}</dd><dt class="property-optional"
             title="Optional">
         <span id="state_displayname_nodejs">
 <a href="#state_displayname_nodejs" style="color: inherit; text-decoration: inherit;">display<wbr>Name</a>
@@ -1214,8 +1118,7 @@ should be used instead.
     </dt>
     <dd>{{% md %}}An optional name to use instead of the name
 attribute when displaying information about this auth method.
-{{% /md %}}</dd>
-    <dt class="property-optional"
+{{% /md %}}</dd><dt class="property-optional"
             title="Optional">
         <span id="state_maxtokenttl_nodejs">
 <a href="#state_maxtokenttl_nodejs" style="color: inherit; text-decoration: inherit;">max<wbr>Token<wbr>Ttl</a>
@@ -1225,8 +1128,7 @@ attribute when displaying information about this auth method.
     </dt>
     <dd>{{% md %}}The maximum life of any token created by this
 auth method.
-{{% /md %}}</dd>
-    <dt class="property-optional"
+{{% /md %}}</dd><dt class="property-optional"
             title="Optional">
         <span id="state_name_nodejs">
 <a href="#state_name_nodejs" style="color: inherit; text-decoration: inherit;">name</a>
@@ -1235,8 +1137,7 @@ auth method.
         <span class="property-type">string</span>
     </dt>
     <dd>{{% md %}}The name of the ACL auth method.
-{{% /md %}}</dd>
-    <dt class="property-optional"
+{{% /md %}}</dd><dt class="property-optional"
             title="Optional">
         <span id="state_namespace_nodejs">
 <a href="#state_namespace_nodejs" style="color: inherit; text-decoration: inherit;">namespace</a>
@@ -1245,8 +1146,7 @@ auth method.
         <span class="property-type">string</span>
     </dt>
     <dd>{{% md %}}The namespace to create the policy within.
-{{% /md %}}</dd>
-    <dt class="property-optional"
+{{% /md %}}</dd><dt class="property-optional"
             title="Optional">
         <span id="state_namespacerules_nodejs">
 <a href="#state_namespacerules_nodejs" style="color: inherit; text-decoration: inherit;">namespace<wbr>Rules</a>
@@ -1256,8 +1156,7 @@ auth method.
     </dt>
     <dd>{{% md %}}A set of rules that control
 which namespace tokens created via this auth method will be created within.
-{{% /md %}}</dd>
-    <dt class="property-optional"
+{{% /md %}}</dd><dt class="property-optional"
             title="Optional">
         <span id="state_tokenlocality_nodejs">
 <a href="#state_tokenlocality_nodejs" style="color: inherit; text-decoration: inherit;">token<wbr>Locality</a>
@@ -1267,8 +1166,7 @@ which namespace tokens created via this auth method will be created within.
     </dt>
     <dd>{{% md %}}The kind of token that this auth method
 produces. This can be either 'local' or 'global'.
-{{% /md %}}</dd>
-    <dt class="property-optional"
+{{% /md %}}</dd><dt class="property-optional"
             title="Optional">
         <span id="state_type_nodejs">
 <a href="#state_type_nodejs" style="color: inherit; text-decoration: inherit;">type</a>
@@ -1277,14 +1175,11 @@ produces. This can be either 'local' or 'global'.
         <span class="property-type">string</span>
     </dt>
     <dd>{{% md %}}The type of the ACL auth method.
-{{% /md %}}</dd>
-</dl>
+{{% /md %}}</dd></dl>
 {{% /choosable %}}
 
 {{% choosable language python %}}
-<dl class="resources-properties">
-
-    <dt class="property-optional property-deprecated"
+<dl class="resources-properties"><dt class="property-optional property-deprecated"
             title="Optional, Deprecated">
         <span id="state_config_python">
 <a href="#state_config_python" style="color: inherit; text-decoration: inherit;">config</a>
@@ -1295,8 +1190,7 @@ produces. This can be either 'local' or 'global'.
     <dd>{{% md %}}The raw configuration for this ACL auth method. This
 attribute is deprecated and will be removed in a future version. `config_json`
 should be used instead.
-{{% /md %}}<p class="property-message">Deprecated: {{% md %}}The config attribute is deprecated, please use config_json instead.{{% /md %}}</p></dd>
-    <dt class="property-optional"
+{{% /md %}}<p class="property-message">Deprecated: {{% md %}}The config attribute is deprecated, please use config_json instead.{{% /md %}}</p></dd><dt class="property-optional"
             title="Optional">
         <span id="state_config_json_python">
 <a href="#state_config_json_python" style="color: inherit; text-decoration: inherit;">config_<wbr>json</a>
@@ -1305,8 +1199,7 @@ should be used instead.
         <span class="property-type">str</span>
     </dt>
     <dd>{{% md %}}The raw configuration for this ACL auth method.
-{{% /md %}}</dd>
-    <dt class="property-optional"
+{{% /md %}}</dd><dt class="property-optional"
             title="Optional">
         <span id="state_description_python">
 <a href="#state_description_python" style="color: inherit; text-decoration: inherit;">description</a>
@@ -1315,8 +1208,7 @@ should be used instead.
         <span class="property-type">str</span>
     </dt>
     <dd>{{% md %}}A free form human readable description of the auth method.
-{{% /md %}}</dd>
-    <dt class="property-optional"
+{{% /md %}}</dd><dt class="property-optional"
             title="Optional">
         <span id="state_display_name_python">
 <a href="#state_display_name_python" style="color: inherit; text-decoration: inherit;">display_<wbr>name</a>
@@ -1326,8 +1218,7 @@ should be used instead.
     </dt>
     <dd>{{% md %}}An optional name to use instead of the name
 attribute when displaying information about this auth method.
-{{% /md %}}</dd>
-    <dt class="property-optional"
+{{% /md %}}</dd><dt class="property-optional"
             title="Optional">
         <span id="state_max_token_ttl_python">
 <a href="#state_max_token_ttl_python" style="color: inherit; text-decoration: inherit;">max_<wbr>token_<wbr>ttl</a>
@@ -1337,8 +1228,7 @@ attribute when displaying information about this auth method.
     </dt>
     <dd>{{% md %}}The maximum life of any token created by this
 auth method.
-{{% /md %}}</dd>
-    <dt class="property-optional"
+{{% /md %}}</dd><dt class="property-optional"
             title="Optional">
         <span id="state_name_python">
 <a href="#state_name_python" style="color: inherit; text-decoration: inherit;">name</a>
@@ -1347,8 +1237,7 @@ auth method.
         <span class="property-type">str</span>
     </dt>
     <dd>{{% md %}}The name of the ACL auth method.
-{{% /md %}}</dd>
-    <dt class="property-optional"
+{{% /md %}}</dd><dt class="property-optional"
             title="Optional">
         <span id="state_namespace_python">
 <a href="#state_namespace_python" style="color: inherit; text-decoration: inherit;">namespace</a>
@@ -1357,8 +1246,7 @@ auth method.
         <span class="property-type">str</span>
     </dt>
     <dd>{{% md %}}The namespace to create the policy within.
-{{% /md %}}</dd>
-    <dt class="property-optional"
+{{% /md %}}</dd><dt class="property-optional"
             title="Optional">
         <span id="state_namespace_rules_python">
 <a href="#state_namespace_rules_python" style="color: inherit; text-decoration: inherit;">namespace_<wbr>rules</a>
@@ -1368,8 +1256,7 @@ auth method.
     </dt>
     <dd>{{% md %}}A set of rules that control
 which namespace tokens created via this auth method will be created within.
-{{% /md %}}</dd>
-    <dt class="property-optional"
+{{% /md %}}</dd><dt class="property-optional"
             title="Optional">
         <span id="state_token_locality_python">
 <a href="#state_token_locality_python" style="color: inherit; text-decoration: inherit;">token_<wbr>locality</a>
@@ -1379,8 +1266,7 @@ which namespace tokens created via this auth method will be created within.
     </dt>
     <dd>{{% md %}}The kind of token that this auth method
 produces. This can be either 'local' or 'global'.
-{{% /md %}}</dd>
-    <dt class="property-optional"
+{{% /md %}}</dd><dt class="property-optional"
             title="Optional">
         <span id="state_type_python">
 <a href="#state_type_python" style="color: inherit; text-decoration: inherit;">type</a>
@@ -1389,8 +1275,7 @@ produces. This can be either 'local' or 'global'.
         <span class="property-type">str</span>
     </dt>
     <dd>{{% md %}}The type of the ACL auth method.
-{{% /md %}}</dd>
-</dl>
+{{% /md %}}</dd></dl>
 {{% /choosable %}}
 
 
@@ -1405,9 +1290,7 @@ produces. This can be either 'local' or 'global'.
 <h4 id="aclauthmethodnamespacerule">Acl<wbr>Auth<wbr>Method<wbr>Namespace<wbr>Rule</h4>
 
 {{% choosable language csharp %}}
-<dl class="resources-properties">
-
-    <dt class="property-required"
+<dl class="resources-properties"><dt class="property-required"
             title="Required">
         <span id="bindnamespace_csharp">
 <a href="#bindnamespace_csharp" style="color: inherit; text-decoration: inherit;">Bind<wbr>Namespace</a>
@@ -1417,8 +1300,7 @@ produces. This can be either 'local' or 'global'.
     </dt>
     <dd>{{% md %}}If the namespace rule's `selector` matches then
 this is used to control the namespace where the token is created.
-{{% /md %}}</dd>
-    <dt class="property-optional"
+{{% /md %}}</dd><dt class="property-optional"
             title="Optional">
         <span id="selector_csharp">
 <a href="#selector_csharp" style="color: inherit; text-decoration: inherit;">Selector</a>
@@ -1429,14 +1311,11 @@ this is used to control the namespace where the token is created.
     <dd>{{% md %}}Specifies the expression used to match this namespace
 rule against valid identities returned from an auth method validation.
 Defaults to `""`.
-{{% /md %}}</dd>
-</dl>
+{{% /md %}}</dd></dl>
 {{% /choosable %}}
 
 {{% choosable language go %}}
-<dl class="resources-properties">
-
-    <dt class="property-required"
+<dl class="resources-properties"><dt class="property-required"
             title="Required">
         <span id="bindnamespace_go">
 <a href="#bindnamespace_go" style="color: inherit; text-decoration: inherit;">Bind<wbr>Namespace</a>
@@ -1446,8 +1325,7 @@ Defaults to `""`.
     </dt>
     <dd>{{% md %}}If the namespace rule's `selector` matches then
 this is used to control the namespace where the token is created.
-{{% /md %}}</dd>
-    <dt class="property-optional"
+{{% /md %}}</dd><dt class="property-optional"
             title="Optional">
         <span id="selector_go">
 <a href="#selector_go" style="color: inherit; text-decoration: inherit;">Selector</a>
@@ -1458,14 +1336,11 @@ this is used to control the namespace where the token is created.
     <dd>{{% md %}}Specifies the expression used to match this namespace
 rule against valid identities returned from an auth method validation.
 Defaults to `""`.
-{{% /md %}}</dd>
-</dl>
+{{% /md %}}</dd></dl>
 {{% /choosable %}}
 
 {{% choosable language nodejs %}}
-<dl class="resources-properties">
-
-    <dt class="property-required"
+<dl class="resources-properties"><dt class="property-required"
             title="Required">
         <span id="bindnamespace_nodejs">
 <a href="#bindnamespace_nodejs" style="color: inherit; text-decoration: inherit;">bind<wbr>Namespace</a>
@@ -1475,8 +1350,7 @@ Defaults to `""`.
     </dt>
     <dd>{{% md %}}If the namespace rule's `selector` matches then
 this is used to control the namespace where the token is created.
-{{% /md %}}</dd>
-    <dt class="property-optional"
+{{% /md %}}</dd><dt class="property-optional"
             title="Optional">
         <span id="selector_nodejs">
 <a href="#selector_nodejs" style="color: inherit; text-decoration: inherit;">selector</a>
@@ -1487,14 +1361,11 @@ this is used to control the namespace where the token is created.
     <dd>{{% md %}}Specifies the expression used to match this namespace
 rule against valid identities returned from an auth method validation.
 Defaults to `""`.
-{{% /md %}}</dd>
-</dl>
+{{% /md %}}</dd></dl>
 {{% /choosable %}}
 
 {{% choosable language python %}}
-<dl class="resources-properties">
-
-    <dt class="property-required"
+<dl class="resources-properties"><dt class="property-required"
             title="Required">
         <span id="bind_namespace_python">
 <a href="#bind_namespace_python" style="color: inherit; text-decoration: inherit;">bind_<wbr>namespace</a>
@@ -1504,8 +1375,7 @@ Defaults to `""`.
     </dt>
     <dd>{{% md %}}If the namespace rule's `selector` matches then
 this is used to control the namespace where the token is created.
-{{% /md %}}</dd>
-    <dt class="property-optional"
+{{% /md %}}</dd><dt class="property-optional"
             title="Optional">
         <span id="selector_python">
 <a href="#selector_python" style="color: inherit; text-decoration: inherit;">selector</a>
@@ -1516,8 +1386,7 @@ this is used to control the namespace where the token is created.
     <dd>{{% md %}}Specifies the expression used to match this namespace
 rule against valid identities returned from an auth method validation.
 Defaults to `""`.
-{{% /md %}}</dd>
-</dl>
+{{% /md %}}</dd></dl>
 {{% /choosable %}}
 
 
@@ -1528,6 +1397,6 @@ Defaults to `""`.
 	<dt>License</dt>
 	<dd>Apache-2.0</dd>
 	<dt>Notes</dt>
-	<dd>This Pulumi package is based on the [`consul` Terraform Provider](https://github.com/hashicorp/terraform-provider-consul).</dd>
+	<dd>{{% md %}}This Pulumi package is based on the [`consul` Terraform Provider](https://github.com/hashicorp/terraform-provider-consul).{{% /md %}}</dd>
 </dl>
 

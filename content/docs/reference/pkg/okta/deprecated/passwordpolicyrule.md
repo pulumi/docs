@@ -35,9 +35,7 @@ meta_desc: "Documentation for the okta.deprecated.PasswordPolicyRule resource wi
 
 {{% choosable language nodejs %}}
 
-<dl class="resources-properties">
-  
-    <dt
+<dl class="resources-properties"><dt
         class="property-required" title="Required">
         <span>name</span>
         <span class="property-indicator"></span>
@@ -45,9 +43,7 @@ meta_desc: "Documentation for the okta.deprecated.PasswordPolicyRule resource wi
     </dt>
     <dd>
       The unique name of the resource.
-    </dd>
-  
-    <dt
+    </dd><dt
         class="property-required" title="Required">
         <span>args</span>
         <span class="property-indicator"></span>
@@ -55,9 +51,7 @@ meta_desc: "Documentation for the okta.deprecated.PasswordPolicyRule resource wi
     </dt>
     <dd>
       The arguments to resource properties.
-    </dd>
-  
-    <dt
+    </dd><dt
         class="property-optional" title="Optional">
         <span>opts</span>
         <span class="property-indicator"></span>
@@ -65,10 +59,7 @@ meta_desc: "Documentation for the okta.deprecated.PasswordPolicyRule resource wi
     </dt>
     <dd>
       Bag of options to control resource&#39;s behavior.
-    </dd>
-  
-
-</dl>
+    </dd></dl>
 
 {{% /choosable %}}
 
@@ -94,9 +85,7 @@ meta_desc: "Documentation for the okta.deprecated.PasswordPolicyRule resource wi
 
 {{% choosable language go %}}
 
-<dl class="resources-properties">
-  
-    <dt
+<dl class="resources-properties"><dt
         class="property-optional" title="Optional">
         <span>ctx</span>
         <span class="property-indicator"></span>
@@ -104,9 +93,7 @@ meta_desc: "Documentation for the okta.deprecated.PasswordPolicyRule resource wi
     </dt>
     <dd>
       Context object for the current deployment.
-    </dd>
-  
-    <dt
+    </dd><dt
         class="property-required" title="Required">
         <span>name</span>
         <span class="property-indicator"></span>
@@ -114,9 +101,7 @@ meta_desc: "Documentation for the okta.deprecated.PasswordPolicyRule resource wi
     </dt>
     <dd>
       The unique name of the resource.
-    </dd>
-  
-    <dt
+    </dd><dt
         class="property-required" title="Required">
         <span>args</span>
         <span class="property-indicator"></span>
@@ -124,9 +109,7 @@ meta_desc: "Documentation for the okta.deprecated.PasswordPolicyRule resource wi
     </dt>
     <dd>
       The arguments to resource properties.
-    </dd>
-  
-    <dt
+    </dd><dt
         class="property-optional" title="Optional">
         <span>opts</span>
         <span class="property-indicator"></span>
@@ -134,18 +117,13 @@ meta_desc: "Documentation for the okta.deprecated.PasswordPolicyRule resource wi
     </dt>
     <dd>
       Bag of options to control resource&#39;s behavior.
-    </dd>
-  
-
-</dl>
+    </dd></dl>
 
 {{% /choosable %}}
 
 {{% choosable language csharp %}}
 
-<dl class="resources-properties">
-  
-    <dt
+<dl class="resources-properties"><dt
         class="property-required" title="Required">
         <span>name</span>
         <span class="property-indicator"></span>
@@ -153,9 +131,7 @@ meta_desc: "Documentation for the okta.deprecated.PasswordPolicyRule resource wi
     </dt>
     <dd>
       The unique name of the resource.
-    </dd>
-  
-    <dt
+    </dd><dt
         class="property-required" title="Required">
         <span>args</span>
         <span class="property-indicator"></span>
@@ -163,9 +139,7 @@ meta_desc: "Documentation for the okta.deprecated.PasswordPolicyRule resource wi
     </dt>
     <dd>
       The arguments to resource properties.
-    </dd>
-  
-    <dt
+    </dd><dt
         class="property-optional" title="Optional">
         <span>opts</span>
         <span class="property-indicator"></span>
@@ -173,10 +147,7 @@ meta_desc: "Documentation for the okta.deprecated.PasswordPolicyRule resource wi
     </dt>
     <dd>
       Bag of options to control resource&#39;s behavior.
-    </dd>
-  
-
-</dl>
+    </dd></dl>
 
 {{% /choosable %}}
 
@@ -191,9 +162,7 @@ The PasswordPolicyRule resource accepts the following [input]({{< relref "/docs/
 
 
 {{% choosable language csharp %}}
-<dl class="resources-properties">
-
-    <dt class="property-required"
+<dl class="resources-properties"><dt class="property-required"
             title="Required">
         <span id="policyid_csharp">
 <a href="#policyid_csharp" style="color: inherit; text-decoration: inherit;">Policyid</a>
@@ -202,8 +171,7 @@ The PasswordPolicyRule resource accepts the following [input]({{< relref "/docs/
         <span class="property-type">string</span>
     </dt>
     <dd>{{% md %}}Policy ID of the Rule
-{{% /md %}}</dd>
-    <dt class="property-optional"
+{{% /md %}}</dd><dt class="property-optional"
             title="Optional">
         <span id="name_csharp">
 <a href="#name_csharp" style="color: inherit; text-decoration: inherit;">Name</a>
@@ -212,8 +180,7 @@ The PasswordPolicyRule resource accepts the following [input]({{< relref "/docs/
         <span class="property-type">string</span>
     </dt>
     <dd>{{% md %}}Policy Rule Name
-{{% /md %}}</dd>
-    <dt class="property-optional"
+{{% /md %}}</dd><dt class="property-optional"
             title="Optional">
         <span id="networkconnection_csharp">
 <a href="#networkconnection_csharp" style="color: inherit; text-decoration: inherit;">Network<wbr>Connection</a>
@@ -222,8 +189,7 @@ The PasswordPolicyRule resource accepts the following [input]({{< relref "/docs/
         <span class="property-type">string</span>
     </dt>
     <dd>{{% md %}}Network selection mode: ANYWHERE, ZONE, ON_NETWORK, or OFF_NETWORK.
-{{% /md %}}</dd>
-    <dt class="property-optional"
+{{% /md %}}</dd><dt class="property-optional"
             title="Optional">
         <span id="networkexcludes_csharp">
 <a href="#networkexcludes_csharp" style="color: inherit; text-decoration: inherit;">Network<wbr>Excludes</a>
@@ -232,8 +198,7 @@ The PasswordPolicyRule resource accepts the following [input]({{< relref "/docs/
         <span class="property-type">List&lt;string&gt;</span>
     </dt>
     <dd>{{% md %}}The zones to exclude
-{{% /md %}}</dd>
-    <dt class="property-optional"
+{{% /md %}}</dd><dt class="property-optional"
             title="Optional">
         <span id="networkincludes_csharp">
 <a href="#networkincludes_csharp" style="color: inherit; text-decoration: inherit;">Network<wbr>Includes</a>
@@ -242,8 +207,7 @@ The PasswordPolicyRule resource accepts the following [input]({{< relref "/docs/
         <span class="property-type">List&lt;string&gt;</span>
     </dt>
     <dd>{{% md %}}The zones to include
-{{% /md %}}</dd>
-    <dt class="property-optional"
+{{% /md %}}</dd><dt class="property-optional"
             title="Optional">
         <span id="passwordchange_csharp">
 <a href="#passwordchange_csharp" style="color: inherit; text-decoration: inherit;">Password<wbr>Change</a>
@@ -252,8 +216,7 @@ The PasswordPolicyRule resource accepts the following [input]({{< relref "/docs/
         <span class="property-type">string</span>
     </dt>
     <dd>{{% md %}}Allow or deny a user to change their password: ALLOW or DENY. Default = ALLOW
-{{% /md %}}</dd>
-    <dt class="property-optional"
+{{% /md %}}</dd><dt class="property-optional"
             title="Optional">
         <span id="passwordreset_csharp">
 <a href="#passwordreset_csharp" style="color: inherit; text-decoration: inherit;">Password<wbr>Reset</a>
@@ -262,8 +225,7 @@ The PasswordPolicyRule resource accepts the following [input]({{< relref "/docs/
         <span class="property-type">string</span>
     </dt>
     <dd>{{% md %}}Allow or deny a user to reset their password: ALLOW or DENY. Default = ALLOW
-{{% /md %}}</dd>
-    <dt class="property-optional"
+{{% /md %}}</dd><dt class="property-optional"
             title="Optional">
         <span id="passwordunlock_csharp">
 <a href="#passwordunlock_csharp" style="color: inherit; text-decoration: inherit;">Password<wbr>Unlock</a>
@@ -272,8 +234,7 @@ The PasswordPolicyRule resource accepts the following [input]({{< relref "/docs/
         <span class="property-type">string</span>
     </dt>
     <dd>{{% md %}}Allow or deny a user to unlock. Default = DENY
-{{% /md %}}</dd>
-    <dt class="property-optional"
+{{% /md %}}</dd><dt class="property-optional"
             title="Optional">
         <span id="priority_csharp">
 <a href="#priority_csharp" style="color: inherit; text-decoration: inherit;">Priority</a>
@@ -283,8 +244,7 @@ The PasswordPolicyRule resource accepts the following [input]({{< relref "/docs/
     </dt>
     <dd>{{% md %}}Policy Rule Priority, this attribute can be set to a valid priority. To avoid endless diff situation we error if an
 invalid priority is provided. API defaults it to the last (lowest) if not there.
-{{% /md %}}</dd>
-    <dt class="property-optional"
+{{% /md %}}</dd><dt class="property-optional"
             title="Optional">
         <span id="status_csharp">
 <a href="#status_csharp" style="color: inherit; text-decoration: inherit;">Status</a>
@@ -293,8 +253,7 @@ invalid priority is provided. API defaults it to the last (lowest) if not there.
         <span class="property-type">string</span>
     </dt>
     <dd>{{% md %}}Policy Rule Status: ACTIVE or INACTIVE.
-{{% /md %}}</dd>
-    <dt class="property-optional"
+{{% /md %}}</dd><dt class="property-optional"
             title="Optional">
         <span id="usersexcludeds_csharp">
 <a href="#usersexcludeds_csharp" style="color: inherit; text-decoration: inherit;">Users<wbr>Excludeds</a>
@@ -303,14 +262,11 @@ invalid priority is provided. API defaults it to the last (lowest) if not there.
         <span class="property-type">List&lt;string&gt;</span>
     </dt>
     <dd>{{% md %}}Set of User IDs to Exclude
-{{% /md %}}</dd>
-</dl>
+{{% /md %}}</dd></dl>
 {{% /choosable %}}
 
 {{% choosable language go %}}
-<dl class="resources-properties">
-
-    <dt class="property-required"
+<dl class="resources-properties"><dt class="property-required"
             title="Required">
         <span id="policyid_go">
 <a href="#policyid_go" style="color: inherit; text-decoration: inherit;">Policyid</a>
@@ -319,8 +275,7 @@ invalid priority is provided. API defaults it to the last (lowest) if not there.
         <span class="property-type">string</span>
     </dt>
     <dd>{{% md %}}Policy ID of the Rule
-{{% /md %}}</dd>
-    <dt class="property-optional"
+{{% /md %}}</dd><dt class="property-optional"
             title="Optional">
         <span id="name_go">
 <a href="#name_go" style="color: inherit; text-decoration: inherit;">Name</a>
@@ -329,8 +284,7 @@ invalid priority is provided. API defaults it to the last (lowest) if not there.
         <span class="property-type">string</span>
     </dt>
     <dd>{{% md %}}Policy Rule Name
-{{% /md %}}</dd>
-    <dt class="property-optional"
+{{% /md %}}</dd><dt class="property-optional"
             title="Optional">
         <span id="networkconnection_go">
 <a href="#networkconnection_go" style="color: inherit; text-decoration: inherit;">Network<wbr>Connection</a>
@@ -339,8 +293,7 @@ invalid priority is provided. API defaults it to the last (lowest) if not there.
         <span class="property-type">string</span>
     </dt>
     <dd>{{% md %}}Network selection mode: ANYWHERE, ZONE, ON_NETWORK, or OFF_NETWORK.
-{{% /md %}}</dd>
-    <dt class="property-optional"
+{{% /md %}}</dd><dt class="property-optional"
             title="Optional">
         <span id="networkexcludes_go">
 <a href="#networkexcludes_go" style="color: inherit; text-decoration: inherit;">Network<wbr>Excludes</a>
@@ -349,8 +302,7 @@ invalid priority is provided. API defaults it to the last (lowest) if not there.
         <span class="property-type">[]string</span>
     </dt>
     <dd>{{% md %}}The zones to exclude
-{{% /md %}}</dd>
-    <dt class="property-optional"
+{{% /md %}}</dd><dt class="property-optional"
             title="Optional">
         <span id="networkincludes_go">
 <a href="#networkincludes_go" style="color: inherit; text-decoration: inherit;">Network<wbr>Includes</a>
@@ -359,8 +311,7 @@ invalid priority is provided. API defaults it to the last (lowest) if not there.
         <span class="property-type">[]string</span>
     </dt>
     <dd>{{% md %}}The zones to include
-{{% /md %}}</dd>
-    <dt class="property-optional"
+{{% /md %}}</dd><dt class="property-optional"
             title="Optional">
         <span id="passwordchange_go">
 <a href="#passwordchange_go" style="color: inherit; text-decoration: inherit;">Password<wbr>Change</a>
@@ -369,8 +320,7 @@ invalid priority is provided. API defaults it to the last (lowest) if not there.
         <span class="property-type">string</span>
     </dt>
     <dd>{{% md %}}Allow or deny a user to change their password: ALLOW or DENY. Default = ALLOW
-{{% /md %}}</dd>
-    <dt class="property-optional"
+{{% /md %}}</dd><dt class="property-optional"
             title="Optional">
         <span id="passwordreset_go">
 <a href="#passwordreset_go" style="color: inherit; text-decoration: inherit;">Password<wbr>Reset</a>
@@ -379,8 +329,7 @@ invalid priority is provided. API defaults it to the last (lowest) if not there.
         <span class="property-type">string</span>
     </dt>
     <dd>{{% md %}}Allow or deny a user to reset their password: ALLOW or DENY. Default = ALLOW
-{{% /md %}}</dd>
-    <dt class="property-optional"
+{{% /md %}}</dd><dt class="property-optional"
             title="Optional">
         <span id="passwordunlock_go">
 <a href="#passwordunlock_go" style="color: inherit; text-decoration: inherit;">Password<wbr>Unlock</a>
@@ -389,8 +338,7 @@ invalid priority is provided. API defaults it to the last (lowest) if not there.
         <span class="property-type">string</span>
     </dt>
     <dd>{{% md %}}Allow or deny a user to unlock. Default = DENY
-{{% /md %}}</dd>
-    <dt class="property-optional"
+{{% /md %}}</dd><dt class="property-optional"
             title="Optional">
         <span id="priority_go">
 <a href="#priority_go" style="color: inherit; text-decoration: inherit;">Priority</a>
@@ -400,8 +348,7 @@ invalid priority is provided. API defaults it to the last (lowest) if not there.
     </dt>
     <dd>{{% md %}}Policy Rule Priority, this attribute can be set to a valid priority. To avoid endless diff situation we error if an
 invalid priority is provided. API defaults it to the last (lowest) if not there.
-{{% /md %}}</dd>
-    <dt class="property-optional"
+{{% /md %}}</dd><dt class="property-optional"
             title="Optional">
         <span id="status_go">
 <a href="#status_go" style="color: inherit; text-decoration: inherit;">Status</a>
@@ -410,8 +357,7 @@ invalid priority is provided. API defaults it to the last (lowest) if not there.
         <span class="property-type">string</span>
     </dt>
     <dd>{{% md %}}Policy Rule Status: ACTIVE or INACTIVE.
-{{% /md %}}</dd>
-    <dt class="property-optional"
+{{% /md %}}</dd><dt class="property-optional"
             title="Optional">
         <span id="usersexcludeds_go">
 <a href="#usersexcludeds_go" style="color: inherit; text-decoration: inherit;">Users<wbr>Excludeds</a>
@@ -420,14 +366,11 @@ invalid priority is provided. API defaults it to the last (lowest) if not there.
         <span class="property-type">[]string</span>
     </dt>
     <dd>{{% md %}}Set of User IDs to Exclude
-{{% /md %}}</dd>
-</dl>
+{{% /md %}}</dd></dl>
 {{% /choosable %}}
 
 {{% choosable language nodejs %}}
-<dl class="resources-properties">
-
-    <dt class="property-required"
+<dl class="resources-properties"><dt class="property-required"
             title="Required">
         <span id="policyid_nodejs">
 <a href="#policyid_nodejs" style="color: inherit; text-decoration: inherit;">policyid</a>
@@ -436,8 +379,7 @@ invalid priority is provided. API defaults it to the last (lowest) if not there.
         <span class="property-type">string</span>
     </dt>
     <dd>{{% md %}}Policy ID of the Rule
-{{% /md %}}</dd>
-    <dt class="property-optional"
+{{% /md %}}</dd><dt class="property-optional"
             title="Optional">
         <span id="name_nodejs">
 <a href="#name_nodejs" style="color: inherit; text-decoration: inherit;">name</a>
@@ -446,8 +388,7 @@ invalid priority is provided. API defaults it to the last (lowest) if not there.
         <span class="property-type">string</span>
     </dt>
     <dd>{{% md %}}Policy Rule Name
-{{% /md %}}</dd>
-    <dt class="property-optional"
+{{% /md %}}</dd><dt class="property-optional"
             title="Optional">
         <span id="networkconnection_nodejs">
 <a href="#networkconnection_nodejs" style="color: inherit; text-decoration: inherit;">network<wbr>Connection</a>
@@ -456,8 +397,7 @@ invalid priority is provided. API defaults it to the last (lowest) if not there.
         <span class="property-type">string</span>
     </dt>
     <dd>{{% md %}}Network selection mode: ANYWHERE, ZONE, ON_NETWORK, or OFF_NETWORK.
-{{% /md %}}</dd>
-    <dt class="property-optional"
+{{% /md %}}</dd><dt class="property-optional"
             title="Optional">
         <span id="networkexcludes_nodejs">
 <a href="#networkexcludes_nodejs" style="color: inherit; text-decoration: inherit;">network<wbr>Excludes</a>
@@ -466,8 +406,7 @@ invalid priority is provided. API defaults it to the last (lowest) if not there.
         <span class="property-type">string[]</span>
     </dt>
     <dd>{{% md %}}The zones to exclude
-{{% /md %}}</dd>
-    <dt class="property-optional"
+{{% /md %}}</dd><dt class="property-optional"
             title="Optional">
         <span id="networkincludes_nodejs">
 <a href="#networkincludes_nodejs" style="color: inherit; text-decoration: inherit;">network<wbr>Includes</a>
@@ -476,8 +415,7 @@ invalid priority is provided. API defaults it to the last (lowest) if not there.
         <span class="property-type">string[]</span>
     </dt>
     <dd>{{% md %}}The zones to include
-{{% /md %}}</dd>
-    <dt class="property-optional"
+{{% /md %}}</dd><dt class="property-optional"
             title="Optional">
         <span id="passwordchange_nodejs">
 <a href="#passwordchange_nodejs" style="color: inherit; text-decoration: inherit;">password<wbr>Change</a>
@@ -486,8 +424,7 @@ invalid priority is provided. API defaults it to the last (lowest) if not there.
         <span class="property-type">string</span>
     </dt>
     <dd>{{% md %}}Allow or deny a user to change their password: ALLOW or DENY. Default = ALLOW
-{{% /md %}}</dd>
-    <dt class="property-optional"
+{{% /md %}}</dd><dt class="property-optional"
             title="Optional">
         <span id="passwordreset_nodejs">
 <a href="#passwordreset_nodejs" style="color: inherit; text-decoration: inherit;">password<wbr>Reset</a>
@@ -496,8 +433,7 @@ invalid priority is provided. API defaults it to the last (lowest) if not there.
         <span class="property-type">string</span>
     </dt>
     <dd>{{% md %}}Allow or deny a user to reset their password: ALLOW or DENY. Default = ALLOW
-{{% /md %}}</dd>
-    <dt class="property-optional"
+{{% /md %}}</dd><dt class="property-optional"
             title="Optional">
         <span id="passwordunlock_nodejs">
 <a href="#passwordunlock_nodejs" style="color: inherit; text-decoration: inherit;">password<wbr>Unlock</a>
@@ -506,8 +442,7 @@ invalid priority is provided. API defaults it to the last (lowest) if not there.
         <span class="property-type">string</span>
     </dt>
     <dd>{{% md %}}Allow or deny a user to unlock. Default = DENY
-{{% /md %}}</dd>
-    <dt class="property-optional"
+{{% /md %}}</dd><dt class="property-optional"
             title="Optional">
         <span id="priority_nodejs">
 <a href="#priority_nodejs" style="color: inherit; text-decoration: inherit;">priority</a>
@@ -517,8 +452,7 @@ invalid priority is provided. API defaults it to the last (lowest) if not there.
     </dt>
     <dd>{{% md %}}Policy Rule Priority, this attribute can be set to a valid priority. To avoid endless diff situation we error if an
 invalid priority is provided. API defaults it to the last (lowest) if not there.
-{{% /md %}}</dd>
-    <dt class="property-optional"
+{{% /md %}}</dd><dt class="property-optional"
             title="Optional">
         <span id="status_nodejs">
 <a href="#status_nodejs" style="color: inherit; text-decoration: inherit;">status</a>
@@ -527,8 +461,7 @@ invalid priority is provided. API defaults it to the last (lowest) if not there.
         <span class="property-type">string</span>
     </dt>
     <dd>{{% md %}}Policy Rule Status: ACTIVE or INACTIVE.
-{{% /md %}}</dd>
-    <dt class="property-optional"
+{{% /md %}}</dd><dt class="property-optional"
             title="Optional">
         <span id="usersexcludeds_nodejs">
 <a href="#usersexcludeds_nodejs" style="color: inherit; text-decoration: inherit;">users<wbr>Excludeds</a>
@@ -537,14 +470,11 @@ invalid priority is provided. API defaults it to the last (lowest) if not there.
         <span class="property-type">string[]</span>
     </dt>
     <dd>{{% md %}}Set of User IDs to Exclude
-{{% /md %}}</dd>
-</dl>
+{{% /md %}}</dd></dl>
 {{% /choosable %}}
 
 {{% choosable language python %}}
-<dl class="resources-properties">
-
-    <dt class="property-required"
+<dl class="resources-properties"><dt class="property-required"
             title="Required">
         <span id="policyid_python">
 <a href="#policyid_python" style="color: inherit; text-decoration: inherit;">policyid</a>
@@ -553,8 +483,7 @@ invalid priority is provided. API defaults it to the last (lowest) if not there.
         <span class="property-type">str</span>
     </dt>
     <dd>{{% md %}}Policy ID of the Rule
-{{% /md %}}</dd>
-    <dt class="property-optional"
+{{% /md %}}</dd><dt class="property-optional"
             title="Optional">
         <span id="name_python">
 <a href="#name_python" style="color: inherit; text-decoration: inherit;">name</a>
@@ -563,8 +492,7 @@ invalid priority is provided. API defaults it to the last (lowest) if not there.
         <span class="property-type">str</span>
     </dt>
     <dd>{{% md %}}Policy Rule Name
-{{% /md %}}</dd>
-    <dt class="property-optional"
+{{% /md %}}</dd><dt class="property-optional"
             title="Optional">
         <span id="network_connection_python">
 <a href="#network_connection_python" style="color: inherit; text-decoration: inherit;">network_<wbr>connection</a>
@@ -573,8 +501,7 @@ invalid priority is provided. API defaults it to the last (lowest) if not there.
         <span class="property-type">str</span>
     </dt>
     <dd>{{% md %}}Network selection mode: ANYWHERE, ZONE, ON_NETWORK, or OFF_NETWORK.
-{{% /md %}}</dd>
-    <dt class="property-optional"
+{{% /md %}}</dd><dt class="property-optional"
             title="Optional">
         <span id="network_excludes_python">
 <a href="#network_excludes_python" style="color: inherit; text-decoration: inherit;">network_<wbr>excludes</a>
@@ -583,8 +510,7 @@ invalid priority is provided. API defaults it to the last (lowest) if not there.
         <span class="property-type">Sequence[str]</span>
     </dt>
     <dd>{{% md %}}The zones to exclude
-{{% /md %}}</dd>
-    <dt class="property-optional"
+{{% /md %}}</dd><dt class="property-optional"
             title="Optional">
         <span id="network_includes_python">
 <a href="#network_includes_python" style="color: inherit; text-decoration: inherit;">network_<wbr>includes</a>
@@ -593,8 +519,7 @@ invalid priority is provided. API defaults it to the last (lowest) if not there.
         <span class="property-type">Sequence[str]</span>
     </dt>
     <dd>{{% md %}}The zones to include
-{{% /md %}}</dd>
-    <dt class="property-optional"
+{{% /md %}}</dd><dt class="property-optional"
             title="Optional">
         <span id="password_change_python">
 <a href="#password_change_python" style="color: inherit; text-decoration: inherit;">password_<wbr>change</a>
@@ -603,8 +528,7 @@ invalid priority is provided. API defaults it to the last (lowest) if not there.
         <span class="property-type">str</span>
     </dt>
     <dd>{{% md %}}Allow or deny a user to change their password: ALLOW or DENY. Default = ALLOW
-{{% /md %}}</dd>
-    <dt class="property-optional"
+{{% /md %}}</dd><dt class="property-optional"
             title="Optional">
         <span id="password_reset_python">
 <a href="#password_reset_python" style="color: inherit; text-decoration: inherit;">password_<wbr>reset</a>
@@ -613,8 +537,7 @@ invalid priority is provided. API defaults it to the last (lowest) if not there.
         <span class="property-type">str</span>
     </dt>
     <dd>{{% md %}}Allow or deny a user to reset their password: ALLOW or DENY. Default = ALLOW
-{{% /md %}}</dd>
-    <dt class="property-optional"
+{{% /md %}}</dd><dt class="property-optional"
             title="Optional">
         <span id="password_unlock_python">
 <a href="#password_unlock_python" style="color: inherit; text-decoration: inherit;">password_<wbr>unlock</a>
@@ -623,8 +546,7 @@ invalid priority is provided. API defaults it to the last (lowest) if not there.
         <span class="property-type">str</span>
     </dt>
     <dd>{{% md %}}Allow or deny a user to unlock. Default = DENY
-{{% /md %}}</dd>
-    <dt class="property-optional"
+{{% /md %}}</dd><dt class="property-optional"
             title="Optional">
         <span id="priority_python">
 <a href="#priority_python" style="color: inherit; text-decoration: inherit;">priority</a>
@@ -634,8 +556,7 @@ invalid priority is provided. API defaults it to the last (lowest) if not there.
     </dt>
     <dd>{{% md %}}Policy Rule Priority, this attribute can be set to a valid priority. To avoid endless diff situation we error if an
 invalid priority is provided. API defaults it to the last (lowest) if not there.
-{{% /md %}}</dd>
-    <dt class="property-optional"
+{{% /md %}}</dd><dt class="property-optional"
             title="Optional">
         <span id="status_python">
 <a href="#status_python" style="color: inherit; text-decoration: inherit;">status</a>
@@ -644,8 +565,7 @@ invalid priority is provided. API defaults it to the last (lowest) if not there.
         <span class="property-type">str</span>
     </dt>
     <dd>{{% md %}}Policy Rule Status: ACTIVE or INACTIVE.
-{{% /md %}}</dd>
-    <dt class="property-optional"
+{{% /md %}}</dd><dt class="property-optional"
             title="Optional">
         <span id="users_excludeds_python">
 <a href="#users_excludeds_python" style="color: inherit; text-decoration: inherit;">users_<wbr>excludeds</a>
@@ -654,8 +574,7 @@ invalid priority is provided. API defaults it to the last (lowest) if not there.
         <span class="property-type">Sequence[str]</span>
     </dt>
     <dd>{{% md %}}Set of User IDs to Exclude
-{{% /md %}}</dd>
-</dl>
+{{% /md %}}</dd></dl>
 {{% /choosable %}}
 
 
@@ -666,9 +585,7 @@ All [input](#inputs) properties are implicitly available as output properties. A
 
 
 {{% choosable language csharp %}}
-<dl class="resources-properties">
-
-    <dt class="property-"
+<dl class="resources-properties"><dt class="property-"
             title="">
         <span id="id_csharp">
 <a href="#id_csharp" style="color: inherit; text-decoration: inherit;">Id</a>
@@ -676,14 +593,11 @@ All [input](#inputs) properties are implicitly available as output properties. A
         <span class="property-indicator"></span>
         <span class="property-type">string</span>
     </dt>
-    <dd>{{% md %}}The provider-assigned unique ID for this managed resource.{{% /md %}}</dd>
-</dl>
+    <dd>{{% md %}}The provider-assigned unique ID for this managed resource.{{% /md %}}</dd></dl>
 {{% /choosable %}}
 
 {{% choosable language go %}}
-<dl class="resources-properties">
-
-    <dt class="property-"
+<dl class="resources-properties"><dt class="property-"
             title="">
         <span id="id_go">
 <a href="#id_go" style="color: inherit; text-decoration: inherit;">Id</a>
@@ -691,14 +605,11 @@ All [input](#inputs) properties are implicitly available as output properties. A
         <span class="property-indicator"></span>
         <span class="property-type">string</span>
     </dt>
-    <dd>{{% md %}}The provider-assigned unique ID for this managed resource.{{% /md %}}</dd>
-</dl>
+    <dd>{{% md %}}The provider-assigned unique ID for this managed resource.{{% /md %}}</dd></dl>
 {{% /choosable %}}
 
 {{% choosable language nodejs %}}
-<dl class="resources-properties">
-
-    <dt class="property-"
+<dl class="resources-properties"><dt class="property-"
             title="">
         <span id="id_nodejs">
 <a href="#id_nodejs" style="color: inherit; text-decoration: inherit;">id</a>
@@ -706,14 +617,11 @@ All [input](#inputs) properties are implicitly available as output properties. A
         <span class="property-indicator"></span>
         <span class="property-type">string</span>
     </dt>
-    <dd>{{% md %}}The provider-assigned unique ID for this managed resource.{{% /md %}}</dd>
-</dl>
+    <dd>{{% md %}}The provider-assigned unique ID for this managed resource.{{% /md %}}</dd></dl>
 {{% /choosable %}}
 
 {{% choosable language python %}}
-<dl class="resources-properties">
-
-    <dt class="property-"
+<dl class="resources-properties"><dt class="property-"
             title="">
         <span id="id_python">
 <a href="#id_python" style="color: inherit; text-decoration: inherit;">id</a>
@@ -721,8 +629,7 @@ All [input](#inputs) properties are implicitly available as output properties. A
         <span class="property-indicator"></span>
         <span class="property-type">str</span>
     </dt>
-    <dd>{{% md %}}The provider-assigned unique ID for this managed resource.{{% /md %}}</dd>
-</dl>
+    <dd>{{% md %}}The provider-assigned unique ID for this managed resource.{{% /md %}}</dd></dl>
 {{% /choosable %}}
 
 
@@ -849,9 +756,7 @@ The following state arguments are supported:
 
 
 {{% choosable language csharp %}}
-<dl class="resources-properties">
-
-    <dt class="property-optional"
+<dl class="resources-properties"><dt class="property-optional"
             title="Optional">
         <span id="state_name_csharp">
 <a href="#state_name_csharp" style="color: inherit; text-decoration: inherit;">Name</a>
@@ -860,8 +765,7 @@ The following state arguments are supported:
         <span class="property-type">string</span>
     </dt>
     <dd>{{% md %}}Policy Rule Name
-{{% /md %}}</dd>
-    <dt class="property-optional"
+{{% /md %}}</dd><dt class="property-optional"
             title="Optional">
         <span id="state_networkconnection_csharp">
 <a href="#state_networkconnection_csharp" style="color: inherit; text-decoration: inherit;">Network<wbr>Connection</a>
@@ -870,8 +774,7 @@ The following state arguments are supported:
         <span class="property-type">string</span>
     </dt>
     <dd>{{% md %}}Network selection mode: ANYWHERE, ZONE, ON_NETWORK, or OFF_NETWORK.
-{{% /md %}}</dd>
-    <dt class="property-optional"
+{{% /md %}}</dd><dt class="property-optional"
             title="Optional">
         <span id="state_networkexcludes_csharp">
 <a href="#state_networkexcludes_csharp" style="color: inherit; text-decoration: inherit;">Network<wbr>Excludes</a>
@@ -880,8 +783,7 @@ The following state arguments are supported:
         <span class="property-type">List&lt;string&gt;</span>
     </dt>
     <dd>{{% md %}}The zones to exclude
-{{% /md %}}</dd>
-    <dt class="property-optional"
+{{% /md %}}</dd><dt class="property-optional"
             title="Optional">
         <span id="state_networkincludes_csharp">
 <a href="#state_networkincludes_csharp" style="color: inherit; text-decoration: inherit;">Network<wbr>Includes</a>
@@ -890,8 +792,7 @@ The following state arguments are supported:
         <span class="property-type">List&lt;string&gt;</span>
     </dt>
     <dd>{{% md %}}The zones to include
-{{% /md %}}</dd>
-    <dt class="property-optional"
+{{% /md %}}</dd><dt class="property-optional"
             title="Optional">
         <span id="state_passwordchange_csharp">
 <a href="#state_passwordchange_csharp" style="color: inherit; text-decoration: inherit;">Password<wbr>Change</a>
@@ -900,8 +801,7 @@ The following state arguments are supported:
         <span class="property-type">string</span>
     </dt>
     <dd>{{% md %}}Allow or deny a user to change their password: ALLOW or DENY. Default = ALLOW
-{{% /md %}}</dd>
-    <dt class="property-optional"
+{{% /md %}}</dd><dt class="property-optional"
             title="Optional">
         <span id="state_passwordreset_csharp">
 <a href="#state_passwordreset_csharp" style="color: inherit; text-decoration: inherit;">Password<wbr>Reset</a>
@@ -910,8 +810,7 @@ The following state arguments are supported:
         <span class="property-type">string</span>
     </dt>
     <dd>{{% md %}}Allow or deny a user to reset their password: ALLOW or DENY. Default = ALLOW
-{{% /md %}}</dd>
-    <dt class="property-optional"
+{{% /md %}}</dd><dt class="property-optional"
             title="Optional">
         <span id="state_passwordunlock_csharp">
 <a href="#state_passwordunlock_csharp" style="color: inherit; text-decoration: inherit;">Password<wbr>Unlock</a>
@@ -920,8 +819,7 @@ The following state arguments are supported:
         <span class="property-type">string</span>
     </dt>
     <dd>{{% md %}}Allow or deny a user to unlock. Default = DENY
-{{% /md %}}</dd>
-    <dt class="property-optional"
+{{% /md %}}</dd><dt class="property-optional"
             title="Optional">
         <span id="state_policyid_csharp">
 <a href="#state_policyid_csharp" style="color: inherit; text-decoration: inherit;">Policyid</a>
@@ -930,8 +828,7 @@ The following state arguments are supported:
         <span class="property-type">string</span>
     </dt>
     <dd>{{% md %}}Policy ID of the Rule
-{{% /md %}}</dd>
-    <dt class="property-optional"
+{{% /md %}}</dd><dt class="property-optional"
             title="Optional">
         <span id="state_priority_csharp">
 <a href="#state_priority_csharp" style="color: inherit; text-decoration: inherit;">Priority</a>
@@ -941,8 +838,7 @@ The following state arguments are supported:
     </dt>
     <dd>{{% md %}}Policy Rule Priority, this attribute can be set to a valid priority. To avoid endless diff situation we error if an
 invalid priority is provided. API defaults it to the last (lowest) if not there.
-{{% /md %}}</dd>
-    <dt class="property-optional"
+{{% /md %}}</dd><dt class="property-optional"
             title="Optional">
         <span id="state_status_csharp">
 <a href="#state_status_csharp" style="color: inherit; text-decoration: inherit;">Status</a>
@@ -951,8 +847,7 @@ invalid priority is provided. API defaults it to the last (lowest) if not there.
         <span class="property-type">string</span>
     </dt>
     <dd>{{% md %}}Policy Rule Status: ACTIVE or INACTIVE.
-{{% /md %}}</dd>
-    <dt class="property-optional"
+{{% /md %}}</dd><dt class="property-optional"
             title="Optional">
         <span id="state_usersexcludeds_csharp">
 <a href="#state_usersexcludeds_csharp" style="color: inherit; text-decoration: inherit;">Users<wbr>Excludeds</a>
@@ -961,14 +856,11 @@ invalid priority is provided. API defaults it to the last (lowest) if not there.
         <span class="property-type">List&lt;string&gt;</span>
     </dt>
     <dd>{{% md %}}Set of User IDs to Exclude
-{{% /md %}}</dd>
-</dl>
+{{% /md %}}</dd></dl>
 {{% /choosable %}}
 
 {{% choosable language go %}}
-<dl class="resources-properties">
-
-    <dt class="property-optional"
+<dl class="resources-properties"><dt class="property-optional"
             title="Optional">
         <span id="state_name_go">
 <a href="#state_name_go" style="color: inherit; text-decoration: inherit;">Name</a>
@@ -977,8 +869,7 @@ invalid priority is provided. API defaults it to the last (lowest) if not there.
         <span class="property-type">string</span>
     </dt>
     <dd>{{% md %}}Policy Rule Name
-{{% /md %}}</dd>
-    <dt class="property-optional"
+{{% /md %}}</dd><dt class="property-optional"
             title="Optional">
         <span id="state_networkconnection_go">
 <a href="#state_networkconnection_go" style="color: inherit; text-decoration: inherit;">Network<wbr>Connection</a>
@@ -987,8 +878,7 @@ invalid priority is provided. API defaults it to the last (lowest) if not there.
         <span class="property-type">string</span>
     </dt>
     <dd>{{% md %}}Network selection mode: ANYWHERE, ZONE, ON_NETWORK, or OFF_NETWORK.
-{{% /md %}}</dd>
-    <dt class="property-optional"
+{{% /md %}}</dd><dt class="property-optional"
             title="Optional">
         <span id="state_networkexcludes_go">
 <a href="#state_networkexcludes_go" style="color: inherit; text-decoration: inherit;">Network<wbr>Excludes</a>
@@ -997,8 +887,7 @@ invalid priority is provided. API defaults it to the last (lowest) if not there.
         <span class="property-type">[]string</span>
     </dt>
     <dd>{{% md %}}The zones to exclude
-{{% /md %}}</dd>
-    <dt class="property-optional"
+{{% /md %}}</dd><dt class="property-optional"
             title="Optional">
         <span id="state_networkincludes_go">
 <a href="#state_networkincludes_go" style="color: inherit; text-decoration: inherit;">Network<wbr>Includes</a>
@@ -1007,8 +896,7 @@ invalid priority is provided. API defaults it to the last (lowest) if not there.
         <span class="property-type">[]string</span>
     </dt>
     <dd>{{% md %}}The zones to include
-{{% /md %}}</dd>
-    <dt class="property-optional"
+{{% /md %}}</dd><dt class="property-optional"
             title="Optional">
         <span id="state_passwordchange_go">
 <a href="#state_passwordchange_go" style="color: inherit; text-decoration: inherit;">Password<wbr>Change</a>
@@ -1017,8 +905,7 @@ invalid priority is provided. API defaults it to the last (lowest) if not there.
         <span class="property-type">string</span>
     </dt>
     <dd>{{% md %}}Allow or deny a user to change their password: ALLOW or DENY. Default = ALLOW
-{{% /md %}}</dd>
-    <dt class="property-optional"
+{{% /md %}}</dd><dt class="property-optional"
             title="Optional">
         <span id="state_passwordreset_go">
 <a href="#state_passwordreset_go" style="color: inherit; text-decoration: inherit;">Password<wbr>Reset</a>
@@ -1027,8 +914,7 @@ invalid priority is provided. API defaults it to the last (lowest) if not there.
         <span class="property-type">string</span>
     </dt>
     <dd>{{% md %}}Allow or deny a user to reset their password: ALLOW or DENY. Default = ALLOW
-{{% /md %}}</dd>
-    <dt class="property-optional"
+{{% /md %}}</dd><dt class="property-optional"
             title="Optional">
         <span id="state_passwordunlock_go">
 <a href="#state_passwordunlock_go" style="color: inherit; text-decoration: inherit;">Password<wbr>Unlock</a>
@@ -1037,8 +923,7 @@ invalid priority is provided. API defaults it to the last (lowest) if not there.
         <span class="property-type">string</span>
     </dt>
     <dd>{{% md %}}Allow or deny a user to unlock. Default = DENY
-{{% /md %}}</dd>
-    <dt class="property-optional"
+{{% /md %}}</dd><dt class="property-optional"
             title="Optional">
         <span id="state_policyid_go">
 <a href="#state_policyid_go" style="color: inherit; text-decoration: inherit;">Policyid</a>
@@ -1047,8 +932,7 @@ invalid priority is provided. API defaults it to the last (lowest) if not there.
         <span class="property-type">string</span>
     </dt>
     <dd>{{% md %}}Policy ID of the Rule
-{{% /md %}}</dd>
-    <dt class="property-optional"
+{{% /md %}}</dd><dt class="property-optional"
             title="Optional">
         <span id="state_priority_go">
 <a href="#state_priority_go" style="color: inherit; text-decoration: inherit;">Priority</a>
@@ -1058,8 +942,7 @@ invalid priority is provided. API defaults it to the last (lowest) if not there.
     </dt>
     <dd>{{% md %}}Policy Rule Priority, this attribute can be set to a valid priority. To avoid endless diff situation we error if an
 invalid priority is provided. API defaults it to the last (lowest) if not there.
-{{% /md %}}</dd>
-    <dt class="property-optional"
+{{% /md %}}</dd><dt class="property-optional"
             title="Optional">
         <span id="state_status_go">
 <a href="#state_status_go" style="color: inherit; text-decoration: inherit;">Status</a>
@@ -1068,8 +951,7 @@ invalid priority is provided. API defaults it to the last (lowest) if not there.
         <span class="property-type">string</span>
     </dt>
     <dd>{{% md %}}Policy Rule Status: ACTIVE or INACTIVE.
-{{% /md %}}</dd>
-    <dt class="property-optional"
+{{% /md %}}</dd><dt class="property-optional"
             title="Optional">
         <span id="state_usersexcludeds_go">
 <a href="#state_usersexcludeds_go" style="color: inherit; text-decoration: inherit;">Users<wbr>Excludeds</a>
@@ -1078,14 +960,11 @@ invalid priority is provided. API defaults it to the last (lowest) if not there.
         <span class="property-type">[]string</span>
     </dt>
     <dd>{{% md %}}Set of User IDs to Exclude
-{{% /md %}}</dd>
-</dl>
+{{% /md %}}</dd></dl>
 {{% /choosable %}}
 
 {{% choosable language nodejs %}}
-<dl class="resources-properties">
-
-    <dt class="property-optional"
+<dl class="resources-properties"><dt class="property-optional"
             title="Optional">
         <span id="state_name_nodejs">
 <a href="#state_name_nodejs" style="color: inherit; text-decoration: inherit;">name</a>
@@ -1094,8 +973,7 @@ invalid priority is provided. API defaults it to the last (lowest) if not there.
         <span class="property-type">string</span>
     </dt>
     <dd>{{% md %}}Policy Rule Name
-{{% /md %}}</dd>
-    <dt class="property-optional"
+{{% /md %}}</dd><dt class="property-optional"
             title="Optional">
         <span id="state_networkconnection_nodejs">
 <a href="#state_networkconnection_nodejs" style="color: inherit; text-decoration: inherit;">network<wbr>Connection</a>
@@ -1104,8 +982,7 @@ invalid priority is provided. API defaults it to the last (lowest) if not there.
         <span class="property-type">string</span>
     </dt>
     <dd>{{% md %}}Network selection mode: ANYWHERE, ZONE, ON_NETWORK, or OFF_NETWORK.
-{{% /md %}}</dd>
-    <dt class="property-optional"
+{{% /md %}}</dd><dt class="property-optional"
             title="Optional">
         <span id="state_networkexcludes_nodejs">
 <a href="#state_networkexcludes_nodejs" style="color: inherit; text-decoration: inherit;">network<wbr>Excludes</a>
@@ -1114,8 +991,7 @@ invalid priority is provided. API defaults it to the last (lowest) if not there.
         <span class="property-type">string[]</span>
     </dt>
     <dd>{{% md %}}The zones to exclude
-{{% /md %}}</dd>
-    <dt class="property-optional"
+{{% /md %}}</dd><dt class="property-optional"
             title="Optional">
         <span id="state_networkincludes_nodejs">
 <a href="#state_networkincludes_nodejs" style="color: inherit; text-decoration: inherit;">network<wbr>Includes</a>
@@ -1124,8 +1000,7 @@ invalid priority is provided. API defaults it to the last (lowest) if not there.
         <span class="property-type">string[]</span>
     </dt>
     <dd>{{% md %}}The zones to include
-{{% /md %}}</dd>
-    <dt class="property-optional"
+{{% /md %}}</dd><dt class="property-optional"
             title="Optional">
         <span id="state_passwordchange_nodejs">
 <a href="#state_passwordchange_nodejs" style="color: inherit; text-decoration: inherit;">password<wbr>Change</a>
@@ -1134,8 +1009,7 @@ invalid priority is provided. API defaults it to the last (lowest) if not there.
         <span class="property-type">string</span>
     </dt>
     <dd>{{% md %}}Allow or deny a user to change their password: ALLOW or DENY. Default = ALLOW
-{{% /md %}}</dd>
-    <dt class="property-optional"
+{{% /md %}}</dd><dt class="property-optional"
             title="Optional">
         <span id="state_passwordreset_nodejs">
 <a href="#state_passwordreset_nodejs" style="color: inherit; text-decoration: inherit;">password<wbr>Reset</a>
@@ -1144,8 +1018,7 @@ invalid priority is provided. API defaults it to the last (lowest) if not there.
         <span class="property-type">string</span>
     </dt>
     <dd>{{% md %}}Allow or deny a user to reset their password: ALLOW or DENY. Default = ALLOW
-{{% /md %}}</dd>
-    <dt class="property-optional"
+{{% /md %}}</dd><dt class="property-optional"
             title="Optional">
         <span id="state_passwordunlock_nodejs">
 <a href="#state_passwordunlock_nodejs" style="color: inherit; text-decoration: inherit;">password<wbr>Unlock</a>
@@ -1154,8 +1027,7 @@ invalid priority is provided. API defaults it to the last (lowest) if not there.
         <span class="property-type">string</span>
     </dt>
     <dd>{{% md %}}Allow or deny a user to unlock. Default = DENY
-{{% /md %}}</dd>
-    <dt class="property-optional"
+{{% /md %}}</dd><dt class="property-optional"
             title="Optional">
         <span id="state_policyid_nodejs">
 <a href="#state_policyid_nodejs" style="color: inherit; text-decoration: inherit;">policyid</a>
@@ -1164,8 +1036,7 @@ invalid priority is provided. API defaults it to the last (lowest) if not there.
         <span class="property-type">string</span>
     </dt>
     <dd>{{% md %}}Policy ID of the Rule
-{{% /md %}}</dd>
-    <dt class="property-optional"
+{{% /md %}}</dd><dt class="property-optional"
             title="Optional">
         <span id="state_priority_nodejs">
 <a href="#state_priority_nodejs" style="color: inherit; text-decoration: inherit;">priority</a>
@@ -1175,8 +1046,7 @@ invalid priority is provided. API defaults it to the last (lowest) if not there.
     </dt>
     <dd>{{% md %}}Policy Rule Priority, this attribute can be set to a valid priority. To avoid endless diff situation we error if an
 invalid priority is provided. API defaults it to the last (lowest) if not there.
-{{% /md %}}</dd>
-    <dt class="property-optional"
+{{% /md %}}</dd><dt class="property-optional"
             title="Optional">
         <span id="state_status_nodejs">
 <a href="#state_status_nodejs" style="color: inherit; text-decoration: inherit;">status</a>
@@ -1185,8 +1055,7 @@ invalid priority is provided. API defaults it to the last (lowest) if not there.
         <span class="property-type">string</span>
     </dt>
     <dd>{{% md %}}Policy Rule Status: ACTIVE or INACTIVE.
-{{% /md %}}</dd>
-    <dt class="property-optional"
+{{% /md %}}</dd><dt class="property-optional"
             title="Optional">
         <span id="state_usersexcludeds_nodejs">
 <a href="#state_usersexcludeds_nodejs" style="color: inherit; text-decoration: inherit;">users<wbr>Excludeds</a>
@@ -1195,14 +1064,11 @@ invalid priority is provided. API defaults it to the last (lowest) if not there.
         <span class="property-type">string[]</span>
     </dt>
     <dd>{{% md %}}Set of User IDs to Exclude
-{{% /md %}}</dd>
-</dl>
+{{% /md %}}</dd></dl>
 {{% /choosable %}}
 
 {{% choosable language python %}}
-<dl class="resources-properties">
-
-    <dt class="property-optional"
+<dl class="resources-properties"><dt class="property-optional"
             title="Optional">
         <span id="state_name_python">
 <a href="#state_name_python" style="color: inherit; text-decoration: inherit;">name</a>
@@ -1211,8 +1077,7 @@ invalid priority is provided. API defaults it to the last (lowest) if not there.
         <span class="property-type">str</span>
     </dt>
     <dd>{{% md %}}Policy Rule Name
-{{% /md %}}</dd>
-    <dt class="property-optional"
+{{% /md %}}</dd><dt class="property-optional"
             title="Optional">
         <span id="state_network_connection_python">
 <a href="#state_network_connection_python" style="color: inherit; text-decoration: inherit;">network_<wbr>connection</a>
@@ -1221,8 +1086,7 @@ invalid priority is provided. API defaults it to the last (lowest) if not there.
         <span class="property-type">str</span>
     </dt>
     <dd>{{% md %}}Network selection mode: ANYWHERE, ZONE, ON_NETWORK, or OFF_NETWORK.
-{{% /md %}}</dd>
-    <dt class="property-optional"
+{{% /md %}}</dd><dt class="property-optional"
             title="Optional">
         <span id="state_network_excludes_python">
 <a href="#state_network_excludes_python" style="color: inherit; text-decoration: inherit;">network_<wbr>excludes</a>
@@ -1231,8 +1095,7 @@ invalid priority is provided. API defaults it to the last (lowest) if not there.
         <span class="property-type">Sequence[str]</span>
     </dt>
     <dd>{{% md %}}The zones to exclude
-{{% /md %}}</dd>
-    <dt class="property-optional"
+{{% /md %}}</dd><dt class="property-optional"
             title="Optional">
         <span id="state_network_includes_python">
 <a href="#state_network_includes_python" style="color: inherit; text-decoration: inherit;">network_<wbr>includes</a>
@@ -1241,8 +1104,7 @@ invalid priority is provided. API defaults it to the last (lowest) if not there.
         <span class="property-type">Sequence[str]</span>
     </dt>
     <dd>{{% md %}}The zones to include
-{{% /md %}}</dd>
-    <dt class="property-optional"
+{{% /md %}}</dd><dt class="property-optional"
             title="Optional">
         <span id="state_password_change_python">
 <a href="#state_password_change_python" style="color: inherit; text-decoration: inherit;">password_<wbr>change</a>
@@ -1251,8 +1113,7 @@ invalid priority is provided. API defaults it to the last (lowest) if not there.
         <span class="property-type">str</span>
     </dt>
     <dd>{{% md %}}Allow or deny a user to change their password: ALLOW or DENY. Default = ALLOW
-{{% /md %}}</dd>
-    <dt class="property-optional"
+{{% /md %}}</dd><dt class="property-optional"
             title="Optional">
         <span id="state_password_reset_python">
 <a href="#state_password_reset_python" style="color: inherit; text-decoration: inherit;">password_<wbr>reset</a>
@@ -1261,8 +1122,7 @@ invalid priority is provided. API defaults it to the last (lowest) if not there.
         <span class="property-type">str</span>
     </dt>
     <dd>{{% md %}}Allow or deny a user to reset their password: ALLOW or DENY. Default = ALLOW
-{{% /md %}}</dd>
-    <dt class="property-optional"
+{{% /md %}}</dd><dt class="property-optional"
             title="Optional">
         <span id="state_password_unlock_python">
 <a href="#state_password_unlock_python" style="color: inherit; text-decoration: inherit;">password_<wbr>unlock</a>
@@ -1271,8 +1131,7 @@ invalid priority is provided. API defaults it to the last (lowest) if not there.
         <span class="property-type">str</span>
     </dt>
     <dd>{{% md %}}Allow or deny a user to unlock. Default = DENY
-{{% /md %}}</dd>
-    <dt class="property-optional"
+{{% /md %}}</dd><dt class="property-optional"
             title="Optional">
         <span id="state_policyid_python">
 <a href="#state_policyid_python" style="color: inherit; text-decoration: inherit;">policyid</a>
@@ -1281,8 +1140,7 @@ invalid priority is provided. API defaults it to the last (lowest) if not there.
         <span class="property-type">str</span>
     </dt>
     <dd>{{% md %}}Policy ID of the Rule
-{{% /md %}}</dd>
-    <dt class="property-optional"
+{{% /md %}}</dd><dt class="property-optional"
             title="Optional">
         <span id="state_priority_python">
 <a href="#state_priority_python" style="color: inherit; text-decoration: inherit;">priority</a>
@@ -1292,8 +1150,7 @@ invalid priority is provided. API defaults it to the last (lowest) if not there.
     </dt>
     <dd>{{% md %}}Policy Rule Priority, this attribute can be set to a valid priority. To avoid endless diff situation we error if an
 invalid priority is provided. API defaults it to the last (lowest) if not there.
-{{% /md %}}</dd>
-    <dt class="property-optional"
+{{% /md %}}</dd><dt class="property-optional"
             title="Optional">
         <span id="state_status_python">
 <a href="#state_status_python" style="color: inherit; text-decoration: inherit;">status</a>
@@ -1302,8 +1159,7 @@ invalid priority is provided. API defaults it to the last (lowest) if not there.
         <span class="property-type">str</span>
     </dt>
     <dd>{{% md %}}Policy Rule Status: ACTIVE or INACTIVE.
-{{% /md %}}</dd>
-    <dt class="property-optional"
+{{% /md %}}</dd><dt class="property-optional"
             title="Optional">
         <span id="state_users_excludeds_python">
 <a href="#state_users_excludeds_python" style="color: inherit; text-decoration: inherit;">users_<wbr>excludeds</a>
@@ -1312,8 +1168,7 @@ invalid priority is provided. API defaults it to the last (lowest) if not there.
         <span class="property-type">Sequence[str]</span>
     </dt>
     <dd>{{% md %}}Set of User IDs to Exclude
-{{% /md %}}</dd>
-</dl>
+{{% /md %}}</dd></dl>
 {{% /choosable %}}
 
 
@@ -1329,6 +1184,6 @@ invalid priority is provided. API defaults it to the last (lowest) if not there.
 	<dt>License</dt>
 	<dd>Apache-2.0</dd>
 	<dt>Notes</dt>
-	<dd>This Pulumi package is based on the [`okta` Terraform Provider](https://github.com/oktadeveloper/terraform-provider-okta).</dd>
+	<dd>{{% md %}}This Pulumi package is based on the [`okta` Terraform Provider](https://github.com/oktadeveloper/terraform-provider-okta).{{% /md %}}</dd>
 </dl>
 

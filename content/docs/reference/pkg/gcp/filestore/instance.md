@@ -21,11 +21,17 @@ To get more information about Instance, see:
     * [Copying Data In/Out](https://cloud.google.com/filestore/docs/copying-data)
 
 {{% examples %}}
+
 ## Example Usage
 
 {{< chooser language "typescript,python,go,csharp" / >}}
+
+
 ### Filestore Instance Basic
-{{% example csharp %}}
+
+
+{{< example csharp >}}
+
 ```csharp
 using Pulumi;
 using Gcp = Pulumi.Gcp;
@@ -60,9 +66,12 @@ class MyStack : Stack
 }
 ```
 
-{{% /example %}}
 
-{{% example go %}}
+{{< /example >}}
+
+
+{{< example go >}}
+
 ```go
 package main
 
@@ -97,9 +106,12 @@ func main() {
 }
 ```
 
-{{% /example %}}
 
-{{% example python %}}
+{{< /example >}}
+
+
+{{< example python >}}
+
 ```python
 import pulumi
 import pulumi_gcp as gcp
@@ -117,9 +129,12 @@ instance = gcp.filestore.Instance("instance",
     zone="us-central1-b")
 ```
 
-{{% /example %}}
 
-{{% example typescript %}}
+{{< /example >}}
+
+
+{{< example typescript >}}
+
 
 ```typescript
 import * as pulumi from "@pulumi/pulumi";
@@ -139,10 +154,17 @@ const instance = new gcp.filestore.Instance("instance", {
 });
 ```
 
-{{% /example %}}
+
+{{< /example >}}
+
+
+
 
 ### Filestore Instance Full
-{{% example csharp %}}
+
+
+{{< example csharp >}}
+
 ```csharp
 using Pulumi;
 using Gcp = Pulumi.Gcp;
@@ -203,9 +225,12 @@ class MyStack : Stack
 }
 ```
 
-{{% /example %}}
 
-{{% example go %}}
+{{< /example >}}
+
+
+{{< example go >}}
+
 ```go
 package main
 
@@ -258,9 +283,12 @@ func main() {
 }
 ```
 
-{{% /example %}}
 
-{{% example python %}}
+{{< /example >}}
+
+
+{{< example python >}}
+
 ```python
 import pulumi
 import pulumi_gcp as gcp
@@ -293,9 +321,12 @@ instance = gcp.filestore.Instance("instance",
     opts=pulumi.ResourceOptions(provider=google_beta))
 ```
 
-{{% /example %}}
 
-{{% example typescript %}}
+{{< /example >}}
+
+
+{{< example typescript >}}
+
 
 ```typescript
 import * as pulumi from "@pulumi/pulumi";
@@ -331,9 +362,16 @@ const instance = new gcp.filestore.Instance("instance", {
 });
 ```
 
-{{% /example %}}
+
+{{< /example >}}
+
+
+
+
 
 {{% /examples %}}
+
+
 
 
 ## Create a Instance Resource {#create}
@@ -358,9 +396,7 @@ const instance = new gcp.filestore.Instance("instance", {
 
 {{% choosable language nodejs %}}
 
-<dl class="resources-properties">
-  
-    <dt
+<dl class="resources-properties"><dt
         class="property-required" title="Required">
         <span>name</span>
         <span class="property-indicator"></span>
@@ -368,9 +404,7 @@ const instance = new gcp.filestore.Instance("instance", {
     </dt>
     <dd>
       The unique name of the resource.
-    </dd>
-  
-    <dt
+    </dd><dt
         class="property-required" title="Required">
         <span>args</span>
         <span class="property-indicator"></span>
@@ -378,9 +412,7 @@ const instance = new gcp.filestore.Instance("instance", {
     </dt>
     <dd>
       The arguments to resource properties.
-    </dd>
-  
-    <dt
+    </dd><dt
         class="property-optional" title="Optional">
         <span>opts</span>
         <span class="property-indicator"></span>
@@ -388,10 +420,7 @@ const instance = new gcp.filestore.Instance("instance", {
     </dt>
     <dd>
       Bag of options to control resource&#39;s behavior.
-    </dd>
-  
-
-</dl>
+    </dd></dl>
 
 {{% /choosable %}}
 
@@ -417,9 +446,7 @@ const instance = new gcp.filestore.Instance("instance", {
 
 {{% choosable language go %}}
 
-<dl class="resources-properties">
-  
-    <dt
+<dl class="resources-properties"><dt
         class="property-optional" title="Optional">
         <span>ctx</span>
         <span class="property-indicator"></span>
@@ -427,9 +454,7 @@ const instance = new gcp.filestore.Instance("instance", {
     </dt>
     <dd>
       Context object for the current deployment.
-    </dd>
-  
-    <dt
+    </dd><dt
         class="property-required" title="Required">
         <span>name</span>
         <span class="property-indicator"></span>
@@ -437,9 +462,7 @@ const instance = new gcp.filestore.Instance("instance", {
     </dt>
     <dd>
       The unique name of the resource.
-    </dd>
-  
-    <dt
+    </dd><dt
         class="property-required" title="Required">
         <span>args</span>
         <span class="property-indicator"></span>
@@ -447,9 +470,7 @@ const instance = new gcp.filestore.Instance("instance", {
     </dt>
     <dd>
       The arguments to resource properties.
-    </dd>
-  
-    <dt
+    </dd><dt
         class="property-optional" title="Optional">
         <span>opts</span>
         <span class="property-indicator"></span>
@@ -457,18 +478,13 @@ const instance = new gcp.filestore.Instance("instance", {
     </dt>
     <dd>
       Bag of options to control resource&#39;s behavior.
-    </dd>
-  
-
-</dl>
+    </dd></dl>
 
 {{% /choosable %}}
 
 {{% choosable language csharp %}}
 
-<dl class="resources-properties">
-  
-    <dt
+<dl class="resources-properties"><dt
         class="property-required" title="Required">
         <span>name</span>
         <span class="property-indicator"></span>
@@ -476,9 +492,7 @@ const instance = new gcp.filestore.Instance("instance", {
     </dt>
     <dd>
       The unique name of the resource.
-    </dd>
-  
-    <dt
+    </dd><dt
         class="property-required" title="Required">
         <span>args</span>
         <span class="property-indicator"></span>
@@ -486,9 +500,7 @@ const instance = new gcp.filestore.Instance("instance", {
     </dt>
     <dd>
       The arguments to resource properties.
-    </dd>
-  
-    <dt
+    </dd><dt
         class="property-optional" title="Optional">
         <span>opts</span>
         <span class="property-indicator"></span>
@@ -496,10 +508,7 @@ const instance = new gcp.filestore.Instance("instance", {
     </dt>
     <dd>
       Bag of options to control resource&#39;s behavior.
-    </dd>
-  
-
-</dl>
+    </dd></dl>
 
 {{% /choosable %}}
 
@@ -514,9 +523,7 @@ The Instance resource accepts the following [input]({{< relref "/docs/intro/conc
 
 
 {{% choosable language csharp %}}
-<dl class="resources-properties">
-
-    <dt class="property-required"
+<dl class="resources-properties"><dt class="property-required"
             title="Required">
         <span id="fileshares_csharp">
 <a href="#fileshares_csharp" style="color: inherit; text-decoration: inherit;">File<wbr>Shares</a>
@@ -527,8 +534,7 @@ The Instance resource accepts the following [input]({{< relref "/docs/intro/conc
     <dd>{{% md %}}File system shares on the instance. For this version, only a
 single file share is supported.
 Structure is documented below.
-{{% /md %}}</dd>
-    <dt class="property-required"
+{{% /md %}}</dd><dt class="property-required"
             title="Required">
         <span id="networks_csharp">
 <a href="#networks_csharp" style="color: inherit; text-decoration: inherit;">Networks</a>
@@ -539,8 +545,7 @@ Structure is documented below.
     <dd>{{% md %}}VPC networks to which the instance is connected. For this version,
 only a single network is supported.
 Structure is documented below.
-{{% /md %}}</dd>
-    <dt class="property-required"
+{{% /md %}}</dd><dt class="property-required"
             title="Required">
         <span id="tier_csharp">
 <a href="#tier_csharp" style="color: inherit; text-decoration: inherit;">Tier</a>
@@ -550,8 +555,7 @@ Structure is documented below.
     </dt>
     <dd>{{% md %}}The service tier of the instance.
 Possible values are `TIER_UNSPECIFIED`, `STANDARD`, `PREMIUM`, `BASIC_HDD`, `BASIC_SSD`, and `HIGH_SCALE_SSD`.
-{{% /md %}}</dd>
-    <dt class="property-required"
+{{% /md %}}</dd><dt class="property-required"
             title="Required">
         <span id="zone_csharp">
 <a href="#zone_csharp" style="color: inherit; text-decoration: inherit;">Zone</a>
@@ -560,8 +564,7 @@ Possible values are `TIER_UNSPECIFIED`, `STANDARD`, `PREMIUM`, `BASIC_HDD`, `BAS
         <span class="property-type">string</span>
     </dt>
     <dd>{{% md %}}The name of the Filestore zone of the instance.
-{{% /md %}}</dd>
-    <dt class="property-optional"
+{{% /md %}}</dd><dt class="property-optional"
             title="Optional">
         <span id="description_csharp">
 <a href="#description_csharp" style="color: inherit; text-decoration: inherit;">Description</a>
@@ -570,8 +573,7 @@ Possible values are `TIER_UNSPECIFIED`, `STANDARD`, `PREMIUM`, `BASIC_HDD`, `BAS
         <span class="property-type">string</span>
     </dt>
     <dd>{{% md %}}A description of the instance.
-{{% /md %}}</dd>
-    <dt class="property-optional"
+{{% /md %}}</dd><dt class="property-optional"
             title="Optional">
         <span id="labels_csharp">
 <a href="#labels_csharp" style="color: inherit; text-decoration: inherit;">Labels</a>
@@ -580,8 +582,7 @@ Possible values are `TIER_UNSPECIFIED`, `STANDARD`, `PREMIUM`, `BASIC_HDD`, `BAS
         <span class="property-type">Dictionary&lt;string, string&gt;</span>
     </dt>
     <dd>{{% md %}}Resource labels to represent user-provided metadata.
-{{% /md %}}</dd>
-    <dt class="property-optional"
+{{% /md %}}</dd><dt class="property-optional"
             title="Optional">
         <span id="name_csharp">
 <a href="#name_csharp" style="color: inherit; text-decoration: inherit;">Name</a>
@@ -590,8 +591,7 @@ Possible values are `TIER_UNSPECIFIED`, `STANDARD`, `PREMIUM`, `BASIC_HDD`, `BAS
         <span class="property-type">string</span>
     </dt>
     <dd>{{% md %}}The name of the fileshare (16 characters or less)
-{{% /md %}}</dd>
-    <dt class="property-optional"
+{{% /md %}}</dd><dt class="property-optional"
             title="Optional">
         <span id="project_csharp">
 <a href="#project_csharp" style="color: inherit; text-decoration: inherit;">Project</a>
@@ -601,14 +601,11 @@ Possible values are `TIER_UNSPECIFIED`, `STANDARD`, `PREMIUM`, `BASIC_HDD`, `BAS
     </dt>
     <dd>{{% md %}}The ID of the project in which the resource belongs.
 If it is not provided, the provider project is used.
-{{% /md %}}</dd>
-</dl>
+{{% /md %}}</dd></dl>
 {{% /choosable %}}
 
 {{% choosable language go %}}
-<dl class="resources-properties">
-
-    <dt class="property-required"
+<dl class="resources-properties"><dt class="property-required"
             title="Required">
         <span id="fileshares_go">
 <a href="#fileshares_go" style="color: inherit; text-decoration: inherit;">File<wbr>Shares</a>
@@ -619,8 +616,7 @@ If it is not provided, the provider project is used.
     <dd>{{% md %}}File system shares on the instance. For this version, only a
 single file share is supported.
 Structure is documented below.
-{{% /md %}}</dd>
-    <dt class="property-required"
+{{% /md %}}</dd><dt class="property-required"
             title="Required">
         <span id="networks_go">
 <a href="#networks_go" style="color: inherit; text-decoration: inherit;">Networks</a>
@@ -631,8 +627,7 @@ Structure is documented below.
     <dd>{{% md %}}VPC networks to which the instance is connected. For this version,
 only a single network is supported.
 Structure is documented below.
-{{% /md %}}</dd>
-    <dt class="property-required"
+{{% /md %}}</dd><dt class="property-required"
             title="Required">
         <span id="tier_go">
 <a href="#tier_go" style="color: inherit; text-decoration: inherit;">Tier</a>
@@ -642,8 +637,7 @@ Structure is documented below.
     </dt>
     <dd>{{% md %}}The service tier of the instance.
 Possible values are `TIER_UNSPECIFIED`, `STANDARD`, `PREMIUM`, `BASIC_HDD`, `BASIC_SSD`, and `HIGH_SCALE_SSD`.
-{{% /md %}}</dd>
-    <dt class="property-required"
+{{% /md %}}</dd><dt class="property-required"
             title="Required">
         <span id="zone_go">
 <a href="#zone_go" style="color: inherit; text-decoration: inherit;">Zone</a>
@@ -652,8 +646,7 @@ Possible values are `TIER_UNSPECIFIED`, `STANDARD`, `PREMIUM`, `BASIC_HDD`, `BAS
         <span class="property-type">string</span>
     </dt>
     <dd>{{% md %}}The name of the Filestore zone of the instance.
-{{% /md %}}</dd>
-    <dt class="property-optional"
+{{% /md %}}</dd><dt class="property-optional"
             title="Optional">
         <span id="description_go">
 <a href="#description_go" style="color: inherit; text-decoration: inherit;">Description</a>
@@ -662,8 +655,7 @@ Possible values are `TIER_UNSPECIFIED`, `STANDARD`, `PREMIUM`, `BASIC_HDD`, `BAS
         <span class="property-type">string</span>
     </dt>
     <dd>{{% md %}}A description of the instance.
-{{% /md %}}</dd>
-    <dt class="property-optional"
+{{% /md %}}</dd><dt class="property-optional"
             title="Optional">
         <span id="labels_go">
 <a href="#labels_go" style="color: inherit; text-decoration: inherit;">Labels</a>
@@ -672,8 +664,7 @@ Possible values are `TIER_UNSPECIFIED`, `STANDARD`, `PREMIUM`, `BASIC_HDD`, `BAS
         <span class="property-type">map[string]string</span>
     </dt>
     <dd>{{% md %}}Resource labels to represent user-provided metadata.
-{{% /md %}}</dd>
-    <dt class="property-optional"
+{{% /md %}}</dd><dt class="property-optional"
             title="Optional">
         <span id="name_go">
 <a href="#name_go" style="color: inherit; text-decoration: inherit;">Name</a>
@@ -682,8 +673,7 @@ Possible values are `TIER_UNSPECIFIED`, `STANDARD`, `PREMIUM`, `BASIC_HDD`, `BAS
         <span class="property-type">string</span>
     </dt>
     <dd>{{% md %}}The name of the fileshare (16 characters or less)
-{{% /md %}}</dd>
-    <dt class="property-optional"
+{{% /md %}}</dd><dt class="property-optional"
             title="Optional">
         <span id="project_go">
 <a href="#project_go" style="color: inherit; text-decoration: inherit;">Project</a>
@@ -693,14 +683,11 @@ Possible values are `TIER_UNSPECIFIED`, `STANDARD`, `PREMIUM`, `BASIC_HDD`, `BAS
     </dt>
     <dd>{{% md %}}The ID of the project in which the resource belongs.
 If it is not provided, the provider project is used.
-{{% /md %}}</dd>
-</dl>
+{{% /md %}}</dd></dl>
 {{% /choosable %}}
 
 {{% choosable language nodejs %}}
-<dl class="resources-properties">
-
-    <dt class="property-required"
+<dl class="resources-properties"><dt class="property-required"
             title="Required">
         <span id="fileshares_nodejs">
 <a href="#fileshares_nodejs" style="color: inherit; text-decoration: inherit;">file<wbr>Shares</a>
@@ -711,8 +698,7 @@ If it is not provided, the provider project is used.
     <dd>{{% md %}}File system shares on the instance. For this version, only a
 single file share is supported.
 Structure is documented below.
-{{% /md %}}</dd>
-    <dt class="property-required"
+{{% /md %}}</dd><dt class="property-required"
             title="Required">
         <span id="networks_nodejs">
 <a href="#networks_nodejs" style="color: inherit; text-decoration: inherit;">networks</a>
@@ -723,8 +709,7 @@ Structure is documented below.
     <dd>{{% md %}}VPC networks to which the instance is connected. For this version,
 only a single network is supported.
 Structure is documented below.
-{{% /md %}}</dd>
-    <dt class="property-required"
+{{% /md %}}</dd><dt class="property-required"
             title="Required">
         <span id="tier_nodejs">
 <a href="#tier_nodejs" style="color: inherit; text-decoration: inherit;">tier</a>
@@ -734,8 +719,7 @@ Structure is documented below.
     </dt>
     <dd>{{% md %}}The service tier of the instance.
 Possible values are `TIER_UNSPECIFIED`, `STANDARD`, `PREMIUM`, `BASIC_HDD`, `BASIC_SSD`, and `HIGH_SCALE_SSD`.
-{{% /md %}}</dd>
-    <dt class="property-required"
+{{% /md %}}</dd><dt class="property-required"
             title="Required">
         <span id="zone_nodejs">
 <a href="#zone_nodejs" style="color: inherit; text-decoration: inherit;">zone</a>
@@ -744,8 +728,7 @@ Possible values are `TIER_UNSPECIFIED`, `STANDARD`, `PREMIUM`, `BASIC_HDD`, `BAS
         <span class="property-type">string</span>
     </dt>
     <dd>{{% md %}}The name of the Filestore zone of the instance.
-{{% /md %}}</dd>
-    <dt class="property-optional"
+{{% /md %}}</dd><dt class="property-optional"
             title="Optional">
         <span id="description_nodejs">
 <a href="#description_nodejs" style="color: inherit; text-decoration: inherit;">description</a>
@@ -754,8 +737,7 @@ Possible values are `TIER_UNSPECIFIED`, `STANDARD`, `PREMIUM`, `BASIC_HDD`, `BAS
         <span class="property-type">string</span>
     </dt>
     <dd>{{% md %}}A description of the instance.
-{{% /md %}}</dd>
-    <dt class="property-optional"
+{{% /md %}}</dd><dt class="property-optional"
             title="Optional">
         <span id="labels_nodejs">
 <a href="#labels_nodejs" style="color: inherit; text-decoration: inherit;">labels</a>
@@ -764,8 +746,7 @@ Possible values are `TIER_UNSPECIFIED`, `STANDARD`, `PREMIUM`, `BASIC_HDD`, `BAS
         <span class="property-type">{[key: string]: string}</span>
     </dt>
     <dd>{{% md %}}Resource labels to represent user-provided metadata.
-{{% /md %}}</dd>
-    <dt class="property-optional"
+{{% /md %}}</dd><dt class="property-optional"
             title="Optional">
         <span id="name_nodejs">
 <a href="#name_nodejs" style="color: inherit; text-decoration: inherit;">name</a>
@@ -774,8 +755,7 @@ Possible values are `TIER_UNSPECIFIED`, `STANDARD`, `PREMIUM`, `BASIC_HDD`, `BAS
         <span class="property-type">string</span>
     </dt>
     <dd>{{% md %}}The name of the fileshare (16 characters or less)
-{{% /md %}}</dd>
-    <dt class="property-optional"
+{{% /md %}}</dd><dt class="property-optional"
             title="Optional">
         <span id="project_nodejs">
 <a href="#project_nodejs" style="color: inherit; text-decoration: inherit;">project</a>
@@ -785,14 +765,11 @@ Possible values are `TIER_UNSPECIFIED`, `STANDARD`, `PREMIUM`, `BASIC_HDD`, `BAS
     </dt>
     <dd>{{% md %}}The ID of the project in which the resource belongs.
 If it is not provided, the provider project is used.
-{{% /md %}}</dd>
-</dl>
+{{% /md %}}</dd></dl>
 {{% /choosable %}}
 
 {{% choosable language python %}}
-<dl class="resources-properties">
-
-    <dt class="property-required"
+<dl class="resources-properties"><dt class="property-required"
             title="Required">
         <span id="file_shares_python">
 <a href="#file_shares_python" style="color: inherit; text-decoration: inherit;">file_<wbr>shares</a>
@@ -803,8 +780,7 @@ If it is not provided, the provider project is used.
     <dd>{{% md %}}File system shares on the instance. For this version, only a
 single file share is supported.
 Structure is documented below.
-{{% /md %}}</dd>
-    <dt class="property-required"
+{{% /md %}}</dd><dt class="property-required"
             title="Required">
         <span id="networks_python">
 <a href="#networks_python" style="color: inherit; text-decoration: inherit;">networks</a>
@@ -815,8 +791,7 @@ Structure is documented below.
     <dd>{{% md %}}VPC networks to which the instance is connected. For this version,
 only a single network is supported.
 Structure is documented below.
-{{% /md %}}</dd>
-    <dt class="property-required"
+{{% /md %}}</dd><dt class="property-required"
             title="Required">
         <span id="tier_python">
 <a href="#tier_python" style="color: inherit; text-decoration: inherit;">tier</a>
@@ -826,8 +801,7 @@ Structure is documented below.
     </dt>
     <dd>{{% md %}}The service tier of the instance.
 Possible values are `TIER_UNSPECIFIED`, `STANDARD`, `PREMIUM`, `BASIC_HDD`, `BASIC_SSD`, and `HIGH_SCALE_SSD`.
-{{% /md %}}</dd>
-    <dt class="property-required"
+{{% /md %}}</dd><dt class="property-required"
             title="Required">
         <span id="zone_python">
 <a href="#zone_python" style="color: inherit; text-decoration: inherit;">zone</a>
@@ -836,8 +810,7 @@ Possible values are `TIER_UNSPECIFIED`, `STANDARD`, `PREMIUM`, `BASIC_HDD`, `BAS
         <span class="property-type">str</span>
     </dt>
     <dd>{{% md %}}The name of the Filestore zone of the instance.
-{{% /md %}}</dd>
-    <dt class="property-optional"
+{{% /md %}}</dd><dt class="property-optional"
             title="Optional">
         <span id="description_python">
 <a href="#description_python" style="color: inherit; text-decoration: inherit;">description</a>
@@ -846,8 +819,7 @@ Possible values are `TIER_UNSPECIFIED`, `STANDARD`, `PREMIUM`, `BASIC_HDD`, `BAS
         <span class="property-type">str</span>
     </dt>
     <dd>{{% md %}}A description of the instance.
-{{% /md %}}</dd>
-    <dt class="property-optional"
+{{% /md %}}</dd><dt class="property-optional"
             title="Optional">
         <span id="labels_python">
 <a href="#labels_python" style="color: inherit; text-decoration: inherit;">labels</a>
@@ -856,8 +828,7 @@ Possible values are `TIER_UNSPECIFIED`, `STANDARD`, `PREMIUM`, `BASIC_HDD`, `BAS
         <span class="property-type">Mapping[str, str]</span>
     </dt>
     <dd>{{% md %}}Resource labels to represent user-provided metadata.
-{{% /md %}}</dd>
-    <dt class="property-optional"
+{{% /md %}}</dd><dt class="property-optional"
             title="Optional">
         <span id="name_python">
 <a href="#name_python" style="color: inherit; text-decoration: inherit;">name</a>
@@ -866,8 +837,7 @@ Possible values are `TIER_UNSPECIFIED`, `STANDARD`, `PREMIUM`, `BASIC_HDD`, `BAS
         <span class="property-type">str</span>
     </dt>
     <dd>{{% md %}}The name of the fileshare (16 characters or less)
-{{% /md %}}</dd>
-    <dt class="property-optional"
+{{% /md %}}</dd><dt class="property-optional"
             title="Optional">
         <span id="project_python">
 <a href="#project_python" style="color: inherit; text-decoration: inherit;">project</a>
@@ -877,8 +847,7 @@ Possible values are `TIER_UNSPECIFIED`, `STANDARD`, `PREMIUM`, `BASIC_HDD`, `BAS
     </dt>
     <dd>{{% md %}}The ID of the project in which the resource belongs.
 If it is not provided, the provider project is used.
-{{% /md %}}</dd>
-</dl>
+{{% /md %}}</dd></dl>
 {{% /choosable %}}
 
 
@@ -889,9 +858,7 @@ All [input](#inputs) properties are implicitly available as output properties. A
 
 
 {{% choosable language csharp %}}
-<dl class="resources-properties">
-
-    <dt class="property-"
+<dl class="resources-properties"><dt class="property-"
             title="">
         <span id="createtime_csharp">
 <a href="#createtime_csharp" style="color: inherit; text-decoration: inherit;">Create<wbr>Time</a>
@@ -900,8 +867,7 @@ All [input](#inputs) properties are implicitly available as output properties. A
         <span class="property-type">string</span>
     </dt>
     <dd>{{% md %}}Creation timestamp in RFC3339 text format.
-{{% /md %}}</dd>
-    <dt class="property-"
+{{% /md %}}</dd><dt class="property-"
             title="">
         <span id="etag_csharp">
 <a href="#etag_csharp" style="color: inherit; text-decoration: inherit;">Etag</a>
@@ -910,8 +876,7 @@ All [input](#inputs) properties are implicitly available as output properties. A
         <span class="property-type">string</span>
     </dt>
     <dd>{{% md %}}Server-specified ETag for the instance resource to prevent simultaneous updates from overwriting each other.
-{{% /md %}}</dd>
-    <dt class="property-"
+{{% /md %}}</dd><dt class="property-"
             title="">
         <span id="id_csharp">
 <a href="#id_csharp" style="color: inherit; text-decoration: inherit;">Id</a>
@@ -919,14 +884,11 @@ All [input](#inputs) properties are implicitly available as output properties. A
         <span class="property-indicator"></span>
         <span class="property-type">string</span>
     </dt>
-    <dd>{{% md %}}The provider-assigned unique ID for this managed resource.{{% /md %}}</dd>
-</dl>
+    <dd>{{% md %}}The provider-assigned unique ID for this managed resource.{{% /md %}}</dd></dl>
 {{% /choosable %}}
 
 {{% choosable language go %}}
-<dl class="resources-properties">
-
-    <dt class="property-"
+<dl class="resources-properties"><dt class="property-"
             title="">
         <span id="createtime_go">
 <a href="#createtime_go" style="color: inherit; text-decoration: inherit;">Create<wbr>Time</a>
@@ -935,8 +897,7 @@ All [input](#inputs) properties are implicitly available as output properties. A
         <span class="property-type">string</span>
     </dt>
     <dd>{{% md %}}Creation timestamp in RFC3339 text format.
-{{% /md %}}</dd>
-    <dt class="property-"
+{{% /md %}}</dd><dt class="property-"
             title="">
         <span id="etag_go">
 <a href="#etag_go" style="color: inherit; text-decoration: inherit;">Etag</a>
@@ -945,8 +906,7 @@ All [input](#inputs) properties are implicitly available as output properties. A
         <span class="property-type">string</span>
     </dt>
     <dd>{{% md %}}Server-specified ETag for the instance resource to prevent simultaneous updates from overwriting each other.
-{{% /md %}}</dd>
-    <dt class="property-"
+{{% /md %}}</dd><dt class="property-"
             title="">
         <span id="id_go">
 <a href="#id_go" style="color: inherit; text-decoration: inherit;">Id</a>
@@ -954,14 +914,11 @@ All [input](#inputs) properties are implicitly available as output properties. A
         <span class="property-indicator"></span>
         <span class="property-type">string</span>
     </dt>
-    <dd>{{% md %}}The provider-assigned unique ID for this managed resource.{{% /md %}}</dd>
-</dl>
+    <dd>{{% md %}}The provider-assigned unique ID for this managed resource.{{% /md %}}</dd></dl>
 {{% /choosable %}}
 
 {{% choosable language nodejs %}}
-<dl class="resources-properties">
-
-    <dt class="property-"
+<dl class="resources-properties"><dt class="property-"
             title="">
         <span id="createtime_nodejs">
 <a href="#createtime_nodejs" style="color: inherit; text-decoration: inherit;">create<wbr>Time</a>
@@ -970,8 +927,7 @@ All [input](#inputs) properties are implicitly available as output properties. A
         <span class="property-type">string</span>
     </dt>
     <dd>{{% md %}}Creation timestamp in RFC3339 text format.
-{{% /md %}}</dd>
-    <dt class="property-"
+{{% /md %}}</dd><dt class="property-"
             title="">
         <span id="etag_nodejs">
 <a href="#etag_nodejs" style="color: inherit; text-decoration: inherit;">etag</a>
@@ -980,8 +936,7 @@ All [input](#inputs) properties are implicitly available as output properties. A
         <span class="property-type">string</span>
     </dt>
     <dd>{{% md %}}Server-specified ETag for the instance resource to prevent simultaneous updates from overwriting each other.
-{{% /md %}}</dd>
-    <dt class="property-"
+{{% /md %}}</dd><dt class="property-"
             title="">
         <span id="id_nodejs">
 <a href="#id_nodejs" style="color: inherit; text-decoration: inherit;">id</a>
@@ -989,14 +944,11 @@ All [input](#inputs) properties are implicitly available as output properties. A
         <span class="property-indicator"></span>
         <span class="property-type">string</span>
     </dt>
-    <dd>{{% md %}}The provider-assigned unique ID for this managed resource.{{% /md %}}</dd>
-</dl>
+    <dd>{{% md %}}The provider-assigned unique ID for this managed resource.{{% /md %}}</dd></dl>
 {{% /choosable %}}
 
 {{% choosable language python %}}
-<dl class="resources-properties">
-
-    <dt class="property-"
+<dl class="resources-properties"><dt class="property-"
             title="">
         <span id="create_time_python">
 <a href="#create_time_python" style="color: inherit; text-decoration: inherit;">create_<wbr>time</a>
@@ -1005,8 +957,7 @@ All [input](#inputs) properties are implicitly available as output properties. A
         <span class="property-type">str</span>
     </dt>
     <dd>{{% md %}}Creation timestamp in RFC3339 text format.
-{{% /md %}}</dd>
-    <dt class="property-"
+{{% /md %}}</dd><dt class="property-"
             title="">
         <span id="etag_python">
 <a href="#etag_python" style="color: inherit; text-decoration: inherit;">etag</a>
@@ -1015,8 +966,7 @@ All [input](#inputs) properties are implicitly available as output properties. A
         <span class="property-type">str</span>
     </dt>
     <dd>{{% md %}}Server-specified ETag for the instance resource to prevent simultaneous updates from overwriting each other.
-{{% /md %}}</dd>
-    <dt class="property-"
+{{% /md %}}</dd><dt class="property-"
             title="">
         <span id="id_python">
 <a href="#id_python" style="color: inherit; text-decoration: inherit;">id</a>
@@ -1024,8 +974,7 @@ All [input](#inputs) properties are implicitly available as output properties. A
         <span class="property-indicator"></span>
         <span class="property-type">str</span>
     </dt>
-    <dd>{{% md %}}The provider-assigned unique ID for this managed resource.{{% /md %}}</dd>
-</dl>
+    <dd>{{% md %}}The provider-assigned unique ID for this managed resource.{{% /md %}}</dd></dl>
 {{% /choosable %}}
 
 
@@ -1152,9 +1101,7 @@ The following state arguments are supported:
 
 
 {{% choosable language csharp %}}
-<dl class="resources-properties">
-
-    <dt class="property-optional"
+<dl class="resources-properties"><dt class="property-optional"
             title="Optional">
         <span id="state_createtime_csharp">
 <a href="#state_createtime_csharp" style="color: inherit; text-decoration: inherit;">Create<wbr>Time</a>
@@ -1163,8 +1110,7 @@ The following state arguments are supported:
         <span class="property-type">string</span>
     </dt>
     <dd>{{% md %}}Creation timestamp in RFC3339 text format.
-{{% /md %}}</dd>
-    <dt class="property-optional"
+{{% /md %}}</dd><dt class="property-optional"
             title="Optional">
         <span id="state_description_csharp">
 <a href="#state_description_csharp" style="color: inherit; text-decoration: inherit;">Description</a>
@@ -1173,8 +1119,7 @@ The following state arguments are supported:
         <span class="property-type">string</span>
     </dt>
     <dd>{{% md %}}A description of the instance.
-{{% /md %}}</dd>
-    <dt class="property-optional"
+{{% /md %}}</dd><dt class="property-optional"
             title="Optional">
         <span id="state_etag_csharp">
 <a href="#state_etag_csharp" style="color: inherit; text-decoration: inherit;">Etag</a>
@@ -1183,8 +1128,7 @@ The following state arguments are supported:
         <span class="property-type">string</span>
     </dt>
     <dd>{{% md %}}Server-specified ETag for the instance resource to prevent simultaneous updates from overwriting each other.
-{{% /md %}}</dd>
-    <dt class="property-optional"
+{{% /md %}}</dd><dt class="property-optional"
             title="Optional">
         <span id="state_fileshares_csharp">
 <a href="#state_fileshares_csharp" style="color: inherit; text-decoration: inherit;">File<wbr>Shares</a>
@@ -1195,8 +1139,7 @@ The following state arguments are supported:
     <dd>{{% md %}}File system shares on the instance. For this version, only a
 single file share is supported.
 Structure is documented below.
-{{% /md %}}</dd>
-    <dt class="property-optional"
+{{% /md %}}</dd><dt class="property-optional"
             title="Optional">
         <span id="state_labels_csharp">
 <a href="#state_labels_csharp" style="color: inherit; text-decoration: inherit;">Labels</a>
@@ -1205,8 +1148,7 @@ Structure is documented below.
         <span class="property-type">Dictionary&lt;string, string&gt;</span>
     </dt>
     <dd>{{% md %}}Resource labels to represent user-provided metadata.
-{{% /md %}}</dd>
-    <dt class="property-optional"
+{{% /md %}}</dd><dt class="property-optional"
             title="Optional">
         <span id="state_name_csharp">
 <a href="#state_name_csharp" style="color: inherit; text-decoration: inherit;">Name</a>
@@ -1215,8 +1157,7 @@ Structure is documented below.
         <span class="property-type">string</span>
     </dt>
     <dd>{{% md %}}The name of the fileshare (16 characters or less)
-{{% /md %}}</dd>
-    <dt class="property-optional"
+{{% /md %}}</dd><dt class="property-optional"
             title="Optional">
         <span id="state_networks_csharp">
 <a href="#state_networks_csharp" style="color: inherit; text-decoration: inherit;">Networks</a>
@@ -1227,8 +1168,7 @@ Structure is documented below.
     <dd>{{% md %}}VPC networks to which the instance is connected. For this version,
 only a single network is supported.
 Structure is documented below.
-{{% /md %}}</dd>
-    <dt class="property-optional"
+{{% /md %}}</dd><dt class="property-optional"
             title="Optional">
         <span id="state_project_csharp">
 <a href="#state_project_csharp" style="color: inherit; text-decoration: inherit;">Project</a>
@@ -1238,8 +1178,7 @@ Structure is documented below.
     </dt>
     <dd>{{% md %}}The ID of the project in which the resource belongs.
 If it is not provided, the provider project is used.
-{{% /md %}}</dd>
-    <dt class="property-optional"
+{{% /md %}}</dd><dt class="property-optional"
             title="Optional">
         <span id="state_tier_csharp">
 <a href="#state_tier_csharp" style="color: inherit; text-decoration: inherit;">Tier</a>
@@ -1249,8 +1188,7 @@ If it is not provided, the provider project is used.
     </dt>
     <dd>{{% md %}}The service tier of the instance.
 Possible values are `TIER_UNSPECIFIED`, `STANDARD`, `PREMIUM`, `BASIC_HDD`, `BASIC_SSD`, and `HIGH_SCALE_SSD`.
-{{% /md %}}</dd>
-    <dt class="property-optional"
+{{% /md %}}</dd><dt class="property-optional"
             title="Optional">
         <span id="state_zone_csharp">
 <a href="#state_zone_csharp" style="color: inherit; text-decoration: inherit;">Zone</a>
@@ -1259,14 +1197,11 @@ Possible values are `TIER_UNSPECIFIED`, `STANDARD`, `PREMIUM`, `BASIC_HDD`, `BAS
         <span class="property-type">string</span>
     </dt>
     <dd>{{% md %}}The name of the Filestore zone of the instance.
-{{% /md %}}</dd>
-</dl>
+{{% /md %}}</dd></dl>
 {{% /choosable %}}
 
 {{% choosable language go %}}
-<dl class="resources-properties">
-
-    <dt class="property-optional"
+<dl class="resources-properties"><dt class="property-optional"
             title="Optional">
         <span id="state_createtime_go">
 <a href="#state_createtime_go" style="color: inherit; text-decoration: inherit;">Create<wbr>Time</a>
@@ -1275,8 +1210,7 @@ Possible values are `TIER_UNSPECIFIED`, `STANDARD`, `PREMIUM`, `BASIC_HDD`, `BAS
         <span class="property-type">string</span>
     </dt>
     <dd>{{% md %}}Creation timestamp in RFC3339 text format.
-{{% /md %}}</dd>
-    <dt class="property-optional"
+{{% /md %}}</dd><dt class="property-optional"
             title="Optional">
         <span id="state_description_go">
 <a href="#state_description_go" style="color: inherit; text-decoration: inherit;">Description</a>
@@ -1285,8 +1219,7 @@ Possible values are `TIER_UNSPECIFIED`, `STANDARD`, `PREMIUM`, `BASIC_HDD`, `BAS
         <span class="property-type">string</span>
     </dt>
     <dd>{{% md %}}A description of the instance.
-{{% /md %}}</dd>
-    <dt class="property-optional"
+{{% /md %}}</dd><dt class="property-optional"
             title="Optional">
         <span id="state_etag_go">
 <a href="#state_etag_go" style="color: inherit; text-decoration: inherit;">Etag</a>
@@ -1295,8 +1228,7 @@ Possible values are `TIER_UNSPECIFIED`, `STANDARD`, `PREMIUM`, `BASIC_HDD`, `BAS
         <span class="property-type">string</span>
     </dt>
     <dd>{{% md %}}Server-specified ETag for the instance resource to prevent simultaneous updates from overwriting each other.
-{{% /md %}}</dd>
-    <dt class="property-optional"
+{{% /md %}}</dd><dt class="property-optional"
             title="Optional">
         <span id="state_fileshares_go">
 <a href="#state_fileshares_go" style="color: inherit; text-decoration: inherit;">File<wbr>Shares</a>
@@ -1307,8 +1239,7 @@ Possible values are `TIER_UNSPECIFIED`, `STANDARD`, `PREMIUM`, `BASIC_HDD`, `BAS
     <dd>{{% md %}}File system shares on the instance. For this version, only a
 single file share is supported.
 Structure is documented below.
-{{% /md %}}</dd>
-    <dt class="property-optional"
+{{% /md %}}</dd><dt class="property-optional"
             title="Optional">
         <span id="state_labels_go">
 <a href="#state_labels_go" style="color: inherit; text-decoration: inherit;">Labels</a>
@@ -1317,8 +1248,7 @@ Structure is documented below.
         <span class="property-type">map[string]string</span>
     </dt>
     <dd>{{% md %}}Resource labels to represent user-provided metadata.
-{{% /md %}}</dd>
-    <dt class="property-optional"
+{{% /md %}}</dd><dt class="property-optional"
             title="Optional">
         <span id="state_name_go">
 <a href="#state_name_go" style="color: inherit; text-decoration: inherit;">Name</a>
@@ -1327,8 +1257,7 @@ Structure is documented below.
         <span class="property-type">string</span>
     </dt>
     <dd>{{% md %}}The name of the fileshare (16 characters or less)
-{{% /md %}}</dd>
-    <dt class="property-optional"
+{{% /md %}}</dd><dt class="property-optional"
             title="Optional">
         <span id="state_networks_go">
 <a href="#state_networks_go" style="color: inherit; text-decoration: inherit;">Networks</a>
@@ -1339,8 +1268,7 @@ Structure is documented below.
     <dd>{{% md %}}VPC networks to which the instance is connected. For this version,
 only a single network is supported.
 Structure is documented below.
-{{% /md %}}</dd>
-    <dt class="property-optional"
+{{% /md %}}</dd><dt class="property-optional"
             title="Optional">
         <span id="state_project_go">
 <a href="#state_project_go" style="color: inherit; text-decoration: inherit;">Project</a>
@@ -1350,8 +1278,7 @@ Structure is documented below.
     </dt>
     <dd>{{% md %}}The ID of the project in which the resource belongs.
 If it is not provided, the provider project is used.
-{{% /md %}}</dd>
-    <dt class="property-optional"
+{{% /md %}}</dd><dt class="property-optional"
             title="Optional">
         <span id="state_tier_go">
 <a href="#state_tier_go" style="color: inherit; text-decoration: inherit;">Tier</a>
@@ -1361,8 +1288,7 @@ If it is not provided, the provider project is used.
     </dt>
     <dd>{{% md %}}The service tier of the instance.
 Possible values are `TIER_UNSPECIFIED`, `STANDARD`, `PREMIUM`, `BASIC_HDD`, `BASIC_SSD`, and `HIGH_SCALE_SSD`.
-{{% /md %}}</dd>
-    <dt class="property-optional"
+{{% /md %}}</dd><dt class="property-optional"
             title="Optional">
         <span id="state_zone_go">
 <a href="#state_zone_go" style="color: inherit; text-decoration: inherit;">Zone</a>
@@ -1371,14 +1297,11 @@ Possible values are `TIER_UNSPECIFIED`, `STANDARD`, `PREMIUM`, `BASIC_HDD`, `BAS
         <span class="property-type">string</span>
     </dt>
     <dd>{{% md %}}The name of the Filestore zone of the instance.
-{{% /md %}}</dd>
-</dl>
+{{% /md %}}</dd></dl>
 {{% /choosable %}}
 
 {{% choosable language nodejs %}}
-<dl class="resources-properties">
-
-    <dt class="property-optional"
+<dl class="resources-properties"><dt class="property-optional"
             title="Optional">
         <span id="state_createtime_nodejs">
 <a href="#state_createtime_nodejs" style="color: inherit; text-decoration: inherit;">create<wbr>Time</a>
@@ -1387,8 +1310,7 @@ Possible values are `TIER_UNSPECIFIED`, `STANDARD`, `PREMIUM`, `BASIC_HDD`, `BAS
         <span class="property-type">string</span>
     </dt>
     <dd>{{% md %}}Creation timestamp in RFC3339 text format.
-{{% /md %}}</dd>
-    <dt class="property-optional"
+{{% /md %}}</dd><dt class="property-optional"
             title="Optional">
         <span id="state_description_nodejs">
 <a href="#state_description_nodejs" style="color: inherit; text-decoration: inherit;">description</a>
@@ -1397,8 +1319,7 @@ Possible values are `TIER_UNSPECIFIED`, `STANDARD`, `PREMIUM`, `BASIC_HDD`, `BAS
         <span class="property-type">string</span>
     </dt>
     <dd>{{% md %}}A description of the instance.
-{{% /md %}}</dd>
-    <dt class="property-optional"
+{{% /md %}}</dd><dt class="property-optional"
             title="Optional">
         <span id="state_etag_nodejs">
 <a href="#state_etag_nodejs" style="color: inherit; text-decoration: inherit;">etag</a>
@@ -1407,8 +1328,7 @@ Possible values are `TIER_UNSPECIFIED`, `STANDARD`, `PREMIUM`, `BASIC_HDD`, `BAS
         <span class="property-type">string</span>
     </dt>
     <dd>{{% md %}}Server-specified ETag for the instance resource to prevent simultaneous updates from overwriting each other.
-{{% /md %}}</dd>
-    <dt class="property-optional"
+{{% /md %}}</dd><dt class="property-optional"
             title="Optional">
         <span id="state_fileshares_nodejs">
 <a href="#state_fileshares_nodejs" style="color: inherit; text-decoration: inherit;">file<wbr>Shares</a>
@@ -1419,8 +1339,7 @@ Possible values are `TIER_UNSPECIFIED`, `STANDARD`, `PREMIUM`, `BASIC_HDD`, `BAS
     <dd>{{% md %}}File system shares on the instance. For this version, only a
 single file share is supported.
 Structure is documented below.
-{{% /md %}}</dd>
-    <dt class="property-optional"
+{{% /md %}}</dd><dt class="property-optional"
             title="Optional">
         <span id="state_labels_nodejs">
 <a href="#state_labels_nodejs" style="color: inherit; text-decoration: inherit;">labels</a>
@@ -1429,8 +1348,7 @@ Structure is documented below.
         <span class="property-type">{[key: string]: string}</span>
     </dt>
     <dd>{{% md %}}Resource labels to represent user-provided metadata.
-{{% /md %}}</dd>
-    <dt class="property-optional"
+{{% /md %}}</dd><dt class="property-optional"
             title="Optional">
         <span id="state_name_nodejs">
 <a href="#state_name_nodejs" style="color: inherit; text-decoration: inherit;">name</a>
@@ -1439,8 +1357,7 @@ Structure is documented below.
         <span class="property-type">string</span>
     </dt>
     <dd>{{% md %}}The name of the fileshare (16 characters or less)
-{{% /md %}}</dd>
-    <dt class="property-optional"
+{{% /md %}}</dd><dt class="property-optional"
             title="Optional">
         <span id="state_networks_nodejs">
 <a href="#state_networks_nodejs" style="color: inherit; text-decoration: inherit;">networks</a>
@@ -1451,8 +1368,7 @@ Structure is documented below.
     <dd>{{% md %}}VPC networks to which the instance is connected. For this version,
 only a single network is supported.
 Structure is documented below.
-{{% /md %}}</dd>
-    <dt class="property-optional"
+{{% /md %}}</dd><dt class="property-optional"
             title="Optional">
         <span id="state_project_nodejs">
 <a href="#state_project_nodejs" style="color: inherit; text-decoration: inherit;">project</a>
@@ -1462,8 +1378,7 @@ Structure is documented below.
     </dt>
     <dd>{{% md %}}The ID of the project in which the resource belongs.
 If it is not provided, the provider project is used.
-{{% /md %}}</dd>
-    <dt class="property-optional"
+{{% /md %}}</dd><dt class="property-optional"
             title="Optional">
         <span id="state_tier_nodejs">
 <a href="#state_tier_nodejs" style="color: inherit; text-decoration: inherit;">tier</a>
@@ -1473,8 +1388,7 @@ If it is not provided, the provider project is used.
     </dt>
     <dd>{{% md %}}The service tier of the instance.
 Possible values are `TIER_UNSPECIFIED`, `STANDARD`, `PREMIUM`, `BASIC_HDD`, `BASIC_SSD`, and `HIGH_SCALE_SSD`.
-{{% /md %}}</dd>
-    <dt class="property-optional"
+{{% /md %}}</dd><dt class="property-optional"
             title="Optional">
         <span id="state_zone_nodejs">
 <a href="#state_zone_nodejs" style="color: inherit; text-decoration: inherit;">zone</a>
@@ -1483,14 +1397,11 @@ Possible values are `TIER_UNSPECIFIED`, `STANDARD`, `PREMIUM`, `BASIC_HDD`, `BAS
         <span class="property-type">string</span>
     </dt>
     <dd>{{% md %}}The name of the Filestore zone of the instance.
-{{% /md %}}</dd>
-</dl>
+{{% /md %}}</dd></dl>
 {{% /choosable %}}
 
 {{% choosable language python %}}
-<dl class="resources-properties">
-
-    <dt class="property-optional"
+<dl class="resources-properties"><dt class="property-optional"
             title="Optional">
         <span id="state_create_time_python">
 <a href="#state_create_time_python" style="color: inherit; text-decoration: inherit;">create_<wbr>time</a>
@@ -1499,8 +1410,7 @@ Possible values are `TIER_UNSPECIFIED`, `STANDARD`, `PREMIUM`, `BASIC_HDD`, `BAS
         <span class="property-type">str</span>
     </dt>
     <dd>{{% md %}}Creation timestamp in RFC3339 text format.
-{{% /md %}}</dd>
-    <dt class="property-optional"
+{{% /md %}}</dd><dt class="property-optional"
             title="Optional">
         <span id="state_description_python">
 <a href="#state_description_python" style="color: inherit; text-decoration: inherit;">description</a>
@@ -1509,8 +1419,7 @@ Possible values are `TIER_UNSPECIFIED`, `STANDARD`, `PREMIUM`, `BASIC_HDD`, `BAS
         <span class="property-type">str</span>
     </dt>
     <dd>{{% md %}}A description of the instance.
-{{% /md %}}</dd>
-    <dt class="property-optional"
+{{% /md %}}</dd><dt class="property-optional"
             title="Optional">
         <span id="state_etag_python">
 <a href="#state_etag_python" style="color: inherit; text-decoration: inherit;">etag</a>
@@ -1519,8 +1428,7 @@ Possible values are `TIER_UNSPECIFIED`, `STANDARD`, `PREMIUM`, `BASIC_HDD`, `BAS
         <span class="property-type">str</span>
     </dt>
     <dd>{{% md %}}Server-specified ETag for the instance resource to prevent simultaneous updates from overwriting each other.
-{{% /md %}}</dd>
-    <dt class="property-optional"
+{{% /md %}}</dd><dt class="property-optional"
             title="Optional">
         <span id="state_file_shares_python">
 <a href="#state_file_shares_python" style="color: inherit; text-decoration: inherit;">file_<wbr>shares</a>
@@ -1531,8 +1439,7 @@ Possible values are `TIER_UNSPECIFIED`, `STANDARD`, `PREMIUM`, `BASIC_HDD`, `BAS
     <dd>{{% md %}}File system shares on the instance. For this version, only a
 single file share is supported.
 Structure is documented below.
-{{% /md %}}</dd>
-    <dt class="property-optional"
+{{% /md %}}</dd><dt class="property-optional"
             title="Optional">
         <span id="state_labels_python">
 <a href="#state_labels_python" style="color: inherit; text-decoration: inherit;">labels</a>
@@ -1541,8 +1448,7 @@ Structure is documented below.
         <span class="property-type">Mapping[str, str]</span>
     </dt>
     <dd>{{% md %}}Resource labels to represent user-provided metadata.
-{{% /md %}}</dd>
-    <dt class="property-optional"
+{{% /md %}}</dd><dt class="property-optional"
             title="Optional">
         <span id="state_name_python">
 <a href="#state_name_python" style="color: inherit; text-decoration: inherit;">name</a>
@@ -1551,8 +1457,7 @@ Structure is documented below.
         <span class="property-type">str</span>
     </dt>
     <dd>{{% md %}}The name of the fileshare (16 characters or less)
-{{% /md %}}</dd>
-    <dt class="property-optional"
+{{% /md %}}</dd><dt class="property-optional"
             title="Optional">
         <span id="state_networks_python">
 <a href="#state_networks_python" style="color: inherit; text-decoration: inherit;">networks</a>
@@ -1563,8 +1468,7 @@ Structure is documented below.
     <dd>{{% md %}}VPC networks to which the instance is connected. For this version,
 only a single network is supported.
 Structure is documented below.
-{{% /md %}}</dd>
-    <dt class="property-optional"
+{{% /md %}}</dd><dt class="property-optional"
             title="Optional">
         <span id="state_project_python">
 <a href="#state_project_python" style="color: inherit; text-decoration: inherit;">project</a>
@@ -1574,8 +1478,7 @@ Structure is documented below.
     </dt>
     <dd>{{% md %}}The ID of the project in which the resource belongs.
 If it is not provided, the provider project is used.
-{{% /md %}}</dd>
-    <dt class="property-optional"
+{{% /md %}}</dd><dt class="property-optional"
             title="Optional">
         <span id="state_tier_python">
 <a href="#state_tier_python" style="color: inherit; text-decoration: inherit;">tier</a>
@@ -1585,8 +1488,7 @@ If it is not provided, the provider project is used.
     </dt>
     <dd>{{% md %}}The service tier of the instance.
 Possible values are `TIER_UNSPECIFIED`, `STANDARD`, `PREMIUM`, `BASIC_HDD`, `BASIC_SSD`, and `HIGH_SCALE_SSD`.
-{{% /md %}}</dd>
-    <dt class="property-optional"
+{{% /md %}}</dd><dt class="property-optional"
             title="Optional">
         <span id="state_zone_python">
 <a href="#state_zone_python" style="color: inherit; text-decoration: inherit;">zone</a>
@@ -1595,8 +1497,7 @@ Possible values are `TIER_UNSPECIFIED`, `STANDARD`, `PREMIUM`, `BASIC_HDD`, `BAS
         <span class="property-type">str</span>
     </dt>
     <dd>{{% md %}}The name of the Filestore zone of the instance.
-{{% /md %}}</dd>
-</dl>
+{{% /md %}}</dd></dl>
 {{% /choosable %}}
 
 
@@ -1611,9 +1512,7 @@ Possible values are `TIER_UNSPECIFIED`, `STANDARD`, `PREMIUM`, `BASIC_HDD`, `BAS
 <h4 id="instancefileshares">Instance<wbr>File<wbr>Shares</h4>
 
 {{% choosable language csharp %}}
-<dl class="resources-properties">
-
-    <dt class="property-required"
+<dl class="resources-properties"><dt class="property-required"
             title="Required">
         <span id="capacitygb_csharp">
 <a href="#capacitygb_csharp" style="color: inherit; text-decoration: inherit;">Capacity<wbr>Gb</a>
@@ -1623,8 +1522,7 @@ Possible values are `TIER_UNSPECIFIED`, `STANDARD`, `PREMIUM`, `BASIC_HDD`, `BAS
     </dt>
     <dd>{{% md %}}File share capacity in GiB. This must be at least 1024 GiB
 for the standard tier, or 2560 GiB for the premium tier.
-{{% /md %}}</dd>
-    <dt class="property-required"
+{{% /md %}}</dd><dt class="property-required"
             title="Required">
         <span id="name_csharp">
 <a href="#name_csharp" style="color: inherit; text-decoration: inherit;">Name</a>
@@ -1633,8 +1531,7 @@ for the standard tier, or 2560 GiB for the premium tier.
         <span class="property-type">string</span>
     </dt>
     <dd>{{% md %}}The name of the fileshare (16 characters or less)
-{{% /md %}}</dd>
-    <dt class="property-optional"
+{{% /md %}}</dd><dt class="property-optional"
             title="Optional">
         <span id="nfsexportoptions_csharp">
 <a href="#nfsexportoptions_csharp" style="color: inherit; text-decoration: inherit;">Nfs<wbr>Export<wbr>Options</a>
@@ -1644,14 +1541,11 @@ for the standard tier, or 2560 GiB for the premium tier.
     </dt>
     <dd>{{% md %}}Nfs Export Options. There is a limit of 10 export options per file share.
 Structure is documented below.
-{{% /md %}}</dd>
-</dl>
+{{% /md %}}</dd></dl>
 {{% /choosable %}}
 
 {{% choosable language go %}}
-<dl class="resources-properties">
-
-    <dt class="property-required"
+<dl class="resources-properties"><dt class="property-required"
             title="Required">
         <span id="capacitygb_go">
 <a href="#capacitygb_go" style="color: inherit; text-decoration: inherit;">Capacity<wbr>Gb</a>
@@ -1661,8 +1555,7 @@ Structure is documented below.
     </dt>
     <dd>{{% md %}}File share capacity in GiB. This must be at least 1024 GiB
 for the standard tier, or 2560 GiB for the premium tier.
-{{% /md %}}</dd>
-    <dt class="property-required"
+{{% /md %}}</dd><dt class="property-required"
             title="Required">
         <span id="name_go">
 <a href="#name_go" style="color: inherit; text-decoration: inherit;">Name</a>
@@ -1671,8 +1564,7 @@ for the standard tier, or 2560 GiB for the premium tier.
         <span class="property-type">string</span>
     </dt>
     <dd>{{% md %}}The name of the fileshare (16 characters or less)
-{{% /md %}}</dd>
-    <dt class="property-optional"
+{{% /md %}}</dd><dt class="property-optional"
             title="Optional">
         <span id="nfsexportoptions_go">
 <a href="#nfsexportoptions_go" style="color: inherit; text-decoration: inherit;">Nfs<wbr>Export<wbr>Options</a>
@@ -1682,14 +1574,11 @@ for the standard tier, or 2560 GiB for the premium tier.
     </dt>
     <dd>{{% md %}}Nfs Export Options. There is a limit of 10 export options per file share.
 Structure is documented below.
-{{% /md %}}</dd>
-</dl>
+{{% /md %}}</dd></dl>
 {{% /choosable %}}
 
 {{% choosable language nodejs %}}
-<dl class="resources-properties">
-
-    <dt class="property-required"
+<dl class="resources-properties"><dt class="property-required"
             title="Required">
         <span id="capacitygb_nodejs">
 <a href="#capacitygb_nodejs" style="color: inherit; text-decoration: inherit;">capacity<wbr>Gb</a>
@@ -1699,8 +1588,7 @@ Structure is documented below.
     </dt>
     <dd>{{% md %}}File share capacity in GiB. This must be at least 1024 GiB
 for the standard tier, or 2560 GiB for the premium tier.
-{{% /md %}}</dd>
-    <dt class="property-required"
+{{% /md %}}</dd><dt class="property-required"
             title="Required">
         <span id="name_nodejs">
 <a href="#name_nodejs" style="color: inherit; text-decoration: inherit;">name</a>
@@ -1709,8 +1597,7 @@ for the standard tier, or 2560 GiB for the premium tier.
         <span class="property-type">string</span>
     </dt>
     <dd>{{% md %}}The name of the fileshare (16 characters or less)
-{{% /md %}}</dd>
-    <dt class="property-optional"
+{{% /md %}}</dd><dt class="property-optional"
             title="Optional">
         <span id="nfsexportoptions_nodejs">
 <a href="#nfsexportoptions_nodejs" style="color: inherit; text-decoration: inherit;">nfs<wbr>Export<wbr>Options</a>
@@ -1720,14 +1607,11 @@ for the standard tier, or 2560 GiB for the premium tier.
     </dt>
     <dd>{{% md %}}Nfs Export Options. There is a limit of 10 export options per file share.
 Structure is documented below.
-{{% /md %}}</dd>
-</dl>
+{{% /md %}}</dd></dl>
 {{% /choosable %}}
 
 {{% choosable language python %}}
-<dl class="resources-properties">
-
-    <dt class="property-required"
+<dl class="resources-properties"><dt class="property-required"
             title="Required">
         <span id="capacity_gb_python">
 <a href="#capacity_gb_python" style="color: inherit; text-decoration: inherit;">capacity_<wbr>gb</a>
@@ -1737,8 +1621,7 @@ Structure is documented below.
     </dt>
     <dd>{{% md %}}File share capacity in GiB. This must be at least 1024 GiB
 for the standard tier, or 2560 GiB for the premium tier.
-{{% /md %}}</dd>
-    <dt class="property-required"
+{{% /md %}}</dd><dt class="property-required"
             title="Required">
         <span id="name_python">
 <a href="#name_python" style="color: inherit; text-decoration: inherit;">name</a>
@@ -1747,8 +1630,7 @@ for the standard tier, or 2560 GiB for the premium tier.
         <span class="property-type">str</span>
     </dt>
     <dd>{{% md %}}The name of the fileshare (16 characters or less)
-{{% /md %}}</dd>
-    <dt class="property-optional"
+{{% /md %}}</dd><dt class="property-optional"
             title="Optional">
         <span id="nfs_export_options_python">
 <a href="#nfs_export_options_python" style="color: inherit; text-decoration: inherit;">nfs_<wbr>export_<wbr>options</a>
@@ -1758,16 +1640,13 @@ for the standard tier, or 2560 GiB for the premium tier.
     </dt>
     <dd>{{% md %}}Nfs Export Options. There is a limit of 10 export options per file share.
 Structure is documented below.
-{{% /md %}}</dd>
-</dl>
+{{% /md %}}</dd></dl>
 {{% /choosable %}}
 
 <h4 id="instancefilesharesnfsexportoption">Instance<wbr>File<wbr>Shares<wbr>Nfs<wbr>Export<wbr>Option</h4>
 
 {{% choosable language csharp %}}
-<dl class="resources-properties">
-
-    <dt class="property-optional"
+<dl class="resources-properties"><dt class="property-optional"
             title="Optional">
         <span id="accessmode_csharp">
 <a href="#accessmode_csharp" style="color: inherit; text-decoration: inherit;">Access<wbr>Mode</a>
@@ -1779,8 +1658,7 @@ Structure is documented below.
 or READ_WRITE, for allowing both read and write requests. The default is READ_WRITE.
 Default value is `READ_WRITE`.
 Possible values are `READ_ONLY` and `READ_WRITE`.
-{{% /md %}}</dd>
-    <dt class="property-optional"
+{{% /md %}}</dd><dt class="property-optional"
             title="Optional">
         <span id="anongid_csharp">
 <a href="#anongid_csharp" style="color: inherit; text-decoration: inherit;">Anon<wbr>Gid</a>
@@ -1791,8 +1669,7 @@ Possible values are `READ_ONLY` and `READ_WRITE`.
     <dd>{{% md %}}An integer representing the anonymous group id with a default value of 65534.
 Anon_gid may only be set with squashMode of ROOT_SQUASH. An error will be returned
 if this field is specified for other squashMode settings.
-{{% /md %}}</dd>
-    <dt class="property-optional"
+{{% /md %}}</dd><dt class="property-optional"
             title="Optional">
         <span id="anonuid_csharp">
 <a href="#anonuid_csharp" style="color: inherit; text-decoration: inherit;">Anon<wbr>Uid</a>
@@ -1803,8 +1680,7 @@ if this field is specified for other squashMode settings.
     <dd>{{% md %}}An integer representing the anonymous user id with a default value of 65534.
 Anon_uid may only be set with squashMode of ROOT_SQUASH. An error will be returned
 if this field is specified for other squashMode settings.
-{{% /md %}}</dd>
-    <dt class="property-optional"
+{{% /md %}}</dd><dt class="property-optional"
             title="Optional">
         <span id="ipranges_csharp">
 <a href="#ipranges_csharp" style="color: inherit; text-decoration: inherit;">Ip<wbr>Ranges</a>
@@ -1815,8 +1691,7 @@ if this field is specified for other squashMode settings.
     <dd>{{% md %}}List of either IPv4 addresses, or ranges in CIDR notation which may mount the file share.
 Overlapping IP ranges are not allowed, both within and across NfsExportOptions. An error will be returned.
 The limit is 64 IP ranges/addresses for each FileShareConfig among all NfsExportOptions.
-{{% /md %}}</dd>
-    <dt class="property-optional"
+{{% /md %}}</dd><dt class="property-optional"
             title="Optional">
         <span id="squashmode_csharp">
 <a href="#squashmode_csharp" style="color: inherit; text-decoration: inherit;">Squash<wbr>Mode</a>
@@ -1828,14 +1703,11 @@ The limit is 64 IP ranges/addresses for each FileShareConfig among all NfsExport
 for not allowing root access. The default is NO_ROOT_SQUASH.
 Default value is `NO_ROOT_SQUASH`.
 Possible values are `NO_ROOT_SQUASH` and `ROOT_SQUASH`.
-{{% /md %}}</dd>
-</dl>
+{{% /md %}}</dd></dl>
 {{% /choosable %}}
 
 {{% choosable language go %}}
-<dl class="resources-properties">
-
-    <dt class="property-optional"
+<dl class="resources-properties"><dt class="property-optional"
             title="Optional">
         <span id="accessmode_go">
 <a href="#accessmode_go" style="color: inherit; text-decoration: inherit;">Access<wbr>Mode</a>
@@ -1847,8 +1719,7 @@ Possible values are `NO_ROOT_SQUASH` and `ROOT_SQUASH`.
 or READ_WRITE, for allowing both read and write requests. The default is READ_WRITE.
 Default value is `READ_WRITE`.
 Possible values are `READ_ONLY` and `READ_WRITE`.
-{{% /md %}}</dd>
-    <dt class="property-optional"
+{{% /md %}}</dd><dt class="property-optional"
             title="Optional">
         <span id="anongid_go">
 <a href="#anongid_go" style="color: inherit; text-decoration: inherit;">Anon<wbr>Gid</a>
@@ -1859,8 +1730,7 @@ Possible values are `READ_ONLY` and `READ_WRITE`.
     <dd>{{% md %}}An integer representing the anonymous group id with a default value of 65534.
 Anon_gid may only be set with squashMode of ROOT_SQUASH. An error will be returned
 if this field is specified for other squashMode settings.
-{{% /md %}}</dd>
-    <dt class="property-optional"
+{{% /md %}}</dd><dt class="property-optional"
             title="Optional">
         <span id="anonuid_go">
 <a href="#anonuid_go" style="color: inherit; text-decoration: inherit;">Anon<wbr>Uid</a>
@@ -1871,8 +1741,7 @@ if this field is specified for other squashMode settings.
     <dd>{{% md %}}An integer representing the anonymous user id with a default value of 65534.
 Anon_uid may only be set with squashMode of ROOT_SQUASH. An error will be returned
 if this field is specified for other squashMode settings.
-{{% /md %}}</dd>
-    <dt class="property-optional"
+{{% /md %}}</dd><dt class="property-optional"
             title="Optional">
         <span id="ipranges_go">
 <a href="#ipranges_go" style="color: inherit; text-decoration: inherit;">Ip<wbr>Ranges</a>
@@ -1883,8 +1752,7 @@ if this field is specified for other squashMode settings.
     <dd>{{% md %}}List of either IPv4 addresses, or ranges in CIDR notation which may mount the file share.
 Overlapping IP ranges are not allowed, both within and across NfsExportOptions. An error will be returned.
 The limit is 64 IP ranges/addresses for each FileShareConfig among all NfsExportOptions.
-{{% /md %}}</dd>
-    <dt class="property-optional"
+{{% /md %}}</dd><dt class="property-optional"
             title="Optional">
         <span id="squashmode_go">
 <a href="#squashmode_go" style="color: inherit; text-decoration: inherit;">Squash<wbr>Mode</a>
@@ -1896,14 +1764,11 @@ The limit is 64 IP ranges/addresses for each FileShareConfig among all NfsExport
 for not allowing root access. The default is NO_ROOT_SQUASH.
 Default value is `NO_ROOT_SQUASH`.
 Possible values are `NO_ROOT_SQUASH` and `ROOT_SQUASH`.
-{{% /md %}}</dd>
-</dl>
+{{% /md %}}</dd></dl>
 {{% /choosable %}}
 
 {{% choosable language nodejs %}}
-<dl class="resources-properties">
-
-    <dt class="property-optional"
+<dl class="resources-properties"><dt class="property-optional"
             title="Optional">
         <span id="accessmode_nodejs">
 <a href="#accessmode_nodejs" style="color: inherit; text-decoration: inherit;">access<wbr>Mode</a>
@@ -1915,8 +1780,7 @@ Possible values are `NO_ROOT_SQUASH` and `ROOT_SQUASH`.
 or READ_WRITE, for allowing both read and write requests. The default is READ_WRITE.
 Default value is `READ_WRITE`.
 Possible values are `READ_ONLY` and `READ_WRITE`.
-{{% /md %}}</dd>
-    <dt class="property-optional"
+{{% /md %}}</dd><dt class="property-optional"
             title="Optional">
         <span id="anongid_nodejs">
 <a href="#anongid_nodejs" style="color: inherit; text-decoration: inherit;">anon<wbr>Gid</a>
@@ -1927,8 +1791,7 @@ Possible values are `READ_ONLY` and `READ_WRITE`.
     <dd>{{% md %}}An integer representing the anonymous group id with a default value of 65534.
 Anon_gid may only be set with squashMode of ROOT_SQUASH. An error will be returned
 if this field is specified for other squashMode settings.
-{{% /md %}}</dd>
-    <dt class="property-optional"
+{{% /md %}}</dd><dt class="property-optional"
             title="Optional">
         <span id="anonuid_nodejs">
 <a href="#anonuid_nodejs" style="color: inherit; text-decoration: inherit;">anon<wbr>Uid</a>
@@ -1939,8 +1802,7 @@ if this field is specified for other squashMode settings.
     <dd>{{% md %}}An integer representing the anonymous user id with a default value of 65534.
 Anon_uid may only be set with squashMode of ROOT_SQUASH. An error will be returned
 if this field is specified for other squashMode settings.
-{{% /md %}}</dd>
-    <dt class="property-optional"
+{{% /md %}}</dd><dt class="property-optional"
             title="Optional">
         <span id="ipranges_nodejs">
 <a href="#ipranges_nodejs" style="color: inherit; text-decoration: inherit;">ip<wbr>Ranges</a>
@@ -1951,8 +1813,7 @@ if this field is specified for other squashMode settings.
     <dd>{{% md %}}List of either IPv4 addresses, or ranges in CIDR notation which may mount the file share.
 Overlapping IP ranges are not allowed, both within and across NfsExportOptions. An error will be returned.
 The limit is 64 IP ranges/addresses for each FileShareConfig among all NfsExportOptions.
-{{% /md %}}</dd>
-    <dt class="property-optional"
+{{% /md %}}</dd><dt class="property-optional"
             title="Optional">
         <span id="squashmode_nodejs">
 <a href="#squashmode_nodejs" style="color: inherit; text-decoration: inherit;">squash<wbr>Mode</a>
@@ -1964,14 +1825,11 @@ The limit is 64 IP ranges/addresses for each FileShareConfig among all NfsExport
 for not allowing root access. The default is NO_ROOT_SQUASH.
 Default value is `NO_ROOT_SQUASH`.
 Possible values are `NO_ROOT_SQUASH` and `ROOT_SQUASH`.
-{{% /md %}}</dd>
-</dl>
+{{% /md %}}</dd></dl>
 {{% /choosable %}}
 
 {{% choosable language python %}}
-<dl class="resources-properties">
-
-    <dt class="property-optional"
+<dl class="resources-properties"><dt class="property-optional"
             title="Optional">
         <span id="access_mode_python">
 <a href="#access_mode_python" style="color: inherit; text-decoration: inherit;">access_<wbr>mode</a>
@@ -1983,8 +1841,7 @@ Possible values are `NO_ROOT_SQUASH` and `ROOT_SQUASH`.
 or READ_WRITE, for allowing both read and write requests. The default is READ_WRITE.
 Default value is `READ_WRITE`.
 Possible values are `READ_ONLY` and `READ_WRITE`.
-{{% /md %}}</dd>
-    <dt class="property-optional"
+{{% /md %}}</dd><dt class="property-optional"
             title="Optional">
         <span id="anon_gid_python">
 <a href="#anon_gid_python" style="color: inherit; text-decoration: inherit;">anon_<wbr>gid</a>
@@ -1995,8 +1852,7 @@ Possible values are `READ_ONLY` and `READ_WRITE`.
     <dd>{{% md %}}An integer representing the anonymous group id with a default value of 65534.
 Anon_gid may only be set with squashMode of ROOT_SQUASH. An error will be returned
 if this field is specified for other squashMode settings.
-{{% /md %}}</dd>
-    <dt class="property-optional"
+{{% /md %}}</dd><dt class="property-optional"
             title="Optional">
         <span id="anon_uid_python">
 <a href="#anon_uid_python" style="color: inherit; text-decoration: inherit;">anon_<wbr>uid</a>
@@ -2007,8 +1863,7 @@ if this field is specified for other squashMode settings.
     <dd>{{% md %}}An integer representing the anonymous user id with a default value of 65534.
 Anon_uid may only be set with squashMode of ROOT_SQUASH. An error will be returned
 if this field is specified for other squashMode settings.
-{{% /md %}}</dd>
-    <dt class="property-optional"
+{{% /md %}}</dd><dt class="property-optional"
             title="Optional">
         <span id="ip_ranges_python">
 <a href="#ip_ranges_python" style="color: inherit; text-decoration: inherit;">ip_<wbr>ranges</a>
@@ -2019,8 +1874,7 @@ if this field is specified for other squashMode settings.
     <dd>{{% md %}}List of either IPv4 addresses, or ranges in CIDR notation which may mount the file share.
 Overlapping IP ranges are not allowed, both within and across NfsExportOptions. An error will be returned.
 The limit is 64 IP ranges/addresses for each FileShareConfig among all NfsExportOptions.
-{{% /md %}}</dd>
-    <dt class="property-optional"
+{{% /md %}}</dd><dt class="property-optional"
             title="Optional">
         <span id="squash_mode_python">
 <a href="#squash_mode_python" style="color: inherit; text-decoration: inherit;">squash_<wbr>mode</a>
@@ -2032,16 +1886,13 @@ The limit is 64 IP ranges/addresses for each FileShareConfig among all NfsExport
 for not allowing root access. The default is NO_ROOT_SQUASH.
 Default value is `NO_ROOT_SQUASH`.
 Possible values are `NO_ROOT_SQUASH` and `ROOT_SQUASH`.
-{{% /md %}}</dd>
-</dl>
+{{% /md %}}</dd></dl>
 {{% /choosable %}}
 
 <h4 id="instancenetwork">Instance<wbr>Network</h4>
 
 {{% choosable language csharp %}}
-<dl class="resources-properties">
-
-    <dt class="property-required"
+<dl class="resources-properties"><dt class="property-required"
             title="Required">
         <span id="modes_csharp">
 <a href="#modes_csharp" style="color: inherit; text-decoration: inherit;">Modes</a>
@@ -2052,8 +1903,7 @@ Possible values are `NO_ROOT_SQUASH` and `ROOT_SQUASH`.
     <dd>{{% md %}}IP versions for which the instance has
 IP addresses assigned.
 Each value may be one of `ADDRESS_MODE_UNSPECIFIED`, `MODE_IPV4`, and `MODE_IPV6`.
-{{% /md %}}</dd>
-    <dt class="property-required"
+{{% /md %}}</dd><dt class="property-required"
             title="Required">
         <span id="network_csharp">
 <a href="#network_csharp" style="color: inherit; text-decoration: inherit;">Network</a>
@@ -2063,8 +1913,7 @@ Each value may be one of `ADDRESS_MODE_UNSPECIFIED`, `MODE_IPV4`, and `MODE_IPV6
     </dt>
     <dd>{{% md %}}The name of the GCE VPC network to which the
 instance is connected.
-{{% /md %}}</dd>
-    <dt class="property-optional"
+{{% /md %}}</dd><dt class="property-optional"
             title="Optional">
         <span id="ipaddresses_csharp">
 <a href="#ipaddresses_csharp" style="color: inherit; text-decoration: inherit;">Ip<wbr>Addresses</a>
@@ -2074,8 +1923,7 @@ instance is connected.
     </dt>
     <dd>{{% md %}}-
 A list of IPv4 or IPv6 addresses.
-{{% /md %}}</dd>
-    <dt class="property-optional"
+{{% /md %}}</dd><dt class="property-optional"
             title="Optional">
         <span id="reservediprange_csharp">
 <a href="#reservediprange_csharp" style="color: inherit; text-decoration: inherit;">Reserved<wbr>Ip<wbr>Range</a>
@@ -2085,14 +1933,11 @@ A list of IPv4 or IPv6 addresses.
     </dt>
     <dd>{{% md %}}A /29 CIDR block that identifies the range of IP
 addresses reserved for this instance.
-{{% /md %}}</dd>
-</dl>
+{{% /md %}}</dd></dl>
 {{% /choosable %}}
 
 {{% choosable language go %}}
-<dl class="resources-properties">
-
-    <dt class="property-required"
+<dl class="resources-properties"><dt class="property-required"
             title="Required">
         <span id="modes_go">
 <a href="#modes_go" style="color: inherit; text-decoration: inherit;">Modes</a>
@@ -2103,8 +1948,7 @@ addresses reserved for this instance.
     <dd>{{% md %}}IP versions for which the instance has
 IP addresses assigned.
 Each value may be one of `ADDRESS_MODE_UNSPECIFIED`, `MODE_IPV4`, and `MODE_IPV6`.
-{{% /md %}}</dd>
-    <dt class="property-required"
+{{% /md %}}</dd><dt class="property-required"
             title="Required">
         <span id="network_go">
 <a href="#network_go" style="color: inherit; text-decoration: inherit;">Network</a>
@@ -2114,8 +1958,7 @@ Each value may be one of `ADDRESS_MODE_UNSPECIFIED`, `MODE_IPV4`, and `MODE_IPV6
     </dt>
     <dd>{{% md %}}The name of the GCE VPC network to which the
 instance is connected.
-{{% /md %}}</dd>
-    <dt class="property-optional"
+{{% /md %}}</dd><dt class="property-optional"
             title="Optional">
         <span id="ipaddresses_go">
 <a href="#ipaddresses_go" style="color: inherit; text-decoration: inherit;">Ip<wbr>Addresses</a>
@@ -2125,8 +1968,7 @@ instance is connected.
     </dt>
     <dd>{{% md %}}-
 A list of IPv4 or IPv6 addresses.
-{{% /md %}}</dd>
-    <dt class="property-optional"
+{{% /md %}}</dd><dt class="property-optional"
             title="Optional">
         <span id="reservediprange_go">
 <a href="#reservediprange_go" style="color: inherit; text-decoration: inherit;">Reserved<wbr>Ip<wbr>Range</a>
@@ -2136,14 +1978,11 @@ A list of IPv4 or IPv6 addresses.
     </dt>
     <dd>{{% md %}}A /29 CIDR block that identifies the range of IP
 addresses reserved for this instance.
-{{% /md %}}</dd>
-</dl>
+{{% /md %}}</dd></dl>
 {{% /choosable %}}
 
 {{% choosable language nodejs %}}
-<dl class="resources-properties">
-
-    <dt class="property-required"
+<dl class="resources-properties"><dt class="property-required"
             title="Required">
         <span id="modes_nodejs">
 <a href="#modes_nodejs" style="color: inherit; text-decoration: inherit;">modes</a>
@@ -2154,8 +1993,7 @@ addresses reserved for this instance.
     <dd>{{% md %}}IP versions for which the instance has
 IP addresses assigned.
 Each value may be one of `ADDRESS_MODE_UNSPECIFIED`, `MODE_IPV4`, and `MODE_IPV6`.
-{{% /md %}}</dd>
-    <dt class="property-required"
+{{% /md %}}</dd><dt class="property-required"
             title="Required">
         <span id="network_nodejs">
 <a href="#network_nodejs" style="color: inherit; text-decoration: inherit;">network</a>
@@ -2165,8 +2003,7 @@ Each value may be one of `ADDRESS_MODE_UNSPECIFIED`, `MODE_IPV4`, and `MODE_IPV6
     </dt>
     <dd>{{% md %}}The name of the GCE VPC network to which the
 instance is connected.
-{{% /md %}}</dd>
-    <dt class="property-optional"
+{{% /md %}}</dd><dt class="property-optional"
             title="Optional">
         <span id="ipaddresses_nodejs">
 <a href="#ipaddresses_nodejs" style="color: inherit; text-decoration: inherit;">ip<wbr>Addresses</a>
@@ -2176,8 +2013,7 @@ instance is connected.
     </dt>
     <dd>{{% md %}}-
 A list of IPv4 or IPv6 addresses.
-{{% /md %}}</dd>
-    <dt class="property-optional"
+{{% /md %}}</dd><dt class="property-optional"
             title="Optional">
         <span id="reservediprange_nodejs">
 <a href="#reservediprange_nodejs" style="color: inherit; text-decoration: inherit;">reserved<wbr>Ip<wbr>Range</a>
@@ -2187,14 +2023,11 @@ A list of IPv4 or IPv6 addresses.
     </dt>
     <dd>{{% md %}}A /29 CIDR block that identifies the range of IP
 addresses reserved for this instance.
-{{% /md %}}</dd>
-</dl>
+{{% /md %}}</dd></dl>
 {{% /choosable %}}
 
 {{% choosable language python %}}
-<dl class="resources-properties">
-
-    <dt class="property-required"
+<dl class="resources-properties"><dt class="property-required"
             title="Required">
         <span id="modes_python">
 <a href="#modes_python" style="color: inherit; text-decoration: inherit;">modes</a>
@@ -2205,8 +2038,7 @@ addresses reserved for this instance.
     <dd>{{% md %}}IP versions for which the instance has
 IP addresses assigned.
 Each value may be one of `ADDRESS_MODE_UNSPECIFIED`, `MODE_IPV4`, and `MODE_IPV6`.
-{{% /md %}}</dd>
-    <dt class="property-required"
+{{% /md %}}</dd><dt class="property-required"
             title="Required">
         <span id="network_python">
 <a href="#network_python" style="color: inherit; text-decoration: inherit;">network</a>
@@ -2216,8 +2048,7 @@ Each value may be one of `ADDRESS_MODE_UNSPECIFIED`, `MODE_IPV4`, and `MODE_IPV6
     </dt>
     <dd>{{% md %}}The name of the GCE VPC network to which the
 instance is connected.
-{{% /md %}}</dd>
-    <dt class="property-optional"
+{{% /md %}}</dd><dt class="property-optional"
             title="Optional">
         <span id="ip_addresses_python">
 <a href="#ip_addresses_python" style="color: inherit; text-decoration: inherit;">ip_<wbr>addresses</a>
@@ -2227,8 +2058,7 @@ instance is connected.
     </dt>
     <dd>{{% md %}}-
 A list of IPv4 or IPv6 addresses.
-{{% /md %}}</dd>
-    <dt class="property-optional"
+{{% /md %}}</dd><dt class="property-optional"
             title="Optional">
         <span id="reserved_ip_range_python">
 <a href="#reserved_ip_range_python" style="color: inherit; text-decoration: inherit;">reserved_<wbr>ip_<wbr>range</a>
@@ -2238,8 +2068,7 @@ A list of IPv4 or IPv6 addresses.
     </dt>
     <dd>{{% md %}}A /29 CIDR block that identifies the range of IP
 addresses reserved for this instance.
-{{% /md %}}</dd>
-</dl>
+{{% /md %}}</dd></dl>
 {{% /choosable %}}
 ## Import
 
@@ -2272,6 +2101,6 @@ Instance can be imported using any of these accepted formats
 	<dt>License</dt>
 	<dd>Apache-2.0</dd>
 	<dt>Notes</dt>
-	<dd>This Pulumi package is based on the [`google-beta` Terraform Provider](https://github.com/hashicorp/terraform-provider-google-beta).</dd>
+	<dd>{{% md %}}This Pulumi package is based on the [`google-beta` Terraform Provider](https://github.com/hashicorp/terraform-provider-google-beta).{{% /md %}}</dd>
 </dl>
 

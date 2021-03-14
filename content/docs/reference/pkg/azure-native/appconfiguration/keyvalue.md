@@ -14,11 +14,17 @@ The key-value resource along with all resource properties.
 API Version: 2020-07-01-preview.
 
 {{% examples %}}
+
 ## Example Usage
 
 {{< chooser language "typescript,python,go,csharp" / >}}
+
+
 ### KeyValues_CreateOrUpdate
-{{% example csharp %}}
+
+
+{{< example csharp >}}
+
 ```csharp
 using Pulumi;
 using AzureNative = Pulumi.AzureNative;
@@ -45,9 +51,12 @@ class MyStack : Stack
 
 ```
 
-{{% /example %}}
 
-{{% example go %}}
+{{< /example >}}
+
+
+{{< example go >}}
+
 
 ```go
 package main
@@ -80,9 +89,12 @@ func main() {
 
 ```
 
-{{% /example %}}
 
-{{% example python %}}
+{{< /example >}}
+
+
+{{< example python >}}
+
 
 ```python
 import pulumi
@@ -100,9 +112,12 @@ key_value = azure_native.appconfiguration.KeyValue("keyValue",
 
 ```
 
-{{% /example %}}
 
-{{% example typescript %}}
+{{< /example >}}
+
+
+{{< example typescript >}}
+
 
 ```typescript
 import * as pulumi from "@pulumi/pulumi";
@@ -121,9 +136,16 @@ const keyValue = new azure_native.appconfiguration.KeyValue("keyValue", {
 
 ```
 
-{{% /example %}}
+
+{{< /example >}}
+
+
+
+
 
 {{% /examples %}}
+
+
 
 
 ## Create a KeyValue Resource {#create}
@@ -148,9 +170,7 @@ const keyValue = new azure_native.appconfiguration.KeyValue("keyValue", {
 
 {{% choosable language nodejs %}}
 
-<dl class="resources-properties">
-  
-    <dt
+<dl class="resources-properties"><dt
         class="property-required" title="Required">
         <span>name</span>
         <span class="property-indicator"></span>
@@ -158,9 +178,7 @@ const keyValue = new azure_native.appconfiguration.KeyValue("keyValue", {
     </dt>
     <dd>
       The unique name of the resource.
-    </dd>
-  
-    <dt
+    </dd><dt
         class="property-required" title="Required">
         <span>args</span>
         <span class="property-indicator"></span>
@@ -168,9 +186,7 @@ const keyValue = new azure_native.appconfiguration.KeyValue("keyValue", {
     </dt>
     <dd>
       The arguments to resource properties.
-    </dd>
-  
-    <dt
+    </dd><dt
         class="property-optional" title="Optional">
         <span>opts</span>
         <span class="property-indicator"></span>
@@ -178,10 +194,7 @@ const keyValue = new azure_native.appconfiguration.KeyValue("keyValue", {
     </dt>
     <dd>
       Bag of options to control resource&#39;s behavior.
-    </dd>
-  
-
-</dl>
+    </dd></dl>
 
 {{% /choosable %}}
 
@@ -207,9 +220,7 @@ const keyValue = new azure_native.appconfiguration.KeyValue("keyValue", {
 
 {{% choosable language go %}}
 
-<dl class="resources-properties">
-  
-    <dt
+<dl class="resources-properties"><dt
         class="property-optional" title="Optional">
         <span>ctx</span>
         <span class="property-indicator"></span>
@@ -217,9 +228,7 @@ const keyValue = new azure_native.appconfiguration.KeyValue("keyValue", {
     </dt>
     <dd>
       Context object for the current deployment.
-    </dd>
-  
-    <dt
+    </dd><dt
         class="property-required" title="Required">
         <span>name</span>
         <span class="property-indicator"></span>
@@ -227,9 +236,7 @@ const keyValue = new azure_native.appconfiguration.KeyValue("keyValue", {
     </dt>
     <dd>
       The unique name of the resource.
-    </dd>
-  
-    <dt
+    </dd><dt
         class="property-required" title="Required">
         <span>args</span>
         <span class="property-indicator"></span>
@@ -237,9 +244,7 @@ const keyValue = new azure_native.appconfiguration.KeyValue("keyValue", {
     </dt>
     <dd>
       The arguments to resource properties.
-    </dd>
-  
-    <dt
+    </dd><dt
         class="property-optional" title="Optional">
         <span>opts</span>
         <span class="property-indicator"></span>
@@ -247,18 +252,13 @@ const keyValue = new azure_native.appconfiguration.KeyValue("keyValue", {
     </dt>
     <dd>
       Bag of options to control resource&#39;s behavior.
-    </dd>
-  
-
-</dl>
+    </dd></dl>
 
 {{% /choosable %}}
 
 {{% choosable language csharp %}}
 
-<dl class="resources-properties">
-  
-    <dt
+<dl class="resources-properties"><dt
         class="property-required" title="Required">
         <span>name</span>
         <span class="property-indicator"></span>
@@ -266,9 +266,7 @@ const keyValue = new azure_native.appconfiguration.KeyValue("keyValue", {
     </dt>
     <dd>
       The unique name of the resource.
-    </dd>
-  
-    <dt
+    </dd><dt
         class="property-required" title="Required">
         <span>args</span>
         <span class="property-indicator"></span>
@@ -276,9 +274,7 @@ const keyValue = new azure_native.appconfiguration.KeyValue("keyValue", {
     </dt>
     <dd>
       The arguments to resource properties.
-    </dd>
-  
-    <dt
+    </dd><dt
         class="property-optional" title="Optional">
         <span>opts</span>
         <span class="property-indicator"></span>
@@ -286,10 +282,7 @@ const keyValue = new azure_native.appconfiguration.KeyValue("keyValue", {
     </dt>
     <dd>
       Bag of options to control resource&#39;s behavior.
-    </dd>
-  
-
-</dl>
+    </dd></dl>
 
 {{% /choosable %}}
 
@@ -304,9 +297,7 @@ The KeyValue resource accepts the following [input]({{< relref "/docs/intro/conc
 
 
 {{% choosable language csharp %}}
-<dl class="resources-properties">
-
-    <dt class="property-required"
+<dl class="resources-properties"><dt class="property-required"
             title="Required">
         <span id="configstorename_csharp">
 <a href="#configstorename_csharp" style="color: inherit; text-decoration: inherit;">Config<wbr>Store<wbr>Name</a>
@@ -314,8 +305,7 @@ The KeyValue resource accepts the following [input]({{< relref "/docs/intro/conc
         <span class="property-indicator"></span>
         <span class="property-type">string</span>
     </dt>
-    <dd>{{% md %}}The name of the configuration store.{{% /md %}}</dd>
-    <dt class="property-required"
+    <dd>{{% md %}}The name of the configuration store.{{% /md %}}</dd><dt class="property-required"
             title="Required">
         <span id="resourcegroupname_csharp">
 <a href="#resourcegroupname_csharp" style="color: inherit; text-decoration: inherit;">Resource<wbr>Group<wbr>Name</a>
@@ -323,8 +313,7 @@ The KeyValue resource accepts the following [input]({{< relref "/docs/intro/conc
         <span class="property-indicator"></span>
         <span class="property-type">string</span>
     </dt>
-    <dd>{{% md %}}The name of the resource group to which the container registry belongs.{{% /md %}}</dd>
-    <dt class="property-optional"
+    <dd>{{% md %}}The name of the resource group to which the container registry belongs.{{% /md %}}</dd><dt class="property-optional"
             title="Optional">
         <span id="contenttype_csharp">
 <a href="#contenttype_csharp" style="color: inherit; text-decoration: inherit;">Content<wbr>Type</a>
@@ -333,8 +322,7 @@ The KeyValue resource accepts the following [input]({{< relref "/docs/intro/conc
         <span class="property-type">string</span>
     </dt>
     <dd>{{% md %}}The content type of the key-value's value.
-Providing a proper content-type can enable transformations of values when they are retrieved by applications.{{% /md %}}</dd>
-    <dt class="property-optional"
+Providing a proper content-type can enable transformations of values when they are retrieved by applications.{{% /md %}}</dd><dt class="property-optional"
             title="Optional">
         <span id="keyvaluename_csharp">
 <a href="#keyvaluename_csharp" style="color: inherit; text-decoration: inherit;">Key<wbr>Value<wbr>Name</a>
@@ -342,8 +330,7 @@ Providing a proper content-type can enable transformations of values when they a
         <span class="property-indicator"></span>
         <span class="property-type">string</span>
     </dt>
-    <dd>{{% md %}}Identifier of key and label combination. Key and label are joined by $ character. Label is optional.{{% /md %}}</dd>
-    <dt class="property-optional"
+    <dd>{{% md %}}Identifier of key and label combination. Key and label are joined by $ character. Label is optional.{{% /md %}}</dd><dt class="property-optional"
             title="Optional">
         <span id="tags_csharp">
 <a href="#tags_csharp" style="color: inherit; text-decoration: inherit;">Tags</a>
@@ -351,8 +338,7 @@ Providing a proper content-type can enable transformations of values when they a
         <span class="property-indicator"></span>
         <span class="property-type">Dictionary&lt;string, string&gt;</span>
     </dt>
-    <dd>{{% md %}}A dictionary of tags that can help identify what a key-value may be applicable for.{{% /md %}}</dd>
-    <dt class="property-optional"
+    <dd>{{% md %}}A dictionary of tags that can help identify what a key-value may be applicable for.{{% /md %}}</dd><dt class="property-optional"
             title="Optional">
         <span id="value_csharp">
 <a href="#value_csharp" style="color: inherit; text-decoration: inherit;">Value</a>
@@ -360,14 +346,11 @@ Providing a proper content-type can enable transformations of values when they a
         <span class="property-indicator"></span>
         <span class="property-type">string</span>
     </dt>
-    <dd>{{% md %}}The value of the key-value.{{% /md %}}</dd>
-</dl>
+    <dd>{{% md %}}The value of the key-value.{{% /md %}}</dd></dl>
 {{% /choosable %}}
 
 {{% choosable language go %}}
-<dl class="resources-properties">
-
-    <dt class="property-required"
+<dl class="resources-properties"><dt class="property-required"
             title="Required">
         <span id="configstorename_go">
 <a href="#configstorename_go" style="color: inherit; text-decoration: inherit;">Config<wbr>Store<wbr>Name</a>
@@ -375,8 +358,7 @@ Providing a proper content-type can enable transformations of values when they a
         <span class="property-indicator"></span>
         <span class="property-type">string</span>
     </dt>
-    <dd>{{% md %}}The name of the configuration store.{{% /md %}}</dd>
-    <dt class="property-required"
+    <dd>{{% md %}}The name of the configuration store.{{% /md %}}</dd><dt class="property-required"
             title="Required">
         <span id="resourcegroupname_go">
 <a href="#resourcegroupname_go" style="color: inherit; text-decoration: inherit;">Resource<wbr>Group<wbr>Name</a>
@@ -384,8 +366,7 @@ Providing a proper content-type can enable transformations of values when they a
         <span class="property-indicator"></span>
         <span class="property-type">string</span>
     </dt>
-    <dd>{{% md %}}The name of the resource group to which the container registry belongs.{{% /md %}}</dd>
-    <dt class="property-optional"
+    <dd>{{% md %}}The name of the resource group to which the container registry belongs.{{% /md %}}</dd><dt class="property-optional"
             title="Optional">
         <span id="contenttype_go">
 <a href="#contenttype_go" style="color: inherit; text-decoration: inherit;">Content<wbr>Type</a>
@@ -394,8 +375,7 @@ Providing a proper content-type can enable transformations of values when they a
         <span class="property-type">string</span>
     </dt>
     <dd>{{% md %}}The content type of the key-value's value.
-Providing a proper content-type can enable transformations of values when they are retrieved by applications.{{% /md %}}</dd>
-    <dt class="property-optional"
+Providing a proper content-type can enable transformations of values when they are retrieved by applications.{{% /md %}}</dd><dt class="property-optional"
             title="Optional">
         <span id="keyvaluename_go">
 <a href="#keyvaluename_go" style="color: inherit; text-decoration: inherit;">Key<wbr>Value<wbr>Name</a>
@@ -403,8 +383,7 @@ Providing a proper content-type can enable transformations of values when they a
         <span class="property-indicator"></span>
         <span class="property-type">string</span>
     </dt>
-    <dd>{{% md %}}Identifier of key and label combination. Key and label are joined by $ character. Label is optional.{{% /md %}}</dd>
-    <dt class="property-optional"
+    <dd>{{% md %}}Identifier of key and label combination. Key and label are joined by $ character. Label is optional.{{% /md %}}</dd><dt class="property-optional"
             title="Optional">
         <span id="tags_go">
 <a href="#tags_go" style="color: inherit; text-decoration: inherit;">Tags</a>
@@ -412,8 +391,7 @@ Providing a proper content-type can enable transformations of values when they a
         <span class="property-indicator"></span>
         <span class="property-type">map[string]string</span>
     </dt>
-    <dd>{{% md %}}A dictionary of tags that can help identify what a key-value may be applicable for.{{% /md %}}</dd>
-    <dt class="property-optional"
+    <dd>{{% md %}}A dictionary of tags that can help identify what a key-value may be applicable for.{{% /md %}}</dd><dt class="property-optional"
             title="Optional">
         <span id="value_go">
 <a href="#value_go" style="color: inherit; text-decoration: inherit;">Value</a>
@@ -421,14 +399,11 @@ Providing a proper content-type can enable transformations of values when they a
         <span class="property-indicator"></span>
         <span class="property-type">string</span>
     </dt>
-    <dd>{{% md %}}The value of the key-value.{{% /md %}}</dd>
-</dl>
+    <dd>{{% md %}}The value of the key-value.{{% /md %}}</dd></dl>
 {{% /choosable %}}
 
 {{% choosable language nodejs %}}
-<dl class="resources-properties">
-
-    <dt class="property-required"
+<dl class="resources-properties"><dt class="property-required"
             title="Required">
         <span id="configstorename_nodejs">
 <a href="#configstorename_nodejs" style="color: inherit; text-decoration: inherit;">config<wbr>Store<wbr>Name</a>
@@ -436,8 +411,7 @@ Providing a proper content-type can enable transformations of values when they a
         <span class="property-indicator"></span>
         <span class="property-type">string</span>
     </dt>
-    <dd>{{% md %}}The name of the configuration store.{{% /md %}}</dd>
-    <dt class="property-required"
+    <dd>{{% md %}}The name of the configuration store.{{% /md %}}</dd><dt class="property-required"
             title="Required">
         <span id="resourcegroupname_nodejs">
 <a href="#resourcegroupname_nodejs" style="color: inherit; text-decoration: inherit;">resource<wbr>Group<wbr>Name</a>
@@ -445,8 +419,7 @@ Providing a proper content-type can enable transformations of values when they a
         <span class="property-indicator"></span>
         <span class="property-type">string</span>
     </dt>
-    <dd>{{% md %}}The name of the resource group to which the container registry belongs.{{% /md %}}</dd>
-    <dt class="property-optional"
+    <dd>{{% md %}}The name of the resource group to which the container registry belongs.{{% /md %}}</dd><dt class="property-optional"
             title="Optional">
         <span id="contenttype_nodejs">
 <a href="#contenttype_nodejs" style="color: inherit; text-decoration: inherit;">content<wbr>Type</a>
@@ -455,8 +428,7 @@ Providing a proper content-type can enable transformations of values when they a
         <span class="property-type">string</span>
     </dt>
     <dd>{{% md %}}The content type of the key-value's value.
-Providing a proper content-type can enable transformations of values when they are retrieved by applications.{{% /md %}}</dd>
-    <dt class="property-optional"
+Providing a proper content-type can enable transformations of values when they are retrieved by applications.{{% /md %}}</dd><dt class="property-optional"
             title="Optional">
         <span id="keyvaluename_nodejs">
 <a href="#keyvaluename_nodejs" style="color: inherit; text-decoration: inherit;">key<wbr>Value<wbr>Name</a>
@@ -464,8 +436,7 @@ Providing a proper content-type can enable transformations of values when they a
         <span class="property-indicator"></span>
         <span class="property-type">string</span>
     </dt>
-    <dd>{{% md %}}Identifier of key and label combination. Key and label are joined by $ character. Label is optional.{{% /md %}}</dd>
-    <dt class="property-optional"
+    <dd>{{% md %}}Identifier of key and label combination. Key and label are joined by $ character. Label is optional.{{% /md %}}</dd><dt class="property-optional"
             title="Optional">
         <span id="tags_nodejs">
 <a href="#tags_nodejs" style="color: inherit; text-decoration: inherit;">tags</a>
@@ -473,8 +444,7 @@ Providing a proper content-type can enable transformations of values when they a
         <span class="property-indicator"></span>
         <span class="property-type">{[key: string]: string}</span>
     </dt>
-    <dd>{{% md %}}A dictionary of tags that can help identify what a key-value may be applicable for.{{% /md %}}</dd>
-    <dt class="property-optional"
+    <dd>{{% md %}}A dictionary of tags that can help identify what a key-value may be applicable for.{{% /md %}}</dd><dt class="property-optional"
             title="Optional">
         <span id="value_nodejs">
 <a href="#value_nodejs" style="color: inherit; text-decoration: inherit;">value</a>
@@ -482,14 +452,11 @@ Providing a proper content-type can enable transformations of values when they a
         <span class="property-indicator"></span>
         <span class="property-type">string</span>
     </dt>
-    <dd>{{% md %}}The value of the key-value.{{% /md %}}</dd>
-</dl>
+    <dd>{{% md %}}The value of the key-value.{{% /md %}}</dd></dl>
 {{% /choosable %}}
 
 {{% choosable language python %}}
-<dl class="resources-properties">
-
-    <dt class="property-required"
+<dl class="resources-properties"><dt class="property-required"
             title="Required">
         <span id="config_store_name_python">
 <a href="#config_store_name_python" style="color: inherit; text-decoration: inherit;">config_<wbr>store_<wbr>name</a>
@@ -497,8 +464,7 @@ Providing a proper content-type can enable transformations of values when they a
         <span class="property-indicator"></span>
         <span class="property-type">str</span>
     </dt>
-    <dd>{{% md %}}The name of the configuration store.{{% /md %}}</dd>
-    <dt class="property-required"
+    <dd>{{% md %}}The name of the configuration store.{{% /md %}}</dd><dt class="property-required"
             title="Required">
         <span id="resource_group_name_python">
 <a href="#resource_group_name_python" style="color: inherit; text-decoration: inherit;">resource_<wbr>group_<wbr>name</a>
@@ -506,8 +472,7 @@ Providing a proper content-type can enable transformations of values when they a
         <span class="property-indicator"></span>
         <span class="property-type">str</span>
     </dt>
-    <dd>{{% md %}}The name of the resource group to which the container registry belongs.{{% /md %}}</dd>
-    <dt class="property-optional"
+    <dd>{{% md %}}The name of the resource group to which the container registry belongs.{{% /md %}}</dd><dt class="property-optional"
             title="Optional">
         <span id="content_type_python">
 <a href="#content_type_python" style="color: inherit; text-decoration: inherit;">content_<wbr>type</a>
@@ -516,8 +481,7 @@ Providing a proper content-type can enable transformations of values when they a
         <span class="property-type">str</span>
     </dt>
     <dd>{{% md %}}The content type of the key-value's value.
-Providing a proper content-type can enable transformations of values when they are retrieved by applications.{{% /md %}}</dd>
-    <dt class="property-optional"
+Providing a proper content-type can enable transformations of values when they are retrieved by applications.{{% /md %}}</dd><dt class="property-optional"
             title="Optional">
         <span id="key_value_name_python">
 <a href="#key_value_name_python" style="color: inherit; text-decoration: inherit;">key_<wbr>value_<wbr>name</a>
@@ -525,8 +489,7 @@ Providing a proper content-type can enable transformations of values when they a
         <span class="property-indicator"></span>
         <span class="property-type">str</span>
     </dt>
-    <dd>{{% md %}}Identifier of key and label combination. Key and label are joined by $ character. Label is optional.{{% /md %}}</dd>
-    <dt class="property-optional"
+    <dd>{{% md %}}Identifier of key and label combination. Key and label are joined by $ character. Label is optional.{{% /md %}}</dd><dt class="property-optional"
             title="Optional">
         <span id="tags_python">
 <a href="#tags_python" style="color: inherit; text-decoration: inherit;">tags</a>
@@ -534,8 +497,7 @@ Providing a proper content-type can enable transformations of values when they a
         <span class="property-indicator"></span>
         <span class="property-type">Mapping[str, str]</span>
     </dt>
-    <dd>{{% md %}}A dictionary of tags that can help identify what a key-value may be applicable for.{{% /md %}}</dd>
-    <dt class="property-optional"
+    <dd>{{% md %}}A dictionary of tags that can help identify what a key-value may be applicable for.{{% /md %}}</dd><dt class="property-optional"
             title="Optional">
         <span id="value_python">
 <a href="#value_python" style="color: inherit; text-decoration: inherit;">value</a>
@@ -543,8 +505,7 @@ Providing a proper content-type can enable transformations of values when they a
         <span class="property-indicator"></span>
         <span class="property-type">str</span>
     </dt>
-    <dd>{{% md %}}The value of the key-value.{{% /md %}}</dd>
-</dl>
+    <dd>{{% md %}}The value of the key-value.{{% /md %}}</dd></dl>
 {{% /choosable %}}
 
 
@@ -555,9 +516,7 @@ All [input](#inputs) properties are implicitly available as output properties. A
 
 
 {{% choosable language csharp %}}
-<dl class="resources-properties">
-
-    <dt class="property-"
+<dl class="resources-properties"><dt class="property-"
             title="">
         <span id="etag_csharp">
 <a href="#etag_csharp" style="color: inherit; text-decoration: inherit;">ETag</a>
@@ -565,8 +524,7 @@ All [input](#inputs) properties are implicitly available as output properties. A
         <span class="property-indicator"></span>
         <span class="property-type">string</span>
     </dt>
-    <dd>{{% md %}}An ETag indicating the state of a key-value within a configuration store.{{% /md %}}</dd>
-    <dt class="property-"
+    <dd>{{% md %}}An ETag indicating the state of a key-value within a configuration store.{{% /md %}}</dd><dt class="property-"
             title="">
         <span id="id_csharp">
 <a href="#id_csharp" style="color: inherit; text-decoration: inherit;">Id</a>
@@ -574,8 +532,7 @@ All [input](#inputs) properties are implicitly available as output properties. A
         <span class="property-indicator"></span>
         <span class="property-type">string</span>
     </dt>
-    <dd>{{% md %}}The provider-assigned unique ID for this managed resource.{{% /md %}}</dd>
-    <dt class="property-"
+    <dd>{{% md %}}The provider-assigned unique ID for this managed resource.{{% /md %}}</dd><dt class="property-"
             title="">
         <span id="key_csharp">
 <a href="#key_csharp" style="color: inherit; text-decoration: inherit;">Key</a>
@@ -584,8 +541,7 @@ All [input](#inputs) properties are implicitly available as output properties. A
         <span class="property-type">string</span>
     </dt>
     <dd>{{% md %}}The primary identifier of a key-value.
-The key is used in unison with the label to uniquely identify a key-value.{{% /md %}}</dd>
-    <dt class="property-"
+The key is used in unison with the label to uniquely identify a key-value.{{% /md %}}</dd><dt class="property-"
             title="">
         <span id="label_csharp">
 <a href="#label_csharp" style="color: inherit; text-decoration: inherit;">Label</a>
@@ -594,8 +550,7 @@ The key is used in unison with the label to uniquely identify a key-value.{{% /m
         <span class="property-type">string</span>
     </dt>
     <dd>{{% md %}}A value used to group key-values.
-The label is used in unison with the key to uniquely identify a key-value.{{% /md %}}</dd>
-    <dt class="property-"
+The label is used in unison with the key to uniquely identify a key-value.{{% /md %}}</dd><dt class="property-"
             title="">
         <span id="lastmodified_csharp">
 <a href="#lastmodified_csharp" style="color: inherit; text-decoration: inherit;">Last<wbr>Modified</a>
@@ -603,8 +558,7 @@ The label is used in unison with the key to uniquely identify a key-value.{{% /m
         <span class="property-indicator"></span>
         <span class="property-type">string</span>
     </dt>
-    <dd>{{% md %}}The last time a modifying operation was performed on the given key-value.{{% /md %}}</dd>
-    <dt class="property-"
+    <dd>{{% md %}}The last time a modifying operation was performed on the given key-value.{{% /md %}}</dd><dt class="property-"
             title="">
         <span id="locked_csharp">
 <a href="#locked_csharp" style="color: inherit; text-decoration: inherit;">Locked</a>
@@ -613,8 +567,7 @@ The label is used in unison with the key to uniquely identify a key-value.{{% /m
         <span class="property-type">bool</span>
     </dt>
     <dd>{{% md %}}A value indicating whether the key-value is locked.
-A locked key-value may not be modified until it is unlocked.{{% /md %}}</dd>
-    <dt class="property-"
+A locked key-value may not be modified until it is unlocked.{{% /md %}}</dd><dt class="property-"
             title="">
         <span id="name_csharp">
 <a href="#name_csharp" style="color: inherit; text-decoration: inherit;">Name</a>
@@ -622,8 +575,7 @@ A locked key-value may not be modified until it is unlocked.{{% /md %}}</dd>
         <span class="property-indicator"></span>
         <span class="property-type">string</span>
     </dt>
-    <dd>{{% md %}}The name of the resource.{{% /md %}}</dd>
-    <dt class="property-"
+    <dd>{{% md %}}The name of the resource.{{% /md %}}</dd><dt class="property-"
             title="">
         <span id="type_csharp">
 <a href="#type_csharp" style="color: inherit; text-decoration: inherit;">Type</a>
@@ -631,14 +583,11 @@ A locked key-value may not be modified until it is unlocked.{{% /md %}}</dd>
         <span class="property-indicator"></span>
         <span class="property-type">string</span>
     </dt>
-    <dd>{{% md %}}The type of the resource.{{% /md %}}</dd>
-</dl>
+    <dd>{{% md %}}The type of the resource.{{% /md %}}</dd></dl>
 {{% /choosable %}}
 
 {{% choosable language go %}}
-<dl class="resources-properties">
-
-    <dt class="property-"
+<dl class="resources-properties"><dt class="property-"
             title="">
         <span id="etag_go">
 <a href="#etag_go" style="color: inherit; text-decoration: inherit;">ETag</a>
@@ -646,8 +595,7 @@ A locked key-value may not be modified until it is unlocked.{{% /md %}}</dd>
         <span class="property-indicator"></span>
         <span class="property-type">string</span>
     </dt>
-    <dd>{{% md %}}An ETag indicating the state of a key-value within a configuration store.{{% /md %}}</dd>
-    <dt class="property-"
+    <dd>{{% md %}}An ETag indicating the state of a key-value within a configuration store.{{% /md %}}</dd><dt class="property-"
             title="">
         <span id="id_go">
 <a href="#id_go" style="color: inherit; text-decoration: inherit;">Id</a>
@@ -655,8 +603,7 @@ A locked key-value may not be modified until it is unlocked.{{% /md %}}</dd>
         <span class="property-indicator"></span>
         <span class="property-type">string</span>
     </dt>
-    <dd>{{% md %}}The provider-assigned unique ID for this managed resource.{{% /md %}}</dd>
-    <dt class="property-"
+    <dd>{{% md %}}The provider-assigned unique ID for this managed resource.{{% /md %}}</dd><dt class="property-"
             title="">
         <span id="key_go">
 <a href="#key_go" style="color: inherit; text-decoration: inherit;">Key</a>
@@ -665,8 +612,7 @@ A locked key-value may not be modified until it is unlocked.{{% /md %}}</dd>
         <span class="property-type">string</span>
     </dt>
     <dd>{{% md %}}The primary identifier of a key-value.
-The key is used in unison with the label to uniquely identify a key-value.{{% /md %}}</dd>
-    <dt class="property-"
+The key is used in unison with the label to uniquely identify a key-value.{{% /md %}}</dd><dt class="property-"
             title="">
         <span id="label_go">
 <a href="#label_go" style="color: inherit; text-decoration: inherit;">Label</a>
@@ -675,8 +621,7 @@ The key is used in unison with the label to uniquely identify a key-value.{{% /m
         <span class="property-type">string</span>
     </dt>
     <dd>{{% md %}}A value used to group key-values.
-The label is used in unison with the key to uniquely identify a key-value.{{% /md %}}</dd>
-    <dt class="property-"
+The label is used in unison with the key to uniquely identify a key-value.{{% /md %}}</dd><dt class="property-"
             title="">
         <span id="lastmodified_go">
 <a href="#lastmodified_go" style="color: inherit; text-decoration: inherit;">Last<wbr>Modified</a>
@@ -684,8 +629,7 @@ The label is used in unison with the key to uniquely identify a key-value.{{% /m
         <span class="property-indicator"></span>
         <span class="property-type">string</span>
     </dt>
-    <dd>{{% md %}}The last time a modifying operation was performed on the given key-value.{{% /md %}}</dd>
-    <dt class="property-"
+    <dd>{{% md %}}The last time a modifying operation was performed on the given key-value.{{% /md %}}</dd><dt class="property-"
             title="">
         <span id="locked_go">
 <a href="#locked_go" style="color: inherit; text-decoration: inherit;">Locked</a>
@@ -694,8 +638,7 @@ The label is used in unison with the key to uniquely identify a key-value.{{% /m
         <span class="property-type">bool</span>
     </dt>
     <dd>{{% md %}}A value indicating whether the key-value is locked.
-A locked key-value may not be modified until it is unlocked.{{% /md %}}</dd>
-    <dt class="property-"
+A locked key-value may not be modified until it is unlocked.{{% /md %}}</dd><dt class="property-"
             title="">
         <span id="name_go">
 <a href="#name_go" style="color: inherit; text-decoration: inherit;">Name</a>
@@ -703,8 +646,7 @@ A locked key-value may not be modified until it is unlocked.{{% /md %}}</dd>
         <span class="property-indicator"></span>
         <span class="property-type">string</span>
     </dt>
-    <dd>{{% md %}}The name of the resource.{{% /md %}}</dd>
-    <dt class="property-"
+    <dd>{{% md %}}The name of the resource.{{% /md %}}</dd><dt class="property-"
             title="">
         <span id="type_go">
 <a href="#type_go" style="color: inherit; text-decoration: inherit;">Type</a>
@@ -712,14 +654,11 @@ A locked key-value may not be modified until it is unlocked.{{% /md %}}</dd>
         <span class="property-indicator"></span>
         <span class="property-type">string</span>
     </dt>
-    <dd>{{% md %}}The type of the resource.{{% /md %}}</dd>
-</dl>
+    <dd>{{% md %}}The type of the resource.{{% /md %}}</dd></dl>
 {{% /choosable %}}
 
 {{% choosable language nodejs %}}
-<dl class="resources-properties">
-
-    <dt class="property-"
+<dl class="resources-properties"><dt class="property-"
             title="">
         <span id="etag_nodejs">
 <a href="#etag_nodejs" style="color: inherit; text-decoration: inherit;">e<wbr>Tag</a>
@@ -727,8 +666,7 @@ A locked key-value may not be modified until it is unlocked.{{% /md %}}</dd>
         <span class="property-indicator"></span>
         <span class="property-type">string</span>
     </dt>
-    <dd>{{% md %}}An ETag indicating the state of a key-value within a configuration store.{{% /md %}}</dd>
-    <dt class="property-"
+    <dd>{{% md %}}An ETag indicating the state of a key-value within a configuration store.{{% /md %}}</dd><dt class="property-"
             title="">
         <span id="id_nodejs">
 <a href="#id_nodejs" style="color: inherit; text-decoration: inherit;">id</a>
@@ -736,8 +674,7 @@ A locked key-value may not be modified until it is unlocked.{{% /md %}}</dd>
         <span class="property-indicator"></span>
         <span class="property-type">string</span>
     </dt>
-    <dd>{{% md %}}The provider-assigned unique ID for this managed resource.{{% /md %}}</dd>
-    <dt class="property-"
+    <dd>{{% md %}}The provider-assigned unique ID for this managed resource.{{% /md %}}</dd><dt class="property-"
             title="">
         <span id="key_nodejs">
 <a href="#key_nodejs" style="color: inherit; text-decoration: inherit;">key</a>
@@ -746,8 +683,7 @@ A locked key-value may not be modified until it is unlocked.{{% /md %}}</dd>
         <span class="property-type">string</span>
     </dt>
     <dd>{{% md %}}The primary identifier of a key-value.
-The key is used in unison with the label to uniquely identify a key-value.{{% /md %}}</dd>
-    <dt class="property-"
+The key is used in unison with the label to uniquely identify a key-value.{{% /md %}}</dd><dt class="property-"
             title="">
         <span id="label_nodejs">
 <a href="#label_nodejs" style="color: inherit; text-decoration: inherit;">label</a>
@@ -756,8 +692,7 @@ The key is used in unison with the label to uniquely identify a key-value.{{% /m
         <span class="property-type">string</span>
     </dt>
     <dd>{{% md %}}A value used to group key-values.
-The label is used in unison with the key to uniquely identify a key-value.{{% /md %}}</dd>
-    <dt class="property-"
+The label is used in unison with the key to uniquely identify a key-value.{{% /md %}}</dd><dt class="property-"
             title="">
         <span id="lastmodified_nodejs">
 <a href="#lastmodified_nodejs" style="color: inherit; text-decoration: inherit;">last<wbr>Modified</a>
@@ -765,8 +700,7 @@ The label is used in unison with the key to uniquely identify a key-value.{{% /m
         <span class="property-indicator"></span>
         <span class="property-type">string</span>
     </dt>
-    <dd>{{% md %}}The last time a modifying operation was performed on the given key-value.{{% /md %}}</dd>
-    <dt class="property-"
+    <dd>{{% md %}}The last time a modifying operation was performed on the given key-value.{{% /md %}}</dd><dt class="property-"
             title="">
         <span id="locked_nodejs">
 <a href="#locked_nodejs" style="color: inherit; text-decoration: inherit;">locked</a>
@@ -775,8 +709,7 @@ The label is used in unison with the key to uniquely identify a key-value.{{% /m
         <span class="property-type">boolean</span>
     </dt>
     <dd>{{% md %}}A value indicating whether the key-value is locked.
-A locked key-value may not be modified until it is unlocked.{{% /md %}}</dd>
-    <dt class="property-"
+A locked key-value may not be modified until it is unlocked.{{% /md %}}</dd><dt class="property-"
             title="">
         <span id="name_nodejs">
 <a href="#name_nodejs" style="color: inherit; text-decoration: inherit;">name</a>
@@ -784,8 +717,7 @@ A locked key-value may not be modified until it is unlocked.{{% /md %}}</dd>
         <span class="property-indicator"></span>
         <span class="property-type">string</span>
     </dt>
-    <dd>{{% md %}}The name of the resource.{{% /md %}}</dd>
-    <dt class="property-"
+    <dd>{{% md %}}The name of the resource.{{% /md %}}</dd><dt class="property-"
             title="">
         <span id="type_nodejs">
 <a href="#type_nodejs" style="color: inherit; text-decoration: inherit;">type</a>
@@ -793,14 +725,11 @@ A locked key-value may not be modified until it is unlocked.{{% /md %}}</dd>
         <span class="property-indicator"></span>
         <span class="property-type">string</span>
     </dt>
-    <dd>{{% md %}}The type of the resource.{{% /md %}}</dd>
-</dl>
+    <dd>{{% md %}}The type of the resource.{{% /md %}}</dd></dl>
 {{% /choosable %}}
 
 {{% choosable language python %}}
-<dl class="resources-properties">
-
-    <dt class="property-"
+<dl class="resources-properties"><dt class="property-"
             title="">
         <span id="e_tag_python">
 <a href="#e_tag_python" style="color: inherit; text-decoration: inherit;">e_<wbr>tag</a>
@@ -808,8 +737,7 @@ A locked key-value may not be modified until it is unlocked.{{% /md %}}</dd>
         <span class="property-indicator"></span>
         <span class="property-type">str</span>
     </dt>
-    <dd>{{% md %}}An ETag indicating the state of a key-value within a configuration store.{{% /md %}}</dd>
-    <dt class="property-"
+    <dd>{{% md %}}An ETag indicating the state of a key-value within a configuration store.{{% /md %}}</dd><dt class="property-"
             title="">
         <span id="id_python">
 <a href="#id_python" style="color: inherit; text-decoration: inherit;">id</a>
@@ -817,8 +745,7 @@ A locked key-value may not be modified until it is unlocked.{{% /md %}}</dd>
         <span class="property-indicator"></span>
         <span class="property-type">str</span>
     </dt>
-    <dd>{{% md %}}The provider-assigned unique ID for this managed resource.{{% /md %}}</dd>
-    <dt class="property-"
+    <dd>{{% md %}}The provider-assigned unique ID for this managed resource.{{% /md %}}</dd><dt class="property-"
             title="">
         <span id="key_python">
 <a href="#key_python" style="color: inherit; text-decoration: inherit;">key</a>
@@ -827,8 +754,7 @@ A locked key-value may not be modified until it is unlocked.{{% /md %}}</dd>
         <span class="property-type">str</span>
     </dt>
     <dd>{{% md %}}The primary identifier of a key-value.
-The key is used in unison with the label to uniquely identify a key-value.{{% /md %}}</dd>
-    <dt class="property-"
+The key is used in unison with the label to uniquely identify a key-value.{{% /md %}}</dd><dt class="property-"
             title="">
         <span id="label_python">
 <a href="#label_python" style="color: inherit; text-decoration: inherit;">label</a>
@@ -837,8 +763,7 @@ The key is used in unison with the label to uniquely identify a key-value.{{% /m
         <span class="property-type">str</span>
     </dt>
     <dd>{{% md %}}A value used to group key-values.
-The label is used in unison with the key to uniquely identify a key-value.{{% /md %}}</dd>
-    <dt class="property-"
+The label is used in unison with the key to uniquely identify a key-value.{{% /md %}}</dd><dt class="property-"
             title="">
         <span id="last_modified_python">
 <a href="#last_modified_python" style="color: inherit; text-decoration: inherit;">last_<wbr>modified</a>
@@ -846,8 +771,7 @@ The label is used in unison with the key to uniquely identify a key-value.{{% /m
         <span class="property-indicator"></span>
         <span class="property-type">str</span>
     </dt>
-    <dd>{{% md %}}The last time a modifying operation was performed on the given key-value.{{% /md %}}</dd>
-    <dt class="property-"
+    <dd>{{% md %}}The last time a modifying operation was performed on the given key-value.{{% /md %}}</dd><dt class="property-"
             title="">
         <span id="locked_python">
 <a href="#locked_python" style="color: inherit; text-decoration: inherit;">locked</a>
@@ -856,8 +780,7 @@ The label is used in unison with the key to uniquely identify a key-value.{{% /m
         <span class="property-type">bool</span>
     </dt>
     <dd>{{% md %}}A value indicating whether the key-value is locked.
-A locked key-value may not be modified until it is unlocked.{{% /md %}}</dd>
-    <dt class="property-"
+A locked key-value may not be modified until it is unlocked.{{% /md %}}</dd><dt class="property-"
             title="">
         <span id="name_python">
 <a href="#name_python" style="color: inherit; text-decoration: inherit;">name</a>
@@ -865,8 +788,7 @@ A locked key-value may not be modified until it is unlocked.{{% /md %}}</dd>
         <span class="property-indicator"></span>
         <span class="property-type">str</span>
     </dt>
-    <dd>{{% md %}}The name of the resource.{{% /md %}}</dd>
-    <dt class="property-"
+    <dd>{{% md %}}The name of the resource.{{% /md %}}</dd><dt class="property-"
             title="">
         <span id="type_python">
 <a href="#type_python" style="color: inherit; text-decoration: inherit;">type</a>
@@ -874,8 +796,7 @@ A locked key-value may not be modified until it is unlocked.{{% /md %}}</dd>
         <span class="property-indicator"></span>
         <span class="property-type">str</span>
     </dt>
-    <dd>{{% md %}}The type of the resource.{{% /md %}}</dd>
-</dl>
+    <dd>{{% md %}}The type of the resource.{{% /md %}}</dd></dl>
 {{% /choosable %}}
 
 

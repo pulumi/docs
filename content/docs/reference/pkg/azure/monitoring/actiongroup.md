@@ -13,11 +13,17 @@ meta_desc: "Documentation for the azure.monitoring.ActionGroup resource with exa
 Manages an Action Group within Azure Monitor.
 
 {{% examples %}}
+
 ## Example Usage
 
 {{< chooser language "typescript,python,go,csharp" / >}}
 
-{{% example csharp %}}
+
+
+
+
+{{< example csharp >}}
+
 ```csharp
 using Pulumi;
 using Azure = Pulumi.Azure;
@@ -143,9 +149,12 @@ class MyStack : Stack
 }
 ```
 
-{{% /example %}}
 
-{{% example go %}}
+{{< /example >}}
+
+
+{{< example go >}}
+
 ```go
 package main
 
@@ -257,9 +266,12 @@ func main() {
 }
 ```
 
-{{% /example %}}
 
-{{% example python %}}
+{{< /example >}}
+
+
+{{< example python >}}
+
 ```python
 import pulumi
 import pulumi_azure as azure
@@ -334,9 +346,12 @@ example_action_group = azure.monitoring.ActionGroup("exampleActionGroup",
     )])
 ```
 
-{{% /example %}}
 
-{{% example typescript %}}
+{{< /example >}}
+
+
+{{< example typescript >}}
+
 
 ```typescript
 import * as pulumi from "@pulumi/pulumi";
@@ -413,9 +428,16 @@ const exampleActionGroup = new azure.monitoring.ActionGroup("exampleActionGroup"
 });
 ```
 
-{{% /example %}}
+
+{{< /example >}}
+
+
+
+
 
 {{% /examples %}}
+
+
 
 
 ## Create a ActionGroup Resource {#create}
@@ -440,9 +462,7 @@ const exampleActionGroup = new azure.monitoring.ActionGroup("exampleActionGroup"
 
 {{% choosable language nodejs %}}
 
-<dl class="resources-properties">
-  
-    <dt
+<dl class="resources-properties"><dt
         class="property-required" title="Required">
         <span>name</span>
         <span class="property-indicator"></span>
@@ -450,9 +470,7 @@ const exampleActionGroup = new azure.monitoring.ActionGroup("exampleActionGroup"
     </dt>
     <dd>
       The unique name of the resource.
-    </dd>
-  
-    <dt
+    </dd><dt
         class="property-required" title="Required">
         <span>args</span>
         <span class="property-indicator"></span>
@@ -460,9 +478,7 @@ const exampleActionGroup = new azure.monitoring.ActionGroup("exampleActionGroup"
     </dt>
     <dd>
       The arguments to resource properties.
-    </dd>
-  
-    <dt
+    </dd><dt
         class="property-optional" title="Optional">
         <span>opts</span>
         <span class="property-indicator"></span>
@@ -470,10 +486,7 @@ const exampleActionGroup = new azure.monitoring.ActionGroup("exampleActionGroup"
     </dt>
     <dd>
       Bag of options to control resource&#39;s behavior.
-    </dd>
-  
-
-</dl>
+    </dd></dl>
 
 {{% /choosable %}}
 
@@ -499,9 +512,7 @@ const exampleActionGroup = new azure.monitoring.ActionGroup("exampleActionGroup"
 
 {{% choosable language go %}}
 
-<dl class="resources-properties">
-  
-    <dt
+<dl class="resources-properties"><dt
         class="property-optional" title="Optional">
         <span>ctx</span>
         <span class="property-indicator"></span>
@@ -509,9 +520,7 @@ const exampleActionGroup = new azure.monitoring.ActionGroup("exampleActionGroup"
     </dt>
     <dd>
       Context object for the current deployment.
-    </dd>
-  
-    <dt
+    </dd><dt
         class="property-required" title="Required">
         <span>name</span>
         <span class="property-indicator"></span>
@@ -519,9 +528,7 @@ const exampleActionGroup = new azure.monitoring.ActionGroup("exampleActionGroup"
     </dt>
     <dd>
       The unique name of the resource.
-    </dd>
-  
-    <dt
+    </dd><dt
         class="property-required" title="Required">
         <span>args</span>
         <span class="property-indicator"></span>
@@ -529,9 +536,7 @@ const exampleActionGroup = new azure.monitoring.ActionGroup("exampleActionGroup"
     </dt>
     <dd>
       The arguments to resource properties.
-    </dd>
-  
-    <dt
+    </dd><dt
         class="property-optional" title="Optional">
         <span>opts</span>
         <span class="property-indicator"></span>
@@ -539,18 +544,13 @@ const exampleActionGroup = new azure.monitoring.ActionGroup("exampleActionGroup"
     </dt>
     <dd>
       Bag of options to control resource&#39;s behavior.
-    </dd>
-  
-
-</dl>
+    </dd></dl>
 
 {{% /choosable %}}
 
 {{% choosable language csharp %}}
 
-<dl class="resources-properties">
-  
-    <dt
+<dl class="resources-properties"><dt
         class="property-required" title="Required">
         <span>name</span>
         <span class="property-indicator"></span>
@@ -558,9 +558,7 @@ const exampleActionGroup = new azure.monitoring.ActionGroup("exampleActionGroup"
     </dt>
     <dd>
       The unique name of the resource.
-    </dd>
-  
-    <dt
+    </dd><dt
         class="property-required" title="Required">
         <span>args</span>
         <span class="property-indicator"></span>
@@ -568,9 +566,7 @@ const exampleActionGroup = new azure.monitoring.ActionGroup("exampleActionGroup"
     </dt>
     <dd>
       The arguments to resource properties.
-    </dd>
-  
-    <dt
+    </dd><dt
         class="property-optional" title="Optional">
         <span>opts</span>
         <span class="property-indicator"></span>
@@ -578,10 +574,7 @@ const exampleActionGroup = new azure.monitoring.ActionGroup("exampleActionGroup"
     </dt>
     <dd>
       Bag of options to control resource&#39;s behavior.
-    </dd>
-  
-
-</dl>
+    </dd></dl>
 
 {{% /choosable %}}
 
@@ -596,9 +589,7 @@ The ActionGroup resource accepts the following [input]({{< relref "/docs/intro/c
 
 
 {{% choosable language csharp %}}
-<dl class="resources-properties">
-
-    <dt class="property-required"
+<dl class="resources-properties"><dt class="property-required"
             title="Required">
         <span id="resourcegroupname_csharp">
 <a href="#resourcegroupname_csharp" style="color: inherit; text-decoration: inherit;">Resource<wbr>Group<wbr>Name</a>
@@ -607,8 +598,7 @@ The ActionGroup resource accepts the following [input]({{< relref "/docs/intro/c
         <span class="property-type">string</span>
     </dt>
     <dd>{{% md %}}The name of the resource group in which to create the Action Group instance.
-{{% /md %}}</dd>
-    <dt class="property-required"
+{{% /md %}}</dd><dt class="property-required"
             title="Required">
         <span id="shortname_csharp">
 <a href="#shortname_csharp" style="color: inherit; text-decoration: inherit;">Short<wbr>Name</a>
@@ -617,8 +607,7 @@ The ActionGroup resource accepts the following [input]({{< relref "/docs/intro/c
         <span class="property-type">string</span>
     </dt>
     <dd>{{% md %}}The short name of the action group. This will be used in SMS messages.
-{{% /md %}}</dd>
-    <dt class="property-optional"
+{{% /md %}}</dd><dt class="property-optional"
             title="Optional">
         <span id="armrolereceivers_csharp">
 <a href="#armrolereceivers_csharp" style="color: inherit; text-decoration: inherit;">Arm<wbr>Role<wbr>Receivers</a>
@@ -627,8 +616,7 @@ The ActionGroup resource accepts the following [input]({{< relref "/docs/intro/c
         <span class="property-type"><a href="#actiongrouparmrolereceiver">List&lt;Action<wbr>Group<wbr>Arm<wbr>Role<wbr>Receiver<wbr>Args&gt;</a></span>
     </dt>
     <dd>{{% md %}}One or more `arm_role_receiver` blocks as defined below.
-{{% /md %}}</dd>
-    <dt class="property-optional"
+{{% /md %}}</dd><dt class="property-optional"
             title="Optional">
         <span id="automationrunbookreceivers_csharp">
 <a href="#automationrunbookreceivers_csharp" style="color: inherit; text-decoration: inherit;">Automation<wbr>Runbook<wbr>Receivers</a>
@@ -637,8 +625,7 @@ The ActionGroup resource accepts the following [input]({{< relref "/docs/intro/c
         <span class="property-type"><a href="#actiongroupautomationrunbookreceiver">List&lt;Action<wbr>Group<wbr>Automation<wbr>Runbook<wbr>Receiver<wbr>Args&gt;</a></span>
     </dt>
     <dd>{{% md %}}One or more `automation_runbook_receiver` blocks as defined below.
-{{% /md %}}</dd>
-    <dt class="property-optional"
+{{% /md %}}</dd><dt class="property-optional"
             title="Optional">
         <span id="azureapppushreceivers_csharp">
 <a href="#azureapppushreceivers_csharp" style="color: inherit; text-decoration: inherit;">Azure<wbr>App<wbr>Push<wbr>Receivers</a>
@@ -647,8 +634,7 @@ The ActionGroup resource accepts the following [input]({{< relref "/docs/intro/c
         <span class="property-type"><a href="#actiongroupazureapppushreceiver">List&lt;Action<wbr>Group<wbr>Azure<wbr>App<wbr>Push<wbr>Receiver<wbr>Args&gt;</a></span>
     </dt>
     <dd>{{% md %}}One or more `azure_app_push_receiver` blocks as defined below.
-{{% /md %}}</dd>
-    <dt class="property-optional"
+{{% /md %}}</dd><dt class="property-optional"
             title="Optional">
         <span id="azurefunctionreceivers_csharp">
 <a href="#azurefunctionreceivers_csharp" style="color: inherit; text-decoration: inherit;">Azure<wbr>Function<wbr>Receivers</a>
@@ -657,8 +643,7 @@ The ActionGroup resource accepts the following [input]({{< relref "/docs/intro/c
         <span class="property-type"><a href="#actiongroupazurefunctionreceiver">List&lt;Action<wbr>Group<wbr>Azure<wbr>Function<wbr>Receiver<wbr>Args&gt;</a></span>
     </dt>
     <dd>{{% md %}}One or more `azure_function_receiver` blocks as defined below.
-{{% /md %}}</dd>
-    <dt class="property-optional"
+{{% /md %}}</dd><dt class="property-optional"
             title="Optional">
         <span id="emailreceivers_csharp">
 <a href="#emailreceivers_csharp" style="color: inherit; text-decoration: inherit;">Email<wbr>Receivers</a>
@@ -667,8 +652,7 @@ The ActionGroup resource accepts the following [input]({{< relref "/docs/intro/c
         <span class="property-type"><a href="#actiongroupemailreceiver">List&lt;Action<wbr>Group<wbr>Email<wbr>Receiver<wbr>Args&gt;</a></span>
     </dt>
     <dd>{{% md %}}One or more `email_receiver` blocks as defined below.
-{{% /md %}}</dd>
-    <dt class="property-optional"
+{{% /md %}}</dd><dt class="property-optional"
             title="Optional">
         <span id="enabled_csharp">
 <a href="#enabled_csharp" style="color: inherit; text-decoration: inherit;">Enabled</a>
@@ -677,8 +661,7 @@ The ActionGroup resource accepts the following [input]({{< relref "/docs/intro/c
         <span class="property-type">bool</span>
     </dt>
     <dd>{{% md %}}Whether this action group is enabled. If an action group is not enabled, then none of its receivers will receive communications. Defaults to `true`.
-{{% /md %}}</dd>
-    <dt class="property-optional"
+{{% /md %}}</dd><dt class="property-optional"
             title="Optional">
         <span id="itsmreceivers_csharp">
 <a href="#itsmreceivers_csharp" style="color: inherit; text-decoration: inherit;">Itsm<wbr>Receivers</a>
@@ -687,8 +670,7 @@ The ActionGroup resource accepts the following [input]({{< relref "/docs/intro/c
         <span class="property-type"><a href="#actiongroupitsmreceiver">List&lt;Action<wbr>Group<wbr>Itsm<wbr>Receiver<wbr>Args&gt;</a></span>
     </dt>
     <dd>{{% md %}}One or more `itsm_receiver` blocks as defined below.
-{{% /md %}}</dd>
-    <dt class="property-optional"
+{{% /md %}}</dd><dt class="property-optional"
             title="Optional">
         <span id="logicappreceivers_csharp">
 <a href="#logicappreceivers_csharp" style="color: inherit; text-decoration: inherit;">Logic<wbr>App<wbr>Receivers</a>
@@ -697,8 +679,7 @@ The ActionGroup resource accepts the following [input]({{< relref "/docs/intro/c
         <span class="property-type"><a href="#actiongrouplogicappreceiver">List&lt;Action<wbr>Group<wbr>Logic<wbr>App<wbr>Receiver<wbr>Args&gt;</a></span>
     </dt>
     <dd>{{% md %}}One or more `logic_app_receiver` blocks as defined below.
-{{% /md %}}</dd>
-    <dt class="property-optional"
+{{% /md %}}</dd><dt class="property-optional"
             title="Optional">
         <span id="name_csharp">
 <a href="#name_csharp" style="color: inherit; text-decoration: inherit;">Name</a>
@@ -707,8 +688,7 @@ The ActionGroup resource accepts the following [input]({{< relref "/docs/intro/c
         <span class="property-type">string</span>
     </dt>
     <dd>{{% md %}}The name of the Action Group. Changing this forces a new resource to be created.
-{{% /md %}}</dd>
-    <dt class="property-optional"
+{{% /md %}}</dd><dt class="property-optional"
             title="Optional">
         <span id="smsreceivers_csharp">
 <a href="#smsreceivers_csharp" style="color: inherit; text-decoration: inherit;">Sms<wbr>Receivers</a>
@@ -717,8 +697,7 @@ The ActionGroup resource accepts the following [input]({{< relref "/docs/intro/c
         <span class="property-type"><a href="#actiongroupsmsreceiver">List&lt;Action<wbr>Group<wbr>Sms<wbr>Receiver<wbr>Args&gt;</a></span>
     </dt>
     <dd>{{% md %}}One or more `sms_receiver` blocks as defined below.
-{{% /md %}}</dd>
-    <dt class="property-optional"
+{{% /md %}}</dd><dt class="property-optional"
             title="Optional">
         <span id="tags_csharp">
 <a href="#tags_csharp" style="color: inherit; text-decoration: inherit;">Tags</a>
@@ -727,8 +706,7 @@ The ActionGroup resource accepts the following [input]({{< relref "/docs/intro/c
         <span class="property-type">Dictionary&lt;string, string&gt;</span>
     </dt>
     <dd>{{% md %}}A mapping of tags to assign to the resource.
-{{% /md %}}</dd>
-    <dt class="property-optional"
+{{% /md %}}</dd><dt class="property-optional"
             title="Optional">
         <span id="voicereceivers_csharp">
 <a href="#voicereceivers_csharp" style="color: inherit; text-decoration: inherit;">Voice<wbr>Receivers</a>
@@ -737,8 +715,7 @@ The ActionGroup resource accepts the following [input]({{< relref "/docs/intro/c
         <span class="property-type"><a href="#actiongroupvoicereceiver">List&lt;Action<wbr>Group<wbr>Voice<wbr>Receiver<wbr>Args&gt;</a></span>
     </dt>
     <dd>{{% md %}}One or more `voice_receiver` blocks as defined below.
-{{% /md %}}</dd>
-    <dt class="property-optional"
+{{% /md %}}</dd><dt class="property-optional"
             title="Optional">
         <span id="webhookreceivers_csharp">
 <a href="#webhookreceivers_csharp" style="color: inherit; text-decoration: inherit;">Webhook<wbr>Receivers</a>
@@ -747,14 +724,11 @@ The ActionGroup resource accepts the following [input]({{< relref "/docs/intro/c
         <span class="property-type"><a href="#actiongroupwebhookreceiver">List&lt;Action<wbr>Group<wbr>Webhook<wbr>Receiver<wbr>Args&gt;</a></span>
     </dt>
     <dd>{{% md %}}One or more `webhook_receiver` blocks as defined below.
-{{% /md %}}</dd>
-</dl>
+{{% /md %}}</dd></dl>
 {{% /choosable %}}
 
 {{% choosable language go %}}
-<dl class="resources-properties">
-
-    <dt class="property-required"
+<dl class="resources-properties"><dt class="property-required"
             title="Required">
         <span id="resourcegroupname_go">
 <a href="#resourcegroupname_go" style="color: inherit; text-decoration: inherit;">Resource<wbr>Group<wbr>Name</a>
@@ -763,8 +737,7 @@ The ActionGroup resource accepts the following [input]({{< relref "/docs/intro/c
         <span class="property-type">string</span>
     </dt>
     <dd>{{% md %}}The name of the resource group in which to create the Action Group instance.
-{{% /md %}}</dd>
-    <dt class="property-required"
+{{% /md %}}</dd><dt class="property-required"
             title="Required">
         <span id="shortname_go">
 <a href="#shortname_go" style="color: inherit; text-decoration: inherit;">Short<wbr>Name</a>
@@ -773,8 +746,7 @@ The ActionGroup resource accepts the following [input]({{< relref "/docs/intro/c
         <span class="property-type">string</span>
     </dt>
     <dd>{{% md %}}The short name of the action group. This will be used in SMS messages.
-{{% /md %}}</dd>
-    <dt class="property-optional"
+{{% /md %}}</dd><dt class="property-optional"
             title="Optional">
         <span id="armrolereceivers_go">
 <a href="#armrolereceivers_go" style="color: inherit; text-decoration: inherit;">Arm<wbr>Role<wbr>Receivers</a>
@@ -783,8 +755,7 @@ The ActionGroup resource accepts the following [input]({{< relref "/docs/intro/c
         <span class="property-type"><a href="#actiongrouparmrolereceiver">[]Action<wbr>Group<wbr>Arm<wbr>Role<wbr>Receiver</a></span>
     </dt>
     <dd>{{% md %}}One or more `arm_role_receiver` blocks as defined below.
-{{% /md %}}</dd>
-    <dt class="property-optional"
+{{% /md %}}</dd><dt class="property-optional"
             title="Optional">
         <span id="automationrunbookreceivers_go">
 <a href="#automationrunbookreceivers_go" style="color: inherit; text-decoration: inherit;">Automation<wbr>Runbook<wbr>Receivers</a>
@@ -793,8 +764,7 @@ The ActionGroup resource accepts the following [input]({{< relref "/docs/intro/c
         <span class="property-type"><a href="#actiongroupautomationrunbookreceiver">[]Action<wbr>Group<wbr>Automation<wbr>Runbook<wbr>Receiver</a></span>
     </dt>
     <dd>{{% md %}}One or more `automation_runbook_receiver` blocks as defined below.
-{{% /md %}}</dd>
-    <dt class="property-optional"
+{{% /md %}}</dd><dt class="property-optional"
             title="Optional">
         <span id="azureapppushreceivers_go">
 <a href="#azureapppushreceivers_go" style="color: inherit; text-decoration: inherit;">Azure<wbr>App<wbr>Push<wbr>Receivers</a>
@@ -803,8 +773,7 @@ The ActionGroup resource accepts the following [input]({{< relref "/docs/intro/c
         <span class="property-type"><a href="#actiongroupazureapppushreceiver">[]Action<wbr>Group<wbr>Azure<wbr>App<wbr>Push<wbr>Receiver</a></span>
     </dt>
     <dd>{{% md %}}One or more `azure_app_push_receiver` blocks as defined below.
-{{% /md %}}</dd>
-    <dt class="property-optional"
+{{% /md %}}</dd><dt class="property-optional"
             title="Optional">
         <span id="azurefunctionreceivers_go">
 <a href="#azurefunctionreceivers_go" style="color: inherit; text-decoration: inherit;">Azure<wbr>Function<wbr>Receivers</a>
@@ -813,8 +782,7 @@ The ActionGroup resource accepts the following [input]({{< relref "/docs/intro/c
         <span class="property-type"><a href="#actiongroupazurefunctionreceiver">[]Action<wbr>Group<wbr>Azure<wbr>Function<wbr>Receiver</a></span>
     </dt>
     <dd>{{% md %}}One or more `azure_function_receiver` blocks as defined below.
-{{% /md %}}</dd>
-    <dt class="property-optional"
+{{% /md %}}</dd><dt class="property-optional"
             title="Optional">
         <span id="emailreceivers_go">
 <a href="#emailreceivers_go" style="color: inherit; text-decoration: inherit;">Email<wbr>Receivers</a>
@@ -823,8 +791,7 @@ The ActionGroup resource accepts the following [input]({{< relref "/docs/intro/c
         <span class="property-type"><a href="#actiongroupemailreceiver">[]Action<wbr>Group<wbr>Email<wbr>Receiver</a></span>
     </dt>
     <dd>{{% md %}}One or more `email_receiver` blocks as defined below.
-{{% /md %}}</dd>
-    <dt class="property-optional"
+{{% /md %}}</dd><dt class="property-optional"
             title="Optional">
         <span id="enabled_go">
 <a href="#enabled_go" style="color: inherit; text-decoration: inherit;">Enabled</a>
@@ -833,8 +800,7 @@ The ActionGroup resource accepts the following [input]({{< relref "/docs/intro/c
         <span class="property-type">bool</span>
     </dt>
     <dd>{{% md %}}Whether this action group is enabled. If an action group is not enabled, then none of its receivers will receive communications. Defaults to `true`.
-{{% /md %}}</dd>
-    <dt class="property-optional"
+{{% /md %}}</dd><dt class="property-optional"
             title="Optional">
         <span id="itsmreceivers_go">
 <a href="#itsmreceivers_go" style="color: inherit; text-decoration: inherit;">Itsm<wbr>Receivers</a>
@@ -843,8 +809,7 @@ The ActionGroup resource accepts the following [input]({{< relref "/docs/intro/c
         <span class="property-type"><a href="#actiongroupitsmreceiver">[]Action<wbr>Group<wbr>Itsm<wbr>Receiver</a></span>
     </dt>
     <dd>{{% md %}}One or more `itsm_receiver` blocks as defined below.
-{{% /md %}}</dd>
-    <dt class="property-optional"
+{{% /md %}}</dd><dt class="property-optional"
             title="Optional">
         <span id="logicappreceivers_go">
 <a href="#logicappreceivers_go" style="color: inherit; text-decoration: inherit;">Logic<wbr>App<wbr>Receivers</a>
@@ -853,8 +818,7 @@ The ActionGroup resource accepts the following [input]({{< relref "/docs/intro/c
         <span class="property-type"><a href="#actiongrouplogicappreceiver">[]Action<wbr>Group<wbr>Logic<wbr>App<wbr>Receiver</a></span>
     </dt>
     <dd>{{% md %}}One or more `logic_app_receiver` blocks as defined below.
-{{% /md %}}</dd>
-    <dt class="property-optional"
+{{% /md %}}</dd><dt class="property-optional"
             title="Optional">
         <span id="name_go">
 <a href="#name_go" style="color: inherit; text-decoration: inherit;">Name</a>
@@ -863,8 +827,7 @@ The ActionGroup resource accepts the following [input]({{< relref "/docs/intro/c
         <span class="property-type">string</span>
     </dt>
     <dd>{{% md %}}The name of the Action Group. Changing this forces a new resource to be created.
-{{% /md %}}</dd>
-    <dt class="property-optional"
+{{% /md %}}</dd><dt class="property-optional"
             title="Optional">
         <span id="smsreceivers_go">
 <a href="#smsreceivers_go" style="color: inherit; text-decoration: inherit;">Sms<wbr>Receivers</a>
@@ -873,8 +836,7 @@ The ActionGroup resource accepts the following [input]({{< relref "/docs/intro/c
         <span class="property-type"><a href="#actiongroupsmsreceiver">[]Action<wbr>Group<wbr>Sms<wbr>Receiver</a></span>
     </dt>
     <dd>{{% md %}}One or more `sms_receiver` blocks as defined below.
-{{% /md %}}</dd>
-    <dt class="property-optional"
+{{% /md %}}</dd><dt class="property-optional"
             title="Optional">
         <span id="tags_go">
 <a href="#tags_go" style="color: inherit; text-decoration: inherit;">Tags</a>
@@ -883,8 +845,7 @@ The ActionGroup resource accepts the following [input]({{< relref "/docs/intro/c
         <span class="property-type">map[string]string</span>
     </dt>
     <dd>{{% md %}}A mapping of tags to assign to the resource.
-{{% /md %}}</dd>
-    <dt class="property-optional"
+{{% /md %}}</dd><dt class="property-optional"
             title="Optional">
         <span id="voicereceivers_go">
 <a href="#voicereceivers_go" style="color: inherit; text-decoration: inherit;">Voice<wbr>Receivers</a>
@@ -893,8 +854,7 @@ The ActionGroup resource accepts the following [input]({{< relref "/docs/intro/c
         <span class="property-type"><a href="#actiongroupvoicereceiver">[]Action<wbr>Group<wbr>Voice<wbr>Receiver</a></span>
     </dt>
     <dd>{{% md %}}One or more `voice_receiver` blocks as defined below.
-{{% /md %}}</dd>
-    <dt class="property-optional"
+{{% /md %}}</dd><dt class="property-optional"
             title="Optional">
         <span id="webhookreceivers_go">
 <a href="#webhookreceivers_go" style="color: inherit; text-decoration: inherit;">Webhook<wbr>Receivers</a>
@@ -903,14 +863,11 @@ The ActionGroup resource accepts the following [input]({{< relref "/docs/intro/c
         <span class="property-type"><a href="#actiongroupwebhookreceiver">[]Action<wbr>Group<wbr>Webhook<wbr>Receiver</a></span>
     </dt>
     <dd>{{% md %}}One or more `webhook_receiver` blocks as defined below.
-{{% /md %}}</dd>
-</dl>
+{{% /md %}}</dd></dl>
 {{% /choosable %}}
 
 {{% choosable language nodejs %}}
-<dl class="resources-properties">
-
-    <dt class="property-required"
+<dl class="resources-properties"><dt class="property-required"
             title="Required">
         <span id="resourcegroupname_nodejs">
 <a href="#resourcegroupname_nodejs" style="color: inherit; text-decoration: inherit;">resource<wbr>Group<wbr>Name</a>
@@ -919,8 +876,7 @@ The ActionGroup resource accepts the following [input]({{< relref "/docs/intro/c
         <span class="property-type">string</span>
     </dt>
     <dd>{{% md %}}The name of the resource group in which to create the Action Group instance.
-{{% /md %}}</dd>
-    <dt class="property-required"
+{{% /md %}}</dd><dt class="property-required"
             title="Required">
         <span id="shortname_nodejs">
 <a href="#shortname_nodejs" style="color: inherit; text-decoration: inherit;">short<wbr>Name</a>
@@ -929,8 +885,7 @@ The ActionGroup resource accepts the following [input]({{< relref "/docs/intro/c
         <span class="property-type">string</span>
     </dt>
     <dd>{{% md %}}The short name of the action group. This will be used in SMS messages.
-{{% /md %}}</dd>
-    <dt class="property-optional"
+{{% /md %}}</dd><dt class="property-optional"
             title="Optional">
         <span id="armrolereceivers_nodejs">
 <a href="#armrolereceivers_nodejs" style="color: inherit; text-decoration: inherit;">arm<wbr>Role<wbr>Receivers</a>
@@ -939,8 +894,7 @@ The ActionGroup resource accepts the following [input]({{< relref "/docs/intro/c
         <span class="property-type"><a href="#actiongrouparmrolereceiver">Action<wbr>Group<wbr>Arm<wbr>Role<wbr>Receiver[]</a></span>
     </dt>
     <dd>{{% md %}}One or more `arm_role_receiver` blocks as defined below.
-{{% /md %}}</dd>
-    <dt class="property-optional"
+{{% /md %}}</dd><dt class="property-optional"
             title="Optional">
         <span id="automationrunbookreceivers_nodejs">
 <a href="#automationrunbookreceivers_nodejs" style="color: inherit; text-decoration: inherit;">automation<wbr>Runbook<wbr>Receivers</a>
@@ -949,8 +903,7 @@ The ActionGroup resource accepts the following [input]({{< relref "/docs/intro/c
         <span class="property-type"><a href="#actiongroupautomationrunbookreceiver">Action<wbr>Group<wbr>Automation<wbr>Runbook<wbr>Receiver[]</a></span>
     </dt>
     <dd>{{% md %}}One or more `automation_runbook_receiver` blocks as defined below.
-{{% /md %}}</dd>
-    <dt class="property-optional"
+{{% /md %}}</dd><dt class="property-optional"
             title="Optional">
         <span id="azureapppushreceivers_nodejs">
 <a href="#azureapppushreceivers_nodejs" style="color: inherit; text-decoration: inherit;">azure<wbr>App<wbr>Push<wbr>Receivers</a>
@@ -959,8 +912,7 @@ The ActionGroup resource accepts the following [input]({{< relref "/docs/intro/c
         <span class="property-type"><a href="#actiongroupazureapppushreceiver">Action<wbr>Group<wbr>Azure<wbr>App<wbr>Push<wbr>Receiver[]</a></span>
     </dt>
     <dd>{{% md %}}One or more `azure_app_push_receiver` blocks as defined below.
-{{% /md %}}</dd>
-    <dt class="property-optional"
+{{% /md %}}</dd><dt class="property-optional"
             title="Optional">
         <span id="azurefunctionreceivers_nodejs">
 <a href="#azurefunctionreceivers_nodejs" style="color: inherit; text-decoration: inherit;">azure<wbr>Function<wbr>Receivers</a>
@@ -969,8 +921,7 @@ The ActionGroup resource accepts the following [input]({{< relref "/docs/intro/c
         <span class="property-type"><a href="#actiongroupazurefunctionreceiver">Action<wbr>Group<wbr>Azure<wbr>Function<wbr>Receiver[]</a></span>
     </dt>
     <dd>{{% md %}}One or more `azure_function_receiver` blocks as defined below.
-{{% /md %}}</dd>
-    <dt class="property-optional"
+{{% /md %}}</dd><dt class="property-optional"
             title="Optional">
         <span id="emailreceivers_nodejs">
 <a href="#emailreceivers_nodejs" style="color: inherit; text-decoration: inherit;">email<wbr>Receivers</a>
@@ -979,8 +930,7 @@ The ActionGroup resource accepts the following [input]({{< relref "/docs/intro/c
         <span class="property-type"><a href="#actiongroupemailreceiver">Action<wbr>Group<wbr>Email<wbr>Receiver[]</a></span>
     </dt>
     <dd>{{% md %}}One or more `email_receiver` blocks as defined below.
-{{% /md %}}</dd>
-    <dt class="property-optional"
+{{% /md %}}</dd><dt class="property-optional"
             title="Optional">
         <span id="enabled_nodejs">
 <a href="#enabled_nodejs" style="color: inherit; text-decoration: inherit;">enabled</a>
@@ -989,8 +939,7 @@ The ActionGroup resource accepts the following [input]({{< relref "/docs/intro/c
         <span class="property-type">boolean</span>
     </dt>
     <dd>{{% md %}}Whether this action group is enabled. If an action group is not enabled, then none of its receivers will receive communications. Defaults to `true`.
-{{% /md %}}</dd>
-    <dt class="property-optional"
+{{% /md %}}</dd><dt class="property-optional"
             title="Optional">
         <span id="itsmreceivers_nodejs">
 <a href="#itsmreceivers_nodejs" style="color: inherit; text-decoration: inherit;">itsm<wbr>Receivers</a>
@@ -999,8 +948,7 @@ The ActionGroup resource accepts the following [input]({{< relref "/docs/intro/c
         <span class="property-type"><a href="#actiongroupitsmreceiver">Action<wbr>Group<wbr>Itsm<wbr>Receiver[]</a></span>
     </dt>
     <dd>{{% md %}}One or more `itsm_receiver` blocks as defined below.
-{{% /md %}}</dd>
-    <dt class="property-optional"
+{{% /md %}}</dd><dt class="property-optional"
             title="Optional">
         <span id="logicappreceivers_nodejs">
 <a href="#logicappreceivers_nodejs" style="color: inherit; text-decoration: inherit;">logic<wbr>App<wbr>Receivers</a>
@@ -1009,8 +957,7 @@ The ActionGroup resource accepts the following [input]({{< relref "/docs/intro/c
         <span class="property-type"><a href="#actiongrouplogicappreceiver">Action<wbr>Group<wbr>Logic<wbr>App<wbr>Receiver[]</a></span>
     </dt>
     <dd>{{% md %}}One or more `logic_app_receiver` blocks as defined below.
-{{% /md %}}</dd>
-    <dt class="property-optional"
+{{% /md %}}</dd><dt class="property-optional"
             title="Optional">
         <span id="name_nodejs">
 <a href="#name_nodejs" style="color: inherit; text-decoration: inherit;">name</a>
@@ -1019,8 +966,7 @@ The ActionGroup resource accepts the following [input]({{< relref "/docs/intro/c
         <span class="property-type">string</span>
     </dt>
     <dd>{{% md %}}The name of the Action Group. Changing this forces a new resource to be created.
-{{% /md %}}</dd>
-    <dt class="property-optional"
+{{% /md %}}</dd><dt class="property-optional"
             title="Optional">
         <span id="smsreceivers_nodejs">
 <a href="#smsreceivers_nodejs" style="color: inherit; text-decoration: inherit;">sms<wbr>Receivers</a>
@@ -1029,8 +975,7 @@ The ActionGroup resource accepts the following [input]({{< relref "/docs/intro/c
         <span class="property-type"><a href="#actiongroupsmsreceiver">Action<wbr>Group<wbr>Sms<wbr>Receiver[]</a></span>
     </dt>
     <dd>{{% md %}}One or more `sms_receiver` blocks as defined below.
-{{% /md %}}</dd>
-    <dt class="property-optional"
+{{% /md %}}</dd><dt class="property-optional"
             title="Optional">
         <span id="tags_nodejs">
 <a href="#tags_nodejs" style="color: inherit; text-decoration: inherit;">tags</a>
@@ -1039,8 +984,7 @@ The ActionGroup resource accepts the following [input]({{< relref "/docs/intro/c
         <span class="property-type">{[key: string]: string}</span>
     </dt>
     <dd>{{% md %}}A mapping of tags to assign to the resource.
-{{% /md %}}</dd>
-    <dt class="property-optional"
+{{% /md %}}</dd><dt class="property-optional"
             title="Optional">
         <span id="voicereceivers_nodejs">
 <a href="#voicereceivers_nodejs" style="color: inherit; text-decoration: inherit;">voice<wbr>Receivers</a>
@@ -1049,8 +993,7 @@ The ActionGroup resource accepts the following [input]({{< relref "/docs/intro/c
         <span class="property-type"><a href="#actiongroupvoicereceiver">Action<wbr>Group<wbr>Voice<wbr>Receiver[]</a></span>
     </dt>
     <dd>{{% md %}}One or more `voice_receiver` blocks as defined below.
-{{% /md %}}</dd>
-    <dt class="property-optional"
+{{% /md %}}</dd><dt class="property-optional"
             title="Optional">
         <span id="webhookreceivers_nodejs">
 <a href="#webhookreceivers_nodejs" style="color: inherit; text-decoration: inherit;">webhook<wbr>Receivers</a>
@@ -1059,14 +1002,11 @@ The ActionGroup resource accepts the following [input]({{< relref "/docs/intro/c
         <span class="property-type"><a href="#actiongroupwebhookreceiver">Action<wbr>Group<wbr>Webhook<wbr>Receiver[]</a></span>
     </dt>
     <dd>{{% md %}}One or more `webhook_receiver` blocks as defined below.
-{{% /md %}}</dd>
-</dl>
+{{% /md %}}</dd></dl>
 {{% /choosable %}}
 
 {{% choosable language python %}}
-<dl class="resources-properties">
-
-    <dt class="property-required"
+<dl class="resources-properties"><dt class="property-required"
             title="Required">
         <span id="resource_group_name_python">
 <a href="#resource_group_name_python" style="color: inherit; text-decoration: inherit;">resource_<wbr>group_<wbr>name</a>
@@ -1075,8 +1015,7 @@ The ActionGroup resource accepts the following [input]({{< relref "/docs/intro/c
         <span class="property-type">str</span>
     </dt>
     <dd>{{% md %}}The name of the resource group in which to create the Action Group instance.
-{{% /md %}}</dd>
-    <dt class="property-required"
+{{% /md %}}</dd><dt class="property-required"
             title="Required">
         <span id="short_name_python">
 <a href="#short_name_python" style="color: inherit; text-decoration: inherit;">short_<wbr>name</a>
@@ -1085,8 +1024,7 @@ The ActionGroup resource accepts the following [input]({{< relref "/docs/intro/c
         <span class="property-type">str</span>
     </dt>
     <dd>{{% md %}}The short name of the action group. This will be used in SMS messages.
-{{% /md %}}</dd>
-    <dt class="property-optional"
+{{% /md %}}</dd><dt class="property-optional"
             title="Optional">
         <span id="arm_role_receivers_python">
 <a href="#arm_role_receivers_python" style="color: inherit; text-decoration: inherit;">arm_<wbr>role_<wbr>receivers</a>
@@ -1095,8 +1033,7 @@ The ActionGroup resource accepts the following [input]({{< relref "/docs/intro/c
         <span class="property-type"><a href="#actiongrouparmrolereceiver">Sequence[Action<wbr>Group<wbr>Arm<wbr>Role<wbr>Receiver<wbr>Args]</a></span>
     </dt>
     <dd>{{% md %}}One or more `arm_role_receiver` blocks as defined below.
-{{% /md %}}</dd>
-    <dt class="property-optional"
+{{% /md %}}</dd><dt class="property-optional"
             title="Optional">
         <span id="automation_runbook_receivers_python">
 <a href="#automation_runbook_receivers_python" style="color: inherit; text-decoration: inherit;">automation_<wbr>runbook_<wbr>receivers</a>
@@ -1105,8 +1042,7 @@ The ActionGroup resource accepts the following [input]({{< relref "/docs/intro/c
         <span class="property-type"><a href="#actiongroupautomationrunbookreceiver">Sequence[Action<wbr>Group<wbr>Automation<wbr>Runbook<wbr>Receiver<wbr>Args]</a></span>
     </dt>
     <dd>{{% md %}}One or more `automation_runbook_receiver` blocks as defined below.
-{{% /md %}}</dd>
-    <dt class="property-optional"
+{{% /md %}}</dd><dt class="property-optional"
             title="Optional">
         <span id="azure_app_push_receivers_python">
 <a href="#azure_app_push_receivers_python" style="color: inherit; text-decoration: inherit;">azure_<wbr>app_<wbr>push_<wbr>receivers</a>
@@ -1115,8 +1051,7 @@ The ActionGroup resource accepts the following [input]({{< relref "/docs/intro/c
         <span class="property-type"><a href="#actiongroupazureapppushreceiver">Sequence[Action<wbr>Group<wbr>Azure<wbr>App<wbr>Push<wbr>Receiver<wbr>Args]</a></span>
     </dt>
     <dd>{{% md %}}One or more `azure_app_push_receiver` blocks as defined below.
-{{% /md %}}</dd>
-    <dt class="property-optional"
+{{% /md %}}</dd><dt class="property-optional"
             title="Optional">
         <span id="azure_function_receivers_python">
 <a href="#azure_function_receivers_python" style="color: inherit; text-decoration: inherit;">azure_<wbr>function_<wbr>receivers</a>
@@ -1125,8 +1060,7 @@ The ActionGroup resource accepts the following [input]({{< relref "/docs/intro/c
         <span class="property-type"><a href="#actiongroupazurefunctionreceiver">Sequence[Action<wbr>Group<wbr>Azure<wbr>Function<wbr>Receiver<wbr>Args]</a></span>
     </dt>
     <dd>{{% md %}}One or more `azure_function_receiver` blocks as defined below.
-{{% /md %}}</dd>
-    <dt class="property-optional"
+{{% /md %}}</dd><dt class="property-optional"
             title="Optional">
         <span id="email_receivers_python">
 <a href="#email_receivers_python" style="color: inherit; text-decoration: inherit;">email_<wbr>receivers</a>
@@ -1135,8 +1069,7 @@ The ActionGroup resource accepts the following [input]({{< relref "/docs/intro/c
         <span class="property-type"><a href="#actiongroupemailreceiver">Sequence[Action<wbr>Group<wbr>Email<wbr>Receiver<wbr>Args]</a></span>
     </dt>
     <dd>{{% md %}}One or more `email_receiver` blocks as defined below.
-{{% /md %}}</dd>
-    <dt class="property-optional"
+{{% /md %}}</dd><dt class="property-optional"
             title="Optional">
         <span id="enabled_python">
 <a href="#enabled_python" style="color: inherit; text-decoration: inherit;">enabled</a>
@@ -1145,8 +1078,7 @@ The ActionGroup resource accepts the following [input]({{< relref "/docs/intro/c
         <span class="property-type">bool</span>
     </dt>
     <dd>{{% md %}}Whether this action group is enabled. If an action group is not enabled, then none of its receivers will receive communications. Defaults to `true`.
-{{% /md %}}</dd>
-    <dt class="property-optional"
+{{% /md %}}</dd><dt class="property-optional"
             title="Optional">
         <span id="itsm_receivers_python">
 <a href="#itsm_receivers_python" style="color: inherit; text-decoration: inherit;">itsm_<wbr>receivers</a>
@@ -1155,8 +1087,7 @@ The ActionGroup resource accepts the following [input]({{< relref "/docs/intro/c
         <span class="property-type"><a href="#actiongroupitsmreceiver">Sequence[Action<wbr>Group<wbr>Itsm<wbr>Receiver<wbr>Args]</a></span>
     </dt>
     <dd>{{% md %}}One or more `itsm_receiver` blocks as defined below.
-{{% /md %}}</dd>
-    <dt class="property-optional"
+{{% /md %}}</dd><dt class="property-optional"
             title="Optional">
         <span id="logic_app_receivers_python">
 <a href="#logic_app_receivers_python" style="color: inherit; text-decoration: inherit;">logic_<wbr>app_<wbr>receivers</a>
@@ -1165,8 +1096,7 @@ The ActionGroup resource accepts the following [input]({{< relref "/docs/intro/c
         <span class="property-type"><a href="#actiongrouplogicappreceiver">Sequence[Action<wbr>Group<wbr>Logic<wbr>App<wbr>Receiver<wbr>Args]</a></span>
     </dt>
     <dd>{{% md %}}One or more `logic_app_receiver` blocks as defined below.
-{{% /md %}}</dd>
-    <dt class="property-optional"
+{{% /md %}}</dd><dt class="property-optional"
             title="Optional">
         <span id="name_python">
 <a href="#name_python" style="color: inherit; text-decoration: inherit;">name</a>
@@ -1175,8 +1105,7 @@ The ActionGroup resource accepts the following [input]({{< relref "/docs/intro/c
         <span class="property-type">str</span>
     </dt>
     <dd>{{% md %}}The name of the Action Group. Changing this forces a new resource to be created.
-{{% /md %}}</dd>
-    <dt class="property-optional"
+{{% /md %}}</dd><dt class="property-optional"
             title="Optional">
         <span id="sms_receivers_python">
 <a href="#sms_receivers_python" style="color: inherit; text-decoration: inherit;">sms_<wbr>receivers</a>
@@ -1185,8 +1114,7 @@ The ActionGroup resource accepts the following [input]({{< relref "/docs/intro/c
         <span class="property-type"><a href="#actiongroupsmsreceiver">Sequence[Action<wbr>Group<wbr>Sms<wbr>Receiver<wbr>Args]</a></span>
     </dt>
     <dd>{{% md %}}One or more `sms_receiver` blocks as defined below.
-{{% /md %}}</dd>
-    <dt class="property-optional"
+{{% /md %}}</dd><dt class="property-optional"
             title="Optional">
         <span id="tags_python">
 <a href="#tags_python" style="color: inherit; text-decoration: inherit;">tags</a>
@@ -1195,8 +1123,7 @@ The ActionGroup resource accepts the following [input]({{< relref "/docs/intro/c
         <span class="property-type">Mapping[str, str]</span>
     </dt>
     <dd>{{% md %}}A mapping of tags to assign to the resource.
-{{% /md %}}</dd>
-    <dt class="property-optional"
+{{% /md %}}</dd><dt class="property-optional"
             title="Optional">
         <span id="voice_receivers_python">
 <a href="#voice_receivers_python" style="color: inherit; text-decoration: inherit;">voice_<wbr>receivers</a>
@@ -1205,8 +1132,7 @@ The ActionGroup resource accepts the following [input]({{< relref "/docs/intro/c
         <span class="property-type"><a href="#actiongroupvoicereceiver">Sequence[Action<wbr>Group<wbr>Voice<wbr>Receiver<wbr>Args]</a></span>
     </dt>
     <dd>{{% md %}}One or more `voice_receiver` blocks as defined below.
-{{% /md %}}</dd>
-    <dt class="property-optional"
+{{% /md %}}</dd><dt class="property-optional"
             title="Optional">
         <span id="webhook_receivers_python">
 <a href="#webhook_receivers_python" style="color: inherit; text-decoration: inherit;">webhook_<wbr>receivers</a>
@@ -1215,8 +1141,7 @@ The ActionGroup resource accepts the following [input]({{< relref "/docs/intro/c
         <span class="property-type"><a href="#actiongroupwebhookreceiver">Sequence[Action<wbr>Group<wbr>Webhook<wbr>Receiver<wbr>Args]</a></span>
     </dt>
     <dd>{{% md %}}One or more `webhook_receiver` blocks as defined below.
-{{% /md %}}</dd>
-</dl>
+{{% /md %}}</dd></dl>
 {{% /choosable %}}
 
 
@@ -1227,9 +1152,7 @@ All [input](#inputs) properties are implicitly available as output properties. A
 
 
 {{% choosable language csharp %}}
-<dl class="resources-properties">
-
-    <dt class="property-"
+<dl class="resources-properties"><dt class="property-"
             title="">
         <span id="id_csharp">
 <a href="#id_csharp" style="color: inherit; text-decoration: inherit;">Id</a>
@@ -1237,14 +1160,11 @@ All [input](#inputs) properties are implicitly available as output properties. A
         <span class="property-indicator"></span>
         <span class="property-type">string</span>
     </dt>
-    <dd>{{% md %}}The provider-assigned unique ID for this managed resource.{{% /md %}}</dd>
-</dl>
+    <dd>{{% md %}}The provider-assigned unique ID for this managed resource.{{% /md %}}</dd></dl>
 {{% /choosable %}}
 
 {{% choosable language go %}}
-<dl class="resources-properties">
-
-    <dt class="property-"
+<dl class="resources-properties"><dt class="property-"
             title="">
         <span id="id_go">
 <a href="#id_go" style="color: inherit; text-decoration: inherit;">Id</a>
@@ -1252,14 +1172,11 @@ All [input](#inputs) properties are implicitly available as output properties. A
         <span class="property-indicator"></span>
         <span class="property-type">string</span>
     </dt>
-    <dd>{{% md %}}The provider-assigned unique ID for this managed resource.{{% /md %}}</dd>
-</dl>
+    <dd>{{% md %}}The provider-assigned unique ID for this managed resource.{{% /md %}}</dd></dl>
 {{% /choosable %}}
 
 {{% choosable language nodejs %}}
-<dl class="resources-properties">
-
-    <dt class="property-"
+<dl class="resources-properties"><dt class="property-"
             title="">
         <span id="id_nodejs">
 <a href="#id_nodejs" style="color: inherit; text-decoration: inherit;">id</a>
@@ -1267,14 +1184,11 @@ All [input](#inputs) properties are implicitly available as output properties. A
         <span class="property-indicator"></span>
         <span class="property-type">string</span>
     </dt>
-    <dd>{{% md %}}The provider-assigned unique ID for this managed resource.{{% /md %}}</dd>
-</dl>
+    <dd>{{% md %}}The provider-assigned unique ID for this managed resource.{{% /md %}}</dd></dl>
 {{% /choosable %}}
 
 {{% choosable language python %}}
-<dl class="resources-properties">
-
-    <dt class="property-"
+<dl class="resources-properties"><dt class="property-"
             title="">
         <span id="id_python">
 <a href="#id_python" style="color: inherit; text-decoration: inherit;">id</a>
@@ -1282,8 +1196,7 @@ All [input](#inputs) properties are implicitly available as output properties. A
         <span class="property-indicator"></span>
         <span class="property-type">str</span>
     </dt>
-    <dd>{{% md %}}The provider-assigned unique ID for this managed resource.{{% /md %}}</dd>
-</dl>
+    <dd>{{% md %}}The provider-assigned unique ID for this managed resource.{{% /md %}}</dd></dl>
 {{% /choosable %}}
 
 
@@ -1410,9 +1323,7 @@ The following state arguments are supported:
 
 
 {{% choosable language csharp %}}
-<dl class="resources-properties">
-
-    <dt class="property-optional"
+<dl class="resources-properties"><dt class="property-optional"
             title="Optional">
         <span id="state_armrolereceivers_csharp">
 <a href="#state_armrolereceivers_csharp" style="color: inherit; text-decoration: inherit;">Arm<wbr>Role<wbr>Receivers</a>
@@ -1421,8 +1332,7 @@ The following state arguments are supported:
         <span class="property-type"><a href="#actiongrouparmrolereceiver">List&lt;Action<wbr>Group<wbr>Arm<wbr>Role<wbr>Receiver<wbr>Args&gt;</a></span>
     </dt>
     <dd>{{% md %}}One or more `arm_role_receiver` blocks as defined below.
-{{% /md %}}</dd>
-    <dt class="property-optional"
+{{% /md %}}</dd><dt class="property-optional"
             title="Optional">
         <span id="state_automationrunbookreceivers_csharp">
 <a href="#state_automationrunbookreceivers_csharp" style="color: inherit; text-decoration: inherit;">Automation<wbr>Runbook<wbr>Receivers</a>
@@ -1431,8 +1341,7 @@ The following state arguments are supported:
         <span class="property-type"><a href="#actiongroupautomationrunbookreceiver">List&lt;Action<wbr>Group<wbr>Automation<wbr>Runbook<wbr>Receiver<wbr>Args&gt;</a></span>
     </dt>
     <dd>{{% md %}}One or more `automation_runbook_receiver` blocks as defined below.
-{{% /md %}}</dd>
-    <dt class="property-optional"
+{{% /md %}}</dd><dt class="property-optional"
             title="Optional">
         <span id="state_azureapppushreceivers_csharp">
 <a href="#state_azureapppushreceivers_csharp" style="color: inherit; text-decoration: inherit;">Azure<wbr>App<wbr>Push<wbr>Receivers</a>
@@ -1441,8 +1350,7 @@ The following state arguments are supported:
         <span class="property-type"><a href="#actiongroupazureapppushreceiver">List&lt;Action<wbr>Group<wbr>Azure<wbr>App<wbr>Push<wbr>Receiver<wbr>Args&gt;</a></span>
     </dt>
     <dd>{{% md %}}One or more `azure_app_push_receiver` blocks as defined below.
-{{% /md %}}</dd>
-    <dt class="property-optional"
+{{% /md %}}</dd><dt class="property-optional"
             title="Optional">
         <span id="state_azurefunctionreceivers_csharp">
 <a href="#state_azurefunctionreceivers_csharp" style="color: inherit; text-decoration: inherit;">Azure<wbr>Function<wbr>Receivers</a>
@@ -1451,8 +1359,7 @@ The following state arguments are supported:
         <span class="property-type"><a href="#actiongroupazurefunctionreceiver">List&lt;Action<wbr>Group<wbr>Azure<wbr>Function<wbr>Receiver<wbr>Args&gt;</a></span>
     </dt>
     <dd>{{% md %}}One or more `azure_function_receiver` blocks as defined below.
-{{% /md %}}</dd>
-    <dt class="property-optional"
+{{% /md %}}</dd><dt class="property-optional"
             title="Optional">
         <span id="state_emailreceivers_csharp">
 <a href="#state_emailreceivers_csharp" style="color: inherit; text-decoration: inherit;">Email<wbr>Receivers</a>
@@ -1461,8 +1368,7 @@ The following state arguments are supported:
         <span class="property-type"><a href="#actiongroupemailreceiver">List&lt;Action<wbr>Group<wbr>Email<wbr>Receiver<wbr>Args&gt;</a></span>
     </dt>
     <dd>{{% md %}}One or more `email_receiver` blocks as defined below.
-{{% /md %}}</dd>
-    <dt class="property-optional"
+{{% /md %}}</dd><dt class="property-optional"
             title="Optional">
         <span id="state_enabled_csharp">
 <a href="#state_enabled_csharp" style="color: inherit; text-decoration: inherit;">Enabled</a>
@@ -1471,8 +1377,7 @@ The following state arguments are supported:
         <span class="property-type">bool</span>
     </dt>
     <dd>{{% md %}}Whether this action group is enabled. If an action group is not enabled, then none of its receivers will receive communications. Defaults to `true`.
-{{% /md %}}</dd>
-    <dt class="property-optional"
+{{% /md %}}</dd><dt class="property-optional"
             title="Optional">
         <span id="state_itsmreceivers_csharp">
 <a href="#state_itsmreceivers_csharp" style="color: inherit; text-decoration: inherit;">Itsm<wbr>Receivers</a>
@@ -1481,8 +1386,7 @@ The following state arguments are supported:
         <span class="property-type"><a href="#actiongroupitsmreceiver">List&lt;Action<wbr>Group<wbr>Itsm<wbr>Receiver<wbr>Args&gt;</a></span>
     </dt>
     <dd>{{% md %}}One or more `itsm_receiver` blocks as defined below.
-{{% /md %}}</dd>
-    <dt class="property-optional"
+{{% /md %}}</dd><dt class="property-optional"
             title="Optional">
         <span id="state_logicappreceivers_csharp">
 <a href="#state_logicappreceivers_csharp" style="color: inherit; text-decoration: inherit;">Logic<wbr>App<wbr>Receivers</a>
@@ -1491,8 +1395,7 @@ The following state arguments are supported:
         <span class="property-type"><a href="#actiongrouplogicappreceiver">List&lt;Action<wbr>Group<wbr>Logic<wbr>App<wbr>Receiver<wbr>Args&gt;</a></span>
     </dt>
     <dd>{{% md %}}One or more `logic_app_receiver` blocks as defined below.
-{{% /md %}}</dd>
-    <dt class="property-optional"
+{{% /md %}}</dd><dt class="property-optional"
             title="Optional">
         <span id="state_name_csharp">
 <a href="#state_name_csharp" style="color: inherit; text-decoration: inherit;">Name</a>
@@ -1501,8 +1404,7 @@ The following state arguments are supported:
         <span class="property-type">string</span>
     </dt>
     <dd>{{% md %}}The name of the Action Group. Changing this forces a new resource to be created.
-{{% /md %}}</dd>
-    <dt class="property-optional"
+{{% /md %}}</dd><dt class="property-optional"
             title="Optional">
         <span id="state_resourcegroupname_csharp">
 <a href="#state_resourcegroupname_csharp" style="color: inherit; text-decoration: inherit;">Resource<wbr>Group<wbr>Name</a>
@@ -1511,8 +1413,7 @@ The following state arguments are supported:
         <span class="property-type">string</span>
     </dt>
     <dd>{{% md %}}The name of the resource group in which to create the Action Group instance.
-{{% /md %}}</dd>
-    <dt class="property-optional"
+{{% /md %}}</dd><dt class="property-optional"
             title="Optional">
         <span id="state_shortname_csharp">
 <a href="#state_shortname_csharp" style="color: inherit; text-decoration: inherit;">Short<wbr>Name</a>
@@ -1521,8 +1422,7 @@ The following state arguments are supported:
         <span class="property-type">string</span>
     </dt>
     <dd>{{% md %}}The short name of the action group. This will be used in SMS messages.
-{{% /md %}}</dd>
-    <dt class="property-optional"
+{{% /md %}}</dd><dt class="property-optional"
             title="Optional">
         <span id="state_smsreceivers_csharp">
 <a href="#state_smsreceivers_csharp" style="color: inherit; text-decoration: inherit;">Sms<wbr>Receivers</a>
@@ -1531,8 +1431,7 @@ The following state arguments are supported:
         <span class="property-type"><a href="#actiongroupsmsreceiver">List&lt;Action<wbr>Group<wbr>Sms<wbr>Receiver<wbr>Args&gt;</a></span>
     </dt>
     <dd>{{% md %}}One or more `sms_receiver` blocks as defined below.
-{{% /md %}}</dd>
-    <dt class="property-optional"
+{{% /md %}}</dd><dt class="property-optional"
             title="Optional">
         <span id="state_tags_csharp">
 <a href="#state_tags_csharp" style="color: inherit; text-decoration: inherit;">Tags</a>
@@ -1541,8 +1440,7 @@ The following state arguments are supported:
         <span class="property-type">Dictionary&lt;string, string&gt;</span>
     </dt>
     <dd>{{% md %}}A mapping of tags to assign to the resource.
-{{% /md %}}</dd>
-    <dt class="property-optional"
+{{% /md %}}</dd><dt class="property-optional"
             title="Optional">
         <span id="state_voicereceivers_csharp">
 <a href="#state_voicereceivers_csharp" style="color: inherit; text-decoration: inherit;">Voice<wbr>Receivers</a>
@@ -1551,8 +1449,7 @@ The following state arguments are supported:
         <span class="property-type"><a href="#actiongroupvoicereceiver">List&lt;Action<wbr>Group<wbr>Voice<wbr>Receiver<wbr>Args&gt;</a></span>
     </dt>
     <dd>{{% md %}}One or more `voice_receiver` blocks as defined below.
-{{% /md %}}</dd>
-    <dt class="property-optional"
+{{% /md %}}</dd><dt class="property-optional"
             title="Optional">
         <span id="state_webhookreceivers_csharp">
 <a href="#state_webhookreceivers_csharp" style="color: inherit; text-decoration: inherit;">Webhook<wbr>Receivers</a>
@@ -1561,14 +1458,11 @@ The following state arguments are supported:
         <span class="property-type"><a href="#actiongroupwebhookreceiver">List&lt;Action<wbr>Group<wbr>Webhook<wbr>Receiver<wbr>Args&gt;</a></span>
     </dt>
     <dd>{{% md %}}One or more `webhook_receiver` blocks as defined below.
-{{% /md %}}</dd>
-</dl>
+{{% /md %}}</dd></dl>
 {{% /choosable %}}
 
 {{% choosable language go %}}
-<dl class="resources-properties">
-
-    <dt class="property-optional"
+<dl class="resources-properties"><dt class="property-optional"
             title="Optional">
         <span id="state_armrolereceivers_go">
 <a href="#state_armrolereceivers_go" style="color: inherit; text-decoration: inherit;">Arm<wbr>Role<wbr>Receivers</a>
@@ -1577,8 +1471,7 @@ The following state arguments are supported:
         <span class="property-type"><a href="#actiongrouparmrolereceiver">[]Action<wbr>Group<wbr>Arm<wbr>Role<wbr>Receiver</a></span>
     </dt>
     <dd>{{% md %}}One or more `arm_role_receiver` blocks as defined below.
-{{% /md %}}</dd>
-    <dt class="property-optional"
+{{% /md %}}</dd><dt class="property-optional"
             title="Optional">
         <span id="state_automationrunbookreceivers_go">
 <a href="#state_automationrunbookreceivers_go" style="color: inherit; text-decoration: inherit;">Automation<wbr>Runbook<wbr>Receivers</a>
@@ -1587,8 +1480,7 @@ The following state arguments are supported:
         <span class="property-type"><a href="#actiongroupautomationrunbookreceiver">[]Action<wbr>Group<wbr>Automation<wbr>Runbook<wbr>Receiver</a></span>
     </dt>
     <dd>{{% md %}}One or more `automation_runbook_receiver` blocks as defined below.
-{{% /md %}}</dd>
-    <dt class="property-optional"
+{{% /md %}}</dd><dt class="property-optional"
             title="Optional">
         <span id="state_azureapppushreceivers_go">
 <a href="#state_azureapppushreceivers_go" style="color: inherit; text-decoration: inherit;">Azure<wbr>App<wbr>Push<wbr>Receivers</a>
@@ -1597,8 +1489,7 @@ The following state arguments are supported:
         <span class="property-type"><a href="#actiongroupazureapppushreceiver">[]Action<wbr>Group<wbr>Azure<wbr>App<wbr>Push<wbr>Receiver</a></span>
     </dt>
     <dd>{{% md %}}One or more `azure_app_push_receiver` blocks as defined below.
-{{% /md %}}</dd>
-    <dt class="property-optional"
+{{% /md %}}</dd><dt class="property-optional"
             title="Optional">
         <span id="state_azurefunctionreceivers_go">
 <a href="#state_azurefunctionreceivers_go" style="color: inherit; text-decoration: inherit;">Azure<wbr>Function<wbr>Receivers</a>
@@ -1607,8 +1498,7 @@ The following state arguments are supported:
         <span class="property-type"><a href="#actiongroupazurefunctionreceiver">[]Action<wbr>Group<wbr>Azure<wbr>Function<wbr>Receiver</a></span>
     </dt>
     <dd>{{% md %}}One or more `azure_function_receiver` blocks as defined below.
-{{% /md %}}</dd>
-    <dt class="property-optional"
+{{% /md %}}</dd><dt class="property-optional"
             title="Optional">
         <span id="state_emailreceivers_go">
 <a href="#state_emailreceivers_go" style="color: inherit; text-decoration: inherit;">Email<wbr>Receivers</a>
@@ -1617,8 +1507,7 @@ The following state arguments are supported:
         <span class="property-type"><a href="#actiongroupemailreceiver">[]Action<wbr>Group<wbr>Email<wbr>Receiver</a></span>
     </dt>
     <dd>{{% md %}}One or more `email_receiver` blocks as defined below.
-{{% /md %}}</dd>
-    <dt class="property-optional"
+{{% /md %}}</dd><dt class="property-optional"
             title="Optional">
         <span id="state_enabled_go">
 <a href="#state_enabled_go" style="color: inherit; text-decoration: inherit;">Enabled</a>
@@ -1627,8 +1516,7 @@ The following state arguments are supported:
         <span class="property-type">bool</span>
     </dt>
     <dd>{{% md %}}Whether this action group is enabled. If an action group is not enabled, then none of its receivers will receive communications. Defaults to `true`.
-{{% /md %}}</dd>
-    <dt class="property-optional"
+{{% /md %}}</dd><dt class="property-optional"
             title="Optional">
         <span id="state_itsmreceivers_go">
 <a href="#state_itsmreceivers_go" style="color: inherit; text-decoration: inherit;">Itsm<wbr>Receivers</a>
@@ -1637,8 +1525,7 @@ The following state arguments are supported:
         <span class="property-type"><a href="#actiongroupitsmreceiver">[]Action<wbr>Group<wbr>Itsm<wbr>Receiver</a></span>
     </dt>
     <dd>{{% md %}}One or more `itsm_receiver` blocks as defined below.
-{{% /md %}}</dd>
-    <dt class="property-optional"
+{{% /md %}}</dd><dt class="property-optional"
             title="Optional">
         <span id="state_logicappreceivers_go">
 <a href="#state_logicappreceivers_go" style="color: inherit; text-decoration: inherit;">Logic<wbr>App<wbr>Receivers</a>
@@ -1647,8 +1534,7 @@ The following state arguments are supported:
         <span class="property-type"><a href="#actiongrouplogicappreceiver">[]Action<wbr>Group<wbr>Logic<wbr>App<wbr>Receiver</a></span>
     </dt>
     <dd>{{% md %}}One or more `logic_app_receiver` blocks as defined below.
-{{% /md %}}</dd>
-    <dt class="property-optional"
+{{% /md %}}</dd><dt class="property-optional"
             title="Optional">
         <span id="state_name_go">
 <a href="#state_name_go" style="color: inherit; text-decoration: inherit;">Name</a>
@@ -1657,8 +1543,7 @@ The following state arguments are supported:
         <span class="property-type">string</span>
     </dt>
     <dd>{{% md %}}The name of the Action Group. Changing this forces a new resource to be created.
-{{% /md %}}</dd>
-    <dt class="property-optional"
+{{% /md %}}</dd><dt class="property-optional"
             title="Optional">
         <span id="state_resourcegroupname_go">
 <a href="#state_resourcegroupname_go" style="color: inherit; text-decoration: inherit;">Resource<wbr>Group<wbr>Name</a>
@@ -1667,8 +1552,7 @@ The following state arguments are supported:
         <span class="property-type">string</span>
     </dt>
     <dd>{{% md %}}The name of the resource group in which to create the Action Group instance.
-{{% /md %}}</dd>
-    <dt class="property-optional"
+{{% /md %}}</dd><dt class="property-optional"
             title="Optional">
         <span id="state_shortname_go">
 <a href="#state_shortname_go" style="color: inherit; text-decoration: inherit;">Short<wbr>Name</a>
@@ -1677,8 +1561,7 @@ The following state arguments are supported:
         <span class="property-type">string</span>
     </dt>
     <dd>{{% md %}}The short name of the action group. This will be used in SMS messages.
-{{% /md %}}</dd>
-    <dt class="property-optional"
+{{% /md %}}</dd><dt class="property-optional"
             title="Optional">
         <span id="state_smsreceivers_go">
 <a href="#state_smsreceivers_go" style="color: inherit; text-decoration: inherit;">Sms<wbr>Receivers</a>
@@ -1687,8 +1570,7 @@ The following state arguments are supported:
         <span class="property-type"><a href="#actiongroupsmsreceiver">[]Action<wbr>Group<wbr>Sms<wbr>Receiver</a></span>
     </dt>
     <dd>{{% md %}}One or more `sms_receiver` blocks as defined below.
-{{% /md %}}</dd>
-    <dt class="property-optional"
+{{% /md %}}</dd><dt class="property-optional"
             title="Optional">
         <span id="state_tags_go">
 <a href="#state_tags_go" style="color: inherit; text-decoration: inherit;">Tags</a>
@@ -1697,8 +1579,7 @@ The following state arguments are supported:
         <span class="property-type">map[string]string</span>
     </dt>
     <dd>{{% md %}}A mapping of tags to assign to the resource.
-{{% /md %}}</dd>
-    <dt class="property-optional"
+{{% /md %}}</dd><dt class="property-optional"
             title="Optional">
         <span id="state_voicereceivers_go">
 <a href="#state_voicereceivers_go" style="color: inherit; text-decoration: inherit;">Voice<wbr>Receivers</a>
@@ -1707,8 +1588,7 @@ The following state arguments are supported:
         <span class="property-type"><a href="#actiongroupvoicereceiver">[]Action<wbr>Group<wbr>Voice<wbr>Receiver</a></span>
     </dt>
     <dd>{{% md %}}One or more `voice_receiver` blocks as defined below.
-{{% /md %}}</dd>
-    <dt class="property-optional"
+{{% /md %}}</dd><dt class="property-optional"
             title="Optional">
         <span id="state_webhookreceivers_go">
 <a href="#state_webhookreceivers_go" style="color: inherit; text-decoration: inherit;">Webhook<wbr>Receivers</a>
@@ -1717,14 +1597,11 @@ The following state arguments are supported:
         <span class="property-type"><a href="#actiongroupwebhookreceiver">[]Action<wbr>Group<wbr>Webhook<wbr>Receiver</a></span>
     </dt>
     <dd>{{% md %}}One or more `webhook_receiver` blocks as defined below.
-{{% /md %}}</dd>
-</dl>
+{{% /md %}}</dd></dl>
 {{% /choosable %}}
 
 {{% choosable language nodejs %}}
-<dl class="resources-properties">
-
-    <dt class="property-optional"
+<dl class="resources-properties"><dt class="property-optional"
             title="Optional">
         <span id="state_armrolereceivers_nodejs">
 <a href="#state_armrolereceivers_nodejs" style="color: inherit; text-decoration: inherit;">arm<wbr>Role<wbr>Receivers</a>
@@ -1733,8 +1610,7 @@ The following state arguments are supported:
         <span class="property-type"><a href="#actiongrouparmrolereceiver">Action<wbr>Group<wbr>Arm<wbr>Role<wbr>Receiver[]</a></span>
     </dt>
     <dd>{{% md %}}One or more `arm_role_receiver` blocks as defined below.
-{{% /md %}}</dd>
-    <dt class="property-optional"
+{{% /md %}}</dd><dt class="property-optional"
             title="Optional">
         <span id="state_automationrunbookreceivers_nodejs">
 <a href="#state_automationrunbookreceivers_nodejs" style="color: inherit; text-decoration: inherit;">automation<wbr>Runbook<wbr>Receivers</a>
@@ -1743,8 +1619,7 @@ The following state arguments are supported:
         <span class="property-type"><a href="#actiongroupautomationrunbookreceiver">Action<wbr>Group<wbr>Automation<wbr>Runbook<wbr>Receiver[]</a></span>
     </dt>
     <dd>{{% md %}}One or more `automation_runbook_receiver` blocks as defined below.
-{{% /md %}}</dd>
-    <dt class="property-optional"
+{{% /md %}}</dd><dt class="property-optional"
             title="Optional">
         <span id="state_azureapppushreceivers_nodejs">
 <a href="#state_azureapppushreceivers_nodejs" style="color: inherit; text-decoration: inherit;">azure<wbr>App<wbr>Push<wbr>Receivers</a>
@@ -1753,8 +1628,7 @@ The following state arguments are supported:
         <span class="property-type"><a href="#actiongroupazureapppushreceiver">Action<wbr>Group<wbr>Azure<wbr>App<wbr>Push<wbr>Receiver[]</a></span>
     </dt>
     <dd>{{% md %}}One or more `azure_app_push_receiver` blocks as defined below.
-{{% /md %}}</dd>
-    <dt class="property-optional"
+{{% /md %}}</dd><dt class="property-optional"
             title="Optional">
         <span id="state_azurefunctionreceivers_nodejs">
 <a href="#state_azurefunctionreceivers_nodejs" style="color: inherit; text-decoration: inherit;">azure<wbr>Function<wbr>Receivers</a>
@@ -1763,8 +1637,7 @@ The following state arguments are supported:
         <span class="property-type"><a href="#actiongroupazurefunctionreceiver">Action<wbr>Group<wbr>Azure<wbr>Function<wbr>Receiver[]</a></span>
     </dt>
     <dd>{{% md %}}One or more `azure_function_receiver` blocks as defined below.
-{{% /md %}}</dd>
-    <dt class="property-optional"
+{{% /md %}}</dd><dt class="property-optional"
             title="Optional">
         <span id="state_emailreceivers_nodejs">
 <a href="#state_emailreceivers_nodejs" style="color: inherit; text-decoration: inherit;">email<wbr>Receivers</a>
@@ -1773,8 +1646,7 @@ The following state arguments are supported:
         <span class="property-type"><a href="#actiongroupemailreceiver">Action<wbr>Group<wbr>Email<wbr>Receiver[]</a></span>
     </dt>
     <dd>{{% md %}}One or more `email_receiver` blocks as defined below.
-{{% /md %}}</dd>
-    <dt class="property-optional"
+{{% /md %}}</dd><dt class="property-optional"
             title="Optional">
         <span id="state_enabled_nodejs">
 <a href="#state_enabled_nodejs" style="color: inherit; text-decoration: inherit;">enabled</a>
@@ -1783,8 +1655,7 @@ The following state arguments are supported:
         <span class="property-type">boolean</span>
     </dt>
     <dd>{{% md %}}Whether this action group is enabled. If an action group is not enabled, then none of its receivers will receive communications. Defaults to `true`.
-{{% /md %}}</dd>
-    <dt class="property-optional"
+{{% /md %}}</dd><dt class="property-optional"
             title="Optional">
         <span id="state_itsmreceivers_nodejs">
 <a href="#state_itsmreceivers_nodejs" style="color: inherit; text-decoration: inherit;">itsm<wbr>Receivers</a>
@@ -1793,8 +1664,7 @@ The following state arguments are supported:
         <span class="property-type"><a href="#actiongroupitsmreceiver">Action<wbr>Group<wbr>Itsm<wbr>Receiver[]</a></span>
     </dt>
     <dd>{{% md %}}One or more `itsm_receiver` blocks as defined below.
-{{% /md %}}</dd>
-    <dt class="property-optional"
+{{% /md %}}</dd><dt class="property-optional"
             title="Optional">
         <span id="state_logicappreceivers_nodejs">
 <a href="#state_logicappreceivers_nodejs" style="color: inherit; text-decoration: inherit;">logic<wbr>App<wbr>Receivers</a>
@@ -1803,8 +1673,7 @@ The following state arguments are supported:
         <span class="property-type"><a href="#actiongrouplogicappreceiver">Action<wbr>Group<wbr>Logic<wbr>App<wbr>Receiver[]</a></span>
     </dt>
     <dd>{{% md %}}One or more `logic_app_receiver` blocks as defined below.
-{{% /md %}}</dd>
-    <dt class="property-optional"
+{{% /md %}}</dd><dt class="property-optional"
             title="Optional">
         <span id="state_name_nodejs">
 <a href="#state_name_nodejs" style="color: inherit; text-decoration: inherit;">name</a>
@@ -1813,8 +1682,7 @@ The following state arguments are supported:
         <span class="property-type">string</span>
     </dt>
     <dd>{{% md %}}The name of the Action Group. Changing this forces a new resource to be created.
-{{% /md %}}</dd>
-    <dt class="property-optional"
+{{% /md %}}</dd><dt class="property-optional"
             title="Optional">
         <span id="state_resourcegroupname_nodejs">
 <a href="#state_resourcegroupname_nodejs" style="color: inherit; text-decoration: inherit;">resource<wbr>Group<wbr>Name</a>
@@ -1823,8 +1691,7 @@ The following state arguments are supported:
         <span class="property-type">string</span>
     </dt>
     <dd>{{% md %}}The name of the resource group in which to create the Action Group instance.
-{{% /md %}}</dd>
-    <dt class="property-optional"
+{{% /md %}}</dd><dt class="property-optional"
             title="Optional">
         <span id="state_shortname_nodejs">
 <a href="#state_shortname_nodejs" style="color: inherit; text-decoration: inherit;">short<wbr>Name</a>
@@ -1833,8 +1700,7 @@ The following state arguments are supported:
         <span class="property-type">string</span>
     </dt>
     <dd>{{% md %}}The short name of the action group. This will be used in SMS messages.
-{{% /md %}}</dd>
-    <dt class="property-optional"
+{{% /md %}}</dd><dt class="property-optional"
             title="Optional">
         <span id="state_smsreceivers_nodejs">
 <a href="#state_smsreceivers_nodejs" style="color: inherit; text-decoration: inherit;">sms<wbr>Receivers</a>
@@ -1843,8 +1709,7 @@ The following state arguments are supported:
         <span class="property-type"><a href="#actiongroupsmsreceiver">Action<wbr>Group<wbr>Sms<wbr>Receiver[]</a></span>
     </dt>
     <dd>{{% md %}}One or more `sms_receiver` blocks as defined below.
-{{% /md %}}</dd>
-    <dt class="property-optional"
+{{% /md %}}</dd><dt class="property-optional"
             title="Optional">
         <span id="state_tags_nodejs">
 <a href="#state_tags_nodejs" style="color: inherit; text-decoration: inherit;">tags</a>
@@ -1853,8 +1718,7 @@ The following state arguments are supported:
         <span class="property-type">{[key: string]: string}</span>
     </dt>
     <dd>{{% md %}}A mapping of tags to assign to the resource.
-{{% /md %}}</dd>
-    <dt class="property-optional"
+{{% /md %}}</dd><dt class="property-optional"
             title="Optional">
         <span id="state_voicereceivers_nodejs">
 <a href="#state_voicereceivers_nodejs" style="color: inherit; text-decoration: inherit;">voice<wbr>Receivers</a>
@@ -1863,8 +1727,7 @@ The following state arguments are supported:
         <span class="property-type"><a href="#actiongroupvoicereceiver">Action<wbr>Group<wbr>Voice<wbr>Receiver[]</a></span>
     </dt>
     <dd>{{% md %}}One or more `voice_receiver` blocks as defined below.
-{{% /md %}}</dd>
-    <dt class="property-optional"
+{{% /md %}}</dd><dt class="property-optional"
             title="Optional">
         <span id="state_webhookreceivers_nodejs">
 <a href="#state_webhookreceivers_nodejs" style="color: inherit; text-decoration: inherit;">webhook<wbr>Receivers</a>
@@ -1873,14 +1736,11 @@ The following state arguments are supported:
         <span class="property-type"><a href="#actiongroupwebhookreceiver">Action<wbr>Group<wbr>Webhook<wbr>Receiver[]</a></span>
     </dt>
     <dd>{{% md %}}One or more `webhook_receiver` blocks as defined below.
-{{% /md %}}</dd>
-</dl>
+{{% /md %}}</dd></dl>
 {{% /choosable %}}
 
 {{% choosable language python %}}
-<dl class="resources-properties">
-
-    <dt class="property-optional"
+<dl class="resources-properties"><dt class="property-optional"
             title="Optional">
         <span id="state_arm_role_receivers_python">
 <a href="#state_arm_role_receivers_python" style="color: inherit; text-decoration: inherit;">arm_<wbr>role_<wbr>receivers</a>
@@ -1889,8 +1749,7 @@ The following state arguments are supported:
         <span class="property-type"><a href="#actiongrouparmrolereceiver">Sequence[Action<wbr>Group<wbr>Arm<wbr>Role<wbr>Receiver<wbr>Args]</a></span>
     </dt>
     <dd>{{% md %}}One or more `arm_role_receiver` blocks as defined below.
-{{% /md %}}</dd>
-    <dt class="property-optional"
+{{% /md %}}</dd><dt class="property-optional"
             title="Optional">
         <span id="state_automation_runbook_receivers_python">
 <a href="#state_automation_runbook_receivers_python" style="color: inherit; text-decoration: inherit;">automation_<wbr>runbook_<wbr>receivers</a>
@@ -1899,8 +1758,7 @@ The following state arguments are supported:
         <span class="property-type"><a href="#actiongroupautomationrunbookreceiver">Sequence[Action<wbr>Group<wbr>Automation<wbr>Runbook<wbr>Receiver<wbr>Args]</a></span>
     </dt>
     <dd>{{% md %}}One or more `automation_runbook_receiver` blocks as defined below.
-{{% /md %}}</dd>
-    <dt class="property-optional"
+{{% /md %}}</dd><dt class="property-optional"
             title="Optional">
         <span id="state_azure_app_push_receivers_python">
 <a href="#state_azure_app_push_receivers_python" style="color: inherit; text-decoration: inherit;">azure_<wbr>app_<wbr>push_<wbr>receivers</a>
@@ -1909,8 +1767,7 @@ The following state arguments are supported:
         <span class="property-type"><a href="#actiongroupazureapppushreceiver">Sequence[Action<wbr>Group<wbr>Azure<wbr>App<wbr>Push<wbr>Receiver<wbr>Args]</a></span>
     </dt>
     <dd>{{% md %}}One or more `azure_app_push_receiver` blocks as defined below.
-{{% /md %}}</dd>
-    <dt class="property-optional"
+{{% /md %}}</dd><dt class="property-optional"
             title="Optional">
         <span id="state_azure_function_receivers_python">
 <a href="#state_azure_function_receivers_python" style="color: inherit; text-decoration: inherit;">azure_<wbr>function_<wbr>receivers</a>
@@ -1919,8 +1776,7 @@ The following state arguments are supported:
         <span class="property-type"><a href="#actiongroupazurefunctionreceiver">Sequence[Action<wbr>Group<wbr>Azure<wbr>Function<wbr>Receiver<wbr>Args]</a></span>
     </dt>
     <dd>{{% md %}}One or more `azure_function_receiver` blocks as defined below.
-{{% /md %}}</dd>
-    <dt class="property-optional"
+{{% /md %}}</dd><dt class="property-optional"
             title="Optional">
         <span id="state_email_receivers_python">
 <a href="#state_email_receivers_python" style="color: inherit; text-decoration: inherit;">email_<wbr>receivers</a>
@@ -1929,8 +1785,7 @@ The following state arguments are supported:
         <span class="property-type"><a href="#actiongroupemailreceiver">Sequence[Action<wbr>Group<wbr>Email<wbr>Receiver<wbr>Args]</a></span>
     </dt>
     <dd>{{% md %}}One or more `email_receiver` blocks as defined below.
-{{% /md %}}</dd>
-    <dt class="property-optional"
+{{% /md %}}</dd><dt class="property-optional"
             title="Optional">
         <span id="state_enabled_python">
 <a href="#state_enabled_python" style="color: inherit; text-decoration: inherit;">enabled</a>
@@ -1939,8 +1794,7 @@ The following state arguments are supported:
         <span class="property-type">bool</span>
     </dt>
     <dd>{{% md %}}Whether this action group is enabled. If an action group is not enabled, then none of its receivers will receive communications. Defaults to `true`.
-{{% /md %}}</dd>
-    <dt class="property-optional"
+{{% /md %}}</dd><dt class="property-optional"
             title="Optional">
         <span id="state_itsm_receivers_python">
 <a href="#state_itsm_receivers_python" style="color: inherit; text-decoration: inherit;">itsm_<wbr>receivers</a>
@@ -1949,8 +1803,7 @@ The following state arguments are supported:
         <span class="property-type"><a href="#actiongroupitsmreceiver">Sequence[Action<wbr>Group<wbr>Itsm<wbr>Receiver<wbr>Args]</a></span>
     </dt>
     <dd>{{% md %}}One or more `itsm_receiver` blocks as defined below.
-{{% /md %}}</dd>
-    <dt class="property-optional"
+{{% /md %}}</dd><dt class="property-optional"
             title="Optional">
         <span id="state_logic_app_receivers_python">
 <a href="#state_logic_app_receivers_python" style="color: inherit; text-decoration: inherit;">logic_<wbr>app_<wbr>receivers</a>
@@ -1959,8 +1812,7 @@ The following state arguments are supported:
         <span class="property-type"><a href="#actiongrouplogicappreceiver">Sequence[Action<wbr>Group<wbr>Logic<wbr>App<wbr>Receiver<wbr>Args]</a></span>
     </dt>
     <dd>{{% md %}}One or more `logic_app_receiver` blocks as defined below.
-{{% /md %}}</dd>
-    <dt class="property-optional"
+{{% /md %}}</dd><dt class="property-optional"
             title="Optional">
         <span id="state_name_python">
 <a href="#state_name_python" style="color: inherit; text-decoration: inherit;">name</a>
@@ -1969,8 +1821,7 @@ The following state arguments are supported:
         <span class="property-type">str</span>
     </dt>
     <dd>{{% md %}}The name of the Action Group. Changing this forces a new resource to be created.
-{{% /md %}}</dd>
-    <dt class="property-optional"
+{{% /md %}}</dd><dt class="property-optional"
             title="Optional">
         <span id="state_resource_group_name_python">
 <a href="#state_resource_group_name_python" style="color: inherit; text-decoration: inherit;">resource_<wbr>group_<wbr>name</a>
@@ -1979,8 +1830,7 @@ The following state arguments are supported:
         <span class="property-type">str</span>
     </dt>
     <dd>{{% md %}}The name of the resource group in which to create the Action Group instance.
-{{% /md %}}</dd>
-    <dt class="property-optional"
+{{% /md %}}</dd><dt class="property-optional"
             title="Optional">
         <span id="state_short_name_python">
 <a href="#state_short_name_python" style="color: inherit; text-decoration: inherit;">short_<wbr>name</a>
@@ -1989,8 +1839,7 @@ The following state arguments are supported:
         <span class="property-type">str</span>
     </dt>
     <dd>{{% md %}}The short name of the action group. This will be used in SMS messages.
-{{% /md %}}</dd>
-    <dt class="property-optional"
+{{% /md %}}</dd><dt class="property-optional"
             title="Optional">
         <span id="state_sms_receivers_python">
 <a href="#state_sms_receivers_python" style="color: inherit; text-decoration: inherit;">sms_<wbr>receivers</a>
@@ -1999,8 +1848,7 @@ The following state arguments are supported:
         <span class="property-type"><a href="#actiongroupsmsreceiver">Sequence[Action<wbr>Group<wbr>Sms<wbr>Receiver<wbr>Args]</a></span>
     </dt>
     <dd>{{% md %}}One or more `sms_receiver` blocks as defined below.
-{{% /md %}}</dd>
-    <dt class="property-optional"
+{{% /md %}}</dd><dt class="property-optional"
             title="Optional">
         <span id="state_tags_python">
 <a href="#state_tags_python" style="color: inherit; text-decoration: inherit;">tags</a>
@@ -2009,8 +1857,7 @@ The following state arguments are supported:
         <span class="property-type">Mapping[str, str]</span>
     </dt>
     <dd>{{% md %}}A mapping of tags to assign to the resource.
-{{% /md %}}</dd>
-    <dt class="property-optional"
+{{% /md %}}</dd><dt class="property-optional"
             title="Optional">
         <span id="state_voice_receivers_python">
 <a href="#state_voice_receivers_python" style="color: inherit; text-decoration: inherit;">voice_<wbr>receivers</a>
@@ -2019,8 +1866,7 @@ The following state arguments are supported:
         <span class="property-type"><a href="#actiongroupvoicereceiver">Sequence[Action<wbr>Group<wbr>Voice<wbr>Receiver<wbr>Args]</a></span>
     </dt>
     <dd>{{% md %}}One or more `voice_receiver` blocks as defined below.
-{{% /md %}}</dd>
-    <dt class="property-optional"
+{{% /md %}}</dd><dt class="property-optional"
             title="Optional">
         <span id="state_webhook_receivers_python">
 <a href="#state_webhook_receivers_python" style="color: inherit; text-decoration: inherit;">webhook_<wbr>receivers</a>
@@ -2029,8 +1875,7 @@ The following state arguments are supported:
         <span class="property-type"><a href="#actiongroupwebhookreceiver">Sequence[Action<wbr>Group<wbr>Webhook<wbr>Receiver<wbr>Args]</a></span>
     </dt>
     <dd>{{% md %}}One or more `webhook_receiver` blocks as defined below.
-{{% /md %}}</dd>
-</dl>
+{{% /md %}}</dd></dl>
 {{% /choosable %}}
 
 
@@ -2045,9 +1890,7 @@ The following state arguments are supported:
 <h4 id="actiongrouparmrolereceiver">Action<wbr>Group<wbr>Arm<wbr>Role<wbr>Receiver</h4>
 
 {{% choosable language csharp %}}
-<dl class="resources-properties">
-
-    <dt class="property-required"
+<dl class="resources-properties"><dt class="property-required"
             title="Required">
         <span id="name_csharp">
 <a href="#name_csharp" style="color: inherit; text-decoration: inherit;">Name</a>
@@ -2056,8 +1899,7 @@ The following state arguments are supported:
         <span class="property-type">string</span>
     </dt>
     <dd>{{% md %}}The name of the ARM role receiver.
-{{% /md %}}</dd>
-    <dt class="property-required"
+{{% /md %}}</dd><dt class="property-required"
             title="Required">
         <span id="roleid_csharp">
 <a href="#roleid_csharp" style="color: inherit; text-decoration: inherit;">Role<wbr>Id</a>
@@ -2066,8 +1908,7 @@ The following state arguments are supported:
         <span class="property-type">string</span>
     </dt>
     <dd>{{% md %}}The arm role id.
-{{% /md %}}</dd>
-    <dt class="property-optional"
+{{% /md %}}</dd><dt class="property-optional"
             title="Optional">
         <span id="usecommonalertschema_csharp">
 <a href="#usecommonalertschema_csharp" style="color: inherit; text-decoration: inherit;">Use<wbr>Common<wbr>Alert<wbr>Schema</a>
@@ -2076,14 +1917,11 @@ The following state arguments are supported:
         <span class="property-type">bool</span>
     </dt>
     <dd>{{% md %}}Enables or disables the common alert schema.
-{{% /md %}}</dd>
-</dl>
+{{% /md %}}</dd></dl>
 {{% /choosable %}}
 
 {{% choosable language go %}}
-<dl class="resources-properties">
-
-    <dt class="property-required"
+<dl class="resources-properties"><dt class="property-required"
             title="Required">
         <span id="name_go">
 <a href="#name_go" style="color: inherit; text-decoration: inherit;">Name</a>
@@ -2092,8 +1930,7 @@ The following state arguments are supported:
         <span class="property-type">string</span>
     </dt>
     <dd>{{% md %}}The name of the ARM role receiver.
-{{% /md %}}</dd>
-    <dt class="property-required"
+{{% /md %}}</dd><dt class="property-required"
             title="Required">
         <span id="roleid_go">
 <a href="#roleid_go" style="color: inherit; text-decoration: inherit;">Role<wbr>Id</a>
@@ -2102,8 +1939,7 @@ The following state arguments are supported:
         <span class="property-type">string</span>
     </dt>
     <dd>{{% md %}}The arm role id.
-{{% /md %}}</dd>
-    <dt class="property-optional"
+{{% /md %}}</dd><dt class="property-optional"
             title="Optional">
         <span id="usecommonalertschema_go">
 <a href="#usecommonalertschema_go" style="color: inherit; text-decoration: inherit;">Use<wbr>Common<wbr>Alert<wbr>Schema</a>
@@ -2112,14 +1948,11 @@ The following state arguments are supported:
         <span class="property-type">bool</span>
     </dt>
     <dd>{{% md %}}Enables or disables the common alert schema.
-{{% /md %}}</dd>
-</dl>
+{{% /md %}}</dd></dl>
 {{% /choosable %}}
 
 {{% choosable language nodejs %}}
-<dl class="resources-properties">
-
-    <dt class="property-required"
+<dl class="resources-properties"><dt class="property-required"
             title="Required">
         <span id="name_nodejs">
 <a href="#name_nodejs" style="color: inherit; text-decoration: inherit;">name</a>
@@ -2128,8 +1961,7 @@ The following state arguments are supported:
         <span class="property-type">string</span>
     </dt>
     <dd>{{% md %}}The name of the ARM role receiver.
-{{% /md %}}</dd>
-    <dt class="property-required"
+{{% /md %}}</dd><dt class="property-required"
             title="Required">
         <span id="roleid_nodejs">
 <a href="#roleid_nodejs" style="color: inherit; text-decoration: inherit;">role<wbr>Id</a>
@@ -2138,8 +1970,7 @@ The following state arguments are supported:
         <span class="property-type">string</span>
     </dt>
     <dd>{{% md %}}The arm role id.
-{{% /md %}}</dd>
-    <dt class="property-optional"
+{{% /md %}}</dd><dt class="property-optional"
             title="Optional">
         <span id="usecommonalertschema_nodejs">
 <a href="#usecommonalertschema_nodejs" style="color: inherit; text-decoration: inherit;">use<wbr>Common<wbr>Alert<wbr>Schema</a>
@@ -2148,14 +1979,11 @@ The following state arguments are supported:
         <span class="property-type">boolean</span>
     </dt>
     <dd>{{% md %}}Enables or disables the common alert schema.
-{{% /md %}}</dd>
-</dl>
+{{% /md %}}</dd></dl>
 {{% /choosable %}}
 
 {{% choosable language python %}}
-<dl class="resources-properties">
-
-    <dt class="property-required"
+<dl class="resources-properties"><dt class="property-required"
             title="Required">
         <span id="name_python">
 <a href="#name_python" style="color: inherit; text-decoration: inherit;">name</a>
@@ -2164,8 +1992,7 @@ The following state arguments are supported:
         <span class="property-type">str</span>
     </dt>
     <dd>{{% md %}}The name of the ARM role receiver.
-{{% /md %}}</dd>
-    <dt class="property-required"
+{{% /md %}}</dd><dt class="property-required"
             title="Required">
         <span id="role_id_python">
 <a href="#role_id_python" style="color: inherit; text-decoration: inherit;">role_<wbr>id</a>
@@ -2174,8 +2001,7 @@ The following state arguments are supported:
         <span class="property-type">str</span>
     </dt>
     <dd>{{% md %}}The arm role id.
-{{% /md %}}</dd>
-    <dt class="property-optional"
+{{% /md %}}</dd><dt class="property-optional"
             title="Optional">
         <span id="use_common_alert_schema_python">
 <a href="#use_common_alert_schema_python" style="color: inherit; text-decoration: inherit;">use_<wbr>common_<wbr>alert_<wbr>schema</a>
@@ -2184,16 +2010,13 @@ The following state arguments are supported:
         <span class="property-type">bool</span>
     </dt>
     <dd>{{% md %}}Enables or disables the common alert schema.
-{{% /md %}}</dd>
-</dl>
+{{% /md %}}</dd></dl>
 {{% /choosable %}}
 
 <h4 id="actiongroupautomationrunbookreceiver">Action<wbr>Group<wbr>Automation<wbr>Runbook<wbr>Receiver</h4>
 
 {{% choosable language csharp %}}
-<dl class="resources-properties">
-
-    <dt class="property-required"
+<dl class="resources-properties"><dt class="property-required"
             title="Required">
         <span id="automationaccountid_csharp">
 <a href="#automationaccountid_csharp" style="color: inherit; text-decoration: inherit;">Automation<wbr>Account<wbr>Id</a>
@@ -2202,8 +2025,7 @@ The following state arguments are supported:
         <span class="property-type">string</span>
     </dt>
     <dd>{{% md %}}The automation account ID which holds this runbook and authenticates to Azure resources.
-{{% /md %}}</dd>
-    <dt class="property-required"
+{{% /md %}}</dd><dt class="property-required"
             title="Required">
         <span id="isglobalrunbook_csharp">
 <a href="#isglobalrunbook_csharp" style="color: inherit; text-decoration: inherit;">Is<wbr>Global<wbr>Runbook</a>
@@ -2212,8 +2034,7 @@ The following state arguments are supported:
         <span class="property-type">bool</span>
     </dt>
     <dd>{{% md %}}Indicates whether this instance is global runbook.
-{{% /md %}}</dd>
-    <dt class="property-required"
+{{% /md %}}</dd><dt class="property-required"
             title="Required">
         <span id="name_csharp">
 <a href="#name_csharp" style="color: inherit; text-decoration: inherit;">Name</a>
@@ -2222,8 +2043,7 @@ The following state arguments are supported:
         <span class="property-type">string</span>
     </dt>
     <dd>{{% md %}}The name of the automation runbook receiver.
-{{% /md %}}</dd>
-    <dt class="property-required"
+{{% /md %}}</dd><dt class="property-required"
             title="Required">
         <span id="runbookname_csharp">
 <a href="#runbookname_csharp" style="color: inherit; text-decoration: inherit;">Runbook<wbr>Name</a>
@@ -2232,8 +2052,7 @@ The following state arguments are supported:
         <span class="property-type">string</span>
     </dt>
     <dd>{{% md %}}The name for this runbook.
-{{% /md %}}</dd>
-    <dt class="property-required"
+{{% /md %}}</dd><dt class="property-required"
             title="Required">
         <span id="serviceuri_csharp">
 <a href="#serviceuri_csharp" style="color: inherit; text-decoration: inherit;">Service<wbr>Uri</a>
@@ -2242,8 +2061,7 @@ The following state arguments are supported:
         <span class="property-type">string</span>
     </dt>
     <dd>{{% md %}}The URI where webhooks should be sent.
-{{% /md %}}</dd>
-    <dt class="property-required"
+{{% /md %}}</dd><dt class="property-required"
             title="Required">
         <span id="webhookresourceid_csharp">
 <a href="#webhookresourceid_csharp" style="color: inherit; text-decoration: inherit;">Webhook<wbr>Resource<wbr>Id</a>
@@ -2252,8 +2070,7 @@ The following state arguments are supported:
         <span class="property-type">string</span>
     </dt>
     <dd>{{% md %}}The resource id for webhook linked to this runbook.
-{{% /md %}}</dd>
-    <dt class="property-optional"
+{{% /md %}}</dd><dt class="property-optional"
             title="Optional">
         <span id="usecommonalertschema_csharp">
 <a href="#usecommonalertschema_csharp" style="color: inherit; text-decoration: inherit;">Use<wbr>Common<wbr>Alert<wbr>Schema</a>
@@ -2262,14 +2079,11 @@ The following state arguments are supported:
         <span class="property-type">bool</span>
     </dt>
     <dd>{{% md %}}Enables or disables the common alert schema.
-{{% /md %}}</dd>
-</dl>
+{{% /md %}}</dd></dl>
 {{% /choosable %}}
 
 {{% choosable language go %}}
-<dl class="resources-properties">
-
-    <dt class="property-required"
+<dl class="resources-properties"><dt class="property-required"
             title="Required">
         <span id="automationaccountid_go">
 <a href="#automationaccountid_go" style="color: inherit; text-decoration: inherit;">Automation<wbr>Account<wbr>Id</a>
@@ -2278,8 +2092,7 @@ The following state arguments are supported:
         <span class="property-type">string</span>
     </dt>
     <dd>{{% md %}}The automation account ID which holds this runbook and authenticates to Azure resources.
-{{% /md %}}</dd>
-    <dt class="property-required"
+{{% /md %}}</dd><dt class="property-required"
             title="Required">
         <span id="isglobalrunbook_go">
 <a href="#isglobalrunbook_go" style="color: inherit; text-decoration: inherit;">Is<wbr>Global<wbr>Runbook</a>
@@ -2288,8 +2101,7 @@ The following state arguments are supported:
         <span class="property-type">bool</span>
     </dt>
     <dd>{{% md %}}Indicates whether this instance is global runbook.
-{{% /md %}}</dd>
-    <dt class="property-required"
+{{% /md %}}</dd><dt class="property-required"
             title="Required">
         <span id="name_go">
 <a href="#name_go" style="color: inherit; text-decoration: inherit;">Name</a>
@@ -2298,8 +2110,7 @@ The following state arguments are supported:
         <span class="property-type">string</span>
     </dt>
     <dd>{{% md %}}The name of the automation runbook receiver.
-{{% /md %}}</dd>
-    <dt class="property-required"
+{{% /md %}}</dd><dt class="property-required"
             title="Required">
         <span id="runbookname_go">
 <a href="#runbookname_go" style="color: inherit; text-decoration: inherit;">Runbook<wbr>Name</a>
@@ -2308,8 +2119,7 @@ The following state arguments are supported:
         <span class="property-type">string</span>
     </dt>
     <dd>{{% md %}}The name for this runbook.
-{{% /md %}}</dd>
-    <dt class="property-required"
+{{% /md %}}</dd><dt class="property-required"
             title="Required">
         <span id="serviceuri_go">
 <a href="#serviceuri_go" style="color: inherit; text-decoration: inherit;">Service<wbr>Uri</a>
@@ -2318,8 +2128,7 @@ The following state arguments are supported:
         <span class="property-type">string</span>
     </dt>
     <dd>{{% md %}}The URI where webhooks should be sent.
-{{% /md %}}</dd>
-    <dt class="property-required"
+{{% /md %}}</dd><dt class="property-required"
             title="Required">
         <span id="webhookresourceid_go">
 <a href="#webhookresourceid_go" style="color: inherit; text-decoration: inherit;">Webhook<wbr>Resource<wbr>Id</a>
@@ -2328,8 +2137,7 @@ The following state arguments are supported:
         <span class="property-type">string</span>
     </dt>
     <dd>{{% md %}}The resource id for webhook linked to this runbook.
-{{% /md %}}</dd>
-    <dt class="property-optional"
+{{% /md %}}</dd><dt class="property-optional"
             title="Optional">
         <span id="usecommonalertschema_go">
 <a href="#usecommonalertschema_go" style="color: inherit; text-decoration: inherit;">Use<wbr>Common<wbr>Alert<wbr>Schema</a>
@@ -2338,14 +2146,11 @@ The following state arguments are supported:
         <span class="property-type">bool</span>
     </dt>
     <dd>{{% md %}}Enables or disables the common alert schema.
-{{% /md %}}</dd>
-</dl>
+{{% /md %}}</dd></dl>
 {{% /choosable %}}
 
 {{% choosable language nodejs %}}
-<dl class="resources-properties">
-
-    <dt class="property-required"
+<dl class="resources-properties"><dt class="property-required"
             title="Required">
         <span id="automationaccountid_nodejs">
 <a href="#automationaccountid_nodejs" style="color: inherit; text-decoration: inherit;">automation<wbr>Account<wbr>Id</a>
@@ -2354,8 +2159,7 @@ The following state arguments are supported:
         <span class="property-type">string</span>
     </dt>
     <dd>{{% md %}}The automation account ID which holds this runbook and authenticates to Azure resources.
-{{% /md %}}</dd>
-    <dt class="property-required"
+{{% /md %}}</dd><dt class="property-required"
             title="Required">
         <span id="isglobalrunbook_nodejs">
 <a href="#isglobalrunbook_nodejs" style="color: inherit; text-decoration: inherit;">is<wbr>Global<wbr>Runbook</a>
@@ -2364,8 +2168,7 @@ The following state arguments are supported:
         <span class="property-type">boolean</span>
     </dt>
     <dd>{{% md %}}Indicates whether this instance is global runbook.
-{{% /md %}}</dd>
-    <dt class="property-required"
+{{% /md %}}</dd><dt class="property-required"
             title="Required">
         <span id="name_nodejs">
 <a href="#name_nodejs" style="color: inherit; text-decoration: inherit;">name</a>
@@ -2374,8 +2177,7 @@ The following state arguments are supported:
         <span class="property-type">string</span>
     </dt>
     <dd>{{% md %}}The name of the automation runbook receiver.
-{{% /md %}}</dd>
-    <dt class="property-required"
+{{% /md %}}</dd><dt class="property-required"
             title="Required">
         <span id="runbookname_nodejs">
 <a href="#runbookname_nodejs" style="color: inherit; text-decoration: inherit;">runbook<wbr>Name</a>
@@ -2384,8 +2186,7 @@ The following state arguments are supported:
         <span class="property-type">string</span>
     </dt>
     <dd>{{% md %}}The name for this runbook.
-{{% /md %}}</dd>
-    <dt class="property-required"
+{{% /md %}}</dd><dt class="property-required"
             title="Required">
         <span id="serviceuri_nodejs">
 <a href="#serviceuri_nodejs" style="color: inherit; text-decoration: inherit;">service<wbr>Uri</a>
@@ -2394,8 +2195,7 @@ The following state arguments are supported:
         <span class="property-type">string</span>
     </dt>
     <dd>{{% md %}}The URI where webhooks should be sent.
-{{% /md %}}</dd>
-    <dt class="property-required"
+{{% /md %}}</dd><dt class="property-required"
             title="Required">
         <span id="webhookresourceid_nodejs">
 <a href="#webhookresourceid_nodejs" style="color: inherit; text-decoration: inherit;">webhook<wbr>Resource<wbr>Id</a>
@@ -2404,8 +2204,7 @@ The following state arguments are supported:
         <span class="property-type">string</span>
     </dt>
     <dd>{{% md %}}The resource id for webhook linked to this runbook.
-{{% /md %}}</dd>
-    <dt class="property-optional"
+{{% /md %}}</dd><dt class="property-optional"
             title="Optional">
         <span id="usecommonalertschema_nodejs">
 <a href="#usecommonalertschema_nodejs" style="color: inherit; text-decoration: inherit;">use<wbr>Common<wbr>Alert<wbr>Schema</a>
@@ -2414,14 +2213,11 @@ The following state arguments are supported:
         <span class="property-type">boolean</span>
     </dt>
     <dd>{{% md %}}Enables or disables the common alert schema.
-{{% /md %}}</dd>
-</dl>
+{{% /md %}}</dd></dl>
 {{% /choosable %}}
 
 {{% choosable language python %}}
-<dl class="resources-properties">
-
-    <dt class="property-required"
+<dl class="resources-properties"><dt class="property-required"
             title="Required">
         <span id="automation_account_id_python">
 <a href="#automation_account_id_python" style="color: inherit; text-decoration: inherit;">automation_<wbr>account_<wbr>id</a>
@@ -2430,8 +2226,7 @@ The following state arguments are supported:
         <span class="property-type">str</span>
     </dt>
     <dd>{{% md %}}The automation account ID which holds this runbook and authenticates to Azure resources.
-{{% /md %}}</dd>
-    <dt class="property-required"
+{{% /md %}}</dd><dt class="property-required"
             title="Required">
         <span id="is_global_runbook_python">
 <a href="#is_global_runbook_python" style="color: inherit; text-decoration: inherit;">is_<wbr>global_<wbr>runbook</a>
@@ -2440,8 +2235,7 @@ The following state arguments are supported:
         <span class="property-type">bool</span>
     </dt>
     <dd>{{% md %}}Indicates whether this instance is global runbook.
-{{% /md %}}</dd>
-    <dt class="property-required"
+{{% /md %}}</dd><dt class="property-required"
             title="Required">
         <span id="name_python">
 <a href="#name_python" style="color: inherit; text-decoration: inherit;">name</a>
@@ -2450,8 +2244,7 @@ The following state arguments are supported:
         <span class="property-type">str</span>
     </dt>
     <dd>{{% md %}}The name of the automation runbook receiver.
-{{% /md %}}</dd>
-    <dt class="property-required"
+{{% /md %}}</dd><dt class="property-required"
             title="Required">
         <span id="runbook_name_python">
 <a href="#runbook_name_python" style="color: inherit; text-decoration: inherit;">runbook_<wbr>name</a>
@@ -2460,8 +2253,7 @@ The following state arguments are supported:
         <span class="property-type">str</span>
     </dt>
     <dd>{{% md %}}The name for this runbook.
-{{% /md %}}</dd>
-    <dt class="property-required"
+{{% /md %}}</dd><dt class="property-required"
             title="Required">
         <span id="service_uri_python">
 <a href="#service_uri_python" style="color: inherit; text-decoration: inherit;">service_<wbr>uri</a>
@@ -2470,8 +2262,7 @@ The following state arguments are supported:
         <span class="property-type">str</span>
     </dt>
     <dd>{{% md %}}The URI where webhooks should be sent.
-{{% /md %}}</dd>
-    <dt class="property-required"
+{{% /md %}}</dd><dt class="property-required"
             title="Required">
         <span id="webhook_resource_id_python">
 <a href="#webhook_resource_id_python" style="color: inherit; text-decoration: inherit;">webhook_<wbr>resource_<wbr>id</a>
@@ -2480,8 +2271,7 @@ The following state arguments are supported:
         <span class="property-type">str</span>
     </dt>
     <dd>{{% md %}}The resource id for webhook linked to this runbook.
-{{% /md %}}</dd>
-    <dt class="property-optional"
+{{% /md %}}</dd><dt class="property-optional"
             title="Optional">
         <span id="use_common_alert_schema_python">
 <a href="#use_common_alert_schema_python" style="color: inherit; text-decoration: inherit;">use_<wbr>common_<wbr>alert_<wbr>schema</a>
@@ -2490,16 +2280,13 @@ The following state arguments are supported:
         <span class="property-type">bool</span>
     </dt>
     <dd>{{% md %}}Enables or disables the common alert schema.
-{{% /md %}}</dd>
-</dl>
+{{% /md %}}</dd></dl>
 {{% /choosable %}}
 
 <h4 id="actiongroupazureapppushreceiver">Action<wbr>Group<wbr>Azure<wbr>App<wbr>Push<wbr>Receiver</h4>
 
 {{% choosable language csharp %}}
-<dl class="resources-properties">
-
-    <dt class="property-required"
+<dl class="resources-properties"><dt class="property-required"
             title="Required">
         <span id="emailaddress_csharp">
 <a href="#emailaddress_csharp" style="color: inherit; text-decoration: inherit;">Email<wbr>Address</a>
@@ -2508,8 +2295,7 @@ The following state arguments are supported:
         <span class="property-type">string</span>
     </dt>
     <dd>{{% md %}}The email address of the user signed into the mobile app who will receive push notifications from this receiver.
-{{% /md %}}</dd>
-    <dt class="property-required"
+{{% /md %}}</dd><dt class="property-required"
             title="Required">
         <span id="name_csharp">
 <a href="#name_csharp" style="color: inherit; text-decoration: inherit;">Name</a>
@@ -2518,14 +2304,11 @@ The following state arguments are supported:
         <span class="property-type">string</span>
     </dt>
     <dd>{{% md %}}The name of the Azure app push receiver.
-{{% /md %}}</dd>
-</dl>
+{{% /md %}}</dd></dl>
 {{% /choosable %}}
 
 {{% choosable language go %}}
-<dl class="resources-properties">
-
-    <dt class="property-required"
+<dl class="resources-properties"><dt class="property-required"
             title="Required">
         <span id="emailaddress_go">
 <a href="#emailaddress_go" style="color: inherit; text-decoration: inherit;">Email<wbr>Address</a>
@@ -2534,8 +2317,7 @@ The following state arguments are supported:
         <span class="property-type">string</span>
     </dt>
     <dd>{{% md %}}The email address of the user signed into the mobile app who will receive push notifications from this receiver.
-{{% /md %}}</dd>
-    <dt class="property-required"
+{{% /md %}}</dd><dt class="property-required"
             title="Required">
         <span id="name_go">
 <a href="#name_go" style="color: inherit; text-decoration: inherit;">Name</a>
@@ -2544,14 +2326,11 @@ The following state arguments are supported:
         <span class="property-type">string</span>
     </dt>
     <dd>{{% md %}}The name of the Azure app push receiver.
-{{% /md %}}</dd>
-</dl>
+{{% /md %}}</dd></dl>
 {{% /choosable %}}
 
 {{% choosable language nodejs %}}
-<dl class="resources-properties">
-
-    <dt class="property-required"
+<dl class="resources-properties"><dt class="property-required"
             title="Required">
         <span id="emailaddress_nodejs">
 <a href="#emailaddress_nodejs" style="color: inherit; text-decoration: inherit;">email<wbr>Address</a>
@@ -2560,8 +2339,7 @@ The following state arguments are supported:
         <span class="property-type">string</span>
     </dt>
     <dd>{{% md %}}The email address of the user signed into the mobile app who will receive push notifications from this receiver.
-{{% /md %}}</dd>
-    <dt class="property-required"
+{{% /md %}}</dd><dt class="property-required"
             title="Required">
         <span id="name_nodejs">
 <a href="#name_nodejs" style="color: inherit; text-decoration: inherit;">name</a>
@@ -2570,14 +2348,11 @@ The following state arguments are supported:
         <span class="property-type">string</span>
     </dt>
     <dd>{{% md %}}The name of the Azure app push receiver.
-{{% /md %}}</dd>
-</dl>
+{{% /md %}}</dd></dl>
 {{% /choosable %}}
 
 {{% choosable language python %}}
-<dl class="resources-properties">
-
-    <dt class="property-required"
+<dl class="resources-properties"><dt class="property-required"
             title="Required">
         <span id="email_address_python">
 <a href="#email_address_python" style="color: inherit; text-decoration: inherit;">email_<wbr>address</a>
@@ -2586,8 +2361,7 @@ The following state arguments are supported:
         <span class="property-type">str</span>
     </dt>
     <dd>{{% md %}}The email address of the user signed into the mobile app who will receive push notifications from this receiver.
-{{% /md %}}</dd>
-    <dt class="property-required"
+{{% /md %}}</dd><dt class="property-required"
             title="Required">
         <span id="name_python">
 <a href="#name_python" style="color: inherit; text-decoration: inherit;">name</a>
@@ -2596,16 +2370,13 @@ The following state arguments are supported:
         <span class="property-type">str</span>
     </dt>
     <dd>{{% md %}}The name of the Azure app push receiver.
-{{% /md %}}</dd>
-</dl>
+{{% /md %}}</dd></dl>
 {{% /choosable %}}
 
 <h4 id="actiongroupazurefunctionreceiver">Action<wbr>Group<wbr>Azure<wbr>Function<wbr>Receiver</h4>
 
 {{% choosable language csharp %}}
-<dl class="resources-properties">
-
-    <dt class="property-required"
+<dl class="resources-properties"><dt class="property-required"
             title="Required">
         <span id="functionappresourceid_csharp">
 <a href="#functionappresourceid_csharp" style="color: inherit; text-decoration: inherit;">Function<wbr>App<wbr>Resource<wbr>Id</a>
@@ -2614,8 +2385,7 @@ The following state arguments are supported:
         <span class="property-type">string</span>
     </dt>
     <dd>{{% md %}}The Azure resource ID of the function app.
-{{% /md %}}</dd>
-    <dt class="property-required"
+{{% /md %}}</dd><dt class="property-required"
             title="Required">
         <span id="functionname_csharp">
 <a href="#functionname_csharp" style="color: inherit; text-decoration: inherit;">Function<wbr>Name</a>
@@ -2624,8 +2394,7 @@ The following state arguments are supported:
         <span class="property-type">string</span>
     </dt>
     <dd>{{% md %}}The function name in the function app.
-{{% /md %}}</dd>
-    <dt class="property-required"
+{{% /md %}}</dd><dt class="property-required"
             title="Required">
         <span id="httptriggerurl_csharp">
 <a href="#httptriggerurl_csharp" style="color: inherit; text-decoration: inherit;">Http<wbr>Trigger<wbr>Url</a>
@@ -2634,8 +2403,7 @@ The following state arguments are supported:
         <span class="property-type">string</span>
     </dt>
     <dd>{{% md %}}The http trigger url where http request sent to.
-{{% /md %}}</dd>
-    <dt class="property-required"
+{{% /md %}}</dd><dt class="property-required"
             title="Required">
         <span id="name_csharp">
 <a href="#name_csharp" style="color: inherit; text-decoration: inherit;">Name</a>
@@ -2644,8 +2412,7 @@ The following state arguments are supported:
         <span class="property-type">string</span>
     </dt>
     <dd>{{% md %}}The name of the Azure Function receiver.
-{{% /md %}}</dd>
-    <dt class="property-optional"
+{{% /md %}}</dd><dt class="property-optional"
             title="Optional">
         <span id="usecommonalertschema_csharp">
 <a href="#usecommonalertschema_csharp" style="color: inherit; text-decoration: inherit;">Use<wbr>Common<wbr>Alert<wbr>Schema</a>
@@ -2654,14 +2421,11 @@ The following state arguments are supported:
         <span class="property-type">bool</span>
     </dt>
     <dd>{{% md %}}Enables or disables the common alert schema.
-{{% /md %}}</dd>
-</dl>
+{{% /md %}}</dd></dl>
 {{% /choosable %}}
 
 {{% choosable language go %}}
-<dl class="resources-properties">
-
-    <dt class="property-required"
+<dl class="resources-properties"><dt class="property-required"
             title="Required">
         <span id="functionappresourceid_go">
 <a href="#functionappresourceid_go" style="color: inherit; text-decoration: inherit;">Function<wbr>App<wbr>Resource<wbr>Id</a>
@@ -2670,8 +2434,7 @@ The following state arguments are supported:
         <span class="property-type">string</span>
     </dt>
     <dd>{{% md %}}The Azure resource ID of the function app.
-{{% /md %}}</dd>
-    <dt class="property-required"
+{{% /md %}}</dd><dt class="property-required"
             title="Required">
         <span id="functionname_go">
 <a href="#functionname_go" style="color: inherit; text-decoration: inherit;">Function<wbr>Name</a>
@@ -2680,8 +2443,7 @@ The following state arguments are supported:
         <span class="property-type">string</span>
     </dt>
     <dd>{{% md %}}The function name in the function app.
-{{% /md %}}</dd>
-    <dt class="property-required"
+{{% /md %}}</dd><dt class="property-required"
             title="Required">
         <span id="httptriggerurl_go">
 <a href="#httptriggerurl_go" style="color: inherit; text-decoration: inherit;">Http<wbr>Trigger<wbr>Url</a>
@@ -2690,8 +2452,7 @@ The following state arguments are supported:
         <span class="property-type">string</span>
     </dt>
     <dd>{{% md %}}The http trigger url where http request sent to.
-{{% /md %}}</dd>
-    <dt class="property-required"
+{{% /md %}}</dd><dt class="property-required"
             title="Required">
         <span id="name_go">
 <a href="#name_go" style="color: inherit; text-decoration: inherit;">Name</a>
@@ -2700,8 +2461,7 @@ The following state arguments are supported:
         <span class="property-type">string</span>
     </dt>
     <dd>{{% md %}}The name of the Azure Function receiver.
-{{% /md %}}</dd>
-    <dt class="property-optional"
+{{% /md %}}</dd><dt class="property-optional"
             title="Optional">
         <span id="usecommonalertschema_go">
 <a href="#usecommonalertschema_go" style="color: inherit; text-decoration: inherit;">Use<wbr>Common<wbr>Alert<wbr>Schema</a>
@@ -2710,14 +2470,11 @@ The following state arguments are supported:
         <span class="property-type">bool</span>
     </dt>
     <dd>{{% md %}}Enables or disables the common alert schema.
-{{% /md %}}</dd>
-</dl>
+{{% /md %}}</dd></dl>
 {{% /choosable %}}
 
 {{% choosable language nodejs %}}
-<dl class="resources-properties">
-
-    <dt class="property-required"
+<dl class="resources-properties"><dt class="property-required"
             title="Required">
         <span id="functionappresourceid_nodejs">
 <a href="#functionappresourceid_nodejs" style="color: inherit; text-decoration: inherit;">function<wbr>App<wbr>Resource<wbr>Id</a>
@@ -2726,8 +2483,7 @@ The following state arguments are supported:
         <span class="property-type">string</span>
     </dt>
     <dd>{{% md %}}The Azure resource ID of the function app.
-{{% /md %}}</dd>
-    <dt class="property-required"
+{{% /md %}}</dd><dt class="property-required"
             title="Required">
         <span id="functionname_nodejs">
 <a href="#functionname_nodejs" style="color: inherit; text-decoration: inherit;">function<wbr>Name</a>
@@ -2736,8 +2492,7 @@ The following state arguments are supported:
         <span class="property-type">string</span>
     </dt>
     <dd>{{% md %}}The function name in the function app.
-{{% /md %}}</dd>
-    <dt class="property-required"
+{{% /md %}}</dd><dt class="property-required"
             title="Required">
         <span id="httptriggerurl_nodejs">
 <a href="#httptriggerurl_nodejs" style="color: inherit; text-decoration: inherit;">http<wbr>Trigger<wbr>Url</a>
@@ -2746,8 +2501,7 @@ The following state arguments are supported:
         <span class="property-type">string</span>
     </dt>
     <dd>{{% md %}}The http trigger url where http request sent to.
-{{% /md %}}</dd>
-    <dt class="property-required"
+{{% /md %}}</dd><dt class="property-required"
             title="Required">
         <span id="name_nodejs">
 <a href="#name_nodejs" style="color: inherit; text-decoration: inherit;">name</a>
@@ -2756,8 +2510,7 @@ The following state arguments are supported:
         <span class="property-type">string</span>
     </dt>
     <dd>{{% md %}}The name of the Azure Function receiver.
-{{% /md %}}</dd>
-    <dt class="property-optional"
+{{% /md %}}</dd><dt class="property-optional"
             title="Optional">
         <span id="usecommonalertschema_nodejs">
 <a href="#usecommonalertschema_nodejs" style="color: inherit; text-decoration: inherit;">use<wbr>Common<wbr>Alert<wbr>Schema</a>
@@ -2766,14 +2519,11 @@ The following state arguments are supported:
         <span class="property-type">boolean</span>
     </dt>
     <dd>{{% md %}}Enables or disables the common alert schema.
-{{% /md %}}</dd>
-</dl>
+{{% /md %}}</dd></dl>
 {{% /choosable %}}
 
 {{% choosable language python %}}
-<dl class="resources-properties">
-
-    <dt class="property-required"
+<dl class="resources-properties"><dt class="property-required"
             title="Required">
         <span id="function_app_resource_id_python">
 <a href="#function_app_resource_id_python" style="color: inherit; text-decoration: inherit;">function_<wbr>app_<wbr>resource_<wbr>id</a>
@@ -2782,8 +2532,7 @@ The following state arguments are supported:
         <span class="property-type">str</span>
     </dt>
     <dd>{{% md %}}The Azure resource ID of the function app.
-{{% /md %}}</dd>
-    <dt class="property-required"
+{{% /md %}}</dd><dt class="property-required"
             title="Required">
         <span id="function_name_python">
 <a href="#function_name_python" style="color: inherit; text-decoration: inherit;">function_<wbr>name</a>
@@ -2792,8 +2541,7 @@ The following state arguments are supported:
         <span class="property-type">str</span>
     </dt>
     <dd>{{% md %}}The function name in the function app.
-{{% /md %}}</dd>
-    <dt class="property-required"
+{{% /md %}}</dd><dt class="property-required"
             title="Required">
         <span id="http_trigger_url_python">
 <a href="#http_trigger_url_python" style="color: inherit; text-decoration: inherit;">http_<wbr>trigger_<wbr>url</a>
@@ -2802,8 +2550,7 @@ The following state arguments are supported:
         <span class="property-type">str</span>
     </dt>
     <dd>{{% md %}}The http trigger url where http request sent to.
-{{% /md %}}</dd>
-    <dt class="property-required"
+{{% /md %}}</dd><dt class="property-required"
             title="Required">
         <span id="name_python">
 <a href="#name_python" style="color: inherit; text-decoration: inherit;">name</a>
@@ -2812,8 +2559,7 @@ The following state arguments are supported:
         <span class="property-type">str</span>
     </dt>
     <dd>{{% md %}}The name of the Azure Function receiver.
-{{% /md %}}</dd>
-    <dt class="property-optional"
+{{% /md %}}</dd><dt class="property-optional"
             title="Optional">
         <span id="use_common_alert_schema_python">
 <a href="#use_common_alert_schema_python" style="color: inherit; text-decoration: inherit;">use_<wbr>common_<wbr>alert_<wbr>schema</a>
@@ -2822,16 +2568,13 @@ The following state arguments are supported:
         <span class="property-type">bool</span>
     </dt>
     <dd>{{% md %}}Enables or disables the common alert schema.
-{{% /md %}}</dd>
-</dl>
+{{% /md %}}</dd></dl>
 {{% /choosable %}}
 
 <h4 id="actiongroupemailreceiver">Action<wbr>Group<wbr>Email<wbr>Receiver</h4>
 
 {{% choosable language csharp %}}
-<dl class="resources-properties">
-
-    <dt class="property-required"
+<dl class="resources-properties"><dt class="property-required"
             title="Required">
         <span id="emailaddress_csharp">
 <a href="#emailaddress_csharp" style="color: inherit; text-decoration: inherit;">Email<wbr>Address</a>
@@ -2840,8 +2583,7 @@ The following state arguments are supported:
         <span class="property-type">string</span>
     </dt>
     <dd>{{% md %}}The email address of this receiver.
-{{% /md %}}</dd>
-    <dt class="property-required"
+{{% /md %}}</dd><dt class="property-required"
             title="Required">
         <span id="name_csharp">
 <a href="#name_csharp" style="color: inherit; text-decoration: inherit;">Name</a>
@@ -2850,8 +2592,7 @@ The following state arguments are supported:
         <span class="property-type">string</span>
     </dt>
     <dd>{{% md %}}The name of the email receiver. Names must be unique (case-insensitive) across all receivers within an action group.
-{{% /md %}}</dd>
-    <dt class="property-optional"
+{{% /md %}}</dd><dt class="property-optional"
             title="Optional">
         <span id="usecommonalertschema_csharp">
 <a href="#usecommonalertschema_csharp" style="color: inherit; text-decoration: inherit;">Use<wbr>Common<wbr>Alert<wbr>Schema</a>
@@ -2860,14 +2601,11 @@ The following state arguments are supported:
         <span class="property-type">bool</span>
     </dt>
     <dd>{{% md %}}Enables or disables the common alert schema.
-{{% /md %}}</dd>
-</dl>
+{{% /md %}}</dd></dl>
 {{% /choosable %}}
 
 {{% choosable language go %}}
-<dl class="resources-properties">
-
-    <dt class="property-required"
+<dl class="resources-properties"><dt class="property-required"
             title="Required">
         <span id="emailaddress_go">
 <a href="#emailaddress_go" style="color: inherit; text-decoration: inherit;">Email<wbr>Address</a>
@@ -2876,8 +2614,7 @@ The following state arguments are supported:
         <span class="property-type">string</span>
     </dt>
     <dd>{{% md %}}The email address of this receiver.
-{{% /md %}}</dd>
-    <dt class="property-required"
+{{% /md %}}</dd><dt class="property-required"
             title="Required">
         <span id="name_go">
 <a href="#name_go" style="color: inherit; text-decoration: inherit;">Name</a>
@@ -2886,8 +2623,7 @@ The following state arguments are supported:
         <span class="property-type">string</span>
     </dt>
     <dd>{{% md %}}The name of the email receiver. Names must be unique (case-insensitive) across all receivers within an action group.
-{{% /md %}}</dd>
-    <dt class="property-optional"
+{{% /md %}}</dd><dt class="property-optional"
             title="Optional">
         <span id="usecommonalertschema_go">
 <a href="#usecommonalertschema_go" style="color: inherit; text-decoration: inherit;">Use<wbr>Common<wbr>Alert<wbr>Schema</a>
@@ -2896,14 +2632,11 @@ The following state arguments are supported:
         <span class="property-type">bool</span>
     </dt>
     <dd>{{% md %}}Enables or disables the common alert schema.
-{{% /md %}}</dd>
-</dl>
+{{% /md %}}</dd></dl>
 {{% /choosable %}}
 
 {{% choosable language nodejs %}}
-<dl class="resources-properties">
-
-    <dt class="property-required"
+<dl class="resources-properties"><dt class="property-required"
             title="Required">
         <span id="emailaddress_nodejs">
 <a href="#emailaddress_nodejs" style="color: inherit; text-decoration: inherit;">email<wbr>Address</a>
@@ -2912,8 +2645,7 @@ The following state arguments are supported:
         <span class="property-type">string</span>
     </dt>
     <dd>{{% md %}}The email address of this receiver.
-{{% /md %}}</dd>
-    <dt class="property-required"
+{{% /md %}}</dd><dt class="property-required"
             title="Required">
         <span id="name_nodejs">
 <a href="#name_nodejs" style="color: inherit; text-decoration: inherit;">name</a>
@@ -2922,8 +2654,7 @@ The following state arguments are supported:
         <span class="property-type">string</span>
     </dt>
     <dd>{{% md %}}The name of the email receiver. Names must be unique (case-insensitive) across all receivers within an action group.
-{{% /md %}}</dd>
-    <dt class="property-optional"
+{{% /md %}}</dd><dt class="property-optional"
             title="Optional">
         <span id="usecommonalertschema_nodejs">
 <a href="#usecommonalertschema_nodejs" style="color: inherit; text-decoration: inherit;">use<wbr>Common<wbr>Alert<wbr>Schema</a>
@@ -2932,14 +2663,11 @@ The following state arguments are supported:
         <span class="property-type">boolean</span>
     </dt>
     <dd>{{% md %}}Enables or disables the common alert schema.
-{{% /md %}}</dd>
-</dl>
+{{% /md %}}</dd></dl>
 {{% /choosable %}}
 
 {{% choosable language python %}}
-<dl class="resources-properties">
-
-    <dt class="property-required"
+<dl class="resources-properties"><dt class="property-required"
             title="Required">
         <span id="email_address_python">
 <a href="#email_address_python" style="color: inherit; text-decoration: inherit;">email_<wbr>address</a>
@@ -2948,8 +2676,7 @@ The following state arguments are supported:
         <span class="property-type">str</span>
     </dt>
     <dd>{{% md %}}The email address of this receiver.
-{{% /md %}}</dd>
-    <dt class="property-required"
+{{% /md %}}</dd><dt class="property-required"
             title="Required">
         <span id="name_python">
 <a href="#name_python" style="color: inherit; text-decoration: inherit;">name</a>
@@ -2958,8 +2685,7 @@ The following state arguments are supported:
         <span class="property-type">str</span>
     </dt>
     <dd>{{% md %}}The name of the email receiver. Names must be unique (case-insensitive) across all receivers within an action group.
-{{% /md %}}</dd>
-    <dt class="property-optional"
+{{% /md %}}</dd><dt class="property-optional"
             title="Optional">
         <span id="use_common_alert_schema_python">
 <a href="#use_common_alert_schema_python" style="color: inherit; text-decoration: inherit;">use_<wbr>common_<wbr>alert_<wbr>schema</a>
@@ -2968,16 +2694,13 @@ The following state arguments are supported:
         <span class="property-type">bool</span>
     </dt>
     <dd>{{% md %}}Enables or disables the common alert schema.
-{{% /md %}}</dd>
-</dl>
+{{% /md %}}</dd></dl>
 {{% /choosable %}}
 
 <h4 id="actiongroupitsmreceiver">Action<wbr>Group<wbr>Itsm<wbr>Receiver</h4>
 
 {{% choosable language csharp %}}
-<dl class="resources-properties">
-
-    <dt class="property-required"
+<dl class="resources-properties"><dt class="property-required"
             title="Required">
         <span id="connectionid_csharp">
 <a href="#connectionid_csharp" style="color: inherit; text-decoration: inherit;">Connection<wbr>Id</a>
@@ -2986,8 +2709,7 @@ The following state arguments are supported:
         <span class="property-type">string</span>
     </dt>
     <dd>{{% md %}}The unique connection identifier of the ITSM connection.
-{{% /md %}}</dd>
-    <dt class="property-required"
+{{% /md %}}</dd><dt class="property-required"
             title="Required">
         <span id="name_csharp">
 <a href="#name_csharp" style="color: inherit; text-decoration: inherit;">Name</a>
@@ -2996,8 +2718,7 @@ The following state arguments are supported:
         <span class="property-type">string</span>
     </dt>
     <dd>{{% md %}}The name of the ITSM receiver.
-{{% /md %}}</dd>
-    <dt class="property-required"
+{{% /md %}}</dd><dt class="property-required"
             title="Required">
         <span id="region_csharp">
 <a href="#region_csharp" style="color: inherit; text-decoration: inherit;">Region</a>
@@ -3006,8 +2727,7 @@ The following state arguments are supported:
         <span class="property-type">string</span>
     </dt>
     <dd>{{% md %}}The region of the workspace.
-{{% /md %}}</dd>
-    <dt class="property-required"
+{{% /md %}}</dd><dt class="property-required"
             title="Required">
         <span id="ticketconfiguration_csharp">
 <a href="#ticketconfiguration_csharp" style="color: inherit; text-decoration: inherit;">Ticket<wbr>Configuration</a>
@@ -3016,8 +2736,7 @@ The following state arguments are supported:
         <span class="property-type">string</span>
     </dt>
     <dd>{{% md %}}A JSON blob for the configurations of the ITSM action. CreateMultipleWorkItems option will be part of this blob as well.
-{{% /md %}}</dd>
-    <dt class="property-required"
+{{% /md %}}</dd><dt class="property-required"
             title="Required">
         <span id="workspaceid_csharp">
 <a href="#workspaceid_csharp" style="color: inherit; text-decoration: inherit;">Workspace<wbr>Id</a>
@@ -3026,14 +2745,11 @@ The following state arguments are supported:
         <span class="property-type">string</span>
     </dt>
     <dd>{{% md %}}The Azure Log Analytics workspace ID where this connection is defined.
-{{% /md %}}</dd>
-</dl>
+{{% /md %}}</dd></dl>
 {{% /choosable %}}
 
 {{% choosable language go %}}
-<dl class="resources-properties">
-
-    <dt class="property-required"
+<dl class="resources-properties"><dt class="property-required"
             title="Required">
         <span id="connectionid_go">
 <a href="#connectionid_go" style="color: inherit; text-decoration: inherit;">Connection<wbr>Id</a>
@@ -3042,8 +2758,7 @@ The following state arguments are supported:
         <span class="property-type">string</span>
     </dt>
     <dd>{{% md %}}The unique connection identifier of the ITSM connection.
-{{% /md %}}</dd>
-    <dt class="property-required"
+{{% /md %}}</dd><dt class="property-required"
             title="Required">
         <span id="name_go">
 <a href="#name_go" style="color: inherit; text-decoration: inherit;">Name</a>
@@ -3052,8 +2767,7 @@ The following state arguments are supported:
         <span class="property-type">string</span>
     </dt>
     <dd>{{% md %}}The name of the ITSM receiver.
-{{% /md %}}</dd>
-    <dt class="property-required"
+{{% /md %}}</dd><dt class="property-required"
             title="Required">
         <span id="region_go">
 <a href="#region_go" style="color: inherit; text-decoration: inherit;">Region</a>
@@ -3062,8 +2776,7 @@ The following state arguments are supported:
         <span class="property-type">string</span>
     </dt>
     <dd>{{% md %}}The region of the workspace.
-{{% /md %}}</dd>
-    <dt class="property-required"
+{{% /md %}}</dd><dt class="property-required"
             title="Required">
         <span id="ticketconfiguration_go">
 <a href="#ticketconfiguration_go" style="color: inherit; text-decoration: inherit;">Ticket<wbr>Configuration</a>
@@ -3072,8 +2785,7 @@ The following state arguments are supported:
         <span class="property-type">string</span>
     </dt>
     <dd>{{% md %}}A JSON blob for the configurations of the ITSM action. CreateMultipleWorkItems option will be part of this blob as well.
-{{% /md %}}</dd>
-    <dt class="property-required"
+{{% /md %}}</dd><dt class="property-required"
             title="Required">
         <span id="workspaceid_go">
 <a href="#workspaceid_go" style="color: inherit; text-decoration: inherit;">Workspace<wbr>Id</a>
@@ -3082,14 +2794,11 @@ The following state arguments are supported:
         <span class="property-type">string</span>
     </dt>
     <dd>{{% md %}}The Azure Log Analytics workspace ID where this connection is defined.
-{{% /md %}}</dd>
-</dl>
+{{% /md %}}</dd></dl>
 {{% /choosable %}}
 
 {{% choosable language nodejs %}}
-<dl class="resources-properties">
-
-    <dt class="property-required"
+<dl class="resources-properties"><dt class="property-required"
             title="Required">
         <span id="connectionid_nodejs">
 <a href="#connectionid_nodejs" style="color: inherit; text-decoration: inherit;">connection<wbr>Id</a>
@@ -3098,8 +2807,7 @@ The following state arguments are supported:
         <span class="property-type">string</span>
     </dt>
     <dd>{{% md %}}The unique connection identifier of the ITSM connection.
-{{% /md %}}</dd>
-    <dt class="property-required"
+{{% /md %}}</dd><dt class="property-required"
             title="Required">
         <span id="name_nodejs">
 <a href="#name_nodejs" style="color: inherit; text-decoration: inherit;">name</a>
@@ -3108,8 +2816,7 @@ The following state arguments are supported:
         <span class="property-type">string</span>
     </dt>
     <dd>{{% md %}}The name of the ITSM receiver.
-{{% /md %}}</dd>
-    <dt class="property-required"
+{{% /md %}}</dd><dt class="property-required"
             title="Required">
         <span id="region_nodejs">
 <a href="#region_nodejs" style="color: inherit; text-decoration: inherit;">region</a>
@@ -3118,8 +2825,7 @@ The following state arguments are supported:
         <span class="property-type">string</span>
     </dt>
     <dd>{{% md %}}The region of the workspace.
-{{% /md %}}</dd>
-    <dt class="property-required"
+{{% /md %}}</dd><dt class="property-required"
             title="Required">
         <span id="ticketconfiguration_nodejs">
 <a href="#ticketconfiguration_nodejs" style="color: inherit; text-decoration: inherit;">ticket<wbr>Configuration</a>
@@ -3128,8 +2834,7 @@ The following state arguments are supported:
         <span class="property-type">string</span>
     </dt>
     <dd>{{% md %}}A JSON blob for the configurations of the ITSM action. CreateMultipleWorkItems option will be part of this blob as well.
-{{% /md %}}</dd>
-    <dt class="property-required"
+{{% /md %}}</dd><dt class="property-required"
             title="Required">
         <span id="workspaceid_nodejs">
 <a href="#workspaceid_nodejs" style="color: inherit; text-decoration: inherit;">workspace<wbr>Id</a>
@@ -3138,14 +2843,11 @@ The following state arguments are supported:
         <span class="property-type">string</span>
     </dt>
     <dd>{{% md %}}The Azure Log Analytics workspace ID where this connection is defined.
-{{% /md %}}</dd>
-</dl>
+{{% /md %}}</dd></dl>
 {{% /choosable %}}
 
 {{% choosable language python %}}
-<dl class="resources-properties">
-
-    <dt class="property-required"
+<dl class="resources-properties"><dt class="property-required"
             title="Required">
         <span id="connection_id_python">
 <a href="#connection_id_python" style="color: inherit; text-decoration: inherit;">connection_<wbr>id</a>
@@ -3154,8 +2856,7 @@ The following state arguments are supported:
         <span class="property-type">str</span>
     </dt>
     <dd>{{% md %}}The unique connection identifier of the ITSM connection.
-{{% /md %}}</dd>
-    <dt class="property-required"
+{{% /md %}}</dd><dt class="property-required"
             title="Required">
         <span id="name_python">
 <a href="#name_python" style="color: inherit; text-decoration: inherit;">name</a>
@@ -3164,8 +2865,7 @@ The following state arguments are supported:
         <span class="property-type">str</span>
     </dt>
     <dd>{{% md %}}The name of the ITSM receiver.
-{{% /md %}}</dd>
-    <dt class="property-required"
+{{% /md %}}</dd><dt class="property-required"
             title="Required">
         <span id="region_python">
 <a href="#region_python" style="color: inherit; text-decoration: inherit;">region</a>
@@ -3174,8 +2874,7 @@ The following state arguments are supported:
         <span class="property-type">str</span>
     </dt>
     <dd>{{% md %}}The region of the workspace.
-{{% /md %}}</dd>
-    <dt class="property-required"
+{{% /md %}}</dd><dt class="property-required"
             title="Required">
         <span id="ticket_configuration_python">
 <a href="#ticket_configuration_python" style="color: inherit; text-decoration: inherit;">ticket_<wbr>configuration</a>
@@ -3184,8 +2883,7 @@ The following state arguments are supported:
         <span class="property-type">str</span>
     </dt>
     <dd>{{% md %}}A JSON blob for the configurations of the ITSM action. CreateMultipleWorkItems option will be part of this blob as well.
-{{% /md %}}</dd>
-    <dt class="property-required"
+{{% /md %}}</dd><dt class="property-required"
             title="Required">
         <span id="workspace_id_python">
 <a href="#workspace_id_python" style="color: inherit; text-decoration: inherit;">workspace_<wbr>id</a>
@@ -3194,16 +2892,13 @@ The following state arguments are supported:
         <span class="property-type">str</span>
     </dt>
     <dd>{{% md %}}The Azure Log Analytics workspace ID where this connection is defined.
-{{% /md %}}</dd>
-</dl>
+{{% /md %}}</dd></dl>
 {{% /choosable %}}
 
 <h4 id="actiongrouplogicappreceiver">Action<wbr>Group<wbr>Logic<wbr>App<wbr>Receiver</h4>
 
 {{% choosable language csharp %}}
-<dl class="resources-properties">
-
-    <dt class="property-required"
+<dl class="resources-properties"><dt class="property-required"
             title="Required">
         <span id="callbackurl_csharp">
 <a href="#callbackurl_csharp" style="color: inherit; text-decoration: inherit;">Callback<wbr>Url</a>
@@ -3212,8 +2907,7 @@ The following state arguments are supported:
         <span class="property-type">string</span>
     </dt>
     <dd>{{% md %}}The callback url where http request sent to.
-{{% /md %}}</dd>
-    <dt class="property-required"
+{{% /md %}}</dd><dt class="property-required"
             title="Required">
         <span id="name_csharp">
 <a href="#name_csharp" style="color: inherit; text-decoration: inherit;">Name</a>
@@ -3222,8 +2916,7 @@ The following state arguments are supported:
         <span class="property-type">string</span>
     </dt>
     <dd>{{% md %}}The name of the logic app receiver.
-{{% /md %}}</dd>
-    <dt class="property-required"
+{{% /md %}}</dd><dt class="property-required"
             title="Required">
         <span id="resourceid_csharp">
 <a href="#resourceid_csharp" style="color: inherit; text-decoration: inherit;">Resource<wbr>Id</a>
@@ -3232,8 +2925,7 @@ The following state arguments are supported:
         <span class="property-type">string</span>
     </dt>
     <dd>{{% md %}}The Azure resource ID of the logic app.
-{{% /md %}}</dd>
-    <dt class="property-optional"
+{{% /md %}}</dd><dt class="property-optional"
             title="Optional">
         <span id="usecommonalertschema_csharp">
 <a href="#usecommonalertschema_csharp" style="color: inherit; text-decoration: inherit;">Use<wbr>Common<wbr>Alert<wbr>Schema</a>
@@ -3242,14 +2934,11 @@ The following state arguments are supported:
         <span class="property-type">bool</span>
     </dt>
     <dd>{{% md %}}Enables or disables the common alert schema.
-{{% /md %}}</dd>
-</dl>
+{{% /md %}}</dd></dl>
 {{% /choosable %}}
 
 {{% choosable language go %}}
-<dl class="resources-properties">
-
-    <dt class="property-required"
+<dl class="resources-properties"><dt class="property-required"
             title="Required">
         <span id="callbackurl_go">
 <a href="#callbackurl_go" style="color: inherit; text-decoration: inherit;">Callback<wbr>Url</a>
@@ -3258,8 +2947,7 @@ The following state arguments are supported:
         <span class="property-type">string</span>
     </dt>
     <dd>{{% md %}}The callback url where http request sent to.
-{{% /md %}}</dd>
-    <dt class="property-required"
+{{% /md %}}</dd><dt class="property-required"
             title="Required">
         <span id="name_go">
 <a href="#name_go" style="color: inherit; text-decoration: inherit;">Name</a>
@@ -3268,8 +2956,7 @@ The following state arguments are supported:
         <span class="property-type">string</span>
     </dt>
     <dd>{{% md %}}The name of the logic app receiver.
-{{% /md %}}</dd>
-    <dt class="property-required"
+{{% /md %}}</dd><dt class="property-required"
             title="Required">
         <span id="resourceid_go">
 <a href="#resourceid_go" style="color: inherit; text-decoration: inherit;">Resource<wbr>Id</a>
@@ -3278,8 +2965,7 @@ The following state arguments are supported:
         <span class="property-type">string</span>
     </dt>
     <dd>{{% md %}}The Azure resource ID of the logic app.
-{{% /md %}}</dd>
-    <dt class="property-optional"
+{{% /md %}}</dd><dt class="property-optional"
             title="Optional">
         <span id="usecommonalertschema_go">
 <a href="#usecommonalertschema_go" style="color: inherit; text-decoration: inherit;">Use<wbr>Common<wbr>Alert<wbr>Schema</a>
@@ -3288,14 +2974,11 @@ The following state arguments are supported:
         <span class="property-type">bool</span>
     </dt>
     <dd>{{% md %}}Enables or disables the common alert schema.
-{{% /md %}}</dd>
-</dl>
+{{% /md %}}</dd></dl>
 {{% /choosable %}}
 
 {{% choosable language nodejs %}}
-<dl class="resources-properties">
-
-    <dt class="property-required"
+<dl class="resources-properties"><dt class="property-required"
             title="Required">
         <span id="callbackurl_nodejs">
 <a href="#callbackurl_nodejs" style="color: inherit; text-decoration: inherit;">callback<wbr>Url</a>
@@ -3304,8 +2987,7 @@ The following state arguments are supported:
         <span class="property-type">string</span>
     </dt>
     <dd>{{% md %}}The callback url where http request sent to.
-{{% /md %}}</dd>
-    <dt class="property-required"
+{{% /md %}}</dd><dt class="property-required"
             title="Required">
         <span id="name_nodejs">
 <a href="#name_nodejs" style="color: inherit; text-decoration: inherit;">name</a>
@@ -3314,8 +2996,7 @@ The following state arguments are supported:
         <span class="property-type">string</span>
     </dt>
     <dd>{{% md %}}The name of the logic app receiver.
-{{% /md %}}</dd>
-    <dt class="property-required"
+{{% /md %}}</dd><dt class="property-required"
             title="Required">
         <span id="resourceid_nodejs">
 <a href="#resourceid_nodejs" style="color: inherit; text-decoration: inherit;">resource<wbr>Id</a>
@@ -3324,8 +3005,7 @@ The following state arguments are supported:
         <span class="property-type">string</span>
     </dt>
     <dd>{{% md %}}The Azure resource ID of the logic app.
-{{% /md %}}</dd>
-    <dt class="property-optional"
+{{% /md %}}</dd><dt class="property-optional"
             title="Optional">
         <span id="usecommonalertschema_nodejs">
 <a href="#usecommonalertschema_nodejs" style="color: inherit; text-decoration: inherit;">use<wbr>Common<wbr>Alert<wbr>Schema</a>
@@ -3334,14 +3014,11 @@ The following state arguments are supported:
         <span class="property-type">boolean</span>
     </dt>
     <dd>{{% md %}}Enables or disables the common alert schema.
-{{% /md %}}</dd>
-</dl>
+{{% /md %}}</dd></dl>
 {{% /choosable %}}
 
 {{% choosable language python %}}
-<dl class="resources-properties">
-
-    <dt class="property-required"
+<dl class="resources-properties"><dt class="property-required"
             title="Required">
         <span id="callback_url_python">
 <a href="#callback_url_python" style="color: inherit; text-decoration: inherit;">callback_<wbr>url</a>
@@ -3350,8 +3027,7 @@ The following state arguments are supported:
         <span class="property-type">str</span>
     </dt>
     <dd>{{% md %}}The callback url where http request sent to.
-{{% /md %}}</dd>
-    <dt class="property-required"
+{{% /md %}}</dd><dt class="property-required"
             title="Required">
         <span id="name_python">
 <a href="#name_python" style="color: inherit; text-decoration: inherit;">name</a>
@@ -3360,8 +3036,7 @@ The following state arguments are supported:
         <span class="property-type">str</span>
     </dt>
     <dd>{{% md %}}The name of the logic app receiver.
-{{% /md %}}</dd>
-    <dt class="property-required"
+{{% /md %}}</dd><dt class="property-required"
             title="Required">
         <span id="resource_id_python">
 <a href="#resource_id_python" style="color: inherit; text-decoration: inherit;">resource_<wbr>id</a>
@@ -3370,8 +3045,7 @@ The following state arguments are supported:
         <span class="property-type">str</span>
     </dt>
     <dd>{{% md %}}The Azure resource ID of the logic app.
-{{% /md %}}</dd>
-    <dt class="property-optional"
+{{% /md %}}</dd><dt class="property-optional"
             title="Optional">
         <span id="use_common_alert_schema_python">
 <a href="#use_common_alert_schema_python" style="color: inherit; text-decoration: inherit;">use_<wbr>common_<wbr>alert_<wbr>schema</a>
@@ -3380,16 +3054,13 @@ The following state arguments are supported:
         <span class="property-type">bool</span>
     </dt>
     <dd>{{% md %}}Enables or disables the common alert schema.
-{{% /md %}}</dd>
-</dl>
+{{% /md %}}</dd></dl>
 {{% /choosable %}}
 
 <h4 id="actiongroupsmsreceiver">Action<wbr>Group<wbr>Sms<wbr>Receiver</h4>
 
 {{% choosable language csharp %}}
-<dl class="resources-properties">
-
-    <dt class="property-required"
+<dl class="resources-properties"><dt class="property-required"
             title="Required">
         <span id="countrycode_csharp">
 <a href="#countrycode_csharp" style="color: inherit; text-decoration: inherit;">Country<wbr>Code</a>
@@ -3398,8 +3069,7 @@ The following state arguments are supported:
         <span class="property-type">string</span>
     </dt>
     <dd>{{% md %}}The country code of the SMS receiver.
-{{% /md %}}</dd>
-    <dt class="property-required"
+{{% /md %}}</dd><dt class="property-required"
             title="Required">
         <span id="name_csharp">
 <a href="#name_csharp" style="color: inherit; text-decoration: inherit;">Name</a>
@@ -3408,8 +3078,7 @@ The following state arguments are supported:
         <span class="property-type">string</span>
     </dt>
     <dd>{{% md %}}The name of the SMS receiver. Names must be unique (case-insensitive) across all receivers within an action group.
-{{% /md %}}</dd>
-    <dt class="property-required"
+{{% /md %}}</dd><dt class="property-required"
             title="Required">
         <span id="phonenumber_csharp">
 <a href="#phonenumber_csharp" style="color: inherit; text-decoration: inherit;">Phone<wbr>Number</a>
@@ -3418,14 +3087,11 @@ The following state arguments are supported:
         <span class="property-type">string</span>
     </dt>
     <dd>{{% md %}}The phone number of the SMS receiver.
-{{% /md %}}</dd>
-</dl>
+{{% /md %}}</dd></dl>
 {{% /choosable %}}
 
 {{% choosable language go %}}
-<dl class="resources-properties">
-
-    <dt class="property-required"
+<dl class="resources-properties"><dt class="property-required"
             title="Required">
         <span id="countrycode_go">
 <a href="#countrycode_go" style="color: inherit; text-decoration: inherit;">Country<wbr>Code</a>
@@ -3434,8 +3100,7 @@ The following state arguments are supported:
         <span class="property-type">string</span>
     </dt>
     <dd>{{% md %}}The country code of the SMS receiver.
-{{% /md %}}</dd>
-    <dt class="property-required"
+{{% /md %}}</dd><dt class="property-required"
             title="Required">
         <span id="name_go">
 <a href="#name_go" style="color: inherit; text-decoration: inherit;">Name</a>
@@ -3444,8 +3109,7 @@ The following state arguments are supported:
         <span class="property-type">string</span>
     </dt>
     <dd>{{% md %}}The name of the SMS receiver. Names must be unique (case-insensitive) across all receivers within an action group.
-{{% /md %}}</dd>
-    <dt class="property-required"
+{{% /md %}}</dd><dt class="property-required"
             title="Required">
         <span id="phonenumber_go">
 <a href="#phonenumber_go" style="color: inherit; text-decoration: inherit;">Phone<wbr>Number</a>
@@ -3454,14 +3118,11 @@ The following state arguments are supported:
         <span class="property-type">string</span>
     </dt>
     <dd>{{% md %}}The phone number of the SMS receiver.
-{{% /md %}}</dd>
-</dl>
+{{% /md %}}</dd></dl>
 {{% /choosable %}}
 
 {{% choosable language nodejs %}}
-<dl class="resources-properties">
-
-    <dt class="property-required"
+<dl class="resources-properties"><dt class="property-required"
             title="Required">
         <span id="countrycode_nodejs">
 <a href="#countrycode_nodejs" style="color: inherit; text-decoration: inherit;">country<wbr>Code</a>
@@ -3470,8 +3131,7 @@ The following state arguments are supported:
         <span class="property-type">string</span>
     </dt>
     <dd>{{% md %}}The country code of the SMS receiver.
-{{% /md %}}</dd>
-    <dt class="property-required"
+{{% /md %}}</dd><dt class="property-required"
             title="Required">
         <span id="name_nodejs">
 <a href="#name_nodejs" style="color: inherit; text-decoration: inherit;">name</a>
@@ -3480,8 +3140,7 @@ The following state arguments are supported:
         <span class="property-type">string</span>
     </dt>
     <dd>{{% md %}}The name of the SMS receiver. Names must be unique (case-insensitive) across all receivers within an action group.
-{{% /md %}}</dd>
-    <dt class="property-required"
+{{% /md %}}</dd><dt class="property-required"
             title="Required">
         <span id="phonenumber_nodejs">
 <a href="#phonenumber_nodejs" style="color: inherit; text-decoration: inherit;">phone<wbr>Number</a>
@@ -3490,14 +3149,11 @@ The following state arguments are supported:
         <span class="property-type">string</span>
     </dt>
     <dd>{{% md %}}The phone number of the SMS receiver.
-{{% /md %}}</dd>
-</dl>
+{{% /md %}}</dd></dl>
 {{% /choosable %}}
 
 {{% choosable language python %}}
-<dl class="resources-properties">
-
-    <dt class="property-required"
+<dl class="resources-properties"><dt class="property-required"
             title="Required">
         <span id="country_code_python">
 <a href="#country_code_python" style="color: inherit; text-decoration: inherit;">country_<wbr>code</a>
@@ -3506,8 +3162,7 @@ The following state arguments are supported:
         <span class="property-type">str</span>
     </dt>
     <dd>{{% md %}}The country code of the SMS receiver.
-{{% /md %}}</dd>
-    <dt class="property-required"
+{{% /md %}}</dd><dt class="property-required"
             title="Required">
         <span id="name_python">
 <a href="#name_python" style="color: inherit; text-decoration: inherit;">name</a>
@@ -3516,8 +3171,7 @@ The following state arguments are supported:
         <span class="property-type">str</span>
     </dt>
     <dd>{{% md %}}The name of the SMS receiver. Names must be unique (case-insensitive) across all receivers within an action group.
-{{% /md %}}</dd>
-    <dt class="property-required"
+{{% /md %}}</dd><dt class="property-required"
             title="Required">
         <span id="phone_number_python">
 <a href="#phone_number_python" style="color: inherit; text-decoration: inherit;">phone_<wbr>number</a>
@@ -3526,16 +3180,13 @@ The following state arguments are supported:
         <span class="property-type">str</span>
     </dt>
     <dd>{{% md %}}The phone number of the SMS receiver.
-{{% /md %}}</dd>
-</dl>
+{{% /md %}}</dd></dl>
 {{% /choosable %}}
 
 <h4 id="actiongroupvoicereceiver">Action<wbr>Group<wbr>Voice<wbr>Receiver</h4>
 
 {{% choosable language csharp %}}
-<dl class="resources-properties">
-
-    <dt class="property-required"
+<dl class="resources-properties"><dt class="property-required"
             title="Required">
         <span id="countrycode_csharp">
 <a href="#countrycode_csharp" style="color: inherit; text-decoration: inherit;">Country<wbr>Code</a>
@@ -3544,8 +3195,7 @@ The following state arguments are supported:
         <span class="property-type">string</span>
     </dt>
     <dd>{{% md %}}The country code of the voice receiver.
-{{% /md %}}</dd>
-    <dt class="property-required"
+{{% /md %}}</dd><dt class="property-required"
             title="Required">
         <span id="name_csharp">
 <a href="#name_csharp" style="color: inherit; text-decoration: inherit;">Name</a>
@@ -3554,8 +3204,7 @@ The following state arguments are supported:
         <span class="property-type">string</span>
     </dt>
     <dd>{{% md %}}The name of the voice receiver.
-{{% /md %}}</dd>
-    <dt class="property-required"
+{{% /md %}}</dd><dt class="property-required"
             title="Required">
         <span id="phonenumber_csharp">
 <a href="#phonenumber_csharp" style="color: inherit; text-decoration: inherit;">Phone<wbr>Number</a>
@@ -3564,14 +3213,11 @@ The following state arguments are supported:
         <span class="property-type">string</span>
     </dt>
     <dd>{{% md %}}The phone number of the voice receiver.
-{{% /md %}}</dd>
-</dl>
+{{% /md %}}</dd></dl>
 {{% /choosable %}}
 
 {{% choosable language go %}}
-<dl class="resources-properties">
-
-    <dt class="property-required"
+<dl class="resources-properties"><dt class="property-required"
             title="Required">
         <span id="countrycode_go">
 <a href="#countrycode_go" style="color: inherit; text-decoration: inherit;">Country<wbr>Code</a>
@@ -3580,8 +3226,7 @@ The following state arguments are supported:
         <span class="property-type">string</span>
     </dt>
     <dd>{{% md %}}The country code of the voice receiver.
-{{% /md %}}</dd>
-    <dt class="property-required"
+{{% /md %}}</dd><dt class="property-required"
             title="Required">
         <span id="name_go">
 <a href="#name_go" style="color: inherit; text-decoration: inherit;">Name</a>
@@ -3590,8 +3235,7 @@ The following state arguments are supported:
         <span class="property-type">string</span>
     </dt>
     <dd>{{% md %}}The name of the voice receiver.
-{{% /md %}}</dd>
-    <dt class="property-required"
+{{% /md %}}</dd><dt class="property-required"
             title="Required">
         <span id="phonenumber_go">
 <a href="#phonenumber_go" style="color: inherit; text-decoration: inherit;">Phone<wbr>Number</a>
@@ -3600,14 +3244,11 @@ The following state arguments are supported:
         <span class="property-type">string</span>
     </dt>
     <dd>{{% md %}}The phone number of the voice receiver.
-{{% /md %}}</dd>
-</dl>
+{{% /md %}}</dd></dl>
 {{% /choosable %}}
 
 {{% choosable language nodejs %}}
-<dl class="resources-properties">
-
-    <dt class="property-required"
+<dl class="resources-properties"><dt class="property-required"
             title="Required">
         <span id="countrycode_nodejs">
 <a href="#countrycode_nodejs" style="color: inherit; text-decoration: inherit;">country<wbr>Code</a>
@@ -3616,8 +3257,7 @@ The following state arguments are supported:
         <span class="property-type">string</span>
     </dt>
     <dd>{{% md %}}The country code of the voice receiver.
-{{% /md %}}</dd>
-    <dt class="property-required"
+{{% /md %}}</dd><dt class="property-required"
             title="Required">
         <span id="name_nodejs">
 <a href="#name_nodejs" style="color: inherit; text-decoration: inherit;">name</a>
@@ -3626,8 +3266,7 @@ The following state arguments are supported:
         <span class="property-type">string</span>
     </dt>
     <dd>{{% md %}}The name of the voice receiver.
-{{% /md %}}</dd>
-    <dt class="property-required"
+{{% /md %}}</dd><dt class="property-required"
             title="Required">
         <span id="phonenumber_nodejs">
 <a href="#phonenumber_nodejs" style="color: inherit; text-decoration: inherit;">phone<wbr>Number</a>
@@ -3636,14 +3275,11 @@ The following state arguments are supported:
         <span class="property-type">string</span>
     </dt>
     <dd>{{% md %}}The phone number of the voice receiver.
-{{% /md %}}</dd>
-</dl>
+{{% /md %}}</dd></dl>
 {{% /choosable %}}
 
 {{% choosable language python %}}
-<dl class="resources-properties">
-
-    <dt class="property-required"
+<dl class="resources-properties"><dt class="property-required"
             title="Required">
         <span id="country_code_python">
 <a href="#country_code_python" style="color: inherit; text-decoration: inherit;">country_<wbr>code</a>
@@ -3652,8 +3288,7 @@ The following state arguments are supported:
         <span class="property-type">str</span>
     </dt>
     <dd>{{% md %}}The country code of the voice receiver.
-{{% /md %}}</dd>
-    <dt class="property-required"
+{{% /md %}}</dd><dt class="property-required"
             title="Required">
         <span id="name_python">
 <a href="#name_python" style="color: inherit; text-decoration: inherit;">name</a>
@@ -3662,8 +3297,7 @@ The following state arguments are supported:
         <span class="property-type">str</span>
     </dt>
     <dd>{{% md %}}The name of the voice receiver.
-{{% /md %}}</dd>
-    <dt class="property-required"
+{{% /md %}}</dd><dt class="property-required"
             title="Required">
         <span id="phone_number_python">
 <a href="#phone_number_python" style="color: inherit; text-decoration: inherit;">phone_<wbr>number</a>
@@ -3672,16 +3306,13 @@ The following state arguments are supported:
         <span class="property-type">str</span>
     </dt>
     <dd>{{% md %}}The phone number of the voice receiver.
-{{% /md %}}</dd>
-</dl>
+{{% /md %}}</dd></dl>
 {{% /choosable %}}
 
 <h4 id="actiongroupwebhookreceiver">Action<wbr>Group<wbr>Webhook<wbr>Receiver</h4>
 
 {{% choosable language csharp %}}
-<dl class="resources-properties">
-
-    <dt class="property-required"
+<dl class="resources-properties"><dt class="property-required"
             title="Required">
         <span id="name_csharp">
 <a href="#name_csharp" style="color: inherit; text-decoration: inherit;">Name</a>
@@ -3690,8 +3321,7 @@ The following state arguments are supported:
         <span class="property-type">string</span>
     </dt>
     <dd>{{% md %}}The name of the webhook receiver. Names must be unique (case-insensitive) across all receivers within an action group.
-{{% /md %}}</dd>
-    <dt class="property-required"
+{{% /md %}}</dd><dt class="property-required"
             title="Required">
         <span id="serviceuri_csharp">
 <a href="#serviceuri_csharp" style="color: inherit; text-decoration: inherit;">Service<wbr>Uri</a>
@@ -3700,8 +3330,7 @@ The following state arguments are supported:
         <span class="property-type">string</span>
     </dt>
     <dd>{{% md %}}The URI where webhooks should be sent.
-{{% /md %}}</dd>
-    <dt class="property-optional"
+{{% /md %}}</dd><dt class="property-optional"
             title="Optional">
         <span id="aadauth_csharp">
 <a href="#aadauth_csharp" style="color: inherit; text-decoration: inherit;">Aad<wbr>Auth</a>
@@ -3710,8 +3339,7 @@ The following state arguments are supported:
         <span class="property-type"><a href="#actiongroupwebhookreceiveraadauth">Action<wbr>Group<wbr>Webhook<wbr>Receiver<wbr>Aad<wbr>Auth<wbr>Args</a></span>
     </dt>
     <dd>{{% md %}}The `aad_auth` block as defined below
-{{% /md %}}</dd>
-    <dt class="property-optional"
+{{% /md %}}</dd><dt class="property-optional"
             title="Optional">
         <span id="usecommonalertschema_csharp">
 <a href="#usecommonalertschema_csharp" style="color: inherit; text-decoration: inherit;">Use<wbr>Common<wbr>Alert<wbr>Schema</a>
@@ -3720,14 +3348,11 @@ The following state arguments are supported:
         <span class="property-type">bool</span>
     </dt>
     <dd>{{% md %}}Enables or disables the common alert schema.
-{{% /md %}}</dd>
-</dl>
+{{% /md %}}</dd></dl>
 {{% /choosable %}}
 
 {{% choosable language go %}}
-<dl class="resources-properties">
-
-    <dt class="property-required"
+<dl class="resources-properties"><dt class="property-required"
             title="Required">
         <span id="name_go">
 <a href="#name_go" style="color: inherit; text-decoration: inherit;">Name</a>
@@ -3736,8 +3361,7 @@ The following state arguments are supported:
         <span class="property-type">string</span>
     </dt>
     <dd>{{% md %}}The name of the webhook receiver. Names must be unique (case-insensitive) across all receivers within an action group.
-{{% /md %}}</dd>
-    <dt class="property-required"
+{{% /md %}}</dd><dt class="property-required"
             title="Required">
         <span id="serviceuri_go">
 <a href="#serviceuri_go" style="color: inherit; text-decoration: inherit;">Service<wbr>Uri</a>
@@ -3746,8 +3370,7 @@ The following state arguments are supported:
         <span class="property-type">string</span>
     </dt>
     <dd>{{% md %}}The URI where webhooks should be sent.
-{{% /md %}}</dd>
-    <dt class="property-optional"
+{{% /md %}}</dd><dt class="property-optional"
             title="Optional">
         <span id="aadauth_go">
 <a href="#aadauth_go" style="color: inherit; text-decoration: inherit;">Aad<wbr>Auth</a>
@@ -3756,8 +3379,7 @@ The following state arguments are supported:
         <span class="property-type"><a href="#actiongroupwebhookreceiveraadauth">Action<wbr>Group<wbr>Webhook<wbr>Receiver<wbr>Aad<wbr>Auth</a></span>
     </dt>
     <dd>{{% md %}}The `aad_auth` block as defined below
-{{% /md %}}</dd>
-    <dt class="property-optional"
+{{% /md %}}</dd><dt class="property-optional"
             title="Optional">
         <span id="usecommonalertschema_go">
 <a href="#usecommonalertschema_go" style="color: inherit; text-decoration: inherit;">Use<wbr>Common<wbr>Alert<wbr>Schema</a>
@@ -3766,14 +3388,11 @@ The following state arguments are supported:
         <span class="property-type">bool</span>
     </dt>
     <dd>{{% md %}}Enables or disables the common alert schema.
-{{% /md %}}</dd>
-</dl>
+{{% /md %}}</dd></dl>
 {{% /choosable %}}
 
 {{% choosable language nodejs %}}
-<dl class="resources-properties">
-
-    <dt class="property-required"
+<dl class="resources-properties"><dt class="property-required"
             title="Required">
         <span id="name_nodejs">
 <a href="#name_nodejs" style="color: inherit; text-decoration: inherit;">name</a>
@@ -3782,8 +3401,7 @@ The following state arguments are supported:
         <span class="property-type">string</span>
     </dt>
     <dd>{{% md %}}The name of the webhook receiver. Names must be unique (case-insensitive) across all receivers within an action group.
-{{% /md %}}</dd>
-    <dt class="property-required"
+{{% /md %}}</dd><dt class="property-required"
             title="Required">
         <span id="serviceuri_nodejs">
 <a href="#serviceuri_nodejs" style="color: inherit; text-decoration: inherit;">service<wbr>Uri</a>
@@ -3792,8 +3410,7 @@ The following state arguments are supported:
         <span class="property-type">string</span>
     </dt>
     <dd>{{% md %}}The URI where webhooks should be sent.
-{{% /md %}}</dd>
-    <dt class="property-optional"
+{{% /md %}}</dd><dt class="property-optional"
             title="Optional">
         <span id="aadauth_nodejs">
 <a href="#aadauth_nodejs" style="color: inherit; text-decoration: inherit;">aad<wbr>Auth</a>
@@ -3802,8 +3419,7 @@ The following state arguments are supported:
         <span class="property-type"><a href="#actiongroupwebhookreceiveraadauth">Action<wbr>Group<wbr>Webhook<wbr>Receiver<wbr>Aad<wbr>Auth</a></span>
     </dt>
     <dd>{{% md %}}The `aad_auth` block as defined below
-{{% /md %}}</dd>
-    <dt class="property-optional"
+{{% /md %}}</dd><dt class="property-optional"
             title="Optional">
         <span id="usecommonalertschema_nodejs">
 <a href="#usecommonalertschema_nodejs" style="color: inherit; text-decoration: inherit;">use<wbr>Common<wbr>Alert<wbr>Schema</a>
@@ -3812,14 +3428,11 @@ The following state arguments are supported:
         <span class="property-type">boolean</span>
     </dt>
     <dd>{{% md %}}Enables or disables the common alert schema.
-{{% /md %}}</dd>
-</dl>
+{{% /md %}}</dd></dl>
 {{% /choosable %}}
 
 {{% choosable language python %}}
-<dl class="resources-properties">
-
-    <dt class="property-required"
+<dl class="resources-properties"><dt class="property-required"
             title="Required">
         <span id="name_python">
 <a href="#name_python" style="color: inherit; text-decoration: inherit;">name</a>
@@ -3828,8 +3441,7 @@ The following state arguments are supported:
         <span class="property-type">str</span>
     </dt>
     <dd>{{% md %}}The name of the webhook receiver. Names must be unique (case-insensitive) across all receivers within an action group.
-{{% /md %}}</dd>
-    <dt class="property-required"
+{{% /md %}}</dd><dt class="property-required"
             title="Required">
         <span id="service_uri_python">
 <a href="#service_uri_python" style="color: inherit; text-decoration: inherit;">service_<wbr>uri</a>
@@ -3838,8 +3450,7 @@ The following state arguments are supported:
         <span class="property-type">str</span>
     </dt>
     <dd>{{% md %}}The URI where webhooks should be sent.
-{{% /md %}}</dd>
-    <dt class="property-optional"
+{{% /md %}}</dd><dt class="property-optional"
             title="Optional">
         <span id="aad_auth_python">
 <a href="#aad_auth_python" style="color: inherit; text-decoration: inherit;">aad_<wbr>auth</a>
@@ -3848,8 +3459,7 @@ The following state arguments are supported:
         <span class="property-type"><a href="#actiongroupwebhookreceiveraadauth">Action<wbr>Group<wbr>Webhook<wbr>Receiver<wbr>Aad<wbr>Auth<wbr>Args</a></span>
     </dt>
     <dd>{{% md %}}The `aad_auth` block as defined below
-{{% /md %}}</dd>
-    <dt class="property-optional"
+{{% /md %}}</dd><dt class="property-optional"
             title="Optional">
         <span id="use_common_alert_schema_python">
 <a href="#use_common_alert_schema_python" style="color: inherit; text-decoration: inherit;">use_<wbr>common_<wbr>alert_<wbr>schema</a>
@@ -3858,16 +3468,13 @@ The following state arguments are supported:
         <span class="property-type">bool</span>
     </dt>
     <dd>{{% md %}}Enables or disables the common alert schema.
-{{% /md %}}</dd>
-</dl>
+{{% /md %}}</dd></dl>
 {{% /choosable %}}
 
 <h4 id="actiongroupwebhookreceiveraadauth">Action<wbr>Group<wbr>Webhook<wbr>Receiver<wbr>Aad<wbr>Auth</h4>
 
 {{% choosable language csharp %}}
-<dl class="resources-properties">
-
-    <dt class="property-required"
+<dl class="resources-properties"><dt class="property-required"
             title="Required">
         <span id="objectid_csharp">
 <a href="#objectid_csharp" style="color: inherit; text-decoration: inherit;">Object<wbr>Id</a>
@@ -3876,8 +3483,7 @@ The following state arguments are supported:
         <span class="property-type">string</span>
     </dt>
     <dd>{{% md %}}The webhook application object Id for aad auth.
-{{% /md %}}</dd>
-    <dt class="property-optional"
+{{% /md %}}</dd><dt class="property-optional"
             title="Optional">
         <span id="identifieruri_csharp">
 <a href="#identifieruri_csharp" style="color: inherit; text-decoration: inherit;">Identifier<wbr>Uri</a>
@@ -3886,8 +3492,7 @@ The following state arguments are supported:
         <span class="property-type">string</span>
     </dt>
     <dd>{{% md %}}The identifier uri for aad auth.
-{{% /md %}}</dd>
-    <dt class="property-optional"
+{{% /md %}}</dd><dt class="property-optional"
             title="Optional">
         <span id="tenantid_csharp">
 <a href="#tenantid_csharp" style="color: inherit; text-decoration: inherit;">Tenant<wbr>Id</a>
@@ -3896,14 +3501,11 @@ The following state arguments are supported:
         <span class="property-type">string</span>
     </dt>
     <dd>{{% md %}}The tenant id for aad auth.
-{{% /md %}}</dd>
-</dl>
+{{% /md %}}</dd></dl>
 {{% /choosable %}}
 
 {{% choosable language go %}}
-<dl class="resources-properties">
-
-    <dt class="property-required"
+<dl class="resources-properties"><dt class="property-required"
             title="Required">
         <span id="objectid_go">
 <a href="#objectid_go" style="color: inherit; text-decoration: inherit;">Object<wbr>Id</a>
@@ -3912,8 +3514,7 @@ The following state arguments are supported:
         <span class="property-type">string</span>
     </dt>
     <dd>{{% md %}}The webhook application object Id for aad auth.
-{{% /md %}}</dd>
-    <dt class="property-optional"
+{{% /md %}}</dd><dt class="property-optional"
             title="Optional">
         <span id="identifieruri_go">
 <a href="#identifieruri_go" style="color: inherit; text-decoration: inherit;">Identifier<wbr>Uri</a>
@@ -3922,8 +3523,7 @@ The following state arguments are supported:
         <span class="property-type">string</span>
     </dt>
     <dd>{{% md %}}The identifier uri for aad auth.
-{{% /md %}}</dd>
-    <dt class="property-optional"
+{{% /md %}}</dd><dt class="property-optional"
             title="Optional">
         <span id="tenantid_go">
 <a href="#tenantid_go" style="color: inherit; text-decoration: inherit;">Tenant<wbr>Id</a>
@@ -3932,14 +3532,11 @@ The following state arguments are supported:
         <span class="property-type">string</span>
     </dt>
     <dd>{{% md %}}The tenant id for aad auth.
-{{% /md %}}</dd>
-</dl>
+{{% /md %}}</dd></dl>
 {{% /choosable %}}
 
 {{% choosable language nodejs %}}
-<dl class="resources-properties">
-
-    <dt class="property-required"
+<dl class="resources-properties"><dt class="property-required"
             title="Required">
         <span id="objectid_nodejs">
 <a href="#objectid_nodejs" style="color: inherit; text-decoration: inherit;">object<wbr>Id</a>
@@ -3948,8 +3545,7 @@ The following state arguments are supported:
         <span class="property-type">string</span>
     </dt>
     <dd>{{% md %}}The webhook application object Id for aad auth.
-{{% /md %}}</dd>
-    <dt class="property-optional"
+{{% /md %}}</dd><dt class="property-optional"
             title="Optional">
         <span id="identifieruri_nodejs">
 <a href="#identifieruri_nodejs" style="color: inherit; text-decoration: inherit;">identifier<wbr>Uri</a>
@@ -3958,8 +3554,7 @@ The following state arguments are supported:
         <span class="property-type">string</span>
     </dt>
     <dd>{{% md %}}The identifier uri for aad auth.
-{{% /md %}}</dd>
-    <dt class="property-optional"
+{{% /md %}}</dd><dt class="property-optional"
             title="Optional">
         <span id="tenantid_nodejs">
 <a href="#tenantid_nodejs" style="color: inherit; text-decoration: inherit;">tenant<wbr>Id</a>
@@ -3968,14 +3563,11 @@ The following state arguments are supported:
         <span class="property-type">string</span>
     </dt>
     <dd>{{% md %}}The tenant id for aad auth.
-{{% /md %}}</dd>
-</dl>
+{{% /md %}}</dd></dl>
 {{% /choosable %}}
 
 {{% choosable language python %}}
-<dl class="resources-properties">
-
-    <dt class="property-required"
+<dl class="resources-properties"><dt class="property-required"
             title="Required">
         <span id="object_id_python">
 <a href="#object_id_python" style="color: inherit; text-decoration: inherit;">object_<wbr>id</a>
@@ -3984,8 +3576,7 @@ The following state arguments are supported:
         <span class="property-type">str</span>
     </dt>
     <dd>{{% md %}}The webhook application object Id for aad auth.
-{{% /md %}}</dd>
-    <dt class="property-optional"
+{{% /md %}}</dd><dt class="property-optional"
             title="Optional">
         <span id="identifier_uri_python">
 <a href="#identifier_uri_python" style="color: inherit; text-decoration: inherit;">identifier_<wbr>uri</a>
@@ -3994,8 +3585,7 @@ The following state arguments are supported:
         <span class="property-type">str</span>
     </dt>
     <dd>{{% md %}}The identifier uri for aad auth.
-{{% /md %}}</dd>
-    <dt class="property-optional"
+{{% /md %}}</dd><dt class="property-optional"
             title="Optional">
         <span id="tenant_id_python">
 <a href="#tenant_id_python" style="color: inherit; text-decoration: inherit;">tenant_<wbr>id</a>
@@ -4004,8 +3594,7 @@ The following state arguments are supported:
         <span class="property-type">str</span>
     </dt>
     <dd>{{% md %}}The tenant id for aad auth.
-{{% /md %}}</dd>
-</dl>
+{{% /md %}}</dd></dl>
 {{% /choosable %}}
 ## Import
 
@@ -4026,6 +3615,6 @@ Action Groups can be imported using the `resource id`, e.g.
 	<dt>License</dt>
 	<dd>Apache-2.0</dd>
 	<dt>Notes</dt>
-	<dd>This Pulumi package is based on the [`azurerm` Terraform Provider](https://github.com/terraform-providers/terraform-provider-azurerm).</dd>
+	<dd>{{% md %}}This Pulumi package is based on the [`azurerm` Terraform Provider](https://github.com/terraform-providers/terraform-provider-azurerm).{{% /md %}}</dd>
 </dl>
 

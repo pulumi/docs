@@ -14,11 +14,17 @@ Provides a DigitalOcean Cloud Firewall resource. This can be used to create,
 modify, and delete Firewalls.
 
 {{% examples %}}
+
 ## Example Usage
 
 {{< chooser language "typescript,python,go,csharp" / >}}
 
-{{% example csharp %}}
+
+
+
+
+{{< example csharp >}}
+
 ```csharp
 using Pulumi;
 using DigitalOcean = Pulumi.DigitalOcean;
@@ -119,13 +125,19 @@ class MyStack : Stack
 }
 ```
 
-{{% /example %}}
 
-{{% example go %}}
+{{< /example >}}
+
+
+{{< example go >}}
+
 Coming soon!
-{{% /example %}}
 
-{{% example python %}}
+{{< /example >}}
+
+
+{{< example python >}}
+
 ```python
 import pulumi
 import pulumi_digitalocean as digitalocean
@@ -196,9 +208,12 @@ web_firewall = digitalocean.Firewall("webFirewall",
     ])
 ```
 
-{{% /example %}}
 
-{{% example typescript %}}
+{{< /example >}}
+
+
+{{< example typescript >}}
+
 
 ```typescript
 import * as pulumi from "@pulumi/pulumi";
@@ -272,9 +287,16 @@ const webFirewall = new digitalocean.Firewall("webFirewall", {
 });
 ```
 
-{{% /example %}}
+
+{{< /example >}}
+
+
+
+
 
 {{% /examples %}}
+
+
 
 
 ## Create a Firewall Resource {#create}
@@ -299,9 +321,7 @@ const webFirewall = new digitalocean.Firewall("webFirewall", {
 
 {{% choosable language nodejs %}}
 
-<dl class="resources-properties">
-  
-    <dt
+<dl class="resources-properties"><dt
         class="property-required" title="Required">
         <span>name</span>
         <span class="property-indicator"></span>
@@ -309,9 +329,7 @@ const webFirewall = new digitalocean.Firewall("webFirewall", {
     </dt>
     <dd>
       The unique name of the resource.
-    </dd>
-  
-    <dt
+    </dd><dt
         class="property-optional" title="Optional">
         <span>args</span>
         <span class="property-indicator"></span>
@@ -319,9 +337,7 @@ const webFirewall = new digitalocean.Firewall("webFirewall", {
     </dt>
     <dd>
       The arguments to resource properties.
-    </dd>
-  
-    <dt
+    </dd><dt
         class="property-optional" title="Optional">
         <span>opts</span>
         <span class="property-indicator"></span>
@@ -329,10 +345,7 @@ const webFirewall = new digitalocean.Firewall("webFirewall", {
     </dt>
     <dd>
       Bag of options to control resource&#39;s behavior.
-    </dd>
-  
-
-</dl>
+    </dd></dl>
 
 {{% /choosable %}}
 
@@ -358,9 +371,7 @@ const webFirewall = new digitalocean.Firewall("webFirewall", {
 
 {{% choosable language go %}}
 
-<dl class="resources-properties">
-  
-    <dt
+<dl class="resources-properties"><dt
         class="property-optional" title="Optional">
         <span>ctx</span>
         <span class="property-indicator"></span>
@@ -368,9 +379,7 @@ const webFirewall = new digitalocean.Firewall("webFirewall", {
     </dt>
     <dd>
       Context object for the current deployment.
-    </dd>
-  
-    <dt
+    </dd><dt
         class="property-required" title="Required">
         <span>name</span>
         <span class="property-indicator"></span>
@@ -378,9 +387,7 @@ const webFirewall = new digitalocean.Firewall("webFirewall", {
     </dt>
     <dd>
       The unique name of the resource.
-    </dd>
-  
-    <dt
+    </dd><dt
         class="property-optional" title="Optional">
         <span>args</span>
         <span class="property-indicator"></span>
@@ -388,9 +395,7 @@ const webFirewall = new digitalocean.Firewall("webFirewall", {
     </dt>
     <dd>
       The arguments to resource properties.
-    </dd>
-  
-    <dt
+    </dd><dt
         class="property-optional" title="Optional">
         <span>opts</span>
         <span class="property-indicator"></span>
@@ -398,18 +403,13 @@ const webFirewall = new digitalocean.Firewall("webFirewall", {
     </dt>
     <dd>
       Bag of options to control resource&#39;s behavior.
-    </dd>
-  
-
-</dl>
+    </dd></dl>
 
 {{% /choosable %}}
 
 {{% choosable language csharp %}}
 
-<dl class="resources-properties">
-  
-    <dt
+<dl class="resources-properties"><dt
         class="property-required" title="Required">
         <span>name</span>
         <span class="property-indicator"></span>
@@ -417,9 +417,7 @@ const webFirewall = new digitalocean.Firewall("webFirewall", {
     </dt>
     <dd>
       The unique name of the resource.
-    </dd>
-  
-    <dt
+    </dd><dt
         class="property-optional" title="Optional">
         <span>args</span>
         <span class="property-indicator"></span>
@@ -427,9 +425,7 @@ const webFirewall = new digitalocean.Firewall("webFirewall", {
     </dt>
     <dd>
       The arguments to resource properties.
-    </dd>
-  
-    <dt
+    </dd><dt
         class="property-optional" title="Optional">
         <span>opts</span>
         <span class="property-indicator"></span>
@@ -437,10 +433,7 @@ const webFirewall = new digitalocean.Firewall("webFirewall", {
     </dt>
     <dd>
       Bag of options to control resource&#39;s behavior.
-    </dd>
-  
-
-</dl>
+    </dd></dl>
 
 {{% /choosable %}}
 
@@ -455,9 +448,7 @@ The Firewall resource accepts the following [input]({{< relref "/docs/intro/conc
 
 
 {{% choosable language csharp %}}
-<dl class="resources-properties">
-
-    <dt class="property-optional"
+<dl class="resources-properties"><dt class="property-optional"
             title="Optional">
         <span id="dropletids_csharp">
 <a href="#dropletids_csharp" style="color: inherit; text-decoration: inherit;">Droplet<wbr>Ids</a>
@@ -467,8 +458,7 @@ The Firewall resource accepts the following [input]({{< relref "/docs/intro/conc
     </dt>
     <dd>{{% md %}}The list of the IDs of the Droplets assigned
 to the Firewall.
-{{% /md %}}</dd>
-    <dt class="property-optional"
+{{% /md %}}</dd><dt class="property-optional"
             title="Optional">
         <span id="inboundrules_csharp">
 <a href="#inboundrules_csharp" style="color: inherit; text-decoration: inherit;">Inbound<wbr>Rules</a>
@@ -478,8 +468,7 @@ to the Firewall.
     </dt>
     <dd>{{% md %}}The inbound access rule block for the Firewall.
 The `inbound_rule` block is documented below.
-{{% /md %}}</dd>
-    <dt class="property-optional"
+{{% /md %}}</dd><dt class="property-optional"
             title="Optional">
         <span id="name_csharp">
 <a href="#name_csharp" style="color: inherit; text-decoration: inherit;">Name</a>
@@ -488,8 +477,7 @@ The `inbound_rule` block is documented below.
         <span class="property-type">string</span>
     </dt>
     <dd>{{% md %}}The Firewall name
-{{% /md %}}</dd>
-    <dt class="property-optional"
+{{% /md %}}</dd><dt class="property-optional"
             title="Optional">
         <span id="outboundrules_csharp">
 <a href="#outboundrules_csharp" style="color: inherit; text-decoration: inherit;">Outbound<wbr>Rules</a>
@@ -499,8 +487,7 @@ The `inbound_rule` block is documented below.
     </dt>
     <dd>{{% md %}}The outbound access rule block for the Firewall.
 The `outbound_rule` block is documented below.
-{{% /md %}}</dd>
-    <dt class="property-optional"
+{{% /md %}}</dd><dt class="property-optional"
             title="Optional">
         <span id="tags_csharp">
 <a href="#tags_csharp" style="color: inherit; text-decoration: inherit;">Tags</a>
@@ -509,14 +496,11 @@ The `outbound_rule` block is documented below.
         <span class="property-type">List&lt;string&gt;</span>
     </dt>
     <dd>{{% md %}}The names of the Tags assigned to the Firewall.
-{{% /md %}}</dd>
-</dl>
+{{% /md %}}</dd></dl>
 {{% /choosable %}}
 
 {{% choosable language go %}}
-<dl class="resources-properties">
-
-    <dt class="property-optional"
+<dl class="resources-properties"><dt class="property-optional"
             title="Optional">
         <span id="dropletids_go">
 <a href="#dropletids_go" style="color: inherit; text-decoration: inherit;">Droplet<wbr>Ids</a>
@@ -526,8 +510,7 @@ The `outbound_rule` block is documented below.
     </dt>
     <dd>{{% md %}}The list of the IDs of the Droplets assigned
 to the Firewall.
-{{% /md %}}</dd>
-    <dt class="property-optional"
+{{% /md %}}</dd><dt class="property-optional"
             title="Optional">
         <span id="inboundrules_go">
 <a href="#inboundrules_go" style="color: inherit; text-decoration: inherit;">Inbound<wbr>Rules</a>
@@ -537,8 +520,7 @@ to the Firewall.
     </dt>
     <dd>{{% md %}}The inbound access rule block for the Firewall.
 The `inbound_rule` block is documented below.
-{{% /md %}}</dd>
-    <dt class="property-optional"
+{{% /md %}}</dd><dt class="property-optional"
             title="Optional">
         <span id="name_go">
 <a href="#name_go" style="color: inherit; text-decoration: inherit;">Name</a>
@@ -547,8 +529,7 @@ The `inbound_rule` block is documented below.
         <span class="property-type">string</span>
     </dt>
     <dd>{{% md %}}The Firewall name
-{{% /md %}}</dd>
-    <dt class="property-optional"
+{{% /md %}}</dd><dt class="property-optional"
             title="Optional">
         <span id="outboundrules_go">
 <a href="#outboundrules_go" style="color: inherit; text-decoration: inherit;">Outbound<wbr>Rules</a>
@@ -558,8 +539,7 @@ The `inbound_rule` block is documented below.
     </dt>
     <dd>{{% md %}}The outbound access rule block for the Firewall.
 The `outbound_rule` block is documented below.
-{{% /md %}}</dd>
-    <dt class="property-optional"
+{{% /md %}}</dd><dt class="property-optional"
             title="Optional">
         <span id="tags_go">
 <a href="#tags_go" style="color: inherit; text-decoration: inherit;">Tags</a>
@@ -568,14 +548,11 @@ The `outbound_rule` block is documented below.
         <span class="property-type">[]string</span>
     </dt>
     <dd>{{% md %}}The names of the Tags assigned to the Firewall.
-{{% /md %}}</dd>
-</dl>
+{{% /md %}}</dd></dl>
 {{% /choosable %}}
 
 {{% choosable language nodejs %}}
-<dl class="resources-properties">
-
-    <dt class="property-optional"
+<dl class="resources-properties"><dt class="property-optional"
             title="Optional">
         <span id="dropletids_nodejs">
 <a href="#dropletids_nodejs" style="color: inherit; text-decoration: inherit;">droplet<wbr>Ids</a>
@@ -585,8 +562,7 @@ The `outbound_rule` block is documented below.
     </dt>
     <dd>{{% md %}}The list of the IDs of the Droplets assigned
 to the Firewall.
-{{% /md %}}</dd>
-    <dt class="property-optional"
+{{% /md %}}</dd><dt class="property-optional"
             title="Optional">
         <span id="inboundrules_nodejs">
 <a href="#inboundrules_nodejs" style="color: inherit; text-decoration: inherit;">inbound<wbr>Rules</a>
@@ -596,8 +572,7 @@ to the Firewall.
     </dt>
     <dd>{{% md %}}The inbound access rule block for the Firewall.
 The `inbound_rule` block is documented below.
-{{% /md %}}</dd>
-    <dt class="property-optional"
+{{% /md %}}</dd><dt class="property-optional"
             title="Optional">
         <span id="name_nodejs">
 <a href="#name_nodejs" style="color: inherit; text-decoration: inherit;">name</a>
@@ -606,8 +581,7 @@ The `inbound_rule` block is documented below.
         <span class="property-type">string</span>
     </dt>
     <dd>{{% md %}}The Firewall name
-{{% /md %}}</dd>
-    <dt class="property-optional"
+{{% /md %}}</dd><dt class="property-optional"
             title="Optional">
         <span id="outboundrules_nodejs">
 <a href="#outboundrules_nodejs" style="color: inherit; text-decoration: inherit;">outbound<wbr>Rules</a>
@@ -617,8 +591,7 @@ The `inbound_rule` block is documented below.
     </dt>
     <dd>{{% md %}}The outbound access rule block for the Firewall.
 The `outbound_rule` block is documented below.
-{{% /md %}}</dd>
-    <dt class="property-optional"
+{{% /md %}}</dd><dt class="property-optional"
             title="Optional">
         <span id="tags_nodejs">
 <a href="#tags_nodejs" style="color: inherit; text-decoration: inherit;">tags</a>
@@ -627,14 +600,11 @@ The `outbound_rule` block is documented below.
         <span class="property-type">string[]</span>
     </dt>
     <dd>{{% md %}}The names of the Tags assigned to the Firewall.
-{{% /md %}}</dd>
-</dl>
+{{% /md %}}</dd></dl>
 {{% /choosable %}}
 
 {{% choosable language python %}}
-<dl class="resources-properties">
-
-    <dt class="property-optional"
+<dl class="resources-properties"><dt class="property-optional"
             title="Optional">
         <span id="droplet_ids_python">
 <a href="#droplet_ids_python" style="color: inherit; text-decoration: inherit;">droplet_<wbr>ids</a>
@@ -644,8 +614,7 @@ The `outbound_rule` block is documented below.
     </dt>
     <dd>{{% md %}}The list of the IDs of the Droplets assigned
 to the Firewall.
-{{% /md %}}</dd>
-    <dt class="property-optional"
+{{% /md %}}</dd><dt class="property-optional"
             title="Optional">
         <span id="inbound_rules_python">
 <a href="#inbound_rules_python" style="color: inherit; text-decoration: inherit;">inbound_<wbr>rules</a>
@@ -655,8 +624,7 @@ to the Firewall.
     </dt>
     <dd>{{% md %}}The inbound access rule block for the Firewall.
 The `inbound_rule` block is documented below.
-{{% /md %}}</dd>
-    <dt class="property-optional"
+{{% /md %}}</dd><dt class="property-optional"
             title="Optional">
         <span id="name_python">
 <a href="#name_python" style="color: inherit; text-decoration: inherit;">name</a>
@@ -665,8 +633,7 @@ The `inbound_rule` block is documented below.
         <span class="property-type">str</span>
     </dt>
     <dd>{{% md %}}The Firewall name
-{{% /md %}}</dd>
-    <dt class="property-optional"
+{{% /md %}}</dd><dt class="property-optional"
             title="Optional">
         <span id="outbound_rules_python">
 <a href="#outbound_rules_python" style="color: inherit; text-decoration: inherit;">outbound_<wbr>rules</a>
@@ -676,8 +643,7 @@ The `inbound_rule` block is documented below.
     </dt>
     <dd>{{% md %}}The outbound access rule block for the Firewall.
 The `outbound_rule` block is documented below.
-{{% /md %}}</dd>
-    <dt class="property-optional"
+{{% /md %}}</dd><dt class="property-optional"
             title="Optional">
         <span id="tags_python">
 <a href="#tags_python" style="color: inherit; text-decoration: inherit;">tags</a>
@@ -686,8 +652,7 @@ The `outbound_rule` block is documented below.
         <span class="property-type">Sequence[str]</span>
     </dt>
     <dd>{{% md %}}The names of the Tags assigned to the Firewall.
-{{% /md %}}</dd>
-</dl>
+{{% /md %}}</dd></dl>
 {{% /choosable %}}
 
 
@@ -698,9 +663,7 @@ All [input](#inputs) properties are implicitly available as output properties. A
 
 
 {{% choosable language csharp %}}
-<dl class="resources-properties">
-
-    <dt class="property-"
+<dl class="resources-properties"><dt class="property-"
             title="">
         <span id="createdat_csharp">
 <a href="#createdat_csharp" style="color: inherit; text-decoration: inherit;">Created<wbr>At</a>
@@ -710,8 +673,7 @@ All [input](#inputs) properties are implicitly available as output properties. A
     </dt>
     <dd>{{% md %}}A time value given in ISO8601 combined date and time format
 that represents when the Firewall was created.
-{{% /md %}}</dd>
-    <dt class="property-"
+{{% /md %}}</dd><dt class="property-"
             title="">
         <span id="id_csharp">
 <a href="#id_csharp" style="color: inherit; text-decoration: inherit;">Id</a>
@@ -719,8 +681,7 @@ that represents when the Firewall was created.
         <span class="property-indicator"></span>
         <span class="property-type">string</span>
     </dt>
-    <dd>{{% md %}}The provider-assigned unique ID for this managed resource.{{% /md %}}</dd>
-    <dt class="property-"
+    <dd>{{% md %}}The provider-assigned unique ID for this managed resource.{{% /md %}}</dd><dt class="property-"
             title="">
         <span id="pendingchanges_csharp">
 <a href="#pendingchanges_csharp" style="color: inherit; text-decoration: inherit;">Pending<wbr>Changes</a>
@@ -732,8 +693,7 @@ that represents when the Firewall was created.
 "removing", and "status".  It is provided to detail exactly which Droplets
 are having their security policies updated.  When empty, all changes
 have been successfully applied.
-{{% /md %}}</dd>
-    <dt class="property-"
+{{% /md %}}</dd><dt class="property-"
             title="">
         <span id="status_csharp">
 <a href="#status_csharp" style="color: inherit; text-decoration: inherit;">Status</a>
@@ -743,14 +703,11 @@ have been successfully applied.
     </dt>
     <dd>{{% md %}}A status string indicating the current state of the Firewall.
 This can be "waiting", "succeeded", or "failed".
-{{% /md %}}</dd>
-</dl>
+{{% /md %}}</dd></dl>
 {{% /choosable %}}
 
 {{% choosable language go %}}
-<dl class="resources-properties">
-
-    <dt class="property-"
+<dl class="resources-properties"><dt class="property-"
             title="">
         <span id="createdat_go">
 <a href="#createdat_go" style="color: inherit; text-decoration: inherit;">Created<wbr>At</a>
@@ -760,8 +717,7 @@ This can be "waiting", "succeeded", or "failed".
     </dt>
     <dd>{{% md %}}A time value given in ISO8601 combined date and time format
 that represents when the Firewall was created.
-{{% /md %}}</dd>
-    <dt class="property-"
+{{% /md %}}</dd><dt class="property-"
             title="">
         <span id="id_go">
 <a href="#id_go" style="color: inherit; text-decoration: inherit;">Id</a>
@@ -769,8 +725,7 @@ that represents when the Firewall was created.
         <span class="property-indicator"></span>
         <span class="property-type">string</span>
     </dt>
-    <dd>{{% md %}}The provider-assigned unique ID for this managed resource.{{% /md %}}</dd>
-    <dt class="property-"
+    <dd>{{% md %}}The provider-assigned unique ID for this managed resource.{{% /md %}}</dd><dt class="property-"
             title="">
         <span id="pendingchanges_go">
 <a href="#pendingchanges_go" style="color: inherit; text-decoration: inherit;">Pending<wbr>Changes</a>
@@ -782,8 +737,7 @@ that represents when the Firewall was created.
 "removing", and "status".  It is provided to detail exactly which Droplets
 are having their security policies updated.  When empty, all changes
 have been successfully applied.
-{{% /md %}}</dd>
-    <dt class="property-"
+{{% /md %}}</dd><dt class="property-"
             title="">
         <span id="status_go">
 <a href="#status_go" style="color: inherit; text-decoration: inherit;">Status</a>
@@ -793,14 +747,11 @@ have been successfully applied.
     </dt>
     <dd>{{% md %}}A status string indicating the current state of the Firewall.
 This can be "waiting", "succeeded", or "failed".
-{{% /md %}}</dd>
-</dl>
+{{% /md %}}</dd></dl>
 {{% /choosable %}}
 
 {{% choosable language nodejs %}}
-<dl class="resources-properties">
-
-    <dt class="property-"
+<dl class="resources-properties"><dt class="property-"
             title="">
         <span id="createdat_nodejs">
 <a href="#createdat_nodejs" style="color: inherit; text-decoration: inherit;">created<wbr>At</a>
@@ -810,8 +761,7 @@ This can be "waiting", "succeeded", or "failed".
     </dt>
     <dd>{{% md %}}A time value given in ISO8601 combined date and time format
 that represents when the Firewall was created.
-{{% /md %}}</dd>
-    <dt class="property-"
+{{% /md %}}</dd><dt class="property-"
             title="">
         <span id="id_nodejs">
 <a href="#id_nodejs" style="color: inherit; text-decoration: inherit;">id</a>
@@ -819,8 +769,7 @@ that represents when the Firewall was created.
         <span class="property-indicator"></span>
         <span class="property-type">string</span>
     </dt>
-    <dd>{{% md %}}The provider-assigned unique ID for this managed resource.{{% /md %}}</dd>
-    <dt class="property-"
+    <dd>{{% md %}}The provider-assigned unique ID for this managed resource.{{% /md %}}</dd><dt class="property-"
             title="">
         <span id="pendingchanges_nodejs">
 <a href="#pendingchanges_nodejs" style="color: inherit; text-decoration: inherit;">pending<wbr>Changes</a>
@@ -832,8 +781,7 @@ that represents when the Firewall was created.
 "removing", and "status".  It is provided to detail exactly which Droplets
 are having their security policies updated.  When empty, all changes
 have been successfully applied.
-{{% /md %}}</dd>
-    <dt class="property-"
+{{% /md %}}</dd><dt class="property-"
             title="">
         <span id="status_nodejs">
 <a href="#status_nodejs" style="color: inherit; text-decoration: inherit;">status</a>
@@ -843,14 +791,11 @@ have been successfully applied.
     </dt>
     <dd>{{% md %}}A status string indicating the current state of the Firewall.
 This can be "waiting", "succeeded", or "failed".
-{{% /md %}}</dd>
-</dl>
+{{% /md %}}</dd></dl>
 {{% /choosable %}}
 
 {{% choosable language python %}}
-<dl class="resources-properties">
-
-    <dt class="property-"
+<dl class="resources-properties"><dt class="property-"
             title="">
         <span id="created_at_python">
 <a href="#created_at_python" style="color: inherit; text-decoration: inherit;">created_<wbr>at</a>
@@ -860,8 +805,7 @@ This can be "waiting", "succeeded", or "failed".
     </dt>
     <dd>{{% md %}}A time value given in ISO8601 combined date and time format
 that represents when the Firewall was created.
-{{% /md %}}</dd>
-    <dt class="property-"
+{{% /md %}}</dd><dt class="property-"
             title="">
         <span id="id_python">
 <a href="#id_python" style="color: inherit; text-decoration: inherit;">id</a>
@@ -869,8 +813,7 @@ that represents when the Firewall was created.
         <span class="property-indicator"></span>
         <span class="property-type">str</span>
     </dt>
-    <dd>{{% md %}}The provider-assigned unique ID for this managed resource.{{% /md %}}</dd>
-    <dt class="property-"
+    <dd>{{% md %}}The provider-assigned unique ID for this managed resource.{{% /md %}}</dd><dt class="property-"
             title="">
         <span id="pending_changes_python">
 <a href="#pending_changes_python" style="color: inherit; text-decoration: inherit;">pending_<wbr>changes</a>
@@ -882,8 +825,7 @@ that represents when the Firewall was created.
 "removing", and "status".  It is provided to detail exactly which Droplets
 are having their security policies updated.  When empty, all changes
 have been successfully applied.
-{{% /md %}}</dd>
-    <dt class="property-"
+{{% /md %}}</dd><dt class="property-"
             title="">
         <span id="status_python">
 <a href="#status_python" style="color: inherit; text-decoration: inherit;">status</a>
@@ -893,8 +835,7 @@ have been successfully applied.
     </dt>
     <dd>{{% md %}}A status string indicating the current state of the Firewall.
 This can be "waiting", "succeeded", or "failed".
-{{% /md %}}</dd>
-</dl>
+{{% /md %}}</dd></dl>
 {{% /choosable %}}
 
 
@@ -1021,9 +962,7 @@ The following state arguments are supported:
 
 
 {{% choosable language csharp %}}
-<dl class="resources-properties">
-
-    <dt class="property-optional"
+<dl class="resources-properties"><dt class="property-optional"
             title="Optional">
         <span id="state_createdat_csharp">
 <a href="#state_createdat_csharp" style="color: inherit; text-decoration: inherit;">Created<wbr>At</a>
@@ -1033,8 +972,7 @@ The following state arguments are supported:
     </dt>
     <dd>{{% md %}}A time value given in ISO8601 combined date and time format
 that represents when the Firewall was created.
-{{% /md %}}</dd>
-    <dt class="property-optional"
+{{% /md %}}</dd><dt class="property-optional"
             title="Optional">
         <span id="state_dropletids_csharp">
 <a href="#state_dropletids_csharp" style="color: inherit; text-decoration: inherit;">Droplet<wbr>Ids</a>
@@ -1044,8 +982,7 @@ that represents when the Firewall was created.
     </dt>
     <dd>{{% md %}}The list of the IDs of the Droplets assigned
 to the Firewall.
-{{% /md %}}</dd>
-    <dt class="property-optional"
+{{% /md %}}</dd><dt class="property-optional"
             title="Optional">
         <span id="state_inboundrules_csharp">
 <a href="#state_inboundrules_csharp" style="color: inherit; text-decoration: inherit;">Inbound<wbr>Rules</a>
@@ -1055,8 +992,7 @@ to the Firewall.
     </dt>
     <dd>{{% md %}}The inbound access rule block for the Firewall.
 The `inbound_rule` block is documented below.
-{{% /md %}}</dd>
-    <dt class="property-optional"
+{{% /md %}}</dd><dt class="property-optional"
             title="Optional">
         <span id="state_name_csharp">
 <a href="#state_name_csharp" style="color: inherit; text-decoration: inherit;">Name</a>
@@ -1065,8 +1001,7 @@ The `inbound_rule` block is documented below.
         <span class="property-type">string</span>
     </dt>
     <dd>{{% md %}}The Firewall name
-{{% /md %}}</dd>
-    <dt class="property-optional"
+{{% /md %}}</dd><dt class="property-optional"
             title="Optional">
         <span id="state_outboundrules_csharp">
 <a href="#state_outboundrules_csharp" style="color: inherit; text-decoration: inherit;">Outbound<wbr>Rules</a>
@@ -1076,8 +1011,7 @@ The `inbound_rule` block is documented below.
     </dt>
     <dd>{{% md %}}The outbound access rule block for the Firewall.
 The `outbound_rule` block is documented below.
-{{% /md %}}</dd>
-    <dt class="property-optional"
+{{% /md %}}</dd><dt class="property-optional"
             title="Optional">
         <span id="state_pendingchanges_csharp">
 <a href="#state_pendingchanges_csharp" style="color: inherit; text-decoration: inherit;">Pending<wbr>Changes</a>
@@ -1089,8 +1023,7 @@ The `outbound_rule` block is documented below.
 "removing", and "status".  It is provided to detail exactly which Droplets
 are having their security policies updated.  When empty, all changes
 have been successfully applied.
-{{% /md %}}</dd>
-    <dt class="property-optional"
+{{% /md %}}</dd><dt class="property-optional"
             title="Optional">
         <span id="state_status_csharp">
 <a href="#state_status_csharp" style="color: inherit; text-decoration: inherit;">Status</a>
@@ -1100,8 +1033,7 @@ have been successfully applied.
     </dt>
     <dd>{{% md %}}A status string indicating the current state of the Firewall.
 This can be "waiting", "succeeded", or "failed".
-{{% /md %}}</dd>
-    <dt class="property-optional"
+{{% /md %}}</dd><dt class="property-optional"
             title="Optional">
         <span id="state_tags_csharp">
 <a href="#state_tags_csharp" style="color: inherit; text-decoration: inherit;">Tags</a>
@@ -1110,14 +1042,11 @@ This can be "waiting", "succeeded", or "failed".
         <span class="property-type">List&lt;string&gt;</span>
     </dt>
     <dd>{{% md %}}The names of the Tags assigned to the Firewall.
-{{% /md %}}</dd>
-</dl>
+{{% /md %}}</dd></dl>
 {{% /choosable %}}
 
 {{% choosable language go %}}
-<dl class="resources-properties">
-
-    <dt class="property-optional"
+<dl class="resources-properties"><dt class="property-optional"
             title="Optional">
         <span id="state_createdat_go">
 <a href="#state_createdat_go" style="color: inherit; text-decoration: inherit;">Created<wbr>At</a>
@@ -1127,8 +1056,7 @@ This can be "waiting", "succeeded", or "failed".
     </dt>
     <dd>{{% md %}}A time value given in ISO8601 combined date and time format
 that represents when the Firewall was created.
-{{% /md %}}</dd>
-    <dt class="property-optional"
+{{% /md %}}</dd><dt class="property-optional"
             title="Optional">
         <span id="state_dropletids_go">
 <a href="#state_dropletids_go" style="color: inherit; text-decoration: inherit;">Droplet<wbr>Ids</a>
@@ -1138,8 +1066,7 @@ that represents when the Firewall was created.
     </dt>
     <dd>{{% md %}}The list of the IDs of the Droplets assigned
 to the Firewall.
-{{% /md %}}</dd>
-    <dt class="property-optional"
+{{% /md %}}</dd><dt class="property-optional"
             title="Optional">
         <span id="state_inboundrules_go">
 <a href="#state_inboundrules_go" style="color: inherit; text-decoration: inherit;">Inbound<wbr>Rules</a>
@@ -1149,8 +1076,7 @@ to the Firewall.
     </dt>
     <dd>{{% md %}}The inbound access rule block for the Firewall.
 The `inbound_rule` block is documented below.
-{{% /md %}}</dd>
-    <dt class="property-optional"
+{{% /md %}}</dd><dt class="property-optional"
             title="Optional">
         <span id="state_name_go">
 <a href="#state_name_go" style="color: inherit; text-decoration: inherit;">Name</a>
@@ -1159,8 +1085,7 @@ The `inbound_rule` block is documented below.
         <span class="property-type">string</span>
     </dt>
     <dd>{{% md %}}The Firewall name
-{{% /md %}}</dd>
-    <dt class="property-optional"
+{{% /md %}}</dd><dt class="property-optional"
             title="Optional">
         <span id="state_outboundrules_go">
 <a href="#state_outboundrules_go" style="color: inherit; text-decoration: inherit;">Outbound<wbr>Rules</a>
@@ -1170,8 +1095,7 @@ The `inbound_rule` block is documented below.
     </dt>
     <dd>{{% md %}}The outbound access rule block for the Firewall.
 The `outbound_rule` block is documented below.
-{{% /md %}}</dd>
-    <dt class="property-optional"
+{{% /md %}}</dd><dt class="property-optional"
             title="Optional">
         <span id="state_pendingchanges_go">
 <a href="#state_pendingchanges_go" style="color: inherit; text-decoration: inherit;">Pending<wbr>Changes</a>
@@ -1183,8 +1107,7 @@ The `outbound_rule` block is documented below.
 "removing", and "status".  It is provided to detail exactly which Droplets
 are having their security policies updated.  When empty, all changes
 have been successfully applied.
-{{% /md %}}</dd>
-    <dt class="property-optional"
+{{% /md %}}</dd><dt class="property-optional"
             title="Optional">
         <span id="state_status_go">
 <a href="#state_status_go" style="color: inherit; text-decoration: inherit;">Status</a>
@@ -1194,8 +1117,7 @@ have been successfully applied.
     </dt>
     <dd>{{% md %}}A status string indicating the current state of the Firewall.
 This can be "waiting", "succeeded", or "failed".
-{{% /md %}}</dd>
-    <dt class="property-optional"
+{{% /md %}}</dd><dt class="property-optional"
             title="Optional">
         <span id="state_tags_go">
 <a href="#state_tags_go" style="color: inherit; text-decoration: inherit;">Tags</a>
@@ -1204,14 +1126,11 @@ This can be "waiting", "succeeded", or "failed".
         <span class="property-type">[]string</span>
     </dt>
     <dd>{{% md %}}The names of the Tags assigned to the Firewall.
-{{% /md %}}</dd>
-</dl>
+{{% /md %}}</dd></dl>
 {{% /choosable %}}
 
 {{% choosable language nodejs %}}
-<dl class="resources-properties">
-
-    <dt class="property-optional"
+<dl class="resources-properties"><dt class="property-optional"
             title="Optional">
         <span id="state_createdat_nodejs">
 <a href="#state_createdat_nodejs" style="color: inherit; text-decoration: inherit;">created<wbr>At</a>
@@ -1221,8 +1140,7 @@ This can be "waiting", "succeeded", or "failed".
     </dt>
     <dd>{{% md %}}A time value given in ISO8601 combined date and time format
 that represents when the Firewall was created.
-{{% /md %}}</dd>
-    <dt class="property-optional"
+{{% /md %}}</dd><dt class="property-optional"
             title="Optional">
         <span id="state_dropletids_nodejs">
 <a href="#state_dropletids_nodejs" style="color: inherit; text-decoration: inherit;">droplet<wbr>Ids</a>
@@ -1232,8 +1150,7 @@ that represents when the Firewall was created.
     </dt>
     <dd>{{% md %}}The list of the IDs of the Droplets assigned
 to the Firewall.
-{{% /md %}}</dd>
-    <dt class="property-optional"
+{{% /md %}}</dd><dt class="property-optional"
             title="Optional">
         <span id="state_inboundrules_nodejs">
 <a href="#state_inboundrules_nodejs" style="color: inherit; text-decoration: inherit;">inbound<wbr>Rules</a>
@@ -1243,8 +1160,7 @@ to the Firewall.
     </dt>
     <dd>{{% md %}}The inbound access rule block for the Firewall.
 The `inbound_rule` block is documented below.
-{{% /md %}}</dd>
-    <dt class="property-optional"
+{{% /md %}}</dd><dt class="property-optional"
             title="Optional">
         <span id="state_name_nodejs">
 <a href="#state_name_nodejs" style="color: inherit; text-decoration: inherit;">name</a>
@@ -1253,8 +1169,7 @@ The `inbound_rule` block is documented below.
         <span class="property-type">string</span>
     </dt>
     <dd>{{% md %}}The Firewall name
-{{% /md %}}</dd>
-    <dt class="property-optional"
+{{% /md %}}</dd><dt class="property-optional"
             title="Optional">
         <span id="state_outboundrules_nodejs">
 <a href="#state_outboundrules_nodejs" style="color: inherit; text-decoration: inherit;">outbound<wbr>Rules</a>
@@ -1264,8 +1179,7 @@ The `inbound_rule` block is documented below.
     </dt>
     <dd>{{% md %}}The outbound access rule block for the Firewall.
 The `outbound_rule` block is documented below.
-{{% /md %}}</dd>
-    <dt class="property-optional"
+{{% /md %}}</dd><dt class="property-optional"
             title="Optional">
         <span id="state_pendingchanges_nodejs">
 <a href="#state_pendingchanges_nodejs" style="color: inherit; text-decoration: inherit;">pending<wbr>Changes</a>
@@ -1277,8 +1191,7 @@ The `outbound_rule` block is documented below.
 "removing", and "status".  It is provided to detail exactly which Droplets
 are having their security policies updated.  When empty, all changes
 have been successfully applied.
-{{% /md %}}</dd>
-    <dt class="property-optional"
+{{% /md %}}</dd><dt class="property-optional"
             title="Optional">
         <span id="state_status_nodejs">
 <a href="#state_status_nodejs" style="color: inherit; text-decoration: inherit;">status</a>
@@ -1288,8 +1201,7 @@ have been successfully applied.
     </dt>
     <dd>{{% md %}}A status string indicating the current state of the Firewall.
 This can be "waiting", "succeeded", or "failed".
-{{% /md %}}</dd>
-    <dt class="property-optional"
+{{% /md %}}</dd><dt class="property-optional"
             title="Optional">
         <span id="state_tags_nodejs">
 <a href="#state_tags_nodejs" style="color: inherit; text-decoration: inherit;">tags</a>
@@ -1298,14 +1210,11 @@ This can be "waiting", "succeeded", or "failed".
         <span class="property-type">string[]</span>
     </dt>
     <dd>{{% md %}}The names of the Tags assigned to the Firewall.
-{{% /md %}}</dd>
-</dl>
+{{% /md %}}</dd></dl>
 {{% /choosable %}}
 
 {{% choosable language python %}}
-<dl class="resources-properties">
-
-    <dt class="property-optional"
+<dl class="resources-properties"><dt class="property-optional"
             title="Optional">
         <span id="state_created_at_python">
 <a href="#state_created_at_python" style="color: inherit; text-decoration: inherit;">created_<wbr>at</a>
@@ -1315,8 +1224,7 @@ This can be "waiting", "succeeded", or "failed".
     </dt>
     <dd>{{% md %}}A time value given in ISO8601 combined date and time format
 that represents when the Firewall was created.
-{{% /md %}}</dd>
-    <dt class="property-optional"
+{{% /md %}}</dd><dt class="property-optional"
             title="Optional">
         <span id="state_droplet_ids_python">
 <a href="#state_droplet_ids_python" style="color: inherit; text-decoration: inherit;">droplet_<wbr>ids</a>
@@ -1326,8 +1234,7 @@ that represents when the Firewall was created.
     </dt>
     <dd>{{% md %}}The list of the IDs of the Droplets assigned
 to the Firewall.
-{{% /md %}}</dd>
-    <dt class="property-optional"
+{{% /md %}}</dd><dt class="property-optional"
             title="Optional">
         <span id="state_inbound_rules_python">
 <a href="#state_inbound_rules_python" style="color: inherit; text-decoration: inherit;">inbound_<wbr>rules</a>
@@ -1337,8 +1244,7 @@ to the Firewall.
     </dt>
     <dd>{{% md %}}The inbound access rule block for the Firewall.
 The `inbound_rule` block is documented below.
-{{% /md %}}</dd>
-    <dt class="property-optional"
+{{% /md %}}</dd><dt class="property-optional"
             title="Optional">
         <span id="state_name_python">
 <a href="#state_name_python" style="color: inherit; text-decoration: inherit;">name</a>
@@ -1347,8 +1253,7 @@ The `inbound_rule` block is documented below.
         <span class="property-type">str</span>
     </dt>
     <dd>{{% md %}}The Firewall name
-{{% /md %}}</dd>
-    <dt class="property-optional"
+{{% /md %}}</dd><dt class="property-optional"
             title="Optional">
         <span id="state_outbound_rules_python">
 <a href="#state_outbound_rules_python" style="color: inherit; text-decoration: inherit;">outbound_<wbr>rules</a>
@@ -1358,8 +1263,7 @@ The `inbound_rule` block is documented below.
     </dt>
     <dd>{{% md %}}The outbound access rule block for the Firewall.
 The `outbound_rule` block is documented below.
-{{% /md %}}</dd>
-    <dt class="property-optional"
+{{% /md %}}</dd><dt class="property-optional"
             title="Optional">
         <span id="state_pending_changes_python">
 <a href="#state_pending_changes_python" style="color: inherit; text-decoration: inherit;">pending_<wbr>changes</a>
@@ -1371,8 +1275,7 @@ The `outbound_rule` block is documented below.
 "removing", and "status".  It is provided to detail exactly which Droplets
 are having their security policies updated.  When empty, all changes
 have been successfully applied.
-{{% /md %}}</dd>
-    <dt class="property-optional"
+{{% /md %}}</dd><dt class="property-optional"
             title="Optional">
         <span id="state_status_python">
 <a href="#state_status_python" style="color: inherit; text-decoration: inherit;">status</a>
@@ -1382,8 +1285,7 @@ have been successfully applied.
     </dt>
     <dd>{{% md %}}A status string indicating the current state of the Firewall.
 This can be "waiting", "succeeded", or "failed".
-{{% /md %}}</dd>
-    <dt class="property-optional"
+{{% /md %}}</dd><dt class="property-optional"
             title="Optional">
         <span id="state_tags_python">
 <a href="#state_tags_python" style="color: inherit; text-decoration: inherit;">tags</a>
@@ -1392,8 +1294,7 @@ This can be "waiting", "succeeded", or "failed".
         <span class="property-type">Sequence[str]</span>
     </dt>
     <dd>{{% md %}}The names of the Tags assigned to the Firewall.
-{{% /md %}}</dd>
-</dl>
+{{% /md %}}</dd></dl>
 {{% /choosable %}}
 
 
@@ -1408,9 +1309,7 @@ This can be "waiting", "succeeded", or "failed".
 <h4 id="firewallinboundrule">Firewall<wbr>Inbound<wbr>Rule</h4>
 
 {{% choosable language csharp %}}
-<dl class="resources-properties">
-
-    <dt class="property-required"
+<dl class="resources-properties"><dt class="property-required"
             title="Required">
         <span id="protocol_csharp">
 <a href="#protocol_csharp" style="color: inherit; text-decoration: inherit;">Protocol</a>
@@ -1420,8 +1319,7 @@ This can be "waiting", "succeeded", or "failed".
     </dt>
     <dd>{{% md %}}The type of traffic to be allowed.
 This may be one of "tcp", "udp", or "icmp".
-{{% /md %}}</dd>
-    <dt class="property-optional"
+{{% /md %}}</dd><dt class="property-optional"
             title="Optional">
         <span id="portrange_csharp">
 <a href="#portrange_csharp" style="color: inherit; text-decoration: inherit;">Port<wbr>Range</a>
@@ -1433,8 +1331,7 @@ This may be one of "tcp", "udp", or "icmp".
 specified as a string containing a single port, a range (e.g. "8000-9000"),
 or "1-65535" to open all ports for a protocol. Required for when protocol is
 `tcp` or `udp`.
-{{% /md %}}</dd>
-    <dt class="property-optional"
+{{% /md %}}</dd><dt class="property-optional"
             title="Optional">
         <span id="sourceaddresses_csharp">
 <a href="#sourceaddresses_csharp" style="color: inherit; text-decoration: inherit;">Source<wbr>Addresses</a>
@@ -1445,8 +1342,7 @@ or "1-65535" to open all ports for a protocol. Required for when protocol is
     <dd>{{% md %}}An array of strings containing the IPv4
 addresses, IPv6 addresses, IPv4 CIDRs, and/or IPv6 CIDRs from which the
 inbound traffic will be accepted.
-{{% /md %}}</dd>
-    <dt class="property-optional"
+{{% /md %}}</dd><dt class="property-optional"
             title="Optional">
         <span id="sourcedropletids_csharp">
 <a href="#sourcedropletids_csharp" style="color: inherit; text-decoration: inherit;">Source<wbr>Droplet<wbr>Ids</a>
@@ -1456,8 +1352,7 @@ inbound traffic will be accepted.
     </dt>
     <dd>{{% md %}}An array containing the IDs of
 the Droplets from which the inbound traffic will be accepted.
-{{% /md %}}</dd>
-    <dt class="property-optional"
+{{% /md %}}</dd><dt class="property-optional"
             title="Optional">
         <span id="sourceloadbalanceruids_csharp">
 <a href="#sourceloadbalanceruids_csharp" style="color: inherit; text-decoration: inherit;">Source<wbr>Load<wbr>Balancer<wbr>Uids</a>
@@ -1467,8 +1362,7 @@ the Droplets from which the inbound traffic will be accepted.
     </dt>
     <dd>{{% md %}}An array containing the IDs
 of the Load Balancers from which the inbound traffic will be accepted.
-{{% /md %}}</dd>
-    <dt class="property-optional"
+{{% /md %}}</dd><dt class="property-optional"
             title="Optional">
         <span id="sourcetags_csharp">
 <a href="#sourcetags_csharp" style="color: inherit; text-decoration: inherit;">Source<wbr>Tags</a>
@@ -1479,14 +1373,11 @@ of the Load Balancers from which the inbound traffic will be accepted.
     <dd>{{% md %}}An array containing the names of Tags
 corresponding to groups of Droplets from which the inbound traffic
 will be accepted.
-{{% /md %}}</dd>
-</dl>
+{{% /md %}}</dd></dl>
 {{% /choosable %}}
 
 {{% choosable language go %}}
-<dl class="resources-properties">
-
-    <dt class="property-required"
+<dl class="resources-properties"><dt class="property-required"
             title="Required">
         <span id="protocol_go">
 <a href="#protocol_go" style="color: inherit; text-decoration: inherit;">Protocol</a>
@@ -1496,8 +1387,7 @@ will be accepted.
     </dt>
     <dd>{{% md %}}The type of traffic to be allowed.
 This may be one of "tcp", "udp", or "icmp".
-{{% /md %}}</dd>
-    <dt class="property-optional"
+{{% /md %}}</dd><dt class="property-optional"
             title="Optional">
         <span id="portrange_go">
 <a href="#portrange_go" style="color: inherit; text-decoration: inherit;">Port<wbr>Range</a>
@@ -1509,8 +1399,7 @@ This may be one of "tcp", "udp", or "icmp".
 specified as a string containing a single port, a range (e.g. "8000-9000"),
 or "1-65535" to open all ports for a protocol. Required for when protocol is
 `tcp` or `udp`.
-{{% /md %}}</dd>
-    <dt class="property-optional"
+{{% /md %}}</dd><dt class="property-optional"
             title="Optional">
         <span id="sourceaddresses_go">
 <a href="#sourceaddresses_go" style="color: inherit; text-decoration: inherit;">Source<wbr>Addresses</a>
@@ -1521,8 +1410,7 @@ or "1-65535" to open all ports for a protocol. Required for when protocol is
     <dd>{{% md %}}An array of strings containing the IPv4
 addresses, IPv6 addresses, IPv4 CIDRs, and/or IPv6 CIDRs from which the
 inbound traffic will be accepted.
-{{% /md %}}</dd>
-    <dt class="property-optional"
+{{% /md %}}</dd><dt class="property-optional"
             title="Optional">
         <span id="sourcedropletids_go">
 <a href="#sourcedropletids_go" style="color: inherit; text-decoration: inherit;">Source<wbr>Droplet<wbr>Ids</a>
@@ -1532,8 +1420,7 @@ inbound traffic will be accepted.
     </dt>
     <dd>{{% md %}}An array containing the IDs of
 the Droplets from which the inbound traffic will be accepted.
-{{% /md %}}</dd>
-    <dt class="property-optional"
+{{% /md %}}</dd><dt class="property-optional"
             title="Optional">
         <span id="sourceloadbalanceruids_go">
 <a href="#sourceloadbalanceruids_go" style="color: inherit; text-decoration: inherit;">Source<wbr>Load<wbr>Balancer<wbr>Uids</a>
@@ -1543,8 +1430,7 @@ the Droplets from which the inbound traffic will be accepted.
     </dt>
     <dd>{{% md %}}An array containing the IDs
 of the Load Balancers from which the inbound traffic will be accepted.
-{{% /md %}}</dd>
-    <dt class="property-optional"
+{{% /md %}}</dd><dt class="property-optional"
             title="Optional">
         <span id="sourcetags_go">
 <a href="#sourcetags_go" style="color: inherit; text-decoration: inherit;">Source<wbr>Tags</a>
@@ -1555,14 +1441,11 @@ of the Load Balancers from which the inbound traffic will be accepted.
     <dd>{{% md %}}An array containing the names of Tags
 corresponding to groups of Droplets from which the inbound traffic
 will be accepted.
-{{% /md %}}</dd>
-</dl>
+{{% /md %}}</dd></dl>
 {{% /choosable %}}
 
 {{% choosable language nodejs %}}
-<dl class="resources-properties">
-
-    <dt class="property-required"
+<dl class="resources-properties"><dt class="property-required"
             title="Required">
         <span id="protocol_nodejs">
 <a href="#protocol_nodejs" style="color: inherit; text-decoration: inherit;">protocol</a>
@@ -1572,8 +1455,7 @@ will be accepted.
     </dt>
     <dd>{{% md %}}The type of traffic to be allowed.
 This may be one of "tcp", "udp", or "icmp".
-{{% /md %}}</dd>
-    <dt class="property-optional"
+{{% /md %}}</dd><dt class="property-optional"
             title="Optional">
         <span id="portrange_nodejs">
 <a href="#portrange_nodejs" style="color: inherit; text-decoration: inherit;">port<wbr>Range</a>
@@ -1585,8 +1467,7 @@ This may be one of "tcp", "udp", or "icmp".
 specified as a string containing a single port, a range (e.g. "8000-9000"),
 or "1-65535" to open all ports for a protocol. Required for when protocol is
 `tcp` or `udp`.
-{{% /md %}}</dd>
-    <dt class="property-optional"
+{{% /md %}}</dd><dt class="property-optional"
             title="Optional">
         <span id="sourceaddresses_nodejs">
 <a href="#sourceaddresses_nodejs" style="color: inherit; text-decoration: inherit;">source<wbr>Addresses</a>
@@ -1597,8 +1478,7 @@ or "1-65535" to open all ports for a protocol. Required for when protocol is
     <dd>{{% md %}}An array of strings containing the IPv4
 addresses, IPv6 addresses, IPv4 CIDRs, and/or IPv6 CIDRs from which the
 inbound traffic will be accepted.
-{{% /md %}}</dd>
-    <dt class="property-optional"
+{{% /md %}}</dd><dt class="property-optional"
             title="Optional">
         <span id="sourcedropletids_nodejs">
 <a href="#sourcedropletids_nodejs" style="color: inherit; text-decoration: inherit;">source<wbr>Droplet<wbr>Ids</a>
@@ -1608,8 +1488,7 @@ inbound traffic will be accepted.
     </dt>
     <dd>{{% md %}}An array containing the IDs of
 the Droplets from which the inbound traffic will be accepted.
-{{% /md %}}</dd>
-    <dt class="property-optional"
+{{% /md %}}</dd><dt class="property-optional"
             title="Optional">
         <span id="sourceloadbalanceruids_nodejs">
 <a href="#sourceloadbalanceruids_nodejs" style="color: inherit; text-decoration: inherit;">source<wbr>Load<wbr>Balancer<wbr>Uids</a>
@@ -1619,8 +1498,7 @@ the Droplets from which the inbound traffic will be accepted.
     </dt>
     <dd>{{% md %}}An array containing the IDs
 of the Load Balancers from which the inbound traffic will be accepted.
-{{% /md %}}</dd>
-    <dt class="property-optional"
+{{% /md %}}</dd><dt class="property-optional"
             title="Optional">
         <span id="sourcetags_nodejs">
 <a href="#sourcetags_nodejs" style="color: inherit; text-decoration: inherit;">source<wbr>Tags</a>
@@ -1631,14 +1509,11 @@ of the Load Balancers from which the inbound traffic will be accepted.
     <dd>{{% md %}}An array containing the names of Tags
 corresponding to groups of Droplets from which the inbound traffic
 will be accepted.
-{{% /md %}}</dd>
-</dl>
+{{% /md %}}</dd></dl>
 {{% /choosable %}}
 
 {{% choosable language python %}}
-<dl class="resources-properties">
-
-    <dt class="property-required"
+<dl class="resources-properties"><dt class="property-required"
             title="Required">
         <span id="protocol_python">
 <a href="#protocol_python" style="color: inherit; text-decoration: inherit;">protocol</a>
@@ -1648,8 +1523,7 @@ will be accepted.
     </dt>
     <dd>{{% md %}}The type of traffic to be allowed.
 This may be one of "tcp", "udp", or "icmp".
-{{% /md %}}</dd>
-    <dt class="property-optional"
+{{% /md %}}</dd><dt class="property-optional"
             title="Optional">
         <span id="port_range_python">
 <a href="#port_range_python" style="color: inherit; text-decoration: inherit;">port_<wbr>range</a>
@@ -1661,8 +1535,7 @@ This may be one of "tcp", "udp", or "icmp".
 specified as a string containing a single port, a range (e.g. "8000-9000"),
 or "1-65535" to open all ports for a protocol. Required for when protocol is
 `tcp` or `udp`.
-{{% /md %}}</dd>
-    <dt class="property-optional"
+{{% /md %}}</dd><dt class="property-optional"
             title="Optional">
         <span id="source_addresses_python">
 <a href="#source_addresses_python" style="color: inherit; text-decoration: inherit;">source_<wbr>addresses</a>
@@ -1673,8 +1546,7 @@ or "1-65535" to open all ports for a protocol. Required for when protocol is
     <dd>{{% md %}}An array of strings containing the IPv4
 addresses, IPv6 addresses, IPv4 CIDRs, and/or IPv6 CIDRs from which the
 inbound traffic will be accepted.
-{{% /md %}}</dd>
-    <dt class="property-optional"
+{{% /md %}}</dd><dt class="property-optional"
             title="Optional">
         <span id="source_droplet_ids_python">
 <a href="#source_droplet_ids_python" style="color: inherit; text-decoration: inherit;">source_<wbr>droplet_<wbr>ids</a>
@@ -1684,8 +1556,7 @@ inbound traffic will be accepted.
     </dt>
     <dd>{{% md %}}An array containing the IDs of
 the Droplets from which the inbound traffic will be accepted.
-{{% /md %}}</dd>
-    <dt class="property-optional"
+{{% /md %}}</dd><dt class="property-optional"
             title="Optional">
         <span id="source_load_balancer_uids_python">
 <a href="#source_load_balancer_uids_python" style="color: inherit; text-decoration: inherit;">source_<wbr>load_<wbr>balancer_<wbr>uids</a>
@@ -1695,8 +1566,7 @@ the Droplets from which the inbound traffic will be accepted.
     </dt>
     <dd>{{% md %}}An array containing the IDs
 of the Load Balancers from which the inbound traffic will be accepted.
-{{% /md %}}</dd>
-    <dt class="property-optional"
+{{% /md %}}</dd><dt class="property-optional"
             title="Optional">
         <span id="source_tags_python">
 <a href="#source_tags_python" style="color: inherit; text-decoration: inherit;">source_<wbr>tags</a>
@@ -1707,16 +1577,13 @@ of the Load Balancers from which the inbound traffic will be accepted.
     <dd>{{% md %}}An array containing the names of Tags
 corresponding to groups of Droplets from which the inbound traffic
 will be accepted.
-{{% /md %}}</dd>
-</dl>
+{{% /md %}}</dd></dl>
 {{% /choosable %}}
 
 <h4 id="firewalloutboundrule">Firewall<wbr>Outbound<wbr>Rule</h4>
 
 {{% choosable language csharp %}}
-<dl class="resources-properties">
-
-    <dt class="property-required"
+<dl class="resources-properties"><dt class="property-required"
             title="Required">
         <span id="protocol_csharp">
 <a href="#protocol_csharp" style="color: inherit; text-decoration: inherit;">Protocol</a>
@@ -1726,8 +1593,7 @@ will be accepted.
     </dt>
     <dd>{{% md %}}The type of traffic to be allowed.
 This may be one of "tcp", "udp", or "icmp".
-{{% /md %}}</dd>
-    <dt class="property-optional"
+{{% /md %}}</dd><dt class="property-optional"
             title="Optional">
         <span id="destinationaddresses_csharp">
 <a href="#destinationaddresses_csharp" style="color: inherit; text-decoration: inherit;">Destination<wbr>Addresses</a>
@@ -1738,8 +1604,7 @@ This may be one of "tcp", "udp", or "icmp".
     <dd>{{% md %}}An array of strings containing the IPv4
 addresses, IPv6 addresses, IPv4 CIDRs, and/or IPv6 CIDRs to which the
 outbound traffic will be allowed.
-{{% /md %}}</dd>
-    <dt class="property-optional"
+{{% /md %}}</dd><dt class="property-optional"
             title="Optional">
         <span id="destinationdropletids_csharp">
 <a href="#destinationdropletids_csharp" style="color: inherit; text-decoration: inherit;">Destination<wbr>Droplet<wbr>Ids</a>
@@ -1749,8 +1614,7 @@ outbound traffic will be allowed.
     </dt>
     <dd>{{% md %}}An array containing the IDs of
 the Droplets to which the outbound traffic will be allowed.
-{{% /md %}}</dd>
-    <dt class="property-optional"
+{{% /md %}}</dd><dt class="property-optional"
             title="Optional">
         <span id="destinationloadbalanceruids_csharp">
 <a href="#destinationloadbalanceruids_csharp" style="color: inherit; text-decoration: inherit;">Destination<wbr>Load<wbr>Balancer<wbr>Uids</a>
@@ -1760,8 +1624,7 @@ the Droplets to which the outbound traffic will be allowed.
     </dt>
     <dd>{{% md %}}An array containing the IDs
 of the Load Balancers to which the outbound traffic will be allowed.
-{{% /md %}}</dd>
-    <dt class="property-optional"
+{{% /md %}}</dd><dt class="property-optional"
             title="Optional">
         <span id="destinationtags_csharp">
 <a href="#destinationtags_csharp" style="color: inherit; text-decoration: inherit;">Destination<wbr>Tags</a>
@@ -1773,8 +1636,7 @@ of the Load Balancers to which the outbound traffic will be allowed.
 corresponding to groups of Droplets to which the outbound traffic will
 be allowed.
 traffic.
-{{% /md %}}</dd>
-    <dt class="property-optional"
+{{% /md %}}</dd><dt class="property-optional"
             title="Optional">
         <span id="portrange_csharp">
 <a href="#portrange_csharp" style="color: inherit; text-decoration: inherit;">Port<wbr>Range</a>
@@ -1786,14 +1648,11 @@ traffic.
 specified as a string containing a single port, a range (e.g. "8000-9000"),
 or "1-65535" to open all ports for a protocol. Required for when protocol is
 `tcp` or `udp`.
-{{% /md %}}</dd>
-</dl>
+{{% /md %}}</dd></dl>
 {{% /choosable %}}
 
 {{% choosable language go %}}
-<dl class="resources-properties">
-
-    <dt class="property-required"
+<dl class="resources-properties"><dt class="property-required"
             title="Required">
         <span id="protocol_go">
 <a href="#protocol_go" style="color: inherit; text-decoration: inherit;">Protocol</a>
@@ -1803,8 +1662,7 @@ or "1-65535" to open all ports for a protocol. Required for when protocol is
     </dt>
     <dd>{{% md %}}The type of traffic to be allowed.
 This may be one of "tcp", "udp", or "icmp".
-{{% /md %}}</dd>
-    <dt class="property-optional"
+{{% /md %}}</dd><dt class="property-optional"
             title="Optional">
         <span id="destinationaddresses_go">
 <a href="#destinationaddresses_go" style="color: inherit; text-decoration: inherit;">Destination<wbr>Addresses</a>
@@ -1815,8 +1673,7 @@ This may be one of "tcp", "udp", or "icmp".
     <dd>{{% md %}}An array of strings containing the IPv4
 addresses, IPv6 addresses, IPv4 CIDRs, and/or IPv6 CIDRs to which the
 outbound traffic will be allowed.
-{{% /md %}}</dd>
-    <dt class="property-optional"
+{{% /md %}}</dd><dt class="property-optional"
             title="Optional">
         <span id="destinationdropletids_go">
 <a href="#destinationdropletids_go" style="color: inherit; text-decoration: inherit;">Destination<wbr>Droplet<wbr>Ids</a>
@@ -1826,8 +1683,7 @@ outbound traffic will be allowed.
     </dt>
     <dd>{{% md %}}An array containing the IDs of
 the Droplets to which the outbound traffic will be allowed.
-{{% /md %}}</dd>
-    <dt class="property-optional"
+{{% /md %}}</dd><dt class="property-optional"
             title="Optional">
         <span id="destinationloadbalanceruids_go">
 <a href="#destinationloadbalanceruids_go" style="color: inherit; text-decoration: inherit;">Destination<wbr>Load<wbr>Balancer<wbr>Uids</a>
@@ -1837,8 +1693,7 @@ the Droplets to which the outbound traffic will be allowed.
     </dt>
     <dd>{{% md %}}An array containing the IDs
 of the Load Balancers to which the outbound traffic will be allowed.
-{{% /md %}}</dd>
-    <dt class="property-optional"
+{{% /md %}}</dd><dt class="property-optional"
             title="Optional">
         <span id="destinationtags_go">
 <a href="#destinationtags_go" style="color: inherit; text-decoration: inherit;">Destination<wbr>Tags</a>
@@ -1850,8 +1705,7 @@ of the Load Balancers to which the outbound traffic will be allowed.
 corresponding to groups of Droplets to which the outbound traffic will
 be allowed.
 traffic.
-{{% /md %}}</dd>
-    <dt class="property-optional"
+{{% /md %}}</dd><dt class="property-optional"
             title="Optional">
         <span id="portrange_go">
 <a href="#portrange_go" style="color: inherit; text-decoration: inherit;">Port<wbr>Range</a>
@@ -1863,14 +1717,11 @@ traffic.
 specified as a string containing a single port, a range (e.g. "8000-9000"),
 or "1-65535" to open all ports for a protocol. Required for when protocol is
 `tcp` or `udp`.
-{{% /md %}}</dd>
-</dl>
+{{% /md %}}</dd></dl>
 {{% /choosable %}}
 
 {{% choosable language nodejs %}}
-<dl class="resources-properties">
-
-    <dt class="property-required"
+<dl class="resources-properties"><dt class="property-required"
             title="Required">
         <span id="protocol_nodejs">
 <a href="#protocol_nodejs" style="color: inherit; text-decoration: inherit;">protocol</a>
@@ -1880,8 +1731,7 @@ or "1-65535" to open all ports for a protocol. Required for when protocol is
     </dt>
     <dd>{{% md %}}The type of traffic to be allowed.
 This may be one of "tcp", "udp", or "icmp".
-{{% /md %}}</dd>
-    <dt class="property-optional"
+{{% /md %}}</dd><dt class="property-optional"
             title="Optional">
         <span id="destinationaddresses_nodejs">
 <a href="#destinationaddresses_nodejs" style="color: inherit; text-decoration: inherit;">destination<wbr>Addresses</a>
@@ -1892,8 +1742,7 @@ This may be one of "tcp", "udp", or "icmp".
     <dd>{{% md %}}An array of strings containing the IPv4
 addresses, IPv6 addresses, IPv4 CIDRs, and/or IPv6 CIDRs to which the
 outbound traffic will be allowed.
-{{% /md %}}</dd>
-    <dt class="property-optional"
+{{% /md %}}</dd><dt class="property-optional"
             title="Optional">
         <span id="destinationdropletids_nodejs">
 <a href="#destinationdropletids_nodejs" style="color: inherit; text-decoration: inherit;">destination<wbr>Droplet<wbr>Ids</a>
@@ -1903,8 +1752,7 @@ outbound traffic will be allowed.
     </dt>
     <dd>{{% md %}}An array containing the IDs of
 the Droplets to which the outbound traffic will be allowed.
-{{% /md %}}</dd>
-    <dt class="property-optional"
+{{% /md %}}</dd><dt class="property-optional"
             title="Optional">
         <span id="destinationloadbalanceruids_nodejs">
 <a href="#destinationloadbalanceruids_nodejs" style="color: inherit; text-decoration: inherit;">destination<wbr>Load<wbr>Balancer<wbr>Uids</a>
@@ -1914,8 +1762,7 @@ the Droplets to which the outbound traffic will be allowed.
     </dt>
     <dd>{{% md %}}An array containing the IDs
 of the Load Balancers to which the outbound traffic will be allowed.
-{{% /md %}}</dd>
-    <dt class="property-optional"
+{{% /md %}}</dd><dt class="property-optional"
             title="Optional">
         <span id="destinationtags_nodejs">
 <a href="#destinationtags_nodejs" style="color: inherit; text-decoration: inherit;">destination<wbr>Tags</a>
@@ -1927,8 +1774,7 @@ of the Load Balancers to which the outbound traffic will be allowed.
 corresponding to groups of Droplets to which the outbound traffic will
 be allowed.
 traffic.
-{{% /md %}}</dd>
-    <dt class="property-optional"
+{{% /md %}}</dd><dt class="property-optional"
             title="Optional">
         <span id="portrange_nodejs">
 <a href="#portrange_nodejs" style="color: inherit; text-decoration: inherit;">port<wbr>Range</a>
@@ -1940,14 +1786,11 @@ traffic.
 specified as a string containing a single port, a range (e.g. "8000-9000"),
 or "1-65535" to open all ports for a protocol. Required for when protocol is
 `tcp` or `udp`.
-{{% /md %}}</dd>
-</dl>
+{{% /md %}}</dd></dl>
 {{% /choosable %}}
 
 {{% choosable language python %}}
-<dl class="resources-properties">
-
-    <dt class="property-required"
+<dl class="resources-properties"><dt class="property-required"
             title="Required">
         <span id="protocol_python">
 <a href="#protocol_python" style="color: inherit; text-decoration: inherit;">protocol</a>
@@ -1957,8 +1800,7 @@ or "1-65535" to open all ports for a protocol. Required for when protocol is
     </dt>
     <dd>{{% md %}}The type of traffic to be allowed.
 This may be one of "tcp", "udp", or "icmp".
-{{% /md %}}</dd>
-    <dt class="property-optional"
+{{% /md %}}</dd><dt class="property-optional"
             title="Optional">
         <span id="destination_addresses_python">
 <a href="#destination_addresses_python" style="color: inherit; text-decoration: inherit;">destination_<wbr>addresses</a>
@@ -1969,8 +1811,7 @@ This may be one of "tcp", "udp", or "icmp".
     <dd>{{% md %}}An array of strings containing the IPv4
 addresses, IPv6 addresses, IPv4 CIDRs, and/or IPv6 CIDRs to which the
 outbound traffic will be allowed.
-{{% /md %}}</dd>
-    <dt class="property-optional"
+{{% /md %}}</dd><dt class="property-optional"
             title="Optional">
         <span id="destination_droplet_ids_python">
 <a href="#destination_droplet_ids_python" style="color: inherit; text-decoration: inherit;">destination_<wbr>droplet_<wbr>ids</a>
@@ -1980,8 +1821,7 @@ outbound traffic will be allowed.
     </dt>
     <dd>{{% md %}}An array containing the IDs of
 the Droplets to which the outbound traffic will be allowed.
-{{% /md %}}</dd>
-    <dt class="property-optional"
+{{% /md %}}</dd><dt class="property-optional"
             title="Optional">
         <span id="destination_load_balancer_uids_python">
 <a href="#destination_load_balancer_uids_python" style="color: inherit; text-decoration: inherit;">destination_<wbr>load_<wbr>balancer_<wbr>uids</a>
@@ -1991,8 +1831,7 @@ the Droplets to which the outbound traffic will be allowed.
     </dt>
     <dd>{{% md %}}An array containing the IDs
 of the Load Balancers to which the outbound traffic will be allowed.
-{{% /md %}}</dd>
-    <dt class="property-optional"
+{{% /md %}}</dd><dt class="property-optional"
             title="Optional">
         <span id="destination_tags_python">
 <a href="#destination_tags_python" style="color: inherit; text-decoration: inherit;">destination_<wbr>tags</a>
@@ -2004,8 +1843,7 @@ of the Load Balancers to which the outbound traffic will be allowed.
 corresponding to groups of Droplets to which the outbound traffic will
 be allowed.
 traffic.
-{{% /md %}}</dd>
-    <dt class="property-optional"
+{{% /md %}}</dd><dt class="property-optional"
             title="Optional">
         <span id="port_range_python">
 <a href="#port_range_python" style="color: inherit; text-decoration: inherit;">port_<wbr>range</a>
@@ -2017,16 +1855,13 @@ traffic.
 specified as a string containing a single port, a range (e.g. "8000-9000"),
 or "1-65535" to open all ports for a protocol. Required for when protocol is
 `tcp` or `udp`.
-{{% /md %}}</dd>
-</dl>
+{{% /md %}}</dd></dl>
 {{% /choosable %}}
 
 <h4 id="firewallpendingchange">Firewall<wbr>Pending<wbr>Change</h4>
 
 {{% choosable language csharp %}}
-<dl class="resources-properties">
-
-    <dt class="property-optional"
+<dl class="resources-properties"><dt class="property-optional"
             title="Optional">
         <span id="dropletid_csharp">
 <a href="#dropletid_csharp" style="color: inherit; text-decoration: inherit;">Droplet<wbr>Id</a>
@@ -2034,8 +1869,7 @@ or "1-65535" to open all ports for a protocol. Required for when protocol is
         <span class="property-indicator"></span>
         <span class="property-type">int</span>
     </dt>
-    <dd>{{% md %}}{{% /md %}}</dd>
-    <dt class="property-optional"
+    <dd>{{% md %}}{{% /md %}}</dd><dt class="property-optional"
             title="Optional">
         <span id="removing_csharp">
 <a href="#removing_csharp" style="color: inherit; text-decoration: inherit;">Removing</a>
@@ -2043,8 +1877,7 @@ or "1-65535" to open all ports for a protocol. Required for when protocol is
         <span class="property-indicator"></span>
         <span class="property-type">bool</span>
     </dt>
-    <dd>{{% md %}}{{% /md %}}</dd>
-    <dt class="property-optional"
+    <dd>{{% md %}}{{% /md %}}</dd><dt class="property-optional"
             title="Optional">
         <span id="status_csharp">
 <a href="#status_csharp" style="color: inherit; text-decoration: inherit;">Status</a>
@@ -2054,14 +1887,11 @@ or "1-65535" to open all ports for a protocol. Required for when protocol is
     </dt>
     <dd>{{% md %}}A status string indicating the current state of the Firewall.
 This can be "waiting", "succeeded", or "failed".
-{{% /md %}}</dd>
-</dl>
+{{% /md %}}</dd></dl>
 {{% /choosable %}}
 
 {{% choosable language go %}}
-<dl class="resources-properties">
-
-    <dt class="property-optional"
+<dl class="resources-properties"><dt class="property-optional"
             title="Optional">
         <span id="dropletid_go">
 <a href="#dropletid_go" style="color: inherit; text-decoration: inherit;">Droplet<wbr>Id</a>
@@ -2069,8 +1899,7 @@ This can be "waiting", "succeeded", or "failed".
         <span class="property-indicator"></span>
         <span class="property-type">int</span>
     </dt>
-    <dd>{{% md %}}{{% /md %}}</dd>
-    <dt class="property-optional"
+    <dd>{{% md %}}{{% /md %}}</dd><dt class="property-optional"
             title="Optional">
         <span id="removing_go">
 <a href="#removing_go" style="color: inherit; text-decoration: inherit;">Removing</a>
@@ -2078,8 +1907,7 @@ This can be "waiting", "succeeded", or "failed".
         <span class="property-indicator"></span>
         <span class="property-type">bool</span>
     </dt>
-    <dd>{{% md %}}{{% /md %}}</dd>
-    <dt class="property-optional"
+    <dd>{{% md %}}{{% /md %}}</dd><dt class="property-optional"
             title="Optional">
         <span id="status_go">
 <a href="#status_go" style="color: inherit; text-decoration: inherit;">Status</a>
@@ -2089,14 +1917,11 @@ This can be "waiting", "succeeded", or "failed".
     </dt>
     <dd>{{% md %}}A status string indicating the current state of the Firewall.
 This can be "waiting", "succeeded", or "failed".
-{{% /md %}}</dd>
-</dl>
+{{% /md %}}</dd></dl>
 {{% /choosable %}}
 
 {{% choosable language nodejs %}}
-<dl class="resources-properties">
-
-    <dt class="property-optional"
+<dl class="resources-properties"><dt class="property-optional"
             title="Optional">
         <span id="dropletid_nodejs">
 <a href="#dropletid_nodejs" style="color: inherit; text-decoration: inherit;">droplet<wbr>Id</a>
@@ -2104,8 +1929,7 @@ This can be "waiting", "succeeded", or "failed".
         <span class="property-indicator"></span>
         <span class="property-type">number</span>
     </dt>
-    <dd>{{% md %}}{{% /md %}}</dd>
-    <dt class="property-optional"
+    <dd>{{% md %}}{{% /md %}}</dd><dt class="property-optional"
             title="Optional">
         <span id="removing_nodejs">
 <a href="#removing_nodejs" style="color: inherit; text-decoration: inherit;">removing</a>
@@ -2113,8 +1937,7 @@ This can be "waiting", "succeeded", or "failed".
         <span class="property-indicator"></span>
         <span class="property-type">boolean</span>
     </dt>
-    <dd>{{% md %}}{{% /md %}}</dd>
-    <dt class="property-optional"
+    <dd>{{% md %}}{{% /md %}}</dd><dt class="property-optional"
             title="Optional">
         <span id="status_nodejs">
 <a href="#status_nodejs" style="color: inherit; text-decoration: inherit;">status</a>
@@ -2124,14 +1947,11 @@ This can be "waiting", "succeeded", or "failed".
     </dt>
     <dd>{{% md %}}A status string indicating the current state of the Firewall.
 This can be "waiting", "succeeded", or "failed".
-{{% /md %}}</dd>
-</dl>
+{{% /md %}}</dd></dl>
 {{% /choosable %}}
 
 {{% choosable language python %}}
-<dl class="resources-properties">
-
-    <dt class="property-optional"
+<dl class="resources-properties"><dt class="property-optional"
             title="Optional">
         <span id="droplet_id_python">
 <a href="#droplet_id_python" style="color: inherit; text-decoration: inherit;">droplet_<wbr>id</a>
@@ -2139,8 +1959,7 @@ This can be "waiting", "succeeded", or "failed".
         <span class="property-indicator"></span>
         <span class="property-type">int</span>
     </dt>
-    <dd>{{% md %}}{{% /md %}}</dd>
-    <dt class="property-optional"
+    <dd>{{% md %}}{{% /md %}}</dd><dt class="property-optional"
             title="Optional">
         <span id="removing_python">
 <a href="#removing_python" style="color: inherit; text-decoration: inherit;">removing</a>
@@ -2148,8 +1967,7 @@ This can be "waiting", "succeeded", or "failed".
         <span class="property-indicator"></span>
         <span class="property-type">bool</span>
     </dt>
-    <dd>{{% md %}}{{% /md %}}</dd>
-    <dt class="property-optional"
+    <dd>{{% md %}}{{% /md %}}</dd><dt class="property-optional"
             title="Optional">
         <span id="status_python">
 <a href="#status_python" style="color: inherit; text-decoration: inherit;">status</a>
@@ -2159,8 +1977,7 @@ This can be "waiting", "succeeded", or "failed".
     </dt>
     <dd>{{% md %}}A status string indicating the current state of the Firewall.
 This can be "waiting", "succeeded", or "failed".
-{{% /md %}}</dd>
-</dl>
+{{% /md %}}</dd></dl>
 {{% /choosable %}}
 ## Import
 
@@ -2181,6 +1998,6 @@ Firewalls can be imported using the firewall `id`, e.g.
 	<dt>License</dt>
 	<dd>Apache-2.0</dd>
 	<dt>Notes</dt>
-	<dd>This Pulumi package is based on the [`digitalocean` Terraform Provider](https://github.com/digitalocean/terraform-provider-digitalocean).</dd>
+	<dd>{{% md %}}This Pulumi package is based on the [`digitalocean` Terraform Provider](https://github.com/digitalocean/terraform-provider-digitalocean).{{% /md %}}</dd>
 </dl>
 

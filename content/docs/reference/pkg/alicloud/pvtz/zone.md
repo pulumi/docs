@@ -43,9 +43,7 @@ Private Zone can be imported using the id, e.g.
 
 {{% choosable language nodejs %}}
 
-<dl class="resources-properties">
-  
-    <dt
+<dl class="resources-properties"><dt
         class="property-required" title="Required">
         <span>name</span>
         <span class="property-indicator"></span>
@@ -53,9 +51,7 @@ Private Zone can be imported using the id, e.g.
     </dt>
     <dd>
       The unique name of the resource.
-    </dd>
-  
-    <dt
+    </dd><dt
         class="property-optional" title="Optional">
         <span>args</span>
         <span class="property-indicator"></span>
@@ -63,9 +59,7 @@ Private Zone can be imported using the id, e.g.
     </dt>
     <dd>
       The arguments to resource properties.
-    </dd>
-  
-    <dt
+    </dd><dt
         class="property-optional" title="Optional">
         <span>opts</span>
         <span class="property-indicator"></span>
@@ -73,10 +67,7 @@ Private Zone can be imported using the id, e.g.
     </dt>
     <dd>
       Bag of options to control resource&#39;s behavior.
-    </dd>
-  
-
-</dl>
+    </dd></dl>
 
 {{% /choosable %}}
 
@@ -102,9 +93,7 @@ Private Zone can be imported using the id, e.g.
 
 {{% choosable language go %}}
 
-<dl class="resources-properties">
-  
-    <dt
+<dl class="resources-properties"><dt
         class="property-optional" title="Optional">
         <span>ctx</span>
         <span class="property-indicator"></span>
@@ -112,9 +101,7 @@ Private Zone can be imported using the id, e.g.
     </dt>
     <dd>
       Context object for the current deployment.
-    </dd>
-  
-    <dt
+    </dd><dt
         class="property-required" title="Required">
         <span>name</span>
         <span class="property-indicator"></span>
@@ -122,9 +109,7 @@ Private Zone can be imported using the id, e.g.
     </dt>
     <dd>
       The unique name of the resource.
-    </dd>
-  
-    <dt
+    </dd><dt
         class="property-optional" title="Optional">
         <span>args</span>
         <span class="property-indicator"></span>
@@ -132,9 +117,7 @@ Private Zone can be imported using the id, e.g.
     </dt>
     <dd>
       The arguments to resource properties.
-    </dd>
-  
-    <dt
+    </dd><dt
         class="property-optional" title="Optional">
         <span>opts</span>
         <span class="property-indicator"></span>
@@ -142,18 +125,13 @@ Private Zone can be imported using the id, e.g.
     </dt>
     <dd>
       Bag of options to control resource&#39;s behavior.
-    </dd>
-  
-
-</dl>
+    </dd></dl>
 
 {{% /choosable %}}
 
 {{% choosable language csharp %}}
 
-<dl class="resources-properties">
-  
-    <dt
+<dl class="resources-properties"><dt
         class="property-required" title="Required">
         <span>name</span>
         <span class="property-indicator"></span>
@@ -161,9 +139,7 @@ Private Zone can be imported using the id, e.g.
     </dt>
     <dd>
       The unique name of the resource.
-    </dd>
-  
-    <dt
+    </dd><dt
         class="property-optional" title="Optional">
         <span>args</span>
         <span class="property-indicator"></span>
@@ -171,9 +147,7 @@ Private Zone can be imported using the id, e.g.
     </dt>
     <dd>
       The arguments to resource properties.
-    </dd>
-  
-    <dt
+    </dd><dt
         class="property-optional" title="Optional">
         <span>opts</span>
         <span class="property-indicator"></span>
@@ -181,10 +155,7 @@ Private Zone can be imported using the id, e.g.
     </dt>
     <dd>
       Bag of options to control resource&#39;s behavior.
-    </dd>
-  
-
-</dl>
+    </dd></dl>
 
 {{% /choosable %}}
 
@@ -199,9 +170,7 @@ The Zone resource accepts the following [input]({{< relref "/docs/intro/concepts
 
 
 {{% choosable language csharp %}}
-<dl class="resources-properties">
-
-    <dt class="property-optional"
+<dl class="resources-properties"><dt class="property-optional"
             title="Optional">
         <span id="lang_csharp">
 <a href="#lang_csharp" style="color: inherit; text-decoration: inherit;">Lang</a>
@@ -210,8 +179,7 @@ The Zone resource accepts the following [input]({{< relref "/docs/intro/concepts
         <span class="property-type">string</span>
     </dt>
     <dd>{{% md %}}The language. Valid values: "zh", "en", "jp".
-{{% /md %}}</dd>
-    <dt class="property-optional property-deprecated"
+{{% /md %}}</dd><dt class="property-optional property-deprecated"
             title="Optional, Deprecated">
         <span id="name_csharp">
 <a href="#name_csharp" style="color: inherit; text-decoration: inherit;">Name</a>
@@ -220,8 +188,7 @@ The Zone resource accepts the following [input]({{< relref "/docs/intro/concepts
         <span class="property-type">string</span>
     </dt>
     <dd>{{% md %}}The name of the Private Zone.
-{{% /md %}}<p class="property-message">Deprecated: {{% md %}}Field &#39;name&#39; has been deprecated from version 1.107.0. Use &#39;zone_name&#39; instead.{{% /md %}}</p></dd>
-    <dt class="property-optional"
+{{% /md %}}<p class="property-message">Deprecated: {{% md %}}Field &#39;name&#39; has been deprecated from version 1.107.0. Use &#39;zone_name&#39; instead.{{% /md %}}</p></dd><dt class="property-optional"
             title="Optional">
         <span id="proxypattern_csharp">
 <a href="#proxypattern_csharp" style="color: inherit; text-decoration: inherit;">Proxy<wbr>Pattern</a>
@@ -233,8 +200,7 @@ The Zone resource accepts the following [input]({{< relref "/docs/intro/concepts
 - ZONE: indicates that the recursive DNS proxy is disabled.
 - RECORD: indicates that the recursive DNS proxy is enabled.
 Default to "ZONE".
-{{% /md %}}</dd>
-    <dt class="property-optional"
+{{% /md %}}</dd><dt class="property-optional"
             title="Optional">
         <span id="remark_csharp">
 <a href="#remark_csharp" style="color: inherit; text-decoration: inherit;">Remark</a>
@@ -243,8 +209,7 @@ Default to "ZONE".
         <span class="property-type">string</span>
     </dt>
     <dd>{{% md %}}The remark of the Private Zone.
-{{% /md %}}</dd>
-    <dt class="property-optional"
+{{% /md %}}</dd><dt class="property-optional"
             title="Optional">
         <span id="resourcegroupid_csharp">
 <a href="#resourcegroupid_csharp" style="color: inherit; text-decoration: inherit;">Resource<wbr>Group<wbr>Id</a>
@@ -253,8 +218,7 @@ Default to "ZONE".
         <span class="property-type">string</span>
     </dt>
     <dd>{{% md %}}The Id of resource group which the Private Zone belongs.
-{{% /md %}}</dd>
-    <dt class="property-optional"
+{{% /md %}}</dd><dt class="property-optional"
             title="Optional">
         <span id="userclientip_csharp">
 <a href="#userclientip_csharp" style="color: inherit; text-decoration: inherit;">User<wbr>Client<wbr>Ip</a>
@@ -263,8 +227,7 @@ Default to "ZONE".
         <span class="property-type">string</span>
     </dt>
     <dd>{{% md %}}The IP address of the client.
-{{% /md %}}</dd>
-    <dt class="property-optional"
+{{% /md %}}</dd><dt class="property-optional"
             title="Optional">
         <span id="zonename_csharp">
 <a href="#zonename_csharp" style="color: inherit; text-decoration: inherit;">Zone<wbr>Name</a>
@@ -273,14 +236,11 @@ Default to "ZONE".
         <span class="property-type">string</span>
     </dt>
     <dd>{{% md %}}The zone_name of the Private Zone.
-{{% /md %}}</dd>
-</dl>
+{{% /md %}}</dd></dl>
 {{% /choosable %}}
 
 {{% choosable language go %}}
-<dl class="resources-properties">
-
-    <dt class="property-optional"
+<dl class="resources-properties"><dt class="property-optional"
             title="Optional">
         <span id="lang_go">
 <a href="#lang_go" style="color: inherit; text-decoration: inherit;">Lang</a>
@@ -289,8 +249,7 @@ Default to "ZONE".
         <span class="property-type">string</span>
     </dt>
     <dd>{{% md %}}The language. Valid values: "zh", "en", "jp".
-{{% /md %}}</dd>
-    <dt class="property-optional property-deprecated"
+{{% /md %}}</dd><dt class="property-optional property-deprecated"
             title="Optional, Deprecated">
         <span id="name_go">
 <a href="#name_go" style="color: inherit; text-decoration: inherit;">Name</a>
@@ -299,8 +258,7 @@ Default to "ZONE".
         <span class="property-type">string</span>
     </dt>
     <dd>{{% md %}}The name of the Private Zone.
-{{% /md %}}<p class="property-message">Deprecated: {{% md %}}Field &#39;name&#39; has been deprecated from version 1.107.0. Use &#39;zone_name&#39; instead.{{% /md %}}</p></dd>
-    <dt class="property-optional"
+{{% /md %}}<p class="property-message">Deprecated: {{% md %}}Field &#39;name&#39; has been deprecated from version 1.107.0. Use &#39;zone_name&#39; instead.{{% /md %}}</p></dd><dt class="property-optional"
             title="Optional">
         <span id="proxypattern_go">
 <a href="#proxypattern_go" style="color: inherit; text-decoration: inherit;">Proxy<wbr>Pattern</a>
@@ -312,8 +270,7 @@ Default to "ZONE".
 - ZONE: indicates that the recursive DNS proxy is disabled.
 - RECORD: indicates that the recursive DNS proxy is enabled.
 Default to "ZONE".
-{{% /md %}}</dd>
-    <dt class="property-optional"
+{{% /md %}}</dd><dt class="property-optional"
             title="Optional">
         <span id="remark_go">
 <a href="#remark_go" style="color: inherit; text-decoration: inherit;">Remark</a>
@@ -322,8 +279,7 @@ Default to "ZONE".
         <span class="property-type">string</span>
     </dt>
     <dd>{{% md %}}The remark of the Private Zone.
-{{% /md %}}</dd>
-    <dt class="property-optional"
+{{% /md %}}</dd><dt class="property-optional"
             title="Optional">
         <span id="resourcegroupid_go">
 <a href="#resourcegroupid_go" style="color: inherit; text-decoration: inherit;">Resource<wbr>Group<wbr>Id</a>
@@ -332,8 +288,7 @@ Default to "ZONE".
         <span class="property-type">string</span>
     </dt>
     <dd>{{% md %}}The Id of resource group which the Private Zone belongs.
-{{% /md %}}</dd>
-    <dt class="property-optional"
+{{% /md %}}</dd><dt class="property-optional"
             title="Optional">
         <span id="userclientip_go">
 <a href="#userclientip_go" style="color: inherit; text-decoration: inherit;">User<wbr>Client<wbr>Ip</a>
@@ -342,8 +297,7 @@ Default to "ZONE".
         <span class="property-type">string</span>
     </dt>
     <dd>{{% md %}}The IP address of the client.
-{{% /md %}}</dd>
-    <dt class="property-optional"
+{{% /md %}}</dd><dt class="property-optional"
             title="Optional">
         <span id="zonename_go">
 <a href="#zonename_go" style="color: inherit; text-decoration: inherit;">Zone<wbr>Name</a>
@@ -352,14 +306,11 @@ Default to "ZONE".
         <span class="property-type">string</span>
     </dt>
     <dd>{{% md %}}The zone_name of the Private Zone.
-{{% /md %}}</dd>
-</dl>
+{{% /md %}}</dd></dl>
 {{% /choosable %}}
 
 {{% choosable language nodejs %}}
-<dl class="resources-properties">
-
-    <dt class="property-optional"
+<dl class="resources-properties"><dt class="property-optional"
             title="Optional">
         <span id="lang_nodejs">
 <a href="#lang_nodejs" style="color: inherit; text-decoration: inherit;">lang</a>
@@ -368,8 +319,7 @@ Default to "ZONE".
         <span class="property-type">string</span>
     </dt>
     <dd>{{% md %}}The language. Valid values: "zh", "en", "jp".
-{{% /md %}}</dd>
-    <dt class="property-optional property-deprecated"
+{{% /md %}}</dd><dt class="property-optional property-deprecated"
             title="Optional, Deprecated">
         <span id="name_nodejs">
 <a href="#name_nodejs" style="color: inherit; text-decoration: inherit;">name</a>
@@ -378,8 +328,7 @@ Default to "ZONE".
         <span class="property-type">string</span>
     </dt>
     <dd>{{% md %}}The name of the Private Zone.
-{{% /md %}}<p class="property-message">Deprecated: {{% md %}}Field &#39;name&#39; has been deprecated from version 1.107.0. Use &#39;zone_name&#39; instead.{{% /md %}}</p></dd>
-    <dt class="property-optional"
+{{% /md %}}<p class="property-message">Deprecated: {{% md %}}Field &#39;name&#39; has been deprecated from version 1.107.0. Use &#39;zone_name&#39; instead.{{% /md %}}</p></dd><dt class="property-optional"
             title="Optional">
         <span id="proxypattern_nodejs">
 <a href="#proxypattern_nodejs" style="color: inherit; text-decoration: inherit;">proxy<wbr>Pattern</a>
@@ -391,8 +340,7 @@ Default to "ZONE".
 - ZONE: indicates that the recursive DNS proxy is disabled.
 - RECORD: indicates that the recursive DNS proxy is enabled.
 Default to "ZONE".
-{{% /md %}}</dd>
-    <dt class="property-optional"
+{{% /md %}}</dd><dt class="property-optional"
             title="Optional">
         <span id="remark_nodejs">
 <a href="#remark_nodejs" style="color: inherit; text-decoration: inherit;">remark</a>
@@ -401,8 +349,7 @@ Default to "ZONE".
         <span class="property-type">string</span>
     </dt>
     <dd>{{% md %}}The remark of the Private Zone.
-{{% /md %}}</dd>
-    <dt class="property-optional"
+{{% /md %}}</dd><dt class="property-optional"
             title="Optional">
         <span id="resourcegroupid_nodejs">
 <a href="#resourcegroupid_nodejs" style="color: inherit; text-decoration: inherit;">resource<wbr>Group<wbr>Id</a>
@@ -411,8 +358,7 @@ Default to "ZONE".
         <span class="property-type">string</span>
     </dt>
     <dd>{{% md %}}The Id of resource group which the Private Zone belongs.
-{{% /md %}}</dd>
-    <dt class="property-optional"
+{{% /md %}}</dd><dt class="property-optional"
             title="Optional">
         <span id="userclientip_nodejs">
 <a href="#userclientip_nodejs" style="color: inherit; text-decoration: inherit;">user<wbr>Client<wbr>Ip</a>
@@ -421,8 +367,7 @@ Default to "ZONE".
         <span class="property-type">string</span>
     </dt>
     <dd>{{% md %}}The IP address of the client.
-{{% /md %}}</dd>
-    <dt class="property-optional"
+{{% /md %}}</dd><dt class="property-optional"
             title="Optional">
         <span id="zonename_nodejs">
 <a href="#zonename_nodejs" style="color: inherit; text-decoration: inherit;">zone<wbr>Name</a>
@@ -431,14 +376,11 @@ Default to "ZONE".
         <span class="property-type">string</span>
     </dt>
     <dd>{{% md %}}The zone_name of the Private Zone.
-{{% /md %}}</dd>
-</dl>
+{{% /md %}}</dd></dl>
 {{% /choosable %}}
 
 {{% choosable language python %}}
-<dl class="resources-properties">
-
-    <dt class="property-optional"
+<dl class="resources-properties"><dt class="property-optional"
             title="Optional">
         <span id="lang_python">
 <a href="#lang_python" style="color: inherit; text-decoration: inherit;">lang</a>
@@ -447,8 +389,7 @@ Default to "ZONE".
         <span class="property-type">str</span>
     </dt>
     <dd>{{% md %}}The language. Valid values: "zh", "en", "jp".
-{{% /md %}}</dd>
-    <dt class="property-optional property-deprecated"
+{{% /md %}}</dd><dt class="property-optional property-deprecated"
             title="Optional, Deprecated">
         <span id="name_python">
 <a href="#name_python" style="color: inherit; text-decoration: inherit;">name</a>
@@ -457,8 +398,7 @@ Default to "ZONE".
         <span class="property-type">str</span>
     </dt>
     <dd>{{% md %}}The name of the Private Zone.
-{{% /md %}}<p class="property-message">Deprecated: {{% md %}}Field &#39;name&#39; has been deprecated from version 1.107.0. Use &#39;zone_name&#39; instead.{{% /md %}}</p></dd>
-    <dt class="property-optional"
+{{% /md %}}<p class="property-message">Deprecated: {{% md %}}Field &#39;name&#39; has been deprecated from version 1.107.0. Use &#39;zone_name&#39; instead.{{% /md %}}</p></dd><dt class="property-optional"
             title="Optional">
         <span id="proxy_pattern_python">
 <a href="#proxy_pattern_python" style="color: inherit; text-decoration: inherit;">proxy_<wbr>pattern</a>
@@ -470,8 +410,7 @@ Default to "ZONE".
 - ZONE: indicates that the recursive DNS proxy is disabled.
 - RECORD: indicates that the recursive DNS proxy is enabled.
 Default to "ZONE".
-{{% /md %}}</dd>
-    <dt class="property-optional"
+{{% /md %}}</dd><dt class="property-optional"
             title="Optional">
         <span id="remark_python">
 <a href="#remark_python" style="color: inherit; text-decoration: inherit;">remark</a>
@@ -480,8 +419,7 @@ Default to "ZONE".
         <span class="property-type">str</span>
     </dt>
     <dd>{{% md %}}The remark of the Private Zone.
-{{% /md %}}</dd>
-    <dt class="property-optional"
+{{% /md %}}</dd><dt class="property-optional"
             title="Optional">
         <span id="resource_group_id_python">
 <a href="#resource_group_id_python" style="color: inherit; text-decoration: inherit;">resource_<wbr>group_<wbr>id</a>
@@ -490,8 +428,7 @@ Default to "ZONE".
         <span class="property-type">str</span>
     </dt>
     <dd>{{% md %}}The Id of resource group which the Private Zone belongs.
-{{% /md %}}</dd>
-    <dt class="property-optional"
+{{% /md %}}</dd><dt class="property-optional"
             title="Optional">
         <span id="user_client_ip_python">
 <a href="#user_client_ip_python" style="color: inherit; text-decoration: inherit;">user_<wbr>client_<wbr>ip</a>
@@ -500,8 +437,7 @@ Default to "ZONE".
         <span class="property-type">str</span>
     </dt>
     <dd>{{% md %}}The IP address of the client.
-{{% /md %}}</dd>
-    <dt class="property-optional"
+{{% /md %}}</dd><dt class="property-optional"
             title="Optional">
         <span id="zone_name_python">
 <a href="#zone_name_python" style="color: inherit; text-decoration: inherit;">zone_<wbr>name</a>
@@ -510,8 +446,7 @@ Default to "ZONE".
         <span class="property-type">str</span>
     </dt>
     <dd>{{% md %}}The zone_name of the Private Zone.
-{{% /md %}}</dd>
-</dl>
+{{% /md %}}</dd></dl>
 {{% /choosable %}}
 
 
@@ -522,9 +457,7 @@ All [input](#inputs) properties are implicitly available as output properties. A
 
 
 {{% choosable language csharp %}}
-<dl class="resources-properties">
-
-    <dt class="property-"
+<dl class="resources-properties"><dt class="property-"
             title="">
         <span id="id_csharp">
 <a href="#id_csharp" style="color: inherit; text-decoration: inherit;">Id</a>
@@ -532,8 +465,7 @@ All [input](#inputs) properties are implicitly available as output properties. A
         <span class="property-indicator"></span>
         <span class="property-type">string</span>
     </dt>
-    <dd>{{% md %}}The provider-assigned unique ID for this managed resource.{{% /md %}}</dd>
-    <dt class="property-"
+    <dd>{{% md %}}The provider-assigned unique ID for this managed resource.{{% /md %}}</dd><dt class="property-"
             title="">
         <span id="isptr_csharp">
 <a href="#isptr_csharp" style="color: inherit; text-decoration: inherit;">Is<wbr>Ptr</a>
@@ -542,8 +474,7 @@ All [input](#inputs) properties are implicitly available as output properties. A
         <span class="property-type">bool</span>
     </dt>
     <dd>{{% md %}}Whether the Private Zone is ptr.
-{{% /md %}}</dd>
-    <dt class="property-"
+{{% /md %}}</dd><dt class="property-"
             title="">
         <span id="recordcount_csharp">
 <a href="#recordcount_csharp" style="color: inherit; text-decoration: inherit;">Record<wbr>Count</a>
@@ -552,14 +483,11 @@ All [input](#inputs) properties are implicitly available as output properties. A
         <span class="property-type">int</span>
     </dt>
     <dd>{{% md %}}The count of the Private Zone Record.
-{{% /md %}}</dd>
-</dl>
+{{% /md %}}</dd></dl>
 {{% /choosable %}}
 
 {{% choosable language go %}}
-<dl class="resources-properties">
-
-    <dt class="property-"
+<dl class="resources-properties"><dt class="property-"
             title="">
         <span id="id_go">
 <a href="#id_go" style="color: inherit; text-decoration: inherit;">Id</a>
@@ -567,8 +495,7 @@ All [input](#inputs) properties are implicitly available as output properties. A
         <span class="property-indicator"></span>
         <span class="property-type">string</span>
     </dt>
-    <dd>{{% md %}}The provider-assigned unique ID for this managed resource.{{% /md %}}</dd>
-    <dt class="property-"
+    <dd>{{% md %}}The provider-assigned unique ID for this managed resource.{{% /md %}}</dd><dt class="property-"
             title="">
         <span id="isptr_go">
 <a href="#isptr_go" style="color: inherit; text-decoration: inherit;">Is<wbr>Ptr</a>
@@ -577,8 +504,7 @@ All [input](#inputs) properties are implicitly available as output properties. A
         <span class="property-type">bool</span>
     </dt>
     <dd>{{% md %}}Whether the Private Zone is ptr.
-{{% /md %}}</dd>
-    <dt class="property-"
+{{% /md %}}</dd><dt class="property-"
             title="">
         <span id="recordcount_go">
 <a href="#recordcount_go" style="color: inherit; text-decoration: inherit;">Record<wbr>Count</a>
@@ -587,14 +513,11 @@ All [input](#inputs) properties are implicitly available as output properties. A
         <span class="property-type">int</span>
     </dt>
     <dd>{{% md %}}The count of the Private Zone Record.
-{{% /md %}}</dd>
-</dl>
+{{% /md %}}</dd></dl>
 {{% /choosable %}}
 
 {{% choosable language nodejs %}}
-<dl class="resources-properties">
-
-    <dt class="property-"
+<dl class="resources-properties"><dt class="property-"
             title="">
         <span id="id_nodejs">
 <a href="#id_nodejs" style="color: inherit; text-decoration: inherit;">id</a>
@@ -602,8 +525,7 @@ All [input](#inputs) properties are implicitly available as output properties. A
         <span class="property-indicator"></span>
         <span class="property-type">string</span>
     </dt>
-    <dd>{{% md %}}The provider-assigned unique ID for this managed resource.{{% /md %}}</dd>
-    <dt class="property-"
+    <dd>{{% md %}}The provider-assigned unique ID for this managed resource.{{% /md %}}</dd><dt class="property-"
             title="">
         <span id="isptr_nodejs">
 <a href="#isptr_nodejs" style="color: inherit; text-decoration: inherit;">is<wbr>Ptr</a>
@@ -612,8 +534,7 @@ All [input](#inputs) properties are implicitly available as output properties. A
         <span class="property-type">boolean</span>
     </dt>
     <dd>{{% md %}}Whether the Private Zone is ptr.
-{{% /md %}}</dd>
-    <dt class="property-"
+{{% /md %}}</dd><dt class="property-"
             title="">
         <span id="recordcount_nodejs">
 <a href="#recordcount_nodejs" style="color: inherit; text-decoration: inherit;">record<wbr>Count</a>
@@ -622,14 +543,11 @@ All [input](#inputs) properties are implicitly available as output properties. A
         <span class="property-type">number</span>
     </dt>
     <dd>{{% md %}}The count of the Private Zone Record.
-{{% /md %}}</dd>
-</dl>
+{{% /md %}}</dd></dl>
 {{% /choosable %}}
 
 {{% choosable language python %}}
-<dl class="resources-properties">
-
-    <dt class="property-"
+<dl class="resources-properties"><dt class="property-"
             title="">
         <span id="id_python">
 <a href="#id_python" style="color: inherit; text-decoration: inherit;">id</a>
@@ -637,8 +555,7 @@ All [input](#inputs) properties are implicitly available as output properties. A
         <span class="property-indicator"></span>
         <span class="property-type">str</span>
     </dt>
-    <dd>{{% md %}}The provider-assigned unique ID for this managed resource.{{% /md %}}</dd>
-    <dt class="property-"
+    <dd>{{% md %}}The provider-assigned unique ID for this managed resource.{{% /md %}}</dd><dt class="property-"
             title="">
         <span id="is_ptr_python">
 <a href="#is_ptr_python" style="color: inherit; text-decoration: inherit;">is_<wbr>ptr</a>
@@ -647,8 +564,7 @@ All [input](#inputs) properties are implicitly available as output properties. A
         <span class="property-type">bool</span>
     </dt>
     <dd>{{% md %}}Whether the Private Zone is ptr.
-{{% /md %}}</dd>
-    <dt class="property-"
+{{% /md %}}</dd><dt class="property-"
             title="">
         <span id="record_count_python">
 <a href="#record_count_python" style="color: inherit; text-decoration: inherit;">record_<wbr>count</a>
@@ -657,8 +573,7 @@ All [input](#inputs) properties are implicitly available as output properties. A
         <span class="property-type">int</span>
     </dt>
     <dd>{{% md %}}The count of the Private Zone Record.
-{{% /md %}}</dd>
-</dl>
+{{% /md %}}</dd></dl>
 {{% /choosable %}}
 
 
@@ -785,9 +700,7 @@ The following state arguments are supported:
 
 
 {{% choosable language csharp %}}
-<dl class="resources-properties">
-
-    <dt class="property-optional"
+<dl class="resources-properties"><dt class="property-optional"
             title="Optional">
         <span id="state_isptr_csharp">
 <a href="#state_isptr_csharp" style="color: inherit; text-decoration: inherit;">Is<wbr>Ptr</a>
@@ -796,8 +709,7 @@ The following state arguments are supported:
         <span class="property-type">bool</span>
     </dt>
     <dd>{{% md %}}Whether the Private Zone is ptr.
-{{% /md %}}</dd>
-    <dt class="property-optional"
+{{% /md %}}</dd><dt class="property-optional"
             title="Optional">
         <span id="state_lang_csharp">
 <a href="#state_lang_csharp" style="color: inherit; text-decoration: inherit;">Lang</a>
@@ -806,8 +718,7 @@ The following state arguments are supported:
         <span class="property-type">string</span>
     </dt>
     <dd>{{% md %}}The language. Valid values: "zh", "en", "jp".
-{{% /md %}}</dd>
-    <dt class="property-optional property-deprecated"
+{{% /md %}}</dd><dt class="property-optional property-deprecated"
             title="Optional, Deprecated">
         <span id="state_name_csharp">
 <a href="#state_name_csharp" style="color: inherit; text-decoration: inherit;">Name</a>
@@ -816,8 +727,7 @@ The following state arguments are supported:
         <span class="property-type">string</span>
     </dt>
     <dd>{{% md %}}The name of the Private Zone.
-{{% /md %}}<p class="property-message">Deprecated: {{% md %}}Field &#39;name&#39; has been deprecated from version 1.107.0. Use &#39;zone_name&#39; instead.{{% /md %}}</p></dd>
-    <dt class="property-optional"
+{{% /md %}}<p class="property-message">Deprecated: {{% md %}}Field &#39;name&#39; has been deprecated from version 1.107.0. Use &#39;zone_name&#39; instead.{{% /md %}}</p></dd><dt class="property-optional"
             title="Optional">
         <span id="state_proxypattern_csharp">
 <a href="#state_proxypattern_csharp" style="color: inherit; text-decoration: inherit;">Proxy<wbr>Pattern</a>
@@ -829,8 +739,7 @@ The following state arguments are supported:
 - ZONE: indicates that the recursive DNS proxy is disabled.
 - RECORD: indicates that the recursive DNS proxy is enabled.
 Default to "ZONE".
-{{% /md %}}</dd>
-    <dt class="property-optional"
+{{% /md %}}</dd><dt class="property-optional"
             title="Optional">
         <span id="state_recordcount_csharp">
 <a href="#state_recordcount_csharp" style="color: inherit; text-decoration: inherit;">Record<wbr>Count</a>
@@ -839,8 +748,7 @@ Default to "ZONE".
         <span class="property-type">int</span>
     </dt>
     <dd>{{% md %}}The count of the Private Zone Record.
-{{% /md %}}</dd>
-    <dt class="property-optional"
+{{% /md %}}</dd><dt class="property-optional"
             title="Optional">
         <span id="state_remark_csharp">
 <a href="#state_remark_csharp" style="color: inherit; text-decoration: inherit;">Remark</a>
@@ -849,8 +757,7 @@ Default to "ZONE".
         <span class="property-type">string</span>
     </dt>
     <dd>{{% md %}}The remark of the Private Zone.
-{{% /md %}}</dd>
-    <dt class="property-optional"
+{{% /md %}}</dd><dt class="property-optional"
             title="Optional">
         <span id="state_resourcegroupid_csharp">
 <a href="#state_resourcegroupid_csharp" style="color: inherit; text-decoration: inherit;">Resource<wbr>Group<wbr>Id</a>
@@ -859,8 +766,7 @@ Default to "ZONE".
         <span class="property-type">string</span>
     </dt>
     <dd>{{% md %}}The Id of resource group which the Private Zone belongs.
-{{% /md %}}</dd>
-    <dt class="property-optional"
+{{% /md %}}</dd><dt class="property-optional"
             title="Optional">
         <span id="state_userclientip_csharp">
 <a href="#state_userclientip_csharp" style="color: inherit; text-decoration: inherit;">User<wbr>Client<wbr>Ip</a>
@@ -869,8 +775,7 @@ Default to "ZONE".
         <span class="property-type">string</span>
     </dt>
     <dd>{{% md %}}The IP address of the client.
-{{% /md %}}</dd>
-    <dt class="property-optional"
+{{% /md %}}</dd><dt class="property-optional"
             title="Optional">
         <span id="state_zonename_csharp">
 <a href="#state_zonename_csharp" style="color: inherit; text-decoration: inherit;">Zone<wbr>Name</a>
@@ -879,14 +784,11 @@ Default to "ZONE".
         <span class="property-type">string</span>
     </dt>
     <dd>{{% md %}}The zone_name of the Private Zone.
-{{% /md %}}</dd>
-</dl>
+{{% /md %}}</dd></dl>
 {{% /choosable %}}
 
 {{% choosable language go %}}
-<dl class="resources-properties">
-
-    <dt class="property-optional"
+<dl class="resources-properties"><dt class="property-optional"
             title="Optional">
         <span id="state_isptr_go">
 <a href="#state_isptr_go" style="color: inherit; text-decoration: inherit;">Is<wbr>Ptr</a>
@@ -895,8 +797,7 @@ Default to "ZONE".
         <span class="property-type">bool</span>
     </dt>
     <dd>{{% md %}}Whether the Private Zone is ptr.
-{{% /md %}}</dd>
-    <dt class="property-optional"
+{{% /md %}}</dd><dt class="property-optional"
             title="Optional">
         <span id="state_lang_go">
 <a href="#state_lang_go" style="color: inherit; text-decoration: inherit;">Lang</a>
@@ -905,8 +806,7 @@ Default to "ZONE".
         <span class="property-type">string</span>
     </dt>
     <dd>{{% md %}}The language. Valid values: "zh", "en", "jp".
-{{% /md %}}</dd>
-    <dt class="property-optional property-deprecated"
+{{% /md %}}</dd><dt class="property-optional property-deprecated"
             title="Optional, Deprecated">
         <span id="state_name_go">
 <a href="#state_name_go" style="color: inherit; text-decoration: inherit;">Name</a>
@@ -915,8 +815,7 @@ Default to "ZONE".
         <span class="property-type">string</span>
     </dt>
     <dd>{{% md %}}The name of the Private Zone.
-{{% /md %}}<p class="property-message">Deprecated: {{% md %}}Field &#39;name&#39; has been deprecated from version 1.107.0. Use &#39;zone_name&#39; instead.{{% /md %}}</p></dd>
-    <dt class="property-optional"
+{{% /md %}}<p class="property-message">Deprecated: {{% md %}}Field &#39;name&#39; has been deprecated from version 1.107.0. Use &#39;zone_name&#39; instead.{{% /md %}}</p></dd><dt class="property-optional"
             title="Optional">
         <span id="state_proxypattern_go">
 <a href="#state_proxypattern_go" style="color: inherit; text-decoration: inherit;">Proxy<wbr>Pattern</a>
@@ -928,8 +827,7 @@ Default to "ZONE".
 - ZONE: indicates that the recursive DNS proxy is disabled.
 - RECORD: indicates that the recursive DNS proxy is enabled.
 Default to "ZONE".
-{{% /md %}}</dd>
-    <dt class="property-optional"
+{{% /md %}}</dd><dt class="property-optional"
             title="Optional">
         <span id="state_recordcount_go">
 <a href="#state_recordcount_go" style="color: inherit; text-decoration: inherit;">Record<wbr>Count</a>
@@ -938,8 +836,7 @@ Default to "ZONE".
         <span class="property-type">int</span>
     </dt>
     <dd>{{% md %}}The count of the Private Zone Record.
-{{% /md %}}</dd>
-    <dt class="property-optional"
+{{% /md %}}</dd><dt class="property-optional"
             title="Optional">
         <span id="state_remark_go">
 <a href="#state_remark_go" style="color: inherit; text-decoration: inherit;">Remark</a>
@@ -948,8 +845,7 @@ Default to "ZONE".
         <span class="property-type">string</span>
     </dt>
     <dd>{{% md %}}The remark of the Private Zone.
-{{% /md %}}</dd>
-    <dt class="property-optional"
+{{% /md %}}</dd><dt class="property-optional"
             title="Optional">
         <span id="state_resourcegroupid_go">
 <a href="#state_resourcegroupid_go" style="color: inherit; text-decoration: inherit;">Resource<wbr>Group<wbr>Id</a>
@@ -958,8 +854,7 @@ Default to "ZONE".
         <span class="property-type">string</span>
     </dt>
     <dd>{{% md %}}The Id of resource group which the Private Zone belongs.
-{{% /md %}}</dd>
-    <dt class="property-optional"
+{{% /md %}}</dd><dt class="property-optional"
             title="Optional">
         <span id="state_userclientip_go">
 <a href="#state_userclientip_go" style="color: inherit; text-decoration: inherit;">User<wbr>Client<wbr>Ip</a>
@@ -968,8 +863,7 @@ Default to "ZONE".
         <span class="property-type">string</span>
     </dt>
     <dd>{{% md %}}The IP address of the client.
-{{% /md %}}</dd>
-    <dt class="property-optional"
+{{% /md %}}</dd><dt class="property-optional"
             title="Optional">
         <span id="state_zonename_go">
 <a href="#state_zonename_go" style="color: inherit; text-decoration: inherit;">Zone<wbr>Name</a>
@@ -978,14 +872,11 @@ Default to "ZONE".
         <span class="property-type">string</span>
     </dt>
     <dd>{{% md %}}The zone_name of the Private Zone.
-{{% /md %}}</dd>
-</dl>
+{{% /md %}}</dd></dl>
 {{% /choosable %}}
 
 {{% choosable language nodejs %}}
-<dl class="resources-properties">
-
-    <dt class="property-optional"
+<dl class="resources-properties"><dt class="property-optional"
             title="Optional">
         <span id="state_isptr_nodejs">
 <a href="#state_isptr_nodejs" style="color: inherit; text-decoration: inherit;">is<wbr>Ptr</a>
@@ -994,8 +885,7 @@ Default to "ZONE".
         <span class="property-type">boolean</span>
     </dt>
     <dd>{{% md %}}Whether the Private Zone is ptr.
-{{% /md %}}</dd>
-    <dt class="property-optional"
+{{% /md %}}</dd><dt class="property-optional"
             title="Optional">
         <span id="state_lang_nodejs">
 <a href="#state_lang_nodejs" style="color: inherit; text-decoration: inherit;">lang</a>
@@ -1004,8 +894,7 @@ Default to "ZONE".
         <span class="property-type">string</span>
     </dt>
     <dd>{{% md %}}The language. Valid values: "zh", "en", "jp".
-{{% /md %}}</dd>
-    <dt class="property-optional property-deprecated"
+{{% /md %}}</dd><dt class="property-optional property-deprecated"
             title="Optional, Deprecated">
         <span id="state_name_nodejs">
 <a href="#state_name_nodejs" style="color: inherit; text-decoration: inherit;">name</a>
@@ -1014,8 +903,7 @@ Default to "ZONE".
         <span class="property-type">string</span>
     </dt>
     <dd>{{% md %}}The name of the Private Zone.
-{{% /md %}}<p class="property-message">Deprecated: {{% md %}}Field &#39;name&#39; has been deprecated from version 1.107.0. Use &#39;zone_name&#39; instead.{{% /md %}}</p></dd>
-    <dt class="property-optional"
+{{% /md %}}<p class="property-message">Deprecated: {{% md %}}Field &#39;name&#39; has been deprecated from version 1.107.0. Use &#39;zone_name&#39; instead.{{% /md %}}</p></dd><dt class="property-optional"
             title="Optional">
         <span id="state_proxypattern_nodejs">
 <a href="#state_proxypattern_nodejs" style="color: inherit; text-decoration: inherit;">proxy<wbr>Pattern</a>
@@ -1027,8 +915,7 @@ Default to "ZONE".
 - ZONE: indicates that the recursive DNS proxy is disabled.
 - RECORD: indicates that the recursive DNS proxy is enabled.
 Default to "ZONE".
-{{% /md %}}</dd>
-    <dt class="property-optional"
+{{% /md %}}</dd><dt class="property-optional"
             title="Optional">
         <span id="state_recordcount_nodejs">
 <a href="#state_recordcount_nodejs" style="color: inherit; text-decoration: inherit;">record<wbr>Count</a>
@@ -1037,8 +924,7 @@ Default to "ZONE".
         <span class="property-type">number</span>
     </dt>
     <dd>{{% md %}}The count of the Private Zone Record.
-{{% /md %}}</dd>
-    <dt class="property-optional"
+{{% /md %}}</dd><dt class="property-optional"
             title="Optional">
         <span id="state_remark_nodejs">
 <a href="#state_remark_nodejs" style="color: inherit; text-decoration: inherit;">remark</a>
@@ -1047,8 +933,7 @@ Default to "ZONE".
         <span class="property-type">string</span>
     </dt>
     <dd>{{% md %}}The remark of the Private Zone.
-{{% /md %}}</dd>
-    <dt class="property-optional"
+{{% /md %}}</dd><dt class="property-optional"
             title="Optional">
         <span id="state_resourcegroupid_nodejs">
 <a href="#state_resourcegroupid_nodejs" style="color: inherit; text-decoration: inherit;">resource<wbr>Group<wbr>Id</a>
@@ -1057,8 +942,7 @@ Default to "ZONE".
         <span class="property-type">string</span>
     </dt>
     <dd>{{% md %}}The Id of resource group which the Private Zone belongs.
-{{% /md %}}</dd>
-    <dt class="property-optional"
+{{% /md %}}</dd><dt class="property-optional"
             title="Optional">
         <span id="state_userclientip_nodejs">
 <a href="#state_userclientip_nodejs" style="color: inherit; text-decoration: inherit;">user<wbr>Client<wbr>Ip</a>
@@ -1067,8 +951,7 @@ Default to "ZONE".
         <span class="property-type">string</span>
     </dt>
     <dd>{{% md %}}The IP address of the client.
-{{% /md %}}</dd>
-    <dt class="property-optional"
+{{% /md %}}</dd><dt class="property-optional"
             title="Optional">
         <span id="state_zonename_nodejs">
 <a href="#state_zonename_nodejs" style="color: inherit; text-decoration: inherit;">zone<wbr>Name</a>
@@ -1077,14 +960,11 @@ Default to "ZONE".
         <span class="property-type">string</span>
     </dt>
     <dd>{{% md %}}The zone_name of the Private Zone.
-{{% /md %}}</dd>
-</dl>
+{{% /md %}}</dd></dl>
 {{% /choosable %}}
 
 {{% choosable language python %}}
-<dl class="resources-properties">
-
-    <dt class="property-optional"
+<dl class="resources-properties"><dt class="property-optional"
             title="Optional">
         <span id="state_is_ptr_python">
 <a href="#state_is_ptr_python" style="color: inherit; text-decoration: inherit;">is_<wbr>ptr</a>
@@ -1093,8 +973,7 @@ Default to "ZONE".
         <span class="property-type">bool</span>
     </dt>
     <dd>{{% md %}}Whether the Private Zone is ptr.
-{{% /md %}}</dd>
-    <dt class="property-optional"
+{{% /md %}}</dd><dt class="property-optional"
             title="Optional">
         <span id="state_lang_python">
 <a href="#state_lang_python" style="color: inherit; text-decoration: inherit;">lang</a>
@@ -1103,8 +982,7 @@ Default to "ZONE".
         <span class="property-type">str</span>
     </dt>
     <dd>{{% md %}}The language. Valid values: "zh", "en", "jp".
-{{% /md %}}</dd>
-    <dt class="property-optional property-deprecated"
+{{% /md %}}</dd><dt class="property-optional property-deprecated"
             title="Optional, Deprecated">
         <span id="state_name_python">
 <a href="#state_name_python" style="color: inherit; text-decoration: inherit;">name</a>
@@ -1113,8 +991,7 @@ Default to "ZONE".
         <span class="property-type">str</span>
     </dt>
     <dd>{{% md %}}The name of the Private Zone.
-{{% /md %}}<p class="property-message">Deprecated: {{% md %}}Field &#39;name&#39; has been deprecated from version 1.107.0. Use &#39;zone_name&#39; instead.{{% /md %}}</p></dd>
-    <dt class="property-optional"
+{{% /md %}}<p class="property-message">Deprecated: {{% md %}}Field &#39;name&#39; has been deprecated from version 1.107.0. Use &#39;zone_name&#39; instead.{{% /md %}}</p></dd><dt class="property-optional"
             title="Optional">
         <span id="state_proxy_pattern_python">
 <a href="#state_proxy_pattern_python" style="color: inherit; text-decoration: inherit;">proxy_<wbr>pattern</a>
@@ -1126,8 +1003,7 @@ Default to "ZONE".
 - ZONE: indicates that the recursive DNS proxy is disabled.
 - RECORD: indicates that the recursive DNS proxy is enabled.
 Default to "ZONE".
-{{% /md %}}</dd>
-    <dt class="property-optional"
+{{% /md %}}</dd><dt class="property-optional"
             title="Optional">
         <span id="state_record_count_python">
 <a href="#state_record_count_python" style="color: inherit; text-decoration: inherit;">record_<wbr>count</a>
@@ -1136,8 +1012,7 @@ Default to "ZONE".
         <span class="property-type">int</span>
     </dt>
     <dd>{{% md %}}The count of the Private Zone Record.
-{{% /md %}}</dd>
-    <dt class="property-optional"
+{{% /md %}}</dd><dt class="property-optional"
             title="Optional">
         <span id="state_remark_python">
 <a href="#state_remark_python" style="color: inherit; text-decoration: inherit;">remark</a>
@@ -1146,8 +1021,7 @@ Default to "ZONE".
         <span class="property-type">str</span>
     </dt>
     <dd>{{% md %}}The remark of the Private Zone.
-{{% /md %}}</dd>
-    <dt class="property-optional"
+{{% /md %}}</dd><dt class="property-optional"
             title="Optional">
         <span id="state_resource_group_id_python">
 <a href="#state_resource_group_id_python" style="color: inherit; text-decoration: inherit;">resource_<wbr>group_<wbr>id</a>
@@ -1156,8 +1030,7 @@ Default to "ZONE".
         <span class="property-type">str</span>
     </dt>
     <dd>{{% md %}}The Id of resource group which the Private Zone belongs.
-{{% /md %}}</dd>
-    <dt class="property-optional"
+{{% /md %}}</dd><dt class="property-optional"
             title="Optional">
         <span id="state_user_client_ip_python">
 <a href="#state_user_client_ip_python" style="color: inherit; text-decoration: inherit;">user_<wbr>client_<wbr>ip</a>
@@ -1166,8 +1039,7 @@ Default to "ZONE".
         <span class="property-type">str</span>
     </dt>
     <dd>{{% md %}}The IP address of the client.
-{{% /md %}}</dd>
-    <dt class="property-optional"
+{{% /md %}}</dd><dt class="property-optional"
             title="Optional">
         <span id="state_zone_name_python">
 <a href="#state_zone_name_python" style="color: inherit; text-decoration: inherit;">zone_<wbr>name</a>
@@ -1176,8 +1048,7 @@ Default to "ZONE".
         <span class="property-type">str</span>
     </dt>
     <dd>{{% md %}}The zone_name of the Private Zone.
-{{% /md %}}</dd>
-</dl>
+{{% /md %}}</dd></dl>
 {{% /choosable %}}
 
 
@@ -1193,6 +1064,6 @@ Default to "ZONE".
 	<dt>License</dt>
 	<dd>Apache-2.0</dd>
 	<dt>Notes</dt>
-	<dd>This Pulumi package is based on the [`alicloud` Terraform Provider](https://github.com/aliyun/terraform-provider-alicloud).</dd>
+	<dd>{{% md %}}This Pulumi package is based on the [`alicloud` Terraform Provider](https://github.com/aliyun/terraform-provider-alicloud).{{% /md %}}</dd>
 </dl>
 

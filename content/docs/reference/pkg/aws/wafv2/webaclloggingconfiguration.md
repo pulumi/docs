@@ -17,11 +17,17 @@ If you are capturing logs for Amazon CloudFront, always create the firehose in U
 Be sure to give the data firehose a name that starts with the prefix `aws-waf-logs-`.
 
 {{% examples %}}
+
 ## Example Usage
 
 {{< chooser language "typescript,python,go,csharp" / >}}
 
-{{% example csharp %}}
+
+
+
+
+{{< example csharp >}}
+
 ```csharp
 using Pulumi;
 using Aws = Pulumi.Aws;
@@ -53,9 +59,12 @@ class MyStack : Stack
 }
 ```
 
-{{% /example %}}
 
-{{% example go %}}
+{{< /example >}}
+
+
+{{< example go >}}
+
 ```go
 package main
 
@@ -87,9 +96,12 @@ func main() {
 }
 ```
 
-{{% /example %}}
 
-{{% example python %}}
+{{< /example >}}
+
+
+{{< example python >}}
+
 ```python
 import pulumi
 import pulumi_aws as aws
@@ -104,9 +116,12 @@ example = aws.wafv2.WebAclLoggingConfiguration("example",
     )])
 ```
 
-{{% /example %}}
 
-{{% example typescript %}}
+{{< /example >}}
+
+
+{{< example typescript >}}
+
 
 ```typescript
 import * as pulumi from "@pulumi/pulumi";
@@ -123,9 +138,16 @@ const example = new aws.wafv2.WebAclLoggingConfiguration("example", {
 });
 ```
 
-{{% /example %}}
+
+{{< /example >}}
+
+
+
+
 
 {{% /examples %}}
+
+
 
 
 ## Create a WebAclLoggingConfiguration Resource {#create}
@@ -150,9 +172,7 @@ const example = new aws.wafv2.WebAclLoggingConfiguration("example", {
 
 {{% choosable language nodejs %}}
 
-<dl class="resources-properties">
-  
-    <dt
+<dl class="resources-properties"><dt
         class="property-required" title="Required">
         <span>name</span>
         <span class="property-indicator"></span>
@@ -160,9 +180,7 @@ const example = new aws.wafv2.WebAclLoggingConfiguration("example", {
     </dt>
     <dd>
       The unique name of the resource.
-    </dd>
-  
-    <dt
+    </dd><dt
         class="property-required" title="Required">
         <span>args</span>
         <span class="property-indicator"></span>
@@ -170,9 +188,7 @@ const example = new aws.wafv2.WebAclLoggingConfiguration("example", {
     </dt>
     <dd>
       The arguments to resource properties.
-    </dd>
-  
-    <dt
+    </dd><dt
         class="property-optional" title="Optional">
         <span>opts</span>
         <span class="property-indicator"></span>
@@ -180,10 +196,7 @@ const example = new aws.wafv2.WebAclLoggingConfiguration("example", {
     </dt>
     <dd>
       Bag of options to control resource&#39;s behavior.
-    </dd>
-  
-
-</dl>
+    </dd></dl>
 
 {{% /choosable %}}
 
@@ -209,9 +222,7 @@ const example = new aws.wafv2.WebAclLoggingConfiguration("example", {
 
 {{% choosable language go %}}
 
-<dl class="resources-properties">
-  
-    <dt
+<dl class="resources-properties"><dt
         class="property-optional" title="Optional">
         <span>ctx</span>
         <span class="property-indicator"></span>
@@ -219,9 +230,7 @@ const example = new aws.wafv2.WebAclLoggingConfiguration("example", {
     </dt>
     <dd>
       Context object for the current deployment.
-    </dd>
-  
-    <dt
+    </dd><dt
         class="property-required" title="Required">
         <span>name</span>
         <span class="property-indicator"></span>
@@ -229,9 +238,7 @@ const example = new aws.wafv2.WebAclLoggingConfiguration("example", {
     </dt>
     <dd>
       The unique name of the resource.
-    </dd>
-  
-    <dt
+    </dd><dt
         class="property-required" title="Required">
         <span>args</span>
         <span class="property-indicator"></span>
@@ -239,9 +246,7 @@ const example = new aws.wafv2.WebAclLoggingConfiguration("example", {
     </dt>
     <dd>
       The arguments to resource properties.
-    </dd>
-  
-    <dt
+    </dd><dt
         class="property-optional" title="Optional">
         <span>opts</span>
         <span class="property-indicator"></span>
@@ -249,18 +254,13 @@ const example = new aws.wafv2.WebAclLoggingConfiguration("example", {
     </dt>
     <dd>
       Bag of options to control resource&#39;s behavior.
-    </dd>
-  
-
-</dl>
+    </dd></dl>
 
 {{% /choosable %}}
 
 {{% choosable language csharp %}}
 
-<dl class="resources-properties">
-  
-    <dt
+<dl class="resources-properties"><dt
         class="property-required" title="Required">
         <span>name</span>
         <span class="property-indicator"></span>
@@ -268,9 +268,7 @@ const example = new aws.wafv2.WebAclLoggingConfiguration("example", {
     </dt>
     <dd>
       The unique name of the resource.
-    </dd>
-  
-    <dt
+    </dd><dt
         class="property-required" title="Required">
         <span>args</span>
         <span class="property-indicator"></span>
@@ -278,9 +276,7 @@ const example = new aws.wafv2.WebAclLoggingConfiguration("example", {
     </dt>
     <dd>
       The arguments to resource properties.
-    </dd>
-  
-    <dt
+    </dd><dt
         class="property-optional" title="Optional">
         <span>opts</span>
         <span class="property-indicator"></span>
@@ -288,10 +284,7 @@ const example = new aws.wafv2.WebAclLoggingConfiguration("example", {
     </dt>
     <dd>
       Bag of options to control resource&#39;s behavior.
-    </dd>
-  
-
-</dl>
+    </dd></dl>
 
 {{% /choosable %}}
 
@@ -306,9 +299,7 @@ The WebAclLoggingConfiguration resource accepts the following [input]({{< relref
 
 
 {{% choosable language csharp %}}
-<dl class="resources-properties">
-
-    <dt class="property-required"
+<dl class="resources-properties"><dt class="property-required"
             title="Required">
         <span id="logdestinationconfigs_csharp">
 <a href="#logdestinationconfigs_csharp" style="color: inherit; text-decoration: inherit;">Log<wbr>Destination<wbr>Configs</a>
@@ -317,8 +308,7 @@ The WebAclLoggingConfiguration resource accepts the following [input]({{< relref
         <span class="property-type">List&lt;string&gt;</span>
     </dt>
     <dd>{{% md %}}The Amazon Kinesis Data Firehose Amazon Resource Name (ARNs) that you want to associate with the web ACL. Currently, only 1 ARN is supported.
-{{% /md %}}</dd>
-    <dt class="property-required"
+{{% /md %}}</dd><dt class="property-required"
             title="Required">
         <span id="resourcearn_csharp">
 <a href="#resourcearn_csharp" style="color: inherit; text-decoration: inherit;">Resource<wbr>Arn</a>
@@ -327,8 +317,7 @@ The WebAclLoggingConfiguration resource accepts the following [input]({{< relref
         <span class="property-type">string</span>
     </dt>
     <dd>{{% md %}}The Amazon Resource Name (ARN) of the web ACL that you want to associate with `log_destination_configs`.
-{{% /md %}}</dd>
-    <dt class="property-optional"
+{{% /md %}}</dd><dt class="property-optional"
             title="Optional">
         <span id="redactedfields_csharp">
 <a href="#redactedfields_csharp" style="color: inherit; text-decoration: inherit;">Redacted<wbr>Fields</a>
@@ -337,14 +326,11 @@ The WebAclLoggingConfiguration resource accepts the following [input]({{< relref
         <span class="property-type"><a href="#webaclloggingconfigurationredactedfield">List&lt;Web<wbr>Acl<wbr>Logging<wbr>Configuration<wbr>Redacted<wbr>Field<wbr>Args&gt;</a></span>
     </dt>
     <dd>{{% md %}}The parts of the request that you want to keep out of the logs. Up to 100 `redacted_fields` blocks are supported.
-{{% /md %}}</dd>
-</dl>
+{{% /md %}}</dd></dl>
 {{% /choosable %}}
 
 {{% choosable language go %}}
-<dl class="resources-properties">
-
-    <dt class="property-required"
+<dl class="resources-properties"><dt class="property-required"
             title="Required">
         <span id="logdestinationconfigs_go">
 <a href="#logdestinationconfigs_go" style="color: inherit; text-decoration: inherit;">Log<wbr>Destination<wbr>Configs</a>
@@ -353,8 +339,7 @@ The WebAclLoggingConfiguration resource accepts the following [input]({{< relref
         <span class="property-type">[]string</span>
     </dt>
     <dd>{{% md %}}The Amazon Kinesis Data Firehose Amazon Resource Name (ARNs) that you want to associate with the web ACL. Currently, only 1 ARN is supported.
-{{% /md %}}</dd>
-    <dt class="property-required"
+{{% /md %}}</dd><dt class="property-required"
             title="Required">
         <span id="resourcearn_go">
 <a href="#resourcearn_go" style="color: inherit; text-decoration: inherit;">Resource<wbr>Arn</a>
@@ -363,8 +348,7 @@ The WebAclLoggingConfiguration resource accepts the following [input]({{< relref
         <span class="property-type">string</span>
     </dt>
     <dd>{{% md %}}The Amazon Resource Name (ARN) of the web ACL that you want to associate with `log_destination_configs`.
-{{% /md %}}</dd>
-    <dt class="property-optional"
+{{% /md %}}</dd><dt class="property-optional"
             title="Optional">
         <span id="redactedfields_go">
 <a href="#redactedfields_go" style="color: inherit; text-decoration: inherit;">Redacted<wbr>Fields</a>
@@ -373,14 +357,11 @@ The WebAclLoggingConfiguration resource accepts the following [input]({{< relref
         <span class="property-type"><a href="#webaclloggingconfigurationredactedfield">[]Web<wbr>Acl<wbr>Logging<wbr>Configuration<wbr>Redacted<wbr>Field</a></span>
     </dt>
     <dd>{{% md %}}The parts of the request that you want to keep out of the logs. Up to 100 `redacted_fields` blocks are supported.
-{{% /md %}}</dd>
-</dl>
+{{% /md %}}</dd></dl>
 {{% /choosable %}}
 
 {{% choosable language nodejs %}}
-<dl class="resources-properties">
-
-    <dt class="property-required"
+<dl class="resources-properties"><dt class="property-required"
             title="Required">
         <span id="logdestinationconfigs_nodejs">
 <a href="#logdestinationconfigs_nodejs" style="color: inherit; text-decoration: inherit;">log<wbr>Destination<wbr>Configs</a>
@@ -389,8 +370,7 @@ The WebAclLoggingConfiguration resource accepts the following [input]({{< relref
         <span class="property-type">string[]</span>
     </dt>
     <dd>{{% md %}}The Amazon Kinesis Data Firehose Amazon Resource Name (ARNs) that you want to associate with the web ACL. Currently, only 1 ARN is supported.
-{{% /md %}}</dd>
-    <dt class="property-required"
+{{% /md %}}</dd><dt class="property-required"
             title="Required">
         <span id="resourcearn_nodejs">
 <a href="#resourcearn_nodejs" style="color: inherit; text-decoration: inherit;">resource<wbr>Arn</a>
@@ -399,8 +379,7 @@ The WebAclLoggingConfiguration resource accepts the following [input]({{< relref
         <span class="property-type">string</span>
     </dt>
     <dd>{{% md %}}The Amazon Resource Name (ARN) of the web ACL that you want to associate with `log_destination_configs`.
-{{% /md %}}</dd>
-    <dt class="property-optional"
+{{% /md %}}</dd><dt class="property-optional"
             title="Optional">
         <span id="redactedfields_nodejs">
 <a href="#redactedfields_nodejs" style="color: inherit; text-decoration: inherit;">redacted<wbr>Fields</a>
@@ -409,14 +388,11 @@ The WebAclLoggingConfiguration resource accepts the following [input]({{< relref
         <span class="property-type"><a href="#webaclloggingconfigurationredactedfield">Web<wbr>Acl<wbr>Logging<wbr>Configuration<wbr>Redacted<wbr>Field[]</a></span>
     </dt>
     <dd>{{% md %}}The parts of the request that you want to keep out of the logs. Up to 100 `redacted_fields` blocks are supported.
-{{% /md %}}</dd>
-</dl>
+{{% /md %}}</dd></dl>
 {{% /choosable %}}
 
 {{% choosable language python %}}
-<dl class="resources-properties">
-
-    <dt class="property-required"
+<dl class="resources-properties"><dt class="property-required"
             title="Required">
         <span id="log_destination_configs_python">
 <a href="#log_destination_configs_python" style="color: inherit; text-decoration: inherit;">log_<wbr>destination_<wbr>configs</a>
@@ -425,8 +401,7 @@ The WebAclLoggingConfiguration resource accepts the following [input]({{< relref
         <span class="property-type">Sequence[str]</span>
     </dt>
     <dd>{{% md %}}The Amazon Kinesis Data Firehose Amazon Resource Name (ARNs) that you want to associate with the web ACL. Currently, only 1 ARN is supported.
-{{% /md %}}</dd>
-    <dt class="property-required"
+{{% /md %}}</dd><dt class="property-required"
             title="Required">
         <span id="resource_arn_python">
 <a href="#resource_arn_python" style="color: inherit; text-decoration: inherit;">resource_<wbr>arn</a>
@@ -435,8 +410,7 @@ The WebAclLoggingConfiguration resource accepts the following [input]({{< relref
         <span class="property-type">str</span>
     </dt>
     <dd>{{% md %}}The Amazon Resource Name (ARN) of the web ACL that you want to associate with `log_destination_configs`.
-{{% /md %}}</dd>
-    <dt class="property-optional"
+{{% /md %}}</dd><dt class="property-optional"
             title="Optional">
         <span id="redacted_fields_python">
 <a href="#redacted_fields_python" style="color: inherit; text-decoration: inherit;">redacted_<wbr>fields</a>
@@ -445,8 +419,7 @@ The WebAclLoggingConfiguration resource accepts the following [input]({{< relref
         <span class="property-type"><a href="#webaclloggingconfigurationredactedfield">Sequence[Web<wbr>Acl<wbr>Logging<wbr>Configuration<wbr>Redacted<wbr>Field<wbr>Args]</a></span>
     </dt>
     <dd>{{% md %}}The parts of the request that you want to keep out of the logs. Up to 100 `redacted_fields` blocks are supported.
-{{% /md %}}</dd>
-</dl>
+{{% /md %}}</dd></dl>
 {{% /choosable %}}
 
 
@@ -457,9 +430,7 @@ All [input](#inputs) properties are implicitly available as output properties. A
 
 
 {{% choosable language csharp %}}
-<dl class="resources-properties">
-
-    <dt class="property-"
+<dl class="resources-properties"><dt class="property-"
             title="">
         <span id="id_csharp">
 <a href="#id_csharp" style="color: inherit; text-decoration: inherit;">Id</a>
@@ -467,14 +438,11 @@ All [input](#inputs) properties are implicitly available as output properties. A
         <span class="property-indicator"></span>
         <span class="property-type">string</span>
     </dt>
-    <dd>{{% md %}}The provider-assigned unique ID for this managed resource.{{% /md %}}</dd>
-</dl>
+    <dd>{{% md %}}The provider-assigned unique ID for this managed resource.{{% /md %}}</dd></dl>
 {{% /choosable %}}
 
 {{% choosable language go %}}
-<dl class="resources-properties">
-
-    <dt class="property-"
+<dl class="resources-properties"><dt class="property-"
             title="">
         <span id="id_go">
 <a href="#id_go" style="color: inherit; text-decoration: inherit;">Id</a>
@@ -482,14 +450,11 @@ All [input](#inputs) properties are implicitly available as output properties. A
         <span class="property-indicator"></span>
         <span class="property-type">string</span>
     </dt>
-    <dd>{{% md %}}The provider-assigned unique ID for this managed resource.{{% /md %}}</dd>
-</dl>
+    <dd>{{% md %}}The provider-assigned unique ID for this managed resource.{{% /md %}}</dd></dl>
 {{% /choosable %}}
 
 {{% choosable language nodejs %}}
-<dl class="resources-properties">
-
-    <dt class="property-"
+<dl class="resources-properties"><dt class="property-"
             title="">
         <span id="id_nodejs">
 <a href="#id_nodejs" style="color: inherit; text-decoration: inherit;">id</a>
@@ -497,14 +462,11 @@ All [input](#inputs) properties are implicitly available as output properties. A
         <span class="property-indicator"></span>
         <span class="property-type">string</span>
     </dt>
-    <dd>{{% md %}}The provider-assigned unique ID for this managed resource.{{% /md %}}</dd>
-</dl>
+    <dd>{{% md %}}The provider-assigned unique ID for this managed resource.{{% /md %}}</dd></dl>
 {{% /choosable %}}
 
 {{% choosable language python %}}
-<dl class="resources-properties">
-
-    <dt class="property-"
+<dl class="resources-properties"><dt class="property-"
             title="">
         <span id="id_python">
 <a href="#id_python" style="color: inherit; text-decoration: inherit;">id</a>
@@ -512,8 +474,7 @@ All [input](#inputs) properties are implicitly available as output properties. A
         <span class="property-indicator"></span>
         <span class="property-type">str</span>
     </dt>
-    <dd>{{% md %}}The provider-assigned unique ID for this managed resource.{{% /md %}}</dd>
-</dl>
+    <dd>{{% md %}}The provider-assigned unique ID for this managed resource.{{% /md %}}</dd></dl>
 {{% /choosable %}}
 
 
@@ -640,9 +601,7 @@ The following state arguments are supported:
 
 
 {{% choosable language csharp %}}
-<dl class="resources-properties">
-
-    <dt class="property-optional"
+<dl class="resources-properties"><dt class="property-optional"
             title="Optional">
         <span id="state_logdestinationconfigs_csharp">
 <a href="#state_logdestinationconfigs_csharp" style="color: inherit; text-decoration: inherit;">Log<wbr>Destination<wbr>Configs</a>
@@ -651,8 +610,7 @@ The following state arguments are supported:
         <span class="property-type">List&lt;string&gt;</span>
     </dt>
     <dd>{{% md %}}The Amazon Kinesis Data Firehose Amazon Resource Name (ARNs) that you want to associate with the web ACL. Currently, only 1 ARN is supported.
-{{% /md %}}</dd>
-    <dt class="property-optional"
+{{% /md %}}</dd><dt class="property-optional"
             title="Optional">
         <span id="state_redactedfields_csharp">
 <a href="#state_redactedfields_csharp" style="color: inherit; text-decoration: inherit;">Redacted<wbr>Fields</a>
@@ -661,8 +619,7 @@ The following state arguments are supported:
         <span class="property-type"><a href="#webaclloggingconfigurationredactedfield">List&lt;Web<wbr>Acl<wbr>Logging<wbr>Configuration<wbr>Redacted<wbr>Field<wbr>Args&gt;</a></span>
     </dt>
     <dd>{{% md %}}The parts of the request that you want to keep out of the logs. Up to 100 `redacted_fields` blocks are supported.
-{{% /md %}}</dd>
-    <dt class="property-optional"
+{{% /md %}}</dd><dt class="property-optional"
             title="Optional">
         <span id="state_resourcearn_csharp">
 <a href="#state_resourcearn_csharp" style="color: inherit; text-decoration: inherit;">Resource<wbr>Arn</a>
@@ -671,14 +628,11 @@ The following state arguments are supported:
         <span class="property-type">string</span>
     </dt>
     <dd>{{% md %}}The Amazon Resource Name (ARN) of the web ACL that you want to associate with `log_destination_configs`.
-{{% /md %}}</dd>
-</dl>
+{{% /md %}}</dd></dl>
 {{% /choosable %}}
 
 {{% choosable language go %}}
-<dl class="resources-properties">
-
-    <dt class="property-optional"
+<dl class="resources-properties"><dt class="property-optional"
             title="Optional">
         <span id="state_logdestinationconfigs_go">
 <a href="#state_logdestinationconfigs_go" style="color: inherit; text-decoration: inherit;">Log<wbr>Destination<wbr>Configs</a>
@@ -687,8 +641,7 @@ The following state arguments are supported:
         <span class="property-type">[]string</span>
     </dt>
     <dd>{{% md %}}The Amazon Kinesis Data Firehose Amazon Resource Name (ARNs) that you want to associate with the web ACL. Currently, only 1 ARN is supported.
-{{% /md %}}</dd>
-    <dt class="property-optional"
+{{% /md %}}</dd><dt class="property-optional"
             title="Optional">
         <span id="state_redactedfields_go">
 <a href="#state_redactedfields_go" style="color: inherit; text-decoration: inherit;">Redacted<wbr>Fields</a>
@@ -697,8 +650,7 @@ The following state arguments are supported:
         <span class="property-type"><a href="#webaclloggingconfigurationredactedfield">[]Web<wbr>Acl<wbr>Logging<wbr>Configuration<wbr>Redacted<wbr>Field</a></span>
     </dt>
     <dd>{{% md %}}The parts of the request that you want to keep out of the logs. Up to 100 `redacted_fields` blocks are supported.
-{{% /md %}}</dd>
-    <dt class="property-optional"
+{{% /md %}}</dd><dt class="property-optional"
             title="Optional">
         <span id="state_resourcearn_go">
 <a href="#state_resourcearn_go" style="color: inherit; text-decoration: inherit;">Resource<wbr>Arn</a>
@@ -707,14 +659,11 @@ The following state arguments are supported:
         <span class="property-type">string</span>
     </dt>
     <dd>{{% md %}}The Amazon Resource Name (ARN) of the web ACL that you want to associate with `log_destination_configs`.
-{{% /md %}}</dd>
-</dl>
+{{% /md %}}</dd></dl>
 {{% /choosable %}}
 
 {{% choosable language nodejs %}}
-<dl class="resources-properties">
-
-    <dt class="property-optional"
+<dl class="resources-properties"><dt class="property-optional"
             title="Optional">
         <span id="state_logdestinationconfigs_nodejs">
 <a href="#state_logdestinationconfigs_nodejs" style="color: inherit; text-decoration: inherit;">log<wbr>Destination<wbr>Configs</a>
@@ -723,8 +672,7 @@ The following state arguments are supported:
         <span class="property-type">string[]</span>
     </dt>
     <dd>{{% md %}}The Amazon Kinesis Data Firehose Amazon Resource Name (ARNs) that you want to associate with the web ACL. Currently, only 1 ARN is supported.
-{{% /md %}}</dd>
-    <dt class="property-optional"
+{{% /md %}}</dd><dt class="property-optional"
             title="Optional">
         <span id="state_redactedfields_nodejs">
 <a href="#state_redactedfields_nodejs" style="color: inherit; text-decoration: inherit;">redacted<wbr>Fields</a>
@@ -733,8 +681,7 @@ The following state arguments are supported:
         <span class="property-type"><a href="#webaclloggingconfigurationredactedfield">Web<wbr>Acl<wbr>Logging<wbr>Configuration<wbr>Redacted<wbr>Field[]</a></span>
     </dt>
     <dd>{{% md %}}The parts of the request that you want to keep out of the logs. Up to 100 `redacted_fields` blocks are supported.
-{{% /md %}}</dd>
-    <dt class="property-optional"
+{{% /md %}}</dd><dt class="property-optional"
             title="Optional">
         <span id="state_resourcearn_nodejs">
 <a href="#state_resourcearn_nodejs" style="color: inherit; text-decoration: inherit;">resource<wbr>Arn</a>
@@ -743,14 +690,11 @@ The following state arguments are supported:
         <span class="property-type">string</span>
     </dt>
     <dd>{{% md %}}The Amazon Resource Name (ARN) of the web ACL that you want to associate with `log_destination_configs`.
-{{% /md %}}</dd>
-</dl>
+{{% /md %}}</dd></dl>
 {{% /choosable %}}
 
 {{% choosable language python %}}
-<dl class="resources-properties">
-
-    <dt class="property-optional"
+<dl class="resources-properties"><dt class="property-optional"
             title="Optional">
         <span id="state_log_destination_configs_python">
 <a href="#state_log_destination_configs_python" style="color: inherit; text-decoration: inherit;">log_<wbr>destination_<wbr>configs</a>
@@ -759,8 +703,7 @@ The following state arguments are supported:
         <span class="property-type">Sequence[str]</span>
     </dt>
     <dd>{{% md %}}The Amazon Kinesis Data Firehose Amazon Resource Name (ARNs) that you want to associate with the web ACL. Currently, only 1 ARN is supported.
-{{% /md %}}</dd>
-    <dt class="property-optional"
+{{% /md %}}</dd><dt class="property-optional"
             title="Optional">
         <span id="state_redacted_fields_python">
 <a href="#state_redacted_fields_python" style="color: inherit; text-decoration: inherit;">redacted_<wbr>fields</a>
@@ -769,8 +712,7 @@ The following state arguments are supported:
         <span class="property-type"><a href="#webaclloggingconfigurationredactedfield">Sequence[Web<wbr>Acl<wbr>Logging<wbr>Configuration<wbr>Redacted<wbr>Field<wbr>Args]</a></span>
     </dt>
     <dd>{{% md %}}The parts of the request that you want to keep out of the logs. Up to 100 `redacted_fields` blocks are supported.
-{{% /md %}}</dd>
-    <dt class="property-optional"
+{{% /md %}}</dd><dt class="property-optional"
             title="Optional">
         <span id="state_resource_arn_python">
 <a href="#state_resource_arn_python" style="color: inherit; text-decoration: inherit;">resource_<wbr>arn</a>
@@ -779,8 +721,7 @@ The following state arguments are supported:
         <span class="property-type">str</span>
     </dt>
     <dd>{{% md %}}The Amazon Resource Name (ARN) of the web ACL that you want to associate with `log_destination_configs`.
-{{% /md %}}</dd>
-</dl>
+{{% /md %}}</dd></dl>
 {{% /choosable %}}
 
 
@@ -795,9 +736,7 @@ The following state arguments are supported:
 <h4 id="webaclloggingconfigurationredactedfield">Web<wbr>Acl<wbr>Logging<wbr>Configuration<wbr>Redacted<wbr>Field</h4>
 
 {{% choosable language csharp %}}
-<dl class="resources-properties">
-
-    <dt class="property-optional"
+<dl class="resources-properties"><dt class="property-optional"
             title="Optional">
         <span id="allqueryarguments_csharp">
 <a href="#allqueryarguments_csharp" style="color: inherit; text-decoration: inherit;">All<wbr>Query<wbr>Arguments</a>
@@ -806,8 +745,7 @@ The following state arguments are supported:
         <span class="property-type"><a href="#webaclloggingconfigurationredactedfieldallqueryarguments">Web<wbr>Acl<wbr>Logging<wbr>Configuration<wbr>Redacted<wbr>Field<wbr>All<wbr>Query<wbr>Arguments<wbr>Args</a></span>
     </dt>
     <dd>{{% md %}}Redact all query arguments.
-{{% /md %}}</dd>
-    <dt class="property-optional"
+{{% /md %}}</dd><dt class="property-optional"
             title="Optional">
         <span id="body_csharp">
 <a href="#body_csharp" style="color: inherit; text-decoration: inherit;">Body</a>
@@ -816,8 +754,7 @@ The following state arguments are supported:
         <span class="property-type"><a href="#webaclloggingconfigurationredactedfieldbody">Web<wbr>Acl<wbr>Logging<wbr>Configuration<wbr>Redacted<wbr>Field<wbr>Body<wbr>Args</a></span>
     </dt>
     <dd>{{% md %}}Redact the request body, which immediately follows the request headers.
-{{% /md %}}</dd>
-    <dt class="property-optional"
+{{% /md %}}</dd><dt class="property-optional"
             title="Optional">
         <span id="method_csharp">
 <a href="#method_csharp" style="color: inherit; text-decoration: inherit;">Method</a>
@@ -826,8 +763,7 @@ The following state arguments are supported:
         <span class="property-type"><a href="#webaclloggingconfigurationredactedfieldmethod">Web<wbr>Acl<wbr>Logging<wbr>Configuration<wbr>Redacted<wbr>Field<wbr>Method<wbr>Args</a></span>
     </dt>
     <dd>{{% md %}}Redact the HTTP method. The method indicates the type of operation that the request is asking the origin to perform.
-{{% /md %}}</dd>
-    <dt class="property-optional"
+{{% /md %}}</dd><dt class="property-optional"
             title="Optional">
         <span id="querystring_csharp">
 <a href="#querystring_csharp" style="color: inherit; text-decoration: inherit;">Query<wbr>String</a>
@@ -836,8 +772,7 @@ The following state arguments are supported:
         <span class="property-type"><a href="#webaclloggingconfigurationredactedfieldquerystring">Web<wbr>Acl<wbr>Logging<wbr>Configuration<wbr>Redacted<wbr>Field<wbr>Query<wbr>String<wbr>Args</a></span>
     </dt>
     <dd>{{% md %}}Redact the query string. This is the part of a URL that appears after a `?` character, if any.
-{{% /md %}}</dd>
-    <dt class="property-optional"
+{{% /md %}}</dd><dt class="property-optional"
             title="Optional">
         <span id="singleheader_csharp">
 <a href="#singleheader_csharp" style="color: inherit; text-decoration: inherit;">Single<wbr>Header</a>
@@ -846,8 +781,7 @@ The following state arguments are supported:
         <span class="property-type"><a href="#webaclloggingconfigurationredactedfieldsingleheader">Web<wbr>Acl<wbr>Logging<wbr>Configuration<wbr>Redacted<wbr>Field<wbr>Single<wbr>Header<wbr>Args</a></span>
     </dt>
     <dd>{{% md %}}Redact a single header. See Single Header below for details.
-{{% /md %}}</dd>
-    <dt class="property-optional"
+{{% /md %}}</dd><dt class="property-optional"
             title="Optional">
         <span id="singlequeryargument_csharp">
 <a href="#singlequeryargument_csharp" style="color: inherit; text-decoration: inherit;">Single<wbr>Query<wbr>Argument</a>
@@ -856,8 +790,7 @@ The following state arguments are supported:
         <span class="property-type"><a href="#webaclloggingconfigurationredactedfieldsinglequeryargument">Web<wbr>Acl<wbr>Logging<wbr>Configuration<wbr>Redacted<wbr>Field<wbr>Single<wbr>Query<wbr>Argument<wbr>Args</a></span>
     </dt>
     <dd>{{% md %}}Redact a single query argument. See Single Query Argument below for details.
-{{% /md %}}</dd>
-    <dt class="property-optional"
+{{% /md %}}</dd><dt class="property-optional"
             title="Optional">
         <span id="uripath_csharp">
 <a href="#uripath_csharp" style="color: inherit; text-decoration: inherit;">Uri<wbr>Path</a>
@@ -866,14 +799,11 @@ The following state arguments are supported:
         <span class="property-type"><a href="#webaclloggingconfigurationredactedfielduripath">Web<wbr>Acl<wbr>Logging<wbr>Configuration<wbr>Redacted<wbr>Field<wbr>Uri<wbr>Path<wbr>Args</a></span>
     </dt>
     <dd>{{% md %}}Redact the request URI path. This is the part of a web request that identifies a resource, for example, `/images/daily-ad.jpg`.
-{{% /md %}}</dd>
-</dl>
+{{% /md %}}</dd></dl>
 {{% /choosable %}}
 
 {{% choosable language go %}}
-<dl class="resources-properties">
-
-    <dt class="property-optional"
+<dl class="resources-properties"><dt class="property-optional"
             title="Optional">
         <span id="allqueryarguments_go">
 <a href="#allqueryarguments_go" style="color: inherit; text-decoration: inherit;">All<wbr>Query<wbr>Arguments</a>
@@ -882,8 +812,7 @@ The following state arguments are supported:
         <span class="property-type"><a href="#webaclloggingconfigurationredactedfieldallqueryarguments">Web<wbr>Acl<wbr>Logging<wbr>Configuration<wbr>Redacted<wbr>Field<wbr>All<wbr>Query<wbr>Arguments</a></span>
     </dt>
     <dd>{{% md %}}Redact all query arguments.
-{{% /md %}}</dd>
-    <dt class="property-optional"
+{{% /md %}}</dd><dt class="property-optional"
             title="Optional">
         <span id="body_go">
 <a href="#body_go" style="color: inherit; text-decoration: inherit;">Body</a>
@@ -892,8 +821,7 @@ The following state arguments are supported:
         <span class="property-type"><a href="#webaclloggingconfigurationredactedfieldbody">Web<wbr>Acl<wbr>Logging<wbr>Configuration<wbr>Redacted<wbr>Field<wbr>Body</a></span>
     </dt>
     <dd>{{% md %}}Redact the request body, which immediately follows the request headers.
-{{% /md %}}</dd>
-    <dt class="property-optional"
+{{% /md %}}</dd><dt class="property-optional"
             title="Optional">
         <span id="method_go">
 <a href="#method_go" style="color: inherit; text-decoration: inherit;">Method</a>
@@ -902,8 +830,7 @@ The following state arguments are supported:
         <span class="property-type"><a href="#webaclloggingconfigurationredactedfieldmethod">Web<wbr>Acl<wbr>Logging<wbr>Configuration<wbr>Redacted<wbr>Field<wbr>Method</a></span>
     </dt>
     <dd>{{% md %}}Redact the HTTP method. The method indicates the type of operation that the request is asking the origin to perform.
-{{% /md %}}</dd>
-    <dt class="property-optional"
+{{% /md %}}</dd><dt class="property-optional"
             title="Optional">
         <span id="querystring_go">
 <a href="#querystring_go" style="color: inherit; text-decoration: inherit;">Query<wbr>String</a>
@@ -912,8 +839,7 @@ The following state arguments are supported:
         <span class="property-type"><a href="#webaclloggingconfigurationredactedfieldquerystring">Web<wbr>Acl<wbr>Logging<wbr>Configuration<wbr>Redacted<wbr>Field<wbr>Query<wbr>String</a></span>
     </dt>
     <dd>{{% md %}}Redact the query string. This is the part of a URL that appears after a `?` character, if any.
-{{% /md %}}</dd>
-    <dt class="property-optional"
+{{% /md %}}</dd><dt class="property-optional"
             title="Optional">
         <span id="singleheader_go">
 <a href="#singleheader_go" style="color: inherit; text-decoration: inherit;">Single<wbr>Header</a>
@@ -922,8 +848,7 @@ The following state arguments are supported:
         <span class="property-type"><a href="#webaclloggingconfigurationredactedfieldsingleheader">Web<wbr>Acl<wbr>Logging<wbr>Configuration<wbr>Redacted<wbr>Field<wbr>Single<wbr>Header</a></span>
     </dt>
     <dd>{{% md %}}Redact a single header. See Single Header below for details.
-{{% /md %}}</dd>
-    <dt class="property-optional"
+{{% /md %}}</dd><dt class="property-optional"
             title="Optional">
         <span id="singlequeryargument_go">
 <a href="#singlequeryargument_go" style="color: inherit; text-decoration: inherit;">Single<wbr>Query<wbr>Argument</a>
@@ -932,8 +857,7 @@ The following state arguments are supported:
         <span class="property-type"><a href="#webaclloggingconfigurationredactedfieldsinglequeryargument">Web<wbr>Acl<wbr>Logging<wbr>Configuration<wbr>Redacted<wbr>Field<wbr>Single<wbr>Query<wbr>Argument</a></span>
     </dt>
     <dd>{{% md %}}Redact a single query argument. See Single Query Argument below for details.
-{{% /md %}}</dd>
-    <dt class="property-optional"
+{{% /md %}}</dd><dt class="property-optional"
             title="Optional">
         <span id="uripath_go">
 <a href="#uripath_go" style="color: inherit; text-decoration: inherit;">Uri<wbr>Path</a>
@@ -942,14 +866,11 @@ The following state arguments are supported:
         <span class="property-type"><a href="#webaclloggingconfigurationredactedfielduripath">Web<wbr>Acl<wbr>Logging<wbr>Configuration<wbr>Redacted<wbr>Field<wbr>Uri<wbr>Path</a></span>
     </dt>
     <dd>{{% md %}}Redact the request URI path. This is the part of a web request that identifies a resource, for example, `/images/daily-ad.jpg`.
-{{% /md %}}</dd>
-</dl>
+{{% /md %}}</dd></dl>
 {{% /choosable %}}
 
 {{% choosable language nodejs %}}
-<dl class="resources-properties">
-
-    <dt class="property-optional"
+<dl class="resources-properties"><dt class="property-optional"
             title="Optional">
         <span id="allqueryarguments_nodejs">
 <a href="#allqueryarguments_nodejs" style="color: inherit; text-decoration: inherit;">all<wbr>Query<wbr>Arguments</a>
@@ -958,8 +879,7 @@ The following state arguments are supported:
         <span class="property-type"><a href="#webaclloggingconfigurationredactedfieldallqueryarguments">Web<wbr>Acl<wbr>Logging<wbr>Configuration<wbr>Redacted<wbr>Field<wbr>All<wbr>Query<wbr>Arguments</a></span>
     </dt>
     <dd>{{% md %}}Redact all query arguments.
-{{% /md %}}</dd>
-    <dt class="property-optional"
+{{% /md %}}</dd><dt class="property-optional"
             title="Optional">
         <span id="body_nodejs">
 <a href="#body_nodejs" style="color: inherit; text-decoration: inherit;">body</a>
@@ -968,8 +888,7 @@ The following state arguments are supported:
         <span class="property-type"><a href="#webaclloggingconfigurationredactedfieldbody">Web<wbr>Acl<wbr>Logging<wbr>Configuration<wbr>Redacted<wbr>Field<wbr>Body</a></span>
     </dt>
     <dd>{{% md %}}Redact the request body, which immediately follows the request headers.
-{{% /md %}}</dd>
-    <dt class="property-optional"
+{{% /md %}}</dd><dt class="property-optional"
             title="Optional">
         <span id="method_nodejs">
 <a href="#method_nodejs" style="color: inherit; text-decoration: inherit;">method</a>
@@ -978,8 +897,7 @@ The following state arguments are supported:
         <span class="property-type"><a href="#webaclloggingconfigurationredactedfieldmethod">Web<wbr>Acl<wbr>Logging<wbr>Configuration<wbr>Redacted<wbr>Field<wbr>Method</a></span>
     </dt>
     <dd>{{% md %}}Redact the HTTP method. The method indicates the type of operation that the request is asking the origin to perform.
-{{% /md %}}</dd>
-    <dt class="property-optional"
+{{% /md %}}</dd><dt class="property-optional"
             title="Optional">
         <span id="querystring_nodejs">
 <a href="#querystring_nodejs" style="color: inherit; text-decoration: inherit;">query<wbr>String</a>
@@ -988,8 +906,7 @@ The following state arguments are supported:
         <span class="property-type"><a href="#webaclloggingconfigurationredactedfieldquerystring">Web<wbr>Acl<wbr>Logging<wbr>Configuration<wbr>Redacted<wbr>Field<wbr>Query<wbr>String</a></span>
     </dt>
     <dd>{{% md %}}Redact the query string. This is the part of a URL that appears after a `?` character, if any.
-{{% /md %}}</dd>
-    <dt class="property-optional"
+{{% /md %}}</dd><dt class="property-optional"
             title="Optional">
         <span id="singleheader_nodejs">
 <a href="#singleheader_nodejs" style="color: inherit; text-decoration: inherit;">single<wbr>Header</a>
@@ -998,8 +915,7 @@ The following state arguments are supported:
         <span class="property-type"><a href="#webaclloggingconfigurationredactedfieldsingleheader">Web<wbr>Acl<wbr>Logging<wbr>Configuration<wbr>Redacted<wbr>Field<wbr>Single<wbr>Header</a></span>
     </dt>
     <dd>{{% md %}}Redact a single header. See Single Header below for details.
-{{% /md %}}</dd>
-    <dt class="property-optional"
+{{% /md %}}</dd><dt class="property-optional"
             title="Optional">
         <span id="singlequeryargument_nodejs">
 <a href="#singlequeryargument_nodejs" style="color: inherit; text-decoration: inherit;">single<wbr>Query<wbr>Argument</a>
@@ -1008,8 +924,7 @@ The following state arguments are supported:
         <span class="property-type"><a href="#webaclloggingconfigurationredactedfieldsinglequeryargument">Web<wbr>Acl<wbr>Logging<wbr>Configuration<wbr>Redacted<wbr>Field<wbr>Single<wbr>Query<wbr>Argument</a></span>
     </dt>
     <dd>{{% md %}}Redact a single query argument. See Single Query Argument below for details.
-{{% /md %}}</dd>
-    <dt class="property-optional"
+{{% /md %}}</dd><dt class="property-optional"
             title="Optional">
         <span id="uripath_nodejs">
 <a href="#uripath_nodejs" style="color: inherit; text-decoration: inherit;">uri<wbr>Path</a>
@@ -1018,14 +933,11 @@ The following state arguments are supported:
         <span class="property-type"><a href="#webaclloggingconfigurationredactedfielduripath">Web<wbr>Acl<wbr>Logging<wbr>Configuration<wbr>Redacted<wbr>Field<wbr>Uri<wbr>Path</a></span>
     </dt>
     <dd>{{% md %}}Redact the request URI path. This is the part of a web request that identifies a resource, for example, `/images/daily-ad.jpg`.
-{{% /md %}}</dd>
-</dl>
+{{% /md %}}</dd></dl>
 {{% /choosable %}}
 
 {{% choosable language python %}}
-<dl class="resources-properties">
-
-    <dt class="property-optional"
+<dl class="resources-properties"><dt class="property-optional"
             title="Optional">
         <span id="all_query_arguments_python">
 <a href="#all_query_arguments_python" style="color: inherit; text-decoration: inherit;">all_<wbr>query_<wbr>arguments</a>
@@ -1034,8 +946,7 @@ The following state arguments are supported:
         <span class="property-type"><a href="#webaclloggingconfigurationredactedfieldallqueryarguments">Web<wbr>Acl<wbr>Logging<wbr>Configuration<wbr>Redacted<wbr>Field<wbr>All<wbr>Query<wbr>Arguments<wbr>Args</a></span>
     </dt>
     <dd>{{% md %}}Redact all query arguments.
-{{% /md %}}</dd>
-    <dt class="property-optional"
+{{% /md %}}</dd><dt class="property-optional"
             title="Optional">
         <span id="body_python">
 <a href="#body_python" style="color: inherit; text-decoration: inherit;">body</a>
@@ -1044,8 +955,7 @@ The following state arguments are supported:
         <span class="property-type"><a href="#webaclloggingconfigurationredactedfieldbody">Web<wbr>Acl<wbr>Logging<wbr>Configuration<wbr>Redacted<wbr>Field<wbr>Body<wbr>Args</a></span>
     </dt>
     <dd>{{% md %}}Redact the request body, which immediately follows the request headers.
-{{% /md %}}</dd>
-    <dt class="property-optional"
+{{% /md %}}</dd><dt class="property-optional"
             title="Optional">
         <span id="method_python">
 <a href="#method_python" style="color: inherit; text-decoration: inherit;">method</a>
@@ -1054,8 +964,7 @@ The following state arguments are supported:
         <span class="property-type"><a href="#webaclloggingconfigurationredactedfieldmethod">Web<wbr>Acl<wbr>Logging<wbr>Configuration<wbr>Redacted<wbr>Field<wbr>Method<wbr>Args</a></span>
     </dt>
     <dd>{{% md %}}Redact the HTTP method. The method indicates the type of operation that the request is asking the origin to perform.
-{{% /md %}}</dd>
-    <dt class="property-optional"
+{{% /md %}}</dd><dt class="property-optional"
             title="Optional">
         <span id="query_string_python">
 <a href="#query_string_python" style="color: inherit; text-decoration: inherit;">query_<wbr>string</a>
@@ -1064,8 +973,7 @@ The following state arguments are supported:
         <span class="property-type"><a href="#webaclloggingconfigurationredactedfieldquerystring">Web<wbr>Acl<wbr>Logging<wbr>Configuration<wbr>Redacted<wbr>Field<wbr>Query<wbr>String<wbr>Args</a></span>
     </dt>
     <dd>{{% md %}}Redact the query string. This is the part of a URL that appears after a `?` character, if any.
-{{% /md %}}</dd>
-    <dt class="property-optional"
+{{% /md %}}</dd><dt class="property-optional"
             title="Optional">
         <span id="single_header_python">
 <a href="#single_header_python" style="color: inherit; text-decoration: inherit;">single_<wbr>header</a>
@@ -1074,8 +982,7 @@ The following state arguments are supported:
         <span class="property-type"><a href="#webaclloggingconfigurationredactedfieldsingleheader">Web<wbr>Acl<wbr>Logging<wbr>Configuration<wbr>Redacted<wbr>Field<wbr>Single<wbr>Header<wbr>Args</a></span>
     </dt>
     <dd>{{% md %}}Redact a single header. See Single Header below for details.
-{{% /md %}}</dd>
-    <dt class="property-optional"
+{{% /md %}}</dd><dt class="property-optional"
             title="Optional">
         <span id="single_query_argument_python">
 <a href="#single_query_argument_python" style="color: inherit; text-decoration: inherit;">single_<wbr>query_<wbr>argument</a>
@@ -1084,8 +991,7 @@ The following state arguments are supported:
         <span class="property-type"><a href="#webaclloggingconfigurationredactedfieldsinglequeryargument">Web<wbr>Acl<wbr>Logging<wbr>Configuration<wbr>Redacted<wbr>Field<wbr>Single<wbr>Query<wbr>Argument<wbr>Args</a></span>
     </dt>
     <dd>{{% md %}}Redact a single query argument. See Single Query Argument below for details.
-{{% /md %}}</dd>
-    <dt class="property-optional"
+{{% /md %}}</dd><dt class="property-optional"
             title="Optional">
         <span id="uri_path_python">
 <a href="#uri_path_python" style="color: inherit; text-decoration: inherit;">uri_<wbr>path</a>
@@ -1094,16 +1000,13 @@ The following state arguments are supported:
         <span class="property-type"><a href="#webaclloggingconfigurationredactedfielduripath">Web<wbr>Acl<wbr>Logging<wbr>Configuration<wbr>Redacted<wbr>Field<wbr>Uri<wbr>Path<wbr>Args</a></span>
     </dt>
     <dd>{{% md %}}Redact the request URI path. This is the part of a web request that identifies a resource, for example, `/images/daily-ad.jpg`.
-{{% /md %}}</dd>
-</dl>
+{{% /md %}}</dd></dl>
 {{% /choosable %}}
 
 <h4 id="webaclloggingconfigurationredactedfieldsingleheader">Web<wbr>Acl<wbr>Logging<wbr>Configuration<wbr>Redacted<wbr>Field<wbr>Single<wbr>Header</h4>
 
 {{% choosable language csharp %}}
-<dl class="resources-properties">
-
-    <dt class="property-required"
+<dl class="resources-properties"><dt class="property-required"
             title="Required">
         <span id="name_csharp">
 <a href="#name_csharp" style="color: inherit; text-decoration: inherit;">Name</a>
@@ -1112,14 +1015,11 @@ The following state arguments are supported:
         <span class="property-type">string</span>
     </dt>
     <dd>{{% md %}}The name of the query header to redact. This setting must be provided as lower case characters.
-{{% /md %}}</dd>
-</dl>
+{{% /md %}}</dd></dl>
 {{% /choosable %}}
 
 {{% choosable language go %}}
-<dl class="resources-properties">
-
-    <dt class="property-required"
+<dl class="resources-properties"><dt class="property-required"
             title="Required">
         <span id="name_go">
 <a href="#name_go" style="color: inherit; text-decoration: inherit;">Name</a>
@@ -1128,14 +1028,11 @@ The following state arguments are supported:
         <span class="property-type">string</span>
     </dt>
     <dd>{{% md %}}The name of the query header to redact. This setting must be provided as lower case characters.
-{{% /md %}}</dd>
-</dl>
+{{% /md %}}</dd></dl>
 {{% /choosable %}}
 
 {{% choosable language nodejs %}}
-<dl class="resources-properties">
-
-    <dt class="property-required"
+<dl class="resources-properties"><dt class="property-required"
             title="Required">
         <span id="name_nodejs">
 <a href="#name_nodejs" style="color: inherit; text-decoration: inherit;">name</a>
@@ -1144,14 +1041,11 @@ The following state arguments are supported:
         <span class="property-type">string</span>
     </dt>
     <dd>{{% md %}}The name of the query header to redact. This setting must be provided as lower case characters.
-{{% /md %}}</dd>
-</dl>
+{{% /md %}}</dd></dl>
 {{% /choosable %}}
 
 {{% choosable language python %}}
-<dl class="resources-properties">
-
-    <dt class="property-required"
+<dl class="resources-properties"><dt class="property-required"
             title="Required">
         <span id="name_python">
 <a href="#name_python" style="color: inherit; text-decoration: inherit;">name</a>
@@ -1160,16 +1054,13 @@ The following state arguments are supported:
         <span class="property-type">str</span>
     </dt>
     <dd>{{% md %}}The name of the query header to redact. This setting must be provided as lower case characters.
-{{% /md %}}</dd>
-</dl>
+{{% /md %}}</dd></dl>
 {{% /choosable %}}
 
 <h4 id="webaclloggingconfigurationredactedfieldsinglequeryargument">Web<wbr>Acl<wbr>Logging<wbr>Configuration<wbr>Redacted<wbr>Field<wbr>Single<wbr>Query<wbr>Argument</h4>
 
 {{% choosable language csharp %}}
-<dl class="resources-properties">
-
-    <dt class="property-required"
+<dl class="resources-properties"><dt class="property-required"
             title="Required">
         <span id="name_csharp">
 <a href="#name_csharp" style="color: inherit; text-decoration: inherit;">Name</a>
@@ -1178,14 +1069,11 @@ The following state arguments are supported:
         <span class="property-type">string</span>
     </dt>
     <dd>{{% md %}}The name of the query header to redact. This setting must be provided as lower case characters.
-{{% /md %}}</dd>
-</dl>
+{{% /md %}}</dd></dl>
 {{% /choosable %}}
 
 {{% choosable language go %}}
-<dl class="resources-properties">
-
-    <dt class="property-required"
+<dl class="resources-properties"><dt class="property-required"
             title="Required">
         <span id="name_go">
 <a href="#name_go" style="color: inherit; text-decoration: inherit;">Name</a>
@@ -1194,14 +1082,11 @@ The following state arguments are supported:
         <span class="property-type">string</span>
     </dt>
     <dd>{{% md %}}The name of the query header to redact. This setting must be provided as lower case characters.
-{{% /md %}}</dd>
-</dl>
+{{% /md %}}</dd></dl>
 {{% /choosable %}}
 
 {{% choosable language nodejs %}}
-<dl class="resources-properties">
-
-    <dt class="property-required"
+<dl class="resources-properties"><dt class="property-required"
             title="Required">
         <span id="name_nodejs">
 <a href="#name_nodejs" style="color: inherit; text-decoration: inherit;">name</a>
@@ -1210,14 +1095,11 @@ The following state arguments are supported:
         <span class="property-type">string</span>
     </dt>
     <dd>{{% md %}}The name of the query header to redact. This setting must be provided as lower case characters.
-{{% /md %}}</dd>
-</dl>
+{{% /md %}}</dd></dl>
 {{% /choosable %}}
 
 {{% choosable language python %}}
-<dl class="resources-properties">
-
-    <dt class="property-required"
+<dl class="resources-properties"><dt class="property-required"
             title="Required">
         <span id="name_python">
 <a href="#name_python" style="color: inherit; text-decoration: inherit;">name</a>
@@ -1226,8 +1108,7 @@ The following state arguments are supported:
         <span class="property-type">str</span>
     </dt>
     <dd>{{% md %}}The name of the query header to redact. This setting must be provided as lower case characters.
-{{% /md %}}</dd>
-</dl>
+{{% /md %}}</dd></dl>
 {{% /choosable %}}
 ## Import
 
@@ -1248,6 +1129,6 @@ WAFv2 Web ACL Logging Configurations can be imported using the WAFv2 Web ACL ARN
 	<dt>License</dt>
 	<dd>Apache-2.0</dd>
 	<dt>Notes</dt>
-	<dd>This Pulumi package is based on the [`aws` Terraform Provider](https://github.com/terraform-providers/terraform-provider-aws).</dd>
+	<dd>{{% md %}}This Pulumi package is based on the [`aws` Terraform Provider](https://github.com/terraform-providers/terraform-provider-aws).{{% /md %}}</dd>
 </dl>
 

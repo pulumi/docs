@@ -16,11 +16,17 @@ An error is triggered if the provided container registry name does not exist.
 
 
 {{% examples %}}
+
 ## Example Usage
 
 {{< chooser language "typescript,python,go,csharp" / >}}
+
+
 ### Basic Example
-{{% example csharp %}}
+
+
+{{< example csharp >}}
+
 ```csharp
 using Pulumi;
 using DigitalOcean = Pulumi.DigitalOcean;
@@ -38,9 +44,12 @@ class MyStack : Stack
 }
 ```
 
-{{% /example %}}
 
-{{% example go %}}
+{{< /example >}}
+
+
+{{< example go >}}
+
 ```go
 package main
 
@@ -62,9 +71,12 @@ func main() {
 }
 ```
 
-{{% /example %}}
 
-{{% example python %}}
+{{< /example >}}
+
+
+{{< example python >}}
+
 ```python
 import pulumi
 import pulumi_digitalocean as digitalocean
@@ -72,9 +84,12 @@ import pulumi_digitalocean as digitalocean
 example = digitalocean.ContainerRegistryDockerCredentials("example", registry_name="example")
 ```
 
-{{% /example %}}
 
-{{% example typescript %}}
+{{< /example >}}
+
+
+{{< example typescript >}}
+
 
 ```typescript
 import * as pulumi from "@pulumi/pulumi";
@@ -85,10 +100,17 @@ const example = new digitalocean.ContainerRegistryDockerCredentials("example", {
 });
 ```
 
-{{% /example %}}
+
+{{< /example >}}
+
+
+
 
 ### Docker Provider Example
-{{% example csharp %}}
+
+
+{{< example csharp >}}
+
 ```csharp
 using Pulumi;
 using DigitalOcean = Pulumi.DigitalOcean;
@@ -110,9 +132,12 @@ class MyStack : Stack
 }
 ```
 
-{{% /example %}}
 
-{{% example go %}}
+{{< /example >}}
+
+
+{{< example go >}}
+
 ```go
 package main
 
@@ -140,9 +165,12 @@ func main() {
 }
 ```
 
-{{% /example %}}
 
-{{% example python %}}
+{{< /example >}}
+
+
+{{< example python >}}
+
 ```python
 import pulumi
 import pulumi_digitalocean as digitalocean
@@ -151,9 +179,12 @@ example_container_registry = digitalocean.get_container_registry(name="example")
 example_container_registry_docker_credentials = digitalocean.ContainerRegistryDockerCredentials("exampleContainerRegistryDockerCredentials", registry_name="example")
 ```
 
-{{% /example %}}
 
-{{% example typescript %}}
+{{< /example >}}
+
+
+{{< example typescript >}}
+
 
 ```typescript
 import * as pulumi from "@pulumi/pulumi";
@@ -165,9 +196,16 @@ const exampleContainerRegistry = digitalocean.getContainerRegistry({
 const exampleContainerRegistryDockerCredentials = new digitalocean.ContainerRegistryDockerCredentials("exampleContainerRegistryDockerCredentials", {registryName: "example"});
 ```
 
-{{% /example %}}
+
+{{< /example >}}
+
+
+
+
 
 {{% /examples %}}
+
+
 
 
 ## Create a ContainerRegistryDockerCredentials Resource {#create}
@@ -192,9 +230,7 @@ const exampleContainerRegistryDockerCredentials = new digitalocean.ContainerRegi
 
 {{% choosable language nodejs %}}
 
-<dl class="resources-properties">
-  
-    <dt
+<dl class="resources-properties"><dt
         class="property-required" title="Required">
         <span>name</span>
         <span class="property-indicator"></span>
@@ -202,9 +238,7 @@ const exampleContainerRegistryDockerCredentials = new digitalocean.ContainerRegi
     </dt>
     <dd>
       The unique name of the resource.
-    </dd>
-  
-    <dt
+    </dd><dt
         class="property-required" title="Required">
         <span>args</span>
         <span class="property-indicator"></span>
@@ -212,9 +246,7 @@ const exampleContainerRegistryDockerCredentials = new digitalocean.ContainerRegi
     </dt>
     <dd>
       The arguments to resource properties.
-    </dd>
-  
-    <dt
+    </dd><dt
         class="property-optional" title="Optional">
         <span>opts</span>
         <span class="property-indicator"></span>
@@ -222,10 +254,7 @@ const exampleContainerRegistryDockerCredentials = new digitalocean.ContainerRegi
     </dt>
     <dd>
       Bag of options to control resource&#39;s behavior.
-    </dd>
-  
-
-</dl>
+    </dd></dl>
 
 {{% /choosable %}}
 
@@ -251,9 +280,7 @@ const exampleContainerRegistryDockerCredentials = new digitalocean.ContainerRegi
 
 {{% choosable language go %}}
 
-<dl class="resources-properties">
-  
-    <dt
+<dl class="resources-properties"><dt
         class="property-optional" title="Optional">
         <span>ctx</span>
         <span class="property-indicator"></span>
@@ -261,9 +288,7 @@ const exampleContainerRegistryDockerCredentials = new digitalocean.ContainerRegi
     </dt>
     <dd>
       Context object for the current deployment.
-    </dd>
-  
-    <dt
+    </dd><dt
         class="property-required" title="Required">
         <span>name</span>
         <span class="property-indicator"></span>
@@ -271,9 +296,7 @@ const exampleContainerRegistryDockerCredentials = new digitalocean.ContainerRegi
     </dt>
     <dd>
       The unique name of the resource.
-    </dd>
-  
-    <dt
+    </dd><dt
         class="property-required" title="Required">
         <span>args</span>
         <span class="property-indicator"></span>
@@ -281,9 +304,7 @@ const exampleContainerRegistryDockerCredentials = new digitalocean.ContainerRegi
     </dt>
     <dd>
       The arguments to resource properties.
-    </dd>
-  
-    <dt
+    </dd><dt
         class="property-optional" title="Optional">
         <span>opts</span>
         <span class="property-indicator"></span>
@@ -291,18 +312,13 @@ const exampleContainerRegistryDockerCredentials = new digitalocean.ContainerRegi
     </dt>
     <dd>
       Bag of options to control resource&#39;s behavior.
-    </dd>
-  
-
-</dl>
+    </dd></dl>
 
 {{% /choosable %}}
 
 {{% choosable language csharp %}}
 
-<dl class="resources-properties">
-  
-    <dt
+<dl class="resources-properties"><dt
         class="property-required" title="Required">
         <span>name</span>
         <span class="property-indicator"></span>
@@ -310,9 +326,7 @@ const exampleContainerRegistryDockerCredentials = new digitalocean.ContainerRegi
     </dt>
     <dd>
       The unique name of the resource.
-    </dd>
-  
-    <dt
+    </dd><dt
         class="property-required" title="Required">
         <span>args</span>
         <span class="property-indicator"></span>
@@ -320,9 +334,7 @@ const exampleContainerRegistryDockerCredentials = new digitalocean.ContainerRegi
     </dt>
     <dd>
       The arguments to resource properties.
-    </dd>
-  
-    <dt
+    </dd><dt
         class="property-optional" title="Optional">
         <span>opts</span>
         <span class="property-indicator"></span>
@@ -330,10 +342,7 @@ const exampleContainerRegistryDockerCredentials = new digitalocean.ContainerRegi
     </dt>
     <dd>
       Bag of options to control resource&#39;s behavior.
-    </dd>
-  
-
-</dl>
+    </dd></dl>
 
 {{% /choosable %}}
 
@@ -348,9 +357,7 @@ The ContainerRegistryDockerCredentials resource accepts the following [input]({{
 
 
 {{% choosable language csharp %}}
-<dl class="resources-properties">
-
-    <dt class="property-required"
+<dl class="resources-properties"><dt class="property-required"
             title="Required">
         <span id="registryname_csharp">
 <a href="#registryname_csharp" style="color: inherit; text-decoration: inherit;">Registry<wbr>Name</a>
@@ -359,8 +366,7 @@ The ContainerRegistryDockerCredentials resource accepts the following [input]({{
         <span class="property-type">string</span>
     </dt>
     <dd>{{% md %}}The name of the container registry.
-{{% /md %}}</dd>
-    <dt class="property-optional"
+{{% /md %}}</dd><dt class="property-optional"
             title="Optional">
         <span id="expiryseconds_csharp">
 <a href="#expiryseconds_csharp" style="color: inherit; text-decoration: inherit;">Expiry<wbr>Seconds</a>
@@ -369,8 +375,7 @@ The ContainerRegistryDockerCredentials resource accepts the following [input]({{
         <span class="property-type">int</span>
     </dt>
     <dd>{{% md %}}The amount of time to pass before the Docker credentials expire in seconds. Defaults to 2147483647, or roughly 68 years. Must be greater than 0 and less than 2147483647.
-{{% /md %}}</dd>
-    <dt class="property-optional"
+{{% /md %}}</dd><dt class="property-optional"
             title="Optional">
         <span id="write_csharp">
 <a href="#write_csharp" style="color: inherit; text-decoration: inherit;">Write</a>
@@ -379,14 +384,11 @@ The ContainerRegistryDockerCredentials resource accepts the following [input]({{
         <span class="property-type">bool</span>
     </dt>
     <dd>{{% md %}}Allow for write access to the container registry. Defaults to false.
-{{% /md %}}</dd>
-</dl>
+{{% /md %}}</dd></dl>
 {{% /choosable %}}
 
 {{% choosable language go %}}
-<dl class="resources-properties">
-
-    <dt class="property-required"
+<dl class="resources-properties"><dt class="property-required"
             title="Required">
         <span id="registryname_go">
 <a href="#registryname_go" style="color: inherit; text-decoration: inherit;">Registry<wbr>Name</a>
@@ -395,8 +397,7 @@ The ContainerRegistryDockerCredentials resource accepts the following [input]({{
         <span class="property-type">string</span>
     </dt>
     <dd>{{% md %}}The name of the container registry.
-{{% /md %}}</dd>
-    <dt class="property-optional"
+{{% /md %}}</dd><dt class="property-optional"
             title="Optional">
         <span id="expiryseconds_go">
 <a href="#expiryseconds_go" style="color: inherit; text-decoration: inherit;">Expiry<wbr>Seconds</a>
@@ -405,8 +406,7 @@ The ContainerRegistryDockerCredentials resource accepts the following [input]({{
         <span class="property-type">int</span>
     </dt>
     <dd>{{% md %}}The amount of time to pass before the Docker credentials expire in seconds. Defaults to 2147483647, or roughly 68 years. Must be greater than 0 and less than 2147483647.
-{{% /md %}}</dd>
-    <dt class="property-optional"
+{{% /md %}}</dd><dt class="property-optional"
             title="Optional">
         <span id="write_go">
 <a href="#write_go" style="color: inherit; text-decoration: inherit;">Write</a>
@@ -415,14 +415,11 @@ The ContainerRegistryDockerCredentials resource accepts the following [input]({{
         <span class="property-type">bool</span>
     </dt>
     <dd>{{% md %}}Allow for write access to the container registry. Defaults to false.
-{{% /md %}}</dd>
-</dl>
+{{% /md %}}</dd></dl>
 {{% /choosable %}}
 
 {{% choosable language nodejs %}}
-<dl class="resources-properties">
-
-    <dt class="property-required"
+<dl class="resources-properties"><dt class="property-required"
             title="Required">
         <span id="registryname_nodejs">
 <a href="#registryname_nodejs" style="color: inherit; text-decoration: inherit;">registry<wbr>Name</a>
@@ -431,8 +428,7 @@ The ContainerRegistryDockerCredentials resource accepts the following [input]({{
         <span class="property-type">string</span>
     </dt>
     <dd>{{% md %}}The name of the container registry.
-{{% /md %}}</dd>
-    <dt class="property-optional"
+{{% /md %}}</dd><dt class="property-optional"
             title="Optional">
         <span id="expiryseconds_nodejs">
 <a href="#expiryseconds_nodejs" style="color: inherit; text-decoration: inherit;">expiry<wbr>Seconds</a>
@@ -441,8 +437,7 @@ The ContainerRegistryDockerCredentials resource accepts the following [input]({{
         <span class="property-type">number</span>
     </dt>
     <dd>{{% md %}}The amount of time to pass before the Docker credentials expire in seconds. Defaults to 2147483647, or roughly 68 years. Must be greater than 0 and less than 2147483647.
-{{% /md %}}</dd>
-    <dt class="property-optional"
+{{% /md %}}</dd><dt class="property-optional"
             title="Optional">
         <span id="write_nodejs">
 <a href="#write_nodejs" style="color: inherit; text-decoration: inherit;">write</a>
@@ -451,14 +446,11 @@ The ContainerRegistryDockerCredentials resource accepts the following [input]({{
         <span class="property-type">boolean</span>
     </dt>
     <dd>{{% md %}}Allow for write access to the container registry. Defaults to false.
-{{% /md %}}</dd>
-</dl>
+{{% /md %}}</dd></dl>
 {{% /choosable %}}
 
 {{% choosable language python %}}
-<dl class="resources-properties">
-
-    <dt class="property-required"
+<dl class="resources-properties"><dt class="property-required"
             title="Required">
         <span id="registry_name_python">
 <a href="#registry_name_python" style="color: inherit; text-decoration: inherit;">registry_<wbr>name</a>
@@ -467,8 +459,7 @@ The ContainerRegistryDockerCredentials resource accepts the following [input]({{
         <span class="property-type">str</span>
     </dt>
     <dd>{{% md %}}The name of the container registry.
-{{% /md %}}</dd>
-    <dt class="property-optional"
+{{% /md %}}</dd><dt class="property-optional"
             title="Optional">
         <span id="expiry_seconds_python">
 <a href="#expiry_seconds_python" style="color: inherit; text-decoration: inherit;">expiry_<wbr>seconds</a>
@@ -477,8 +468,7 @@ The ContainerRegistryDockerCredentials resource accepts the following [input]({{
         <span class="property-type">int</span>
     </dt>
     <dd>{{% md %}}The amount of time to pass before the Docker credentials expire in seconds. Defaults to 2147483647, or roughly 68 years. Must be greater than 0 and less than 2147483647.
-{{% /md %}}</dd>
-    <dt class="property-optional"
+{{% /md %}}</dd><dt class="property-optional"
             title="Optional">
         <span id="write_python">
 <a href="#write_python" style="color: inherit; text-decoration: inherit;">write</a>
@@ -487,8 +477,7 @@ The ContainerRegistryDockerCredentials resource accepts the following [input]({{
         <span class="property-type">bool</span>
     </dt>
     <dd>{{% md %}}Allow for write access to the container registry. Defaults to false.
-{{% /md %}}</dd>
-</dl>
+{{% /md %}}</dd></dl>
 {{% /choosable %}}
 
 
@@ -499,9 +488,7 @@ All [input](#inputs) properties are implicitly available as output properties. A
 
 
 {{% choosable language csharp %}}
-<dl class="resources-properties">
-
-    <dt class="property-"
+<dl class="resources-properties"><dt class="property-"
             title="">
         <span id="credentialexpirationtime_csharp">
 <a href="#credentialexpirationtime_csharp" style="color: inherit; text-decoration: inherit;">Credential<wbr>Expiration<wbr>Time</a>
@@ -509,8 +496,7 @@ All [input](#inputs) properties are implicitly available as output properties. A
         <span class="property-indicator"></span>
         <span class="property-type">string</span>
     </dt>
-    <dd>{{% md %}}{{% /md %}}</dd>
-    <dt class="property-"
+    <dd>{{% md %}}{{% /md %}}</dd><dt class="property-"
             title="">
         <span id="dockercredentials_csharp">
 <a href="#dockercredentials_csharp" style="color: inherit; text-decoration: inherit;">Docker<wbr>Credentials</a>
@@ -518,8 +504,7 @@ All [input](#inputs) properties are implicitly available as output properties. A
         <span class="property-indicator"></span>
         <span class="property-type">string</span>
     </dt>
-    <dd>{{% md %}}{{% /md %}}</dd>
-    <dt class="property-"
+    <dd>{{% md %}}{{% /md %}}</dd><dt class="property-"
             title="">
         <span id="id_csharp">
 <a href="#id_csharp" style="color: inherit; text-decoration: inherit;">Id</a>
@@ -527,14 +512,11 @@ All [input](#inputs) properties are implicitly available as output properties. A
         <span class="property-indicator"></span>
         <span class="property-type">string</span>
     </dt>
-    <dd>{{% md %}}The provider-assigned unique ID for this managed resource.{{% /md %}}</dd>
-</dl>
+    <dd>{{% md %}}The provider-assigned unique ID for this managed resource.{{% /md %}}</dd></dl>
 {{% /choosable %}}
 
 {{% choosable language go %}}
-<dl class="resources-properties">
-
-    <dt class="property-"
+<dl class="resources-properties"><dt class="property-"
             title="">
         <span id="credentialexpirationtime_go">
 <a href="#credentialexpirationtime_go" style="color: inherit; text-decoration: inherit;">Credential<wbr>Expiration<wbr>Time</a>
@@ -542,8 +524,7 @@ All [input](#inputs) properties are implicitly available as output properties. A
         <span class="property-indicator"></span>
         <span class="property-type">string</span>
     </dt>
-    <dd>{{% md %}}{{% /md %}}</dd>
-    <dt class="property-"
+    <dd>{{% md %}}{{% /md %}}</dd><dt class="property-"
             title="">
         <span id="dockercredentials_go">
 <a href="#dockercredentials_go" style="color: inherit; text-decoration: inherit;">Docker<wbr>Credentials</a>
@@ -551,8 +532,7 @@ All [input](#inputs) properties are implicitly available as output properties. A
         <span class="property-indicator"></span>
         <span class="property-type">string</span>
     </dt>
-    <dd>{{% md %}}{{% /md %}}</dd>
-    <dt class="property-"
+    <dd>{{% md %}}{{% /md %}}</dd><dt class="property-"
             title="">
         <span id="id_go">
 <a href="#id_go" style="color: inherit; text-decoration: inherit;">Id</a>
@@ -560,14 +540,11 @@ All [input](#inputs) properties are implicitly available as output properties. A
         <span class="property-indicator"></span>
         <span class="property-type">string</span>
     </dt>
-    <dd>{{% md %}}The provider-assigned unique ID for this managed resource.{{% /md %}}</dd>
-</dl>
+    <dd>{{% md %}}The provider-assigned unique ID for this managed resource.{{% /md %}}</dd></dl>
 {{% /choosable %}}
 
 {{% choosable language nodejs %}}
-<dl class="resources-properties">
-
-    <dt class="property-"
+<dl class="resources-properties"><dt class="property-"
             title="">
         <span id="credentialexpirationtime_nodejs">
 <a href="#credentialexpirationtime_nodejs" style="color: inherit; text-decoration: inherit;">credential<wbr>Expiration<wbr>Time</a>
@@ -575,8 +552,7 @@ All [input](#inputs) properties are implicitly available as output properties. A
         <span class="property-indicator"></span>
         <span class="property-type">string</span>
     </dt>
-    <dd>{{% md %}}{{% /md %}}</dd>
-    <dt class="property-"
+    <dd>{{% md %}}{{% /md %}}</dd><dt class="property-"
             title="">
         <span id="dockercredentials_nodejs">
 <a href="#dockercredentials_nodejs" style="color: inherit; text-decoration: inherit;">docker<wbr>Credentials</a>
@@ -584,8 +560,7 @@ All [input](#inputs) properties are implicitly available as output properties. A
         <span class="property-indicator"></span>
         <span class="property-type">string</span>
     </dt>
-    <dd>{{% md %}}{{% /md %}}</dd>
-    <dt class="property-"
+    <dd>{{% md %}}{{% /md %}}</dd><dt class="property-"
             title="">
         <span id="id_nodejs">
 <a href="#id_nodejs" style="color: inherit; text-decoration: inherit;">id</a>
@@ -593,14 +568,11 @@ All [input](#inputs) properties are implicitly available as output properties. A
         <span class="property-indicator"></span>
         <span class="property-type">string</span>
     </dt>
-    <dd>{{% md %}}The provider-assigned unique ID for this managed resource.{{% /md %}}</dd>
-</dl>
+    <dd>{{% md %}}The provider-assigned unique ID for this managed resource.{{% /md %}}</dd></dl>
 {{% /choosable %}}
 
 {{% choosable language python %}}
-<dl class="resources-properties">
-
-    <dt class="property-"
+<dl class="resources-properties"><dt class="property-"
             title="">
         <span id="credential_expiration_time_python">
 <a href="#credential_expiration_time_python" style="color: inherit; text-decoration: inherit;">credential_<wbr>expiration_<wbr>time</a>
@@ -608,8 +580,7 @@ All [input](#inputs) properties are implicitly available as output properties. A
         <span class="property-indicator"></span>
         <span class="property-type">str</span>
     </dt>
-    <dd>{{% md %}}{{% /md %}}</dd>
-    <dt class="property-"
+    <dd>{{% md %}}{{% /md %}}</dd><dt class="property-"
             title="">
         <span id="docker_credentials_python">
 <a href="#docker_credentials_python" style="color: inherit; text-decoration: inherit;">docker_<wbr>credentials</a>
@@ -617,8 +588,7 @@ All [input](#inputs) properties are implicitly available as output properties. A
         <span class="property-indicator"></span>
         <span class="property-type">str</span>
     </dt>
-    <dd>{{% md %}}{{% /md %}}</dd>
-    <dt class="property-"
+    <dd>{{% md %}}{{% /md %}}</dd><dt class="property-"
             title="">
         <span id="id_python">
 <a href="#id_python" style="color: inherit; text-decoration: inherit;">id</a>
@@ -626,8 +596,7 @@ All [input](#inputs) properties are implicitly available as output properties. A
         <span class="property-indicator"></span>
         <span class="property-type">str</span>
     </dt>
-    <dd>{{% md %}}The provider-assigned unique ID for this managed resource.{{% /md %}}</dd>
-</dl>
+    <dd>{{% md %}}The provider-assigned unique ID for this managed resource.{{% /md %}}</dd></dl>
 {{% /choosable %}}
 
 
@@ -754,9 +723,7 @@ The following state arguments are supported:
 
 
 {{% choosable language csharp %}}
-<dl class="resources-properties">
-
-    <dt class="property-optional"
+<dl class="resources-properties"><dt class="property-optional"
             title="Optional">
         <span id="state_credentialexpirationtime_csharp">
 <a href="#state_credentialexpirationtime_csharp" style="color: inherit; text-decoration: inherit;">Credential<wbr>Expiration<wbr>Time</a>
@@ -764,8 +731,7 @@ The following state arguments are supported:
         <span class="property-indicator"></span>
         <span class="property-type">string</span>
     </dt>
-    <dd>{{% md %}}{{% /md %}}</dd>
-    <dt class="property-optional"
+    <dd>{{% md %}}{{% /md %}}</dd><dt class="property-optional"
             title="Optional">
         <span id="state_dockercredentials_csharp">
 <a href="#state_dockercredentials_csharp" style="color: inherit; text-decoration: inherit;">Docker<wbr>Credentials</a>
@@ -773,8 +739,7 @@ The following state arguments are supported:
         <span class="property-indicator"></span>
         <span class="property-type">string</span>
     </dt>
-    <dd>{{% md %}}{{% /md %}}</dd>
-    <dt class="property-optional"
+    <dd>{{% md %}}{{% /md %}}</dd><dt class="property-optional"
             title="Optional">
         <span id="state_expiryseconds_csharp">
 <a href="#state_expiryseconds_csharp" style="color: inherit; text-decoration: inherit;">Expiry<wbr>Seconds</a>
@@ -783,8 +748,7 @@ The following state arguments are supported:
         <span class="property-type">int</span>
     </dt>
     <dd>{{% md %}}The amount of time to pass before the Docker credentials expire in seconds. Defaults to 2147483647, or roughly 68 years. Must be greater than 0 and less than 2147483647.
-{{% /md %}}</dd>
-    <dt class="property-optional"
+{{% /md %}}</dd><dt class="property-optional"
             title="Optional">
         <span id="state_registryname_csharp">
 <a href="#state_registryname_csharp" style="color: inherit; text-decoration: inherit;">Registry<wbr>Name</a>
@@ -793,8 +757,7 @@ The following state arguments are supported:
         <span class="property-type">string</span>
     </dt>
     <dd>{{% md %}}The name of the container registry.
-{{% /md %}}</dd>
-    <dt class="property-optional"
+{{% /md %}}</dd><dt class="property-optional"
             title="Optional">
         <span id="state_write_csharp">
 <a href="#state_write_csharp" style="color: inherit; text-decoration: inherit;">Write</a>
@@ -803,14 +766,11 @@ The following state arguments are supported:
         <span class="property-type">bool</span>
     </dt>
     <dd>{{% md %}}Allow for write access to the container registry. Defaults to false.
-{{% /md %}}</dd>
-</dl>
+{{% /md %}}</dd></dl>
 {{% /choosable %}}
 
 {{% choosable language go %}}
-<dl class="resources-properties">
-
-    <dt class="property-optional"
+<dl class="resources-properties"><dt class="property-optional"
             title="Optional">
         <span id="state_credentialexpirationtime_go">
 <a href="#state_credentialexpirationtime_go" style="color: inherit; text-decoration: inherit;">Credential<wbr>Expiration<wbr>Time</a>
@@ -818,8 +778,7 @@ The following state arguments are supported:
         <span class="property-indicator"></span>
         <span class="property-type">string</span>
     </dt>
-    <dd>{{% md %}}{{% /md %}}</dd>
-    <dt class="property-optional"
+    <dd>{{% md %}}{{% /md %}}</dd><dt class="property-optional"
             title="Optional">
         <span id="state_dockercredentials_go">
 <a href="#state_dockercredentials_go" style="color: inherit; text-decoration: inherit;">Docker<wbr>Credentials</a>
@@ -827,8 +786,7 @@ The following state arguments are supported:
         <span class="property-indicator"></span>
         <span class="property-type">string</span>
     </dt>
-    <dd>{{% md %}}{{% /md %}}</dd>
-    <dt class="property-optional"
+    <dd>{{% md %}}{{% /md %}}</dd><dt class="property-optional"
             title="Optional">
         <span id="state_expiryseconds_go">
 <a href="#state_expiryseconds_go" style="color: inherit; text-decoration: inherit;">Expiry<wbr>Seconds</a>
@@ -837,8 +795,7 @@ The following state arguments are supported:
         <span class="property-type">int</span>
     </dt>
     <dd>{{% md %}}The amount of time to pass before the Docker credentials expire in seconds. Defaults to 2147483647, or roughly 68 years. Must be greater than 0 and less than 2147483647.
-{{% /md %}}</dd>
-    <dt class="property-optional"
+{{% /md %}}</dd><dt class="property-optional"
             title="Optional">
         <span id="state_registryname_go">
 <a href="#state_registryname_go" style="color: inherit; text-decoration: inherit;">Registry<wbr>Name</a>
@@ -847,8 +804,7 @@ The following state arguments are supported:
         <span class="property-type">string</span>
     </dt>
     <dd>{{% md %}}The name of the container registry.
-{{% /md %}}</dd>
-    <dt class="property-optional"
+{{% /md %}}</dd><dt class="property-optional"
             title="Optional">
         <span id="state_write_go">
 <a href="#state_write_go" style="color: inherit; text-decoration: inherit;">Write</a>
@@ -857,14 +813,11 @@ The following state arguments are supported:
         <span class="property-type">bool</span>
     </dt>
     <dd>{{% md %}}Allow for write access to the container registry. Defaults to false.
-{{% /md %}}</dd>
-</dl>
+{{% /md %}}</dd></dl>
 {{% /choosable %}}
 
 {{% choosable language nodejs %}}
-<dl class="resources-properties">
-
-    <dt class="property-optional"
+<dl class="resources-properties"><dt class="property-optional"
             title="Optional">
         <span id="state_credentialexpirationtime_nodejs">
 <a href="#state_credentialexpirationtime_nodejs" style="color: inherit; text-decoration: inherit;">credential<wbr>Expiration<wbr>Time</a>
@@ -872,8 +825,7 @@ The following state arguments are supported:
         <span class="property-indicator"></span>
         <span class="property-type">string</span>
     </dt>
-    <dd>{{% md %}}{{% /md %}}</dd>
-    <dt class="property-optional"
+    <dd>{{% md %}}{{% /md %}}</dd><dt class="property-optional"
             title="Optional">
         <span id="state_dockercredentials_nodejs">
 <a href="#state_dockercredentials_nodejs" style="color: inherit; text-decoration: inherit;">docker<wbr>Credentials</a>
@@ -881,8 +833,7 @@ The following state arguments are supported:
         <span class="property-indicator"></span>
         <span class="property-type">string</span>
     </dt>
-    <dd>{{% md %}}{{% /md %}}</dd>
-    <dt class="property-optional"
+    <dd>{{% md %}}{{% /md %}}</dd><dt class="property-optional"
             title="Optional">
         <span id="state_expiryseconds_nodejs">
 <a href="#state_expiryseconds_nodejs" style="color: inherit; text-decoration: inherit;">expiry<wbr>Seconds</a>
@@ -891,8 +842,7 @@ The following state arguments are supported:
         <span class="property-type">number</span>
     </dt>
     <dd>{{% md %}}The amount of time to pass before the Docker credentials expire in seconds. Defaults to 2147483647, or roughly 68 years. Must be greater than 0 and less than 2147483647.
-{{% /md %}}</dd>
-    <dt class="property-optional"
+{{% /md %}}</dd><dt class="property-optional"
             title="Optional">
         <span id="state_registryname_nodejs">
 <a href="#state_registryname_nodejs" style="color: inherit; text-decoration: inherit;">registry<wbr>Name</a>
@@ -901,8 +851,7 @@ The following state arguments are supported:
         <span class="property-type">string</span>
     </dt>
     <dd>{{% md %}}The name of the container registry.
-{{% /md %}}</dd>
-    <dt class="property-optional"
+{{% /md %}}</dd><dt class="property-optional"
             title="Optional">
         <span id="state_write_nodejs">
 <a href="#state_write_nodejs" style="color: inherit; text-decoration: inherit;">write</a>
@@ -911,14 +860,11 @@ The following state arguments are supported:
         <span class="property-type">boolean</span>
     </dt>
     <dd>{{% md %}}Allow for write access to the container registry. Defaults to false.
-{{% /md %}}</dd>
-</dl>
+{{% /md %}}</dd></dl>
 {{% /choosable %}}
 
 {{% choosable language python %}}
-<dl class="resources-properties">
-
-    <dt class="property-optional"
+<dl class="resources-properties"><dt class="property-optional"
             title="Optional">
         <span id="state_credential_expiration_time_python">
 <a href="#state_credential_expiration_time_python" style="color: inherit; text-decoration: inherit;">credential_<wbr>expiration_<wbr>time</a>
@@ -926,8 +872,7 @@ The following state arguments are supported:
         <span class="property-indicator"></span>
         <span class="property-type">str</span>
     </dt>
-    <dd>{{% md %}}{{% /md %}}</dd>
-    <dt class="property-optional"
+    <dd>{{% md %}}{{% /md %}}</dd><dt class="property-optional"
             title="Optional">
         <span id="state_docker_credentials_python">
 <a href="#state_docker_credentials_python" style="color: inherit; text-decoration: inherit;">docker_<wbr>credentials</a>
@@ -935,8 +880,7 @@ The following state arguments are supported:
         <span class="property-indicator"></span>
         <span class="property-type">str</span>
     </dt>
-    <dd>{{% md %}}{{% /md %}}</dd>
-    <dt class="property-optional"
+    <dd>{{% md %}}{{% /md %}}</dd><dt class="property-optional"
             title="Optional">
         <span id="state_expiry_seconds_python">
 <a href="#state_expiry_seconds_python" style="color: inherit; text-decoration: inherit;">expiry_<wbr>seconds</a>
@@ -945,8 +889,7 @@ The following state arguments are supported:
         <span class="property-type">int</span>
     </dt>
     <dd>{{% md %}}The amount of time to pass before the Docker credentials expire in seconds. Defaults to 2147483647, or roughly 68 years. Must be greater than 0 and less than 2147483647.
-{{% /md %}}</dd>
-    <dt class="property-optional"
+{{% /md %}}</dd><dt class="property-optional"
             title="Optional">
         <span id="state_registry_name_python">
 <a href="#state_registry_name_python" style="color: inherit; text-decoration: inherit;">registry_<wbr>name</a>
@@ -955,8 +898,7 @@ The following state arguments are supported:
         <span class="property-type">str</span>
     </dt>
     <dd>{{% md %}}The name of the container registry.
-{{% /md %}}</dd>
-    <dt class="property-optional"
+{{% /md %}}</dd><dt class="property-optional"
             title="Optional">
         <span id="state_write_python">
 <a href="#state_write_python" style="color: inherit; text-decoration: inherit;">write</a>
@@ -965,8 +907,7 @@ The following state arguments are supported:
         <span class="property-type">bool</span>
     </dt>
     <dd>{{% md %}}Allow for write access to the container registry. Defaults to false.
-{{% /md %}}</dd>
-</dl>
+{{% /md %}}</dd></dl>
 {{% /choosable %}}
 
 
@@ -982,6 +923,6 @@ The following state arguments are supported:
 	<dt>License</dt>
 	<dd>Apache-2.0</dd>
 	<dt>Notes</dt>
-	<dd>This Pulumi package is based on the [`digitalocean` Terraform Provider](https://github.com/digitalocean/terraform-provider-digitalocean).</dd>
+	<dd>{{% md %}}This Pulumi package is based on the [`digitalocean` Terraform Provider](https://github.com/digitalocean/terraform-provider-digitalocean).{{% /md %}}</dd>
 </dl>
 

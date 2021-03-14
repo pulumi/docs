@@ -1,8 +1,8 @@
 
 ---
 title: "Certificate"
-title_tag: "Resource Certificate | Package Hetzner Cloud"
-meta_desc: "Explore the Certificate resource of the Hetzner Cloud package, including examples, input properties, output properties, lookup functions, and supporting types. Provides a Hetzner Cloud Certificate to represent a TLS certificate in the Hetzner Cloud."
+title_tag: "hcloud.Certificate"
+meta_desc: "Documentation for the hcloud.Certificate resource with examples, input properties, output properties, lookup functions, and supporting types."
 ---
 
 
@@ -36,9 +36,7 @@ Provides a Hetzner Cloud Certificate to represent a TLS certificate in the Hetzn
 
 {{% choosable language nodejs %}}
 
-<dl class="resources-properties">
-  
-    <dt
+<dl class="resources-properties"><dt
         class="property-required" title="Required">
         <span>name</span>
         <span class="property-indicator"></span>
@@ -46,9 +44,7 @@ Provides a Hetzner Cloud Certificate to represent a TLS certificate in the Hetzn
     </dt>
     <dd>
       The unique name of the resource.
-    </dd>
-  
-    <dt
+    </dd><dt
         class="property-required" title="Required">
         <span>args</span>
         <span class="property-indicator"></span>
@@ -56,9 +52,7 @@ Provides a Hetzner Cloud Certificate to represent a TLS certificate in the Hetzn
     </dt>
     <dd>
       The arguments to resource properties.
-    </dd>
-  
-    <dt
+    </dd><dt
         class="property-optional" title="Optional">
         <span>opts</span>
         <span class="property-indicator"></span>
@@ -66,10 +60,7 @@ Provides a Hetzner Cloud Certificate to represent a TLS certificate in the Hetzn
     </dt>
     <dd>
       Bag of options to control resource&#39;s behavior.
-    </dd>
-  
-
-</dl>
+    </dd></dl>
 
 {{% /choosable %}}
 
@@ -95,9 +86,7 @@ Provides a Hetzner Cloud Certificate to represent a TLS certificate in the Hetzn
 
 {{% choosable language go %}}
 
-<dl class="resources-properties">
-  
-    <dt
+<dl class="resources-properties"><dt
         class="property-optional" title="Optional">
         <span>ctx</span>
         <span class="property-indicator"></span>
@@ -105,9 +94,7 @@ Provides a Hetzner Cloud Certificate to represent a TLS certificate in the Hetzn
     </dt>
     <dd>
       Context object for the current deployment.
-    </dd>
-  
-    <dt
+    </dd><dt
         class="property-required" title="Required">
         <span>name</span>
         <span class="property-indicator"></span>
@@ -115,9 +102,7 @@ Provides a Hetzner Cloud Certificate to represent a TLS certificate in the Hetzn
     </dt>
     <dd>
       The unique name of the resource.
-    </dd>
-  
-    <dt
+    </dd><dt
         class="property-required" title="Required">
         <span>args</span>
         <span class="property-indicator"></span>
@@ -125,9 +110,7 @@ Provides a Hetzner Cloud Certificate to represent a TLS certificate in the Hetzn
     </dt>
     <dd>
       The arguments to resource properties.
-    </dd>
-  
-    <dt
+    </dd><dt
         class="property-optional" title="Optional">
         <span>opts</span>
         <span class="property-indicator"></span>
@@ -135,18 +118,13 @@ Provides a Hetzner Cloud Certificate to represent a TLS certificate in the Hetzn
     </dt>
     <dd>
       Bag of options to control resource&#39;s behavior.
-    </dd>
-  
-
-</dl>
+    </dd></dl>
 
 {{% /choosable %}}
 
 {{% choosable language csharp %}}
 
-<dl class="resources-properties">
-  
-    <dt
+<dl class="resources-properties"><dt
         class="property-required" title="Required">
         <span>name</span>
         <span class="property-indicator"></span>
@@ -154,9 +132,7 @@ Provides a Hetzner Cloud Certificate to represent a TLS certificate in the Hetzn
     </dt>
     <dd>
       The unique name of the resource.
-    </dd>
-  
-    <dt
+    </dd><dt
         class="property-required" title="Required">
         <span>args</span>
         <span class="property-indicator"></span>
@@ -164,9 +140,7 @@ Provides a Hetzner Cloud Certificate to represent a TLS certificate in the Hetzn
     </dt>
     <dd>
       The arguments to resource properties.
-    </dd>
-  
-    <dt
+    </dd><dt
         class="property-optional" title="Optional">
         <span>opts</span>
         <span class="property-indicator"></span>
@@ -174,10 +148,7 @@ Provides a Hetzner Cloud Certificate to represent a TLS certificate in the Hetzn
     </dt>
     <dd>
       Bag of options to control resource&#39;s behavior.
-    </dd>
-  
-
-</dl>
+    </dd></dl>
 
 {{% /choosable %}}
 
@@ -192,9 +163,7 @@ The Certificate resource accepts the following [input]({{< relref "/docs/intro/c
 
 
 {{% choosable language csharp %}}
-<dl class="resources-properties">
-
-    <dt class="property-required"
+<dl class="resources-properties"><dt class="property-required"
             title="Required">
         <span id="certificatecontents_csharp">
 <a href="#certificatecontents_csharp" style="color: inherit; text-decoration: inherit;">Certificate<wbr>Contents</a>
@@ -203,8 +172,7 @@ The Certificate resource accepts the following [input]({{< relref "/docs/intro/c
         <span class="property-type">string</span>
     </dt>
     <dd>{{% md %}}PEM encoded TLS certificate.
-{{% /md %}}</dd>
-    <dt class="property-required"
+{{% /md %}}</dd><dt class="property-required"
             title="Required">
         <span id="privatekey_csharp">
 <a href="#privatekey_csharp" style="color: inherit; text-decoration: inherit;">Private<wbr>Key</a>
@@ -213,8 +181,7 @@ The Certificate resource accepts the following [input]({{< relref "/docs/intro/c
         <span class="property-type">string</span>
     </dt>
     <dd>{{% md %}}PEM encoded private key belonging to the certificate.
-{{% /md %}}</dd>
-    <dt class="property-optional"
+{{% /md %}}</dd><dt class="property-optional"
             title="Optional">
         <span id="labels_csharp">
 <a href="#labels_csharp" style="color: inherit; text-decoration: inherit;">Labels</a>
@@ -224,8 +191,7 @@ The Certificate resource accepts the following [input]({{< relref "/docs/intro/c
     </dt>
     <dd>{{% md %}}User-defined labels (key-value pairs) the
 certificate should be created with.
-{{% /md %}}</dd>
-    <dt class="property-optional"
+{{% /md %}}</dd><dt class="property-optional"
             title="Optional">
         <span id="name_csharp">
 <a href="#name_csharp" style="color: inherit; text-decoration: inherit;">Name</a>
@@ -234,14 +200,11 @@ certificate should be created with.
         <span class="property-type">string</span>
     </dt>
     <dd>{{% md %}}Name of the Certificate.
-{{% /md %}}</dd>
-</dl>
+{{% /md %}}</dd></dl>
 {{% /choosable %}}
 
 {{% choosable language go %}}
-<dl class="resources-properties">
-
-    <dt class="property-required"
+<dl class="resources-properties"><dt class="property-required"
             title="Required">
         <span id="certificate_go">
 <a href="#certificate_go" style="color: inherit; text-decoration: inherit;">Certificate</a>
@@ -250,8 +213,7 @@ certificate should be created with.
         <span class="property-type">string</span>
     </dt>
     <dd>{{% md %}}PEM encoded TLS certificate.
-{{% /md %}}</dd>
-    <dt class="property-required"
+{{% /md %}}</dd><dt class="property-required"
             title="Required">
         <span id="privatekey_go">
 <a href="#privatekey_go" style="color: inherit; text-decoration: inherit;">Private<wbr>Key</a>
@@ -260,8 +222,7 @@ certificate should be created with.
         <span class="property-type">string</span>
     </dt>
     <dd>{{% md %}}PEM encoded private key belonging to the certificate.
-{{% /md %}}</dd>
-    <dt class="property-optional"
+{{% /md %}}</dd><dt class="property-optional"
             title="Optional">
         <span id="labels_go">
 <a href="#labels_go" style="color: inherit; text-decoration: inherit;">Labels</a>
@@ -271,8 +232,7 @@ certificate should be created with.
     </dt>
     <dd>{{% md %}}User-defined labels (key-value pairs) the
 certificate should be created with.
-{{% /md %}}</dd>
-    <dt class="property-optional"
+{{% /md %}}</dd><dt class="property-optional"
             title="Optional">
         <span id="name_go">
 <a href="#name_go" style="color: inherit; text-decoration: inherit;">Name</a>
@@ -281,14 +241,11 @@ certificate should be created with.
         <span class="property-type">string</span>
     </dt>
     <dd>{{% md %}}Name of the Certificate.
-{{% /md %}}</dd>
-</dl>
+{{% /md %}}</dd></dl>
 {{% /choosable %}}
 
 {{% choosable language nodejs %}}
-<dl class="resources-properties">
-
-    <dt class="property-required"
+<dl class="resources-properties"><dt class="property-required"
             title="Required">
         <span id="certificate_nodejs">
 <a href="#certificate_nodejs" style="color: inherit; text-decoration: inherit;">certificate</a>
@@ -297,8 +254,7 @@ certificate should be created with.
         <span class="property-type">string</span>
     </dt>
     <dd>{{% md %}}PEM encoded TLS certificate.
-{{% /md %}}</dd>
-    <dt class="property-required"
+{{% /md %}}</dd><dt class="property-required"
             title="Required">
         <span id="privatekey_nodejs">
 <a href="#privatekey_nodejs" style="color: inherit; text-decoration: inherit;">private<wbr>Key</a>
@@ -307,8 +263,7 @@ certificate should be created with.
         <span class="property-type">string</span>
     </dt>
     <dd>{{% md %}}PEM encoded private key belonging to the certificate.
-{{% /md %}}</dd>
-    <dt class="property-optional"
+{{% /md %}}</dd><dt class="property-optional"
             title="Optional">
         <span id="labels_nodejs">
 <a href="#labels_nodejs" style="color: inherit; text-decoration: inherit;">labels</a>
@@ -318,8 +273,7 @@ certificate should be created with.
     </dt>
     <dd>{{% md %}}User-defined labels (key-value pairs) the
 certificate should be created with.
-{{% /md %}}</dd>
-    <dt class="property-optional"
+{{% /md %}}</dd><dt class="property-optional"
             title="Optional">
         <span id="name_nodejs">
 <a href="#name_nodejs" style="color: inherit; text-decoration: inherit;">name</a>
@@ -328,14 +282,11 @@ certificate should be created with.
         <span class="property-type">string</span>
     </dt>
     <dd>{{% md %}}Name of the Certificate.
-{{% /md %}}</dd>
-</dl>
+{{% /md %}}</dd></dl>
 {{% /choosable %}}
 
 {{% choosable language python %}}
-<dl class="resources-properties">
-
-    <dt class="property-required"
+<dl class="resources-properties"><dt class="property-required"
             title="Required">
         <span id="certificate_python">
 <a href="#certificate_python" style="color: inherit; text-decoration: inherit;">certificate</a>
@@ -344,8 +295,7 @@ certificate should be created with.
         <span class="property-type">str</span>
     </dt>
     <dd>{{% md %}}PEM encoded TLS certificate.
-{{% /md %}}</dd>
-    <dt class="property-required"
+{{% /md %}}</dd><dt class="property-required"
             title="Required">
         <span id="private_key_python">
 <a href="#private_key_python" style="color: inherit; text-decoration: inherit;">private_<wbr>key</a>
@@ -354,8 +304,7 @@ certificate should be created with.
         <span class="property-type">str</span>
     </dt>
     <dd>{{% md %}}PEM encoded private key belonging to the certificate.
-{{% /md %}}</dd>
-    <dt class="property-optional"
+{{% /md %}}</dd><dt class="property-optional"
             title="Optional">
         <span id="labels_python">
 <a href="#labels_python" style="color: inherit; text-decoration: inherit;">labels</a>
@@ -365,8 +314,7 @@ certificate should be created with.
     </dt>
     <dd>{{% md %}}User-defined labels (key-value pairs) the
 certificate should be created with.
-{{% /md %}}</dd>
-    <dt class="property-optional"
+{{% /md %}}</dd><dt class="property-optional"
             title="Optional">
         <span id="name_python">
 <a href="#name_python" style="color: inherit; text-decoration: inherit;">name</a>
@@ -375,8 +323,7 @@ certificate should be created with.
         <span class="property-type">str</span>
     </dt>
     <dd>{{% md %}}Name of the Certificate.
-{{% /md %}}</dd>
-</dl>
+{{% /md %}}</dd></dl>
 {{% /choosable %}}
 
 
@@ -387,9 +334,7 @@ All [input](#inputs) properties are implicitly available as output properties. A
 
 
 {{% choosable language csharp %}}
-<dl class="resources-properties">
-
-    <dt class="property-"
+<dl class="resources-properties"><dt class="property-"
             title="">
         <span id="created_csharp">
 <a href="#created_csharp" style="color: inherit; text-decoration: inherit;">Created</a>
@@ -398,8 +343,7 @@ All [input](#inputs) properties are implicitly available as output properties. A
         <span class="property-type">string</span>
     </dt>
     <dd>{{% md %}}(string) Point in time when the Certificate was created at Hetzner Cloud (in ISO-8601 format).
-{{% /md %}}</dd>
-    <dt class="property-"
+{{% /md %}}</dd><dt class="property-"
             title="">
         <span id="domainnames_csharp">
 <a href="#domainnames_csharp" style="color: inherit; text-decoration: inherit;">Domain<wbr>Names</a>
@@ -408,8 +352,7 @@ All [input](#inputs) properties are implicitly available as output properties. A
         <span class="property-type">List&lt;string&gt;</span>
     </dt>
     <dd>{{% md %}}(list) Domains and subdomains covered by the certificate.
-{{% /md %}}</dd>
-    <dt class="property-"
+{{% /md %}}</dd><dt class="property-"
             title="">
         <span id="fingerprint_csharp">
 <a href="#fingerprint_csharp" style="color: inherit; text-decoration: inherit;">Fingerprint</a>
@@ -418,8 +361,7 @@ All [input](#inputs) properties are implicitly available as output properties. A
         <span class="property-type">string</span>
     </dt>
     <dd>{{% md %}}(string) Fingerprint of the certificate.
-{{% /md %}}</dd>
-    <dt class="property-"
+{{% /md %}}</dd><dt class="property-"
             title="">
         <span id="id_csharp">
 <a href="#id_csharp" style="color: inherit; text-decoration: inherit;">Id</a>
@@ -427,8 +369,7 @@ All [input](#inputs) properties are implicitly available as output properties. A
         <span class="property-indicator"></span>
         <span class="property-type">string</span>
     </dt>
-    <dd>{{% md %}}The provider-assigned unique ID for this managed resource.{{% /md %}}</dd>
-    <dt class="property-"
+    <dd>{{% md %}}The provider-assigned unique ID for this managed resource.{{% /md %}}</dd><dt class="property-"
             title="">
         <span id="notvalidafter_csharp">
 <a href="#notvalidafter_csharp" style="color: inherit; text-decoration: inherit;">Not<wbr>Valid<wbr>After</a>
@@ -437,8 +378,7 @@ All [input](#inputs) properties are implicitly available as output properties. A
         <span class="property-type">string</span>
     </dt>
     <dd>{{% md %}}(string) Point in time when the Certificate stops being valid (in ISO-8601 format).
-{{% /md %}}</dd>
-    <dt class="property-"
+{{% /md %}}</dd><dt class="property-"
             title="">
         <span id="notvalidbefore_csharp">
 <a href="#notvalidbefore_csharp" style="color: inherit; text-decoration: inherit;">Not<wbr>Valid<wbr>Before</a>
@@ -447,14 +387,11 @@ All [input](#inputs) properties are implicitly available as output properties. A
         <span class="property-type">string</span>
     </dt>
     <dd>{{% md %}}(string) Point in time when the Certificate becomes valid (in ISO-8601 format).
-{{% /md %}}</dd>
-</dl>
+{{% /md %}}</dd></dl>
 {{% /choosable %}}
 
 {{% choosable language go %}}
-<dl class="resources-properties">
-
-    <dt class="property-"
+<dl class="resources-properties"><dt class="property-"
             title="">
         <span id="created_go">
 <a href="#created_go" style="color: inherit; text-decoration: inherit;">Created</a>
@@ -463,8 +400,7 @@ All [input](#inputs) properties are implicitly available as output properties. A
         <span class="property-type">string</span>
     </dt>
     <dd>{{% md %}}(string) Point in time when the Certificate was created at Hetzner Cloud (in ISO-8601 format).
-{{% /md %}}</dd>
-    <dt class="property-"
+{{% /md %}}</dd><dt class="property-"
             title="">
         <span id="domainnames_go">
 <a href="#domainnames_go" style="color: inherit; text-decoration: inherit;">Domain<wbr>Names</a>
@@ -473,8 +409,7 @@ All [input](#inputs) properties are implicitly available as output properties. A
         <span class="property-type">[]string</span>
     </dt>
     <dd>{{% md %}}(list) Domains and subdomains covered by the certificate.
-{{% /md %}}</dd>
-    <dt class="property-"
+{{% /md %}}</dd><dt class="property-"
             title="">
         <span id="fingerprint_go">
 <a href="#fingerprint_go" style="color: inherit; text-decoration: inherit;">Fingerprint</a>
@@ -483,8 +418,7 @@ All [input](#inputs) properties are implicitly available as output properties. A
         <span class="property-type">string</span>
     </dt>
     <dd>{{% md %}}(string) Fingerprint of the certificate.
-{{% /md %}}</dd>
-    <dt class="property-"
+{{% /md %}}</dd><dt class="property-"
             title="">
         <span id="id_go">
 <a href="#id_go" style="color: inherit; text-decoration: inherit;">Id</a>
@@ -492,8 +426,7 @@ All [input](#inputs) properties are implicitly available as output properties. A
         <span class="property-indicator"></span>
         <span class="property-type">string</span>
     </dt>
-    <dd>{{% md %}}The provider-assigned unique ID for this managed resource.{{% /md %}}</dd>
-    <dt class="property-"
+    <dd>{{% md %}}The provider-assigned unique ID for this managed resource.{{% /md %}}</dd><dt class="property-"
             title="">
         <span id="notvalidafter_go">
 <a href="#notvalidafter_go" style="color: inherit; text-decoration: inherit;">Not<wbr>Valid<wbr>After</a>
@@ -502,8 +435,7 @@ All [input](#inputs) properties are implicitly available as output properties. A
         <span class="property-type">string</span>
     </dt>
     <dd>{{% md %}}(string) Point in time when the Certificate stops being valid (in ISO-8601 format).
-{{% /md %}}</dd>
-    <dt class="property-"
+{{% /md %}}</dd><dt class="property-"
             title="">
         <span id="notvalidbefore_go">
 <a href="#notvalidbefore_go" style="color: inherit; text-decoration: inherit;">Not<wbr>Valid<wbr>Before</a>
@@ -512,14 +444,11 @@ All [input](#inputs) properties are implicitly available as output properties. A
         <span class="property-type">string</span>
     </dt>
     <dd>{{% md %}}(string) Point in time when the Certificate becomes valid (in ISO-8601 format).
-{{% /md %}}</dd>
-</dl>
+{{% /md %}}</dd></dl>
 {{% /choosable %}}
 
 {{% choosable language nodejs %}}
-<dl class="resources-properties">
-
-    <dt class="property-"
+<dl class="resources-properties"><dt class="property-"
             title="">
         <span id="created_nodejs">
 <a href="#created_nodejs" style="color: inherit; text-decoration: inherit;">created</a>
@@ -528,8 +457,7 @@ All [input](#inputs) properties are implicitly available as output properties. A
         <span class="property-type">string</span>
     </dt>
     <dd>{{% md %}}(string) Point in time when the Certificate was created at Hetzner Cloud (in ISO-8601 format).
-{{% /md %}}</dd>
-    <dt class="property-"
+{{% /md %}}</dd><dt class="property-"
             title="">
         <span id="domainnames_nodejs">
 <a href="#domainnames_nodejs" style="color: inherit; text-decoration: inherit;">domain<wbr>Names</a>
@@ -538,8 +466,7 @@ All [input](#inputs) properties are implicitly available as output properties. A
         <span class="property-type">string[]</span>
     </dt>
     <dd>{{% md %}}(list) Domains and subdomains covered by the certificate.
-{{% /md %}}</dd>
-    <dt class="property-"
+{{% /md %}}</dd><dt class="property-"
             title="">
         <span id="fingerprint_nodejs">
 <a href="#fingerprint_nodejs" style="color: inherit; text-decoration: inherit;">fingerprint</a>
@@ -548,8 +475,7 @@ All [input](#inputs) properties are implicitly available as output properties. A
         <span class="property-type">string</span>
     </dt>
     <dd>{{% md %}}(string) Fingerprint of the certificate.
-{{% /md %}}</dd>
-    <dt class="property-"
+{{% /md %}}</dd><dt class="property-"
             title="">
         <span id="id_nodejs">
 <a href="#id_nodejs" style="color: inherit; text-decoration: inherit;">id</a>
@@ -557,8 +483,7 @@ All [input](#inputs) properties are implicitly available as output properties. A
         <span class="property-indicator"></span>
         <span class="property-type">string</span>
     </dt>
-    <dd>{{% md %}}The provider-assigned unique ID for this managed resource.{{% /md %}}</dd>
-    <dt class="property-"
+    <dd>{{% md %}}The provider-assigned unique ID for this managed resource.{{% /md %}}</dd><dt class="property-"
             title="">
         <span id="notvalidafter_nodejs">
 <a href="#notvalidafter_nodejs" style="color: inherit; text-decoration: inherit;">not<wbr>Valid<wbr>After</a>
@@ -567,8 +492,7 @@ All [input](#inputs) properties are implicitly available as output properties. A
         <span class="property-type">string</span>
     </dt>
     <dd>{{% md %}}(string) Point in time when the Certificate stops being valid (in ISO-8601 format).
-{{% /md %}}</dd>
-    <dt class="property-"
+{{% /md %}}</dd><dt class="property-"
             title="">
         <span id="notvalidbefore_nodejs">
 <a href="#notvalidbefore_nodejs" style="color: inherit; text-decoration: inherit;">not<wbr>Valid<wbr>Before</a>
@@ -577,14 +501,11 @@ All [input](#inputs) properties are implicitly available as output properties. A
         <span class="property-type">string</span>
     </dt>
     <dd>{{% md %}}(string) Point in time when the Certificate becomes valid (in ISO-8601 format).
-{{% /md %}}</dd>
-</dl>
+{{% /md %}}</dd></dl>
 {{% /choosable %}}
 
 {{% choosable language python %}}
-<dl class="resources-properties">
-
-    <dt class="property-"
+<dl class="resources-properties"><dt class="property-"
             title="">
         <span id="created_python">
 <a href="#created_python" style="color: inherit; text-decoration: inherit;">created</a>
@@ -593,8 +514,7 @@ All [input](#inputs) properties are implicitly available as output properties. A
         <span class="property-type">str</span>
     </dt>
     <dd>{{% md %}}(string) Point in time when the Certificate was created at Hetzner Cloud (in ISO-8601 format).
-{{% /md %}}</dd>
-    <dt class="property-"
+{{% /md %}}</dd><dt class="property-"
             title="">
         <span id="domain_names_python">
 <a href="#domain_names_python" style="color: inherit; text-decoration: inherit;">domain_<wbr>names</a>
@@ -603,8 +523,7 @@ All [input](#inputs) properties are implicitly available as output properties. A
         <span class="property-type">Sequence[str]</span>
     </dt>
     <dd>{{% md %}}(list) Domains and subdomains covered by the certificate.
-{{% /md %}}</dd>
-    <dt class="property-"
+{{% /md %}}</dd><dt class="property-"
             title="">
         <span id="fingerprint_python">
 <a href="#fingerprint_python" style="color: inherit; text-decoration: inherit;">fingerprint</a>
@@ -613,8 +532,7 @@ All [input](#inputs) properties are implicitly available as output properties. A
         <span class="property-type">str</span>
     </dt>
     <dd>{{% md %}}(string) Fingerprint of the certificate.
-{{% /md %}}</dd>
-    <dt class="property-"
+{{% /md %}}</dd><dt class="property-"
             title="">
         <span id="id_python">
 <a href="#id_python" style="color: inherit; text-decoration: inherit;">id</a>
@@ -622,8 +540,7 @@ All [input](#inputs) properties are implicitly available as output properties. A
         <span class="property-indicator"></span>
         <span class="property-type">str</span>
     </dt>
-    <dd>{{% md %}}The provider-assigned unique ID for this managed resource.{{% /md %}}</dd>
-    <dt class="property-"
+    <dd>{{% md %}}The provider-assigned unique ID for this managed resource.{{% /md %}}</dd><dt class="property-"
             title="">
         <span id="not_valid_after_python">
 <a href="#not_valid_after_python" style="color: inherit; text-decoration: inherit;">not_<wbr>valid_<wbr>after</a>
@@ -632,8 +549,7 @@ All [input](#inputs) properties are implicitly available as output properties. A
         <span class="property-type">str</span>
     </dt>
     <dd>{{% md %}}(string) Point in time when the Certificate stops being valid (in ISO-8601 format).
-{{% /md %}}</dd>
-    <dt class="property-"
+{{% /md %}}</dd><dt class="property-"
             title="">
         <span id="not_valid_before_python">
 <a href="#not_valid_before_python" style="color: inherit; text-decoration: inherit;">not_<wbr>valid_<wbr>before</a>
@@ -642,8 +558,7 @@ All [input](#inputs) properties are implicitly available as output properties. A
         <span class="property-type">str</span>
     </dt>
     <dd>{{% md %}}(string) Point in time when the Certificate becomes valid (in ISO-8601 format).
-{{% /md %}}</dd>
-</dl>
+{{% /md %}}</dd></dl>
 {{% /choosable %}}
 
 
@@ -770,9 +685,7 @@ The following state arguments are supported:
 
 
 {{% choosable language csharp %}}
-<dl class="resources-properties">
-
-    <dt class="property-optional"
+<dl class="resources-properties"><dt class="property-optional"
             title="Optional">
         <span id="state_certificatecontents_csharp">
 <a href="#state_certificatecontents_csharp" style="color: inherit; text-decoration: inherit;">Certificate<wbr>Contents</a>
@@ -781,8 +694,7 @@ The following state arguments are supported:
         <span class="property-type">string</span>
     </dt>
     <dd>{{% md %}}PEM encoded TLS certificate.
-{{% /md %}}</dd>
-    <dt class="property-optional"
+{{% /md %}}</dd><dt class="property-optional"
             title="Optional">
         <span id="state_created_csharp">
 <a href="#state_created_csharp" style="color: inherit; text-decoration: inherit;">Created</a>
@@ -791,8 +703,7 @@ The following state arguments are supported:
         <span class="property-type">string</span>
     </dt>
     <dd>{{% md %}}(string) Point in time when the Certificate was created at Hetzner Cloud (in ISO-8601 format).
-{{% /md %}}</dd>
-    <dt class="property-optional"
+{{% /md %}}</dd><dt class="property-optional"
             title="Optional">
         <span id="state_domainnames_csharp">
 <a href="#state_domainnames_csharp" style="color: inherit; text-decoration: inherit;">Domain<wbr>Names</a>
@@ -801,8 +712,7 @@ The following state arguments are supported:
         <span class="property-type">List&lt;string&gt;</span>
     </dt>
     <dd>{{% md %}}(list) Domains and subdomains covered by the certificate.
-{{% /md %}}</dd>
-    <dt class="property-optional"
+{{% /md %}}</dd><dt class="property-optional"
             title="Optional">
         <span id="state_fingerprint_csharp">
 <a href="#state_fingerprint_csharp" style="color: inherit; text-decoration: inherit;">Fingerprint</a>
@@ -811,8 +721,7 @@ The following state arguments are supported:
         <span class="property-type">string</span>
     </dt>
     <dd>{{% md %}}(string) Fingerprint of the certificate.
-{{% /md %}}</dd>
-    <dt class="property-optional"
+{{% /md %}}</dd><dt class="property-optional"
             title="Optional">
         <span id="state_labels_csharp">
 <a href="#state_labels_csharp" style="color: inherit; text-decoration: inherit;">Labels</a>
@@ -822,8 +731,7 @@ The following state arguments are supported:
     </dt>
     <dd>{{% md %}}User-defined labels (key-value pairs) the
 certificate should be created with.
-{{% /md %}}</dd>
-    <dt class="property-optional"
+{{% /md %}}</dd><dt class="property-optional"
             title="Optional">
         <span id="state_name_csharp">
 <a href="#state_name_csharp" style="color: inherit; text-decoration: inherit;">Name</a>
@@ -832,8 +740,7 @@ certificate should be created with.
         <span class="property-type">string</span>
     </dt>
     <dd>{{% md %}}Name of the Certificate.
-{{% /md %}}</dd>
-    <dt class="property-optional"
+{{% /md %}}</dd><dt class="property-optional"
             title="Optional">
         <span id="state_notvalidafter_csharp">
 <a href="#state_notvalidafter_csharp" style="color: inherit; text-decoration: inherit;">Not<wbr>Valid<wbr>After</a>
@@ -842,8 +749,7 @@ certificate should be created with.
         <span class="property-type">string</span>
     </dt>
     <dd>{{% md %}}(string) Point in time when the Certificate stops being valid (in ISO-8601 format).
-{{% /md %}}</dd>
-    <dt class="property-optional"
+{{% /md %}}</dd><dt class="property-optional"
             title="Optional">
         <span id="state_notvalidbefore_csharp">
 <a href="#state_notvalidbefore_csharp" style="color: inherit; text-decoration: inherit;">Not<wbr>Valid<wbr>Before</a>
@@ -852,8 +758,7 @@ certificate should be created with.
         <span class="property-type">string</span>
     </dt>
     <dd>{{% md %}}(string) Point in time when the Certificate becomes valid (in ISO-8601 format).
-{{% /md %}}</dd>
-    <dt class="property-optional"
+{{% /md %}}</dd><dt class="property-optional"
             title="Optional">
         <span id="state_privatekey_csharp">
 <a href="#state_privatekey_csharp" style="color: inherit; text-decoration: inherit;">Private<wbr>Key</a>
@@ -862,14 +767,11 @@ certificate should be created with.
         <span class="property-type">string</span>
     </dt>
     <dd>{{% md %}}PEM encoded private key belonging to the certificate.
-{{% /md %}}</dd>
-</dl>
+{{% /md %}}</dd></dl>
 {{% /choosable %}}
 
 {{% choosable language go %}}
-<dl class="resources-properties">
-
-    <dt class="property-optional"
+<dl class="resources-properties"><dt class="property-optional"
             title="Optional">
         <span id="state_certificate_go">
 <a href="#state_certificate_go" style="color: inherit; text-decoration: inherit;">Certificate</a>
@@ -878,8 +780,7 @@ certificate should be created with.
         <span class="property-type">string</span>
     </dt>
     <dd>{{% md %}}PEM encoded TLS certificate.
-{{% /md %}}</dd>
-    <dt class="property-optional"
+{{% /md %}}</dd><dt class="property-optional"
             title="Optional">
         <span id="state_created_go">
 <a href="#state_created_go" style="color: inherit; text-decoration: inherit;">Created</a>
@@ -888,8 +789,7 @@ certificate should be created with.
         <span class="property-type">string</span>
     </dt>
     <dd>{{% md %}}(string) Point in time when the Certificate was created at Hetzner Cloud (in ISO-8601 format).
-{{% /md %}}</dd>
-    <dt class="property-optional"
+{{% /md %}}</dd><dt class="property-optional"
             title="Optional">
         <span id="state_domainnames_go">
 <a href="#state_domainnames_go" style="color: inherit; text-decoration: inherit;">Domain<wbr>Names</a>
@@ -898,8 +798,7 @@ certificate should be created with.
         <span class="property-type">[]string</span>
     </dt>
     <dd>{{% md %}}(list) Domains and subdomains covered by the certificate.
-{{% /md %}}</dd>
-    <dt class="property-optional"
+{{% /md %}}</dd><dt class="property-optional"
             title="Optional">
         <span id="state_fingerprint_go">
 <a href="#state_fingerprint_go" style="color: inherit; text-decoration: inherit;">Fingerprint</a>
@@ -908,8 +807,7 @@ certificate should be created with.
         <span class="property-type">string</span>
     </dt>
     <dd>{{% md %}}(string) Fingerprint of the certificate.
-{{% /md %}}</dd>
-    <dt class="property-optional"
+{{% /md %}}</dd><dt class="property-optional"
             title="Optional">
         <span id="state_labels_go">
 <a href="#state_labels_go" style="color: inherit; text-decoration: inherit;">Labels</a>
@@ -919,8 +817,7 @@ certificate should be created with.
     </dt>
     <dd>{{% md %}}User-defined labels (key-value pairs) the
 certificate should be created with.
-{{% /md %}}</dd>
-    <dt class="property-optional"
+{{% /md %}}</dd><dt class="property-optional"
             title="Optional">
         <span id="state_name_go">
 <a href="#state_name_go" style="color: inherit; text-decoration: inherit;">Name</a>
@@ -929,8 +826,7 @@ certificate should be created with.
         <span class="property-type">string</span>
     </dt>
     <dd>{{% md %}}Name of the Certificate.
-{{% /md %}}</dd>
-    <dt class="property-optional"
+{{% /md %}}</dd><dt class="property-optional"
             title="Optional">
         <span id="state_notvalidafter_go">
 <a href="#state_notvalidafter_go" style="color: inherit; text-decoration: inherit;">Not<wbr>Valid<wbr>After</a>
@@ -939,8 +835,7 @@ certificate should be created with.
         <span class="property-type">string</span>
     </dt>
     <dd>{{% md %}}(string) Point in time when the Certificate stops being valid (in ISO-8601 format).
-{{% /md %}}</dd>
-    <dt class="property-optional"
+{{% /md %}}</dd><dt class="property-optional"
             title="Optional">
         <span id="state_notvalidbefore_go">
 <a href="#state_notvalidbefore_go" style="color: inherit; text-decoration: inherit;">Not<wbr>Valid<wbr>Before</a>
@@ -949,8 +844,7 @@ certificate should be created with.
         <span class="property-type">string</span>
     </dt>
     <dd>{{% md %}}(string) Point in time when the Certificate becomes valid (in ISO-8601 format).
-{{% /md %}}</dd>
-    <dt class="property-optional"
+{{% /md %}}</dd><dt class="property-optional"
             title="Optional">
         <span id="state_privatekey_go">
 <a href="#state_privatekey_go" style="color: inherit; text-decoration: inherit;">Private<wbr>Key</a>
@@ -959,14 +853,11 @@ certificate should be created with.
         <span class="property-type">string</span>
     </dt>
     <dd>{{% md %}}PEM encoded private key belonging to the certificate.
-{{% /md %}}</dd>
-</dl>
+{{% /md %}}</dd></dl>
 {{% /choosable %}}
 
 {{% choosable language nodejs %}}
-<dl class="resources-properties">
-
-    <dt class="property-optional"
+<dl class="resources-properties"><dt class="property-optional"
             title="Optional">
         <span id="state_certificate_nodejs">
 <a href="#state_certificate_nodejs" style="color: inherit; text-decoration: inherit;">certificate</a>
@@ -975,8 +866,7 @@ certificate should be created with.
         <span class="property-type">string</span>
     </dt>
     <dd>{{% md %}}PEM encoded TLS certificate.
-{{% /md %}}</dd>
-    <dt class="property-optional"
+{{% /md %}}</dd><dt class="property-optional"
             title="Optional">
         <span id="state_created_nodejs">
 <a href="#state_created_nodejs" style="color: inherit; text-decoration: inherit;">created</a>
@@ -985,8 +875,7 @@ certificate should be created with.
         <span class="property-type">string</span>
     </dt>
     <dd>{{% md %}}(string) Point in time when the Certificate was created at Hetzner Cloud (in ISO-8601 format).
-{{% /md %}}</dd>
-    <dt class="property-optional"
+{{% /md %}}</dd><dt class="property-optional"
             title="Optional">
         <span id="state_domainnames_nodejs">
 <a href="#state_domainnames_nodejs" style="color: inherit; text-decoration: inherit;">domain<wbr>Names</a>
@@ -995,8 +884,7 @@ certificate should be created with.
         <span class="property-type">string[]</span>
     </dt>
     <dd>{{% md %}}(list) Domains and subdomains covered by the certificate.
-{{% /md %}}</dd>
-    <dt class="property-optional"
+{{% /md %}}</dd><dt class="property-optional"
             title="Optional">
         <span id="state_fingerprint_nodejs">
 <a href="#state_fingerprint_nodejs" style="color: inherit; text-decoration: inherit;">fingerprint</a>
@@ -1005,8 +893,7 @@ certificate should be created with.
         <span class="property-type">string</span>
     </dt>
     <dd>{{% md %}}(string) Fingerprint of the certificate.
-{{% /md %}}</dd>
-    <dt class="property-optional"
+{{% /md %}}</dd><dt class="property-optional"
             title="Optional">
         <span id="state_labels_nodejs">
 <a href="#state_labels_nodejs" style="color: inherit; text-decoration: inherit;">labels</a>
@@ -1016,8 +903,7 @@ certificate should be created with.
     </dt>
     <dd>{{% md %}}User-defined labels (key-value pairs) the
 certificate should be created with.
-{{% /md %}}</dd>
-    <dt class="property-optional"
+{{% /md %}}</dd><dt class="property-optional"
             title="Optional">
         <span id="state_name_nodejs">
 <a href="#state_name_nodejs" style="color: inherit; text-decoration: inherit;">name</a>
@@ -1026,8 +912,7 @@ certificate should be created with.
         <span class="property-type">string</span>
     </dt>
     <dd>{{% md %}}Name of the Certificate.
-{{% /md %}}</dd>
-    <dt class="property-optional"
+{{% /md %}}</dd><dt class="property-optional"
             title="Optional">
         <span id="state_notvalidafter_nodejs">
 <a href="#state_notvalidafter_nodejs" style="color: inherit; text-decoration: inherit;">not<wbr>Valid<wbr>After</a>
@@ -1036,8 +921,7 @@ certificate should be created with.
         <span class="property-type">string</span>
     </dt>
     <dd>{{% md %}}(string) Point in time when the Certificate stops being valid (in ISO-8601 format).
-{{% /md %}}</dd>
-    <dt class="property-optional"
+{{% /md %}}</dd><dt class="property-optional"
             title="Optional">
         <span id="state_notvalidbefore_nodejs">
 <a href="#state_notvalidbefore_nodejs" style="color: inherit; text-decoration: inherit;">not<wbr>Valid<wbr>Before</a>
@@ -1046,8 +930,7 @@ certificate should be created with.
         <span class="property-type">string</span>
     </dt>
     <dd>{{% md %}}(string) Point in time when the Certificate becomes valid (in ISO-8601 format).
-{{% /md %}}</dd>
-    <dt class="property-optional"
+{{% /md %}}</dd><dt class="property-optional"
             title="Optional">
         <span id="state_privatekey_nodejs">
 <a href="#state_privatekey_nodejs" style="color: inherit; text-decoration: inherit;">private<wbr>Key</a>
@@ -1056,14 +939,11 @@ certificate should be created with.
         <span class="property-type">string</span>
     </dt>
     <dd>{{% md %}}PEM encoded private key belonging to the certificate.
-{{% /md %}}</dd>
-</dl>
+{{% /md %}}</dd></dl>
 {{% /choosable %}}
 
 {{% choosable language python %}}
-<dl class="resources-properties">
-
-    <dt class="property-optional"
+<dl class="resources-properties"><dt class="property-optional"
             title="Optional">
         <span id="state_certificate_python">
 <a href="#state_certificate_python" style="color: inherit; text-decoration: inherit;">certificate</a>
@@ -1072,8 +952,7 @@ certificate should be created with.
         <span class="property-type">str</span>
     </dt>
     <dd>{{% md %}}PEM encoded TLS certificate.
-{{% /md %}}</dd>
-    <dt class="property-optional"
+{{% /md %}}</dd><dt class="property-optional"
             title="Optional">
         <span id="state_created_python">
 <a href="#state_created_python" style="color: inherit; text-decoration: inherit;">created</a>
@@ -1082,8 +961,7 @@ certificate should be created with.
         <span class="property-type">str</span>
     </dt>
     <dd>{{% md %}}(string) Point in time when the Certificate was created at Hetzner Cloud (in ISO-8601 format).
-{{% /md %}}</dd>
-    <dt class="property-optional"
+{{% /md %}}</dd><dt class="property-optional"
             title="Optional">
         <span id="state_domain_names_python">
 <a href="#state_domain_names_python" style="color: inherit; text-decoration: inherit;">domain_<wbr>names</a>
@@ -1092,8 +970,7 @@ certificate should be created with.
         <span class="property-type">Sequence[str]</span>
     </dt>
     <dd>{{% md %}}(list) Domains and subdomains covered by the certificate.
-{{% /md %}}</dd>
-    <dt class="property-optional"
+{{% /md %}}</dd><dt class="property-optional"
             title="Optional">
         <span id="state_fingerprint_python">
 <a href="#state_fingerprint_python" style="color: inherit; text-decoration: inherit;">fingerprint</a>
@@ -1102,8 +979,7 @@ certificate should be created with.
         <span class="property-type">str</span>
     </dt>
     <dd>{{% md %}}(string) Fingerprint of the certificate.
-{{% /md %}}</dd>
-    <dt class="property-optional"
+{{% /md %}}</dd><dt class="property-optional"
             title="Optional">
         <span id="state_labels_python">
 <a href="#state_labels_python" style="color: inherit; text-decoration: inherit;">labels</a>
@@ -1113,8 +989,7 @@ certificate should be created with.
     </dt>
     <dd>{{% md %}}User-defined labels (key-value pairs) the
 certificate should be created with.
-{{% /md %}}</dd>
-    <dt class="property-optional"
+{{% /md %}}</dd><dt class="property-optional"
             title="Optional">
         <span id="state_name_python">
 <a href="#state_name_python" style="color: inherit; text-decoration: inherit;">name</a>
@@ -1123,8 +998,7 @@ certificate should be created with.
         <span class="property-type">str</span>
     </dt>
     <dd>{{% md %}}Name of the Certificate.
-{{% /md %}}</dd>
-    <dt class="property-optional"
+{{% /md %}}</dd><dt class="property-optional"
             title="Optional">
         <span id="state_not_valid_after_python">
 <a href="#state_not_valid_after_python" style="color: inherit; text-decoration: inherit;">not_<wbr>valid_<wbr>after</a>
@@ -1133,8 +1007,7 @@ certificate should be created with.
         <span class="property-type">str</span>
     </dt>
     <dd>{{% md %}}(string) Point in time when the Certificate stops being valid (in ISO-8601 format).
-{{% /md %}}</dd>
-    <dt class="property-optional"
+{{% /md %}}</dd><dt class="property-optional"
             title="Optional">
         <span id="state_not_valid_before_python">
 <a href="#state_not_valid_before_python" style="color: inherit; text-decoration: inherit;">not_<wbr>valid_<wbr>before</a>
@@ -1143,8 +1016,7 @@ certificate should be created with.
         <span class="property-type">str</span>
     </dt>
     <dd>{{% md %}}(string) Point in time when the Certificate becomes valid (in ISO-8601 format).
-{{% /md %}}</dd>
-    <dt class="property-optional"
+{{% /md %}}</dd><dt class="property-optional"
             title="Optional">
         <span id="state_private_key_python">
 <a href="#state_private_key_python" style="color: inherit; text-decoration: inherit;">private_<wbr>key</a>
@@ -1153,8 +1025,7 @@ certificate should be created with.
         <span class="property-type">str</span>
     </dt>
     <dd>{{% md %}}PEM encoded private key belonging to the certificate.
-{{% /md %}}</dd>
-</dl>
+{{% /md %}}</dd></dl>
 {{% /choosable %}}
 
 
@@ -1180,6 +1051,6 @@ Certificates can be imported using their `id`hcl
 	<dt>License</dt>
 	<dd>Apache-2.0</dd>
 	<dt>Notes</dt>
-	<dd>This Pulumi package is based on the [`hcloud` Terraform Provider](https://github.com/hetznercloud/terraform-provider-hcloud).</dd>
+	<dd>{{% md %}}This Pulumi package is based on the [`hcloud` Terraform Provider](https://github.com/hetznercloud/terraform-provider-hcloud).{{% /md %}}</dd>
 </dl>
 

@@ -13,11 +13,17 @@ meta_desc: "Documentation for the gcp.dataproc.AutoscalingPolicy resource with e
 Describes an autoscaling policy for Dataproc cluster autoscaler.
 
 {{% examples %}}
+
 ## Example Usage
 
 {{< chooser language "typescript,python,go,csharp" / >}}
+
+
 ### Dataproc Autoscaling Policy
-{{% example csharp %}}
+
+
+{{< example csharp >}}
+
 ```csharp
 using Pulumi;
 using Gcp = Pulumi.Gcp;
@@ -60,9 +66,12 @@ class MyStack : Stack
 }
 ```
 
-{{% /example %}}
 
-{{% example go %}}
+{{< /example >}}
+
+
+{{< example go >}}
+
 ```go
 package main
 
@@ -106,9 +115,12 @@ func main() {
 }
 ```
 
-{{% /example %}}
 
-{{% example python %}}
+{{< /example >}}
+
+
+{{< example python >}}
+
 ```python
 import pulumi
 import pulumi_gcp as gcp
@@ -135,9 +147,12 @@ basic = gcp.dataproc.Cluster("basic",
     ))
 ```
 
-{{% /example %}}
 
-{{% example typescript %}}
+{{< /example >}}
+
+
+{{< example typescript >}}
+
 
 ```typescript
 import * as pulumi from "@pulumi/pulumi";
@@ -167,9 +182,16 @@ const basic = new gcp.dataproc.Cluster("basic", {
 });
 ```
 
-{{% /example %}}
+
+{{< /example >}}
+
+
+
+
 
 {{% /examples %}}
+
+
 
 
 ## Create a AutoscalingPolicy Resource {#create}
@@ -194,9 +216,7 @@ const basic = new gcp.dataproc.Cluster("basic", {
 
 {{% choosable language nodejs %}}
 
-<dl class="resources-properties">
-  
-    <dt
+<dl class="resources-properties"><dt
         class="property-required" title="Required">
         <span>name</span>
         <span class="property-indicator"></span>
@@ -204,9 +224,7 @@ const basic = new gcp.dataproc.Cluster("basic", {
     </dt>
     <dd>
       The unique name of the resource.
-    </dd>
-  
-    <dt
+    </dd><dt
         class="property-required" title="Required">
         <span>args</span>
         <span class="property-indicator"></span>
@@ -214,9 +232,7 @@ const basic = new gcp.dataproc.Cluster("basic", {
     </dt>
     <dd>
       The arguments to resource properties.
-    </dd>
-  
-    <dt
+    </dd><dt
         class="property-optional" title="Optional">
         <span>opts</span>
         <span class="property-indicator"></span>
@@ -224,10 +240,7 @@ const basic = new gcp.dataproc.Cluster("basic", {
     </dt>
     <dd>
       Bag of options to control resource&#39;s behavior.
-    </dd>
-  
-
-</dl>
+    </dd></dl>
 
 {{% /choosable %}}
 
@@ -253,9 +266,7 @@ const basic = new gcp.dataproc.Cluster("basic", {
 
 {{% choosable language go %}}
 
-<dl class="resources-properties">
-  
-    <dt
+<dl class="resources-properties"><dt
         class="property-optional" title="Optional">
         <span>ctx</span>
         <span class="property-indicator"></span>
@@ -263,9 +274,7 @@ const basic = new gcp.dataproc.Cluster("basic", {
     </dt>
     <dd>
       Context object for the current deployment.
-    </dd>
-  
-    <dt
+    </dd><dt
         class="property-required" title="Required">
         <span>name</span>
         <span class="property-indicator"></span>
@@ -273,9 +282,7 @@ const basic = new gcp.dataproc.Cluster("basic", {
     </dt>
     <dd>
       The unique name of the resource.
-    </dd>
-  
-    <dt
+    </dd><dt
         class="property-required" title="Required">
         <span>args</span>
         <span class="property-indicator"></span>
@@ -283,9 +290,7 @@ const basic = new gcp.dataproc.Cluster("basic", {
     </dt>
     <dd>
       The arguments to resource properties.
-    </dd>
-  
-    <dt
+    </dd><dt
         class="property-optional" title="Optional">
         <span>opts</span>
         <span class="property-indicator"></span>
@@ -293,18 +298,13 @@ const basic = new gcp.dataproc.Cluster("basic", {
     </dt>
     <dd>
       Bag of options to control resource&#39;s behavior.
-    </dd>
-  
-
-</dl>
+    </dd></dl>
 
 {{% /choosable %}}
 
 {{% choosable language csharp %}}
 
-<dl class="resources-properties">
-  
-    <dt
+<dl class="resources-properties"><dt
         class="property-required" title="Required">
         <span>name</span>
         <span class="property-indicator"></span>
@@ -312,9 +312,7 @@ const basic = new gcp.dataproc.Cluster("basic", {
     </dt>
     <dd>
       The unique name of the resource.
-    </dd>
-  
-    <dt
+    </dd><dt
         class="property-required" title="Required">
         <span>args</span>
         <span class="property-indicator"></span>
@@ -322,9 +320,7 @@ const basic = new gcp.dataproc.Cluster("basic", {
     </dt>
     <dd>
       The arguments to resource properties.
-    </dd>
-  
-    <dt
+    </dd><dt
         class="property-optional" title="Optional">
         <span>opts</span>
         <span class="property-indicator"></span>
@@ -332,10 +328,7 @@ const basic = new gcp.dataproc.Cluster("basic", {
     </dt>
     <dd>
       Bag of options to control resource&#39;s behavior.
-    </dd>
-  
-
-</dl>
+    </dd></dl>
 
 {{% /choosable %}}
 
@@ -350,9 +343,7 @@ The AutoscalingPolicy resource accepts the following [input]({{< relref "/docs/i
 
 
 {{% choosable language csharp %}}
-<dl class="resources-properties">
-
-    <dt class="property-required"
+<dl class="resources-properties"><dt class="property-required"
             title="Required">
         <span id="policyid_csharp">
 <a href="#policyid_csharp" style="color: inherit; text-decoration: inherit;">Policy<wbr>Id</a>
@@ -363,8 +354,7 @@ The AutoscalingPolicy resource accepts the following [input]({{< relref "/docs/i
     <dd>{{% md %}}The policy id. The id must contain only letters (a-z, A-Z), numbers (0-9), underscores (_),
 and hyphens (-). Cannot begin or end with underscore or hyphen. Must consist of between
 3 and 50 characters.
-{{% /md %}}</dd>
-    <dt class="property-optional"
+{{% /md %}}</dd><dt class="property-optional"
             title="Optional">
         <span id="basicalgorithm_csharp">
 <a href="#basicalgorithm_csharp" style="color: inherit; text-decoration: inherit;">Basic<wbr>Algorithm</a>
@@ -374,8 +364,7 @@ and hyphens (-). Cannot begin or end with underscore or hyphen. Must consist of 
     </dt>
     <dd>{{% md %}}Basic algorithm for autoscaling.
 Structure is documented below.
-{{% /md %}}</dd>
-    <dt class="property-optional"
+{{% /md %}}</dd><dt class="property-optional"
             title="Optional">
         <span id="location_csharp">
 <a href="#location_csharp" style="color: inherit; text-decoration: inherit;">Location</a>
@@ -385,8 +374,7 @@ Structure is documented below.
     </dt>
     <dd>{{% md %}}The  location where the autoscaling policy should reside.
 The default value is `global`.
-{{% /md %}}</dd>
-    <dt class="property-optional"
+{{% /md %}}</dd><dt class="property-optional"
             title="Optional">
         <span id="project_csharp">
 <a href="#project_csharp" style="color: inherit; text-decoration: inherit;">Project</a>
@@ -396,8 +384,7 @@ The default value is `global`.
     </dt>
     <dd>{{% md %}}The ID of the project in which the resource belongs.
 If it is not provided, the provider project is used.
-{{% /md %}}</dd>
-    <dt class="property-optional"
+{{% /md %}}</dd><dt class="property-optional"
             title="Optional">
         <span id="secondaryworkerconfig_csharp">
 <a href="#secondaryworkerconfig_csharp" style="color: inherit; text-decoration: inherit;">Secondary<wbr>Worker<wbr>Config</a>
@@ -407,8 +394,7 @@ If it is not provided, the provider project is used.
     </dt>
     <dd>{{% md %}}Describes how the autoscaler will operate for secondary workers.
 Structure is documented below.
-{{% /md %}}</dd>
-    <dt class="property-optional"
+{{% /md %}}</dd><dt class="property-optional"
             title="Optional">
         <span id="workerconfig_csharp">
 <a href="#workerconfig_csharp" style="color: inherit; text-decoration: inherit;">Worker<wbr>Config</a>
@@ -418,14 +404,11 @@ Structure is documented below.
     </dt>
     <dd>{{% md %}}Describes how the autoscaler will operate for primary workers.
 Structure is documented below.
-{{% /md %}}</dd>
-</dl>
+{{% /md %}}</dd></dl>
 {{% /choosable %}}
 
 {{% choosable language go %}}
-<dl class="resources-properties">
-
-    <dt class="property-required"
+<dl class="resources-properties"><dt class="property-required"
             title="Required">
         <span id="policyid_go">
 <a href="#policyid_go" style="color: inherit; text-decoration: inherit;">Policy<wbr>Id</a>
@@ -436,8 +419,7 @@ Structure is documented below.
     <dd>{{% md %}}The policy id. The id must contain only letters (a-z, A-Z), numbers (0-9), underscores (_),
 and hyphens (-). Cannot begin or end with underscore or hyphen. Must consist of between
 3 and 50 characters.
-{{% /md %}}</dd>
-    <dt class="property-optional"
+{{% /md %}}</dd><dt class="property-optional"
             title="Optional">
         <span id="basicalgorithm_go">
 <a href="#basicalgorithm_go" style="color: inherit; text-decoration: inherit;">Basic<wbr>Algorithm</a>
@@ -447,8 +429,7 @@ and hyphens (-). Cannot begin or end with underscore or hyphen. Must consist of 
     </dt>
     <dd>{{% md %}}Basic algorithm for autoscaling.
 Structure is documented below.
-{{% /md %}}</dd>
-    <dt class="property-optional"
+{{% /md %}}</dd><dt class="property-optional"
             title="Optional">
         <span id="location_go">
 <a href="#location_go" style="color: inherit; text-decoration: inherit;">Location</a>
@@ -458,8 +439,7 @@ Structure is documented below.
     </dt>
     <dd>{{% md %}}The  location where the autoscaling policy should reside.
 The default value is `global`.
-{{% /md %}}</dd>
-    <dt class="property-optional"
+{{% /md %}}</dd><dt class="property-optional"
             title="Optional">
         <span id="project_go">
 <a href="#project_go" style="color: inherit; text-decoration: inherit;">Project</a>
@@ -469,8 +449,7 @@ The default value is `global`.
     </dt>
     <dd>{{% md %}}The ID of the project in which the resource belongs.
 If it is not provided, the provider project is used.
-{{% /md %}}</dd>
-    <dt class="property-optional"
+{{% /md %}}</dd><dt class="property-optional"
             title="Optional">
         <span id="secondaryworkerconfig_go">
 <a href="#secondaryworkerconfig_go" style="color: inherit; text-decoration: inherit;">Secondary<wbr>Worker<wbr>Config</a>
@@ -480,8 +459,7 @@ If it is not provided, the provider project is used.
     </dt>
     <dd>{{% md %}}Describes how the autoscaler will operate for secondary workers.
 Structure is documented below.
-{{% /md %}}</dd>
-    <dt class="property-optional"
+{{% /md %}}</dd><dt class="property-optional"
             title="Optional">
         <span id="workerconfig_go">
 <a href="#workerconfig_go" style="color: inherit; text-decoration: inherit;">Worker<wbr>Config</a>
@@ -491,14 +469,11 @@ Structure is documented below.
     </dt>
     <dd>{{% md %}}Describes how the autoscaler will operate for primary workers.
 Structure is documented below.
-{{% /md %}}</dd>
-</dl>
+{{% /md %}}</dd></dl>
 {{% /choosable %}}
 
 {{% choosable language nodejs %}}
-<dl class="resources-properties">
-
-    <dt class="property-required"
+<dl class="resources-properties"><dt class="property-required"
             title="Required">
         <span id="policyid_nodejs">
 <a href="#policyid_nodejs" style="color: inherit; text-decoration: inherit;">policy<wbr>Id</a>
@@ -509,8 +484,7 @@ Structure is documented below.
     <dd>{{% md %}}The policy id. The id must contain only letters (a-z, A-Z), numbers (0-9), underscores (_),
 and hyphens (-). Cannot begin or end with underscore or hyphen. Must consist of between
 3 and 50 characters.
-{{% /md %}}</dd>
-    <dt class="property-optional"
+{{% /md %}}</dd><dt class="property-optional"
             title="Optional">
         <span id="basicalgorithm_nodejs">
 <a href="#basicalgorithm_nodejs" style="color: inherit; text-decoration: inherit;">basic<wbr>Algorithm</a>
@@ -520,8 +494,7 @@ and hyphens (-). Cannot begin or end with underscore or hyphen. Must consist of 
     </dt>
     <dd>{{% md %}}Basic algorithm for autoscaling.
 Structure is documented below.
-{{% /md %}}</dd>
-    <dt class="property-optional"
+{{% /md %}}</dd><dt class="property-optional"
             title="Optional">
         <span id="location_nodejs">
 <a href="#location_nodejs" style="color: inherit; text-decoration: inherit;">location</a>
@@ -531,8 +504,7 @@ Structure is documented below.
     </dt>
     <dd>{{% md %}}The  location where the autoscaling policy should reside.
 The default value is `global`.
-{{% /md %}}</dd>
-    <dt class="property-optional"
+{{% /md %}}</dd><dt class="property-optional"
             title="Optional">
         <span id="project_nodejs">
 <a href="#project_nodejs" style="color: inherit; text-decoration: inherit;">project</a>
@@ -542,8 +514,7 @@ The default value is `global`.
     </dt>
     <dd>{{% md %}}The ID of the project in which the resource belongs.
 If it is not provided, the provider project is used.
-{{% /md %}}</dd>
-    <dt class="property-optional"
+{{% /md %}}</dd><dt class="property-optional"
             title="Optional">
         <span id="secondaryworkerconfig_nodejs">
 <a href="#secondaryworkerconfig_nodejs" style="color: inherit; text-decoration: inherit;">secondary<wbr>Worker<wbr>Config</a>
@@ -553,8 +524,7 @@ If it is not provided, the provider project is used.
     </dt>
     <dd>{{% md %}}Describes how the autoscaler will operate for secondary workers.
 Structure is documented below.
-{{% /md %}}</dd>
-    <dt class="property-optional"
+{{% /md %}}</dd><dt class="property-optional"
             title="Optional">
         <span id="workerconfig_nodejs">
 <a href="#workerconfig_nodejs" style="color: inherit; text-decoration: inherit;">worker<wbr>Config</a>
@@ -564,14 +534,11 @@ Structure is documented below.
     </dt>
     <dd>{{% md %}}Describes how the autoscaler will operate for primary workers.
 Structure is documented below.
-{{% /md %}}</dd>
-</dl>
+{{% /md %}}</dd></dl>
 {{% /choosable %}}
 
 {{% choosable language python %}}
-<dl class="resources-properties">
-
-    <dt class="property-required"
+<dl class="resources-properties"><dt class="property-required"
             title="Required">
         <span id="policy_id_python">
 <a href="#policy_id_python" style="color: inherit; text-decoration: inherit;">policy_<wbr>id</a>
@@ -582,8 +549,7 @@ Structure is documented below.
     <dd>{{% md %}}The policy id. The id must contain only letters (a-z, A-Z), numbers (0-9), underscores (_),
 and hyphens (-). Cannot begin or end with underscore or hyphen. Must consist of between
 3 and 50 characters.
-{{% /md %}}</dd>
-    <dt class="property-optional"
+{{% /md %}}</dd><dt class="property-optional"
             title="Optional">
         <span id="basic_algorithm_python">
 <a href="#basic_algorithm_python" style="color: inherit; text-decoration: inherit;">basic_<wbr>algorithm</a>
@@ -593,8 +559,7 @@ and hyphens (-). Cannot begin or end with underscore or hyphen. Must consist of 
     </dt>
     <dd>{{% md %}}Basic algorithm for autoscaling.
 Structure is documented below.
-{{% /md %}}</dd>
-    <dt class="property-optional"
+{{% /md %}}</dd><dt class="property-optional"
             title="Optional">
         <span id="location_python">
 <a href="#location_python" style="color: inherit; text-decoration: inherit;">location</a>
@@ -604,8 +569,7 @@ Structure is documented below.
     </dt>
     <dd>{{% md %}}The  location where the autoscaling policy should reside.
 The default value is `global`.
-{{% /md %}}</dd>
-    <dt class="property-optional"
+{{% /md %}}</dd><dt class="property-optional"
             title="Optional">
         <span id="project_python">
 <a href="#project_python" style="color: inherit; text-decoration: inherit;">project</a>
@@ -615,8 +579,7 @@ The default value is `global`.
     </dt>
     <dd>{{% md %}}The ID of the project in which the resource belongs.
 If it is not provided, the provider project is used.
-{{% /md %}}</dd>
-    <dt class="property-optional"
+{{% /md %}}</dd><dt class="property-optional"
             title="Optional">
         <span id="secondary_worker_config_python">
 <a href="#secondary_worker_config_python" style="color: inherit; text-decoration: inherit;">secondary_<wbr>worker_<wbr>config</a>
@@ -626,8 +589,7 @@ If it is not provided, the provider project is used.
     </dt>
     <dd>{{% md %}}Describes how the autoscaler will operate for secondary workers.
 Structure is documented below.
-{{% /md %}}</dd>
-    <dt class="property-optional"
+{{% /md %}}</dd><dt class="property-optional"
             title="Optional">
         <span id="worker_config_python">
 <a href="#worker_config_python" style="color: inherit; text-decoration: inherit;">worker_<wbr>config</a>
@@ -637,8 +599,7 @@ Structure is documented below.
     </dt>
     <dd>{{% md %}}Describes how the autoscaler will operate for primary workers.
 Structure is documented below.
-{{% /md %}}</dd>
-</dl>
+{{% /md %}}</dd></dl>
 {{% /choosable %}}
 
 
@@ -649,9 +610,7 @@ All [input](#inputs) properties are implicitly available as output properties. A
 
 
 {{% choosable language csharp %}}
-<dl class="resources-properties">
-
-    <dt class="property-"
+<dl class="resources-properties"><dt class="property-"
             title="">
         <span id="id_csharp">
 <a href="#id_csharp" style="color: inherit; text-decoration: inherit;">Id</a>
@@ -659,8 +618,7 @@ All [input](#inputs) properties are implicitly available as output properties. A
         <span class="property-indicator"></span>
         <span class="property-type">string</span>
     </dt>
-    <dd>{{% md %}}The provider-assigned unique ID for this managed resource.{{% /md %}}</dd>
-    <dt class="property-"
+    <dd>{{% md %}}The provider-assigned unique ID for this managed resource.{{% /md %}}</dd><dt class="property-"
             title="">
         <span id="name_csharp">
 <a href="#name_csharp" style="color: inherit; text-decoration: inherit;">Name</a>
@@ -669,14 +627,11 @@ All [input](#inputs) properties are implicitly available as output properties. A
         <span class="property-type">string</span>
     </dt>
     <dd>{{% md %}}The "resource name" of the autoscaling policy.
-{{% /md %}}</dd>
-</dl>
+{{% /md %}}</dd></dl>
 {{% /choosable %}}
 
 {{% choosable language go %}}
-<dl class="resources-properties">
-
-    <dt class="property-"
+<dl class="resources-properties"><dt class="property-"
             title="">
         <span id="id_go">
 <a href="#id_go" style="color: inherit; text-decoration: inherit;">Id</a>
@@ -684,8 +639,7 @@ All [input](#inputs) properties are implicitly available as output properties. A
         <span class="property-indicator"></span>
         <span class="property-type">string</span>
     </dt>
-    <dd>{{% md %}}The provider-assigned unique ID for this managed resource.{{% /md %}}</dd>
-    <dt class="property-"
+    <dd>{{% md %}}The provider-assigned unique ID for this managed resource.{{% /md %}}</dd><dt class="property-"
             title="">
         <span id="name_go">
 <a href="#name_go" style="color: inherit; text-decoration: inherit;">Name</a>
@@ -694,14 +648,11 @@ All [input](#inputs) properties are implicitly available as output properties. A
         <span class="property-type">string</span>
     </dt>
     <dd>{{% md %}}The "resource name" of the autoscaling policy.
-{{% /md %}}</dd>
-</dl>
+{{% /md %}}</dd></dl>
 {{% /choosable %}}
 
 {{% choosable language nodejs %}}
-<dl class="resources-properties">
-
-    <dt class="property-"
+<dl class="resources-properties"><dt class="property-"
             title="">
         <span id="id_nodejs">
 <a href="#id_nodejs" style="color: inherit; text-decoration: inherit;">id</a>
@@ -709,8 +660,7 @@ All [input](#inputs) properties are implicitly available as output properties. A
         <span class="property-indicator"></span>
         <span class="property-type">string</span>
     </dt>
-    <dd>{{% md %}}The provider-assigned unique ID for this managed resource.{{% /md %}}</dd>
-    <dt class="property-"
+    <dd>{{% md %}}The provider-assigned unique ID for this managed resource.{{% /md %}}</dd><dt class="property-"
             title="">
         <span id="name_nodejs">
 <a href="#name_nodejs" style="color: inherit; text-decoration: inherit;">name</a>
@@ -719,14 +669,11 @@ All [input](#inputs) properties are implicitly available as output properties. A
         <span class="property-type">string</span>
     </dt>
     <dd>{{% md %}}The "resource name" of the autoscaling policy.
-{{% /md %}}</dd>
-</dl>
+{{% /md %}}</dd></dl>
 {{% /choosable %}}
 
 {{% choosable language python %}}
-<dl class="resources-properties">
-
-    <dt class="property-"
+<dl class="resources-properties"><dt class="property-"
             title="">
         <span id="id_python">
 <a href="#id_python" style="color: inherit; text-decoration: inherit;">id</a>
@@ -734,8 +681,7 @@ All [input](#inputs) properties are implicitly available as output properties. A
         <span class="property-indicator"></span>
         <span class="property-type">str</span>
     </dt>
-    <dd>{{% md %}}The provider-assigned unique ID for this managed resource.{{% /md %}}</dd>
-    <dt class="property-"
+    <dd>{{% md %}}The provider-assigned unique ID for this managed resource.{{% /md %}}</dd><dt class="property-"
             title="">
         <span id="name_python">
 <a href="#name_python" style="color: inherit; text-decoration: inherit;">name</a>
@@ -744,8 +690,7 @@ All [input](#inputs) properties are implicitly available as output properties. A
         <span class="property-type">str</span>
     </dt>
     <dd>{{% md %}}The "resource name" of the autoscaling policy.
-{{% /md %}}</dd>
-</dl>
+{{% /md %}}</dd></dl>
 {{% /choosable %}}
 
 
@@ -872,9 +817,7 @@ The following state arguments are supported:
 
 
 {{% choosable language csharp %}}
-<dl class="resources-properties">
-
-    <dt class="property-optional"
+<dl class="resources-properties"><dt class="property-optional"
             title="Optional">
         <span id="state_basicalgorithm_csharp">
 <a href="#state_basicalgorithm_csharp" style="color: inherit; text-decoration: inherit;">Basic<wbr>Algorithm</a>
@@ -884,8 +827,7 @@ The following state arguments are supported:
     </dt>
     <dd>{{% md %}}Basic algorithm for autoscaling.
 Structure is documented below.
-{{% /md %}}</dd>
-    <dt class="property-optional"
+{{% /md %}}</dd><dt class="property-optional"
             title="Optional">
         <span id="state_location_csharp">
 <a href="#state_location_csharp" style="color: inherit; text-decoration: inherit;">Location</a>
@@ -895,8 +837,7 @@ Structure is documented below.
     </dt>
     <dd>{{% md %}}The  location where the autoscaling policy should reside.
 The default value is `global`.
-{{% /md %}}</dd>
-    <dt class="property-optional"
+{{% /md %}}</dd><dt class="property-optional"
             title="Optional">
         <span id="state_name_csharp">
 <a href="#state_name_csharp" style="color: inherit; text-decoration: inherit;">Name</a>
@@ -905,8 +846,7 @@ The default value is `global`.
         <span class="property-type">string</span>
     </dt>
     <dd>{{% md %}}The "resource name" of the autoscaling policy.
-{{% /md %}}</dd>
-    <dt class="property-optional"
+{{% /md %}}</dd><dt class="property-optional"
             title="Optional">
         <span id="state_policyid_csharp">
 <a href="#state_policyid_csharp" style="color: inherit; text-decoration: inherit;">Policy<wbr>Id</a>
@@ -917,8 +857,7 @@ The default value is `global`.
     <dd>{{% md %}}The policy id. The id must contain only letters (a-z, A-Z), numbers (0-9), underscores (_),
 and hyphens (-). Cannot begin or end with underscore or hyphen. Must consist of between
 3 and 50 characters.
-{{% /md %}}</dd>
-    <dt class="property-optional"
+{{% /md %}}</dd><dt class="property-optional"
             title="Optional">
         <span id="state_project_csharp">
 <a href="#state_project_csharp" style="color: inherit; text-decoration: inherit;">Project</a>
@@ -928,8 +867,7 @@ and hyphens (-). Cannot begin or end with underscore or hyphen. Must consist of 
     </dt>
     <dd>{{% md %}}The ID of the project in which the resource belongs.
 If it is not provided, the provider project is used.
-{{% /md %}}</dd>
-    <dt class="property-optional"
+{{% /md %}}</dd><dt class="property-optional"
             title="Optional">
         <span id="state_secondaryworkerconfig_csharp">
 <a href="#state_secondaryworkerconfig_csharp" style="color: inherit; text-decoration: inherit;">Secondary<wbr>Worker<wbr>Config</a>
@@ -939,8 +877,7 @@ If it is not provided, the provider project is used.
     </dt>
     <dd>{{% md %}}Describes how the autoscaler will operate for secondary workers.
 Structure is documented below.
-{{% /md %}}</dd>
-    <dt class="property-optional"
+{{% /md %}}</dd><dt class="property-optional"
             title="Optional">
         <span id="state_workerconfig_csharp">
 <a href="#state_workerconfig_csharp" style="color: inherit; text-decoration: inherit;">Worker<wbr>Config</a>
@@ -950,14 +887,11 @@ Structure is documented below.
     </dt>
     <dd>{{% md %}}Describes how the autoscaler will operate for primary workers.
 Structure is documented below.
-{{% /md %}}</dd>
-</dl>
+{{% /md %}}</dd></dl>
 {{% /choosable %}}
 
 {{% choosable language go %}}
-<dl class="resources-properties">
-
-    <dt class="property-optional"
+<dl class="resources-properties"><dt class="property-optional"
             title="Optional">
         <span id="state_basicalgorithm_go">
 <a href="#state_basicalgorithm_go" style="color: inherit; text-decoration: inherit;">Basic<wbr>Algorithm</a>
@@ -967,8 +901,7 @@ Structure is documented below.
     </dt>
     <dd>{{% md %}}Basic algorithm for autoscaling.
 Structure is documented below.
-{{% /md %}}</dd>
-    <dt class="property-optional"
+{{% /md %}}</dd><dt class="property-optional"
             title="Optional">
         <span id="state_location_go">
 <a href="#state_location_go" style="color: inherit; text-decoration: inherit;">Location</a>
@@ -978,8 +911,7 @@ Structure is documented below.
     </dt>
     <dd>{{% md %}}The  location where the autoscaling policy should reside.
 The default value is `global`.
-{{% /md %}}</dd>
-    <dt class="property-optional"
+{{% /md %}}</dd><dt class="property-optional"
             title="Optional">
         <span id="state_name_go">
 <a href="#state_name_go" style="color: inherit; text-decoration: inherit;">Name</a>
@@ -988,8 +920,7 @@ The default value is `global`.
         <span class="property-type">string</span>
     </dt>
     <dd>{{% md %}}The "resource name" of the autoscaling policy.
-{{% /md %}}</dd>
-    <dt class="property-optional"
+{{% /md %}}</dd><dt class="property-optional"
             title="Optional">
         <span id="state_policyid_go">
 <a href="#state_policyid_go" style="color: inherit; text-decoration: inherit;">Policy<wbr>Id</a>
@@ -1000,8 +931,7 @@ The default value is `global`.
     <dd>{{% md %}}The policy id. The id must contain only letters (a-z, A-Z), numbers (0-9), underscores (_),
 and hyphens (-). Cannot begin or end with underscore or hyphen. Must consist of between
 3 and 50 characters.
-{{% /md %}}</dd>
-    <dt class="property-optional"
+{{% /md %}}</dd><dt class="property-optional"
             title="Optional">
         <span id="state_project_go">
 <a href="#state_project_go" style="color: inherit; text-decoration: inherit;">Project</a>
@@ -1011,8 +941,7 @@ and hyphens (-). Cannot begin or end with underscore or hyphen. Must consist of 
     </dt>
     <dd>{{% md %}}The ID of the project in which the resource belongs.
 If it is not provided, the provider project is used.
-{{% /md %}}</dd>
-    <dt class="property-optional"
+{{% /md %}}</dd><dt class="property-optional"
             title="Optional">
         <span id="state_secondaryworkerconfig_go">
 <a href="#state_secondaryworkerconfig_go" style="color: inherit; text-decoration: inherit;">Secondary<wbr>Worker<wbr>Config</a>
@@ -1022,8 +951,7 @@ If it is not provided, the provider project is used.
     </dt>
     <dd>{{% md %}}Describes how the autoscaler will operate for secondary workers.
 Structure is documented below.
-{{% /md %}}</dd>
-    <dt class="property-optional"
+{{% /md %}}</dd><dt class="property-optional"
             title="Optional">
         <span id="state_workerconfig_go">
 <a href="#state_workerconfig_go" style="color: inherit; text-decoration: inherit;">Worker<wbr>Config</a>
@@ -1033,14 +961,11 @@ Structure is documented below.
     </dt>
     <dd>{{% md %}}Describes how the autoscaler will operate for primary workers.
 Structure is documented below.
-{{% /md %}}</dd>
-</dl>
+{{% /md %}}</dd></dl>
 {{% /choosable %}}
 
 {{% choosable language nodejs %}}
-<dl class="resources-properties">
-
-    <dt class="property-optional"
+<dl class="resources-properties"><dt class="property-optional"
             title="Optional">
         <span id="state_basicalgorithm_nodejs">
 <a href="#state_basicalgorithm_nodejs" style="color: inherit; text-decoration: inherit;">basic<wbr>Algorithm</a>
@@ -1050,8 +975,7 @@ Structure is documented below.
     </dt>
     <dd>{{% md %}}Basic algorithm for autoscaling.
 Structure is documented below.
-{{% /md %}}</dd>
-    <dt class="property-optional"
+{{% /md %}}</dd><dt class="property-optional"
             title="Optional">
         <span id="state_location_nodejs">
 <a href="#state_location_nodejs" style="color: inherit; text-decoration: inherit;">location</a>
@@ -1061,8 +985,7 @@ Structure is documented below.
     </dt>
     <dd>{{% md %}}The  location where the autoscaling policy should reside.
 The default value is `global`.
-{{% /md %}}</dd>
-    <dt class="property-optional"
+{{% /md %}}</dd><dt class="property-optional"
             title="Optional">
         <span id="state_name_nodejs">
 <a href="#state_name_nodejs" style="color: inherit; text-decoration: inherit;">name</a>
@@ -1071,8 +994,7 @@ The default value is `global`.
         <span class="property-type">string</span>
     </dt>
     <dd>{{% md %}}The "resource name" of the autoscaling policy.
-{{% /md %}}</dd>
-    <dt class="property-optional"
+{{% /md %}}</dd><dt class="property-optional"
             title="Optional">
         <span id="state_policyid_nodejs">
 <a href="#state_policyid_nodejs" style="color: inherit; text-decoration: inherit;">policy<wbr>Id</a>
@@ -1083,8 +1005,7 @@ The default value is `global`.
     <dd>{{% md %}}The policy id. The id must contain only letters (a-z, A-Z), numbers (0-9), underscores (_),
 and hyphens (-). Cannot begin or end with underscore or hyphen. Must consist of between
 3 and 50 characters.
-{{% /md %}}</dd>
-    <dt class="property-optional"
+{{% /md %}}</dd><dt class="property-optional"
             title="Optional">
         <span id="state_project_nodejs">
 <a href="#state_project_nodejs" style="color: inherit; text-decoration: inherit;">project</a>
@@ -1094,8 +1015,7 @@ and hyphens (-). Cannot begin or end with underscore or hyphen. Must consist of 
     </dt>
     <dd>{{% md %}}The ID of the project in which the resource belongs.
 If it is not provided, the provider project is used.
-{{% /md %}}</dd>
-    <dt class="property-optional"
+{{% /md %}}</dd><dt class="property-optional"
             title="Optional">
         <span id="state_secondaryworkerconfig_nodejs">
 <a href="#state_secondaryworkerconfig_nodejs" style="color: inherit; text-decoration: inherit;">secondary<wbr>Worker<wbr>Config</a>
@@ -1105,8 +1025,7 @@ If it is not provided, the provider project is used.
     </dt>
     <dd>{{% md %}}Describes how the autoscaler will operate for secondary workers.
 Structure is documented below.
-{{% /md %}}</dd>
-    <dt class="property-optional"
+{{% /md %}}</dd><dt class="property-optional"
             title="Optional">
         <span id="state_workerconfig_nodejs">
 <a href="#state_workerconfig_nodejs" style="color: inherit; text-decoration: inherit;">worker<wbr>Config</a>
@@ -1116,14 +1035,11 @@ Structure is documented below.
     </dt>
     <dd>{{% md %}}Describes how the autoscaler will operate for primary workers.
 Structure is documented below.
-{{% /md %}}</dd>
-</dl>
+{{% /md %}}</dd></dl>
 {{% /choosable %}}
 
 {{% choosable language python %}}
-<dl class="resources-properties">
-
-    <dt class="property-optional"
+<dl class="resources-properties"><dt class="property-optional"
             title="Optional">
         <span id="state_basic_algorithm_python">
 <a href="#state_basic_algorithm_python" style="color: inherit; text-decoration: inherit;">basic_<wbr>algorithm</a>
@@ -1133,8 +1049,7 @@ Structure is documented below.
     </dt>
     <dd>{{% md %}}Basic algorithm for autoscaling.
 Structure is documented below.
-{{% /md %}}</dd>
-    <dt class="property-optional"
+{{% /md %}}</dd><dt class="property-optional"
             title="Optional">
         <span id="state_location_python">
 <a href="#state_location_python" style="color: inherit; text-decoration: inherit;">location</a>
@@ -1144,8 +1059,7 @@ Structure is documented below.
     </dt>
     <dd>{{% md %}}The  location where the autoscaling policy should reside.
 The default value is `global`.
-{{% /md %}}</dd>
-    <dt class="property-optional"
+{{% /md %}}</dd><dt class="property-optional"
             title="Optional">
         <span id="state_name_python">
 <a href="#state_name_python" style="color: inherit; text-decoration: inherit;">name</a>
@@ -1154,8 +1068,7 @@ The default value is `global`.
         <span class="property-type">str</span>
     </dt>
     <dd>{{% md %}}The "resource name" of the autoscaling policy.
-{{% /md %}}</dd>
-    <dt class="property-optional"
+{{% /md %}}</dd><dt class="property-optional"
             title="Optional">
         <span id="state_policy_id_python">
 <a href="#state_policy_id_python" style="color: inherit; text-decoration: inherit;">policy_<wbr>id</a>
@@ -1166,8 +1079,7 @@ The default value is `global`.
     <dd>{{% md %}}The policy id. The id must contain only letters (a-z, A-Z), numbers (0-9), underscores (_),
 and hyphens (-). Cannot begin or end with underscore or hyphen. Must consist of between
 3 and 50 characters.
-{{% /md %}}</dd>
-    <dt class="property-optional"
+{{% /md %}}</dd><dt class="property-optional"
             title="Optional">
         <span id="state_project_python">
 <a href="#state_project_python" style="color: inherit; text-decoration: inherit;">project</a>
@@ -1177,8 +1089,7 @@ and hyphens (-). Cannot begin or end with underscore or hyphen. Must consist of 
     </dt>
     <dd>{{% md %}}The ID of the project in which the resource belongs.
 If it is not provided, the provider project is used.
-{{% /md %}}</dd>
-    <dt class="property-optional"
+{{% /md %}}</dd><dt class="property-optional"
             title="Optional">
         <span id="state_secondary_worker_config_python">
 <a href="#state_secondary_worker_config_python" style="color: inherit; text-decoration: inherit;">secondary_<wbr>worker_<wbr>config</a>
@@ -1188,8 +1099,7 @@ If it is not provided, the provider project is used.
     </dt>
     <dd>{{% md %}}Describes how the autoscaler will operate for secondary workers.
 Structure is documented below.
-{{% /md %}}</dd>
-    <dt class="property-optional"
+{{% /md %}}</dd><dt class="property-optional"
             title="Optional">
         <span id="state_worker_config_python">
 <a href="#state_worker_config_python" style="color: inherit; text-decoration: inherit;">worker_<wbr>config</a>
@@ -1199,8 +1109,7 @@ Structure is documented below.
     </dt>
     <dd>{{% md %}}Describes how the autoscaler will operate for primary workers.
 Structure is documented below.
-{{% /md %}}</dd>
-</dl>
+{{% /md %}}</dd></dl>
 {{% /choosable %}}
 
 
@@ -1215,9 +1124,7 @@ Structure is documented below.
 <h4 id="autoscalingpolicybasicalgorithm">Autoscaling<wbr>Policy<wbr>Basic<wbr>Algorithm</h4>
 
 {{% choosable language csharp %}}
-<dl class="resources-properties">
-
-    <dt class="property-required"
+<dl class="resources-properties"><dt class="property-required"
             title="Required">
         <span id="yarnconfig_csharp">
 <a href="#yarnconfig_csharp" style="color: inherit; text-decoration: inherit;">Yarn<wbr>Config</a>
@@ -1227,8 +1134,7 @@ Structure is documented below.
     </dt>
     <dd>{{% md %}}YARN autoscaling configuration.
 Structure is documented below.
-{{% /md %}}</dd>
-    <dt class="property-optional"
+{{% /md %}}</dd><dt class="property-optional"
             title="Optional">
         <span id="cooldownperiod_csharp">
 <a href="#cooldownperiod_csharp" style="color: inherit; text-decoration: inherit;">Cooldown<wbr>Period</a>
@@ -1239,14 +1145,11 @@ Structure is documented below.
     <dd>{{% md %}}Duration between scaling events. A scaling period starts after the
 update operation from the previous event has completed.
 Bounds: [2m, 1d]. Default: 2m.
-{{% /md %}}</dd>
-</dl>
+{{% /md %}}</dd></dl>
 {{% /choosable %}}
 
 {{% choosable language go %}}
-<dl class="resources-properties">
-
-    <dt class="property-required"
+<dl class="resources-properties"><dt class="property-required"
             title="Required">
         <span id="yarnconfig_go">
 <a href="#yarnconfig_go" style="color: inherit; text-decoration: inherit;">Yarn<wbr>Config</a>
@@ -1256,8 +1159,7 @@ Bounds: [2m, 1d]. Default: 2m.
     </dt>
     <dd>{{% md %}}YARN autoscaling configuration.
 Structure is documented below.
-{{% /md %}}</dd>
-    <dt class="property-optional"
+{{% /md %}}</dd><dt class="property-optional"
             title="Optional">
         <span id="cooldownperiod_go">
 <a href="#cooldownperiod_go" style="color: inherit; text-decoration: inherit;">Cooldown<wbr>Period</a>
@@ -1268,14 +1170,11 @@ Structure is documented below.
     <dd>{{% md %}}Duration between scaling events. A scaling period starts after the
 update operation from the previous event has completed.
 Bounds: [2m, 1d]. Default: 2m.
-{{% /md %}}</dd>
-</dl>
+{{% /md %}}</dd></dl>
 {{% /choosable %}}
 
 {{% choosable language nodejs %}}
-<dl class="resources-properties">
-
-    <dt class="property-required"
+<dl class="resources-properties"><dt class="property-required"
             title="Required">
         <span id="yarnconfig_nodejs">
 <a href="#yarnconfig_nodejs" style="color: inherit; text-decoration: inherit;">yarn<wbr>Config</a>
@@ -1285,8 +1184,7 @@ Bounds: [2m, 1d]. Default: 2m.
     </dt>
     <dd>{{% md %}}YARN autoscaling configuration.
 Structure is documented below.
-{{% /md %}}</dd>
-    <dt class="property-optional"
+{{% /md %}}</dd><dt class="property-optional"
             title="Optional">
         <span id="cooldownperiod_nodejs">
 <a href="#cooldownperiod_nodejs" style="color: inherit; text-decoration: inherit;">cooldown<wbr>Period</a>
@@ -1297,14 +1195,11 @@ Structure is documented below.
     <dd>{{% md %}}Duration between scaling events. A scaling period starts after the
 update operation from the previous event has completed.
 Bounds: [2m, 1d]. Default: 2m.
-{{% /md %}}</dd>
-</dl>
+{{% /md %}}</dd></dl>
 {{% /choosable %}}
 
 {{% choosable language python %}}
-<dl class="resources-properties">
-
-    <dt class="property-required"
+<dl class="resources-properties"><dt class="property-required"
             title="Required">
         <span id="yarn_config_python">
 <a href="#yarn_config_python" style="color: inherit; text-decoration: inherit;">yarn_<wbr>config</a>
@@ -1314,8 +1209,7 @@ Bounds: [2m, 1d]. Default: 2m.
     </dt>
     <dd>{{% md %}}YARN autoscaling configuration.
 Structure is documented below.
-{{% /md %}}</dd>
-    <dt class="property-optional"
+{{% /md %}}</dd><dt class="property-optional"
             title="Optional">
         <span id="cooldown_period_python">
 <a href="#cooldown_period_python" style="color: inherit; text-decoration: inherit;">cooldown_<wbr>period</a>
@@ -1326,16 +1220,13 @@ Structure is documented below.
     <dd>{{% md %}}Duration between scaling events. A scaling period starts after the
 update operation from the previous event has completed.
 Bounds: [2m, 1d]. Default: 2m.
-{{% /md %}}</dd>
-</dl>
+{{% /md %}}</dd></dl>
 {{% /choosable %}}
 
 <h4 id="autoscalingpolicybasicalgorithmyarnconfig">Autoscaling<wbr>Policy<wbr>Basic<wbr>Algorithm<wbr>Yarn<wbr>Config</h4>
 
 {{% choosable language csharp %}}
-<dl class="resources-properties">
-
-    <dt class="property-required"
+<dl class="resources-properties"><dt class="property-required"
             title="Required">
         <span id="gracefuldecommissiontimeout_csharp">
 <a href="#gracefuldecommissiontimeout_csharp" style="color: inherit; text-decoration: inherit;">Graceful<wbr>Decommission<wbr>Timeout</a>
@@ -1347,8 +1238,7 @@ Bounds: [2m, 1d]. Default: 2m.
 duration to wait for jobs to complete before forcefully removing workers
 (and potentially interrupting jobs). Only applicable to downscaling operations.
 Bounds: [0s, 1d].
-{{% /md %}}</dd>
-    <dt class="property-required"
+{{% /md %}}</dd><dt class="property-required"
             title="Required">
         <span id="scaledownfactor_csharp">
 <a href="#scaledownfactor_csharp" style="color: inherit; text-decoration: inherit;">Scale<wbr>Down<wbr>Factor</a>
@@ -1362,8 +1252,7 @@ is no available memory remaining after the update (more aggressive scaling).
 A scale-down factor of 0 disables removing workers, which can be beneficial for
 autoscaling a single job.
 Bounds: [0.0, 1.0].
-{{% /md %}}</dd>
-    <dt class="property-required"
+{{% /md %}}</dd><dt class="property-required"
             title="Required">
         <span id="scaleupfactor_csharp">
 <a href="#scaleupfactor_csharp" style="color: inherit; text-decoration: inherit;">Scale<wbr>Up<wbr>Factor</a>
@@ -1377,8 +1266,7 @@ is no pending memory remaining after the update (more aggressive scaling).
 A scale-up factor closer to 0 will result in a smaller magnitude of scaling up
 (less aggressive scaling).
 Bounds: [0.0, 1.0].
-{{% /md %}}</dd>
-    <dt class="property-optional"
+{{% /md %}}</dd><dt class="property-optional"
             title="Optional">
         <span id="scaledownminworkerfraction_csharp">
 <a href="#scaledownminworkerfraction_csharp" style="color: inherit; text-decoration: inherit;">Scale<wbr>Down<wbr>Min<wbr>Worker<wbr>Fraction</a>
@@ -1391,8 +1279,7 @@ For example, in a 20-worker cluster, a threshold of 0.1 means the autoscaler mus
 recommend at least a 2 worker scale-down for the cluster to scale. A threshold of 0
 means the autoscaler will scale down on any recommended change.
 Bounds: [0.0, 1.0]. Default: 0.0.
-{{% /md %}}</dd>
-    <dt class="property-optional"
+{{% /md %}}</dd><dt class="property-optional"
             title="Optional">
         <span id="scaleupminworkerfraction_csharp">
 <a href="#scaleupminworkerfraction_csharp" style="color: inherit; text-decoration: inherit;">Scale<wbr>Up<wbr>Min<wbr>Worker<wbr>Fraction</a>
@@ -1405,14 +1292,11 @@ occurs. For example, in a 20-worker cluster, a threshold of 0.1 means the autosc
 must recommend at least a 2-worker scale-up for the cluster to scale. A threshold of
 0 means the autoscaler will scale up on any recommended change.
 Bounds: [0.0, 1.0]. Default: 0.0.
-{{% /md %}}</dd>
-</dl>
+{{% /md %}}</dd></dl>
 {{% /choosable %}}
 
 {{% choosable language go %}}
-<dl class="resources-properties">
-
-    <dt class="property-required"
+<dl class="resources-properties"><dt class="property-required"
             title="Required">
         <span id="gracefuldecommissiontimeout_go">
 <a href="#gracefuldecommissiontimeout_go" style="color: inherit; text-decoration: inherit;">Graceful<wbr>Decommission<wbr>Timeout</a>
@@ -1424,8 +1308,7 @@ Bounds: [0.0, 1.0]. Default: 0.0.
 duration to wait for jobs to complete before forcefully removing workers
 (and potentially interrupting jobs). Only applicable to downscaling operations.
 Bounds: [0s, 1d].
-{{% /md %}}</dd>
-    <dt class="property-required"
+{{% /md %}}</dd><dt class="property-required"
             title="Required">
         <span id="scaledownfactor_go">
 <a href="#scaledownfactor_go" style="color: inherit; text-decoration: inherit;">Scale<wbr>Down<wbr>Factor</a>
@@ -1439,8 +1322,7 @@ is no available memory remaining after the update (more aggressive scaling).
 A scale-down factor of 0 disables removing workers, which can be beneficial for
 autoscaling a single job.
 Bounds: [0.0, 1.0].
-{{% /md %}}</dd>
-    <dt class="property-required"
+{{% /md %}}</dd><dt class="property-required"
             title="Required">
         <span id="scaleupfactor_go">
 <a href="#scaleupfactor_go" style="color: inherit; text-decoration: inherit;">Scale<wbr>Up<wbr>Factor</a>
@@ -1454,8 +1336,7 @@ is no pending memory remaining after the update (more aggressive scaling).
 A scale-up factor closer to 0 will result in a smaller magnitude of scaling up
 (less aggressive scaling).
 Bounds: [0.0, 1.0].
-{{% /md %}}</dd>
-    <dt class="property-optional"
+{{% /md %}}</dd><dt class="property-optional"
             title="Optional">
         <span id="scaledownminworkerfraction_go">
 <a href="#scaledownminworkerfraction_go" style="color: inherit; text-decoration: inherit;">Scale<wbr>Down<wbr>Min<wbr>Worker<wbr>Fraction</a>
@@ -1468,8 +1349,7 @@ For example, in a 20-worker cluster, a threshold of 0.1 means the autoscaler mus
 recommend at least a 2 worker scale-down for the cluster to scale. A threshold of 0
 means the autoscaler will scale down on any recommended change.
 Bounds: [0.0, 1.0]. Default: 0.0.
-{{% /md %}}</dd>
-    <dt class="property-optional"
+{{% /md %}}</dd><dt class="property-optional"
             title="Optional">
         <span id="scaleupminworkerfraction_go">
 <a href="#scaleupminworkerfraction_go" style="color: inherit; text-decoration: inherit;">Scale<wbr>Up<wbr>Min<wbr>Worker<wbr>Fraction</a>
@@ -1482,14 +1362,11 @@ occurs. For example, in a 20-worker cluster, a threshold of 0.1 means the autosc
 must recommend at least a 2-worker scale-up for the cluster to scale. A threshold of
 0 means the autoscaler will scale up on any recommended change.
 Bounds: [0.0, 1.0]. Default: 0.0.
-{{% /md %}}</dd>
-</dl>
+{{% /md %}}</dd></dl>
 {{% /choosable %}}
 
 {{% choosable language nodejs %}}
-<dl class="resources-properties">
-
-    <dt class="property-required"
+<dl class="resources-properties"><dt class="property-required"
             title="Required">
         <span id="gracefuldecommissiontimeout_nodejs">
 <a href="#gracefuldecommissiontimeout_nodejs" style="color: inherit; text-decoration: inherit;">graceful<wbr>Decommission<wbr>Timeout</a>
@@ -1501,8 +1378,7 @@ Bounds: [0.0, 1.0]. Default: 0.0.
 duration to wait for jobs to complete before forcefully removing workers
 (and potentially interrupting jobs). Only applicable to downscaling operations.
 Bounds: [0s, 1d].
-{{% /md %}}</dd>
-    <dt class="property-required"
+{{% /md %}}</dd><dt class="property-required"
             title="Required">
         <span id="scaledownfactor_nodejs">
 <a href="#scaledownfactor_nodejs" style="color: inherit; text-decoration: inherit;">scale<wbr>Down<wbr>Factor</a>
@@ -1516,8 +1392,7 @@ is no available memory remaining after the update (more aggressive scaling).
 A scale-down factor of 0 disables removing workers, which can be beneficial for
 autoscaling a single job.
 Bounds: [0.0, 1.0].
-{{% /md %}}</dd>
-    <dt class="property-required"
+{{% /md %}}</dd><dt class="property-required"
             title="Required">
         <span id="scaleupfactor_nodejs">
 <a href="#scaleupfactor_nodejs" style="color: inherit; text-decoration: inherit;">scale<wbr>Up<wbr>Factor</a>
@@ -1531,8 +1406,7 @@ is no pending memory remaining after the update (more aggressive scaling).
 A scale-up factor closer to 0 will result in a smaller magnitude of scaling up
 (less aggressive scaling).
 Bounds: [0.0, 1.0].
-{{% /md %}}</dd>
-    <dt class="property-optional"
+{{% /md %}}</dd><dt class="property-optional"
             title="Optional">
         <span id="scaledownminworkerfraction_nodejs">
 <a href="#scaledownminworkerfraction_nodejs" style="color: inherit; text-decoration: inherit;">scale<wbr>Down<wbr>Min<wbr>Worker<wbr>Fraction</a>
@@ -1545,8 +1419,7 @@ For example, in a 20-worker cluster, a threshold of 0.1 means the autoscaler mus
 recommend at least a 2 worker scale-down for the cluster to scale. A threshold of 0
 means the autoscaler will scale down on any recommended change.
 Bounds: [0.0, 1.0]. Default: 0.0.
-{{% /md %}}</dd>
-    <dt class="property-optional"
+{{% /md %}}</dd><dt class="property-optional"
             title="Optional">
         <span id="scaleupminworkerfraction_nodejs">
 <a href="#scaleupminworkerfraction_nodejs" style="color: inherit; text-decoration: inherit;">scale<wbr>Up<wbr>Min<wbr>Worker<wbr>Fraction</a>
@@ -1559,14 +1432,11 @@ occurs. For example, in a 20-worker cluster, a threshold of 0.1 means the autosc
 must recommend at least a 2-worker scale-up for the cluster to scale. A threshold of
 0 means the autoscaler will scale up on any recommended change.
 Bounds: [0.0, 1.0]. Default: 0.0.
-{{% /md %}}</dd>
-</dl>
+{{% /md %}}</dd></dl>
 {{% /choosable %}}
 
 {{% choosable language python %}}
-<dl class="resources-properties">
-
-    <dt class="property-required"
+<dl class="resources-properties"><dt class="property-required"
             title="Required">
         <span id="graceful_decommission_timeout_python">
 <a href="#graceful_decommission_timeout_python" style="color: inherit; text-decoration: inherit;">graceful_<wbr>decommission_<wbr>timeout</a>
@@ -1578,8 +1448,7 @@ Bounds: [0.0, 1.0]. Default: 0.0.
 duration to wait for jobs to complete before forcefully removing workers
 (and potentially interrupting jobs). Only applicable to downscaling operations.
 Bounds: [0s, 1d].
-{{% /md %}}</dd>
-    <dt class="property-required"
+{{% /md %}}</dd><dt class="property-required"
             title="Required">
         <span id="scale_down_factor_python">
 <a href="#scale_down_factor_python" style="color: inherit; text-decoration: inherit;">scale_<wbr>down_<wbr>factor</a>
@@ -1593,8 +1462,7 @@ is no available memory remaining after the update (more aggressive scaling).
 A scale-down factor of 0 disables removing workers, which can be beneficial for
 autoscaling a single job.
 Bounds: [0.0, 1.0].
-{{% /md %}}</dd>
-    <dt class="property-required"
+{{% /md %}}</dd><dt class="property-required"
             title="Required">
         <span id="scale_up_factor_python">
 <a href="#scale_up_factor_python" style="color: inherit; text-decoration: inherit;">scale_<wbr>up_<wbr>factor</a>
@@ -1608,8 +1476,7 @@ is no pending memory remaining after the update (more aggressive scaling).
 A scale-up factor closer to 0 will result in a smaller magnitude of scaling up
 (less aggressive scaling).
 Bounds: [0.0, 1.0].
-{{% /md %}}</dd>
-    <dt class="property-optional"
+{{% /md %}}</dd><dt class="property-optional"
             title="Optional">
         <span id="scale_down_min_worker_fraction_python">
 <a href="#scale_down_min_worker_fraction_python" style="color: inherit; text-decoration: inherit;">scale_<wbr>down_<wbr>min_<wbr>worker_<wbr>fraction</a>
@@ -1622,8 +1489,7 @@ For example, in a 20-worker cluster, a threshold of 0.1 means the autoscaler mus
 recommend at least a 2 worker scale-down for the cluster to scale. A threshold of 0
 means the autoscaler will scale down on any recommended change.
 Bounds: [0.0, 1.0]. Default: 0.0.
-{{% /md %}}</dd>
-    <dt class="property-optional"
+{{% /md %}}</dd><dt class="property-optional"
             title="Optional">
         <span id="scale_up_min_worker_fraction_python">
 <a href="#scale_up_min_worker_fraction_python" style="color: inherit; text-decoration: inherit;">scale_<wbr>up_<wbr>min_<wbr>worker_<wbr>fraction</a>
@@ -1636,16 +1502,13 @@ occurs. For example, in a 20-worker cluster, a threshold of 0.1 means the autosc
 must recommend at least a 2-worker scale-up for the cluster to scale. A threshold of
 0 means the autoscaler will scale up on any recommended change.
 Bounds: [0.0, 1.0]. Default: 0.0.
-{{% /md %}}</dd>
-</dl>
+{{% /md %}}</dd></dl>
 {{% /choosable %}}
 
 <h4 id="autoscalingpolicysecondaryworkerconfig">Autoscaling<wbr>Policy<wbr>Secondary<wbr>Worker<wbr>Config</h4>
 
 {{% choosable language csharp %}}
-<dl class="resources-properties">
-
-    <dt class="property-optional"
+<dl class="resources-properties"><dt class="property-optional"
             title="Optional">
         <span id="maxinstances_csharp">
 <a href="#maxinstances_csharp" style="color: inherit; text-decoration: inherit;">Max<wbr>Instances</a>
@@ -1656,8 +1519,7 @@ Bounds: [0.0, 1.0]. Default: 0.0.
     <dd>{{% md %}}Maximum number of instances for this group. Note that by default, clusters will not use
 secondary workers. Required for secondary workers if the minimum secondary instances is set.
 Bounds: [minInstances, ). Defaults to 0.
-{{% /md %}}</dd>
-    <dt class="property-optional"
+{{% /md %}}</dd><dt class="property-optional"
             title="Optional">
         <span id="mininstances_csharp">
 <a href="#mininstances_csharp" style="color: inherit; text-decoration: inherit;">Min<wbr>Instances</a>
@@ -1666,8 +1528,7 @@ Bounds: [minInstances, ). Defaults to 0.
         <span class="property-type">int</span>
     </dt>
     <dd>{{% md %}}Minimum number of instances for this group. Bounds: [0, maxInstances]. Defaults to 0.
-{{% /md %}}</dd>
-    <dt class="property-optional"
+{{% /md %}}</dd><dt class="property-optional"
             title="Optional">
         <span id="weight_csharp">
 <a href="#weight_csharp" style="color: inherit; text-decoration: inherit;">Weight</a>
@@ -1687,14 +1548,11 @@ all groups: the cluster will attempt to maintain an equal number of workers in e
 within the configured size bounds for each group. If weight is set for one group only,
 the cluster will default to zero weight on the unset group. For example if weight is set
 only on primary workers, the cluster will use primary workers only and no secondary workers.
-{{% /md %}}</dd>
-</dl>
+{{% /md %}}</dd></dl>
 {{% /choosable %}}
 
 {{% choosable language go %}}
-<dl class="resources-properties">
-
-    <dt class="property-optional"
+<dl class="resources-properties"><dt class="property-optional"
             title="Optional">
         <span id="maxinstances_go">
 <a href="#maxinstances_go" style="color: inherit; text-decoration: inherit;">Max<wbr>Instances</a>
@@ -1705,8 +1563,7 @@ only on primary workers, the cluster will use primary workers only and no second
     <dd>{{% md %}}Maximum number of instances for this group. Note that by default, clusters will not use
 secondary workers. Required for secondary workers if the minimum secondary instances is set.
 Bounds: [minInstances, ). Defaults to 0.
-{{% /md %}}</dd>
-    <dt class="property-optional"
+{{% /md %}}</dd><dt class="property-optional"
             title="Optional">
         <span id="mininstances_go">
 <a href="#mininstances_go" style="color: inherit; text-decoration: inherit;">Min<wbr>Instances</a>
@@ -1715,8 +1572,7 @@ Bounds: [minInstances, ). Defaults to 0.
         <span class="property-type">int</span>
     </dt>
     <dd>{{% md %}}Minimum number of instances for this group. Bounds: [0, maxInstances]. Defaults to 0.
-{{% /md %}}</dd>
-    <dt class="property-optional"
+{{% /md %}}</dd><dt class="property-optional"
             title="Optional">
         <span id="weight_go">
 <a href="#weight_go" style="color: inherit; text-decoration: inherit;">Weight</a>
@@ -1736,14 +1592,11 @@ all groups: the cluster will attempt to maintain an equal number of workers in e
 within the configured size bounds for each group. If weight is set for one group only,
 the cluster will default to zero weight on the unset group. For example if weight is set
 only on primary workers, the cluster will use primary workers only and no secondary workers.
-{{% /md %}}</dd>
-</dl>
+{{% /md %}}</dd></dl>
 {{% /choosable %}}
 
 {{% choosable language nodejs %}}
-<dl class="resources-properties">
-
-    <dt class="property-optional"
+<dl class="resources-properties"><dt class="property-optional"
             title="Optional">
         <span id="maxinstances_nodejs">
 <a href="#maxinstances_nodejs" style="color: inherit; text-decoration: inherit;">max<wbr>Instances</a>
@@ -1754,8 +1607,7 @@ only on primary workers, the cluster will use primary workers only and no second
     <dd>{{% md %}}Maximum number of instances for this group. Note that by default, clusters will not use
 secondary workers. Required for secondary workers if the minimum secondary instances is set.
 Bounds: [minInstances, ). Defaults to 0.
-{{% /md %}}</dd>
-    <dt class="property-optional"
+{{% /md %}}</dd><dt class="property-optional"
             title="Optional">
         <span id="mininstances_nodejs">
 <a href="#mininstances_nodejs" style="color: inherit; text-decoration: inherit;">min<wbr>Instances</a>
@@ -1764,8 +1616,7 @@ Bounds: [minInstances, ). Defaults to 0.
         <span class="property-type">number</span>
     </dt>
     <dd>{{% md %}}Minimum number of instances for this group. Bounds: [0, maxInstances]. Defaults to 0.
-{{% /md %}}</dd>
-    <dt class="property-optional"
+{{% /md %}}</dd><dt class="property-optional"
             title="Optional">
         <span id="weight_nodejs">
 <a href="#weight_nodejs" style="color: inherit; text-decoration: inherit;">weight</a>
@@ -1785,14 +1636,11 @@ all groups: the cluster will attempt to maintain an equal number of workers in e
 within the configured size bounds for each group. If weight is set for one group only,
 the cluster will default to zero weight on the unset group. For example if weight is set
 only on primary workers, the cluster will use primary workers only and no secondary workers.
-{{% /md %}}</dd>
-</dl>
+{{% /md %}}</dd></dl>
 {{% /choosable %}}
 
 {{% choosable language python %}}
-<dl class="resources-properties">
-
-    <dt class="property-optional"
+<dl class="resources-properties"><dt class="property-optional"
             title="Optional">
         <span id="max_instances_python">
 <a href="#max_instances_python" style="color: inherit; text-decoration: inherit;">max_<wbr>instances</a>
@@ -1803,8 +1651,7 @@ only on primary workers, the cluster will use primary workers only and no second
     <dd>{{% md %}}Maximum number of instances for this group. Note that by default, clusters will not use
 secondary workers. Required for secondary workers if the minimum secondary instances is set.
 Bounds: [minInstances, ). Defaults to 0.
-{{% /md %}}</dd>
-    <dt class="property-optional"
+{{% /md %}}</dd><dt class="property-optional"
             title="Optional">
         <span id="min_instances_python">
 <a href="#min_instances_python" style="color: inherit; text-decoration: inherit;">min_<wbr>instances</a>
@@ -1813,8 +1660,7 @@ Bounds: [minInstances, ). Defaults to 0.
         <span class="property-type">int</span>
     </dt>
     <dd>{{% md %}}Minimum number of instances for this group. Bounds: [0, maxInstances]. Defaults to 0.
-{{% /md %}}</dd>
-    <dt class="property-optional"
+{{% /md %}}</dd><dt class="property-optional"
             title="Optional">
         <span id="weight_python">
 <a href="#weight_python" style="color: inherit; text-decoration: inherit;">weight</a>
@@ -1834,16 +1680,13 @@ all groups: the cluster will attempt to maintain an equal number of workers in e
 within the configured size bounds for each group. If weight is set for one group only,
 the cluster will default to zero weight on the unset group. For example if weight is set
 only on primary workers, the cluster will use primary workers only and no secondary workers.
-{{% /md %}}</dd>
-</dl>
+{{% /md %}}</dd></dl>
 {{% /choosable %}}
 
 <h4 id="autoscalingpolicyworkerconfig">Autoscaling<wbr>Policy<wbr>Worker<wbr>Config</h4>
 
 {{% choosable language csharp %}}
-<dl class="resources-properties">
-
-    <dt class="property-required"
+<dl class="resources-properties"><dt class="property-required"
             title="Required">
         <span id="maxinstances_csharp">
 <a href="#maxinstances_csharp" style="color: inherit; text-decoration: inherit;">Max<wbr>Instances</a>
@@ -1854,8 +1697,7 @@ only on primary workers, the cluster will use primary workers only and no second
     <dd>{{% md %}}Maximum number of instances for this group. Note that by default, clusters will not use
 secondary workers. Required for secondary workers if the minimum secondary instances is set.
 Bounds: [minInstances, ). Defaults to 0.
-{{% /md %}}</dd>
-    <dt class="property-optional"
+{{% /md %}}</dd><dt class="property-optional"
             title="Optional">
         <span id="mininstances_csharp">
 <a href="#mininstances_csharp" style="color: inherit; text-decoration: inherit;">Min<wbr>Instances</a>
@@ -1864,8 +1706,7 @@ Bounds: [minInstances, ). Defaults to 0.
         <span class="property-type">int</span>
     </dt>
     <dd>{{% md %}}Minimum number of instances for this group. Bounds: [0, maxInstances]. Defaults to 0.
-{{% /md %}}</dd>
-    <dt class="property-optional"
+{{% /md %}}</dd><dt class="property-optional"
             title="Optional">
         <span id="weight_csharp">
 <a href="#weight_csharp" style="color: inherit; text-decoration: inherit;">Weight</a>
@@ -1885,14 +1726,11 @@ all groups: the cluster will attempt to maintain an equal number of workers in e
 within the configured size bounds for each group. If weight is set for one group only,
 the cluster will default to zero weight on the unset group. For example if weight is set
 only on primary workers, the cluster will use primary workers only and no secondary workers.
-{{% /md %}}</dd>
-</dl>
+{{% /md %}}</dd></dl>
 {{% /choosable %}}
 
 {{% choosable language go %}}
-<dl class="resources-properties">
-
-    <dt class="property-required"
+<dl class="resources-properties"><dt class="property-required"
             title="Required">
         <span id="maxinstances_go">
 <a href="#maxinstances_go" style="color: inherit; text-decoration: inherit;">Max<wbr>Instances</a>
@@ -1903,8 +1741,7 @@ only on primary workers, the cluster will use primary workers only and no second
     <dd>{{% md %}}Maximum number of instances for this group. Note that by default, clusters will not use
 secondary workers. Required for secondary workers if the minimum secondary instances is set.
 Bounds: [minInstances, ). Defaults to 0.
-{{% /md %}}</dd>
-    <dt class="property-optional"
+{{% /md %}}</dd><dt class="property-optional"
             title="Optional">
         <span id="mininstances_go">
 <a href="#mininstances_go" style="color: inherit; text-decoration: inherit;">Min<wbr>Instances</a>
@@ -1913,8 +1750,7 @@ Bounds: [minInstances, ). Defaults to 0.
         <span class="property-type">int</span>
     </dt>
     <dd>{{% md %}}Minimum number of instances for this group. Bounds: [0, maxInstances]. Defaults to 0.
-{{% /md %}}</dd>
-    <dt class="property-optional"
+{{% /md %}}</dd><dt class="property-optional"
             title="Optional">
         <span id="weight_go">
 <a href="#weight_go" style="color: inherit; text-decoration: inherit;">Weight</a>
@@ -1934,14 +1770,11 @@ all groups: the cluster will attempt to maintain an equal number of workers in e
 within the configured size bounds for each group. If weight is set for one group only,
 the cluster will default to zero weight on the unset group. For example if weight is set
 only on primary workers, the cluster will use primary workers only and no secondary workers.
-{{% /md %}}</dd>
-</dl>
+{{% /md %}}</dd></dl>
 {{% /choosable %}}
 
 {{% choosable language nodejs %}}
-<dl class="resources-properties">
-
-    <dt class="property-required"
+<dl class="resources-properties"><dt class="property-required"
             title="Required">
         <span id="maxinstances_nodejs">
 <a href="#maxinstances_nodejs" style="color: inherit; text-decoration: inherit;">max<wbr>Instances</a>
@@ -1952,8 +1785,7 @@ only on primary workers, the cluster will use primary workers only and no second
     <dd>{{% md %}}Maximum number of instances for this group. Note that by default, clusters will not use
 secondary workers. Required for secondary workers if the minimum secondary instances is set.
 Bounds: [minInstances, ). Defaults to 0.
-{{% /md %}}</dd>
-    <dt class="property-optional"
+{{% /md %}}</dd><dt class="property-optional"
             title="Optional">
         <span id="mininstances_nodejs">
 <a href="#mininstances_nodejs" style="color: inherit; text-decoration: inherit;">min<wbr>Instances</a>
@@ -1962,8 +1794,7 @@ Bounds: [minInstances, ). Defaults to 0.
         <span class="property-type">number</span>
     </dt>
     <dd>{{% md %}}Minimum number of instances for this group. Bounds: [0, maxInstances]. Defaults to 0.
-{{% /md %}}</dd>
-    <dt class="property-optional"
+{{% /md %}}</dd><dt class="property-optional"
             title="Optional">
         <span id="weight_nodejs">
 <a href="#weight_nodejs" style="color: inherit; text-decoration: inherit;">weight</a>
@@ -1983,14 +1814,11 @@ all groups: the cluster will attempt to maintain an equal number of workers in e
 within the configured size bounds for each group. If weight is set for one group only,
 the cluster will default to zero weight on the unset group. For example if weight is set
 only on primary workers, the cluster will use primary workers only and no secondary workers.
-{{% /md %}}</dd>
-</dl>
+{{% /md %}}</dd></dl>
 {{% /choosable %}}
 
 {{% choosable language python %}}
-<dl class="resources-properties">
-
-    <dt class="property-required"
+<dl class="resources-properties"><dt class="property-required"
             title="Required">
         <span id="max_instances_python">
 <a href="#max_instances_python" style="color: inherit; text-decoration: inherit;">max_<wbr>instances</a>
@@ -2001,8 +1829,7 @@ only on primary workers, the cluster will use primary workers only and no second
     <dd>{{% md %}}Maximum number of instances for this group. Note that by default, clusters will not use
 secondary workers. Required for secondary workers if the minimum secondary instances is set.
 Bounds: [minInstances, ). Defaults to 0.
-{{% /md %}}</dd>
-    <dt class="property-optional"
+{{% /md %}}</dd><dt class="property-optional"
             title="Optional">
         <span id="min_instances_python">
 <a href="#min_instances_python" style="color: inherit; text-decoration: inherit;">min_<wbr>instances</a>
@@ -2011,8 +1838,7 @@ Bounds: [minInstances, ). Defaults to 0.
         <span class="property-type">int</span>
     </dt>
     <dd>{{% md %}}Minimum number of instances for this group. Bounds: [0, maxInstances]. Defaults to 0.
-{{% /md %}}</dd>
-    <dt class="property-optional"
+{{% /md %}}</dd><dt class="property-optional"
             title="Optional">
         <span id="weight_python">
 <a href="#weight_python" style="color: inherit; text-decoration: inherit;">weight</a>
@@ -2032,8 +1858,7 @@ all groups: the cluster will attempt to maintain an equal number of workers in e
 within the configured size bounds for each group. If weight is set for one group only,
 the cluster will default to zero weight on the unset group. For example if weight is set
 only on primary workers, the cluster will use primary workers only and no secondary workers.
-{{% /md %}}</dd>
-</dl>
+{{% /md %}}</dd></dl>
 {{% /choosable %}}
 ## Import
 
@@ -2062,6 +1887,6 @@ AutoscalingPolicy can be imported using any of these accepted formats
 	<dt>License</dt>
 	<dd>Apache-2.0</dd>
 	<dt>Notes</dt>
-	<dd>This Pulumi package is based on the [`google-beta` Terraform Provider](https://github.com/hashicorp/terraform-provider-google-beta).</dd>
+	<dd>{{% md %}}This Pulumi package is based on the [`google-beta` Terraform Provider](https://github.com/hashicorp/terraform-provider-google-beta).{{% /md %}}</dd>
 </dl>
 

@@ -14,11 +14,17 @@ Represents a scaling plan definition.
 API Version: 2021-01-14-preview.
 
 {{% examples %}}
+
 ## Example Usage
 
 {{< chooser language "typescript,python,go,csharp" / >}}
+
+
 ### ScalingPlans_Create
-{{% example csharp %}}
+
+
+{{< example csharp >}}
+
 ```csharp
 using Pulumi;
 using AzureNative = Pulumi.AzureNative;
@@ -87,9 +93,12 @@ class MyStack : Stack
 
 ```
 
-{{% /example %}}
 
-{{% example go %}}
+{{< /example >}}
+
+
+{{< example go >}}
+
 
 ```go
 package main
@@ -157,9 +166,12 @@ func main() {
 
 ```
 
-{{% /example %}}
 
-{{% example python %}}
+{{< /example >}}
+
+
+{{< example python >}}
+
 
 ```python
 import pulumi
@@ -210,9 +222,12 @@ scaling_plan = azure_native.desktopvirtualization.ScalingPlan("scalingPlan",
 
 ```
 
-{{% /example %}}
 
-{{% example typescript %}}
+{{< /example >}}
+
+
+{{< example typescript >}}
+
 
 ```typescript
 import * as pulumi from "@pulumi/pulumi";
@@ -264,9 +279,16 @@ const scalingPlan = new azure_native.desktopvirtualization.ScalingPlan("scalingP
 
 ```
 
-{{% /example %}}
+
+{{< /example >}}
+
+
+
+
 
 {{% /examples %}}
+
+
 
 
 ## Create a ScalingPlan Resource {#create}
@@ -291,9 +313,7 @@ const scalingPlan = new azure_native.desktopvirtualization.ScalingPlan("scalingP
 
 {{% choosable language nodejs %}}
 
-<dl class="resources-properties">
-  
-    <dt
+<dl class="resources-properties"><dt
         class="property-required" title="Required">
         <span>name</span>
         <span class="property-indicator"></span>
@@ -301,9 +321,7 @@ const scalingPlan = new azure_native.desktopvirtualization.ScalingPlan("scalingP
     </dt>
     <dd>
       The unique name of the resource.
-    </dd>
-  
-    <dt
+    </dd><dt
         class="property-required" title="Required">
         <span>args</span>
         <span class="property-indicator"></span>
@@ -311,9 +329,7 @@ const scalingPlan = new azure_native.desktopvirtualization.ScalingPlan("scalingP
     </dt>
     <dd>
       The arguments to resource properties.
-    </dd>
-  
-    <dt
+    </dd><dt
         class="property-optional" title="Optional">
         <span>opts</span>
         <span class="property-indicator"></span>
@@ -321,10 +337,7 @@ const scalingPlan = new azure_native.desktopvirtualization.ScalingPlan("scalingP
     </dt>
     <dd>
       Bag of options to control resource&#39;s behavior.
-    </dd>
-  
-
-</dl>
+    </dd></dl>
 
 {{% /choosable %}}
 
@@ -350,9 +363,7 @@ const scalingPlan = new azure_native.desktopvirtualization.ScalingPlan("scalingP
 
 {{% choosable language go %}}
 
-<dl class="resources-properties">
-  
-    <dt
+<dl class="resources-properties"><dt
         class="property-optional" title="Optional">
         <span>ctx</span>
         <span class="property-indicator"></span>
@@ -360,9 +371,7 @@ const scalingPlan = new azure_native.desktopvirtualization.ScalingPlan("scalingP
     </dt>
     <dd>
       Context object for the current deployment.
-    </dd>
-  
-    <dt
+    </dd><dt
         class="property-required" title="Required">
         <span>name</span>
         <span class="property-indicator"></span>
@@ -370,9 +379,7 @@ const scalingPlan = new azure_native.desktopvirtualization.ScalingPlan("scalingP
     </dt>
     <dd>
       The unique name of the resource.
-    </dd>
-  
-    <dt
+    </dd><dt
         class="property-required" title="Required">
         <span>args</span>
         <span class="property-indicator"></span>
@@ -380,9 +387,7 @@ const scalingPlan = new azure_native.desktopvirtualization.ScalingPlan("scalingP
     </dt>
     <dd>
       The arguments to resource properties.
-    </dd>
-  
-    <dt
+    </dd><dt
         class="property-optional" title="Optional">
         <span>opts</span>
         <span class="property-indicator"></span>
@@ -390,18 +395,13 @@ const scalingPlan = new azure_native.desktopvirtualization.ScalingPlan("scalingP
     </dt>
     <dd>
       Bag of options to control resource&#39;s behavior.
-    </dd>
-  
-
-</dl>
+    </dd></dl>
 
 {{% /choosable %}}
 
 {{% choosable language csharp %}}
 
-<dl class="resources-properties">
-  
-    <dt
+<dl class="resources-properties"><dt
         class="property-required" title="Required">
         <span>name</span>
         <span class="property-indicator"></span>
@@ -409,9 +409,7 @@ const scalingPlan = new azure_native.desktopvirtualization.ScalingPlan("scalingP
     </dt>
     <dd>
       The unique name of the resource.
-    </dd>
-  
-    <dt
+    </dd><dt
         class="property-required" title="Required">
         <span>args</span>
         <span class="property-indicator"></span>
@@ -419,9 +417,7 @@ const scalingPlan = new azure_native.desktopvirtualization.ScalingPlan("scalingP
     </dt>
     <dd>
       The arguments to resource properties.
-    </dd>
-  
-    <dt
+    </dd><dt
         class="property-optional" title="Optional">
         <span>opts</span>
         <span class="property-indicator"></span>
@@ -429,10 +425,7 @@ const scalingPlan = new azure_native.desktopvirtualization.ScalingPlan("scalingP
     </dt>
     <dd>
       Bag of options to control resource&#39;s behavior.
-    </dd>
-  
-
-</dl>
+    </dd></dl>
 
 {{% /choosable %}}
 
@@ -447,9 +440,7 @@ The ScalingPlan resource accepts the following [input]({{< relref "/docs/intro/c
 
 
 {{% choosable language csharp %}}
-<dl class="resources-properties">
-
-    <dt class="property-required"
+<dl class="resources-properties"><dt class="property-required"
             title="Required">
         <span id="resourcegroupname_csharp">
 <a href="#resourcegroupname_csharp" style="color: inherit; text-decoration: inherit;">Resource<wbr>Group<wbr>Name</a>
@@ -457,8 +448,7 @@ The ScalingPlan resource accepts the following [input]({{< relref "/docs/intro/c
         <span class="property-indicator"></span>
         <span class="property-type">string</span>
     </dt>
-    <dd>{{% md %}}The name of the resource group. The name is case insensitive.{{% /md %}}</dd>
-    <dt class="property-optional"
+    <dd>{{% md %}}The name of the resource group. The name is case insensitive.{{% /md %}}</dd><dt class="property-optional"
             title="Optional">
         <span id="description_csharp">
 <a href="#description_csharp" style="color: inherit; text-decoration: inherit;">Description</a>
@@ -466,8 +456,7 @@ The ScalingPlan resource accepts the following [input]({{< relref "/docs/intro/c
         <span class="property-indicator"></span>
         <span class="property-type">string</span>
     </dt>
-    <dd>{{% md %}}Description of scaling plan.{{% /md %}}</dd>
-    <dt class="property-optional"
+    <dd>{{% md %}}Description of scaling plan.{{% /md %}}</dd><dt class="property-optional"
             title="Optional">
         <span id="exclusiontag_csharp">
 <a href="#exclusiontag_csharp" style="color: inherit; text-decoration: inherit;">Exclusion<wbr>Tag</a>
@@ -475,8 +464,7 @@ The ScalingPlan resource accepts the following [input]({{< relref "/docs/intro/c
         <span class="property-indicator"></span>
         <span class="property-type">string</span>
     </dt>
-    <dd>{{% md %}}Exclusion tag for scaling plan.{{% /md %}}</dd>
-    <dt class="property-optional"
+    <dd>{{% md %}}Exclusion tag for scaling plan.{{% /md %}}</dd><dt class="property-optional"
             title="Optional">
         <span id="friendlyname_csharp">
 <a href="#friendlyname_csharp" style="color: inherit; text-decoration: inherit;">Friendly<wbr>Name</a>
@@ -484,8 +472,7 @@ The ScalingPlan resource accepts the following [input]({{< relref "/docs/intro/c
         <span class="property-indicator"></span>
         <span class="property-type">string</span>
     </dt>
-    <dd>{{% md %}}User friendly name of scaling plan.{{% /md %}}</dd>
-    <dt class="property-optional"
+    <dd>{{% md %}}User friendly name of scaling plan.{{% /md %}}</dd><dt class="property-optional"
             title="Optional">
         <span id="hostpoolreferences_csharp">
 <a href="#hostpoolreferences_csharp" style="color: inherit; text-decoration: inherit;">Host<wbr>Pool<wbr>References</a>
@@ -493,8 +480,7 @@ The ScalingPlan resource accepts the following [input]({{< relref "/docs/intro/c
         <span class="property-indicator"></span>
         <span class="property-type"><a href="#scalinghostpoolreference">List&lt;Pulumi.<wbr>Azure<wbr>Native.<wbr>Desktop<wbr>Virtualization.<wbr>Inputs.<wbr>Scaling<wbr>Host<wbr>Pool<wbr>Reference<wbr>Args&gt;</a></span>
     </dt>
-    <dd>{{% md %}}List of ScalingHostPoolReference definitions.{{% /md %}}</dd>
-    <dt class="property-optional"
+    <dd>{{% md %}}List of ScalingHostPoolReference definitions.{{% /md %}}</dd><dt class="property-optional"
             title="Optional">
         <span id="hostpooltype_csharp">
 <a href="#hostpooltype_csharp" style="color: inherit; text-decoration: inherit;">Host<wbr>Pool<wbr>Type</a>
@@ -502,8 +488,7 @@ The ScalingPlan resource accepts the following [input]({{< relref "/docs/intro/c
         <span class="property-indicator"></span>
         <span class="property-type">string | <a href="#hostpooltype">Pulumi.<wbr>Azure<wbr>Native.<wbr>Desktop<wbr>Virtualization.<wbr>Host<wbr>Pool<wbr>Type</a></span>
     </dt>
-    <dd>{{% md %}}HostPool type for scaling plan.{{% /md %}}</dd>
-    <dt class="property-optional"
+    <dd>{{% md %}}HostPool type for scaling plan.{{% /md %}}</dd><dt class="property-optional"
             title="Optional">
         <span id="location_csharp">
 <a href="#location_csharp" style="color: inherit; text-decoration: inherit;">Location</a>
@@ -511,8 +496,7 @@ The ScalingPlan resource accepts the following [input]({{< relref "/docs/intro/c
         <span class="property-indicator"></span>
         <span class="property-type">string</span>
     </dt>
-    <dd>{{% md %}}The geo-location where the resource lives{{% /md %}}</dd>
-    <dt class="property-optional"
+    <dd>{{% md %}}The geo-location where the resource lives{{% /md %}}</dd><dt class="property-optional"
             title="Optional">
         <span id="scalingplanname_csharp">
 <a href="#scalingplanname_csharp" style="color: inherit; text-decoration: inherit;">Scaling<wbr>Plan<wbr>Name</a>
@@ -520,8 +504,7 @@ The ScalingPlan resource accepts the following [input]({{< relref "/docs/intro/c
         <span class="property-indicator"></span>
         <span class="property-type">string</span>
     </dt>
-    <dd>{{% md %}}The name of the scaling plan.{{% /md %}}</dd>
-    <dt class="property-optional"
+    <dd>{{% md %}}The name of the scaling plan.{{% /md %}}</dd><dt class="property-optional"
             title="Optional">
         <span id="schedules_csharp">
 <a href="#schedules_csharp" style="color: inherit; text-decoration: inherit;">Schedules</a>
@@ -529,8 +512,7 @@ The ScalingPlan resource accepts the following [input]({{< relref "/docs/intro/c
         <span class="property-indicator"></span>
         <span class="property-type"><a href="#scalingschedule">List&lt;Pulumi.<wbr>Azure<wbr>Native.<wbr>Desktop<wbr>Virtualization.<wbr>Inputs.<wbr>Scaling<wbr>Schedule<wbr>Args&gt;</a></span>
     </dt>
-    <dd>{{% md %}}List of ScalingSchedule definitions.{{% /md %}}</dd>
-    <dt class="property-optional"
+    <dd>{{% md %}}List of ScalingSchedule definitions.{{% /md %}}</dd><dt class="property-optional"
             title="Optional">
         <span id="tags_csharp">
 <a href="#tags_csharp" style="color: inherit; text-decoration: inherit;">Tags</a>
@@ -538,8 +520,7 @@ The ScalingPlan resource accepts the following [input]({{< relref "/docs/intro/c
         <span class="property-indicator"></span>
         <span class="property-type">Dictionary&lt;string, string&gt;</span>
     </dt>
-    <dd>{{% md %}}Resource tags.{{% /md %}}</dd>
-    <dt class="property-optional"
+    <dd>{{% md %}}Resource tags.{{% /md %}}</dd><dt class="property-optional"
             title="Optional">
         <span id="timezone_csharp">
 <a href="#timezone_csharp" style="color: inherit; text-decoration: inherit;">Time<wbr>Zone</a>
@@ -547,14 +528,11 @@ The ScalingPlan resource accepts the following [input]({{< relref "/docs/intro/c
         <span class="property-indicator"></span>
         <span class="property-type">string</span>
     </dt>
-    <dd>{{% md %}}Timezone of the scaling plan.{{% /md %}}</dd>
-</dl>
+    <dd>{{% md %}}Timezone of the scaling plan.{{% /md %}}</dd></dl>
 {{% /choosable %}}
 
 {{% choosable language go %}}
-<dl class="resources-properties">
-
-    <dt class="property-required"
+<dl class="resources-properties"><dt class="property-required"
             title="Required">
         <span id="resourcegroupname_go">
 <a href="#resourcegroupname_go" style="color: inherit; text-decoration: inherit;">Resource<wbr>Group<wbr>Name</a>
@@ -562,8 +540,7 @@ The ScalingPlan resource accepts the following [input]({{< relref "/docs/intro/c
         <span class="property-indicator"></span>
         <span class="property-type">string</span>
     </dt>
-    <dd>{{% md %}}The name of the resource group. The name is case insensitive.{{% /md %}}</dd>
-    <dt class="property-optional"
+    <dd>{{% md %}}The name of the resource group. The name is case insensitive.{{% /md %}}</dd><dt class="property-optional"
             title="Optional">
         <span id="description_go">
 <a href="#description_go" style="color: inherit; text-decoration: inherit;">Description</a>
@@ -571,8 +548,7 @@ The ScalingPlan resource accepts the following [input]({{< relref "/docs/intro/c
         <span class="property-indicator"></span>
         <span class="property-type">string</span>
     </dt>
-    <dd>{{% md %}}Description of scaling plan.{{% /md %}}</dd>
-    <dt class="property-optional"
+    <dd>{{% md %}}Description of scaling plan.{{% /md %}}</dd><dt class="property-optional"
             title="Optional">
         <span id="exclusiontag_go">
 <a href="#exclusiontag_go" style="color: inherit; text-decoration: inherit;">Exclusion<wbr>Tag</a>
@@ -580,8 +556,7 @@ The ScalingPlan resource accepts the following [input]({{< relref "/docs/intro/c
         <span class="property-indicator"></span>
         <span class="property-type">string</span>
     </dt>
-    <dd>{{% md %}}Exclusion tag for scaling plan.{{% /md %}}</dd>
-    <dt class="property-optional"
+    <dd>{{% md %}}Exclusion tag for scaling plan.{{% /md %}}</dd><dt class="property-optional"
             title="Optional">
         <span id="friendlyname_go">
 <a href="#friendlyname_go" style="color: inherit; text-decoration: inherit;">Friendly<wbr>Name</a>
@@ -589,8 +564,7 @@ The ScalingPlan resource accepts the following [input]({{< relref "/docs/intro/c
         <span class="property-indicator"></span>
         <span class="property-type">string</span>
     </dt>
-    <dd>{{% md %}}User friendly name of scaling plan.{{% /md %}}</dd>
-    <dt class="property-optional"
+    <dd>{{% md %}}User friendly name of scaling plan.{{% /md %}}</dd><dt class="property-optional"
             title="Optional">
         <span id="hostpoolreferences_go">
 <a href="#hostpoolreferences_go" style="color: inherit; text-decoration: inherit;">Host<wbr>Pool<wbr>References</a>
@@ -598,8 +572,7 @@ The ScalingPlan resource accepts the following [input]({{< relref "/docs/intro/c
         <span class="property-indicator"></span>
         <span class="property-type"><a href="#scalinghostpoolreference">[]Scaling<wbr>Host<wbr>Pool<wbr>Reference</a></span>
     </dt>
-    <dd>{{% md %}}List of ScalingHostPoolReference definitions.{{% /md %}}</dd>
-    <dt class="property-optional"
+    <dd>{{% md %}}List of ScalingHostPoolReference definitions.{{% /md %}}</dd><dt class="property-optional"
             title="Optional">
         <span id="hostpooltype_go">
 <a href="#hostpooltype_go" style="color: inherit; text-decoration: inherit;">Host<wbr>Pool<wbr>Type</a>
@@ -607,8 +580,7 @@ The ScalingPlan resource accepts the following [input]({{< relref "/docs/intro/c
         <span class="property-indicator"></span>
         <span class="property-type">string | <a href="#hostpooltype">Host<wbr>Pool<wbr>Type</a></span>
     </dt>
-    <dd>{{% md %}}HostPool type for scaling plan.{{% /md %}}</dd>
-    <dt class="property-optional"
+    <dd>{{% md %}}HostPool type for scaling plan.{{% /md %}}</dd><dt class="property-optional"
             title="Optional">
         <span id="location_go">
 <a href="#location_go" style="color: inherit; text-decoration: inherit;">Location</a>
@@ -616,8 +588,7 @@ The ScalingPlan resource accepts the following [input]({{< relref "/docs/intro/c
         <span class="property-indicator"></span>
         <span class="property-type">string</span>
     </dt>
-    <dd>{{% md %}}The geo-location where the resource lives{{% /md %}}</dd>
-    <dt class="property-optional"
+    <dd>{{% md %}}The geo-location where the resource lives{{% /md %}}</dd><dt class="property-optional"
             title="Optional">
         <span id="scalingplanname_go">
 <a href="#scalingplanname_go" style="color: inherit; text-decoration: inherit;">Scaling<wbr>Plan<wbr>Name</a>
@@ -625,8 +596,7 @@ The ScalingPlan resource accepts the following [input]({{< relref "/docs/intro/c
         <span class="property-indicator"></span>
         <span class="property-type">string</span>
     </dt>
-    <dd>{{% md %}}The name of the scaling plan.{{% /md %}}</dd>
-    <dt class="property-optional"
+    <dd>{{% md %}}The name of the scaling plan.{{% /md %}}</dd><dt class="property-optional"
             title="Optional">
         <span id="schedules_go">
 <a href="#schedules_go" style="color: inherit; text-decoration: inherit;">Schedules</a>
@@ -634,8 +604,7 @@ The ScalingPlan resource accepts the following [input]({{< relref "/docs/intro/c
         <span class="property-indicator"></span>
         <span class="property-type"><a href="#scalingschedule">[]Scaling<wbr>Schedule</a></span>
     </dt>
-    <dd>{{% md %}}List of ScalingSchedule definitions.{{% /md %}}</dd>
-    <dt class="property-optional"
+    <dd>{{% md %}}List of ScalingSchedule definitions.{{% /md %}}</dd><dt class="property-optional"
             title="Optional">
         <span id="tags_go">
 <a href="#tags_go" style="color: inherit; text-decoration: inherit;">Tags</a>
@@ -643,8 +612,7 @@ The ScalingPlan resource accepts the following [input]({{< relref "/docs/intro/c
         <span class="property-indicator"></span>
         <span class="property-type">map[string]string</span>
     </dt>
-    <dd>{{% md %}}Resource tags.{{% /md %}}</dd>
-    <dt class="property-optional"
+    <dd>{{% md %}}Resource tags.{{% /md %}}</dd><dt class="property-optional"
             title="Optional">
         <span id="timezone_go">
 <a href="#timezone_go" style="color: inherit; text-decoration: inherit;">Time<wbr>Zone</a>
@@ -652,14 +620,11 @@ The ScalingPlan resource accepts the following [input]({{< relref "/docs/intro/c
         <span class="property-indicator"></span>
         <span class="property-type">string</span>
     </dt>
-    <dd>{{% md %}}Timezone of the scaling plan.{{% /md %}}</dd>
-</dl>
+    <dd>{{% md %}}Timezone of the scaling plan.{{% /md %}}</dd></dl>
 {{% /choosable %}}
 
 {{% choosable language nodejs %}}
-<dl class="resources-properties">
-
-    <dt class="property-required"
+<dl class="resources-properties"><dt class="property-required"
             title="Required">
         <span id="resourcegroupname_nodejs">
 <a href="#resourcegroupname_nodejs" style="color: inherit; text-decoration: inherit;">resource<wbr>Group<wbr>Name</a>
@@ -667,8 +632,7 @@ The ScalingPlan resource accepts the following [input]({{< relref "/docs/intro/c
         <span class="property-indicator"></span>
         <span class="property-type">string</span>
     </dt>
-    <dd>{{% md %}}The name of the resource group. The name is case insensitive.{{% /md %}}</dd>
-    <dt class="property-optional"
+    <dd>{{% md %}}The name of the resource group. The name is case insensitive.{{% /md %}}</dd><dt class="property-optional"
             title="Optional">
         <span id="description_nodejs">
 <a href="#description_nodejs" style="color: inherit; text-decoration: inherit;">description</a>
@@ -676,8 +640,7 @@ The ScalingPlan resource accepts the following [input]({{< relref "/docs/intro/c
         <span class="property-indicator"></span>
         <span class="property-type">string</span>
     </dt>
-    <dd>{{% md %}}Description of scaling plan.{{% /md %}}</dd>
-    <dt class="property-optional"
+    <dd>{{% md %}}Description of scaling plan.{{% /md %}}</dd><dt class="property-optional"
             title="Optional">
         <span id="exclusiontag_nodejs">
 <a href="#exclusiontag_nodejs" style="color: inherit; text-decoration: inherit;">exclusion<wbr>Tag</a>
@@ -685,8 +648,7 @@ The ScalingPlan resource accepts the following [input]({{< relref "/docs/intro/c
         <span class="property-indicator"></span>
         <span class="property-type">string</span>
     </dt>
-    <dd>{{% md %}}Exclusion tag for scaling plan.{{% /md %}}</dd>
-    <dt class="property-optional"
+    <dd>{{% md %}}Exclusion tag for scaling plan.{{% /md %}}</dd><dt class="property-optional"
             title="Optional">
         <span id="friendlyname_nodejs">
 <a href="#friendlyname_nodejs" style="color: inherit; text-decoration: inherit;">friendly<wbr>Name</a>
@@ -694,8 +656,7 @@ The ScalingPlan resource accepts the following [input]({{< relref "/docs/intro/c
         <span class="property-indicator"></span>
         <span class="property-type">string</span>
     </dt>
-    <dd>{{% md %}}User friendly name of scaling plan.{{% /md %}}</dd>
-    <dt class="property-optional"
+    <dd>{{% md %}}User friendly name of scaling plan.{{% /md %}}</dd><dt class="property-optional"
             title="Optional">
         <span id="hostpoolreferences_nodejs">
 <a href="#hostpoolreferences_nodejs" style="color: inherit; text-decoration: inherit;">host<wbr>Pool<wbr>References</a>
@@ -703,8 +664,7 @@ The ScalingPlan resource accepts the following [input]({{< relref "/docs/intro/c
         <span class="property-indicator"></span>
         <span class="property-type"><a href="#scalinghostpoolreference">Scaling<wbr>Host<wbr>Pool<wbr>Reference[]</a></span>
     </dt>
-    <dd>{{% md %}}List of ScalingHostPoolReference definitions.{{% /md %}}</dd>
-    <dt class="property-optional"
+    <dd>{{% md %}}List of ScalingHostPoolReference definitions.{{% /md %}}</dd><dt class="property-optional"
             title="Optional">
         <span id="hostpooltype_nodejs">
 <a href="#hostpooltype_nodejs" style="color: inherit; text-decoration: inherit;">host<wbr>Pool<wbr>Type</a>
@@ -712,8 +672,7 @@ The ScalingPlan resource accepts the following [input]({{< relref "/docs/intro/c
         <span class="property-indicator"></span>
         <span class="property-type">string | <a href="#hostpooltype">Host<wbr>Pool<wbr>Type</a></span>
     </dt>
-    <dd>{{% md %}}HostPool type for scaling plan.{{% /md %}}</dd>
-    <dt class="property-optional"
+    <dd>{{% md %}}HostPool type for scaling plan.{{% /md %}}</dd><dt class="property-optional"
             title="Optional">
         <span id="location_nodejs">
 <a href="#location_nodejs" style="color: inherit; text-decoration: inherit;">location</a>
@@ -721,8 +680,7 @@ The ScalingPlan resource accepts the following [input]({{< relref "/docs/intro/c
         <span class="property-indicator"></span>
         <span class="property-type">string</span>
     </dt>
-    <dd>{{% md %}}The geo-location where the resource lives{{% /md %}}</dd>
-    <dt class="property-optional"
+    <dd>{{% md %}}The geo-location where the resource lives{{% /md %}}</dd><dt class="property-optional"
             title="Optional">
         <span id="scalingplanname_nodejs">
 <a href="#scalingplanname_nodejs" style="color: inherit; text-decoration: inherit;">scaling<wbr>Plan<wbr>Name</a>
@@ -730,8 +688,7 @@ The ScalingPlan resource accepts the following [input]({{< relref "/docs/intro/c
         <span class="property-indicator"></span>
         <span class="property-type">string</span>
     </dt>
-    <dd>{{% md %}}The name of the scaling plan.{{% /md %}}</dd>
-    <dt class="property-optional"
+    <dd>{{% md %}}The name of the scaling plan.{{% /md %}}</dd><dt class="property-optional"
             title="Optional">
         <span id="schedules_nodejs">
 <a href="#schedules_nodejs" style="color: inherit; text-decoration: inherit;">schedules</a>
@@ -739,8 +696,7 @@ The ScalingPlan resource accepts the following [input]({{< relref "/docs/intro/c
         <span class="property-indicator"></span>
         <span class="property-type"><a href="#scalingschedule">Scaling<wbr>Schedule[]</a></span>
     </dt>
-    <dd>{{% md %}}List of ScalingSchedule definitions.{{% /md %}}</dd>
-    <dt class="property-optional"
+    <dd>{{% md %}}List of ScalingSchedule definitions.{{% /md %}}</dd><dt class="property-optional"
             title="Optional">
         <span id="tags_nodejs">
 <a href="#tags_nodejs" style="color: inherit; text-decoration: inherit;">tags</a>
@@ -748,8 +704,7 @@ The ScalingPlan resource accepts the following [input]({{< relref "/docs/intro/c
         <span class="property-indicator"></span>
         <span class="property-type">{[key: string]: string}</span>
     </dt>
-    <dd>{{% md %}}Resource tags.{{% /md %}}</dd>
-    <dt class="property-optional"
+    <dd>{{% md %}}Resource tags.{{% /md %}}</dd><dt class="property-optional"
             title="Optional">
         <span id="timezone_nodejs">
 <a href="#timezone_nodejs" style="color: inherit; text-decoration: inherit;">time<wbr>Zone</a>
@@ -757,14 +712,11 @@ The ScalingPlan resource accepts the following [input]({{< relref "/docs/intro/c
         <span class="property-indicator"></span>
         <span class="property-type">string</span>
     </dt>
-    <dd>{{% md %}}Timezone of the scaling plan.{{% /md %}}</dd>
-</dl>
+    <dd>{{% md %}}Timezone of the scaling plan.{{% /md %}}</dd></dl>
 {{% /choosable %}}
 
 {{% choosable language python %}}
-<dl class="resources-properties">
-
-    <dt class="property-required"
+<dl class="resources-properties"><dt class="property-required"
             title="Required">
         <span id="resource_group_name_python">
 <a href="#resource_group_name_python" style="color: inherit; text-decoration: inherit;">resource_<wbr>group_<wbr>name</a>
@@ -772,8 +724,7 @@ The ScalingPlan resource accepts the following [input]({{< relref "/docs/intro/c
         <span class="property-indicator"></span>
         <span class="property-type">str</span>
     </dt>
-    <dd>{{% md %}}The name of the resource group. The name is case insensitive.{{% /md %}}</dd>
-    <dt class="property-optional"
+    <dd>{{% md %}}The name of the resource group. The name is case insensitive.{{% /md %}}</dd><dt class="property-optional"
             title="Optional">
         <span id="description_python">
 <a href="#description_python" style="color: inherit; text-decoration: inherit;">description</a>
@@ -781,8 +732,7 @@ The ScalingPlan resource accepts the following [input]({{< relref "/docs/intro/c
         <span class="property-indicator"></span>
         <span class="property-type">str</span>
     </dt>
-    <dd>{{% md %}}Description of scaling plan.{{% /md %}}</dd>
-    <dt class="property-optional"
+    <dd>{{% md %}}Description of scaling plan.{{% /md %}}</dd><dt class="property-optional"
             title="Optional">
         <span id="exclusion_tag_python">
 <a href="#exclusion_tag_python" style="color: inherit; text-decoration: inherit;">exclusion_<wbr>tag</a>
@@ -790,8 +740,7 @@ The ScalingPlan resource accepts the following [input]({{< relref "/docs/intro/c
         <span class="property-indicator"></span>
         <span class="property-type">str</span>
     </dt>
-    <dd>{{% md %}}Exclusion tag for scaling plan.{{% /md %}}</dd>
-    <dt class="property-optional"
+    <dd>{{% md %}}Exclusion tag for scaling plan.{{% /md %}}</dd><dt class="property-optional"
             title="Optional">
         <span id="friendly_name_python">
 <a href="#friendly_name_python" style="color: inherit; text-decoration: inherit;">friendly_<wbr>name</a>
@@ -799,8 +748,7 @@ The ScalingPlan resource accepts the following [input]({{< relref "/docs/intro/c
         <span class="property-indicator"></span>
         <span class="property-type">str</span>
     </dt>
-    <dd>{{% md %}}User friendly name of scaling plan.{{% /md %}}</dd>
-    <dt class="property-optional"
+    <dd>{{% md %}}User friendly name of scaling plan.{{% /md %}}</dd><dt class="property-optional"
             title="Optional">
         <span id="host_pool_references_python">
 <a href="#host_pool_references_python" style="color: inherit; text-decoration: inherit;">host_<wbr>pool_<wbr>references</a>
@@ -808,8 +756,7 @@ The ScalingPlan resource accepts the following [input]({{< relref "/docs/intro/c
         <span class="property-indicator"></span>
         <span class="property-type"><a href="#scalinghostpoolreference">Sequence[Scaling<wbr>Host<wbr>Pool<wbr>Reference<wbr>Args]</a></span>
     </dt>
-    <dd>{{% md %}}List of ScalingHostPoolReference definitions.{{% /md %}}</dd>
-    <dt class="property-optional"
+    <dd>{{% md %}}List of ScalingHostPoolReference definitions.{{% /md %}}</dd><dt class="property-optional"
             title="Optional">
         <span id="host_pool_type_python">
 <a href="#host_pool_type_python" style="color: inherit; text-decoration: inherit;">host_<wbr>pool_<wbr>type</a>
@@ -817,8 +764,7 @@ The ScalingPlan resource accepts the following [input]({{< relref "/docs/intro/c
         <span class="property-indicator"></span>
         <span class="property-type">str | <a href="#hostpooltype">Host<wbr>Pool<wbr>Type</a></span>
     </dt>
-    <dd>{{% md %}}HostPool type for scaling plan.{{% /md %}}</dd>
-    <dt class="property-optional"
+    <dd>{{% md %}}HostPool type for scaling plan.{{% /md %}}</dd><dt class="property-optional"
             title="Optional">
         <span id="location_python">
 <a href="#location_python" style="color: inherit; text-decoration: inherit;">location</a>
@@ -826,8 +772,7 @@ The ScalingPlan resource accepts the following [input]({{< relref "/docs/intro/c
         <span class="property-indicator"></span>
         <span class="property-type">str</span>
     </dt>
-    <dd>{{% md %}}The geo-location where the resource lives{{% /md %}}</dd>
-    <dt class="property-optional"
+    <dd>{{% md %}}The geo-location where the resource lives{{% /md %}}</dd><dt class="property-optional"
             title="Optional">
         <span id="scaling_plan_name_python">
 <a href="#scaling_plan_name_python" style="color: inherit; text-decoration: inherit;">scaling_<wbr>plan_<wbr>name</a>
@@ -835,8 +780,7 @@ The ScalingPlan resource accepts the following [input]({{< relref "/docs/intro/c
         <span class="property-indicator"></span>
         <span class="property-type">str</span>
     </dt>
-    <dd>{{% md %}}The name of the scaling plan.{{% /md %}}</dd>
-    <dt class="property-optional"
+    <dd>{{% md %}}The name of the scaling plan.{{% /md %}}</dd><dt class="property-optional"
             title="Optional">
         <span id="schedules_python">
 <a href="#schedules_python" style="color: inherit; text-decoration: inherit;">schedules</a>
@@ -844,8 +788,7 @@ The ScalingPlan resource accepts the following [input]({{< relref "/docs/intro/c
         <span class="property-indicator"></span>
         <span class="property-type"><a href="#scalingschedule">Sequence[Scaling<wbr>Schedule<wbr>Args]</a></span>
     </dt>
-    <dd>{{% md %}}List of ScalingSchedule definitions.{{% /md %}}</dd>
-    <dt class="property-optional"
+    <dd>{{% md %}}List of ScalingSchedule definitions.{{% /md %}}</dd><dt class="property-optional"
             title="Optional">
         <span id="tags_python">
 <a href="#tags_python" style="color: inherit; text-decoration: inherit;">tags</a>
@@ -853,8 +796,7 @@ The ScalingPlan resource accepts the following [input]({{< relref "/docs/intro/c
         <span class="property-indicator"></span>
         <span class="property-type">Mapping[str, str]</span>
     </dt>
-    <dd>{{% md %}}Resource tags.{{% /md %}}</dd>
-    <dt class="property-optional"
+    <dd>{{% md %}}Resource tags.{{% /md %}}</dd><dt class="property-optional"
             title="Optional">
         <span id="time_zone_python">
 <a href="#time_zone_python" style="color: inherit; text-decoration: inherit;">time_<wbr>zone</a>
@@ -862,8 +804,7 @@ The ScalingPlan resource accepts the following [input]({{< relref "/docs/intro/c
         <span class="property-indicator"></span>
         <span class="property-type">str</span>
     </dt>
-    <dd>{{% md %}}Timezone of the scaling plan.{{% /md %}}</dd>
-</dl>
+    <dd>{{% md %}}Timezone of the scaling plan.{{% /md %}}</dd></dl>
 {{% /choosable %}}
 
 
@@ -874,9 +815,7 @@ All [input](#inputs) properties are implicitly available as output properties. A
 
 
 {{% choosable language csharp %}}
-<dl class="resources-properties">
-
-    <dt class="property-"
+<dl class="resources-properties"><dt class="property-"
             title="">
         <span id="id_csharp">
 <a href="#id_csharp" style="color: inherit; text-decoration: inherit;">Id</a>
@@ -884,8 +823,7 @@ All [input](#inputs) properties are implicitly available as output properties. A
         <span class="property-indicator"></span>
         <span class="property-type">string</span>
     </dt>
-    <dd>{{% md %}}The provider-assigned unique ID for this managed resource.{{% /md %}}</dd>
-    <dt class="property-"
+    <dd>{{% md %}}The provider-assigned unique ID for this managed resource.{{% /md %}}</dd><dt class="property-"
             title="">
         <span id="name_csharp">
 <a href="#name_csharp" style="color: inherit; text-decoration: inherit;">Name</a>
@@ -893,8 +831,7 @@ All [input](#inputs) properties are implicitly available as output properties. A
         <span class="property-indicator"></span>
         <span class="property-type">string</span>
     </dt>
-    <dd>{{% md %}}The name of the resource{{% /md %}}</dd>
-    <dt class="property-"
+    <dd>{{% md %}}The name of the resource{{% /md %}}</dd><dt class="property-"
             title="">
         <span id="type_csharp">
 <a href="#type_csharp" style="color: inherit; text-decoration: inherit;">Type</a>
@@ -902,14 +839,11 @@ All [input](#inputs) properties are implicitly available as output properties. A
         <span class="property-indicator"></span>
         <span class="property-type">string</span>
     </dt>
-    <dd>{{% md %}}The type of the resource. E.g. "Microsoft.Compute/virtualMachines" or "Microsoft.Storage/storageAccounts"{{% /md %}}</dd>
-</dl>
+    <dd>{{% md %}}The type of the resource. E.g. "Microsoft.Compute/virtualMachines" or "Microsoft.Storage/storageAccounts"{{% /md %}}</dd></dl>
 {{% /choosable %}}
 
 {{% choosable language go %}}
-<dl class="resources-properties">
-
-    <dt class="property-"
+<dl class="resources-properties"><dt class="property-"
             title="">
         <span id="id_go">
 <a href="#id_go" style="color: inherit; text-decoration: inherit;">Id</a>
@@ -917,8 +851,7 @@ All [input](#inputs) properties are implicitly available as output properties. A
         <span class="property-indicator"></span>
         <span class="property-type">string</span>
     </dt>
-    <dd>{{% md %}}The provider-assigned unique ID for this managed resource.{{% /md %}}</dd>
-    <dt class="property-"
+    <dd>{{% md %}}The provider-assigned unique ID for this managed resource.{{% /md %}}</dd><dt class="property-"
             title="">
         <span id="name_go">
 <a href="#name_go" style="color: inherit; text-decoration: inherit;">Name</a>
@@ -926,8 +859,7 @@ All [input](#inputs) properties are implicitly available as output properties. A
         <span class="property-indicator"></span>
         <span class="property-type">string</span>
     </dt>
-    <dd>{{% md %}}The name of the resource{{% /md %}}</dd>
-    <dt class="property-"
+    <dd>{{% md %}}The name of the resource{{% /md %}}</dd><dt class="property-"
             title="">
         <span id="type_go">
 <a href="#type_go" style="color: inherit; text-decoration: inherit;">Type</a>
@@ -935,14 +867,11 @@ All [input](#inputs) properties are implicitly available as output properties. A
         <span class="property-indicator"></span>
         <span class="property-type">string</span>
     </dt>
-    <dd>{{% md %}}The type of the resource. E.g. "Microsoft.Compute/virtualMachines" or "Microsoft.Storage/storageAccounts"{{% /md %}}</dd>
-</dl>
+    <dd>{{% md %}}The type of the resource. E.g. "Microsoft.Compute/virtualMachines" or "Microsoft.Storage/storageAccounts"{{% /md %}}</dd></dl>
 {{% /choosable %}}
 
 {{% choosable language nodejs %}}
-<dl class="resources-properties">
-
-    <dt class="property-"
+<dl class="resources-properties"><dt class="property-"
             title="">
         <span id="id_nodejs">
 <a href="#id_nodejs" style="color: inherit; text-decoration: inherit;">id</a>
@@ -950,8 +879,7 @@ All [input](#inputs) properties are implicitly available as output properties. A
         <span class="property-indicator"></span>
         <span class="property-type">string</span>
     </dt>
-    <dd>{{% md %}}The provider-assigned unique ID for this managed resource.{{% /md %}}</dd>
-    <dt class="property-"
+    <dd>{{% md %}}The provider-assigned unique ID for this managed resource.{{% /md %}}</dd><dt class="property-"
             title="">
         <span id="name_nodejs">
 <a href="#name_nodejs" style="color: inherit; text-decoration: inherit;">name</a>
@@ -959,8 +887,7 @@ All [input](#inputs) properties are implicitly available as output properties. A
         <span class="property-indicator"></span>
         <span class="property-type">string</span>
     </dt>
-    <dd>{{% md %}}The name of the resource{{% /md %}}</dd>
-    <dt class="property-"
+    <dd>{{% md %}}The name of the resource{{% /md %}}</dd><dt class="property-"
             title="">
         <span id="type_nodejs">
 <a href="#type_nodejs" style="color: inherit; text-decoration: inherit;">type</a>
@@ -968,14 +895,11 @@ All [input](#inputs) properties are implicitly available as output properties. A
         <span class="property-indicator"></span>
         <span class="property-type">string</span>
     </dt>
-    <dd>{{% md %}}The type of the resource. E.g. "Microsoft.Compute/virtualMachines" or "Microsoft.Storage/storageAccounts"{{% /md %}}</dd>
-</dl>
+    <dd>{{% md %}}The type of the resource. E.g. "Microsoft.Compute/virtualMachines" or "Microsoft.Storage/storageAccounts"{{% /md %}}</dd></dl>
 {{% /choosable %}}
 
 {{% choosable language python %}}
-<dl class="resources-properties">
-
-    <dt class="property-"
+<dl class="resources-properties"><dt class="property-"
             title="">
         <span id="id_python">
 <a href="#id_python" style="color: inherit; text-decoration: inherit;">id</a>
@@ -983,8 +907,7 @@ All [input](#inputs) properties are implicitly available as output properties. A
         <span class="property-indicator"></span>
         <span class="property-type">str</span>
     </dt>
-    <dd>{{% md %}}The provider-assigned unique ID for this managed resource.{{% /md %}}</dd>
-    <dt class="property-"
+    <dd>{{% md %}}The provider-assigned unique ID for this managed resource.{{% /md %}}</dd><dt class="property-"
             title="">
         <span id="name_python">
 <a href="#name_python" style="color: inherit; text-decoration: inherit;">name</a>
@@ -992,8 +915,7 @@ All [input](#inputs) properties are implicitly available as output properties. A
         <span class="property-indicator"></span>
         <span class="property-type">str</span>
     </dt>
-    <dd>{{% md %}}The name of the resource{{% /md %}}</dd>
-    <dt class="property-"
+    <dd>{{% md %}}The name of the resource{{% /md %}}</dd><dt class="property-"
             title="">
         <span id="type_python">
 <a href="#type_python" style="color: inherit; text-decoration: inherit;">type</a>
@@ -1001,8 +923,7 @@ All [input](#inputs) properties are implicitly available as output properties. A
         <span class="property-indicator"></span>
         <span class="property-type">str</span>
     </dt>
-    <dd>{{% md %}}The type of the resource. E.g. "Microsoft.Compute/virtualMachines" or "Microsoft.Storage/storageAccounts"{{% /md %}}</dd>
-</dl>
+    <dd>{{% md %}}The type of the resource. E.g. "Microsoft.Compute/virtualMachines" or "Microsoft.Storage/storageAccounts"{{% /md %}}</dd></dl>
 {{% /choosable %}}
 
 
@@ -1018,47 +939,33 @@ All [input](#inputs) properties are implicitly available as output properties. A
 <h4 id="hostpooltype">Host<wbr>Pool<wbr>Type</h4>
 
 {{% choosable language csharp %}}
-<dl class="tabular">
-    <dt>Personal</dt>
-    <dd>Personal</dd>
-    <dt>Pooled</dt>
-    <dd>Pooled</dd>
-</dl>
+<dl class="tabular"><dt>Personal</dt>
+    <dd>Personal</dd><dt>Pooled</dt>
+    <dd>Pooled</dd></dl>
 {{% /choosable %}}
 
 {{% choosable language go %}}
-<dl class="tabular">
-    <dt>Host<wbr>Pool<wbr>Type<wbr>Personal</dt>
-    <dd>Personal</dd>
-    <dt>Host<wbr>Pool<wbr>Type<wbr>Pooled</dt>
-    <dd>Pooled</dd>
-</dl>
+<dl class="tabular"><dt>Host<wbr>Pool<wbr>Type<wbr>Personal</dt>
+    <dd>Personal</dd><dt>Host<wbr>Pool<wbr>Type<wbr>Pooled</dt>
+    <dd>Pooled</dd></dl>
 {{% /choosable %}}
 
 {{% choosable language nodejs %}}
-<dl class="tabular">
-    <dt>Personal</dt>
-    <dd>Personal</dd>
-    <dt>Pooled</dt>
-    <dd>Pooled</dd>
-</dl>
+<dl class="tabular"><dt>Personal</dt>
+    <dd>Personal</dd><dt>Pooled</dt>
+    <dd>Pooled</dd></dl>
 {{% /choosable %}}
 
 {{% choosable language python %}}
-<dl class="tabular">
-    <dt>PERSONAL</dt>
-    <dd>Personal</dd>
-    <dt>POOLED</dt>
-    <dd>Pooled</dd>
-</dl>
+<dl class="tabular"><dt>PERSONAL</dt>
+    <dd>Personal</dd><dt>POOLED</dt>
+    <dd>Pooled</dd></dl>
 {{% /choosable %}}
 
 <h4 id="scalinghostpoolreference">Scaling<wbr>Host<wbr>Pool<wbr>Reference</h4>
 
 {{% choosable language csharp %}}
-<dl class="resources-properties">
-
-    <dt class="property-optional"
+<dl class="resources-properties"><dt class="property-optional"
             title="Optional">
         <span id="hostpoolarmpath_csharp">
 <a href="#hostpoolarmpath_csharp" style="color: inherit; text-decoration: inherit;">Host<wbr>Pool<wbr>Arm<wbr>Path</a>
@@ -1066,8 +973,7 @@ All [input](#inputs) properties are implicitly available as output properties. A
         <span class="property-indicator"></span>
         <span class="property-type">string</span>
     </dt>
-    <dd>{{% md %}}Arm path of referenced hostpool.{{% /md %}}</dd>
-    <dt class="property-optional"
+    <dd>{{% md %}}Arm path of referenced hostpool.{{% /md %}}</dd><dt class="property-optional"
             title="Optional">
         <span id="scalingplanenabled_csharp">
 <a href="#scalingplanenabled_csharp" style="color: inherit; text-decoration: inherit;">Scaling<wbr>Plan<wbr>Enabled</a>
@@ -1075,14 +981,11 @@ All [input](#inputs) properties are implicitly available as output properties. A
         <span class="property-indicator"></span>
         <span class="property-type">bool</span>
     </dt>
-    <dd>{{% md %}}Is the scaling plan enabled for this hostpool.{{% /md %}}</dd>
-</dl>
+    <dd>{{% md %}}Is the scaling plan enabled for this hostpool.{{% /md %}}</dd></dl>
 {{% /choosable %}}
 
 {{% choosable language go %}}
-<dl class="resources-properties">
-
-    <dt class="property-optional"
+<dl class="resources-properties"><dt class="property-optional"
             title="Optional">
         <span id="hostpoolarmpath_go">
 <a href="#hostpoolarmpath_go" style="color: inherit; text-decoration: inherit;">Host<wbr>Pool<wbr>Arm<wbr>Path</a>
@@ -1090,8 +993,7 @@ All [input](#inputs) properties are implicitly available as output properties. A
         <span class="property-indicator"></span>
         <span class="property-type">string</span>
     </dt>
-    <dd>{{% md %}}Arm path of referenced hostpool.{{% /md %}}</dd>
-    <dt class="property-optional"
+    <dd>{{% md %}}Arm path of referenced hostpool.{{% /md %}}</dd><dt class="property-optional"
             title="Optional">
         <span id="scalingplanenabled_go">
 <a href="#scalingplanenabled_go" style="color: inherit; text-decoration: inherit;">Scaling<wbr>Plan<wbr>Enabled</a>
@@ -1099,14 +1001,11 @@ All [input](#inputs) properties are implicitly available as output properties. A
         <span class="property-indicator"></span>
         <span class="property-type">bool</span>
     </dt>
-    <dd>{{% md %}}Is the scaling plan enabled for this hostpool.{{% /md %}}</dd>
-</dl>
+    <dd>{{% md %}}Is the scaling plan enabled for this hostpool.{{% /md %}}</dd></dl>
 {{% /choosable %}}
 
 {{% choosable language nodejs %}}
-<dl class="resources-properties">
-
-    <dt class="property-optional"
+<dl class="resources-properties"><dt class="property-optional"
             title="Optional">
         <span id="hostpoolarmpath_nodejs">
 <a href="#hostpoolarmpath_nodejs" style="color: inherit; text-decoration: inherit;">host<wbr>Pool<wbr>Arm<wbr>Path</a>
@@ -1114,8 +1013,7 @@ All [input](#inputs) properties are implicitly available as output properties. A
         <span class="property-indicator"></span>
         <span class="property-type">string</span>
     </dt>
-    <dd>{{% md %}}Arm path of referenced hostpool.{{% /md %}}</dd>
-    <dt class="property-optional"
+    <dd>{{% md %}}Arm path of referenced hostpool.{{% /md %}}</dd><dt class="property-optional"
             title="Optional">
         <span id="scalingplanenabled_nodejs">
 <a href="#scalingplanenabled_nodejs" style="color: inherit; text-decoration: inherit;">scaling<wbr>Plan<wbr>Enabled</a>
@@ -1123,14 +1021,11 @@ All [input](#inputs) properties are implicitly available as output properties. A
         <span class="property-indicator"></span>
         <span class="property-type">boolean</span>
     </dt>
-    <dd>{{% md %}}Is the scaling plan enabled for this hostpool.{{% /md %}}</dd>
-</dl>
+    <dd>{{% md %}}Is the scaling plan enabled for this hostpool.{{% /md %}}</dd></dl>
 {{% /choosable %}}
 
 {{% choosable language python %}}
-<dl class="resources-properties">
-
-    <dt class="property-optional"
+<dl class="resources-properties"><dt class="property-optional"
             title="Optional">
         <span id="host_pool_arm_path_python">
 <a href="#host_pool_arm_path_python" style="color: inherit; text-decoration: inherit;">host_<wbr>pool_<wbr>arm_<wbr>path</a>
@@ -1138,8 +1033,7 @@ All [input](#inputs) properties are implicitly available as output properties. A
         <span class="property-indicator"></span>
         <span class="property-type">str</span>
     </dt>
-    <dd>{{% md %}}Arm path of referenced hostpool.{{% /md %}}</dd>
-    <dt class="property-optional"
+    <dd>{{% md %}}Arm path of referenced hostpool.{{% /md %}}</dd><dt class="property-optional"
             title="Optional">
         <span id="scaling_plan_enabled_python">
 <a href="#scaling_plan_enabled_python" style="color: inherit; text-decoration: inherit;">scaling_<wbr>plan_<wbr>enabled</a>
@@ -1147,16 +1041,13 @@ All [input](#inputs) properties are implicitly available as output properties. A
         <span class="property-indicator"></span>
         <span class="property-type">bool</span>
     </dt>
-    <dd>{{% md %}}Is the scaling plan enabled for this hostpool.{{% /md %}}</dd>
-</dl>
+    <dd>{{% md %}}Is the scaling plan enabled for this hostpool.{{% /md %}}</dd></dl>
 {{% /choosable %}}
 
 <h4 id="scalinghostpoolreferenceresponse">Scaling<wbr>Host<wbr>Pool<wbr>Reference<wbr>Response</h4>
 
 {{% choosable language csharp %}}
-<dl class="resources-properties">
-
-    <dt class="property-optional"
+<dl class="resources-properties"><dt class="property-optional"
             title="Optional">
         <span id="hostpoolarmpath_csharp">
 <a href="#hostpoolarmpath_csharp" style="color: inherit; text-decoration: inherit;">Host<wbr>Pool<wbr>Arm<wbr>Path</a>
@@ -1164,8 +1055,7 @@ All [input](#inputs) properties are implicitly available as output properties. A
         <span class="property-indicator"></span>
         <span class="property-type">string</span>
     </dt>
-    <dd>{{% md %}}Arm path of referenced hostpool.{{% /md %}}</dd>
-    <dt class="property-optional"
+    <dd>{{% md %}}Arm path of referenced hostpool.{{% /md %}}</dd><dt class="property-optional"
             title="Optional">
         <span id="scalingplanenabled_csharp">
 <a href="#scalingplanenabled_csharp" style="color: inherit; text-decoration: inherit;">Scaling<wbr>Plan<wbr>Enabled</a>
@@ -1173,14 +1063,11 @@ All [input](#inputs) properties are implicitly available as output properties. A
         <span class="property-indicator"></span>
         <span class="property-type">bool</span>
     </dt>
-    <dd>{{% md %}}Is the scaling plan enabled for this hostpool.{{% /md %}}</dd>
-</dl>
+    <dd>{{% md %}}Is the scaling plan enabled for this hostpool.{{% /md %}}</dd></dl>
 {{% /choosable %}}
 
 {{% choosable language go %}}
-<dl class="resources-properties">
-
-    <dt class="property-optional"
+<dl class="resources-properties"><dt class="property-optional"
             title="Optional">
         <span id="hostpoolarmpath_go">
 <a href="#hostpoolarmpath_go" style="color: inherit; text-decoration: inherit;">Host<wbr>Pool<wbr>Arm<wbr>Path</a>
@@ -1188,8 +1075,7 @@ All [input](#inputs) properties are implicitly available as output properties. A
         <span class="property-indicator"></span>
         <span class="property-type">string</span>
     </dt>
-    <dd>{{% md %}}Arm path of referenced hostpool.{{% /md %}}</dd>
-    <dt class="property-optional"
+    <dd>{{% md %}}Arm path of referenced hostpool.{{% /md %}}</dd><dt class="property-optional"
             title="Optional">
         <span id="scalingplanenabled_go">
 <a href="#scalingplanenabled_go" style="color: inherit; text-decoration: inherit;">Scaling<wbr>Plan<wbr>Enabled</a>
@@ -1197,14 +1083,11 @@ All [input](#inputs) properties are implicitly available as output properties. A
         <span class="property-indicator"></span>
         <span class="property-type">bool</span>
     </dt>
-    <dd>{{% md %}}Is the scaling plan enabled for this hostpool.{{% /md %}}</dd>
-</dl>
+    <dd>{{% md %}}Is the scaling plan enabled for this hostpool.{{% /md %}}</dd></dl>
 {{% /choosable %}}
 
 {{% choosable language nodejs %}}
-<dl class="resources-properties">
-
-    <dt class="property-optional"
+<dl class="resources-properties"><dt class="property-optional"
             title="Optional">
         <span id="hostpoolarmpath_nodejs">
 <a href="#hostpoolarmpath_nodejs" style="color: inherit; text-decoration: inherit;">host<wbr>Pool<wbr>Arm<wbr>Path</a>
@@ -1212,8 +1095,7 @@ All [input](#inputs) properties are implicitly available as output properties. A
         <span class="property-indicator"></span>
         <span class="property-type">string</span>
     </dt>
-    <dd>{{% md %}}Arm path of referenced hostpool.{{% /md %}}</dd>
-    <dt class="property-optional"
+    <dd>{{% md %}}Arm path of referenced hostpool.{{% /md %}}</dd><dt class="property-optional"
             title="Optional">
         <span id="scalingplanenabled_nodejs">
 <a href="#scalingplanenabled_nodejs" style="color: inherit; text-decoration: inherit;">scaling<wbr>Plan<wbr>Enabled</a>
@@ -1221,14 +1103,11 @@ All [input](#inputs) properties are implicitly available as output properties. A
         <span class="property-indicator"></span>
         <span class="property-type">boolean</span>
     </dt>
-    <dd>{{% md %}}Is the scaling plan enabled for this hostpool.{{% /md %}}</dd>
-</dl>
+    <dd>{{% md %}}Is the scaling plan enabled for this hostpool.{{% /md %}}</dd></dl>
 {{% /choosable %}}
 
 {{% choosable language python %}}
-<dl class="resources-properties">
-
-    <dt class="property-optional"
+<dl class="resources-properties"><dt class="property-optional"
             title="Optional">
         <span id="host_pool_arm_path_python">
 <a href="#host_pool_arm_path_python" style="color: inherit; text-decoration: inherit;">host_<wbr>pool_<wbr>arm_<wbr>path</a>
@@ -1236,8 +1115,7 @@ All [input](#inputs) properties are implicitly available as output properties. A
         <span class="property-indicator"></span>
         <span class="property-type">str</span>
     </dt>
-    <dd>{{% md %}}Arm path of referenced hostpool.{{% /md %}}</dd>
-    <dt class="property-optional"
+    <dd>{{% md %}}Arm path of referenced hostpool.{{% /md %}}</dd><dt class="property-optional"
             title="Optional">
         <span id="scaling_plan_enabled_python">
 <a href="#scaling_plan_enabled_python" style="color: inherit; text-decoration: inherit;">scaling_<wbr>plan_<wbr>enabled</a>
@@ -1245,16 +1123,13 @@ All [input](#inputs) properties are implicitly available as output properties. A
         <span class="property-indicator"></span>
         <span class="property-type">bool</span>
     </dt>
-    <dd>{{% md %}}Is the scaling plan enabled for this hostpool.{{% /md %}}</dd>
-</dl>
+    <dd>{{% md %}}Is the scaling plan enabled for this hostpool.{{% /md %}}</dd></dl>
 {{% /choosable %}}
 
 <h4 id="scalingschedule">Scaling<wbr>Schedule</h4>
 
 {{% choosable language csharp %}}
-<dl class="resources-properties">
-
-    <dt class="property-optional"
+<dl class="resources-properties"><dt class="property-optional"
             title="Optional">
         <span id="daysofweek_csharp">
 <a href="#daysofweek_csharp" style="color: inherit; text-decoration: inherit;">Days<wbr>Of<wbr>Week</a>
@@ -1262,8 +1137,7 @@ All [input](#inputs) properties are implicitly available as output properties. A
         <span class="property-indicator"></span>
         <span class="property-type">List&lt;string&gt;</span>
     </dt>
-    <dd>{{% md %}}Set of days of the week on which this schedule is active.{{% /md %}}</dd>
-    <dt class="property-optional"
+    <dd>{{% md %}}Set of days of the week on which this schedule is active.{{% /md %}}</dd><dt class="property-optional"
             title="Optional">
         <span id="name_csharp">
 <a href="#name_csharp" style="color: inherit; text-decoration: inherit;">Name</a>
@@ -1271,8 +1145,7 @@ All [input](#inputs) properties are implicitly available as output properties. A
         <span class="property-indicator"></span>
         <span class="property-type">string</span>
     </dt>
-    <dd>{{% md %}}Name of the scaling schedule.{{% /md %}}</dd>
-    <dt class="property-optional"
+    <dd>{{% md %}}Name of the scaling schedule.{{% /md %}}</dd><dt class="property-optional"
             title="Optional">
         <span id="offpeakloadbalancingalgorithm_csharp">
 <a href="#offpeakloadbalancingalgorithm_csharp" style="color: inherit; text-decoration: inherit;">Off<wbr>Peak<wbr>Load<wbr>Balancing<wbr>Algorithm</a>
@@ -1280,8 +1153,7 @@ All [input](#inputs) properties are implicitly available as output properties. A
         <span class="property-indicator"></span>
         <span class="property-type">string | <a href="#sessionhostloadbalancingalgorithm">Pulumi.<wbr>Azure<wbr>Native.<wbr>Desktop<wbr>Virtualization.<wbr>Session<wbr>Host<wbr>Load<wbr>Balancing<wbr>Algorithm</a></span>
     </dt>
-    <dd>{{% md %}}Load balancing algorithm for off-peak period.{{% /md %}}</dd>
-    <dt class="property-optional"
+    <dd>{{% md %}}Load balancing algorithm for off-peak period.{{% /md %}}</dd><dt class="property-optional"
             title="Optional">
         <span id="offpeakstarttime_csharp">
 <a href="#offpeakstarttime_csharp" style="color: inherit; text-decoration: inherit;">Off<wbr>Peak<wbr>Start<wbr>Time</a>
@@ -1289,8 +1161,7 @@ All [input](#inputs) properties are implicitly available as output properties. A
         <span class="property-indicator"></span>
         <span class="property-type">string</span>
     </dt>
-    <dd>{{% md %}}Starting time for off-peak period.{{% /md %}}</dd>
-    <dt class="property-optional"
+    <dd>{{% md %}}Starting time for off-peak period.{{% /md %}}</dd><dt class="property-optional"
             title="Optional">
         <span id="peakloadbalancingalgorithm_csharp">
 <a href="#peakloadbalancingalgorithm_csharp" style="color: inherit; text-decoration: inherit;">Peak<wbr>Load<wbr>Balancing<wbr>Algorithm</a>
@@ -1298,8 +1169,7 @@ All [input](#inputs) properties are implicitly available as output properties. A
         <span class="property-indicator"></span>
         <span class="property-type">string | <a href="#sessionhostloadbalancingalgorithm">Pulumi.<wbr>Azure<wbr>Native.<wbr>Desktop<wbr>Virtualization.<wbr>Session<wbr>Host<wbr>Load<wbr>Balancing<wbr>Algorithm</a></span>
     </dt>
-    <dd>{{% md %}}Load balancing algorithm for peak period.{{% /md %}}</dd>
-    <dt class="property-optional"
+    <dd>{{% md %}}Load balancing algorithm for peak period.{{% /md %}}</dd><dt class="property-optional"
             title="Optional">
         <span id="peakstarttime_csharp">
 <a href="#peakstarttime_csharp" style="color: inherit; text-decoration: inherit;">Peak<wbr>Start<wbr>Time</a>
@@ -1307,8 +1177,7 @@ All [input](#inputs) properties are implicitly available as output properties. A
         <span class="property-indicator"></span>
         <span class="property-type">string</span>
     </dt>
-    <dd>{{% md %}}Starting time for peak period.{{% /md %}}</dd>
-    <dt class="property-optional"
+    <dd>{{% md %}}Starting time for peak period.{{% /md %}}</dd><dt class="property-optional"
             title="Optional">
         <span id="rampdowncapacitythresholdpct_csharp">
 <a href="#rampdowncapacitythresholdpct_csharp" style="color: inherit; text-decoration: inherit;">Ramp<wbr>Down<wbr>Capacity<wbr>Threshold<wbr>Pct</a>
@@ -1316,8 +1185,7 @@ All [input](#inputs) properties are implicitly available as output properties. A
         <span class="property-indicator"></span>
         <span class="property-type">int</span>
     </dt>
-    <dd>{{% md %}}Capacity threshold for ramp down period.{{% /md %}}</dd>
-    <dt class="property-optional"
+    <dd>{{% md %}}Capacity threshold for ramp down period.{{% /md %}}</dd><dt class="property-optional"
             title="Optional">
         <span id="rampdownforcelogoffusers_csharp">
 <a href="#rampdownforcelogoffusers_csharp" style="color: inherit; text-decoration: inherit;">Ramp<wbr>Down<wbr>Force<wbr>Logoff<wbr>Users</a>
@@ -1325,8 +1193,7 @@ All [input](#inputs) properties are implicitly available as output properties. A
         <span class="property-indicator"></span>
         <span class="property-type">bool</span>
     </dt>
-    <dd>{{% md %}}Should users be logged off forcefully from hosts.{{% /md %}}</dd>
-    <dt class="property-optional"
+    <dd>{{% md %}}Should users be logged off forcefully from hosts.{{% /md %}}</dd><dt class="property-optional"
             title="Optional">
         <span id="rampdownloadbalancingalgorithm_csharp">
 <a href="#rampdownloadbalancingalgorithm_csharp" style="color: inherit; text-decoration: inherit;">Ramp<wbr>Down<wbr>Load<wbr>Balancing<wbr>Algorithm</a>
@@ -1334,8 +1201,7 @@ All [input](#inputs) properties are implicitly available as output properties. A
         <span class="property-indicator"></span>
         <span class="property-type">string | <a href="#sessionhostloadbalancingalgorithm">Pulumi.<wbr>Azure<wbr>Native.<wbr>Desktop<wbr>Virtualization.<wbr>Session<wbr>Host<wbr>Load<wbr>Balancing<wbr>Algorithm</a></span>
     </dt>
-    <dd>{{% md %}}Load balancing algorithm for ramp down period.{{% /md %}}</dd>
-    <dt class="property-optional"
+    <dd>{{% md %}}Load balancing algorithm for ramp down period.{{% /md %}}</dd><dt class="property-optional"
             title="Optional">
         <span id="rampdownminimumhostspct_csharp">
 <a href="#rampdownminimumhostspct_csharp" style="color: inherit; text-decoration: inherit;">Ramp<wbr>Down<wbr>Minimum<wbr>Hosts<wbr>Pct</a>
@@ -1343,8 +1209,7 @@ All [input](#inputs) properties are implicitly available as output properties. A
         <span class="property-indicator"></span>
         <span class="property-type">int</span>
     </dt>
-    <dd>{{% md %}}Minimum host percentage for ramp down period.{{% /md %}}</dd>
-    <dt class="property-optional"
+    <dd>{{% md %}}Minimum host percentage for ramp down period.{{% /md %}}</dd><dt class="property-optional"
             title="Optional">
         <span id="rampdownnotificationmessage_csharp">
 <a href="#rampdownnotificationmessage_csharp" style="color: inherit; text-decoration: inherit;">Ramp<wbr>Down<wbr>Notification<wbr>Message</a>
@@ -1352,8 +1217,7 @@ All [input](#inputs) properties are implicitly available as output properties. A
         <span class="property-indicator"></span>
         <span class="property-type">string</span>
     </dt>
-    <dd>{{% md %}}Notification message for users during ramp down period.{{% /md %}}</dd>
-    <dt class="property-optional"
+    <dd>{{% md %}}Notification message for users during ramp down period.{{% /md %}}</dd><dt class="property-optional"
             title="Optional">
         <span id="rampdownstarttime_csharp">
 <a href="#rampdownstarttime_csharp" style="color: inherit; text-decoration: inherit;">Ramp<wbr>Down<wbr>Start<wbr>Time</a>
@@ -1361,8 +1225,7 @@ All [input](#inputs) properties are implicitly available as output properties. A
         <span class="property-indicator"></span>
         <span class="property-type">string</span>
     </dt>
-    <dd>{{% md %}}Starting time for ramp down period.{{% /md %}}</dd>
-    <dt class="property-optional"
+    <dd>{{% md %}}Starting time for ramp down period.{{% /md %}}</dd><dt class="property-optional"
             title="Optional">
         <span id="rampdownstophostswhen_csharp">
 <a href="#rampdownstophostswhen_csharp" style="color: inherit; text-decoration: inherit;">Ramp<wbr>Down<wbr>Stop<wbr>Hosts<wbr>When</a>
@@ -1370,8 +1233,7 @@ All [input](#inputs) properties are implicitly available as output properties. A
         <span class="property-indicator"></span>
         <span class="property-type">string | <a href="#stophostswhen">Pulumi.<wbr>Azure<wbr>Native.<wbr>Desktop<wbr>Virtualization.<wbr>Stop<wbr>Hosts<wbr>When</a></span>
     </dt>
-    <dd>{{% md %}}Specifies when to stop hosts during ramp down period.{{% /md %}}</dd>
-    <dt class="property-optional"
+    <dd>{{% md %}}Specifies when to stop hosts during ramp down period.{{% /md %}}</dd><dt class="property-optional"
             title="Optional">
         <span id="rampdownwaittimeminutes_csharp">
 <a href="#rampdownwaittimeminutes_csharp" style="color: inherit; text-decoration: inherit;">Ramp<wbr>Down<wbr>Wait<wbr>Time<wbr>Minutes</a>
@@ -1379,8 +1241,7 @@ All [input](#inputs) properties are implicitly available as output properties. A
         <span class="property-indicator"></span>
         <span class="property-type">int</span>
     </dt>
-    <dd>{{% md %}}Number of minutes to wait to stop hosts during ramp down period.{{% /md %}}</dd>
-    <dt class="property-optional"
+    <dd>{{% md %}}Number of minutes to wait to stop hosts during ramp down period.{{% /md %}}</dd><dt class="property-optional"
             title="Optional">
         <span id="rampupcapacitythresholdpct_csharp">
 <a href="#rampupcapacitythresholdpct_csharp" style="color: inherit; text-decoration: inherit;">Ramp<wbr>Up<wbr>Capacity<wbr>Threshold<wbr>Pct</a>
@@ -1388,8 +1249,7 @@ All [input](#inputs) properties are implicitly available as output properties. A
         <span class="property-indicator"></span>
         <span class="property-type">int</span>
     </dt>
-    <dd>{{% md %}}Capacity threshold for ramp up period.{{% /md %}}</dd>
-    <dt class="property-optional"
+    <dd>{{% md %}}Capacity threshold for ramp up period.{{% /md %}}</dd><dt class="property-optional"
             title="Optional">
         <span id="rampuploadbalancingalgorithm_csharp">
 <a href="#rampuploadbalancingalgorithm_csharp" style="color: inherit; text-decoration: inherit;">Ramp<wbr>Up<wbr>Load<wbr>Balancing<wbr>Algorithm</a>
@@ -1397,8 +1257,7 @@ All [input](#inputs) properties are implicitly available as output properties. A
         <span class="property-indicator"></span>
         <span class="property-type">string | <a href="#sessionhostloadbalancingalgorithm">Pulumi.<wbr>Azure<wbr>Native.<wbr>Desktop<wbr>Virtualization.<wbr>Session<wbr>Host<wbr>Load<wbr>Balancing<wbr>Algorithm</a></span>
     </dt>
-    <dd>{{% md %}}Load balancing algorithm for ramp up period.{{% /md %}}</dd>
-    <dt class="property-optional"
+    <dd>{{% md %}}Load balancing algorithm for ramp up period.{{% /md %}}</dd><dt class="property-optional"
             title="Optional">
         <span id="rampupminimumhostspct_csharp">
 <a href="#rampupminimumhostspct_csharp" style="color: inherit; text-decoration: inherit;">Ramp<wbr>Up<wbr>Minimum<wbr>Hosts<wbr>Pct</a>
@@ -1406,8 +1265,7 @@ All [input](#inputs) properties are implicitly available as output properties. A
         <span class="property-indicator"></span>
         <span class="property-type">int</span>
     </dt>
-    <dd>{{% md %}}Minimum host percentage for ramp up period.{{% /md %}}</dd>
-    <dt class="property-optional"
+    <dd>{{% md %}}Minimum host percentage for ramp up period.{{% /md %}}</dd><dt class="property-optional"
             title="Optional">
         <span id="rampupstarttime_csharp">
 <a href="#rampupstarttime_csharp" style="color: inherit; text-decoration: inherit;">Ramp<wbr>Up<wbr>Start<wbr>Time</a>
@@ -1415,14 +1273,11 @@ All [input](#inputs) properties are implicitly available as output properties. A
         <span class="property-indicator"></span>
         <span class="property-type">string</span>
     </dt>
-    <dd>{{% md %}}Starting time for ramp up period.{{% /md %}}</dd>
-</dl>
+    <dd>{{% md %}}Starting time for ramp up period.{{% /md %}}</dd></dl>
 {{% /choosable %}}
 
 {{% choosable language go %}}
-<dl class="resources-properties">
-
-    <dt class="property-optional"
+<dl class="resources-properties"><dt class="property-optional"
             title="Optional">
         <span id="daysofweek_go">
 <a href="#daysofweek_go" style="color: inherit; text-decoration: inherit;">Days<wbr>Of<wbr>Week</a>
@@ -1430,8 +1285,7 @@ All [input](#inputs) properties are implicitly available as output properties. A
         <span class="property-indicator"></span>
         <span class="property-type">[]string</span>
     </dt>
-    <dd>{{% md %}}Set of days of the week on which this schedule is active.{{% /md %}}</dd>
-    <dt class="property-optional"
+    <dd>{{% md %}}Set of days of the week on which this schedule is active.{{% /md %}}</dd><dt class="property-optional"
             title="Optional">
         <span id="name_go">
 <a href="#name_go" style="color: inherit; text-decoration: inherit;">Name</a>
@@ -1439,8 +1293,7 @@ All [input](#inputs) properties are implicitly available as output properties. A
         <span class="property-indicator"></span>
         <span class="property-type">string</span>
     </dt>
-    <dd>{{% md %}}Name of the scaling schedule.{{% /md %}}</dd>
-    <dt class="property-optional"
+    <dd>{{% md %}}Name of the scaling schedule.{{% /md %}}</dd><dt class="property-optional"
             title="Optional">
         <span id="offpeakloadbalancingalgorithm_go">
 <a href="#offpeakloadbalancingalgorithm_go" style="color: inherit; text-decoration: inherit;">Off<wbr>Peak<wbr>Load<wbr>Balancing<wbr>Algorithm</a>
@@ -1448,8 +1301,7 @@ All [input](#inputs) properties are implicitly available as output properties. A
         <span class="property-indicator"></span>
         <span class="property-type">string | <a href="#sessionhostloadbalancingalgorithm">Session<wbr>Host<wbr>Load<wbr>Balancing<wbr>Algorithm</a></span>
     </dt>
-    <dd>{{% md %}}Load balancing algorithm for off-peak period.{{% /md %}}</dd>
-    <dt class="property-optional"
+    <dd>{{% md %}}Load balancing algorithm for off-peak period.{{% /md %}}</dd><dt class="property-optional"
             title="Optional">
         <span id="offpeakstarttime_go">
 <a href="#offpeakstarttime_go" style="color: inherit; text-decoration: inherit;">Off<wbr>Peak<wbr>Start<wbr>Time</a>
@@ -1457,8 +1309,7 @@ All [input](#inputs) properties are implicitly available as output properties. A
         <span class="property-indicator"></span>
         <span class="property-type">string</span>
     </dt>
-    <dd>{{% md %}}Starting time for off-peak period.{{% /md %}}</dd>
-    <dt class="property-optional"
+    <dd>{{% md %}}Starting time for off-peak period.{{% /md %}}</dd><dt class="property-optional"
             title="Optional">
         <span id="peakloadbalancingalgorithm_go">
 <a href="#peakloadbalancingalgorithm_go" style="color: inherit; text-decoration: inherit;">Peak<wbr>Load<wbr>Balancing<wbr>Algorithm</a>
@@ -1466,8 +1317,7 @@ All [input](#inputs) properties are implicitly available as output properties. A
         <span class="property-indicator"></span>
         <span class="property-type">string | <a href="#sessionhostloadbalancingalgorithm">Session<wbr>Host<wbr>Load<wbr>Balancing<wbr>Algorithm</a></span>
     </dt>
-    <dd>{{% md %}}Load balancing algorithm for peak period.{{% /md %}}</dd>
-    <dt class="property-optional"
+    <dd>{{% md %}}Load balancing algorithm for peak period.{{% /md %}}</dd><dt class="property-optional"
             title="Optional">
         <span id="peakstarttime_go">
 <a href="#peakstarttime_go" style="color: inherit; text-decoration: inherit;">Peak<wbr>Start<wbr>Time</a>
@@ -1475,8 +1325,7 @@ All [input](#inputs) properties are implicitly available as output properties. A
         <span class="property-indicator"></span>
         <span class="property-type">string</span>
     </dt>
-    <dd>{{% md %}}Starting time for peak period.{{% /md %}}</dd>
-    <dt class="property-optional"
+    <dd>{{% md %}}Starting time for peak period.{{% /md %}}</dd><dt class="property-optional"
             title="Optional">
         <span id="rampdowncapacitythresholdpct_go">
 <a href="#rampdowncapacitythresholdpct_go" style="color: inherit; text-decoration: inherit;">Ramp<wbr>Down<wbr>Capacity<wbr>Threshold<wbr>Pct</a>
@@ -1484,8 +1333,7 @@ All [input](#inputs) properties are implicitly available as output properties. A
         <span class="property-indicator"></span>
         <span class="property-type">int</span>
     </dt>
-    <dd>{{% md %}}Capacity threshold for ramp down period.{{% /md %}}</dd>
-    <dt class="property-optional"
+    <dd>{{% md %}}Capacity threshold for ramp down period.{{% /md %}}</dd><dt class="property-optional"
             title="Optional">
         <span id="rampdownforcelogoffusers_go">
 <a href="#rampdownforcelogoffusers_go" style="color: inherit; text-decoration: inherit;">Ramp<wbr>Down<wbr>Force<wbr>Logoff<wbr>Users</a>
@@ -1493,8 +1341,7 @@ All [input](#inputs) properties are implicitly available as output properties. A
         <span class="property-indicator"></span>
         <span class="property-type">bool</span>
     </dt>
-    <dd>{{% md %}}Should users be logged off forcefully from hosts.{{% /md %}}</dd>
-    <dt class="property-optional"
+    <dd>{{% md %}}Should users be logged off forcefully from hosts.{{% /md %}}</dd><dt class="property-optional"
             title="Optional">
         <span id="rampdownloadbalancingalgorithm_go">
 <a href="#rampdownloadbalancingalgorithm_go" style="color: inherit; text-decoration: inherit;">Ramp<wbr>Down<wbr>Load<wbr>Balancing<wbr>Algorithm</a>
@@ -1502,8 +1349,7 @@ All [input](#inputs) properties are implicitly available as output properties. A
         <span class="property-indicator"></span>
         <span class="property-type">string | <a href="#sessionhostloadbalancingalgorithm">Session<wbr>Host<wbr>Load<wbr>Balancing<wbr>Algorithm</a></span>
     </dt>
-    <dd>{{% md %}}Load balancing algorithm for ramp down period.{{% /md %}}</dd>
-    <dt class="property-optional"
+    <dd>{{% md %}}Load balancing algorithm for ramp down period.{{% /md %}}</dd><dt class="property-optional"
             title="Optional">
         <span id="rampdownminimumhostspct_go">
 <a href="#rampdownminimumhostspct_go" style="color: inherit; text-decoration: inherit;">Ramp<wbr>Down<wbr>Minimum<wbr>Hosts<wbr>Pct</a>
@@ -1511,8 +1357,7 @@ All [input](#inputs) properties are implicitly available as output properties. A
         <span class="property-indicator"></span>
         <span class="property-type">int</span>
     </dt>
-    <dd>{{% md %}}Minimum host percentage for ramp down period.{{% /md %}}</dd>
-    <dt class="property-optional"
+    <dd>{{% md %}}Minimum host percentage for ramp down period.{{% /md %}}</dd><dt class="property-optional"
             title="Optional">
         <span id="rampdownnotificationmessage_go">
 <a href="#rampdownnotificationmessage_go" style="color: inherit; text-decoration: inherit;">Ramp<wbr>Down<wbr>Notification<wbr>Message</a>
@@ -1520,8 +1365,7 @@ All [input](#inputs) properties are implicitly available as output properties. A
         <span class="property-indicator"></span>
         <span class="property-type">string</span>
     </dt>
-    <dd>{{% md %}}Notification message for users during ramp down period.{{% /md %}}</dd>
-    <dt class="property-optional"
+    <dd>{{% md %}}Notification message for users during ramp down period.{{% /md %}}</dd><dt class="property-optional"
             title="Optional">
         <span id="rampdownstarttime_go">
 <a href="#rampdownstarttime_go" style="color: inherit; text-decoration: inherit;">Ramp<wbr>Down<wbr>Start<wbr>Time</a>
@@ -1529,8 +1373,7 @@ All [input](#inputs) properties are implicitly available as output properties. A
         <span class="property-indicator"></span>
         <span class="property-type">string</span>
     </dt>
-    <dd>{{% md %}}Starting time for ramp down period.{{% /md %}}</dd>
-    <dt class="property-optional"
+    <dd>{{% md %}}Starting time for ramp down period.{{% /md %}}</dd><dt class="property-optional"
             title="Optional">
         <span id="rampdownstophostswhen_go">
 <a href="#rampdownstophostswhen_go" style="color: inherit; text-decoration: inherit;">Ramp<wbr>Down<wbr>Stop<wbr>Hosts<wbr>When</a>
@@ -1538,8 +1381,7 @@ All [input](#inputs) properties are implicitly available as output properties. A
         <span class="property-indicator"></span>
         <span class="property-type">string | <a href="#stophostswhen">Stop<wbr>Hosts<wbr>When</a></span>
     </dt>
-    <dd>{{% md %}}Specifies when to stop hosts during ramp down period.{{% /md %}}</dd>
-    <dt class="property-optional"
+    <dd>{{% md %}}Specifies when to stop hosts during ramp down period.{{% /md %}}</dd><dt class="property-optional"
             title="Optional">
         <span id="rampdownwaittimeminutes_go">
 <a href="#rampdownwaittimeminutes_go" style="color: inherit; text-decoration: inherit;">Ramp<wbr>Down<wbr>Wait<wbr>Time<wbr>Minutes</a>
@@ -1547,8 +1389,7 @@ All [input](#inputs) properties are implicitly available as output properties. A
         <span class="property-indicator"></span>
         <span class="property-type">int</span>
     </dt>
-    <dd>{{% md %}}Number of minutes to wait to stop hosts during ramp down period.{{% /md %}}</dd>
-    <dt class="property-optional"
+    <dd>{{% md %}}Number of minutes to wait to stop hosts during ramp down period.{{% /md %}}</dd><dt class="property-optional"
             title="Optional">
         <span id="rampupcapacitythresholdpct_go">
 <a href="#rampupcapacitythresholdpct_go" style="color: inherit; text-decoration: inherit;">Ramp<wbr>Up<wbr>Capacity<wbr>Threshold<wbr>Pct</a>
@@ -1556,8 +1397,7 @@ All [input](#inputs) properties are implicitly available as output properties. A
         <span class="property-indicator"></span>
         <span class="property-type">int</span>
     </dt>
-    <dd>{{% md %}}Capacity threshold for ramp up period.{{% /md %}}</dd>
-    <dt class="property-optional"
+    <dd>{{% md %}}Capacity threshold for ramp up period.{{% /md %}}</dd><dt class="property-optional"
             title="Optional">
         <span id="rampuploadbalancingalgorithm_go">
 <a href="#rampuploadbalancingalgorithm_go" style="color: inherit; text-decoration: inherit;">Ramp<wbr>Up<wbr>Load<wbr>Balancing<wbr>Algorithm</a>
@@ -1565,8 +1405,7 @@ All [input](#inputs) properties are implicitly available as output properties. A
         <span class="property-indicator"></span>
         <span class="property-type">string | <a href="#sessionhostloadbalancingalgorithm">Session<wbr>Host<wbr>Load<wbr>Balancing<wbr>Algorithm</a></span>
     </dt>
-    <dd>{{% md %}}Load balancing algorithm for ramp up period.{{% /md %}}</dd>
-    <dt class="property-optional"
+    <dd>{{% md %}}Load balancing algorithm for ramp up period.{{% /md %}}</dd><dt class="property-optional"
             title="Optional">
         <span id="rampupminimumhostspct_go">
 <a href="#rampupminimumhostspct_go" style="color: inherit; text-decoration: inherit;">Ramp<wbr>Up<wbr>Minimum<wbr>Hosts<wbr>Pct</a>
@@ -1574,8 +1413,7 @@ All [input](#inputs) properties are implicitly available as output properties. A
         <span class="property-indicator"></span>
         <span class="property-type">int</span>
     </dt>
-    <dd>{{% md %}}Minimum host percentage for ramp up period.{{% /md %}}</dd>
-    <dt class="property-optional"
+    <dd>{{% md %}}Minimum host percentage for ramp up period.{{% /md %}}</dd><dt class="property-optional"
             title="Optional">
         <span id="rampupstarttime_go">
 <a href="#rampupstarttime_go" style="color: inherit; text-decoration: inherit;">Ramp<wbr>Up<wbr>Start<wbr>Time</a>
@@ -1583,14 +1421,11 @@ All [input](#inputs) properties are implicitly available as output properties. A
         <span class="property-indicator"></span>
         <span class="property-type">string</span>
     </dt>
-    <dd>{{% md %}}Starting time for ramp up period.{{% /md %}}</dd>
-</dl>
+    <dd>{{% md %}}Starting time for ramp up period.{{% /md %}}</dd></dl>
 {{% /choosable %}}
 
 {{% choosable language nodejs %}}
-<dl class="resources-properties">
-
-    <dt class="property-optional"
+<dl class="resources-properties"><dt class="property-optional"
             title="Optional">
         <span id="daysofweek_nodejs">
 <a href="#daysofweek_nodejs" style="color: inherit; text-decoration: inherit;">days<wbr>Of<wbr>Week</a>
@@ -1598,8 +1433,7 @@ All [input](#inputs) properties are implicitly available as output properties. A
         <span class="property-indicator"></span>
         <span class="property-type">string[]</span>
     </dt>
-    <dd>{{% md %}}Set of days of the week on which this schedule is active.{{% /md %}}</dd>
-    <dt class="property-optional"
+    <dd>{{% md %}}Set of days of the week on which this schedule is active.{{% /md %}}</dd><dt class="property-optional"
             title="Optional">
         <span id="name_nodejs">
 <a href="#name_nodejs" style="color: inherit; text-decoration: inherit;">name</a>
@@ -1607,8 +1441,7 @@ All [input](#inputs) properties are implicitly available as output properties. A
         <span class="property-indicator"></span>
         <span class="property-type">string</span>
     </dt>
-    <dd>{{% md %}}Name of the scaling schedule.{{% /md %}}</dd>
-    <dt class="property-optional"
+    <dd>{{% md %}}Name of the scaling schedule.{{% /md %}}</dd><dt class="property-optional"
             title="Optional">
         <span id="offpeakloadbalancingalgorithm_nodejs">
 <a href="#offpeakloadbalancingalgorithm_nodejs" style="color: inherit; text-decoration: inherit;">off<wbr>Peak<wbr>Load<wbr>Balancing<wbr>Algorithm</a>
@@ -1616,8 +1449,7 @@ All [input](#inputs) properties are implicitly available as output properties. A
         <span class="property-indicator"></span>
         <span class="property-type">string | <a href="#sessionhostloadbalancingalgorithm">Session<wbr>Host<wbr>Load<wbr>Balancing<wbr>Algorithm</a></span>
     </dt>
-    <dd>{{% md %}}Load balancing algorithm for off-peak period.{{% /md %}}</dd>
-    <dt class="property-optional"
+    <dd>{{% md %}}Load balancing algorithm for off-peak period.{{% /md %}}</dd><dt class="property-optional"
             title="Optional">
         <span id="offpeakstarttime_nodejs">
 <a href="#offpeakstarttime_nodejs" style="color: inherit; text-decoration: inherit;">off<wbr>Peak<wbr>Start<wbr>Time</a>
@@ -1625,8 +1457,7 @@ All [input](#inputs) properties are implicitly available as output properties. A
         <span class="property-indicator"></span>
         <span class="property-type">string</span>
     </dt>
-    <dd>{{% md %}}Starting time for off-peak period.{{% /md %}}</dd>
-    <dt class="property-optional"
+    <dd>{{% md %}}Starting time for off-peak period.{{% /md %}}</dd><dt class="property-optional"
             title="Optional">
         <span id="peakloadbalancingalgorithm_nodejs">
 <a href="#peakloadbalancingalgorithm_nodejs" style="color: inherit; text-decoration: inherit;">peak<wbr>Load<wbr>Balancing<wbr>Algorithm</a>
@@ -1634,8 +1465,7 @@ All [input](#inputs) properties are implicitly available as output properties. A
         <span class="property-indicator"></span>
         <span class="property-type">string | <a href="#sessionhostloadbalancingalgorithm">Session<wbr>Host<wbr>Load<wbr>Balancing<wbr>Algorithm</a></span>
     </dt>
-    <dd>{{% md %}}Load balancing algorithm for peak period.{{% /md %}}</dd>
-    <dt class="property-optional"
+    <dd>{{% md %}}Load balancing algorithm for peak period.{{% /md %}}</dd><dt class="property-optional"
             title="Optional">
         <span id="peakstarttime_nodejs">
 <a href="#peakstarttime_nodejs" style="color: inherit; text-decoration: inherit;">peak<wbr>Start<wbr>Time</a>
@@ -1643,8 +1473,7 @@ All [input](#inputs) properties are implicitly available as output properties. A
         <span class="property-indicator"></span>
         <span class="property-type">string</span>
     </dt>
-    <dd>{{% md %}}Starting time for peak period.{{% /md %}}</dd>
-    <dt class="property-optional"
+    <dd>{{% md %}}Starting time for peak period.{{% /md %}}</dd><dt class="property-optional"
             title="Optional">
         <span id="rampdowncapacitythresholdpct_nodejs">
 <a href="#rampdowncapacitythresholdpct_nodejs" style="color: inherit; text-decoration: inherit;">ramp<wbr>Down<wbr>Capacity<wbr>Threshold<wbr>Pct</a>
@@ -1652,8 +1481,7 @@ All [input](#inputs) properties are implicitly available as output properties. A
         <span class="property-indicator"></span>
         <span class="property-type">number</span>
     </dt>
-    <dd>{{% md %}}Capacity threshold for ramp down period.{{% /md %}}</dd>
-    <dt class="property-optional"
+    <dd>{{% md %}}Capacity threshold for ramp down period.{{% /md %}}</dd><dt class="property-optional"
             title="Optional">
         <span id="rampdownforcelogoffusers_nodejs">
 <a href="#rampdownforcelogoffusers_nodejs" style="color: inherit; text-decoration: inherit;">ramp<wbr>Down<wbr>Force<wbr>Logoff<wbr>Users</a>
@@ -1661,8 +1489,7 @@ All [input](#inputs) properties are implicitly available as output properties. A
         <span class="property-indicator"></span>
         <span class="property-type">boolean</span>
     </dt>
-    <dd>{{% md %}}Should users be logged off forcefully from hosts.{{% /md %}}</dd>
-    <dt class="property-optional"
+    <dd>{{% md %}}Should users be logged off forcefully from hosts.{{% /md %}}</dd><dt class="property-optional"
             title="Optional">
         <span id="rampdownloadbalancingalgorithm_nodejs">
 <a href="#rampdownloadbalancingalgorithm_nodejs" style="color: inherit; text-decoration: inherit;">ramp<wbr>Down<wbr>Load<wbr>Balancing<wbr>Algorithm</a>
@@ -1670,8 +1497,7 @@ All [input](#inputs) properties are implicitly available as output properties. A
         <span class="property-indicator"></span>
         <span class="property-type">string | <a href="#sessionhostloadbalancingalgorithm">Session<wbr>Host<wbr>Load<wbr>Balancing<wbr>Algorithm</a></span>
     </dt>
-    <dd>{{% md %}}Load balancing algorithm for ramp down period.{{% /md %}}</dd>
-    <dt class="property-optional"
+    <dd>{{% md %}}Load balancing algorithm for ramp down period.{{% /md %}}</dd><dt class="property-optional"
             title="Optional">
         <span id="rampdownminimumhostspct_nodejs">
 <a href="#rampdownminimumhostspct_nodejs" style="color: inherit; text-decoration: inherit;">ramp<wbr>Down<wbr>Minimum<wbr>Hosts<wbr>Pct</a>
@@ -1679,8 +1505,7 @@ All [input](#inputs) properties are implicitly available as output properties. A
         <span class="property-indicator"></span>
         <span class="property-type">number</span>
     </dt>
-    <dd>{{% md %}}Minimum host percentage for ramp down period.{{% /md %}}</dd>
-    <dt class="property-optional"
+    <dd>{{% md %}}Minimum host percentage for ramp down period.{{% /md %}}</dd><dt class="property-optional"
             title="Optional">
         <span id="rampdownnotificationmessage_nodejs">
 <a href="#rampdownnotificationmessage_nodejs" style="color: inherit; text-decoration: inherit;">ramp<wbr>Down<wbr>Notification<wbr>Message</a>
@@ -1688,8 +1513,7 @@ All [input](#inputs) properties are implicitly available as output properties. A
         <span class="property-indicator"></span>
         <span class="property-type">string</span>
     </dt>
-    <dd>{{% md %}}Notification message for users during ramp down period.{{% /md %}}</dd>
-    <dt class="property-optional"
+    <dd>{{% md %}}Notification message for users during ramp down period.{{% /md %}}</dd><dt class="property-optional"
             title="Optional">
         <span id="rampdownstarttime_nodejs">
 <a href="#rampdownstarttime_nodejs" style="color: inherit; text-decoration: inherit;">ramp<wbr>Down<wbr>Start<wbr>Time</a>
@@ -1697,8 +1521,7 @@ All [input](#inputs) properties are implicitly available as output properties. A
         <span class="property-indicator"></span>
         <span class="property-type">string</span>
     </dt>
-    <dd>{{% md %}}Starting time for ramp down period.{{% /md %}}</dd>
-    <dt class="property-optional"
+    <dd>{{% md %}}Starting time for ramp down period.{{% /md %}}</dd><dt class="property-optional"
             title="Optional">
         <span id="rampdownstophostswhen_nodejs">
 <a href="#rampdownstophostswhen_nodejs" style="color: inherit; text-decoration: inherit;">ramp<wbr>Down<wbr>Stop<wbr>Hosts<wbr>When</a>
@@ -1706,8 +1529,7 @@ All [input](#inputs) properties are implicitly available as output properties. A
         <span class="property-indicator"></span>
         <span class="property-type">string | <a href="#stophostswhen">Stop<wbr>Hosts<wbr>When</a></span>
     </dt>
-    <dd>{{% md %}}Specifies when to stop hosts during ramp down period.{{% /md %}}</dd>
-    <dt class="property-optional"
+    <dd>{{% md %}}Specifies when to stop hosts during ramp down period.{{% /md %}}</dd><dt class="property-optional"
             title="Optional">
         <span id="rampdownwaittimeminutes_nodejs">
 <a href="#rampdownwaittimeminutes_nodejs" style="color: inherit; text-decoration: inherit;">ramp<wbr>Down<wbr>Wait<wbr>Time<wbr>Minutes</a>
@@ -1715,8 +1537,7 @@ All [input](#inputs) properties are implicitly available as output properties. A
         <span class="property-indicator"></span>
         <span class="property-type">number</span>
     </dt>
-    <dd>{{% md %}}Number of minutes to wait to stop hosts during ramp down period.{{% /md %}}</dd>
-    <dt class="property-optional"
+    <dd>{{% md %}}Number of minutes to wait to stop hosts during ramp down period.{{% /md %}}</dd><dt class="property-optional"
             title="Optional">
         <span id="rampupcapacitythresholdpct_nodejs">
 <a href="#rampupcapacitythresholdpct_nodejs" style="color: inherit; text-decoration: inherit;">ramp<wbr>Up<wbr>Capacity<wbr>Threshold<wbr>Pct</a>
@@ -1724,8 +1545,7 @@ All [input](#inputs) properties are implicitly available as output properties. A
         <span class="property-indicator"></span>
         <span class="property-type">number</span>
     </dt>
-    <dd>{{% md %}}Capacity threshold for ramp up period.{{% /md %}}</dd>
-    <dt class="property-optional"
+    <dd>{{% md %}}Capacity threshold for ramp up period.{{% /md %}}</dd><dt class="property-optional"
             title="Optional">
         <span id="rampuploadbalancingalgorithm_nodejs">
 <a href="#rampuploadbalancingalgorithm_nodejs" style="color: inherit; text-decoration: inherit;">ramp<wbr>Up<wbr>Load<wbr>Balancing<wbr>Algorithm</a>
@@ -1733,8 +1553,7 @@ All [input](#inputs) properties are implicitly available as output properties. A
         <span class="property-indicator"></span>
         <span class="property-type">string | <a href="#sessionhostloadbalancingalgorithm">Session<wbr>Host<wbr>Load<wbr>Balancing<wbr>Algorithm</a></span>
     </dt>
-    <dd>{{% md %}}Load balancing algorithm for ramp up period.{{% /md %}}</dd>
-    <dt class="property-optional"
+    <dd>{{% md %}}Load balancing algorithm for ramp up period.{{% /md %}}</dd><dt class="property-optional"
             title="Optional">
         <span id="rampupminimumhostspct_nodejs">
 <a href="#rampupminimumhostspct_nodejs" style="color: inherit; text-decoration: inherit;">ramp<wbr>Up<wbr>Minimum<wbr>Hosts<wbr>Pct</a>
@@ -1742,8 +1561,7 @@ All [input](#inputs) properties are implicitly available as output properties. A
         <span class="property-indicator"></span>
         <span class="property-type">number</span>
     </dt>
-    <dd>{{% md %}}Minimum host percentage for ramp up period.{{% /md %}}</dd>
-    <dt class="property-optional"
+    <dd>{{% md %}}Minimum host percentage for ramp up period.{{% /md %}}</dd><dt class="property-optional"
             title="Optional">
         <span id="rampupstarttime_nodejs">
 <a href="#rampupstarttime_nodejs" style="color: inherit; text-decoration: inherit;">ramp<wbr>Up<wbr>Start<wbr>Time</a>
@@ -1751,14 +1569,11 @@ All [input](#inputs) properties are implicitly available as output properties. A
         <span class="property-indicator"></span>
         <span class="property-type">string</span>
     </dt>
-    <dd>{{% md %}}Starting time for ramp up period.{{% /md %}}</dd>
-</dl>
+    <dd>{{% md %}}Starting time for ramp up period.{{% /md %}}</dd></dl>
 {{% /choosable %}}
 
 {{% choosable language python %}}
-<dl class="resources-properties">
-
-    <dt class="property-optional"
+<dl class="resources-properties"><dt class="property-optional"
             title="Optional">
         <span id="days_of_week_python">
 <a href="#days_of_week_python" style="color: inherit; text-decoration: inherit;">days_<wbr>of_<wbr>week</a>
@@ -1766,8 +1581,7 @@ All [input](#inputs) properties are implicitly available as output properties. A
         <span class="property-indicator"></span>
         <span class="property-type">Sequence[str]</span>
     </dt>
-    <dd>{{% md %}}Set of days of the week on which this schedule is active.{{% /md %}}</dd>
-    <dt class="property-optional"
+    <dd>{{% md %}}Set of days of the week on which this schedule is active.{{% /md %}}</dd><dt class="property-optional"
             title="Optional">
         <span id="name_python">
 <a href="#name_python" style="color: inherit; text-decoration: inherit;">name</a>
@@ -1775,8 +1589,7 @@ All [input](#inputs) properties are implicitly available as output properties. A
         <span class="property-indicator"></span>
         <span class="property-type">str</span>
     </dt>
-    <dd>{{% md %}}Name of the scaling schedule.{{% /md %}}</dd>
-    <dt class="property-optional"
+    <dd>{{% md %}}Name of the scaling schedule.{{% /md %}}</dd><dt class="property-optional"
             title="Optional">
         <span id="off_peak_load_balancing_algorithm_python">
 <a href="#off_peak_load_balancing_algorithm_python" style="color: inherit; text-decoration: inherit;">off_<wbr>peak_<wbr>load_<wbr>balancing_<wbr>algorithm</a>
@@ -1784,8 +1597,7 @@ All [input](#inputs) properties are implicitly available as output properties. A
         <span class="property-indicator"></span>
         <span class="property-type">str | <a href="#sessionhostloadbalancingalgorithm">Session<wbr>Host<wbr>Load<wbr>Balancing<wbr>Algorithm</a></span>
     </dt>
-    <dd>{{% md %}}Load balancing algorithm for off-peak period.{{% /md %}}</dd>
-    <dt class="property-optional"
+    <dd>{{% md %}}Load balancing algorithm for off-peak period.{{% /md %}}</dd><dt class="property-optional"
             title="Optional">
         <span id="off_peak_start_time_python">
 <a href="#off_peak_start_time_python" style="color: inherit; text-decoration: inherit;">off_<wbr>peak_<wbr>start_<wbr>time</a>
@@ -1793,8 +1605,7 @@ All [input](#inputs) properties are implicitly available as output properties. A
         <span class="property-indicator"></span>
         <span class="property-type">str</span>
     </dt>
-    <dd>{{% md %}}Starting time for off-peak period.{{% /md %}}</dd>
-    <dt class="property-optional"
+    <dd>{{% md %}}Starting time for off-peak period.{{% /md %}}</dd><dt class="property-optional"
             title="Optional">
         <span id="peak_load_balancing_algorithm_python">
 <a href="#peak_load_balancing_algorithm_python" style="color: inherit; text-decoration: inherit;">peak_<wbr>load_<wbr>balancing_<wbr>algorithm</a>
@@ -1802,8 +1613,7 @@ All [input](#inputs) properties are implicitly available as output properties. A
         <span class="property-indicator"></span>
         <span class="property-type">str | <a href="#sessionhostloadbalancingalgorithm">Session<wbr>Host<wbr>Load<wbr>Balancing<wbr>Algorithm</a></span>
     </dt>
-    <dd>{{% md %}}Load balancing algorithm for peak period.{{% /md %}}</dd>
-    <dt class="property-optional"
+    <dd>{{% md %}}Load balancing algorithm for peak period.{{% /md %}}</dd><dt class="property-optional"
             title="Optional">
         <span id="peak_start_time_python">
 <a href="#peak_start_time_python" style="color: inherit; text-decoration: inherit;">peak_<wbr>start_<wbr>time</a>
@@ -1811,8 +1621,7 @@ All [input](#inputs) properties are implicitly available as output properties. A
         <span class="property-indicator"></span>
         <span class="property-type">str</span>
     </dt>
-    <dd>{{% md %}}Starting time for peak period.{{% /md %}}</dd>
-    <dt class="property-optional"
+    <dd>{{% md %}}Starting time for peak period.{{% /md %}}</dd><dt class="property-optional"
             title="Optional">
         <span id="ramp_down_capacity_threshold_pct_python">
 <a href="#ramp_down_capacity_threshold_pct_python" style="color: inherit; text-decoration: inherit;">ramp_<wbr>down_<wbr>capacity_<wbr>threshold_<wbr>pct</a>
@@ -1820,8 +1629,7 @@ All [input](#inputs) properties are implicitly available as output properties. A
         <span class="property-indicator"></span>
         <span class="property-type">int</span>
     </dt>
-    <dd>{{% md %}}Capacity threshold for ramp down period.{{% /md %}}</dd>
-    <dt class="property-optional"
+    <dd>{{% md %}}Capacity threshold for ramp down period.{{% /md %}}</dd><dt class="property-optional"
             title="Optional">
         <span id="ramp_down_force_logoff_users_python">
 <a href="#ramp_down_force_logoff_users_python" style="color: inherit; text-decoration: inherit;">ramp_<wbr>down_<wbr>force_<wbr>logoff_<wbr>users</a>
@@ -1829,8 +1637,7 @@ All [input](#inputs) properties are implicitly available as output properties. A
         <span class="property-indicator"></span>
         <span class="property-type">bool</span>
     </dt>
-    <dd>{{% md %}}Should users be logged off forcefully from hosts.{{% /md %}}</dd>
-    <dt class="property-optional"
+    <dd>{{% md %}}Should users be logged off forcefully from hosts.{{% /md %}}</dd><dt class="property-optional"
             title="Optional">
         <span id="ramp_down_load_balancing_algorithm_python">
 <a href="#ramp_down_load_balancing_algorithm_python" style="color: inherit; text-decoration: inherit;">ramp_<wbr>down_<wbr>load_<wbr>balancing_<wbr>algorithm</a>
@@ -1838,8 +1645,7 @@ All [input](#inputs) properties are implicitly available as output properties. A
         <span class="property-indicator"></span>
         <span class="property-type">str | <a href="#sessionhostloadbalancingalgorithm">Session<wbr>Host<wbr>Load<wbr>Balancing<wbr>Algorithm</a></span>
     </dt>
-    <dd>{{% md %}}Load balancing algorithm for ramp down period.{{% /md %}}</dd>
-    <dt class="property-optional"
+    <dd>{{% md %}}Load balancing algorithm for ramp down period.{{% /md %}}</dd><dt class="property-optional"
             title="Optional">
         <span id="ramp_down_minimum_hosts_pct_python">
 <a href="#ramp_down_minimum_hosts_pct_python" style="color: inherit; text-decoration: inherit;">ramp_<wbr>down_<wbr>minimum_<wbr>hosts_<wbr>pct</a>
@@ -1847,8 +1653,7 @@ All [input](#inputs) properties are implicitly available as output properties. A
         <span class="property-indicator"></span>
         <span class="property-type">int</span>
     </dt>
-    <dd>{{% md %}}Minimum host percentage for ramp down period.{{% /md %}}</dd>
-    <dt class="property-optional"
+    <dd>{{% md %}}Minimum host percentage for ramp down period.{{% /md %}}</dd><dt class="property-optional"
             title="Optional">
         <span id="ramp_down_notification_message_python">
 <a href="#ramp_down_notification_message_python" style="color: inherit; text-decoration: inherit;">ramp_<wbr>down_<wbr>notification_<wbr>message</a>
@@ -1856,8 +1661,7 @@ All [input](#inputs) properties are implicitly available as output properties. A
         <span class="property-indicator"></span>
         <span class="property-type">str</span>
     </dt>
-    <dd>{{% md %}}Notification message for users during ramp down period.{{% /md %}}</dd>
-    <dt class="property-optional"
+    <dd>{{% md %}}Notification message for users during ramp down period.{{% /md %}}</dd><dt class="property-optional"
             title="Optional">
         <span id="ramp_down_start_time_python">
 <a href="#ramp_down_start_time_python" style="color: inherit; text-decoration: inherit;">ramp_<wbr>down_<wbr>start_<wbr>time</a>
@@ -1865,8 +1669,7 @@ All [input](#inputs) properties are implicitly available as output properties. A
         <span class="property-indicator"></span>
         <span class="property-type">str</span>
     </dt>
-    <dd>{{% md %}}Starting time for ramp down period.{{% /md %}}</dd>
-    <dt class="property-optional"
+    <dd>{{% md %}}Starting time for ramp down period.{{% /md %}}</dd><dt class="property-optional"
             title="Optional">
         <span id="ramp_down_stop_hosts_when_python">
 <a href="#ramp_down_stop_hosts_when_python" style="color: inherit; text-decoration: inherit;">ramp_<wbr>down_<wbr>stop_<wbr>hosts_<wbr>when</a>
@@ -1874,8 +1677,7 @@ All [input](#inputs) properties are implicitly available as output properties. A
         <span class="property-indicator"></span>
         <span class="property-type">str | <a href="#stophostswhen">Stop<wbr>Hosts<wbr>When</a></span>
     </dt>
-    <dd>{{% md %}}Specifies when to stop hosts during ramp down period.{{% /md %}}</dd>
-    <dt class="property-optional"
+    <dd>{{% md %}}Specifies when to stop hosts during ramp down period.{{% /md %}}</dd><dt class="property-optional"
             title="Optional">
         <span id="ramp_down_wait_time_minutes_python">
 <a href="#ramp_down_wait_time_minutes_python" style="color: inherit; text-decoration: inherit;">ramp_<wbr>down_<wbr>wait_<wbr>time_<wbr>minutes</a>
@@ -1883,8 +1685,7 @@ All [input](#inputs) properties are implicitly available as output properties. A
         <span class="property-indicator"></span>
         <span class="property-type">int</span>
     </dt>
-    <dd>{{% md %}}Number of minutes to wait to stop hosts during ramp down period.{{% /md %}}</dd>
-    <dt class="property-optional"
+    <dd>{{% md %}}Number of minutes to wait to stop hosts during ramp down period.{{% /md %}}</dd><dt class="property-optional"
             title="Optional">
         <span id="ramp_up_capacity_threshold_pct_python">
 <a href="#ramp_up_capacity_threshold_pct_python" style="color: inherit; text-decoration: inherit;">ramp_<wbr>up_<wbr>capacity_<wbr>threshold_<wbr>pct</a>
@@ -1892,8 +1693,7 @@ All [input](#inputs) properties are implicitly available as output properties. A
         <span class="property-indicator"></span>
         <span class="property-type">int</span>
     </dt>
-    <dd>{{% md %}}Capacity threshold for ramp up period.{{% /md %}}</dd>
-    <dt class="property-optional"
+    <dd>{{% md %}}Capacity threshold for ramp up period.{{% /md %}}</dd><dt class="property-optional"
             title="Optional">
         <span id="ramp_up_load_balancing_algorithm_python">
 <a href="#ramp_up_load_balancing_algorithm_python" style="color: inherit; text-decoration: inherit;">ramp_<wbr>up_<wbr>load_<wbr>balancing_<wbr>algorithm</a>
@@ -1901,8 +1701,7 @@ All [input](#inputs) properties are implicitly available as output properties. A
         <span class="property-indicator"></span>
         <span class="property-type">str | <a href="#sessionhostloadbalancingalgorithm">Session<wbr>Host<wbr>Load<wbr>Balancing<wbr>Algorithm</a></span>
     </dt>
-    <dd>{{% md %}}Load balancing algorithm for ramp up period.{{% /md %}}</dd>
-    <dt class="property-optional"
+    <dd>{{% md %}}Load balancing algorithm for ramp up period.{{% /md %}}</dd><dt class="property-optional"
             title="Optional">
         <span id="ramp_up_minimum_hosts_pct_python">
 <a href="#ramp_up_minimum_hosts_pct_python" style="color: inherit; text-decoration: inherit;">ramp_<wbr>up_<wbr>minimum_<wbr>hosts_<wbr>pct</a>
@@ -1910,8 +1709,7 @@ All [input](#inputs) properties are implicitly available as output properties. A
         <span class="property-indicator"></span>
         <span class="property-type">int</span>
     </dt>
-    <dd>{{% md %}}Minimum host percentage for ramp up period.{{% /md %}}</dd>
-    <dt class="property-optional"
+    <dd>{{% md %}}Minimum host percentage for ramp up period.{{% /md %}}</dd><dt class="property-optional"
             title="Optional">
         <span id="ramp_up_start_time_python">
 <a href="#ramp_up_start_time_python" style="color: inherit; text-decoration: inherit;">ramp_<wbr>up_<wbr>start_<wbr>time</a>
@@ -1919,16 +1717,13 @@ All [input](#inputs) properties are implicitly available as output properties. A
         <span class="property-indicator"></span>
         <span class="property-type">str</span>
     </dt>
-    <dd>{{% md %}}Starting time for ramp up period.{{% /md %}}</dd>
-</dl>
+    <dd>{{% md %}}Starting time for ramp up period.{{% /md %}}</dd></dl>
 {{% /choosable %}}
 
 <h4 id="scalingscheduleresponse">Scaling<wbr>Schedule<wbr>Response</h4>
 
 {{% choosable language csharp %}}
-<dl class="resources-properties">
-
-    <dt class="property-optional"
+<dl class="resources-properties"><dt class="property-optional"
             title="Optional">
         <span id="daysofweek_csharp">
 <a href="#daysofweek_csharp" style="color: inherit; text-decoration: inherit;">Days<wbr>Of<wbr>Week</a>
@@ -1936,8 +1731,7 @@ All [input](#inputs) properties are implicitly available as output properties. A
         <span class="property-indicator"></span>
         <span class="property-type">List&lt;string&gt;</span>
     </dt>
-    <dd>{{% md %}}Set of days of the week on which this schedule is active.{{% /md %}}</dd>
-    <dt class="property-optional"
+    <dd>{{% md %}}Set of days of the week on which this schedule is active.{{% /md %}}</dd><dt class="property-optional"
             title="Optional">
         <span id="name_csharp">
 <a href="#name_csharp" style="color: inherit; text-decoration: inherit;">Name</a>
@@ -1945,8 +1739,7 @@ All [input](#inputs) properties are implicitly available as output properties. A
         <span class="property-indicator"></span>
         <span class="property-type">string</span>
     </dt>
-    <dd>{{% md %}}Name of the scaling schedule.{{% /md %}}</dd>
-    <dt class="property-optional"
+    <dd>{{% md %}}Name of the scaling schedule.{{% /md %}}</dd><dt class="property-optional"
             title="Optional">
         <span id="offpeakloadbalancingalgorithm_csharp">
 <a href="#offpeakloadbalancingalgorithm_csharp" style="color: inherit; text-decoration: inherit;">Off<wbr>Peak<wbr>Load<wbr>Balancing<wbr>Algorithm</a>
@@ -1954,8 +1747,7 @@ All [input](#inputs) properties are implicitly available as output properties. A
         <span class="property-indicator"></span>
         <span class="property-type">string</span>
     </dt>
-    <dd>{{% md %}}Load balancing algorithm for off-peak period.{{% /md %}}</dd>
-    <dt class="property-optional"
+    <dd>{{% md %}}Load balancing algorithm for off-peak period.{{% /md %}}</dd><dt class="property-optional"
             title="Optional">
         <span id="offpeakstarttime_csharp">
 <a href="#offpeakstarttime_csharp" style="color: inherit; text-decoration: inherit;">Off<wbr>Peak<wbr>Start<wbr>Time</a>
@@ -1963,8 +1755,7 @@ All [input](#inputs) properties are implicitly available as output properties. A
         <span class="property-indicator"></span>
         <span class="property-type">string</span>
     </dt>
-    <dd>{{% md %}}Starting time for off-peak period.{{% /md %}}</dd>
-    <dt class="property-optional"
+    <dd>{{% md %}}Starting time for off-peak period.{{% /md %}}</dd><dt class="property-optional"
             title="Optional">
         <span id="peakloadbalancingalgorithm_csharp">
 <a href="#peakloadbalancingalgorithm_csharp" style="color: inherit; text-decoration: inherit;">Peak<wbr>Load<wbr>Balancing<wbr>Algorithm</a>
@@ -1972,8 +1763,7 @@ All [input](#inputs) properties are implicitly available as output properties. A
         <span class="property-indicator"></span>
         <span class="property-type">string</span>
     </dt>
-    <dd>{{% md %}}Load balancing algorithm for peak period.{{% /md %}}</dd>
-    <dt class="property-optional"
+    <dd>{{% md %}}Load balancing algorithm for peak period.{{% /md %}}</dd><dt class="property-optional"
             title="Optional">
         <span id="peakstarttime_csharp">
 <a href="#peakstarttime_csharp" style="color: inherit; text-decoration: inherit;">Peak<wbr>Start<wbr>Time</a>
@@ -1981,8 +1771,7 @@ All [input](#inputs) properties are implicitly available as output properties. A
         <span class="property-indicator"></span>
         <span class="property-type">string</span>
     </dt>
-    <dd>{{% md %}}Starting time for peak period.{{% /md %}}</dd>
-    <dt class="property-optional"
+    <dd>{{% md %}}Starting time for peak period.{{% /md %}}</dd><dt class="property-optional"
             title="Optional">
         <span id="rampdowncapacitythresholdpct_csharp">
 <a href="#rampdowncapacitythresholdpct_csharp" style="color: inherit; text-decoration: inherit;">Ramp<wbr>Down<wbr>Capacity<wbr>Threshold<wbr>Pct</a>
@@ -1990,8 +1779,7 @@ All [input](#inputs) properties are implicitly available as output properties. A
         <span class="property-indicator"></span>
         <span class="property-type">int</span>
     </dt>
-    <dd>{{% md %}}Capacity threshold for ramp down period.{{% /md %}}</dd>
-    <dt class="property-optional"
+    <dd>{{% md %}}Capacity threshold for ramp down period.{{% /md %}}</dd><dt class="property-optional"
             title="Optional">
         <span id="rampdownforcelogoffusers_csharp">
 <a href="#rampdownforcelogoffusers_csharp" style="color: inherit; text-decoration: inherit;">Ramp<wbr>Down<wbr>Force<wbr>Logoff<wbr>Users</a>
@@ -1999,8 +1787,7 @@ All [input](#inputs) properties are implicitly available as output properties. A
         <span class="property-indicator"></span>
         <span class="property-type">bool</span>
     </dt>
-    <dd>{{% md %}}Should users be logged off forcefully from hosts.{{% /md %}}</dd>
-    <dt class="property-optional"
+    <dd>{{% md %}}Should users be logged off forcefully from hosts.{{% /md %}}</dd><dt class="property-optional"
             title="Optional">
         <span id="rampdownloadbalancingalgorithm_csharp">
 <a href="#rampdownloadbalancingalgorithm_csharp" style="color: inherit; text-decoration: inherit;">Ramp<wbr>Down<wbr>Load<wbr>Balancing<wbr>Algorithm</a>
@@ -2008,8 +1795,7 @@ All [input](#inputs) properties are implicitly available as output properties. A
         <span class="property-indicator"></span>
         <span class="property-type">string</span>
     </dt>
-    <dd>{{% md %}}Load balancing algorithm for ramp down period.{{% /md %}}</dd>
-    <dt class="property-optional"
+    <dd>{{% md %}}Load balancing algorithm for ramp down period.{{% /md %}}</dd><dt class="property-optional"
             title="Optional">
         <span id="rampdownminimumhostspct_csharp">
 <a href="#rampdownminimumhostspct_csharp" style="color: inherit; text-decoration: inherit;">Ramp<wbr>Down<wbr>Minimum<wbr>Hosts<wbr>Pct</a>
@@ -2017,8 +1803,7 @@ All [input](#inputs) properties are implicitly available as output properties. A
         <span class="property-indicator"></span>
         <span class="property-type">int</span>
     </dt>
-    <dd>{{% md %}}Minimum host percentage for ramp down period.{{% /md %}}</dd>
-    <dt class="property-optional"
+    <dd>{{% md %}}Minimum host percentage for ramp down period.{{% /md %}}</dd><dt class="property-optional"
             title="Optional">
         <span id="rampdownnotificationmessage_csharp">
 <a href="#rampdownnotificationmessage_csharp" style="color: inherit; text-decoration: inherit;">Ramp<wbr>Down<wbr>Notification<wbr>Message</a>
@@ -2026,8 +1811,7 @@ All [input](#inputs) properties are implicitly available as output properties. A
         <span class="property-indicator"></span>
         <span class="property-type">string</span>
     </dt>
-    <dd>{{% md %}}Notification message for users during ramp down period.{{% /md %}}</dd>
-    <dt class="property-optional"
+    <dd>{{% md %}}Notification message for users during ramp down period.{{% /md %}}</dd><dt class="property-optional"
             title="Optional">
         <span id="rampdownstarttime_csharp">
 <a href="#rampdownstarttime_csharp" style="color: inherit; text-decoration: inherit;">Ramp<wbr>Down<wbr>Start<wbr>Time</a>
@@ -2035,8 +1819,7 @@ All [input](#inputs) properties are implicitly available as output properties. A
         <span class="property-indicator"></span>
         <span class="property-type">string</span>
     </dt>
-    <dd>{{% md %}}Starting time for ramp down period.{{% /md %}}</dd>
-    <dt class="property-optional"
+    <dd>{{% md %}}Starting time for ramp down period.{{% /md %}}</dd><dt class="property-optional"
             title="Optional">
         <span id="rampdownstophostswhen_csharp">
 <a href="#rampdownstophostswhen_csharp" style="color: inherit; text-decoration: inherit;">Ramp<wbr>Down<wbr>Stop<wbr>Hosts<wbr>When</a>
@@ -2044,8 +1827,7 @@ All [input](#inputs) properties are implicitly available as output properties. A
         <span class="property-indicator"></span>
         <span class="property-type">string</span>
     </dt>
-    <dd>{{% md %}}Specifies when to stop hosts during ramp down period.{{% /md %}}</dd>
-    <dt class="property-optional"
+    <dd>{{% md %}}Specifies when to stop hosts during ramp down period.{{% /md %}}</dd><dt class="property-optional"
             title="Optional">
         <span id="rampdownwaittimeminutes_csharp">
 <a href="#rampdownwaittimeminutes_csharp" style="color: inherit; text-decoration: inherit;">Ramp<wbr>Down<wbr>Wait<wbr>Time<wbr>Minutes</a>
@@ -2053,8 +1835,7 @@ All [input](#inputs) properties are implicitly available as output properties. A
         <span class="property-indicator"></span>
         <span class="property-type">int</span>
     </dt>
-    <dd>{{% md %}}Number of minutes to wait to stop hosts during ramp down period.{{% /md %}}</dd>
-    <dt class="property-optional"
+    <dd>{{% md %}}Number of minutes to wait to stop hosts during ramp down period.{{% /md %}}</dd><dt class="property-optional"
             title="Optional">
         <span id="rampupcapacitythresholdpct_csharp">
 <a href="#rampupcapacitythresholdpct_csharp" style="color: inherit; text-decoration: inherit;">Ramp<wbr>Up<wbr>Capacity<wbr>Threshold<wbr>Pct</a>
@@ -2062,8 +1843,7 @@ All [input](#inputs) properties are implicitly available as output properties. A
         <span class="property-indicator"></span>
         <span class="property-type">int</span>
     </dt>
-    <dd>{{% md %}}Capacity threshold for ramp up period.{{% /md %}}</dd>
-    <dt class="property-optional"
+    <dd>{{% md %}}Capacity threshold for ramp up period.{{% /md %}}</dd><dt class="property-optional"
             title="Optional">
         <span id="rampuploadbalancingalgorithm_csharp">
 <a href="#rampuploadbalancingalgorithm_csharp" style="color: inherit; text-decoration: inherit;">Ramp<wbr>Up<wbr>Load<wbr>Balancing<wbr>Algorithm</a>
@@ -2071,8 +1851,7 @@ All [input](#inputs) properties are implicitly available as output properties. A
         <span class="property-indicator"></span>
         <span class="property-type">string</span>
     </dt>
-    <dd>{{% md %}}Load balancing algorithm for ramp up period.{{% /md %}}</dd>
-    <dt class="property-optional"
+    <dd>{{% md %}}Load balancing algorithm for ramp up period.{{% /md %}}</dd><dt class="property-optional"
             title="Optional">
         <span id="rampupminimumhostspct_csharp">
 <a href="#rampupminimumhostspct_csharp" style="color: inherit; text-decoration: inherit;">Ramp<wbr>Up<wbr>Minimum<wbr>Hosts<wbr>Pct</a>
@@ -2080,8 +1859,7 @@ All [input](#inputs) properties are implicitly available as output properties. A
         <span class="property-indicator"></span>
         <span class="property-type">int</span>
     </dt>
-    <dd>{{% md %}}Minimum host percentage for ramp up period.{{% /md %}}</dd>
-    <dt class="property-optional"
+    <dd>{{% md %}}Minimum host percentage for ramp up period.{{% /md %}}</dd><dt class="property-optional"
             title="Optional">
         <span id="rampupstarttime_csharp">
 <a href="#rampupstarttime_csharp" style="color: inherit; text-decoration: inherit;">Ramp<wbr>Up<wbr>Start<wbr>Time</a>
@@ -2089,14 +1867,11 @@ All [input](#inputs) properties are implicitly available as output properties. A
         <span class="property-indicator"></span>
         <span class="property-type">string</span>
     </dt>
-    <dd>{{% md %}}Starting time for ramp up period.{{% /md %}}</dd>
-</dl>
+    <dd>{{% md %}}Starting time for ramp up period.{{% /md %}}</dd></dl>
 {{% /choosable %}}
 
 {{% choosable language go %}}
-<dl class="resources-properties">
-
-    <dt class="property-optional"
+<dl class="resources-properties"><dt class="property-optional"
             title="Optional">
         <span id="daysofweek_go">
 <a href="#daysofweek_go" style="color: inherit; text-decoration: inherit;">Days<wbr>Of<wbr>Week</a>
@@ -2104,8 +1879,7 @@ All [input](#inputs) properties are implicitly available as output properties. A
         <span class="property-indicator"></span>
         <span class="property-type">[]string</span>
     </dt>
-    <dd>{{% md %}}Set of days of the week on which this schedule is active.{{% /md %}}</dd>
-    <dt class="property-optional"
+    <dd>{{% md %}}Set of days of the week on which this schedule is active.{{% /md %}}</dd><dt class="property-optional"
             title="Optional">
         <span id="name_go">
 <a href="#name_go" style="color: inherit; text-decoration: inherit;">Name</a>
@@ -2113,8 +1887,7 @@ All [input](#inputs) properties are implicitly available as output properties. A
         <span class="property-indicator"></span>
         <span class="property-type">string</span>
     </dt>
-    <dd>{{% md %}}Name of the scaling schedule.{{% /md %}}</dd>
-    <dt class="property-optional"
+    <dd>{{% md %}}Name of the scaling schedule.{{% /md %}}</dd><dt class="property-optional"
             title="Optional">
         <span id="offpeakloadbalancingalgorithm_go">
 <a href="#offpeakloadbalancingalgorithm_go" style="color: inherit; text-decoration: inherit;">Off<wbr>Peak<wbr>Load<wbr>Balancing<wbr>Algorithm</a>
@@ -2122,8 +1895,7 @@ All [input](#inputs) properties are implicitly available as output properties. A
         <span class="property-indicator"></span>
         <span class="property-type">string</span>
     </dt>
-    <dd>{{% md %}}Load balancing algorithm for off-peak period.{{% /md %}}</dd>
-    <dt class="property-optional"
+    <dd>{{% md %}}Load balancing algorithm for off-peak period.{{% /md %}}</dd><dt class="property-optional"
             title="Optional">
         <span id="offpeakstarttime_go">
 <a href="#offpeakstarttime_go" style="color: inherit; text-decoration: inherit;">Off<wbr>Peak<wbr>Start<wbr>Time</a>
@@ -2131,8 +1903,7 @@ All [input](#inputs) properties are implicitly available as output properties. A
         <span class="property-indicator"></span>
         <span class="property-type">string</span>
     </dt>
-    <dd>{{% md %}}Starting time for off-peak period.{{% /md %}}</dd>
-    <dt class="property-optional"
+    <dd>{{% md %}}Starting time for off-peak period.{{% /md %}}</dd><dt class="property-optional"
             title="Optional">
         <span id="peakloadbalancingalgorithm_go">
 <a href="#peakloadbalancingalgorithm_go" style="color: inherit; text-decoration: inherit;">Peak<wbr>Load<wbr>Balancing<wbr>Algorithm</a>
@@ -2140,8 +1911,7 @@ All [input](#inputs) properties are implicitly available as output properties. A
         <span class="property-indicator"></span>
         <span class="property-type">string</span>
     </dt>
-    <dd>{{% md %}}Load balancing algorithm for peak period.{{% /md %}}</dd>
-    <dt class="property-optional"
+    <dd>{{% md %}}Load balancing algorithm for peak period.{{% /md %}}</dd><dt class="property-optional"
             title="Optional">
         <span id="peakstarttime_go">
 <a href="#peakstarttime_go" style="color: inherit; text-decoration: inherit;">Peak<wbr>Start<wbr>Time</a>
@@ -2149,8 +1919,7 @@ All [input](#inputs) properties are implicitly available as output properties. A
         <span class="property-indicator"></span>
         <span class="property-type">string</span>
     </dt>
-    <dd>{{% md %}}Starting time for peak period.{{% /md %}}</dd>
-    <dt class="property-optional"
+    <dd>{{% md %}}Starting time for peak period.{{% /md %}}</dd><dt class="property-optional"
             title="Optional">
         <span id="rampdowncapacitythresholdpct_go">
 <a href="#rampdowncapacitythresholdpct_go" style="color: inherit; text-decoration: inherit;">Ramp<wbr>Down<wbr>Capacity<wbr>Threshold<wbr>Pct</a>
@@ -2158,8 +1927,7 @@ All [input](#inputs) properties are implicitly available as output properties. A
         <span class="property-indicator"></span>
         <span class="property-type">int</span>
     </dt>
-    <dd>{{% md %}}Capacity threshold for ramp down period.{{% /md %}}</dd>
-    <dt class="property-optional"
+    <dd>{{% md %}}Capacity threshold for ramp down period.{{% /md %}}</dd><dt class="property-optional"
             title="Optional">
         <span id="rampdownforcelogoffusers_go">
 <a href="#rampdownforcelogoffusers_go" style="color: inherit; text-decoration: inherit;">Ramp<wbr>Down<wbr>Force<wbr>Logoff<wbr>Users</a>
@@ -2167,8 +1935,7 @@ All [input](#inputs) properties are implicitly available as output properties. A
         <span class="property-indicator"></span>
         <span class="property-type">bool</span>
     </dt>
-    <dd>{{% md %}}Should users be logged off forcefully from hosts.{{% /md %}}</dd>
-    <dt class="property-optional"
+    <dd>{{% md %}}Should users be logged off forcefully from hosts.{{% /md %}}</dd><dt class="property-optional"
             title="Optional">
         <span id="rampdownloadbalancingalgorithm_go">
 <a href="#rampdownloadbalancingalgorithm_go" style="color: inherit; text-decoration: inherit;">Ramp<wbr>Down<wbr>Load<wbr>Balancing<wbr>Algorithm</a>
@@ -2176,8 +1943,7 @@ All [input](#inputs) properties are implicitly available as output properties. A
         <span class="property-indicator"></span>
         <span class="property-type">string</span>
     </dt>
-    <dd>{{% md %}}Load balancing algorithm for ramp down period.{{% /md %}}</dd>
-    <dt class="property-optional"
+    <dd>{{% md %}}Load balancing algorithm for ramp down period.{{% /md %}}</dd><dt class="property-optional"
             title="Optional">
         <span id="rampdownminimumhostspct_go">
 <a href="#rampdownminimumhostspct_go" style="color: inherit; text-decoration: inherit;">Ramp<wbr>Down<wbr>Minimum<wbr>Hosts<wbr>Pct</a>
@@ -2185,8 +1951,7 @@ All [input](#inputs) properties are implicitly available as output properties. A
         <span class="property-indicator"></span>
         <span class="property-type">int</span>
     </dt>
-    <dd>{{% md %}}Minimum host percentage for ramp down period.{{% /md %}}</dd>
-    <dt class="property-optional"
+    <dd>{{% md %}}Minimum host percentage for ramp down period.{{% /md %}}</dd><dt class="property-optional"
             title="Optional">
         <span id="rampdownnotificationmessage_go">
 <a href="#rampdownnotificationmessage_go" style="color: inherit; text-decoration: inherit;">Ramp<wbr>Down<wbr>Notification<wbr>Message</a>
@@ -2194,8 +1959,7 @@ All [input](#inputs) properties are implicitly available as output properties. A
         <span class="property-indicator"></span>
         <span class="property-type">string</span>
     </dt>
-    <dd>{{% md %}}Notification message for users during ramp down period.{{% /md %}}</dd>
-    <dt class="property-optional"
+    <dd>{{% md %}}Notification message for users during ramp down period.{{% /md %}}</dd><dt class="property-optional"
             title="Optional">
         <span id="rampdownstarttime_go">
 <a href="#rampdownstarttime_go" style="color: inherit; text-decoration: inherit;">Ramp<wbr>Down<wbr>Start<wbr>Time</a>
@@ -2203,8 +1967,7 @@ All [input](#inputs) properties are implicitly available as output properties. A
         <span class="property-indicator"></span>
         <span class="property-type">string</span>
     </dt>
-    <dd>{{% md %}}Starting time for ramp down period.{{% /md %}}</dd>
-    <dt class="property-optional"
+    <dd>{{% md %}}Starting time for ramp down period.{{% /md %}}</dd><dt class="property-optional"
             title="Optional">
         <span id="rampdownstophostswhen_go">
 <a href="#rampdownstophostswhen_go" style="color: inherit; text-decoration: inherit;">Ramp<wbr>Down<wbr>Stop<wbr>Hosts<wbr>When</a>
@@ -2212,8 +1975,7 @@ All [input](#inputs) properties are implicitly available as output properties. A
         <span class="property-indicator"></span>
         <span class="property-type">string</span>
     </dt>
-    <dd>{{% md %}}Specifies when to stop hosts during ramp down period.{{% /md %}}</dd>
-    <dt class="property-optional"
+    <dd>{{% md %}}Specifies when to stop hosts during ramp down period.{{% /md %}}</dd><dt class="property-optional"
             title="Optional">
         <span id="rampdownwaittimeminutes_go">
 <a href="#rampdownwaittimeminutes_go" style="color: inherit; text-decoration: inherit;">Ramp<wbr>Down<wbr>Wait<wbr>Time<wbr>Minutes</a>
@@ -2221,8 +1983,7 @@ All [input](#inputs) properties are implicitly available as output properties. A
         <span class="property-indicator"></span>
         <span class="property-type">int</span>
     </dt>
-    <dd>{{% md %}}Number of minutes to wait to stop hosts during ramp down period.{{% /md %}}</dd>
-    <dt class="property-optional"
+    <dd>{{% md %}}Number of minutes to wait to stop hosts during ramp down period.{{% /md %}}</dd><dt class="property-optional"
             title="Optional">
         <span id="rampupcapacitythresholdpct_go">
 <a href="#rampupcapacitythresholdpct_go" style="color: inherit; text-decoration: inherit;">Ramp<wbr>Up<wbr>Capacity<wbr>Threshold<wbr>Pct</a>
@@ -2230,8 +1991,7 @@ All [input](#inputs) properties are implicitly available as output properties. A
         <span class="property-indicator"></span>
         <span class="property-type">int</span>
     </dt>
-    <dd>{{% md %}}Capacity threshold for ramp up period.{{% /md %}}</dd>
-    <dt class="property-optional"
+    <dd>{{% md %}}Capacity threshold for ramp up period.{{% /md %}}</dd><dt class="property-optional"
             title="Optional">
         <span id="rampuploadbalancingalgorithm_go">
 <a href="#rampuploadbalancingalgorithm_go" style="color: inherit; text-decoration: inherit;">Ramp<wbr>Up<wbr>Load<wbr>Balancing<wbr>Algorithm</a>
@@ -2239,8 +1999,7 @@ All [input](#inputs) properties are implicitly available as output properties. A
         <span class="property-indicator"></span>
         <span class="property-type">string</span>
     </dt>
-    <dd>{{% md %}}Load balancing algorithm for ramp up period.{{% /md %}}</dd>
-    <dt class="property-optional"
+    <dd>{{% md %}}Load balancing algorithm for ramp up period.{{% /md %}}</dd><dt class="property-optional"
             title="Optional">
         <span id="rampupminimumhostspct_go">
 <a href="#rampupminimumhostspct_go" style="color: inherit; text-decoration: inherit;">Ramp<wbr>Up<wbr>Minimum<wbr>Hosts<wbr>Pct</a>
@@ -2248,8 +2007,7 @@ All [input](#inputs) properties are implicitly available as output properties. A
         <span class="property-indicator"></span>
         <span class="property-type">int</span>
     </dt>
-    <dd>{{% md %}}Minimum host percentage for ramp up period.{{% /md %}}</dd>
-    <dt class="property-optional"
+    <dd>{{% md %}}Minimum host percentage for ramp up period.{{% /md %}}</dd><dt class="property-optional"
             title="Optional">
         <span id="rampupstarttime_go">
 <a href="#rampupstarttime_go" style="color: inherit; text-decoration: inherit;">Ramp<wbr>Up<wbr>Start<wbr>Time</a>
@@ -2257,14 +2015,11 @@ All [input](#inputs) properties are implicitly available as output properties. A
         <span class="property-indicator"></span>
         <span class="property-type">string</span>
     </dt>
-    <dd>{{% md %}}Starting time for ramp up period.{{% /md %}}</dd>
-</dl>
+    <dd>{{% md %}}Starting time for ramp up period.{{% /md %}}</dd></dl>
 {{% /choosable %}}
 
 {{% choosable language nodejs %}}
-<dl class="resources-properties">
-
-    <dt class="property-optional"
+<dl class="resources-properties"><dt class="property-optional"
             title="Optional">
         <span id="daysofweek_nodejs">
 <a href="#daysofweek_nodejs" style="color: inherit; text-decoration: inherit;">days<wbr>Of<wbr>Week</a>
@@ -2272,8 +2027,7 @@ All [input](#inputs) properties are implicitly available as output properties. A
         <span class="property-indicator"></span>
         <span class="property-type">string[]</span>
     </dt>
-    <dd>{{% md %}}Set of days of the week on which this schedule is active.{{% /md %}}</dd>
-    <dt class="property-optional"
+    <dd>{{% md %}}Set of days of the week on which this schedule is active.{{% /md %}}</dd><dt class="property-optional"
             title="Optional">
         <span id="name_nodejs">
 <a href="#name_nodejs" style="color: inherit; text-decoration: inherit;">name</a>
@@ -2281,8 +2035,7 @@ All [input](#inputs) properties are implicitly available as output properties. A
         <span class="property-indicator"></span>
         <span class="property-type">string</span>
     </dt>
-    <dd>{{% md %}}Name of the scaling schedule.{{% /md %}}</dd>
-    <dt class="property-optional"
+    <dd>{{% md %}}Name of the scaling schedule.{{% /md %}}</dd><dt class="property-optional"
             title="Optional">
         <span id="offpeakloadbalancingalgorithm_nodejs">
 <a href="#offpeakloadbalancingalgorithm_nodejs" style="color: inherit; text-decoration: inherit;">off<wbr>Peak<wbr>Load<wbr>Balancing<wbr>Algorithm</a>
@@ -2290,8 +2043,7 @@ All [input](#inputs) properties are implicitly available as output properties. A
         <span class="property-indicator"></span>
         <span class="property-type">string</span>
     </dt>
-    <dd>{{% md %}}Load balancing algorithm for off-peak period.{{% /md %}}</dd>
-    <dt class="property-optional"
+    <dd>{{% md %}}Load balancing algorithm for off-peak period.{{% /md %}}</dd><dt class="property-optional"
             title="Optional">
         <span id="offpeakstarttime_nodejs">
 <a href="#offpeakstarttime_nodejs" style="color: inherit; text-decoration: inherit;">off<wbr>Peak<wbr>Start<wbr>Time</a>
@@ -2299,8 +2051,7 @@ All [input](#inputs) properties are implicitly available as output properties. A
         <span class="property-indicator"></span>
         <span class="property-type">string</span>
     </dt>
-    <dd>{{% md %}}Starting time for off-peak period.{{% /md %}}</dd>
-    <dt class="property-optional"
+    <dd>{{% md %}}Starting time for off-peak period.{{% /md %}}</dd><dt class="property-optional"
             title="Optional">
         <span id="peakloadbalancingalgorithm_nodejs">
 <a href="#peakloadbalancingalgorithm_nodejs" style="color: inherit; text-decoration: inherit;">peak<wbr>Load<wbr>Balancing<wbr>Algorithm</a>
@@ -2308,8 +2059,7 @@ All [input](#inputs) properties are implicitly available as output properties. A
         <span class="property-indicator"></span>
         <span class="property-type">string</span>
     </dt>
-    <dd>{{% md %}}Load balancing algorithm for peak period.{{% /md %}}</dd>
-    <dt class="property-optional"
+    <dd>{{% md %}}Load balancing algorithm for peak period.{{% /md %}}</dd><dt class="property-optional"
             title="Optional">
         <span id="peakstarttime_nodejs">
 <a href="#peakstarttime_nodejs" style="color: inherit; text-decoration: inherit;">peak<wbr>Start<wbr>Time</a>
@@ -2317,8 +2067,7 @@ All [input](#inputs) properties are implicitly available as output properties. A
         <span class="property-indicator"></span>
         <span class="property-type">string</span>
     </dt>
-    <dd>{{% md %}}Starting time for peak period.{{% /md %}}</dd>
-    <dt class="property-optional"
+    <dd>{{% md %}}Starting time for peak period.{{% /md %}}</dd><dt class="property-optional"
             title="Optional">
         <span id="rampdowncapacitythresholdpct_nodejs">
 <a href="#rampdowncapacitythresholdpct_nodejs" style="color: inherit; text-decoration: inherit;">ramp<wbr>Down<wbr>Capacity<wbr>Threshold<wbr>Pct</a>
@@ -2326,8 +2075,7 @@ All [input](#inputs) properties are implicitly available as output properties. A
         <span class="property-indicator"></span>
         <span class="property-type">number</span>
     </dt>
-    <dd>{{% md %}}Capacity threshold for ramp down period.{{% /md %}}</dd>
-    <dt class="property-optional"
+    <dd>{{% md %}}Capacity threshold for ramp down period.{{% /md %}}</dd><dt class="property-optional"
             title="Optional">
         <span id="rampdownforcelogoffusers_nodejs">
 <a href="#rampdownforcelogoffusers_nodejs" style="color: inherit; text-decoration: inherit;">ramp<wbr>Down<wbr>Force<wbr>Logoff<wbr>Users</a>
@@ -2335,8 +2083,7 @@ All [input](#inputs) properties are implicitly available as output properties. A
         <span class="property-indicator"></span>
         <span class="property-type">boolean</span>
     </dt>
-    <dd>{{% md %}}Should users be logged off forcefully from hosts.{{% /md %}}</dd>
-    <dt class="property-optional"
+    <dd>{{% md %}}Should users be logged off forcefully from hosts.{{% /md %}}</dd><dt class="property-optional"
             title="Optional">
         <span id="rampdownloadbalancingalgorithm_nodejs">
 <a href="#rampdownloadbalancingalgorithm_nodejs" style="color: inherit; text-decoration: inherit;">ramp<wbr>Down<wbr>Load<wbr>Balancing<wbr>Algorithm</a>
@@ -2344,8 +2091,7 @@ All [input](#inputs) properties are implicitly available as output properties. A
         <span class="property-indicator"></span>
         <span class="property-type">string</span>
     </dt>
-    <dd>{{% md %}}Load balancing algorithm for ramp down period.{{% /md %}}</dd>
-    <dt class="property-optional"
+    <dd>{{% md %}}Load balancing algorithm for ramp down period.{{% /md %}}</dd><dt class="property-optional"
             title="Optional">
         <span id="rampdownminimumhostspct_nodejs">
 <a href="#rampdownminimumhostspct_nodejs" style="color: inherit; text-decoration: inherit;">ramp<wbr>Down<wbr>Minimum<wbr>Hosts<wbr>Pct</a>
@@ -2353,8 +2099,7 @@ All [input](#inputs) properties are implicitly available as output properties. A
         <span class="property-indicator"></span>
         <span class="property-type">number</span>
     </dt>
-    <dd>{{% md %}}Minimum host percentage for ramp down period.{{% /md %}}</dd>
-    <dt class="property-optional"
+    <dd>{{% md %}}Minimum host percentage for ramp down period.{{% /md %}}</dd><dt class="property-optional"
             title="Optional">
         <span id="rampdownnotificationmessage_nodejs">
 <a href="#rampdownnotificationmessage_nodejs" style="color: inherit; text-decoration: inherit;">ramp<wbr>Down<wbr>Notification<wbr>Message</a>
@@ -2362,8 +2107,7 @@ All [input](#inputs) properties are implicitly available as output properties. A
         <span class="property-indicator"></span>
         <span class="property-type">string</span>
     </dt>
-    <dd>{{% md %}}Notification message for users during ramp down period.{{% /md %}}</dd>
-    <dt class="property-optional"
+    <dd>{{% md %}}Notification message for users during ramp down period.{{% /md %}}</dd><dt class="property-optional"
             title="Optional">
         <span id="rampdownstarttime_nodejs">
 <a href="#rampdownstarttime_nodejs" style="color: inherit; text-decoration: inherit;">ramp<wbr>Down<wbr>Start<wbr>Time</a>
@@ -2371,8 +2115,7 @@ All [input](#inputs) properties are implicitly available as output properties. A
         <span class="property-indicator"></span>
         <span class="property-type">string</span>
     </dt>
-    <dd>{{% md %}}Starting time for ramp down period.{{% /md %}}</dd>
-    <dt class="property-optional"
+    <dd>{{% md %}}Starting time for ramp down period.{{% /md %}}</dd><dt class="property-optional"
             title="Optional">
         <span id="rampdownstophostswhen_nodejs">
 <a href="#rampdownstophostswhen_nodejs" style="color: inherit; text-decoration: inherit;">ramp<wbr>Down<wbr>Stop<wbr>Hosts<wbr>When</a>
@@ -2380,8 +2123,7 @@ All [input](#inputs) properties are implicitly available as output properties. A
         <span class="property-indicator"></span>
         <span class="property-type">string</span>
     </dt>
-    <dd>{{% md %}}Specifies when to stop hosts during ramp down period.{{% /md %}}</dd>
-    <dt class="property-optional"
+    <dd>{{% md %}}Specifies when to stop hosts during ramp down period.{{% /md %}}</dd><dt class="property-optional"
             title="Optional">
         <span id="rampdownwaittimeminutes_nodejs">
 <a href="#rampdownwaittimeminutes_nodejs" style="color: inherit; text-decoration: inherit;">ramp<wbr>Down<wbr>Wait<wbr>Time<wbr>Minutes</a>
@@ -2389,8 +2131,7 @@ All [input](#inputs) properties are implicitly available as output properties. A
         <span class="property-indicator"></span>
         <span class="property-type">number</span>
     </dt>
-    <dd>{{% md %}}Number of minutes to wait to stop hosts during ramp down period.{{% /md %}}</dd>
-    <dt class="property-optional"
+    <dd>{{% md %}}Number of minutes to wait to stop hosts during ramp down period.{{% /md %}}</dd><dt class="property-optional"
             title="Optional">
         <span id="rampupcapacitythresholdpct_nodejs">
 <a href="#rampupcapacitythresholdpct_nodejs" style="color: inherit; text-decoration: inherit;">ramp<wbr>Up<wbr>Capacity<wbr>Threshold<wbr>Pct</a>
@@ -2398,8 +2139,7 @@ All [input](#inputs) properties are implicitly available as output properties. A
         <span class="property-indicator"></span>
         <span class="property-type">number</span>
     </dt>
-    <dd>{{% md %}}Capacity threshold for ramp up period.{{% /md %}}</dd>
-    <dt class="property-optional"
+    <dd>{{% md %}}Capacity threshold for ramp up period.{{% /md %}}</dd><dt class="property-optional"
             title="Optional">
         <span id="rampuploadbalancingalgorithm_nodejs">
 <a href="#rampuploadbalancingalgorithm_nodejs" style="color: inherit; text-decoration: inherit;">ramp<wbr>Up<wbr>Load<wbr>Balancing<wbr>Algorithm</a>
@@ -2407,8 +2147,7 @@ All [input](#inputs) properties are implicitly available as output properties. A
         <span class="property-indicator"></span>
         <span class="property-type">string</span>
     </dt>
-    <dd>{{% md %}}Load balancing algorithm for ramp up period.{{% /md %}}</dd>
-    <dt class="property-optional"
+    <dd>{{% md %}}Load balancing algorithm for ramp up period.{{% /md %}}</dd><dt class="property-optional"
             title="Optional">
         <span id="rampupminimumhostspct_nodejs">
 <a href="#rampupminimumhostspct_nodejs" style="color: inherit; text-decoration: inherit;">ramp<wbr>Up<wbr>Minimum<wbr>Hosts<wbr>Pct</a>
@@ -2416,8 +2155,7 @@ All [input](#inputs) properties are implicitly available as output properties. A
         <span class="property-indicator"></span>
         <span class="property-type">number</span>
     </dt>
-    <dd>{{% md %}}Minimum host percentage for ramp up period.{{% /md %}}</dd>
-    <dt class="property-optional"
+    <dd>{{% md %}}Minimum host percentage for ramp up period.{{% /md %}}</dd><dt class="property-optional"
             title="Optional">
         <span id="rampupstarttime_nodejs">
 <a href="#rampupstarttime_nodejs" style="color: inherit; text-decoration: inherit;">ramp<wbr>Up<wbr>Start<wbr>Time</a>
@@ -2425,14 +2163,11 @@ All [input](#inputs) properties are implicitly available as output properties. A
         <span class="property-indicator"></span>
         <span class="property-type">string</span>
     </dt>
-    <dd>{{% md %}}Starting time for ramp up period.{{% /md %}}</dd>
-</dl>
+    <dd>{{% md %}}Starting time for ramp up period.{{% /md %}}</dd></dl>
 {{% /choosable %}}
 
 {{% choosable language python %}}
-<dl class="resources-properties">
-
-    <dt class="property-optional"
+<dl class="resources-properties"><dt class="property-optional"
             title="Optional">
         <span id="days_of_week_python">
 <a href="#days_of_week_python" style="color: inherit; text-decoration: inherit;">days_<wbr>of_<wbr>week</a>
@@ -2440,8 +2175,7 @@ All [input](#inputs) properties are implicitly available as output properties. A
         <span class="property-indicator"></span>
         <span class="property-type">Sequence[str]</span>
     </dt>
-    <dd>{{% md %}}Set of days of the week on which this schedule is active.{{% /md %}}</dd>
-    <dt class="property-optional"
+    <dd>{{% md %}}Set of days of the week on which this schedule is active.{{% /md %}}</dd><dt class="property-optional"
             title="Optional">
         <span id="name_python">
 <a href="#name_python" style="color: inherit; text-decoration: inherit;">name</a>
@@ -2449,8 +2183,7 @@ All [input](#inputs) properties are implicitly available as output properties. A
         <span class="property-indicator"></span>
         <span class="property-type">str</span>
     </dt>
-    <dd>{{% md %}}Name of the scaling schedule.{{% /md %}}</dd>
-    <dt class="property-optional"
+    <dd>{{% md %}}Name of the scaling schedule.{{% /md %}}</dd><dt class="property-optional"
             title="Optional">
         <span id="off_peak_load_balancing_algorithm_python">
 <a href="#off_peak_load_balancing_algorithm_python" style="color: inherit; text-decoration: inherit;">off_<wbr>peak_<wbr>load_<wbr>balancing_<wbr>algorithm</a>
@@ -2458,8 +2191,7 @@ All [input](#inputs) properties are implicitly available as output properties. A
         <span class="property-indicator"></span>
         <span class="property-type">str</span>
     </dt>
-    <dd>{{% md %}}Load balancing algorithm for off-peak period.{{% /md %}}</dd>
-    <dt class="property-optional"
+    <dd>{{% md %}}Load balancing algorithm for off-peak period.{{% /md %}}</dd><dt class="property-optional"
             title="Optional">
         <span id="off_peak_start_time_python">
 <a href="#off_peak_start_time_python" style="color: inherit; text-decoration: inherit;">off_<wbr>peak_<wbr>start_<wbr>time</a>
@@ -2467,8 +2199,7 @@ All [input](#inputs) properties are implicitly available as output properties. A
         <span class="property-indicator"></span>
         <span class="property-type">str</span>
     </dt>
-    <dd>{{% md %}}Starting time for off-peak period.{{% /md %}}</dd>
-    <dt class="property-optional"
+    <dd>{{% md %}}Starting time for off-peak period.{{% /md %}}</dd><dt class="property-optional"
             title="Optional">
         <span id="peak_load_balancing_algorithm_python">
 <a href="#peak_load_balancing_algorithm_python" style="color: inherit; text-decoration: inherit;">peak_<wbr>load_<wbr>balancing_<wbr>algorithm</a>
@@ -2476,8 +2207,7 @@ All [input](#inputs) properties are implicitly available as output properties. A
         <span class="property-indicator"></span>
         <span class="property-type">str</span>
     </dt>
-    <dd>{{% md %}}Load balancing algorithm for peak period.{{% /md %}}</dd>
-    <dt class="property-optional"
+    <dd>{{% md %}}Load balancing algorithm for peak period.{{% /md %}}</dd><dt class="property-optional"
             title="Optional">
         <span id="peak_start_time_python">
 <a href="#peak_start_time_python" style="color: inherit; text-decoration: inherit;">peak_<wbr>start_<wbr>time</a>
@@ -2485,8 +2215,7 @@ All [input](#inputs) properties are implicitly available as output properties. A
         <span class="property-indicator"></span>
         <span class="property-type">str</span>
     </dt>
-    <dd>{{% md %}}Starting time for peak period.{{% /md %}}</dd>
-    <dt class="property-optional"
+    <dd>{{% md %}}Starting time for peak period.{{% /md %}}</dd><dt class="property-optional"
             title="Optional">
         <span id="ramp_down_capacity_threshold_pct_python">
 <a href="#ramp_down_capacity_threshold_pct_python" style="color: inherit; text-decoration: inherit;">ramp_<wbr>down_<wbr>capacity_<wbr>threshold_<wbr>pct</a>
@@ -2494,8 +2223,7 @@ All [input](#inputs) properties are implicitly available as output properties. A
         <span class="property-indicator"></span>
         <span class="property-type">int</span>
     </dt>
-    <dd>{{% md %}}Capacity threshold for ramp down period.{{% /md %}}</dd>
-    <dt class="property-optional"
+    <dd>{{% md %}}Capacity threshold for ramp down period.{{% /md %}}</dd><dt class="property-optional"
             title="Optional">
         <span id="ramp_down_force_logoff_users_python">
 <a href="#ramp_down_force_logoff_users_python" style="color: inherit; text-decoration: inherit;">ramp_<wbr>down_<wbr>force_<wbr>logoff_<wbr>users</a>
@@ -2503,8 +2231,7 @@ All [input](#inputs) properties are implicitly available as output properties. A
         <span class="property-indicator"></span>
         <span class="property-type">bool</span>
     </dt>
-    <dd>{{% md %}}Should users be logged off forcefully from hosts.{{% /md %}}</dd>
-    <dt class="property-optional"
+    <dd>{{% md %}}Should users be logged off forcefully from hosts.{{% /md %}}</dd><dt class="property-optional"
             title="Optional">
         <span id="ramp_down_load_balancing_algorithm_python">
 <a href="#ramp_down_load_balancing_algorithm_python" style="color: inherit; text-decoration: inherit;">ramp_<wbr>down_<wbr>load_<wbr>balancing_<wbr>algorithm</a>
@@ -2512,8 +2239,7 @@ All [input](#inputs) properties are implicitly available as output properties. A
         <span class="property-indicator"></span>
         <span class="property-type">str</span>
     </dt>
-    <dd>{{% md %}}Load balancing algorithm for ramp down period.{{% /md %}}</dd>
-    <dt class="property-optional"
+    <dd>{{% md %}}Load balancing algorithm for ramp down period.{{% /md %}}</dd><dt class="property-optional"
             title="Optional">
         <span id="ramp_down_minimum_hosts_pct_python">
 <a href="#ramp_down_minimum_hosts_pct_python" style="color: inherit; text-decoration: inherit;">ramp_<wbr>down_<wbr>minimum_<wbr>hosts_<wbr>pct</a>
@@ -2521,8 +2247,7 @@ All [input](#inputs) properties are implicitly available as output properties. A
         <span class="property-indicator"></span>
         <span class="property-type">int</span>
     </dt>
-    <dd>{{% md %}}Minimum host percentage for ramp down period.{{% /md %}}</dd>
-    <dt class="property-optional"
+    <dd>{{% md %}}Minimum host percentage for ramp down period.{{% /md %}}</dd><dt class="property-optional"
             title="Optional">
         <span id="ramp_down_notification_message_python">
 <a href="#ramp_down_notification_message_python" style="color: inherit; text-decoration: inherit;">ramp_<wbr>down_<wbr>notification_<wbr>message</a>
@@ -2530,8 +2255,7 @@ All [input](#inputs) properties are implicitly available as output properties. A
         <span class="property-indicator"></span>
         <span class="property-type">str</span>
     </dt>
-    <dd>{{% md %}}Notification message for users during ramp down period.{{% /md %}}</dd>
-    <dt class="property-optional"
+    <dd>{{% md %}}Notification message for users during ramp down period.{{% /md %}}</dd><dt class="property-optional"
             title="Optional">
         <span id="ramp_down_start_time_python">
 <a href="#ramp_down_start_time_python" style="color: inherit; text-decoration: inherit;">ramp_<wbr>down_<wbr>start_<wbr>time</a>
@@ -2539,8 +2263,7 @@ All [input](#inputs) properties are implicitly available as output properties. A
         <span class="property-indicator"></span>
         <span class="property-type">str</span>
     </dt>
-    <dd>{{% md %}}Starting time for ramp down period.{{% /md %}}</dd>
-    <dt class="property-optional"
+    <dd>{{% md %}}Starting time for ramp down period.{{% /md %}}</dd><dt class="property-optional"
             title="Optional">
         <span id="ramp_down_stop_hosts_when_python">
 <a href="#ramp_down_stop_hosts_when_python" style="color: inherit; text-decoration: inherit;">ramp_<wbr>down_<wbr>stop_<wbr>hosts_<wbr>when</a>
@@ -2548,8 +2271,7 @@ All [input](#inputs) properties are implicitly available as output properties. A
         <span class="property-indicator"></span>
         <span class="property-type">str</span>
     </dt>
-    <dd>{{% md %}}Specifies when to stop hosts during ramp down period.{{% /md %}}</dd>
-    <dt class="property-optional"
+    <dd>{{% md %}}Specifies when to stop hosts during ramp down period.{{% /md %}}</dd><dt class="property-optional"
             title="Optional">
         <span id="ramp_down_wait_time_minutes_python">
 <a href="#ramp_down_wait_time_minutes_python" style="color: inherit; text-decoration: inherit;">ramp_<wbr>down_<wbr>wait_<wbr>time_<wbr>minutes</a>
@@ -2557,8 +2279,7 @@ All [input](#inputs) properties are implicitly available as output properties. A
         <span class="property-indicator"></span>
         <span class="property-type">int</span>
     </dt>
-    <dd>{{% md %}}Number of minutes to wait to stop hosts during ramp down period.{{% /md %}}</dd>
-    <dt class="property-optional"
+    <dd>{{% md %}}Number of minutes to wait to stop hosts during ramp down period.{{% /md %}}</dd><dt class="property-optional"
             title="Optional">
         <span id="ramp_up_capacity_threshold_pct_python">
 <a href="#ramp_up_capacity_threshold_pct_python" style="color: inherit; text-decoration: inherit;">ramp_<wbr>up_<wbr>capacity_<wbr>threshold_<wbr>pct</a>
@@ -2566,8 +2287,7 @@ All [input](#inputs) properties are implicitly available as output properties. A
         <span class="property-indicator"></span>
         <span class="property-type">int</span>
     </dt>
-    <dd>{{% md %}}Capacity threshold for ramp up period.{{% /md %}}</dd>
-    <dt class="property-optional"
+    <dd>{{% md %}}Capacity threshold for ramp up period.{{% /md %}}</dd><dt class="property-optional"
             title="Optional">
         <span id="ramp_up_load_balancing_algorithm_python">
 <a href="#ramp_up_load_balancing_algorithm_python" style="color: inherit; text-decoration: inherit;">ramp_<wbr>up_<wbr>load_<wbr>balancing_<wbr>algorithm</a>
@@ -2575,8 +2295,7 @@ All [input](#inputs) properties are implicitly available as output properties. A
         <span class="property-indicator"></span>
         <span class="property-type">str</span>
     </dt>
-    <dd>{{% md %}}Load balancing algorithm for ramp up period.{{% /md %}}</dd>
-    <dt class="property-optional"
+    <dd>{{% md %}}Load balancing algorithm for ramp up period.{{% /md %}}</dd><dt class="property-optional"
             title="Optional">
         <span id="ramp_up_minimum_hosts_pct_python">
 <a href="#ramp_up_minimum_hosts_pct_python" style="color: inherit; text-decoration: inherit;">ramp_<wbr>up_<wbr>minimum_<wbr>hosts_<wbr>pct</a>
@@ -2584,8 +2303,7 @@ All [input](#inputs) properties are implicitly available as output properties. A
         <span class="property-indicator"></span>
         <span class="property-type">int</span>
     </dt>
-    <dd>{{% md %}}Minimum host percentage for ramp up period.{{% /md %}}</dd>
-    <dt class="property-optional"
+    <dd>{{% md %}}Minimum host percentage for ramp up period.{{% /md %}}</dd><dt class="property-optional"
             title="Optional">
         <span id="ramp_up_start_time_python">
 <a href="#ramp_up_start_time_python" style="color: inherit; text-decoration: inherit;">ramp_<wbr>up_<wbr>start_<wbr>time</a>
@@ -2593,84 +2311,59 @@ All [input](#inputs) properties are implicitly available as output properties. A
         <span class="property-indicator"></span>
         <span class="property-type">str</span>
     </dt>
-    <dd>{{% md %}}Starting time for ramp up period.{{% /md %}}</dd>
-</dl>
+    <dd>{{% md %}}Starting time for ramp up period.{{% /md %}}</dd></dl>
 {{% /choosable %}}
 
 <h4 id="sessionhostloadbalancingalgorithm">Session<wbr>Host<wbr>Load<wbr>Balancing<wbr>Algorithm</h4>
 
 {{% choosable language csharp %}}
-<dl class="tabular">
-    <dt>Breadth<wbr>First</dt>
-    <dd>BreadthFirst</dd>
-    <dt>Depth<wbr>First</dt>
-    <dd>DepthFirst</dd>
-</dl>
+<dl class="tabular"><dt>Breadth<wbr>First</dt>
+    <dd>BreadthFirst</dd><dt>Depth<wbr>First</dt>
+    <dd>DepthFirst</dd></dl>
 {{% /choosable %}}
 
 {{% choosable language go %}}
-<dl class="tabular">
-    <dt>Session<wbr>Host<wbr>Load<wbr>Balancing<wbr>Algorithm<wbr>Breadth<wbr>First</dt>
-    <dd>BreadthFirst</dd>
-    <dt>Session<wbr>Host<wbr>Load<wbr>Balancing<wbr>Algorithm<wbr>Depth<wbr>First</dt>
-    <dd>DepthFirst</dd>
-</dl>
+<dl class="tabular"><dt>Session<wbr>Host<wbr>Load<wbr>Balancing<wbr>Algorithm<wbr>Breadth<wbr>First</dt>
+    <dd>BreadthFirst</dd><dt>Session<wbr>Host<wbr>Load<wbr>Balancing<wbr>Algorithm<wbr>Depth<wbr>First</dt>
+    <dd>DepthFirst</dd></dl>
 {{% /choosable %}}
 
 {{% choosable language nodejs %}}
-<dl class="tabular">
-    <dt>Breadth<wbr>First</dt>
-    <dd>BreadthFirst</dd>
-    <dt>Depth<wbr>First</dt>
-    <dd>DepthFirst</dd>
-</dl>
+<dl class="tabular"><dt>Breadth<wbr>First</dt>
+    <dd>BreadthFirst</dd><dt>Depth<wbr>First</dt>
+    <dd>DepthFirst</dd></dl>
 {{% /choosable %}}
 
 {{% choosable language python %}}
-<dl class="tabular">
-    <dt>BREADTH_FIRST</dt>
-    <dd>BreadthFirst</dd>
-    <dt>DEPTH_FIRST</dt>
-    <dd>DepthFirst</dd>
-</dl>
+<dl class="tabular"><dt>BREADTH_FIRST</dt>
+    <dd>BreadthFirst</dd><dt>DEPTH_FIRST</dt>
+    <dd>DepthFirst</dd></dl>
 {{% /choosable %}}
 
 <h4 id="stophostswhen">Stop<wbr>Hosts<wbr>When</h4>
 
 {{% choosable language csharp %}}
-<dl class="tabular">
-    <dt>Zero<wbr>Sessions</dt>
-    <dd>ZeroSessions</dd>
-    <dt>Zero<wbr>Active<wbr>Sessions</dt>
-    <dd>ZeroActiveSessions</dd>
-</dl>
+<dl class="tabular"><dt>Zero<wbr>Sessions</dt>
+    <dd>ZeroSessions</dd><dt>Zero<wbr>Active<wbr>Sessions</dt>
+    <dd>ZeroActiveSessions</dd></dl>
 {{% /choosable %}}
 
 {{% choosable language go %}}
-<dl class="tabular">
-    <dt>Stop<wbr>Hosts<wbr>When<wbr>Zero<wbr>Sessions</dt>
-    <dd>ZeroSessions</dd>
-    <dt>Stop<wbr>Hosts<wbr>When<wbr>Zero<wbr>Active<wbr>Sessions</dt>
-    <dd>ZeroActiveSessions</dd>
-</dl>
+<dl class="tabular"><dt>Stop<wbr>Hosts<wbr>When<wbr>Zero<wbr>Sessions</dt>
+    <dd>ZeroSessions</dd><dt>Stop<wbr>Hosts<wbr>When<wbr>Zero<wbr>Active<wbr>Sessions</dt>
+    <dd>ZeroActiveSessions</dd></dl>
 {{% /choosable %}}
 
 {{% choosable language nodejs %}}
-<dl class="tabular">
-    <dt>Zero<wbr>Sessions</dt>
-    <dd>ZeroSessions</dd>
-    <dt>Zero<wbr>Active<wbr>Sessions</dt>
-    <dd>ZeroActiveSessions</dd>
-</dl>
+<dl class="tabular"><dt>Zero<wbr>Sessions</dt>
+    <dd>ZeroSessions</dd><dt>Zero<wbr>Active<wbr>Sessions</dt>
+    <dd>ZeroActiveSessions</dd></dl>
 {{% /choosable %}}
 
 {{% choosable language python %}}
-<dl class="tabular">
-    <dt>ZERO_SESSIONS</dt>
-    <dd>ZeroSessions</dd>
-    <dt>ZERO_ACTIVE_SESSIONS</dt>
-    <dd>ZeroActiveSessions</dd>
-</dl>
+<dl class="tabular"><dt>ZERO_SESSIONS</dt>
+    <dd>ZeroSessions</dd><dt>ZERO_ACTIVE_SESSIONS</dt>
+    <dd>ZeroActiveSessions</dd></dl>
 {{% /choosable %}}
 ## Import
 

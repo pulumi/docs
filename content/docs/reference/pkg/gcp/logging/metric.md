@@ -21,11 +21,17 @@ To get more information about Metric, see:
     * [Official Documentation](https://cloud.google.com/logging/docs/apis)
 
 {{% examples %}}
+
 ## Example Usage
 
 {{< chooser language "typescript,python,go,csharp" / >}}
+
+
 ### Logging Metric Basic
-{{% example csharp %}}
+
+
+{{< example csharp >}}
+
 ```csharp
 using Pulumi;
 using Gcp = Pulumi.Gcp;
@@ -80,9 +86,12 @@ class MyStack : Stack
 }
 ```
 
-{{% /example %}}
 
-{{% example go %}}
+{{< /example >}}
+
+
+{{< example go >}}
+
 ```go
 package main
 
@@ -134,9 +143,12 @@ func main() {
 }
 ```
 
-{{% /example %}}
 
-{{% example python %}}
+{{< /example >}}
+
+
+{{< example python >}}
+
 ```python
 import pulumi
 import pulumi_gcp as gcp
@@ -175,9 +187,12 @@ logging_metric = gcp.logging.Metric("loggingMetric",
     value_extractor="EXTRACT(jsonPayload.request)")
 ```
 
-{{% /example %}}
 
-{{% example typescript %}}
+{{< /example >}}
+
+
+{{< example typescript >}}
+
 
 ```typescript
 import * as pulumi from "@pulumi/pulumi";
@@ -218,10 +233,17 @@ const loggingMetric = new gcp.logging.Metric("logging_metric", {
 });
 ```
 
-{{% /example %}}
+
+{{< /example >}}
+
+
+
 
 ### Logging Metric Counter Basic
-{{% example csharp %}}
+
+
+{{< example csharp >}}
+
 ```csharp
 using Pulumi;
 using Gcp = Pulumi.Gcp;
@@ -244,9 +266,12 @@ class MyStack : Stack
 }
 ```
 
-{{% /example %}}
 
-{{% example go %}}
+{{< /example >}}
+
+
+{{< example go >}}
+
 ```go
 package main
 
@@ -272,9 +297,12 @@ func main() {
 }
 ```
 
-{{% /example %}}
 
-{{% example python %}}
+{{< /example >}}
+
+
+{{< example python >}}
+
 ```python
 import pulumi
 import pulumi_gcp as gcp
@@ -287,9 +315,12 @@ logging_metric = gcp.logging.Metric("loggingMetric",
     ))
 ```
 
-{{% /example %}}
 
-{{% example typescript %}}
+{{< /example >}}
+
+
+{{< example typescript >}}
+
 
 ```typescript
 import * as pulumi from "@pulumi/pulumi";
@@ -304,10 +335,17 @@ const loggingMetric = new gcp.logging.Metric("logging_metric", {
 });
 ```
 
-{{% /example %}}
+
+{{< /example >}}
+
+
+
 
 ### Logging Metric Counter Labels
-{{% example csharp %}}
+
+
+{{< example csharp >}}
+
 ```csharp
 using Pulumi;
 using Gcp = Pulumi.Gcp;
@@ -343,9 +381,12 @@ class MyStack : Stack
 }
 ```
 
-{{% /example %}}
 
-{{% example go %}}
+{{< /example >}}
+
+
+{{< example go >}}
+
 ```go
 package main
 
@@ -381,9 +422,12 @@ func main() {
 }
 ```
 
-{{% /example %}}
 
-{{% example python %}}
+{{< /example >}}
+
+
+{{< example python >}}
+
 ```python
 import pulumi
 import pulumi_gcp as gcp
@@ -404,9 +448,12 @@ logging_metric = gcp.logging.Metric("loggingMetric",
     ))
 ```
 
-{{% /example %}}
 
-{{% example typescript %}}
+{{< /example >}}
+
+
+{{< example typescript >}}
+
 
 ```typescript
 import * as pulumi from "@pulumi/pulumi";
@@ -429,9 +476,16 @@ const loggingMetric = new gcp.logging.Metric("logging_metric", {
 });
 ```
 
-{{% /example %}}
+
+{{< /example >}}
+
+
+
+
 
 {{% /examples %}}
+
+
 
 
 ## Create a Metric Resource {#create}
@@ -456,9 +510,7 @@ const loggingMetric = new gcp.logging.Metric("logging_metric", {
 
 {{% choosable language nodejs %}}
 
-<dl class="resources-properties">
-  
-    <dt
+<dl class="resources-properties"><dt
         class="property-required" title="Required">
         <span>name</span>
         <span class="property-indicator"></span>
@@ -466,9 +518,7 @@ const loggingMetric = new gcp.logging.Metric("logging_metric", {
     </dt>
     <dd>
       The unique name of the resource.
-    </dd>
-  
-    <dt
+    </dd><dt
         class="property-required" title="Required">
         <span>args</span>
         <span class="property-indicator"></span>
@@ -476,9 +526,7 @@ const loggingMetric = new gcp.logging.Metric("logging_metric", {
     </dt>
     <dd>
       The arguments to resource properties.
-    </dd>
-  
-    <dt
+    </dd><dt
         class="property-optional" title="Optional">
         <span>opts</span>
         <span class="property-indicator"></span>
@@ -486,10 +534,7 @@ const loggingMetric = new gcp.logging.Metric("logging_metric", {
     </dt>
     <dd>
       Bag of options to control resource&#39;s behavior.
-    </dd>
-  
-
-</dl>
+    </dd></dl>
 
 {{% /choosable %}}
 
@@ -515,9 +560,7 @@ const loggingMetric = new gcp.logging.Metric("logging_metric", {
 
 {{% choosable language go %}}
 
-<dl class="resources-properties">
-  
-    <dt
+<dl class="resources-properties"><dt
         class="property-optional" title="Optional">
         <span>ctx</span>
         <span class="property-indicator"></span>
@@ -525,9 +568,7 @@ const loggingMetric = new gcp.logging.Metric("logging_metric", {
     </dt>
     <dd>
       Context object for the current deployment.
-    </dd>
-  
-    <dt
+    </dd><dt
         class="property-required" title="Required">
         <span>name</span>
         <span class="property-indicator"></span>
@@ -535,9 +576,7 @@ const loggingMetric = new gcp.logging.Metric("logging_metric", {
     </dt>
     <dd>
       The unique name of the resource.
-    </dd>
-  
-    <dt
+    </dd><dt
         class="property-required" title="Required">
         <span>args</span>
         <span class="property-indicator"></span>
@@ -545,9 +584,7 @@ const loggingMetric = new gcp.logging.Metric("logging_metric", {
     </dt>
     <dd>
       The arguments to resource properties.
-    </dd>
-  
-    <dt
+    </dd><dt
         class="property-optional" title="Optional">
         <span>opts</span>
         <span class="property-indicator"></span>
@@ -555,18 +592,13 @@ const loggingMetric = new gcp.logging.Metric("logging_metric", {
     </dt>
     <dd>
       Bag of options to control resource&#39;s behavior.
-    </dd>
-  
-
-</dl>
+    </dd></dl>
 
 {{% /choosable %}}
 
 {{% choosable language csharp %}}
 
-<dl class="resources-properties">
-  
-    <dt
+<dl class="resources-properties"><dt
         class="property-required" title="Required">
         <span>name</span>
         <span class="property-indicator"></span>
@@ -574,9 +606,7 @@ const loggingMetric = new gcp.logging.Metric("logging_metric", {
     </dt>
     <dd>
       The unique name of the resource.
-    </dd>
-  
-    <dt
+    </dd><dt
         class="property-required" title="Required">
         <span>args</span>
         <span class="property-indicator"></span>
@@ -584,9 +614,7 @@ const loggingMetric = new gcp.logging.Metric("logging_metric", {
     </dt>
     <dd>
       The arguments to resource properties.
-    </dd>
-  
-    <dt
+    </dd><dt
         class="property-optional" title="Optional">
         <span>opts</span>
         <span class="property-indicator"></span>
@@ -594,10 +622,7 @@ const loggingMetric = new gcp.logging.Metric("logging_metric", {
     </dt>
     <dd>
       Bag of options to control resource&#39;s behavior.
-    </dd>
-  
-
-</dl>
+    </dd></dl>
 
 {{% /choosable %}}
 
@@ -612,9 +637,7 @@ The Metric resource accepts the following [input]({{< relref "/docs/intro/concep
 
 
 {{% choosable language csharp %}}
-<dl class="resources-properties">
-
-    <dt class="property-required"
+<dl class="resources-properties"><dt class="property-required"
             title="Required">
         <span id="filter_csharp">
 <a href="#filter_csharp" style="color: inherit; text-decoration: inherit;">Filter</a>
@@ -624,8 +647,7 @@ The Metric resource accepts the following [input]({{< relref "/docs/intro/concep
     </dt>
     <dd>{{% md %}}An advanced logs filter (https://cloud.google.com/logging/docs/view/advanced-filters) which
 is used to match log entries.
-{{% /md %}}</dd>
-    <dt class="property-required"
+{{% /md %}}</dd><dt class="property-required"
             title="Required">
         <span id="metricdescriptor_csharp">
 <a href="#metricdescriptor_csharp" style="color: inherit; text-decoration: inherit;">Metric<wbr>Descriptor</a>
@@ -635,8 +657,7 @@ is used to match log entries.
     </dt>
     <dd>{{% md %}}The metric descriptor associated with the logs-based metric.
 Structure is documented below.
-{{% /md %}}</dd>
-    <dt class="property-optional"
+{{% /md %}}</dd><dt class="property-optional"
             title="Optional">
         <span id="bucketoptions_csharp">
 <a href="#bucketoptions_csharp" style="color: inherit; text-decoration: inherit;">Bucket<wbr>Options</a>
@@ -647,8 +668,7 @@ Structure is documented below.
     <dd>{{% md %}}The bucketOptions are required when the logs-based metric is using a DISTRIBUTION value type and it
 describes the bucket boundaries used to create a histogram of the extracted values.
 Structure is documented below.
-{{% /md %}}</dd>
-    <dt class="property-optional"
+{{% /md %}}</dd><dt class="property-optional"
             title="Optional">
         <span id="description_csharp">
 <a href="#description_csharp" style="color: inherit; text-decoration: inherit;">Description</a>
@@ -658,8 +678,7 @@ Structure is documented below.
     </dt>
     <dd>{{% md %}}A description of this metric, which is used in documentation. The maximum length of the
 description is 8000 characters.
-{{% /md %}}</dd>
-    <dt class="property-optional"
+{{% /md %}}</dd><dt class="property-optional"
             title="Optional">
         <span id="labelextractors_csharp">
 <a href="#labelextractors_csharp" style="color: inherit; text-decoration: inherit;">Label<wbr>Extractors</a>
@@ -671,8 +690,7 @@ description is 8000 characters.
 entry field and assign as the label value. Each label key specified in the LabelDescriptor must
 have an associated extractor expression in this map. The syntax of the extractor expression is
 the same as for the valueExtractor field.
-{{% /md %}}</dd>
-    <dt class="property-optional"
+{{% /md %}}</dd><dt class="property-optional"
             title="Optional">
         <span id="name_csharp">
 <a href="#name_csharp" style="color: inherit; text-decoration: inherit;">Name</a>
@@ -685,8 +703,7 @@ Metric identifiers are limited to 100 characters and can include only the follow
 characters A-Z, a-z, 0-9, and the special characters _-.,+!*',()%/. The forward-slash
 character (/) denotes a hierarchy of name pieces, and it cannot be the first character
 of the name.
-{{% /md %}}</dd>
-    <dt class="property-optional"
+{{% /md %}}</dd><dt class="property-optional"
             title="Optional">
         <span id="project_csharp">
 <a href="#project_csharp" style="color: inherit; text-decoration: inherit;">Project</a>
@@ -696,8 +713,7 @@ of the name.
     </dt>
     <dd>{{% md %}}The ID of the project in which the resource belongs.
 If it is not provided, the provider project is used.
-{{% /md %}}</dd>
-    <dt class="property-optional"
+{{% /md %}}</dd><dt class="property-optional"
             title="Optional">
         <span id="valueextractor_csharp">
 <a href="#valueextractor_csharp" style="color: inherit; text-decoration: inherit;">Value<wbr>Extractor</a>
@@ -712,14 +728,11 @@ the value is to be extracted. 2. regex - A regular expression using the Google R
 (https://github.com/google/re2/wiki/Syntax) with a single capture group to extract data from the specified
 log entry field. The value of the field is converted to a string before applying the regex. It is an
 error to specify a regex that does not include exactly one capture group.
-{{% /md %}}</dd>
-</dl>
+{{% /md %}}</dd></dl>
 {{% /choosable %}}
 
 {{% choosable language go %}}
-<dl class="resources-properties">
-
-    <dt class="property-required"
+<dl class="resources-properties"><dt class="property-required"
             title="Required">
         <span id="filter_go">
 <a href="#filter_go" style="color: inherit; text-decoration: inherit;">Filter</a>
@@ -729,8 +742,7 @@ error to specify a regex that does not include exactly one capture group.
     </dt>
     <dd>{{% md %}}An advanced logs filter (https://cloud.google.com/logging/docs/view/advanced-filters) which
 is used to match log entries.
-{{% /md %}}</dd>
-    <dt class="property-required"
+{{% /md %}}</dd><dt class="property-required"
             title="Required">
         <span id="metricdescriptor_go">
 <a href="#metricdescriptor_go" style="color: inherit; text-decoration: inherit;">Metric<wbr>Descriptor</a>
@@ -740,8 +752,7 @@ is used to match log entries.
     </dt>
     <dd>{{% md %}}The metric descriptor associated with the logs-based metric.
 Structure is documented below.
-{{% /md %}}</dd>
-    <dt class="property-optional"
+{{% /md %}}</dd><dt class="property-optional"
             title="Optional">
         <span id="bucketoptions_go">
 <a href="#bucketoptions_go" style="color: inherit; text-decoration: inherit;">Bucket<wbr>Options</a>
@@ -752,8 +763,7 @@ Structure is documented below.
     <dd>{{% md %}}The bucketOptions are required when the logs-based metric is using a DISTRIBUTION value type and it
 describes the bucket boundaries used to create a histogram of the extracted values.
 Structure is documented below.
-{{% /md %}}</dd>
-    <dt class="property-optional"
+{{% /md %}}</dd><dt class="property-optional"
             title="Optional">
         <span id="description_go">
 <a href="#description_go" style="color: inherit; text-decoration: inherit;">Description</a>
@@ -763,8 +773,7 @@ Structure is documented below.
     </dt>
     <dd>{{% md %}}A description of this metric, which is used in documentation. The maximum length of the
 description is 8000 characters.
-{{% /md %}}</dd>
-    <dt class="property-optional"
+{{% /md %}}</dd><dt class="property-optional"
             title="Optional">
         <span id="labelextractors_go">
 <a href="#labelextractors_go" style="color: inherit; text-decoration: inherit;">Label<wbr>Extractors</a>
@@ -776,8 +785,7 @@ description is 8000 characters.
 entry field and assign as the label value. Each label key specified in the LabelDescriptor must
 have an associated extractor expression in this map. The syntax of the extractor expression is
 the same as for the valueExtractor field.
-{{% /md %}}</dd>
-    <dt class="property-optional"
+{{% /md %}}</dd><dt class="property-optional"
             title="Optional">
         <span id="name_go">
 <a href="#name_go" style="color: inherit; text-decoration: inherit;">Name</a>
@@ -790,8 +798,7 @@ Metric identifiers are limited to 100 characters and can include only the follow
 characters A-Z, a-z, 0-9, and the special characters _-.,+!*',()%/. The forward-slash
 character (/) denotes a hierarchy of name pieces, and it cannot be the first character
 of the name.
-{{% /md %}}</dd>
-    <dt class="property-optional"
+{{% /md %}}</dd><dt class="property-optional"
             title="Optional">
         <span id="project_go">
 <a href="#project_go" style="color: inherit; text-decoration: inherit;">Project</a>
@@ -801,8 +808,7 @@ of the name.
     </dt>
     <dd>{{% md %}}The ID of the project in which the resource belongs.
 If it is not provided, the provider project is used.
-{{% /md %}}</dd>
-    <dt class="property-optional"
+{{% /md %}}</dd><dt class="property-optional"
             title="Optional">
         <span id="valueextractor_go">
 <a href="#valueextractor_go" style="color: inherit; text-decoration: inherit;">Value<wbr>Extractor</a>
@@ -817,14 +823,11 @@ the value is to be extracted. 2. regex - A regular expression using the Google R
 (https://github.com/google/re2/wiki/Syntax) with a single capture group to extract data from the specified
 log entry field. The value of the field is converted to a string before applying the regex. It is an
 error to specify a regex that does not include exactly one capture group.
-{{% /md %}}</dd>
-</dl>
+{{% /md %}}</dd></dl>
 {{% /choosable %}}
 
 {{% choosable language nodejs %}}
-<dl class="resources-properties">
-
-    <dt class="property-required"
+<dl class="resources-properties"><dt class="property-required"
             title="Required">
         <span id="filter_nodejs">
 <a href="#filter_nodejs" style="color: inherit; text-decoration: inherit;">filter</a>
@@ -834,8 +837,7 @@ error to specify a regex that does not include exactly one capture group.
     </dt>
     <dd>{{% md %}}An advanced logs filter (https://cloud.google.com/logging/docs/view/advanced-filters) which
 is used to match log entries.
-{{% /md %}}</dd>
-    <dt class="property-required"
+{{% /md %}}</dd><dt class="property-required"
             title="Required">
         <span id="metricdescriptor_nodejs">
 <a href="#metricdescriptor_nodejs" style="color: inherit; text-decoration: inherit;">metric<wbr>Descriptor</a>
@@ -845,8 +847,7 @@ is used to match log entries.
     </dt>
     <dd>{{% md %}}The metric descriptor associated with the logs-based metric.
 Structure is documented below.
-{{% /md %}}</dd>
-    <dt class="property-optional"
+{{% /md %}}</dd><dt class="property-optional"
             title="Optional">
         <span id="bucketoptions_nodejs">
 <a href="#bucketoptions_nodejs" style="color: inherit; text-decoration: inherit;">bucket<wbr>Options</a>
@@ -857,8 +858,7 @@ Structure is documented below.
     <dd>{{% md %}}The bucketOptions are required when the logs-based metric is using a DISTRIBUTION value type and it
 describes the bucket boundaries used to create a histogram of the extracted values.
 Structure is documented below.
-{{% /md %}}</dd>
-    <dt class="property-optional"
+{{% /md %}}</dd><dt class="property-optional"
             title="Optional">
         <span id="description_nodejs">
 <a href="#description_nodejs" style="color: inherit; text-decoration: inherit;">description</a>
@@ -868,8 +868,7 @@ Structure is documented below.
     </dt>
     <dd>{{% md %}}A description of this metric, which is used in documentation. The maximum length of the
 description is 8000 characters.
-{{% /md %}}</dd>
-    <dt class="property-optional"
+{{% /md %}}</dd><dt class="property-optional"
             title="Optional">
         <span id="labelextractors_nodejs">
 <a href="#labelextractors_nodejs" style="color: inherit; text-decoration: inherit;">label<wbr>Extractors</a>
@@ -881,8 +880,7 @@ description is 8000 characters.
 entry field and assign as the label value. Each label key specified in the LabelDescriptor must
 have an associated extractor expression in this map. The syntax of the extractor expression is
 the same as for the valueExtractor field.
-{{% /md %}}</dd>
-    <dt class="property-optional"
+{{% /md %}}</dd><dt class="property-optional"
             title="Optional">
         <span id="name_nodejs">
 <a href="#name_nodejs" style="color: inherit; text-decoration: inherit;">name</a>
@@ -895,8 +893,7 @@ Metric identifiers are limited to 100 characters and can include only the follow
 characters A-Z, a-z, 0-9, and the special characters _-.,+!*',()%/. The forward-slash
 character (/) denotes a hierarchy of name pieces, and it cannot be the first character
 of the name.
-{{% /md %}}</dd>
-    <dt class="property-optional"
+{{% /md %}}</dd><dt class="property-optional"
             title="Optional">
         <span id="project_nodejs">
 <a href="#project_nodejs" style="color: inherit; text-decoration: inherit;">project</a>
@@ -906,8 +903,7 @@ of the name.
     </dt>
     <dd>{{% md %}}The ID of the project in which the resource belongs.
 If it is not provided, the provider project is used.
-{{% /md %}}</dd>
-    <dt class="property-optional"
+{{% /md %}}</dd><dt class="property-optional"
             title="Optional">
         <span id="valueextractor_nodejs">
 <a href="#valueextractor_nodejs" style="color: inherit; text-decoration: inherit;">value<wbr>Extractor</a>
@@ -922,14 +918,11 @@ the value is to be extracted. 2. regex - A regular expression using the Google R
 (https://github.com/google/re2/wiki/Syntax) with a single capture group to extract data from the specified
 log entry field. The value of the field is converted to a string before applying the regex. It is an
 error to specify a regex that does not include exactly one capture group.
-{{% /md %}}</dd>
-</dl>
+{{% /md %}}</dd></dl>
 {{% /choosable %}}
 
 {{% choosable language python %}}
-<dl class="resources-properties">
-
-    <dt class="property-required"
+<dl class="resources-properties"><dt class="property-required"
             title="Required">
         <span id="filter_python">
 <a href="#filter_python" style="color: inherit; text-decoration: inherit;">filter</a>
@@ -939,8 +932,7 @@ error to specify a regex that does not include exactly one capture group.
     </dt>
     <dd>{{% md %}}An advanced logs filter (https://cloud.google.com/logging/docs/view/advanced-filters) which
 is used to match log entries.
-{{% /md %}}</dd>
-    <dt class="property-required"
+{{% /md %}}</dd><dt class="property-required"
             title="Required">
         <span id="metric_descriptor_python">
 <a href="#metric_descriptor_python" style="color: inherit; text-decoration: inherit;">metric_<wbr>descriptor</a>
@@ -950,8 +942,7 @@ is used to match log entries.
     </dt>
     <dd>{{% md %}}The metric descriptor associated with the logs-based metric.
 Structure is documented below.
-{{% /md %}}</dd>
-    <dt class="property-optional"
+{{% /md %}}</dd><dt class="property-optional"
             title="Optional">
         <span id="bucket_options_python">
 <a href="#bucket_options_python" style="color: inherit; text-decoration: inherit;">bucket_<wbr>options</a>
@@ -962,8 +953,7 @@ Structure is documented below.
     <dd>{{% md %}}The bucketOptions are required when the logs-based metric is using a DISTRIBUTION value type and it
 describes the bucket boundaries used to create a histogram of the extracted values.
 Structure is documented below.
-{{% /md %}}</dd>
-    <dt class="property-optional"
+{{% /md %}}</dd><dt class="property-optional"
             title="Optional">
         <span id="description_python">
 <a href="#description_python" style="color: inherit; text-decoration: inherit;">description</a>
@@ -973,8 +963,7 @@ Structure is documented below.
     </dt>
     <dd>{{% md %}}A description of this metric, which is used in documentation. The maximum length of the
 description is 8000 characters.
-{{% /md %}}</dd>
-    <dt class="property-optional"
+{{% /md %}}</dd><dt class="property-optional"
             title="Optional">
         <span id="label_extractors_python">
 <a href="#label_extractors_python" style="color: inherit; text-decoration: inherit;">label_<wbr>extractors</a>
@@ -986,8 +975,7 @@ description is 8000 characters.
 entry field and assign as the label value. Each label key specified in the LabelDescriptor must
 have an associated extractor expression in this map. The syntax of the extractor expression is
 the same as for the valueExtractor field.
-{{% /md %}}</dd>
-    <dt class="property-optional"
+{{% /md %}}</dd><dt class="property-optional"
             title="Optional">
         <span id="name_python">
 <a href="#name_python" style="color: inherit; text-decoration: inherit;">name</a>
@@ -1000,8 +988,7 @@ Metric identifiers are limited to 100 characters and can include only the follow
 characters A-Z, a-z, 0-9, and the special characters _-.,+!*',()%/. The forward-slash
 character (/) denotes a hierarchy of name pieces, and it cannot be the first character
 of the name.
-{{% /md %}}</dd>
-    <dt class="property-optional"
+{{% /md %}}</dd><dt class="property-optional"
             title="Optional">
         <span id="project_python">
 <a href="#project_python" style="color: inherit; text-decoration: inherit;">project</a>
@@ -1011,8 +998,7 @@ of the name.
     </dt>
     <dd>{{% md %}}The ID of the project in which the resource belongs.
 If it is not provided, the provider project is used.
-{{% /md %}}</dd>
-    <dt class="property-optional"
+{{% /md %}}</dd><dt class="property-optional"
             title="Optional">
         <span id="value_extractor_python">
 <a href="#value_extractor_python" style="color: inherit; text-decoration: inherit;">value_<wbr>extractor</a>
@@ -1027,8 +1013,7 @@ the value is to be extracted. 2. regex - A regular expression using the Google R
 (https://github.com/google/re2/wiki/Syntax) with a single capture group to extract data from the specified
 log entry field. The value of the field is converted to a string before applying the regex. It is an
 error to specify a regex that does not include exactly one capture group.
-{{% /md %}}</dd>
-</dl>
+{{% /md %}}</dd></dl>
 {{% /choosable %}}
 
 
@@ -1039,9 +1024,7 @@ All [input](#inputs) properties are implicitly available as output properties. A
 
 
 {{% choosable language csharp %}}
-<dl class="resources-properties">
-
-    <dt class="property-"
+<dl class="resources-properties"><dt class="property-"
             title="">
         <span id="id_csharp">
 <a href="#id_csharp" style="color: inherit; text-decoration: inherit;">Id</a>
@@ -1049,14 +1032,11 @@ All [input](#inputs) properties are implicitly available as output properties. A
         <span class="property-indicator"></span>
         <span class="property-type">string</span>
     </dt>
-    <dd>{{% md %}}The provider-assigned unique ID for this managed resource.{{% /md %}}</dd>
-</dl>
+    <dd>{{% md %}}The provider-assigned unique ID for this managed resource.{{% /md %}}</dd></dl>
 {{% /choosable %}}
 
 {{% choosable language go %}}
-<dl class="resources-properties">
-
-    <dt class="property-"
+<dl class="resources-properties"><dt class="property-"
             title="">
         <span id="id_go">
 <a href="#id_go" style="color: inherit; text-decoration: inherit;">Id</a>
@@ -1064,14 +1044,11 @@ All [input](#inputs) properties are implicitly available as output properties. A
         <span class="property-indicator"></span>
         <span class="property-type">string</span>
     </dt>
-    <dd>{{% md %}}The provider-assigned unique ID for this managed resource.{{% /md %}}</dd>
-</dl>
+    <dd>{{% md %}}The provider-assigned unique ID for this managed resource.{{% /md %}}</dd></dl>
 {{% /choosable %}}
 
 {{% choosable language nodejs %}}
-<dl class="resources-properties">
-
-    <dt class="property-"
+<dl class="resources-properties"><dt class="property-"
             title="">
         <span id="id_nodejs">
 <a href="#id_nodejs" style="color: inherit; text-decoration: inherit;">id</a>
@@ -1079,14 +1056,11 @@ All [input](#inputs) properties are implicitly available as output properties. A
         <span class="property-indicator"></span>
         <span class="property-type">string</span>
     </dt>
-    <dd>{{% md %}}The provider-assigned unique ID for this managed resource.{{% /md %}}</dd>
-</dl>
+    <dd>{{% md %}}The provider-assigned unique ID for this managed resource.{{% /md %}}</dd></dl>
 {{% /choosable %}}
 
 {{% choosable language python %}}
-<dl class="resources-properties">
-
-    <dt class="property-"
+<dl class="resources-properties"><dt class="property-"
             title="">
         <span id="id_python">
 <a href="#id_python" style="color: inherit; text-decoration: inherit;">id</a>
@@ -1094,8 +1068,7 @@ All [input](#inputs) properties are implicitly available as output properties. A
         <span class="property-indicator"></span>
         <span class="property-type">str</span>
     </dt>
-    <dd>{{% md %}}The provider-assigned unique ID for this managed resource.{{% /md %}}</dd>
-</dl>
+    <dd>{{% md %}}The provider-assigned unique ID for this managed resource.{{% /md %}}</dd></dl>
 {{% /choosable %}}
 
 
@@ -1222,9 +1195,7 @@ The following state arguments are supported:
 
 
 {{% choosable language csharp %}}
-<dl class="resources-properties">
-
-    <dt class="property-optional"
+<dl class="resources-properties"><dt class="property-optional"
             title="Optional">
         <span id="state_bucketoptions_csharp">
 <a href="#state_bucketoptions_csharp" style="color: inherit; text-decoration: inherit;">Bucket<wbr>Options</a>
@@ -1235,8 +1206,7 @@ The following state arguments are supported:
     <dd>{{% md %}}The bucketOptions are required when the logs-based metric is using a DISTRIBUTION value type and it
 describes the bucket boundaries used to create a histogram of the extracted values.
 Structure is documented below.
-{{% /md %}}</dd>
-    <dt class="property-optional"
+{{% /md %}}</dd><dt class="property-optional"
             title="Optional">
         <span id="state_description_csharp">
 <a href="#state_description_csharp" style="color: inherit; text-decoration: inherit;">Description</a>
@@ -1246,8 +1216,7 @@ Structure is documented below.
     </dt>
     <dd>{{% md %}}A description of this metric, which is used in documentation. The maximum length of the
 description is 8000 characters.
-{{% /md %}}</dd>
-    <dt class="property-optional"
+{{% /md %}}</dd><dt class="property-optional"
             title="Optional">
         <span id="state_filter_csharp">
 <a href="#state_filter_csharp" style="color: inherit; text-decoration: inherit;">Filter</a>
@@ -1257,8 +1226,7 @@ description is 8000 characters.
     </dt>
     <dd>{{% md %}}An advanced logs filter (https://cloud.google.com/logging/docs/view/advanced-filters) which
 is used to match log entries.
-{{% /md %}}</dd>
-    <dt class="property-optional"
+{{% /md %}}</dd><dt class="property-optional"
             title="Optional">
         <span id="state_labelextractors_csharp">
 <a href="#state_labelextractors_csharp" style="color: inherit; text-decoration: inherit;">Label<wbr>Extractors</a>
@@ -1270,8 +1238,7 @@ is used to match log entries.
 entry field and assign as the label value. Each label key specified in the LabelDescriptor must
 have an associated extractor expression in this map. The syntax of the extractor expression is
 the same as for the valueExtractor field.
-{{% /md %}}</dd>
-    <dt class="property-optional"
+{{% /md %}}</dd><dt class="property-optional"
             title="Optional">
         <span id="state_metricdescriptor_csharp">
 <a href="#state_metricdescriptor_csharp" style="color: inherit; text-decoration: inherit;">Metric<wbr>Descriptor</a>
@@ -1281,8 +1248,7 @@ the same as for the valueExtractor field.
     </dt>
     <dd>{{% md %}}The metric descriptor associated with the logs-based metric.
 Structure is documented below.
-{{% /md %}}</dd>
-    <dt class="property-optional"
+{{% /md %}}</dd><dt class="property-optional"
             title="Optional">
         <span id="state_name_csharp">
 <a href="#state_name_csharp" style="color: inherit; text-decoration: inherit;">Name</a>
@@ -1295,8 +1261,7 @@ Metric identifiers are limited to 100 characters and can include only the follow
 characters A-Z, a-z, 0-9, and the special characters _-.,+!*',()%/. The forward-slash
 character (/) denotes a hierarchy of name pieces, and it cannot be the first character
 of the name.
-{{% /md %}}</dd>
-    <dt class="property-optional"
+{{% /md %}}</dd><dt class="property-optional"
             title="Optional">
         <span id="state_project_csharp">
 <a href="#state_project_csharp" style="color: inherit; text-decoration: inherit;">Project</a>
@@ -1306,8 +1271,7 @@ of the name.
     </dt>
     <dd>{{% md %}}The ID of the project in which the resource belongs.
 If it is not provided, the provider project is used.
-{{% /md %}}</dd>
-    <dt class="property-optional"
+{{% /md %}}</dd><dt class="property-optional"
             title="Optional">
         <span id="state_valueextractor_csharp">
 <a href="#state_valueextractor_csharp" style="color: inherit; text-decoration: inherit;">Value<wbr>Extractor</a>
@@ -1322,14 +1286,11 @@ the value is to be extracted. 2. regex - A regular expression using the Google R
 (https://github.com/google/re2/wiki/Syntax) with a single capture group to extract data from the specified
 log entry field. The value of the field is converted to a string before applying the regex. It is an
 error to specify a regex that does not include exactly one capture group.
-{{% /md %}}</dd>
-</dl>
+{{% /md %}}</dd></dl>
 {{% /choosable %}}
 
 {{% choosable language go %}}
-<dl class="resources-properties">
-
-    <dt class="property-optional"
+<dl class="resources-properties"><dt class="property-optional"
             title="Optional">
         <span id="state_bucketoptions_go">
 <a href="#state_bucketoptions_go" style="color: inherit; text-decoration: inherit;">Bucket<wbr>Options</a>
@@ -1340,8 +1301,7 @@ error to specify a regex that does not include exactly one capture group.
     <dd>{{% md %}}The bucketOptions are required when the logs-based metric is using a DISTRIBUTION value type and it
 describes the bucket boundaries used to create a histogram of the extracted values.
 Structure is documented below.
-{{% /md %}}</dd>
-    <dt class="property-optional"
+{{% /md %}}</dd><dt class="property-optional"
             title="Optional">
         <span id="state_description_go">
 <a href="#state_description_go" style="color: inherit; text-decoration: inherit;">Description</a>
@@ -1351,8 +1311,7 @@ Structure is documented below.
     </dt>
     <dd>{{% md %}}A description of this metric, which is used in documentation. The maximum length of the
 description is 8000 characters.
-{{% /md %}}</dd>
-    <dt class="property-optional"
+{{% /md %}}</dd><dt class="property-optional"
             title="Optional">
         <span id="state_filter_go">
 <a href="#state_filter_go" style="color: inherit; text-decoration: inherit;">Filter</a>
@@ -1362,8 +1321,7 @@ description is 8000 characters.
     </dt>
     <dd>{{% md %}}An advanced logs filter (https://cloud.google.com/logging/docs/view/advanced-filters) which
 is used to match log entries.
-{{% /md %}}</dd>
-    <dt class="property-optional"
+{{% /md %}}</dd><dt class="property-optional"
             title="Optional">
         <span id="state_labelextractors_go">
 <a href="#state_labelextractors_go" style="color: inherit; text-decoration: inherit;">Label<wbr>Extractors</a>
@@ -1375,8 +1333,7 @@ is used to match log entries.
 entry field and assign as the label value. Each label key specified in the LabelDescriptor must
 have an associated extractor expression in this map. The syntax of the extractor expression is
 the same as for the valueExtractor field.
-{{% /md %}}</dd>
-    <dt class="property-optional"
+{{% /md %}}</dd><dt class="property-optional"
             title="Optional">
         <span id="state_metricdescriptor_go">
 <a href="#state_metricdescriptor_go" style="color: inherit; text-decoration: inherit;">Metric<wbr>Descriptor</a>
@@ -1386,8 +1343,7 @@ the same as for the valueExtractor field.
     </dt>
     <dd>{{% md %}}The metric descriptor associated with the logs-based metric.
 Structure is documented below.
-{{% /md %}}</dd>
-    <dt class="property-optional"
+{{% /md %}}</dd><dt class="property-optional"
             title="Optional">
         <span id="state_name_go">
 <a href="#state_name_go" style="color: inherit; text-decoration: inherit;">Name</a>
@@ -1400,8 +1356,7 @@ Metric identifiers are limited to 100 characters and can include only the follow
 characters A-Z, a-z, 0-9, and the special characters _-.,+!*',()%/. The forward-slash
 character (/) denotes a hierarchy of name pieces, and it cannot be the first character
 of the name.
-{{% /md %}}</dd>
-    <dt class="property-optional"
+{{% /md %}}</dd><dt class="property-optional"
             title="Optional">
         <span id="state_project_go">
 <a href="#state_project_go" style="color: inherit; text-decoration: inherit;">Project</a>
@@ -1411,8 +1366,7 @@ of the name.
     </dt>
     <dd>{{% md %}}The ID of the project in which the resource belongs.
 If it is not provided, the provider project is used.
-{{% /md %}}</dd>
-    <dt class="property-optional"
+{{% /md %}}</dd><dt class="property-optional"
             title="Optional">
         <span id="state_valueextractor_go">
 <a href="#state_valueextractor_go" style="color: inherit; text-decoration: inherit;">Value<wbr>Extractor</a>
@@ -1427,14 +1381,11 @@ the value is to be extracted. 2. regex - A regular expression using the Google R
 (https://github.com/google/re2/wiki/Syntax) with a single capture group to extract data from the specified
 log entry field. The value of the field is converted to a string before applying the regex. It is an
 error to specify a regex that does not include exactly one capture group.
-{{% /md %}}</dd>
-</dl>
+{{% /md %}}</dd></dl>
 {{% /choosable %}}
 
 {{% choosable language nodejs %}}
-<dl class="resources-properties">
-
-    <dt class="property-optional"
+<dl class="resources-properties"><dt class="property-optional"
             title="Optional">
         <span id="state_bucketoptions_nodejs">
 <a href="#state_bucketoptions_nodejs" style="color: inherit; text-decoration: inherit;">bucket<wbr>Options</a>
@@ -1445,8 +1396,7 @@ error to specify a regex that does not include exactly one capture group.
     <dd>{{% md %}}The bucketOptions are required when the logs-based metric is using a DISTRIBUTION value type and it
 describes the bucket boundaries used to create a histogram of the extracted values.
 Structure is documented below.
-{{% /md %}}</dd>
-    <dt class="property-optional"
+{{% /md %}}</dd><dt class="property-optional"
             title="Optional">
         <span id="state_description_nodejs">
 <a href="#state_description_nodejs" style="color: inherit; text-decoration: inherit;">description</a>
@@ -1456,8 +1406,7 @@ Structure is documented below.
     </dt>
     <dd>{{% md %}}A description of this metric, which is used in documentation. The maximum length of the
 description is 8000 characters.
-{{% /md %}}</dd>
-    <dt class="property-optional"
+{{% /md %}}</dd><dt class="property-optional"
             title="Optional">
         <span id="state_filter_nodejs">
 <a href="#state_filter_nodejs" style="color: inherit; text-decoration: inherit;">filter</a>
@@ -1467,8 +1416,7 @@ description is 8000 characters.
     </dt>
     <dd>{{% md %}}An advanced logs filter (https://cloud.google.com/logging/docs/view/advanced-filters) which
 is used to match log entries.
-{{% /md %}}</dd>
-    <dt class="property-optional"
+{{% /md %}}</dd><dt class="property-optional"
             title="Optional">
         <span id="state_labelextractors_nodejs">
 <a href="#state_labelextractors_nodejs" style="color: inherit; text-decoration: inherit;">label<wbr>Extractors</a>
@@ -1480,8 +1428,7 @@ is used to match log entries.
 entry field and assign as the label value. Each label key specified in the LabelDescriptor must
 have an associated extractor expression in this map. The syntax of the extractor expression is
 the same as for the valueExtractor field.
-{{% /md %}}</dd>
-    <dt class="property-optional"
+{{% /md %}}</dd><dt class="property-optional"
             title="Optional">
         <span id="state_metricdescriptor_nodejs">
 <a href="#state_metricdescriptor_nodejs" style="color: inherit; text-decoration: inherit;">metric<wbr>Descriptor</a>
@@ -1491,8 +1438,7 @@ the same as for the valueExtractor field.
     </dt>
     <dd>{{% md %}}The metric descriptor associated with the logs-based metric.
 Structure is documented below.
-{{% /md %}}</dd>
-    <dt class="property-optional"
+{{% /md %}}</dd><dt class="property-optional"
             title="Optional">
         <span id="state_name_nodejs">
 <a href="#state_name_nodejs" style="color: inherit; text-decoration: inherit;">name</a>
@@ -1505,8 +1451,7 @@ Metric identifiers are limited to 100 characters and can include only the follow
 characters A-Z, a-z, 0-9, and the special characters _-.,+!*',()%/. The forward-slash
 character (/) denotes a hierarchy of name pieces, and it cannot be the first character
 of the name.
-{{% /md %}}</dd>
-    <dt class="property-optional"
+{{% /md %}}</dd><dt class="property-optional"
             title="Optional">
         <span id="state_project_nodejs">
 <a href="#state_project_nodejs" style="color: inherit; text-decoration: inherit;">project</a>
@@ -1516,8 +1461,7 @@ of the name.
     </dt>
     <dd>{{% md %}}The ID of the project in which the resource belongs.
 If it is not provided, the provider project is used.
-{{% /md %}}</dd>
-    <dt class="property-optional"
+{{% /md %}}</dd><dt class="property-optional"
             title="Optional">
         <span id="state_valueextractor_nodejs">
 <a href="#state_valueextractor_nodejs" style="color: inherit; text-decoration: inherit;">value<wbr>Extractor</a>
@@ -1532,14 +1476,11 @@ the value is to be extracted. 2. regex - A regular expression using the Google R
 (https://github.com/google/re2/wiki/Syntax) with a single capture group to extract data from the specified
 log entry field. The value of the field is converted to a string before applying the regex. It is an
 error to specify a regex that does not include exactly one capture group.
-{{% /md %}}</dd>
-</dl>
+{{% /md %}}</dd></dl>
 {{% /choosable %}}
 
 {{% choosable language python %}}
-<dl class="resources-properties">
-
-    <dt class="property-optional"
+<dl class="resources-properties"><dt class="property-optional"
             title="Optional">
         <span id="state_bucket_options_python">
 <a href="#state_bucket_options_python" style="color: inherit; text-decoration: inherit;">bucket_<wbr>options</a>
@@ -1550,8 +1491,7 @@ error to specify a regex that does not include exactly one capture group.
     <dd>{{% md %}}The bucketOptions are required when the logs-based metric is using a DISTRIBUTION value type and it
 describes the bucket boundaries used to create a histogram of the extracted values.
 Structure is documented below.
-{{% /md %}}</dd>
-    <dt class="property-optional"
+{{% /md %}}</dd><dt class="property-optional"
             title="Optional">
         <span id="state_description_python">
 <a href="#state_description_python" style="color: inherit; text-decoration: inherit;">description</a>
@@ -1561,8 +1501,7 @@ Structure is documented below.
     </dt>
     <dd>{{% md %}}A description of this metric, which is used in documentation. The maximum length of the
 description is 8000 characters.
-{{% /md %}}</dd>
-    <dt class="property-optional"
+{{% /md %}}</dd><dt class="property-optional"
             title="Optional">
         <span id="state_filter_python">
 <a href="#state_filter_python" style="color: inherit; text-decoration: inherit;">filter</a>
@@ -1572,8 +1511,7 @@ description is 8000 characters.
     </dt>
     <dd>{{% md %}}An advanced logs filter (https://cloud.google.com/logging/docs/view/advanced-filters) which
 is used to match log entries.
-{{% /md %}}</dd>
-    <dt class="property-optional"
+{{% /md %}}</dd><dt class="property-optional"
             title="Optional">
         <span id="state_label_extractors_python">
 <a href="#state_label_extractors_python" style="color: inherit; text-decoration: inherit;">label_<wbr>extractors</a>
@@ -1585,8 +1523,7 @@ is used to match log entries.
 entry field and assign as the label value. Each label key specified in the LabelDescriptor must
 have an associated extractor expression in this map. The syntax of the extractor expression is
 the same as for the valueExtractor field.
-{{% /md %}}</dd>
-    <dt class="property-optional"
+{{% /md %}}</dd><dt class="property-optional"
             title="Optional">
         <span id="state_metric_descriptor_python">
 <a href="#state_metric_descriptor_python" style="color: inherit; text-decoration: inherit;">metric_<wbr>descriptor</a>
@@ -1596,8 +1533,7 @@ the same as for the valueExtractor field.
     </dt>
     <dd>{{% md %}}The metric descriptor associated with the logs-based metric.
 Structure is documented below.
-{{% /md %}}</dd>
-    <dt class="property-optional"
+{{% /md %}}</dd><dt class="property-optional"
             title="Optional">
         <span id="state_name_python">
 <a href="#state_name_python" style="color: inherit; text-decoration: inherit;">name</a>
@@ -1610,8 +1546,7 @@ Metric identifiers are limited to 100 characters and can include only the follow
 characters A-Z, a-z, 0-9, and the special characters _-.,+!*',()%/. The forward-slash
 character (/) denotes a hierarchy of name pieces, and it cannot be the first character
 of the name.
-{{% /md %}}</dd>
-    <dt class="property-optional"
+{{% /md %}}</dd><dt class="property-optional"
             title="Optional">
         <span id="state_project_python">
 <a href="#state_project_python" style="color: inherit; text-decoration: inherit;">project</a>
@@ -1621,8 +1556,7 @@ of the name.
     </dt>
     <dd>{{% md %}}The ID of the project in which the resource belongs.
 If it is not provided, the provider project is used.
-{{% /md %}}</dd>
-    <dt class="property-optional"
+{{% /md %}}</dd><dt class="property-optional"
             title="Optional">
         <span id="state_value_extractor_python">
 <a href="#state_value_extractor_python" style="color: inherit; text-decoration: inherit;">value_<wbr>extractor</a>
@@ -1637,8 +1571,7 @@ the value is to be extracted. 2. regex - A regular expression using the Google R
 (https://github.com/google/re2/wiki/Syntax) with a single capture group to extract data from the specified
 log entry field. The value of the field is converted to a string before applying the regex. It is an
 error to specify a regex that does not include exactly one capture group.
-{{% /md %}}</dd>
-</dl>
+{{% /md %}}</dd></dl>
 {{% /choosable %}}
 
 
@@ -1653,9 +1586,7 @@ error to specify a regex that does not include exactly one capture group.
 <h4 id="metricbucketoptions">Metric<wbr>Bucket<wbr>Options</h4>
 
 {{% choosable language csharp %}}
-<dl class="resources-properties">
-
-    <dt class="property-optional"
+<dl class="resources-properties"><dt class="property-optional"
             title="Optional">
         <span id="explicitbuckets_csharp">
 <a href="#explicitbuckets_csharp" style="color: inherit; text-decoration: inherit;">Explicit<wbr>Buckets</a>
@@ -1665,8 +1596,7 @@ error to specify a regex that does not include exactly one capture group.
     </dt>
     <dd>{{% md %}}Specifies a set of buckets with arbitrary widths.
 Structure is documented below.
-{{% /md %}}</dd>
-    <dt class="property-optional"
+{{% /md %}}</dd><dt class="property-optional"
             title="Optional">
         <span id="exponentialbuckets_csharp">
 <a href="#exponentialbuckets_csharp" style="color: inherit; text-decoration: inherit;">Exponential<wbr>Buckets</a>
@@ -1677,8 +1607,7 @@ Structure is documented below.
     <dd>{{% md %}}Specifies an exponential sequence of buckets that have a width that is proportional to the value of
 the lower bound. Each bucket represents a constant relative uncertainty on a specific value in the bucket.
 Structure is documented below.
-{{% /md %}}</dd>
-    <dt class="property-optional"
+{{% /md %}}</dd><dt class="property-optional"
             title="Optional">
         <span id="linearbuckets_csharp">
 <a href="#linearbuckets_csharp" style="color: inherit; text-decoration: inherit;">Linear<wbr>Buckets</a>
@@ -1689,14 +1618,11 @@ Structure is documented below.
     <dd>{{% md %}}Specifies a linear sequence of buckets that all have the same width (except overflow and underflow).
 Each bucket represents a constant absolute uncertainty on the specific value in the bucket.
 Structure is documented below.
-{{% /md %}}</dd>
-</dl>
+{{% /md %}}</dd></dl>
 {{% /choosable %}}
 
 {{% choosable language go %}}
-<dl class="resources-properties">
-
-    <dt class="property-optional"
+<dl class="resources-properties"><dt class="property-optional"
             title="Optional">
         <span id="explicitbuckets_go">
 <a href="#explicitbuckets_go" style="color: inherit; text-decoration: inherit;">Explicit<wbr>Buckets</a>
@@ -1706,8 +1632,7 @@ Structure is documented below.
     </dt>
     <dd>{{% md %}}Specifies a set of buckets with arbitrary widths.
 Structure is documented below.
-{{% /md %}}</dd>
-    <dt class="property-optional"
+{{% /md %}}</dd><dt class="property-optional"
             title="Optional">
         <span id="exponentialbuckets_go">
 <a href="#exponentialbuckets_go" style="color: inherit; text-decoration: inherit;">Exponential<wbr>Buckets</a>
@@ -1718,8 +1643,7 @@ Structure is documented below.
     <dd>{{% md %}}Specifies an exponential sequence of buckets that have a width that is proportional to the value of
 the lower bound. Each bucket represents a constant relative uncertainty on a specific value in the bucket.
 Structure is documented below.
-{{% /md %}}</dd>
-    <dt class="property-optional"
+{{% /md %}}</dd><dt class="property-optional"
             title="Optional">
         <span id="linearbuckets_go">
 <a href="#linearbuckets_go" style="color: inherit; text-decoration: inherit;">Linear<wbr>Buckets</a>
@@ -1730,14 +1654,11 @@ Structure is documented below.
     <dd>{{% md %}}Specifies a linear sequence of buckets that all have the same width (except overflow and underflow).
 Each bucket represents a constant absolute uncertainty on the specific value in the bucket.
 Structure is documented below.
-{{% /md %}}</dd>
-</dl>
+{{% /md %}}</dd></dl>
 {{% /choosable %}}
 
 {{% choosable language nodejs %}}
-<dl class="resources-properties">
-
-    <dt class="property-optional"
+<dl class="resources-properties"><dt class="property-optional"
             title="Optional">
         <span id="explicitbuckets_nodejs">
 <a href="#explicitbuckets_nodejs" style="color: inherit; text-decoration: inherit;">explicit<wbr>Buckets</a>
@@ -1747,8 +1668,7 @@ Structure is documented below.
     </dt>
     <dd>{{% md %}}Specifies a set of buckets with arbitrary widths.
 Structure is documented below.
-{{% /md %}}</dd>
-    <dt class="property-optional"
+{{% /md %}}</dd><dt class="property-optional"
             title="Optional">
         <span id="exponentialbuckets_nodejs">
 <a href="#exponentialbuckets_nodejs" style="color: inherit; text-decoration: inherit;">exponential<wbr>Buckets</a>
@@ -1759,8 +1679,7 @@ Structure is documented below.
     <dd>{{% md %}}Specifies an exponential sequence of buckets that have a width that is proportional to the value of
 the lower bound. Each bucket represents a constant relative uncertainty on a specific value in the bucket.
 Structure is documented below.
-{{% /md %}}</dd>
-    <dt class="property-optional"
+{{% /md %}}</dd><dt class="property-optional"
             title="Optional">
         <span id="linearbuckets_nodejs">
 <a href="#linearbuckets_nodejs" style="color: inherit; text-decoration: inherit;">linear<wbr>Buckets</a>
@@ -1771,14 +1690,11 @@ Structure is documented below.
     <dd>{{% md %}}Specifies a linear sequence of buckets that all have the same width (except overflow and underflow).
 Each bucket represents a constant absolute uncertainty on the specific value in the bucket.
 Structure is documented below.
-{{% /md %}}</dd>
-</dl>
+{{% /md %}}</dd></dl>
 {{% /choosable %}}
 
 {{% choosable language python %}}
-<dl class="resources-properties">
-
-    <dt class="property-optional"
+<dl class="resources-properties"><dt class="property-optional"
             title="Optional">
         <span id="explicit_buckets_python">
 <a href="#explicit_buckets_python" style="color: inherit; text-decoration: inherit;">explicit_<wbr>buckets</a>
@@ -1788,8 +1704,7 @@ Structure is documented below.
     </dt>
     <dd>{{% md %}}Specifies a set of buckets with arbitrary widths.
 Structure is documented below.
-{{% /md %}}</dd>
-    <dt class="property-optional"
+{{% /md %}}</dd><dt class="property-optional"
             title="Optional">
         <span id="exponential_buckets_python">
 <a href="#exponential_buckets_python" style="color: inherit; text-decoration: inherit;">exponential_<wbr>buckets</a>
@@ -1800,8 +1715,7 @@ Structure is documented below.
     <dd>{{% md %}}Specifies an exponential sequence of buckets that have a width that is proportional to the value of
 the lower bound. Each bucket represents a constant relative uncertainty on a specific value in the bucket.
 Structure is documented below.
-{{% /md %}}</dd>
-    <dt class="property-optional"
+{{% /md %}}</dd><dt class="property-optional"
             title="Optional">
         <span id="linear_buckets_python">
 <a href="#linear_buckets_python" style="color: inherit; text-decoration: inherit;">linear_<wbr>buckets</a>
@@ -1812,16 +1726,13 @@ Structure is documented below.
     <dd>{{% md %}}Specifies a linear sequence of buckets that all have the same width (except overflow and underflow).
 Each bucket represents a constant absolute uncertainty on the specific value in the bucket.
 Structure is documented below.
-{{% /md %}}</dd>
-</dl>
+{{% /md %}}</dd></dl>
 {{% /choosable %}}
 
 <h4 id="metricbucketoptionsexplicitbuckets">Metric<wbr>Bucket<wbr>Options<wbr>Explicit<wbr>Buckets</h4>
 
 {{% choosable language csharp %}}
-<dl class="resources-properties">
-
-    <dt class="property-required"
+<dl class="resources-properties"><dt class="property-required"
             title="Required">
         <span id="bounds_csharp">
 <a href="#bounds_csharp" style="color: inherit; text-decoration: inherit;">Bounds</a>
@@ -1830,14 +1741,11 @@ Structure is documented below.
         <span class="property-type">List&lt;double&gt;</span>
     </dt>
     <dd>{{% md %}}The values must be monotonically increasing.
-{{% /md %}}</dd>
-</dl>
+{{% /md %}}</dd></dl>
 {{% /choosable %}}
 
 {{% choosable language go %}}
-<dl class="resources-properties">
-
-    <dt class="property-required"
+<dl class="resources-properties"><dt class="property-required"
             title="Required">
         <span id="bounds_go">
 <a href="#bounds_go" style="color: inherit; text-decoration: inherit;">Bounds</a>
@@ -1846,14 +1754,11 @@ Structure is documented below.
         <span class="property-type">[]float64</span>
     </dt>
     <dd>{{% md %}}The values must be monotonically increasing.
-{{% /md %}}</dd>
-</dl>
+{{% /md %}}</dd></dl>
 {{% /choosable %}}
 
 {{% choosable language nodejs %}}
-<dl class="resources-properties">
-
-    <dt class="property-required"
+<dl class="resources-properties"><dt class="property-required"
             title="Required">
         <span id="bounds_nodejs">
 <a href="#bounds_nodejs" style="color: inherit; text-decoration: inherit;">bounds</a>
@@ -1862,14 +1767,11 @@ Structure is documented below.
         <span class="property-type">number[]</span>
     </dt>
     <dd>{{% md %}}The values must be monotonically increasing.
-{{% /md %}}</dd>
-</dl>
+{{% /md %}}</dd></dl>
 {{% /choosable %}}
 
 {{% choosable language python %}}
-<dl class="resources-properties">
-
-    <dt class="property-required"
+<dl class="resources-properties"><dt class="property-required"
             title="Required">
         <span id="bounds_python">
 <a href="#bounds_python" style="color: inherit; text-decoration: inherit;">bounds</a>
@@ -1878,16 +1780,13 @@ Structure is documented below.
         <span class="property-type">Sequence[float]</span>
     </dt>
     <dd>{{% md %}}The values must be monotonically increasing.
-{{% /md %}}</dd>
-</dl>
+{{% /md %}}</dd></dl>
 {{% /choosable %}}
 
 <h4 id="metricbucketoptionsexponentialbuckets">Metric<wbr>Bucket<wbr>Options<wbr>Exponential<wbr>Buckets</h4>
 
 {{% choosable language csharp %}}
-<dl class="resources-properties">
-
-    <dt class="property-optional"
+<dl class="resources-properties"><dt class="property-optional"
             title="Optional">
         <span id="growthfactor_csharp">
 <a href="#growthfactor_csharp" style="color: inherit; text-decoration: inherit;">Growth<wbr>Factor</a>
@@ -1896,8 +1795,7 @@ Structure is documented below.
         <span class="property-type">double</span>
     </dt>
     <dd>{{% md %}}Must be greater than 1.
-{{% /md %}}</dd>
-    <dt class="property-optional"
+{{% /md %}}</dd><dt class="property-optional"
             title="Optional">
         <span id="numfinitebuckets_csharp">
 <a href="#numfinitebuckets_csharp" style="color: inherit; text-decoration: inherit;">Num<wbr>Finite<wbr>Buckets</a>
@@ -1906,8 +1804,7 @@ Structure is documented below.
         <span class="property-type">int</span>
     </dt>
     <dd>{{% md %}}Must be greater than 0.
-{{% /md %}}</dd>
-    <dt class="property-optional"
+{{% /md %}}</dd><dt class="property-optional"
             title="Optional">
         <span id="scale_csharp">
 <a href="#scale_csharp" style="color: inherit; text-decoration: inherit;">Scale</a>
@@ -1916,14 +1813,11 @@ Structure is documented below.
         <span class="property-type">double</span>
     </dt>
     <dd>{{% md %}}Must be greater than 0.
-{{% /md %}}</dd>
-</dl>
+{{% /md %}}</dd></dl>
 {{% /choosable %}}
 
 {{% choosable language go %}}
-<dl class="resources-properties">
-
-    <dt class="property-optional"
+<dl class="resources-properties"><dt class="property-optional"
             title="Optional">
         <span id="growthfactor_go">
 <a href="#growthfactor_go" style="color: inherit; text-decoration: inherit;">Growth<wbr>Factor</a>
@@ -1932,8 +1826,7 @@ Structure is documented below.
         <span class="property-type">float64</span>
     </dt>
     <dd>{{% md %}}Must be greater than 1.
-{{% /md %}}</dd>
-    <dt class="property-optional"
+{{% /md %}}</dd><dt class="property-optional"
             title="Optional">
         <span id="numfinitebuckets_go">
 <a href="#numfinitebuckets_go" style="color: inherit; text-decoration: inherit;">Num<wbr>Finite<wbr>Buckets</a>
@@ -1942,8 +1835,7 @@ Structure is documented below.
         <span class="property-type">int</span>
     </dt>
     <dd>{{% md %}}Must be greater than 0.
-{{% /md %}}</dd>
-    <dt class="property-optional"
+{{% /md %}}</dd><dt class="property-optional"
             title="Optional">
         <span id="scale_go">
 <a href="#scale_go" style="color: inherit; text-decoration: inherit;">Scale</a>
@@ -1952,14 +1844,11 @@ Structure is documented below.
         <span class="property-type">float64</span>
     </dt>
     <dd>{{% md %}}Must be greater than 0.
-{{% /md %}}</dd>
-</dl>
+{{% /md %}}</dd></dl>
 {{% /choosable %}}
 
 {{% choosable language nodejs %}}
-<dl class="resources-properties">
-
-    <dt class="property-optional"
+<dl class="resources-properties"><dt class="property-optional"
             title="Optional">
         <span id="growthfactor_nodejs">
 <a href="#growthfactor_nodejs" style="color: inherit; text-decoration: inherit;">growth<wbr>Factor</a>
@@ -1968,8 +1857,7 @@ Structure is documented below.
         <span class="property-type">number</span>
     </dt>
     <dd>{{% md %}}Must be greater than 1.
-{{% /md %}}</dd>
-    <dt class="property-optional"
+{{% /md %}}</dd><dt class="property-optional"
             title="Optional">
         <span id="numfinitebuckets_nodejs">
 <a href="#numfinitebuckets_nodejs" style="color: inherit; text-decoration: inherit;">num<wbr>Finite<wbr>Buckets</a>
@@ -1978,8 +1866,7 @@ Structure is documented below.
         <span class="property-type">number</span>
     </dt>
     <dd>{{% md %}}Must be greater than 0.
-{{% /md %}}</dd>
-    <dt class="property-optional"
+{{% /md %}}</dd><dt class="property-optional"
             title="Optional">
         <span id="scale_nodejs">
 <a href="#scale_nodejs" style="color: inherit; text-decoration: inherit;">scale</a>
@@ -1988,14 +1875,11 @@ Structure is documented below.
         <span class="property-type">number</span>
     </dt>
     <dd>{{% md %}}Must be greater than 0.
-{{% /md %}}</dd>
-</dl>
+{{% /md %}}</dd></dl>
 {{% /choosable %}}
 
 {{% choosable language python %}}
-<dl class="resources-properties">
-
-    <dt class="property-optional"
+<dl class="resources-properties"><dt class="property-optional"
             title="Optional">
         <span id="growth_factor_python">
 <a href="#growth_factor_python" style="color: inherit; text-decoration: inherit;">growth_<wbr>factor</a>
@@ -2004,8 +1888,7 @@ Structure is documented below.
         <span class="property-type">float</span>
     </dt>
     <dd>{{% md %}}Must be greater than 1.
-{{% /md %}}</dd>
-    <dt class="property-optional"
+{{% /md %}}</dd><dt class="property-optional"
             title="Optional">
         <span id="num_finite_buckets_python">
 <a href="#num_finite_buckets_python" style="color: inherit; text-decoration: inherit;">num_<wbr>finite_<wbr>buckets</a>
@@ -2014,8 +1897,7 @@ Structure is documented below.
         <span class="property-type">int</span>
     </dt>
     <dd>{{% md %}}Must be greater than 0.
-{{% /md %}}</dd>
-    <dt class="property-optional"
+{{% /md %}}</dd><dt class="property-optional"
             title="Optional">
         <span id="scale_python">
 <a href="#scale_python" style="color: inherit; text-decoration: inherit;">scale</a>
@@ -2024,16 +1906,13 @@ Structure is documented below.
         <span class="property-type">float</span>
     </dt>
     <dd>{{% md %}}Must be greater than 0.
-{{% /md %}}</dd>
-</dl>
+{{% /md %}}</dd></dl>
 {{% /choosable %}}
 
 <h4 id="metricbucketoptionslinearbuckets">Metric<wbr>Bucket<wbr>Options<wbr>Linear<wbr>Buckets</h4>
 
 {{% choosable language csharp %}}
-<dl class="resources-properties">
-
-    <dt class="property-optional"
+<dl class="resources-properties"><dt class="property-optional"
             title="Optional">
         <span id="numfinitebuckets_csharp">
 <a href="#numfinitebuckets_csharp" style="color: inherit; text-decoration: inherit;">Num<wbr>Finite<wbr>Buckets</a>
@@ -2042,8 +1921,7 @@ Structure is documented below.
         <span class="property-type">int</span>
     </dt>
     <dd>{{% md %}}Must be greater than 0.
-{{% /md %}}</dd>
-    <dt class="property-optional"
+{{% /md %}}</dd><dt class="property-optional"
             title="Optional">
         <span id="offset_csharp">
 <a href="#offset_csharp" style="color: inherit; text-decoration: inherit;">Offset</a>
@@ -2052,8 +1930,7 @@ Structure is documented below.
         <span class="property-type">double</span>
     </dt>
     <dd>{{% md %}}Lower bound of the first bucket.
-{{% /md %}}</dd>
-    <dt class="property-optional"
+{{% /md %}}</dd><dt class="property-optional"
             title="Optional">
         <span id="width_csharp">
 <a href="#width_csharp" style="color: inherit; text-decoration: inherit;">Width</a>
@@ -2062,14 +1939,11 @@ Structure is documented below.
         <span class="property-type">int</span>
     </dt>
     <dd>{{% md %}}Must be greater than 0.
-{{% /md %}}</dd>
-</dl>
+{{% /md %}}</dd></dl>
 {{% /choosable %}}
 
 {{% choosable language go %}}
-<dl class="resources-properties">
-
-    <dt class="property-optional"
+<dl class="resources-properties"><dt class="property-optional"
             title="Optional">
         <span id="numfinitebuckets_go">
 <a href="#numfinitebuckets_go" style="color: inherit; text-decoration: inherit;">Num<wbr>Finite<wbr>Buckets</a>
@@ -2078,8 +1952,7 @@ Structure is documented below.
         <span class="property-type">int</span>
     </dt>
     <dd>{{% md %}}Must be greater than 0.
-{{% /md %}}</dd>
-    <dt class="property-optional"
+{{% /md %}}</dd><dt class="property-optional"
             title="Optional">
         <span id="offset_go">
 <a href="#offset_go" style="color: inherit; text-decoration: inherit;">Offset</a>
@@ -2088,8 +1961,7 @@ Structure is documented below.
         <span class="property-type">float64</span>
     </dt>
     <dd>{{% md %}}Lower bound of the first bucket.
-{{% /md %}}</dd>
-    <dt class="property-optional"
+{{% /md %}}</dd><dt class="property-optional"
             title="Optional">
         <span id="width_go">
 <a href="#width_go" style="color: inherit; text-decoration: inherit;">Width</a>
@@ -2098,14 +1970,11 @@ Structure is documented below.
         <span class="property-type">int</span>
     </dt>
     <dd>{{% md %}}Must be greater than 0.
-{{% /md %}}</dd>
-</dl>
+{{% /md %}}</dd></dl>
 {{% /choosable %}}
 
 {{% choosable language nodejs %}}
-<dl class="resources-properties">
-
-    <dt class="property-optional"
+<dl class="resources-properties"><dt class="property-optional"
             title="Optional">
         <span id="numfinitebuckets_nodejs">
 <a href="#numfinitebuckets_nodejs" style="color: inherit; text-decoration: inherit;">num<wbr>Finite<wbr>Buckets</a>
@@ -2114,8 +1983,7 @@ Structure is documented below.
         <span class="property-type">number</span>
     </dt>
     <dd>{{% md %}}Must be greater than 0.
-{{% /md %}}</dd>
-    <dt class="property-optional"
+{{% /md %}}</dd><dt class="property-optional"
             title="Optional">
         <span id="offset_nodejs">
 <a href="#offset_nodejs" style="color: inherit; text-decoration: inherit;">offset</a>
@@ -2124,8 +1992,7 @@ Structure is documented below.
         <span class="property-type">number</span>
     </dt>
     <dd>{{% md %}}Lower bound of the first bucket.
-{{% /md %}}</dd>
-    <dt class="property-optional"
+{{% /md %}}</dd><dt class="property-optional"
             title="Optional">
         <span id="width_nodejs">
 <a href="#width_nodejs" style="color: inherit; text-decoration: inherit;">width</a>
@@ -2134,14 +2001,11 @@ Structure is documented below.
         <span class="property-type">number</span>
     </dt>
     <dd>{{% md %}}Must be greater than 0.
-{{% /md %}}</dd>
-</dl>
+{{% /md %}}</dd></dl>
 {{% /choosable %}}
 
 {{% choosable language python %}}
-<dl class="resources-properties">
-
-    <dt class="property-optional"
+<dl class="resources-properties"><dt class="property-optional"
             title="Optional">
         <span id="num_finite_buckets_python">
 <a href="#num_finite_buckets_python" style="color: inherit; text-decoration: inherit;">num_<wbr>finite_<wbr>buckets</a>
@@ -2150,8 +2014,7 @@ Structure is documented below.
         <span class="property-type">int</span>
     </dt>
     <dd>{{% md %}}Must be greater than 0.
-{{% /md %}}</dd>
-    <dt class="property-optional"
+{{% /md %}}</dd><dt class="property-optional"
             title="Optional">
         <span id="offset_python">
 <a href="#offset_python" style="color: inherit; text-decoration: inherit;">offset</a>
@@ -2160,8 +2023,7 @@ Structure is documented below.
         <span class="property-type">float</span>
     </dt>
     <dd>{{% md %}}Lower bound of the first bucket.
-{{% /md %}}</dd>
-    <dt class="property-optional"
+{{% /md %}}</dd><dt class="property-optional"
             title="Optional">
         <span id="width_python">
 <a href="#width_python" style="color: inherit; text-decoration: inherit;">width</a>
@@ -2170,16 +2032,13 @@ Structure is documented below.
         <span class="property-type">int</span>
     </dt>
     <dd>{{% md %}}Must be greater than 0.
-{{% /md %}}</dd>
-</dl>
+{{% /md %}}</dd></dl>
 {{% /choosable %}}
 
 <h4 id="metricmetricdescriptor">Metric<wbr>Metric<wbr>Descriptor</h4>
 
 {{% choosable language csharp %}}
-<dl class="resources-properties">
-
-    <dt class="property-required"
+<dl class="resources-properties"><dt class="property-required"
             title="Required">
         <span id="metrickind_csharp">
 <a href="#metrickind_csharp" style="color: inherit; text-decoration: inherit;">Metric<wbr>Kind</a>
@@ -2191,8 +2050,7 @@ Structure is documented below.
 Some combinations of metricKind and valueType might not be supported.
 For counter metrics, set this to DELTA.
 Possible values are `DELTA`, `GAUGE`, and `CUMULATIVE`.
-{{% /md %}}</dd>
-    <dt class="property-required"
+{{% /md %}}</dd><dt class="property-required"
             title="Required">
         <span id="valuetype_csharp">
 <a href="#valuetype_csharp" style="color: inherit; text-decoration: inherit;">Value<wbr>Type</a>
@@ -2203,8 +2061,7 @@ Possible values are `DELTA`, `GAUGE`, and `CUMULATIVE`.
     <dd>{{% md %}}The type of data that can be assigned to the label.
 Default value is `STRING`.
 Possible values are `BOOL`, `INT64`, and `STRING`.
-{{% /md %}}</dd>
-    <dt class="property-optional"
+{{% /md %}}</dd><dt class="property-optional"
             title="Optional">
         <span id="displayname_csharp">
 <a href="#displayname_csharp" style="color: inherit; text-decoration: inherit;">Display<wbr>Name</a>
@@ -2215,8 +2072,7 @@ Possible values are `BOOL`, `INT64`, and `STRING`.
     <dd>{{% md %}}A concise name for the metric, which can be displayed in user interfaces. Use sentence case
 without an ending period, for example "Request count". This field is optional but it is
 recommended to be set for any metrics associated with user-visible concepts, such as Quota.
-{{% /md %}}</dd>
-    <dt class="property-optional"
+{{% /md %}}</dd><dt class="property-optional"
             title="Optional">
         <span id="labels_csharp">
 <a href="#labels_csharp" style="color: inherit; text-decoration: inherit;">Labels</a>
@@ -2229,8 +2085,7 @@ example, the appengine.googleapis.com/http/server/response_latencies metric type
 for the HTTP response code, response_code, so you can look at latencies for successful responses
 or just for responses that failed.
 Structure is documented below.
-{{% /md %}}</dd>
-    <dt class="property-optional"
+{{% /md %}}</dd><dt class="property-optional"
             title="Optional">
         <span id="unit_csharp">
 <a href="#unit_csharp" style="color: inherit; text-decoration: inherit;">Unit</a>
@@ -2241,14 +2096,11 @@ Structure is documented below.
     <dd>{{% md %}}The unit in which the metric value is reported. It is only applicable if the valueType is
 `INT64`, `DOUBLE`, or `DISTRIBUTION`. The supported units are a subset of
 [The Unified Code for Units of Measure](http://unitsofmeasure.org/ucum.html) standard
-{{% /md %}}</dd>
-</dl>
+{{% /md %}}</dd></dl>
 {{% /choosable %}}
 
 {{% choosable language go %}}
-<dl class="resources-properties">
-
-    <dt class="property-required"
+<dl class="resources-properties"><dt class="property-required"
             title="Required">
         <span id="metrickind_go">
 <a href="#metrickind_go" style="color: inherit; text-decoration: inherit;">Metric<wbr>Kind</a>
@@ -2260,8 +2112,7 @@ Structure is documented below.
 Some combinations of metricKind and valueType might not be supported.
 For counter metrics, set this to DELTA.
 Possible values are `DELTA`, `GAUGE`, and `CUMULATIVE`.
-{{% /md %}}</dd>
-    <dt class="property-required"
+{{% /md %}}</dd><dt class="property-required"
             title="Required">
         <span id="valuetype_go">
 <a href="#valuetype_go" style="color: inherit; text-decoration: inherit;">Value<wbr>Type</a>
@@ -2272,8 +2123,7 @@ Possible values are `DELTA`, `GAUGE`, and `CUMULATIVE`.
     <dd>{{% md %}}The type of data that can be assigned to the label.
 Default value is `STRING`.
 Possible values are `BOOL`, `INT64`, and `STRING`.
-{{% /md %}}</dd>
-    <dt class="property-optional"
+{{% /md %}}</dd><dt class="property-optional"
             title="Optional">
         <span id="displayname_go">
 <a href="#displayname_go" style="color: inherit; text-decoration: inherit;">Display<wbr>Name</a>
@@ -2284,8 +2134,7 @@ Possible values are `BOOL`, `INT64`, and `STRING`.
     <dd>{{% md %}}A concise name for the metric, which can be displayed in user interfaces. Use sentence case
 without an ending period, for example "Request count". This field is optional but it is
 recommended to be set for any metrics associated with user-visible concepts, such as Quota.
-{{% /md %}}</dd>
-    <dt class="property-optional"
+{{% /md %}}</dd><dt class="property-optional"
             title="Optional">
         <span id="labels_go">
 <a href="#labels_go" style="color: inherit; text-decoration: inherit;">Labels</a>
@@ -2298,8 +2147,7 @@ example, the appengine.googleapis.com/http/server/response_latencies metric type
 for the HTTP response code, response_code, so you can look at latencies for successful responses
 or just for responses that failed.
 Structure is documented below.
-{{% /md %}}</dd>
-    <dt class="property-optional"
+{{% /md %}}</dd><dt class="property-optional"
             title="Optional">
         <span id="unit_go">
 <a href="#unit_go" style="color: inherit; text-decoration: inherit;">Unit</a>
@@ -2310,14 +2158,11 @@ Structure is documented below.
     <dd>{{% md %}}The unit in which the metric value is reported. It is only applicable if the valueType is
 `INT64`, `DOUBLE`, or `DISTRIBUTION`. The supported units are a subset of
 [The Unified Code for Units of Measure](http://unitsofmeasure.org/ucum.html) standard
-{{% /md %}}</dd>
-</dl>
+{{% /md %}}</dd></dl>
 {{% /choosable %}}
 
 {{% choosable language nodejs %}}
-<dl class="resources-properties">
-
-    <dt class="property-required"
+<dl class="resources-properties"><dt class="property-required"
             title="Required">
         <span id="metrickind_nodejs">
 <a href="#metrickind_nodejs" style="color: inherit; text-decoration: inherit;">metric<wbr>Kind</a>
@@ -2329,8 +2174,7 @@ Structure is documented below.
 Some combinations of metricKind and valueType might not be supported.
 For counter metrics, set this to DELTA.
 Possible values are `DELTA`, `GAUGE`, and `CUMULATIVE`.
-{{% /md %}}</dd>
-    <dt class="property-required"
+{{% /md %}}</dd><dt class="property-required"
             title="Required">
         <span id="valuetype_nodejs">
 <a href="#valuetype_nodejs" style="color: inherit; text-decoration: inherit;">value<wbr>Type</a>
@@ -2341,8 +2185,7 @@ Possible values are `DELTA`, `GAUGE`, and `CUMULATIVE`.
     <dd>{{% md %}}The type of data that can be assigned to the label.
 Default value is `STRING`.
 Possible values are `BOOL`, `INT64`, and `STRING`.
-{{% /md %}}</dd>
-    <dt class="property-optional"
+{{% /md %}}</dd><dt class="property-optional"
             title="Optional">
         <span id="displayname_nodejs">
 <a href="#displayname_nodejs" style="color: inherit; text-decoration: inherit;">display<wbr>Name</a>
@@ -2353,8 +2196,7 @@ Possible values are `BOOL`, `INT64`, and `STRING`.
     <dd>{{% md %}}A concise name for the metric, which can be displayed in user interfaces. Use sentence case
 without an ending period, for example "Request count". This field is optional but it is
 recommended to be set for any metrics associated with user-visible concepts, such as Quota.
-{{% /md %}}</dd>
-    <dt class="property-optional"
+{{% /md %}}</dd><dt class="property-optional"
             title="Optional">
         <span id="labels_nodejs">
 <a href="#labels_nodejs" style="color: inherit; text-decoration: inherit;">labels</a>
@@ -2367,8 +2209,7 @@ example, the appengine.googleapis.com/http/server/response_latencies metric type
 for the HTTP response code, response_code, so you can look at latencies for successful responses
 or just for responses that failed.
 Structure is documented below.
-{{% /md %}}</dd>
-    <dt class="property-optional"
+{{% /md %}}</dd><dt class="property-optional"
             title="Optional">
         <span id="unit_nodejs">
 <a href="#unit_nodejs" style="color: inherit; text-decoration: inherit;">unit</a>
@@ -2379,14 +2220,11 @@ Structure is documented below.
     <dd>{{% md %}}The unit in which the metric value is reported. It is only applicable if the valueType is
 `INT64`, `DOUBLE`, or `DISTRIBUTION`. The supported units are a subset of
 [The Unified Code for Units of Measure](http://unitsofmeasure.org/ucum.html) standard
-{{% /md %}}</dd>
-</dl>
+{{% /md %}}</dd></dl>
 {{% /choosable %}}
 
 {{% choosable language python %}}
-<dl class="resources-properties">
-
-    <dt class="property-required"
+<dl class="resources-properties"><dt class="property-required"
             title="Required">
         <span id="metric_kind_python">
 <a href="#metric_kind_python" style="color: inherit; text-decoration: inherit;">metric_<wbr>kind</a>
@@ -2398,8 +2236,7 @@ Structure is documented below.
 Some combinations of metricKind and valueType might not be supported.
 For counter metrics, set this to DELTA.
 Possible values are `DELTA`, `GAUGE`, and `CUMULATIVE`.
-{{% /md %}}</dd>
-    <dt class="property-required"
+{{% /md %}}</dd><dt class="property-required"
             title="Required">
         <span id="value_type_python">
 <a href="#value_type_python" style="color: inherit; text-decoration: inherit;">value_<wbr>type</a>
@@ -2410,8 +2247,7 @@ Possible values are `DELTA`, `GAUGE`, and `CUMULATIVE`.
     <dd>{{% md %}}The type of data that can be assigned to the label.
 Default value is `STRING`.
 Possible values are `BOOL`, `INT64`, and `STRING`.
-{{% /md %}}</dd>
-    <dt class="property-optional"
+{{% /md %}}</dd><dt class="property-optional"
             title="Optional">
         <span id="display_name_python">
 <a href="#display_name_python" style="color: inherit; text-decoration: inherit;">display_<wbr>name</a>
@@ -2422,8 +2258,7 @@ Possible values are `BOOL`, `INT64`, and `STRING`.
     <dd>{{% md %}}A concise name for the metric, which can be displayed in user interfaces. Use sentence case
 without an ending period, for example "Request count". This field is optional but it is
 recommended to be set for any metrics associated with user-visible concepts, such as Quota.
-{{% /md %}}</dd>
-    <dt class="property-optional"
+{{% /md %}}</dd><dt class="property-optional"
             title="Optional">
         <span id="labels_python">
 <a href="#labels_python" style="color: inherit; text-decoration: inherit;">labels</a>
@@ -2436,8 +2271,7 @@ example, the appengine.googleapis.com/http/server/response_latencies metric type
 for the HTTP response code, response_code, so you can look at latencies for successful responses
 or just for responses that failed.
 Structure is documented below.
-{{% /md %}}</dd>
-    <dt class="property-optional"
+{{% /md %}}</dd><dt class="property-optional"
             title="Optional">
         <span id="unit_python">
 <a href="#unit_python" style="color: inherit; text-decoration: inherit;">unit</a>
@@ -2448,16 +2282,13 @@ Structure is documented below.
     <dd>{{% md %}}The unit in which the metric value is reported. It is only applicable if the valueType is
 `INT64`, `DOUBLE`, or `DISTRIBUTION`. The supported units are a subset of
 [The Unified Code for Units of Measure](http://unitsofmeasure.org/ucum.html) standard
-{{% /md %}}</dd>
-</dl>
+{{% /md %}}</dd></dl>
 {{% /choosable %}}
 
 <h4 id="metricmetricdescriptorlabel">Metric<wbr>Metric<wbr>Descriptor<wbr>Label</h4>
 
 {{% choosable language csharp %}}
-<dl class="resources-properties">
-
-    <dt class="property-required"
+<dl class="resources-properties"><dt class="property-required"
             title="Required">
         <span id="key_csharp">
 <a href="#key_csharp" style="color: inherit; text-decoration: inherit;">Key</a>
@@ -2466,8 +2297,7 @@ Structure is documented below.
         <span class="property-type">string</span>
     </dt>
     <dd>{{% md %}}The label key.
-{{% /md %}}</dd>
-    <dt class="property-optional"
+{{% /md %}}</dd><dt class="property-optional"
             title="Optional">
         <span id="description_csharp">
 <a href="#description_csharp" style="color: inherit; text-decoration: inherit;">Description</a>
@@ -2477,8 +2307,7 @@ Structure is documented below.
     </dt>
     <dd>{{% md %}}A description of this metric, which is used in documentation. The maximum length of the
 description is 8000 characters.
-{{% /md %}}</dd>
-    <dt class="property-optional"
+{{% /md %}}</dd><dt class="property-optional"
             title="Optional">
         <span id="valuetype_csharp">
 <a href="#valuetype_csharp" style="color: inherit; text-decoration: inherit;">Value<wbr>Type</a>
@@ -2489,14 +2318,11 @@ description is 8000 characters.
     <dd>{{% md %}}The type of data that can be assigned to the label.
 Default value is `STRING`.
 Possible values are `BOOL`, `INT64`, and `STRING`.
-{{% /md %}}</dd>
-</dl>
+{{% /md %}}</dd></dl>
 {{% /choosable %}}
 
 {{% choosable language go %}}
-<dl class="resources-properties">
-
-    <dt class="property-required"
+<dl class="resources-properties"><dt class="property-required"
             title="Required">
         <span id="key_go">
 <a href="#key_go" style="color: inherit; text-decoration: inherit;">Key</a>
@@ -2505,8 +2331,7 @@ Possible values are `BOOL`, `INT64`, and `STRING`.
         <span class="property-type">string</span>
     </dt>
     <dd>{{% md %}}The label key.
-{{% /md %}}</dd>
-    <dt class="property-optional"
+{{% /md %}}</dd><dt class="property-optional"
             title="Optional">
         <span id="description_go">
 <a href="#description_go" style="color: inherit; text-decoration: inherit;">Description</a>
@@ -2516,8 +2341,7 @@ Possible values are `BOOL`, `INT64`, and `STRING`.
     </dt>
     <dd>{{% md %}}A description of this metric, which is used in documentation. The maximum length of the
 description is 8000 characters.
-{{% /md %}}</dd>
-    <dt class="property-optional"
+{{% /md %}}</dd><dt class="property-optional"
             title="Optional">
         <span id="valuetype_go">
 <a href="#valuetype_go" style="color: inherit; text-decoration: inherit;">Value<wbr>Type</a>
@@ -2528,14 +2352,11 @@ description is 8000 characters.
     <dd>{{% md %}}The type of data that can be assigned to the label.
 Default value is `STRING`.
 Possible values are `BOOL`, `INT64`, and `STRING`.
-{{% /md %}}</dd>
-</dl>
+{{% /md %}}</dd></dl>
 {{% /choosable %}}
 
 {{% choosable language nodejs %}}
-<dl class="resources-properties">
-
-    <dt class="property-required"
+<dl class="resources-properties"><dt class="property-required"
             title="Required">
         <span id="key_nodejs">
 <a href="#key_nodejs" style="color: inherit; text-decoration: inherit;">key</a>
@@ -2544,8 +2365,7 @@ Possible values are `BOOL`, `INT64`, and `STRING`.
         <span class="property-type">string</span>
     </dt>
     <dd>{{% md %}}The label key.
-{{% /md %}}</dd>
-    <dt class="property-optional"
+{{% /md %}}</dd><dt class="property-optional"
             title="Optional">
         <span id="description_nodejs">
 <a href="#description_nodejs" style="color: inherit; text-decoration: inherit;">description</a>
@@ -2555,8 +2375,7 @@ Possible values are `BOOL`, `INT64`, and `STRING`.
     </dt>
     <dd>{{% md %}}A description of this metric, which is used in documentation. The maximum length of the
 description is 8000 characters.
-{{% /md %}}</dd>
-    <dt class="property-optional"
+{{% /md %}}</dd><dt class="property-optional"
             title="Optional">
         <span id="valuetype_nodejs">
 <a href="#valuetype_nodejs" style="color: inherit; text-decoration: inherit;">value<wbr>Type</a>
@@ -2567,14 +2386,11 @@ description is 8000 characters.
     <dd>{{% md %}}The type of data that can be assigned to the label.
 Default value is `STRING`.
 Possible values are `BOOL`, `INT64`, and `STRING`.
-{{% /md %}}</dd>
-</dl>
+{{% /md %}}</dd></dl>
 {{% /choosable %}}
 
 {{% choosable language python %}}
-<dl class="resources-properties">
-
-    <dt class="property-required"
+<dl class="resources-properties"><dt class="property-required"
             title="Required">
         <span id="key_python">
 <a href="#key_python" style="color: inherit; text-decoration: inherit;">key</a>
@@ -2583,8 +2399,7 @@ Possible values are `BOOL`, `INT64`, and `STRING`.
         <span class="property-type">str</span>
     </dt>
     <dd>{{% md %}}The label key.
-{{% /md %}}</dd>
-    <dt class="property-optional"
+{{% /md %}}</dd><dt class="property-optional"
             title="Optional">
         <span id="description_python">
 <a href="#description_python" style="color: inherit; text-decoration: inherit;">description</a>
@@ -2594,8 +2409,7 @@ Possible values are `BOOL`, `INT64`, and `STRING`.
     </dt>
     <dd>{{% md %}}A description of this metric, which is used in documentation. The maximum length of the
 description is 8000 characters.
-{{% /md %}}</dd>
-    <dt class="property-optional"
+{{% /md %}}</dd><dt class="property-optional"
             title="Optional">
         <span id="value_type_python">
 <a href="#value_type_python" style="color: inherit; text-decoration: inherit;">value_<wbr>type</a>
@@ -2606,8 +2420,7 @@ description is 8000 characters.
     <dd>{{% md %}}The type of data that can be assigned to the label.
 Default value is `STRING`.
 Possible values are `BOOL`, `INT64`, and `STRING`.
-{{% /md %}}</dd>
-</dl>
+{{% /md %}}</dd></dl>
 {{% /choosable %}}
 ## Import
 
@@ -2632,6 +2445,6 @@ Metric can be imported using any of these accepted formats
 	<dt>License</dt>
 	<dd>Apache-2.0</dd>
 	<dt>Notes</dt>
-	<dd>This Pulumi package is based on the [`google-beta` Terraform Provider](https://github.com/hashicorp/terraform-provider-google-beta).</dd>
+	<dd>{{% md %}}This Pulumi package is based on the [`google-beta` Terraform Provider](https://github.com/hashicorp/terraform-provider-google-beta).{{% /md %}}</dd>
 </dl>
 

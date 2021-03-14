@@ -40,9 +40,7 @@ on their documentation site for guidance.
 
 {{% choosable language nodejs %}}
 
-<dl class="resources-properties">
-  
-    <dt
+<dl class="resources-properties"><dt
         class="property-required" title="Required">
         <span>name</span>
         <span class="property-indicator"></span>
@@ -50,9 +48,7 @@ on their documentation site for guidance.
     </dt>
     <dd>
       The unique name of the resource.
-    </dd>
-  
-    <dt
+    </dd><dt
         class="property-required" title="Required">
         <span>args</span>
         <span class="property-indicator"></span>
@@ -60,9 +56,7 @@ on their documentation site for guidance.
     </dt>
     <dd>
       The arguments to resource properties.
-    </dd>
-  
-    <dt
+    </dd><dt
         class="property-optional" title="Optional">
         <span>opts</span>
         <span class="property-indicator"></span>
@@ -70,10 +64,7 @@ on their documentation site for guidance.
     </dt>
     <dd>
       Bag of options to control resource&#39;s behavior.
-    </dd>
-  
-
-</dl>
+    </dd></dl>
 
 {{% /choosable %}}
 
@@ -99,9 +90,7 @@ on their documentation site for guidance.
 
 {{% choosable language go %}}
 
-<dl class="resources-properties">
-  
-    <dt
+<dl class="resources-properties"><dt
         class="property-optional" title="Optional">
         <span>ctx</span>
         <span class="property-indicator"></span>
@@ -109,9 +98,7 @@ on their documentation site for guidance.
     </dt>
     <dd>
       Context object for the current deployment.
-    </dd>
-  
-    <dt
+    </dd><dt
         class="property-required" title="Required">
         <span>name</span>
         <span class="property-indicator"></span>
@@ -119,9 +106,7 @@ on their documentation site for guidance.
     </dt>
     <dd>
       The unique name of the resource.
-    </dd>
-  
-    <dt
+    </dd><dt
         class="property-required" title="Required">
         <span>args</span>
         <span class="property-indicator"></span>
@@ -129,9 +114,7 @@ on their documentation site for guidance.
     </dt>
     <dd>
       The arguments to resource properties.
-    </dd>
-  
-    <dt
+    </dd><dt
         class="property-optional" title="Optional">
         <span>opts</span>
         <span class="property-indicator"></span>
@@ -139,18 +122,13 @@ on their documentation site for guidance.
     </dt>
     <dd>
       Bag of options to control resource&#39;s behavior.
-    </dd>
-  
-
-</dl>
+    </dd></dl>
 
 {{% /choosable %}}
 
 {{% choosable language csharp %}}
 
-<dl class="resources-properties">
-  
-    <dt
+<dl class="resources-properties"><dt
         class="property-required" title="Required">
         <span>name</span>
         <span class="property-indicator"></span>
@@ -158,9 +136,7 @@ on their documentation site for guidance.
     </dt>
     <dd>
       The unique name of the resource.
-    </dd>
-  
-    <dt
+    </dd><dt
         class="property-required" title="Required">
         <span>args</span>
         <span class="property-indicator"></span>
@@ -168,9 +144,7 @@ on their documentation site for guidance.
     </dt>
     <dd>
       The arguments to resource properties.
-    </dd>
-  
-    <dt
+    </dd><dt
         class="property-optional" title="Optional">
         <span>opts</span>
         <span class="property-indicator"></span>
@@ -178,10 +152,7 @@ on their documentation site for guidance.
     </dt>
     <dd>
       Bag of options to control resource&#39;s behavior.
-    </dd>
-  
-
-</dl>
+    </dd></dl>
 
 {{% /choosable %}}
 
@@ -196,9 +167,7 @@ The ServiceCompute resource accepts the following [input]({{< relref "/docs/intr
 
 
 {{% choosable language csharp %}}
-<dl class="resources-properties">
-
-    <dt class="property-required"
+<dl class="resources-properties"><dt class="property-required"
             title="Required">
         <span id="domains_csharp">
 <a href="#domains_csharp" style="color: inherit; text-decoration: inherit;">Domains</a>
@@ -207,8 +176,7 @@ The ServiceCompute resource accepts the following [input]({{< relref "/docs/intr
         <span class="property-type"><a href="#servicecomputedomain">List&lt;Service<wbr>Compute<wbr>Domain<wbr>Args&gt;</a></span>
     </dt>
     <dd>{{% md %}}The domain of the DigitalOcean Spaces endpoint (default "nyc3.digitaloceanspaces.com").
-{{% /md %}}</dd>
-    <dt class="property-required"
+{{% /md %}}</dd><dt class="property-required"
             title="Required">
         <span id="package_csharp">
 <a href="#package_csharp" style="color: inherit; text-decoration: inherit;">Package</a>
@@ -218,8 +186,7 @@ The ServiceCompute resource accepts the following [input]({{< relref "/docs/intr
     </dt>
     <dd>{{% md %}}A Wasm deployment package to upload.
 Defined below.
-{{% /md %}}</dd>
-    <dt class="property-optional"
+{{% /md %}}</dd><dt class="property-optional"
             title="Optional">
         <span id="activate_csharp">
 <a href="#activate_csharp" style="color: inherit; text-decoration: inherit;">Activate</a>
@@ -228,8 +195,7 @@ Defined below.
         <span class="property-type">bool</span>
     </dt>
     <dd>{{% md %}}Conditionally prevents the Service from being activated. The apply step will continue to create a new draft version but will not activate it if this is set to false. Default true.
-{{% /md %}}</dd>
-    <dt class="property-optional"
+{{% /md %}}</dd><dt class="property-optional"
             title="Optional">
         <span id="backends_csharp">
 <a href="#backends_csharp" style="color: inherit; text-decoration: inherit;">Backends</a>
@@ -240,8 +206,7 @@ Defined below.
     <dd>{{% md %}}A set of Backends to service requests from your Domains.
 Defined below. Backends must be defined in this argument, or defined in the
 `vcl` argument below
-{{% /md %}}</dd>
-    <dt class="property-optional"
+{{% /md %}}</dd><dt class="property-optional"
             title="Optional">
         <span id="bigqueryloggings_csharp">
 <a href="#bigqueryloggings_csharp" style="color: inherit; text-decoration: inherit;">Bigqueryloggings</a>
@@ -251,8 +216,7 @@ Defined below. Backends must be defined in this argument, or defined in the
     </dt>
     <dd>{{% md %}}A BigQuery endpoint to send streaming logs too.
 Defined below.
-{{% /md %}}</dd>
-    <dt class="property-optional"
+{{% /md %}}</dd><dt class="property-optional"
             title="Optional">
         <span id="blobstorageloggings_csharp">
 <a href="#blobstorageloggings_csharp" style="color: inherit; text-decoration: inherit;">Blobstorageloggings</a>
@@ -262,8 +226,7 @@ Defined below.
     </dt>
     <dd>{{% md %}}An Azure Blob Storage endpoint to send streaming logs too.
 Defined below.
-{{% /md %}}</dd>
-    <dt class="property-optional"
+{{% /md %}}</dd><dt class="property-optional"
             title="Optional">
         <span id="comment_csharp">
 <a href="#comment_csharp" style="color: inherit; text-decoration: inherit;">Comment</a>
@@ -272,8 +235,7 @@ Defined below.
         <span class="property-type">string</span>
     </dt>
     <dd>{{% md %}}An optional comment about the Domain.
-{{% /md %}}</dd>
-    <dt class="property-optional"
+{{% /md %}}</dd><dt class="property-optional"
             title="Optional">
         <span id="forcedestroy_csharp">
 <a href="#forcedestroy_csharp" style="color: inherit; text-decoration: inherit;">Force<wbr>Destroy</a>
@@ -283,8 +245,7 @@ Defined below.
     </dt>
     <dd>{{% md %}}Services that are active cannot be destroyed. In
 order to destroy the Service, set `force_destroy` to `true`. Default `false`.
-{{% /md %}}</dd>
-    <dt class="property-optional"
+{{% /md %}}</dd><dt class="property-optional"
             title="Optional">
         <span id="gcsloggings_csharp">
 <a href="#gcsloggings_csharp" style="color: inherit; text-decoration: inherit;">Gcsloggings</a>
@@ -294,8 +255,7 @@ order to destroy the Service, set `force_destroy` to `true`. Default `false`.
     </dt>
     <dd>{{% md %}}A gcs endpoint to send streaming logs too.
 Defined below.
-{{% /md %}}</dd>
-    <dt class="property-optional"
+{{% /md %}}</dd><dt class="property-optional"
             title="Optional">
         <span id="healthchecks_csharp">
 <a href="#healthchecks_csharp" style="color: inherit; text-decoration: inherit;">Healthchecks</a>
@@ -304,8 +264,7 @@ Defined below.
         <span class="property-type"><a href="#servicecomputehealthcheck">List&lt;Service<wbr>Compute<wbr>Healthcheck<wbr>Args&gt;</a></span>
     </dt>
     <dd>{{% md %}}Name of a defined `healthcheck` to assign to this backend.
-{{% /md %}}</dd>
-    <dt class="property-optional"
+{{% /md %}}</dd><dt class="property-optional"
             title="Optional">
         <span id="httpsloggings_csharp">
 <a href="#httpsloggings_csharp" style="color: inherit; text-decoration: inherit;">Httpsloggings</a>
@@ -315,8 +274,7 @@ Defined below.
     </dt>
     <dd>{{% md %}}An HTTPS endpoint to send streaming logs to.
 Defined below.
-{{% /md %}}</dd>
-    <dt class="property-optional"
+{{% /md %}}</dd><dt class="property-optional"
             title="Optional">
         <span id="logentries_csharp">
 <a href="#logentries_csharp" style="color: inherit; text-decoration: inherit;">Logentries</a>
@@ -326,8 +284,7 @@ Defined below.
     </dt>
     <dd>{{% md %}}A logentries endpoint to send streaming logs too.
 Defined below.
-{{% /md %}}</dd>
-    <dt class="property-optional"
+{{% /md %}}</dd><dt class="property-optional"
             title="Optional">
         <span id="loggingcloudfiles_csharp">
 <a href="#loggingcloudfiles_csharp" style="color: inherit; text-decoration: inherit;">Logging<wbr>Cloudfiles</a>
@@ -337,8 +294,7 @@ Defined below.
     </dt>
     <dd>{{% md %}}A Rackspace Cloud Files endpoint to send streaming logs to.
 Defined below.
-{{% /md %}}</dd>
-    <dt class="property-optional"
+{{% /md %}}</dd><dt class="property-optional"
             title="Optional">
         <span id="loggingdatadogs_csharp">
 <a href="#loggingdatadogs_csharp" style="color: inherit; text-decoration: inherit;">Logging<wbr>Datadogs</a>
@@ -348,8 +304,7 @@ Defined below.
     </dt>
     <dd>{{% md %}}A Datadog endpoint to send streaming logs to.
 Defined below.
-{{% /md %}}</dd>
-    <dt class="property-optional"
+{{% /md %}}</dd><dt class="property-optional"
             title="Optional">
         <span id="loggingdigitaloceans_csharp">
 <a href="#loggingdigitaloceans_csharp" style="color: inherit; text-decoration: inherit;">Logging<wbr>Digitaloceans</a>
@@ -359,8 +314,7 @@ Defined below.
     </dt>
     <dd>{{% md %}}A DigitalOcean Spaces endpoint to send streaming logs to.
 Defined below.
-{{% /md %}}</dd>
-    <dt class="property-optional"
+{{% /md %}}</dd><dt class="property-optional"
             title="Optional">
         <span id="loggingelasticsearches_csharp">
 <a href="#loggingelasticsearches_csharp" style="color: inherit; text-decoration: inherit;">Logging<wbr>Elasticsearches</a>
@@ -370,8 +324,7 @@ Defined below.
     </dt>
     <dd>{{% md %}}An Elasticsearch endpoint to send streaming logs to.
 Defined below.
-{{% /md %}}</dd>
-    <dt class="property-optional"
+{{% /md %}}</dd><dt class="property-optional"
             title="Optional">
         <span id="loggingftps_csharp">
 <a href="#loggingftps_csharp" style="color: inherit; text-decoration: inherit;">Logging<wbr>Ftps</a>
@@ -381,8 +334,7 @@ Defined below.
     </dt>
     <dd>{{% md %}}An FTP endpoint to send streaming logs to.
 Defined below.
-{{% /md %}}</dd>
-    <dt class="property-optional"
+{{% /md %}}</dd><dt class="property-optional"
             title="Optional">
         <span id="logginggooglepubsubs_csharp">
 <a href="#logginggooglepubsubs_csharp" style="color: inherit; text-decoration: inherit;">Logging<wbr>Googlepubsubs</a>
@@ -392,8 +344,7 @@ Defined below.
     </dt>
     <dd>{{% md %}}A Google Cloud Pub/Sub endpoint to send streaming logs to.
 Defined below.
-{{% /md %}}</dd>
-    <dt class="property-optional"
+{{% /md %}}</dd><dt class="property-optional"
             title="Optional">
         <span id="loggingheroku_csharp">
 <a href="#loggingheroku_csharp" style="color: inherit; text-decoration: inherit;">Logging<wbr>Heroku</a>
@@ -403,8 +354,7 @@ Defined below.
     </dt>
     <dd>{{% md %}}A Heroku endpoint to send streaming logs to.
 Defined below.
-{{% /md %}}</dd>
-    <dt class="property-optional"
+{{% /md %}}</dd><dt class="property-optional"
             title="Optional">
         <span id="logginghoneycombs_csharp">
 <a href="#logginghoneycombs_csharp" style="color: inherit; text-decoration: inherit;">Logging<wbr>Honeycombs</a>
@@ -414,8 +364,7 @@ Defined below.
     </dt>
     <dd>{{% md %}}A Honeycomb endpoint to send streaming logs to.
 Defined below.
-{{% /md %}}</dd>
-    <dt class="property-optional"
+{{% /md %}}</dd><dt class="property-optional"
             title="Optional">
         <span id="loggingkafkas_csharp">
 <a href="#loggingkafkas_csharp" style="color: inherit; text-decoration: inherit;">Logging<wbr>Kafkas</a>
@@ -425,8 +374,7 @@ Defined below.
     </dt>
     <dd>{{% md %}}A Kafka endpoint to send streaming logs to.
 Defined below.
-{{% /md %}}</dd>
-    <dt class="property-optional"
+{{% /md %}}</dd><dt class="property-optional"
             title="Optional">
         <span id="loggingkineses_csharp">
 <a href="#loggingkineses_csharp" style="color: inherit; text-decoration: inherit;">Logging<wbr>Kineses</a>
@@ -436,8 +384,7 @@ Defined below.
     </dt>
     <dd>{{% md %}}A Kinesis endpoint to send streaming logs to.
 Defined below.
-{{% /md %}}</dd>
-    <dt class="property-optional"
+{{% /md %}}</dd><dt class="property-optional"
             title="Optional">
         <span id="logginglogglies_csharp">
 <a href="#logginglogglies_csharp" style="color: inherit; text-decoration: inherit;">Logging<wbr>Logglies</a>
@@ -447,8 +394,7 @@ Defined below.
     </dt>
     <dd>{{% md %}}A Loggly endpoint to send streaming logs to.
 Defined below.
-{{% /md %}}</dd>
-    <dt class="property-optional"
+{{% /md %}}</dd><dt class="property-optional"
             title="Optional">
         <span id="logginglogshuttles_csharp">
 <a href="#logginglogshuttles_csharp" style="color: inherit; text-decoration: inherit;">Logging<wbr>Logshuttles</a>
@@ -458,8 +404,7 @@ Defined below.
     </dt>
     <dd>{{% md %}}A Log Shuttle endpoint to send streaming logs to.
 Defined below.
-{{% /md %}}</dd>
-    <dt class="property-optional"
+{{% /md %}}</dd><dt class="property-optional"
             title="Optional">
         <span id="loggingnewrelics_csharp">
 <a href="#loggingnewrelics_csharp" style="color: inherit; text-decoration: inherit;">Logging<wbr>Newrelics</a>
@@ -469,8 +414,7 @@ Defined below.
     </dt>
     <dd>{{% md %}}A New Relic endpoint to send streaming logs to.
 Defined below.
-{{% /md %}}</dd>
-    <dt class="property-optional"
+{{% /md %}}</dd><dt class="property-optional"
             title="Optional">
         <span id="loggingopenstacks_csharp">
 <a href="#loggingopenstacks_csharp" style="color: inherit; text-decoration: inherit;">Logging<wbr>Openstacks</a>
@@ -480,8 +424,7 @@ Defined below.
     </dt>
     <dd>{{% md %}}An OpenStack endpoint to send streaming logs to.
 Defined below.
-{{% /md %}}</dd>
-    <dt class="property-optional"
+{{% /md %}}</dd><dt class="property-optional"
             title="Optional">
         <span id="loggingscalyrs_csharp">
 <a href="#loggingscalyrs_csharp" style="color: inherit; text-decoration: inherit;">Logging<wbr>Scalyrs</a>
@@ -491,8 +434,7 @@ Defined below.
     </dt>
     <dd>{{% md %}}A Scalyr endpoint to send streaming logs to.
 Defined below.
-{{% /md %}}</dd>
-    <dt class="property-optional"
+{{% /md %}}</dd><dt class="property-optional"
             title="Optional">
         <span id="loggingsftps_csharp">
 <a href="#loggingsftps_csharp" style="color: inherit; text-decoration: inherit;">Logging<wbr>Sftps</a>
@@ -502,8 +444,7 @@ Defined below.
     </dt>
     <dd>{{% md %}}An SFTP endpoint to send streaming logs to.
 Defined below.
-{{% /md %}}</dd>
-    <dt class="property-optional"
+{{% /md %}}</dd><dt class="property-optional"
             title="Optional">
         <span id="name_csharp">
 <a href="#name_csharp" style="color: inherit; text-decoration: inherit;">Name</a>
@@ -512,8 +453,7 @@ Defined below.
         <span class="property-type">string</span>
     </dt>
     <dd>{{% md %}}The unique name of the Kinesis logging endpoint.
-{{% /md %}}</dd>
-    <dt class="property-optional"
+{{% /md %}}</dd><dt class="property-optional"
             title="Optional">
         <span id="papertrails_csharp">
 <a href="#papertrails_csharp" style="color: inherit; text-decoration: inherit;">Papertrails</a>
@@ -523,8 +463,7 @@ Defined below.
     </dt>
     <dd>{{% md %}}A Papertrail endpoint to send streaming logs too.
 Defined below.
-{{% /md %}}</dd>
-    <dt class="property-optional"
+{{% /md %}}</dd><dt class="property-optional"
             title="Optional">
         <span id="s3loggings_csharp">
 <a href="#s3loggings_csharp" style="color: inherit; text-decoration: inherit;">S3loggings</a>
@@ -534,8 +473,7 @@ Defined below.
     </dt>
     <dd>{{% md %}}A set of S3 Buckets to send streaming logs too.
 Defined below.
-{{% /md %}}</dd>
-    <dt class="property-optional"
+{{% /md %}}</dd><dt class="property-optional"
             title="Optional">
         <span id="splunks_csharp">
 <a href="#splunks_csharp" style="color: inherit; text-decoration: inherit;">Splunks</a>
@@ -545,8 +483,7 @@ Defined below.
     </dt>
     <dd>{{% md %}}A Splunk endpoint to send streaming logs too.
 Defined below.
-{{% /md %}}</dd>
-    <dt class="property-optional"
+{{% /md %}}</dd><dt class="property-optional"
             title="Optional">
         <span id="sumologics_csharp">
 <a href="#sumologics_csharp" style="color: inherit; text-decoration: inherit;">Sumologics</a>
@@ -556,8 +493,7 @@ Defined below.
     </dt>
     <dd>{{% md %}}A Sumologic endpoint to send streaming logs too.
 Defined below.
-{{% /md %}}</dd>
-    <dt class="property-optional"
+{{% /md %}}</dd><dt class="property-optional"
             title="Optional">
         <span id="syslogs_csharp">
 <a href="#syslogs_csharp" style="color: inherit; text-decoration: inherit;">Syslogs</a>
@@ -567,8 +503,7 @@ Defined below.
     </dt>
     <dd>{{% md %}}A syslog endpoint to send streaming logs too.
 Defined below.
-{{% /md %}}</dd>
-    <dt class="property-optional"
+{{% /md %}}</dd><dt class="property-optional"
             title="Optional">
         <span id="versioncomment_csharp">
 <a href="#versioncomment_csharp" style="color: inherit; text-decoration: inherit;">Version<wbr>Comment</a>
@@ -577,14 +512,11 @@ Defined below.
         <span class="property-type">string</span>
     </dt>
     <dd>{{% md %}}Description field for the version.
-{{% /md %}}</dd>
-</dl>
+{{% /md %}}</dd></dl>
 {{% /choosable %}}
 
 {{% choosable language go %}}
-<dl class="resources-properties">
-
-    <dt class="property-required"
+<dl class="resources-properties"><dt class="property-required"
             title="Required">
         <span id="domains_go">
 <a href="#domains_go" style="color: inherit; text-decoration: inherit;">Domains</a>
@@ -593,8 +525,7 @@ Defined below.
         <span class="property-type"><a href="#servicecomputedomain">[]Service<wbr>Compute<wbr>Domain</a></span>
     </dt>
     <dd>{{% md %}}The domain of the DigitalOcean Spaces endpoint (default "nyc3.digitaloceanspaces.com").
-{{% /md %}}</dd>
-    <dt class="property-required"
+{{% /md %}}</dd><dt class="property-required"
             title="Required">
         <span id="package_go">
 <a href="#package_go" style="color: inherit; text-decoration: inherit;">Package</a>
@@ -604,8 +535,7 @@ Defined below.
     </dt>
     <dd>{{% md %}}A Wasm deployment package to upload.
 Defined below.
-{{% /md %}}</dd>
-    <dt class="property-optional"
+{{% /md %}}</dd><dt class="property-optional"
             title="Optional">
         <span id="activate_go">
 <a href="#activate_go" style="color: inherit; text-decoration: inherit;">Activate</a>
@@ -614,8 +544,7 @@ Defined below.
         <span class="property-type">bool</span>
     </dt>
     <dd>{{% md %}}Conditionally prevents the Service from being activated. The apply step will continue to create a new draft version but will not activate it if this is set to false. Default true.
-{{% /md %}}</dd>
-    <dt class="property-optional"
+{{% /md %}}</dd><dt class="property-optional"
             title="Optional">
         <span id="backends_go">
 <a href="#backends_go" style="color: inherit; text-decoration: inherit;">Backends</a>
@@ -626,8 +555,7 @@ Defined below.
     <dd>{{% md %}}A set of Backends to service requests from your Domains.
 Defined below. Backends must be defined in this argument, or defined in the
 `vcl` argument below
-{{% /md %}}</dd>
-    <dt class="property-optional"
+{{% /md %}}</dd><dt class="property-optional"
             title="Optional">
         <span id="bigqueryloggings_go">
 <a href="#bigqueryloggings_go" style="color: inherit; text-decoration: inherit;">Bigqueryloggings</a>
@@ -637,8 +565,7 @@ Defined below. Backends must be defined in this argument, or defined in the
     </dt>
     <dd>{{% md %}}A BigQuery endpoint to send streaming logs too.
 Defined below.
-{{% /md %}}</dd>
-    <dt class="property-optional"
+{{% /md %}}</dd><dt class="property-optional"
             title="Optional">
         <span id="blobstorageloggings_go">
 <a href="#blobstorageloggings_go" style="color: inherit; text-decoration: inherit;">Blobstorageloggings</a>
@@ -648,8 +575,7 @@ Defined below.
     </dt>
     <dd>{{% md %}}An Azure Blob Storage endpoint to send streaming logs too.
 Defined below.
-{{% /md %}}</dd>
-    <dt class="property-optional"
+{{% /md %}}</dd><dt class="property-optional"
             title="Optional">
         <span id="comment_go">
 <a href="#comment_go" style="color: inherit; text-decoration: inherit;">Comment</a>
@@ -658,8 +584,7 @@ Defined below.
         <span class="property-type">string</span>
     </dt>
     <dd>{{% md %}}An optional comment about the Domain.
-{{% /md %}}</dd>
-    <dt class="property-optional"
+{{% /md %}}</dd><dt class="property-optional"
             title="Optional">
         <span id="forcedestroy_go">
 <a href="#forcedestroy_go" style="color: inherit; text-decoration: inherit;">Force<wbr>Destroy</a>
@@ -669,8 +594,7 @@ Defined below.
     </dt>
     <dd>{{% md %}}Services that are active cannot be destroyed. In
 order to destroy the Service, set `force_destroy` to `true`. Default `false`.
-{{% /md %}}</dd>
-    <dt class="property-optional"
+{{% /md %}}</dd><dt class="property-optional"
             title="Optional">
         <span id="gcsloggings_go">
 <a href="#gcsloggings_go" style="color: inherit; text-decoration: inherit;">Gcsloggings</a>
@@ -680,8 +604,7 @@ order to destroy the Service, set `force_destroy` to `true`. Default `false`.
     </dt>
     <dd>{{% md %}}A gcs endpoint to send streaming logs too.
 Defined below.
-{{% /md %}}</dd>
-    <dt class="property-optional"
+{{% /md %}}</dd><dt class="property-optional"
             title="Optional">
         <span id="healthchecks_go">
 <a href="#healthchecks_go" style="color: inherit; text-decoration: inherit;">Healthchecks</a>
@@ -690,8 +613,7 @@ Defined below.
         <span class="property-type"><a href="#servicecomputehealthcheck">[]Service<wbr>Compute<wbr>Healthcheck</a></span>
     </dt>
     <dd>{{% md %}}Name of a defined `healthcheck` to assign to this backend.
-{{% /md %}}</dd>
-    <dt class="property-optional"
+{{% /md %}}</dd><dt class="property-optional"
             title="Optional">
         <span id="httpsloggings_go">
 <a href="#httpsloggings_go" style="color: inherit; text-decoration: inherit;">Httpsloggings</a>
@@ -701,8 +623,7 @@ Defined below.
     </dt>
     <dd>{{% md %}}An HTTPS endpoint to send streaming logs to.
 Defined below.
-{{% /md %}}</dd>
-    <dt class="property-optional"
+{{% /md %}}</dd><dt class="property-optional"
             title="Optional">
         <span id="logentries_go">
 <a href="#logentries_go" style="color: inherit; text-decoration: inherit;">Logentries</a>
@@ -712,8 +633,7 @@ Defined below.
     </dt>
     <dd>{{% md %}}A logentries endpoint to send streaming logs too.
 Defined below.
-{{% /md %}}</dd>
-    <dt class="property-optional"
+{{% /md %}}</dd><dt class="property-optional"
             title="Optional">
         <span id="loggingcloudfiles_go">
 <a href="#loggingcloudfiles_go" style="color: inherit; text-decoration: inherit;">Logging<wbr>Cloudfiles</a>
@@ -723,8 +643,7 @@ Defined below.
     </dt>
     <dd>{{% md %}}A Rackspace Cloud Files endpoint to send streaming logs to.
 Defined below.
-{{% /md %}}</dd>
-    <dt class="property-optional"
+{{% /md %}}</dd><dt class="property-optional"
             title="Optional">
         <span id="loggingdatadogs_go">
 <a href="#loggingdatadogs_go" style="color: inherit; text-decoration: inherit;">Logging<wbr>Datadogs</a>
@@ -734,8 +653,7 @@ Defined below.
     </dt>
     <dd>{{% md %}}A Datadog endpoint to send streaming logs to.
 Defined below.
-{{% /md %}}</dd>
-    <dt class="property-optional"
+{{% /md %}}</dd><dt class="property-optional"
             title="Optional">
         <span id="loggingdigitaloceans_go">
 <a href="#loggingdigitaloceans_go" style="color: inherit; text-decoration: inherit;">Logging<wbr>Digitaloceans</a>
@@ -745,8 +663,7 @@ Defined below.
     </dt>
     <dd>{{% md %}}A DigitalOcean Spaces endpoint to send streaming logs to.
 Defined below.
-{{% /md %}}</dd>
-    <dt class="property-optional"
+{{% /md %}}</dd><dt class="property-optional"
             title="Optional">
         <span id="loggingelasticsearches_go">
 <a href="#loggingelasticsearches_go" style="color: inherit; text-decoration: inherit;">Logging<wbr>Elasticsearches</a>
@@ -756,8 +673,7 @@ Defined below.
     </dt>
     <dd>{{% md %}}An Elasticsearch endpoint to send streaming logs to.
 Defined below.
-{{% /md %}}</dd>
-    <dt class="property-optional"
+{{% /md %}}</dd><dt class="property-optional"
             title="Optional">
         <span id="loggingftps_go">
 <a href="#loggingftps_go" style="color: inherit; text-decoration: inherit;">Logging<wbr>Ftps</a>
@@ -767,8 +683,7 @@ Defined below.
     </dt>
     <dd>{{% md %}}An FTP endpoint to send streaming logs to.
 Defined below.
-{{% /md %}}</dd>
-    <dt class="property-optional"
+{{% /md %}}</dd><dt class="property-optional"
             title="Optional">
         <span id="logginggooglepubsubs_go">
 <a href="#logginggooglepubsubs_go" style="color: inherit; text-decoration: inherit;">Logging<wbr>Googlepubsubs</a>
@@ -778,8 +693,7 @@ Defined below.
     </dt>
     <dd>{{% md %}}A Google Cloud Pub/Sub endpoint to send streaming logs to.
 Defined below.
-{{% /md %}}</dd>
-    <dt class="property-optional"
+{{% /md %}}</dd><dt class="property-optional"
             title="Optional">
         <span id="loggingheroku_go">
 <a href="#loggingheroku_go" style="color: inherit; text-decoration: inherit;">Logging<wbr>Heroku</a>
@@ -789,8 +703,7 @@ Defined below.
     </dt>
     <dd>{{% md %}}A Heroku endpoint to send streaming logs to.
 Defined below.
-{{% /md %}}</dd>
-    <dt class="property-optional"
+{{% /md %}}</dd><dt class="property-optional"
             title="Optional">
         <span id="logginghoneycombs_go">
 <a href="#logginghoneycombs_go" style="color: inherit; text-decoration: inherit;">Logging<wbr>Honeycombs</a>
@@ -800,8 +713,7 @@ Defined below.
     </dt>
     <dd>{{% md %}}A Honeycomb endpoint to send streaming logs to.
 Defined below.
-{{% /md %}}</dd>
-    <dt class="property-optional"
+{{% /md %}}</dd><dt class="property-optional"
             title="Optional">
         <span id="loggingkafkas_go">
 <a href="#loggingkafkas_go" style="color: inherit; text-decoration: inherit;">Logging<wbr>Kafkas</a>
@@ -811,8 +723,7 @@ Defined below.
     </dt>
     <dd>{{% md %}}A Kafka endpoint to send streaming logs to.
 Defined below.
-{{% /md %}}</dd>
-    <dt class="property-optional"
+{{% /md %}}</dd><dt class="property-optional"
             title="Optional">
         <span id="loggingkineses_go">
 <a href="#loggingkineses_go" style="color: inherit; text-decoration: inherit;">Logging<wbr>Kineses</a>
@@ -822,8 +733,7 @@ Defined below.
     </dt>
     <dd>{{% md %}}A Kinesis endpoint to send streaming logs to.
 Defined below.
-{{% /md %}}</dd>
-    <dt class="property-optional"
+{{% /md %}}</dd><dt class="property-optional"
             title="Optional">
         <span id="logginglogglies_go">
 <a href="#logginglogglies_go" style="color: inherit; text-decoration: inherit;">Logging<wbr>Logglies</a>
@@ -833,8 +743,7 @@ Defined below.
     </dt>
     <dd>{{% md %}}A Loggly endpoint to send streaming logs to.
 Defined below.
-{{% /md %}}</dd>
-    <dt class="property-optional"
+{{% /md %}}</dd><dt class="property-optional"
             title="Optional">
         <span id="logginglogshuttles_go">
 <a href="#logginglogshuttles_go" style="color: inherit; text-decoration: inherit;">Logging<wbr>Logshuttles</a>
@@ -844,8 +753,7 @@ Defined below.
     </dt>
     <dd>{{% md %}}A Log Shuttle endpoint to send streaming logs to.
 Defined below.
-{{% /md %}}</dd>
-    <dt class="property-optional"
+{{% /md %}}</dd><dt class="property-optional"
             title="Optional">
         <span id="loggingnewrelics_go">
 <a href="#loggingnewrelics_go" style="color: inherit; text-decoration: inherit;">Logging<wbr>Newrelics</a>
@@ -855,8 +763,7 @@ Defined below.
     </dt>
     <dd>{{% md %}}A New Relic endpoint to send streaming logs to.
 Defined below.
-{{% /md %}}</dd>
-    <dt class="property-optional"
+{{% /md %}}</dd><dt class="property-optional"
             title="Optional">
         <span id="loggingopenstacks_go">
 <a href="#loggingopenstacks_go" style="color: inherit; text-decoration: inherit;">Logging<wbr>Openstacks</a>
@@ -866,8 +773,7 @@ Defined below.
     </dt>
     <dd>{{% md %}}An OpenStack endpoint to send streaming logs to.
 Defined below.
-{{% /md %}}</dd>
-    <dt class="property-optional"
+{{% /md %}}</dd><dt class="property-optional"
             title="Optional">
         <span id="loggingscalyrs_go">
 <a href="#loggingscalyrs_go" style="color: inherit; text-decoration: inherit;">Logging<wbr>Scalyrs</a>
@@ -877,8 +783,7 @@ Defined below.
     </dt>
     <dd>{{% md %}}A Scalyr endpoint to send streaming logs to.
 Defined below.
-{{% /md %}}</dd>
-    <dt class="property-optional"
+{{% /md %}}</dd><dt class="property-optional"
             title="Optional">
         <span id="loggingsftps_go">
 <a href="#loggingsftps_go" style="color: inherit; text-decoration: inherit;">Logging<wbr>Sftps</a>
@@ -888,8 +793,7 @@ Defined below.
     </dt>
     <dd>{{% md %}}An SFTP endpoint to send streaming logs to.
 Defined below.
-{{% /md %}}</dd>
-    <dt class="property-optional"
+{{% /md %}}</dd><dt class="property-optional"
             title="Optional">
         <span id="name_go">
 <a href="#name_go" style="color: inherit; text-decoration: inherit;">Name</a>
@@ -898,8 +802,7 @@ Defined below.
         <span class="property-type">string</span>
     </dt>
     <dd>{{% md %}}The unique name of the Kinesis logging endpoint.
-{{% /md %}}</dd>
-    <dt class="property-optional"
+{{% /md %}}</dd><dt class="property-optional"
             title="Optional">
         <span id="papertrails_go">
 <a href="#papertrails_go" style="color: inherit; text-decoration: inherit;">Papertrails</a>
@@ -909,8 +812,7 @@ Defined below.
     </dt>
     <dd>{{% md %}}A Papertrail endpoint to send streaming logs too.
 Defined below.
-{{% /md %}}</dd>
-    <dt class="property-optional"
+{{% /md %}}</dd><dt class="property-optional"
             title="Optional">
         <span id="s3loggings_go">
 <a href="#s3loggings_go" style="color: inherit; text-decoration: inherit;">S3loggings</a>
@@ -920,8 +822,7 @@ Defined below.
     </dt>
     <dd>{{% md %}}A set of S3 Buckets to send streaming logs too.
 Defined below.
-{{% /md %}}</dd>
-    <dt class="property-optional"
+{{% /md %}}</dd><dt class="property-optional"
             title="Optional">
         <span id="splunks_go">
 <a href="#splunks_go" style="color: inherit; text-decoration: inherit;">Splunks</a>
@@ -931,8 +832,7 @@ Defined below.
     </dt>
     <dd>{{% md %}}A Splunk endpoint to send streaming logs too.
 Defined below.
-{{% /md %}}</dd>
-    <dt class="property-optional"
+{{% /md %}}</dd><dt class="property-optional"
             title="Optional">
         <span id="sumologics_go">
 <a href="#sumologics_go" style="color: inherit; text-decoration: inherit;">Sumologics</a>
@@ -942,8 +842,7 @@ Defined below.
     </dt>
     <dd>{{% md %}}A Sumologic endpoint to send streaming logs too.
 Defined below.
-{{% /md %}}</dd>
-    <dt class="property-optional"
+{{% /md %}}</dd><dt class="property-optional"
             title="Optional">
         <span id="syslogs_go">
 <a href="#syslogs_go" style="color: inherit; text-decoration: inherit;">Syslogs</a>
@@ -953,8 +852,7 @@ Defined below.
     </dt>
     <dd>{{% md %}}A syslog endpoint to send streaming logs too.
 Defined below.
-{{% /md %}}</dd>
-    <dt class="property-optional"
+{{% /md %}}</dd><dt class="property-optional"
             title="Optional">
         <span id="versioncomment_go">
 <a href="#versioncomment_go" style="color: inherit; text-decoration: inherit;">Version<wbr>Comment</a>
@@ -963,14 +861,11 @@ Defined below.
         <span class="property-type">string</span>
     </dt>
     <dd>{{% md %}}Description field for the version.
-{{% /md %}}</dd>
-</dl>
+{{% /md %}}</dd></dl>
 {{% /choosable %}}
 
 {{% choosable language nodejs %}}
-<dl class="resources-properties">
-
-    <dt class="property-required"
+<dl class="resources-properties"><dt class="property-required"
             title="Required">
         <span id="domains_nodejs">
 <a href="#domains_nodejs" style="color: inherit; text-decoration: inherit;">domains</a>
@@ -979,8 +874,7 @@ Defined below.
         <span class="property-type"><a href="#servicecomputedomain">Service<wbr>Compute<wbr>Domain[]</a></span>
     </dt>
     <dd>{{% md %}}The domain of the DigitalOcean Spaces endpoint (default "nyc3.digitaloceanspaces.com").
-{{% /md %}}</dd>
-    <dt class="property-required"
+{{% /md %}}</dd><dt class="property-required"
             title="Required">
         <span id="package_nodejs">
 <a href="#package_nodejs" style="color: inherit; text-decoration: inherit;">package</a>
@@ -990,8 +884,7 @@ Defined below.
     </dt>
     <dd>{{% md %}}A Wasm deployment package to upload.
 Defined below.
-{{% /md %}}</dd>
-    <dt class="property-optional"
+{{% /md %}}</dd><dt class="property-optional"
             title="Optional">
         <span id="activate_nodejs">
 <a href="#activate_nodejs" style="color: inherit; text-decoration: inherit;">activate</a>
@@ -1000,8 +893,7 @@ Defined below.
         <span class="property-type">boolean</span>
     </dt>
     <dd>{{% md %}}Conditionally prevents the Service from being activated. The apply step will continue to create a new draft version but will not activate it if this is set to false. Default true.
-{{% /md %}}</dd>
-    <dt class="property-optional"
+{{% /md %}}</dd><dt class="property-optional"
             title="Optional">
         <span id="backends_nodejs">
 <a href="#backends_nodejs" style="color: inherit; text-decoration: inherit;">backends</a>
@@ -1012,8 +904,7 @@ Defined below.
     <dd>{{% md %}}A set of Backends to service requests from your Domains.
 Defined below. Backends must be defined in this argument, or defined in the
 `vcl` argument below
-{{% /md %}}</dd>
-    <dt class="property-optional"
+{{% /md %}}</dd><dt class="property-optional"
             title="Optional">
         <span id="bigqueryloggings_nodejs">
 <a href="#bigqueryloggings_nodejs" style="color: inherit; text-decoration: inherit;">bigqueryloggings</a>
@@ -1023,8 +914,7 @@ Defined below. Backends must be defined in this argument, or defined in the
     </dt>
     <dd>{{% md %}}A BigQuery endpoint to send streaming logs too.
 Defined below.
-{{% /md %}}</dd>
-    <dt class="property-optional"
+{{% /md %}}</dd><dt class="property-optional"
             title="Optional">
         <span id="blobstorageloggings_nodejs">
 <a href="#blobstorageloggings_nodejs" style="color: inherit; text-decoration: inherit;">blobstorageloggings</a>
@@ -1034,8 +924,7 @@ Defined below.
     </dt>
     <dd>{{% md %}}An Azure Blob Storage endpoint to send streaming logs too.
 Defined below.
-{{% /md %}}</dd>
-    <dt class="property-optional"
+{{% /md %}}</dd><dt class="property-optional"
             title="Optional">
         <span id="comment_nodejs">
 <a href="#comment_nodejs" style="color: inherit; text-decoration: inherit;">comment</a>
@@ -1044,8 +933,7 @@ Defined below.
         <span class="property-type">string</span>
     </dt>
     <dd>{{% md %}}An optional comment about the Domain.
-{{% /md %}}</dd>
-    <dt class="property-optional"
+{{% /md %}}</dd><dt class="property-optional"
             title="Optional">
         <span id="forcedestroy_nodejs">
 <a href="#forcedestroy_nodejs" style="color: inherit; text-decoration: inherit;">force<wbr>Destroy</a>
@@ -1055,8 +943,7 @@ Defined below.
     </dt>
     <dd>{{% md %}}Services that are active cannot be destroyed. In
 order to destroy the Service, set `force_destroy` to `true`. Default `false`.
-{{% /md %}}</dd>
-    <dt class="property-optional"
+{{% /md %}}</dd><dt class="property-optional"
             title="Optional">
         <span id="gcsloggings_nodejs">
 <a href="#gcsloggings_nodejs" style="color: inherit; text-decoration: inherit;">gcsloggings</a>
@@ -1066,8 +953,7 @@ order to destroy the Service, set `force_destroy` to `true`. Default `false`.
     </dt>
     <dd>{{% md %}}A gcs endpoint to send streaming logs too.
 Defined below.
-{{% /md %}}</dd>
-    <dt class="property-optional"
+{{% /md %}}</dd><dt class="property-optional"
             title="Optional">
         <span id="healthchecks_nodejs">
 <a href="#healthchecks_nodejs" style="color: inherit; text-decoration: inherit;">healthchecks</a>
@@ -1076,8 +962,7 @@ Defined below.
         <span class="property-type"><a href="#servicecomputehealthcheck">Service<wbr>Compute<wbr>Healthcheck[]</a></span>
     </dt>
     <dd>{{% md %}}Name of a defined `healthcheck` to assign to this backend.
-{{% /md %}}</dd>
-    <dt class="property-optional"
+{{% /md %}}</dd><dt class="property-optional"
             title="Optional">
         <span id="httpsloggings_nodejs">
 <a href="#httpsloggings_nodejs" style="color: inherit; text-decoration: inherit;">httpsloggings</a>
@@ -1087,8 +972,7 @@ Defined below.
     </dt>
     <dd>{{% md %}}An HTTPS endpoint to send streaming logs to.
 Defined below.
-{{% /md %}}</dd>
-    <dt class="property-optional"
+{{% /md %}}</dd><dt class="property-optional"
             title="Optional">
         <span id="logentries_nodejs">
 <a href="#logentries_nodejs" style="color: inherit; text-decoration: inherit;">logentries</a>
@@ -1098,8 +982,7 @@ Defined below.
     </dt>
     <dd>{{% md %}}A logentries endpoint to send streaming logs too.
 Defined below.
-{{% /md %}}</dd>
-    <dt class="property-optional"
+{{% /md %}}</dd><dt class="property-optional"
             title="Optional">
         <span id="loggingcloudfiles_nodejs">
 <a href="#loggingcloudfiles_nodejs" style="color: inherit; text-decoration: inherit;">logging<wbr>Cloudfiles</a>
@@ -1109,8 +992,7 @@ Defined below.
     </dt>
     <dd>{{% md %}}A Rackspace Cloud Files endpoint to send streaming logs to.
 Defined below.
-{{% /md %}}</dd>
-    <dt class="property-optional"
+{{% /md %}}</dd><dt class="property-optional"
             title="Optional">
         <span id="loggingdatadogs_nodejs">
 <a href="#loggingdatadogs_nodejs" style="color: inherit; text-decoration: inherit;">logging<wbr>Datadogs</a>
@@ -1120,8 +1002,7 @@ Defined below.
     </dt>
     <dd>{{% md %}}A Datadog endpoint to send streaming logs to.
 Defined below.
-{{% /md %}}</dd>
-    <dt class="property-optional"
+{{% /md %}}</dd><dt class="property-optional"
             title="Optional">
         <span id="loggingdigitaloceans_nodejs">
 <a href="#loggingdigitaloceans_nodejs" style="color: inherit; text-decoration: inherit;">logging<wbr>Digitaloceans</a>
@@ -1131,8 +1012,7 @@ Defined below.
     </dt>
     <dd>{{% md %}}A DigitalOcean Spaces endpoint to send streaming logs to.
 Defined below.
-{{% /md %}}</dd>
-    <dt class="property-optional"
+{{% /md %}}</dd><dt class="property-optional"
             title="Optional">
         <span id="loggingelasticsearches_nodejs">
 <a href="#loggingelasticsearches_nodejs" style="color: inherit; text-decoration: inherit;">logging<wbr>Elasticsearches</a>
@@ -1142,8 +1022,7 @@ Defined below.
     </dt>
     <dd>{{% md %}}An Elasticsearch endpoint to send streaming logs to.
 Defined below.
-{{% /md %}}</dd>
-    <dt class="property-optional"
+{{% /md %}}</dd><dt class="property-optional"
             title="Optional">
         <span id="loggingftps_nodejs">
 <a href="#loggingftps_nodejs" style="color: inherit; text-decoration: inherit;">logging<wbr>Ftps</a>
@@ -1153,8 +1032,7 @@ Defined below.
     </dt>
     <dd>{{% md %}}An FTP endpoint to send streaming logs to.
 Defined below.
-{{% /md %}}</dd>
-    <dt class="property-optional"
+{{% /md %}}</dd><dt class="property-optional"
             title="Optional">
         <span id="logginggooglepubsubs_nodejs">
 <a href="#logginggooglepubsubs_nodejs" style="color: inherit; text-decoration: inherit;">logging<wbr>Googlepubsubs</a>
@@ -1164,8 +1042,7 @@ Defined below.
     </dt>
     <dd>{{% md %}}A Google Cloud Pub/Sub endpoint to send streaming logs to.
 Defined below.
-{{% /md %}}</dd>
-    <dt class="property-optional"
+{{% /md %}}</dd><dt class="property-optional"
             title="Optional">
         <span id="loggingheroku_nodejs">
 <a href="#loggingheroku_nodejs" style="color: inherit; text-decoration: inherit;">logging<wbr>Heroku</a>
@@ -1175,8 +1052,7 @@ Defined below.
     </dt>
     <dd>{{% md %}}A Heroku endpoint to send streaming logs to.
 Defined below.
-{{% /md %}}</dd>
-    <dt class="property-optional"
+{{% /md %}}</dd><dt class="property-optional"
             title="Optional">
         <span id="logginghoneycombs_nodejs">
 <a href="#logginghoneycombs_nodejs" style="color: inherit; text-decoration: inherit;">logging<wbr>Honeycombs</a>
@@ -1186,8 +1062,7 @@ Defined below.
     </dt>
     <dd>{{% md %}}A Honeycomb endpoint to send streaming logs to.
 Defined below.
-{{% /md %}}</dd>
-    <dt class="property-optional"
+{{% /md %}}</dd><dt class="property-optional"
             title="Optional">
         <span id="loggingkafkas_nodejs">
 <a href="#loggingkafkas_nodejs" style="color: inherit; text-decoration: inherit;">logging<wbr>Kafkas</a>
@@ -1197,8 +1072,7 @@ Defined below.
     </dt>
     <dd>{{% md %}}A Kafka endpoint to send streaming logs to.
 Defined below.
-{{% /md %}}</dd>
-    <dt class="property-optional"
+{{% /md %}}</dd><dt class="property-optional"
             title="Optional">
         <span id="loggingkineses_nodejs">
 <a href="#loggingkineses_nodejs" style="color: inherit; text-decoration: inherit;">logging<wbr>Kineses</a>
@@ -1208,8 +1082,7 @@ Defined below.
     </dt>
     <dd>{{% md %}}A Kinesis endpoint to send streaming logs to.
 Defined below.
-{{% /md %}}</dd>
-    <dt class="property-optional"
+{{% /md %}}</dd><dt class="property-optional"
             title="Optional">
         <span id="logginglogglies_nodejs">
 <a href="#logginglogglies_nodejs" style="color: inherit; text-decoration: inherit;">logging<wbr>Logglies</a>
@@ -1219,8 +1092,7 @@ Defined below.
     </dt>
     <dd>{{% md %}}A Loggly endpoint to send streaming logs to.
 Defined below.
-{{% /md %}}</dd>
-    <dt class="property-optional"
+{{% /md %}}</dd><dt class="property-optional"
             title="Optional">
         <span id="logginglogshuttles_nodejs">
 <a href="#logginglogshuttles_nodejs" style="color: inherit; text-decoration: inherit;">logging<wbr>Logshuttles</a>
@@ -1230,8 +1102,7 @@ Defined below.
     </dt>
     <dd>{{% md %}}A Log Shuttle endpoint to send streaming logs to.
 Defined below.
-{{% /md %}}</dd>
-    <dt class="property-optional"
+{{% /md %}}</dd><dt class="property-optional"
             title="Optional">
         <span id="loggingnewrelics_nodejs">
 <a href="#loggingnewrelics_nodejs" style="color: inherit; text-decoration: inherit;">logging<wbr>Newrelics</a>
@@ -1241,8 +1112,7 @@ Defined below.
     </dt>
     <dd>{{% md %}}A New Relic endpoint to send streaming logs to.
 Defined below.
-{{% /md %}}</dd>
-    <dt class="property-optional"
+{{% /md %}}</dd><dt class="property-optional"
             title="Optional">
         <span id="loggingopenstacks_nodejs">
 <a href="#loggingopenstacks_nodejs" style="color: inherit; text-decoration: inherit;">logging<wbr>Openstacks</a>
@@ -1252,8 +1122,7 @@ Defined below.
     </dt>
     <dd>{{% md %}}An OpenStack endpoint to send streaming logs to.
 Defined below.
-{{% /md %}}</dd>
-    <dt class="property-optional"
+{{% /md %}}</dd><dt class="property-optional"
             title="Optional">
         <span id="loggingscalyrs_nodejs">
 <a href="#loggingscalyrs_nodejs" style="color: inherit; text-decoration: inherit;">logging<wbr>Scalyrs</a>
@@ -1263,8 +1132,7 @@ Defined below.
     </dt>
     <dd>{{% md %}}A Scalyr endpoint to send streaming logs to.
 Defined below.
-{{% /md %}}</dd>
-    <dt class="property-optional"
+{{% /md %}}</dd><dt class="property-optional"
             title="Optional">
         <span id="loggingsftps_nodejs">
 <a href="#loggingsftps_nodejs" style="color: inherit; text-decoration: inherit;">logging<wbr>Sftps</a>
@@ -1274,8 +1142,7 @@ Defined below.
     </dt>
     <dd>{{% md %}}An SFTP endpoint to send streaming logs to.
 Defined below.
-{{% /md %}}</dd>
-    <dt class="property-optional"
+{{% /md %}}</dd><dt class="property-optional"
             title="Optional">
         <span id="name_nodejs">
 <a href="#name_nodejs" style="color: inherit; text-decoration: inherit;">name</a>
@@ -1284,8 +1151,7 @@ Defined below.
         <span class="property-type">string</span>
     </dt>
     <dd>{{% md %}}The unique name of the Kinesis logging endpoint.
-{{% /md %}}</dd>
-    <dt class="property-optional"
+{{% /md %}}</dd><dt class="property-optional"
             title="Optional">
         <span id="papertrails_nodejs">
 <a href="#papertrails_nodejs" style="color: inherit; text-decoration: inherit;">papertrails</a>
@@ -1295,8 +1161,7 @@ Defined below.
     </dt>
     <dd>{{% md %}}A Papertrail endpoint to send streaming logs too.
 Defined below.
-{{% /md %}}</dd>
-    <dt class="property-optional"
+{{% /md %}}</dd><dt class="property-optional"
             title="Optional">
         <span id="s3loggings_nodejs">
 <a href="#s3loggings_nodejs" style="color: inherit; text-decoration: inherit;">s3loggings</a>
@@ -1306,8 +1171,7 @@ Defined below.
     </dt>
     <dd>{{% md %}}A set of S3 Buckets to send streaming logs too.
 Defined below.
-{{% /md %}}</dd>
-    <dt class="property-optional"
+{{% /md %}}</dd><dt class="property-optional"
             title="Optional">
         <span id="splunks_nodejs">
 <a href="#splunks_nodejs" style="color: inherit; text-decoration: inherit;">splunks</a>
@@ -1317,8 +1181,7 @@ Defined below.
     </dt>
     <dd>{{% md %}}A Splunk endpoint to send streaming logs too.
 Defined below.
-{{% /md %}}</dd>
-    <dt class="property-optional"
+{{% /md %}}</dd><dt class="property-optional"
             title="Optional">
         <span id="sumologics_nodejs">
 <a href="#sumologics_nodejs" style="color: inherit; text-decoration: inherit;">sumologics</a>
@@ -1328,8 +1191,7 @@ Defined below.
     </dt>
     <dd>{{% md %}}A Sumologic endpoint to send streaming logs too.
 Defined below.
-{{% /md %}}</dd>
-    <dt class="property-optional"
+{{% /md %}}</dd><dt class="property-optional"
             title="Optional">
         <span id="syslogs_nodejs">
 <a href="#syslogs_nodejs" style="color: inherit; text-decoration: inherit;">syslogs</a>
@@ -1339,8 +1201,7 @@ Defined below.
     </dt>
     <dd>{{% md %}}A syslog endpoint to send streaming logs too.
 Defined below.
-{{% /md %}}</dd>
-    <dt class="property-optional"
+{{% /md %}}</dd><dt class="property-optional"
             title="Optional">
         <span id="versioncomment_nodejs">
 <a href="#versioncomment_nodejs" style="color: inherit; text-decoration: inherit;">version<wbr>Comment</a>
@@ -1349,14 +1210,11 @@ Defined below.
         <span class="property-type">string</span>
     </dt>
     <dd>{{% md %}}Description field for the version.
-{{% /md %}}</dd>
-</dl>
+{{% /md %}}</dd></dl>
 {{% /choosable %}}
 
 {{% choosable language python %}}
-<dl class="resources-properties">
-
-    <dt class="property-required"
+<dl class="resources-properties"><dt class="property-required"
             title="Required">
         <span id="domains_python">
 <a href="#domains_python" style="color: inherit; text-decoration: inherit;">domains</a>
@@ -1365,8 +1223,7 @@ Defined below.
         <span class="property-type"><a href="#servicecomputedomain">Sequence[Service<wbr>Compute<wbr>Domain<wbr>Args]</a></span>
     </dt>
     <dd>{{% md %}}The domain of the DigitalOcean Spaces endpoint (default "nyc3.digitaloceanspaces.com").
-{{% /md %}}</dd>
-    <dt class="property-required"
+{{% /md %}}</dd><dt class="property-required"
             title="Required">
         <span id="package_python">
 <a href="#package_python" style="color: inherit; text-decoration: inherit;">package</a>
@@ -1376,8 +1233,7 @@ Defined below.
     </dt>
     <dd>{{% md %}}A Wasm deployment package to upload.
 Defined below.
-{{% /md %}}</dd>
-    <dt class="property-optional"
+{{% /md %}}</dd><dt class="property-optional"
             title="Optional">
         <span id="activate_python">
 <a href="#activate_python" style="color: inherit; text-decoration: inherit;">activate</a>
@@ -1386,8 +1242,7 @@ Defined below.
         <span class="property-type">bool</span>
     </dt>
     <dd>{{% md %}}Conditionally prevents the Service from being activated. The apply step will continue to create a new draft version but will not activate it if this is set to false. Default true.
-{{% /md %}}</dd>
-    <dt class="property-optional"
+{{% /md %}}</dd><dt class="property-optional"
             title="Optional">
         <span id="backends_python">
 <a href="#backends_python" style="color: inherit; text-decoration: inherit;">backends</a>
@@ -1398,8 +1253,7 @@ Defined below.
     <dd>{{% md %}}A set of Backends to service requests from your Domains.
 Defined below. Backends must be defined in this argument, or defined in the
 `vcl` argument below
-{{% /md %}}</dd>
-    <dt class="property-optional"
+{{% /md %}}</dd><dt class="property-optional"
             title="Optional">
         <span id="bigqueryloggings_python">
 <a href="#bigqueryloggings_python" style="color: inherit; text-decoration: inherit;">bigqueryloggings</a>
@@ -1409,8 +1263,7 @@ Defined below. Backends must be defined in this argument, or defined in the
     </dt>
     <dd>{{% md %}}A BigQuery endpoint to send streaming logs too.
 Defined below.
-{{% /md %}}</dd>
-    <dt class="property-optional"
+{{% /md %}}</dd><dt class="property-optional"
             title="Optional">
         <span id="blobstorageloggings_python">
 <a href="#blobstorageloggings_python" style="color: inherit; text-decoration: inherit;">blobstorageloggings</a>
@@ -1420,8 +1273,7 @@ Defined below.
     </dt>
     <dd>{{% md %}}An Azure Blob Storage endpoint to send streaming logs too.
 Defined below.
-{{% /md %}}</dd>
-    <dt class="property-optional"
+{{% /md %}}</dd><dt class="property-optional"
             title="Optional">
         <span id="comment_python">
 <a href="#comment_python" style="color: inherit; text-decoration: inherit;">comment</a>
@@ -1430,8 +1282,7 @@ Defined below.
         <span class="property-type">str</span>
     </dt>
     <dd>{{% md %}}An optional comment about the Domain.
-{{% /md %}}</dd>
-    <dt class="property-optional"
+{{% /md %}}</dd><dt class="property-optional"
             title="Optional">
         <span id="force_destroy_python">
 <a href="#force_destroy_python" style="color: inherit; text-decoration: inherit;">force_<wbr>destroy</a>
@@ -1441,8 +1292,7 @@ Defined below.
     </dt>
     <dd>{{% md %}}Services that are active cannot be destroyed. In
 order to destroy the Service, set `force_destroy` to `true`. Default `false`.
-{{% /md %}}</dd>
-    <dt class="property-optional"
+{{% /md %}}</dd><dt class="property-optional"
             title="Optional">
         <span id="gcsloggings_python">
 <a href="#gcsloggings_python" style="color: inherit; text-decoration: inherit;">gcsloggings</a>
@@ -1452,8 +1302,7 @@ order to destroy the Service, set `force_destroy` to `true`. Default `false`.
     </dt>
     <dd>{{% md %}}A gcs endpoint to send streaming logs too.
 Defined below.
-{{% /md %}}</dd>
-    <dt class="property-optional"
+{{% /md %}}</dd><dt class="property-optional"
             title="Optional">
         <span id="healthchecks_python">
 <a href="#healthchecks_python" style="color: inherit; text-decoration: inherit;">healthchecks</a>
@@ -1462,8 +1311,7 @@ Defined below.
         <span class="property-type"><a href="#servicecomputehealthcheck">Sequence[Service<wbr>Compute<wbr>Healthcheck<wbr>Args]</a></span>
     </dt>
     <dd>{{% md %}}Name of a defined `healthcheck` to assign to this backend.
-{{% /md %}}</dd>
-    <dt class="property-optional"
+{{% /md %}}</dd><dt class="property-optional"
             title="Optional">
         <span id="httpsloggings_python">
 <a href="#httpsloggings_python" style="color: inherit; text-decoration: inherit;">httpsloggings</a>
@@ -1473,8 +1321,7 @@ Defined below.
     </dt>
     <dd>{{% md %}}An HTTPS endpoint to send streaming logs to.
 Defined below.
-{{% /md %}}</dd>
-    <dt class="property-optional"
+{{% /md %}}</dd><dt class="property-optional"
             title="Optional">
         <span id="logentries_python">
 <a href="#logentries_python" style="color: inherit; text-decoration: inherit;">logentries</a>
@@ -1484,8 +1331,7 @@ Defined below.
     </dt>
     <dd>{{% md %}}A logentries endpoint to send streaming logs too.
 Defined below.
-{{% /md %}}</dd>
-    <dt class="property-optional"
+{{% /md %}}</dd><dt class="property-optional"
             title="Optional">
         <span id="logging_cloudfiles_python">
 <a href="#logging_cloudfiles_python" style="color: inherit; text-decoration: inherit;">logging_<wbr>cloudfiles</a>
@@ -1495,8 +1341,7 @@ Defined below.
     </dt>
     <dd>{{% md %}}A Rackspace Cloud Files endpoint to send streaming logs to.
 Defined below.
-{{% /md %}}</dd>
-    <dt class="property-optional"
+{{% /md %}}</dd><dt class="property-optional"
             title="Optional">
         <span id="logging_datadogs_python">
 <a href="#logging_datadogs_python" style="color: inherit; text-decoration: inherit;">logging_<wbr>datadogs</a>
@@ -1506,8 +1351,7 @@ Defined below.
     </dt>
     <dd>{{% md %}}A Datadog endpoint to send streaming logs to.
 Defined below.
-{{% /md %}}</dd>
-    <dt class="property-optional"
+{{% /md %}}</dd><dt class="property-optional"
             title="Optional">
         <span id="logging_digitaloceans_python">
 <a href="#logging_digitaloceans_python" style="color: inherit; text-decoration: inherit;">logging_<wbr>digitaloceans</a>
@@ -1517,8 +1361,7 @@ Defined below.
     </dt>
     <dd>{{% md %}}A DigitalOcean Spaces endpoint to send streaming logs to.
 Defined below.
-{{% /md %}}</dd>
-    <dt class="property-optional"
+{{% /md %}}</dd><dt class="property-optional"
             title="Optional">
         <span id="logging_elasticsearches_python">
 <a href="#logging_elasticsearches_python" style="color: inherit; text-decoration: inherit;">logging_<wbr>elasticsearches</a>
@@ -1528,8 +1371,7 @@ Defined below.
     </dt>
     <dd>{{% md %}}An Elasticsearch endpoint to send streaming logs to.
 Defined below.
-{{% /md %}}</dd>
-    <dt class="property-optional"
+{{% /md %}}</dd><dt class="property-optional"
             title="Optional">
         <span id="logging_ftps_python">
 <a href="#logging_ftps_python" style="color: inherit; text-decoration: inherit;">logging_<wbr>ftps</a>
@@ -1539,8 +1381,7 @@ Defined below.
     </dt>
     <dd>{{% md %}}An FTP endpoint to send streaming logs to.
 Defined below.
-{{% /md %}}</dd>
-    <dt class="property-optional"
+{{% /md %}}</dd><dt class="property-optional"
             title="Optional">
         <span id="logging_googlepubsubs_python">
 <a href="#logging_googlepubsubs_python" style="color: inherit; text-decoration: inherit;">logging_<wbr>googlepubsubs</a>
@@ -1550,8 +1391,7 @@ Defined below.
     </dt>
     <dd>{{% md %}}A Google Cloud Pub/Sub endpoint to send streaming logs to.
 Defined below.
-{{% /md %}}</dd>
-    <dt class="property-optional"
+{{% /md %}}</dd><dt class="property-optional"
             title="Optional">
         <span id="logging_heroku_python">
 <a href="#logging_heroku_python" style="color: inherit; text-decoration: inherit;">logging_<wbr>heroku</a>
@@ -1561,8 +1401,7 @@ Defined below.
     </dt>
     <dd>{{% md %}}A Heroku endpoint to send streaming logs to.
 Defined below.
-{{% /md %}}</dd>
-    <dt class="property-optional"
+{{% /md %}}</dd><dt class="property-optional"
             title="Optional">
         <span id="logging_honeycombs_python">
 <a href="#logging_honeycombs_python" style="color: inherit; text-decoration: inherit;">logging_<wbr>honeycombs</a>
@@ -1572,8 +1411,7 @@ Defined below.
     </dt>
     <dd>{{% md %}}A Honeycomb endpoint to send streaming logs to.
 Defined below.
-{{% /md %}}</dd>
-    <dt class="property-optional"
+{{% /md %}}</dd><dt class="property-optional"
             title="Optional">
         <span id="logging_kafkas_python">
 <a href="#logging_kafkas_python" style="color: inherit; text-decoration: inherit;">logging_<wbr>kafkas</a>
@@ -1583,8 +1421,7 @@ Defined below.
     </dt>
     <dd>{{% md %}}A Kafka endpoint to send streaming logs to.
 Defined below.
-{{% /md %}}</dd>
-    <dt class="property-optional"
+{{% /md %}}</dd><dt class="property-optional"
             title="Optional">
         <span id="logging_kineses_python">
 <a href="#logging_kineses_python" style="color: inherit; text-decoration: inherit;">logging_<wbr>kineses</a>
@@ -1594,8 +1431,7 @@ Defined below.
     </dt>
     <dd>{{% md %}}A Kinesis endpoint to send streaming logs to.
 Defined below.
-{{% /md %}}</dd>
-    <dt class="property-optional"
+{{% /md %}}</dd><dt class="property-optional"
             title="Optional">
         <span id="logging_logglies_python">
 <a href="#logging_logglies_python" style="color: inherit; text-decoration: inherit;">logging_<wbr>logglies</a>
@@ -1605,8 +1441,7 @@ Defined below.
     </dt>
     <dd>{{% md %}}A Loggly endpoint to send streaming logs to.
 Defined below.
-{{% /md %}}</dd>
-    <dt class="property-optional"
+{{% /md %}}</dd><dt class="property-optional"
             title="Optional">
         <span id="logging_logshuttles_python">
 <a href="#logging_logshuttles_python" style="color: inherit; text-decoration: inherit;">logging_<wbr>logshuttles</a>
@@ -1616,8 +1451,7 @@ Defined below.
     </dt>
     <dd>{{% md %}}A Log Shuttle endpoint to send streaming logs to.
 Defined below.
-{{% /md %}}</dd>
-    <dt class="property-optional"
+{{% /md %}}</dd><dt class="property-optional"
             title="Optional">
         <span id="logging_newrelics_python">
 <a href="#logging_newrelics_python" style="color: inherit; text-decoration: inherit;">logging_<wbr>newrelics</a>
@@ -1627,8 +1461,7 @@ Defined below.
     </dt>
     <dd>{{% md %}}A New Relic endpoint to send streaming logs to.
 Defined below.
-{{% /md %}}</dd>
-    <dt class="property-optional"
+{{% /md %}}</dd><dt class="property-optional"
             title="Optional">
         <span id="logging_openstacks_python">
 <a href="#logging_openstacks_python" style="color: inherit; text-decoration: inherit;">logging_<wbr>openstacks</a>
@@ -1638,8 +1471,7 @@ Defined below.
     </dt>
     <dd>{{% md %}}An OpenStack endpoint to send streaming logs to.
 Defined below.
-{{% /md %}}</dd>
-    <dt class="property-optional"
+{{% /md %}}</dd><dt class="property-optional"
             title="Optional">
         <span id="logging_scalyrs_python">
 <a href="#logging_scalyrs_python" style="color: inherit; text-decoration: inherit;">logging_<wbr>scalyrs</a>
@@ -1649,8 +1481,7 @@ Defined below.
     </dt>
     <dd>{{% md %}}A Scalyr endpoint to send streaming logs to.
 Defined below.
-{{% /md %}}</dd>
-    <dt class="property-optional"
+{{% /md %}}</dd><dt class="property-optional"
             title="Optional">
         <span id="logging_sftps_python">
 <a href="#logging_sftps_python" style="color: inherit; text-decoration: inherit;">logging_<wbr>sftps</a>
@@ -1660,8 +1491,7 @@ Defined below.
     </dt>
     <dd>{{% md %}}An SFTP endpoint to send streaming logs to.
 Defined below.
-{{% /md %}}</dd>
-    <dt class="property-optional"
+{{% /md %}}</dd><dt class="property-optional"
             title="Optional">
         <span id="name_python">
 <a href="#name_python" style="color: inherit; text-decoration: inherit;">name</a>
@@ -1670,8 +1500,7 @@ Defined below.
         <span class="property-type">str</span>
     </dt>
     <dd>{{% md %}}The unique name of the Kinesis logging endpoint.
-{{% /md %}}</dd>
-    <dt class="property-optional"
+{{% /md %}}</dd><dt class="property-optional"
             title="Optional">
         <span id="papertrails_python">
 <a href="#papertrails_python" style="color: inherit; text-decoration: inherit;">papertrails</a>
@@ -1681,8 +1510,7 @@ Defined below.
     </dt>
     <dd>{{% md %}}A Papertrail endpoint to send streaming logs too.
 Defined below.
-{{% /md %}}</dd>
-    <dt class="property-optional"
+{{% /md %}}</dd><dt class="property-optional"
             title="Optional">
         <span id="s3loggings_python">
 <a href="#s3loggings_python" style="color: inherit; text-decoration: inherit;">s3loggings</a>
@@ -1692,8 +1520,7 @@ Defined below.
     </dt>
     <dd>{{% md %}}A set of S3 Buckets to send streaming logs too.
 Defined below.
-{{% /md %}}</dd>
-    <dt class="property-optional"
+{{% /md %}}</dd><dt class="property-optional"
             title="Optional">
         <span id="splunks_python">
 <a href="#splunks_python" style="color: inherit; text-decoration: inherit;">splunks</a>
@@ -1703,8 +1530,7 @@ Defined below.
     </dt>
     <dd>{{% md %}}A Splunk endpoint to send streaming logs too.
 Defined below.
-{{% /md %}}</dd>
-    <dt class="property-optional"
+{{% /md %}}</dd><dt class="property-optional"
             title="Optional">
         <span id="sumologics_python">
 <a href="#sumologics_python" style="color: inherit; text-decoration: inherit;">sumologics</a>
@@ -1714,8 +1540,7 @@ Defined below.
     </dt>
     <dd>{{% md %}}A Sumologic endpoint to send streaming logs too.
 Defined below.
-{{% /md %}}</dd>
-    <dt class="property-optional"
+{{% /md %}}</dd><dt class="property-optional"
             title="Optional">
         <span id="syslogs_python">
 <a href="#syslogs_python" style="color: inherit; text-decoration: inherit;">syslogs</a>
@@ -1725,8 +1550,7 @@ Defined below.
     </dt>
     <dd>{{% md %}}A syslog endpoint to send streaming logs too.
 Defined below.
-{{% /md %}}</dd>
-    <dt class="property-optional"
+{{% /md %}}</dd><dt class="property-optional"
             title="Optional">
         <span id="version_comment_python">
 <a href="#version_comment_python" style="color: inherit; text-decoration: inherit;">version_<wbr>comment</a>
@@ -1735,8 +1559,7 @@ Defined below.
         <span class="property-type">str</span>
     </dt>
     <dd>{{% md %}}Description field for the version.
-{{% /md %}}</dd>
-</dl>
+{{% /md %}}</dd></dl>
 {{% /choosable %}}
 
 
@@ -1747,9 +1570,7 @@ All [input](#inputs) properties are implicitly available as output properties. A
 
 
 {{% choosable language csharp %}}
-<dl class="resources-properties">
-
-    <dt class="property-"
+<dl class="resources-properties"><dt class="property-"
             title="">
         <span id="activeversion_csharp">
 <a href="#activeversion_csharp" style="color: inherit; text-decoration: inherit;">Active<wbr>Version</a>
@@ -1758,8 +1579,7 @@ All [input](#inputs) properties are implicitly available as output properties. A
         <span class="property-type">int</span>
     </dt>
     <dd>{{% md %}}The currently active version of your Fastly Service.
-{{% /md %}}</dd>
-    <dt class="property-"
+{{% /md %}}</dd><dt class="property-"
             title="">
         <span id="clonedversion_csharp">
 <a href="#clonedversion_csharp" style="color: inherit; text-decoration: inherit;">Cloned<wbr>Version</a>
@@ -1767,8 +1587,7 @@ All [input](#inputs) properties are implicitly available as output properties. A
         <span class="property-indicator"></span>
         <span class="property-type">int</span>
     </dt>
-    <dd>{{% md %}}{{% /md %}}</dd>
-    <dt class="property-"
+    <dd>{{% md %}}{{% /md %}}</dd><dt class="property-"
             title="">
         <span id="id_csharp">
 <a href="#id_csharp" style="color: inherit; text-decoration: inherit;">Id</a>
@@ -1776,14 +1595,11 @@ All [input](#inputs) properties are implicitly available as output properties. A
         <span class="property-indicator"></span>
         <span class="property-type">string</span>
     </dt>
-    <dd>{{% md %}}The provider-assigned unique ID for this managed resource.{{% /md %}}</dd>
-</dl>
+    <dd>{{% md %}}The provider-assigned unique ID for this managed resource.{{% /md %}}</dd></dl>
 {{% /choosable %}}
 
 {{% choosable language go %}}
-<dl class="resources-properties">
-
-    <dt class="property-"
+<dl class="resources-properties"><dt class="property-"
             title="">
         <span id="activeversion_go">
 <a href="#activeversion_go" style="color: inherit; text-decoration: inherit;">Active<wbr>Version</a>
@@ -1792,8 +1608,7 @@ All [input](#inputs) properties are implicitly available as output properties. A
         <span class="property-type">int</span>
     </dt>
     <dd>{{% md %}}The currently active version of your Fastly Service.
-{{% /md %}}</dd>
-    <dt class="property-"
+{{% /md %}}</dd><dt class="property-"
             title="">
         <span id="clonedversion_go">
 <a href="#clonedversion_go" style="color: inherit; text-decoration: inherit;">Cloned<wbr>Version</a>
@@ -1801,8 +1616,7 @@ All [input](#inputs) properties are implicitly available as output properties. A
         <span class="property-indicator"></span>
         <span class="property-type">int</span>
     </dt>
-    <dd>{{% md %}}{{% /md %}}</dd>
-    <dt class="property-"
+    <dd>{{% md %}}{{% /md %}}</dd><dt class="property-"
             title="">
         <span id="id_go">
 <a href="#id_go" style="color: inherit; text-decoration: inherit;">Id</a>
@@ -1810,14 +1624,11 @@ All [input](#inputs) properties are implicitly available as output properties. A
         <span class="property-indicator"></span>
         <span class="property-type">string</span>
     </dt>
-    <dd>{{% md %}}The provider-assigned unique ID for this managed resource.{{% /md %}}</dd>
-</dl>
+    <dd>{{% md %}}The provider-assigned unique ID for this managed resource.{{% /md %}}</dd></dl>
 {{% /choosable %}}
 
 {{% choosable language nodejs %}}
-<dl class="resources-properties">
-
-    <dt class="property-"
+<dl class="resources-properties"><dt class="property-"
             title="">
         <span id="activeversion_nodejs">
 <a href="#activeversion_nodejs" style="color: inherit; text-decoration: inherit;">active<wbr>Version</a>
@@ -1826,8 +1637,7 @@ All [input](#inputs) properties are implicitly available as output properties. A
         <span class="property-type">number</span>
     </dt>
     <dd>{{% md %}}The currently active version of your Fastly Service.
-{{% /md %}}</dd>
-    <dt class="property-"
+{{% /md %}}</dd><dt class="property-"
             title="">
         <span id="clonedversion_nodejs">
 <a href="#clonedversion_nodejs" style="color: inherit; text-decoration: inherit;">cloned<wbr>Version</a>
@@ -1835,8 +1645,7 @@ All [input](#inputs) properties are implicitly available as output properties. A
         <span class="property-indicator"></span>
         <span class="property-type">number</span>
     </dt>
-    <dd>{{% md %}}{{% /md %}}</dd>
-    <dt class="property-"
+    <dd>{{% md %}}{{% /md %}}</dd><dt class="property-"
             title="">
         <span id="id_nodejs">
 <a href="#id_nodejs" style="color: inherit; text-decoration: inherit;">id</a>
@@ -1844,14 +1653,11 @@ All [input](#inputs) properties are implicitly available as output properties. A
         <span class="property-indicator"></span>
         <span class="property-type">string</span>
     </dt>
-    <dd>{{% md %}}The provider-assigned unique ID for this managed resource.{{% /md %}}</dd>
-</dl>
+    <dd>{{% md %}}The provider-assigned unique ID for this managed resource.{{% /md %}}</dd></dl>
 {{% /choosable %}}
 
 {{% choosable language python %}}
-<dl class="resources-properties">
-
-    <dt class="property-"
+<dl class="resources-properties"><dt class="property-"
             title="">
         <span id="active_version_python">
 <a href="#active_version_python" style="color: inherit; text-decoration: inherit;">active_<wbr>version</a>
@@ -1860,8 +1666,7 @@ All [input](#inputs) properties are implicitly available as output properties. A
         <span class="property-type">int</span>
     </dt>
     <dd>{{% md %}}The currently active version of your Fastly Service.
-{{% /md %}}</dd>
-    <dt class="property-"
+{{% /md %}}</dd><dt class="property-"
             title="">
         <span id="cloned_version_python">
 <a href="#cloned_version_python" style="color: inherit; text-decoration: inherit;">cloned_<wbr>version</a>
@@ -1869,8 +1674,7 @@ All [input](#inputs) properties are implicitly available as output properties. A
         <span class="property-indicator"></span>
         <span class="property-type">int</span>
     </dt>
-    <dd>{{% md %}}{{% /md %}}</dd>
-    <dt class="property-"
+    <dd>{{% md %}}{{% /md %}}</dd><dt class="property-"
             title="">
         <span id="id_python">
 <a href="#id_python" style="color: inherit; text-decoration: inherit;">id</a>
@@ -1878,8 +1682,7 @@ All [input](#inputs) properties are implicitly available as output properties. A
         <span class="property-indicator"></span>
         <span class="property-type">str</span>
     </dt>
-    <dd>{{% md %}}The provider-assigned unique ID for this managed resource.{{% /md %}}</dd>
-</dl>
+    <dd>{{% md %}}The provider-assigned unique ID for this managed resource.{{% /md %}}</dd></dl>
 {{% /choosable %}}
 
 
@@ -2006,9 +1809,7 @@ The following state arguments are supported:
 
 
 {{% choosable language csharp %}}
-<dl class="resources-properties">
-
-    <dt class="property-optional"
+<dl class="resources-properties"><dt class="property-optional"
             title="Optional">
         <span id="state_activate_csharp">
 <a href="#state_activate_csharp" style="color: inherit; text-decoration: inherit;">Activate</a>
@@ -2017,8 +1818,7 @@ The following state arguments are supported:
         <span class="property-type">bool</span>
     </dt>
     <dd>{{% md %}}Conditionally prevents the Service from being activated. The apply step will continue to create a new draft version but will not activate it if this is set to false. Default true.
-{{% /md %}}</dd>
-    <dt class="property-optional"
+{{% /md %}}</dd><dt class="property-optional"
             title="Optional">
         <span id="state_activeversion_csharp">
 <a href="#state_activeversion_csharp" style="color: inherit; text-decoration: inherit;">Active<wbr>Version</a>
@@ -2027,8 +1827,7 @@ The following state arguments are supported:
         <span class="property-type">int</span>
     </dt>
     <dd>{{% md %}}The currently active version of your Fastly Service.
-{{% /md %}}</dd>
-    <dt class="property-optional"
+{{% /md %}}</dd><dt class="property-optional"
             title="Optional">
         <span id="state_backends_csharp">
 <a href="#state_backends_csharp" style="color: inherit; text-decoration: inherit;">Backends</a>
@@ -2039,8 +1838,7 @@ The following state arguments are supported:
     <dd>{{% md %}}A set of Backends to service requests from your Domains.
 Defined below. Backends must be defined in this argument, or defined in the
 `vcl` argument below
-{{% /md %}}</dd>
-    <dt class="property-optional"
+{{% /md %}}</dd><dt class="property-optional"
             title="Optional">
         <span id="state_bigqueryloggings_csharp">
 <a href="#state_bigqueryloggings_csharp" style="color: inherit; text-decoration: inherit;">Bigqueryloggings</a>
@@ -2050,8 +1848,7 @@ Defined below. Backends must be defined in this argument, or defined in the
     </dt>
     <dd>{{% md %}}A BigQuery endpoint to send streaming logs too.
 Defined below.
-{{% /md %}}</dd>
-    <dt class="property-optional"
+{{% /md %}}</dd><dt class="property-optional"
             title="Optional">
         <span id="state_blobstorageloggings_csharp">
 <a href="#state_blobstorageloggings_csharp" style="color: inherit; text-decoration: inherit;">Blobstorageloggings</a>
@@ -2061,8 +1858,7 @@ Defined below.
     </dt>
     <dd>{{% md %}}An Azure Blob Storage endpoint to send streaming logs too.
 Defined below.
-{{% /md %}}</dd>
-    <dt class="property-optional"
+{{% /md %}}</dd><dt class="property-optional"
             title="Optional">
         <span id="state_clonedversion_csharp">
 <a href="#state_clonedversion_csharp" style="color: inherit; text-decoration: inherit;">Cloned<wbr>Version</a>
@@ -2070,8 +1866,7 @@ Defined below.
         <span class="property-indicator"></span>
         <span class="property-type">int</span>
     </dt>
-    <dd>{{% md %}}{{% /md %}}</dd>
-    <dt class="property-optional"
+    <dd>{{% md %}}{{% /md %}}</dd><dt class="property-optional"
             title="Optional">
         <span id="state_comment_csharp">
 <a href="#state_comment_csharp" style="color: inherit; text-decoration: inherit;">Comment</a>
@@ -2080,8 +1875,7 @@ Defined below.
         <span class="property-type">string</span>
     </dt>
     <dd>{{% md %}}An optional comment about the Domain.
-{{% /md %}}</dd>
-    <dt class="property-optional"
+{{% /md %}}</dd><dt class="property-optional"
             title="Optional">
         <span id="state_domains_csharp">
 <a href="#state_domains_csharp" style="color: inherit; text-decoration: inherit;">Domains</a>
@@ -2090,8 +1884,7 @@ Defined below.
         <span class="property-type"><a href="#servicecomputedomain">List&lt;Service<wbr>Compute<wbr>Domain<wbr>Args&gt;</a></span>
     </dt>
     <dd>{{% md %}}The domain of the DigitalOcean Spaces endpoint (default "nyc3.digitaloceanspaces.com").
-{{% /md %}}</dd>
-    <dt class="property-optional"
+{{% /md %}}</dd><dt class="property-optional"
             title="Optional">
         <span id="state_forcedestroy_csharp">
 <a href="#state_forcedestroy_csharp" style="color: inherit; text-decoration: inherit;">Force<wbr>Destroy</a>
@@ -2101,8 +1894,7 @@ Defined below.
     </dt>
     <dd>{{% md %}}Services that are active cannot be destroyed. In
 order to destroy the Service, set `force_destroy` to `true`. Default `false`.
-{{% /md %}}</dd>
-    <dt class="property-optional"
+{{% /md %}}</dd><dt class="property-optional"
             title="Optional">
         <span id="state_gcsloggings_csharp">
 <a href="#state_gcsloggings_csharp" style="color: inherit; text-decoration: inherit;">Gcsloggings</a>
@@ -2112,8 +1904,7 @@ order to destroy the Service, set `force_destroy` to `true`. Default `false`.
     </dt>
     <dd>{{% md %}}A gcs endpoint to send streaming logs too.
 Defined below.
-{{% /md %}}</dd>
-    <dt class="property-optional"
+{{% /md %}}</dd><dt class="property-optional"
             title="Optional">
         <span id="state_healthchecks_csharp">
 <a href="#state_healthchecks_csharp" style="color: inherit; text-decoration: inherit;">Healthchecks</a>
@@ -2122,8 +1913,7 @@ Defined below.
         <span class="property-type"><a href="#servicecomputehealthcheck">List&lt;Service<wbr>Compute<wbr>Healthcheck<wbr>Args&gt;</a></span>
     </dt>
     <dd>{{% md %}}Name of a defined `healthcheck` to assign to this backend.
-{{% /md %}}</dd>
-    <dt class="property-optional"
+{{% /md %}}</dd><dt class="property-optional"
             title="Optional">
         <span id="state_httpsloggings_csharp">
 <a href="#state_httpsloggings_csharp" style="color: inherit; text-decoration: inherit;">Httpsloggings</a>
@@ -2133,8 +1923,7 @@ Defined below.
     </dt>
     <dd>{{% md %}}An HTTPS endpoint to send streaming logs to.
 Defined below.
-{{% /md %}}</dd>
-    <dt class="property-optional"
+{{% /md %}}</dd><dt class="property-optional"
             title="Optional">
         <span id="state_logentries_csharp">
 <a href="#state_logentries_csharp" style="color: inherit; text-decoration: inherit;">Logentries</a>
@@ -2144,8 +1933,7 @@ Defined below.
     </dt>
     <dd>{{% md %}}A logentries endpoint to send streaming logs too.
 Defined below.
-{{% /md %}}</dd>
-    <dt class="property-optional"
+{{% /md %}}</dd><dt class="property-optional"
             title="Optional">
         <span id="state_loggingcloudfiles_csharp">
 <a href="#state_loggingcloudfiles_csharp" style="color: inherit; text-decoration: inherit;">Logging<wbr>Cloudfiles</a>
@@ -2155,8 +1943,7 @@ Defined below.
     </dt>
     <dd>{{% md %}}A Rackspace Cloud Files endpoint to send streaming logs to.
 Defined below.
-{{% /md %}}</dd>
-    <dt class="property-optional"
+{{% /md %}}</dd><dt class="property-optional"
             title="Optional">
         <span id="state_loggingdatadogs_csharp">
 <a href="#state_loggingdatadogs_csharp" style="color: inherit; text-decoration: inherit;">Logging<wbr>Datadogs</a>
@@ -2166,8 +1953,7 @@ Defined below.
     </dt>
     <dd>{{% md %}}A Datadog endpoint to send streaming logs to.
 Defined below.
-{{% /md %}}</dd>
-    <dt class="property-optional"
+{{% /md %}}</dd><dt class="property-optional"
             title="Optional">
         <span id="state_loggingdigitaloceans_csharp">
 <a href="#state_loggingdigitaloceans_csharp" style="color: inherit; text-decoration: inherit;">Logging<wbr>Digitaloceans</a>
@@ -2177,8 +1963,7 @@ Defined below.
     </dt>
     <dd>{{% md %}}A DigitalOcean Spaces endpoint to send streaming logs to.
 Defined below.
-{{% /md %}}</dd>
-    <dt class="property-optional"
+{{% /md %}}</dd><dt class="property-optional"
             title="Optional">
         <span id="state_loggingelasticsearches_csharp">
 <a href="#state_loggingelasticsearches_csharp" style="color: inherit; text-decoration: inherit;">Logging<wbr>Elasticsearches</a>
@@ -2188,8 +1973,7 @@ Defined below.
     </dt>
     <dd>{{% md %}}An Elasticsearch endpoint to send streaming logs to.
 Defined below.
-{{% /md %}}</dd>
-    <dt class="property-optional"
+{{% /md %}}</dd><dt class="property-optional"
             title="Optional">
         <span id="state_loggingftps_csharp">
 <a href="#state_loggingftps_csharp" style="color: inherit; text-decoration: inherit;">Logging<wbr>Ftps</a>
@@ -2199,8 +1983,7 @@ Defined below.
     </dt>
     <dd>{{% md %}}An FTP endpoint to send streaming logs to.
 Defined below.
-{{% /md %}}</dd>
-    <dt class="property-optional"
+{{% /md %}}</dd><dt class="property-optional"
             title="Optional">
         <span id="state_logginggooglepubsubs_csharp">
 <a href="#state_logginggooglepubsubs_csharp" style="color: inherit; text-decoration: inherit;">Logging<wbr>Googlepubsubs</a>
@@ -2210,8 +1993,7 @@ Defined below.
     </dt>
     <dd>{{% md %}}A Google Cloud Pub/Sub endpoint to send streaming logs to.
 Defined below.
-{{% /md %}}</dd>
-    <dt class="property-optional"
+{{% /md %}}</dd><dt class="property-optional"
             title="Optional">
         <span id="state_loggingheroku_csharp">
 <a href="#state_loggingheroku_csharp" style="color: inherit; text-decoration: inherit;">Logging<wbr>Heroku</a>
@@ -2221,8 +2003,7 @@ Defined below.
     </dt>
     <dd>{{% md %}}A Heroku endpoint to send streaming logs to.
 Defined below.
-{{% /md %}}</dd>
-    <dt class="property-optional"
+{{% /md %}}</dd><dt class="property-optional"
             title="Optional">
         <span id="state_logginghoneycombs_csharp">
 <a href="#state_logginghoneycombs_csharp" style="color: inherit; text-decoration: inherit;">Logging<wbr>Honeycombs</a>
@@ -2232,8 +2013,7 @@ Defined below.
     </dt>
     <dd>{{% md %}}A Honeycomb endpoint to send streaming logs to.
 Defined below.
-{{% /md %}}</dd>
-    <dt class="property-optional"
+{{% /md %}}</dd><dt class="property-optional"
             title="Optional">
         <span id="state_loggingkafkas_csharp">
 <a href="#state_loggingkafkas_csharp" style="color: inherit; text-decoration: inherit;">Logging<wbr>Kafkas</a>
@@ -2243,8 +2023,7 @@ Defined below.
     </dt>
     <dd>{{% md %}}A Kafka endpoint to send streaming logs to.
 Defined below.
-{{% /md %}}</dd>
-    <dt class="property-optional"
+{{% /md %}}</dd><dt class="property-optional"
             title="Optional">
         <span id="state_loggingkineses_csharp">
 <a href="#state_loggingkineses_csharp" style="color: inherit; text-decoration: inherit;">Logging<wbr>Kineses</a>
@@ -2254,8 +2033,7 @@ Defined below.
     </dt>
     <dd>{{% md %}}A Kinesis endpoint to send streaming logs to.
 Defined below.
-{{% /md %}}</dd>
-    <dt class="property-optional"
+{{% /md %}}</dd><dt class="property-optional"
             title="Optional">
         <span id="state_logginglogglies_csharp">
 <a href="#state_logginglogglies_csharp" style="color: inherit; text-decoration: inherit;">Logging<wbr>Logglies</a>
@@ -2265,8 +2043,7 @@ Defined below.
     </dt>
     <dd>{{% md %}}A Loggly endpoint to send streaming logs to.
 Defined below.
-{{% /md %}}</dd>
-    <dt class="property-optional"
+{{% /md %}}</dd><dt class="property-optional"
             title="Optional">
         <span id="state_logginglogshuttles_csharp">
 <a href="#state_logginglogshuttles_csharp" style="color: inherit; text-decoration: inherit;">Logging<wbr>Logshuttles</a>
@@ -2276,8 +2053,7 @@ Defined below.
     </dt>
     <dd>{{% md %}}A Log Shuttle endpoint to send streaming logs to.
 Defined below.
-{{% /md %}}</dd>
-    <dt class="property-optional"
+{{% /md %}}</dd><dt class="property-optional"
             title="Optional">
         <span id="state_loggingnewrelics_csharp">
 <a href="#state_loggingnewrelics_csharp" style="color: inherit; text-decoration: inherit;">Logging<wbr>Newrelics</a>
@@ -2287,8 +2063,7 @@ Defined below.
     </dt>
     <dd>{{% md %}}A New Relic endpoint to send streaming logs to.
 Defined below.
-{{% /md %}}</dd>
-    <dt class="property-optional"
+{{% /md %}}</dd><dt class="property-optional"
             title="Optional">
         <span id="state_loggingopenstacks_csharp">
 <a href="#state_loggingopenstacks_csharp" style="color: inherit; text-decoration: inherit;">Logging<wbr>Openstacks</a>
@@ -2298,8 +2073,7 @@ Defined below.
     </dt>
     <dd>{{% md %}}An OpenStack endpoint to send streaming logs to.
 Defined below.
-{{% /md %}}</dd>
-    <dt class="property-optional"
+{{% /md %}}</dd><dt class="property-optional"
             title="Optional">
         <span id="state_loggingscalyrs_csharp">
 <a href="#state_loggingscalyrs_csharp" style="color: inherit; text-decoration: inherit;">Logging<wbr>Scalyrs</a>
@@ -2309,8 +2083,7 @@ Defined below.
     </dt>
     <dd>{{% md %}}A Scalyr endpoint to send streaming logs to.
 Defined below.
-{{% /md %}}</dd>
-    <dt class="property-optional"
+{{% /md %}}</dd><dt class="property-optional"
             title="Optional">
         <span id="state_loggingsftps_csharp">
 <a href="#state_loggingsftps_csharp" style="color: inherit; text-decoration: inherit;">Logging<wbr>Sftps</a>
@@ -2320,8 +2093,7 @@ Defined below.
     </dt>
     <dd>{{% md %}}An SFTP endpoint to send streaming logs to.
 Defined below.
-{{% /md %}}</dd>
-    <dt class="property-optional"
+{{% /md %}}</dd><dt class="property-optional"
             title="Optional">
         <span id="state_name_csharp">
 <a href="#state_name_csharp" style="color: inherit; text-decoration: inherit;">Name</a>
@@ -2330,8 +2102,7 @@ Defined below.
         <span class="property-type">string</span>
     </dt>
     <dd>{{% md %}}The unique name of the Kinesis logging endpoint.
-{{% /md %}}</dd>
-    <dt class="property-optional"
+{{% /md %}}</dd><dt class="property-optional"
             title="Optional">
         <span id="state_package_csharp">
 <a href="#state_package_csharp" style="color: inherit; text-decoration: inherit;">Package</a>
@@ -2341,8 +2112,7 @@ Defined below.
     </dt>
     <dd>{{% md %}}A Wasm deployment package to upload.
 Defined below.
-{{% /md %}}</dd>
-    <dt class="property-optional"
+{{% /md %}}</dd><dt class="property-optional"
             title="Optional">
         <span id="state_papertrails_csharp">
 <a href="#state_papertrails_csharp" style="color: inherit; text-decoration: inherit;">Papertrails</a>
@@ -2352,8 +2122,7 @@ Defined below.
     </dt>
     <dd>{{% md %}}A Papertrail endpoint to send streaming logs too.
 Defined below.
-{{% /md %}}</dd>
-    <dt class="property-optional"
+{{% /md %}}</dd><dt class="property-optional"
             title="Optional">
         <span id="state_s3loggings_csharp">
 <a href="#state_s3loggings_csharp" style="color: inherit; text-decoration: inherit;">S3loggings</a>
@@ -2363,8 +2132,7 @@ Defined below.
     </dt>
     <dd>{{% md %}}A set of S3 Buckets to send streaming logs too.
 Defined below.
-{{% /md %}}</dd>
-    <dt class="property-optional"
+{{% /md %}}</dd><dt class="property-optional"
             title="Optional">
         <span id="state_splunks_csharp">
 <a href="#state_splunks_csharp" style="color: inherit; text-decoration: inherit;">Splunks</a>
@@ -2374,8 +2142,7 @@ Defined below.
     </dt>
     <dd>{{% md %}}A Splunk endpoint to send streaming logs too.
 Defined below.
-{{% /md %}}</dd>
-    <dt class="property-optional"
+{{% /md %}}</dd><dt class="property-optional"
             title="Optional">
         <span id="state_sumologics_csharp">
 <a href="#state_sumologics_csharp" style="color: inherit; text-decoration: inherit;">Sumologics</a>
@@ -2385,8 +2152,7 @@ Defined below.
     </dt>
     <dd>{{% md %}}A Sumologic endpoint to send streaming logs too.
 Defined below.
-{{% /md %}}</dd>
-    <dt class="property-optional"
+{{% /md %}}</dd><dt class="property-optional"
             title="Optional">
         <span id="state_syslogs_csharp">
 <a href="#state_syslogs_csharp" style="color: inherit; text-decoration: inherit;">Syslogs</a>
@@ -2396,8 +2162,7 @@ Defined below.
     </dt>
     <dd>{{% md %}}A syslog endpoint to send streaming logs too.
 Defined below.
-{{% /md %}}</dd>
-    <dt class="property-optional"
+{{% /md %}}</dd><dt class="property-optional"
             title="Optional">
         <span id="state_versioncomment_csharp">
 <a href="#state_versioncomment_csharp" style="color: inherit; text-decoration: inherit;">Version<wbr>Comment</a>
@@ -2406,14 +2171,11 @@ Defined below.
         <span class="property-type">string</span>
     </dt>
     <dd>{{% md %}}Description field for the version.
-{{% /md %}}</dd>
-</dl>
+{{% /md %}}</dd></dl>
 {{% /choosable %}}
 
 {{% choosable language go %}}
-<dl class="resources-properties">
-
-    <dt class="property-optional"
+<dl class="resources-properties"><dt class="property-optional"
             title="Optional">
         <span id="state_activate_go">
 <a href="#state_activate_go" style="color: inherit; text-decoration: inherit;">Activate</a>
@@ -2422,8 +2184,7 @@ Defined below.
         <span class="property-type">bool</span>
     </dt>
     <dd>{{% md %}}Conditionally prevents the Service from being activated. The apply step will continue to create a new draft version but will not activate it if this is set to false. Default true.
-{{% /md %}}</dd>
-    <dt class="property-optional"
+{{% /md %}}</dd><dt class="property-optional"
             title="Optional">
         <span id="state_activeversion_go">
 <a href="#state_activeversion_go" style="color: inherit; text-decoration: inherit;">Active<wbr>Version</a>
@@ -2432,8 +2193,7 @@ Defined below.
         <span class="property-type">int</span>
     </dt>
     <dd>{{% md %}}The currently active version of your Fastly Service.
-{{% /md %}}</dd>
-    <dt class="property-optional"
+{{% /md %}}</dd><dt class="property-optional"
             title="Optional">
         <span id="state_backends_go">
 <a href="#state_backends_go" style="color: inherit; text-decoration: inherit;">Backends</a>
@@ -2444,8 +2204,7 @@ Defined below.
     <dd>{{% md %}}A set of Backends to service requests from your Domains.
 Defined below. Backends must be defined in this argument, or defined in the
 `vcl` argument below
-{{% /md %}}</dd>
-    <dt class="property-optional"
+{{% /md %}}</dd><dt class="property-optional"
             title="Optional">
         <span id="state_bigqueryloggings_go">
 <a href="#state_bigqueryloggings_go" style="color: inherit; text-decoration: inherit;">Bigqueryloggings</a>
@@ -2455,8 +2214,7 @@ Defined below. Backends must be defined in this argument, or defined in the
     </dt>
     <dd>{{% md %}}A BigQuery endpoint to send streaming logs too.
 Defined below.
-{{% /md %}}</dd>
-    <dt class="property-optional"
+{{% /md %}}</dd><dt class="property-optional"
             title="Optional">
         <span id="state_blobstorageloggings_go">
 <a href="#state_blobstorageloggings_go" style="color: inherit; text-decoration: inherit;">Blobstorageloggings</a>
@@ -2466,8 +2224,7 @@ Defined below.
     </dt>
     <dd>{{% md %}}An Azure Blob Storage endpoint to send streaming logs too.
 Defined below.
-{{% /md %}}</dd>
-    <dt class="property-optional"
+{{% /md %}}</dd><dt class="property-optional"
             title="Optional">
         <span id="state_clonedversion_go">
 <a href="#state_clonedversion_go" style="color: inherit; text-decoration: inherit;">Cloned<wbr>Version</a>
@@ -2475,8 +2232,7 @@ Defined below.
         <span class="property-indicator"></span>
         <span class="property-type">int</span>
     </dt>
-    <dd>{{% md %}}{{% /md %}}</dd>
-    <dt class="property-optional"
+    <dd>{{% md %}}{{% /md %}}</dd><dt class="property-optional"
             title="Optional">
         <span id="state_comment_go">
 <a href="#state_comment_go" style="color: inherit; text-decoration: inherit;">Comment</a>
@@ -2485,8 +2241,7 @@ Defined below.
         <span class="property-type">string</span>
     </dt>
     <dd>{{% md %}}An optional comment about the Domain.
-{{% /md %}}</dd>
-    <dt class="property-optional"
+{{% /md %}}</dd><dt class="property-optional"
             title="Optional">
         <span id="state_domains_go">
 <a href="#state_domains_go" style="color: inherit; text-decoration: inherit;">Domains</a>
@@ -2495,8 +2250,7 @@ Defined below.
         <span class="property-type"><a href="#servicecomputedomain">[]Service<wbr>Compute<wbr>Domain</a></span>
     </dt>
     <dd>{{% md %}}The domain of the DigitalOcean Spaces endpoint (default "nyc3.digitaloceanspaces.com").
-{{% /md %}}</dd>
-    <dt class="property-optional"
+{{% /md %}}</dd><dt class="property-optional"
             title="Optional">
         <span id="state_forcedestroy_go">
 <a href="#state_forcedestroy_go" style="color: inherit; text-decoration: inherit;">Force<wbr>Destroy</a>
@@ -2506,8 +2260,7 @@ Defined below.
     </dt>
     <dd>{{% md %}}Services that are active cannot be destroyed. In
 order to destroy the Service, set `force_destroy` to `true`. Default `false`.
-{{% /md %}}</dd>
-    <dt class="property-optional"
+{{% /md %}}</dd><dt class="property-optional"
             title="Optional">
         <span id="state_gcsloggings_go">
 <a href="#state_gcsloggings_go" style="color: inherit; text-decoration: inherit;">Gcsloggings</a>
@@ -2517,8 +2270,7 @@ order to destroy the Service, set `force_destroy` to `true`. Default `false`.
     </dt>
     <dd>{{% md %}}A gcs endpoint to send streaming logs too.
 Defined below.
-{{% /md %}}</dd>
-    <dt class="property-optional"
+{{% /md %}}</dd><dt class="property-optional"
             title="Optional">
         <span id="state_healthchecks_go">
 <a href="#state_healthchecks_go" style="color: inherit; text-decoration: inherit;">Healthchecks</a>
@@ -2527,8 +2279,7 @@ Defined below.
         <span class="property-type"><a href="#servicecomputehealthcheck">[]Service<wbr>Compute<wbr>Healthcheck</a></span>
     </dt>
     <dd>{{% md %}}Name of a defined `healthcheck` to assign to this backend.
-{{% /md %}}</dd>
-    <dt class="property-optional"
+{{% /md %}}</dd><dt class="property-optional"
             title="Optional">
         <span id="state_httpsloggings_go">
 <a href="#state_httpsloggings_go" style="color: inherit; text-decoration: inherit;">Httpsloggings</a>
@@ -2538,8 +2289,7 @@ Defined below.
     </dt>
     <dd>{{% md %}}An HTTPS endpoint to send streaming logs to.
 Defined below.
-{{% /md %}}</dd>
-    <dt class="property-optional"
+{{% /md %}}</dd><dt class="property-optional"
             title="Optional">
         <span id="state_logentries_go">
 <a href="#state_logentries_go" style="color: inherit; text-decoration: inherit;">Logentries</a>
@@ -2549,8 +2299,7 @@ Defined below.
     </dt>
     <dd>{{% md %}}A logentries endpoint to send streaming logs too.
 Defined below.
-{{% /md %}}</dd>
-    <dt class="property-optional"
+{{% /md %}}</dd><dt class="property-optional"
             title="Optional">
         <span id="state_loggingcloudfiles_go">
 <a href="#state_loggingcloudfiles_go" style="color: inherit; text-decoration: inherit;">Logging<wbr>Cloudfiles</a>
@@ -2560,8 +2309,7 @@ Defined below.
     </dt>
     <dd>{{% md %}}A Rackspace Cloud Files endpoint to send streaming logs to.
 Defined below.
-{{% /md %}}</dd>
-    <dt class="property-optional"
+{{% /md %}}</dd><dt class="property-optional"
             title="Optional">
         <span id="state_loggingdatadogs_go">
 <a href="#state_loggingdatadogs_go" style="color: inherit; text-decoration: inherit;">Logging<wbr>Datadogs</a>
@@ -2571,8 +2319,7 @@ Defined below.
     </dt>
     <dd>{{% md %}}A Datadog endpoint to send streaming logs to.
 Defined below.
-{{% /md %}}</dd>
-    <dt class="property-optional"
+{{% /md %}}</dd><dt class="property-optional"
             title="Optional">
         <span id="state_loggingdigitaloceans_go">
 <a href="#state_loggingdigitaloceans_go" style="color: inherit; text-decoration: inherit;">Logging<wbr>Digitaloceans</a>
@@ -2582,8 +2329,7 @@ Defined below.
     </dt>
     <dd>{{% md %}}A DigitalOcean Spaces endpoint to send streaming logs to.
 Defined below.
-{{% /md %}}</dd>
-    <dt class="property-optional"
+{{% /md %}}</dd><dt class="property-optional"
             title="Optional">
         <span id="state_loggingelasticsearches_go">
 <a href="#state_loggingelasticsearches_go" style="color: inherit; text-decoration: inherit;">Logging<wbr>Elasticsearches</a>
@@ -2593,8 +2339,7 @@ Defined below.
     </dt>
     <dd>{{% md %}}An Elasticsearch endpoint to send streaming logs to.
 Defined below.
-{{% /md %}}</dd>
-    <dt class="property-optional"
+{{% /md %}}</dd><dt class="property-optional"
             title="Optional">
         <span id="state_loggingftps_go">
 <a href="#state_loggingftps_go" style="color: inherit; text-decoration: inherit;">Logging<wbr>Ftps</a>
@@ -2604,8 +2349,7 @@ Defined below.
     </dt>
     <dd>{{% md %}}An FTP endpoint to send streaming logs to.
 Defined below.
-{{% /md %}}</dd>
-    <dt class="property-optional"
+{{% /md %}}</dd><dt class="property-optional"
             title="Optional">
         <span id="state_logginggooglepubsubs_go">
 <a href="#state_logginggooglepubsubs_go" style="color: inherit; text-decoration: inherit;">Logging<wbr>Googlepubsubs</a>
@@ -2615,8 +2359,7 @@ Defined below.
     </dt>
     <dd>{{% md %}}A Google Cloud Pub/Sub endpoint to send streaming logs to.
 Defined below.
-{{% /md %}}</dd>
-    <dt class="property-optional"
+{{% /md %}}</dd><dt class="property-optional"
             title="Optional">
         <span id="state_loggingheroku_go">
 <a href="#state_loggingheroku_go" style="color: inherit; text-decoration: inherit;">Logging<wbr>Heroku</a>
@@ -2626,8 +2369,7 @@ Defined below.
     </dt>
     <dd>{{% md %}}A Heroku endpoint to send streaming logs to.
 Defined below.
-{{% /md %}}</dd>
-    <dt class="property-optional"
+{{% /md %}}</dd><dt class="property-optional"
             title="Optional">
         <span id="state_logginghoneycombs_go">
 <a href="#state_logginghoneycombs_go" style="color: inherit; text-decoration: inherit;">Logging<wbr>Honeycombs</a>
@@ -2637,8 +2379,7 @@ Defined below.
     </dt>
     <dd>{{% md %}}A Honeycomb endpoint to send streaming logs to.
 Defined below.
-{{% /md %}}</dd>
-    <dt class="property-optional"
+{{% /md %}}</dd><dt class="property-optional"
             title="Optional">
         <span id="state_loggingkafkas_go">
 <a href="#state_loggingkafkas_go" style="color: inherit; text-decoration: inherit;">Logging<wbr>Kafkas</a>
@@ -2648,8 +2389,7 @@ Defined below.
     </dt>
     <dd>{{% md %}}A Kafka endpoint to send streaming logs to.
 Defined below.
-{{% /md %}}</dd>
-    <dt class="property-optional"
+{{% /md %}}</dd><dt class="property-optional"
             title="Optional">
         <span id="state_loggingkineses_go">
 <a href="#state_loggingkineses_go" style="color: inherit; text-decoration: inherit;">Logging<wbr>Kineses</a>
@@ -2659,8 +2399,7 @@ Defined below.
     </dt>
     <dd>{{% md %}}A Kinesis endpoint to send streaming logs to.
 Defined below.
-{{% /md %}}</dd>
-    <dt class="property-optional"
+{{% /md %}}</dd><dt class="property-optional"
             title="Optional">
         <span id="state_logginglogglies_go">
 <a href="#state_logginglogglies_go" style="color: inherit; text-decoration: inherit;">Logging<wbr>Logglies</a>
@@ -2670,8 +2409,7 @@ Defined below.
     </dt>
     <dd>{{% md %}}A Loggly endpoint to send streaming logs to.
 Defined below.
-{{% /md %}}</dd>
-    <dt class="property-optional"
+{{% /md %}}</dd><dt class="property-optional"
             title="Optional">
         <span id="state_logginglogshuttles_go">
 <a href="#state_logginglogshuttles_go" style="color: inherit; text-decoration: inherit;">Logging<wbr>Logshuttles</a>
@@ -2681,8 +2419,7 @@ Defined below.
     </dt>
     <dd>{{% md %}}A Log Shuttle endpoint to send streaming logs to.
 Defined below.
-{{% /md %}}</dd>
-    <dt class="property-optional"
+{{% /md %}}</dd><dt class="property-optional"
             title="Optional">
         <span id="state_loggingnewrelics_go">
 <a href="#state_loggingnewrelics_go" style="color: inherit; text-decoration: inherit;">Logging<wbr>Newrelics</a>
@@ -2692,8 +2429,7 @@ Defined below.
     </dt>
     <dd>{{% md %}}A New Relic endpoint to send streaming logs to.
 Defined below.
-{{% /md %}}</dd>
-    <dt class="property-optional"
+{{% /md %}}</dd><dt class="property-optional"
             title="Optional">
         <span id="state_loggingopenstacks_go">
 <a href="#state_loggingopenstacks_go" style="color: inherit; text-decoration: inherit;">Logging<wbr>Openstacks</a>
@@ -2703,8 +2439,7 @@ Defined below.
     </dt>
     <dd>{{% md %}}An OpenStack endpoint to send streaming logs to.
 Defined below.
-{{% /md %}}</dd>
-    <dt class="property-optional"
+{{% /md %}}</dd><dt class="property-optional"
             title="Optional">
         <span id="state_loggingscalyrs_go">
 <a href="#state_loggingscalyrs_go" style="color: inherit; text-decoration: inherit;">Logging<wbr>Scalyrs</a>
@@ -2714,8 +2449,7 @@ Defined below.
     </dt>
     <dd>{{% md %}}A Scalyr endpoint to send streaming logs to.
 Defined below.
-{{% /md %}}</dd>
-    <dt class="property-optional"
+{{% /md %}}</dd><dt class="property-optional"
             title="Optional">
         <span id="state_loggingsftps_go">
 <a href="#state_loggingsftps_go" style="color: inherit; text-decoration: inherit;">Logging<wbr>Sftps</a>
@@ -2725,8 +2459,7 @@ Defined below.
     </dt>
     <dd>{{% md %}}An SFTP endpoint to send streaming logs to.
 Defined below.
-{{% /md %}}</dd>
-    <dt class="property-optional"
+{{% /md %}}</dd><dt class="property-optional"
             title="Optional">
         <span id="state_name_go">
 <a href="#state_name_go" style="color: inherit; text-decoration: inherit;">Name</a>
@@ -2735,8 +2468,7 @@ Defined below.
         <span class="property-type">string</span>
     </dt>
     <dd>{{% md %}}The unique name of the Kinesis logging endpoint.
-{{% /md %}}</dd>
-    <dt class="property-optional"
+{{% /md %}}</dd><dt class="property-optional"
             title="Optional">
         <span id="state_package_go">
 <a href="#state_package_go" style="color: inherit; text-decoration: inherit;">Package</a>
@@ -2746,8 +2478,7 @@ Defined below.
     </dt>
     <dd>{{% md %}}A Wasm deployment package to upload.
 Defined below.
-{{% /md %}}</dd>
-    <dt class="property-optional"
+{{% /md %}}</dd><dt class="property-optional"
             title="Optional">
         <span id="state_papertrails_go">
 <a href="#state_papertrails_go" style="color: inherit; text-decoration: inherit;">Papertrails</a>
@@ -2757,8 +2488,7 @@ Defined below.
     </dt>
     <dd>{{% md %}}A Papertrail endpoint to send streaming logs too.
 Defined below.
-{{% /md %}}</dd>
-    <dt class="property-optional"
+{{% /md %}}</dd><dt class="property-optional"
             title="Optional">
         <span id="state_s3loggings_go">
 <a href="#state_s3loggings_go" style="color: inherit; text-decoration: inherit;">S3loggings</a>
@@ -2768,8 +2498,7 @@ Defined below.
     </dt>
     <dd>{{% md %}}A set of S3 Buckets to send streaming logs too.
 Defined below.
-{{% /md %}}</dd>
-    <dt class="property-optional"
+{{% /md %}}</dd><dt class="property-optional"
             title="Optional">
         <span id="state_splunks_go">
 <a href="#state_splunks_go" style="color: inherit; text-decoration: inherit;">Splunks</a>
@@ -2779,8 +2508,7 @@ Defined below.
     </dt>
     <dd>{{% md %}}A Splunk endpoint to send streaming logs too.
 Defined below.
-{{% /md %}}</dd>
-    <dt class="property-optional"
+{{% /md %}}</dd><dt class="property-optional"
             title="Optional">
         <span id="state_sumologics_go">
 <a href="#state_sumologics_go" style="color: inherit; text-decoration: inherit;">Sumologics</a>
@@ -2790,8 +2518,7 @@ Defined below.
     </dt>
     <dd>{{% md %}}A Sumologic endpoint to send streaming logs too.
 Defined below.
-{{% /md %}}</dd>
-    <dt class="property-optional"
+{{% /md %}}</dd><dt class="property-optional"
             title="Optional">
         <span id="state_syslogs_go">
 <a href="#state_syslogs_go" style="color: inherit; text-decoration: inherit;">Syslogs</a>
@@ -2801,8 +2528,7 @@ Defined below.
     </dt>
     <dd>{{% md %}}A syslog endpoint to send streaming logs too.
 Defined below.
-{{% /md %}}</dd>
-    <dt class="property-optional"
+{{% /md %}}</dd><dt class="property-optional"
             title="Optional">
         <span id="state_versioncomment_go">
 <a href="#state_versioncomment_go" style="color: inherit; text-decoration: inherit;">Version<wbr>Comment</a>
@@ -2811,14 +2537,11 @@ Defined below.
         <span class="property-type">string</span>
     </dt>
     <dd>{{% md %}}Description field for the version.
-{{% /md %}}</dd>
-</dl>
+{{% /md %}}</dd></dl>
 {{% /choosable %}}
 
 {{% choosable language nodejs %}}
-<dl class="resources-properties">
-
-    <dt class="property-optional"
+<dl class="resources-properties"><dt class="property-optional"
             title="Optional">
         <span id="state_activate_nodejs">
 <a href="#state_activate_nodejs" style="color: inherit; text-decoration: inherit;">activate</a>
@@ -2827,8 +2550,7 @@ Defined below.
         <span class="property-type">boolean</span>
     </dt>
     <dd>{{% md %}}Conditionally prevents the Service from being activated. The apply step will continue to create a new draft version but will not activate it if this is set to false. Default true.
-{{% /md %}}</dd>
-    <dt class="property-optional"
+{{% /md %}}</dd><dt class="property-optional"
             title="Optional">
         <span id="state_activeversion_nodejs">
 <a href="#state_activeversion_nodejs" style="color: inherit; text-decoration: inherit;">active<wbr>Version</a>
@@ -2837,8 +2559,7 @@ Defined below.
         <span class="property-type">number</span>
     </dt>
     <dd>{{% md %}}The currently active version of your Fastly Service.
-{{% /md %}}</dd>
-    <dt class="property-optional"
+{{% /md %}}</dd><dt class="property-optional"
             title="Optional">
         <span id="state_backends_nodejs">
 <a href="#state_backends_nodejs" style="color: inherit; text-decoration: inherit;">backends</a>
@@ -2849,8 +2570,7 @@ Defined below.
     <dd>{{% md %}}A set of Backends to service requests from your Domains.
 Defined below. Backends must be defined in this argument, or defined in the
 `vcl` argument below
-{{% /md %}}</dd>
-    <dt class="property-optional"
+{{% /md %}}</dd><dt class="property-optional"
             title="Optional">
         <span id="state_bigqueryloggings_nodejs">
 <a href="#state_bigqueryloggings_nodejs" style="color: inherit; text-decoration: inherit;">bigqueryloggings</a>
@@ -2860,8 +2580,7 @@ Defined below. Backends must be defined in this argument, or defined in the
     </dt>
     <dd>{{% md %}}A BigQuery endpoint to send streaming logs too.
 Defined below.
-{{% /md %}}</dd>
-    <dt class="property-optional"
+{{% /md %}}</dd><dt class="property-optional"
             title="Optional">
         <span id="state_blobstorageloggings_nodejs">
 <a href="#state_blobstorageloggings_nodejs" style="color: inherit; text-decoration: inherit;">blobstorageloggings</a>
@@ -2871,8 +2590,7 @@ Defined below.
     </dt>
     <dd>{{% md %}}An Azure Blob Storage endpoint to send streaming logs too.
 Defined below.
-{{% /md %}}</dd>
-    <dt class="property-optional"
+{{% /md %}}</dd><dt class="property-optional"
             title="Optional">
         <span id="state_clonedversion_nodejs">
 <a href="#state_clonedversion_nodejs" style="color: inherit; text-decoration: inherit;">cloned<wbr>Version</a>
@@ -2880,8 +2598,7 @@ Defined below.
         <span class="property-indicator"></span>
         <span class="property-type">number</span>
     </dt>
-    <dd>{{% md %}}{{% /md %}}</dd>
-    <dt class="property-optional"
+    <dd>{{% md %}}{{% /md %}}</dd><dt class="property-optional"
             title="Optional">
         <span id="state_comment_nodejs">
 <a href="#state_comment_nodejs" style="color: inherit; text-decoration: inherit;">comment</a>
@@ -2890,8 +2607,7 @@ Defined below.
         <span class="property-type">string</span>
     </dt>
     <dd>{{% md %}}An optional comment about the Domain.
-{{% /md %}}</dd>
-    <dt class="property-optional"
+{{% /md %}}</dd><dt class="property-optional"
             title="Optional">
         <span id="state_domains_nodejs">
 <a href="#state_domains_nodejs" style="color: inherit; text-decoration: inherit;">domains</a>
@@ -2900,8 +2616,7 @@ Defined below.
         <span class="property-type"><a href="#servicecomputedomain">Service<wbr>Compute<wbr>Domain[]</a></span>
     </dt>
     <dd>{{% md %}}The domain of the DigitalOcean Spaces endpoint (default "nyc3.digitaloceanspaces.com").
-{{% /md %}}</dd>
-    <dt class="property-optional"
+{{% /md %}}</dd><dt class="property-optional"
             title="Optional">
         <span id="state_forcedestroy_nodejs">
 <a href="#state_forcedestroy_nodejs" style="color: inherit; text-decoration: inherit;">force<wbr>Destroy</a>
@@ -2911,8 +2626,7 @@ Defined below.
     </dt>
     <dd>{{% md %}}Services that are active cannot be destroyed. In
 order to destroy the Service, set `force_destroy` to `true`. Default `false`.
-{{% /md %}}</dd>
-    <dt class="property-optional"
+{{% /md %}}</dd><dt class="property-optional"
             title="Optional">
         <span id="state_gcsloggings_nodejs">
 <a href="#state_gcsloggings_nodejs" style="color: inherit; text-decoration: inherit;">gcsloggings</a>
@@ -2922,8 +2636,7 @@ order to destroy the Service, set `force_destroy` to `true`. Default `false`.
     </dt>
     <dd>{{% md %}}A gcs endpoint to send streaming logs too.
 Defined below.
-{{% /md %}}</dd>
-    <dt class="property-optional"
+{{% /md %}}</dd><dt class="property-optional"
             title="Optional">
         <span id="state_healthchecks_nodejs">
 <a href="#state_healthchecks_nodejs" style="color: inherit; text-decoration: inherit;">healthchecks</a>
@@ -2932,8 +2645,7 @@ Defined below.
         <span class="property-type"><a href="#servicecomputehealthcheck">Service<wbr>Compute<wbr>Healthcheck[]</a></span>
     </dt>
     <dd>{{% md %}}Name of a defined `healthcheck` to assign to this backend.
-{{% /md %}}</dd>
-    <dt class="property-optional"
+{{% /md %}}</dd><dt class="property-optional"
             title="Optional">
         <span id="state_httpsloggings_nodejs">
 <a href="#state_httpsloggings_nodejs" style="color: inherit; text-decoration: inherit;">httpsloggings</a>
@@ -2943,8 +2655,7 @@ Defined below.
     </dt>
     <dd>{{% md %}}An HTTPS endpoint to send streaming logs to.
 Defined below.
-{{% /md %}}</dd>
-    <dt class="property-optional"
+{{% /md %}}</dd><dt class="property-optional"
             title="Optional">
         <span id="state_logentries_nodejs">
 <a href="#state_logentries_nodejs" style="color: inherit; text-decoration: inherit;">logentries</a>
@@ -2954,8 +2665,7 @@ Defined below.
     </dt>
     <dd>{{% md %}}A logentries endpoint to send streaming logs too.
 Defined below.
-{{% /md %}}</dd>
-    <dt class="property-optional"
+{{% /md %}}</dd><dt class="property-optional"
             title="Optional">
         <span id="state_loggingcloudfiles_nodejs">
 <a href="#state_loggingcloudfiles_nodejs" style="color: inherit; text-decoration: inherit;">logging<wbr>Cloudfiles</a>
@@ -2965,8 +2675,7 @@ Defined below.
     </dt>
     <dd>{{% md %}}A Rackspace Cloud Files endpoint to send streaming logs to.
 Defined below.
-{{% /md %}}</dd>
-    <dt class="property-optional"
+{{% /md %}}</dd><dt class="property-optional"
             title="Optional">
         <span id="state_loggingdatadogs_nodejs">
 <a href="#state_loggingdatadogs_nodejs" style="color: inherit; text-decoration: inherit;">logging<wbr>Datadogs</a>
@@ -2976,8 +2685,7 @@ Defined below.
     </dt>
     <dd>{{% md %}}A Datadog endpoint to send streaming logs to.
 Defined below.
-{{% /md %}}</dd>
-    <dt class="property-optional"
+{{% /md %}}</dd><dt class="property-optional"
             title="Optional">
         <span id="state_loggingdigitaloceans_nodejs">
 <a href="#state_loggingdigitaloceans_nodejs" style="color: inherit; text-decoration: inherit;">logging<wbr>Digitaloceans</a>
@@ -2987,8 +2695,7 @@ Defined below.
     </dt>
     <dd>{{% md %}}A DigitalOcean Spaces endpoint to send streaming logs to.
 Defined below.
-{{% /md %}}</dd>
-    <dt class="property-optional"
+{{% /md %}}</dd><dt class="property-optional"
             title="Optional">
         <span id="state_loggingelasticsearches_nodejs">
 <a href="#state_loggingelasticsearches_nodejs" style="color: inherit; text-decoration: inherit;">logging<wbr>Elasticsearches</a>
@@ -2998,8 +2705,7 @@ Defined below.
     </dt>
     <dd>{{% md %}}An Elasticsearch endpoint to send streaming logs to.
 Defined below.
-{{% /md %}}</dd>
-    <dt class="property-optional"
+{{% /md %}}</dd><dt class="property-optional"
             title="Optional">
         <span id="state_loggingftps_nodejs">
 <a href="#state_loggingftps_nodejs" style="color: inherit; text-decoration: inherit;">logging<wbr>Ftps</a>
@@ -3009,8 +2715,7 @@ Defined below.
     </dt>
     <dd>{{% md %}}An FTP endpoint to send streaming logs to.
 Defined below.
-{{% /md %}}</dd>
-    <dt class="property-optional"
+{{% /md %}}</dd><dt class="property-optional"
             title="Optional">
         <span id="state_logginggooglepubsubs_nodejs">
 <a href="#state_logginggooglepubsubs_nodejs" style="color: inherit; text-decoration: inherit;">logging<wbr>Googlepubsubs</a>
@@ -3020,8 +2725,7 @@ Defined below.
     </dt>
     <dd>{{% md %}}A Google Cloud Pub/Sub endpoint to send streaming logs to.
 Defined below.
-{{% /md %}}</dd>
-    <dt class="property-optional"
+{{% /md %}}</dd><dt class="property-optional"
             title="Optional">
         <span id="state_loggingheroku_nodejs">
 <a href="#state_loggingheroku_nodejs" style="color: inherit; text-decoration: inherit;">logging<wbr>Heroku</a>
@@ -3031,8 +2735,7 @@ Defined below.
     </dt>
     <dd>{{% md %}}A Heroku endpoint to send streaming logs to.
 Defined below.
-{{% /md %}}</dd>
-    <dt class="property-optional"
+{{% /md %}}</dd><dt class="property-optional"
             title="Optional">
         <span id="state_logginghoneycombs_nodejs">
 <a href="#state_logginghoneycombs_nodejs" style="color: inherit; text-decoration: inherit;">logging<wbr>Honeycombs</a>
@@ -3042,8 +2745,7 @@ Defined below.
     </dt>
     <dd>{{% md %}}A Honeycomb endpoint to send streaming logs to.
 Defined below.
-{{% /md %}}</dd>
-    <dt class="property-optional"
+{{% /md %}}</dd><dt class="property-optional"
             title="Optional">
         <span id="state_loggingkafkas_nodejs">
 <a href="#state_loggingkafkas_nodejs" style="color: inherit; text-decoration: inherit;">logging<wbr>Kafkas</a>
@@ -3053,8 +2755,7 @@ Defined below.
     </dt>
     <dd>{{% md %}}A Kafka endpoint to send streaming logs to.
 Defined below.
-{{% /md %}}</dd>
-    <dt class="property-optional"
+{{% /md %}}</dd><dt class="property-optional"
             title="Optional">
         <span id="state_loggingkineses_nodejs">
 <a href="#state_loggingkineses_nodejs" style="color: inherit; text-decoration: inherit;">logging<wbr>Kineses</a>
@@ -3064,8 +2765,7 @@ Defined below.
     </dt>
     <dd>{{% md %}}A Kinesis endpoint to send streaming logs to.
 Defined below.
-{{% /md %}}</dd>
-    <dt class="property-optional"
+{{% /md %}}</dd><dt class="property-optional"
             title="Optional">
         <span id="state_logginglogglies_nodejs">
 <a href="#state_logginglogglies_nodejs" style="color: inherit; text-decoration: inherit;">logging<wbr>Logglies</a>
@@ -3075,8 +2775,7 @@ Defined below.
     </dt>
     <dd>{{% md %}}A Loggly endpoint to send streaming logs to.
 Defined below.
-{{% /md %}}</dd>
-    <dt class="property-optional"
+{{% /md %}}</dd><dt class="property-optional"
             title="Optional">
         <span id="state_logginglogshuttles_nodejs">
 <a href="#state_logginglogshuttles_nodejs" style="color: inherit; text-decoration: inherit;">logging<wbr>Logshuttles</a>
@@ -3086,8 +2785,7 @@ Defined below.
     </dt>
     <dd>{{% md %}}A Log Shuttle endpoint to send streaming logs to.
 Defined below.
-{{% /md %}}</dd>
-    <dt class="property-optional"
+{{% /md %}}</dd><dt class="property-optional"
             title="Optional">
         <span id="state_loggingnewrelics_nodejs">
 <a href="#state_loggingnewrelics_nodejs" style="color: inherit; text-decoration: inherit;">logging<wbr>Newrelics</a>
@@ -3097,8 +2795,7 @@ Defined below.
     </dt>
     <dd>{{% md %}}A New Relic endpoint to send streaming logs to.
 Defined below.
-{{% /md %}}</dd>
-    <dt class="property-optional"
+{{% /md %}}</dd><dt class="property-optional"
             title="Optional">
         <span id="state_loggingopenstacks_nodejs">
 <a href="#state_loggingopenstacks_nodejs" style="color: inherit; text-decoration: inherit;">logging<wbr>Openstacks</a>
@@ -3108,8 +2805,7 @@ Defined below.
     </dt>
     <dd>{{% md %}}An OpenStack endpoint to send streaming logs to.
 Defined below.
-{{% /md %}}</dd>
-    <dt class="property-optional"
+{{% /md %}}</dd><dt class="property-optional"
             title="Optional">
         <span id="state_loggingscalyrs_nodejs">
 <a href="#state_loggingscalyrs_nodejs" style="color: inherit; text-decoration: inherit;">logging<wbr>Scalyrs</a>
@@ -3119,8 +2815,7 @@ Defined below.
     </dt>
     <dd>{{% md %}}A Scalyr endpoint to send streaming logs to.
 Defined below.
-{{% /md %}}</dd>
-    <dt class="property-optional"
+{{% /md %}}</dd><dt class="property-optional"
             title="Optional">
         <span id="state_loggingsftps_nodejs">
 <a href="#state_loggingsftps_nodejs" style="color: inherit; text-decoration: inherit;">logging<wbr>Sftps</a>
@@ -3130,8 +2825,7 @@ Defined below.
     </dt>
     <dd>{{% md %}}An SFTP endpoint to send streaming logs to.
 Defined below.
-{{% /md %}}</dd>
-    <dt class="property-optional"
+{{% /md %}}</dd><dt class="property-optional"
             title="Optional">
         <span id="state_name_nodejs">
 <a href="#state_name_nodejs" style="color: inherit; text-decoration: inherit;">name</a>
@@ -3140,8 +2834,7 @@ Defined below.
         <span class="property-type">string</span>
     </dt>
     <dd>{{% md %}}The unique name of the Kinesis logging endpoint.
-{{% /md %}}</dd>
-    <dt class="property-optional"
+{{% /md %}}</dd><dt class="property-optional"
             title="Optional">
         <span id="state_package_nodejs">
 <a href="#state_package_nodejs" style="color: inherit; text-decoration: inherit;">package</a>
@@ -3151,8 +2844,7 @@ Defined below.
     </dt>
     <dd>{{% md %}}A Wasm deployment package to upload.
 Defined below.
-{{% /md %}}</dd>
-    <dt class="property-optional"
+{{% /md %}}</dd><dt class="property-optional"
             title="Optional">
         <span id="state_papertrails_nodejs">
 <a href="#state_papertrails_nodejs" style="color: inherit; text-decoration: inherit;">papertrails</a>
@@ -3162,8 +2854,7 @@ Defined below.
     </dt>
     <dd>{{% md %}}A Papertrail endpoint to send streaming logs too.
 Defined below.
-{{% /md %}}</dd>
-    <dt class="property-optional"
+{{% /md %}}</dd><dt class="property-optional"
             title="Optional">
         <span id="state_s3loggings_nodejs">
 <a href="#state_s3loggings_nodejs" style="color: inherit; text-decoration: inherit;">s3loggings</a>
@@ -3173,8 +2864,7 @@ Defined below.
     </dt>
     <dd>{{% md %}}A set of S3 Buckets to send streaming logs too.
 Defined below.
-{{% /md %}}</dd>
-    <dt class="property-optional"
+{{% /md %}}</dd><dt class="property-optional"
             title="Optional">
         <span id="state_splunks_nodejs">
 <a href="#state_splunks_nodejs" style="color: inherit; text-decoration: inherit;">splunks</a>
@@ -3184,8 +2874,7 @@ Defined below.
     </dt>
     <dd>{{% md %}}A Splunk endpoint to send streaming logs too.
 Defined below.
-{{% /md %}}</dd>
-    <dt class="property-optional"
+{{% /md %}}</dd><dt class="property-optional"
             title="Optional">
         <span id="state_sumologics_nodejs">
 <a href="#state_sumologics_nodejs" style="color: inherit; text-decoration: inherit;">sumologics</a>
@@ -3195,8 +2884,7 @@ Defined below.
     </dt>
     <dd>{{% md %}}A Sumologic endpoint to send streaming logs too.
 Defined below.
-{{% /md %}}</dd>
-    <dt class="property-optional"
+{{% /md %}}</dd><dt class="property-optional"
             title="Optional">
         <span id="state_syslogs_nodejs">
 <a href="#state_syslogs_nodejs" style="color: inherit; text-decoration: inherit;">syslogs</a>
@@ -3206,8 +2894,7 @@ Defined below.
     </dt>
     <dd>{{% md %}}A syslog endpoint to send streaming logs too.
 Defined below.
-{{% /md %}}</dd>
-    <dt class="property-optional"
+{{% /md %}}</dd><dt class="property-optional"
             title="Optional">
         <span id="state_versioncomment_nodejs">
 <a href="#state_versioncomment_nodejs" style="color: inherit; text-decoration: inherit;">version<wbr>Comment</a>
@@ -3216,14 +2903,11 @@ Defined below.
         <span class="property-type">string</span>
     </dt>
     <dd>{{% md %}}Description field for the version.
-{{% /md %}}</dd>
-</dl>
+{{% /md %}}</dd></dl>
 {{% /choosable %}}
 
 {{% choosable language python %}}
-<dl class="resources-properties">
-
-    <dt class="property-optional"
+<dl class="resources-properties"><dt class="property-optional"
             title="Optional">
         <span id="state_activate_python">
 <a href="#state_activate_python" style="color: inherit; text-decoration: inherit;">activate</a>
@@ -3232,8 +2916,7 @@ Defined below.
         <span class="property-type">bool</span>
     </dt>
     <dd>{{% md %}}Conditionally prevents the Service from being activated. The apply step will continue to create a new draft version but will not activate it if this is set to false. Default true.
-{{% /md %}}</dd>
-    <dt class="property-optional"
+{{% /md %}}</dd><dt class="property-optional"
             title="Optional">
         <span id="state_active_version_python">
 <a href="#state_active_version_python" style="color: inherit; text-decoration: inherit;">active_<wbr>version</a>
@@ -3242,8 +2925,7 @@ Defined below.
         <span class="property-type">int</span>
     </dt>
     <dd>{{% md %}}The currently active version of your Fastly Service.
-{{% /md %}}</dd>
-    <dt class="property-optional"
+{{% /md %}}</dd><dt class="property-optional"
             title="Optional">
         <span id="state_backends_python">
 <a href="#state_backends_python" style="color: inherit; text-decoration: inherit;">backends</a>
@@ -3254,8 +2936,7 @@ Defined below.
     <dd>{{% md %}}A set of Backends to service requests from your Domains.
 Defined below. Backends must be defined in this argument, or defined in the
 `vcl` argument below
-{{% /md %}}</dd>
-    <dt class="property-optional"
+{{% /md %}}</dd><dt class="property-optional"
             title="Optional">
         <span id="state_bigqueryloggings_python">
 <a href="#state_bigqueryloggings_python" style="color: inherit; text-decoration: inherit;">bigqueryloggings</a>
@@ -3265,8 +2946,7 @@ Defined below. Backends must be defined in this argument, or defined in the
     </dt>
     <dd>{{% md %}}A BigQuery endpoint to send streaming logs too.
 Defined below.
-{{% /md %}}</dd>
-    <dt class="property-optional"
+{{% /md %}}</dd><dt class="property-optional"
             title="Optional">
         <span id="state_blobstorageloggings_python">
 <a href="#state_blobstorageloggings_python" style="color: inherit; text-decoration: inherit;">blobstorageloggings</a>
@@ -3276,8 +2956,7 @@ Defined below.
     </dt>
     <dd>{{% md %}}An Azure Blob Storage endpoint to send streaming logs too.
 Defined below.
-{{% /md %}}</dd>
-    <dt class="property-optional"
+{{% /md %}}</dd><dt class="property-optional"
             title="Optional">
         <span id="state_cloned_version_python">
 <a href="#state_cloned_version_python" style="color: inherit; text-decoration: inherit;">cloned_<wbr>version</a>
@@ -3285,8 +2964,7 @@ Defined below.
         <span class="property-indicator"></span>
         <span class="property-type">int</span>
     </dt>
-    <dd>{{% md %}}{{% /md %}}</dd>
-    <dt class="property-optional"
+    <dd>{{% md %}}{{% /md %}}</dd><dt class="property-optional"
             title="Optional">
         <span id="state_comment_python">
 <a href="#state_comment_python" style="color: inherit; text-decoration: inherit;">comment</a>
@@ -3295,8 +2973,7 @@ Defined below.
         <span class="property-type">str</span>
     </dt>
     <dd>{{% md %}}An optional comment about the Domain.
-{{% /md %}}</dd>
-    <dt class="property-optional"
+{{% /md %}}</dd><dt class="property-optional"
             title="Optional">
         <span id="state_domains_python">
 <a href="#state_domains_python" style="color: inherit; text-decoration: inherit;">domains</a>
@@ -3305,8 +2982,7 @@ Defined below.
         <span class="property-type"><a href="#servicecomputedomain">Sequence[Service<wbr>Compute<wbr>Domain<wbr>Args]</a></span>
     </dt>
     <dd>{{% md %}}The domain of the DigitalOcean Spaces endpoint (default "nyc3.digitaloceanspaces.com").
-{{% /md %}}</dd>
-    <dt class="property-optional"
+{{% /md %}}</dd><dt class="property-optional"
             title="Optional">
         <span id="state_force_destroy_python">
 <a href="#state_force_destroy_python" style="color: inherit; text-decoration: inherit;">force_<wbr>destroy</a>
@@ -3316,8 +2992,7 @@ Defined below.
     </dt>
     <dd>{{% md %}}Services that are active cannot be destroyed. In
 order to destroy the Service, set `force_destroy` to `true`. Default `false`.
-{{% /md %}}</dd>
-    <dt class="property-optional"
+{{% /md %}}</dd><dt class="property-optional"
             title="Optional">
         <span id="state_gcsloggings_python">
 <a href="#state_gcsloggings_python" style="color: inherit; text-decoration: inherit;">gcsloggings</a>
@@ -3327,8 +3002,7 @@ order to destroy the Service, set `force_destroy` to `true`. Default `false`.
     </dt>
     <dd>{{% md %}}A gcs endpoint to send streaming logs too.
 Defined below.
-{{% /md %}}</dd>
-    <dt class="property-optional"
+{{% /md %}}</dd><dt class="property-optional"
             title="Optional">
         <span id="state_healthchecks_python">
 <a href="#state_healthchecks_python" style="color: inherit; text-decoration: inherit;">healthchecks</a>
@@ -3337,8 +3011,7 @@ Defined below.
         <span class="property-type"><a href="#servicecomputehealthcheck">Sequence[Service<wbr>Compute<wbr>Healthcheck<wbr>Args]</a></span>
     </dt>
     <dd>{{% md %}}Name of a defined `healthcheck` to assign to this backend.
-{{% /md %}}</dd>
-    <dt class="property-optional"
+{{% /md %}}</dd><dt class="property-optional"
             title="Optional">
         <span id="state_httpsloggings_python">
 <a href="#state_httpsloggings_python" style="color: inherit; text-decoration: inherit;">httpsloggings</a>
@@ -3348,8 +3021,7 @@ Defined below.
     </dt>
     <dd>{{% md %}}An HTTPS endpoint to send streaming logs to.
 Defined below.
-{{% /md %}}</dd>
-    <dt class="property-optional"
+{{% /md %}}</dd><dt class="property-optional"
             title="Optional">
         <span id="state_logentries_python">
 <a href="#state_logentries_python" style="color: inherit; text-decoration: inherit;">logentries</a>
@@ -3359,8 +3031,7 @@ Defined below.
     </dt>
     <dd>{{% md %}}A logentries endpoint to send streaming logs too.
 Defined below.
-{{% /md %}}</dd>
-    <dt class="property-optional"
+{{% /md %}}</dd><dt class="property-optional"
             title="Optional">
         <span id="state_logging_cloudfiles_python">
 <a href="#state_logging_cloudfiles_python" style="color: inherit; text-decoration: inherit;">logging_<wbr>cloudfiles</a>
@@ -3370,8 +3041,7 @@ Defined below.
     </dt>
     <dd>{{% md %}}A Rackspace Cloud Files endpoint to send streaming logs to.
 Defined below.
-{{% /md %}}</dd>
-    <dt class="property-optional"
+{{% /md %}}</dd><dt class="property-optional"
             title="Optional">
         <span id="state_logging_datadogs_python">
 <a href="#state_logging_datadogs_python" style="color: inherit; text-decoration: inherit;">logging_<wbr>datadogs</a>
@@ -3381,8 +3051,7 @@ Defined below.
     </dt>
     <dd>{{% md %}}A Datadog endpoint to send streaming logs to.
 Defined below.
-{{% /md %}}</dd>
-    <dt class="property-optional"
+{{% /md %}}</dd><dt class="property-optional"
             title="Optional">
         <span id="state_logging_digitaloceans_python">
 <a href="#state_logging_digitaloceans_python" style="color: inherit; text-decoration: inherit;">logging_<wbr>digitaloceans</a>
@@ -3392,8 +3061,7 @@ Defined below.
     </dt>
     <dd>{{% md %}}A DigitalOcean Spaces endpoint to send streaming logs to.
 Defined below.
-{{% /md %}}</dd>
-    <dt class="property-optional"
+{{% /md %}}</dd><dt class="property-optional"
             title="Optional">
         <span id="state_logging_elasticsearches_python">
 <a href="#state_logging_elasticsearches_python" style="color: inherit; text-decoration: inherit;">logging_<wbr>elasticsearches</a>
@@ -3403,8 +3071,7 @@ Defined below.
     </dt>
     <dd>{{% md %}}An Elasticsearch endpoint to send streaming logs to.
 Defined below.
-{{% /md %}}</dd>
-    <dt class="property-optional"
+{{% /md %}}</dd><dt class="property-optional"
             title="Optional">
         <span id="state_logging_ftps_python">
 <a href="#state_logging_ftps_python" style="color: inherit; text-decoration: inherit;">logging_<wbr>ftps</a>
@@ -3414,8 +3081,7 @@ Defined below.
     </dt>
     <dd>{{% md %}}An FTP endpoint to send streaming logs to.
 Defined below.
-{{% /md %}}</dd>
-    <dt class="property-optional"
+{{% /md %}}</dd><dt class="property-optional"
             title="Optional">
         <span id="state_logging_googlepubsubs_python">
 <a href="#state_logging_googlepubsubs_python" style="color: inherit; text-decoration: inherit;">logging_<wbr>googlepubsubs</a>
@@ -3425,8 +3091,7 @@ Defined below.
     </dt>
     <dd>{{% md %}}A Google Cloud Pub/Sub endpoint to send streaming logs to.
 Defined below.
-{{% /md %}}</dd>
-    <dt class="property-optional"
+{{% /md %}}</dd><dt class="property-optional"
             title="Optional">
         <span id="state_logging_heroku_python">
 <a href="#state_logging_heroku_python" style="color: inherit; text-decoration: inherit;">logging_<wbr>heroku</a>
@@ -3436,8 +3101,7 @@ Defined below.
     </dt>
     <dd>{{% md %}}A Heroku endpoint to send streaming logs to.
 Defined below.
-{{% /md %}}</dd>
-    <dt class="property-optional"
+{{% /md %}}</dd><dt class="property-optional"
             title="Optional">
         <span id="state_logging_honeycombs_python">
 <a href="#state_logging_honeycombs_python" style="color: inherit; text-decoration: inherit;">logging_<wbr>honeycombs</a>
@@ -3447,8 +3111,7 @@ Defined below.
     </dt>
     <dd>{{% md %}}A Honeycomb endpoint to send streaming logs to.
 Defined below.
-{{% /md %}}</dd>
-    <dt class="property-optional"
+{{% /md %}}</dd><dt class="property-optional"
             title="Optional">
         <span id="state_logging_kafkas_python">
 <a href="#state_logging_kafkas_python" style="color: inherit; text-decoration: inherit;">logging_<wbr>kafkas</a>
@@ -3458,8 +3121,7 @@ Defined below.
     </dt>
     <dd>{{% md %}}A Kafka endpoint to send streaming logs to.
 Defined below.
-{{% /md %}}</dd>
-    <dt class="property-optional"
+{{% /md %}}</dd><dt class="property-optional"
             title="Optional">
         <span id="state_logging_kineses_python">
 <a href="#state_logging_kineses_python" style="color: inherit; text-decoration: inherit;">logging_<wbr>kineses</a>
@@ -3469,8 +3131,7 @@ Defined below.
     </dt>
     <dd>{{% md %}}A Kinesis endpoint to send streaming logs to.
 Defined below.
-{{% /md %}}</dd>
-    <dt class="property-optional"
+{{% /md %}}</dd><dt class="property-optional"
             title="Optional">
         <span id="state_logging_logglies_python">
 <a href="#state_logging_logglies_python" style="color: inherit; text-decoration: inherit;">logging_<wbr>logglies</a>
@@ -3480,8 +3141,7 @@ Defined below.
     </dt>
     <dd>{{% md %}}A Loggly endpoint to send streaming logs to.
 Defined below.
-{{% /md %}}</dd>
-    <dt class="property-optional"
+{{% /md %}}</dd><dt class="property-optional"
             title="Optional">
         <span id="state_logging_logshuttles_python">
 <a href="#state_logging_logshuttles_python" style="color: inherit; text-decoration: inherit;">logging_<wbr>logshuttles</a>
@@ -3491,8 +3151,7 @@ Defined below.
     </dt>
     <dd>{{% md %}}A Log Shuttle endpoint to send streaming logs to.
 Defined below.
-{{% /md %}}</dd>
-    <dt class="property-optional"
+{{% /md %}}</dd><dt class="property-optional"
             title="Optional">
         <span id="state_logging_newrelics_python">
 <a href="#state_logging_newrelics_python" style="color: inherit; text-decoration: inherit;">logging_<wbr>newrelics</a>
@@ -3502,8 +3161,7 @@ Defined below.
     </dt>
     <dd>{{% md %}}A New Relic endpoint to send streaming logs to.
 Defined below.
-{{% /md %}}</dd>
-    <dt class="property-optional"
+{{% /md %}}</dd><dt class="property-optional"
             title="Optional">
         <span id="state_logging_openstacks_python">
 <a href="#state_logging_openstacks_python" style="color: inherit; text-decoration: inherit;">logging_<wbr>openstacks</a>
@@ -3513,8 +3171,7 @@ Defined below.
     </dt>
     <dd>{{% md %}}An OpenStack endpoint to send streaming logs to.
 Defined below.
-{{% /md %}}</dd>
-    <dt class="property-optional"
+{{% /md %}}</dd><dt class="property-optional"
             title="Optional">
         <span id="state_logging_scalyrs_python">
 <a href="#state_logging_scalyrs_python" style="color: inherit; text-decoration: inherit;">logging_<wbr>scalyrs</a>
@@ -3524,8 +3181,7 @@ Defined below.
     </dt>
     <dd>{{% md %}}A Scalyr endpoint to send streaming logs to.
 Defined below.
-{{% /md %}}</dd>
-    <dt class="property-optional"
+{{% /md %}}</dd><dt class="property-optional"
             title="Optional">
         <span id="state_logging_sftps_python">
 <a href="#state_logging_sftps_python" style="color: inherit; text-decoration: inherit;">logging_<wbr>sftps</a>
@@ -3535,8 +3191,7 @@ Defined below.
     </dt>
     <dd>{{% md %}}An SFTP endpoint to send streaming logs to.
 Defined below.
-{{% /md %}}</dd>
-    <dt class="property-optional"
+{{% /md %}}</dd><dt class="property-optional"
             title="Optional">
         <span id="state_name_python">
 <a href="#state_name_python" style="color: inherit; text-decoration: inherit;">name</a>
@@ -3545,8 +3200,7 @@ Defined below.
         <span class="property-type">str</span>
     </dt>
     <dd>{{% md %}}The unique name of the Kinesis logging endpoint.
-{{% /md %}}</dd>
-    <dt class="property-optional"
+{{% /md %}}</dd><dt class="property-optional"
             title="Optional">
         <span id="state_package_python">
 <a href="#state_package_python" style="color: inherit; text-decoration: inherit;">package</a>
@@ -3556,8 +3210,7 @@ Defined below.
     </dt>
     <dd>{{% md %}}A Wasm deployment package to upload.
 Defined below.
-{{% /md %}}</dd>
-    <dt class="property-optional"
+{{% /md %}}</dd><dt class="property-optional"
             title="Optional">
         <span id="state_papertrails_python">
 <a href="#state_papertrails_python" style="color: inherit; text-decoration: inherit;">papertrails</a>
@@ -3567,8 +3220,7 @@ Defined below.
     </dt>
     <dd>{{% md %}}A Papertrail endpoint to send streaming logs too.
 Defined below.
-{{% /md %}}</dd>
-    <dt class="property-optional"
+{{% /md %}}</dd><dt class="property-optional"
             title="Optional">
         <span id="state_s3loggings_python">
 <a href="#state_s3loggings_python" style="color: inherit; text-decoration: inherit;">s3loggings</a>
@@ -3578,8 +3230,7 @@ Defined below.
     </dt>
     <dd>{{% md %}}A set of S3 Buckets to send streaming logs too.
 Defined below.
-{{% /md %}}</dd>
-    <dt class="property-optional"
+{{% /md %}}</dd><dt class="property-optional"
             title="Optional">
         <span id="state_splunks_python">
 <a href="#state_splunks_python" style="color: inherit; text-decoration: inherit;">splunks</a>
@@ -3589,8 +3240,7 @@ Defined below.
     </dt>
     <dd>{{% md %}}A Splunk endpoint to send streaming logs too.
 Defined below.
-{{% /md %}}</dd>
-    <dt class="property-optional"
+{{% /md %}}</dd><dt class="property-optional"
             title="Optional">
         <span id="state_sumologics_python">
 <a href="#state_sumologics_python" style="color: inherit; text-decoration: inherit;">sumologics</a>
@@ -3600,8 +3250,7 @@ Defined below.
     </dt>
     <dd>{{% md %}}A Sumologic endpoint to send streaming logs too.
 Defined below.
-{{% /md %}}</dd>
-    <dt class="property-optional"
+{{% /md %}}</dd><dt class="property-optional"
             title="Optional">
         <span id="state_syslogs_python">
 <a href="#state_syslogs_python" style="color: inherit; text-decoration: inherit;">syslogs</a>
@@ -3611,8 +3260,7 @@ Defined below.
     </dt>
     <dd>{{% md %}}A syslog endpoint to send streaming logs too.
 Defined below.
-{{% /md %}}</dd>
-    <dt class="property-optional"
+{{% /md %}}</dd><dt class="property-optional"
             title="Optional">
         <span id="state_version_comment_python">
 <a href="#state_version_comment_python" style="color: inherit; text-decoration: inherit;">version_<wbr>comment</a>
@@ -3621,8 +3269,7 @@ Defined below.
         <span class="property-type">str</span>
     </dt>
     <dd>{{% md %}}Description field for the version.
-{{% /md %}}</dd>
-</dl>
+{{% /md %}}</dd></dl>
 {{% /choosable %}}
 
 
@@ -3637,9 +3284,7 @@ Defined below.
 <h4 id="servicecomputebackend">Service<wbr>Compute<wbr>Backend</h4>
 
 {{% choosable language csharp %}}
-<dl class="resources-properties">
-
-    <dt class="property-required"
+<dl class="resources-properties"><dt class="property-required"
             title="Required">
         <span id="address_csharp">
 <a href="#address_csharp" style="color: inherit; text-decoration: inherit;">Address</a>
@@ -3648,8 +3293,7 @@ Defined below.
         <span class="property-type">string</span>
     </dt>
     <dd>{{% md %}}The SFTP address to stream logs to.
-{{% /md %}}</dd>
-    <dt class="property-required"
+{{% /md %}}</dd><dt class="property-required"
             title="Required">
         <span id="name_csharp">
 <a href="#name_csharp" style="color: inherit; text-decoration: inherit;">Name</a>
@@ -3658,8 +3302,7 @@ Defined below.
         <span class="property-type">string</span>
     </dt>
     <dd>{{% md %}}The unique name of the Kinesis logging endpoint.
-{{% /md %}}</dd>
-    <dt class="property-optional"
+{{% /md %}}</dd><dt class="property-optional"
             title="Optional">
         <span id="autoloadbalance_csharp">
 <a href="#autoloadbalance_csharp" style="color: inherit; text-decoration: inherit;">Auto<wbr>Loadbalance</a>
@@ -3670,8 +3313,7 @@ Defined below.
     <dd>{{% md %}}Denotes if this Backend should be
 included in the pool of backends that requests are load balanced against.
 Default `true`.
-{{% /md %}}</dd>
-    <dt class="property-optional"
+{{% /md %}}</dd><dt class="property-optional"
             title="Optional">
         <span id="betweenbytestimeout_csharp">
 <a href="#betweenbytestimeout_csharp" style="color: inherit; text-decoration: inherit;">Between<wbr>Bytes<wbr>Timeout</a>
@@ -3680,8 +3322,7 @@ Default `true`.
         <span class="property-type">int</span>
     </dt>
     <dd>{{% md %}}How long to wait between bytes in milliseconds. Default `10000`.
-{{% /md %}}</dd>
-    <dt class="property-optional"
+{{% /md %}}</dd><dt class="property-optional"
             title="Optional">
         <span id="connecttimeout_csharp">
 <a href="#connecttimeout_csharp" style="color: inherit; text-decoration: inherit;">Connect<wbr>Timeout</a>
@@ -3691,8 +3332,7 @@ Default `true`.
     </dt>
     <dd>{{% md %}}How long to wait for a timeout in milliseconds.
 Default `1000`
-{{% /md %}}</dd>
-    <dt class="property-optional"
+{{% /md %}}</dd><dt class="property-optional"
             title="Optional">
         <span id="errorthreshold_csharp">
 <a href="#errorthreshold_csharp" style="color: inherit; text-decoration: inherit;">Error<wbr>Threshold</a>
@@ -3701,8 +3341,7 @@ Default `1000`
         <span class="property-type">int</span>
     </dt>
     <dd>{{% md %}}Number of errors to allow before the Backend is marked as down. Default `0`.
-{{% /md %}}</dd>
-    <dt class="property-optional"
+{{% /md %}}</dd><dt class="property-optional"
             title="Optional">
         <span id="firstbytetimeout_csharp">
 <a href="#firstbytetimeout_csharp" style="color: inherit; text-decoration: inherit;">First<wbr>Byte<wbr>Timeout</a>
@@ -3711,8 +3350,7 @@ Default `1000`
         <span class="property-type">int</span>
     </dt>
     <dd>{{% md %}}How long to wait for the first bytes in milliseconds. Default `15000`.
-{{% /md %}}</dd>
-    <dt class="property-optional"
+{{% /md %}}</dd><dt class="property-optional"
             title="Optional">
         <span id="healthcheck_csharp">
 <a href="#healthcheck_csharp" style="color: inherit; text-decoration: inherit;">Healthcheck</a>
@@ -3721,8 +3359,7 @@ Default `1000`
         <span class="property-type">string</span>
     </dt>
     <dd>{{% md %}}Name of a defined `healthcheck` to assign to this backend.
-{{% /md %}}</dd>
-    <dt class="property-optional"
+{{% /md %}}</dd><dt class="property-optional"
             title="Optional">
         <span id="maxconn_csharp">
 <a href="#maxconn_csharp" style="color: inherit; text-decoration: inherit;">Max<wbr>Conn</a>
@@ -3732,8 +3369,7 @@ Default `1000`
     </dt>
     <dd>{{% md %}}Maximum number of connections for this Backend.
 Default `200`.
-{{% /md %}}</dd>
-    <dt class="property-optional"
+{{% /md %}}</dd><dt class="property-optional"
             title="Optional">
         <span id="maxtlsversion_csharp">
 <a href="#maxtlsversion_csharp" style="color: inherit; text-decoration: inherit;">Max<wbr>Tls<wbr>Version</a>
@@ -3742,8 +3378,7 @@ Default `200`.
         <span class="property-type">string</span>
     </dt>
     <dd>{{% md %}}Maximum allowed TLS version on SSL connections to this backend.
-{{% /md %}}</dd>
-    <dt class="property-optional"
+{{% /md %}}</dd><dt class="property-optional"
             title="Optional">
         <span id="mintlsversion_csharp">
 <a href="#mintlsversion_csharp" style="color: inherit; text-decoration: inherit;">Min<wbr>Tls<wbr>Version</a>
@@ -3752,8 +3387,7 @@ Default `200`.
         <span class="property-type">string</span>
     </dt>
     <dd>{{% md %}}Minimum allowed TLS version on SSL connections to this backend.
-{{% /md %}}</dd>
-    <dt class="property-optional"
+{{% /md %}}</dd><dt class="property-optional"
             title="Optional">
         <span id="overridehost_csharp">
 <a href="#overridehost_csharp" style="color: inherit; text-decoration: inherit;">Override<wbr>Host</a>
@@ -3762,8 +3396,7 @@ Default `200`.
         <span class="property-type">string</span>
     </dt>
     <dd>{{% md %}}The hostname to override the Host header.
-{{% /md %}}</dd>
-    <dt class="property-optional"
+{{% /md %}}</dd><dt class="property-optional"
             title="Optional">
         <span id="port_csharp">
 <a href="#port_csharp" style="color: inherit; text-decoration: inherit;">Port</a>
@@ -3772,8 +3405,7 @@ Default `200`.
         <span class="property-type">int</span>
     </dt>
     <dd>{{% md %}}The port the SFTP service listens on. (Default: `22`).
-{{% /md %}}</dd>
-    <dt class="property-optional"
+{{% /md %}}</dd><dt class="property-optional"
             title="Optional">
         <span id="shield_csharp">
 <a href="#shield_csharp" style="color: inherit; text-decoration: inherit;">Shield</a>
@@ -3782,8 +3414,7 @@ Default `200`.
         <span class="property-type">string</span>
     </dt>
     <dd>{{% md %}}The POP of the shield designated to reduce inbound load. Valid values for `shield` are included in the [`GET /datacenters`](https://developer.fastly.com/reference/api/utils/datacenter/) API response.
-{{% /md %}}</dd>
-    <dt class="property-optional"
+{{% /md %}}</dd><dt class="property-optional"
             title="Optional">
         <span id="sslcacert_csharp">
 <a href="#sslcacert_csharp" style="color: inherit; text-decoration: inherit;">Ssl<wbr>Ca<wbr>Cert</a>
@@ -3792,8 +3423,7 @@ Default `200`.
         <span class="property-type">string</span>
     </dt>
     <dd>{{% md %}}CA certificate attached to origin.
-{{% /md %}}</dd>
-    <dt class="property-optional"
+{{% /md %}}</dd><dt class="property-optional"
             title="Optional">
         <span id="sslcerthostname_csharp">
 <a href="#sslcerthostname_csharp" style="color: inherit; text-decoration: inherit;">Ssl<wbr>Cert<wbr>Hostname</a>
@@ -3802,8 +3432,7 @@ Default `200`.
         <span class="property-type">string</span>
     </dt>
     <dd>{{% md %}}Overrides ssl_hostname, but only for cert verification. Does not affect SNI at all.
-{{% /md %}}</dd>
-    <dt class="property-optional"
+{{% /md %}}</dd><dt class="property-optional"
             title="Optional">
         <span id="sslcheckcert_csharp">
 <a href="#sslcheckcert_csharp" style="color: inherit; text-decoration: inherit;">Ssl<wbr>Check<wbr>Cert</a>
@@ -3812,8 +3441,7 @@ Default `200`.
         <span class="property-type">bool</span>
     </dt>
     <dd>{{% md %}}Be strict about checking SSL certs. Default `true`.
-{{% /md %}}</dd>
-    <dt class="property-optional"
+{{% /md %}}</dd><dt class="property-optional"
             title="Optional">
         <span id="sslciphers_csharp">
 <a href="#sslciphers_csharp" style="color: inherit; text-decoration: inherit;">Ssl<wbr>Ciphers</a>
@@ -3822,8 +3450,7 @@ Default `200`.
         <span class="property-type">string</span>
     </dt>
     <dd>{{% md %}}Comma separated list of OpenSSL Ciphers to try when negotiating to the backend.
-{{% /md %}}</dd>
-    <dt class="property-optional"
+{{% /md %}}</dd><dt class="property-optional"
             title="Optional">
         <span id="sslclientcert_csharp">
 <a href="#sslclientcert_csharp" style="color: inherit; text-decoration: inherit;">Ssl<wbr>Client<wbr>Cert</a>
@@ -3832,8 +3459,7 @@ Default `200`.
         <span class="property-type">string</span>
     </dt>
     <dd>{{% md %}}Client certificate attached to origin. Used when connecting to the backend.
-{{% /md %}}</dd>
-    <dt class="property-optional"
+{{% /md %}}</dd><dt class="property-optional"
             title="Optional">
         <span id="sslclientkey_csharp">
 <a href="#sslclientkey_csharp" style="color: inherit; text-decoration: inherit;">Ssl<wbr>Client<wbr>Key</a>
@@ -3842,8 +3468,7 @@ Default `200`.
         <span class="property-type">string</span>
     </dt>
     <dd>{{% md %}}Client key attached to origin. Used when connecting to the backend.
-{{% /md %}}</dd>
-    <dt class="property-optional property-deprecated"
+{{% /md %}}</dd><dt class="property-optional property-deprecated"
             title="Optional, Deprecated">
         <span id="sslhostname_csharp">
 <a href="#sslhostname_csharp" style="color: inherit; text-decoration: inherit;">Ssl<wbr>Hostname</a>
@@ -3852,8 +3477,7 @@ Default `200`.
         <span class="property-type">string</span>
     </dt>
     <dd>{{% md %}}Used for both SNI during the TLS handshake and to validate the cert.
-{{% /md %}}<p class="property-message">Deprecated: {{% md %}}Use ssl_cert_hostname and ssl_sni_hostname instead.{{% /md %}}</p></dd>
-    <dt class="property-optional"
+{{% /md %}}<p class="property-message">Deprecated: {{% md %}}Use ssl_cert_hostname and ssl_sni_hostname instead.{{% /md %}}</p></dd><dt class="property-optional"
             title="Optional">
         <span id="sslsnihostname_csharp">
 <a href="#sslsnihostname_csharp" style="color: inherit; text-decoration: inherit;">Ssl<wbr>Sni<wbr>Hostname</a>
@@ -3862,8 +3486,7 @@ Default `200`.
         <span class="property-type">string</span>
     </dt>
     <dd>{{% md %}}Overrides ssl_hostname, but only for SNI in the handshake. Does not affect cert validation at all.
-{{% /md %}}</dd>
-    <dt class="property-optional"
+{{% /md %}}</dd><dt class="property-optional"
             title="Optional">
         <span id="usessl_csharp">
 <a href="#usessl_csharp" style="color: inherit; text-decoration: inherit;">Use<wbr>Ssl</a>
@@ -3872,8 +3495,7 @@ Default `200`.
         <span class="property-type">bool</span>
     </dt>
     <dd>{{% md %}}Whether or not to use SSL to reach the backend. Default `false`.
-{{% /md %}}</dd>
-    <dt class="property-optional"
+{{% /md %}}</dd><dt class="property-optional"
             title="Optional">
         <span id="weight_csharp">
 <a href="#weight_csharp" style="color: inherit; text-decoration: inherit;">Weight</a>
@@ -3882,14 +3504,11 @@ Default `200`.
         <span class="property-type">int</span>
     </dt>
     <dd>{{% md %}}The [portion of traffic](https://docs.fastly.com/en/guides/load-balancing-configuration#how-weight-affects-load-balancing) to send to this Backend. Each Backend receives `weight / total` of the traffic. Default `100`.
-{{% /md %}}</dd>
-</dl>
+{{% /md %}}</dd></dl>
 {{% /choosable %}}
 
 {{% choosable language go %}}
-<dl class="resources-properties">
-
-    <dt class="property-required"
+<dl class="resources-properties"><dt class="property-required"
             title="Required">
         <span id="address_go">
 <a href="#address_go" style="color: inherit; text-decoration: inherit;">Address</a>
@@ -3898,8 +3517,7 @@ Default `200`.
         <span class="property-type">string</span>
     </dt>
     <dd>{{% md %}}The SFTP address to stream logs to.
-{{% /md %}}</dd>
-    <dt class="property-required"
+{{% /md %}}</dd><dt class="property-required"
             title="Required">
         <span id="name_go">
 <a href="#name_go" style="color: inherit; text-decoration: inherit;">Name</a>
@@ -3908,8 +3526,7 @@ Default `200`.
         <span class="property-type">string</span>
     </dt>
     <dd>{{% md %}}The unique name of the Kinesis logging endpoint.
-{{% /md %}}</dd>
-    <dt class="property-optional"
+{{% /md %}}</dd><dt class="property-optional"
             title="Optional">
         <span id="autoloadbalance_go">
 <a href="#autoloadbalance_go" style="color: inherit; text-decoration: inherit;">Auto<wbr>Loadbalance</a>
@@ -3920,8 +3537,7 @@ Default `200`.
     <dd>{{% md %}}Denotes if this Backend should be
 included in the pool of backends that requests are load balanced against.
 Default `true`.
-{{% /md %}}</dd>
-    <dt class="property-optional"
+{{% /md %}}</dd><dt class="property-optional"
             title="Optional">
         <span id="betweenbytestimeout_go">
 <a href="#betweenbytestimeout_go" style="color: inherit; text-decoration: inherit;">Between<wbr>Bytes<wbr>Timeout</a>
@@ -3930,8 +3546,7 @@ Default `true`.
         <span class="property-type">int</span>
     </dt>
     <dd>{{% md %}}How long to wait between bytes in milliseconds. Default `10000`.
-{{% /md %}}</dd>
-    <dt class="property-optional"
+{{% /md %}}</dd><dt class="property-optional"
             title="Optional">
         <span id="connecttimeout_go">
 <a href="#connecttimeout_go" style="color: inherit; text-decoration: inherit;">Connect<wbr>Timeout</a>
@@ -3941,8 +3556,7 @@ Default `true`.
     </dt>
     <dd>{{% md %}}How long to wait for a timeout in milliseconds.
 Default `1000`
-{{% /md %}}</dd>
-    <dt class="property-optional"
+{{% /md %}}</dd><dt class="property-optional"
             title="Optional">
         <span id="errorthreshold_go">
 <a href="#errorthreshold_go" style="color: inherit; text-decoration: inherit;">Error<wbr>Threshold</a>
@@ -3951,8 +3565,7 @@ Default `1000`
         <span class="property-type">int</span>
     </dt>
     <dd>{{% md %}}Number of errors to allow before the Backend is marked as down. Default `0`.
-{{% /md %}}</dd>
-    <dt class="property-optional"
+{{% /md %}}</dd><dt class="property-optional"
             title="Optional">
         <span id="firstbytetimeout_go">
 <a href="#firstbytetimeout_go" style="color: inherit; text-decoration: inherit;">First<wbr>Byte<wbr>Timeout</a>
@@ -3961,8 +3574,7 @@ Default `1000`
         <span class="property-type">int</span>
     </dt>
     <dd>{{% md %}}How long to wait for the first bytes in milliseconds. Default `15000`.
-{{% /md %}}</dd>
-    <dt class="property-optional"
+{{% /md %}}</dd><dt class="property-optional"
             title="Optional">
         <span id="healthcheck_go">
 <a href="#healthcheck_go" style="color: inherit; text-decoration: inherit;">Healthcheck</a>
@@ -3971,8 +3583,7 @@ Default `1000`
         <span class="property-type">string</span>
     </dt>
     <dd>{{% md %}}Name of a defined `healthcheck` to assign to this backend.
-{{% /md %}}</dd>
-    <dt class="property-optional"
+{{% /md %}}</dd><dt class="property-optional"
             title="Optional">
         <span id="maxconn_go">
 <a href="#maxconn_go" style="color: inherit; text-decoration: inherit;">Max<wbr>Conn</a>
@@ -3982,8 +3593,7 @@ Default `1000`
     </dt>
     <dd>{{% md %}}Maximum number of connections for this Backend.
 Default `200`.
-{{% /md %}}</dd>
-    <dt class="property-optional"
+{{% /md %}}</dd><dt class="property-optional"
             title="Optional">
         <span id="maxtlsversion_go">
 <a href="#maxtlsversion_go" style="color: inherit; text-decoration: inherit;">Max<wbr>Tls<wbr>Version</a>
@@ -3992,8 +3602,7 @@ Default `200`.
         <span class="property-type">string</span>
     </dt>
     <dd>{{% md %}}Maximum allowed TLS version on SSL connections to this backend.
-{{% /md %}}</dd>
-    <dt class="property-optional"
+{{% /md %}}</dd><dt class="property-optional"
             title="Optional">
         <span id="mintlsversion_go">
 <a href="#mintlsversion_go" style="color: inherit; text-decoration: inherit;">Min<wbr>Tls<wbr>Version</a>
@@ -4002,8 +3611,7 @@ Default `200`.
         <span class="property-type">string</span>
     </dt>
     <dd>{{% md %}}Minimum allowed TLS version on SSL connections to this backend.
-{{% /md %}}</dd>
-    <dt class="property-optional"
+{{% /md %}}</dd><dt class="property-optional"
             title="Optional">
         <span id="overridehost_go">
 <a href="#overridehost_go" style="color: inherit; text-decoration: inherit;">Override<wbr>Host</a>
@@ -4012,8 +3620,7 @@ Default `200`.
         <span class="property-type">string</span>
     </dt>
     <dd>{{% md %}}The hostname to override the Host header.
-{{% /md %}}</dd>
-    <dt class="property-optional"
+{{% /md %}}</dd><dt class="property-optional"
             title="Optional">
         <span id="port_go">
 <a href="#port_go" style="color: inherit; text-decoration: inherit;">Port</a>
@@ -4022,8 +3629,7 @@ Default `200`.
         <span class="property-type">int</span>
     </dt>
     <dd>{{% md %}}The port the SFTP service listens on. (Default: `22`).
-{{% /md %}}</dd>
-    <dt class="property-optional"
+{{% /md %}}</dd><dt class="property-optional"
             title="Optional">
         <span id="shield_go">
 <a href="#shield_go" style="color: inherit; text-decoration: inherit;">Shield</a>
@@ -4032,8 +3638,7 @@ Default `200`.
         <span class="property-type">string</span>
     </dt>
     <dd>{{% md %}}The POP of the shield designated to reduce inbound load. Valid values for `shield` are included in the [`GET /datacenters`](https://developer.fastly.com/reference/api/utils/datacenter/) API response.
-{{% /md %}}</dd>
-    <dt class="property-optional"
+{{% /md %}}</dd><dt class="property-optional"
             title="Optional">
         <span id="sslcacert_go">
 <a href="#sslcacert_go" style="color: inherit; text-decoration: inherit;">Ssl<wbr>Ca<wbr>Cert</a>
@@ -4042,8 +3647,7 @@ Default `200`.
         <span class="property-type">string</span>
     </dt>
     <dd>{{% md %}}CA certificate attached to origin.
-{{% /md %}}</dd>
-    <dt class="property-optional"
+{{% /md %}}</dd><dt class="property-optional"
             title="Optional">
         <span id="sslcerthostname_go">
 <a href="#sslcerthostname_go" style="color: inherit; text-decoration: inherit;">Ssl<wbr>Cert<wbr>Hostname</a>
@@ -4052,8 +3656,7 @@ Default `200`.
         <span class="property-type">string</span>
     </dt>
     <dd>{{% md %}}Overrides ssl_hostname, but only for cert verification. Does not affect SNI at all.
-{{% /md %}}</dd>
-    <dt class="property-optional"
+{{% /md %}}</dd><dt class="property-optional"
             title="Optional">
         <span id="sslcheckcert_go">
 <a href="#sslcheckcert_go" style="color: inherit; text-decoration: inherit;">Ssl<wbr>Check<wbr>Cert</a>
@@ -4062,8 +3665,7 @@ Default `200`.
         <span class="property-type">bool</span>
     </dt>
     <dd>{{% md %}}Be strict about checking SSL certs. Default `true`.
-{{% /md %}}</dd>
-    <dt class="property-optional"
+{{% /md %}}</dd><dt class="property-optional"
             title="Optional">
         <span id="sslciphers_go">
 <a href="#sslciphers_go" style="color: inherit; text-decoration: inherit;">Ssl<wbr>Ciphers</a>
@@ -4072,8 +3674,7 @@ Default `200`.
         <span class="property-type">string</span>
     </dt>
     <dd>{{% md %}}Comma separated list of OpenSSL Ciphers to try when negotiating to the backend.
-{{% /md %}}</dd>
-    <dt class="property-optional"
+{{% /md %}}</dd><dt class="property-optional"
             title="Optional">
         <span id="sslclientcert_go">
 <a href="#sslclientcert_go" style="color: inherit; text-decoration: inherit;">Ssl<wbr>Client<wbr>Cert</a>
@@ -4082,8 +3683,7 @@ Default `200`.
         <span class="property-type">string</span>
     </dt>
     <dd>{{% md %}}Client certificate attached to origin. Used when connecting to the backend.
-{{% /md %}}</dd>
-    <dt class="property-optional"
+{{% /md %}}</dd><dt class="property-optional"
             title="Optional">
         <span id="sslclientkey_go">
 <a href="#sslclientkey_go" style="color: inherit; text-decoration: inherit;">Ssl<wbr>Client<wbr>Key</a>
@@ -4092,8 +3692,7 @@ Default `200`.
         <span class="property-type">string</span>
     </dt>
     <dd>{{% md %}}Client key attached to origin. Used when connecting to the backend.
-{{% /md %}}</dd>
-    <dt class="property-optional property-deprecated"
+{{% /md %}}</dd><dt class="property-optional property-deprecated"
             title="Optional, Deprecated">
         <span id="sslhostname_go">
 <a href="#sslhostname_go" style="color: inherit; text-decoration: inherit;">Ssl<wbr>Hostname</a>
@@ -4102,8 +3701,7 @@ Default `200`.
         <span class="property-type">string</span>
     </dt>
     <dd>{{% md %}}Used for both SNI during the TLS handshake and to validate the cert.
-{{% /md %}}<p class="property-message">Deprecated: {{% md %}}Use ssl_cert_hostname and ssl_sni_hostname instead.{{% /md %}}</p></dd>
-    <dt class="property-optional"
+{{% /md %}}<p class="property-message">Deprecated: {{% md %}}Use ssl_cert_hostname and ssl_sni_hostname instead.{{% /md %}}</p></dd><dt class="property-optional"
             title="Optional">
         <span id="sslsnihostname_go">
 <a href="#sslsnihostname_go" style="color: inherit; text-decoration: inherit;">Ssl<wbr>Sni<wbr>Hostname</a>
@@ -4112,8 +3710,7 @@ Default `200`.
         <span class="property-type">string</span>
     </dt>
     <dd>{{% md %}}Overrides ssl_hostname, but only for SNI in the handshake. Does not affect cert validation at all.
-{{% /md %}}</dd>
-    <dt class="property-optional"
+{{% /md %}}</dd><dt class="property-optional"
             title="Optional">
         <span id="usessl_go">
 <a href="#usessl_go" style="color: inherit; text-decoration: inherit;">Use<wbr>Ssl</a>
@@ -4122,8 +3719,7 @@ Default `200`.
         <span class="property-type">bool</span>
     </dt>
     <dd>{{% md %}}Whether or not to use SSL to reach the backend. Default `false`.
-{{% /md %}}</dd>
-    <dt class="property-optional"
+{{% /md %}}</dd><dt class="property-optional"
             title="Optional">
         <span id="weight_go">
 <a href="#weight_go" style="color: inherit; text-decoration: inherit;">Weight</a>
@@ -4132,14 +3728,11 @@ Default `200`.
         <span class="property-type">int</span>
     </dt>
     <dd>{{% md %}}The [portion of traffic](https://docs.fastly.com/en/guides/load-balancing-configuration#how-weight-affects-load-balancing) to send to this Backend. Each Backend receives `weight / total` of the traffic. Default `100`.
-{{% /md %}}</dd>
-</dl>
+{{% /md %}}</dd></dl>
 {{% /choosable %}}
 
 {{% choosable language nodejs %}}
-<dl class="resources-properties">
-
-    <dt class="property-required"
+<dl class="resources-properties"><dt class="property-required"
             title="Required">
         <span id="address_nodejs">
 <a href="#address_nodejs" style="color: inherit; text-decoration: inherit;">address</a>
@@ -4148,8 +3741,7 @@ Default `200`.
         <span class="property-type">string</span>
     </dt>
     <dd>{{% md %}}The SFTP address to stream logs to.
-{{% /md %}}</dd>
-    <dt class="property-required"
+{{% /md %}}</dd><dt class="property-required"
             title="Required">
         <span id="name_nodejs">
 <a href="#name_nodejs" style="color: inherit; text-decoration: inherit;">name</a>
@@ -4158,8 +3750,7 @@ Default `200`.
         <span class="property-type">string</span>
     </dt>
     <dd>{{% md %}}The unique name of the Kinesis logging endpoint.
-{{% /md %}}</dd>
-    <dt class="property-optional"
+{{% /md %}}</dd><dt class="property-optional"
             title="Optional">
         <span id="autoloadbalance_nodejs">
 <a href="#autoloadbalance_nodejs" style="color: inherit; text-decoration: inherit;">auto<wbr>Loadbalance</a>
@@ -4170,8 +3761,7 @@ Default `200`.
     <dd>{{% md %}}Denotes if this Backend should be
 included in the pool of backends that requests are load balanced against.
 Default `true`.
-{{% /md %}}</dd>
-    <dt class="property-optional"
+{{% /md %}}</dd><dt class="property-optional"
             title="Optional">
         <span id="betweenbytestimeout_nodejs">
 <a href="#betweenbytestimeout_nodejs" style="color: inherit; text-decoration: inherit;">between<wbr>Bytes<wbr>Timeout</a>
@@ -4180,8 +3770,7 @@ Default `true`.
         <span class="property-type">number</span>
     </dt>
     <dd>{{% md %}}How long to wait between bytes in milliseconds. Default `10000`.
-{{% /md %}}</dd>
-    <dt class="property-optional"
+{{% /md %}}</dd><dt class="property-optional"
             title="Optional">
         <span id="connecttimeout_nodejs">
 <a href="#connecttimeout_nodejs" style="color: inherit; text-decoration: inherit;">connect<wbr>Timeout</a>
@@ -4191,8 +3780,7 @@ Default `true`.
     </dt>
     <dd>{{% md %}}How long to wait for a timeout in milliseconds.
 Default `1000`
-{{% /md %}}</dd>
-    <dt class="property-optional"
+{{% /md %}}</dd><dt class="property-optional"
             title="Optional">
         <span id="errorthreshold_nodejs">
 <a href="#errorthreshold_nodejs" style="color: inherit; text-decoration: inherit;">error<wbr>Threshold</a>
@@ -4201,8 +3789,7 @@ Default `1000`
         <span class="property-type">number</span>
     </dt>
     <dd>{{% md %}}Number of errors to allow before the Backend is marked as down. Default `0`.
-{{% /md %}}</dd>
-    <dt class="property-optional"
+{{% /md %}}</dd><dt class="property-optional"
             title="Optional">
         <span id="firstbytetimeout_nodejs">
 <a href="#firstbytetimeout_nodejs" style="color: inherit; text-decoration: inherit;">first<wbr>Byte<wbr>Timeout</a>
@@ -4211,8 +3798,7 @@ Default `1000`
         <span class="property-type">number</span>
     </dt>
     <dd>{{% md %}}How long to wait for the first bytes in milliseconds. Default `15000`.
-{{% /md %}}</dd>
-    <dt class="property-optional"
+{{% /md %}}</dd><dt class="property-optional"
             title="Optional">
         <span id="healthcheck_nodejs">
 <a href="#healthcheck_nodejs" style="color: inherit; text-decoration: inherit;">healthcheck</a>
@@ -4221,8 +3807,7 @@ Default `1000`
         <span class="property-type">string</span>
     </dt>
     <dd>{{% md %}}Name of a defined `healthcheck` to assign to this backend.
-{{% /md %}}</dd>
-    <dt class="property-optional"
+{{% /md %}}</dd><dt class="property-optional"
             title="Optional">
         <span id="maxconn_nodejs">
 <a href="#maxconn_nodejs" style="color: inherit; text-decoration: inherit;">max<wbr>Conn</a>
@@ -4232,8 +3817,7 @@ Default `1000`
     </dt>
     <dd>{{% md %}}Maximum number of connections for this Backend.
 Default `200`.
-{{% /md %}}</dd>
-    <dt class="property-optional"
+{{% /md %}}</dd><dt class="property-optional"
             title="Optional">
         <span id="maxtlsversion_nodejs">
 <a href="#maxtlsversion_nodejs" style="color: inherit; text-decoration: inherit;">max<wbr>Tls<wbr>Version</a>
@@ -4242,8 +3826,7 @@ Default `200`.
         <span class="property-type">string</span>
     </dt>
     <dd>{{% md %}}Maximum allowed TLS version on SSL connections to this backend.
-{{% /md %}}</dd>
-    <dt class="property-optional"
+{{% /md %}}</dd><dt class="property-optional"
             title="Optional">
         <span id="mintlsversion_nodejs">
 <a href="#mintlsversion_nodejs" style="color: inherit; text-decoration: inherit;">min<wbr>Tls<wbr>Version</a>
@@ -4252,8 +3835,7 @@ Default `200`.
         <span class="property-type">string</span>
     </dt>
     <dd>{{% md %}}Minimum allowed TLS version on SSL connections to this backend.
-{{% /md %}}</dd>
-    <dt class="property-optional"
+{{% /md %}}</dd><dt class="property-optional"
             title="Optional">
         <span id="overridehost_nodejs">
 <a href="#overridehost_nodejs" style="color: inherit; text-decoration: inherit;">override<wbr>Host</a>
@@ -4262,8 +3844,7 @@ Default `200`.
         <span class="property-type">string</span>
     </dt>
     <dd>{{% md %}}The hostname to override the Host header.
-{{% /md %}}</dd>
-    <dt class="property-optional"
+{{% /md %}}</dd><dt class="property-optional"
             title="Optional">
         <span id="port_nodejs">
 <a href="#port_nodejs" style="color: inherit; text-decoration: inherit;">port</a>
@@ -4272,8 +3853,7 @@ Default `200`.
         <span class="property-type">number</span>
     </dt>
     <dd>{{% md %}}The port the SFTP service listens on. (Default: `22`).
-{{% /md %}}</dd>
-    <dt class="property-optional"
+{{% /md %}}</dd><dt class="property-optional"
             title="Optional">
         <span id="shield_nodejs">
 <a href="#shield_nodejs" style="color: inherit; text-decoration: inherit;">shield</a>
@@ -4282,8 +3862,7 @@ Default `200`.
         <span class="property-type">string</span>
     </dt>
     <dd>{{% md %}}The POP of the shield designated to reduce inbound load. Valid values for `shield` are included in the [`GET /datacenters`](https://developer.fastly.com/reference/api/utils/datacenter/) API response.
-{{% /md %}}</dd>
-    <dt class="property-optional"
+{{% /md %}}</dd><dt class="property-optional"
             title="Optional">
         <span id="sslcacert_nodejs">
 <a href="#sslcacert_nodejs" style="color: inherit; text-decoration: inherit;">ssl<wbr>Ca<wbr>Cert</a>
@@ -4292,8 +3871,7 @@ Default `200`.
         <span class="property-type">string</span>
     </dt>
     <dd>{{% md %}}CA certificate attached to origin.
-{{% /md %}}</dd>
-    <dt class="property-optional"
+{{% /md %}}</dd><dt class="property-optional"
             title="Optional">
         <span id="sslcerthostname_nodejs">
 <a href="#sslcerthostname_nodejs" style="color: inherit; text-decoration: inherit;">ssl<wbr>Cert<wbr>Hostname</a>
@@ -4302,8 +3880,7 @@ Default `200`.
         <span class="property-type">string</span>
     </dt>
     <dd>{{% md %}}Overrides ssl_hostname, but only for cert verification. Does not affect SNI at all.
-{{% /md %}}</dd>
-    <dt class="property-optional"
+{{% /md %}}</dd><dt class="property-optional"
             title="Optional">
         <span id="sslcheckcert_nodejs">
 <a href="#sslcheckcert_nodejs" style="color: inherit; text-decoration: inherit;">ssl<wbr>Check<wbr>Cert</a>
@@ -4312,8 +3889,7 @@ Default `200`.
         <span class="property-type">boolean</span>
     </dt>
     <dd>{{% md %}}Be strict about checking SSL certs. Default `true`.
-{{% /md %}}</dd>
-    <dt class="property-optional"
+{{% /md %}}</dd><dt class="property-optional"
             title="Optional">
         <span id="sslciphers_nodejs">
 <a href="#sslciphers_nodejs" style="color: inherit; text-decoration: inherit;">ssl<wbr>Ciphers</a>
@@ -4322,8 +3898,7 @@ Default `200`.
         <span class="property-type">string</span>
     </dt>
     <dd>{{% md %}}Comma separated list of OpenSSL Ciphers to try when negotiating to the backend.
-{{% /md %}}</dd>
-    <dt class="property-optional"
+{{% /md %}}</dd><dt class="property-optional"
             title="Optional">
         <span id="sslclientcert_nodejs">
 <a href="#sslclientcert_nodejs" style="color: inherit; text-decoration: inherit;">ssl<wbr>Client<wbr>Cert</a>
@@ -4332,8 +3907,7 @@ Default `200`.
         <span class="property-type">string</span>
     </dt>
     <dd>{{% md %}}Client certificate attached to origin. Used when connecting to the backend.
-{{% /md %}}</dd>
-    <dt class="property-optional"
+{{% /md %}}</dd><dt class="property-optional"
             title="Optional">
         <span id="sslclientkey_nodejs">
 <a href="#sslclientkey_nodejs" style="color: inherit; text-decoration: inherit;">ssl<wbr>Client<wbr>Key</a>
@@ -4342,8 +3916,7 @@ Default `200`.
         <span class="property-type">string</span>
     </dt>
     <dd>{{% md %}}Client key attached to origin. Used when connecting to the backend.
-{{% /md %}}</dd>
-    <dt class="property-optional property-deprecated"
+{{% /md %}}</dd><dt class="property-optional property-deprecated"
             title="Optional, Deprecated">
         <span id="sslhostname_nodejs">
 <a href="#sslhostname_nodejs" style="color: inherit; text-decoration: inherit;">ssl<wbr>Hostname</a>
@@ -4352,8 +3925,7 @@ Default `200`.
         <span class="property-type">string</span>
     </dt>
     <dd>{{% md %}}Used for both SNI during the TLS handshake and to validate the cert.
-{{% /md %}}<p class="property-message">Deprecated: {{% md %}}Use ssl_cert_hostname and ssl_sni_hostname instead.{{% /md %}}</p></dd>
-    <dt class="property-optional"
+{{% /md %}}<p class="property-message">Deprecated: {{% md %}}Use ssl_cert_hostname and ssl_sni_hostname instead.{{% /md %}}</p></dd><dt class="property-optional"
             title="Optional">
         <span id="sslsnihostname_nodejs">
 <a href="#sslsnihostname_nodejs" style="color: inherit; text-decoration: inherit;">ssl<wbr>Sni<wbr>Hostname</a>
@@ -4362,8 +3934,7 @@ Default `200`.
         <span class="property-type">string</span>
     </dt>
     <dd>{{% md %}}Overrides ssl_hostname, but only for SNI in the handshake. Does not affect cert validation at all.
-{{% /md %}}</dd>
-    <dt class="property-optional"
+{{% /md %}}</dd><dt class="property-optional"
             title="Optional">
         <span id="usessl_nodejs">
 <a href="#usessl_nodejs" style="color: inherit; text-decoration: inherit;">use<wbr>Ssl</a>
@@ -4372,8 +3943,7 @@ Default `200`.
         <span class="property-type">boolean</span>
     </dt>
     <dd>{{% md %}}Whether or not to use SSL to reach the backend. Default `false`.
-{{% /md %}}</dd>
-    <dt class="property-optional"
+{{% /md %}}</dd><dt class="property-optional"
             title="Optional">
         <span id="weight_nodejs">
 <a href="#weight_nodejs" style="color: inherit; text-decoration: inherit;">weight</a>
@@ -4382,14 +3952,11 @@ Default `200`.
         <span class="property-type">number</span>
     </dt>
     <dd>{{% md %}}The [portion of traffic](https://docs.fastly.com/en/guides/load-balancing-configuration#how-weight-affects-load-balancing) to send to this Backend. Each Backend receives `weight / total` of the traffic. Default `100`.
-{{% /md %}}</dd>
-</dl>
+{{% /md %}}</dd></dl>
 {{% /choosable %}}
 
 {{% choosable language python %}}
-<dl class="resources-properties">
-
-    <dt class="property-required"
+<dl class="resources-properties"><dt class="property-required"
             title="Required">
         <span id="address_python">
 <a href="#address_python" style="color: inherit; text-decoration: inherit;">address</a>
@@ -4398,8 +3965,7 @@ Default `200`.
         <span class="property-type">str</span>
     </dt>
     <dd>{{% md %}}The SFTP address to stream logs to.
-{{% /md %}}</dd>
-    <dt class="property-required"
+{{% /md %}}</dd><dt class="property-required"
             title="Required">
         <span id="name_python">
 <a href="#name_python" style="color: inherit; text-decoration: inherit;">name</a>
@@ -4408,8 +3974,7 @@ Default `200`.
         <span class="property-type">str</span>
     </dt>
     <dd>{{% md %}}The unique name of the Kinesis logging endpoint.
-{{% /md %}}</dd>
-    <dt class="property-optional"
+{{% /md %}}</dd><dt class="property-optional"
             title="Optional">
         <span id="auto_loadbalance_python">
 <a href="#auto_loadbalance_python" style="color: inherit; text-decoration: inherit;">auto_<wbr>loadbalance</a>
@@ -4420,8 +3985,7 @@ Default `200`.
     <dd>{{% md %}}Denotes if this Backend should be
 included in the pool of backends that requests are load balanced against.
 Default `true`.
-{{% /md %}}</dd>
-    <dt class="property-optional"
+{{% /md %}}</dd><dt class="property-optional"
             title="Optional">
         <span id="between_bytes_timeout_python">
 <a href="#between_bytes_timeout_python" style="color: inherit; text-decoration: inherit;">between_<wbr>bytes_<wbr>timeout</a>
@@ -4430,8 +3994,7 @@ Default `true`.
         <span class="property-type">int</span>
     </dt>
     <dd>{{% md %}}How long to wait between bytes in milliseconds. Default `10000`.
-{{% /md %}}</dd>
-    <dt class="property-optional"
+{{% /md %}}</dd><dt class="property-optional"
             title="Optional">
         <span id="connect_timeout_python">
 <a href="#connect_timeout_python" style="color: inherit; text-decoration: inherit;">connect_<wbr>timeout</a>
@@ -4441,8 +4004,7 @@ Default `true`.
     </dt>
     <dd>{{% md %}}How long to wait for a timeout in milliseconds.
 Default `1000`
-{{% /md %}}</dd>
-    <dt class="property-optional"
+{{% /md %}}</dd><dt class="property-optional"
             title="Optional">
         <span id="error_threshold_python">
 <a href="#error_threshold_python" style="color: inherit; text-decoration: inherit;">error_<wbr>threshold</a>
@@ -4451,8 +4013,7 @@ Default `1000`
         <span class="property-type">int</span>
     </dt>
     <dd>{{% md %}}Number of errors to allow before the Backend is marked as down. Default `0`.
-{{% /md %}}</dd>
-    <dt class="property-optional"
+{{% /md %}}</dd><dt class="property-optional"
             title="Optional">
         <span id="first_byte_timeout_python">
 <a href="#first_byte_timeout_python" style="color: inherit; text-decoration: inherit;">first_<wbr>byte_<wbr>timeout</a>
@@ -4461,8 +4022,7 @@ Default `1000`
         <span class="property-type">int</span>
     </dt>
     <dd>{{% md %}}How long to wait for the first bytes in milliseconds. Default `15000`.
-{{% /md %}}</dd>
-    <dt class="property-optional"
+{{% /md %}}</dd><dt class="property-optional"
             title="Optional">
         <span id="healthcheck_python">
 <a href="#healthcheck_python" style="color: inherit; text-decoration: inherit;">healthcheck</a>
@@ -4471,8 +4031,7 @@ Default `1000`
         <span class="property-type">str</span>
     </dt>
     <dd>{{% md %}}Name of a defined `healthcheck` to assign to this backend.
-{{% /md %}}</dd>
-    <dt class="property-optional"
+{{% /md %}}</dd><dt class="property-optional"
             title="Optional">
         <span id="max_conn_python">
 <a href="#max_conn_python" style="color: inherit; text-decoration: inherit;">max_<wbr>conn</a>
@@ -4482,8 +4041,7 @@ Default `1000`
     </dt>
     <dd>{{% md %}}Maximum number of connections for this Backend.
 Default `200`.
-{{% /md %}}</dd>
-    <dt class="property-optional"
+{{% /md %}}</dd><dt class="property-optional"
             title="Optional">
         <span id="max_tls_version_python">
 <a href="#max_tls_version_python" style="color: inherit; text-decoration: inherit;">max_<wbr>tls_<wbr>version</a>
@@ -4492,8 +4050,7 @@ Default `200`.
         <span class="property-type">str</span>
     </dt>
     <dd>{{% md %}}Maximum allowed TLS version on SSL connections to this backend.
-{{% /md %}}</dd>
-    <dt class="property-optional"
+{{% /md %}}</dd><dt class="property-optional"
             title="Optional">
         <span id="min_tls_version_python">
 <a href="#min_tls_version_python" style="color: inherit; text-decoration: inherit;">min_<wbr>tls_<wbr>version</a>
@@ -4502,8 +4059,7 @@ Default `200`.
         <span class="property-type">str</span>
     </dt>
     <dd>{{% md %}}Minimum allowed TLS version on SSL connections to this backend.
-{{% /md %}}</dd>
-    <dt class="property-optional"
+{{% /md %}}</dd><dt class="property-optional"
             title="Optional">
         <span id="override_host_python">
 <a href="#override_host_python" style="color: inherit; text-decoration: inherit;">override_<wbr>host</a>
@@ -4512,8 +4068,7 @@ Default `200`.
         <span class="property-type">str</span>
     </dt>
     <dd>{{% md %}}The hostname to override the Host header.
-{{% /md %}}</dd>
-    <dt class="property-optional"
+{{% /md %}}</dd><dt class="property-optional"
             title="Optional">
         <span id="port_python">
 <a href="#port_python" style="color: inherit; text-decoration: inherit;">port</a>
@@ -4522,8 +4077,7 @@ Default `200`.
         <span class="property-type">int</span>
     </dt>
     <dd>{{% md %}}The port the SFTP service listens on. (Default: `22`).
-{{% /md %}}</dd>
-    <dt class="property-optional"
+{{% /md %}}</dd><dt class="property-optional"
             title="Optional">
         <span id="shield_python">
 <a href="#shield_python" style="color: inherit; text-decoration: inherit;">shield</a>
@@ -4532,8 +4086,7 @@ Default `200`.
         <span class="property-type">str</span>
     </dt>
     <dd>{{% md %}}The POP of the shield designated to reduce inbound load. Valid values for `shield` are included in the [`GET /datacenters`](https://developer.fastly.com/reference/api/utils/datacenter/) API response.
-{{% /md %}}</dd>
-    <dt class="property-optional"
+{{% /md %}}</dd><dt class="property-optional"
             title="Optional">
         <span id="ssl_ca_cert_python">
 <a href="#ssl_ca_cert_python" style="color: inherit; text-decoration: inherit;">ssl_<wbr>ca_<wbr>cert</a>
@@ -4542,8 +4095,7 @@ Default `200`.
         <span class="property-type">str</span>
     </dt>
     <dd>{{% md %}}CA certificate attached to origin.
-{{% /md %}}</dd>
-    <dt class="property-optional"
+{{% /md %}}</dd><dt class="property-optional"
             title="Optional">
         <span id="ssl_cert_hostname_python">
 <a href="#ssl_cert_hostname_python" style="color: inherit; text-decoration: inherit;">ssl_<wbr>cert_<wbr>hostname</a>
@@ -4552,8 +4104,7 @@ Default `200`.
         <span class="property-type">str</span>
     </dt>
     <dd>{{% md %}}Overrides ssl_hostname, but only for cert verification. Does not affect SNI at all.
-{{% /md %}}</dd>
-    <dt class="property-optional"
+{{% /md %}}</dd><dt class="property-optional"
             title="Optional">
         <span id="ssl_check_cert_python">
 <a href="#ssl_check_cert_python" style="color: inherit; text-decoration: inherit;">ssl_<wbr>check_<wbr>cert</a>
@@ -4562,8 +4113,7 @@ Default `200`.
         <span class="property-type">bool</span>
     </dt>
     <dd>{{% md %}}Be strict about checking SSL certs. Default `true`.
-{{% /md %}}</dd>
-    <dt class="property-optional"
+{{% /md %}}</dd><dt class="property-optional"
             title="Optional">
         <span id="ssl_ciphers_python">
 <a href="#ssl_ciphers_python" style="color: inherit; text-decoration: inherit;">ssl_<wbr>ciphers</a>
@@ -4572,8 +4122,7 @@ Default `200`.
         <span class="property-type">str</span>
     </dt>
     <dd>{{% md %}}Comma separated list of OpenSSL Ciphers to try when negotiating to the backend.
-{{% /md %}}</dd>
-    <dt class="property-optional"
+{{% /md %}}</dd><dt class="property-optional"
             title="Optional">
         <span id="ssl_client_cert_python">
 <a href="#ssl_client_cert_python" style="color: inherit; text-decoration: inherit;">ssl_<wbr>client_<wbr>cert</a>
@@ -4582,8 +4131,7 @@ Default `200`.
         <span class="property-type">str</span>
     </dt>
     <dd>{{% md %}}Client certificate attached to origin. Used when connecting to the backend.
-{{% /md %}}</dd>
-    <dt class="property-optional"
+{{% /md %}}</dd><dt class="property-optional"
             title="Optional">
         <span id="ssl_client_key_python">
 <a href="#ssl_client_key_python" style="color: inherit; text-decoration: inherit;">ssl_<wbr>client_<wbr>key</a>
@@ -4592,8 +4140,7 @@ Default `200`.
         <span class="property-type">str</span>
     </dt>
     <dd>{{% md %}}Client key attached to origin. Used when connecting to the backend.
-{{% /md %}}</dd>
-    <dt class="property-optional property-deprecated"
+{{% /md %}}</dd><dt class="property-optional property-deprecated"
             title="Optional, Deprecated">
         <span id="ssl_hostname_python">
 <a href="#ssl_hostname_python" style="color: inherit; text-decoration: inherit;">ssl_<wbr>hostname</a>
@@ -4602,8 +4149,7 @@ Default `200`.
         <span class="property-type">str</span>
     </dt>
     <dd>{{% md %}}Used for both SNI during the TLS handshake and to validate the cert.
-{{% /md %}}<p class="property-message">Deprecated: {{% md %}}Use ssl_cert_hostname and ssl_sni_hostname instead.{{% /md %}}</p></dd>
-    <dt class="property-optional"
+{{% /md %}}<p class="property-message">Deprecated: {{% md %}}Use ssl_cert_hostname and ssl_sni_hostname instead.{{% /md %}}</p></dd><dt class="property-optional"
             title="Optional">
         <span id="ssl_sni_hostname_python">
 <a href="#ssl_sni_hostname_python" style="color: inherit; text-decoration: inherit;">ssl_<wbr>sni_<wbr>hostname</a>
@@ -4612,8 +4158,7 @@ Default `200`.
         <span class="property-type">str</span>
     </dt>
     <dd>{{% md %}}Overrides ssl_hostname, but only for SNI in the handshake. Does not affect cert validation at all.
-{{% /md %}}</dd>
-    <dt class="property-optional"
+{{% /md %}}</dd><dt class="property-optional"
             title="Optional">
         <span id="use_ssl_python">
 <a href="#use_ssl_python" style="color: inherit; text-decoration: inherit;">use_<wbr>ssl</a>
@@ -4622,8 +4167,7 @@ Default `200`.
         <span class="property-type">bool</span>
     </dt>
     <dd>{{% md %}}Whether or not to use SSL to reach the backend. Default `false`.
-{{% /md %}}</dd>
-    <dt class="property-optional"
+{{% /md %}}</dd><dt class="property-optional"
             title="Optional">
         <span id="weight_python">
 <a href="#weight_python" style="color: inherit; text-decoration: inherit;">weight</a>
@@ -4632,16 +4176,13 @@ Default `200`.
         <span class="property-type">int</span>
     </dt>
     <dd>{{% md %}}The [portion of traffic](https://docs.fastly.com/en/guides/load-balancing-configuration#how-weight-affects-load-balancing) to send to this Backend. Each Backend receives `weight / total` of the traffic. Default `100`.
-{{% /md %}}</dd>
-</dl>
+{{% /md %}}</dd></dl>
 {{% /choosable %}}
 
 <h4 id="servicecomputebigquerylogging">Service<wbr>Compute<wbr>Bigquerylogging</h4>
 
 {{% choosable language csharp %}}
-<dl class="resources-properties">
-
-    <dt class="property-required"
+<dl class="resources-properties"><dt class="property-required"
             title="Required">
         <span id="dataset_csharp">
 <a href="#dataset_csharp" style="color: inherit; text-decoration: inherit;">Dataset</a>
@@ -4650,8 +4191,7 @@ Default `200`.
         <span class="property-type">string</span>
     </dt>
     <dd>{{% md %}}The Honeycomb Dataset you want to log to.
-{{% /md %}}</dd>
-    <dt class="property-required"
+{{% /md %}}</dd><dt class="property-required"
             title="Required">
         <span id="email_csharp">
 <a href="#email_csharp" style="color: inherit; text-decoration: inherit;">Email</a>
@@ -4660,8 +4200,7 @@ Default `200`.
         <span class="property-type">string</span>
     </dt>
     <dd>{{% md %}}The email for the service account with write access to your BigQuery dataset. If not provided, this will be pulled from a `FASTLY_BQ_EMAIL` environment variable.
-{{% /md %}}</dd>
-    <dt class="property-required"
+{{% /md %}}</dd><dt class="property-required"
             title="Required">
         <span id="name_csharp">
 <a href="#name_csharp" style="color: inherit; text-decoration: inherit;">Name</a>
@@ -4670,8 +4209,7 @@ Default `200`.
         <span class="property-type">string</span>
     </dt>
     <dd>{{% md %}}The unique name of the Kinesis logging endpoint.
-{{% /md %}}</dd>
-    <dt class="property-required"
+{{% /md %}}</dd><dt class="property-required"
             title="Required">
         <span id="projectid_csharp">
 <a href="#projectid_csharp" style="color: inherit; text-decoration: inherit;">Project<wbr>Id</a>
@@ -4680,8 +4218,7 @@ Default `200`.
         <span class="property-type">string</span>
     </dt>
     <dd>{{% md %}}The ID of your Google Cloud Platform project.
-{{% /md %}}</dd>
-    <dt class="property-required"
+{{% /md %}}</dd><dt class="property-required"
             title="Required">
         <span id="secretkey_csharp">
 <a href="#secretkey_csharp" style="color: inherit; text-decoration: inherit;">Secret<wbr>Key</a>
@@ -4690,8 +4227,7 @@ Default `200`.
         <span class="property-type">string</span>
     </dt>
     <dd>{{% md %}}The AWS secret access key to authenticate with.
-{{% /md %}}</dd>
-    <dt class="property-required"
+{{% /md %}}</dd><dt class="property-required"
             title="Required">
         <span id="table_csharp">
 <a href="#table_csharp" style="color: inherit; text-decoration: inherit;">Table</a>
@@ -4700,8 +4236,7 @@ Default `200`.
         <span class="property-type">string</span>
     </dt>
     <dd>{{% md %}}The ID of your BigQuery table.
-{{% /md %}}</dd>
-    <dt class="property-optional"
+{{% /md %}}</dd><dt class="property-optional"
             title="Optional">
         <span id="template_csharp">
 <a href="#template_csharp" style="color: inherit; text-decoration: inherit;">Template</a>
@@ -4709,14 +4244,11 @@ Default `200`.
         <span class="property-indicator"></span>
         <span class="property-type">string</span>
     </dt>
-    <dd>{{% md %}}{{% /md %}}</dd>
-</dl>
+    <dd>{{% md %}}{{% /md %}}</dd></dl>
 {{% /choosable %}}
 
 {{% choosable language go %}}
-<dl class="resources-properties">
-
-    <dt class="property-required"
+<dl class="resources-properties"><dt class="property-required"
             title="Required">
         <span id="dataset_go">
 <a href="#dataset_go" style="color: inherit; text-decoration: inherit;">Dataset</a>
@@ -4725,8 +4257,7 @@ Default `200`.
         <span class="property-type">string</span>
     </dt>
     <dd>{{% md %}}The Honeycomb Dataset you want to log to.
-{{% /md %}}</dd>
-    <dt class="property-required"
+{{% /md %}}</dd><dt class="property-required"
             title="Required">
         <span id="email_go">
 <a href="#email_go" style="color: inherit; text-decoration: inherit;">Email</a>
@@ -4735,8 +4266,7 @@ Default `200`.
         <span class="property-type">string</span>
     </dt>
     <dd>{{% md %}}The email for the service account with write access to your BigQuery dataset. If not provided, this will be pulled from a `FASTLY_BQ_EMAIL` environment variable.
-{{% /md %}}</dd>
-    <dt class="property-required"
+{{% /md %}}</dd><dt class="property-required"
             title="Required">
         <span id="name_go">
 <a href="#name_go" style="color: inherit; text-decoration: inherit;">Name</a>
@@ -4745,8 +4275,7 @@ Default `200`.
         <span class="property-type">string</span>
     </dt>
     <dd>{{% md %}}The unique name of the Kinesis logging endpoint.
-{{% /md %}}</dd>
-    <dt class="property-required"
+{{% /md %}}</dd><dt class="property-required"
             title="Required">
         <span id="projectid_go">
 <a href="#projectid_go" style="color: inherit; text-decoration: inherit;">Project<wbr>Id</a>
@@ -4755,8 +4284,7 @@ Default `200`.
         <span class="property-type">string</span>
     </dt>
     <dd>{{% md %}}The ID of your Google Cloud Platform project.
-{{% /md %}}</dd>
-    <dt class="property-required"
+{{% /md %}}</dd><dt class="property-required"
             title="Required">
         <span id="secretkey_go">
 <a href="#secretkey_go" style="color: inherit; text-decoration: inherit;">Secret<wbr>Key</a>
@@ -4765,8 +4293,7 @@ Default `200`.
         <span class="property-type">string</span>
     </dt>
     <dd>{{% md %}}The AWS secret access key to authenticate with.
-{{% /md %}}</dd>
-    <dt class="property-required"
+{{% /md %}}</dd><dt class="property-required"
             title="Required">
         <span id="table_go">
 <a href="#table_go" style="color: inherit; text-decoration: inherit;">Table</a>
@@ -4775,8 +4302,7 @@ Default `200`.
         <span class="property-type">string</span>
     </dt>
     <dd>{{% md %}}The ID of your BigQuery table.
-{{% /md %}}</dd>
-    <dt class="property-optional"
+{{% /md %}}</dd><dt class="property-optional"
             title="Optional">
         <span id="template_go">
 <a href="#template_go" style="color: inherit; text-decoration: inherit;">Template</a>
@@ -4784,14 +4310,11 @@ Default `200`.
         <span class="property-indicator"></span>
         <span class="property-type">string</span>
     </dt>
-    <dd>{{% md %}}{{% /md %}}</dd>
-</dl>
+    <dd>{{% md %}}{{% /md %}}</dd></dl>
 {{% /choosable %}}
 
 {{% choosable language nodejs %}}
-<dl class="resources-properties">
-
-    <dt class="property-required"
+<dl class="resources-properties"><dt class="property-required"
             title="Required">
         <span id="dataset_nodejs">
 <a href="#dataset_nodejs" style="color: inherit; text-decoration: inherit;">dataset</a>
@@ -4800,8 +4323,7 @@ Default `200`.
         <span class="property-type">string</span>
     </dt>
     <dd>{{% md %}}The Honeycomb Dataset you want to log to.
-{{% /md %}}</dd>
-    <dt class="property-required"
+{{% /md %}}</dd><dt class="property-required"
             title="Required">
         <span id="email_nodejs">
 <a href="#email_nodejs" style="color: inherit; text-decoration: inherit;">email</a>
@@ -4810,8 +4332,7 @@ Default `200`.
         <span class="property-type">string</span>
     </dt>
     <dd>{{% md %}}The email for the service account with write access to your BigQuery dataset. If not provided, this will be pulled from a `FASTLY_BQ_EMAIL` environment variable.
-{{% /md %}}</dd>
-    <dt class="property-required"
+{{% /md %}}</dd><dt class="property-required"
             title="Required">
         <span id="name_nodejs">
 <a href="#name_nodejs" style="color: inherit; text-decoration: inherit;">name</a>
@@ -4820,8 +4341,7 @@ Default `200`.
         <span class="property-type">string</span>
     </dt>
     <dd>{{% md %}}The unique name of the Kinesis logging endpoint.
-{{% /md %}}</dd>
-    <dt class="property-required"
+{{% /md %}}</dd><dt class="property-required"
             title="Required">
         <span id="projectid_nodejs">
 <a href="#projectid_nodejs" style="color: inherit; text-decoration: inherit;">project<wbr>Id</a>
@@ -4830,8 +4350,7 @@ Default `200`.
         <span class="property-type">string</span>
     </dt>
     <dd>{{% md %}}The ID of your Google Cloud Platform project.
-{{% /md %}}</dd>
-    <dt class="property-required"
+{{% /md %}}</dd><dt class="property-required"
             title="Required">
         <span id="secretkey_nodejs">
 <a href="#secretkey_nodejs" style="color: inherit; text-decoration: inherit;">secret<wbr>Key</a>
@@ -4840,8 +4359,7 @@ Default `200`.
         <span class="property-type">string</span>
     </dt>
     <dd>{{% md %}}The AWS secret access key to authenticate with.
-{{% /md %}}</dd>
-    <dt class="property-required"
+{{% /md %}}</dd><dt class="property-required"
             title="Required">
         <span id="table_nodejs">
 <a href="#table_nodejs" style="color: inherit; text-decoration: inherit;">table</a>
@@ -4850,8 +4368,7 @@ Default `200`.
         <span class="property-type">string</span>
     </dt>
     <dd>{{% md %}}The ID of your BigQuery table.
-{{% /md %}}</dd>
-    <dt class="property-optional"
+{{% /md %}}</dd><dt class="property-optional"
             title="Optional">
         <span id="template_nodejs">
 <a href="#template_nodejs" style="color: inherit; text-decoration: inherit;">template</a>
@@ -4859,14 +4376,11 @@ Default `200`.
         <span class="property-indicator"></span>
         <span class="property-type">string</span>
     </dt>
-    <dd>{{% md %}}{{% /md %}}</dd>
-</dl>
+    <dd>{{% md %}}{{% /md %}}</dd></dl>
 {{% /choosable %}}
 
 {{% choosable language python %}}
-<dl class="resources-properties">
-
-    <dt class="property-required"
+<dl class="resources-properties"><dt class="property-required"
             title="Required">
         <span id="dataset_python">
 <a href="#dataset_python" style="color: inherit; text-decoration: inherit;">dataset</a>
@@ -4875,8 +4389,7 @@ Default `200`.
         <span class="property-type">str</span>
     </dt>
     <dd>{{% md %}}The Honeycomb Dataset you want to log to.
-{{% /md %}}</dd>
-    <dt class="property-required"
+{{% /md %}}</dd><dt class="property-required"
             title="Required">
         <span id="email_python">
 <a href="#email_python" style="color: inherit; text-decoration: inherit;">email</a>
@@ -4885,8 +4398,7 @@ Default `200`.
         <span class="property-type">str</span>
     </dt>
     <dd>{{% md %}}The email for the service account with write access to your BigQuery dataset. If not provided, this will be pulled from a `FASTLY_BQ_EMAIL` environment variable.
-{{% /md %}}</dd>
-    <dt class="property-required"
+{{% /md %}}</dd><dt class="property-required"
             title="Required">
         <span id="name_python">
 <a href="#name_python" style="color: inherit; text-decoration: inherit;">name</a>
@@ -4895,8 +4407,7 @@ Default `200`.
         <span class="property-type">str</span>
     </dt>
     <dd>{{% md %}}The unique name of the Kinesis logging endpoint.
-{{% /md %}}</dd>
-    <dt class="property-required"
+{{% /md %}}</dd><dt class="property-required"
             title="Required">
         <span id="project_id_python">
 <a href="#project_id_python" style="color: inherit; text-decoration: inherit;">project_<wbr>id</a>
@@ -4905,8 +4416,7 @@ Default `200`.
         <span class="property-type">str</span>
     </dt>
     <dd>{{% md %}}The ID of your Google Cloud Platform project.
-{{% /md %}}</dd>
-    <dt class="property-required"
+{{% /md %}}</dd><dt class="property-required"
             title="Required">
         <span id="secret_key_python">
 <a href="#secret_key_python" style="color: inherit; text-decoration: inherit;">secret_<wbr>key</a>
@@ -4915,8 +4425,7 @@ Default `200`.
         <span class="property-type">str</span>
     </dt>
     <dd>{{% md %}}The AWS secret access key to authenticate with.
-{{% /md %}}</dd>
-    <dt class="property-required"
+{{% /md %}}</dd><dt class="property-required"
             title="Required">
         <span id="table_python">
 <a href="#table_python" style="color: inherit; text-decoration: inherit;">table</a>
@@ -4925,8 +4434,7 @@ Default `200`.
         <span class="property-type">str</span>
     </dt>
     <dd>{{% md %}}The ID of your BigQuery table.
-{{% /md %}}</dd>
-    <dt class="property-optional"
+{{% /md %}}</dd><dt class="property-optional"
             title="Optional">
         <span id="template_python">
 <a href="#template_python" style="color: inherit; text-decoration: inherit;">template</a>
@@ -4934,16 +4442,13 @@ Default `200`.
         <span class="property-indicator"></span>
         <span class="property-type">str</span>
     </dt>
-    <dd>{{% md %}}{{% /md %}}</dd>
-</dl>
+    <dd>{{% md %}}{{% /md %}}</dd></dl>
 {{% /choosable %}}
 
 <h4 id="servicecomputeblobstoragelogging">Service<wbr>Compute<wbr>Blobstoragelogging</h4>
 
 {{% choosable language csharp %}}
-<dl class="resources-properties">
-
-    <dt class="property-required"
+<dl class="resources-properties"><dt class="property-required"
             title="Required">
         <span id="accountname_csharp">
 <a href="#accountname_csharp" style="color: inherit; text-decoration: inherit;">Account<wbr>Name</a>
@@ -4952,8 +4457,7 @@ Default `200`.
         <span class="property-type">string</span>
     </dt>
     <dd>{{% md %}}The unique Azure Blob Storage namespace in which your data objects are stored.
-{{% /md %}}</dd>
-    <dt class="property-required"
+{{% /md %}}</dd><dt class="property-required"
             title="Required">
         <span id="container_csharp">
 <a href="#container_csharp" style="color: inherit; text-decoration: inherit;">Container</a>
@@ -4962,8 +4466,7 @@ Default `200`.
         <span class="property-type">string</span>
     </dt>
     <dd>{{% md %}}The name of the Azure Blob Storage container in which to store logs.
-{{% /md %}}</dd>
-    <dt class="property-required"
+{{% /md %}}</dd><dt class="property-required"
             title="Required">
         <span id="name_csharp">
 <a href="#name_csharp" style="color: inherit; text-decoration: inherit;">Name</a>
@@ -4972,8 +4475,7 @@ Default `200`.
         <span class="property-type">string</span>
     </dt>
     <dd>{{% md %}}The unique name of the Kinesis logging endpoint.
-{{% /md %}}</dd>
-    <dt class="property-required"
+{{% /md %}}</dd><dt class="property-required"
             title="Required">
         <span id="sastoken_csharp">
 <a href="#sastoken_csharp" style="color: inherit; text-decoration: inherit;">Sas<wbr>Token</a>
@@ -4982,8 +4484,7 @@ Default `200`.
         <span class="property-type">string</span>
     </dt>
     <dd>{{% md %}}The Azure shared access signature providing write access to the blob service objects. Be sure to update your token before it expires or the logging functionality will not work.
-{{% /md %}}</dd>
-    <dt class="property-optional"
+{{% /md %}}</dd><dt class="property-optional"
             title="Optional">
         <span id="gziplevel_csharp">
 <a href="#gziplevel_csharp" style="color: inherit; text-decoration: inherit;">Gzip<wbr>Level</a>
@@ -4992,8 +4493,7 @@ Default `200`.
         <span class="property-type">int</span>
     </dt>
     <dd>{{% md %}}What level of GZIP encoding to have when dumping logs (default 0, no compression).
-{{% /md %}}</dd>
-    <dt class="property-optional"
+{{% /md %}}</dd><dt class="property-optional"
             title="Optional">
         <span id="messagetype_csharp">
 <a href="#messagetype_csharp" style="color: inherit; text-decoration: inherit;">Message<wbr>Type</a>
@@ -5002,8 +4502,7 @@ Default `200`.
         <span class="property-type">string</span>
     </dt>
     <dd>{{% md %}}How the message should be formatted. One of: classic (default), loggly, logplex or blank.
-{{% /md %}}</dd>
-    <dt class="property-optional"
+{{% /md %}}</dd><dt class="property-optional"
             title="Optional">
         <span id="path_csharp">
 <a href="#path_csharp" style="color: inherit; text-decoration: inherit;">Path</a>
@@ -5012,8 +4511,7 @@ Default `200`.
         <span class="property-type">string</span>
     </dt>
     <dd>{{% md %}}The path to upload logs to.
-{{% /md %}}</dd>
-    <dt class="property-optional"
+{{% /md %}}</dd><dt class="property-optional"
             title="Optional">
         <span id="period_csharp">
 <a href="#period_csharp" style="color: inherit; text-decoration: inherit;">Period</a>
@@ -5022,8 +4520,7 @@ Default `200`.
         <span class="property-type">int</span>
     </dt>
     <dd>{{% md %}}How frequently log files are finalized so they can be available for reading (in seconds, default 3600).
-{{% /md %}}</dd>
-    <dt class="property-optional"
+{{% /md %}}</dd><dt class="property-optional"
             title="Optional">
         <span id="publickey_csharp">
 <a href="#publickey_csharp" style="color: inherit; text-decoration: inherit;">Public<wbr>Key</a>
@@ -5032,8 +4529,7 @@ Default `200`.
         <span class="property-type">string</span>
     </dt>
     <dd>{{% md %}}The PGP public key that Fastly will use to encrypt your log files before writing them to disk.
-{{% /md %}}</dd>
-    <dt class="property-optional"
+{{% /md %}}</dd><dt class="property-optional"
             title="Optional">
         <span id="timestampformat_csharp">
 <a href="#timestampformat_csharp" style="color: inherit; text-decoration: inherit;">Timestamp<wbr>Format</a>
@@ -5042,14 +4538,11 @@ Default `200`.
         <span class="property-type">string</span>
     </dt>
     <dd>{{% md %}}The strftime specified timestamp formatting (default `%Y-%m-%dT%H:%M:%S.000`).
-{{% /md %}}</dd>
-</dl>
+{{% /md %}}</dd></dl>
 {{% /choosable %}}
 
 {{% choosable language go %}}
-<dl class="resources-properties">
-
-    <dt class="property-required"
+<dl class="resources-properties"><dt class="property-required"
             title="Required">
         <span id="accountname_go">
 <a href="#accountname_go" style="color: inherit; text-decoration: inherit;">Account<wbr>Name</a>
@@ -5058,8 +4551,7 @@ Default `200`.
         <span class="property-type">string</span>
     </dt>
     <dd>{{% md %}}The unique Azure Blob Storage namespace in which your data objects are stored.
-{{% /md %}}</dd>
-    <dt class="property-required"
+{{% /md %}}</dd><dt class="property-required"
             title="Required">
         <span id="container_go">
 <a href="#container_go" style="color: inherit; text-decoration: inherit;">Container</a>
@@ -5068,8 +4560,7 @@ Default `200`.
         <span class="property-type">string</span>
     </dt>
     <dd>{{% md %}}The name of the Azure Blob Storage container in which to store logs.
-{{% /md %}}</dd>
-    <dt class="property-required"
+{{% /md %}}</dd><dt class="property-required"
             title="Required">
         <span id="name_go">
 <a href="#name_go" style="color: inherit; text-decoration: inherit;">Name</a>
@@ -5078,8 +4569,7 @@ Default `200`.
         <span class="property-type">string</span>
     </dt>
     <dd>{{% md %}}The unique name of the Kinesis logging endpoint.
-{{% /md %}}</dd>
-    <dt class="property-required"
+{{% /md %}}</dd><dt class="property-required"
             title="Required">
         <span id="sastoken_go">
 <a href="#sastoken_go" style="color: inherit; text-decoration: inherit;">Sas<wbr>Token</a>
@@ -5088,8 +4578,7 @@ Default `200`.
         <span class="property-type">string</span>
     </dt>
     <dd>{{% md %}}The Azure shared access signature providing write access to the blob service objects. Be sure to update your token before it expires or the logging functionality will not work.
-{{% /md %}}</dd>
-    <dt class="property-optional"
+{{% /md %}}</dd><dt class="property-optional"
             title="Optional">
         <span id="gziplevel_go">
 <a href="#gziplevel_go" style="color: inherit; text-decoration: inherit;">Gzip<wbr>Level</a>
@@ -5098,8 +4587,7 @@ Default `200`.
         <span class="property-type">int</span>
     </dt>
     <dd>{{% md %}}What level of GZIP encoding to have when dumping logs (default 0, no compression).
-{{% /md %}}</dd>
-    <dt class="property-optional"
+{{% /md %}}</dd><dt class="property-optional"
             title="Optional">
         <span id="messagetype_go">
 <a href="#messagetype_go" style="color: inherit; text-decoration: inherit;">Message<wbr>Type</a>
@@ -5108,8 +4596,7 @@ Default `200`.
         <span class="property-type">string</span>
     </dt>
     <dd>{{% md %}}How the message should be formatted. One of: classic (default), loggly, logplex or blank.
-{{% /md %}}</dd>
-    <dt class="property-optional"
+{{% /md %}}</dd><dt class="property-optional"
             title="Optional">
         <span id="path_go">
 <a href="#path_go" style="color: inherit; text-decoration: inherit;">Path</a>
@@ -5118,8 +4605,7 @@ Default `200`.
         <span class="property-type">string</span>
     </dt>
     <dd>{{% md %}}The path to upload logs to.
-{{% /md %}}</dd>
-    <dt class="property-optional"
+{{% /md %}}</dd><dt class="property-optional"
             title="Optional">
         <span id="period_go">
 <a href="#period_go" style="color: inherit; text-decoration: inherit;">Period</a>
@@ -5128,8 +4614,7 @@ Default `200`.
         <span class="property-type">int</span>
     </dt>
     <dd>{{% md %}}How frequently log files are finalized so they can be available for reading (in seconds, default 3600).
-{{% /md %}}</dd>
-    <dt class="property-optional"
+{{% /md %}}</dd><dt class="property-optional"
             title="Optional">
         <span id="publickey_go">
 <a href="#publickey_go" style="color: inherit; text-decoration: inherit;">Public<wbr>Key</a>
@@ -5138,8 +4623,7 @@ Default `200`.
         <span class="property-type">string</span>
     </dt>
     <dd>{{% md %}}The PGP public key that Fastly will use to encrypt your log files before writing them to disk.
-{{% /md %}}</dd>
-    <dt class="property-optional"
+{{% /md %}}</dd><dt class="property-optional"
             title="Optional">
         <span id="timestampformat_go">
 <a href="#timestampformat_go" style="color: inherit; text-decoration: inherit;">Timestamp<wbr>Format</a>
@@ -5148,14 +4632,11 @@ Default `200`.
         <span class="property-type">string</span>
     </dt>
     <dd>{{% md %}}The strftime specified timestamp formatting (default `%Y-%m-%dT%H:%M:%S.000`).
-{{% /md %}}</dd>
-</dl>
+{{% /md %}}</dd></dl>
 {{% /choosable %}}
 
 {{% choosable language nodejs %}}
-<dl class="resources-properties">
-
-    <dt class="property-required"
+<dl class="resources-properties"><dt class="property-required"
             title="Required">
         <span id="accountname_nodejs">
 <a href="#accountname_nodejs" style="color: inherit; text-decoration: inherit;">account<wbr>Name</a>
@@ -5164,8 +4645,7 @@ Default `200`.
         <span class="property-type">string</span>
     </dt>
     <dd>{{% md %}}The unique Azure Blob Storage namespace in which your data objects are stored.
-{{% /md %}}</dd>
-    <dt class="property-required"
+{{% /md %}}</dd><dt class="property-required"
             title="Required">
         <span id="container_nodejs">
 <a href="#container_nodejs" style="color: inherit; text-decoration: inherit;">container</a>
@@ -5174,8 +4654,7 @@ Default `200`.
         <span class="property-type">string</span>
     </dt>
     <dd>{{% md %}}The name of the Azure Blob Storage container in which to store logs.
-{{% /md %}}</dd>
-    <dt class="property-required"
+{{% /md %}}</dd><dt class="property-required"
             title="Required">
         <span id="name_nodejs">
 <a href="#name_nodejs" style="color: inherit; text-decoration: inherit;">name</a>
@@ -5184,8 +4663,7 @@ Default `200`.
         <span class="property-type">string</span>
     </dt>
     <dd>{{% md %}}The unique name of the Kinesis logging endpoint.
-{{% /md %}}</dd>
-    <dt class="property-required"
+{{% /md %}}</dd><dt class="property-required"
             title="Required">
         <span id="sastoken_nodejs">
 <a href="#sastoken_nodejs" style="color: inherit; text-decoration: inherit;">sas<wbr>Token</a>
@@ -5194,8 +4672,7 @@ Default `200`.
         <span class="property-type">string</span>
     </dt>
     <dd>{{% md %}}The Azure shared access signature providing write access to the blob service objects. Be sure to update your token before it expires or the logging functionality will not work.
-{{% /md %}}</dd>
-    <dt class="property-optional"
+{{% /md %}}</dd><dt class="property-optional"
             title="Optional">
         <span id="gziplevel_nodejs">
 <a href="#gziplevel_nodejs" style="color: inherit; text-decoration: inherit;">gzip<wbr>Level</a>
@@ -5204,8 +4681,7 @@ Default `200`.
         <span class="property-type">number</span>
     </dt>
     <dd>{{% md %}}What level of GZIP encoding to have when dumping logs (default 0, no compression).
-{{% /md %}}</dd>
-    <dt class="property-optional"
+{{% /md %}}</dd><dt class="property-optional"
             title="Optional">
         <span id="messagetype_nodejs">
 <a href="#messagetype_nodejs" style="color: inherit; text-decoration: inherit;">message<wbr>Type</a>
@@ -5214,8 +4690,7 @@ Default `200`.
         <span class="property-type">string</span>
     </dt>
     <dd>{{% md %}}How the message should be formatted. One of: classic (default), loggly, logplex or blank.
-{{% /md %}}</dd>
-    <dt class="property-optional"
+{{% /md %}}</dd><dt class="property-optional"
             title="Optional">
         <span id="path_nodejs">
 <a href="#path_nodejs" style="color: inherit; text-decoration: inherit;">path</a>
@@ -5224,8 +4699,7 @@ Default `200`.
         <span class="property-type">string</span>
     </dt>
     <dd>{{% md %}}The path to upload logs to.
-{{% /md %}}</dd>
-    <dt class="property-optional"
+{{% /md %}}</dd><dt class="property-optional"
             title="Optional">
         <span id="period_nodejs">
 <a href="#period_nodejs" style="color: inherit; text-decoration: inherit;">period</a>
@@ -5234,8 +4708,7 @@ Default `200`.
         <span class="property-type">number</span>
     </dt>
     <dd>{{% md %}}How frequently log files are finalized so they can be available for reading (in seconds, default 3600).
-{{% /md %}}</dd>
-    <dt class="property-optional"
+{{% /md %}}</dd><dt class="property-optional"
             title="Optional">
         <span id="publickey_nodejs">
 <a href="#publickey_nodejs" style="color: inherit; text-decoration: inherit;">public<wbr>Key</a>
@@ -5244,8 +4717,7 @@ Default `200`.
         <span class="property-type">string</span>
     </dt>
     <dd>{{% md %}}The PGP public key that Fastly will use to encrypt your log files before writing them to disk.
-{{% /md %}}</dd>
-    <dt class="property-optional"
+{{% /md %}}</dd><dt class="property-optional"
             title="Optional">
         <span id="timestampformat_nodejs">
 <a href="#timestampformat_nodejs" style="color: inherit; text-decoration: inherit;">timestamp<wbr>Format</a>
@@ -5254,14 +4726,11 @@ Default `200`.
         <span class="property-type">string</span>
     </dt>
     <dd>{{% md %}}The strftime specified timestamp formatting (default `%Y-%m-%dT%H:%M:%S.000`).
-{{% /md %}}</dd>
-</dl>
+{{% /md %}}</dd></dl>
 {{% /choosable %}}
 
 {{% choosable language python %}}
-<dl class="resources-properties">
-
-    <dt class="property-required"
+<dl class="resources-properties"><dt class="property-required"
             title="Required">
         <span id="account_name_python">
 <a href="#account_name_python" style="color: inherit; text-decoration: inherit;">account_<wbr>name</a>
@@ -5270,8 +4739,7 @@ Default `200`.
         <span class="property-type">str</span>
     </dt>
     <dd>{{% md %}}The unique Azure Blob Storage namespace in which your data objects are stored.
-{{% /md %}}</dd>
-    <dt class="property-required"
+{{% /md %}}</dd><dt class="property-required"
             title="Required">
         <span id="container_python">
 <a href="#container_python" style="color: inherit; text-decoration: inherit;">container</a>
@@ -5280,8 +4748,7 @@ Default `200`.
         <span class="property-type">str</span>
     </dt>
     <dd>{{% md %}}The name of the Azure Blob Storage container in which to store logs.
-{{% /md %}}</dd>
-    <dt class="property-required"
+{{% /md %}}</dd><dt class="property-required"
             title="Required">
         <span id="name_python">
 <a href="#name_python" style="color: inherit; text-decoration: inherit;">name</a>
@@ -5290,8 +4757,7 @@ Default `200`.
         <span class="property-type">str</span>
     </dt>
     <dd>{{% md %}}The unique name of the Kinesis logging endpoint.
-{{% /md %}}</dd>
-    <dt class="property-required"
+{{% /md %}}</dd><dt class="property-required"
             title="Required">
         <span id="sas_token_python">
 <a href="#sas_token_python" style="color: inherit; text-decoration: inherit;">sas_<wbr>token</a>
@@ -5300,8 +4766,7 @@ Default `200`.
         <span class="property-type">str</span>
     </dt>
     <dd>{{% md %}}The Azure shared access signature providing write access to the blob service objects. Be sure to update your token before it expires or the logging functionality will not work.
-{{% /md %}}</dd>
-    <dt class="property-optional"
+{{% /md %}}</dd><dt class="property-optional"
             title="Optional">
         <span id="gzip_level_python">
 <a href="#gzip_level_python" style="color: inherit; text-decoration: inherit;">gzip_<wbr>level</a>
@@ -5310,8 +4775,7 @@ Default `200`.
         <span class="property-type">int</span>
     </dt>
     <dd>{{% md %}}What level of GZIP encoding to have when dumping logs (default 0, no compression).
-{{% /md %}}</dd>
-    <dt class="property-optional"
+{{% /md %}}</dd><dt class="property-optional"
             title="Optional">
         <span id="message_type_python">
 <a href="#message_type_python" style="color: inherit; text-decoration: inherit;">message_<wbr>type</a>
@@ -5320,8 +4784,7 @@ Default `200`.
         <span class="property-type">str</span>
     </dt>
     <dd>{{% md %}}How the message should be formatted. One of: classic (default), loggly, logplex or blank.
-{{% /md %}}</dd>
-    <dt class="property-optional"
+{{% /md %}}</dd><dt class="property-optional"
             title="Optional">
         <span id="path_python">
 <a href="#path_python" style="color: inherit; text-decoration: inherit;">path</a>
@@ -5330,8 +4793,7 @@ Default `200`.
         <span class="property-type">str</span>
     </dt>
     <dd>{{% md %}}The path to upload logs to.
-{{% /md %}}</dd>
-    <dt class="property-optional"
+{{% /md %}}</dd><dt class="property-optional"
             title="Optional">
         <span id="period_python">
 <a href="#period_python" style="color: inherit; text-decoration: inherit;">period</a>
@@ -5340,8 +4802,7 @@ Default `200`.
         <span class="property-type">int</span>
     </dt>
     <dd>{{% md %}}How frequently log files are finalized so they can be available for reading (in seconds, default 3600).
-{{% /md %}}</dd>
-    <dt class="property-optional"
+{{% /md %}}</dd><dt class="property-optional"
             title="Optional">
         <span id="public_key_python">
 <a href="#public_key_python" style="color: inherit; text-decoration: inherit;">public_<wbr>key</a>
@@ -5350,8 +4811,7 @@ Default `200`.
         <span class="property-type">str</span>
     </dt>
     <dd>{{% md %}}The PGP public key that Fastly will use to encrypt your log files before writing them to disk.
-{{% /md %}}</dd>
-    <dt class="property-optional"
+{{% /md %}}</dd><dt class="property-optional"
             title="Optional">
         <span id="timestamp_format_python">
 <a href="#timestamp_format_python" style="color: inherit; text-decoration: inherit;">timestamp_<wbr>format</a>
@@ -5360,16 +4820,13 @@ Default `200`.
         <span class="property-type">str</span>
     </dt>
     <dd>{{% md %}}The strftime specified timestamp formatting (default `%Y-%m-%dT%H:%M:%S.000`).
-{{% /md %}}</dd>
-</dl>
+{{% /md %}}</dd></dl>
 {{% /choosable %}}
 
 <h4 id="servicecomputedomain">Service<wbr>Compute<wbr>Domain</h4>
 
 {{% choosable language csharp %}}
-<dl class="resources-properties">
-
-    <dt class="property-required"
+<dl class="resources-properties"><dt class="property-required"
             title="Required">
         <span id="name_csharp">
 <a href="#name_csharp" style="color: inherit; text-decoration: inherit;">Name</a>
@@ -5378,8 +4835,7 @@ Default `200`.
         <span class="property-type">string</span>
     </dt>
     <dd>{{% md %}}The unique name of the Kinesis logging endpoint.
-{{% /md %}}</dd>
-    <dt class="property-optional"
+{{% /md %}}</dd><dt class="property-optional"
             title="Optional">
         <span id="comment_csharp">
 <a href="#comment_csharp" style="color: inherit; text-decoration: inherit;">Comment</a>
@@ -5388,14 +4844,11 @@ Default `200`.
         <span class="property-type">string</span>
     </dt>
     <dd>{{% md %}}An optional comment about the Domain.
-{{% /md %}}</dd>
-</dl>
+{{% /md %}}</dd></dl>
 {{% /choosable %}}
 
 {{% choosable language go %}}
-<dl class="resources-properties">
-
-    <dt class="property-required"
+<dl class="resources-properties"><dt class="property-required"
             title="Required">
         <span id="name_go">
 <a href="#name_go" style="color: inherit; text-decoration: inherit;">Name</a>
@@ -5404,8 +4857,7 @@ Default `200`.
         <span class="property-type">string</span>
     </dt>
     <dd>{{% md %}}The unique name of the Kinesis logging endpoint.
-{{% /md %}}</dd>
-    <dt class="property-optional"
+{{% /md %}}</dd><dt class="property-optional"
             title="Optional">
         <span id="comment_go">
 <a href="#comment_go" style="color: inherit; text-decoration: inherit;">Comment</a>
@@ -5414,14 +4866,11 @@ Default `200`.
         <span class="property-type">string</span>
     </dt>
     <dd>{{% md %}}An optional comment about the Domain.
-{{% /md %}}</dd>
-</dl>
+{{% /md %}}</dd></dl>
 {{% /choosable %}}
 
 {{% choosable language nodejs %}}
-<dl class="resources-properties">
-
-    <dt class="property-required"
+<dl class="resources-properties"><dt class="property-required"
             title="Required">
         <span id="name_nodejs">
 <a href="#name_nodejs" style="color: inherit; text-decoration: inherit;">name</a>
@@ -5430,8 +4879,7 @@ Default `200`.
         <span class="property-type">string</span>
     </dt>
     <dd>{{% md %}}The unique name of the Kinesis logging endpoint.
-{{% /md %}}</dd>
-    <dt class="property-optional"
+{{% /md %}}</dd><dt class="property-optional"
             title="Optional">
         <span id="comment_nodejs">
 <a href="#comment_nodejs" style="color: inherit; text-decoration: inherit;">comment</a>
@@ -5440,14 +4888,11 @@ Default `200`.
         <span class="property-type">string</span>
     </dt>
     <dd>{{% md %}}An optional comment about the Domain.
-{{% /md %}}</dd>
-</dl>
+{{% /md %}}</dd></dl>
 {{% /choosable %}}
 
 {{% choosable language python %}}
-<dl class="resources-properties">
-
-    <dt class="property-required"
+<dl class="resources-properties"><dt class="property-required"
             title="Required">
         <span id="name_python">
 <a href="#name_python" style="color: inherit; text-decoration: inherit;">name</a>
@@ -5456,8 +4901,7 @@ Default `200`.
         <span class="property-type">str</span>
     </dt>
     <dd>{{% md %}}The unique name of the Kinesis logging endpoint.
-{{% /md %}}</dd>
-    <dt class="property-optional"
+{{% /md %}}</dd><dt class="property-optional"
             title="Optional">
         <span id="comment_python">
 <a href="#comment_python" style="color: inherit; text-decoration: inherit;">comment</a>
@@ -5466,16 +4910,13 @@ Default `200`.
         <span class="property-type">str</span>
     </dt>
     <dd>{{% md %}}An optional comment about the Domain.
-{{% /md %}}</dd>
-</dl>
+{{% /md %}}</dd></dl>
 {{% /choosable %}}
 
 <h4 id="servicecomputegcslogging">Service<wbr>Compute<wbr>Gcslogging</h4>
 
 {{% choosable language csharp %}}
-<dl class="resources-properties">
-
-    <dt class="property-required"
+<dl class="resources-properties"><dt class="property-required"
             title="Required">
         <span id="bucketname_csharp">
 <a href="#bucketname_csharp" style="color: inherit; text-decoration: inherit;">Bucket<wbr>Name</a>
@@ -5484,8 +4925,7 @@ Default `200`.
         <span class="property-type">string</span>
     </dt>
     <dd>{{% md %}}The name of your Cloud Files container.
-{{% /md %}}</dd>
-    <dt class="property-required"
+{{% /md %}}</dd><dt class="property-required"
             title="Required">
         <span id="name_csharp">
 <a href="#name_csharp" style="color: inherit; text-decoration: inherit;">Name</a>
@@ -5494,8 +4934,7 @@ Default `200`.
         <span class="property-type">string</span>
     </dt>
     <dd>{{% md %}}The unique name of the Kinesis logging endpoint.
-{{% /md %}}</dd>
-    <dt class="property-optional"
+{{% /md %}}</dd><dt class="property-optional"
             title="Optional">
         <span id="email_csharp">
 <a href="#email_csharp" style="color: inherit; text-decoration: inherit;">Email</a>
@@ -5504,8 +4943,7 @@ Default `200`.
         <span class="property-type">string</span>
     </dt>
     <dd>{{% md %}}The email for the service account with write access to your BigQuery dataset. If not provided, this will be pulled from a `FASTLY_BQ_EMAIL` environment variable.
-{{% /md %}}</dd>
-    <dt class="property-optional"
+{{% /md %}}</dd><dt class="property-optional"
             title="Optional">
         <span id="gziplevel_csharp">
 <a href="#gziplevel_csharp" style="color: inherit; text-decoration: inherit;">Gzip<wbr>Level</a>
@@ -5514,8 +4952,7 @@ Default `200`.
         <span class="property-type">int</span>
     </dt>
     <dd>{{% md %}}What level of GZIP encoding to have when dumping logs (default 0, no compression).
-{{% /md %}}</dd>
-    <dt class="property-optional"
+{{% /md %}}</dd><dt class="property-optional"
             title="Optional">
         <span id="messagetype_csharp">
 <a href="#messagetype_csharp" style="color: inherit; text-decoration: inherit;">Message<wbr>Type</a>
@@ -5524,8 +4961,7 @@ Default `200`.
         <span class="property-type">string</span>
     </dt>
     <dd>{{% md %}}How the message should be formatted. One of: classic (default), loggly, logplex or blank.
-{{% /md %}}</dd>
-    <dt class="property-optional"
+{{% /md %}}</dd><dt class="property-optional"
             title="Optional">
         <span id="path_csharp">
 <a href="#path_csharp" style="color: inherit; text-decoration: inherit;">Path</a>
@@ -5534,8 +4970,7 @@ Default `200`.
         <span class="property-type">string</span>
     </dt>
     <dd>{{% md %}}The path to upload logs to.
-{{% /md %}}</dd>
-    <dt class="property-optional"
+{{% /md %}}</dd><dt class="property-optional"
             title="Optional">
         <span id="period_csharp">
 <a href="#period_csharp" style="color: inherit; text-decoration: inherit;">Period</a>
@@ -5544,8 +4979,7 @@ Default `200`.
         <span class="property-type">int</span>
     </dt>
     <dd>{{% md %}}How frequently log files are finalized so they can be available for reading (in seconds, default 3600).
-{{% /md %}}</dd>
-    <dt class="property-optional"
+{{% /md %}}</dd><dt class="property-optional"
             title="Optional">
         <span id="secretkey_csharp">
 <a href="#secretkey_csharp" style="color: inherit; text-decoration: inherit;">Secret<wbr>Key</a>
@@ -5554,8 +4988,7 @@ Default `200`.
         <span class="property-type">string</span>
     </dt>
     <dd>{{% md %}}The AWS secret access key to authenticate with.
-{{% /md %}}</dd>
-    <dt class="property-optional"
+{{% /md %}}</dd><dt class="property-optional"
             title="Optional">
         <span id="timestampformat_csharp">
 <a href="#timestampformat_csharp" style="color: inherit; text-decoration: inherit;">Timestamp<wbr>Format</a>
@@ -5564,14 +4997,11 @@ Default `200`.
         <span class="property-type">string</span>
     </dt>
     <dd>{{% md %}}The strftime specified timestamp formatting (default `%Y-%m-%dT%H:%M:%S.000`).
-{{% /md %}}</dd>
-</dl>
+{{% /md %}}</dd></dl>
 {{% /choosable %}}
 
 {{% choosable language go %}}
-<dl class="resources-properties">
-
-    <dt class="property-required"
+<dl class="resources-properties"><dt class="property-required"
             title="Required">
         <span id="bucketname_go">
 <a href="#bucketname_go" style="color: inherit; text-decoration: inherit;">Bucket<wbr>Name</a>
@@ -5580,8 +5010,7 @@ Default `200`.
         <span class="property-type">string</span>
     </dt>
     <dd>{{% md %}}The name of your Cloud Files container.
-{{% /md %}}</dd>
-    <dt class="property-required"
+{{% /md %}}</dd><dt class="property-required"
             title="Required">
         <span id="name_go">
 <a href="#name_go" style="color: inherit; text-decoration: inherit;">Name</a>
@@ -5590,8 +5019,7 @@ Default `200`.
         <span class="property-type">string</span>
     </dt>
     <dd>{{% md %}}The unique name of the Kinesis logging endpoint.
-{{% /md %}}</dd>
-    <dt class="property-optional"
+{{% /md %}}</dd><dt class="property-optional"
             title="Optional">
         <span id="email_go">
 <a href="#email_go" style="color: inherit; text-decoration: inherit;">Email</a>
@@ -5600,8 +5028,7 @@ Default `200`.
         <span class="property-type">string</span>
     </dt>
     <dd>{{% md %}}The email for the service account with write access to your BigQuery dataset. If not provided, this will be pulled from a `FASTLY_BQ_EMAIL` environment variable.
-{{% /md %}}</dd>
-    <dt class="property-optional"
+{{% /md %}}</dd><dt class="property-optional"
             title="Optional">
         <span id="gziplevel_go">
 <a href="#gziplevel_go" style="color: inherit; text-decoration: inherit;">Gzip<wbr>Level</a>
@@ -5610,8 +5037,7 @@ Default `200`.
         <span class="property-type">int</span>
     </dt>
     <dd>{{% md %}}What level of GZIP encoding to have when dumping logs (default 0, no compression).
-{{% /md %}}</dd>
-    <dt class="property-optional"
+{{% /md %}}</dd><dt class="property-optional"
             title="Optional">
         <span id="messagetype_go">
 <a href="#messagetype_go" style="color: inherit; text-decoration: inherit;">Message<wbr>Type</a>
@@ -5620,8 +5046,7 @@ Default `200`.
         <span class="property-type">string</span>
     </dt>
     <dd>{{% md %}}How the message should be formatted. One of: classic (default), loggly, logplex or blank.
-{{% /md %}}</dd>
-    <dt class="property-optional"
+{{% /md %}}</dd><dt class="property-optional"
             title="Optional">
         <span id="path_go">
 <a href="#path_go" style="color: inherit; text-decoration: inherit;">Path</a>
@@ -5630,8 +5055,7 @@ Default `200`.
         <span class="property-type">string</span>
     </dt>
     <dd>{{% md %}}The path to upload logs to.
-{{% /md %}}</dd>
-    <dt class="property-optional"
+{{% /md %}}</dd><dt class="property-optional"
             title="Optional">
         <span id="period_go">
 <a href="#period_go" style="color: inherit; text-decoration: inherit;">Period</a>
@@ -5640,8 +5064,7 @@ Default `200`.
         <span class="property-type">int</span>
     </dt>
     <dd>{{% md %}}How frequently log files are finalized so they can be available for reading (in seconds, default 3600).
-{{% /md %}}</dd>
-    <dt class="property-optional"
+{{% /md %}}</dd><dt class="property-optional"
             title="Optional">
         <span id="secretkey_go">
 <a href="#secretkey_go" style="color: inherit; text-decoration: inherit;">Secret<wbr>Key</a>
@@ -5650,8 +5073,7 @@ Default `200`.
         <span class="property-type">string</span>
     </dt>
     <dd>{{% md %}}The AWS secret access key to authenticate with.
-{{% /md %}}</dd>
-    <dt class="property-optional"
+{{% /md %}}</dd><dt class="property-optional"
             title="Optional">
         <span id="timestampformat_go">
 <a href="#timestampformat_go" style="color: inherit; text-decoration: inherit;">Timestamp<wbr>Format</a>
@@ -5660,14 +5082,11 @@ Default `200`.
         <span class="property-type">string</span>
     </dt>
     <dd>{{% md %}}The strftime specified timestamp formatting (default `%Y-%m-%dT%H:%M:%S.000`).
-{{% /md %}}</dd>
-</dl>
+{{% /md %}}</dd></dl>
 {{% /choosable %}}
 
 {{% choosable language nodejs %}}
-<dl class="resources-properties">
-
-    <dt class="property-required"
+<dl class="resources-properties"><dt class="property-required"
             title="Required">
         <span id="bucketname_nodejs">
 <a href="#bucketname_nodejs" style="color: inherit; text-decoration: inherit;">bucket<wbr>Name</a>
@@ -5676,8 +5095,7 @@ Default `200`.
         <span class="property-type">string</span>
     </dt>
     <dd>{{% md %}}The name of your Cloud Files container.
-{{% /md %}}</dd>
-    <dt class="property-required"
+{{% /md %}}</dd><dt class="property-required"
             title="Required">
         <span id="name_nodejs">
 <a href="#name_nodejs" style="color: inherit; text-decoration: inherit;">name</a>
@@ -5686,8 +5104,7 @@ Default `200`.
         <span class="property-type">string</span>
     </dt>
     <dd>{{% md %}}The unique name of the Kinesis logging endpoint.
-{{% /md %}}</dd>
-    <dt class="property-optional"
+{{% /md %}}</dd><dt class="property-optional"
             title="Optional">
         <span id="email_nodejs">
 <a href="#email_nodejs" style="color: inherit; text-decoration: inherit;">email</a>
@@ -5696,8 +5113,7 @@ Default `200`.
         <span class="property-type">string</span>
     </dt>
     <dd>{{% md %}}The email for the service account with write access to your BigQuery dataset. If not provided, this will be pulled from a `FASTLY_BQ_EMAIL` environment variable.
-{{% /md %}}</dd>
-    <dt class="property-optional"
+{{% /md %}}</dd><dt class="property-optional"
             title="Optional">
         <span id="gziplevel_nodejs">
 <a href="#gziplevel_nodejs" style="color: inherit; text-decoration: inherit;">gzip<wbr>Level</a>
@@ -5706,8 +5122,7 @@ Default `200`.
         <span class="property-type">number</span>
     </dt>
     <dd>{{% md %}}What level of GZIP encoding to have when dumping logs (default 0, no compression).
-{{% /md %}}</dd>
-    <dt class="property-optional"
+{{% /md %}}</dd><dt class="property-optional"
             title="Optional">
         <span id="messagetype_nodejs">
 <a href="#messagetype_nodejs" style="color: inherit; text-decoration: inherit;">message<wbr>Type</a>
@@ -5716,8 +5131,7 @@ Default `200`.
         <span class="property-type">string</span>
     </dt>
     <dd>{{% md %}}How the message should be formatted. One of: classic (default), loggly, logplex or blank.
-{{% /md %}}</dd>
-    <dt class="property-optional"
+{{% /md %}}</dd><dt class="property-optional"
             title="Optional">
         <span id="path_nodejs">
 <a href="#path_nodejs" style="color: inherit; text-decoration: inherit;">path</a>
@@ -5726,8 +5140,7 @@ Default `200`.
         <span class="property-type">string</span>
     </dt>
     <dd>{{% md %}}The path to upload logs to.
-{{% /md %}}</dd>
-    <dt class="property-optional"
+{{% /md %}}</dd><dt class="property-optional"
             title="Optional">
         <span id="period_nodejs">
 <a href="#period_nodejs" style="color: inherit; text-decoration: inherit;">period</a>
@@ -5736,8 +5149,7 @@ Default `200`.
         <span class="property-type">number</span>
     </dt>
     <dd>{{% md %}}How frequently log files are finalized so they can be available for reading (in seconds, default 3600).
-{{% /md %}}</dd>
-    <dt class="property-optional"
+{{% /md %}}</dd><dt class="property-optional"
             title="Optional">
         <span id="secretkey_nodejs">
 <a href="#secretkey_nodejs" style="color: inherit; text-decoration: inherit;">secret<wbr>Key</a>
@@ -5746,8 +5158,7 @@ Default `200`.
         <span class="property-type">string</span>
     </dt>
     <dd>{{% md %}}The AWS secret access key to authenticate with.
-{{% /md %}}</dd>
-    <dt class="property-optional"
+{{% /md %}}</dd><dt class="property-optional"
             title="Optional">
         <span id="timestampformat_nodejs">
 <a href="#timestampformat_nodejs" style="color: inherit; text-decoration: inherit;">timestamp<wbr>Format</a>
@@ -5756,14 +5167,11 @@ Default `200`.
         <span class="property-type">string</span>
     </dt>
     <dd>{{% md %}}The strftime specified timestamp formatting (default `%Y-%m-%dT%H:%M:%S.000`).
-{{% /md %}}</dd>
-</dl>
+{{% /md %}}</dd></dl>
 {{% /choosable %}}
 
 {{% choosable language python %}}
-<dl class="resources-properties">
-
-    <dt class="property-required"
+<dl class="resources-properties"><dt class="property-required"
             title="Required">
         <span id="bucket_name_python">
 <a href="#bucket_name_python" style="color: inherit; text-decoration: inherit;">bucket_<wbr>name</a>
@@ -5772,8 +5180,7 @@ Default `200`.
         <span class="property-type">str</span>
     </dt>
     <dd>{{% md %}}The name of your Cloud Files container.
-{{% /md %}}</dd>
-    <dt class="property-required"
+{{% /md %}}</dd><dt class="property-required"
             title="Required">
         <span id="name_python">
 <a href="#name_python" style="color: inherit; text-decoration: inherit;">name</a>
@@ -5782,8 +5189,7 @@ Default `200`.
         <span class="property-type">str</span>
     </dt>
     <dd>{{% md %}}The unique name of the Kinesis logging endpoint.
-{{% /md %}}</dd>
-    <dt class="property-optional"
+{{% /md %}}</dd><dt class="property-optional"
             title="Optional">
         <span id="email_python">
 <a href="#email_python" style="color: inherit; text-decoration: inherit;">email</a>
@@ -5792,8 +5198,7 @@ Default `200`.
         <span class="property-type">str</span>
     </dt>
     <dd>{{% md %}}The email for the service account with write access to your BigQuery dataset. If not provided, this will be pulled from a `FASTLY_BQ_EMAIL` environment variable.
-{{% /md %}}</dd>
-    <dt class="property-optional"
+{{% /md %}}</dd><dt class="property-optional"
             title="Optional">
         <span id="gzip_level_python">
 <a href="#gzip_level_python" style="color: inherit; text-decoration: inherit;">gzip_<wbr>level</a>
@@ -5802,8 +5207,7 @@ Default `200`.
         <span class="property-type">int</span>
     </dt>
     <dd>{{% md %}}What level of GZIP encoding to have when dumping logs (default 0, no compression).
-{{% /md %}}</dd>
-    <dt class="property-optional"
+{{% /md %}}</dd><dt class="property-optional"
             title="Optional">
         <span id="message_type_python">
 <a href="#message_type_python" style="color: inherit; text-decoration: inherit;">message_<wbr>type</a>
@@ -5812,8 +5216,7 @@ Default `200`.
         <span class="property-type">str</span>
     </dt>
     <dd>{{% md %}}How the message should be formatted. One of: classic (default), loggly, logplex or blank.
-{{% /md %}}</dd>
-    <dt class="property-optional"
+{{% /md %}}</dd><dt class="property-optional"
             title="Optional">
         <span id="path_python">
 <a href="#path_python" style="color: inherit; text-decoration: inherit;">path</a>
@@ -5822,8 +5225,7 @@ Default `200`.
         <span class="property-type">str</span>
     </dt>
     <dd>{{% md %}}The path to upload logs to.
-{{% /md %}}</dd>
-    <dt class="property-optional"
+{{% /md %}}</dd><dt class="property-optional"
             title="Optional">
         <span id="period_python">
 <a href="#period_python" style="color: inherit; text-decoration: inherit;">period</a>
@@ -5832,8 +5234,7 @@ Default `200`.
         <span class="property-type">int</span>
     </dt>
     <dd>{{% md %}}How frequently log files are finalized so they can be available for reading (in seconds, default 3600).
-{{% /md %}}</dd>
-    <dt class="property-optional"
+{{% /md %}}</dd><dt class="property-optional"
             title="Optional">
         <span id="secret_key_python">
 <a href="#secret_key_python" style="color: inherit; text-decoration: inherit;">secret_<wbr>key</a>
@@ -5842,8 +5243,7 @@ Default `200`.
         <span class="property-type">str</span>
     </dt>
     <dd>{{% md %}}The AWS secret access key to authenticate with.
-{{% /md %}}</dd>
-    <dt class="property-optional"
+{{% /md %}}</dd><dt class="property-optional"
             title="Optional">
         <span id="timestamp_format_python">
 <a href="#timestamp_format_python" style="color: inherit; text-decoration: inherit;">timestamp_<wbr>format</a>
@@ -5852,16 +5252,13 @@ Default `200`.
         <span class="property-type">str</span>
     </dt>
     <dd>{{% md %}}The strftime specified timestamp formatting (default `%Y-%m-%dT%H:%M:%S.000`).
-{{% /md %}}</dd>
-</dl>
+{{% /md %}}</dd></dl>
 {{% /choosable %}}
 
 <h4 id="servicecomputehealthcheck">Service<wbr>Compute<wbr>Healthcheck</h4>
 
 {{% choosable language csharp %}}
-<dl class="resources-properties">
-
-    <dt class="property-required"
+<dl class="resources-properties"><dt class="property-required"
             title="Required">
         <span id="host_csharp">
 <a href="#host_csharp" style="color: inherit; text-decoration: inherit;">Host</a>
@@ -5870,8 +5267,7 @@ Default `200`.
         <span class="property-type">string</span>
     </dt>
     <dd>{{% md %}}The Host header to send for this Healthcheck.
-{{% /md %}}</dd>
-    <dt class="property-required"
+{{% /md %}}</dd><dt class="property-required"
             title="Required">
         <span id="name_csharp">
 <a href="#name_csharp" style="color: inherit; text-decoration: inherit;">Name</a>
@@ -5880,8 +5276,7 @@ Default `200`.
         <span class="property-type">string</span>
     </dt>
     <dd>{{% md %}}The unique name of the Kinesis logging endpoint.
-{{% /md %}}</dd>
-    <dt class="property-required"
+{{% /md %}}</dd><dt class="property-required"
             title="Required">
         <span id="path_csharp">
 <a href="#path_csharp" style="color: inherit; text-decoration: inherit;">Path</a>
@@ -5890,8 +5285,7 @@ Default `200`.
         <span class="property-type">string</span>
     </dt>
     <dd>{{% md %}}The path to upload logs to.
-{{% /md %}}</dd>
-    <dt class="property-optional"
+{{% /md %}}</dd><dt class="property-optional"
             title="Optional">
         <span id="checkinterval_csharp">
 <a href="#checkinterval_csharp" style="color: inherit; text-decoration: inherit;">Check<wbr>Interval</a>
@@ -5900,8 +5294,7 @@ Default `200`.
         <span class="property-type">int</span>
     </dt>
     <dd>{{% md %}}How often to run the Healthcheck in milliseconds. Default `5000`.
-{{% /md %}}</dd>
-    <dt class="property-optional"
+{{% /md %}}</dd><dt class="property-optional"
             title="Optional">
         <span id="expectedresponse_csharp">
 <a href="#expectedresponse_csharp" style="color: inherit; text-decoration: inherit;">Expected<wbr>Response</a>
@@ -5910,8 +5303,7 @@ Default `200`.
         <span class="property-type">int</span>
     </dt>
     <dd>{{% md %}}The status code expected from the host. Default `200`.
-{{% /md %}}</dd>
-    <dt class="property-optional"
+{{% /md %}}</dd><dt class="property-optional"
             title="Optional">
         <span id="httpversion_csharp">
 <a href="#httpversion_csharp" style="color: inherit; text-decoration: inherit;">Http<wbr>Version</a>
@@ -5920,8 +5312,7 @@ Default `200`.
         <span class="property-type">string</span>
     </dt>
     <dd>{{% md %}}Whether to use version 1.0 or 1.1 HTTP. Default `1.1`.
-{{% /md %}}</dd>
-    <dt class="property-optional"
+{{% /md %}}</dd><dt class="property-optional"
             title="Optional">
         <span id="initial_csharp">
 <a href="#initial_csharp" style="color: inherit; text-decoration: inherit;">Initial</a>
@@ -5930,8 +5321,7 @@ Default `200`.
         <span class="property-type">int</span>
     </dt>
     <dd>{{% md %}}When loading a config, the initial number of probes to be seen as OK. Default `2`.
-{{% /md %}}</dd>
-    <dt class="property-optional"
+{{% /md %}}</dd><dt class="property-optional"
             title="Optional">
         <span id="method_csharp">
 <a href="#method_csharp" style="color: inherit; text-decoration: inherit;">Method</a>
@@ -5940,8 +5330,7 @@ Default `200`.
         <span class="property-type">string</span>
     </dt>
     <dd>{{% md %}}HTTP method used for request. Can be either `POST` or `PUT`. Default `POST`.
-{{% /md %}}</dd>
-    <dt class="property-optional"
+{{% /md %}}</dd><dt class="property-optional"
             title="Optional">
         <span id="threshold_csharp">
 <a href="#threshold_csharp" style="color: inherit; text-decoration: inherit;">Threshold</a>
@@ -5950,8 +5339,7 @@ Default `200`.
         <span class="property-type">int</span>
     </dt>
     <dd>{{% md %}}How many Healthchecks must succeed to be considered healthy. Default `3`.
-{{% /md %}}</dd>
-    <dt class="property-optional"
+{{% /md %}}</dd><dt class="property-optional"
             title="Optional">
         <span id="timeout_csharp">
 <a href="#timeout_csharp" style="color: inherit; text-decoration: inherit;">Timeout</a>
@@ -5960,8 +5348,7 @@ Default `200`.
         <span class="property-type">int</span>
     </dt>
     <dd>{{% md %}}Timeout in milliseconds. Default `500`.
-{{% /md %}}</dd>
-    <dt class="property-optional"
+{{% /md %}}</dd><dt class="property-optional"
             title="Optional">
         <span id="window_csharp">
 <a href="#window_csharp" style="color: inherit; text-decoration: inherit;">Window</a>
@@ -5970,14 +5357,11 @@ Default `200`.
         <span class="property-type">int</span>
     </dt>
     <dd>{{% md %}}The number of most recent Healthcheck queries to keep for this Healthcheck. Default `5`.
-{{% /md %}}</dd>
-</dl>
+{{% /md %}}</dd></dl>
 {{% /choosable %}}
 
 {{% choosable language go %}}
-<dl class="resources-properties">
-
-    <dt class="property-required"
+<dl class="resources-properties"><dt class="property-required"
             title="Required">
         <span id="host_go">
 <a href="#host_go" style="color: inherit; text-decoration: inherit;">Host</a>
@@ -5986,8 +5370,7 @@ Default `200`.
         <span class="property-type">string</span>
     </dt>
     <dd>{{% md %}}The Host header to send for this Healthcheck.
-{{% /md %}}</dd>
-    <dt class="property-required"
+{{% /md %}}</dd><dt class="property-required"
             title="Required">
         <span id="name_go">
 <a href="#name_go" style="color: inherit; text-decoration: inherit;">Name</a>
@@ -5996,8 +5379,7 @@ Default `200`.
         <span class="property-type">string</span>
     </dt>
     <dd>{{% md %}}The unique name of the Kinesis logging endpoint.
-{{% /md %}}</dd>
-    <dt class="property-required"
+{{% /md %}}</dd><dt class="property-required"
             title="Required">
         <span id="path_go">
 <a href="#path_go" style="color: inherit; text-decoration: inherit;">Path</a>
@@ -6006,8 +5388,7 @@ Default `200`.
         <span class="property-type">string</span>
     </dt>
     <dd>{{% md %}}The path to upload logs to.
-{{% /md %}}</dd>
-    <dt class="property-optional"
+{{% /md %}}</dd><dt class="property-optional"
             title="Optional">
         <span id="checkinterval_go">
 <a href="#checkinterval_go" style="color: inherit; text-decoration: inherit;">Check<wbr>Interval</a>
@@ -6016,8 +5397,7 @@ Default `200`.
         <span class="property-type">int</span>
     </dt>
     <dd>{{% md %}}How often to run the Healthcheck in milliseconds. Default `5000`.
-{{% /md %}}</dd>
-    <dt class="property-optional"
+{{% /md %}}</dd><dt class="property-optional"
             title="Optional">
         <span id="expectedresponse_go">
 <a href="#expectedresponse_go" style="color: inherit; text-decoration: inherit;">Expected<wbr>Response</a>
@@ -6026,8 +5406,7 @@ Default `200`.
         <span class="property-type">int</span>
     </dt>
     <dd>{{% md %}}The status code expected from the host. Default `200`.
-{{% /md %}}</dd>
-    <dt class="property-optional"
+{{% /md %}}</dd><dt class="property-optional"
             title="Optional">
         <span id="httpversion_go">
 <a href="#httpversion_go" style="color: inherit; text-decoration: inherit;">Http<wbr>Version</a>
@@ -6036,8 +5415,7 @@ Default `200`.
         <span class="property-type">string</span>
     </dt>
     <dd>{{% md %}}Whether to use version 1.0 or 1.1 HTTP. Default `1.1`.
-{{% /md %}}</dd>
-    <dt class="property-optional"
+{{% /md %}}</dd><dt class="property-optional"
             title="Optional">
         <span id="initial_go">
 <a href="#initial_go" style="color: inherit; text-decoration: inherit;">Initial</a>
@@ -6046,8 +5424,7 @@ Default `200`.
         <span class="property-type">int</span>
     </dt>
     <dd>{{% md %}}When loading a config, the initial number of probes to be seen as OK. Default `2`.
-{{% /md %}}</dd>
-    <dt class="property-optional"
+{{% /md %}}</dd><dt class="property-optional"
             title="Optional">
         <span id="method_go">
 <a href="#method_go" style="color: inherit; text-decoration: inherit;">Method</a>
@@ -6056,8 +5433,7 @@ Default `200`.
         <span class="property-type">string</span>
     </dt>
     <dd>{{% md %}}HTTP method used for request. Can be either `POST` or `PUT`. Default `POST`.
-{{% /md %}}</dd>
-    <dt class="property-optional"
+{{% /md %}}</dd><dt class="property-optional"
             title="Optional">
         <span id="threshold_go">
 <a href="#threshold_go" style="color: inherit; text-decoration: inherit;">Threshold</a>
@@ -6066,8 +5442,7 @@ Default `200`.
         <span class="property-type">int</span>
     </dt>
     <dd>{{% md %}}How many Healthchecks must succeed to be considered healthy. Default `3`.
-{{% /md %}}</dd>
-    <dt class="property-optional"
+{{% /md %}}</dd><dt class="property-optional"
             title="Optional">
         <span id="timeout_go">
 <a href="#timeout_go" style="color: inherit; text-decoration: inherit;">Timeout</a>
@@ -6076,8 +5451,7 @@ Default `200`.
         <span class="property-type">int</span>
     </dt>
     <dd>{{% md %}}Timeout in milliseconds. Default `500`.
-{{% /md %}}</dd>
-    <dt class="property-optional"
+{{% /md %}}</dd><dt class="property-optional"
             title="Optional">
         <span id="window_go">
 <a href="#window_go" style="color: inherit; text-decoration: inherit;">Window</a>
@@ -6086,14 +5460,11 @@ Default `200`.
         <span class="property-type">int</span>
     </dt>
     <dd>{{% md %}}The number of most recent Healthcheck queries to keep for this Healthcheck. Default `5`.
-{{% /md %}}</dd>
-</dl>
+{{% /md %}}</dd></dl>
 {{% /choosable %}}
 
 {{% choosable language nodejs %}}
-<dl class="resources-properties">
-
-    <dt class="property-required"
+<dl class="resources-properties"><dt class="property-required"
             title="Required">
         <span id="host_nodejs">
 <a href="#host_nodejs" style="color: inherit; text-decoration: inherit;">host</a>
@@ -6102,8 +5473,7 @@ Default `200`.
         <span class="property-type">string</span>
     </dt>
     <dd>{{% md %}}The Host header to send for this Healthcheck.
-{{% /md %}}</dd>
-    <dt class="property-required"
+{{% /md %}}</dd><dt class="property-required"
             title="Required">
         <span id="name_nodejs">
 <a href="#name_nodejs" style="color: inherit; text-decoration: inherit;">name</a>
@@ -6112,8 +5482,7 @@ Default `200`.
         <span class="property-type">string</span>
     </dt>
     <dd>{{% md %}}The unique name of the Kinesis logging endpoint.
-{{% /md %}}</dd>
-    <dt class="property-required"
+{{% /md %}}</dd><dt class="property-required"
             title="Required">
         <span id="path_nodejs">
 <a href="#path_nodejs" style="color: inherit; text-decoration: inherit;">path</a>
@@ -6122,8 +5491,7 @@ Default `200`.
         <span class="property-type">string</span>
     </dt>
     <dd>{{% md %}}The path to upload logs to.
-{{% /md %}}</dd>
-    <dt class="property-optional"
+{{% /md %}}</dd><dt class="property-optional"
             title="Optional">
         <span id="checkinterval_nodejs">
 <a href="#checkinterval_nodejs" style="color: inherit; text-decoration: inherit;">check<wbr>Interval</a>
@@ -6132,8 +5500,7 @@ Default `200`.
         <span class="property-type">number</span>
     </dt>
     <dd>{{% md %}}How often to run the Healthcheck in milliseconds. Default `5000`.
-{{% /md %}}</dd>
-    <dt class="property-optional"
+{{% /md %}}</dd><dt class="property-optional"
             title="Optional">
         <span id="expectedresponse_nodejs">
 <a href="#expectedresponse_nodejs" style="color: inherit; text-decoration: inherit;">expected<wbr>Response</a>
@@ -6142,8 +5509,7 @@ Default `200`.
         <span class="property-type">number</span>
     </dt>
     <dd>{{% md %}}The status code expected from the host. Default `200`.
-{{% /md %}}</dd>
-    <dt class="property-optional"
+{{% /md %}}</dd><dt class="property-optional"
             title="Optional">
         <span id="httpversion_nodejs">
 <a href="#httpversion_nodejs" style="color: inherit; text-decoration: inherit;">http<wbr>Version</a>
@@ -6152,8 +5518,7 @@ Default `200`.
         <span class="property-type">string</span>
     </dt>
     <dd>{{% md %}}Whether to use version 1.0 or 1.1 HTTP. Default `1.1`.
-{{% /md %}}</dd>
-    <dt class="property-optional"
+{{% /md %}}</dd><dt class="property-optional"
             title="Optional">
         <span id="initial_nodejs">
 <a href="#initial_nodejs" style="color: inherit; text-decoration: inherit;">initial</a>
@@ -6162,8 +5527,7 @@ Default `200`.
         <span class="property-type">number</span>
     </dt>
     <dd>{{% md %}}When loading a config, the initial number of probes to be seen as OK. Default `2`.
-{{% /md %}}</dd>
-    <dt class="property-optional"
+{{% /md %}}</dd><dt class="property-optional"
             title="Optional">
         <span id="method_nodejs">
 <a href="#method_nodejs" style="color: inherit; text-decoration: inherit;">method</a>
@@ -6172,8 +5536,7 @@ Default `200`.
         <span class="property-type">string</span>
     </dt>
     <dd>{{% md %}}HTTP method used for request. Can be either `POST` or `PUT`. Default `POST`.
-{{% /md %}}</dd>
-    <dt class="property-optional"
+{{% /md %}}</dd><dt class="property-optional"
             title="Optional">
         <span id="threshold_nodejs">
 <a href="#threshold_nodejs" style="color: inherit; text-decoration: inherit;">threshold</a>
@@ -6182,8 +5545,7 @@ Default `200`.
         <span class="property-type">number</span>
     </dt>
     <dd>{{% md %}}How many Healthchecks must succeed to be considered healthy. Default `3`.
-{{% /md %}}</dd>
-    <dt class="property-optional"
+{{% /md %}}</dd><dt class="property-optional"
             title="Optional">
         <span id="timeout_nodejs">
 <a href="#timeout_nodejs" style="color: inherit; text-decoration: inherit;">timeout</a>
@@ -6192,8 +5554,7 @@ Default `200`.
         <span class="property-type">number</span>
     </dt>
     <dd>{{% md %}}Timeout in milliseconds. Default `500`.
-{{% /md %}}</dd>
-    <dt class="property-optional"
+{{% /md %}}</dd><dt class="property-optional"
             title="Optional">
         <span id="window_nodejs">
 <a href="#window_nodejs" style="color: inherit; text-decoration: inherit;">window</a>
@@ -6202,14 +5563,11 @@ Default `200`.
         <span class="property-type">number</span>
     </dt>
     <dd>{{% md %}}The number of most recent Healthcheck queries to keep for this Healthcheck. Default `5`.
-{{% /md %}}</dd>
-</dl>
+{{% /md %}}</dd></dl>
 {{% /choosable %}}
 
 {{% choosable language python %}}
-<dl class="resources-properties">
-
-    <dt class="property-required"
+<dl class="resources-properties"><dt class="property-required"
             title="Required">
         <span id="host_python">
 <a href="#host_python" style="color: inherit; text-decoration: inherit;">host</a>
@@ -6218,8 +5576,7 @@ Default `200`.
         <span class="property-type">str</span>
     </dt>
     <dd>{{% md %}}The Host header to send for this Healthcheck.
-{{% /md %}}</dd>
-    <dt class="property-required"
+{{% /md %}}</dd><dt class="property-required"
             title="Required">
         <span id="name_python">
 <a href="#name_python" style="color: inherit; text-decoration: inherit;">name</a>
@@ -6228,8 +5585,7 @@ Default `200`.
         <span class="property-type">str</span>
     </dt>
     <dd>{{% md %}}The unique name of the Kinesis logging endpoint.
-{{% /md %}}</dd>
-    <dt class="property-required"
+{{% /md %}}</dd><dt class="property-required"
             title="Required">
         <span id="path_python">
 <a href="#path_python" style="color: inherit; text-decoration: inherit;">path</a>
@@ -6238,8 +5594,7 @@ Default `200`.
         <span class="property-type">str</span>
     </dt>
     <dd>{{% md %}}The path to upload logs to.
-{{% /md %}}</dd>
-    <dt class="property-optional"
+{{% /md %}}</dd><dt class="property-optional"
             title="Optional">
         <span id="check_interval_python">
 <a href="#check_interval_python" style="color: inherit; text-decoration: inherit;">check_<wbr>interval</a>
@@ -6248,8 +5603,7 @@ Default `200`.
         <span class="property-type">int</span>
     </dt>
     <dd>{{% md %}}How often to run the Healthcheck in milliseconds. Default `5000`.
-{{% /md %}}</dd>
-    <dt class="property-optional"
+{{% /md %}}</dd><dt class="property-optional"
             title="Optional">
         <span id="expected_response_python">
 <a href="#expected_response_python" style="color: inherit; text-decoration: inherit;">expected_<wbr>response</a>
@@ -6258,8 +5612,7 @@ Default `200`.
         <span class="property-type">int</span>
     </dt>
     <dd>{{% md %}}The status code expected from the host. Default `200`.
-{{% /md %}}</dd>
-    <dt class="property-optional"
+{{% /md %}}</dd><dt class="property-optional"
             title="Optional">
         <span id="http_version_python">
 <a href="#http_version_python" style="color: inherit; text-decoration: inherit;">http_<wbr>version</a>
@@ -6268,8 +5621,7 @@ Default `200`.
         <span class="property-type">str</span>
     </dt>
     <dd>{{% md %}}Whether to use version 1.0 or 1.1 HTTP. Default `1.1`.
-{{% /md %}}</dd>
-    <dt class="property-optional"
+{{% /md %}}</dd><dt class="property-optional"
             title="Optional">
         <span id="initial_python">
 <a href="#initial_python" style="color: inherit; text-decoration: inherit;">initial</a>
@@ -6278,8 +5630,7 @@ Default `200`.
         <span class="property-type">int</span>
     </dt>
     <dd>{{% md %}}When loading a config, the initial number of probes to be seen as OK. Default `2`.
-{{% /md %}}</dd>
-    <dt class="property-optional"
+{{% /md %}}</dd><dt class="property-optional"
             title="Optional">
         <span id="method_python">
 <a href="#method_python" style="color: inherit; text-decoration: inherit;">method</a>
@@ -6288,8 +5639,7 @@ Default `200`.
         <span class="property-type">str</span>
     </dt>
     <dd>{{% md %}}HTTP method used for request. Can be either `POST` or `PUT`. Default `POST`.
-{{% /md %}}</dd>
-    <dt class="property-optional"
+{{% /md %}}</dd><dt class="property-optional"
             title="Optional">
         <span id="threshold_python">
 <a href="#threshold_python" style="color: inherit; text-decoration: inherit;">threshold</a>
@@ -6298,8 +5648,7 @@ Default `200`.
         <span class="property-type">int</span>
     </dt>
     <dd>{{% md %}}How many Healthchecks must succeed to be considered healthy. Default `3`.
-{{% /md %}}</dd>
-    <dt class="property-optional"
+{{% /md %}}</dd><dt class="property-optional"
             title="Optional">
         <span id="timeout_python">
 <a href="#timeout_python" style="color: inherit; text-decoration: inherit;">timeout</a>
@@ -6308,8 +5657,7 @@ Default `200`.
         <span class="property-type">int</span>
     </dt>
     <dd>{{% md %}}Timeout in milliseconds. Default `500`.
-{{% /md %}}</dd>
-    <dt class="property-optional"
+{{% /md %}}</dd><dt class="property-optional"
             title="Optional">
         <span id="window_python">
 <a href="#window_python" style="color: inherit; text-decoration: inherit;">window</a>
@@ -6318,16 +5666,13 @@ Default `200`.
         <span class="property-type">int</span>
     </dt>
     <dd>{{% md %}}The number of most recent Healthcheck queries to keep for this Healthcheck. Default `5`.
-{{% /md %}}</dd>
-</dl>
+{{% /md %}}</dd></dl>
 {{% /choosable %}}
 
 <h4 id="servicecomputehttpslogging">Service<wbr>Compute<wbr>Httpslogging</h4>
 
 {{% choosable language csharp %}}
-<dl class="resources-properties">
-
-    <dt class="property-required"
+<dl class="resources-properties"><dt class="property-required"
             title="Required">
         <span id="name_csharp">
 <a href="#name_csharp" style="color: inherit; text-decoration: inherit;">Name</a>
@@ -6336,8 +5681,7 @@ Default `200`.
         <span class="property-type">string</span>
     </dt>
     <dd>{{% md %}}The unique name of the Kinesis logging endpoint.
-{{% /md %}}</dd>
-    <dt class="property-required"
+{{% /md %}}</dd><dt class="property-required"
             title="Required">
         <span id="url_csharp">
 <a href="#url_csharp" style="color: inherit; text-decoration: inherit;">Url</a>
@@ -6346,8 +5690,7 @@ Default `200`.
         <span class="property-type">string</span>
     </dt>
     <dd>{{% md %}}Your OpenStack auth url.
-{{% /md %}}</dd>
-    <dt class="property-optional"
+{{% /md %}}</dd><dt class="property-optional"
             title="Optional">
         <span id="contenttype_csharp">
 <a href="#contenttype_csharp" style="color: inherit; text-decoration: inherit;">Content<wbr>Type</a>
@@ -6356,8 +5699,7 @@ Default `200`.
         <span class="property-type">string</span>
     </dt>
     <dd>{{% md %}}Value of the `Content-Type` header sent with the request.
-{{% /md %}}</dd>
-    <dt class="property-optional"
+{{% /md %}}</dd><dt class="property-optional"
             title="Optional">
         <span id="headername_csharp">
 <a href="#headername_csharp" style="color: inherit; text-decoration: inherit;">Header<wbr>Name</a>
@@ -6366,8 +5708,7 @@ Default `200`.
         <span class="property-type">string</span>
     </dt>
     <dd>{{% md %}}Custom header sent with the request.
-{{% /md %}}</dd>
-    <dt class="property-optional"
+{{% /md %}}</dd><dt class="property-optional"
             title="Optional">
         <span id="headervalue_csharp">
 <a href="#headervalue_csharp" style="color: inherit; text-decoration: inherit;">Header<wbr>Value</a>
@@ -6376,8 +5717,7 @@ Default `200`.
         <span class="property-type">string</span>
     </dt>
     <dd>{{% md %}}Value of the custom header sent with the request.
-{{% /md %}}</dd>
-    <dt class="property-optional"
+{{% /md %}}</dd><dt class="property-optional"
             title="Optional">
         <span id="jsonformat_csharp">
 <a href="#jsonformat_csharp" style="color: inherit; text-decoration: inherit;">Json<wbr>Format</a>
@@ -6386,8 +5726,7 @@ Default `200`.
         <span class="property-type">string</span>
     </dt>
     <dd>{{% md %}}Formats log entries as JSON. Can be either disabled (`0`), array of json (`1`), or newline delimited json (`2`).
-{{% /md %}}</dd>
-    <dt class="property-optional"
+{{% /md %}}</dd><dt class="property-optional"
             title="Optional">
         <span id="messagetype_csharp">
 <a href="#messagetype_csharp" style="color: inherit; text-decoration: inherit;">Message<wbr>Type</a>
@@ -6396,8 +5735,7 @@ Default `200`.
         <span class="property-type">string</span>
     </dt>
     <dd>{{% md %}}How the message should be formatted. One of: classic (default), loggly, logplex or blank.
-{{% /md %}}</dd>
-    <dt class="property-optional"
+{{% /md %}}</dd><dt class="property-optional"
             title="Optional">
         <span id="method_csharp">
 <a href="#method_csharp" style="color: inherit; text-decoration: inherit;">Method</a>
@@ -6406,8 +5744,7 @@ Default `200`.
         <span class="property-type">string</span>
     </dt>
     <dd>{{% md %}}HTTP method used for request. Can be either `POST` or `PUT`. Default `POST`.
-{{% /md %}}</dd>
-    <dt class="property-optional"
+{{% /md %}}</dd><dt class="property-optional"
             title="Optional">
         <span id="requestmaxbytes_csharp">
 <a href="#requestmaxbytes_csharp" style="color: inherit; text-decoration: inherit;">Request<wbr>Max<wbr>Bytes</a>
@@ -6416,8 +5753,7 @@ Default `200`.
         <span class="property-type">int</span>
     </dt>
     <dd>{{% md %}}The maximum number of bytes sent in one request. Defaults to `0` for unbounded.
-{{% /md %}}</dd>
-    <dt class="property-optional"
+{{% /md %}}</dd><dt class="property-optional"
             title="Optional">
         <span id="requestmaxentries_csharp">
 <a href="#requestmaxentries_csharp" style="color: inherit; text-decoration: inherit;">Request<wbr>Max<wbr>Entries</a>
@@ -6426,8 +5762,7 @@ Default `200`.
         <span class="property-type">int</span>
     </dt>
     <dd>{{% md %}}The maximum number of logs sent in one request. Defaults to `0` for unbounded.
-{{% /md %}}</dd>
-    <dt class="property-optional"
+{{% /md %}}</dd><dt class="property-optional"
             title="Optional">
         <span id="tlscacert_csharp">
 <a href="#tlscacert_csharp" style="color: inherit; text-decoration: inherit;">Tls<wbr>Ca<wbr>Cert</a>
@@ -6436,8 +5771,7 @@ Default `200`.
         <span class="property-type">string</span>
     </dt>
     <dd>{{% md %}}A secure certificate to authenticate the server with. Must be in PEM format.
-{{% /md %}}</dd>
-    <dt class="property-optional"
+{{% /md %}}</dd><dt class="property-optional"
             title="Optional">
         <span id="tlsclientcert_csharp">
 <a href="#tlsclientcert_csharp" style="color: inherit; text-decoration: inherit;">Tls<wbr>Client<wbr>Cert</a>
@@ -6446,8 +5780,7 @@ Default `200`.
         <span class="property-type">string</span>
     </dt>
     <dd>{{% md %}}The client certificate used to make authenticated requests. Must be in PEM format.
-{{% /md %}}</dd>
-    <dt class="property-optional"
+{{% /md %}}</dd><dt class="property-optional"
             title="Optional">
         <span id="tlsclientkey_csharp">
 <a href="#tlsclientkey_csharp" style="color: inherit; text-decoration: inherit;">Tls<wbr>Client<wbr>Key</a>
@@ -6456,8 +5789,7 @@ Default `200`.
         <span class="property-type">string</span>
     </dt>
     <dd>{{% md %}}The client private key used to make authenticated requests. Must be in PEM format.
-{{% /md %}}</dd>
-    <dt class="property-optional"
+{{% /md %}}</dd><dt class="property-optional"
             title="Optional">
         <span id="tlshostname_csharp">
 <a href="#tlshostname_csharp" style="color: inherit; text-decoration: inherit;">Tls<wbr>Hostname</a>
@@ -6466,14 +5798,11 @@ Default `200`.
         <span class="property-type">string</span>
     </dt>
     <dd>{{% md %}}The hostname used to verify the server's certificate. It can either be the Common Name or a Subject Alternative Name (SAN).
-{{% /md %}}</dd>
-</dl>
+{{% /md %}}</dd></dl>
 {{% /choosable %}}
 
 {{% choosable language go %}}
-<dl class="resources-properties">
-
-    <dt class="property-required"
+<dl class="resources-properties"><dt class="property-required"
             title="Required">
         <span id="name_go">
 <a href="#name_go" style="color: inherit; text-decoration: inherit;">Name</a>
@@ -6482,8 +5811,7 @@ Default `200`.
         <span class="property-type">string</span>
     </dt>
     <dd>{{% md %}}The unique name of the Kinesis logging endpoint.
-{{% /md %}}</dd>
-    <dt class="property-required"
+{{% /md %}}</dd><dt class="property-required"
             title="Required">
         <span id="url_go">
 <a href="#url_go" style="color: inherit; text-decoration: inherit;">Url</a>
@@ -6492,8 +5820,7 @@ Default `200`.
         <span class="property-type">string</span>
     </dt>
     <dd>{{% md %}}Your OpenStack auth url.
-{{% /md %}}</dd>
-    <dt class="property-optional"
+{{% /md %}}</dd><dt class="property-optional"
             title="Optional">
         <span id="contenttype_go">
 <a href="#contenttype_go" style="color: inherit; text-decoration: inherit;">Content<wbr>Type</a>
@@ -6502,8 +5829,7 @@ Default `200`.
         <span class="property-type">string</span>
     </dt>
     <dd>{{% md %}}Value of the `Content-Type` header sent with the request.
-{{% /md %}}</dd>
-    <dt class="property-optional"
+{{% /md %}}</dd><dt class="property-optional"
             title="Optional">
         <span id="headername_go">
 <a href="#headername_go" style="color: inherit; text-decoration: inherit;">Header<wbr>Name</a>
@@ -6512,8 +5838,7 @@ Default `200`.
         <span class="property-type">string</span>
     </dt>
     <dd>{{% md %}}Custom header sent with the request.
-{{% /md %}}</dd>
-    <dt class="property-optional"
+{{% /md %}}</dd><dt class="property-optional"
             title="Optional">
         <span id="headervalue_go">
 <a href="#headervalue_go" style="color: inherit; text-decoration: inherit;">Header<wbr>Value</a>
@@ -6522,8 +5847,7 @@ Default `200`.
         <span class="property-type">string</span>
     </dt>
     <dd>{{% md %}}Value of the custom header sent with the request.
-{{% /md %}}</dd>
-    <dt class="property-optional"
+{{% /md %}}</dd><dt class="property-optional"
             title="Optional">
         <span id="jsonformat_go">
 <a href="#jsonformat_go" style="color: inherit; text-decoration: inherit;">Json<wbr>Format</a>
@@ -6532,8 +5856,7 @@ Default `200`.
         <span class="property-type">string</span>
     </dt>
     <dd>{{% md %}}Formats log entries as JSON. Can be either disabled (`0`), array of json (`1`), or newline delimited json (`2`).
-{{% /md %}}</dd>
-    <dt class="property-optional"
+{{% /md %}}</dd><dt class="property-optional"
             title="Optional">
         <span id="messagetype_go">
 <a href="#messagetype_go" style="color: inherit; text-decoration: inherit;">Message<wbr>Type</a>
@@ -6542,8 +5865,7 @@ Default `200`.
         <span class="property-type">string</span>
     </dt>
     <dd>{{% md %}}How the message should be formatted. One of: classic (default), loggly, logplex or blank.
-{{% /md %}}</dd>
-    <dt class="property-optional"
+{{% /md %}}</dd><dt class="property-optional"
             title="Optional">
         <span id="method_go">
 <a href="#method_go" style="color: inherit; text-decoration: inherit;">Method</a>
@@ -6552,8 +5874,7 @@ Default `200`.
         <span class="property-type">string</span>
     </dt>
     <dd>{{% md %}}HTTP method used for request. Can be either `POST` or `PUT`. Default `POST`.
-{{% /md %}}</dd>
-    <dt class="property-optional"
+{{% /md %}}</dd><dt class="property-optional"
             title="Optional">
         <span id="requestmaxbytes_go">
 <a href="#requestmaxbytes_go" style="color: inherit; text-decoration: inherit;">Request<wbr>Max<wbr>Bytes</a>
@@ -6562,8 +5883,7 @@ Default `200`.
         <span class="property-type">int</span>
     </dt>
     <dd>{{% md %}}The maximum number of bytes sent in one request. Defaults to `0` for unbounded.
-{{% /md %}}</dd>
-    <dt class="property-optional"
+{{% /md %}}</dd><dt class="property-optional"
             title="Optional">
         <span id="requestmaxentries_go">
 <a href="#requestmaxentries_go" style="color: inherit; text-decoration: inherit;">Request<wbr>Max<wbr>Entries</a>
@@ -6572,8 +5892,7 @@ Default `200`.
         <span class="property-type">int</span>
     </dt>
     <dd>{{% md %}}The maximum number of logs sent in one request. Defaults to `0` for unbounded.
-{{% /md %}}</dd>
-    <dt class="property-optional"
+{{% /md %}}</dd><dt class="property-optional"
             title="Optional">
         <span id="tlscacert_go">
 <a href="#tlscacert_go" style="color: inherit; text-decoration: inherit;">Tls<wbr>Ca<wbr>Cert</a>
@@ -6582,8 +5901,7 @@ Default `200`.
         <span class="property-type">string</span>
     </dt>
     <dd>{{% md %}}A secure certificate to authenticate the server with. Must be in PEM format.
-{{% /md %}}</dd>
-    <dt class="property-optional"
+{{% /md %}}</dd><dt class="property-optional"
             title="Optional">
         <span id="tlsclientcert_go">
 <a href="#tlsclientcert_go" style="color: inherit; text-decoration: inherit;">Tls<wbr>Client<wbr>Cert</a>
@@ -6592,8 +5910,7 @@ Default `200`.
         <span class="property-type">string</span>
     </dt>
     <dd>{{% md %}}The client certificate used to make authenticated requests. Must be in PEM format.
-{{% /md %}}</dd>
-    <dt class="property-optional"
+{{% /md %}}</dd><dt class="property-optional"
             title="Optional">
         <span id="tlsclientkey_go">
 <a href="#tlsclientkey_go" style="color: inherit; text-decoration: inherit;">Tls<wbr>Client<wbr>Key</a>
@@ -6602,8 +5919,7 @@ Default `200`.
         <span class="property-type">string</span>
     </dt>
     <dd>{{% md %}}The client private key used to make authenticated requests. Must be in PEM format.
-{{% /md %}}</dd>
-    <dt class="property-optional"
+{{% /md %}}</dd><dt class="property-optional"
             title="Optional">
         <span id="tlshostname_go">
 <a href="#tlshostname_go" style="color: inherit; text-decoration: inherit;">Tls<wbr>Hostname</a>
@@ -6612,14 +5928,11 @@ Default `200`.
         <span class="property-type">string</span>
     </dt>
     <dd>{{% md %}}The hostname used to verify the server's certificate. It can either be the Common Name or a Subject Alternative Name (SAN).
-{{% /md %}}</dd>
-</dl>
+{{% /md %}}</dd></dl>
 {{% /choosable %}}
 
 {{% choosable language nodejs %}}
-<dl class="resources-properties">
-
-    <dt class="property-required"
+<dl class="resources-properties"><dt class="property-required"
             title="Required">
         <span id="name_nodejs">
 <a href="#name_nodejs" style="color: inherit; text-decoration: inherit;">name</a>
@@ -6628,8 +5941,7 @@ Default `200`.
         <span class="property-type">string</span>
     </dt>
     <dd>{{% md %}}The unique name of the Kinesis logging endpoint.
-{{% /md %}}</dd>
-    <dt class="property-required"
+{{% /md %}}</dd><dt class="property-required"
             title="Required">
         <span id="url_nodejs">
 <a href="#url_nodejs" style="color: inherit; text-decoration: inherit;">url</a>
@@ -6638,8 +5950,7 @@ Default `200`.
         <span class="property-type">string</span>
     </dt>
     <dd>{{% md %}}Your OpenStack auth url.
-{{% /md %}}</dd>
-    <dt class="property-optional"
+{{% /md %}}</dd><dt class="property-optional"
             title="Optional">
         <span id="contenttype_nodejs">
 <a href="#contenttype_nodejs" style="color: inherit; text-decoration: inherit;">content<wbr>Type</a>
@@ -6648,8 +5959,7 @@ Default `200`.
         <span class="property-type">string</span>
     </dt>
     <dd>{{% md %}}Value of the `Content-Type` header sent with the request.
-{{% /md %}}</dd>
-    <dt class="property-optional"
+{{% /md %}}</dd><dt class="property-optional"
             title="Optional">
         <span id="headername_nodejs">
 <a href="#headername_nodejs" style="color: inherit; text-decoration: inherit;">header<wbr>Name</a>
@@ -6658,8 +5968,7 @@ Default `200`.
         <span class="property-type">string</span>
     </dt>
     <dd>{{% md %}}Custom header sent with the request.
-{{% /md %}}</dd>
-    <dt class="property-optional"
+{{% /md %}}</dd><dt class="property-optional"
             title="Optional">
         <span id="headervalue_nodejs">
 <a href="#headervalue_nodejs" style="color: inherit; text-decoration: inherit;">header<wbr>Value</a>
@@ -6668,8 +5977,7 @@ Default `200`.
         <span class="property-type">string</span>
     </dt>
     <dd>{{% md %}}Value of the custom header sent with the request.
-{{% /md %}}</dd>
-    <dt class="property-optional"
+{{% /md %}}</dd><dt class="property-optional"
             title="Optional">
         <span id="jsonformat_nodejs">
 <a href="#jsonformat_nodejs" style="color: inherit; text-decoration: inherit;">json<wbr>Format</a>
@@ -6678,8 +5986,7 @@ Default `200`.
         <span class="property-type">string</span>
     </dt>
     <dd>{{% md %}}Formats log entries as JSON. Can be either disabled (`0`), array of json (`1`), or newline delimited json (`2`).
-{{% /md %}}</dd>
-    <dt class="property-optional"
+{{% /md %}}</dd><dt class="property-optional"
             title="Optional">
         <span id="messagetype_nodejs">
 <a href="#messagetype_nodejs" style="color: inherit; text-decoration: inherit;">message<wbr>Type</a>
@@ -6688,8 +5995,7 @@ Default `200`.
         <span class="property-type">string</span>
     </dt>
     <dd>{{% md %}}How the message should be formatted. One of: classic (default), loggly, logplex or blank.
-{{% /md %}}</dd>
-    <dt class="property-optional"
+{{% /md %}}</dd><dt class="property-optional"
             title="Optional">
         <span id="method_nodejs">
 <a href="#method_nodejs" style="color: inherit; text-decoration: inherit;">method</a>
@@ -6698,8 +6004,7 @@ Default `200`.
         <span class="property-type">string</span>
     </dt>
     <dd>{{% md %}}HTTP method used for request. Can be either `POST` or `PUT`. Default `POST`.
-{{% /md %}}</dd>
-    <dt class="property-optional"
+{{% /md %}}</dd><dt class="property-optional"
             title="Optional">
         <span id="requestmaxbytes_nodejs">
 <a href="#requestmaxbytes_nodejs" style="color: inherit; text-decoration: inherit;">request<wbr>Max<wbr>Bytes</a>
@@ -6708,8 +6013,7 @@ Default `200`.
         <span class="property-type">number</span>
     </dt>
     <dd>{{% md %}}The maximum number of bytes sent in one request. Defaults to `0` for unbounded.
-{{% /md %}}</dd>
-    <dt class="property-optional"
+{{% /md %}}</dd><dt class="property-optional"
             title="Optional">
         <span id="requestmaxentries_nodejs">
 <a href="#requestmaxentries_nodejs" style="color: inherit; text-decoration: inherit;">request<wbr>Max<wbr>Entries</a>
@@ -6718,8 +6022,7 @@ Default `200`.
         <span class="property-type">number</span>
     </dt>
     <dd>{{% md %}}The maximum number of logs sent in one request. Defaults to `0` for unbounded.
-{{% /md %}}</dd>
-    <dt class="property-optional"
+{{% /md %}}</dd><dt class="property-optional"
             title="Optional">
         <span id="tlscacert_nodejs">
 <a href="#tlscacert_nodejs" style="color: inherit; text-decoration: inherit;">tls<wbr>Ca<wbr>Cert</a>
@@ -6728,8 +6031,7 @@ Default `200`.
         <span class="property-type">string</span>
     </dt>
     <dd>{{% md %}}A secure certificate to authenticate the server with. Must be in PEM format.
-{{% /md %}}</dd>
-    <dt class="property-optional"
+{{% /md %}}</dd><dt class="property-optional"
             title="Optional">
         <span id="tlsclientcert_nodejs">
 <a href="#tlsclientcert_nodejs" style="color: inherit; text-decoration: inherit;">tls<wbr>Client<wbr>Cert</a>
@@ -6738,8 +6040,7 @@ Default `200`.
         <span class="property-type">string</span>
     </dt>
     <dd>{{% md %}}The client certificate used to make authenticated requests. Must be in PEM format.
-{{% /md %}}</dd>
-    <dt class="property-optional"
+{{% /md %}}</dd><dt class="property-optional"
             title="Optional">
         <span id="tlsclientkey_nodejs">
 <a href="#tlsclientkey_nodejs" style="color: inherit; text-decoration: inherit;">tls<wbr>Client<wbr>Key</a>
@@ -6748,8 +6049,7 @@ Default `200`.
         <span class="property-type">string</span>
     </dt>
     <dd>{{% md %}}The client private key used to make authenticated requests. Must be in PEM format.
-{{% /md %}}</dd>
-    <dt class="property-optional"
+{{% /md %}}</dd><dt class="property-optional"
             title="Optional">
         <span id="tlshostname_nodejs">
 <a href="#tlshostname_nodejs" style="color: inherit; text-decoration: inherit;">tls<wbr>Hostname</a>
@@ -6758,14 +6058,11 @@ Default `200`.
         <span class="property-type">string</span>
     </dt>
     <dd>{{% md %}}The hostname used to verify the server's certificate. It can either be the Common Name or a Subject Alternative Name (SAN).
-{{% /md %}}</dd>
-</dl>
+{{% /md %}}</dd></dl>
 {{% /choosable %}}
 
 {{% choosable language python %}}
-<dl class="resources-properties">
-
-    <dt class="property-required"
+<dl class="resources-properties"><dt class="property-required"
             title="Required">
         <span id="name_python">
 <a href="#name_python" style="color: inherit; text-decoration: inherit;">name</a>
@@ -6774,8 +6071,7 @@ Default `200`.
         <span class="property-type">str</span>
     </dt>
     <dd>{{% md %}}The unique name of the Kinesis logging endpoint.
-{{% /md %}}</dd>
-    <dt class="property-required"
+{{% /md %}}</dd><dt class="property-required"
             title="Required">
         <span id="url_python">
 <a href="#url_python" style="color: inherit; text-decoration: inherit;">url</a>
@@ -6784,8 +6080,7 @@ Default `200`.
         <span class="property-type">str</span>
     </dt>
     <dd>{{% md %}}Your OpenStack auth url.
-{{% /md %}}</dd>
-    <dt class="property-optional"
+{{% /md %}}</dd><dt class="property-optional"
             title="Optional">
         <span id="content_type_python">
 <a href="#content_type_python" style="color: inherit; text-decoration: inherit;">content_<wbr>type</a>
@@ -6794,8 +6089,7 @@ Default `200`.
         <span class="property-type">str</span>
     </dt>
     <dd>{{% md %}}Value of the `Content-Type` header sent with the request.
-{{% /md %}}</dd>
-    <dt class="property-optional"
+{{% /md %}}</dd><dt class="property-optional"
             title="Optional">
         <span id="header_name_python">
 <a href="#header_name_python" style="color: inherit; text-decoration: inherit;">header_<wbr>name</a>
@@ -6804,8 +6098,7 @@ Default `200`.
         <span class="property-type">str</span>
     </dt>
     <dd>{{% md %}}Custom header sent with the request.
-{{% /md %}}</dd>
-    <dt class="property-optional"
+{{% /md %}}</dd><dt class="property-optional"
             title="Optional">
         <span id="header_value_python">
 <a href="#header_value_python" style="color: inherit; text-decoration: inherit;">header_<wbr>value</a>
@@ -6814,8 +6107,7 @@ Default `200`.
         <span class="property-type">str</span>
     </dt>
     <dd>{{% md %}}Value of the custom header sent with the request.
-{{% /md %}}</dd>
-    <dt class="property-optional"
+{{% /md %}}</dd><dt class="property-optional"
             title="Optional">
         <span id="json_format_python">
 <a href="#json_format_python" style="color: inherit; text-decoration: inherit;">json_<wbr>format</a>
@@ -6824,8 +6116,7 @@ Default `200`.
         <span class="property-type">str</span>
     </dt>
     <dd>{{% md %}}Formats log entries as JSON. Can be either disabled (`0`), array of json (`1`), or newline delimited json (`2`).
-{{% /md %}}</dd>
-    <dt class="property-optional"
+{{% /md %}}</dd><dt class="property-optional"
             title="Optional">
         <span id="message_type_python">
 <a href="#message_type_python" style="color: inherit; text-decoration: inherit;">message_<wbr>type</a>
@@ -6834,8 +6125,7 @@ Default `200`.
         <span class="property-type">str</span>
     </dt>
     <dd>{{% md %}}How the message should be formatted. One of: classic (default), loggly, logplex or blank.
-{{% /md %}}</dd>
-    <dt class="property-optional"
+{{% /md %}}</dd><dt class="property-optional"
             title="Optional">
         <span id="method_python">
 <a href="#method_python" style="color: inherit; text-decoration: inherit;">method</a>
@@ -6844,8 +6134,7 @@ Default `200`.
         <span class="property-type">str</span>
     </dt>
     <dd>{{% md %}}HTTP method used for request. Can be either `POST` or `PUT`. Default `POST`.
-{{% /md %}}</dd>
-    <dt class="property-optional"
+{{% /md %}}</dd><dt class="property-optional"
             title="Optional">
         <span id="request_max_bytes_python">
 <a href="#request_max_bytes_python" style="color: inherit; text-decoration: inherit;">request_<wbr>max_<wbr>bytes</a>
@@ -6854,8 +6143,7 @@ Default `200`.
         <span class="property-type">int</span>
     </dt>
     <dd>{{% md %}}The maximum number of bytes sent in one request. Defaults to `0` for unbounded.
-{{% /md %}}</dd>
-    <dt class="property-optional"
+{{% /md %}}</dd><dt class="property-optional"
             title="Optional">
         <span id="request_max_entries_python">
 <a href="#request_max_entries_python" style="color: inherit; text-decoration: inherit;">request_<wbr>max_<wbr>entries</a>
@@ -6864,8 +6152,7 @@ Default `200`.
         <span class="property-type">int</span>
     </dt>
     <dd>{{% md %}}The maximum number of logs sent in one request. Defaults to `0` for unbounded.
-{{% /md %}}</dd>
-    <dt class="property-optional"
+{{% /md %}}</dd><dt class="property-optional"
             title="Optional">
         <span id="tls_ca_cert_python">
 <a href="#tls_ca_cert_python" style="color: inherit; text-decoration: inherit;">tls_<wbr>ca_<wbr>cert</a>
@@ -6874,8 +6161,7 @@ Default `200`.
         <span class="property-type">str</span>
     </dt>
     <dd>{{% md %}}A secure certificate to authenticate the server with. Must be in PEM format.
-{{% /md %}}</dd>
-    <dt class="property-optional"
+{{% /md %}}</dd><dt class="property-optional"
             title="Optional">
         <span id="tls_client_cert_python">
 <a href="#tls_client_cert_python" style="color: inherit; text-decoration: inherit;">tls_<wbr>client_<wbr>cert</a>
@@ -6884,8 +6170,7 @@ Default `200`.
         <span class="property-type">str</span>
     </dt>
     <dd>{{% md %}}The client certificate used to make authenticated requests. Must be in PEM format.
-{{% /md %}}</dd>
-    <dt class="property-optional"
+{{% /md %}}</dd><dt class="property-optional"
             title="Optional">
         <span id="tls_client_key_python">
 <a href="#tls_client_key_python" style="color: inherit; text-decoration: inherit;">tls_<wbr>client_<wbr>key</a>
@@ -6894,8 +6179,7 @@ Default `200`.
         <span class="property-type">str</span>
     </dt>
     <dd>{{% md %}}The client private key used to make authenticated requests. Must be in PEM format.
-{{% /md %}}</dd>
-    <dt class="property-optional"
+{{% /md %}}</dd><dt class="property-optional"
             title="Optional">
         <span id="tls_hostname_python">
 <a href="#tls_hostname_python" style="color: inherit; text-decoration: inherit;">tls_<wbr>hostname</a>
@@ -6904,16 +6188,13 @@ Default `200`.
         <span class="property-type">str</span>
     </dt>
     <dd>{{% md %}}The hostname used to verify the server's certificate. It can either be the Common Name or a Subject Alternative Name (SAN).
-{{% /md %}}</dd>
-</dl>
+{{% /md %}}</dd></dl>
 {{% /choosable %}}
 
 <h4 id="servicecomputelogentry">Service<wbr>Compute<wbr>Logentry</h4>
 
 {{% choosable language csharp %}}
-<dl class="resources-properties">
-
-    <dt class="property-required"
+<dl class="resources-properties"><dt class="property-required"
             title="Required">
         <span id="name_csharp">
 <a href="#name_csharp" style="color: inherit; text-decoration: inherit;">Name</a>
@@ -6922,8 +6203,7 @@ Default `200`.
         <span class="property-type">string</span>
     </dt>
     <dd>{{% md %}}The unique name of the Kinesis logging endpoint.
-{{% /md %}}</dd>
-    <dt class="property-required"
+{{% /md %}}</dd><dt class="property-required"
             title="Required">
         <span id="token_csharp">
 <a href="#token_csharp" style="color: inherit; text-decoration: inherit;">Token</a>
@@ -6932,8 +6212,7 @@ Default `200`.
         <span class="property-type">string</span>
     </dt>
     <dd>{{% md %}}The data authentication token associated with this endpoint.
-{{% /md %}}</dd>
-    <dt class="property-optional"
+{{% /md %}}</dd><dt class="property-optional"
             title="Optional">
         <span id="port_csharp">
 <a href="#port_csharp" style="color: inherit; text-decoration: inherit;">Port</a>
@@ -6942,8 +6221,7 @@ Default `200`.
         <span class="property-type">int</span>
     </dt>
     <dd>{{% md %}}The port the SFTP service listens on. (Default: `22`).
-{{% /md %}}</dd>
-    <dt class="property-optional"
+{{% /md %}}</dd><dt class="property-optional"
             title="Optional">
         <span id="usetls_csharp">
 <a href="#usetls_csharp" style="color: inherit; text-decoration: inherit;">Use<wbr>Tls</a>
@@ -6952,14 +6230,11 @@ Default `200`.
         <span class="property-type">bool</span>
     </dt>
     <dd>{{% md %}}Whether to use TLS for secure logging. Can be either true or false.
-{{% /md %}}</dd>
-</dl>
+{{% /md %}}</dd></dl>
 {{% /choosable %}}
 
 {{% choosable language go %}}
-<dl class="resources-properties">
-
-    <dt class="property-required"
+<dl class="resources-properties"><dt class="property-required"
             title="Required">
         <span id="name_go">
 <a href="#name_go" style="color: inherit; text-decoration: inherit;">Name</a>
@@ -6968,8 +6243,7 @@ Default `200`.
         <span class="property-type">string</span>
     </dt>
     <dd>{{% md %}}The unique name of the Kinesis logging endpoint.
-{{% /md %}}</dd>
-    <dt class="property-required"
+{{% /md %}}</dd><dt class="property-required"
             title="Required">
         <span id="token_go">
 <a href="#token_go" style="color: inherit; text-decoration: inherit;">Token</a>
@@ -6978,8 +6252,7 @@ Default `200`.
         <span class="property-type">string</span>
     </dt>
     <dd>{{% md %}}The data authentication token associated with this endpoint.
-{{% /md %}}</dd>
-    <dt class="property-optional"
+{{% /md %}}</dd><dt class="property-optional"
             title="Optional">
         <span id="port_go">
 <a href="#port_go" style="color: inherit; text-decoration: inherit;">Port</a>
@@ -6988,8 +6261,7 @@ Default `200`.
         <span class="property-type">int</span>
     </dt>
     <dd>{{% md %}}The port the SFTP service listens on. (Default: `22`).
-{{% /md %}}</dd>
-    <dt class="property-optional"
+{{% /md %}}</dd><dt class="property-optional"
             title="Optional">
         <span id="usetls_go">
 <a href="#usetls_go" style="color: inherit; text-decoration: inherit;">Use<wbr>Tls</a>
@@ -6998,14 +6270,11 @@ Default `200`.
         <span class="property-type">bool</span>
     </dt>
     <dd>{{% md %}}Whether to use TLS for secure logging. Can be either true or false.
-{{% /md %}}</dd>
-</dl>
+{{% /md %}}</dd></dl>
 {{% /choosable %}}
 
 {{% choosable language nodejs %}}
-<dl class="resources-properties">
-
-    <dt class="property-required"
+<dl class="resources-properties"><dt class="property-required"
             title="Required">
         <span id="name_nodejs">
 <a href="#name_nodejs" style="color: inherit; text-decoration: inherit;">name</a>
@@ -7014,8 +6283,7 @@ Default `200`.
         <span class="property-type">string</span>
     </dt>
     <dd>{{% md %}}The unique name of the Kinesis logging endpoint.
-{{% /md %}}</dd>
-    <dt class="property-required"
+{{% /md %}}</dd><dt class="property-required"
             title="Required">
         <span id="token_nodejs">
 <a href="#token_nodejs" style="color: inherit; text-decoration: inherit;">token</a>
@@ -7024,8 +6292,7 @@ Default `200`.
         <span class="property-type">string</span>
     </dt>
     <dd>{{% md %}}The data authentication token associated with this endpoint.
-{{% /md %}}</dd>
-    <dt class="property-optional"
+{{% /md %}}</dd><dt class="property-optional"
             title="Optional">
         <span id="port_nodejs">
 <a href="#port_nodejs" style="color: inherit; text-decoration: inherit;">port</a>
@@ -7034,8 +6301,7 @@ Default `200`.
         <span class="property-type">number</span>
     </dt>
     <dd>{{% md %}}The port the SFTP service listens on. (Default: `22`).
-{{% /md %}}</dd>
-    <dt class="property-optional"
+{{% /md %}}</dd><dt class="property-optional"
             title="Optional">
         <span id="usetls_nodejs">
 <a href="#usetls_nodejs" style="color: inherit; text-decoration: inherit;">use<wbr>Tls</a>
@@ -7044,14 +6310,11 @@ Default `200`.
         <span class="property-type">boolean</span>
     </dt>
     <dd>{{% md %}}Whether to use TLS for secure logging. Can be either true or false.
-{{% /md %}}</dd>
-</dl>
+{{% /md %}}</dd></dl>
 {{% /choosable %}}
 
 {{% choosable language python %}}
-<dl class="resources-properties">
-
-    <dt class="property-required"
+<dl class="resources-properties"><dt class="property-required"
             title="Required">
         <span id="name_python">
 <a href="#name_python" style="color: inherit; text-decoration: inherit;">name</a>
@@ -7060,8 +6323,7 @@ Default `200`.
         <span class="property-type">str</span>
     </dt>
     <dd>{{% md %}}The unique name of the Kinesis logging endpoint.
-{{% /md %}}</dd>
-    <dt class="property-required"
+{{% /md %}}</dd><dt class="property-required"
             title="Required">
         <span id="token_python">
 <a href="#token_python" style="color: inherit; text-decoration: inherit;">token</a>
@@ -7070,8 +6332,7 @@ Default `200`.
         <span class="property-type">str</span>
     </dt>
     <dd>{{% md %}}The data authentication token associated with this endpoint.
-{{% /md %}}</dd>
-    <dt class="property-optional"
+{{% /md %}}</dd><dt class="property-optional"
             title="Optional">
         <span id="port_python">
 <a href="#port_python" style="color: inherit; text-decoration: inherit;">port</a>
@@ -7080,8 +6341,7 @@ Default `200`.
         <span class="property-type">int</span>
     </dt>
     <dd>{{% md %}}The port the SFTP service listens on. (Default: `22`).
-{{% /md %}}</dd>
-    <dt class="property-optional"
+{{% /md %}}</dd><dt class="property-optional"
             title="Optional">
         <span id="use_tls_python">
 <a href="#use_tls_python" style="color: inherit; text-decoration: inherit;">use_<wbr>tls</a>
@@ -7090,16 +6350,13 @@ Default `200`.
         <span class="property-type">bool</span>
     </dt>
     <dd>{{% md %}}Whether to use TLS for secure logging. Can be either true or false.
-{{% /md %}}</dd>
-</dl>
+{{% /md %}}</dd></dl>
 {{% /choosable %}}
 
 <h4 id="servicecomputeloggingcloudfile">Service<wbr>Compute<wbr>Logging<wbr>Cloudfile</h4>
 
 {{% choosable language csharp %}}
-<dl class="resources-properties">
-
-    <dt class="property-required"
+<dl class="resources-properties"><dt class="property-required"
             title="Required">
         <span id="accesskey_csharp">
 <a href="#accesskey_csharp" style="color: inherit; text-decoration: inherit;">Access<wbr>Key</a>
@@ -7108,8 +6365,7 @@ Default `200`.
         <span class="property-type">string</span>
     </dt>
     <dd>{{% md %}}The AWS access key to be used to write to the stream.
-{{% /md %}}</dd>
-    <dt class="property-required"
+{{% /md %}}</dd><dt class="property-required"
             title="Required">
         <span id="bucketname_csharp">
 <a href="#bucketname_csharp" style="color: inherit; text-decoration: inherit;">Bucket<wbr>Name</a>
@@ -7118,8 +6374,7 @@ Default `200`.
         <span class="property-type">string</span>
     </dt>
     <dd>{{% md %}}The name of your Cloud Files container.
-{{% /md %}}</dd>
-    <dt class="property-required"
+{{% /md %}}</dd><dt class="property-required"
             title="Required">
         <span id="name_csharp">
 <a href="#name_csharp" style="color: inherit; text-decoration: inherit;">Name</a>
@@ -7128,8 +6383,7 @@ Default `200`.
         <span class="property-type">string</span>
     </dt>
     <dd>{{% md %}}The unique name of the Kinesis logging endpoint.
-{{% /md %}}</dd>
-    <dt class="property-required"
+{{% /md %}}</dd><dt class="property-required"
             title="Required">
         <span id="user_csharp">
 <a href="#user_csharp" style="color: inherit; text-decoration: inherit;">User</a>
@@ -7138,8 +6392,7 @@ Default `200`.
         <span class="property-type">string</span>
     </dt>
     <dd>{{% md %}}The username for your Cloud Files account.
-{{% /md %}}</dd>
-    <dt class="property-optional"
+{{% /md %}}</dd><dt class="property-optional"
             title="Optional">
         <span id="gziplevel_csharp">
 <a href="#gziplevel_csharp" style="color: inherit; text-decoration: inherit;">Gzip<wbr>Level</a>
@@ -7148,8 +6401,7 @@ Default `200`.
         <span class="property-type">int</span>
     </dt>
     <dd>{{% md %}}What level of GZIP encoding to have when dumping logs (default 0, no compression).
-{{% /md %}}</dd>
-    <dt class="property-optional"
+{{% /md %}}</dd><dt class="property-optional"
             title="Optional">
         <span id="messagetype_csharp">
 <a href="#messagetype_csharp" style="color: inherit; text-decoration: inherit;">Message<wbr>Type</a>
@@ -7158,8 +6410,7 @@ Default `200`.
         <span class="property-type">string</span>
     </dt>
     <dd>{{% md %}}How the message should be formatted. One of: classic (default), loggly, logplex or blank.
-{{% /md %}}</dd>
-    <dt class="property-optional"
+{{% /md %}}</dd><dt class="property-optional"
             title="Optional">
         <span id="path_csharp">
 <a href="#path_csharp" style="color: inherit; text-decoration: inherit;">Path</a>
@@ -7168,8 +6419,7 @@ Default `200`.
         <span class="property-type">string</span>
     </dt>
     <dd>{{% md %}}The path to upload logs to.
-{{% /md %}}</dd>
-    <dt class="property-optional"
+{{% /md %}}</dd><dt class="property-optional"
             title="Optional">
         <span id="period_csharp">
 <a href="#period_csharp" style="color: inherit; text-decoration: inherit;">Period</a>
@@ -7178,8 +6428,7 @@ Default `200`.
         <span class="property-type">int</span>
     </dt>
     <dd>{{% md %}}How frequently log files are finalized so they can be available for reading (in seconds, default 3600).
-{{% /md %}}</dd>
-    <dt class="property-optional"
+{{% /md %}}</dd><dt class="property-optional"
             title="Optional">
         <span id="publickey_csharp">
 <a href="#publickey_csharp" style="color: inherit; text-decoration: inherit;">Public<wbr>Key</a>
@@ -7188,8 +6437,7 @@ Default `200`.
         <span class="property-type">string</span>
     </dt>
     <dd>{{% md %}}The PGP public key that Fastly will use to encrypt your log files before writing them to disk.
-{{% /md %}}</dd>
-    <dt class="property-optional"
+{{% /md %}}</dd><dt class="property-optional"
             title="Optional">
         <span id="region_csharp">
 <a href="#region_csharp" style="color: inherit; text-decoration: inherit;">Region</a>
@@ -7198,8 +6446,7 @@ Default `200`.
         <span class="property-type">string</span>
     </dt>
     <dd>{{% md %}}The AWS region the stream resides in. (Default: `us-east-1`).
-{{% /md %}}</dd>
-    <dt class="property-optional"
+{{% /md %}}</dd><dt class="property-optional"
             title="Optional">
         <span id="timestampformat_csharp">
 <a href="#timestampformat_csharp" style="color: inherit; text-decoration: inherit;">Timestamp<wbr>Format</a>
@@ -7208,14 +6455,11 @@ Default `200`.
         <span class="property-type">string</span>
     </dt>
     <dd>{{% md %}}The strftime specified timestamp formatting (default `%Y-%m-%dT%H:%M:%S.000`).
-{{% /md %}}</dd>
-</dl>
+{{% /md %}}</dd></dl>
 {{% /choosable %}}
 
 {{% choosable language go %}}
-<dl class="resources-properties">
-
-    <dt class="property-required"
+<dl class="resources-properties"><dt class="property-required"
             title="Required">
         <span id="accesskey_go">
 <a href="#accesskey_go" style="color: inherit; text-decoration: inherit;">Access<wbr>Key</a>
@@ -7224,8 +6468,7 @@ Default `200`.
         <span class="property-type">string</span>
     </dt>
     <dd>{{% md %}}The AWS access key to be used to write to the stream.
-{{% /md %}}</dd>
-    <dt class="property-required"
+{{% /md %}}</dd><dt class="property-required"
             title="Required">
         <span id="bucketname_go">
 <a href="#bucketname_go" style="color: inherit; text-decoration: inherit;">Bucket<wbr>Name</a>
@@ -7234,8 +6477,7 @@ Default `200`.
         <span class="property-type">string</span>
     </dt>
     <dd>{{% md %}}The name of your Cloud Files container.
-{{% /md %}}</dd>
-    <dt class="property-required"
+{{% /md %}}</dd><dt class="property-required"
             title="Required">
         <span id="name_go">
 <a href="#name_go" style="color: inherit; text-decoration: inherit;">Name</a>
@@ -7244,8 +6486,7 @@ Default `200`.
         <span class="property-type">string</span>
     </dt>
     <dd>{{% md %}}The unique name of the Kinesis logging endpoint.
-{{% /md %}}</dd>
-    <dt class="property-required"
+{{% /md %}}</dd><dt class="property-required"
             title="Required">
         <span id="user_go">
 <a href="#user_go" style="color: inherit; text-decoration: inherit;">User</a>
@@ -7254,8 +6495,7 @@ Default `200`.
         <span class="property-type">string</span>
     </dt>
     <dd>{{% md %}}The username for your Cloud Files account.
-{{% /md %}}</dd>
-    <dt class="property-optional"
+{{% /md %}}</dd><dt class="property-optional"
             title="Optional">
         <span id="gziplevel_go">
 <a href="#gziplevel_go" style="color: inherit; text-decoration: inherit;">Gzip<wbr>Level</a>
@@ -7264,8 +6504,7 @@ Default `200`.
         <span class="property-type">int</span>
     </dt>
     <dd>{{% md %}}What level of GZIP encoding to have when dumping logs (default 0, no compression).
-{{% /md %}}</dd>
-    <dt class="property-optional"
+{{% /md %}}</dd><dt class="property-optional"
             title="Optional">
         <span id="messagetype_go">
 <a href="#messagetype_go" style="color: inherit; text-decoration: inherit;">Message<wbr>Type</a>
@@ -7274,8 +6513,7 @@ Default `200`.
         <span class="property-type">string</span>
     </dt>
     <dd>{{% md %}}How the message should be formatted. One of: classic (default), loggly, logplex or blank.
-{{% /md %}}</dd>
-    <dt class="property-optional"
+{{% /md %}}</dd><dt class="property-optional"
             title="Optional">
         <span id="path_go">
 <a href="#path_go" style="color: inherit; text-decoration: inherit;">Path</a>
@@ -7284,8 +6522,7 @@ Default `200`.
         <span class="property-type">string</span>
     </dt>
     <dd>{{% md %}}The path to upload logs to.
-{{% /md %}}</dd>
-    <dt class="property-optional"
+{{% /md %}}</dd><dt class="property-optional"
             title="Optional">
         <span id="period_go">
 <a href="#period_go" style="color: inherit; text-decoration: inherit;">Period</a>
@@ -7294,8 +6531,7 @@ Default `200`.
         <span class="property-type">int</span>
     </dt>
     <dd>{{% md %}}How frequently log files are finalized so they can be available for reading (in seconds, default 3600).
-{{% /md %}}</dd>
-    <dt class="property-optional"
+{{% /md %}}</dd><dt class="property-optional"
             title="Optional">
         <span id="publickey_go">
 <a href="#publickey_go" style="color: inherit; text-decoration: inherit;">Public<wbr>Key</a>
@@ -7304,8 +6540,7 @@ Default `200`.
         <span class="property-type">string</span>
     </dt>
     <dd>{{% md %}}The PGP public key that Fastly will use to encrypt your log files before writing them to disk.
-{{% /md %}}</dd>
-    <dt class="property-optional"
+{{% /md %}}</dd><dt class="property-optional"
             title="Optional">
         <span id="region_go">
 <a href="#region_go" style="color: inherit; text-decoration: inherit;">Region</a>
@@ -7314,8 +6549,7 @@ Default `200`.
         <span class="property-type">string</span>
     </dt>
     <dd>{{% md %}}The AWS region the stream resides in. (Default: `us-east-1`).
-{{% /md %}}</dd>
-    <dt class="property-optional"
+{{% /md %}}</dd><dt class="property-optional"
             title="Optional">
         <span id="timestampformat_go">
 <a href="#timestampformat_go" style="color: inherit; text-decoration: inherit;">Timestamp<wbr>Format</a>
@@ -7324,14 +6558,11 @@ Default `200`.
         <span class="property-type">string</span>
     </dt>
     <dd>{{% md %}}The strftime specified timestamp formatting (default `%Y-%m-%dT%H:%M:%S.000`).
-{{% /md %}}</dd>
-</dl>
+{{% /md %}}</dd></dl>
 {{% /choosable %}}
 
 {{% choosable language nodejs %}}
-<dl class="resources-properties">
-
-    <dt class="property-required"
+<dl class="resources-properties"><dt class="property-required"
             title="Required">
         <span id="accesskey_nodejs">
 <a href="#accesskey_nodejs" style="color: inherit; text-decoration: inherit;">access<wbr>Key</a>
@@ -7340,8 +6571,7 @@ Default `200`.
         <span class="property-type">string</span>
     </dt>
     <dd>{{% md %}}The AWS access key to be used to write to the stream.
-{{% /md %}}</dd>
-    <dt class="property-required"
+{{% /md %}}</dd><dt class="property-required"
             title="Required">
         <span id="bucketname_nodejs">
 <a href="#bucketname_nodejs" style="color: inherit; text-decoration: inherit;">bucket<wbr>Name</a>
@@ -7350,8 +6580,7 @@ Default `200`.
         <span class="property-type">string</span>
     </dt>
     <dd>{{% md %}}The name of your Cloud Files container.
-{{% /md %}}</dd>
-    <dt class="property-required"
+{{% /md %}}</dd><dt class="property-required"
             title="Required">
         <span id="name_nodejs">
 <a href="#name_nodejs" style="color: inherit; text-decoration: inherit;">name</a>
@@ -7360,8 +6589,7 @@ Default `200`.
         <span class="property-type">string</span>
     </dt>
     <dd>{{% md %}}The unique name of the Kinesis logging endpoint.
-{{% /md %}}</dd>
-    <dt class="property-required"
+{{% /md %}}</dd><dt class="property-required"
             title="Required">
         <span id="user_nodejs">
 <a href="#user_nodejs" style="color: inherit; text-decoration: inherit;">user</a>
@@ -7370,8 +6598,7 @@ Default `200`.
         <span class="property-type">string</span>
     </dt>
     <dd>{{% md %}}The username for your Cloud Files account.
-{{% /md %}}</dd>
-    <dt class="property-optional"
+{{% /md %}}</dd><dt class="property-optional"
             title="Optional">
         <span id="gziplevel_nodejs">
 <a href="#gziplevel_nodejs" style="color: inherit; text-decoration: inherit;">gzip<wbr>Level</a>
@@ -7380,8 +6607,7 @@ Default `200`.
         <span class="property-type">number</span>
     </dt>
     <dd>{{% md %}}What level of GZIP encoding to have when dumping logs (default 0, no compression).
-{{% /md %}}</dd>
-    <dt class="property-optional"
+{{% /md %}}</dd><dt class="property-optional"
             title="Optional">
         <span id="messagetype_nodejs">
 <a href="#messagetype_nodejs" style="color: inherit; text-decoration: inherit;">message<wbr>Type</a>
@@ -7390,8 +6616,7 @@ Default `200`.
         <span class="property-type">string</span>
     </dt>
     <dd>{{% md %}}How the message should be formatted. One of: classic (default), loggly, logplex or blank.
-{{% /md %}}</dd>
-    <dt class="property-optional"
+{{% /md %}}</dd><dt class="property-optional"
             title="Optional">
         <span id="path_nodejs">
 <a href="#path_nodejs" style="color: inherit; text-decoration: inherit;">path</a>
@@ -7400,8 +6625,7 @@ Default `200`.
         <span class="property-type">string</span>
     </dt>
     <dd>{{% md %}}The path to upload logs to.
-{{% /md %}}</dd>
-    <dt class="property-optional"
+{{% /md %}}</dd><dt class="property-optional"
             title="Optional">
         <span id="period_nodejs">
 <a href="#period_nodejs" style="color: inherit; text-decoration: inherit;">period</a>
@@ -7410,8 +6634,7 @@ Default `200`.
         <span class="property-type">number</span>
     </dt>
     <dd>{{% md %}}How frequently log files are finalized so they can be available for reading (in seconds, default 3600).
-{{% /md %}}</dd>
-    <dt class="property-optional"
+{{% /md %}}</dd><dt class="property-optional"
             title="Optional">
         <span id="publickey_nodejs">
 <a href="#publickey_nodejs" style="color: inherit; text-decoration: inherit;">public<wbr>Key</a>
@@ -7420,8 +6643,7 @@ Default `200`.
         <span class="property-type">string</span>
     </dt>
     <dd>{{% md %}}The PGP public key that Fastly will use to encrypt your log files before writing them to disk.
-{{% /md %}}</dd>
-    <dt class="property-optional"
+{{% /md %}}</dd><dt class="property-optional"
             title="Optional">
         <span id="region_nodejs">
 <a href="#region_nodejs" style="color: inherit; text-decoration: inherit;">region</a>
@@ -7430,8 +6652,7 @@ Default `200`.
         <span class="property-type">string</span>
     </dt>
     <dd>{{% md %}}The AWS region the stream resides in. (Default: `us-east-1`).
-{{% /md %}}</dd>
-    <dt class="property-optional"
+{{% /md %}}</dd><dt class="property-optional"
             title="Optional">
         <span id="timestampformat_nodejs">
 <a href="#timestampformat_nodejs" style="color: inherit; text-decoration: inherit;">timestamp<wbr>Format</a>
@@ -7440,14 +6661,11 @@ Default `200`.
         <span class="property-type">string</span>
     </dt>
     <dd>{{% md %}}The strftime specified timestamp formatting (default `%Y-%m-%dT%H:%M:%S.000`).
-{{% /md %}}</dd>
-</dl>
+{{% /md %}}</dd></dl>
 {{% /choosable %}}
 
 {{% choosable language python %}}
-<dl class="resources-properties">
-
-    <dt class="property-required"
+<dl class="resources-properties"><dt class="property-required"
             title="Required">
         <span id="access_key_python">
 <a href="#access_key_python" style="color: inherit; text-decoration: inherit;">access_<wbr>key</a>
@@ -7456,8 +6674,7 @@ Default `200`.
         <span class="property-type">str</span>
     </dt>
     <dd>{{% md %}}The AWS access key to be used to write to the stream.
-{{% /md %}}</dd>
-    <dt class="property-required"
+{{% /md %}}</dd><dt class="property-required"
             title="Required">
         <span id="bucket_name_python">
 <a href="#bucket_name_python" style="color: inherit; text-decoration: inherit;">bucket_<wbr>name</a>
@@ -7466,8 +6683,7 @@ Default `200`.
         <span class="property-type">str</span>
     </dt>
     <dd>{{% md %}}The name of your Cloud Files container.
-{{% /md %}}</dd>
-    <dt class="property-required"
+{{% /md %}}</dd><dt class="property-required"
             title="Required">
         <span id="name_python">
 <a href="#name_python" style="color: inherit; text-decoration: inherit;">name</a>
@@ -7476,8 +6692,7 @@ Default `200`.
         <span class="property-type">str</span>
     </dt>
     <dd>{{% md %}}The unique name of the Kinesis logging endpoint.
-{{% /md %}}</dd>
-    <dt class="property-required"
+{{% /md %}}</dd><dt class="property-required"
             title="Required">
         <span id="user_python">
 <a href="#user_python" style="color: inherit; text-decoration: inherit;">user</a>
@@ -7486,8 +6701,7 @@ Default `200`.
         <span class="property-type">str</span>
     </dt>
     <dd>{{% md %}}The username for your Cloud Files account.
-{{% /md %}}</dd>
-    <dt class="property-optional"
+{{% /md %}}</dd><dt class="property-optional"
             title="Optional">
         <span id="gzip_level_python">
 <a href="#gzip_level_python" style="color: inherit; text-decoration: inherit;">gzip_<wbr>level</a>
@@ -7496,8 +6710,7 @@ Default `200`.
         <span class="property-type">int</span>
     </dt>
     <dd>{{% md %}}What level of GZIP encoding to have when dumping logs (default 0, no compression).
-{{% /md %}}</dd>
-    <dt class="property-optional"
+{{% /md %}}</dd><dt class="property-optional"
             title="Optional">
         <span id="message_type_python">
 <a href="#message_type_python" style="color: inherit; text-decoration: inherit;">message_<wbr>type</a>
@@ -7506,8 +6719,7 @@ Default `200`.
         <span class="property-type">str</span>
     </dt>
     <dd>{{% md %}}How the message should be formatted. One of: classic (default), loggly, logplex or blank.
-{{% /md %}}</dd>
-    <dt class="property-optional"
+{{% /md %}}</dd><dt class="property-optional"
             title="Optional">
         <span id="path_python">
 <a href="#path_python" style="color: inherit; text-decoration: inherit;">path</a>
@@ -7516,8 +6728,7 @@ Default `200`.
         <span class="property-type">str</span>
     </dt>
     <dd>{{% md %}}The path to upload logs to.
-{{% /md %}}</dd>
-    <dt class="property-optional"
+{{% /md %}}</dd><dt class="property-optional"
             title="Optional">
         <span id="period_python">
 <a href="#period_python" style="color: inherit; text-decoration: inherit;">period</a>
@@ -7526,8 +6737,7 @@ Default `200`.
         <span class="property-type">int</span>
     </dt>
     <dd>{{% md %}}How frequently log files are finalized so they can be available for reading (in seconds, default 3600).
-{{% /md %}}</dd>
-    <dt class="property-optional"
+{{% /md %}}</dd><dt class="property-optional"
             title="Optional">
         <span id="public_key_python">
 <a href="#public_key_python" style="color: inherit; text-decoration: inherit;">public_<wbr>key</a>
@@ -7536,8 +6746,7 @@ Default `200`.
         <span class="property-type">str</span>
     </dt>
     <dd>{{% md %}}The PGP public key that Fastly will use to encrypt your log files before writing them to disk.
-{{% /md %}}</dd>
-    <dt class="property-optional"
+{{% /md %}}</dd><dt class="property-optional"
             title="Optional">
         <span id="region_python">
 <a href="#region_python" style="color: inherit; text-decoration: inherit;">region</a>
@@ -7546,8 +6755,7 @@ Default `200`.
         <span class="property-type">str</span>
     </dt>
     <dd>{{% md %}}The AWS region the stream resides in. (Default: `us-east-1`).
-{{% /md %}}</dd>
-    <dt class="property-optional"
+{{% /md %}}</dd><dt class="property-optional"
             title="Optional">
         <span id="timestamp_format_python">
 <a href="#timestamp_format_python" style="color: inherit; text-decoration: inherit;">timestamp_<wbr>format</a>
@@ -7556,16 +6764,13 @@ Default `200`.
         <span class="property-type">str</span>
     </dt>
     <dd>{{% md %}}The strftime specified timestamp formatting (default `%Y-%m-%dT%H:%M:%S.000`).
-{{% /md %}}</dd>
-</dl>
+{{% /md %}}</dd></dl>
 {{% /choosable %}}
 
 <h4 id="servicecomputeloggingdatadog">Service<wbr>Compute<wbr>Logging<wbr>Datadog</h4>
 
 {{% choosable language csharp %}}
-<dl class="resources-properties">
-
-    <dt class="property-required"
+<dl class="resources-properties"><dt class="property-required"
             title="Required">
         <span id="name_csharp">
 <a href="#name_csharp" style="color: inherit; text-decoration: inherit;">Name</a>
@@ -7574,8 +6779,7 @@ Default `200`.
         <span class="property-type">string</span>
     </dt>
     <dd>{{% md %}}The unique name of the Kinesis logging endpoint.
-{{% /md %}}</dd>
-    <dt class="property-required"
+{{% /md %}}</dd><dt class="property-required"
             title="Required">
         <span id="token_csharp">
 <a href="#token_csharp" style="color: inherit; text-decoration: inherit;">Token</a>
@@ -7584,8 +6788,7 @@ Default `200`.
         <span class="property-type">string</span>
     </dt>
     <dd>{{% md %}}The data authentication token associated with this endpoint.
-{{% /md %}}</dd>
-    <dt class="property-optional"
+{{% /md %}}</dd><dt class="property-optional"
             title="Optional">
         <span id="region_csharp">
 <a href="#region_csharp" style="color: inherit; text-decoration: inherit;">Region</a>
@@ -7594,14 +6797,11 @@ Default `200`.
         <span class="property-type">string</span>
     </dt>
     <dd>{{% md %}}The AWS region the stream resides in. (Default: `us-east-1`).
-{{% /md %}}</dd>
-</dl>
+{{% /md %}}</dd></dl>
 {{% /choosable %}}
 
 {{% choosable language go %}}
-<dl class="resources-properties">
-
-    <dt class="property-required"
+<dl class="resources-properties"><dt class="property-required"
             title="Required">
         <span id="name_go">
 <a href="#name_go" style="color: inherit; text-decoration: inherit;">Name</a>
@@ -7610,8 +6810,7 @@ Default `200`.
         <span class="property-type">string</span>
     </dt>
     <dd>{{% md %}}The unique name of the Kinesis logging endpoint.
-{{% /md %}}</dd>
-    <dt class="property-required"
+{{% /md %}}</dd><dt class="property-required"
             title="Required">
         <span id="token_go">
 <a href="#token_go" style="color: inherit; text-decoration: inherit;">Token</a>
@@ -7620,8 +6819,7 @@ Default `200`.
         <span class="property-type">string</span>
     </dt>
     <dd>{{% md %}}The data authentication token associated with this endpoint.
-{{% /md %}}</dd>
-    <dt class="property-optional"
+{{% /md %}}</dd><dt class="property-optional"
             title="Optional">
         <span id="region_go">
 <a href="#region_go" style="color: inherit; text-decoration: inherit;">Region</a>
@@ -7630,14 +6828,11 @@ Default `200`.
         <span class="property-type">string</span>
     </dt>
     <dd>{{% md %}}The AWS region the stream resides in. (Default: `us-east-1`).
-{{% /md %}}</dd>
-</dl>
+{{% /md %}}</dd></dl>
 {{% /choosable %}}
 
 {{% choosable language nodejs %}}
-<dl class="resources-properties">
-
-    <dt class="property-required"
+<dl class="resources-properties"><dt class="property-required"
             title="Required">
         <span id="name_nodejs">
 <a href="#name_nodejs" style="color: inherit; text-decoration: inherit;">name</a>
@@ -7646,8 +6841,7 @@ Default `200`.
         <span class="property-type">string</span>
     </dt>
     <dd>{{% md %}}The unique name of the Kinesis logging endpoint.
-{{% /md %}}</dd>
-    <dt class="property-required"
+{{% /md %}}</dd><dt class="property-required"
             title="Required">
         <span id="token_nodejs">
 <a href="#token_nodejs" style="color: inherit; text-decoration: inherit;">token</a>
@@ -7656,8 +6850,7 @@ Default `200`.
         <span class="property-type">string</span>
     </dt>
     <dd>{{% md %}}The data authentication token associated with this endpoint.
-{{% /md %}}</dd>
-    <dt class="property-optional"
+{{% /md %}}</dd><dt class="property-optional"
             title="Optional">
         <span id="region_nodejs">
 <a href="#region_nodejs" style="color: inherit; text-decoration: inherit;">region</a>
@@ -7666,14 +6859,11 @@ Default `200`.
         <span class="property-type">string</span>
     </dt>
     <dd>{{% md %}}The AWS region the stream resides in. (Default: `us-east-1`).
-{{% /md %}}</dd>
-</dl>
+{{% /md %}}</dd></dl>
 {{% /choosable %}}
 
 {{% choosable language python %}}
-<dl class="resources-properties">
-
-    <dt class="property-required"
+<dl class="resources-properties"><dt class="property-required"
             title="Required">
         <span id="name_python">
 <a href="#name_python" style="color: inherit; text-decoration: inherit;">name</a>
@@ -7682,8 +6872,7 @@ Default `200`.
         <span class="property-type">str</span>
     </dt>
     <dd>{{% md %}}The unique name of the Kinesis logging endpoint.
-{{% /md %}}</dd>
-    <dt class="property-required"
+{{% /md %}}</dd><dt class="property-required"
             title="Required">
         <span id="token_python">
 <a href="#token_python" style="color: inherit; text-decoration: inherit;">token</a>
@@ -7692,8 +6881,7 @@ Default `200`.
         <span class="property-type">str</span>
     </dt>
     <dd>{{% md %}}The data authentication token associated with this endpoint.
-{{% /md %}}</dd>
-    <dt class="property-optional"
+{{% /md %}}</dd><dt class="property-optional"
             title="Optional">
         <span id="region_python">
 <a href="#region_python" style="color: inherit; text-decoration: inherit;">region</a>
@@ -7702,16 +6890,13 @@ Default `200`.
         <span class="property-type">str</span>
     </dt>
     <dd>{{% md %}}The AWS region the stream resides in. (Default: `us-east-1`).
-{{% /md %}}</dd>
-</dl>
+{{% /md %}}</dd></dl>
 {{% /choosable %}}
 
 <h4 id="servicecomputeloggingdigitalocean">Service<wbr>Compute<wbr>Logging<wbr>Digitalocean</h4>
 
 {{% choosable language csharp %}}
-<dl class="resources-properties">
-
-    <dt class="property-required"
+<dl class="resources-properties"><dt class="property-required"
             title="Required">
         <span id="accesskey_csharp">
 <a href="#accesskey_csharp" style="color: inherit; text-decoration: inherit;">Access<wbr>Key</a>
@@ -7720,8 +6905,7 @@ Default `200`.
         <span class="property-type">string</span>
     </dt>
     <dd>{{% md %}}The AWS access key to be used to write to the stream.
-{{% /md %}}</dd>
-    <dt class="property-required"
+{{% /md %}}</dd><dt class="property-required"
             title="Required">
         <span id="bucketname_csharp">
 <a href="#bucketname_csharp" style="color: inherit; text-decoration: inherit;">Bucket<wbr>Name</a>
@@ -7730,8 +6914,7 @@ Default `200`.
         <span class="property-type">string</span>
     </dt>
     <dd>{{% md %}}The name of your Cloud Files container.
-{{% /md %}}</dd>
-    <dt class="property-required"
+{{% /md %}}</dd><dt class="property-required"
             title="Required">
         <span id="name_csharp">
 <a href="#name_csharp" style="color: inherit; text-decoration: inherit;">Name</a>
@@ -7740,8 +6923,7 @@ Default `200`.
         <span class="property-type">string</span>
     </dt>
     <dd>{{% md %}}The unique name of the Kinesis logging endpoint.
-{{% /md %}}</dd>
-    <dt class="property-required"
+{{% /md %}}</dd><dt class="property-required"
             title="Required">
         <span id="secretkey_csharp">
 <a href="#secretkey_csharp" style="color: inherit; text-decoration: inherit;">Secret<wbr>Key</a>
@@ -7750,8 +6932,7 @@ Default `200`.
         <span class="property-type">string</span>
     </dt>
     <dd>{{% md %}}The AWS secret access key to authenticate with.
-{{% /md %}}</dd>
-    <dt class="property-optional"
+{{% /md %}}</dd><dt class="property-optional"
             title="Optional">
         <span id="domain_csharp">
 <a href="#domain_csharp" style="color: inherit; text-decoration: inherit;">Domain</a>
@@ -7760,8 +6941,7 @@ Default `200`.
         <span class="property-type">string</span>
     </dt>
     <dd>{{% md %}}The domain of the DigitalOcean Spaces endpoint (default "nyc3.digitaloceanspaces.com").
-{{% /md %}}</dd>
-    <dt class="property-optional"
+{{% /md %}}</dd><dt class="property-optional"
             title="Optional">
         <span id="gziplevel_csharp">
 <a href="#gziplevel_csharp" style="color: inherit; text-decoration: inherit;">Gzip<wbr>Level</a>
@@ -7770,8 +6950,7 @@ Default `200`.
         <span class="property-type">int</span>
     </dt>
     <dd>{{% md %}}What level of GZIP encoding to have when dumping logs (default 0, no compression).
-{{% /md %}}</dd>
-    <dt class="property-optional"
+{{% /md %}}</dd><dt class="property-optional"
             title="Optional">
         <span id="messagetype_csharp">
 <a href="#messagetype_csharp" style="color: inherit; text-decoration: inherit;">Message<wbr>Type</a>
@@ -7780,8 +6959,7 @@ Default `200`.
         <span class="property-type">string</span>
     </dt>
     <dd>{{% md %}}How the message should be formatted. One of: classic (default), loggly, logplex or blank.
-{{% /md %}}</dd>
-    <dt class="property-optional"
+{{% /md %}}</dd><dt class="property-optional"
             title="Optional">
         <span id="path_csharp">
 <a href="#path_csharp" style="color: inherit; text-decoration: inherit;">Path</a>
@@ -7790,8 +6968,7 @@ Default `200`.
         <span class="property-type">string</span>
     </dt>
     <dd>{{% md %}}The path to upload logs to.
-{{% /md %}}</dd>
-    <dt class="property-optional"
+{{% /md %}}</dd><dt class="property-optional"
             title="Optional">
         <span id="period_csharp">
 <a href="#period_csharp" style="color: inherit; text-decoration: inherit;">Period</a>
@@ -7800,8 +6977,7 @@ Default `200`.
         <span class="property-type">int</span>
     </dt>
     <dd>{{% md %}}How frequently log files are finalized so they can be available for reading (in seconds, default 3600).
-{{% /md %}}</dd>
-    <dt class="property-optional"
+{{% /md %}}</dd><dt class="property-optional"
             title="Optional">
         <span id="publickey_csharp">
 <a href="#publickey_csharp" style="color: inherit; text-decoration: inherit;">Public<wbr>Key</a>
@@ -7810,8 +6986,7 @@ Default `200`.
         <span class="property-type">string</span>
     </dt>
     <dd>{{% md %}}The PGP public key that Fastly will use to encrypt your log files before writing them to disk.
-{{% /md %}}</dd>
-    <dt class="property-optional"
+{{% /md %}}</dd><dt class="property-optional"
             title="Optional">
         <span id="timestampformat_csharp">
 <a href="#timestampformat_csharp" style="color: inherit; text-decoration: inherit;">Timestamp<wbr>Format</a>
@@ -7820,14 +6995,11 @@ Default `200`.
         <span class="property-type">string</span>
     </dt>
     <dd>{{% md %}}The strftime specified timestamp formatting (default `%Y-%m-%dT%H:%M:%S.000`).
-{{% /md %}}</dd>
-</dl>
+{{% /md %}}</dd></dl>
 {{% /choosable %}}
 
 {{% choosable language go %}}
-<dl class="resources-properties">
-
-    <dt class="property-required"
+<dl class="resources-properties"><dt class="property-required"
             title="Required">
         <span id="accesskey_go">
 <a href="#accesskey_go" style="color: inherit; text-decoration: inherit;">Access<wbr>Key</a>
@@ -7836,8 +7008,7 @@ Default `200`.
         <span class="property-type">string</span>
     </dt>
     <dd>{{% md %}}The AWS access key to be used to write to the stream.
-{{% /md %}}</dd>
-    <dt class="property-required"
+{{% /md %}}</dd><dt class="property-required"
             title="Required">
         <span id="bucketname_go">
 <a href="#bucketname_go" style="color: inherit; text-decoration: inherit;">Bucket<wbr>Name</a>
@@ -7846,8 +7017,7 @@ Default `200`.
         <span class="property-type">string</span>
     </dt>
     <dd>{{% md %}}The name of your Cloud Files container.
-{{% /md %}}</dd>
-    <dt class="property-required"
+{{% /md %}}</dd><dt class="property-required"
             title="Required">
         <span id="name_go">
 <a href="#name_go" style="color: inherit; text-decoration: inherit;">Name</a>
@@ -7856,8 +7026,7 @@ Default `200`.
         <span class="property-type">string</span>
     </dt>
     <dd>{{% md %}}The unique name of the Kinesis logging endpoint.
-{{% /md %}}</dd>
-    <dt class="property-required"
+{{% /md %}}</dd><dt class="property-required"
             title="Required">
         <span id="secretkey_go">
 <a href="#secretkey_go" style="color: inherit; text-decoration: inherit;">Secret<wbr>Key</a>
@@ -7866,8 +7035,7 @@ Default `200`.
         <span class="property-type">string</span>
     </dt>
     <dd>{{% md %}}The AWS secret access key to authenticate with.
-{{% /md %}}</dd>
-    <dt class="property-optional"
+{{% /md %}}</dd><dt class="property-optional"
             title="Optional">
         <span id="domain_go">
 <a href="#domain_go" style="color: inherit; text-decoration: inherit;">Domain</a>
@@ -7876,8 +7044,7 @@ Default `200`.
         <span class="property-type">string</span>
     </dt>
     <dd>{{% md %}}The domain of the DigitalOcean Spaces endpoint (default "nyc3.digitaloceanspaces.com").
-{{% /md %}}</dd>
-    <dt class="property-optional"
+{{% /md %}}</dd><dt class="property-optional"
             title="Optional">
         <span id="gziplevel_go">
 <a href="#gziplevel_go" style="color: inherit; text-decoration: inherit;">Gzip<wbr>Level</a>
@@ -7886,8 +7053,7 @@ Default `200`.
         <span class="property-type">int</span>
     </dt>
     <dd>{{% md %}}What level of GZIP encoding to have when dumping logs (default 0, no compression).
-{{% /md %}}</dd>
-    <dt class="property-optional"
+{{% /md %}}</dd><dt class="property-optional"
             title="Optional">
         <span id="messagetype_go">
 <a href="#messagetype_go" style="color: inherit; text-decoration: inherit;">Message<wbr>Type</a>
@@ -7896,8 +7062,7 @@ Default `200`.
         <span class="property-type">string</span>
     </dt>
     <dd>{{% md %}}How the message should be formatted. One of: classic (default), loggly, logplex or blank.
-{{% /md %}}</dd>
-    <dt class="property-optional"
+{{% /md %}}</dd><dt class="property-optional"
             title="Optional">
         <span id="path_go">
 <a href="#path_go" style="color: inherit; text-decoration: inherit;">Path</a>
@@ -7906,8 +7071,7 @@ Default `200`.
         <span class="property-type">string</span>
     </dt>
     <dd>{{% md %}}The path to upload logs to.
-{{% /md %}}</dd>
-    <dt class="property-optional"
+{{% /md %}}</dd><dt class="property-optional"
             title="Optional">
         <span id="period_go">
 <a href="#period_go" style="color: inherit; text-decoration: inherit;">Period</a>
@@ -7916,8 +7080,7 @@ Default `200`.
         <span class="property-type">int</span>
     </dt>
     <dd>{{% md %}}How frequently log files are finalized so they can be available for reading (in seconds, default 3600).
-{{% /md %}}</dd>
-    <dt class="property-optional"
+{{% /md %}}</dd><dt class="property-optional"
             title="Optional">
         <span id="publickey_go">
 <a href="#publickey_go" style="color: inherit; text-decoration: inherit;">Public<wbr>Key</a>
@@ -7926,8 +7089,7 @@ Default `200`.
         <span class="property-type">string</span>
     </dt>
     <dd>{{% md %}}The PGP public key that Fastly will use to encrypt your log files before writing them to disk.
-{{% /md %}}</dd>
-    <dt class="property-optional"
+{{% /md %}}</dd><dt class="property-optional"
             title="Optional">
         <span id="timestampformat_go">
 <a href="#timestampformat_go" style="color: inherit; text-decoration: inherit;">Timestamp<wbr>Format</a>
@@ -7936,14 +7098,11 @@ Default `200`.
         <span class="property-type">string</span>
     </dt>
     <dd>{{% md %}}The strftime specified timestamp formatting (default `%Y-%m-%dT%H:%M:%S.000`).
-{{% /md %}}</dd>
-</dl>
+{{% /md %}}</dd></dl>
 {{% /choosable %}}
 
 {{% choosable language nodejs %}}
-<dl class="resources-properties">
-
-    <dt class="property-required"
+<dl class="resources-properties"><dt class="property-required"
             title="Required">
         <span id="accesskey_nodejs">
 <a href="#accesskey_nodejs" style="color: inherit; text-decoration: inherit;">access<wbr>Key</a>
@@ -7952,8 +7111,7 @@ Default `200`.
         <span class="property-type">string</span>
     </dt>
     <dd>{{% md %}}The AWS access key to be used to write to the stream.
-{{% /md %}}</dd>
-    <dt class="property-required"
+{{% /md %}}</dd><dt class="property-required"
             title="Required">
         <span id="bucketname_nodejs">
 <a href="#bucketname_nodejs" style="color: inherit; text-decoration: inherit;">bucket<wbr>Name</a>
@@ -7962,8 +7120,7 @@ Default `200`.
         <span class="property-type">string</span>
     </dt>
     <dd>{{% md %}}The name of your Cloud Files container.
-{{% /md %}}</dd>
-    <dt class="property-required"
+{{% /md %}}</dd><dt class="property-required"
             title="Required">
         <span id="name_nodejs">
 <a href="#name_nodejs" style="color: inherit; text-decoration: inherit;">name</a>
@@ -7972,8 +7129,7 @@ Default `200`.
         <span class="property-type">string</span>
     </dt>
     <dd>{{% md %}}The unique name of the Kinesis logging endpoint.
-{{% /md %}}</dd>
-    <dt class="property-required"
+{{% /md %}}</dd><dt class="property-required"
             title="Required">
         <span id="secretkey_nodejs">
 <a href="#secretkey_nodejs" style="color: inherit; text-decoration: inherit;">secret<wbr>Key</a>
@@ -7982,8 +7138,7 @@ Default `200`.
         <span class="property-type">string</span>
     </dt>
     <dd>{{% md %}}The AWS secret access key to authenticate with.
-{{% /md %}}</dd>
-    <dt class="property-optional"
+{{% /md %}}</dd><dt class="property-optional"
             title="Optional">
         <span id="domain_nodejs">
 <a href="#domain_nodejs" style="color: inherit; text-decoration: inherit;">domain</a>
@@ -7992,8 +7147,7 @@ Default `200`.
         <span class="property-type">string</span>
     </dt>
     <dd>{{% md %}}The domain of the DigitalOcean Spaces endpoint (default "nyc3.digitaloceanspaces.com").
-{{% /md %}}</dd>
-    <dt class="property-optional"
+{{% /md %}}</dd><dt class="property-optional"
             title="Optional">
         <span id="gziplevel_nodejs">
 <a href="#gziplevel_nodejs" style="color: inherit; text-decoration: inherit;">gzip<wbr>Level</a>
@@ -8002,8 +7156,7 @@ Default `200`.
         <span class="property-type">number</span>
     </dt>
     <dd>{{% md %}}What level of GZIP encoding to have when dumping logs (default 0, no compression).
-{{% /md %}}</dd>
-    <dt class="property-optional"
+{{% /md %}}</dd><dt class="property-optional"
             title="Optional">
         <span id="messagetype_nodejs">
 <a href="#messagetype_nodejs" style="color: inherit; text-decoration: inherit;">message<wbr>Type</a>
@@ -8012,8 +7165,7 @@ Default `200`.
         <span class="property-type">string</span>
     </dt>
     <dd>{{% md %}}How the message should be formatted. One of: classic (default), loggly, logplex or blank.
-{{% /md %}}</dd>
-    <dt class="property-optional"
+{{% /md %}}</dd><dt class="property-optional"
             title="Optional">
         <span id="path_nodejs">
 <a href="#path_nodejs" style="color: inherit; text-decoration: inherit;">path</a>
@@ -8022,8 +7174,7 @@ Default `200`.
         <span class="property-type">string</span>
     </dt>
     <dd>{{% md %}}The path to upload logs to.
-{{% /md %}}</dd>
-    <dt class="property-optional"
+{{% /md %}}</dd><dt class="property-optional"
             title="Optional">
         <span id="period_nodejs">
 <a href="#period_nodejs" style="color: inherit; text-decoration: inherit;">period</a>
@@ -8032,8 +7183,7 @@ Default `200`.
         <span class="property-type">number</span>
     </dt>
     <dd>{{% md %}}How frequently log files are finalized so they can be available for reading (in seconds, default 3600).
-{{% /md %}}</dd>
-    <dt class="property-optional"
+{{% /md %}}</dd><dt class="property-optional"
             title="Optional">
         <span id="publickey_nodejs">
 <a href="#publickey_nodejs" style="color: inherit; text-decoration: inherit;">public<wbr>Key</a>
@@ -8042,8 +7192,7 @@ Default `200`.
         <span class="property-type">string</span>
     </dt>
     <dd>{{% md %}}The PGP public key that Fastly will use to encrypt your log files before writing them to disk.
-{{% /md %}}</dd>
-    <dt class="property-optional"
+{{% /md %}}</dd><dt class="property-optional"
             title="Optional">
         <span id="timestampformat_nodejs">
 <a href="#timestampformat_nodejs" style="color: inherit; text-decoration: inherit;">timestamp<wbr>Format</a>
@@ -8052,14 +7201,11 @@ Default `200`.
         <span class="property-type">string</span>
     </dt>
     <dd>{{% md %}}The strftime specified timestamp formatting (default `%Y-%m-%dT%H:%M:%S.000`).
-{{% /md %}}</dd>
-</dl>
+{{% /md %}}</dd></dl>
 {{% /choosable %}}
 
 {{% choosable language python %}}
-<dl class="resources-properties">
-
-    <dt class="property-required"
+<dl class="resources-properties"><dt class="property-required"
             title="Required">
         <span id="access_key_python">
 <a href="#access_key_python" style="color: inherit; text-decoration: inherit;">access_<wbr>key</a>
@@ -8068,8 +7214,7 @@ Default `200`.
         <span class="property-type">str</span>
     </dt>
     <dd>{{% md %}}The AWS access key to be used to write to the stream.
-{{% /md %}}</dd>
-    <dt class="property-required"
+{{% /md %}}</dd><dt class="property-required"
             title="Required">
         <span id="bucket_name_python">
 <a href="#bucket_name_python" style="color: inherit; text-decoration: inherit;">bucket_<wbr>name</a>
@@ -8078,8 +7223,7 @@ Default `200`.
         <span class="property-type">str</span>
     </dt>
     <dd>{{% md %}}The name of your Cloud Files container.
-{{% /md %}}</dd>
-    <dt class="property-required"
+{{% /md %}}</dd><dt class="property-required"
             title="Required">
         <span id="name_python">
 <a href="#name_python" style="color: inherit; text-decoration: inherit;">name</a>
@@ -8088,8 +7232,7 @@ Default `200`.
         <span class="property-type">str</span>
     </dt>
     <dd>{{% md %}}The unique name of the Kinesis logging endpoint.
-{{% /md %}}</dd>
-    <dt class="property-required"
+{{% /md %}}</dd><dt class="property-required"
             title="Required">
         <span id="secret_key_python">
 <a href="#secret_key_python" style="color: inherit; text-decoration: inherit;">secret_<wbr>key</a>
@@ -8098,8 +7241,7 @@ Default `200`.
         <span class="property-type">str</span>
     </dt>
     <dd>{{% md %}}The AWS secret access key to authenticate with.
-{{% /md %}}</dd>
-    <dt class="property-optional"
+{{% /md %}}</dd><dt class="property-optional"
             title="Optional">
         <span id="domain_python">
 <a href="#domain_python" style="color: inherit; text-decoration: inherit;">domain</a>
@@ -8108,8 +7250,7 @@ Default `200`.
         <span class="property-type">str</span>
     </dt>
     <dd>{{% md %}}The domain of the DigitalOcean Spaces endpoint (default "nyc3.digitaloceanspaces.com").
-{{% /md %}}</dd>
-    <dt class="property-optional"
+{{% /md %}}</dd><dt class="property-optional"
             title="Optional">
         <span id="gzip_level_python">
 <a href="#gzip_level_python" style="color: inherit; text-decoration: inherit;">gzip_<wbr>level</a>
@@ -8118,8 +7259,7 @@ Default `200`.
         <span class="property-type">int</span>
     </dt>
     <dd>{{% md %}}What level of GZIP encoding to have when dumping logs (default 0, no compression).
-{{% /md %}}</dd>
-    <dt class="property-optional"
+{{% /md %}}</dd><dt class="property-optional"
             title="Optional">
         <span id="message_type_python">
 <a href="#message_type_python" style="color: inherit; text-decoration: inherit;">message_<wbr>type</a>
@@ -8128,8 +7268,7 @@ Default `200`.
         <span class="property-type">str</span>
     </dt>
     <dd>{{% md %}}How the message should be formatted. One of: classic (default), loggly, logplex or blank.
-{{% /md %}}</dd>
-    <dt class="property-optional"
+{{% /md %}}</dd><dt class="property-optional"
             title="Optional">
         <span id="path_python">
 <a href="#path_python" style="color: inherit; text-decoration: inherit;">path</a>
@@ -8138,8 +7277,7 @@ Default `200`.
         <span class="property-type">str</span>
     </dt>
     <dd>{{% md %}}The path to upload logs to.
-{{% /md %}}</dd>
-    <dt class="property-optional"
+{{% /md %}}</dd><dt class="property-optional"
             title="Optional">
         <span id="period_python">
 <a href="#period_python" style="color: inherit; text-decoration: inherit;">period</a>
@@ -8148,8 +7286,7 @@ Default `200`.
         <span class="property-type">int</span>
     </dt>
     <dd>{{% md %}}How frequently log files are finalized so they can be available for reading (in seconds, default 3600).
-{{% /md %}}</dd>
-    <dt class="property-optional"
+{{% /md %}}</dd><dt class="property-optional"
             title="Optional">
         <span id="public_key_python">
 <a href="#public_key_python" style="color: inherit; text-decoration: inherit;">public_<wbr>key</a>
@@ -8158,8 +7295,7 @@ Default `200`.
         <span class="property-type">str</span>
     </dt>
     <dd>{{% md %}}The PGP public key that Fastly will use to encrypt your log files before writing them to disk.
-{{% /md %}}</dd>
-    <dt class="property-optional"
+{{% /md %}}</dd><dt class="property-optional"
             title="Optional">
         <span id="timestamp_format_python">
 <a href="#timestamp_format_python" style="color: inherit; text-decoration: inherit;">timestamp_<wbr>format</a>
@@ -8168,16 +7304,13 @@ Default `200`.
         <span class="property-type">str</span>
     </dt>
     <dd>{{% md %}}The strftime specified timestamp formatting (default `%Y-%m-%dT%H:%M:%S.000`).
-{{% /md %}}</dd>
-</dl>
+{{% /md %}}</dd></dl>
 {{% /choosable %}}
 
 <h4 id="servicecomputeloggingelasticsearch">Service<wbr>Compute<wbr>Logging<wbr>Elasticsearch</h4>
 
 {{% choosable language csharp %}}
-<dl class="resources-properties">
-
-    <dt class="property-required"
+<dl class="resources-properties"><dt class="property-required"
             title="Required">
         <span id="index_csharp">
 <a href="#index_csharp" style="color: inherit; text-decoration: inherit;">Index</a>
@@ -8186,8 +7319,7 @@ Default `200`.
         <span class="property-type">string</span>
     </dt>
     <dd>{{% md %}}The name of the Elasticsearch index to send documents (logs) to.
-{{% /md %}}</dd>
-    <dt class="property-required"
+{{% /md %}}</dd><dt class="property-required"
             title="Required">
         <span id="name_csharp">
 <a href="#name_csharp" style="color: inherit; text-decoration: inherit;">Name</a>
@@ -8196,8 +7328,7 @@ Default `200`.
         <span class="property-type">string</span>
     </dt>
     <dd>{{% md %}}The unique name of the Kinesis logging endpoint.
-{{% /md %}}</dd>
-    <dt class="property-required"
+{{% /md %}}</dd><dt class="property-required"
             title="Required">
         <span id="url_csharp">
 <a href="#url_csharp" style="color: inherit; text-decoration: inherit;">Url</a>
@@ -8206,8 +7337,7 @@ Default `200`.
         <span class="property-type">string</span>
     </dt>
     <dd>{{% md %}}Your OpenStack auth url.
-{{% /md %}}</dd>
-    <dt class="property-optional"
+{{% /md %}}</dd><dt class="property-optional"
             title="Optional">
         <span id="password_csharp">
 <a href="#password_csharp" style="color: inherit; text-decoration: inherit;">Password</a>
@@ -8216,8 +7346,7 @@ Default `200`.
         <span class="property-type">string</span>
     </dt>
     <dd>{{% md %}}The password for the server. If both `password` and `secret_key` are passed, `secret_key` will be preferred.
-{{% /md %}}</dd>
-    <dt class="property-optional"
+{{% /md %}}</dd><dt class="property-optional"
             title="Optional">
         <span id="pipeline_csharp">
 <a href="#pipeline_csharp" style="color: inherit; text-decoration: inherit;">Pipeline</a>
@@ -8226,8 +7355,7 @@ Default `200`.
         <span class="property-type">string</span>
     </dt>
     <dd>{{% md %}}The ID of the Elasticsearch ingest pipeline to apply pre-process transformations to before indexing.
-{{% /md %}}</dd>
-    <dt class="property-optional"
+{{% /md %}}</dd><dt class="property-optional"
             title="Optional">
         <span id="requestmaxbytes_csharp">
 <a href="#requestmaxbytes_csharp" style="color: inherit; text-decoration: inherit;">Request<wbr>Max<wbr>Bytes</a>
@@ -8236,8 +7364,7 @@ Default `200`.
         <span class="property-type">int</span>
     </dt>
     <dd>{{% md %}}The maximum number of bytes sent in one request. Defaults to `0` for unbounded.
-{{% /md %}}</dd>
-    <dt class="property-optional"
+{{% /md %}}</dd><dt class="property-optional"
             title="Optional">
         <span id="requestmaxentries_csharp">
 <a href="#requestmaxentries_csharp" style="color: inherit; text-decoration: inherit;">Request<wbr>Max<wbr>Entries</a>
@@ -8246,8 +7373,7 @@ Default `200`.
         <span class="property-type">int</span>
     </dt>
     <dd>{{% md %}}The maximum number of logs sent in one request. Defaults to `0` for unbounded.
-{{% /md %}}</dd>
-    <dt class="property-optional"
+{{% /md %}}</dd><dt class="property-optional"
             title="Optional">
         <span id="tlscacert_csharp">
 <a href="#tlscacert_csharp" style="color: inherit; text-decoration: inherit;">Tls<wbr>Ca<wbr>Cert</a>
@@ -8256,8 +7382,7 @@ Default `200`.
         <span class="property-type">string</span>
     </dt>
     <dd>{{% md %}}A secure certificate to authenticate the server with. Must be in PEM format.
-{{% /md %}}</dd>
-    <dt class="property-optional"
+{{% /md %}}</dd><dt class="property-optional"
             title="Optional">
         <span id="tlsclientcert_csharp">
 <a href="#tlsclientcert_csharp" style="color: inherit; text-decoration: inherit;">Tls<wbr>Client<wbr>Cert</a>
@@ -8266,8 +7391,7 @@ Default `200`.
         <span class="property-type">string</span>
     </dt>
     <dd>{{% md %}}The client certificate used to make authenticated requests. Must be in PEM format.
-{{% /md %}}</dd>
-    <dt class="property-optional"
+{{% /md %}}</dd><dt class="property-optional"
             title="Optional">
         <span id="tlsclientkey_csharp">
 <a href="#tlsclientkey_csharp" style="color: inherit; text-decoration: inherit;">Tls<wbr>Client<wbr>Key</a>
@@ -8276,8 +7400,7 @@ Default `200`.
         <span class="property-type">string</span>
     </dt>
     <dd>{{% md %}}The client private key used to make authenticated requests. Must be in PEM format.
-{{% /md %}}</dd>
-    <dt class="property-optional"
+{{% /md %}}</dd><dt class="property-optional"
             title="Optional">
         <span id="tlshostname_csharp">
 <a href="#tlshostname_csharp" style="color: inherit; text-decoration: inherit;">Tls<wbr>Hostname</a>
@@ -8286,8 +7409,7 @@ Default `200`.
         <span class="property-type">string</span>
     </dt>
     <dd>{{% md %}}The hostname used to verify the server's certificate. It can either be the Common Name or a Subject Alternative Name (SAN).
-{{% /md %}}</dd>
-    <dt class="property-optional"
+{{% /md %}}</dd><dt class="property-optional"
             title="Optional">
         <span id="user_csharp">
 <a href="#user_csharp" style="color: inherit; text-decoration: inherit;">User</a>
@@ -8296,14 +7418,11 @@ Default `200`.
         <span class="property-type">string</span>
     </dt>
     <dd>{{% md %}}The username for your Cloud Files account.
-{{% /md %}}</dd>
-</dl>
+{{% /md %}}</dd></dl>
 {{% /choosable %}}
 
 {{% choosable language go %}}
-<dl class="resources-properties">
-
-    <dt class="property-required"
+<dl class="resources-properties"><dt class="property-required"
             title="Required">
         <span id="index_go">
 <a href="#index_go" style="color: inherit; text-decoration: inherit;">Index</a>
@@ -8312,8 +7431,7 @@ Default `200`.
         <span class="property-type">string</span>
     </dt>
     <dd>{{% md %}}The name of the Elasticsearch index to send documents (logs) to.
-{{% /md %}}</dd>
-    <dt class="property-required"
+{{% /md %}}</dd><dt class="property-required"
             title="Required">
         <span id="name_go">
 <a href="#name_go" style="color: inherit; text-decoration: inherit;">Name</a>
@@ -8322,8 +7440,7 @@ Default `200`.
         <span class="property-type">string</span>
     </dt>
     <dd>{{% md %}}The unique name of the Kinesis logging endpoint.
-{{% /md %}}</dd>
-    <dt class="property-required"
+{{% /md %}}</dd><dt class="property-required"
             title="Required">
         <span id="url_go">
 <a href="#url_go" style="color: inherit; text-decoration: inherit;">Url</a>
@@ -8332,8 +7449,7 @@ Default `200`.
         <span class="property-type">string</span>
     </dt>
     <dd>{{% md %}}Your OpenStack auth url.
-{{% /md %}}</dd>
-    <dt class="property-optional"
+{{% /md %}}</dd><dt class="property-optional"
             title="Optional">
         <span id="password_go">
 <a href="#password_go" style="color: inherit; text-decoration: inherit;">Password</a>
@@ -8342,8 +7458,7 @@ Default `200`.
         <span class="property-type">string</span>
     </dt>
     <dd>{{% md %}}The password for the server. If both `password` and `secret_key` are passed, `secret_key` will be preferred.
-{{% /md %}}</dd>
-    <dt class="property-optional"
+{{% /md %}}</dd><dt class="property-optional"
             title="Optional">
         <span id="pipeline_go">
 <a href="#pipeline_go" style="color: inherit; text-decoration: inherit;">Pipeline</a>
@@ -8352,8 +7467,7 @@ Default `200`.
         <span class="property-type">string</span>
     </dt>
     <dd>{{% md %}}The ID of the Elasticsearch ingest pipeline to apply pre-process transformations to before indexing.
-{{% /md %}}</dd>
-    <dt class="property-optional"
+{{% /md %}}</dd><dt class="property-optional"
             title="Optional">
         <span id="requestmaxbytes_go">
 <a href="#requestmaxbytes_go" style="color: inherit; text-decoration: inherit;">Request<wbr>Max<wbr>Bytes</a>
@@ -8362,8 +7476,7 @@ Default `200`.
         <span class="property-type">int</span>
     </dt>
     <dd>{{% md %}}The maximum number of bytes sent in one request. Defaults to `0` for unbounded.
-{{% /md %}}</dd>
-    <dt class="property-optional"
+{{% /md %}}</dd><dt class="property-optional"
             title="Optional">
         <span id="requestmaxentries_go">
 <a href="#requestmaxentries_go" style="color: inherit; text-decoration: inherit;">Request<wbr>Max<wbr>Entries</a>
@@ -8372,8 +7485,7 @@ Default `200`.
         <span class="property-type">int</span>
     </dt>
     <dd>{{% md %}}The maximum number of logs sent in one request. Defaults to `0` for unbounded.
-{{% /md %}}</dd>
-    <dt class="property-optional"
+{{% /md %}}</dd><dt class="property-optional"
             title="Optional">
         <span id="tlscacert_go">
 <a href="#tlscacert_go" style="color: inherit; text-decoration: inherit;">Tls<wbr>Ca<wbr>Cert</a>
@@ -8382,8 +7494,7 @@ Default `200`.
         <span class="property-type">string</span>
     </dt>
     <dd>{{% md %}}A secure certificate to authenticate the server with. Must be in PEM format.
-{{% /md %}}</dd>
-    <dt class="property-optional"
+{{% /md %}}</dd><dt class="property-optional"
             title="Optional">
         <span id="tlsclientcert_go">
 <a href="#tlsclientcert_go" style="color: inherit; text-decoration: inherit;">Tls<wbr>Client<wbr>Cert</a>
@@ -8392,8 +7503,7 @@ Default `200`.
         <span class="property-type">string</span>
     </dt>
     <dd>{{% md %}}The client certificate used to make authenticated requests. Must be in PEM format.
-{{% /md %}}</dd>
-    <dt class="property-optional"
+{{% /md %}}</dd><dt class="property-optional"
             title="Optional">
         <span id="tlsclientkey_go">
 <a href="#tlsclientkey_go" style="color: inherit; text-decoration: inherit;">Tls<wbr>Client<wbr>Key</a>
@@ -8402,8 +7512,7 @@ Default `200`.
         <span class="property-type">string</span>
     </dt>
     <dd>{{% md %}}The client private key used to make authenticated requests. Must be in PEM format.
-{{% /md %}}</dd>
-    <dt class="property-optional"
+{{% /md %}}</dd><dt class="property-optional"
             title="Optional">
         <span id="tlshostname_go">
 <a href="#tlshostname_go" style="color: inherit; text-decoration: inherit;">Tls<wbr>Hostname</a>
@@ -8412,8 +7521,7 @@ Default `200`.
         <span class="property-type">string</span>
     </dt>
     <dd>{{% md %}}The hostname used to verify the server's certificate. It can either be the Common Name or a Subject Alternative Name (SAN).
-{{% /md %}}</dd>
-    <dt class="property-optional"
+{{% /md %}}</dd><dt class="property-optional"
             title="Optional">
         <span id="user_go">
 <a href="#user_go" style="color: inherit; text-decoration: inherit;">User</a>
@@ -8422,14 +7530,11 @@ Default `200`.
         <span class="property-type">string</span>
     </dt>
     <dd>{{% md %}}The username for your Cloud Files account.
-{{% /md %}}</dd>
-</dl>
+{{% /md %}}</dd></dl>
 {{% /choosable %}}
 
 {{% choosable language nodejs %}}
-<dl class="resources-properties">
-
-    <dt class="property-required"
+<dl class="resources-properties"><dt class="property-required"
             title="Required">
         <span id="index_nodejs">
 <a href="#index_nodejs" style="color: inherit; text-decoration: inherit;">index</a>
@@ -8438,8 +7543,7 @@ Default `200`.
         <span class="property-type">string</span>
     </dt>
     <dd>{{% md %}}The name of the Elasticsearch index to send documents (logs) to.
-{{% /md %}}</dd>
-    <dt class="property-required"
+{{% /md %}}</dd><dt class="property-required"
             title="Required">
         <span id="name_nodejs">
 <a href="#name_nodejs" style="color: inherit; text-decoration: inherit;">name</a>
@@ -8448,8 +7552,7 @@ Default `200`.
         <span class="property-type">string</span>
     </dt>
     <dd>{{% md %}}The unique name of the Kinesis logging endpoint.
-{{% /md %}}</dd>
-    <dt class="property-required"
+{{% /md %}}</dd><dt class="property-required"
             title="Required">
         <span id="url_nodejs">
 <a href="#url_nodejs" style="color: inherit; text-decoration: inherit;">url</a>
@@ -8458,8 +7561,7 @@ Default `200`.
         <span class="property-type">string</span>
     </dt>
     <dd>{{% md %}}Your OpenStack auth url.
-{{% /md %}}</dd>
-    <dt class="property-optional"
+{{% /md %}}</dd><dt class="property-optional"
             title="Optional">
         <span id="password_nodejs">
 <a href="#password_nodejs" style="color: inherit; text-decoration: inherit;">password</a>
@@ -8468,8 +7570,7 @@ Default `200`.
         <span class="property-type">string</span>
     </dt>
     <dd>{{% md %}}The password for the server. If both `password` and `secret_key` are passed, `secret_key` will be preferred.
-{{% /md %}}</dd>
-    <dt class="property-optional"
+{{% /md %}}</dd><dt class="property-optional"
             title="Optional">
         <span id="pipeline_nodejs">
 <a href="#pipeline_nodejs" style="color: inherit; text-decoration: inherit;">pipeline</a>
@@ -8478,8 +7579,7 @@ Default `200`.
         <span class="property-type">string</span>
     </dt>
     <dd>{{% md %}}The ID of the Elasticsearch ingest pipeline to apply pre-process transformations to before indexing.
-{{% /md %}}</dd>
-    <dt class="property-optional"
+{{% /md %}}</dd><dt class="property-optional"
             title="Optional">
         <span id="requestmaxbytes_nodejs">
 <a href="#requestmaxbytes_nodejs" style="color: inherit; text-decoration: inherit;">request<wbr>Max<wbr>Bytes</a>
@@ -8488,8 +7588,7 @@ Default `200`.
         <span class="property-type">number</span>
     </dt>
     <dd>{{% md %}}The maximum number of bytes sent in one request. Defaults to `0` for unbounded.
-{{% /md %}}</dd>
-    <dt class="property-optional"
+{{% /md %}}</dd><dt class="property-optional"
             title="Optional">
         <span id="requestmaxentries_nodejs">
 <a href="#requestmaxentries_nodejs" style="color: inherit; text-decoration: inherit;">request<wbr>Max<wbr>Entries</a>
@@ -8498,8 +7597,7 @@ Default `200`.
         <span class="property-type">number</span>
     </dt>
     <dd>{{% md %}}The maximum number of logs sent in one request. Defaults to `0` for unbounded.
-{{% /md %}}</dd>
-    <dt class="property-optional"
+{{% /md %}}</dd><dt class="property-optional"
             title="Optional">
         <span id="tlscacert_nodejs">
 <a href="#tlscacert_nodejs" style="color: inherit; text-decoration: inherit;">tls<wbr>Ca<wbr>Cert</a>
@@ -8508,8 +7606,7 @@ Default `200`.
         <span class="property-type">string</span>
     </dt>
     <dd>{{% md %}}A secure certificate to authenticate the server with. Must be in PEM format.
-{{% /md %}}</dd>
-    <dt class="property-optional"
+{{% /md %}}</dd><dt class="property-optional"
             title="Optional">
         <span id="tlsclientcert_nodejs">
 <a href="#tlsclientcert_nodejs" style="color: inherit; text-decoration: inherit;">tls<wbr>Client<wbr>Cert</a>
@@ -8518,8 +7615,7 @@ Default `200`.
         <span class="property-type">string</span>
     </dt>
     <dd>{{% md %}}The client certificate used to make authenticated requests. Must be in PEM format.
-{{% /md %}}</dd>
-    <dt class="property-optional"
+{{% /md %}}</dd><dt class="property-optional"
             title="Optional">
         <span id="tlsclientkey_nodejs">
 <a href="#tlsclientkey_nodejs" style="color: inherit; text-decoration: inherit;">tls<wbr>Client<wbr>Key</a>
@@ -8528,8 +7624,7 @@ Default `200`.
         <span class="property-type">string</span>
     </dt>
     <dd>{{% md %}}The client private key used to make authenticated requests. Must be in PEM format.
-{{% /md %}}</dd>
-    <dt class="property-optional"
+{{% /md %}}</dd><dt class="property-optional"
             title="Optional">
         <span id="tlshostname_nodejs">
 <a href="#tlshostname_nodejs" style="color: inherit; text-decoration: inherit;">tls<wbr>Hostname</a>
@@ -8538,8 +7633,7 @@ Default `200`.
         <span class="property-type">string</span>
     </dt>
     <dd>{{% md %}}The hostname used to verify the server's certificate. It can either be the Common Name or a Subject Alternative Name (SAN).
-{{% /md %}}</dd>
-    <dt class="property-optional"
+{{% /md %}}</dd><dt class="property-optional"
             title="Optional">
         <span id="user_nodejs">
 <a href="#user_nodejs" style="color: inherit; text-decoration: inherit;">user</a>
@@ -8548,14 +7642,11 @@ Default `200`.
         <span class="property-type">string</span>
     </dt>
     <dd>{{% md %}}The username for your Cloud Files account.
-{{% /md %}}</dd>
-</dl>
+{{% /md %}}</dd></dl>
 {{% /choosable %}}
 
 {{% choosable language python %}}
-<dl class="resources-properties">
-
-    <dt class="property-required"
+<dl class="resources-properties"><dt class="property-required"
             title="Required">
         <span id="index_python">
 <a href="#index_python" style="color: inherit; text-decoration: inherit;">index</a>
@@ -8564,8 +7655,7 @@ Default `200`.
         <span class="property-type">str</span>
     </dt>
     <dd>{{% md %}}The name of the Elasticsearch index to send documents (logs) to.
-{{% /md %}}</dd>
-    <dt class="property-required"
+{{% /md %}}</dd><dt class="property-required"
             title="Required">
         <span id="name_python">
 <a href="#name_python" style="color: inherit; text-decoration: inherit;">name</a>
@@ -8574,8 +7664,7 @@ Default `200`.
         <span class="property-type">str</span>
     </dt>
     <dd>{{% md %}}The unique name of the Kinesis logging endpoint.
-{{% /md %}}</dd>
-    <dt class="property-required"
+{{% /md %}}</dd><dt class="property-required"
             title="Required">
         <span id="url_python">
 <a href="#url_python" style="color: inherit; text-decoration: inherit;">url</a>
@@ -8584,8 +7673,7 @@ Default `200`.
         <span class="property-type">str</span>
     </dt>
     <dd>{{% md %}}Your OpenStack auth url.
-{{% /md %}}</dd>
-    <dt class="property-optional"
+{{% /md %}}</dd><dt class="property-optional"
             title="Optional">
         <span id="password_python">
 <a href="#password_python" style="color: inherit; text-decoration: inherit;">password</a>
@@ -8594,8 +7682,7 @@ Default `200`.
         <span class="property-type">str</span>
     </dt>
     <dd>{{% md %}}The password for the server. If both `password` and `secret_key` are passed, `secret_key` will be preferred.
-{{% /md %}}</dd>
-    <dt class="property-optional"
+{{% /md %}}</dd><dt class="property-optional"
             title="Optional">
         <span id="pipeline_python">
 <a href="#pipeline_python" style="color: inherit; text-decoration: inherit;">pipeline</a>
@@ -8604,8 +7691,7 @@ Default `200`.
         <span class="property-type">str</span>
     </dt>
     <dd>{{% md %}}The ID of the Elasticsearch ingest pipeline to apply pre-process transformations to before indexing.
-{{% /md %}}</dd>
-    <dt class="property-optional"
+{{% /md %}}</dd><dt class="property-optional"
             title="Optional">
         <span id="request_max_bytes_python">
 <a href="#request_max_bytes_python" style="color: inherit; text-decoration: inherit;">request_<wbr>max_<wbr>bytes</a>
@@ -8614,8 +7700,7 @@ Default `200`.
         <span class="property-type">int</span>
     </dt>
     <dd>{{% md %}}The maximum number of bytes sent in one request. Defaults to `0` for unbounded.
-{{% /md %}}</dd>
-    <dt class="property-optional"
+{{% /md %}}</dd><dt class="property-optional"
             title="Optional">
         <span id="request_max_entries_python">
 <a href="#request_max_entries_python" style="color: inherit; text-decoration: inherit;">request_<wbr>max_<wbr>entries</a>
@@ -8624,8 +7709,7 @@ Default `200`.
         <span class="property-type">int</span>
     </dt>
     <dd>{{% md %}}The maximum number of logs sent in one request. Defaults to `0` for unbounded.
-{{% /md %}}</dd>
-    <dt class="property-optional"
+{{% /md %}}</dd><dt class="property-optional"
             title="Optional">
         <span id="tls_ca_cert_python">
 <a href="#tls_ca_cert_python" style="color: inherit; text-decoration: inherit;">tls_<wbr>ca_<wbr>cert</a>
@@ -8634,8 +7718,7 @@ Default `200`.
         <span class="property-type">str</span>
     </dt>
     <dd>{{% md %}}A secure certificate to authenticate the server with. Must be in PEM format.
-{{% /md %}}</dd>
-    <dt class="property-optional"
+{{% /md %}}</dd><dt class="property-optional"
             title="Optional">
         <span id="tls_client_cert_python">
 <a href="#tls_client_cert_python" style="color: inherit; text-decoration: inherit;">tls_<wbr>client_<wbr>cert</a>
@@ -8644,8 +7727,7 @@ Default `200`.
         <span class="property-type">str</span>
     </dt>
     <dd>{{% md %}}The client certificate used to make authenticated requests. Must be in PEM format.
-{{% /md %}}</dd>
-    <dt class="property-optional"
+{{% /md %}}</dd><dt class="property-optional"
             title="Optional">
         <span id="tls_client_key_python">
 <a href="#tls_client_key_python" style="color: inherit; text-decoration: inherit;">tls_<wbr>client_<wbr>key</a>
@@ -8654,8 +7736,7 @@ Default `200`.
         <span class="property-type">str</span>
     </dt>
     <dd>{{% md %}}The client private key used to make authenticated requests. Must be in PEM format.
-{{% /md %}}</dd>
-    <dt class="property-optional"
+{{% /md %}}</dd><dt class="property-optional"
             title="Optional">
         <span id="tls_hostname_python">
 <a href="#tls_hostname_python" style="color: inherit; text-decoration: inherit;">tls_<wbr>hostname</a>
@@ -8664,8 +7745,7 @@ Default `200`.
         <span class="property-type">str</span>
     </dt>
     <dd>{{% md %}}The hostname used to verify the server's certificate. It can either be the Common Name or a Subject Alternative Name (SAN).
-{{% /md %}}</dd>
-    <dt class="property-optional"
+{{% /md %}}</dd><dt class="property-optional"
             title="Optional">
         <span id="user_python">
 <a href="#user_python" style="color: inherit; text-decoration: inherit;">user</a>
@@ -8674,16 +7754,13 @@ Default `200`.
         <span class="property-type">str</span>
     </dt>
     <dd>{{% md %}}The username for your Cloud Files account.
-{{% /md %}}</dd>
-</dl>
+{{% /md %}}</dd></dl>
 {{% /choosable %}}
 
 <h4 id="servicecomputeloggingftp">Service<wbr>Compute<wbr>Logging<wbr>Ftp</h4>
 
 {{% choosable language csharp %}}
-<dl class="resources-properties">
-
-    <dt class="property-required"
+<dl class="resources-properties"><dt class="property-required"
             title="Required">
         <span id="address_csharp">
 <a href="#address_csharp" style="color: inherit; text-decoration: inherit;">Address</a>
@@ -8692,8 +7769,7 @@ Default `200`.
         <span class="property-type">string</span>
     </dt>
     <dd>{{% md %}}The SFTP address to stream logs to.
-{{% /md %}}</dd>
-    <dt class="property-required"
+{{% /md %}}</dd><dt class="property-required"
             title="Required">
         <span id="name_csharp">
 <a href="#name_csharp" style="color: inherit; text-decoration: inherit;">Name</a>
@@ -8702,8 +7778,7 @@ Default `200`.
         <span class="property-type">string</span>
     </dt>
     <dd>{{% md %}}The unique name of the Kinesis logging endpoint.
-{{% /md %}}</dd>
-    <dt class="property-required"
+{{% /md %}}</dd><dt class="property-required"
             title="Required">
         <span id="password_csharp">
 <a href="#password_csharp" style="color: inherit; text-decoration: inherit;">Password</a>
@@ -8712,8 +7787,7 @@ Default `200`.
         <span class="property-type">string</span>
     </dt>
     <dd>{{% md %}}The password for the server. If both `password` and `secret_key` are passed, `secret_key` will be preferred.
-{{% /md %}}</dd>
-    <dt class="property-required"
+{{% /md %}}</dd><dt class="property-required"
             title="Required">
         <span id="path_csharp">
 <a href="#path_csharp" style="color: inherit; text-decoration: inherit;">Path</a>
@@ -8722,8 +7796,7 @@ Default `200`.
         <span class="property-type">string</span>
     </dt>
     <dd>{{% md %}}The path to upload logs to.
-{{% /md %}}</dd>
-    <dt class="property-required"
+{{% /md %}}</dd><dt class="property-required"
             title="Required">
         <span id="user_csharp">
 <a href="#user_csharp" style="color: inherit; text-decoration: inherit;">User</a>
@@ -8732,8 +7805,7 @@ Default `200`.
         <span class="property-type">string</span>
     </dt>
     <dd>{{% md %}}The username for your Cloud Files account.
-{{% /md %}}</dd>
-    <dt class="property-optional"
+{{% /md %}}</dd><dt class="property-optional"
             title="Optional">
         <span id="gziplevel_csharp">
 <a href="#gziplevel_csharp" style="color: inherit; text-decoration: inherit;">Gzip<wbr>Level</a>
@@ -8742,8 +7814,7 @@ Default `200`.
         <span class="property-type">int</span>
     </dt>
     <dd>{{% md %}}What level of GZIP encoding to have when dumping logs (default 0, no compression).
-{{% /md %}}</dd>
-    <dt class="property-optional"
+{{% /md %}}</dd><dt class="property-optional"
             title="Optional">
         <span id="messagetype_csharp">
 <a href="#messagetype_csharp" style="color: inherit; text-decoration: inherit;">Message<wbr>Type</a>
@@ -8752,8 +7823,7 @@ Default `200`.
         <span class="property-type">string</span>
     </dt>
     <dd>{{% md %}}How the message should be formatted. One of: classic (default), loggly, logplex or blank.
-{{% /md %}}</dd>
-    <dt class="property-optional"
+{{% /md %}}</dd><dt class="property-optional"
             title="Optional">
         <span id="period_csharp">
 <a href="#period_csharp" style="color: inherit; text-decoration: inherit;">Period</a>
@@ -8762,8 +7832,7 @@ Default `200`.
         <span class="property-type">int</span>
     </dt>
     <dd>{{% md %}}How frequently log files are finalized so they can be available for reading (in seconds, default 3600).
-{{% /md %}}</dd>
-    <dt class="property-optional"
+{{% /md %}}</dd><dt class="property-optional"
             title="Optional">
         <span id="port_csharp">
 <a href="#port_csharp" style="color: inherit; text-decoration: inherit;">Port</a>
@@ -8772,8 +7841,7 @@ Default `200`.
         <span class="property-type">int</span>
     </dt>
     <dd>{{% md %}}The port the SFTP service listens on. (Default: `22`).
-{{% /md %}}</dd>
-    <dt class="property-optional"
+{{% /md %}}</dd><dt class="property-optional"
             title="Optional">
         <span id="publickey_csharp">
 <a href="#publickey_csharp" style="color: inherit; text-decoration: inherit;">Public<wbr>Key</a>
@@ -8782,8 +7850,7 @@ Default `200`.
         <span class="property-type">string</span>
     </dt>
     <dd>{{% md %}}The PGP public key that Fastly will use to encrypt your log files before writing them to disk.
-{{% /md %}}</dd>
-    <dt class="property-optional"
+{{% /md %}}</dd><dt class="property-optional"
             title="Optional">
         <span id="timestampformat_csharp">
 <a href="#timestampformat_csharp" style="color: inherit; text-decoration: inherit;">Timestamp<wbr>Format</a>
@@ -8792,14 +7859,11 @@ Default `200`.
         <span class="property-type">string</span>
     </dt>
     <dd>{{% md %}}The strftime specified timestamp formatting (default `%Y-%m-%dT%H:%M:%S.000`).
-{{% /md %}}</dd>
-</dl>
+{{% /md %}}</dd></dl>
 {{% /choosable %}}
 
 {{% choosable language go %}}
-<dl class="resources-properties">
-
-    <dt class="property-required"
+<dl class="resources-properties"><dt class="property-required"
             title="Required">
         <span id="address_go">
 <a href="#address_go" style="color: inherit; text-decoration: inherit;">Address</a>
@@ -8808,8 +7872,7 @@ Default `200`.
         <span class="property-type">string</span>
     </dt>
     <dd>{{% md %}}The SFTP address to stream logs to.
-{{% /md %}}</dd>
-    <dt class="property-required"
+{{% /md %}}</dd><dt class="property-required"
             title="Required">
         <span id="name_go">
 <a href="#name_go" style="color: inherit; text-decoration: inherit;">Name</a>
@@ -8818,8 +7881,7 @@ Default `200`.
         <span class="property-type">string</span>
     </dt>
     <dd>{{% md %}}The unique name of the Kinesis logging endpoint.
-{{% /md %}}</dd>
-    <dt class="property-required"
+{{% /md %}}</dd><dt class="property-required"
             title="Required">
         <span id="password_go">
 <a href="#password_go" style="color: inherit; text-decoration: inherit;">Password</a>
@@ -8828,8 +7890,7 @@ Default `200`.
         <span class="property-type">string</span>
     </dt>
     <dd>{{% md %}}The password for the server. If both `password` and `secret_key` are passed, `secret_key` will be preferred.
-{{% /md %}}</dd>
-    <dt class="property-required"
+{{% /md %}}</dd><dt class="property-required"
             title="Required">
         <span id="path_go">
 <a href="#path_go" style="color: inherit; text-decoration: inherit;">Path</a>
@@ -8838,8 +7899,7 @@ Default `200`.
         <span class="property-type">string</span>
     </dt>
     <dd>{{% md %}}The path to upload logs to.
-{{% /md %}}</dd>
-    <dt class="property-required"
+{{% /md %}}</dd><dt class="property-required"
             title="Required">
         <span id="user_go">
 <a href="#user_go" style="color: inherit; text-decoration: inherit;">User</a>
@@ -8848,8 +7908,7 @@ Default `200`.
         <span class="property-type">string</span>
     </dt>
     <dd>{{% md %}}The username for your Cloud Files account.
-{{% /md %}}</dd>
-    <dt class="property-optional"
+{{% /md %}}</dd><dt class="property-optional"
             title="Optional">
         <span id="gziplevel_go">
 <a href="#gziplevel_go" style="color: inherit; text-decoration: inherit;">Gzip<wbr>Level</a>
@@ -8858,8 +7917,7 @@ Default `200`.
         <span class="property-type">int</span>
     </dt>
     <dd>{{% md %}}What level of GZIP encoding to have when dumping logs (default 0, no compression).
-{{% /md %}}</dd>
-    <dt class="property-optional"
+{{% /md %}}</dd><dt class="property-optional"
             title="Optional">
         <span id="messagetype_go">
 <a href="#messagetype_go" style="color: inherit; text-decoration: inherit;">Message<wbr>Type</a>
@@ -8868,8 +7926,7 @@ Default `200`.
         <span class="property-type">string</span>
     </dt>
     <dd>{{% md %}}How the message should be formatted. One of: classic (default), loggly, logplex or blank.
-{{% /md %}}</dd>
-    <dt class="property-optional"
+{{% /md %}}</dd><dt class="property-optional"
             title="Optional">
         <span id="period_go">
 <a href="#period_go" style="color: inherit; text-decoration: inherit;">Period</a>
@@ -8878,8 +7935,7 @@ Default `200`.
         <span class="property-type">int</span>
     </dt>
     <dd>{{% md %}}How frequently log files are finalized so they can be available for reading (in seconds, default 3600).
-{{% /md %}}</dd>
-    <dt class="property-optional"
+{{% /md %}}</dd><dt class="property-optional"
             title="Optional">
         <span id="port_go">
 <a href="#port_go" style="color: inherit; text-decoration: inherit;">Port</a>
@@ -8888,8 +7944,7 @@ Default `200`.
         <span class="property-type">int</span>
     </dt>
     <dd>{{% md %}}The port the SFTP service listens on. (Default: `22`).
-{{% /md %}}</dd>
-    <dt class="property-optional"
+{{% /md %}}</dd><dt class="property-optional"
             title="Optional">
         <span id="publickey_go">
 <a href="#publickey_go" style="color: inherit; text-decoration: inherit;">Public<wbr>Key</a>
@@ -8898,8 +7953,7 @@ Default `200`.
         <span class="property-type">string</span>
     </dt>
     <dd>{{% md %}}The PGP public key that Fastly will use to encrypt your log files before writing them to disk.
-{{% /md %}}</dd>
-    <dt class="property-optional"
+{{% /md %}}</dd><dt class="property-optional"
             title="Optional">
         <span id="timestampformat_go">
 <a href="#timestampformat_go" style="color: inherit; text-decoration: inherit;">Timestamp<wbr>Format</a>
@@ -8908,14 +7962,11 @@ Default `200`.
         <span class="property-type">string</span>
     </dt>
     <dd>{{% md %}}The strftime specified timestamp formatting (default `%Y-%m-%dT%H:%M:%S.000`).
-{{% /md %}}</dd>
-</dl>
+{{% /md %}}</dd></dl>
 {{% /choosable %}}
 
 {{% choosable language nodejs %}}
-<dl class="resources-properties">
-
-    <dt class="property-required"
+<dl class="resources-properties"><dt class="property-required"
             title="Required">
         <span id="address_nodejs">
 <a href="#address_nodejs" style="color: inherit; text-decoration: inherit;">address</a>
@@ -8924,8 +7975,7 @@ Default `200`.
         <span class="property-type">string</span>
     </dt>
     <dd>{{% md %}}The SFTP address to stream logs to.
-{{% /md %}}</dd>
-    <dt class="property-required"
+{{% /md %}}</dd><dt class="property-required"
             title="Required">
         <span id="name_nodejs">
 <a href="#name_nodejs" style="color: inherit; text-decoration: inherit;">name</a>
@@ -8934,8 +7984,7 @@ Default `200`.
         <span class="property-type">string</span>
     </dt>
     <dd>{{% md %}}The unique name of the Kinesis logging endpoint.
-{{% /md %}}</dd>
-    <dt class="property-required"
+{{% /md %}}</dd><dt class="property-required"
             title="Required">
         <span id="password_nodejs">
 <a href="#password_nodejs" style="color: inherit; text-decoration: inherit;">password</a>
@@ -8944,8 +7993,7 @@ Default `200`.
         <span class="property-type">string</span>
     </dt>
     <dd>{{% md %}}The password for the server. If both `password` and `secret_key` are passed, `secret_key` will be preferred.
-{{% /md %}}</dd>
-    <dt class="property-required"
+{{% /md %}}</dd><dt class="property-required"
             title="Required">
         <span id="path_nodejs">
 <a href="#path_nodejs" style="color: inherit; text-decoration: inherit;">path</a>
@@ -8954,8 +8002,7 @@ Default `200`.
         <span class="property-type">string</span>
     </dt>
     <dd>{{% md %}}The path to upload logs to.
-{{% /md %}}</dd>
-    <dt class="property-required"
+{{% /md %}}</dd><dt class="property-required"
             title="Required">
         <span id="user_nodejs">
 <a href="#user_nodejs" style="color: inherit; text-decoration: inherit;">user</a>
@@ -8964,8 +8011,7 @@ Default `200`.
         <span class="property-type">string</span>
     </dt>
     <dd>{{% md %}}The username for your Cloud Files account.
-{{% /md %}}</dd>
-    <dt class="property-optional"
+{{% /md %}}</dd><dt class="property-optional"
             title="Optional">
         <span id="gziplevel_nodejs">
 <a href="#gziplevel_nodejs" style="color: inherit; text-decoration: inherit;">gzip<wbr>Level</a>
@@ -8974,8 +8020,7 @@ Default `200`.
         <span class="property-type">number</span>
     </dt>
     <dd>{{% md %}}What level of GZIP encoding to have when dumping logs (default 0, no compression).
-{{% /md %}}</dd>
-    <dt class="property-optional"
+{{% /md %}}</dd><dt class="property-optional"
             title="Optional">
         <span id="messagetype_nodejs">
 <a href="#messagetype_nodejs" style="color: inherit; text-decoration: inherit;">message<wbr>Type</a>
@@ -8984,8 +8029,7 @@ Default `200`.
         <span class="property-type">string</span>
     </dt>
     <dd>{{% md %}}How the message should be formatted. One of: classic (default), loggly, logplex or blank.
-{{% /md %}}</dd>
-    <dt class="property-optional"
+{{% /md %}}</dd><dt class="property-optional"
             title="Optional">
         <span id="period_nodejs">
 <a href="#period_nodejs" style="color: inherit; text-decoration: inherit;">period</a>
@@ -8994,8 +8038,7 @@ Default `200`.
         <span class="property-type">number</span>
     </dt>
     <dd>{{% md %}}How frequently log files are finalized so they can be available for reading (in seconds, default 3600).
-{{% /md %}}</dd>
-    <dt class="property-optional"
+{{% /md %}}</dd><dt class="property-optional"
             title="Optional">
         <span id="port_nodejs">
 <a href="#port_nodejs" style="color: inherit; text-decoration: inherit;">port</a>
@@ -9004,8 +8047,7 @@ Default `200`.
         <span class="property-type">number</span>
     </dt>
     <dd>{{% md %}}The port the SFTP service listens on. (Default: `22`).
-{{% /md %}}</dd>
-    <dt class="property-optional"
+{{% /md %}}</dd><dt class="property-optional"
             title="Optional">
         <span id="publickey_nodejs">
 <a href="#publickey_nodejs" style="color: inherit; text-decoration: inherit;">public<wbr>Key</a>
@@ -9014,8 +8056,7 @@ Default `200`.
         <span class="property-type">string</span>
     </dt>
     <dd>{{% md %}}The PGP public key that Fastly will use to encrypt your log files before writing them to disk.
-{{% /md %}}</dd>
-    <dt class="property-optional"
+{{% /md %}}</dd><dt class="property-optional"
             title="Optional">
         <span id="timestampformat_nodejs">
 <a href="#timestampformat_nodejs" style="color: inherit; text-decoration: inherit;">timestamp<wbr>Format</a>
@@ -9024,14 +8065,11 @@ Default `200`.
         <span class="property-type">string</span>
     </dt>
     <dd>{{% md %}}The strftime specified timestamp formatting (default `%Y-%m-%dT%H:%M:%S.000`).
-{{% /md %}}</dd>
-</dl>
+{{% /md %}}</dd></dl>
 {{% /choosable %}}
 
 {{% choosable language python %}}
-<dl class="resources-properties">
-
-    <dt class="property-required"
+<dl class="resources-properties"><dt class="property-required"
             title="Required">
         <span id="address_python">
 <a href="#address_python" style="color: inherit; text-decoration: inherit;">address</a>
@@ -9040,8 +8078,7 @@ Default `200`.
         <span class="property-type">str</span>
     </dt>
     <dd>{{% md %}}The SFTP address to stream logs to.
-{{% /md %}}</dd>
-    <dt class="property-required"
+{{% /md %}}</dd><dt class="property-required"
             title="Required">
         <span id="name_python">
 <a href="#name_python" style="color: inherit; text-decoration: inherit;">name</a>
@@ -9050,8 +8087,7 @@ Default `200`.
         <span class="property-type">str</span>
     </dt>
     <dd>{{% md %}}The unique name of the Kinesis logging endpoint.
-{{% /md %}}</dd>
-    <dt class="property-required"
+{{% /md %}}</dd><dt class="property-required"
             title="Required">
         <span id="password_python">
 <a href="#password_python" style="color: inherit; text-decoration: inherit;">password</a>
@@ -9060,8 +8096,7 @@ Default `200`.
         <span class="property-type">str</span>
     </dt>
     <dd>{{% md %}}The password for the server. If both `password` and `secret_key` are passed, `secret_key` will be preferred.
-{{% /md %}}</dd>
-    <dt class="property-required"
+{{% /md %}}</dd><dt class="property-required"
             title="Required">
         <span id="path_python">
 <a href="#path_python" style="color: inherit; text-decoration: inherit;">path</a>
@@ -9070,8 +8105,7 @@ Default `200`.
         <span class="property-type">str</span>
     </dt>
     <dd>{{% md %}}The path to upload logs to.
-{{% /md %}}</dd>
-    <dt class="property-required"
+{{% /md %}}</dd><dt class="property-required"
             title="Required">
         <span id="user_python">
 <a href="#user_python" style="color: inherit; text-decoration: inherit;">user</a>
@@ -9080,8 +8114,7 @@ Default `200`.
         <span class="property-type">str</span>
     </dt>
     <dd>{{% md %}}The username for your Cloud Files account.
-{{% /md %}}</dd>
-    <dt class="property-optional"
+{{% /md %}}</dd><dt class="property-optional"
             title="Optional">
         <span id="gzip_level_python">
 <a href="#gzip_level_python" style="color: inherit; text-decoration: inherit;">gzip_<wbr>level</a>
@@ -9090,8 +8123,7 @@ Default `200`.
         <span class="property-type">int</span>
     </dt>
     <dd>{{% md %}}What level of GZIP encoding to have when dumping logs (default 0, no compression).
-{{% /md %}}</dd>
-    <dt class="property-optional"
+{{% /md %}}</dd><dt class="property-optional"
             title="Optional">
         <span id="message_type_python">
 <a href="#message_type_python" style="color: inherit; text-decoration: inherit;">message_<wbr>type</a>
@@ -9100,8 +8132,7 @@ Default `200`.
         <span class="property-type">str</span>
     </dt>
     <dd>{{% md %}}How the message should be formatted. One of: classic (default), loggly, logplex or blank.
-{{% /md %}}</dd>
-    <dt class="property-optional"
+{{% /md %}}</dd><dt class="property-optional"
             title="Optional">
         <span id="period_python">
 <a href="#period_python" style="color: inherit; text-decoration: inherit;">period</a>
@@ -9110,8 +8141,7 @@ Default `200`.
         <span class="property-type">int</span>
     </dt>
     <dd>{{% md %}}How frequently log files are finalized so they can be available for reading (in seconds, default 3600).
-{{% /md %}}</dd>
-    <dt class="property-optional"
+{{% /md %}}</dd><dt class="property-optional"
             title="Optional">
         <span id="port_python">
 <a href="#port_python" style="color: inherit; text-decoration: inherit;">port</a>
@@ -9120,8 +8150,7 @@ Default `200`.
         <span class="property-type">int</span>
     </dt>
     <dd>{{% md %}}The port the SFTP service listens on. (Default: `22`).
-{{% /md %}}</dd>
-    <dt class="property-optional"
+{{% /md %}}</dd><dt class="property-optional"
             title="Optional">
         <span id="public_key_python">
 <a href="#public_key_python" style="color: inherit; text-decoration: inherit;">public_<wbr>key</a>
@@ -9130,8 +8159,7 @@ Default `200`.
         <span class="property-type">str</span>
     </dt>
     <dd>{{% md %}}The PGP public key that Fastly will use to encrypt your log files before writing them to disk.
-{{% /md %}}</dd>
-    <dt class="property-optional"
+{{% /md %}}</dd><dt class="property-optional"
             title="Optional">
         <span id="timestamp_format_python">
 <a href="#timestamp_format_python" style="color: inherit; text-decoration: inherit;">timestamp_<wbr>format</a>
@@ -9140,16 +8168,13 @@ Default `200`.
         <span class="property-type">str</span>
     </dt>
     <dd>{{% md %}}The strftime specified timestamp formatting (default `%Y-%m-%dT%H:%M:%S.000`).
-{{% /md %}}</dd>
-</dl>
+{{% /md %}}</dd></dl>
 {{% /choosable %}}
 
 <h4 id="servicecomputelogginggooglepubsub">Service<wbr>Compute<wbr>Logging<wbr>Googlepubsub</h4>
 
 {{% choosable language csharp %}}
-<dl class="resources-properties">
-
-    <dt class="property-required"
+<dl class="resources-properties"><dt class="property-required"
             title="Required">
         <span id="name_csharp">
 <a href="#name_csharp" style="color: inherit; text-decoration: inherit;">Name</a>
@@ -9158,8 +8183,7 @@ Default `200`.
         <span class="property-type">string</span>
     </dt>
     <dd>{{% md %}}The unique name of the Kinesis logging endpoint.
-{{% /md %}}</dd>
-    <dt class="property-required"
+{{% /md %}}</dd><dt class="property-required"
             title="Required">
         <span id="projectid_csharp">
 <a href="#projectid_csharp" style="color: inherit; text-decoration: inherit;">Project<wbr>Id</a>
@@ -9168,8 +8192,7 @@ Default `200`.
         <span class="property-type">string</span>
     </dt>
     <dd>{{% md %}}The ID of your Google Cloud Platform project.
-{{% /md %}}</dd>
-    <dt class="property-required"
+{{% /md %}}</dd><dt class="property-required"
             title="Required">
         <span id="secretkey_csharp">
 <a href="#secretkey_csharp" style="color: inherit; text-decoration: inherit;">Secret<wbr>Key</a>
@@ -9178,8 +8201,7 @@ Default `200`.
         <span class="property-type">string</span>
     </dt>
     <dd>{{% md %}}The AWS secret access key to authenticate with.
-{{% /md %}}</dd>
-    <dt class="property-required"
+{{% /md %}}</dd><dt class="property-required"
             title="Required">
         <span id="topic_csharp">
 <a href="#topic_csharp" style="color: inherit; text-decoration: inherit;">Topic</a>
@@ -9188,8 +8210,7 @@ Default `200`.
         <span class="property-type">string</span>
     </dt>
     <dd>{{% md %}}The Kinesis stream name.
-{{% /md %}}</dd>
-    <dt class="property-required"
+{{% /md %}}</dd><dt class="property-required"
             title="Required">
         <span id="user_csharp">
 <a href="#user_csharp" style="color: inherit; text-decoration: inherit;">User</a>
@@ -9198,14 +8219,11 @@ Default `200`.
         <span class="property-type">string</span>
     </dt>
     <dd>{{% md %}}The username for your Cloud Files account.
-{{% /md %}}</dd>
-</dl>
+{{% /md %}}</dd></dl>
 {{% /choosable %}}
 
 {{% choosable language go %}}
-<dl class="resources-properties">
-
-    <dt class="property-required"
+<dl class="resources-properties"><dt class="property-required"
             title="Required">
         <span id="name_go">
 <a href="#name_go" style="color: inherit; text-decoration: inherit;">Name</a>
@@ -9214,8 +8232,7 @@ Default `200`.
         <span class="property-type">string</span>
     </dt>
     <dd>{{% md %}}The unique name of the Kinesis logging endpoint.
-{{% /md %}}</dd>
-    <dt class="property-required"
+{{% /md %}}</dd><dt class="property-required"
             title="Required">
         <span id="projectid_go">
 <a href="#projectid_go" style="color: inherit; text-decoration: inherit;">Project<wbr>Id</a>
@@ -9224,8 +8241,7 @@ Default `200`.
         <span class="property-type">string</span>
     </dt>
     <dd>{{% md %}}The ID of your Google Cloud Platform project.
-{{% /md %}}</dd>
-    <dt class="property-required"
+{{% /md %}}</dd><dt class="property-required"
             title="Required">
         <span id="secretkey_go">
 <a href="#secretkey_go" style="color: inherit; text-decoration: inherit;">Secret<wbr>Key</a>
@@ -9234,8 +8250,7 @@ Default `200`.
         <span class="property-type">string</span>
     </dt>
     <dd>{{% md %}}The AWS secret access key to authenticate with.
-{{% /md %}}</dd>
-    <dt class="property-required"
+{{% /md %}}</dd><dt class="property-required"
             title="Required">
         <span id="topic_go">
 <a href="#topic_go" style="color: inherit; text-decoration: inherit;">Topic</a>
@@ -9244,8 +8259,7 @@ Default `200`.
         <span class="property-type">string</span>
     </dt>
     <dd>{{% md %}}The Kinesis stream name.
-{{% /md %}}</dd>
-    <dt class="property-required"
+{{% /md %}}</dd><dt class="property-required"
             title="Required">
         <span id="user_go">
 <a href="#user_go" style="color: inherit; text-decoration: inherit;">User</a>
@@ -9254,14 +8268,11 @@ Default `200`.
         <span class="property-type">string</span>
     </dt>
     <dd>{{% md %}}The username for your Cloud Files account.
-{{% /md %}}</dd>
-</dl>
+{{% /md %}}</dd></dl>
 {{% /choosable %}}
 
 {{% choosable language nodejs %}}
-<dl class="resources-properties">
-
-    <dt class="property-required"
+<dl class="resources-properties"><dt class="property-required"
             title="Required">
         <span id="name_nodejs">
 <a href="#name_nodejs" style="color: inherit; text-decoration: inherit;">name</a>
@@ -9270,8 +8281,7 @@ Default `200`.
         <span class="property-type">string</span>
     </dt>
     <dd>{{% md %}}The unique name of the Kinesis logging endpoint.
-{{% /md %}}</dd>
-    <dt class="property-required"
+{{% /md %}}</dd><dt class="property-required"
             title="Required">
         <span id="projectid_nodejs">
 <a href="#projectid_nodejs" style="color: inherit; text-decoration: inherit;">project<wbr>Id</a>
@@ -9280,8 +8290,7 @@ Default `200`.
         <span class="property-type">string</span>
     </dt>
     <dd>{{% md %}}The ID of your Google Cloud Platform project.
-{{% /md %}}</dd>
-    <dt class="property-required"
+{{% /md %}}</dd><dt class="property-required"
             title="Required">
         <span id="secretkey_nodejs">
 <a href="#secretkey_nodejs" style="color: inherit; text-decoration: inherit;">secret<wbr>Key</a>
@@ -9290,8 +8299,7 @@ Default `200`.
         <span class="property-type">string</span>
     </dt>
     <dd>{{% md %}}The AWS secret access key to authenticate with.
-{{% /md %}}</dd>
-    <dt class="property-required"
+{{% /md %}}</dd><dt class="property-required"
             title="Required">
         <span id="topic_nodejs">
 <a href="#topic_nodejs" style="color: inherit; text-decoration: inherit;">topic</a>
@@ -9300,8 +8308,7 @@ Default `200`.
         <span class="property-type">string</span>
     </dt>
     <dd>{{% md %}}The Kinesis stream name.
-{{% /md %}}</dd>
-    <dt class="property-required"
+{{% /md %}}</dd><dt class="property-required"
             title="Required">
         <span id="user_nodejs">
 <a href="#user_nodejs" style="color: inherit; text-decoration: inherit;">user</a>
@@ -9310,14 +8317,11 @@ Default `200`.
         <span class="property-type">string</span>
     </dt>
     <dd>{{% md %}}The username for your Cloud Files account.
-{{% /md %}}</dd>
-</dl>
+{{% /md %}}</dd></dl>
 {{% /choosable %}}
 
 {{% choosable language python %}}
-<dl class="resources-properties">
-
-    <dt class="property-required"
+<dl class="resources-properties"><dt class="property-required"
             title="Required">
         <span id="name_python">
 <a href="#name_python" style="color: inherit; text-decoration: inherit;">name</a>
@@ -9326,8 +8330,7 @@ Default `200`.
         <span class="property-type">str</span>
     </dt>
     <dd>{{% md %}}The unique name of the Kinesis logging endpoint.
-{{% /md %}}</dd>
-    <dt class="property-required"
+{{% /md %}}</dd><dt class="property-required"
             title="Required">
         <span id="project_id_python">
 <a href="#project_id_python" style="color: inherit; text-decoration: inherit;">project_<wbr>id</a>
@@ -9336,8 +8339,7 @@ Default `200`.
         <span class="property-type">str</span>
     </dt>
     <dd>{{% md %}}The ID of your Google Cloud Platform project.
-{{% /md %}}</dd>
-    <dt class="property-required"
+{{% /md %}}</dd><dt class="property-required"
             title="Required">
         <span id="secret_key_python">
 <a href="#secret_key_python" style="color: inherit; text-decoration: inherit;">secret_<wbr>key</a>
@@ -9346,8 +8348,7 @@ Default `200`.
         <span class="property-type">str</span>
     </dt>
     <dd>{{% md %}}The AWS secret access key to authenticate with.
-{{% /md %}}</dd>
-    <dt class="property-required"
+{{% /md %}}</dd><dt class="property-required"
             title="Required">
         <span id="topic_python">
 <a href="#topic_python" style="color: inherit; text-decoration: inherit;">topic</a>
@@ -9356,8 +8357,7 @@ Default `200`.
         <span class="property-type">str</span>
     </dt>
     <dd>{{% md %}}The Kinesis stream name.
-{{% /md %}}</dd>
-    <dt class="property-required"
+{{% /md %}}</dd><dt class="property-required"
             title="Required">
         <span id="user_python">
 <a href="#user_python" style="color: inherit; text-decoration: inherit;">user</a>
@@ -9366,16 +8366,13 @@ Default `200`.
         <span class="property-type">str</span>
     </dt>
     <dd>{{% md %}}The username for your Cloud Files account.
-{{% /md %}}</dd>
-</dl>
+{{% /md %}}</dd></dl>
 {{% /choosable %}}
 
 <h4 id="servicecomputeloggingheroku">Service<wbr>Compute<wbr>Logging<wbr>Heroku</h4>
 
 {{% choosable language csharp %}}
-<dl class="resources-properties">
-
-    <dt class="property-required"
+<dl class="resources-properties"><dt class="property-required"
             title="Required">
         <span id="name_csharp">
 <a href="#name_csharp" style="color: inherit; text-decoration: inherit;">Name</a>
@@ -9384,8 +8381,7 @@ Default `200`.
         <span class="property-type">string</span>
     </dt>
     <dd>{{% md %}}The unique name of the Kinesis logging endpoint.
-{{% /md %}}</dd>
-    <dt class="property-required"
+{{% /md %}}</dd><dt class="property-required"
             title="Required">
         <span id="token_csharp">
 <a href="#token_csharp" style="color: inherit; text-decoration: inherit;">Token</a>
@@ -9394,8 +8390,7 @@ Default `200`.
         <span class="property-type">string</span>
     </dt>
     <dd>{{% md %}}The data authentication token associated with this endpoint.
-{{% /md %}}</dd>
-    <dt class="property-required"
+{{% /md %}}</dd><dt class="property-required"
             title="Required">
         <span id="url_csharp">
 <a href="#url_csharp" style="color: inherit; text-decoration: inherit;">Url</a>
@@ -9404,14 +8399,11 @@ Default `200`.
         <span class="property-type">string</span>
     </dt>
     <dd>{{% md %}}Your OpenStack auth url.
-{{% /md %}}</dd>
-</dl>
+{{% /md %}}</dd></dl>
 {{% /choosable %}}
 
 {{% choosable language go %}}
-<dl class="resources-properties">
-
-    <dt class="property-required"
+<dl class="resources-properties"><dt class="property-required"
             title="Required">
         <span id="name_go">
 <a href="#name_go" style="color: inherit; text-decoration: inherit;">Name</a>
@@ -9420,8 +8412,7 @@ Default `200`.
         <span class="property-type">string</span>
     </dt>
     <dd>{{% md %}}The unique name of the Kinesis logging endpoint.
-{{% /md %}}</dd>
-    <dt class="property-required"
+{{% /md %}}</dd><dt class="property-required"
             title="Required">
         <span id="token_go">
 <a href="#token_go" style="color: inherit; text-decoration: inherit;">Token</a>
@@ -9430,8 +8421,7 @@ Default `200`.
         <span class="property-type">string</span>
     </dt>
     <dd>{{% md %}}The data authentication token associated with this endpoint.
-{{% /md %}}</dd>
-    <dt class="property-required"
+{{% /md %}}</dd><dt class="property-required"
             title="Required">
         <span id="url_go">
 <a href="#url_go" style="color: inherit; text-decoration: inherit;">Url</a>
@@ -9440,14 +8430,11 @@ Default `200`.
         <span class="property-type">string</span>
     </dt>
     <dd>{{% md %}}Your OpenStack auth url.
-{{% /md %}}</dd>
-</dl>
+{{% /md %}}</dd></dl>
 {{% /choosable %}}
 
 {{% choosable language nodejs %}}
-<dl class="resources-properties">
-
-    <dt class="property-required"
+<dl class="resources-properties"><dt class="property-required"
             title="Required">
         <span id="name_nodejs">
 <a href="#name_nodejs" style="color: inherit; text-decoration: inherit;">name</a>
@@ -9456,8 +8443,7 @@ Default `200`.
         <span class="property-type">string</span>
     </dt>
     <dd>{{% md %}}The unique name of the Kinesis logging endpoint.
-{{% /md %}}</dd>
-    <dt class="property-required"
+{{% /md %}}</dd><dt class="property-required"
             title="Required">
         <span id="token_nodejs">
 <a href="#token_nodejs" style="color: inherit; text-decoration: inherit;">token</a>
@@ -9466,8 +8452,7 @@ Default `200`.
         <span class="property-type">string</span>
     </dt>
     <dd>{{% md %}}The data authentication token associated with this endpoint.
-{{% /md %}}</dd>
-    <dt class="property-required"
+{{% /md %}}</dd><dt class="property-required"
             title="Required">
         <span id="url_nodejs">
 <a href="#url_nodejs" style="color: inherit; text-decoration: inherit;">url</a>
@@ -9476,14 +8461,11 @@ Default `200`.
         <span class="property-type">string</span>
     </dt>
     <dd>{{% md %}}Your OpenStack auth url.
-{{% /md %}}</dd>
-</dl>
+{{% /md %}}</dd></dl>
 {{% /choosable %}}
 
 {{% choosable language python %}}
-<dl class="resources-properties">
-
-    <dt class="property-required"
+<dl class="resources-properties"><dt class="property-required"
             title="Required">
         <span id="name_python">
 <a href="#name_python" style="color: inherit; text-decoration: inherit;">name</a>
@@ -9492,8 +8474,7 @@ Default `200`.
         <span class="property-type">str</span>
     </dt>
     <dd>{{% md %}}The unique name of the Kinesis logging endpoint.
-{{% /md %}}</dd>
-    <dt class="property-required"
+{{% /md %}}</dd><dt class="property-required"
             title="Required">
         <span id="token_python">
 <a href="#token_python" style="color: inherit; text-decoration: inherit;">token</a>
@@ -9502,8 +8483,7 @@ Default `200`.
         <span class="property-type">str</span>
     </dt>
     <dd>{{% md %}}The data authentication token associated with this endpoint.
-{{% /md %}}</dd>
-    <dt class="property-required"
+{{% /md %}}</dd><dt class="property-required"
             title="Required">
         <span id="url_python">
 <a href="#url_python" style="color: inherit; text-decoration: inherit;">url</a>
@@ -9512,16 +8492,13 @@ Default `200`.
         <span class="property-type">str</span>
     </dt>
     <dd>{{% md %}}Your OpenStack auth url.
-{{% /md %}}</dd>
-</dl>
+{{% /md %}}</dd></dl>
 {{% /choosable %}}
 
 <h4 id="servicecomputelogginghoneycomb">Service<wbr>Compute<wbr>Logging<wbr>Honeycomb</h4>
 
 {{% choosable language csharp %}}
-<dl class="resources-properties">
-
-    <dt class="property-required"
+<dl class="resources-properties"><dt class="property-required"
             title="Required">
         <span id="dataset_csharp">
 <a href="#dataset_csharp" style="color: inherit; text-decoration: inherit;">Dataset</a>
@@ -9530,8 +8507,7 @@ Default `200`.
         <span class="property-type">string</span>
     </dt>
     <dd>{{% md %}}The Honeycomb Dataset you want to log to.
-{{% /md %}}</dd>
-    <dt class="property-required"
+{{% /md %}}</dd><dt class="property-required"
             title="Required">
         <span id="name_csharp">
 <a href="#name_csharp" style="color: inherit; text-decoration: inherit;">Name</a>
@@ -9540,8 +8516,7 @@ Default `200`.
         <span class="property-type">string</span>
     </dt>
     <dd>{{% md %}}The unique name of the Kinesis logging endpoint.
-{{% /md %}}</dd>
-    <dt class="property-required"
+{{% /md %}}</dd><dt class="property-required"
             title="Required">
         <span id="token_csharp">
 <a href="#token_csharp" style="color: inherit; text-decoration: inherit;">Token</a>
@@ -9550,14 +8525,11 @@ Default `200`.
         <span class="property-type">string</span>
     </dt>
     <dd>{{% md %}}The data authentication token associated with this endpoint.
-{{% /md %}}</dd>
-</dl>
+{{% /md %}}</dd></dl>
 {{% /choosable %}}
 
 {{% choosable language go %}}
-<dl class="resources-properties">
-
-    <dt class="property-required"
+<dl class="resources-properties"><dt class="property-required"
             title="Required">
         <span id="dataset_go">
 <a href="#dataset_go" style="color: inherit; text-decoration: inherit;">Dataset</a>
@@ -9566,8 +8538,7 @@ Default `200`.
         <span class="property-type">string</span>
     </dt>
     <dd>{{% md %}}The Honeycomb Dataset you want to log to.
-{{% /md %}}</dd>
-    <dt class="property-required"
+{{% /md %}}</dd><dt class="property-required"
             title="Required">
         <span id="name_go">
 <a href="#name_go" style="color: inherit; text-decoration: inherit;">Name</a>
@@ -9576,8 +8547,7 @@ Default `200`.
         <span class="property-type">string</span>
     </dt>
     <dd>{{% md %}}The unique name of the Kinesis logging endpoint.
-{{% /md %}}</dd>
-    <dt class="property-required"
+{{% /md %}}</dd><dt class="property-required"
             title="Required">
         <span id="token_go">
 <a href="#token_go" style="color: inherit; text-decoration: inherit;">Token</a>
@@ -9586,14 +8556,11 @@ Default `200`.
         <span class="property-type">string</span>
     </dt>
     <dd>{{% md %}}The data authentication token associated with this endpoint.
-{{% /md %}}</dd>
-</dl>
+{{% /md %}}</dd></dl>
 {{% /choosable %}}
 
 {{% choosable language nodejs %}}
-<dl class="resources-properties">
-
-    <dt class="property-required"
+<dl class="resources-properties"><dt class="property-required"
             title="Required">
         <span id="dataset_nodejs">
 <a href="#dataset_nodejs" style="color: inherit; text-decoration: inherit;">dataset</a>
@@ -9602,8 +8569,7 @@ Default `200`.
         <span class="property-type">string</span>
     </dt>
     <dd>{{% md %}}The Honeycomb Dataset you want to log to.
-{{% /md %}}</dd>
-    <dt class="property-required"
+{{% /md %}}</dd><dt class="property-required"
             title="Required">
         <span id="name_nodejs">
 <a href="#name_nodejs" style="color: inherit; text-decoration: inherit;">name</a>
@@ -9612,8 +8578,7 @@ Default `200`.
         <span class="property-type">string</span>
     </dt>
     <dd>{{% md %}}The unique name of the Kinesis logging endpoint.
-{{% /md %}}</dd>
-    <dt class="property-required"
+{{% /md %}}</dd><dt class="property-required"
             title="Required">
         <span id="token_nodejs">
 <a href="#token_nodejs" style="color: inherit; text-decoration: inherit;">token</a>
@@ -9622,14 +8587,11 @@ Default `200`.
         <span class="property-type">string</span>
     </dt>
     <dd>{{% md %}}The data authentication token associated with this endpoint.
-{{% /md %}}</dd>
-</dl>
+{{% /md %}}</dd></dl>
 {{% /choosable %}}
 
 {{% choosable language python %}}
-<dl class="resources-properties">
-
-    <dt class="property-required"
+<dl class="resources-properties"><dt class="property-required"
             title="Required">
         <span id="dataset_python">
 <a href="#dataset_python" style="color: inherit; text-decoration: inherit;">dataset</a>
@@ -9638,8 +8600,7 @@ Default `200`.
         <span class="property-type">str</span>
     </dt>
     <dd>{{% md %}}The Honeycomb Dataset you want to log to.
-{{% /md %}}</dd>
-    <dt class="property-required"
+{{% /md %}}</dd><dt class="property-required"
             title="Required">
         <span id="name_python">
 <a href="#name_python" style="color: inherit; text-decoration: inherit;">name</a>
@@ -9648,8 +8609,7 @@ Default `200`.
         <span class="property-type">str</span>
     </dt>
     <dd>{{% md %}}The unique name of the Kinesis logging endpoint.
-{{% /md %}}</dd>
-    <dt class="property-required"
+{{% /md %}}</dd><dt class="property-required"
             title="Required">
         <span id="token_python">
 <a href="#token_python" style="color: inherit; text-decoration: inherit;">token</a>
@@ -9658,16 +8618,13 @@ Default `200`.
         <span class="property-type">str</span>
     </dt>
     <dd>{{% md %}}The data authentication token associated with this endpoint.
-{{% /md %}}</dd>
-</dl>
+{{% /md %}}</dd></dl>
 {{% /choosable %}}
 
 <h4 id="servicecomputeloggingkafka">Service<wbr>Compute<wbr>Logging<wbr>Kafka</h4>
 
 {{% choosable language csharp %}}
-<dl class="resources-properties">
-
-    <dt class="property-required"
+<dl class="resources-properties"><dt class="property-required"
             title="Required">
         <span id="brokers_csharp">
 <a href="#brokers_csharp" style="color: inherit; text-decoration: inherit;">Brokers</a>
@@ -9676,8 +8633,7 @@ Default `200`.
         <span class="property-type">string</span>
     </dt>
     <dd>{{% md %}}A comma-separated list of IP addresses or hostnames of Kafka brokers.
-{{% /md %}}</dd>
-    <dt class="property-required"
+{{% /md %}}</dd><dt class="property-required"
             title="Required">
         <span id="name_csharp">
 <a href="#name_csharp" style="color: inherit; text-decoration: inherit;">Name</a>
@@ -9686,8 +8642,7 @@ Default `200`.
         <span class="property-type">string</span>
     </dt>
     <dd>{{% md %}}The unique name of the Kinesis logging endpoint.
-{{% /md %}}</dd>
-    <dt class="property-required"
+{{% /md %}}</dd><dt class="property-required"
             title="Required">
         <span id="topic_csharp">
 <a href="#topic_csharp" style="color: inherit; text-decoration: inherit;">Topic</a>
@@ -9696,8 +8651,7 @@ Default `200`.
         <span class="property-type">string</span>
     </dt>
     <dd>{{% md %}}The Kinesis stream name.
-{{% /md %}}</dd>
-    <dt class="property-optional"
+{{% /md %}}</dd><dt class="property-optional"
             title="Optional">
         <span id="authmethod_csharp">
 <a href="#authmethod_csharp" style="color: inherit; text-decoration: inherit;">Auth<wbr>Method</a>
@@ -9705,8 +8659,7 @@ Default `200`.
         <span class="property-indicator"></span>
         <span class="property-type">string</span>
     </dt>
-    <dd>{{% md %}}{{% /md %}}</dd>
-    <dt class="property-optional"
+    <dd>{{% md %}}{{% /md %}}</dd><dt class="property-optional"
             title="Optional">
         <span id="compressioncodec_csharp">
 <a href="#compressioncodec_csharp" style="color: inherit; text-decoration: inherit;">Compression<wbr>Codec</a>
@@ -9715,8 +8668,7 @@ Default `200`.
         <span class="property-type">string</span>
     </dt>
     <dd>{{% md %}}The codec used for compression of your logs. One of: gzip, snappy, lz4.
-{{% /md %}}</dd>
-    <dt class="property-optional"
+{{% /md %}}</dd><dt class="property-optional"
             title="Optional">
         <span id="parselogkeyvals_csharp">
 <a href="#parselogkeyvals_csharp" style="color: inherit; text-decoration: inherit;">Parse<wbr>Log<wbr>Keyvals</a>
@@ -9724,8 +8676,7 @@ Default `200`.
         <span class="property-indicator"></span>
         <span class="property-type">bool</span>
     </dt>
-    <dd>{{% md %}}{{% /md %}}</dd>
-    <dt class="property-optional"
+    <dd>{{% md %}}{{% /md %}}</dd><dt class="property-optional"
             title="Optional">
         <span id="password_csharp">
 <a href="#password_csharp" style="color: inherit; text-decoration: inherit;">Password</a>
@@ -9734,8 +8685,7 @@ Default `200`.
         <span class="property-type">string</span>
     </dt>
     <dd>{{% md %}}The password for the server. If both `password` and `secret_key` are passed, `secret_key` will be preferred.
-{{% /md %}}</dd>
-    <dt class="property-optional"
+{{% /md %}}</dd><dt class="property-optional"
             title="Optional">
         <span id="requestmaxbytes_csharp">
 <a href="#requestmaxbytes_csharp" style="color: inherit; text-decoration: inherit;">Request<wbr>Max<wbr>Bytes</a>
@@ -9744,8 +8694,7 @@ Default `200`.
         <span class="property-type">int</span>
     </dt>
     <dd>{{% md %}}The maximum number of bytes sent in one request. Defaults to `0` for unbounded.
-{{% /md %}}</dd>
-    <dt class="property-optional"
+{{% /md %}}</dd><dt class="property-optional"
             title="Optional">
         <span id="requiredacks_csharp">
 <a href="#requiredacks_csharp" style="color: inherit; text-decoration: inherit;">Required<wbr>Acks</a>
@@ -9754,8 +8703,7 @@ Default `200`.
         <span class="property-type">string</span>
     </dt>
     <dd>{{% md %}}The Number of acknowledgements a leader must receive before a write is considered successful. One of: 1 (default) One server needs to respond. 0 No servers need to respond. -1	Wait for all in-sync replicas to respond.
-{{% /md %}}</dd>
-    <dt class="property-optional"
+{{% /md %}}</dd><dt class="property-optional"
             title="Optional">
         <span id="tlscacert_csharp">
 <a href="#tlscacert_csharp" style="color: inherit; text-decoration: inherit;">Tls<wbr>Ca<wbr>Cert</a>
@@ -9764,8 +8712,7 @@ Default `200`.
         <span class="property-type">string</span>
     </dt>
     <dd>{{% md %}}A secure certificate to authenticate the server with. Must be in PEM format.
-{{% /md %}}</dd>
-    <dt class="property-optional"
+{{% /md %}}</dd><dt class="property-optional"
             title="Optional">
         <span id="tlsclientcert_csharp">
 <a href="#tlsclientcert_csharp" style="color: inherit; text-decoration: inherit;">Tls<wbr>Client<wbr>Cert</a>
@@ -9774,8 +8721,7 @@ Default `200`.
         <span class="property-type">string</span>
     </dt>
     <dd>{{% md %}}The client certificate used to make authenticated requests. Must be in PEM format.
-{{% /md %}}</dd>
-    <dt class="property-optional"
+{{% /md %}}</dd><dt class="property-optional"
             title="Optional">
         <span id="tlsclientkey_csharp">
 <a href="#tlsclientkey_csharp" style="color: inherit; text-decoration: inherit;">Tls<wbr>Client<wbr>Key</a>
@@ -9784,8 +8730,7 @@ Default `200`.
         <span class="property-type">string</span>
     </dt>
     <dd>{{% md %}}The client private key used to make authenticated requests. Must be in PEM format.
-{{% /md %}}</dd>
-    <dt class="property-optional"
+{{% /md %}}</dd><dt class="property-optional"
             title="Optional">
         <span id="tlshostname_csharp">
 <a href="#tlshostname_csharp" style="color: inherit; text-decoration: inherit;">Tls<wbr>Hostname</a>
@@ -9794,8 +8739,7 @@ Default `200`.
         <span class="property-type">string</span>
     </dt>
     <dd>{{% md %}}The hostname used to verify the server's certificate. It can either be the Common Name or a Subject Alternative Name (SAN).
-{{% /md %}}</dd>
-    <dt class="property-optional"
+{{% /md %}}</dd><dt class="property-optional"
             title="Optional">
         <span id="usetls_csharp">
 <a href="#usetls_csharp" style="color: inherit; text-decoration: inherit;">Use<wbr>Tls</a>
@@ -9804,8 +8748,7 @@ Default `200`.
         <span class="property-type">bool</span>
     </dt>
     <dd>{{% md %}}Whether to use TLS for secure logging. Can be either true or false.
-{{% /md %}}</dd>
-    <dt class="property-optional"
+{{% /md %}}</dd><dt class="property-optional"
             title="Optional">
         <span id="user_csharp">
 <a href="#user_csharp" style="color: inherit; text-decoration: inherit;">User</a>
@@ -9814,14 +8757,11 @@ Default `200`.
         <span class="property-type">string</span>
     </dt>
     <dd>{{% md %}}The username for your Cloud Files account.
-{{% /md %}}</dd>
-</dl>
+{{% /md %}}</dd></dl>
 {{% /choosable %}}
 
 {{% choosable language go %}}
-<dl class="resources-properties">
-
-    <dt class="property-required"
+<dl class="resources-properties"><dt class="property-required"
             title="Required">
         <span id="brokers_go">
 <a href="#brokers_go" style="color: inherit; text-decoration: inherit;">Brokers</a>
@@ -9830,8 +8770,7 @@ Default `200`.
         <span class="property-type">string</span>
     </dt>
     <dd>{{% md %}}A comma-separated list of IP addresses or hostnames of Kafka brokers.
-{{% /md %}}</dd>
-    <dt class="property-required"
+{{% /md %}}</dd><dt class="property-required"
             title="Required">
         <span id="name_go">
 <a href="#name_go" style="color: inherit; text-decoration: inherit;">Name</a>
@@ -9840,8 +8779,7 @@ Default `200`.
         <span class="property-type">string</span>
     </dt>
     <dd>{{% md %}}The unique name of the Kinesis logging endpoint.
-{{% /md %}}</dd>
-    <dt class="property-required"
+{{% /md %}}</dd><dt class="property-required"
             title="Required">
         <span id="topic_go">
 <a href="#topic_go" style="color: inherit; text-decoration: inherit;">Topic</a>
@@ -9850,8 +8788,7 @@ Default `200`.
         <span class="property-type">string</span>
     </dt>
     <dd>{{% md %}}The Kinesis stream name.
-{{% /md %}}</dd>
-    <dt class="property-optional"
+{{% /md %}}</dd><dt class="property-optional"
             title="Optional">
         <span id="authmethod_go">
 <a href="#authmethod_go" style="color: inherit; text-decoration: inherit;">Auth<wbr>Method</a>
@@ -9859,8 +8796,7 @@ Default `200`.
         <span class="property-indicator"></span>
         <span class="property-type">string</span>
     </dt>
-    <dd>{{% md %}}{{% /md %}}</dd>
-    <dt class="property-optional"
+    <dd>{{% md %}}{{% /md %}}</dd><dt class="property-optional"
             title="Optional">
         <span id="compressioncodec_go">
 <a href="#compressioncodec_go" style="color: inherit; text-decoration: inherit;">Compression<wbr>Codec</a>
@@ -9869,8 +8805,7 @@ Default `200`.
         <span class="property-type">string</span>
     </dt>
     <dd>{{% md %}}The codec used for compression of your logs. One of: gzip, snappy, lz4.
-{{% /md %}}</dd>
-    <dt class="property-optional"
+{{% /md %}}</dd><dt class="property-optional"
             title="Optional">
         <span id="parselogkeyvals_go">
 <a href="#parselogkeyvals_go" style="color: inherit; text-decoration: inherit;">Parse<wbr>Log<wbr>Keyvals</a>
@@ -9878,8 +8813,7 @@ Default `200`.
         <span class="property-indicator"></span>
         <span class="property-type">bool</span>
     </dt>
-    <dd>{{% md %}}{{% /md %}}</dd>
-    <dt class="property-optional"
+    <dd>{{% md %}}{{% /md %}}</dd><dt class="property-optional"
             title="Optional">
         <span id="password_go">
 <a href="#password_go" style="color: inherit; text-decoration: inherit;">Password</a>
@@ -9888,8 +8822,7 @@ Default `200`.
         <span class="property-type">string</span>
     </dt>
     <dd>{{% md %}}The password for the server. If both `password` and `secret_key` are passed, `secret_key` will be preferred.
-{{% /md %}}</dd>
-    <dt class="property-optional"
+{{% /md %}}</dd><dt class="property-optional"
             title="Optional">
         <span id="requestmaxbytes_go">
 <a href="#requestmaxbytes_go" style="color: inherit; text-decoration: inherit;">Request<wbr>Max<wbr>Bytes</a>
@@ -9898,8 +8831,7 @@ Default `200`.
         <span class="property-type">int</span>
     </dt>
     <dd>{{% md %}}The maximum number of bytes sent in one request. Defaults to `0` for unbounded.
-{{% /md %}}</dd>
-    <dt class="property-optional"
+{{% /md %}}</dd><dt class="property-optional"
             title="Optional">
         <span id="requiredacks_go">
 <a href="#requiredacks_go" style="color: inherit; text-decoration: inherit;">Required<wbr>Acks</a>
@@ -9908,8 +8840,7 @@ Default `200`.
         <span class="property-type">string</span>
     </dt>
     <dd>{{% md %}}The Number of acknowledgements a leader must receive before a write is considered successful. One of: 1 (default) One server needs to respond. 0 No servers need to respond. -1	Wait for all in-sync replicas to respond.
-{{% /md %}}</dd>
-    <dt class="property-optional"
+{{% /md %}}</dd><dt class="property-optional"
             title="Optional">
         <span id="tlscacert_go">
 <a href="#tlscacert_go" style="color: inherit; text-decoration: inherit;">Tls<wbr>Ca<wbr>Cert</a>
@@ -9918,8 +8849,7 @@ Default `200`.
         <span class="property-type">string</span>
     </dt>
     <dd>{{% md %}}A secure certificate to authenticate the server with. Must be in PEM format.
-{{% /md %}}</dd>
-    <dt class="property-optional"
+{{% /md %}}</dd><dt class="property-optional"
             title="Optional">
         <span id="tlsclientcert_go">
 <a href="#tlsclientcert_go" style="color: inherit; text-decoration: inherit;">Tls<wbr>Client<wbr>Cert</a>
@@ -9928,8 +8858,7 @@ Default `200`.
         <span class="property-type">string</span>
     </dt>
     <dd>{{% md %}}The client certificate used to make authenticated requests. Must be in PEM format.
-{{% /md %}}</dd>
-    <dt class="property-optional"
+{{% /md %}}</dd><dt class="property-optional"
             title="Optional">
         <span id="tlsclientkey_go">
 <a href="#tlsclientkey_go" style="color: inherit; text-decoration: inherit;">Tls<wbr>Client<wbr>Key</a>
@@ -9938,8 +8867,7 @@ Default `200`.
         <span class="property-type">string</span>
     </dt>
     <dd>{{% md %}}The client private key used to make authenticated requests. Must be in PEM format.
-{{% /md %}}</dd>
-    <dt class="property-optional"
+{{% /md %}}</dd><dt class="property-optional"
             title="Optional">
         <span id="tlshostname_go">
 <a href="#tlshostname_go" style="color: inherit; text-decoration: inherit;">Tls<wbr>Hostname</a>
@@ -9948,8 +8876,7 @@ Default `200`.
         <span class="property-type">string</span>
     </dt>
     <dd>{{% md %}}The hostname used to verify the server's certificate. It can either be the Common Name or a Subject Alternative Name (SAN).
-{{% /md %}}</dd>
-    <dt class="property-optional"
+{{% /md %}}</dd><dt class="property-optional"
             title="Optional">
         <span id="usetls_go">
 <a href="#usetls_go" style="color: inherit; text-decoration: inherit;">Use<wbr>Tls</a>
@@ -9958,8 +8885,7 @@ Default `200`.
         <span class="property-type">bool</span>
     </dt>
     <dd>{{% md %}}Whether to use TLS for secure logging. Can be either true or false.
-{{% /md %}}</dd>
-    <dt class="property-optional"
+{{% /md %}}</dd><dt class="property-optional"
             title="Optional">
         <span id="user_go">
 <a href="#user_go" style="color: inherit; text-decoration: inherit;">User</a>
@@ -9968,14 +8894,11 @@ Default `200`.
         <span class="property-type">string</span>
     </dt>
     <dd>{{% md %}}The username for your Cloud Files account.
-{{% /md %}}</dd>
-</dl>
+{{% /md %}}</dd></dl>
 {{% /choosable %}}
 
 {{% choosable language nodejs %}}
-<dl class="resources-properties">
-
-    <dt class="property-required"
+<dl class="resources-properties"><dt class="property-required"
             title="Required">
         <span id="brokers_nodejs">
 <a href="#brokers_nodejs" style="color: inherit; text-decoration: inherit;">brokers</a>
@@ -9984,8 +8907,7 @@ Default `200`.
         <span class="property-type">string</span>
     </dt>
     <dd>{{% md %}}A comma-separated list of IP addresses or hostnames of Kafka brokers.
-{{% /md %}}</dd>
-    <dt class="property-required"
+{{% /md %}}</dd><dt class="property-required"
             title="Required">
         <span id="name_nodejs">
 <a href="#name_nodejs" style="color: inherit; text-decoration: inherit;">name</a>
@@ -9994,8 +8916,7 @@ Default `200`.
         <span class="property-type">string</span>
     </dt>
     <dd>{{% md %}}The unique name of the Kinesis logging endpoint.
-{{% /md %}}</dd>
-    <dt class="property-required"
+{{% /md %}}</dd><dt class="property-required"
             title="Required">
         <span id="topic_nodejs">
 <a href="#topic_nodejs" style="color: inherit; text-decoration: inherit;">topic</a>
@@ -10004,8 +8925,7 @@ Default `200`.
         <span class="property-type">string</span>
     </dt>
     <dd>{{% md %}}The Kinesis stream name.
-{{% /md %}}</dd>
-    <dt class="property-optional"
+{{% /md %}}</dd><dt class="property-optional"
             title="Optional">
         <span id="authmethod_nodejs">
 <a href="#authmethod_nodejs" style="color: inherit; text-decoration: inherit;">auth<wbr>Method</a>
@@ -10013,8 +8933,7 @@ Default `200`.
         <span class="property-indicator"></span>
         <span class="property-type">string</span>
     </dt>
-    <dd>{{% md %}}{{% /md %}}</dd>
-    <dt class="property-optional"
+    <dd>{{% md %}}{{% /md %}}</dd><dt class="property-optional"
             title="Optional">
         <span id="compressioncodec_nodejs">
 <a href="#compressioncodec_nodejs" style="color: inherit; text-decoration: inherit;">compression<wbr>Codec</a>
@@ -10023,8 +8942,7 @@ Default `200`.
         <span class="property-type">string</span>
     </dt>
     <dd>{{% md %}}The codec used for compression of your logs. One of: gzip, snappy, lz4.
-{{% /md %}}</dd>
-    <dt class="property-optional"
+{{% /md %}}</dd><dt class="property-optional"
             title="Optional">
         <span id="parselogkeyvals_nodejs">
 <a href="#parselogkeyvals_nodejs" style="color: inherit; text-decoration: inherit;">parse<wbr>Log<wbr>Keyvals</a>
@@ -10032,8 +8950,7 @@ Default `200`.
         <span class="property-indicator"></span>
         <span class="property-type">boolean</span>
     </dt>
-    <dd>{{% md %}}{{% /md %}}</dd>
-    <dt class="property-optional"
+    <dd>{{% md %}}{{% /md %}}</dd><dt class="property-optional"
             title="Optional">
         <span id="password_nodejs">
 <a href="#password_nodejs" style="color: inherit; text-decoration: inherit;">password</a>
@@ -10042,8 +8959,7 @@ Default `200`.
         <span class="property-type">string</span>
     </dt>
     <dd>{{% md %}}The password for the server. If both `password` and `secret_key` are passed, `secret_key` will be preferred.
-{{% /md %}}</dd>
-    <dt class="property-optional"
+{{% /md %}}</dd><dt class="property-optional"
             title="Optional">
         <span id="requestmaxbytes_nodejs">
 <a href="#requestmaxbytes_nodejs" style="color: inherit; text-decoration: inherit;">request<wbr>Max<wbr>Bytes</a>
@@ -10052,8 +8968,7 @@ Default `200`.
         <span class="property-type">number</span>
     </dt>
     <dd>{{% md %}}The maximum number of bytes sent in one request. Defaults to `0` for unbounded.
-{{% /md %}}</dd>
-    <dt class="property-optional"
+{{% /md %}}</dd><dt class="property-optional"
             title="Optional">
         <span id="requiredacks_nodejs">
 <a href="#requiredacks_nodejs" style="color: inherit; text-decoration: inherit;">required<wbr>Acks</a>
@@ -10062,8 +8977,7 @@ Default `200`.
         <span class="property-type">string</span>
     </dt>
     <dd>{{% md %}}The Number of acknowledgements a leader must receive before a write is considered successful. One of: 1 (default) One server needs to respond. 0 No servers need to respond. -1	Wait for all in-sync replicas to respond.
-{{% /md %}}</dd>
-    <dt class="property-optional"
+{{% /md %}}</dd><dt class="property-optional"
             title="Optional">
         <span id="tlscacert_nodejs">
 <a href="#tlscacert_nodejs" style="color: inherit; text-decoration: inherit;">tls<wbr>Ca<wbr>Cert</a>
@@ -10072,8 +8986,7 @@ Default `200`.
         <span class="property-type">string</span>
     </dt>
     <dd>{{% md %}}A secure certificate to authenticate the server with. Must be in PEM format.
-{{% /md %}}</dd>
-    <dt class="property-optional"
+{{% /md %}}</dd><dt class="property-optional"
             title="Optional">
         <span id="tlsclientcert_nodejs">
 <a href="#tlsclientcert_nodejs" style="color: inherit; text-decoration: inherit;">tls<wbr>Client<wbr>Cert</a>
@@ -10082,8 +8995,7 @@ Default `200`.
         <span class="property-type">string</span>
     </dt>
     <dd>{{% md %}}The client certificate used to make authenticated requests. Must be in PEM format.
-{{% /md %}}</dd>
-    <dt class="property-optional"
+{{% /md %}}</dd><dt class="property-optional"
             title="Optional">
         <span id="tlsclientkey_nodejs">
 <a href="#tlsclientkey_nodejs" style="color: inherit; text-decoration: inherit;">tls<wbr>Client<wbr>Key</a>
@@ -10092,8 +9004,7 @@ Default `200`.
         <span class="property-type">string</span>
     </dt>
     <dd>{{% md %}}The client private key used to make authenticated requests. Must be in PEM format.
-{{% /md %}}</dd>
-    <dt class="property-optional"
+{{% /md %}}</dd><dt class="property-optional"
             title="Optional">
         <span id="tlshostname_nodejs">
 <a href="#tlshostname_nodejs" style="color: inherit; text-decoration: inherit;">tls<wbr>Hostname</a>
@@ -10102,8 +9013,7 @@ Default `200`.
         <span class="property-type">string</span>
     </dt>
     <dd>{{% md %}}The hostname used to verify the server's certificate. It can either be the Common Name or a Subject Alternative Name (SAN).
-{{% /md %}}</dd>
-    <dt class="property-optional"
+{{% /md %}}</dd><dt class="property-optional"
             title="Optional">
         <span id="usetls_nodejs">
 <a href="#usetls_nodejs" style="color: inherit; text-decoration: inherit;">use<wbr>Tls</a>
@@ -10112,8 +9022,7 @@ Default `200`.
         <span class="property-type">boolean</span>
     </dt>
     <dd>{{% md %}}Whether to use TLS for secure logging. Can be either true or false.
-{{% /md %}}</dd>
-    <dt class="property-optional"
+{{% /md %}}</dd><dt class="property-optional"
             title="Optional">
         <span id="user_nodejs">
 <a href="#user_nodejs" style="color: inherit; text-decoration: inherit;">user</a>
@@ -10122,14 +9031,11 @@ Default `200`.
         <span class="property-type">string</span>
     </dt>
     <dd>{{% md %}}The username for your Cloud Files account.
-{{% /md %}}</dd>
-</dl>
+{{% /md %}}</dd></dl>
 {{% /choosable %}}
 
 {{% choosable language python %}}
-<dl class="resources-properties">
-
-    <dt class="property-required"
+<dl class="resources-properties"><dt class="property-required"
             title="Required">
         <span id="brokers_python">
 <a href="#brokers_python" style="color: inherit; text-decoration: inherit;">brokers</a>
@@ -10138,8 +9044,7 @@ Default `200`.
         <span class="property-type">str</span>
     </dt>
     <dd>{{% md %}}A comma-separated list of IP addresses or hostnames of Kafka brokers.
-{{% /md %}}</dd>
-    <dt class="property-required"
+{{% /md %}}</dd><dt class="property-required"
             title="Required">
         <span id="name_python">
 <a href="#name_python" style="color: inherit; text-decoration: inherit;">name</a>
@@ -10148,8 +9053,7 @@ Default `200`.
         <span class="property-type">str</span>
     </dt>
     <dd>{{% md %}}The unique name of the Kinesis logging endpoint.
-{{% /md %}}</dd>
-    <dt class="property-required"
+{{% /md %}}</dd><dt class="property-required"
             title="Required">
         <span id="topic_python">
 <a href="#topic_python" style="color: inherit; text-decoration: inherit;">topic</a>
@@ -10158,8 +9062,7 @@ Default `200`.
         <span class="property-type">str</span>
     </dt>
     <dd>{{% md %}}The Kinesis stream name.
-{{% /md %}}</dd>
-    <dt class="property-optional"
+{{% /md %}}</dd><dt class="property-optional"
             title="Optional">
         <span id="auth_method_python">
 <a href="#auth_method_python" style="color: inherit; text-decoration: inherit;">auth_<wbr>method</a>
@@ -10167,8 +9070,7 @@ Default `200`.
         <span class="property-indicator"></span>
         <span class="property-type">str</span>
     </dt>
-    <dd>{{% md %}}{{% /md %}}</dd>
-    <dt class="property-optional"
+    <dd>{{% md %}}{{% /md %}}</dd><dt class="property-optional"
             title="Optional">
         <span id="compression_codec_python">
 <a href="#compression_codec_python" style="color: inherit; text-decoration: inherit;">compression_<wbr>codec</a>
@@ -10177,8 +9079,7 @@ Default `200`.
         <span class="property-type">str</span>
     </dt>
     <dd>{{% md %}}The codec used for compression of your logs. One of: gzip, snappy, lz4.
-{{% /md %}}</dd>
-    <dt class="property-optional"
+{{% /md %}}</dd><dt class="property-optional"
             title="Optional">
         <span id="parse_log_keyvals_python">
 <a href="#parse_log_keyvals_python" style="color: inherit; text-decoration: inherit;">parse_<wbr>log_<wbr>keyvals</a>
@@ -10186,8 +9087,7 @@ Default `200`.
         <span class="property-indicator"></span>
         <span class="property-type">bool</span>
     </dt>
-    <dd>{{% md %}}{{% /md %}}</dd>
-    <dt class="property-optional"
+    <dd>{{% md %}}{{% /md %}}</dd><dt class="property-optional"
             title="Optional">
         <span id="password_python">
 <a href="#password_python" style="color: inherit; text-decoration: inherit;">password</a>
@@ -10196,8 +9096,7 @@ Default `200`.
         <span class="property-type">str</span>
     </dt>
     <dd>{{% md %}}The password for the server. If both `password` and `secret_key` are passed, `secret_key` will be preferred.
-{{% /md %}}</dd>
-    <dt class="property-optional"
+{{% /md %}}</dd><dt class="property-optional"
             title="Optional">
         <span id="request_max_bytes_python">
 <a href="#request_max_bytes_python" style="color: inherit; text-decoration: inherit;">request_<wbr>max_<wbr>bytes</a>
@@ -10206,8 +9105,7 @@ Default `200`.
         <span class="property-type">int</span>
     </dt>
     <dd>{{% md %}}The maximum number of bytes sent in one request. Defaults to `0` for unbounded.
-{{% /md %}}</dd>
-    <dt class="property-optional"
+{{% /md %}}</dd><dt class="property-optional"
             title="Optional">
         <span id="required_acks_python">
 <a href="#required_acks_python" style="color: inherit; text-decoration: inherit;">required_<wbr>acks</a>
@@ -10216,8 +9114,7 @@ Default `200`.
         <span class="property-type">str</span>
     </dt>
     <dd>{{% md %}}The Number of acknowledgements a leader must receive before a write is considered successful. One of: 1 (default) One server needs to respond. 0 No servers need to respond. -1	Wait for all in-sync replicas to respond.
-{{% /md %}}</dd>
-    <dt class="property-optional"
+{{% /md %}}</dd><dt class="property-optional"
             title="Optional">
         <span id="tls_ca_cert_python">
 <a href="#tls_ca_cert_python" style="color: inherit; text-decoration: inherit;">tls_<wbr>ca_<wbr>cert</a>
@@ -10226,8 +9123,7 @@ Default `200`.
         <span class="property-type">str</span>
     </dt>
     <dd>{{% md %}}A secure certificate to authenticate the server with. Must be in PEM format.
-{{% /md %}}</dd>
-    <dt class="property-optional"
+{{% /md %}}</dd><dt class="property-optional"
             title="Optional">
         <span id="tls_client_cert_python">
 <a href="#tls_client_cert_python" style="color: inherit; text-decoration: inherit;">tls_<wbr>client_<wbr>cert</a>
@@ -10236,8 +9132,7 @@ Default `200`.
         <span class="property-type">str</span>
     </dt>
     <dd>{{% md %}}The client certificate used to make authenticated requests. Must be in PEM format.
-{{% /md %}}</dd>
-    <dt class="property-optional"
+{{% /md %}}</dd><dt class="property-optional"
             title="Optional">
         <span id="tls_client_key_python">
 <a href="#tls_client_key_python" style="color: inherit; text-decoration: inherit;">tls_<wbr>client_<wbr>key</a>
@@ -10246,8 +9141,7 @@ Default `200`.
         <span class="property-type">str</span>
     </dt>
     <dd>{{% md %}}The client private key used to make authenticated requests. Must be in PEM format.
-{{% /md %}}</dd>
-    <dt class="property-optional"
+{{% /md %}}</dd><dt class="property-optional"
             title="Optional">
         <span id="tls_hostname_python">
 <a href="#tls_hostname_python" style="color: inherit; text-decoration: inherit;">tls_<wbr>hostname</a>
@@ -10256,8 +9150,7 @@ Default `200`.
         <span class="property-type">str</span>
     </dt>
     <dd>{{% md %}}The hostname used to verify the server's certificate. It can either be the Common Name or a Subject Alternative Name (SAN).
-{{% /md %}}</dd>
-    <dt class="property-optional"
+{{% /md %}}</dd><dt class="property-optional"
             title="Optional">
         <span id="use_tls_python">
 <a href="#use_tls_python" style="color: inherit; text-decoration: inherit;">use_<wbr>tls</a>
@@ -10266,8 +9159,7 @@ Default `200`.
         <span class="property-type">bool</span>
     </dt>
     <dd>{{% md %}}Whether to use TLS for secure logging. Can be either true or false.
-{{% /md %}}</dd>
-    <dt class="property-optional"
+{{% /md %}}</dd><dt class="property-optional"
             title="Optional">
         <span id="user_python">
 <a href="#user_python" style="color: inherit; text-decoration: inherit;">user</a>
@@ -10276,16 +9168,13 @@ Default `200`.
         <span class="property-type">str</span>
     </dt>
     <dd>{{% md %}}The username for your Cloud Files account.
-{{% /md %}}</dd>
-</dl>
+{{% /md %}}</dd></dl>
 {{% /choosable %}}
 
 <h4 id="servicecomputeloggingkinese">Service<wbr>Compute<wbr>Logging<wbr>Kinese</h4>
 
 {{% choosable language csharp %}}
-<dl class="resources-properties">
-
-    <dt class="property-required"
+<dl class="resources-properties"><dt class="property-required"
             title="Required">
         <span id="accesskey_csharp">
 <a href="#accesskey_csharp" style="color: inherit; text-decoration: inherit;">Access<wbr>Key</a>
@@ -10294,8 +9183,7 @@ Default `200`.
         <span class="property-type">string</span>
     </dt>
     <dd>{{% md %}}The AWS access key to be used to write to the stream.
-{{% /md %}}</dd>
-    <dt class="property-required"
+{{% /md %}}</dd><dt class="property-required"
             title="Required">
         <span id="name_csharp">
 <a href="#name_csharp" style="color: inherit; text-decoration: inherit;">Name</a>
@@ -10304,8 +9192,7 @@ Default `200`.
         <span class="property-type">string</span>
     </dt>
     <dd>{{% md %}}The unique name of the Kinesis logging endpoint.
-{{% /md %}}</dd>
-    <dt class="property-required"
+{{% /md %}}</dd><dt class="property-required"
             title="Required">
         <span id="secretkey_csharp">
 <a href="#secretkey_csharp" style="color: inherit; text-decoration: inherit;">Secret<wbr>Key</a>
@@ -10314,8 +9201,7 @@ Default `200`.
         <span class="property-type">string</span>
     </dt>
     <dd>{{% md %}}The AWS secret access key to authenticate with.
-{{% /md %}}</dd>
-    <dt class="property-required"
+{{% /md %}}</dd><dt class="property-required"
             title="Required">
         <span id="topic_csharp">
 <a href="#topic_csharp" style="color: inherit; text-decoration: inherit;">Topic</a>
@@ -10324,8 +9210,7 @@ Default `200`.
         <span class="property-type">string</span>
     </dt>
     <dd>{{% md %}}The Kinesis stream name.
-{{% /md %}}</dd>
-    <dt class="property-optional"
+{{% /md %}}</dd><dt class="property-optional"
             title="Optional">
         <span id="region_csharp">
 <a href="#region_csharp" style="color: inherit; text-decoration: inherit;">Region</a>
@@ -10334,14 +9219,11 @@ Default `200`.
         <span class="property-type">string</span>
     </dt>
     <dd>{{% md %}}The AWS region the stream resides in. (Default: `us-east-1`).
-{{% /md %}}</dd>
-</dl>
+{{% /md %}}</dd></dl>
 {{% /choosable %}}
 
 {{% choosable language go %}}
-<dl class="resources-properties">
-
-    <dt class="property-required"
+<dl class="resources-properties"><dt class="property-required"
             title="Required">
         <span id="accesskey_go">
 <a href="#accesskey_go" style="color: inherit; text-decoration: inherit;">Access<wbr>Key</a>
@@ -10350,8 +9232,7 @@ Default `200`.
         <span class="property-type">string</span>
     </dt>
     <dd>{{% md %}}The AWS access key to be used to write to the stream.
-{{% /md %}}</dd>
-    <dt class="property-required"
+{{% /md %}}</dd><dt class="property-required"
             title="Required">
         <span id="name_go">
 <a href="#name_go" style="color: inherit; text-decoration: inherit;">Name</a>
@@ -10360,8 +9241,7 @@ Default `200`.
         <span class="property-type">string</span>
     </dt>
     <dd>{{% md %}}The unique name of the Kinesis logging endpoint.
-{{% /md %}}</dd>
-    <dt class="property-required"
+{{% /md %}}</dd><dt class="property-required"
             title="Required">
         <span id="secretkey_go">
 <a href="#secretkey_go" style="color: inherit; text-decoration: inherit;">Secret<wbr>Key</a>
@@ -10370,8 +9250,7 @@ Default `200`.
         <span class="property-type">string</span>
     </dt>
     <dd>{{% md %}}The AWS secret access key to authenticate with.
-{{% /md %}}</dd>
-    <dt class="property-required"
+{{% /md %}}</dd><dt class="property-required"
             title="Required">
         <span id="topic_go">
 <a href="#topic_go" style="color: inherit; text-decoration: inherit;">Topic</a>
@@ -10380,8 +9259,7 @@ Default `200`.
         <span class="property-type">string</span>
     </dt>
     <dd>{{% md %}}The Kinesis stream name.
-{{% /md %}}</dd>
-    <dt class="property-optional"
+{{% /md %}}</dd><dt class="property-optional"
             title="Optional">
         <span id="region_go">
 <a href="#region_go" style="color: inherit; text-decoration: inherit;">Region</a>
@@ -10390,14 +9268,11 @@ Default `200`.
         <span class="property-type">string</span>
     </dt>
     <dd>{{% md %}}The AWS region the stream resides in. (Default: `us-east-1`).
-{{% /md %}}</dd>
-</dl>
+{{% /md %}}</dd></dl>
 {{% /choosable %}}
 
 {{% choosable language nodejs %}}
-<dl class="resources-properties">
-
-    <dt class="property-required"
+<dl class="resources-properties"><dt class="property-required"
             title="Required">
         <span id="accesskey_nodejs">
 <a href="#accesskey_nodejs" style="color: inherit; text-decoration: inherit;">access<wbr>Key</a>
@@ -10406,8 +9281,7 @@ Default `200`.
         <span class="property-type">string</span>
     </dt>
     <dd>{{% md %}}The AWS access key to be used to write to the stream.
-{{% /md %}}</dd>
-    <dt class="property-required"
+{{% /md %}}</dd><dt class="property-required"
             title="Required">
         <span id="name_nodejs">
 <a href="#name_nodejs" style="color: inherit; text-decoration: inherit;">name</a>
@@ -10416,8 +9290,7 @@ Default `200`.
         <span class="property-type">string</span>
     </dt>
     <dd>{{% md %}}The unique name of the Kinesis logging endpoint.
-{{% /md %}}</dd>
-    <dt class="property-required"
+{{% /md %}}</dd><dt class="property-required"
             title="Required">
         <span id="secretkey_nodejs">
 <a href="#secretkey_nodejs" style="color: inherit; text-decoration: inherit;">secret<wbr>Key</a>
@@ -10426,8 +9299,7 @@ Default `200`.
         <span class="property-type">string</span>
     </dt>
     <dd>{{% md %}}The AWS secret access key to authenticate with.
-{{% /md %}}</dd>
-    <dt class="property-required"
+{{% /md %}}</dd><dt class="property-required"
             title="Required">
         <span id="topic_nodejs">
 <a href="#topic_nodejs" style="color: inherit; text-decoration: inherit;">topic</a>
@@ -10436,8 +9308,7 @@ Default `200`.
         <span class="property-type">string</span>
     </dt>
     <dd>{{% md %}}The Kinesis stream name.
-{{% /md %}}</dd>
-    <dt class="property-optional"
+{{% /md %}}</dd><dt class="property-optional"
             title="Optional">
         <span id="region_nodejs">
 <a href="#region_nodejs" style="color: inherit; text-decoration: inherit;">region</a>
@@ -10446,14 +9317,11 @@ Default `200`.
         <span class="property-type">string</span>
     </dt>
     <dd>{{% md %}}The AWS region the stream resides in. (Default: `us-east-1`).
-{{% /md %}}</dd>
-</dl>
+{{% /md %}}</dd></dl>
 {{% /choosable %}}
 
 {{% choosable language python %}}
-<dl class="resources-properties">
-
-    <dt class="property-required"
+<dl class="resources-properties"><dt class="property-required"
             title="Required">
         <span id="access_key_python">
 <a href="#access_key_python" style="color: inherit; text-decoration: inherit;">access_<wbr>key</a>
@@ -10462,8 +9330,7 @@ Default `200`.
         <span class="property-type">str</span>
     </dt>
     <dd>{{% md %}}The AWS access key to be used to write to the stream.
-{{% /md %}}</dd>
-    <dt class="property-required"
+{{% /md %}}</dd><dt class="property-required"
             title="Required">
         <span id="name_python">
 <a href="#name_python" style="color: inherit; text-decoration: inherit;">name</a>
@@ -10472,8 +9339,7 @@ Default `200`.
         <span class="property-type">str</span>
     </dt>
     <dd>{{% md %}}The unique name of the Kinesis logging endpoint.
-{{% /md %}}</dd>
-    <dt class="property-required"
+{{% /md %}}</dd><dt class="property-required"
             title="Required">
         <span id="secret_key_python">
 <a href="#secret_key_python" style="color: inherit; text-decoration: inherit;">secret_<wbr>key</a>
@@ -10482,8 +9348,7 @@ Default `200`.
         <span class="property-type">str</span>
     </dt>
     <dd>{{% md %}}The AWS secret access key to authenticate with.
-{{% /md %}}</dd>
-    <dt class="property-required"
+{{% /md %}}</dd><dt class="property-required"
             title="Required">
         <span id="topic_python">
 <a href="#topic_python" style="color: inherit; text-decoration: inherit;">topic</a>
@@ -10492,8 +9357,7 @@ Default `200`.
         <span class="property-type">str</span>
     </dt>
     <dd>{{% md %}}The Kinesis stream name.
-{{% /md %}}</dd>
-    <dt class="property-optional"
+{{% /md %}}</dd><dt class="property-optional"
             title="Optional">
         <span id="region_python">
 <a href="#region_python" style="color: inherit; text-decoration: inherit;">region</a>
@@ -10502,16 +9366,13 @@ Default `200`.
         <span class="property-type">str</span>
     </dt>
     <dd>{{% md %}}The AWS region the stream resides in. (Default: `us-east-1`).
-{{% /md %}}</dd>
-</dl>
+{{% /md %}}</dd></dl>
 {{% /choosable %}}
 
 <h4 id="servicecomputeloggingloggly">Service<wbr>Compute<wbr>Logging<wbr>Loggly</h4>
 
 {{% choosable language csharp %}}
-<dl class="resources-properties">
-
-    <dt class="property-required"
+<dl class="resources-properties"><dt class="property-required"
             title="Required">
         <span id="name_csharp">
 <a href="#name_csharp" style="color: inherit; text-decoration: inherit;">Name</a>
@@ -10520,8 +9381,7 @@ Default `200`.
         <span class="property-type">string</span>
     </dt>
     <dd>{{% md %}}The unique name of the Kinesis logging endpoint.
-{{% /md %}}</dd>
-    <dt class="property-required"
+{{% /md %}}</dd><dt class="property-required"
             title="Required">
         <span id="token_csharp">
 <a href="#token_csharp" style="color: inherit; text-decoration: inherit;">Token</a>
@@ -10530,14 +9390,11 @@ Default `200`.
         <span class="property-type">string</span>
     </dt>
     <dd>{{% md %}}The data authentication token associated with this endpoint.
-{{% /md %}}</dd>
-</dl>
+{{% /md %}}</dd></dl>
 {{% /choosable %}}
 
 {{% choosable language go %}}
-<dl class="resources-properties">
-
-    <dt class="property-required"
+<dl class="resources-properties"><dt class="property-required"
             title="Required">
         <span id="name_go">
 <a href="#name_go" style="color: inherit; text-decoration: inherit;">Name</a>
@@ -10546,8 +9403,7 @@ Default `200`.
         <span class="property-type">string</span>
     </dt>
     <dd>{{% md %}}The unique name of the Kinesis logging endpoint.
-{{% /md %}}</dd>
-    <dt class="property-required"
+{{% /md %}}</dd><dt class="property-required"
             title="Required">
         <span id="token_go">
 <a href="#token_go" style="color: inherit; text-decoration: inherit;">Token</a>
@@ -10556,14 +9412,11 @@ Default `200`.
         <span class="property-type">string</span>
     </dt>
     <dd>{{% md %}}The data authentication token associated with this endpoint.
-{{% /md %}}</dd>
-</dl>
+{{% /md %}}</dd></dl>
 {{% /choosable %}}
 
 {{% choosable language nodejs %}}
-<dl class="resources-properties">
-
-    <dt class="property-required"
+<dl class="resources-properties"><dt class="property-required"
             title="Required">
         <span id="name_nodejs">
 <a href="#name_nodejs" style="color: inherit; text-decoration: inherit;">name</a>
@@ -10572,8 +9425,7 @@ Default `200`.
         <span class="property-type">string</span>
     </dt>
     <dd>{{% md %}}The unique name of the Kinesis logging endpoint.
-{{% /md %}}</dd>
-    <dt class="property-required"
+{{% /md %}}</dd><dt class="property-required"
             title="Required">
         <span id="token_nodejs">
 <a href="#token_nodejs" style="color: inherit; text-decoration: inherit;">token</a>
@@ -10582,14 +9434,11 @@ Default `200`.
         <span class="property-type">string</span>
     </dt>
     <dd>{{% md %}}The data authentication token associated with this endpoint.
-{{% /md %}}</dd>
-</dl>
+{{% /md %}}</dd></dl>
 {{% /choosable %}}
 
 {{% choosable language python %}}
-<dl class="resources-properties">
-
-    <dt class="property-required"
+<dl class="resources-properties"><dt class="property-required"
             title="Required">
         <span id="name_python">
 <a href="#name_python" style="color: inherit; text-decoration: inherit;">name</a>
@@ -10598,8 +9447,7 @@ Default `200`.
         <span class="property-type">str</span>
     </dt>
     <dd>{{% md %}}The unique name of the Kinesis logging endpoint.
-{{% /md %}}</dd>
-    <dt class="property-required"
+{{% /md %}}</dd><dt class="property-required"
             title="Required">
         <span id="token_python">
 <a href="#token_python" style="color: inherit; text-decoration: inherit;">token</a>
@@ -10608,16 +9456,13 @@ Default `200`.
         <span class="property-type">str</span>
     </dt>
     <dd>{{% md %}}The data authentication token associated with this endpoint.
-{{% /md %}}</dd>
-</dl>
+{{% /md %}}</dd></dl>
 {{% /choosable %}}
 
 <h4 id="servicecomputelogginglogshuttle">Service<wbr>Compute<wbr>Logging<wbr>Logshuttle</h4>
 
 {{% choosable language csharp %}}
-<dl class="resources-properties">
-
-    <dt class="property-required"
+<dl class="resources-properties"><dt class="property-required"
             title="Required">
         <span id="name_csharp">
 <a href="#name_csharp" style="color: inherit; text-decoration: inherit;">Name</a>
@@ -10626,8 +9471,7 @@ Default `200`.
         <span class="property-type">string</span>
     </dt>
     <dd>{{% md %}}The unique name of the Kinesis logging endpoint.
-{{% /md %}}</dd>
-    <dt class="property-required"
+{{% /md %}}</dd><dt class="property-required"
             title="Required">
         <span id="token_csharp">
 <a href="#token_csharp" style="color: inherit; text-decoration: inherit;">Token</a>
@@ -10636,8 +9480,7 @@ Default `200`.
         <span class="property-type">string</span>
     </dt>
     <dd>{{% md %}}The data authentication token associated with this endpoint.
-{{% /md %}}</dd>
-    <dt class="property-required"
+{{% /md %}}</dd><dt class="property-required"
             title="Required">
         <span id="url_csharp">
 <a href="#url_csharp" style="color: inherit; text-decoration: inherit;">Url</a>
@@ -10646,14 +9489,11 @@ Default `200`.
         <span class="property-type">string</span>
     </dt>
     <dd>{{% md %}}Your OpenStack auth url.
-{{% /md %}}</dd>
-</dl>
+{{% /md %}}</dd></dl>
 {{% /choosable %}}
 
 {{% choosable language go %}}
-<dl class="resources-properties">
-
-    <dt class="property-required"
+<dl class="resources-properties"><dt class="property-required"
             title="Required">
         <span id="name_go">
 <a href="#name_go" style="color: inherit; text-decoration: inherit;">Name</a>
@@ -10662,8 +9502,7 @@ Default `200`.
         <span class="property-type">string</span>
     </dt>
     <dd>{{% md %}}The unique name of the Kinesis logging endpoint.
-{{% /md %}}</dd>
-    <dt class="property-required"
+{{% /md %}}</dd><dt class="property-required"
             title="Required">
         <span id="token_go">
 <a href="#token_go" style="color: inherit; text-decoration: inherit;">Token</a>
@@ -10672,8 +9511,7 @@ Default `200`.
         <span class="property-type">string</span>
     </dt>
     <dd>{{% md %}}The data authentication token associated with this endpoint.
-{{% /md %}}</dd>
-    <dt class="property-required"
+{{% /md %}}</dd><dt class="property-required"
             title="Required">
         <span id="url_go">
 <a href="#url_go" style="color: inherit; text-decoration: inherit;">Url</a>
@@ -10682,14 +9520,11 @@ Default `200`.
         <span class="property-type">string</span>
     </dt>
     <dd>{{% md %}}Your OpenStack auth url.
-{{% /md %}}</dd>
-</dl>
+{{% /md %}}</dd></dl>
 {{% /choosable %}}
 
 {{% choosable language nodejs %}}
-<dl class="resources-properties">
-
-    <dt class="property-required"
+<dl class="resources-properties"><dt class="property-required"
             title="Required">
         <span id="name_nodejs">
 <a href="#name_nodejs" style="color: inherit; text-decoration: inherit;">name</a>
@@ -10698,8 +9533,7 @@ Default `200`.
         <span class="property-type">string</span>
     </dt>
     <dd>{{% md %}}The unique name of the Kinesis logging endpoint.
-{{% /md %}}</dd>
-    <dt class="property-required"
+{{% /md %}}</dd><dt class="property-required"
             title="Required">
         <span id="token_nodejs">
 <a href="#token_nodejs" style="color: inherit; text-decoration: inherit;">token</a>
@@ -10708,8 +9542,7 @@ Default `200`.
         <span class="property-type">string</span>
     </dt>
     <dd>{{% md %}}The data authentication token associated with this endpoint.
-{{% /md %}}</dd>
-    <dt class="property-required"
+{{% /md %}}</dd><dt class="property-required"
             title="Required">
         <span id="url_nodejs">
 <a href="#url_nodejs" style="color: inherit; text-decoration: inherit;">url</a>
@@ -10718,14 +9551,11 @@ Default `200`.
         <span class="property-type">string</span>
     </dt>
     <dd>{{% md %}}Your OpenStack auth url.
-{{% /md %}}</dd>
-</dl>
+{{% /md %}}</dd></dl>
 {{% /choosable %}}
 
 {{% choosable language python %}}
-<dl class="resources-properties">
-
-    <dt class="property-required"
+<dl class="resources-properties"><dt class="property-required"
             title="Required">
         <span id="name_python">
 <a href="#name_python" style="color: inherit; text-decoration: inherit;">name</a>
@@ -10734,8 +9564,7 @@ Default `200`.
         <span class="property-type">str</span>
     </dt>
     <dd>{{% md %}}The unique name of the Kinesis logging endpoint.
-{{% /md %}}</dd>
-    <dt class="property-required"
+{{% /md %}}</dd><dt class="property-required"
             title="Required">
         <span id="token_python">
 <a href="#token_python" style="color: inherit; text-decoration: inherit;">token</a>
@@ -10744,8 +9573,7 @@ Default `200`.
         <span class="property-type">str</span>
     </dt>
     <dd>{{% md %}}The data authentication token associated with this endpoint.
-{{% /md %}}</dd>
-    <dt class="property-required"
+{{% /md %}}</dd><dt class="property-required"
             title="Required">
         <span id="url_python">
 <a href="#url_python" style="color: inherit; text-decoration: inherit;">url</a>
@@ -10754,16 +9582,13 @@ Default `200`.
         <span class="property-type">str</span>
     </dt>
     <dd>{{% md %}}Your OpenStack auth url.
-{{% /md %}}</dd>
-</dl>
+{{% /md %}}</dd></dl>
 {{% /choosable %}}
 
 <h4 id="servicecomputeloggingnewrelic">Service<wbr>Compute<wbr>Logging<wbr>Newrelic</h4>
 
 {{% choosable language csharp %}}
-<dl class="resources-properties">
-
-    <dt class="property-required"
+<dl class="resources-properties"><dt class="property-required"
             title="Required">
         <span id="name_csharp">
 <a href="#name_csharp" style="color: inherit; text-decoration: inherit;">Name</a>
@@ -10772,8 +9597,7 @@ Default `200`.
         <span class="property-type">string</span>
     </dt>
     <dd>{{% md %}}The unique name of the Kinesis logging endpoint.
-{{% /md %}}</dd>
-    <dt class="property-required"
+{{% /md %}}</dd><dt class="property-required"
             title="Required">
         <span id="token_csharp">
 <a href="#token_csharp" style="color: inherit; text-decoration: inherit;">Token</a>
@@ -10782,14 +9606,11 @@ Default `200`.
         <span class="property-type">string</span>
     </dt>
     <dd>{{% md %}}The data authentication token associated with this endpoint.
-{{% /md %}}</dd>
-</dl>
+{{% /md %}}</dd></dl>
 {{% /choosable %}}
 
 {{% choosable language go %}}
-<dl class="resources-properties">
-
-    <dt class="property-required"
+<dl class="resources-properties"><dt class="property-required"
             title="Required">
         <span id="name_go">
 <a href="#name_go" style="color: inherit; text-decoration: inherit;">Name</a>
@@ -10798,8 +9619,7 @@ Default `200`.
         <span class="property-type">string</span>
     </dt>
     <dd>{{% md %}}The unique name of the Kinesis logging endpoint.
-{{% /md %}}</dd>
-    <dt class="property-required"
+{{% /md %}}</dd><dt class="property-required"
             title="Required">
         <span id="token_go">
 <a href="#token_go" style="color: inherit; text-decoration: inherit;">Token</a>
@@ -10808,14 +9628,11 @@ Default `200`.
         <span class="property-type">string</span>
     </dt>
     <dd>{{% md %}}The data authentication token associated with this endpoint.
-{{% /md %}}</dd>
-</dl>
+{{% /md %}}</dd></dl>
 {{% /choosable %}}
 
 {{% choosable language nodejs %}}
-<dl class="resources-properties">
-
-    <dt class="property-required"
+<dl class="resources-properties"><dt class="property-required"
             title="Required">
         <span id="name_nodejs">
 <a href="#name_nodejs" style="color: inherit; text-decoration: inherit;">name</a>
@@ -10824,8 +9641,7 @@ Default `200`.
         <span class="property-type">string</span>
     </dt>
     <dd>{{% md %}}The unique name of the Kinesis logging endpoint.
-{{% /md %}}</dd>
-    <dt class="property-required"
+{{% /md %}}</dd><dt class="property-required"
             title="Required">
         <span id="token_nodejs">
 <a href="#token_nodejs" style="color: inherit; text-decoration: inherit;">token</a>
@@ -10834,14 +9650,11 @@ Default `200`.
         <span class="property-type">string</span>
     </dt>
     <dd>{{% md %}}The data authentication token associated with this endpoint.
-{{% /md %}}</dd>
-</dl>
+{{% /md %}}</dd></dl>
 {{% /choosable %}}
 
 {{% choosable language python %}}
-<dl class="resources-properties">
-
-    <dt class="property-required"
+<dl class="resources-properties"><dt class="property-required"
             title="Required">
         <span id="name_python">
 <a href="#name_python" style="color: inherit; text-decoration: inherit;">name</a>
@@ -10850,8 +9663,7 @@ Default `200`.
         <span class="property-type">str</span>
     </dt>
     <dd>{{% md %}}The unique name of the Kinesis logging endpoint.
-{{% /md %}}</dd>
-    <dt class="property-required"
+{{% /md %}}</dd><dt class="property-required"
             title="Required">
         <span id="token_python">
 <a href="#token_python" style="color: inherit; text-decoration: inherit;">token</a>
@@ -10860,16 +9672,13 @@ Default `200`.
         <span class="property-type">str</span>
     </dt>
     <dd>{{% md %}}The data authentication token associated with this endpoint.
-{{% /md %}}</dd>
-</dl>
+{{% /md %}}</dd></dl>
 {{% /choosable %}}
 
 <h4 id="servicecomputeloggingopenstack">Service<wbr>Compute<wbr>Logging<wbr>Openstack</h4>
 
 {{% choosable language csharp %}}
-<dl class="resources-properties">
-
-    <dt class="property-required"
+<dl class="resources-properties"><dt class="property-required"
             title="Required">
         <span id="accesskey_csharp">
 <a href="#accesskey_csharp" style="color: inherit; text-decoration: inherit;">Access<wbr>Key</a>
@@ -10878,8 +9687,7 @@ Default `200`.
         <span class="property-type">string</span>
     </dt>
     <dd>{{% md %}}The AWS access key to be used to write to the stream.
-{{% /md %}}</dd>
-    <dt class="property-required"
+{{% /md %}}</dd><dt class="property-required"
             title="Required">
         <span id="bucketname_csharp">
 <a href="#bucketname_csharp" style="color: inherit; text-decoration: inherit;">Bucket<wbr>Name</a>
@@ -10888,8 +9696,7 @@ Default `200`.
         <span class="property-type">string</span>
     </dt>
     <dd>{{% md %}}The name of your Cloud Files container.
-{{% /md %}}</dd>
-    <dt class="property-required"
+{{% /md %}}</dd><dt class="property-required"
             title="Required">
         <span id="name_csharp">
 <a href="#name_csharp" style="color: inherit; text-decoration: inherit;">Name</a>
@@ -10898,8 +9705,7 @@ Default `200`.
         <span class="property-type">string</span>
     </dt>
     <dd>{{% md %}}The unique name of the Kinesis logging endpoint.
-{{% /md %}}</dd>
-    <dt class="property-required"
+{{% /md %}}</dd><dt class="property-required"
             title="Required">
         <span id="url_csharp">
 <a href="#url_csharp" style="color: inherit; text-decoration: inherit;">Url</a>
@@ -10908,8 +9714,7 @@ Default `200`.
         <span class="property-type">string</span>
     </dt>
     <dd>{{% md %}}Your OpenStack auth url.
-{{% /md %}}</dd>
-    <dt class="property-required"
+{{% /md %}}</dd><dt class="property-required"
             title="Required">
         <span id="user_csharp">
 <a href="#user_csharp" style="color: inherit; text-decoration: inherit;">User</a>
@@ -10918,8 +9723,7 @@ Default `200`.
         <span class="property-type">string</span>
     </dt>
     <dd>{{% md %}}The username for your Cloud Files account.
-{{% /md %}}</dd>
-    <dt class="property-optional"
+{{% /md %}}</dd><dt class="property-optional"
             title="Optional">
         <span id="gziplevel_csharp">
 <a href="#gziplevel_csharp" style="color: inherit; text-decoration: inherit;">Gzip<wbr>Level</a>
@@ -10928,8 +9732,7 @@ Default `200`.
         <span class="property-type">int</span>
     </dt>
     <dd>{{% md %}}What level of GZIP encoding to have when dumping logs (default 0, no compression).
-{{% /md %}}</dd>
-    <dt class="property-optional"
+{{% /md %}}</dd><dt class="property-optional"
             title="Optional">
         <span id="messagetype_csharp">
 <a href="#messagetype_csharp" style="color: inherit; text-decoration: inherit;">Message<wbr>Type</a>
@@ -10938,8 +9741,7 @@ Default `200`.
         <span class="property-type">string</span>
     </dt>
     <dd>{{% md %}}How the message should be formatted. One of: classic (default), loggly, logplex or blank.
-{{% /md %}}</dd>
-    <dt class="property-optional"
+{{% /md %}}</dd><dt class="property-optional"
             title="Optional">
         <span id="path_csharp">
 <a href="#path_csharp" style="color: inherit; text-decoration: inherit;">Path</a>
@@ -10948,8 +9750,7 @@ Default `200`.
         <span class="property-type">string</span>
     </dt>
     <dd>{{% md %}}The path to upload logs to.
-{{% /md %}}</dd>
-    <dt class="property-optional"
+{{% /md %}}</dd><dt class="property-optional"
             title="Optional">
         <span id="period_csharp">
 <a href="#period_csharp" style="color: inherit; text-decoration: inherit;">Period</a>
@@ -10958,8 +9759,7 @@ Default `200`.
         <span class="property-type">int</span>
     </dt>
     <dd>{{% md %}}How frequently log files are finalized so they can be available for reading (in seconds, default 3600).
-{{% /md %}}</dd>
-    <dt class="property-optional"
+{{% /md %}}</dd><dt class="property-optional"
             title="Optional">
         <span id="publickey_csharp">
 <a href="#publickey_csharp" style="color: inherit; text-decoration: inherit;">Public<wbr>Key</a>
@@ -10968,8 +9768,7 @@ Default `200`.
         <span class="property-type">string</span>
     </dt>
     <dd>{{% md %}}The PGP public key that Fastly will use to encrypt your log files before writing them to disk.
-{{% /md %}}</dd>
-    <dt class="property-optional"
+{{% /md %}}</dd><dt class="property-optional"
             title="Optional">
         <span id="timestampformat_csharp">
 <a href="#timestampformat_csharp" style="color: inherit; text-decoration: inherit;">Timestamp<wbr>Format</a>
@@ -10978,14 +9777,11 @@ Default `200`.
         <span class="property-type">string</span>
     </dt>
     <dd>{{% md %}}The strftime specified timestamp formatting (default `%Y-%m-%dT%H:%M:%S.000`).
-{{% /md %}}</dd>
-</dl>
+{{% /md %}}</dd></dl>
 {{% /choosable %}}
 
 {{% choosable language go %}}
-<dl class="resources-properties">
-
-    <dt class="property-required"
+<dl class="resources-properties"><dt class="property-required"
             title="Required">
         <span id="accesskey_go">
 <a href="#accesskey_go" style="color: inherit; text-decoration: inherit;">Access<wbr>Key</a>
@@ -10994,8 +9790,7 @@ Default `200`.
         <span class="property-type">string</span>
     </dt>
     <dd>{{% md %}}The AWS access key to be used to write to the stream.
-{{% /md %}}</dd>
-    <dt class="property-required"
+{{% /md %}}</dd><dt class="property-required"
             title="Required">
         <span id="bucketname_go">
 <a href="#bucketname_go" style="color: inherit; text-decoration: inherit;">Bucket<wbr>Name</a>
@@ -11004,8 +9799,7 @@ Default `200`.
         <span class="property-type">string</span>
     </dt>
     <dd>{{% md %}}The name of your Cloud Files container.
-{{% /md %}}</dd>
-    <dt class="property-required"
+{{% /md %}}</dd><dt class="property-required"
             title="Required">
         <span id="name_go">
 <a href="#name_go" style="color: inherit; text-decoration: inherit;">Name</a>
@@ -11014,8 +9808,7 @@ Default `200`.
         <span class="property-type">string</span>
     </dt>
     <dd>{{% md %}}The unique name of the Kinesis logging endpoint.
-{{% /md %}}</dd>
-    <dt class="property-required"
+{{% /md %}}</dd><dt class="property-required"
             title="Required">
         <span id="url_go">
 <a href="#url_go" style="color: inherit; text-decoration: inherit;">Url</a>
@@ -11024,8 +9817,7 @@ Default `200`.
         <span class="property-type">string</span>
     </dt>
     <dd>{{% md %}}Your OpenStack auth url.
-{{% /md %}}</dd>
-    <dt class="property-required"
+{{% /md %}}</dd><dt class="property-required"
             title="Required">
         <span id="user_go">
 <a href="#user_go" style="color: inherit; text-decoration: inherit;">User</a>
@@ -11034,8 +9826,7 @@ Default `200`.
         <span class="property-type">string</span>
     </dt>
     <dd>{{% md %}}The username for your Cloud Files account.
-{{% /md %}}</dd>
-    <dt class="property-optional"
+{{% /md %}}</dd><dt class="property-optional"
             title="Optional">
         <span id="gziplevel_go">
 <a href="#gziplevel_go" style="color: inherit; text-decoration: inherit;">Gzip<wbr>Level</a>
@@ -11044,8 +9835,7 @@ Default `200`.
         <span class="property-type">int</span>
     </dt>
     <dd>{{% md %}}What level of GZIP encoding to have when dumping logs (default 0, no compression).
-{{% /md %}}</dd>
-    <dt class="property-optional"
+{{% /md %}}</dd><dt class="property-optional"
             title="Optional">
         <span id="messagetype_go">
 <a href="#messagetype_go" style="color: inherit; text-decoration: inherit;">Message<wbr>Type</a>
@@ -11054,8 +9844,7 @@ Default `200`.
         <span class="property-type">string</span>
     </dt>
     <dd>{{% md %}}How the message should be formatted. One of: classic (default), loggly, logplex or blank.
-{{% /md %}}</dd>
-    <dt class="property-optional"
+{{% /md %}}</dd><dt class="property-optional"
             title="Optional">
         <span id="path_go">
 <a href="#path_go" style="color: inherit; text-decoration: inherit;">Path</a>
@@ -11064,8 +9853,7 @@ Default `200`.
         <span class="property-type">string</span>
     </dt>
     <dd>{{% md %}}The path to upload logs to.
-{{% /md %}}</dd>
-    <dt class="property-optional"
+{{% /md %}}</dd><dt class="property-optional"
             title="Optional">
         <span id="period_go">
 <a href="#period_go" style="color: inherit; text-decoration: inherit;">Period</a>
@@ -11074,8 +9862,7 @@ Default `200`.
         <span class="property-type">int</span>
     </dt>
     <dd>{{% md %}}How frequently log files are finalized so they can be available for reading (in seconds, default 3600).
-{{% /md %}}</dd>
-    <dt class="property-optional"
+{{% /md %}}</dd><dt class="property-optional"
             title="Optional">
         <span id="publickey_go">
 <a href="#publickey_go" style="color: inherit; text-decoration: inherit;">Public<wbr>Key</a>
@@ -11084,8 +9871,7 @@ Default `200`.
         <span class="property-type">string</span>
     </dt>
     <dd>{{% md %}}The PGP public key that Fastly will use to encrypt your log files before writing them to disk.
-{{% /md %}}</dd>
-    <dt class="property-optional"
+{{% /md %}}</dd><dt class="property-optional"
             title="Optional">
         <span id="timestampformat_go">
 <a href="#timestampformat_go" style="color: inherit; text-decoration: inherit;">Timestamp<wbr>Format</a>
@@ -11094,14 +9880,11 @@ Default `200`.
         <span class="property-type">string</span>
     </dt>
     <dd>{{% md %}}The strftime specified timestamp formatting (default `%Y-%m-%dT%H:%M:%S.000`).
-{{% /md %}}</dd>
-</dl>
+{{% /md %}}</dd></dl>
 {{% /choosable %}}
 
 {{% choosable language nodejs %}}
-<dl class="resources-properties">
-
-    <dt class="property-required"
+<dl class="resources-properties"><dt class="property-required"
             title="Required">
         <span id="accesskey_nodejs">
 <a href="#accesskey_nodejs" style="color: inherit; text-decoration: inherit;">access<wbr>Key</a>
@@ -11110,8 +9893,7 @@ Default `200`.
         <span class="property-type">string</span>
     </dt>
     <dd>{{% md %}}The AWS access key to be used to write to the stream.
-{{% /md %}}</dd>
-    <dt class="property-required"
+{{% /md %}}</dd><dt class="property-required"
             title="Required">
         <span id="bucketname_nodejs">
 <a href="#bucketname_nodejs" style="color: inherit; text-decoration: inherit;">bucket<wbr>Name</a>
@@ -11120,8 +9902,7 @@ Default `200`.
         <span class="property-type">string</span>
     </dt>
     <dd>{{% md %}}The name of your Cloud Files container.
-{{% /md %}}</dd>
-    <dt class="property-required"
+{{% /md %}}</dd><dt class="property-required"
             title="Required">
         <span id="name_nodejs">
 <a href="#name_nodejs" style="color: inherit; text-decoration: inherit;">name</a>
@@ -11130,8 +9911,7 @@ Default `200`.
         <span class="property-type">string</span>
     </dt>
     <dd>{{% md %}}The unique name of the Kinesis logging endpoint.
-{{% /md %}}</dd>
-    <dt class="property-required"
+{{% /md %}}</dd><dt class="property-required"
             title="Required">
         <span id="url_nodejs">
 <a href="#url_nodejs" style="color: inherit; text-decoration: inherit;">url</a>
@@ -11140,8 +9920,7 @@ Default `200`.
         <span class="property-type">string</span>
     </dt>
     <dd>{{% md %}}Your OpenStack auth url.
-{{% /md %}}</dd>
-    <dt class="property-required"
+{{% /md %}}</dd><dt class="property-required"
             title="Required">
         <span id="user_nodejs">
 <a href="#user_nodejs" style="color: inherit; text-decoration: inherit;">user</a>
@@ -11150,8 +9929,7 @@ Default `200`.
         <span class="property-type">string</span>
     </dt>
     <dd>{{% md %}}The username for your Cloud Files account.
-{{% /md %}}</dd>
-    <dt class="property-optional"
+{{% /md %}}</dd><dt class="property-optional"
             title="Optional">
         <span id="gziplevel_nodejs">
 <a href="#gziplevel_nodejs" style="color: inherit; text-decoration: inherit;">gzip<wbr>Level</a>
@@ -11160,8 +9938,7 @@ Default `200`.
         <span class="property-type">number</span>
     </dt>
     <dd>{{% md %}}What level of GZIP encoding to have when dumping logs (default 0, no compression).
-{{% /md %}}</dd>
-    <dt class="property-optional"
+{{% /md %}}</dd><dt class="property-optional"
             title="Optional">
         <span id="messagetype_nodejs">
 <a href="#messagetype_nodejs" style="color: inherit; text-decoration: inherit;">message<wbr>Type</a>
@@ -11170,8 +9947,7 @@ Default `200`.
         <span class="property-type">string</span>
     </dt>
     <dd>{{% md %}}How the message should be formatted. One of: classic (default), loggly, logplex or blank.
-{{% /md %}}</dd>
-    <dt class="property-optional"
+{{% /md %}}</dd><dt class="property-optional"
             title="Optional">
         <span id="path_nodejs">
 <a href="#path_nodejs" style="color: inherit; text-decoration: inherit;">path</a>
@@ -11180,8 +9956,7 @@ Default `200`.
         <span class="property-type">string</span>
     </dt>
     <dd>{{% md %}}The path to upload logs to.
-{{% /md %}}</dd>
-    <dt class="property-optional"
+{{% /md %}}</dd><dt class="property-optional"
             title="Optional">
         <span id="period_nodejs">
 <a href="#period_nodejs" style="color: inherit; text-decoration: inherit;">period</a>
@@ -11190,8 +9965,7 @@ Default `200`.
         <span class="property-type">number</span>
     </dt>
     <dd>{{% md %}}How frequently log files are finalized so they can be available for reading (in seconds, default 3600).
-{{% /md %}}</dd>
-    <dt class="property-optional"
+{{% /md %}}</dd><dt class="property-optional"
             title="Optional">
         <span id="publickey_nodejs">
 <a href="#publickey_nodejs" style="color: inherit; text-decoration: inherit;">public<wbr>Key</a>
@@ -11200,8 +9974,7 @@ Default `200`.
         <span class="property-type">string</span>
     </dt>
     <dd>{{% md %}}The PGP public key that Fastly will use to encrypt your log files before writing them to disk.
-{{% /md %}}</dd>
-    <dt class="property-optional"
+{{% /md %}}</dd><dt class="property-optional"
             title="Optional">
         <span id="timestampformat_nodejs">
 <a href="#timestampformat_nodejs" style="color: inherit; text-decoration: inherit;">timestamp<wbr>Format</a>
@@ -11210,14 +9983,11 @@ Default `200`.
         <span class="property-type">string</span>
     </dt>
     <dd>{{% md %}}The strftime specified timestamp formatting (default `%Y-%m-%dT%H:%M:%S.000`).
-{{% /md %}}</dd>
-</dl>
+{{% /md %}}</dd></dl>
 {{% /choosable %}}
 
 {{% choosable language python %}}
-<dl class="resources-properties">
-
-    <dt class="property-required"
+<dl class="resources-properties"><dt class="property-required"
             title="Required">
         <span id="access_key_python">
 <a href="#access_key_python" style="color: inherit; text-decoration: inherit;">access_<wbr>key</a>
@@ -11226,8 +9996,7 @@ Default `200`.
         <span class="property-type">str</span>
     </dt>
     <dd>{{% md %}}The AWS access key to be used to write to the stream.
-{{% /md %}}</dd>
-    <dt class="property-required"
+{{% /md %}}</dd><dt class="property-required"
             title="Required">
         <span id="bucket_name_python">
 <a href="#bucket_name_python" style="color: inherit; text-decoration: inherit;">bucket_<wbr>name</a>
@@ -11236,8 +10005,7 @@ Default `200`.
         <span class="property-type">str</span>
     </dt>
     <dd>{{% md %}}The name of your Cloud Files container.
-{{% /md %}}</dd>
-    <dt class="property-required"
+{{% /md %}}</dd><dt class="property-required"
             title="Required">
         <span id="name_python">
 <a href="#name_python" style="color: inherit; text-decoration: inherit;">name</a>
@@ -11246,8 +10014,7 @@ Default `200`.
         <span class="property-type">str</span>
     </dt>
     <dd>{{% md %}}The unique name of the Kinesis logging endpoint.
-{{% /md %}}</dd>
-    <dt class="property-required"
+{{% /md %}}</dd><dt class="property-required"
             title="Required">
         <span id="url_python">
 <a href="#url_python" style="color: inherit; text-decoration: inherit;">url</a>
@@ -11256,8 +10023,7 @@ Default `200`.
         <span class="property-type">str</span>
     </dt>
     <dd>{{% md %}}Your OpenStack auth url.
-{{% /md %}}</dd>
-    <dt class="property-required"
+{{% /md %}}</dd><dt class="property-required"
             title="Required">
         <span id="user_python">
 <a href="#user_python" style="color: inherit; text-decoration: inherit;">user</a>
@@ -11266,8 +10032,7 @@ Default `200`.
         <span class="property-type">str</span>
     </dt>
     <dd>{{% md %}}The username for your Cloud Files account.
-{{% /md %}}</dd>
-    <dt class="property-optional"
+{{% /md %}}</dd><dt class="property-optional"
             title="Optional">
         <span id="gzip_level_python">
 <a href="#gzip_level_python" style="color: inherit; text-decoration: inherit;">gzip_<wbr>level</a>
@@ -11276,8 +10041,7 @@ Default `200`.
         <span class="property-type">int</span>
     </dt>
     <dd>{{% md %}}What level of GZIP encoding to have when dumping logs (default 0, no compression).
-{{% /md %}}</dd>
-    <dt class="property-optional"
+{{% /md %}}</dd><dt class="property-optional"
             title="Optional">
         <span id="message_type_python">
 <a href="#message_type_python" style="color: inherit; text-decoration: inherit;">message_<wbr>type</a>
@@ -11286,8 +10050,7 @@ Default `200`.
         <span class="property-type">str</span>
     </dt>
     <dd>{{% md %}}How the message should be formatted. One of: classic (default), loggly, logplex or blank.
-{{% /md %}}</dd>
-    <dt class="property-optional"
+{{% /md %}}</dd><dt class="property-optional"
             title="Optional">
         <span id="path_python">
 <a href="#path_python" style="color: inherit; text-decoration: inherit;">path</a>
@@ -11296,8 +10059,7 @@ Default `200`.
         <span class="property-type">str</span>
     </dt>
     <dd>{{% md %}}The path to upload logs to.
-{{% /md %}}</dd>
-    <dt class="property-optional"
+{{% /md %}}</dd><dt class="property-optional"
             title="Optional">
         <span id="period_python">
 <a href="#period_python" style="color: inherit; text-decoration: inherit;">period</a>
@@ -11306,8 +10068,7 @@ Default `200`.
         <span class="property-type">int</span>
     </dt>
     <dd>{{% md %}}How frequently log files are finalized so they can be available for reading (in seconds, default 3600).
-{{% /md %}}</dd>
-    <dt class="property-optional"
+{{% /md %}}</dd><dt class="property-optional"
             title="Optional">
         <span id="public_key_python">
 <a href="#public_key_python" style="color: inherit; text-decoration: inherit;">public_<wbr>key</a>
@@ -11316,8 +10077,7 @@ Default `200`.
         <span class="property-type">str</span>
     </dt>
     <dd>{{% md %}}The PGP public key that Fastly will use to encrypt your log files before writing them to disk.
-{{% /md %}}</dd>
-    <dt class="property-optional"
+{{% /md %}}</dd><dt class="property-optional"
             title="Optional">
         <span id="timestamp_format_python">
 <a href="#timestamp_format_python" style="color: inherit; text-decoration: inherit;">timestamp_<wbr>format</a>
@@ -11326,16 +10086,13 @@ Default `200`.
         <span class="property-type">str</span>
     </dt>
     <dd>{{% md %}}The strftime specified timestamp formatting (default `%Y-%m-%dT%H:%M:%S.000`).
-{{% /md %}}</dd>
-</dl>
+{{% /md %}}</dd></dl>
 {{% /choosable %}}
 
 <h4 id="servicecomputeloggingscalyr">Service<wbr>Compute<wbr>Logging<wbr>Scalyr</h4>
 
 {{% choosable language csharp %}}
-<dl class="resources-properties">
-
-    <dt class="property-required"
+<dl class="resources-properties"><dt class="property-required"
             title="Required">
         <span id="name_csharp">
 <a href="#name_csharp" style="color: inherit; text-decoration: inherit;">Name</a>
@@ -11344,8 +10101,7 @@ Default `200`.
         <span class="property-type">string</span>
     </dt>
     <dd>{{% md %}}The unique name of the Kinesis logging endpoint.
-{{% /md %}}</dd>
-    <dt class="property-required"
+{{% /md %}}</dd><dt class="property-required"
             title="Required">
         <span id="token_csharp">
 <a href="#token_csharp" style="color: inherit; text-decoration: inherit;">Token</a>
@@ -11354,8 +10110,7 @@ Default `200`.
         <span class="property-type">string</span>
     </dt>
     <dd>{{% md %}}The data authentication token associated with this endpoint.
-{{% /md %}}</dd>
-    <dt class="property-optional"
+{{% /md %}}</dd><dt class="property-optional"
             title="Optional">
         <span id="region_csharp">
 <a href="#region_csharp" style="color: inherit; text-decoration: inherit;">Region</a>
@@ -11364,14 +10119,11 @@ Default `200`.
         <span class="property-type">string</span>
     </dt>
     <dd>{{% md %}}The AWS region the stream resides in. (Default: `us-east-1`).
-{{% /md %}}</dd>
-</dl>
+{{% /md %}}</dd></dl>
 {{% /choosable %}}
 
 {{% choosable language go %}}
-<dl class="resources-properties">
-
-    <dt class="property-required"
+<dl class="resources-properties"><dt class="property-required"
             title="Required">
         <span id="name_go">
 <a href="#name_go" style="color: inherit; text-decoration: inherit;">Name</a>
@@ -11380,8 +10132,7 @@ Default `200`.
         <span class="property-type">string</span>
     </dt>
     <dd>{{% md %}}The unique name of the Kinesis logging endpoint.
-{{% /md %}}</dd>
-    <dt class="property-required"
+{{% /md %}}</dd><dt class="property-required"
             title="Required">
         <span id="token_go">
 <a href="#token_go" style="color: inherit; text-decoration: inherit;">Token</a>
@@ -11390,8 +10141,7 @@ Default `200`.
         <span class="property-type">string</span>
     </dt>
     <dd>{{% md %}}The data authentication token associated with this endpoint.
-{{% /md %}}</dd>
-    <dt class="property-optional"
+{{% /md %}}</dd><dt class="property-optional"
             title="Optional">
         <span id="region_go">
 <a href="#region_go" style="color: inherit; text-decoration: inherit;">Region</a>
@@ -11400,14 +10150,11 @@ Default `200`.
         <span class="property-type">string</span>
     </dt>
     <dd>{{% md %}}The AWS region the stream resides in. (Default: `us-east-1`).
-{{% /md %}}</dd>
-</dl>
+{{% /md %}}</dd></dl>
 {{% /choosable %}}
 
 {{% choosable language nodejs %}}
-<dl class="resources-properties">
-
-    <dt class="property-required"
+<dl class="resources-properties"><dt class="property-required"
             title="Required">
         <span id="name_nodejs">
 <a href="#name_nodejs" style="color: inherit; text-decoration: inherit;">name</a>
@@ -11416,8 +10163,7 @@ Default `200`.
         <span class="property-type">string</span>
     </dt>
     <dd>{{% md %}}The unique name of the Kinesis logging endpoint.
-{{% /md %}}</dd>
-    <dt class="property-required"
+{{% /md %}}</dd><dt class="property-required"
             title="Required">
         <span id="token_nodejs">
 <a href="#token_nodejs" style="color: inherit; text-decoration: inherit;">token</a>
@@ -11426,8 +10172,7 @@ Default `200`.
         <span class="property-type">string</span>
     </dt>
     <dd>{{% md %}}The data authentication token associated with this endpoint.
-{{% /md %}}</dd>
-    <dt class="property-optional"
+{{% /md %}}</dd><dt class="property-optional"
             title="Optional">
         <span id="region_nodejs">
 <a href="#region_nodejs" style="color: inherit; text-decoration: inherit;">region</a>
@@ -11436,14 +10181,11 @@ Default `200`.
         <span class="property-type">string</span>
     </dt>
     <dd>{{% md %}}The AWS region the stream resides in. (Default: `us-east-1`).
-{{% /md %}}</dd>
-</dl>
+{{% /md %}}</dd></dl>
 {{% /choosable %}}
 
 {{% choosable language python %}}
-<dl class="resources-properties">
-
-    <dt class="property-required"
+<dl class="resources-properties"><dt class="property-required"
             title="Required">
         <span id="name_python">
 <a href="#name_python" style="color: inherit; text-decoration: inherit;">name</a>
@@ -11452,8 +10194,7 @@ Default `200`.
         <span class="property-type">str</span>
     </dt>
     <dd>{{% md %}}The unique name of the Kinesis logging endpoint.
-{{% /md %}}</dd>
-    <dt class="property-required"
+{{% /md %}}</dd><dt class="property-required"
             title="Required">
         <span id="token_python">
 <a href="#token_python" style="color: inherit; text-decoration: inherit;">token</a>
@@ -11462,8 +10203,7 @@ Default `200`.
         <span class="property-type">str</span>
     </dt>
     <dd>{{% md %}}The data authentication token associated with this endpoint.
-{{% /md %}}</dd>
-    <dt class="property-optional"
+{{% /md %}}</dd><dt class="property-optional"
             title="Optional">
         <span id="region_python">
 <a href="#region_python" style="color: inherit; text-decoration: inherit;">region</a>
@@ -11472,16 +10212,13 @@ Default `200`.
         <span class="property-type">str</span>
     </dt>
     <dd>{{% md %}}The AWS region the stream resides in. (Default: `us-east-1`).
-{{% /md %}}</dd>
-</dl>
+{{% /md %}}</dd></dl>
 {{% /choosable %}}
 
 <h4 id="servicecomputeloggingsftp">Service<wbr>Compute<wbr>Logging<wbr>Sftp</h4>
 
 {{% choosable language csharp %}}
-<dl class="resources-properties">
-
-    <dt class="property-required"
+<dl class="resources-properties"><dt class="property-required"
             title="Required">
         <span id="address_csharp">
 <a href="#address_csharp" style="color: inherit; text-decoration: inherit;">Address</a>
@@ -11490,8 +10227,7 @@ Default `200`.
         <span class="property-type">string</span>
     </dt>
     <dd>{{% md %}}The SFTP address to stream logs to.
-{{% /md %}}</dd>
-    <dt class="property-required"
+{{% /md %}}</dd><dt class="property-required"
             title="Required">
         <span id="name_csharp">
 <a href="#name_csharp" style="color: inherit; text-decoration: inherit;">Name</a>
@@ -11500,8 +10236,7 @@ Default `200`.
         <span class="property-type">string</span>
     </dt>
     <dd>{{% md %}}The unique name of the Kinesis logging endpoint.
-{{% /md %}}</dd>
-    <dt class="property-required"
+{{% /md %}}</dd><dt class="property-required"
             title="Required">
         <span id="path_csharp">
 <a href="#path_csharp" style="color: inherit; text-decoration: inherit;">Path</a>
@@ -11510,8 +10245,7 @@ Default `200`.
         <span class="property-type">string</span>
     </dt>
     <dd>{{% md %}}The path to upload logs to.
-{{% /md %}}</dd>
-    <dt class="property-required"
+{{% /md %}}</dd><dt class="property-required"
             title="Required">
         <span id="sshknownhosts_csharp">
 <a href="#sshknownhosts_csharp" style="color: inherit; text-decoration: inherit;">Ssh<wbr>Known<wbr>Hosts</a>
@@ -11520,8 +10254,7 @@ Default `200`.
         <span class="property-type">string</span>
     </dt>
     <dd>{{% md %}}A list of host keys for all hosts we can connect to over SFTP.
-{{% /md %}}</dd>
-    <dt class="property-required"
+{{% /md %}}</dd><dt class="property-required"
             title="Required">
         <span id="user_csharp">
 <a href="#user_csharp" style="color: inherit; text-decoration: inherit;">User</a>
@@ -11530,8 +10263,7 @@ Default `200`.
         <span class="property-type">string</span>
     </dt>
     <dd>{{% md %}}The username for your Cloud Files account.
-{{% /md %}}</dd>
-    <dt class="property-optional"
+{{% /md %}}</dd><dt class="property-optional"
             title="Optional">
         <span id="gziplevel_csharp">
 <a href="#gziplevel_csharp" style="color: inherit; text-decoration: inherit;">Gzip<wbr>Level</a>
@@ -11540,8 +10272,7 @@ Default `200`.
         <span class="property-type">int</span>
     </dt>
     <dd>{{% md %}}What level of GZIP encoding to have when dumping logs (default 0, no compression).
-{{% /md %}}</dd>
-    <dt class="property-optional"
+{{% /md %}}</dd><dt class="property-optional"
             title="Optional">
         <span id="messagetype_csharp">
 <a href="#messagetype_csharp" style="color: inherit; text-decoration: inherit;">Message<wbr>Type</a>
@@ -11550,8 +10281,7 @@ Default `200`.
         <span class="property-type">string</span>
     </dt>
     <dd>{{% md %}}How the message should be formatted. One of: classic (default), loggly, logplex or blank.
-{{% /md %}}</dd>
-    <dt class="property-optional"
+{{% /md %}}</dd><dt class="property-optional"
             title="Optional">
         <span id="password_csharp">
 <a href="#password_csharp" style="color: inherit; text-decoration: inherit;">Password</a>
@@ -11560,8 +10290,7 @@ Default `200`.
         <span class="property-type">string</span>
     </dt>
     <dd>{{% md %}}The password for the server. If both `password` and `secret_key` are passed, `secret_key` will be preferred.
-{{% /md %}}</dd>
-    <dt class="property-optional"
+{{% /md %}}</dd><dt class="property-optional"
             title="Optional">
         <span id="period_csharp">
 <a href="#period_csharp" style="color: inherit; text-decoration: inherit;">Period</a>
@@ -11570,8 +10299,7 @@ Default `200`.
         <span class="property-type">int</span>
     </dt>
     <dd>{{% md %}}How frequently log files are finalized so they can be available for reading (in seconds, default 3600).
-{{% /md %}}</dd>
-    <dt class="property-optional"
+{{% /md %}}</dd><dt class="property-optional"
             title="Optional">
         <span id="port_csharp">
 <a href="#port_csharp" style="color: inherit; text-decoration: inherit;">Port</a>
@@ -11580,8 +10308,7 @@ Default `200`.
         <span class="property-type">int</span>
     </dt>
     <dd>{{% md %}}The port the SFTP service listens on. (Default: `22`).
-{{% /md %}}</dd>
-    <dt class="property-optional"
+{{% /md %}}</dd><dt class="property-optional"
             title="Optional">
         <span id="publickey_csharp">
 <a href="#publickey_csharp" style="color: inherit; text-decoration: inherit;">Public<wbr>Key</a>
@@ -11590,8 +10317,7 @@ Default `200`.
         <span class="property-type">string</span>
     </dt>
     <dd>{{% md %}}The PGP public key that Fastly will use to encrypt your log files before writing them to disk.
-{{% /md %}}</dd>
-    <dt class="property-optional"
+{{% /md %}}</dd><dt class="property-optional"
             title="Optional">
         <span id="secretkey_csharp">
 <a href="#secretkey_csharp" style="color: inherit; text-decoration: inherit;">Secret<wbr>Key</a>
@@ -11600,8 +10326,7 @@ Default `200`.
         <span class="property-type">string</span>
     </dt>
     <dd>{{% md %}}The AWS secret access key to authenticate with.
-{{% /md %}}</dd>
-    <dt class="property-optional"
+{{% /md %}}</dd><dt class="property-optional"
             title="Optional">
         <span id="timestampformat_csharp">
 <a href="#timestampformat_csharp" style="color: inherit; text-decoration: inherit;">Timestamp<wbr>Format</a>
@@ -11610,14 +10335,11 @@ Default `200`.
         <span class="property-type">string</span>
     </dt>
     <dd>{{% md %}}The strftime specified timestamp formatting (default `%Y-%m-%dT%H:%M:%S.000`).
-{{% /md %}}</dd>
-</dl>
+{{% /md %}}</dd></dl>
 {{% /choosable %}}
 
 {{% choosable language go %}}
-<dl class="resources-properties">
-
-    <dt class="property-required"
+<dl class="resources-properties"><dt class="property-required"
             title="Required">
         <span id="address_go">
 <a href="#address_go" style="color: inherit; text-decoration: inherit;">Address</a>
@@ -11626,8 +10348,7 @@ Default `200`.
         <span class="property-type">string</span>
     </dt>
     <dd>{{% md %}}The SFTP address to stream logs to.
-{{% /md %}}</dd>
-    <dt class="property-required"
+{{% /md %}}</dd><dt class="property-required"
             title="Required">
         <span id="name_go">
 <a href="#name_go" style="color: inherit; text-decoration: inherit;">Name</a>
@@ -11636,8 +10357,7 @@ Default `200`.
         <span class="property-type">string</span>
     </dt>
     <dd>{{% md %}}The unique name of the Kinesis logging endpoint.
-{{% /md %}}</dd>
-    <dt class="property-required"
+{{% /md %}}</dd><dt class="property-required"
             title="Required">
         <span id="path_go">
 <a href="#path_go" style="color: inherit; text-decoration: inherit;">Path</a>
@@ -11646,8 +10366,7 @@ Default `200`.
         <span class="property-type">string</span>
     </dt>
     <dd>{{% md %}}The path to upload logs to.
-{{% /md %}}</dd>
-    <dt class="property-required"
+{{% /md %}}</dd><dt class="property-required"
             title="Required">
         <span id="sshknownhosts_go">
 <a href="#sshknownhosts_go" style="color: inherit; text-decoration: inherit;">Ssh<wbr>Known<wbr>Hosts</a>
@@ -11656,8 +10375,7 @@ Default `200`.
         <span class="property-type">string</span>
     </dt>
     <dd>{{% md %}}A list of host keys for all hosts we can connect to over SFTP.
-{{% /md %}}</dd>
-    <dt class="property-required"
+{{% /md %}}</dd><dt class="property-required"
             title="Required">
         <span id="user_go">
 <a href="#user_go" style="color: inherit; text-decoration: inherit;">User</a>
@@ -11666,8 +10384,7 @@ Default `200`.
         <span class="property-type">string</span>
     </dt>
     <dd>{{% md %}}The username for your Cloud Files account.
-{{% /md %}}</dd>
-    <dt class="property-optional"
+{{% /md %}}</dd><dt class="property-optional"
             title="Optional">
         <span id="gziplevel_go">
 <a href="#gziplevel_go" style="color: inherit; text-decoration: inherit;">Gzip<wbr>Level</a>
@@ -11676,8 +10393,7 @@ Default `200`.
         <span class="property-type">int</span>
     </dt>
     <dd>{{% md %}}What level of GZIP encoding to have when dumping logs (default 0, no compression).
-{{% /md %}}</dd>
-    <dt class="property-optional"
+{{% /md %}}</dd><dt class="property-optional"
             title="Optional">
         <span id="messagetype_go">
 <a href="#messagetype_go" style="color: inherit; text-decoration: inherit;">Message<wbr>Type</a>
@@ -11686,8 +10402,7 @@ Default `200`.
         <span class="property-type">string</span>
     </dt>
     <dd>{{% md %}}How the message should be formatted. One of: classic (default), loggly, logplex or blank.
-{{% /md %}}</dd>
-    <dt class="property-optional"
+{{% /md %}}</dd><dt class="property-optional"
             title="Optional">
         <span id="password_go">
 <a href="#password_go" style="color: inherit; text-decoration: inherit;">Password</a>
@@ -11696,8 +10411,7 @@ Default `200`.
         <span class="property-type">string</span>
     </dt>
     <dd>{{% md %}}The password for the server. If both `password` and `secret_key` are passed, `secret_key` will be preferred.
-{{% /md %}}</dd>
-    <dt class="property-optional"
+{{% /md %}}</dd><dt class="property-optional"
             title="Optional">
         <span id="period_go">
 <a href="#period_go" style="color: inherit; text-decoration: inherit;">Period</a>
@@ -11706,8 +10420,7 @@ Default `200`.
         <span class="property-type">int</span>
     </dt>
     <dd>{{% md %}}How frequently log files are finalized so they can be available for reading (in seconds, default 3600).
-{{% /md %}}</dd>
-    <dt class="property-optional"
+{{% /md %}}</dd><dt class="property-optional"
             title="Optional">
         <span id="port_go">
 <a href="#port_go" style="color: inherit; text-decoration: inherit;">Port</a>
@@ -11716,8 +10429,7 @@ Default `200`.
         <span class="property-type">int</span>
     </dt>
     <dd>{{% md %}}The port the SFTP service listens on. (Default: `22`).
-{{% /md %}}</dd>
-    <dt class="property-optional"
+{{% /md %}}</dd><dt class="property-optional"
             title="Optional">
         <span id="publickey_go">
 <a href="#publickey_go" style="color: inherit; text-decoration: inherit;">Public<wbr>Key</a>
@@ -11726,8 +10438,7 @@ Default `200`.
         <span class="property-type">string</span>
     </dt>
     <dd>{{% md %}}The PGP public key that Fastly will use to encrypt your log files before writing them to disk.
-{{% /md %}}</dd>
-    <dt class="property-optional"
+{{% /md %}}</dd><dt class="property-optional"
             title="Optional">
         <span id="secretkey_go">
 <a href="#secretkey_go" style="color: inherit; text-decoration: inherit;">Secret<wbr>Key</a>
@@ -11736,8 +10447,7 @@ Default `200`.
         <span class="property-type">string</span>
     </dt>
     <dd>{{% md %}}The AWS secret access key to authenticate with.
-{{% /md %}}</dd>
-    <dt class="property-optional"
+{{% /md %}}</dd><dt class="property-optional"
             title="Optional">
         <span id="timestampformat_go">
 <a href="#timestampformat_go" style="color: inherit; text-decoration: inherit;">Timestamp<wbr>Format</a>
@@ -11746,14 +10456,11 @@ Default `200`.
         <span class="property-type">string</span>
     </dt>
     <dd>{{% md %}}The strftime specified timestamp formatting (default `%Y-%m-%dT%H:%M:%S.000`).
-{{% /md %}}</dd>
-</dl>
+{{% /md %}}</dd></dl>
 {{% /choosable %}}
 
 {{% choosable language nodejs %}}
-<dl class="resources-properties">
-
-    <dt class="property-required"
+<dl class="resources-properties"><dt class="property-required"
             title="Required">
         <span id="address_nodejs">
 <a href="#address_nodejs" style="color: inherit; text-decoration: inherit;">address</a>
@@ -11762,8 +10469,7 @@ Default `200`.
         <span class="property-type">string</span>
     </dt>
     <dd>{{% md %}}The SFTP address to stream logs to.
-{{% /md %}}</dd>
-    <dt class="property-required"
+{{% /md %}}</dd><dt class="property-required"
             title="Required">
         <span id="name_nodejs">
 <a href="#name_nodejs" style="color: inherit; text-decoration: inherit;">name</a>
@@ -11772,8 +10478,7 @@ Default `200`.
         <span class="property-type">string</span>
     </dt>
     <dd>{{% md %}}The unique name of the Kinesis logging endpoint.
-{{% /md %}}</dd>
-    <dt class="property-required"
+{{% /md %}}</dd><dt class="property-required"
             title="Required">
         <span id="path_nodejs">
 <a href="#path_nodejs" style="color: inherit; text-decoration: inherit;">path</a>
@@ -11782,8 +10487,7 @@ Default `200`.
         <span class="property-type">string</span>
     </dt>
     <dd>{{% md %}}The path to upload logs to.
-{{% /md %}}</dd>
-    <dt class="property-required"
+{{% /md %}}</dd><dt class="property-required"
             title="Required">
         <span id="sshknownhosts_nodejs">
 <a href="#sshknownhosts_nodejs" style="color: inherit; text-decoration: inherit;">ssh<wbr>Known<wbr>Hosts</a>
@@ -11792,8 +10496,7 @@ Default `200`.
         <span class="property-type">string</span>
     </dt>
     <dd>{{% md %}}A list of host keys for all hosts we can connect to over SFTP.
-{{% /md %}}</dd>
-    <dt class="property-required"
+{{% /md %}}</dd><dt class="property-required"
             title="Required">
         <span id="user_nodejs">
 <a href="#user_nodejs" style="color: inherit; text-decoration: inherit;">user</a>
@@ -11802,8 +10505,7 @@ Default `200`.
         <span class="property-type">string</span>
     </dt>
     <dd>{{% md %}}The username for your Cloud Files account.
-{{% /md %}}</dd>
-    <dt class="property-optional"
+{{% /md %}}</dd><dt class="property-optional"
             title="Optional">
         <span id="gziplevel_nodejs">
 <a href="#gziplevel_nodejs" style="color: inherit; text-decoration: inherit;">gzip<wbr>Level</a>
@@ -11812,8 +10514,7 @@ Default `200`.
         <span class="property-type">number</span>
     </dt>
     <dd>{{% md %}}What level of GZIP encoding to have when dumping logs (default 0, no compression).
-{{% /md %}}</dd>
-    <dt class="property-optional"
+{{% /md %}}</dd><dt class="property-optional"
             title="Optional">
         <span id="messagetype_nodejs">
 <a href="#messagetype_nodejs" style="color: inherit; text-decoration: inherit;">message<wbr>Type</a>
@@ -11822,8 +10523,7 @@ Default `200`.
         <span class="property-type">string</span>
     </dt>
     <dd>{{% md %}}How the message should be formatted. One of: classic (default), loggly, logplex or blank.
-{{% /md %}}</dd>
-    <dt class="property-optional"
+{{% /md %}}</dd><dt class="property-optional"
             title="Optional">
         <span id="password_nodejs">
 <a href="#password_nodejs" style="color: inherit; text-decoration: inherit;">password</a>
@@ -11832,8 +10532,7 @@ Default `200`.
         <span class="property-type">string</span>
     </dt>
     <dd>{{% md %}}The password for the server. If both `password` and `secret_key` are passed, `secret_key` will be preferred.
-{{% /md %}}</dd>
-    <dt class="property-optional"
+{{% /md %}}</dd><dt class="property-optional"
             title="Optional">
         <span id="period_nodejs">
 <a href="#period_nodejs" style="color: inherit; text-decoration: inherit;">period</a>
@@ -11842,8 +10541,7 @@ Default `200`.
         <span class="property-type">number</span>
     </dt>
     <dd>{{% md %}}How frequently log files are finalized so they can be available for reading (in seconds, default 3600).
-{{% /md %}}</dd>
-    <dt class="property-optional"
+{{% /md %}}</dd><dt class="property-optional"
             title="Optional">
         <span id="port_nodejs">
 <a href="#port_nodejs" style="color: inherit; text-decoration: inherit;">port</a>
@@ -11852,8 +10550,7 @@ Default `200`.
         <span class="property-type">number</span>
     </dt>
     <dd>{{% md %}}The port the SFTP service listens on. (Default: `22`).
-{{% /md %}}</dd>
-    <dt class="property-optional"
+{{% /md %}}</dd><dt class="property-optional"
             title="Optional">
         <span id="publickey_nodejs">
 <a href="#publickey_nodejs" style="color: inherit; text-decoration: inherit;">public<wbr>Key</a>
@@ -11862,8 +10559,7 @@ Default `200`.
         <span class="property-type">string</span>
     </dt>
     <dd>{{% md %}}The PGP public key that Fastly will use to encrypt your log files before writing them to disk.
-{{% /md %}}</dd>
-    <dt class="property-optional"
+{{% /md %}}</dd><dt class="property-optional"
             title="Optional">
         <span id="secretkey_nodejs">
 <a href="#secretkey_nodejs" style="color: inherit; text-decoration: inherit;">secret<wbr>Key</a>
@@ -11872,8 +10568,7 @@ Default `200`.
         <span class="property-type">string</span>
     </dt>
     <dd>{{% md %}}The AWS secret access key to authenticate with.
-{{% /md %}}</dd>
-    <dt class="property-optional"
+{{% /md %}}</dd><dt class="property-optional"
             title="Optional">
         <span id="timestampformat_nodejs">
 <a href="#timestampformat_nodejs" style="color: inherit; text-decoration: inherit;">timestamp<wbr>Format</a>
@@ -11882,14 +10577,11 @@ Default `200`.
         <span class="property-type">string</span>
     </dt>
     <dd>{{% md %}}The strftime specified timestamp formatting (default `%Y-%m-%dT%H:%M:%S.000`).
-{{% /md %}}</dd>
-</dl>
+{{% /md %}}</dd></dl>
 {{% /choosable %}}
 
 {{% choosable language python %}}
-<dl class="resources-properties">
-
-    <dt class="property-required"
+<dl class="resources-properties"><dt class="property-required"
             title="Required">
         <span id="address_python">
 <a href="#address_python" style="color: inherit; text-decoration: inherit;">address</a>
@@ -11898,8 +10590,7 @@ Default `200`.
         <span class="property-type">str</span>
     </dt>
     <dd>{{% md %}}The SFTP address to stream logs to.
-{{% /md %}}</dd>
-    <dt class="property-required"
+{{% /md %}}</dd><dt class="property-required"
             title="Required">
         <span id="name_python">
 <a href="#name_python" style="color: inherit; text-decoration: inherit;">name</a>
@@ -11908,8 +10599,7 @@ Default `200`.
         <span class="property-type">str</span>
     </dt>
     <dd>{{% md %}}The unique name of the Kinesis logging endpoint.
-{{% /md %}}</dd>
-    <dt class="property-required"
+{{% /md %}}</dd><dt class="property-required"
             title="Required">
         <span id="path_python">
 <a href="#path_python" style="color: inherit; text-decoration: inherit;">path</a>
@@ -11918,8 +10608,7 @@ Default `200`.
         <span class="property-type">str</span>
     </dt>
     <dd>{{% md %}}The path to upload logs to.
-{{% /md %}}</dd>
-    <dt class="property-required"
+{{% /md %}}</dd><dt class="property-required"
             title="Required">
         <span id="ssh_known_hosts_python">
 <a href="#ssh_known_hosts_python" style="color: inherit; text-decoration: inherit;">ssh_<wbr>known_<wbr>hosts</a>
@@ -11928,8 +10617,7 @@ Default `200`.
         <span class="property-type">str</span>
     </dt>
     <dd>{{% md %}}A list of host keys for all hosts we can connect to over SFTP.
-{{% /md %}}</dd>
-    <dt class="property-required"
+{{% /md %}}</dd><dt class="property-required"
             title="Required">
         <span id="user_python">
 <a href="#user_python" style="color: inherit; text-decoration: inherit;">user</a>
@@ -11938,8 +10626,7 @@ Default `200`.
         <span class="property-type">str</span>
     </dt>
     <dd>{{% md %}}The username for your Cloud Files account.
-{{% /md %}}</dd>
-    <dt class="property-optional"
+{{% /md %}}</dd><dt class="property-optional"
             title="Optional">
         <span id="gzip_level_python">
 <a href="#gzip_level_python" style="color: inherit; text-decoration: inherit;">gzip_<wbr>level</a>
@@ -11948,8 +10635,7 @@ Default `200`.
         <span class="property-type">int</span>
     </dt>
     <dd>{{% md %}}What level of GZIP encoding to have when dumping logs (default 0, no compression).
-{{% /md %}}</dd>
-    <dt class="property-optional"
+{{% /md %}}</dd><dt class="property-optional"
             title="Optional">
         <span id="message_type_python">
 <a href="#message_type_python" style="color: inherit; text-decoration: inherit;">message_<wbr>type</a>
@@ -11958,8 +10644,7 @@ Default `200`.
         <span class="property-type">str</span>
     </dt>
     <dd>{{% md %}}How the message should be formatted. One of: classic (default), loggly, logplex or blank.
-{{% /md %}}</dd>
-    <dt class="property-optional"
+{{% /md %}}</dd><dt class="property-optional"
             title="Optional">
         <span id="password_python">
 <a href="#password_python" style="color: inherit; text-decoration: inherit;">password</a>
@@ -11968,8 +10653,7 @@ Default `200`.
         <span class="property-type">str</span>
     </dt>
     <dd>{{% md %}}The password for the server. If both `password` and `secret_key` are passed, `secret_key` will be preferred.
-{{% /md %}}</dd>
-    <dt class="property-optional"
+{{% /md %}}</dd><dt class="property-optional"
             title="Optional">
         <span id="period_python">
 <a href="#period_python" style="color: inherit; text-decoration: inherit;">period</a>
@@ -11978,8 +10662,7 @@ Default `200`.
         <span class="property-type">int</span>
     </dt>
     <dd>{{% md %}}How frequently log files are finalized so they can be available for reading (in seconds, default 3600).
-{{% /md %}}</dd>
-    <dt class="property-optional"
+{{% /md %}}</dd><dt class="property-optional"
             title="Optional">
         <span id="port_python">
 <a href="#port_python" style="color: inherit; text-decoration: inherit;">port</a>
@@ -11988,8 +10671,7 @@ Default `200`.
         <span class="property-type">int</span>
     </dt>
     <dd>{{% md %}}The port the SFTP service listens on. (Default: `22`).
-{{% /md %}}</dd>
-    <dt class="property-optional"
+{{% /md %}}</dd><dt class="property-optional"
             title="Optional">
         <span id="public_key_python">
 <a href="#public_key_python" style="color: inherit; text-decoration: inherit;">public_<wbr>key</a>
@@ -11998,8 +10680,7 @@ Default `200`.
         <span class="property-type">str</span>
     </dt>
     <dd>{{% md %}}The PGP public key that Fastly will use to encrypt your log files before writing them to disk.
-{{% /md %}}</dd>
-    <dt class="property-optional"
+{{% /md %}}</dd><dt class="property-optional"
             title="Optional">
         <span id="secret_key_python">
 <a href="#secret_key_python" style="color: inherit; text-decoration: inherit;">secret_<wbr>key</a>
@@ -12008,8 +10689,7 @@ Default `200`.
         <span class="property-type">str</span>
     </dt>
     <dd>{{% md %}}The AWS secret access key to authenticate with.
-{{% /md %}}</dd>
-    <dt class="property-optional"
+{{% /md %}}</dd><dt class="property-optional"
             title="Optional">
         <span id="timestamp_format_python">
 <a href="#timestamp_format_python" style="color: inherit; text-decoration: inherit;">timestamp_<wbr>format</a>
@@ -12018,16 +10698,13 @@ Default `200`.
         <span class="property-type">str</span>
     </dt>
     <dd>{{% md %}}The strftime specified timestamp formatting (default `%Y-%m-%dT%H:%M:%S.000`).
-{{% /md %}}</dd>
-</dl>
+{{% /md %}}</dd></dl>
 {{% /choosable %}}
 
 <h4 id="servicecomputepackage">Service<wbr>Compute<wbr>Package</h4>
 
 {{% choosable language csharp %}}
-<dl class="resources-properties">
-
-    <dt class="property-required"
+<dl class="resources-properties"><dt class="property-required"
             title="Required">
         <span id="filename_csharp">
 <a href="#filename_csharp" style="color: inherit; text-decoration: inherit;">Filename</a>
@@ -12036,8 +10713,7 @@ Default `200`.
         <span class="property-type">string</span>
     </dt>
     <dd>{{% md %}}The path to the Wasm deployment package within your local filesystem.
-{{% /md %}}</dd>
-    <dt class="property-optional"
+{{% /md %}}</dd><dt class="property-optional"
             title="Optional">
         <span id="sourcecodehash_csharp">
 <a href="#sourcecodehash_csharp" style="color: inherit; text-decoration: inherit;">Source<wbr>Code<wbr>Hash</a>
@@ -12045,14 +10721,11 @@ Default `200`.
         <span class="property-indicator"></span>
         <span class="property-type">string</span>
     </dt>
-    <dd>{{% md %}}{{% /md %}}</dd>
-</dl>
+    <dd>{{% md %}}{{% /md %}}</dd></dl>
 {{% /choosable %}}
 
 {{% choosable language go %}}
-<dl class="resources-properties">
-
-    <dt class="property-required"
+<dl class="resources-properties"><dt class="property-required"
             title="Required">
         <span id="filename_go">
 <a href="#filename_go" style="color: inherit; text-decoration: inherit;">Filename</a>
@@ -12061,8 +10734,7 @@ Default `200`.
         <span class="property-type">string</span>
     </dt>
     <dd>{{% md %}}The path to the Wasm deployment package within your local filesystem.
-{{% /md %}}</dd>
-    <dt class="property-optional"
+{{% /md %}}</dd><dt class="property-optional"
             title="Optional">
         <span id="sourcecodehash_go">
 <a href="#sourcecodehash_go" style="color: inherit; text-decoration: inherit;">Source<wbr>Code<wbr>Hash</a>
@@ -12070,14 +10742,11 @@ Default `200`.
         <span class="property-indicator"></span>
         <span class="property-type">string</span>
     </dt>
-    <dd>{{% md %}}{{% /md %}}</dd>
-</dl>
+    <dd>{{% md %}}{{% /md %}}</dd></dl>
 {{% /choosable %}}
 
 {{% choosable language nodejs %}}
-<dl class="resources-properties">
-
-    <dt class="property-required"
+<dl class="resources-properties"><dt class="property-required"
             title="Required">
         <span id="filename_nodejs">
 <a href="#filename_nodejs" style="color: inherit; text-decoration: inherit;">filename</a>
@@ -12086,8 +10755,7 @@ Default `200`.
         <span class="property-type">string</span>
     </dt>
     <dd>{{% md %}}The path to the Wasm deployment package within your local filesystem.
-{{% /md %}}</dd>
-    <dt class="property-optional"
+{{% /md %}}</dd><dt class="property-optional"
             title="Optional">
         <span id="sourcecodehash_nodejs">
 <a href="#sourcecodehash_nodejs" style="color: inherit; text-decoration: inherit;">source<wbr>Code<wbr>Hash</a>
@@ -12095,14 +10763,11 @@ Default `200`.
         <span class="property-indicator"></span>
         <span class="property-type">string</span>
     </dt>
-    <dd>{{% md %}}{{% /md %}}</dd>
-</dl>
+    <dd>{{% md %}}{{% /md %}}</dd></dl>
 {{% /choosable %}}
 
 {{% choosable language python %}}
-<dl class="resources-properties">
-
-    <dt class="property-required"
+<dl class="resources-properties"><dt class="property-required"
             title="Required">
         <span id="filename_python">
 <a href="#filename_python" style="color: inherit; text-decoration: inherit;">filename</a>
@@ -12111,8 +10776,7 @@ Default `200`.
         <span class="property-type">str</span>
     </dt>
     <dd>{{% md %}}The path to the Wasm deployment package within your local filesystem.
-{{% /md %}}</dd>
-    <dt class="property-optional"
+{{% /md %}}</dd><dt class="property-optional"
             title="Optional">
         <span id="source_code_hash_python">
 <a href="#source_code_hash_python" style="color: inherit; text-decoration: inherit;">source_<wbr>code_<wbr>hash</a>
@@ -12120,16 +10784,13 @@ Default `200`.
         <span class="property-indicator"></span>
         <span class="property-type">str</span>
     </dt>
-    <dd>{{% md %}}{{% /md %}}</dd>
-</dl>
+    <dd>{{% md %}}{{% /md %}}</dd></dl>
 {{% /choosable %}}
 
 <h4 id="servicecomputepapertrail">Service<wbr>Compute<wbr>Papertrail</h4>
 
 {{% choosable language csharp %}}
-<dl class="resources-properties">
-
-    <dt class="property-required"
+<dl class="resources-properties"><dt class="property-required"
             title="Required">
         <span id="address_csharp">
 <a href="#address_csharp" style="color: inherit; text-decoration: inherit;">Address</a>
@@ -12138,8 +10799,7 @@ Default `200`.
         <span class="property-type">string</span>
     </dt>
     <dd>{{% md %}}The SFTP address to stream logs to.
-{{% /md %}}</dd>
-    <dt class="property-required"
+{{% /md %}}</dd><dt class="property-required"
             title="Required">
         <span id="name_csharp">
 <a href="#name_csharp" style="color: inherit; text-decoration: inherit;">Name</a>
@@ -12148,8 +10808,7 @@ Default `200`.
         <span class="property-type">string</span>
     </dt>
     <dd>{{% md %}}The unique name of the Kinesis logging endpoint.
-{{% /md %}}</dd>
-    <dt class="property-required"
+{{% /md %}}</dd><dt class="property-required"
             title="Required">
         <span id="port_csharp">
 <a href="#port_csharp" style="color: inherit; text-decoration: inherit;">Port</a>
@@ -12158,14 +10817,11 @@ Default `200`.
         <span class="property-type">int</span>
     </dt>
     <dd>{{% md %}}The port the SFTP service listens on. (Default: `22`).
-{{% /md %}}</dd>
-</dl>
+{{% /md %}}</dd></dl>
 {{% /choosable %}}
 
 {{% choosable language go %}}
-<dl class="resources-properties">
-
-    <dt class="property-required"
+<dl class="resources-properties"><dt class="property-required"
             title="Required">
         <span id="address_go">
 <a href="#address_go" style="color: inherit; text-decoration: inherit;">Address</a>
@@ -12174,8 +10830,7 @@ Default `200`.
         <span class="property-type">string</span>
     </dt>
     <dd>{{% md %}}The SFTP address to stream logs to.
-{{% /md %}}</dd>
-    <dt class="property-required"
+{{% /md %}}</dd><dt class="property-required"
             title="Required">
         <span id="name_go">
 <a href="#name_go" style="color: inherit; text-decoration: inherit;">Name</a>
@@ -12184,8 +10839,7 @@ Default `200`.
         <span class="property-type">string</span>
     </dt>
     <dd>{{% md %}}The unique name of the Kinesis logging endpoint.
-{{% /md %}}</dd>
-    <dt class="property-required"
+{{% /md %}}</dd><dt class="property-required"
             title="Required">
         <span id="port_go">
 <a href="#port_go" style="color: inherit; text-decoration: inherit;">Port</a>
@@ -12194,14 +10848,11 @@ Default `200`.
         <span class="property-type">int</span>
     </dt>
     <dd>{{% md %}}The port the SFTP service listens on. (Default: `22`).
-{{% /md %}}</dd>
-</dl>
+{{% /md %}}</dd></dl>
 {{% /choosable %}}
 
 {{% choosable language nodejs %}}
-<dl class="resources-properties">
-
-    <dt class="property-required"
+<dl class="resources-properties"><dt class="property-required"
             title="Required">
         <span id="address_nodejs">
 <a href="#address_nodejs" style="color: inherit; text-decoration: inherit;">address</a>
@@ -12210,8 +10861,7 @@ Default `200`.
         <span class="property-type">string</span>
     </dt>
     <dd>{{% md %}}The SFTP address to stream logs to.
-{{% /md %}}</dd>
-    <dt class="property-required"
+{{% /md %}}</dd><dt class="property-required"
             title="Required">
         <span id="name_nodejs">
 <a href="#name_nodejs" style="color: inherit; text-decoration: inherit;">name</a>
@@ -12220,8 +10870,7 @@ Default `200`.
         <span class="property-type">string</span>
     </dt>
     <dd>{{% md %}}The unique name of the Kinesis logging endpoint.
-{{% /md %}}</dd>
-    <dt class="property-required"
+{{% /md %}}</dd><dt class="property-required"
             title="Required">
         <span id="port_nodejs">
 <a href="#port_nodejs" style="color: inherit; text-decoration: inherit;">port</a>
@@ -12230,14 +10879,11 @@ Default `200`.
         <span class="property-type">number</span>
     </dt>
     <dd>{{% md %}}The port the SFTP service listens on. (Default: `22`).
-{{% /md %}}</dd>
-</dl>
+{{% /md %}}</dd></dl>
 {{% /choosable %}}
 
 {{% choosable language python %}}
-<dl class="resources-properties">
-
-    <dt class="property-required"
+<dl class="resources-properties"><dt class="property-required"
             title="Required">
         <span id="address_python">
 <a href="#address_python" style="color: inherit; text-decoration: inherit;">address</a>
@@ -12246,8 +10892,7 @@ Default `200`.
         <span class="property-type">str</span>
     </dt>
     <dd>{{% md %}}The SFTP address to stream logs to.
-{{% /md %}}</dd>
-    <dt class="property-required"
+{{% /md %}}</dd><dt class="property-required"
             title="Required">
         <span id="name_python">
 <a href="#name_python" style="color: inherit; text-decoration: inherit;">name</a>
@@ -12256,8 +10901,7 @@ Default `200`.
         <span class="property-type">str</span>
     </dt>
     <dd>{{% md %}}The unique name of the Kinesis logging endpoint.
-{{% /md %}}</dd>
-    <dt class="property-required"
+{{% /md %}}</dd><dt class="property-required"
             title="Required">
         <span id="port_python">
 <a href="#port_python" style="color: inherit; text-decoration: inherit;">port</a>
@@ -12266,16 +10910,13 @@ Default `200`.
         <span class="property-type">int</span>
     </dt>
     <dd>{{% md %}}The port the SFTP service listens on. (Default: `22`).
-{{% /md %}}</dd>
-</dl>
+{{% /md %}}</dd></dl>
 {{% /choosable %}}
 
 <h4 id="servicecomputes3logging">Service<wbr>Compute<wbr>S3logging</h4>
 
 {{% choosable language csharp %}}
-<dl class="resources-properties">
-
-    <dt class="property-required"
+<dl class="resources-properties"><dt class="property-required"
             title="Required">
         <span id="bucketname_csharp">
 <a href="#bucketname_csharp" style="color: inherit; text-decoration: inherit;">Bucket<wbr>Name</a>
@@ -12284,8 +10925,7 @@ Default `200`.
         <span class="property-type">string</span>
     </dt>
     <dd>{{% md %}}The name of your Cloud Files container.
-{{% /md %}}</dd>
-    <dt class="property-required"
+{{% /md %}}</dd><dt class="property-required"
             title="Required">
         <span id="name_csharp">
 <a href="#name_csharp" style="color: inherit; text-decoration: inherit;">Name</a>
@@ -12294,8 +10934,7 @@ Default `200`.
         <span class="property-type">string</span>
     </dt>
     <dd>{{% md %}}The unique name of the Kinesis logging endpoint.
-{{% /md %}}</dd>
-    <dt class="property-optional"
+{{% /md %}}</dd><dt class="property-optional"
             title="Optional">
         <span id="domain_csharp">
 <a href="#domain_csharp" style="color: inherit; text-decoration: inherit;">Domain</a>
@@ -12304,8 +10943,7 @@ Default `200`.
         <span class="property-type">string</span>
     </dt>
     <dd>{{% md %}}The domain of the DigitalOcean Spaces endpoint (default "nyc3.digitaloceanspaces.com").
-{{% /md %}}</dd>
-    <dt class="property-optional"
+{{% /md %}}</dd><dt class="property-optional"
             title="Optional">
         <span id="gziplevel_csharp">
 <a href="#gziplevel_csharp" style="color: inherit; text-decoration: inherit;">Gzip<wbr>Level</a>
@@ -12314,8 +10952,7 @@ Default `200`.
         <span class="property-type">int</span>
     </dt>
     <dd>{{% md %}}What level of GZIP encoding to have when dumping logs (default 0, no compression).
-{{% /md %}}</dd>
-    <dt class="property-optional"
+{{% /md %}}</dd><dt class="property-optional"
             title="Optional">
         <span id="messagetype_csharp">
 <a href="#messagetype_csharp" style="color: inherit; text-decoration: inherit;">Message<wbr>Type</a>
@@ -12324,8 +10961,7 @@ Default `200`.
         <span class="property-type">string</span>
     </dt>
     <dd>{{% md %}}How the message should be formatted. One of: classic (default), loggly, logplex or blank.
-{{% /md %}}</dd>
-    <dt class="property-optional"
+{{% /md %}}</dd><dt class="property-optional"
             title="Optional">
         <span id="path_csharp">
 <a href="#path_csharp" style="color: inherit; text-decoration: inherit;">Path</a>
@@ -12334,8 +10970,7 @@ Default `200`.
         <span class="property-type">string</span>
     </dt>
     <dd>{{% md %}}The path to upload logs to.
-{{% /md %}}</dd>
-    <dt class="property-optional"
+{{% /md %}}</dd><dt class="property-optional"
             title="Optional">
         <span id="period_csharp">
 <a href="#period_csharp" style="color: inherit; text-decoration: inherit;">Period</a>
@@ -12344,8 +10979,7 @@ Default `200`.
         <span class="property-type">int</span>
     </dt>
     <dd>{{% md %}}How frequently log files are finalized so they can be available for reading (in seconds, default 3600).
-{{% /md %}}</dd>
-    <dt class="property-optional"
+{{% /md %}}</dd><dt class="property-optional"
             title="Optional">
         <span id="publickey_csharp">
 <a href="#publickey_csharp" style="color: inherit; text-decoration: inherit;">Public<wbr>Key</a>
@@ -12354,8 +10988,7 @@ Default `200`.
         <span class="property-type">string</span>
     </dt>
     <dd>{{% md %}}The PGP public key that Fastly will use to encrypt your log files before writing them to disk.
-{{% /md %}}</dd>
-    <dt class="property-optional"
+{{% /md %}}</dd><dt class="property-optional"
             title="Optional">
         <span id="redundancy_csharp">
 <a href="#redundancy_csharp" style="color: inherit; text-decoration: inherit;">Redundancy</a>
@@ -12364,8 +10997,7 @@ Default `200`.
         <span class="property-type">string</span>
     </dt>
     <dd>{{% md %}}The S3 redundancy level. Should be formatted; one of: `standard`, `reduced_redundancy` or null. Default `null`.
-{{% /md %}}</dd>
-    <dt class="property-optional"
+{{% /md %}}</dd><dt class="property-optional"
             title="Optional">
         <span id="s3accesskey_csharp">
 <a href="#s3accesskey_csharp" style="color: inherit; text-decoration: inherit;">S3Access<wbr>Key</a>
@@ -12377,8 +11009,7 @@ Default `200`.
 permissions to post logs. It is **strongly** recommended you create a separate
 IAM user with permissions to only operate on this Bucket. This key will be
 not be encrypted. You can provide this key via an environment variable, `FASTLY_S3_ACCESS_KEY`.
-{{% /md %}}</dd>
-    <dt class="property-optional"
+{{% /md %}}</dd><dt class="property-optional"
             title="Optional">
         <span id="s3secretkey_csharp">
 <a href="#s3secretkey_csharp" style="color: inherit; text-decoration: inherit;">S3Secret<wbr>Key</a>
@@ -12390,8 +11021,7 @@ not be encrypted. You can provide this key via an environment variable, `FASTLY_
 permissions to post logs. It is **strongly** recommended you create a separate
 IAM user with permissions to only operate on this Bucket. This secret will be
 not be encrypted. You can provide this secret via an environment variable, `FASTLY_S3_SECRET_KEY`.
-{{% /md %}}</dd>
-    <dt class="property-optional"
+{{% /md %}}</dd><dt class="property-optional"
             title="Optional">
         <span id="serversideencryption_csharp">
 <a href="#serversideencryption_csharp" style="color: inherit; text-decoration: inherit;">Server<wbr>Side<wbr>Encryption</a>
@@ -12399,8 +11029,7 @@ not be encrypted. You can provide this secret via an environment variable, `FAST
         <span class="property-indicator"></span>
         <span class="property-type">string</span>
     </dt>
-    <dd>{{% md %}}{{% /md %}}</dd>
-    <dt class="property-optional"
+    <dd>{{% md %}}{{% /md %}}</dd><dt class="property-optional"
             title="Optional">
         <span id="serversideencryptionkmskeyid_csharp">
 <a href="#serversideencryptionkmskeyid_csharp" style="color: inherit; text-decoration: inherit;">Server<wbr>Side<wbr>Encryption<wbr>Kms<wbr>Key<wbr>Id</a>
@@ -12408,8 +11037,7 @@ not be encrypted. You can provide this secret via an environment variable, `FAST
         <span class="property-indicator"></span>
         <span class="property-type">string</span>
     </dt>
-    <dd>{{% md %}}{{% /md %}}</dd>
-    <dt class="property-optional"
+    <dd>{{% md %}}{{% /md %}}</dd><dt class="property-optional"
             title="Optional">
         <span id="timestampformat_csharp">
 <a href="#timestampformat_csharp" style="color: inherit; text-decoration: inherit;">Timestamp<wbr>Format</a>
@@ -12418,14 +11046,11 @@ not be encrypted. You can provide this secret via an environment variable, `FAST
         <span class="property-type">string</span>
     </dt>
     <dd>{{% md %}}The strftime specified timestamp formatting (default `%Y-%m-%dT%H:%M:%S.000`).
-{{% /md %}}</dd>
-</dl>
+{{% /md %}}</dd></dl>
 {{% /choosable %}}
 
 {{% choosable language go %}}
-<dl class="resources-properties">
-
-    <dt class="property-required"
+<dl class="resources-properties"><dt class="property-required"
             title="Required">
         <span id="bucketname_go">
 <a href="#bucketname_go" style="color: inherit; text-decoration: inherit;">Bucket<wbr>Name</a>
@@ -12434,8 +11059,7 @@ not be encrypted. You can provide this secret via an environment variable, `FAST
         <span class="property-type">string</span>
     </dt>
     <dd>{{% md %}}The name of your Cloud Files container.
-{{% /md %}}</dd>
-    <dt class="property-required"
+{{% /md %}}</dd><dt class="property-required"
             title="Required">
         <span id="name_go">
 <a href="#name_go" style="color: inherit; text-decoration: inherit;">Name</a>
@@ -12444,8 +11068,7 @@ not be encrypted. You can provide this secret via an environment variable, `FAST
         <span class="property-type">string</span>
     </dt>
     <dd>{{% md %}}The unique name of the Kinesis logging endpoint.
-{{% /md %}}</dd>
-    <dt class="property-optional"
+{{% /md %}}</dd><dt class="property-optional"
             title="Optional">
         <span id="domain_go">
 <a href="#domain_go" style="color: inherit; text-decoration: inherit;">Domain</a>
@@ -12454,8 +11077,7 @@ not be encrypted. You can provide this secret via an environment variable, `FAST
         <span class="property-type">string</span>
     </dt>
     <dd>{{% md %}}The domain of the DigitalOcean Spaces endpoint (default "nyc3.digitaloceanspaces.com").
-{{% /md %}}</dd>
-    <dt class="property-optional"
+{{% /md %}}</dd><dt class="property-optional"
             title="Optional">
         <span id="gziplevel_go">
 <a href="#gziplevel_go" style="color: inherit; text-decoration: inherit;">Gzip<wbr>Level</a>
@@ -12464,8 +11086,7 @@ not be encrypted. You can provide this secret via an environment variable, `FAST
         <span class="property-type">int</span>
     </dt>
     <dd>{{% md %}}What level of GZIP encoding to have when dumping logs (default 0, no compression).
-{{% /md %}}</dd>
-    <dt class="property-optional"
+{{% /md %}}</dd><dt class="property-optional"
             title="Optional">
         <span id="messagetype_go">
 <a href="#messagetype_go" style="color: inherit; text-decoration: inherit;">Message<wbr>Type</a>
@@ -12474,8 +11095,7 @@ not be encrypted. You can provide this secret via an environment variable, `FAST
         <span class="property-type">string</span>
     </dt>
     <dd>{{% md %}}How the message should be formatted. One of: classic (default), loggly, logplex or blank.
-{{% /md %}}</dd>
-    <dt class="property-optional"
+{{% /md %}}</dd><dt class="property-optional"
             title="Optional">
         <span id="path_go">
 <a href="#path_go" style="color: inherit; text-decoration: inherit;">Path</a>
@@ -12484,8 +11104,7 @@ not be encrypted. You can provide this secret via an environment variable, `FAST
         <span class="property-type">string</span>
     </dt>
     <dd>{{% md %}}The path to upload logs to.
-{{% /md %}}</dd>
-    <dt class="property-optional"
+{{% /md %}}</dd><dt class="property-optional"
             title="Optional">
         <span id="period_go">
 <a href="#period_go" style="color: inherit; text-decoration: inherit;">Period</a>
@@ -12494,8 +11113,7 @@ not be encrypted. You can provide this secret via an environment variable, `FAST
         <span class="property-type">int</span>
     </dt>
     <dd>{{% md %}}How frequently log files are finalized so they can be available for reading (in seconds, default 3600).
-{{% /md %}}</dd>
-    <dt class="property-optional"
+{{% /md %}}</dd><dt class="property-optional"
             title="Optional">
         <span id="publickey_go">
 <a href="#publickey_go" style="color: inherit; text-decoration: inherit;">Public<wbr>Key</a>
@@ -12504,8 +11122,7 @@ not be encrypted. You can provide this secret via an environment variable, `FAST
         <span class="property-type">string</span>
     </dt>
     <dd>{{% md %}}The PGP public key that Fastly will use to encrypt your log files before writing them to disk.
-{{% /md %}}</dd>
-    <dt class="property-optional"
+{{% /md %}}</dd><dt class="property-optional"
             title="Optional">
         <span id="redundancy_go">
 <a href="#redundancy_go" style="color: inherit; text-decoration: inherit;">Redundancy</a>
@@ -12514,8 +11131,7 @@ not be encrypted. You can provide this secret via an environment variable, `FAST
         <span class="property-type">string</span>
     </dt>
     <dd>{{% md %}}The S3 redundancy level. Should be formatted; one of: `standard`, `reduced_redundancy` or null. Default `null`.
-{{% /md %}}</dd>
-    <dt class="property-optional"
+{{% /md %}}</dd><dt class="property-optional"
             title="Optional">
         <span id="s3accesskey_go">
 <a href="#s3accesskey_go" style="color: inherit; text-decoration: inherit;">S3Access<wbr>Key</a>
@@ -12527,8 +11143,7 @@ not be encrypted. You can provide this secret via an environment variable, `FAST
 permissions to post logs. It is **strongly** recommended you create a separate
 IAM user with permissions to only operate on this Bucket. This key will be
 not be encrypted. You can provide this key via an environment variable, `FASTLY_S3_ACCESS_KEY`.
-{{% /md %}}</dd>
-    <dt class="property-optional"
+{{% /md %}}</dd><dt class="property-optional"
             title="Optional">
         <span id="s3secretkey_go">
 <a href="#s3secretkey_go" style="color: inherit; text-decoration: inherit;">S3Secret<wbr>Key</a>
@@ -12540,8 +11155,7 @@ not be encrypted. You can provide this key via an environment variable, `FASTLY_
 permissions to post logs. It is **strongly** recommended you create a separate
 IAM user with permissions to only operate on this Bucket. This secret will be
 not be encrypted. You can provide this secret via an environment variable, `FASTLY_S3_SECRET_KEY`.
-{{% /md %}}</dd>
-    <dt class="property-optional"
+{{% /md %}}</dd><dt class="property-optional"
             title="Optional">
         <span id="serversideencryption_go">
 <a href="#serversideencryption_go" style="color: inherit; text-decoration: inherit;">Server<wbr>Side<wbr>Encryption</a>
@@ -12549,8 +11163,7 @@ not be encrypted. You can provide this secret via an environment variable, `FAST
         <span class="property-indicator"></span>
         <span class="property-type">string</span>
     </dt>
-    <dd>{{% md %}}{{% /md %}}</dd>
-    <dt class="property-optional"
+    <dd>{{% md %}}{{% /md %}}</dd><dt class="property-optional"
             title="Optional">
         <span id="serversideencryptionkmskeyid_go">
 <a href="#serversideencryptionkmskeyid_go" style="color: inherit; text-decoration: inherit;">Server<wbr>Side<wbr>Encryption<wbr>Kms<wbr>Key<wbr>Id</a>
@@ -12558,8 +11171,7 @@ not be encrypted. You can provide this secret via an environment variable, `FAST
         <span class="property-indicator"></span>
         <span class="property-type">string</span>
     </dt>
-    <dd>{{% md %}}{{% /md %}}</dd>
-    <dt class="property-optional"
+    <dd>{{% md %}}{{% /md %}}</dd><dt class="property-optional"
             title="Optional">
         <span id="timestampformat_go">
 <a href="#timestampformat_go" style="color: inherit; text-decoration: inherit;">Timestamp<wbr>Format</a>
@@ -12568,14 +11180,11 @@ not be encrypted. You can provide this secret via an environment variable, `FAST
         <span class="property-type">string</span>
     </dt>
     <dd>{{% md %}}The strftime specified timestamp formatting (default `%Y-%m-%dT%H:%M:%S.000`).
-{{% /md %}}</dd>
-</dl>
+{{% /md %}}</dd></dl>
 {{% /choosable %}}
 
 {{% choosable language nodejs %}}
-<dl class="resources-properties">
-
-    <dt class="property-required"
+<dl class="resources-properties"><dt class="property-required"
             title="Required">
         <span id="bucketname_nodejs">
 <a href="#bucketname_nodejs" style="color: inherit; text-decoration: inherit;">bucket<wbr>Name</a>
@@ -12584,8 +11193,7 @@ not be encrypted. You can provide this secret via an environment variable, `FAST
         <span class="property-type">string</span>
     </dt>
     <dd>{{% md %}}The name of your Cloud Files container.
-{{% /md %}}</dd>
-    <dt class="property-required"
+{{% /md %}}</dd><dt class="property-required"
             title="Required">
         <span id="name_nodejs">
 <a href="#name_nodejs" style="color: inherit; text-decoration: inherit;">name</a>
@@ -12594,8 +11202,7 @@ not be encrypted. You can provide this secret via an environment variable, `FAST
         <span class="property-type">string</span>
     </dt>
     <dd>{{% md %}}The unique name of the Kinesis logging endpoint.
-{{% /md %}}</dd>
-    <dt class="property-optional"
+{{% /md %}}</dd><dt class="property-optional"
             title="Optional">
         <span id="domain_nodejs">
 <a href="#domain_nodejs" style="color: inherit; text-decoration: inherit;">domain</a>
@@ -12604,8 +11211,7 @@ not be encrypted. You can provide this secret via an environment variable, `FAST
         <span class="property-type">string</span>
     </dt>
     <dd>{{% md %}}The domain of the DigitalOcean Spaces endpoint (default "nyc3.digitaloceanspaces.com").
-{{% /md %}}</dd>
-    <dt class="property-optional"
+{{% /md %}}</dd><dt class="property-optional"
             title="Optional">
         <span id="gziplevel_nodejs">
 <a href="#gziplevel_nodejs" style="color: inherit; text-decoration: inherit;">gzip<wbr>Level</a>
@@ -12614,8 +11220,7 @@ not be encrypted. You can provide this secret via an environment variable, `FAST
         <span class="property-type">number</span>
     </dt>
     <dd>{{% md %}}What level of GZIP encoding to have when dumping logs (default 0, no compression).
-{{% /md %}}</dd>
-    <dt class="property-optional"
+{{% /md %}}</dd><dt class="property-optional"
             title="Optional">
         <span id="messagetype_nodejs">
 <a href="#messagetype_nodejs" style="color: inherit; text-decoration: inherit;">message<wbr>Type</a>
@@ -12624,8 +11229,7 @@ not be encrypted. You can provide this secret via an environment variable, `FAST
         <span class="property-type">string</span>
     </dt>
     <dd>{{% md %}}How the message should be formatted. One of: classic (default), loggly, logplex or blank.
-{{% /md %}}</dd>
-    <dt class="property-optional"
+{{% /md %}}</dd><dt class="property-optional"
             title="Optional">
         <span id="path_nodejs">
 <a href="#path_nodejs" style="color: inherit; text-decoration: inherit;">path</a>
@@ -12634,8 +11238,7 @@ not be encrypted. You can provide this secret via an environment variable, `FAST
         <span class="property-type">string</span>
     </dt>
     <dd>{{% md %}}The path to upload logs to.
-{{% /md %}}</dd>
-    <dt class="property-optional"
+{{% /md %}}</dd><dt class="property-optional"
             title="Optional">
         <span id="period_nodejs">
 <a href="#period_nodejs" style="color: inherit; text-decoration: inherit;">period</a>
@@ -12644,8 +11247,7 @@ not be encrypted. You can provide this secret via an environment variable, `FAST
         <span class="property-type">number</span>
     </dt>
     <dd>{{% md %}}How frequently log files are finalized so they can be available for reading (in seconds, default 3600).
-{{% /md %}}</dd>
-    <dt class="property-optional"
+{{% /md %}}</dd><dt class="property-optional"
             title="Optional">
         <span id="publickey_nodejs">
 <a href="#publickey_nodejs" style="color: inherit; text-decoration: inherit;">public<wbr>Key</a>
@@ -12654,8 +11256,7 @@ not be encrypted. You can provide this secret via an environment variable, `FAST
         <span class="property-type">string</span>
     </dt>
     <dd>{{% md %}}The PGP public key that Fastly will use to encrypt your log files before writing them to disk.
-{{% /md %}}</dd>
-    <dt class="property-optional"
+{{% /md %}}</dd><dt class="property-optional"
             title="Optional">
         <span id="redundancy_nodejs">
 <a href="#redundancy_nodejs" style="color: inherit; text-decoration: inherit;">redundancy</a>
@@ -12664,8 +11265,7 @@ not be encrypted. You can provide this secret via an environment variable, `FAST
         <span class="property-type">string</span>
     </dt>
     <dd>{{% md %}}The S3 redundancy level. Should be formatted; one of: `standard`, `reduced_redundancy` or null. Default `null`.
-{{% /md %}}</dd>
-    <dt class="property-optional"
+{{% /md %}}</dd><dt class="property-optional"
             title="Optional">
         <span id="s3accesskey_nodejs">
 <a href="#s3accesskey_nodejs" style="color: inherit; text-decoration: inherit;">s3Access<wbr>Key</a>
@@ -12677,8 +11277,7 @@ not be encrypted. You can provide this secret via an environment variable, `FAST
 permissions to post logs. It is **strongly** recommended you create a separate
 IAM user with permissions to only operate on this Bucket. This key will be
 not be encrypted. You can provide this key via an environment variable, `FASTLY_S3_ACCESS_KEY`.
-{{% /md %}}</dd>
-    <dt class="property-optional"
+{{% /md %}}</dd><dt class="property-optional"
             title="Optional">
         <span id="s3secretkey_nodejs">
 <a href="#s3secretkey_nodejs" style="color: inherit; text-decoration: inherit;">s3Secret<wbr>Key</a>
@@ -12690,8 +11289,7 @@ not be encrypted. You can provide this key via an environment variable, `FASTLY_
 permissions to post logs. It is **strongly** recommended you create a separate
 IAM user with permissions to only operate on this Bucket. This secret will be
 not be encrypted. You can provide this secret via an environment variable, `FASTLY_S3_SECRET_KEY`.
-{{% /md %}}</dd>
-    <dt class="property-optional"
+{{% /md %}}</dd><dt class="property-optional"
             title="Optional">
         <span id="serversideencryption_nodejs">
 <a href="#serversideencryption_nodejs" style="color: inherit; text-decoration: inherit;">server<wbr>Side<wbr>Encryption</a>
@@ -12699,8 +11297,7 @@ not be encrypted. You can provide this secret via an environment variable, `FAST
         <span class="property-indicator"></span>
         <span class="property-type">string</span>
     </dt>
-    <dd>{{% md %}}{{% /md %}}</dd>
-    <dt class="property-optional"
+    <dd>{{% md %}}{{% /md %}}</dd><dt class="property-optional"
             title="Optional">
         <span id="serversideencryptionkmskeyid_nodejs">
 <a href="#serversideencryptionkmskeyid_nodejs" style="color: inherit; text-decoration: inherit;">server<wbr>Side<wbr>Encryption<wbr>Kms<wbr>Key<wbr>Id</a>
@@ -12708,8 +11305,7 @@ not be encrypted. You can provide this secret via an environment variable, `FAST
         <span class="property-indicator"></span>
         <span class="property-type">string</span>
     </dt>
-    <dd>{{% md %}}{{% /md %}}</dd>
-    <dt class="property-optional"
+    <dd>{{% md %}}{{% /md %}}</dd><dt class="property-optional"
             title="Optional">
         <span id="timestampformat_nodejs">
 <a href="#timestampformat_nodejs" style="color: inherit; text-decoration: inherit;">timestamp<wbr>Format</a>
@@ -12718,14 +11314,11 @@ not be encrypted. You can provide this secret via an environment variable, `FAST
         <span class="property-type">string</span>
     </dt>
     <dd>{{% md %}}The strftime specified timestamp formatting (default `%Y-%m-%dT%H:%M:%S.000`).
-{{% /md %}}</dd>
-</dl>
+{{% /md %}}</dd></dl>
 {{% /choosable %}}
 
 {{% choosable language python %}}
-<dl class="resources-properties">
-
-    <dt class="property-required"
+<dl class="resources-properties"><dt class="property-required"
             title="Required">
         <span id="bucket_name_python">
 <a href="#bucket_name_python" style="color: inherit; text-decoration: inherit;">bucket_<wbr>name</a>
@@ -12734,8 +11327,7 @@ not be encrypted. You can provide this secret via an environment variable, `FAST
         <span class="property-type">str</span>
     </dt>
     <dd>{{% md %}}The name of your Cloud Files container.
-{{% /md %}}</dd>
-    <dt class="property-required"
+{{% /md %}}</dd><dt class="property-required"
             title="Required">
         <span id="name_python">
 <a href="#name_python" style="color: inherit; text-decoration: inherit;">name</a>
@@ -12744,8 +11336,7 @@ not be encrypted. You can provide this secret via an environment variable, `FAST
         <span class="property-type">str</span>
     </dt>
     <dd>{{% md %}}The unique name of the Kinesis logging endpoint.
-{{% /md %}}</dd>
-    <dt class="property-optional"
+{{% /md %}}</dd><dt class="property-optional"
             title="Optional">
         <span id="domain_python">
 <a href="#domain_python" style="color: inherit; text-decoration: inherit;">domain</a>
@@ -12754,8 +11345,7 @@ not be encrypted. You can provide this secret via an environment variable, `FAST
         <span class="property-type">str</span>
     </dt>
     <dd>{{% md %}}The domain of the DigitalOcean Spaces endpoint (default "nyc3.digitaloceanspaces.com").
-{{% /md %}}</dd>
-    <dt class="property-optional"
+{{% /md %}}</dd><dt class="property-optional"
             title="Optional">
         <span id="gzip_level_python">
 <a href="#gzip_level_python" style="color: inherit; text-decoration: inherit;">gzip_<wbr>level</a>
@@ -12764,8 +11354,7 @@ not be encrypted. You can provide this secret via an environment variable, `FAST
         <span class="property-type">int</span>
     </dt>
     <dd>{{% md %}}What level of GZIP encoding to have when dumping logs (default 0, no compression).
-{{% /md %}}</dd>
-    <dt class="property-optional"
+{{% /md %}}</dd><dt class="property-optional"
             title="Optional">
         <span id="message_type_python">
 <a href="#message_type_python" style="color: inherit; text-decoration: inherit;">message_<wbr>type</a>
@@ -12774,8 +11363,7 @@ not be encrypted. You can provide this secret via an environment variable, `FAST
         <span class="property-type">str</span>
     </dt>
     <dd>{{% md %}}How the message should be formatted. One of: classic (default), loggly, logplex or blank.
-{{% /md %}}</dd>
-    <dt class="property-optional"
+{{% /md %}}</dd><dt class="property-optional"
             title="Optional">
         <span id="path_python">
 <a href="#path_python" style="color: inherit; text-decoration: inherit;">path</a>
@@ -12784,8 +11372,7 @@ not be encrypted. You can provide this secret via an environment variable, `FAST
         <span class="property-type">str</span>
     </dt>
     <dd>{{% md %}}The path to upload logs to.
-{{% /md %}}</dd>
-    <dt class="property-optional"
+{{% /md %}}</dd><dt class="property-optional"
             title="Optional">
         <span id="period_python">
 <a href="#period_python" style="color: inherit; text-decoration: inherit;">period</a>
@@ -12794,8 +11381,7 @@ not be encrypted. You can provide this secret via an environment variable, `FAST
         <span class="property-type">int</span>
     </dt>
     <dd>{{% md %}}How frequently log files are finalized so they can be available for reading (in seconds, default 3600).
-{{% /md %}}</dd>
-    <dt class="property-optional"
+{{% /md %}}</dd><dt class="property-optional"
             title="Optional">
         <span id="public_key_python">
 <a href="#public_key_python" style="color: inherit; text-decoration: inherit;">public_<wbr>key</a>
@@ -12804,8 +11390,7 @@ not be encrypted. You can provide this secret via an environment variable, `FAST
         <span class="property-type">str</span>
     </dt>
     <dd>{{% md %}}The PGP public key that Fastly will use to encrypt your log files before writing them to disk.
-{{% /md %}}</dd>
-    <dt class="property-optional"
+{{% /md %}}</dd><dt class="property-optional"
             title="Optional">
         <span id="redundancy_python">
 <a href="#redundancy_python" style="color: inherit; text-decoration: inherit;">redundancy</a>
@@ -12814,8 +11399,7 @@ not be encrypted. You can provide this secret via an environment variable, `FAST
         <span class="property-type">str</span>
     </dt>
     <dd>{{% md %}}The S3 redundancy level. Should be formatted; one of: `standard`, `reduced_redundancy` or null. Default `null`.
-{{% /md %}}</dd>
-    <dt class="property-optional"
+{{% /md %}}</dd><dt class="property-optional"
             title="Optional">
         <span id="s3_access_key_python">
 <a href="#s3_access_key_python" style="color: inherit; text-decoration: inherit;">s3_<wbr>access_<wbr>key</a>
@@ -12827,8 +11411,7 @@ not be encrypted. You can provide this secret via an environment variable, `FAST
 permissions to post logs. It is **strongly** recommended you create a separate
 IAM user with permissions to only operate on this Bucket. This key will be
 not be encrypted. You can provide this key via an environment variable, `FASTLY_S3_ACCESS_KEY`.
-{{% /md %}}</dd>
-    <dt class="property-optional"
+{{% /md %}}</dd><dt class="property-optional"
             title="Optional">
         <span id="s3_secret_key_python">
 <a href="#s3_secret_key_python" style="color: inherit; text-decoration: inherit;">s3_<wbr>secret_<wbr>key</a>
@@ -12840,8 +11423,7 @@ not be encrypted. You can provide this key via an environment variable, `FASTLY_
 permissions to post logs. It is **strongly** recommended you create a separate
 IAM user with permissions to only operate on this Bucket. This secret will be
 not be encrypted. You can provide this secret via an environment variable, `FASTLY_S3_SECRET_KEY`.
-{{% /md %}}</dd>
-    <dt class="property-optional"
+{{% /md %}}</dd><dt class="property-optional"
             title="Optional">
         <span id="server_side_encryption_python">
 <a href="#server_side_encryption_python" style="color: inherit; text-decoration: inherit;">server_<wbr>side_<wbr>encryption</a>
@@ -12849,8 +11431,7 @@ not be encrypted. You can provide this secret via an environment variable, `FAST
         <span class="property-indicator"></span>
         <span class="property-type">str</span>
     </dt>
-    <dd>{{% md %}}{{% /md %}}</dd>
-    <dt class="property-optional"
+    <dd>{{% md %}}{{% /md %}}</dd><dt class="property-optional"
             title="Optional">
         <span id="server_side_encryption_kms_key_id_python">
 <a href="#server_side_encryption_kms_key_id_python" style="color: inherit; text-decoration: inherit;">server_<wbr>side_<wbr>encryption_<wbr>kms_<wbr>key_<wbr>id</a>
@@ -12858,8 +11439,7 @@ not be encrypted. You can provide this secret via an environment variable, `FAST
         <span class="property-indicator"></span>
         <span class="property-type">str</span>
     </dt>
-    <dd>{{% md %}}{{% /md %}}</dd>
-    <dt class="property-optional"
+    <dd>{{% md %}}{{% /md %}}</dd><dt class="property-optional"
             title="Optional">
         <span id="timestamp_format_python">
 <a href="#timestamp_format_python" style="color: inherit; text-decoration: inherit;">timestamp_<wbr>format</a>
@@ -12868,16 +11448,13 @@ not be encrypted. You can provide this secret via an environment variable, `FAST
         <span class="property-type">str</span>
     </dt>
     <dd>{{% md %}}The strftime specified timestamp formatting (default `%Y-%m-%dT%H:%M:%S.000`).
-{{% /md %}}</dd>
-</dl>
+{{% /md %}}</dd></dl>
 {{% /choosable %}}
 
 <h4 id="servicecomputesplunk">Service<wbr>Compute<wbr>Splunk</h4>
 
 {{% choosable language csharp %}}
-<dl class="resources-properties">
-
-    <dt class="property-required"
+<dl class="resources-properties"><dt class="property-required"
             title="Required">
         <span id="name_csharp">
 <a href="#name_csharp" style="color: inherit; text-decoration: inherit;">Name</a>
@@ -12886,8 +11463,7 @@ not be encrypted. You can provide this secret via an environment variable, `FAST
         <span class="property-type">string</span>
     </dt>
     <dd>{{% md %}}The unique name of the Kinesis logging endpoint.
-{{% /md %}}</dd>
-    <dt class="property-required"
+{{% /md %}}</dd><dt class="property-required"
             title="Required">
         <span id="token_csharp">
 <a href="#token_csharp" style="color: inherit; text-decoration: inherit;">Token</a>
@@ -12896,8 +11472,7 @@ not be encrypted. You can provide this secret via an environment variable, `FAST
         <span class="property-type">string</span>
     </dt>
     <dd>{{% md %}}The data authentication token associated with this endpoint.
-{{% /md %}}</dd>
-    <dt class="property-required"
+{{% /md %}}</dd><dt class="property-required"
             title="Required">
         <span id="url_csharp">
 <a href="#url_csharp" style="color: inherit; text-decoration: inherit;">Url</a>
@@ -12906,8 +11481,7 @@ not be encrypted. You can provide this secret via an environment variable, `FAST
         <span class="property-type">string</span>
     </dt>
     <dd>{{% md %}}Your OpenStack auth url.
-{{% /md %}}</dd>
-    <dt class="property-optional"
+{{% /md %}}</dd><dt class="property-optional"
             title="Optional">
         <span id="tlscacert_csharp">
 <a href="#tlscacert_csharp" style="color: inherit; text-decoration: inherit;">Tls<wbr>Ca<wbr>Cert</a>
@@ -12916,8 +11490,7 @@ not be encrypted. You can provide this secret via an environment variable, `FAST
         <span class="property-type">string</span>
     </dt>
     <dd>{{% md %}}A secure certificate to authenticate the server with. Must be in PEM format.
-{{% /md %}}</dd>
-    <dt class="property-optional"
+{{% /md %}}</dd><dt class="property-optional"
             title="Optional">
         <span id="tlshostname_csharp">
 <a href="#tlshostname_csharp" style="color: inherit; text-decoration: inherit;">Tls<wbr>Hostname</a>
@@ -12926,14 +11499,11 @@ not be encrypted. You can provide this secret via an environment variable, `FAST
         <span class="property-type">string</span>
     </dt>
     <dd>{{% md %}}The hostname used to verify the server's certificate. It can either be the Common Name or a Subject Alternative Name (SAN).
-{{% /md %}}</dd>
-</dl>
+{{% /md %}}</dd></dl>
 {{% /choosable %}}
 
 {{% choosable language go %}}
-<dl class="resources-properties">
-
-    <dt class="property-required"
+<dl class="resources-properties"><dt class="property-required"
             title="Required">
         <span id="name_go">
 <a href="#name_go" style="color: inherit; text-decoration: inherit;">Name</a>
@@ -12942,8 +11512,7 @@ not be encrypted. You can provide this secret via an environment variable, `FAST
         <span class="property-type">string</span>
     </dt>
     <dd>{{% md %}}The unique name of the Kinesis logging endpoint.
-{{% /md %}}</dd>
-    <dt class="property-required"
+{{% /md %}}</dd><dt class="property-required"
             title="Required">
         <span id="token_go">
 <a href="#token_go" style="color: inherit; text-decoration: inherit;">Token</a>
@@ -12952,8 +11521,7 @@ not be encrypted. You can provide this secret via an environment variable, `FAST
         <span class="property-type">string</span>
     </dt>
     <dd>{{% md %}}The data authentication token associated with this endpoint.
-{{% /md %}}</dd>
-    <dt class="property-required"
+{{% /md %}}</dd><dt class="property-required"
             title="Required">
         <span id="url_go">
 <a href="#url_go" style="color: inherit; text-decoration: inherit;">Url</a>
@@ -12962,8 +11530,7 @@ not be encrypted. You can provide this secret via an environment variable, `FAST
         <span class="property-type">string</span>
     </dt>
     <dd>{{% md %}}Your OpenStack auth url.
-{{% /md %}}</dd>
-    <dt class="property-optional"
+{{% /md %}}</dd><dt class="property-optional"
             title="Optional">
         <span id="tlscacert_go">
 <a href="#tlscacert_go" style="color: inherit; text-decoration: inherit;">Tls<wbr>Ca<wbr>Cert</a>
@@ -12972,8 +11539,7 @@ not be encrypted. You can provide this secret via an environment variable, `FAST
         <span class="property-type">string</span>
     </dt>
     <dd>{{% md %}}A secure certificate to authenticate the server with. Must be in PEM format.
-{{% /md %}}</dd>
-    <dt class="property-optional"
+{{% /md %}}</dd><dt class="property-optional"
             title="Optional">
         <span id="tlshostname_go">
 <a href="#tlshostname_go" style="color: inherit; text-decoration: inherit;">Tls<wbr>Hostname</a>
@@ -12982,14 +11548,11 @@ not be encrypted. You can provide this secret via an environment variable, `FAST
         <span class="property-type">string</span>
     </dt>
     <dd>{{% md %}}The hostname used to verify the server's certificate. It can either be the Common Name or a Subject Alternative Name (SAN).
-{{% /md %}}</dd>
-</dl>
+{{% /md %}}</dd></dl>
 {{% /choosable %}}
 
 {{% choosable language nodejs %}}
-<dl class="resources-properties">
-
-    <dt class="property-required"
+<dl class="resources-properties"><dt class="property-required"
             title="Required">
         <span id="name_nodejs">
 <a href="#name_nodejs" style="color: inherit; text-decoration: inherit;">name</a>
@@ -12998,8 +11561,7 @@ not be encrypted. You can provide this secret via an environment variable, `FAST
         <span class="property-type">string</span>
     </dt>
     <dd>{{% md %}}The unique name of the Kinesis logging endpoint.
-{{% /md %}}</dd>
-    <dt class="property-required"
+{{% /md %}}</dd><dt class="property-required"
             title="Required">
         <span id="token_nodejs">
 <a href="#token_nodejs" style="color: inherit; text-decoration: inherit;">token</a>
@@ -13008,8 +11570,7 @@ not be encrypted. You can provide this secret via an environment variable, `FAST
         <span class="property-type">string</span>
     </dt>
     <dd>{{% md %}}The data authentication token associated with this endpoint.
-{{% /md %}}</dd>
-    <dt class="property-required"
+{{% /md %}}</dd><dt class="property-required"
             title="Required">
         <span id="url_nodejs">
 <a href="#url_nodejs" style="color: inherit; text-decoration: inherit;">url</a>
@@ -13018,8 +11579,7 @@ not be encrypted. You can provide this secret via an environment variable, `FAST
         <span class="property-type">string</span>
     </dt>
     <dd>{{% md %}}Your OpenStack auth url.
-{{% /md %}}</dd>
-    <dt class="property-optional"
+{{% /md %}}</dd><dt class="property-optional"
             title="Optional">
         <span id="tlscacert_nodejs">
 <a href="#tlscacert_nodejs" style="color: inherit; text-decoration: inherit;">tls<wbr>Ca<wbr>Cert</a>
@@ -13028,8 +11588,7 @@ not be encrypted. You can provide this secret via an environment variable, `FAST
         <span class="property-type">string</span>
     </dt>
     <dd>{{% md %}}A secure certificate to authenticate the server with. Must be in PEM format.
-{{% /md %}}</dd>
-    <dt class="property-optional"
+{{% /md %}}</dd><dt class="property-optional"
             title="Optional">
         <span id="tlshostname_nodejs">
 <a href="#tlshostname_nodejs" style="color: inherit; text-decoration: inherit;">tls<wbr>Hostname</a>
@@ -13038,14 +11597,11 @@ not be encrypted. You can provide this secret via an environment variable, `FAST
         <span class="property-type">string</span>
     </dt>
     <dd>{{% md %}}The hostname used to verify the server's certificate. It can either be the Common Name or a Subject Alternative Name (SAN).
-{{% /md %}}</dd>
-</dl>
+{{% /md %}}</dd></dl>
 {{% /choosable %}}
 
 {{% choosable language python %}}
-<dl class="resources-properties">
-
-    <dt class="property-required"
+<dl class="resources-properties"><dt class="property-required"
             title="Required">
         <span id="name_python">
 <a href="#name_python" style="color: inherit; text-decoration: inherit;">name</a>
@@ -13054,8 +11610,7 @@ not be encrypted. You can provide this secret via an environment variable, `FAST
         <span class="property-type">str</span>
     </dt>
     <dd>{{% md %}}The unique name of the Kinesis logging endpoint.
-{{% /md %}}</dd>
-    <dt class="property-required"
+{{% /md %}}</dd><dt class="property-required"
             title="Required">
         <span id="token_python">
 <a href="#token_python" style="color: inherit; text-decoration: inherit;">token</a>
@@ -13064,8 +11619,7 @@ not be encrypted. You can provide this secret via an environment variable, `FAST
         <span class="property-type">str</span>
     </dt>
     <dd>{{% md %}}The data authentication token associated with this endpoint.
-{{% /md %}}</dd>
-    <dt class="property-required"
+{{% /md %}}</dd><dt class="property-required"
             title="Required">
         <span id="url_python">
 <a href="#url_python" style="color: inherit; text-decoration: inherit;">url</a>
@@ -13074,8 +11628,7 @@ not be encrypted. You can provide this secret via an environment variable, `FAST
         <span class="property-type">str</span>
     </dt>
     <dd>{{% md %}}Your OpenStack auth url.
-{{% /md %}}</dd>
-    <dt class="property-optional"
+{{% /md %}}</dd><dt class="property-optional"
             title="Optional">
         <span id="tls_ca_cert_python">
 <a href="#tls_ca_cert_python" style="color: inherit; text-decoration: inherit;">tls_<wbr>ca_<wbr>cert</a>
@@ -13084,8 +11637,7 @@ not be encrypted. You can provide this secret via an environment variable, `FAST
         <span class="property-type">str</span>
     </dt>
     <dd>{{% md %}}A secure certificate to authenticate the server with. Must be in PEM format.
-{{% /md %}}</dd>
-    <dt class="property-optional"
+{{% /md %}}</dd><dt class="property-optional"
             title="Optional">
         <span id="tls_hostname_python">
 <a href="#tls_hostname_python" style="color: inherit; text-decoration: inherit;">tls_<wbr>hostname</a>
@@ -13094,16 +11646,13 @@ not be encrypted. You can provide this secret via an environment variable, `FAST
         <span class="property-type">str</span>
     </dt>
     <dd>{{% md %}}The hostname used to verify the server's certificate. It can either be the Common Name or a Subject Alternative Name (SAN).
-{{% /md %}}</dd>
-</dl>
+{{% /md %}}</dd></dl>
 {{% /choosable %}}
 
 <h4 id="servicecomputesumologic">Service<wbr>Compute<wbr>Sumologic</h4>
 
 {{% choosable language csharp %}}
-<dl class="resources-properties">
-
-    <dt class="property-required"
+<dl class="resources-properties"><dt class="property-required"
             title="Required">
         <span id="name_csharp">
 <a href="#name_csharp" style="color: inherit; text-decoration: inherit;">Name</a>
@@ -13112,8 +11661,7 @@ not be encrypted. You can provide this secret via an environment variable, `FAST
         <span class="property-type">string</span>
     </dt>
     <dd>{{% md %}}The unique name of the Kinesis logging endpoint.
-{{% /md %}}</dd>
-    <dt class="property-required"
+{{% /md %}}</dd><dt class="property-required"
             title="Required">
         <span id="url_csharp">
 <a href="#url_csharp" style="color: inherit; text-decoration: inherit;">Url</a>
@@ -13122,8 +11670,7 @@ not be encrypted. You can provide this secret via an environment variable, `FAST
         <span class="property-type">string</span>
     </dt>
     <dd>{{% md %}}Your OpenStack auth url.
-{{% /md %}}</dd>
-    <dt class="property-optional"
+{{% /md %}}</dd><dt class="property-optional"
             title="Optional">
         <span id="messagetype_csharp">
 <a href="#messagetype_csharp" style="color: inherit; text-decoration: inherit;">Message<wbr>Type</a>
@@ -13132,14 +11679,11 @@ not be encrypted. You can provide this secret via an environment variable, `FAST
         <span class="property-type">string</span>
     </dt>
     <dd>{{% md %}}How the message should be formatted. One of: classic (default), loggly, logplex or blank.
-{{% /md %}}</dd>
-</dl>
+{{% /md %}}</dd></dl>
 {{% /choosable %}}
 
 {{% choosable language go %}}
-<dl class="resources-properties">
-
-    <dt class="property-required"
+<dl class="resources-properties"><dt class="property-required"
             title="Required">
         <span id="name_go">
 <a href="#name_go" style="color: inherit; text-decoration: inherit;">Name</a>
@@ -13148,8 +11692,7 @@ not be encrypted. You can provide this secret via an environment variable, `FAST
         <span class="property-type">string</span>
     </dt>
     <dd>{{% md %}}The unique name of the Kinesis logging endpoint.
-{{% /md %}}</dd>
-    <dt class="property-required"
+{{% /md %}}</dd><dt class="property-required"
             title="Required">
         <span id="url_go">
 <a href="#url_go" style="color: inherit; text-decoration: inherit;">Url</a>
@@ -13158,8 +11701,7 @@ not be encrypted. You can provide this secret via an environment variable, `FAST
         <span class="property-type">string</span>
     </dt>
     <dd>{{% md %}}Your OpenStack auth url.
-{{% /md %}}</dd>
-    <dt class="property-optional"
+{{% /md %}}</dd><dt class="property-optional"
             title="Optional">
         <span id="messagetype_go">
 <a href="#messagetype_go" style="color: inherit; text-decoration: inherit;">Message<wbr>Type</a>
@@ -13168,14 +11710,11 @@ not be encrypted. You can provide this secret via an environment variable, `FAST
         <span class="property-type">string</span>
     </dt>
     <dd>{{% md %}}How the message should be formatted. One of: classic (default), loggly, logplex or blank.
-{{% /md %}}</dd>
-</dl>
+{{% /md %}}</dd></dl>
 {{% /choosable %}}
 
 {{% choosable language nodejs %}}
-<dl class="resources-properties">
-
-    <dt class="property-required"
+<dl class="resources-properties"><dt class="property-required"
             title="Required">
         <span id="name_nodejs">
 <a href="#name_nodejs" style="color: inherit; text-decoration: inherit;">name</a>
@@ -13184,8 +11723,7 @@ not be encrypted. You can provide this secret via an environment variable, `FAST
         <span class="property-type">string</span>
     </dt>
     <dd>{{% md %}}The unique name of the Kinesis logging endpoint.
-{{% /md %}}</dd>
-    <dt class="property-required"
+{{% /md %}}</dd><dt class="property-required"
             title="Required">
         <span id="url_nodejs">
 <a href="#url_nodejs" style="color: inherit; text-decoration: inherit;">url</a>
@@ -13194,8 +11732,7 @@ not be encrypted. You can provide this secret via an environment variable, `FAST
         <span class="property-type">string</span>
     </dt>
     <dd>{{% md %}}Your OpenStack auth url.
-{{% /md %}}</dd>
-    <dt class="property-optional"
+{{% /md %}}</dd><dt class="property-optional"
             title="Optional">
         <span id="messagetype_nodejs">
 <a href="#messagetype_nodejs" style="color: inherit; text-decoration: inherit;">message<wbr>Type</a>
@@ -13204,14 +11741,11 @@ not be encrypted. You can provide this secret via an environment variable, `FAST
         <span class="property-type">string</span>
     </dt>
     <dd>{{% md %}}How the message should be formatted. One of: classic (default), loggly, logplex or blank.
-{{% /md %}}</dd>
-</dl>
+{{% /md %}}</dd></dl>
 {{% /choosable %}}
 
 {{% choosable language python %}}
-<dl class="resources-properties">
-
-    <dt class="property-required"
+<dl class="resources-properties"><dt class="property-required"
             title="Required">
         <span id="name_python">
 <a href="#name_python" style="color: inherit; text-decoration: inherit;">name</a>
@@ -13220,8 +11754,7 @@ not be encrypted. You can provide this secret via an environment variable, `FAST
         <span class="property-type">str</span>
     </dt>
     <dd>{{% md %}}The unique name of the Kinesis logging endpoint.
-{{% /md %}}</dd>
-    <dt class="property-required"
+{{% /md %}}</dd><dt class="property-required"
             title="Required">
         <span id="url_python">
 <a href="#url_python" style="color: inherit; text-decoration: inherit;">url</a>
@@ -13230,8 +11763,7 @@ not be encrypted. You can provide this secret via an environment variable, `FAST
         <span class="property-type">str</span>
     </dt>
     <dd>{{% md %}}Your OpenStack auth url.
-{{% /md %}}</dd>
-    <dt class="property-optional"
+{{% /md %}}</dd><dt class="property-optional"
             title="Optional">
         <span id="message_type_python">
 <a href="#message_type_python" style="color: inherit; text-decoration: inherit;">message_<wbr>type</a>
@@ -13240,16 +11772,13 @@ not be encrypted. You can provide this secret via an environment variable, `FAST
         <span class="property-type">str</span>
     </dt>
     <dd>{{% md %}}How the message should be formatted. One of: classic (default), loggly, logplex or blank.
-{{% /md %}}</dd>
-</dl>
+{{% /md %}}</dd></dl>
 {{% /choosable %}}
 
 <h4 id="servicecomputesyslog">Service<wbr>Compute<wbr>Syslog</h4>
 
 {{% choosable language csharp %}}
-<dl class="resources-properties">
-
-    <dt class="property-required"
+<dl class="resources-properties"><dt class="property-required"
             title="Required">
         <span id="address_csharp">
 <a href="#address_csharp" style="color: inherit; text-decoration: inherit;">Address</a>
@@ -13258,8 +11787,7 @@ not be encrypted. You can provide this secret via an environment variable, `FAST
         <span class="property-type">string</span>
     </dt>
     <dd>{{% md %}}The SFTP address to stream logs to.
-{{% /md %}}</dd>
-    <dt class="property-required"
+{{% /md %}}</dd><dt class="property-required"
             title="Required">
         <span id="name_csharp">
 <a href="#name_csharp" style="color: inherit; text-decoration: inherit;">Name</a>
@@ -13268,8 +11796,7 @@ not be encrypted. You can provide this secret via an environment variable, `FAST
         <span class="property-type">string</span>
     </dt>
     <dd>{{% md %}}The unique name of the Kinesis logging endpoint.
-{{% /md %}}</dd>
-    <dt class="property-optional"
+{{% /md %}}</dd><dt class="property-optional"
             title="Optional">
         <span id="messagetype_csharp">
 <a href="#messagetype_csharp" style="color: inherit; text-decoration: inherit;">Message<wbr>Type</a>
@@ -13278,8 +11805,7 @@ not be encrypted. You can provide this secret via an environment variable, `FAST
         <span class="property-type">string</span>
     </dt>
     <dd>{{% md %}}How the message should be formatted. One of: classic (default), loggly, logplex or blank.
-{{% /md %}}</dd>
-    <dt class="property-optional"
+{{% /md %}}</dd><dt class="property-optional"
             title="Optional">
         <span id="port_csharp">
 <a href="#port_csharp" style="color: inherit; text-decoration: inherit;">Port</a>
@@ -13288,8 +11814,7 @@ not be encrypted. You can provide this secret via an environment variable, `FAST
         <span class="property-type">int</span>
     </dt>
     <dd>{{% md %}}The port the SFTP service listens on. (Default: `22`).
-{{% /md %}}</dd>
-    <dt class="property-optional"
+{{% /md %}}</dd><dt class="property-optional"
             title="Optional">
         <span id="tlscacert_csharp">
 <a href="#tlscacert_csharp" style="color: inherit; text-decoration: inherit;">Tls<wbr>Ca<wbr>Cert</a>
@@ -13298,8 +11823,7 @@ not be encrypted. You can provide this secret via an environment variable, `FAST
         <span class="property-type">string</span>
     </dt>
     <dd>{{% md %}}A secure certificate to authenticate the server with. Must be in PEM format.
-{{% /md %}}</dd>
-    <dt class="property-optional"
+{{% /md %}}</dd><dt class="property-optional"
             title="Optional">
         <span id="tlsclientcert_csharp">
 <a href="#tlsclientcert_csharp" style="color: inherit; text-decoration: inherit;">Tls<wbr>Client<wbr>Cert</a>
@@ -13308,8 +11832,7 @@ not be encrypted. You can provide this secret via an environment variable, `FAST
         <span class="property-type">string</span>
     </dt>
     <dd>{{% md %}}The client certificate used to make authenticated requests. Must be in PEM format.
-{{% /md %}}</dd>
-    <dt class="property-optional"
+{{% /md %}}</dd><dt class="property-optional"
             title="Optional">
         <span id="tlsclientkey_csharp">
 <a href="#tlsclientkey_csharp" style="color: inherit; text-decoration: inherit;">Tls<wbr>Client<wbr>Key</a>
@@ -13318,8 +11841,7 @@ not be encrypted. You can provide this secret via an environment variable, `FAST
         <span class="property-type">string</span>
     </dt>
     <dd>{{% md %}}The client private key used to make authenticated requests. Must be in PEM format.
-{{% /md %}}</dd>
-    <dt class="property-optional"
+{{% /md %}}</dd><dt class="property-optional"
             title="Optional">
         <span id="tlshostname_csharp">
 <a href="#tlshostname_csharp" style="color: inherit; text-decoration: inherit;">Tls<wbr>Hostname</a>
@@ -13328,8 +11850,7 @@ not be encrypted. You can provide this secret via an environment variable, `FAST
         <span class="property-type">string</span>
     </dt>
     <dd>{{% md %}}The hostname used to verify the server's certificate. It can either be the Common Name or a Subject Alternative Name (SAN).
-{{% /md %}}</dd>
-    <dt class="property-optional"
+{{% /md %}}</dd><dt class="property-optional"
             title="Optional">
         <span id="token_csharp">
 <a href="#token_csharp" style="color: inherit; text-decoration: inherit;">Token</a>
@@ -13338,8 +11859,7 @@ not be encrypted. You can provide this secret via an environment variable, `FAST
         <span class="property-type">string</span>
     </dt>
     <dd>{{% md %}}The data authentication token associated with this endpoint.
-{{% /md %}}</dd>
-    <dt class="property-optional"
+{{% /md %}}</dd><dt class="property-optional"
             title="Optional">
         <span id="usetls_csharp">
 <a href="#usetls_csharp" style="color: inherit; text-decoration: inherit;">Use<wbr>Tls</a>
@@ -13348,14 +11868,11 @@ not be encrypted. You can provide this secret via an environment variable, `FAST
         <span class="property-type">bool</span>
     </dt>
     <dd>{{% md %}}Whether to use TLS for secure logging. Can be either true or false.
-{{% /md %}}</dd>
-</dl>
+{{% /md %}}</dd></dl>
 {{% /choosable %}}
 
 {{% choosable language go %}}
-<dl class="resources-properties">
-
-    <dt class="property-required"
+<dl class="resources-properties"><dt class="property-required"
             title="Required">
         <span id="address_go">
 <a href="#address_go" style="color: inherit; text-decoration: inherit;">Address</a>
@@ -13364,8 +11881,7 @@ not be encrypted. You can provide this secret via an environment variable, `FAST
         <span class="property-type">string</span>
     </dt>
     <dd>{{% md %}}The SFTP address to stream logs to.
-{{% /md %}}</dd>
-    <dt class="property-required"
+{{% /md %}}</dd><dt class="property-required"
             title="Required">
         <span id="name_go">
 <a href="#name_go" style="color: inherit; text-decoration: inherit;">Name</a>
@@ -13374,8 +11890,7 @@ not be encrypted. You can provide this secret via an environment variable, `FAST
         <span class="property-type">string</span>
     </dt>
     <dd>{{% md %}}The unique name of the Kinesis logging endpoint.
-{{% /md %}}</dd>
-    <dt class="property-optional"
+{{% /md %}}</dd><dt class="property-optional"
             title="Optional">
         <span id="messagetype_go">
 <a href="#messagetype_go" style="color: inherit; text-decoration: inherit;">Message<wbr>Type</a>
@@ -13384,8 +11899,7 @@ not be encrypted. You can provide this secret via an environment variable, `FAST
         <span class="property-type">string</span>
     </dt>
     <dd>{{% md %}}How the message should be formatted. One of: classic (default), loggly, logplex or blank.
-{{% /md %}}</dd>
-    <dt class="property-optional"
+{{% /md %}}</dd><dt class="property-optional"
             title="Optional">
         <span id="port_go">
 <a href="#port_go" style="color: inherit; text-decoration: inherit;">Port</a>
@@ -13394,8 +11908,7 @@ not be encrypted. You can provide this secret via an environment variable, `FAST
         <span class="property-type">int</span>
     </dt>
     <dd>{{% md %}}The port the SFTP service listens on. (Default: `22`).
-{{% /md %}}</dd>
-    <dt class="property-optional"
+{{% /md %}}</dd><dt class="property-optional"
             title="Optional">
         <span id="tlscacert_go">
 <a href="#tlscacert_go" style="color: inherit; text-decoration: inherit;">Tls<wbr>Ca<wbr>Cert</a>
@@ -13404,8 +11917,7 @@ not be encrypted. You can provide this secret via an environment variable, `FAST
         <span class="property-type">string</span>
     </dt>
     <dd>{{% md %}}A secure certificate to authenticate the server with. Must be in PEM format.
-{{% /md %}}</dd>
-    <dt class="property-optional"
+{{% /md %}}</dd><dt class="property-optional"
             title="Optional">
         <span id="tlsclientcert_go">
 <a href="#tlsclientcert_go" style="color: inherit; text-decoration: inherit;">Tls<wbr>Client<wbr>Cert</a>
@@ -13414,8 +11926,7 @@ not be encrypted. You can provide this secret via an environment variable, `FAST
         <span class="property-type">string</span>
     </dt>
     <dd>{{% md %}}The client certificate used to make authenticated requests. Must be in PEM format.
-{{% /md %}}</dd>
-    <dt class="property-optional"
+{{% /md %}}</dd><dt class="property-optional"
             title="Optional">
         <span id="tlsclientkey_go">
 <a href="#tlsclientkey_go" style="color: inherit; text-decoration: inherit;">Tls<wbr>Client<wbr>Key</a>
@@ -13424,8 +11935,7 @@ not be encrypted. You can provide this secret via an environment variable, `FAST
         <span class="property-type">string</span>
     </dt>
     <dd>{{% md %}}The client private key used to make authenticated requests. Must be in PEM format.
-{{% /md %}}</dd>
-    <dt class="property-optional"
+{{% /md %}}</dd><dt class="property-optional"
             title="Optional">
         <span id="tlshostname_go">
 <a href="#tlshostname_go" style="color: inherit; text-decoration: inherit;">Tls<wbr>Hostname</a>
@@ -13434,8 +11944,7 @@ not be encrypted. You can provide this secret via an environment variable, `FAST
         <span class="property-type">string</span>
     </dt>
     <dd>{{% md %}}The hostname used to verify the server's certificate. It can either be the Common Name or a Subject Alternative Name (SAN).
-{{% /md %}}</dd>
-    <dt class="property-optional"
+{{% /md %}}</dd><dt class="property-optional"
             title="Optional">
         <span id="token_go">
 <a href="#token_go" style="color: inherit; text-decoration: inherit;">Token</a>
@@ -13444,8 +11953,7 @@ not be encrypted. You can provide this secret via an environment variable, `FAST
         <span class="property-type">string</span>
     </dt>
     <dd>{{% md %}}The data authentication token associated with this endpoint.
-{{% /md %}}</dd>
-    <dt class="property-optional"
+{{% /md %}}</dd><dt class="property-optional"
             title="Optional">
         <span id="usetls_go">
 <a href="#usetls_go" style="color: inherit; text-decoration: inherit;">Use<wbr>Tls</a>
@@ -13454,14 +11962,11 @@ not be encrypted. You can provide this secret via an environment variable, `FAST
         <span class="property-type">bool</span>
     </dt>
     <dd>{{% md %}}Whether to use TLS for secure logging. Can be either true or false.
-{{% /md %}}</dd>
-</dl>
+{{% /md %}}</dd></dl>
 {{% /choosable %}}
 
 {{% choosable language nodejs %}}
-<dl class="resources-properties">
-
-    <dt class="property-required"
+<dl class="resources-properties"><dt class="property-required"
             title="Required">
         <span id="address_nodejs">
 <a href="#address_nodejs" style="color: inherit; text-decoration: inherit;">address</a>
@@ -13470,8 +11975,7 @@ not be encrypted. You can provide this secret via an environment variable, `FAST
         <span class="property-type">string</span>
     </dt>
     <dd>{{% md %}}The SFTP address to stream logs to.
-{{% /md %}}</dd>
-    <dt class="property-required"
+{{% /md %}}</dd><dt class="property-required"
             title="Required">
         <span id="name_nodejs">
 <a href="#name_nodejs" style="color: inherit; text-decoration: inherit;">name</a>
@@ -13480,8 +11984,7 @@ not be encrypted. You can provide this secret via an environment variable, `FAST
         <span class="property-type">string</span>
     </dt>
     <dd>{{% md %}}The unique name of the Kinesis logging endpoint.
-{{% /md %}}</dd>
-    <dt class="property-optional"
+{{% /md %}}</dd><dt class="property-optional"
             title="Optional">
         <span id="messagetype_nodejs">
 <a href="#messagetype_nodejs" style="color: inherit; text-decoration: inherit;">message<wbr>Type</a>
@@ -13490,8 +11993,7 @@ not be encrypted. You can provide this secret via an environment variable, `FAST
         <span class="property-type">string</span>
     </dt>
     <dd>{{% md %}}How the message should be formatted. One of: classic (default), loggly, logplex or blank.
-{{% /md %}}</dd>
-    <dt class="property-optional"
+{{% /md %}}</dd><dt class="property-optional"
             title="Optional">
         <span id="port_nodejs">
 <a href="#port_nodejs" style="color: inherit; text-decoration: inherit;">port</a>
@@ -13500,8 +12002,7 @@ not be encrypted. You can provide this secret via an environment variable, `FAST
         <span class="property-type">number</span>
     </dt>
     <dd>{{% md %}}The port the SFTP service listens on. (Default: `22`).
-{{% /md %}}</dd>
-    <dt class="property-optional"
+{{% /md %}}</dd><dt class="property-optional"
             title="Optional">
         <span id="tlscacert_nodejs">
 <a href="#tlscacert_nodejs" style="color: inherit; text-decoration: inherit;">tls<wbr>Ca<wbr>Cert</a>
@@ -13510,8 +12011,7 @@ not be encrypted. You can provide this secret via an environment variable, `FAST
         <span class="property-type">string</span>
     </dt>
     <dd>{{% md %}}A secure certificate to authenticate the server with. Must be in PEM format.
-{{% /md %}}</dd>
-    <dt class="property-optional"
+{{% /md %}}</dd><dt class="property-optional"
             title="Optional">
         <span id="tlsclientcert_nodejs">
 <a href="#tlsclientcert_nodejs" style="color: inherit; text-decoration: inherit;">tls<wbr>Client<wbr>Cert</a>
@@ -13520,8 +12020,7 @@ not be encrypted. You can provide this secret via an environment variable, `FAST
         <span class="property-type">string</span>
     </dt>
     <dd>{{% md %}}The client certificate used to make authenticated requests. Must be in PEM format.
-{{% /md %}}</dd>
-    <dt class="property-optional"
+{{% /md %}}</dd><dt class="property-optional"
             title="Optional">
         <span id="tlsclientkey_nodejs">
 <a href="#tlsclientkey_nodejs" style="color: inherit; text-decoration: inherit;">tls<wbr>Client<wbr>Key</a>
@@ -13530,8 +12029,7 @@ not be encrypted. You can provide this secret via an environment variable, `FAST
         <span class="property-type">string</span>
     </dt>
     <dd>{{% md %}}The client private key used to make authenticated requests. Must be in PEM format.
-{{% /md %}}</dd>
-    <dt class="property-optional"
+{{% /md %}}</dd><dt class="property-optional"
             title="Optional">
         <span id="tlshostname_nodejs">
 <a href="#tlshostname_nodejs" style="color: inherit; text-decoration: inherit;">tls<wbr>Hostname</a>
@@ -13540,8 +12038,7 @@ not be encrypted. You can provide this secret via an environment variable, `FAST
         <span class="property-type">string</span>
     </dt>
     <dd>{{% md %}}The hostname used to verify the server's certificate. It can either be the Common Name or a Subject Alternative Name (SAN).
-{{% /md %}}</dd>
-    <dt class="property-optional"
+{{% /md %}}</dd><dt class="property-optional"
             title="Optional">
         <span id="token_nodejs">
 <a href="#token_nodejs" style="color: inherit; text-decoration: inherit;">token</a>
@@ -13550,8 +12047,7 @@ not be encrypted. You can provide this secret via an environment variable, `FAST
         <span class="property-type">string</span>
     </dt>
     <dd>{{% md %}}The data authentication token associated with this endpoint.
-{{% /md %}}</dd>
-    <dt class="property-optional"
+{{% /md %}}</dd><dt class="property-optional"
             title="Optional">
         <span id="usetls_nodejs">
 <a href="#usetls_nodejs" style="color: inherit; text-decoration: inherit;">use<wbr>Tls</a>
@@ -13560,14 +12056,11 @@ not be encrypted. You can provide this secret via an environment variable, `FAST
         <span class="property-type">boolean</span>
     </dt>
     <dd>{{% md %}}Whether to use TLS for secure logging. Can be either true or false.
-{{% /md %}}</dd>
-</dl>
+{{% /md %}}</dd></dl>
 {{% /choosable %}}
 
 {{% choosable language python %}}
-<dl class="resources-properties">
-
-    <dt class="property-required"
+<dl class="resources-properties"><dt class="property-required"
             title="Required">
         <span id="address_python">
 <a href="#address_python" style="color: inherit; text-decoration: inherit;">address</a>
@@ -13576,8 +12069,7 @@ not be encrypted. You can provide this secret via an environment variable, `FAST
         <span class="property-type">str</span>
     </dt>
     <dd>{{% md %}}The SFTP address to stream logs to.
-{{% /md %}}</dd>
-    <dt class="property-required"
+{{% /md %}}</dd><dt class="property-required"
             title="Required">
         <span id="name_python">
 <a href="#name_python" style="color: inherit; text-decoration: inherit;">name</a>
@@ -13586,8 +12078,7 @@ not be encrypted. You can provide this secret via an environment variable, `FAST
         <span class="property-type">str</span>
     </dt>
     <dd>{{% md %}}The unique name of the Kinesis logging endpoint.
-{{% /md %}}</dd>
-    <dt class="property-optional"
+{{% /md %}}</dd><dt class="property-optional"
             title="Optional">
         <span id="message_type_python">
 <a href="#message_type_python" style="color: inherit; text-decoration: inherit;">message_<wbr>type</a>
@@ -13596,8 +12087,7 @@ not be encrypted. You can provide this secret via an environment variable, `FAST
         <span class="property-type">str</span>
     </dt>
     <dd>{{% md %}}How the message should be formatted. One of: classic (default), loggly, logplex or blank.
-{{% /md %}}</dd>
-    <dt class="property-optional"
+{{% /md %}}</dd><dt class="property-optional"
             title="Optional">
         <span id="port_python">
 <a href="#port_python" style="color: inherit; text-decoration: inherit;">port</a>
@@ -13606,8 +12096,7 @@ not be encrypted. You can provide this secret via an environment variable, `FAST
         <span class="property-type">int</span>
     </dt>
     <dd>{{% md %}}The port the SFTP service listens on. (Default: `22`).
-{{% /md %}}</dd>
-    <dt class="property-optional"
+{{% /md %}}</dd><dt class="property-optional"
             title="Optional">
         <span id="tls_ca_cert_python">
 <a href="#tls_ca_cert_python" style="color: inherit; text-decoration: inherit;">tls_<wbr>ca_<wbr>cert</a>
@@ -13616,8 +12105,7 @@ not be encrypted. You can provide this secret via an environment variable, `FAST
         <span class="property-type">str</span>
     </dt>
     <dd>{{% md %}}A secure certificate to authenticate the server with. Must be in PEM format.
-{{% /md %}}</dd>
-    <dt class="property-optional"
+{{% /md %}}</dd><dt class="property-optional"
             title="Optional">
         <span id="tls_client_cert_python">
 <a href="#tls_client_cert_python" style="color: inherit; text-decoration: inherit;">tls_<wbr>client_<wbr>cert</a>
@@ -13626,8 +12114,7 @@ not be encrypted. You can provide this secret via an environment variable, `FAST
         <span class="property-type">str</span>
     </dt>
     <dd>{{% md %}}The client certificate used to make authenticated requests. Must be in PEM format.
-{{% /md %}}</dd>
-    <dt class="property-optional"
+{{% /md %}}</dd><dt class="property-optional"
             title="Optional">
         <span id="tls_client_key_python">
 <a href="#tls_client_key_python" style="color: inherit; text-decoration: inherit;">tls_<wbr>client_<wbr>key</a>
@@ -13636,8 +12123,7 @@ not be encrypted. You can provide this secret via an environment variable, `FAST
         <span class="property-type">str</span>
     </dt>
     <dd>{{% md %}}The client private key used to make authenticated requests. Must be in PEM format.
-{{% /md %}}</dd>
-    <dt class="property-optional"
+{{% /md %}}</dd><dt class="property-optional"
             title="Optional">
         <span id="tls_hostname_python">
 <a href="#tls_hostname_python" style="color: inherit; text-decoration: inherit;">tls_<wbr>hostname</a>
@@ -13646,8 +12132,7 @@ not be encrypted. You can provide this secret via an environment variable, `FAST
         <span class="property-type">str</span>
     </dt>
     <dd>{{% md %}}The hostname used to verify the server's certificate. It can either be the Common Name or a Subject Alternative Name (SAN).
-{{% /md %}}</dd>
-    <dt class="property-optional"
+{{% /md %}}</dd><dt class="property-optional"
             title="Optional">
         <span id="token_python">
 <a href="#token_python" style="color: inherit; text-decoration: inherit;">token</a>
@@ -13656,8 +12141,7 @@ not be encrypted. You can provide this secret via an environment variable, `FAST
         <span class="property-type">str</span>
     </dt>
     <dd>{{% md %}}The data authentication token associated with this endpoint.
-{{% /md %}}</dd>
-    <dt class="property-optional"
+{{% /md %}}</dd><dt class="property-optional"
             title="Optional">
         <span id="use_tls_python">
 <a href="#use_tls_python" style="color: inherit; text-decoration: inherit;">use_<wbr>tls</a>
@@ -13666,8 +12150,7 @@ not be encrypted. You can provide this secret via an environment variable, `FAST
         <span class="property-type">bool</span>
     </dt>
     <dd>{{% md %}}Whether to use TLS for secure logging. Can be either true or false.
-{{% /md %}}</dd>
-</dl>
+{{% /md %}}</dd></dl>
 {{% /choosable %}}
 ## Import
 
@@ -13688,6 +12171,6 @@ Fastly Service can be imported using their service ID, e.g.
 	<dt>License</dt>
 	<dd>Apache-2.0</dd>
 	<dt>Notes</dt>
-	<dd>This Pulumi package is based on the [`fastly` Terraform Provider](https://github.com/fastly/terraform-provider-fastly).</dd>
+	<dd>{{% md %}}This Pulumi package is based on the [`fastly` Terraform Provider](https://github.com/fastly/terraform-provider-fastly).{{% /md %}}</dd>
 </dl>
 

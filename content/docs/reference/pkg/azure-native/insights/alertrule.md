@@ -14,11 +14,17 @@ The alert rule resource.
 API Version: 2016-03-01.
 
 {{% examples %}}
+
 ## Example Usage
 
 {{< chooser language "typescript,python,go,csharp" / >}}
+
+
 ### Create or update an alert rule
-{{% example csharp %}}
+
+
+{{< example csharp >}}
+
 ```csharp
 using Pulumi;
 using AzureNative = Pulumi.AzureNative;
@@ -58,13 +64,19 @@ class MyStack : Stack
 
 ```
 
-{{% /example %}}
 
-{{% example go %}}
+{{< /example >}}
+
+
+{{< example go >}}
+
 Coming soon!
-{{% /example %}}
 
-{{% example python %}}
+{{< /example >}}
+
+
+{{< example python >}}
+
 
 ```python
 import pulumi
@@ -94,9 +106,12 @@ alert_rule = azure_native.insights.AlertRule("alertRule",
 
 ```
 
-{{% /example %}}
 
-{{% example typescript %}}
+{{< /example >}}
+
+
+{{< example typescript >}}
+
 
 ```typescript
 import * as pulumi from "@pulumi/pulumi";
@@ -127,9 +142,16 @@ const alertRule = new azure_native.insights.AlertRule("alertRule", {
 
 ```
 
-{{% /example %}}
+
+{{< /example >}}
+
+
+
+
 
 {{% /examples %}}
+
+
 
 
 ## Create a AlertRule Resource {#create}
@@ -154,9 +176,7 @@ const alertRule = new azure_native.insights.AlertRule("alertRule", {
 
 {{% choosable language nodejs %}}
 
-<dl class="resources-properties">
-  
-    <dt
+<dl class="resources-properties"><dt
         class="property-required" title="Required">
         <span>name</span>
         <span class="property-indicator"></span>
@@ -164,9 +184,7 @@ const alertRule = new azure_native.insights.AlertRule("alertRule", {
     </dt>
     <dd>
       The unique name of the resource.
-    </dd>
-  
-    <dt
+    </dd><dt
         class="property-required" title="Required">
         <span>args</span>
         <span class="property-indicator"></span>
@@ -174,9 +192,7 @@ const alertRule = new azure_native.insights.AlertRule("alertRule", {
     </dt>
     <dd>
       The arguments to resource properties.
-    </dd>
-  
-    <dt
+    </dd><dt
         class="property-optional" title="Optional">
         <span>opts</span>
         <span class="property-indicator"></span>
@@ -184,10 +200,7 @@ const alertRule = new azure_native.insights.AlertRule("alertRule", {
     </dt>
     <dd>
       Bag of options to control resource&#39;s behavior.
-    </dd>
-  
-
-</dl>
+    </dd></dl>
 
 {{% /choosable %}}
 
@@ -213,9 +226,7 @@ const alertRule = new azure_native.insights.AlertRule("alertRule", {
 
 {{% choosable language go %}}
 
-<dl class="resources-properties">
-  
-    <dt
+<dl class="resources-properties"><dt
         class="property-optional" title="Optional">
         <span>ctx</span>
         <span class="property-indicator"></span>
@@ -223,9 +234,7 @@ const alertRule = new azure_native.insights.AlertRule("alertRule", {
     </dt>
     <dd>
       Context object for the current deployment.
-    </dd>
-  
-    <dt
+    </dd><dt
         class="property-required" title="Required">
         <span>name</span>
         <span class="property-indicator"></span>
@@ -233,9 +242,7 @@ const alertRule = new azure_native.insights.AlertRule("alertRule", {
     </dt>
     <dd>
       The unique name of the resource.
-    </dd>
-  
-    <dt
+    </dd><dt
         class="property-required" title="Required">
         <span>args</span>
         <span class="property-indicator"></span>
@@ -243,9 +250,7 @@ const alertRule = new azure_native.insights.AlertRule("alertRule", {
     </dt>
     <dd>
       The arguments to resource properties.
-    </dd>
-  
-    <dt
+    </dd><dt
         class="property-optional" title="Optional">
         <span>opts</span>
         <span class="property-indicator"></span>
@@ -253,18 +258,13 @@ const alertRule = new azure_native.insights.AlertRule("alertRule", {
     </dt>
     <dd>
       Bag of options to control resource&#39;s behavior.
-    </dd>
-  
-
-</dl>
+    </dd></dl>
 
 {{% /choosable %}}
 
 {{% choosable language csharp %}}
 
-<dl class="resources-properties">
-  
-    <dt
+<dl class="resources-properties"><dt
         class="property-required" title="Required">
         <span>name</span>
         <span class="property-indicator"></span>
@@ -272,9 +272,7 @@ const alertRule = new azure_native.insights.AlertRule("alertRule", {
     </dt>
     <dd>
       The unique name of the resource.
-    </dd>
-  
-    <dt
+    </dd><dt
         class="property-required" title="Required">
         <span>args</span>
         <span class="property-indicator"></span>
@@ -282,9 +280,7 @@ const alertRule = new azure_native.insights.AlertRule("alertRule", {
     </dt>
     <dd>
       The arguments to resource properties.
-    </dd>
-  
-    <dt
+    </dd><dt
         class="property-optional" title="Optional">
         <span>opts</span>
         <span class="property-indicator"></span>
@@ -292,10 +288,7 @@ const alertRule = new azure_native.insights.AlertRule("alertRule", {
     </dt>
     <dd>
       Bag of options to control resource&#39;s behavior.
-    </dd>
-  
-
-</dl>
+    </dd></dl>
 
 {{% /choosable %}}
 
@@ -310,9 +303,7 @@ The AlertRule resource accepts the following [input]({{< relref "/docs/intro/con
 
 
 {{% choosable language csharp %}}
-<dl class="resources-properties">
-
-    <dt class="property-required"
+<dl class="resources-properties"><dt class="property-required"
             title="Required">
         <span id="condition_csharp">
 <a href="#condition_csharp" style="color: inherit; text-decoration: inherit;">Condition</a>
@@ -320,8 +311,7 @@ The AlertRule resource accepts the following [input]({{< relref "/docs/intro/con
         <span class="property-indicator"></span>
         <span class="property-type"><a href="#locationthresholdrulecondition">Pulumi.<wbr>Azure<wbr>Native.<wbr>Insights.<wbr>Inputs.<wbr>Location<wbr>Threshold<wbr>Rule<wbr>Condition<wbr>Args</a> | <a href="#managementeventrulecondition">Pulumi.<wbr>Azure<wbr>Native.<wbr>Insights.<wbr>Inputs.<wbr>Management<wbr>Event<wbr>Rule<wbr>Condition<wbr>Args</a> | <a href="#thresholdrulecondition">Pulumi.<wbr>Azure<wbr>Native.<wbr>Insights.<wbr>Inputs.<wbr>Threshold<wbr>Rule<wbr>Condition<wbr>Args</a></span>
     </dt>
-    <dd>{{% md %}}the condition that results in the alert rule being activated.{{% /md %}}</dd>
-    <dt class="property-required"
+    <dd>{{% md %}}the condition that results in the alert rule being activated.{{% /md %}}</dd><dt class="property-required"
             title="Required">
         <span id="isenabled_csharp">
 <a href="#isenabled_csharp" style="color: inherit; text-decoration: inherit;">Is<wbr>Enabled</a>
@@ -329,8 +319,7 @@ The AlertRule resource accepts the following [input]({{< relref "/docs/intro/con
         <span class="property-indicator"></span>
         <span class="property-type">bool</span>
     </dt>
-    <dd>{{% md %}}the flag that indicates whether the alert rule is enabled.{{% /md %}}</dd>
-    <dt class="property-required"
+    <dd>{{% md %}}the flag that indicates whether the alert rule is enabled.{{% /md %}}</dd><dt class="property-required"
             title="Required">
         <span id="name_csharp">
 <a href="#name_csharp" style="color: inherit; text-decoration: inherit;">Name</a>
@@ -338,8 +327,7 @@ The AlertRule resource accepts the following [input]({{< relref "/docs/intro/con
         <span class="property-indicator"></span>
         <span class="property-type">string</span>
     </dt>
-    <dd>{{% md %}}the name of the alert rule.{{% /md %}}</dd>
-    <dt class="property-required"
+    <dd>{{% md %}}the name of the alert rule.{{% /md %}}</dd><dt class="property-required"
             title="Required">
         <span id="resourcegroupname_csharp">
 <a href="#resourcegroupname_csharp" style="color: inherit; text-decoration: inherit;">Resource<wbr>Group<wbr>Name</a>
@@ -347,8 +335,7 @@ The AlertRule resource accepts the following [input]({{< relref "/docs/intro/con
         <span class="property-indicator"></span>
         <span class="property-type">string</span>
     </dt>
-    <dd>{{% md %}}The name of the resource group.{{% /md %}}</dd>
-    <dt class="property-optional"
+    <dd>{{% md %}}The name of the resource group.{{% /md %}}</dd><dt class="property-optional"
             title="Optional">
         <span id="action_csharp">
 <a href="#action_csharp" style="color: inherit; text-decoration: inherit;">Action</a>
@@ -356,8 +343,7 @@ The AlertRule resource accepts the following [input]({{< relref "/docs/intro/con
         <span class="property-indicator"></span>
         <span class="property-type"><a href="#ruleemailaction">Pulumi.<wbr>Azure<wbr>Native.<wbr>Insights.<wbr>Inputs.<wbr>Rule<wbr>Email<wbr>Action<wbr>Args</a> | <a href="#rulewebhookaction">Pulumi.<wbr>Azure<wbr>Native.<wbr>Insights.<wbr>Inputs.<wbr>Rule<wbr>Webhook<wbr>Action<wbr>Args</a></span>
     </dt>
-    <dd>{{% md %}}action that is performed when the alert rule becomes active, and when an alert condition is resolved.{{% /md %}}</dd>
-    <dt class="property-optional"
+    <dd>{{% md %}}action that is performed when the alert rule becomes active, and when an alert condition is resolved.{{% /md %}}</dd><dt class="property-optional"
             title="Optional">
         <span id="actions_csharp">
 <a href="#actions_csharp" style="color: inherit; text-decoration: inherit;">Actions</a>
@@ -365,8 +351,7 @@ The AlertRule resource accepts the following [input]({{< relref "/docs/intro/con
         <span class="property-indicator"></span>
         <span class="property-type">List&lt;Union&lt;Pulumi.<wbr>Azure<wbr>Native.<wbr>Insights.<wbr>Inputs.<wbr>Rule<wbr>Email<wbr>Action<wbr>Args, Pulumi.<wbr>Azure<wbr>Native.<wbr>Insights.<wbr>Inputs.<wbr>Rule<wbr>Webhook<wbr>Action<wbr>Args&gt;&gt;</span>
     </dt>
-    <dd>{{% md %}}the array of actions that are performed when the alert rule becomes active, and when an alert condition is resolved.{{% /md %}}</dd>
-    <dt class="property-optional"
+    <dd>{{% md %}}the array of actions that are performed when the alert rule becomes active, and when an alert condition is resolved.{{% /md %}}</dd><dt class="property-optional"
             title="Optional">
         <span id="description_csharp">
 <a href="#description_csharp" style="color: inherit; text-decoration: inherit;">Description</a>
@@ -374,8 +359,7 @@ The AlertRule resource accepts the following [input]({{< relref "/docs/intro/con
         <span class="property-indicator"></span>
         <span class="property-type">string</span>
     </dt>
-    <dd>{{% md %}}the description of the alert rule that will be included in the alert email.{{% /md %}}</dd>
-    <dt class="property-optional"
+    <dd>{{% md %}}the description of the alert rule that will be included in the alert email.{{% /md %}}</dd><dt class="property-optional"
             title="Optional">
         <span id="location_csharp">
 <a href="#location_csharp" style="color: inherit; text-decoration: inherit;">Location</a>
@@ -383,8 +367,7 @@ The AlertRule resource accepts the following [input]({{< relref "/docs/intro/con
         <span class="property-indicator"></span>
         <span class="property-type">string</span>
     </dt>
-    <dd>{{% md %}}Resource location{{% /md %}}</dd>
-    <dt class="property-optional"
+    <dd>{{% md %}}Resource location{{% /md %}}</dd><dt class="property-optional"
             title="Optional">
         <span id="provisioningstate_csharp">
 <a href="#provisioningstate_csharp" style="color: inherit; text-decoration: inherit;">Provisioning<wbr>State</a>
@@ -392,8 +375,7 @@ The AlertRule resource accepts the following [input]({{< relref "/docs/intro/con
         <span class="property-indicator"></span>
         <span class="property-type">string</span>
     </dt>
-    <dd>{{% md %}}the provisioning state.{{% /md %}}</dd>
-    <dt class="property-optional"
+    <dd>{{% md %}}the provisioning state.{{% /md %}}</dd><dt class="property-optional"
             title="Optional">
         <span id="rulename_csharp">
 <a href="#rulename_csharp" style="color: inherit; text-decoration: inherit;">Rule<wbr>Name</a>
@@ -401,8 +383,7 @@ The AlertRule resource accepts the following [input]({{< relref "/docs/intro/con
         <span class="property-indicator"></span>
         <span class="property-type">string</span>
     </dt>
-    <dd>{{% md %}}The name of the rule.{{% /md %}}</dd>
-    <dt class="property-optional"
+    <dd>{{% md %}}The name of the rule.{{% /md %}}</dd><dt class="property-optional"
             title="Optional">
         <span id="tags_csharp">
 <a href="#tags_csharp" style="color: inherit; text-decoration: inherit;">Tags</a>
@@ -410,14 +391,11 @@ The AlertRule resource accepts the following [input]({{< relref "/docs/intro/con
         <span class="property-indicator"></span>
         <span class="property-type">Dictionary&lt;string, string&gt;</span>
     </dt>
-    <dd>{{% md %}}Resource tags{{% /md %}}</dd>
-</dl>
+    <dd>{{% md %}}Resource tags{{% /md %}}</dd></dl>
 {{% /choosable %}}
 
 {{% choosable language go %}}
-<dl class="resources-properties">
-
-    <dt class="property-required"
+<dl class="resources-properties"><dt class="property-required"
             title="Required">
         <span id="condition_go">
 <a href="#condition_go" style="color: inherit; text-decoration: inherit;">Condition</a>
@@ -425,8 +403,7 @@ The AlertRule resource accepts the following [input]({{< relref "/docs/intro/con
         <span class="property-indicator"></span>
         <span class="property-type"><a href="#locationthresholdrulecondition">Location<wbr>Threshold<wbr>Rule<wbr>Condition</a> | <a href="#managementeventrulecondition">Management<wbr>Event<wbr>Rule<wbr>Condition</a> | <a href="#thresholdrulecondition">Threshold<wbr>Rule<wbr>Condition</a></span>
     </dt>
-    <dd>{{% md %}}the condition that results in the alert rule being activated.{{% /md %}}</dd>
-    <dt class="property-required"
+    <dd>{{% md %}}the condition that results in the alert rule being activated.{{% /md %}}</dd><dt class="property-required"
             title="Required">
         <span id="isenabled_go">
 <a href="#isenabled_go" style="color: inherit; text-decoration: inherit;">Is<wbr>Enabled</a>
@@ -434,8 +411,7 @@ The AlertRule resource accepts the following [input]({{< relref "/docs/intro/con
         <span class="property-indicator"></span>
         <span class="property-type">bool</span>
     </dt>
-    <dd>{{% md %}}the flag that indicates whether the alert rule is enabled.{{% /md %}}</dd>
-    <dt class="property-required"
+    <dd>{{% md %}}the flag that indicates whether the alert rule is enabled.{{% /md %}}</dd><dt class="property-required"
             title="Required">
         <span id="name_go">
 <a href="#name_go" style="color: inherit; text-decoration: inherit;">Name</a>
@@ -443,8 +419,7 @@ The AlertRule resource accepts the following [input]({{< relref "/docs/intro/con
         <span class="property-indicator"></span>
         <span class="property-type">string</span>
     </dt>
-    <dd>{{% md %}}the name of the alert rule.{{% /md %}}</dd>
-    <dt class="property-required"
+    <dd>{{% md %}}the name of the alert rule.{{% /md %}}</dd><dt class="property-required"
             title="Required">
         <span id="resourcegroupname_go">
 <a href="#resourcegroupname_go" style="color: inherit; text-decoration: inherit;">Resource<wbr>Group<wbr>Name</a>
@@ -452,8 +427,7 @@ The AlertRule resource accepts the following [input]({{< relref "/docs/intro/con
         <span class="property-indicator"></span>
         <span class="property-type">string</span>
     </dt>
-    <dd>{{% md %}}The name of the resource group.{{% /md %}}</dd>
-    <dt class="property-optional"
+    <dd>{{% md %}}The name of the resource group.{{% /md %}}</dd><dt class="property-optional"
             title="Optional">
         <span id="action_go">
 <a href="#action_go" style="color: inherit; text-decoration: inherit;">Action</a>
@@ -461,8 +435,7 @@ The AlertRule resource accepts the following [input]({{< relref "/docs/intro/con
         <span class="property-indicator"></span>
         <span class="property-type"><a href="#ruleemailaction">Rule<wbr>Email<wbr>Action</a> | <a href="#rulewebhookaction">Rule<wbr>Webhook<wbr>Action</a></span>
     </dt>
-    <dd>{{% md %}}action that is performed when the alert rule becomes active, and when an alert condition is resolved.{{% /md %}}</dd>
-    <dt class="property-optional"
+    <dd>{{% md %}}action that is performed when the alert rule becomes active, and when an alert condition is resolved.{{% /md %}}</dd><dt class="property-optional"
             title="Optional">
         <span id="actions_go">
 <a href="#actions_go" style="color: inherit; text-decoration: inherit;">Actions</a>
@@ -470,8 +443,7 @@ The AlertRule resource accepts the following [input]({{< relref "/docs/intro/con
         <span class="property-indicator"></span>
         <span class="property-type">[]interface{}</span>
     </dt>
-    <dd>{{% md %}}the array of actions that are performed when the alert rule becomes active, and when an alert condition is resolved.{{% /md %}}</dd>
-    <dt class="property-optional"
+    <dd>{{% md %}}the array of actions that are performed when the alert rule becomes active, and when an alert condition is resolved.{{% /md %}}</dd><dt class="property-optional"
             title="Optional">
         <span id="description_go">
 <a href="#description_go" style="color: inherit; text-decoration: inherit;">Description</a>
@@ -479,8 +451,7 @@ The AlertRule resource accepts the following [input]({{< relref "/docs/intro/con
         <span class="property-indicator"></span>
         <span class="property-type">string</span>
     </dt>
-    <dd>{{% md %}}the description of the alert rule that will be included in the alert email.{{% /md %}}</dd>
-    <dt class="property-optional"
+    <dd>{{% md %}}the description of the alert rule that will be included in the alert email.{{% /md %}}</dd><dt class="property-optional"
             title="Optional">
         <span id="location_go">
 <a href="#location_go" style="color: inherit; text-decoration: inherit;">Location</a>
@@ -488,8 +459,7 @@ The AlertRule resource accepts the following [input]({{< relref "/docs/intro/con
         <span class="property-indicator"></span>
         <span class="property-type">string</span>
     </dt>
-    <dd>{{% md %}}Resource location{{% /md %}}</dd>
-    <dt class="property-optional"
+    <dd>{{% md %}}Resource location{{% /md %}}</dd><dt class="property-optional"
             title="Optional">
         <span id="provisioningstate_go">
 <a href="#provisioningstate_go" style="color: inherit; text-decoration: inherit;">Provisioning<wbr>State</a>
@@ -497,8 +467,7 @@ The AlertRule resource accepts the following [input]({{< relref "/docs/intro/con
         <span class="property-indicator"></span>
         <span class="property-type">string</span>
     </dt>
-    <dd>{{% md %}}the provisioning state.{{% /md %}}</dd>
-    <dt class="property-optional"
+    <dd>{{% md %}}the provisioning state.{{% /md %}}</dd><dt class="property-optional"
             title="Optional">
         <span id="rulename_go">
 <a href="#rulename_go" style="color: inherit; text-decoration: inherit;">Rule<wbr>Name</a>
@@ -506,8 +475,7 @@ The AlertRule resource accepts the following [input]({{< relref "/docs/intro/con
         <span class="property-indicator"></span>
         <span class="property-type">string</span>
     </dt>
-    <dd>{{% md %}}The name of the rule.{{% /md %}}</dd>
-    <dt class="property-optional"
+    <dd>{{% md %}}The name of the rule.{{% /md %}}</dd><dt class="property-optional"
             title="Optional">
         <span id="tags_go">
 <a href="#tags_go" style="color: inherit; text-decoration: inherit;">Tags</a>
@@ -515,14 +483,11 @@ The AlertRule resource accepts the following [input]({{< relref "/docs/intro/con
         <span class="property-indicator"></span>
         <span class="property-type">map[string]string</span>
     </dt>
-    <dd>{{% md %}}Resource tags{{% /md %}}</dd>
-</dl>
+    <dd>{{% md %}}Resource tags{{% /md %}}</dd></dl>
 {{% /choosable %}}
 
 {{% choosable language nodejs %}}
-<dl class="resources-properties">
-
-    <dt class="property-required"
+<dl class="resources-properties"><dt class="property-required"
             title="Required">
         <span id="condition_nodejs">
 <a href="#condition_nodejs" style="color: inherit; text-decoration: inherit;">condition</a>
@@ -530,8 +495,7 @@ The AlertRule resource accepts the following [input]({{< relref "/docs/intro/con
         <span class="property-indicator"></span>
         <span class="property-type"><a href="#locationthresholdrulecondition">Location<wbr>Threshold<wbr>Rule<wbr>Condition</a> | <a href="#managementeventrulecondition">Management<wbr>Event<wbr>Rule<wbr>Condition</a> | <a href="#thresholdrulecondition">Threshold<wbr>Rule<wbr>Condition</a></span>
     </dt>
-    <dd>{{% md %}}the condition that results in the alert rule being activated.{{% /md %}}</dd>
-    <dt class="property-required"
+    <dd>{{% md %}}the condition that results in the alert rule being activated.{{% /md %}}</dd><dt class="property-required"
             title="Required">
         <span id="isenabled_nodejs">
 <a href="#isenabled_nodejs" style="color: inherit; text-decoration: inherit;">is<wbr>Enabled</a>
@@ -539,8 +503,7 @@ The AlertRule resource accepts the following [input]({{< relref "/docs/intro/con
         <span class="property-indicator"></span>
         <span class="property-type">boolean</span>
     </dt>
-    <dd>{{% md %}}the flag that indicates whether the alert rule is enabled.{{% /md %}}</dd>
-    <dt class="property-required"
+    <dd>{{% md %}}the flag that indicates whether the alert rule is enabled.{{% /md %}}</dd><dt class="property-required"
             title="Required">
         <span id="name_nodejs">
 <a href="#name_nodejs" style="color: inherit; text-decoration: inherit;">name</a>
@@ -548,8 +511,7 @@ The AlertRule resource accepts the following [input]({{< relref "/docs/intro/con
         <span class="property-indicator"></span>
         <span class="property-type">string</span>
     </dt>
-    <dd>{{% md %}}the name of the alert rule.{{% /md %}}</dd>
-    <dt class="property-required"
+    <dd>{{% md %}}the name of the alert rule.{{% /md %}}</dd><dt class="property-required"
             title="Required">
         <span id="resourcegroupname_nodejs">
 <a href="#resourcegroupname_nodejs" style="color: inherit; text-decoration: inherit;">resource<wbr>Group<wbr>Name</a>
@@ -557,8 +519,7 @@ The AlertRule resource accepts the following [input]({{< relref "/docs/intro/con
         <span class="property-indicator"></span>
         <span class="property-type">string</span>
     </dt>
-    <dd>{{% md %}}The name of the resource group.{{% /md %}}</dd>
-    <dt class="property-optional"
+    <dd>{{% md %}}The name of the resource group.{{% /md %}}</dd><dt class="property-optional"
             title="Optional">
         <span id="action_nodejs">
 <a href="#action_nodejs" style="color: inherit; text-decoration: inherit;">action</a>
@@ -566,8 +527,7 @@ The AlertRule resource accepts the following [input]({{< relref "/docs/intro/con
         <span class="property-indicator"></span>
         <span class="property-type"><a href="#ruleemailaction">Rule<wbr>Email<wbr>Action</a> | <a href="#rulewebhookaction">Rule<wbr>Webhook<wbr>Action</a></span>
     </dt>
-    <dd>{{% md %}}action that is performed when the alert rule becomes active, and when an alert condition is resolved.{{% /md %}}</dd>
-    <dt class="property-optional"
+    <dd>{{% md %}}action that is performed when the alert rule becomes active, and when an alert condition is resolved.{{% /md %}}</dd><dt class="property-optional"
             title="Optional">
         <span id="actions_nodejs">
 <a href="#actions_nodejs" style="color: inherit; text-decoration: inherit;">actions</a>
@@ -575,8 +535,7 @@ The AlertRule resource accepts the following [input]({{< relref "/docs/intro/con
         <span class="property-indicator"></span>
         <span class="property-type">Rule<wbr>Email<wbr>Action | Rule<wbr>Webhook<wbr>Action[]</span>
     </dt>
-    <dd>{{% md %}}the array of actions that are performed when the alert rule becomes active, and when an alert condition is resolved.{{% /md %}}</dd>
-    <dt class="property-optional"
+    <dd>{{% md %}}the array of actions that are performed when the alert rule becomes active, and when an alert condition is resolved.{{% /md %}}</dd><dt class="property-optional"
             title="Optional">
         <span id="description_nodejs">
 <a href="#description_nodejs" style="color: inherit; text-decoration: inherit;">description</a>
@@ -584,8 +543,7 @@ The AlertRule resource accepts the following [input]({{< relref "/docs/intro/con
         <span class="property-indicator"></span>
         <span class="property-type">string</span>
     </dt>
-    <dd>{{% md %}}the description of the alert rule that will be included in the alert email.{{% /md %}}</dd>
-    <dt class="property-optional"
+    <dd>{{% md %}}the description of the alert rule that will be included in the alert email.{{% /md %}}</dd><dt class="property-optional"
             title="Optional">
         <span id="location_nodejs">
 <a href="#location_nodejs" style="color: inherit; text-decoration: inherit;">location</a>
@@ -593,8 +551,7 @@ The AlertRule resource accepts the following [input]({{< relref "/docs/intro/con
         <span class="property-indicator"></span>
         <span class="property-type">string</span>
     </dt>
-    <dd>{{% md %}}Resource location{{% /md %}}</dd>
-    <dt class="property-optional"
+    <dd>{{% md %}}Resource location{{% /md %}}</dd><dt class="property-optional"
             title="Optional">
         <span id="provisioningstate_nodejs">
 <a href="#provisioningstate_nodejs" style="color: inherit; text-decoration: inherit;">provisioning<wbr>State</a>
@@ -602,8 +559,7 @@ The AlertRule resource accepts the following [input]({{< relref "/docs/intro/con
         <span class="property-indicator"></span>
         <span class="property-type">string</span>
     </dt>
-    <dd>{{% md %}}the provisioning state.{{% /md %}}</dd>
-    <dt class="property-optional"
+    <dd>{{% md %}}the provisioning state.{{% /md %}}</dd><dt class="property-optional"
             title="Optional">
         <span id="rulename_nodejs">
 <a href="#rulename_nodejs" style="color: inherit; text-decoration: inherit;">rule<wbr>Name</a>
@@ -611,8 +567,7 @@ The AlertRule resource accepts the following [input]({{< relref "/docs/intro/con
         <span class="property-indicator"></span>
         <span class="property-type">string</span>
     </dt>
-    <dd>{{% md %}}The name of the rule.{{% /md %}}</dd>
-    <dt class="property-optional"
+    <dd>{{% md %}}The name of the rule.{{% /md %}}</dd><dt class="property-optional"
             title="Optional">
         <span id="tags_nodejs">
 <a href="#tags_nodejs" style="color: inherit; text-decoration: inherit;">tags</a>
@@ -620,14 +575,11 @@ The AlertRule resource accepts the following [input]({{< relref "/docs/intro/con
         <span class="property-indicator"></span>
         <span class="property-type">{[key: string]: string}</span>
     </dt>
-    <dd>{{% md %}}Resource tags{{% /md %}}</dd>
-</dl>
+    <dd>{{% md %}}Resource tags{{% /md %}}</dd></dl>
 {{% /choosable %}}
 
 {{% choosable language python %}}
-<dl class="resources-properties">
-
-    <dt class="property-required"
+<dl class="resources-properties"><dt class="property-required"
             title="Required">
         <span id="condition_python">
 <a href="#condition_python" style="color: inherit; text-decoration: inherit;">condition</a>
@@ -635,8 +587,7 @@ The AlertRule resource accepts the following [input]({{< relref "/docs/intro/con
         <span class="property-indicator"></span>
         <span class="property-type"><a href="#locationthresholdrulecondition">Location<wbr>Threshold<wbr>Rule<wbr>Condition<wbr>Args</a> | <a href="#managementeventrulecondition">Management<wbr>Event<wbr>Rule<wbr>Condition<wbr>Args</a> | <a href="#thresholdrulecondition">Threshold<wbr>Rule<wbr>Condition<wbr>Args</a></span>
     </dt>
-    <dd>{{% md %}}the condition that results in the alert rule being activated.{{% /md %}}</dd>
-    <dt class="property-required"
+    <dd>{{% md %}}the condition that results in the alert rule being activated.{{% /md %}}</dd><dt class="property-required"
             title="Required">
         <span id="is_enabled_python">
 <a href="#is_enabled_python" style="color: inherit; text-decoration: inherit;">is_<wbr>enabled</a>
@@ -644,8 +595,7 @@ The AlertRule resource accepts the following [input]({{< relref "/docs/intro/con
         <span class="property-indicator"></span>
         <span class="property-type">bool</span>
     </dt>
-    <dd>{{% md %}}the flag that indicates whether the alert rule is enabled.{{% /md %}}</dd>
-    <dt class="property-required"
+    <dd>{{% md %}}the flag that indicates whether the alert rule is enabled.{{% /md %}}</dd><dt class="property-required"
             title="Required">
         <span id="name_python">
 <a href="#name_python" style="color: inherit; text-decoration: inherit;">name</a>
@@ -653,8 +603,7 @@ The AlertRule resource accepts the following [input]({{< relref "/docs/intro/con
         <span class="property-indicator"></span>
         <span class="property-type">str</span>
     </dt>
-    <dd>{{% md %}}the name of the alert rule.{{% /md %}}</dd>
-    <dt class="property-required"
+    <dd>{{% md %}}the name of the alert rule.{{% /md %}}</dd><dt class="property-required"
             title="Required">
         <span id="resource_group_name_python">
 <a href="#resource_group_name_python" style="color: inherit; text-decoration: inherit;">resource_<wbr>group_<wbr>name</a>
@@ -662,8 +611,7 @@ The AlertRule resource accepts the following [input]({{< relref "/docs/intro/con
         <span class="property-indicator"></span>
         <span class="property-type">str</span>
     </dt>
-    <dd>{{% md %}}The name of the resource group.{{% /md %}}</dd>
-    <dt class="property-optional"
+    <dd>{{% md %}}The name of the resource group.{{% /md %}}</dd><dt class="property-optional"
             title="Optional">
         <span id="action_python">
 <a href="#action_python" style="color: inherit; text-decoration: inherit;">action</a>
@@ -671,8 +619,7 @@ The AlertRule resource accepts the following [input]({{< relref "/docs/intro/con
         <span class="property-indicator"></span>
         <span class="property-type"><a href="#ruleemailaction">Rule<wbr>Email<wbr>Action<wbr>Args</a> | <a href="#rulewebhookaction">Rule<wbr>Webhook<wbr>Action<wbr>Args</a></span>
     </dt>
-    <dd>{{% md %}}action that is performed when the alert rule becomes active, and when an alert condition is resolved.{{% /md %}}</dd>
-    <dt class="property-optional"
+    <dd>{{% md %}}action that is performed when the alert rule becomes active, and when an alert condition is resolved.{{% /md %}}</dd><dt class="property-optional"
             title="Optional">
         <span id="actions_python">
 <a href="#actions_python" style="color: inherit; text-decoration: inherit;">actions</a>
@@ -680,8 +627,7 @@ The AlertRule resource accepts the following [input]({{< relref "/docs/intro/con
         <span class="property-indicator"></span>
         <span class="property-type">Sequence[Union[Rule<wbr>Email<wbr>Action<wbr>Args, Rule<wbr>Webhook<wbr>Action<wbr>Args]]</span>
     </dt>
-    <dd>{{% md %}}the array of actions that are performed when the alert rule becomes active, and when an alert condition is resolved.{{% /md %}}</dd>
-    <dt class="property-optional"
+    <dd>{{% md %}}the array of actions that are performed when the alert rule becomes active, and when an alert condition is resolved.{{% /md %}}</dd><dt class="property-optional"
             title="Optional">
         <span id="description_python">
 <a href="#description_python" style="color: inherit; text-decoration: inherit;">description</a>
@@ -689,8 +635,7 @@ The AlertRule resource accepts the following [input]({{< relref "/docs/intro/con
         <span class="property-indicator"></span>
         <span class="property-type">str</span>
     </dt>
-    <dd>{{% md %}}the description of the alert rule that will be included in the alert email.{{% /md %}}</dd>
-    <dt class="property-optional"
+    <dd>{{% md %}}the description of the alert rule that will be included in the alert email.{{% /md %}}</dd><dt class="property-optional"
             title="Optional">
         <span id="location_python">
 <a href="#location_python" style="color: inherit; text-decoration: inherit;">location</a>
@@ -698,8 +643,7 @@ The AlertRule resource accepts the following [input]({{< relref "/docs/intro/con
         <span class="property-indicator"></span>
         <span class="property-type">str</span>
     </dt>
-    <dd>{{% md %}}Resource location{{% /md %}}</dd>
-    <dt class="property-optional"
+    <dd>{{% md %}}Resource location{{% /md %}}</dd><dt class="property-optional"
             title="Optional">
         <span id="provisioning_state_python">
 <a href="#provisioning_state_python" style="color: inherit; text-decoration: inherit;">provisioning_<wbr>state</a>
@@ -707,8 +651,7 @@ The AlertRule resource accepts the following [input]({{< relref "/docs/intro/con
         <span class="property-indicator"></span>
         <span class="property-type">str</span>
     </dt>
-    <dd>{{% md %}}the provisioning state.{{% /md %}}</dd>
-    <dt class="property-optional"
+    <dd>{{% md %}}the provisioning state.{{% /md %}}</dd><dt class="property-optional"
             title="Optional">
         <span id="rule_name_python">
 <a href="#rule_name_python" style="color: inherit; text-decoration: inherit;">rule_<wbr>name</a>
@@ -716,8 +659,7 @@ The AlertRule resource accepts the following [input]({{< relref "/docs/intro/con
         <span class="property-indicator"></span>
         <span class="property-type">str</span>
     </dt>
-    <dd>{{% md %}}The name of the rule.{{% /md %}}</dd>
-    <dt class="property-optional"
+    <dd>{{% md %}}The name of the rule.{{% /md %}}</dd><dt class="property-optional"
             title="Optional">
         <span id="tags_python">
 <a href="#tags_python" style="color: inherit; text-decoration: inherit;">tags</a>
@@ -725,8 +667,7 @@ The AlertRule resource accepts the following [input]({{< relref "/docs/intro/con
         <span class="property-indicator"></span>
         <span class="property-type">Mapping[str, str]</span>
     </dt>
-    <dd>{{% md %}}Resource tags{{% /md %}}</dd>
-</dl>
+    <dd>{{% md %}}Resource tags{{% /md %}}</dd></dl>
 {{% /choosable %}}
 
 
@@ -737,9 +678,7 @@ All [input](#inputs) properties are implicitly available as output properties. A
 
 
 {{% choosable language csharp %}}
-<dl class="resources-properties">
-
-    <dt class="property-"
+<dl class="resources-properties"><dt class="property-"
             title="">
         <span id="id_csharp">
 <a href="#id_csharp" style="color: inherit; text-decoration: inherit;">Id</a>
@@ -747,8 +686,7 @@ All [input](#inputs) properties are implicitly available as output properties. A
         <span class="property-indicator"></span>
         <span class="property-type">string</span>
     </dt>
-    <dd>{{% md %}}The provider-assigned unique ID for this managed resource.{{% /md %}}</dd>
-    <dt class="property-"
+    <dd>{{% md %}}The provider-assigned unique ID for this managed resource.{{% /md %}}</dd><dt class="property-"
             title="">
         <span id="lastupdatedtime_csharp">
 <a href="#lastupdatedtime_csharp" style="color: inherit; text-decoration: inherit;">Last<wbr>Updated<wbr>Time</a>
@@ -756,8 +694,7 @@ All [input](#inputs) properties are implicitly available as output properties. A
         <span class="property-indicator"></span>
         <span class="property-type">string</span>
     </dt>
-    <dd>{{% md %}}Last time the rule was updated in ISO8601 format.{{% /md %}}</dd>
-    <dt class="property-"
+    <dd>{{% md %}}Last time the rule was updated in ISO8601 format.{{% /md %}}</dd><dt class="property-"
             title="">
         <span id="type_csharp">
 <a href="#type_csharp" style="color: inherit; text-decoration: inherit;">Type</a>
@@ -765,14 +702,11 @@ All [input](#inputs) properties are implicitly available as output properties. A
         <span class="property-indicator"></span>
         <span class="property-type">string</span>
     </dt>
-    <dd>{{% md %}}Azure resource type{{% /md %}}</dd>
-</dl>
+    <dd>{{% md %}}Azure resource type{{% /md %}}</dd></dl>
 {{% /choosable %}}
 
 {{% choosable language go %}}
-<dl class="resources-properties">
-
-    <dt class="property-"
+<dl class="resources-properties"><dt class="property-"
             title="">
         <span id="id_go">
 <a href="#id_go" style="color: inherit; text-decoration: inherit;">Id</a>
@@ -780,8 +714,7 @@ All [input](#inputs) properties are implicitly available as output properties. A
         <span class="property-indicator"></span>
         <span class="property-type">string</span>
     </dt>
-    <dd>{{% md %}}The provider-assigned unique ID for this managed resource.{{% /md %}}</dd>
-    <dt class="property-"
+    <dd>{{% md %}}The provider-assigned unique ID for this managed resource.{{% /md %}}</dd><dt class="property-"
             title="">
         <span id="lastupdatedtime_go">
 <a href="#lastupdatedtime_go" style="color: inherit; text-decoration: inherit;">Last<wbr>Updated<wbr>Time</a>
@@ -789,8 +722,7 @@ All [input](#inputs) properties are implicitly available as output properties. A
         <span class="property-indicator"></span>
         <span class="property-type">string</span>
     </dt>
-    <dd>{{% md %}}Last time the rule was updated in ISO8601 format.{{% /md %}}</dd>
-    <dt class="property-"
+    <dd>{{% md %}}Last time the rule was updated in ISO8601 format.{{% /md %}}</dd><dt class="property-"
             title="">
         <span id="type_go">
 <a href="#type_go" style="color: inherit; text-decoration: inherit;">Type</a>
@@ -798,14 +730,11 @@ All [input](#inputs) properties are implicitly available as output properties. A
         <span class="property-indicator"></span>
         <span class="property-type">string</span>
     </dt>
-    <dd>{{% md %}}Azure resource type{{% /md %}}</dd>
-</dl>
+    <dd>{{% md %}}Azure resource type{{% /md %}}</dd></dl>
 {{% /choosable %}}
 
 {{% choosable language nodejs %}}
-<dl class="resources-properties">
-
-    <dt class="property-"
+<dl class="resources-properties"><dt class="property-"
             title="">
         <span id="id_nodejs">
 <a href="#id_nodejs" style="color: inherit; text-decoration: inherit;">id</a>
@@ -813,8 +742,7 @@ All [input](#inputs) properties are implicitly available as output properties. A
         <span class="property-indicator"></span>
         <span class="property-type">string</span>
     </dt>
-    <dd>{{% md %}}The provider-assigned unique ID for this managed resource.{{% /md %}}</dd>
-    <dt class="property-"
+    <dd>{{% md %}}The provider-assigned unique ID for this managed resource.{{% /md %}}</dd><dt class="property-"
             title="">
         <span id="lastupdatedtime_nodejs">
 <a href="#lastupdatedtime_nodejs" style="color: inherit; text-decoration: inherit;">last<wbr>Updated<wbr>Time</a>
@@ -822,8 +750,7 @@ All [input](#inputs) properties are implicitly available as output properties. A
         <span class="property-indicator"></span>
         <span class="property-type">string</span>
     </dt>
-    <dd>{{% md %}}Last time the rule was updated in ISO8601 format.{{% /md %}}</dd>
-    <dt class="property-"
+    <dd>{{% md %}}Last time the rule was updated in ISO8601 format.{{% /md %}}</dd><dt class="property-"
             title="">
         <span id="type_nodejs">
 <a href="#type_nodejs" style="color: inherit; text-decoration: inherit;">type</a>
@@ -831,14 +758,11 @@ All [input](#inputs) properties are implicitly available as output properties. A
         <span class="property-indicator"></span>
         <span class="property-type">string</span>
     </dt>
-    <dd>{{% md %}}Azure resource type{{% /md %}}</dd>
-</dl>
+    <dd>{{% md %}}Azure resource type{{% /md %}}</dd></dl>
 {{% /choosable %}}
 
 {{% choosable language python %}}
-<dl class="resources-properties">
-
-    <dt class="property-"
+<dl class="resources-properties"><dt class="property-"
             title="">
         <span id="id_python">
 <a href="#id_python" style="color: inherit; text-decoration: inherit;">id</a>
@@ -846,8 +770,7 @@ All [input](#inputs) properties are implicitly available as output properties. A
         <span class="property-indicator"></span>
         <span class="property-type">str</span>
     </dt>
-    <dd>{{% md %}}The provider-assigned unique ID for this managed resource.{{% /md %}}</dd>
-    <dt class="property-"
+    <dd>{{% md %}}The provider-assigned unique ID for this managed resource.{{% /md %}}</dd><dt class="property-"
             title="">
         <span id="last_updated_time_python">
 <a href="#last_updated_time_python" style="color: inherit; text-decoration: inherit;">last_<wbr>updated_<wbr>time</a>
@@ -855,8 +778,7 @@ All [input](#inputs) properties are implicitly available as output properties. A
         <span class="property-indicator"></span>
         <span class="property-type">str</span>
     </dt>
-    <dd>{{% md %}}Last time the rule was updated in ISO8601 format.{{% /md %}}</dd>
-    <dt class="property-"
+    <dd>{{% md %}}Last time the rule was updated in ISO8601 format.{{% /md %}}</dd><dt class="property-"
             title="">
         <span id="type_python">
 <a href="#type_python" style="color: inherit; text-decoration: inherit;">type</a>
@@ -864,8 +786,7 @@ All [input](#inputs) properties are implicitly available as output properties. A
         <span class="property-indicator"></span>
         <span class="property-type">str</span>
     </dt>
-    <dd>{{% md %}}Azure resource type{{% /md %}}</dd>
-</dl>
+    <dd>{{% md %}}Azure resource type{{% /md %}}</dd></dl>
 {{% /choosable %}}
 
 
@@ -881,63 +802,41 @@ All [input](#inputs) properties are implicitly available as output properties. A
 <h4 id="conditionoperator">Condition<wbr>Operator</h4>
 
 {{% choosable language csharp %}}
-<dl class="tabular">
-    <dt>Greater<wbr>Than</dt>
-    <dd>GreaterThan</dd>
-    <dt>Greater<wbr>Than<wbr>Or<wbr>Equal</dt>
-    <dd>GreaterThanOrEqual</dd>
-    <dt>Less<wbr>Than</dt>
-    <dd>LessThan</dd>
-    <dt>Less<wbr>Than<wbr>Or<wbr>Equal</dt>
-    <dd>LessThanOrEqual</dd>
-</dl>
+<dl class="tabular"><dt>Greater<wbr>Than</dt>
+    <dd>GreaterThan</dd><dt>Greater<wbr>Than<wbr>Or<wbr>Equal</dt>
+    <dd>GreaterThanOrEqual</dd><dt>Less<wbr>Than</dt>
+    <dd>LessThan</dd><dt>Less<wbr>Than<wbr>Or<wbr>Equal</dt>
+    <dd>LessThanOrEqual</dd></dl>
 {{% /choosable %}}
 
 {{% choosable language go %}}
-<dl class="tabular">
-    <dt>Condition<wbr>Operator<wbr>Greater<wbr>Than</dt>
-    <dd>GreaterThan</dd>
-    <dt>Condition<wbr>Operator<wbr>Greater<wbr>Than<wbr>Or<wbr>Equal</dt>
-    <dd>GreaterThanOrEqual</dd>
-    <dt>Condition<wbr>Operator<wbr>Less<wbr>Than</dt>
-    <dd>LessThan</dd>
-    <dt>Condition<wbr>Operator<wbr>Less<wbr>Than<wbr>Or<wbr>Equal</dt>
-    <dd>LessThanOrEqual</dd>
-</dl>
+<dl class="tabular"><dt>Condition<wbr>Operator<wbr>Greater<wbr>Than</dt>
+    <dd>GreaterThan</dd><dt>Condition<wbr>Operator<wbr>Greater<wbr>Than<wbr>Or<wbr>Equal</dt>
+    <dd>GreaterThanOrEqual</dd><dt>Condition<wbr>Operator<wbr>Less<wbr>Than</dt>
+    <dd>LessThan</dd><dt>Condition<wbr>Operator<wbr>Less<wbr>Than<wbr>Or<wbr>Equal</dt>
+    <dd>LessThanOrEqual</dd></dl>
 {{% /choosable %}}
 
 {{% choosable language nodejs %}}
-<dl class="tabular">
-    <dt>Greater<wbr>Than</dt>
-    <dd>GreaterThan</dd>
-    <dt>Greater<wbr>Than<wbr>Or<wbr>Equal</dt>
-    <dd>GreaterThanOrEqual</dd>
-    <dt>Less<wbr>Than</dt>
-    <dd>LessThan</dd>
-    <dt>Less<wbr>Than<wbr>Or<wbr>Equal</dt>
-    <dd>LessThanOrEqual</dd>
-</dl>
+<dl class="tabular"><dt>Greater<wbr>Than</dt>
+    <dd>GreaterThan</dd><dt>Greater<wbr>Than<wbr>Or<wbr>Equal</dt>
+    <dd>GreaterThanOrEqual</dd><dt>Less<wbr>Than</dt>
+    <dd>LessThan</dd><dt>Less<wbr>Than<wbr>Or<wbr>Equal</dt>
+    <dd>LessThanOrEqual</dd></dl>
 {{% /choosable %}}
 
 {{% choosable language python %}}
-<dl class="tabular">
-    <dt>GREATER_THAN</dt>
-    <dd>GreaterThan</dd>
-    <dt>GREATER_THAN_OR_EQUAL</dt>
-    <dd>GreaterThanOrEqual</dd>
-    <dt>LESS_THAN</dt>
-    <dd>LessThan</dd>
-    <dt>LESS_THAN_OR_EQUAL</dt>
-    <dd>LessThanOrEqual</dd>
-</dl>
+<dl class="tabular"><dt>GREATER_THAN</dt>
+    <dd>GreaterThan</dd><dt>GREATER_THAN_OR_EQUAL</dt>
+    <dd>GreaterThanOrEqual</dd><dt>LESS_THAN</dt>
+    <dd>LessThan</dd><dt>LESS_THAN_OR_EQUAL</dt>
+    <dd>LessThanOrEqual</dd></dl>
 {{% /choosable %}}
 
 <h4 id="locationthresholdrulecondition">Location<wbr>Threshold<wbr>Rule<wbr>Condition</h4>
 
 {{% choosable language csharp %}}
-<dl class="resources-properties">
-
-    <dt class="property-required"
+<dl class="resources-properties"><dt class="property-required"
             title="Required">
         <span id="failedlocationcount_csharp">
 <a href="#failedlocationcount_csharp" style="color: inherit; text-decoration: inherit;">Failed<wbr>Location<wbr>Count</a>
@@ -945,8 +844,7 @@ All [input](#inputs) properties are implicitly available as output properties. A
         <span class="property-indicator"></span>
         <span class="property-type">int</span>
     </dt>
-    <dd>{{% md %}}the number of locations that must fail to activate the alert.{{% /md %}}</dd>
-    <dt class="property-optional"
+    <dd>{{% md %}}the number of locations that must fail to activate the alert.{{% /md %}}</dd><dt class="property-optional"
             title="Optional">
         <span id="datasource_csharp">
 <a href="#datasource_csharp" style="color: inherit; text-decoration: inherit;">Data<wbr>Source</a>
@@ -954,8 +852,7 @@ All [input](#inputs) properties are implicitly available as output properties. A
         <span class="property-indicator"></span>
         <span class="property-type"><a href="#rulemanagementeventdatasource">Pulumi.<wbr>Azure<wbr>Native.<wbr>Insights.<wbr>Inputs.<wbr>Rule<wbr>Management<wbr>Event<wbr>Data<wbr>Source<wbr>Args</a> | <a href="#rulemetricdatasource">Pulumi.<wbr>Azure<wbr>Native.<wbr>Insights.<wbr>Inputs.<wbr>Rule<wbr>Metric<wbr>Data<wbr>Source<wbr>Args</a></span>
     </dt>
-    <dd>{{% md %}}the resource from which the rule collects its data. For this type dataSource will always be of type RuleMetricDataSource.{{% /md %}}</dd>
-    <dt class="property-optional"
+    <dd>{{% md %}}the resource from which the rule collects its data. For this type dataSource will always be of type RuleMetricDataSource.{{% /md %}}</dd><dt class="property-optional"
             title="Optional">
         <span id="windowsize_csharp">
 <a href="#windowsize_csharp" style="color: inherit; text-decoration: inherit;">Window<wbr>Size</a>
@@ -963,14 +860,11 @@ All [input](#inputs) properties are implicitly available as output properties. A
         <span class="property-indicator"></span>
         <span class="property-type">string</span>
     </dt>
-    <dd>{{% md %}}the period of time (in ISO 8601 duration format) that is used to monitor alert activity based on the threshold. If specified then it must be between 5 minutes and 1 day.{{% /md %}}</dd>
-</dl>
+    <dd>{{% md %}}the period of time (in ISO 8601 duration format) that is used to monitor alert activity based on the threshold. If specified then it must be between 5 minutes and 1 day.{{% /md %}}</dd></dl>
 {{% /choosable %}}
 
 {{% choosable language go %}}
-<dl class="resources-properties">
-
-    <dt class="property-required"
+<dl class="resources-properties"><dt class="property-required"
             title="Required">
         <span id="failedlocationcount_go">
 <a href="#failedlocationcount_go" style="color: inherit; text-decoration: inherit;">Failed<wbr>Location<wbr>Count</a>
@@ -978,8 +872,7 @@ All [input](#inputs) properties are implicitly available as output properties. A
         <span class="property-indicator"></span>
         <span class="property-type">int</span>
     </dt>
-    <dd>{{% md %}}the number of locations that must fail to activate the alert.{{% /md %}}</dd>
-    <dt class="property-optional"
+    <dd>{{% md %}}the number of locations that must fail to activate the alert.{{% /md %}}</dd><dt class="property-optional"
             title="Optional">
         <span id="datasource_go">
 <a href="#datasource_go" style="color: inherit; text-decoration: inherit;">Data<wbr>Source</a>
@@ -987,8 +880,7 @@ All [input](#inputs) properties are implicitly available as output properties. A
         <span class="property-indicator"></span>
         <span class="property-type"><a href="#rulemanagementeventdatasource">Rule<wbr>Management<wbr>Event<wbr>Data<wbr>Source</a> | <a href="#rulemetricdatasource">Rule<wbr>Metric<wbr>Data<wbr>Source</a></span>
     </dt>
-    <dd>{{% md %}}the resource from which the rule collects its data. For this type dataSource will always be of type RuleMetricDataSource.{{% /md %}}</dd>
-    <dt class="property-optional"
+    <dd>{{% md %}}the resource from which the rule collects its data. For this type dataSource will always be of type RuleMetricDataSource.{{% /md %}}</dd><dt class="property-optional"
             title="Optional">
         <span id="windowsize_go">
 <a href="#windowsize_go" style="color: inherit; text-decoration: inherit;">Window<wbr>Size</a>
@@ -996,14 +888,11 @@ All [input](#inputs) properties are implicitly available as output properties. A
         <span class="property-indicator"></span>
         <span class="property-type">string</span>
     </dt>
-    <dd>{{% md %}}the period of time (in ISO 8601 duration format) that is used to monitor alert activity based on the threshold. If specified then it must be between 5 minutes and 1 day.{{% /md %}}</dd>
-</dl>
+    <dd>{{% md %}}the period of time (in ISO 8601 duration format) that is used to monitor alert activity based on the threshold. If specified then it must be between 5 minutes and 1 day.{{% /md %}}</dd></dl>
 {{% /choosable %}}
 
 {{% choosable language nodejs %}}
-<dl class="resources-properties">
-
-    <dt class="property-required"
+<dl class="resources-properties"><dt class="property-required"
             title="Required">
         <span id="failedlocationcount_nodejs">
 <a href="#failedlocationcount_nodejs" style="color: inherit; text-decoration: inherit;">failed<wbr>Location<wbr>Count</a>
@@ -1011,8 +900,7 @@ All [input](#inputs) properties are implicitly available as output properties. A
         <span class="property-indicator"></span>
         <span class="property-type">number</span>
     </dt>
-    <dd>{{% md %}}the number of locations that must fail to activate the alert.{{% /md %}}</dd>
-    <dt class="property-optional"
+    <dd>{{% md %}}the number of locations that must fail to activate the alert.{{% /md %}}</dd><dt class="property-optional"
             title="Optional">
         <span id="datasource_nodejs">
 <a href="#datasource_nodejs" style="color: inherit; text-decoration: inherit;">data<wbr>Source</a>
@@ -1020,8 +908,7 @@ All [input](#inputs) properties are implicitly available as output properties. A
         <span class="property-indicator"></span>
         <span class="property-type"><a href="#rulemanagementeventdatasource">Rule<wbr>Management<wbr>Event<wbr>Data<wbr>Source</a> | <a href="#rulemetricdatasource">Rule<wbr>Metric<wbr>Data<wbr>Source</a></span>
     </dt>
-    <dd>{{% md %}}the resource from which the rule collects its data. For this type dataSource will always be of type RuleMetricDataSource.{{% /md %}}</dd>
-    <dt class="property-optional"
+    <dd>{{% md %}}the resource from which the rule collects its data. For this type dataSource will always be of type RuleMetricDataSource.{{% /md %}}</dd><dt class="property-optional"
             title="Optional">
         <span id="windowsize_nodejs">
 <a href="#windowsize_nodejs" style="color: inherit; text-decoration: inherit;">window<wbr>Size</a>
@@ -1029,14 +916,11 @@ All [input](#inputs) properties are implicitly available as output properties. A
         <span class="property-indicator"></span>
         <span class="property-type">string</span>
     </dt>
-    <dd>{{% md %}}the period of time (in ISO 8601 duration format) that is used to monitor alert activity based on the threshold. If specified then it must be between 5 minutes and 1 day.{{% /md %}}</dd>
-</dl>
+    <dd>{{% md %}}the period of time (in ISO 8601 duration format) that is used to monitor alert activity based on the threshold. If specified then it must be between 5 minutes and 1 day.{{% /md %}}</dd></dl>
 {{% /choosable %}}
 
 {{% choosable language python %}}
-<dl class="resources-properties">
-
-    <dt class="property-required"
+<dl class="resources-properties"><dt class="property-required"
             title="Required">
         <span id="failed_location_count_python">
 <a href="#failed_location_count_python" style="color: inherit; text-decoration: inherit;">failed_<wbr>location_<wbr>count</a>
@@ -1044,8 +928,7 @@ All [input](#inputs) properties are implicitly available as output properties. A
         <span class="property-indicator"></span>
         <span class="property-type">int</span>
     </dt>
-    <dd>{{% md %}}the number of locations that must fail to activate the alert.{{% /md %}}</dd>
-    <dt class="property-optional"
+    <dd>{{% md %}}the number of locations that must fail to activate the alert.{{% /md %}}</dd><dt class="property-optional"
             title="Optional">
         <span id="data_source_python">
 <a href="#data_source_python" style="color: inherit; text-decoration: inherit;">data_<wbr>source</a>
@@ -1053,8 +936,7 @@ All [input](#inputs) properties are implicitly available as output properties. A
         <span class="property-indicator"></span>
         <span class="property-type"><a href="#rulemanagementeventdatasource">Rule<wbr>Management<wbr>Event<wbr>Data<wbr>Source<wbr>Args</a> | <a href="#rulemetricdatasource">Rule<wbr>Metric<wbr>Data<wbr>Source<wbr>Args</a></span>
     </dt>
-    <dd>{{% md %}}the resource from which the rule collects its data. For this type dataSource will always be of type RuleMetricDataSource.{{% /md %}}</dd>
-    <dt class="property-optional"
+    <dd>{{% md %}}the resource from which the rule collects its data. For this type dataSource will always be of type RuleMetricDataSource.{{% /md %}}</dd><dt class="property-optional"
             title="Optional">
         <span id="window_size_python">
 <a href="#window_size_python" style="color: inherit; text-decoration: inherit;">window_<wbr>size</a>
@@ -1062,16 +944,13 @@ All [input](#inputs) properties are implicitly available as output properties. A
         <span class="property-indicator"></span>
         <span class="property-type">str</span>
     </dt>
-    <dd>{{% md %}}the period of time (in ISO 8601 duration format) that is used to monitor alert activity based on the threshold. If specified then it must be between 5 minutes and 1 day.{{% /md %}}</dd>
-</dl>
+    <dd>{{% md %}}the period of time (in ISO 8601 duration format) that is used to monitor alert activity based on the threshold. If specified then it must be between 5 minutes and 1 day.{{% /md %}}</dd></dl>
 {{% /choosable %}}
 
 <h4 id="locationthresholdruleconditionresponse">Location<wbr>Threshold<wbr>Rule<wbr>Condition<wbr>Response</h4>
 
 {{% choosable language csharp %}}
-<dl class="resources-properties">
-
-    <dt class="property-required"
+<dl class="resources-properties"><dt class="property-required"
             title="Required">
         <span id="failedlocationcount_csharp">
 <a href="#failedlocationcount_csharp" style="color: inherit; text-decoration: inherit;">Failed<wbr>Location<wbr>Count</a>
@@ -1079,8 +958,7 @@ All [input](#inputs) properties are implicitly available as output properties. A
         <span class="property-indicator"></span>
         <span class="property-type">int</span>
     </dt>
-    <dd>{{% md %}}the number of locations that must fail to activate the alert.{{% /md %}}</dd>
-    <dt class="property-optional"
+    <dd>{{% md %}}the number of locations that must fail to activate the alert.{{% /md %}}</dd><dt class="property-optional"
             title="Optional">
         <span id="datasource_csharp">
 <a href="#datasource_csharp" style="color: inherit; text-decoration: inherit;">Data<wbr>Source</a>
@@ -1088,8 +966,7 @@ All [input](#inputs) properties are implicitly available as output properties. A
         <span class="property-indicator"></span>
         <span class="property-type"><a href="#rulemanagementeventdatasourceresponse">Pulumi.<wbr>Azure<wbr>Native.<wbr>Insights.<wbr>Inputs.<wbr>Rule<wbr>Management<wbr>Event<wbr>Data<wbr>Source<wbr>Response<wbr>Args</a> | <a href="#rulemetricdatasourceresponse">Pulumi.<wbr>Azure<wbr>Native.<wbr>Insights.<wbr>Inputs.<wbr>Rule<wbr>Metric<wbr>Data<wbr>Source<wbr>Response<wbr>Args</a></span>
     </dt>
-    <dd>{{% md %}}the resource from which the rule collects its data. For this type dataSource will always be of type RuleMetricDataSource.{{% /md %}}</dd>
-    <dt class="property-optional"
+    <dd>{{% md %}}the resource from which the rule collects its data. For this type dataSource will always be of type RuleMetricDataSource.{{% /md %}}</dd><dt class="property-optional"
             title="Optional">
         <span id="windowsize_csharp">
 <a href="#windowsize_csharp" style="color: inherit; text-decoration: inherit;">Window<wbr>Size</a>
@@ -1097,14 +974,11 @@ All [input](#inputs) properties are implicitly available as output properties. A
         <span class="property-indicator"></span>
         <span class="property-type">string</span>
     </dt>
-    <dd>{{% md %}}the period of time (in ISO 8601 duration format) that is used to monitor alert activity based on the threshold. If specified then it must be between 5 minutes and 1 day.{{% /md %}}</dd>
-</dl>
+    <dd>{{% md %}}the period of time (in ISO 8601 duration format) that is used to monitor alert activity based on the threshold. If specified then it must be between 5 minutes and 1 day.{{% /md %}}</dd></dl>
 {{% /choosable %}}
 
 {{% choosable language go %}}
-<dl class="resources-properties">
-
-    <dt class="property-required"
+<dl class="resources-properties"><dt class="property-required"
             title="Required">
         <span id="failedlocationcount_go">
 <a href="#failedlocationcount_go" style="color: inherit; text-decoration: inherit;">Failed<wbr>Location<wbr>Count</a>
@@ -1112,8 +986,7 @@ All [input](#inputs) properties are implicitly available as output properties. A
         <span class="property-indicator"></span>
         <span class="property-type">int</span>
     </dt>
-    <dd>{{% md %}}the number of locations that must fail to activate the alert.{{% /md %}}</dd>
-    <dt class="property-optional"
+    <dd>{{% md %}}the number of locations that must fail to activate the alert.{{% /md %}}</dd><dt class="property-optional"
             title="Optional">
         <span id="datasource_go">
 <a href="#datasource_go" style="color: inherit; text-decoration: inherit;">Data<wbr>Source</a>
@@ -1121,8 +994,7 @@ All [input](#inputs) properties are implicitly available as output properties. A
         <span class="property-indicator"></span>
         <span class="property-type"><a href="#rulemanagementeventdatasourceresponse">Rule<wbr>Management<wbr>Event<wbr>Data<wbr>Source<wbr>Response</a> | <a href="#rulemetricdatasourceresponse">Rule<wbr>Metric<wbr>Data<wbr>Source<wbr>Response</a></span>
     </dt>
-    <dd>{{% md %}}the resource from which the rule collects its data. For this type dataSource will always be of type RuleMetricDataSource.{{% /md %}}</dd>
-    <dt class="property-optional"
+    <dd>{{% md %}}the resource from which the rule collects its data. For this type dataSource will always be of type RuleMetricDataSource.{{% /md %}}</dd><dt class="property-optional"
             title="Optional">
         <span id="windowsize_go">
 <a href="#windowsize_go" style="color: inherit; text-decoration: inherit;">Window<wbr>Size</a>
@@ -1130,14 +1002,11 @@ All [input](#inputs) properties are implicitly available as output properties. A
         <span class="property-indicator"></span>
         <span class="property-type">string</span>
     </dt>
-    <dd>{{% md %}}the period of time (in ISO 8601 duration format) that is used to monitor alert activity based on the threshold. If specified then it must be between 5 minutes and 1 day.{{% /md %}}</dd>
-</dl>
+    <dd>{{% md %}}the period of time (in ISO 8601 duration format) that is used to monitor alert activity based on the threshold. If specified then it must be between 5 minutes and 1 day.{{% /md %}}</dd></dl>
 {{% /choosable %}}
 
 {{% choosable language nodejs %}}
-<dl class="resources-properties">
-
-    <dt class="property-required"
+<dl class="resources-properties"><dt class="property-required"
             title="Required">
         <span id="failedlocationcount_nodejs">
 <a href="#failedlocationcount_nodejs" style="color: inherit; text-decoration: inherit;">failed<wbr>Location<wbr>Count</a>
@@ -1145,8 +1014,7 @@ All [input](#inputs) properties are implicitly available as output properties. A
         <span class="property-indicator"></span>
         <span class="property-type">number</span>
     </dt>
-    <dd>{{% md %}}the number of locations that must fail to activate the alert.{{% /md %}}</dd>
-    <dt class="property-optional"
+    <dd>{{% md %}}the number of locations that must fail to activate the alert.{{% /md %}}</dd><dt class="property-optional"
             title="Optional">
         <span id="datasource_nodejs">
 <a href="#datasource_nodejs" style="color: inherit; text-decoration: inherit;">data<wbr>Source</a>
@@ -1154,8 +1022,7 @@ All [input](#inputs) properties are implicitly available as output properties. A
         <span class="property-indicator"></span>
         <span class="property-type"><a href="#rulemanagementeventdatasourceresponse">Rule<wbr>Management<wbr>Event<wbr>Data<wbr>Source<wbr>Response</a> | <a href="#rulemetricdatasourceresponse">Rule<wbr>Metric<wbr>Data<wbr>Source<wbr>Response</a></span>
     </dt>
-    <dd>{{% md %}}the resource from which the rule collects its data. For this type dataSource will always be of type RuleMetricDataSource.{{% /md %}}</dd>
-    <dt class="property-optional"
+    <dd>{{% md %}}the resource from which the rule collects its data. For this type dataSource will always be of type RuleMetricDataSource.{{% /md %}}</dd><dt class="property-optional"
             title="Optional">
         <span id="windowsize_nodejs">
 <a href="#windowsize_nodejs" style="color: inherit; text-decoration: inherit;">window<wbr>Size</a>
@@ -1163,14 +1030,11 @@ All [input](#inputs) properties are implicitly available as output properties. A
         <span class="property-indicator"></span>
         <span class="property-type">string</span>
     </dt>
-    <dd>{{% md %}}the period of time (in ISO 8601 duration format) that is used to monitor alert activity based on the threshold. If specified then it must be between 5 minutes and 1 day.{{% /md %}}</dd>
-</dl>
+    <dd>{{% md %}}the period of time (in ISO 8601 duration format) that is used to monitor alert activity based on the threshold. If specified then it must be between 5 minutes and 1 day.{{% /md %}}</dd></dl>
 {{% /choosable %}}
 
 {{% choosable language python %}}
-<dl class="resources-properties">
-
-    <dt class="property-required"
+<dl class="resources-properties"><dt class="property-required"
             title="Required">
         <span id="failed_location_count_python">
 <a href="#failed_location_count_python" style="color: inherit; text-decoration: inherit;">failed_<wbr>location_<wbr>count</a>
@@ -1178,8 +1042,7 @@ All [input](#inputs) properties are implicitly available as output properties. A
         <span class="property-indicator"></span>
         <span class="property-type">int</span>
     </dt>
-    <dd>{{% md %}}the number of locations that must fail to activate the alert.{{% /md %}}</dd>
-    <dt class="property-optional"
+    <dd>{{% md %}}the number of locations that must fail to activate the alert.{{% /md %}}</dd><dt class="property-optional"
             title="Optional">
         <span id="data_source_python">
 <a href="#data_source_python" style="color: inherit; text-decoration: inherit;">data_<wbr>source</a>
@@ -1187,8 +1050,7 @@ All [input](#inputs) properties are implicitly available as output properties. A
         <span class="property-indicator"></span>
         <span class="property-type"><a href="#rulemanagementeventdatasourceresponse">Rule<wbr>Management<wbr>Event<wbr>Data<wbr>Source<wbr>Response<wbr>Args</a> | <a href="#rulemetricdatasourceresponse">Rule<wbr>Metric<wbr>Data<wbr>Source<wbr>Response<wbr>Args</a></span>
     </dt>
-    <dd>{{% md %}}the resource from which the rule collects its data. For this type dataSource will always be of type RuleMetricDataSource.{{% /md %}}</dd>
-    <dt class="property-optional"
+    <dd>{{% md %}}the resource from which the rule collects its data. For this type dataSource will always be of type RuleMetricDataSource.{{% /md %}}</dd><dt class="property-optional"
             title="Optional">
         <span id="window_size_python">
 <a href="#window_size_python" style="color: inherit; text-decoration: inherit;">window_<wbr>size</a>
@@ -1196,16 +1058,13 @@ All [input](#inputs) properties are implicitly available as output properties. A
         <span class="property-indicator"></span>
         <span class="property-type">str</span>
     </dt>
-    <dd>{{% md %}}the period of time (in ISO 8601 duration format) that is used to monitor alert activity based on the threshold. If specified then it must be between 5 minutes and 1 day.{{% /md %}}</dd>
-</dl>
+    <dd>{{% md %}}the period of time (in ISO 8601 duration format) that is used to monitor alert activity based on the threshold. If specified then it must be between 5 minutes and 1 day.{{% /md %}}</dd></dl>
 {{% /choosable %}}
 
 <h4 id="managementeventaggregationcondition">Management<wbr>Event<wbr>Aggregation<wbr>Condition</h4>
 
 {{% choosable language csharp %}}
-<dl class="resources-properties">
-
-    <dt class="property-optional"
+<dl class="resources-properties"><dt class="property-optional"
             title="Optional">
         <span id="operator_csharp">
 <a href="#operator_csharp" style="color: inherit; text-decoration: inherit;">Operator</a>
@@ -1213,8 +1072,7 @@ All [input](#inputs) properties are implicitly available as output properties. A
         <span class="property-indicator"></span>
         <span class="property-type"><a href="#conditionoperator">Pulumi.<wbr>Azure<wbr>Native.<wbr>Insights.<wbr>Condition<wbr>Operator</a></span>
     </dt>
-    <dd>{{% md %}}the condition operator.{{% /md %}}</dd>
-    <dt class="property-optional"
+    <dd>{{% md %}}the condition operator.{{% /md %}}</dd><dt class="property-optional"
             title="Optional">
         <span id="threshold_csharp">
 <a href="#threshold_csharp" style="color: inherit; text-decoration: inherit;">Threshold</a>
@@ -1222,8 +1080,7 @@ All [input](#inputs) properties are implicitly available as output properties. A
         <span class="property-indicator"></span>
         <span class="property-type">double</span>
     </dt>
-    <dd>{{% md %}}The threshold value that activates the alert.{{% /md %}}</dd>
-    <dt class="property-optional"
+    <dd>{{% md %}}The threshold value that activates the alert.{{% /md %}}</dd><dt class="property-optional"
             title="Optional">
         <span id="windowsize_csharp">
 <a href="#windowsize_csharp" style="color: inherit; text-decoration: inherit;">Window<wbr>Size</a>
@@ -1231,14 +1088,11 @@ All [input](#inputs) properties are implicitly available as output properties. A
         <span class="property-indicator"></span>
         <span class="property-type">string</span>
     </dt>
-    <dd>{{% md %}}the period of time (in ISO 8601 duration format) that is used to monitor alert activity based on the threshold. If specified then it must be between 5 minutes and 1 day.{{% /md %}}</dd>
-</dl>
+    <dd>{{% md %}}the period of time (in ISO 8601 duration format) that is used to monitor alert activity based on the threshold. If specified then it must be between 5 minutes and 1 day.{{% /md %}}</dd></dl>
 {{% /choosable %}}
 
 {{% choosable language go %}}
-<dl class="resources-properties">
-
-    <dt class="property-optional"
+<dl class="resources-properties"><dt class="property-optional"
             title="Optional">
         <span id="operator_go">
 <a href="#operator_go" style="color: inherit; text-decoration: inherit;">Operator</a>
@@ -1246,8 +1100,7 @@ All [input](#inputs) properties are implicitly available as output properties. A
         <span class="property-indicator"></span>
         <span class="property-type"><a href="#conditionoperator">Condition<wbr>Operator</a></span>
     </dt>
-    <dd>{{% md %}}the condition operator.{{% /md %}}</dd>
-    <dt class="property-optional"
+    <dd>{{% md %}}the condition operator.{{% /md %}}</dd><dt class="property-optional"
             title="Optional">
         <span id="threshold_go">
 <a href="#threshold_go" style="color: inherit; text-decoration: inherit;">Threshold</a>
@@ -1255,8 +1108,7 @@ All [input](#inputs) properties are implicitly available as output properties. A
         <span class="property-indicator"></span>
         <span class="property-type">float64</span>
     </dt>
-    <dd>{{% md %}}The threshold value that activates the alert.{{% /md %}}</dd>
-    <dt class="property-optional"
+    <dd>{{% md %}}The threshold value that activates the alert.{{% /md %}}</dd><dt class="property-optional"
             title="Optional">
         <span id="windowsize_go">
 <a href="#windowsize_go" style="color: inherit; text-decoration: inherit;">Window<wbr>Size</a>
@@ -1264,14 +1116,11 @@ All [input](#inputs) properties are implicitly available as output properties. A
         <span class="property-indicator"></span>
         <span class="property-type">string</span>
     </dt>
-    <dd>{{% md %}}the period of time (in ISO 8601 duration format) that is used to monitor alert activity based on the threshold. If specified then it must be between 5 minutes and 1 day.{{% /md %}}</dd>
-</dl>
+    <dd>{{% md %}}the period of time (in ISO 8601 duration format) that is used to monitor alert activity based on the threshold. If specified then it must be between 5 minutes and 1 day.{{% /md %}}</dd></dl>
 {{% /choosable %}}
 
 {{% choosable language nodejs %}}
-<dl class="resources-properties">
-
-    <dt class="property-optional"
+<dl class="resources-properties"><dt class="property-optional"
             title="Optional">
         <span id="operator_nodejs">
 <a href="#operator_nodejs" style="color: inherit; text-decoration: inherit;">operator</a>
@@ -1279,8 +1128,7 @@ All [input](#inputs) properties are implicitly available as output properties. A
         <span class="property-indicator"></span>
         <span class="property-type"><a href="#conditionoperator">Condition<wbr>Operator</a></span>
     </dt>
-    <dd>{{% md %}}the condition operator.{{% /md %}}</dd>
-    <dt class="property-optional"
+    <dd>{{% md %}}the condition operator.{{% /md %}}</dd><dt class="property-optional"
             title="Optional">
         <span id="threshold_nodejs">
 <a href="#threshold_nodejs" style="color: inherit; text-decoration: inherit;">threshold</a>
@@ -1288,8 +1136,7 @@ All [input](#inputs) properties are implicitly available as output properties. A
         <span class="property-indicator"></span>
         <span class="property-type">number</span>
     </dt>
-    <dd>{{% md %}}The threshold value that activates the alert.{{% /md %}}</dd>
-    <dt class="property-optional"
+    <dd>{{% md %}}The threshold value that activates the alert.{{% /md %}}</dd><dt class="property-optional"
             title="Optional">
         <span id="windowsize_nodejs">
 <a href="#windowsize_nodejs" style="color: inherit; text-decoration: inherit;">window<wbr>Size</a>
@@ -1297,14 +1144,11 @@ All [input](#inputs) properties are implicitly available as output properties. A
         <span class="property-indicator"></span>
         <span class="property-type">string</span>
     </dt>
-    <dd>{{% md %}}the period of time (in ISO 8601 duration format) that is used to monitor alert activity based on the threshold. If specified then it must be between 5 minutes and 1 day.{{% /md %}}</dd>
-</dl>
+    <dd>{{% md %}}the period of time (in ISO 8601 duration format) that is used to monitor alert activity based on the threshold. If specified then it must be between 5 minutes and 1 day.{{% /md %}}</dd></dl>
 {{% /choosable %}}
 
 {{% choosable language python %}}
-<dl class="resources-properties">
-
-    <dt class="property-optional"
+<dl class="resources-properties"><dt class="property-optional"
             title="Optional">
         <span id="operator_python">
 <a href="#operator_python" style="color: inherit; text-decoration: inherit;">operator</a>
@@ -1312,8 +1156,7 @@ All [input](#inputs) properties are implicitly available as output properties. A
         <span class="property-indicator"></span>
         <span class="property-type"><a href="#conditionoperator">Condition<wbr>Operator</a></span>
     </dt>
-    <dd>{{% md %}}the condition operator.{{% /md %}}</dd>
-    <dt class="property-optional"
+    <dd>{{% md %}}the condition operator.{{% /md %}}</dd><dt class="property-optional"
             title="Optional">
         <span id="threshold_python">
 <a href="#threshold_python" style="color: inherit; text-decoration: inherit;">threshold</a>
@@ -1321,8 +1164,7 @@ All [input](#inputs) properties are implicitly available as output properties. A
         <span class="property-indicator"></span>
         <span class="property-type">float</span>
     </dt>
-    <dd>{{% md %}}The threshold value that activates the alert.{{% /md %}}</dd>
-    <dt class="property-optional"
+    <dd>{{% md %}}The threshold value that activates the alert.{{% /md %}}</dd><dt class="property-optional"
             title="Optional">
         <span id="window_size_python">
 <a href="#window_size_python" style="color: inherit; text-decoration: inherit;">window_<wbr>size</a>
@@ -1330,16 +1172,13 @@ All [input](#inputs) properties are implicitly available as output properties. A
         <span class="property-indicator"></span>
         <span class="property-type">str</span>
     </dt>
-    <dd>{{% md %}}the period of time (in ISO 8601 duration format) that is used to monitor alert activity based on the threshold. If specified then it must be between 5 minutes and 1 day.{{% /md %}}</dd>
-</dl>
+    <dd>{{% md %}}the period of time (in ISO 8601 duration format) that is used to monitor alert activity based on the threshold. If specified then it must be between 5 minutes and 1 day.{{% /md %}}</dd></dl>
 {{% /choosable %}}
 
 <h4 id="managementeventaggregationconditionresponse">Management<wbr>Event<wbr>Aggregation<wbr>Condition<wbr>Response</h4>
 
 {{% choosable language csharp %}}
-<dl class="resources-properties">
-
-    <dt class="property-optional"
+<dl class="resources-properties"><dt class="property-optional"
             title="Optional">
         <span id="operator_csharp">
 <a href="#operator_csharp" style="color: inherit; text-decoration: inherit;">Operator</a>
@@ -1347,8 +1186,7 @@ All [input](#inputs) properties are implicitly available as output properties. A
         <span class="property-indicator"></span>
         <span class="property-type">string</span>
     </dt>
-    <dd>{{% md %}}the condition operator.{{% /md %}}</dd>
-    <dt class="property-optional"
+    <dd>{{% md %}}the condition operator.{{% /md %}}</dd><dt class="property-optional"
             title="Optional">
         <span id="threshold_csharp">
 <a href="#threshold_csharp" style="color: inherit; text-decoration: inherit;">Threshold</a>
@@ -1356,8 +1194,7 @@ All [input](#inputs) properties are implicitly available as output properties. A
         <span class="property-indicator"></span>
         <span class="property-type">double</span>
     </dt>
-    <dd>{{% md %}}The threshold value that activates the alert.{{% /md %}}</dd>
-    <dt class="property-optional"
+    <dd>{{% md %}}The threshold value that activates the alert.{{% /md %}}</dd><dt class="property-optional"
             title="Optional">
         <span id="windowsize_csharp">
 <a href="#windowsize_csharp" style="color: inherit; text-decoration: inherit;">Window<wbr>Size</a>
@@ -1365,14 +1202,11 @@ All [input](#inputs) properties are implicitly available as output properties. A
         <span class="property-indicator"></span>
         <span class="property-type">string</span>
     </dt>
-    <dd>{{% md %}}the period of time (in ISO 8601 duration format) that is used to monitor alert activity based on the threshold. If specified then it must be between 5 minutes and 1 day.{{% /md %}}</dd>
-</dl>
+    <dd>{{% md %}}the period of time (in ISO 8601 duration format) that is used to monitor alert activity based on the threshold. If specified then it must be between 5 minutes and 1 day.{{% /md %}}</dd></dl>
 {{% /choosable %}}
 
 {{% choosable language go %}}
-<dl class="resources-properties">
-
-    <dt class="property-optional"
+<dl class="resources-properties"><dt class="property-optional"
             title="Optional">
         <span id="operator_go">
 <a href="#operator_go" style="color: inherit; text-decoration: inherit;">Operator</a>
@@ -1380,8 +1214,7 @@ All [input](#inputs) properties are implicitly available as output properties. A
         <span class="property-indicator"></span>
         <span class="property-type">string</span>
     </dt>
-    <dd>{{% md %}}the condition operator.{{% /md %}}</dd>
-    <dt class="property-optional"
+    <dd>{{% md %}}the condition operator.{{% /md %}}</dd><dt class="property-optional"
             title="Optional">
         <span id="threshold_go">
 <a href="#threshold_go" style="color: inherit; text-decoration: inherit;">Threshold</a>
@@ -1389,8 +1222,7 @@ All [input](#inputs) properties are implicitly available as output properties. A
         <span class="property-indicator"></span>
         <span class="property-type">float64</span>
     </dt>
-    <dd>{{% md %}}The threshold value that activates the alert.{{% /md %}}</dd>
-    <dt class="property-optional"
+    <dd>{{% md %}}The threshold value that activates the alert.{{% /md %}}</dd><dt class="property-optional"
             title="Optional">
         <span id="windowsize_go">
 <a href="#windowsize_go" style="color: inherit; text-decoration: inherit;">Window<wbr>Size</a>
@@ -1398,14 +1230,11 @@ All [input](#inputs) properties are implicitly available as output properties. A
         <span class="property-indicator"></span>
         <span class="property-type">string</span>
     </dt>
-    <dd>{{% md %}}the period of time (in ISO 8601 duration format) that is used to monitor alert activity based on the threshold. If specified then it must be between 5 minutes and 1 day.{{% /md %}}</dd>
-</dl>
+    <dd>{{% md %}}the period of time (in ISO 8601 duration format) that is used to monitor alert activity based on the threshold. If specified then it must be between 5 minutes and 1 day.{{% /md %}}</dd></dl>
 {{% /choosable %}}
 
 {{% choosable language nodejs %}}
-<dl class="resources-properties">
-
-    <dt class="property-optional"
+<dl class="resources-properties"><dt class="property-optional"
             title="Optional">
         <span id="operator_nodejs">
 <a href="#operator_nodejs" style="color: inherit; text-decoration: inherit;">operator</a>
@@ -1413,8 +1242,7 @@ All [input](#inputs) properties are implicitly available as output properties. A
         <span class="property-indicator"></span>
         <span class="property-type">string</span>
     </dt>
-    <dd>{{% md %}}the condition operator.{{% /md %}}</dd>
-    <dt class="property-optional"
+    <dd>{{% md %}}the condition operator.{{% /md %}}</dd><dt class="property-optional"
             title="Optional">
         <span id="threshold_nodejs">
 <a href="#threshold_nodejs" style="color: inherit; text-decoration: inherit;">threshold</a>
@@ -1422,8 +1250,7 @@ All [input](#inputs) properties are implicitly available as output properties. A
         <span class="property-indicator"></span>
         <span class="property-type">number</span>
     </dt>
-    <dd>{{% md %}}The threshold value that activates the alert.{{% /md %}}</dd>
-    <dt class="property-optional"
+    <dd>{{% md %}}The threshold value that activates the alert.{{% /md %}}</dd><dt class="property-optional"
             title="Optional">
         <span id="windowsize_nodejs">
 <a href="#windowsize_nodejs" style="color: inherit; text-decoration: inherit;">window<wbr>Size</a>
@@ -1431,14 +1258,11 @@ All [input](#inputs) properties are implicitly available as output properties. A
         <span class="property-indicator"></span>
         <span class="property-type">string</span>
     </dt>
-    <dd>{{% md %}}the period of time (in ISO 8601 duration format) that is used to monitor alert activity based on the threshold. If specified then it must be between 5 minutes and 1 day.{{% /md %}}</dd>
-</dl>
+    <dd>{{% md %}}the period of time (in ISO 8601 duration format) that is used to monitor alert activity based on the threshold. If specified then it must be between 5 minutes and 1 day.{{% /md %}}</dd></dl>
 {{% /choosable %}}
 
 {{% choosable language python %}}
-<dl class="resources-properties">
-
-    <dt class="property-optional"
+<dl class="resources-properties"><dt class="property-optional"
             title="Optional">
         <span id="operator_python">
 <a href="#operator_python" style="color: inherit; text-decoration: inherit;">operator</a>
@@ -1446,8 +1270,7 @@ All [input](#inputs) properties are implicitly available as output properties. A
         <span class="property-indicator"></span>
         <span class="property-type">str</span>
     </dt>
-    <dd>{{% md %}}the condition operator.{{% /md %}}</dd>
-    <dt class="property-optional"
+    <dd>{{% md %}}the condition operator.{{% /md %}}</dd><dt class="property-optional"
             title="Optional">
         <span id="threshold_python">
 <a href="#threshold_python" style="color: inherit; text-decoration: inherit;">threshold</a>
@@ -1455,8 +1278,7 @@ All [input](#inputs) properties are implicitly available as output properties. A
         <span class="property-indicator"></span>
         <span class="property-type">float</span>
     </dt>
-    <dd>{{% md %}}The threshold value that activates the alert.{{% /md %}}</dd>
-    <dt class="property-optional"
+    <dd>{{% md %}}The threshold value that activates the alert.{{% /md %}}</dd><dt class="property-optional"
             title="Optional">
         <span id="window_size_python">
 <a href="#window_size_python" style="color: inherit; text-decoration: inherit;">window_<wbr>size</a>
@@ -1464,16 +1286,13 @@ All [input](#inputs) properties are implicitly available as output properties. A
         <span class="property-indicator"></span>
         <span class="property-type">str</span>
     </dt>
-    <dd>{{% md %}}the period of time (in ISO 8601 duration format) that is used to monitor alert activity based on the threshold. If specified then it must be between 5 minutes and 1 day.{{% /md %}}</dd>
-</dl>
+    <dd>{{% md %}}the period of time (in ISO 8601 duration format) that is used to monitor alert activity based on the threshold. If specified then it must be between 5 minutes and 1 day.{{% /md %}}</dd></dl>
 {{% /choosable %}}
 
 <h4 id="managementeventrulecondition">Management<wbr>Event<wbr>Rule<wbr>Condition</h4>
 
 {{% choosable language csharp %}}
-<dl class="resources-properties">
-
-    <dt class="property-optional"
+<dl class="resources-properties"><dt class="property-optional"
             title="Optional">
         <span id="aggregation_csharp">
 <a href="#aggregation_csharp" style="color: inherit; text-decoration: inherit;">Aggregation</a>
@@ -1481,8 +1300,7 @@ All [input](#inputs) properties are implicitly available as output properties. A
         <span class="property-indicator"></span>
         <span class="property-type"><a href="#managementeventaggregationcondition">Pulumi.<wbr>Azure<wbr>Native.<wbr>Insights.<wbr>Inputs.<wbr>Management<wbr>Event<wbr>Aggregation<wbr>Condition<wbr>Args</a></span>
     </dt>
-    <dd>{{% md %}}How the data that is collected should be combined over time and when the alert is activated. Note that for management event alerts aggregation is optional – if it is not provided then any event will cause the alert to activate.{{% /md %}}</dd>
-    <dt class="property-optional"
+    <dd>{{% md %}}How the data that is collected should be combined over time and when the alert is activated. Note that for management event alerts aggregation is optional – if it is not provided then any event will cause the alert to activate.{{% /md %}}</dd><dt class="property-optional"
             title="Optional">
         <span id="datasource_csharp">
 <a href="#datasource_csharp" style="color: inherit; text-decoration: inherit;">Data<wbr>Source</a>
@@ -1490,14 +1308,11 @@ All [input](#inputs) properties are implicitly available as output properties. A
         <span class="property-indicator"></span>
         <span class="property-type"><a href="#rulemanagementeventdatasource">Pulumi.<wbr>Azure<wbr>Native.<wbr>Insights.<wbr>Inputs.<wbr>Rule<wbr>Management<wbr>Event<wbr>Data<wbr>Source<wbr>Args</a> | <a href="#rulemetricdatasource">Pulumi.<wbr>Azure<wbr>Native.<wbr>Insights.<wbr>Inputs.<wbr>Rule<wbr>Metric<wbr>Data<wbr>Source<wbr>Args</a></span>
     </dt>
-    <dd>{{% md %}}the resource from which the rule collects its data. For this type dataSource will always be of type RuleMetricDataSource.{{% /md %}}</dd>
-</dl>
+    <dd>{{% md %}}the resource from which the rule collects its data. For this type dataSource will always be of type RuleMetricDataSource.{{% /md %}}</dd></dl>
 {{% /choosable %}}
 
 {{% choosable language go %}}
-<dl class="resources-properties">
-
-    <dt class="property-optional"
+<dl class="resources-properties"><dt class="property-optional"
             title="Optional">
         <span id="aggregation_go">
 <a href="#aggregation_go" style="color: inherit; text-decoration: inherit;">Aggregation</a>
@@ -1505,8 +1320,7 @@ All [input](#inputs) properties are implicitly available as output properties. A
         <span class="property-indicator"></span>
         <span class="property-type"><a href="#managementeventaggregationcondition">Management<wbr>Event<wbr>Aggregation<wbr>Condition</a></span>
     </dt>
-    <dd>{{% md %}}How the data that is collected should be combined over time and when the alert is activated. Note that for management event alerts aggregation is optional – if it is not provided then any event will cause the alert to activate.{{% /md %}}</dd>
-    <dt class="property-optional"
+    <dd>{{% md %}}How the data that is collected should be combined over time and when the alert is activated. Note that for management event alerts aggregation is optional – if it is not provided then any event will cause the alert to activate.{{% /md %}}</dd><dt class="property-optional"
             title="Optional">
         <span id="datasource_go">
 <a href="#datasource_go" style="color: inherit; text-decoration: inherit;">Data<wbr>Source</a>
@@ -1514,14 +1328,11 @@ All [input](#inputs) properties are implicitly available as output properties. A
         <span class="property-indicator"></span>
         <span class="property-type"><a href="#rulemanagementeventdatasource">Rule<wbr>Management<wbr>Event<wbr>Data<wbr>Source</a> | <a href="#rulemetricdatasource">Rule<wbr>Metric<wbr>Data<wbr>Source</a></span>
     </dt>
-    <dd>{{% md %}}the resource from which the rule collects its data. For this type dataSource will always be of type RuleMetricDataSource.{{% /md %}}</dd>
-</dl>
+    <dd>{{% md %}}the resource from which the rule collects its data. For this type dataSource will always be of type RuleMetricDataSource.{{% /md %}}</dd></dl>
 {{% /choosable %}}
 
 {{% choosable language nodejs %}}
-<dl class="resources-properties">
-
-    <dt class="property-optional"
+<dl class="resources-properties"><dt class="property-optional"
             title="Optional">
         <span id="aggregation_nodejs">
 <a href="#aggregation_nodejs" style="color: inherit; text-decoration: inherit;">aggregation</a>
@@ -1529,8 +1340,7 @@ All [input](#inputs) properties are implicitly available as output properties. A
         <span class="property-indicator"></span>
         <span class="property-type"><a href="#managementeventaggregationcondition">Management<wbr>Event<wbr>Aggregation<wbr>Condition</a></span>
     </dt>
-    <dd>{{% md %}}How the data that is collected should be combined over time and when the alert is activated. Note that for management event alerts aggregation is optional – if it is not provided then any event will cause the alert to activate.{{% /md %}}</dd>
-    <dt class="property-optional"
+    <dd>{{% md %}}How the data that is collected should be combined over time and when the alert is activated. Note that for management event alerts aggregation is optional – if it is not provided then any event will cause the alert to activate.{{% /md %}}</dd><dt class="property-optional"
             title="Optional">
         <span id="datasource_nodejs">
 <a href="#datasource_nodejs" style="color: inherit; text-decoration: inherit;">data<wbr>Source</a>
@@ -1538,14 +1348,11 @@ All [input](#inputs) properties are implicitly available as output properties. A
         <span class="property-indicator"></span>
         <span class="property-type"><a href="#rulemanagementeventdatasource">Rule<wbr>Management<wbr>Event<wbr>Data<wbr>Source</a> | <a href="#rulemetricdatasource">Rule<wbr>Metric<wbr>Data<wbr>Source</a></span>
     </dt>
-    <dd>{{% md %}}the resource from which the rule collects its data. For this type dataSource will always be of type RuleMetricDataSource.{{% /md %}}</dd>
-</dl>
+    <dd>{{% md %}}the resource from which the rule collects its data. For this type dataSource will always be of type RuleMetricDataSource.{{% /md %}}</dd></dl>
 {{% /choosable %}}
 
 {{% choosable language python %}}
-<dl class="resources-properties">
-
-    <dt class="property-optional"
+<dl class="resources-properties"><dt class="property-optional"
             title="Optional">
         <span id="aggregation_python">
 <a href="#aggregation_python" style="color: inherit; text-decoration: inherit;">aggregation</a>
@@ -1553,8 +1360,7 @@ All [input](#inputs) properties are implicitly available as output properties. A
         <span class="property-indicator"></span>
         <span class="property-type"><a href="#managementeventaggregationcondition">Management<wbr>Event<wbr>Aggregation<wbr>Condition<wbr>Args</a></span>
     </dt>
-    <dd>{{% md %}}How the data that is collected should be combined over time and when the alert is activated. Note that for management event alerts aggregation is optional – if it is not provided then any event will cause the alert to activate.{{% /md %}}</dd>
-    <dt class="property-optional"
+    <dd>{{% md %}}How the data that is collected should be combined over time and when the alert is activated. Note that for management event alerts aggregation is optional – if it is not provided then any event will cause the alert to activate.{{% /md %}}</dd><dt class="property-optional"
             title="Optional">
         <span id="data_source_python">
 <a href="#data_source_python" style="color: inherit; text-decoration: inherit;">data_<wbr>source</a>
@@ -1562,16 +1368,13 @@ All [input](#inputs) properties are implicitly available as output properties. A
         <span class="property-indicator"></span>
         <span class="property-type"><a href="#rulemanagementeventdatasource">Rule<wbr>Management<wbr>Event<wbr>Data<wbr>Source<wbr>Args</a> | <a href="#rulemetricdatasource">Rule<wbr>Metric<wbr>Data<wbr>Source<wbr>Args</a></span>
     </dt>
-    <dd>{{% md %}}the resource from which the rule collects its data. For this type dataSource will always be of type RuleMetricDataSource.{{% /md %}}</dd>
-</dl>
+    <dd>{{% md %}}the resource from which the rule collects its data. For this type dataSource will always be of type RuleMetricDataSource.{{% /md %}}</dd></dl>
 {{% /choosable %}}
 
 <h4 id="managementeventruleconditionresponse">Management<wbr>Event<wbr>Rule<wbr>Condition<wbr>Response</h4>
 
 {{% choosable language csharp %}}
-<dl class="resources-properties">
-
-    <dt class="property-optional"
+<dl class="resources-properties"><dt class="property-optional"
             title="Optional">
         <span id="aggregation_csharp">
 <a href="#aggregation_csharp" style="color: inherit; text-decoration: inherit;">Aggregation</a>
@@ -1579,8 +1382,7 @@ All [input](#inputs) properties are implicitly available as output properties. A
         <span class="property-indicator"></span>
         <span class="property-type"><a href="#managementeventaggregationconditionresponse">Pulumi.<wbr>Azure<wbr>Native.<wbr>Insights.<wbr>Inputs.<wbr>Management<wbr>Event<wbr>Aggregation<wbr>Condition<wbr>Response<wbr>Args</a></span>
     </dt>
-    <dd>{{% md %}}How the data that is collected should be combined over time and when the alert is activated. Note that for management event alerts aggregation is optional – if it is not provided then any event will cause the alert to activate.{{% /md %}}</dd>
-    <dt class="property-optional"
+    <dd>{{% md %}}How the data that is collected should be combined over time and when the alert is activated. Note that for management event alerts aggregation is optional – if it is not provided then any event will cause the alert to activate.{{% /md %}}</dd><dt class="property-optional"
             title="Optional">
         <span id="datasource_csharp">
 <a href="#datasource_csharp" style="color: inherit; text-decoration: inherit;">Data<wbr>Source</a>
@@ -1588,14 +1390,11 @@ All [input](#inputs) properties are implicitly available as output properties. A
         <span class="property-indicator"></span>
         <span class="property-type"><a href="#rulemanagementeventdatasourceresponse">Pulumi.<wbr>Azure<wbr>Native.<wbr>Insights.<wbr>Inputs.<wbr>Rule<wbr>Management<wbr>Event<wbr>Data<wbr>Source<wbr>Response<wbr>Args</a> | <a href="#rulemetricdatasourceresponse">Pulumi.<wbr>Azure<wbr>Native.<wbr>Insights.<wbr>Inputs.<wbr>Rule<wbr>Metric<wbr>Data<wbr>Source<wbr>Response<wbr>Args</a></span>
     </dt>
-    <dd>{{% md %}}the resource from which the rule collects its data. For this type dataSource will always be of type RuleMetricDataSource.{{% /md %}}</dd>
-</dl>
+    <dd>{{% md %}}the resource from which the rule collects its data. For this type dataSource will always be of type RuleMetricDataSource.{{% /md %}}</dd></dl>
 {{% /choosable %}}
 
 {{% choosable language go %}}
-<dl class="resources-properties">
-
-    <dt class="property-optional"
+<dl class="resources-properties"><dt class="property-optional"
             title="Optional">
         <span id="aggregation_go">
 <a href="#aggregation_go" style="color: inherit; text-decoration: inherit;">Aggregation</a>
@@ -1603,8 +1402,7 @@ All [input](#inputs) properties are implicitly available as output properties. A
         <span class="property-indicator"></span>
         <span class="property-type"><a href="#managementeventaggregationconditionresponse">Management<wbr>Event<wbr>Aggregation<wbr>Condition<wbr>Response</a></span>
     </dt>
-    <dd>{{% md %}}How the data that is collected should be combined over time and when the alert is activated. Note that for management event alerts aggregation is optional – if it is not provided then any event will cause the alert to activate.{{% /md %}}</dd>
-    <dt class="property-optional"
+    <dd>{{% md %}}How the data that is collected should be combined over time and when the alert is activated. Note that for management event alerts aggregation is optional – if it is not provided then any event will cause the alert to activate.{{% /md %}}</dd><dt class="property-optional"
             title="Optional">
         <span id="datasource_go">
 <a href="#datasource_go" style="color: inherit; text-decoration: inherit;">Data<wbr>Source</a>
@@ -1612,14 +1410,11 @@ All [input](#inputs) properties are implicitly available as output properties. A
         <span class="property-indicator"></span>
         <span class="property-type"><a href="#rulemanagementeventdatasourceresponse">Rule<wbr>Management<wbr>Event<wbr>Data<wbr>Source<wbr>Response</a> | <a href="#rulemetricdatasourceresponse">Rule<wbr>Metric<wbr>Data<wbr>Source<wbr>Response</a></span>
     </dt>
-    <dd>{{% md %}}the resource from which the rule collects its data. For this type dataSource will always be of type RuleMetricDataSource.{{% /md %}}</dd>
-</dl>
+    <dd>{{% md %}}the resource from which the rule collects its data. For this type dataSource will always be of type RuleMetricDataSource.{{% /md %}}</dd></dl>
 {{% /choosable %}}
 
 {{% choosable language nodejs %}}
-<dl class="resources-properties">
-
-    <dt class="property-optional"
+<dl class="resources-properties"><dt class="property-optional"
             title="Optional">
         <span id="aggregation_nodejs">
 <a href="#aggregation_nodejs" style="color: inherit; text-decoration: inherit;">aggregation</a>
@@ -1627,8 +1422,7 @@ All [input](#inputs) properties are implicitly available as output properties. A
         <span class="property-indicator"></span>
         <span class="property-type"><a href="#managementeventaggregationconditionresponse">Management<wbr>Event<wbr>Aggregation<wbr>Condition<wbr>Response</a></span>
     </dt>
-    <dd>{{% md %}}How the data that is collected should be combined over time and when the alert is activated. Note that for management event alerts aggregation is optional – if it is not provided then any event will cause the alert to activate.{{% /md %}}</dd>
-    <dt class="property-optional"
+    <dd>{{% md %}}How the data that is collected should be combined over time and when the alert is activated. Note that for management event alerts aggregation is optional – if it is not provided then any event will cause the alert to activate.{{% /md %}}</dd><dt class="property-optional"
             title="Optional">
         <span id="datasource_nodejs">
 <a href="#datasource_nodejs" style="color: inherit; text-decoration: inherit;">data<wbr>Source</a>
@@ -1636,14 +1430,11 @@ All [input](#inputs) properties are implicitly available as output properties. A
         <span class="property-indicator"></span>
         <span class="property-type"><a href="#rulemanagementeventdatasourceresponse">Rule<wbr>Management<wbr>Event<wbr>Data<wbr>Source<wbr>Response</a> | <a href="#rulemetricdatasourceresponse">Rule<wbr>Metric<wbr>Data<wbr>Source<wbr>Response</a></span>
     </dt>
-    <dd>{{% md %}}the resource from which the rule collects its data. For this type dataSource will always be of type RuleMetricDataSource.{{% /md %}}</dd>
-</dl>
+    <dd>{{% md %}}the resource from which the rule collects its data. For this type dataSource will always be of type RuleMetricDataSource.{{% /md %}}</dd></dl>
 {{% /choosable %}}
 
 {{% choosable language python %}}
-<dl class="resources-properties">
-
-    <dt class="property-optional"
+<dl class="resources-properties"><dt class="property-optional"
             title="Optional">
         <span id="aggregation_python">
 <a href="#aggregation_python" style="color: inherit; text-decoration: inherit;">aggregation</a>
@@ -1651,8 +1442,7 @@ All [input](#inputs) properties are implicitly available as output properties. A
         <span class="property-indicator"></span>
         <span class="property-type"><a href="#managementeventaggregationconditionresponse">Management<wbr>Event<wbr>Aggregation<wbr>Condition<wbr>Response<wbr>Args</a></span>
     </dt>
-    <dd>{{% md %}}How the data that is collected should be combined over time and when the alert is activated. Note that for management event alerts aggregation is optional – if it is not provided then any event will cause the alert to activate.{{% /md %}}</dd>
-    <dt class="property-optional"
+    <dd>{{% md %}}How the data that is collected should be combined over time and when the alert is activated. Note that for management event alerts aggregation is optional – if it is not provided then any event will cause the alert to activate.{{% /md %}}</dd><dt class="property-optional"
             title="Optional">
         <span id="data_source_python">
 <a href="#data_source_python" style="color: inherit; text-decoration: inherit;">data_<wbr>source</a>
@@ -1660,16 +1450,13 @@ All [input](#inputs) properties are implicitly available as output properties. A
         <span class="property-indicator"></span>
         <span class="property-type"><a href="#rulemanagementeventdatasourceresponse">Rule<wbr>Management<wbr>Event<wbr>Data<wbr>Source<wbr>Response<wbr>Args</a> | <a href="#rulemetricdatasourceresponse">Rule<wbr>Metric<wbr>Data<wbr>Source<wbr>Response<wbr>Args</a></span>
     </dt>
-    <dd>{{% md %}}the resource from which the rule collects its data. For this type dataSource will always be of type RuleMetricDataSource.{{% /md %}}</dd>
-</dl>
+    <dd>{{% md %}}the resource from which the rule collects its data. For this type dataSource will always be of type RuleMetricDataSource.{{% /md %}}</dd></dl>
 {{% /choosable %}}
 
 <h4 id="ruleemailaction">Rule<wbr>Email<wbr>Action</h4>
 
 {{% choosable language csharp %}}
-<dl class="resources-properties">
-
-    <dt class="property-optional"
+<dl class="resources-properties"><dt class="property-optional"
             title="Optional">
         <span id="customemails_csharp">
 <a href="#customemails_csharp" style="color: inherit; text-decoration: inherit;">Custom<wbr>Emails</a>
@@ -1677,8 +1464,7 @@ All [input](#inputs) properties are implicitly available as output properties. A
         <span class="property-indicator"></span>
         <span class="property-type">List&lt;string&gt;</span>
     </dt>
-    <dd>{{% md %}}the list of administrator's custom email addresses to notify of the activation of the alert.{{% /md %}}</dd>
-    <dt class="property-optional"
+    <dd>{{% md %}}the list of administrator's custom email addresses to notify of the activation of the alert.{{% /md %}}</dd><dt class="property-optional"
             title="Optional">
         <span id="sendtoserviceowners_csharp">
 <a href="#sendtoserviceowners_csharp" style="color: inherit; text-decoration: inherit;">Send<wbr>To<wbr>Service<wbr>Owners</a>
@@ -1686,14 +1472,11 @@ All [input](#inputs) properties are implicitly available as output properties. A
         <span class="property-indicator"></span>
         <span class="property-type">bool</span>
     </dt>
-    <dd>{{% md %}}Whether the administrators (service and co-administrators) of the service should be notified when the alert is activated.{{% /md %}}</dd>
-</dl>
+    <dd>{{% md %}}Whether the administrators (service and co-administrators) of the service should be notified when the alert is activated.{{% /md %}}</dd></dl>
 {{% /choosable %}}
 
 {{% choosable language go %}}
-<dl class="resources-properties">
-
-    <dt class="property-optional"
+<dl class="resources-properties"><dt class="property-optional"
             title="Optional">
         <span id="customemails_go">
 <a href="#customemails_go" style="color: inherit; text-decoration: inherit;">Custom<wbr>Emails</a>
@@ -1701,8 +1484,7 @@ All [input](#inputs) properties are implicitly available as output properties. A
         <span class="property-indicator"></span>
         <span class="property-type">[]string</span>
     </dt>
-    <dd>{{% md %}}the list of administrator's custom email addresses to notify of the activation of the alert.{{% /md %}}</dd>
-    <dt class="property-optional"
+    <dd>{{% md %}}the list of administrator's custom email addresses to notify of the activation of the alert.{{% /md %}}</dd><dt class="property-optional"
             title="Optional">
         <span id="sendtoserviceowners_go">
 <a href="#sendtoserviceowners_go" style="color: inherit; text-decoration: inherit;">Send<wbr>To<wbr>Service<wbr>Owners</a>
@@ -1710,14 +1492,11 @@ All [input](#inputs) properties are implicitly available as output properties. A
         <span class="property-indicator"></span>
         <span class="property-type">bool</span>
     </dt>
-    <dd>{{% md %}}Whether the administrators (service and co-administrators) of the service should be notified when the alert is activated.{{% /md %}}</dd>
-</dl>
+    <dd>{{% md %}}Whether the administrators (service and co-administrators) of the service should be notified when the alert is activated.{{% /md %}}</dd></dl>
 {{% /choosable %}}
 
 {{% choosable language nodejs %}}
-<dl class="resources-properties">
-
-    <dt class="property-optional"
+<dl class="resources-properties"><dt class="property-optional"
             title="Optional">
         <span id="customemails_nodejs">
 <a href="#customemails_nodejs" style="color: inherit; text-decoration: inherit;">custom<wbr>Emails</a>
@@ -1725,8 +1504,7 @@ All [input](#inputs) properties are implicitly available as output properties. A
         <span class="property-indicator"></span>
         <span class="property-type">string[]</span>
     </dt>
-    <dd>{{% md %}}the list of administrator's custom email addresses to notify of the activation of the alert.{{% /md %}}</dd>
-    <dt class="property-optional"
+    <dd>{{% md %}}the list of administrator's custom email addresses to notify of the activation of the alert.{{% /md %}}</dd><dt class="property-optional"
             title="Optional">
         <span id="sendtoserviceowners_nodejs">
 <a href="#sendtoserviceowners_nodejs" style="color: inherit; text-decoration: inherit;">send<wbr>To<wbr>Service<wbr>Owners</a>
@@ -1734,14 +1512,11 @@ All [input](#inputs) properties are implicitly available as output properties. A
         <span class="property-indicator"></span>
         <span class="property-type">boolean</span>
     </dt>
-    <dd>{{% md %}}Whether the administrators (service and co-administrators) of the service should be notified when the alert is activated.{{% /md %}}</dd>
-</dl>
+    <dd>{{% md %}}Whether the administrators (service and co-administrators) of the service should be notified when the alert is activated.{{% /md %}}</dd></dl>
 {{% /choosable %}}
 
 {{% choosable language python %}}
-<dl class="resources-properties">
-
-    <dt class="property-optional"
+<dl class="resources-properties"><dt class="property-optional"
             title="Optional">
         <span id="custom_emails_python">
 <a href="#custom_emails_python" style="color: inherit; text-decoration: inherit;">custom_<wbr>emails</a>
@@ -1749,8 +1524,7 @@ All [input](#inputs) properties are implicitly available as output properties. A
         <span class="property-indicator"></span>
         <span class="property-type">Sequence[str]</span>
     </dt>
-    <dd>{{% md %}}the list of administrator's custom email addresses to notify of the activation of the alert.{{% /md %}}</dd>
-    <dt class="property-optional"
+    <dd>{{% md %}}the list of administrator's custom email addresses to notify of the activation of the alert.{{% /md %}}</dd><dt class="property-optional"
             title="Optional">
         <span id="send_to_service_owners_python">
 <a href="#send_to_service_owners_python" style="color: inherit; text-decoration: inherit;">send_<wbr>to_<wbr>service_<wbr>owners</a>
@@ -1758,16 +1532,13 @@ All [input](#inputs) properties are implicitly available as output properties. A
         <span class="property-indicator"></span>
         <span class="property-type">bool</span>
     </dt>
-    <dd>{{% md %}}Whether the administrators (service and co-administrators) of the service should be notified when the alert is activated.{{% /md %}}</dd>
-</dl>
+    <dd>{{% md %}}Whether the administrators (service and co-administrators) of the service should be notified when the alert is activated.{{% /md %}}</dd></dl>
 {{% /choosable %}}
 
 <h4 id="ruleemailactionresponse">Rule<wbr>Email<wbr>Action<wbr>Response</h4>
 
 {{% choosable language csharp %}}
-<dl class="resources-properties">
-
-    <dt class="property-optional"
+<dl class="resources-properties"><dt class="property-optional"
             title="Optional">
         <span id="customemails_csharp">
 <a href="#customemails_csharp" style="color: inherit; text-decoration: inherit;">Custom<wbr>Emails</a>
@@ -1775,8 +1546,7 @@ All [input](#inputs) properties are implicitly available as output properties. A
         <span class="property-indicator"></span>
         <span class="property-type">List&lt;string&gt;</span>
     </dt>
-    <dd>{{% md %}}the list of administrator's custom email addresses to notify of the activation of the alert.{{% /md %}}</dd>
-    <dt class="property-optional"
+    <dd>{{% md %}}the list of administrator's custom email addresses to notify of the activation of the alert.{{% /md %}}</dd><dt class="property-optional"
             title="Optional">
         <span id="sendtoserviceowners_csharp">
 <a href="#sendtoserviceowners_csharp" style="color: inherit; text-decoration: inherit;">Send<wbr>To<wbr>Service<wbr>Owners</a>
@@ -1784,14 +1554,11 @@ All [input](#inputs) properties are implicitly available as output properties. A
         <span class="property-indicator"></span>
         <span class="property-type">bool</span>
     </dt>
-    <dd>{{% md %}}Whether the administrators (service and co-administrators) of the service should be notified when the alert is activated.{{% /md %}}</dd>
-</dl>
+    <dd>{{% md %}}Whether the administrators (service and co-administrators) of the service should be notified when the alert is activated.{{% /md %}}</dd></dl>
 {{% /choosable %}}
 
 {{% choosable language go %}}
-<dl class="resources-properties">
-
-    <dt class="property-optional"
+<dl class="resources-properties"><dt class="property-optional"
             title="Optional">
         <span id="customemails_go">
 <a href="#customemails_go" style="color: inherit; text-decoration: inherit;">Custom<wbr>Emails</a>
@@ -1799,8 +1566,7 @@ All [input](#inputs) properties are implicitly available as output properties. A
         <span class="property-indicator"></span>
         <span class="property-type">[]string</span>
     </dt>
-    <dd>{{% md %}}the list of administrator's custom email addresses to notify of the activation of the alert.{{% /md %}}</dd>
-    <dt class="property-optional"
+    <dd>{{% md %}}the list of administrator's custom email addresses to notify of the activation of the alert.{{% /md %}}</dd><dt class="property-optional"
             title="Optional">
         <span id="sendtoserviceowners_go">
 <a href="#sendtoserviceowners_go" style="color: inherit; text-decoration: inherit;">Send<wbr>To<wbr>Service<wbr>Owners</a>
@@ -1808,14 +1574,11 @@ All [input](#inputs) properties are implicitly available as output properties. A
         <span class="property-indicator"></span>
         <span class="property-type">bool</span>
     </dt>
-    <dd>{{% md %}}Whether the administrators (service and co-administrators) of the service should be notified when the alert is activated.{{% /md %}}</dd>
-</dl>
+    <dd>{{% md %}}Whether the administrators (service and co-administrators) of the service should be notified when the alert is activated.{{% /md %}}</dd></dl>
 {{% /choosable %}}
 
 {{% choosable language nodejs %}}
-<dl class="resources-properties">
-
-    <dt class="property-optional"
+<dl class="resources-properties"><dt class="property-optional"
             title="Optional">
         <span id="customemails_nodejs">
 <a href="#customemails_nodejs" style="color: inherit; text-decoration: inherit;">custom<wbr>Emails</a>
@@ -1823,8 +1586,7 @@ All [input](#inputs) properties are implicitly available as output properties. A
         <span class="property-indicator"></span>
         <span class="property-type">string[]</span>
     </dt>
-    <dd>{{% md %}}the list of administrator's custom email addresses to notify of the activation of the alert.{{% /md %}}</dd>
-    <dt class="property-optional"
+    <dd>{{% md %}}the list of administrator's custom email addresses to notify of the activation of the alert.{{% /md %}}</dd><dt class="property-optional"
             title="Optional">
         <span id="sendtoserviceowners_nodejs">
 <a href="#sendtoserviceowners_nodejs" style="color: inherit; text-decoration: inherit;">send<wbr>To<wbr>Service<wbr>Owners</a>
@@ -1832,14 +1594,11 @@ All [input](#inputs) properties are implicitly available as output properties. A
         <span class="property-indicator"></span>
         <span class="property-type">boolean</span>
     </dt>
-    <dd>{{% md %}}Whether the administrators (service and co-administrators) of the service should be notified when the alert is activated.{{% /md %}}</dd>
-</dl>
+    <dd>{{% md %}}Whether the administrators (service and co-administrators) of the service should be notified when the alert is activated.{{% /md %}}</dd></dl>
 {{% /choosable %}}
 
 {{% choosable language python %}}
-<dl class="resources-properties">
-
-    <dt class="property-optional"
+<dl class="resources-properties"><dt class="property-optional"
             title="Optional">
         <span id="custom_emails_python">
 <a href="#custom_emails_python" style="color: inherit; text-decoration: inherit;">custom_<wbr>emails</a>
@@ -1847,8 +1606,7 @@ All [input](#inputs) properties are implicitly available as output properties. A
         <span class="property-indicator"></span>
         <span class="property-type">Sequence[str]</span>
     </dt>
-    <dd>{{% md %}}the list of administrator's custom email addresses to notify of the activation of the alert.{{% /md %}}</dd>
-    <dt class="property-optional"
+    <dd>{{% md %}}the list of administrator's custom email addresses to notify of the activation of the alert.{{% /md %}}</dd><dt class="property-optional"
             title="Optional">
         <span id="send_to_service_owners_python">
 <a href="#send_to_service_owners_python" style="color: inherit; text-decoration: inherit;">send_<wbr>to_<wbr>service_<wbr>owners</a>
@@ -1856,16 +1614,13 @@ All [input](#inputs) properties are implicitly available as output properties. A
         <span class="property-indicator"></span>
         <span class="property-type">bool</span>
     </dt>
-    <dd>{{% md %}}Whether the administrators (service and co-administrators) of the service should be notified when the alert is activated.{{% /md %}}</dd>
-</dl>
+    <dd>{{% md %}}Whether the administrators (service and co-administrators) of the service should be notified when the alert is activated.{{% /md %}}</dd></dl>
 {{% /choosable %}}
 
 <h4 id="rulemanagementeventclaimsdatasource">Rule<wbr>Management<wbr>Event<wbr>Claims<wbr>Data<wbr>Source</h4>
 
 {{% choosable language csharp %}}
-<dl class="resources-properties">
-
-    <dt class="property-optional"
+<dl class="resources-properties"><dt class="property-optional"
             title="Optional">
         <span id="emailaddress_csharp">
 <a href="#emailaddress_csharp" style="color: inherit; text-decoration: inherit;">Email<wbr>Address</a>
@@ -1873,14 +1628,11 @@ All [input](#inputs) properties are implicitly available as output properties. A
         <span class="property-indicator"></span>
         <span class="property-type">string</span>
     </dt>
-    <dd>{{% md %}}the email address.{{% /md %}}</dd>
-</dl>
+    <dd>{{% md %}}the email address.{{% /md %}}</dd></dl>
 {{% /choosable %}}
 
 {{% choosable language go %}}
-<dl class="resources-properties">
-
-    <dt class="property-optional"
+<dl class="resources-properties"><dt class="property-optional"
             title="Optional">
         <span id="emailaddress_go">
 <a href="#emailaddress_go" style="color: inherit; text-decoration: inherit;">Email<wbr>Address</a>
@@ -1888,14 +1640,11 @@ All [input](#inputs) properties are implicitly available as output properties. A
         <span class="property-indicator"></span>
         <span class="property-type">string</span>
     </dt>
-    <dd>{{% md %}}the email address.{{% /md %}}</dd>
-</dl>
+    <dd>{{% md %}}the email address.{{% /md %}}</dd></dl>
 {{% /choosable %}}
 
 {{% choosable language nodejs %}}
-<dl class="resources-properties">
-
-    <dt class="property-optional"
+<dl class="resources-properties"><dt class="property-optional"
             title="Optional">
         <span id="emailaddress_nodejs">
 <a href="#emailaddress_nodejs" style="color: inherit; text-decoration: inherit;">email<wbr>Address</a>
@@ -1903,14 +1652,11 @@ All [input](#inputs) properties are implicitly available as output properties. A
         <span class="property-indicator"></span>
         <span class="property-type">string</span>
     </dt>
-    <dd>{{% md %}}the email address.{{% /md %}}</dd>
-</dl>
+    <dd>{{% md %}}the email address.{{% /md %}}</dd></dl>
 {{% /choosable %}}
 
 {{% choosable language python %}}
-<dl class="resources-properties">
-
-    <dt class="property-optional"
+<dl class="resources-properties"><dt class="property-optional"
             title="Optional">
         <span id="email_address_python">
 <a href="#email_address_python" style="color: inherit; text-decoration: inherit;">email_<wbr>address</a>
@@ -1918,16 +1664,13 @@ All [input](#inputs) properties are implicitly available as output properties. A
         <span class="property-indicator"></span>
         <span class="property-type">str</span>
     </dt>
-    <dd>{{% md %}}the email address.{{% /md %}}</dd>
-</dl>
+    <dd>{{% md %}}the email address.{{% /md %}}</dd></dl>
 {{% /choosable %}}
 
 <h4 id="rulemanagementeventclaimsdatasourceresponse">Rule<wbr>Management<wbr>Event<wbr>Claims<wbr>Data<wbr>Source<wbr>Response</h4>
 
 {{% choosable language csharp %}}
-<dl class="resources-properties">
-
-    <dt class="property-optional"
+<dl class="resources-properties"><dt class="property-optional"
             title="Optional">
         <span id="emailaddress_csharp">
 <a href="#emailaddress_csharp" style="color: inherit; text-decoration: inherit;">Email<wbr>Address</a>
@@ -1935,14 +1678,11 @@ All [input](#inputs) properties are implicitly available as output properties. A
         <span class="property-indicator"></span>
         <span class="property-type">string</span>
     </dt>
-    <dd>{{% md %}}the email address.{{% /md %}}</dd>
-</dl>
+    <dd>{{% md %}}the email address.{{% /md %}}</dd></dl>
 {{% /choosable %}}
 
 {{% choosable language go %}}
-<dl class="resources-properties">
-
-    <dt class="property-optional"
+<dl class="resources-properties"><dt class="property-optional"
             title="Optional">
         <span id="emailaddress_go">
 <a href="#emailaddress_go" style="color: inherit; text-decoration: inherit;">Email<wbr>Address</a>
@@ -1950,14 +1690,11 @@ All [input](#inputs) properties are implicitly available as output properties. A
         <span class="property-indicator"></span>
         <span class="property-type">string</span>
     </dt>
-    <dd>{{% md %}}the email address.{{% /md %}}</dd>
-</dl>
+    <dd>{{% md %}}the email address.{{% /md %}}</dd></dl>
 {{% /choosable %}}
 
 {{% choosable language nodejs %}}
-<dl class="resources-properties">
-
-    <dt class="property-optional"
+<dl class="resources-properties"><dt class="property-optional"
             title="Optional">
         <span id="emailaddress_nodejs">
 <a href="#emailaddress_nodejs" style="color: inherit; text-decoration: inherit;">email<wbr>Address</a>
@@ -1965,14 +1702,11 @@ All [input](#inputs) properties are implicitly available as output properties. A
         <span class="property-indicator"></span>
         <span class="property-type">string</span>
     </dt>
-    <dd>{{% md %}}the email address.{{% /md %}}</dd>
-</dl>
+    <dd>{{% md %}}the email address.{{% /md %}}</dd></dl>
 {{% /choosable %}}
 
 {{% choosable language python %}}
-<dl class="resources-properties">
-
-    <dt class="property-optional"
+<dl class="resources-properties"><dt class="property-optional"
             title="Optional">
         <span id="email_address_python">
 <a href="#email_address_python" style="color: inherit; text-decoration: inherit;">email_<wbr>address</a>
@@ -1980,16 +1714,13 @@ All [input](#inputs) properties are implicitly available as output properties. A
         <span class="property-indicator"></span>
         <span class="property-type">str</span>
     </dt>
-    <dd>{{% md %}}the email address.{{% /md %}}</dd>
-</dl>
+    <dd>{{% md %}}the email address.{{% /md %}}</dd></dl>
 {{% /choosable %}}
 
 <h4 id="rulemanagementeventdatasource">Rule<wbr>Management<wbr>Event<wbr>Data<wbr>Source</h4>
 
 {{% choosable language csharp %}}
-<dl class="resources-properties">
-
-    <dt class="property-optional"
+<dl class="resources-properties"><dt class="property-optional"
             title="Optional">
         <span id="claims_csharp">
 <a href="#claims_csharp" style="color: inherit; text-decoration: inherit;">Claims</a>
@@ -1997,8 +1728,7 @@ All [input](#inputs) properties are implicitly available as output properties. A
         <span class="property-indicator"></span>
         <span class="property-type"><a href="#rulemanagementeventclaimsdatasource">Pulumi.<wbr>Azure<wbr>Native.<wbr>Insights.<wbr>Inputs.<wbr>Rule<wbr>Management<wbr>Event<wbr>Claims<wbr>Data<wbr>Source<wbr>Args</a></span>
     </dt>
-    <dd>{{% md %}}the claims.{{% /md %}}</dd>
-    <dt class="property-optional"
+    <dd>{{% md %}}the claims.{{% /md %}}</dd><dt class="property-optional"
             title="Optional">
         <span id="eventname_csharp">
 <a href="#eventname_csharp" style="color: inherit; text-decoration: inherit;">Event<wbr>Name</a>
@@ -2006,8 +1736,7 @@ All [input](#inputs) properties are implicitly available as output properties. A
         <span class="property-indicator"></span>
         <span class="property-type">string</span>
     </dt>
-    <dd>{{% md %}}the event name.{{% /md %}}</dd>
-    <dt class="property-optional"
+    <dd>{{% md %}}the event name.{{% /md %}}</dd><dt class="property-optional"
             title="Optional">
         <span id="eventsource_csharp">
 <a href="#eventsource_csharp" style="color: inherit; text-decoration: inherit;">Event<wbr>Source</a>
@@ -2015,8 +1744,7 @@ All [input](#inputs) properties are implicitly available as output properties. A
         <span class="property-indicator"></span>
         <span class="property-type">string</span>
     </dt>
-    <dd>{{% md %}}the event source.{{% /md %}}</dd>
-    <dt class="property-optional"
+    <dd>{{% md %}}the event source.{{% /md %}}</dd><dt class="property-optional"
             title="Optional">
         <span id="legacyresourceid_csharp">
 <a href="#legacyresourceid_csharp" style="color: inherit; text-decoration: inherit;">Legacy<wbr>Resource<wbr>Id</a>
@@ -2024,8 +1752,7 @@ All [input](#inputs) properties are implicitly available as output properties. A
         <span class="property-indicator"></span>
         <span class="property-type">string</span>
     </dt>
-    <dd>{{% md %}}the legacy resource identifier of the resource the rule monitors. **NOTE**: this property cannot be updated for an existing rule.{{% /md %}}</dd>
-    <dt class="property-optional"
+    <dd>{{% md %}}the legacy resource identifier of the resource the rule monitors. **NOTE**: this property cannot be updated for an existing rule.{{% /md %}}</dd><dt class="property-optional"
             title="Optional">
         <span id="level_csharp">
 <a href="#level_csharp" style="color: inherit; text-decoration: inherit;">Level</a>
@@ -2033,8 +1760,7 @@ All [input](#inputs) properties are implicitly available as output properties. A
         <span class="property-indicator"></span>
         <span class="property-type">string</span>
     </dt>
-    <dd>{{% md %}}the level.{{% /md %}}</dd>
-    <dt class="property-optional"
+    <dd>{{% md %}}the level.{{% /md %}}</dd><dt class="property-optional"
             title="Optional">
         <span id="metricnamespace_csharp">
 <a href="#metricnamespace_csharp" style="color: inherit; text-decoration: inherit;">Metric<wbr>Namespace</a>
@@ -2042,8 +1768,7 @@ All [input](#inputs) properties are implicitly available as output properties. A
         <span class="property-indicator"></span>
         <span class="property-type">string</span>
     </dt>
-    <dd>{{% md %}}the namespace of the metric.{{% /md %}}</dd>
-    <dt class="property-optional"
+    <dd>{{% md %}}the namespace of the metric.{{% /md %}}</dd><dt class="property-optional"
             title="Optional">
         <span id="operationname_csharp">
 <a href="#operationname_csharp" style="color: inherit; text-decoration: inherit;">Operation<wbr>Name</a>
@@ -2051,8 +1776,7 @@ All [input](#inputs) properties are implicitly available as output properties. A
         <span class="property-indicator"></span>
         <span class="property-type">string</span>
     </dt>
-    <dd>{{% md %}}The name of the operation that should be checked for. If no name is provided, any operation will match.{{% /md %}}</dd>
-    <dt class="property-optional"
+    <dd>{{% md %}}The name of the operation that should be checked for. If no name is provided, any operation will match.{{% /md %}}</dd><dt class="property-optional"
             title="Optional">
         <span id="resourcegroupname_csharp">
 <a href="#resourcegroupname_csharp" style="color: inherit; text-decoration: inherit;">Resource<wbr>Group<wbr>Name</a>
@@ -2060,8 +1784,7 @@ All [input](#inputs) properties are implicitly available as output properties. A
         <span class="property-indicator"></span>
         <span class="property-type">string</span>
     </dt>
-    <dd>{{% md %}}the resource group name.{{% /md %}}</dd>
-    <dt class="property-optional"
+    <dd>{{% md %}}the resource group name.{{% /md %}}</dd><dt class="property-optional"
             title="Optional">
         <span id="resourcelocation_csharp">
 <a href="#resourcelocation_csharp" style="color: inherit; text-decoration: inherit;">Resource<wbr>Location</a>
@@ -2069,8 +1792,7 @@ All [input](#inputs) properties are implicitly available as output properties. A
         <span class="property-indicator"></span>
         <span class="property-type">string</span>
     </dt>
-    <dd>{{% md %}}the location of the resource.{{% /md %}}</dd>
-    <dt class="property-optional"
+    <dd>{{% md %}}the location of the resource.{{% /md %}}</dd><dt class="property-optional"
             title="Optional">
         <span id="resourceprovidername_csharp">
 <a href="#resourceprovidername_csharp" style="color: inherit; text-decoration: inherit;">Resource<wbr>Provider<wbr>Name</a>
@@ -2078,8 +1800,7 @@ All [input](#inputs) properties are implicitly available as output properties. A
         <span class="property-indicator"></span>
         <span class="property-type">string</span>
     </dt>
-    <dd>{{% md %}}the resource provider name.{{% /md %}}</dd>
-    <dt class="property-optional"
+    <dd>{{% md %}}the resource provider name.{{% /md %}}</dd><dt class="property-optional"
             title="Optional">
         <span id="resourceuri_csharp">
 <a href="#resourceuri_csharp" style="color: inherit; text-decoration: inherit;">Resource<wbr>Uri</a>
@@ -2087,8 +1808,7 @@ All [input](#inputs) properties are implicitly available as output properties. A
         <span class="property-indicator"></span>
         <span class="property-type">string</span>
     </dt>
-    <dd>{{% md %}}the resource identifier of the resource the rule monitors. **NOTE**: this property cannot be updated for an existing rule.{{% /md %}}</dd>
-    <dt class="property-optional"
+    <dd>{{% md %}}the resource identifier of the resource the rule monitors. **NOTE**: this property cannot be updated for an existing rule.{{% /md %}}</dd><dt class="property-optional"
             title="Optional">
         <span id="status_csharp">
 <a href="#status_csharp" style="color: inherit; text-decoration: inherit;">Status</a>
@@ -2096,8 +1816,7 @@ All [input](#inputs) properties are implicitly available as output properties. A
         <span class="property-indicator"></span>
         <span class="property-type">string</span>
     </dt>
-    <dd>{{% md %}}The status of the operation that should be checked for. If no status is provided, any status will match.{{% /md %}}</dd>
-    <dt class="property-optional"
+    <dd>{{% md %}}The status of the operation that should be checked for. If no status is provided, any status will match.{{% /md %}}</dd><dt class="property-optional"
             title="Optional">
         <span id="substatus_csharp">
 <a href="#substatus_csharp" style="color: inherit; text-decoration: inherit;">Sub<wbr>Status</a>
@@ -2105,14 +1824,11 @@ All [input](#inputs) properties are implicitly available as output properties. A
         <span class="property-indicator"></span>
         <span class="property-type">string</span>
     </dt>
-    <dd>{{% md %}}the substatus.{{% /md %}}</dd>
-</dl>
+    <dd>{{% md %}}the substatus.{{% /md %}}</dd></dl>
 {{% /choosable %}}
 
 {{% choosable language go %}}
-<dl class="resources-properties">
-
-    <dt class="property-optional"
+<dl class="resources-properties"><dt class="property-optional"
             title="Optional">
         <span id="claims_go">
 <a href="#claims_go" style="color: inherit; text-decoration: inherit;">Claims</a>
@@ -2120,8 +1836,7 @@ All [input](#inputs) properties are implicitly available as output properties. A
         <span class="property-indicator"></span>
         <span class="property-type"><a href="#rulemanagementeventclaimsdatasource">Rule<wbr>Management<wbr>Event<wbr>Claims<wbr>Data<wbr>Source</a></span>
     </dt>
-    <dd>{{% md %}}the claims.{{% /md %}}</dd>
-    <dt class="property-optional"
+    <dd>{{% md %}}the claims.{{% /md %}}</dd><dt class="property-optional"
             title="Optional">
         <span id="eventname_go">
 <a href="#eventname_go" style="color: inherit; text-decoration: inherit;">Event<wbr>Name</a>
@@ -2129,8 +1844,7 @@ All [input](#inputs) properties are implicitly available as output properties. A
         <span class="property-indicator"></span>
         <span class="property-type">string</span>
     </dt>
-    <dd>{{% md %}}the event name.{{% /md %}}</dd>
-    <dt class="property-optional"
+    <dd>{{% md %}}the event name.{{% /md %}}</dd><dt class="property-optional"
             title="Optional">
         <span id="eventsource_go">
 <a href="#eventsource_go" style="color: inherit; text-decoration: inherit;">Event<wbr>Source</a>
@@ -2138,8 +1852,7 @@ All [input](#inputs) properties are implicitly available as output properties. A
         <span class="property-indicator"></span>
         <span class="property-type">string</span>
     </dt>
-    <dd>{{% md %}}the event source.{{% /md %}}</dd>
-    <dt class="property-optional"
+    <dd>{{% md %}}the event source.{{% /md %}}</dd><dt class="property-optional"
             title="Optional">
         <span id="legacyresourceid_go">
 <a href="#legacyresourceid_go" style="color: inherit; text-decoration: inherit;">Legacy<wbr>Resource<wbr>Id</a>
@@ -2147,8 +1860,7 @@ All [input](#inputs) properties are implicitly available as output properties. A
         <span class="property-indicator"></span>
         <span class="property-type">string</span>
     </dt>
-    <dd>{{% md %}}the legacy resource identifier of the resource the rule monitors. **NOTE**: this property cannot be updated for an existing rule.{{% /md %}}</dd>
-    <dt class="property-optional"
+    <dd>{{% md %}}the legacy resource identifier of the resource the rule monitors. **NOTE**: this property cannot be updated for an existing rule.{{% /md %}}</dd><dt class="property-optional"
             title="Optional">
         <span id="level_go">
 <a href="#level_go" style="color: inherit; text-decoration: inherit;">Level</a>
@@ -2156,8 +1868,7 @@ All [input](#inputs) properties are implicitly available as output properties. A
         <span class="property-indicator"></span>
         <span class="property-type">string</span>
     </dt>
-    <dd>{{% md %}}the level.{{% /md %}}</dd>
-    <dt class="property-optional"
+    <dd>{{% md %}}the level.{{% /md %}}</dd><dt class="property-optional"
             title="Optional">
         <span id="metricnamespace_go">
 <a href="#metricnamespace_go" style="color: inherit; text-decoration: inherit;">Metric<wbr>Namespace</a>
@@ -2165,8 +1876,7 @@ All [input](#inputs) properties are implicitly available as output properties. A
         <span class="property-indicator"></span>
         <span class="property-type">string</span>
     </dt>
-    <dd>{{% md %}}the namespace of the metric.{{% /md %}}</dd>
-    <dt class="property-optional"
+    <dd>{{% md %}}the namespace of the metric.{{% /md %}}</dd><dt class="property-optional"
             title="Optional">
         <span id="operationname_go">
 <a href="#operationname_go" style="color: inherit; text-decoration: inherit;">Operation<wbr>Name</a>
@@ -2174,8 +1884,7 @@ All [input](#inputs) properties are implicitly available as output properties. A
         <span class="property-indicator"></span>
         <span class="property-type">string</span>
     </dt>
-    <dd>{{% md %}}The name of the operation that should be checked for. If no name is provided, any operation will match.{{% /md %}}</dd>
-    <dt class="property-optional"
+    <dd>{{% md %}}The name of the operation that should be checked for. If no name is provided, any operation will match.{{% /md %}}</dd><dt class="property-optional"
             title="Optional">
         <span id="resourcegroupname_go">
 <a href="#resourcegroupname_go" style="color: inherit; text-decoration: inherit;">Resource<wbr>Group<wbr>Name</a>
@@ -2183,8 +1892,7 @@ All [input](#inputs) properties are implicitly available as output properties. A
         <span class="property-indicator"></span>
         <span class="property-type">string</span>
     </dt>
-    <dd>{{% md %}}the resource group name.{{% /md %}}</dd>
-    <dt class="property-optional"
+    <dd>{{% md %}}the resource group name.{{% /md %}}</dd><dt class="property-optional"
             title="Optional">
         <span id="resourcelocation_go">
 <a href="#resourcelocation_go" style="color: inherit; text-decoration: inherit;">Resource<wbr>Location</a>
@@ -2192,8 +1900,7 @@ All [input](#inputs) properties are implicitly available as output properties. A
         <span class="property-indicator"></span>
         <span class="property-type">string</span>
     </dt>
-    <dd>{{% md %}}the location of the resource.{{% /md %}}</dd>
-    <dt class="property-optional"
+    <dd>{{% md %}}the location of the resource.{{% /md %}}</dd><dt class="property-optional"
             title="Optional">
         <span id="resourceprovidername_go">
 <a href="#resourceprovidername_go" style="color: inherit; text-decoration: inherit;">Resource<wbr>Provider<wbr>Name</a>
@@ -2201,8 +1908,7 @@ All [input](#inputs) properties are implicitly available as output properties. A
         <span class="property-indicator"></span>
         <span class="property-type">string</span>
     </dt>
-    <dd>{{% md %}}the resource provider name.{{% /md %}}</dd>
-    <dt class="property-optional"
+    <dd>{{% md %}}the resource provider name.{{% /md %}}</dd><dt class="property-optional"
             title="Optional">
         <span id="resourceuri_go">
 <a href="#resourceuri_go" style="color: inherit; text-decoration: inherit;">Resource<wbr>Uri</a>
@@ -2210,8 +1916,7 @@ All [input](#inputs) properties are implicitly available as output properties. A
         <span class="property-indicator"></span>
         <span class="property-type">string</span>
     </dt>
-    <dd>{{% md %}}the resource identifier of the resource the rule monitors. **NOTE**: this property cannot be updated for an existing rule.{{% /md %}}</dd>
-    <dt class="property-optional"
+    <dd>{{% md %}}the resource identifier of the resource the rule monitors. **NOTE**: this property cannot be updated for an existing rule.{{% /md %}}</dd><dt class="property-optional"
             title="Optional">
         <span id="status_go">
 <a href="#status_go" style="color: inherit; text-decoration: inherit;">Status</a>
@@ -2219,8 +1924,7 @@ All [input](#inputs) properties are implicitly available as output properties. A
         <span class="property-indicator"></span>
         <span class="property-type">string</span>
     </dt>
-    <dd>{{% md %}}The status of the operation that should be checked for. If no status is provided, any status will match.{{% /md %}}</dd>
-    <dt class="property-optional"
+    <dd>{{% md %}}The status of the operation that should be checked for. If no status is provided, any status will match.{{% /md %}}</dd><dt class="property-optional"
             title="Optional">
         <span id="substatus_go">
 <a href="#substatus_go" style="color: inherit; text-decoration: inherit;">Sub<wbr>Status</a>
@@ -2228,14 +1932,11 @@ All [input](#inputs) properties are implicitly available as output properties. A
         <span class="property-indicator"></span>
         <span class="property-type">string</span>
     </dt>
-    <dd>{{% md %}}the substatus.{{% /md %}}</dd>
-</dl>
+    <dd>{{% md %}}the substatus.{{% /md %}}</dd></dl>
 {{% /choosable %}}
 
 {{% choosable language nodejs %}}
-<dl class="resources-properties">
-
-    <dt class="property-optional"
+<dl class="resources-properties"><dt class="property-optional"
             title="Optional">
         <span id="claims_nodejs">
 <a href="#claims_nodejs" style="color: inherit; text-decoration: inherit;">claims</a>
@@ -2243,8 +1944,7 @@ All [input](#inputs) properties are implicitly available as output properties. A
         <span class="property-indicator"></span>
         <span class="property-type"><a href="#rulemanagementeventclaimsdatasource">Rule<wbr>Management<wbr>Event<wbr>Claims<wbr>Data<wbr>Source</a></span>
     </dt>
-    <dd>{{% md %}}the claims.{{% /md %}}</dd>
-    <dt class="property-optional"
+    <dd>{{% md %}}the claims.{{% /md %}}</dd><dt class="property-optional"
             title="Optional">
         <span id="eventname_nodejs">
 <a href="#eventname_nodejs" style="color: inherit; text-decoration: inherit;">event<wbr>Name</a>
@@ -2252,8 +1952,7 @@ All [input](#inputs) properties are implicitly available as output properties. A
         <span class="property-indicator"></span>
         <span class="property-type">string</span>
     </dt>
-    <dd>{{% md %}}the event name.{{% /md %}}</dd>
-    <dt class="property-optional"
+    <dd>{{% md %}}the event name.{{% /md %}}</dd><dt class="property-optional"
             title="Optional">
         <span id="eventsource_nodejs">
 <a href="#eventsource_nodejs" style="color: inherit; text-decoration: inherit;">event<wbr>Source</a>
@@ -2261,8 +1960,7 @@ All [input](#inputs) properties are implicitly available as output properties. A
         <span class="property-indicator"></span>
         <span class="property-type">string</span>
     </dt>
-    <dd>{{% md %}}the event source.{{% /md %}}</dd>
-    <dt class="property-optional"
+    <dd>{{% md %}}the event source.{{% /md %}}</dd><dt class="property-optional"
             title="Optional">
         <span id="legacyresourceid_nodejs">
 <a href="#legacyresourceid_nodejs" style="color: inherit; text-decoration: inherit;">legacy<wbr>Resource<wbr>Id</a>
@@ -2270,8 +1968,7 @@ All [input](#inputs) properties are implicitly available as output properties. A
         <span class="property-indicator"></span>
         <span class="property-type">string</span>
     </dt>
-    <dd>{{% md %}}the legacy resource identifier of the resource the rule monitors. **NOTE**: this property cannot be updated for an existing rule.{{% /md %}}</dd>
-    <dt class="property-optional"
+    <dd>{{% md %}}the legacy resource identifier of the resource the rule monitors. **NOTE**: this property cannot be updated for an existing rule.{{% /md %}}</dd><dt class="property-optional"
             title="Optional">
         <span id="level_nodejs">
 <a href="#level_nodejs" style="color: inherit; text-decoration: inherit;">level</a>
@@ -2279,8 +1976,7 @@ All [input](#inputs) properties are implicitly available as output properties. A
         <span class="property-indicator"></span>
         <span class="property-type">string</span>
     </dt>
-    <dd>{{% md %}}the level.{{% /md %}}</dd>
-    <dt class="property-optional"
+    <dd>{{% md %}}the level.{{% /md %}}</dd><dt class="property-optional"
             title="Optional">
         <span id="metricnamespace_nodejs">
 <a href="#metricnamespace_nodejs" style="color: inherit; text-decoration: inherit;">metric<wbr>Namespace</a>
@@ -2288,8 +1984,7 @@ All [input](#inputs) properties are implicitly available as output properties. A
         <span class="property-indicator"></span>
         <span class="property-type">string</span>
     </dt>
-    <dd>{{% md %}}the namespace of the metric.{{% /md %}}</dd>
-    <dt class="property-optional"
+    <dd>{{% md %}}the namespace of the metric.{{% /md %}}</dd><dt class="property-optional"
             title="Optional">
         <span id="operationname_nodejs">
 <a href="#operationname_nodejs" style="color: inherit; text-decoration: inherit;">operation<wbr>Name</a>
@@ -2297,8 +1992,7 @@ All [input](#inputs) properties are implicitly available as output properties. A
         <span class="property-indicator"></span>
         <span class="property-type">string</span>
     </dt>
-    <dd>{{% md %}}The name of the operation that should be checked for. If no name is provided, any operation will match.{{% /md %}}</dd>
-    <dt class="property-optional"
+    <dd>{{% md %}}The name of the operation that should be checked for. If no name is provided, any operation will match.{{% /md %}}</dd><dt class="property-optional"
             title="Optional">
         <span id="resourcegroupname_nodejs">
 <a href="#resourcegroupname_nodejs" style="color: inherit; text-decoration: inherit;">resource<wbr>Group<wbr>Name</a>
@@ -2306,8 +2000,7 @@ All [input](#inputs) properties are implicitly available as output properties. A
         <span class="property-indicator"></span>
         <span class="property-type">string</span>
     </dt>
-    <dd>{{% md %}}the resource group name.{{% /md %}}</dd>
-    <dt class="property-optional"
+    <dd>{{% md %}}the resource group name.{{% /md %}}</dd><dt class="property-optional"
             title="Optional">
         <span id="resourcelocation_nodejs">
 <a href="#resourcelocation_nodejs" style="color: inherit; text-decoration: inherit;">resource<wbr>Location</a>
@@ -2315,8 +2008,7 @@ All [input](#inputs) properties are implicitly available as output properties. A
         <span class="property-indicator"></span>
         <span class="property-type">string</span>
     </dt>
-    <dd>{{% md %}}the location of the resource.{{% /md %}}</dd>
-    <dt class="property-optional"
+    <dd>{{% md %}}the location of the resource.{{% /md %}}</dd><dt class="property-optional"
             title="Optional">
         <span id="resourceprovidername_nodejs">
 <a href="#resourceprovidername_nodejs" style="color: inherit; text-decoration: inherit;">resource<wbr>Provider<wbr>Name</a>
@@ -2324,8 +2016,7 @@ All [input](#inputs) properties are implicitly available as output properties. A
         <span class="property-indicator"></span>
         <span class="property-type">string</span>
     </dt>
-    <dd>{{% md %}}the resource provider name.{{% /md %}}</dd>
-    <dt class="property-optional"
+    <dd>{{% md %}}the resource provider name.{{% /md %}}</dd><dt class="property-optional"
             title="Optional">
         <span id="resourceuri_nodejs">
 <a href="#resourceuri_nodejs" style="color: inherit; text-decoration: inherit;">resource<wbr>Uri</a>
@@ -2333,8 +2024,7 @@ All [input](#inputs) properties are implicitly available as output properties. A
         <span class="property-indicator"></span>
         <span class="property-type">string</span>
     </dt>
-    <dd>{{% md %}}the resource identifier of the resource the rule monitors. **NOTE**: this property cannot be updated for an existing rule.{{% /md %}}</dd>
-    <dt class="property-optional"
+    <dd>{{% md %}}the resource identifier of the resource the rule monitors. **NOTE**: this property cannot be updated for an existing rule.{{% /md %}}</dd><dt class="property-optional"
             title="Optional">
         <span id="status_nodejs">
 <a href="#status_nodejs" style="color: inherit; text-decoration: inherit;">status</a>
@@ -2342,8 +2032,7 @@ All [input](#inputs) properties are implicitly available as output properties. A
         <span class="property-indicator"></span>
         <span class="property-type">string</span>
     </dt>
-    <dd>{{% md %}}The status of the operation that should be checked for. If no status is provided, any status will match.{{% /md %}}</dd>
-    <dt class="property-optional"
+    <dd>{{% md %}}The status of the operation that should be checked for. If no status is provided, any status will match.{{% /md %}}</dd><dt class="property-optional"
             title="Optional">
         <span id="substatus_nodejs">
 <a href="#substatus_nodejs" style="color: inherit; text-decoration: inherit;">sub<wbr>Status</a>
@@ -2351,14 +2040,11 @@ All [input](#inputs) properties are implicitly available as output properties. A
         <span class="property-indicator"></span>
         <span class="property-type">string</span>
     </dt>
-    <dd>{{% md %}}the substatus.{{% /md %}}</dd>
-</dl>
+    <dd>{{% md %}}the substatus.{{% /md %}}</dd></dl>
 {{% /choosable %}}
 
 {{% choosable language python %}}
-<dl class="resources-properties">
-
-    <dt class="property-optional"
+<dl class="resources-properties"><dt class="property-optional"
             title="Optional">
         <span id="claims_python">
 <a href="#claims_python" style="color: inherit; text-decoration: inherit;">claims</a>
@@ -2366,8 +2052,7 @@ All [input](#inputs) properties are implicitly available as output properties. A
         <span class="property-indicator"></span>
         <span class="property-type"><a href="#rulemanagementeventclaimsdatasource">Rule<wbr>Management<wbr>Event<wbr>Claims<wbr>Data<wbr>Source<wbr>Args</a></span>
     </dt>
-    <dd>{{% md %}}the claims.{{% /md %}}</dd>
-    <dt class="property-optional"
+    <dd>{{% md %}}the claims.{{% /md %}}</dd><dt class="property-optional"
             title="Optional">
         <span id="event_name_python">
 <a href="#event_name_python" style="color: inherit; text-decoration: inherit;">event_<wbr>name</a>
@@ -2375,8 +2060,7 @@ All [input](#inputs) properties are implicitly available as output properties. A
         <span class="property-indicator"></span>
         <span class="property-type">str</span>
     </dt>
-    <dd>{{% md %}}the event name.{{% /md %}}</dd>
-    <dt class="property-optional"
+    <dd>{{% md %}}the event name.{{% /md %}}</dd><dt class="property-optional"
             title="Optional">
         <span id="event_source_python">
 <a href="#event_source_python" style="color: inherit; text-decoration: inherit;">event_<wbr>source</a>
@@ -2384,8 +2068,7 @@ All [input](#inputs) properties are implicitly available as output properties. A
         <span class="property-indicator"></span>
         <span class="property-type">str</span>
     </dt>
-    <dd>{{% md %}}the event source.{{% /md %}}</dd>
-    <dt class="property-optional"
+    <dd>{{% md %}}the event source.{{% /md %}}</dd><dt class="property-optional"
             title="Optional">
         <span id="legacy_resource_id_python">
 <a href="#legacy_resource_id_python" style="color: inherit; text-decoration: inherit;">legacy_<wbr>resource_<wbr>id</a>
@@ -2393,8 +2076,7 @@ All [input](#inputs) properties are implicitly available as output properties. A
         <span class="property-indicator"></span>
         <span class="property-type">str</span>
     </dt>
-    <dd>{{% md %}}the legacy resource identifier of the resource the rule monitors. **NOTE**: this property cannot be updated for an existing rule.{{% /md %}}</dd>
-    <dt class="property-optional"
+    <dd>{{% md %}}the legacy resource identifier of the resource the rule monitors. **NOTE**: this property cannot be updated for an existing rule.{{% /md %}}</dd><dt class="property-optional"
             title="Optional">
         <span id="level_python">
 <a href="#level_python" style="color: inherit; text-decoration: inherit;">level</a>
@@ -2402,8 +2084,7 @@ All [input](#inputs) properties are implicitly available as output properties. A
         <span class="property-indicator"></span>
         <span class="property-type">str</span>
     </dt>
-    <dd>{{% md %}}the level.{{% /md %}}</dd>
-    <dt class="property-optional"
+    <dd>{{% md %}}the level.{{% /md %}}</dd><dt class="property-optional"
             title="Optional">
         <span id="metric_namespace_python">
 <a href="#metric_namespace_python" style="color: inherit; text-decoration: inherit;">metric_<wbr>namespace</a>
@@ -2411,8 +2092,7 @@ All [input](#inputs) properties are implicitly available as output properties. A
         <span class="property-indicator"></span>
         <span class="property-type">str</span>
     </dt>
-    <dd>{{% md %}}the namespace of the metric.{{% /md %}}</dd>
-    <dt class="property-optional"
+    <dd>{{% md %}}the namespace of the metric.{{% /md %}}</dd><dt class="property-optional"
             title="Optional">
         <span id="operation_name_python">
 <a href="#operation_name_python" style="color: inherit; text-decoration: inherit;">operation_<wbr>name</a>
@@ -2420,8 +2100,7 @@ All [input](#inputs) properties are implicitly available as output properties. A
         <span class="property-indicator"></span>
         <span class="property-type">str</span>
     </dt>
-    <dd>{{% md %}}The name of the operation that should be checked for. If no name is provided, any operation will match.{{% /md %}}</dd>
-    <dt class="property-optional"
+    <dd>{{% md %}}The name of the operation that should be checked for. If no name is provided, any operation will match.{{% /md %}}</dd><dt class="property-optional"
             title="Optional">
         <span id="resource_group_name_python">
 <a href="#resource_group_name_python" style="color: inherit; text-decoration: inherit;">resource_<wbr>group_<wbr>name</a>
@@ -2429,8 +2108,7 @@ All [input](#inputs) properties are implicitly available as output properties. A
         <span class="property-indicator"></span>
         <span class="property-type">str</span>
     </dt>
-    <dd>{{% md %}}the resource group name.{{% /md %}}</dd>
-    <dt class="property-optional"
+    <dd>{{% md %}}the resource group name.{{% /md %}}</dd><dt class="property-optional"
             title="Optional">
         <span id="resource_location_python">
 <a href="#resource_location_python" style="color: inherit; text-decoration: inherit;">resource_<wbr>location</a>
@@ -2438,8 +2116,7 @@ All [input](#inputs) properties are implicitly available as output properties. A
         <span class="property-indicator"></span>
         <span class="property-type">str</span>
     </dt>
-    <dd>{{% md %}}the location of the resource.{{% /md %}}</dd>
-    <dt class="property-optional"
+    <dd>{{% md %}}the location of the resource.{{% /md %}}</dd><dt class="property-optional"
             title="Optional">
         <span id="resource_provider_name_python">
 <a href="#resource_provider_name_python" style="color: inherit; text-decoration: inherit;">resource_<wbr>provider_<wbr>name</a>
@@ -2447,8 +2124,7 @@ All [input](#inputs) properties are implicitly available as output properties. A
         <span class="property-indicator"></span>
         <span class="property-type">str</span>
     </dt>
-    <dd>{{% md %}}the resource provider name.{{% /md %}}</dd>
-    <dt class="property-optional"
+    <dd>{{% md %}}the resource provider name.{{% /md %}}</dd><dt class="property-optional"
             title="Optional">
         <span id="resource_uri_python">
 <a href="#resource_uri_python" style="color: inherit; text-decoration: inherit;">resource_<wbr>uri</a>
@@ -2456,8 +2132,7 @@ All [input](#inputs) properties are implicitly available as output properties. A
         <span class="property-indicator"></span>
         <span class="property-type">str</span>
     </dt>
-    <dd>{{% md %}}the resource identifier of the resource the rule monitors. **NOTE**: this property cannot be updated for an existing rule.{{% /md %}}</dd>
-    <dt class="property-optional"
+    <dd>{{% md %}}the resource identifier of the resource the rule monitors. **NOTE**: this property cannot be updated for an existing rule.{{% /md %}}</dd><dt class="property-optional"
             title="Optional">
         <span id="status_python">
 <a href="#status_python" style="color: inherit; text-decoration: inherit;">status</a>
@@ -2465,8 +2140,7 @@ All [input](#inputs) properties are implicitly available as output properties. A
         <span class="property-indicator"></span>
         <span class="property-type">str</span>
     </dt>
-    <dd>{{% md %}}The status of the operation that should be checked for. If no status is provided, any status will match.{{% /md %}}</dd>
-    <dt class="property-optional"
+    <dd>{{% md %}}The status of the operation that should be checked for. If no status is provided, any status will match.{{% /md %}}</dd><dt class="property-optional"
             title="Optional">
         <span id="sub_status_python">
 <a href="#sub_status_python" style="color: inherit; text-decoration: inherit;">sub_<wbr>status</a>
@@ -2474,16 +2148,13 @@ All [input](#inputs) properties are implicitly available as output properties. A
         <span class="property-indicator"></span>
         <span class="property-type">str</span>
     </dt>
-    <dd>{{% md %}}the substatus.{{% /md %}}</dd>
-</dl>
+    <dd>{{% md %}}the substatus.{{% /md %}}</dd></dl>
 {{% /choosable %}}
 
 <h4 id="rulemanagementeventdatasourceresponse">Rule<wbr>Management<wbr>Event<wbr>Data<wbr>Source<wbr>Response</h4>
 
 {{% choosable language csharp %}}
-<dl class="resources-properties">
-
-    <dt class="property-optional"
+<dl class="resources-properties"><dt class="property-optional"
             title="Optional">
         <span id="claims_csharp">
 <a href="#claims_csharp" style="color: inherit; text-decoration: inherit;">Claims</a>
@@ -2491,8 +2162,7 @@ All [input](#inputs) properties are implicitly available as output properties. A
         <span class="property-indicator"></span>
         <span class="property-type"><a href="#rulemanagementeventclaimsdatasourceresponse">Pulumi.<wbr>Azure<wbr>Native.<wbr>Insights.<wbr>Inputs.<wbr>Rule<wbr>Management<wbr>Event<wbr>Claims<wbr>Data<wbr>Source<wbr>Response<wbr>Args</a></span>
     </dt>
-    <dd>{{% md %}}the claims.{{% /md %}}</dd>
-    <dt class="property-optional"
+    <dd>{{% md %}}the claims.{{% /md %}}</dd><dt class="property-optional"
             title="Optional">
         <span id="eventname_csharp">
 <a href="#eventname_csharp" style="color: inherit; text-decoration: inherit;">Event<wbr>Name</a>
@@ -2500,8 +2170,7 @@ All [input](#inputs) properties are implicitly available as output properties. A
         <span class="property-indicator"></span>
         <span class="property-type">string</span>
     </dt>
-    <dd>{{% md %}}the event name.{{% /md %}}</dd>
-    <dt class="property-optional"
+    <dd>{{% md %}}the event name.{{% /md %}}</dd><dt class="property-optional"
             title="Optional">
         <span id="eventsource_csharp">
 <a href="#eventsource_csharp" style="color: inherit; text-decoration: inherit;">Event<wbr>Source</a>
@@ -2509,8 +2178,7 @@ All [input](#inputs) properties are implicitly available as output properties. A
         <span class="property-indicator"></span>
         <span class="property-type">string</span>
     </dt>
-    <dd>{{% md %}}the event source.{{% /md %}}</dd>
-    <dt class="property-optional"
+    <dd>{{% md %}}the event source.{{% /md %}}</dd><dt class="property-optional"
             title="Optional">
         <span id="legacyresourceid_csharp">
 <a href="#legacyresourceid_csharp" style="color: inherit; text-decoration: inherit;">Legacy<wbr>Resource<wbr>Id</a>
@@ -2518,8 +2186,7 @@ All [input](#inputs) properties are implicitly available as output properties. A
         <span class="property-indicator"></span>
         <span class="property-type">string</span>
     </dt>
-    <dd>{{% md %}}the legacy resource identifier of the resource the rule monitors. **NOTE**: this property cannot be updated for an existing rule.{{% /md %}}</dd>
-    <dt class="property-optional"
+    <dd>{{% md %}}the legacy resource identifier of the resource the rule monitors. **NOTE**: this property cannot be updated for an existing rule.{{% /md %}}</dd><dt class="property-optional"
             title="Optional">
         <span id="level_csharp">
 <a href="#level_csharp" style="color: inherit; text-decoration: inherit;">Level</a>
@@ -2527,8 +2194,7 @@ All [input](#inputs) properties are implicitly available as output properties. A
         <span class="property-indicator"></span>
         <span class="property-type">string</span>
     </dt>
-    <dd>{{% md %}}the level.{{% /md %}}</dd>
-    <dt class="property-optional"
+    <dd>{{% md %}}the level.{{% /md %}}</dd><dt class="property-optional"
             title="Optional">
         <span id="metricnamespace_csharp">
 <a href="#metricnamespace_csharp" style="color: inherit; text-decoration: inherit;">Metric<wbr>Namespace</a>
@@ -2536,8 +2202,7 @@ All [input](#inputs) properties are implicitly available as output properties. A
         <span class="property-indicator"></span>
         <span class="property-type">string</span>
     </dt>
-    <dd>{{% md %}}the namespace of the metric.{{% /md %}}</dd>
-    <dt class="property-optional"
+    <dd>{{% md %}}the namespace of the metric.{{% /md %}}</dd><dt class="property-optional"
             title="Optional">
         <span id="operationname_csharp">
 <a href="#operationname_csharp" style="color: inherit; text-decoration: inherit;">Operation<wbr>Name</a>
@@ -2545,8 +2210,7 @@ All [input](#inputs) properties are implicitly available as output properties. A
         <span class="property-indicator"></span>
         <span class="property-type">string</span>
     </dt>
-    <dd>{{% md %}}The name of the operation that should be checked for. If no name is provided, any operation will match.{{% /md %}}</dd>
-    <dt class="property-optional"
+    <dd>{{% md %}}The name of the operation that should be checked for. If no name is provided, any operation will match.{{% /md %}}</dd><dt class="property-optional"
             title="Optional">
         <span id="resourcegroupname_csharp">
 <a href="#resourcegroupname_csharp" style="color: inherit; text-decoration: inherit;">Resource<wbr>Group<wbr>Name</a>
@@ -2554,8 +2218,7 @@ All [input](#inputs) properties are implicitly available as output properties. A
         <span class="property-indicator"></span>
         <span class="property-type">string</span>
     </dt>
-    <dd>{{% md %}}the resource group name.{{% /md %}}</dd>
-    <dt class="property-optional"
+    <dd>{{% md %}}the resource group name.{{% /md %}}</dd><dt class="property-optional"
             title="Optional">
         <span id="resourcelocation_csharp">
 <a href="#resourcelocation_csharp" style="color: inherit; text-decoration: inherit;">Resource<wbr>Location</a>
@@ -2563,8 +2226,7 @@ All [input](#inputs) properties are implicitly available as output properties. A
         <span class="property-indicator"></span>
         <span class="property-type">string</span>
     </dt>
-    <dd>{{% md %}}the location of the resource.{{% /md %}}</dd>
-    <dt class="property-optional"
+    <dd>{{% md %}}the location of the resource.{{% /md %}}</dd><dt class="property-optional"
             title="Optional">
         <span id="resourceprovidername_csharp">
 <a href="#resourceprovidername_csharp" style="color: inherit; text-decoration: inherit;">Resource<wbr>Provider<wbr>Name</a>
@@ -2572,8 +2234,7 @@ All [input](#inputs) properties are implicitly available as output properties. A
         <span class="property-indicator"></span>
         <span class="property-type">string</span>
     </dt>
-    <dd>{{% md %}}the resource provider name.{{% /md %}}</dd>
-    <dt class="property-optional"
+    <dd>{{% md %}}the resource provider name.{{% /md %}}</dd><dt class="property-optional"
             title="Optional">
         <span id="resourceuri_csharp">
 <a href="#resourceuri_csharp" style="color: inherit; text-decoration: inherit;">Resource<wbr>Uri</a>
@@ -2581,8 +2242,7 @@ All [input](#inputs) properties are implicitly available as output properties. A
         <span class="property-indicator"></span>
         <span class="property-type">string</span>
     </dt>
-    <dd>{{% md %}}the resource identifier of the resource the rule monitors. **NOTE**: this property cannot be updated for an existing rule.{{% /md %}}</dd>
-    <dt class="property-optional"
+    <dd>{{% md %}}the resource identifier of the resource the rule monitors. **NOTE**: this property cannot be updated for an existing rule.{{% /md %}}</dd><dt class="property-optional"
             title="Optional">
         <span id="status_csharp">
 <a href="#status_csharp" style="color: inherit; text-decoration: inherit;">Status</a>
@@ -2590,8 +2250,7 @@ All [input](#inputs) properties are implicitly available as output properties. A
         <span class="property-indicator"></span>
         <span class="property-type">string</span>
     </dt>
-    <dd>{{% md %}}The status of the operation that should be checked for. If no status is provided, any status will match.{{% /md %}}</dd>
-    <dt class="property-optional"
+    <dd>{{% md %}}The status of the operation that should be checked for. If no status is provided, any status will match.{{% /md %}}</dd><dt class="property-optional"
             title="Optional">
         <span id="substatus_csharp">
 <a href="#substatus_csharp" style="color: inherit; text-decoration: inherit;">Sub<wbr>Status</a>
@@ -2599,14 +2258,11 @@ All [input](#inputs) properties are implicitly available as output properties. A
         <span class="property-indicator"></span>
         <span class="property-type">string</span>
     </dt>
-    <dd>{{% md %}}the substatus.{{% /md %}}</dd>
-</dl>
+    <dd>{{% md %}}the substatus.{{% /md %}}</dd></dl>
 {{% /choosable %}}
 
 {{% choosable language go %}}
-<dl class="resources-properties">
-
-    <dt class="property-optional"
+<dl class="resources-properties"><dt class="property-optional"
             title="Optional">
         <span id="claims_go">
 <a href="#claims_go" style="color: inherit; text-decoration: inherit;">Claims</a>
@@ -2614,8 +2270,7 @@ All [input](#inputs) properties are implicitly available as output properties. A
         <span class="property-indicator"></span>
         <span class="property-type"><a href="#rulemanagementeventclaimsdatasourceresponse">Rule<wbr>Management<wbr>Event<wbr>Claims<wbr>Data<wbr>Source<wbr>Response</a></span>
     </dt>
-    <dd>{{% md %}}the claims.{{% /md %}}</dd>
-    <dt class="property-optional"
+    <dd>{{% md %}}the claims.{{% /md %}}</dd><dt class="property-optional"
             title="Optional">
         <span id="eventname_go">
 <a href="#eventname_go" style="color: inherit; text-decoration: inherit;">Event<wbr>Name</a>
@@ -2623,8 +2278,7 @@ All [input](#inputs) properties are implicitly available as output properties. A
         <span class="property-indicator"></span>
         <span class="property-type">string</span>
     </dt>
-    <dd>{{% md %}}the event name.{{% /md %}}</dd>
-    <dt class="property-optional"
+    <dd>{{% md %}}the event name.{{% /md %}}</dd><dt class="property-optional"
             title="Optional">
         <span id="eventsource_go">
 <a href="#eventsource_go" style="color: inherit; text-decoration: inherit;">Event<wbr>Source</a>
@@ -2632,8 +2286,7 @@ All [input](#inputs) properties are implicitly available as output properties. A
         <span class="property-indicator"></span>
         <span class="property-type">string</span>
     </dt>
-    <dd>{{% md %}}the event source.{{% /md %}}</dd>
-    <dt class="property-optional"
+    <dd>{{% md %}}the event source.{{% /md %}}</dd><dt class="property-optional"
             title="Optional">
         <span id="legacyresourceid_go">
 <a href="#legacyresourceid_go" style="color: inherit; text-decoration: inherit;">Legacy<wbr>Resource<wbr>Id</a>
@@ -2641,8 +2294,7 @@ All [input](#inputs) properties are implicitly available as output properties. A
         <span class="property-indicator"></span>
         <span class="property-type">string</span>
     </dt>
-    <dd>{{% md %}}the legacy resource identifier of the resource the rule monitors. **NOTE**: this property cannot be updated for an existing rule.{{% /md %}}</dd>
-    <dt class="property-optional"
+    <dd>{{% md %}}the legacy resource identifier of the resource the rule monitors. **NOTE**: this property cannot be updated for an existing rule.{{% /md %}}</dd><dt class="property-optional"
             title="Optional">
         <span id="level_go">
 <a href="#level_go" style="color: inherit; text-decoration: inherit;">Level</a>
@@ -2650,8 +2302,7 @@ All [input](#inputs) properties are implicitly available as output properties. A
         <span class="property-indicator"></span>
         <span class="property-type">string</span>
     </dt>
-    <dd>{{% md %}}the level.{{% /md %}}</dd>
-    <dt class="property-optional"
+    <dd>{{% md %}}the level.{{% /md %}}</dd><dt class="property-optional"
             title="Optional">
         <span id="metricnamespace_go">
 <a href="#metricnamespace_go" style="color: inherit; text-decoration: inherit;">Metric<wbr>Namespace</a>
@@ -2659,8 +2310,7 @@ All [input](#inputs) properties are implicitly available as output properties. A
         <span class="property-indicator"></span>
         <span class="property-type">string</span>
     </dt>
-    <dd>{{% md %}}the namespace of the metric.{{% /md %}}</dd>
-    <dt class="property-optional"
+    <dd>{{% md %}}the namespace of the metric.{{% /md %}}</dd><dt class="property-optional"
             title="Optional">
         <span id="operationname_go">
 <a href="#operationname_go" style="color: inherit; text-decoration: inherit;">Operation<wbr>Name</a>
@@ -2668,8 +2318,7 @@ All [input](#inputs) properties are implicitly available as output properties. A
         <span class="property-indicator"></span>
         <span class="property-type">string</span>
     </dt>
-    <dd>{{% md %}}The name of the operation that should be checked for. If no name is provided, any operation will match.{{% /md %}}</dd>
-    <dt class="property-optional"
+    <dd>{{% md %}}The name of the operation that should be checked for. If no name is provided, any operation will match.{{% /md %}}</dd><dt class="property-optional"
             title="Optional">
         <span id="resourcegroupname_go">
 <a href="#resourcegroupname_go" style="color: inherit; text-decoration: inherit;">Resource<wbr>Group<wbr>Name</a>
@@ -2677,8 +2326,7 @@ All [input](#inputs) properties are implicitly available as output properties. A
         <span class="property-indicator"></span>
         <span class="property-type">string</span>
     </dt>
-    <dd>{{% md %}}the resource group name.{{% /md %}}</dd>
-    <dt class="property-optional"
+    <dd>{{% md %}}the resource group name.{{% /md %}}</dd><dt class="property-optional"
             title="Optional">
         <span id="resourcelocation_go">
 <a href="#resourcelocation_go" style="color: inherit; text-decoration: inherit;">Resource<wbr>Location</a>
@@ -2686,8 +2334,7 @@ All [input](#inputs) properties are implicitly available as output properties. A
         <span class="property-indicator"></span>
         <span class="property-type">string</span>
     </dt>
-    <dd>{{% md %}}the location of the resource.{{% /md %}}</dd>
-    <dt class="property-optional"
+    <dd>{{% md %}}the location of the resource.{{% /md %}}</dd><dt class="property-optional"
             title="Optional">
         <span id="resourceprovidername_go">
 <a href="#resourceprovidername_go" style="color: inherit; text-decoration: inherit;">Resource<wbr>Provider<wbr>Name</a>
@@ -2695,8 +2342,7 @@ All [input](#inputs) properties are implicitly available as output properties. A
         <span class="property-indicator"></span>
         <span class="property-type">string</span>
     </dt>
-    <dd>{{% md %}}the resource provider name.{{% /md %}}</dd>
-    <dt class="property-optional"
+    <dd>{{% md %}}the resource provider name.{{% /md %}}</dd><dt class="property-optional"
             title="Optional">
         <span id="resourceuri_go">
 <a href="#resourceuri_go" style="color: inherit; text-decoration: inherit;">Resource<wbr>Uri</a>
@@ -2704,8 +2350,7 @@ All [input](#inputs) properties are implicitly available as output properties. A
         <span class="property-indicator"></span>
         <span class="property-type">string</span>
     </dt>
-    <dd>{{% md %}}the resource identifier of the resource the rule monitors. **NOTE**: this property cannot be updated for an existing rule.{{% /md %}}</dd>
-    <dt class="property-optional"
+    <dd>{{% md %}}the resource identifier of the resource the rule monitors. **NOTE**: this property cannot be updated for an existing rule.{{% /md %}}</dd><dt class="property-optional"
             title="Optional">
         <span id="status_go">
 <a href="#status_go" style="color: inherit; text-decoration: inherit;">Status</a>
@@ -2713,8 +2358,7 @@ All [input](#inputs) properties are implicitly available as output properties. A
         <span class="property-indicator"></span>
         <span class="property-type">string</span>
     </dt>
-    <dd>{{% md %}}The status of the operation that should be checked for. If no status is provided, any status will match.{{% /md %}}</dd>
-    <dt class="property-optional"
+    <dd>{{% md %}}The status of the operation that should be checked for. If no status is provided, any status will match.{{% /md %}}</dd><dt class="property-optional"
             title="Optional">
         <span id="substatus_go">
 <a href="#substatus_go" style="color: inherit; text-decoration: inherit;">Sub<wbr>Status</a>
@@ -2722,14 +2366,11 @@ All [input](#inputs) properties are implicitly available as output properties. A
         <span class="property-indicator"></span>
         <span class="property-type">string</span>
     </dt>
-    <dd>{{% md %}}the substatus.{{% /md %}}</dd>
-</dl>
+    <dd>{{% md %}}the substatus.{{% /md %}}</dd></dl>
 {{% /choosable %}}
 
 {{% choosable language nodejs %}}
-<dl class="resources-properties">
-
-    <dt class="property-optional"
+<dl class="resources-properties"><dt class="property-optional"
             title="Optional">
         <span id="claims_nodejs">
 <a href="#claims_nodejs" style="color: inherit; text-decoration: inherit;">claims</a>
@@ -2737,8 +2378,7 @@ All [input](#inputs) properties are implicitly available as output properties. A
         <span class="property-indicator"></span>
         <span class="property-type"><a href="#rulemanagementeventclaimsdatasourceresponse">Rule<wbr>Management<wbr>Event<wbr>Claims<wbr>Data<wbr>Source<wbr>Response</a></span>
     </dt>
-    <dd>{{% md %}}the claims.{{% /md %}}</dd>
-    <dt class="property-optional"
+    <dd>{{% md %}}the claims.{{% /md %}}</dd><dt class="property-optional"
             title="Optional">
         <span id="eventname_nodejs">
 <a href="#eventname_nodejs" style="color: inherit; text-decoration: inherit;">event<wbr>Name</a>
@@ -2746,8 +2386,7 @@ All [input](#inputs) properties are implicitly available as output properties. A
         <span class="property-indicator"></span>
         <span class="property-type">string</span>
     </dt>
-    <dd>{{% md %}}the event name.{{% /md %}}</dd>
-    <dt class="property-optional"
+    <dd>{{% md %}}the event name.{{% /md %}}</dd><dt class="property-optional"
             title="Optional">
         <span id="eventsource_nodejs">
 <a href="#eventsource_nodejs" style="color: inherit; text-decoration: inherit;">event<wbr>Source</a>
@@ -2755,8 +2394,7 @@ All [input](#inputs) properties are implicitly available as output properties. A
         <span class="property-indicator"></span>
         <span class="property-type">string</span>
     </dt>
-    <dd>{{% md %}}the event source.{{% /md %}}</dd>
-    <dt class="property-optional"
+    <dd>{{% md %}}the event source.{{% /md %}}</dd><dt class="property-optional"
             title="Optional">
         <span id="legacyresourceid_nodejs">
 <a href="#legacyresourceid_nodejs" style="color: inherit; text-decoration: inherit;">legacy<wbr>Resource<wbr>Id</a>
@@ -2764,8 +2402,7 @@ All [input](#inputs) properties are implicitly available as output properties. A
         <span class="property-indicator"></span>
         <span class="property-type">string</span>
     </dt>
-    <dd>{{% md %}}the legacy resource identifier of the resource the rule monitors. **NOTE**: this property cannot be updated for an existing rule.{{% /md %}}</dd>
-    <dt class="property-optional"
+    <dd>{{% md %}}the legacy resource identifier of the resource the rule monitors. **NOTE**: this property cannot be updated for an existing rule.{{% /md %}}</dd><dt class="property-optional"
             title="Optional">
         <span id="level_nodejs">
 <a href="#level_nodejs" style="color: inherit; text-decoration: inherit;">level</a>
@@ -2773,8 +2410,7 @@ All [input](#inputs) properties are implicitly available as output properties. A
         <span class="property-indicator"></span>
         <span class="property-type">string</span>
     </dt>
-    <dd>{{% md %}}the level.{{% /md %}}</dd>
-    <dt class="property-optional"
+    <dd>{{% md %}}the level.{{% /md %}}</dd><dt class="property-optional"
             title="Optional">
         <span id="metricnamespace_nodejs">
 <a href="#metricnamespace_nodejs" style="color: inherit; text-decoration: inherit;">metric<wbr>Namespace</a>
@@ -2782,8 +2418,7 @@ All [input](#inputs) properties are implicitly available as output properties. A
         <span class="property-indicator"></span>
         <span class="property-type">string</span>
     </dt>
-    <dd>{{% md %}}the namespace of the metric.{{% /md %}}</dd>
-    <dt class="property-optional"
+    <dd>{{% md %}}the namespace of the metric.{{% /md %}}</dd><dt class="property-optional"
             title="Optional">
         <span id="operationname_nodejs">
 <a href="#operationname_nodejs" style="color: inherit; text-decoration: inherit;">operation<wbr>Name</a>
@@ -2791,8 +2426,7 @@ All [input](#inputs) properties are implicitly available as output properties. A
         <span class="property-indicator"></span>
         <span class="property-type">string</span>
     </dt>
-    <dd>{{% md %}}The name of the operation that should be checked for. If no name is provided, any operation will match.{{% /md %}}</dd>
-    <dt class="property-optional"
+    <dd>{{% md %}}The name of the operation that should be checked for. If no name is provided, any operation will match.{{% /md %}}</dd><dt class="property-optional"
             title="Optional">
         <span id="resourcegroupname_nodejs">
 <a href="#resourcegroupname_nodejs" style="color: inherit; text-decoration: inherit;">resource<wbr>Group<wbr>Name</a>
@@ -2800,8 +2434,7 @@ All [input](#inputs) properties are implicitly available as output properties. A
         <span class="property-indicator"></span>
         <span class="property-type">string</span>
     </dt>
-    <dd>{{% md %}}the resource group name.{{% /md %}}</dd>
-    <dt class="property-optional"
+    <dd>{{% md %}}the resource group name.{{% /md %}}</dd><dt class="property-optional"
             title="Optional">
         <span id="resourcelocation_nodejs">
 <a href="#resourcelocation_nodejs" style="color: inherit; text-decoration: inherit;">resource<wbr>Location</a>
@@ -2809,8 +2442,7 @@ All [input](#inputs) properties are implicitly available as output properties. A
         <span class="property-indicator"></span>
         <span class="property-type">string</span>
     </dt>
-    <dd>{{% md %}}the location of the resource.{{% /md %}}</dd>
-    <dt class="property-optional"
+    <dd>{{% md %}}the location of the resource.{{% /md %}}</dd><dt class="property-optional"
             title="Optional">
         <span id="resourceprovidername_nodejs">
 <a href="#resourceprovidername_nodejs" style="color: inherit; text-decoration: inherit;">resource<wbr>Provider<wbr>Name</a>
@@ -2818,8 +2450,7 @@ All [input](#inputs) properties are implicitly available as output properties. A
         <span class="property-indicator"></span>
         <span class="property-type">string</span>
     </dt>
-    <dd>{{% md %}}the resource provider name.{{% /md %}}</dd>
-    <dt class="property-optional"
+    <dd>{{% md %}}the resource provider name.{{% /md %}}</dd><dt class="property-optional"
             title="Optional">
         <span id="resourceuri_nodejs">
 <a href="#resourceuri_nodejs" style="color: inherit; text-decoration: inherit;">resource<wbr>Uri</a>
@@ -2827,8 +2458,7 @@ All [input](#inputs) properties are implicitly available as output properties. A
         <span class="property-indicator"></span>
         <span class="property-type">string</span>
     </dt>
-    <dd>{{% md %}}the resource identifier of the resource the rule monitors. **NOTE**: this property cannot be updated for an existing rule.{{% /md %}}</dd>
-    <dt class="property-optional"
+    <dd>{{% md %}}the resource identifier of the resource the rule monitors. **NOTE**: this property cannot be updated for an existing rule.{{% /md %}}</dd><dt class="property-optional"
             title="Optional">
         <span id="status_nodejs">
 <a href="#status_nodejs" style="color: inherit; text-decoration: inherit;">status</a>
@@ -2836,8 +2466,7 @@ All [input](#inputs) properties are implicitly available as output properties. A
         <span class="property-indicator"></span>
         <span class="property-type">string</span>
     </dt>
-    <dd>{{% md %}}The status of the operation that should be checked for. If no status is provided, any status will match.{{% /md %}}</dd>
-    <dt class="property-optional"
+    <dd>{{% md %}}The status of the operation that should be checked for. If no status is provided, any status will match.{{% /md %}}</dd><dt class="property-optional"
             title="Optional">
         <span id="substatus_nodejs">
 <a href="#substatus_nodejs" style="color: inherit; text-decoration: inherit;">sub<wbr>Status</a>
@@ -2845,14 +2474,11 @@ All [input](#inputs) properties are implicitly available as output properties. A
         <span class="property-indicator"></span>
         <span class="property-type">string</span>
     </dt>
-    <dd>{{% md %}}the substatus.{{% /md %}}</dd>
-</dl>
+    <dd>{{% md %}}the substatus.{{% /md %}}</dd></dl>
 {{% /choosable %}}
 
 {{% choosable language python %}}
-<dl class="resources-properties">
-
-    <dt class="property-optional"
+<dl class="resources-properties"><dt class="property-optional"
             title="Optional">
         <span id="claims_python">
 <a href="#claims_python" style="color: inherit; text-decoration: inherit;">claims</a>
@@ -2860,8 +2486,7 @@ All [input](#inputs) properties are implicitly available as output properties. A
         <span class="property-indicator"></span>
         <span class="property-type"><a href="#rulemanagementeventclaimsdatasourceresponse">Rule<wbr>Management<wbr>Event<wbr>Claims<wbr>Data<wbr>Source<wbr>Response<wbr>Args</a></span>
     </dt>
-    <dd>{{% md %}}the claims.{{% /md %}}</dd>
-    <dt class="property-optional"
+    <dd>{{% md %}}the claims.{{% /md %}}</dd><dt class="property-optional"
             title="Optional">
         <span id="event_name_python">
 <a href="#event_name_python" style="color: inherit; text-decoration: inherit;">event_<wbr>name</a>
@@ -2869,8 +2494,7 @@ All [input](#inputs) properties are implicitly available as output properties. A
         <span class="property-indicator"></span>
         <span class="property-type">str</span>
     </dt>
-    <dd>{{% md %}}the event name.{{% /md %}}</dd>
-    <dt class="property-optional"
+    <dd>{{% md %}}the event name.{{% /md %}}</dd><dt class="property-optional"
             title="Optional">
         <span id="event_source_python">
 <a href="#event_source_python" style="color: inherit; text-decoration: inherit;">event_<wbr>source</a>
@@ -2878,8 +2502,7 @@ All [input](#inputs) properties are implicitly available as output properties. A
         <span class="property-indicator"></span>
         <span class="property-type">str</span>
     </dt>
-    <dd>{{% md %}}the event source.{{% /md %}}</dd>
-    <dt class="property-optional"
+    <dd>{{% md %}}the event source.{{% /md %}}</dd><dt class="property-optional"
             title="Optional">
         <span id="legacy_resource_id_python">
 <a href="#legacy_resource_id_python" style="color: inherit; text-decoration: inherit;">legacy_<wbr>resource_<wbr>id</a>
@@ -2887,8 +2510,7 @@ All [input](#inputs) properties are implicitly available as output properties. A
         <span class="property-indicator"></span>
         <span class="property-type">str</span>
     </dt>
-    <dd>{{% md %}}the legacy resource identifier of the resource the rule monitors. **NOTE**: this property cannot be updated for an existing rule.{{% /md %}}</dd>
-    <dt class="property-optional"
+    <dd>{{% md %}}the legacy resource identifier of the resource the rule monitors. **NOTE**: this property cannot be updated for an existing rule.{{% /md %}}</dd><dt class="property-optional"
             title="Optional">
         <span id="level_python">
 <a href="#level_python" style="color: inherit; text-decoration: inherit;">level</a>
@@ -2896,8 +2518,7 @@ All [input](#inputs) properties are implicitly available as output properties. A
         <span class="property-indicator"></span>
         <span class="property-type">str</span>
     </dt>
-    <dd>{{% md %}}the level.{{% /md %}}</dd>
-    <dt class="property-optional"
+    <dd>{{% md %}}the level.{{% /md %}}</dd><dt class="property-optional"
             title="Optional">
         <span id="metric_namespace_python">
 <a href="#metric_namespace_python" style="color: inherit; text-decoration: inherit;">metric_<wbr>namespace</a>
@@ -2905,8 +2526,7 @@ All [input](#inputs) properties are implicitly available as output properties. A
         <span class="property-indicator"></span>
         <span class="property-type">str</span>
     </dt>
-    <dd>{{% md %}}the namespace of the metric.{{% /md %}}</dd>
-    <dt class="property-optional"
+    <dd>{{% md %}}the namespace of the metric.{{% /md %}}</dd><dt class="property-optional"
             title="Optional">
         <span id="operation_name_python">
 <a href="#operation_name_python" style="color: inherit; text-decoration: inherit;">operation_<wbr>name</a>
@@ -2914,8 +2534,7 @@ All [input](#inputs) properties are implicitly available as output properties. A
         <span class="property-indicator"></span>
         <span class="property-type">str</span>
     </dt>
-    <dd>{{% md %}}The name of the operation that should be checked for. If no name is provided, any operation will match.{{% /md %}}</dd>
-    <dt class="property-optional"
+    <dd>{{% md %}}The name of the operation that should be checked for. If no name is provided, any operation will match.{{% /md %}}</dd><dt class="property-optional"
             title="Optional">
         <span id="resource_group_name_python">
 <a href="#resource_group_name_python" style="color: inherit; text-decoration: inherit;">resource_<wbr>group_<wbr>name</a>
@@ -2923,8 +2542,7 @@ All [input](#inputs) properties are implicitly available as output properties. A
         <span class="property-indicator"></span>
         <span class="property-type">str</span>
     </dt>
-    <dd>{{% md %}}the resource group name.{{% /md %}}</dd>
-    <dt class="property-optional"
+    <dd>{{% md %}}the resource group name.{{% /md %}}</dd><dt class="property-optional"
             title="Optional">
         <span id="resource_location_python">
 <a href="#resource_location_python" style="color: inherit; text-decoration: inherit;">resource_<wbr>location</a>
@@ -2932,8 +2550,7 @@ All [input](#inputs) properties are implicitly available as output properties. A
         <span class="property-indicator"></span>
         <span class="property-type">str</span>
     </dt>
-    <dd>{{% md %}}the location of the resource.{{% /md %}}</dd>
-    <dt class="property-optional"
+    <dd>{{% md %}}the location of the resource.{{% /md %}}</dd><dt class="property-optional"
             title="Optional">
         <span id="resource_provider_name_python">
 <a href="#resource_provider_name_python" style="color: inherit; text-decoration: inherit;">resource_<wbr>provider_<wbr>name</a>
@@ -2941,8 +2558,7 @@ All [input](#inputs) properties are implicitly available as output properties. A
         <span class="property-indicator"></span>
         <span class="property-type">str</span>
     </dt>
-    <dd>{{% md %}}the resource provider name.{{% /md %}}</dd>
-    <dt class="property-optional"
+    <dd>{{% md %}}the resource provider name.{{% /md %}}</dd><dt class="property-optional"
             title="Optional">
         <span id="resource_uri_python">
 <a href="#resource_uri_python" style="color: inherit; text-decoration: inherit;">resource_<wbr>uri</a>
@@ -2950,8 +2566,7 @@ All [input](#inputs) properties are implicitly available as output properties. A
         <span class="property-indicator"></span>
         <span class="property-type">str</span>
     </dt>
-    <dd>{{% md %}}the resource identifier of the resource the rule monitors. **NOTE**: this property cannot be updated for an existing rule.{{% /md %}}</dd>
-    <dt class="property-optional"
+    <dd>{{% md %}}the resource identifier of the resource the rule monitors. **NOTE**: this property cannot be updated for an existing rule.{{% /md %}}</dd><dt class="property-optional"
             title="Optional">
         <span id="status_python">
 <a href="#status_python" style="color: inherit; text-decoration: inherit;">status</a>
@@ -2959,8 +2574,7 @@ All [input](#inputs) properties are implicitly available as output properties. A
         <span class="property-indicator"></span>
         <span class="property-type">str</span>
     </dt>
-    <dd>{{% md %}}The status of the operation that should be checked for. If no status is provided, any status will match.{{% /md %}}</dd>
-    <dt class="property-optional"
+    <dd>{{% md %}}The status of the operation that should be checked for. If no status is provided, any status will match.{{% /md %}}</dd><dt class="property-optional"
             title="Optional">
         <span id="sub_status_python">
 <a href="#sub_status_python" style="color: inherit; text-decoration: inherit;">sub_<wbr>status</a>
@@ -2968,16 +2582,13 @@ All [input](#inputs) properties are implicitly available as output properties. A
         <span class="property-indicator"></span>
         <span class="property-type">str</span>
     </dt>
-    <dd>{{% md %}}the substatus.{{% /md %}}</dd>
-</dl>
+    <dd>{{% md %}}the substatus.{{% /md %}}</dd></dl>
 {{% /choosable %}}
 
 <h4 id="rulemetricdatasource">Rule<wbr>Metric<wbr>Data<wbr>Source</h4>
 
 {{% choosable language csharp %}}
-<dl class="resources-properties">
-
-    <dt class="property-optional"
+<dl class="resources-properties"><dt class="property-optional"
             title="Optional">
         <span id="legacyresourceid_csharp">
 <a href="#legacyresourceid_csharp" style="color: inherit; text-decoration: inherit;">Legacy<wbr>Resource<wbr>Id</a>
@@ -2985,8 +2596,7 @@ All [input](#inputs) properties are implicitly available as output properties. A
         <span class="property-indicator"></span>
         <span class="property-type">string</span>
     </dt>
-    <dd>{{% md %}}the legacy resource identifier of the resource the rule monitors. **NOTE**: this property cannot be updated for an existing rule.{{% /md %}}</dd>
-    <dt class="property-optional"
+    <dd>{{% md %}}the legacy resource identifier of the resource the rule monitors. **NOTE**: this property cannot be updated for an existing rule.{{% /md %}}</dd><dt class="property-optional"
             title="Optional">
         <span id="metricname_csharp">
 <a href="#metricname_csharp" style="color: inherit; text-decoration: inherit;">Metric<wbr>Name</a>
@@ -2994,8 +2604,7 @@ All [input](#inputs) properties are implicitly available as output properties. A
         <span class="property-indicator"></span>
         <span class="property-type">string</span>
     </dt>
-    <dd>{{% md %}}the name of the metric that defines what the rule monitors.{{% /md %}}</dd>
-    <dt class="property-optional"
+    <dd>{{% md %}}the name of the metric that defines what the rule monitors.{{% /md %}}</dd><dt class="property-optional"
             title="Optional">
         <span id="metricnamespace_csharp">
 <a href="#metricnamespace_csharp" style="color: inherit; text-decoration: inherit;">Metric<wbr>Namespace</a>
@@ -3003,8 +2612,7 @@ All [input](#inputs) properties are implicitly available as output properties. A
         <span class="property-indicator"></span>
         <span class="property-type">string</span>
     </dt>
-    <dd>{{% md %}}the namespace of the metric.{{% /md %}}</dd>
-    <dt class="property-optional"
+    <dd>{{% md %}}the namespace of the metric.{{% /md %}}</dd><dt class="property-optional"
             title="Optional">
         <span id="resourcelocation_csharp">
 <a href="#resourcelocation_csharp" style="color: inherit; text-decoration: inherit;">Resource<wbr>Location</a>
@@ -3012,8 +2620,7 @@ All [input](#inputs) properties are implicitly available as output properties. A
         <span class="property-indicator"></span>
         <span class="property-type">string</span>
     </dt>
-    <dd>{{% md %}}the location of the resource.{{% /md %}}</dd>
-    <dt class="property-optional"
+    <dd>{{% md %}}the location of the resource.{{% /md %}}</dd><dt class="property-optional"
             title="Optional">
         <span id="resourceuri_csharp">
 <a href="#resourceuri_csharp" style="color: inherit; text-decoration: inherit;">Resource<wbr>Uri</a>
@@ -3021,14 +2628,11 @@ All [input](#inputs) properties are implicitly available as output properties. A
         <span class="property-indicator"></span>
         <span class="property-type">string</span>
     </dt>
-    <dd>{{% md %}}the resource identifier of the resource the rule monitors. **NOTE**: this property cannot be updated for an existing rule.{{% /md %}}</dd>
-</dl>
+    <dd>{{% md %}}the resource identifier of the resource the rule monitors. **NOTE**: this property cannot be updated for an existing rule.{{% /md %}}</dd></dl>
 {{% /choosable %}}
 
 {{% choosable language go %}}
-<dl class="resources-properties">
-
-    <dt class="property-optional"
+<dl class="resources-properties"><dt class="property-optional"
             title="Optional">
         <span id="legacyresourceid_go">
 <a href="#legacyresourceid_go" style="color: inherit; text-decoration: inherit;">Legacy<wbr>Resource<wbr>Id</a>
@@ -3036,8 +2640,7 @@ All [input](#inputs) properties are implicitly available as output properties. A
         <span class="property-indicator"></span>
         <span class="property-type">string</span>
     </dt>
-    <dd>{{% md %}}the legacy resource identifier of the resource the rule monitors. **NOTE**: this property cannot be updated for an existing rule.{{% /md %}}</dd>
-    <dt class="property-optional"
+    <dd>{{% md %}}the legacy resource identifier of the resource the rule monitors. **NOTE**: this property cannot be updated for an existing rule.{{% /md %}}</dd><dt class="property-optional"
             title="Optional">
         <span id="metricname_go">
 <a href="#metricname_go" style="color: inherit; text-decoration: inherit;">Metric<wbr>Name</a>
@@ -3045,8 +2648,7 @@ All [input](#inputs) properties are implicitly available as output properties. A
         <span class="property-indicator"></span>
         <span class="property-type">string</span>
     </dt>
-    <dd>{{% md %}}the name of the metric that defines what the rule monitors.{{% /md %}}</dd>
-    <dt class="property-optional"
+    <dd>{{% md %}}the name of the metric that defines what the rule monitors.{{% /md %}}</dd><dt class="property-optional"
             title="Optional">
         <span id="metricnamespace_go">
 <a href="#metricnamespace_go" style="color: inherit; text-decoration: inherit;">Metric<wbr>Namespace</a>
@@ -3054,8 +2656,7 @@ All [input](#inputs) properties are implicitly available as output properties. A
         <span class="property-indicator"></span>
         <span class="property-type">string</span>
     </dt>
-    <dd>{{% md %}}the namespace of the metric.{{% /md %}}</dd>
-    <dt class="property-optional"
+    <dd>{{% md %}}the namespace of the metric.{{% /md %}}</dd><dt class="property-optional"
             title="Optional">
         <span id="resourcelocation_go">
 <a href="#resourcelocation_go" style="color: inherit; text-decoration: inherit;">Resource<wbr>Location</a>
@@ -3063,8 +2664,7 @@ All [input](#inputs) properties are implicitly available as output properties. A
         <span class="property-indicator"></span>
         <span class="property-type">string</span>
     </dt>
-    <dd>{{% md %}}the location of the resource.{{% /md %}}</dd>
-    <dt class="property-optional"
+    <dd>{{% md %}}the location of the resource.{{% /md %}}</dd><dt class="property-optional"
             title="Optional">
         <span id="resourceuri_go">
 <a href="#resourceuri_go" style="color: inherit; text-decoration: inherit;">Resource<wbr>Uri</a>
@@ -3072,14 +2672,11 @@ All [input](#inputs) properties are implicitly available as output properties. A
         <span class="property-indicator"></span>
         <span class="property-type">string</span>
     </dt>
-    <dd>{{% md %}}the resource identifier of the resource the rule monitors. **NOTE**: this property cannot be updated for an existing rule.{{% /md %}}</dd>
-</dl>
+    <dd>{{% md %}}the resource identifier of the resource the rule monitors. **NOTE**: this property cannot be updated for an existing rule.{{% /md %}}</dd></dl>
 {{% /choosable %}}
 
 {{% choosable language nodejs %}}
-<dl class="resources-properties">
-
-    <dt class="property-optional"
+<dl class="resources-properties"><dt class="property-optional"
             title="Optional">
         <span id="legacyresourceid_nodejs">
 <a href="#legacyresourceid_nodejs" style="color: inherit; text-decoration: inherit;">legacy<wbr>Resource<wbr>Id</a>
@@ -3087,8 +2684,7 @@ All [input](#inputs) properties are implicitly available as output properties. A
         <span class="property-indicator"></span>
         <span class="property-type">string</span>
     </dt>
-    <dd>{{% md %}}the legacy resource identifier of the resource the rule monitors. **NOTE**: this property cannot be updated for an existing rule.{{% /md %}}</dd>
-    <dt class="property-optional"
+    <dd>{{% md %}}the legacy resource identifier of the resource the rule monitors. **NOTE**: this property cannot be updated for an existing rule.{{% /md %}}</dd><dt class="property-optional"
             title="Optional">
         <span id="metricname_nodejs">
 <a href="#metricname_nodejs" style="color: inherit; text-decoration: inherit;">metric<wbr>Name</a>
@@ -3096,8 +2692,7 @@ All [input](#inputs) properties are implicitly available as output properties. A
         <span class="property-indicator"></span>
         <span class="property-type">string</span>
     </dt>
-    <dd>{{% md %}}the name of the metric that defines what the rule monitors.{{% /md %}}</dd>
-    <dt class="property-optional"
+    <dd>{{% md %}}the name of the metric that defines what the rule monitors.{{% /md %}}</dd><dt class="property-optional"
             title="Optional">
         <span id="metricnamespace_nodejs">
 <a href="#metricnamespace_nodejs" style="color: inherit; text-decoration: inherit;">metric<wbr>Namespace</a>
@@ -3105,8 +2700,7 @@ All [input](#inputs) properties are implicitly available as output properties. A
         <span class="property-indicator"></span>
         <span class="property-type">string</span>
     </dt>
-    <dd>{{% md %}}the namespace of the metric.{{% /md %}}</dd>
-    <dt class="property-optional"
+    <dd>{{% md %}}the namespace of the metric.{{% /md %}}</dd><dt class="property-optional"
             title="Optional">
         <span id="resourcelocation_nodejs">
 <a href="#resourcelocation_nodejs" style="color: inherit; text-decoration: inherit;">resource<wbr>Location</a>
@@ -3114,8 +2708,7 @@ All [input](#inputs) properties are implicitly available as output properties. A
         <span class="property-indicator"></span>
         <span class="property-type">string</span>
     </dt>
-    <dd>{{% md %}}the location of the resource.{{% /md %}}</dd>
-    <dt class="property-optional"
+    <dd>{{% md %}}the location of the resource.{{% /md %}}</dd><dt class="property-optional"
             title="Optional">
         <span id="resourceuri_nodejs">
 <a href="#resourceuri_nodejs" style="color: inherit; text-decoration: inherit;">resource<wbr>Uri</a>
@@ -3123,14 +2716,11 @@ All [input](#inputs) properties are implicitly available as output properties. A
         <span class="property-indicator"></span>
         <span class="property-type">string</span>
     </dt>
-    <dd>{{% md %}}the resource identifier of the resource the rule monitors. **NOTE**: this property cannot be updated for an existing rule.{{% /md %}}</dd>
-</dl>
+    <dd>{{% md %}}the resource identifier of the resource the rule monitors. **NOTE**: this property cannot be updated for an existing rule.{{% /md %}}</dd></dl>
 {{% /choosable %}}
 
 {{% choosable language python %}}
-<dl class="resources-properties">
-
-    <dt class="property-optional"
+<dl class="resources-properties"><dt class="property-optional"
             title="Optional">
         <span id="legacy_resource_id_python">
 <a href="#legacy_resource_id_python" style="color: inherit; text-decoration: inherit;">legacy_<wbr>resource_<wbr>id</a>
@@ -3138,8 +2728,7 @@ All [input](#inputs) properties are implicitly available as output properties. A
         <span class="property-indicator"></span>
         <span class="property-type">str</span>
     </dt>
-    <dd>{{% md %}}the legacy resource identifier of the resource the rule monitors. **NOTE**: this property cannot be updated for an existing rule.{{% /md %}}</dd>
-    <dt class="property-optional"
+    <dd>{{% md %}}the legacy resource identifier of the resource the rule monitors. **NOTE**: this property cannot be updated for an existing rule.{{% /md %}}</dd><dt class="property-optional"
             title="Optional">
         <span id="metric_name_python">
 <a href="#metric_name_python" style="color: inherit; text-decoration: inherit;">metric_<wbr>name</a>
@@ -3147,8 +2736,7 @@ All [input](#inputs) properties are implicitly available as output properties. A
         <span class="property-indicator"></span>
         <span class="property-type">str</span>
     </dt>
-    <dd>{{% md %}}the name of the metric that defines what the rule monitors.{{% /md %}}</dd>
-    <dt class="property-optional"
+    <dd>{{% md %}}the name of the metric that defines what the rule monitors.{{% /md %}}</dd><dt class="property-optional"
             title="Optional">
         <span id="metric_namespace_python">
 <a href="#metric_namespace_python" style="color: inherit; text-decoration: inherit;">metric_<wbr>namespace</a>
@@ -3156,8 +2744,7 @@ All [input](#inputs) properties are implicitly available as output properties. A
         <span class="property-indicator"></span>
         <span class="property-type">str</span>
     </dt>
-    <dd>{{% md %}}the namespace of the metric.{{% /md %}}</dd>
-    <dt class="property-optional"
+    <dd>{{% md %}}the namespace of the metric.{{% /md %}}</dd><dt class="property-optional"
             title="Optional">
         <span id="resource_location_python">
 <a href="#resource_location_python" style="color: inherit; text-decoration: inherit;">resource_<wbr>location</a>
@@ -3165,8 +2752,7 @@ All [input](#inputs) properties are implicitly available as output properties. A
         <span class="property-indicator"></span>
         <span class="property-type">str</span>
     </dt>
-    <dd>{{% md %}}the location of the resource.{{% /md %}}</dd>
-    <dt class="property-optional"
+    <dd>{{% md %}}the location of the resource.{{% /md %}}</dd><dt class="property-optional"
             title="Optional">
         <span id="resource_uri_python">
 <a href="#resource_uri_python" style="color: inherit; text-decoration: inherit;">resource_<wbr>uri</a>
@@ -3174,16 +2760,13 @@ All [input](#inputs) properties are implicitly available as output properties. A
         <span class="property-indicator"></span>
         <span class="property-type">str</span>
     </dt>
-    <dd>{{% md %}}the resource identifier of the resource the rule monitors. **NOTE**: this property cannot be updated for an existing rule.{{% /md %}}</dd>
-</dl>
+    <dd>{{% md %}}the resource identifier of the resource the rule monitors. **NOTE**: this property cannot be updated for an existing rule.{{% /md %}}</dd></dl>
 {{% /choosable %}}
 
 <h4 id="rulemetricdatasourceresponse">Rule<wbr>Metric<wbr>Data<wbr>Source<wbr>Response</h4>
 
 {{% choosable language csharp %}}
-<dl class="resources-properties">
-
-    <dt class="property-optional"
+<dl class="resources-properties"><dt class="property-optional"
             title="Optional">
         <span id="legacyresourceid_csharp">
 <a href="#legacyresourceid_csharp" style="color: inherit; text-decoration: inherit;">Legacy<wbr>Resource<wbr>Id</a>
@@ -3191,8 +2774,7 @@ All [input](#inputs) properties are implicitly available as output properties. A
         <span class="property-indicator"></span>
         <span class="property-type">string</span>
     </dt>
-    <dd>{{% md %}}the legacy resource identifier of the resource the rule monitors. **NOTE**: this property cannot be updated for an existing rule.{{% /md %}}</dd>
-    <dt class="property-optional"
+    <dd>{{% md %}}the legacy resource identifier of the resource the rule monitors. **NOTE**: this property cannot be updated for an existing rule.{{% /md %}}</dd><dt class="property-optional"
             title="Optional">
         <span id="metricname_csharp">
 <a href="#metricname_csharp" style="color: inherit; text-decoration: inherit;">Metric<wbr>Name</a>
@@ -3200,8 +2782,7 @@ All [input](#inputs) properties are implicitly available as output properties. A
         <span class="property-indicator"></span>
         <span class="property-type">string</span>
     </dt>
-    <dd>{{% md %}}the name of the metric that defines what the rule monitors.{{% /md %}}</dd>
-    <dt class="property-optional"
+    <dd>{{% md %}}the name of the metric that defines what the rule monitors.{{% /md %}}</dd><dt class="property-optional"
             title="Optional">
         <span id="metricnamespace_csharp">
 <a href="#metricnamespace_csharp" style="color: inherit; text-decoration: inherit;">Metric<wbr>Namespace</a>
@@ -3209,8 +2790,7 @@ All [input](#inputs) properties are implicitly available as output properties. A
         <span class="property-indicator"></span>
         <span class="property-type">string</span>
     </dt>
-    <dd>{{% md %}}the namespace of the metric.{{% /md %}}</dd>
-    <dt class="property-optional"
+    <dd>{{% md %}}the namespace of the metric.{{% /md %}}</dd><dt class="property-optional"
             title="Optional">
         <span id="resourcelocation_csharp">
 <a href="#resourcelocation_csharp" style="color: inherit; text-decoration: inherit;">Resource<wbr>Location</a>
@@ -3218,8 +2798,7 @@ All [input](#inputs) properties are implicitly available as output properties. A
         <span class="property-indicator"></span>
         <span class="property-type">string</span>
     </dt>
-    <dd>{{% md %}}the location of the resource.{{% /md %}}</dd>
-    <dt class="property-optional"
+    <dd>{{% md %}}the location of the resource.{{% /md %}}</dd><dt class="property-optional"
             title="Optional">
         <span id="resourceuri_csharp">
 <a href="#resourceuri_csharp" style="color: inherit; text-decoration: inherit;">Resource<wbr>Uri</a>
@@ -3227,14 +2806,11 @@ All [input](#inputs) properties are implicitly available as output properties. A
         <span class="property-indicator"></span>
         <span class="property-type">string</span>
     </dt>
-    <dd>{{% md %}}the resource identifier of the resource the rule monitors. **NOTE**: this property cannot be updated for an existing rule.{{% /md %}}</dd>
-</dl>
+    <dd>{{% md %}}the resource identifier of the resource the rule monitors. **NOTE**: this property cannot be updated for an existing rule.{{% /md %}}</dd></dl>
 {{% /choosable %}}
 
 {{% choosable language go %}}
-<dl class="resources-properties">
-
-    <dt class="property-optional"
+<dl class="resources-properties"><dt class="property-optional"
             title="Optional">
         <span id="legacyresourceid_go">
 <a href="#legacyresourceid_go" style="color: inherit; text-decoration: inherit;">Legacy<wbr>Resource<wbr>Id</a>
@@ -3242,8 +2818,7 @@ All [input](#inputs) properties are implicitly available as output properties. A
         <span class="property-indicator"></span>
         <span class="property-type">string</span>
     </dt>
-    <dd>{{% md %}}the legacy resource identifier of the resource the rule monitors. **NOTE**: this property cannot be updated for an existing rule.{{% /md %}}</dd>
-    <dt class="property-optional"
+    <dd>{{% md %}}the legacy resource identifier of the resource the rule monitors. **NOTE**: this property cannot be updated for an existing rule.{{% /md %}}</dd><dt class="property-optional"
             title="Optional">
         <span id="metricname_go">
 <a href="#metricname_go" style="color: inherit; text-decoration: inherit;">Metric<wbr>Name</a>
@@ -3251,8 +2826,7 @@ All [input](#inputs) properties are implicitly available as output properties. A
         <span class="property-indicator"></span>
         <span class="property-type">string</span>
     </dt>
-    <dd>{{% md %}}the name of the metric that defines what the rule monitors.{{% /md %}}</dd>
-    <dt class="property-optional"
+    <dd>{{% md %}}the name of the metric that defines what the rule monitors.{{% /md %}}</dd><dt class="property-optional"
             title="Optional">
         <span id="metricnamespace_go">
 <a href="#metricnamespace_go" style="color: inherit; text-decoration: inherit;">Metric<wbr>Namespace</a>
@@ -3260,8 +2834,7 @@ All [input](#inputs) properties are implicitly available as output properties. A
         <span class="property-indicator"></span>
         <span class="property-type">string</span>
     </dt>
-    <dd>{{% md %}}the namespace of the metric.{{% /md %}}</dd>
-    <dt class="property-optional"
+    <dd>{{% md %}}the namespace of the metric.{{% /md %}}</dd><dt class="property-optional"
             title="Optional">
         <span id="resourcelocation_go">
 <a href="#resourcelocation_go" style="color: inherit; text-decoration: inherit;">Resource<wbr>Location</a>
@@ -3269,8 +2842,7 @@ All [input](#inputs) properties are implicitly available as output properties. A
         <span class="property-indicator"></span>
         <span class="property-type">string</span>
     </dt>
-    <dd>{{% md %}}the location of the resource.{{% /md %}}</dd>
-    <dt class="property-optional"
+    <dd>{{% md %}}the location of the resource.{{% /md %}}</dd><dt class="property-optional"
             title="Optional">
         <span id="resourceuri_go">
 <a href="#resourceuri_go" style="color: inherit; text-decoration: inherit;">Resource<wbr>Uri</a>
@@ -3278,14 +2850,11 @@ All [input](#inputs) properties are implicitly available as output properties. A
         <span class="property-indicator"></span>
         <span class="property-type">string</span>
     </dt>
-    <dd>{{% md %}}the resource identifier of the resource the rule monitors. **NOTE**: this property cannot be updated for an existing rule.{{% /md %}}</dd>
-</dl>
+    <dd>{{% md %}}the resource identifier of the resource the rule monitors. **NOTE**: this property cannot be updated for an existing rule.{{% /md %}}</dd></dl>
 {{% /choosable %}}
 
 {{% choosable language nodejs %}}
-<dl class="resources-properties">
-
-    <dt class="property-optional"
+<dl class="resources-properties"><dt class="property-optional"
             title="Optional">
         <span id="legacyresourceid_nodejs">
 <a href="#legacyresourceid_nodejs" style="color: inherit; text-decoration: inherit;">legacy<wbr>Resource<wbr>Id</a>
@@ -3293,8 +2862,7 @@ All [input](#inputs) properties are implicitly available as output properties. A
         <span class="property-indicator"></span>
         <span class="property-type">string</span>
     </dt>
-    <dd>{{% md %}}the legacy resource identifier of the resource the rule monitors. **NOTE**: this property cannot be updated for an existing rule.{{% /md %}}</dd>
-    <dt class="property-optional"
+    <dd>{{% md %}}the legacy resource identifier of the resource the rule monitors. **NOTE**: this property cannot be updated for an existing rule.{{% /md %}}</dd><dt class="property-optional"
             title="Optional">
         <span id="metricname_nodejs">
 <a href="#metricname_nodejs" style="color: inherit; text-decoration: inherit;">metric<wbr>Name</a>
@@ -3302,8 +2870,7 @@ All [input](#inputs) properties are implicitly available as output properties. A
         <span class="property-indicator"></span>
         <span class="property-type">string</span>
     </dt>
-    <dd>{{% md %}}the name of the metric that defines what the rule monitors.{{% /md %}}</dd>
-    <dt class="property-optional"
+    <dd>{{% md %}}the name of the metric that defines what the rule monitors.{{% /md %}}</dd><dt class="property-optional"
             title="Optional">
         <span id="metricnamespace_nodejs">
 <a href="#metricnamespace_nodejs" style="color: inherit; text-decoration: inherit;">metric<wbr>Namespace</a>
@@ -3311,8 +2878,7 @@ All [input](#inputs) properties are implicitly available as output properties. A
         <span class="property-indicator"></span>
         <span class="property-type">string</span>
     </dt>
-    <dd>{{% md %}}the namespace of the metric.{{% /md %}}</dd>
-    <dt class="property-optional"
+    <dd>{{% md %}}the namespace of the metric.{{% /md %}}</dd><dt class="property-optional"
             title="Optional">
         <span id="resourcelocation_nodejs">
 <a href="#resourcelocation_nodejs" style="color: inherit; text-decoration: inherit;">resource<wbr>Location</a>
@@ -3320,8 +2886,7 @@ All [input](#inputs) properties are implicitly available as output properties. A
         <span class="property-indicator"></span>
         <span class="property-type">string</span>
     </dt>
-    <dd>{{% md %}}the location of the resource.{{% /md %}}</dd>
-    <dt class="property-optional"
+    <dd>{{% md %}}the location of the resource.{{% /md %}}</dd><dt class="property-optional"
             title="Optional">
         <span id="resourceuri_nodejs">
 <a href="#resourceuri_nodejs" style="color: inherit; text-decoration: inherit;">resource<wbr>Uri</a>
@@ -3329,14 +2894,11 @@ All [input](#inputs) properties are implicitly available as output properties. A
         <span class="property-indicator"></span>
         <span class="property-type">string</span>
     </dt>
-    <dd>{{% md %}}the resource identifier of the resource the rule monitors. **NOTE**: this property cannot be updated for an existing rule.{{% /md %}}</dd>
-</dl>
+    <dd>{{% md %}}the resource identifier of the resource the rule monitors. **NOTE**: this property cannot be updated for an existing rule.{{% /md %}}</dd></dl>
 {{% /choosable %}}
 
 {{% choosable language python %}}
-<dl class="resources-properties">
-
-    <dt class="property-optional"
+<dl class="resources-properties"><dt class="property-optional"
             title="Optional">
         <span id="legacy_resource_id_python">
 <a href="#legacy_resource_id_python" style="color: inherit; text-decoration: inherit;">legacy_<wbr>resource_<wbr>id</a>
@@ -3344,8 +2906,7 @@ All [input](#inputs) properties are implicitly available as output properties. A
         <span class="property-indicator"></span>
         <span class="property-type">str</span>
     </dt>
-    <dd>{{% md %}}the legacy resource identifier of the resource the rule monitors. **NOTE**: this property cannot be updated for an existing rule.{{% /md %}}</dd>
-    <dt class="property-optional"
+    <dd>{{% md %}}the legacy resource identifier of the resource the rule monitors. **NOTE**: this property cannot be updated for an existing rule.{{% /md %}}</dd><dt class="property-optional"
             title="Optional">
         <span id="metric_name_python">
 <a href="#metric_name_python" style="color: inherit; text-decoration: inherit;">metric_<wbr>name</a>
@@ -3353,8 +2914,7 @@ All [input](#inputs) properties are implicitly available as output properties. A
         <span class="property-indicator"></span>
         <span class="property-type">str</span>
     </dt>
-    <dd>{{% md %}}the name of the metric that defines what the rule monitors.{{% /md %}}</dd>
-    <dt class="property-optional"
+    <dd>{{% md %}}the name of the metric that defines what the rule monitors.{{% /md %}}</dd><dt class="property-optional"
             title="Optional">
         <span id="metric_namespace_python">
 <a href="#metric_namespace_python" style="color: inherit; text-decoration: inherit;">metric_<wbr>namespace</a>
@@ -3362,8 +2922,7 @@ All [input](#inputs) properties are implicitly available as output properties. A
         <span class="property-indicator"></span>
         <span class="property-type">str</span>
     </dt>
-    <dd>{{% md %}}the namespace of the metric.{{% /md %}}</dd>
-    <dt class="property-optional"
+    <dd>{{% md %}}the namespace of the metric.{{% /md %}}</dd><dt class="property-optional"
             title="Optional">
         <span id="resource_location_python">
 <a href="#resource_location_python" style="color: inherit; text-decoration: inherit;">resource_<wbr>location</a>
@@ -3371,8 +2930,7 @@ All [input](#inputs) properties are implicitly available as output properties. A
         <span class="property-indicator"></span>
         <span class="property-type">str</span>
     </dt>
-    <dd>{{% md %}}the location of the resource.{{% /md %}}</dd>
-    <dt class="property-optional"
+    <dd>{{% md %}}the location of the resource.{{% /md %}}</dd><dt class="property-optional"
             title="Optional">
         <span id="resource_uri_python">
 <a href="#resource_uri_python" style="color: inherit; text-decoration: inherit;">resource_<wbr>uri</a>
@@ -3380,16 +2938,13 @@ All [input](#inputs) properties are implicitly available as output properties. A
         <span class="property-indicator"></span>
         <span class="property-type">str</span>
     </dt>
-    <dd>{{% md %}}the resource identifier of the resource the rule monitors. **NOTE**: this property cannot be updated for an existing rule.{{% /md %}}</dd>
-</dl>
+    <dd>{{% md %}}the resource identifier of the resource the rule monitors. **NOTE**: this property cannot be updated for an existing rule.{{% /md %}}</dd></dl>
 {{% /choosable %}}
 
 <h4 id="rulewebhookaction">Rule<wbr>Webhook<wbr>Action</h4>
 
 {{% choosable language csharp %}}
-<dl class="resources-properties">
-
-    <dt class="property-optional"
+<dl class="resources-properties"><dt class="property-optional"
             title="Optional">
         <span id="properties_csharp">
 <a href="#properties_csharp" style="color: inherit; text-decoration: inherit;">Properties</a>
@@ -3397,8 +2952,7 @@ All [input](#inputs) properties are implicitly available as output properties. A
         <span class="property-indicator"></span>
         <span class="property-type">Dictionary&lt;string, string&gt;</span>
     </dt>
-    <dd>{{% md %}}the dictionary of custom properties to include with the post operation. These data are appended to the webhook payload.{{% /md %}}</dd>
-    <dt class="property-optional"
+    <dd>{{% md %}}the dictionary of custom properties to include with the post operation. These data are appended to the webhook payload.{{% /md %}}</dd><dt class="property-optional"
             title="Optional">
         <span id="serviceuri_csharp">
 <a href="#serviceuri_csharp" style="color: inherit; text-decoration: inherit;">Service<wbr>Uri</a>
@@ -3406,14 +2960,11 @@ All [input](#inputs) properties are implicitly available as output properties. A
         <span class="property-indicator"></span>
         <span class="property-type">string</span>
     </dt>
-    <dd>{{% md %}}the service uri to Post the notification when the alert activates or resolves.{{% /md %}}</dd>
-</dl>
+    <dd>{{% md %}}the service uri to Post the notification when the alert activates or resolves.{{% /md %}}</dd></dl>
 {{% /choosable %}}
 
 {{% choosable language go %}}
-<dl class="resources-properties">
-
-    <dt class="property-optional"
+<dl class="resources-properties"><dt class="property-optional"
             title="Optional">
         <span id="properties_go">
 <a href="#properties_go" style="color: inherit; text-decoration: inherit;">Properties</a>
@@ -3421,8 +2972,7 @@ All [input](#inputs) properties are implicitly available as output properties. A
         <span class="property-indicator"></span>
         <span class="property-type">map[string]string</span>
     </dt>
-    <dd>{{% md %}}the dictionary of custom properties to include with the post operation. These data are appended to the webhook payload.{{% /md %}}</dd>
-    <dt class="property-optional"
+    <dd>{{% md %}}the dictionary of custom properties to include with the post operation. These data are appended to the webhook payload.{{% /md %}}</dd><dt class="property-optional"
             title="Optional">
         <span id="serviceuri_go">
 <a href="#serviceuri_go" style="color: inherit; text-decoration: inherit;">Service<wbr>Uri</a>
@@ -3430,14 +2980,11 @@ All [input](#inputs) properties are implicitly available as output properties. A
         <span class="property-indicator"></span>
         <span class="property-type">string</span>
     </dt>
-    <dd>{{% md %}}the service uri to Post the notification when the alert activates or resolves.{{% /md %}}</dd>
-</dl>
+    <dd>{{% md %}}the service uri to Post the notification when the alert activates or resolves.{{% /md %}}</dd></dl>
 {{% /choosable %}}
 
 {{% choosable language nodejs %}}
-<dl class="resources-properties">
-
-    <dt class="property-optional"
+<dl class="resources-properties"><dt class="property-optional"
             title="Optional">
         <span id="properties_nodejs">
 <a href="#properties_nodejs" style="color: inherit; text-decoration: inherit;">properties</a>
@@ -3445,8 +2992,7 @@ All [input](#inputs) properties are implicitly available as output properties. A
         <span class="property-indicator"></span>
         <span class="property-type">{[key: string]: string}</span>
     </dt>
-    <dd>{{% md %}}the dictionary of custom properties to include with the post operation. These data are appended to the webhook payload.{{% /md %}}</dd>
-    <dt class="property-optional"
+    <dd>{{% md %}}the dictionary of custom properties to include with the post operation. These data are appended to the webhook payload.{{% /md %}}</dd><dt class="property-optional"
             title="Optional">
         <span id="serviceuri_nodejs">
 <a href="#serviceuri_nodejs" style="color: inherit; text-decoration: inherit;">service<wbr>Uri</a>
@@ -3454,14 +3000,11 @@ All [input](#inputs) properties are implicitly available as output properties. A
         <span class="property-indicator"></span>
         <span class="property-type">string</span>
     </dt>
-    <dd>{{% md %}}the service uri to Post the notification when the alert activates or resolves.{{% /md %}}</dd>
-</dl>
+    <dd>{{% md %}}the service uri to Post the notification when the alert activates or resolves.{{% /md %}}</dd></dl>
 {{% /choosable %}}
 
 {{% choosable language python %}}
-<dl class="resources-properties">
-
-    <dt class="property-optional"
+<dl class="resources-properties"><dt class="property-optional"
             title="Optional">
         <span id="properties_python">
 <a href="#properties_python" style="color: inherit; text-decoration: inherit;">properties</a>
@@ -3469,8 +3012,7 @@ All [input](#inputs) properties are implicitly available as output properties. A
         <span class="property-indicator"></span>
         <span class="property-type">Mapping[str, str]</span>
     </dt>
-    <dd>{{% md %}}the dictionary of custom properties to include with the post operation. These data are appended to the webhook payload.{{% /md %}}</dd>
-    <dt class="property-optional"
+    <dd>{{% md %}}the dictionary of custom properties to include with the post operation. These data are appended to the webhook payload.{{% /md %}}</dd><dt class="property-optional"
             title="Optional">
         <span id="service_uri_python">
 <a href="#service_uri_python" style="color: inherit; text-decoration: inherit;">service_<wbr>uri</a>
@@ -3478,16 +3020,13 @@ All [input](#inputs) properties are implicitly available as output properties. A
         <span class="property-indicator"></span>
         <span class="property-type">str</span>
     </dt>
-    <dd>{{% md %}}the service uri to Post the notification when the alert activates or resolves.{{% /md %}}</dd>
-</dl>
+    <dd>{{% md %}}the service uri to Post the notification when the alert activates or resolves.{{% /md %}}</dd></dl>
 {{% /choosable %}}
 
 <h4 id="rulewebhookactionresponse">Rule<wbr>Webhook<wbr>Action<wbr>Response</h4>
 
 {{% choosable language csharp %}}
-<dl class="resources-properties">
-
-    <dt class="property-optional"
+<dl class="resources-properties"><dt class="property-optional"
             title="Optional">
         <span id="properties_csharp">
 <a href="#properties_csharp" style="color: inherit; text-decoration: inherit;">Properties</a>
@@ -3495,8 +3034,7 @@ All [input](#inputs) properties are implicitly available as output properties. A
         <span class="property-indicator"></span>
         <span class="property-type">Dictionary&lt;string, string&gt;</span>
     </dt>
-    <dd>{{% md %}}the dictionary of custom properties to include with the post operation. These data are appended to the webhook payload.{{% /md %}}</dd>
-    <dt class="property-optional"
+    <dd>{{% md %}}the dictionary of custom properties to include with the post operation. These data are appended to the webhook payload.{{% /md %}}</dd><dt class="property-optional"
             title="Optional">
         <span id="serviceuri_csharp">
 <a href="#serviceuri_csharp" style="color: inherit; text-decoration: inherit;">Service<wbr>Uri</a>
@@ -3504,14 +3042,11 @@ All [input](#inputs) properties are implicitly available as output properties. A
         <span class="property-indicator"></span>
         <span class="property-type">string</span>
     </dt>
-    <dd>{{% md %}}the service uri to Post the notification when the alert activates or resolves.{{% /md %}}</dd>
-</dl>
+    <dd>{{% md %}}the service uri to Post the notification when the alert activates or resolves.{{% /md %}}</dd></dl>
 {{% /choosable %}}
 
 {{% choosable language go %}}
-<dl class="resources-properties">
-
-    <dt class="property-optional"
+<dl class="resources-properties"><dt class="property-optional"
             title="Optional">
         <span id="properties_go">
 <a href="#properties_go" style="color: inherit; text-decoration: inherit;">Properties</a>
@@ -3519,8 +3054,7 @@ All [input](#inputs) properties are implicitly available as output properties. A
         <span class="property-indicator"></span>
         <span class="property-type">map[string]string</span>
     </dt>
-    <dd>{{% md %}}the dictionary of custom properties to include with the post operation. These data are appended to the webhook payload.{{% /md %}}</dd>
-    <dt class="property-optional"
+    <dd>{{% md %}}the dictionary of custom properties to include with the post operation. These data are appended to the webhook payload.{{% /md %}}</dd><dt class="property-optional"
             title="Optional">
         <span id="serviceuri_go">
 <a href="#serviceuri_go" style="color: inherit; text-decoration: inherit;">Service<wbr>Uri</a>
@@ -3528,14 +3062,11 @@ All [input](#inputs) properties are implicitly available as output properties. A
         <span class="property-indicator"></span>
         <span class="property-type">string</span>
     </dt>
-    <dd>{{% md %}}the service uri to Post the notification when the alert activates or resolves.{{% /md %}}</dd>
-</dl>
+    <dd>{{% md %}}the service uri to Post the notification when the alert activates or resolves.{{% /md %}}</dd></dl>
 {{% /choosable %}}
 
 {{% choosable language nodejs %}}
-<dl class="resources-properties">
-
-    <dt class="property-optional"
+<dl class="resources-properties"><dt class="property-optional"
             title="Optional">
         <span id="properties_nodejs">
 <a href="#properties_nodejs" style="color: inherit; text-decoration: inherit;">properties</a>
@@ -3543,8 +3074,7 @@ All [input](#inputs) properties are implicitly available as output properties. A
         <span class="property-indicator"></span>
         <span class="property-type">{[key: string]: string}</span>
     </dt>
-    <dd>{{% md %}}the dictionary of custom properties to include with the post operation. These data are appended to the webhook payload.{{% /md %}}</dd>
-    <dt class="property-optional"
+    <dd>{{% md %}}the dictionary of custom properties to include with the post operation. These data are appended to the webhook payload.{{% /md %}}</dd><dt class="property-optional"
             title="Optional">
         <span id="serviceuri_nodejs">
 <a href="#serviceuri_nodejs" style="color: inherit; text-decoration: inherit;">service<wbr>Uri</a>
@@ -3552,14 +3082,11 @@ All [input](#inputs) properties are implicitly available as output properties. A
         <span class="property-indicator"></span>
         <span class="property-type">string</span>
     </dt>
-    <dd>{{% md %}}the service uri to Post the notification when the alert activates or resolves.{{% /md %}}</dd>
-</dl>
+    <dd>{{% md %}}the service uri to Post the notification when the alert activates or resolves.{{% /md %}}</dd></dl>
 {{% /choosable %}}
 
 {{% choosable language python %}}
-<dl class="resources-properties">
-
-    <dt class="property-optional"
+<dl class="resources-properties"><dt class="property-optional"
             title="Optional">
         <span id="properties_python">
 <a href="#properties_python" style="color: inherit; text-decoration: inherit;">properties</a>
@@ -3567,8 +3094,7 @@ All [input](#inputs) properties are implicitly available as output properties. A
         <span class="property-indicator"></span>
         <span class="property-type">Mapping[str, str]</span>
     </dt>
-    <dd>{{% md %}}the dictionary of custom properties to include with the post operation. These data are appended to the webhook payload.{{% /md %}}</dd>
-    <dt class="property-optional"
+    <dd>{{% md %}}the dictionary of custom properties to include with the post operation. These data are appended to the webhook payload.{{% /md %}}</dd><dt class="property-optional"
             title="Optional">
         <span id="service_uri_python">
 <a href="#service_uri_python" style="color: inherit; text-decoration: inherit;">service_<wbr>uri</a>
@@ -3576,16 +3102,13 @@ All [input](#inputs) properties are implicitly available as output properties. A
         <span class="property-indicator"></span>
         <span class="property-type">str</span>
     </dt>
-    <dd>{{% md %}}the service uri to Post the notification when the alert activates or resolves.{{% /md %}}</dd>
-</dl>
+    <dd>{{% md %}}the service uri to Post the notification when the alert activates or resolves.{{% /md %}}</dd></dl>
 {{% /choosable %}}
 
 <h4 id="thresholdrulecondition">Threshold<wbr>Rule<wbr>Condition</h4>
 
 {{% choosable language csharp %}}
-<dl class="resources-properties">
-
-    <dt class="property-required"
+<dl class="resources-properties"><dt class="property-required"
             title="Required">
         <span id="operator_csharp">
 <a href="#operator_csharp" style="color: inherit; text-decoration: inherit;">Operator</a>
@@ -3593,8 +3116,7 @@ All [input](#inputs) properties are implicitly available as output properties. A
         <span class="property-indicator"></span>
         <span class="property-type"><a href="#conditionoperator">Pulumi.<wbr>Azure<wbr>Native.<wbr>Insights.<wbr>Condition<wbr>Operator</a></span>
     </dt>
-    <dd>{{% md %}}the operator used to compare the data and the threshold.{{% /md %}}</dd>
-    <dt class="property-required"
+    <dd>{{% md %}}the operator used to compare the data and the threshold.{{% /md %}}</dd><dt class="property-required"
             title="Required">
         <span id="threshold_csharp">
 <a href="#threshold_csharp" style="color: inherit; text-decoration: inherit;">Threshold</a>
@@ -3602,8 +3124,7 @@ All [input](#inputs) properties are implicitly available as output properties. A
         <span class="property-indicator"></span>
         <span class="property-type">double</span>
     </dt>
-    <dd>{{% md %}}the threshold value that activates the alert.{{% /md %}}</dd>
-    <dt class="property-optional"
+    <dd>{{% md %}}the threshold value that activates the alert.{{% /md %}}</dd><dt class="property-optional"
             title="Optional">
         <span id="datasource_csharp">
 <a href="#datasource_csharp" style="color: inherit; text-decoration: inherit;">Data<wbr>Source</a>
@@ -3611,8 +3132,7 @@ All [input](#inputs) properties are implicitly available as output properties. A
         <span class="property-indicator"></span>
         <span class="property-type"><a href="#rulemanagementeventdatasource">Pulumi.<wbr>Azure<wbr>Native.<wbr>Insights.<wbr>Inputs.<wbr>Rule<wbr>Management<wbr>Event<wbr>Data<wbr>Source<wbr>Args</a> | <a href="#rulemetricdatasource">Pulumi.<wbr>Azure<wbr>Native.<wbr>Insights.<wbr>Inputs.<wbr>Rule<wbr>Metric<wbr>Data<wbr>Source<wbr>Args</a></span>
     </dt>
-    <dd>{{% md %}}the resource from which the rule collects its data. For this type dataSource will always be of type RuleMetricDataSource.{{% /md %}}</dd>
-    <dt class="property-optional"
+    <dd>{{% md %}}the resource from which the rule collects its data. For this type dataSource will always be of type RuleMetricDataSource.{{% /md %}}</dd><dt class="property-optional"
             title="Optional">
         <span id="timeaggregation_csharp">
 <a href="#timeaggregation_csharp" style="color: inherit; text-decoration: inherit;">Time<wbr>Aggregation</a>
@@ -3620,8 +3140,7 @@ All [input](#inputs) properties are implicitly available as output properties. A
         <span class="property-indicator"></span>
         <span class="property-type"><a href="#timeaggregationoperator">Pulumi.<wbr>Azure<wbr>Native.<wbr>Insights.<wbr>Time<wbr>Aggregation<wbr>Operator</a></span>
     </dt>
-    <dd>{{% md %}}the time aggregation operator. How the data that are collected should be combined over time. The default value is the PrimaryAggregationType of the Metric.{{% /md %}}</dd>
-    <dt class="property-optional"
+    <dd>{{% md %}}the time aggregation operator. How the data that are collected should be combined over time. The default value is the PrimaryAggregationType of the Metric.{{% /md %}}</dd><dt class="property-optional"
             title="Optional">
         <span id="windowsize_csharp">
 <a href="#windowsize_csharp" style="color: inherit; text-decoration: inherit;">Window<wbr>Size</a>
@@ -3629,14 +3148,11 @@ All [input](#inputs) properties are implicitly available as output properties. A
         <span class="property-indicator"></span>
         <span class="property-type">string</span>
     </dt>
-    <dd>{{% md %}}the period of time (in ISO 8601 duration format) that is used to monitor alert activity based on the threshold. If specified then it must be between 5 minutes and 1 day.{{% /md %}}</dd>
-</dl>
+    <dd>{{% md %}}the period of time (in ISO 8601 duration format) that is used to monitor alert activity based on the threshold. If specified then it must be between 5 minutes and 1 day.{{% /md %}}</dd></dl>
 {{% /choosable %}}
 
 {{% choosable language go %}}
-<dl class="resources-properties">
-
-    <dt class="property-required"
+<dl class="resources-properties"><dt class="property-required"
             title="Required">
         <span id="operator_go">
 <a href="#operator_go" style="color: inherit; text-decoration: inherit;">Operator</a>
@@ -3644,8 +3160,7 @@ All [input](#inputs) properties are implicitly available as output properties. A
         <span class="property-indicator"></span>
         <span class="property-type"><a href="#conditionoperator">Condition<wbr>Operator</a></span>
     </dt>
-    <dd>{{% md %}}the operator used to compare the data and the threshold.{{% /md %}}</dd>
-    <dt class="property-required"
+    <dd>{{% md %}}the operator used to compare the data and the threshold.{{% /md %}}</dd><dt class="property-required"
             title="Required">
         <span id="threshold_go">
 <a href="#threshold_go" style="color: inherit; text-decoration: inherit;">Threshold</a>
@@ -3653,8 +3168,7 @@ All [input](#inputs) properties are implicitly available as output properties. A
         <span class="property-indicator"></span>
         <span class="property-type">float64</span>
     </dt>
-    <dd>{{% md %}}the threshold value that activates the alert.{{% /md %}}</dd>
-    <dt class="property-optional"
+    <dd>{{% md %}}the threshold value that activates the alert.{{% /md %}}</dd><dt class="property-optional"
             title="Optional">
         <span id="datasource_go">
 <a href="#datasource_go" style="color: inherit; text-decoration: inherit;">Data<wbr>Source</a>
@@ -3662,8 +3176,7 @@ All [input](#inputs) properties are implicitly available as output properties. A
         <span class="property-indicator"></span>
         <span class="property-type"><a href="#rulemanagementeventdatasource">Rule<wbr>Management<wbr>Event<wbr>Data<wbr>Source</a> | <a href="#rulemetricdatasource">Rule<wbr>Metric<wbr>Data<wbr>Source</a></span>
     </dt>
-    <dd>{{% md %}}the resource from which the rule collects its data. For this type dataSource will always be of type RuleMetricDataSource.{{% /md %}}</dd>
-    <dt class="property-optional"
+    <dd>{{% md %}}the resource from which the rule collects its data. For this type dataSource will always be of type RuleMetricDataSource.{{% /md %}}</dd><dt class="property-optional"
             title="Optional">
         <span id="timeaggregation_go">
 <a href="#timeaggregation_go" style="color: inherit; text-decoration: inherit;">Time<wbr>Aggregation</a>
@@ -3671,8 +3184,7 @@ All [input](#inputs) properties are implicitly available as output properties. A
         <span class="property-indicator"></span>
         <span class="property-type"><a href="#timeaggregationoperator">Time<wbr>Aggregation<wbr>Operator</a></span>
     </dt>
-    <dd>{{% md %}}the time aggregation operator. How the data that are collected should be combined over time. The default value is the PrimaryAggregationType of the Metric.{{% /md %}}</dd>
-    <dt class="property-optional"
+    <dd>{{% md %}}the time aggregation operator. How the data that are collected should be combined over time. The default value is the PrimaryAggregationType of the Metric.{{% /md %}}</dd><dt class="property-optional"
             title="Optional">
         <span id="windowsize_go">
 <a href="#windowsize_go" style="color: inherit; text-decoration: inherit;">Window<wbr>Size</a>
@@ -3680,14 +3192,11 @@ All [input](#inputs) properties are implicitly available as output properties. A
         <span class="property-indicator"></span>
         <span class="property-type">string</span>
     </dt>
-    <dd>{{% md %}}the period of time (in ISO 8601 duration format) that is used to monitor alert activity based on the threshold. If specified then it must be between 5 minutes and 1 day.{{% /md %}}</dd>
-</dl>
+    <dd>{{% md %}}the period of time (in ISO 8601 duration format) that is used to monitor alert activity based on the threshold. If specified then it must be between 5 minutes and 1 day.{{% /md %}}</dd></dl>
 {{% /choosable %}}
 
 {{% choosable language nodejs %}}
-<dl class="resources-properties">
-
-    <dt class="property-required"
+<dl class="resources-properties"><dt class="property-required"
             title="Required">
         <span id="operator_nodejs">
 <a href="#operator_nodejs" style="color: inherit; text-decoration: inherit;">operator</a>
@@ -3695,8 +3204,7 @@ All [input](#inputs) properties are implicitly available as output properties. A
         <span class="property-indicator"></span>
         <span class="property-type"><a href="#conditionoperator">Condition<wbr>Operator</a></span>
     </dt>
-    <dd>{{% md %}}the operator used to compare the data and the threshold.{{% /md %}}</dd>
-    <dt class="property-required"
+    <dd>{{% md %}}the operator used to compare the data and the threshold.{{% /md %}}</dd><dt class="property-required"
             title="Required">
         <span id="threshold_nodejs">
 <a href="#threshold_nodejs" style="color: inherit; text-decoration: inherit;">threshold</a>
@@ -3704,8 +3212,7 @@ All [input](#inputs) properties are implicitly available as output properties. A
         <span class="property-indicator"></span>
         <span class="property-type">number</span>
     </dt>
-    <dd>{{% md %}}the threshold value that activates the alert.{{% /md %}}</dd>
-    <dt class="property-optional"
+    <dd>{{% md %}}the threshold value that activates the alert.{{% /md %}}</dd><dt class="property-optional"
             title="Optional">
         <span id="datasource_nodejs">
 <a href="#datasource_nodejs" style="color: inherit; text-decoration: inherit;">data<wbr>Source</a>
@@ -3713,8 +3220,7 @@ All [input](#inputs) properties are implicitly available as output properties. A
         <span class="property-indicator"></span>
         <span class="property-type"><a href="#rulemanagementeventdatasource">Rule<wbr>Management<wbr>Event<wbr>Data<wbr>Source</a> | <a href="#rulemetricdatasource">Rule<wbr>Metric<wbr>Data<wbr>Source</a></span>
     </dt>
-    <dd>{{% md %}}the resource from which the rule collects its data. For this type dataSource will always be of type RuleMetricDataSource.{{% /md %}}</dd>
-    <dt class="property-optional"
+    <dd>{{% md %}}the resource from which the rule collects its data. For this type dataSource will always be of type RuleMetricDataSource.{{% /md %}}</dd><dt class="property-optional"
             title="Optional">
         <span id="timeaggregation_nodejs">
 <a href="#timeaggregation_nodejs" style="color: inherit; text-decoration: inherit;">time<wbr>Aggregation</a>
@@ -3722,8 +3228,7 @@ All [input](#inputs) properties are implicitly available as output properties. A
         <span class="property-indicator"></span>
         <span class="property-type"><a href="#timeaggregationoperator">Time<wbr>Aggregation<wbr>Operator</a></span>
     </dt>
-    <dd>{{% md %}}the time aggregation operator. How the data that are collected should be combined over time. The default value is the PrimaryAggregationType of the Metric.{{% /md %}}</dd>
-    <dt class="property-optional"
+    <dd>{{% md %}}the time aggregation operator. How the data that are collected should be combined over time. The default value is the PrimaryAggregationType of the Metric.{{% /md %}}</dd><dt class="property-optional"
             title="Optional">
         <span id="windowsize_nodejs">
 <a href="#windowsize_nodejs" style="color: inherit; text-decoration: inherit;">window<wbr>Size</a>
@@ -3731,14 +3236,11 @@ All [input](#inputs) properties are implicitly available as output properties. A
         <span class="property-indicator"></span>
         <span class="property-type">string</span>
     </dt>
-    <dd>{{% md %}}the period of time (in ISO 8601 duration format) that is used to monitor alert activity based on the threshold. If specified then it must be between 5 minutes and 1 day.{{% /md %}}</dd>
-</dl>
+    <dd>{{% md %}}the period of time (in ISO 8601 duration format) that is used to monitor alert activity based on the threshold. If specified then it must be between 5 minutes and 1 day.{{% /md %}}</dd></dl>
 {{% /choosable %}}
 
 {{% choosable language python %}}
-<dl class="resources-properties">
-
-    <dt class="property-required"
+<dl class="resources-properties"><dt class="property-required"
             title="Required">
         <span id="operator_python">
 <a href="#operator_python" style="color: inherit; text-decoration: inherit;">operator</a>
@@ -3746,8 +3248,7 @@ All [input](#inputs) properties are implicitly available as output properties. A
         <span class="property-indicator"></span>
         <span class="property-type"><a href="#conditionoperator">Condition<wbr>Operator</a></span>
     </dt>
-    <dd>{{% md %}}the operator used to compare the data and the threshold.{{% /md %}}</dd>
-    <dt class="property-required"
+    <dd>{{% md %}}the operator used to compare the data and the threshold.{{% /md %}}</dd><dt class="property-required"
             title="Required">
         <span id="threshold_python">
 <a href="#threshold_python" style="color: inherit; text-decoration: inherit;">threshold</a>
@@ -3755,8 +3256,7 @@ All [input](#inputs) properties are implicitly available as output properties. A
         <span class="property-indicator"></span>
         <span class="property-type">float</span>
     </dt>
-    <dd>{{% md %}}the threshold value that activates the alert.{{% /md %}}</dd>
-    <dt class="property-optional"
+    <dd>{{% md %}}the threshold value that activates the alert.{{% /md %}}</dd><dt class="property-optional"
             title="Optional">
         <span id="data_source_python">
 <a href="#data_source_python" style="color: inherit; text-decoration: inherit;">data_<wbr>source</a>
@@ -3764,8 +3264,7 @@ All [input](#inputs) properties are implicitly available as output properties. A
         <span class="property-indicator"></span>
         <span class="property-type"><a href="#rulemanagementeventdatasource">Rule<wbr>Management<wbr>Event<wbr>Data<wbr>Source<wbr>Args</a> | <a href="#rulemetricdatasource">Rule<wbr>Metric<wbr>Data<wbr>Source<wbr>Args</a></span>
     </dt>
-    <dd>{{% md %}}the resource from which the rule collects its data. For this type dataSource will always be of type RuleMetricDataSource.{{% /md %}}</dd>
-    <dt class="property-optional"
+    <dd>{{% md %}}the resource from which the rule collects its data. For this type dataSource will always be of type RuleMetricDataSource.{{% /md %}}</dd><dt class="property-optional"
             title="Optional">
         <span id="time_aggregation_python">
 <a href="#time_aggregation_python" style="color: inherit; text-decoration: inherit;">time_<wbr>aggregation</a>
@@ -3773,8 +3272,7 @@ All [input](#inputs) properties are implicitly available as output properties. A
         <span class="property-indicator"></span>
         <span class="property-type"><a href="#timeaggregationoperator">Time<wbr>Aggregation<wbr>Operator</a></span>
     </dt>
-    <dd>{{% md %}}the time aggregation operator. How the data that are collected should be combined over time. The default value is the PrimaryAggregationType of the Metric.{{% /md %}}</dd>
-    <dt class="property-optional"
+    <dd>{{% md %}}the time aggregation operator. How the data that are collected should be combined over time. The default value is the PrimaryAggregationType of the Metric.{{% /md %}}</dd><dt class="property-optional"
             title="Optional">
         <span id="window_size_python">
 <a href="#window_size_python" style="color: inherit; text-decoration: inherit;">window_<wbr>size</a>
@@ -3782,16 +3280,13 @@ All [input](#inputs) properties are implicitly available as output properties. A
         <span class="property-indicator"></span>
         <span class="property-type">str</span>
     </dt>
-    <dd>{{% md %}}the period of time (in ISO 8601 duration format) that is used to monitor alert activity based on the threshold. If specified then it must be between 5 minutes and 1 day.{{% /md %}}</dd>
-</dl>
+    <dd>{{% md %}}the period of time (in ISO 8601 duration format) that is used to monitor alert activity based on the threshold. If specified then it must be between 5 minutes and 1 day.{{% /md %}}</dd></dl>
 {{% /choosable %}}
 
 <h4 id="thresholdruleconditionresponse">Threshold<wbr>Rule<wbr>Condition<wbr>Response</h4>
 
 {{% choosable language csharp %}}
-<dl class="resources-properties">
-
-    <dt class="property-required"
+<dl class="resources-properties"><dt class="property-required"
             title="Required">
         <span id="operator_csharp">
 <a href="#operator_csharp" style="color: inherit; text-decoration: inherit;">Operator</a>
@@ -3799,8 +3294,7 @@ All [input](#inputs) properties are implicitly available as output properties. A
         <span class="property-indicator"></span>
         <span class="property-type">string</span>
     </dt>
-    <dd>{{% md %}}the operator used to compare the data and the threshold.{{% /md %}}</dd>
-    <dt class="property-required"
+    <dd>{{% md %}}the operator used to compare the data and the threshold.{{% /md %}}</dd><dt class="property-required"
             title="Required">
         <span id="threshold_csharp">
 <a href="#threshold_csharp" style="color: inherit; text-decoration: inherit;">Threshold</a>
@@ -3808,8 +3302,7 @@ All [input](#inputs) properties are implicitly available as output properties. A
         <span class="property-indicator"></span>
         <span class="property-type">double</span>
     </dt>
-    <dd>{{% md %}}the threshold value that activates the alert.{{% /md %}}</dd>
-    <dt class="property-optional"
+    <dd>{{% md %}}the threshold value that activates the alert.{{% /md %}}</dd><dt class="property-optional"
             title="Optional">
         <span id="datasource_csharp">
 <a href="#datasource_csharp" style="color: inherit; text-decoration: inherit;">Data<wbr>Source</a>
@@ -3817,8 +3310,7 @@ All [input](#inputs) properties are implicitly available as output properties. A
         <span class="property-indicator"></span>
         <span class="property-type"><a href="#rulemanagementeventdatasourceresponse">Pulumi.<wbr>Azure<wbr>Native.<wbr>Insights.<wbr>Inputs.<wbr>Rule<wbr>Management<wbr>Event<wbr>Data<wbr>Source<wbr>Response<wbr>Args</a> | <a href="#rulemetricdatasourceresponse">Pulumi.<wbr>Azure<wbr>Native.<wbr>Insights.<wbr>Inputs.<wbr>Rule<wbr>Metric<wbr>Data<wbr>Source<wbr>Response<wbr>Args</a></span>
     </dt>
-    <dd>{{% md %}}the resource from which the rule collects its data. For this type dataSource will always be of type RuleMetricDataSource.{{% /md %}}</dd>
-    <dt class="property-optional"
+    <dd>{{% md %}}the resource from which the rule collects its data. For this type dataSource will always be of type RuleMetricDataSource.{{% /md %}}</dd><dt class="property-optional"
             title="Optional">
         <span id="timeaggregation_csharp">
 <a href="#timeaggregation_csharp" style="color: inherit; text-decoration: inherit;">Time<wbr>Aggregation</a>
@@ -3826,8 +3318,7 @@ All [input](#inputs) properties are implicitly available as output properties. A
         <span class="property-indicator"></span>
         <span class="property-type">string</span>
     </dt>
-    <dd>{{% md %}}the time aggregation operator. How the data that are collected should be combined over time. The default value is the PrimaryAggregationType of the Metric.{{% /md %}}</dd>
-    <dt class="property-optional"
+    <dd>{{% md %}}the time aggregation operator. How the data that are collected should be combined over time. The default value is the PrimaryAggregationType of the Metric.{{% /md %}}</dd><dt class="property-optional"
             title="Optional">
         <span id="windowsize_csharp">
 <a href="#windowsize_csharp" style="color: inherit; text-decoration: inherit;">Window<wbr>Size</a>
@@ -3835,14 +3326,11 @@ All [input](#inputs) properties are implicitly available as output properties. A
         <span class="property-indicator"></span>
         <span class="property-type">string</span>
     </dt>
-    <dd>{{% md %}}the period of time (in ISO 8601 duration format) that is used to monitor alert activity based on the threshold. If specified then it must be between 5 minutes and 1 day.{{% /md %}}</dd>
-</dl>
+    <dd>{{% md %}}the period of time (in ISO 8601 duration format) that is used to monitor alert activity based on the threshold. If specified then it must be between 5 minutes and 1 day.{{% /md %}}</dd></dl>
 {{% /choosable %}}
 
 {{% choosable language go %}}
-<dl class="resources-properties">
-
-    <dt class="property-required"
+<dl class="resources-properties"><dt class="property-required"
             title="Required">
         <span id="operator_go">
 <a href="#operator_go" style="color: inherit; text-decoration: inherit;">Operator</a>
@@ -3850,8 +3338,7 @@ All [input](#inputs) properties are implicitly available as output properties. A
         <span class="property-indicator"></span>
         <span class="property-type">string</span>
     </dt>
-    <dd>{{% md %}}the operator used to compare the data and the threshold.{{% /md %}}</dd>
-    <dt class="property-required"
+    <dd>{{% md %}}the operator used to compare the data and the threshold.{{% /md %}}</dd><dt class="property-required"
             title="Required">
         <span id="threshold_go">
 <a href="#threshold_go" style="color: inherit; text-decoration: inherit;">Threshold</a>
@@ -3859,8 +3346,7 @@ All [input](#inputs) properties are implicitly available as output properties. A
         <span class="property-indicator"></span>
         <span class="property-type">float64</span>
     </dt>
-    <dd>{{% md %}}the threshold value that activates the alert.{{% /md %}}</dd>
-    <dt class="property-optional"
+    <dd>{{% md %}}the threshold value that activates the alert.{{% /md %}}</dd><dt class="property-optional"
             title="Optional">
         <span id="datasource_go">
 <a href="#datasource_go" style="color: inherit; text-decoration: inherit;">Data<wbr>Source</a>
@@ -3868,8 +3354,7 @@ All [input](#inputs) properties are implicitly available as output properties. A
         <span class="property-indicator"></span>
         <span class="property-type"><a href="#rulemanagementeventdatasourceresponse">Rule<wbr>Management<wbr>Event<wbr>Data<wbr>Source<wbr>Response</a> | <a href="#rulemetricdatasourceresponse">Rule<wbr>Metric<wbr>Data<wbr>Source<wbr>Response</a></span>
     </dt>
-    <dd>{{% md %}}the resource from which the rule collects its data. For this type dataSource will always be of type RuleMetricDataSource.{{% /md %}}</dd>
-    <dt class="property-optional"
+    <dd>{{% md %}}the resource from which the rule collects its data. For this type dataSource will always be of type RuleMetricDataSource.{{% /md %}}</dd><dt class="property-optional"
             title="Optional">
         <span id="timeaggregation_go">
 <a href="#timeaggregation_go" style="color: inherit; text-decoration: inherit;">Time<wbr>Aggregation</a>
@@ -3877,8 +3362,7 @@ All [input](#inputs) properties are implicitly available as output properties. A
         <span class="property-indicator"></span>
         <span class="property-type">string</span>
     </dt>
-    <dd>{{% md %}}the time aggregation operator. How the data that are collected should be combined over time. The default value is the PrimaryAggregationType of the Metric.{{% /md %}}</dd>
-    <dt class="property-optional"
+    <dd>{{% md %}}the time aggregation operator. How the data that are collected should be combined over time. The default value is the PrimaryAggregationType of the Metric.{{% /md %}}</dd><dt class="property-optional"
             title="Optional">
         <span id="windowsize_go">
 <a href="#windowsize_go" style="color: inherit; text-decoration: inherit;">Window<wbr>Size</a>
@@ -3886,14 +3370,11 @@ All [input](#inputs) properties are implicitly available as output properties. A
         <span class="property-indicator"></span>
         <span class="property-type">string</span>
     </dt>
-    <dd>{{% md %}}the period of time (in ISO 8601 duration format) that is used to monitor alert activity based on the threshold. If specified then it must be between 5 minutes and 1 day.{{% /md %}}</dd>
-</dl>
+    <dd>{{% md %}}the period of time (in ISO 8601 duration format) that is used to monitor alert activity based on the threshold. If specified then it must be between 5 minutes and 1 day.{{% /md %}}</dd></dl>
 {{% /choosable %}}
 
 {{% choosable language nodejs %}}
-<dl class="resources-properties">
-
-    <dt class="property-required"
+<dl class="resources-properties"><dt class="property-required"
             title="Required">
         <span id="operator_nodejs">
 <a href="#operator_nodejs" style="color: inherit; text-decoration: inherit;">operator</a>
@@ -3901,8 +3382,7 @@ All [input](#inputs) properties are implicitly available as output properties. A
         <span class="property-indicator"></span>
         <span class="property-type">string</span>
     </dt>
-    <dd>{{% md %}}the operator used to compare the data and the threshold.{{% /md %}}</dd>
-    <dt class="property-required"
+    <dd>{{% md %}}the operator used to compare the data and the threshold.{{% /md %}}</dd><dt class="property-required"
             title="Required">
         <span id="threshold_nodejs">
 <a href="#threshold_nodejs" style="color: inherit; text-decoration: inherit;">threshold</a>
@@ -3910,8 +3390,7 @@ All [input](#inputs) properties are implicitly available as output properties. A
         <span class="property-indicator"></span>
         <span class="property-type">number</span>
     </dt>
-    <dd>{{% md %}}the threshold value that activates the alert.{{% /md %}}</dd>
-    <dt class="property-optional"
+    <dd>{{% md %}}the threshold value that activates the alert.{{% /md %}}</dd><dt class="property-optional"
             title="Optional">
         <span id="datasource_nodejs">
 <a href="#datasource_nodejs" style="color: inherit; text-decoration: inherit;">data<wbr>Source</a>
@@ -3919,8 +3398,7 @@ All [input](#inputs) properties are implicitly available as output properties. A
         <span class="property-indicator"></span>
         <span class="property-type"><a href="#rulemanagementeventdatasourceresponse">Rule<wbr>Management<wbr>Event<wbr>Data<wbr>Source<wbr>Response</a> | <a href="#rulemetricdatasourceresponse">Rule<wbr>Metric<wbr>Data<wbr>Source<wbr>Response</a></span>
     </dt>
-    <dd>{{% md %}}the resource from which the rule collects its data. For this type dataSource will always be of type RuleMetricDataSource.{{% /md %}}</dd>
-    <dt class="property-optional"
+    <dd>{{% md %}}the resource from which the rule collects its data. For this type dataSource will always be of type RuleMetricDataSource.{{% /md %}}</dd><dt class="property-optional"
             title="Optional">
         <span id="timeaggregation_nodejs">
 <a href="#timeaggregation_nodejs" style="color: inherit; text-decoration: inherit;">time<wbr>Aggregation</a>
@@ -3928,8 +3406,7 @@ All [input](#inputs) properties are implicitly available as output properties. A
         <span class="property-indicator"></span>
         <span class="property-type">string</span>
     </dt>
-    <dd>{{% md %}}the time aggregation operator. How the data that are collected should be combined over time. The default value is the PrimaryAggregationType of the Metric.{{% /md %}}</dd>
-    <dt class="property-optional"
+    <dd>{{% md %}}the time aggregation operator. How the data that are collected should be combined over time. The default value is the PrimaryAggregationType of the Metric.{{% /md %}}</dd><dt class="property-optional"
             title="Optional">
         <span id="windowsize_nodejs">
 <a href="#windowsize_nodejs" style="color: inherit; text-decoration: inherit;">window<wbr>Size</a>
@@ -3937,14 +3414,11 @@ All [input](#inputs) properties are implicitly available as output properties. A
         <span class="property-indicator"></span>
         <span class="property-type">string</span>
     </dt>
-    <dd>{{% md %}}the period of time (in ISO 8601 duration format) that is used to monitor alert activity based on the threshold. If specified then it must be between 5 minutes and 1 day.{{% /md %}}</dd>
-</dl>
+    <dd>{{% md %}}the period of time (in ISO 8601 duration format) that is used to monitor alert activity based on the threshold. If specified then it must be between 5 minutes and 1 day.{{% /md %}}</dd></dl>
 {{% /choosable %}}
 
 {{% choosable language python %}}
-<dl class="resources-properties">
-
-    <dt class="property-required"
+<dl class="resources-properties"><dt class="property-required"
             title="Required">
         <span id="operator_python">
 <a href="#operator_python" style="color: inherit; text-decoration: inherit;">operator</a>
@@ -3952,8 +3426,7 @@ All [input](#inputs) properties are implicitly available as output properties. A
         <span class="property-indicator"></span>
         <span class="property-type">str</span>
     </dt>
-    <dd>{{% md %}}the operator used to compare the data and the threshold.{{% /md %}}</dd>
-    <dt class="property-required"
+    <dd>{{% md %}}the operator used to compare the data and the threshold.{{% /md %}}</dd><dt class="property-required"
             title="Required">
         <span id="threshold_python">
 <a href="#threshold_python" style="color: inherit; text-decoration: inherit;">threshold</a>
@@ -3961,8 +3434,7 @@ All [input](#inputs) properties are implicitly available as output properties. A
         <span class="property-indicator"></span>
         <span class="property-type">float</span>
     </dt>
-    <dd>{{% md %}}the threshold value that activates the alert.{{% /md %}}</dd>
-    <dt class="property-optional"
+    <dd>{{% md %}}the threshold value that activates the alert.{{% /md %}}</dd><dt class="property-optional"
             title="Optional">
         <span id="data_source_python">
 <a href="#data_source_python" style="color: inherit; text-decoration: inherit;">data_<wbr>source</a>
@@ -3970,8 +3442,7 @@ All [input](#inputs) properties are implicitly available as output properties. A
         <span class="property-indicator"></span>
         <span class="property-type"><a href="#rulemanagementeventdatasourceresponse">Rule<wbr>Management<wbr>Event<wbr>Data<wbr>Source<wbr>Response<wbr>Args</a> | <a href="#rulemetricdatasourceresponse">Rule<wbr>Metric<wbr>Data<wbr>Source<wbr>Response<wbr>Args</a></span>
     </dt>
-    <dd>{{% md %}}the resource from which the rule collects its data. For this type dataSource will always be of type RuleMetricDataSource.{{% /md %}}</dd>
-    <dt class="property-optional"
+    <dd>{{% md %}}the resource from which the rule collects its data. For this type dataSource will always be of type RuleMetricDataSource.{{% /md %}}</dd><dt class="property-optional"
             title="Optional">
         <span id="time_aggregation_python">
 <a href="#time_aggregation_python" style="color: inherit; text-decoration: inherit;">time_<wbr>aggregation</a>
@@ -3979,8 +3450,7 @@ All [input](#inputs) properties are implicitly available as output properties. A
         <span class="property-indicator"></span>
         <span class="property-type">str</span>
     </dt>
-    <dd>{{% md %}}the time aggregation operator. How the data that are collected should be combined over time. The default value is the PrimaryAggregationType of the Metric.{{% /md %}}</dd>
-    <dt class="property-optional"
+    <dd>{{% md %}}the time aggregation operator. How the data that are collected should be combined over time. The default value is the PrimaryAggregationType of the Metric.{{% /md %}}</dd><dt class="property-optional"
             title="Optional">
         <span id="window_size_python">
 <a href="#window_size_python" style="color: inherit; text-decoration: inherit;">window_<wbr>size</a>
@@ -3988,70 +3458,45 @@ All [input](#inputs) properties are implicitly available as output properties. A
         <span class="property-indicator"></span>
         <span class="property-type">str</span>
     </dt>
-    <dd>{{% md %}}the period of time (in ISO 8601 duration format) that is used to monitor alert activity based on the threshold. If specified then it must be between 5 minutes and 1 day.{{% /md %}}</dd>
-</dl>
+    <dd>{{% md %}}the period of time (in ISO 8601 duration format) that is used to monitor alert activity based on the threshold. If specified then it must be between 5 minutes and 1 day.{{% /md %}}</dd></dl>
 {{% /choosable %}}
 
 <h4 id="timeaggregationoperator">Time<wbr>Aggregation<wbr>Operator</h4>
 
 {{% choosable language csharp %}}
-<dl class="tabular">
-    <dt>Average</dt>
-    <dd>Average</dd>
-    <dt>Minimum</dt>
-    <dd>Minimum</dd>
-    <dt>Maximum</dt>
-    <dd>Maximum</dd>
-    <dt>Total</dt>
-    <dd>Total</dd>
-    <dt>Last</dt>
-    <dd>Last</dd>
-</dl>
+<dl class="tabular"><dt>Average</dt>
+    <dd>Average</dd><dt>Minimum</dt>
+    <dd>Minimum</dd><dt>Maximum</dt>
+    <dd>Maximum</dd><dt>Total</dt>
+    <dd>Total</dd><dt>Last</dt>
+    <dd>Last</dd></dl>
 {{% /choosable %}}
 
 {{% choosable language go %}}
-<dl class="tabular">
-    <dt>Time<wbr>Aggregation<wbr>Operator<wbr>Average</dt>
-    <dd>Average</dd>
-    <dt>Time<wbr>Aggregation<wbr>Operator<wbr>Minimum</dt>
-    <dd>Minimum</dd>
-    <dt>Time<wbr>Aggregation<wbr>Operator<wbr>Maximum</dt>
-    <dd>Maximum</dd>
-    <dt>Time<wbr>Aggregation<wbr>Operator<wbr>Total</dt>
-    <dd>Total</dd>
-    <dt>Time<wbr>Aggregation<wbr>Operator<wbr>Last</dt>
-    <dd>Last</dd>
-</dl>
+<dl class="tabular"><dt>Time<wbr>Aggregation<wbr>Operator<wbr>Average</dt>
+    <dd>Average</dd><dt>Time<wbr>Aggregation<wbr>Operator<wbr>Minimum</dt>
+    <dd>Minimum</dd><dt>Time<wbr>Aggregation<wbr>Operator<wbr>Maximum</dt>
+    <dd>Maximum</dd><dt>Time<wbr>Aggregation<wbr>Operator<wbr>Total</dt>
+    <dd>Total</dd><dt>Time<wbr>Aggregation<wbr>Operator<wbr>Last</dt>
+    <dd>Last</dd></dl>
 {{% /choosable %}}
 
 {{% choosable language nodejs %}}
-<dl class="tabular">
-    <dt>Average</dt>
-    <dd>Average</dd>
-    <dt>Minimum</dt>
-    <dd>Minimum</dd>
-    <dt>Maximum</dt>
-    <dd>Maximum</dd>
-    <dt>Total</dt>
-    <dd>Total</dd>
-    <dt>Last</dt>
-    <dd>Last</dd>
-</dl>
+<dl class="tabular"><dt>Average</dt>
+    <dd>Average</dd><dt>Minimum</dt>
+    <dd>Minimum</dd><dt>Maximum</dt>
+    <dd>Maximum</dd><dt>Total</dt>
+    <dd>Total</dd><dt>Last</dt>
+    <dd>Last</dd></dl>
 {{% /choosable %}}
 
 {{% choosable language python %}}
-<dl class="tabular">
-    <dt>AVERAGE</dt>
-    <dd>Average</dd>
-    <dt>MINIMUM</dt>
-    <dd>Minimum</dd>
-    <dt>MAXIMUM</dt>
-    <dd>Maximum</dd>
-    <dt>TOTAL</dt>
-    <dd>Total</dd>
-    <dt>LAST</dt>
-    <dd>Last</dd>
-</dl>
+<dl class="tabular"><dt>AVERAGE</dt>
+    <dd>Average</dd><dt>MINIMUM</dt>
+    <dd>Minimum</dd><dt>MAXIMUM</dt>
+    <dd>Maximum</dd><dt>TOTAL</dt>
+    <dd>Total</dd><dt>LAST</dt>
+    <dd>Last</dd></dl>
 {{% /choosable %}}
 ## Import
 

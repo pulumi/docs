@@ -20,11 +20,17 @@ To get more information about Policy, see:
     * [Using DNS server policies](https://cloud.google.com/dns/zones/#using-dns-server-policies)
 
 {{% examples %}}
+
 ## Example Usage
 
 {{< chooser language "typescript,python,go,csharp" / >}}
+
+
 ### Dns Policy Basic
-{{% example csharp %}}
+
+
+{{< example csharp >}}
+
 ```csharp
 using Pulumi;
 using Gcp = Pulumi.Gcp;
@@ -77,9 +83,12 @@ class MyStack : Stack
 }
 ```
 
-{{% /example %}}
 
-{{% example go %}}
+{{< /example >}}
+
+
+{{< example go >}}
+
 ```go
 package main
 
@@ -134,9 +143,12 @@ func main() {
 }
 ```
 
-{{% /example %}}
 
-{{% example python %}}
+{{< /example >}}
+
+
+{{< example python >}}
+
 ```python
 import pulumi
 import pulumi_gcp as gcp
@@ -167,9 +179,12 @@ example_policy = gcp.dns.Policy("example-policy",
     ])
 ```
 
-{{% /example %}}
 
-{{% example typescript %}}
+{{< /example >}}
+
+
+{{< example typescript >}}
+
 
 ```typescript
 import * as pulumi from "@pulumi/pulumi";
@@ -202,9 +217,16 @@ const example_policy = new gcp.dns.Policy("example-policy", {
 });
 ```
 
-{{% /example %}}
+
+{{< /example >}}
+
+
+
+
 
 {{% /examples %}}
+
+
 
 
 ## Create a Policy Resource {#create}
@@ -229,9 +251,7 @@ const example_policy = new gcp.dns.Policy("example-policy", {
 
 {{% choosable language nodejs %}}
 
-<dl class="resources-properties">
-  
-    <dt
+<dl class="resources-properties"><dt
         class="property-required" title="Required">
         <span>name</span>
         <span class="property-indicator"></span>
@@ -239,9 +259,7 @@ const example_policy = new gcp.dns.Policy("example-policy", {
     </dt>
     <dd>
       The unique name of the resource.
-    </dd>
-  
-    <dt
+    </dd><dt
         class="property-optional" title="Optional">
         <span>args</span>
         <span class="property-indicator"></span>
@@ -249,9 +267,7 @@ const example_policy = new gcp.dns.Policy("example-policy", {
     </dt>
     <dd>
       The arguments to resource properties.
-    </dd>
-  
-    <dt
+    </dd><dt
         class="property-optional" title="Optional">
         <span>opts</span>
         <span class="property-indicator"></span>
@@ -259,10 +275,7 @@ const example_policy = new gcp.dns.Policy("example-policy", {
     </dt>
     <dd>
       Bag of options to control resource&#39;s behavior.
-    </dd>
-  
-
-</dl>
+    </dd></dl>
 
 {{% /choosable %}}
 
@@ -288,9 +301,7 @@ const example_policy = new gcp.dns.Policy("example-policy", {
 
 {{% choosable language go %}}
 
-<dl class="resources-properties">
-  
-    <dt
+<dl class="resources-properties"><dt
         class="property-optional" title="Optional">
         <span>ctx</span>
         <span class="property-indicator"></span>
@@ -298,9 +309,7 @@ const example_policy = new gcp.dns.Policy("example-policy", {
     </dt>
     <dd>
       Context object for the current deployment.
-    </dd>
-  
-    <dt
+    </dd><dt
         class="property-required" title="Required">
         <span>name</span>
         <span class="property-indicator"></span>
@@ -308,9 +317,7 @@ const example_policy = new gcp.dns.Policy("example-policy", {
     </dt>
     <dd>
       The unique name of the resource.
-    </dd>
-  
-    <dt
+    </dd><dt
         class="property-optional" title="Optional">
         <span>args</span>
         <span class="property-indicator"></span>
@@ -318,9 +325,7 @@ const example_policy = new gcp.dns.Policy("example-policy", {
     </dt>
     <dd>
       The arguments to resource properties.
-    </dd>
-  
-    <dt
+    </dd><dt
         class="property-optional" title="Optional">
         <span>opts</span>
         <span class="property-indicator"></span>
@@ -328,18 +333,13 @@ const example_policy = new gcp.dns.Policy("example-policy", {
     </dt>
     <dd>
       Bag of options to control resource&#39;s behavior.
-    </dd>
-  
-
-</dl>
+    </dd></dl>
 
 {{% /choosable %}}
 
 {{% choosable language csharp %}}
 
-<dl class="resources-properties">
-  
-    <dt
+<dl class="resources-properties"><dt
         class="property-required" title="Required">
         <span>name</span>
         <span class="property-indicator"></span>
@@ -347,9 +347,7 @@ const example_policy = new gcp.dns.Policy("example-policy", {
     </dt>
     <dd>
       The unique name of the resource.
-    </dd>
-  
-    <dt
+    </dd><dt
         class="property-optional" title="Optional">
         <span>args</span>
         <span class="property-indicator"></span>
@@ -357,9 +355,7 @@ const example_policy = new gcp.dns.Policy("example-policy", {
     </dt>
     <dd>
       The arguments to resource properties.
-    </dd>
-  
-    <dt
+    </dd><dt
         class="property-optional" title="Optional">
         <span>opts</span>
         <span class="property-indicator"></span>
@@ -367,10 +363,7 @@ const example_policy = new gcp.dns.Policy("example-policy", {
     </dt>
     <dd>
       Bag of options to control resource&#39;s behavior.
-    </dd>
-  
-
-</dl>
+    </dd></dl>
 
 {{% /choosable %}}
 
@@ -385,9 +378,7 @@ The Policy resource accepts the following [input]({{< relref "/docs/intro/concep
 
 
 {{% choosable language csharp %}}
-<dl class="resources-properties">
-
-    <dt class="property-optional"
+<dl class="resources-properties"><dt class="property-optional"
             title="Optional">
         <span id="alternativenameserverconfig_csharp">
 <a href="#alternativenameserverconfig_csharp" style="color: inherit; text-decoration: inherit;">Alternative<wbr>Name<wbr>Server<wbr>Config</a>
@@ -399,8 +390,7 @@ The Policy resource accepts the following [input]({{< relref "/docs/intro/concep
 When specified, all DNS queries are forwarded to a name server that you choose.
 Names such as .internal are not available when an alternative name server is specified.
 Structure is documented below.
-{{% /md %}}</dd>
-    <dt class="property-optional"
+{{% /md %}}</dd><dt class="property-optional"
             title="Optional">
         <span id="description_csharp">
 <a href="#description_csharp" style="color: inherit; text-decoration: inherit;">Description</a>
@@ -409,8 +399,7 @@ Structure is documented below.
         <span class="property-type">string</span>
     </dt>
     <dd>{{% md %}}A textual description field. Defaults to 'Managed by Pulumi'.
-{{% /md %}}</dd>
-    <dt class="property-optional"
+{{% /md %}}</dd><dt class="property-optional"
             title="Optional">
         <span id="enableinboundforwarding_csharp">
 <a href="#enableinboundforwarding_csharp" style="color: inherit; text-decoration: inherit;">Enable<wbr>Inbound<wbr>Forwarding</a>
@@ -422,8 +411,7 @@ Structure is documented below.
 by VMs or applications over VPN connections. When enabled, a
 virtual IP address will be allocated from each of the sub-networks
 that are bound to this policy.
-{{% /md %}}</dd>
-    <dt class="property-optional"
+{{% /md %}}</dd><dt class="property-optional"
             title="Optional">
         <span id="enablelogging_csharp">
 <a href="#enablelogging_csharp" style="color: inherit; text-decoration: inherit;">Enable<wbr>Logging</a>
@@ -433,8 +421,7 @@ that are bound to this policy.
     </dt>
     <dd>{{% md %}}Controls whether logging is enabled for the networks bound to this policy.
 Defaults to no logging if not set.
-{{% /md %}}</dd>
-    <dt class="property-optional"
+{{% /md %}}</dd><dt class="property-optional"
             title="Optional">
         <span id="name_csharp">
 <a href="#name_csharp" style="color: inherit; text-decoration: inherit;">Name</a>
@@ -443,8 +430,7 @@ Defaults to no logging if not set.
         <span class="property-type">string</span>
     </dt>
     <dd>{{% md %}}User assigned name for this policy.
-{{% /md %}}</dd>
-    <dt class="property-optional"
+{{% /md %}}</dd><dt class="property-optional"
             title="Optional">
         <span id="networks_csharp">
 <a href="#networks_csharp" style="color: inherit; text-decoration: inherit;">Networks</a>
@@ -454,8 +440,7 @@ Defaults to no logging if not set.
     </dt>
     <dd>{{% md %}}List of network names specifying networks to which this policy is applied.
 Structure is documented below.
-{{% /md %}}</dd>
-    <dt class="property-optional"
+{{% /md %}}</dd><dt class="property-optional"
             title="Optional">
         <span id="project_csharp">
 <a href="#project_csharp" style="color: inherit; text-decoration: inherit;">Project</a>
@@ -465,14 +450,11 @@ Structure is documented below.
     </dt>
     <dd>{{% md %}}The ID of the project in which the resource belongs.
 If it is not provided, the provider project is used.
-{{% /md %}}</dd>
-</dl>
+{{% /md %}}</dd></dl>
 {{% /choosable %}}
 
 {{% choosable language go %}}
-<dl class="resources-properties">
-
-    <dt class="property-optional"
+<dl class="resources-properties"><dt class="property-optional"
             title="Optional">
         <span id="alternativenameserverconfig_go">
 <a href="#alternativenameserverconfig_go" style="color: inherit; text-decoration: inherit;">Alternative<wbr>Name<wbr>Server<wbr>Config</a>
@@ -484,8 +466,7 @@ If it is not provided, the provider project is used.
 When specified, all DNS queries are forwarded to a name server that you choose.
 Names such as .internal are not available when an alternative name server is specified.
 Structure is documented below.
-{{% /md %}}</dd>
-    <dt class="property-optional"
+{{% /md %}}</dd><dt class="property-optional"
             title="Optional">
         <span id="description_go">
 <a href="#description_go" style="color: inherit; text-decoration: inherit;">Description</a>
@@ -494,8 +475,7 @@ Structure is documented below.
         <span class="property-type">string</span>
     </dt>
     <dd>{{% md %}}A textual description field. Defaults to 'Managed by Pulumi'.
-{{% /md %}}</dd>
-    <dt class="property-optional"
+{{% /md %}}</dd><dt class="property-optional"
             title="Optional">
         <span id="enableinboundforwarding_go">
 <a href="#enableinboundforwarding_go" style="color: inherit; text-decoration: inherit;">Enable<wbr>Inbound<wbr>Forwarding</a>
@@ -507,8 +487,7 @@ Structure is documented below.
 by VMs or applications over VPN connections. When enabled, a
 virtual IP address will be allocated from each of the sub-networks
 that are bound to this policy.
-{{% /md %}}</dd>
-    <dt class="property-optional"
+{{% /md %}}</dd><dt class="property-optional"
             title="Optional">
         <span id="enablelogging_go">
 <a href="#enablelogging_go" style="color: inherit; text-decoration: inherit;">Enable<wbr>Logging</a>
@@ -518,8 +497,7 @@ that are bound to this policy.
     </dt>
     <dd>{{% md %}}Controls whether logging is enabled for the networks bound to this policy.
 Defaults to no logging if not set.
-{{% /md %}}</dd>
-    <dt class="property-optional"
+{{% /md %}}</dd><dt class="property-optional"
             title="Optional">
         <span id="name_go">
 <a href="#name_go" style="color: inherit; text-decoration: inherit;">Name</a>
@@ -528,8 +506,7 @@ Defaults to no logging if not set.
         <span class="property-type">string</span>
     </dt>
     <dd>{{% md %}}User assigned name for this policy.
-{{% /md %}}</dd>
-    <dt class="property-optional"
+{{% /md %}}</dd><dt class="property-optional"
             title="Optional">
         <span id="networks_go">
 <a href="#networks_go" style="color: inherit; text-decoration: inherit;">Networks</a>
@@ -539,8 +516,7 @@ Defaults to no logging if not set.
     </dt>
     <dd>{{% md %}}List of network names specifying networks to which this policy is applied.
 Structure is documented below.
-{{% /md %}}</dd>
-    <dt class="property-optional"
+{{% /md %}}</dd><dt class="property-optional"
             title="Optional">
         <span id="project_go">
 <a href="#project_go" style="color: inherit; text-decoration: inherit;">Project</a>
@@ -550,14 +526,11 @@ Structure is documented below.
     </dt>
     <dd>{{% md %}}The ID of the project in which the resource belongs.
 If it is not provided, the provider project is used.
-{{% /md %}}</dd>
-</dl>
+{{% /md %}}</dd></dl>
 {{% /choosable %}}
 
 {{% choosable language nodejs %}}
-<dl class="resources-properties">
-
-    <dt class="property-optional"
+<dl class="resources-properties"><dt class="property-optional"
             title="Optional">
         <span id="alternativenameserverconfig_nodejs">
 <a href="#alternativenameserverconfig_nodejs" style="color: inherit; text-decoration: inherit;">alternative<wbr>Name<wbr>Server<wbr>Config</a>
@@ -569,8 +542,7 @@ If it is not provided, the provider project is used.
 When specified, all DNS queries are forwarded to a name server that you choose.
 Names such as .internal are not available when an alternative name server is specified.
 Structure is documented below.
-{{% /md %}}</dd>
-    <dt class="property-optional"
+{{% /md %}}</dd><dt class="property-optional"
             title="Optional">
         <span id="description_nodejs">
 <a href="#description_nodejs" style="color: inherit; text-decoration: inherit;">description</a>
@@ -579,8 +551,7 @@ Structure is documented below.
         <span class="property-type">string</span>
     </dt>
     <dd>{{% md %}}A textual description field. Defaults to 'Managed by Pulumi'.
-{{% /md %}}</dd>
-    <dt class="property-optional"
+{{% /md %}}</dd><dt class="property-optional"
             title="Optional">
         <span id="enableinboundforwarding_nodejs">
 <a href="#enableinboundforwarding_nodejs" style="color: inherit; text-decoration: inherit;">enable<wbr>Inbound<wbr>Forwarding</a>
@@ -592,8 +563,7 @@ Structure is documented below.
 by VMs or applications over VPN connections. When enabled, a
 virtual IP address will be allocated from each of the sub-networks
 that are bound to this policy.
-{{% /md %}}</dd>
-    <dt class="property-optional"
+{{% /md %}}</dd><dt class="property-optional"
             title="Optional">
         <span id="enablelogging_nodejs">
 <a href="#enablelogging_nodejs" style="color: inherit; text-decoration: inherit;">enable<wbr>Logging</a>
@@ -603,8 +573,7 @@ that are bound to this policy.
     </dt>
     <dd>{{% md %}}Controls whether logging is enabled for the networks bound to this policy.
 Defaults to no logging if not set.
-{{% /md %}}</dd>
-    <dt class="property-optional"
+{{% /md %}}</dd><dt class="property-optional"
             title="Optional">
         <span id="name_nodejs">
 <a href="#name_nodejs" style="color: inherit; text-decoration: inherit;">name</a>
@@ -613,8 +582,7 @@ Defaults to no logging if not set.
         <span class="property-type">string</span>
     </dt>
     <dd>{{% md %}}User assigned name for this policy.
-{{% /md %}}</dd>
-    <dt class="property-optional"
+{{% /md %}}</dd><dt class="property-optional"
             title="Optional">
         <span id="networks_nodejs">
 <a href="#networks_nodejs" style="color: inherit; text-decoration: inherit;">networks</a>
@@ -624,8 +592,7 @@ Defaults to no logging if not set.
     </dt>
     <dd>{{% md %}}List of network names specifying networks to which this policy is applied.
 Structure is documented below.
-{{% /md %}}</dd>
-    <dt class="property-optional"
+{{% /md %}}</dd><dt class="property-optional"
             title="Optional">
         <span id="project_nodejs">
 <a href="#project_nodejs" style="color: inherit; text-decoration: inherit;">project</a>
@@ -635,14 +602,11 @@ Structure is documented below.
     </dt>
     <dd>{{% md %}}The ID of the project in which the resource belongs.
 If it is not provided, the provider project is used.
-{{% /md %}}</dd>
-</dl>
+{{% /md %}}</dd></dl>
 {{% /choosable %}}
 
 {{% choosable language python %}}
-<dl class="resources-properties">
-
-    <dt class="property-optional"
+<dl class="resources-properties"><dt class="property-optional"
             title="Optional">
         <span id="alternative_name_server_config_python">
 <a href="#alternative_name_server_config_python" style="color: inherit; text-decoration: inherit;">alternative_<wbr>name_<wbr>server_<wbr>config</a>
@@ -654,8 +618,7 @@ If it is not provided, the provider project is used.
 When specified, all DNS queries are forwarded to a name server that you choose.
 Names such as .internal are not available when an alternative name server is specified.
 Structure is documented below.
-{{% /md %}}</dd>
-    <dt class="property-optional"
+{{% /md %}}</dd><dt class="property-optional"
             title="Optional">
         <span id="description_python">
 <a href="#description_python" style="color: inherit; text-decoration: inherit;">description</a>
@@ -664,8 +627,7 @@ Structure is documented below.
         <span class="property-type">str</span>
     </dt>
     <dd>{{% md %}}A textual description field. Defaults to 'Managed by Pulumi'.
-{{% /md %}}</dd>
-    <dt class="property-optional"
+{{% /md %}}</dd><dt class="property-optional"
             title="Optional">
         <span id="enable_inbound_forwarding_python">
 <a href="#enable_inbound_forwarding_python" style="color: inherit; text-decoration: inherit;">enable_<wbr>inbound_<wbr>forwarding</a>
@@ -677,8 +639,7 @@ Structure is documented below.
 by VMs or applications over VPN connections. When enabled, a
 virtual IP address will be allocated from each of the sub-networks
 that are bound to this policy.
-{{% /md %}}</dd>
-    <dt class="property-optional"
+{{% /md %}}</dd><dt class="property-optional"
             title="Optional">
         <span id="enable_logging_python">
 <a href="#enable_logging_python" style="color: inherit; text-decoration: inherit;">enable_<wbr>logging</a>
@@ -688,8 +649,7 @@ that are bound to this policy.
     </dt>
     <dd>{{% md %}}Controls whether logging is enabled for the networks bound to this policy.
 Defaults to no logging if not set.
-{{% /md %}}</dd>
-    <dt class="property-optional"
+{{% /md %}}</dd><dt class="property-optional"
             title="Optional">
         <span id="name_python">
 <a href="#name_python" style="color: inherit; text-decoration: inherit;">name</a>
@@ -698,8 +658,7 @@ Defaults to no logging if not set.
         <span class="property-type">str</span>
     </dt>
     <dd>{{% md %}}User assigned name for this policy.
-{{% /md %}}</dd>
-    <dt class="property-optional"
+{{% /md %}}</dd><dt class="property-optional"
             title="Optional">
         <span id="networks_python">
 <a href="#networks_python" style="color: inherit; text-decoration: inherit;">networks</a>
@@ -709,8 +668,7 @@ Defaults to no logging if not set.
     </dt>
     <dd>{{% md %}}List of network names specifying networks to which this policy is applied.
 Structure is documented below.
-{{% /md %}}</dd>
-    <dt class="property-optional"
+{{% /md %}}</dd><dt class="property-optional"
             title="Optional">
         <span id="project_python">
 <a href="#project_python" style="color: inherit; text-decoration: inherit;">project</a>
@@ -720,8 +678,7 @@ Structure is documented below.
     </dt>
     <dd>{{% md %}}The ID of the project in which the resource belongs.
 If it is not provided, the provider project is used.
-{{% /md %}}</dd>
-</dl>
+{{% /md %}}</dd></dl>
 {{% /choosable %}}
 
 
@@ -732,9 +689,7 @@ All [input](#inputs) properties are implicitly available as output properties. A
 
 
 {{% choosable language csharp %}}
-<dl class="resources-properties">
-
-    <dt class="property-"
+<dl class="resources-properties"><dt class="property-"
             title="">
         <span id="id_csharp">
 <a href="#id_csharp" style="color: inherit; text-decoration: inherit;">Id</a>
@@ -742,14 +697,11 @@ All [input](#inputs) properties are implicitly available as output properties. A
         <span class="property-indicator"></span>
         <span class="property-type">string</span>
     </dt>
-    <dd>{{% md %}}The provider-assigned unique ID for this managed resource.{{% /md %}}</dd>
-</dl>
+    <dd>{{% md %}}The provider-assigned unique ID for this managed resource.{{% /md %}}</dd></dl>
 {{% /choosable %}}
 
 {{% choosable language go %}}
-<dl class="resources-properties">
-
-    <dt class="property-"
+<dl class="resources-properties"><dt class="property-"
             title="">
         <span id="id_go">
 <a href="#id_go" style="color: inherit; text-decoration: inherit;">Id</a>
@@ -757,14 +709,11 @@ All [input](#inputs) properties are implicitly available as output properties. A
         <span class="property-indicator"></span>
         <span class="property-type">string</span>
     </dt>
-    <dd>{{% md %}}The provider-assigned unique ID for this managed resource.{{% /md %}}</dd>
-</dl>
+    <dd>{{% md %}}The provider-assigned unique ID for this managed resource.{{% /md %}}</dd></dl>
 {{% /choosable %}}
 
 {{% choosable language nodejs %}}
-<dl class="resources-properties">
-
-    <dt class="property-"
+<dl class="resources-properties"><dt class="property-"
             title="">
         <span id="id_nodejs">
 <a href="#id_nodejs" style="color: inherit; text-decoration: inherit;">id</a>
@@ -772,14 +721,11 @@ All [input](#inputs) properties are implicitly available as output properties. A
         <span class="property-indicator"></span>
         <span class="property-type">string</span>
     </dt>
-    <dd>{{% md %}}The provider-assigned unique ID for this managed resource.{{% /md %}}</dd>
-</dl>
+    <dd>{{% md %}}The provider-assigned unique ID for this managed resource.{{% /md %}}</dd></dl>
 {{% /choosable %}}
 
 {{% choosable language python %}}
-<dl class="resources-properties">
-
-    <dt class="property-"
+<dl class="resources-properties"><dt class="property-"
             title="">
         <span id="id_python">
 <a href="#id_python" style="color: inherit; text-decoration: inherit;">id</a>
@@ -787,8 +733,7 @@ All [input](#inputs) properties are implicitly available as output properties. A
         <span class="property-indicator"></span>
         <span class="property-type">str</span>
     </dt>
-    <dd>{{% md %}}The provider-assigned unique ID for this managed resource.{{% /md %}}</dd>
-</dl>
+    <dd>{{% md %}}The provider-assigned unique ID for this managed resource.{{% /md %}}</dd></dl>
 {{% /choosable %}}
 
 
@@ -915,9 +860,7 @@ The following state arguments are supported:
 
 
 {{% choosable language csharp %}}
-<dl class="resources-properties">
-
-    <dt class="property-optional"
+<dl class="resources-properties"><dt class="property-optional"
             title="Optional">
         <span id="state_alternativenameserverconfig_csharp">
 <a href="#state_alternativenameserverconfig_csharp" style="color: inherit; text-decoration: inherit;">Alternative<wbr>Name<wbr>Server<wbr>Config</a>
@@ -929,8 +872,7 @@ The following state arguments are supported:
 When specified, all DNS queries are forwarded to a name server that you choose.
 Names such as .internal are not available when an alternative name server is specified.
 Structure is documented below.
-{{% /md %}}</dd>
-    <dt class="property-optional"
+{{% /md %}}</dd><dt class="property-optional"
             title="Optional">
         <span id="state_description_csharp">
 <a href="#state_description_csharp" style="color: inherit; text-decoration: inherit;">Description</a>
@@ -939,8 +881,7 @@ Structure is documented below.
         <span class="property-type">string</span>
     </dt>
     <dd>{{% md %}}A textual description field. Defaults to 'Managed by Pulumi'.
-{{% /md %}}</dd>
-    <dt class="property-optional"
+{{% /md %}}</dd><dt class="property-optional"
             title="Optional">
         <span id="state_enableinboundforwarding_csharp">
 <a href="#state_enableinboundforwarding_csharp" style="color: inherit; text-decoration: inherit;">Enable<wbr>Inbound<wbr>Forwarding</a>
@@ -952,8 +893,7 @@ Structure is documented below.
 by VMs or applications over VPN connections. When enabled, a
 virtual IP address will be allocated from each of the sub-networks
 that are bound to this policy.
-{{% /md %}}</dd>
-    <dt class="property-optional"
+{{% /md %}}</dd><dt class="property-optional"
             title="Optional">
         <span id="state_enablelogging_csharp">
 <a href="#state_enablelogging_csharp" style="color: inherit; text-decoration: inherit;">Enable<wbr>Logging</a>
@@ -963,8 +903,7 @@ that are bound to this policy.
     </dt>
     <dd>{{% md %}}Controls whether logging is enabled for the networks bound to this policy.
 Defaults to no logging if not set.
-{{% /md %}}</dd>
-    <dt class="property-optional"
+{{% /md %}}</dd><dt class="property-optional"
             title="Optional">
         <span id="state_name_csharp">
 <a href="#state_name_csharp" style="color: inherit; text-decoration: inherit;">Name</a>
@@ -973,8 +912,7 @@ Defaults to no logging if not set.
         <span class="property-type">string</span>
     </dt>
     <dd>{{% md %}}User assigned name for this policy.
-{{% /md %}}</dd>
-    <dt class="property-optional"
+{{% /md %}}</dd><dt class="property-optional"
             title="Optional">
         <span id="state_networks_csharp">
 <a href="#state_networks_csharp" style="color: inherit; text-decoration: inherit;">Networks</a>
@@ -984,8 +922,7 @@ Defaults to no logging if not set.
     </dt>
     <dd>{{% md %}}List of network names specifying networks to which this policy is applied.
 Structure is documented below.
-{{% /md %}}</dd>
-    <dt class="property-optional"
+{{% /md %}}</dd><dt class="property-optional"
             title="Optional">
         <span id="state_project_csharp">
 <a href="#state_project_csharp" style="color: inherit; text-decoration: inherit;">Project</a>
@@ -995,14 +932,11 @@ Structure is documented below.
     </dt>
     <dd>{{% md %}}The ID of the project in which the resource belongs.
 If it is not provided, the provider project is used.
-{{% /md %}}</dd>
-</dl>
+{{% /md %}}</dd></dl>
 {{% /choosable %}}
 
 {{% choosable language go %}}
-<dl class="resources-properties">
-
-    <dt class="property-optional"
+<dl class="resources-properties"><dt class="property-optional"
             title="Optional">
         <span id="state_alternativenameserverconfig_go">
 <a href="#state_alternativenameserverconfig_go" style="color: inherit; text-decoration: inherit;">Alternative<wbr>Name<wbr>Server<wbr>Config</a>
@@ -1014,8 +948,7 @@ If it is not provided, the provider project is used.
 When specified, all DNS queries are forwarded to a name server that you choose.
 Names such as .internal are not available when an alternative name server is specified.
 Structure is documented below.
-{{% /md %}}</dd>
-    <dt class="property-optional"
+{{% /md %}}</dd><dt class="property-optional"
             title="Optional">
         <span id="state_description_go">
 <a href="#state_description_go" style="color: inherit; text-decoration: inherit;">Description</a>
@@ -1024,8 +957,7 @@ Structure is documented below.
         <span class="property-type">string</span>
     </dt>
     <dd>{{% md %}}A textual description field. Defaults to 'Managed by Pulumi'.
-{{% /md %}}</dd>
-    <dt class="property-optional"
+{{% /md %}}</dd><dt class="property-optional"
             title="Optional">
         <span id="state_enableinboundforwarding_go">
 <a href="#state_enableinboundforwarding_go" style="color: inherit; text-decoration: inherit;">Enable<wbr>Inbound<wbr>Forwarding</a>
@@ -1037,8 +969,7 @@ Structure is documented below.
 by VMs or applications over VPN connections. When enabled, a
 virtual IP address will be allocated from each of the sub-networks
 that are bound to this policy.
-{{% /md %}}</dd>
-    <dt class="property-optional"
+{{% /md %}}</dd><dt class="property-optional"
             title="Optional">
         <span id="state_enablelogging_go">
 <a href="#state_enablelogging_go" style="color: inherit; text-decoration: inherit;">Enable<wbr>Logging</a>
@@ -1048,8 +979,7 @@ that are bound to this policy.
     </dt>
     <dd>{{% md %}}Controls whether logging is enabled for the networks bound to this policy.
 Defaults to no logging if not set.
-{{% /md %}}</dd>
-    <dt class="property-optional"
+{{% /md %}}</dd><dt class="property-optional"
             title="Optional">
         <span id="state_name_go">
 <a href="#state_name_go" style="color: inherit; text-decoration: inherit;">Name</a>
@@ -1058,8 +988,7 @@ Defaults to no logging if not set.
         <span class="property-type">string</span>
     </dt>
     <dd>{{% md %}}User assigned name for this policy.
-{{% /md %}}</dd>
-    <dt class="property-optional"
+{{% /md %}}</dd><dt class="property-optional"
             title="Optional">
         <span id="state_networks_go">
 <a href="#state_networks_go" style="color: inherit; text-decoration: inherit;">Networks</a>
@@ -1069,8 +998,7 @@ Defaults to no logging if not set.
     </dt>
     <dd>{{% md %}}List of network names specifying networks to which this policy is applied.
 Structure is documented below.
-{{% /md %}}</dd>
-    <dt class="property-optional"
+{{% /md %}}</dd><dt class="property-optional"
             title="Optional">
         <span id="state_project_go">
 <a href="#state_project_go" style="color: inherit; text-decoration: inherit;">Project</a>
@@ -1080,14 +1008,11 @@ Structure is documented below.
     </dt>
     <dd>{{% md %}}The ID of the project in which the resource belongs.
 If it is not provided, the provider project is used.
-{{% /md %}}</dd>
-</dl>
+{{% /md %}}</dd></dl>
 {{% /choosable %}}
 
 {{% choosable language nodejs %}}
-<dl class="resources-properties">
-
-    <dt class="property-optional"
+<dl class="resources-properties"><dt class="property-optional"
             title="Optional">
         <span id="state_alternativenameserverconfig_nodejs">
 <a href="#state_alternativenameserverconfig_nodejs" style="color: inherit; text-decoration: inherit;">alternative<wbr>Name<wbr>Server<wbr>Config</a>
@@ -1099,8 +1024,7 @@ If it is not provided, the provider project is used.
 When specified, all DNS queries are forwarded to a name server that you choose.
 Names such as .internal are not available when an alternative name server is specified.
 Structure is documented below.
-{{% /md %}}</dd>
-    <dt class="property-optional"
+{{% /md %}}</dd><dt class="property-optional"
             title="Optional">
         <span id="state_description_nodejs">
 <a href="#state_description_nodejs" style="color: inherit; text-decoration: inherit;">description</a>
@@ -1109,8 +1033,7 @@ Structure is documented below.
         <span class="property-type">string</span>
     </dt>
     <dd>{{% md %}}A textual description field. Defaults to 'Managed by Pulumi'.
-{{% /md %}}</dd>
-    <dt class="property-optional"
+{{% /md %}}</dd><dt class="property-optional"
             title="Optional">
         <span id="state_enableinboundforwarding_nodejs">
 <a href="#state_enableinboundforwarding_nodejs" style="color: inherit; text-decoration: inherit;">enable<wbr>Inbound<wbr>Forwarding</a>
@@ -1122,8 +1045,7 @@ Structure is documented below.
 by VMs or applications over VPN connections. When enabled, a
 virtual IP address will be allocated from each of the sub-networks
 that are bound to this policy.
-{{% /md %}}</dd>
-    <dt class="property-optional"
+{{% /md %}}</dd><dt class="property-optional"
             title="Optional">
         <span id="state_enablelogging_nodejs">
 <a href="#state_enablelogging_nodejs" style="color: inherit; text-decoration: inherit;">enable<wbr>Logging</a>
@@ -1133,8 +1055,7 @@ that are bound to this policy.
     </dt>
     <dd>{{% md %}}Controls whether logging is enabled for the networks bound to this policy.
 Defaults to no logging if not set.
-{{% /md %}}</dd>
-    <dt class="property-optional"
+{{% /md %}}</dd><dt class="property-optional"
             title="Optional">
         <span id="state_name_nodejs">
 <a href="#state_name_nodejs" style="color: inherit; text-decoration: inherit;">name</a>
@@ -1143,8 +1064,7 @@ Defaults to no logging if not set.
         <span class="property-type">string</span>
     </dt>
     <dd>{{% md %}}User assigned name for this policy.
-{{% /md %}}</dd>
-    <dt class="property-optional"
+{{% /md %}}</dd><dt class="property-optional"
             title="Optional">
         <span id="state_networks_nodejs">
 <a href="#state_networks_nodejs" style="color: inherit; text-decoration: inherit;">networks</a>
@@ -1154,8 +1074,7 @@ Defaults to no logging if not set.
     </dt>
     <dd>{{% md %}}List of network names specifying networks to which this policy is applied.
 Structure is documented below.
-{{% /md %}}</dd>
-    <dt class="property-optional"
+{{% /md %}}</dd><dt class="property-optional"
             title="Optional">
         <span id="state_project_nodejs">
 <a href="#state_project_nodejs" style="color: inherit; text-decoration: inherit;">project</a>
@@ -1165,14 +1084,11 @@ Structure is documented below.
     </dt>
     <dd>{{% md %}}The ID of the project in which the resource belongs.
 If it is not provided, the provider project is used.
-{{% /md %}}</dd>
-</dl>
+{{% /md %}}</dd></dl>
 {{% /choosable %}}
 
 {{% choosable language python %}}
-<dl class="resources-properties">
-
-    <dt class="property-optional"
+<dl class="resources-properties"><dt class="property-optional"
             title="Optional">
         <span id="state_alternative_name_server_config_python">
 <a href="#state_alternative_name_server_config_python" style="color: inherit; text-decoration: inherit;">alternative_<wbr>name_<wbr>server_<wbr>config</a>
@@ -1184,8 +1100,7 @@ If it is not provided, the provider project is used.
 When specified, all DNS queries are forwarded to a name server that you choose.
 Names such as .internal are not available when an alternative name server is specified.
 Structure is documented below.
-{{% /md %}}</dd>
-    <dt class="property-optional"
+{{% /md %}}</dd><dt class="property-optional"
             title="Optional">
         <span id="state_description_python">
 <a href="#state_description_python" style="color: inherit; text-decoration: inherit;">description</a>
@@ -1194,8 +1109,7 @@ Structure is documented below.
         <span class="property-type">str</span>
     </dt>
     <dd>{{% md %}}A textual description field. Defaults to 'Managed by Pulumi'.
-{{% /md %}}</dd>
-    <dt class="property-optional"
+{{% /md %}}</dd><dt class="property-optional"
             title="Optional">
         <span id="state_enable_inbound_forwarding_python">
 <a href="#state_enable_inbound_forwarding_python" style="color: inherit; text-decoration: inherit;">enable_<wbr>inbound_<wbr>forwarding</a>
@@ -1207,8 +1121,7 @@ Structure is documented below.
 by VMs or applications over VPN connections. When enabled, a
 virtual IP address will be allocated from each of the sub-networks
 that are bound to this policy.
-{{% /md %}}</dd>
-    <dt class="property-optional"
+{{% /md %}}</dd><dt class="property-optional"
             title="Optional">
         <span id="state_enable_logging_python">
 <a href="#state_enable_logging_python" style="color: inherit; text-decoration: inherit;">enable_<wbr>logging</a>
@@ -1218,8 +1131,7 @@ that are bound to this policy.
     </dt>
     <dd>{{% md %}}Controls whether logging is enabled for the networks bound to this policy.
 Defaults to no logging if not set.
-{{% /md %}}</dd>
-    <dt class="property-optional"
+{{% /md %}}</dd><dt class="property-optional"
             title="Optional">
         <span id="state_name_python">
 <a href="#state_name_python" style="color: inherit; text-decoration: inherit;">name</a>
@@ -1228,8 +1140,7 @@ Defaults to no logging if not set.
         <span class="property-type">str</span>
     </dt>
     <dd>{{% md %}}User assigned name for this policy.
-{{% /md %}}</dd>
-    <dt class="property-optional"
+{{% /md %}}</dd><dt class="property-optional"
             title="Optional">
         <span id="state_networks_python">
 <a href="#state_networks_python" style="color: inherit; text-decoration: inherit;">networks</a>
@@ -1239,8 +1150,7 @@ Defaults to no logging if not set.
     </dt>
     <dd>{{% md %}}List of network names specifying networks to which this policy is applied.
 Structure is documented below.
-{{% /md %}}</dd>
-    <dt class="property-optional"
+{{% /md %}}</dd><dt class="property-optional"
             title="Optional">
         <span id="state_project_python">
 <a href="#state_project_python" style="color: inherit; text-decoration: inherit;">project</a>
@@ -1250,8 +1160,7 @@ Structure is documented below.
     </dt>
     <dd>{{% md %}}The ID of the project in which the resource belongs.
 If it is not provided, the provider project is used.
-{{% /md %}}</dd>
-</dl>
+{{% /md %}}</dd></dl>
 {{% /choosable %}}
 
 
@@ -1266,9 +1175,7 @@ If it is not provided, the provider project is used.
 <h4 id="policyalternativenameserverconfig">Policy<wbr>Alternative<wbr>Name<wbr>Server<wbr>Config</h4>
 
 {{% choosable language csharp %}}
-<dl class="resources-properties">
-
-    <dt class="property-required"
+<dl class="resources-properties"><dt class="property-required"
             title="Required">
         <span id="targetnameservers_csharp">
 <a href="#targetnameservers_csharp" style="color: inherit; text-decoration: inherit;">Target<wbr>Name<wbr>Servers</a>
@@ -1280,14 +1187,11 @@ If it is not provided, the provider project is used.
 all DNS queries are forwarded to a name server that you choose. Names such as .internal
 are not available when an alternative name server is specified.
 Structure is documented below.
-{{% /md %}}</dd>
-</dl>
+{{% /md %}}</dd></dl>
 {{% /choosable %}}
 
 {{% choosable language go %}}
-<dl class="resources-properties">
-
-    <dt class="property-required"
+<dl class="resources-properties"><dt class="property-required"
             title="Required">
         <span id="targetnameservers_go">
 <a href="#targetnameservers_go" style="color: inherit; text-decoration: inherit;">Target<wbr>Name<wbr>Servers</a>
@@ -1299,14 +1203,11 @@ Structure is documented below.
 all DNS queries are forwarded to a name server that you choose. Names such as .internal
 are not available when an alternative name server is specified.
 Structure is documented below.
-{{% /md %}}</dd>
-</dl>
+{{% /md %}}</dd></dl>
 {{% /choosable %}}
 
 {{% choosable language nodejs %}}
-<dl class="resources-properties">
-
-    <dt class="property-required"
+<dl class="resources-properties"><dt class="property-required"
             title="Required">
         <span id="targetnameservers_nodejs">
 <a href="#targetnameservers_nodejs" style="color: inherit; text-decoration: inherit;">target<wbr>Name<wbr>Servers</a>
@@ -1318,14 +1219,11 @@ Structure is documented below.
 all DNS queries are forwarded to a name server that you choose. Names such as .internal
 are not available when an alternative name server is specified.
 Structure is documented below.
-{{% /md %}}</dd>
-</dl>
+{{% /md %}}</dd></dl>
 {{% /choosable %}}
 
 {{% choosable language python %}}
-<dl class="resources-properties">
-
-    <dt class="property-required"
+<dl class="resources-properties"><dt class="property-required"
             title="Required">
         <span id="target_name_servers_python">
 <a href="#target_name_servers_python" style="color: inherit; text-decoration: inherit;">target_<wbr>name_<wbr>servers</a>
@@ -1337,16 +1235,13 @@ Structure is documented below.
 all DNS queries are forwarded to a name server that you choose. Names such as .internal
 are not available when an alternative name server is specified.
 Structure is documented below.
-{{% /md %}}</dd>
-</dl>
+{{% /md %}}</dd></dl>
 {{% /choosable %}}
 
 <h4 id="policyalternativenameserverconfigtargetnameserver">Policy<wbr>Alternative<wbr>Name<wbr>Server<wbr>Config<wbr>Target<wbr>Name<wbr>Server</h4>
 
 {{% choosable language csharp %}}
-<dl class="resources-properties">
-
-    <dt class="property-required"
+<dl class="resources-properties"><dt class="property-required"
             title="Required">
         <span id="ipv4address_csharp">
 <a href="#ipv4address_csharp" style="color: inherit; text-decoration: inherit;">Ipv4Address</a>
@@ -1355,8 +1250,7 @@ Structure is documented below.
         <span class="property-type">string</span>
     </dt>
     <dd>{{% md %}}IPv4 address to forward to.
-{{% /md %}}</dd>
-    <dt class="property-optional"
+{{% /md %}}</dd><dt class="property-optional"
             title="Optional">
         <span id="forwardingpath_csharp">
 <a href="#forwardingpath_csharp" style="color: inherit; text-decoration: inherit;">Forwarding<wbr>Path</a>
@@ -1368,14 +1262,11 @@ Structure is documented below.
 decision based on address ranges, i.e. RFC1918 addresses go to the VPC, Non-RFC1918 addresses go
 to the Internet. When set to `private`, Cloud DNS will always send queries through VPC for this target
 Possible values are `default` and `private`.
-{{% /md %}}</dd>
-</dl>
+{{% /md %}}</dd></dl>
 {{% /choosable %}}
 
 {{% choosable language go %}}
-<dl class="resources-properties">
-
-    <dt class="property-required"
+<dl class="resources-properties"><dt class="property-required"
             title="Required">
         <span id="ipv4address_go">
 <a href="#ipv4address_go" style="color: inherit; text-decoration: inherit;">Ipv4Address</a>
@@ -1384,8 +1275,7 @@ Possible values are `default` and `private`.
         <span class="property-type">string</span>
     </dt>
     <dd>{{% md %}}IPv4 address to forward to.
-{{% /md %}}</dd>
-    <dt class="property-optional"
+{{% /md %}}</dd><dt class="property-optional"
             title="Optional">
         <span id="forwardingpath_go">
 <a href="#forwardingpath_go" style="color: inherit; text-decoration: inherit;">Forwarding<wbr>Path</a>
@@ -1397,14 +1287,11 @@ Possible values are `default` and `private`.
 decision based on address ranges, i.e. RFC1918 addresses go to the VPC, Non-RFC1918 addresses go
 to the Internet. When set to `private`, Cloud DNS will always send queries through VPC for this target
 Possible values are `default` and `private`.
-{{% /md %}}</dd>
-</dl>
+{{% /md %}}</dd></dl>
 {{% /choosable %}}
 
 {{% choosable language nodejs %}}
-<dl class="resources-properties">
-
-    <dt class="property-required"
+<dl class="resources-properties"><dt class="property-required"
             title="Required">
         <span id="ipv4address_nodejs">
 <a href="#ipv4address_nodejs" style="color: inherit; text-decoration: inherit;">ipv4Address</a>
@@ -1413,8 +1300,7 @@ Possible values are `default` and `private`.
         <span class="property-type">string</span>
     </dt>
     <dd>{{% md %}}IPv4 address to forward to.
-{{% /md %}}</dd>
-    <dt class="property-optional"
+{{% /md %}}</dd><dt class="property-optional"
             title="Optional">
         <span id="forwardingpath_nodejs">
 <a href="#forwardingpath_nodejs" style="color: inherit; text-decoration: inherit;">forwarding<wbr>Path</a>
@@ -1426,14 +1312,11 @@ Possible values are `default` and `private`.
 decision based on address ranges, i.e. RFC1918 addresses go to the VPC, Non-RFC1918 addresses go
 to the Internet. When set to `private`, Cloud DNS will always send queries through VPC for this target
 Possible values are `default` and `private`.
-{{% /md %}}</dd>
-</dl>
+{{% /md %}}</dd></dl>
 {{% /choosable %}}
 
 {{% choosable language python %}}
-<dl class="resources-properties">
-
-    <dt class="property-required"
+<dl class="resources-properties"><dt class="property-required"
             title="Required">
         <span id="ipv4_address_python">
 <a href="#ipv4_address_python" style="color: inherit; text-decoration: inherit;">ipv4_<wbr>address</a>
@@ -1442,8 +1325,7 @@ Possible values are `default` and `private`.
         <span class="property-type">str</span>
     </dt>
     <dd>{{% md %}}IPv4 address to forward to.
-{{% /md %}}</dd>
-    <dt class="property-optional"
+{{% /md %}}</dd><dt class="property-optional"
             title="Optional">
         <span id="forwarding_path_python">
 <a href="#forwarding_path_python" style="color: inherit; text-decoration: inherit;">forwarding_<wbr>path</a>
@@ -1455,16 +1337,13 @@ Possible values are `default` and `private`.
 decision based on address ranges, i.e. RFC1918 addresses go to the VPC, Non-RFC1918 addresses go
 to the Internet. When set to `private`, Cloud DNS will always send queries through VPC for this target
 Possible values are `default` and `private`.
-{{% /md %}}</dd>
-</dl>
+{{% /md %}}</dd></dl>
 {{% /choosable %}}
 
 <h4 id="policynetwork">Policy<wbr>Network</h4>
 
 {{% choosable language csharp %}}
-<dl class="resources-properties">
-
-    <dt class="property-required"
+<dl class="resources-properties"><dt class="property-required"
             title="Required">
         <span id="networkurl_csharp">
 <a href="#networkurl_csharp" style="color: inherit; text-decoration: inherit;">Network<wbr>Url</a>
@@ -1475,14 +1354,11 @@ Possible values are `default` and `private`.
     <dd>{{% md %}}The id or fully qualified URL of the VPC network to forward queries to.
 This should be formatted like `projects/{project}/global/networks/{network}` or
 `https://www.googleapis.com/compute/v1/projects/{project}/global/networks/{network}`
-{{% /md %}}</dd>
-</dl>
+{{% /md %}}</dd></dl>
 {{% /choosable %}}
 
 {{% choosable language go %}}
-<dl class="resources-properties">
-
-    <dt class="property-required"
+<dl class="resources-properties"><dt class="property-required"
             title="Required">
         <span id="networkurl_go">
 <a href="#networkurl_go" style="color: inherit; text-decoration: inherit;">Network<wbr>Url</a>
@@ -1493,14 +1369,11 @@ This should be formatted like `projects/{project}/global/networks/{network}` or
     <dd>{{% md %}}The id or fully qualified URL of the VPC network to forward queries to.
 This should be formatted like `projects/{project}/global/networks/{network}` or
 `https://www.googleapis.com/compute/v1/projects/{project}/global/networks/{network}`
-{{% /md %}}</dd>
-</dl>
+{{% /md %}}</dd></dl>
 {{% /choosable %}}
 
 {{% choosable language nodejs %}}
-<dl class="resources-properties">
-
-    <dt class="property-required"
+<dl class="resources-properties"><dt class="property-required"
             title="Required">
         <span id="networkurl_nodejs">
 <a href="#networkurl_nodejs" style="color: inherit; text-decoration: inherit;">network<wbr>Url</a>
@@ -1511,14 +1384,11 @@ This should be formatted like `projects/{project}/global/networks/{network}` or
     <dd>{{% md %}}The id or fully qualified URL of the VPC network to forward queries to.
 This should be formatted like `projects/{project}/global/networks/{network}` or
 `https://www.googleapis.com/compute/v1/projects/{project}/global/networks/{network}`
-{{% /md %}}</dd>
-</dl>
+{{% /md %}}</dd></dl>
 {{% /choosable %}}
 
 {{% choosable language python %}}
-<dl class="resources-properties">
-
-    <dt class="property-required"
+<dl class="resources-properties"><dt class="property-required"
             title="Required">
         <span id="network_url_python">
 <a href="#network_url_python" style="color: inherit; text-decoration: inherit;">network_<wbr>url</a>
@@ -1529,8 +1399,7 @@ This should be formatted like `projects/{project}/global/networks/{network}` or
     <dd>{{% md %}}The id or fully qualified URL of the VPC network to forward queries to.
 This should be formatted like `projects/{project}/global/networks/{network}` or
 `https://www.googleapis.com/compute/v1/projects/{project}/global/networks/{network}`
-{{% /md %}}</dd>
-</dl>
+{{% /md %}}</dd></dl>
 {{% /choosable %}}
 ## Import
 
@@ -1559,6 +1428,6 @@ Policy can be imported using any of these accepted formats
 	<dt>License</dt>
 	<dd>Apache-2.0</dd>
 	<dt>Notes</dt>
-	<dd>This Pulumi package is based on the [`google-beta` Terraform Provider](https://github.com/hashicorp/terraform-provider-google-beta).</dd>
+	<dd>{{% md %}}This Pulumi package is based on the [`google-beta` Terraform Provider](https://github.com/hashicorp/terraform-provider-google-beta).{{% /md %}}</dd>
 </dl>
 

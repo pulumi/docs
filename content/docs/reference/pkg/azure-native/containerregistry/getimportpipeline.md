@@ -51,9 +51,7 @@ The following arguments are supported:
 
 
 {{% choosable language csharp %}}
-<dl class="resources-properties">
-
-    <dt class="property-required"
+<dl class="resources-properties"><dt class="property-required"
             title="Required">
         <span id="importpipelinename_csharp">
 <a href="#importpipelinename_csharp" style="color: inherit; text-decoration: inherit;">Import<wbr>Pipeline<wbr>Name</a>
@@ -61,8 +59,7 @@ The following arguments are supported:
         <span class="property-indicator"></span>
         <span class="property-type">string</span>
     </dt>
-    <dd>{{% md %}}The name of the import pipeline.{{% /md %}}</dd>
-    <dt class="property-required"
+    <dd>{{% md %}}The name of the import pipeline.{{% /md %}}</dd><dt class="property-required"
             title="Required">
         <span id="registryname_csharp">
 <a href="#registryname_csharp" style="color: inherit; text-decoration: inherit;">Registry<wbr>Name</a>
@@ -70,8 +67,7 @@ The following arguments are supported:
         <span class="property-indicator"></span>
         <span class="property-type">string</span>
     </dt>
-    <dd>{{% md %}}The name of the container registry.{{% /md %}}</dd>
-    <dt class="property-required"
+    <dd>{{% md %}}The name of the container registry.{{% /md %}}</dd><dt class="property-required"
             title="Required">
         <span id="resourcegroupname_csharp">
 <a href="#resourcegroupname_csharp" style="color: inherit; text-decoration: inherit;">Resource<wbr>Group<wbr>Name</a>
@@ -79,14 +75,11 @@ The following arguments are supported:
         <span class="property-indicator"></span>
         <span class="property-type">string</span>
     </dt>
-    <dd>{{% md %}}The name of the resource group to which the container registry belongs.{{% /md %}}</dd>
-</dl>
+    <dd>{{% md %}}The name of the resource group to which the container registry belongs.{{% /md %}}</dd></dl>
 {{% /choosable %}}
 
 {{% choosable language go %}}
-<dl class="resources-properties">
-
-    <dt class="property-required"
+<dl class="resources-properties"><dt class="property-required"
             title="Required">
         <span id="importpipelinename_go">
 <a href="#importpipelinename_go" style="color: inherit; text-decoration: inherit;">Import<wbr>Pipeline<wbr>Name</a>
@@ -94,8 +87,7 @@ The following arguments are supported:
         <span class="property-indicator"></span>
         <span class="property-type">string</span>
     </dt>
-    <dd>{{% md %}}The name of the import pipeline.{{% /md %}}</dd>
-    <dt class="property-required"
+    <dd>{{% md %}}The name of the import pipeline.{{% /md %}}</dd><dt class="property-required"
             title="Required">
         <span id="registryname_go">
 <a href="#registryname_go" style="color: inherit; text-decoration: inherit;">Registry<wbr>Name</a>
@@ -103,8 +95,7 @@ The following arguments are supported:
         <span class="property-indicator"></span>
         <span class="property-type">string</span>
     </dt>
-    <dd>{{% md %}}The name of the container registry.{{% /md %}}</dd>
-    <dt class="property-required"
+    <dd>{{% md %}}The name of the container registry.{{% /md %}}</dd><dt class="property-required"
             title="Required">
         <span id="resourcegroupname_go">
 <a href="#resourcegroupname_go" style="color: inherit; text-decoration: inherit;">Resource<wbr>Group<wbr>Name</a>
@@ -112,14 +103,11 @@ The following arguments are supported:
         <span class="property-indicator"></span>
         <span class="property-type">string</span>
     </dt>
-    <dd>{{% md %}}The name of the resource group to which the container registry belongs.{{% /md %}}</dd>
-</dl>
+    <dd>{{% md %}}The name of the resource group to which the container registry belongs.{{% /md %}}</dd></dl>
 {{% /choosable %}}
 
 {{% choosable language nodejs %}}
-<dl class="resources-properties">
-
-    <dt class="property-required"
+<dl class="resources-properties"><dt class="property-required"
             title="Required">
         <span id="importpipelinename_nodejs">
 <a href="#importpipelinename_nodejs" style="color: inherit; text-decoration: inherit;">import<wbr>Pipeline<wbr>Name</a>
@@ -127,8 +115,7 @@ The following arguments are supported:
         <span class="property-indicator"></span>
         <span class="property-type">string</span>
     </dt>
-    <dd>{{% md %}}The name of the import pipeline.{{% /md %}}</dd>
-    <dt class="property-required"
+    <dd>{{% md %}}The name of the import pipeline.{{% /md %}}</dd><dt class="property-required"
             title="Required">
         <span id="registryname_nodejs">
 <a href="#registryname_nodejs" style="color: inherit; text-decoration: inherit;">registry<wbr>Name</a>
@@ -136,8 +123,7 @@ The following arguments are supported:
         <span class="property-indicator"></span>
         <span class="property-type">string</span>
     </dt>
-    <dd>{{% md %}}The name of the container registry.{{% /md %}}</dd>
-    <dt class="property-required"
+    <dd>{{% md %}}The name of the container registry.{{% /md %}}</dd><dt class="property-required"
             title="Required">
         <span id="resourcegroupname_nodejs">
 <a href="#resourcegroupname_nodejs" style="color: inherit; text-decoration: inherit;">resource<wbr>Group<wbr>Name</a>
@@ -145,14 +131,11 @@ The following arguments are supported:
         <span class="property-indicator"></span>
         <span class="property-type">string</span>
     </dt>
-    <dd>{{% md %}}The name of the resource group to which the container registry belongs.{{% /md %}}</dd>
-</dl>
+    <dd>{{% md %}}The name of the resource group to which the container registry belongs.{{% /md %}}</dd></dl>
 {{% /choosable %}}
 
 {{% choosable language python %}}
-<dl class="resources-properties">
-
-    <dt class="property-required"
+<dl class="resources-properties"><dt class="property-required"
             title="Required">
         <span id="import_pipeline_name_python">
 <a href="#import_pipeline_name_python" style="color: inherit; text-decoration: inherit;">import_<wbr>pipeline_<wbr>name</a>
@@ -160,8 +143,7 @@ The following arguments are supported:
         <span class="property-indicator"></span>
         <span class="property-type">str</span>
     </dt>
-    <dd>{{% md %}}The name of the import pipeline.{{% /md %}}</dd>
-    <dt class="property-required"
+    <dd>{{% md %}}The name of the import pipeline.{{% /md %}}</dd><dt class="property-required"
             title="Required">
         <span id="registry_name_python">
 <a href="#registry_name_python" style="color: inherit; text-decoration: inherit;">registry_<wbr>name</a>
@@ -169,8 +151,7 @@ The following arguments are supported:
         <span class="property-indicator"></span>
         <span class="property-type">str</span>
     </dt>
-    <dd>{{% md %}}The name of the container registry.{{% /md %}}</dd>
-    <dt class="property-required"
+    <dd>{{% md %}}The name of the container registry.{{% /md %}}</dd><dt class="property-required"
             title="Required">
         <span id="resource_group_name_python">
 <a href="#resource_group_name_python" style="color: inherit; text-decoration: inherit;">resource_<wbr>group_<wbr>name</a>
@@ -178,8 +159,7 @@ The following arguments are supported:
         <span class="property-indicator"></span>
         <span class="property-type">str</span>
     </dt>
-    <dd>{{% md %}}The name of the resource group to which the container registry belongs.{{% /md %}}</dd>
-</dl>
+    <dd>{{% md %}}The name of the resource group to which the container registry belongs.{{% /md %}}</dd></dl>
 {{% /choosable %}}
 
 
@@ -192,9 +172,7 @@ The following output properties are available:
 
 
 {{% choosable language csharp %}}
-<dl class="resources-properties">
-
-    <dt class="property-"
+<dl class="resources-properties"><dt class="property-"
             title="">
         <span id="id_csharp">
 <a href="#id_csharp" style="color: inherit; text-decoration: inherit;">Id</a>
@@ -202,8 +180,7 @@ The following output properties are available:
         <span class="property-indicator"></span>
         <span class="property-type">string</span>
     </dt>
-    <dd>{{% md %}}The resource ID.{{% /md %}}</dd>
-    <dt class="property-"
+    <dd>{{% md %}}The resource ID.{{% /md %}}</dd><dt class="property-"
             title="">
         <span id="name_csharp">
 <a href="#name_csharp" style="color: inherit; text-decoration: inherit;">Name</a>
@@ -211,8 +188,7 @@ The following output properties are available:
         <span class="property-indicator"></span>
         <span class="property-type">string</span>
     </dt>
-    <dd>{{% md %}}The name of the resource.{{% /md %}}</dd>
-    <dt class="property-"
+    <dd>{{% md %}}The name of the resource.{{% /md %}}</dd><dt class="property-"
             title="">
         <span id="provisioningstate_csharp">
 <a href="#provisioningstate_csharp" style="color: inherit; text-decoration: inherit;">Provisioning<wbr>State</a>
@@ -220,8 +196,7 @@ The following output properties are available:
         <span class="property-indicator"></span>
         <span class="property-type">string</span>
     </dt>
-    <dd>{{% md %}}The provisioning state of the pipeline at the time the operation was called.{{% /md %}}</dd>
-    <dt class="property-"
+    <dd>{{% md %}}The provisioning state of the pipeline at the time the operation was called.{{% /md %}}</dd><dt class="property-"
             title="">
         <span id="source_csharp">
 <a href="#source_csharp" style="color: inherit; text-decoration: inherit;">Source</a>
@@ -229,8 +204,7 @@ The following output properties are available:
         <span class="property-indicator"></span>
         <span class="property-type"><a href="#importpipelinesourcepropertiesresponse">Pulumi.<wbr>Azure<wbr>Native.<wbr>Container<wbr>Registry.<wbr>Outputs.<wbr>Import<wbr>Pipeline<wbr>Source<wbr>Properties<wbr>Response</a></span>
     </dt>
-    <dd>{{% md %}}The source properties of the import pipeline.{{% /md %}}</dd>
-    <dt class="property-"
+    <dd>{{% md %}}The source properties of the import pipeline.{{% /md %}}</dd><dt class="property-"
             title="">
         <span id="systemdata_csharp">
 <a href="#systemdata_csharp" style="color: inherit; text-decoration: inherit;">System<wbr>Data</a>
@@ -238,8 +212,7 @@ The following output properties are available:
         <span class="property-indicator"></span>
         <span class="property-type"><a href="#systemdataresponse">Pulumi.<wbr>Azure<wbr>Native.<wbr>Container<wbr>Registry.<wbr>Outputs.<wbr>System<wbr>Data<wbr>Response</a></span>
     </dt>
-    <dd>{{% md %}}Metadata pertaining to creation and last modification of the resource.{{% /md %}}</dd>
-    <dt class="property-"
+    <dd>{{% md %}}Metadata pertaining to creation and last modification of the resource.{{% /md %}}</dd><dt class="property-"
             title="">
         <span id="type_csharp">
 <a href="#type_csharp" style="color: inherit; text-decoration: inherit;">Type</a>
@@ -247,8 +220,7 @@ The following output properties are available:
         <span class="property-indicator"></span>
         <span class="property-type">string</span>
     </dt>
-    <dd>{{% md %}}The type of the resource.{{% /md %}}</dd>
-    <dt class="property-"
+    <dd>{{% md %}}The type of the resource.{{% /md %}}</dd><dt class="property-"
             title="">
         <span id="identity_csharp">
 <a href="#identity_csharp" style="color: inherit; text-decoration: inherit;">Identity</a>
@@ -256,8 +228,7 @@ The following output properties are available:
         <span class="property-indicator"></span>
         <span class="property-type"><a href="#identitypropertiesresponse">Pulumi.<wbr>Azure<wbr>Native.<wbr>Container<wbr>Registry.<wbr>Outputs.<wbr>Identity<wbr>Properties<wbr>Response</a></span>
     </dt>
-    <dd>{{% md %}}The identity of the import pipeline.{{% /md %}}</dd>
-    <dt class="property-"
+    <dd>{{% md %}}The identity of the import pipeline.{{% /md %}}</dd><dt class="property-"
             title="">
         <span id="location_csharp">
 <a href="#location_csharp" style="color: inherit; text-decoration: inherit;">Location</a>
@@ -265,8 +236,7 @@ The following output properties are available:
         <span class="property-indicator"></span>
         <span class="property-type">string</span>
     </dt>
-    <dd>{{% md %}}The location of the import pipeline.{{% /md %}}</dd>
-    <dt class="property-"
+    <dd>{{% md %}}The location of the import pipeline.{{% /md %}}</dd><dt class="property-"
             title="">
         <span id="options_csharp">
 <a href="#options_csharp" style="color: inherit; text-decoration: inherit;">Options</a>
@@ -274,8 +244,7 @@ The following output properties are available:
         <span class="property-indicator"></span>
         <span class="property-type">List&lt;string&gt;</span>
     </dt>
-    <dd>{{% md %}}The list of all options configured for the pipeline.{{% /md %}}</dd>
-    <dt class="property-"
+    <dd>{{% md %}}The list of all options configured for the pipeline.{{% /md %}}</dd><dt class="property-"
             title="">
         <span id="trigger_csharp">
 <a href="#trigger_csharp" style="color: inherit; text-decoration: inherit;">Trigger</a>
@@ -283,14 +252,11 @@ The following output properties are available:
         <span class="property-indicator"></span>
         <span class="property-type"><a href="#pipelinetriggerpropertiesresponse">Pulumi.<wbr>Azure<wbr>Native.<wbr>Container<wbr>Registry.<wbr>Outputs.<wbr>Pipeline<wbr>Trigger<wbr>Properties<wbr>Response</a></span>
     </dt>
-    <dd>{{% md %}}The properties that describe the trigger of the import pipeline.{{% /md %}}</dd>
-</dl>
+    <dd>{{% md %}}The properties that describe the trigger of the import pipeline.{{% /md %}}</dd></dl>
 {{% /choosable %}}
 
 {{% choosable language go %}}
-<dl class="resources-properties">
-
-    <dt class="property-"
+<dl class="resources-properties"><dt class="property-"
             title="">
         <span id="id_go">
 <a href="#id_go" style="color: inherit; text-decoration: inherit;">Id</a>
@@ -298,8 +264,7 @@ The following output properties are available:
         <span class="property-indicator"></span>
         <span class="property-type">string</span>
     </dt>
-    <dd>{{% md %}}The resource ID.{{% /md %}}</dd>
-    <dt class="property-"
+    <dd>{{% md %}}The resource ID.{{% /md %}}</dd><dt class="property-"
             title="">
         <span id="name_go">
 <a href="#name_go" style="color: inherit; text-decoration: inherit;">Name</a>
@@ -307,8 +272,7 @@ The following output properties are available:
         <span class="property-indicator"></span>
         <span class="property-type">string</span>
     </dt>
-    <dd>{{% md %}}The name of the resource.{{% /md %}}</dd>
-    <dt class="property-"
+    <dd>{{% md %}}The name of the resource.{{% /md %}}</dd><dt class="property-"
             title="">
         <span id="provisioningstate_go">
 <a href="#provisioningstate_go" style="color: inherit; text-decoration: inherit;">Provisioning<wbr>State</a>
@@ -316,8 +280,7 @@ The following output properties are available:
         <span class="property-indicator"></span>
         <span class="property-type">string</span>
     </dt>
-    <dd>{{% md %}}The provisioning state of the pipeline at the time the operation was called.{{% /md %}}</dd>
-    <dt class="property-"
+    <dd>{{% md %}}The provisioning state of the pipeline at the time the operation was called.{{% /md %}}</dd><dt class="property-"
             title="">
         <span id="source_go">
 <a href="#source_go" style="color: inherit; text-decoration: inherit;">Source</a>
@@ -325,8 +288,7 @@ The following output properties are available:
         <span class="property-indicator"></span>
         <span class="property-type"><a href="#importpipelinesourcepropertiesresponse">Import<wbr>Pipeline<wbr>Source<wbr>Properties<wbr>Response</a></span>
     </dt>
-    <dd>{{% md %}}The source properties of the import pipeline.{{% /md %}}</dd>
-    <dt class="property-"
+    <dd>{{% md %}}The source properties of the import pipeline.{{% /md %}}</dd><dt class="property-"
             title="">
         <span id="systemdata_go">
 <a href="#systemdata_go" style="color: inherit; text-decoration: inherit;">System<wbr>Data</a>
@@ -334,8 +296,7 @@ The following output properties are available:
         <span class="property-indicator"></span>
         <span class="property-type"><a href="#systemdataresponse">System<wbr>Data<wbr>Response</a></span>
     </dt>
-    <dd>{{% md %}}Metadata pertaining to creation and last modification of the resource.{{% /md %}}</dd>
-    <dt class="property-"
+    <dd>{{% md %}}Metadata pertaining to creation and last modification of the resource.{{% /md %}}</dd><dt class="property-"
             title="">
         <span id="type_go">
 <a href="#type_go" style="color: inherit; text-decoration: inherit;">Type</a>
@@ -343,8 +304,7 @@ The following output properties are available:
         <span class="property-indicator"></span>
         <span class="property-type">string</span>
     </dt>
-    <dd>{{% md %}}The type of the resource.{{% /md %}}</dd>
-    <dt class="property-"
+    <dd>{{% md %}}The type of the resource.{{% /md %}}</dd><dt class="property-"
             title="">
         <span id="identity_go">
 <a href="#identity_go" style="color: inherit; text-decoration: inherit;">Identity</a>
@@ -352,8 +312,7 @@ The following output properties are available:
         <span class="property-indicator"></span>
         <span class="property-type"><a href="#identitypropertiesresponse">Identity<wbr>Properties<wbr>Response</a></span>
     </dt>
-    <dd>{{% md %}}The identity of the import pipeline.{{% /md %}}</dd>
-    <dt class="property-"
+    <dd>{{% md %}}The identity of the import pipeline.{{% /md %}}</dd><dt class="property-"
             title="">
         <span id="location_go">
 <a href="#location_go" style="color: inherit; text-decoration: inherit;">Location</a>
@@ -361,8 +320,7 @@ The following output properties are available:
         <span class="property-indicator"></span>
         <span class="property-type">string</span>
     </dt>
-    <dd>{{% md %}}The location of the import pipeline.{{% /md %}}</dd>
-    <dt class="property-"
+    <dd>{{% md %}}The location of the import pipeline.{{% /md %}}</dd><dt class="property-"
             title="">
         <span id="options_go">
 <a href="#options_go" style="color: inherit; text-decoration: inherit;">Options</a>
@@ -370,8 +328,7 @@ The following output properties are available:
         <span class="property-indicator"></span>
         <span class="property-type">[]string</span>
     </dt>
-    <dd>{{% md %}}The list of all options configured for the pipeline.{{% /md %}}</dd>
-    <dt class="property-"
+    <dd>{{% md %}}The list of all options configured for the pipeline.{{% /md %}}</dd><dt class="property-"
             title="">
         <span id="trigger_go">
 <a href="#trigger_go" style="color: inherit; text-decoration: inherit;">Trigger</a>
@@ -379,14 +336,11 @@ The following output properties are available:
         <span class="property-indicator"></span>
         <span class="property-type"><a href="#pipelinetriggerpropertiesresponse">Pipeline<wbr>Trigger<wbr>Properties<wbr>Response</a></span>
     </dt>
-    <dd>{{% md %}}The properties that describe the trigger of the import pipeline.{{% /md %}}</dd>
-</dl>
+    <dd>{{% md %}}The properties that describe the trigger of the import pipeline.{{% /md %}}</dd></dl>
 {{% /choosable %}}
 
 {{% choosable language nodejs %}}
-<dl class="resources-properties">
-
-    <dt class="property-"
+<dl class="resources-properties"><dt class="property-"
             title="">
         <span id="id_nodejs">
 <a href="#id_nodejs" style="color: inherit; text-decoration: inherit;">id</a>
@@ -394,8 +348,7 @@ The following output properties are available:
         <span class="property-indicator"></span>
         <span class="property-type">string</span>
     </dt>
-    <dd>{{% md %}}The resource ID.{{% /md %}}</dd>
-    <dt class="property-"
+    <dd>{{% md %}}The resource ID.{{% /md %}}</dd><dt class="property-"
             title="">
         <span id="name_nodejs">
 <a href="#name_nodejs" style="color: inherit; text-decoration: inherit;">name</a>
@@ -403,8 +356,7 @@ The following output properties are available:
         <span class="property-indicator"></span>
         <span class="property-type">string</span>
     </dt>
-    <dd>{{% md %}}The name of the resource.{{% /md %}}</dd>
-    <dt class="property-"
+    <dd>{{% md %}}The name of the resource.{{% /md %}}</dd><dt class="property-"
             title="">
         <span id="provisioningstate_nodejs">
 <a href="#provisioningstate_nodejs" style="color: inherit; text-decoration: inherit;">provisioning<wbr>State</a>
@@ -412,8 +364,7 @@ The following output properties are available:
         <span class="property-indicator"></span>
         <span class="property-type">string</span>
     </dt>
-    <dd>{{% md %}}The provisioning state of the pipeline at the time the operation was called.{{% /md %}}</dd>
-    <dt class="property-"
+    <dd>{{% md %}}The provisioning state of the pipeline at the time the operation was called.{{% /md %}}</dd><dt class="property-"
             title="">
         <span id="source_nodejs">
 <a href="#source_nodejs" style="color: inherit; text-decoration: inherit;">source</a>
@@ -421,8 +372,7 @@ The following output properties are available:
         <span class="property-indicator"></span>
         <span class="property-type"><a href="#importpipelinesourcepropertiesresponse">Import<wbr>Pipeline<wbr>Source<wbr>Properties<wbr>Response</a></span>
     </dt>
-    <dd>{{% md %}}The source properties of the import pipeline.{{% /md %}}</dd>
-    <dt class="property-"
+    <dd>{{% md %}}The source properties of the import pipeline.{{% /md %}}</dd><dt class="property-"
             title="">
         <span id="systemdata_nodejs">
 <a href="#systemdata_nodejs" style="color: inherit; text-decoration: inherit;">system<wbr>Data</a>
@@ -430,8 +380,7 @@ The following output properties are available:
         <span class="property-indicator"></span>
         <span class="property-type"><a href="#systemdataresponse">System<wbr>Data<wbr>Response</a></span>
     </dt>
-    <dd>{{% md %}}Metadata pertaining to creation and last modification of the resource.{{% /md %}}</dd>
-    <dt class="property-"
+    <dd>{{% md %}}Metadata pertaining to creation and last modification of the resource.{{% /md %}}</dd><dt class="property-"
             title="">
         <span id="type_nodejs">
 <a href="#type_nodejs" style="color: inherit; text-decoration: inherit;">type</a>
@@ -439,8 +388,7 @@ The following output properties are available:
         <span class="property-indicator"></span>
         <span class="property-type">string</span>
     </dt>
-    <dd>{{% md %}}The type of the resource.{{% /md %}}</dd>
-    <dt class="property-"
+    <dd>{{% md %}}The type of the resource.{{% /md %}}</dd><dt class="property-"
             title="">
         <span id="identity_nodejs">
 <a href="#identity_nodejs" style="color: inherit; text-decoration: inherit;">identity</a>
@@ -448,8 +396,7 @@ The following output properties are available:
         <span class="property-indicator"></span>
         <span class="property-type"><a href="#identitypropertiesresponse">Identity<wbr>Properties<wbr>Response</a></span>
     </dt>
-    <dd>{{% md %}}The identity of the import pipeline.{{% /md %}}</dd>
-    <dt class="property-"
+    <dd>{{% md %}}The identity of the import pipeline.{{% /md %}}</dd><dt class="property-"
             title="">
         <span id="location_nodejs">
 <a href="#location_nodejs" style="color: inherit; text-decoration: inherit;">location</a>
@@ -457,8 +404,7 @@ The following output properties are available:
         <span class="property-indicator"></span>
         <span class="property-type">string</span>
     </dt>
-    <dd>{{% md %}}The location of the import pipeline.{{% /md %}}</dd>
-    <dt class="property-"
+    <dd>{{% md %}}The location of the import pipeline.{{% /md %}}</dd><dt class="property-"
             title="">
         <span id="options_nodejs">
 <a href="#options_nodejs" style="color: inherit; text-decoration: inherit;">options</a>
@@ -466,8 +412,7 @@ The following output properties are available:
         <span class="property-indicator"></span>
         <span class="property-type">string[]</span>
     </dt>
-    <dd>{{% md %}}The list of all options configured for the pipeline.{{% /md %}}</dd>
-    <dt class="property-"
+    <dd>{{% md %}}The list of all options configured for the pipeline.{{% /md %}}</dd><dt class="property-"
             title="">
         <span id="trigger_nodejs">
 <a href="#trigger_nodejs" style="color: inherit; text-decoration: inherit;">trigger</a>
@@ -475,14 +420,11 @@ The following output properties are available:
         <span class="property-indicator"></span>
         <span class="property-type"><a href="#pipelinetriggerpropertiesresponse">Pipeline<wbr>Trigger<wbr>Properties<wbr>Response</a></span>
     </dt>
-    <dd>{{% md %}}The properties that describe the trigger of the import pipeline.{{% /md %}}</dd>
-</dl>
+    <dd>{{% md %}}The properties that describe the trigger of the import pipeline.{{% /md %}}</dd></dl>
 {{% /choosable %}}
 
 {{% choosable language python %}}
-<dl class="resources-properties">
-
-    <dt class="property-"
+<dl class="resources-properties"><dt class="property-"
             title="">
         <span id="id_python">
 <a href="#id_python" style="color: inherit; text-decoration: inherit;">id</a>
@@ -490,8 +432,7 @@ The following output properties are available:
         <span class="property-indicator"></span>
         <span class="property-type">str</span>
     </dt>
-    <dd>{{% md %}}The resource ID.{{% /md %}}</dd>
-    <dt class="property-"
+    <dd>{{% md %}}The resource ID.{{% /md %}}</dd><dt class="property-"
             title="">
         <span id="name_python">
 <a href="#name_python" style="color: inherit; text-decoration: inherit;">name</a>
@@ -499,8 +440,7 @@ The following output properties are available:
         <span class="property-indicator"></span>
         <span class="property-type">str</span>
     </dt>
-    <dd>{{% md %}}The name of the resource.{{% /md %}}</dd>
-    <dt class="property-"
+    <dd>{{% md %}}The name of the resource.{{% /md %}}</dd><dt class="property-"
             title="">
         <span id="provisioning_state_python">
 <a href="#provisioning_state_python" style="color: inherit; text-decoration: inherit;">provisioning_<wbr>state</a>
@@ -508,8 +448,7 @@ The following output properties are available:
         <span class="property-indicator"></span>
         <span class="property-type">str</span>
     </dt>
-    <dd>{{% md %}}The provisioning state of the pipeline at the time the operation was called.{{% /md %}}</dd>
-    <dt class="property-"
+    <dd>{{% md %}}The provisioning state of the pipeline at the time the operation was called.{{% /md %}}</dd><dt class="property-"
             title="">
         <span id="source_python">
 <a href="#source_python" style="color: inherit; text-decoration: inherit;">source</a>
@@ -517,8 +456,7 @@ The following output properties are available:
         <span class="property-indicator"></span>
         <span class="property-type"><a href="#importpipelinesourcepropertiesresponse">Import<wbr>Pipeline<wbr>Source<wbr>Properties<wbr>Response</a></span>
     </dt>
-    <dd>{{% md %}}The source properties of the import pipeline.{{% /md %}}</dd>
-    <dt class="property-"
+    <dd>{{% md %}}The source properties of the import pipeline.{{% /md %}}</dd><dt class="property-"
             title="">
         <span id="system_data_python">
 <a href="#system_data_python" style="color: inherit; text-decoration: inherit;">system_<wbr>data</a>
@@ -526,8 +464,7 @@ The following output properties are available:
         <span class="property-indicator"></span>
         <span class="property-type"><a href="#systemdataresponse">System<wbr>Data<wbr>Response</a></span>
     </dt>
-    <dd>{{% md %}}Metadata pertaining to creation and last modification of the resource.{{% /md %}}</dd>
-    <dt class="property-"
+    <dd>{{% md %}}Metadata pertaining to creation and last modification of the resource.{{% /md %}}</dd><dt class="property-"
             title="">
         <span id="type_python">
 <a href="#type_python" style="color: inherit; text-decoration: inherit;">type</a>
@@ -535,8 +472,7 @@ The following output properties are available:
         <span class="property-indicator"></span>
         <span class="property-type">str</span>
     </dt>
-    <dd>{{% md %}}The type of the resource.{{% /md %}}</dd>
-    <dt class="property-"
+    <dd>{{% md %}}The type of the resource.{{% /md %}}</dd><dt class="property-"
             title="">
         <span id="identity_python">
 <a href="#identity_python" style="color: inherit; text-decoration: inherit;">identity</a>
@@ -544,8 +480,7 @@ The following output properties are available:
         <span class="property-indicator"></span>
         <span class="property-type"><a href="#identitypropertiesresponse">Identity<wbr>Properties<wbr>Response</a></span>
     </dt>
-    <dd>{{% md %}}The identity of the import pipeline.{{% /md %}}</dd>
-    <dt class="property-"
+    <dd>{{% md %}}The identity of the import pipeline.{{% /md %}}</dd><dt class="property-"
             title="">
         <span id="location_python">
 <a href="#location_python" style="color: inherit; text-decoration: inherit;">location</a>
@@ -553,8 +488,7 @@ The following output properties are available:
         <span class="property-indicator"></span>
         <span class="property-type">str</span>
     </dt>
-    <dd>{{% md %}}The location of the import pipeline.{{% /md %}}</dd>
-    <dt class="property-"
+    <dd>{{% md %}}The location of the import pipeline.{{% /md %}}</dd><dt class="property-"
             title="">
         <span id="options_python">
 <a href="#options_python" style="color: inherit; text-decoration: inherit;">options</a>
@@ -562,8 +496,7 @@ The following output properties are available:
         <span class="property-indicator"></span>
         <span class="property-type">Sequence[str]</span>
     </dt>
-    <dd>{{% md %}}The list of all options configured for the pipeline.{{% /md %}}</dd>
-    <dt class="property-"
+    <dd>{{% md %}}The list of all options configured for the pipeline.{{% /md %}}</dd><dt class="property-"
             title="">
         <span id="trigger_python">
 <a href="#trigger_python" style="color: inherit; text-decoration: inherit;">trigger</a>
@@ -571,8 +504,7 @@ The following output properties are available:
         <span class="property-indicator"></span>
         <span class="property-type"><a href="#pipelinetriggerpropertiesresponse">Pipeline<wbr>Trigger<wbr>Properties<wbr>Response</a></span>
     </dt>
-    <dd>{{% md %}}The properties that describe the trigger of the import pipeline.{{% /md %}}</dd>
-</dl>
+    <dd>{{% md %}}The properties that describe the trigger of the import pipeline.{{% /md %}}</dd></dl>
 {{% /choosable %}}
 
 
@@ -586,9 +518,7 @@ The following output properties are available:
 
 
 {{% choosable language csharp %}}
-<dl class="resources-properties">
-
-    <dt class="property-optional"
+<dl class="resources-properties"><dt class="property-optional"
             title="Optional">
         <span id="principalid_csharp">
 <a href="#principalid_csharp" style="color: inherit; text-decoration: inherit;">Principal<wbr>Id</a>
@@ -596,8 +526,7 @@ The following output properties are available:
         <span class="property-indicator"></span>
         <span class="property-type">string</span>
     </dt>
-    <dd>{{% md %}}The principal ID of resource identity.{{% /md %}}</dd>
-    <dt class="property-optional"
+    <dd>{{% md %}}The principal ID of resource identity.{{% /md %}}</dd><dt class="property-optional"
             title="Optional">
         <span id="tenantid_csharp">
 <a href="#tenantid_csharp" style="color: inherit; text-decoration: inherit;">Tenant<wbr>Id</a>
@@ -605,8 +534,7 @@ The following output properties are available:
         <span class="property-indicator"></span>
         <span class="property-type">string</span>
     </dt>
-    <dd>{{% md %}}The tenant ID of resource.{{% /md %}}</dd>
-    <dt class="property-optional"
+    <dd>{{% md %}}The tenant ID of resource.{{% /md %}}</dd><dt class="property-optional"
             title="Optional">
         <span id="type_csharp">
 <a href="#type_csharp" style="color: inherit; text-decoration: inherit;">Type</a>
@@ -614,8 +542,7 @@ The following output properties are available:
         <span class="property-indicator"></span>
         <span class="property-type">string</span>
     </dt>
-    <dd>{{% md %}}The identity type.{{% /md %}}</dd>
-    <dt class="property-optional"
+    <dd>{{% md %}}The identity type.{{% /md %}}</dd><dt class="property-optional"
             title="Optional">
         <span id="userassignedidentities_csharp">
 <a href="#userassignedidentities_csharp" style="color: inherit; text-decoration: inherit;">User<wbr>Assigned<wbr>Identities</a>
@@ -626,14 +553,11 @@ The following output properties are available:
     <dd>{{% md %}}The list of user identities associated with the resource. The user identity 
 dictionary key references will be ARM resource ids in the form: 
 '/subscriptions/{subscriptionId}/resourceGroups/{resourceGroupName}/
-    providers/Microsoft.ManagedIdentity/userAssignedIdentities/{identityName}'.{{% /md %}}</dd>
-</dl>
+    providers/Microsoft.ManagedIdentity/userAssignedIdentities/{identityName}'.{{% /md %}}</dd></dl>
 {{% /choosable %}}
 
 {{% choosable language go %}}
-<dl class="resources-properties">
-
-    <dt class="property-optional"
+<dl class="resources-properties"><dt class="property-optional"
             title="Optional">
         <span id="principalid_go">
 <a href="#principalid_go" style="color: inherit; text-decoration: inherit;">Principal<wbr>Id</a>
@@ -641,8 +565,7 @@ dictionary key references will be ARM resource ids in the form:
         <span class="property-indicator"></span>
         <span class="property-type">string</span>
     </dt>
-    <dd>{{% md %}}The principal ID of resource identity.{{% /md %}}</dd>
-    <dt class="property-optional"
+    <dd>{{% md %}}The principal ID of resource identity.{{% /md %}}</dd><dt class="property-optional"
             title="Optional">
         <span id="tenantid_go">
 <a href="#tenantid_go" style="color: inherit; text-decoration: inherit;">Tenant<wbr>Id</a>
@@ -650,8 +573,7 @@ dictionary key references will be ARM resource ids in the form:
         <span class="property-indicator"></span>
         <span class="property-type">string</span>
     </dt>
-    <dd>{{% md %}}The tenant ID of resource.{{% /md %}}</dd>
-    <dt class="property-optional"
+    <dd>{{% md %}}The tenant ID of resource.{{% /md %}}</dd><dt class="property-optional"
             title="Optional">
         <span id="type_go">
 <a href="#type_go" style="color: inherit; text-decoration: inherit;">Type</a>
@@ -659,8 +581,7 @@ dictionary key references will be ARM resource ids in the form:
         <span class="property-indicator"></span>
         <span class="property-type">string</span>
     </dt>
-    <dd>{{% md %}}The identity type.{{% /md %}}</dd>
-    <dt class="property-optional"
+    <dd>{{% md %}}The identity type.{{% /md %}}</dd><dt class="property-optional"
             title="Optional">
         <span id="userassignedidentities_go">
 <a href="#userassignedidentities_go" style="color: inherit; text-decoration: inherit;">User<wbr>Assigned<wbr>Identities</a>
@@ -671,14 +592,11 @@ dictionary key references will be ARM resource ids in the form:
     <dd>{{% md %}}The list of user identities associated with the resource. The user identity 
 dictionary key references will be ARM resource ids in the form: 
 '/subscriptions/{subscriptionId}/resourceGroups/{resourceGroupName}/
-    providers/Microsoft.ManagedIdentity/userAssignedIdentities/{identityName}'.{{% /md %}}</dd>
-</dl>
+    providers/Microsoft.ManagedIdentity/userAssignedIdentities/{identityName}'.{{% /md %}}</dd></dl>
 {{% /choosable %}}
 
 {{% choosable language nodejs %}}
-<dl class="resources-properties">
-
-    <dt class="property-optional"
+<dl class="resources-properties"><dt class="property-optional"
             title="Optional">
         <span id="principalid_nodejs">
 <a href="#principalid_nodejs" style="color: inherit; text-decoration: inherit;">principal<wbr>Id</a>
@@ -686,8 +604,7 @@ dictionary key references will be ARM resource ids in the form:
         <span class="property-indicator"></span>
         <span class="property-type">string</span>
     </dt>
-    <dd>{{% md %}}The principal ID of resource identity.{{% /md %}}</dd>
-    <dt class="property-optional"
+    <dd>{{% md %}}The principal ID of resource identity.{{% /md %}}</dd><dt class="property-optional"
             title="Optional">
         <span id="tenantid_nodejs">
 <a href="#tenantid_nodejs" style="color: inherit; text-decoration: inherit;">tenant<wbr>Id</a>
@@ -695,8 +612,7 @@ dictionary key references will be ARM resource ids in the form:
         <span class="property-indicator"></span>
         <span class="property-type">string</span>
     </dt>
-    <dd>{{% md %}}The tenant ID of resource.{{% /md %}}</dd>
-    <dt class="property-optional"
+    <dd>{{% md %}}The tenant ID of resource.{{% /md %}}</dd><dt class="property-optional"
             title="Optional">
         <span id="type_nodejs">
 <a href="#type_nodejs" style="color: inherit; text-decoration: inherit;">type</a>
@@ -704,8 +620,7 @@ dictionary key references will be ARM resource ids in the form:
         <span class="property-indicator"></span>
         <span class="property-type">string</span>
     </dt>
-    <dd>{{% md %}}The identity type.{{% /md %}}</dd>
-    <dt class="property-optional"
+    <dd>{{% md %}}The identity type.{{% /md %}}</dd><dt class="property-optional"
             title="Optional">
         <span id="userassignedidentities_nodejs">
 <a href="#userassignedidentities_nodejs" style="color: inherit; text-decoration: inherit;">user<wbr>Assigned<wbr>Identities</a>
@@ -716,14 +631,11 @@ dictionary key references will be ARM resource ids in the form:
     <dd>{{% md %}}The list of user identities associated with the resource. The user identity 
 dictionary key references will be ARM resource ids in the form: 
 '/subscriptions/{subscriptionId}/resourceGroups/{resourceGroupName}/
-    providers/Microsoft.ManagedIdentity/userAssignedIdentities/{identityName}'.{{% /md %}}</dd>
-</dl>
+    providers/Microsoft.ManagedIdentity/userAssignedIdentities/{identityName}'.{{% /md %}}</dd></dl>
 {{% /choosable %}}
 
 {{% choosable language python %}}
-<dl class="resources-properties">
-
-    <dt class="property-optional"
+<dl class="resources-properties"><dt class="property-optional"
             title="Optional">
         <span id="principal_id_python">
 <a href="#principal_id_python" style="color: inherit; text-decoration: inherit;">principal_<wbr>id</a>
@@ -731,8 +643,7 @@ dictionary key references will be ARM resource ids in the form:
         <span class="property-indicator"></span>
         <span class="property-type">str</span>
     </dt>
-    <dd>{{% md %}}The principal ID of resource identity.{{% /md %}}</dd>
-    <dt class="property-optional"
+    <dd>{{% md %}}The principal ID of resource identity.{{% /md %}}</dd><dt class="property-optional"
             title="Optional">
         <span id="tenant_id_python">
 <a href="#tenant_id_python" style="color: inherit; text-decoration: inherit;">tenant_<wbr>id</a>
@@ -740,8 +651,7 @@ dictionary key references will be ARM resource ids in the form:
         <span class="property-indicator"></span>
         <span class="property-type">str</span>
     </dt>
-    <dd>{{% md %}}The tenant ID of resource.{{% /md %}}</dd>
-    <dt class="property-optional"
+    <dd>{{% md %}}The tenant ID of resource.{{% /md %}}</dd><dt class="property-optional"
             title="Optional">
         <span id="type_python">
 <a href="#type_python" style="color: inherit; text-decoration: inherit;">type</a>
@@ -749,8 +659,7 @@ dictionary key references will be ARM resource ids in the form:
         <span class="property-indicator"></span>
         <span class="property-type">str</span>
     </dt>
-    <dd>{{% md %}}The identity type.{{% /md %}}</dd>
-    <dt class="property-optional"
+    <dd>{{% md %}}The identity type.{{% /md %}}</dd><dt class="property-optional"
             title="Optional">
         <span id="user_assigned_identities_python">
 <a href="#user_assigned_identities_python" style="color: inherit; text-decoration: inherit;">user_<wbr>assigned_<wbr>identities</a>
@@ -761,8 +670,7 @@ dictionary key references will be ARM resource ids in the form:
     <dd>{{% md %}}The list of user identities associated with the resource. The user identity 
 dictionary key references will be ARM resource ids in the form: 
 '/subscriptions/{subscriptionId}/resourceGroups/{resourceGroupName}/
-    providers/Microsoft.ManagedIdentity/userAssignedIdentities/{identityName}'.{{% /md %}}</dd>
-</dl>
+    providers/Microsoft.ManagedIdentity/userAssignedIdentities/{identityName}'.{{% /md %}}</dd></dl>
 {{% /choosable %}}
 
 <h4 id="importpipelinesourcepropertiesresponse">Import<wbr>Pipeline<wbr>Source<wbr>Properties<wbr>Response</h4>
@@ -770,9 +678,7 @@ dictionary key references will be ARM resource ids in the form:
 
 
 {{% choosable language csharp %}}
-<dl class="resources-properties">
-
-    <dt class="property-required"
+<dl class="resources-properties"><dt class="property-required"
             title="Required">
         <span id="keyvaulturi_csharp">
 <a href="#keyvaulturi_csharp" style="color: inherit; text-decoration: inherit;">Key<wbr>Vault<wbr>Uri</a>
@@ -780,8 +686,7 @@ dictionary key references will be ARM resource ids in the form:
         <span class="property-indicator"></span>
         <span class="property-type">string</span>
     </dt>
-    <dd>{{% md %}}They key vault secret uri to obtain the source storage SAS token.{{% /md %}}</dd>
-    <dt class="property-optional"
+    <dd>{{% md %}}They key vault secret uri to obtain the source storage SAS token.{{% /md %}}</dd><dt class="property-optional"
             title="Optional">
         <span id="type_csharp">
 <a href="#type_csharp" style="color: inherit; text-decoration: inherit;">Type</a>
@@ -789,8 +694,7 @@ dictionary key references will be ARM resource ids in the form:
         <span class="property-indicator"></span>
         <span class="property-type">string</span>
     </dt>
-    <dd>{{% md %}}The type of source for the import pipeline.{{% /md %}}</dd>
-    <dt class="property-optional"
+    <dd>{{% md %}}The type of source for the import pipeline.{{% /md %}}</dd><dt class="property-optional"
             title="Optional">
         <span id="uri_csharp">
 <a href="#uri_csharp" style="color: inherit; text-decoration: inherit;">Uri</a>
@@ -800,14 +704,11 @@ dictionary key references will be ARM resource ids in the form:
     </dt>
     <dd>{{% md %}}The source uri of the import pipeline.
 When 'AzureStorageBlob': "https://accountName.blob.core.windows.net/containerName/blobName"
-When 'AzureStorageBlobContainer': "https://accountName.blob.core.windows.net/containerName"{{% /md %}}</dd>
-</dl>
+When 'AzureStorageBlobContainer': "https://accountName.blob.core.windows.net/containerName"{{% /md %}}</dd></dl>
 {{% /choosable %}}
 
 {{% choosable language go %}}
-<dl class="resources-properties">
-
-    <dt class="property-required"
+<dl class="resources-properties"><dt class="property-required"
             title="Required">
         <span id="keyvaulturi_go">
 <a href="#keyvaulturi_go" style="color: inherit; text-decoration: inherit;">Key<wbr>Vault<wbr>Uri</a>
@@ -815,8 +716,7 @@ When 'AzureStorageBlobContainer': "https://accountName.blob.core.windows.net/con
         <span class="property-indicator"></span>
         <span class="property-type">string</span>
     </dt>
-    <dd>{{% md %}}They key vault secret uri to obtain the source storage SAS token.{{% /md %}}</dd>
-    <dt class="property-optional"
+    <dd>{{% md %}}They key vault secret uri to obtain the source storage SAS token.{{% /md %}}</dd><dt class="property-optional"
             title="Optional">
         <span id="type_go">
 <a href="#type_go" style="color: inherit; text-decoration: inherit;">Type</a>
@@ -824,8 +724,7 @@ When 'AzureStorageBlobContainer': "https://accountName.blob.core.windows.net/con
         <span class="property-indicator"></span>
         <span class="property-type">string</span>
     </dt>
-    <dd>{{% md %}}The type of source for the import pipeline.{{% /md %}}</dd>
-    <dt class="property-optional"
+    <dd>{{% md %}}The type of source for the import pipeline.{{% /md %}}</dd><dt class="property-optional"
             title="Optional">
         <span id="uri_go">
 <a href="#uri_go" style="color: inherit; text-decoration: inherit;">Uri</a>
@@ -835,14 +734,11 @@ When 'AzureStorageBlobContainer': "https://accountName.blob.core.windows.net/con
     </dt>
     <dd>{{% md %}}The source uri of the import pipeline.
 When 'AzureStorageBlob': "https://accountName.blob.core.windows.net/containerName/blobName"
-When 'AzureStorageBlobContainer': "https://accountName.blob.core.windows.net/containerName"{{% /md %}}</dd>
-</dl>
+When 'AzureStorageBlobContainer': "https://accountName.blob.core.windows.net/containerName"{{% /md %}}</dd></dl>
 {{% /choosable %}}
 
 {{% choosable language nodejs %}}
-<dl class="resources-properties">
-
-    <dt class="property-required"
+<dl class="resources-properties"><dt class="property-required"
             title="Required">
         <span id="keyvaulturi_nodejs">
 <a href="#keyvaulturi_nodejs" style="color: inherit; text-decoration: inherit;">key<wbr>Vault<wbr>Uri</a>
@@ -850,8 +746,7 @@ When 'AzureStorageBlobContainer': "https://accountName.blob.core.windows.net/con
         <span class="property-indicator"></span>
         <span class="property-type">string</span>
     </dt>
-    <dd>{{% md %}}They key vault secret uri to obtain the source storage SAS token.{{% /md %}}</dd>
-    <dt class="property-optional"
+    <dd>{{% md %}}They key vault secret uri to obtain the source storage SAS token.{{% /md %}}</dd><dt class="property-optional"
             title="Optional">
         <span id="type_nodejs">
 <a href="#type_nodejs" style="color: inherit; text-decoration: inherit;">type</a>
@@ -859,8 +754,7 @@ When 'AzureStorageBlobContainer': "https://accountName.blob.core.windows.net/con
         <span class="property-indicator"></span>
         <span class="property-type">string</span>
     </dt>
-    <dd>{{% md %}}The type of source for the import pipeline.{{% /md %}}</dd>
-    <dt class="property-optional"
+    <dd>{{% md %}}The type of source for the import pipeline.{{% /md %}}</dd><dt class="property-optional"
             title="Optional">
         <span id="uri_nodejs">
 <a href="#uri_nodejs" style="color: inherit; text-decoration: inherit;">uri</a>
@@ -870,14 +764,11 @@ When 'AzureStorageBlobContainer': "https://accountName.blob.core.windows.net/con
     </dt>
     <dd>{{% md %}}The source uri of the import pipeline.
 When 'AzureStorageBlob': "https://accountName.blob.core.windows.net/containerName/blobName"
-When 'AzureStorageBlobContainer': "https://accountName.blob.core.windows.net/containerName"{{% /md %}}</dd>
-</dl>
+When 'AzureStorageBlobContainer': "https://accountName.blob.core.windows.net/containerName"{{% /md %}}</dd></dl>
 {{% /choosable %}}
 
 {{% choosable language python %}}
-<dl class="resources-properties">
-
-    <dt class="property-required"
+<dl class="resources-properties"><dt class="property-required"
             title="Required">
         <span id="key_vault_uri_python">
 <a href="#key_vault_uri_python" style="color: inherit; text-decoration: inherit;">key_<wbr>vault_<wbr>uri</a>
@@ -885,8 +776,7 @@ When 'AzureStorageBlobContainer': "https://accountName.blob.core.windows.net/con
         <span class="property-indicator"></span>
         <span class="property-type">str</span>
     </dt>
-    <dd>{{% md %}}They key vault secret uri to obtain the source storage SAS token.{{% /md %}}</dd>
-    <dt class="property-optional"
+    <dd>{{% md %}}They key vault secret uri to obtain the source storage SAS token.{{% /md %}}</dd><dt class="property-optional"
             title="Optional">
         <span id="type_python">
 <a href="#type_python" style="color: inherit; text-decoration: inherit;">type</a>
@@ -894,8 +784,7 @@ When 'AzureStorageBlobContainer': "https://accountName.blob.core.windows.net/con
         <span class="property-indicator"></span>
         <span class="property-type">str</span>
     </dt>
-    <dd>{{% md %}}The type of source for the import pipeline.{{% /md %}}</dd>
-    <dt class="property-optional"
+    <dd>{{% md %}}The type of source for the import pipeline.{{% /md %}}</dd><dt class="property-optional"
             title="Optional">
         <span id="uri_python">
 <a href="#uri_python" style="color: inherit; text-decoration: inherit;">uri</a>
@@ -905,8 +794,7 @@ When 'AzureStorageBlobContainer': "https://accountName.blob.core.windows.net/con
     </dt>
     <dd>{{% md %}}The source uri of the import pipeline.
 When 'AzureStorageBlob': "https://accountName.blob.core.windows.net/containerName/blobName"
-When 'AzureStorageBlobContainer': "https://accountName.blob.core.windows.net/containerName"{{% /md %}}</dd>
-</dl>
+When 'AzureStorageBlobContainer': "https://accountName.blob.core.windows.net/containerName"{{% /md %}}</dd></dl>
 {{% /choosable %}}
 
 <h4 id="pipelinesourcetriggerpropertiesresponse">Pipeline<wbr>Source<wbr>Trigger<wbr>Properties<wbr>Response</h4>
@@ -914,9 +802,7 @@ When 'AzureStorageBlobContainer': "https://accountName.blob.core.windows.net/con
 
 
 {{% choosable language csharp %}}
-<dl class="resources-properties">
-
-    <dt class="property-required"
+<dl class="resources-properties"><dt class="property-required"
             title="Required">
         <span id="status_csharp">
 <a href="#status_csharp" style="color: inherit; text-decoration: inherit;">Status</a>
@@ -924,14 +810,11 @@ When 'AzureStorageBlobContainer': "https://accountName.blob.core.windows.net/con
         <span class="property-indicator"></span>
         <span class="property-type">string</span>
     </dt>
-    <dd>{{% md %}}The current status of the source trigger.{{% /md %}}</dd>
-</dl>
+    <dd>{{% md %}}The current status of the source trigger.{{% /md %}}</dd></dl>
 {{% /choosable %}}
 
 {{% choosable language go %}}
-<dl class="resources-properties">
-
-    <dt class="property-required"
+<dl class="resources-properties"><dt class="property-required"
             title="Required">
         <span id="status_go">
 <a href="#status_go" style="color: inherit; text-decoration: inherit;">Status</a>
@@ -939,14 +822,11 @@ When 'AzureStorageBlobContainer': "https://accountName.blob.core.windows.net/con
         <span class="property-indicator"></span>
         <span class="property-type">string</span>
     </dt>
-    <dd>{{% md %}}The current status of the source trigger.{{% /md %}}</dd>
-</dl>
+    <dd>{{% md %}}The current status of the source trigger.{{% /md %}}</dd></dl>
 {{% /choosable %}}
 
 {{% choosable language nodejs %}}
-<dl class="resources-properties">
-
-    <dt class="property-required"
+<dl class="resources-properties"><dt class="property-required"
             title="Required">
         <span id="status_nodejs">
 <a href="#status_nodejs" style="color: inherit; text-decoration: inherit;">status</a>
@@ -954,14 +834,11 @@ When 'AzureStorageBlobContainer': "https://accountName.blob.core.windows.net/con
         <span class="property-indicator"></span>
         <span class="property-type">string</span>
     </dt>
-    <dd>{{% md %}}The current status of the source trigger.{{% /md %}}</dd>
-</dl>
+    <dd>{{% md %}}The current status of the source trigger.{{% /md %}}</dd></dl>
 {{% /choosable %}}
 
 {{% choosable language python %}}
-<dl class="resources-properties">
-
-    <dt class="property-required"
+<dl class="resources-properties"><dt class="property-required"
             title="Required">
         <span id="status_python">
 <a href="#status_python" style="color: inherit; text-decoration: inherit;">status</a>
@@ -969,8 +846,7 @@ When 'AzureStorageBlobContainer': "https://accountName.blob.core.windows.net/con
         <span class="property-indicator"></span>
         <span class="property-type">str</span>
     </dt>
-    <dd>{{% md %}}The current status of the source trigger.{{% /md %}}</dd>
-</dl>
+    <dd>{{% md %}}The current status of the source trigger.{{% /md %}}</dd></dl>
 {{% /choosable %}}
 
 <h4 id="pipelinetriggerpropertiesresponse">Pipeline<wbr>Trigger<wbr>Properties<wbr>Response</h4>
@@ -978,9 +854,7 @@ When 'AzureStorageBlobContainer': "https://accountName.blob.core.windows.net/con
 
 
 {{% choosable language csharp %}}
-<dl class="resources-properties">
-
-    <dt class="property-optional"
+<dl class="resources-properties"><dt class="property-optional"
             title="Optional">
         <span id="sourcetrigger_csharp">
 <a href="#sourcetrigger_csharp" style="color: inherit; text-decoration: inherit;">Source<wbr>Trigger</a>
@@ -988,14 +862,11 @@ When 'AzureStorageBlobContainer': "https://accountName.blob.core.windows.net/con
         <span class="property-indicator"></span>
         <span class="property-type"><a href="#pipelinesourcetriggerpropertiesresponse">Pulumi.<wbr>Azure<wbr>Native.<wbr>Container<wbr>Registry.<wbr>Inputs.<wbr>Pipeline<wbr>Source<wbr>Trigger<wbr>Properties<wbr>Response<wbr>Args</a></span>
     </dt>
-    <dd>{{% md %}}The source trigger properties of the pipeline.{{% /md %}}</dd>
-</dl>
+    <dd>{{% md %}}The source trigger properties of the pipeline.{{% /md %}}</dd></dl>
 {{% /choosable %}}
 
 {{% choosable language go %}}
-<dl class="resources-properties">
-
-    <dt class="property-optional"
+<dl class="resources-properties"><dt class="property-optional"
             title="Optional">
         <span id="sourcetrigger_go">
 <a href="#sourcetrigger_go" style="color: inherit; text-decoration: inherit;">Source<wbr>Trigger</a>
@@ -1003,14 +874,11 @@ When 'AzureStorageBlobContainer': "https://accountName.blob.core.windows.net/con
         <span class="property-indicator"></span>
         <span class="property-type"><a href="#pipelinesourcetriggerpropertiesresponse">Pipeline<wbr>Source<wbr>Trigger<wbr>Properties<wbr>Response</a></span>
     </dt>
-    <dd>{{% md %}}The source trigger properties of the pipeline.{{% /md %}}</dd>
-</dl>
+    <dd>{{% md %}}The source trigger properties of the pipeline.{{% /md %}}</dd></dl>
 {{% /choosable %}}
 
 {{% choosable language nodejs %}}
-<dl class="resources-properties">
-
-    <dt class="property-optional"
+<dl class="resources-properties"><dt class="property-optional"
             title="Optional">
         <span id="sourcetrigger_nodejs">
 <a href="#sourcetrigger_nodejs" style="color: inherit; text-decoration: inherit;">source<wbr>Trigger</a>
@@ -1018,14 +886,11 @@ When 'AzureStorageBlobContainer': "https://accountName.blob.core.windows.net/con
         <span class="property-indicator"></span>
         <span class="property-type"><a href="#pipelinesourcetriggerpropertiesresponse">Pipeline<wbr>Source<wbr>Trigger<wbr>Properties<wbr>Response</a></span>
     </dt>
-    <dd>{{% md %}}The source trigger properties of the pipeline.{{% /md %}}</dd>
-</dl>
+    <dd>{{% md %}}The source trigger properties of the pipeline.{{% /md %}}</dd></dl>
 {{% /choosable %}}
 
 {{% choosable language python %}}
-<dl class="resources-properties">
-
-    <dt class="property-optional"
+<dl class="resources-properties"><dt class="property-optional"
             title="Optional">
         <span id="source_trigger_python">
 <a href="#source_trigger_python" style="color: inherit; text-decoration: inherit;">source_<wbr>trigger</a>
@@ -1033,8 +898,7 @@ When 'AzureStorageBlobContainer': "https://accountName.blob.core.windows.net/con
         <span class="property-indicator"></span>
         <span class="property-type"><a href="#pipelinesourcetriggerpropertiesresponse">Pipeline<wbr>Source<wbr>Trigger<wbr>Properties<wbr>Response<wbr>Args</a></span>
     </dt>
-    <dd>{{% md %}}The source trigger properties of the pipeline.{{% /md %}}</dd>
-</dl>
+    <dd>{{% md %}}The source trigger properties of the pipeline.{{% /md %}}</dd></dl>
 {{% /choosable %}}
 
 <h4 id="systemdataresponse">System<wbr>Data<wbr>Response</h4>
@@ -1042,9 +906,7 @@ When 'AzureStorageBlobContainer': "https://accountName.blob.core.windows.net/con
 
 
 {{% choosable language csharp %}}
-<dl class="resources-properties">
-
-    <dt class="property-optional"
+<dl class="resources-properties"><dt class="property-optional"
             title="Optional">
         <span id="createdat_csharp">
 <a href="#createdat_csharp" style="color: inherit; text-decoration: inherit;">Created<wbr>At</a>
@@ -1052,8 +914,7 @@ When 'AzureStorageBlobContainer': "https://accountName.blob.core.windows.net/con
         <span class="property-indicator"></span>
         <span class="property-type">string</span>
     </dt>
-    <dd>{{% md %}}The timestamp of resource creation (UTC).{{% /md %}}</dd>
-    <dt class="property-optional"
+    <dd>{{% md %}}The timestamp of resource creation (UTC).{{% /md %}}</dd><dt class="property-optional"
             title="Optional">
         <span id="createdby_csharp">
 <a href="#createdby_csharp" style="color: inherit; text-decoration: inherit;">Created<wbr>By</a>
@@ -1061,8 +922,7 @@ When 'AzureStorageBlobContainer': "https://accountName.blob.core.windows.net/con
         <span class="property-indicator"></span>
         <span class="property-type">string</span>
     </dt>
-    <dd>{{% md %}}The identity that created the resource.{{% /md %}}</dd>
-    <dt class="property-optional"
+    <dd>{{% md %}}The identity that created the resource.{{% /md %}}</dd><dt class="property-optional"
             title="Optional">
         <span id="createdbytype_csharp">
 <a href="#createdbytype_csharp" style="color: inherit; text-decoration: inherit;">Created<wbr>By<wbr>Type</a>
@@ -1070,8 +930,7 @@ When 'AzureStorageBlobContainer': "https://accountName.blob.core.windows.net/con
         <span class="property-indicator"></span>
         <span class="property-type">string</span>
     </dt>
-    <dd>{{% md %}}The type of identity that created the resource.{{% /md %}}</dd>
-    <dt class="property-optional"
+    <dd>{{% md %}}The type of identity that created the resource.{{% /md %}}</dd><dt class="property-optional"
             title="Optional">
         <span id="lastmodifiedat_csharp">
 <a href="#lastmodifiedat_csharp" style="color: inherit; text-decoration: inherit;">Last<wbr>Modified<wbr>At</a>
@@ -1079,8 +938,7 @@ When 'AzureStorageBlobContainer': "https://accountName.blob.core.windows.net/con
         <span class="property-indicator"></span>
         <span class="property-type">string</span>
     </dt>
-    <dd>{{% md %}}The timestamp of resource modification (UTC).{{% /md %}}</dd>
-    <dt class="property-optional"
+    <dd>{{% md %}}The timestamp of resource modification (UTC).{{% /md %}}</dd><dt class="property-optional"
             title="Optional">
         <span id="lastmodifiedby_csharp">
 <a href="#lastmodifiedby_csharp" style="color: inherit; text-decoration: inherit;">Last<wbr>Modified<wbr>By</a>
@@ -1088,8 +946,7 @@ When 'AzureStorageBlobContainer': "https://accountName.blob.core.windows.net/con
         <span class="property-indicator"></span>
         <span class="property-type">string</span>
     </dt>
-    <dd>{{% md %}}The identity that last modified the resource.{{% /md %}}</dd>
-    <dt class="property-optional"
+    <dd>{{% md %}}The identity that last modified the resource.{{% /md %}}</dd><dt class="property-optional"
             title="Optional">
         <span id="lastmodifiedbytype_csharp">
 <a href="#lastmodifiedbytype_csharp" style="color: inherit; text-decoration: inherit;">Last<wbr>Modified<wbr>By<wbr>Type</a>
@@ -1097,14 +954,11 @@ When 'AzureStorageBlobContainer': "https://accountName.blob.core.windows.net/con
         <span class="property-indicator"></span>
         <span class="property-type">string</span>
     </dt>
-    <dd>{{% md %}}The type of identity that last modified the resource.{{% /md %}}</dd>
-</dl>
+    <dd>{{% md %}}The type of identity that last modified the resource.{{% /md %}}</dd></dl>
 {{% /choosable %}}
 
 {{% choosable language go %}}
-<dl class="resources-properties">
-
-    <dt class="property-optional"
+<dl class="resources-properties"><dt class="property-optional"
             title="Optional">
         <span id="createdat_go">
 <a href="#createdat_go" style="color: inherit; text-decoration: inherit;">Created<wbr>At</a>
@@ -1112,8 +966,7 @@ When 'AzureStorageBlobContainer': "https://accountName.blob.core.windows.net/con
         <span class="property-indicator"></span>
         <span class="property-type">string</span>
     </dt>
-    <dd>{{% md %}}The timestamp of resource creation (UTC).{{% /md %}}</dd>
-    <dt class="property-optional"
+    <dd>{{% md %}}The timestamp of resource creation (UTC).{{% /md %}}</dd><dt class="property-optional"
             title="Optional">
         <span id="createdby_go">
 <a href="#createdby_go" style="color: inherit; text-decoration: inherit;">Created<wbr>By</a>
@@ -1121,8 +974,7 @@ When 'AzureStorageBlobContainer': "https://accountName.blob.core.windows.net/con
         <span class="property-indicator"></span>
         <span class="property-type">string</span>
     </dt>
-    <dd>{{% md %}}The identity that created the resource.{{% /md %}}</dd>
-    <dt class="property-optional"
+    <dd>{{% md %}}The identity that created the resource.{{% /md %}}</dd><dt class="property-optional"
             title="Optional">
         <span id="createdbytype_go">
 <a href="#createdbytype_go" style="color: inherit; text-decoration: inherit;">Created<wbr>By<wbr>Type</a>
@@ -1130,8 +982,7 @@ When 'AzureStorageBlobContainer': "https://accountName.blob.core.windows.net/con
         <span class="property-indicator"></span>
         <span class="property-type">string</span>
     </dt>
-    <dd>{{% md %}}The type of identity that created the resource.{{% /md %}}</dd>
-    <dt class="property-optional"
+    <dd>{{% md %}}The type of identity that created the resource.{{% /md %}}</dd><dt class="property-optional"
             title="Optional">
         <span id="lastmodifiedat_go">
 <a href="#lastmodifiedat_go" style="color: inherit; text-decoration: inherit;">Last<wbr>Modified<wbr>At</a>
@@ -1139,8 +990,7 @@ When 'AzureStorageBlobContainer': "https://accountName.blob.core.windows.net/con
         <span class="property-indicator"></span>
         <span class="property-type">string</span>
     </dt>
-    <dd>{{% md %}}The timestamp of resource modification (UTC).{{% /md %}}</dd>
-    <dt class="property-optional"
+    <dd>{{% md %}}The timestamp of resource modification (UTC).{{% /md %}}</dd><dt class="property-optional"
             title="Optional">
         <span id="lastmodifiedby_go">
 <a href="#lastmodifiedby_go" style="color: inherit; text-decoration: inherit;">Last<wbr>Modified<wbr>By</a>
@@ -1148,8 +998,7 @@ When 'AzureStorageBlobContainer': "https://accountName.blob.core.windows.net/con
         <span class="property-indicator"></span>
         <span class="property-type">string</span>
     </dt>
-    <dd>{{% md %}}The identity that last modified the resource.{{% /md %}}</dd>
-    <dt class="property-optional"
+    <dd>{{% md %}}The identity that last modified the resource.{{% /md %}}</dd><dt class="property-optional"
             title="Optional">
         <span id="lastmodifiedbytype_go">
 <a href="#lastmodifiedbytype_go" style="color: inherit; text-decoration: inherit;">Last<wbr>Modified<wbr>By<wbr>Type</a>
@@ -1157,14 +1006,11 @@ When 'AzureStorageBlobContainer': "https://accountName.blob.core.windows.net/con
         <span class="property-indicator"></span>
         <span class="property-type">string</span>
     </dt>
-    <dd>{{% md %}}The type of identity that last modified the resource.{{% /md %}}</dd>
-</dl>
+    <dd>{{% md %}}The type of identity that last modified the resource.{{% /md %}}</dd></dl>
 {{% /choosable %}}
 
 {{% choosable language nodejs %}}
-<dl class="resources-properties">
-
-    <dt class="property-optional"
+<dl class="resources-properties"><dt class="property-optional"
             title="Optional">
         <span id="createdat_nodejs">
 <a href="#createdat_nodejs" style="color: inherit; text-decoration: inherit;">created<wbr>At</a>
@@ -1172,8 +1018,7 @@ When 'AzureStorageBlobContainer': "https://accountName.blob.core.windows.net/con
         <span class="property-indicator"></span>
         <span class="property-type">string</span>
     </dt>
-    <dd>{{% md %}}The timestamp of resource creation (UTC).{{% /md %}}</dd>
-    <dt class="property-optional"
+    <dd>{{% md %}}The timestamp of resource creation (UTC).{{% /md %}}</dd><dt class="property-optional"
             title="Optional">
         <span id="createdby_nodejs">
 <a href="#createdby_nodejs" style="color: inherit; text-decoration: inherit;">created<wbr>By</a>
@@ -1181,8 +1026,7 @@ When 'AzureStorageBlobContainer': "https://accountName.blob.core.windows.net/con
         <span class="property-indicator"></span>
         <span class="property-type">string</span>
     </dt>
-    <dd>{{% md %}}The identity that created the resource.{{% /md %}}</dd>
-    <dt class="property-optional"
+    <dd>{{% md %}}The identity that created the resource.{{% /md %}}</dd><dt class="property-optional"
             title="Optional">
         <span id="createdbytype_nodejs">
 <a href="#createdbytype_nodejs" style="color: inherit; text-decoration: inherit;">created<wbr>By<wbr>Type</a>
@@ -1190,8 +1034,7 @@ When 'AzureStorageBlobContainer': "https://accountName.blob.core.windows.net/con
         <span class="property-indicator"></span>
         <span class="property-type">string</span>
     </dt>
-    <dd>{{% md %}}The type of identity that created the resource.{{% /md %}}</dd>
-    <dt class="property-optional"
+    <dd>{{% md %}}The type of identity that created the resource.{{% /md %}}</dd><dt class="property-optional"
             title="Optional">
         <span id="lastmodifiedat_nodejs">
 <a href="#lastmodifiedat_nodejs" style="color: inherit; text-decoration: inherit;">last<wbr>Modified<wbr>At</a>
@@ -1199,8 +1042,7 @@ When 'AzureStorageBlobContainer': "https://accountName.blob.core.windows.net/con
         <span class="property-indicator"></span>
         <span class="property-type">string</span>
     </dt>
-    <dd>{{% md %}}The timestamp of resource modification (UTC).{{% /md %}}</dd>
-    <dt class="property-optional"
+    <dd>{{% md %}}The timestamp of resource modification (UTC).{{% /md %}}</dd><dt class="property-optional"
             title="Optional">
         <span id="lastmodifiedby_nodejs">
 <a href="#lastmodifiedby_nodejs" style="color: inherit; text-decoration: inherit;">last<wbr>Modified<wbr>By</a>
@@ -1208,8 +1050,7 @@ When 'AzureStorageBlobContainer': "https://accountName.blob.core.windows.net/con
         <span class="property-indicator"></span>
         <span class="property-type">string</span>
     </dt>
-    <dd>{{% md %}}The identity that last modified the resource.{{% /md %}}</dd>
-    <dt class="property-optional"
+    <dd>{{% md %}}The identity that last modified the resource.{{% /md %}}</dd><dt class="property-optional"
             title="Optional">
         <span id="lastmodifiedbytype_nodejs">
 <a href="#lastmodifiedbytype_nodejs" style="color: inherit; text-decoration: inherit;">last<wbr>Modified<wbr>By<wbr>Type</a>
@@ -1217,14 +1058,11 @@ When 'AzureStorageBlobContainer': "https://accountName.blob.core.windows.net/con
         <span class="property-indicator"></span>
         <span class="property-type">string</span>
     </dt>
-    <dd>{{% md %}}The type of identity that last modified the resource.{{% /md %}}</dd>
-</dl>
+    <dd>{{% md %}}The type of identity that last modified the resource.{{% /md %}}</dd></dl>
 {{% /choosable %}}
 
 {{% choosable language python %}}
-<dl class="resources-properties">
-
-    <dt class="property-optional"
+<dl class="resources-properties"><dt class="property-optional"
             title="Optional">
         <span id="created_at_python">
 <a href="#created_at_python" style="color: inherit; text-decoration: inherit;">created_<wbr>at</a>
@@ -1232,8 +1070,7 @@ When 'AzureStorageBlobContainer': "https://accountName.blob.core.windows.net/con
         <span class="property-indicator"></span>
         <span class="property-type">str</span>
     </dt>
-    <dd>{{% md %}}The timestamp of resource creation (UTC).{{% /md %}}</dd>
-    <dt class="property-optional"
+    <dd>{{% md %}}The timestamp of resource creation (UTC).{{% /md %}}</dd><dt class="property-optional"
             title="Optional">
         <span id="created_by_python">
 <a href="#created_by_python" style="color: inherit; text-decoration: inherit;">created_<wbr>by</a>
@@ -1241,8 +1078,7 @@ When 'AzureStorageBlobContainer': "https://accountName.blob.core.windows.net/con
         <span class="property-indicator"></span>
         <span class="property-type">str</span>
     </dt>
-    <dd>{{% md %}}The identity that created the resource.{{% /md %}}</dd>
-    <dt class="property-optional"
+    <dd>{{% md %}}The identity that created the resource.{{% /md %}}</dd><dt class="property-optional"
             title="Optional">
         <span id="created_by_type_python">
 <a href="#created_by_type_python" style="color: inherit; text-decoration: inherit;">created_<wbr>by_<wbr>type</a>
@@ -1250,8 +1086,7 @@ When 'AzureStorageBlobContainer': "https://accountName.blob.core.windows.net/con
         <span class="property-indicator"></span>
         <span class="property-type">str</span>
     </dt>
-    <dd>{{% md %}}The type of identity that created the resource.{{% /md %}}</dd>
-    <dt class="property-optional"
+    <dd>{{% md %}}The type of identity that created the resource.{{% /md %}}</dd><dt class="property-optional"
             title="Optional">
         <span id="last_modified_at_python">
 <a href="#last_modified_at_python" style="color: inherit; text-decoration: inherit;">last_<wbr>modified_<wbr>at</a>
@@ -1259,8 +1094,7 @@ When 'AzureStorageBlobContainer': "https://accountName.blob.core.windows.net/con
         <span class="property-indicator"></span>
         <span class="property-type">str</span>
     </dt>
-    <dd>{{% md %}}The timestamp of resource modification (UTC).{{% /md %}}</dd>
-    <dt class="property-optional"
+    <dd>{{% md %}}The timestamp of resource modification (UTC).{{% /md %}}</dd><dt class="property-optional"
             title="Optional">
         <span id="last_modified_by_python">
 <a href="#last_modified_by_python" style="color: inherit; text-decoration: inherit;">last_<wbr>modified_<wbr>by</a>
@@ -1268,8 +1102,7 @@ When 'AzureStorageBlobContainer': "https://accountName.blob.core.windows.net/con
         <span class="property-indicator"></span>
         <span class="property-type">str</span>
     </dt>
-    <dd>{{% md %}}The identity that last modified the resource.{{% /md %}}</dd>
-    <dt class="property-optional"
+    <dd>{{% md %}}The identity that last modified the resource.{{% /md %}}</dd><dt class="property-optional"
             title="Optional">
         <span id="last_modified_by_type_python">
 <a href="#last_modified_by_type_python" style="color: inherit; text-decoration: inherit;">last_<wbr>modified_<wbr>by_<wbr>type</a>
@@ -1277,8 +1110,7 @@ When 'AzureStorageBlobContainer': "https://accountName.blob.core.windows.net/con
         <span class="property-indicator"></span>
         <span class="property-type">str</span>
     </dt>
-    <dd>{{% md %}}The type of identity that last modified the resource.{{% /md %}}</dd>
-</dl>
+    <dd>{{% md %}}The type of identity that last modified the resource.{{% /md %}}</dd></dl>
 {{% /choosable %}}
 
 <h4 id="useridentitypropertiesresponse">User<wbr>Identity<wbr>Properties<wbr>Response</h4>
@@ -1286,9 +1118,7 @@ When 'AzureStorageBlobContainer': "https://accountName.blob.core.windows.net/con
 
 
 {{% choosable language csharp %}}
-<dl class="resources-properties">
-
-    <dt class="property-optional"
+<dl class="resources-properties"><dt class="property-optional"
             title="Optional">
         <span id="clientid_csharp">
 <a href="#clientid_csharp" style="color: inherit; text-decoration: inherit;">Client<wbr>Id</a>
@@ -1296,8 +1126,7 @@ When 'AzureStorageBlobContainer': "https://accountName.blob.core.windows.net/con
         <span class="property-indicator"></span>
         <span class="property-type">string</span>
     </dt>
-    <dd>{{% md %}}The client id of user assigned identity.{{% /md %}}</dd>
-    <dt class="property-optional"
+    <dd>{{% md %}}The client id of user assigned identity.{{% /md %}}</dd><dt class="property-optional"
             title="Optional">
         <span id="principalid_csharp">
 <a href="#principalid_csharp" style="color: inherit; text-decoration: inherit;">Principal<wbr>Id</a>
@@ -1305,14 +1134,11 @@ When 'AzureStorageBlobContainer': "https://accountName.blob.core.windows.net/con
         <span class="property-indicator"></span>
         <span class="property-type">string</span>
     </dt>
-    <dd>{{% md %}}The principal id of user assigned identity.{{% /md %}}</dd>
-</dl>
+    <dd>{{% md %}}The principal id of user assigned identity.{{% /md %}}</dd></dl>
 {{% /choosable %}}
 
 {{% choosable language go %}}
-<dl class="resources-properties">
-
-    <dt class="property-optional"
+<dl class="resources-properties"><dt class="property-optional"
             title="Optional">
         <span id="clientid_go">
 <a href="#clientid_go" style="color: inherit; text-decoration: inherit;">Client<wbr>Id</a>
@@ -1320,8 +1146,7 @@ When 'AzureStorageBlobContainer': "https://accountName.blob.core.windows.net/con
         <span class="property-indicator"></span>
         <span class="property-type">string</span>
     </dt>
-    <dd>{{% md %}}The client id of user assigned identity.{{% /md %}}</dd>
-    <dt class="property-optional"
+    <dd>{{% md %}}The client id of user assigned identity.{{% /md %}}</dd><dt class="property-optional"
             title="Optional">
         <span id="principalid_go">
 <a href="#principalid_go" style="color: inherit; text-decoration: inherit;">Principal<wbr>Id</a>
@@ -1329,14 +1154,11 @@ When 'AzureStorageBlobContainer': "https://accountName.blob.core.windows.net/con
         <span class="property-indicator"></span>
         <span class="property-type">string</span>
     </dt>
-    <dd>{{% md %}}The principal id of user assigned identity.{{% /md %}}</dd>
-</dl>
+    <dd>{{% md %}}The principal id of user assigned identity.{{% /md %}}</dd></dl>
 {{% /choosable %}}
 
 {{% choosable language nodejs %}}
-<dl class="resources-properties">
-
-    <dt class="property-optional"
+<dl class="resources-properties"><dt class="property-optional"
             title="Optional">
         <span id="clientid_nodejs">
 <a href="#clientid_nodejs" style="color: inherit; text-decoration: inherit;">client<wbr>Id</a>
@@ -1344,8 +1166,7 @@ When 'AzureStorageBlobContainer': "https://accountName.blob.core.windows.net/con
         <span class="property-indicator"></span>
         <span class="property-type">string</span>
     </dt>
-    <dd>{{% md %}}The client id of user assigned identity.{{% /md %}}</dd>
-    <dt class="property-optional"
+    <dd>{{% md %}}The client id of user assigned identity.{{% /md %}}</dd><dt class="property-optional"
             title="Optional">
         <span id="principalid_nodejs">
 <a href="#principalid_nodejs" style="color: inherit; text-decoration: inherit;">principal<wbr>Id</a>
@@ -1353,14 +1174,11 @@ When 'AzureStorageBlobContainer': "https://accountName.blob.core.windows.net/con
         <span class="property-indicator"></span>
         <span class="property-type">string</span>
     </dt>
-    <dd>{{% md %}}The principal id of user assigned identity.{{% /md %}}</dd>
-</dl>
+    <dd>{{% md %}}The principal id of user assigned identity.{{% /md %}}</dd></dl>
 {{% /choosable %}}
 
 {{% choosable language python %}}
-<dl class="resources-properties">
-
-    <dt class="property-optional"
+<dl class="resources-properties"><dt class="property-optional"
             title="Optional">
         <span id="client_id_python">
 <a href="#client_id_python" style="color: inherit; text-decoration: inherit;">client_<wbr>id</a>
@@ -1368,8 +1186,7 @@ When 'AzureStorageBlobContainer': "https://accountName.blob.core.windows.net/con
         <span class="property-indicator"></span>
         <span class="property-type">str</span>
     </dt>
-    <dd>{{% md %}}The client id of user assigned identity.{{% /md %}}</dd>
-    <dt class="property-optional"
+    <dd>{{% md %}}The client id of user assigned identity.{{% /md %}}</dd><dt class="property-optional"
             title="Optional">
         <span id="principal_id_python">
 <a href="#principal_id_python" style="color: inherit; text-decoration: inherit;">principal_<wbr>id</a>
@@ -1377,8 +1194,7 @@ When 'AzureStorageBlobContainer': "https://accountName.blob.core.windows.net/con
         <span class="property-indicator"></span>
         <span class="property-type">str</span>
     </dt>
-    <dd>{{% md %}}The principal id of user assigned identity.{{% /md %}}</dd>
-</dl>
+    <dd>{{% md %}}The principal id of user assigned identity.{{% /md %}}</dd></dl>
 {{% /choosable %}}
 
 

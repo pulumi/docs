@@ -14,11 +14,17 @@ SaaS REST API resource definition.
 API Version: 2018-03-01-beta.
 
 {{% examples %}}
+
 ## Example Usage
 
 {{< chooser language "typescript,python,go,csharp" / >}}
+
+
 ### Create subscription level SaaS resource
-{{% example csharp %}}
+
+
+{{< example csharp >}}
+
 ```csharp
 using Pulumi;
 using AzureNative = Pulumi.AzureNative;
@@ -51,9 +57,12 @@ class MyStack : Stack
 
 ```
 
-{{% /example %}}
 
-{{% example go %}}
+{{< /example >}}
+
+
+{{< example go >}}
+
 
 ```go
 package main
@@ -89,9 +98,12 @@ func main() {
 
 ```
 
-{{% /example %}}
 
-{{% example python %}}
+{{< /example >}}
+
+
+{{< example python >}}
+
 
 ```python
 import pulumi
@@ -114,9 +126,12 @@ saas_subscription_level = azure_native.saas.SaasSubscriptionLevel("saasSubscript
 
 ```
 
-{{% /example %}}
 
-{{% example typescript %}}
+{{< /example >}}
+
+
+{{< example typescript >}}
+
 
 ```typescript
 import * as pulumi from "@pulumi/pulumi";
@@ -140,9 +155,16 @@ const saasSubscriptionLevel = new azure_native.saas.SaasSubscriptionLevel("saasS
 
 ```
 
-{{% /example %}}
+
+{{< /example >}}
+
+
+
+
 
 {{% /examples %}}
+
+
 
 
 ## Create a SaasSubscriptionLevel Resource {#create}
@@ -167,9 +189,7 @@ const saasSubscriptionLevel = new azure_native.saas.SaasSubscriptionLevel("saasS
 
 {{% choosable language nodejs %}}
 
-<dl class="resources-properties">
-  
-    <dt
+<dl class="resources-properties"><dt
         class="property-required" title="Required">
         <span>name</span>
         <span class="property-indicator"></span>
@@ -177,9 +197,7 @@ const saasSubscriptionLevel = new azure_native.saas.SaasSubscriptionLevel("saasS
     </dt>
     <dd>
       The unique name of the resource.
-    </dd>
-  
-    <dt
+    </dd><dt
         class="property-required" title="Required">
         <span>args</span>
         <span class="property-indicator"></span>
@@ -187,9 +205,7 @@ const saasSubscriptionLevel = new azure_native.saas.SaasSubscriptionLevel("saasS
     </dt>
     <dd>
       The arguments to resource properties.
-    </dd>
-  
-    <dt
+    </dd><dt
         class="property-optional" title="Optional">
         <span>opts</span>
         <span class="property-indicator"></span>
@@ -197,10 +213,7 @@ const saasSubscriptionLevel = new azure_native.saas.SaasSubscriptionLevel("saasS
     </dt>
     <dd>
       Bag of options to control resource&#39;s behavior.
-    </dd>
-  
-
-</dl>
+    </dd></dl>
 
 {{% /choosable %}}
 
@@ -226,9 +239,7 @@ const saasSubscriptionLevel = new azure_native.saas.SaasSubscriptionLevel("saasS
 
 {{% choosable language go %}}
 
-<dl class="resources-properties">
-  
-    <dt
+<dl class="resources-properties"><dt
         class="property-optional" title="Optional">
         <span>ctx</span>
         <span class="property-indicator"></span>
@@ -236,9 +247,7 @@ const saasSubscriptionLevel = new azure_native.saas.SaasSubscriptionLevel("saasS
     </dt>
     <dd>
       Context object for the current deployment.
-    </dd>
-  
-    <dt
+    </dd><dt
         class="property-required" title="Required">
         <span>name</span>
         <span class="property-indicator"></span>
@@ -246,9 +255,7 @@ const saasSubscriptionLevel = new azure_native.saas.SaasSubscriptionLevel("saasS
     </dt>
     <dd>
       The unique name of the resource.
-    </dd>
-  
-    <dt
+    </dd><dt
         class="property-required" title="Required">
         <span>args</span>
         <span class="property-indicator"></span>
@@ -256,9 +263,7 @@ const saasSubscriptionLevel = new azure_native.saas.SaasSubscriptionLevel("saasS
     </dt>
     <dd>
       The arguments to resource properties.
-    </dd>
-  
-    <dt
+    </dd><dt
         class="property-optional" title="Optional">
         <span>opts</span>
         <span class="property-indicator"></span>
@@ -266,18 +271,13 @@ const saasSubscriptionLevel = new azure_native.saas.SaasSubscriptionLevel("saasS
     </dt>
     <dd>
       Bag of options to control resource&#39;s behavior.
-    </dd>
-  
-
-</dl>
+    </dd></dl>
 
 {{% /choosable %}}
 
 {{% choosable language csharp %}}
 
-<dl class="resources-properties">
-  
-    <dt
+<dl class="resources-properties"><dt
         class="property-required" title="Required">
         <span>name</span>
         <span class="property-indicator"></span>
@@ -285,9 +285,7 @@ const saasSubscriptionLevel = new azure_native.saas.SaasSubscriptionLevel("saasS
     </dt>
     <dd>
       The unique name of the resource.
-    </dd>
-  
-    <dt
+    </dd><dt
         class="property-required" title="Required">
         <span>args</span>
         <span class="property-indicator"></span>
@@ -295,9 +293,7 @@ const saasSubscriptionLevel = new azure_native.saas.SaasSubscriptionLevel("saasS
     </dt>
     <dd>
       The arguments to resource properties.
-    </dd>
-  
-    <dt
+    </dd><dt
         class="property-optional" title="Optional">
         <span>opts</span>
         <span class="property-indicator"></span>
@@ -305,10 +301,7 @@ const saasSubscriptionLevel = new azure_native.saas.SaasSubscriptionLevel("saasS
     </dt>
     <dd>
       Bag of options to control resource&#39;s behavior.
-    </dd>
-  
-
-</dl>
+    </dd></dl>
 
 {{% /choosable %}}
 
@@ -323,9 +316,7 @@ The SaasSubscriptionLevel resource accepts the following [input]({{< relref "/do
 
 
 {{% choosable language csharp %}}
-<dl class="resources-properties">
-
-    <dt class="property-required"
+<dl class="resources-properties"><dt class="property-required"
             title="Required">
         <span id="resourcegroupname_csharp">
 <a href="#resourcegroupname_csharp" style="color: inherit; text-decoration: inherit;">Resource<wbr>Group<wbr>Name</a>
@@ -333,8 +324,7 @@ The SaasSubscriptionLevel resource accepts the following [input]({{< relref "/do
         <span class="property-indicator"></span>
         <span class="property-type">string</span>
     </dt>
-    <dd>{{% md %}}The name of the resource group.{{% /md %}}</dd>
-    <dt class="property-optional"
+    <dd>{{% md %}}The name of the resource group.{{% /md %}}</dd><dt class="property-optional"
             title="Optional">
         <span id="name_csharp">
 <a href="#name_csharp" style="color: inherit; text-decoration: inherit;">Name</a>
@@ -342,8 +332,7 @@ The SaasSubscriptionLevel resource accepts the following [input]({{< relref "/do
         <span class="property-indicator"></span>
         <span class="property-type">string</span>
     </dt>
-    <dd>{{% md %}}The resource name{{% /md %}}</dd>
-    <dt class="property-optional"
+    <dd>{{% md %}}The resource name{{% /md %}}</dd><dt class="property-optional"
             title="Optional">
         <span id="properties_csharp">
 <a href="#properties_csharp" style="color: inherit; text-decoration: inherit;">Properties</a>
@@ -351,8 +340,7 @@ The SaasSubscriptionLevel resource accepts the following [input]({{< relref "/do
         <span class="property-indicator"></span>
         <span class="property-type"><a href="#saascreationproperties">Pulumi.<wbr>Azure<wbr>Native.<wbr>Saa<wbr>S.<wbr>Inputs.<wbr>Saas<wbr>Creation<wbr>Properties<wbr>Args</a></span>
     </dt>
-    <dd>{{% md %}}Properties of the SaaS resource that are relevant for creation.{{% /md %}}</dd>
-    <dt class="property-optional"
+    <dd>{{% md %}}Properties of the SaaS resource that are relevant for creation.{{% /md %}}</dd><dt class="property-optional"
             title="Optional">
         <span id="resourcename_csharp">
 <a href="#resourcename_csharp" style="color: inherit; text-decoration: inherit;">Resource<wbr>Name</a>
@@ -360,8 +348,7 @@ The SaasSubscriptionLevel resource accepts the following [input]({{< relref "/do
         <span class="property-indicator"></span>
         <span class="property-type">string</span>
     </dt>
-    <dd>{{% md %}}The name of the resource.{{% /md %}}</dd>
-    <dt class="property-optional"
+    <dd>{{% md %}}The name of the resource.{{% /md %}}</dd><dt class="property-optional"
             title="Optional">
         <span id="tags_csharp">
 <a href="#tags_csharp" style="color: inherit; text-decoration: inherit;">Tags</a>
@@ -369,14 +356,11 @@ The SaasSubscriptionLevel resource accepts the following [input]({{< relref "/do
         <span class="property-indicator"></span>
         <span class="property-type">Dictionary&lt;string, string&gt;</span>
     </dt>
-    <dd>{{% md %}}the resource tags.{{% /md %}}</dd>
-</dl>
+    <dd>{{% md %}}the resource tags.{{% /md %}}</dd></dl>
 {{% /choosable %}}
 
 {{% choosable language go %}}
-<dl class="resources-properties">
-
-    <dt class="property-required"
+<dl class="resources-properties"><dt class="property-required"
             title="Required">
         <span id="resourcegroupname_go">
 <a href="#resourcegroupname_go" style="color: inherit; text-decoration: inherit;">Resource<wbr>Group<wbr>Name</a>
@@ -384,8 +368,7 @@ The SaasSubscriptionLevel resource accepts the following [input]({{< relref "/do
         <span class="property-indicator"></span>
         <span class="property-type">string</span>
     </dt>
-    <dd>{{% md %}}The name of the resource group.{{% /md %}}</dd>
-    <dt class="property-optional"
+    <dd>{{% md %}}The name of the resource group.{{% /md %}}</dd><dt class="property-optional"
             title="Optional">
         <span id="name_go">
 <a href="#name_go" style="color: inherit; text-decoration: inherit;">Name</a>
@@ -393,8 +376,7 @@ The SaasSubscriptionLevel resource accepts the following [input]({{< relref "/do
         <span class="property-indicator"></span>
         <span class="property-type">string</span>
     </dt>
-    <dd>{{% md %}}The resource name{{% /md %}}</dd>
-    <dt class="property-optional"
+    <dd>{{% md %}}The resource name{{% /md %}}</dd><dt class="property-optional"
             title="Optional">
         <span id="properties_go">
 <a href="#properties_go" style="color: inherit; text-decoration: inherit;">Properties</a>
@@ -402,8 +384,7 @@ The SaasSubscriptionLevel resource accepts the following [input]({{< relref "/do
         <span class="property-indicator"></span>
         <span class="property-type"><a href="#saascreationproperties">Saas<wbr>Creation<wbr>Properties</a></span>
     </dt>
-    <dd>{{% md %}}Properties of the SaaS resource that are relevant for creation.{{% /md %}}</dd>
-    <dt class="property-optional"
+    <dd>{{% md %}}Properties of the SaaS resource that are relevant for creation.{{% /md %}}</dd><dt class="property-optional"
             title="Optional">
         <span id="resourcename_go">
 <a href="#resourcename_go" style="color: inherit; text-decoration: inherit;">Resource<wbr>Name</a>
@@ -411,8 +392,7 @@ The SaasSubscriptionLevel resource accepts the following [input]({{< relref "/do
         <span class="property-indicator"></span>
         <span class="property-type">string</span>
     </dt>
-    <dd>{{% md %}}The name of the resource.{{% /md %}}</dd>
-    <dt class="property-optional"
+    <dd>{{% md %}}The name of the resource.{{% /md %}}</dd><dt class="property-optional"
             title="Optional">
         <span id="tags_go">
 <a href="#tags_go" style="color: inherit; text-decoration: inherit;">Tags</a>
@@ -420,14 +400,11 @@ The SaasSubscriptionLevel resource accepts the following [input]({{< relref "/do
         <span class="property-indicator"></span>
         <span class="property-type">map[string]string</span>
     </dt>
-    <dd>{{% md %}}the resource tags.{{% /md %}}</dd>
-</dl>
+    <dd>{{% md %}}the resource tags.{{% /md %}}</dd></dl>
 {{% /choosable %}}
 
 {{% choosable language nodejs %}}
-<dl class="resources-properties">
-
-    <dt class="property-required"
+<dl class="resources-properties"><dt class="property-required"
             title="Required">
         <span id="resourcegroupname_nodejs">
 <a href="#resourcegroupname_nodejs" style="color: inherit; text-decoration: inherit;">resource<wbr>Group<wbr>Name</a>
@@ -435,8 +412,7 @@ The SaasSubscriptionLevel resource accepts the following [input]({{< relref "/do
         <span class="property-indicator"></span>
         <span class="property-type">string</span>
     </dt>
-    <dd>{{% md %}}The name of the resource group.{{% /md %}}</dd>
-    <dt class="property-optional"
+    <dd>{{% md %}}The name of the resource group.{{% /md %}}</dd><dt class="property-optional"
             title="Optional">
         <span id="name_nodejs">
 <a href="#name_nodejs" style="color: inherit; text-decoration: inherit;">name</a>
@@ -444,8 +420,7 @@ The SaasSubscriptionLevel resource accepts the following [input]({{< relref "/do
         <span class="property-indicator"></span>
         <span class="property-type">string</span>
     </dt>
-    <dd>{{% md %}}The resource name{{% /md %}}</dd>
-    <dt class="property-optional"
+    <dd>{{% md %}}The resource name{{% /md %}}</dd><dt class="property-optional"
             title="Optional">
         <span id="properties_nodejs">
 <a href="#properties_nodejs" style="color: inherit; text-decoration: inherit;">properties</a>
@@ -453,8 +428,7 @@ The SaasSubscriptionLevel resource accepts the following [input]({{< relref "/do
         <span class="property-indicator"></span>
         <span class="property-type"><a href="#saascreationproperties">Saas<wbr>Creation<wbr>Properties</a></span>
     </dt>
-    <dd>{{% md %}}Properties of the SaaS resource that are relevant for creation.{{% /md %}}</dd>
-    <dt class="property-optional"
+    <dd>{{% md %}}Properties of the SaaS resource that are relevant for creation.{{% /md %}}</dd><dt class="property-optional"
             title="Optional">
         <span id="resourcename_nodejs">
 <a href="#resourcename_nodejs" style="color: inherit; text-decoration: inherit;">resource<wbr>Name</a>
@@ -462,8 +436,7 @@ The SaasSubscriptionLevel resource accepts the following [input]({{< relref "/do
         <span class="property-indicator"></span>
         <span class="property-type">string</span>
     </dt>
-    <dd>{{% md %}}The name of the resource.{{% /md %}}</dd>
-    <dt class="property-optional"
+    <dd>{{% md %}}The name of the resource.{{% /md %}}</dd><dt class="property-optional"
             title="Optional">
         <span id="tags_nodejs">
 <a href="#tags_nodejs" style="color: inherit; text-decoration: inherit;">tags</a>
@@ -471,14 +444,11 @@ The SaasSubscriptionLevel resource accepts the following [input]({{< relref "/do
         <span class="property-indicator"></span>
         <span class="property-type">{[key: string]: string}</span>
     </dt>
-    <dd>{{% md %}}the resource tags.{{% /md %}}</dd>
-</dl>
+    <dd>{{% md %}}the resource tags.{{% /md %}}</dd></dl>
 {{% /choosable %}}
 
 {{% choosable language python %}}
-<dl class="resources-properties">
-
-    <dt class="property-required"
+<dl class="resources-properties"><dt class="property-required"
             title="Required">
         <span id="resource_group_name_python">
 <a href="#resource_group_name_python" style="color: inherit; text-decoration: inherit;">resource_<wbr>group_<wbr>name</a>
@@ -486,8 +456,7 @@ The SaasSubscriptionLevel resource accepts the following [input]({{< relref "/do
         <span class="property-indicator"></span>
         <span class="property-type">str</span>
     </dt>
-    <dd>{{% md %}}The name of the resource group.{{% /md %}}</dd>
-    <dt class="property-optional"
+    <dd>{{% md %}}The name of the resource group.{{% /md %}}</dd><dt class="property-optional"
             title="Optional">
         <span id="name_python">
 <a href="#name_python" style="color: inherit; text-decoration: inherit;">name</a>
@@ -495,8 +464,7 @@ The SaasSubscriptionLevel resource accepts the following [input]({{< relref "/do
         <span class="property-indicator"></span>
         <span class="property-type">str</span>
     </dt>
-    <dd>{{% md %}}The resource name{{% /md %}}</dd>
-    <dt class="property-optional"
+    <dd>{{% md %}}The resource name{{% /md %}}</dd><dt class="property-optional"
             title="Optional">
         <span id="properties_python">
 <a href="#properties_python" style="color: inherit; text-decoration: inherit;">properties</a>
@@ -504,8 +472,7 @@ The SaasSubscriptionLevel resource accepts the following [input]({{< relref "/do
         <span class="property-indicator"></span>
         <span class="property-type"><a href="#saascreationproperties">Saas<wbr>Creation<wbr>Properties<wbr>Args</a></span>
     </dt>
-    <dd>{{% md %}}Properties of the SaaS resource that are relevant for creation.{{% /md %}}</dd>
-    <dt class="property-optional"
+    <dd>{{% md %}}Properties of the SaaS resource that are relevant for creation.{{% /md %}}</dd><dt class="property-optional"
             title="Optional">
         <span id="resource_name_python">
 <a href="#resource_name_python" style="color: inherit; text-decoration: inherit;">resource_<wbr>name</a>
@@ -513,8 +480,7 @@ The SaasSubscriptionLevel resource accepts the following [input]({{< relref "/do
         <span class="property-indicator"></span>
         <span class="property-type">str</span>
     </dt>
-    <dd>{{% md %}}The name of the resource.{{% /md %}}</dd>
-    <dt class="property-optional"
+    <dd>{{% md %}}The name of the resource.{{% /md %}}</dd><dt class="property-optional"
             title="Optional">
         <span id="tags_python">
 <a href="#tags_python" style="color: inherit; text-decoration: inherit;">tags</a>
@@ -522,8 +488,7 @@ The SaasSubscriptionLevel resource accepts the following [input]({{< relref "/do
         <span class="property-indicator"></span>
         <span class="property-type">Mapping[str, str]</span>
     </dt>
-    <dd>{{% md %}}the resource tags.{{% /md %}}</dd>
-</dl>
+    <dd>{{% md %}}the resource tags.{{% /md %}}</dd></dl>
 {{% /choosable %}}
 
 
@@ -534,9 +499,7 @@ All [input](#inputs) properties are implicitly available as output properties. A
 
 
 {{% choosable language csharp %}}
-<dl class="resources-properties">
-
-    <dt class="property-"
+<dl class="resources-properties"><dt class="property-"
             title="">
         <span id="id_csharp">
 <a href="#id_csharp" style="color: inherit; text-decoration: inherit;">Id</a>
@@ -544,8 +507,7 @@ All [input](#inputs) properties are implicitly available as output properties. A
         <span class="property-indicator"></span>
         <span class="property-type">string</span>
     </dt>
-    <dd>{{% md %}}The provider-assigned unique ID for this managed resource.{{% /md %}}</dd>
-    <dt class="property-"
+    <dd>{{% md %}}The provider-assigned unique ID for this managed resource.{{% /md %}}</dd><dt class="property-"
             title="">
         <span id="type_csharp">
 <a href="#type_csharp" style="color: inherit; text-decoration: inherit;">Type</a>
@@ -553,14 +515,11 @@ All [input](#inputs) properties are implicitly available as output properties. A
         <span class="property-indicator"></span>
         <span class="property-type">string</span>
     </dt>
-    <dd>{{% md %}}Resource type.{{% /md %}}</dd>
-</dl>
+    <dd>{{% md %}}Resource type.{{% /md %}}</dd></dl>
 {{% /choosable %}}
 
 {{% choosable language go %}}
-<dl class="resources-properties">
-
-    <dt class="property-"
+<dl class="resources-properties"><dt class="property-"
             title="">
         <span id="id_go">
 <a href="#id_go" style="color: inherit; text-decoration: inherit;">Id</a>
@@ -568,8 +527,7 @@ All [input](#inputs) properties are implicitly available as output properties. A
         <span class="property-indicator"></span>
         <span class="property-type">string</span>
     </dt>
-    <dd>{{% md %}}The provider-assigned unique ID for this managed resource.{{% /md %}}</dd>
-    <dt class="property-"
+    <dd>{{% md %}}The provider-assigned unique ID for this managed resource.{{% /md %}}</dd><dt class="property-"
             title="">
         <span id="type_go">
 <a href="#type_go" style="color: inherit; text-decoration: inherit;">Type</a>
@@ -577,14 +535,11 @@ All [input](#inputs) properties are implicitly available as output properties. A
         <span class="property-indicator"></span>
         <span class="property-type">string</span>
     </dt>
-    <dd>{{% md %}}Resource type.{{% /md %}}</dd>
-</dl>
+    <dd>{{% md %}}Resource type.{{% /md %}}</dd></dl>
 {{% /choosable %}}
 
 {{% choosable language nodejs %}}
-<dl class="resources-properties">
-
-    <dt class="property-"
+<dl class="resources-properties"><dt class="property-"
             title="">
         <span id="id_nodejs">
 <a href="#id_nodejs" style="color: inherit; text-decoration: inherit;">id</a>
@@ -592,8 +547,7 @@ All [input](#inputs) properties are implicitly available as output properties. A
         <span class="property-indicator"></span>
         <span class="property-type">string</span>
     </dt>
-    <dd>{{% md %}}The provider-assigned unique ID for this managed resource.{{% /md %}}</dd>
-    <dt class="property-"
+    <dd>{{% md %}}The provider-assigned unique ID for this managed resource.{{% /md %}}</dd><dt class="property-"
             title="">
         <span id="type_nodejs">
 <a href="#type_nodejs" style="color: inherit; text-decoration: inherit;">type</a>
@@ -601,14 +555,11 @@ All [input](#inputs) properties are implicitly available as output properties. A
         <span class="property-indicator"></span>
         <span class="property-type">string</span>
     </dt>
-    <dd>{{% md %}}Resource type.{{% /md %}}</dd>
-</dl>
+    <dd>{{% md %}}Resource type.{{% /md %}}</dd></dl>
 {{% /choosable %}}
 
 {{% choosable language python %}}
-<dl class="resources-properties">
-
-    <dt class="property-"
+<dl class="resources-properties"><dt class="property-"
             title="">
         <span id="id_python">
 <a href="#id_python" style="color: inherit; text-decoration: inherit;">id</a>
@@ -616,8 +567,7 @@ All [input](#inputs) properties are implicitly available as output properties. A
         <span class="property-indicator"></span>
         <span class="property-type">str</span>
     </dt>
-    <dd>{{% md %}}The provider-assigned unique ID for this managed resource.{{% /md %}}</dd>
-    <dt class="property-"
+    <dd>{{% md %}}The provider-assigned unique ID for this managed resource.{{% /md %}}</dd><dt class="property-"
             title="">
         <span id="type_python">
 <a href="#type_python" style="color: inherit; text-decoration: inherit;">type</a>
@@ -625,8 +575,7 @@ All [input](#inputs) properties are implicitly available as output properties. A
         <span class="property-indicator"></span>
         <span class="property-type">str</span>
     </dt>
-    <dd>{{% md %}}Resource type.{{% /md %}}</dd>
-</dl>
+    <dd>{{% md %}}Resource type.{{% /md %}}</dd></dl>
 {{% /choosable %}}
 
 
@@ -642,47 +591,33 @@ All [input](#inputs) properties are implicitly available as output properties. A
 <h4 id="paymentchanneltype">Payment<wbr>Channel<wbr>Type</h4>
 
 {{% choosable language csharp %}}
-<dl class="tabular">
-    <dt>Subscription<wbr>Delegated</dt>
-    <dd>SubscriptionDelegated</dd>
-    <dt>Customer<wbr>Delegated</dt>
-    <dd>CustomerDelegated</dd>
-</dl>
+<dl class="tabular"><dt>Subscription<wbr>Delegated</dt>
+    <dd>SubscriptionDelegated</dd><dt>Customer<wbr>Delegated</dt>
+    <dd>CustomerDelegated</dd></dl>
 {{% /choosable %}}
 
 {{% choosable language go %}}
-<dl class="tabular">
-    <dt>Payment<wbr>Channel<wbr>Type<wbr>Subscription<wbr>Delegated</dt>
-    <dd>SubscriptionDelegated</dd>
-    <dt>Payment<wbr>Channel<wbr>Type<wbr>Customer<wbr>Delegated</dt>
-    <dd>CustomerDelegated</dd>
-</dl>
+<dl class="tabular"><dt>Payment<wbr>Channel<wbr>Type<wbr>Subscription<wbr>Delegated</dt>
+    <dd>SubscriptionDelegated</dd><dt>Payment<wbr>Channel<wbr>Type<wbr>Customer<wbr>Delegated</dt>
+    <dd>CustomerDelegated</dd></dl>
 {{% /choosable %}}
 
 {{% choosable language nodejs %}}
-<dl class="tabular">
-    <dt>Subscription<wbr>Delegated</dt>
-    <dd>SubscriptionDelegated</dd>
-    <dt>Customer<wbr>Delegated</dt>
-    <dd>CustomerDelegated</dd>
-</dl>
+<dl class="tabular"><dt>Subscription<wbr>Delegated</dt>
+    <dd>SubscriptionDelegated</dd><dt>Customer<wbr>Delegated</dt>
+    <dd>CustomerDelegated</dd></dl>
 {{% /choosable %}}
 
 {{% choosable language python %}}
-<dl class="tabular">
-    <dt>SUBSCRIPTION_DELEGATED</dt>
-    <dd>SubscriptionDelegated</dd>
-    <dt>CUSTOMER_DELEGATED</dt>
-    <dd>CustomerDelegated</dd>
-</dl>
+<dl class="tabular"><dt>SUBSCRIPTION_DELEGATED</dt>
+    <dd>SubscriptionDelegated</dd><dt>CUSTOMER_DELEGATED</dt>
+    <dd>CustomerDelegated</dd></dl>
 {{% /choosable %}}
 
 <h4 id="saascreationproperties">Saas<wbr>Creation<wbr>Properties</h4>
 
 {{% choosable language csharp %}}
-<dl class="resources-properties">
-
-    <dt class="property-optional"
+<dl class="resources-properties"><dt class="property-optional"
             title="Optional">
         <span id="autorenew_csharp">
 <a href="#autorenew_csharp" style="color: inherit; text-decoration: inherit;">Auto<wbr>Renew</a>
@@ -690,8 +625,7 @@ All [input](#inputs) properties are implicitly available as output properties. A
         <span class="property-indicator"></span>
         <span class="property-type">bool</span>
     </dt>
-    <dd>{{% md %}}Whether the SaaS subscription will auto renew upon term end.{{% /md %}}</dd>
-    <dt class="property-optional"
+    <dd>{{% md %}}Whether the SaaS subscription will auto renew upon term end.{{% /md %}}</dd><dt class="property-optional"
             title="Optional">
         <span id="offerid_csharp">
 <a href="#offerid_csharp" style="color: inherit; text-decoration: inherit;">Offer<wbr>Id</a>
@@ -699,8 +633,7 @@ All [input](#inputs) properties are implicitly available as output properties. A
         <span class="property-indicator"></span>
         <span class="property-type">string</span>
     </dt>
-    <dd>{{% md %}}The offer id.{{% /md %}}</dd>
-    <dt class="property-optional"
+    <dd>{{% md %}}The offer id.{{% /md %}}</dd><dt class="property-optional"
             title="Optional">
         <span id="paymentchannelmetadata_csharp">
 <a href="#paymentchannelmetadata_csharp" style="color: inherit; text-decoration: inherit;">Payment<wbr>Channel<wbr>Metadata</a>
@@ -708,8 +641,7 @@ All [input](#inputs) properties are implicitly available as output properties. A
         <span class="property-indicator"></span>
         <span class="property-type">Dictionary&lt;string, string&gt;</span>
     </dt>
-    <dd>{{% md %}}The metadata about the SaaS subscription such as the AzureSubscriptionId and ResourceUri.{{% /md %}}</dd>
-    <dt class="property-optional"
+    <dd>{{% md %}}The metadata about the SaaS subscription such as the AzureSubscriptionId and ResourceUri.{{% /md %}}</dd><dt class="property-optional"
             title="Optional">
         <span id="paymentchanneltype_csharp">
 <a href="#paymentchanneltype_csharp" style="color: inherit; text-decoration: inherit;">Payment<wbr>Channel<wbr>Type</a>
@@ -717,8 +649,7 @@ All [input](#inputs) properties are implicitly available as output properties. A
         <span class="property-indicator"></span>
         <span class="property-type">string | <a href="#paymentchanneltype">Pulumi.<wbr>Azure<wbr>Native.<wbr>Saa<wbr>S.<wbr>Payment<wbr>Channel<wbr>Type</a></span>
     </dt>
-    <dd>{{% md %}}The Payment channel for the SaasSubscription.{{% /md %}}</dd>
-    <dt class="property-optional"
+    <dd>{{% md %}}The Payment channel for the SaasSubscription.{{% /md %}}</dd><dt class="property-optional"
             title="Optional">
         <span id="publisherid_csharp">
 <a href="#publisherid_csharp" style="color: inherit; text-decoration: inherit;">Publisher<wbr>Id</a>
@@ -726,8 +657,7 @@ All [input](#inputs) properties are implicitly available as output properties. A
         <span class="property-indicator"></span>
         <span class="property-type">string</span>
     </dt>
-    <dd>{{% md %}}The publisher id.{{% /md %}}</dd>
-    <dt class="property-optional"
+    <dd>{{% md %}}The publisher id.{{% /md %}}</dd><dt class="property-optional"
             title="Optional">
         <span id="publishertestenvironment_csharp">
 <a href="#publishertestenvironment_csharp" style="color: inherit; text-decoration: inherit;">Publisher<wbr>Test<wbr>Environment</a>
@@ -735,8 +665,7 @@ All [input](#inputs) properties are implicitly available as output properties. A
         <span class="property-indicator"></span>
         <span class="property-type">string</span>
     </dt>
-    <dd>{{% md %}}The environment in the publisher side for this resource.{{% /md %}}</dd>
-    <dt class="property-optional"
+    <dd>{{% md %}}The environment in the publisher side for this resource.{{% /md %}}</dd><dt class="property-optional"
             title="Optional">
         <span id="quantity_csharp">
 <a href="#quantity_csharp" style="color: inherit; text-decoration: inherit;">Quantity</a>
@@ -744,8 +673,7 @@ All [input](#inputs) properties are implicitly available as output properties. A
         <span class="property-indicator"></span>
         <span class="property-type">double</span>
     </dt>
-    <dd>{{% md %}}The seat count.{{% /md %}}</dd>
-    <dt class="property-optional"
+    <dd>{{% md %}}The seat count.{{% /md %}}</dd><dt class="property-optional"
             title="Optional">
         <span id="saasresourcename_csharp">
 <a href="#saasresourcename_csharp" style="color: inherit; text-decoration: inherit;">Saas<wbr>Resource<wbr>Name</a>
@@ -753,8 +681,7 @@ All [input](#inputs) properties are implicitly available as output properties. A
         <span class="property-indicator"></span>
         <span class="property-type">string</span>
     </dt>
-    <dd>{{% md %}}The SaaS resource name.{{% /md %}}</dd>
-    <dt class="property-optional"
+    <dd>{{% md %}}The SaaS resource name.{{% /md %}}</dd><dt class="property-optional"
             title="Optional">
         <span id="saassessionid_csharp">
 <a href="#saassessionid_csharp" style="color: inherit; text-decoration: inherit;">Saas<wbr>Session<wbr>Id</a>
@@ -762,8 +689,7 @@ All [input](#inputs) properties are implicitly available as output properties. A
         <span class="property-indicator"></span>
         <span class="property-type">string</span>
     </dt>
-    <dd>{{% md %}}The saas session id used for dev service migration request.{{% /md %}}</dd>
-    <dt class="property-optional"
+    <dd>{{% md %}}The saas session id used for dev service migration request.{{% /md %}}</dd><dt class="property-optional"
             title="Optional">
         <span id="saassubscriptionid_csharp">
 <a href="#saassubscriptionid_csharp" style="color: inherit; text-decoration: inherit;">Saas<wbr>Subscription<wbr>Id</a>
@@ -771,8 +697,7 @@ All [input](#inputs) properties are implicitly available as output properties. A
         <span class="property-indicator"></span>
         <span class="property-type">string</span>
     </dt>
-    <dd>{{% md %}}The saas subscription id used for tenant to subscription level migration request.{{% /md %}}</dd>
-    <dt class="property-optional"
+    <dd>{{% md %}}The saas subscription id used for tenant to subscription level migration request.{{% /md %}}</dd><dt class="property-optional"
             title="Optional">
         <span id="skuid_csharp">
 <a href="#skuid_csharp" style="color: inherit; text-decoration: inherit;">Sku<wbr>Id</a>
@@ -780,8 +705,7 @@ All [input](#inputs) properties are implicitly available as output properties. A
         <span class="property-indicator"></span>
         <span class="property-type">string</span>
     </dt>
-    <dd>{{% md %}}The plan id.{{% /md %}}</dd>
-    <dt class="property-optional"
+    <dd>{{% md %}}The plan id.{{% /md %}}</dd><dt class="property-optional"
             title="Optional">
         <span id="termid_csharp">
 <a href="#termid_csharp" style="color: inherit; text-decoration: inherit;">Term<wbr>Id</a>
@@ -789,14 +713,11 @@ All [input](#inputs) properties are implicitly available as output properties. A
         <span class="property-indicator"></span>
         <span class="property-type">string</span>
     </dt>
-    <dd>{{% md %}}The current Term id.{{% /md %}}</dd>
-</dl>
+    <dd>{{% md %}}The current Term id.{{% /md %}}</dd></dl>
 {{% /choosable %}}
 
 {{% choosable language go %}}
-<dl class="resources-properties">
-
-    <dt class="property-optional"
+<dl class="resources-properties"><dt class="property-optional"
             title="Optional">
         <span id="autorenew_go">
 <a href="#autorenew_go" style="color: inherit; text-decoration: inherit;">Auto<wbr>Renew</a>
@@ -804,8 +725,7 @@ All [input](#inputs) properties are implicitly available as output properties. A
         <span class="property-indicator"></span>
         <span class="property-type">bool</span>
     </dt>
-    <dd>{{% md %}}Whether the SaaS subscription will auto renew upon term end.{{% /md %}}</dd>
-    <dt class="property-optional"
+    <dd>{{% md %}}Whether the SaaS subscription will auto renew upon term end.{{% /md %}}</dd><dt class="property-optional"
             title="Optional">
         <span id="offerid_go">
 <a href="#offerid_go" style="color: inherit; text-decoration: inherit;">Offer<wbr>Id</a>
@@ -813,8 +733,7 @@ All [input](#inputs) properties are implicitly available as output properties. A
         <span class="property-indicator"></span>
         <span class="property-type">string</span>
     </dt>
-    <dd>{{% md %}}The offer id.{{% /md %}}</dd>
-    <dt class="property-optional"
+    <dd>{{% md %}}The offer id.{{% /md %}}</dd><dt class="property-optional"
             title="Optional">
         <span id="paymentchannelmetadata_go">
 <a href="#paymentchannelmetadata_go" style="color: inherit; text-decoration: inherit;">Payment<wbr>Channel<wbr>Metadata</a>
@@ -822,8 +741,7 @@ All [input](#inputs) properties are implicitly available as output properties. A
         <span class="property-indicator"></span>
         <span class="property-type">map[string]string</span>
     </dt>
-    <dd>{{% md %}}The metadata about the SaaS subscription such as the AzureSubscriptionId and ResourceUri.{{% /md %}}</dd>
-    <dt class="property-optional"
+    <dd>{{% md %}}The metadata about the SaaS subscription such as the AzureSubscriptionId and ResourceUri.{{% /md %}}</dd><dt class="property-optional"
             title="Optional">
         <span id="paymentchanneltype_go">
 <a href="#paymentchanneltype_go" style="color: inherit; text-decoration: inherit;">Payment<wbr>Channel<wbr>Type</a>
@@ -831,8 +749,7 @@ All [input](#inputs) properties are implicitly available as output properties. A
         <span class="property-indicator"></span>
         <span class="property-type">string | <a href="#paymentchanneltype">Payment<wbr>Channel<wbr>Type</a></span>
     </dt>
-    <dd>{{% md %}}The Payment channel for the SaasSubscription.{{% /md %}}</dd>
-    <dt class="property-optional"
+    <dd>{{% md %}}The Payment channel for the SaasSubscription.{{% /md %}}</dd><dt class="property-optional"
             title="Optional">
         <span id="publisherid_go">
 <a href="#publisherid_go" style="color: inherit; text-decoration: inherit;">Publisher<wbr>Id</a>
@@ -840,8 +757,7 @@ All [input](#inputs) properties are implicitly available as output properties. A
         <span class="property-indicator"></span>
         <span class="property-type">string</span>
     </dt>
-    <dd>{{% md %}}The publisher id.{{% /md %}}</dd>
-    <dt class="property-optional"
+    <dd>{{% md %}}The publisher id.{{% /md %}}</dd><dt class="property-optional"
             title="Optional">
         <span id="publishertestenvironment_go">
 <a href="#publishertestenvironment_go" style="color: inherit; text-decoration: inherit;">Publisher<wbr>Test<wbr>Environment</a>
@@ -849,8 +765,7 @@ All [input](#inputs) properties are implicitly available as output properties. A
         <span class="property-indicator"></span>
         <span class="property-type">string</span>
     </dt>
-    <dd>{{% md %}}The environment in the publisher side for this resource.{{% /md %}}</dd>
-    <dt class="property-optional"
+    <dd>{{% md %}}The environment in the publisher side for this resource.{{% /md %}}</dd><dt class="property-optional"
             title="Optional">
         <span id="quantity_go">
 <a href="#quantity_go" style="color: inherit; text-decoration: inherit;">Quantity</a>
@@ -858,8 +773,7 @@ All [input](#inputs) properties are implicitly available as output properties. A
         <span class="property-indicator"></span>
         <span class="property-type">float64</span>
     </dt>
-    <dd>{{% md %}}The seat count.{{% /md %}}</dd>
-    <dt class="property-optional"
+    <dd>{{% md %}}The seat count.{{% /md %}}</dd><dt class="property-optional"
             title="Optional">
         <span id="saasresourcename_go">
 <a href="#saasresourcename_go" style="color: inherit; text-decoration: inherit;">Saas<wbr>Resource<wbr>Name</a>
@@ -867,8 +781,7 @@ All [input](#inputs) properties are implicitly available as output properties. A
         <span class="property-indicator"></span>
         <span class="property-type">string</span>
     </dt>
-    <dd>{{% md %}}The SaaS resource name.{{% /md %}}</dd>
-    <dt class="property-optional"
+    <dd>{{% md %}}The SaaS resource name.{{% /md %}}</dd><dt class="property-optional"
             title="Optional">
         <span id="saassessionid_go">
 <a href="#saassessionid_go" style="color: inherit; text-decoration: inherit;">Saas<wbr>Session<wbr>Id</a>
@@ -876,8 +789,7 @@ All [input](#inputs) properties are implicitly available as output properties. A
         <span class="property-indicator"></span>
         <span class="property-type">string</span>
     </dt>
-    <dd>{{% md %}}The saas session id used for dev service migration request.{{% /md %}}</dd>
-    <dt class="property-optional"
+    <dd>{{% md %}}The saas session id used for dev service migration request.{{% /md %}}</dd><dt class="property-optional"
             title="Optional">
         <span id="saassubscriptionid_go">
 <a href="#saassubscriptionid_go" style="color: inherit; text-decoration: inherit;">Saas<wbr>Subscription<wbr>Id</a>
@@ -885,8 +797,7 @@ All [input](#inputs) properties are implicitly available as output properties. A
         <span class="property-indicator"></span>
         <span class="property-type">string</span>
     </dt>
-    <dd>{{% md %}}The saas subscription id used for tenant to subscription level migration request.{{% /md %}}</dd>
-    <dt class="property-optional"
+    <dd>{{% md %}}The saas subscription id used for tenant to subscription level migration request.{{% /md %}}</dd><dt class="property-optional"
             title="Optional">
         <span id="skuid_go">
 <a href="#skuid_go" style="color: inherit; text-decoration: inherit;">Sku<wbr>Id</a>
@@ -894,8 +805,7 @@ All [input](#inputs) properties are implicitly available as output properties. A
         <span class="property-indicator"></span>
         <span class="property-type">string</span>
     </dt>
-    <dd>{{% md %}}The plan id.{{% /md %}}</dd>
-    <dt class="property-optional"
+    <dd>{{% md %}}The plan id.{{% /md %}}</dd><dt class="property-optional"
             title="Optional">
         <span id="termid_go">
 <a href="#termid_go" style="color: inherit; text-decoration: inherit;">Term<wbr>Id</a>
@@ -903,14 +813,11 @@ All [input](#inputs) properties are implicitly available as output properties. A
         <span class="property-indicator"></span>
         <span class="property-type">string</span>
     </dt>
-    <dd>{{% md %}}The current Term id.{{% /md %}}</dd>
-</dl>
+    <dd>{{% md %}}The current Term id.{{% /md %}}</dd></dl>
 {{% /choosable %}}
 
 {{% choosable language nodejs %}}
-<dl class="resources-properties">
-
-    <dt class="property-optional"
+<dl class="resources-properties"><dt class="property-optional"
             title="Optional">
         <span id="autorenew_nodejs">
 <a href="#autorenew_nodejs" style="color: inherit; text-decoration: inherit;">auto<wbr>Renew</a>
@@ -918,8 +825,7 @@ All [input](#inputs) properties are implicitly available as output properties. A
         <span class="property-indicator"></span>
         <span class="property-type">boolean</span>
     </dt>
-    <dd>{{% md %}}Whether the SaaS subscription will auto renew upon term end.{{% /md %}}</dd>
-    <dt class="property-optional"
+    <dd>{{% md %}}Whether the SaaS subscription will auto renew upon term end.{{% /md %}}</dd><dt class="property-optional"
             title="Optional">
         <span id="offerid_nodejs">
 <a href="#offerid_nodejs" style="color: inherit; text-decoration: inherit;">offer<wbr>Id</a>
@@ -927,8 +833,7 @@ All [input](#inputs) properties are implicitly available as output properties. A
         <span class="property-indicator"></span>
         <span class="property-type">string</span>
     </dt>
-    <dd>{{% md %}}The offer id.{{% /md %}}</dd>
-    <dt class="property-optional"
+    <dd>{{% md %}}The offer id.{{% /md %}}</dd><dt class="property-optional"
             title="Optional">
         <span id="paymentchannelmetadata_nodejs">
 <a href="#paymentchannelmetadata_nodejs" style="color: inherit; text-decoration: inherit;">payment<wbr>Channel<wbr>Metadata</a>
@@ -936,8 +841,7 @@ All [input](#inputs) properties are implicitly available as output properties. A
         <span class="property-indicator"></span>
         <span class="property-type">{[key: string]: string}</span>
     </dt>
-    <dd>{{% md %}}The metadata about the SaaS subscription such as the AzureSubscriptionId and ResourceUri.{{% /md %}}</dd>
-    <dt class="property-optional"
+    <dd>{{% md %}}The metadata about the SaaS subscription such as the AzureSubscriptionId and ResourceUri.{{% /md %}}</dd><dt class="property-optional"
             title="Optional">
         <span id="paymentchanneltype_nodejs">
 <a href="#paymentchanneltype_nodejs" style="color: inherit; text-decoration: inherit;">payment<wbr>Channel<wbr>Type</a>
@@ -945,8 +849,7 @@ All [input](#inputs) properties are implicitly available as output properties. A
         <span class="property-indicator"></span>
         <span class="property-type">string | <a href="#paymentchanneltype">Payment<wbr>Channel<wbr>Type</a></span>
     </dt>
-    <dd>{{% md %}}The Payment channel for the SaasSubscription.{{% /md %}}</dd>
-    <dt class="property-optional"
+    <dd>{{% md %}}The Payment channel for the SaasSubscription.{{% /md %}}</dd><dt class="property-optional"
             title="Optional">
         <span id="publisherid_nodejs">
 <a href="#publisherid_nodejs" style="color: inherit; text-decoration: inherit;">publisher<wbr>Id</a>
@@ -954,8 +857,7 @@ All [input](#inputs) properties are implicitly available as output properties. A
         <span class="property-indicator"></span>
         <span class="property-type">string</span>
     </dt>
-    <dd>{{% md %}}The publisher id.{{% /md %}}</dd>
-    <dt class="property-optional"
+    <dd>{{% md %}}The publisher id.{{% /md %}}</dd><dt class="property-optional"
             title="Optional">
         <span id="publishertestenvironment_nodejs">
 <a href="#publishertestenvironment_nodejs" style="color: inherit; text-decoration: inherit;">publisher<wbr>Test<wbr>Environment</a>
@@ -963,8 +865,7 @@ All [input](#inputs) properties are implicitly available as output properties. A
         <span class="property-indicator"></span>
         <span class="property-type">string</span>
     </dt>
-    <dd>{{% md %}}The environment in the publisher side for this resource.{{% /md %}}</dd>
-    <dt class="property-optional"
+    <dd>{{% md %}}The environment in the publisher side for this resource.{{% /md %}}</dd><dt class="property-optional"
             title="Optional">
         <span id="quantity_nodejs">
 <a href="#quantity_nodejs" style="color: inherit; text-decoration: inherit;">quantity</a>
@@ -972,8 +873,7 @@ All [input](#inputs) properties are implicitly available as output properties. A
         <span class="property-indicator"></span>
         <span class="property-type">number</span>
     </dt>
-    <dd>{{% md %}}The seat count.{{% /md %}}</dd>
-    <dt class="property-optional"
+    <dd>{{% md %}}The seat count.{{% /md %}}</dd><dt class="property-optional"
             title="Optional">
         <span id="saasresourcename_nodejs">
 <a href="#saasresourcename_nodejs" style="color: inherit; text-decoration: inherit;">saas<wbr>Resource<wbr>Name</a>
@@ -981,8 +881,7 @@ All [input](#inputs) properties are implicitly available as output properties. A
         <span class="property-indicator"></span>
         <span class="property-type">string</span>
     </dt>
-    <dd>{{% md %}}The SaaS resource name.{{% /md %}}</dd>
-    <dt class="property-optional"
+    <dd>{{% md %}}The SaaS resource name.{{% /md %}}</dd><dt class="property-optional"
             title="Optional">
         <span id="saassessionid_nodejs">
 <a href="#saassessionid_nodejs" style="color: inherit; text-decoration: inherit;">saas<wbr>Session<wbr>Id</a>
@@ -990,8 +889,7 @@ All [input](#inputs) properties are implicitly available as output properties. A
         <span class="property-indicator"></span>
         <span class="property-type">string</span>
     </dt>
-    <dd>{{% md %}}The saas session id used for dev service migration request.{{% /md %}}</dd>
-    <dt class="property-optional"
+    <dd>{{% md %}}The saas session id used for dev service migration request.{{% /md %}}</dd><dt class="property-optional"
             title="Optional">
         <span id="saassubscriptionid_nodejs">
 <a href="#saassubscriptionid_nodejs" style="color: inherit; text-decoration: inherit;">saas<wbr>Subscription<wbr>Id</a>
@@ -999,8 +897,7 @@ All [input](#inputs) properties are implicitly available as output properties. A
         <span class="property-indicator"></span>
         <span class="property-type">string</span>
     </dt>
-    <dd>{{% md %}}The saas subscription id used for tenant to subscription level migration request.{{% /md %}}</dd>
-    <dt class="property-optional"
+    <dd>{{% md %}}The saas subscription id used for tenant to subscription level migration request.{{% /md %}}</dd><dt class="property-optional"
             title="Optional">
         <span id="skuid_nodejs">
 <a href="#skuid_nodejs" style="color: inherit; text-decoration: inherit;">sku<wbr>Id</a>
@@ -1008,8 +905,7 @@ All [input](#inputs) properties are implicitly available as output properties. A
         <span class="property-indicator"></span>
         <span class="property-type">string</span>
     </dt>
-    <dd>{{% md %}}The plan id.{{% /md %}}</dd>
-    <dt class="property-optional"
+    <dd>{{% md %}}The plan id.{{% /md %}}</dd><dt class="property-optional"
             title="Optional">
         <span id="termid_nodejs">
 <a href="#termid_nodejs" style="color: inherit; text-decoration: inherit;">term<wbr>Id</a>
@@ -1017,14 +913,11 @@ All [input](#inputs) properties are implicitly available as output properties. A
         <span class="property-indicator"></span>
         <span class="property-type">string</span>
     </dt>
-    <dd>{{% md %}}The current Term id.{{% /md %}}</dd>
-</dl>
+    <dd>{{% md %}}The current Term id.{{% /md %}}</dd></dl>
 {{% /choosable %}}
 
 {{% choosable language python %}}
-<dl class="resources-properties">
-
-    <dt class="property-optional"
+<dl class="resources-properties"><dt class="property-optional"
             title="Optional">
         <span id="auto_renew_python">
 <a href="#auto_renew_python" style="color: inherit; text-decoration: inherit;">auto_<wbr>renew</a>
@@ -1032,8 +925,7 @@ All [input](#inputs) properties are implicitly available as output properties. A
         <span class="property-indicator"></span>
         <span class="property-type">bool</span>
     </dt>
-    <dd>{{% md %}}Whether the SaaS subscription will auto renew upon term end.{{% /md %}}</dd>
-    <dt class="property-optional"
+    <dd>{{% md %}}Whether the SaaS subscription will auto renew upon term end.{{% /md %}}</dd><dt class="property-optional"
             title="Optional">
         <span id="offer_id_python">
 <a href="#offer_id_python" style="color: inherit; text-decoration: inherit;">offer_<wbr>id</a>
@@ -1041,8 +933,7 @@ All [input](#inputs) properties are implicitly available as output properties. A
         <span class="property-indicator"></span>
         <span class="property-type">str</span>
     </dt>
-    <dd>{{% md %}}The offer id.{{% /md %}}</dd>
-    <dt class="property-optional"
+    <dd>{{% md %}}The offer id.{{% /md %}}</dd><dt class="property-optional"
             title="Optional">
         <span id="payment_channel_metadata_python">
 <a href="#payment_channel_metadata_python" style="color: inherit; text-decoration: inherit;">payment_<wbr>channel_<wbr>metadata</a>
@@ -1050,8 +941,7 @@ All [input](#inputs) properties are implicitly available as output properties. A
         <span class="property-indicator"></span>
         <span class="property-type">Mapping[str, str]</span>
     </dt>
-    <dd>{{% md %}}The metadata about the SaaS subscription such as the AzureSubscriptionId and ResourceUri.{{% /md %}}</dd>
-    <dt class="property-optional"
+    <dd>{{% md %}}The metadata about the SaaS subscription such as the AzureSubscriptionId and ResourceUri.{{% /md %}}</dd><dt class="property-optional"
             title="Optional">
         <span id="payment_channel_type_python">
 <a href="#payment_channel_type_python" style="color: inherit; text-decoration: inherit;">payment_<wbr>channel_<wbr>type</a>
@@ -1059,8 +949,7 @@ All [input](#inputs) properties are implicitly available as output properties. A
         <span class="property-indicator"></span>
         <span class="property-type">str | <a href="#paymentchanneltype">Payment<wbr>Channel<wbr>Type</a></span>
     </dt>
-    <dd>{{% md %}}The Payment channel for the SaasSubscription.{{% /md %}}</dd>
-    <dt class="property-optional"
+    <dd>{{% md %}}The Payment channel for the SaasSubscription.{{% /md %}}</dd><dt class="property-optional"
             title="Optional">
         <span id="publisher_id_python">
 <a href="#publisher_id_python" style="color: inherit; text-decoration: inherit;">publisher_<wbr>id</a>
@@ -1068,8 +957,7 @@ All [input](#inputs) properties are implicitly available as output properties. A
         <span class="property-indicator"></span>
         <span class="property-type">str</span>
     </dt>
-    <dd>{{% md %}}The publisher id.{{% /md %}}</dd>
-    <dt class="property-optional"
+    <dd>{{% md %}}The publisher id.{{% /md %}}</dd><dt class="property-optional"
             title="Optional">
         <span id="publisher_test_environment_python">
 <a href="#publisher_test_environment_python" style="color: inherit; text-decoration: inherit;">publisher_<wbr>test_<wbr>environment</a>
@@ -1077,8 +965,7 @@ All [input](#inputs) properties are implicitly available as output properties. A
         <span class="property-indicator"></span>
         <span class="property-type">str</span>
     </dt>
-    <dd>{{% md %}}The environment in the publisher side for this resource.{{% /md %}}</dd>
-    <dt class="property-optional"
+    <dd>{{% md %}}The environment in the publisher side for this resource.{{% /md %}}</dd><dt class="property-optional"
             title="Optional">
         <span id="quantity_python">
 <a href="#quantity_python" style="color: inherit; text-decoration: inherit;">quantity</a>
@@ -1086,8 +973,7 @@ All [input](#inputs) properties are implicitly available as output properties. A
         <span class="property-indicator"></span>
         <span class="property-type">float</span>
     </dt>
-    <dd>{{% md %}}The seat count.{{% /md %}}</dd>
-    <dt class="property-optional"
+    <dd>{{% md %}}The seat count.{{% /md %}}</dd><dt class="property-optional"
             title="Optional">
         <span id="saas_resource_name_python">
 <a href="#saas_resource_name_python" style="color: inherit; text-decoration: inherit;">saas_<wbr>resource_<wbr>name</a>
@@ -1095,8 +981,7 @@ All [input](#inputs) properties are implicitly available as output properties. A
         <span class="property-indicator"></span>
         <span class="property-type">str</span>
     </dt>
-    <dd>{{% md %}}The SaaS resource name.{{% /md %}}</dd>
-    <dt class="property-optional"
+    <dd>{{% md %}}The SaaS resource name.{{% /md %}}</dd><dt class="property-optional"
             title="Optional">
         <span id="saas_session_id_python">
 <a href="#saas_session_id_python" style="color: inherit; text-decoration: inherit;">saas_<wbr>session_<wbr>id</a>
@@ -1104,8 +989,7 @@ All [input](#inputs) properties are implicitly available as output properties. A
         <span class="property-indicator"></span>
         <span class="property-type">str</span>
     </dt>
-    <dd>{{% md %}}The saas session id used for dev service migration request.{{% /md %}}</dd>
-    <dt class="property-optional"
+    <dd>{{% md %}}The saas session id used for dev service migration request.{{% /md %}}</dd><dt class="property-optional"
             title="Optional">
         <span id="saas_subscription_id_python">
 <a href="#saas_subscription_id_python" style="color: inherit; text-decoration: inherit;">saas_<wbr>subscription_<wbr>id</a>
@@ -1113,8 +997,7 @@ All [input](#inputs) properties are implicitly available as output properties. A
         <span class="property-indicator"></span>
         <span class="property-type">str</span>
     </dt>
-    <dd>{{% md %}}The saas subscription id used for tenant to subscription level migration request.{{% /md %}}</dd>
-    <dt class="property-optional"
+    <dd>{{% md %}}The saas subscription id used for tenant to subscription level migration request.{{% /md %}}</dd><dt class="property-optional"
             title="Optional">
         <span id="sku_id_python">
 <a href="#sku_id_python" style="color: inherit; text-decoration: inherit;">sku_<wbr>id</a>
@@ -1122,8 +1005,7 @@ All [input](#inputs) properties are implicitly available as output properties. A
         <span class="property-indicator"></span>
         <span class="property-type">str</span>
     </dt>
-    <dd>{{% md %}}The plan id.{{% /md %}}</dd>
-    <dt class="property-optional"
+    <dd>{{% md %}}The plan id.{{% /md %}}</dd><dt class="property-optional"
             title="Optional">
         <span id="term_id_python">
 <a href="#term_id_python" style="color: inherit; text-decoration: inherit;">term_<wbr>id</a>
@@ -1131,16 +1013,13 @@ All [input](#inputs) properties are implicitly available as output properties. A
         <span class="property-indicator"></span>
         <span class="property-type">str</span>
     </dt>
-    <dd>{{% md %}}The current Term id.{{% /md %}}</dd>
-</dl>
+    <dd>{{% md %}}The current Term id.{{% /md %}}</dd></dl>
 {{% /choosable %}}
 
 <h4 id="saaspropertiesresponseterm">Saas<wbr>Properties<wbr>Response<wbr>Term</h4>
 
 {{% choosable language csharp %}}
-<dl class="resources-properties">
-
-    <dt class="property-optional"
+<dl class="resources-properties"><dt class="property-optional"
             title="Optional">
         <span id="enddate_csharp">
 <a href="#enddate_csharp" style="color: inherit; text-decoration: inherit;">End<wbr>Date</a>
@@ -1148,8 +1027,7 @@ All [input](#inputs) properties are implicitly available as output properties. A
         <span class="property-indicator"></span>
         <span class="property-type">string</span>
     </dt>
-    <dd>{{% md %}}The end date of the current term{{% /md %}}</dd>
-    <dt class="property-optional"
+    <dd>{{% md %}}The end date of the current term{{% /md %}}</dd><dt class="property-optional"
             title="Optional">
         <span id="startdate_csharp">
 <a href="#startdate_csharp" style="color: inherit; text-decoration: inherit;">Start<wbr>Date</a>
@@ -1157,8 +1035,7 @@ All [input](#inputs) properties are implicitly available as output properties. A
         <span class="property-indicator"></span>
         <span class="property-type">string</span>
     </dt>
-    <dd>{{% md %}}The start date of the current term{{% /md %}}</dd>
-    <dt class="property-optional"
+    <dd>{{% md %}}The start date of the current term{{% /md %}}</dd><dt class="property-optional"
             title="Optional">
         <span id="termunit_csharp">
 <a href="#termunit_csharp" style="color: inherit; text-decoration: inherit;">Term<wbr>Unit</a>
@@ -1166,14 +1043,11 @@ All [input](#inputs) properties are implicitly available as output properties. A
         <span class="property-indicator"></span>
         <span class="property-type">string</span>
     </dt>
-    <dd>{{% md %}}The unit indicating Monthly / Yearly{{% /md %}}</dd>
-</dl>
+    <dd>{{% md %}}The unit indicating Monthly / Yearly{{% /md %}}</dd></dl>
 {{% /choosable %}}
 
 {{% choosable language go %}}
-<dl class="resources-properties">
-
-    <dt class="property-optional"
+<dl class="resources-properties"><dt class="property-optional"
             title="Optional">
         <span id="enddate_go">
 <a href="#enddate_go" style="color: inherit; text-decoration: inherit;">End<wbr>Date</a>
@@ -1181,8 +1055,7 @@ All [input](#inputs) properties are implicitly available as output properties. A
         <span class="property-indicator"></span>
         <span class="property-type">string</span>
     </dt>
-    <dd>{{% md %}}The end date of the current term{{% /md %}}</dd>
-    <dt class="property-optional"
+    <dd>{{% md %}}The end date of the current term{{% /md %}}</dd><dt class="property-optional"
             title="Optional">
         <span id="startdate_go">
 <a href="#startdate_go" style="color: inherit; text-decoration: inherit;">Start<wbr>Date</a>
@@ -1190,8 +1063,7 @@ All [input](#inputs) properties are implicitly available as output properties. A
         <span class="property-indicator"></span>
         <span class="property-type">string</span>
     </dt>
-    <dd>{{% md %}}The start date of the current term{{% /md %}}</dd>
-    <dt class="property-optional"
+    <dd>{{% md %}}The start date of the current term{{% /md %}}</dd><dt class="property-optional"
             title="Optional">
         <span id="termunit_go">
 <a href="#termunit_go" style="color: inherit; text-decoration: inherit;">Term<wbr>Unit</a>
@@ -1199,14 +1071,11 @@ All [input](#inputs) properties are implicitly available as output properties. A
         <span class="property-indicator"></span>
         <span class="property-type">string</span>
     </dt>
-    <dd>{{% md %}}The unit indicating Monthly / Yearly{{% /md %}}</dd>
-</dl>
+    <dd>{{% md %}}The unit indicating Monthly / Yearly{{% /md %}}</dd></dl>
 {{% /choosable %}}
 
 {{% choosable language nodejs %}}
-<dl class="resources-properties">
-
-    <dt class="property-optional"
+<dl class="resources-properties"><dt class="property-optional"
             title="Optional">
         <span id="enddate_nodejs">
 <a href="#enddate_nodejs" style="color: inherit; text-decoration: inherit;">end<wbr>Date</a>
@@ -1214,8 +1083,7 @@ All [input](#inputs) properties are implicitly available as output properties. A
         <span class="property-indicator"></span>
         <span class="property-type">string</span>
     </dt>
-    <dd>{{% md %}}The end date of the current term{{% /md %}}</dd>
-    <dt class="property-optional"
+    <dd>{{% md %}}The end date of the current term{{% /md %}}</dd><dt class="property-optional"
             title="Optional">
         <span id="startdate_nodejs">
 <a href="#startdate_nodejs" style="color: inherit; text-decoration: inherit;">start<wbr>Date</a>
@@ -1223,8 +1091,7 @@ All [input](#inputs) properties are implicitly available as output properties. A
         <span class="property-indicator"></span>
         <span class="property-type">string</span>
     </dt>
-    <dd>{{% md %}}The start date of the current term{{% /md %}}</dd>
-    <dt class="property-optional"
+    <dd>{{% md %}}The start date of the current term{{% /md %}}</dd><dt class="property-optional"
             title="Optional">
         <span id="termunit_nodejs">
 <a href="#termunit_nodejs" style="color: inherit; text-decoration: inherit;">term<wbr>Unit</a>
@@ -1232,14 +1099,11 @@ All [input](#inputs) properties are implicitly available as output properties. A
         <span class="property-indicator"></span>
         <span class="property-type">string</span>
     </dt>
-    <dd>{{% md %}}The unit indicating Monthly / Yearly{{% /md %}}</dd>
-</dl>
+    <dd>{{% md %}}The unit indicating Monthly / Yearly{{% /md %}}</dd></dl>
 {{% /choosable %}}
 
 {{% choosable language python %}}
-<dl class="resources-properties">
-
-    <dt class="property-optional"
+<dl class="resources-properties"><dt class="property-optional"
             title="Optional">
         <span id="end_date_python">
 <a href="#end_date_python" style="color: inherit; text-decoration: inherit;">end_<wbr>date</a>
@@ -1247,8 +1111,7 @@ All [input](#inputs) properties are implicitly available as output properties. A
         <span class="property-indicator"></span>
         <span class="property-type">str</span>
     </dt>
-    <dd>{{% md %}}The end date of the current term{{% /md %}}</dd>
-    <dt class="property-optional"
+    <dd>{{% md %}}The end date of the current term{{% /md %}}</dd><dt class="property-optional"
             title="Optional">
         <span id="start_date_python">
 <a href="#start_date_python" style="color: inherit; text-decoration: inherit;">start_<wbr>date</a>
@@ -1256,8 +1119,7 @@ All [input](#inputs) properties are implicitly available as output properties. A
         <span class="property-indicator"></span>
         <span class="property-type">str</span>
     </dt>
-    <dd>{{% md %}}The start date of the current term{{% /md %}}</dd>
-    <dt class="property-optional"
+    <dd>{{% md %}}The start date of the current term{{% /md %}}</dd><dt class="property-optional"
             title="Optional">
         <span id="term_unit_python">
 <a href="#term_unit_python" style="color: inherit; text-decoration: inherit;">term_<wbr>unit</a>
@@ -1265,16 +1127,13 @@ All [input](#inputs) properties are implicitly available as output properties. A
         <span class="property-indicator"></span>
         <span class="property-type">str</span>
     </dt>
-    <dd>{{% md %}}The unit indicating Monthly / Yearly{{% /md %}}</dd>
-</dl>
+    <dd>{{% md %}}The unit indicating Monthly / Yearly{{% /md %}}</dd></dl>
 {{% /choosable %}}
 
 <h4 id="saasresourceresponseproperties">Saas<wbr>Resource<wbr>Response<wbr>Properties</h4>
 
 {{% choosable language csharp %}}
-<dl class="resources-properties">
-
-    <dt class="property-required"
+<dl class="resources-properties"><dt class="property-required"
             title="Required">
         <span id="created_csharp">
 <a href="#created_csharp" style="color: inherit; text-decoration: inherit;">Created</a>
@@ -1282,8 +1141,7 @@ All [input](#inputs) properties are implicitly available as output properties. A
         <span class="property-indicator"></span>
         <span class="property-type">string</span>
     </dt>
-    <dd>{{% md %}}The created date of this resource.{{% /md %}}</dd>
-    <dt class="property-optional"
+    <dd>{{% md %}}The created date of this resource.{{% /md %}}</dd><dt class="property-optional"
             title="Optional">
         <span id="autorenew_csharp">
 <a href="#autorenew_csharp" style="color: inherit; text-decoration: inherit;">Auto<wbr>Renew</a>
@@ -1291,8 +1149,7 @@ All [input](#inputs) properties are implicitly available as output properties. A
         <span class="property-indicator"></span>
         <span class="property-type">bool</span>
     </dt>
-    <dd>{{% md %}}Whether the SaaS subscription will auto renew upon term end.{{% /md %}}</dd>
-    <dt class="property-optional"
+    <dd>{{% md %}}Whether the SaaS subscription will auto renew upon term end.{{% /md %}}</dd><dt class="property-optional"
             title="Optional">
         <span id="isfreetrial_csharp">
 <a href="#isfreetrial_csharp" style="color: inherit; text-decoration: inherit;">Is<wbr>Free<wbr>Trial</a>
@@ -1300,8 +1157,7 @@ All [input](#inputs) properties are implicitly available as output properties. A
         <span class="property-indicator"></span>
         <span class="property-type">bool</span>
     </dt>
-    <dd>{{% md %}}Whether the current term is a Free Trial term{{% /md %}}</dd>
-    <dt class="property-optional"
+    <dd>{{% md %}}Whether the current term is a Free Trial term{{% /md %}}</dd><dt class="property-optional"
             title="Optional">
         <span id="lastmodified_csharp">
 <a href="#lastmodified_csharp" style="color: inherit; text-decoration: inherit;">Last<wbr>Modified</a>
@@ -1309,8 +1165,7 @@ All [input](#inputs) properties are implicitly available as output properties. A
         <span class="property-indicator"></span>
         <span class="property-type">string</span>
     </dt>
-    <dd>{{% md %}}The last modifier date if this resource.{{% /md %}}</dd>
-    <dt class="property-optional"
+    <dd>{{% md %}}The last modifier date if this resource.{{% /md %}}</dd><dt class="property-optional"
             title="Optional">
         <span id="offerid_csharp">
 <a href="#offerid_csharp" style="color: inherit; text-decoration: inherit;">Offer<wbr>Id</a>
@@ -1318,8 +1173,7 @@ All [input](#inputs) properties are implicitly available as output properties. A
         <span class="property-indicator"></span>
         <span class="property-type">string</span>
     </dt>
-    <dd>{{% md %}}The offer id.{{% /md %}}</dd>
-    <dt class="property-optional"
+    <dd>{{% md %}}The offer id.{{% /md %}}</dd><dt class="property-optional"
             title="Optional">
         <span id="paymentchannelmetadata_csharp">
 <a href="#paymentchannelmetadata_csharp" style="color: inherit; text-decoration: inherit;">Payment<wbr>Channel<wbr>Metadata</a>
@@ -1327,8 +1181,7 @@ All [input](#inputs) properties are implicitly available as output properties. A
         <span class="property-indicator"></span>
         <span class="property-type">Dictionary&lt;string, string&gt;</span>
     </dt>
-    <dd>{{% md %}}The metadata about the SaaS subscription such as the AzureSubscriptionId and ResourceUri.{{% /md %}}</dd>
-    <dt class="property-optional"
+    <dd>{{% md %}}The metadata about the SaaS subscription such as the AzureSubscriptionId and ResourceUri.{{% /md %}}</dd><dt class="property-optional"
             title="Optional">
         <span id="paymentchanneltype_csharp">
 <a href="#paymentchanneltype_csharp" style="color: inherit; text-decoration: inherit;">Payment<wbr>Channel<wbr>Type</a>
@@ -1336,8 +1189,7 @@ All [input](#inputs) properties are implicitly available as output properties. A
         <span class="property-indicator"></span>
         <span class="property-type">string</span>
     </dt>
-    <dd>{{% md %}}The Payment channel for the SaasSubscription.{{% /md %}}</dd>
-    <dt class="property-optional"
+    <dd>{{% md %}}The Payment channel for the SaasSubscription.{{% /md %}}</dd><dt class="property-optional"
             title="Optional">
         <span id="publisherid_csharp">
 <a href="#publisherid_csharp" style="color: inherit; text-decoration: inherit;">Publisher<wbr>Id</a>
@@ -1345,8 +1197,7 @@ All [input](#inputs) properties are implicitly available as output properties. A
         <span class="property-indicator"></span>
         <span class="property-type">string</span>
     </dt>
-    <dd>{{% md %}}The publisher id.{{% /md %}}</dd>
-    <dt class="property-optional"
+    <dd>{{% md %}}The publisher id.{{% /md %}}</dd><dt class="property-optional"
             title="Optional">
         <span id="publishertestenvironment_csharp">
 <a href="#publishertestenvironment_csharp" style="color: inherit; text-decoration: inherit;">Publisher<wbr>Test<wbr>Environment</a>
@@ -1354,8 +1205,7 @@ All [input](#inputs) properties are implicitly available as output properties. A
         <span class="property-indicator"></span>
         <span class="property-type">string</span>
     </dt>
-    <dd>{{% md %}}The environment in the publisher side for this resource.{{% /md %}}</dd>
-    <dt class="property-optional"
+    <dd>{{% md %}}The environment in the publisher side for this resource.{{% /md %}}</dd><dt class="property-optional"
             title="Optional">
         <span id="quantity_csharp">
 <a href="#quantity_csharp" style="color: inherit; text-decoration: inherit;">Quantity</a>
@@ -1363,8 +1213,7 @@ All [input](#inputs) properties are implicitly available as output properties. A
         <span class="property-indicator"></span>
         <span class="property-type">double</span>
     </dt>
-    <dd>{{% md %}}The seat count.{{% /md %}}</dd>
-    <dt class="property-optional"
+    <dd>{{% md %}}The seat count.{{% /md %}}</dd><dt class="property-optional"
             title="Optional">
         <span id="saasresourcename_csharp">
 <a href="#saasresourcename_csharp" style="color: inherit; text-decoration: inherit;">Saas<wbr>Resource<wbr>Name</a>
@@ -1372,8 +1221,7 @@ All [input](#inputs) properties are implicitly available as output properties. A
         <span class="property-indicator"></span>
         <span class="property-type">string</span>
     </dt>
-    <dd>{{% md %}}The SaaS resource name.{{% /md %}}</dd>
-    <dt class="property-optional"
+    <dd>{{% md %}}The SaaS resource name.{{% /md %}}</dd><dt class="property-optional"
             title="Optional">
         <span id="saassessionid_csharp">
 <a href="#saassessionid_csharp" style="color: inherit; text-decoration: inherit;">Saas<wbr>Session<wbr>Id</a>
@@ -1381,8 +1229,7 @@ All [input](#inputs) properties are implicitly available as output properties. A
         <span class="property-indicator"></span>
         <span class="property-type">string</span>
     </dt>
-    <dd>{{% md %}}The saas session id used for dev service migration request.{{% /md %}}</dd>
-    <dt class="property-optional"
+    <dd>{{% md %}}The saas session id used for dev service migration request.{{% /md %}}</dd><dt class="property-optional"
             title="Optional">
         <span id="saassubscriptionid_csharp">
 <a href="#saassubscriptionid_csharp" style="color: inherit; text-decoration: inherit;">Saas<wbr>Subscription<wbr>Id</a>
@@ -1390,8 +1237,7 @@ All [input](#inputs) properties are implicitly available as output properties. A
         <span class="property-indicator"></span>
         <span class="property-type">string</span>
     </dt>
-    <dd>{{% md %}}The saas subscription id used for tenant to subscription level migration request.{{% /md %}}</dd>
-    <dt class="property-optional"
+    <dd>{{% md %}}The saas subscription id used for tenant to subscription level migration request.{{% /md %}}</dd><dt class="property-optional"
             title="Optional">
         <span id="skuid_csharp">
 <a href="#skuid_csharp" style="color: inherit; text-decoration: inherit;">Sku<wbr>Id</a>
@@ -1399,8 +1245,7 @@ All [input](#inputs) properties are implicitly available as output properties. A
         <span class="property-indicator"></span>
         <span class="property-type">string</span>
     </dt>
-    <dd>{{% md %}}The plan id.{{% /md %}}</dd>
-    <dt class="property-optional"
+    <dd>{{% md %}}The plan id.{{% /md %}}</dd><dt class="property-optional"
             title="Optional">
         <span id="status_csharp">
 <a href="#status_csharp" style="color: inherit; text-decoration: inherit;">Status</a>
@@ -1408,8 +1253,7 @@ All [input](#inputs) properties are implicitly available as output properties. A
         <span class="property-indicator"></span>
         <span class="property-type">string</span>
     </dt>
-    <dd>{{% md %}}The SaaS Subscription Status.{{% /md %}}</dd>
-    <dt class="property-optional"
+    <dd>{{% md %}}The SaaS Subscription Status.{{% /md %}}</dd><dt class="property-optional"
             title="Optional">
         <span id="term_csharp">
 <a href="#term_csharp" style="color: inherit; text-decoration: inherit;">Term</a>
@@ -1417,8 +1261,7 @@ All [input](#inputs) properties are implicitly available as output properties. A
         <span class="property-indicator"></span>
         <span class="property-type"><a href="#saaspropertiesresponseterm">Pulumi.<wbr>Azure<wbr>Native.<wbr>Saa<wbr>S.<wbr>Inputs.<wbr>Saas<wbr>Properties<wbr>Response<wbr>Term<wbr>Args</a></span>
     </dt>
-    <dd>{{% md %}}The current Term object.{{% /md %}}</dd>
-    <dt class="property-optional"
+    <dd>{{% md %}}The current Term object.{{% /md %}}</dd><dt class="property-optional"
             title="Optional">
         <span id="termid_csharp">
 <a href="#termid_csharp" style="color: inherit; text-decoration: inherit;">Term<wbr>Id</a>
@@ -1426,14 +1269,11 @@ All [input](#inputs) properties are implicitly available as output properties. A
         <span class="property-indicator"></span>
         <span class="property-type">string</span>
     </dt>
-    <dd>{{% md %}}The current Term id.{{% /md %}}</dd>
-</dl>
+    <dd>{{% md %}}The current Term id.{{% /md %}}</dd></dl>
 {{% /choosable %}}
 
 {{% choosable language go %}}
-<dl class="resources-properties">
-
-    <dt class="property-required"
+<dl class="resources-properties"><dt class="property-required"
             title="Required">
         <span id="created_go">
 <a href="#created_go" style="color: inherit; text-decoration: inherit;">Created</a>
@@ -1441,8 +1281,7 @@ All [input](#inputs) properties are implicitly available as output properties. A
         <span class="property-indicator"></span>
         <span class="property-type">string</span>
     </dt>
-    <dd>{{% md %}}The created date of this resource.{{% /md %}}</dd>
-    <dt class="property-optional"
+    <dd>{{% md %}}The created date of this resource.{{% /md %}}</dd><dt class="property-optional"
             title="Optional">
         <span id="autorenew_go">
 <a href="#autorenew_go" style="color: inherit; text-decoration: inherit;">Auto<wbr>Renew</a>
@@ -1450,8 +1289,7 @@ All [input](#inputs) properties are implicitly available as output properties. A
         <span class="property-indicator"></span>
         <span class="property-type">bool</span>
     </dt>
-    <dd>{{% md %}}Whether the SaaS subscription will auto renew upon term end.{{% /md %}}</dd>
-    <dt class="property-optional"
+    <dd>{{% md %}}Whether the SaaS subscription will auto renew upon term end.{{% /md %}}</dd><dt class="property-optional"
             title="Optional">
         <span id="isfreetrial_go">
 <a href="#isfreetrial_go" style="color: inherit; text-decoration: inherit;">Is<wbr>Free<wbr>Trial</a>
@@ -1459,8 +1297,7 @@ All [input](#inputs) properties are implicitly available as output properties. A
         <span class="property-indicator"></span>
         <span class="property-type">bool</span>
     </dt>
-    <dd>{{% md %}}Whether the current term is a Free Trial term{{% /md %}}</dd>
-    <dt class="property-optional"
+    <dd>{{% md %}}Whether the current term is a Free Trial term{{% /md %}}</dd><dt class="property-optional"
             title="Optional">
         <span id="lastmodified_go">
 <a href="#lastmodified_go" style="color: inherit; text-decoration: inherit;">Last<wbr>Modified</a>
@@ -1468,8 +1305,7 @@ All [input](#inputs) properties are implicitly available as output properties. A
         <span class="property-indicator"></span>
         <span class="property-type">string</span>
     </dt>
-    <dd>{{% md %}}The last modifier date if this resource.{{% /md %}}</dd>
-    <dt class="property-optional"
+    <dd>{{% md %}}The last modifier date if this resource.{{% /md %}}</dd><dt class="property-optional"
             title="Optional">
         <span id="offerid_go">
 <a href="#offerid_go" style="color: inherit; text-decoration: inherit;">Offer<wbr>Id</a>
@@ -1477,8 +1313,7 @@ All [input](#inputs) properties are implicitly available as output properties. A
         <span class="property-indicator"></span>
         <span class="property-type">string</span>
     </dt>
-    <dd>{{% md %}}The offer id.{{% /md %}}</dd>
-    <dt class="property-optional"
+    <dd>{{% md %}}The offer id.{{% /md %}}</dd><dt class="property-optional"
             title="Optional">
         <span id="paymentchannelmetadata_go">
 <a href="#paymentchannelmetadata_go" style="color: inherit; text-decoration: inherit;">Payment<wbr>Channel<wbr>Metadata</a>
@@ -1486,8 +1321,7 @@ All [input](#inputs) properties are implicitly available as output properties. A
         <span class="property-indicator"></span>
         <span class="property-type">map[string]string</span>
     </dt>
-    <dd>{{% md %}}The metadata about the SaaS subscription such as the AzureSubscriptionId and ResourceUri.{{% /md %}}</dd>
-    <dt class="property-optional"
+    <dd>{{% md %}}The metadata about the SaaS subscription such as the AzureSubscriptionId and ResourceUri.{{% /md %}}</dd><dt class="property-optional"
             title="Optional">
         <span id="paymentchanneltype_go">
 <a href="#paymentchanneltype_go" style="color: inherit; text-decoration: inherit;">Payment<wbr>Channel<wbr>Type</a>
@@ -1495,8 +1329,7 @@ All [input](#inputs) properties are implicitly available as output properties. A
         <span class="property-indicator"></span>
         <span class="property-type">string</span>
     </dt>
-    <dd>{{% md %}}The Payment channel for the SaasSubscription.{{% /md %}}</dd>
-    <dt class="property-optional"
+    <dd>{{% md %}}The Payment channel for the SaasSubscription.{{% /md %}}</dd><dt class="property-optional"
             title="Optional">
         <span id="publisherid_go">
 <a href="#publisherid_go" style="color: inherit; text-decoration: inherit;">Publisher<wbr>Id</a>
@@ -1504,8 +1337,7 @@ All [input](#inputs) properties are implicitly available as output properties. A
         <span class="property-indicator"></span>
         <span class="property-type">string</span>
     </dt>
-    <dd>{{% md %}}The publisher id.{{% /md %}}</dd>
-    <dt class="property-optional"
+    <dd>{{% md %}}The publisher id.{{% /md %}}</dd><dt class="property-optional"
             title="Optional">
         <span id="publishertestenvironment_go">
 <a href="#publishertestenvironment_go" style="color: inherit; text-decoration: inherit;">Publisher<wbr>Test<wbr>Environment</a>
@@ -1513,8 +1345,7 @@ All [input](#inputs) properties are implicitly available as output properties. A
         <span class="property-indicator"></span>
         <span class="property-type">string</span>
     </dt>
-    <dd>{{% md %}}The environment in the publisher side for this resource.{{% /md %}}</dd>
-    <dt class="property-optional"
+    <dd>{{% md %}}The environment in the publisher side for this resource.{{% /md %}}</dd><dt class="property-optional"
             title="Optional">
         <span id="quantity_go">
 <a href="#quantity_go" style="color: inherit; text-decoration: inherit;">Quantity</a>
@@ -1522,8 +1353,7 @@ All [input](#inputs) properties are implicitly available as output properties. A
         <span class="property-indicator"></span>
         <span class="property-type">float64</span>
     </dt>
-    <dd>{{% md %}}The seat count.{{% /md %}}</dd>
-    <dt class="property-optional"
+    <dd>{{% md %}}The seat count.{{% /md %}}</dd><dt class="property-optional"
             title="Optional">
         <span id="saasresourcename_go">
 <a href="#saasresourcename_go" style="color: inherit; text-decoration: inherit;">Saas<wbr>Resource<wbr>Name</a>
@@ -1531,8 +1361,7 @@ All [input](#inputs) properties are implicitly available as output properties. A
         <span class="property-indicator"></span>
         <span class="property-type">string</span>
     </dt>
-    <dd>{{% md %}}The SaaS resource name.{{% /md %}}</dd>
-    <dt class="property-optional"
+    <dd>{{% md %}}The SaaS resource name.{{% /md %}}</dd><dt class="property-optional"
             title="Optional">
         <span id="saassessionid_go">
 <a href="#saassessionid_go" style="color: inherit; text-decoration: inherit;">Saas<wbr>Session<wbr>Id</a>
@@ -1540,8 +1369,7 @@ All [input](#inputs) properties are implicitly available as output properties. A
         <span class="property-indicator"></span>
         <span class="property-type">string</span>
     </dt>
-    <dd>{{% md %}}The saas session id used for dev service migration request.{{% /md %}}</dd>
-    <dt class="property-optional"
+    <dd>{{% md %}}The saas session id used for dev service migration request.{{% /md %}}</dd><dt class="property-optional"
             title="Optional">
         <span id="saassubscriptionid_go">
 <a href="#saassubscriptionid_go" style="color: inherit; text-decoration: inherit;">Saas<wbr>Subscription<wbr>Id</a>
@@ -1549,8 +1377,7 @@ All [input](#inputs) properties are implicitly available as output properties. A
         <span class="property-indicator"></span>
         <span class="property-type">string</span>
     </dt>
-    <dd>{{% md %}}The saas subscription id used for tenant to subscription level migration request.{{% /md %}}</dd>
-    <dt class="property-optional"
+    <dd>{{% md %}}The saas subscription id used for tenant to subscription level migration request.{{% /md %}}</dd><dt class="property-optional"
             title="Optional">
         <span id="skuid_go">
 <a href="#skuid_go" style="color: inherit; text-decoration: inherit;">Sku<wbr>Id</a>
@@ -1558,8 +1385,7 @@ All [input](#inputs) properties are implicitly available as output properties. A
         <span class="property-indicator"></span>
         <span class="property-type">string</span>
     </dt>
-    <dd>{{% md %}}The plan id.{{% /md %}}</dd>
-    <dt class="property-optional"
+    <dd>{{% md %}}The plan id.{{% /md %}}</dd><dt class="property-optional"
             title="Optional">
         <span id="status_go">
 <a href="#status_go" style="color: inherit; text-decoration: inherit;">Status</a>
@@ -1567,8 +1393,7 @@ All [input](#inputs) properties are implicitly available as output properties. A
         <span class="property-indicator"></span>
         <span class="property-type">string</span>
     </dt>
-    <dd>{{% md %}}The SaaS Subscription Status.{{% /md %}}</dd>
-    <dt class="property-optional"
+    <dd>{{% md %}}The SaaS Subscription Status.{{% /md %}}</dd><dt class="property-optional"
             title="Optional">
         <span id="term_go">
 <a href="#term_go" style="color: inherit; text-decoration: inherit;">Term</a>
@@ -1576,8 +1401,7 @@ All [input](#inputs) properties are implicitly available as output properties. A
         <span class="property-indicator"></span>
         <span class="property-type"><a href="#saaspropertiesresponseterm">Saas<wbr>Properties<wbr>Response<wbr>Term</a></span>
     </dt>
-    <dd>{{% md %}}The current Term object.{{% /md %}}</dd>
-    <dt class="property-optional"
+    <dd>{{% md %}}The current Term object.{{% /md %}}</dd><dt class="property-optional"
             title="Optional">
         <span id="termid_go">
 <a href="#termid_go" style="color: inherit; text-decoration: inherit;">Term<wbr>Id</a>
@@ -1585,14 +1409,11 @@ All [input](#inputs) properties are implicitly available as output properties. A
         <span class="property-indicator"></span>
         <span class="property-type">string</span>
     </dt>
-    <dd>{{% md %}}The current Term id.{{% /md %}}</dd>
-</dl>
+    <dd>{{% md %}}The current Term id.{{% /md %}}</dd></dl>
 {{% /choosable %}}
 
 {{% choosable language nodejs %}}
-<dl class="resources-properties">
-
-    <dt class="property-required"
+<dl class="resources-properties"><dt class="property-required"
             title="Required">
         <span id="created_nodejs">
 <a href="#created_nodejs" style="color: inherit; text-decoration: inherit;">created</a>
@@ -1600,8 +1421,7 @@ All [input](#inputs) properties are implicitly available as output properties. A
         <span class="property-indicator"></span>
         <span class="property-type">string</span>
     </dt>
-    <dd>{{% md %}}The created date of this resource.{{% /md %}}</dd>
-    <dt class="property-optional"
+    <dd>{{% md %}}The created date of this resource.{{% /md %}}</dd><dt class="property-optional"
             title="Optional">
         <span id="autorenew_nodejs">
 <a href="#autorenew_nodejs" style="color: inherit; text-decoration: inherit;">auto<wbr>Renew</a>
@@ -1609,8 +1429,7 @@ All [input](#inputs) properties are implicitly available as output properties. A
         <span class="property-indicator"></span>
         <span class="property-type">boolean</span>
     </dt>
-    <dd>{{% md %}}Whether the SaaS subscription will auto renew upon term end.{{% /md %}}</dd>
-    <dt class="property-optional"
+    <dd>{{% md %}}Whether the SaaS subscription will auto renew upon term end.{{% /md %}}</dd><dt class="property-optional"
             title="Optional">
         <span id="isfreetrial_nodejs">
 <a href="#isfreetrial_nodejs" style="color: inherit; text-decoration: inherit;">is<wbr>Free<wbr>Trial</a>
@@ -1618,8 +1437,7 @@ All [input](#inputs) properties are implicitly available as output properties. A
         <span class="property-indicator"></span>
         <span class="property-type">boolean</span>
     </dt>
-    <dd>{{% md %}}Whether the current term is a Free Trial term{{% /md %}}</dd>
-    <dt class="property-optional"
+    <dd>{{% md %}}Whether the current term is a Free Trial term{{% /md %}}</dd><dt class="property-optional"
             title="Optional">
         <span id="lastmodified_nodejs">
 <a href="#lastmodified_nodejs" style="color: inherit; text-decoration: inherit;">last<wbr>Modified</a>
@@ -1627,8 +1445,7 @@ All [input](#inputs) properties are implicitly available as output properties. A
         <span class="property-indicator"></span>
         <span class="property-type">string</span>
     </dt>
-    <dd>{{% md %}}The last modifier date if this resource.{{% /md %}}</dd>
-    <dt class="property-optional"
+    <dd>{{% md %}}The last modifier date if this resource.{{% /md %}}</dd><dt class="property-optional"
             title="Optional">
         <span id="offerid_nodejs">
 <a href="#offerid_nodejs" style="color: inherit; text-decoration: inherit;">offer<wbr>Id</a>
@@ -1636,8 +1453,7 @@ All [input](#inputs) properties are implicitly available as output properties. A
         <span class="property-indicator"></span>
         <span class="property-type">string</span>
     </dt>
-    <dd>{{% md %}}The offer id.{{% /md %}}</dd>
-    <dt class="property-optional"
+    <dd>{{% md %}}The offer id.{{% /md %}}</dd><dt class="property-optional"
             title="Optional">
         <span id="paymentchannelmetadata_nodejs">
 <a href="#paymentchannelmetadata_nodejs" style="color: inherit; text-decoration: inherit;">payment<wbr>Channel<wbr>Metadata</a>
@@ -1645,8 +1461,7 @@ All [input](#inputs) properties are implicitly available as output properties. A
         <span class="property-indicator"></span>
         <span class="property-type">{[key: string]: string}</span>
     </dt>
-    <dd>{{% md %}}The metadata about the SaaS subscription such as the AzureSubscriptionId and ResourceUri.{{% /md %}}</dd>
-    <dt class="property-optional"
+    <dd>{{% md %}}The metadata about the SaaS subscription such as the AzureSubscriptionId and ResourceUri.{{% /md %}}</dd><dt class="property-optional"
             title="Optional">
         <span id="paymentchanneltype_nodejs">
 <a href="#paymentchanneltype_nodejs" style="color: inherit; text-decoration: inherit;">payment<wbr>Channel<wbr>Type</a>
@@ -1654,8 +1469,7 @@ All [input](#inputs) properties are implicitly available as output properties. A
         <span class="property-indicator"></span>
         <span class="property-type">string</span>
     </dt>
-    <dd>{{% md %}}The Payment channel for the SaasSubscription.{{% /md %}}</dd>
-    <dt class="property-optional"
+    <dd>{{% md %}}The Payment channel for the SaasSubscription.{{% /md %}}</dd><dt class="property-optional"
             title="Optional">
         <span id="publisherid_nodejs">
 <a href="#publisherid_nodejs" style="color: inherit; text-decoration: inherit;">publisher<wbr>Id</a>
@@ -1663,8 +1477,7 @@ All [input](#inputs) properties are implicitly available as output properties. A
         <span class="property-indicator"></span>
         <span class="property-type">string</span>
     </dt>
-    <dd>{{% md %}}The publisher id.{{% /md %}}</dd>
-    <dt class="property-optional"
+    <dd>{{% md %}}The publisher id.{{% /md %}}</dd><dt class="property-optional"
             title="Optional">
         <span id="publishertestenvironment_nodejs">
 <a href="#publishertestenvironment_nodejs" style="color: inherit; text-decoration: inherit;">publisher<wbr>Test<wbr>Environment</a>
@@ -1672,8 +1485,7 @@ All [input](#inputs) properties are implicitly available as output properties. A
         <span class="property-indicator"></span>
         <span class="property-type">string</span>
     </dt>
-    <dd>{{% md %}}The environment in the publisher side for this resource.{{% /md %}}</dd>
-    <dt class="property-optional"
+    <dd>{{% md %}}The environment in the publisher side for this resource.{{% /md %}}</dd><dt class="property-optional"
             title="Optional">
         <span id="quantity_nodejs">
 <a href="#quantity_nodejs" style="color: inherit; text-decoration: inherit;">quantity</a>
@@ -1681,8 +1493,7 @@ All [input](#inputs) properties are implicitly available as output properties. A
         <span class="property-indicator"></span>
         <span class="property-type">number</span>
     </dt>
-    <dd>{{% md %}}The seat count.{{% /md %}}</dd>
-    <dt class="property-optional"
+    <dd>{{% md %}}The seat count.{{% /md %}}</dd><dt class="property-optional"
             title="Optional">
         <span id="saasresourcename_nodejs">
 <a href="#saasresourcename_nodejs" style="color: inherit; text-decoration: inherit;">saas<wbr>Resource<wbr>Name</a>
@@ -1690,8 +1501,7 @@ All [input](#inputs) properties are implicitly available as output properties. A
         <span class="property-indicator"></span>
         <span class="property-type">string</span>
     </dt>
-    <dd>{{% md %}}The SaaS resource name.{{% /md %}}</dd>
-    <dt class="property-optional"
+    <dd>{{% md %}}The SaaS resource name.{{% /md %}}</dd><dt class="property-optional"
             title="Optional">
         <span id="saassessionid_nodejs">
 <a href="#saassessionid_nodejs" style="color: inherit; text-decoration: inherit;">saas<wbr>Session<wbr>Id</a>
@@ -1699,8 +1509,7 @@ All [input](#inputs) properties are implicitly available as output properties. A
         <span class="property-indicator"></span>
         <span class="property-type">string</span>
     </dt>
-    <dd>{{% md %}}The saas session id used for dev service migration request.{{% /md %}}</dd>
-    <dt class="property-optional"
+    <dd>{{% md %}}The saas session id used for dev service migration request.{{% /md %}}</dd><dt class="property-optional"
             title="Optional">
         <span id="saassubscriptionid_nodejs">
 <a href="#saassubscriptionid_nodejs" style="color: inherit; text-decoration: inherit;">saas<wbr>Subscription<wbr>Id</a>
@@ -1708,8 +1517,7 @@ All [input](#inputs) properties are implicitly available as output properties. A
         <span class="property-indicator"></span>
         <span class="property-type">string</span>
     </dt>
-    <dd>{{% md %}}The saas subscription id used for tenant to subscription level migration request.{{% /md %}}</dd>
-    <dt class="property-optional"
+    <dd>{{% md %}}The saas subscription id used for tenant to subscription level migration request.{{% /md %}}</dd><dt class="property-optional"
             title="Optional">
         <span id="skuid_nodejs">
 <a href="#skuid_nodejs" style="color: inherit; text-decoration: inherit;">sku<wbr>Id</a>
@@ -1717,8 +1525,7 @@ All [input](#inputs) properties are implicitly available as output properties. A
         <span class="property-indicator"></span>
         <span class="property-type">string</span>
     </dt>
-    <dd>{{% md %}}The plan id.{{% /md %}}</dd>
-    <dt class="property-optional"
+    <dd>{{% md %}}The plan id.{{% /md %}}</dd><dt class="property-optional"
             title="Optional">
         <span id="status_nodejs">
 <a href="#status_nodejs" style="color: inherit; text-decoration: inherit;">status</a>
@@ -1726,8 +1533,7 @@ All [input](#inputs) properties are implicitly available as output properties. A
         <span class="property-indicator"></span>
         <span class="property-type">string</span>
     </dt>
-    <dd>{{% md %}}The SaaS Subscription Status.{{% /md %}}</dd>
-    <dt class="property-optional"
+    <dd>{{% md %}}The SaaS Subscription Status.{{% /md %}}</dd><dt class="property-optional"
             title="Optional">
         <span id="term_nodejs">
 <a href="#term_nodejs" style="color: inherit; text-decoration: inherit;">term</a>
@@ -1735,8 +1541,7 @@ All [input](#inputs) properties are implicitly available as output properties. A
         <span class="property-indicator"></span>
         <span class="property-type"><a href="#saaspropertiesresponseterm">Saas<wbr>Properties<wbr>Response<wbr>Term</a></span>
     </dt>
-    <dd>{{% md %}}The current Term object.{{% /md %}}</dd>
-    <dt class="property-optional"
+    <dd>{{% md %}}The current Term object.{{% /md %}}</dd><dt class="property-optional"
             title="Optional">
         <span id="termid_nodejs">
 <a href="#termid_nodejs" style="color: inherit; text-decoration: inherit;">term<wbr>Id</a>
@@ -1744,14 +1549,11 @@ All [input](#inputs) properties are implicitly available as output properties. A
         <span class="property-indicator"></span>
         <span class="property-type">string</span>
     </dt>
-    <dd>{{% md %}}The current Term id.{{% /md %}}</dd>
-</dl>
+    <dd>{{% md %}}The current Term id.{{% /md %}}</dd></dl>
 {{% /choosable %}}
 
 {{% choosable language python %}}
-<dl class="resources-properties">
-
-    <dt class="property-required"
+<dl class="resources-properties"><dt class="property-required"
             title="Required">
         <span id="created_python">
 <a href="#created_python" style="color: inherit; text-decoration: inherit;">created</a>
@@ -1759,8 +1561,7 @@ All [input](#inputs) properties are implicitly available as output properties. A
         <span class="property-indicator"></span>
         <span class="property-type">str</span>
     </dt>
-    <dd>{{% md %}}The created date of this resource.{{% /md %}}</dd>
-    <dt class="property-optional"
+    <dd>{{% md %}}The created date of this resource.{{% /md %}}</dd><dt class="property-optional"
             title="Optional">
         <span id="auto_renew_python">
 <a href="#auto_renew_python" style="color: inherit; text-decoration: inherit;">auto_<wbr>renew</a>
@@ -1768,8 +1569,7 @@ All [input](#inputs) properties are implicitly available as output properties. A
         <span class="property-indicator"></span>
         <span class="property-type">bool</span>
     </dt>
-    <dd>{{% md %}}Whether the SaaS subscription will auto renew upon term end.{{% /md %}}</dd>
-    <dt class="property-optional"
+    <dd>{{% md %}}Whether the SaaS subscription will auto renew upon term end.{{% /md %}}</dd><dt class="property-optional"
             title="Optional">
         <span id="is_free_trial_python">
 <a href="#is_free_trial_python" style="color: inherit; text-decoration: inherit;">is_<wbr>free_<wbr>trial</a>
@@ -1777,8 +1577,7 @@ All [input](#inputs) properties are implicitly available as output properties. A
         <span class="property-indicator"></span>
         <span class="property-type">bool</span>
     </dt>
-    <dd>{{% md %}}Whether the current term is a Free Trial term{{% /md %}}</dd>
-    <dt class="property-optional"
+    <dd>{{% md %}}Whether the current term is a Free Trial term{{% /md %}}</dd><dt class="property-optional"
             title="Optional">
         <span id="last_modified_python">
 <a href="#last_modified_python" style="color: inherit; text-decoration: inherit;">last_<wbr>modified</a>
@@ -1786,8 +1585,7 @@ All [input](#inputs) properties are implicitly available as output properties. A
         <span class="property-indicator"></span>
         <span class="property-type">str</span>
     </dt>
-    <dd>{{% md %}}The last modifier date if this resource.{{% /md %}}</dd>
-    <dt class="property-optional"
+    <dd>{{% md %}}The last modifier date if this resource.{{% /md %}}</dd><dt class="property-optional"
             title="Optional">
         <span id="offer_id_python">
 <a href="#offer_id_python" style="color: inherit; text-decoration: inherit;">offer_<wbr>id</a>
@@ -1795,8 +1593,7 @@ All [input](#inputs) properties are implicitly available as output properties. A
         <span class="property-indicator"></span>
         <span class="property-type">str</span>
     </dt>
-    <dd>{{% md %}}The offer id.{{% /md %}}</dd>
-    <dt class="property-optional"
+    <dd>{{% md %}}The offer id.{{% /md %}}</dd><dt class="property-optional"
             title="Optional">
         <span id="payment_channel_metadata_python">
 <a href="#payment_channel_metadata_python" style="color: inherit; text-decoration: inherit;">payment_<wbr>channel_<wbr>metadata</a>
@@ -1804,8 +1601,7 @@ All [input](#inputs) properties are implicitly available as output properties. A
         <span class="property-indicator"></span>
         <span class="property-type">Mapping[str, str]</span>
     </dt>
-    <dd>{{% md %}}The metadata about the SaaS subscription such as the AzureSubscriptionId and ResourceUri.{{% /md %}}</dd>
-    <dt class="property-optional"
+    <dd>{{% md %}}The metadata about the SaaS subscription such as the AzureSubscriptionId and ResourceUri.{{% /md %}}</dd><dt class="property-optional"
             title="Optional">
         <span id="payment_channel_type_python">
 <a href="#payment_channel_type_python" style="color: inherit; text-decoration: inherit;">payment_<wbr>channel_<wbr>type</a>
@@ -1813,8 +1609,7 @@ All [input](#inputs) properties are implicitly available as output properties. A
         <span class="property-indicator"></span>
         <span class="property-type">str</span>
     </dt>
-    <dd>{{% md %}}The Payment channel for the SaasSubscription.{{% /md %}}</dd>
-    <dt class="property-optional"
+    <dd>{{% md %}}The Payment channel for the SaasSubscription.{{% /md %}}</dd><dt class="property-optional"
             title="Optional">
         <span id="publisher_id_python">
 <a href="#publisher_id_python" style="color: inherit; text-decoration: inherit;">publisher_<wbr>id</a>
@@ -1822,8 +1617,7 @@ All [input](#inputs) properties are implicitly available as output properties. A
         <span class="property-indicator"></span>
         <span class="property-type">str</span>
     </dt>
-    <dd>{{% md %}}The publisher id.{{% /md %}}</dd>
-    <dt class="property-optional"
+    <dd>{{% md %}}The publisher id.{{% /md %}}</dd><dt class="property-optional"
             title="Optional">
         <span id="publisher_test_environment_python">
 <a href="#publisher_test_environment_python" style="color: inherit; text-decoration: inherit;">publisher_<wbr>test_<wbr>environment</a>
@@ -1831,8 +1625,7 @@ All [input](#inputs) properties are implicitly available as output properties. A
         <span class="property-indicator"></span>
         <span class="property-type">str</span>
     </dt>
-    <dd>{{% md %}}The environment in the publisher side for this resource.{{% /md %}}</dd>
-    <dt class="property-optional"
+    <dd>{{% md %}}The environment in the publisher side for this resource.{{% /md %}}</dd><dt class="property-optional"
             title="Optional">
         <span id="quantity_python">
 <a href="#quantity_python" style="color: inherit; text-decoration: inherit;">quantity</a>
@@ -1840,8 +1633,7 @@ All [input](#inputs) properties are implicitly available as output properties. A
         <span class="property-indicator"></span>
         <span class="property-type">float</span>
     </dt>
-    <dd>{{% md %}}The seat count.{{% /md %}}</dd>
-    <dt class="property-optional"
+    <dd>{{% md %}}The seat count.{{% /md %}}</dd><dt class="property-optional"
             title="Optional">
         <span id="saas_resource_name_python">
 <a href="#saas_resource_name_python" style="color: inherit; text-decoration: inherit;">saas_<wbr>resource_<wbr>name</a>
@@ -1849,8 +1641,7 @@ All [input](#inputs) properties are implicitly available as output properties. A
         <span class="property-indicator"></span>
         <span class="property-type">str</span>
     </dt>
-    <dd>{{% md %}}The SaaS resource name.{{% /md %}}</dd>
-    <dt class="property-optional"
+    <dd>{{% md %}}The SaaS resource name.{{% /md %}}</dd><dt class="property-optional"
             title="Optional">
         <span id="saas_session_id_python">
 <a href="#saas_session_id_python" style="color: inherit; text-decoration: inherit;">saas_<wbr>session_<wbr>id</a>
@@ -1858,8 +1649,7 @@ All [input](#inputs) properties are implicitly available as output properties. A
         <span class="property-indicator"></span>
         <span class="property-type">str</span>
     </dt>
-    <dd>{{% md %}}The saas session id used for dev service migration request.{{% /md %}}</dd>
-    <dt class="property-optional"
+    <dd>{{% md %}}The saas session id used for dev service migration request.{{% /md %}}</dd><dt class="property-optional"
             title="Optional">
         <span id="saas_subscription_id_python">
 <a href="#saas_subscription_id_python" style="color: inherit; text-decoration: inherit;">saas_<wbr>subscription_<wbr>id</a>
@@ -1867,8 +1657,7 @@ All [input](#inputs) properties are implicitly available as output properties. A
         <span class="property-indicator"></span>
         <span class="property-type">str</span>
     </dt>
-    <dd>{{% md %}}The saas subscription id used for tenant to subscription level migration request.{{% /md %}}</dd>
-    <dt class="property-optional"
+    <dd>{{% md %}}The saas subscription id used for tenant to subscription level migration request.{{% /md %}}</dd><dt class="property-optional"
             title="Optional">
         <span id="sku_id_python">
 <a href="#sku_id_python" style="color: inherit; text-decoration: inherit;">sku_<wbr>id</a>
@@ -1876,8 +1665,7 @@ All [input](#inputs) properties are implicitly available as output properties. A
         <span class="property-indicator"></span>
         <span class="property-type">str</span>
     </dt>
-    <dd>{{% md %}}The plan id.{{% /md %}}</dd>
-    <dt class="property-optional"
+    <dd>{{% md %}}The plan id.{{% /md %}}</dd><dt class="property-optional"
             title="Optional">
         <span id="status_python">
 <a href="#status_python" style="color: inherit; text-decoration: inherit;">status</a>
@@ -1885,8 +1673,7 @@ All [input](#inputs) properties are implicitly available as output properties. A
         <span class="property-indicator"></span>
         <span class="property-type">str</span>
     </dt>
-    <dd>{{% md %}}The SaaS Subscription Status.{{% /md %}}</dd>
-    <dt class="property-optional"
+    <dd>{{% md %}}The SaaS Subscription Status.{{% /md %}}</dd><dt class="property-optional"
             title="Optional">
         <span id="term_python">
 <a href="#term_python" style="color: inherit; text-decoration: inherit;">term</a>
@@ -1894,8 +1681,7 @@ All [input](#inputs) properties are implicitly available as output properties. A
         <span class="property-indicator"></span>
         <span class="property-type"><a href="#saaspropertiesresponseterm">Saas<wbr>Properties<wbr>Response<wbr>Term<wbr>Args</a></span>
     </dt>
-    <dd>{{% md %}}The current Term object.{{% /md %}}</dd>
-    <dt class="property-optional"
+    <dd>{{% md %}}The current Term object.{{% /md %}}</dd><dt class="property-optional"
             title="Optional">
         <span id="term_id_python">
 <a href="#term_id_python" style="color: inherit; text-decoration: inherit;">term_<wbr>id</a>
@@ -1903,8 +1689,7 @@ All [input](#inputs) properties are implicitly available as output properties. A
         <span class="property-indicator"></span>
         <span class="property-type">str</span>
     </dt>
-    <dd>{{% md %}}The current Term id.{{% /md %}}</dd>
-</dl>
+    <dd>{{% md %}}The current Term id.{{% /md %}}</dd></dl>
 {{% /choosable %}}
 ## Import
 

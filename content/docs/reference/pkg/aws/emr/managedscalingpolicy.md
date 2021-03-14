@@ -13,11 +13,17 @@ meta_desc: "Documentation for the aws.emr.ManagedScalingPolicy resource with exa
 Provides a Managed Scaling policy for EMR Cluster. With Amazon EMR versions 5.30.0 and later (except for Amazon EMR 6.0.0), you can enable EMR managed scaling to automatically increase or decrease the number of instances or units in your cluster based on workload. See [Using EMR Managed Scaling in Amazon EMR](https://docs.aws.amazon.com/emr/latest/ManagementGuide/emr-managed-scaling.html) for more information.
 
 {{% examples %}}
+
 ## Example Usage
 
 {{< chooser language "typescript,python,go,csharp" / >}}
 
-{{% example csharp %}}
+
+
+
+
+{{< example csharp >}}
+
 ```csharp
 using Pulumi;
 using Aws = Pulumi.Aws;
@@ -59,9 +65,12 @@ class MyStack : Stack
 }
 ```
 
-{{% /example %}}
 
-{{% example go %}}
+{{< /example >}}
+
+
+{{< example go >}}
+
 ```go
 package main
 
@@ -104,9 +113,12 @@ func main() {
 }
 ```
 
-{{% /example %}}
 
-{{% example python %}}
+{{< /example >}}
+
+
+{{< example python >}}
+
 ```python
 import pulumi
 import pulumi_aws as aws
@@ -131,9 +143,12 @@ samplepolicy = aws.emr.ManagedScalingPolicy("samplepolicy",
     )])
 ```
 
-{{% /example %}}
 
-{{% example typescript %}}
+{{< /example >}}
+
+
+{{< example typescript >}}
+
 
 ```typescript
 import * as pulumi from "@pulumi/pulumi";
@@ -161,9 +176,16 @@ const samplepolicy = new aws.emr.ManagedScalingPolicy("samplepolicy", {
 });
 ```
 
-{{% /example %}}
+
+{{< /example >}}
+
+
+
+
 
 {{% /examples %}}
+
+
 
 
 ## Create a ManagedScalingPolicy Resource {#create}
@@ -188,9 +210,7 @@ const samplepolicy = new aws.emr.ManagedScalingPolicy("samplepolicy", {
 
 {{% choosable language nodejs %}}
 
-<dl class="resources-properties">
-  
-    <dt
+<dl class="resources-properties"><dt
         class="property-required" title="Required">
         <span>name</span>
         <span class="property-indicator"></span>
@@ -198,9 +218,7 @@ const samplepolicy = new aws.emr.ManagedScalingPolicy("samplepolicy", {
     </dt>
     <dd>
       The unique name of the resource.
-    </dd>
-  
-    <dt
+    </dd><dt
         class="property-required" title="Required">
         <span>args</span>
         <span class="property-indicator"></span>
@@ -208,9 +226,7 @@ const samplepolicy = new aws.emr.ManagedScalingPolicy("samplepolicy", {
     </dt>
     <dd>
       The arguments to resource properties.
-    </dd>
-  
-    <dt
+    </dd><dt
         class="property-optional" title="Optional">
         <span>opts</span>
         <span class="property-indicator"></span>
@@ -218,10 +234,7 @@ const samplepolicy = new aws.emr.ManagedScalingPolicy("samplepolicy", {
     </dt>
     <dd>
       Bag of options to control resource&#39;s behavior.
-    </dd>
-  
-
-</dl>
+    </dd></dl>
 
 {{% /choosable %}}
 
@@ -247,9 +260,7 @@ const samplepolicy = new aws.emr.ManagedScalingPolicy("samplepolicy", {
 
 {{% choosable language go %}}
 
-<dl class="resources-properties">
-  
-    <dt
+<dl class="resources-properties"><dt
         class="property-optional" title="Optional">
         <span>ctx</span>
         <span class="property-indicator"></span>
@@ -257,9 +268,7 @@ const samplepolicy = new aws.emr.ManagedScalingPolicy("samplepolicy", {
     </dt>
     <dd>
       Context object for the current deployment.
-    </dd>
-  
-    <dt
+    </dd><dt
         class="property-required" title="Required">
         <span>name</span>
         <span class="property-indicator"></span>
@@ -267,9 +276,7 @@ const samplepolicy = new aws.emr.ManagedScalingPolicy("samplepolicy", {
     </dt>
     <dd>
       The unique name of the resource.
-    </dd>
-  
-    <dt
+    </dd><dt
         class="property-required" title="Required">
         <span>args</span>
         <span class="property-indicator"></span>
@@ -277,9 +284,7 @@ const samplepolicy = new aws.emr.ManagedScalingPolicy("samplepolicy", {
     </dt>
     <dd>
       The arguments to resource properties.
-    </dd>
-  
-    <dt
+    </dd><dt
         class="property-optional" title="Optional">
         <span>opts</span>
         <span class="property-indicator"></span>
@@ -287,18 +292,13 @@ const samplepolicy = new aws.emr.ManagedScalingPolicy("samplepolicy", {
     </dt>
     <dd>
       Bag of options to control resource&#39;s behavior.
-    </dd>
-  
-
-</dl>
+    </dd></dl>
 
 {{% /choosable %}}
 
 {{% choosable language csharp %}}
 
-<dl class="resources-properties">
-  
-    <dt
+<dl class="resources-properties"><dt
         class="property-required" title="Required">
         <span>name</span>
         <span class="property-indicator"></span>
@@ -306,9 +306,7 @@ const samplepolicy = new aws.emr.ManagedScalingPolicy("samplepolicy", {
     </dt>
     <dd>
       The unique name of the resource.
-    </dd>
-  
-    <dt
+    </dd><dt
         class="property-required" title="Required">
         <span>args</span>
         <span class="property-indicator"></span>
@@ -316,9 +314,7 @@ const samplepolicy = new aws.emr.ManagedScalingPolicy("samplepolicy", {
     </dt>
     <dd>
       The arguments to resource properties.
-    </dd>
-  
-    <dt
+    </dd><dt
         class="property-optional" title="Optional">
         <span>opts</span>
         <span class="property-indicator"></span>
@@ -326,10 +322,7 @@ const samplepolicy = new aws.emr.ManagedScalingPolicy("samplepolicy", {
     </dt>
     <dd>
       Bag of options to control resource&#39;s behavior.
-    </dd>
-  
-
-</dl>
+    </dd></dl>
 
 {{% /choosable %}}
 
@@ -344,9 +337,7 @@ The ManagedScalingPolicy resource accepts the following [input]({{< relref "/doc
 
 
 {{% choosable language csharp %}}
-<dl class="resources-properties">
-
-    <dt class="property-required"
+<dl class="resources-properties"><dt class="property-required"
             title="Required">
         <span id="clusterid_csharp">
 <a href="#clusterid_csharp" style="color: inherit; text-decoration: inherit;">Cluster<wbr>Id</a>
@@ -355,8 +346,7 @@ The ManagedScalingPolicy resource accepts the following [input]({{< relref "/doc
         <span class="property-type">string</span>
     </dt>
     <dd>{{% md %}}The id of the EMR cluster
-{{% /md %}}</dd>
-    <dt class="property-required"
+{{% /md %}}</dd><dt class="property-required"
             title="Required">
         <span id="computelimits_csharp">
 <a href="#computelimits_csharp" style="color: inherit; text-decoration: inherit;">Compute<wbr>Limits</a>
@@ -365,14 +355,11 @@ The ManagedScalingPolicy resource accepts the following [input]({{< relref "/doc
         <span class="property-type"><a href="#managedscalingpolicycomputelimit">List&lt;Managed<wbr>Scaling<wbr>Policy<wbr>Compute<wbr>Limit<wbr>Args&gt;</a></span>
     </dt>
     <dd>{{% md %}}Configuration block with compute limit settings. Described below.
-{{% /md %}}</dd>
-</dl>
+{{% /md %}}</dd></dl>
 {{% /choosable %}}
 
 {{% choosable language go %}}
-<dl class="resources-properties">
-
-    <dt class="property-required"
+<dl class="resources-properties"><dt class="property-required"
             title="Required">
         <span id="clusterid_go">
 <a href="#clusterid_go" style="color: inherit; text-decoration: inherit;">Cluster<wbr>Id</a>
@@ -381,8 +368,7 @@ The ManagedScalingPolicy resource accepts the following [input]({{< relref "/doc
         <span class="property-type">string</span>
     </dt>
     <dd>{{% md %}}The id of the EMR cluster
-{{% /md %}}</dd>
-    <dt class="property-required"
+{{% /md %}}</dd><dt class="property-required"
             title="Required">
         <span id="computelimits_go">
 <a href="#computelimits_go" style="color: inherit; text-decoration: inherit;">Compute<wbr>Limits</a>
@@ -391,14 +377,11 @@ The ManagedScalingPolicy resource accepts the following [input]({{< relref "/doc
         <span class="property-type"><a href="#managedscalingpolicycomputelimit">[]Managed<wbr>Scaling<wbr>Policy<wbr>Compute<wbr>Limit</a></span>
     </dt>
     <dd>{{% md %}}Configuration block with compute limit settings. Described below.
-{{% /md %}}</dd>
-</dl>
+{{% /md %}}</dd></dl>
 {{% /choosable %}}
 
 {{% choosable language nodejs %}}
-<dl class="resources-properties">
-
-    <dt class="property-required"
+<dl class="resources-properties"><dt class="property-required"
             title="Required">
         <span id="clusterid_nodejs">
 <a href="#clusterid_nodejs" style="color: inherit; text-decoration: inherit;">cluster<wbr>Id</a>
@@ -407,8 +390,7 @@ The ManagedScalingPolicy resource accepts the following [input]({{< relref "/doc
         <span class="property-type">string</span>
     </dt>
     <dd>{{% md %}}The id of the EMR cluster
-{{% /md %}}</dd>
-    <dt class="property-required"
+{{% /md %}}</dd><dt class="property-required"
             title="Required">
         <span id="computelimits_nodejs">
 <a href="#computelimits_nodejs" style="color: inherit; text-decoration: inherit;">compute<wbr>Limits</a>
@@ -417,14 +399,11 @@ The ManagedScalingPolicy resource accepts the following [input]({{< relref "/doc
         <span class="property-type"><a href="#managedscalingpolicycomputelimit">Managed<wbr>Scaling<wbr>Policy<wbr>Compute<wbr>Limit[]</a></span>
     </dt>
     <dd>{{% md %}}Configuration block with compute limit settings. Described below.
-{{% /md %}}</dd>
-</dl>
+{{% /md %}}</dd></dl>
 {{% /choosable %}}
 
 {{% choosable language python %}}
-<dl class="resources-properties">
-
-    <dt class="property-required"
+<dl class="resources-properties"><dt class="property-required"
             title="Required">
         <span id="cluster_id_python">
 <a href="#cluster_id_python" style="color: inherit; text-decoration: inherit;">cluster_<wbr>id</a>
@@ -433,8 +412,7 @@ The ManagedScalingPolicy resource accepts the following [input]({{< relref "/doc
         <span class="property-type">str</span>
     </dt>
     <dd>{{% md %}}The id of the EMR cluster
-{{% /md %}}</dd>
-    <dt class="property-required"
+{{% /md %}}</dd><dt class="property-required"
             title="Required">
         <span id="compute_limits_python">
 <a href="#compute_limits_python" style="color: inherit; text-decoration: inherit;">compute_<wbr>limits</a>
@@ -443,8 +421,7 @@ The ManagedScalingPolicy resource accepts the following [input]({{< relref "/doc
         <span class="property-type"><a href="#managedscalingpolicycomputelimit">Sequence[Managed<wbr>Scaling<wbr>Policy<wbr>Compute<wbr>Limit<wbr>Args]</a></span>
     </dt>
     <dd>{{% md %}}Configuration block with compute limit settings. Described below.
-{{% /md %}}</dd>
-</dl>
+{{% /md %}}</dd></dl>
 {{% /choosable %}}
 
 
@@ -455,9 +432,7 @@ All [input](#inputs) properties are implicitly available as output properties. A
 
 
 {{% choosable language csharp %}}
-<dl class="resources-properties">
-
-    <dt class="property-"
+<dl class="resources-properties"><dt class="property-"
             title="">
         <span id="id_csharp">
 <a href="#id_csharp" style="color: inherit; text-decoration: inherit;">Id</a>
@@ -465,14 +440,11 @@ All [input](#inputs) properties are implicitly available as output properties. A
         <span class="property-indicator"></span>
         <span class="property-type">string</span>
     </dt>
-    <dd>{{% md %}}The provider-assigned unique ID for this managed resource.{{% /md %}}</dd>
-</dl>
+    <dd>{{% md %}}The provider-assigned unique ID for this managed resource.{{% /md %}}</dd></dl>
 {{% /choosable %}}
 
 {{% choosable language go %}}
-<dl class="resources-properties">
-
-    <dt class="property-"
+<dl class="resources-properties"><dt class="property-"
             title="">
         <span id="id_go">
 <a href="#id_go" style="color: inherit; text-decoration: inherit;">Id</a>
@@ -480,14 +452,11 @@ All [input](#inputs) properties are implicitly available as output properties. A
         <span class="property-indicator"></span>
         <span class="property-type">string</span>
     </dt>
-    <dd>{{% md %}}The provider-assigned unique ID for this managed resource.{{% /md %}}</dd>
-</dl>
+    <dd>{{% md %}}The provider-assigned unique ID for this managed resource.{{% /md %}}</dd></dl>
 {{% /choosable %}}
 
 {{% choosable language nodejs %}}
-<dl class="resources-properties">
-
-    <dt class="property-"
+<dl class="resources-properties"><dt class="property-"
             title="">
         <span id="id_nodejs">
 <a href="#id_nodejs" style="color: inherit; text-decoration: inherit;">id</a>
@@ -495,14 +464,11 @@ All [input](#inputs) properties are implicitly available as output properties. A
         <span class="property-indicator"></span>
         <span class="property-type">string</span>
     </dt>
-    <dd>{{% md %}}The provider-assigned unique ID for this managed resource.{{% /md %}}</dd>
-</dl>
+    <dd>{{% md %}}The provider-assigned unique ID for this managed resource.{{% /md %}}</dd></dl>
 {{% /choosable %}}
 
 {{% choosable language python %}}
-<dl class="resources-properties">
-
-    <dt class="property-"
+<dl class="resources-properties"><dt class="property-"
             title="">
         <span id="id_python">
 <a href="#id_python" style="color: inherit; text-decoration: inherit;">id</a>
@@ -510,8 +476,7 @@ All [input](#inputs) properties are implicitly available as output properties. A
         <span class="property-indicator"></span>
         <span class="property-type">str</span>
     </dt>
-    <dd>{{% md %}}The provider-assigned unique ID for this managed resource.{{% /md %}}</dd>
-</dl>
+    <dd>{{% md %}}The provider-assigned unique ID for this managed resource.{{% /md %}}</dd></dl>
 {{% /choosable %}}
 
 
@@ -638,9 +603,7 @@ The following state arguments are supported:
 
 
 {{% choosable language csharp %}}
-<dl class="resources-properties">
-
-    <dt class="property-optional"
+<dl class="resources-properties"><dt class="property-optional"
             title="Optional">
         <span id="state_clusterid_csharp">
 <a href="#state_clusterid_csharp" style="color: inherit; text-decoration: inherit;">Cluster<wbr>Id</a>
@@ -649,8 +612,7 @@ The following state arguments are supported:
         <span class="property-type">string</span>
     </dt>
     <dd>{{% md %}}The id of the EMR cluster
-{{% /md %}}</dd>
-    <dt class="property-optional"
+{{% /md %}}</dd><dt class="property-optional"
             title="Optional">
         <span id="state_computelimits_csharp">
 <a href="#state_computelimits_csharp" style="color: inherit; text-decoration: inherit;">Compute<wbr>Limits</a>
@@ -659,14 +621,11 @@ The following state arguments are supported:
         <span class="property-type"><a href="#managedscalingpolicycomputelimit">List&lt;Managed<wbr>Scaling<wbr>Policy<wbr>Compute<wbr>Limit<wbr>Args&gt;</a></span>
     </dt>
     <dd>{{% md %}}Configuration block with compute limit settings. Described below.
-{{% /md %}}</dd>
-</dl>
+{{% /md %}}</dd></dl>
 {{% /choosable %}}
 
 {{% choosable language go %}}
-<dl class="resources-properties">
-
-    <dt class="property-optional"
+<dl class="resources-properties"><dt class="property-optional"
             title="Optional">
         <span id="state_clusterid_go">
 <a href="#state_clusterid_go" style="color: inherit; text-decoration: inherit;">Cluster<wbr>Id</a>
@@ -675,8 +634,7 @@ The following state arguments are supported:
         <span class="property-type">string</span>
     </dt>
     <dd>{{% md %}}The id of the EMR cluster
-{{% /md %}}</dd>
-    <dt class="property-optional"
+{{% /md %}}</dd><dt class="property-optional"
             title="Optional">
         <span id="state_computelimits_go">
 <a href="#state_computelimits_go" style="color: inherit; text-decoration: inherit;">Compute<wbr>Limits</a>
@@ -685,14 +643,11 @@ The following state arguments are supported:
         <span class="property-type"><a href="#managedscalingpolicycomputelimit">[]Managed<wbr>Scaling<wbr>Policy<wbr>Compute<wbr>Limit</a></span>
     </dt>
     <dd>{{% md %}}Configuration block with compute limit settings. Described below.
-{{% /md %}}</dd>
-</dl>
+{{% /md %}}</dd></dl>
 {{% /choosable %}}
 
 {{% choosable language nodejs %}}
-<dl class="resources-properties">
-
-    <dt class="property-optional"
+<dl class="resources-properties"><dt class="property-optional"
             title="Optional">
         <span id="state_clusterid_nodejs">
 <a href="#state_clusterid_nodejs" style="color: inherit; text-decoration: inherit;">cluster<wbr>Id</a>
@@ -701,8 +656,7 @@ The following state arguments are supported:
         <span class="property-type">string</span>
     </dt>
     <dd>{{% md %}}The id of the EMR cluster
-{{% /md %}}</dd>
-    <dt class="property-optional"
+{{% /md %}}</dd><dt class="property-optional"
             title="Optional">
         <span id="state_computelimits_nodejs">
 <a href="#state_computelimits_nodejs" style="color: inherit; text-decoration: inherit;">compute<wbr>Limits</a>
@@ -711,14 +665,11 @@ The following state arguments are supported:
         <span class="property-type"><a href="#managedscalingpolicycomputelimit">Managed<wbr>Scaling<wbr>Policy<wbr>Compute<wbr>Limit[]</a></span>
     </dt>
     <dd>{{% md %}}Configuration block with compute limit settings. Described below.
-{{% /md %}}</dd>
-</dl>
+{{% /md %}}</dd></dl>
 {{% /choosable %}}
 
 {{% choosable language python %}}
-<dl class="resources-properties">
-
-    <dt class="property-optional"
+<dl class="resources-properties"><dt class="property-optional"
             title="Optional">
         <span id="state_cluster_id_python">
 <a href="#state_cluster_id_python" style="color: inherit; text-decoration: inherit;">cluster_<wbr>id</a>
@@ -727,8 +678,7 @@ The following state arguments are supported:
         <span class="property-type">str</span>
     </dt>
     <dd>{{% md %}}The id of the EMR cluster
-{{% /md %}}</dd>
-    <dt class="property-optional"
+{{% /md %}}</dd><dt class="property-optional"
             title="Optional">
         <span id="state_compute_limits_python">
 <a href="#state_compute_limits_python" style="color: inherit; text-decoration: inherit;">compute_<wbr>limits</a>
@@ -737,8 +687,7 @@ The following state arguments are supported:
         <span class="property-type"><a href="#managedscalingpolicycomputelimit">Sequence[Managed<wbr>Scaling<wbr>Policy<wbr>Compute<wbr>Limit<wbr>Args]</a></span>
     </dt>
     <dd>{{% md %}}Configuration block with compute limit settings. Described below.
-{{% /md %}}</dd>
-</dl>
+{{% /md %}}</dd></dl>
 {{% /choosable %}}
 
 
@@ -753,9 +702,7 @@ The following state arguments are supported:
 <h4 id="managedscalingpolicycomputelimit">Managed<wbr>Scaling<wbr>Policy<wbr>Compute<wbr>Limit</h4>
 
 {{% choosable language csharp %}}
-<dl class="resources-properties">
-
-    <dt class="property-required"
+<dl class="resources-properties"><dt class="property-required"
             title="Required">
         <span id="maximumcapacityunits_csharp">
 <a href="#maximumcapacityunits_csharp" style="color: inherit; text-decoration: inherit;">Maximum<wbr>Capacity<wbr>Units</a>
@@ -764,8 +711,7 @@ The following state arguments are supported:
         <span class="property-type">int</span>
     </dt>
     <dd>{{% md %}}The upper boundary of EC2 units. It is measured through VCPU cores or instances for instance groups and measured through units for instance fleets. Managed scaling activities are not allowed beyond this boundary. The limit only applies to the core and task nodes. The master node cannot be scaled after initial configuration.
-{{% /md %}}</dd>
-    <dt class="property-required"
+{{% /md %}}</dd><dt class="property-required"
             title="Required">
         <span id="minimumcapacityunits_csharp">
 <a href="#minimumcapacityunits_csharp" style="color: inherit; text-decoration: inherit;">Minimum<wbr>Capacity<wbr>Units</a>
@@ -774,8 +720,7 @@ The following state arguments are supported:
         <span class="property-type">int</span>
     </dt>
     <dd>{{% md %}}The lower boundary of EC2 units. It is measured through VCPU cores or instances for instance groups and measured through units for instance fleets. Managed scaling activities are not allowed beyond this boundary. The limit only applies to the core and task nodes. The master node cannot be scaled after initial configuration.
-{{% /md %}}</dd>
-    <dt class="property-required"
+{{% /md %}}</dd><dt class="property-required"
             title="Required">
         <span id="unittype_csharp">
 <a href="#unittype_csharp" style="color: inherit; text-decoration: inherit;">Unit<wbr>Type</a>
@@ -784,8 +729,7 @@ The following state arguments are supported:
         <span class="property-type">string</span>
     </dt>
     <dd>{{% md %}}The unit type used for specifying a managed scaling policy. Valid Values: `InstanceFleetUnits` | `Instances` | `VCPU`
-{{% /md %}}</dd>
-    <dt class="property-optional"
+{{% /md %}}</dd><dt class="property-optional"
             title="Optional">
         <span id="maximumcorecapacityunits_csharp">
 <a href="#maximumcorecapacityunits_csharp" style="color: inherit; text-decoration: inherit;">Maximum<wbr>Core<wbr>Capacity<wbr>Units</a>
@@ -794,8 +738,7 @@ The following state arguments are supported:
         <span class="property-type">int</span>
     </dt>
     <dd>{{% md %}}The upper boundary of EC2 units for core node type in a cluster. It is measured through VCPU cores or instances for instance groups and measured through units for instance fleets. The core units are not allowed to scale beyond this boundary. The parameter is used to split capacity allocation between core and task nodes.
-{{% /md %}}</dd>
-    <dt class="property-optional"
+{{% /md %}}</dd><dt class="property-optional"
             title="Optional">
         <span id="maximumondemandcapacityunits_csharp">
 <a href="#maximumondemandcapacityunits_csharp" style="color: inherit; text-decoration: inherit;">Maximum<wbr>Ondemand<wbr>Capacity<wbr>Units</a>
@@ -804,14 +747,11 @@ The following state arguments are supported:
         <span class="property-type">int</span>
     </dt>
     <dd>{{% md %}}The upper boundary of On-Demand EC2 units. It is measured through VCPU cores or instances for instance groups and measured through units for instance fleets. The On-Demand units are not allowed to scale beyond this boundary. The parameter is used to split capacity allocation between On-Demand and Spot instances.
-{{% /md %}}</dd>
-</dl>
+{{% /md %}}</dd></dl>
 {{% /choosable %}}
 
 {{% choosable language go %}}
-<dl class="resources-properties">
-
-    <dt class="property-required"
+<dl class="resources-properties"><dt class="property-required"
             title="Required">
         <span id="maximumcapacityunits_go">
 <a href="#maximumcapacityunits_go" style="color: inherit; text-decoration: inherit;">Maximum<wbr>Capacity<wbr>Units</a>
@@ -820,8 +760,7 @@ The following state arguments are supported:
         <span class="property-type">int</span>
     </dt>
     <dd>{{% md %}}The upper boundary of EC2 units. It is measured through VCPU cores or instances for instance groups and measured through units for instance fleets. Managed scaling activities are not allowed beyond this boundary. The limit only applies to the core and task nodes. The master node cannot be scaled after initial configuration.
-{{% /md %}}</dd>
-    <dt class="property-required"
+{{% /md %}}</dd><dt class="property-required"
             title="Required">
         <span id="minimumcapacityunits_go">
 <a href="#minimumcapacityunits_go" style="color: inherit; text-decoration: inherit;">Minimum<wbr>Capacity<wbr>Units</a>
@@ -830,8 +769,7 @@ The following state arguments are supported:
         <span class="property-type">int</span>
     </dt>
     <dd>{{% md %}}The lower boundary of EC2 units. It is measured through VCPU cores or instances for instance groups and measured through units for instance fleets. Managed scaling activities are not allowed beyond this boundary. The limit only applies to the core and task nodes. The master node cannot be scaled after initial configuration.
-{{% /md %}}</dd>
-    <dt class="property-required"
+{{% /md %}}</dd><dt class="property-required"
             title="Required">
         <span id="unittype_go">
 <a href="#unittype_go" style="color: inherit; text-decoration: inherit;">Unit<wbr>Type</a>
@@ -840,8 +778,7 @@ The following state arguments are supported:
         <span class="property-type">string</span>
     </dt>
     <dd>{{% md %}}The unit type used for specifying a managed scaling policy. Valid Values: `InstanceFleetUnits` | `Instances` | `VCPU`
-{{% /md %}}</dd>
-    <dt class="property-optional"
+{{% /md %}}</dd><dt class="property-optional"
             title="Optional">
         <span id="maximumcorecapacityunits_go">
 <a href="#maximumcorecapacityunits_go" style="color: inherit; text-decoration: inherit;">Maximum<wbr>Core<wbr>Capacity<wbr>Units</a>
@@ -850,8 +787,7 @@ The following state arguments are supported:
         <span class="property-type">int</span>
     </dt>
     <dd>{{% md %}}The upper boundary of EC2 units for core node type in a cluster. It is measured through VCPU cores or instances for instance groups and measured through units for instance fleets. The core units are not allowed to scale beyond this boundary. The parameter is used to split capacity allocation between core and task nodes.
-{{% /md %}}</dd>
-    <dt class="property-optional"
+{{% /md %}}</dd><dt class="property-optional"
             title="Optional">
         <span id="maximumondemandcapacityunits_go">
 <a href="#maximumondemandcapacityunits_go" style="color: inherit; text-decoration: inherit;">Maximum<wbr>Ondemand<wbr>Capacity<wbr>Units</a>
@@ -860,14 +796,11 @@ The following state arguments are supported:
         <span class="property-type">int</span>
     </dt>
     <dd>{{% md %}}The upper boundary of On-Demand EC2 units. It is measured through VCPU cores or instances for instance groups and measured through units for instance fleets. The On-Demand units are not allowed to scale beyond this boundary. The parameter is used to split capacity allocation between On-Demand and Spot instances.
-{{% /md %}}</dd>
-</dl>
+{{% /md %}}</dd></dl>
 {{% /choosable %}}
 
 {{% choosable language nodejs %}}
-<dl class="resources-properties">
-
-    <dt class="property-required"
+<dl class="resources-properties"><dt class="property-required"
             title="Required">
         <span id="maximumcapacityunits_nodejs">
 <a href="#maximumcapacityunits_nodejs" style="color: inherit; text-decoration: inherit;">maximum<wbr>Capacity<wbr>Units</a>
@@ -876,8 +809,7 @@ The following state arguments are supported:
         <span class="property-type">number</span>
     </dt>
     <dd>{{% md %}}The upper boundary of EC2 units. It is measured through VCPU cores or instances for instance groups and measured through units for instance fleets. Managed scaling activities are not allowed beyond this boundary. The limit only applies to the core and task nodes. The master node cannot be scaled after initial configuration.
-{{% /md %}}</dd>
-    <dt class="property-required"
+{{% /md %}}</dd><dt class="property-required"
             title="Required">
         <span id="minimumcapacityunits_nodejs">
 <a href="#minimumcapacityunits_nodejs" style="color: inherit; text-decoration: inherit;">minimum<wbr>Capacity<wbr>Units</a>
@@ -886,8 +818,7 @@ The following state arguments are supported:
         <span class="property-type">number</span>
     </dt>
     <dd>{{% md %}}The lower boundary of EC2 units. It is measured through VCPU cores or instances for instance groups and measured through units for instance fleets. Managed scaling activities are not allowed beyond this boundary. The limit only applies to the core and task nodes. The master node cannot be scaled after initial configuration.
-{{% /md %}}</dd>
-    <dt class="property-required"
+{{% /md %}}</dd><dt class="property-required"
             title="Required">
         <span id="unittype_nodejs">
 <a href="#unittype_nodejs" style="color: inherit; text-decoration: inherit;">unit<wbr>Type</a>
@@ -896,8 +827,7 @@ The following state arguments are supported:
         <span class="property-type">string</span>
     </dt>
     <dd>{{% md %}}The unit type used for specifying a managed scaling policy. Valid Values: `InstanceFleetUnits` | `Instances` | `VCPU`
-{{% /md %}}</dd>
-    <dt class="property-optional"
+{{% /md %}}</dd><dt class="property-optional"
             title="Optional">
         <span id="maximumcorecapacityunits_nodejs">
 <a href="#maximumcorecapacityunits_nodejs" style="color: inherit; text-decoration: inherit;">maximum<wbr>Core<wbr>Capacity<wbr>Units</a>
@@ -906,8 +836,7 @@ The following state arguments are supported:
         <span class="property-type">number</span>
     </dt>
     <dd>{{% md %}}The upper boundary of EC2 units for core node type in a cluster. It is measured through VCPU cores or instances for instance groups and measured through units for instance fleets. The core units are not allowed to scale beyond this boundary. The parameter is used to split capacity allocation between core and task nodes.
-{{% /md %}}</dd>
-    <dt class="property-optional"
+{{% /md %}}</dd><dt class="property-optional"
             title="Optional">
         <span id="maximumondemandcapacityunits_nodejs">
 <a href="#maximumondemandcapacityunits_nodejs" style="color: inherit; text-decoration: inherit;">maximum<wbr>Ondemand<wbr>Capacity<wbr>Units</a>
@@ -916,14 +845,11 @@ The following state arguments are supported:
         <span class="property-type">number</span>
     </dt>
     <dd>{{% md %}}The upper boundary of On-Demand EC2 units. It is measured through VCPU cores or instances for instance groups and measured through units for instance fleets. The On-Demand units are not allowed to scale beyond this boundary. The parameter is used to split capacity allocation between On-Demand and Spot instances.
-{{% /md %}}</dd>
-</dl>
+{{% /md %}}</dd></dl>
 {{% /choosable %}}
 
 {{% choosable language python %}}
-<dl class="resources-properties">
-
-    <dt class="property-required"
+<dl class="resources-properties"><dt class="property-required"
             title="Required">
         <span id="maximum_capacity_units_python">
 <a href="#maximum_capacity_units_python" style="color: inherit; text-decoration: inherit;">maximum_<wbr>capacity_<wbr>units</a>
@@ -932,8 +858,7 @@ The following state arguments are supported:
         <span class="property-type">int</span>
     </dt>
     <dd>{{% md %}}The upper boundary of EC2 units. It is measured through VCPU cores or instances for instance groups and measured through units for instance fleets. Managed scaling activities are not allowed beyond this boundary. The limit only applies to the core and task nodes. The master node cannot be scaled after initial configuration.
-{{% /md %}}</dd>
-    <dt class="property-required"
+{{% /md %}}</dd><dt class="property-required"
             title="Required">
         <span id="minimum_capacity_units_python">
 <a href="#minimum_capacity_units_python" style="color: inherit; text-decoration: inherit;">minimum_<wbr>capacity_<wbr>units</a>
@@ -942,8 +867,7 @@ The following state arguments are supported:
         <span class="property-type">int</span>
     </dt>
     <dd>{{% md %}}The lower boundary of EC2 units. It is measured through VCPU cores or instances for instance groups and measured through units for instance fleets. Managed scaling activities are not allowed beyond this boundary. The limit only applies to the core and task nodes. The master node cannot be scaled after initial configuration.
-{{% /md %}}</dd>
-    <dt class="property-required"
+{{% /md %}}</dd><dt class="property-required"
             title="Required">
         <span id="unit_type_python">
 <a href="#unit_type_python" style="color: inherit; text-decoration: inherit;">unit_<wbr>type</a>
@@ -952,8 +876,7 @@ The following state arguments are supported:
         <span class="property-type">str</span>
     </dt>
     <dd>{{% md %}}The unit type used for specifying a managed scaling policy. Valid Values: `InstanceFleetUnits` | `Instances` | `VCPU`
-{{% /md %}}</dd>
-    <dt class="property-optional"
+{{% /md %}}</dd><dt class="property-optional"
             title="Optional">
         <span id="maximum_core_capacity_units_python">
 <a href="#maximum_core_capacity_units_python" style="color: inherit; text-decoration: inherit;">maximum_<wbr>core_<wbr>capacity_<wbr>units</a>
@@ -962,8 +885,7 @@ The following state arguments are supported:
         <span class="property-type">int</span>
     </dt>
     <dd>{{% md %}}The upper boundary of EC2 units for core node type in a cluster. It is measured through VCPU cores or instances for instance groups and measured through units for instance fleets. The core units are not allowed to scale beyond this boundary. The parameter is used to split capacity allocation between core and task nodes.
-{{% /md %}}</dd>
-    <dt class="property-optional"
+{{% /md %}}</dd><dt class="property-optional"
             title="Optional">
         <span id="maximum_ondemand_capacity_units_python">
 <a href="#maximum_ondemand_capacity_units_python" style="color: inherit; text-decoration: inherit;">maximum_<wbr>ondemand_<wbr>capacity_<wbr>units</a>
@@ -972,8 +894,7 @@ The following state arguments are supported:
         <span class="property-type">int</span>
     </dt>
     <dd>{{% md %}}The upper boundary of On-Demand EC2 units. It is measured through VCPU cores or instances for instance groups and measured through units for instance fleets. The On-Demand units are not allowed to scale beyond this boundary. The parameter is used to split capacity allocation between On-Demand and Spot instances.
-{{% /md %}}</dd>
-</dl>
+{{% /md %}}</dd></dl>
 {{% /choosable %}}
 ## Import
 
@@ -994,6 +915,6 @@ EMR Managed Scaling Policies can be imported via the EMR Cluster identifier, e.g
 	<dt>License</dt>
 	<dd>Apache-2.0</dd>
 	<dt>Notes</dt>
-	<dd>This Pulumi package is based on the [`aws` Terraform Provider](https://github.com/terraform-providers/terraform-provider-aws).</dd>
+	<dd>{{% md %}}This Pulumi package is based on the [`aws` Terraform Provider](https://github.com/terraform-providers/terraform-provider-aws).{{% /md %}}</dd>
 </dl>
 

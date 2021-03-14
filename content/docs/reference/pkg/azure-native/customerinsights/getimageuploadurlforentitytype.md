@@ -51,9 +51,7 @@ The following arguments are supported:
 
 
 {{% choosable language csharp %}}
-<dl class="resources-properties">
-
-    <dt class="property-required"
+<dl class="resources-properties"><dt class="property-required"
             title="Required">
         <span id="hubname_csharp">
 <a href="#hubname_csharp" style="color: inherit; text-decoration: inherit;">Hub<wbr>Name</a>
@@ -61,8 +59,7 @@ The following arguments are supported:
         <span class="property-indicator"></span>
         <span class="property-type">string</span>
     </dt>
-    <dd>{{% md %}}The name of the hub.{{% /md %}}</dd>
-    <dt class="property-required"
+    <dd>{{% md %}}The name of the hub.{{% /md %}}</dd><dt class="property-required"
             title="Required">
         <span id="resourcegroupname_csharp">
 <a href="#resourcegroupname_csharp" style="color: inherit; text-decoration: inherit;">Resource<wbr>Group<wbr>Name</a>
@@ -70,8 +67,7 @@ The following arguments are supported:
         <span class="property-indicator"></span>
         <span class="property-type">string</span>
     </dt>
-    <dd>{{% md %}}The name of the resource group.{{% /md %}}</dd>
-    <dt class="property-optional"
+    <dd>{{% md %}}The name of the resource group.{{% /md %}}</dd><dt class="property-optional"
             title="Optional">
         <span id="entitytype_csharp">
 <a href="#entitytype_csharp" style="color: inherit; text-decoration: inherit;">Entity<wbr>Type</a>
@@ -79,8 +75,7 @@ The following arguments are supported:
         <span class="property-indicator"></span>
         <span class="property-type">string</span>
     </dt>
-    <dd>{{% md %}}Type of entity. Can be Profile or Interaction.{{% /md %}}</dd>
-    <dt class="property-optional"
+    <dd>{{% md %}}Type of entity. Can be Profile or Interaction.{{% /md %}}</dd><dt class="property-optional"
             title="Optional">
         <span id="entitytypename_csharp">
 <a href="#entitytypename_csharp" style="color: inherit; text-decoration: inherit;">Entity<wbr>Type<wbr>Name</a>
@@ -88,8 +83,7 @@ The following arguments are supported:
         <span class="property-indicator"></span>
         <span class="property-type">string</span>
     </dt>
-    <dd>{{% md %}}Name of the entity type.{{% /md %}}</dd>
-    <dt class="property-optional"
+    <dd>{{% md %}}Name of the entity type.{{% /md %}}</dd><dt class="property-optional"
             title="Optional">
         <span id="relativepath_csharp">
 <a href="#relativepath_csharp" style="color: inherit; text-decoration: inherit;">Relative<wbr>Path</a>
@@ -97,14 +91,11 @@ The following arguments are supported:
         <span class="property-indicator"></span>
         <span class="property-type">string</span>
     </dt>
-    <dd>{{% md %}}Relative path of the image.{{% /md %}}</dd>
-</dl>
+    <dd>{{% md %}}Relative path of the image.{{% /md %}}</dd></dl>
 {{% /choosable %}}
 
 {{% choosable language go %}}
-<dl class="resources-properties">
-
-    <dt class="property-required"
+<dl class="resources-properties"><dt class="property-required"
             title="Required">
         <span id="hubname_go">
 <a href="#hubname_go" style="color: inherit; text-decoration: inherit;">Hub<wbr>Name</a>
@@ -112,8 +103,7 @@ The following arguments are supported:
         <span class="property-indicator"></span>
         <span class="property-type">string</span>
     </dt>
-    <dd>{{% md %}}The name of the hub.{{% /md %}}</dd>
-    <dt class="property-required"
+    <dd>{{% md %}}The name of the hub.{{% /md %}}</dd><dt class="property-required"
             title="Required">
         <span id="resourcegroupname_go">
 <a href="#resourcegroupname_go" style="color: inherit; text-decoration: inherit;">Resource<wbr>Group<wbr>Name</a>
@@ -121,8 +111,7 @@ The following arguments are supported:
         <span class="property-indicator"></span>
         <span class="property-type">string</span>
     </dt>
-    <dd>{{% md %}}The name of the resource group.{{% /md %}}</dd>
-    <dt class="property-optional"
+    <dd>{{% md %}}The name of the resource group.{{% /md %}}</dd><dt class="property-optional"
             title="Optional">
         <span id="entitytype_go">
 <a href="#entitytype_go" style="color: inherit; text-decoration: inherit;">Entity<wbr>Type</a>
@@ -130,8 +119,7 @@ The following arguments are supported:
         <span class="property-indicator"></span>
         <span class="property-type">string</span>
     </dt>
-    <dd>{{% md %}}Type of entity. Can be Profile or Interaction.{{% /md %}}</dd>
-    <dt class="property-optional"
+    <dd>{{% md %}}Type of entity. Can be Profile or Interaction.{{% /md %}}</dd><dt class="property-optional"
             title="Optional">
         <span id="entitytypename_go">
 <a href="#entitytypename_go" style="color: inherit; text-decoration: inherit;">Entity<wbr>Type<wbr>Name</a>
@@ -139,8 +127,7 @@ The following arguments are supported:
         <span class="property-indicator"></span>
         <span class="property-type">string</span>
     </dt>
-    <dd>{{% md %}}Name of the entity type.{{% /md %}}</dd>
-    <dt class="property-optional"
+    <dd>{{% md %}}Name of the entity type.{{% /md %}}</dd><dt class="property-optional"
             title="Optional">
         <span id="relativepath_go">
 <a href="#relativepath_go" style="color: inherit; text-decoration: inherit;">Relative<wbr>Path</a>
@@ -148,14 +135,11 @@ The following arguments are supported:
         <span class="property-indicator"></span>
         <span class="property-type">string</span>
     </dt>
-    <dd>{{% md %}}Relative path of the image.{{% /md %}}</dd>
-</dl>
+    <dd>{{% md %}}Relative path of the image.{{% /md %}}</dd></dl>
 {{% /choosable %}}
 
 {{% choosable language nodejs %}}
-<dl class="resources-properties">
-
-    <dt class="property-required"
+<dl class="resources-properties"><dt class="property-required"
             title="Required">
         <span id="hubname_nodejs">
 <a href="#hubname_nodejs" style="color: inherit; text-decoration: inherit;">hub<wbr>Name</a>
@@ -163,8 +147,7 @@ The following arguments are supported:
         <span class="property-indicator"></span>
         <span class="property-type">string</span>
     </dt>
-    <dd>{{% md %}}The name of the hub.{{% /md %}}</dd>
-    <dt class="property-required"
+    <dd>{{% md %}}The name of the hub.{{% /md %}}</dd><dt class="property-required"
             title="Required">
         <span id="resourcegroupname_nodejs">
 <a href="#resourcegroupname_nodejs" style="color: inherit; text-decoration: inherit;">resource<wbr>Group<wbr>Name</a>
@@ -172,8 +155,7 @@ The following arguments are supported:
         <span class="property-indicator"></span>
         <span class="property-type">string</span>
     </dt>
-    <dd>{{% md %}}The name of the resource group.{{% /md %}}</dd>
-    <dt class="property-optional"
+    <dd>{{% md %}}The name of the resource group.{{% /md %}}</dd><dt class="property-optional"
             title="Optional">
         <span id="entitytype_nodejs">
 <a href="#entitytype_nodejs" style="color: inherit; text-decoration: inherit;">entity<wbr>Type</a>
@@ -181,8 +163,7 @@ The following arguments are supported:
         <span class="property-indicator"></span>
         <span class="property-type">string</span>
     </dt>
-    <dd>{{% md %}}Type of entity. Can be Profile or Interaction.{{% /md %}}</dd>
-    <dt class="property-optional"
+    <dd>{{% md %}}Type of entity. Can be Profile or Interaction.{{% /md %}}</dd><dt class="property-optional"
             title="Optional">
         <span id="entitytypename_nodejs">
 <a href="#entitytypename_nodejs" style="color: inherit; text-decoration: inherit;">entity<wbr>Type<wbr>Name</a>
@@ -190,8 +171,7 @@ The following arguments are supported:
         <span class="property-indicator"></span>
         <span class="property-type">string</span>
     </dt>
-    <dd>{{% md %}}Name of the entity type.{{% /md %}}</dd>
-    <dt class="property-optional"
+    <dd>{{% md %}}Name of the entity type.{{% /md %}}</dd><dt class="property-optional"
             title="Optional">
         <span id="relativepath_nodejs">
 <a href="#relativepath_nodejs" style="color: inherit; text-decoration: inherit;">relative<wbr>Path</a>
@@ -199,14 +179,11 @@ The following arguments are supported:
         <span class="property-indicator"></span>
         <span class="property-type">string</span>
     </dt>
-    <dd>{{% md %}}Relative path of the image.{{% /md %}}</dd>
-</dl>
+    <dd>{{% md %}}Relative path of the image.{{% /md %}}</dd></dl>
 {{% /choosable %}}
 
 {{% choosable language python %}}
-<dl class="resources-properties">
-
-    <dt class="property-required"
+<dl class="resources-properties"><dt class="property-required"
             title="Required">
         <span id="hub_name_python">
 <a href="#hub_name_python" style="color: inherit; text-decoration: inherit;">hub_<wbr>name</a>
@@ -214,8 +191,7 @@ The following arguments are supported:
         <span class="property-indicator"></span>
         <span class="property-type">str</span>
     </dt>
-    <dd>{{% md %}}The name of the hub.{{% /md %}}</dd>
-    <dt class="property-required"
+    <dd>{{% md %}}The name of the hub.{{% /md %}}</dd><dt class="property-required"
             title="Required">
         <span id="resource_group_name_python">
 <a href="#resource_group_name_python" style="color: inherit; text-decoration: inherit;">resource_<wbr>group_<wbr>name</a>
@@ -223,8 +199,7 @@ The following arguments are supported:
         <span class="property-indicator"></span>
         <span class="property-type">str</span>
     </dt>
-    <dd>{{% md %}}The name of the resource group.{{% /md %}}</dd>
-    <dt class="property-optional"
+    <dd>{{% md %}}The name of the resource group.{{% /md %}}</dd><dt class="property-optional"
             title="Optional">
         <span id="entity_type_python">
 <a href="#entity_type_python" style="color: inherit; text-decoration: inherit;">entity_<wbr>type</a>
@@ -232,8 +207,7 @@ The following arguments are supported:
         <span class="property-indicator"></span>
         <span class="property-type">str</span>
     </dt>
-    <dd>{{% md %}}Type of entity. Can be Profile or Interaction.{{% /md %}}</dd>
-    <dt class="property-optional"
+    <dd>{{% md %}}Type of entity. Can be Profile or Interaction.{{% /md %}}</dd><dt class="property-optional"
             title="Optional">
         <span id="entity_type_name_python">
 <a href="#entity_type_name_python" style="color: inherit; text-decoration: inherit;">entity_<wbr>type_<wbr>name</a>
@@ -241,8 +215,7 @@ The following arguments are supported:
         <span class="property-indicator"></span>
         <span class="property-type">str</span>
     </dt>
-    <dd>{{% md %}}Name of the entity type.{{% /md %}}</dd>
-    <dt class="property-optional"
+    <dd>{{% md %}}Name of the entity type.{{% /md %}}</dd><dt class="property-optional"
             title="Optional">
         <span id="relative_path_python">
 <a href="#relative_path_python" style="color: inherit; text-decoration: inherit;">relative_<wbr>path</a>
@@ -250,8 +223,7 @@ The following arguments are supported:
         <span class="property-indicator"></span>
         <span class="property-type">str</span>
     </dt>
-    <dd>{{% md %}}Relative path of the image.{{% /md %}}</dd>
-</dl>
+    <dd>{{% md %}}Relative path of the image.{{% /md %}}</dd></dl>
 {{% /choosable %}}
 
 
@@ -264,9 +236,7 @@ The following output properties are available:
 
 
 {{% choosable language csharp %}}
-<dl class="resources-properties">
-
-    <dt class="property-"
+<dl class="resources-properties"><dt class="property-"
             title="">
         <span id="contenturl_csharp">
 <a href="#contenturl_csharp" style="color: inherit; text-decoration: inherit;">Content<wbr>Url</a>
@@ -274,8 +244,7 @@ The following output properties are available:
         <span class="property-indicator"></span>
         <span class="property-type">string</span>
     </dt>
-    <dd>{{% md %}}Content URL for the image blob.{{% /md %}}</dd>
-    <dt class="property-"
+    <dd>{{% md %}}Content URL for the image blob.{{% /md %}}</dd><dt class="property-"
             title="">
         <span id="imageexists_csharp">
 <a href="#imageexists_csharp" style="color: inherit; text-decoration: inherit;">Image<wbr>Exists</a>
@@ -283,8 +252,7 @@ The following output properties are available:
         <span class="property-indicator"></span>
         <span class="property-type">bool</span>
     </dt>
-    <dd>{{% md %}}Whether image exists already.{{% /md %}}</dd>
-    <dt class="property-"
+    <dd>{{% md %}}Whether image exists already.{{% /md %}}</dd><dt class="property-"
             title="">
         <span id="relativepath_csharp">
 <a href="#relativepath_csharp" style="color: inherit; text-decoration: inherit;">Relative<wbr>Path</a>
@@ -292,14 +260,11 @@ The following output properties are available:
         <span class="property-indicator"></span>
         <span class="property-type">string</span>
     </dt>
-    <dd>{{% md %}}Relative path of the image.{{% /md %}}</dd>
-</dl>
+    <dd>{{% md %}}Relative path of the image.{{% /md %}}</dd></dl>
 {{% /choosable %}}
 
 {{% choosable language go %}}
-<dl class="resources-properties">
-
-    <dt class="property-"
+<dl class="resources-properties"><dt class="property-"
             title="">
         <span id="contenturl_go">
 <a href="#contenturl_go" style="color: inherit; text-decoration: inherit;">Content<wbr>Url</a>
@@ -307,8 +272,7 @@ The following output properties are available:
         <span class="property-indicator"></span>
         <span class="property-type">string</span>
     </dt>
-    <dd>{{% md %}}Content URL for the image blob.{{% /md %}}</dd>
-    <dt class="property-"
+    <dd>{{% md %}}Content URL for the image blob.{{% /md %}}</dd><dt class="property-"
             title="">
         <span id="imageexists_go">
 <a href="#imageexists_go" style="color: inherit; text-decoration: inherit;">Image<wbr>Exists</a>
@@ -316,8 +280,7 @@ The following output properties are available:
         <span class="property-indicator"></span>
         <span class="property-type">bool</span>
     </dt>
-    <dd>{{% md %}}Whether image exists already.{{% /md %}}</dd>
-    <dt class="property-"
+    <dd>{{% md %}}Whether image exists already.{{% /md %}}</dd><dt class="property-"
             title="">
         <span id="relativepath_go">
 <a href="#relativepath_go" style="color: inherit; text-decoration: inherit;">Relative<wbr>Path</a>
@@ -325,14 +288,11 @@ The following output properties are available:
         <span class="property-indicator"></span>
         <span class="property-type">string</span>
     </dt>
-    <dd>{{% md %}}Relative path of the image.{{% /md %}}</dd>
-</dl>
+    <dd>{{% md %}}Relative path of the image.{{% /md %}}</dd></dl>
 {{% /choosable %}}
 
 {{% choosable language nodejs %}}
-<dl class="resources-properties">
-
-    <dt class="property-"
+<dl class="resources-properties"><dt class="property-"
             title="">
         <span id="contenturl_nodejs">
 <a href="#contenturl_nodejs" style="color: inherit; text-decoration: inherit;">content<wbr>Url</a>
@@ -340,8 +300,7 @@ The following output properties are available:
         <span class="property-indicator"></span>
         <span class="property-type">string</span>
     </dt>
-    <dd>{{% md %}}Content URL for the image blob.{{% /md %}}</dd>
-    <dt class="property-"
+    <dd>{{% md %}}Content URL for the image blob.{{% /md %}}</dd><dt class="property-"
             title="">
         <span id="imageexists_nodejs">
 <a href="#imageexists_nodejs" style="color: inherit; text-decoration: inherit;">image<wbr>Exists</a>
@@ -349,8 +308,7 @@ The following output properties are available:
         <span class="property-indicator"></span>
         <span class="property-type">boolean</span>
     </dt>
-    <dd>{{% md %}}Whether image exists already.{{% /md %}}</dd>
-    <dt class="property-"
+    <dd>{{% md %}}Whether image exists already.{{% /md %}}</dd><dt class="property-"
             title="">
         <span id="relativepath_nodejs">
 <a href="#relativepath_nodejs" style="color: inherit; text-decoration: inherit;">relative<wbr>Path</a>
@@ -358,14 +316,11 @@ The following output properties are available:
         <span class="property-indicator"></span>
         <span class="property-type">string</span>
     </dt>
-    <dd>{{% md %}}Relative path of the image.{{% /md %}}</dd>
-</dl>
+    <dd>{{% md %}}Relative path of the image.{{% /md %}}</dd></dl>
 {{% /choosable %}}
 
 {{% choosable language python %}}
-<dl class="resources-properties">
-
-    <dt class="property-"
+<dl class="resources-properties"><dt class="property-"
             title="">
         <span id="content_url_python">
 <a href="#content_url_python" style="color: inherit; text-decoration: inherit;">content_<wbr>url</a>
@@ -373,8 +328,7 @@ The following output properties are available:
         <span class="property-indicator"></span>
         <span class="property-type">str</span>
     </dt>
-    <dd>{{% md %}}Content URL for the image blob.{{% /md %}}</dd>
-    <dt class="property-"
+    <dd>{{% md %}}Content URL for the image blob.{{% /md %}}</dd><dt class="property-"
             title="">
         <span id="image_exists_python">
 <a href="#image_exists_python" style="color: inherit; text-decoration: inherit;">image_<wbr>exists</a>
@@ -382,8 +336,7 @@ The following output properties are available:
         <span class="property-indicator"></span>
         <span class="property-type">bool</span>
     </dt>
-    <dd>{{% md %}}Whether image exists already.{{% /md %}}</dd>
-    <dt class="property-"
+    <dd>{{% md %}}Whether image exists already.{{% /md %}}</dd><dt class="property-"
             title="">
         <span id="relative_path_python">
 <a href="#relative_path_python" style="color: inherit; text-decoration: inherit;">relative_<wbr>path</a>
@@ -391,8 +344,7 @@ The following output properties are available:
         <span class="property-indicator"></span>
         <span class="property-type">str</span>
     </dt>
-    <dd>{{% md %}}Relative path of the image.{{% /md %}}</dd>
-</dl>
+    <dd>{{% md %}}Relative path of the image.{{% /md %}}</dd></dl>
 {{% /choosable %}}
 
 

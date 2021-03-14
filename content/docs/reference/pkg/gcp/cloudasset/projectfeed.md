@@ -42,9 +42,7 @@ To get more information about ProjectFeed, see:
 
 {{% choosable language nodejs %}}
 
-<dl class="resources-properties">
-  
-    <dt
+<dl class="resources-properties"><dt
         class="property-required" title="Required">
         <span>name</span>
         <span class="property-indicator"></span>
@@ -52,9 +50,7 @@ To get more information about ProjectFeed, see:
     </dt>
     <dd>
       The unique name of the resource.
-    </dd>
-  
-    <dt
+    </dd><dt
         class="property-required" title="Required">
         <span>args</span>
         <span class="property-indicator"></span>
@@ -62,9 +58,7 @@ To get more information about ProjectFeed, see:
     </dt>
     <dd>
       The arguments to resource properties.
-    </dd>
-  
-    <dt
+    </dd><dt
         class="property-optional" title="Optional">
         <span>opts</span>
         <span class="property-indicator"></span>
@@ -72,10 +66,7 @@ To get more information about ProjectFeed, see:
     </dt>
     <dd>
       Bag of options to control resource&#39;s behavior.
-    </dd>
-  
-
-</dl>
+    </dd></dl>
 
 {{% /choosable %}}
 
@@ -101,9 +92,7 @@ To get more information about ProjectFeed, see:
 
 {{% choosable language go %}}
 
-<dl class="resources-properties">
-  
-    <dt
+<dl class="resources-properties"><dt
         class="property-optional" title="Optional">
         <span>ctx</span>
         <span class="property-indicator"></span>
@@ -111,9 +100,7 @@ To get more information about ProjectFeed, see:
     </dt>
     <dd>
       Context object for the current deployment.
-    </dd>
-  
-    <dt
+    </dd><dt
         class="property-required" title="Required">
         <span>name</span>
         <span class="property-indicator"></span>
@@ -121,9 +108,7 @@ To get more information about ProjectFeed, see:
     </dt>
     <dd>
       The unique name of the resource.
-    </dd>
-  
-    <dt
+    </dd><dt
         class="property-required" title="Required">
         <span>args</span>
         <span class="property-indicator"></span>
@@ -131,9 +116,7 @@ To get more information about ProjectFeed, see:
     </dt>
     <dd>
       The arguments to resource properties.
-    </dd>
-  
-    <dt
+    </dd><dt
         class="property-optional" title="Optional">
         <span>opts</span>
         <span class="property-indicator"></span>
@@ -141,18 +124,13 @@ To get more information about ProjectFeed, see:
     </dt>
     <dd>
       Bag of options to control resource&#39;s behavior.
-    </dd>
-  
-
-</dl>
+    </dd></dl>
 
 {{% /choosable %}}
 
 {{% choosable language csharp %}}
 
-<dl class="resources-properties">
-  
-    <dt
+<dl class="resources-properties"><dt
         class="property-required" title="Required">
         <span>name</span>
         <span class="property-indicator"></span>
@@ -160,9 +138,7 @@ To get more information about ProjectFeed, see:
     </dt>
     <dd>
       The unique name of the resource.
-    </dd>
-  
-    <dt
+    </dd><dt
         class="property-required" title="Required">
         <span>args</span>
         <span class="property-indicator"></span>
@@ -170,9 +146,7 @@ To get more information about ProjectFeed, see:
     </dt>
     <dd>
       The arguments to resource properties.
-    </dd>
-  
-    <dt
+    </dd><dt
         class="property-optional" title="Optional">
         <span>opts</span>
         <span class="property-indicator"></span>
@@ -180,10 +154,7 @@ To get more information about ProjectFeed, see:
     </dt>
     <dd>
       Bag of options to control resource&#39;s behavior.
-    </dd>
-  
-
-</dl>
+    </dd></dl>
 
 {{% /choosable %}}
 
@@ -198,9 +169,7 @@ The ProjectFeed resource accepts the following [input]({{< relref "/docs/intro/c
 
 
 {{% choosable language csharp %}}
-<dl class="resources-properties">
-
-    <dt class="property-required"
+<dl class="resources-properties"><dt class="property-required"
             title="Required">
         <span id="feedid_csharp">
 <a href="#feedid_csharp" style="color: inherit; text-decoration: inherit;">Feed<wbr>Id</a>
@@ -209,8 +178,7 @@ The ProjectFeed resource accepts the following [input]({{< relref "/docs/intro/c
         <span class="property-type">string</span>
     </dt>
     <dd>{{% md %}}This is the client-assigned asset feed identifier and it needs to be unique under a specific parent.
-{{% /md %}}</dd>
-    <dt class="property-required"
+{{% /md %}}</dd><dt class="property-required"
             title="Required">
         <span id="feedoutputconfig_csharp">
 <a href="#feedoutputconfig_csharp" style="color: inherit; text-decoration: inherit;">Feed<wbr>Output<wbr>Config</a>
@@ -220,8 +188,7 @@ The ProjectFeed resource accepts the following [input]({{< relref "/docs/intro/c
     </dt>
     <dd>{{% md %}}Output configuration for asset feed destination.
 Structure is documented below.
-{{% /md %}}</dd>
-    <dt class="property-optional"
+{{% /md %}}</dd><dt class="property-optional"
             title="Optional">
         <span id="assetnames_csharp">
 <a href="#assetnames_csharp" style="color: inherit; text-decoration: inherit;">Asset<wbr>Names</a>
@@ -233,8 +200,7 @@ Structure is documented below.
 assetNames and assetTypes. Only asset updates matching specified assetNames and assetTypes are
 exported to the feed. For example: //compute.googleapis.com/projects/my_project_123/zones/zone1/instances/instance1.
 See https://cloud.google.com/apis/design/resourceNames#fullResourceName for more info.
-{{% /md %}}</dd>
-    <dt class="property-optional"
+{{% /md %}}</dd><dt class="property-optional"
             title="Optional">
         <span id="assettypes_csharp">
 <a href="#assettypes_csharp" style="color: inherit; text-decoration: inherit;">Asset<wbr>Types</a>
@@ -247,8 +213,7 @@ and assetTypes. Only asset updates matching specified assetNames and assetTypes 
 the feed. For example: "compute.googleapis.com/Disk"
 See https://cloud.google.com/asset-inventory/docs/supported-asset-types for a list of all
 supported asset types.
-{{% /md %}}</dd>
-    <dt class="property-optional"
+{{% /md %}}</dd><dt class="property-optional"
             title="Optional">
         <span id="billingproject_csharp">
 <a href="#billingproject_csharp" style="color: inherit; text-decoration: inherit;">Billing<wbr>Project</a>
@@ -260,8 +225,7 @@ supported asset types.
 destination pubsub topic. It also specifies the project for API
 enablement check, quota, and billing. If not specified, the resource's
 project will be used.
-{{% /md %}}</dd>
-    <dt class="property-optional"
+{{% /md %}}</dd><dt class="property-optional"
             title="Optional">
         <span id="condition_csharp">
 <a href="#condition_csharp" style="color: inherit; text-decoration: inherit;">Condition</a>
@@ -275,8 +239,7 @@ must be a valid CEL expression on a TemporalAsset with name temporal_asset. Exam
 expression "temporal_asset.deleted == true" will only publish Asset deletions. Other fields of
 condition are optional.
 Structure is documented below.
-{{% /md %}}</dd>
-    <dt class="property-optional"
+{{% /md %}}</dd><dt class="property-optional"
             title="Optional">
         <span id="contenttype_csharp">
 <a href="#contenttype_csharp" style="color: inherit; text-decoration: inherit;">Content<wbr>Type</a>
@@ -286,8 +249,7 @@ Structure is documented below.
     </dt>
     <dd>{{% md %}}Asset content type. If not specified, no content but the asset name and type will be returned.
 Possible values are `CONTENT_TYPE_UNSPECIFIED`, `RESOURCE`, `IAM_POLICY`, `ORG_POLICY`, and `ACCESS_POLICY`.
-{{% /md %}}</dd>
-    <dt class="property-optional"
+{{% /md %}}</dd><dt class="property-optional"
             title="Optional">
         <span id="project_csharp">
 <a href="#project_csharp" style="color: inherit; text-decoration: inherit;">Project</a>
@@ -297,14 +259,11 @@ Possible values are `CONTENT_TYPE_UNSPECIFIED`, `RESOURCE`, `IAM_POLICY`, `ORG_P
     </dt>
     <dd>{{% md %}}The ID of the project in which the resource belongs.
 If it is not provided, the provider project is used.
-{{% /md %}}</dd>
-</dl>
+{{% /md %}}</dd></dl>
 {{% /choosable %}}
 
 {{% choosable language go %}}
-<dl class="resources-properties">
-
-    <dt class="property-required"
+<dl class="resources-properties"><dt class="property-required"
             title="Required">
         <span id="feedid_go">
 <a href="#feedid_go" style="color: inherit; text-decoration: inherit;">Feed<wbr>Id</a>
@@ -313,8 +272,7 @@ If it is not provided, the provider project is used.
         <span class="property-type">string</span>
     </dt>
     <dd>{{% md %}}This is the client-assigned asset feed identifier and it needs to be unique under a specific parent.
-{{% /md %}}</dd>
-    <dt class="property-required"
+{{% /md %}}</dd><dt class="property-required"
             title="Required">
         <span id="feedoutputconfig_go">
 <a href="#feedoutputconfig_go" style="color: inherit; text-decoration: inherit;">Feed<wbr>Output<wbr>Config</a>
@@ -324,8 +282,7 @@ If it is not provided, the provider project is used.
     </dt>
     <dd>{{% md %}}Output configuration for asset feed destination.
 Structure is documented below.
-{{% /md %}}</dd>
-    <dt class="property-optional"
+{{% /md %}}</dd><dt class="property-optional"
             title="Optional">
         <span id="assetnames_go">
 <a href="#assetnames_go" style="color: inherit; text-decoration: inherit;">Asset<wbr>Names</a>
@@ -337,8 +294,7 @@ Structure is documented below.
 assetNames and assetTypes. Only asset updates matching specified assetNames and assetTypes are
 exported to the feed. For example: //compute.googleapis.com/projects/my_project_123/zones/zone1/instances/instance1.
 See https://cloud.google.com/apis/design/resourceNames#fullResourceName for more info.
-{{% /md %}}</dd>
-    <dt class="property-optional"
+{{% /md %}}</dd><dt class="property-optional"
             title="Optional">
         <span id="assettypes_go">
 <a href="#assettypes_go" style="color: inherit; text-decoration: inherit;">Asset<wbr>Types</a>
@@ -351,8 +307,7 @@ and assetTypes. Only asset updates matching specified assetNames and assetTypes 
 the feed. For example: "compute.googleapis.com/Disk"
 See https://cloud.google.com/asset-inventory/docs/supported-asset-types for a list of all
 supported asset types.
-{{% /md %}}</dd>
-    <dt class="property-optional"
+{{% /md %}}</dd><dt class="property-optional"
             title="Optional">
         <span id="billingproject_go">
 <a href="#billingproject_go" style="color: inherit; text-decoration: inherit;">Billing<wbr>Project</a>
@@ -364,8 +319,7 @@ supported asset types.
 destination pubsub topic. It also specifies the project for API
 enablement check, quota, and billing. If not specified, the resource's
 project will be used.
-{{% /md %}}</dd>
-    <dt class="property-optional"
+{{% /md %}}</dd><dt class="property-optional"
             title="Optional">
         <span id="condition_go">
 <a href="#condition_go" style="color: inherit; text-decoration: inherit;">Condition</a>
@@ -379,8 +333,7 @@ must be a valid CEL expression on a TemporalAsset with name temporal_asset. Exam
 expression "temporal_asset.deleted == true" will only publish Asset deletions. Other fields of
 condition are optional.
 Structure is documented below.
-{{% /md %}}</dd>
-    <dt class="property-optional"
+{{% /md %}}</dd><dt class="property-optional"
             title="Optional">
         <span id="contenttype_go">
 <a href="#contenttype_go" style="color: inherit; text-decoration: inherit;">Content<wbr>Type</a>
@@ -390,8 +343,7 @@ Structure is documented below.
     </dt>
     <dd>{{% md %}}Asset content type. If not specified, no content but the asset name and type will be returned.
 Possible values are `CONTENT_TYPE_UNSPECIFIED`, `RESOURCE`, `IAM_POLICY`, `ORG_POLICY`, and `ACCESS_POLICY`.
-{{% /md %}}</dd>
-    <dt class="property-optional"
+{{% /md %}}</dd><dt class="property-optional"
             title="Optional">
         <span id="project_go">
 <a href="#project_go" style="color: inherit; text-decoration: inherit;">Project</a>
@@ -401,14 +353,11 @@ Possible values are `CONTENT_TYPE_UNSPECIFIED`, `RESOURCE`, `IAM_POLICY`, `ORG_P
     </dt>
     <dd>{{% md %}}The ID of the project in which the resource belongs.
 If it is not provided, the provider project is used.
-{{% /md %}}</dd>
-</dl>
+{{% /md %}}</dd></dl>
 {{% /choosable %}}
 
 {{% choosable language nodejs %}}
-<dl class="resources-properties">
-
-    <dt class="property-required"
+<dl class="resources-properties"><dt class="property-required"
             title="Required">
         <span id="feedid_nodejs">
 <a href="#feedid_nodejs" style="color: inherit; text-decoration: inherit;">feed<wbr>Id</a>
@@ -417,8 +366,7 @@ If it is not provided, the provider project is used.
         <span class="property-type">string</span>
     </dt>
     <dd>{{% md %}}This is the client-assigned asset feed identifier and it needs to be unique under a specific parent.
-{{% /md %}}</dd>
-    <dt class="property-required"
+{{% /md %}}</dd><dt class="property-required"
             title="Required">
         <span id="feedoutputconfig_nodejs">
 <a href="#feedoutputconfig_nodejs" style="color: inherit; text-decoration: inherit;">feed<wbr>Output<wbr>Config</a>
@@ -428,8 +376,7 @@ If it is not provided, the provider project is used.
     </dt>
     <dd>{{% md %}}Output configuration for asset feed destination.
 Structure is documented below.
-{{% /md %}}</dd>
-    <dt class="property-optional"
+{{% /md %}}</dd><dt class="property-optional"
             title="Optional">
         <span id="assetnames_nodejs">
 <a href="#assetnames_nodejs" style="color: inherit; text-decoration: inherit;">asset<wbr>Names</a>
@@ -441,8 +388,7 @@ Structure is documented below.
 assetNames and assetTypes. Only asset updates matching specified assetNames and assetTypes are
 exported to the feed. For example: //compute.googleapis.com/projects/my_project_123/zones/zone1/instances/instance1.
 See https://cloud.google.com/apis/design/resourceNames#fullResourceName for more info.
-{{% /md %}}</dd>
-    <dt class="property-optional"
+{{% /md %}}</dd><dt class="property-optional"
             title="Optional">
         <span id="assettypes_nodejs">
 <a href="#assettypes_nodejs" style="color: inherit; text-decoration: inherit;">asset<wbr>Types</a>
@@ -455,8 +401,7 @@ and assetTypes. Only asset updates matching specified assetNames and assetTypes 
 the feed. For example: "compute.googleapis.com/Disk"
 See https://cloud.google.com/asset-inventory/docs/supported-asset-types for a list of all
 supported asset types.
-{{% /md %}}</dd>
-    <dt class="property-optional"
+{{% /md %}}</dd><dt class="property-optional"
             title="Optional">
         <span id="billingproject_nodejs">
 <a href="#billingproject_nodejs" style="color: inherit; text-decoration: inherit;">billing<wbr>Project</a>
@@ -468,8 +413,7 @@ supported asset types.
 destination pubsub topic. It also specifies the project for API
 enablement check, quota, and billing. If not specified, the resource's
 project will be used.
-{{% /md %}}</dd>
-    <dt class="property-optional"
+{{% /md %}}</dd><dt class="property-optional"
             title="Optional">
         <span id="condition_nodejs">
 <a href="#condition_nodejs" style="color: inherit; text-decoration: inherit;">condition</a>
@@ -483,8 +427,7 @@ must be a valid CEL expression on a TemporalAsset with name temporal_asset. Exam
 expression "temporal_asset.deleted == true" will only publish Asset deletions. Other fields of
 condition are optional.
 Structure is documented below.
-{{% /md %}}</dd>
-    <dt class="property-optional"
+{{% /md %}}</dd><dt class="property-optional"
             title="Optional">
         <span id="contenttype_nodejs">
 <a href="#contenttype_nodejs" style="color: inherit; text-decoration: inherit;">content<wbr>Type</a>
@@ -494,8 +437,7 @@ Structure is documented below.
     </dt>
     <dd>{{% md %}}Asset content type. If not specified, no content but the asset name and type will be returned.
 Possible values are `CONTENT_TYPE_UNSPECIFIED`, `RESOURCE`, `IAM_POLICY`, `ORG_POLICY`, and `ACCESS_POLICY`.
-{{% /md %}}</dd>
-    <dt class="property-optional"
+{{% /md %}}</dd><dt class="property-optional"
             title="Optional">
         <span id="project_nodejs">
 <a href="#project_nodejs" style="color: inherit; text-decoration: inherit;">project</a>
@@ -505,14 +447,11 @@ Possible values are `CONTENT_TYPE_UNSPECIFIED`, `RESOURCE`, `IAM_POLICY`, `ORG_P
     </dt>
     <dd>{{% md %}}The ID of the project in which the resource belongs.
 If it is not provided, the provider project is used.
-{{% /md %}}</dd>
-</dl>
+{{% /md %}}</dd></dl>
 {{% /choosable %}}
 
 {{% choosable language python %}}
-<dl class="resources-properties">
-
-    <dt class="property-required"
+<dl class="resources-properties"><dt class="property-required"
             title="Required">
         <span id="feed_id_python">
 <a href="#feed_id_python" style="color: inherit; text-decoration: inherit;">feed_<wbr>id</a>
@@ -521,8 +460,7 @@ If it is not provided, the provider project is used.
         <span class="property-type">str</span>
     </dt>
     <dd>{{% md %}}This is the client-assigned asset feed identifier and it needs to be unique under a specific parent.
-{{% /md %}}</dd>
-    <dt class="property-required"
+{{% /md %}}</dd><dt class="property-required"
             title="Required">
         <span id="feed_output_config_python">
 <a href="#feed_output_config_python" style="color: inherit; text-decoration: inherit;">feed_<wbr>output_<wbr>config</a>
@@ -532,8 +470,7 @@ If it is not provided, the provider project is used.
     </dt>
     <dd>{{% md %}}Output configuration for asset feed destination.
 Structure is documented below.
-{{% /md %}}</dd>
-    <dt class="property-optional"
+{{% /md %}}</dd><dt class="property-optional"
             title="Optional">
         <span id="asset_names_python">
 <a href="#asset_names_python" style="color: inherit; text-decoration: inherit;">asset_<wbr>names</a>
@@ -545,8 +482,7 @@ Structure is documented below.
 assetNames and assetTypes. Only asset updates matching specified assetNames and assetTypes are
 exported to the feed. For example: //compute.googleapis.com/projects/my_project_123/zones/zone1/instances/instance1.
 See https://cloud.google.com/apis/design/resourceNames#fullResourceName for more info.
-{{% /md %}}</dd>
-    <dt class="property-optional"
+{{% /md %}}</dd><dt class="property-optional"
             title="Optional">
         <span id="asset_types_python">
 <a href="#asset_types_python" style="color: inherit; text-decoration: inherit;">asset_<wbr>types</a>
@@ -559,8 +495,7 @@ and assetTypes. Only asset updates matching specified assetNames and assetTypes 
 the feed. For example: "compute.googleapis.com/Disk"
 See https://cloud.google.com/asset-inventory/docs/supported-asset-types for a list of all
 supported asset types.
-{{% /md %}}</dd>
-    <dt class="property-optional"
+{{% /md %}}</dd><dt class="property-optional"
             title="Optional">
         <span id="billing_project_python">
 <a href="#billing_project_python" style="color: inherit; text-decoration: inherit;">billing_<wbr>project</a>
@@ -572,8 +507,7 @@ supported asset types.
 destination pubsub topic. It also specifies the project for API
 enablement check, quota, and billing. If not specified, the resource's
 project will be used.
-{{% /md %}}</dd>
-    <dt class="property-optional"
+{{% /md %}}</dd><dt class="property-optional"
             title="Optional">
         <span id="condition_python">
 <a href="#condition_python" style="color: inherit; text-decoration: inherit;">condition</a>
@@ -587,8 +521,7 @@ must be a valid CEL expression on a TemporalAsset with name temporal_asset. Exam
 expression "temporal_asset.deleted == true" will only publish Asset deletions. Other fields of
 condition are optional.
 Structure is documented below.
-{{% /md %}}</dd>
-    <dt class="property-optional"
+{{% /md %}}</dd><dt class="property-optional"
             title="Optional">
         <span id="content_type_python">
 <a href="#content_type_python" style="color: inherit; text-decoration: inherit;">content_<wbr>type</a>
@@ -598,8 +531,7 @@ Structure is documented below.
     </dt>
     <dd>{{% md %}}Asset content type. If not specified, no content but the asset name and type will be returned.
 Possible values are `CONTENT_TYPE_UNSPECIFIED`, `RESOURCE`, `IAM_POLICY`, `ORG_POLICY`, and `ACCESS_POLICY`.
-{{% /md %}}</dd>
-    <dt class="property-optional"
+{{% /md %}}</dd><dt class="property-optional"
             title="Optional">
         <span id="project_python">
 <a href="#project_python" style="color: inherit; text-decoration: inherit;">project</a>
@@ -609,8 +541,7 @@ Possible values are `CONTENT_TYPE_UNSPECIFIED`, `RESOURCE`, `IAM_POLICY`, `ORG_P
     </dt>
     <dd>{{% md %}}The ID of the project in which the resource belongs.
 If it is not provided, the provider project is used.
-{{% /md %}}</dd>
-</dl>
+{{% /md %}}</dd></dl>
 {{% /choosable %}}
 
 
@@ -621,9 +552,7 @@ All [input](#inputs) properties are implicitly available as output properties. A
 
 
 {{% choosable language csharp %}}
-<dl class="resources-properties">
-
-    <dt class="property-"
+<dl class="resources-properties"><dt class="property-"
             title="">
         <span id="id_csharp">
 <a href="#id_csharp" style="color: inherit; text-decoration: inherit;">Id</a>
@@ -631,8 +560,7 @@ All [input](#inputs) properties are implicitly available as output properties. A
         <span class="property-indicator"></span>
         <span class="property-type">string</span>
     </dt>
-    <dd>{{% md %}}The provider-assigned unique ID for this managed resource.{{% /md %}}</dd>
-    <dt class="property-"
+    <dd>{{% md %}}The provider-assigned unique ID for this managed resource.{{% /md %}}</dd><dt class="property-"
             title="">
         <span id="name_csharp">
 <a href="#name_csharp" style="color: inherit; text-decoration: inherit;">Name</a>
@@ -641,14 +569,11 @@ All [input](#inputs) properties are implicitly available as output properties. A
         <span class="property-type">string</span>
     </dt>
     <dd>{{% md %}}The format will be projects/{projectNumber}/feeds/{client-assigned_feed_identifier}.
-{{% /md %}}</dd>
-</dl>
+{{% /md %}}</dd></dl>
 {{% /choosable %}}
 
 {{% choosable language go %}}
-<dl class="resources-properties">
-
-    <dt class="property-"
+<dl class="resources-properties"><dt class="property-"
             title="">
         <span id="id_go">
 <a href="#id_go" style="color: inherit; text-decoration: inherit;">Id</a>
@@ -656,8 +581,7 @@ All [input](#inputs) properties are implicitly available as output properties. A
         <span class="property-indicator"></span>
         <span class="property-type">string</span>
     </dt>
-    <dd>{{% md %}}The provider-assigned unique ID for this managed resource.{{% /md %}}</dd>
-    <dt class="property-"
+    <dd>{{% md %}}The provider-assigned unique ID for this managed resource.{{% /md %}}</dd><dt class="property-"
             title="">
         <span id="name_go">
 <a href="#name_go" style="color: inherit; text-decoration: inherit;">Name</a>
@@ -666,14 +590,11 @@ All [input](#inputs) properties are implicitly available as output properties. A
         <span class="property-type">string</span>
     </dt>
     <dd>{{% md %}}The format will be projects/{projectNumber}/feeds/{client-assigned_feed_identifier}.
-{{% /md %}}</dd>
-</dl>
+{{% /md %}}</dd></dl>
 {{% /choosable %}}
 
 {{% choosable language nodejs %}}
-<dl class="resources-properties">
-
-    <dt class="property-"
+<dl class="resources-properties"><dt class="property-"
             title="">
         <span id="id_nodejs">
 <a href="#id_nodejs" style="color: inherit; text-decoration: inherit;">id</a>
@@ -681,8 +602,7 @@ All [input](#inputs) properties are implicitly available as output properties. A
         <span class="property-indicator"></span>
         <span class="property-type">string</span>
     </dt>
-    <dd>{{% md %}}The provider-assigned unique ID for this managed resource.{{% /md %}}</dd>
-    <dt class="property-"
+    <dd>{{% md %}}The provider-assigned unique ID for this managed resource.{{% /md %}}</dd><dt class="property-"
             title="">
         <span id="name_nodejs">
 <a href="#name_nodejs" style="color: inherit; text-decoration: inherit;">name</a>
@@ -691,14 +611,11 @@ All [input](#inputs) properties are implicitly available as output properties. A
         <span class="property-type">string</span>
     </dt>
     <dd>{{% md %}}The format will be projects/{projectNumber}/feeds/{client-assigned_feed_identifier}.
-{{% /md %}}</dd>
-</dl>
+{{% /md %}}</dd></dl>
 {{% /choosable %}}
 
 {{% choosable language python %}}
-<dl class="resources-properties">
-
-    <dt class="property-"
+<dl class="resources-properties"><dt class="property-"
             title="">
         <span id="id_python">
 <a href="#id_python" style="color: inherit; text-decoration: inherit;">id</a>
@@ -706,8 +623,7 @@ All [input](#inputs) properties are implicitly available as output properties. A
         <span class="property-indicator"></span>
         <span class="property-type">str</span>
     </dt>
-    <dd>{{% md %}}The provider-assigned unique ID for this managed resource.{{% /md %}}</dd>
-    <dt class="property-"
+    <dd>{{% md %}}The provider-assigned unique ID for this managed resource.{{% /md %}}</dd><dt class="property-"
             title="">
         <span id="name_python">
 <a href="#name_python" style="color: inherit; text-decoration: inherit;">name</a>
@@ -716,8 +632,7 @@ All [input](#inputs) properties are implicitly available as output properties. A
         <span class="property-type">str</span>
     </dt>
     <dd>{{% md %}}The format will be projects/{projectNumber}/feeds/{client-assigned_feed_identifier}.
-{{% /md %}}</dd>
-</dl>
+{{% /md %}}</dd></dl>
 {{% /choosable %}}
 
 
@@ -844,9 +759,7 @@ The following state arguments are supported:
 
 
 {{% choosable language csharp %}}
-<dl class="resources-properties">
-
-    <dt class="property-optional"
+<dl class="resources-properties"><dt class="property-optional"
             title="Optional">
         <span id="state_assetnames_csharp">
 <a href="#state_assetnames_csharp" style="color: inherit; text-decoration: inherit;">Asset<wbr>Names</a>
@@ -858,8 +771,7 @@ The following state arguments are supported:
 assetNames and assetTypes. Only asset updates matching specified assetNames and assetTypes are
 exported to the feed. For example: //compute.googleapis.com/projects/my_project_123/zones/zone1/instances/instance1.
 See https://cloud.google.com/apis/design/resourceNames#fullResourceName for more info.
-{{% /md %}}</dd>
-    <dt class="property-optional"
+{{% /md %}}</dd><dt class="property-optional"
             title="Optional">
         <span id="state_assettypes_csharp">
 <a href="#state_assettypes_csharp" style="color: inherit; text-decoration: inherit;">Asset<wbr>Types</a>
@@ -872,8 +784,7 @@ and assetTypes. Only asset updates matching specified assetNames and assetTypes 
 the feed. For example: "compute.googleapis.com/Disk"
 See https://cloud.google.com/asset-inventory/docs/supported-asset-types for a list of all
 supported asset types.
-{{% /md %}}</dd>
-    <dt class="property-optional"
+{{% /md %}}</dd><dt class="property-optional"
             title="Optional">
         <span id="state_billingproject_csharp">
 <a href="#state_billingproject_csharp" style="color: inherit; text-decoration: inherit;">Billing<wbr>Project</a>
@@ -885,8 +796,7 @@ supported asset types.
 destination pubsub topic. It also specifies the project for API
 enablement check, quota, and billing. If not specified, the resource's
 project will be used.
-{{% /md %}}</dd>
-    <dt class="property-optional"
+{{% /md %}}</dd><dt class="property-optional"
             title="Optional">
         <span id="state_condition_csharp">
 <a href="#state_condition_csharp" style="color: inherit; text-decoration: inherit;">Condition</a>
@@ -900,8 +810,7 @@ must be a valid CEL expression on a TemporalAsset with name temporal_asset. Exam
 expression "temporal_asset.deleted == true" will only publish Asset deletions. Other fields of
 condition are optional.
 Structure is documented below.
-{{% /md %}}</dd>
-    <dt class="property-optional"
+{{% /md %}}</dd><dt class="property-optional"
             title="Optional">
         <span id="state_contenttype_csharp">
 <a href="#state_contenttype_csharp" style="color: inherit; text-decoration: inherit;">Content<wbr>Type</a>
@@ -911,8 +820,7 @@ Structure is documented below.
     </dt>
     <dd>{{% md %}}Asset content type. If not specified, no content but the asset name and type will be returned.
 Possible values are `CONTENT_TYPE_UNSPECIFIED`, `RESOURCE`, `IAM_POLICY`, `ORG_POLICY`, and `ACCESS_POLICY`.
-{{% /md %}}</dd>
-    <dt class="property-optional"
+{{% /md %}}</dd><dt class="property-optional"
             title="Optional">
         <span id="state_feedid_csharp">
 <a href="#state_feedid_csharp" style="color: inherit; text-decoration: inherit;">Feed<wbr>Id</a>
@@ -921,8 +829,7 @@ Possible values are `CONTENT_TYPE_UNSPECIFIED`, `RESOURCE`, `IAM_POLICY`, `ORG_P
         <span class="property-type">string</span>
     </dt>
     <dd>{{% md %}}This is the client-assigned asset feed identifier and it needs to be unique under a specific parent.
-{{% /md %}}</dd>
-    <dt class="property-optional"
+{{% /md %}}</dd><dt class="property-optional"
             title="Optional">
         <span id="state_feedoutputconfig_csharp">
 <a href="#state_feedoutputconfig_csharp" style="color: inherit; text-decoration: inherit;">Feed<wbr>Output<wbr>Config</a>
@@ -932,8 +839,7 @@ Possible values are `CONTENT_TYPE_UNSPECIFIED`, `RESOURCE`, `IAM_POLICY`, `ORG_P
     </dt>
     <dd>{{% md %}}Output configuration for asset feed destination.
 Structure is documented below.
-{{% /md %}}</dd>
-    <dt class="property-optional"
+{{% /md %}}</dd><dt class="property-optional"
             title="Optional">
         <span id="state_name_csharp">
 <a href="#state_name_csharp" style="color: inherit; text-decoration: inherit;">Name</a>
@@ -942,8 +848,7 @@ Structure is documented below.
         <span class="property-type">string</span>
     </dt>
     <dd>{{% md %}}The format will be projects/{projectNumber}/feeds/{client-assigned_feed_identifier}.
-{{% /md %}}</dd>
-    <dt class="property-optional"
+{{% /md %}}</dd><dt class="property-optional"
             title="Optional">
         <span id="state_project_csharp">
 <a href="#state_project_csharp" style="color: inherit; text-decoration: inherit;">Project</a>
@@ -953,14 +858,11 @@ Structure is documented below.
     </dt>
     <dd>{{% md %}}The ID of the project in which the resource belongs.
 If it is not provided, the provider project is used.
-{{% /md %}}</dd>
-</dl>
+{{% /md %}}</dd></dl>
 {{% /choosable %}}
 
 {{% choosable language go %}}
-<dl class="resources-properties">
-
-    <dt class="property-optional"
+<dl class="resources-properties"><dt class="property-optional"
             title="Optional">
         <span id="state_assetnames_go">
 <a href="#state_assetnames_go" style="color: inherit; text-decoration: inherit;">Asset<wbr>Names</a>
@@ -972,8 +874,7 @@ If it is not provided, the provider project is used.
 assetNames and assetTypes. Only asset updates matching specified assetNames and assetTypes are
 exported to the feed. For example: //compute.googleapis.com/projects/my_project_123/zones/zone1/instances/instance1.
 See https://cloud.google.com/apis/design/resourceNames#fullResourceName for more info.
-{{% /md %}}</dd>
-    <dt class="property-optional"
+{{% /md %}}</dd><dt class="property-optional"
             title="Optional">
         <span id="state_assettypes_go">
 <a href="#state_assettypes_go" style="color: inherit; text-decoration: inherit;">Asset<wbr>Types</a>
@@ -986,8 +887,7 @@ and assetTypes. Only asset updates matching specified assetNames and assetTypes 
 the feed. For example: "compute.googleapis.com/Disk"
 See https://cloud.google.com/asset-inventory/docs/supported-asset-types for a list of all
 supported asset types.
-{{% /md %}}</dd>
-    <dt class="property-optional"
+{{% /md %}}</dd><dt class="property-optional"
             title="Optional">
         <span id="state_billingproject_go">
 <a href="#state_billingproject_go" style="color: inherit; text-decoration: inherit;">Billing<wbr>Project</a>
@@ -999,8 +899,7 @@ supported asset types.
 destination pubsub topic. It also specifies the project for API
 enablement check, quota, and billing. If not specified, the resource's
 project will be used.
-{{% /md %}}</dd>
-    <dt class="property-optional"
+{{% /md %}}</dd><dt class="property-optional"
             title="Optional">
         <span id="state_condition_go">
 <a href="#state_condition_go" style="color: inherit; text-decoration: inherit;">Condition</a>
@@ -1014,8 +913,7 @@ must be a valid CEL expression on a TemporalAsset with name temporal_asset. Exam
 expression "temporal_asset.deleted == true" will only publish Asset deletions. Other fields of
 condition are optional.
 Structure is documented below.
-{{% /md %}}</dd>
-    <dt class="property-optional"
+{{% /md %}}</dd><dt class="property-optional"
             title="Optional">
         <span id="state_contenttype_go">
 <a href="#state_contenttype_go" style="color: inherit; text-decoration: inherit;">Content<wbr>Type</a>
@@ -1025,8 +923,7 @@ Structure is documented below.
     </dt>
     <dd>{{% md %}}Asset content type. If not specified, no content but the asset name and type will be returned.
 Possible values are `CONTENT_TYPE_UNSPECIFIED`, `RESOURCE`, `IAM_POLICY`, `ORG_POLICY`, and `ACCESS_POLICY`.
-{{% /md %}}</dd>
-    <dt class="property-optional"
+{{% /md %}}</dd><dt class="property-optional"
             title="Optional">
         <span id="state_feedid_go">
 <a href="#state_feedid_go" style="color: inherit; text-decoration: inherit;">Feed<wbr>Id</a>
@@ -1035,8 +932,7 @@ Possible values are `CONTENT_TYPE_UNSPECIFIED`, `RESOURCE`, `IAM_POLICY`, `ORG_P
         <span class="property-type">string</span>
     </dt>
     <dd>{{% md %}}This is the client-assigned asset feed identifier and it needs to be unique under a specific parent.
-{{% /md %}}</dd>
-    <dt class="property-optional"
+{{% /md %}}</dd><dt class="property-optional"
             title="Optional">
         <span id="state_feedoutputconfig_go">
 <a href="#state_feedoutputconfig_go" style="color: inherit; text-decoration: inherit;">Feed<wbr>Output<wbr>Config</a>
@@ -1046,8 +942,7 @@ Possible values are `CONTENT_TYPE_UNSPECIFIED`, `RESOURCE`, `IAM_POLICY`, `ORG_P
     </dt>
     <dd>{{% md %}}Output configuration for asset feed destination.
 Structure is documented below.
-{{% /md %}}</dd>
-    <dt class="property-optional"
+{{% /md %}}</dd><dt class="property-optional"
             title="Optional">
         <span id="state_name_go">
 <a href="#state_name_go" style="color: inherit; text-decoration: inherit;">Name</a>
@@ -1056,8 +951,7 @@ Structure is documented below.
         <span class="property-type">string</span>
     </dt>
     <dd>{{% md %}}The format will be projects/{projectNumber}/feeds/{client-assigned_feed_identifier}.
-{{% /md %}}</dd>
-    <dt class="property-optional"
+{{% /md %}}</dd><dt class="property-optional"
             title="Optional">
         <span id="state_project_go">
 <a href="#state_project_go" style="color: inherit; text-decoration: inherit;">Project</a>
@@ -1067,14 +961,11 @@ Structure is documented below.
     </dt>
     <dd>{{% md %}}The ID of the project in which the resource belongs.
 If it is not provided, the provider project is used.
-{{% /md %}}</dd>
-</dl>
+{{% /md %}}</dd></dl>
 {{% /choosable %}}
 
 {{% choosable language nodejs %}}
-<dl class="resources-properties">
-
-    <dt class="property-optional"
+<dl class="resources-properties"><dt class="property-optional"
             title="Optional">
         <span id="state_assetnames_nodejs">
 <a href="#state_assetnames_nodejs" style="color: inherit; text-decoration: inherit;">asset<wbr>Names</a>
@@ -1086,8 +977,7 @@ If it is not provided, the provider project is used.
 assetNames and assetTypes. Only asset updates matching specified assetNames and assetTypes are
 exported to the feed. For example: //compute.googleapis.com/projects/my_project_123/zones/zone1/instances/instance1.
 See https://cloud.google.com/apis/design/resourceNames#fullResourceName for more info.
-{{% /md %}}</dd>
-    <dt class="property-optional"
+{{% /md %}}</dd><dt class="property-optional"
             title="Optional">
         <span id="state_assettypes_nodejs">
 <a href="#state_assettypes_nodejs" style="color: inherit; text-decoration: inherit;">asset<wbr>Types</a>
@@ -1100,8 +990,7 @@ and assetTypes. Only asset updates matching specified assetNames and assetTypes 
 the feed. For example: "compute.googleapis.com/Disk"
 See https://cloud.google.com/asset-inventory/docs/supported-asset-types for a list of all
 supported asset types.
-{{% /md %}}</dd>
-    <dt class="property-optional"
+{{% /md %}}</dd><dt class="property-optional"
             title="Optional">
         <span id="state_billingproject_nodejs">
 <a href="#state_billingproject_nodejs" style="color: inherit; text-decoration: inherit;">billing<wbr>Project</a>
@@ -1113,8 +1002,7 @@ supported asset types.
 destination pubsub topic. It also specifies the project for API
 enablement check, quota, and billing. If not specified, the resource's
 project will be used.
-{{% /md %}}</dd>
-    <dt class="property-optional"
+{{% /md %}}</dd><dt class="property-optional"
             title="Optional">
         <span id="state_condition_nodejs">
 <a href="#state_condition_nodejs" style="color: inherit; text-decoration: inherit;">condition</a>
@@ -1128,8 +1016,7 @@ must be a valid CEL expression on a TemporalAsset with name temporal_asset. Exam
 expression "temporal_asset.deleted == true" will only publish Asset deletions. Other fields of
 condition are optional.
 Structure is documented below.
-{{% /md %}}</dd>
-    <dt class="property-optional"
+{{% /md %}}</dd><dt class="property-optional"
             title="Optional">
         <span id="state_contenttype_nodejs">
 <a href="#state_contenttype_nodejs" style="color: inherit; text-decoration: inherit;">content<wbr>Type</a>
@@ -1139,8 +1026,7 @@ Structure is documented below.
     </dt>
     <dd>{{% md %}}Asset content type. If not specified, no content but the asset name and type will be returned.
 Possible values are `CONTENT_TYPE_UNSPECIFIED`, `RESOURCE`, `IAM_POLICY`, `ORG_POLICY`, and `ACCESS_POLICY`.
-{{% /md %}}</dd>
-    <dt class="property-optional"
+{{% /md %}}</dd><dt class="property-optional"
             title="Optional">
         <span id="state_feedid_nodejs">
 <a href="#state_feedid_nodejs" style="color: inherit; text-decoration: inherit;">feed<wbr>Id</a>
@@ -1149,8 +1035,7 @@ Possible values are `CONTENT_TYPE_UNSPECIFIED`, `RESOURCE`, `IAM_POLICY`, `ORG_P
         <span class="property-type">string</span>
     </dt>
     <dd>{{% md %}}This is the client-assigned asset feed identifier and it needs to be unique under a specific parent.
-{{% /md %}}</dd>
-    <dt class="property-optional"
+{{% /md %}}</dd><dt class="property-optional"
             title="Optional">
         <span id="state_feedoutputconfig_nodejs">
 <a href="#state_feedoutputconfig_nodejs" style="color: inherit; text-decoration: inherit;">feed<wbr>Output<wbr>Config</a>
@@ -1160,8 +1045,7 @@ Possible values are `CONTENT_TYPE_UNSPECIFIED`, `RESOURCE`, `IAM_POLICY`, `ORG_P
     </dt>
     <dd>{{% md %}}Output configuration for asset feed destination.
 Structure is documented below.
-{{% /md %}}</dd>
-    <dt class="property-optional"
+{{% /md %}}</dd><dt class="property-optional"
             title="Optional">
         <span id="state_name_nodejs">
 <a href="#state_name_nodejs" style="color: inherit; text-decoration: inherit;">name</a>
@@ -1170,8 +1054,7 @@ Structure is documented below.
         <span class="property-type">string</span>
     </dt>
     <dd>{{% md %}}The format will be projects/{projectNumber}/feeds/{client-assigned_feed_identifier}.
-{{% /md %}}</dd>
-    <dt class="property-optional"
+{{% /md %}}</dd><dt class="property-optional"
             title="Optional">
         <span id="state_project_nodejs">
 <a href="#state_project_nodejs" style="color: inherit; text-decoration: inherit;">project</a>
@@ -1181,14 +1064,11 @@ Structure is documented below.
     </dt>
     <dd>{{% md %}}The ID of the project in which the resource belongs.
 If it is not provided, the provider project is used.
-{{% /md %}}</dd>
-</dl>
+{{% /md %}}</dd></dl>
 {{% /choosable %}}
 
 {{% choosable language python %}}
-<dl class="resources-properties">
-
-    <dt class="property-optional"
+<dl class="resources-properties"><dt class="property-optional"
             title="Optional">
         <span id="state_asset_names_python">
 <a href="#state_asset_names_python" style="color: inherit; text-decoration: inherit;">asset_<wbr>names</a>
@@ -1200,8 +1080,7 @@ If it is not provided, the provider project is used.
 assetNames and assetTypes. Only asset updates matching specified assetNames and assetTypes are
 exported to the feed. For example: //compute.googleapis.com/projects/my_project_123/zones/zone1/instances/instance1.
 See https://cloud.google.com/apis/design/resourceNames#fullResourceName for more info.
-{{% /md %}}</dd>
-    <dt class="property-optional"
+{{% /md %}}</dd><dt class="property-optional"
             title="Optional">
         <span id="state_asset_types_python">
 <a href="#state_asset_types_python" style="color: inherit; text-decoration: inherit;">asset_<wbr>types</a>
@@ -1214,8 +1093,7 @@ and assetTypes. Only asset updates matching specified assetNames and assetTypes 
 the feed. For example: "compute.googleapis.com/Disk"
 See https://cloud.google.com/asset-inventory/docs/supported-asset-types for a list of all
 supported asset types.
-{{% /md %}}</dd>
-    <dt class="property-optional"
+{{% /md %}}</dd><dt class="property-optional"
             title="Optional">
         <span id="state_billing_project_python">
 <a href="#state_billing_project_python" style="color: inherit; text-decoration: inherit;">billing_<wbr>project</a>
@@ -1227,8 +1105,7 @@ supported asset types.
 destination pubsub topic. It also specifies the project for API
 enablement check, quota, and billing. If not specified, the resource's
 project will be used.
-{{% /md %}}</dd>
-    <dt class="property-optional"
+{{% /md %}}</dd><dt class="property-optional"
             title="Optional">
         <span id="state_condition_python">
 <a href="#state_condition_python" style="color: inherit; text-decoration: inherit;">condition</a>
@@ -1242,8 +1119,7 @@ must be a valid CEL expression on a TemporalAsset with name temporal_asset. Exam
 expression "temporal_asset.deleted == true" will only publish Asset deletions. Other fields of
 condition are optional.
 Structure is documented below.
-{{% /md %}}</dd>
-    <dt class="property-optional"
+{{% /md %}}</dd><dt class="property-optional"
             title="Optional">
         <span id="state_content_type_python">
 <a href="#state_content_type_python" style="color: inherit; text-decoration: inherit;">content_<wbr>type</a>
@@ -1253,8 +1129,7 @@ Structure is documented below.
     </dt>
     <dd>{{% md %}}Asset content type. If not specified, no content but the asset name and type will be returned.
 Possible values are `CONTENT_TYPE_UNSPECIFIED`, `RESOURCE`, `IAM_POLICY`, `ORG_POLICY`, and `ACCESS_POLICY`.
-{{% /md %}}</dd>
-    <dt class="property-optional"
+{{% /md %}}</dd><dt class="property-optional"
             title="Optional">
         <span id="state_feed_id_python">
 <a href="#state_feed_id_python" style="color: inherit; text-decoration: inherit;">feed_<wbr>id</a>
@@ -1263,8 +1138,7 @@ Possible values are `CONTENT_TYPE_UNSPECIFIED`, `RESOURCE`, `IAM_POLICY`, `ORG_P
         <span class="property-type">str</span>
     </dt>
     <dd>{{% md %}}This is the client-assigned asset feed identifier and it needs to be unique under a specific parent.
-{{% /md %}}</dd>
-    <dt class="property-optional"
+{{% /md %}}</dd><dt class="property-optional"
             title="Optional">
         <span id="state_feed_output_config_python">
 <a href="#state_feed_output_config_python" style="color: inherit; text-decoration: inherit;">feed_<wbr>output_<wbr>config</a>
@@ -1274,8 +1148,7 @@ Possible values are `CONTENT_TYPE_UNSPECIFIED`, `RESOURCE`, `IAM_POLICY`, `ORG_P
     </dt>
     <dd>{{% md %}}Output configuration for asset feed destination.
 Structure is documented below.
-{{% /md %}}</dd>
-    <dt class="property-optional"
+{{% /md %}}</dd><dt class="property-optional"
             title="Optional">
         <span id="state_name_python">
 <a href="#state_name_python" style="color: inherit; text-decoration: inherit;">name</a>
@@ -1284,8 +1157,7 @@ Structure is documented below.
         <span class="property-type">str</span>
     </dt>
     <dd>{{% md %}}The format will be projects/{projectNumber}/feeds/{client-assigned_feed_identifier}.
-{{% /md %}}</dd>
-    <dt class="property-optional"
+{{% /md %}}</dd><dt class="property-optional"
             title="Optional">
         <span id="state_project_python">
 <a href="#state_project_python" style="color: inherit; text-decoration: inherit;">project</a>
@@ -1295,8 +1167,7 @@ Structure is documented below.
     </dt>
     <dd>{{% md %}}The ID of the project in which the resource belongs.
 If it is not provided, the provider project is used.
-{{% /md %}}</dd>
-</dl>
+{{% /md %}}</dd></dl>
 {{% /choosable %}}
 
 
@@ -1311,9 +1182,7 @@ If it is not provided, the provider project is used.
 <h4 id="projectfeedcondition">Project<wbr>Feed<wbr>Condition</h4>
 
 {{% choosable language csharp %}}
-<dl class="resources-properties">
-
-    <dt class="property-required"
+<dl class="resources-properties"><dt class="property-required"
             title="Required">
         <span id="expression_csharp">
 <a href="#expression_csharp" style="color: inherit; text-decoration: inherit;">Expression</a>
@@ -1322,8 +1191,7 @@ If it is not provided, the provider project is used.
         <span class="property-type">string</span>
     </dt>
     <dd>{{% md %}}Textual representation of an expression in Common Expression Language syntax.
-{{% /md %}}</dd>
-    <dt class="property-optional"
+{{% /md %}}</dd><dt class="property-optional"
             title="Optional">
         <span id="description_csharp">
 <a href="#description_csharp" style="color: inherit; text-decoration: inherit;">Description</a>
@@ -1333,8 +1201,7 @@ If it is not provided, the provider project is used.
     </dt>
     <dd>{{% md %}}Description of the expression. This is a longer text which describes the expression,
 e.g. when hovered over it in a UI.
-{{% /md %}}</dd>
-    <dt class="property-optional"
+{{% /md %}}</dd><dt class="property-optional"
             title="Optional">
         <span id="location_csharp">
 <a href="#location_csharp" style="color: inherit; text-decoration: inherit;">Location</a>
@@ -1344,8 +1211,7 @@ e.g. when hovered over it in a UI.
     </dt>
     <dd>{{% md %}}String indicating the location of the expression for error reporting, e.g. a file
 name and a position in the file.
-{{% /md %}}</dd>
-    <dt class="property-optional"
+{{% /md %}}</dd><dt class="property-optional"
             title="Optional">
         <span id="title_csharp">
 <a href="#title_csharp" style="color: inherit; text-decoration: inherit;">Title</a>
@@ -1355,14 +1221,11 @@ name and a position in the file.
     </dt>
     <dd>{{% md %}}Title for the expression, i.e. a short string describing its purpose.
 This can be used e.g. in UIs which allow to enter the expression.
-{{% /md %}}</dd>
-</dl>
+{{% /md %}}</dd></dl>
 {{% /choosable %}}
 
 {{% choosable language go %}}
-<dl class="resources-properties">
-
-    <dt class="property-required"
+<dl class="resources-properties"><dt class="property-required"
             title="Required">
         <span id="expression_go">
 <a href="#expression_go" style="color: inherit; text-decoration: inherit;">Expression</a>
@@ -1371,8 +1234,7 @@ This can be used e.g. in UIs which allow to enter the expression.
         <span class="property-type">string</span>
     </dt>
     <dd>{{% md %}}Textual representation of an expression in Common Expression Language syntax.
-{{% /md %}}</dd>
-    <dt class="property-optional"
+{{% /md %}}</dd><dt class="property-optional"
             title="Optional">
         <span id="description_go">
 <a href="#description_go" style="color: inherit; text-decoration: inherit;">Description</a>
@@ -1382,8 +1244,7 @@ This can be used e.g. in UIs which allow to enter the expression.
     </dt>
     <dd>{{% md %}}Description of the expression. This is a longer text which describes the expression,
 e.g. when hovered over it in a UI.
-{{% /md %}}</dd>
-    <dt class="property-optional"
+{{% /md %}}</dd><dt class="property-optional"
             title="Optional">
         <span id="location_go">
 <a href="#location_go" style="color: inherit; text-decoration: inherit;">Location</a>
@@ -1393,8 +1254,7 @@ e.g. when hovered over it in a UI.
     </dt>
     <dd>{{% md %}}String indicating the location of the expression for error reporting, e.g. a file
 name and a position in the file.
-{{% /md %}}</dd>
-    <dt class="property-optional"
+{{% /md %}}</dd><dt class="property-optional"
             title="Optional">
         <span id="title_go">
 <a href="#title_go" style="color: inherit; text-decoration: inherit;">Title</a>
@@ -1404,14 +1264,11 @@ name and a position in the file.
     </dt>
     <dd>{{% md %}}Title for the expression, i.e. a short string describing its purpose.
 This can be used e.g. in UIs which allow to enter the expression.
-{{% /md %}}</dd>
-</dl>
+{{% /md %}}</dd></dl>
 {{% /choosable %}}
 
 {{% choosable language nodejs %}}
-<dl class="resources-properties">
-
-    <dt class="property-required"
+<dl class="resources-properties"><dt class="property-required"
             title="Required">
         <span id="expression_nodejs">
 <a href="#expression_nodejs" style="color: inherit; text-decoration: inherit;">expression</a>
@@ -1420,8 +1277,7 @@ This can be used e.g. in UIs which allow to enter the expression.
         <span class="property-type">string</span>
     </dt>
     <dd>{{% md %}}Textual representation of an expression in Common Expression Language syntax.
-{{% /md %}}</dd>
-    <dt class="property-optional"
+{{% /md %}}</dd><dt class="property-optional"
             title="Optional">
         <span id="description_nodejs">
 <a href="#description_nodejs" style="color: inherit; text-decoration: inherit;">description</a>
@@ -1431,8 +1287,7 @@ This can be used e.g. in UIs which allow to enter the expression.
     </dt>
     <dd>{{% md %}}Description of the expression. This is a longer text which describes the expression,
 e.g. when hovered over it in a UI.
-{{% /md %}}</dd>
-    <dt class="property-optional"
+{{% /md %}}</dd><dt class="property-optional"
             title="Optional">
         <span id="location_nodejs">
 <a href="#location_nodejs" style="color: inherit; text-decoration: inherit;">location</a>
@@ -1442,8 +1297,7 @@ e.g. when hovered over it in a UI.
     </dt>
     <dd>{{% md %}}String indicating the location of the expression for error reporting, e.g. a file
 name and a position in the file.
-{{% /md %}}</dd>
-    <dt class="property-optional"
+{{% /md %}}</dd><dt class="property-optional"
             title="Optional">
         <span id="title_nodejs">
 <a href="#title_nodejs" style="color: inherit; text-decoration: inherit;">title</a>
@@ -1453,14 +1307,11 @@ name and a position in the file.
     </dt>
     <dd>{{% md %}}Title for the expression, i.e. a short string describing its purpose.
 This can be used e.g. in UIs which allow to enter the expression.
-{{% /md %}}</dd>
-</dl>
+{{% /md %}}</dd></dl>
 {{% /choosable %}}
 
 {{% choosable language python %}}
-<dl class="resources-properties">
-
-    <dt class="property-required"
+<dl class="resources-properties"><dt class="property-required"
             title="Required">
         <span id="expression_python">
 <a href="#expression_python" style="color: inherit; text-decoration: inherit;">expression</a>
@@ -1469,8 +1320,7 @@ This can be used e.g. in UIs which allow to enter the expression.
         <span class="property-type">str</span>
     </dt>
     <dd>{{% md %}}Textual representation of an expression in Common Expression Language syntax.
-{{% /md %}}</dd>
-    <dt class="property-optional"
+{{% /md %}}</dd><dt class="property-optional"
             title="Optional">
         <span id="description_python">
 <a href="#description_python" style="color: inherit; text-decoration: inherit;">description</a>
@@ -1480,8 +1330,7 @@ This can be used e.g. in UIs which allow to enter the expression.
     </dt>
     <dd>{{% md %}}Description of the expression. This is a longer text which describes the expression,
 e.g. when hovered over it in a UI.
-{{% /md %}}</dd>
-    <dt class="property-optional"
+{{% /md %}}</dd><dt class="property-optional"
             title="Optional">
         <span id="location_python">
 <a href="#location_python" style="color: inherit; text-decoration: inherit;">location</a>
@@ -1491,8 +1340,7 @@ e.g. when hovered over it in a UI.
     </dt>
     <dd>{{% md %}}String indicating the location of the expression for error reporting, e.g. a file
 name and a position in the file.
-{{% /md %}}</dd>
-    <dt class="property-optional"
+{{% /md %}}</dd><dt class="property-optional"
             title="Optional">
         <span id="title_python">
 <a href="#title_python" style="color: inherit; text-decoration: inherit;">title</a>
@@ -1502,16 +1350,13 @@ name and a position in the file.
     </dt>
     <dd>{{% md %}}Title for the expression, i.e. a short string describing its purpose.
 This can be used e.g. in UIs which allow to enter the expression.
-{{% /md %}}</dd>
-</dl>
+{{% /md %}}</dd></dl>
 {{% /choosable %}}
 
 <h4 id="projectfeedfeedoutputconfig">Project<wbr>Feed<wbr>Feed<wbr>Output<wbr>Config</h4>
 
 {{% choosable language csharp %}}
-<dl class="resources-properties">
-
-    <dt class="property-required"
+<dl class="resources-properties"><dt class="property-required"
             title="Required">
         <span id="pubsubdestination_csharp">
 <a href="#pubsubdestination_csharp" style="color: inherit; text-decoration: inherit;">Pubsub<wbr>Destination</a>
@@ -1521,14 +1366,11 @@ This can be used e.g. in UIs which allow to enter the expression.
     </dt>
     <dd>{{% md %}}Destination on Cloud Pubsub.
 Structure is documented below.
-{{% /md %}}</dd>
-</dl>
+{{% /md %}}</dd></dl>
 {{% /choosable %}}
 
 {{% choosable language go %}}
-<dl class="resources-properties">
-
-    <dt class="property-required"
+<dl class="resources-properties"><dt class="property-required"
             title="Required">
         <span id="pubsubdestination_go">
 <a href="#pubsubdestination_go" style="color: inherit; text-decoration: inherit;">Pubsub<wbr>Destination</a>
@@ -1538,14 +1380,11 @@ Structure is documented below.
     </dt>
     <dd>{{% md %}}Destination on Cloud Pubsub.
 Structure is documented below.
-{{% /md %}}</dd>
-</dl>
+{{% /md %}}</dd></dl>
 {{% /choosable %}}
 
 {{% choosable language nodejs %}}
-<dl class="resources-properties">
-
-    <dt class="property-required"
+<dl class="resources-properties"><dt class="property-required"
             title="Required">
         <span id="pubsubdestination_nodejs">
 <a href="#pubsubdestination_nodejs" style="color: inherit; text-decoration: inherit;">pubsub<wbr>Destination</a>
@@ -1555,14 +1394,11 @@ Structure is documented below.
     </dt>
     <dd>{{% md %}}Destination on Cloud Pubsub.
 Structure is documented below.
-{{% /md %}}</dd>
-</dl>
+{{% /md %}}</dd></dl>
 {{% /choosable %}}
 
 {{% choosable language python %}}
-<dl class="resources-properties">
-
-    <dt class="property-required"
+<dl class="resources-properties"><dt class="property-required"
             title="Required">
         <span id="pubsub_destination_python">
 <a href="#pubsub_destination_python" style="color: inherit; text-decoration: inherit;">pubsub_<wbr>destination</a>
@@ -1572,16 +1408,13 @@ Structure is documented below.
     </dt>
     <dd>{{% md %}}Destination on Cloud Pubsub.
 Structure is documented below.
-{{% /md %}}</dd>
-</dl>
+{{% /md %}}</dd></dl>
 {{% /choosable %}}
 
 <h4 id="projectfeedfeedoutputconfigpubsubdestination">Project<wbr>Feed<wbr>Feed<wbr>Output<wbr>Config<wbr>Pubsub<wbr>Destination</h4>
 
 {{% choosable language csharp %}}
-<dl class="resources-properties">
-
-    <dt class="property-required"
+<dl class="resources-properties"><dt class="property-required"
             title="Required">
         <span id="topic_csharp">
 <a href="#topic_csharp" style="color: inherit; text-decoration: inherit;">Topic</a>
@@ -1590,14 +1423,11 @@ Structure is documented below.
         <span class="property-type">string</span>
     </dt>
     <dd>{{% md %}}Destination on Cloud Pubsub topic.
-{{% /md %}}</dd>
-</dl>
+{{% /md %}}</dd></dl>
 {{% /choosable %}}
 
 {{% choosable language go %}}
-<dl class="resources-properties">
-
-    <dt class="property-required"
+<dl class="resources-properties"><dt class="property-required"
             title="Required">
         <span id="topic_go">
 <a href="#topic_go" style="color: inherit; text-decoration: inherit;">Topic</a>
@@ -1606,14 +1436,11 @@ Structure is documented below.
         <span class="property-type">string</span>
     </dt>
     <dd>{{% md %}}Destination on Cloud Pubsub topic.
-{{% /md %}}</dd>
-</dl>
+{{% /md %}}</dd></dl>
 {{% /choosable %}}
 
 {{% choosable language nodejs %}}
-<dl class="resources-properties">
-
-    <dt class="property-required"
+<dl class="resources-properties"><dt class="property-required"
             title="Required">
         <span id="topic_nodejs">
 <a href="#topic_nodejs" style="color: inherit; text-decoration: inherit;">topic</a>
@@ -1622,14 +1449,11 @@ Structure is documented below.
         <span class="property-type">string</span>
     </dt>
     <dd>{{% md %}}Destination on Cloud Pubsub topic.
-{{% /md %}}</dd>
-</dl>
+{{% /md %}}</dd></dl>
 {{% /choosable %}}
 
 {{% choosable language python %}}
-<dl class="resources-properties">
-
-    <dt class="property-required"
+<dl class="resources-properties"><dt class="property-required"
             title="Required">
         <span id="topic_python">
 <a href="#topic_python" style="color: inherit; text-decoration: inherit;">topic</a>
@@ -1638,8 +1462,7 @@ Structure is documented below.
         <span class="property-type">str</span>
     </dt>
     <dd>{{% md %}}Destination on Cloud Pubsub topic.
-{{% /md %}}</dd>
-</dl>
+{{% /md %}}</dd></dl>
 {{% /choosable %}}
 ## Import
 
@@ -1668,6 +1491,6 @@ ProjectFeed can be imported using any of these accepted formats
 	<dt>License</dt>
 	<dd>Apache-2.0</dd>
 	<dt>Notes</dt>
-	<dd>This Pulumi package is based on the [`google-beta` Terraform Provider](https://github.com/hashicorp/terraform-provider-google-beta).</dd>
+	<dd>{{% md %}}This Pulumi package is based on the [`google-beta` Terraform Provider](https://github.com/hashicorp/terraform-provider-google-beta).{{% /md %}}</dd>
 </dl>
 

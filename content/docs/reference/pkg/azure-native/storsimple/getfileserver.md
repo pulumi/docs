@@ -51,9 +51,7 @@ The following arguments are supported:
 
 
 {{% choosable language csharp %}}
-<dl class="resources-properties">
-
-    <dt class="property-required"
+<dl class="resources-properties"><dt class="property-required"
             title="Required">
         <span id="devicename_csharp">
 <a href="#devicename_csharp" style="color: inherit; text-decoration: inherit;">Device<wbr>Name</a>
@@ -61,8 +59,7 @@ The following arguments are supported:
         <span class="property-indicator"></span>
         <span class="property-type">string</span>
     </dt>
-    <dd>{{% md %}}The device name.{{% /md %}}</dd>
-    <dt class="property-required"
+    <dd>{{% md %}}The device name.{{% /md %}}</dd><dt class="property-required"
             title="Required">
         <span id="fileservername_csharp">
 <a href="#fileservername_csharp" style="color: inherit; text-decoration: inherit;">File<wbr>Server<wbr>Name</a>
@@ -70,8 +67,7 @@ The following arguments are supported:
         <span class="property-indicator"></span>
         <span class="property-type">string</span>
     </dt>
-    <dd>{{% md %}}The file server name.{{% /md %}}</dd>
-    <dt class="property-required"
+    <dd>{{% md %}}The file server name.{{% /md %}}</dd><dt class="property-required"
             title="Required">
         <span id="managername_csharp">
 <a href="#managername_csharp" style="color: inherit; text-decoration: inherit;">Manager<wbr>Name</a>
@@ -79,8 +75,7 @@ The following arguments are supported:
         <span class="property-indicator"></span>
         <span class="property-type">string</span>
     </dt>
-    <dd>{{% md %}}The manager name{{% /md %}}</dd>
-    <dt class="property-required"
+    <dd>{{% md %}}The manager name{{% /md %}}</dd><dt class="property-required"
             title="Required">
         <span id="resourcegroupname_csharp">
 <a href="#resourcegroupname_csharp" style="color: inherit; text-decoration: inherit;">Resource<wbr>Group<wbr>Name</a>
@@ -88,14 +83,11 @@ The following arguments are supported:
         <span class="property-indicator"></span>
         <span class="property-type">string</span>
     </dt>
-    <dd>{{% md %}}The resource group name{{% /md %}}</dd>
-</dl>
+    <dd>{{% md %}}The resource group name{{% /md %}}</dd></dl>
 {{% /choosable %}}
 
 {{% choosable language go %}}
-<dl class="resources-properties">
-
-    <dt class="property-required"
+<dl class="resources-properties"><dt class="property-required"
             title="Required">
         <span id="devicename_go">
 <a href="#devicename_go" style="color: inherit; text-decoration: inherit;">Device<wbr>Name</a>
@@ -103,8 +95,7 @@ The following arguments are supported:
         <span class="property-indicator"></span>
         <span class="property-type">string</span>
     </dt>
-    <dd>{{% md %}}The device name.{{% /md %}}</dd>
-    <dt class="property-required"
+    <dd>{{% md %}}The device name.{{% /md %}}</dd><dt class="property-required"
             title="Required">
         <span id="fileservername_go">
 <a href="#fileservername_go" style="color: inherit; text-decoration: inherit;">File<wbr>Server<wbr>Name</a>
@@ -112,8 +103,7 @@ The following arguments are supported:
         <span class="property-indicator"></span>
         <span class="property-type">string</span>
     </dt>
-    <dd>{{% md %}}The file server name.{{% /md %}}</dd>
-    <dt class="property-required"
+    <dd>{{% md %}}The file server name.{{% /md %}}</dd><dt class="property-required"
             title="Required">
         <span id="managername_go">
 <a href="#managername_go" style="color: inherit; text-decoration: inherit;">Manager<wbr>Name</a>
@@ -121,8 +111,7 @@ The following arguments are supported:
         <span class="property-indicator"></span>
         <span class="property-type">string</span>
     </dt>
-    <dd>{{% md %}}The manager name{{% /md %}}</dd>
-    <dt class="property-required"
+    <dd>{{% md %}}The manager name{{% /md %}}</dd><dt class="property-required"
             title="Required">
         <span id="resourcegroupname_go">
 <a href="#resourcegroupname_go" style="color: inherit; text-decoration: inherit;">Resource<wbr>Group<wbr>Name</a>
@@ -130,14 +119,11 @@ The following arguments are supported:
         <span class="property-indicator"></span>
         <span class="property-type">string</span>
     </dt>
-    <dd>{{% md %}}The resource group name{{% /md %}}</dd>
-</dl>
+    <dd>{{% md %}}The resource group name{{% /md %}}</dd></dl>
 {{% /choosable %}}
 
 {{% choosable language nodejs %}}
-<dl class="resources-properties">
-
-    <dt class="property-required"
+<dl class="resources-properties"><dt class="property-required"
             title="Required">
         <span id="devicename_nodejs">
 <a href="#devicename_nodejs" style="color: inherit; text-decoration: inherit;">device<wbr>Name</a>
@@ -145,8 +131,7 @@ The following arguments are supported:
         <span class="property-indicator"></span>
         <span class="property-type">string</span>
     </dt>
-    <dd>{{% md %}}The device name.{{% /md %}}</dd>
-    <dt class="property-required"
+    <dd>{{% md %}}The device name.{{% /md %}}</dd><dt class="property-required"
             title="Required">
         <span id="fileservername_nodejs">
 <a href="#fileservername_nodejs" style="color: inherit; text-decoration: inherit;">file<wbr>Server<wbr>Name</a>
@@ -154,8 +139,7 @@ The following arguments are supported:
         <span class="property-indicator"></span>
         <span class="property-type">string</span>
     </dt>
-    <dd>{{% md %}}The file server name.{{% /md %}}</dd>
-    <dt class="property-required"
+    <dd>{{% md %}}The file server name.{{% /md %}}</dd><dt class="property-required"
             title="Required">
         <span id="managername_nodejs">
 <a href="#managername_nodejs" style="color: inherit; text-decoration: inherit;">manager<wbr>Name</a>
@@ -163,8 +147,7 @@ The following arguments are supported:
         <span class="property-indicator"></span>
         <span class="property-type">string</span>
     </dt>
-    <dd>{{% md %}}The manager name{{% /md %}}</dd>
-    <dt class="property-required"
+    <dd>{{% md %}}The manager name{{% /md %}}</dd><dt class="property-required"
             title="Required">
         <span id="resourcegroupname_nodejs">
 <a href="#resourcegroupname_nodejs" style="color: inherit; text-decoration: inherit;">resource<wbr>Group<wbr>Name</a>
@@ -172,14 +155,11 @@ The following arguments are supported:
         <span class="property-indicator"></span>
         <span class="property-type">string</span>
     </dt>
-    <dd>{{% md %}}The resource group name{{% /md %}}</dd>
-</dl>
+    <dd>{{% md %}}The resource group name{{% /md %}}</dd></dl>
 {{% /choosable %}}
 
 {{% choosable language python %}}
-<dl class="resources-properties">
-
-    <dt class="property-required"
+<dl class="resources-properties"><dt class="property-required"
             title="Required">
         <span id="device_name_python">
 <a href="#device_name_python" style="color: inherit; text-decoration: inherit;">device_<wbr>name</a>
@@ -187,8 +167,7 @@ The following arguments are supported:
         <span class="property-indicator"></span>
         <span class="property-type">str</span>
     </dt>
-    <dd>{{% md %}}The device name.{{% /md %}}</dd>
-    <dt class="property-required"
+    <dd>{{% md %}}The device name.{{% /md %}}</dd><dt class="property-required"
             title="Required">
         <span id="file_server_name_python">
 <a href="#file_server_name_python" style="color: inherit; text-decoration: inherit;">file_<wbr>server_<wbr>name</a>
@@ -196,8 +175,7 @@ The following arguments are supported:
         <span class="property-indicator"></span>
         <span class="property-type">str</span>
     </dt>
-    <dd>{{% md %}}The file server name.{{% /md %}}</dd>
-    <dt class="property-required"
+    <dd>{{% md %}}The file server name.{{% /md %}}</dd><dt class="property-required"
             title="Required">
         <span id="manager_name_python">
 <a href="#manager_name_python" style="color: inherit; text-decoration: inherit;">manager_<wbr>name</a>
@@ -205,8 +183,7 @@ The following arguments are supported:
         <span class="property-indicator"></span>
         <span class="property-type">str</span>
     </dt>
-    <dd>{{% md %}}The manager name{{% /md %}}</dd>
-    <dt class="property-required"
+    <dd>{{% md %}}The manager name{{% /md %}}</dd><dt class="property-required"
             title="Required">
         <span id="resource_group_name_python">
 <a href="#resource_group_name_python" style="color: inherit; text-decoration: inherit;">resource_<wbr>group_<wbr>name</a>
@@ -214,8 +191,7 @@ The following arguments are supported:
         <span class="property-indicator"></span>
         <span class="property-type">str</span>
     </dt>
-    <dd>{{% md %}}The resource group name{{% /md %}}</dd>
-</dl>
+    <dd>{{% md %}}The resource group name{{% /md %}}</dd></dl>
 {{% /choosable %}}
 
 
@@ -228,9 +204,7 @@ The following output properties are available:
 
 
 {{% choosable language csharp %}}
-<dl class="resources-properties">
-
-    <dt class="property-"
+<dl class="resources-properties"><dt class="property-"
             title="">
         <span id="backupschedulegroupid_csharp">
 <a href="#backupschedulegroupid_csharp" style="color: inherit; text-decoration: inherit;">Backup<wbr>Schedule<wbr>Group<wbr>Id</a>
@@ -238,8 +212,7 @@ The following output properties are available:
         <span class="property-indicator"></span>
         <span class="property-type">string</span>
     </dt>
-    <dd>{{% md %}}The backup policy id.{{% /md %}}</dd>
-    <dt class="property-"
+    <dd>{{% md %}}The backup policy id.{{% /md %}}</dd><dt class="property-"
             title="">
         <span id="domainname_csharp">
 <a href="#domainname_csharp" style="color: inherit; text-decoration: inherit;">Domain<wbr>Name</a>
@@ -247,8 +220,7 @@ The following output properties are available:
         <span class="property-indicator"></span>
         <span class="property-type">string</span>
     </dt>
-    <dd>{{% md %}}Domain of the file server{{% /md %}}</dd>
-    <dt class="property-"
+    <dd>{{% md %}}Domain of the file server{{% /md %}}</dd><dt class="property-"
             title="">
         <span id="id_csharp">
 <a href="#id_csharp" style="color: inherit; text-decoration: inherit;">Id</a>
@@ -256,8 +228,7 @@ The following output properties are available:
         <span class="property-indicator"></span>
         <span class="property-type">string</span>
     </dt>
-    <dd>{{% md %}}The identifier.{{% /md %}}</dd>
-    <dt class="property-"
+    <dd>{{% md %}}The identifier.{{% /md %}}</dd><dt class="property-"
             title="">
         <span id="name_csharp">
 <a href="#name_csharp" style="color: inherit; text-decoration: inherit;">Name</a>
@@ -265,8 +236,7 @@ The following output properties are available:
         <span class="property-indicator"></span>
         <span class="property-type">string</span>
     </dt>
-    <dd>{{% md %}}The name.{{% /md %}}</dd>
-    <dt class="property-"
+    <dd>{{% md %}}The name.{{% /md %}}</dd><dt class="property-"
             title="">
         <span id="storagedomainid_csharp">
 <a href="#storagedomainid_csharp" style="color: inherit; text-decoration: inherit;">Storage<wbr>Domain<wbr>Id</a>
@@ -274,8 +244,7 @@ The following output properties are available:
         <span class="property-indicator"></span>
         <span class="property-type">string</span>
     </dt>
-    <dd>{{% md %}}The storage domain id.{{% /md %}}</dd>
-    <dt class="property-"
+    <dd>{{% md %}}The storage domain id.{{% /md %}}</dd><dt class="property-"
             title="">
         <span id="type_csharp">
 <a href="#type_csharp" style="color: inherit; text-decoration: inherit;">Type</a>
@@ -283,8 +252,7 @@ The following output properties are available:
         <span class="property-indicator"></span>
         <span class="property-type">string</span>
     </dt>
-    <dd>{{% md %}}The type.{{% /md %}}</dd>
-    <dt class="property-"
+    <dd>{{% md %}}The type.{{% /md %}}</dd><dt class="property-"
             title="">
         <span id="description_csharp">
 <a href="#description_csharp" style="color: inherit; text-decoration: inherit;">Description</a>
@@ -292,14 +260,11 @@ The following output properties are available:
         <span class="property-indicator"></span>
         <span class="property-type">string</span>
     </dt>
-    <dd>{{% md %}}The description of the file server{{% /md %}}</dd>
-</dl>
+    <dd>{{% md %}}The description of the file server{{% /md %}}</dd></dl>
 {{% /choosable %}}
 
 {{% choosable language go %}}
-<dl class="resources-properties">
-
-    <dt class="property-"
+<dl class="resources-properties"><dt class="property-"
             title="">
         <span id="backupschedulegroupid_go">
 <a href="#backupschedulegroupid_go" style="color: inherit; text-decoration: inherit;">Backup<wbr>Schedule<wbr>Group<wbr>Id</a>
@@ -307,8 +272,7 @@ The following output properties are available:
         <span class="property-indicator"></span>
         <span class="property-type">string</span>
     </dt>
-    <dd>{{% md %}}The backup policy id.{{% /md %}}</dd>
-    <dt class="property-"
+    <dd>{{% md %}}The backup policy id.{{% /md %}}</dd><dt class="property-"
             title="">
         <span id="domainname_go">
 <a href="#domainname_go" style="color: inherit; text-decoration: inherit;">Domain<wbr>Name</a>
@@ -316,8 +280,7 @@ The following output properties are available:
         <span class="property-indicator"></span>
         <span class="property-type">string</span>
     </dt>
-    <dd>{{% md %}}Domain of the file server{{% /md %}}</dd>
-    <dt class="property-"
+    <dd>{{% md %}}Domain of the file server{{% /md %}}</dd><dt class="property-"
             title="">
         <span id="id_go">
 <a href="#id_go" style="color: inherit; text-decoration: inherit;">Id</a>
@@ -325,8 +288,7 @@ The following output properties are available:
         <span class="property-indicator"></span>
         <span class="property-type">string</span>
     </dt>
-    <dd>{{% md %}}The identifier.{{% /md %}}</dd>
-    <dt class="property-"
+    <dd>{{% md %}}The identifier.{{% /md %}}</dd><dt class="property-"
             title="">
         <span id="name_go">
 <a href="#name_go" style="color: inherit; text-decoration: inherit;">Name</a>
@@ -334,8 +296,7 @@ The following output properties are available:
         <span class="property-indicator"></span>
         <span class="property-type">string</span>
     </dt>
-    <dd>{{% md %}}The name.{{% /md %}}</dd>
-    <dt class="property-"
+    <dd>{{% md %}}The name.{{% /md %}}</dd><dt class="property-"
             title="">
         <span id="storagedomainid_go">
 <a href="#storagedomainid_go" style="color: inherit; text-decoration: inherit;">Storage<wbr>Domain<wbr>Id</a>
@@ -343,8 +304,7 @@ The following output properties are available:
         <span class="property-indicator"></span>
         <span class="property-type">string</span>
     </dt>
-    <dd>{{% md %}}The storage domain id.{{% /md %}}</dd>
-    <dt class="property-"
+    <dd>{{% md %}}The storage domain id.{{% /md %}}</dd><dt class="property-"
             title="">
         <span id="type_go">
 <a href="#type_go" style="color: inherit; text-decoration: inherit;">Type</a>
@@ -352,8 +312,7 @@ The following output properties are available:
         <span class="property-indicator"></span>
         <span class="property-type">string</span>
     </dt>
-    <dd>{{% md %}}The type.{{% /md %}}</dd>
-    <dt class="property-"
+    <dd>{{% md %}}The type.{{% /md %}}</dd><dt class="property-"
             title="">
         <span id="description_go">
 <a href="#description_go" style="color: inherit; text-decoration: inherit;">Description</a>
@@ -361,14 +320,11 @@ The following output properties are available:
         <span class="property-indicator"></span>
         <span class="property-type">string</span>
     </dt>
-    <dd>{{% md %}}The description of the file server{{% /md %}}</dd>
-</dl>
+    <dd>{{% md %}}The description of the file server{{% /md %}}</dd></dl>
 {{% /choosable %}}
 
 {{% choosable language nodejs %}}
-<dl class="resources-properties">
-
-    <dt class="property-"
+<dl class="resources-properties"><dt class="property-"
             title="">
         <span id="backupschedulegroupid_nodejs">
 <a href="#backupschedulegroupid_nodejs" style="color: inherit; text-decoration: inherit;">backup<wbr>Schedule<wbr>Group<wbr>Id</a>
@@ -376,8 +332,7 @@ The following output properties are available:
         <span class="property-indicator"></span>
         <span class="property-type">string</span>
     </dt>
-    <dd>{{% md %}}The backup policy id.{{% /md %}}</dd>
-    <dt class="property-"
+    <dd>{{% md %}}The backup policy id.{{% /md %}}</dd><dt class="property-"
             title="">
         <span id="domainname_nodejs">
 <a href="#domainname_nodejs" style="color: inherit; text-decoration: inherit;">domain<wbr>Name</a>
@@ -385,8 +340,7 @@ The following output properties are available:
         <span class="property-indicator"></span>
         <span class="property-type">string</span>
     </dt>
-    <dd>{{% md %}}Domain of the file server{{% /md %}}</dd>
-    <dt class="property-"
+    <dd>{{% md %}}Domain of the file server{{% /md %}}</dd><dt class="property-"
             title="">
         <span id="id_nodejs">
 <a href="#id_nodejs" style="color: inherit; text-decoration: inherit;">id</a>
@@ -394,8 +348,7 @@ The following output properties are available:
         <span class="property-indicator"></span>
         <span class="property-type">string</span>
     </dt>
-    <dd>{{% md %}}The identifier.{{% /md %}}</dd>
-    <dt class="property-"
+    <dd>{{% md %}}The identifier.{{% /md %}}</dd><dt class="property-"
             title="">
         <span id="name_nodejs">
 <a href="#name_nodejs" style="color: inherit; text-decoration: inherit;">name</a>
@@ -403,8 +356,7 @@ The following output properties are available:
         <span class="property-indicator"></span>
         <span class="property-type">string</span>
     </dt>
-    <dd>{{% md %}}The name.{{% /md %}}</dd>
-    <dt class="property-"
+    <dd>{{% md %}}The name.{{% /md %}}</dd><dt class="property-"
             title="">
         <span id="storagedomainid_nodejs">
 <a href="#storagedomainid_nodejs" style="color: inherit; text-decoration: inherit;">storage<wbr>Domain<wbr>Id</a>
@@ -412,8 +364,7 @@ The following output properties are available:
         <span class="property-indicator"></span>
         <span class="property-type">string</span>
     </dt>
-    <dd>{{% md %}}The storage domain id.{{% /md %}}</dd>
-    <dt class="property-"
+    <dd>{{% md %}}The storage domain id.{{% /md %}}</dd><dt class="property-"
             title="">
         <span id="type_nodejs">
 <a href="#type_nodejs" style="color: inherit; text-decoration: inherit;">type</a>
@@ -421,8 +372,7 @@ The following output properties are available:
         <span class="property-indicator"></span>
         <span class="property-type">string</span>
     </dt>
-    <dd>{{% md %}}The type.{{% /md %}}</dd>
-    <dt class="property-"
+    <dd>{{% md %}}The type.{{% /md %}}</dd><dt class="property-"
             title="">
         <span id="description_nodejs">
 <a href="#description_nodejs" style="color: inherit; text-decoration: inherit;">description</a>
@@ -430,14 +380,11 @@ The following output properties are available:
         <span class="property-indicator"></span>
         <span class="property-type">string</span>
     </dt>
-    <dd>{{% md %}}The description of the file server{{% /md %}}</dd>
-</dl>
+    <dd>{{% md %}}The description of the file server{{% /md %}}</dd></dl>
 {{% /choosable %}}
 
 {{% choosable language python %}}
-<dl class="resources-properties">
-
-    <dt class="property-"
+<dl class="resources-properties"><dt class="property-"
             title="">
         <span id="backup_schedule_group_id_python">
 <a href="#backup_schedule_group_id_python" style="color: inherit; text-decoration: inherit;">backup_<wbr>schedule_<wbr>group_<wbr>id</a>
@@ -445,8 +392,7 @@ The following output properties are available:
         <span class="property-indicator"></span>
         <span class="property-type">str</span>
     </dt>
-    <dd>{{% md %}}The backup policy id.{{% /md %}}</dd>
-    <dt class="property-"
+    <dd>{{% md %}}The backup policy id.{{% /md %}}</dd><dt class="property-"
             title="">
         <span id="domain_name_python">
 <a href="#domain_name_python" style="color: inherit; text-decoration: inherit;">domain_<wbr>name</a>
@@ -454,8 +400,7 @@ The following output properties are available:
         <span class="property-indicator"></span>
         <span class="property-type">str</span>
     </dt>
-    <dd>{{% md %}}Domain of the file server{{% /md %}}</dd>
-    <dt class="property-"
+    <dd>{{% md %}}Domain of the file server{{% /md %}}</dd><dt class="property-"
             title="">
         <span id="id_python">
 <a href="#id_python" style="color: inherit; text-decoration: inherit;">id</a>
@@ -463,8 +408,7 @@ The following output properties are available:
         <span class="property-indicator"></span>
         <span class="property-type">str</span>
     </dt>
-    <dd>{{% md %}}The identifier.{{% /md %}}</dd>
-    <dt class="property-"
+    <dd>{{% md %}}The identifier.{{% /md %}}</dd><dt class="property-"
             title="">
         <span id="name_python">
 <a href="#name_python" style="color: inherit; text-decoration: inherit;">name</a>
@@ -472,8 +416,7 @@ The following output properties are available:
         <span class="property-indicator"></span>
         <span class="property-type">str</span>
     </dt>
-    <dd>{{% md %}}The name.{{% /md %}}</dd>
-    <dt class="property-"
+    <dd>{{% md %}}The name.{{% /md %}}</dd><dt class="property-"
             title="">
         <span id="storage_domain_id_python">
 <a href="#storage_domain_id_python" style="color: inherit; text-decoration: inherit;">storage_<wbr>domain_<wbr>id</a>
@@ -481,8 +424,7 @@ The following output properties are available:
         <span class="property-indicator"></span>
         <span class="property-type">str</span>
     </dt>
-    <dd>{{% md %}}The storage domain id.{{% /md %}}</dd>
-    <dt class="property-"
+    <dd>{{% md %}}The storage domain id.{{% /md %}}</dd><dt class="property-"
             title="">
         <span id="type_python">
 <a href="#type_python" style="color: inherit; text-decoration: inherit;">type</a>
@@ -490,8 +432,7 @@ The following output properties are available:
         <span class="property-indicator"></span>
         <span class="property-type">str</span>
     </dt>
-    <dd>{{% md %}}The type.{{% /md %}}</dd>
-    <dt class="property-"
+    <dd>{{% md %}}The type.{{% /md %}}</dd><dt class="property-"
             title="">
         <span id="description_python">
 <a href="#description_python" style="color: inherit; text-decoration: inherit;">description</a>
@@ -499,8 +440,7 @@ The following output properties are available:
         <span class="property-indicator"></span>
         <span class="property-type">str</span>
     </dt>
-    <dd>{{% md %}}The description of the file server{{% /md %}}</dd>
-</dl>
+    <dd>{{% md %}}The description of the file server{{% /md %}}</dd></dl>
 {{% /choosable %}}
 
 

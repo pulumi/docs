@@ -43,9 +43,7 @@ Images can be imported using the `id`, e.g.
 
 {{% choosable language nodejs %}}
 
-<dl class="resources-properties">
-  
-    <dt
+<dl class="resources-properties"><dt
         class="property-required" title="Required">
         <span>name</span>
         <span class="property-indicator"></span>
@@ -53,9 +51,7 @@ Images can be imported using the `id`, e.g.
     </dt>
     <dd>
       The unique name of the resource.
-    </dd>
-  
-    <dt
+    </dd><dt
         class="property-required" title="Required">
         <span>args</span>
         <span class="property-indicator"></span>
@@ -63,9 +59,7 @@ Images can be imported using the `id`, e.g.
     </dt>
     <dd>
       The arguments to resource properties.
-    </dd>
-  
-    <dt
+    </dd><dt
         class="property-optional" title="Optional">
         <span>opts</span>
         <span class="property-indicator"></span>
@@ -73,10 +67,7 @@ Images can be imported using the `id`, e.g.
     </dt>
     <dd>
       Bag of options to control resource&#39;s behavior.
-    </dd>
-  
-
-</dl>
+    </dd></dl>
 
 {{% /choosable %}}
 
@@ -102,9 +93,7 @@ Images can be imported using the `id`, e.g.
 
 {{% choosable language go %}}
 
-<dl class="resources-properties">
-  
-    <dt
+<dl class="resources-properties"><dt
         class="property-optional" title="Optional">
         <span>ctx</span>
         <span class="property-indicator"></span>
@@ -112,9 +101,7 @@ Images can be imported using the `id`, e.g.
     </dt>
     <dd>
       Context object for the current deployment.
-    </dd>
-  
-    <dt
+    </dd><dt
         class="property-required" title="Required">
         <span>name</span>
         <span class="property-indicator"></span>
@@ -122,9 +109,7 @@ Images can be imported using the `id`, e.g.
     </dt>
     <dd>
       The unique name of the resource.
-    </dd>
-  
-    <dt
+    </dd><dt
         class="property-required" title="Required">
         <span>args</span>
         <span class="property-indicator"></span>
@@ -132,9 +117,7 @@ Images can be imported using the `id`, e.g.
     </dt>
     <dd>
       The arguments to resource properties.
-    </dd>
-  
-    <dt
+    </dd><dt
         class="property-optional" title="Optional">
         <span>opts</span>
         <span class="property-indicator"></span>
@@ -142,18 +125,13 @@ Images can be imported using the `id`, e.g.
     </dt>
     <dd>
       Bag of options to control resource&#39;s behavior.
-    </dd>
-  
-
-</dl>
+    </dd></dl>
 
 {{% /choosable %}}
 
 {{% choosable language csharp %}}
 
-<dl class="resources-properties">
-  
-    <dt
+<dl class="resources-properties"><dt
         class="property-required" title="Required">
         <span>name</span>
         <span class="property-indicator"></span>
@@ -161,9 +139,7 @@ Images can be imported using the `id`, e.g.
     </dt>
     <dd>
       The unique name of the resource.
-    </dd>
-  
-    <dt
+    </dd><dt
         class="property-required" title="Required">
         <span>args</span>
         <span class="property-indicator"></span>
@@ -171,9 +147,7 @@ Images can be imported using the `id`, e.g.
     </dt>
     <dd>
       The arguments to resource properties.
-    </dd>
-  
-    <dt
+    </dd><dt
         class="property-optional" title="Optional">
         <span>opts</span>
         <span class="property-indicator"></span>
@@ -181,10 +155,7 @@ Images can be imported using the `id`, e.g.
     </dt>
     <dd>
       Bag of options to control resource&#39;s behavior.
-    </dd>
-  
-
-</dl>
+    </dd></dl>
 
 {{% /choosable %}}
 
@@ -199,9 +170,7 @@ The Image resource accepts the following [input]({{< relref "/docs/intro/concept
 
 
 {{% choosable language csharp %}}
-<dl class="resources-properties">
-
-    <dt class="property-required"
+<dl class="resources-properties"><dt class="property-required"
             title="Required">
         <span id="containerformat_csharp">
 <a href="#containerformat_csharp" style="color: inherit; text-decoration: inherit;">Container<wbr>Format</a>
@@ -211,8 +180,7 @@ The Image resource accepts the following [input]({{< relref "/docs/intro/concept
     </dt>
     <dd>{{% md %}}The container format. Must be one of
 "ami", "ari", "aki", "bare", "ovf".
-{{% /md %}}</dd>
-    <dt class="property-required"
+{{% /md %}}</dd><dt class="property-required"
             title="Required">
         <span id="diskformat_csharp">
 <a href="#diskformat_csharp" style="color: inherit; text-decoration: inherit;">Disk<wbr>Format</a>
@@ -222,8 +190,7 @@ The Image resource accepts the following [input]({{< relref "/docs/intro/concept
     </dt>
     <dd>{{% md %}}The disk format. Must be one of
 "ami", "ari", "aki", "vhd", "vmdk", "raw", "qcow2", "vdi", "iso".
-{{% /md %}}</dd>
-    <dt class="property-optional"
+{{% /md %}}</dd><dt class="property-optional"
             title="Optional">
         <span id="hidden_csharp">
 <a href="#hidden_csharp" style="color: inherit; text-decoration: inherit;">Hidden</a>
@@ -233,8 +200,7 @@ The Image resource accepts the following [input]({{< relref "/docs/intro/concept
     </dt>
     <dd>{{% md %}}If true, image will be hidden from public list.
 Defaults to false.
-{{% /md %}}</dd>
-    <dt class="property-optional"
+{{% /md %}}</dd><dt class="property-optional"
             title="Optional">
         <span id="imagecachepath_csharp">
 <a href="#imagecachepath_csharp" style="color: inherit; text-decoration: inherit;">Image<wbr>Cache<wbr>Path</a>
@@ -242,8 +208,7 @@ Defaults to false.
         <span class="property-indicator"></span>
         <span class="property-type">string</span>
     </dt>
-    <dd>{{% md %}}{{% /md %}}</dd>
-    <dt class="property-optional"
+    <dd>{{% md %}}{{% /md %}}</dd><dt class="property-optional"
             title="Optional">
         <span id="imageid_csharp">
 <a href="#imageid_csharp" style="color: inherit; text-decoration: inherit;">Image<wbr>Id</a>
@@ -253,8 +218,7 @@ Defaults to false.
     </dt>
     <dd>{{% md %}}Unique ID (valid UUID) of image to create. Changing 
 this creates a new image.
-{{% /md %}}</dd>
-    <dt class="property-optional"
+{{% /md %}}</dd><dt class="property-optional"
             title="Optional">
         <span id="imagesourcepassword_csharp">
 <a href="#imagesourcepassword_csharp" style="color: inherit; text-decoration: inherit;">Image<wbr>Source<wbr>Password</a>
@@ -263,8 +227,7 @@ this creates a new image.
         <span class="property-type">string</span>
     </dt>
     <dd>{{% md %}}The password of basic auth to download `image_source_url`.
-{{% /md %}}</dd>
-    <dt class="property-optional"
+{{% /md %}}</dd><dt class="property-optional"
             title="Optional">
         <span id="imagesourceurl_csharp">
 <a href="#imagesourceurl_csharp" style="color: inherit; text-decoration: inherit;">Image<wbr>Source<wbr>Url</a>
@@ -276,8 +239,7 @@ this creates a new image.
 is not used, then the image will be downloaded in the `image_cache_path` before
 being uploaded to Glance.
 Conflicts with `local_file_path`.
-{{% /md %}}</dd>
-    <dt class="property-optional"
+{{% /md %}}</dd><dt class="property-optional"
             title="Optional">
         <span id="imagesourceusername_csharp">
 <a href="#imagesourceusername_csharp" style="color: inherit; text-decoration: inherit;">Image<wbr>Source<wbr>Username</a>
@@ -286,8 +248,7 @@ Conflicts with `local_file_path`.
         <span class="property-type">string</span>
     </dt>
     <dd>{{% md %}}The username of basic auth to download `image_source_url`.
-{{% /md %}}</dd>
-    <dt class="property-optional"
+{{% /md %}}</dd><dt class="property-optional"
             title="Optional">
         <span id="localfilepath_csharp">
 <a href="#localfilepath_csharp" style="color: inherit; text-decoration: inherit;">Local<wbr>File<wbr>Path</a>
@@ -298,8 +259,7 @@ Conflicts with `local_file_path`.
     <dd>{{% md %}}This is the filepath of the raw image file
 that will be uploaded to Glance. Conflicts with `image_source_url` and
 `web_download`.
-{{% /md %}}</dd>
-    <dt class="property-optional"
+{{% /md %}}</dd><dt class="property-optional"
             title="Optional">
         <span id="mindiskgb_csharp">
 <a href="#mindiskgb_csharp" style="color: inherit; text-decoration: inherit;">Min<wbr>Disk<wbr>Gb</a>
@@ -309,8 +269,7 @@ that will be uploaded to Glance. Conflicts with `image_source_url` and
     </dt>
     <dd>{{% md %}}Amount of disk space (in GB) required to boot image.
 Defaults to 0.
-{{% /md %}}</dd>
-    <dt class="property-optional"
+{{% /md %}}</dd><dt class="property-optional"
             title="Optional">
         <span id="minrammb_csharp">
 <a href="#minrammb_csharp" style="color: inherit; text-decoration: inherit;">Min<wbr>Ram<wbr>Mb</a>
@@ -320,8 +279,7 @@ Defaults to 0.
     </dt>
     <dd>{{% md %}}Amount of ram (in MB) required to boot image.
 Defauts to 0.
-{{% /md %}}</dd>
-    <dt class="property-optional"
+{{% /md %}}</dd><dt class="property-optional"
             title="Optional">
         <span id="name_csharp">
 <a href="#name_csharp" style="color: inherit; text-decoration: inherit;">Name</a>
@@ -330,8 +288,7 @@ Defauts to 0.
         <span class="property-type">string</span>
     </dt>
     <dd>{{% md %}}The name of the image.
-{{% /md %}}</dd>
-    <dt class="property-optional"
+{{% /md %}}</dd><dt class="property-optional"
             title="Optional">
         <span id="properties_csharp">
 <a href="#properties_csharp" style="color: inherit; text-decoration: inherit;">Properties</a>
@@ -342,8 +299,7 @@ Defauts to 0.
     <dd>{{% md %}}A map of key/value pairs to set freeform
 information about an image. See the "Notes" section for further
 information about properties.
-{{% /md %}}</dd>
-    <dt class="property-optional"
+{{% /md %}}</dd><dt class="property-optional"
             title="Optional">
         <span id="protected_csharp">
 <a href="#protected_csharp" style="color: inherit; text-decoration: inherit;">Protected</a>
@@ -353,8 +309,7 @@ information about properties.
     </dt>
     <dd>{{% md %}}If true, image will not be deletable.
 Defaults to false.
-{{% /md %}}</dd>
-    <dt class="property-optional"
+{{% /md %}}</dd><dt class="property-optional"
             title="Optional">
         <span id="region_csharp">
 <a href="#region_csharp" style="color: inherit; text-decoration: inherit;">Region</a>
@@ -366,8 +321,7 @@ Defaults to false.
 A Glance client is needed to create an Image that can be used with
 a compute instance. If omitted, the `region` argument of the provider
 is used. Changing this creates a new Image.
-{{% /md %}}</dd>
-    <dt class="property-optional"
+{{% /md %}}</dd><dt class="property-optional"
             title="Optional">
         <span id="tags_csharp">
 <a href="#tags_csharp" style="color: inherit; text-decoration: inherit;">Tags</a>
@@ -377,8 +331,7 @@ is used. Changing this creates a new Image.
     </dt>
     <dd>{{% md %}}The tags of the image. It must be a list of strings.
 At this time, it is not possible to delete all tags of an image.
-{{% /md %}}</dd>
-    <dt class="property-optional"
+{{% /md %}}</dd><dt class="property-optional"
             title="Optional">
         <span id="verifychecksum_csharp">
 <a href="#verifychecksum_csharp" style="color: inherit; text-decoration: inherit;">Verify<wbr>Checksum</a>
@@ -389,8 +342,7 @@ At this time, it is not possible to delete all tags of an image.
     <dd>{{% md %}}If false, the checksum will not be verified
 once the image is finished uploading. Conflicts with `web_download`.
 Defaults to true when not using `web_download`.
-{{% /md %}}</dd>
-    <dt class="property-optional"
+{{% /md %}}</dd><dt class="property-optional"
             title="Optional">
         <span id="visibility_csharp">
 <a href="#visibility_csharp" style="color: inherit; text-decoration: inherit;">Visibility</a>
@@ -401,8 +353,7 @@ Defaults to true when not using `web_download`.
     <dd>{{% md %}}The visibility of the image. Must be one of
 "public", "private", "community", or "shared". The ability to set the
 visibility depends upon the configuration of the OpenStack cloud.
-{{% /md %}}</dd>
-    <dt class="property-optional"
+{{% /md %}}</dd><dt class="property-optional"
             title="Optional">
         <span id="webdownload_csharp">
 <a href="#webdownload_csharp" style="color: inherit; text-decoration: inherit;">Web<wbr>Download</a>
@@ -413,14 +364,11 @@ visibility depends upon the configuration of the OpenStack cloud.
     <dd>{{% md %}}If true, the "web-download" import method will
 be used to let Openstack download the image directly from the remote source.
 Conflicts with `local_file_path`. Defaults to false.
-{{% /md %}}</dd>
-</dl>
+{{% /md %}}</dd></dl>
 {{% /choosable %}}
 
 {{% choosable language go %}}
-<dl class="resources-properties">
-
-    <dt class="property-required"
+<dl class="resources-properties"><dt class="property-required"
             title="Required">
         <span id="containerformat_go">
 <a href="#containerformat_go" style="color: inherit; text-decoration: inherit;">Container<wbr>Format</a>
@@ -430,8 +378,7 @@ Conflicts with `local_file_path`. Defaults to false.
     </dt>
     <dd>{{% md %}}The container format. Must be one of
 "ami", "ari", "aki", "bare", "ovf".
-{{% /md %}}</dd>
-    <dt class="property-required"
+{{% /md %}}</dd><dt class="property-required"
             title="Required">
         <span id="diskformat_go">
 <a href="#diskformat_go" style="color: inherit; text-decoration: inherit;">Disk<wbr>Format</a>
@@ -441,8 +388,7 @@ Conflicts with `local_file_path`. Defaults to false.
     </dt>
     <dd>{{% md %}}The disk format. Must be one of
 "ami", "ari", "aki", "vhd", "vmdk", "raw", "qcow2", "vdi", "iso".
-{{% /md %}}</dd>
-    <dt class="property-optional"
+{{% /md %}}</dd><dt class="property-optional"
             title="Optional">
         <span id="hidden_go">
 <a href="#hidden_go" style="color: inherit; text-decoration: inherit;">Hidden</a>
@@ -452,8 +398,7 @@ Conflicts with `local_file_path`. Defaults to false.
     </dt>
     <dd>{{% md %}}If true, image will be hidden from public list.
 Defaults to false.
-{{% /md %}}</dd>
-    <dt class="property-optional"
+{{% /md %}}</dd><dt class="property-optional"
             title="Optional">
         <span id="imagecachepath_go">
 <a href="#imagecachepath_go" style="color: inherit; text-decoration: inherit;">Image<wbr>Cache<wbr>Path</a>
@@ -461,8 +406,7 @@ Defaults to false.
         <span class="property-indicator"></span>
         <span class="property-type">string</span>
     </dt>
-    <dd>{{% md %}}{{% /md %}}</dd>
-    <dt class="property-optional"
+    <dd>{{% md %}}{{% /md %}}</dd><dt class="property-optional"
             title="Optional">
         <span id="imageid_go">
 <a href="#imageid_go" style="color: inherit; text-decoration: inherit;">Image<wbr>Id</a>
@@ -472,8 +416,7 @@ Defaults to false.
     </dt>
     <dd>{{% md %}}Unique ID (valid UUID) of image to create. Changing 
 this creates a new image.
-{{% /md %}}</dd>
-    <dt class="property-optional"
+{{% /md %}}</dd><dt class="property-optional"
             title="Optional">
         <span id="imagesourcepassword_go">
 <a href="#imagesourcepassword_go" style="color: inherit; text-decoration: inherit;">Image<wbr>Source<wbr>Password</a>
@@ -482,8 +425,7 @@ this creates a new image.
         <span class="property-type">string</span>
     </dt>
     <dd>{{% md %}}The password of basic auth to download `image_source_url`.
-{{% /md %}}</dd>
-    <dt class="property-optional"
+{{% /md %}}</dd><dt class="property-optional"
             title="Optional">
         <span id="imagesourceurl_go">
 <a href="#imagesourceurl_go" style="color: inherit; text-decoration: inherit;">Image<wbr>Source<wbr>Url</a>
@@ -495,8 +437,7 @@ this creates a new image.
 is not used, then the image will be downloaded in the `image_cache_path` before
 being uploaded to Glance.
 Conflicts with `local_file_path`.
-{{% /md %}}</dd>
-    <dt class="property-optional"
+{{% /md %}}</dd><dt class="property-optional"
             title="Optional">
         <span id="imagesourceusername_go">
 <a href="#imagesourceusername_go" style="color: inherit; text-decoration: inherit;">Image<wbr>Source<wbr>Username</a>
@@ -505,8 +446,7 @@ Conflicts with `local_file_path`.
         <span class="property-type">string</span>
     </dt>
     <dd>{{% md %}}The username of basic auth to download `image_source_url`.
-{{% /md %}}</dd>
-    <dt class="property-optional"
+{{% /md %}}</dd><dt class="property-optional"
             title="Optional">
         <span id="localfilepath_go">
 <a href="#localfilepath_go" style="color: inherit; text-decoration: inherit;">Local<wbr>File<wbr>Path</a>
@@ -517,8 +457,7 @@ Conflicts with `local_file_path`.
     <dd>{{% md %}}This is the filepath of the raw image file
 that will be uploaded to Glance. Conflicts with `image_source_url` and
 `web_download`.
-{{% /md %}}</dd>
-    <dt class="property-optional"
+{{% /md %}}</dd><dt class="property-optional"
             title="Optional">
         <span id="mindiskgb_go">
 <a href="#mindiskgb_go" style="color: inherit; text-decoration: inherit;">Min<wbr>Disk<wbr>Gb</a>
@@ -528,8 +467,7 @@ that will be uploaded to Glance. Conflicts with `image_source_url` and
     </dt>
     <dd>{{% md %}}Amount of disk space (in GB) required to boot image.
 Defaults to 0.
-{{% /md %}}</dd>
-    <dt class="property-optional"
+{{% /md %}}</dd><dt class="property-optional"
             title="Optional">
         <span id="minrammb_go">
 <a href="#minrammb_go" style="color: inherit; text-decoration: inherit;">Min<wbr>Ram<wbr>Mb</a>
@@ -539,8 +477,7 @@ Defaults to 0.
     </dt>
     <dd>{{% md %}}Amount of ram (in MB) required to boot image.
 Defauts to 0.
-{{% /md %}}</dd>
-    <dt class="property-optional"
+{{% /md %}}</dd><dt class="property-optional"
             title="Optional">
         <span id="name_go">
 <a href="#name_go" style="color: inherit; text-decoration: inherit;">Name</a>
@@ -549,8 +486,7 @@ Defauts to 0.
         <span class="property-type">string</span>
     </dt>
     <dd>{{% md %}}The name of the image.
-{{% /md %}}</dd>
-    <dt class="property-optional"
+{{% /md %}}</dd><dt class="property-optional"
             title="Optional">
         <span id="properties_go">
 <a href="#properties_go" style="color: inherit; text-decoration: inherit;">Properties</a>
@@ -561,8 +497,7 @@ Defauts to 0.
     <dd>{{% md %}}A map of key/value pairs to set freeform
 information about an image. See the "Notes" section for further
 information about properties.
-{{% /md %}}</dd>
-    <dt class="property-optional"
+{{% /md %}}</dd><dt class="property-optional"
             title="Optional">
         <span id="protected_go">
 <a href="#protected_go" style="color: inherit; text-decoration: inherit;">Protected</a>
@@ -572,8 +507,7 @@ information about properties.
     </dt>
     <dd>{{% md %}}If true, image will not be deletable.
 Defaults to false.
-{{% /md %}}</dd>
-    <dt class="property-optional"
+{{% /md %}}</dd><dt class="property-optional"
             title="Optional">
         <span id="region_go">
 <a href="#region_go" style="color: inherit; text-decoration: inherit;">Region</a>
@@ -585,8 +519,7 @@ Defaults to false.
 A Glance client is needed to create an Image that can be used with
 a compute instance. If omitted, the `region` argument of the provider
 is used. Changing this creates a new Image.
-{{% /md %}}</dd>
-    <dt class="property-optional"
+{{% /md %}}</dd><dt class="property-optional"
             title="Optional">
         <span id="tags_go">
 <a href="#tags_go" style="color: inherit; text-decoration: inherit;">Tags</a>
@@ -596,8 +529,7 @@ is used. Changing this creates a new Image.
     </dt>
     <dd>{{% md %}}The tags of the image. It must be a list of strings.
 At this time, it is not possible to delete all tags of an image.
-{{% /md %}}</dd>
-    <dt class="property-optional"
+{{% /md %}}</dd><dt class="property-optional"
             title="Optional">
         <span id="verifychecksum_go">
 <a href="#verifychecksum_go" style="color: inherit; text-decoration: inherit;">Verify<wbr>Checksum</a>
@@ -608,8 +540,7 @@ At this time, it is not possible to delete all tags of an image.
     <dd>{{% md %}}If false, the checksum will not be verified
 once the image is finished uploading. Conflicts with `web_download`.
 Defaults to true when not using `web_download`.
-{{% /md %}}</dd>
-    <dt class="property-optional"
+{{% /md %}}</dd><dt class="property-optional"
             title="Optional">
         <span id="visibility_go">
 <a href="#visibility_go" style="color: inherit; text-decoration: inherit;">Visibility</a>
@@ -620,8 +551,7 @@ Defaults to true when not using `web_download`.
     <dd>{{% md %}}The visibility of the image. Must be one of
 "public", "private", "community", or "shared". The ability to set the
 visibility depends upon the configuration of the OpenStack cloud.
-{{% /md %}}</dd>
-    <dt class="property-optional"
+{{% /md %}}</dd><dt class="property-optional"
             title="Optional">
         <span id="webdownload_go">
 <a href="#webdownload_go" style="color: inherit; text-decoration: inherit;">Web<wbr>Download</a>
@@ -632,14 +562,11 @@ visibility depends upon the configuration of the OpenStack cloud.
     <dd>{{% md %}}If true, the "web-download" import method will
 be used to let Openstack download the image directly from the remote source.
 Conflicts with `local_file_path`. Defaults to false.
-{{% /md %}}</dd>
-</dl>
+{{% /md %}}</dd></dl>
 {{% /choosable %}}
 
 {{% choosable language nodejs %}}
-<dl class="resources-properties">
-
-    <dt class="property-required"
+<dl class="resources-properties"><dt class="property-required"
             title="Required">
         <span id="containerformat_nodejs">
 <a href="#containerformat_nodejs" style="color: inherit; text-decoration: inherit;">container<wbr>Format</a>
@@ -649,8 +576,7 @@ Conflicts with `local_file_path`. Defaults to false.
     </dt>
     <dd>{{% md %}}The container format. Must be one of
 "ami", "ari", "aki", "bare", "ovf".
-{{% /md %}}</dd>
-    <dt class="property-required"
+{{% /md %}}</dd><dt class="property-required"
             title="Required">
         <span id="diskformat_nodejs">
 <a href="#diskformat_nodejs" style="color: inherit; text-decoration: inherit;">disk<wbr>Format</a>
@@ -660,8 +586,7 @@ Conflicts with `local_file_path`. Defaults to false.
     </dt>
     <dd>{{% md %}}The disk format. Must be one of
 "ami", "ari", "aki", "vhd", "vmdk", "raw", "qcow2", "vdi", "iso".
-{{% /md %}}</dd>
-    <dt class="property-optional"
+{{% /md %}}</dd><dt class="property-optional"
             title="Optional">
         <span id="hidden_nodejs">
 <a href="#hidden_nodejs" style="color: inherit; text-decoration: inherit;">hidden</a>
@@ -671,8 +596,7 @@ Conflicts with `local_file_path`. Defaults to false.
     </dt>
     <dd>{{% md %}}If true, image will be hidden from public list.
 Defaults to false.
-{{% /md %}}</dd>
-    <dt class="property-optional"
+{{% /md %}}</dd><dt class="property-optional"
             title="Optional">
         <span id="imagecachepath_nodejs">
 <a href="#imagecachepath_nodejs" style="color: inherit; text-decoration: inherit;">image<wbr>Cache<wbr>Path</a>
@@ -680,8 +604,7 @@ Defaults to false.
         <span class="property-indicator"></span>
         <span class="property-type">string</span>
     </dt>
-    <dd>{{% md %}}{{% /md %}}</dd>
-    <dt class="property-optional"
+    <dd>{{% md %}}{{% /md %}}</dd><dt class="property-optional"
             title="Optional">
         <span id="imageid_nodejs">
 <a href="#imageid_nodejs" style="color: inherit; text-decoration: inherit;">image<wbr>Id</a>
@@ -691,8 +614,7 @@ Defaults to false.
     </dt>
     <dd>{{% md %}}Unique ID (valid UUID) of image to create. Changing 
 this creates a new image.
-{{% /md %}}</dd>
-    <dt class="property-optional"
+{{% /md %}}</dd><dt class="property-optional"
             title="Optional">
         <span id="imagesourcepassword_nodejs">
 <a href="#imagesourcepassword_nodejs" style="color: inherit; text-decoration: inherit;">image<wbr>Source<wbr>Password</a>
@@ -701,8 +623,7 @@ this creates a new image.
         <span class="property-type">string</span>
     </dt>
     <dd>{{% md %}}The password of basic auth to download `image_source_url`.
-{{% /md %}}</dd>
-    <dt class="property-optional"
+{{% /md %}}</dd><dt class="property-optional"
             title="Optional">
         <span id="imagesourceurl_nodejs">
 <a href="#imagesourceurl_nodejs" style="color: inherit; text-decoration: inherit;">image<wbr>Source<wbr>Url</a>
@@ -714,8 +635,7 @@ this creates a new image.
 is not used, then the image will be downloaded in the `image_cache_path` before
 being uploaded to Glance.
 Conflicts with `local_file_path`.
-{{% /md %}}</dd>
-    <dt class="property-optional"
+{{% /md %}}</dd><dt class="property-optional"
             title="Optional">
         <span id="imagesourceusername_nodejs">
 <a href="#imagesourceusername_nodejs" style="color: inherit; text-decoration: inherit;">image<wbr>Source<wbr>Username</a>
@@ -724,8 +644,7 @@ Conflicts with `local_file_path`.
         <span class="property-type">string</span>
     </dt>
     <dd>{{% md %}}The username of basic auth to download `image_source_url`.
-{{% /md %}}</dd>
-    <dt class="property-optional"
+{{% /md %}}</dd><dt class="property-optional"
             title="Optional">
         <span id="localfilepath_nodejs">
 <a href="#localfilepath_nodejs" style="color: inherit; text-decoration: inherit;">local<wbr>File<wbr>Path</a>
@@ -736,8 +655,7 @@ Conflicts with `local_file_path`.
     <dd>{{% md %}}This is the filepath of the raw image file
 that will be uploaded to Glance. Conflicts with `image_source_url` and
 `web_download`.
-{{% /md %}}</dd>
-    <dt class="property-optional"
+{{% /md %}}</dd><dt class="property-optional"
             title="Optional">
         <span id="mindiskgb_nodejs">
 <a href="#mindiskgb_nodejs" style="color: inherit; text-decoration: inherit;">min<wbr>Disk<wbr>Gb</a>
@@ -747,8 +665,7 @@ that will be uploaded to Glance. Conflicts with `image_source_url` and
     </dt>
     <dd>{{% md %}}Amount of disk space (in GB) required to boot image.
 Defaults to 0.
-{{% /md %}}</dd>
-    <dt class="property-optional"
+{{% /md %}}</dd><dt class="property-optional"
             title="Optional">
         <span id="minrammb_nodejs">
 <a href="#minrammb_nodejs" style="color: inherit; text-decoration: inherit;">min<wbr>Ram<wbr>Mb</a>
@@ -758,8 +675,7 @@ Defaults to 0.
     </dt>
     <dd>{{% md %}}Amount of ram (in MB) required to boot image.
 Defauts to 0.
-{{% /md %}}</dd>
-    <dt class="property-optional"
+{{% /md %}}</dd><dt class="property-optional"
             title="Optional">
         <span id="name_nodejs">
 <a href="#name_nodejs" style="color: inherit; text-decoration: inherit;">name</a>
@@ -768,8 +684,7 @@ Defauts to 0.
         <span class="property-type">string</span>
     </dt>
     <dd>{{% md %}}The name of the image.
-{{% /md %}}</dd>
-    <dt class="property-optional"
+{{% /md %}}</dd><dt class="property-optional"
             title="Optional">
         <span id="properties_nodejs">
 <a href="#properties_nodejs" style="color: inherit; text-decoration: inherit;">properties</a>
@@ -780,8 +695,7 @@ Defauts to 0.
     <dd>{{% md %}}A map of key/value pairs to set freeform
 information about an image. See the "Notes" section for further
 information about properties.
-{{% /md %}}</dd>
-    <dt class="property-optional"
+{{% /md %}}</dd><dt class="property-optional"
             title="Optional">
         <span id="protected_nodejs">
 <a href="#protected_nodejs" style="color: inherit; text-decoration: inherit;">protected</a>
@@ -791,8 +705,7 @@ information about properties.
     </dt>
     <dd>{{% md %}}If true, image will not be deletable.
 Defaults to false.
-{{% /md %}}</dd>
-    <dt class="property-optional"
+{{% /md %}}</dd><dt class="property-optional"
             title="Optional">
         <span id="region_nodejs">
 <a href="#region_nodejs" style="color: inherit; text-decoration: inherit;">region</a>
@@ -804,8 +717,7 @@ Defaults to false.
 A Glance client is needed to create an Image that can be used with
 a compute instance. If omitted, the `region` argument of the provider
 is used. Changing this creates a new Image.
-{{% /md %}}</dd>
-    <dt class="property-optional"
+{{% /md %}}</dd><dt class="property-optional"
             title="Optional">
         <span id="tags_nodejs">
 <a href="#tags_nodejs" style="color: inherit; text-decoration: inherit;">tags</a>
@@ -815,8 +727,7 @@ is used. Changing this creates a new Image.
     </dt>
     <dd>{{% md %}}The tags of the image. It must be a list of strings.
 At this time, it is not possible to delete all tags of an image.
-{{% /md %}}</dd>
-    <dt class="property-optional"
+{{% /md %}}</dd><dt class="property-optional"
             title="Optional">
         <span id="verifychecksum_nodejs">
 <a href="#verifychecksum_nodejs" style="color: inherit; text-decoration: inherit;">verify<wbr>Checksum</a>
@@ -827,8 +738,7 @@ At this time, it is not possible to delete all tags of an image.
     <dd>{{% md %}}If false, the checksum will not be verified
 once the image is finished uploading. Conflicts with `web_download`.
 Defaults to true when not using `web_download`.
-{{% /md %}}</dd>
-    <dt class="property-optional"
+{{% /md %}}</dd><dt class="property-optional"
             title="Optional">
         <span id="visibility_nodejs">
 <a href="#visibility_nodejs" style="color: inherit; text-decoration: inherit;">visibility</a>
@@ -839,8 +749,7 @@ Defaults to true when not using `web_download`.
     <dd>{{% md %}}The visibility of the image. Must be one of
 "public", "private", "community", or "shared". The ability to set the
 visibility depends upon the configuration of the OpenStack cloud.
-{{% /md %}}</dd>
-    <dt class="property-optional"
+{{% /md %}}</dd><dt class="property-optional"
             title="Optional">
         <span id="webdownload_nodejs">
 <a href="#webdownload_nodejs" style="color: inherit; text-decoration: inherit;">web<wbr>Download</a>
@@ -851,14 +760,11 @@ visibility depends upon the configuration of the OpenStack cloud.
     <dd>{{% md %}}If true, the "web-download" import method will
 be used to let Openstack download the image directly from the remote source.
 Conflicts with `local_file_path`. Defaults to false.
-{{% /md %}}</dd>
-</dl>
+{{% /md %}}</dd></dl>
 {{% /choosable %}}
 
 {{% choosable language python %}}
-<dl class="resources-properties">
-
-    <dt class="property-required"
+<dl class="resources-properties"><dt class="property-required"
             title="Required">
         <span id="container_format_python">
 <a href="#container_format_python" style="color: inherit; text-decoration: inherit;">container_<wbr>format</a>
@@ -868,8 +774,7 @@ Conflicts with `local_file_path`. Defaults to false.
     </dt>
     <dd>{{% md %}}The container format. Must be one of
 "ami", "ari", "aki", "bare", "ovf".
-{{% /md %}}</dd>
-    <dt class="property-required"
+{{% /md %}}</dd><dt class="property-required"
             title="Required">
         <span id="disk_format_python">
 <a href="#disk_format_python" style="color: inherit; text-decoration: inherit;">disk_<wbr>format</a>
@@ -879,8 +784,7 @@ Conflicts with `local_file_path`. Defaults to false.
     </dt>
     <dd>{{% md %}}The disk format. Must be one of
 "ami", "ari", "aki", "vhd", "vmdk", "raw", "qcow2", "vdi", "iso".
-{{% /md %}}</dd>
-    <dt class="property-optional"
+{{% /md %}}</dd><dt class="property-optional"
             title="Optional">
         <span id="hidden_python">
 <a href="#hidden_python" style="color: inherit; text-decoration: inherit;">hidden</a>
@@ -890,8 +794,7 @@ Conflicts with `local_file_path`. Defaults to false.
     </dt>
     <dd>{{% md %}}If true, image will be hidden from public list.
 Defaults to false.
-{{% /md %}}</dd>
-    <dt class="property-optional"
+{{% /md %}}</dd><dt class="property-optional"
             title="Optional">
         <span id="image_cache_path_python">
 <a href="#image_cache_path_python" style="color: inherit; text-decoration: inherit;">image_<wbr>cache_<wbr>path</a>
@@ -899,8 +802,7 @@ Defaults to false.
         <span class="property-indicator"></span>
         <span class="property-type">str</span>
     </dt>
-    <dd>{{% md %}}{{% /md %}}</dd>
-    <dt class="property-optional"
+    <dd>{{% md %}}{{% /md %}}</dd><dt class="property-optional"
             title="Optional">
         <span id="image_id_python">
 <a href="#image_id_python" style="color: inherit; text-decoration: inherit;">image_<wbr>id</a>
@@ -910,8 +812,7 @@ Defaults to false.
     </dt>
     <dd>{{% md %}}Unique ID (valid UUID) of image to create. Changing 
 this creates a new image.
-{{% /md %}}</dd>
-    <dt class="property-optional"
+{{% /md %}}</dd><dt class="property-optional"
             title="Optional">
         <span id="image_source_password_python">
 <a href="#image_source_password_python" style="color: inherit; text-decoration: inherit;">image_<wbr>source_<wbr>password</a>
@@ -920,8 +821,7 @@ this creates a new image.
         <span class="property-type">str</span>
     </dt>
     <dd>{{% md %}}The password of basic auth to download `image_source_url`.
-{{% /md %}}</dd>
-    <dt class="property-optional"
+{{% /md %}}</dd><dt class="property-optional"
             title="Optional">
         <span id="image_source_url_python">
 <a href="#image_source_url_python" style="color: inherit; text-decoration: inherit;">image_<wbr>source_<wbr>url</a>
@@ -933,8 +833,7 @@ this creates a new image.
 is not used, then the image will be downloaded in the `image_cache_path` before
 being uploaded to Glance.
 Conflicts with `local_file_path`.
-{{% /md %}}</dd>
-    <dt class="property-optional"
+{{% /md %}}</dd><dt class="property-optional"
             title="Optional">
         <span id="image_source_username_python">
 <a href="#image_source_username_python" style="color: inherit; text-decoration: inherit;">image_<wbr>source_<wbr>username</a>
@@ -943,8 +842,7 @@ Conflicts with `local_file_path`.
         <span class="property-type">str</span>
     </dt>
     <dd>{{% md %}}The username of basic auth to download `image_source_url`.
-{{% /md %}}</dd>
-    <dt class="property-optional"
+{{% /md %}}</dd><dt class="property-optional"
             title="Optional">
         <span id="local_file_path_python">
 <a href="#local_file_path_python" style="color: inherit; text-decoration: inherit;">local_<wbr>file_<wbr>path</a>
@@ -955,8 +853,7 @@ Conflicts with `local_file_path`.
     <dd>{{% md %}}This is the filepath of the raw image file
 that will be uploaded to Glance. Conflicts with `image_source_url` and
 `web_download`.
-{{% /md %}}</dd>
-    <dt class="property-optional"
+{{% /md %}}</dd><dt class="property-optional"
             title="Optional">
         <span id="min_disk_gb_python">
 <a href="#min_disk_gb_python" style="color: inherit; text-decoration: inherit;">min_<wbr>disk_<wbr>gb</a>
@@ -966,8 +863,7 @@ that will be uploaded to Glance. Conflicts with `image_source_url` and
     </dt>
     <dd>{{% md %}}Amount of disk space (in GB) required to boot image.
 Defaults to 0.
-{{% /md %}}</dd>
-    <dt class="property-optional"
+{{% /md %}}</dd><dt class="property-optional"
             title="Optional">
         <span id="min_ram_mb_python">
 <a href="#min_ram_mb_python" style="color: inherit; text-decoration: inherit;">min_<wbr>ram_<wbr>mb</a>
@@ -977,8 +873,7 @@ Defaults to 0.
     </dt>
     <dd>{{% md %}}Amount of ram (in MB) required to boot image.
 Defauts to 0.
-{{% /md %}}</dd>
-    <dt class="property-optional"
+{{% /md %}}</dd><dt class="property-optional"
             title="Optional">
         <span id="name_python">
 <a href="#name_python" style="color: inherit; text-decoration: inherit;">name</a>
@@ -987,8 +882,7 @@ Defauts to 0.
         <span class="property-type">str</span>
     </dt>
     <dd>{{% md %}}The name of the image.
-{{% /md %}}</dd>
-    <dt class="property-optional"
+{{% /md %}}</dd><dt class="property-optional"
             title="Optional">
         <span id="properties_python">
 <a href="#properties_python" style="color: inherit; text-decoration: inherit;">properties</a>
@@ -999,8 +893,7 @@ Defauts to 0.
     <dd>{{% md %}}A map of key/value pairs to set freeform
 information about an image. See the "Notes" section for further
 information about properties.
-{{% /md %}}</dd>
-    <dt class="property-optional"
+{{% /md %}}</dd><dt class="property-optional"
             title="Optional">
         <span id="protected_python">
 <a href="#protected_python" style="color: inherit; text-decoration: inherit;">protected</a>
@@ -1010,8 +903,7 @@ information about properties.
     </dt>
     <dd>{{% md %}}If true, image will not be deletable.
 Defaults to false.
-{{% /md %}}</dd>
-    <dt class="property-optional"
+{{% /md %}}</dd><dt class="property-optional"
             title="Optional">
         <span id="region_python">
 <a href="#region_python" style="color: inherit; text-decoration: inherit;">region</a>
@@ -1023,8 +915,7 @@ Defaults to false.
 A Glance client is needed to create an Image that can be used with
 a compute instance. If omitted, the `region` argument of the provider
 is used. Changing this creates a new Image.
-{{% /md %}}</dd>
-    <dt class="property-optional"
+{{% /md %}}</dd><dt class="property-optional"
             title="Optional">
         <span id="tags_python">
 <a href="#tags_python" style="color: inherit; text-decoration: inherit;">tags</a>
@@ -1034,8 +925,7 @@ is used. Changing this creates a new Image.
     </dt>
     <dd>{{% md %}}The tags of the image. It must be a list of strings.
 At this time, it is not possible to delete all tags of an image.
-{{% /md %}}</dd>
-    <dt class="property-optional"
+{{% /md %}}</dd><dt class="property-optional"
             title="Optional">
         <span id="verify_checksum_python">
 <a href="#verify_checksum_python" style="color: inherit; text-decoration: inherit;">verify_<wbr>checksum</a>
@@ -1046,8 +936,7 @@ At this time, it is not possible to delete all tags of an image.
     <dd>{{% md %}}If false, the checksum will not be verified
 once the image is finished uploading. Conflicts with `web_download`.
 Defaults to true when not using `web_download`.
-{{% /md %}}</dd>
-    <dt class="property-optional"
+{{% /md %}}</dd><dt class="property-optional"
             title="Optional">
         <span id="visibility_python">
 <a href="#visibility_python" style="color: inherit; text-decoration: inherit;">visibility</a>
@@ -1058,8 +947,7 @@ Defaults to true when not using `web_download`.
     <dd>{{% md %}}The visibility of the image. Must be one of
 "public", "private", "community", or "shared". The ability to set the
 visibility depends upon the configuration of the OpenStack cloud.
-{{% /md %}}</dd>
-    <dt class="property-optional"
+{{% /md %}}</dd><dt class="property-optional"
             title="Optional">
         <span id="web_download_python">
 <a href="#web_download_python" style="color: inherit; text-decoration: inherit;">web_<wbr>download</a>
@@ -1070,8 +958,7 @@ visibility depends upon the configuration of the OpenStack cloud.
     <dd>{{% md %}}If true, the "web-download" import method will
 be used to let Openstack download the image directly from the remote source.
 Conflicts with `local_file_path`. Defaults to false.
-{{% /md %}}</dd>
-</dl>
+{{% /md %}}</dd></dl>
 {{% /choosable %}}
 
 
@@ -1082,9 +969,7 @@ All [input](#inputs) properties are implicitly available as output properties. A
 
 
 {{% choosable language csharp %}}
-<dl class="resources-properties">
-
-    <dt class="property-"
+<dl class="resources-properties"><dt class="property-"
             title="">
         <span id="checksum_csharp">
 <a href="#checksum_csharp" style="color: inherit; text-decoration: inherit;">Checksum</a>
@@ -1093,8 +978,7 @@ All [input](#inputs) properties are implicitly available as output properties. A
         <span class="property-type">string</span>
     </dt>
     <dd>{{% md %}}The checksum of the data associated with the image.
-{{% /md %}}</dd>
-    <dt class="property-"
+{{% /md %}}</dd><dt class="property-"
             title="">
         <span id="createdat_csharp">
 <a href="#createdat_csharp" style="color: inherit; text-decoration: inherit;">Created<wbr>At</a>
@@ -1103,8 +987,7 @@ All [input](#inputs) properties are implicitly available as output properties. A
         <span class="property-type">string</span>
     </dt>
     <dd>{{% md %}}The date the image was created.
-{{% /md %}}</dd>
-    <dt class="property-"
+{{% /md %}}</dd><dt class="property-"
             title="">
         <span id="file_csharp">
 <a href="#file_csharp" style="color: inherit; text-decoration: inherit;">File</a>
@@ -1115,8 +998,7 @@ All [input](#inputs) properties are implicitly available as output properties. A
     <dd>{{% md %}}the trailing path after the glance
 endpoint that represent the location of the image
 or the path to retrieve it.
-{{% /md %}}</dd>
-    <dt class="property-"
+{{% /md %}}</dd><dt class="property-"
             title="">
         <span id="id_csharp">
 <a href="#id_csharp" style="color: inherit; text-decoration: inherit;">Id</a>
@@ -1124,8 +1006,7 @@ or the path to retrieve it.
         <span class="property-indicator"></span>
         <span class="property-type">string</span>
     </dt>
-    <dd>{{% md %}}The provider-assigned unique ID for this managed resource.{{% /md %}}</dd>
-    <dt class="property-"
+    <dd>{{% md %}}The provider-assigned unique ID for this managed resource.{{% /md %}}</dd><dt class="property-"
             title="">
         <span id="metadata_csharp">
 <a href="#metadata_csharp" style="color: inherit; text-decoration: inherit;">Metadata</a>
@@ -1136,8 +1017,7 @@ or the path to retrieve it.
     <dd>{{% md %}}The metadata associated with the image.
 Image metadata allow for meaningfully define the image properties
 and tags. See https://docs.openstack.org/glance/latest/user/metadefs-concepts.html.
-{{% /md %}}</dd>
-    <dt class="property-"
+{{% /md %}}</dd><dt class="property-"
             title="">
         <span id="owner_csharp">
 <a href="#owner_csharp" style="color: inherit; text-decoration: inherit;">Owner</a>
@@ -1146,8 +1026,7 @@ and tags. See https://docs.openstack.org/glance/latest/user/metadefs-concepts.ht
         <span class="property-type">string</span>
     </dt>
     <dd>{{% md %}}The id of the openstack user who owns the image.
-{{% /md %}}</dd>
-    <dt class="property-"
+{{% /md %}}</dd><dt class="property-"
             title="">
         <span id="schema_csharp">
 <a href="#schema_csharp" style="color: inherit; text-decoration: inherit;">Schema</a>
@@ -1157,8 +1036,7 @@ and tags. See https://docs.openstack.org/glance/latest/user/metadefs-concepts.ht
     </dt>
     <dd>{{% md %}}The path to the JSON-schema that represent
 the image or image
-{{% /md %}}</dd>
-    <dt class="property-"
+{{% /md %}}</dd><dt class="property-"
             title="">
         <span id="sizebytes_csharp">
 <a href="#sizebytes_csharp" style="color: inherit; text-decoration: inherit;">Size<wbr>Bytes</a>
@@ -1167,8 +1045,7 @@ the image or image
         <span class="property-type">int</span>
     </dt>
     <dd>{{% md %}}The size in bytes of the data associated with the image.
-{{% /md %}}</dd>
-    <dt class="property-"
+{{% /md %}}</dd><dt class="property-"
             title="">
         <span id="status_csharp">
 <a href="#status_csharp" style="color: inherit; text-decoration: inherit;">Status</a>
@@ -1178,8 +1055,7 @@ the image or image
     </dt>
     <dd>{{% md %}}The status of the image. It can be "queued", "active"
 or "saving".
-{{% /md %}}</dd>
-    <dt class="property- property-deprecated"
+{{% /md %}}</dd><dt class="property- property-deprecated"
             title=", Deprecated">
         <span id="updateat_csharp">
 <a href="#updateat_csharp" style="color: inherit; text-decoration: inherit;">Update<wbr>At</a>
@@ -1188,8 +1064,7 @@ or "saving".
         <span class="property-type">string</span>
     </dt>
     <dd>{{% md %}}(**Deprecated** - use `updated_at` instead)
-{{% /md %}}<p class="property-message">Deprecated: {{% md %}}Use updated_at instead{{% /md %}}</p></dd>
-    <dt class="property-"
+{{% /md %}}<p class="property-message">Deprecated: {{% md %}}Use updated_at instead{{% /md %}}</p></dd><dt class="property-"
             title="">
         <span id="updatedat_csharp">
 <a href="#updatedat_csharp" style="color: inherit; text-decoration: inherit;">Updated<wbr>At</a>
@@ -1198,14 +1073,11 @@ or "saving".
         <span class="property-type">string</span>
     </dt>
     <dd>{{% md %}}The date the image was last updated.
-{{% /md %}}</dd>
-</dl>
+{{% /md %}}</dd></dl>
 {{% /choosable %}}
 
 {{% choosable language go %}}
-<dl class="resources-properties">
-
-    <dt class="property-"
+<dl class="resources-properties"><dt class="property-"
             title="">
         <span id="checksum_go">
 <a href="#checksum_go" style="color: inherit; text-decoration: inherit;">Checksum</a>
@@ -1214,8 +1086,7 @@ or "saving".
         <span class="property-type">string</span>
     </dt>
     <dd>{{% md %}}The checksum of the data associated with the image.
-{{% /md %}}</dd>
-    <dt class="property-"
+{{% /md %}}</dd><dt class="property-"
             title="">
         <span id="createdat_go">
 <a href="#createdat_go" style="color: inherit; text-decoration: inherit;">Created<wbr>At</a>
@@ -1224,8 +1095,7 @@ or "saving".
         <span class="property-type">string</span>
     </dt>
     <dd>{{% md %}}The date the image was created.
-{{% /md %}}</dd>
-    <dt class="property-"
+{{% /md %}}</dd><dt class="property-"
             title="">
         <span id="file_go">
 <a href="#file_go" style="color: inherit; text-decoration: inherit;">File</a>
@@ -1236,8 +1106,7 @@ or "saving".
     <dd>{{% md %}}the trailing path after the glance
 endpoint that represent the location of the image
 or the path to retrieve it.
-{{% /md %}}</dd>
-    <dt class="property-"
+{{% /md %}}</dd><dt class="property-"
             title="">
         <span id="id_go">
 <a href="#id_go" style="color: inherit; text-decoration: inherit;">Id</a>
@@ -1245,8 +1114,7 @@ or the path to retrieve it.
         <span class="property-indicator"></span>
         <span class="property-type">string</span>
     </dt>
-    <dd>{{% md %}}The provider-assigned unique ID for this managed resource.{{% /md %}}</dd>
-    <dt class="property-"
+    <dd>{{% md %}}The provider-assigned unique ID for this managed resource.{{% /md %}}</dd><dt class="property-"
             title="">
         <span id="metadata_go">
 <a href="#metadata_go" style="color: inherit; text-decoration: inherit;">Metadata</a>
@@ -1257,8 +1125,7 @@ or the path to retrieve it.
     <dd>{{% md %}}The metadata associated with the image.
 Image metadata allow for meaningfully define the image properties
 and tags. See https://docs.openstack.org/glance/latest/user/metadefs-concepts.html.
-{{% /md %}}</dd>
-    <dt class="property-"
+{{% /md %}}</dd><dt class="property-"
             title="">
         <span id="owner_go">
 <a href="#owner_go" style="color: inherit; text-decoration: inherit;">Owner</a>
@@ -1267,8 +1134,7 @@ and tags. See https://docs.openstack.org/glance/latest/user/metadefs-concepts.ht
         <span class="property-type">string</span>
     </dt>
     <dd>{{% md %}}The id of the openstack user who owns the image.
-{{% /md %}}</dd>
-    <dt class="property-"
+{{% /md %}}</dd><dt class="property-"
             title="">
         <span id="schema_go">
 <a href="#schema_go" style="color: inherit; text-decoration: inherit;">Schema</a>
@@ -1278,8 +1144,7 @@ and tags. See https://docs.openstack.org/glance/latest/user/metadefs-concepts.ht
     </dt>
     <dd>{{% md %}}The path to the JSON-schema that represent
 the image or image
-{{% /md %}}</dd>
-    <dt class="property-"
+{{% /md %}}</dd><dt class="property-"
             title="">
         <span id="sizebytes_go">
 <a href="#sizebytes_go" style="color: inherit; text-decoration: inherit;">Size<wbr>Bytes</a>
@@ -1288,8 +1153,7 @@ the image or image
         <span class="property-type">int</span>
     </dt>
     <dd>{{% md %}}The size in bytes of the data associated with the image.
-{{% /md %}}</dd>
-    <dt class="property-"
+{{% /md %}}</dd><dt class="property-"
             title="">
         <span id="status_go">
 <a href="#status_go" style="color: inherit; text-decoration: inherit;">Status</a>
@@ -1299,8 +1163,7 @@ the image or image
     </dt>
     <dd>{{% md %}}The status of the image. It can be "queued", "active"
 or "saving".
-{{% /md %}}</dd>
-    <dt class="property- property-deprecated"
+{{% /md %}}</dd><dt class="property- property-deprecated"
             title=", Deprecated">
         <span id="updateat_go">
 <a href="#updateat_go" style="color: inherit; text-decoration: inherit;">Update<wbr>At</a>
@@ -1309,8 +1172,7 @@ or "saving".
         <span class="property-type">string</span>
     </dt>
     <dd>{{% md %}}(**Deprecated** - use `updated_at` instead)
-{{% /md %}}<p class="property-message">Deprecated: {{% md %}}Use updated_at instead{{% /md %}}</p></dd>
-    <dt class="property-"
+{{% /md %}}<p class="property-message">Deprecated: {{% md %}}Use updated_at instead{{% /md %}}</p></dd><dt class="property-"
             title="">
         <span id="updatedat_go">
 <a href="#updatedat_go" style="color: inherit; text-decoration: inherit;">Updated<wbr>At</a>
@@ -1319,14 +1181,11 @@ or "saving".
         <span class="property-type">string</span>
     </dt>
     <dd>{{% md %}}The date the image was last updated.
-{{% /md %}}</dd>
-</dl>
+{{% /md %}}</dd></dl>
 {{% /choosable %}}
 
 {{% choosable language nodejs %}}
-<dl class="resources-properties">
-
-    <dt class="property-"
+<dl class="resources-properties"><dt class="property-"
             title="">
         <span id="checksum_nodejs">
 <a href="#checksum_nodejs" style="color: inherit; text-decoration: inherit;">checksum</a>
@@ -1335,8 +1194,7 @@ or "saving".
         <span class="property-type">string</span>
     </dt>
     <dd>{{% md %}}The checksum of the data associated with the image.
-{{% /md %}}</dd>
-    <dt class="property-"
+{{% /md %}}</dd><dt class="property-"
             title="">
         <span id="createdat_nodejs">
 <a href="#createdat_nodejs" style="color: inherit; text-decoration: inherit;">created<wbr>At</a>
@@ -1345,8 +1203,7 @@ or "saving".
         <span class="property-type">string</span>
     </dt>
     <dd>{{% md %}}The date the image was created.
-{{% /md %}}</dd>
-    <dt class="property-"
+{{% /md %}}</dd><dt class="property-"
             title="">
         <span id="file_nodejs">
 <a href="#file_nodejs" style="color: inherit; text-decoration: inherit;">file</a>
@@ -1357,8 +1214,7 @@ or "saving".
     <dd>{{% md %}}the trailing path after the glance
 endpoint that represent the location of the image
 or the path to retrieve it.
-{{% /md %}}</dd>
-    <dt class="property-"
+{{% /md %}}</dd><dt class="property-"
             title="">
         <span id="id_nodejs">
 <a href="#id_nodejs" style="color: inherit; text-decoration: inherit;">id</a>
@@ -1366,8 +1222,7 @@ or the path to retrieve it.
         <span class="property-indicator"></span>
         <span class="property-type">string</span>
     </dt>
-    <dd>{{% md %}}The provider-assigned unique ID for this managed resource.{{% /md %}}</dd>
-    <dt class="property-"
+    <dd>{{% md %}}The provider-assigned unique ID for this managed resource.{{% /md %}}</dd><dt class="property-"
             title="">
         <span id="metadata_nodejs">
 <a href="#metadata_nodejs" style="color: inherit; text-decoration: inherit;">metadata</a>
@@ -1378,8 +1233,7 @@ or the path to retrieve it.
     <dd>{{% md %}}The metadata associated with the image.
 Image metadata allow for meaningfully define the image properties
 and tags. See https://docs.openstack.org/glance/latest/user/metadefs-concepts.html.
-{{% /md %}}</dd>
-    <dt class="property-"
+{{% /md %}}</dd><dt class="property-"
             title="">
         <span id="owner_nodejs">
 <a href="#owner_nodejs" style="color: inherit; text-decoration: inherit;">owner</a>
@@ -1388,8 +1242,7 @@ and tags. See https://docs.openstack.org/glance/latest/user/metadefs-concepts.ht
         <span class="property-type">string</span>
     </dt>
     <dd>{{% md %}}The id of the openstack user who owns the image.
-{{% /md %}}</dd>
-    <dt class="property-"
+{{% /md %}}</dd><dt class="property-"
             title="">
         <span id="schema_nodejs">
 <a href="#schema_nodejs" style="color: inherit; text-decoration: inherit;">schema</a>
@@ -1399,8 +1252,7 @@ and tags. See https://docs.openstack.org/glance/latest/user/metadefs-concepts.ht
     </dt>
     <dd>{{% md %}}The path to the JSON-schema that represent
 the image or image
-{{% /md %}}</dd>
-    <dt class="property-"
+{{% /md %}}</dd><dt class="property-"
             title="">
         <span id="sizebytes_nodejs">
 <a href="#sizebytes_nodejs" style="color: inherit; text-decoration: inherit;">size<wbr>Bytes</a>
@@ -1409,8 +1261,7 @@ the image or image
         <span class="property-type">number</span>
     </dt>
     <dd>{{% md %}}The size in bytes of the data associated with the image.
-{{% /md %}}</dd>
-    <dt class="property-"
+{{% /md %}}</dd><dt class="property-"
             title="">
         <span id="status_nodejs">
 <a href="#status_nodejs" style="color: inherit; text-decoration: inherit;">status</a>
@@ -1420,8 +1271,7 @@ the image or image
     </dt>
     <dd>{{% md %}}The status of the image. It can be "queued", "active"
 or "saving".
-{{% /md %}}</dd>
-    <dt class="property- property-deprecated"
+{{% /md %}}</dd><dt class="property- property-deprecated"
             title=", Deprecated">
         <span id="updateat_nodejs">
 <a href="#updateat_nodejs" style="color: inherit; text-decoration: inherit;">update<wbr>At</a>
@@ -1430,8 +1280,7 @@ or "saving".
         <span class="property-type">string</span>
     </dt>
     <dd>{{% md %}}(**Deprecated** - use `updated_at` instead)
-{{% /md %}}<p class="property-message">Deprecated: {{% md %}}Use updated_at instead{{% /md %}}</p></dd>
-    <dt class="property-"
+{{% /md %}}<p class="property-message">Deprecated: {{% md %}}Use updated_at instead{{% /md %}}</p></dd><dt class="property-"
             title="">
         <span id="updatedat_nodejs">
 <a href="#updatedat_nodejs" style="color: inherit; text-decoration: inherit;">updated<wbr>At</a>
@@ -1440,14 +1289,11 @@ or "saving".
         <span class="property-type">string</span>
     </dt>
     <dd>{{% md %}}The date the image was last updated.
-{{% /md %}}</dd>
-</dl>
+{{% /md %}}</dd></dl>
 {{% /choosable %}}
 
 {{% choosable language python %}}
-<dl class="resources-properties">
-
-    <dt class="property-"
+<dl class="resources-properties"><dt class="property-"
             title="">
         <span id="checksum_python">
 <a href="#checksum_python" style="color: inherit; text-decoration: inherit;">checksum</a>
@@ -1456,8 +1302,7 @@ or "saving".
         <span class="property-type">str</span>
     </dt>
     <dd>{{% md %}}The checksum of the data associated with the image.
-{{% /md %}}</dd>
-    <dt class="property-"
+{{% /md %}}</dd><dt class="property-"
             title="">
         <span id="created_at_python">
 <a href="#created_at_python" style="color: inherit; text-decoration: inherit;">created_<wbr>at</a>
@@ -1466,8 +1311,7 @@ or "saving".
         <span class="property-type">str</span>
     </dt>
     <dd>{{% md %}}The date the image was created.
-{{% /md %}}</dd>
-    <dt class="property-"
+{{% /md %}}</dd><dt class="property-"
             title="">
         <span id="file_python">
 <a href="#file_python" style="color: inherit; text-decoration: inherit;">file</a>
@@ -1478,8 +1322,7 @@ or "saving".
     <dd>{{% md %}}the trailing path after the glance
 endpoint that represent the location of the image
 or the path to retrieve it.
-{{% /md %}}</dd>
-    <dt class="property-"
+{{% /md %}}</dd><dt class="property-"
             title="">
         <span id="id_python">
 <a href="#id_python" style="color: inherit; text-decoration: inherit;">id</a>
@@ -1487,8 +1330,7 @@ or the path to retrieve it.
         <span class="property-indicator"></span>
         <span class="property-type">str</span>
     </dt>
-    <dd>{{% md %}}The provider-assigned unique ID for this managed resource.{{% /md %}}</dd>
-    <dt class="property-"
+    <dd>{{% md %}}The provider-assigned unique ID for this managed resource.{{% /md %}}</dd><dt class="property-"
             title="">
         <span id="metadata_python">
 <a href="#metadata_python" style="color: inherit; text-decoration: inherit;">metadata</a>
@@ -1499,8 +1341,7 @@ or the path to retrieve it.
     <dd>{{% md %}}The metadata associated with the image.
 Image metadata allow for meaningfully define the image properties
 and tags. See https://docs.openstack.org/glance/latest/user/metadefs-concepts.html.
-{{% /md %}}</dd>
-    <dt class="property-"
+{{% /md %}}</dd><dt class="property-"
             title="">
         <span id="owner_python">
 <a href="#owner_python" style="color: inherit; text-decoration: inherit;">owner</a>
@@ -1509,8 +1350,7 @@ and tags. See https://docs.openstack.org/glance/latest/user/metadefs-concepts.ht
         <span class="property-type">str</span>
     </dt>
     <dd>{{% md %}}The id of the openstack user who owns the image.
-{{% /md %}}</dd>
-    <dt class="property-"
+{{% /md %}}</dd><dt class="property-"
             title="">
         <span id="schema_python">
 <a href="#schema_python" style="color: inherit; text-decoration: inherit;">schema</a>
@@ -1520,8 +1360,7 @@ and tags. See https://docs.openstack.org/glance/latest/user/metadefs-concepts.ht
     </dt>
     <dd>{{% md %}}The path to the JSON-schema that represent
 the image or image
-{{% /md %}}</dd>
-    <dt class="property-"
+{{% /md %}}</dd><dt class="property-"
             title="">
         <span id="size_bytes_python">
 <a href="#size_bytes_python" style="color: inherit; text-decoration: inherit;">size_<wbr>bytes</a>
@@ -1530,8 +1369,7 @@ the image or image
         <span class="property-type">int</span>
     </dt>
     <dd>{{% md %}}The size in bytes of the data associated with the image.
-{{% /md %}}</dd>
-    <dt class="property-"
+{{% /md %}}</dd><dt class="property-"
             title="">
         <span id="status_python">
 <a href="#status_python" style="color: inherit; text-decoration: inherit;">status</a>
@@ -1541,8 +1379,7 @@ the image or image
     </dt>
     <dd>{{% md %}}The status of the image. It can be "queued", "active"
 or "saving".
-{{% /md %}}</dd>
-    <dt class="property- property-deprecated"
+{{% /md %}}</dd><dt class="property- property-deprecated"
             title=", Deprecated">
         <span id="update_at_python">
 <a href="#update_at_python" style="color: inherit; text-decoration: inherit;">update_<wbr>at</a>
@@ -1551,8 +1388,7 @@ or "saving".
         <span class="property-type">str</span>
     </dt>
     <dd>{{% md %}}(**Deprecated** - use `updated_at` instead)
-{{% /md %}}<p class="property-message">Deprecated: {{% md %}}Use updated_at instead{{% /md %}}</p></dd>
-    <dt class="property-"
+{{% /md %}}<p class="property-message">Deprecated: {{% md %}}Use updated_at instead{{% /md %}}</p></dd><dt class="property-"
             title="">
         <span id="updated_at_python">
 <a href="#updated_at_python" style="color: inherit; text-decoration: inherit;">updated_<wbr>at</a>
@@ -1561,8 +1397,7 @@ or "saving".
         <span class="property-type">str</span>
     </dt>
     <dd>{{% md %}}The date the image was last updated.
-{{% /md %}}</dd>
-</dl>
+{{% /md %}}</dd></dl>
 {{% /choosable %}}
 
 
@@ -1689,9 +1524,7 @@ The following state arguments are supported:
 
 
 {{% choosable language csharp %}}
-<dl class="resources-properties">
-
-    <dt class="property-optional"
+<dl class="resources-properties"><dt class="property-optional"
             title="Optional">
         <span id="state_checksum_csharp">
 <a href="#state_checksum_csharp" style="color: inherit; text-decoration: inherit;">Checksum</a>
@@ -1700,8 +1533,7 @@ The following state arguments are supported:
         <span class="property-type">string</span>
     </dt>
     <dd>{{% md %}}The checksum of the data associated with the image.
-{{% /md %}}</dd>
-    <dt class="property-optional"
+{{% /md %}}</dd><dt class="property-optional"
             title="Optional">
         <span id="state_containerformat_csharp">
 <a href="#state_containerformat_csharp" style="color: inherit; text-decoration: inherit;">Container<wbr>Format</a>
@@ -1711,8 +1543,7 @@ The following state arguments are supported:
     </dt>
     <dd>{{% md %}}The container format. Must be one of
 "ami", "ari", "aki", "bare", "ovf".
-{{% /md %}}</dd>
-    <dt class="property-optional"
+{{% /md %}}</dd><dt class="property-optional"
             title="Optional">
         <span id="state_createdat_csharp">
 <a href="#state_createdat_csharp" style="color: inherit; text-decoration: inherit;">Created<wbr>At</a>
@@ -1721,8 +1552,7 @@ The following state arguments are supported:
         <span class="property-type">string</span>
     </dt>
     <dd>{{% md %}}The date the image was created.
-{{% /md %}}</dd>
-    <dt class="property-optional"
+{{% /md %}}</dd><dt class="property-optional"
             title="Optional">
         <span id="state_diskformat_csharp">
 <a href="#state_diskformat_csharp" style="color: inherit; text-decoration: inherit;">Disk<wbr>Format</a>
@@ -1732,8 +1562,7 @@ The following state arguments are supported:
     </dt>
     <dd>{{% md %}}The disk format. Must be one of
 "ami", "ari", "aki", "vhd", "vmdk", "raw", "qcow2", "vdi", "iso".
-{{% /md %}}</dd>
-    <dt class="property-optional"
+{{% /md %}}</dd><dt class="property-optional"
             title="Optional">
         <span id="state_file_csharp">
 <a href="#state_file_csharp" style="color: inherit; text-decoration: inherit;">File</a>
@@ -1744,8 +1573,7 @@ The following state arguments are supported:
     <dd>{{% md %}}the trailing path after the glance
 endpoint that represent the location of the image
 or the path to retrieve it.
-{{% /md %}}</dd>
-    <dt class="property-optional"
+{{% /md %}}</dd><dt class="property-optional"
             title="Optional">
         <span id="state_hidden_csharp">
 <a href="#state_hidden_csharp" style="color: inherit; text-decoration: inherit;">Hidden</a>
@@ -1755,8 +1583,7 @@ or the path to retrieve it.
     </dt>
     <dd>{{% md %}}If true, image will be hidden from public list.
 Defaults to false.
-{{% /md %}}</dd>
-    <dt class="property-optional"
+{{% /md %}}</dd><dt class="property-optional"
             title="Optional">
         <span id="state_imagecachepath_csharp">
 <a href="#state_imagecachepath_csharp" style="color: inherit; text-decoration: inherit;">Image<wbr>Cache<wbr>Path</a>
@@ -1764,8 +1591,7 @@ Defaults to false.
         <span class="property-indicator"></span>
         <span class="property-type">string</span>
     </dt>
-    <dd>{{% md %}}{{% /md %}}</dd>
-    <dt class="property-optional"
+    <dd>{{% md %}}{{% /md %}}</dd><dt class="property-optional"
             title="Optional">
         <span id="state_imageid_csharp">
 <a href="#state_imageid_csharp" style="color: inherit; text-decoration: inherit;">Image<wbr>Id</a>
@@ -1775,8 +1601,7 @@ Defaults to false.
     </dt>
     <dd>{{% md %}}Unique ID (valid UUID) of image to create. Changing 
 this creates a new image.
-{{% /md %}}</dd>
-    <dt class="property-optional"
+{{% /md %}}</dd><dt class="property-optional"
             title="Optional">
         <span id="state_imagesourcepassword_csharp">
 <a href="#state_imagesourcepassword_csharp" style="color: inherit; text-decoration: inherit;">Image<wbr>Source<wbr>Password</a>
@@ -1785,8 +1610,7 @@ this creates a new image.
         <span class="property-type">string</span>
     </dt>
     <dd>{{% md %}}The password of basic auth to download `image_source_url`.
-{{% /md %}}</dd>
-    <dt class="property-optional"
+{{% /md %}}</dd><dt class="property-optional"
             title="Optional">
         <span id="state_imagesourceurl_csharp">
 <a href="#state_imagesourceurl_csharp" style="color: inherit; text-decoration: inherit;">Image<wbr>Source<wbr>Url</a>
@@ -1798,8 +1622,7 @@ this creates a new image.
 is not used, then the image will be downloaded in the `image_cache_path` before
 being uploaded to Glance.
 Conflicts with `local_file_path`.
-{{% /md %}}</dd>
-    <dt class="property-optional"
+{{% /md %}}</dd><dt class="property-optional"
             title="Optional">
         <span id="state_imagesourceusername_csharp">
 <a href="#state_imagesourceusername_csharp" style="color: inherit; text-decoration: inherit;">Image<wbr>Source<wbr>Username</a>
@@ -1808,8 +1631,7 @@ Conflicts with `local_file_path`.
         <span class="property-type">string</span>
     </dt>
     <dd>{{% md %}}The username of basic auth to download `image_source_url`.
-{{% /md %}}</dd>
-    <dt class="property-optional"
+{{% /md %}}</dd><dt class="property-optional"
             title="Optional">
         <span id="state_localfilepath_csharp">
 <a href="#state_localfilepath_csharp" style="color: inherit; text-decoration: inherit;">Local<wbr>File<wbr>Path</a>
@@ -1820,8 +1642,7 @@ Conflicts with `local_file_path`.
     <dd>{{% md %}}This is the filepath of the raw image file
 that will be uploaded to Glance. Conflicts with `image_source_url` and
 `web_download`.
-{{% /md %}}</dd>
-    <dt class="property-optional"
+{{% /md %}}</dd><dt class="property-optional"
             title="Optional">
         <span id="state_metadata_csharp">
 <a href="#state_metadata_csharp" style="color: inherit; text-decoration: inherit;">Metadata</a>
@@ -1832,8 +1653,7 @@ that will be uploaded to Glance. Conflicts with `image_source_url` and
     <dd>{{% md %}}The metadata associated with the image.
 Image metadata allow for meaningfully define the image properties
 and tags. See https://docs.openstack.org/glance/latest/user/metadefs-concepts.html.
-{{% /md %}}</dd>
-    <dt class="property-optional"
+{{% /md %}}</dd><dt class="property-optional"
             title="Optional">
         <span id="state_mindiskgb_csharp">
 <a href="#state_mindiskgb_csharp" style="color: inherit; text-decoration: inherit;">Min<wbr>Disk<wbr>Gb</a>
@@ -1843,8 +1663,7 @@ and tags. See https://docs.openstack.org/glance/latest/user/metadefs-concepts.ht
     </dt>
     <dd>{{% md %}}Amount of disk space (in GB) required to boot image.
 Defaults to 0.
-{{% /md %}}</dd>
-    <dt class="property-optional"
+{{% /md %}}</dd><dt class="property-optional"
             title="Optional">
         <span id="state_minrammb_csharp">
 <a href="#state_minrammb_csharp" style="color: inherit; text-decoration: inherit;">Min<wbr>Ram<wbr>Mb</a>
@@ -1854,8 +1673,7 @@ Defaults to 0.
     </dt>
     <dd>{{% md %}}Amount of ram (in MB) required to boot image.
 Defauts to 0.
-{{% /md %}}</dd>
-    <dt class="property-optional"
+{{% /md %}}</dd><dt class="property-optional"
             title="Optional">
         <span id="state_name_csharp">
 <a href="#state_name_csharp" style="color: inherit; text-decoration: inherit;">Name</a>
@@ -1864,8 +1682,7 @@ Defauts to 0.
         <span class="property-type">string</span>
     </dt>
     <dd>{{% md %}}The name of the image.
-{{% /md %}}</dd>
-    <dt class="property-optional"
+{{% /md %}}</dd><dt class="property-optional"
             title="Optional">
         <span id="state_owner_csharp">
 <a href="#state_owner_csharp" style="color: inherit; text-decoration: inherit;">Owner</a>
@@ -1874,8 +1691,7 @@ Defauts to 0.
         <span class="property-type">string</span>
     </dt>
     <dd>{{% md %}}The id of the openstack user who owns the image.
-{{% /md %}}</dd>
-    <dt class="property-optional"
+{{% /md %}}</dd><dt class="property-optional"
             title="Optional">
         <span id="state_properties_csharp">
 <a href="#state_properties_csharp" style="color: inherit; text-decoration: inherit;">Properties</a>
@@ -1886,8 +1702,7 @@ Defauts to 0.
     <dd>{{% md %}}A map of key/value pairs to set freeform
 information about an image. See the "Notes" section for further
 information about properties.
-{{% /md %}}</dd>
-    <dt class="property-optional"
+{{% /md %}}</dd><dt class="property-optional"
             title="Optional">
         <span id="state_protected_csharp">
 <a href="#state_protected_csharp" style="color: inherit; text-decoration: inherit;">Protected</a>
@@ -1897,8 +1712,7 @@ information about properties.
     </dt>
     <dd>{{% md %}}If true, image will not be deletable.
 Defaults to false.
-{{% /md %}}</dd>
-    <dt class="property-optional"
+{{% /md %}}</dd><dt class="property-optional"
             title="Optional">
         <span id="state_region_csharp">
 <a href="#state_region_csharp" style="color: inherit; text-decoration: inherit;">Region</a>
@@ -1910,8 +1724,7 @@ Defaults to false.
 A Glance client is needed to create an Image that can be used with
 a compute instance. If omitted, the `region` argument of the provider
 is used. Changing this creates a new Image.
-{{% /md %}}</dd>
-    <dt class="property-optional"
+{{% /md %}}</dd><dt class="property-optional"
             title="Optional">
         <span id="state_schema_csharp">
 <a href="#state_schema_csharp" style="color: inherit; text-decoration: inherit;">Schema</a>
@@ -1921,8 +1734,7 @@ is used. Changing this creates a new Image.
     </dt>
     <dd>{{% md %}}The path to the JSON-schema that represent
 the image or image
-{{% /md %}}</dd>
-    <dt class="property-optional"
+{{% /md %}}</dd><dt class="property-optional"
             title="Optional">
         <span id="state_sizebytes_csharp">
 <a href="#state_sizebytes_csharp" style="color: inherit; text-decoration: inherit;">Size<wbr>Bytes</a>
@@ -1931,8 +1743,7 @@ the image or image
         <span class="property-type">int</span>
     </dt>
     <dd>{{% md %}}The size in bytes of the data associated with the image.
-{{% /md %}}</dd>
-    <dt class="property-optional"
+{{% /md %}}</dd><dt class="property-optional"
             title="Optional">
         <span id="state_status_csharp">
 <a href="#state_status_csharp" style="color: inherit; text-decoration: inherit;">Status</a>
@@ -1942,8 +1753,7 @@ the image or image
     </dt>
     <dd>{{% md %}}The status of the image. It can be "queued", "active"
 or "saving".
-{{% /md %}}</dd>
-    <dt class="property-optional"
+{{% /md %}}</dd><dt class="property-optional"
             title="Optional">
         <span id="state_tags_csharp">
 <a href="#state_tags_csharp" style="color: inherit; text-decoration: inherit;">Tags</a>
@@ -1953,8 +1763,7 @@ or "saving".
     </dt>
     <dd>{{% md %}}The tags of the image. It must be a list of strings.
 At this time, it is not possible to delete all tags of an image.
-{{% /md %}}</dd>
-    <dt class="property-optional property-deprecated"
+{{% /md %}}</dd><dt class="property-optional property-deprecated"
             title="Optional, Deprecated">
         <span id="state_updateat_csharp">
 <a href="#state_updateat_csharp" style="color: inherit; text-decoration: inherit;">Update<wbr>At</a>
@@ -1963,8 +1772,7 @@ At this time, it is not possible to delete all tags of an image.
         <span class="property-type">string</span>
     </dt>
     <dd>{{% md %}}(**Deprecated** - use `updated_at` instead)
-{{% /md %}}<p class="property-message">Deprecated: {{% md %}}Use updated_at instead{{% /md %}}</p></dd>
-    <dt class="property-optional"
+{{% /md %}}<p class="property-message">Deprecated: {{% md %}}Use updated_at instead{{% /md %}}</p></dd><dt class="property-optional"
             title="Optional">
         <span id="state_updatedat_csharp">
 <a href="#state_updatedat_csharp" style="color: inherit; text-decoration: inherit;">Updated<wbr>At</a>
@@ -1973,8 +1781,7 @@ At this time, it is not possible to delete all tags of an image.
         <span class="property-type">string</span>
     </dt>
     <dd>{{% md %}}The date the image was last updated.
-{{% /md %}}</dd>
-    <dt class="property-optional"
+{{% /md %}}</dd><dt class="property-optional"
             title="Optional">
         <span id="state_verifychecksum_csharp">
 <a href="#state_verifychecksum_csharp" style="color: inherit; text-decoration: inherit;">Verify<wbr>Checksum</a>
@@ -1985,8 +1792,7 @@ At this time, it is not possible to delete all tags of an image.
     <dd>{{% md %}}If false, the checksum will not be verified
 once the image is finished uploading. Conflicts with `web_download`.
 Defaults to true when not using `web_download`.
-{{% /md %}}</dd>
-    <dt class="property-optional"
+{{% /md %}}</dd><dt class="property-optional"
             title="Optional">
         <span id="state_visibility_csharp">
 <a href="#state_visibility_csharp" style="color: inherit; text-decoration: inherit;">Visibility</a>
@@ -1997,8 +1803,7 @@ Defaults to true when not using `web_download`.
     <dd>{{% md %}}The visibility of the image. Must be one of
 "public", "private", "community", or "shared". The ability to set the
 visibility depends upon the configuration of the OpenStack cloud.
-{{% /md %}}</dd>
-    <dt class="property-optional"
+{{% /md %}}</dd><dt class="property-optional"
             title="Optional">
         <span id="state_webdownload_csharp">
 <a href="#state_webdownload_csharp" style="color: inherit; text-decoration: inherit;">Web<wbr>Download</a>
@@ -2009,14 +1814,11 @@ visibility depends upon the configuration of the OpenStack cloud.
     <dd>{{% md %}}If true, the "web-download" import method will
 be used to let Openstack download the image directly from the remote source.
 Conflicts with `local_file_path`. Defaults to false.
-{{% /md %}}</dd>
-</dl>
+{{% /md %}}</dd></dl>
 {{% /choosable %}}
 
 {{% choosable language go %}}
-<dl class="resources-properties">
-
-    <dt class="property-optional"
+<dl class="resources-properties"><dt class="property-optional"
             title="Optional">
         <span id="state_checksum_go">
 <a href="#state_checksum_go" style="color: inherit; text-decoration: inherit;">Checksum</a>
@@ -2025,8 +1827,7 @@ Conflicts with `local_file_path`. Defaults to false.
         <span class="property-type">string</span>
     </dt>
     <dd>{{% md %}}The checksum of the data associated with the image.
-{{% /md %}}</dd>
-    <dt class="property-optional"
+{{% /md %}}</dd><dt class="property-optional"
             title="Optional">
         <span id="state_containerformat_go">
 <a href="#state_containerformat_go" style="color: inherit; text-decoration: inherit;">Container<wbr>Format</a>
@@ -2036,8 +1837,7 @@ Conflicts with `local_file_path`. Defaults to false.
     </dt>
     <dd>{{% md %}}The container format. Must be one of
 "ami", "ari", "aki", "bare", "ovf".
-{{% /md %}}</dd>
-    <dt class="property-optional"
+{{% /md %}}</dd><dt class="property-optional"
             title="Optional">
         <span id="state_createdat_go">
 <a href="#state_createdat_go" style="color: inherit; text-decoration: inherit;">Created<wbr>At</a>
@@ -2046,8 +1846,7 @@ Conflicts with `local_file_path`. Defaults to false.
         <span class="property-type">string</span>
     </dt>
     <dd>{{% md %}}The date the image was created.
-{{% /md %}}</dd>
-    <dt class="property-optional"
+{{% /md %}}</dd><dt class="property-optional"
             title="Optional">
         <span id="state_diskformat_go">
 <a href="#state_diskformat_go" style="color: inherit; text-decoration: inherit;">Disk<wbr>Format</a>
@@ -2057,8 +1856,7 @@ Conflicts with `local_file_path`. Defaults to false.
     </dt>
     <dd>{{% md %}}The disk format. Must be one of
 "ami", "ari", "aki", "vhd", "vmdk", "raw", "qcow2", "vdi", "iso".
-{{% /md %}}</dd>
-    <dt class="property-optional"
+{{% /md %}}</dd><dt class="property-optional"
             title="Optional">
         <span id="state_file_go">
 <a href="#state_file_go" style="color: inherit; text-decoration: inherit;">File</a>
@@ -2069,8 +1867,7 @@ Conflicts with `local_file_path`. Defaults to false.
     <dd>{{% md %}}the trailing path after the glance
 endpoint that represent the location of the image
 or the path to retrieve it.
-{{% /md %}}</dd>
-    <dt class="property-optional"
+{{% /md %}}</dd><dt class="property-optional"
             title="Optional">
         <span id="state_hidden_go">
 <a href="#state_hidden_go" style="color: inherit; text-decoration: inherit;">Hidden</a>
@@ -2080,8 +1877,7 @@ or the path to retrieve it.
     </dt>
     <dd>{{% md %}}If true, image will be hidden from public list.
 Defaults to false.
-{{% /md %}}</dd>
-    <dt class="property-optional"
+{{% /md %}}</dd><dt class="property-optional"
             title="Optional">
         <span id="state_imagecachepath_go">
 <a href="#state_imagecachepath_go" style="color: inherit; text-decoration: inherit;">Image<wbr>Cache<wbr>Path</a>
@@ -2089,8 +1885,7 @@ Defaults to false.
         <span class="property-indicator"></span>
         <span class="property-type">string</span>
     </dt>
-    <dd>{{% md %}}{{% /md %}}</dd>
-    <dt class="property-optional"
+    <dd>{{% md %}}{{% /md %}}</dd><dt class="property-optional"
             title="Optional">
         <span id="state_imageid_go">
 <a href="#state_imageid_go" style="color: inherit; text-decoration: inherit;">Image<wbr>Id</a>
@@ -2100,8 +1895,7 @@ Defaults to false.
     </dt>
     <dd>{{% md %}}Unique ID (valid UUID) of image to create. Changing 
 this creates a new image.
-{{% /md %}}</dd>
-    <dt class="property-optional"
+{{% /md %}}</dd><dt class="property-optional"
             title="Optional">
         <span id="state_imagesourcepassword_go">
 <a href="#state_imagesourcepassword_go" style="color: inherit; text-decoration: inherit;">Image<wbr>Source<wbr>Password</a>
@@ -2110,8 +1904,7 @@ this creates a new image.
         <span class="property-type">string</span>
     </dt>
     <dd>{{% md %}}The password of basic auth to download `image_source_url`.
-{{% /md %}}</dd>
-    <dt class="property-optional"
+{{% /md %}}</dd><dt class="property-optional"
             title="Optional">
         <span id="state_imagesourceurl_go">
 <a href="#state_imagesourceurl_go" style="color: inherit; text-decoration: inherit;">Image<wbr>Source<wbr>Url</a>
@@ -2123,8 +1916,7 @@ this creates a new image.
 is not used, then the image will be downloaded in the `image_cache_path` before
 being uploaded to Glance.
 Conflicts with `local_file_path`.
-{{% /md %}}</dd>
-    <dt class="property-optional"
+{{% /md %}}</dd><dt class="property-optional"
             title="Optional">
         <span id="state_imagesourceusername_go">
 <a href="#state_imagesourceusername_go" style="color: inherit; text-decoration: inherit;">Image<wbr>Source<wbr>Username</a>
@@ -2133,8 +1925,7 @@ Conflicts with `local_file_path`.
         <span class="property-type">string</span>
     </dt>
     <dd>{{% md %}}The username of basic auth to download `image_source_url`.
-{{% /md %}}</dd>
-    <dt class="property-optional"
+{{% /md %}}</dd><dt class="property-optional"
             title="Optional">
         <span id="state_localfilepath_go">
 <a href="#state_localfilepath_go" style="color: inherit; text-decoration: inherit;">Local<wbr>File<wbr>Path</a>
@@ -2145,8 +1936,7 @@ Conflicts with `local_file_path`.
     <dd>{{% md %}}This is the filepath of the raw image file
 that will be uploaded to Glance. Conflicts with `image_source_url` and
 `web_download`.
-{{% /md %}}</dd>
-    <dt class="property-optional"
+{{% /md %}}</dd><dt class="property-optional"
             title="Optional">
         <span id="state_metadata_go">
 <a href="#state_metadata_go" style="color: inherit; text-decoration: inherit;">Metadata</a>
@@ -2157,8 +1947,7 @@ that will be uploaded to Glance. Conflicts with `image_source_url` and
     <dd>{{% md %}}The metadata associated with the image.
 Image metadata allow for meaningfully define the image properties
 and tags. See https://docs.openstack.org/glance/latest/user/metadefs-concepts.html.
-{{% /md %}}</dd>
-    <dt class="property-optional"
+{{% /md %}}</dd><dt class="property-optional"
             title="Optional">
         <span id="state_mindiskgb_go">
 <a href="#state_mindiskgb_go" style="color: inherit; text-decoration: inherit;">Min<wbr>Disk<wbr>Gb</a>
@@ -2168,8 +1957,7 @@ and tags. See https://docs.openstack.org/glance/latest/user/metadefs-concepts.ht
     </dt>
     <dd>{{% md %}}Amount of disk space (in GB) required to boot image.
 Defaults to 0.
-{{% /md %}}</dd>
-    <dt class="property-optional"
+{{% /md %}}</dd><dt class="property-optional"
             title="Optional">
         <span id="state_minrammb_go">
 <a href="#state_minrammb_go" style="color: inherit; text-decoration: inherit;">Min<wbr>Ram<wbr>Mb</a>
@@ -2179,8 +1967,7 @@ Defaults to 0.
     </dt>
     <dd>{{% md %}}Amount of ram (in MB) required to boot image.
 Defauts to 0.
-{{% /md %}}</dd>
-    <dt class="property-optional"
+{{% /md %}}</dd><dt class="property-optional"
             title="Optional">
         <span id="state_name_go">
 <a href="#state_name_go" style="color: inherit; text-decoration: inherit;">Name</a>
@@ -2189,8 +1976,7 @@ Defauts to 0.
         <span class="property-type">string</span>
     </dt>
     <dd>{{% md %}}The name of the image.
-{{% /md %}}</dd>
-    <dt class="property-optional"
+{{% /md %}}</dd><dt class="property-optional"
             title="Optional">
         <span id="state_owner_go">
 <a href="#state_owner_go" style="color: inherit; text-decoration: inherit;">Owner</a>
@@ -2199,8 +1985,7 @@ Defauts to 0.
         <span class="property-type">string</span>
     </dt>
     <dd>{{% md %}}The id of the openstack user who owns the image.
-{{% /md %}}</dd>
-    <dt class="property-optional"
+{{% /md %}}</dd><dt class="property-optional"
             title="Optional">
         <span id="state_properties_go">
 <a href="#state_properties_go" style="color: inherit; text-decoration: inherit;">Properties</a>
@@ -2211,8 +1996,7 @@ Defauts to 0.
     <dd>{{% md %}}A map of key/value pairs to set freeform
 information about an image. See the "Notes" section for further
 information about properties.
-{{% /md %}}</dd>
-    <dt class="property-optional"
+{{% /md %}}</dd><dt class="property-optional"
             title="Optional">
         <span id="state_protected_go">
 <a href="#state_protected_go" style="color: inherit; text-decoration: inherit;">Protected</a>
@@ -2222,8 +2006,7 @@ information about properties.
     </dt>
     <dd>{{% md %}}If true, image will not be deletable.
 Defaults to false.
-{{% /md %}}</dd>
-    <dt class="property-optional"
+{{% /md %}}</dd><dt class="property-optional"
             title="Optional">
         <span id="state_region_go">
 <a href="#state_region_go" style="color: inherit; text-decoration: inherit;">Region</a>
@@ -2235,8 +2018,7 @@ Defaults to false.
 A Glance client is needed to create an Image that can be used with
 a compute instance. If omitted, the `region` argument of the provider
 is used. Changing this creates a new Image.
-{{% /md %}}</dd>
-    <dt class="property-optional"
+{{% /md %}}</dd><dt class="property-optional"
             title="Optional">
         <span id="state_schema_go">
 <a href="#state_schema_go" style="color: inherit; text-decoration: inherit;">Schema</a>
@@ -2246,8 +2028,7 @@ is used. Changing this creates a new Image.
     </dt>
     <dd>{{% md %}}The path to the JSON-schema that represent
 the image or image
-{{% /md %}}</dd>
-    <dt class="property-optional"
+{{% /md %}}</dd><dt class="property-optional"
             title="Optional">
         <span id="state_sizebytes_go">
 <a href="#state_sizebytes_go" style="color: inherit; text-decoration: inherit;">Size<wbr>Bytes</a>
@@ -2256,8 +2037,7 @@ the image or image
         <span class="property-type">int</span>
     </dt>
     <dd>{{% md %}}The size in bytes of the data associated with the image.
-{{% /md %}}</dd>
-    <dt class="property-optional"
+{{% /md %}}</dd><dt class="property-optional"
             title="Optional">
         <span id="state_status_go">
 <a href="#state_status_go" style="color: inherit; text-decoration: inherit;">Status</a>
@@ -2267,8 +2047,7 @@ the image or image
     </dt>
     <dd>{{% md %}}The status of the image. It can be "queued", "active"
 or "saving".
-{{% /md %}}</dd>
-    <dt class="property-optional"
+{{% /md %}}</dd><dt class="property-optional"
             title="Optional">
         <span id="state_tags_go">
 <a href="#state_tags_go" style="color: inherit; text-decoration: inherit;">Tags</a>
@@ -2278,8 +2057,7 @@ or "saving".
     </dt>
     <dd>{{% md %}}The tags of the image. It must be a list of strings.
 At this time, it is not possible to delete all tags of an image.
-{{% /md %}}</dd>
-    <dt class="property-optional property-deprecated"
+{{% /md %}}</dd><dt class="property-optional property-deprecated"
             title="Optional, Deprecated">
         <span id="state_updateat_go">
 <a href="#state_updateat_go" style="color: inherit; text-decoration: inherit;">Update<wbr>At</a>
@@ -2288,8 +2066,7 @@ At this time, it is not possible to delete all tags of an image.
         <span class="property-type">string</span>
     </dt>
     <dd>{{% md %}}(**Deprecated** - use `updated_at` instead)
-{{% /md %}}<p class="property-message">Deprecated: {{% md %}}Use updated_at instead{{% /md %}}</p></dd>
-    <dt class="property-optional"
+{{% /md %}}<p class="property-message">Deprecated: {{% md %}}Use updated_at instead{{% /md %}}</p></dd><dt class="property-optional"
             title="Optional">
         <span id="state_updatedat_go">
 <a href="#state_updatedat_go" style="color: inherit; text-decoration: inherit;">Updated<wbr>At</a>
@@ -2298,8 +2075,7 @@ At this time, it is not possible to delete all tags of an image.
         <span class="property-type">string</span>
     </dt>
     <dd>{{% md %}}The date the image was last updated.
-{{% /md %}}</dd>
-    <dt class="property-optional"
+{{% /md %}}</dd><dt class="property-optional"
             title="Optional">
         <span id="state_verifychecksum_go">
 <a href="#state_verifychecksum_go" style="color: inherit; text-decoration: inherit;">Verify<wbr>Checksum</a>
@@ -2310,8 +2086,7 @@ At this time, it is not possible to delete all tags of an image.
     <dd>{{% md %}}If false, the checksum will not be verified
 once the image is finished uploading. Conflicts with `web_download`.
 Defaults to true when not using `web_download`.
-{{% /md %}}</dd>
-    <dt class="property-optional"
+{{% /md %}}</dd><dt class="property-optional"
             title="Optional">
         <span id="state_visibility_go">
 <a href="#state_visibility_go" style="color: inherit; text-decoration: inherit;">Visibility</a>
@@ -2322,8 +2097,7 @@ Defaults to true when not using `web_download`.
     <dd>{{% md %}}The visibility of the image. Must be one of
 "public", "private", "community", or "shared". The ability to set the
 visibility depends upon the configuration of the OpenStack cloud.
-{{% /md %}}</dd>
-    <dt class="property-optional"
+{{% /md %}}</dd><dt class="property-optional"
             title="Optional">
         <span id="state_webdownload_go">
 <a href="#state_webdownload_go" style="color: inherit; text-decoration: inherit;">Web<wbr>Download</a>
@@ -2334,14 +2108,11 @@ visibility depends upon the configuration of the OpenStack cloud.
     <dd>{{% md %}}If true, the "web-download" import method will
 be used to let Openstack download the image directly from the remote source.
 Conflicts with `local_file_path`. Defaults to false.
-{{% /md %}}</dd>
-</dl>
+{{% /md %}}</dd></dl>
 {{% /choosable %}}
 
 {{% choosable language nodejs %}}
-<dl class="resources-properties">
-
-    <dt class="property-optional"
+<dl class="resources-properties"><dt class="property-optional"
             title="Optional">
         <span id="state_checksum_nodejs">
 <a href="#state_checksum_nodejs" style="color: inherit; text-decoration: inherit;">checksum</a>
@@ -2350,8 +2121,7 @@ Conflicts with `local_file_path`. Defaults to false.
         <span class="property-type">string</span>
     </dt>
     <dd>{{% md %}}The checksum of the data associated with the image.
-{{% /md %}}</dd>
-    <dt class="property-optional"
+{{% /md %}}</dd><dt class="property-optional"
             title="Optional">
         <span id="state_containerformat_nodejs">
 <a href="#state_containerformat_nodejs" style="color: inherit; text-decoration: inherit;">container<wbr>Format</a>
@@ -2361,8 +2131,7 @@ Conflicts with `local_file_path`. Defaults to false.
     </dt>
     <dd>{{% md %}}The container format. Must be one of
 "ami", "ari", "aki", "bare", "ovf".
-{{% /md %}}</dd>
-    <dt class="property-optional"
+{{% /md %}}</dd><dt class="property-optional"
             title="Optional">
         <span id="state_createdat_nodejs">
 <a href="#state_createdat_nodejs" style="color: inherit; text-decoration: inherit;">created<wbr>At</a>
@@ -2371,8 +2140,7 @@ Conflicts with `local_file_path`. Defaults to false.
         <span class="property-type">string</span>
     </dt>
     <dd>{{% md %}}The date the image was created.
-{{% /md %}}</dd>
-    <dt class="property-optional"
+{{% /md %}}</dd><dt class="property-optional"
             title="Optional">
         <span id="state_diskformat_nodejs">
 <a href="#state_diskformat_nodejs" style="color: inherit; text-decoration: inherit;">disk<wbr>Format</a>
@@ -2382,8 +2150,7 @@ Conflicts with `local_file_path`. Defaults to false.
     </dt>
     <dd>{{% md %}}The disk format. Must be one of
 "ami", "ari", "aki", "vhd", "vmdk", "raw", "qcow2", "vdi", "iso".
-{{% /md %}}</dd>
-    <dt class="property-optional"
+{{% /md %}}</dd><dt class="property-optional"
             title="Optional">
         <span id="state_file_nodejs">
 <a href="#state_file_nodejs" style="color: inherit; text-decoration: inherit;">file</a>
@@ -2394,8 +2161,7 @@ Conflicts with `local_file_path`. Defaults to false.
     <dd>{{% md %}}the trailing path after the glance
 endpoint that represent the location of the image
 or the path to retrieve it.
-{{% /md %}}</dd>
-    <dt class="property-optional"
+{{% /md %}}</dd><dt class="property-optional"
             title="Optional">
         <span id="state_hidden_nodejs">
 <a href="#state_hidden_nodejs" style="color: inherit; text-decoration: inherit;">hidden</a>
@@ -2405,8 +2171,7 @@ or the path to retrieve it.
     </dt>
     <dd>{{% md %}}If true, image will be hidden from public list.
 Defaults to false.
-{{% /md %}}</dd>
-    <dt class="property-optional"
+{{% /md %}}</dd><dt class="property-optional"
             title="Optional">
         <span id="state_imagecachepath_nodejs">
 <a href="#state_imagecachepath_nodejs" style="color: inherit; text-decoration: inherit;">image<wbr>Cache<wbr>Path</a>
@@ -2414,8 +2179,7 @@ Defaults to false.
         <span class="property-indicator"></span>
         <span class="property-type">string</span>
     </dt>
-    <dd>{{% md %}}{{% /md %}}</dd>
-    <dt class="property-optional"
+    <dd>{{% md %}}{{% /md %}}</dd><dt class="property-optional"
             title="Optional">
         <span id="state_imageid_nodejs">
 <a href="#state_imageid_nodejs" style="color: inherit; text-decoration: inherit;">image<wbr>Id</a>
@@ -2425,8 +2189,7 @@ Defaults to false.
     </dt>
     <dd>{{% md %}}Unique ID (valid UUID) of image to create. Changing 
 this creates a new image.
-{{% /md %}}</dd>
-    <dt class="property-optional"
+{{% /md %}}</dd><dt class="property-optional"
             title="Optional">
         <span id="state_imagesourcepassword_nodejs">
 <a href="#state_imagesourcepassword_nodejs" style="color: inherit; text-decoration: inherit;">image<wbr>Source<wbr>Password</a>
@@ -2435,8 +2198,7 @@ this creates a new image.
         <span class="property-type">string</span>
     </dt>
     <dd>{{% md %}}The password of basic auth to download `image_source_url`.
-{{% /md %}}</dd>
-    <dt class="property-optional"
+{{% /md %}}</dd><dt class="property-optional"
             title="Optional">
         <span id="state_imagesourceurl_nodejs">
 <a href="#state_imagesourceurl_nodejs" style="color: inherit; text-decoration: inherit;">image<wbr>Source<wbr>Url</a>
@@ -2448,8 +2210,7 @@ this creates a new image.
 is not used, then the image will be downloaded in the `image_cache_path` before
 being uploaded to Glance.
 Conflicts with `local_file_path`.
-{{% /md %}}</dd>
-    <dt class="property-optional"
+{{% /md %}}</dd><dt class="property-optional"
             title="Optional">
         <span id="state_imagesourceusername_nodejs">
 <a href="#state_imagesourceusername_nodejs" style="color: inherit; text-decoration: inherit;">image<wbr>Source<wbr>Username</a>
@@ -2458,8 +2219,7 @@ Conflicts with `local_file_path`.
         <span class="property-type">string</span>
     </dt>
     <dd>{{% md %}}The username of basic auth to download `image_source_url`.
-{{% /md %}}</dd>
-    <dt class="property-optional"
+{{% /md %}}</dd><dt class="property-optional"
             title="Optional">
         <span id="state_localfilepath_nodejs">
 <a href="#state_localfilepath_nodejs" style="color: inherit; text-decoration: inherit;">local<wbr>File<wbr>Path</a>
@@ -2470,8 +2230,7 @@ Conflicts with `local_file_path`.
     <dd>{{% md %}}This is the filepath of the raw image file
 that will be uploaded to Glance. Conflicts with `image_source_url` and
 `web_download`.
-{{% /md %}}</dd>
-    <dt class="property-optional"
+{{% /md %}}</dd><dt class="property-optional"
             title="Optional">
         <span id="state_metadata_nodejs">
 <a href="#state_metadata_nodejs" style="color: inherit; text-decoration: inherit;">metadata</a>
@@ -2482,8 +2241,7 @@ that will be uploaded to Glance. Conflicts with `image_source_url` and
     <dd>{{% md %}}The metadata associated with the image.
 Image metadata allow for meaningfully define the image properties
 and tags. See https://docs.openstack.org/glance/latest/user/metadefs-concepts.html.
-{{% /md %}}</dd>
-    <dt class="property-optional"
+{{% /md %}}</dd><dt class="property-optional"
             title="Optional">
         <span id="state_mindiskgb_nodejs">
 <a href="#state_mindiskgb_nodejs" style="color: inherit; text-decoration: inherit;">min<wbr>Disk<wbr>Gb</a>
@@ -2493,8 +2251,7 @@ and tags. See https://docs.openstack.org/glance/latest/user/metadefs-concepts.ht
     </dt>
     <dd>{{% md %}}Amount of disk space (in GB) required to boot image.
 Defaults to 0.
-{{% /md %}}</dd>
-    <dt class="property-optional"
+{{% /md %}}</dd><dt class="property-optional"
             title="Optional">
         <span id="state_minrammb_nodejs">
 <a href="#state_minrammb_nodejs" style="color: inherit; text-decoration: inherit;">min<wbr>Ram<wbr>Mb</a>
@@ -2504,8 +2261,7 @@ Defaults to 0.
     </dt>
     <dd>{{% md %}}Amount of ram (in MB) required to boot image.
 Defauts to 0.
-{{% /md %}}</dd>
-    <dt class="property-optional"
+{{% /md %}}</dd><dt class="property-optional"
             title="Optional">
         <span id="state_name_nodejs">
 <a href="#state_name_nodejs" style="color: inherit; text-decoration: inherit;">name</a>
@@ -2514,8 +2270,7 @@ Defauts to 0.
         <span class="property-type">string</span>
     </dt>
     <dd>{{% md %}}The name of the image.
-{{% /md %}}</dd>
-    <dt class="property-optional"
+{{% /md %}}</dd><dt class="property-optional"
             title="Optional">
         <span id="state_owner_nodejs">
 <a href="#state_owner_nodejs" style="color: inherit; text-decoration: inherit;">owner</a>
@@ -2524,8 +2279,7 @@ Defauts to 0.
         <span class="property-type">string</span>
     </dt>
     <dd>{{% md %}}The id of the openstack user who owns the image.
-{{% /md %}}</dd>
-    <dt class="property-optional"
+{{% /md %}}</dd><dt class="property-optional"
             title="Optional">
         <span id="state_properties_nodejs">
 <a href="#state_properties_nodejs" style="color: inherit; text-decoration: inherit;">properties</a>
@@ -2536,8 +2290,7 @@ Defauts to 0.
     <dd>{{% md %}}A map of key/value pairs to set freeform
 information about an image. See the "Notes" section for further
 information about properties.
-{{% /md %}}</dd>
-    <dt class="property-optional"
+{{% /md %}}</dd><dt class="property-optional"
             title="Optional">
         <span id="state_protected_nodejs">
 <a href="#state_protected_nodejs" style="color: inherit; text-decoration: inherit;">protected</a>
@@ -2547,8 +2300,7 @@ information about properties.
     </dt>
     <dd>{{% md %}}If true, image will not be deletable.
 Defaults to false.
-{{% /md %}}</dd>
-    <dt class="property-optional"
+{{% /md %}}</dd><dt class="property-optional"
             title="Optional">
         <span id="state_region_nodejs">
 <a href="#state_region_nodejs" style="color: inherit; text-decoration: inherit;">region</a>
@@ -2560,8 +2312,7 @@ Defaults to false.
 A Glance client is needed to create an Image that can be used with
 a compute instance. If omitted, the `region` argument of the provider
 is used. Changing this creates a new Image.
-{{% /md %}}</dd>
-    <dt class="property-optional"
+{{% /md %}}</dd><dt class="property-optional"
             title="Optional">
         <span id="state_schema_nodejs">
 <a href="#state_schema_nodejs" style="color: inherit; text-decoration: inherit;">schema</a>
@@ -2571,8 +2322,7 @@ is used. Changing this creates a new Image.
     </dt>
     <dd>{{% md %}}The path to the JSON-schema that represent
 the image or image
-{{% /md %}}</dd>
-    <dt class="property-optional"
+{{% /md %}}</dd><dt class="property-optional"
             title="Optional">
         <span id="state_sizebytes_nodejs">
 <a href="#state_sizebytes_nodejs" style="color: inherit; text-decoration: inherit;">size<wbr>Bytes</a>
@@ -2581,8 +2331,7 @@ the image or image
         <span class="property-type">number</span>
     </dt>
     <dd>{{% md %}}The size in bytes of the data associated with the image.
-{{% /md %}}</dd>
-    <dt class="property-optional"
+{{% /md %}}</dd><dt class="property-optional"
             title="Optional">
         <span id="state_status_nodejs">
 <a href="#state_status_nodejs" style="color: inherit; text-decoration: inherit;">status</a>
@@ -2592,8 +2341,7 @@ the image or image
     </dt>
     <dd>{{% md %}}The status of the image. It can be "queued", "active"
 or "saving".
-{{% /md %}}</dd>
-    <dt class="property-optional"
+{{% /md %}}</dd><dt class="property-optional"
             title="Optional">
         <span id="state_tags_nodejs">
 <a href="#state_tags_nodejs" style="color: inherit; text-decoration: inherit;">tags</a>
@@ -2603,8 +2351,7 @@ or "saving".
     </dt>
     <dd>{{% md %}}The tags of the image. It must be a list of strings.
 At this time, it is not possible to delete all tags of an image.
-{{% /md %}}</dd>
-    <dt class="property-optional property-deprecated"
+{{% /md %}}</dd><dt class="property-optional property-deprecated"
             title="Optional, Deprecated">
         <span id="state_updateat_nodejs">
 <a href="#state_updateat_nodejs" style="color: inherit; text-decoration: inherit;">update<wbr>At</a>
@@ -2613,8 +2360,7 @@ At this time, it is not possible to delete all tags of an image.
         <span class="property-type">string</span>
     </dt>
     <dd>{{% md %}}(**Deprecated** - use `updated_at` instead)
-{{% /md %}}<p class="property-message">Deprecated: {{% md %}}Use updated_at instead{{% /md %}}</p></dd>
-    <dt class="property-optional"
+{{% /md %}}<p class="property-message">Deprecated: {{% md %}}Use updated_at instead{{% /md %}}</p></dd><dt class="property-optional"
             title="Optional">
         <span id="state_updatedat_nodejs">
 <a href="#state_updatedat_nodejs" style="color: inherit; text-decoration: inherit;">updated<wbr>At</a>
@@ -2623,8 +2369,7 @@ At this time, it is not possible to delete all tags of an image.
         <span class="property-type">string</span>
     </dt>
     <dd>{{% md %}}The date the image was last updated.
-{{% /md %}}</dd>
-    <dt class="property-optional"
+{{% /md %}}</dd><dt class="property-optional"
             title="Optional">
         <span id="state_verifychecksum_nodejs">
 <a href="#state_verifychecksum_nodejs" style="color: inherit; text-decoration: inherit;">verify<wbr>Checksum</a>
@@ -2635,8 +2380,7 @@ At this time, it is not possible to delete all tags of an image.
     <dd>{{% md %}}If false, the checksum will not be verified
 once the image is finished uploading. Conflicts with `web_download`.
 Defaults to true when not using `web_download`.
-{{% /md %}}</dd>
-    <dt class="property-optional"
+{{% /md %}}</dd><dt class="property-optional"
             title="Optional">
         <span id="state_visibility_nodejs">
 <a href="#state_visibility_nodejs" style="color: inherit; text-decoration: inherit;">visibility</a>
@@ -2647,8 +2391,7 @@ Defaults to true when not using `web_download`.
     <dd>{{% md %}}The visibility of the image. Must be one of
 "public", "private", "community", or "shared". The ability to set the
 visibility depends upon the configuration of the OpenStack cloud.
-{{% /md %}}</dd>
-    <dt class="property-optional"
+{{% /md %}}</dd><dt class="property-optional"
             title="Optional">
         <span id="state_webdownload_nodejs">
 <a href="#state_webdownload_nodejs" style="color: inherit; text-decoration: inherit;">web<wbr>Download</a>
@@ -2659,14 +2402,11 @@ visibility depends upon the configuration of the OpenStack cloud.
     <dd>{{% md %}}If true, the "web-download" import method will
 be used to let Openstack download the image directly from the remote source.
 Conflicts with `local_file_path`. Defaults to false.
-{{% /md %}}</dd>
-</dl>
+{{% /md %}}</dd></dl>
 {{% /choosable %}}
 
 {{% choosable language python %}}
-<dl class="resources-properties">
-
-    <dt class="property-optional"
+<dl class="resources-properties"><dt class="property-optional"
             title="Optional">
         <span id="state_checksum_python">
 <a href="#state_checksum_python" style="color: inherit; text-decoration: inherit;">checksum</a>
@@ -2675,8 +2415,7 @@ Conflicts with `local_file_path`. Defaults to false.
         <span class="property-type">str</span>
     </dt>
     <dd>{{% md %}}The checksum of the data associated with the image.
-{{% /md %}}</dd>
-    <dt class="property-optional"
+{{% /md %}}</dd><dt class="property-optional"
             title="Optional">
         <span id="state_container_format_python">
 <a href="#state_container_format_python" style="color: inherit; text-decoration: inherit;">container_<wbr>format</a>
@@ -2686,8 +2425,7 @@ Conflicts with `local_file_path`. Defaults to false.
     </dt>
     <dd>{{% md %}}The container format. Must be one of
 "ami", "ari", "aki", "bare", "ovf".
-{{% /md %}}</dd>
-    <dt class="property-optional"
+{{% /md %}}</dd><dt class="property-optional"
             title="Optional">
         <span id="state_created_at_python">
 <a href="#state_created_at_python" style="color: inherit; text-decoration: inherit;">created_<wbr>at</a>
@@ -2696,8 +2434,7 @@ Conflicts with `local_file_path`. Defaults to false.
         <span class="property-type">str</span>
     </dt>
     <dd>{{% md %}}The date the image was created.
-{{% /md %}}</dd>
-    <dt class="property-optional"
+{{% /md %}}</dd><dt class="property-optional"
             title="Optional">
         <span id="state_disk_format_python">
 <a href="#state_disk_format_python" style="color: inherit; text-decoration: inherit;">disk_<wbr>format</a>
@@ -2707,8 +2444,7 @@ Conflicts with `local_file_path`. Defaults to false.
     </dt>
     <dd>{{% md %}}The disk format. Must be one of
 "ami", "ari", "aki", "vhd", "vmdk", "raw", "qcow2", "vdi", "iso".
-{{% /md %}}</dd>
-    <dt class="property-optional"
+{{% /md %}}</dd><dt class="property-optional"
             title="Optional">
         <span id="state_file_python">
 <a href="#state_file_python" style="color: inherit; text-decoration: inherit;">file</a>
@@ -2719,8 +2455,7 @@ Conflicts with `local_file_path`. Defaults to false.
     <dd>{{% md %}}the trailing path after the glance
 endpoint that represent the location of the image
 or the path to retrieve it.
-{{% /md %}}</dd>
-    <dt class="property-optional"
+{{% /md %}}</dd><dt class="property-optional"
             title="Optional">
         <span id="state_hidden_python">
 <a href="#state_hidden_python" style="color: inherit; text-decoration: inherit;">hidden</a>
@@ -2730,8 +2465,7 @@ or the path to retrieve it.
     </dt>
     <dd>{{% md %}}If true, image will be hidden from public list.
 Defaults to false.
-{{% /md %}}</dd>
-    <dt class="property-optional"
+{{% /md %}}</dd><dt class="property-optional"
             title="Optional">
         <span id="state_image_cache_path_python">
 <a href="#state_image_cache_path_python" style="color: inherit; text-decoration: inherit;">image_<wbr>cache_<wbr>path</a>
@@ -2739,8 +2473,7 @@ Defaults to false.
         <span class="property-indicator"></span>
         <span class="property-type">str</span>
     </dt>
-    <dd>{{% md %}}{{% /md %}}</dd>
-    <dt class="property-optional"
+    <dd>{{% md %}}{{% /md %}}</dd><dt class="property-optional"
             title="Optional">
         <span id="state_image_id_python">
 <a href="#state_image_id_python" style="color: inherit; text-decoration: inherit;">image_<wbr>id</a>
@@ -2750,8 +2483,7 @@ Defaults to false.
     </dt>
     <dd>{{% md %}}Unique ID (valid UUID) of image to create. Changing 
 this creates a new image.
-{{% /md %}}</dd>
-    <dt class="property-optional"
+{{% /md %}}</dd><dt class="property-optional"
             title="Optional">
         <span id="state_image_source_password_python">
 <a href="#state_image_source_password_python" style="color: inherit; text-decoration: inherit;">image_<wbr>source_<wbr>password</a>
@@ -2760,8 +2492,7 @@ this creates a new image.
         <span class="property-type">str</span>
     </dt>
     <dd>{{% md %}}The password of basic auth to download `image_source_url`.
-{{% /md %}}</dd>
-    <dt class="property-optional"
+{{% /md %}}</dd><dt class="property-optional"
             title="Optional">
         <span id="state_image_source_url_python">
 <a href="#state_image_source_url_python" style="color: inherit; text-decoration: inherit;">image_<wbr>source_<wbr>url</a>
@@ -2773,8 +2504,7 @@ this creates a new image.
 is not used, then the image will be downloaded in the `image_cache_path` before
 being uploaded to Glance.
 Conflicts with `local_file_path`.
-{{% /md %}}</dd>
-    <dt class="property-optional"
+{{% /md %}}</dd><dt class="property-optional"
             title="Optional">
         <span id="state_image_source_username_python">
 <a href="#state_image_source_username_python" style="color: inherit; text-decoration: inherit;">image_<wbr>source_<wbr>username</a>
@@ -2783,8 +2513,7 @@ Conflicts with `local_file_path`.
         <span class="property-type">str</span>
     </dt>
     <dd>{{% md %}}The username of basic auth to download `image_source_url`.
-{{% /md %}}</dd>
-    <dt class="property-optional"
+{{% /md %}}</dd><dt class="property-optional"
             title="Optional">
         <span id="state_local_file_path_python">
 <a href="#state_local_file_path_python" style="color: inherit; text-decoration: inherit;">local_<wbr>file_<wbr>path</a>
@@ -2795,8 +2524,7 @@ Conflicts with `local_file_path`.
     <dd>{{% md %}}This is the filepath of the raw image file
 that will be uploaded to Glance. Conflicts with `image_source_url` and
 `web_download`.
-{{% /md %}}</dd>
-    <dt class="property-optional"
+{{% /md %}}</dd><dt class="property-optional"
             title="Optional">
         <span id="state_metadata_python">
 <a href="#state_metadata_python" style="color: inherit; text-decoration: inherit;">metadata</a>
@@ -2807,8 +2535,7 @@ that will be uploaded to Glance. Conflicts with `image_source_url` and
     <dd>{{% md %}}The metadata associated with the image.
 Image metadata allow for meaningfully define the image properties
 and tags. See https://docs.openstack.org/glance/latest/user/metadefs-concepts.html.
-{{% /md %}}</dd>
-    <dt class="property-optional"
+{{% /md %}}</dd><dt class="property-optional"
             title="Optional">
         <span id="state_min_disk_gb_python">
 <a href="#state_min_disk_gb_python" style="color: inherit; text-decoration: inherit;">min_<wbr>disk_<wbr>gb</a>
@@ -2818,8 +2545,7 @@ and tags. See https://docs.openstack.org/glance/latest/user/metadefs-concepts.ht
     </dt>
     <dd>{{% md %}}Amount of disk space (in GB) required to boot image.
 Defaults to 0.
-{{% /md %}}</dd>
-    <dt class="property-optional"
+{{% /md %}}</dd><dt class="property-optional"
             title="Optional">
         <span id="state_min_ram_mb_python">
 <a href="#state_min_ram_mb_python" style="color: inherit; text-decoration: inherit;">min_<wbr>ram_<wbr>mb</a>
@@ -2829,8 +2555,7 @@ Defaults to 0.
     </dt>
     <dd>{{% md %}}Amount of ram (in MB) required to boot image.
 Defauts to 0.
-{{% /md %}}</dd>
-    <dt class="property-optional"
+{{% /md %}}</dd><dt class="property-optional"
             title="Optional">
         <span id="state_name_python">
 <a href="#state_name_python" style="color: inherit; text-decoration: inherit;">name</a>
@@ -2839,8 +2564,7 @@ Defauts to 0.
         <span class="property-type">str</span>
     </dt>
     <dd>{{% md %}}The name of the image.
-{{% /md %}}</dd>
-    <dt class="property-optional"
+{{% /md %}}</dd><dt class="property-optional"
             title="Optional">
         <span id="state_owner_python">
 <a href="#state_owner_python" style="color: inherit; text-decoration: inherit;">owner</a>
@@ -2849,8 +2573,7 @@ Defauts to 0.
         <span class="property-type">str</span>
     </dt>
     <dd>{{% md %}}The id of the openstack user who owns the image.
-{{% /md %}}</dd>
-    <dt class="property-optional"
+{{% /md %}}</dd><dt class="property-optional"
             title="Optional">
         <span id="state_properties_python">
 <a href="#state_properties_python" style="color: inherit; text-decoration: inherit;">properties</a>
@@ -2861,8 +2584,7 @@ Defauts to 0.
     <dd>{{% md %}}A map of key/value pairs to set freeform
 information about an image. See the "Notes" section for further
 information about properties.
-{{% /md %}}</dd>
-    <dt class="property-optional"
+{{% /md %}}</dd><dt class="property-optional"
             title="Optional">
         <span id="state_protected_python">
 <a href="#state_protected_python" style="color: inherit; text-decoration: inherit;">protected</a>
@@ -2872,8 +2594,7 @@ information about properties.
     </dt>
     <dd>{{% md %}}If true, image will not be deletable.
 Defaults to false.
-{{% /md %}}</dd>
-    <dt class="property-optional"
+{{% /md %}}</dd><dt class="property-optional"
             title="Optional">
         <span id="state_region_python">
 <a href="#state_region_python" style="color: inherit; text-decoration: inherit;">region</a>
@@ -2885,8 +2606,7 @@ Defaults to false.
 A Glance client is needed to create an Image that can be used with
 a compute instance. If omitted, the `region` argument of the provider
 is used. Changing this creates a new Image.
-{{% /md %}}</dd>
-    <dt class="property-optional"
+{{% /md %}}</dd><dt class="property-optional"
             title="Optional">
         <span id="state_schema_python">
 <a href="#state_schema_python" style="color: inherit; text-decoration: inherit;">schema</a>
@@ -2896,8 +2616,7 @@ is used. Changing this creates a new Image.
     </dt>
     <dd>{{% md %}}The path to the JSON-schema that represent
 the image or image
-{{% /md %}}</dd>
-    <dt class="property-optional"
+{{% /md %}}</dd><dt class="property-optional"
             title="Optional">
         <span id="state_size_bytes_python">
 <a href="#state_size_bytes_python" style="color: inherit; text-decoration: inherit;">size_<wbr>bytes</a>
@@ -2906,8 +2625,7 @@ the image or image
         <span class="property-type">int</span>
     </dt>
     <dd>{{% md %}}The size in bytes of the data associated with the image.
-{{% /md %}}</dd>
-    <dt class="property-optional"
+{{% /md %}}</dd><dt class="property-optional"
             title="Optional">
         <span id="state_status_python">
 <a href="#state_status_python" style="color: inherit; text-decoration: inherit;">status</a>
@@ -2917,8 +2635,7 @@ the image or image
     </dt>
     <dd>{{% md %}}The status of the image. It can be "queued", "active"
 or "saving".
-{{% /md %}}</dd>
-    <dt class="property-optional"
+{{% /md %}}</dd><dt class="property-optional"
             title="Optional">
         <span id="state_tags_python">
 <a href="#state_tags_python" style="color: inherit; text-decoration: inherit;">tags</a>
@@ -2928,8 +2645,7 @@ or "saving".
     </dt>
     <dd>{{% md %}}The tags of the image. It must be a list of strings.
 At this time, it is not possible to delete all tags of an image.
-{{% /md %}}</dd>
-    <dt class="property-optional property-deprecated"
+{{% /md %}}</dd><dt class="property-optional property-deprecated"
             title="Optional, Deprecated">
         <span id="state_update_at_python">
 <a href="#state_update_at_python" style="color: inherit; text-decoration: inherit;">update_<wbr>at</a>
@@ -2938,8 +2654,7 @@ At this time, it is not possible to delete all tags of an image.
         <span class="property-type">str</span>
     </dt>
     <dd>{{% md %}}(**Deprecated** - use `updated_at` instead)
-{{% /md %}}<p class="property-message">Deprecated: {{% md %}}Use updated_at instead{{% /md %}}</p></dd>
-    <dt class="property-optional"
+{{% /md %}}<p class="property-message">Deprecated: {{% md %}}Use updated_at instead{{% /md %}}</p></dd><dt class="property-optional"
             title="Optional">
         <span id="state_updated_at_python">
 <a href="#state_updated_at_python" style="color: inherit; text-decoration: inherit;">updated_<wbr>at</a>
@@ -2948,8 +2663,7 @@ At this time, it is not possible to delete all tags of an image.
         <span class="property-type">str</span>
     </dt>
     <dd>{{% md %}}The date the image was last updated.
-{{% /md %}}</dd>
-    <dt class="property-optional"
+{{% /md %}}</dd><dt class="property-optional"
             title="Optional">
         <span id="state_verify_checksum_python">
 <a href="#state_verify_checksum_python" style="color: inherit; text-decoration: inherit;">verify_<wbr>checksum</a>
@@ -2960,8 +2674,7 @@ At this time, it is not possible to delete all tags of an image.
     <dd>{{% md %}}If false, the checksum will not be verified
 once the image is finished uploading. Conflicts with `web_download`.
 Defaults to true when not using `web_download`.
-{{% /md %}}</dd>
-    <dt class="property-optional"
+{{% /md %}}</dd><dt class="property-optional"
             title="Optional">
         <span id="state_visibility_python">
 <a href="#state_visibility_python" style="color: inherit; text-decoration: inherit;">visibility</a>
@@ -2972,8 +2685,7 @@ Defaults to true when not using `web_download`.
     <dd>{{% md %}}The visibility of the image. Must be one of
 "public", "private", "community", or "shared". The ability to set the
 visibility depends upon the configuration of the OpenStack cloud.
-{{% /md %}}</dd>
-    <dt class="property-optional"
+{{% /md %}}</dd><dt class="property-optional"
             title="Optional">
         <span id="state_web_download_python">
 <a href="#state_web_download_python" style="color: inherit; text-decoration: inherit;">web_<wbr>download</a>
@@ -2984,8 +2696,7 @@ visibility depends upon the configuration of the OpenStack cloud.
     <dd>{{% md %}}If true, the "web-download" import method will
 be used to let Openstack download the image directly from the remote source.
 Conflicts with `local_file_path`. Defaults to false.
-{{% /md %}}</dd>
-</dl>
+{{% /md %}}</dd></dl>
 {{% /choosable %}}
 
 
@@ -3001,6 +2712,6 @@ Conflicts with `local_file_path`. Defaults to false.
 	<dt>License</dt>
 	<dd>Apache-2.0</dd>
 	<dt>Notes</dt>
-	<dd>This Pulumi package is based on the [`openstack` Terraform Provider](https://github.com/terraform-provider-openstack/terraform-provider-openstack).</dd>
+	<dd>{{% md %}}This Pulumi package is based on the [`openstack` Terraform Provider](https://github.com/terraform-provider-openstack/terraform-provider-openstack).{{% /md %}}</dd>
 </dl>
 

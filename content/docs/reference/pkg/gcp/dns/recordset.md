@@ -19,11 +19,17 @@ In addition, the Google Cloud DNS API requires NS records to be present at all t
 will not actually remove NS records during destroy but will report that it did.
 
 {{% examples %}}
+
 ## Example Usage
 
 {{< chooser language "typescript,python,go,csharp" / >}}
+
+
 ### Binding a DNS name to the ephemeral IP of a new instance:
-{{% example csharp %}}
+
+
+{{< example csharp >}}
+
 ```csharp
 using Pulumi;
 using Gcp = Pulumi.Gcp;
@@ -75,9 +81,12 @@ class MyStack : Stack
 }
 ```
 
-{{% /example %}}
 
-{{% example go %}}
+{{< /example >}}
+
+
+{{< example go >}}
+
 ```go
 package main
 
@@ -138,9 +147,12 @@ func main() {
 }
 ```
 
-{{% /example %}}
 
-{{% example python %}}
+{{< /example >}}
+
+
+{{< example python >}}
+
 ```python
 import pulumi
 import pulumi_gcp as gcp
@@ -166,9 +178,12 @@ frontend_record_set = gcp.dns.RecordSet("frontendRecordSet",
     rrdatas=[frontend_instance.network_interfaces[0].access_configs[0].nat_ip])
 ```
 
-{{% /example %}}
 
-{{% example typescript %}}
+{{< /example >}}
+
+
+{{< example typescript >}}
+
 
 ```typescript
 import * as pulumi from "@pulumi/pulumi";
@@ -197,10 +212,17 @@ const frontendRecordSet = new gcp.dns.RecordSet("frontendRecordSet", {
 });
 ```
 
-{{% /example %}}
+
+{{< /example >}}
+
+
+
 
 ### Adding an A record
-{{% example csharp %}}
+
+
+{{< example csharp >}}
+
 ```csharp
 using Pulumi;
 using Gcp = Pulumi.Gcp;
@@ -229,9 +251,12 @@ class MyStack : Stack
 }
 ```
 
-{{% /example %}}
 
-{{% example go %}}
+{{< /example >}}
+
+
+{{< example go >}}
+
 ```go
 package main
 
@@ -269,9 +294,12 @@ func main() {
 }
 ```
 
-{{% /example %}}
 
-{{% example python %}}
+{{< /example >}}
+
+
+{{< example python >}}
+
 ```python
 import pulumi
 import pulumi_gcp as gcp
@@ -285,9 +313,12 @@ record_set = gcp.dns.RecordSet("recordSet",
     rrdatas=["8.8.8.8"])
 ```
 
-{{% /example %}}
 
-{{% example typescript %}}
+{{< /example >}}
+
+
+{{< example typescript >}}
+
 
 ```typescript
 import * as pulumi from "@pulumi/pulumi";
@@ -303,10 +334,17 @@ const recordSet = new gcp.dns.RecordSet("recordSet", {
 });
 ```
 
-{{% /example %}}
+
+{{< /example >}}
+
+
+
 
 ### Adding an MX record
-{{% example csharp %}}
+
+
+{{< example csharp >}}
+
 ```csharp
 using Pulumi;
 using Gcp = Pulumi.Gcp;
@@ -339,9 +377,12 @@ class MyStack : Stack
 }
 ```
 
-{{% /example %}}
 
-{{% example go %}}
+{{< /example >}}
+
+
+{{< example go >}}
+
 ```go
 package main
 
@@ -379,9 +420,12 @@ func main() {
 }
 ```
 
-{{% /example %}}
 
-{{% example python %}}
+{{< /example >}}
+
+
+{{< example python >}}
+
 ```python
 import pulumi
 import pulumi_gcp as gcp
@@ -401,9 +445,12 @@ mx = gcp.dns.RecordSet("mx",
     ])
 ```
 
-{{% /example %}}
 
-{{% example typescript %}}
+{{< /example >}}
+
+
+{{< example typescript >}}
+
 
 ```typescript
 import * as pulumi from "@pulumi/pulumi";
@@ -425,10 +472,17 @@ const mx = new gcp.dns.RecordSet("mx", {
 });
 ```
 
-{{% /example %}}
+
+{{< /example >}}
+
+
+
 
 ### Adding an SPF record
-{{% example csharp %}}
+
+
+{{< example csharp >}}
+
 ```csharp
 using Pulumi;
 using Gcp = Pulumi.Gcp;
@@ -457,9 +511,12 @@ class MyStack : Stack
 }
 ```
 
-{{% /example %}}
 
-{{% example go %}}
+{{< /example >}}
+
+
+{{< example go >}}
+
 ```go
 package main
 
@@ -497,9 +554,12 @@ func main() {
 }
 ```
 
-{{% /example %}}
 
-{{% example python %}}
+{{< /example >}}
+
+
+{{< example python >}}
+
 ```python
 import pulumi
 import pulumi_gcp as gcp
@@ -513,9 +573,12 @@ spf = gcp.dns.RecordSet("spf",
     rrdatas=["\"v=spf1 ip4:111.111.111.111 include:backoff.email-example.com -all\""])
 ```
 
-{{% /example %}}
 
-{{% example typescript %}}
+{{< /example >}}
+
+
+{{< example typescript >}}
+
 
 ```typescript
 import * as pulumi from "@pulumi/pulumi";
@@ -531,10 +594,17 @@ const spf = new gcp.dns.RecordSet("spf", {
 });
 ```
 
-{{% /example %}}
+
+{{< /example >}}
+
+
+
 
 ### Adding a CNAME record
-{{% example csharp %}}
+
+
+{{< example csharp >}}
+
 ```csharp
 using Pulumi;
 using Gcp = Pulumi.Gcp;
@@ -563,9 +633,12 @@ class MyStack : Stack
 }
 ```
 
-{{% /example %}}
 
-{{% example go %}}
+{{< /example >}}
+
+
+{{< example go >}}
+
 ```go
 package main
 
@@ -603,9 +676,12 @@ func main() {
 }
 ```
 
-{{% /example %}}
 
-{{% example python %}}
+{{< /example >}}
+
+
+{{< example python >}}
+
 ```python
 import pulumi
 import pulumi_gcp as gcp
@@ -619,9 +695,12 @@ cname = gcp.dns.RecordSet("cname",
     rrdatas=["frontend.mydomain.com."])
 ```
 
-{{% /example %}}
 
-{{% example typescript %}}
+{{< /example >}}
+
+
+{{< example typescript >}}
+
 
 ```typescript
 import * as pulumi from "@pulumi/pulumi";
@@ -637,9 +716,16 @@ const cname = new gcp.dns.RecordSet("cname", {
 });
 ```
 
-{{% /example %}}
+
+{{< /example >}}
+
+
+
+
 
 {{% /examples %}}
+
+
 
 
 ## Create a RecordSet Resource {#create}
@@ -664,9 +750,7 @@ const cname = new gcp.dns.RecordSet("cname", {
 
 {{% choosable language nodejs %}}
 
-<dl class="resources-properties">
-  
-    <dt
+<dl class="resources-properties"><dt
         class="property-required" title="Required">
         <span>name</span>
         <span class="property-indicator"></span>
@@ -674,9 +758,7 @@ const cname = new gcp.dns.RecordSet("cname", {
     </dt>
     <dd>
       The unique name of the resource.
-    </dd>
-  
-    <dt
+    </dd><dt
         class="property-required" title="Required">
         <span>args</span>
         <span class="property-indicator"></span>
@@ -684,9 +766,7 @@ const cname = new gcp.dns.RecordSet("cname", {
     </dt>
     <dd>
       The arguments to resource properties.
-    </dd>
-  
-    <dt
+    </dd><dt
         class="property-optional" title="Optional">
         <span>opts</span>
         <span class="property-indicator"></span>
@@ -694,10 +774,7 @@ const cname = new gcp.dns.RecordSet("cname", {
     </dt>
     <dd>
       Bag of options to control resource&#39;s behavior.
-    </dd>
-  
-
-</dl>
+    </dd></dl>
 
 {{% /choosable %}}
 
@@ -723,9 +800,7 @@ const cname = new gcp.dns.RecordSet("cname", {
 
 {{% choosable language go %}}
 
-<dl class="resources-properties">
-  
-    <dt
+<dl class="resources-properties"><dt
         class="property-optional" title="Optional">
         <span>ctx</span>
         <span class="property-indicator"></span>
@@ -733,9 +808,7 @@ const cname = new gcp.dns.RecordSet("cname", {
     </dt>
     <dd>
       Context object for the current deployment.
-    </dd>
-  
-    <dt
+    </dd><dt
         class="property-required" title="Required">
         <span>name</span>
         <span class="property-indicator"></span>
@@ -743,9 +816,7 @@ const cname = new gcp.dns.RecordSet("cname", {
     </dt>
     <dd>
       The unique name of the resource.
-    </dd>
-  
-    <dt
+    </dd><dt
         class="property-required" title="Required">
         <span>args</span>
         <span class="property-indicator"></span>
@@ -753,9 +824,7 @@ const cname = new gcp.dns.RecordSet("cname", {
     </dt>
     <dd>
       The arguments to resource properties.
-    </dd>
-  
-    <dt
+    </dd><dt
         class="property-optional" title="Optional">
         <span>opts</span>
         <span class="property-indicator"></span>
@@ -763,18 +832,13 @@ const cname = new gcp.dns.RecordSet("cname", {
     </dt>
     <dd>
       Bag of options to control resource&#39;s behavior.
-    </dd>
-  
-
-</dl>
+    </dd></dl>
 
 {{% /choosable %}}
 
 {{% choosable language csharp %}}
 
-<dl class="resources-properties">
-  
-    <dt
+<dl class="resources-properties"><dt
         class="property-required" title="Required">
         <span>name</span>
         <span class="property-indicator"></span>
@@ -782,9 +846,7 @@ const cname = new gcp.dns.RecordSet("cname", {
     </dt>
     <dd>
       The unique name of the resource.
-    </dd>
-  
-    <dt
+    </dd><dt
         class="property-required" title="Required">
         <span>args</span>
         <span class="property-indicator"></span>
@@ -792,9 +854,7 @@ const cname = new gcp.dns.RecordSet("cname", {
     </dt>
     <dd>
       The arguments to resource properties.
-    </dd>
-  
-    <dt
+    </dd><dt
         class="property-optional" title="Optional">
         <span>opts</span>
         <span class="property-indicator"></span>
@@ -802,10 +862,7 @@ const cname = new gcp.dns.RecordSet("cname", {
     </dt>
     <dd>
       Bag of options to control resource&#39;s behavior.
-    </dd>
-  
-
-</dl>
+    </dd></dl>
 
 {{% /choosable %}}
 
@@ -820,9 +877,7 @@ The RecordSet resource accepts the following [input]({{< relref "/docs/intro/con
 
 
 {{% choosable language csharp %}}
-<dl class="resources-properties">
-
-    <dt class="property-required"
+<dl class="resources-properties"><dt class="property-required"
             title="Required">
         <span id="managedzone_csharp">
 <a href="#managedzone_csharp" style="color: inherit; text-decoration: inherit;">Managed<wbr>Zone</a>
@@ -832,8 +887,7 @@ The RecordSet resource accepts the following [input]({{< relref "/docs/intro/con
     </dt>
     <dd>{{% md %}}The name of the zone in which this record set will
 reside.
-{{% /md %}}</dd>
-    <dt class="property-required"
+{{% /md %}}</dd><dt class="property-required"
             title="Required">
         <span id="name_csharp">
 <a href="#name_csharp" style="color: inherit; text-decoration: inherit;">Name</a>
@@ -842,8 +896,7 @@ reside.
         <span class="property-type">string</span>
     </dt>
     <dd>{{% md %}}The DNS name this record set will apply to.
-{{% /md %}}</dd>
-    <dt class="property-required"
+{{% /md %}}</dd><dt class="property-required"
             title="Required">
         <span id="rrdatas_csharp">
 <a href="#rrdatas_csharp" style="color: inherit; text-decoration: inherit;">Rrdatas</a>
@@ -853,8 +906,7 @@ reside.
     </dt>
     <dd>{{% md %}}The string data for the records in this record set
 whose meaning depends on the DNS type. For TXT record, if the string data contains spaces, add surrounding `\"` if you don't want your string to get split on spaces. To specify a single record value longer than 255 characters such as a TXT record for DKIM, add `\"\"` inside the provider configuration string (e.g. `"first255characters\"\"morecharacters"`).
-{{% /md %}}</dd>
-    <dt class="property-required"
+{{% /md %}}</dd><dt class="property-required"
             title="Required">
         <span id="ttl_csharp">
 <a href="#ttl_csharp" style="color: inherit; text-decoration: inherit;">Ttl</a>
@@ -863,8 +915,7 @@ whose meaning depends on the DNS type. For TXT record, if the string data contai
         <span class="property-type">int</span>
     </dt>
     <dd>{{% md %}}The time-to-live of this record set (seconds).
-{{% /md %}}</dd>
-    <dt class="property-required"
+{{% /md %}}</dd><dt class="property-required"
             title="Required">
         <span id="type_csharp">
 <a href="#type_csharp" style="color: inherit; text-decoration: inherit;">Type</a>
@@ -873,8 +924,7 @@ whose meaning depends on the DNS type. For TXT record, if the string data contai
         <span class="property-type">string</span>
     </dt>
     <dd>{{% md %}}The DNS record set type.
-{{% /md %}}</dd>
-    <dt class="property-optional"
+{{% /md %}}</dd><dt class="property-optional"
             title="Optional">
         <span id="project_csharp">
 <a href="#project_csharp" style="color: inherit; text-decoration: inherit;">Project</a>
@@ -884,14 +934,11 @@ whose meaning depends on the DNS type. For TXT record, if the string data contai
     </dt>
     <dd>{{% md %}}The ID of the project in which the resource belongs. If it
 is not provided, the provider project is used.
-{{% /md %}}</dd>
-</dl>
+{{% /md %}}</dd></dl>
 {{% /choosable %}}
 
 {{% choosable language go %}}
-<dl class="resources-properties">
-
-    <dt class="property-required"
+<dl class="resources-properties"><dt class="property-required"
             title="Required">
         <span id="managedzone_go">
 <a href="#managedzone_go" style="color: inherit; text-decoration: inherit;">Managed<wbr>Zone</a>
@@ -901,8 +948,7 @@ is not provided, the provider project is used.
     </dt>
     <dd>{{% md %}}The name of the zone in which this record set will
 reside.
-{{% /md %}}</dd>
-    <dt class="property-required"
+{{% /md %}}</dd><dt class="property-required"
             title="Required">
         <span id="name_go">
 <a href="#name_go" style="color: inherit; text-decoration: inherit;">Name</a>
@@ -911,8 +957,7 @@ reside.
         <span class="property-type">string</span>
     </dt>
     <dd>{{% md %}}The DNS name this record set will apply to.
-{{% /md %}}</dd>
-    <dt class="property-required"
+{{% /md %}}</dd><dt class="property-required"
             title="Required">
         <span id="rrdatas_go">
 <a href="#rrdatas_go" style="color: inherit; text-decoration: inherit;">Rrdatas</a>
@@ -922,8 +967,7 @@ reside.
     </dt>
     <dd>{{% md %}}The string data for the records in this record set
 whose meaning depends on the DNS type. For TXT record, if the string data contains spaces, add surrounding `\"` if you don't want your string to get split on spaces. To specify a single record value longer than 255 characters such as a TXT record for DKIM, add `\"\"` inside the provider configuration string (e.g. `"first255characters\"\"morecharacters"`).
-{{% /md %}}</dd>
-    <dt class="property-required"
+{{% /md %}}</dd><dt class="property-required"
             title="Required">
         <span id="ttl_go">
 <a href="#ttl_go" style="color: inherit; text-decoration: inherit;">Ttl</a>
@@ -932,8 +976,7 @@ whose meaning depends on the DNS type. For TXT record, if the string data contai
         <span class="property-type">int</span>
     </dt>
     <dd>{{% md %}}The time-to-live of this record set (seconds).
-{{% /md %}}</dd>
-    <dt class="property-required"
+{{% /md %}}</dd><dt class="property-required"
             title="Required">
         <span id="type_go">
 <a href="#type_go" style="color: inherit; text-decoration: inherit;">Type</a>
@@ -942,8 +985,7 @@ whose meaning depends on the DNS type. For TXT record, if the string data contai
         <span class="property-type">string</span>
     </dt>
     <dd>{{% md %}}The DNS record set type.
-{{% /md %}}</dd>
-    <dt class="property-optional"
+{{% /md %}}</dd><dt class="property-optional"
             title="Optional">
         <span id="project_go">
 <a href="#project_go" style="color: inherit; text-decoration: inherit;">Project</a>
@@ -953,14 +995,11 @@ whose meaning depends on the DNS type. For TXT record, if the string data contai
     </dt>
     <dd>{{% md %}}The ID of the project in which the resource belongs. If it
 is not provided, the provider project is used.
-{{% /md %}}</dd>
-</dl>
+{{% /md %}}</dd></dl>
 {{% /choosable %}}
 
 {{% choosable language nodejs %}}
-<dl class="resources-properties">
-
-    <dt class="property-required"
+<dl class="resources-properties"><dt class="property-required"
             title="Required">
         <span id="managedzone_nodejs">
 <a href="#managedzone_nodejs" style="color: inherit; text-decoration: inherit;">managed<wbr>Zone</a>
@@ -970,8 +1009,7 @@ is not provided, the provider project is used.
     </dt>
     <dd>{{% md %}}The name of the zone in which this record set will
 reside.
-{{% /md %}}</dd>
-    <dt class="property-required"
+{{% /md %}}</dd><dt class="property-required"
             title="Required">
         <span id="name_nodejs">
 <a href="#name_nodejs" style="color: inherit; text-decoration: inherit;">name</a>
@@ -980,8 +1018,7 @@ reside.
         <span class="property-type">string</span>
     </dt>
     <dd>{{% md %}}The DNS name this record set will apply to.
-{{% /md %}}</dd>
-    <dt class="property-required"
+{{% /md %}}</dd><dt class="property-required"
             title="Required">
         <span id="rrdatas_nodejs">
 <a href="#rrdatas_nodejs" style="color: inherit; text-decoration: inherit;">rrdatas</a>
@@ -991,8 +1028,7 @@ reside.
     </dt>
     <dd>{{% md %}}The string data for the records in this record set
 whose meaning depends on the DNS type. For TXT record, if the string data contains spaces, add surrounding `\"` if you don't want your string to get split on spaces. To specify a single record value longer than 255 characters such as a TXT record for DKIM, add `\"\"` inside the provider configuration string (e.g. `"first255characters\"\"morecharacters"`).
-{{% /md %}}</dd>
-    <dt class="property-required"
+{{% /md %}}</dd><dt class="property-required"
             title="Required">
         <span id="ttl_nodejs">
 <a href="#ttl_nodejs" style="color: inherit; text-decoration: inherit;">ttl</a>
@@ -1001,8 +1037,7 @@ whose meaning depends on the DNS type. For TXT record, if the string data contai
         <span class="property-type">number</span>
     </dt>
     <dd>{{% md %}}The time-to-live of this record set (seconds).
-{{% /md %}}</dd>
-    <dt class="property-required"
+{{% /md %}}</dd><dt class="property-required"
             title="Required">
         <span id="type_nodejs">
 <a href="#type_nodejs" style="color: inherit; text-decoration: inherit;">type</a>
@@ -1011,8 +1046,7 @@ whose meaning depends on the DNS type. For TXT record, if the string data contai
         <span class="property-type">string</span>
     </dt>
     <dd>{{% md %}}The DNS record set type.
-{{% /md %}}</dd>
-    <dt class="property-optional"
+{{% /md %}}</dd><dt class="property-optional"
             title="Optional">
         <span id="project_nodejs">
 <a href="#project_nodejs" style="color: inherit; text-decoration: inherit;">project</a>
@@ -1022,14 +1056,11 @@ whose meaning depends on the DNS type. For TXT record, if the string data contai
     </dt>
     <dd>{{% md %}}The ID of the project in which the resource belongs. If it
 is not provided, the provider project is used.
-{{% /md %}}</dd>
-</dl>
+{{% /md %}}</dd></dl>
 {{% /choosable %}}
 
 {{% choosable language python %}}
-<dl class="resources-properties">
-
-    <dt class="property-required"
+<dl class="resources-properties"><dt class="property-required"
             title="Required">
         <span id="managed_zone_python">
 <a href="#managed_zone_python" style="color: inherit; text-decoration: inherit;">managed_<wbr>zone</a>
@@ -1039,8 +1070,7 @@ is not provided, the provider project is used.
     </dt>
     <dd>{{% md %}}The name of the zone in which this record set will
 reside.
-{{% /md %}}</dd>
-    <dt class="property-required"
+{{% /md %}}</dd><dt class="property-required"
             title="Required">
         <span id="name_python">
 <a href="#name_python" style="color: inherit; text-decoration: inherit;">name</a>
@@ -1049,8 +1079,7 @@ reside.
         <span class="property-type">str</span>
     </dt>
     <dd>{{% md %}}The DNS name this record set will apply to.
-{{% /md %}}</dd>
-    <dt class="property-required"
+{{% /md %}}</dd><dt class="property-required"
             title="Required">
         <span id="rrdatas_python">
 <a href="#rrdatas_python" style="color: inherit; text-decoration: inherit;">rrdatas</a>
@@ -1060,8 +1089,7 @@ reside.
     </dt>
     <dd>{{% md %}}The string data for the records in this record set
 whose meaning depends on the DNS type. For TXT record, if the string data contains spaces, add surrounding `\"` if you don't want your string to get split on spaces. To specify a single record value longer than 255 characters such as a TXT record for DKIM, add `\"\"` inside the provider configuration string (e.g. `"first255characters\"\"morecharacters"`).
-{{% /md %}}</dd>
-    <dt class="property-required"
+{{% /md %}}</dd><dt class="property-required"
             title="Required">
         <span id="ttl_python">
 <a href="#ttl_python" style="color: inherit; text-decoration: inherit;">ttl</a>
@@ -1070,8 +1098,7 @@ whose meaning depends on the DNS type. For TXT record, if the string data contai
         <span class="property-type">int</span>
     </dt>
     <dd>{{% md %}}The time-to-live of this record set (seconds).
-{{% /md %}}</dd>
-    <dt class="property-required"
+{{% /md %}}</dd><dt class="property-required"
             title="Required">
         <span id="type_python">
 <a href="#type_python" style="color: inherit; text-decoration: inherit;">type</a>
@@ -1080,8 +1107,7 @@ whose meaning depends on the DNS type. For TXT record, if the string data contai
         <span class="property-type">str</span>
     </dt>
     <dd>{{% md %}}The DNS record set type.
-{{% /md %}}</dd>
-    <dt class="property-optional"
+{{% /md %}}</dd><dt class="property-optional"
             title="Optional">
         <span id="project_python">
 <a href="#project_python" style="color: inherit; text-decoration: inherit;">project</a>
@@ -1091,8 +1117,7 @@ whose meaning depends on the DNS type. For TXT record, if the string data contai
     </dt>
     <dd>{{% md %}}The ID of the project in which the resource belongs. If it
 is not provided, the provider project is used.
-{{% /md %}}</dd>
-</dl>
+{{% /md %}}</dd></dl>
 {{% /choosable %}}
 
 
@@ -1103,9 +1128,7 @@ All [input](#inputs) properties are implicitly available as output properties. A
 
 
 {{% choosable language csharp %}}
-<dl class="resources-properties">
-
-    <dt class="property-"
+<dl class="resources-properties"><dt class="property-"
             title="">
         <span id="id_csharp">
 <a href="#id_csharp" style="color: inherit; text-decoration: inherit;">Id</a>
@@ -1113,14 +1136,11 @@ All [input](#inputs) properties are implicitly available as output properties. A
         <span class="property-indicator"></span>
         <span class="property-type">string</span>
     </dt>
-    <dd>{{% md %}}The provider-assigned unique ID for this managed resource.{{% /md %}}</dd>
-</dl>
+    <dd>{{% md %}}The provider-assigned unique ID for this managed resource.{{% /md %}}</dd></dl>
 {{% /choosable %}}
 
 {{% choosable language go %}}
-<dl class="resources-properties">
-
-    <dt class="property-"
+<dl class="resources-properties"><dt class="property-"
             title="">
         <span id="id_go">
 <a href="#id_go" style="color: inherit; text-decoration: inherit;">Id</a>
@@ -1128,14 +1148,11 @@ All [input](#inputs) properties are implicitly available as output properties. A
         <span class="property-indicator"></span>
         <span class="property-type">string</span>
     </dt>
-    <dd>{{% md %}}The provider-assigned unique ID for this managed resource.{{% /md %}}</dd>
-</dl>
+    <dd>{{% md %}}The provider-assigned unique ID for this managed resource.{{% /md %}}</dd></dl>
 {{% /choosable %}}
 
 {{% choosable language nodejs %}}
-<dl class="resources-properties">
-
-    <dt class="property-"
+<dl class="resources-properties"><dt class="property-"
             title="">
         <span id="id_nodejs">
 <a href="#id_nodejs" style="color: inherit; text-decoration: inherit;">id</a>
@@ -1143,14 +1160,11 @@ All [input](#inputs) properties are implicitly available as output properties. A
         <span class="property-indicator"></span>
         <span class="property-type">string</span>
     </dt>
-    <dd>{{% md %}}The provider-assigned unique ID for this managed resource.{{% /md %}}</dd>
-</dl>
+    <dd>{{% md %}}The provider-assigned unique ID for this managed resource.{{% /md %}}</dd></dl>
 {{% /choosable %}}
 
 {{% choosable language python %}}
-<dl class="resources-properties">
-
-    <dt class="property-"
+<dl class="resources-properties"><dt class="property-"
             title="">
         <span id="id_python">
 <a href="#id_python" style="color: inherit; text-decoration: inherit;">id</a>
@@ -1158,8 +1172,7 @@ All [input](#inputs) properties are implicitly available as output properties. A
         <span class="property-indicator"></span>
         <span class="property-type">str</span>
     </dt>
-    <dd>{{% md %}}The provider-assigned unique ID for this managed resource.{{% /md %}}</dd>
-</dl>
+    <dd>{{% md %}}The provider-assigned unique ID for this managed resource.{{% /md %}}</dd></dl>
 {{% /choosable %}}
 
 
@@ -1286,9 +1299,7 @@ The following state arguments are supported:
 
 
 {{% choosable language csharp %}}
-<dl class="resources-properties">
-
-    <dt class="property-optional"
+<dl class="resources-properties"><dt class="property-optional"
             title="Optional">
         <span id="state_managedzone_csharp">
 <a href="#state_managedzone_csharp" style="color: inherit; text-decoration: inherit;">Managed<wbr>Zone</a>
@@ -1298,8 +1309,7 @@ The following state arguments are supported:
     </dt>
     <dd>{{% md %}}The name of the zone in which this record set will
 reside.
-{{% /md %}}</dd>
-    <dt class="property-optional"
+{{% /md %}}</dd><dt class="property-optional"
             title="Optional">
         <span id="state_name_csharp">
 <a href="#state_name_csharp" style="color: inherit; text-decoration: inherit;">Name</a>
@@ -1308,8 +1318,7 @@ reside.
         <span class="property-type">string</span>
     </dt>
     <dd>{{% md %}}The DNS name this record set will apply to.
-{{% /md %}}</dd>
-    <dt class="property-optional"
+{{% /md %}}</dd><dt class="property-optional"
             title="Optional">
         <span id="state_project_csharp">
 <a href="#state_project_csharp" style="color: inherit; text-decoration: inherit;">Project</a>
@@ -1319,8 +1328,7 @@ reside.
     </dt>
     <dd>{{% md %}}The ID of the project in which the resource belongs. If it
 is not provided, the provider project is used.
-{{% /md %}}</dd>
-    <dt class="property-optional"
+{{% /md %}}</dd><dt class="property-optional"
             title="Optional">
         <span id="state_rrdatas_csharp">
 <a href="#state_rrdatas_csharp" style="color: inherit; text-decoration: inherit;">Rrdatas</a>
@@ -1330,8 +1338,7 @@ is not provided, the provider project is used.
     </dt>
     <dd>{{% md %}}The string data for the records in this record set
 whose meaning depends on the DNS type. For TXT record, if the string data contains spaces, add surrounding `\"` if you don't want your string to get split on spaces. To specify a single record value longer than 255 characters such as a TXT record for DKIM, add `\"\"` inside the provider configuration string (e.g. `"first255characters\"\"morecharacters"`).
-{{% /md %}}</dd>
-    <dt class="property-optional"
+{{% /md %}}</dd><dt class="property-optional"
             title="Optional">
         <span id="state_ttl_csharp">
 <a href="#state_ttl_csharp" style="color: inherit; text-decoration: inherit;">Ttl</a>
@@ -1340,8 +1347,7 @@ whose meaning depends on the DNS type. For TXT record, if the string data contai
         <span class="property-type">int</span>
     </dt>
     <dd>{{% md %}}The time-to-live of this record set (seconds).
-{{% /md %}}</dd>
-    <dt class="property-optional"
+{{% /md %}}</dd><dt class="property-optional"
             title="Optional">
         <span id="state_type_csharp">
 <a href="#state_type_csharp" style="color: inherit; text-decoration: inherit;">Type</a>
@@ -1350,14 +1356,11 @@ whose meaning depends on the DNS type. For TXT record, if the string data contai
         <span class="property-type">string</span>
     </dt>
     <dd>{{% md %}}The DNS record set type.
-{{% /md %}}</dd>
-</dl>
+{{% /md %}}</dd></dl>
 {{% /choosable %}}
 
 {{% choosable language go %}}
-<dl class="resources-properties">
-
-    <dt class="property-optional"
+<dl class="resources-properties"><dt class="property-optional"
             title="Optional">
         <span id="state_managedzone_go">
 <a href="#state_managedzone_go" style="color: inherit; text-decoration: inherit;">Managed<wbr>Zone</a>
@@ -1367,8 +1370,7 @@ whose meaning depends on the DNS type. For TXT record, if the string data contai
     </dt>
     <dd>{{% md %}}The name of the zone in which this record set will
 reside.
-{{% /md %}}</dd>
-    <dt class="property-optional"
+{{% /md %}}</dd><dt class="property-optional"
             title="Optional">
         <span id="state_name_go">
 <a href="#state_name_go" style="color: inherit; text-decoration: inherit;">Name</a>
@@ -1377,8 +1379,7 @@ reside.
         <span class="property-type">string</span>
     </dt>
     <dd>{{% md %}}The DNS name this record set will apply to.
-{{% /md %}}</dd>
-    <dt class="property-optional"
+{{% /md %}}</dd><dt class="property-optional"
             title="Optional">
         <span id="state_project_go">
 <a href="#state_project_go" style="color: inherit; text-decoration: inherit;">Project</a>
@@ -1388,8 +1389,7 @@ reside.
     </dt>
     <dd>{{% md %}}The ID of the project in which the resource belongs. If it
 is not provided, the provider project is used.
-{{% /md %}}</dd>
-    <dt class="property-optional"
+{{% /md %}}</dd><dt class="property-optional"
             title="Optional">
         <span id="state_rrdatas_go">
 <a href="#state_rrdatas_go" style="color: inherit; text-decoration: inherit;">Rrdatas</a>
@@ -1399,8 +1399,7 @@ is not provided, the provider project is used.
     </dt>
     <dd>{{% md %}}The string data for the records in this record set
 whose meaning depends on the DNS type. For TXT record, if the string data contains spaces, add surrounding `\"` if you don't want your string to get split on spaces. To specify a single record value longer than 255 characters such as a TXT record for DKIM, add `\"\"` inside the provider configuration string (e.g. `"first255characters\"\"morecharacters"`).
-{{% /md %}}</dd>
-    <dt class="property-optional"
+{{% /md %}}</dd><dt class="property-optional"
             title="Optional">
         <span id="state_ttl_go">
 <a href="#state_ttl_go" style="color: inherit; text-decoration: inherit;">Ttl</a>
@@ -1409,8 +1408,7 @@ whose meaning depends on the DNS type. For TXT record, if the string data contai
         <span class="property-type">int</span>
     </dt>
     <dd>{{% md %}}The time-to-live of this record set (seconds).
-{{% /md %}}</dd>
-    <dt class="property-optional"
+{{% /md %}}</dd><dt class="property-optional"
             title="Optional">
         <span id="state_type_go">
 <a href="#state_type_go" style="color: inherit; text-decoration: inherit;">Type</a>
@@ -1419,14 +1417,11 @@ whose meaning depends on the DNS type. For TXT record, if the string data contai
         <span class="property-type">string</span>
     </dt>
     <dd>{{% md %}}The DNS record set type.
-{{% /md %}}</dd>
-</dl>
+{{% /md %}}</dd></dl>
 {{% /choosable %}}
 
 {{% choosable language nodejs %}}
-<dl class="resources-properties">
-
-    <dt class="property-optional"
+<dl class="resources-properties"><dt class="property-optional"
             title="Optional">
         <span id="state_managedzone_nodejs">
 <a href="#state_managedzone_nodejs" style="color: inherit; text-decoration: inherit;">managed<wbr>Zone</a>
@@ -1436,8 +1431,7 @@ whose meaning depends on the DNS type. For TXT record, if the string data contai
     </dt>
     <dd>{{% md %}}The name of the zone in which this record set will
 reside.
-{{% /md %}}</dd>
-    <dt class="property-optional"
+{{% /md %}}</dd><dt class="property-optional"
             title="Optional">
         <span id="state_name_nodejs">
 <a href="#state_name_nodejs" style="color: inherit; text-decoration: inherit;">name</a>
@@ -1446,8 +1440,7 @@ reside.
         <span class="property-type">string</span>
     </dt>
     <dd>{{% md %}}The DNS name this record set will apply to.
-{{% /md %}}</dd>
-    <dt class="property-optional"
+{{% /md %}}</dd><dt class="property-optional"
             title="Optional">
         <span id="state_project_nodejs">
 <a href="#state_project_nodejs" style="color: inherit; text-decoration: inherit;">project</a>
@@ -1457,8 +1450,7 @@ reside.
     </dt>
     <dd>{{% md %}}The ID of the project in which the resource belongs. If it
 is not provided, the provider project is used.
-{{% /md %}}</dd>
-    <dt class="property-optional"
+{{% /md %}}</dd><dt class="property-optional"
             title="Optional">
         <span id="state_rrdatas_nodejs">
 <a href="#state_rrdatas_nodejs" style="color: inherit; text-decoration: inherit;">rrdatas</a>
@@ -1468,8 +1460,7 @@ is not provided, the provider project is used.
     </dt>
     <dd>{{% md %}}The string data for the records in this record set
 whose meaning depends on the DNS type. For TXT record, if the string data contains spaces, add surrounding `\"` if you don't want your string to get split on spaces. To specify a single record value longer than 255 characters such as a TXT record for DKIM, add `\"\"` inside the provider configuration string (e.g. `"first255characters\"\"morecharacters"`).
-{{% /md %}}</dd>
-    <dt class="property-optional"
+{{% /md %}}</dd><dt class="property-optional"
             title="Optional">
         <span id="state_ttl_nodejs">
 <a href="#state_ttl_nodejs" style="color: inherit; text-decoration: inherit;">ttl</a>
@@ -1478,8 +1469,7 @@ whose meaning depends on the DNS type. For TXT record, if the string data contai
         <span class="property-type">number</span>
     </dt>
     <dd>{{% md %}}The time-to-live of this record set (seconds).
-{{% /md %}}</dd>
-    <dt class="property-optional"
+{{% /md %}}</dd><dt class="property-optional"
             title="Optional">
         <span id="state_type_nodejs">
 <a href="#state_type_nodejs" style="color: inherit; text-decoration: inherit;">type</a>
@@ -1488,14 +1478,11 @@ whose meaning depends on the DNS type. For TXT record, if the string data contai
         <span class="property-type">string</span>
     </dt>
     <dd>{{% md %}}The DNS record set type.
-{{% /md %}}</dd>
-</dl>
+{{% /md %}}</dd></dl>
 {{% /choosable %}}
 
 {{% choosable language python %}}
-<dl class="resources-properties">
-
-    <dt class="property-optional"
+<dl class="resources-properties"><dt class="property-optional"
             title="Optional">
         <span id="state_managed_zone_python">
 <a href="#state_managed_zone_python" style="color: inherit; text-decoration: inherit;">managed_<wbr>zone</a>
@@ -1505,8 +1492,7 @@ whose meaning depends on the DNS type. For TXT record, if the string data contai
     </dt>
     <dd>{{% md %}}The name of the zone in which this record set will
 reside.
-{{% /md %}}</dd>
-    <dt class="property-optional"
+{{% /md %}}</dd><dt class="property-optional"
             title="Optional">
         <span id="state_name_python">
 <a href="#state_name_python" style="color: inherit; text-decoration: inherit;">name</a>
@@ -1515,8 +1501,7 @@ reside.
         <span class="property-type">str</span>
     </dt>
     <dd>{{% md %}}The DNS name this record set will apply to.
-{{% /md %}}</dd>
-    <dt class="property-optional"
+{{% /md %}}</dd><dt class="property-optional"
             title="Optional">
         <span id="state_project_python">
 <a href="#state_project_python" style="color: inherit; text-decoration: inherit;">project</a>
@@ -1526,8 +1511,7 @@ reside.
     </dt>
     <dd>{{% md %}}The ID of the project in which the resource belongs. If it
 is not provided, the provider project is used.
-{{% /md %}}</dd>
-    <dt class="property-optional"
+{{% /md %}}</dd><dt class="property-optional"
             title="Optional">
         <span id="state_rrdatas_python">
 <a href="#state_rrdatas_python" style="color: inherit; text-decoration: inherit;">rrdatas</a>
@@ -1537,8 +1521,7 @@ is not provided, the provider project is used.
     </dt>
     <dd>{{% md %}}The string data for the records in this record set
 whose meaning depends on the DNS type. For TXT record, if the string data contains spaces, add surrounding `\"` if you don't want your string to get split on spaces. To specify a single record value longer than 255 characters such as a TXT record for DKIM, add `\"\"` inside the provider configuration string (e.g. `"first255characters\"\"morecharacters"`).
-{{% /md %}}</dd>
-    <dt class="property-optional"
+{{% /md %}}</dd><dt class="property-optional"
             title="Optional">
         <span id="state_ttl_python">
 <a href="#state_ttl_python" style="color: inherit; text-decoration: inherit;">ttl</a>
@@ -1547,8 +1530,7 @@ whose meaning depends on the DNS type. For TXT record, if the string data contai
         <span class="property-type">int</span>
     </dt>
     <dd>{{% md %}}The time-to-live of this record set (seconds).
-{{% /md %}}</dd>
-    <dt class="property-optional"
+{{% /md %}}</dd><dt class="property-optional"
             title="Optional">
         <span id="state_type_python">
 <a href="#state_type_python" style="color: inherit; text-decoration: inherit;">type</a>
@@ -1557,8 +1539,7 @@ whose meaning depends on the DNS type. For TXT record, if the string data contai
         <span class="property-type">str</span>
     </dt>
     <dd>{{% md %}}The DNS record set type.
-{{% /md %}}</dd>
-</dl>
+{{% /md %}}</dd></dl>
 {{% /choosable %}}
 
 
@@ -1590,6 +1571,6 @@ DNS record sets can be imported using either of these accepted formats
 	<dt>License</dt>
 	<dd>Apache-2.0</dd>
 	<dt>Notes</dt>
-	<dd>This Pulumi package is based on the [`google-beta` Terraform Provider](https://github.com/hashicorp/terraform-provider-google-beta).</dd>
+	<dd>{{% md %}}This Pulumi package is based on the [`google-beta` Terraform Provider](https://github.com/hashicorp/terraform-provider-google-beta).{{% /md %}}</dd>
 </dl>
 

@@ -40,9 +40,7 @@ construction to achieve fine-grained programmatic control over provider settings
 
 {{% choosable language nodejs %}}
 
-<dl class="resources-properties">
-  
-    <dt
+<dl class="resources-properties"><dt
         class="property-required" title="Required">
         <span>name</span>
         <span class="property-indicator"></span>
@@ -50,9 +48,7 @@ construction to achieve fine-grained programmatic control over provider settings
     </dt>
     <dd>
       The unique name of the resource.
-    </dd>
-  
-    <dt
+    </dd><dt
         class="property-optional" title="Optional">
         <span>args</span>
         <span class="property-indicator"></span>
@@ -60,9 +56,7 @@ construction to achieve fine-grained programmatic control over provider settings
     </dt>
     <dd>
       The arguments to resource properties.
-    </dd>
-  
-    <dt
+    </dd><dt
         class="property-optional" title="Optional">
         <span>opts</span>
         <span class="property-indicator"></span>
@@ -70,10 +64,7 @@ construction to achieve fine-grained programmatic control over provider settings
     </dt>
     <dd>
       Bag of options to control resource&#39;s behavior.
-    </dd>
-  
-
-</dl>
+    </dd></dl>
 
 {{% /choosable %}}
 
@@ -99,9 +90,7 @@ construction to achieve fine-grained programmatic control over provider settings
 
 {{% choosable language go %}}
 
-<dl class="resources-properties">
-  
-    <dt
+<dl class="resources-properties"><dt
         class="property-optional" title="Optional">
         <span>ctx</span>
         <span class="property-indicator"></span>
@@ -109,9 +98,7 @@ construction to achieve fine-grained programmatic control over provider settings
     </dt>
     <dd>
       Context object for the current deployment.
-    </dd>
-  
-    <dt
+    </dd><dt
         class="property-required" title="Required">
         <span>name</span>
         <span class="property-indicator"></span>
@@ -119,9 +106,7 @@ construction to achieve fine-grained programmatic control over provider settings
     </dt>
     <dd>
       The unique name of the resource.
-    </dd>
-  
-    <dt
+    </dd><dt
         class="property-optional" title="Optional">
         <span>args</span>
         <span class="property-indicator"></span>
@@ -129,9 +114,7 @@ construction to achieve fine-grained programmatic control over provider settings
     </dt>
     <dd>
       The arguments to resource properties.
-    </dd>
-  
-    <dt
+    </dd><dt
         class="property-optional" title="Optional">
         <span>opts</span>
         <span class="property-indicator"></span>
@@ -139,18 +122,13 @@ construction to achieve fine-grained programmatic control over provider settings
     </dt>
     <dd>
       Bag of options to control resource&#39;s behavior.
-    </dd>
-  
-
-</dl>
+    </dd></dl>
 
 {{% /choosable %}}
 
 {{% choosable language csharp %}}
 
-<dl class="resources-properties">
-  
-    <dt
+<dl class="resources-properties"><dt
         class="property-required" title="Required">
         <span>name</span>
         <span class="property-indicator"></span>
@@ -158,9 +136,7 @@ construction to achieve fine-grained programmatic control over provider settings
     </dt>
     <dd>
       The unique name of the resource.
-    </dd>
-  
-    <dt
+    </dd><dt
         class="property-optional" title="Optional">
         <span>args</span>
         <span class="property-indicator"></span>
@@ -168,9 +144,7 @@ construction to achieve fine-grained programmatic control over provider settings
     </dt>
     <dd>
       The arguments to resource properties.
-    </dd>
-  
-    <dt
+    </dd><dt
         class="property-optional" title="Optional">
         <span>opts</span>
         <span class="property-indicator"></span>
@@ -178,10 +152,7 @@ construction to achieve fine-grained programmatic control over provider settings
     </dt>
     <dd>
       Bag of options to control resource&#39;s behavior.
-    </dd>
-  
-
-</dl>
+    </dd></dl>
 
 {{% /choosable %}}
 
@@ -196,9 +167,7 @@ The Provider resource accepts the following [input]({{< relref "/docs/intro/conc
 
 
 {{% choosable language csharp %}}
-<dl class="resources-properties">
-
-    <dt class="property-optional"
+<dl class="resources-properties"><dt class="property-optional"
             title="Optional">
         <span id="accesstoken_csharp">
 <a href="#accesstoken_csharp" style="color: inherit; text-decoration: inherit;">Access<wbr>Token</a>
@@ -207,8 +176,7 @@ The Provider resource accepts the following [input]({{< relref "/docs/intro/conc
         <span class="property-type">string</span>
     </dt>
     <dd>{{% md %}}Access token for TPP, user should use this for authentication
-{{% /md %}}</dd>
-    <dt class="property-optional"
+{{% /md %}}</dd><dt class="property-optional"
             title="Optional">
         <span id="apikey_csharp">
 <a href="#apikey_csharp" style="color: inherit; text-decoration: inherit;">Api<wbr>Key</a>
@@ -217,8 +185,7 @@ The Provider resource accepts the following [input]({{< relref "/docs/intro/conc
         <span class="property-type">string</span>
     </dt>
     <dd>{{% md %}}API key for Venafi Cloud. Example: 142231b7-cvb0-412e-886b-6aeght0bc93d
-{{% /md %}}</dd>
-    <dt class="property-optional"
+{{% /md %}}</dd><dt class="property-optional"
             title="Optional">
         <span id="devmode_csharp">
 <a href="#devmode_csharp" style="color: inherit; text-decoration: inherit;">Dev<wbr>Mode</a>
@@ -228,8 +195,7 @@ The Provider resource accepts the following [input]({{< relref "/docs/intro/conc
     </dt>
     <dd>{{% md %}}When set to true, the resulting certificate will be issued by an ephemeral, no trust CA rather than enrolling using
 Venafi Cloud or Platform. Useful for development and testing.
-{{% /md %}}</dd>
-    <dt class="property-optional property-deprecated"
+{{% /md %}}</dd><dt class="property-optional property-deprecated"
             title="Optional, Deprecated">
         <span id="tpppassword_csharp">
 <a href="#tpppassword_csharp" style="color: inherit; text-decoration: inherit;">Tpp<wbr>Password</a>
@@ -238,8 +204,7 @@ Venafi Cloud or Platform. Useful for development and testing.
         <span class="property-type">string</span>
     </dt>
     <dd>{{% md %}}Password for WebSDK user. Example: password
-{{% /md %}}<p class="property-message">Deprecated: {{% md %}}, please use access_token instead{{% /md %}}</p></dd>
-    <dt class="property-optional property-deprecated"
+{{% /md %}}<p class="property-message">Deprecated: {{% md %}}, please use access_token instead{{% /md %}}</p></dd><dt class="property-optional property-deprecated"
             title="Optional, Deprecated">
         <span id="tppusername_csharp">
 <a href="#tppusername_csharp" style="color: inherit; text-decoration: inherit;">Tpp<wbr>Username</a>
@@ -248,8 +213,7 @@ Venafi Cloud or Platform. Useful for development and testing.
         <span class="property-type">string</span>
     </dt>
     <dd>{{% md %}}WebSDK user for Venafi Platform. Example: admin
-{{% /md %}}<p class="property-message">Deprecated: {{% md %}}, please use access_token instead{{% /md %}}</p></dd>
-    <dt class="property-optional"
+{{% /md %}}<p class="property-message">Deprecated: {{% md %}}, please use access_token instead{{% /md %}}</p></dd><dt class="property-optional"
             title="Optional">
         <span id="trustbundle_csharp">
 <a href="#trustbundle_csharp" style="color: inherit; text-decoration: inherit;">Trust<wbr>Bundle</a>
@@ -259,8 +223,7 @@ Venafi Cloud or Platform. Useful for development and testing.
     </dt>
     <dd>{{% md %}}Use to specify a PEM-formatted file that contains certificates to be trust anchors for all communications with the
 Venafi Web Service. Example: trust_bundle = "${file("chain.pem")}"
-{{% /md %}}</dd>
-    <dt class="property-optional"
+{{% /md %}}</dd><dt class="property-optional"
             title="Optional">
         <span id="url_csharp">
 <a href="#url_csharp" style="color: inherit; text-decoration: inherit;">Url</a>
@@ -269,8 +232,7 @@ Venafi Web Service. Example: trust_bundle = "${file("chain.pem")}"
         <span class="property-type">string</span>
     </dt>
     <dd>{{% md %}}The Venafi Web Service URL.. Example: https://tpp.venafi.example/vedsdk
-{{% /md %}}</dd>
-    <dt class="property-optional"
+{{% /md %}}</dd><dt class="property-optional"
             title="Optional">
         <span id="zone_csharp">
 <a href="#zone_csharp" style="color: inherit; text-decoration: inherit;">Zone</a>
@@ -280,14 +242,11 @@ Venafi Web Service. Example: trust_bundle = "${file("chain.pem")}"
     </dt>
     <dd>{{% md %}}DN of the Venafi Platform policy folder or name of the Venafi Cloud zone. Example for Platform: testpolicy\\vault
 Example for Venafi Cloud: Default
-{{% /md %}}</dd>
-</dl>
+{{% /md %}}</dd></dl>
 {{% /choosable %}}
 
 {{% choosable language go %}}
-<dl class="resources-properties">
-
-    <dt class="property-optional"
+<dl class="resources-properties"><dt class="property-optional"
             title="Optional">
         <span id="accesstoken_go">
 <a href="#accesstoken_go" style="color: inherit; text-decoration: inherit;">Access<wbr>Token</a>
@@ -296,8 +255,7 @@ Example for Venafi Cloud: Default
         <span class="property-type">string</span>
     </dt>
     <dd>{{% md %}}Access token for TPP, user should use this for authentication
-{{% /md %}}</dd>
-    <dt class="property-optional"
+{{% /md %}}</dd><dt class="property-optional"
             title="Optional">
         <span id="apikey_go">
 <a href="#apikey_go" style="color: inherit; text-decoration: inherit;">Api<wbr>Key</a>
@@ -306,8 +264,7 @@ Example for Venafi Cloud: Default
         <span class="property-type">string</span>
     </dt>
     <dd>{{% md %}}API key for Venafi Cloud. Example: 142231b7-cvb0-412e-886b-6aeght0bc93d
-{{% /md %}}</dd>
-    <dt class="property-optional"
+{{% /md %}}</dd><dt class="property-optional"
             title="Optional">
         <span id="devmode_go">
 <a href="#devmode_go" style="color: inherit; text-decoration: inherit;">Dev<wbr>Mode</a>
@@ -317,8 +274,7 @@ Example for Venafi Cloud: Default
     </dt>
     <dd>{{% md %}}When set to true, the resulting certificate will be issued by an ephemeral, no trust CA rather than enrolling using
 Venafi Cloud or Platform. Useful for development and testing.
-{{% /md %}}</dd>
-    <dt class="property-optional property-deprecated"
+{{% /md %}}</dd><dt class="property-optional property-deprecated"
             title="Optional, Deprecated">
         <span id="tpppassword_go">
 <a href="#tpppassword_go" style="color: inherit; text-decoration: inherit;">Tpp<wbr>Password</a>
@@ -327,8 +283,7 @@ Venafi Cloud or Platform. Useful for development and testing.
         <span class="property-type">string</span>
     </dt>
     <dd>{{% md %}}Password for WebSDK user. Example: password
-{{% /md %}}<p class="property-message">Deprecated: {{% md %}}, please use access_token instead{{% /md %}}</p></dd>
-    <dt class="property-optional property-deprecated"
+{{% /md %}}<p class="property-message">Deprecated: {{% md %}}, please use access_token instead{{% /md %}}</p></dd><dt class="property-optional property-deprecated"
             title="Optional, Deprecated">
         <span id="tppusername_go">
 <a href="#tppusername_go" style="color: inherit; text-decoration: inherit;">Tpp<wbr>Username</a>
@@ -337,8 +292,7 @@ Venafi Cloud or Platform. Useful for development and testing.
         <span class="property-type">string</span>
     </dt>
     <dd>{{% md %}}WebSDK user for Venafi Platform. Example: admin
-{{% /md %}}<p class="property-message">Deprecated: {{% md %}}, please use access_token instead{{% /md %}}</p></dd>
-    <dt class="property-optional"
+{{% /md %}}<p class="property-message">Deprecated: {{% md %}}, please use access_token instead{{% /md %}}</p></dd><dt class="property-optional"
             title="Optional">
         <span id="trustbundle_go">
 <a href="#trustbundle_go" style="color: inherit; text-decoration: inherit;">Trust<wbr>Bundle</a>
@@ -348,8 +302,7 @@ Venafi Cloud or Platform. Useful for development and testing.
     </dt>
     <dd>{{% md %}}Use to specify a PEM-formatted file that contains certificates to be trust anchors for all communications with the
 Venafi Web Service. Example: trust_bundle = "${file("chain.pem")}"
-{{% /md %}}</dd>
-    <dt class="property-optional"
+{{% /md %}}</dd><dt class="property-optional"
             title="Optional">
         <span id="url_go">
 <a href="#url_go" style="color: inherit; text-decoration: inherit;">Url</a>
@@ -358,8 +311,7 @@ Venafi Web Service. Example: trust_bundle = "${file("chain.pem")}"
         <span class="property-type">string</span>
     </dt>
     <dd>{{% md %}}The Venafi Web Service URL.. Example: https://tpp.venafi.example/vedsdk
-{{% /md %}}</dd>
-    <dt class="property-optional"
+{{% /md %}}</dd><dt class="property-optional"
             title="Optional">
         <span id="zone_go">
 <a href="#zone_go" style="color: inherit; text-decoration: inherit;">Zone</a>
@@ -369,14 +321,11 @@ Venafi Web Service. Example: trust_bundle = "${file("chain.pem")}"
     </dt>
     <dd>{{% md %}}DN of the Venafi Platform policy folder or name of the Venafi Cloud zone. Example for Platform: testpolicy\\vault
 Example for Venafi Cloud: Default
-{{% /md %}}</dd>
-</dl>
+{{% /md %}}</dd></dl>
 {{% /choosable %}}
 
 {{% choosable language nodejs %}}
-<dl class="resources-properties">
-
-    <dt class="property-optional"
+<dl class="resources-properties"><dt class="property-optional"
             title="Optional">
         <span id="accesstoken_nodejs">
 <a href="#accesstoken_nodejs" style="color: inherit; text-decoration: inherit;">access<wbr>Token</a>
@@ -385,8 +334,7 @@ Example for Venafi Cloud: Default
         <span class="property-type">string</span>
     </dt>
     <dd>{{% md %}}Access token for TPP, user should use this for authentication
-{{% /md %}}</dd>
-    <dt class="property-optional"
+{{% /md %}}</dd><dt class="property-optional"
             title="Optional">
         <span id="apikey_nodejs">
 <a href="#apikey_nodejs" style="color: inherit; text-decoration: inherit;">api<wbr>Key</a>
@@ -395,8 +343,7 @@ Example for Venafi Cloud: Default
         <span class="property-type">string</span>
     </dt>
     <dd>{{% md %}}API key for Venafi Cloud. Example: 142231b7-cvb0-412e-886b-6aeght0bc93d
-{{% /md %}}</dd>
-    <dt class="property-optional"
+{{% /md %}}</dd><dt class="property-optional"
             title="Optional">
         <span id="devmode_nodejs">
 <a href="#devmode_nodejs" style="color: inherit; text-decoration: inherit;">dev<wbr>Mode</a>
@@ -406,8 +353,7 @@ Example for Venafi Cloud: Default
     </dt>
     <dd>{{% md %}}When set to true, the resulting certificate will be issued by an ephemeral, no trust CA rather than enrolling using
 Venafi Cloud or Platform. Useful for development and testing.
-{{% /md %}}</dd>
-    <dt class="property-optional property-deprecated"
+{{% /md %}}</dd><dt class="property-optional property-deprecated"
             title="Optional, Deprecated">
         <span id="tpppassword_nodejs">
 <a href="#tpppassword_nodejs" style="color: inherit; text-decoration: inherit;">tpp<wbr>Password</a>
@@ -416,8 +362,7 @@ Venafi Cloud or Platform. Useful for development and testing.
         <span class="property-type">string</span>
     </dt>
     <dd>{{% md %}}Password for WebSDK user. Example: password
-{{% /md %}}<p class="property-message">Deprecated: {{% md %}}, please use access_token instead{{% /md %}}</p></dd>
-    <dt class="property-optional property-deprecated"
+{{% /md %}}<p class="property-message">Deprecated: {{% md %}}, please use access_token instead{{% /md %}}</p></dd><dt class="property-optional property-deprecated"
             title="Optional, Deprecated">
         <span id="tppusername_nodejs">
 <a href="#tppusername_nodejs" style="color: inherit; text-decoration: inherit;">tpp<wbr>Username</a>
@@ -426,8 +371,7 @@ Venafi Cloud or Platform. Useful for development and testing.
         <span class="property-type">string</span>
     </dt>
     <dd>{{% md %}}WebSDK user for Venafi Platform. Example: admin
-{{% /md %}}<p class="property-message">Deprecated: {{% md %}}, please use access_token instead{{% /md %}}</p></dd>
-    <dt class="property-optional"
+{{% /md %}}<p class="property-message">Deprecated: {{% md %}}, please use access_token instead{{% /md %}}</p></dd><dt class="property-optional"
             title="Optional">
         <span id="trustbundle_nodejs">
 <a href="#trustbundle_nodejs" style="color: inherit; text-decoration: inherit;">trust<wbr>Bundle</a>
@@ -437,8 +381,7 @@ Venafi Cloud or Platform. Useful for development and testing.
     </dt>
     <dd>{{% md %}}Use to specify a PEM-formatted file that contains certificates to be trust anchors for all communications with the
 Venafi Web Service. Example: trust_bundle = "${file("chain.pem")}"
-{{% /md %}}</dd>
-    <dt class="property-optional"
+{{% /md %}}</dd><dt class="property-optional"
             title="Optional">
         <span id="url_nodejs">
 <a href="#url_nodejs" style="color: inherit; text-decoration: inherit;">url</a>
@@ -447,8 +390,7 @@ Venafi Web Service. Example: trust_bundle = "${file("chain.pem")}"
         <span class="property-type">string</span>
     </dt>
     <dd>{{% md %}}The Venafi Web Service URL.. Example: https://tpp.venafi.example/vedsdk
-{{% /md %}}</dd>
-    <dt class="property-optional"
+{{% /md %}}</dd><dt class="property-optional"
             title="Optional">
         <span id="zone_nodejs">
 <a href="#zone_nodejs" style="color: inherit; text-decoration: inherit;">zone</a>
@@ -458,14 +400,11 @@ Venafi Web Service. Example: trust_bundle = "${file("chain.pem")}"
     </dt>
     <dd>{{% md %}}DN of the Venafi Platform policy folder or name of the Venafi Cloud zone. Example for Platform: testpolicy\\vault
 Example for Venafi Cloud: Default
-{{% /md %}}</dd>
-</dl>
+{{% /md %}}</dd></dl>
 {{% /choosable %}}
 
 {{% choosable language python %}}
-<dl class="resources-properties">
-
-    <dt class="property-optional"
+<dl class="resources-properties"><dt class="property-optional"
             title="Optional">
         <span id="access_token_python">
 <a href="#access_token_python" style="color: inherit; text-decoration: inherit;">access_<wbr>token</a>
@@ -474,8 +413,7 @@ Example for Venafi Cloud: Default
         <span class="property-type">str</span>
     </dt>
     <dd>{{% md %}}Access token for TPP, user should use this for authentication
-{{% /md %}}</dd>
-    <dt class="property-optional"
+{{% /md %}}</dd><dt class="property-optional"
             title="Optional">
         <span id="api_key_python">
 <a href="#api_key_python" style="color: inherit; text-decoration: inherit;">api_<wbr>key</a>
@@ -484,8 +422,7 @@ Example for Venafi Cloud: Default
         <span class="property-type">str</span>
     </dt>
     <dd>{{% md %}}API key for Venafi Cloud. Example: 142231b7-cvb0-412e-886b-6aeght0bc93d
-{{% /md %}}</dd>
-    <dt class="property-optional"
+{{% /md %}}</dd><dt class="property-optional"
             title="Optional">
         <span id="dev_mode_python">
 <a href="#dev_mode_python" style="color: inherit; text-decoration: inherit;">dev_<wbr>mode</a>
@@ -495,8 +432,7 @@ Example for Venafi Cloud: Default
     </dt>
     <dd>{{% md %}}When set to true, the resulting certificate will be issued by an ephemeral, no trust CA rather than enrolling using
 Venafi Cloud or Platform. Useful for development and testing.
-{{% /md %}}</dd>
-    <dt class="property-optional property-deprecated"
+{{% /md %}}</dd><dt class="property-optional property-deprecated"
             title="Optional, Deprecated">
         <span id="tpp_password_python">
 <a href="#tpp_password_python" style="color: inherit; text-decoration: inherit;">tpp_<wbr>password</a>
@@ -505,8 +441,7 @@ Venafi Cloud or Platform. Useful for development and testing.
         <span class="property-type">str</span>
     </dt>
     <dd>{{% md %}}Password for WebSDK user. Example: password
-{{% /md %}}<p class="property-message">Deprecated: {{% md %}}, please use access_token instead{{% /md %}}</p></dd>
-    <dt class="property-optional property-deprecated"
+{{% /md %}}<p class="property-message">Deprecated: {{% md %}}, please use access_token instead{{% /md %}}</p></dd><dt class="property-optional property-deprecated"
             title="Optional, Deprecated">
         <span id="tpp_username_python">
 <a href="#tpp_username_python" style="color: inherit; text-decoration: inherit;">tpp_<wbr>username</a>
@@ -515,8 +450,7 @@ Venafi Cloud or Platform. Useful for development and testing.
         <span class="property-type">str</span>
     </dt>
     <dd>{{% md %}}WebSDK user for Venafi Platform. Example: admin
-{{% /md %}}<p class="property-message">Deprecated: {{% md %}}, please use access_token instead{{% /md %}}</p></dd>
-    <dt class="property-optional"
+{{% /md %}}<p class="property-message">Deprecated: {{% md %}}, please use access_token instead{{% /md %}}</p></dd><dt class="property-optional"
             title="Optional">
         <span id="trust_bundle_python">
 <a href="#trust_bundle_python" style="color: inherit; text-decoration: inherit;">trust_<wbr>bundle</a>
@@ -526,8 +460,7 @@ Venafi Cloud or Platform. Useful for development and testing.
     </dt>
     <dd>{{% md %}}Use to specify a PEM-formatted file that contains certificates to be trust anchors for all communications with the
 Venafi Web Service. Example: trust_bundle = "${file("chain.pem")}"
-{{% /md %}}</dd>
-    <dt class="property-optional"
+{{% /md %}}</dd><dt class="property-optional"
             title="Optional">
         <span id="url_python">
 <a href="#url_python" style="color: inherit; text-decoration: inherit;">url</a>
@@ -536,8 +469,7 @@ Venafi Web Service. Example: trust_bundle = "${file("chain.pem")}"
         <span class="property-type">str</span>
     </dt>
     <dd>{{% md %}}The Venafi Web Service URL.. Example: https://tpp.venafi.example/vedsdk
-{{% /md %}}</dd>
-    <dt class="property-optional"
+{{% /md %}}</dd><dt class="property-optional"
             title="Optional">
         <span id="zone_python">
 <a href="#zone_python" style="color: inherit; text-decoration: inherit;">zone</a>
@@ -547,8 +479,7 @@ Venafi Web Service. Example: trust_bundle = "${file("chain.pem")}"
     </dt>
     <dd>{{% md %}}DN of the Venafi Platform policy folder or name of the Venafi Cloud zone. Example for Platform: testpolicy\\vault
 Example for Venafi Cloud: Default
-{{% /md %}}</dd>
-</dl>
+{{% /md %}}</dd></dl>
 {{% /choosable %}}
 
 
@@ -559,9 +490,7 @@ All [input](#inputs) properties are implicitly available as output properties. A
 
 
 {{% choosable language csharp %}}
-<dl class="resources-properties">
-
-    <dt class="property-"
+<dl class="resources-properties"><dt class="property-"
             title="">
         <span id="id_csharp">
 <a href="#id_csharp" style="color: inherit; text-decoration: inherit;">Id</a>
@@ -569,14 +498,11 @@ All [input](#inputs) properties are implicitly available as output properties. A
         <span class="property-indicator"></span>
         <span class="property-type">string</span>
     </dt>
-    <dd>{{% md %}}The provider-assigned unique ID for this managed resource.{{% /md %}}</dd>
-</dl>
+    <dd>{{% md %}}The provider-assigned unique ID for this managed resource.{{% /md %}}</dd></dl>
 {{% /choosable %}}
 
 {{% choosable language go %}}
-<dl class="resources-properties">
-
-    <dt class="property-"
+<dl class="resources-properties"><dt class="property-"
             title="">
         <span id="id_go">
 <a href="#id_go" style="color: inherit; text-decoration: inherit;">Id</a>
@@ -584,14 +510,11 @@ All [input](#inputs) properties are implicitly available as output properties. A
         <span class="property-indicator"></span>
         <span class="property-type">string</span>
     </dt>
-    <dd>{{% md %}}The provider-assigned unique ID for this managed resource.{{% /md %}}</dd>
-</dl>
+    <dd>{{% md %}}The provider-assigned unique ID for this managed resource.{{% /md %}}</dd></dl>
 {{% /choosable %}}
 
 {{% choosable language nodejs %}}
-<dl class="resources-properties">
-
-    <dt class="property-"
+<dl class="resources-properties"><dt class="property-"
             title="">
         <span id="id_nodejs">
 <a href="#id_nodejs" style="color: inherit; text-decoration: inherit;">id</a>
@@ -599,14 +522,11 @@ All [input](#inputs) properties are implicitly available as output properties. A
         <span class="property-indicator"></span>
         <span class="property-type">string</span>
     </dt>
-    <dd>{{% md %}}The provider-assigned unique ID for this managed resource.{{% /md %}}</dd>
-</dl>
+    <dd>{{% md %}}The provider-assigned unique ID for this managed resource.{{% /md %}}</dd></dl>
 {{% /choosable %}}
 
 {{% choosable language python %}}
-<dl class="resources-properties">
-
-    <dt class="property-"
+<dl class="resources-properties"><dt class="property-"
             title="">
         <span id="id_python">
 <a href="#id_python" style="color: inherit; text-decoration: inherit;">id</a>
@@ -614,8 +534,7 @@ All [input](#inputs) properties are implicitly available as output properties. A
         <span class="property-indicator"></span>
         <span class="property-type">str</span>
     </dt>
-    <dd>{{% md %}}The provider-assigned unique ID for this managed resource.{{% /md %}}</dd>
-</dl>
+    <dd>{{% md %}}The provider-assigned unique ID for this managed resource.{{% /md %}}</dd></dl>
 {{% /choosable %}}
 
 
@@ -632,6 +551,6 @@ All [input](#inputs) properties are implicitly available as output properties. A
 	<dt>License</dt>
 	<dd>Apache-2.0</dd>
 	<dt>Notes</dt>
-	<dd>This Pulumi package is based on the [`venafi` Terraform Provider](https://github.com/Venafi/terraform-provider-venafi).</dd>
+	<dd>{{% md %}}This Pulumi package is based on the [`venafi` Terraform Provider](https://github.com/Venafi/terraform-provider-venafi).{{% /md %}}</dd>
 </dl>
 

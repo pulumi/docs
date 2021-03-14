@@ -51,9 +51,7 @@ The following arguments are supported:
 
 
 {{% choosable language csharp %}}
-<dl class="resources-properties">
-
-    <dt class="property-required"
+<dl class="resources-properties"><dt class="property-required"
             title="Required">
         <span id="accountname_csharp">
 <a href="#accountname_csharp" style="color: inherit; text-decoration: inherit;">Account<wbr>Name</a>
@@ -61,8 +59,7 @@ The following arguments are supported:
         <span class="property-indicator"></span>
         <span class="property-type">string</span>
     </dt>
-    <dd>{{% md %}}The name of the Batch account.{{% /md %}}</dd>
-    <dt class="property-required"
+    <dd>{{% md %}}The name of the Batch account.{{% /md %}}</dd><dt class="property-required"
             title="Required">
         <span id="resourcegroupname_csharp">
 <a href="#resourcegroupname_csharp" style="color: inherit; text-decoration: inherit;">Resource<wbr>Group<wbr>Name</a>
@@ -70,14 +67,11 @@ The following arguments are supported:
         <span class="property-indicator"></span>
         <span class="property-type">string</span>
     </dt>
-    <dd>{{% md %}}The name of the resource group that contains the Batch account.{{% /md %}}</dd>
-</dl>
+    <dd>{{% md %}}The name of the resource group that contains the Batch account.{{% /md %}}</dd></dl>
 {{% /choosable %}}
 
 {{% choosable language go %}}
-<dl class="resources-properties">
-
-    <dt class="property-required"
+<dl class="resources-properties"><dt class="property-required"
             title="Required">
         <span id="accountname_go">
 <a href="#accountname_go" style="color: inherit; text-decoration: inherit;">Account<wbr>Name</a>
@@ -85,8 +79,7 @@ The following arguments are supported:
         <span class="property-indicator"></span>
         <span class="property-type">string</span>
     </dt>
-    <dd>{{% md %}}The name of the Batch account.{{% /md %}}</dd>
-    <dt class="property-required"
+    <dd>{{% md %}}The name of the Batch account.{{% /md %}}</dd><dt class="property-required"
             title="Required">
         <span id="resourcegroupname_go">
 <a href="#resourcegroupname_go" style="color: inherit; text-decoration: inherit;">Resource<wbr>Group<wbr>Name</a>
@@ -94,14 +87,11 @@ The following arguments are supported:
         <span class="property-indicator"></span>
         <span class="property-type">string</span>
     </dt>
-    <dd>{{% md %}}The name of the resource group that contains the Batch account.{{% /md %}}</dd>
-</dl>
+    <dd>{{% md %}}The name of the resource group that contains the Batch account.{{% /md %}}</dd></dl>
 {{% /choosable %}}
 
 {{% choosable language nodejs %}}
-<dl class="resources-properties">
-
-    <dt class="property-required"
+<dl class="resources-properties"><dt class="property-required"
             title="Required">
         <span id="accountname_nodejs">
 <a href="#accountname_nodejs" style="color: inherit; text-decoration: inherit;">account<wbr>Name</a>
@@ -109,8 +99,7 @@ The following arguments are supported:
         <span class="property-indicator"></span>
         <span class="property-type">string</span>
     </dt>
-    <dd>{{% md %}}The name of the Batch account.{{% /md %}}</dd>
-    <dt class="property-required"
+    <dd>{{% md %}}The name of the Batch account.{{% /md %}}</dd><dt class="property-required"
             title="Required">
         <span id="resourcegroupname_nodejs">
 <a href="#resourcegroupname_nodejs" style="color: inherit; text-decoration: inherit;">resource<wbr>Group<wbr>Name</a>
@@ -118,14 +107,11 @@ The following arguments are supported:
         <span class="property-indicator"></span>
         <span class="property-type">string</span>
     </dt>
-    <dd>{{% md %}}The name of the resource group that contains the Batch account.{{% /md %}}</dd>
-</dl>
+    <dd>{{% md %}}The name of the resource group that contains the Batch account.{{% /md %}}</dd></dl>
 {{% /choosable %}}
 
 {{% choosable language python %}}
-<dl class="resources-properties">
-
-    <dt class="property-required"
+<dl class="resources-properties"><dt class="property-required"
             title="Required">
         <span id="account_name_python">
 <a href="#account_name_python" style="color: inherit; text-decoration: inherit;">account_<wbr>name</a>
@@ -133,8 +119,7 @@ The following arguments are supported:
         <span class="property-indicator"></span>
         <span class="property-type">str</span>
     </dt>
-    <dd>{{% md %}}The name of the Batch account.{{% /md %}}</dd>
-    <dt class="property-required"
+    <dd>{{% md %}}The name of the Batch account.{{% /md %}}</dd><dt class="property-required"
             title="Required">
         <span id="resource_group_name_python">
 <a href="#resource_group_name_python" style="color: inherit; text-decoration: inherit;">resource_<wbr>group_<wbr>name</a>
@@ -142,8 +127,7 @@ The following arguments are supported:
         <span class="property-indicator"></span>
         <span class="property-type">str</span>
     </dt>
-    <dd>{{% md %}}The name of the resource group that contains the Batch account.{{% /md %}}</dd>
-</dl>
+    <dd>{{% md %}}The name of the resource group that contains the Batch account.{{% /md %}}</dd></dl>
 {{% /choosable %}}
 
 
@@ -156,9 +140,7 @@ The following output properties are available:
 
 
 {{% choosable language csharp %}}
-<dl class="resources-properties">
-
-    <dt class="property-"
+<dl class="resources-properties"><dt class="property-"
             title="">
         <span id="accountendpoint_csharp">
 <a href="#accountendpoint_csharp" style="color: inherit; text-decoration: inherit;">Account<wbr>Endpoint</a>
@@ -166,8 +148,7 @@ The following output properties are available:
         <span class="property-indicator"></span>
         <span class="property-type">string</span>
     </dt>
-    <dd>{{% md %}}The account endpoint used to interact with the Batch service.{{% /md %}}</dd>
-    <dt class="property-"
+    <dd>{{% md %}}The account endpoint used to interact with the Batch service.{{% /md %}}</dd><dt class="property-"
             title="">
         <span id="activejobandjobschedulequota_csharp">
 <a href="#activejobandjobschedulequota_csharp" style="color: inherit; text-decoration: inherit;">Active<wbr>Job<wbr>And<wbr>Job<wbr>Schedule<wbr>Quota</a>
@@ -175,8 +156,7 @@ The following output properties are available:
         <span class="property-indicator"></span>
         <span class="property-type">int</span>
     </dt>
-    <dd>{{% md %}}{{% /md %}}</dd>
-    <dt class="property-"
+    <dd>{{% md %}}{{% /md %}}</dd><dt class="property-"
             title="">
         <span id="autostorage_csharp">
 <a href="#autostorage_csharp" style="color: inherit; text-decoration: inherit;">Auto<wbr>Storage</a>
@@ -184,8 +164,7 @@ The following output properties are available:
         <span class="property-indicator"></span>
         <span class="property-type"><a href="#autostoragepropertiesresponse">Pulumi.<wbr>Azure<wbr>Native.<wbr>Batch.<wbr>Outputs.<wbr>Auto<wbr>Storage<wbr>Properties<wbr>Response</a></span>
     </dt>
-    <dd>{{% md %}}Contains information about the auto-storage account associated with a Batch account.{{% /md %}}</dd>
-    <dt class="property-"
+    <dd>{{% md %}}Contains information about the auto-storage account associated with a Batch account.{{% /md %}}</dd><dt class="property-"
             title="">
         <span id="dedicatedcorequota_csharp">
 <a href="#dedicatedcorequota_csharp" style="color: inherit; text-decoration: inherit;">Dedicated<wbr>Core<wbr>Quota</a>
@@ -193,8 +172,7 @@ The following output properties are available:
         <span class="property-indicator"></span>
         <span class="property-type">int</span>
     </dt>
-    <dd>{{% md %}}For accounts with PoolAllocationMode set to UserSubscription, quota is managed on the subscription so this value is not returned.{{% /md %}}</dd>
-    <dt class="property-"
+    <dd>{{% md %}}For accounts with PoolAllocationMode set to UserSubscription, quota is managed on the subscription so this value is not returned.{{% /md %}}</dd><dt class="property-"
             title="">
         <span id="dedicatedcorequotapervmfamily_csharp">
 <a href="#dedicatedcorequotapervmfamily_csharp" style="color: inherit; text-decoration: inherit;">Dedicated<wbr>Core<wbr>Quota<wbr>Per<wbr>VMFamily</a>
@@ -202,8 +180,7 @@ The following output properties are available:
         <span class="property-indicator"></span>
         <span class="property-type"><a href="#virtualmachinefamilycorequotaresponse">List&lt;Pulumi.<wbr>Azure<wbr>Native.<wbr>Batch.<wbr>Outputs.<wbr>Virtual<wbr>Machine<wbr>Family<wbr>Core<wbr>Quota<wbr>Response&gt;</a></span>
     </dt>
-    <dd>{{% md %}}A list of the dedicated core quota per Virtual Machine family for the Batch account. For accounts with PoolAllocationMode set to UserSubscription, quota is managed on the subscription so this value is not returned.{{% /md %}}</dd>
-    <dt class="property-"
+    <dd>{{% md %}}A list of the dedicated core quota per Virtual Machine family for the Batch account. For accounts with PoolAllocationMode set to UserSubscription, quota is managed on the subscription so this value is not returned.{{% /md %}}</dd><dt class="property-"
             title="">
         <span id="dedicatedcorequotapervmfamilyenforced_csharp">
 <a href="#dedicatedcorequotapervmfamilyenforced_csharp" style="color: inherit; text-decoration: inherit;">Dedicated<wbr>Core<wbr>Quota<wbr>Per<wbr>VMFamily<wbr>Enforced</a>
@@ -211,8 +188,7 @@ The following output properties are available:
         <span class="property-indicator"></span>
         <span class="property-type">bool</span>
     </dt>
-    <dd>{{% md %}}Batch is transitioning its core quota system for dedicated cores to be enforced per Virtual Machine family. During this transitional phase, the dedicated core quota per Virtual Machine family may not yet be enforced. If this flag is false, dedicated core quota is enforced via the old dedicatedCoreQuota property on the account and does not consider Virtual Machine family. If this flag is true, dedicated core quota is enforced via the dedicatedCoreQuotaPerVMFamily property on the account, and the old dedicatedCoreQuota does not apply.{{% /md %}}</dd>
-    <dt class="property-"
+    <dd>{{% md %}}Batch is transitioning its core quota system for dedicated cores to be enforced per Virtual Machine family. During this transitional phase, the dedicated core quota per Virtual Machine family may not yet be enforced. If this flag is false, dedicated core quota is enforced via the old dedicatedCoreQuota property on the account and does not consider Virtual Machine family. If this flag is true, dedicated core quota is enforced via the dedicatedCoreQuotaPerVMFamily property on the account, and the old dedicatedCoreQuota does not apply.{{% /md %}}</dd><dt class="property-"
             title="">
         <span id="encryption_csharp">
 <a href="#encryption_csharp" style="color: inherit; text-decoration: inherit;">Encryption</a>
@@ -220,8 +196,7 @@ The following output properties are available:
         <span class="property-indicator"></span>
         <span class="property-type"><a href="#encryptionpropertiesresponse">Pulumi.<wbr>Azure<wbr>Native.<wbr>Batch.<wbr>Outputs.<wbr>Encryption<wbr>Properties<wbr>Response</a></span>
     </dt>
-    <dd>{{% md %}}Configures how customer data is encrypted inside the Batch account. By default, accounts are encrypted using a Microsoft managed key. For additional control, a customer-managed key can be used instead.{{% /md %}}</dd>
-    <dt class="property-"
+    <dd>{{% md %}}Configures how customer data is encrypted inside the Batch account. By default, accounts are encrypted using a Microsoft managed key. For additional control, a customer-managed key can be used instead.{{% /md %}}</dd><dt class="property-"
             title="">
         <span id="id_csharp">
 <a href="#id_csharp" style="color: inherit; text-decoration: inherit;">Id</a>
@@ -229,8 +204,7 @@ The following output properties are available:
         <span class="property-indicator"></span>
         <span class="property-type">string</span>
     </dt>
-    <dd>{{% md %}}The ID of the resource.{{% /md %}}</dd>
-    <dt class="property-"
+    <dd>{{% md %}}The ID of the resource.{{% /md %}}</dd><dt class="property-"
             title="">
         <span id="keyvaultreference_csharp">
 <a href="#keyvaultreference_csharp" style="color: inherit; text-decoration: inherit;">Key<wbr>Vault<wbr>Reference</a>
@@ -238,8 +212,7 @@ The following output properties are available:
         <span class="property-indicator"></span>
         <span class="property-type"><a href="#keyvaultreferenceresponse">Pulumi.<wbr>Azure<wbr>Native.<wbr>Batch.<wbr>Outputs.<wbr>Key<wbr>Vault<wbr>Reference<wbr>Response</a></span>
     </dt>
-    <dd>{{% md %}}Identifies the Azure key vault associated with a Batch account.{{% /md %}}</dd>
-    <dt class="property-"
+    <dd>{{% md %}}Identifies the Azure key vault associated with a Batch account.{{% /md %}}</dd><dt class="property-"
             title="">
         <span id="location_csharp">
 <a href="#location_csharp" style="color: inherit; text-decoration: inherit;">Location</a>
@@ -247,8 +220,7 @@ The following output properties are available:
         <span class="property-indicator"></span>
         <span class="property-type">string</span>
     </dt>
-    <dd>{{% md %}}The location of the resource.{{% /md %}}</dd>
-    <dt class="property-"
+    <dd>{{% md %}}The location of the resource.{{% /md %}}</dd><dt class="property-"
             title="">
         <span id="lowprioritycorequota_csharp">
 <a href="#lowprioritycorequota_csharp" style="color: inherit; text-decoration: inherit;">Low<wbr>Priority<wbr>Core<wbr>Quota</a>
@@ -256,8 +228,7 @@ The following output properties are available:
         <span class="property-indicator"></span>
         <span class="property-type">int</span>
     </dt>
-    <dd>{{% md %}}For accounts with PoolAllocationMode set to UserSubscription, quota is managed on the subscription so this value is not returned.{{% /md %}}</dd>
-    <dt class="property-"
+    <dd>{{% md %}}For accounts with PoolAllocationMode set to UserSubscription, quota is managed on the subscription so this value is not returned.{{% /md %}}</dd><dt class="property-"
             title="">
         <span id="name_csharp">
 <a href="#name_csharp" style="color: inherit; text-decoration: inherit;">Name</a>
@@ -265,8 +236,7 @@ The following output properties are available:
         <span class="property-indicator"></span>
         <span class="property-type">string</span>
     </dt>
-    <dd>{{% md %}}The name of the resource.{{% /md %}}</dd>
-    <dt class="property-"
+    <dd>{{% md %}}The name of the resource.{{% /md %}}</dd><dt class="property-"
             title="">
         <span id="poolallocationmode_csharp">
 <a href="#poolallocationmode_csharp" style="color: inherit; text-decoration: inherit;">Pool<wbr>Allocation<wbr>Mode</a>
@@ -274,8 +244,7 @@ The following output properties are available:
         <span class="property-indicator"></span>
         <span class="property-type">string</span>
     </dt>
-    <dd>{{% md %}}The allocation mode for creating pools in the Batch account.{{% /md %}}</dd>
-    <dt class="property-"
+    <dd>{{% md %}}The allocation mode for creating pools in the Batch account.{{% /md %}}</dd><dt class="property-"
             title="">
         <span id="poolquota_csharp">
 <a href="#poolquota_csharp" style="color: inherit; text-decoration: inherit;">Pool<wbr>Quota</a>
@@ -283,8 +252,7 @@ The following output properties are available:
         <span class="property-indicator"></span>
         <span class="property-type">int</span>
     </dt>
-    <dd>{{% md %}}{{% /md %}}</dd>
-    <dt class="property-"
+    <dd>{{% md %}}{{% /md %}}</dd><dt class="property-"
             title="">
         <span id="privateendpointconnections_csharp">
 <a href="#privateendpointconnections_csharp" style="color: inherit; text-decoration: inherit;">Private<wbr>Endpoint<wbr>Connections</a>
@@ -292,8 +260,7 @@ The following output properties are available:
         <span class="property-indicator"></span>
         <span class="property-type"><a href="#privateendpointconnectionresponse">List&lt;Pulumi.<wbr>Azure<wbr>Native.<wbr>Batch.<wbr>Outputs.<wbr>Private<wbr>Endpoint<wbr>Connection<wbr>Response&gt;</a></span>
     </dt>
-    <dd>{{% md %}}List of private endpoint connections associated with the Batch account{{% /md %}}</dd>
-    <dt class="property-"
+    <dd>{{% md %}}List of private endpoint connections associated with the Batch account{{% /md %}}</dd><dt class="property-"
             title="">
         <span id="provisioningstate_csharp">
 <a href="#provisioningstate_csharp" style="color: inherit; text-decoration: inherit;">Provisioning<wbr>State</a>
@@ -301,8 +268,7 @@ The following output properties are available:
         <span class="property-indicator"></span>
         <span class="property-type">string</span>
     </dt>
-    <dd>{{% md %}}The provisioned state of the resource{{% /md %}}</dd>
-    <dt class="property-"
+    <dd>{{% md %}}The provisioned state of the resource{{% /md %}}</dd><dt class="property-"
             title="">
         <span id="publicnetworkaccess_csharp">
 <a href="#publicnetworkaccess_csharp" style="color: inherit; text-decoration: inherit;">Public<wbr>Network<wbr>Access</a>
@@ -310,8 +276,7 @@ The following output properties are available:
         <span class="property-indicator"></span>
         <span class="property-type">string</span>
     </dt>
-    <dd>{{% md %}}If not specified, the default value is 'enabled'.{{% /md %}}</dd>
-    <dt class="property-"
+    <dd>{{% md %}}If not specified, the default value is 'enabled'.{{% /md %}}</dd><dt class="property-"
             title="">
         <span id="tags_csharp">
 <a href="#tags_csharp" style="color: inherit; text-decoration: inherit;">Tags</a>
@@ -319,8 +284,7 @@ The following output properties are available:
         <span class="property-indicator"></span>
         <span class="property-type">Dictionary&lt;string, string&gt;</span>
     </dt>
-    <dd>{{% md %}}The tags of the resource.{{% /md %}}</dd>
-    <dt class="property-"
+    <dd>{{% md %}}The tags of the resource.{{% /md %}}</dd><dt class="property-"
             title="">
         <span id="type_csharp">
 <a href="#type_csharp" style="color: inherit; text-decoration: inherit;">Type</a>
@@ -328,8 +292,7 @@ The following output properties are available:
         <span class="property-indicator"></span>
         <span class="property-type">string</span>
     </dt>
-    <dd>{{% md %}}The type of the resource.{{% /md %}}</dd>
-    <dt class="property-"
+    <dd>{{% md %}}The type of the resource.{{% /md %}}</dd><dt class="property-"
             title="">
         <span id="identity_csharp">
 <a href="#identity_csharp" style="color: inherit; text-decoration: inherit;">Identity</a>
@@ -337,14 +300,11 @@ The following output properties are available:
         <span class="property-indicator"></span>
         <span class="property-type"><a href="#batchaccountidentityresponse">Pulumi.<wbr>Azure<wbr>Native.<wbr>Batch.<wbr>Outputs.<wbr>Batch<wbr>Account<wbr>Identity<wbr>Response</a></span>
     </dt>
-    <dd>{{% md %}}The identity of the Batch account.{{% /md %}}</dd>
-</dl>
+    <dd>{{% md %}}The identity of the Batch account.{{% /md %}}</dd></dl>
 {{% /choosable %}}
 
 {{% choosable language go %}}
-<dl class="resources-properties">
-
-    <dt class="property-"
+<dl class="resources-properties"><dt class="property-"
             title="">
         <span id="accountendpoint_go">
 <a href="#accountendpoint_go" style="color: inherit; text-decoration: inherit;">Account<wbr>Endpoint</a>
@@ -352,8 +312,7 @@ The following output properties are available:
         <span class="property-indicator"></span>
         <span class="property-type">string</span>
     </dt>
-    <dd>{{% md %}}The account endpoint used to interact with the Batch service.{{% /md %}}</dd>
-    <dt class="property-"
+    <dd>{{% md %}}The account endpoint used to interact with the Batch service.{{% /md %}}</dd><dt class="property-"
             title="">
         <span id="activejobandjobschedulequota_go">
 <a href="#activejobandjobschedulequota_go" style="color: inherit; text-decoration: inherit;">Active<wbr>Job<wbr>And<wbr>Job<wbr>Schedule<wbr>Quota</a>
@@ -361,8 +320,7 @@ The following output properties are available:
         <span class="property-indicator"></span>
         <span class="property-type">int</span>
     </dt>
-    <dd>{{% md %}}{{% /md %}}</dd>
-    <dt class="property-"
+    <dd>{{% md %}}{{% /md %}}</dd><dt class="property-"
             title="">
         <span id="autostorage_go">
 <a href="#autostorage_go" style="color: inherit; text-decoration: inherit;">Auto<wbr>Storage</a>
@@ -370,8 +328,7 @@ The following output properties are available:
         <span class="property-indicator"></span>
         <span class="property-type"><a href="#autostoragepropertiesresponse">Auto<wbr>Storage<wbr>Properties<wbr>Response</a></span>
     </dt>
-    <dd>{{% md %}}Contains information about the auto-storage account associated with a Batch account.{{% /md %}}</dd>
-    <dt class="property-"
+    <dd>{{% md %}}Contains information about the auto-storage account associated with a Batch account.{{% /md %}}</dd><dt class="property-"
             title="">
         <span id="dedicatedcorequota_go">
 <a href="#dedicatedcorequota_go" style="color: inherit; text-decoration: inherit;">Dedicated<wbr>Core<wbr>Quota</a>
@@ -379,8 +336,7 @@ The following output properties are available:
         <span class="property-indicator"></span>
         <span class="property-type">int</span>
     </dt>
-    <dd>{{% md %}}For accounts with PoolAllocationMode set to UserSubscription, quota is managed on the subscription so this value is not returned.{{% /md %}}</dd>
-    <dt class="property-"
+    <dd>{{% md %}}For accounts with PoolAllocationMode set to UserSubscription, quota is managed on the subscription so this value is not returned.{{% /md %}}</dd><dt class="property-"
             title="">
         <span id="dedicatedcorequotapervmfamily_go">
 <a href="#dedicatedcorequotapervmfamily_go" style="color: inherit; text-decoration: inherit;">Dedicated<wbr>Core<wbr>Quota<wbr>Per<wbr>VMFamily</a>
@@ -388,8 +344,7 @@ The following output properties are available:
         <span class="property-indicator"></span>
         <span class="property-type"><a href="#virtualmachinefamilycorequotaresponse">[]Virtual<wbr>Machine<wbr>Family<wbr>Core<wbr>Quota<wbr>Response</a></span>
     </dt>
-    <dd>{{% md %}}A list of the dedicated core quota per Virtual Machine family for the Batch account. For accounts with PoolAllocationMode set to UserSubscription, quota is managed on the subscription so this value is not returned.{{% /md %}}</dd>
-    <dt class="property-"
+    <dd>{{% md %}}A list of the dedicated core quota per Virtual Machine family for the Batch account. For accounts with PoolAllocationMode set to UserSubscription, quota is managed on the subscription so this value is not returned.{{% /md %}}</dd><dt class="property-"
             title="">
         <span id="dedicatedcorequotapervmfamilyenforced_go">
 <a href="#dedicatedcorequotapervmfamilyenforced_go" style="color: inherit; text-decoration: inherit;">Dedicated<wbr>Core<wbr>Quota<wbr>Per<wbr>VMFamily<wbr>Enforced</a>
@@ -397,8 +352,7 @@ The following output properties are available:
         <span class="property-indicator"></span>
         <span class="property-type">bool</span>
     </dt>
-    <dd>{{% md %}}Batch is transitioning its core quota system for dedicated cores to be enforced per Virtual Machine family. During this transitional phase, the dedicated core quota per Virtual Machine family may not yet be enforced. If this flag is false, dedicated core quota is enforced via the old dedicatedCoreQuota property on the account and does not consider Virtual Machine family. If this flag is true, dedicated core quota is enforced via the dedicatedCoreQuotaPerVMFamily property on the account, and the old dedicatedCoreQuota does not apply.{{% /md %}}</dd>
-    <dt class="property-"
+    <dd>{{% md %}}Batch is transitioning its core quota system for dedicated cores to be enforced per Virtual Machine family. During this transitional phase, the dedicated core quota per Virtual Machine family may not yet be enforced. If this flag is false, dedicated core quota is enforced via the old dedicatedCoreQuota property on the account and does not consider Virtual Machine family. If this flag is true, dedicated core quota is enforced via the dedicatedCoreQuotaPerVMFamily property on the account, and the old dedicatedCoreQuota does not apply.{{% /md %}}</dd><dt class="property-"
             title="">
         <span id="encryption_go">
 <a href="#encryption_go" style="color: inherit; text-decoration: inherit;">Encryption</a>
@@ -406,8 +360,7 @@ The following output properties are available:
         <span class="property-indicator"></span>
         <span class="property-type"><a href="#encryptionpropertiesresponse">Encryption<wbr>Properties<wbr>Response</a></span>
     </dt>
-    <dd>{{% md %}}Configures how customer data is encrypted inside the Batch account. By default, accounts are encrypted using a Microsoft managed key. For additional control, a customer-managed key can be used instead.{{% /md %}}</dd>
-    <dt class="property-"
+    <dd>{{% md %}}Configures how customer data is encrypted inside the Batch account. By default, accounts are encrypted using a Microsoft managed key. For additional control, a customer-managed key can be used instead.{{% /md %}}</dd><dt class="property-"
             title="">
         <span id="id_go">
 <a href="#id_go" style="color: inherit; text-decoration: inherit;">Id</a>
@@ -415,8 +368,7 @@ The following output properties are available:
         <span class="property-indicator"></span>
         <span class="property-type">string</span>
     </dt>
-    <dd>{{% md %}}The ID of the resource.{{% /md %}}</dd>
-    <dt class="property-"
+    <dd>{{% md %}}The ID of the resource.{{% /md %}}</dd><dt class="property-"
             title="">
         <span id="keyvaultreference_go">
 <a href="#keyvaultreference_go" style="color: inherit; text-decoration: inherit;">Key<wbr>Vault<wbr>Reference</a>
@@ -424,8 +376,7 @@ The following output properties are available:
         <span class="property-indicator"></span>
         <span class="property-type"><a href="#keyvaultreferenceresponse">Key<wbr>Vault<wbr>Reference<wbr>Response</a></span>
     </dt>
-    <dd>{{% md %}}Identifies the Azure key vault associated with a Batch account.{{% /md %}}</dd>
-    <dt class="property-"
+    <dd>{{% md %}}Identifies the Azure key vault associated with a Batch account.{{% /md %}}</dd><dt class="property-"
             title="">
         <span id="location_go">
 <a href="#location_go" style="color: inherit; text-decoration: inherit;">Location</a>
@@ -433,8 +384,7 @@ The following output properties are available:
         <span class="property-indicator"></span>
         <span class="property-type">string</span>
     </dt>
-    <dd>{{% md %}}The location of the resource.{{% /md %}}</dd>
-    <dt class="property-"
+    <dd>{{% md %}}The location of the resource.{{% /md %}}</dd><dt class="property-"
             title="">
         <span id="lowprioritycorequota_go">
 <a href="#lowprioritycorequota_go" style="color: inherit; text-decoration: inherit;">Low<wbr>Priority<wbr>Core<wbr>Quota</a>
@@ -442,8 +392,7 @@ The following output properties are available:
         <span class="property-indicator"></span>
         <span class="property-type">int</span>
     </dt>
-    <dd>{{% md %}}For accounts with PoolAllocationMode set to UserSubscription, quota is managed on the subscription so this value is not returned.{{% /md %}}</dd>
-    <dt class="property-"
+    <dd>{{% md %}}For accounts with PoolAllocationMode set to UserSubscription, quota is managed on the subscription so this value is not returned.{{% /md %}}</dd><dt class="property-"
             title="">
         <span id="name_go">
 <a href="#name_go" style="color: inherit; text-decoration: inherit;">Name</a>
@@ -451,8 +400,7 @@ The following output properties are available:
         <span class="property-indicator"></span>
         <span class="property-type">string</span>
     </dt>
-    <dd>{{% md %}}The name of the resource.{{% /md %}}</dd>
-    <dt class="property-"
+    <dd>{{% md %}}The name of the resource.{{% /md %}}</dd><dt class="property-"
             title="">
         <span id="poolallocationmode_go">
 <a href="#poolallocationmode_go" style="color: inherit; text-decoration: inherit;">Pool<wbr>Allocation<wbr>Mode</a>
@@ -460,8 +408,7 @@ The following output properties are available:
         <span class="property-indicator"></span>
         <span class="property-type">string</span>
     </dt>
-    <dd>{{% md %}}The allocation mode for creating pools in the Batch account.{{% /md %}}</dd>
-    <dt class="property-"
+    <dd>{{% md %}}The allocation mode for creating pools in the Batch account.{{% /md %}}</dd><dt class="property-"
             title="">
         <span id="poolquota_go">
 <a href="#poolquota_go" style="color: inherit; text-decoration: inherit;">Pool<wbr>Quota</a>
@@ -469,8 +416,7 @@ The following output properties are available:
         <span class="property-indicator"></span>
         <span class="property-type">int</span>
     </dt>
-    <dd>{{% md %}}{{% /md %}}</dd>
-    <dt class="property-"
+    <dd>{{% md %}}{{% /md %}}</dd><dt class="property-"
             title="">
         <span id="privateendpointconnections_go">
 <a href="#privateendpointconnections_go" style="color: inherit; text-decoration: inherit;">Private<wbr>Endpoint<wbr>Connections</a>
@@ -478,8 +424,7 @@ The following output properties are available:
         <span class="property-indicator"></span>
         <span class="property-type"><a href="#privateendpointconnectionresponse">[]Private<wbr>Endpoint<wbr>Connection<wbr>Response</a></span>
     </dt>
-    <dd>{{% md %}}List of private endpoint connections associated with the Batch account{{% /md %}}</dd>
-    <dt class="property-"
+    <dd>{{% md %}}List of private endpoint connections associated with the Batch account{{% /md %}}</dd><dt class="property-"
             title="">
         <span id="provisioningstate_go">
 <a href="#provisioningstate_go" style="color: inherit; text-decoration: inherit;">Provisioning<wbr>State</a>
@@ -487,8 +432,7 @@ The following output properties are available:
         <span class="property-indicator"></span>
         <span class="property-type">string</span>
     </dt>
-    <dd>{{% md %}}The provisioned state of the resource{{% /md %}}</dd>
-    <dt class="property-"
+    <dd>{{% md %}}The provisioned state of the resource{{% /md %}}</dd><dt class="property-"
             title="">
         <span id="publicnetworkaccess_go">
 <a href="#publicnetworkaccess_go" style="color: inherit; text-decoration: inherit;">Public<wbr>Network<wbr>Access</a>
@@ -496,8 +440,7 @@ The following output properties are available:
         <span class="property-indicator"></span>
         <span class="property-type">string</span>
     </dt>
-    <dd>{{% md %}}If not specified, the default value is 'enabled'.{{% /md %}}</dd>
-    <dt class="property-"
+    <dd>{{% md %}}If not specified, the default value is 'enabled'.{{% /md %}}</dd><dt class="property-"
             title="">
         <span id="tags_go">
 <a href="#tags_go" style="color: inherit; text-decoration: inherit;">Tags</a>
@@ -505,8 +448,7 @@ The following output properties are available:
         <span class="property-indicator"></span>
         <span class="property-type">map[string]string</span>
     </dt>
-    <dd>{{% md %}}The tags of the resource.{{% /md %}}</dd>
-    <dt class="property-"
+    <dd>{{% md %}}The tags of the resource.{{% /md %}}</dd><dt class="property-"
             title="">
         <span id="type_go">
 <a href="#type_go" style="color: inherit; text-decoration: inherit;">Type</a>
@@ -514,8 +456,7 @@ The following output properties are available:
         <span class="property-indicator"></span>
         <span class="property-type">string</span>
     </dt>
-    <dd>{{% md %}}The type of the resource.{{% /md %}}</dd>
-    <dt class="property-"
+    <dd>{{% md %}}The type of the resource.{{% /md %}}</dd><dt class="property-"
             title="">
         <span id="identity_go">
 <a href="#identity_go" style="color: inherit; text-decoration: inherit;">Identity</a>
@@ -523,14 +464,11 @@ The following output properties are available:
         <span class="property-indicator"></span>
         <span class="property-type"><a href="#batchaccountidentityresponse">Batch<wbr>Account<wbr>Identity<wbr>Response</a></span>
     </dt>
-    <dd>{{% md %}}The identity of the Batch account.{{% /md %}}</dd>
-</dl>
+    <dd>{{% md %}}The identity of the Batch account.{{% /md %}}</dd></dl>
 {{% /choosable %}}
 
 {{% choosable language nodejs %}}
-<dl class="resources-properties">
-
-    <dt class="property-"
+<dl class="resources-properties"><dt class="property-"
             title="">
         <span id="accountendpoint_nodejs">
 <a href="#accountendpoint_nodejs" style="color: inherit; text-decoration: inherit;">account<wbr>Endpoint</a>
@@ -538,8 +476,7 @@ The following output properties are available:
         <span class="property-indicator"></span>
         <span class="property-type">string</span>
     </dt>
-    <dd>{{% md %}}The account endpoint used to interact with the Batch service.{{% /md %}}</dd>
-    <dt class="property-"
+    <dd>{{% md %}}The account endpoint used to interact with the Batch service.{{% /md %}}</dd><dt class="property-"
             title="">
         <span id="activejobandjobschedulequota_nodejs">
 <a href="#activejobandjobschedulequota_nodejs" style="color: inherit; text-decoration: inherit;">active<wbr>Job<wbr>And<wbr>Job<wbr>Schedule<wbr>Quota</a>
@@ -547,8 +484,7 @@ The following output properties are available:
         <span class="property-indicator"></span>
         <span class="property-type">number</span>
     </dt>
-    <dd>{{% md %}}{{% /md %}}</dd>
-    <dt class="property-"
+    <dd>{{% md %}}{{% /md %}}</dd><dt class="property-"
             title="">
         <span id="autostorage_nodejs">
 <a href="#autostorage_nodejs" style="color: inherit; text-decoration: inherit;">auto<wbr>Storage</a>
@@ -556,8 +492,7 @@ The following output properties are available:
         <span class="property-indicator"></span>
         <span class="property-type"><a href="#autostoragepropertiesresponse">Auto<wbr>Storage<wbr>Properties<wbr>Response</a></span>
     </dt>
-    <dd>{{% md %}}Contains information about the auto-storage account associated with a Batch account.{{% /md %}}</dd>
-    <dt class="property-"
+    <dd>{{% md %}}Contains information about the auto-storage account associated with a Batch account.{{% /md %}}</dd><dt class="property-"
             title="">
         <span id="dedicatedcorequota_nodejs">
 <a href="#dedicatedcorequota_nodejs" style="color: inherit; text-decoration: inherit;">dedicated<wbr>Core<wbr>Quota</a>
@@ -565,8 +500,7 @@ The following output properties are available:
         <span class="property-indicator"></span>
         <span class="property-type">number</span>
     </dt>
-    <dd>{{% md %}}For accounts with PoolAllocationMode set to UserSubscription, quota is managed on the subscription so this value is not returned.{{% /md %}}</dd>
-    <dt class="property-"
+    <dd>{{% md %}}For accounts with PoolAllocationMode set to UserSubscription, quota is managed on the subscription so this value is not returned.{{% /md %}}</dd><dt class="property-"
             title="">
         <span id="dedicatedcorequotapervmfamily_nodejs">
 <a href="#dedicatedcorequotapervmfamily_nodejs" style="color: inherit; text-decoration: inherit;">dedicated<wbr>Core<wbr>Quota<wbr>Per<wbr>VMFamily</a>
@@ -574,8 +508,7 @@ The following output properties are available:
         <span class="property-indicator"></span>
         <span class="property-type"><a href="#virtualmachinefamilycorequotaresponse">Virtual<wbr>Machine<wbr>Family<wbr>Core<wbr>Quota<wbr>Response[]</a></span>
     </dt>
-    <dd>{{% md %}}A list of the dedicated core quota per Virtual Machine family for the Batch account. For accounts with PoolAllocationMode set to UserSubscription, quota is managed on the subscription so this value is not returned.{{% /md %}}</dd>
-    <dt class="property-"
+    <dd>{{% md %}}A list of the dedicated core quota per Virtual Machine family for the Batch account. For accounts with PoolAllocationMode set to UserSubscription, quota is managed on the subscription so this value is not returned.{{% /md %}}</dd><dt class="property-"
             title="">
         <span id="dedicatedcorequotapervmfamilyenforced_nodejs">
 <a href="#dedicatedcorequotapervmfamilyenforced_nodejs" style="color: inherit; text-decoration: inherit;">dedicated<wbr>Core<wbr>Quota<wbr>Per<wbr>VMFamily<wbr>Enforced</a>
@@ -583,8 +516,7 @@ The following output properties are available:
         <span class="property-indicator"></span>
         <span class="property-type">boolean</span>
     </dt>
-    <dd>{{% md %}}Batch is transitioning its core quota system for dedicated cores to be enforced per Virtual Machine family. During this transitional phase, the dedicated core quota per Virtual Machine family may not yet be enforced. If this flag is false, dedicated core quota is enforced via the old dedicatedCoreQuota property on the account and does not consider Virtual Machine family. If this flag is true, dedicated core quota is enforced via the dedicatedCoreQuotaPerVMFamily property on the account, and the old dedicatedCoreQuota does not apply.{{% /md %}}</dd>
-    <dt class="property-"
+    <dd>{{% md %}}Batch is transitioning its core quota system for dedicated cores to be enforced per Virtual Machine family. During this transitional phase, the dedicated core quota per Virtual Machine family may not yet be enforced. If this flag is false, dedicated core quota is enforced via the old dedicatedCoreQuota property on the account and does not consider Virtual Machine family. If this flag is true, dedicated core quota is enforced via the dedicatedCoreQuotaPerVMFamily property on the account, and the old dedicatedCoreQuota does not apply.{{% /md %}}</dd><dt class="property-"
             title="">
         <span id="encryption_nodejs">
 <a href="#encryption_nodejs" style="color: inherit; text-decoration: inherit;">encryption</a>
@@ -592,8 +524,7 @@ The following output properties are available:
         <span class="property-indicator"></span>
         <span class="property-type"><a href="#encryptionpropertiesresponse">Encryption<wbr>Properties<wbr>Response</a></span>
     </dt>
-    <dd>{{% md %}}Configures how customer data is encrypted inside the Batch account. By default, accounts are encrypted using a Microsoft managed key. For additional control, a customer-managed key can be used instead.{{% /md %}}</dd>
-    <dt class="property-"
+    <dd>{{% md %}}Configures how customer data is encrypted inside the Batch account. By default, accounts are encrypted using a Microsoft managed key. For additional control, a customer-managed key can be used instead.{{% /md %}}</dd><dt class="property-"
             title="">
         <span id="id_nodejs">
 <a href="#id_nodejs" style="color: inherit; text-decoration: inherit;">id</a>
@@ -601,8 +532,7 @@ The following output properties are available:
         <span class="property-indicator"></span>
         <span class="property-type">string</span>
     </dt>
-    <dd>{{% md %}}The ID of the resource.{{% /md %}}</dd>
-    <dt class="property-"
+    <dd>{{% md %}}The ID of the resource.{{% /md %}}</dd><dt class="property-"
             title="">
         <span id="keyvaultreference_nodejs">
 <a href="#keyvaultreference_nodejs" style="color: inherit; text-decoration: inherit;">key<wbr>Vault<wbr>Reference</a>
@@ -610,8 +540,7 @@ The following output properties are available:
         <span class="property-indicator"></span>
         <span class="property-type"><a href="#keyvaultreferenceresponse">Key<wbr>Vault<wbr>Reference<wbr>Response</a></span>
     </dt>
-    <dd>{{% md %}}Identifies the Azure key vault associated with a Batch account.{{% /md %}}</dd>
-    <dt class="property-"
+    <dd>{{% md %}}Identifies the Azure key vault associated with a Batch account.{{% /md %}}</dd><dt class="property-"
             title="">
         <span id="location_nodejs">
 <a href="#location_nodejs" style="color: inherit; text-decoration: inherit;">location</a>
@@ -619,8 +548,7 @@ The following output properties are available:
         <span class="property-indicator"></span>
         <span class="property-type">string</span>
     </dt>
-    <dd>{{% md %}}The location of the resource.{{% /md %}}</dd>
-    <dt class="property-"
+    <dd>{{% md %}}The location of the resource.{{% /md %}}</dd><dt class="property-"
             title="">
         <span id="lowprioritycorequota_nodejs">
 <a href="#lowprioritycorequota_nodejs" style="color: inherit; text-decoration: inherit;">low<wbr>Priority<wbr>Core<wbr>Quota</a>
@@ -628,8 +556,7 @@ The following output properties are available:
         <span class="property-indicator"></span>
         <span class="property-type">number</span>
     </dt>
-    <dd>{{% md %}}For accounts with PoolAllocationMode set to UserSubscription, quota is managed on the subscription so this value is not returned.{{% /md %}}</dd>
-    <dt class="property-"
+    <dd>{{% md %}}For accounts with PoolAllocationMode set to UserSubscription, quota is managed on the subscription so this value is not returned.{{% /md %}}</dd><dt class="property-"
             title="">
         <span id="name_nodejs">
 <a href="#name_nodejs" style="color: inherit; text-decoration: inherit;">name</a>
@@ -637,8 +564,7 @@ The following output properties are available:
         <span class="property-indicator"></span>
         <span class="property-type">string</span>
     </dt>
-    <dd>{{% md %}}The name of the resource.{{% /md %}}</dd>
-    <dt class="property-"
+    <dd>{{% md %}}The name of the resource.{{% /md %}}</dd><dt class="property-"
             title="">
         <span id="poolallocationmode_nodejs">
 <a href="#poolallocationmode_nodejs" style="color: inherit; text-decoration: inherit;">pool<wbr>Allocation<wbr>Mode</a>
@@ -646,8 +572,7 @@ The following output properties are available:
         <span class="property-indicator"></span>
         <span class="property-type">string</span>
     </dt>
-    <dd>{{% md %}}The allocation mode for creating pools in the Batch account.{{% /md %}}</dd>
-    <dt class="property-"
+    <dd>{{% md %}}The allocation mode for creating pools in the Batch account.{{% /md %}}</dd><dt class="property-"
             title="">
         <span id="poolquota_nodejs">
 <a href="#poolquota_nodejs" style="color: inherit; text-decoration: inherit;">pool<wbr>Quota</a>
@@ -655,8 +580,7 @@ The following output properties are available:
         <span class="property-indicator"></span>
         <span class="property-type">number</span>
     </dt>
-    <dd>{{% md %}}{{% /md %}}</dd>
-    <dt class="property-"
+    <dd>{{% md %}}{{% /md %}}</dd><dt class="property-"
             title="">
         <span id="privateendpointconnections_nodejs">
 <a href="#privateendpointconnections_nodejs" style="color: inherit; text-decoration: inherit;">private<wbr>Endpoint<wbr>Connections</a>
@@ -664,8 +588,7 @@ The following output properties are available:
         <span class="property-indicator"></span>
         <span class="property-type"><a href="#privateendpointconnectionresponse">Private<wbr>Endpoint<wbr>Connection<wbr>Response[]</a></span>
     </dt>
-    <dd>{{% md %}}List of private endpoint connections associated with the Batch account{{% /md %}}</dd>
-    <dt class="property-"
+    <dd>{{% md %}}List of private endpoint connections associated with the Batch account{{% /md %}}</dd><dt class="property-"
             title="">
         <span id="provisioningstate_nodejs">
 <a href="#provisioningstate_nodejs" style="color: inherit; text-decoration: inherit;">provisioning<wbr>State</a>
@@ -673,8 +596,7 @@ The following output properties are available:
         <span class="property-indicator"></span>
         <span class="property-type">string</span>
     </dt>
-    <dd>{{% md %}}The provisioned state of the resource{{% /md %}}</dd>
-    <dt class="property-"
+    <dd>{{% md %}}The provisioned state of the resource{{% /md %}}</dd><dt class="property-"
             title="">
         <span id="publicnetworkaccess_nodejs">
 <a href="#publicnetworkaccess_nodejs" style="color: inherit; text-decoration: inherit;">public<wbr>Network<wbr>Access</a>
@@ -682,8 +604,7 @@ The following output properties are available:
         <span class="property-indicator"></span>
         <span class="property-type">string</span>
     </dt>
-    <dd>{{% md %}}If not specified, the default value is 'enabled'.{{% /md %}}</dd>
-    <dt class="property-"
+    <dd>{{% md %}}If not specified, the default value is 'enabled'.{{% /md %}}</dd><dt class="property-"
             title="">
         <span id="tags_nodejs">
 <a href="#tags_nodejs" style="color: inherit; text-decoration: inherit;">tags</a>
@@ -691,8 +612,7 @@ The following output properties are available:
         <span class="property-indicator"></span>
         <span class="property-type">{[key: string]: string}</span>
     </dt>
-    <dd>{{% md %}}The tags of the resource.{{% /md %}}</dd>
-    <dt class="property-"
+    <dd>{{% md %}}The tags of the resource.{{% /md %}}</dd><dt class="property-"
             title="">
         <span id="type_nodejs">
 <a href="#type_nodejs" style="color: inherit; text-decoration: inherit;">type</a>
@@ -700,8 +620,7 @@ The following output properties are available:
         <span class="property-indicator"></span>
         <span class="property-type">string</span>
     </dt>
-    <dd>{{% md %}}The type of the resource.{{% /md %}}</dd>
-    <dt class="property-"
+    <dd>{{% md %}}The type of the resource.{{% /md %}}</dd><dt class="property-"
             title="">
         <span id="identity_nodejs">
 <a href="#identity_nodejs" style="color: inherit; text-decoration: inherit;">identity</a>
@@ -709,14 +628,11 @@ The following output properties are available:
         <span class="property-indicator"></span>
         <span class="property-type"><a href="#batchaccountidentityresponse">Batch<wbr>Account<wbr>Identity<wbr>Response</a></span>
     </dt>
-    <dd>{{% md %}}The identity of the Batch account.{{% /md %}}</dd>
-</dl>
+    <dd>{{% md %}}The identity of the Batch account.{{% /md %}}</dd></dl>
 {{% /choosable %}}
 
 {{% choosable language python %}}
-<dl class="resources-properties">
-
-    <dt class="property-"
+<dl class="resources-properties"><dt class="property-"
             title="">
         <span id="account_endpoint_python">
 <a href="#account_endpoint_python" style="color: inherit; text-decoration: inherit;">account_<wbr>endpoint</a>
@@ -724,8 +640,7 @@ The following output properties are available:
         <span class="property-indicator"></span>
         <span class="property-type">str</span>
     </dt>
-    <dd>{{% md %}}The account endpoint used to interact with the Batch service.{{% /md %}}</dd>
-    <dt class="property-"
+    <dd>{{% md %}}The account endpoint used to interact with the Batch service.{{% /md %}}</dd><dt class="property-"
             title="">
         <span id="active_job_and_job_schedule_quota_python">
 <a href="#active_job_and_job_schedule_quota_python" style="color: inherit; text-decoration: inherit;">active_<wbr>job_<wbr>and_<wbr>job_<wbr>schedule_<wbr>quota</a>
@@ -733,8 +648,7 @@ The following output properties are available:
         <span class="property-indicator"></span>
         <span class="property-type">int</span>
     </dt>
-    <dd>{{% md %}}{{% /md %}}</dd>
-    <dt class="property-"
+    <dd>{{% md %}}{{% /md %}}</dd><dt class="property-"
             title="">
         <span id="auto_storage_python">
 <a href="#auto_storage_python" style="color: inherit; text-decoration: inherit;">auto_<wbr>storage</a>
@@ -742,8 +656,7 @@ The following output properties are available:
         <span class="property-indicator"></span>
         <span class="property-type"><a href="#autostoragepropertiesresponse">Auto<wbr>Storage<wbr>Properties<wbr>Response</a></span>
     </dt>
-    <dd>{{% md %}}Contains information about the auto-storage account associated with a Batch account.{{% /md %}}</dd>
-    <dt class="property-"
+    <dd>{{% md %}}Contains information about the auto-storage account associated with a Batch account.{{% /md %}}</dd><dt class="property-"
             title="">
         <span id="dedicated_core_quota_python">
 <a href="#dedicated_core_quota_python" style="color: inherit; text-decoration: inherit;">dedicated_<wbr>core_<wbr>quota</a>
@@ -751,8 +664,7 @@ The following output properties are available:
         <span class="property-indicator"></span>
         <span class="property-type">int</span>
     </dt>
-    <dd>{{% md %}}For accounts with PoolAllocationMode set to UserSubscription, quota is managed on the subscription so this value is not returned.{{% /md %}}</dd>
-    <dt class="property-"
+    <dd>{{% md %}}For accounts with PoolAllocationMode set to UserSubscription, quota is managed on the subscription so this value is not returned.{{% /md %}}</dd><dt class="property-"
             title="">
         <span id="dedicated_core_quota_per_vm_family_python">
 <a href="#dedicated_core_quota_per_vm_family_python" style="color: inherit; text-decoration: inherit;">dedicated_<wbr>core_<wbr>quota_<wbr>per_<wbr>vm_<wbr>family</a>
@@ -760,8 +672,7 @@ The following output properties are available:
         <span class="property-indicator"></span>
         <span class="property-type"><a href="#virtualmachinefamilycorequotaresponse">Sequence[Virtual<wbr>Machine<wbr>Family<wbr>Core<wbr>Quota<wbr>Response]</a></span>
     </dt>
-    <dd>{{% md %}}A list of the dedicated core quota per Virtual Machine family for the Batch account. For accounts with PoolAllocationMode set to UserSubscription, quota is managed on the subscription so this value is not returned.{{% /md %}}</dd>
-    <dt class="property-"
+    <dd>{{% md %}}A list of the dedicated core quota per Virtual Machine family for the Batch account. For accounts with PoolAllocationMode set to UserSubscription, quota is managed on the subscription so this value is not returned.{{% /md %}}</dd><dt class="property-"
             title="">
         <span id="dedicated_core_quota_per_vm_family_enforced_python">
 <a href="#dedicated_core_quota_per_vm_family_enforced_python" style="color: inherit; text-decoration: inherit;">dedicated_<wbr>core_<wbr>quota_<wbr>per_<wbr>vm_<wbr>family_<wbr>enforced</a>
@@ -769,8 +680,7 @@ The following output properties are available:
         <span class="property-indicator"></span>
         <span class="property-type">bool</span>
     </dt>
-    <dd>{{% md %}}Batch is transitioning its core quota system for dedicated cores to be enforced per Virtual Machine family. During this transitional phase, the dedicated core quota per Virtual Machine family may not yet be enforced. If this flag is false, dedicated core quota is enforced via the old dedicatedCoreQuota property on the account and does not consider Virtual Machine family. If this flag is true, dedicated core quota is enforced via the dedicatedCoreQuotaPerVMFamily property on the account, and the old dedicatedCoreQuota does not apply.{{% /md %}}</dd>
-    <dt class="property-"
+    <dd>{{% md %}}Batch is transitioning its core quota system for dedicated cores to be enforced per Virtual Machine family. During this transitional phase, the dedicated core quota per Virtual Machine family may not yet be enforced. If this flag is false, dedicated core quota is enforced via the old dedicatedCoreQuota property on the account and does not consider Virtual Machine family. If this flag is true, dedicated core quota is enforced via the dedicatedCoreQuotaPerVMFamily property on the account, and the old dedicatedCoreQuota does not apply.{{% /md %}}</dd><dt class="property-"
             title="">
         <span id="encryption_python">
 <a href="#encryption_python" style="color: inherit; text-decoration: inherit;">encryption</a>
@@ -778,8 +688,7 @@ The following output properties are available:
         <span class="property-indicator"></span>
         <span class="property-type"><a href="#encryptionpropertiesresponse">Encryption<wbr>Properties<wbr>Response</a></span>
     </dt>
-    <dd>{{% md %}}Configures how customer data is encrypted inside the Batch account. By default, accounts are encrypted using a Microsoft managed key. For additional control, a customer-managed key can be used instead.{{% /md %}}</dd>
-    <dt class="property-"
+    <dd>{{% md %}}Configures how customer data is encrypted inside the Batch account. By default, accounts are encrypted using a Microsoft managed key. For additional control, a customer-managed key can be used instead.{{% /md %}}</dd><dt class="property-"
             title="">
         <span id="id_python">
 <a href="#id_python" style="color: inherit; text-decoration: inherit;">id</a>
@@ -787,8 +696,7 @@ The following output properties are available:
         <span class="property-indicator"></span>
         <span class="property-type">str</span>
     </dt>
-    <dd>{{% md %}}The ID of the resource.{{% /md %}}</dd>
-    <dt class="property-"
+    <dd>{{% md %}}The ID of the resource.{{% /md %}}</dd><dt class="property-"
             title="">
         <span id="key_vault_reference_python">
 <a href="#key_vault_reference_python" style="color: inherit; text-decoration: inherit;">key_<wbr>vault_<wbr>reference</a>
@@ -796,8 +704,7 @@ The following output properties are available:
         <span class="property-indicator"></span>
         <span class="property-type"><a href="#keyvaultreferenceresponse">Key<wbr>Vault<wbr>Reference<wbr>Response</a></span>
     </dt>
-    <dd>{{% md %}}Identifies the Azure key vault associated with a Batch account.{{% /md %}}</dd>
-    <dt class="property-"
+    <dd>{{% md %}}Identifies the Azure key vault associated with a Batch account.{{% /md %}}</dd><dt class="property-"
             title="">
         <span id="location_python">
 <a href="#location_python" style="color: inherit; text-decoration: inherit;">location</a>
@@ -805,8 +712,7 @@ The following output properties are available:
         <span class="property-indicator"></span>
         <span class="property-type">str</span>
     </dt>
-    <dd>{{% md %}}The location of the resource.{{% /md %}}</dd>
-    <dt class="property-"
+    <dd>{{% md %}}The location of the resource.{{% /md %}}</dd><dt class="property-"
             title="">
         <span id="low_priority_core_quota_python">
 <a href="#low_priority_core_quota_python" style="color: inherit; text-decoration: inherit;">low_<wbr>priority_<wbr>core_<wbr>quota</a>
@@ -814,8 +720,7 @@ The following output properties are available:
         <span class="property-indicator"></span>
         <span class="property-type">int</span>
     </dt>
-    <dd>{{% md %}}For accounts with PoolAllocationMode set to UserSubscription, quota is managed on the subscription so this value is not returned.{{% /md %}}</dd>
-    <dt class="property-"
+    <dd>{{% md %}}For accounts with PoolAllocationMode set to UserSubscription, quota is managed on the subscription so this value is not returned.{{% /md %}}</dd><dt class="property-"
             title="">
         <span id="name_python">
 <a href="#name_python" style="color: inherit; text-decoration: inherit;">name</a>
@@ -823,8 +728,7 @@ The following output properties are available:
         <span class="property-indicator"></span>
         <span class="property-type">str</span>
     </dt>
-    <dd>{{% md %}}The name of the resource.{{% /md %}}</dd>
-    <dt class="property-"
+    <dd>{{% md %}}The name of the resource.{{% /md %}}</dd><dt class="property-"
             title="">
         <span id="pool_allocation_mode_python">
 <a href="#pool_allocation_mode_python" style="color: inherit; text-decoration: inherit;">pool_<wbr>allocation_<wbr>mode</a>
@@ -832,8 +736,7 @@ The following output properties are available:
         <span class="property-indicator"></span>
         <span class="property-type">str</span>
     </dt>
-    <dd>{{% md %}}The allocation mode for creating pools in the Batch account.{{% /md %}}</dd>
-    <dt class="property-"
+    <dd>{{% md %}}The allocation mode for creating pools in the Batch account.{{% /md %}}</dd><dt class="property-"
             title="">
         <span id="pool_quota_python">
 <a href="#pool_quota_python" style="color: inherit; text-decoration: inherit;">pool_<wbr>quota</a>
@@ -841,8 +744,7 @@ The following output properties are available:
         <span class="property-indicator"></span>
         <span class="property-type">int</span>
     </dt>
-    <dd>{{% md %}}{{% /md %}}</dd>
-    <dt class="property-"
+    <dd>{{% md %}}{{% /md %}}</dd><dt class="property-"
             title="">
         <span id="private_endpoint_connections_python">
 <a href="#private_endpoint_connections_python" style="color: inherit; text-decoration: inherit;">private_<wbr>endpoint_<wbr>connections</a>
@@ -850,8 +752,7 @@ The following output properties are available:
         <span class="property-indicator"></span>
         <span class="property-type"><a href="#privateendpointconnectionresponse">Sequence[Private<wbr>Endpoint<wbr>Connection<wbr>Response]</a></span>
     </dt>
-    <dd>{{% md %}}List of private endpoint connections associated with the Batch account{{% /md %}}</dd>
-    <dt class="property-"
+    <dd>{{% md %}}List of private endpoint connections associated with the Batch account{{% /md %}}</dd><dt class="property-"
             title="">
         <span id="provisioning_state_python">
 <a href="#provisioning_state_python" style="color: inherit; text-decoration: inherit;">provisioning_<wbr>state</a>
@@ -859,8 +760,7 @@ The following output properties are available:
         <span class="property-indicator"></span>
         <span class="property-type">str</span>
     </dt>
-    <dd>{{% md %}}The provisioned state of the resource{{% /md %}}</dd>
-    <dt class="property-"
+    <dd>{{% md %}}The provisioned state of the resource{{% /md %}}</dd><dt class="property-"
             title="">
         <span id="public_network_access_python">
 <a href="#public_network_access_python" style="color: inherit; text-decoration: inherit;">public_<wbr>network_<wbr>access</a>
@@ -868,8 +768,7 @@ The following output properties are available:
         <span class="property-indicator"></span>
         <span class="property-type">str</span>
     </dt>
-    <dd>{{% md %}}If not specified, the default value is 'enabled'.{{% /md %}}</dd>
-    <dt class="property-"
+    <dd>{{% md %}}If not specified, the default value is 'enabled'.{{% /md %}}</dd><dt class="property-"
             title="">
         <span id="tags_python">
 <a href="#tags_python" style="color: inherit; text-decoration: inherit;">tags</a>
@@ -877,8 +776,7 @@ The following output properties are available:
         <span class="property-indicator"></span>
         <span class="property-type">Mapping[str, str]</span>
     </dt>
-    <dd>{{% md %}}The tags of the resource.{{% /md %}}</dd>
-    <dt class="property-"
+    <dd>{{% md %}}The tags of the resource.{{% /md %}}</dd><dt class="property-"
             title="">
         <span id="type_python">
 <a href="#type_python" style="color: inherit; text-decoration: inherit;">type</a>
@@ -886,8 +784,7 @@ The following output properties are available:
         <span class="property-indicator"></span>
         <span class="property-type">str</span>
     </dt>
-    <dd>{{% md %}}The type of the resource.{{% /md %}}</dd>
-    <dt class="property-"
+    <dd>{{% md %}}The type of the resource.{{% /md %}}</dd><dt class="property-"
             title="">
         <span id="identity_python">
 <a href="#identity_python" style="color: inherit; text-decoration: inherit;">identity</a>
@@ -895,8 +792,7 @@ The following output properties are available:
         <span class="property-indicator"></span>
         <span class="property-type"><a href="#batchaccountidentityresponse">Batch<wbr>Account<wbr>Identity<wbr>Response</a></span>
     </dt>
-    <dd>{{% md %}}The identity of the Batch account.{{% /md %}}</dd>
-</dl>
+    <dd>{{% md %}}The identity of the Batch account.{{% /md %}}</dd></dl>
 {{% /choosable %}}
 
 
@@ -910,9 +806,7 @@ The following output properties are available:
 
 
 {{% choosable language csharp %}}
-<dl class="resources-properties">
-
-    <dt class="property-required"
+<dl class="resources-properties"><dt class="property-required"
             title="Required">
         <span id="lastkeysync_csharp">
 <a href="#lastkeysync_csharp" style="color: inherit; text-decoration: inherit;">Last<wbr>Key<wbr>Sync</a>
@@ -920,8 +814,7 @@ The following output properties are available:
         <span class="property-indicator"></span>
         <span class="property-type">string</span>
     </dt>
-    <dd>{{% md %}}The UTC time at which storage keys were last synchronized with the Batch account.{{% /md %}}</dd>
-    <dt class="property-required"
+    <dd>{{% md %}}The UTC time at which storage keys were last synchronized with the Batch account.{{% /md %}}</dd><dt class="property-required"
             title="Required">
         <span id="storageaccountid_csharp">
 <a href="#storageaccountid_csharp" style="color: inherit; text-decoration: inherit;">Storage<wbr>Account<wbr>Id</a>
@@ -929,14 +822,11 @@ The following output properties are available:
         <span class="property-indicator"></span>
         <span class="property-type">string</span>
     </dt>
-    <dd>{{% md %}}The resource ID of the storage account to be used for auto-storage account.{{% /md %}}</dd>
-</dl>
+    <dd>{{% md %}}The resource ID of the storage account to be used for auto-storage account.{{% /md %}}</dd></dl>
 {{% /choosable %}}
 
 {{% choosable language go %}}
-<dl class="resources-properties">
-
-    <dt class="property-required"
+<dl class="resources-properties"><dt class="property-required"
             title="Required">
         <span id="lastkeysync_go">
 <a href="#lastkeysync_go" style="color: inherit; text-decoration: inherit;">Last<wbr>Key<wbr>Sync</a>
@@ -944,8 +834,7 @@ The following output properties are available:
         <span class="property-indicator"></span>
         <span class="property-type">string</span>
     </dt>
-    <dd>{{% md %}}The UTC time at which storage keys were last synchronized with the Batch account.{{% /md %}}</dd>
-    <dt class="property-required"
+    <dd>{{% md %}}The UTC time at which storage keys were last synchronized with the Batch account.{{% /md %}}</dd><dt class="property-required"
             title="Required">
         <span id="storageaccountid_go">
 <a href="#storageaccountid_go" style="color: inherit; text-decoration: inherit;">Storage<wbr>Account<wbr>Id</a>
@@ -953,14 +842,11 @@ The following output properties are available:
         <span class="property-indicator"></span>
         <span class="property-type">string</span>
     </dt>
-    <dd>{{% md %}}The resource ID of the storage account to be used for auto-storage account.{{% /md %}}</dd>
-</dl>
+    <dd>{{% md %}}The resource ID of the storage account to be used for auto-storage account.{{% /md %}}</dd></dl>
 {{% /choosable %}}
 
 {{% choosable language nodejs %}}
-<dl class="resources-properties">
-
-    <dt class="property-required"
+<dl class="resources-properties"><dt class="property-required"
             title="Required">
         <span id="lastkeysync_nodejs">
 <a href="#lastkeysync_nodejs" style="color: inherit; text-decoration: inherit;">last<wbr>Key<wbr>Sync</a>
@@ -968,8 +854,7 @@ The following output properties are available:
         <span class="property-indicator"></span>
         <span class="property-type">string</span>
     </dt>
-    <dd>{{% md %}}The UTC time at which storage keys were last synchronized with the Batch account.{{% /md %}}</dd>
-    <dt class="property-required"
+    <dd>{{% md %}}The UTC time at which storage keys were last synchronized with the Batch account.{{% /md %}}</dd><dt class="property-required"
             title="Required">
         <span id="storageaccountid_nodejs">
 <a href="#storageaccountid_nodejs" style="color: inherit; text-decoration: inherit;">storage<wbr>Account<wbr>Id</a>
@@ -977,14 +862,11 @@ The following output properties are available:
         <span class="property-indicator"></span>
         <span class="property-type">string</span>
     </dt>
-    <dd>{{% md %}}The resource ID of the storage account to be used for auto-storage account.{{% /md %}}</dd>
-</dl>
+    <dd>{{% md %}}The resource ID of the storage account to be used for auto-storage account.{{% /md %}}</dd></dl>
 {{% /choosable %}}
 
 {{% choosable language python %}}
-<dl class="resources-properties">
-
-    <dt class="property-required"
+<dl class="resources-properties"><dt class="property-required"
             title="Required">
         <span id="last_key_sync_python">
 <a href="#last_key_sync_python" style="color: inherit; text-decoration: inherit;">last_<wbr>key_<wbr>sync</a>
@@ -992,8 +874,7 @@ The following output properties are available:
         <span class="property-indicator"></span>
         <span class="property-type">str</span>
     </dt>
-    <dd>{{% md %}}The UTC time at which storage keys were last synchronized with the Batch account.{{% /md %}}</dd>
-    <dt class="property-required"
+    <dd>{{% md %}}The UTC time at which storage keys were last synchronized with the Batch account.{{% /md %}}</dd><dt class="property-required"
             title="Required">
         <span id="storage_account_id_python">
 <a href="#storage_account_id_python" style="color: inherit; text-decoration: inherit;">storage_<wbr>account_<wbr>id</a>
@@ -1001,8 +882,7 @@ The following output properties are available:
         <span class="property-indicator"></span>
         <span class="property-type">str</span>
     </dt>
-    <dd>{{% md %}}The resource ID of the storage account to be used for auto-storage account.{{% /md %}}</dd>
-</dl>
+    <dd>{{% md %}}The resource ID of the storage account to be used for auto-storage account.{{% /md %}}</dd></dl>
 {{% /choosable %}}
 
 <h4 id="batchaccountidentityresponse">Batch<wbr>Account<wbr>Identity<wbr>Response</h4>
@@ -1010,9 +890,7 @@ The following output properties are available:
 
 
 {{% choosable language csharp %}}
-<dl class="resources-properties">
-
-    <dt class="property-required"
+<dl class="resources-properties"><dt class="property-required"
             title="Required">
         <span id="principalid_csharp">
 <a href="#principalid_csharp" style="color: inherit; text-decoration: inherit;">Principal<wbr>Id</a>
@@ -1020,8 +898,7 @@ The following output properties are available:
         <span class="property-indicator"></span>
         <span class="property-type">string</span>
     </dt>
-    <dd>{{% md %}}The principal id of the Batch account. This property will only be provided for a system assigned identity.{{% /md %}}</dd>
-    <dt class="property-required"
+    <dd>{{% md %}}The principal id of the Batch account. This property will only be provided for a system assigned identity.{{% /md %}}</dd><dt class="property-required"
             title="Required">
         <span id="tenantid_csharp">
 <a href="#tenantid_csharp" style="color: inherit; text-decoration: inherit;">Tenant<wbr>Id</a>
@@ -1029,8 +906,7 @@ The following output properties are available:
         <span class="property-indicator"></span>
         <span class="property-type">string</span>
     </dt>
-    <dd>{{% md %}}The tenant id associated with the Batch account. This property will only be provided for a system assigned identity.{{% /md %}}</dd>
-    <dt class="property-required"
+    <dd>{{% md %}}The tenant id associated with the Batch account. This property will only be provided for a system assigned identity.{{% /md %}}</dd><dt class="property-required"
             title="Required">
         <span id="type_csharp">
 <a href="#type_csharp" style="color: inherit; text-decoration: inherit;">Type</a>
@@ -1038,8 +914,7 @@ The following output properties are available:
         <span class="property-indicator"></span>
         <span class="property-type">string</span>
     </dt>
-    <dd>{{% md %}}The type of identity used for the Batch account.{{% /md %}}</dd>
-    <dt class="property-optional"
+    <dd>{{% md %}}The type of identity used for the Batch account.{{% /md %}}</dd><dt class="property-optional"
             title="Optional">
         <span id="userassignedidentities_csharp">
 <a href="#userassignedidentities_csharp" style="color: inherit; text-decoration: inherit;">User<wbr>Assigned<wbr>Identities</a>
@@ -1047,14 +922,11 @@ The following output properties are available:
         <span class="property-indicator"></span>
         <span class="property-type">Dictionary&lt;string, Pulumi.<wbr>Azure<wbr>Native.<wbr>Batch.<wbr>Inputs.<wbr>Batch<wbr>Account<wbr>Identity<wbr>Response<wbr>User<wbr>Assigned<wbr>Identities<wbr>Args&gt;</span>
     </dt>
-    <dd>{{% md %}}The list of user identities associated with the Batch account. The user identity dictionary key references will be ARM resource ids in the form: '/subscriptions/{subscriptionId}/resourceGroups/{resourceGroupName}/providers/Microsoft.ManagedIdentity/userAssignedIdentities/{identityName}'.{{% /md %}}</dd>
-</dl>
+    <dd>{{% md %}}The list of user identities associated with the Batch account. The user identity dictionary key references will be ARM resource ids in the form: '/subscriptions/{subscriptionId}/resourceGroups/{resourceGroupName}/providers/Microsoft.ManagedIdentity/userAssignedIdentities/{identityName}'.{{% /md %}}</dd></dl>
 {{% /choosable %}}
 
 {{% choosable language go %}}
-<dl class="resources-properties">
-
-    <dt class="property-required"
+<dl class="resources-properties"><dt class="property-required"
             title="Required">
         <span id="principalid_go">
 <a href="#principalid_go" style="color: inherit; text-decoration: inherit;">Principal<wbr>Id</a>
@@ -1062,8 +934,7 @@ The following output properties are available:
         <span class="property-indicator"></span>
         <span class="property-type">string</span>
     </dt>
-    <dd>{{% md %}}The principal id of the Batch account. This property will only be provided for a system assigned identity.{{% /md %}}</dd>
-    <dt class="property-required"
+    <dd>{{% md %}}The principal id of the Batch account. This property will only be provided for a system assigned identity.{{% /md %}}</dd><dt class="property-required"
             title="Required">
         <span id="tenantid_go">
 <a href="#tenantid_go" style="color: inherit; text-decoration: inherit;">Tenant<wbr>Id</a>
@@ -1071,8 +942,7 @@ The following output properties are available:
         <span class="property-indicator"></span>
         <span class="property-type">string</span>
     </dt>
-    <dd>{{% md %}}The tenant id associated with the Batch account. This property will only be provided for a system assigned identity.{{% /md %}}</dd>
-    <dt class="property-required"
+    <dd>{{% md %}}The tenant id associated with the Batch account. This property will only be provided for a system assigned identity.{{% /md %}}</dd><dt class="property-required"
             title="Required">
         <span id="type_go">
 <a href="#type_go" style="color: inherit; text-decoration: inherit;">Type</a>
@@ -1080,8 +950,7 @@ The following output properties are available:
         <span class="property-indicator"></span>
         <span class="property-type">string</span>
     </dt>
-    <dd>{{% md %}}The type of identity used for the Batch account.{{% /md %}}</dd>
-    <dt class="property-optional"
+    <dd>{{% md %}}The type of identity used for the Batch account.{{% /md %}}</dd><dt class="property-optional"
             title="Optional">
         <span id="userassignedidentities_go">
 <a href="#userassignedidentities_go" style="color: inherit; text-decoration: inherit;">User<wbr>Assigned<wbr>Identities</a>
@@ -1089,14 +958,11 @@ The following output properties are available:
         <span class="property-indicator"></span>
         <span class="property-type">map[string]Batch<wbr>Account<wbr>Identity<wbr>Response<wbr>User<wbr>Assigned<wbr>Identities</span>
     </dt>
-    <dd>{{% md %}}The list of user identities associated with the Batch account. The user identity dictionary key references will be ARM resource ids in the form: '/subscriptions/{subscriptionId}/resourceGroups/{resourceGroupName}/providers/Microsoft.ManagedIdentity/userAssignedIdentities/{identityName}'.{{% /md %}}</dd>
-</dl>
+    <dd>{{% md %}}The list of user identities associated with the Batch account. The user identity dictionary key references will be ARM resource ids in the form: '/subscriptions/{subscriptionId}/resourceGroups/{resourceGroupName}/providers/Microsoft.ManagedIdentity/userAssignedIdentities/{identityName}'.{{% /md %}}</dd></dl>
 {{% /choosable %}}
 
 {{% choosable language nodejs %}}
-<dl class="resources-properties">
-
-    <dt class="property-required"
+<dl class="resources-properties"><dt class="property-required"
             title="Required">
         <span id="principalid_nodejs">
 <a href="#principalid_nodejs" style="color: inherit; text-decoration: inherit;">principal<wbr>Id</a>
@@ -1104,8 +970,7 @@ The following output properties are available:
         <span class="property-indicator"></span>
         <span class="property-type">string</span>
     </dt>
-    <dd>{{% md %}}The principal id of the Batch account. This property will only be provided for a system assigned identity.{{% /md %}}</dd>
-    <dt class="property-required"
+    <dd>{{% md %}}The principal id of the Batch account. This property will only be provided for a system assigned identity.{{% /md %}}</dd><dt class="property-required"
             title="Required">
         <span id="tenantid_nodejs">
 <a href="#tenantid_nodejs" style="color: inherit; text-decoration: inherit;">tenant<wbr>Id</a>
@@ -1113,8 +978,7 @@ The following output properties are available:
         <span class="property-indicator"></span>
         <span class="property-type">string</span>
     </dt>
-    <dd>{{% md %}}The tenant id associated with the Batch account. This property will only be provided for a system assigned identity.{{% /md %}}</dd>
-    <dt class="property-required"
+    <dd>{{% md %}}The tenant id associated with the Batch account. This property will only be provided for a system assigned identity.{{% /md %}}</dd><dt class="property-required"
             title="Required">
         <span id="type_nodejs">
 <a href="#type_nodejs" style="color: inherit; text-decoration: inherit;">type</a>
@@ -1122,8 +986,7 @@ The following output properties are available:
         <span class="property-indicator"></span>
         <span class="property-type">string</span>
     </dt>
-    <dd>{{% md %}}The type of identity used for the Batch account.{{% /md %}}</dd>
-    <dt class="property-optional"
+    <dd>{{% md %}}The type of identity used for the Batch account.{{% /md %}}</dd><dt class="property-optional"
             title="Optional">
         <span id="userassignedidentities_nodejs">
 <a href="#userassignedidentities_nodejs" style="color: inherit; text-decoration: inherit;">user<wbr>Assigned<wbr>Identities</a>
@@ -1131,14 +994,11 @@ The following output properties are available:
         <span class="property-indicator"></span>
         <span class="property-type">{[key: string]: Batch<wbr>Account<wbr>Identity<wbr>Response<wbr>User<wbr>Assigned<wbr>Identities}</span>
     </dt>
-    <dd>{{% md %}}The list of user identities associated with the Batch account. The user identity dictionary key references will be ARM resource ids in the form: '/subscriptions/{subscriptionId}/resourceGroups/{resourceGroupName}/providers/Microsoft.ManagedIdentity/userAssignedIdentities/{identityName}'.{{% /md %}}</dd>
-</dl>
+    <dd>{{% md %}}The list of user identities associated with the Batch account. The user identity dictionary key references will be ARM resource ids in the form: '/subscriptions/{subscriptionId}/resourceGroups/{resourceGroupName}/providers/Microsoft.ManagedIdentity/userAssignedIdentities/{identityName}'.{{% /md %}}</dd></dl>
 {{% /choosable %}}
 
 {{% choosable language python %}}
-<dl class="resources-properties">
-
-    <dt class="property-required"
+<dl class="resources-properties"><dt class="property-required"
             title="Required">
         <span id="principal_id_python">
 <a href="#principal_id_python" style="color: inherit; text-decoration: inherit;">principal_<wbr>id</a>
@@ -1146,8 +1006,7 @@ The following output properties are available:
         <span class="property-indicator"></span>
         <span class="property-type">str</span>
     </dt>
-    <dd>{{% md %}}The principal id of the Batch account. This property will only be provided for a system assigned identity.{{% /md %}}</dd>
-    <dt class="property-required"
+    <dd>{{% md %}}The principal id of the Batch account. This property will only be provided for a system assigned identity.{{% /md %}}</dd><dt class="property-required"
             title="Required">
         <span id="tenant_id_python">
 <a href="#tenant_id_python" style="color: inherit; text-decoration: inherit;">tenant_<wbr>id</a>
@@ -1155,8 +1014,7 @@ The following output properties are available:
         <span class="property-indicator"></span>
         <span class="property-type">str</span>
     </dt>
-    <dd>{{% md %}}The tenant id associated with the Batch account. This property will only be provided for a system assigned identity.{{% /md %}}</dd>
-    <dt class="property-required"
+    <dd>{{% md %}}The tenant id associated with the Batch account. This property will only be provided for a system assigned identity.{{% /md %}}</dd><dt class="property-required"
             title="Required">
         <span id="type_python">
 <a href="#type_python" style="color: inherit; text-decoration: inherit;">type</a>
@@ -1164,8 +1022,7 @@ The following output properties are available:
         <span class="property-indicator"></span>
         <span class="property-type">str</span>
     </dt>
-    <dd>{{% md %}}The type of identity used for the Batch account.{{% /md %}}</dd>
-    <dt class="property-optional"
+    <dd>{{% md %}}The type of identity used for the Batch account.{{% /md %}}</dd><dt class="property-optional"
             title="Optional">
         <span id="user_assigned_identities_python">
 <a href="#user_assigned_identities_python" style="color: inherit; text-decoration: inherit;">user_<wbr>assigned_<wbr>identities</a>
@@ -1173,8 +1030,7 @@ The following output properties are available:
         <span class="property-indicator"></span>
         <span class="property-type">Mapping[str, Batch<wbr>Account<wbr>Identity<wbr>Response<wbr>User<wbr>Assigned<wbr>Identities<wbr>Args]</span>
     </dt>
-    <dd>{{% md %}}The list of user identities associated with the Batch account. The user identity dictionary key references will be ARM resource ids in the form: '/subscriptions/{subscriptionId}/resourceGroups/{resourceGroupName}/providers/Microsoft.ManagedIdentity/userAssignedIdentities/{identityName}'.{{% /md %}}</dd>
-</dl>
+    <dd>{{% md %}}The list of user identities associated with the Batch account. The user identity dictionary key references will be ARM resource ids in the form: '/subscriptions/{subscriptionId}/resourceGroups/{resourceGroupName}/providers/Microsoft.ManagedIdentity/userAssignedIdentities/{identityName}'.{{% /md %}}</dd></dl>
 {{% /choosable %}}
 
 <h4 id="batchaccountidentityresponseuserassignedidentities">Batch<wbr>Account<wbr>Identity<wbr>Response<wbr>User<wbr>Assigned<wbr>Identities</h4>
@@ -1182,9 +1038,7 @@ The following output properties are available:
 
 
 {{% choosable language csharp %}}
-<dl class="resources-properties">
-
-    <dt class="property-required"
+<dl class="resources-properties"><dt class="property-required"
             title="Required">
         <span id="clientid_csharp">
 <a href="#clientid_csharp" style="color: inherit; text-decoration: inherit;">Client<wbr>Id</a>
@@ -1192,8 +1046,7 @@ The following output properties are available:
         <span class="property-indicator"></span>
         <span class="property-type">string</span>
     </dt>
-    <dd>{{% md %}}The client id of user assigned identity.{{% /md %}}</dd>
-    <dt class="property-required"
+    <dd>{{% md %}}The client id of user assigned identity.{{% /md %}}</dd><dt class="property-required"
             title="Required">
         <span id="principalid_csharp">
 <a href="#principalid_csharp" style="color: inherit; text-decoration: inherit;">Principal<wbr>Id</a>
@@ -1201,14 +1054,11 @@ The following output properties are available:
         <span class="property-indicator"></span>
         <span class="property-type">string</span>
     </dt>
-    <dd>{{% md %}}The principal id of user assigned identity.{{% /md %}}</dd>
-</dl>
+    <dd>{{% md %}}The principal id of user assigned identity.{{% /md %}}</dd></dl>
 {{% /choosable %}}
 
 {{% choosable language go %}}
-<dl class="resources-properties">
-
-    <dt class="property-required"
+<dl class="resources-properties"><dt class="property-required"
             title="Required">
         <span id="clientid_go">
 <a href="#clientid_go" style="color: inherit; text-decoration: inherit;">Client<wbr>Id</a>
@@ -1216,8 +1066,7 @@ The following output properties are available:
         <span class="property-indicator"></span>
         <span class="property-type">string</span>
     </dt>
-    <dd>{{% md %}}The client id of user assigned identity.{{% /md %}}</dd>
-    <dt class="property-required"
+    <dd>{{% md %}}The client id of user assigned identity.{{% /md %}}</dd><dt class="property-required"
             title="Required">
         <span id="principalid_go">
 <a href="#principalid_go" style="color: inherit; text-decoration: inherit;">Principal<wbr>Id</a>
@@ -1225,14 +1074,11 @@ The following output properties are available:
         <span class="property-indicator"></span>
         <span class="property-type">string</span>
     </dt>
-    <dd>{{% md %}}The principal id of user assigned identity.{{% /md %}}</dd>
-</dl>
+    <dd>{{% md %}}The principal id of user assigned identity.{{% /md %}}</dd></dl>
 {{% /choosable %}}
 
 {{% choosable language nodejs %}}
-<dl class="resources-properties">
-
-    <dt class="property-required"
+<dl class="resources-properties"><dt class="property-required"
             title="Required">
         <span id="clientid_nodejs">
 <a href="#clientid_nodejs" style="color: inherit; text-decoration: inherit;">client<wbr>Id</a>
@@ -1240,8 +1086,7 @@ The following output properties are available:
         <span class="property-indicator"></span>
         <span class="property-type">string</span>
     </dt>
-    <dd>{{% md %}}The client id of user assigned identity.{{% /md %}}</dd>
-    <dt class="property-required"
+    <dd>{{% md %}}The client id of user assigned identity.{{% /md %}}</dd><dt class="property-required"
             title="Required">
         <span id="principalid_nodejs">
 <a href="#principalid_nodejs" style="color: inherit; text-decoration: inherit;">principal<wbr>Id</a>
@@ -1249,14 +1094,11 @@ The following output properties are available:
         <span class="property-indicator"></span>
         <span class="property-type">string</span>
     </dt>
-    <dd>{{% md %}}The principal id of user assigned identity.{{% /md %}}</dd>
-</dl>
+    <dd>{{% md %}}The principal id of user assigned identity.{{% /md %}}</dd></dl>
 {{% /choosable %}}
 
 {{% choosable language python %}}
-<dl class="resources-properties">
-
-    <dt class="property-required"
+<dl class="resources-properties"><dt class="property-required"
             title="Required">
         <span id="client_id_python">
 <a href="#client_id_python" style="color: inherit; text-decoration: inherit;">client_<wbr>id</a>
@@ -1264,8 +1106,7 @@ The following output properties are available:
         <span class="property-indicator"></span>
         <span class="property-type">str</span>
     </dt>
-    <dd>{{% md %}}The client id of user assigned identity.{{% /md %}}</dd>
-    <dt class="property-required"
+    <dd>{{% md %}}The client id of user assigned identity.{{% /md %}}</dd><dt class="property-required"
             title="Required">
         <span id="principal_id_python">
 <a href="#principal_id_python" style="color: inherit; text-decoration: inherit;">principal_<wbr>id</a>
@@ -1273,8 +1114,7 @@ The following output properties are available:
         <span class="property-indicator"></span>
         <span class="property-type">str</span>
     </dt>
-    <dd>{{% md %}}The principal id of user assigned identity.{{% /md %}}</dd>
-</dl>
+    <dd>{{% md %}}The principal id of user assigned identity.{{% /md %}}</dd></dl>
 {{% /choosable %}}
 
 <h4 id="encryptionpropertiesresponse">Encryption<wbr>Properties<wbr>Response</h4>
@@ -1282,9 +1122,7 @@ The following output properties are available:
 
 
 {{% choosable language csharp %}}
-<dl class="resources-properties">
-
-    <dt class="property-optional"
+<dl class="resources-properties"><dt class="property-optional"
             title="Optional">
         <span id="keysource_csharp">
 <a href="#keysource_csharp" style="color: inherit; text-decoration: inherit;">Key<wbr>Source</a>
@@ -1292,8 +1130,7 @@ The following output properties are available:
         <span class="property-indicator"></span>
         <span class="property-type">string</span>
     </dt>
-    <dd>{{% md %}}Type of the key source.{{% /md %}}</dd>
-    <dt class="property-optional"
+    <dd>{{% md %}}Type of the key source.{{% /md %}}</dd><dt class="property-optional"
             title="Optional">
         <span id="keyvaultproperties_csharp">
 <a href="#keyvaultproperties_csharp" style="color: inherit; text-decoration: inherit;">Key<wbr>Vault<wbr>Properties</a>
@@ -1301,14 +1138,11 @@ The following output properties are available:
         <span class="property-indicator"></span>
         <span class="property-type"><a href="#keyvaultpropertiesresponse">Pulumi.<wbr>Azure<wbr>Native.<wbr>Batch.<wbr>Inputs.<wbr>Key<wbr>Vault<wbr>Properties<wbr>Response<wbr>Args</a></span>
     </dt>
-    <dd>{{% md %}}Additional details when using Microsoft.KeyVault{{% /md %}}</dd>
-</dl>
+    <dd>{{% md %}}Additional details when using Microsoft.KeyVault{{% /md %}}</dd></dl>
 {{% /choosable %}}
 
 {{% choosable language go %}}
-<dl class="resources-properties">
-
-    <dt class="property-optional"
+<dl class="resources-properties"><dt class="property-optional"
             title="Optional">
         <span id="keysource_go">
 <a href="#keysource_go" style="color: inherit; text-decoration: inherit;">Key<wbr>Source</a>
@@ -1316,8 +1150,7 @@ The following output properties are available:
         <span class="property-indicator"></span>
         <span class="property-type">string</span>
     </dt>
-    <dd>{{% md %}}Type of the key source.{{% /md %}}</dd>
-    <dt class="property-optional"
+    <dd>{{% md %}}Type of the key source.{{% /md %}}</dd><dt class="property-optional"
             title="Optional">
         <span id="keyvaultproperties_go">
 <a href="#keyvaultproperties_go" style="color: inherit; text-decoration: inherit;">Key<wbr>Vault<wbr>Properties</a>
@@ -1325,14 +1158,11 @@ The following output properties are available:
         <span class="property-indicator"></span>
         <span class="property-type"><a href="#keyvaultpropertiesresponse">Key<wbr>Vault<wbr>Properties<wbr>Response</a></span>
     </dt>
-    <dd>{{% md %}}Additional details when using Microsoft.KeyVault{{% /md %}}</dd>
-</dl>
+    <dd>{{% md %}}Additional details when using Microsoft.KeyVault{{% /md %}}</dd></dl>
 {{% /choosable %}}
 
 {{% choosable language nodejs %}}
-<dl class="resources-properties">
-
-    <dt class="property-optional"
+<dl class="resources-properties"><dt class="property-optional"
             title="Optional">
         <span id="keysource_nodejs">
 <a href="#keysource_nodejs" style="color: inherit; text-decoration: inherit;">key<wbr>Source</a>
@@ -1340,8 +1170,7 @@ The following output properties are available:
         <span class="property-indicator"></span>
         <span class="property-type">string</span>
     </dt>
-    <dd>{{% md %}}Type of the key source.{{% /md %}}</dd>
-    <dt class="property-optional"
+    <dd>{{% md %}}Type of the key source.{{% /md %}}</dd><dt class="property-optional"
             title="Optional">
         <span id="keyvaultproperties_nodejs">
 <a href="#keyvaultproperties_nodejs" style="color: inherit; text-decoration: inherit;">key<wbr>Vault<wbr>Properties</a>
@@ -1349,14 +1178,11 @@ The following output properties are available:
         <span class="property-indicator"></span>
         <span class="property-type"><a href="#keyvaultpropertiesresponse">Key<wbr>Vault<wbr>Properties<wbr>Response</a></span>
     </dt>
-    <dd>{{% md %}}Additional details when using Microsoft.KeyVault{{% /md %}}</dd>
-</dl>
+    <dd>{{% md %}}Additional details when using Microsoft.KeyVault{{% /md %}}</dd></dl>
 {{% /choosable %}}
 
 {{% choosable language python %}}
-<dl class="resources-properties">
-
-    <dt class="property-optional"
+<dl class="resources-properties"><dt class="property-optional"
             title="Optional">
         <span id="key_source_python">
 <a href="#key_source_python" style="color: inherit; text-decoration: inherit;">key_<wbr>source</a>
@@ -1364,8 +1190,7 @@ The following output properties are available:
         <span class="property-indicator"></span>
         <span class="property-type">str</span>
     </dt>
-    <dd>{{% md %}}Type of the key source.{{% /md %}}</dd>
-    <dt class="property-optional"
+    <dd>{{% md %}}Type of the key source.{{% /md %}}</dd><dt class="property-optional"
             title="Optional">
         <span id="key_vault_properties_python">
 <a href="#key_vault_properties_python" style="color: inherit; text-decoration: inherit;">key_<wbr>vault_<wbr>properties</a>
@@ -1373,8 +1198,7 @@ The following output properties are available:
         <span class="property-indicator"></span>
         <span class="property-type"><a href="#keyvaultpropertiesresponse">Key<wbr>Vault<wbr>Properties<wbr>Response<wbr>Args</a></span>
     </dt>
-    <dd>{{% md %}}Additional details when using Microsoft.KeyVault{{% /md %}}</dd>
-</dl>
+    <dd>{{% md %}}Additional details when using Microsoft.KeyVault{{% /md %}}</dd></dl>
 {{% /choosable %}}
 
 <h4 id="keyvaultpropertiesresponse">Key<wbr>Vault<wbr>Properties<wbr>Response</h4>
@@ -1382,9 +1206,7 @@ The following output properties are available:
 
 
 {{% choosable language csharp %}}
-<dl class="resources-properties">
-
-    <dt class="property-optional"
+<dl class="resources-properties"><dt class="property-optional"
             title="Optional">
         <span id="keyidentifier_csharp">
 <a href="#keyidentifier_csharp" style="color: inherit; text-decoration: inherit;">Key<wbr>Identifier</a>
@@ -1396,14 +1218,11 @@ The following output properties are available:
 
  The Batch Account has a System Assigned identity
  The account identity has been granted Key/Get, Key/Unwrap and Key/Wrap permissions
- The KeyVault has soft-delete and purge protection enabled{{% /md %}}</dd>
-</dl>
+ The KeyVault has soft-delete and purge protection enabled{{% /md %}}</dd></dl>
 {{% /choosable %}}
 
 {{% choosable language go %}}
-<dl class="resources-properties">
-
-    <dt class="property-optional"
+<dl class="resources-properties"><dt class="property-optional"
             title="Optional">
         <span id="keyidentifier_go">
 <a href="#keyidentifier_go" style="color: inherit; text-decoration: inherit;">Key<wbr>Identifier</a>
@@ -1415,14 +1234,11 @@ The following output properties are available:
 
  The Batch Account has a System Assigned identity
  The account identity has been granted Key/Get, Key/Unwrap and Key/Wrap permissions
- The KeyVault has soft-delete and purge protection enabled{{% /md %}}</dd>
-</dl>
+ The KeyVault has soft-delete and purge protection enabled{{% /md %}}</dd></dl>
 {{% /choosable %}}
 
 {{% choosable language nodejs %}}
-<dl class="resources-properties">
-
-    <dt class="property-optional"
+<dl class="resources-properties"><dt class="property-optional"
             title="Optional">
         <span id="keyidentifier_nodejs">
 <a href="#keyidentifier_nodejs" style="color: inherit; text-decoration: inherit;">key<wbr>Identifier</a>
@@ -1434,14 +1250,11 @@ The following output properties are available:
 
  The Batch Account has a System Assigned identity
  The account identity has been granted Key/Get, Key/Unwrap and Key/Wrap permissions
- The KeyVault has soft-delete and purge protection enabled{{% /md %}}</dd>
-</dl>
+ The KeyVault has soft-delete and purge protection enabled{{% /md %}}</dd></dl>
 {{% /choosable %}}
 
 {{% choosable language python %}}
-<dl class="resources-properties">
-
-    <dt class="property-optional"
+<dl class="resources-properties"><dt class="property-optional"
             title="Optional">
         <span id="key_identifier_python">
 <a href="#key_identifier_python" style="color: inherit; text-decoration: inherit;">key_<wbr>identifier</a>
@@ -1453,8 +1266,7 @@ The following output properties are available:
 
  The Batch Account has a System Assigned identity
  The account identity has been granted Key/Get, Key/Unwrap and Key/Wrap permissions
- The KeyVault has soft-delete and purge protection enabled{{% /md %}}</dd>
-</dl>
+ The KeyVault has soft-delete and purge protection enabled{{% /md %}}</dd></dl>
 {{% /choosable %}}
 
 <h4 id="keyvaultreferenceresponse">Key<wbr>Vault<wbr>Reference<wbr>Response</h4>
@@ -1462,9 +1274,7 @@ The following output properties are available:
 
 
 {{% choosable language csharp %}}
-<dl class="resources-properties">
-
-    <dt class="property-required"
+<dl class="resources-properties"><dt class="property-required"
             title="Required">
         <span id="id_csharp">
 <a href="#id_csharp" style="color: inherit; text-decoration: inherit;">Id</a>
@@ -1472,8 +1282,7 @@ The following output properties are available:
         <span class="property-indicator"></span>
         <span class="property-type">string</span>
     </dt>
-    <dd>{{% md %}}The resource ID of the Azure key vault associated with the Batch account.{{% /md %}}</dd>
-    <dt class="property-required"
+    <dd>{{% md %}}The resource ID of the Azure key vault associated with the Batch account.{{% /md %}}</dd><dt class="property-required"
             title="Required">
         <span id="url_csharp">
 <a href="#url_csharp" style="color: inherit; text-decoration: inherit;">Url</a>
@@ -1481,14 +1290,11 @@ The following output properties are available:
         <span class="property-indicator"></span>
         <span class="property-type">string</span>
     </dt>
-    <dd>{{% md %}}The URL of the Azure key vault associated with the Batch account.{{% /md %}}</dd>
-</dl>
+    <dd>{{% md %}}The URL of the Azure key vault associated with the Batch account.{{% /md %}}</dd></dl>
 {{% /choosable %}}
 
 {{% choosable language go %}}
-<dl class="resources-properties">
-
-    <dt class="property-required"
+<dl class="resources-properties"><dt class="property-required"
             title="Required">
         <span id="id_go">
 <a href="#id_go" style="color: inherit; text-decoration: inherit;">Id</a>
@@ -1496,8 +1302,7 @@ The following output properties are available:
         <span class="property-indicator"></span>
         <span class="property-type">string</span>
     </dt>
-    <dd>{{% md %}}The resource ID of the Azure key vault associated with the Batch account.{{% /md %}}</dd>
-    <dt class="property-required"
+    <dd>{{% md %}}The resource ID of the Azure key vault associated with the Batch account.{{% /md %}}</dd><dt class="property-required"
             title="Required">
         <span id="url_go">
 <a href="#url_go" style="color: inherit; text-decoration: inherit;">Url</a>
@@ -1505,14 +1310,11 @@ The following output properties are available:
         <span class="property-indicator"></span>
         <span class="property-type">string</span>
     </dt>
-    <dd>{{% md %}}The URL of the Azure key vault associated with the Batch account.{{% /md %}}</dd>
-</dl>
+    <dd>{{% md %}}The URL of the Azure key vault associated with the Batch account.{{% /md %}}</dd></dl>
 {{% /choosable %}}
 
 {{% choosable language nodejs %}}
-<dl class="resources-properties">
-
-    <dt class="property-required"
+<dl class="resources-properties"><dt class="property-required"
             title="Required">
         <span id="id_nodejs">
 <a href="#id_nodejs" style="color: inherit; text-decoration: inherit;">id</a>
@@ -1520,8 +1322,7 @@ The following output properties are available:
         <span class="property-indicator"></span>
         <span class="property-type">string</span>
     </dt>
-    <dd>{{% md %}}The resource ID of the Azure key vault associated with the Batch account.{{% /md %}}</dd>
-    <dt class="property-required"
+    <dd>{{% md %}}The resource ID of the Azure key vault associated with the Batch account.{{% /md %}}</dd><dt class="property-required"
             title="Required">
         <span id="url_nodejs">
 <a href="#url_nodejs" style="color: inherit; text-decoration: inherit;">url</a>
@@ -1529,14 +1330,11 @@ The following output properties are available:
         <span class="property-indicator"></span>
         <span class="property-type">string</span>
     </dt>
-    <dd>{{% md %}}The URL of the Azure key vault associated with the Batch account.{{% /md %}}</dd>
-</dl>
+    <dd>{{% md %}}The URL of the Azure key vault associated with the Batch account.{{% /md %}}</dd></dl>
 {{% /choosable %}}
 
 {{% choosable language python %}}
-<dl class="resources-properties">
-
-    <dt class="property-required"
+<dl class="resources-properties"><dt class="property-required"
             title="Required">
         <span id="id_python">
 <a href="#id_python" style="color: inherit; text-decoration: inherit;">id</a>
@@ -1544,8 +1342,7 @@ The following output properties are available:
         <span class="property-indicator"></span>
         <span class="property-type">str</span>
     </dt>
-    <dd>{{% md %}}The resource ID of the Azure key vault associated with the Batch account.{{% /md %}}</dd>
-    <dt class="property-required"
+    <dd>{{% md %}}The resource ID of the Azure key vault associated with the Batch account.{{% /md %}}</dd><dt class="property-required"
             title="Required">
         <span id="url_python">
 <a href="#url_python" style="color: inherit; text-decoration: inherit;">url</a>
@@ -1553,8 +1350,7 @@ The following output properties are available:
         <span class="property-indicator"></span>
         <span class="property-type">str</span>
     </dt>
-    <dd>{{% md %}}The URL of the Azure key vault associated with the Batch account.{{% /md %}}</dd>
-</dl>
+    <dd>{{% md %}}The URL of the Azure key vault associated with the Batch account.{{% /md %}}</dd></dl>
 {{% /choosable %}}
 
 <h4 id="privateendpointconnectionresponse">Private<wbr>Endpoint<wbr>Connection<wbr>Response</h4>
@@ -1562,9 +1358,7 @@ The following output properties are available:
 
 
 {{% choosable language csharp %}}
-<dl class="resources-properties">
-
-    <dt class="property-required"
+<dl class="resources-properties"><dt class="property-required"
             title="Required">
         <span id="etag_csharp">
 <a href="#etag_csharp" style="color: inherit; text-decoration: inherit;">Etag</a>
@@ -1572,8 +1366,7 @@ The following output properties are available:
         <span class="property-indicator"></span>
         <span class="property-type">string</span>
     </dt>
-    <dd>{{% md %}}The ETag of the resource, used for concurrency statements.{{% /md %}}</dd>
-    <dt class="property-required"
+    <dd>{{% md %}}The ETag of the resource, used for concurrency statements.{{% /md %}}</dd><dt class="property-required"
             title="Required">
         <span id="id_csharp">
 <a href="#id_csharp" style="color: inherit; text-decoration: inherit;">Id</a>
@@ -1581,8 +1374,7 @@ The following output properties are available:
         <span class="property-indicator"></span>
         <span class="property-type">string</span>
     </dt>
-    <dd>{{% md %}}The ID of the resource.{{% /md %}}</dd>
-    <dt class="property-required"
+    <dd>{{% md %}}The ID of the resource.{{% /md %}}</dd><dt class="property-required"
             title="Required">
         <span id="name_csharp">
 <a href="#name_csharp" style="color: inherit; text-decoration: inherit;">Name</a>
@@ -1590,8 +1382,7 @@ The following output properties are available:
         <span class="property-indicator"></span>
         <span class="property-type">string</span>
     </dt>
-    <dd>{{% md %}}The name of the resource.{{% /md %}}</dd>
-    <dt class="property-required"
+    <dd>{{% md %}}The name of the resource.{{% /md %}}</dd><dt class="property-required"
             title="Required">
         <span id="provisioningstate_csharp">
 <a href="#provisioningstate_csharp" style="color: inherit; text-decoration: inherit;">Provisioning<wbr>State</a>
@@ -1599,8 +1390,7 @@ The following output properties are available:
         <span class="property-indicator"></span>
         <span class="property-type">string</span>
     </dt>
-    <dd>{{% md %}}{{% /md %}}</dd>
-    <dt class="property-required"
+    <dd>{{% md %}}{{% /md %}}</dd><dt class="property-required"
             title="Required">
         <span id="type_csharp">
 <a href="#type_csharp" style="color: inherit; text-decoration: inherit;">Type</a>
@@ -1608,8 +1398,7 @@ The following output properties are available:
         <span class="property-indicator"></span>
         <span class="property-type">string</span>
     </dt>
-    <dd>{{% md %}}The type of the resource.{{% /md %}}</dd>
-    <dt class="property-optional"
+    <dd>{{% md %}}The type of the resource.{{% /md %}}</dd><dt class="property-optional"
             title="Optional">
         <span id="privateendpoint_csharp">
 <a href="#privateendpoint_csharp" style="color: inherit; text-decoration: inherit;">Private<wbr>Endpoint</a>
@@ -1617,8 +1406,7 @@ The following output properties are available:
         <span class="property-indicator"></span>
         <span class="property-type"><a href="#privateendpointresponse">Pulumi.<wbr>Azure<wbr>Native.<wbr>Batch.<wbr>Inputs.<wbr>Private<wbr>Endpoint<wbr>Response<wbr>Args</a></span>
     </dt>
-    <dd>{{% md %}}The private endpoint of the private endpoint connection.{{% /md %}}</dd>
-    <dt class="property-optional"
+    <dd>{{% md %}}The private endpoint of the private endpoint connection.{{% /md %}}</dd><dt class="property-optional"
             title="Optional">
         <span id="privatelinkserviceconnectionstate_csharp">
 <a href="#privatelinkserviceconnectionstate_csharp" style="color: inherit; text-decoration: inherit;">Private<wbr>Link<wbr>Service<wbr>Connection<wbr>State</a>
@@ -1626,14 +1414,11 @@ The following output properties are available:
         <span class="property-indicator"></span>
         <span class="property-type"><a href="#privatelinkserviceconnectionstateresponse">Pulumi.<wbr>Azure<wbr>Native.<wbr>Batch.<wbr>Inputs.<wbr>Private<wbr>Link<wbr>Service<wbr>Connection<wbr>State<wbr>Response<wbr>Args</a></span>
     </dt>
-    <dd>{{% md %}}The private link service connection state of the private endpoint connection{{% /md %}}</dd>
-</dl>
+    <dd>{{% md %}}The private link service connection state of the private endpoint connection{{% /md %}}</dd></dl>
 {{% /choosable %}}
 
 {{% choosable language go %}}
-<dl class="resources-properties">
-
-    <dt class="property-required"
+<dl class="resources-properties"><dt class="property-required"
             title="Required">
         <span id="etag_go">
 <a href="#etag_go" style="color: inherit; text-decoration: inherit;">Etag</a>
@@ -1641,8 +1426,7 @@ The following output properties are available:
         <span class="property-indicator"></span>
         <span class="property-type">string</span>
     </dt>
-    <dd>{{% md %}}The ETag of the resource, used for concurrency statements.{{% /md %}}</dd>
-    <dt class="property-required"
+    <dd>{{% md %}}The ETag of the resource, used for concurrency statements.{{% /md %}}</dd><dt class="property-required"
             title="Required">
         <span id="id_go">
 <a href="#id_go" style="color: inherit; text-decoration: inherit;">Id</a>
@@ -1650,8 +1434,7 @@ The following output properties are available:
         <span class="property-indicator"></span>
         <span class="property-type">string</span>
     </dt>
-    <dd>{{% md %}}The ID of the resource.{{% /md %}}</dd>
-    <dt class="property-required"
+    <dd>{{% md %}}The ID of the resource.{{% /md %}}</dd><dt class="property-required"
             title="Required">
         <span id="name_go">
 <a href="#name_go" style="color: inherit; text-decoration: inherit;">Name</a>
@@ -1659,8 +1442,7 @@ The following output properties are available:
         <span class="property-indicator"></span>
         <span class="property-type">string</span>
     </dt>
-    <dd>{{% md %}}The name of the resource.{{% /md %}}</dd>
-    <dt class="property-required"
+    <dd>{{% md %}}The name of the resource.{{% /md %}}</dd><dt class="property-required"
             title="Required">
         <span id="provisioningstate_go">
 <a href="#provisioningstate_go" style="color: inherit; text-decoration: inherit;">Provisioning<wbr>State</a>
@@ -1668,8 +1450,7 @@ The following output properties are available:
         <span class="property-indicator"></span>
         <span class="property-type">string</span>
     </dt>
-    <dd>{{% md %}}{{% /md %}}</dd>
-    <dt class="property-required"
+    <dd>{{% md %}}{{% /md %}}</dd><dt class="property-required"
             title="Required">
         <span id="type_go">
 <a href="#type_go" style="color: inherit; text-decoration: inherit;">Type</a>
@@ -1677,8 +1458,7 @@ The following output properties are available:
         <span class="property-indicator"></span>
         <span class="property-type">string</span>
     </dt>
-    <dd>{{% md %}}The type of the resource.{{% /md %}}</dd>
-    <dt class="property-optional"
+    <dd>{{% md %}}The type of the resource.{{% /md %}}</dd><dt class="property-optional"
             title="Optional">
         <span id="privateendpoint_go">
 <a href="#privateendpoint_go" style="color: inherit; text-decoration: inherit;">Private<wbr>Endpoint</a>
@@ -1686,8 +1466,7 @@ The following output properties are available:
         <span class="property-indicator"></span>
         <span class="property-type"><a href="#privateendpointresponse">Private<wbr>Endpoint<wbr>Response</a></span>
     </dt>
-    <dd>{{% md %}}The private endpoint of the private endpoint connection.{{% /md %}}</dd>
-    <dt class="property-optional"
+    <dd>{{% md %}}The private endpoint of the private endpoint connection.{{% /md %}}</dd><dt class="property-optional"
             title="Optional">
         <span id="privatelinkserviceconnectionstate_go">
 <a href="#privatelinkserviceconnectionstate_go" style="color: inherit; text-decoration: inherit;">Private<wbr>Link<wbr>Service<wbr>Connection<wbr>State</a>
@@ -1695,14 +1474,11 @@ The following output properties are available:
         <span class="property-indicator"></span>
         <span class="property-type"><a href="#privatelinkserviceconnectionstateresponse">Private<wbr>Link<wbr>Service<wbr>Connection<wbr>State<wbr>Response</a></span>
     </dt>
-    <dd>{{% md %}}The private link service connection state of the private endpoint connection{{% /md %}}</dd>
-</dl>
+    <dd>{{% md %}}The private link service connection state of the private endpoint connection{{% /md %}}</dd></dl>
 {{% /choosable %}}
 
 {{% choosable language nodejs %}}
-<dl class="resources-properties">
-
-    <dt class="property-required"
+<dl class="resources-properties"><dt class="property-required"
             title="Required">
         <span id="etag_nodejs">
 <a href="#etag_nodejs" style="color: inherit; text-decoration: inherit;">etag</a>
@@ -1710,8 +1486,7 @@ The following output properties are available:
         <span class="property-indicator"></span>
         <span class="property-type">string</span>
     </dt>
-    <dd>{{% md %}}The ETag of the resource, used for concurrency statements.{{% /md %}}</dd>
-    <dt class="property-required"
+    <dd>{{% md %}}The ETag of the resource, used for concurrency statements.{{% /md %}}</dd><dt class="property-required"
             title="Required">
         <span id="id_nodejs">
 <a href="#id_nodejs" style="color: inherit; text-decoration: inherit;">id</a>
@@ -1719,8 +1494,7 @@ The following output properties are available:
         <span class="property-indicator"></span>
         <span class="property-type">string</span>
     </dt>
-    <dd>{{% md %}}The ID of the resource.{{% /md %}}</dd>
-    <dt class="property-required"
+    <dd>{{% md %}}The ID of the resource.{{% /md %}}</dd><dt class="property-required"
             title="Required">
         <span id="name_nodejs">
 <a href="#name_nodejs" style="color: inherit; text-decoration: inherit;">name</a>
@@ -1728,8 +1502,7 @@ The following output properties are available:
         <span class="property-indicator"></span>
         <span class="property-type">string</span>
     </dt>
-    <dd>{{% md %}}The name of the resource.{{% /md %}}</dd>
-    <dt class="property-required"
+    <dd>{{% md %}}The name of the resource.{{% /md %}}</dd><dt class="property-required"
             title="Required">
         <span id="provisioningstate_nodejs">
 <a href="#provisioningstate_nodejs" style="color: inherit; text-decoration: inherit;">provisioning<wbr>State</a>
@@ -1737,8 +1510,7 @@ The following output properties are available:
         <span class="property-indicator"></span>
         <span class="property-type">string</span>
     </dt>
-    <dd>{{% md %}}{{% /md %}}</dd>
-    <dt class="property-required"
+    <dd>{{% md %}}{{% /md %}}</dd><dt class="property-required"
             title="Required">
         <span id="type_nodejs">
 <a href="#type_nodejs" style="color: inherit; text-decoration: inherit;">type</a>
@@ -1746,8 +1518,7 @@ The following output properties are available:
         <span class="property-indicator"></span>
         <span class="property-type">string</span>
     </dt>
-    <dd>{{% md %}}The type of the resource.{{% /md %}}</dd>
-    <dt class="property-optional"
+    <dd>{{% md %}}The type of the resource.{{% /md %}}</dd><dt class="property-optional"
             title="Optional">
         <span id="privateendpoint_nodejs">
 <a href="#privateendpoint_nodejs" style="color: inherit; text-decoration: inherit;">private<wbr>Endpoint</a>
@@ -1755,8 +1526,7 @@ The following output properties are available:
         <span class="property-indicator"></span>
         <span class="property-type"><a href="#privateendpointresponse">Private<wbr>Endpoint<wbr>Response</a></span>
     </dt>
-    <dd>{{% md %}}The private endpoint of the private endpoint connection.{{% /md %}}</dd>
-    <dt class="property-optional"
+    <dd>{{% md %}}The private endpoint of the private endpoint connection.{{% /md %}}</dd><dt class="property-optional"
             title="Optional">
         <span id="privatelinkserviceconnectionstate_nodejs">
 <a href="#privatelinkserviceconnectionstate_nodejs" style="color: inherit; text-decoration: inherit;">private<wbr>Link<wbr>Service<wbr>Connection<wbr>State</a>
@@ -1764,14 +1534,11 @@ The following output properties are available:
         <span class="property-indicator"></span>
         <span class="property-type"><a href="#privatelinkserviceconnectionstateresponse">Private<wbr>Link<wbr>Service<wbr>Connection<wbr>State<wbr>Response</a></span>
     </dt>
-    <dd>{{% md %}}The private link service connection state of the private endpoint connection{{% /md %}}</dd>
-</dl>
+    <dd>{{% md %}}The private link service connection state of the private endpoint connection{{% /md %}}</dd></dl>
 {{% /choosable %}}
 
 {{% choosable language python %}}
-<dl class="resources-properties">
-
-    <dt class="property-required"
+<dl class="resources-properties"><dt class="property-required"
             title="Required">
         <span id="etag_python">
 <a href="#etag_python" style="color: inherit; text-decoration: inherit;">etag</a>
@@ -1779,8 +1546,7 @@ The following output properties are available:
         <span class="property-indicator"></span>
         <span class="property-type">str</span>
     </dt>
-    <dd>{{% md %}}The ETag of the resource, used for concurrency statements.{{% /md %}}</dd>
-    <dt class="property-required"
+    <dd>{{% md %}}The ETag of the resource, used for concurrency statements.{{% /md %}}</dd><dt class="property-required"
             title="Required">
         <span id="id_python">
 <a href="#id_python" style="color: inherit; text-decoration: inherit;">id</a>
@@ -1788,8 +1554,7 @@ The following output properties are available:
         <span class="property-indicator"></span>
         <span class="property-type">str</span>
     </dt>
-    <dd>{{% md %}}The ID of the resource.{{% /md %}}</dd>
-    <dt class="property-required"
+    <dd>{{% md %}}The ID of the resource.{{% /md %}}</dd><dt class="property-required"
             title="Required">
         <span id="name_python">
 <a href="#name_python" style="color: inherit; text-decoration: inherit;">name</a>
@@ -1797,8 +1562,7 @@ The following output properties are available:
         <span class="property-indicator"></span>
         <span class="property-type">str</span>
     </dt>
-    <dd>{{% md %}}The name of the resource.{{% /md %}}</dd>
-    <dt class="property-required"
+    <dd>{{% md %}}The name of the resource.{{% /md %}}</dd><dt class="property-required"
             title="Required">
         <span id="provisioning_state_python">
 <a href="#provisioning_state_python" style="color: inherit; text-decoration: inherit;">provisioning_<wbr>state</a>
@@ -1806,8 +1570,7 @@ The following output properties are available:
         <span class="property-indicator"></span>
         <span class="property-type">str</span>
     </dt>
-    <dd>{{% md %}}{{% /md %}}</dd>
-    <dt class="property-required"
+    <dd>{{% md %}}{{% /md %}}</dd><dt class="property-required"
             title="Required">
         <span id="type_python">
 <a href="#type_python" style="color: inherit; text-decoration: inherit;">type</a>
@@ -1815,8 +1578,7 @@ The following output properties are available:
         <span class="property-indicator"></span>
         <span class="property-type">str</span>
     </dt>
-    <dd>{{% md %}}The type of the resource.{{% /md %}}</dd>
-    <dt class="property-optional"
+    <dd>{{% md %}}The type of the resource.{{% /md %}}</dd><dt class="property-optional"
             title="Optional">
         <span id="private_endpoint_python">
 <a href="#private_endpoint_python" style="color: inherit; text-decoration: inherit;">private_<wbr>endpoint</a>
@@ -1824,8 +1586,7 @@ The following output properties are available:
         <span class="property-indicator"></span>
         <span class="property-type"><a href="#privateendpointresponse">Private<wbr>Endpoint<wbr>Response<wbr>Args</a></span>
     </dt>
-    <dd>{{% md %}}The private endpoint of the private endpoint connection.{{% /md %}}</dd>
-    <dt class="property-optional"
+    <dd>{{% md %}}The private endpoint of the private endpoint connection.{{% /md %}}</dd><dt class="property-optional"
             title="Optional">
         <span id="private_link_service_connection_state_python">
 <a href="#private_link_service_connection_state_python" style="color: inherit; text-decoration: inherit;">private_<wbr>link_<wbr>service_<wbr>connection_<wbr>state</a>
@@ -1833,8 +1594,7 @@ The following output properties are available:
         <span class="property-indicator"></span>
         <span class="property-type"><a href="#privatelinkserviceconnectionstateresponse">Private<wbr>Link<wbr>Service<wbr>Connection<wbr>State<wbr>Response<wbr>Args</a></span>
     </dt>
-    <dd>{{% md %}}The private link service connection state of the private endpoint connection{{% /md %}}</dd>
-</dl>
+    <dd>{{% md %}}The private link service connection state of the private endpoint connection{{% /md %}}</dd></dl>
 {{% /choosable %}}
 
 <h4 id="privateendpointresponse">Private<wbr>Endpoint<wbr>Response</h4>
@@ -1842,9 +1602,7 @@ The following output properties are available:
 
 
 {{% choosable language csharp %}}
-<dl class="resources-properties">
-
-    <dt class="property-required"
+<dl class="resources-properties"><dt class="property-required"
             title="Required">
         <span id="id_csharp">
 <a href="#id_csharp" style="color: inherit; text-decoration: inherit;">Id</a>
@@ -1852,14 +1610,11 @@ The following output properties are available:
         <span class="property-indicator"></span>
         <span class="property-type">string</span>
     </dt>
-    <dd>{{% md %}}{{% /md %}}</dd>
-</dl>
+    <dd>{{% md %}}{{% /md %}}</dd></dl>
 {{% /choosable %}}
 
 {{% choosable language go %}}
-<dl class="resources-properties">
-
-    <dt class="property-required"
+<dl class="resources-properties"><dt class="property-required"
             title="Required">
         <span id="id_go">
 <a href="#id_go" style="color: inherit; text-decoration: inherit;">Id</a>
@@ -1867,14 +1622,11 @@ The following output properties are available:
         <span class="property-indicator"></span>
         <span class="property-type">string</span>
     </dt>
-    <dd>{{% md %}}{{% /md %}}</dd>
-</dl>
+    <dd>{{% md %}}{{% /md %}}</dd></dl>
 {{% /choosable %}}
 
 {{% choosable language nodejs %}}
-<dl class="resources-properties">
-
-    <dt class="property-required"
+<dl class="resources-properties"><dt class="property-required"
             title="Required">
         <span id="id_nodejs">
 <a href="#id_nodejs" style="color: inherit; text-decoration: inherit;">id</a>
@@ -1882,14 +1634,11 @@ The following output properties are available:
         <span class="property-indicator"></span>
         <span class="property-type">string</span>
     </dt>
-    <dd>{{% md %}}{{% /md %}}</dd>
-</dl>
+    <dd>{{% md %}}{{% /md %}}</dd></dl>
 {{% /choosable %}}
 
 {{% choosable language python %}}
-<dl class="resources-properties">
-
-    <dt class="property-required"
+<dl class="resources-properties"><dt class="property-required"
             title="Required">
         <span id="id_python">
 <a href="#id_python" style="color: inherit; text-decoration: inherit;">id</a>
@@ -1897,8 +1646,7 @@ The following output properties are available:
         <span class="property-indicator"></span>
         <span class="property-type">str</span>
     </dt>
-    <dd>{{% md %}}{{% /md %}}</dd>
-</dl>
+    <dd>{{% md %}}{{% /md %}}</dd></dl>
 {{% /choosable %}}
 
 <h4 id="privatelinkserviceconnectionstateresponse">Private<wbr>Link<wbr>Service<wbr>Connection<wbr>State<wbr>Response</h4>
@@ -1906,9 +1654,7 @@ The following output properties are available:
 
 
 {{% choosable language csharp %}}
-<dl class="resources-properties">
-
-    <dt class="property-required"
+<dl class="resources-properties"><dt class="property-required"
             title="Required">
         <span id="actionrequired_csharp">
 <a href="#actionrequired_csharp" style="color: inherit; text-decoration: inherit;">Action<wbr>Required</a>
@@ -1916,8 +1662,7 @@ The following output properties are available:
         <span class="property-indicator"></span>
         <span class="property-type">string</span>
     </dt>
-    <dd>{{% md %}}{{% /md %}}</dd>
-    <dt class="property-required"
+    <dd>{{% md %}}{{% /md %}}</dd><dt class="property-required"
             title="Required">
         <span id="status_csharp">
 <a href="#status_csharp" style="color: inherit; text-decoration: inherit;">Status</a>
@@ -1925,8 +1670,7 @@ The following output properties are available:
         <span class="property-indicator"></span>
         <span class="property-type">string</span>
     </dt>
-    <dd>{{% md %}}{{% /md %}}</dd>
-    <dt class="property-optional"
+    <dd>{{% md %}}{{% /md %}}</dd><dt class="property-optional"
             title="Optional">
         <span id="description_csharp">
 <a href="#description_csharp" style="color: inherit; text-decoration: inherit;">Description</a>
@@ -1934,14 +1678,11 @@ The following output properties are available:
         <span class="property-indicator"></span>
         <span class="property-type">string</span>
     </dt>
-    <dd>{{% md %}}{{% /md %}}</dd>
-</dl>
+    <dd>{{% md %}}{{% /md %}}</dd></dl>
 {{% /choosable %}}
 
 {{% choosable language go %}}
-<dl class="resources-properties">
-
-    <dt class="property-required"
+<dl class="resources-properties"><dt class="property-required"
             title="Required">
         <span id="actionrequired_go">
 <a href="#actionrequired_go" style="color: inherit; text-decoration: inherit;">Action<wbr>Required</a>
@@ -1949,8 +1690,7 @@ The following output properties are available:
         <span class="property-indicator"></span>
         <span class="property-type">string</span>
     </dt>
-    <dd>{{% md %}}{{% /md %}}</dd>
-    <dt class="property-required"
+    <dd>{{% md %}}{{% /md %}}</dd><dt class="property-required"
             title="Required">
         <span id="status_go">
 <a href="#status_go" style="color: inherit; text-decoration: inherit;">Status</a>
@@ -1958,8 +1698,7 @@ The following output properties are available:
         <span class="property-indicator"></span>
         <span class="property-type">string</span>
     </dt>
-    <dd>{{% md %}}{{% /md %}}</dd>
-    <dt class="property-optional"
+    <dd>{{% md %}}{{% /md %}}</dd><dt class="property-optional"
             title="Optional">
         <span id="description_go">
 <a href="#description_go" style="color: inherit; text-decoration: inherit;">Description</a>
@@ -1967,14 +1706,11 @@ The following output properties are available:
         <span class="property-indicator"></span>
         <span class="property-type">string</span>
     </dt>
-    <dd>{{% md %}}{{% /md %}}</dd>
-</dl>
+    <dd>{{% md %}}{{% /md %}}</dd></dl>
 {{% /choosable %}}
 
 {{% choosable language nodejs %}}
-<dl class="resources-properties">
-
-    <dt class="property-required"
+<dl class="resources-properties"><dt class="property-required"
             title="Required">
         <span id="actionrequired_nodejs">
 <a href="#actionrequired_nodejs" style="color: inherit; text-decoration: inherit;">action<wbr>Required</a>
@@ -1982,8 +1718,7 @@ The following output properties are available:
         <span class="property-indicator"></span>
         <span class="property-type">string</span>
     </dt>
-    <dd>{{% md %}}{{% /md %}}</dd>
-    <dt class="property-required"
+    <dd>{{% md %}}{{% /md %}}</dd><dt class="property-required"
             title="Required">
         <span id="status_nodejs">
 <a href="#status_nodejs" style="color: inherit; text-decoration: inherit;">status</a>
@@ -1991,8 +1726,7 @@ The following output properties are available:
         <span class="property-indicator"></span>
         <span class="property-type">string</span>
     </dt>
-    <dd>{{% md %}}{{% /md %}}</dd>
-    <dt class="property-optional"
+    <dd>{{% md %}}{{% /md %}}</dd><dt class="property-optional"
             title="Optional">
         <span id="description_nodejs">
 <a href="#description_nodejs" style="color: inherit; text-decoration: inherit;">description</a>
@@ -2000,14 +1734,11 @@ The following output properties are available:
         <span class="property-indicator"></span>
         <span class="property-type">string</span>
     </dt>
-    <dd>{{% md %}}{{% /md %}}</dd>
-</dl>
+    <dd>{{% md %}}{{% /md %}}</dd></dl>
 {{% /choosable %}}
 
 {{% choosable language python %}}
-<dl class="resources-properties">
-
-    <dt class="property-required"
+<dl class="resources-properties"><dt class="property-required"
             title="Required">
         <span id="action_required_python">
 <a href="#action_required_python" style="color: inherit; text-decoration: inherit;">action_<wbr>required</a>
@@ -2015,8 +1746,7 @@ The following output properties are available:
         <span class="property-indicator"></span>
         <span class="property-type">str</span>
     </dt>
-    <dd>{{% md %}}{{% /md %}}</dd>
-    <dt class="property-required"
+    <dd>{{% md %}}{{% /md %}}</dd><dt class="property-required"
             title="Required">
         <span id="status_python">
 <a href="#status_python" style="color: inherit; text-decoration: inherit;">status</a>
@@ -2024,8 +1754,7 @@ The following output properties are available:
         <span class="property-indicator"></span>
         <span class="property-type">str</span>
     </dt>
-    <dd>{{% md %}}{{% /md %}}</dd>
-    <dt class="property-optional"
+    <dd>{{% md %}}{{% /md %}}</dd><dt class="property-optional"
             title="Optional">
         <span id="description_python">
 <a href="#description_python" style="color: inherit; text-decoration: inherit;">description</a>
@@ -2033,8 +1762,7 @@ The following output properties are available:
         <span class="property-indicator"></span>
         <span class="property-type">str</span>
     </dt>
-    <dd>{{% md %}}{{% /md %}}</dd>
-</dl>
+    <dd>{{% md %}}{{% /md %}}</dd></dl>
 {{% /choosable %}}
 
 <h4 id="virtualmachinefamilycorequotaresponse">Virtual<wbr>Machine<wbr>Family<wbr>Core<wbr>Quota<wbr>Response</h4>
@@ -2042,9 +1770,7 @@ The following output properties are available:
 
 
 {{% choosable language csharp %}}
-<dl class="resources-properties">
-
-    <dt class="property-required"
+<dl class="resources-properties"><dt class="property-required"
             title="Required">
         <span id="corequota_csharp">
 <a href="#corequota_csharp" style="color: inherit; text-decoration: inherit;">Core<wbr>Quota</a>
@@ -2052,8 +1778,7 @@ The following output properties are available:
         <span class="property-indicator"></span>
         <span class="property-type">int</span>
     </dt>
-    <dd>{{% md %}}The core quota for the VM family for the Batch account.{{% /md %}}</dd>
-    <dt class="property-required"
+    <dd>{{% md %}}The core quota for the VM family for the Batch account.{{% /md %}}</dd><dt class="property-required"
             title="Required">
         <span id="name_csharp">
 <a href="#name_csharp" style="color: inherit; text-decoration: inherit;">Name</a>
@@ -2061,14 +1786,11 @@ The following output properties are available:
         <span class="property-indicator"></span>
         <span class="property-type">string</span>
     </dt>
-    <dd>{{% md %}}The Virtual Machine family name.{{% /md %}}</dd>
-</dl>
+    <dd>{{% md %}}The Virtual Machine family name.{{% /md %}}</dd></dl>
 {{% /choosable %}}
 
 {{% choosable language go %}}
-<dl class="resources-properties">
-
-    <dt class="property-required"
+<dl class="resources-properties"><dt class="property-required"
             title="Required">
         <span id="corequota_go">
 <a href="#corequota_go" style="color: inherit; text-decoration: inherit;">Core<wbr>Quota</a>
@@ -2076,8 +1798,7 @@ The following output properties are available:
         <span class="property-indicator"></span>
         <span class="property-type">int</span>
     </dt>
-    <dd>{{% md %}}The core quota for the VM family for the Batch account.{{% /md %}}</dd>
-    <dt class="property-required"
+    <dd>{{% md %}}The core quota for the VM family for the Batch account.{{% /md %}}</dd><dt class="property-required"
             title="Required">
         <span id="name_go">
 <a href="#name_go" style="color: inherit; text-decoration: inherit;">Name</a>
@@ -2085,14 +1806,11 @@ The following output properties are available:
         <span class="property-indicator"></span>
         <span class="property-type">string</span>
     </dt>
-    <dd>{{% md %}}The Virtual Machine family name.{{% /md %}}</dd>
-</dl>
+    <dd>{{% md %}}The Virtual Machine family name.{{% /md %}}</dd></dl>
 {{% /choosable %}}
 
 {{% choosable language nodejs %}}
-<dl class="resources-properties">
-
-    <dt class="property-required"
+<dl class="resources-properties"><dt class="property-required"
             title="Required">
         <span id="corequota_nodejs">
 <a href="#corequota_nodejs" style="color: inherit; text-decoration: inherit;">core<wbr>Quota</a>
@@ -2100,8 +1818,7 @@ The following output properties are available:
         <span class="property-indicator"></span>
         <span class="property-type">number</span>
     </dt>
-    <dd>{{% md %}}The core quota for the VM family for the Batch account.{{% /md %}}</dd>
-    <dt class="property-required"
+    <dd>{{% md %}}The core quota for the VM family for the Batch account.{{% /md %}}</dd><dt class="property-required"
             title="Required">
         <span id="name_nodejs">
 <a href="#name_nodejs" style="color: inherit; text-decoration: inherit;">name</a>
@@ -2109,14 +1826,11 @@ The following output properties are available:
         <span class="property-indicator"></span>
         <span class="property-type">string</span>
     </dt>
-    <dd>{{% md %}}The Virtual Machine family name.{{% /md %}}</dd>
-</dl>
+    <dd>{{% md %}}The Virtual Machine family name.{{% /md %}}</dd></dl>
 {{% /choosable %}}
 
 {{% choosable language python %}}
-<dl class="resources-properties">
-
-    <dt class="property-required"
+<dl class="resources-properties"><dt class="property-required"
             title="Required">
         <span id="core_quota_python">
 <a href="#core_quota_python" style="color: inherit; text-decoration: inherit;">core_<wbr>quota</a>
@@ -2124,8 +1838,7 @@ The following output properties are available:
         <span class="property-indicator"></span>
         <span class="property-type">int</span>
     </dt>
-    <dd>{{% md %}}The core quota for the VM family for the Batch account.{{% /md %}}</dd>
-    <dt class="property-required"
+    <dd>{{% md %}}The core quota for the VM family for the Batch account.{{% /md %}}</dd><dt class="property-required"
             title="Required">
         <span id="name_python">
 <a href="#name_python" style="color: inherit; text-decoration: inherit;">name</a>
@@ -2133,8 +1846,7 @@ The following output properties are available:
         <span class="property-indicator"></span>
         <span class="property-type">str</span>
     </dt>
-    <dd>{{% md %}}The Virtual Machine family name.{{% /md %}}</dd>
-</dl>
+    <dd>{{% md %}}The Virtual Machine family name.{{% /md %}}</dd></dl>
 {{% /choosable %}}
 
 

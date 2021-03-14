@@ -51,9 +51,7 @@ The following arguments are supported:
 
 
 {{% choosable language csharp %}}
-<dl class="resources-properties">
-
-    <dt class="property-required"
+<dl class="resources-properties"><dt class="property-required"
             title="Required">
         <span id="accountname_csharp">
 <a href="#accountname_csharp" style="color: inherit; text-decoration: inherit;">Account<wbr>Name</a>
@@ -61,8 +59,7 @@ The following arguments are supported:
         <span class="property-indicator"></span>
         <span class="property-type">string</span>
     </dt>
-    <dd>{{% md %}}Cosmos DB database account name.{{% /md %}}</dd>
-    <dt class="property-required"
+    <dd>{{% md %}}Cosmos DB database account name.{{% /md %}}</dd><dt class="property-required"
             title="Required">
         <span id="resourcegroupname_csharp">
 <a href="#resourcegroupname_csharp" style="color: inherit; text-decoration: inherit;">Resource<wbr>Group<wbr>Name</a>
@@ -70,14 +67,11 @@ The following arguments are supported:
         <span class="property-indicator"></span>
         <span class="property-type">string</span>
     </dt>
-    <dd>{{% md %}}The name of the resource group. The name is case insensitive.{{% /md %}}</dd>
-</dl>
+    <dd>{{% md %}}The name of the resource group. The name is case insensitive.{{% /md %}}</dd></dl>
 {{% /choosable %}}
 
 {{% choosable language go %}}
-<dl class="resources-properties">
-
-    <dt class="property-required"
+<dl class="resources-properties"><dt class="property-required"
             title="Required">
         <span id="accountname_go">
 <a href="#accountname_go" style="color: inherit; text-decoration: inherit;">Account<wbr>Name</a>
@@ -85,8 +79,7 @@ The following arguments are supported:
         <span class="property-indicator"></span>
         <span class="property-type">string</span>
     </dt>
-    <dd>{{% md %}}Cosmos DB database account name.{{% /md %}}</dd>
-    <dt class="property-required"
+    <dd>{{% md %}}Cosmos DB database account name.{{% /md %}}</dd><dt class="property-required"
             title="Required">
         <span id="resourcegroupname_go">
 <a href="#resourcegroupname_go" style="color: inherit; text-decoration: inherit;">Resource<wbr>Group<wbr>Name</a>
@@ -94,14 +87,11 @@ The following arguments are supported:
         <span class="property-indicator"></span>
         <span class="property-type">string</span>
     </dt>
-    <dd>{{% md %}}The name of the resource group. The name is case insensitive.{{% /md %}}</dd>
-</dl>
+    <dd>{{% md %}}The name of the resource group. The name is case insensitive.{{% /md %}}</dd></dl>
 {{% /choosable %}}
 
 {{% choosable language nodejs %}}
-<dl class="resources-properties">
-
-    <dt class="property-required"
+<dl class="resources-properties"><dt class="property-required"
             title="Required">
         <span id="accountname_nodejs">
 <a href="#accountname_nodejs" style="color: inherit; text-decoration: inherit;">account<wbr>Name</a>
@@ -109,8 +99,7 @@ The following arguments are supported:
         <span class="property-indicator"></span>
         <span class="property-type">string</span>
     </dt>
-    <dd>{{% md %}}Cosmos DB database account name.{{% /md %}}</dd>
-    <dt class="property-required"
+    <dd>{{% md %}}Cosmos DB database account name.{{% /md %}}</dd><dt class="property-required"
             title="Required">
         <span id="resourcegroupname_nodejs">
 <a href="#resourcegroupname_nodejs" style="color: inherit; text-decoration: inherit;">resource<wbr>Group<wbr>Name</a>
@@ -118,14 +107,11 @@ The following arguments are supported:
         <span class="property-indicator"></span>
         <span class="property-type">string</span>
     </dt>
-    <dd>{{% md %}}The name of the resource group. The name is case insensitive.{{% /md %}}</dd>
-</dl>
+    <dd>{{% md %}}The name of the resource group. The name is case insensitive.{{% /md %}}</dd></dl>
 {{% /choosable %}}
 
 {{% choosable language python %}}
-<dl class="resources-properties">
-
-    <dt class="property-required"
+<dl class="resources-properties"><dt class="property-required"
             title="Required">
         <span id="account_name_python">
 <a href="#account_name_python" style="color: inherit; text-decoration: inherit;">account_<wbr>name</a>
@@ -133,8 +119,7 @@ The following arguments are supported:
         <span class="property-indicator"></span>
         <span class="property-type">str</span>
     </dt>
-    <dd>{{% md %}}Cosmos DB database account name.{{% /md %}}</dd>
-    <dt class="property-required"
+    <dd>{{% md %}}Cosmos DB database account name.{{% /md %}}</dd><dt class="property-required"
             title="Required">
         <span id="resource_group_name_python">
 <a href="#resource_group_name_python" style="color: inherit; text-decoration: inherit;">resource_<wbr>group_<wbr>name</a>
@@ -142,8 +127,7 @@ The following arguments are supported:
         <span class="property-indicator"></span>
         <span class="property-type">str</span>
     </dt>
-    <dd>{{% md %}}The name of the resource group. The name is case insensitive.{{% /md %}}</dd>
-</dl>
+    <dd>{{% md %}}The name of the resource group. The name is case insensitive.{{% /md %}}</dd></dl>
 {{% /choosable %}}
 
 
@@ -156,9 +140,7 @@ The following output properties are available:
 
 
 {{% choosable language csharp %}}
-<dl class="resources-properties">
-
-    <dt class="property-"
+<dl class="resources-properties"><dt class="property-"
             title="">
         <span id="primarymasterkey_csharp">
 <a href="#primarymasterkey_csharp" style="color: inherit; text-decoration: inherit;">Primary<wbr>Master<wbr>Key</a>
@@ -166,8 +148,7 @@ The following output properties are available:
         <span class="property-indicator"></span>
         <span class="property-type">string</span>
     </dt>
-    <dd>{{% md %}}Base 64 encoded value of the primary read-write key.{{% /md %}}</dd>
-    <dt class="property-"
+    <dd>{{% md %}}Base 64 encoded value of the primary read-write key.{{% /md %}}</dd><dt class="property-"
             title="">
         <span id="primaryreadonlymasterkey_csharp">
 <a href="#primaryreadonlymasterkey_csharp" style="color: inherit; text-decoration: inherit;">Primary<wbr>Readonly<wbr>Master<wbr>Key</a>
@@ -175,8 +156,7 @@ The following output properties are available:
         <span class="property-indicator"></span>
         <span class="property-type">string</span>
     </dt>
-    <dd>{{% md %}}Base 64 encoded value of the primary read-only key.{{% /md %}}</dd>
-    <dt class="property-"
+    <dd>{{% md %}}Base 64 encoded value of the primary read-only key.{{% /md %}}</dd><dt class="property-"
             title="">
         <span id="secondarymasterkey_csharp">
 <a href="#secondarymasterkey_csharp" style="color: inherit; text-decoration: inherit;">Secondary<wbr>Master<wbr>Key</a>
@@ -184,8 +164,7 @@ The following output properties are available:
         <span class="property-indicator"></span>
         <span class="property-type">string</span>
     </dt>
-    <dd>{{% md %}}Base 64 encoded value of the secondary read-write key.{{% /md %}}</dd>
-    <dt class="property-"
+    <dd>{{% md %}}Base 64 encoded value of the secondary read-write key.{{% /md %}}</dd><dt class="property-"
             title="">
         <span id="secondaryreadonlymasterkey_csharp">
 <a href="#secondaryreadonlymasterkey_csharp" style="color: inherit; text-decoration: inherit;">Secondary<wbr>Readonly<wbr>Master<wbr>Key</a>
@@ -193,14 +172,11 @@ The following output properties are available:
         <span class="property-indicator"></span>
         <span class="property-type">string</span>
     </dt>
-    <dd>{{% md %}}Base 64 encoded value of the secondary read-only key.{{% /md %}}</dd>
-</dl>
+    <dd>{{% md %}}Base 64 encoded value of the secondary read-only key.{{% /md %}}</dd></dl>
 {{% /choosable %}}
 
 {{% choosable language go %}}
-<dl class="resources-properties">
-
-    <dt class="property-"
+<dl class="resources-properties"><dt class="property-"
             title="">
         <span id="primarymasterkey_go">
 <a href="#primarymasterkey_go" style="color: inherit; text-decoration: inherit;">Primary<wbr>Master<wbr>Key</a>
@@ -208,8 +184,7 @@ The following output properties are available:
         <span class="property-indicator"></span>
         <span class="property-type">string</span>
     </dt>
-    <dd>{{% md %}}Base 64 encoded value of the primary read-write key.{{% /md %}}</dd>
-    <dt class="property-"
+    <dd>{{% md %}}Base 64 encoded value of the primary read-write key.{{% /md %}}</dd><dt class="property-"
             title="">
         <span id="primaryreadonlymasterkey_go">
 <a href="#primaryreadonlymasterkey_go" style="color: inherit; text-decoration: inherit;">Primary<wbr>Readonly<wbr>Master<wbr>Key</a>
@@ -217,8 +192,7 @@ The following output properties are available:
         <span class="property-indicator"></span>
         <span class="property-type">string</span>
     </dt>
-    <dd>{{% md %}}Base 64 encoded value of the primary read-only key.{{% /md %}}</dd>
-    <dt class="property-"
+    <dd>{{% md %}}Base 64 encoded value of the primary read-only key.{{% /md %}}</dd><dt class="property-"
             title="">
         <span id="secondarymasterkey_go">
 <a href="#secondarymasterkey_go" style="color: inherit; text-decoration: inherit;">Secondary<wbr>Master<wbr>Key</a>
@@ -226,8 +200,7 @@ The following output properties are available:
         <span class="property-indicator"></span>
         <span class="property-type">string</span>
     </dt>
-    <dd>{{% md %}}Base 64 encoded value of the secondary read-write key.{{% /md %}}</dd>
-    <dt class="property-"
+    <dd>{{% md %}}Base 64 encoded value of the secondary read-write key.{{% /md %}}</dd><dt class="property-"
             title="">
         <span id="secondaryreadonlymasterkey_go">
 <a href="#secondaryreadonlymasterkey_go" style="color: inherit; text-decoration: inherit;">Secondary<wbr>Readonly<wbr>Master<wbr>Key</a>
@@ -235,14 +208,11 @@ The following output properties are available:
         <span class="property-indicator"></span>
         <span class="property-type">string</span>
     </dt>
-    <dd>{{% md %}}Base 64 encoded value of the secondary read-only key.{{% /md %}}</dd>
-</dl>
+    <dd>{{% md %}}Base 64 encoded value of the secondary read-only key.{{% /md %}}</dd></dl>
 {{% /choosable %}}
 
 {{% choosable language nodejs %}}
-<dl class="resources-properties">
-
-    <dt class="property-"
+<dl class="resources-properties"><dt class="property-"
             title="">
         <span id="primarymasterkey_nodejs">
 <a href="#primarymasterkey_nodejs" style="color: inherit; text-decoration: inherit;">primary<wbr>Master<wbr>Key</a>
@@ -250,8 +220,7 @@ The following output properties are available:
         <span class="property-indicator"></span>
         <span class="property-type">string</span>
     </dt>
-    <dd>{{% md %}}Base 64 encoded value of the primary read-write key.{{% /md %}}</dd>
-    <dt class="property-"
+    <dd>{{% md %}}Base 64 encoded value of the primary read-write key.{{% /md %}}</dd><dt class="property-"
             title="">
         <span id="primaryreadonlymasterkey_nodejs">
 <a href="#primaryreadonlymasterkey_nodejs" style="color: inherit; text-decoration: inherit;">primary<wbr>Readonly<wbr>Master<wbr>Key</a>
@@ -259,8 +228,7 @@ The following output properties are available:
         <span class="property-indicator"></span>
         <span class="property-type">string</span>
     </dt>
-    <dd>{{% md %}}Base 64 encoded value of the primary read-only key.{{% /md %}}</dd>
-    <dt class="property-"
+    <dd>{{% md %}}Base 64 encoded value of the primary read-only key.{{% /md %}}</dd><dt class="property-"
             title="">
         <span id="secondarymasterkey_nodejs">
 <a href="#secondarymasterkey_nodejs" style="color: inherit; text-decoration: inherit;">secondary<wbr>Master<wbr>Key</a>
@@ -268,8 +236,7 @@ The following output properties are available:
         <span class="property-indicator"></span>
         <span class="property-type">string</span>
     </dt>
-    <dd>{{% md %}}Base 64 encoded value of the secondary read-write key.{{% /md %}}</dd>
-    <dt class="property-"
+    <dd>{{% md %}}Base 64 encoded value of the secondary read-write key.{{% /md %}}</dd><dt class="property-"
             title="">
         <span id="secondaryreadonlymasterkey_nodejs">
 <a href="#secondaryreadonlymasterkey_nodejs" style="color: inherit; text-decoration: inherit;">secondary<wbr>Readonly<wbr>Master<wbr>Key</a>
@@ -277,14 +244,11 @@ The following output properties are available:
         <span class="property-indicator"></span>
         <span class="property-type">string</span>
     </dt>
-    <dd>{{% md %}}Base 64 encoded value of the secondary read-only key.{{% /md %}}</dd>
-</dl>
+    <dd>{{% md %}}Base 64 encoded value of the secondary read-only key.{{% /md %}}</dd></dl>
 {{% /choosable %}}
 
 {{% choosable language python %}}
-<dl class="resources-properties">
-
-    <dt class="property-"
+<dl class="resources-properties"><dt class="property-"
             title="">
         <span id="primary_master_key_python">
 <a href="#primary_master_key_python" style="color: inherit; text-decoration: inherit;">primary_<wbr>master_<wbr>key</a>
@@ -292,8 +256,7 @@ The following output properties are available:
         <span class="property-indicator"></span>
         <span class="property-type">str</span>
     </dt>
-    <dd>{{% md %}}Base 64 encoded value of the primary read-write key.{{% /md %}}</dd>
-    <dt class="property-"
+    <dd>{{% md %}}Base 64 encoded value of the primary read-write key.{{% /md %}}</dd><dt class="property-"
             title="">
         <span id="primary_readonly_master_key_python">
 <a href="#primary_readonly_master_key_python" style="color: inherit; text-decoration: inherit;">primary_<wbr>readonly_<wbr>master_<wbr>key</a>
@@ -301,8 +264,7 @@ The following output properties are available:
         <span class="property-indicator"></span>
         <span class="property-type">str</span>
     </dt>
-    <dd>{{% md %}}Base 64 encoded value of the primary read-only key.{{% /md %}}</dd>
-    <dt class="property-"
+    <dd>{{% md %}}Base 64 encoded value of the primary read-only key.{{% /md %}}</dd><dt class="property-"
             title="">
         <span id="secondary_master_key_python">
 <a href="#secondary_master_key_python" style="color: inherit; text-decoration: inherit;">secondary_<wbr>master_<wbr>key</a>
@@ -310,8 +272,7 @@ The following output properties are available:
         <span class="property-indicator"></span>
         <span class="property-type">str</span>
     </dt>
-    <dd>{{% md %}}Base 64 encoded value of the secondary read-write key.{{% /md %}}</dd>
-    <dt class="property-"
+    <dd>{{% md %}}Base 64 encoded value of the secondary read-write key.{{% /md %}}</dd><dt class="property-"
             title="">
         <span id="secondary_readonly_master_key_python">
 <a href="#secondary_readonly_master_key_python" style="color: inherit; text-decoration: inherit;">secondary_<wbr>readonly_<wbr>master_<wbr>key</a>
@@ -319,8 +280,7 @@ The following output properties are available:
         <span class="property-indicator"></span>
         <span class="property-type">str</span>
     </dt>
-    <dd>{{% md %}}Base 64 encoded value of the secondary read-only key.{{% /md %}}</dd>
-</dl>
+    <dd>{{% md %}}Base 64 encoded value of the secondary read-only key.{{% /md %}}</dd></dl>
 {{% /choosable %}}
 
 

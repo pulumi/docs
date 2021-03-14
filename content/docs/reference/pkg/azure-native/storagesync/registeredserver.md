@@ -14,11 +14,17 @@ Registered Server resource.
 API Version: 2020-03-01.
 
 {{% examples %}}
+
 ## Example Usage
 
 {{< chooser language "typescript,python,go,csharp" / >}}
+
+
 ### RegisteredServers_Create
-{{% example csharp %}}
+
+
+{{< example csharp >}}
+
 ```csharp
 using Pulumi;
 using AzureNative = Pulumi.AzureNative;
@@ -44,9 +50,12 @@ class MyStack : Stack
 
 ```
 
-{{% /example %}}
 
-{{% example go %}}
+{{< /example >}}
+
+
+{{< example go >}}
+
 
 ```go
 package main
@@ -77,9 +86,12 @@ func main() {
 
 ```
 
-{{% /example %}}
 
-{{% example python %}}
+{{< /example >}}
+
+
+{{< example python >}}
+
 
 ```python
 import pulumi
@@ -97,9 +109,12 @@ registered_server = azure_native.storagesync.RegisteredServer("registeredServer"
 
 ```
 
-{{% /example %}}
 
-{{% example typescript %}}
+{{< /example >}}
+
+
+{{< example typescript >}}
+
 
 ```typescript
 import * as pulumi from "@pulumi/pulumi";
@@ -118,9 +133,16 @@ const registeredServer = new azure_native.storagesync.RegisteredServer("register
 
 ```
 
-{{% /example %}}
+
+{{< /example >}}
+
+
+
+
 
 {{% /examples %}}
+
+
 
 
 ## Create a RegisteredServer Resource {#create}
@@ -145,9 +167,7 @@ const registeredServer = new azure_native.storagesync.RegisteredServer("register
 
 {{% choosable language nodejs %}}
 
-<dl class="resources-properties">
-  
-    <dt
+<dl class="resources-properties"><dt
         class="property-required" title="Required">
         <span>name</span>
         <span class="property-indicator"></span>
@@ -155,9 +175,7 @@ const registeredServer = new azure_native.storagesync.RegisteredServer("register
     </dt>
     <dd>
       The unique name of the resource.
-    </dd>
-  
-    <dt
+    </dd><dt
         class="property-required" title="Required">
         <span>args</span>
         <span class="property-indicator"></span>
@@ -165,9 +183,7 @@ const registeredServer = new azure_native.storagesync.RegisteredServer("register
     </dt>
     <dd>
       The arguments to resource properties.
-    </dd>
-  
-    <dt
+    </dd><dt
         class="property-optional" title="Optional">
         <span>opts</span>
         <span class="property-indicator"></span>
@@ -175,10 +191,7 @@ const registeredServer = new azure_native.storagesync.RegisteredServer("register
     </dt>
     <dd>
       Bag of options to control resource&#39;s behavior.
-    </dd>
-  
-
-</dl>
+    </dd></dl>
 
 {{% /choosable %}}
 
@@ -204,9 +217,7 @@ const registeredServer = new azure_native.storagesync.RegisteredServer("register
 
 {{% choosable language go %}}
 
-<dl class="resources-properties">
-  
-    <dt
+<dl class="resources-properties"><dt
         class="property-optional" title="Optional">
         <span>ctx</span>
         <span class="property-indicator"></span>
@@ -214,9 +225,7 @@ const registeredServer = new azure_native.storagesync.RegisteredServer("register
     </dt>
     <dd>
       Context object for the current deployment.
-    </dd>
-  
-    <dt
+    </dd><dt
         class="property-required" title="Required">
         <span>name</span>
         <span class="property-indicator"></span>
@@ -224,9 +233,7 @@ const registeredServer = new azure_native.storagesync.RegisteredServer("register
     </dt>
     <dd>
       The unique name of the resource.
-    </dd>
-  
-    <dt
+    </dd><dt
         class="property-required" title="Required">
         <span>args</span>
         <span class="property-indicator"></span>
@@ -234,9 +241,7 @@ const registeredServer = new azure_native.storagesync.RegisteredServer("register
     </dt>
     <dd>
       The arguments to resource properties.
-    </dd>
-  
-    <dt
+    </dd><dt
         class="property-optional" title="Optional">
         <span>opts</span>
         <span class="property-indicator"></span>
@@ -244,18 +249,13 @@ const registeredServer = new azure_native.storagesync.RegisteredServer("register
     </dt>
     <dd>
       Bag of options to control resource&#39;s behavior.
-    </dd>
-  
-
-</dl>
+    </dd></dl>
 
 {{% /choosable %}}
 
 {{% choosable language csharp %}}
 
-<dl class="resources-properties">
-  
-    <dt
+<dl class="resources-properties"><dt
         class="property-required" title="Required">
         <span>name</span>
         <span class="property-indicator"></span>
@@ -263,9 +263,7 @@ const registeredServer = new azure_native.storagesync.RegisteredServer("register
     </dt>
     <dd>
       The unique name of the resource.
-    </dd>
-  
-    <dt
+    </dd><dt
         class="property-required" title="Required">
         <span>args</span>
         <span class="property-indicator"></span>
@@ -273,9 +271,7 @@ const registeredServer = new azure_native.storagesync.RegisteredServer("register
     </dt>
     <dd>
       The arguments to resource properties.
-    </dd>
-  
-    <dt
+    </dd><dt
         class="property-optional" title="Optional">
         <span>opts</span>
         <span class="property-indicator"></span>
@@ -283,10 +279,7 @@ const registeredServer = new azure_native.storagesync.RegisteredServer("register
     </dt>
     <dd>
       Bag of options to control resource&#39;s behavior.
-    </dd>
-  
-
-</dl>
+    </dd></dl>
 
 {{% /choosable %}}
 
@@ -301,9 +294,7 @@ The RegisteredServer resource accepts the following [input]({{< relref "/docs/in
 
 
 {{% choosable language csharp %}}
-<dl class="resources-properties">
-
-    <dt class="property-required"
+<dl class="resources-properties"><dt class="property-required"
             title="Required">
         <span id="resourcegroupname_csharp">
 <a href="#resourcegroupname_csharp" style="color: inherit; text-decoration: inherit;">Resource<wbr>Group<wbr>Name</a>
@@ -311,8 +302,7 @@ The RegisteredServer resource accepts the following [input]({{< relref "/docs/in
         <span class="property-indicator"></span>
         <span class="property-type">string</span>
     </dt>
-    <dd>{{% md %}}The name of the resource group. The name is case insensitive.{{% /md %}}</dd>
-    <dt class="property-required"
+    <dd>{{% md %}}The name of the resource group. The name is case insensitive.{{% /md %}}</dd><dt class="property-required"
             title="Required">
         <span id="storagesyncservicename_csharp">
 <a href="#storagesyncservicename_csharp" style="color: inherit; text-decoration: inherit;">Storage<wbr>Sync<wbr>Service<wbr>Name</a>
@@ -320,8 +310,7 @@ The RegisteredServer resource accepts the following [input]({{< relref "/docs/in
         <span class="property-indicator"></span>
         <span class="property-type">string</span>
     </dt>
-    <dd>{{% md %}}Name of Storage Sync Service resource.{{% /md %}}</dd>
-    <dt class="property-optional"
+    <dd>{{% md %}}Name of Storage Sync Service resource.{{% /md %}}</dd><dt class="property-optional"
             title="Optional">
         <span id="agentversion_csharp">
 <a href="#agentversion_csharp" style="color: inherit; text-decoration: inherit;">Agent<wbr>Version</a>
@@ -329,8 +318,7 @@ The RegisteredServer resource accepts the following [input]({{< relref "/docs/in
         <span class="property-indicator"></span>
         <span class="property-type">string</span>
     </dt>
-    <dd>{{% md %}}Registered Server Agent Version{{% /md %}}</dd>
-    <dt class="property-optional"
+    <dd>{{% md %}}Registered Server Agent Version{{% /md %}}</dd><dt class="property-optional"
             title="Optional">
         <span id="clusterid_csharp">
 <a href="#clusterid_csharp" style="color: inherit; text-decoration: inherit;">Cluster<wbr>Id</a>
@@ -338,8 +326,7 @@ The RegisteredServer resource accepts the following [input]({{< relref "/docs/in
         <span class="property-indicator"></span>
         <span class="property-type">string</span>
     </dt>
-    <dd>{{% md %}}Registered Server clusterId{{% /md %}}</dd>
-    <dt class="property-optional"
+    <dd>{{% md %}}Registered Server clusterId{{% /md %}}</dd><dt class="property-optional"
             title="Optional">
         <span id="clustername_csharp">
 <a href="#clustername_csharp" style="color: inherit; text-decoration: inherit;">Cluster<wbr>Name</a>
@@ -347,8 +334,7 @@ The RegisteredServer resource accepts the following [input]({{< relref "/docs/in
         <span class="property-indicator"></span>
         <span class="property-type">string</span>
     </dt>
-    <dd>{{% md %}}Registered Server clusterName{{% /md %}}</dd>
-    <dt class="property-optional"
+    <dd>{{% md %}}Registered Server clusterName{{% /md %}}</dd><dt class="property-optional"
             title="Optional">
         <span id="friendlyname_csharp">
 <a href="#friendlyname_csharp" style="color: inherit; text-decoration: inherit;">Friendly<wbr>Name</a>
@@ -356,8 +342,7 @@ The RegisteredServer resource accepts the following [input]({{< relref "/docs/in
         <span class="property-indicator"></span>
         <span class="property-type">string</span>
     </dt>
-    <dd>{{% md %}}Friendly Name{{% /md %}}</dd>
-    <dt class="property-optional"
+    <dd>{{% md %}}Friendly Name{{% /md %}}</dd><dt class="property-optional"
             title="Optional">
         <span id="lastheartbeat_csharp">
 <a href="#lastheartbeat_csharp" style="color: inherit; text-decoration: inherit;">Last<wbr>Heart<wbr>Beat</a>
@@ -365,8 +350,7 @@ The RegisteredServer resource accepts the following [input]({{< relref "/docs/in
         <span class="property-indicator"></span>
         <span class="property-type">string</span>
     </dt>
-    <dd>{{% md %}}Registered Server last heart beat{{% /md %}}</dd>
-    <dt class="property-optional"
+    <dd>{{% md %}}Registered Server last heart beat{{% /md %}}</dd><dt class="property-optional"
             title="Optional">
         <span id="servercertificate_csharp">
 <a href="#servercertificate_csharp" style="color: inherit; text-decoration: inherit;">Server<wbr>Certificate</a>
@@ -374,8 +358,7 @@ The RegisteredServer resource accepts the following [input]({{< relref "/docs/in
         <span class="property-indicator"></span>
         <span class="property-type">string</span>
     </dt>
-    <dd>{{% md %}}Registered Server Certificate{{% /md %}}</dd>
-    <dt class="property-optional"
+    <dd>{{% md %}}Registered Server Certificate{{% /md %}}</dd><dt class="property-optional"
             title="Optional">
         <span id="serverid_csharp">
 <a href="#serverid_csharp" style="color: inherit; text-decoration: inherit;">Server<wbr>Id</a>
@@ -383,8 +366,7 @@ The RegisteredServer resource accepts the following [input]({{< relref "/docs/in
         <span class="property-indicator"></span>
         <span class="property-type">string</span>
     </dt>
-    <dd>{{% md %}}Registered Server serverId{{% /md %}}</dd>
-    <dt class="property-optional"
+    <dd>{{% md %}}Registered Server serverId{{% /md %}}</dd><dt class="property-optional"
             title="Optional">
         <span id="serverosversion_csharp">
 <a href="#serverosversion_csharp" style="color: inherit; text-decoration: inherit;">Server<wbr>OSVersion</a>
@@ -392,8 +374,7 @@ The RegisteredServer resource accepts the following [input]({{< relref "/docs/in
         <span class="property-indicator"></span>
         <span class="property-type">string</span>
     </dt>
-    <dd>{{% md %}}Registered Server OS Version{{% /md %}}</dd>
-    <dt class="property-optional"
+    <dd>{{% md %}}Registered Server OS Version{{% /md %}}</dd><dt class="property-optional"
             title="Optional">
         <span id="serverrole_csharp">
 <a href="#serverrole_csharp" style="color: inherit; text-decoration: inherit;">Server<wbr>Role</a>
@@ -401,14 +382,11 @@ The RegisteredServer resource accepts the following [input]({{< relref "/docs/in
         <span class="property-indicator"></span>
         <span class="property-type">string</span>
     </dt>
-    <dd>{{% md %}}Registered Server serverRole{{% /md %}}</dd>
-</dl>
+    <dd>{{% md %}}Registered Server serverRole{{% /md %}}</dd></dl>
 {{% /choosable %}}
 
 {{% choosable language go %}}
-<dl class="resources-properties">
-
-    <dt class="property-required"
+<dl class="resources-properties"><dt class="property-required"
             title="Required">
         <span id="resourcegroupname_go">
 <a href="#resourcegroupname_go" style="color: inherit; text-decoration: inherit;">Resource<wbr>Group<wbr>Name</a>
@@ -416,8 +394,7 @@ The RegisteredServer resource accepts the following [input]({{< relref "/docs/in
         <span class="property-indicator"></span>
         <span class="property-type">string</span>
     </dt>
-    <dd>{{% md %}}The name of the resource group. The name is case insensitive.{{% /md %}}</dd>
-    <dt class="property-required"
+    <dd>{{% md %}}The name of the resource group. The name is case insensitive.{{% /md %}}</dd><dt class="property-required"
             title="Required">
         <span id="storagesyncservicename_go">
 <a href="#storagesyncservicename_go" style="color: inherit; text-decoration: inherit;">Storage<wbr>Sync<wbr>Service<wbr>Name</a>
@@ -425,8 +402,7 @@ The RegisteredServer resource accepts the following [input]({{< relref "/docs/in
         <span class="property-indicator"></span>
         <span class="property-type">string</span>
     </dt>
-    <dd>{{% md %}}Name of Storage Sync Service resource.{{% /md %}}</dd>
-    <dt class="property-optional"
+    <dd>{{% md %}}Name of Storage Sync Service resource.{{% /md %}}</dd><dt class="property-optional"
             title="Optional">
         <span id="agentversion_go">
 <a href="#agentversion_go" style="color: inherit; text-decoration: inherit;">Agent<wbr>Version</a>
@@ -434,8 +410,7 @@ The RegisteredServer resource accepts the following [input]({{< relref "/docs/in
         <span class="property-indicator"></span>
         <span class="property-type">string</span>
     </dt>
-    <dd>{{% md %}}Registered Server Agent Version{{% /md %}}</dd>
-    <dt class="property-optional"
+    <dd>{{% md %}}Registered Server Agent Version{{% /md %}}</dd><dt class="property-optional"
             title="Optional">
         <span id="clusterid_go">
 <a href="#clusterid_go" style="color: inherit; text-decoration: inherit;">Cluster<wbr>Id</a>
@@ -443,8 +418,7 @@ The RegisteredServer resource accepts the following [input]({{< relref "/docs/in
         <span class="property-indicator"></span>
         <span class="property-type">string</span>
     </dt>
-    <dd>{{% md %}}Registered Server clusterId{{% /md %}}</dd>
-    <dt class="property-optional"
+    <dd>{{% md %}}Registered Server clusterId{{% /md %}}</dd><dt class="property-optional"
             title="Optional">
         <span id="clustername_go">
 <a href="#clustername_go" style="color: inherit; text-decoration: inherit;">Cluster<wbr>Name</a>
@@ -452,8 +426,7 @@ The RegisteredServer resource accepts the following [input]({{< relref "/docs/in
         <span class="property-indicator"></span>
         <span class="property-type">string</span>
     </dt>
-    <dd>{{% md %}}Registered Server clusterName{{% /md %}}</dd>
-    <dt class="property-optional"
+    <dd>{{% md %}}Registered Server clusterName{{% /md %}}</dd><dt class="property-optional"
             title="Optional">
         <span id="friendlyname_go">
 <a href="#friendlyname_go" style="color: inherit; text-decoration: inherit;">Friendly<wbr>Name</a>
@@ -461,8 +434,7 @@ The RegisteredServer resource accepts the following [input]({{< relref "/docs/in
         <span class="property-indicator"></span>
         <span class="property-type">string</span>
     </dt>
-    <dd>{{% md %}}Friendly Name{{% /md %}}</dd>
-    <dt class="property-optional"
+    <dd>{{% md %}}Friendly Name{{% /md %}}</dd><dt class="property-optional"
             title="Optional">
         <span id="lastheartbeat_go">
 <a href="#lastheartbeat_go" style="color: inherit; text-decoration: inherit;">Last<wbr>Heart<wbr>Beat</a>
@@ -470,8 +442,7 @@ The RegisteredServer resource accepts the following [input]({{< relref "/docs/in
         <span class="property-indicator"></span>
         <span class="property-type">string</span>
     </dt>
-    <dd>{{% md %}}Registered Server last heart beat{{% /md %}}</dd>
-    <dt class="property-optional"
+    <dd>{{% md %}}Registered Server last heart beat{{% /md %}}</dd><dt class="property-optional"
             title="Optional">
         <span id="servercertificate_go">
 <a href="#servercertificate_go" style="color: inherit; text-decoration: inherit;">Server<wbr>Certificate</a>
@@ -479,8 +450,7 @@ The RegisteredServer resource accepts the following [input]({{< relref "/docs/in
         <span class="property-indicator"></span>
         <span class="property-type">string</span>
     </dt>
-    <dd>{{% md %}}Registered Server Certificate{{% /md %}}</dd>
-    <dt class="property-optional"
+    <dd>{{% md %}}Registered Server Certificate{{% /md %}}</dd><dt class="property-optional"
             title="Optional">
         <span id="serverid_go">
 <a href="#serverid_go" style="color: inherit; text-decoration: inherit;">Server<wbr>Id</a>
@@ -488,8 +458,7 @@ The RegisteredServer resource accepts the following [input]({{< relref "/docs/in
         <span class="property-indicator"></span>
         <span class="property-type">string</span>
     </dt>
-    <dd>{{% md %}}Registered Server serverId{{% /md %}}</dd>
-    <dt class="property-optional"
+    <dd>{{% md %}}Registered Server serverId{{% /md %}}</dd><dt class="property-optional"
             title="Optional">
         <span id="serverosversion_go">
 <a href="#serverosversion_go" style="color: inherit; text-decoration: inherit;">Server<wbr>OSVersion</a>
@@ -497,8 +466,7 @@ The RegisteredServer resource accepts the following [input]({{< relref "/docs/in
         <span class="property-indicator"></span>
         <span class="property-type">string</span>
     </dt>
-    <dd>{{% md %}}Registered Server OS Version{{% /md %}}</dd>
-    <dt class="property-optional"
+    <dd>{{% md %}}Registered Server OS Version{{% /md %}}</dd><dt class="property-optional"
             title="Optional">
         <span id="serverrole_go">
 <a href="#serverrole_go" style="color: inherit; text-decoration: inherit;">Server<wbr>Role</a>
@@ -506,14 +474,11 @@ The RegisteredServer resource accepts the following [input]({{< relref "/docs/in
         <span class="property-indicator"></span>
         <span class="property-type">string</span>
     </dt>
-    <dd>{{% md %}}Registered Server serverRole{{% /md %}}</dd>
-</dl>
+    <dd>{{% md %}}Registered Server serverRole{{% /md %}}</dd></dl>
 {{% /choosable %}}
 
 {{% choosable language nodejs %}}
-<dl class="resources-properties">
-
-    <dt class="property-required"
+<dl class="resources-properties"><dt class="property-required"
             title="Required">
         <span id="resourcegroupname_nodejs">
 <a href="#resourcegroupname_nodejs" style="color: inherit; text-decoration: inherit;">resource<wbr>Group<wbr>Name</a>
@@ -521,8 +486,7 @@ The RegisteredServer resource accepts the following [input]({{< relref "/docs/in
         <span class="property-indicator"></span>
         <span class="property-type">string</span>
     </dt>
-    <dd>{{% md %}}The name of the resource group. The name is case insensitive.{{% /md %}}</dd>
-    <dt class="property-required"
+    <dd>{{% md %}}The name of the resource group. The name is case insensitive.{{% /md %}}</dd><dt class="property-required"
             title="Required">
         <span id="storagesyncservicename_nodejs">
 <a href="#storagesyncservicename_nodejs" style="color: inherit; text-decoration: inherit;">storage<wbr>Sync<wbr>Service<wbr>Name</a>
@@ -530,8 +494,7 @@ The RegisteredServer resource accepts the following [input]({{< relref "/docs/in
         <span class="property-indicator"></span>
         <span class="property-type">string</span>
     </dt>
-    <dd>{{% md %}}Name of Storage Sync Service resource.{{% /md %}}</dd>
-    <dt class="property-optional"
+    <dd>{{% md %}}Name of Storage Sync Service resource.{{% /md %}}</dd><dt class="property-optional"
             title="Optional">
         <span id="agentversion_nodejs">
 <a href="#agentversion_nodejs" style="color: inherit; text-decoration: inherit;">agent<wbr>Version</a>
@@ -539,8 +502,7 @@ The RegisteredServer resource accepts the following [input]({{< relref "/docs/in
         <span class="property-indicator"></span>
         <span class="property-type">string</span>
     </dt>
-    <dd>{{% md %}}Registered Server Agent Version{{% /md %}}</dd>
-    <dt class="property-optional"
+    <dd>{{% md %}}Registered Server Agent Version{{% /md %}}</dd><dt class="property-optional"
             title="Optional">
         <span id="clusterid_nodejs">
 <a href="#clusterid_nodejs" style="color: inherit; text-decoration: inherit;">cluster<wbr>Id</a>
@@ -548,8 +510,7 @@ The RegisteredServer resource accepts the following [input]({{< relref "/docs/in
         <span class="property-indicator"></span>
         <span class="property-type">string</span>
     </dt>
-    <dd>{{% md %}}Registered Server clusterId{{% /md %}}</dd>
-    <dt class="property-optional"
+    <dd>{{% md %}}Registered Server clusterId{{% /md %}}</dd><dt class="property-optional"
             title="Optional">
         <span id="clustername_nodejs">
 <a href="#clustername_nodejs" style="color: inherit; text-decoration: inherit;">cluster<wbr>Name</a>
@@ -557,8 +518,7 @@ The RegisteredServer resource accepts the following [input]({{< relref "/docs/in
         <span class="property-indicator"></span>
         <span class="property-type">string</span>
     </dt>
-    <dd>{{% md %}}Registered Server clusterName{{% /md %}}</dd>
-    <dt class="property-optional"
+    <dd>{{% md %}}Registered Server clusterName{{% /md %}}</dd><dt class="property-optional"
             title="Optional">
         <span id="friendlyname_nodejs">
 <a href="#friendlyname_nodejs" style="color: inherit; text-decoration: inherit;">friendly<wbr>Name</a>
@@ -566,8 +526,7 @@ The RegisteredServer resource accepts the following [input]({{< relref "/docs/in
         <span class="property-indicator"></span>
         <span class="property-type">string</span>
     </dt>
-    <dd>{{% md %}}Friendly Name{{% /md %}}</dd>
-    <dt class="property-optional"
+    <dd>{{% md %}}Friendly Name{{% /md %}}</dd><dt class="property-optional"
             title="Optional">
         <span id="lastheartbeat_nodejs">
 <a href="#lastheartbeat_nodejs" style="color: inherit; text-decoration: inherit;">last<wbr>Heart<wbr>Beat</a>
@@ -575,8 +534,7 @@ The RegisteredServer resource accepts the following [input]({{< relref "/docs/in
         <span class="property-indicator"></span>
         <span class="property-type">string</span>
     </dt>
-    <dd>{{% md %}}Registered Server last heart beat{{% /md %}}</dd>
-    <dt class="property-optional"
+    <dd>{{% md %}}Registered Server last heart beat{{% /md %}}</dd><dt class="property-optional"
             title="Optional">
         <span id="servercertificate_nodejs">
 <a href="#servercertificate_nodejs" style="color: inherit; text-decoration: inherit;">server<wbr>Certificate</a>
@@ -584,8 +542,7 @@ The RegisteredServer resource accepts the following [input]({{< relref "/docs/in
         <span class="property-indicator"></span>
         <span class="property-type">string</span>
     </dt>
-    <dd>{{% md %}}Registered Server Certificate{{% /md %}}</dd>
-    <dt class="property-optional"
+    <dd>{{% md %}}Registered Server Certificate{{% /md %}}</dd><dt class="property-optional"
             title="Optional">
         <span id="serverid_nodejs">
 <a href="#serverid_nodejs" style="color: inherit; text-decoration: inherit;">server<wbr>Id</a>
@@ -593,8 +550,7 @@ The RegisteredServer resource accepts the following [input]({{< relref "/docs/in
         <span class="property-indicator"></span>
         <span class="property-type">string</span>
     </dt>
-    <dd>{{% md %}}Registered Server serverId{{% /md %}}</dd>
-    <dt class="property-optional"
+    <dd>{{% md %}}Registered Server serverId{{% /md %}}</dd><dt class="property-optional"
             title="Optional">
         <span id="serverosversion_nodejs">
 <a href="#serverosversion_nodejs" style="color: inherit; text-decoration: inherit;">server<wbr>OSVersion</a>
@@ -602,8 +558,7 @@ The RegisteredServer resource accepts the following [input]({{< relref "/docs/in
         <span class="property-indicator"></span>
         <span class="property-type">string</span>
     </dt>
-    <dd>{{% md %}}Registered Server OS Version{{% /md %}}</dd>
-    <dt class="property-optional"
+    <dd>{{% md %}}Registered Server OS Version{{% /md %}}</dd><dt class="property-optional"
             title="Optional">
         <span id="serverrole_nodejs">
 <a href="#serverrole_nodejs" style="color: inherit; text-decoration: inherit;">server<wbr>Role</a>
@@ -611,14 +566,11 @@ The RegisteredServer resource accepts the following [input]({{< relref "/docs/in
         <span class="property-indicator"></span>
         <span class="property-type">string</span>
     </dt>
-    <dd>{{% md %}}Registered Server serverRole{{% /md %}}</dd>
-</dl>
+    <dd>{{% md %}}Registered Server serverRole{{% /md %}}</dd></dl>
 {{% /choosable %}}
 
 {{% choosable language python %}}
-<dl class="resources-properties">
-
-    <dt class="property-required"
+<dl class="resources-properties"><dt class="property-required"
             title="Required">
         <span id="resource_group_name_python">
 <a href="#resource_group_name_python" style="color: inherit; text-decoration: inherit;">resource_<wbr>group_<wbr>name</a>
@@ -626,8 +578,7 @@ The RegisteredServer resource accepts the following [input]({{< relref "/docs/in
         <span class="property-indicator"></span>
         <span class="property-type">str</span>
     </dt>
-    <dd>{{% md %}}The name of the resource group. The name is case insensitive.{{% /md %}}</dd>
-    <dt class="property-required"
+    <dd>{{% md %}}The name of the resource group. The name is case insensitive.{{% /md %}}</dd><dt class="property-required"
             title="Required">
         <span id="storage_sync_service_name_python">
 <a href="#storage_sync_service_name_python" style="color: inherit; text-decoration: inherit;">storage_<wbr>sync_<wbr>service_<wbr>name</a>
@@ -635,8 +586,7 @@ The RegisteredServer resource accepts the following [input]({{< relref "/docs/in
         <span class="property-indicator"></span>
         <span class="property-type">str</span>
     </dt>
-    <dd>{{% md %}}Name of Storage Sync Service resource.{{% /md %}}</dd>
-    <dt class="property-optional"
+    <dd>{{% md %}}Name of Storage Sync Service resource.{{% /md %}}</dd><dt class="property-optional"
             title="Optional">
         <span id="agent_version_python">
 <a href="#agent_version_python" style="color: inherit; text-decoration: inherit;">agent_<wbr>version</a>
@@ -644,8 +594,7 @@ The RegisteredServer resource accepts the following [input]({{< relref "/docs/in
         <span class="property-indicator"></span>
         <span class="property-type">str</span>
     </dt>
-    <dd>{{% md %}}Registered Server Agent Version{{% /md %}}</dd>
-    <dt class="property-optional"
+    <dd>{{% md %}}Registered Server Agent Version{{% /md %}}</dd><dt class="property-optional"
             title="Optional">
         <span id="cluster_id_python">
 <a href="#cluster_id_python" style="color: inherit; text-decoration: inherit;">cluster_<wbr>id</a>
@@ -653,8 +602,7 @@ The RegisteredServer resource accepts the following [input]({{< relref "/docs/in
         <span class="property-indicator"></span>
         <span class="property-type">str</span>
     </dt>
-    <dd>{{% md %}}Registered Server clusterId{{% /md %}}</dd>
-    <dt class="property-optional"
+    <dd>{{% md %}}Registered Server clusterId{{% /md %}}</dd><dt class="property-optional"
             title="Optional">
         <span id="cluster_name_python">
 <a href="#cluster_name_python" style="color: inherit; text-decoration: inherit;">cluster_<wbr>name</a>
@@ -662,8 +610,7 @@ The RegisteredServer resource accepts the following [input]({{< relref "/docs/in
         <span class="property-indicator"></span>
         <span class="property-type">str</span>
     </dt>
-    <dd>{{% md %}}Registered Server clusterName{{% /md %}}</dd>
-    <dt class="property-optional"
+    <dd>{{% md %}}Registered Server clusterName{{% /md %}}</dd><dt class="property-optional"
             title="Optional">
         <span id="friendly_name_python">
 <a href="#friendly_name_python" style="color: inherit; text-decoration: inherit;">friendly_<wbr>name</a>
@@ -671,8 +618,7 @@ The RegisteredServer resource accepts the following [input]({{< relref "/docs/in
         <span class="property-indicator"></span>
         <span class="property-type">str</span>
     </dt>
-    <dd>{{% md %}}Friendly Name{{% /md %}}</dd>
-    <dt class="property-optional"
+    <dd>{{% md %}}Friendly Name{{% /md %}}</dd><dt class="property-optional"
             title="Optional">
         <span id="last_heart_beat_python">
 <a href="#last_heart_beat_python" style="color: inherit; text-decoration: inherit;">last_<wbr>heart_<wbr>beat</a>
@@ -680,8 +626,7 @@ The RegisteredServer resource accepts the following [input]({{< relref "/docs/in
         <span class="property-indicator"></span>
         <span class="property-type">str</span>
     </dt>
-    <dd>{{% md %}}Registered Server last heart beat{{% /md %}}</dd>
-    <dt class="property-optional"
+    <dd>{{% md %}}Registered Server last heart beat{{% /md %}}</dd><dt class="property-optional"
             title="Optional">
         <span id="server_certificate_python">
 <a href="#server_certificate_python" style="color: inherit; text-decoration: inherit;">server_<wbr>certificate</a>
@@ -689,8 +634,7 @@ The RegisteredServer resource accepts the following [input]({{< relref "/docs/in
         <span class="property-indicator"></span>
         <span class="property-type">str</span>
     </dt>
-    <dd>{{% md %}}Registered Server Certificate{{% /md %}}</dd>
-    <dt class="property-optional"
+    <dd>{{% md %}}Registered Server Certificate{{% /md %}}</dd><dt class="property-optional"
             title="Optional">
         <span id="server_id_python">
 <a href="#server_id_python" style="color: inherit; text-decoration: inherit;">server_<wbr>id</a>
@@ -698,8 +642,7 @@ The RegisteredServer resource accepts the following [input]({{< relref "/docs/in
         <span class="property-indicator"></span>
         <span class="property-type">str</span>
     </dt>
-    <dd>{{% md %}}Registered Server serverId{{% /md %}}</dd>
-    <dt class="property-optional"
+    <dd>{{% md %}}Registered Server serverId{{% /md %}}</dd><dt class="property-optional"
             title="Optional">
         <span id="server_os_version_python">
 <a href="#server_os_version_python" style="color: inherit; text-decoration: inherit;">server_<wbr>os_<wbr>version</a>
@@ -707,8 +650,7 @@ The RegisteredServer resource accepts the following [input]({{< relref "/docs/in
         <span class="property-indicator"></span>
         <span class="property-type">str</span>
     </dt>
-    <dd>{{% md %}}Registered Server OS Version{{% /md %}}</dd>
-    <dt class="property-optional"
+    <dd>{{% md %}}Registered Server OS Version{{% /md %}}</dd><dt class="property-optional"
             title="Optional">
         <span id="server_role_python">
 <a href="#server_role_python" style="color: inherit; text-decoration: inherit;">server_<wbr>role</a>
@@ -716,8 +658,7 @@ The RegisteredServer resource accepts the following [input]({{< relref "/docs/in
         <span class="property-indicator"></span>
         <span class="property-type">str</span>
     </dt>
-    <dd>{{% md %}}Registered Server serverRole{{% /md %}}</dd>
-</dl>
+    <dd>{{% md %}}Registered Server serverRole{{% /md %}}</dd></dl>
 {{% /choosable %}}
 
 
@@ -728,9 +669,7 @@ All [input](#inputs) properties are implicitly available as output properties. A
 
 
 {{% choosable language csharp %}}
-<dl class="resources-properties">
-
-    <dt class="property-"
+<dl class="resources-properties"><dt class="property-"
             title="">
         <span id="id_csharp">
 <a href="#id_csharp" style="color: inherit; text-decoration: inherit;">Id</a>
@@ -738,8 +677,7 @@ All [input](#inputs) properties are implicitly available as output properties. A
         <span class="property-indicator"></span>
         <span class="property-type">string</span>
     </dt>
-    <dd>{{% md %}}The provider-assigned unique ID for this managed resource.{{% /md %}}</dd>
-    <dt class="property-"
+    <dd>{{% md %}}The provider-assigned unique ID for this managed resource.{{% /md %}}</dd><dt class="property-"
             title="">
         <span id="name_csharp">
 <a href="#name_csharp" style="color: inherit; text-decoration: inherit;">Name</a>
@@ -747,8 +685,7 @@ All [input](#inputs) properties are implicitly available as output properties. A
         <span class="property-indicator"></span>
         <span class="property-type">string</span>
     </dt>
-    <dd>{{% md %}}The name of the resource{{% /md %}}</dd>
-    <dt class="property-"
+    <dd>{{% md %}}The name of the resource{{% /md %}}</dd><dt class="property-"
             title="">
         <span id="type_csharp">
 <a href="#type_csharp" style="color: inherit; text-decoration: inherit;">Type</a>
@@ -756,8 +693,7 @@ All [input](#inputs) properties are implicitly available as output properties. A
         <span class="property-indicator"></span>
         <span class="property-type">string</span>
     </dt>
-    <dd>{{% md %}}The type of the resource. E.g. "Microsoft.Compute/virtualMachines" or "Microsoft.Storage/storageAccounts"{{% /md %}}</dd>
-    <dt class="property-"
+    <dd>{{% md %}}The type of the resource. E.g. "Microsoft.Compute/virtualMachines" or "Microsoft.Storage/storageAccounts"{{% /md %}}</dd><dt class="property-"
             title="">
         <span id="discoveryendpointuri_csharp">
 <a href="#discoveryendpointuri_csharp" style="color: inherit; text-decoration: inherit;">Discovery<wbr>Endpoint<wbr>Uri</a>
@@ -765,8 +701,7 @@ All [input](#inputs) properties are implicitly available as output properties. A
         <span class="property-indicator"></span>
         <span class="property-type">string</span>
     </dt>
-    <dd>{{% md %}}Resource discoveryEndpointUri{{% /md %}}</dd>
-    <dt class="property-"
+    <dd>{{% md %}}Resource discoveryEndpointUri{{% /md %}}</dd><dt class="property-"
             title="">
         <span id="lastoperationname_csharp">
 <a href="#lastoperationname_csharp" style="color: inherit; text-decoration: inherit;">Last<wbr>Operation<wbr>Name</a>
@@ -774,8 +709,7 @@ All [input](#inputs) properties are implicitly available as output properties. A
         <span class="property-indicator"></span>
         <span class="property-type">string</span>
     </dt>
-    <dd>{{% md %}}Resource Last Operation Name{{% /md %}}</dd>
-    <dt class="property-"
+    <dd>{{% md %}}Resource Last Operation Name{{% /md %}}</dd><dt class="property-"
             title="">
         <span id="lastworkflowid_csharp">
 <a href="#lastworkflowid_csharp" style="color: inherit; text-decoration: inherit;">Last<wbr>Workflow<wbr>Id</a>
@@ -783,8 +717,7 @@ All [input](#inputs) properties are implicitly available as output properties. A
         <span class="property-indicator"></span>
         <span class="property-type">string</span>
     </dt>
-    <dd>{{% md %}}Registered Server lastWorkflowId{{% /md %}}</dd>
-    <dt class="property-"
+    <dd>{{% md %}}Registered Server lastWorkflowId{{% /md %}}</dd><dt class="property-"
             title="">
         <span id="managementendpointuri_csharp">
 <a href="#managementendpointuri_csharp" style="color: inherit; text-decoration: inherit;">Management<wbr>Endpoint<wbr>Uri</a>
@@ -792,8 +725,7 @@ All [input](#inputs) properties are implicitly available as output properties. A
         <span class="property-indicator"></span>
         <span class="property-type">string</span>
     </dt>
-    <dd>{{% md %}}Management Endpoint Uri{{% /md %}}</dd>
-    <dt class="property-"
+    <dd>{{% md %}}Management Endpoint Uri{{% /md %}}</dd><dt class="property-"
             title="">
         <span id="monitoringconfiguration_csharp">
 <a href="#monitoringconfiguration_csharp" style="color: inherit; text-decoration: inherit;">Monitoring<wbr>Configuration</a>
@@ -801,8 +733,7 @@ All [input](#inputs) properties are implicitly available as output properties. A
         <span class="property-indicator"></span>
         <span class="property-type">string</span>
     </dt>
-    <dd>{{% md %}}Monitoring Configuration{{% /md %}}</dd>
-    <dt class="property-"
+    <dd>{{% md %}}Monitoring Configuration{{% /md %}}</dd><dt class="property-"
             title="">
         <span id="monitoringendpointuri_csharp">
 <a href="#monitoringendpointuri_csharp" style="color: inherit; text-decoration: inherit;">Monitoring<wbr>Endpoint<wbr>Uri</a>
@@ -810,8 +741,7 @@ All [input](#inputs) properties are implicitly available as output properties. A
         <span class="property-indicator"></span>
         <span class="property-type">string</span>
     </dt>
-    <dd>{{% md %}}Telemetry Endpoint Uri{{% /md %}}</dd>
-    <dt class="property-"
+    <dd>{{% md %}}Telemetry Endpoint Uri{{% /md %}}</dd><dt class="property-"
             title="">
         <span id="provisioningstate_csharp">
 <a href="#provisioningstate_csharp" style="color: inherit; text-decoration: inherit;">Provisioning<wbr>State</a>
@@ -819,8 +749,7 @@ All [input](#inputs) properties are implicitly available as output properties. A
         <span class="property-indicator"></span>
         <span class="property-type">string</span>
     </dt>
-    <dd>{{% md %}}Registered Server Provisioning State{{% /md %}}</dd>
-    <dt class="property-"
+    <dd>{{% md %}}Registered Server Provisioning State{{% /md %}}</dd><dt class="property-"
             title="">
         <span id="resourcelocation_csharp">
 <a href="#resourcelocation_csharp" style="color: inherit; text-decoration: inherit;">Resource<wbr>Location</a>
@@ -828,8 +757,7 @@ All [input](#inputs) properties are implicitly available as output properties. A
         <span class="property-indicator"></span>
         <span class="property-type">string</span>
     </dt>
-    <dd>{{% md %}}Resource Location{{% /md %}}</dd>
-    <dt class="property-"
+    <dd>{{% md %}}Resource Location{{% /md %}}</dd><dt class="property-"
             title="">
         <span id="servermanagementerrorcode_csharp">
 <a href="#servermanagementerrorcode_csharp" style="color: inherit; text-decoration: inherit;">Server<wbr>Management<wbr>Error<wbr>Code</a>
@@ -837,8 +765,7 @@ All [input](#inputs) properties are implicitly available as output properties. A
         <span class="property-indicator"></span>
         <span class="property-type">int</span>
     </dt>
-    <dd>{{% md %}}Registered Server Management Error Code{{% /md %}}</dd>
-    <dt class="property-"
+    <dd>{{% md %}}Registered Server Management Error Code{{% /md %}}</dd><dt class="property-"
             title="">
         <span id="servicelocation_csharp">
 <a href="#servicelocation_csharp" style="color: inherit; text-decoration: inherit;">Service<wbr>Location</a>
@@ -846,8 +773,7 @@ All [input](#inputs) properties are implicitly available as output properties. A
         <span class="property-indicator"></span>
         <span class="property-type">string</span>
     </dt>
-    <dd>{{% md %}}Service Location{{% /md %}}</dd>
-    <dt class="property-"
+    <dd>{{% md %}}Service Location{{% /md %}}</dd><dt class="property-"
             title="">
         <span id="storagesyncserviceuid_csharp">
 <a href="#storagesyncserviceuid_csharp" style="color: inherit; text-decoration: inherit;">Storage<wbr>Sync<wbr>Service<wbr>Uid</a>
@@ -855,14 +781,11 @@ All [input](#inputs) properties are implicitly available as output properties. A
         <span class="property-indicator"></span>
         <span class="property-type">string</span>
     </dt>
-    <dd>{{% md %}}Registered Server storageSyncServiceUid{{% /md %}}</dd>
-</dl>
+    <dd>{{% md %}}Registered Server storageSyncServiceUid{{% /md %}}</dd></dl>
 {{% /choosable %}}
 
 {{% choosable language go %}}
-<dl class="resources-properties">
-
-    <dt class="property-"
+<dl class="resources-properties"><dt class="property-"
             title="">
         <span id="id_go">
 <a href="#id_go" style="color: inherit; text-decoration: inherit;">Id</a>
@@ -870,8 +793,7 @@ All [input](#inputs) properties are implicitly available as output properties. A
         <span class="property-indicator"></span>
         <span class="property-type">string</span>
     </dt>
-    <dd>{{% md %}}The provider-assigned unique ID for this managed resource.{{% /md %}}</dd>
-    <dt class="property-"
+    <dd>{{% md %}}The provider-assigned unique ID for this managed resource.{{% /md %}}</dd><dt class="property-"
             title="">
         <span id="name_go">
 <a href="#name_go" style="color: inherit; text-decoration: inherit;">Name</a>
@@ -879,8 +801,7 @@ All [input](#inputs) properties are implicitly available as output properties. A
         <span class="property-indicator"></span>
         <span class="property-type">string</span>
     </dt>
-    <dd>{{% md %}}The name of the resource{{% /md %}}</dd>
-    <dt class="property-"
+    <dd>{{% md %}}The name of the resource{{% /md %}}</dd><dt class="property-"
             title="">
         <span id="type_go">
 <a href="#type_go" style="color: inherit; text-decoration: inherit;">Type</a>
@@ -888,8 +809,7 @@ All [input](#inputs) properties are implicitly available as output properties. A
         <span class="property-indicator"></span>
         <span class="property-type">string</span>
     </dt>
-    <dd>{{% md %}}The type of the resource. E.g. "Microsoft.Compute/virtualMachines" or "Microsoft.Storage/storageAccounts"{{% /md %}}</dd>
-    <dt class="property-"
+    <dd>{{% md %}}The type of the resource. E.g. "Microsoft.Compute/virtualMachines" or "Microsoft.Storage/storageAccounts"{{% /md %}}</dd><dt class="property-"
             title="">
         <span id="discoveryendpointuri_go">
 <a href="#discoveryendpointuri_go" style="color: inherit; text-decoration: inherit;">Discovery<wbr>Endpoint<wbr>Uri</a>
@@ -897,8 +817,7 @@ All [input](#inputs) properties are implicitly available as output properties. A
         <span class="property-indicator"></span>
         <span class="property-type">string</span>
     </dt>
-    <dd>{{% md %}}Resource discoveryEndpointUri{{% /md %}}</dd>
-    <dt class="property-"
+    <dd>{{% md %}}Resource discoveryEndpointUri{{% /md %}}</dd><dt class="property-"
             title="">
         <span id="lastoperationname_go">
 <a href="#lastoperationname_go" style="color: inherit; text-decoration: inherit;">Last<wbr>Operation<wbr>Name</a>
@@ -906,8 +825,7 @@ All [input](#inputs) properties are implicitly available as output properties. A
         <span class="property-indicator"></span>
         <span class="property-type">string</span>
     </dt>
-    <dd>{{% md %}}Resource Last Operation Name{{% /md %}}</dd>
-    <dt class="property-"
+    <dd>{{% md %}}Resource Last Operation Name{{% /md %}}</dd><dt class="property-"
             title="">
         <span id="lastworkflowid_go">
 <a href="#lastworkflowid_go" style="color: inherit; text-decoration: inherit;">Last<wbr>Workflow<wbr>Id</a>
@@ -915,8 +833,7 @@ All [input](#inputs) properties are implicitly available as output properties. A
         <span class="property-indicator"></span>
         <span class="property-type">string</span>
     </dt>
-    <dd>{{% md %}}Registered Server lastWorkflowId{{% /md %}}</dd>
-    <dt class="property-"
+    <dd>{{% md %}}Registered Server lastWorkflowId{{% /md %}}</dd><dt class="property-"
             title="">
         <span id="managementendpointuri_go">
 <a href="#managementendpointuri_go" style="color: inherit; text-decoration: inherit;">Management<wbr>Endpoint<wbr>Uri</a>
@@ -924,8 +841,7 @@ All [input](#inputs) properties are implicitly available as output properties. A
         <span class="property-indicator"></span>
         <span class="property-type">string</span>
     </dt>
-    <dd>{{% md %}}Management Endpoint Uri{{% /md %}}</dd>
-    <dt class="property-"
+    <dd>{{% md %}}Management Endpoint Uri{{% /md %}}</dd><dt class="property-"
             title="">
         <span id="monitoringconfiguration_go">
 <a href="#monitoringconfiguration_go" style="color: inherit; text-decoration: inherit;">Monitoring<wbr>Configuration</a>
@@ -933,8 +849,7 @@ All [input](#inputs) properties are implicitly available as output properties. A
         <span class="property-indicator"></span>
         <span class="property-type">string</span>
     </dt>
-    <dd>{{% md %}}Monitoring Configuration{{% /md %}}</dd>
-    <dt class="property-"
+    <dd>{{% md %}}Monitoring Configuration{{% /md %}}</dd><dt class="property-"
             title="">
         <span id="monitoringendpointuri_go">
 <a href="#monitoringendpointuri_go" style="color: inherit; text-decoration: inherit;">Monitoring<wbr>Endpoint<wbr>Uri</a>
@@ -942,8 +857,7 @@ All [input](#inputs) properties are implicitly available as output properties. A
         <span class="property-indicator"></span>
         <span class="property-type">string</span>
     </dt>
-    <dd>{{% md %}}Telemetry Endpoint Uri{{% /md %}}</dd>
-    <dt class="property-"
+    <dd>{{% md %}}Telemetry Endpoint Uri{{% /md %}}</dd><dt class="property-"
             title="">
         <span id="provisioningstate_go">
 <a href="#provisioningstate_go" style="color: inherit; text-decoration: inherit;">Provisioning<wbr>State</a>
@@ -951,8 +865,7 @@ All [input](#inputs) properties are implicitly available as output properties. A
         <span class="property-indicator"></span>
         <span class="property-type">string</span>
     </dt>
-    <dd>{{% md %}}Registered Server Provisioning State{{% /md %}}</dd>
-    <dt class="property-"
+    <dd>{{% md %}}Registered Server Provisioning State{{% /md %}}</dd><dt class="property-"
             title="">
         <span id="resourcelocation_go">
 <a href="#resourcelocation_go" style="color: inherit; text-decoration: inherit;">Resource<wbr>Location</a>
@@ -960,8 +873,7 @@ All [input](#inputs) properties are implicitly available as output properties. A
         <span class="property-indicator"></span>
         <span class="property-type">string</span>
     </dt>
-    <dd>{{% md %}}Resource Location{{% /md %}}</dd>
-    <dt class="property-"
+    <dd>{{% md %}}Resource Location{{% /md %}}</dd><dt class="property-"
             title="">
         <span id="servermanagementerrorcode_go">
 <a href="#servermanagementerrorcode_go" style="color: inherit; text-decoration: inherit;">Server<wbr>Management<wbr>Error<wbr>Code</a>
@@ -969,8 +881,7 @@ All [input](#inputs) properties are implicitly available as output properties. A
         <span class="property-indicator"></span>
         <span class="property-type">int</span>
     </dt>
-    <dd>{{% md %}}Registered Server Management Error Code{{% /md %}}</dd>
-    <dt class="property-"
+    <dd>{{% md %}}Registered Server Management Error Code{{% /md %}}</dd><dt class="property-"
             title="">
         <span id="servicelocation_go">
 <a href="#servicelocation_go" style="color: inherit; text-decoration: inherit;">Service<wbr>Location</a>
@@ -978,8 +889,7 @@ All [input](#inputs) properties are implicitly available as output properties. A
         <span class="property-indicator"></span>
         <span class="property-type">string</span>
     </dt>
-    <dd>{{% md %}}Service Location{{% /md %}}</dd>
-    <dt class="property-"
+    <dd>{{% md %}}Service Location{{% /md %}}</dd><dt class="property-"
             title="">
         <span id="storagesyncserviceuid_go">
 <a href="#storagesyncserviceuid_go" style="color: inherit; text-decoration: inherit;">Storage<wbr>Sync<wbr>Service<wbr>Uid</a>
@@ -987,14 +897,11 @@ All [input](#inputs) properties are implicitly available as output properties. A
         <span class="property-indicator"></span>
         <span class="property-type">string</span>
     </dt>
-    <dd>{{% md %}}Registered Server storageSyncServiceUid{{% /md %}}</dd>
-</dl>
+    <dd>{{% md %}}Registered Server storageSyncServiceUid{{% /md %}}</dd></dl>
 {{% /choosable %}}
 
 {{% choosable language nodejs %}}
-<dl class="resources-properties">
-
-    <dt class="property-"
+<dl class="resources-properties"><dt class="property-"
             title="">
         <span id="id_nodejs">
 <a href="#id_nodejs" style="color: inherit; text-decoration: inherit;">id</a>
@@ -1002,8 +909,7 @@ All [input](#inputs) properties are implicitly available as output properties. A
         <span class="property-indicator"></span>
         <span class="property-type">string</span>
     </dt>
-    <dd>{{% md %}}The provider-assigned unique ID for this managed resource.{{% /md %}}</dd>
-    <dt class="property-"
+    <dd>{{% md %}}The provider-assigned unique ID for this managed resource.{{% /md %}}</dd><dt class="property-"
             title="">
         <span id="name_nodejs">
 <a href="#name_nodejs" style="color: inherit; text-decoration: inherit;">name</a>
@@ -1011,8 +917,7 @@ All [input](#inputs) properties are implicitly available as output properties. A
         <span class="property-indicator"></span>
         <span class="property-type">string</span>
     </dt>
-    <dd>{{% md %}}The name of the resource{{% /md %}}</dd>
-    <dt class="property-"
+    <dd>{{% md %}}The name of the resource{{% /md %}}</dd><dt class="property-"
             title="">
         <span id="type_nodejs">
 <a href="#type_nodejs" style="color: inherit; text-decoration: inherit;">type</a>
@@ -1020,8 +925,7 @@ All [input](#inputs) properties are implicitly available as output properties. A
         <span class="property-indicator"></span>
         <span class="property-type">string</span>
     </dt>
-    <dd>{{% md %}}The type of the resource. E.g. "Microsoft.Compute/virtualMachines" or "Microsoft.Storage/storageAccounts"{{% /md %}}</dd>
-    <dt class="property-"
+    <dd>{{% md %}}The type of the resource. E.g. "Microsoft.Compute/virtualMachines" or "Microsoft.Storage/storageAccounts"{{% /md %}}</dd><dt class="property-"
             title="">
         <span id="discoveryendpointuri_nodejs">
 <a href="#discoveryendpointuri_nodejs" style="color: inherit; text-decoration: inherit;">discovery<wbr>Endpoint<wbr>Uri</a>
@@ -1029,8 +933,7 @@ All [input](#inputs) properties are implicitly available as output properties. A
         <span class="property-indicator"></span>
         <span class="property-type">string</span>
     </dt>
-    <dd>{{% md %}}Resource discoveryEndpointUri{{% /md %}}</dd>
-    <dt class="property-"
+    <dd>{{% md %}}Resource discoveryEndpointUri{{% /md %}}</dd><dt class="property-"
             title="">
         <span id="lastoperationname_nodejs">
 <a href="#lastoperationname_nodejs" style="color: inherit; text-decoration: inherit;">last<wbr>Operation<wbr>Name</a>
@@ -1038,8 +941,7 @@ All [input](#inputs) properties are implicitly available as output properties. A
         <span class="property-indicator"></span>
         <span class="property-type">string</span>
     </dt>
-    <dd>{{% md %}}Resource Last Operation Name{{% /md %}}</dd>
-    <dt class="property-"
+    <dd>{{% md %}}Resource Last Operation Name{{% /md %}}</dd><dt class="property-"
             title="">
         <span id="lastworkflowid_nodejs">
 <a href="#lastworkflowid_nodejs" style="color: inherit; text-decoration: inherit;">last<wbr>Workflow<wbr>Id</a>
@@ -1047,8 +949,7 @@ All [input](#inputs) properties are implicitly available as output properties. A
         <span class="property-indicator"></span>
         <span class="property-type">string</span>
     </dt>
-    <dd>{{% md %}}Registered Server lastWorkflowId{{% /md %}}</dd>
-    <dt class="property-"
+    <dd>{{% md %}}Registered Server lastWorkflowId{{% /md %}}</dd><dt class="property-"
             title="">
         <span id="managementendpointuri_nodejs">
 <a href="#managementendpointuri_nodejs" style="color: inherit; text-decoration: inherit;">management<wbr>Endpoint<wbr>Uri</a>
@@ -1056,8 +957,7 @@ All [input](#inputs) properties are implicitly available as output properties. A
         <span class="property-indicator"></span>
         <span class="property-type">string</span>
     </dt>
-    <dd>{{% md %}}Management Endpoint Uri{{% /md %}}</dd>
-    <dt class="property-"
+    <dd>{{% md %}}Management Endpoint Uri{{% /md %}}</dd><dt class="property-"
             title="">
         <span id="monitoringconfiguration_nodejs">
 <a href="#monitoringconfiguration_nodejs" style="color: inherit; text-decoration: inherit;">monitoring<wbr>Configuration</a>
@@ -1065,8 +965,7 @@ All [input](#inputs) properties are implicitly available as output properties. A
         <span class="property-indicator"></span>
         <span class="property-type">string</span>
     </dt>
-    <dd>{{% md %}}Monitoring Configuration{{% /md %}}</dd>
-    <dt class="property-"
+    <dd>{{% md %}}Monitoring Configuration{{% /md %}}</dd><dt class="property-"
             title="">
         <span id="monitoringendpointuri_nodejs">
 <a href="#monitoringendpointuri_nodejs" style="color: inherit; text-decoration: inherit;">monitoring<wbr>Endpoint<wbr>Uri</a>
@@ -1074,8 +973,7 @@ All [input](#inputs) properties are implicitly available as output properties. A
         <span class="property-indicator"></span>
         <span class="property-type">string</span>
     </dt>
-    <dd>{{% md %}}Telemetry Endpoint Uri{{% /md %}}</dd>
-    <dt class="property-"
+    <dd>{{% md %}}Telemetry Endpoint Uri{{% /md %}}</dd><dt class="property-"
             title="">
         <span id="provisioningstate_nodejs">
 <a href="#provisioningstate_nodejs" style="color: inherit; text-decoration: inherit;">provisioning<wbr>State</a>
@@ -1083,8 +981,7 @@ All [input](#inputs) properties are implicitly available as output properties. A
         <span class="property-indicator"></span>
         <span class="property-type">string</span>
     </dt>
-    <dd>{{% md %}}Registered Server Provisioning State{{% /md %}}</dd>
-    <dt class="property-"
+    <dd>{{% md %}}Registered Server Provisioning State{{% /md %}}</dd><dt class="property-"
             title="">
         <span id="resourcelocation_nodejs">
 <a href="#resourcelocation_nodejs" style="color: inherit; text-decoration: inherit;">resource<wbr>Location</a>
@@ -1092,8 +989,7 @@ All [input](#inputs) properties are implicitly available as output properties. A
         <span class="property-indicator"></span>
         <span class="property-type">string</span>
     </dt>
-    <dd>{{% md %}}Resource Location{{% /md %}}</dd>
-    <dt class="property-"
+    <dd>{{% md %}}Resource Location{{% /md %}}</dd><dt class="property-"
             title="">
         <span id="servermanagementerrorcode_nodejs">
 <a href="#servermanagementerrorcode_nodejs" style="color: inherit; text-decoration: inherit;">server<wbr>Management<wbr>Error<wbr>Code</a>
@@ -1101,8 +997,7 @@ All [input](#inputs) properties are implicitly available as output properties. A
         <span class="property-indicator"></span>
         <span class="property-type">number</span>
     </dt>
-    <dd>{{% md %}}Registered Server Management Error Code{{% /md %}}</dd>
-    <dt class="property-"
+    <dd>{{% md %}}Registered Server Management Error Code{{% /md %}}</dd><dt class="property-"
             title="">
         <span id="servicelocation_nodejs">
 <a href="#servicelocation_nodejs" style="color: inherit; text-decoration: inherit;">service<wbr>Location</a>
@@ -1110,8 +1005,7 @@ All [input](#inputs) properties are implicitly available as output properties. A
         <span class="property-indicator"></span>
         <span class="property-type">string</span>
     </dt>
-    <dd>{{% md %}}Service Location{{% /md %}}</dd>
-    <dt class="property-"
+    <dd>{{% md %}}Service Location{{% /md %}}</dd><dt class="property-"
             title="">
         <span id="storagesyncserviceuid_nodejs">
 <a href="#storagesyncserviceuid_nodejs" style="color: inherit; text-decoration: inherit;">storage<wbr>Sync<wbr>Service<wbr>Uid</a>
@@ -1119,14 +1013,11 @@ All [input](#inputs) properties are implicitly available as output properties. A
         <span class="property-indicator"></span>
         <span class="property-type">string</span>
     </dt>
-    <dd>{{% md %}}Registered Server storageSyncServiceUid{{% /md %}}</dd>
-</dl>
+    <dd>{{% md %}}Registered Server storageSyncServiceUid{{% /md %}}</dd></dl>
 {{% /choosable %}}
 
 {{% choosable language python %}}
-<dl class="resources-properties">
-
-    <dt class="property-"
+<dl class="resources-properties"><dt class="property-"
             title="">
         <span id="id_python">
 <a href="#id_python" style="color: inherit; text-decoration: inherit;">id</a>
@@ -1134,8 +1025,7 @@ All [input](#inputs) properties are implicitly available as output properties. A
         <span class="property-indicator"></span>
         <span class="property-type">str</span>
     </dt>
-    <dd>{{% md %}}The provider-assigned unique ID for this managed resource.{{% /md %}}</dd>
-    <dt class="property-"
+    <dd>{{% md %}}The provider-assigned unique ID for this managed resource.{{% /md %}}</dd><dt class="property-"
             title="">
         <span id="name_python">
 <a href="#name_python" style="color: inherit; text-decoration: inherit;">name</a>
@@ -1143,8 +1033,7 @@ All [input](#inputs) properties are implicitly available as output properties. A
         <span class="property-indicator"></span>
         <span class="property-type">str</span>
     </dt>
-    <dd>{{% md %}}The name of the resource{{% /md %}}</dd>
-    <dt class="property-"
+    <dd>{{% md %}}The name of the resource{{% /md %}}</dd><dt class="property-"
             title="">
         <span id="type_python">
 <a href="#type_python" style="color: inherit; text-decoration: inherit;">type</a>
@@ -1152,8 +1041,7 @@ All [input](#inputs) properties are implicitly available as output properties. A
         <span class="property-indicator"></span>
         <span class="property-type">str</span>
     </dt>
-    <dd>{{% md %}}The type of the resource. E.g. "Microsoft.Compute/virtualMachines" or "Microsoft.Storage/storageAccounts"{{% /md %}}</dd>
-    <dt class="property-"
+    <dd>{{% md %}}The type of the resource. E.g. "Microsoft.Compute/virtualMachines" or "Microsoft.Storage/storageAccounts"{{% /md %}}</dd><dt class="property-"
             title="">
         <span id="discovery_endpoint_uri_python">
 <a href="#discovery_endpoint_uri_python" style="color: inherit; text-decoration: inherit;">discovery_<wbr>endpoint_<wbr>uri</a>
@@ -1161,8 +1049,7 @@ All [input](#inputs) properties are implicitly available as output properties. A
         <span class="property-indicator"></span>
         <span class="property-type">str</span>
     </dt>
-    <dd>{{% md %}}Resource discoveryEndpointUri{{% /md %}}</dd>
-    <dt class="property-"
+    <dd>{{% md %}}Resource discoveryEndpointUri{{% /md %}}</dd><dt class="property-"
             title="">
         <span id="last_operation_name_python">
 <a href="#last_operation_name_python" style="color: inherit; text-decoration: inherit;">last_<wbr>operation_<wbr>name</a>
@@ -1170,8 +1057,7 @@ All [input](#inputs) properties are implicitly available as output properties. A
         <span class="property-indicator"></span>
         <span class="property-type">str</span>
     </dt>
-    <dd>{{% md %}}Resource Last Operation Name{{% /md %}}</dd>
-    <dt class="property-"
+    <dd>{{% md %}}Resource Last Operation Name{{% /md %}}</dd><dt class="property-"
             title="">
         <span id="last_workflow_id_python">
 <a href="#last_workflow_id_python" style="color: inherit; text-decoration: inherit;">last_<wbr>workflow_<wbr>id</a>
@@ -1179,8 +1065,7 @@ All [input](#inputs) properties are implicitly available as output properties. A
         <span class="property-indicator"></span>
         <span class="property-type">str</span>
     </dt>
-    <dd>{{% md %}}Registered Server lastWorkflowId{{% /md %}}</dd>
-    <dt class="property-"
+    <dd>{{% md %}}Registered Server lastWorkflowId{{% /md %}}</dd><dt class="property-"
             title="">
         <span id="management_endpoint_uri_python">
 <a href="#management_endpoint_uri_python" style="color: inherit; text-decoration: inherit;">management_<wbr>endpoint_<wbr>uri</a>
@@ -1188,8 +1073,7 @@ All [input](#inputs) properties are implicitly available as output properties. A
         <span class="property-indicator"></span>
         <span class="property-type">str</span>
     </dt>
-    <dd>{{% md %}}Management Endpoint Uri{{% /md %}}</dd>
-    <dt class="property-"
+    <dd>{{% md %}}Management Endpoint Uri{{% /md %}}</dd><dt class="property-"
             title="">
         <span id="monitoring_configuration_python">
 <a href="#monitoring_configuration_python" style="color: inherit; text-decoration: inherit;">monitoring_<wbr>configuration</a>
@@ -1197,8 +1081,7 @@ All [input](#inputs) properties are implicitly available as output properties. A
         <span class="property-indicator"></span>
         <span class="property-type">str</span>
     </dt>
-    <dd>{{% md %}}Monitoring Configuration{{% /md %}}</dd>
-    <dt class="property-"
+    <dd>{{% md %}}Monitoring Configuration{{% /md %}}</dd><dt class="property-"
             title="">
         <span id="monitoring_endpoint_uri_python">
 <a href="#monitoring_endpoint_uri_python" style="color: inherit; text-decoration: inherit;">monitoring_<wbr>endpoint_<wbr>uri</a>
@@ -1206,8 +1089,7 @@ All [input](#inputs) properties are implicitly available as output properties. A
         <span class="property-indicator"></span>
         <span class="property-type">str</span>
     </dt>
-    <dd>{{% md %}}Telemetry Endpoint Uri{{% /md %}}</dd>
-    <dt class="property-"
+    <dd>{{% md %}}Telemetry Endpoint Uri{{% /md %}}</dd><dt class="property-"
             title="">
         <span id="provisioning_state_python">
 <a href="#provisioning_state_python" style="color: inherit; text-decoration: inherit;">provisioning_<wbr>state</a>
@@ -1215,8 +1097,7 @@ All [input](#inputs) properties are implicitly available as output properties. A
         <span class="property-indicator"></span>
         <span class="property-type">str</span>
     </dt>
-    <dd>{{% md %}}Registered Server Provisioning State{{% /md %}}</dd>
-    <dt class="property-"
+    <dd>{{% md %}}Registered Server Provisioning State{{% /md %}}</dd><dt class="property-"
             title="">
         <span id="resource_location_python">
 <a href="#resource_location_python" style="color: inherit; text-decoration: inherit;">resource_<wbr>location</a>
@@ -1224,8 +1105,7 @@ All [input](#inputs) properties are implicitly available as output properties. A
         <span class="property-indicator"></span>
         <span class="property-type">str</span>
     </dt>
-    <dd>{{% md %}}Resource Location{{% /md %}}</dd>
-    <dt class="property-"
+    <dd>{{% md %}}Resource Location{{% /md %}}</dd><dt class="property-"
             title="">
         <span id="server_management_error_code_python">
 <a href="#server_management_error_code_python" style="color: inherit; text-decoration: inherit;">server_<wbr>management_<wbr>error_<wbr>code</a>
@@ -1233,8 +1113,7 @@ All [input](#inputs) properties are implicitly available as output properties. A
         <span class="property-indicator"></span>
         <span class="property-type">int</span>
     </dt>
-    <dd>{{% md %}}Registered Server Management Error Code{{% /md %}}</dd>
-    <dt class="property-"
+    <dd>{{% md %}}Registered Server Management Error Code{{% /md %}}</dd><dt class="property-"
             title="">
         <span id="service_location_python">
 <a href="#service_location_python" style="color: inherit; text-decoration: inherit;">service_<wbr>location</a>
@@ -1242,8 +1121,7 @@ All [input](#inputs) properties are implicitly available as output properties. A
         <span class="property-indicator"></span>
         <span class="property-type">str</span>
     </dt>
-    <dd>{{% md %}}Service Location{{% /md %}}</dd>
-    <dt class="property-"
+    <dd>{{% md %}}Service Location{{% /md %}}</dd><dt class="property-"
             title="">
         <span id="storage_sync_service_uid_python">
 <a href="#storage_sync_service_uid_python" style="color: inherit; text-decoration: inherit;">storage_<wbr>sync_<wbr>service_<wbr>uid</a>
@@ -1251,8 +1129,7 @@ All [input](#inputs) properties are implicitly available as output properties. A
         <span class="property-indicator"></span>
         <span class="property-type">str</span>
     </dt>
-    <dd>{{% md %}}Registered Server storageSyncServiceUid{{% /md %}}</dd>
-</dl>
+    <dd>{{% md %}}Registered Server storageSyncServiceUid{{% /md %}}</dd></dl>
 {{% /choosable %}}
 
 

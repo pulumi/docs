@@ -31,11 +31,17 @@ The following attributes are available on node_status:
 * `down` - The number of backends considered to be 'DOWN' and unhealthy. These are not in rotation, and not serving requests.
 
 {{% examples %}}
+
 ## Example Usage
 
 {{< chooser language "typescript,python,go,csharp" / >}}
 
-{{% example csharp %}}
+
+
+
+
+{{< example csharp >}}
+
 ```csharp
 using Pulumi;
 using Linode = Pulumi.Linode;
@@ -67,9 +73,12 @@ class MyStack : Stack
 }
 ```
 
-{{% /example %}}
 
-{{% example go %}}
+{{< /example >}}
+
+
+{{< example go >}}
+
 ```go
 package main
 
@@ -107,9 +116,12 @@ func main() {
 }
 ```
 
-{{% /example %}}
 
-{{% example python %}}
+{{< /example >}}
+
+
+{{< example python >}}
+
 ```python
 import pulumi
 import pulumi_linode as linode
@@ -130,9 +142,12 @@ foofig = linode.NodeBalancerConfig("foofig",
     stickiness="http_cookie")
 ```
 
-{{% /example %}}
 
-{{% example typescript %}}
+{{< /example >}}
+
+
+{{< example typescript >}}
+
 
 ```typescript
 import * as pulumi from "@pulumi/pulumi";
@@ -156,9 +171,16 @@ const foofig = new linode.NodeBalancerConfig("foofig", {
 });
 ```
 
-{{% /example %}}
+
+{{< /example >}}
+
+
+
+
 
 {{% /examples %}}
+
+
 
 
 ## Create a NodeBalancerConfig Resource {#create}
@@ -183,9 +205,7 @@ const foofig = new linode.NodeBalancerConfig("foofig", {
 
 {{% choosable language nodejs %}}
 
-<dl class="resources-properties">
-  
-    <dt
+<dl class="resources-properties"><dt
         class="property-required" title="Required">
         <span>name</span>
         <span class="property-indicator"></span>
@@ -193,9 +213,7 @@ const foofig = new linode.NodeBalancerConfig("foofig", {
     </dt>
     <dd>
       The unique name of the resource.
-    </dd>
-  
-    <dt
+    </dd><dt
         class="property-required" title="Required">
         <span>args</span>
         <span class="property-indicator"></span>
@@ -203,9 +221,7 @@ const foofig = new linode.NodeBalancerConfig("foofig", {
     </dt>
     <dd>
       The arguments to resource properties.
-    </dd>
-  
-    <dt
+    </dd><dt
         class="property-optional" title="Optional">
         <span>opts</span>
         <span class="property-indicator"></span>
@@ -213,10 +229,7 @@ const foofig = new linode.NodeBalancerConfig("foofig", {
     </dt>
     <dd>
       Bag of options to control resource&#39;s behavior.
-    </dd>
-  
-
-</dl>
+    </dd></dl>
 
 {{% /choosable %}}
 
@@ -242,9 +255,7 @@ const foofig = new linode.NodeBalancerConfig("foofig", {
 
 {{% choosable language go %}}
 
-<dl class="resources-properties">
-  
-    <dt
+<dl class="resources-properties"><dt
         class="property-optional" title="Optional">
         <span>ctx</span>
         <span class="property-indicator"></span>
@@ -252,9 +263,7 @@ const foofig = new linode.NodeBalancerConfig("foofig", {
     </dt>
     <dd>
       Context object for the current deployment.
-    </dd>
-  
-    <dt
+    </dd><dt
         class="property-required" title="Required">
         <span>name</span>
         <span class="property-indicator"></span>
@@ -262,9 +271,7 @@ const foofig = new linode.NodeBalancerConfig("foofig", {
     </dt>
     <dd>
       The unique name of the resource.
-    </dd>
-  
-    <dt
+    </dd><dt
         class="property-required" title="Required">
         <span>args</span>
         <span class="property-indicator"></span>
@@ -272,9 +279,7 @@ const foofig = new linode.NodeBalancerConfig("foofig", {
     </dt>
     <dd>
       The arguments to resource properties.
-    </dd>
-  
-    <dt
+    </dd><dt
         class="property-optional" title="Optional">
         <span>opts</span>
         <span class="property-indicator"></span>
@@ -282,18 +287,13 @@ const foofig = new linode.NodeBalancerConfig("foofig", {
     </dt>
     <dd>
       Bag of options to control resource&#39;s behavior.
-    </dd>
-  
-
-</dl>
+    </dd></dl>
 
 {{% /choosable %}}
 
 {{% choosable language csharp %}}
 
-<dl class="resources-properties">
-  
-    <dt
+<dl class="resources-properties"><dt
         class="property-required" title="Required">
         <span>name</span>
         <span class="property-indicator"></span>
@@ -301,9 +301,7 @@ const foofig = new linode.NodeBalancerConfig("foofig", {
     </dt>
     <dd>
       The unique name of the resource.
-    </dd>
-  
-    <dt
+    </dd><dt
         class="property-required" title="Required">
         <span>args</span>
         <span class="property-indicator"></span>
@@ -311,9 +309,7 @@ const foofig = new linode.NodeBalancerConfig("foofig", {
     </dt>
     <dd>
       The arguments to resource properties.
-    </dd>
-  
-    <dt
+    </dd><dt
         class="property-optional" title="Optional">
         <span>opts</span>
         <span class="property-indicator"></span>
@@ -321,10 +317,7 @@ const foofig = new linode.NodeBalancerConfig("foofig", {
     </dt>
     <dd>
       Bag of options to control resource&#39;s behavior.
-    </dd>
-  
-
-</dl>
+    </dd></dl>
 
 {{% /choosable %}}
 
@@ -339,9 +332,7 @@ The NodeBalancerConfig resource accepts the following [input]({{< relref "/docs/
 
 
 {{% choosable language csharp %}}
-<dl class="resources-properties">
-
-    <dt class="property-required"
+<dl class="resources-properties"><dt class="property-required"
             title="Required">
         <span id="nodebalancerid_csharp">
 <a href="#nodebalancerid_csharp" style="color: inherit; text-decoration: inherit;">Nodebalancer<wbr>Id</a>
@@ -350,8 +341,7 @@ The NodeBalancerConfig resource accepts the following [input]({{< relref "/docs/
         <span class="property-type">int</span>
     </dt>
     <dd>{{% md %}}The ID of the NodeBalancer to access.
-{{% /md %}}</dd>
-    <dt class="property-optional"
+{{% /md %}}</dd><dt class="property-optional"
             title="Optional">
         <span id="algorithm_csharp">
 <a href="#algorithm_csharp" style="color: inherit; text-decoration: inherit;">Algorithm</a>
@@ -360,8 +350,7 @@ The NodeBalancerConfig resource accepts the following [input]({{< relref "/docs/
         <span class="property-type">string</span>
     </dt>
     <dd>{{% md %}}What algorithm this NodeBalancer should use for routing traffic to backends: roundrobin, leastconn, source
-{{% /md %}}</dd>
-    <dt class="property-optional"
+{{% /md %}}</dd><dt class="property-optional"
             title="Optional">
         <span id="check_csharp">
 <a href="#check_csharp" style="color: inherit; text-decoration: inherit;">Check</a>
@@ -370,8 +359,7 @@ The NodeBalancerConfig resource accepts the following [input]({{< relref "/docs/
         <span class="property-type">string</span>
     </dt>
     <dd>{{% md %}}The type of check to perform against backends to ensure they are serving requests. This is used to determine if backends are up or down. If none no check is performed. connection requires only a connection to the backend to succeed. http and http_body rely on the backend serving HTTP, and that the response returned matches what is expected.
-{{% /md %}}</dd>
-    <dt class="property-optional"
+{{% /md %}}</dd><dt class="property-optional"
             title="Optional">
         <span id="checkattempts_csharp">
 <a href="#checkattempts_csharp" style="color: inherit; text-decoration: inherit;">Check<wbr>Attempts</a>
@@ -380,8 +368,7 @@ The NodeBalancerConfig resource accepts the following [input]({{< relref "/docs/
         <span class="property-type">int</span>
     </dt>
     <dd>{{% md %}}How many times to attempt a check before considering a backend to be down. (1-30)
-{{% /md %}}</dd>
-    <dt class="property-optional"
+{{% /md %}}</dd><dt class="property-optional"
             title="Optional">
         <span id="checkbody_csharp">
 <a href="#checkbody_csharp" style="color: inherit; text-decoration: inherit;">Check<wbr>Body</a>
@@ -391,8 +378,7 @@ The NodeBalancerConfig resource accepts the following [input]({{< relref "/docs/
     </dt>
     <dd>{{% md %}}This value must be present in the response body of the check in order for it to pass. If this value is not present in
 the response body of a check request, the backend is considered to be down
-{{% /md %}}</dd>
-    <dt class="property-optional"
+{{% /md %}}</dd><dt class="property-optional"
             title="Optional">
         <span id="checkinterval_csharp">
 <a href="#checkinterval_csharp" style="color: inherit; text-decoration: inherit;">Check<wbr>Interval</a>
@@ -401,8 +387,7 @@ the response body of a check request, the backend is considered to be down
         <span class="property-type">int</span>
     </dt>
     <dd>{{% md %}}How often, in seconds, to check that backends are up and serving requests.
-{{% /md %}}</dd>
-    <dt class="property-optional"
+{{% /md %}}</dd><dt class="property-optional"
             title="Optional">
         <span id="checkpassive_csharp">
 <a href="#checkpassive_csharp" style="color: inherit; text-decoration: inherit;">Check<wbr>Passive</a>
@@ -411,8 +396,7 @@ the response body of a check request, the backend is considered to be down
         <span class="property-type">bool</span>
     </dt>
     <dd>{{% md %}}If true, any response from this backend with a 5xx status code will be enough for it to be considered unhealthy and taken out of rotation.
-{{% /md %}}</dd>
-    <dt class="property-optional"
+{{% /md %}}</dd><dt class="property-optional"
             title="Optional">
         <span id="checkpath_csharp">
 <a href="#checkpath_csharp" style="color: inherit; text-decoration: inherit;">Check<wbr>Path</a>
@@ -421,8 +405,7 @@ the response body of a check request, the backend is considered to be down
         <span class="property-type">string</span>
     </dt>
     <dd>{{% md %}}The URL path to check on each backend. If the backend does not respond to this request it is considered to be down.
-{{% /md %}}</dd>
-    <dt class="property-optional"
+{{% /md %}}</dd><dt class="property-optional"
             title="Optional">
         <span id="checktimeout_csharp">
 <a href="#checktimeout_csharp" style="color: inherit; text-decoration: inherit;">Check<wbr>Timeout</a>
@@ -431,8 +414,7 @@ the response body of a check request, the backend is considered to be down
         <span class="property-type">int</span>
     </dt>
     <dd>{{% md %}}How long, in seconds, to wait for a check attempt before considering it failed. (1-30)
-{{% /md %}}</dd>
-    <dt class="property-optional"
+{{% /md %}}</dd><dt class="property-optional"
             title="Optional">
         <span id="ciphersuite_csharp">
 <a href="#ciphersuite_csharp" style="color: inherit; text-decoration: inherit;">Cipher<wbr>Suite</a>
@@ -441,8 +423,7 @@ the response body of a check request, the backend is considered to be down
         <span class="property-type">string</span>
     </dt>
     <dd>{{% md %}}What ciphers to use for SSL connections served by this NodeBalancer. `legacy` is considered insecure and should only be used if necessary.
-{{% /md %}}</dd>
-    <dt class="property-optional"
+{{% /md %}}</dd><dt class="property-optional"
             title="Optional">
         <span id="port_csharp">
 <a href="#port_csharp" style="color: inherit; text-decoration: inherit;">Port</a>
@@ -451,8 +432,7 @@ the response body of a check request, the backend is considered to be down
         <span class="property-type">int</span>
     </dt>
     <dd>{{% md %}}The TCP port this Config is for. These values must be unique across configs on a single NodeBalancer (you can't have two configs for port 80, for example). While some ports imply some protocols, no enforcement is done and you may configure your NodeBalancer however is useful to you. For example, while port 443 is generally used for HTTPS, you do not need SSL configured to have a NodeBalancer listening on port 443. (Defaults to 80)
-{{% /md %}}</dd>
-    <dt class="property-optional"
+{{% /md %}}</dd><dt class="property-optional"
             title="Optional">
         <span id="protocol_csharp">
 <a href="#protocol_csharp" style="color: inherit; text-decoration: inherit;">Protocol</a>
@@ -461,8 +441,7 @@ the response body of a check request, the backend is considered to be down
         <span class="property-type">string</span>
     </dt>
     <dd>{{% md %}}The protocol this port is configured to serve. If this is set to https you must include an ssl_cert and an ssl_key. (Defaults to "http")
-{{% /md %}}</dd>
-    <dt class="property-optional"
+{{% /md %}}</dd><dt class="property-optional"
             title="Optional">
         <span id="proxyprotocol_csharp">
 <a href="#proxyprotocol_csharp" style="color: inherit; text-decoration: inherit;">Proxy<wbr>Protocol</a>
@@ -471,8 +450,7 @@ the response body of a check request, the backend is considered to be down
         <span class="property-type">string</span>
     </dt>
     <dd>{{% md %}}The version of ProxyProtocol to use for the underlying NodeBalancer. This requires protocol to be `tcp`. Valid values are `none`, `v1`, and `v2`. (Defaults to `none`)
-{{% /md %}}</dd>
-    <dt class="property-optional"
+{{% /md %}}</dd><dt class="property-optional"
             title="Optional">
         <span id="sslcert_csharp">
 <a href="#sslcert_csharp" style="color: inherit; text-decoration: inherit;">Ssl<wbr>Cert</a>
@@ -481,8 +459,7 @@ the response body of a check request, the backend is considered to be down
         <span class="property-type">string</span>
     </dt>
     <dd>{{% md %}}The certificate this port is serving. This is not returned. If set, this field will come back as `<REDACTED>`. Please use the ssl_commonname and ssl_fingerprint to identify the certificate.
-{{% /md %}}</dd>
-    <dt class="property-optional"
+{{% /md %}}</dd><dt class="property-optional"
             title="Optional">
         <span id="sslkey_csharp">
 <a href="#sslkey_csharp" style="color: inherit; text-decoration: inherit;">Ssl<wbr>Key</a>
@@ -491,8 +468,7 @@ the response body of a check request, the backend is considered to be down
         <span class="property-type">string</span>
     </dt>
     <dd>{{% md %}}The private key corresponding to this port's certificate. This is not returned. If set, this field will come back as `<REDACTED>`. Please use the ssl_commonname and ssl_fingerprint to identify the certificate.
-{{% /md %}}</dd>
-    <dt class="property-optional"
+{{% /md %}}</dd><dt class="property-optional"
             title="Optional">
         <span id="stickiness_csharp">
 <a href="#stickiness_csharp" style="color: inherit; text-decoration: inherit;">Stickiness</a>
@@ -501,14 +477,11 @@ the response body of a check request, the backend is considered to be down
         <span class="property-type">string</span>
     </dt>
     <dd>{{% md %}}Controls how session stickiness is handled on this port: 'none', 'table', 'http_cookie'
-{{% /md %}}</dd>
-</dl>
+{{% /md %}}</dd></dl>
 {{% /choosable %}}
 
 {{% choosable language go %}}
-<dl class="resources-properties">
-
-    <dt class="property-required"
+<dl class="resources-properties"><dt class="property-required"
             title="Required">
         <span id="nodebalancerid_go">
 <a href="#nodebalancerid_go" style="color: inherit; text-decoration: inherit;">Nodebalancer<wbr>Id</a>
@@ -517,8 +490,7 @@ the response body of a check request, the backend is considered to be down
         <span class="property-type">int</span>
     </dt>
     <dd>{{% md %}}The ID of the NodeBalancer to access.
-{{% /md %}}</dd>
-    <dt class="property-optional"
+{{% /md %}}</dd><dt class="property-optional"
             title="Optional">
         <span id="algorithm_go">
 <a href="#algorithm_go" style="color: inherit; text-decoration: inherit;">Algorithm</a>
@@ -527,8 +499,7 @@ the response body of a check request, the backend is considered to be down
         <span class="property-type">string</span>
     </dt>
     <dd>{{% md %}}What algorithm this NodeBalancer should use for routing traffic to backends: roundrobin, leastconn, source
-{{% /md %}}</dd>
-    <dt class="property-optional"
+{{% /md %}}</dd><dt class="property-optional"
             title="Optional">
         <span id="check_go">
 <a href="#check_go" style="color: inherit; text-decoration: inherit;">Check</a>
@@ -537,8 +508,7 @@ the response body of a check request, the backend is considered to be down
         <span class="property-type">string</span>
     </dt>
     <dd>{{% md %}}The type of check to perform against backends to ensure they are serving requests. This is used to determine if backends are up or down. If none no check is performed. connection requires only a connection to the backend to succeed. http and http_body rely on the backend serving HTTP, and that the response returned matches what is expected.
-{{% /md %}}</dd>
-    <dt class="property-optional"
+{{% /md %}}</dd><dt class="property-optional"
             title="Optional">
         <span id="checkattempts_go">
 <a href="#checkattempts_go" style="color: inherit; text-decoration: inherit;">Check<wbr>Attempts</a>
@@ -547,8 +517,7 @@ the response body of a check request, the backend is considered to be down
         <span class="property-type">int</span>
     </dt>
     <dd>{{% md %}}How many times to attempt a check before considering a backend to be down. (1-30)
-{{% /md %}}</dd>
-    <dt class="property-optional"
+{{% /md %}}</dd><dt class="property-optional"
             title="Optional">
         <span id="checkbody_go">
 <a href="#checkbody_go" style="color: inherit; text-decoration: inherit;">Check<wbr>Body</a>
@@ -558,8 +527,7 @@ the response body of a check request, the backend is considered to be down
     </dt>
     <dd>{{% md %}}This value must be present in the response body of the check in order for it to pass. If this value is not present in
 the response body of a check request, the backend is considered to be down
-{{% /md %}}</dd>
-    <dt class="property-optional"
+{{% /md %}}</dd><dt class="property-optional"
             title="Optional">
         <span id="checkinterval_go">
 <a href="#checkinterval_go" style="color: inherit; text-decoration: inherit;">Check<wbr>Interval</a>
@@ -568,8 +536,7 @@ the response body of a check request, the backend is considered to be down
         <span class="property-type">int</span>
     </dt>
     <dd>{{% md %}}How often, in seconds, to check that backends are up and serving requests.
-{{% /md %}}</dd>
-    <dt class="property-optional"
+{{% /md %}}</dd><dt class="property-optional"
             title="Optional">
         <span id="checkpassive_go">
 <a href="#checkpassive_go" style="color: inherit; text-decoration: inherit;">Check<wbr>Passive</a>
@@ -578,8 +545,7 @@ the response body of a check request, the backend is considered to be down
         <span class="property-type">bool</span>
     </dt>
     <dd>{{% md %}}If true, any response from this backend with a 5xx status code will be enough for it to be considered unhealthy and taken out of rotation.
-{{% /md %}}</dd>
-    <dt class="property-optional"
+{{% /md %}}</dd><dt class="property-optional"
             title="Optional">
         <span id="checkpath_go">
 <a href="#checkpath_go" style="color: inherit; text-decoration: inherit;">Check<wbr>Path</a>
@@ -588,8 +554,7 @@ the response body of a check request, the backend is considered to be down
         <span class="property-type">string</span>
     </dt>
     <dd>{{% md %}}The URL path to check on each backend. If the backend does not respond to this request it is considered to be down.
-{{% /md %}}</dd>
-    <dt class="property-optional"
+{{% /md %}}</dd><dt class="property-optional"
             title="Optional">
         <span id="checktimeout_go">
 <a href="#checktimeout_go" style="color: inherit; text-decoration: inherit;">Check<wbr>Timeout</a>
@@ -598,8 +563,7 @@ the response body of a check request, the backend is considered to be down
         <span class="property-type">int</span>
     </dt>
     <dd>{{% md %}}How long, in seconds, to wait for a check attempt before considering it failed. (1-30)
-{{% /md %}}</dd>
-    <dt class="property-optional"
+{{% /md %}}</dd><dt class="property-optional"
             title="Optional">
         <span id="ciphersuite_go">
 <a href="#ciphersuite_go" style="color: inherit; text-decoration: inherit;">Cipher<wbr>Suite</a>
@@ -608,8 +572,7 @@ the response body of a check request, the backend is considered to be down
         <span class="property-type">string</span>
     </dt>
     <dd>{{% md %}}What ciphers to use for SSL connections served by this NodeBalancer. `legacy` is considered insecure and should only be used if necessary.
-{{% /md %}}</dd>
-    <dt class="property-optional"
+{{% /md %}}</dd><dt class="property-optional"
             title="Optional">
         <span id="port_go">
 <a href="#port_go" style="color: inherit; text-decoration: inherit;">Port</a>
@@ -618,8 +581,7 @@ the response body of a check request, the backend is considered to be down
         <span class="property-type">int</span>
     </dt>
     <dd>{{% md %}}The TCP port this Config is for. These values must be unique across configs on a single NodeBalancer (you can't have two configs for port 80, for example). While some ports imply some protocols, no enforcement is done and you may configure your NodeBalancer however is useful to you. For example, while port 443 is generally used for HTTPS, you do not need SSL configured to have a NodeBalancer listening on port 443. (Defaults to 80)
-{{% /md %}}</dd>
-    <dt class="property-optional"
+{{% /md %}}</dd><dt class="property-optional"
             title="Optional">
         <span id="protocol_go">
 <a href="#protocol_go" style="color: inherit; text-decoration: inherit;">Protocol</a>
@@ -628,8 +590,7 @@ the response body of a check request, the backend is considered to be down
         <span class="property-type">string</span>
     </dt>
     <dd>{{% md %}}The protocol this port is configured to serve. If this is set to https you must include an ssl_cert and an ssl_key. (Defaults to "http")
-{{% /md %}}</dd>
-    <dt class="property-optional"
+{{% /md %}}</dd><dt class="property-optional"
             title="Optional">
         <span id="proxyprotocol_go">
 <a href="#proxyprotocol_go" style="color: inherit; text-decoration: inherit;">Proxy<wbr>Protocol</a>
@@ -638,8 +599,7 @@ the response body of a check request, the backend is considered to be down
         <span class="property-type">string</span>
     </dt>
     <dd>{{% md %}}The version of ProxyProtocol to use for the underlying NodeBalancer. This requires protocol to be `tcp`. Valid values are `none`, `v1`, and `v2`. (Defaults to `none`)
-{{% /md %}}</dd>
-    <dt class="property-optional"
+{{% /md %}}</dd><dt class="property-optional"
             title="Optional">
         <span id="sslcert_go">
 <a href="#sslcert_go" style="color: inherit; text-decoration: inherit;">Ssl<wbr>Cert</a>
@@ -648,8 +608,7 @@ the response body of a check request, the backend is considered to be down
         <span class="property-type">string</span>
     </dt>
     <dd>{{% md %}}The certificate this port is serving. This is not returned. If set, this field will come back as `<REDACTED>`. Please use the ssl_commonname and ssl_fingerprint to identify the certificate.
-{{% /md %}}</dd>
-    <dt class="property-optional"
+{{% /md %}}</dd><dt class="property-optional"
             title="Optional">
         <span id="sslkey_go">
 <a href="#sslkey_go" style="color: inherit; text-decoration: inherit;">Ssl<wbr>Key</a>
@@ -658,8 +617,7 @@ the response body of a check request, the backend is considered to be down
         <span class="property-type">string</span>
     </dt>
     <dd>{{% md %}}The private key corresponding to this port's certificate. This is not returned. If set, this field will come back as `<REDACTED>`. Please use the ssl_commonname and ssl_fingerprint to identify the certificate.
-{{% /md %}}</dd>
-    <dt class="property-optional"
+{{% /md %}}</dd><dt class="property-optional"
             title="Optional">
         <span id="stickiness_go">
 <a href="#stickiness_go" style="color: inherit; text-decoration: inherit;">Stickiness</a>
@@ -668,14 +626,11 @@ the response body of a check request, the backend is considered to be down
         <span class="property-type">string</span>
     </dt>
     <dd>{{% md %}}Controls how session stickiness is handled on this port: 'none', 'table', 'http_cookie'
-{{% /md %}}</dd>
-</dl>
+{{% /md %}}</dd></dl>
 {{% /choosable %}}
 
 {{% choosable language nodejs %}}
-<dl class="resources-properties">
-
-    <dt class="property-required"
+<dl class="resources-properties"><dt class="property-required"
             title="Required">
         <span id="nodebalancerid_nodejs">
 <a href="#nodebalancerid_nodejs" style="color: inherit; text-decoration: inherit;">nodebalancer<wbr>Id</a>
@@ -684,8 +639,7 @@ the response body of a check request, the backend is considered to be down
         <span class="property-type">number</span>
     </dt>
     <dd>{{% md %}}The ID of the NodeBalancer to access.
-{{% /md %}}</dd>
-    <dt class="property-optional"
+{{% /md %}}</dd><dt class="property-optional"
             title="Optional">
         <span id="algorithm_nodejs">
 <a href="#algorithm_nodejs" style="color: inherit; text-decoration: inherit;">algorithm</a>
@@ -694,8 +648,7 @@ the response body of a check request, the backend is considered to be down
         <span class="property-type">string</span>
     </dt>
     <dd>{{% md %}}What algorithm this NodeBalancer should use for routing traffic to backends: roundrobin, leastconn, source
-{{% /md %}}</dd>
-    <dt class="property-optional"
+{{% /md %}}</dd><dt class="property-optional"
             title="Optional">
         <span id="check_nodejs">
 <a href="#check_nodejs" style="color: inherit; text-decoration: inherit;">check</a>
@@ -704,8 +657,7 @@ the response body of a check request, the backend is considered to be down
         <span class="property-type">string</span>
     </dt>
     <dd>{{% md %}}The type of check to perform against backends to ensure they are serving requests. This is used to determine if backends are up or down. If none no check is performed. connection requires only a connection to the backend to succeed. http and http_body rely on the backend serving HTTP, and that the response returned matches what is expected.
-{{% /md %}}</dd>
-    <dt class="property-optional"
+{{% /md %}}</dd><dt class="property-optional"
             title="Optional">
         <span id="checkattempts_nodejs">
 <a href="#checkattempts_nodejs" style="color: inherit; text-decoration: inherit;">check<wbr>Attempts</a>
@@ -714,8 +666,7 @@ the response body of a check request, the backend is considered to be down
         <span class="property-type">number</span>
     </dt>
     <dd>{{% md %}}How many times to attempt a check before considering a backend to be down. (1-30)
-{{% /md %}}</dd>
-    <dt class="property-optional"
+{{% /md %}}</dd><dt class="property-optional"
             title="Optional">
         <span id="checkbody_nodejs">
 <a href="#checkbody_nodejs" style="color: inherit; text-decoration: inherit;">check<wbr>Body</a>
@@ -725,8 +676,7 @@ the response body of a check request, the backend is considered to be down
     </dt>
     <dd>{{% md %}}This value must be present in the response body of the check in order for it to pass. If this value is not present in
 the response body of a check request, the backend is considered to be down
-{{% /md %}}</dd>
-    <dt class="property-optional"
+{{% /md %}}</dd><dt class="property-optional"
             title="Optional">
         <span id="checkinterval_nodejs">
 <a href="#checkinterval_nodejs" style="color: inherit; text-decoration: inherit;">check<wbr>Interval</a>
@@ -735,8 +685,7 @@ the response body of a check request, the backend is considered to be down
         <span class="property-type">number</span>
     </dt>
     <dd>{{% md %}}How often, in seconds, to check that backends are up and serving requests.
-{{% /md %}}</dd>
-    <dt class="property-optional"
+{{% /md %}}</dd><dt class="property-optional"
             title="Optional">
         <span id="checkpassive_nodejs">
 <a href="#checkpassive_nodejs" style="color: inherit; text-decoration: inherit;">check<wbr>Passive</a>
@@ -745,8 +694,7 @@ the response body of a check request, the backend is considered to be down
         <span class="property-type">boolean</span>
     </dt>
     <dd>{{% md %}}If true, any response from this backend with a 5xx status code will be enough for it to be considered unhealthy and taken out of rotation.
-{{% /md %}}</dd>
-    <dt class="property-optional"
+{{% /md %}}</dd><dt class="property-optional"
             title="Optional">
         <span id="checkpath_nodejs">
 <a href="#checkpath_nodejs" style="color: inherit; text-decoration: inherit;">check<wbr>Path</a>
@@ -755,8 +703,7 @@ the response body of a check request, the backend is considered to be down
         <span class="property-type">string</span>
     </dt>
     <dd>{{% md %}}The URL path to check on each backend. If the backend does not respond to this request it is considered to be down.
-{{% /md %}}</dd>
-    <dt class="property-optional"
+{{% /md %}}</dd><dt class="property-optional"
             title="Optional">
         <span id="checktimeout_nodejs">
 <a href="#checktimeout_nodejs" style="color: inherit; text-decoration: inherit;">check<wbr>Timeout</a>
@@ -765,8 +712,7 @@ the response body of a check request, the backend is considered to be down
         <span class="property-type">number</span>
     </dt>
     <dd>{{% md %}}How long, in seconds, to wait for a check attempt before considering it failed. (1-30)
-{{% /md %}}</dd>
-    <dt class="property-optional"
+{{% /md %}}</dd><dt class="property-optional"
             title="Optional">
         <span id="ciphersuite_nodejs">
 <a href="#ciphersuite_nodejs" style="color: inherit; text-decoration: inherit;">cipher<wbr>Suite</a>
@@ -775,8 +721,7 @@ the response body of a check request, the backend is considered to be down
         <span class="property-type">string</span>
     </dt>
     <dd>{{% md %}}What ciphers to use for SSL connections served by this NodeBalancer. `legacy` is considered insecure and should only be used if necessary.
-{{% /md %}}</dd>
-    <dt class="property-optional"
+{{% /md %}}</dd><dt class="property-optional"
             title="Optional">
         <span id="port_nodejs">
 <a href="#port_nodejs" style="color: inherit; text-decoration: inherit;">port</a>
@@ -785,8 +730,7 @@ the response body of a check request, the backend is considered to be down
         <span class="property-type">number</span>
     </dt>
     <dd>{{% md %}}The TCP port this Config is for. These values must be unique across configs on a single NodeBalancer (you can't have two configs for port 80, for example). While some ports imply some protocols, no enforcement is done and you may configure your NodeBalancer however is useful to you. For example, while port 443 is generally used for HTTPS, you do not need SSL configured to have a NodeBalancer listening on port 443. (Defaults to 80)
-{{% /md %}}</dd>
-    <dt class="property-optional"
+{{% /md %}}</dd><dt class="property-optional"
             title="Optional">
         <span id="protocol_nodejs">
 <a href="#protocol_nodejs" style="color: inherit; text-decoration: inherit;">protocol</a>
@@ -795,8 +739,7 @@ the response body of a check request, the backend is considered to be down
         <span class="property-type">string</span>
     </dt>
     <dd>{{% md %}}The protocol this port is configured to serve. If this is set to https you must include an ssl_cert and an ssl_key. (Defaults to "http")
-{{% /md %}}</dd>
-    <dt class="property-optional"
+{{% /md %}}</dd><dt class="property-optional"
             title="Optional">
         <span id="proxyprotocol_nodejs">
 <a href="#proxyprotocol_nodejs" style="color: inherit; text-decoration: inherit;">proxy<wbr>Protocol</a>
@@ -805,8 +748,7 @@ the response body of a check request, the backend is considered to be down
         <span class="property-type">string</span>
     </dt>
     <dd>{{% md %}}The version of ProxyProtocol to use for the underlying NodeBalancer. This requires protocol to be `tcp`. Valid values are `none`, `v1`, and `v2`. (Defaults to `none`)
-{{% /md %}}</dd>
-    <dt class="property-optional"
+{{% /md %}}</dd><dt class="property-optional"
             title="Optional">
         <span id="sslcert_nodejs">
 <a href="#sslcert_nodejs" style="color: inherit; text-decoration: inherit;">ssl<wbr>Cert</a>
@@ -815,8 +757,7 @@ the response body of a check request, the backend is considered to be down
         <span class="property-type">string</span>
     </dt>
     <dd>{{% md %}}The certificate this port is serving. This is not returned. If set, this field will come back as `<REDACTED>`. Please use the ssl_commonname and ssl_fingerprint to identify the certificate.
-{{% /md %}}</dd>
-    <dt class="property-optional"
+{{% /md %}}</dd><dt class="property-optional"
             title="Optional">
         <span id="sslkey_nodejs">
 <a href="#sslkey_nodejs" style="color: inherit; text-decoration: inherit;">ssl<wbr>Key</a>
@@ -825,8 +766,7 @@ the response body of a check request, the backend is considered to be down
         <span class="property-type">string</span>
     </dt>
     <dd>{{% md %}}The private key corresponding to this port's certificate. This is not returned. If set, this field will come back as `<REDACTED>`. Please use the ssl_commonname and ssl_fingerprint to identify the certificate.
-{{% /md %}}</dd>
-    <dt class="property-optional"
+{{% /md %}}</dd><dt class="property-optional"
             title="Optional">
         <span id="stickiness_nodejs">
 <a href="#stickiness_nodejs" style="color: inherit; text-decoration: inherit;">stickiness</a>
@@ -835,14 +775,11 @@ the response body of a check request, the backend is considered to be down
         <span class="property-type">string</span>
     </dt>
     <dd>{{% md %}}Controls how session stickiness is handled on this port: 'none', 'table', 'http_cookie'
-{{% /md %}}</dd>
-</dl>
+{{% /md %}}</dd></dl>
 {{% /choosable %}}
 
 {{% choosable language python %}}
-<dl class="resources-properties">
-
-    <dt class="property-required"
+<dl class="resources-properties"><dt class="property-required"
             title="Required">
         <span id="nodebalancer_id_python">
 <a href="#nodebalancer_id_python" style="color: inherit; text-decoration: inherit;">nodebalancer_<wbr>id</a>
@@ -851,8 +788,7 @@ the response body of a check request, the backend is considered to be down
         <span class="property-type">int</span>
     </dt>
     <dd>{{% md %}}The ID of the NodeBalancer to access.
-{{% /md %}}</dd>
-    <dt class="property-optional"
+{{% /md %}}</dd><dt class="property-optional"
             title="Optional">
         <span id="algorithm_python">
 <a href="#algorithm_python" style="color: inherit; text-decoration: inherit;">algorithm</a>
@@ -861,8 +797,7 @@ the response body of a check request, the backend is considered to be down
         <span class="property-type">str</span>
     </dt>
     <dd>{{% md %}}What algorithm this NodeBalancer should use for routing traffic to backends: roundrobin, leastconn, source
-{{% /md %}}</dd>
-    <dt class="property-optional"
+{{% /md %}}</dd><dt class="property-optional"
             title="Optional">
         <span id="check_python">
 <a href="#check_python" style="color: inherit; text-decoration: inherit;">check</a>
@@ -871,8 +806,7 @@ the response body of a check request, the backend is considered to be down
         <span class="property-type">str</span>
     </dt>
     <dd>{{% md %}}The type of check to perform against backends to ensure they are serving requests. This is used to determine if backends are up or down. If none no check is performed. connection requires only a connection to the backend to succeed. http and http_body rely on the backend serving HTTP, and that the response returned matches what is expected.
-{{% /md %}}</dd>
-    <dt class="property-optional"
+{{% /md %}}</dd><dt class="property-optional"
             title="Optional">
         <span id="check_attempts_python">
 <a href="#check_attempts_python" style="color: inherit; text-decoration: inherit;">check_<wbr>attempts</a>
@@ -881,8 +815,7 @@ the response body of a check request, the backend is considered to be down
         <span class="property-type">int</span>
     </dt>
     <dd>{{% md %}}How many times to attempt a check before considering a backend to be down. (1-30)
-{{% /md %}}</dd>
-    <dt class="property-optional"
+{{% /md %}}</dd><dt class="property-optional"
             title="Optional">
         <span id="check_body_python">
 <a href="#check_body_python" style="color: inherit; text-decoration: inherit;">check_<wbr>body</a>
@@ -892,8 +825,7 @@ the response body of a check request, the backend is considered to be down
     </dt>
     <dd>{{% md %}}This value must be present in the response body of the check in order for it to pass. If this value is not present in
 the response body of a check request, the backend is considered to be down
-{{% /md %}}</dd>
-    <dt class="property-optional"
+{{% /md %}}</dd><dt class="property-optional"
             title="Optional">
         <span id="check_interval_python">
 <a href="#check_interval_python" style="color: inherit; text-decoration: inherit;">check_<wbr>interval</a>
@@ -902,8 +834,7 @@ the response body of a check request, the backend is considered to be down
         <span class="property-type">int</span>
     </dt>
     <dd>{{% md %}}How often, in seconds, to check that backends are up and serving requests.
-{{% /md %}}</dd>
-    <dt class="property-optional"
+{{% /md %}}</dd><dt class="property-optional"
             title="Optional">
         <span id="check_passive_python">
 <a href="#check_passive_python" style="color: inherit; text-decoration: inherit;">check_<wbr>passive</a>
@@ -912,8 +843,7 @@ the response body of a check request, the backend is considered to be down
         <span class="property-type">bool</span>
     </dt>
     <dd>{{% md %}}If true, any response from this backend with a 5xx status code will be enough for it to be considered unhealthy and taken out of rotation.
-{{% /md %}}</dd>
-    <dt class="property-optional"
+{{% /md %}}</dd><dt class="property-optional"
             title="Optional">
         <span id="check_path_python">
 <a href="#check_path_python" style="color: inherit; text-decoration: inherit;">check_<wbr>path</a>
@@ -922,8 +852,7 @@ the response body of a check request, the backend is considered to be down
         <span class="property-type">str</span>
     </dt>
     <dd>{{% md %}}The URL path to check on each backend. If the backend does not respond to this request it is considered to be down.
-{{% /md %}}</dd>
-    <dt class="property-optional"
+{{% /md %}}</dd><dt class="property-optional"
             title="Optional">
         <span id="check_timeout_python">
 <a href="#check_timeout_python" style="color: inherit; text-decoration: inherit;">check_<wbr>timeout</a>
@@ -932,8 +861,7 @@ the response body of a check request, the backend is considered to be down
         <span class="property-type">int</span>
     </dt>
     <dd>{{% md %}}How long, in seconds, to wait for a check attempt before considering it failed. (1-30)
-{{% /md %}}</dd>
-    <dt class="property-optional"
+{{% /md %}}</dd><dt class="property-optional"
             title="Optional">
         <span id="cipher_suite_python">
 <a href="#cipher_suite_python" style="color: inherit; text-decoration: inherit;">cipher_<wbr>suite</a>
@@ -942,8 +870,7 @@ the response body of a check request, the backend is considered to be down
         <span class="property-type">str</span>
     </dt>
     <dd>{{% md %}}What ciphers to use for SSL connections served by this NodeBalancer. `legacy` is considered insecure and should only be used if necessary.
-{{% /md %}}</dd>
-    <dt class="property-optional"
+{{% /md %}}</dd><dt class="property-optional"
             title="Optional">
         <span id="port_python">
 <a href="#port_python" style="color: inherit; text-decoration: inherit;">port</a>
@@ -952,8 +879,7 @@ the response body of a check request, the backend is considered to be down
         <span class="property-type">int</span>
     </dt>
     <dd>{{% md %}}The TCP port this Config is for. These values must be unique across configs on a single NodeBalancer (you can't have two configs for port 80, for example). While some ports imply some protocols, no enforcement is done and you may configure your NodeBalancer however is useful to you. For example, while port 443 is generally used for HTTPS, you do not need SSL configured to have a NodeBalancer listening on port 443. (Defaults to 80)
-{{% /md %}}</dd>
-    <dt class="property-optional"
+{{% /md %}}</dd><dt class="property-optional"
             title="Optional">
         <span id="protocol_python">
 <a href="#protocol_python" style="color: inherit; text-decoration: inherit;">protocol</a>
@@ -962,8 +888,7 @@ the response body of a check request, the backend is considered to be down
         <span class="property-type">str</span>
     </dt>
     <dd>{{% md %}}The protocol this port is configured to serve. If this is set to https you must include an ssl_cert and an ssl_key. (Defaults to "http")
-{{% /md %}}</dd>
-    <dt class="property-optional"
+{{% /md %}}</dd><dt class="property-optional"
             title="Optional">
         <span id="proxy_protocol_python">
 <a href="#proxy_protocol_python" style="color: inherit; text-decoration: inherit;">proxy_<wbr>protocol</a>
@@ -972,8 +897,7 @@ the response body of a check request, the backend is considered to be down
         <span class="property-type">str</span>
     </dt>
     <dd>{{% md %}}The version of ProxyProtocol to use for the underlying NodeBalancer. This requires protocol to be `tcp`. Valid values are `none`, `v1`, and `v2`. (Defaults to `none`)
-{{% /md %}}</dd>
-    <dt class="property-optional"
+{{% /md %}}</dd><dt class="property-optional"
             title="Optional">
         <span id="ssl_cert_python">
 <a href="#ssl_cert_python" style="color: inherit; text-decoration: inherit;">ssl_<wbr>cert</a>
@@ -982,8 +906,7 @@ the response body of a check request, the backend is considered to be down
         <span class="property-type">str</span>
     </dt>
     <dd>{{% md %}}The certificate this port is serving. This is not returned. If set, this field will come back as `<REDACTED>`. Please use the ssl_commonname and ssl_fingerprint to identify the certificate.
-{{% /md %}}</dd>
-    <dt class="property-optional"
+{{% /md %}}</dd><dt class="property-optional"
             title="Optional">
         <span id="ssl_key_python">
 <a href="#ssl_key_python" style="color: inherit; text-decoration: inherit;">ssl_<wbr>key</a>
@@ -992,8 +915,7 @@ the response body of a check request, the backend is considered to be down
         <span class="property-type">str</span>
     </dt>
     <dd>{{% md %}}The private key corresponding to this port's certificate. This is not returned. If set, this field will come back as `<REDACTED>`. Please use the ssl_commonname and ssl_fingerprint to identify the certificate.
-{{% /md %}}</dd>
-    <dt class="property-optional"
+{{% /md %}}</dd><dt class="property-optional"
             title="Optional">
         <span id="stickiness_python">
 <a href="#stickiness_python" style="color: inherit; text-decoration: inherit;">stickiness</a>
@@ -1002,8 +924,7 @@ the response body of a check request, the backend is considered to be down
         <span class="property-type">str</span>
     </dt>
     <dd>{{% md %}}Controls how session stickiness is handled on this port: 'none', 'table', 'http_cookie'
-{{% /md %}}</dd>
-</dl>
+{{% /md %}}</dd></dl>
 {{% /choosable %}}
 
 
@@ -1014,9 +935,7 @@ All [input](#inputs) properties are implicitly available as output properties. A
 
 
 {{% choosable language csharp %}}
-<dl class="resources-properties">
-
-    <dt class="property-"
+<dl class="resources-properties"><dt class="property-"
             title="">
         <span id="id_csharp">
 <a href="#id_csharp" style="color: inherit; text-decoration: inherit;">Id</a>
@@ -1024,8 +943,7 @@ All [input](#inputs) properties are implicitly available as output properties. A
         <span class="property-indicator"></span>
         <span class="property-type">string</span>
     </dt>
-    <dd>{{% md %}}The provider-assigned unique ID for this managed resource.{{% /md %}}</dd>
-    <dt class="property-"
+    <dd>{{% md %}}The provider-assigned unique ID for this managed resource.{{% /md %}}</dd><dt class="property-"
             title="">
         <span id="nodestatuses_csharp">
 <a href="#nodestatuses_csharp" style="color: inherit; text-decoration: inherit;">Node<wbr>Statuses</a>
@@ -1033,8 +951,7 @@ All [input](#inputs) properties are implicitly available as output properties. A
         <span class="property-indicator"></span>
         <span class="property-type"><a href="#nodebalancerconfignodestatus">List&lt;Node<wbr>Balancer<wbr>Config<wbr>Node<wbr>Status&gt;</a></span>
     </dt>
-    <dd>{{% md %}}{{% /md %}}</dd>
-    <dt class="property-"
+    <dd>{{% md %}}{{% /md %}}</dd><dt class="property-"
             title="">
         <span id="sslcommonname_csharp">
 <a href="#sslcommonname_csharp" style="color: inherit; text-decoration: inherit;">Ssl<wbr>Commonname</a>
@@ -1043,8 +960,7 @@ All [input](#inputs) properties are implicitly available as output properties. A
         <span class="property-type">string</span>
     </dt>
     <dd>{{% md %}}The common name for the SSL certification this port is serving if this port is not configured to use SSL.
-{{% /md %}}</dd>
-    <dt class="property-"
+{{% /md %}}</dd><dt class="property-"
             title="">
         <span id="sslfingerprint_csharp">
 <a href="#sslfingerprint_csharp" style="color: inherit; text-decoration: inherit;">Ssl<wbr>Fingerprint</a>
@@ -1053,14 +969,11 @@ All [input](#inputs) properties are implicitly available as output properties. A
         <span class="property-type">string</span>
     </dt>
     <dd>{{% md %}}The fingerprint for the SSL certification this port is serving if this port is not configured to use SSL.
-{{% /md %}}</dd>
-</dl>
+{{% /md %}}</dd></dl>
 {{% /choosable %}}
 
 {{% choosable language go %}}
-<dl class="resources-properties">
-
-    <dt class="property-"
+<dl class="resources-properties"><dt class="property-"
             title="">
         <span id="id_go">
 <a href="#id_go" style="color: inherit; text-decoration: inherit;">Id</a>
@@ -1068,8 +981,7 @@ All [input](#inputs) properties are implicitly available as output properties. A
         <span class="property-indicator"></span>
         <span class="property-type">string</span>
     </dt>
-    <dd>{{% md %}}The provider-assigned unique ID for this managed resource.{{% /md %}}</dd>
-    <dt class="property-"
+    <dd>{{% md %}}The provider-assigned unique ID for this managed resource.{{% /md %}}</dd><dt class="property-"
             title="">
         <span id="nodestatuses_go">
 <a href="#nodestatuses_go" style="color: inherit; text-decoration: inherit;">Node<wbr>Statuses</a>
@@ -1077,8 +989,7 @@ All [input](#inputs) properties are implicitly available as output properties. A
         <span class="property-indicator"></span>
         <span class="property-type"><a href="#nodebalancerconfignodestatus">[]Node<wbr>Balancer<wbr>Config<wbr>Node<wbr>Status</a></span>
     </dt>
-    <dd>{{% md %}}{{% /md %}}</dd>
-    <dt class="property-"
+    <dd>{{% md %}}{{% /md %}}</dd><dt class="property-"
             title="">
         <span id="sslcommonname_go">
 <a href="#sslcommonname_go" style="color: inherit; text-decoration: inherit;">Ssl<wbr>Commonname</a>
@@ -1087,8 +998,7 @@ All [input](#inputs) properties are implicitly available as output properties. A
         <span class="property-type">string</span>
     </dt>
     <dd>{{% md %}}The common name for the SSL certification this port is serving if this port is not configured to use SSL.
-{{% /md %}}</dd>
-    <dt class="property-"
+{{% /md %}}</dd><dt class="property-"
             title="">
         <span id="sslfingerprint_go">
 <a href="#sslfingerprint_go" style="color: inherit; text-decoration: inherit;">Ssl<wbr>Fingerprint</a>
@@ -1097,14 +1007,11 @@ All [input](#inputs) properties are implicitly available as output properties. A
         <span class="property-type">string</span>
     </dt>
     <dd>{{% md %}}The fingerprint for the SSL certification this port is serving if this port is not configured to use SSL.
-{{% /md %}}</dd>
-</dl>
+{{% /md %}}</dd></dl>
 {{% /choosable %}}
 
 {{% choosable language nodejs %}}
-<dl class="resources-properties">
-
-    <dt class="property-"
+<dl class="resources-properties"><dt class="property-"
             title="">
         <span id="id_nodejs">
 <a href="#id_nodejs" style="color: inherit; text-decoration: inherit;">id</a>
@@ -1112,8 +1019,7 @@ All [input](#inputs) properties are implicitly available as output properties. A
         <span class="property-indicator"></span>
         <span class="property-type">string</span>
     </dt>
-    <dd>{{% md %}}The provider-assigned unique ID for this managed resource.{{% /md %}}</dd>
-    <dt class="property-"
+    <dd>{{% md %}}The provider-assigned unique ID for this managed resource.{{% /md %}}</dd><dt class="property-"
             title="">
         <span id="nodestatuses_nodejs">
 <a href="#nodestatuses_nodejs" style="color: inherit; text-decoration: inherit;">node<wbr>Statuses</a>
@@ -1121,8 +1027,7 @@ All [input](#inputs) properties are implicitly available as output properties. A
         <span class="property-indicator"></span>
         <span class="property-type"><a href="#nodebalancerconfignodestatus">Node<wbr>Balancer<wbr>Config<wbr>Node<wbr>Status[]</a></span>
     </dt>
-    <dd>{{% md %}}{{% /md %}}</dd>
-    <dt class="property-"
+    <dd>{{% md %}}{{% /md %}}</dd><dt class="property-"
             title="">
         <span id="sslcommonname_nodejs">
 <a href="#sslcommonname_nodejs" style="color: inherit; text-decoration: inherit;">ssl<wbr>Commonname</a>
@@ -1131,8 +1036,7 @@ All [input](#inputs) properties are implicitly available as output properties. A
         <span class="property-type">string</span>
     </dt>
     <dd>{{% md %}}The common name for the SSL certification this port is serving if this port is not configured to use SSL.
-{{% /md %}}</dd>
-    <dt class="property-"
+{{% /md %}}</dd><dt class="property-"
             title="">
         <span id="sslfingerprint_nodejs">
 <a href="#sslfingerprint_nodejs" style="color: inherit; text-decoration: inherit;">ssl<wbr>Fingerprint</a>
@@ -1141,14 +1045,11 @@ All [input](#inputs) properties are implicitly available as output properties. A
         <span class="property-type">string</span>
     </dt>
     <dd>{{% md %}}The fingerprint for the SSL certification this port is serving if this port is not configured to use SSL.
-{{% /md %}}</dd>
-</dl>
+{{% /md %}}</dd></dl>
 {{% /choosable %}}
 
 {{% choosable language python %}}
-<dl class="resources-properties">
-
-    <dt class="property-"
+<dl class="resources-properties"><dt class="property-"
             title="">
         <span id="id_python">
 <a href="#id_python" style="color: inherit; text-decoration: inherit;">id</a>
@@ -1156,8 +1057,7 @@ All [input](#inputs) properties are implicitly available as output properties. A
         <span class="property-indicator"></span>
         <span class="property-type">str</span>
     </dt>
-    <dd>{{% md %}}The provider-assigned unique ID for this managed resource.{{% /md %}}</dd>
-    <dt class="property-"
+    <dd>{{% md %}}The provider-assigned unique ID for this managed resource.{{% /md %}}</dd><dt class="property-"
             title="">
         <span id="node_statuses_python">
 <a href="#node_statuses_python" style="color: inherit; text-decoration: inherit;">node_<wbr>statuses</a>
@@ -1165,8 +1065,7 @@ All [input](#inputs) properties are implicitly available as output properties. A
         <span class="property-indicator"></span>
         <span class="property-type"><a href="#nodebalancerconfignodestatus">Sequence[Node<wbr>Balancer<wbr>Config<wbr>Node<wbr>Status]</a></span>
     </dt>
-    <dd>{{% md %}}{{% /md %}}</dd>
-    <dt class="property-"
+    <dd>{{% md %}}{{% /md %}}</dd><dt class="property-"
             title="">
         <span id="ssl_commonname_python">
 <a href="#ssl_commonname_python" style="color: inherit; text-decoration: inherit;">ssl_<wbr>commonname</a>
@@ -1175,8 +1074,7 @@ All [input](#inputs) properties are implicitly available as output properties. A
         <span class="property-type">str</span>
     </dt>
     <dd>{{% md %}}The common name for the SSL certification this port is serving if this port is not configured to use SSL.
-{{% /md %}}</dd>
-    <dt class="property-"
+{{% /md %}}</dd><dt class="property-"
             title="">
         <span id="ssl_fingerprint_python">
 <a href="#ssl_fingerprint_python" style="color: inherit; text-decoration: inherit;">ssl_<wbr>fingerprint</a>
@@ -1185,8 +1083,7 @@ All [input](#inputs) properties are implicitly available as output properties. A
         <span class="property-type">str</span>
     </dt>
     <dd>{{% md %}}The fingerprint for the SSL certification this port is serving if this port is not configured to use SSL.
-{{% /md %}}</dd>
-</dl>
+{{% /md %}}</dd></dl>
 {{% /choosable %}}
 
 
@@ -1313,9 +1210,7 @@ The following state arguments are supported:
 
 
 {{% choosable language csharp %}}
-<dl class="resources-properties">
-
-    <dt class="property-optional"
+<dl class="resources-properties"><dt class="property-optional"
             title="Optional">
         <span id="state_algorithm_csharp">
 <a href="#state_algorithm_csharp" style="color: inherit; text-decoration: inherit;">Algorithm</a>
@@ -1324,8 +1219,7 @@ The following state arguments are supported:
         <span class="property-type">string</span>
     </dt>
     <dd>{{% md %}}What algorithm this NodeBalancer should use for routing traffic to backends: roundrobin, leastconn, source
-{{% /md %}}</dd>
-    <dt class="property-optional"
+{{% /md %}}</dd><dt class="property-optional"
             title="Optional">
         <span id="state_check_csharp">
 <a href="#state_check_csharp" style="color: inherit; text-decoration: inherit;">Check</a>
@@ -1334,8 +1228,7 @@ The following state arguments are supported:
         <span class="property-type">string</span>
     </dt>
     <dd>{{% md %}}The type of check to perform against backends to ensure they are serving requests. This is used to determine if backends are up or down. If none no check is performed. connection requires only a connection to the backend to succeed. http and http_body rely on the backend serving HTTP, and that the response returned matches what is expected.
-{{% /md %}}</dd>
-    <dt class="property-optional"
+{{% /md %}}</dd><dt class="property-optional"
             title="Optional">
         <span id="state_checkattempts_csharp">
 <a href="#state_checkattempts_csharp" style="color: inherit; text-decoration: inherit;">Check<wbr>Attempts</a>
@@ -1344,8 +1237,7 @@ The following state arguments are supported:
         <span class="property-type">int</span>
     </dt>
     <dd>{{% md %}}How many times to attempt a check before considering a backend to be down. (1-30)
-{{% /md %}}</dd>
-    <dt class="property-optional"
+{{% /md %}}</dd><dt class="property-optional"
             title="Optional">
         <span id="state_checkbody_csharp">
 <a href="#state_checkbody_csharp" style="color: inherit; text-decoration: inherit;">Check<wbr>Body</a>
@@ -1355,8 +1247,7 @@ The following state arguments are supported:
     </dt>
     <dd>{{% md %}}This value must be present in the response body of the check in order for it to pass. If this value is not present in
 the response body of a check request, the backend is considered to be down
-{{% /md %}}</dd>
-    <dt class="property-optional"
+{{% /md %}}</dd><dt class="property-optional"
             title="Optional">
         <span id="state_checkinterval_csharp">
 <a href="#state_checkinterval_csharp" style="color: inherit; text-decoration: inherit;">Check<wbr>Interval</a>
@@ -1365,8 +1256,7 @@ the response body of a check request, the backend is considered to be down
         <span class="property-type">int</span>
     </dt>
     <dd>{{% md %}}How often, in seconds, to check that backends are up and serving requests.
-{{% /md %}}</dd>
-    <dt class="property-optional"
+{{% /md %}}</dd><dt class="property-optional"
             title="Optional">
         <span id="state_checkpassive_csharp">
 <a href="#state_checkpassive_csharp" style="color: inherit; text-decoration: inherit;">Check<wbr>Passive</a>
@@ -1375,8 +1265,7 @@ the response body of a check request, the backend is considered to be down
         <span class="property-type">bool</span>
     </dt>
     <dd>{{% md %}}If true, any response from this backend with a 5xx status code will be enough for it to be considered unhealthy and taken out of rotation.
-{{% /md %}}</dd>
-    <dt class="property-optional"
+{{% /md %}}</dd><dt class="property-optional"
             title="Optional">
         <span id="state_checkpath_csharp">
 <a href="#state_checkpath_csharp" style="color: inherit; text-decoration: inherit;">Check<wbr>Path</a>
@@ -1385,8 +1274,7 @@ the response body of a check request, the backend is considered to be down
         <span class="property-type">string</span>
     </dt>
     <dd>{{% md %}}The URL path to check on each backend. If the backend does not respond to this request it is considered to be down.
-{{% /md %}}</dd>
-    <dt class="property-optional"
+{{% /md %}}</dd><dt class="property-optional"
             title="Optional">
         <span id="state_checktimeout_csharp">
 <a href="#state_checktimeout_csharp" style="color: inherit; text-decoration: inherit;">Check<wbr>Timeout</a>
@@ -1395,8 +1283,7 @@ the response body of a check request, the backend is considered to be down
         <span class="property-type">int</span>
     </dt>
     <dd>{{% md %}}How long, in seconds, to wait for a check attempt before considering it failed. (1-30)
-{{% /md %}}</dd>
-    <dt class="property-optional"
+{{% /md %}}</dd><dt class="property-optional"
             title="Optional">
         <span id="state_ciphersuite_csharp">
 <a href="#state_ciphersuite_csharp" style="color: inherit; text-decoration: inherit;">Cipher<wbr>Suite</a>
@@ -1405,8 +1292,7 @@ the response body of a check request, the backend is considered to be down
         <span class="property-type">string</span>
     </dt>
     <dd>{{% md %}}What ciphers to use for SSL connections served by this NodeBalancer. `legacy` is considered insecure and should only be used if necessary.
-{{% /md %}}</dd>
-    <dt class="property-optional"
+{{% /md %}}</dd><dt class="property-optional"
             title="Optional">
         <span id="state_nodestatuses_csharp">
 <a href="#state_nodestatuses_csharp" style="color: inherit; text-decoration: inherit;">Node<wbr>Statuses</a>
@@ -1414,8 +1300,7 @@ the response body of a check request, the backend is considered to be down
         <span class="property-indicator"></span>
         <span class="property-type"><a href="#nodebalancerconfignodestatus">List&lt;Node<wbr>Balancer<wbr>Config<wbr>Node<wbr>Status<wbr>Args&gt;</a></span>
     </dt>
-    <dd>{{% md %}}{{% /md %}}</dd>
-    <dt class="property-optional"
+    <dd>{{% md %}}{{% /md %}}</dd><dt class="property-optional"
             title="Optional">
         <span id="state_nodebalancerid_csharp">
 <a href="#state_nodebalancerid_csharp" style="color: inherit; text-decoration: inherit;">Nodebalancer<wbr>Id</a>
@@ -1424,8 +1309,7 @@ the response body of a check request, the backend is considered to be down
         <span class="property-type">int</span>
     </dt>
     <dd>{{% md %}}The ID of the NodeBalancer to access.
-{{% /md %}}</dd>
-    <dt class="property-optional"
+{{% /md %}}</dd><dt class="property-optional"
             title="Optional">
         <span id="state_port_csharp">
 <a href="#state_port_csharp" style="color: inherit; text-decoration: inherit;">Port</a>
@@ -1434,8 +1318,7 @@ the response body of a check request, the backend is considered to be down
         <span class="property-type">int</span>
     </dt>
     <dd>{{% md %}}The TCP port this Config is for. These values must be unique across configs on a single NodeBalancer (you can't have two configs for port 80, for example). While some ports imply some protocols, no enforcement is done and you may configure your NodeBalancer however is useful to you. For example, while port 443 is generally used for HTTPS, you do not need SSL configured to have a NodeBalancer listening on port 443. (Defaults to 80)
-{{% /md %}}</dd>
-    <dt class="property-optional"
+{{% /md %}}</dd><dt class="property-optional"
             title="Optional">
         <span id="state_protocol_csharp">
 <a href="#state_protocol_csharp" style="color: inherit; text-decoration: inherit;">Protocol</a>
@@ -1444,8 +1327,7 @@ the response body of a check request, the backend is considered to be down
         <span class="property-type">string</span>
     </dt>
     <dd>{{% md %}}The protocol this port is configured to serve. If this is set to https you must include an ssl_cert and an ssl_key. (Defaults to "http")
-{{% /md %}}</dd>
-    <dt class="property-optional"
+{{% /md %}}</dd><dt class="property-optional"
             title="Optional">
         <span id="state_proxyprotocol_csharp">
 <a href="#state_proxyprotocol_csharp" style="color: inherit; text-decoration: inherit;">Proxy<wbr>Protocol</a>
@@ -1454,8 +1336,7 @@ the response body of a check request, the backend is considered to be down
         <span class="property-type">string</span>
     </dt>
     <dd>{{% md %}}The version of ProxyProtocol to use for the underlying NodeBalancer. This requires protocol to be `tcp`. Valid values are `none`, `v1`, and `v2`. (Defaults to `none`)
-{{% /md %}}</dd>
-    <dt class="property-optional"
+{{% /md %}}</dd><dt class="property-optional"
             title="Optional">
         <span id="state_sslcert_csharp">
 <a href="#state_sslcert_csharp" style="color: inherit; text-decoration: inherit;">Ssl<wbr>Cert</a>
@@ -1464,8 +1345,7 @@ the response body of a check request, the backend is considered to be down
         <span class="property-type">string</span>
     </dt>
     <dd>{{% md %}}The certificate this port is serving. This is not returned. If set, this field will come back as `<REDACTED>`. Please use the ssl_commonname and ssl_fingerprint to identify the certificate.
-{{% /md %}}</dd>
-    <dt class="property-optional"
+{{% /md %}}</dd><dt class="property-optional"
             title="Optional">
         <span id="state_sslcommonname_csharp">
 <a href="#state_sslcommonname_csharp" style="color: inherit; text-decoration: inherit;">Ssl<wbr>Commonname</a>
@@ -1474,8 +1354,7 @@ the response body of a check request, the backend is considered to be down
         <span class="property-type">string</span>
     </dt>
     <dd>{{% md %}}The common name for the SSL certification this port is serving if this port is not configured to use SSL.
-{{% /md %}}</dd>
-    <dt class="property-optional"
+{{% /md %}}</dd><dt class="property-optional"
             title="Optional">
         <span id="state_sslfingerprint_csharp">
 <a href="#state_sslfingerprint_csharp" style="color: inherit; text-decoration: inherit;">Ssl<wbr>Fingerprint</a>
@@ -1484,8 +1363,7 @@ the response body of a check request, the backend is considered to be down
         <span class="property-type">string</span>
     </dt>
     <dd>{{% md %}}The fingerprint for the SSL certification this port is serving if this port is not configured to use SSL.
-{{% /md %}}</dd>
-    <dt class="property-optional"
+{{% /md %}}</dd><dt class="property-optional"
             title="Optional">
         <span id="state_sslkey_csharp">
 <a href="#state_sslkey_csharp" style="color: inherit; text-decoration: inherit;">Ssl<wbr>Key</a>
@@ -1494,8 +1372,7 @@ the response body of a check request, the backend is considered to be down
         <span class="property-type">string</span>
     </dt>
     <dd>{{% md %}}The private key corresponding to this port's certificate. This is not returned. If set, this field will come back as `<REDACTED>`. Please use the ssl_commonname and ssl_fingerprint to identify the certificate.
-{{% /md %}}</dd>
-    <dt class="property-optional"
+{{% /md %}}</dd><dt class="property-optional"
             title="Optional">
         <span id="state_stickiness_csharp">
 <a href="#state_stickiness_csharp" style="color: inherit; text-decoration: inherit;">Stickiness</a>
@@ -1504,14 +1381,11 @@ the response body of a check request, the backend is considered to be down
         <span class="property-type">string</span>
     </dt>
     <dd>{{% md %}}Controls how session stickiness is handled on this port: 'none', 'table', 'http_cookie'
-{{% /md %}}</dd>
-</dl>
+{{% /md %}}</dd></dl>
 {{% /choosable %}}
 
 {{% choosable language go %}}
-<dl class="resources-properties">
-
-    <dt class="property-optional"
+<dl class="resources-properties"><dt class="property-optional"
             title="Optional">
         <span id="state_algorithm_go">
 <a href="#state_algorithm_go" style="color: inherit; text-decoration: inherit;">Algorithm</a>
@@ -1520,8 +1394,7 @@ the response body of a check request, the backend is considered to be down
         <span class="property-type">string</span>
     </dt>
     <dd>{{% md %}}What algorithm this NodeBalancer should use for routing traffic to backends: roundrobin, leastconn, source
-{{% /md %}}</dd>
-    <dt class="property-optional"
+{{% /md %}}</dd><dt class="property-optional"
             title="Optional">
         <span id="state_check_go">
 <a href="#state_check_go" style="color: inherit; text-decoration: inherit;">Check</a>
@@ -1530,8 +1403,7 @@ the response body of a check request, the backend is considered to be down
         <span class="property-type">string</span>
     </dt>
     <dd>{{% md %}}The type of check to perform against backends to ensure they are serving requests. This is used to determine if backends are up or down. If none no check is performed. connection requires only a connection to the backend to succeed. http and http_body rely on the backend serving HTTP, and that the response returned matches what is expected.
-{{% /md %}}</dd>
-    <dt class="property-optional"
+{{% /md %}}</dd><dt class="property-optional"
             title="Optional">
         <span id="state_checkattempts_go">
 <a href="#state_checkattempts_go" style="color: inherit; text-decoration: inherit;">Check<wbr>Attempts</a>
@@ -1540,8 +1412,7 @@ the response body of a check request, the backend is considered to be down
         <span class="property-type">int</span>
     </dt>
     <dd>{{% md %}}How many times to attempt a check before considering a backend to be down. (1-30)
-{{% /md %}}</dd>
-    <dt class="property-optional"
+{{% /md %}}</dd><dt class="property-optional"
             title="Optional">
         <span id="state_checkbody_go">
 <a href="#state_checkbody_go" style="color: inherit; text-decoration: inherit;">Check<wbr>Body</a>
@@ -1551,8 +1422,7 @@ the response body of a check request, the backend is considered to be down
     </dt>
     <dd>{{% md %}}This value must be present in the response body of the check in order for it to pass. If this value is not present in
 the response body of a check request, the backend is considered to be down
-{{% /md %}}</dd>
-    <dt class="property-optional"
+{{% /md %}}</dd><dt class="property-optional"
             title="Optional">
         <span id="state_checkinterval_go">
 <a href="#state_checkinterval_go" style="color: inherit; text-decoration: inherit;">Check<wbr>Interval</a>
@@ -1561,8 +1431,7 @@ the response body of a check request, the backend is considered to be down
         <span class="property-type">int</span>
     </dt>
     <dd>{{% md %}}How often, in seconds, to check that backends are up and serving requests.
-{{% /md %}}</dd>
-    <dt class="property-optional"
+{{% /md %}}</dd><dt class="property-optional"
             title="Optional">
         <span id="state_checkpassive_go">
 <a href="#state_checkpassive_go" style="color: inherit; text-decoration: inherit;">Check<wbr>Passive</a>
@@ -1571,8 +1440,7 @@ the response body of a check request, the backend is considered to be down
         <span class="property-type">bool</span>
     </dt>
     <dd>{{% md %}}If true, any response from this backend with a 5xx status code will be enough for it to be considered unhealthy and taken out of rotation.
-{{% /md %}}</dd>
-    <dt class="property-optional"
+{{% /md %}}</dd><dt class="property-optional"
             title="Optional">
         <span id="state_checkpath_go">
 <a href="#state_checkpath_go" style="color: inherit; text-decoration: inherit;">Check<wbr>Path</a>
@@ -1581,8 +1449,7 @@ the response body of a check request, the backend is considered to be down
         <span class="property-type">string</span>
     </dt>
     <dd>{{% md %}}The URL path to check on each backend. If the backend does not respond to this request it is considered to be down.
-{{% /md %}}</dd>
-    <dt class="property-optional"
+{{% /md %}}</dd><dt class="property-optional"
             title="Optional">
         <span id="state_checktimeout_go">
 <a href="#state_checktimeout_go" style="color: inherit; text-decoration: inherit;">Check<wbr>Timeout</a>
@@ -1591,8 +1458,7 @@ the response body of a check request, the backend is considered to be down
         <span class="property-type">int</span>
     </dt>
     <dd>{{% md %}}How long, in seconds, to wait for a check attempt before considering it failed. (1-30)
-{{% /md %}}</dd>
-    <dt class="property-optional"
+{{% /md %}}</dd><dt class="property-optional"
             title="Optional">
         <span id="state_ciphersuite_go">
 <a href="#state_ciphersuite_go" style="color: inherit; text-decoration: inherit;">Cipher<wbr>Suite</a>
@@ -1601,8 +1467,7 @@ the response body of a check request, the backend is considered to be down
         <span class="property-type">string</span>
     </dt>
     <dd>{{% md %}}What ciphers to use for SSL connections served by this NodeBalancer. `legacy` is considered insecure and should only be used if necessary.
-{{% /md %}}</dd>
-    <dt class="property-optional"
+{{% /md %}}</dd><dt class="property-optional"
             title="Optional">
         <span id="state_nodestatuses_go">
 <a href="#state_nodestatuses_go" style="color: inherit; text-decoration: inherit;">Node<wbr>Statuses</a>
@@ -1610,8 +1475,7 @@ the response body of a check request, the backend is considered to be down
         <span class="property-indicator"></span>
         <span class="property-type"><a href="#nodebalancerconfignodestatus">[]Node<wbr>Balancer<wbr>Config<wbr>Node<wbr>Status</a></span>
     </dt>
-    <dd>{{% md %}}{{% /md %}}</dd>
-    <dt class="property-optional"
+    <dd>{{% md %}}{{% /md %}}</dd><dt class="property-optional"
             title="Optional">
         <span id="state_nodebalancerid_go">
 <a href="#state_nodebalancerid_go" style="color: inherit; text-decoration: inherit;">Nodebalancer<wbr>Id</a>
@@ -1620,8 +1484,7 @@ the response body of a check request, the backend is considered to be down
         <span class="property-type">int</span>
     </dt>
     <dd>{{% md %}}The ID of the NodeBalancer to access.
-{{% /md %}}</dd>
-    <dt class="property-optional"
+{{% /md %}}</dd><dt class="property-optional"
             title="Optional">
         <span id="state_port_go">
 <a href="#state_port_go" style="color: inherit; text-decoration: inherit;">Port</a>
@@ -1630,8 +1493,7 @@ the response body of a check request, the backend is considered to be down
         <span class="property-type">int</span>
     </dt>
     <dd>{{% md %}}The TCP port this Config is for. These values must be unique across configs on a single NodeBalancer (you can't have two configs for port 80, for example). While some ports imply some protocols, no enforcement is done and you may configure your NodeBalancer however is useful to you. For example, while port 443 is generally used for HTTPS, you do not need SSL configured to have a NodeBalancer listening on port 443. (Defaults to 80)
-{{% /md %}}</dd>
-    <dt class="property-optional"
+{{% /md %}}</dd><dt class="property-optional"
             title="Optional">
         <span id="state_protocol_go">
 <a href="#state_protocol_go" style="color: inherit; text-decoration: inherit;">Protocol</a>
@@ -1640,8 +1502,7 @@ the response body of a check request, the backend is considered to be down
         <span class="property-type">string</span>
     </dt>
     <dd>{{% md %}}The protocol this port is configured to serve. If this is set to https you must include an ssl_cert and an ssl_key. (Defaults to "http")
-{{% /md %}}</dd>
-    <dt class="property-optional"
+{{% /md %}}</dd><dt class="property-optional"
             title="Optional">
         <span id="state_proxyprotocol_go">
 <a href="#state_proxyprotocol_go" style="color: inherit; text-decoration: inherit;">Proxy<wbr>Protocol</a>
@@ -1650,8 +1511,7 @@ the response body of a check request, the backend is considered to be down
         <span class="property-type">string</span>
     </dt>
     <dd>{{% md %}}The version of ProxyProtocol to use for the underlying NodeBalancer. This requires protocol to be `tcp`. Valid values are `none`, `v1`, and `v2`. (Defaults to `none`)
-{{% /md %}}</dd>
-    <dt class="property-optional"
+{{% /md %}}</dd><dt class="property-optional"
             title="Optional">
         <span id="state_sslcert_go">
 <a href="#state_sslcert_go" style="color: inherit; text-decoration: inherit;">Ssl<wbr>Cert</a>
@@ -1660,8 +1520,7 @@ the response body of a check request, the backend is considered to be down
         <span class="property-type">string</span>
     </dt>
     <dd>{{% md %}}The certificate this port is serving. This is not returned. If set, this field will come back as `<REDACTED>`. Please use the ssl_commonname and ssl_fingerprint to identify the certificate.
-{{% /md %}}</dd>
-    <dt class="property-optional"
+{{% /md %}}</dd><dt class="property-optional"
             title="Optional">
         <span id="state_sslcommonname_go">
 <a href="#state_sslcommonname_go" style="color: inherit; text-decoration: inherit;">Ssl<wbr>Commonname</a>
@@ -1670,8 +1529,7 @@ the response body of a check request, the backend is considered to be down
         <span class="property-type">string</span>
     </dt>
     <dd>{{% md %}}The common name for the SSL certification this port is serving if this port is not configured to use SSL.
-{{% /md %}}</dd>
-    <dt class="property-optional"
+{{% /md %}}</dd><dt class="property-optional"
             title="Optional">
         <span id="state_sslfingerprint_go">
 <a href="#state_sslfingerprint_go" style="color: inherit; text-decoration: inherit;">Ssl<wbr>Fingerprint</a>
@@ -1680,8 +1538,7 @@ the response body of a check request, the backend is considered to be down
         <span class="property-type">string</span>
     </dt>
     <dd>{{% md %}}The fingerprint for the SSL certification this port is serving if this port is not configured to use SSL.
-{{% /md %}}</dd>
-    <dt class="property-optional"
+{{% /md %}}</dd><dt class="property-optional"
             title="Optional">
         <span id="state_sslkey_go">
 <a href="#state_sslkey_go" style="color: inherit; text-decoration: inherit;">Ssl<wbr>Key</a>
@@ -1690,8 +1547,7 @@ the response body of a check request, the backend is considered to be down
         <span class="property-type">string</span>
     </dt>
     <dd>{{% md %}}The private key corresponding to this port's certificate. This is not returned. If set, this field will come back as `<REDACTED>`. Please use the ssl_commonname and ssl_fingerprint to identify the certificate.
-{{% /md %}}</dd>
-    <dt class="property-optional"
+{{% /md %}}</dd><dt class="property-optional"
             title="Optional">
         <span id="state_stickiness_go">
 <a href="#state_stickiness_go" style="color: inherit; text-decoration: inherit;">Stickiness</a>
@@ -1700,14 +1556,11 @@ the response body of a check request, the backend is considered to be down
         <span class="property-type">string</span>
     </dt>
     <dd>{{% md %}}Controls how session stickiness is handled on this port: 'none', 'table', 'http_cookie'
-{{% /md %}}</dd>
-</dl>
+{{% /md %}}</dd></dl>
 {{% /choosable %}}
 
 {{% choosable language nodejs %}}
-<dl class="resources-properties">
-
-    <dt class="property-optional"
+<dl class="resources-properties"><dt class="property-optional"
             title="Optional">
         <span id="state_algorithm_nodejs">
 <a href="#state_algorithm_nodejs" style="color: inherit; text-decoration: inherit;">algorithm</a>
@@ -1716,8 +1569,7 @@ the response body of a check request, the backend is considered to be down
         <span class="property-type">string</span>
     </dt>
     <dd>{{% md %}}What algorithm this NodeBalancer should use for routing traffic to backends: roundrobin, leastconn, source
-{{% /md %}}</dd>
-    <dt class="property-optional"
+{{% /md %}}</dd><dt class="property-optional"
             title="Optional">
         <span id="state_check_nodejs">
 <a href="#state_check_nodejs" style="color: inherit; text-decoration: inherit;">check</a>
@@ -1726,8 +1578,7 @@ the response body of a check request, the backend is considered to be down
         <span class="property-type">string</span>
     </dt>
     <dd>{{% md %}}The type of check to perform against backends to ensure they are serving requests. This is used to determine if backends are up or down. If none no check is performed. connection requires only a connection to the backend to succeed. http and http_body rely on the backend serving HTTP, and that the response returned matches what is expected.
-{{% /md %}}</dd>
-    <dt class="property-optional"
+{{% /md %}}</dd><dt class="property-optional"
             title="Optional">
         <span id="state_checkattempts_nodejs">
 <a href="#state_checkattempts_nodejs" style="color: inherit; text-decoration: inherit;">check<wbr>Attempts</a>
@@ -1736,8 +1587,7 @@ the response body of a check request, the backend is considered to be down
         <span class="property-type">number</span>
     </dt>
     <dd>{{% md %}}How many times to attempt a check before considering a backend to be down. (1-30)
-{{% /md %}}</dd>
-    <dt class="property-optional"
+{{% /md %}}</dd><dt class="property-optional"
             title="Optional">
         <span id="state_checkbody_nodejs">
 <a href="#state_checkbody_nodejs" style="color: inherit; text-decoration: inherit;">check<wbr>Body</a>
@@ -1747,8 +1597,7 @@ the response body of a check request, the backend is considered to be down
     </dt>
     <dd>{{% md %}}This value must be present in the response body of the check in order for it to pass. If this value is not present in
 the response body of a check request, the backend is considered to be down
-{{% /md %}}</dd>
-    <dt class="property-optional"
+{{% /md %}}</dd><dt class="property-optional"
             title="Optional">
         <span id="state_checkinterval_nodejs">
 <a href="#state_checkinterval_nodejs" style="color: inherit; text-decoration: inherit;">check<wbr>Interval</a>
@@ -1757,8 +1606,7 @@ the response body of a check request, the backend is considered to be down
         <span class="property-type">number</span>
     </dt>
     <dd>{{% md %}}How often, in seconds, to check that backends are up and serving requests.
-{{% /md %}}</dd>
-    <dt class="property-optional"
+{{% /md %}}</dd><dt class="property-optional"
             title="Optional">
         <span id="state_checkpassive_nodejs">
 <a href="#state_checkpassive_nodejs" style="color: inherit; text-decoration: inherit;">check<wbr>Passive</a>
@@ -1767,8 +1615,7 @@ the response body of a check request, the backend is considered to be down
         <span class="property-type">boolean</span>
     </dt>
     <dd>{{% md %}}If true, any response from this backend with a 5xx status code will be enough for it to be considered unhealthy and taken out of rotation.
-{{% /md %}}</dd>
-    <dt class="property-optional"
+{{% /md %}}</dd><dt class="property-optional"
             title="Optional">
         <span id="state_checkpath_nodejs">
 <a href="#state_checkpath_nodejs" style="color: inherit; text-decoration: inherit;">check<wbr>Path</a>
@@ -1777,8 +1624,7 @@ the response body of a check request, the backend is considered to be down
         <span class="property-type">string</span>
     </dt>
     <dd>{{% md %}}The URL path to check on each backend. If the backend does not respond to this request it is considered to be down.
-{{% /md %}}</dd>
-    <dt class="property-optional"
+{{% /md %}}</dd><dt class="property-optional"
             title="Optional">
         <span id="state_checktimeout_nodejs">
 <a href="#state_checktimeout_nodejs" style="color: inherit; text-decoration: inherit;">check<wbr>Timeout</a>
@@ -1787,8 +1633,7 @@ the response body of a check request, the backend is considered to be down
         <span class="property-type">number</span>
     </dt>
     <dd>{{% md %}}How long, in seconds, to wait for a check attempt before considering it failed. (1-30)
-{{% /md %}}</dd>
-    <dt class="property-optional"
+{{% /md %}}</dd><dt class="property-optional"
             title="Optional">
         <span id="state_ciphersuite_nodejs">
 <a href="#state_ciphersuite_nodejs" style="color: inherit; text-decoration: inherit;">cipher<wbr>Suite</a>
@@ -1797,8 +1642,7 @@ the response body of a check request, the backend is considered to be down
         <span class="property-type">string</span>
     </dt>
     <dd>{{% md %}}What ciphers to use for SSL connections served by this NodeBalancer. `legacy` is considered insecure and should only be used if necessary.
-{{% /md %}}</dd>
-    <dt class="property-optional"
+{{% /md %}}</dd><dt class="property-optional"
             title="Optional">
         <span id="state_nodestatuses_nodejs">
 <a href="#state_nodestatuses_nodejs" style="color: inherit; text-decoration: inherit;">node<wbr>Statuses</a>
@@ -1806,8 +1650,7 @@ the response body of a check request, the backend is considered to be down
         <span class="property-indicator"></span>
         <span class="property-type"><a href="#nodebalancerconfignodestatus">Node<wbr>Balancer<wbr>Config<wbr>Node<wbr>Status[]</a></span>
     </dt>
-    <dd>{{% md %}}{{% /md %}}</dd>
-    <dt class="property-optional"
+    <dd>{{% md %}}{{% /md %}}</dd><dt class="property-optional"
             title="Optional">
         <span id="state_nodebalancerid_nodejs">
 <a href="#state_nodebalancerid_nodejs" style="color: inherit; text-decoration: inherit;">nodebalancer<wbr>Id</a>
@@ -1816,8 +1659,7 @@ the response body of a check request, the backend is considered to be down
         <span class="property-type">number</span>
     </dt>
     <dd>{{% md %}}The ID of the NodeBalancer to access.
-{{% /md %}}</dd>
-    <dt class="property-optional"
+{{% /md %}}</dd><dt class="property-optional"
             title="Optional">
         <span id="state_port_nodejs">
 <a href="#state_port_nodejs" style="color: inherit; text-decoration: inherit;">port</a>
@@ -1826,8 +1668,7 @@ the response body of a check request, the backend is considered to be down
         <span class="property-type">number</span>
     </dt>
     <dd>{{% md %}}The TCP port this Config is for. These values must be unique across configs on a single NodeBalancer (you can't have two configs for port 80, for example). While some ports imply some protocols, no enforcement is done and you may configure your NodeBalancer however is useful to you. For example, while port 443 is generally used for HTTPS, you do not need SSL configured to have a NodeBalancer listening on port 443. (Defaults to 80)
-{{% /md %}}</dd>
-    <dt class="property-optional"
+{{% /md %}}</dd><dt class="property-optional"
             title="Optional">
         <span id="state_protocol_nodejs">
 <a href="#state_protocol_nodejs" style="color: inherit; text-decoration: inherit;">protocol</a>
@@ -1836,8 +1677,7 @@ the response body of a check request, the backend is considered to be down
         <span class="property-type">string</span>
     </dt>
     <dd>{{% md %}}The protocol this port is configured to serve. If this is set to https you must include an ssl_cert and an ssl_key. (Defaults to "http")
-{{% /md %}}</dd>
-    <dt class="property-optional"
+{{% /md %}}</dd><dt class="property-optional"
             title="Optional">
         <span id="state_proxyprotocol_nodejs">
 <a href="#state_proxyprotocol_nodejs" style="color: inherit; text-decoration: inherit;">proxy<wbr>Protocol</a>
@@ -1846,8 +1686,7 @@ the response body of a check request, the backend is considered to be down
         <span class="property-type">string</span>
     </dt>
     <dd>{{% md %}}The version of ProxyProtocol to use for the underlying NodeBalancer. This requires protocol to be `tcp`. Valid values are `none`, `v1`, and `v2`. (Defaults to `none`)
-{{% /md %}}</dd>
-    <dt class="property-optional"
+{{% /md %}}</dd><dt class="property-optional"
             title="Optional">
         <span id="state_sslcert_nodejs">
 <a href="#state_sslcert_nodejs" style="color: inherit; text-decoration: inherit;">ssl<wbr>Cert</a>
@@ -1856,8 +1695,7 @@ the response body of a check request, the backend is considered to be down
         <span class="property-type">string</span>
     </dt>
     <dd>{{% md %}}The certificate this port is serving. This is not returned. If set, this field will come back as `<REDACTED>`. Please use the ssl_commonname and ssl_fingerprint to identify the certificate.
-{{% /md %}}</dd>
-    <dt class="property-optional"
+{{% /md %}}</dd><dt class="property-optional"
             title="Optional">
         <span id="state_sslcommonname_nodejs">
 <a href="#state_sslcommonname_nodejs" style="color: inherit; text-decoration: inherit;">ssl<wbr>Commonname</a>
@@ -1866,8 +1704,7 @@ the response body of a check request, the backend is considered to be down
         <span class="property-type">string</span>
     </dt>
     <dd>{{% md %}}The common name for the SSL certification this port is serving if this port is not configured to use SSL.
-{{% /md %}}</dd>
-    <dt class="property-optional"
+{{% /md %}}</dd><dt class="property-optional"
             title="Optional">
         <span id="state_sslfingerprint_nodejs">
 <a href="#state_sslfingerprint_nodejs" style="color: inherit; text-decoration: inherit;">ssl<wbr>Fingerprint</a>
@@ -1876,8 +1713,7 @@ the response body of a check request, the backend is considered to be down
         <span class="property-type">string</span>
     </dt>
     <dd>{{% md %}}The fingerprint for the SSL certification this port is serving if this port is not configured to use SSL.
-{{% /md %}}</dd>
-    <dt class="property-optional"
+{{% /md %}}</dd><dt class="property-optional"
             title="Optional">
         <span id="state_sslkey_nodejs">
 <a href="#state_sslkey_nodejs" style="color: inherit; text-decoration: inherit;">ssl<wbr>Key</a>
@@ -1886,8 +1722,7 @@ the response body of a check request, the backend is considered to be down
         <span class="property-type">string</span>
     </dt>
     <dd>{{% md %}}The private key corresponding to this port's certificate. This is not returned. If set, this field will come back as `<REDACTED>`. Please use the ssl_commonname and ssl_fingerprint to identify the certificate.
-{{% /md %}}</dd>
-    <dt class="property-optional"
+{{% /md %}}</dd><dt class="property-optional"
             title="Optional">
         <span id="state_stickiness_nodejs">
 <a href="#state_stickiness_nodejs" style="color: inherit; text-decoration: inherit;">stickiness</a>
@@ -1896,14 +1731,11 @@ the response body of a check request, the backend is considered to be down
         <span class="property-type">string</span>
     </dt>
     <dd>{{% md %}}Controls how session stickiness is handled on this port: 'none', 'table', 'http_cookie'
-{{% /md %}}</dd>
-</dl>
+{{% /md %}}</dd></dl>
 {{% /choosable %}}
 
 {{% choosable language python %}}
-<dl class="resources-properties">
-
-    <dt class="property-optional"
+<dl class="resources-properties"><dt class="property-optional"
             title="Optional">
         <span id="state_algorithm_python">
 <a href="#state_algorithm_python" style="color: inherit; text-decoration: inherit;">algorithm</a>
@@ -1912,8 +1744,7 @@ the response body of a check request, the backend is considered to be down
         <span class="property-type">str</span>
     </dt>
     <dd>{{% md %}}What algorithm this NodeBalancer should use for routing traffic to backends: roundrobin, leastconn, source
-{{% /md %}}</dd>
-    <dt class="property-optional"
+{{% /md %}}</dd><dt class="property-optional"
             title="Optional">
         <span id="state_check_python">
 <a href="#state_check_python" style="color: inherit; text-decoration: inherit;">check</a>
@@ -1922,8 +1753,7 @@ the response body of a check request, the backend is considered to be down
         <span class="property-type">str</span>
     </dt>
     <dd>{{% md %}}The type of check to perform against backends to ensure they are serving requests. This is used to determine if backends are up or down. If none no check is performed. connection requires only a connection to the backend to succeed. http and http_body rely on the backend serving HTTP, and that the response returned matches what is expected.
-{{% /md %}}</dd>
-    <dt class="property-optional"
+{{% /md %}}</dd><dt class="property-optional"
             title="Optional">
         <span id="state_check_attempts_python">
 <a href="#state_check_attempts_python" style="color: inherit; text-decoration: inherit;">check_<wbr>attempts</a>
@@ -1932,8 +1762,7 @@ the response body of a check request, the backend is considered to be down
         <span class="property-type">int</span>
     </dt>
     <dd>{{% md %}}How many times to attempt a check before considering a backend to be down. (1-30)
-{{% /md %}}</dd>
-    <dt class="property-optional"
+{{% /md %}}</dd><dt class="property-optional"
             title="Optional">
         <span id="state_check_body_python">
 <a href="#state_check_body_python" style="color: inherit; text-decoration: inherit;">check_<wbr>body</a>
@@ -1943,8 +1772,7 @@ the response body of a check request, the backend is considered to be down
     </dt>
     <dd>{{% md %}}This value must be present in the response body of the check in order for it to pass. If this value is not present in
 the response body of a check request, the backend is considered to be down
-{{% /md %}}</dd>
-    <dt class="property-optional"
+{{% /md %}}</dd><dt class="property-optional"
             title="Optional">
         <span id="state_check_interval_python">
 <a href="#state_check_interval_python" style="color: inherit; text-decoration: inherit;">check_<wbr>interval</a>
@@ -1953,8 +1781,7 @@ the response body of a check request, the backend is considered to be down
         <span class="property-type">int</span>
     </dt>
     <dd>{{% md %}}How often, in seconds, to check that backends are up and serving requests.
-{{% /md %}}</dd>
-    <dt class="property-optional"
+{{% /md %}}</dd><dt class="property-optional"
             title="Optional">
         <span id="state_check_passive_python">
 <a href="#state_check_passive_python" style="color: inherit; text-decoration: inherit;">check_<wbr>passive</a>
@@ -1963,8 +1790,7 @@ the response body of a check request, the backend is considered to be down
         <span class="property-type">bool</span>
     </dt>
     <dd>{{% md %}}If true, any response from this backend with a 5xx status code will be enough for it to be considered unhealthy and taken out of rotation.
-{{% /md %}}</dd>
-    <dt class="property-optional"
+{{% /md %}}</dd><dt class="property-optional"
             title="Optional">
         <span id="state_check_path_python">
 <a href="#state_check_path_python" style="color: inherit; text-decoration: inherit;">check_<wbr>path</a>
@@ -1973,8 +1799,7 @@ the response body of a check request, the backend is considered to be down
         <span class="property-type">str</span>
     </dt>
     <dd>{{% md %}}The URL path to check on each backend. If the backend does not respond to this request it is considered to be down.
-{{% /md %}}</dd>
-    <dt class="property-optional"
+{{% /md %}}</dd><dt class="property-optional"
             title="Optional">
         <span id="state_check_timeout_python">
 <a href="#state_check_timeout_python" style="color: inherit; text-decoration: inherit;">check_<wbr>timeout</a>
@@ -1983,8 +1808,7 @@ the response body of a check request, the backend is considered to be down
         <span class="property-type">int</span>
     </dt>
     <dd>{{% md %}}How long, in seconds, to wait for a check attempt before considering it failed. (1-30)
-{{% /md %}}</dd>
-    <dt class="property-optional"
+{{% /md %}}</dd><dt class="property-optional"
             title="Optional">
         <span id="state_cipher_suite_python">
 <a href="#state_cipher_suite_python" style="color: inherit; text-decoration: inherit;">cipher_<wbr>suite</a>
@@ -1993,8 +1817,7 @@ the response body of a check request, the backend is considered to be down
         <span class="property-type">str</span>
     </dt>
     <dd>{{% md %}}What ciphers to use for SSL connections served by this NodeBalancer. `legacy` is considered insecure and should only be used if necessary.
-{{% /md %}}</dd>
-    <dt class="property-optional"
+{{% /md %}}</dd><dt class="property-optional"
             title="Optional">
         <span id="state_node_statuses_python">
 <a href="#state_node_statuses_python" style="color: inherit; text-decoration: inherit;">node_<wbr>statuses</a>
@@ -2002,8 +1825,7 @@ the response body of a check request, the backend is considered to be down
         <span class="property-indicator"></span>
         <span class="property-type"><a href="#nodebalancerconfignodestatus">Sequence[Node<wbr>Balancer<wbr>Config<wbr>Node<wbr>Status<wbr>Args]</a></span>
     </dt>
-    <dd>{{% md %}}{{% /md %}}</dd>
-    <dt class="property-optional"
+    <dd>{{% md %}}{{% /md %}}</dd><dt class="property-optional"
             title="Optional">
         <span id="state_nodebalancer_id_python">
 <a href="#state_nodebalancer_id_python" style="color: inherit; text-decoration: inherit;">nodebalancer_<wbr>id</a>
@@ -2012,8 +1834,7 @@ the response body of a check request, the backend is considered to be down
         <span class="property-type">int</span>
     </dt>
     <dd>{{% md %}}The ID of the NodeBalancer to access.
-{{% /md %}}</dd>
-    <dt class="property-optional"
+{{% /md %}}</dd><dt class="property-optional"
             title="Optional">
         <span id="state_port_python">
 <a href="#state_port_python" style="color: inherit; text-decoration: inherit;">port</a>
@@ -2022,8 +1843,7 @@ the response body of a check request, the backend is considered to be down
         <span class="property-type">int</span>
     </dt>
     <dd>{{% md %}}The TCP port this Config is for. These values must be unique across configs on a single NodeBalancer (you can't have two configs for port 80, for example). While some ports imply some protocols, no enforcement is done and you may configure your NodeBalancer however is useful to you. For example, while port 443 is generally used for HTTPS, you do not need SSL configured to have a NodeBalancer listening on port 443. (Defaults to 80)
-{{% /md %}}</dd>
-    <dt class="property-optional"
+{{% /md %}}</dd><dt class="property-optional"
             title="Optional">
         <span id="state_protocol_python">
 <a href="#state_protocol_python" style="color: inherit; text-decoration: inherit;">protocol</a>
@@ -2032,8 +1852,7 @@ the response body of a check request, the backend is considered to be down
         <span class="property-type">str</span>
     </dt>
     <dd>{{% md %}}The protocol this port is configured to serve. If this is set to https you must include an ssl_cert and an ssl_key. (Defaults to "http")
-{{% /md %}}</dd>
-    <dt class="property-optional"
+{{% /md %}}</dd><dt class="property-optional"
             title="Optional">
         <span id="state_proxy_protocol_python">
 <a href="#state_proxy_protocol_python" style="color: inherit; text-decoration: inherit;">proxy_<wbr>protocol</a>
@@ -2042,8 +1861,7 @@ the response body of a check request, the backend is considered to be down
         <span class="property-type">str</span>
     </dt>
     <dd>{{% md %}}The version of ProxyProtocol to use for the underlying NodeBalancer. This requires protocol to be `tcp`. Valid values are `none`, `v1`, and `v2`. (Defaults to `none`)
-{{% /md %}}</dd>
-    <dt class="property-optional"
+{{% /md %}}</dd><dt class="property-optional"
             title="Optional">
         <span id="state_ssl_cert_python">
 <a href="#state_ssl_cert_python" style="color: inherit; text-decoration: inherit;">ssl_<wbr>cert</a>
@@ -2052,8 +1870,7 @@ the response body of a check request, the backend is considered to be down
         <span class="property-type">str</span>
     </dt>
     <dd>{{% md %}}The certificate this port is serving. This is not returned. If set, this field will come back as `<REDACTED>`. Please use the ssl_commonname and ssl_fingerprint to identify the certificate.
-{{% /md %}}</dd>
-    <dt class="property-optional"
+{{% /md %}}</dd><dt class="property-optional"
             title="Optional">
         <span id="state_ssl_commonname_python">
 <a href="#state_ssl_commonname_python" style="color: inherit; text-decoration: inherit;">ssl_<wbr>commonname</a>
@@ -2062,8 +1879,7 @@ the response body of a check request, the backend is considered to be down
         <span class="property-type">str</span>
     </dt>
     <dd>{{% md %}}The common name for the SSL certification this port is serving if this port is not configured to use SSL.
-{{% /md %}}</dd>
-    <dt class="property-optional"
+{{% /md %}}</dd><dt class="property-optional"
             title="Optional">
         <span id="state_ssl_fingerprint_python">
 <a href="#state_ssl_fingerprint_python" style="color: inherit; text-decoration: inherit;">ssl_<wbr>fingerprint</a>
@@ -2072,8 +1888,7 @@ the response body of a check request, the backend is considered to be down
         <span class="property-type">str</span>
     </dt>
     <dd>{{% md %}}The fingerprint for the SSL certification this port is serving if this port is not configured to use SSL.
-{{% /md %}}</dd>
-    <dt class="property-optional"
+{{% /md %}}</dd><dt class="property-optional"
             title="Optional">
         <span id="state_ssl_key_python">
 <a href="#state_ssl_key_python" style="color: inherit; text-decoration: inherit;">ssl_<wbr>key</a>
@@ -2082,8 +1897,7 @@ the response body of a check request, the backend is considered to be down
         <span class="property-type">str</span>
     </dt>
     <dd>{{% md %}}The private key corresponding to this port's certificate. This is not returned. If set, this field will come back as `<REDACTED>`. Please use the ssl_commonname and ssl_fingerprint to identify the certificate.
-{{% /md %}}</dd>
-    <dt class="property-optional"
+{{% /md %}}</dd><dt class="property-optional"
             title="Optional">
         <span id="state_stickiness_python">
 <a href="#state_stickiness_python" style="color: inherit; text-decoration: inherit;">stickiness</a>
@@ -2092,8 +1906,7 @@ the response body of a check request, the backend is considered to be down
         <span class="property-type">str</span>
     </dt>
     <dd>{{% md %}}Controls how session stickiness is handled on this port: 'none', 'table', 'http_cookie'
-{{% /md %}}</dd>
-</dl>
+{{% /md %}}</dd></dl>
 {{% /choosable %}}
 
 
@@ -2108,9 +1921,7 @@ the response body of a check request, the backend is considered to be down
 <h4 id="nodebalancerconfignodestatus">Node<wbr>Balancer<wbr>Config<wbr>Node<wbr>Status</h4>
 
 {{% choosable language csharp %}}
-<dl class="resources-properties">
-
-    <dt class="property-optional"
+<dl class="resources-properties"><dt class="property-optional"
             title="Optional">
         <span id="down_csharp">
 <a href="#down_csharp" style="color: inherit; text-decoration: inherit;">Down</a>
@@ -2118,8 +1929,7 @@ the response body of a check request, the backend is considered to be down
         <span class="property-indicator"></span>
         <span class="property-type">int</span>
     </dt>
-    <dd>{{% md %}}{{% /md %}}</dd>
-    <dt class="property-optional"
+    <dd>{{% md %}}{{% /md %}}</dd><dt class="property-optional"
             title="Optional">
         <span id="up_csharp">
 <a href="#up_csharp" style="color: inherit; text-decoration: inherit;">Up</a>
@@ -2127,14 +1937,11 @@ the response body of a check request, the backend is considered to be down
         <span class="property-indicator"></span>
         <span class="property-type">int</span>
     </dt>
-    <dd>{{% md %}}{{% /md %}}</dd>
-</dl>
+    <dd>{{% md %}}{{% /md %}}</dd></dl>
 {{% /choosable %}}
 
 {{% choosable language go %}}
-<dl class="resources-properties">
-
-    <dt class="property-optional"
+<dl class="resources-properties"><dt class="property-optional"
             title="Optional">
         <span id="down_go">
 <a href="#down_go" style="color: inherit; text-decoration: inherit;">Down</a>
@@ -2142,8 +1949,7 @@ the response body of a check request, the backend is considered to be down
         <span class="property-indicator"></span>
         <span class="property-type">int</span>
     </dt>
-    <dd>{{% md %}}{{% /md %}}</dd>
-    <dt class="property-optional"
+    <dd>{{% md %}}{{% /md %}}</dd><dt class="property-optional"
             title="Optional">
         <span id="up_go">
 <a href="#up_go" style="color: inherit; text-decoration: inherit;">Up</a>
@@ -2151,14 +1957,11 @@ the response body of a check request, the backend is considered to be down
         <span class="property-indicator"></span>
         <span class="property-type">int</span>
     </dt>
-    <dd>{{% md %}}{{% /md %}}</dd>
-</dl>
+    <dd>{{% md %}}{{% /md %}}</dd></dl>
 {{% /choosable %}}
 
 {{% choosable language nodejs %}}
-<dl class="resources-properties">
-
-    <dt class="property-optional"
+<dl class="resources-properties"><dt class="property-optional"
             title="Optional">
         <span id="down_nodejs">
 <a href="#down_nodejs" style="color: inherit; text-decoration: inherit;">down</a>
@@ -2166,8 +1969,7 @@ the response body of a check request, the backend is considered to be down
         <span class="property-indicator"></span>
         <span class="property-type">number</span>
     </dt>
-    <dd>{{% md %}}{{% /md %}}</dd>
-    <dt class="property-optional"
+    <dd>{{% md %}}{{% /md %}}</dd><dt class="property-optional"
             title="Optional">
         <span id="up_nodejs">
 <a href="#up_nodejs" style="color: inherit; text-decoration: inherit;">up</a>
@@ -2175,14 +1977,11 @@ the response body of a check request, the backend is considered to be down
         <span class="property-indicator"></span>
         <span class="property-type">number</span>
     </dt>
-    <dd>{{% md %}}{{% /md %}}</dd>
-</dl>
+    <dd>{{% md %}}{{% /md %}}</dd></dl>
 {{% /choosable %}}
 
 {{% choosable language python %}}
-<dl class="resources-properties">
-
-    <dt class="property-optional"
+<dl class="resources-properties"><dt class="property-optional"
             title="Optional">
         <span id="down_python">
 <a href="#down_python" style="color: inherit; text-decoration: inherit;">down</a>
@@ -2190,8 +1989,7 @@ the response body of a check request, the backend is considered to be down
         <span class="property-indicator"></span>
         <span class="property-type">int</span>
     </dt>
-    <dd>{{% md %}}{{% /md %}}</dd>
-    <dt class="property-optional"
+    <dd>{{% md %}}{{% /md %}}</dd><dt class="property-optional"
             title="Optional">
         <span id="up_python">
 <a href="#up_python" style="color: inherit; text-decoration: inherit;">up</a>
@@ -2199,8 +1997,7 @@ the response body of a check request, the backend is considered to be down
         <span class="property-indicator"></span>
         <span class="property-type">int</span>
     </dt>
-    <dd>{{% md %}}{{% /md %}}</dd>
-</dl>
+    <dd>{{% md %}}{{% /md %}}</dd></dl>
 {{% /choosable %}}
 ## Import
 
@@ -2223,6 +2020,6 @@ NodeBalancer Configs can be imported using the NodeBalancer `nodebalancer_id` fo
 	<dt>License</dt>
 	<dd>Apache-2.0</dd>
 	<dt>Notes</dt>
-	<dd>This Pulumi package is based on the [`linode` Terraform Provider](https://github.com/linode/terraform-provider-linode).</dd>
+	<dd>{{% md %}}This Pulumi package is based on the [`linode` Terraform Provider](https://github.com/linode/terraform-provider-linode).{{% /md %}}</dd>
 </dl>
 

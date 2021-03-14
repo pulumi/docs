@@ -13,11 +13,17 @@ meta_desc: "Documentation for the azure.appinsights.Insights resource with examp
 Manages an Application Insights component.
 
 {{% examples %}}
+
 ## Example Usage
 
 {{< chooser language "typescript,python,go,csharp" / >}}
 
-{{% example csharp %}}
+
+
+
+
+{{< example csharp >}}
+
 ```csharp
 using Pulumi;
 using Azure = Pulumi.Azure;
@@ -47,9 +53,12 @@ class MyStack : Stack
 }
 ```
 
-{{% /example %}}
 
-{{% example go %}}
+{{< /example >}}
+
+
+{{< example go >}}
+
 ```go
 package main
 
@@ -82,9 +91,12 @@ func main() {
 }
 ```
 
-{{% /example %}}
 
-{{% example python %}}
+{{< /example >}}
+
+
+{{< example python >}}
+
 ```python
 import pulumi
 import pulumi_azure as azure
@@ -98,9 +110,12 @@ pulumi.export("instrumentationKey", example_insights.instrumentation_key)
 pulumi.export("appId", example_insights.app_id)
 ```
 
-{{% /example %}}
 
-{{% example typescript %}}
+{{< /example >}}
+
+
+{{< example typescript >}}
+
 
 ```typescript
 import * as pulumi from "@pulumi/pulumi";
@@ -116,9 +131,16 @@ export const instrumentationKey = exampleInsights.instrumentationKey;
 export const appId = exampleInsights.appId;
 ```
 
-{{% /example %}}
+
+{{< /example >}}
+
+
+
+
 
 {{% /examples %}}
+
+
 
 
 ## Create a Insights Resource {#create}
@@ -143,9 +165,7 @@ export const appId = exampleInsights.appId;
 
 {{% choosable language nodejs %}}
 
-<dl class="resources-properties">
-  
-    <dt
+<dl class="resources-properties"><dt
         class="property-required" title="Required">
         <span>name</span>
         <span class="property-indicator"></span>
@@ -153,9 +173,7 @@ export const appId = exampleInsights.appId;
     </dt>
     <dd>
       The unique name of the resource.
-    </dd>
-  
-    <dt
+    </dd><dt
         class="property-required" title="Required">
         <span>args</span>
         <span class="property-indicator"></span>
@@ -163,9 +181,7 @@ export const appId = exampleInsights.appId;
     </dt>
     <dd>
       The arguments to resource properties.
-    </dd>
-  
-    <dt
+    </dd><dt
         class="property-optional" title="Optional">
         <span>opts</span>
         <span class="property-indicator"></span>
@@ -173,10 +189,7 @@ export const appId = exampleInsights.appId;
     </dt>
     <dd>
       Bag of options to control resource&#39;s behavior.
-    </dd>
-  
-
-</dl>
+    </dd></dl>
 
 {{% /choosable %}}
 
@@ -202,9 +215,7 @@ export const appId = exampleInsights.appId;
 
 {{% choosable language go %}}
 
-<dl class="resources-properties">
-  
-    <dt
+<dl class="resources-properties"><dt
         class="property-optional" title="Optional">
         <span>ctx</span>
         <span class="property-indicator"></span>
@@ -212,9 +223,7 @@ export const appId = exampleInsights.appId;
     </dt>
     <dd>
       Context object for the current deployment.
-    </dd>
-  
-    <dt
+    </dd><dt
         class="property-required" title="Required">
         <span>name</span>
         <span class="property-indicator"></span>
@@ -222,9 +231,7 @@ export const appId = exampleInsights.appId;
     </dt>
     <dd>
       The unique name of the resource.
-    </dd>
-  
-    <dt
+    </dd><dt
         class="property-required" title="Required">
         <span>args</span>
         <span class="property-indicator"></span>
@@ -232,9 +239,7 @@ export const appId = exampleInsights.appId;
     </dt>
     <dd>
       The arguments to resource properties.
-    </dd>
-  
-    <dt
+    </dd><dt
         class="property-optional" title="Optional">
         <span>opts</span>
         <span class="property-indicator"></span>
@@ -242,18 +247,13 @@ export const appId = exampleInsights.appId;
     </dt>
     <dd>
       Bag of options to control resource&#39;s behavior.
-    </dd>
-  
-
-</dl>
+    </dd></dl>
 
 {{% /choosable %}}
 
 {{% choosable language csharp %}}
 
-<dl class="resources-properties">
-  
-    <dt
+<dl class="resources-properties"><dt
         class="property-required" title="Required">
         <span>name</span>
         <span class="property-indicator"></span>
@@ -261,9 +261,7 @@ export const appId = exampleInsights.appId;
     </dt>
     <dd>
       The unique name of the resource.
-    </dd>
-  
-    <dt
+    </dd><dt
         class="property-required" title="Required">
         <span>args</span>
         <span class="property-indicator"></span>
@@ -271,9 +269,7 @@ export const appId = exampleInsights.appId;
     </dt>
     <dd>
       The arguments to resource properties.
-    </dd>
-  
-    <dt
+    </dd><dt
         class="property-optional" title="Optional">
         <span>opts</span>
         <span class="property-indicator"></span>
@@ -281,10 +277,7 @@ export const appId = exampleInsights.appId;
     </dt>
     <dd>
       Bag of options to control resource&#39;s behavior.
-    </dd>
-  
-
-</dl>
+    </dd></dl>
 
 {{% /choosable %}}
 
@@ -299,9 +292,7 @@ The Insights resource accepts the following [input]({{< relref "/docs/intro/conc
 
 
 {{% choosable language csharp %}}
-<dl class="resources-properties">
-
-    <dt class="property-required"
+<dl class="resources-properties"><dt class="property-required"
             title="Required">
         <span id="applicationtype_csharp">
 <a href="#applicationtype_csharp" style="color: inherit; text-decoration: inherit;">Application<wbr>Type</a>
@@ -310,8 +301,7 @@ The Insights resource accepts the following [input]({{< relref "/docs/intro/conc
         <span class="property-type">string</span>
     </dt>
     <dd>{{% md %}}Specifies the type of Application Insights to create. Valid values are `ios` for _iOS_, `java` for _Java web_, `MobileCenter` for _App Center_, `Node.JS` for _Node.js_, `other` for _General_, `phone` for _Windows Phone_, `store` for _Windows Store_ and `web` for _ASP.NET_. Please note these values are case sensitive; unmatched values are treated as _ASP.NET_ by Azure. Changing this forces a new resource to be created.
-{{% /md %}}</dd>
-    <dt class="property-required"
+{{% /md %}}</dd><dt class="property-required"
             title="Required">
         <span id="resourcegroupname_csharp">
 <a href="#resourcegroupname_csharp" style="color: inherit; text-decoration: inherit;">Resource<wbr>Group<wbr>Name</a>
@@ -321,8 +311,7 @@ The Insights resource accepts the following [input]({{< relref "/docs/intro/conc
     </dt>
     <dd>{{% md %}}The name of the resource group in which to
 create the Application Insights component.
-{{% /md %}}</dd>
-    <dt class="property-optional"
+{{% /md %}}</dd><dt class="property-optional"
             title="Optional">
         <span id="dailydatacapingb_csharp">
 <a href="#dailydatacapingb_csharp" style="color: inherit; text-decoration: inherit;">Daily<wbr>Data<wbr>Cap<wbr>In<wbr>Gb</a>
@@ -331,8 +320,7 @@ create the Application Insights component.
         <span class="property-type">double</span>
     </dt>
     <dd>{{% md %}}Specifies the Application Insights component daily data volume cap in GB.
-{{% /md %}}</dd>
-    <dt class="property-optional"
+{{% /md %}}</dd><dt class="property-optional"
             title="Optional">
         <span id="dailydatacapnotificationsdisabled_csharp">
 <a href="#dailydatacapnotificationsdisabled_csharp" style="color: inherit; text-decoration: inherit;">Daily<wbr>Data<wbr>Cap<wbr>Notifications<wbr>Disabled</a>
@@ -341,8 +329,7 @@ create the Application Insights component.
         <span class="property-type">bool</span>
     </dt>
     <dd>{{% md %}}Specifies if a notification email will be send when the daily data volume cap is met.
-{{% /md %}}</dd>
-    <dt class="property-optional"
+{{% /md %}}</dd><dt class="property-optional"
             title="Optional">
         <span id="disableipmasking_csharp">
 <a href="#disableipmasking_csharp" style="color: inherit; text-decoration: inherit;">Disable<wbr>Ip<wbr>Masking</a>
@@ -351,8 +338,7 @@ create the Application Insights component.
         <span class="property-type">bool</span>
     </dt>
     <dd>{{% md %}}By default the real client ip is masked as `0.0.0.0` in the logs. Use this argument to disable masking and log the real client ip. Defaults to `false`.
-{{% /md %}}</dd>
-    <dt class="property-optional"
+{{% /md %}}</dd><dt class="property-optional"
             title="Optional">
         <span id="location_csharp">
 <a href="#location_csharp" style="color: inherit; text-decoration: inherit;">Location</a>
@@ -361,8 +347,7 @@ create the Application Insights component.
         <span class="property-type">string</span>
     </dt>
     <dd>{{% md %}}Specifies the supported Azure location where the resource exists. Changing this forces a new resource to be created.
-{{% /md %}}</dd>
-    <dt class="property-optional"
+{{% /md %}}</dd><dt class="property-optional"
             title="Optional">
         <span id="name_csharp">
 <a href="#name_csharp" style="color: inherit; text-decoration: inherit;">Name</a>
@@ -372,8 +357,7 @@ create the Application Insights component.
     </dt>
     <dd>{{% md %}}Specifies the name of the Application Insights component. Changing this forces a
 new resource to be created.
-{{% /md %}}</dd>
-    <dt class="property-optional"
+{{% /md %}}</dd><dt class="property-optional"
             title="Optional">
         <span id="retentionindays_csharp">
 <a href="#retentionindays_csharp" style="color: inherit; text-decoration: inherit;">Retention<wbr>In<wbr>Days</a>
@@ -382,8 +366,7 @@ new resource to be created.
         <span class="property-type">int</span>
     </dt>
     <dd>{{% md %}}Specifies the retention period in days. Possible values are `30`, `60`, `90`, `120`, `180`, `270`, `365`, `550` or `730`. Defaults to `90`.
-{{% /md %}}</dd>
-    <dt class="property-optional"
+{{% /md %}}</dd><dt class="property-optional"
             title="Optional">
         <span id="samplingpercentage_csharp">
 <a href="#samplingpercentage_csharp" style="color: inherit; text-decoration: inherit;">Sampling<wbr>Percentage</a>
@@ -392,8 +375,7 @@ new resource to be created.
         <span class="property-type">double</span>
     </dt>
     <dd>{{% md %}}Specifies the percentage of the data produced by the monitored application that is sampled for Application Insights telemetry.
-{{% /md %}}</dd>
-    <dt class="property-optional"
+{{% /md %}}</dd><dt class="property-optional"
             title="Optional">
         <span id="tags_csharp">
 <a href="#tags_csharp" style="color: inherit; text-decoration: inherit;">Tags</a>
@@ -402,14 +384,11 @@ new resource to be created.
         <span class="property-type">Dictionary&lt;string, string&gt;</span>
     </dt>
     <dd>{{% md %}}A mapping of tags to assign to the resource.
-{{% /md %}}</dd>
-</dl>
+{{% /md %}}</dd></dl>
 {{% /choosable %}}
 
 {{% choosable language go %}}
-<dl class="resources-properties">
-
-    <dt class="property-required"
+<dl class="resources-properties"><dt class="property-required"
             title="Required">
         <span id="applicationtype_go">
 <a href="#applicationtype_go" style="color: inherit; text-decoration: inherit;">Application<wbr>Type</a>
@@ -418,8 +397,7 @@ new resource to be created.
         <span class="property-type">string</span>
     </dt>
     <dd>{{% md %}}Specifies the type of Application Insights to create. Valid values are `ios` for _iOS_, `java` for _Java web_, `MobileCenter` for _App Center_, `Node.JS` for _Node.js_, `other` for _General_, `phone` for _Windows Phone_, `store` for _Windows Store_ and `web` for _ASP.NET_. Please note these values are case sensitive; unmatched values are treated as _ASP.NET_ by Azure. Changing this forces a new resource to be created.
-{{% /md %}}</dd>
-    <dt class="property-required"
+{{% /md %}}</dd><dt class="property-required"
             title="Required">
         <span id="resourcegroupname_go">
 <a href="#resourcegroupname_go" style="color: inherit; text-decoration: inherit;">Resource<wbr>Group<wbr>Name</a>
@@ -429,8 +407,7 @@ new resource to be created.
     </dt>
     <dd>{{% md %}}The name of the resource group in which to
 create the Application Insights component.
-{{% /md %}}</dd>
-    <dt class="property-optional"
+{{% /md %}}</dd><dt class="property-optional"
             title="Optional">
         <span id="dailydatacapingb_go">
 <a href="#dailydatacapingb_go" style="color: inherit; text-decoration: inherit;">Daily<wbr>Data<wbr>Cap<wbr>In<wbr>Gb</a>
@@ -439,8 +416,7 @@ create the Application Insights component.
         <span class="property-type">float64</span>
     </dt>
     <dd>{{% md %}}Specifies the Application Insights component daily data volume cap in GB.
-{{% /md %}}</dd>
-    <dt class="property-optional"
+{{% /md %}}</dd><dt class="property-optional"
             title="Optional">
         <span id="dailydatacapnotificationsdisabled_go">
 <a href="#dailydatacapnotificationsdisabled_go" style="color: inherit; text-decoration: inherit;">Daily<wbr>Data<wbr>Cap<wbr>Notifications<wbr>Disabled</a>
@@ -449,8 +425,7 @@ create the Application Insights component.
         <span class="property-type">bool</span>
     </dt>
     <dd>{{% md %}}Specifies if a notification email will be send when the daily data volume cap is met.
-{{% /md %}}</dd>
-    <dt class="property-optional"
+{{% /md %}}</dd><dt class="property-optional"
             title="Optional">
         <span id="disableipmasking_go">
 <a href="#disableipmasking_go" style="color: inherit; text-decoration: inherit;">Disable<wbr>Ip<wbr>Masking</a>
@@ -459,8 +434,7 @@ create the Application Insights component.
         <span class="property-type">bool</span>
     </dt>
     <dd>{{% md %}}By default the real client ip is masked as `0.0.0.0` in the logs. Use this argument to disable masking and log the real client ip. Defaults to `false`.
-{{% /md %}}</dd>
-    <dt class="property-optional"
+{{% /md %}}</dd><dt class="property-optional"
             title="Optional">
         <span id="location_go">
 <a href="#location_go" style="color: inherit; text-decoration: inherit;">Location</a>
@@ -469,8 +443,7 @@ create the Application Insights component.
         <span class="property-type">string</span>
     </dt>
     <dd>{{% md %}}Specifies the supported Azure location where the resource exists. Changing this forces a new resource to be created.
-{{% /md %}}</dd>
-    <dt class="property-optional"
+{{% /md %}}</dd><dt class="property-optional"
             title="Optional">
         <span id="name_go">
 <a href="#name_go" style="color: inherit; text-decoration: inherit;">Name</a>
@@ -480,8 +453,7 @@ create the Application Insights component.
     </dt>
     <dd>{{% md %}}Specifies the name of the Application Insights component. Changing this forces a
 new resource to be created.
-{{% /md %}}</dd>
-    <dt class="property-optional"
+{{% /md %}}</dd><dt class="property-optional"
             title="Optional">
         <span id="retentionindays_go">
 <a href="#retentionindays_go" style="color: inherit; text-decoration: inherit;">Retention<wbr>In<wbr>Days</a>
@@ -490,8 +462,7 @@ new resource to be created.
         <span class="property-type">int</span>
     </dt>
     <dd>{{% md %}}Specifies the retention period in days. Possible values are `30`, `60`, `90`, `120`, `180`, `270`, `365`, `550` or `730`. Defaults to `90`.
-{{% /md %}}</dd>
-    <dt class="property-optional"
+{{% /md %}}</dd><dt class="property-optional"
             title="Optional">
         <span id="samplingpercentage_go">
 <a href="#samplingpercentage_go" style="color: inherit; text-decoration: inherit;">Sampling<wbr>Percentage</a>
@@ -500,8 +471,7 @@ new resource to be created.
         <span class="property-type">float64</span>
     </dt>
     <dd>{{% md %}}Specifies the percentage of the data produced by the monitored application that is sampled for Application Insights telemetry.
-{{% /md %}}</dd>
-    <dt class="property-optional"
+{{% /md %}}</dd><dt class="property-optional"
             title="Optional">
         <span id="tags_go">
 <a href="#tags_go" style="color: inherit; text-decoration: inherit;">Tags</a>
@@ -510,14 +480,11 @@ new resource to be created.
         <span class="property-type">map[string]string</span>
     </dt>
     <dd>{{% md %}}A mapping of tags to assign to the resource.
-{{% /md %}}</dd>
-</dl>
+{{% /md %}}</dd></dl>
 {{% /choosable %}}
 
 {{% choosable language nodejs %}}
-<dl class="resources-properties">
-
-    <dt class="property-required"
+<dl class="resources-properties"><dt class="property-required"
             title="Required">
         <span id="applicationtype_nodejs">
 <a href="#applicationtype_nodejs" style="color: inherit; text-decoration: inherit;">application<wbr>Type</a>
@@ -526,8 +493,7 @@ new resource to be created.
         <span class="property-type">string</span>
     </dt>
     <dd>{{% md %}}Specifies the type of Application Insights to create. Valid values are `ios` for _iOS_, `java` for _Java web_, `MobileCenter` for _App Center_, `Node.JS` for _Node.js_, `other` for _General_, `phone` for _Windows Phone_, `store` for _Windows Store_ and `web` for _ASP.NET_. Please note these values are case sensitive; unmatched values are treated as _ASP.NET_ by Azure. Changing this forces a new resource to be created.
-{{% /md %}}</dd>
-    <dt class="property-required"
+{{% /md %}}</dd><dt class="property-required"
             title="Required">
         <span id="resourcegroupname_nodejs">
 <a href="#resourcegroupname_nodejs" style="color: inherit; text-decoration: inherit;">resource<wbr>Group<wbr>Name</a>
@@ -537,8 +503,7 @@ new resource to be created.
     </dt>
     <dd>{{% md %}}The name of the resource group in which to
 create the Application Insights component.
-{{% /md %}}</dd>
-    <dt class="property-optional"
+{{% /md %}}</dd><dt class="property-optional"
             title="Optional">
         <span id="dailydatacapingb_nodejs">
 <a href="#dailydatacapingb_nodejs" style="color: inherit; text-decoration: inherit;">daily<wbr>Data<wbr>Cap<wbr>In<wbr>Gb</a>
@@ -547,8 +512,7 @@ create the Application Insights component.
         <span class="property-type">number</span>
     </dt>
     <dd>{{% md %}}Specifies the Application Insights component daily data volume cap in GB.
-{{% /md %}}</dd>
-    <dt class="property-optional"
+{{% /md %}}</dd><dt class="property-optional"
             title="Optional">
         <span id="dailydatacapnotificationsdisabled_nodejs">
 <a href="#dailydatacapnotificationsdisabled_nodejs" style="color: inherit; text-decoration: inherit;">daily<wbr>Data<wbr>Cap<wbr>Notifications<wbr>Disabled</a>
@@ -557,8 +521,7 @@ create the Application Insights component.
         <span class="property-type">boolean</span>
     </dt>
     <dd>{{% md %}}Specifies if a notification email will be send when the daily data volume cap is met.
-{{% /md %}}</dd>
-    <dt class="property-optional"
+{{% /md %}}</dd><dt class="property-optional"
             title="Optional">
         <span id="disableipmasking_nodejs">
 <a href="#disableipmasking_nodejs" style="color: inherit; text-decoration: inherit;">disable<wbr>Ip<wbr>Masking</a>
@@ -567,8 +530,7 @@ create the Application Insights component.
         <span class="property-type">boolean</span>
     </dt>
     <dd>{{% md %}}By default the real client ip is masked as `0.0.0.0` in the logs. Use this argument to disable masking and log the real client ip. Defaults to `false`.
-{{% /md %}}</dd>
-    <dt class="property-optional"
+{{% /md %}}</dd><dt class="property-optional"
             title="Optional">
         <span id="location_nodejs">
 <a href="#location_nodejs" style="color: inherit; text-decoration: inherit;">location</a>
@@ -577,8 +539,7 @@ create the Application Insights component.
         <span class="property-type">string</span>
     </dt>
     <dd>{{% md %}}Specifies the supported Azure location where the resource exists. Changing this forces a new resource to be created.
-{{% /md %}}</dd>
-    <dt class="property-optional"
+{{% /md %}}</dd><dt class="property-optional"
             title="Optional">
         <span id="name_nodejs">
 <a href="#name_nodejs" style="color: inherit; text-decoration: inherit;">name</a>
@@ -588,8 +549,7 @@ create the Application Insights component.
     </dt>
     <dd>{{% md %}}Specifies the name of the Application Insights component. Changing this forces a
 new resource to be created.
-{{% /md %}}</dd>
-    <dt class="property-optional"
+{{% /md %}}</dd><dt class="property-optional"
             title="Optional">
         <span id="retentionindays_nodejs">
 <a href="#retentionindays_nodejs" style="color: inherit; text-decoration: inherit;">retention<wbr>In<wbr>Days</a>
@@ -598,8 +558,7 @@ new resource to be created.
         <span class="property-type">number</span>
     </dt>
     <dd>{{% md %}}Specifies the retention period in days. Possible values are `30`, `60`, `90`, `120`, `180`, `270`, `365`, `550` or `730`. Defaults to `90`.
-{{% /md %}}</dd>
-    <dt class="property-optional"
+{{% /md %}}</dd><dt class="property-optional"
             title="Optional">
         <span id="samplingpercentage_nodejs">
 <a href="#samplingpercentage_nodejs" style="color: inherit; text-decoration: inherit;">sampling<wbr>Percentage</a>
@@ -608,8 +567,7 @@ new resource to be created.
         <span class="property-type">number</span>
     </dt>
     <dd>{{% md %}}Specifies the percentage of the data produced by the monitored application that is sampled for Application Insights telemetry.
-{{% /md %}}</dd>
-    <dt class="property-optional"
+{{% /md %}}</dd><dt class="property-optional"
             title="Optional">
         <span id="tags_nodejs">
 <a href="#tags_nodejs" style="color: inherit; text-decoration: inherit;">tags</a>
@@ -618,14 +576,11 @@ new resource to be created.
         <span class="property-type">{[key: string]: string}</span>
     </dt>
     <dd>{{% md %}}A mapping of tags to assign to the resource.
-{{% /md %}}</dd>
-</dl>
+{{% /md %}}</dd></dl>
 {{% /choosable %}}
 
 {{% choosable language python %}}
-<dl class="resources-properties">
-
-    <dt class="property-required"
+<dl class="resources-properties"><dt class="property-required"
             title="Required">
         <span id="application_type_python">
 <a href="#application_type_python" style="color: inherit; text-decoration: inherit;">application_<wbr>type</a>
@@ -634,8 +589,7 @@ new resource to be created.
         <span class="property-type">str</span>
     </dt>
     <dd>{{% md %}}Specifies the type of Application Insights to create. Valid values are `ios` for _iOS_, `java` for _Java web_, `MobileCenter` for _App Center_, `Node.JS` for _Node.js_, `other` for _General_, `phone` for _Windows Phone_, `store` for _Windows Store_ and `web` for _ASP.NET_. Please note these values are case sensitive; unmatched values are treated as _ASP.NET_ by Azure. Changing this forces a new resource to be created.
-{{% /md %}}</dd>
-    <dt class="property-required"
+{{% /md %}}</dd><dt class="property-required"
             title="Required">
         <span id="resource_group_name_python">
 <a href="#resource_group_name_python" style="color: inherit; text-decoration: inherit;">resource_<wbr>group_<wbr>name</a>
@@ -645,8 +599,7 @@ new resource to be created.
     </dt>
     <dd>{{% md %}}The name of the resource group in which to
 create the Application Insights component.
-{{% /md %}}</dd>
-    <dt class="property-optional"
+{{% /md %}}</dd><dt class="property-optional"
             title="Optional">
         <span id="daily_data_cap_in_gb_python">
 <a href="#daily_data_cap_in_gb_python" style="color: inherit; text-decoration: inherit;">daily_<wbr>data_<wbr>cap_<wbr>in_<wbr>gb</a>
@@ -655,8 +608,7 @@ create the Application Insights component.
         <span class="property-type">float</span>
     </dt>
     <dd>{{% md %}}Specifies the Application Insights component daily data volume cap in GB.
-{{% /md %}}</dd>
-    <dt class="property-optional"
+{{% /md %}}</dd><dt class="property-optional"
             title="Optional">
         <span id="daily_data_cap_notifications_disabled_python">
 <a href="#daily_data_cap_notifications_disabled_python" style="color: inherit; text-decoration: inherit;">daily_<wbr>data_<wbr>cap_<wbr>notifications_<wbr>disabled</a>
@@ -665,8 +617,7 @@ create the Application Insights component.
         <span class="property-type">bool</span>
     </dt>
     <dd>{{% md %}}Specifies if a notification email will be send when the daily data volume cap is met.
-{{% /md %}}</dd>
-    <dt class="property-optional"
+{{% /md %}}</dd><dt class="property-optional"
             title="Optional">
         <span id="disable_ip_masking_python">
 <a href="#disable_ip_masking_python" style="color: inherit; text-decoration: inherit;">disable_<wbr>ip_<wbr>masking</a>
@@ -675,8 +626,7 @@ create the Application Insights component.
         <span class="property-type">bool</span>
     </dt>
     <dd>{{% md %}}By default the real client ip is masked as `0.0.0.0` in the logs. Use this argument to disable masking and log the real client ip. Defaults to `false`.
-{{% /md %}}</dd>
-    <dt class="property-optional"
+{{% /md %}}</dd><dt class="property-optional"
             title="Optional">
         <span id="location_python">
 <a href="#location_python" style="color: inherit; text-decoration: inherit;">location</a>
@@ -685,8 +635,7 @@ create the Application Insights component.
         <span class="property-type">str</span>
     </dt>
     <dd>{{% md %}}Specifies the supported Azure location where the resource exists. Changing this forces a new resource to be created.
-{{% /md %}}</dd>
-    <dt class="property-optional"
+{{% /md %}}</dd><dt class="property-optional"
             title="Optional">
         <span id="name_python">
 <a href="#name_python" style="color: inherit; text-decoration: inherit;">name</a>
@@ -696,8 +645,7 @@ create the Application Insights component.
     </dt>
     <dd>{{% md %}}Specifies the name of the Application Insights component. Changing this forces a
 new resource to be created.
-{{% /md %}}</dd>
-    <dt class="property-optional"
+{{% /md %}}</dd><dt class="property-optional"
             title="Optional">
         <span id="retention_in_days_python">
 <a href="#retention_in_days_python" style="color: inherit; text-decoration: inherit;">retention_<wbr>in_<wbr>days</a>
@@ -706,8 +654,7 @@ new resource to be created.
         <span class="property-type">int</span>
     </dt>
     <dd>{{% md %}}Specifies the retention period in days. Possible values are `30`, `60`, `90`, `120`, `180`, `270`, `365`, `550` or `730`. Defaults to `90`.
-{{% /md %}}</dd>
-    <dt class="property-optional"
+{{% /md %}}</dd><dt class="property-optional"
             title="Optional">
         <span id="sampling_percentage_python">
 <a href="#sampling_percentage_python" style="color: inherit; text-decoration: inherit;">sampling_<wbr>percentage</a>
@@ -716,8 +663,7 @@ new resource to be created.
         <span class="property-type">float</span>
     </dt>
     <dd>{{% md %}}Specifies the percentage of the data produced by the monitored application that is sampled for Application Insights telemetry.
-{{% /md %}}</dd>
-    <dt class="property-optional"
+{{% /md %}}</dd><dt class="property-optional"
             title="Optional">
         <span id="tags_python">
 <a href="#tags_python" style="color: inherit; text-decoration: inherit;">tags</a>
@@ -726,8 +672,7 @@ new resource to be created.
         <span class="property-type">Mapping[str, str]</span>
     </dt>
     <dd>{{% md %}}A mapping of tags to assign to the resource.
-{{% /md %}}</dd>
-</dl>
+{{% /md %}}</dd></dl>
 {{% /choosable %}}
 
 
@@ -738,9 +683,7 @@ All [input](#inputs) properties are implicitly available as output properties. A
 
 
 {{% choosable language csharp %}}
-<dl class="resources-properties">
-
-    <dt class="property-"
+<dl class="resources-properties"><dt class="property-"
             title="">
         <span id="appid_csharp">
 <a href="#appid_csharp" style="color: inherit; text-decoration: inherit;">App<wbr>Id</a>
@@ -749,8 +692,7 @@ All [input](#inputs) properties are implicitly available as output properties. A
         <span class="property-type">string</span>
     </dt>
     <dd>{{% md %}}The App ID associated with this Application Insights component.
-{{% /md %}}</dd>
-    <dt class="property-"
+{{% /md %}}</dd><dt class="property-"
             title="">
         <span id="connectionstring_csharp">
 <a href="#connectionstring_csharp" style="color: inherit; text-decoration: inherit;">Connection<wbr>String</a>
@@ -759,8 +701,7 @@ All [input](#inputs) properties are implicitly available as output properties. A
         <span class="property-type">string</span>
     </dt>
     <dd>{{% md %}}The Connection String for this Application Insights component. (Sensitive)
-{{% /md %}}</dd>
-    <dt class="property-"
+{{% /md %}}</dd><dt class="property-"
             title="">
         <span id="id_csharp">
 <a href="#id_csharp" style="color: inherit; text-decoration: inherit;">Id</a>
@@ -768,8 +709,7 @@ All [input](#inputs) properties are implicitly available as output properties. A
         <span class="property-indicator"></span>
         <span class="property-type">string</span>
     </dt>
-    <dd>{{% md %}}The provider-assigned unique ID for this managed resource.{{% /md %}}</dd>
-    <dt class="property-"
+    <dd>{{% md %}}The provider-assigned unique ID for this managed resource.{{% /md %}}</dd><dt class="property-"
             title="">
         <span id="instrumentationkey_csharp">
 <a href="#instrumentationkey_csharp" style="color: inherit; text-decoration: inherit;">Instrumentation<wbr>Key</a>
@@ -778,14 +718,11 @@ All [input](#inputs) properties are implicitly available as output properties. A
         <span class="property-type">string</span>
     </dt>
     <dd>{{% md %}}The Instrumentation Key for this Application Insights component.
-{{% /md %}}</dd>
-</dl>
+{{% /md %}}</dd></dl>
 {{% /choosable %}}
 
 {{% choosable language go %}}
-<dl class="resources-properties">
-
-    <dt class="property-"
+<dl class="resources-properties"><dt class="property-"
             title="">
         <span id="appid_go">
 <a href="#appid_go" style="color: inherit; text-decoration: inherit;">App<wbr>Id</a>
@@ -794,8 +731,7 @@ All [input](#inputs) properties are implicitly available as output properties. A
         <span class="property-type">string</span>
     </dt>
     <dd>{{% md %}}The App ID associated with this Application Insights component.
-{{% /md %}}</dd>
-    <dt class="property-"
+{{% /md %}}</dd><dt class="property-"
             title="">
         <span id="connectionstring_go">
 <a href="#connectionstring_go" style="color: inherit; text-decoration: inherit;">Connection<wbr>String</a>
@@ -804,8 +740,7 @@ All [input](#inputs) properties are implicitly available as output properties. A
         <span class="property-type">string</span>
     </dt>
     <dd>{{% md %}}The Connection String for this Application Insights component. (Sensitive)
-{{% /md %}}</dd>
-    <dt class="property-"
+{{% /md %}}</dd><dt class="property-"
             title="">
         <span id="id_go">
 <a href="#id_go" style="color: inherit; text-decoration: inherit;">Id</a>
@@ -813,8 +748,7 @@ All [input](#inputs) properties are implicitly available as output properties. A
         <span class="property-indicator"></span>
         <span class="property-type">string</span>
     </dt>
-    <dd>{{% md %}}The provider-assigned unique ID for this managed resource.{{% /md %}}</dd>
-    <dt class="property-"
+    <dd>{{% md %}}The provider-assigned unique ID for this managed resource.{{% /md %}}</dd><dt class="property-"
             title="">
         <span id="instrumentationkey_go">
 <a href="#instrumentationkey_go" style="color: inherit; text-decoration: inherit;">Instrumentation<wbr>Key</a>
@@ -823,14 +757,11 @@ All [input](#inputs) properties are implicitly available as output properties. A
         <span class="property-type">string</span>
     </dt>
     <dd>{{% md %}}The Instrumentation Key for this Application Insights component.
-{{% /md %}}</dd>
-</dl>
+{{% /md %}}</dd></dl>
 {{% /choosable %}}
 
 {{% choosable language nodejs %}}
-<dl class="resources-properties">
-
-    <dt class="property-"
+<dl class="resources-properties"><dt class="property-"
             title="">
         <span id="appid_nodejs">
 <a href="#appid_nodejs" style="color: inherit; text-decoration: inherit;">app<wbr>Id</a>
@@ -839,8 +770,7 @@ All [input](#inputs) properties are implicitly available as output properties. A
         <span class="property-type">string</span>
     </dt>
     <dd>{{% md %}}The App ID associated with this Application Insights component.
-{{% /md %}}</dd>
-    <dt class="property-"
+{{% /md %}}</dd><dt class="property-"
             title="">
         <span id="connectionstring_nodejs">
 <a href="#connectionstring_nodejs" style="color: inherit; text-decoration: inherit;">connection<wbr>String</a>
@@ -849,8 +779,7 @@ All [input](#inputs) properties are implicitly available as output properties. A
         <span class="property-type">string</span>
     </dt>
     <dd>{{% md %}}The Connection String for this Application Insights component. (Sensitive)
-{{% /md %}}</dd>
-    <dt class="property-"
+{{% /md %}}</dd><dt class="property-"
             title="">
         <span id="id_nodejs">
 <a href="#id_nodejs" style="color: inherit; text-decoration: inherit;">id</a>
@@ -858,8 +787,7 @@ All [input](#inputs) properties are implicitly available as output properties. A
         <span class="property-indicator"></span>
         <span class="property-type">string</span>
     </dt>
-    <dd>{{% md %}}The provider-assigned unique ID for this managed resource.{{% /md %}}</dd>
-    <dt class="property-"
+    <dd>{{% md %}}The provider-assigned unique ID for this managed resource.{{% /md %}}</dd><dt class="property-"
             title="">
         <span id="instrumentationkey_nodejs">
 <a href="#instrumentationkey_nodejs" style="color: inherit; text-decoration: inherit;">instrumentation<wbr>Key</a>
@@ -868,14 +796,11 @@ All [input](#inputs) properties are implicitly available as output properties. A
         <span class="property-type">string</span>
     </dt>
     <dd>{{% md %}}The Instrumentation Key for this Application Insights component.
-{{% /md %}}</dd>
-</dl>
+{{% /md %}}</dd></dl>
 {{% /choosable %}}
 
 {{% choosable language python %}}
-<dl class="resources-properties">
-
-    <dt class="property-"
+<dl class="resources-properties"><dt class="property-"
             title="">
         <span id="app_id_python">
 <a href="#app_id_python" style="color: inherit; text-decoration: inherit;">app_<wbr>id</a>
@@ -884,8 +809,7 @@ All [input](#inputs) properties are implicitly available as output properties. A
         <span class="property-type">str</span>
     </dt>
     <dd>{{% md %}}The App ID associated with this Application Insights component.
-{{% /md %}}</dd>
-    <dt class="property-"
+{{% /md %}}</dd><dt class="property-"
             title="">
         <span id="connection_string_python">
 <a href="#connection_string_python" style="color: inherit; text-decoration: inherit;">connection_<wbr>string</a>
@@ -894,8 +818,7 @@ All [input](#inputs) properties are implicitly available as output properties. A
         <span class="property-type">str</span>
     </dt>
     <dd>{{% md %}}The Connection String for this Application Insights component. (Sensitive)
-{{% /md %}}</dd>
-    <dt class="property-"
+{{% /md %}}</dd><dt class="property-"
             title="">
         <span id="id_python">
 <a href="#id_python" style="color: inherit; text-decoration: inherit;">id</a>
@@ -903,8 +826,7 @@ All [input](#inputs) properties are implicitly available as output properties. A
         <span class="property-indicator"></span>
         <span class="property-type">str</span>
     </dt>
-    <dd>{{% md %}}The provider-assigned unique ID for this managed resource.{{% /md %}}</dd>
-    <dt class="property-"
+    <dd>{{% md %}}The provider-assigned unique ID for this managed resource.{{% /md %}}</dd><dt class="property-"
             title="">
         <span id="instrumentation_key_python">
 <a href="#instrumentation_key_python" style="color: inherit; text-decoration: inherit;">instrumentation_<wbr>key</a>
@@ -913,8 +835,7 @@ All [input](#inputs) properties are implicitly available as output properties. A
         <span class="property-type">str</span>
     </dt>
     <dd>{{% md %}}The Instrumentation Key for this Application Insights component.
-{{% /md %}}</dd>
-</dl>
+{{% /md %}}</dd></dl>
 {{% /choosable %}}
 
 
@@ -1041,9 +962,7 @@ The following state arguments are supported:
 
 
 {{% choosable language csharp %}}
-<dl class="resources-properties">
-
-    <dt class="property-optional"
+<dl class="resources-properties"><dt class="property-optional"
             title="Optional">
         <span id="state_appid_csharp">
 <a href="#state_appid_csharp" style="color: inherit; text-decoration: inherit;">App<wbr>Id</a>
@@ -1052,8 +971,7 @@ The following state arguments are supported:
         <span class="property-type">string</span>
     </dt>
     <dd>{{% md %}}The App ID associated with this Application Insights component.
-{{% /md %}}</dd>
-    <dt class="property-optional"
+{{% /md %}}</dd><dt class="property-optional"
             title="Optional">
         <span id="state_applicationtype_csharp">
 <a href="#state_applicationtype_csharp" style="color: inherit; text-decoration: inherit;">Application<wbr>Type</a>
@@ -1062,8 +980,7 @@ The following state arguments are supported:
         <span class="property-type">string</span>
     </dt>
     <dd>{{% md %}}Specifies the type of Application Insights to create. Valid values are `ios` for _iOS_, `java` for _Java web_, `MobileCenter` for _App Center_, `Node.JS` for _Node.js_, `other` for _General_, `phone` for _Windows Phone_, `store` for _Windows Store_ and `web` for _ASP.NET_. Please note these values are case sensitive; unmatched values are treated as _ASP.NET_ by Azure. Changing this forces a new resource to be created.
-{{% /md %}}</dd>
-    <dt class="property-optional"
+{{% /md %}}</dd><dt class="property-optional"
             title="Optional">
         <span id="state_connectionstring_csharp">
 <a href="#state_connectionstring_csharp" style="color: inherit; text-decoration: inherit;">Connection<wbr>String</a>
@@ -1072,8 +989,7 @@ The following state arguments are supported:
         <span class="property-type">string</span>
     </dt>
     <dd>{{% md %}}The Connection String for this Application Insights component. (Sensitive)
-{{% /md %}}</dd>
-    <dt class="property-optional"
+{{% /md %}}</dd><dt class="property-optional"
             title="Optional">
         <span id="state_dailydatacapingb_csharp">
 <a href="#state_dailydatacapingb_csharp" style="color: inherit; text-decoration: inherit;">Daily<wbr>Data<wbr>Cap<wbr>In<wbr>Gb</a>
@@ -1082,8 +998,7 @@ The following state arguments are supported:
         <span class="property-type">double</span>
     </dt>
     <dd>{{% md %}}Specifies the Application Insights component daily data volume cap in GB.
-{{% /md %}}</dd>
-    <dt class="property-optional"
+{{% /md %}}</dd><dt class="property-optional"
             title="Optional">
         <span id="state_dailydatacapnotificationsdisabled_csharp">
 <a href="#state_dailydatacapnotificationsdisabled_csharp" style="color: inherit; text-decoration: inherit;">Daily<wbr>Data<wbr>Cap<wbr>Notifications<wbr>Disabled</a>
@@ -1092,8 +1007,7 @@ The following state arguments are supported:
         <span class="property-type">bool</span>
     </dt>
     <dd>{{% md %}}Specifies if a notification email will be send when the daily data volume cap is met.
-{{% /md %}}</dd>
-    <dt class="property-optional"
+{{% /md %}}</dd><dt class="property-optional"
             title="Optional">
         <span id="state_disableipmasking_csharp">
 <a href="#state_disableipmasking_csharp" style="color: inherit; text-decoration: inherit;">Disable<wbr>Ip<wbr>Masking</a>
@@ -1102,8 +1016,7 @@ The following state arguments are supported:
         <span class="property-type">bool</span>
     </dt>
     <dd>{{% md %}}By default the real client ip is masked as `0.0.0.0` in the logs. Use this argument to disable masking and log the real client ip. Defaults to `false`.
-{{% /md %}}</dd>
-    <dt class="property-optional"
+{{% /md %}}</dd><dt class="property-optional"
             title="Optional">
         <span id="state_instrumentationkey_csharp">
 <a href="#state_instrumentationkey_csharp" style="color: inherit; text-decoration: inherit;">Instrumentation<wbr>Key</a>
@@ -1112,8 +1025,7 @@ The following state arguments are supported:
         <span class="property-type">string</span>
     </dt>
     <dd>{{% md %}}The Instrumentation Key for this Application Insights component.
-{{% /md %}}</dd>
-    <dt class="property-optional"
+{{% /md %}}</dd><dt class="property-optional"
             title="Optional">
         <span id="state_location_csharp">
 <a href="#state_location_csharp" style="color: inherit; text-decoration: inherit;">Location</a>
@@ -1122,8 +1034,7 @@ The following state arguments are supported:
         <span class="property-type">string</span>
     </dt>
     <dd>{{% md %}}Specifies the supported Azure location where the resource exists. Changing this forces a new resource to be created.
-{{% /md %}}</dd>
-    <dt class="property-optional"
+{{% /md %}}</dd><dt class="property-optional"
             title="Optional">
         <span id="state_name_csharp">
 <a href="#state_name_csharp" style="color: inherit; text-decoration: inherit;">Name</a>
@@ -1133,8 +1044,7 @@ The following state arguments are supported:
     </dt>
     <dd>{{% md %}}Specifies the name of the Application Insights component. Changing this forces a
 new resource to be created.
-{{% /md %}}</dd>
-    <dt class="property-optional"
+{{% /md %}}</dd><dt class="property-optional"
             title="Optional">
         <span id="state_resourcegroupname_csharp">
 <a href="#state_resourcegroupname_csharp" style="color: inherit; text-decoration: inherit;">Resource<wbr>Group<wbr>Name</a>
@@ -1144,8 +1054,7 @@ new resource to be created.
     </dt>
     <dd>{{% md %}}The name of the resource group in which to
 create the Application Insights component.
-{{% /md %}}</dd>
-    <dt class="property-optional"
+{{% /md %}}</dd><dt class="property-optional"
             title="Optional">
         <span id="state_retentionindays_csharp">
 <a href="#state_retentionindays_csharp" style="color: inherit; text-decoration: inherit;">Retention<wbr>In<wbr>Days</a>
@@ -1154,8 +1063,7 @@ create the Application Insights component.
         <span class="property-type">int</span>
     </dt>
     <dd>{{% md %}}Specifies the retention period in days. Possible values are `30`, `60`, `90`, `120`, `180`, `270`, `365`, `550` or `730`. Defaults to `90`.
-{{% /md %}}</dd>
-    <dt class="property-optional"
+{{% /md %}}</dd><dt class="property-optional"
             title="Optional">
         <span id="state_samplingpercentage_csharp">
 <a href="#state_samplingpercentage_csharp" style="color: inherit; text-decoration: inherit;">Sampling<wbr>Percentage</a>
@@ -1164,8 +1072,7 @@ create the Application Insights component.
         <span class="property-type">double</span>
     </dt>
     <dd>{{% md %}}Specifies the percentage of the data produced by the monitored application that is sampled for Application Insights telemetry.
-{{% /md %}}</dd>
-    <dt class="property-optional"
+{{% /md %}}</dd><dt class="property-optional"
             title="Optional">
         <span id="state_tags_csharp">
 <a href="#state_tags_csharp" style="color: inherit; text-decoration: inherit;">Tags</a>
@@ -1174,14 +1081,11 @@ create the Application Insights component.
         <span class="property-type">Dictionary&lt;string, string&gt;</span>
     </dt>
     <dd>{{% md %}}A mapping of tags to assign to the resource.
-{{% /md %}}</dd>
-</dl>
+{{% /md %}}</dd></dl>
 {{% /choosable %}}
 
 {{% choosable language go %}}
-<dl class="resources-properties">
-
-    <dt class="property-optional"
+<dl class="resources-properties"><dt class="property-optional"
             title="Optional">
         <span id="state_appid_go">
 <a href="#state_appid_go" style="color: inherit; text-decoration: inherit;">App<wbr>Id</a>
@@ -1190,8 +1094,7 @@ create the Application Insights component.
         <span class="property-type">string</span>
     </dt>
     <dd>{{% md %}}The App ID associated with this Application Insights component.
-{{% /md %}}</dd>
-    <dt class="property-optional"
+{{% /md %}}</dd><dt class="property-optional"
             title="Optional">
         <span id="state_applicationtype_go">
 <a href="#state_applicationtype_go" style="color: inherit; text-decoration: inherit;">Application<wbr>Type</a>
@@ -1200,8 +1103,7 @@ create the Application Insights component.
         <span class="property-type">string</span>
     </dt>
     <dd>{{% md %}}Specifies the type of Application Insights to create. Valid values are `ios` for _iOS_, `java` for _Java web_, `MobileCenter` for _App Center_, `Node.JS` for _Node.js_, `other` for _General_, `phone` for _Windows Phone_, `store` for _Windows Store_ and `web` for _ASP.NET_. Please note these values are case sensitive; unmatched values are treated as _ASP.NET_ by Azure. Changing this forces a new resource to be created.
-{{% /md %}}</dd>
-    <dt class="property-optional"
+{{% /md %}}</dd><dt class="property-optional"
             title="Optional">
         <span id="state_connectionstring_go">
 <a href="#state_connectionstring_go" style="color: inherit; text-decoration: inherit;">Connection<wbr>String</a>
@@ -1210,8 +1112,7 @@ create the Application Insights component.
         <span class="property-type">string</span>
     </dt>
     <dd>{{% md %}}The Connection String for this Application Insights component. (Sensitive)
-{{% /md %}}</dd>
-    <dt class="property-optional"
+{{% /md %}}</dd><dt class="property-optional"
             title="Optional">
         <span id="state_dailydatacapingb_go">
 <a href="#state_dailydatacapingb_go" style="color: inherit; text-decoration: inherit;">Daily<wbr>Data<wbr>Cap<wbr>In<wbr>Gb</a>
@@ -1220,8 +1121,7 @@ create the Application Insights component.
         <span class="property-type">float64</span>
     </dt>
     <dd>{{% md %}}Specifies the Application Insights component daily data volume cap in GB.
-{{% /md %}}</dd>
-    <dt class="property-optional"
+{{% /md %}}</dd><dt class="property-optional"
             title="Optional">
         <span id="state_dailydatacapnotificationsdisabled_go">
 <a href="#state_dailydatacapnotificationsdisabled_go" style="color: inherit; text-decoration: inherit;">Daily<wbr>Data<wbr>Cap<wbr>Notifications<wbr>Disabled</a>
@@ -1230,8 +1130,7 @@ create the Application Insights component.
         <span class="property-type">bool</span>
     </dt>
     <dd>{{% md %}}Specifies if a notification email will be send when the daily data volume cap is met.
-{{% /md %}}</dd>
-    <dt class="property-optional"
+{{% /md %}}</dd><dt class="property-optional"
             title="Optional">
         <span id="state_disableipmasking_go">
 <a href="#state_disableipmasking_go" style="color: inherit; text-decoration: inherit;">Disable<wbr>Ip<wbr>Masking</a>
@@ -1240,8 +1139,7 @@ create the Application Insights component.
         <span class="property-type">bool</span>
     </dt>
     <dd>{{% md %}}By default the real client ip is masked as `0.0.0.0` in the logs. Use this argument to disable masking and log the real client ip. Defaults to `false`.
-{{% /md %}}</dd>
-    <dt class="property-optional"
+{{% /md %}}</dd><dt class="property-optional"
             title="Optional">
         <span id="state_instrumentationkey_go">
 <a href="#state_instrumentationkey_go" style="color: inherit; text-decoration: inherit;">Instrumentation<wbr>Key</a>
@@ -1250,8 +1148,7 @@ create the Application Insights component.
         <span class="property-type">string</span>
     </dt>
     <dd>{{% md %}}The Instrumentation Key for this Application Insights component.
-{{% /md %}}</dd>
-    <dt class="property-optional"
+{{% /md %}}</dd><dt class="property-optional"
             title="Optional">
         <span id="state_location_go">
 <a href="#state_location_go" style="color: inherit; text-decoration: inherit;">Location</a>
@@ -1260,8 +1157,7 @@ create the Application Insights component.
         <span class="property-type">string</span>
     </dt>
     <dd>{{% md %}}Specifies the supported Azure location where the resource exists. Changing this forces a new resource to be created.
-{{% /md %}}</dd>
-    <dt class="property-optional"
+{{% /md %}}</dd><dt class="property-optional"
             title="Optional">
         <span id="state_name_go">
 <a href="#state_name_go" style="color: inherit; text-decoration: inherit;">Name</a>
@@ -1271,8 +1167,7 @@ create the Application Insights component.
     </dt>
     <dd>{{% md %}}Specifies the name of the Application Insights component. Changing this forces a
 new resource to be created.
-{{% /md %}}</dd>
-    <dt class="property-optional"
+{{% /md %}}</dd><dt class="property-optional"
             title="Optional">
         <span id="state_resourcegroupname_go">
 <a href="#state_resourcegroupname_go" style="color: inherit; text-decoration: inherit;">Resource<wbr>Group<wbr>Name</a>
@@ -1282,8 +1177,7 @@ new resource to be created.
     </dt>
     <dd>{{% md %}}The name of the resource group in which to
 create the Application Insights component.
-{{% /md %}}</dd>
-    <dt class="property-optional"
+{{% /md %}}</dd><dt class="property-optional"
             title="Optional">
         <span id="state_retentionindays_go">
 <a href="#state_retentionindays_go" style="color: inherit; text-decoration: inherit;">Retention<wbr>In<wbr>Days</a>
@@ -1292,8 +1186,7 @@ create the Application Insights component.
         <span class="property-type">int</span>
     </dt>
     <dd>{{% md %}}Specifies the retention period in days. Possible values are `30`, `60`, `90`, `120`, `180`, `270`, `365`, `550` or `730`. Defaults to `90`.
-{{% /md %}}</dd>
-    <dt class="property-optional"
+{{% /md %}}</dd><dt class="property-optional"
             title="Optional">
         <span id="state_samplingpercentage_go">
 <a href="#state_samplingpercentage_go" style="color: inherit; text-decoration: inherit;">Sampling<wbr>Percentage</a>
@@ -1302,8 +1195,7 @@ create the Application Insights component.
         <span class="property-type">float64</span>
     </dt>
     <dd>{{% md %}}Specifies the percentage of the data produced by the monitored application that is sampled for Application Insights telemetry.
-{{% /md %}}</dd>
-    <dt class="property-optional"
+{{% /md %}}</dd><dt class="property-optional"
             title="Optional">
         <span id="state_tags_go">
 <a href="#state_tags_go" style="color: inherit; text-decoration: inherit;">Tags</a>
@@ -1312,14 +1204,11 @@ create the Application Insights component.
         <span class="property-type">map[string]string</span>
     </dt>
     <dd>{{% md %}}A mapping of tags to assign to the resource.
-{{% /md %}}</dd>
-</dl>
+{{% /md %}}</dd></dl>
 {{% /choosable %}}
 
 {{% choosable language nodejs %}}
-<dl class="resources-properties">
-
-    <dt class="property-optional"
+<dl class="resources-properties"><dt class="property-optional"
             title="Optional">
         <span id="state_appid_nodejs">
 <a href="#state_appid_nodejs" style="color: inherit; text-decoration: inherit;">app<wbr>Id</a>
@@ -1328,8 +1217,7 @@ create the Application Insights component.
         <span class="property-type">string</span>
     </dt>
     <dd>{{% md %}}The App ID associated with this Application Insights component.
-{{% /md %}}</dd>
-    <dt class="property-optional"
+{{% /md %}}</dd><dt class="property-optional"
             title="Optional">
         <span id="state_applicationtype_nodejs">
 <a href="#state_applicationtype_nodejs" style="color: inherit; text-decoration: inherit;">application<wbr>Type</a>
@@ -1338,8 +1226,7 @@ create the Application Insights component.
         <span class="property-type">string</span>
     </dt>
     <dd>{{% md %}}Specifies the type of Application Insights to create. Valid values are `ios` for _iOS_, `java` for _Java web_, `MobileCenter` for _App Center_, `Node.JS` for _Node.js_, `other` for _General_, `phone` for _Windows Phone_, `store` for _Windows Store_ and `web` for _ASP.NET_. Please note these values are case sensitive; unmatched values are treated as _ASP.NET_ by Azure. Changing this forces a new resource to be created.
-{{% /md %}}</dd>
-    <dt class="property-optional"
+{{% /md %}}</dd><dt class="property-optional"
             title="Optional">
         <span id="state_connectionstring_nodejs">
 <a href="#state_connectionstring_nodejs" style="color: inherit; text-decoration: inherit;">connection<wbr>String</a>
@@ -1348,8 +1235,7 @@ create the Application Insights component.
         <span class="property-type">string</span>
     </dt>
     <dd>{{% md %}}The Connection String for this Application Insights component. (Sensitive)
-{{% /md %}}</dd>
-    <dt class="property-optional"
+{{% /md %}}</dd><dt class="property-optional"
             title="Optional">
         <span id="state_dailydatacapingb_nodejs">
 <a href="#state_dailydatacapingb_nodejs" style="color: inherit; text-decoration: inherit;">daily<wbr>Data<wbr>Cap<wbr>In<wbr>Gb</a>
@@ -1358,8 +1244,7 @@ create the Application Insights component.
         <span class="property-type">number</span>
     </dt>
     <dd>{{% md %}}Specifies the Application Insights component daily data volume cap in GB.
-{{% /md %}}</dd>
-    <dt class="property-optional"
+{{% /md %}}</dd><dt class="property-optional"
             title="Optional">
         <span id="state_dailydatacapnotificationsdisabled_nodejs">
 <a href="#state_dailydatacapnotificationsdisabled_nodejs" style="color: inherit; text-decoration: inherit;">daily<wbr>Data<wbr>Cap<wbr>Notifications<wbr>Disabled</a>
@@ -1368,8 +1253,7 @@ create the Application Insights component.
         <span class="property-type">boolean</span>
     </dt>
     <dd>{{% md %}}Specifies if a notification email will be send when the daily data volume cap is met.
-{{% /md %}}</dd>
-    <dt class="property-optional"
+{{% /md %}}</dd><dt class="property-optional"
             title="Optional">
         <span id="state_disableipmasking_nodejs">
 <a href="#state_disableipmasking_nodejs" style="color: inherit; text-decoration: inherit;">disable<wbr>Ip<wbr>Masking</a>
@@ -1378,8 +1262,7 @@ create the Application Insights component.
         <span class="property-type">boolean</span>
     </dt>
     <dd>{{% md %}}By default the real client ip is masked as `0.0.0.0` in the logs. Use this argument to disable masking and log the real client ip. Defaults to `false`.
-{{% /md %}}</dd>
-    <dt class="property-optional"
+{{% /md %}}</dd><dt class="property-optional"
             title="Optional">
         <span id="state_instrumentationkey_nodejs">
 <a href="#state_instrumentationkey_nodejs" style="color: inherit; text-decoration: inherit;">instrumentation<wbr>Key</a>
@@ -1388,8 +1271,7 @@ create the Application Insights component.
         <span class="property-type">string</span>
     </dt>
     <dd>{{% md %}}The Instrumentation Key for this Application Insights component.
-{{% /md %}}</dd>
-    <dt class="property-optional"
+{{% /md %}}</dd><dt class="property-optional"
             title="Optional">
         <span id="state_location_nodejs">
 <a href="#state_location_nodejs" style="color: inherit; text-decoration: inherit;">location</a>
@@ -1398,8 +1280,7 @@ create the Application Insights component.
         <span class="property-type">string</span>
     </dt>
     <dd>{{% md %}}Specifies the supported Azure location where the resource exists. Changing this forces a new resource to be created.
-{{% /md %}}</dd>
-    <dt class="property-optional"
+{{% /md %}}</dd><dt class="property-optional"
             title="Optional">
         <span id="state_name_nodejs">
 <a href="#state_name_nodejs" style="color: inherit; text-decoration: inherit;">name</a>
@@ -1409,8 +1290,7 @@ create the Application Insights component.
     </dt>
     <dd>{{% md %}}Specifies the name of the Application Insights component. Changing this forces a
 new resource to be created.
-{{% /md %}}</dd>
-    <dt class="property-optional"
+{{% /md %}}</dd><dt class="property-optional"
             title="Optional">
         <span id="state_resourcegroupname_nodejs">
 <a href="#state_resourcegroupname_nodejs" style="color: inherit; text-decoration: inherit;">resource<wbr>Group<wbr>Name</a>
@@ -1420,8 +1300,7 @@ new resource to be created.
     </dt>
     <dd>{{% md %}}The name of the resource group in which to
 create the Application Insights component.
-{{% /md %}}</dd>
-    <dt class="property-optional"
+{{% /md %}}</dd><dt class="property-optional"
             title="Optional">
         <span id="state_retentionindays_nodejs">
 <a href="#state_retentionindays_nodejs" style="color: inherit; text-decoration: inherit;">retention<wbr>In<wbr>Days</a>
@@ -1430,8 +1309,7 @@ create the Application Insights component.
         <span class="property-type">number</span>
     </dt>
     <dd>{{% md %}}Specifies the retention period in days. Possible values are `30`, `60`, `90`, `120`, `180`, `270`, `365`, `550` or `730`. Defaults to `90`.
-{{% /md %}}</dd>
-    <dt class="property-optional"
+{{% /md %}}</dd><dt class="property-optional"
             title="Optional">
         <span id="state_samplingpercentage_nodejs">
 <a href="#state_samplingpercentage_nodejs" style="color: inherit; text-decoration: inherit;">sampling<wbr>Percentage</a>
@@ -1440,8 +1318,7 @@ create the Application Insights component.
         <span class="property-type">number</span>
     </dt>
     <dd>{{% md %}}Specifies the percentage of the data produced by the monitored application that is sampled for Application Insights telemetry.
-{{% /md %}}</dd>
-    <dt class="property-optional"
+{{% /md %}}</dd><dt class="property-optional"
             title="Optional">
         <span id="state_tags_nodejs">
 <a href="#state_tags_nodejs" style="color: inherit; text-decoration: inherit;">tags</a>
@@ -1450,14 +1327,11 @@ create the Application Insights component.
         <span class="property-type">{[key: string]: string}</span>
     </dt>
     <dd>{{% md %}}A mapping of tags to assign to the resource.
-{{% /md %}}</dd>
-</dl>
+{{% /md %}}</dd></dl>
 {{% /choosable %}}
 
 {{% choosable language python %}}
-<dl class="resources-properties">
-
-    <dt class="property-optional"
+<dl class="resources-properties"><dt class="property-optional"
             title="Optional">
         <span id="state_app_id_python">
 <a href="#state_app_id_python" style="color: inherit; text-decoration: inherit;">app_<wbr>id</a>
@@ -1466,8 +1340,7 @@ create the Application Insights component.
         <span class="property-type">str</span>
     </dt>
     <dd>{{% md %}}The App ID associated with this Application Insights component.
-{{% /md %}}</dd>
-    <dt class="property-optional"
+{{% /md %}}</dd><dt class="property-optional"
             title="Optional">
         <span id="state_application_type_python">
 <a href="#state_application_type_python" style="color: inherit; text-decoration: inherit;">application_<wbr>type</a>
@@ -1476,8 +1349,7 @@ create the Application Insights component.
         <span class="property-type">str</span>
     </dt>
     <dd>{{% md %}}Specifies the type of Application Insights to create. Valid values are `ios` for _iOS_, `java` for _Java web_, `MobileCenter` for _App Center_, `Node.JS` for _Node.js_, `other` for _General_, `phone` for _Windows Phone_, `store` for _Windows Store_ and `web` for _ASP.NET_. Please note these values are case sensitive; unmatched values are treated as _ASP.NET_ by Azure. Changing this forces a new resource to be created.
-{{% /md %}}</dd>
-    <dt class="property-optional"
+{{% /md %}}</dd><dt class="property-optional"
             title="Optional">
         <span id="state_connection_string_python">
 <a href="#state_connection_string_python" style="color: inherit; text-decoration: inherit;">connection_<wbr>string</a>
@@ -1486,8 +1358,7 @@ create the Application Insights component.
         <span class="property-type">str</span>
     </dt>
     <dd>{{% md %}}The Connection String for this Application Insights component. (Sensitive)
-{{% /md %}}</dd>
-    <dt class="property-optional"
+{{% /md %}}</dd><dt class="property-optional"
             title="Optional">
         <span id="state_daily_data_cap_in_gb_python">
 <a href="#state_daily_data_cap_in_gb_python" style="color: inherit; text-decoration: inherit;">daily_<wbr>data_<wbr>cap_<wbr>in_<wbr>gb</a>
@@ -1496,8 +1367,7 @@ create the Application Insights component.
         <span class="property-type">float</span>
     </dt>
     <dd>{{% md %}}Specifies the Application Insights component daily data volume cap in GB.
-{{% /md %}}</dd>
-    <dt class="property-optional"
+{{% /md %}}</dd><dt class="property-optional"
             title="Optional">
         <span id="state_daily_data_cap_notifications_disabled_python">
 <a href="#state_daily_data_cap_notifications_disabled_python" style="color: inherit; text-decoration: inherit;">daily_<wbr>data_<wbr>cap_<wbr>notifications_<wbr>disabled</a>
@@ -1506,8 +1376,7 @@ create the Application Insights component.
         <span class="property-type">bool</span>
     </dt>
     <dd>{{% md %}}Specifies if a notification email will be send when the daily data volume cap is met.
-{{% /md %}}</dd>
-    <dt class="property-optional"
+{{% /md %}}</dd><dt class="property-optional"
             title="Optional">
         <span id="state_disable_ip_masking_python">
 <a href="#state_disable_ip_masking_python" style="color: inherit; text-decoration: inherit;">disable_<wbr>ip_<wbr>masking</a>
@@ -1516,8 +1385,7 @@ create the Application Insights component.
         <span class="property-type">bool</span>
     </dt>
     <dd>{{% md %}}By default the real client ip is masked as `0.0.0.0` in the logs. Use this argument to disable masking and log the real client ip. Defaults to `false`.
-{{% /md %}}</dd>
-    <dt class="property-optional"
+{{% /md %}}</dd><dt class="property-optional"
             title="Optional">
         <span id="state_instrumentation_key_python">
 <a href="#state_instrumentation_key_python" style="color: inherit; text-decoration: inherit;">instrumentation_<wbr>key</a>
@@ -1526,8 +1394,7 @@ create the Application Insights component.
         <span class="property-type">str</span>
     </dt>
     <dd>{{% md %}}The Instrumentation Key for this Application Insights component.
-{{% /md %}}</dd>
-    <dt class="property-optional"
+{{% /md %}}</dd><dt class="property-optional"
             title="Optional">
         <span id="state_location_python">
 <a href="#state_location_python" style="color: inherit; text-decoration: inherit;">location</a>
@@ -1536,8 +1403,7 @@ create the Application Insights component.
         <span class="property-type">str</span>
     </dt>
     <dd>{{% md %}}Specifies the supported Azure location where the resource exists. Changing this forces a new resource to be created.
-{{% /md %}}</dd>
-    <dt class="property-optional"
+{{% /md %}}</dd><dt class="property-optional"
             title="Optional">
         <span id="state_name_python">
 <a href="#state_name_python" style="color: inherit; text-decoration: inherit;">name</a>
@@ -1547,8 +1413,7 @@ create the Application Insights component.
     </dt>
     <dd>{{% md %}}Specifies the name of the Application Insights component. Changing this forces a
 new resource to be created.
-{{% /md %}}</dd>
-    <dt class="property-optional"
+{{% /md %}}</dd><dt class="property-optional"
             title="Optional">
         <span id="state_resource_group_name_python">
 <a href="#state_resource_group_name_python" style="color: inherit; text-decoration: inherit;">resource_<wbr>group_<wbr>name</a>
@@ -1558,8 +1423,7 @@ new resource to be created.
     </dt>
     <dd>{{% md %}}The name of the resource group in which to
 create the Application Insights component.
-{{% /md %}}</dd>
-    <dt class="property-optional"
+{{% /md %}}</dd><dt class="property-optional"
             title="Optional">
         <span id="state_retention_in_days_python">
 <a href="#state_retention_in_days_python" style="color: inherit; text-decoration: inherit;">retention_<wbr>in_<wbr>days</a>
@@ -1568,8 +1432,7 @@ create the Application Insights component.
         <span class="property-type">int</span>
     </dt>
     <dd>{{% md %}}Specifies the retention period in days. Possible values are `30`, `60`, `90`, `120`, `180`, `270`, `365`, `550` or `730`. Defaults to `90`.
-{{% /md %}}</dd>
-    <dt class="property-optional"
+{{% /md %}}</dd><dt class="property-optional"
             title="Optional">
         <span id="state_sampling_percentage_python">
 <a href="#state_sampling_percentage_python" style="color: inherit; text-decoration: inherit;">sampling_<wbr>percentage</a>
@@ -1578,8 +1441,7 @@ create the Application Insights component.
         <span class="property-type">float</span>
     </dt>
     <dd>{{% md %}}Specifies the percentage of the data produced by the monitored application that is sampled for Application Insights telemetry.
-{{% /md %}}</dd>
-    <dt class="property-optional"
+{{% /md %}}</dd><dt class="property-optional"
             title="Optional">
         <span id="state_tags_python">
 <a href="#state_tags_python" style="color: inherit; text-decoration: inherit;">tags</a>
@@ -1588,8 +1450,7 @@ create the Application Insights component.
         <span class="property-type">Mapping[str, str]</span>
     </dt>
     <dd>{{% md %}}A mapping of tags to assign to the resource.
-{{% /md %}}</dd>
-</dl>
+{{% /md %}}</dd></dl>
 {{% /choosable %}}
 
 
@@ -1615,6 +1476,6 @@ Application Insights instances can be imported using the `resource id`, e.g.
 	<dt>License</dt>
 	<dd>Apache-2.0</dd>
 	<dt>Notes</dt>
-	<dd>This Pulumi package is based on the [`azurerm` Terraform Provider](https://github.com/terraform-providers/terraform-provider-azurerm).</dd>
+	<dd>{{% md %}}This Pulumi package is based on the [`azurerm` Terraform Provider](https://github.com/terraform-providers/terraform-provider-azurerm).{{% /md %}}</dd>
 </dl>
 

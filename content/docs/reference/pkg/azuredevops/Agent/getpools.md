@@ -1,8 +1,8 @@
 
 ---
-title: "GetPools"
-title_tag: "Function GetPools | Module Agent | Package Azure DevOps"
-meta_desc: "Explore the GetPools function of the Agent module, including examples, input properties, output properties, and supporting types. Use this data source to access information about existing Agent Pools within Azure DevOps."
+title: "getPools"
+title_tag: "azuredevops.Agent.getPools"
+meta_desc: "Documentation for the azuredevops.Agent.getPools function with examples, input properties, output properties, and supporting types."
 ---
 
 
@@ -18,11 +18,17 @@ Use this data source to access information about existing Agent Pools within Azu
 
 
 {{% examples %}}
+
 ## Example Usage
 
 {{< chooser language "typescript,python,go,csharp" / >}}
 
-{{% example csharp %}}
+
+
+
+
+{{< example csharp >}}
+
 ```csharp
 using System.Linq;
 using Pulumi;
@@ -47,14 +53,17 @@ class MyStack : Stack
 }
 ```
 
-{{% /example %}}
 
-{{% example go %}}
+{{< /example >}}
+
+
+{{< example go >}}
+
 ```go
 package main
 
 import (
-	"github.com/pulumi/pulumi-azuredevops/sdk/go/azuredevops/"
+	"github.com/pulumi/pulumi-azuredevops/sdk/go/azuredevops"
 	"github.com/pulumi/pulumi/sdk/v2/go/pulumi"
 )
 
@@ -84,9 +93,12 @@ func main() {
 }
 ```
 
-{{% /example %}}
 
-{{% example python %}}
+{{< /example >}}
+
+
+{{< example python >}}
+
 ```python
 import pulumi
 import pulumi_azuredevops as azuredevops
@@ -97,9 +109,12 @@ pulumi.export("autoProvision", [__item.auto_provision for __item in pools.agent_
 pulumi.export("poolType", [__item.pool_type for __item in pools.agent_pools])
 ```
 
-{{% /example %}}
 
-{{% example typescript %}}
+{{< /example >}}
+
+
+{{< example typescript >}}
+
 
 ```typescript
 import * as pulumi from "@pulumi/pulumi";
@@ -111,12 +126,19 @@ export const autoProvision = pools.then(pools => pools.agentPools.map(__item => 
 export const poolType = pools.then(pools => pools.agentPools.map(__item => __item.poolType));
 ```
 
-{{% /example %}}
+
+{{< /example >}}
+
+
+
+
 
 {{% /examples %}}
 
 
-## Using GetPools {#using}
+
+
+## Using getPools {#using}
 
 {{< chooser language "typescript,python,go,csharp" / >}}
 
@@ -134,6 +156,8 @@ export const poolType = pools.then(pools => pools.agentPools.map(__item => __ite
 {{% choosable language go %}}
 <div class="highlight"><pre class="chroma"><code class="language-go" data-lang="go"><span class="k">func </span>GetPools<span class="p">(</span><span class="nx">ctx</span><span class="p"> *</span><span class="nx"><a href="https://pkg.go.dev/github.com/pulumi/pulumi/sdk/v2/go/pulumi?tab=doc#Context">Context</a></span><span class="p">, </span><span class="nx">opts</span><span class="p"> ...</span><span class="nx"><a href="https://pkg.go.dev/github.com/pulumi/pulumi/sdk/v2/go/pulumi?tab=doc#InvokeOption">InvokeOption</a></span><span class="p">) (*<span class="nx"><a href="#result">GetPoolsResult</a></span>, error)</span></code></pre></div>
 
+> Note: This function is named `GetPools` in the Go SDK.
+
 {{% /choosable %}}
 
 
@@ -146,16 +170,14 @@ export const poolType = pools.then(pools => pools.agentPools.map(__item => __ite
 
 
 
-## GetPools Result {#result}
+## getPools Result {#result}
 
 The following output properties are available:
 
 
 
 {{% choosable language csharp %}}
-<dl class="resources-properties">
-
-    <dt class="property-"
+<dl class="resources-properties"><dt class="property-"
             title="">
         <span id="agentpools_csharp">
 <a href="#agentpools_csharp" style="color: inherit; text-decoration: inherit;">Agent<wbr>Pools</a>
@@ -164,8 +186,7 @@ The following output properties are available:
         <span class="property-type"><a href="#getpoolsagentpool">List&lt;Pulumi.<wbr>Azure<wbr>Dev<wbr>Ops.<wbr>Agent.<wbr>Outputs.<wbr>Get<wbr>Pools<wbr>Agent<wbr>Pool&gt;</a></span>
     </dt>
     <dd>{{% md %}}A list of existing agent pools in your Azure DevOps Organization with the following details about every agent pool:
-{{% /md %}}</dd>
-    <dt class="property-"
+{{% /md %}}</dd><dt class="property-"
             title="">
         <span id="id_csharp">
 <a href="#id_csharp" style="color: inherit; text-decoration: inherit;">Id</a>
@@ -174,14 +195,11 @@ The following output properties are available:
         <span class="property-type">string</span>
     </dt>
     <dd>{{% md %}}The provider-assigned unique ID for this managed resource.
-{{% /md %}}</dd>
-</dl>
+{{% /md %}}</dd></dl>
 {{% /choosable %}}
 
 {{% choosable language go %}}
-<dl class="resources-properties">
-
-    <dt class="property-"
+<dl class="resources-properties"><dt class="property-"
             title="">
         <span id="agentpools_go">
 <a href="#agentpools_go" style="color: inherit; text-decoration: inherit;">Agent<wbr>Pools</a>
@@ -190,8 +208,7 @@ The following output properties are available:
         <span class="property-type"><a href="#getpoolsagentpool">[]Get<wbr>Pools<wbr>Agent<wbr>Pool</a></span>
     </dt>
     <dd>{{% md %}}A list of existing agent pools in your Azure DevOps Organization with the following details about every agent pool:
-{{% /md %}}</dd>
-    <dt class="property-"
+{{% /md %}}</dd><dt class="property-"
             title="">
         <span id="id_go">
 <a href="#id_go" style="color: inherit; text-decoration: inherit;">Id</a>
@@ -200,14 +217,11 @@ The following output properties are available:
         <span class="property-type">string</span>
     </dt>
     <dd>{{% md %}}The provider-assigned unique ID for this managed resource.
-{{% /md %}}</dd>
-</dl>
+{{% /md %}}</dd></dl>
 {{% /choosable %}}
 
 {{% choosable language nodejs %}}
-<dl class="resources-properties">
-
-    <dt class="property-"
+<dl class="resources-properties"><dt class="property-"
             title="">
         <span id="agentpools_nodejs">
 <a href="#agentpools_nodejs" style="color: inherit; text-decoration: inherit;">agent<wbr>Pools</a>
@@ -216,8 +230,7 @@ The following output properties are available:
         <span class="property-type"><a href="#getpoolsagentpool">Get<wbr>Pools<wbr>Agent<wbr>Pool[]</a></span>
     </dt>
     <dd>{{% md %}}A list of existing agent pools in your Azure DevOps Organization with the following details about every agent pool:
-{{% /md %}}</dd>
-    <dt class="property-"
+{{% /md %}}</dd><dt class="property-"
             title="">
         <span id="id_nodejs">
 <a href="#id_nodejs" style="color: inherit; text-decoration: inherit;">id</a>
@@ -226,14 +239,11 @@ The following output properties are available:
         <span class="property-type">string</span>
     </dt>
     <dd>{{% md %}}The provider-assigned unique ID for this managed resource.
-{{% /md %}}</dd>
-</dl>
+{{% /md %}}</dd></dl>
 {{% /choosable %}}
 
 {{% choosable language python %}}
-<dl class="resources-properties">
-
-    <dt class="property-"
+<dl class="resources-properties"><dt class="property-"
             title="">
         <span id="agent_pools_python">
 <a href="#agent_pools_python" style="color: inherit; text-decoration: inherit;">agent_<wbr>pools</a>
@@ -242,8 +252,7 @@ The following output properties are available:
         <span class="property-type"><a href="#getpoolsagentpool">Get<wbr>Pools<wbr>Agent<wbr>Pool]</a></span>
     </dt>
     <dd>{{% md %}}A list of existing agent pools in your Azure DevOps Organization with the following details about every agent pool:
-{{% /md %}}</dd>
-    <dt class="property-"
+{{% /md %}}</dd><dt class="property-"
             title="">
         <span id="id_python">
 <a href="#id_python" style="color: inherit; text-decoration: inherit;">id</a>
@@ -252,8 +261,7 @@ The following output properties are available:
         <span class="property-type">str</span>
     </dt>
     <dd>{{% md %}}The provider-assigned unique ID for this managed resource.
-{{% /md %}}</dd>
-</dl>
+{{% /md %}}</dd></dl>
 {{% /choosable %}}
 
 
@@ -267,9 +275,7 @@ The following output properties are available:
 
 
 {{% choosable language csharp %}}
-<dl class="resources-properties">
-
-    <dt class="property-required"
+<dl class="resources-properties"><dt class="property-required"
             title="Required">
         <span id="autoprovision_csharp">
 <a href="#autoprovision_csharp" style="color: inherit; text-decoration: inherit;">Auto<wbr>Provision</a>
@@ -278,8 +284,7 @@ The following output properties are available:
         <span class="property-type">bool</span>
     </dt>
     <dd>{{% md %}}Specifies whether or not a queue should be automatically provisioned for each project collection.
-{{% /md %}}</dd>
-    <dt class="property-required"
+{{% /md %}}</dd><dt class="property-required"
             title="Required">
         <span id="id_csharp">
 <a href="#id_csharp" style="color: inherit; text-decoration: inherit;">Id</a>
@@ -287,8 +292,7 @@ The following output properties are available:
         <span class="property-indicator"></span>
         <span class="property-type">int</span>
     </dt>
-    <dd>{{% md %}}{{% /md %}}</dd>
-    <dt class="property-required"
+    <dd>{{% md %}}{{% /md %}}</dd><dt class="property-required"
             title="Required">
         <span id="name_csharp">
 <a href="#name_csharp" style="color: inherit; text-decoration: inherit;">Name</a>
@@ -297,8 +301,7 @@ The following output properties are available:
         <span class="property-type">string</span>
     </dt>
     <dd>{{% md %}}The name of the agent pool
-{{% /md %}}</dd>
-    <dt class="property-required"
+{{% /md %}}</dd><dt class="property-required"
             title="Required">
         <span id="pooltype_csharp">
 <a href="#pooltype_csharp" style="color: inherit; text-decoration: inherit;">Pool<wbr>Type</a>
@@ -307,14 +310,11 @@ The following output properties are available:
         <span class="property-type">string</span>
     </dt>
     <dd>{{% md %}}Specifies whether the agent pool type is Automation or Deployment.
-{{% /md %}}</dd>
-</dl>
+{{% /md %}}</dd></dl>
 {{% /choosable %}}
 
 {{% choosable language go %}}
-<dl class="resources-properties">
-
-    <dt class="property-required"
+<dl class="resources-properties"><dt class="property-required"
             title="Required">
         <span id="autoprovision_go">
 <a href="#autoprovision_go" style="color: inherit; text-decoration: inherit;">Auto<wbr>Provision</a>
@@ -323,8 +323,7 @@ The following output properties are available:
         <span class="property-type">bool</span>
     </dt>
     <dd>{{% md %}}Specifies whether or not a queue should be automatically provisioned for each project collection.
-{{% /md %}}</dd>
-    <dt class="property-required"
+{{% /md %}}</dd><dt class="property-required"
             title="Required">
         <span id="id_go">
 <a href="#id_go" style="color: inherit; text-decoration: inherit;">Id</a>
@@ -332,8 +331,7 @@ The following output properties are available:
         <span class="property-indicator"></span>
         <span class="property-type">int</span>
     </dt>
-    <dd>{{% md %}}{{% /md %}}</dd>
-    <dt class="property-required"
+    <dd>{{% md %}}{{% /md %}}</dd><dt class="property-required"
             title="Required">
         <span id="name_go">
 <a href="#name_go" style="color: inherit; text-decoration: inherit;">Name</a>
@@ -342,8 +340,7 @@ The following output properties are available:
         <span class="property-type">string</span>
     </dt>
     <dd>{{% md %}}The name of the agent pool
-{{% /md %}}</dd>
-    <dt class="property-required"
+{{% /md %}}</dd><dt class="property-required"
             title="Required">
         <span id="pooltype_go">
 <a href="#pooltype_go" style="color: inherit; text-decoration: inherit;">Pool<wbr>Type</a>
@@ -352,14 +349,11 @@ The following output properties are available:
         <span class="property-type">string</span>
     </dt>
     <dd>{{% md %}}Specifies whether the agent pool type is Automation or Deployment.
-{{% /md %}}</dd>
-</dl>
+{{% /md %}}</dd></dl>
 {{% /choosable %}}
 
 {{% choosable language nodejs %}}
-<dl class="resources-properties">
-
-    <dt class="property-required"
+<dl class="resources-properties"><dt class="property-required"
             title="Required">
         <span id="autoprovision_nodejs">
 <a href="#autoprovision_nodejs" style="color: inherit; text-decoration: inherit;">auto<wbr>Provision</a>
@@ -368,8 +362,7 @@ The following output properties are available:
         <span class="property-type">boolean</span>
     </dt>
     <dd>{{% md %}}Specifies whether or not a queue should be automatically provisioned for each project collection.
-{{% /md %}}</dd>
-    <dt class="property-required"
+{{% /md %}}</dd><dt class="property-required"
             title="Required">
         <span id="id_nodejs">
 <a href="#id_nodejs" style="color: inherit; text-decoration: inherit;">id</a>
@@ -377,8 +370,7 @@ The following output properties are available:
         <span class="property-indicator"></span>
         <span class="property-type">number</span>
     </dt>
-    <dd>{{% md %}}{{% /md %}}</dd>
-    <dt class="property-required"
+    <dd>{{% md %}}{{% /md %}}</dd><dt class="property-required"
             title="Required">
         <span id="name_nodejs">
 <a href="#name_nodejs" style="color: inherit; text-decoration: inherit;">name</a>
@@ -387,8 +379,7 @@ The following output properties are available:
         <span class="property-type">string</span>
     </dt>
     <dd>{{% md %}}The name of the agent pool
-{{% /md %}}</dd>
-    <dt class="property-required"
+{{% /md %}}</dd><dt class="property-required"
             title="Required">
         <span id="pooltype_nodejs">
 <a href="#pooltype_nodejs" style="color: inherit; text-decoration: inherit;">pool<wbr>Type</a>
@@ -397,14 +388,11 @@ The following output properties are available:
         <span class="property-type">string</span>
     </dt>
     <dd>{{% md %}}Specifies whether the agent pool type is Automation or Deployment.
-{{% /md %}}</dd>
-</dl>
+{{% /md %}}</dd></dl>
 {{% /choosable %}}
 
 {{% choosable language python %}}
-<dl class="resources-properties">
-
-    <dt class="property-required"
+<dl class="resources-properties"><dt class="property-required"
             title="Required">
         <span id="auto_provision_python">
 <a href="#auto_provision_python" style="color: inherit; text-decoration: inherit;">auto_<wbr>provision</a>
@@ -413,8 +401,7 @@ The following output properties are available:
         <span class="property-type">bool</span>
     </dt>
     <dd>{{% md %}}Specifies whether or not a queue should be automatically provisioned for each project collection.
-{{% /md %}}</dd>
-    <dt class="property-required"
+{{% /md %}}</dd><dt class="property-required"
             title="Required">
         <span id="id_python">
 <a href="#id_python" style="color: inherit; text-decoration: inherit;">id</a>
@@ -422,8 +409,7 @@ The following output properties are available:
         <span class="property-indicator"></span>
         <span class="property-type">int</span>
     </dt>
-    <dd>{{% md %}}{{% /md %}}</dd>
-    <dt class="property-required"
+    <dd>{{% md %}}{{% /md %}}</dd><dt class="property-required"
             title="Required">
         <span id="name_python">
 <a href="#name_python" style="color: inherit; text-decoration: inherit;">name</a>
@@ -432,8 +418,7 @@ The following output properties are available:
         <span class="property-type">str</span>
     </dt>
     <dd>{{% md %}}The name of the agent pool
-{{% /md %}}</dd>
-    <dt class="property-required"
+{{% /md %}}</dd><dt class="property-required"
             title="Required">
         <span id="pool_type_python">
 <a href="#pool_type_python" style="color: inherit; text-decoration: inherit;">pool_<wbr>type</a>
@@ -442,8 +427,7 @@ The following output properties are available:
         <span class="property-type">str</span>
     </dt>
     <dd>{{% md %}}Specifies whether the agent pool type is Automation or Deployment.
-{{% /md %}}</dd>
-</dl>
+{{% /md %}}</dd></dl>
 {{% /choosable %}}
 
 
@@ -457,6 +441,6 @@ The following output properties are available:
 	<dt>License</dt>
 	<dd>Apache-2.0</dd>
 	<dt>Notes</dt>
-	<dd>This Pulumi package is based on the [`azuredevops` Terraform Provider](https://github.com/microsoft/terraform-provider-azuredevops).</dd>
+	<dd>{{% md %}}This Pulumi package is based on the [`azuredevops` Terraform Provider](https://github.com/microsoft/terraform-provider-azuredevops).{{% /md %}}</dd>
 </dl>
 

@@ -51,9 +51,7 @@ The following arguments are supported:
 
 
 {{% choosable language csharp %}}
-<dl class="resources-properties">
-
-    <dt class="property-required"
+<dl class="resources-properties"><dt class="property-required"
             title="Required">
         <span id="integrationaccountname_csharp">
 <a href="#integrationaccountname_csharp" style="color: inherit; text-decoration: inherit;">Integration<wbr>Account<wbr>Name</a>
@@ -61,8 +59,7 @@ The following arguments are supported:
         <span class="property-indicator"></span>
         <span class="property-type">string</span>
     </dt>
-    <dd>{{% md %}}The integration account name.{{% /md %}}</dd>
-    <dt class="property-required"
+    <dd>{{% md %}}The integration account name.{{% /md %}}</dd><dt class="property-required"
             title="Required">
         <span id="resourcegroupname_csharp">
 <a href="#resourcegroupname_csharp" style="color: inherit; text-decoration: inherit;">Resource<wbr>Group<wbr>Name</a>
@@ -70,8 +67,7 @@ The following arguments are supported:
         <span class="property-indicator"></span>
         <span class="property-type">string</span>
     </dt>
-    <dd>{{% md %}}The resource group name.{{% /md %}}</dd>
-    <dt class="property-required"
+    <dd>{{% md %}}The resource group name.{{% /md %}}</dd><dt class="property-required"
             title="Required">
         <span id="rosettanetprocessconfigurationname_csharp">
 <a href="#rosettanetprocessconfigurationname_csharp" style="color: inherit; text-decoration: inherit;">Rosetta<wbr>Net<wbr>Process<wbr>Configuration<wbr>Name</a>
@@ -79,14 +75,11 @@ The following arguments are supported:
         <span class="property-indicator"></span>
         <span class="property-type">string</span>
     </dt>
-    <dd>{{% md %}}The integration account RosettaNetProcessConfiguration name.{{% /md %}}</dd>
-</dl>
+    <dd>{{% md %}}The integration account RosettaNetProcessConfiguration name.{{% /md %}}</dd></dl>
 {{% /choosable %}}
 
 {{% choosable language go %}}
-<dl class="resources-properties">
-
-    <dt class="property-required"
+<dl class="resources-properties"><dt class="property-required"
             title="Required">
         <span id="integrationaccountname_go">
 <a href="#integrationaccountname_go" style="color: inherit; text-decoration: inherit;">Integration<wbr>Account<wbr>Name</a>
@@ -94,8 +87,7 @@ The following arguments are supported:
         <span class="property-indicator"></span>
         <span class="property-type">string</span>
     </dt>
-    <dd>{{% md %}}The integration account name.{{% /md %}}</dd>
-    <dt class="property-required"
+    <dd>{{% md %}}The integration account name.{{% /md %}}</dd><dt class="property-required"
             title="Required">
         <span id="resourcegroupname_go">
 <a href="#resourcegroupname_go" style="color: inherit; text-decoration: inherit;">Resource<wbr>Group<wbr>Name</a>
@@ -103,8 +95,7 @@ The following arguments are supported:
         <span class="property-indicator"></span>
         <span class="property-type">string</span>
     </dt>
-    <dd>{{% md %}}The resource group name.{{% /md %}}</dd>
-    <dt class="property-required"
+    <dd>{{% md %}}The resource group name.{{% /md %}}</dd><dt class="property-required"
             title="Required">
         <span id="rosettanetprocessconfigurationname_go">
 <a href="#rosettanetprocessconfigurationname_go" style="color: inherit; text-decoration: inherit;">Rosetta<wbr>Net<wbr>Process<wbr>Configuration<wbr>Name</a>
@@ -112,14 +103,11 @@ The following arguments are supported:
         <span class="property-indicator"></span>
         <span class="property-type">string</span>
     </dt>
-    <dd>{{% md %}}The integration account RosettaNetProcessConfiguration name.{{% /md %}}</dd>
-</dl>
+    <dd>{{% md %}}The integration account RosettaNetProcessConfiguration name.{{% /md %}}</dd></dl>
 {{% /choosable %}}
 
 {{% choosable language nodejs %}}
-<dl class="resources-properties">
-
-    <dt class="property-required"
+<dl class="resources-properties"><dt class="property-required"
             title="Required">
         <span id="integrationaccountname_nodejs">
 <a href="#integrationaccountname_nodejs" style="color: inherit; text-decoration: inherit;">integration<wbr>Account<wbr>Name</a>
@@ -127,8 +115,7 @@ The following arguments are supported:
         <span class="property-indicator"></span>
         <span class="property-type">string</span>
     </dt>
-    <dd>{{% md %}}The integration account name.{{% /md %}}</dd>
-    <dt class="property-required"
+    <dd>{{% md %}}The integration account name.{{% /md %}}</dd><dt class="property-required"
             title="Required">
         <span id="resourcegroupname_nodejs">
 <a href="#resourcegroupname_nodejs" style="color: inherit; text-decoration: inherit;">resource<wbr>Group<wbr>Name</a>
@@ -136,8 +123,7 @@ The following arguments are supported:
         <span class="property-indicator"></span>
         <span class="property-type">string</span>
     </dt>
-    <dd>{{% md %}}The resource group name.{{% /md %}}</dd>
-    <dt class="property-required"
+    <dd>{{% md %}}The resource group name.{{% /md %}}</dd><dt class="property-required"
             title="Required">
         <span id="rosettanetprocessconfigurationname_nodejs">
 <a href="#rosettanetprocessconfigurationname_nodejs" style="color: inherit; text-decoration: inherit;">rosetta<wbr>Net<wbr>Process<wbr>Configuration<wbr>Name</a>
@@ -145,14 +131,11 @@ The following arguments are supported:
         <span class="property-indicator"></span>
         <span class="property-type">string</span>
     </dt>
-    <dd>{{% md %}}The integration account RosettaNetProcessConfiguration name.{{% /md %}}</dd>
-</dl>
+    <dd>{{% md %}}The integration account RosettaNetProcessConfiguration name.{{% /md %}}</dd></dl>
 {{% /choosable %}}
 
 {{% choosable language python %}}
-<dl class="resources-properties">
-
-    <dt class="property-required"
+<dl class="resources-properties"><dt class="property-required"
             title="Required">
         <span id="integration_account_name_python">
 <a href="#integration_account_name_python" style="color: inherit; text-decoration: inherit;">integration_<wbr>account_<wbr>name</a>
@@ -160,8 +143,7 @@ The following arguments are supported:
         <span class="property-indicator"></span>
         <span class="property-type">str</span>
     </dt>
-    <dd>{{% md %}}The integration account name.{{% /md %}}</dd>
-    <dt class="property-required"
+    <dd>{{% md %}}The integration account name.{{% /md %}}</dd><dt class="property-required"
             title="Required">
         <span id="resource_group_name_python">
 <a href="#resource_group_name_python" style="color: inherit; text-decoration: inherit;">resource_<wbr>group_<wbr>name</a>
@@ -169,8 +151,7 @@ The following arguments are supported:
         <span class="property-indicator"></span>
         <span class="property-type">str</span>
     </dt>
-    <dd>{{% md %}}The resource group name.{{% /md %}}</dd>
-    <dt class="property-required"
+    <dd>{{% md %}}The resource group name.{{% /md %}}</dd><dt class="property-required"
             title="Required">
         <span id="rosetta_net_process_configuration_name_python">
 <a href="#rosetta_net_process_configuration_name_python" style="color: inherit; text-decoration: inherit;">rosetta_<wbr>net_<wbr>process_<wbr>configuration_<wbr>name</a>
@@ -178,8 +159,7 @@ The following arguments are supported:
         <span class="property-indicator"></span>
         <span class="property-type">str</span>
     </dt>
-    <dd>{{% md %}}The integration account RosettaNetProcessConfiguration name.{{% /md %}}</dd>
-</dl>
+    <dd>{{% md %}}The integration account RosettaNetProcessConfiguration name.{{% /md %}}</dd></dl>
 {{% /choosable %}}
 
 
@@ -192,9 +172,7 @@ The following output properties are available:
 
 
 {{% choosable language csharp %}}
-<dl class="resources-properties">
-
-    <dt class="property-"
+<dl class="resources-properties"><dt class="property-"
             title="">
         <span id="activitysettings_csharp">
 <a href="#activitysettings_csharp" style="color: inherit; text-decoration: inherit;">Activity<wbr>Settings</a>
@@ -202,8 +180,7 @@ The following output properties are available:
         <span class="property-indicator"></span>
         <span class="property-type"><a href="#rosettanetpipactivitysettingsresponse">Pulumi.<wbr>Azure<wbr>Native.<wbr>Logic.<wbr>Outputs.<wbr>Rosetta<wbr>Net<wbr>Pip<wbr>Activity<wbr>Settings<wbr>Response</a></span>
     </dt>
-    <dd>{{% md %}}The RosettaNet process configuration activity settings.{{% /md %}}</dd>
-    <dt class="property-"
+    <dd>{{% md %}}The RosettaNet process configuration activity settings.{{% /md %}}</dd><dt class="property-"
             title="">
         <span id="changedtime_csharp">
 <a href="#changedtime_csharp" style="color: inherit; text-decoration: inherit;">Changed<wbr>Time</a>
@@ -211,8 +188,7 @@ The following output properties are available:
         <span class="property-indicator"></span>
         <span class="property-type">string</span>
     </dt>
-    <dd>{{% md %}}The changed time.{{% /md %}}</dd>
-    <dt class="property-"
+    <dd>{{% md %}}The changed time.{{% /md %}}</dd><dt class="property-"
             title="">
         <span id="createdtime_csharp">
 <a href="#createdtime_csharp" style="color: inherit; text-decoration: inherit;">Created<wbr>Time</a>
@@ -220,8 +196,7 @@ The following output properties are available:
         <span class="property-indicator"></span>
         <span class="property-type">string</span>
     </dt>
-    <dd>{{% md %}}The created time.{{% /md %}}</dd>
-    <dt class="property-"
+    <dd>{{% md %}}The created time.{{% /md %}}</dd><dt class="property-"
             title="">
         <span id="id_csharp">
 <a href="#id_csharp" style="color: inherit; text-decoration: inherit;">Id</a>
@@ -229,8 +204,7 @@ The following output properties are available:
         <span class="property-indicator"></span>
         <span class="property-type">string</span>
     </dt>
-    <dd>{{% md %}}The resource id.{{% /md %}}</dd>
-    <dt class="property-"
+    <dd>{{% md %}}The resource id.{{% /md %}}</dd><dt class="property-"
             title="">
         <span id="initiatorrolesettings_csharp">
 <a href="#initiatorrolesettings_csharp" style="color: inherit; text-decoration: inherit;">Initiator<wbr>Role<wbr>Settings</a>
@@ -238,8 +212,7 @@ The following output properties are available:
         <span class="property-indicator"></span>
         <span class="property-type"><a href="#rosettanetpiprolesettingsresponse">Pulumi.<wbr>Azure<wbr>Native.<wbr>Logic.<wbr>Outputs.<wbr>Rosetta<wbr>Net<wbr>Pip<wbr>Role<wbr>Settings<wbr>Response</a></span>
     </dt>
-    <dd>{{% md %}}The RosettaNet initiator role settings.{{% /md %}}</dd>
-    <dt class="property-"
+    <dd>{{% md %}}The RosettaNet initiator role settings.{{% /md %}}</dd><dt class="property-"
             title="">
         <span id="name_csharp">
 <a href="#name_csharp" style="color: inherit; text-decoration: inherit;">Name</a>
@@ -247,8 +220,7 @@ The following output properties are available:
         <span class="property-indicator"></span>
         <span class="property-type">string</span>
     </dt>
-    <dd>{{% md %}}Gets the resource name.{{% /md %}}</dd>
-    <dt class="property-"
+    <dd>{{% md %}}Gets the resource name.{{% /md %}}</dd><dt class="property-"
             title="">
         <span id="processcode_csharp">
 <a href="#processcode_csharp" style="color: inherit; text-decoration: inherit;">Process<wbr>Code</a>
@@ -256,8 +228,7 @@ The following output properties are available:
         <span class="property-indicator"></span>
         <span class="property-type">string</span>
     </dt>
-    <dd>{{% md %}}The integration account RosettaNet process code.{{% /md %}}</dd>
-    <dt class="property-"
+    <dd>{{% md %}}The integration account RosettaNet process code.{{% /md %}}</dd><dt class="property-"
             title="">
         <span id="processname_csharp">
 <a href="#processname_csharp" style="color: inherit; text-decoration: inherit;">Process<wbr>Name</a>
@@ -265,8 +236,7 @@ The following output properties are available:
         <span class="property-indicator"></span>
         <span class="property-type">string</span>
     </dt>
-    <dd>{{% md %}}The integration account RosettaNet process name.{{% /md %}}</dd>
-    <dt class="property-"
+    <dd>{{% md %}}The integration account RosettaNet process name.{{% /md %}}</dd><dt class="property-"
             title="">
         <span id="processversion_csharp">
 <a href="#processversion_csharp" style="color: inherit; text-decoration: inherit;">Process<wbr>Version</a>
@@ -274,8 +244,7 @@ The following output properties are available:
         <span class="property-indicator"></span>
         <span class="property-type">string</span>
     </dt>
-    <dd>{{% md %}}The integration account RosettaNet process version.{{% /md %}}</dd>
-    <dt class="property-"
+    <dd>{{% md %}}The integration account RosettaNet process version.{{% /md %}}</dd><dt class="property-"
             title="">
         <span id="responderrolesettings_csharp">
 <a href="#responderrolesettings_csharp" style="color: inherit; text-decoration: inherit;">Responder<wbr>Role<wbr>Settings</a>
@@ -283,8 +252,7 @@ The following output properties are available:
         <span class="property-indicator"></span>
         <span class="property-type"><a href="#rosettanetpiprolesettingsresponse">Pulumi.<wbr>Azure<wbr>Native.<wbr>Logic.<wbr>Outputs.<wbr>Rosetta<wbr>Net<wbr>Pip<wbr>Role<wbr>Settings<wbr>Response</a></span>
     </dt>
-    <dd>{{% md %}}The RosettaNet responder role settings.{{% /md %}}</dd>
-    <dt class="property-"
+    <dd>{{% md %}}The RosettaNet responder role settings.{{% /md %}}</dd><dt class="property-"
             title="">
         <span id="type_csharp">
 <a href="#type_csharp" style="color: inherit; text-decoration: inherit;">Type</a>
@@ -292,8 +260,7 @@ The following output properties are available:
         <span class="property-indicator"></span>
         <span class="property-type">string</span>
     </dt>
-    <dd>{{% md %}}Gets the resource type.{{% /md %}}</dd>
-    <dt class="property-"
+    <dd>{{% md %}}Gets the resource type.{{% /md %}}</dd><dt class="property-"
             title="">
         <span id="description_csharp">
 <a href="#description_csharp" style="color: inherit; text-decoration: inherit;">Description</a>
@@ -301,8 +268,7 @@ The following output properties are available:
         <span class="property-indicator"></span>
         <span class="property-type">string</span>
     </dt>
-    <dd>{{% md %}}The integration account RosettaNet ProcessConfiguration properties.{{% /md %}}</dd>
-    <dt class="property-"
+    <dd>{{% md %}}The integration account RosettaNet ProcessConfiguration properties.{{% /md %}}</dd><dt class="property-"
             title="">
         <span id="location_csharp">
 <a href="#location_csharp" style="color: inherit; text-decoration: inherit;">Location</a>
@@ -310,8 +276,7 @@ The following output properties are available:
         <span class="property-indicator"></span>
         <span class="property-type">string</span>
     </dt>
-    <dd>{{% md %}}The resource location.{{% /md %}}</dd>
-    <dt class="property-"
+    <dd>{{% md %}}The resource location.{{% /md %}}</dd><dt class="property-"
             title="">
         <span id="metadata_csharp">
 <a href="#metadata_csharp" style="color: inherit; text-decoration: inherit;">Metadata</a>
@@ -319,8 +284,7 @@ The following output properties are available:
         <span class="property-indicator"></span>
         <span class="property-type">Dictionary&lt;string, string&gt;</span>
     </dt>
-    <dd>{{% md %}}The metadata.{{% /md %}}</dd>
-    <dt class="property-"
+    <dd>{{% md %}}The metadata.{{% /md %}}</dd><dt class="property-"
             title="">
         <span id="tags_csharp">
 <a href="#tags_csharp" style="color: inherit; text-decoration: inherit;">Tags</a>
@@ -328,14 +292,11 @@ The following output properties are available:
         <span class="property-indicator"></span>
         <span class="property-type">Dictionary&lt;string, string&gt;</span>
     </dt>
-    <dd>{{% md %}}The resource tags.{{% /md %}}</dd>
-</dl>
+    <dd>{{% md %}}The resource tags.{{% /md %}}</dd></dl>
 {{% /choosable %}}
 
 {{% choosable language go %}}
-<dl class="resources-properties">
-
-    <dt class="property-"
+<dl class="resources-properties"><dt class="property-"
             title="">
         <span id="activitysettings_go">
 <a href="#activitysettings_go" style="color: inherit; text-decoration: inherit;">Activity<wbr>Settings</a>
@@ -343,8 +304,7 @@ The following output properties are available:
         <span class="property-indicator"></span>
         <span class="property-type"><a href="#rosettanetpipactivitysettingsresponse">Rosetta<wbr>Net<wbr>Pip<wbr>Activity<wbr>Settings<wbr>Response</a></span>
     </dt>
-    <dd>{{% md %}}The RosettaNet process configuration activity settings.{{% /md %}}</dd>
-    <dt class="property-"
+    <dd>{{% md %}}The RosettaNet process configuration activity settings.{{% /md %}}</dd><dt class="property-"
             title="">
         <span id="changedtime_go">
 <a href="#changedtime_go" style="color: inherit; text-decoration: inherit;">Changed<wbr>Time</a>
@@ -352,8 +312,7 @@ The following output properties are available:
         <span class="property-indicator"></span>
         <span class="property-type">string</span>
     </dt>
-    <dd>{{% md %}}The changed time.{{% /md %}}</dd>
-    <dt class="property-"
+    <dd>{{% md %}}The changed time.{{% /md %}}</dd><dt class="property-"
             title="">
         <span id="createdtime_go">
 <a href="#createdtime_go" style="color: inherit; text-decoration: inherit;">Created<wbr>Time</a>
@@ -361,8 +320,7 @@ The following output properties are available:
         <span class="property-indicator"></span>
         <span class="property-type">string</span>
     </dt>
-    <dd>{{% md %}}The created time.{{% /md %}}</dd>
-    <dt class="property-"
+    <dd>{{% md %}}The created time.{{% /md %}}</dd><dt class="property-"
             title="">
         <span id="id_go">
 <a href="#id_go" style="color: inherit; text-decoration: inherit;">Id</a>
@@ -370,8 +328,7 @@ The following output properties are available:
         <span class="property-indicator"></span>
         <span class="property-type">string</span>
     </dt>
-    <dd>{{% md %}}The resource id.{{% /md %}}</dd>
-    <dt class="property-"
+    <dd>{{% md %}}The resource id.{{% /md %}}</dd><dt class="property-"
             title="">
         <span id="initiatorrolesettings_go">
 <a href="#initiatorrolesettings_go" style="color: inherit; text-decoration: inherit;">Initiator<wbr>Role<wbr>Settings</a>
@@ -379,8 +336,7 @@ The following output properties are available:
         <span class="property-indicator"></span>
         <span class="property-type"><a href="#rosettanetpiprolesettingsresponse">Rosetta<wbr>Net<wbr>Pip<wbr>Role<wbr>Settings<wbr>Response</a></span>
     </dt>
-    <dd>{{% md %}}The RosettaNet initiator role settings.{{% /md %}}</dd>
-    <dt class="property-"
+    <dd>{{% md %}}The RosettaNet initiator role settings.{{% /md %}}</dd><dt class="property-"
             title="">
         <span id="name_go">
 <a href="#name_go" style="color: inherit; text-decoration: inherit;">Name</a>
@@ -388,8 +344,7 @@ The following output properties are available:
         <span class="property-indicator"></span>
         <span class="property-type">string</span>
     </dt>
-    <dd>{{% md %}}Gets the resource name.{{% /md %}}</dd>
-    <dt class="property-"
+    <dd>{{% md %}}Gets the resource name.{{% /md %}}</dd><dt class="property-"
             title="">
         <span id="processcode_go">
 <a href="#processcode_go" style="color: inherit; text-decoration: inherit;">Process<wbr>Code</a>
@@ -397,8 +352,7 @@ The following output properties are available:
         <span class="property-indicator"></span>
         <span class="property-type">string</span>
     </dt>
-    <dd>{{% md %}}The integration account RosettaNet process code.{{% /md %}}</dd>
-    <dt class="property-"
+    <dd>{{% md %}}The integration account RosettaNet process code.{{% /md %}}</dd><dt class="property-"
             title="">
         <span id="processname_go">
 <a href="#processname_go" style="color: inherit; text-decoration: inherit;">Process<wbr>Name</a>
@@ -406,8 +360,7 @@ The following output properties are available:
         <span class="property-indicator"></span>
         <span class="property-type">string</span>
     </dt>
-    <dd>{{% md %}}The integration account RosettaNet process name.{{% /md %}}</dd>
-    <dt class="property-"
+    <dd>{{% md %}}The integration account RosettaNet process name.{{% /md %}}</dd><dt class="property-"
             title="">
         <span id="processversion_go">
 <a href="#processversion_go" style="color: inherit; text-decoration: inherit;">Process<wbr>Version</a>
@@ -415,8 +368,7 @@ The following output properties are available:
         <span class="property-indicator"></span>
         <span class="property-type">string</span>
     </dt>
-    <dd>{{% md %}}The integration account RosettaNet process version.{{% /md %}}</dd>
-    <dt class="property-"
+    <dd>{{% md %}}The integration account RosettaNet process version.{{% /md %}}</dd><dt class="property-"
             title="">
         <span id="responderrolesettings_go">
 <a href="#responderrolesettings_go" style="color: inherit; text-decoration: inherit;">Responder<wbr>Role<wbr>Settings</a>
@@ -424,8 +376,7 @@ The following output properties are available:
         <span class="property-indicator"></span>
         <span class="property-type"><a href="#rosettanetpiprolesettingsresponse">Rosetta<wbr>Net<wbr>Pip<wbr>Role<wbr>Settings<wbr>Response</a></span>
     </dt>
-    <dd>{{% md %}}The RosettaNet responder role settings.{{% /md %}}</dd>
-    <dt class="property-"
+    <dd>{{% md %}}The RosettaNet responder role settings.{{% /md %}}</dd><dt class="property-"
             title="">
         <span id="type_go">
 <a href="#type_go" style="color: inherit; text-decoration: inherit;">Type</a>
@@ -433,8 +384,7 @@ The following output properties are available:
         <span class="property-indicator"></span>
         <span class="property-type">string</span>
     </dt>
-    <dd>{{% md %}}Gets the resource type.{{% /md %}}</dd>
-    <dt class="property-"
+    <dd>{{% md %}}Gets the resource type.{{% /md %}}</dd><dt class="property-"
             title="">
         <span id="description_go">
 <a href="#description_go" style="color: inherit; text-decoration: inherit;">Description</a>
@@ -442,8 +392,7 @@ The following output properties are available:
         <span class="property-indicator"></span>
         <span class="property-type">string</span>
     </dt>
-    <dd>{{% md %}}The integration account RosettaNet ProcessConfiguration properties.{{% /md %}}</dd>
-    <dt class="property-"
+    <dd>{{% md %}}The integration account RosettaNet ProcessConfiguration properties.{{% /md %}}</dd><dt class="property-"
             title="">
         <span id="location_go">
 <a href="#location_go" style="color: inherit; text-decoration: inherit;">Location</a>
@@ -451,8 +400,7 @@ The following output properties are available:
         <span class="property-indicator"></span>
         <span class="property-type">string</span>
     </dt>
-    <dd>{{% md %}}The resource location.{{% /md %}}</dd>
-    <dt class="property-"
+    <dd>{{% md %}}The resource location.{{% /md %}}</dd><dt class="property-"
             title="">
         <span id="metadata_go">
 <a href="#metadata_go" style="color: inherit; text-decoration: inherit;">Metadata</a>
@@ -460,8 +408,7 @@ The following output properties are available:
         <span class="property-indicator"></span>
         <span class="property-type">map[string]string</span>
     </dt>
-    <dd>{{% md %}}The metadata.{{% /md %}}</dd>
-    <dt class="property-"
+    <dd>{{% md %}}The metadata.{{% /md %}}</dd><dt class="property-"
             title="">
         <span id="tags_go">
 <a href="#tags_go" style="color: inherit; text-decoration: inherit;">Tags</a>
@@ -469,14 +416,11 @@ The following output properties are available:
         <span class="property-indicator"></span>
         <span class="property-type">map[string]string</span>
     </dt>
-    <dd>{{% md %}}The resource tags.{{% /md %}}</dd>
-</dl>
+    <dd>{{% md %}}The resource tags.{{% /md %}}</dd></dl>
 {{% /choosable %}}
 
 {{% choosable language nodejs %}}
-<dl class="resources-properties">
-
-    <dt class="property-"
+<dl class="resources-properties"><dt class="property-"
             title="">
         <span id="activitysettings_nodejs">
 <a href="#activitysettings_nodejs" style="color: inherit; text-decoration: inherit;">activity<wbr>Settings</a>
@@ -484,8 +428,7 @@ The following output properties are available:
         <span class="property-indicator"></span>
         <span class="property-type"><a href="#rosettanetpipactivitysettingsresponse">Rosetta<wbr>Net<wbr>Pip<wbr>Activity<wbr>Settings<wbr>Response</a></span>
     </dt>
-    <dd>{{% md %}}The RosettaNet process configuration activity settings.{{% /md %}}</dd>
-    <dt class="property-"
+    <dd>{{% md %}}The RosettaNet process configuration activity settings.{{% /md %}}</dd><dt class="property-"
             title="">
         <span id="changedtime_nodejs">
 <a href="#changedtime_nodejs" style="color: inherit; text-decoration: inherit;">changed<wbr>Time</a>
@@ -493,8 +436,7 @@ The following output properties are available:
         <span class="property-indicator"></span>
         <span class="property-type">string</span>
     </dt>
-    <dd>{{% md %}}The changed time.{{% /md %}}</dd>
-    <dt class="property-"
+    <dd>{{% md %}}The changed time.{{% /md %}}</dd><dt class="property-"
             title="">
         <span id="createdtime_nodejs">
 <a href="#createdtime_nodejs" style="color: inherit; text-decoration: inherit;">created<wbr>Time</a>
@@ -502,8 +444,7 @@ The following output properties are available:
         <span class="property-indicator"></span>
         <span class="property-type">string</span>
     </dt>
-    <dd>{{% md %}}The created time.{{% /md %}}</dd>
-    <dt class="property-"
+    <dd>{{% md %}}The created time.{{% /md %}}</dd><dt class="property-"
             title="">
         <span id="id_nodejs">
 <a href="#id_nodejs" style="color: inherit; text-decoration: inherit;">id</a>
@@ -511,8 +452,7 @@ The following output properties are available:
         <span class="property-indicator"></span>
         <span class="property-type">string</span>
     </dt>
-    <dd>{{% md %}}The resource id.{{% /md %}}</dd>
-    <dt class="property-"
+    <dd>{{% md %}}The resource id.{{% /md %}}</dd><dt class="property-"
             title="">
         <span id="initiatorrolesettings_nodejs">
 <a href="#initiatorrolesettings_nodejs" style="color: inherit; text-decoration: inherit;">initiator<wbr>Role<wbr>Settings</a>
@@ -520,8 +460,7 @@ The following output properties are available:
         <span class="property-indicator"></span>
         <span class="property-type"><a href="#rosettanetpiprolesettingsresponse">Rosetta<wbr>Net<wbr>Pip<wbr>Role<wbr>Settings<wbr>Response</a></span>
     </dt>
-    <dd>{{% md %}}The RosettaNet initiator role settings.{{% /md %}}</dd>
-    <dt class="property-"
+    <dd>{{% md %}}The RosettaNet initiator role settings.{{% /md %}}</dd><dt class="property-"
             title="">
         <span id="name_nodejs">
 <a href="#name_nodejs" style="color: inherit; text-decoration: inherit;">name</a>
@@ -529,8 +468,7 @@ The following output properties are available:
         <span class="property-indicator"></span>
         <span class="property-type">string</span>
     </dt>
-    <dd>{{% md %}}Gets the resource name.{{% /md %}}</dd>
-    <dt class="property-"
+    <dd>{{% md %}}Gets the resource name.{{% /md %}}</dd><dt class="property-"
             title="">
         <span id="processcode_nodejs">
 <a href="#processcode_nodejs" style="color: inherit; text-decoration: inherit;">process<wbr>Code</a>
@@ -538,8 +476,7 @@ The following output properties are available:
         <span class="property-indicator"></span>
         <span class="property-type">string</span>
     </dt>
-    <dd>{{% md %}}The integration account RosettaNet process code.{{% /md %}}</dd>
-    <dt class="property-"
+    <dd>{{% md %}}The integration account RosettaNet process code.{{% /md %}}</dd><dt class="property-"
             title="">
         <span id="processname_nodejs">
 <a href="#processname_nodejs" style="color: inherit; text-decoration: inherit;">process<wbr>Name</a>
@@ -547,8 +484,7 @@ The following output properties are available:
         <span class="property-indicator"></span>
         <span class="property-type">string</span>
     </dt>
-    <dd>{{% md %}}The integration account RosettaNet process name.{{% /md %}}</dd>
-    <dt class="property-"
+    <dd>{{% md %}}The integration account RosettaNet process name.{{% /md %}}</dd><dt class="property-"
             title="">
         <span id="processversion_nodejs">
 <a href="#processversion_nodejs" style="color: inherit; text-decoration: inherit;">process<wbr>Version</a>
@@ -556,8 +492,7 @@ The following output properties are available:
         <span class="property-indicator"></span>
         <span class="property-type">string</span>
     </dt>
-    <dd>{{% md %}}The integration account RosettaNet process version.{{% /md %}}</dd>
-    <dt class="property-"
+    <dd>{{% md %}}The integration account RosettaNet process version.{{% /md %}}</dd><dt class="property-"
             title="">
         <span id="responderrolesettings_nodejs">
 <a href="#responderrolesettings_nodejs" style="color: inherit; text-decoration: inherit;">responder<wbr>Role<wbr>Settings</a>
@@ -565,8 +500,7 @@ The following output properties are available:
         <span class="property-indicator"></span>
         <span class="property-type"><a href="#rosettanetpiprolesettingsresponse">Rosetta<wbr>Net<wbr>Pip<wbr>Role<wbr>Settings<wbr>Response</a></span>
     </dt>
-    <dd>{{% md %}}The RosettaNet responder role settings.{{% /md %}}</dd>
-    <dt class="property-"
+    <dd>{{% md %}}The RosettaNet responder role settings.{{% /md %}}</dd><dt class="property-"
             title="">
         <span id="type_nodejs">
 <a href="#type_nodejs" style="color: inherit; text-decoration: inherit;">type</a>
@@ -574,8 +508,7 @@ The following output properties are available:
         <span class="property-indicator"></span>
         <span class="property-type">string</span>
     </dt>
-    <dd>{{% md %}}Gets the resource type.{{% /md %}}</dd>
-    <dt class="property-"
+    <dd>{{% md %}}Gets the resource type.{{% /md %}}</dd><dt class="property-"
             title="">
         <span id="description_nodejs">
 <a href="#description_nodejs" style="color: inherit; text-decoration: inherit;">description</a>
@@ -583,8 +516,7 @@ The following output properties are available:
         <span class="property-indicator"></span>
         <span class="property-type">string</span>
     </dt>
-    <dd>{{% md %}}The integration account RosettaNet ProcessConfiguration properties.{{% /md %}}</dd>
-    <dt class="property-"
+    <dd>{{% md %}}The integration account RosettaNet ProcessConfiguration properties.{{% /md %}}</dd><dt class="property-"
             title="">
         <span id="location_nodejs">
 <a href="#location_nodejs" style="color: inherit; text-decoration: inherit;">location</a>
@@ -592,8 +524,7 @@ The following output properties are available:
         <span class="property-indicator"></span>
         <span class="property-type">string</span>
     </dt>
-    <dd>{{% md %}}The resource location.{{% /md %}}</dd>
-    <dt class="property-"
+    <dd>{{% md %}}The resource location.{{% /md %}}</dd><dt class="property-"
             title="">
         <span id="metadata_nodejs">
 <a href="#metadata_nodejs" style="color: inherit; text-decoration: inherit;">metadata</a>
@@ -601,8 +532,7 @@ The following output properties are available:
         <span class="property-indicator"></span>
         <span class="property-type">{[key: string]: string}</span>
     </dt>
-    <dd>{{% md %}}The metadata.{{% /md %}}</dd>
-    <dt class="property-"
+    <dd>{{% md %}}The metadata.{{% /md %}}</dd><dt class="property-"
             title="">
         <span id="tags_nodejs">
 <a href="#tags_nodejs" style="color: inherit; text-decoration: inherit;">tags</a>
@@ -610,14 +540,11 @@ The following output properties are available:
         <span class="property-indicator"></span>
         <span class="property-type">{[key: string]: string}</span>
     </dt>
-    <dd>{{% md %}}The resource tags.{{% /md %}}</dd>
-</dl>
+    <dd>{{% md %}}The resource tags.{{% /md %}}</dd></dl>
 {{% /choosable %}}
 
 {{% choosable language python %}}
-<dl class="resources-properties">
-
-    <dt class="property-"
+<dl class="resources-properties"><dt class="property-"
             title="">
         <span id="activity_settings_python">
 <a href="#activity_settings_python" style="color: inherit; text-decoration: inherit;">activity_<wbr>settings</a>
@@ -625,8 +552,7 @@ The following output properties are available:
         <span class="property-indicator"></span>
         <span class="property-type"><a href="#rosettanetpipactivitysettingsresponse">Rosetta<wbr>Net<wbr>Pip<wbr>Activity<wbr>Settings<wbr>Response</a></span>
     </dt>
-    <dd>{{% md %}}The RosettaNet process configuration activity settings.{{% /md %}}</dd>
-    <dt class="property-"
+    <dd>{{% md %}}The RosettaNet process configuration activity settings.{{% /md %}}</dd><dt class="property-"
             title="">
         <span id="changed_time_python">
 <a href="#changed_time_python" style="color: inherit; text-decoration: inherit;">changed_<wbr>time</a>
@@ -634,8 +560,7 @@ The following output properties are available:
         <span class="property-indicator"></span>
         <span class="property-type">str</span>
     </dt>
-    <dd>{{% md %}}The changed time.{{% /md %}}</dd>
-    <dt class="property-"
+    <dd>{{% md %}}The changed time.{{% /md %}}</dd><dt class="property-"
             title="">
         <span id="created_time_python">
 <a href="#created_time_python" style="color: inherit; text-decoration: inherit;">created_<wbr>time</a>
@@ -643,8 +568,7 @@ The following output properties are available:
         <span class="property-indicator"></span>
         <span class="property-type">str</span>
     </dt>
-    <dd>{{% md %}}The created time.{{% /md %}}</dd>
-    <dt class="property-"
+    <dd>{{% md %}}The created time.{{% /md %}}</dd><dt class="property-"
             title="">
         <span id="id_python">
 <a href="#id_python" style="color: inherit; text-decoration: inherit;">id</a>
@@ -652,8 +576,7 @@ The following output properties are available:
         <span class="property-indicator"></span>
         <span class="property-type">str</span>
     </dt>
-    <dd>{{% md %}}The resource id.{{% /md %}}</dd>
-    <dt class="property-"
+    <dd>{{% md %}}The resource id.{{% /md %}}</dd><dt class="property-"
             title="">
         <span id="initiator_role_settings_python">
 <a href="#initiator_role_settings_python" style="color: inherit; text-decoration: inherit;">initiator_<wbr>role_<wbr>settings</a>
@@ -661,8 +584,7 @@ The following output properties are available:
         <span class="property-indicator"></span>
         <span class="property-type"><a href="#rosettanetpiprolesettingsresponse">Rosetta<wbr>Net<wbr>Pip<wbr>Role<wbr>Settings<wbr>Response</a></span>
     </dt>
-    <dd>{{% md %}}The RosettaNet initiator role settings.{{% /md %}}</dd>
-    <dt class="property-"
+    <dd>{{% md %}}The RosettaNet initiator role settings.{{% /md %}}</dd><dt class="property-"
             title="">
         <span id="name_python">
 <a href="#name_python" style="color: inherit; text-decoration: inherit;">name</a>
@@ -670,8 +592,7 @@ The following output properties are available:
         <span class="property-indicator"></span>
         <span class="property-type">str</span>
     </dt>
-    <dd>{{% md %}}Gets the resource name.{{% /md %}}</dd>
-    <dt class="property-"
+    <dd>{{% md %}}Gets the resource name.{{% /md %}}</dd><dt class="property-"
             title="">
         <span id="process_code_python">
 <a href="#process_code_python" style="color: inherit; text-decoration: inherit;">process_<wbr>code</a>
@@ -679,8 +600,7 @@ The following output properties are available:
         <span class="property-indicator"></span>
         <span class="property-type">str</span>
     </dt>
-    <dd>{{% md %}}The integration account RosettaNet process code.{{% /md %}}</dd>
-    <dt class="property-"
+    <dd>{{% md %}}The integration account RosettaNet process code.{{% /md %}}</dd><dt class="property-"
             title="">
         <span id="process_name_python">
 <a href="#process_name_python" style="color: inherit; text-decoration: inherit;">process_<wbr>name</a>
@@ -688,8 +608,7 @@ The following output properties are available:
         <span class="property-indicator"></span>
         <span class="property-type">str</span>
     </dt>
-    <dd>{{% md %}}The integration account RosettaNet process name.{{% /md %}}</dd>
-    <dt class="property-"
+    <dd>{{% md %}}The integration account RosettaNet process name.{{% /md %}}</dd><dt class="property-"
             title="">
         <span id="process_version_python">
 <a href="#process_version_python" style="color: inherit; text-decoration: inherit;">process_<wbr>version</a>
@@ -697,8 +616,7 @@ The following output properties are available:
         <span class="property-indicator"></span>
         <span class="property-type">str</span>
     </dt>
-    <dd>{{% md %}}The integration account RosettaNet process version.{{% /md %}}</dd>
-    <dt class="property-"
+    <dd>{{% md %}}The integration account RosettaNet process version.{{% /md %}}</dd><dt class="property-"
             title="">
         <span id="responder_role_settings_python">
 <a href="#responder_role_settings_python" style="color: inherit; text-decoration: inherit;">responder_<wbr>role_<wbr>settings</a>
@@ -706,8 +624,7 @@ The following output properties are available:
         <span class="property-indicator"></span>
         <span class="property-type"><a href="#rosettanetpiprolesettingsresponse">Rosetta<wbr>Net<wbr>Pip<wbr>Role<wbr>Settings<wbr>Response</a></span>
     </dt>
-    <dd>{{% md %}}The RosettaNet responder role settings.{{% /md %}}</dd>
-    <dt class="property-"
+    <dd>{{% md %}}The RosettaNet responder role settings.{{% /md %}}</dd><dt class="property-"
             title="">
         <span id="type_python">
 <a href="#type_python" style="color: inherit; text-decoration: inherit;">type</a>
@@ -715,8 +632,7 @@ The following output properties are available:
         <span class="property-indicator"></span>
         <span class="property-type">str</span>
     </dt>
-    <dd>{{% md %}}Gets the resource type.{{% /md %}}</dd>
-    <dt class="property-"
+    <dd>{{% md %}}Gets the resource type.{{% /md %}}</dd><dt class="property-"
             title="">
         <span id="description_python">
 <a href="#description_python" style="color: inherit; text-decoration: inherit;">description</a>
@@ -724,8 +640,7 @@ The following output properties are available:
         <span class="property-indicator"></span>
         <span class="property-type">str</span>
     </dt>
-    <dd>{{% md %}}The integration account RosettaNet ProcessConfiguration properties.{{% /md %}}</dd>
-    <dt class="property-"
+    <dd>{{% md %}}The integration account RosettaNet ProcessConfiguration properties.{{% /md %}}</dd><dt class="property-"
             title="">
         <span id="location_python">
 <a href="#location_python" style="color: inherit; text-decoration: inherit;">location</a>
@@ -733,8 +648,7 @@ The following output properties are available:
         <span class="property-indicator"></span>
         <span class="property-type">str</span>
     </dt>
-    <dd>{{% md %}}The resource location.{{% /md %}}</dd>
-    <dt class="property-"
+    <dd>{{% md %}}The resource location.{{% /md %}}</dd><dt class="property-"
             title="">
         <span id="metadata_python">
 <a href="#metadata_python" style="color: inherit; text-decoration: inherit;">metadata</a>
@@ -742,8 +656,7 @@ The following output properties are available:
         <span class="property-indicator"></span>
         <span class="property-type">Mapping[str, str]</span>
     </dt>
-    <dd>{{% md %}}The metadata.{{% /md %}}</dd>
-    <dt class="property-"
+    <dd>{{% md %}}The metadata.{{% /md %}}</dd><dt class="property-"
             title="">
         <span id="tags_python">
 <a href="#tags_python" style="color: inherit; text-decoration: inherit;">tags</a>
@@ -751,8 +664,7 @@ The following output properties are available:
         <span class="property-indicator"></span>
         <span class="property-type">Mapping[str, str]</span>
     </dt>
-    <dd>{{% md %}}The resource tags.{{% /md %}}</dd>
-</dl>
+    <dd>{{% md %}}The resource tags.{{% /md %}}</dd></dl>
 {{% /choosable %}}
 
 
@@ -766,9 +678,7 @@ The following output properties are available:
 
 
 {{% choosable language csharp %}}
-<dl class="resources-properties">
-
-    <dt class="property-required"
+<dl class="resources-properties"><dt class="property-required"
             title="Required">
         <span id="isnonrepudiationrequired_csharp">
 <a href="#isnonrepudiationrequired_csharp" style="color: inherit; text-decoration: inherit;">Is<wbr>Non<wbr>Repudiation<wbr>Required</a>
@@ -776,8 +686,7 @@ The following output properties are available:
         <span class="property-indicator"></span>
         <span class="property-type">bool</span>
     </dt>
-    <dd>{{% md %}}The non-repudiation is required or not.{{% /md %}}</dd>
-    <dt class="property-required"
+    <dd>{{% md %}}The non-repudiation is required or not.{{% /md %}}</dd><dt class="property-required"
             title="Required">
         <span id="timetoacknowledgeinseconds_csharp">
 <a href="#timetoacknowledgeinseconds_csharp" style="color: inherit; text-decoration: inherit;">Time<wbr>To<wbr>Acknowledge<wbr>In<wbr>Seconds</a>
@@ -785,14 +694,11 @@ The following output properties are available:
         <span class="property-indicator"></span>
         <span class="property-type">int</span>
     </dt>
-    <dd>{{% md %}}The time to acknowledge in seconds.{{% /md %}}</dd>
-</dl>
+    <dd>{{% md %}}The time to acknowledge in seconds.{{% /md %}}</dd></dl>
 {{% /choosable %}}
 
 {{% choosable language go %}}
-<dl class="resources-properties">
-
-    <dt class="property-required"
+<dl class="resources-properties"><dt class="property-required"
             title="Required">
         <span id="isnonrepudiationrequired_go">
 <a href="#isnonrepudiationrequired_go" style="color: inherit; text-decoration: inherit;">Is<wbr>Non<wbr>Repudiation<wbr>Required</a>
@@ -800,8 +706,7 @@ The following output properties are available:
         <span class="property-indicator"></span>
         <span class="property-type">bool</span>
     </dt>
-    <dd>{{% md %}}The non-repudiation is required or not.{{% /md %}}</dd>
-    <dt class="property-required"
+    <dd>{{% md %}}The non-repudiation is required or not.{{% /md %}}</dd><dt class="property-required"
             title="Required">
         <span id="timetoacknowledgeinseconds_go">
 <a href="#timetoacknowledgeinseconds_go" style="color: inherit; text-decoration: inherit;">Time<wbr>To<wbr>Acknowledge<wbr>In<wbr>Seconds</a>
@@ -809,14 +714,11 @@ The following output properties are available:
         <span class="property-indicator"></span>
         <span class="property-type">int</span>
     </dt>
-    <dd>{{% md %}}The time to acknowledge in seconds.{{% /md %}}</dd>
-</dl>
+    <dd>{{% md %}}The time to acknowledge in seconds.{{% /md %}}</dd></dl>
 {{% /choosable %}}
 
 {{% choosable language nodejs %}}
-<dl class="resources-properties">
-
-    <dt class="property-required"
+<dl class="resources-properties"><dt class="property-required"
             title="Required">
         <span id="isnonrepudiationrequired_nodejs">
 <a href="#isnonrepudiationrequired_nodejs" style="color: inherit; text-decoration: inherit;">is<wbr>Non<wbr>Repudiation<wbr>Required</a>
@@ -824,8 +726,7 @@ The following output properties are available:
         <span class="property-indicator"></span>
         <span class="property-type">boolean</span>
     </dt>
-    <dd>{{% md %}}The non-repudiation is required or not.{{% /md %}}</dd>
-    <dt class="property-required"
+    <dd>{{% md %}}The non-repudiation is required or not.{{% /md %}}</dd><dt class="property-required"
             title="Required">
         <span id="timetoacknowledgeinseconds_nodejs">
 <a href="#timetoacknowledgeinseconds_nodejs" style="color: inherit; text-decoration: inherit;">time<wbr>To<wbr>Acknowledge<wbr>In<wbr>Seconds</a>
@@ -833,14 +734,11 @@ The following output properties are available:
         <span class="property-indicator"></span>
         <span class="property-type">number</span>
     </dt>
-    <dd>{{% md %}}The time to acknowledge in seconds.{{% /md %}}</dd>
-</dl>
+    <dd>{{% md %}}The time to acknowledge in seconds.{{% /md %}}</dd></dl>
 {{% /choosable %}}
 
 {{% choosable language python %}}
-<dl class="resources-properties">
-
-    <dt class="property-required"
+<dl class="resources-properties"><dt class="property-required"
             title="Required">
         <span id="is_non_repudiation_required_python">
 <a href="#is_non_repudiation_required_python" style="color: inherit; text-decoration: inherit;">is_<wbr>non_<wbr>repudiation_<wbr>required</a>
@@ -848,8 +746,7 @@ The following output properties are available:
         <span class="property-indicator"></span>
         <span class="property-type">bool</span>
     </dt>
-    <dd>{{% md %}}The non-repudiation is required or not.{{% /md %}}</dd>
-    <dt class="property-required"
+    <dd>{{% md %}}The non-repudiation is required or not.{{% /md %}}</dd><dt class="property-required"
             title="Required">
         <span id="time_to_acknowledge_in_seconds_python">
 <a href="#time_to_acknowledge_in_seconds_python" style="color: inherit; text-decoration: inherit;">time_<wbr>to_<wbr>acknowledge_<wbr>in_<wbr>seconds</a>
@@ -857,8 +754,7 @@ The following output properties are available:
         <span class="property-indicator"></span>
         <span class="property-type">int</span>
     </dt>
-    <dd>{{% md %}}The time to acknowledge in seconds.{{% /md %}}</dd>
-</dl>
+    <dd>{{% md %}}The time to acknowledge in seconds.{{% /md %}}</dd></dl>
 {{% /choosable %}}
 
 <h4 id="rosettanetpipactivitybehaviorresponse">Rosetta<wbr>Net<wbr>Pip<wbr>Activity<wbr>Behavior<wbr>Response</h4>
@@ -866,9 +762,7 @@ The following output properties are available:
 
 
 {{% choosable language csharp %}}
-<dl class="resources-properties">
-
-    <dt class="property-required"
+<dl class="resources-properties"><dt class="property-required"
             title="Required">
         <span id="actiontype_csharp">
 <a href="#actiontype_csharp" style="color: inherit; text-decoration: inherit;">Action<wbr>Type</a>
@@ -876,8 +770,7 @@ The following output properties are available:
         <span class="property-indicator"></span>
         <span class="property-type">string</span>
     </dt>
-    <dd>{{% md %}}The value indicating whether the RosettaNet PIP is used for a single action.{{% /md %}}</dd>
-    <dt class="property-required"
+    <dd>{{% md %}}The value indicating whether the RosettaNet PIP is used for a single action.{{% /md %}}</dd><dt class="property-required"
             title="Required">
         <span id="isauthorizationrequired_csharp">
 <a href="#isauthorizationrequired_csharp" style="color: inherit; text-decoration: inherit;">Is<wbr>Authorization<wbr>Required</a>
@@ -885,8 +778,7 @@ The following output properties are available:
         <span class="property-indicator"></span>
         <span class="property-type">bool</span>
     </dt>
-    <dd>{{% md %}}The value indicating whether authorization is required.{{% /md %}}</dd>
-    <dt class="property-required"
+    <dd>{{% md %}}The value indicating whether authorization is required.{{% /md %}}</dd><dt class="property-required"
             title="Required">
         <span id="issecuredtransportrequired_csharp">
 <a href="#issecuredtransportrequired_csharp" style="color: inherit; text-decoration: inherit;">Is<wbr>Secured<wbr>Transport<wbr>Required</a>
@@ -894,8 +786,7 @@ The following output properties are available:
         <span class="property-indicator"></span>
         <span class="property-type">bool</span>
     </dt>
-    <dd>{{% md %}}The value indicating whether secured transport is required.{{% /md %}}</dd>
-    <dt class="property-required"
+    <dd>{{% md %}}The value indicating whether secured transport is required.{{% /md %}}</dd><dt class="property-required"
             title="Required">
         <span id="nonrepudiationoforiginandcontent_csharp">
 <a href="#nonrepudiationoforiginandcontent_csharp" style="color: inherit; text-decoration: inherit;">Non<wbr>Repudiation<wbr>Of<wbr>Origin<wbr>And<wbr>Content</a>
@@ -903,8 +794,7 @@ The following output properties are available:
         <span class="property-indicator"></span>
         <span class="property-type">bool</span>
     </dt>
-    <dd>{{% md %}}The value indicating whether non-repudiation is for origin and content.{{% /md %}}</dd>
-    <dt class="property-required"
+    <dd>{{% md %}}The value indicating whether non-repudiation is for origin and content.{{% /md %}}</dd><dt class="property-required"
             title="Required">
         <span id="persistentconfidentialityscope_csharp">
 <a href="#persistentconfidentialityscope_csharp" style="color: inherit; text-decoration: inherit;">Persistent<wbr>Confidentiality<wbr>Scope</a>
@@ -912,8 +802,7 @@ The following output properties are available:
         <span class="property-indicator"></span>
         <span class="property-type">string</span>
     </dt>
-    <dd>{{% md %}}The persistent confidentiality encryption scope.{{% /md %}}</dd>
-    <dt class="property-required"
+    <dd>{{% md %}}The persistent confidentiality encryption scope.{{% /md %}}</dd><dt class="property-required"
             title="Required">
         <span id="responsetype_csharp">
 <a href="#responsetype_csharp" style="color: inherit; text-decoration: inherit;">Response<wbr>Type</a>
@@ -921,8 +810,7 @@ The following output properties are available:
         <span class="property-indicator"></span>
         <span class="property-type">string</span>
     </dt>
-    <dd>{{% md %}}The value indicating whether the RosettaNet PIP communication is synchronous.{{% /md %}}</dd>
-    <dt class="property-required"
+    <dd>{{% md %}}The value indicating whether the RosettaNet PIP communication is synchronous.{{% /md %}}</dd><dt class="property-required"
             title="Required">
         <span id="retrycount_csharp">
 <a href="#retrycount_csharp" style="color: inherit; text-decoration: inherit;">Retry<wbr>Count</a>
@@ -930,8 +818,7 @@ The following output properties are available:
         <span class="property-indicator"></span>
         <span class="property-type">int</span>
     </dt>
-    <dd>{{% md %}}The value indicating retry count.{{% /md %}}</dd>
-    <dt class="property-required"
+    <dd>{{% md %}}The value indicating retry count.{{% /md %}}</dd><dt class="property-required"
             title="Required">
         <span id="timetoperforminseconds_csharp">
 <a href="#timetoperforminseconds_csharp" style="color: inherit; text-decoration: inherit;">Time<wbr>To<wbr>Perform<wbr>In<wbr>Seconds</a>
@@ -939,14 +826,11 @@ The following output properties are available:
         <span class="property-indicator"></span>
         <span class="property-type">int</span>
     </dt>
-    <dd>{{% md %}}The time to perform in seconds.{{% /md %}}</dd>
-</dl>
+    <dd>{{% md %}}The time to perform in seconds.{{% /md %}}</dd></dl>
 {{% /choosable %}}
 
 {{% choosable language go %}}
-<dl class="resources-properties">
-
-    <dt class="property-required"
+<dl class="resources-properties"><dt class="property-required"
             title="Required">
         <span id="actiontype_go">
 <a href="#actiontype_go" style="color: inherit; text-decoration: inherit;">Action<wbr>Type</a>
@@ -954,8 +838,7 @@ The following output properties are available:
         <span class="property-indicator"></span>
         <span class="property-type">string</span>
     </dt>
-    <dd>{{% md %}}The value indicating whether the RosettaNet PIP is used for a single action.{{% /md %}}</dd>
-    <dt class="property-required"
+    <dd>{{% md %}}The value indicating whether the RosettaNet PIP is used for a single action.{{% /md %}}</dd><dt class="property-required"
             title="Required">
         <span id="isauthorizationrequired_go">
 <a href="#isauthorizationrequired_go" style="color: inherit; text-decoration: inherit;">Is<wbr>Authorization<wbr>Required</a>
@@ -963,8 +846,7 @@ The following output properties are available:
         <span class="property-indicator"></span>
         <span class="property-type">bool</span>
     </dt>
-    <dd>{{% md %}}The value indicating whether authorization is required.{{% /md %}}</dd>
-    <dt class="property-required"
+    <dd>{{% md %}}The value indicating whether authorization is required.{{% /md %}}</dd><dt class="property-required"
             title="Required">
         <span id="issecuredtransportrequired_go">
 <a href="#issecuredtransportrequired_go" style="color: inherit; text-decoration: inherit;">Is<wbr>Secured<wbr>Transport<wbr>Required</a>
@@ -972,8 +854,7 @@ The following output properties are available:
         <span class="property-indicator"></span>
         <span class="property-type">bool</span>
     </dt>
-    <dd>{{% md %}}The value indicating whether secured transport is required.{{% /md %}}</dd>
-    <dt class="property-required"
+    <dd>{{% md %}}The value indicating whether secured transport is required.{{% /md %}}</dd><dt class="property-required"
             title="Required">
         <span id="nonrepudiationoforiginandcontent_go">
 <a href="#nonrepudiationoforiginandcontent_go" style="color: inherit; text-decoration: inherit;">Non<wbr>Repudiation<wbr>Of<wbr>Origin<wbr>And<wbr>Content</a>
@@ -981,8 +862,7 @@ The following output properties are available:
         <span class="property-indicator"></span>
         <span class="property-type">bool</span>
     </dt>
-    <dd>{{% md %}}The value indicating whether non-repudiation is for origin and content.{{% /md %}}</dd>
-    <dt class="property-required"
+    <dd>{{% md %}}The value indicating whether non-repudiation is for origin and content.{{% /md %}}</dd><dt class="property-required"
             title="Required">
         <span id="persistentconfidentialityscope_go">
 <a href="#persistentconfidentialityscope_go" style="color: inherit; text-decoration: inherit;">Persistent<wbr>Confidentiality<wbr>Scope</a>
@@ -990,8 +870,7 @@ The following output properties are available:
         <span class="property-indicator"></span>
         <span class="property-type">string</span>
     </dt>
-    <dd>{{% md %}}The persistent confidentiality encryption scope.{{% /md %}}</dd>
-    <dt class="property-required"
+    <dd>{{% md %}}The persistent confidentiality encryption scope.{{% /md %}}</dd><dt class="property-required"
             title="Required">
         <span id="responsetype_go">
 <a href="#responsetype_go" style="color: inherit; text-decoration: inherit;">Response<wbr>Type</a>
@@ -999,8 +878,7 @@ The following output properties are available:
         <span class="property-indicator"></span>
         <span class="property-type">string</span>
     </dt>
-    <dd>{{% md %}}The value indicating whether the RosettaNet PIP communication is synchronous.{{% /md %}}</dd>
-    <dt class="property-required"
+    <dd>{{% md %}}The value indicating whether the RosettaNet PIP communication is synchronous.{{% /md %}}</dd><dt class="property-required"
             title="Required">
         <span id="retrycount_go">
 <a href="#retrycount_go" style="color: inherit; text-decoration: inherit;">Retry<wbr>Count</a>
@@ -1008,8 +886,7 @@ The following output properties are available:
         <span class="property-indicator"></span>
         <span class="property-type">int</span>
     </dt>
-    <dd>{{% md %}}The value indicating retry count.{{% /md %}}</dd>
-    <dt class="property-required"
+    <dd>{{% md %}}The value indicating retry count.{{% /md %}}</dd><dt class="property-required"
             title="Required">
         <span id="timetoperforminseconds_go">
 <a href="#timetoperforminseconds_go" style="color: inherit; text-decoration: inherit;">Time<wbr>To<wbr>Perform<wbr>In<wbr>Seconds</a>
@@ -1017,14 +894,11 @@ The following output properties are available:
         <span class="property-indicator"></span>
         <span class="property-type">int</span>
     </dt>
-    <dd>{{% md %}}The time to perform in seconds.{{% /md %}}</dd>
-</dl>
+    <dd>{{% md %}}The time to perform in seconds.{{% /md %}}</dd></dl>
 {{% /choosable %}}
 
 {{% choosable language nodejs %}}
-<dl class="resources-properties">
-
-    <dt class="property-required"
+<dl class="resources-properties"><dt class="property-required"
             title="Required">
         <span id="actiontype_nodejs">
 <a href="#actiontype_nodejs" style="color: inherit; text-decoration: inherit;">action<wbr>Type</a>
@@ -1032,8 +906,7 @@ The following output properties are available:
         <span class="property-indicator"></span>
         <span class="property-type">string</span>
     </dt>
-    <dd>{{% md %}}The value indicating whether the RosettaNet PIP is used for a single action.{{% /md %}}</dd>
-    <dt class="property-required"
+    <dd>{{% md %}}The value indicating whether the RosettaNet PIP is used for a single action.{{% /md %}}</dd><dt class="property-required"
             title="Required">
         <span id="isauthorizationrequired_nodejs">
 <a href="#isauthorizationrequired_nodejs" style="color: inherit; text-decoration: inherit;">is<wbr>Authorization<wbr>Required</a>
@@ -1041,8 +914,7 @@ The following output properties are available:
         <span class="property-indicator"></span>
         <span class="property-type">boolean</span>
     </dt>
-    <dd>{{% md %}}The value indicating whether authorization is required.{{% /md %}}</dd>
-    <dt class="property-required"
+    <dd>{{% md %}}The value indicating whether authorization is required.{{% /md %}}</dd><dt class="property-required"
             title="Required">
         <span id="issecuredtransportrequired_nodejs">
 <a href="#issecuredtransportrequired_nodejs" style="color: inherit; text-decoration: inherit;">is<wbr>Secured<wbr>Transport<wbr>Required</a>
@@ -1050,8 +922,7 @@ The following output properties are available:
         <span class="property-indicator"></span>
         <span class="property-type">boolean</span>
     </dt>
-    <dd>{{% md %}}The value indicating whether secured transport is required.{{% /md %}}</dd>
-    <dt class="property-required"
+    <dd>{{% md %}}The value indicating whether secured transport is required.{{% /md %}}</dd><dt class="property-required"
             title="Required">
         <span id="nonrepudiationoforiginandcontent_nodejs">
 <a href="#nonrepudiationoforiginandcontent_nodejs" style="color: inherit; text-decoration: inherit;">non<wbr>Repudiation<wbr>Of<wbr>Origin<wbr>And<wbr>Content</a>
@@ -1059,8 +930,7 @@ The following output properties are available:
         <span class="property-indicator"></span>
         <span class="property-type">boolean</span>
     </dt>
-    <dd>{{% md %}}The value indicating whether non-repudiation is for origin and content.{{% /md %}}</dd>
-    <dt class="property-required"
+    <dd>{{% md %}}The value indicating whether non-repudiation is for origin and content.{{% /md %}}</dd><dt class="property-required"
             title="Required">
         <span id="persistentconfidentialityscope_nodejs">
 <a href="#persistentconfidentialityscope_nodejs" style="color: inherit; text-decoration: inherit;">persistent<wbr>Confidentiality<wbr>Scope</a>
@@ -1068,8 +938,7 @@ The following output properties are available:
         <span class="property-indicator"></span>
         <span class="property-type">string</span>
     </dt>
-    <dd>{{% md %}}The persistent confidentiality encryption scope.{{% /md %}}</dd>
-    <dt class="property-required"
+    <dd>{{% md %}}The persistent confidentiality encryption scope.{{% /md %}}</dd><dt class="property-required"
             title="Required">
         <span id="responsetype_nodejs">
 <a href="#responsetype_nodejs" style="color: inherit; text-decoration: inherit;">response<wbr>Type</a>
@@ -1077,8 +946,7 @@ The following output properties are available:
         <span class="property-indicator"></span>
         <span class="property-type">string</span>
     </dt>
-    <dd>{{% md %}}The value indicating whether the RosettaNet PIP communication is synchronous.{{% /md %}}</dd>
-    <dt class="property-required"
+    <dd>{{% md %}}The value indicating whether the RosettaNet PIP communication is synchronous.{{% /md %}}</dd><dt class="property-required"
             title="Required">
         <span id="retrycount_nodejs">
 <a href="#retrycount_nodejs" style="color: inherit; text-decoration: inherit;">retry<wbr>Count</a>
@@ -1086,8 +954,7 @@ The following output properties are available:
         <span class="property-indicator"></span>
         <span class="property-type">number</span>
     </dt>
-    <dd>{{% md %}}The value indicating retry count.{{% /md %}}</dd>
-    <dt class="property-required"
+    <dd>{{% md %}}The value indicating retry count.{{% /md %}}</dd><dt class="property-required"
             title="Required">
         <span id="timetoperforminseconds_nodejs">
 <a href="#timetoperforminseconds_nodejs" style="color: inherit; text-decoration: inherit;">time<wbr>To<wbr>Perform<wbr>In<wbr>Seconds</a>
@@ -1095,14 +962,11 @@ The following output properties are available:
         <span class="property-indicator"></span>
         <span class="property-type">number</span>
     </dt>
-    <dd>{{% md %}}The time to perform in seconds.{{% /md %}}</dd>
-</dl>
+    <dd>{{% md %}}The time to perform in seconds.{{% /md %}}</dd></dl>
 {{% /choosable %}}
 
 {{% choosable language python %}}
-<dl class="resources-properties">
-
-    <dt class="property-required"
+<dl class="resources-properties"><dt class="property-required"
             title="Required">
         <span id="action_type_python">
 <a href="#action_type_python" style="color: inherit; text-decoration: inherit;">action_<wbr>type</a>
@@ -1110,8 +974,7 @@ The following output properties are available:
         <span class="property-indicator"></span>
         <span class="property-type">str</span>
     </dt>
-    <dd>{{% md %}}The value indicating whether the RosettaNet PIP is used for a single action.{{% /md %}}</dd>
-    <dt class="property-required"
+    <dd>{{% md %}}The value indicating whether the RosettaNet PIP is used for a single action.{{% /md %}}</dd><dt class="property-required"
             title="Required">
         <span id="is_authorization_required_python">
 <a href="#is_authorization_required_python" style="color: inherit; text-decoration: inherit;">is_<wbr>authorization_<wbr>required</a>
@@ -1119,8 +982,7 @@ The following output properties are available:
         <span class="property-indicator"></span>
         <span class="property-type">bool</span>
     </dt>
-    <dd>{{% md %}}The value indicating whether authorization is required.{{% /md %}}</dd>
-    <dt class="property-required"
+    <dd>{{% md %}}The value indicating whether authorization is required.{{% /md %}}</dd><dt class="property-required"
             title="Required">
         <span id="is_secured_transport_required_python">
 <a href="#is_secured_transport_required_python" style="color: inherit; text-decoration: inherit;">is_<wbr>secured_<wbr>transport_<wbr>required</a>
@@ -1128,8 +990,7 @@ The following output properties are available:
         <span class="property-indicator"></span>
         <span class="property-type">bool</span>
     </dt>
-    <dd>{{% md %}}The value indicating whether secured transport is required.{{% /md %}}</dd>
-    <dt class="property-required"
+    <dd>{{% md %}}The value indicating whether secured transport is required.{{% /md %}}</dd><dt class="property-required"
             title="Required">
         <span id="non_repudiation_of_origin_and_content_python">
 <a href="#non_repudiation_of_origin_and_content_python" style="color: inherit; text-decoration: inherit;">non_<wbr>repudiation_<wbr>of_<wbr>origin_<wbr>and_<wbr>content</a>
@@ -1137,8 +998,7 @@ The following output properties are available:
         <span class="property-indicator"></span>
         <span class="property-type">bool</span>
     </dt>
-    <dd>{{% md %}}The value indicating whether non-repudiation is for origin and content.{{% /md %}}</dd>
-    <dt class="property-required"
+    <dd>{{% md %}}The value indicating whether non-repudiation is for origin and content.{{% /md %}}</dd><dt class="property-required"
             title="Required">
         <span id="persistent_confidentiality_scope_python">
 <a href="#persistent_confidentiality_scope_python" style="color: inherit; text-decoration: inherit;">persistent_<wbr>confidentiality_<wbr>scope</a>
@@ -1146,8 +1006,7 @@ The following output properties are available:
         <span class="property-indicator"></span>
         <span class="property-type">str</span>
     </dt>
-    <dd>{{% md %}}The persistent confidentiality encryption scope.{{% /md %}}</dd>
-    <dt class="property-required"
+    <dd>{{% md %}}The persistent confidentiality encryption scope.{{% /md %}}</dd><dt class="property-required"
             title="Required">
         <span id="response_type_python">
 <a href="#response_type_python" style="color: inherit; text-decoration: inherit;">response_<wbr>type</a>
@@ -1155,8 +1014,7 @@ The following output properties are available:
         <span class="property-indicator"></span>
         <span class="property-type">str</span>
     </dt>
-    <dd>{{% md %}}The value indicating whether the RosettaNet PIP communication is synchronous.{{% /md %}}</dd>
-    <dt class="property-required"
+    <dd>{{% md %}}The value indicating whether the RosettaNet PIP communication is synchronous.{{% /md %}}</dd><dt class="property-required"
             title="Required">
         <span id="retry_count_python">
 <a href="#retry_count_python" style="color: inherit; text-decoration: inherit;">retry_<wbr>count</a>
@@ -1164,8 +1022,7 @@ The following output properties are available:
         <span class="property-indicator"></span>
         <span class="property-type">int</span>
     </dt>
-    <dd>{{% md %}}The value indicating retry count.{{% /md %}}</dd>
-    <dt class="property-required"
+    <dd>{{% md %}}The value indicating retry count.{{% /md %}}</dd><dt class="property-required"
             title="Required">
         <span id="time_to_perform_in_seconds_python">
 <a href="#time_to_perform_in_seconds_python" style="color: inherit; text-decoration: inherit;">time_<wbr>to_<wbr>perform_<wbr>in_<wbr>seconds</a>
@@ -1173,8 +1030,7 @@ The following output properties are available:
         <span class="property-indicator"></span>
         <span class="property-type">int</span>
     </dt>
-    <dd>{{% md %}}The time to perform in seconds.{{% /md %}}</dd>
-</dl>
+    <dd>{{% md %}}The time to perform in seconds.{{% /md %}}</dd></dl>
 {{% /choosable %}}
 
 <h4 id="rosettanetpipactivitysettingsresponse">Rosetta<wbr>Net<wbr>Pip<wbr>Activity<wbr>Settings<wbr>Response</h4>
@@ -1182,9 +1038,7 @@ The following output properties are available:
 
 
 {{% choosable language csharp %}}
-<dl class="resources-properties">
-
-    <dt class="property-required"
+<dl class="resources-properties"><dt class="property-required"
             title="Required">
         <span id="acknowledgmentofreceiptsettings_csharp">
 <a href="#acknowledgmentofreceiptsettings_csharp" style="color: inherit; text-decoration: inherit;">Acknowledgment<wbr>Of<wbr>Receipt<wbr>Settings</a>
@@ -1192,8 +1046,7 @@ The following output properties are available:
         <span class="property-indicator"></span>
         <span class="property-type"><a href="#rosettanetpipacknowledgmentofreceiptsettingsresponse">Pulumi.<wbr>Azure<wbr>Native.<wbr>Logic.<wbr>Inputs.<wbr>Rosetta<wbr>Net<wbr>Pip<wbr>Acknowledgment<wbr>Of<wbr>Receipt<wbr>Settings<wbr>Response<wbr>Args</a></span>
     </dt>
-    <dd>{{% md %}}The RosettaNet ProcessConfiguration acknowledgement settings.{{% /md %}}</dd>
-    <dt class="property-required"
+    <dd>{{% md %}}The RosettaNet ProcessConfiguration acknowledgement settings.{{% /md %}}</dd><dt class="property-required"
             title="Required">
         <span id="activitybehavior_csharp">
 <a href="#activitybehavior_csharp" style="color: inherit; text-decoration: inherit;">Activity<wbr>Behavior</a>
@@ -1201,8 +1054,7 @@ The following output properties are available:
         <span class="property-indicator"></span>
         <span class="property-type"><a href="#rosettanetpipactivitybehaviorresponse">Pulumi.<wbr>Azure<wbr>Native.<wbr>Logic.<wbr>Inputs.<wbr>Rosetta<wbr>Net<wbr>Pip<wbr>Activity<wbr>Behavior<wbr>Response<wbr>Args</a></span>
     </dt>
-    <dd>{{% md %}}The RosettaNet ProcessConfiguration activity behavior.{{% /md %}}</dd>
-    <dt class="property-required"
+    <dd>{{% md %}}The RosettaNet ProcessConfiguration activity behavior.{{% /md %}}</dd><dt class="property-required"
             title="Required">
         <span id="activitytype_csharp">
 <a href="#activitytype_csharp" style="color: inherit; text-decoration: inherit;">Activity<wbr>Type</a>
@@ -1210,14 +1062,11 @@ The following output properties are available:
         <span class="property-indicator"></span>
         <span class="property-type">string</span>
     </dt>
-    <dd>{{% md %}}The RosettaNet ProcessConfiguration activity type.{{% /md %}}</dd>
-</dl>
+    <dd>{{% md %}}The RosettaNet ProcessConfiguration activity type.{{% /md %}}</dd></dl>
 {{% /choosable %}}
 
 {{% choosable language go %}}
-<dl class="resources-properties">
-
-    <dt class="property-required"
+<dl class="resources-properties"><dt class="property-required"
             title="Required">
         <span id="acknowledgmentofreceiptsettings_go">
 <a href="#acknowledgmentofreceiptsettings_go" style="color: inherit; text-decoration: inherit;">Acknowledgment<wbr>Of<wbr>Receipt<wbr>Settings</a>
@@ -1225,8 +1074,7 @@ The following output properties are available:
         <span class="property-indicator"></span>
         <span class="property-type"><a href="#rosettanetpipacknowledgmentofreceiptsettingsresponse">Rosetta<wbr>Net<wbr>Pip<wbr>Acknowledgment<wbr>Of<wbr>Receipt<wbr>Settings<wbr>Response</a></span>
     </dt>
-    <dd>{{% md %}}The RosettaNet ProcessConfiguration acknowledgement settings.{{% /md %}}</dd>
-    <dt class="property-required"
+    <dd>{{% md %}}The RosettaNet ProcessConfiguration acknowledgement settings.{{% /md %}}</dd><dt class="property-required"
             title="Required">
         <span id="activitybehavior_go">
 <a href="#activitybehavior_go" style="color: inherit; text-decoration: inherit;">Activity<wbr>Behavior</a>
@@ -1234,8 +1082,7 @@ The following output properties are available:
         <span class="property-indicator"></span>
         <span class="property-type"><a href="#rosettanetpipactivitybehaviorresponse">Rosetta<wbr>Net<wbr>Pip<wbr>Activity<wbr>Behavior<wbr>Response</a></span>
     </dt>
-    <dd>{{% md %}}The RosettaNet ProcessConfiguration activity behavior.{{% /md %}}</dd>
-    <dt class="property-required"
+    <dd>{{% md %}}The RosettaNet ProcessConfiguration activity behavior.{{% /md %}}</dd><dt class="property-required"
             title="Required">
         <span id="activitytype_go">
 <a href="#activitytype_go" style="color: inherit; text-decoration: inherit;">Activity<wbr>Type</a>
@@ -1243,14 +1090,11 @@ The following output properties are available:
         <span class="property-indicator"></span>
         <span class="property-type">string</span>
     </dt>
-    <dd>{{% md %}}The RosettaNet ProcessConfiguration activity type.{{% /md %}}</dd>
-</dl>
+    <dd>{{% md %}}The RosettaNet ProcessConfiguration activity type.{{% /md %}}</dd></dl>
 {{% /choosable %}}
 
 {{% choosable language nodejs %}}
-<dl class="resources-properties">
-
-    <dt class="property-required"
+<dl class="resources-properties"><dt class="property-required"
             title="Required">
         <span id="acknowledgmentofreceiptsettings_nodejs">
 <a href="#acknowledgmentofreceiptsettings_nodejs" style="color: inherit; text-decoration: inherit;">acknowledgment<wbr>Of<wbr>Receipt<wbr>Settings</a>
@@ -1258,8 +1102,7 @@ The following output properties are available:
         <span class="property-indicator"></span>
         <span class="property-type"><a href="#rosettanetpipacknowledgmentofreceiptsettingsresponse">Rosetta<wbr>Net<wbr>Pip<wbr>Acknowledgment<wbr>Of<wbr>Receipt<wbr>Settings<wbr>Response</a></span>
     </dt>
-    <dd>{{% md %}}The RosettaNet ProcessConfiguration acknowledgement settings.{{% /md %}}</dd>
-    <dt class="property-required"
+    <dd>{{% md %}}The RosettaNet ProcessConfiguration acknowledgement settings.{{% /md %}}</dd><dt class="property-required"
             title="Required">
         <span id="activitybehavior_nodejs">
 <a href="#activitybehavior_nodejs" style="color: inherit; text-decoration: inherit;">activity<wbr>Behavior</a>
@@ -1267,8 +1110,7 @@ The following output properties are available:
         <span class="property-indicator"></span>
         <span class="property-type"><a href="#rosettanetpipactivitybehaviorresponse">Rosetta<wbr>Net<wbr>Pip<wbr>Activity<wbr>Behavior<wbr>Response</a></span>
     </dt>
-    <dd>{{% md %}}The RosettaNet ProcessConfiguration activity behavior.{{% /md %}}</dd>
-    <dt class="property-required"
+    <dd>{{% md %}}The RosettaNet ProcessConfiguration activity behavior.{{% /md %}}</dd><dt class="property-required"
             title="Required">
         <span id="activitytype_nodejs">
 <a href="#activitytype_nodejs" style="color: inherit; text-decoration: inherit;">activity<wbr>Type</a>
@@ -1276,14 +1118,11 @@ The following output properties are available:
         <span class="property-indicator"></span>
         <span class="property-type">string</span>
     </dt>
-    <dd>{{% md %}}The RosettaNet ProcessConfiguration activity type.{{% /md %}}</dd>
-</dl>
+    <dd>{{% md %}}The RosettaNet ProcessConfiguration activity type.{{% /md %}}</dd></dl>
 {{% /choosable %}}
 
 {{% choosable language python %}}
-<dl class="resources-properties">
-
-    <dt class="property-required"
+<dl class="resources-properties"><dt class="property-required"
             title="Required">
         <span id="acknowledgment_of_receipt_settings_python">
 <a href="#acknowledgment_of_receipt_settings_python" style="color: inherit; text-decoration: inherit;">acknowledgment_<wbr>of_<wbr>receipt_<wbr>settings</a>
@@ -1291,8 +1130,7 @@ The following output properties are available:
         <span class="property-indicator"></span>
         <span class="property-type"><a href="#rosettanetpipacknowledgmentofreceiptsettingsresponse">Rosetta<wbr>Net<wbr>Pip<wbr>Acknowledgment<wbr>Of<wbr>Receipt<wbr>Settings<wbr>Response<wbr>Args</a></span>
     </dt>
-    <dd>{{% md %}}The RosettaNet ProcessConfiguration acknowledgement settings.{{% /md %}}</dd>
-    <dt class="property-required"
+    <dd>{{% md %}}The RosettaNet ProcessConfiguration acknowledgement settings.{{% /md %}}</dd><dt class="property-required"
             title="Required">
         <span id="activity_behavior_python">
 <a href="#activity_behavior_python" style="color: inherit; text-decoration: inherit;">activity_<wbr>behavior</a>
@@ -1300,8 +1138,7 @@ The following output properties are available:
         <span class="property-indicator"></span>
         <span class="property-type"><a href="#rosettanetpipactivitybehaviorresponse">Rosetta<wbr>Net<wbr>Pip<wbr>Activity<wbr>Behavior<wbr>Response<wbr>Args</a></span>
     </dt>
-    <dd>{{% md %}}The RosettaNet ProcessConfiguration activity behavior.{{% /md %}}</dd>
-    <dt class="property-required"
+    <dd>{{% md %}}The RosettaNet ProcessConfiguration activity behavior.{{% /md %}}</dd><dt class="property-required"
             title="Required">
         <span id="activity_type_python">
 <a href="#activity_type_python" style="color: inherit; text-decoration: inherit;">activity_<wbr>type</a>
@@ -1309,8 +1146,7 @@ The following output properties are available:
         <span class="property-indicator"></span>
         <span class="property-type">str</span>
     </dt>
-    <dd>{{% md %}}The RosettaNet ProcessConfiguration activity type.{{% /md %}}</dd>
-</dl>
+    <dd>{{% md %}}The RosettaNet ProcessConfiguration activity type.{{% /md %}}</dd></dl>
 {{% /choosable %}}
 
 <h4 id="rosettanetpipbusinessdocumentresponse">Rosetta<wbr>Net<wbr>Pip<wbr>Business<wbr>Document<wbr>Response</h4>
@@ -1318,9 +1154,7 @@ The following output properties are available:
 
 
 {{% choosable language csharp %}}
-<dl class="resources-properties">
-
-    <dt class="property-required"
+<dl class="resources-properties"><dt class="property-required"
             title="Required">
         <span id="name_csharp">
 <a href="#name_csharp" style="color: inherit; text-decoration: inherit;">Name</a>
@@ -1328,8 +1162,7 @@ The following output properties are available:
         <span class="property-indicator"></span>
         <span class="property-type">string</span>
     </dt>
-    <dd>{{% md %}}The business document name.{{% /md %}}</dd>
-    <dt class="property-required"
+    <dd>{{% md %}}The business document name.{{% /md %}}</dd><dt class="property-required"
             title="Required">
         <span id="version_csharp">
 <a href="#version_csharp" style="color: inherit; text-decoration: inherit;">Version</a>
@@ -1337,8 +1170,7 @@ The following output properties are available:
         <span class="property-indicator"></span>
         <span class="property-type">string</span>
     </dt>
-    <dd>{{% md %}}The business document version.{{% /md %}}</dd>
-    <dt class="property-optional"
+    <dd>{{% md %}}The business document version.{{% /md %}}</dd><dt class="property-optional"
             title="Optional">
         <span id="description_csharp">
 <a href="#description_csharp" style="color: inherit; text-decoration: inherit;">Description</a>
@@ -1346,14 +1178,11 @@ The following output properties are available:
         <span class="property-indicator"></span>
         <span class="property-type">string</span>
     </dt>
-    <dd>{{% md %}}The business document description.{{% /md %}}</dd>
-</dl>
+    <dd>{{% md %}}The business document description.{{% /md %}}</dd></dl>
 {{% /choosable %}}
 
 {{% choosable language go %}}
-<dl class="resources-properties">
-
-    <dt class="property-required"
+<dl class="resources-properties"><dt class="property-required"
             title="Required">
         <span id="name_go">
 <a href="#name_go" style="color: inherit; text-decoration: inherit;">Name</a>
@@ -1361,8 +1190,7 @@ The following output properties are available:
         <span class="property-indicator"></span>
         <span class="property-type">string</span>
     </dt>
-    <dd>{{% md %}}The business document name.{{% /md %}}</dd>
-    <dt class="property-required"
+    <dd>{{% md %}}The business document name.{{% /md %}}</dd><dt class="property-required"
             title="Required">
         <span id="version_go">
 <a href="#version_go" style="color: inherit; text-decoration: inherit;">Version</a>
@@ -1370,8 +1198,7 @@ The following output properties are available:
         <span class="property-indicator"></span>
         <span class="property-type">string</span>
     </dt>
-    <dd>{{% md %}}The business document version.{{% /md %}}</dd>
-    <dt class="property-optional"
+    <dd>{{% md %}}The business document version.{{% /md %}}</dd><dt class="property-optional"
             title="Optional">
         <span id="description_go">
 <a href="#description_go" style="color: inherit; text-decoration: inherit;">Description</a>
@@ -1379,14 +1206,11 @@ The following output properties are available:
         <span class="property-indicator"></span>
         <span class="property-type">string</span>
     </dt>
-    <dd>{{% md %}}The business document description.{{% /md %}}</dd>
-</dl>
+    <dd>{{% md %}}The business document description.{{% /md %}}</dd></dl>
 {{% /choosable %}}
 
 {{% choosable language nodejs %}}
-<dl class="resources-properties">
-
-    <dt class="property-required"
+<dl class="resources-properties"><dt class="property-required"
             title="Required">
         <span id="name_nodejs">
 <a href="#name_nodejs" style="color: inherit; text-decoration: inherit;">name</a>
@@ -1394,8 +1218,7 @@ The following output properties are available:
         <span class="property-indicator"></span>
         <span class="property-type">string</span>
     </dt>
-    <dd>{{% md %}}The business document name.{{% /md %}}</dd>
-    <dt class="property-required"
+    <dd>{{% md %}}The business document name.{{% /md %}}</dd><dt class="property-required"
             title="Required">
         <span id="version_nodejs">
 <a href="#version_nodejs" style="color: inherit; text-decoration: inherit;">version</a>
@@ -1403,8 +1226,7 @@ The following output properties are available:
         <span class="property-indicator"></span>
         <span class="property-type">string</span>
     </dt>
-    <dd>{{% md %}}The business document version.{{% /md %}}</dd>
-    <dt class="property-optional"
+    <dd>{{% md %}}The business document version.{{% /md %}}</dd><dt class="property-optional"
             title="Optional">
         <span id="description_nodejs">
 <a href="#description_nodejs" style="color: inherit; text-decoration: inherit;">description</a>
@@ -1412,14 +1234,11 @@ The following output properties are available:
         <span class="property-indicator"></span>
         <span class="property-type">string</span>
     </dt>
-    <dd>{{% md %}}The business document description.{{% /md %}}</dd>
-</dl>
+    <dd>{{% md %}}The business document description.{{% /md %}}</dd></dl>
 {{% /choosable %}}
 
 {{% choosable language python %}}
-<dl class="resources-properties">
-
-    <dt class="property-required"
+<dl class="resources-properties"><dt class="property-required"
             title="Required">
         <span id="name_python">
 <a href="#name_python" style="color: inherit; text-decoration: inherit;">name</a>
@@ -1427,8 +1246,7 @@ The following output properties are available:
         <span class="property-indicator"></span>
         <span class="property-type">str</span>
     </dt>
-    <dd>{{% md %}}The business document name.{{% /md %}}</dd>
-    <dt class="property-required"
+    <dd>{{% md %}}The business document name.{{% /md %}}</dd><dt class="property-required"
             title="Required">
         <span id="version_python">
 <a href="#version_python" style="color: inherit; text-decoration: inherit;">version</a>
@@ -1436,8 +1254,7 @@ The following output properties are available:
         <span class="property-indicator"></span>
         <span class="property-type">str</span>
     </dt>
-    <dd>{{% md %}}The business document version.{{% /md %}}</dd>
-    <dt class="property-optional"
+    <dd>{{% md %}}The business document version.{{% /md %}}</dd><dt class="property-optional"
             title="Optional">
         <span id="description_python">
 <a href="#description_python" style="color: inherit; text-decoration: inherit;">description</a>
@@ -1445,8 +1262,7 @@ The following output properties are available:
         <span class="property-indicator"></span>
         <span class="property-type">str</span>
     </dt>
-    <dd>{{% md %}}The business document description.{{% /md %}}</dd>
-</dl>
+    <dd>{{% md %}}The business document description.{{% /md %}}</dd></dl>
 {{% /choosable %}}
 
 <h4 id="rosettanetpiprolesettingsresponse">Rosetta<wbr>Net<wbr>Pip<wbr>Role<wbr>Settings<wbr>Response</h4>
@@ -1454,9 +1270,7 @@ The following output properties are available:
 
 
 {{% choosable language csharp %}}
-<dl class="resources-properties">
-
-    <dt class="property-required"
+<dl class="resources-properties"><dt class="property-required"
             title="Required">
         <span id="action_csharp">
 <a href="#action_csharp" style="color: inherit; text-decoration: inherit;">Action</a>
@@ -1464,8 +1278,7 @@ The following output properties are available:
         <span class="property-indicator"></span>
         <span class="property-type">string</span>
     </dt>
-    <dd>{{% md %}}The action name.{{% /md %}}</dd>
-    <dt class="property-required"
+    <dd>{{% md %}}The action name.{{% /md %}}</dd><dt class="property-required"
             title="Required">
         <span id="businessdocument_csharp">
 <a href="#businessdocument_csharp" style="color: inherit; text-decoration: inherit;">Business<wbr>Document</a>
@@ -1473,8 +1286,7 @@ The following output properties are available:
         <span class="property-indicator"></span>
         <span class="property-type"><a href="#rosettanetpipbusinessdocumentresponse">Pulumi.<wbr>Azure<wbr>Native.<wbr>Logic.<wbr>Inputs.<wbr>Rosetta<wbr>Net<wbr>Pip<wbr>Business<wbr>Document<wbr>Response<wbr>Args</a></span>
     </dt>
-    <dd>{{% md %}}The RosettaNet ProcessConfiguration business document.{{% /md %}}</dd>
-    <dt class="property-required"
+    <dd>{{% md %}}The RosettaNet ProcessConfiguration business document.{{% /md %}}</dd><dt class="property-required"
             title="Required">
         <span id="role_csharp">
 <a href="#role_csharp" style="color: inherit; text-decoration: inherit;">Role</a>
@@ -1482,8 +1294,7 @@ The following output properties are available:
         <span class="property-indicator"></span>
         <span class="property-type">string</span>
     </dt>
-    <dd>{{% md %}}The role name.{{% /md %}}</dd>
-    <dt class="property-required"
+    <dd>{{% md %}}The role name.{{% /md %}}</dd><dt class="property-required"
             title="Required">
         <span id="roletype_csharp">
 <a href="#roletype_csharp" style="color: inherit; text-decoration: inherit;">Role<wbr>Type</a>
@@ -1491,8 +1302,7 @@ The following output properties are available:
         <span class="property-indicator"></span>
         <span class="property-type">string</span>
     </dt>
-    <dd>{{% md %}}The RosettaNet ProcessConfiguration role type.{{% /md %}}</dd>
-    <dt class="property-required"
+    <dd>{{% md %}}The RosettaNet ProcessConfiguration role type.{{% /md %}}</dd><dt class="property-required"
             title="Required">
         <span id="service_csharp">
 <a href="#service_csharp" style="color: inherit; text-decoration: inherit;">Service</a>
@@ -1500,8 +1310,7 @@ The following output properties are available:
         <span class="property-indicator"></span>
         <span class="property-type">string</span>
     </dt>
-    <dd>{{% md %}}The service name.{{% /md %}}</dd>
-    <dt class="property-required"
+    <dd>{{% md %}}The service name.{{% /md %}}</dd><dt class="property-required"
             title="Required">
         <span id="serviceclassification_csharp">
 <a href="#serviceclassification_csharp" style="color: inherit; text-decoration: inherit;">Service<wbr>Classification</a>
@@ -1509,8 +1318,7 @@ The following output properties are available:
         <span class="property-indicator"></span>
         <span class="property-type">string</span>
     </dt>
-    <dd>{{% md %}}The service classification name.{{% /md %}}</dd>
-    <dt class="property-optional"
+    <dd>{{% md %}}The service classification name.{{% /md %}}</dd><dt class="property-optional"
             title="Optional">
         <span id="description_csharp">
 <a href="#description_csharp" style="color: inherit; text-decoration: inherit;">Description</a>
@@ -1518,14 +1326,11 @@ The following output properties are available:
         <span class="property-indicator"></span>
         <span class="property-type">string</span>
     </dt>
-    <dd>{{% md %}}The description.{{% /md %}}</dd>
-</dl>
+    <dd>{{% md %}}The description.{{% /md %}}</dd></dl>
 {{% /choosable %}}
 
 {{% choosable language go %}}
-<dl class="resources-properties">
-
-    <dt class="property-required"
+<dl class="resources-properties"><dt class="property-required"
             title="Required">
         <span id="action_go">
 <a href="#action_go" style="color: inherit; text-decoration: inherit;">Action</a>
@@ -1533,8 +1338,7 @@ The following output properties are available:
         <span class="property-indicator"></span>
         <span class="property-type">string</span>
     </dt>
-    <dd>{{% md %}}The action name.{{% /md %}}</dd>
-    <dt class="property-required"
+    <dd>{{% md %}}The action name.{{% /md %}}</dd><dt class="property-required"
             title="Required">
         <span id="businessdocument_go">
 <a href="#businessdocument_go" style="color: inherit; text-decoration: inherit;">Business<wbr>Document</a>
@@ -1542,8 +1346,7 @@ The following output properties are available:
         <span class="property-indicator"></span>
         <span class="property-type"><a href="#rosettanetpipbusinessdocumentresponse">Rosetta<wbr>Net<wbr>Pip<wbr>Business<wbr>Document<wbr>Response</a></span>
     </dt>
-    <dd>{{% md %}}The RosettaNet ProcessConfiguration business document.{{% /md %}}</dd>
-    <dt class="property-required"
+    <dd>{{% md %}}The RosettaNet ProcessConfiguration business document.{{% /md %}}</dd><dt class="property-required"
             title="Required">
         <span id="role_go">
 <a href="#role_go" style="color: inherit; text-decoration: inherit;">Role</a>
@@ -1551,8 +1354,7 @@ The following output properties are available:
         <span class="property-indicator"></span>
         <span class="property-type">string</span>
     </dt>
-    <dd>{{% md %}}The role name.{{% /md %}}</dd>
-    <dt class="property-required"
+    <dd>{{% md %}}The role name.{{% /md %}}</dd><dt class="property-required"
             title="Required">
         <span id="roletype_go">
 <a href="#roletype_go" style="color: inherit; text-decoration: inherit;">Role<wbr>Type</a>
@@ -1560,8 +1362,7 @@ The following output properties are available:
         <span class="property-indicator"></span>
         <span class="property-type">string</span>
     </dt>
-    <dd>{{% md %}}The RosettaNet ProcessConfiguration role type.{{% /md %}}</dd>
-    <dt class="property-required"
+    <dd>{{% md %}}The RosettaNet ProcessConfiguration role type.{{% /md %}}</dd><dt class="property-required"
             title="Required">
         <span id="service_go">
 <a href="#service_go" style="color: inherit; text-decoration: inherit;">Service</a>
@@ -1569,8 +1370,7 @@ The following output properties are available:
         <span class="property-indicator"></span>
         <span class="property-type">string</span>
     </dt>
-    <dd>{{% md %}}The service name.{{% /md %}}</dd>
-    <dt class="property-required"
+    <dd>{{% md %}}The service name.{{% /md %}}</dd><dt class="property-required"
             title="Required">
         <span id="serviceclassification_go">
 <a href="#serviceclassification_go" style="color: inherit; text-decoration: inherit;">Service<wbr>Classification</a>
@@ -1578,8 +1378,7 @@ The following output properties are available:
         <span class="property-indicator"></span>
         <span class="property-type">string</span>
     </dt>
-    <dd>{{% md %}}The service classification name.{{% /md %}}</dd>
-    <dt class="property-optional"
+    <dd>{{% md %}}The service classification name.{{% /md %}}</dd><dt class="property-optional"
             title="Optional">
         <span id="description_go">
 <a href="#description_go" style="color: inherit; text-decoration: inherit;">Description</a>
@@ -1587,14 +1386,11 @@ The following output properties are available:
         <span class="property-indicator"></span>
         <span class="property-type">string</span>
     </dt>
-    <dd>{{% md %}}The description.{{% /md %}}</dd>
-</dl>
+    <dd>{{% md %}}The description.{{% /md %}}</dd></dl>
 {{% /choosable %}}
 
 {{% choosable language nodejs %}}
-<dl class="resources-properties">
-
-    <dt class="property-required"
+<dl class="resources-properties"><dt class="property-required"
             title="Required">
         <span id="action_nodejs">
 <a href="#action_nodejs" style="color: inherit; text-decoration: inherit;">action</a>
@@ -1602,8 +1398,7 @@ The following output properties are available:
         <span class="property-indicator"></span>
         <span class="property-type">string</span>
     </dt>
-    <dd>{{% md %}}The action name.{{% /md %}}</dd>
-    <dt class="property-required"
+    <dd>{{% md %}}The action name.{{% /md %}}</dd><dt class="property-required"
             title="Required">
         <span id="businessdocument_nodejs">
 <a href="#businessdocument_nodejs" style="color: inherit; text-decoration: inherit;">business<wbr>Document</a>
@@ -1611,8 +1406,7 @@ The following output properties are available:
         <span class="property-indicator"></span>
         <span class="property-type"><a href="#rosettanetpipbusinessdocumentresponse">Rosetta<wbr>Net<wbr>Pip<wbr>Business<wbr>Document<wbr>Response</a></span>
     </dt>
-    <dd>{{% md %}}The RosettaNet ProcessConfiguration business document.{{% /md %}}</dd>
-    <dt class="property-required"
+    <dd>{{% md %}}The RosettaNet ProcessConfiguration business document.{{% /md %}}</dd><dt class="property-required"
             title="Required">
         <span id="role_nodejs">
 <a href="#role_nodejs" style="color: inherit; text-decoration: inherit;">role</a>
@@ -1620,8 +1414,7 @@ The following output properties are available:
         <span class="property-indicator"></span>
         <span class="property-type">string</span>
     </dt>
-    <dd>{{% md %}}The role name.{{% /md %}}</dd>
-    <dt class="property-required"
+    <dd>{{% md %}}The role name.{{% /md %}}</dd><dt class="property-required"
             title="Required">
         <span id="roletype_nodejs">
 <a href="#roletype_nodejs" style="color: inherit; text-decoration: inherit;">role<wbr>Type</a>
@@ -1629,8 +1422,7 @@ The following output properties are available:
         <span class="property-indicator"></span>
         <span class="property-type">string</span>
     </dt>
-    <dd>{{% md %}}The RosettaNet ProcessConfiguration role type.{{% /md %}}</dd>
-    <dt class="property-required"
+    <dd>{{% md %}}The RosettaNet ProcessConfiguration role type.{{% /md %}}</dd><dt class="property-required"
             title="Required">
         <span id="service_nodejs">
 <a href="#service_nodejs" style="color: inherit; text-decoration: inherit;">service</a>
@@ -1638,8 +1430,7 @@ The following output properties are available:
         <span class="property-indicator"></span>
         <span class="property-type">string</span>
     </dt>
-    <dd>{{% md %}}The service name.{{% /md %}}</dd>
-    <dt class="property-required"
+    <dd>{{% md %}}The service name.{{% /md %}}</dd><dt class="property-required"
             title="Required">
         <span id="serviceclassification_nodejs">
 <a href="#serviceclassification_nodejs" style="color: inherit; text-decoration: inherit;">service<wbr>Classification</a>
@@ -1647,8 +1438,7 @@ The following output properties are available:
         <span class="property-indicator"></span>
         <span class="property-type">string</span>
     </dt>
-    <dd>{{% md %}}The service classification name.{{% /md %}}</dd>
-    <dt class="property-optional"
+    <dd>{{% md %}}The service classification name.{{% /md %}}</dd><dt class="property-optional"
             title="Optional">
         <span id="description_nodejs">
 <a href="#description_nodejs" style="color: inherit; text-decoration: inherit;">description</a>
@@ -1656,14 +1446,11 @@ The following output properties are available:
         <span class="property-indicator"></span>
         <span class="property-type">string</span>
     </dt>
-    <dd>{{% md %}}The description.{{% /md %}}</dd>
-</dl>
+    <dd>{{% md %}}The description.{{% /md %}}</dd></dl>
 {{% /choosable %}}
 
 {{% choosable language python %}}
-<dl class="resources-properties">
-
-    <dt class="property-required"
+<dl class="resources-properties"><dt class="property-required"
             title="Required">
         <span id="action_python">
 <a href="#action_python" style="color: inherit; text-decoration: inherit;">action</a>
@@ -1671,8 +1458,7 @@ The following output properties are available:
         <span class="property-indicator"></span>
         <span class="property-type">str</span>
     </dt>
-    <dd>{{% md %}}The action name.{{% /md %}}</dd>
-    <dt class="property-required"
+    <dd>{{% md %}}The action name.{{% /md %}}</dd><dt class="property-required"
             title="Required">
         <span id="business_document_python">
 <a href="#business_document_python" style="color: inherit; text-decoration: inherit;">business_<wbr>document</a>
@@ -1680,8 +1466,7 @@ The following output properties are available:
         <span class="property-indicator"></span>
         <span class="property-type"><a href="#rosettanetpipbusinessdocumentresponse">Rosetta<wbr>Net<wbr>Pip<wbr>Business<wbr>Document<wbr>Response<wbr>Args</a></span>
     </dt>
-    <dd>{{% md %}}The RosettaNet ProcessConfiguration business document.{{% /md %}}</dd>
-    <dt class="property-required"
+    <dd>{{% md %}}The RosettaNet ProcessConfiguration business document.{{% /md %}}</dd><dt class="property-required"
             title="Required">
         <span id="role_python">
 <a href="#role_python" style="color: inherit; text-decoration: inherit;">role</a>
@@ -1689,8 +1474,7 @@ The following output properties are available:
         <span class="property-indicator"></span>
         <span class="property-type">str</span>
     </dt>
-    <dd>{{% md %}}The role name.{{% /md %}}</dd>
-    <dt class="property-required"
+    <dd>{{% md %}}The role name.{{% /md %}}</dd><dt class="property-required"
             title="Required">
         <span id="role_type_python">
 <a href="#role_type_python" style="color: inherit; text-decoration: inherit;">role_<wbr>type</a>
@@ -1698,8 +1482,7 @@ The following output properties are available:
         <span class="property-indicator"></span>
         <span class="property-type">str</span>
     </dt>
-    <dd>{{% md %}}The RosettaNet ProcessConfiguration role type.{{% /md %}}</dd>
-    <dt class="property-required"
+    <dd>{{% md %}}The RosettaNet ProcessConfiguration role type.{{% /md %}}</dd><dt class="property-required"
             title="Required">
         <span id="service_python">
 <a href="#service_python" style="color: inherit; text-decoration: inherit;">service</a>
@@ -1707,8 +1490,7 @@ The following output properties are available:
         <span class="property-indicator"></span>
         <span class="property-type">str</span>
     </dt>
-    <dd>{{% md %}}The service name.{{% /md %}}</dd>
-    <dt class="property-required"
+    <dd>{{% md %}}The service name.{{% /md %}}</dd><dt class="property-required"
             title="Required">
         <span id="service_classification_python">
 <a href="#service_classification_python" style="color: inherit; text-decoration: inherit;">service_<wbr>classification</a>
@@ -1716,8 +1498,7 @@ The following output properties are available:
         <span class="property-indicator"></span>
         <span class="property-type">str</span>
     </dt>
-    <dd>{{% md %}}The service classification name.{{% /md %}}</dd>
-    <dt class="property-optional"
+    <dd>{{% md %}}The service classification name.{{% /md %}}</dd><dt class="property-optional"
             title="Optional">
         <span id="description_python">
 <a href="#description_python" style="color: inherit; text-decoration: inherit;">description</a>
@@ -1725,8 +1506,7 @@ The following output properties are available:
         <span class="property-indicator"></span>
         <span class="property-type">str</span>
     </dt>
-    <dd>{{% md %}}The description.{{% /md %}}</dd>
-</dl>
+    <dd>{{% md %}}The description.{{% /md %}}</dd></dl>
 {{% /choosable %}}
 
 

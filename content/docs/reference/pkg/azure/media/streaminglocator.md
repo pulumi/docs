@@ -13,11 +13,17 @@ meta_desc: "Documentation for the azure.media.StreamingLocator resource with exa
 Manages a Media Streaming Locator.
 
 {{% examples %}}
+
 ## Example Usage
 
 {{< chooser language "typescript,python,go,csharp" / >}}
 
-{{% example csharp %}}
+
+
+
+
+{{< example csharp >}}
+
 ```csharp
 using Pulumi;
 using Azure = Pulumi.Azure;
@@ -68,9 +74,12 @@ class MyStack : Stack
 }
 ```
 
-{{% /example %}}
 
-{{% example go %}}
+{{< /example >}}
+
+
+{{< example go >}}
+
 ```go
 package main
 
@@ -133,9 +142,12 @@ func main() {
 }
 ```
 
-{{% /example %}}
 
-{{% example python %}}
+{{< /example >}}
+
+
+{{< example python >}}
+
 ```python
 import pulumi
 import pulumi_azure as azure
@@ -164,9 +176,12 @@ example_streaming_locator = azure.media.StreamingLocator("exampleStreamingLocato
     streaming_policy_name="Predefined_ClearStreamingOnly")
 ```
 
-{{% /example %}}
 
-{{% example typescript %}}
+{{< /example >}}
+
+
+{{< example typescript >}}
+
 
 ```typescript
 import * as pulumi from "@pulumi/pulumi";
@@ -200,9 +215,16 @@ const exampleStreamingLocator = new azure.media.StreamingLocator("exampleStreami
 });
 ```
 
-{{% /example %}}
+
+{{< /example >}}
+
+
+
+
 
 {{% /examples %}}
+
+
 
 
 ## Create a StreamingLocator Resource {#create}
@@ -227,9 +249,7 @@ const exampleStreamingLocator = new azure.media.StreamingLocator("exampleStreami
 
 {{% choosable language nodejs %}}
 
-<dl class="resources-properties">
-  
-    <dt
+<dl class="resources-properties"><dt
         class="property-required" title="Required">
         <span>name</span>
         <span class="property-indicator"></span>
@@ -237,9 +257,7 @@ const exampleStreamingLocator = new azure.media.StreamingLocator("exampleStreami
     </dt>
     <dd>
       The unique name of the resource.
-    </dd>
-  
-    <dt
+    </dd><dt
         class="property-required" title="Required">
         <span>args</span>
         <span class="property-indicator"></span>
@@ -247,9 +265,7 @@ const exampleStreamingLocator = new azure.media.StreamingLocator("exampleStreami
     </dt>
     <dd>
       The arguments to resource properties.
-    </dd>
-  
-    <dt
+    </dd><dt
         class="property-optional" title="Optional">
         <span>opts</span>
         <span class="property-indicator"></span>
@@ -257,10 +273,7 @@ const exampleStreamingLocator = new azure.media.StreamingLocator("exampleStreami
     </dt>
     <dd>
       Bag of options to control resource&#39;s behavior.
-    </dd>
-  
-
-</dl>
+    </dd></dl>
 
 {{% /choosable %}}
 
@@ -286,9 +299,7 @@ const exampleStreamingLocator = new azure.media.StreamingLocator("exampleStreami
 
 {{% choosable language go %}}
 
-<dl class="resources-properties">
-  
-    <dt
+<dl class="resources-properties"><dt
         class="property-optional" title="Optional">
         <span>ctx</span>
         <span class="property-indicator"></span>
@@ -296,9 +307,7 @@ const exampleStreamingLocator = new azure.media.StreamingLocator("exampleStreami
     </dt>
     <dd>
       Context object for the current deployment.
-    </dd>
-  
-    <dt
+    </dd><dt
         class="property-required" title="Required">
         <span>name</span>
         <span class="property-indicator"></span>
@@ -306,9 +315,7 @@ const exampleStreamingLocator = new azure.media.StreamingLocator("exampleStreami
     </dt>
     <dd>
       The unique name of the resource.
-    </dd>
-  
-    <dt
+    </dd><dt
         class="property-required" title="Required">
         <span>args</span>
         <span class="property-indicator"></span>
@@ -316,9 +323,7 @@ const exampleStreamingLocator = new azure.media.StreamingLocator("exampleStreami
     </dt>
     <dd>
       The arguments to resource properties.
-    </dd>
-  
-    <dt
+    </dd><dt
         class="property-optional" title="Optional">
         <span>opts</span>
         <span class="property-indicator"></span>
@@ -326,18 +331,13 @@ const exampleStreamingLocator = new azure.media.StreamingLocator("exampleStreami
     </dt>
     <dd>
       Bag of options to control resource&#39;s behavior.
-    </dd>
-  
-
-</dl>
+    </dd></dl>
 
 {{% /choosable %}}
 
 {{% choosable language csharp %}}
 
-<dl class="resources-properties">
-  
-    <dt
+<dl class="resources-properties"><dt
         class="property-required" title="Required">
         <span>name</span>
         <span class="property-indicator"></span>
@@ -345,9 +345,7 @@ const exampleStreamingLocator = new azure.media.StreamingLocator("exampleStreami
     </dt>
     <dd>
       The unique name of the resource.
-    </dd>
-  
-    <dt
+    </dd><dt
         class="property-required" title="Required">
         <span>args</span>
         <span class="property-indicator"></span>
@@ -355,9 +353,7 @@ const exampleStreamingLocator = new azure.media.StreamingLocator("exampleStreami
     </dt>
     <dd>
       The arguments to resource properties.
-    </dd>
-  
-    <dt
+    </dd><dt
         class="property-optional" title="Optional">
         <span>opts</span>
         <span class="property-indicator"></span>
@@ -365,10 +361,7 @@ const exampleStreamingLocator = new azure.media.StreamingLocator("exampleStreami
     </dt>
     <dd>
       Bag of options to control resource&#39;s behavior.
-    </dd>
-  
-
-</dl>
+    </dd></dl>
 
 {{% /choosable %}}
 
@@ -383,9 +376,7 @@ The StreamingLocator resource accepts the following [input]({{< relref "/docs/in
 
 
 {{% choosable language csharp %}}
-<dl class="resources-properties">
-
-    <dt class="property-required"
+<dl class="resources-properties"><dt class="property-required"
             title="Required">
         <span id="assetname_csharp">
 <a href="#assetname_csharp" style="color: inherit; text-decoration: inherit;">Asset<wbr>Name</a>
@@ -394,8 +385,7 @@ The StreamingLocator resource accepts the following [input]({{< relref "/docs/in
         <span class="property-type">string</span>
     </dt>
     <dd>{{% md %}}Asset Name. Changing this forces a new Streaming Locator to be created.
-{{% /md %}}</dd>
-    <dt class="property-required"
+{{% /md %}}</dd><dt class="property-required"
             title="Required">
         <span id="mediaservicesaccountname_csharp">
 <a href="#mediaservicesaccountname_csharp" style="color: inherit; text-decoration: inherit;">Media<wbr>Services<wbr>Account<wbr>Name</a>
@@ -404,8 +394,7 @@ The StreamingLocator resource accepts the following [input]({{< relref "/docs/in
         <span class="property-type">string</span>
     </dt>
     <dd>{{% md %}}The Media Services account name. Changing this forces a new Streaming Locator to be created.
-{{% /md %}}</dd>
-    <dt class="property-required"
+{{% /md %}}</dd><dt class="property-required"
             title="Required">
         <span id="resourcegroupname_csharp">
 <a href="#resourcegroupname_csharp" style="color: inherit; text-decoration: inherit;">Resource<wbr>Group<wbr>Name</a>
@@ -414,8 +403,7 @@ The StreamingLocator resource accepts the following [input]({{< relref "/docs/in
         <span class="property-type">string</span>
     </dt>
     <dd>{{% md %}}The name of the Resource Group where the Streaming Locator should exist. Changing this forces a new Streaming Locator to be created.
-{{% /md %}}</dd>
-    <dt class="property-required"
+{{% /md %}}</dd><dt class="property-required"
             title="Required">
         <span id="streamingpolicyname_csharp">
 <a href="#streamingpolicyname_csharp" style="color: inherit; text-decoration: inherit;">Streaming<wbr>Policy<wbr>Name</a>
@@ -424,8 +412,7 @@ The StreamingLocator resource accepts the following [input]({{< relref "/docs/in
         <span class="property-type">string</span>
     </dt>
     <dd>{{% md %}}Name of the Streaming Policy used by this Streaming Locator. Either specify the name of Streaming Policy you created or use one of the predefined Streaming Policies. The predefined Streaming Policies available are: `Predefined_DownloadOnly`, `Predefined_ClearStreamingOnly`, `Predefined_DownloadAndClearStreaming`, `Predefined_ClearKey`, `Predefined_MultiDrmCencStreaming` and `Predefined_MultiDrmStreaming`. Changing this forces a new Streaming Locator to be created.
-{{% /md %}}</dd>
-    <dt class="property-optional"
+{{% /md %}}</dd><dt class="property-optional"
             title="Optional">
         <span id="alternativemediaid_csharp">
 <a href="#alternativemediaid_csharp" style="color: inherit; text-decoration: inherit;">Alternative<wbr>Media<wbr>Id</a>
@@ -434,8 +421,7 @@ The StreamingLocator resource accepts the following [input]({{< relref "/docs/in
         <span class="property-type">string</span>
     </dt>
     <dd>{{% md %}}Alternative Media ID of this Streaming Locator. Changing this forces a new Streaming Locator to be created.
-{{% /md %}}</dd>
-    <dt class="property-optional"
+{{% /md %}}</dd><dt class="property-optional"
             title="Optional">
         <span id="contentkeys_csharp">
 <a href="#contentkeys_csharp" style="color: inherit; text-decoration: inherit;">Content<wbr>Keys</a>
@@ -444,8 +430,7 @@ The StreamingLocator resource accepts the following [input]({{< relref "/docs/in
         <span class="property-type"><a href="#streaminglocatorcontentkey">List&lt;Streaming<wbr>Locator<wbr>Content<wbr>Key<wbr>Args&gt;</a></span>
     </dt>
     <dd>{{% md %}}One or more `content_key` blocks as defined below. Changing this forces a new Streaming Locator to be created.
-{{% /md %}}</dd>
-    <dt class="property-optional"
+{{% /md %}}</dd><dt class="property-optional"
             title="Optional">
         <span id="defaultcontentkeypolicyname_csharp">
 <a href="#defaultcontentkeypolicyname_csharp" style="color: inherit; text-decoration: inherit;">Default<wbr>Content<wbr>Key<wbr>Policy<wbr>Name</a>
@@ -454,8 +439,7 @@ The StreamingLocator resource accepts the following [input]({{< relref "/docs/in
         <span class="property-type">string</span>
     </dt>
     <dd>{{% md %}}Name of the default Content Key Policy used by this Streaming Locator.Changing this forces a new Streaming Locator to be created.
-{{% /md %}}</dd>
-    <dt class="property-optional"
+{{% /md %}}</dd><dt class="property-optional"
             title="Optional">
         <span id="endtime_csharp">
 <a href="#endtime_csharp" style="color: inherit; text-decoration: inherit;">End<wbr>Time</a>
@@ -464,8 +448,7 @@ The StreamingLocator resource accepts the following [input]({{< relref "/docs/in
         <span class="property-type">string</span>
     </dt>
     <dd>{{% md %}}The end time of the Streaming Locator. Changing this forces a new Streaming Locator to be created.
-{{% /md %}}</dd>
-    <dt class="property-optional"
+{{% /md %}}</dd><dt class="property-optional"
             title="Optional">
         <span id="name_csharp">
 <a href="#name_csharp" style="color: inherit; text-decoration: inherit;">Name</a>
@@ -474,8 +457,7 @@ The StreamingLocator resource accepts the following [input]({{< relref "/docs/in
         <span class="property-type">string</span>
     </dt>
     <dd>{{% md %}}The name which should be used for this Streaming Locator. Changing this forces a new Streaming Locator to be created.
-{{% /md %}}</dd>
-    <dt class="property-optional"
+{{% /md %}}</dd><dt class="property-optional"
             title="Optional">
         <span id="starttime_csharp">
 <a href="#starttime_csharp" style="color: inherit; text-decoration: inherit;">Start<wbr>Time</a>
@@ -484,8 +466,7 @@ The StreamingLocator resource accepts the following [input]({{< relref "/docs/in
         <span class="property-type">string</span>
     </dt>
     <dd>{{% md %}}The start time of the Streaming Locator. Changing this forces a new Streaming Locator to be created.
-{{% /md %}}</dd>
-    <dt class="property-optional"
+{{% /md %}}</dd><dt class="property-optional"
             title="Optional">
         <span id="streaminglocatorid_csharp">
 <a href="#streaminglocatorid_csharp" style="color: inherit; text-decoration: inherit;">Streaming<wbr>Locator<wbr>Id</a>
@@ -494,14 +475,11 @@ The StreamingLocator resource accepts the following [input]({{< relref "/docs/in
         <span class="property-type">string</span>
     </dt>
     <dd>{{% md %}}The ID of the Streaming Locator. Changing this forces a new Streaming Locator to be created.
-{{% /md %}}</dd>
-</dl>
+{{% /md %}}</dd></dl>
 {{% /choosable %}}
 
 {{% choosable language go %}}
-<dl class="resources-properties">
-
-    <dt class="property-required"
+<dl class="resources-properties"><dt class="property-required"
             title="Required">
         <span id="assetname_go">
 <a href="#assetname_go" style="color: inherit; text-decoration: inherit;">Asset<wbr>Name</a>
@@ -510,8 +488,7 @@ The StreamingLocator resource accepts the following [input]({{< relref "/docs/in
         <span class="property-type">string</span>
     </dt>
     <dd>{{% md %}}Asset Name. Changing this forces a new Streaming Locator to be created.
-{{% /md %}}</dd>
-    <dt class="property-required"
+{{% /md %}}</dd><dt class="property-required"
             title="Required">
         <span id="mediaservicesaccountname_go">
 <a href="#mediaservicesaccountname_go" style="color: inherit; text-decoration: inherit;">Media<wbr>Services<wbr>Account<wbr>Name</a>
@@ -520,8 +497,7 @@ The StreamingLocator resource accepts the following [input]({{< relref "/docs/in
         <span class="property-type">string</span>
     </dt>
     <dd>{{% md %}}The Media Services account name. Changing this forces a new Streaming Locator to be created.
-{{% /md %}}</dd>
-    <dt class="property-required"
+{{% /md %}}</dd><dt class="property-required"
             title="Required">
         <span id="resourcegroupname_go">
 <a href="#resourcegroupname_go" style="color: inherit; text-decoration: inherit;">Resource<wbr>Group<wbr>Name</a>
@@ -530,8 +506,7 @@ The StreamingLocator resource accepts the following [input]({{< relref "/docs/in
         <span class="property-type">string</span>
     </dt>
     <dd>{{% md %}}The name of the Resource Group where the Streaming Locator should exist. Changing this forces a new Streaming Locator to be created.
-{{% /md %}}</dd>
-    <dt class="property-required"
+{{% /md %}}</dd><dt class="property-required"
             title="Required">
         <span id="streamingpolicyname_go">
 <a href="#streamingpolicyname_go" style="color: inherit; text-decoration: inherit;">Streaming<wbr>Policy<wbr>Name</a>
@@ -540,8 +515,7 @@ The StreamingLocator resource accepts the following [input]({{< relref "/docs/in
         <span class="property-type">string</span>
     </dt>
     <dd>{{% md %}}Name of the Streaming Policy used by this Streaming Locator. Either specify the name of Streaming Policy you created or use one of the predefined Streaming Policies. The predefined Streaming Policies available are: `Predefined_DownloadOnly`, `Predefined_ClearStreamingOnly`, `Predefined_DownloadAndClearStreaming`, `Predefined_ClearKey`, `Predefined_MultiDrmCencStreaming` and `Predefined_MultiDrmStreaming`. Changing this forces a new Streaming Locator to be created.
-{{% /md %}}</dd>
-    <dt class="property-optional"
+{{% /md %}}</dd><dt class="property-optional"
             title="Optional">
         <span id="alternativemediaid_go">
 <a href="#alternativemediaid_go" style="color: inherit; text-decoration: inherit;">Alternative<wbr>Media<wbr>Id</a>
@@ -550,8 +524,7 @@ The StreamingLocator resource accepts the following [input]({{< relref "/docs/in
         <span class="property-type">string</span>
     </dt>
     <dd>{{% md %}}Alternative Media ID of this Streaming Locator. Changing this forces a new Streaming Locator to be created.
-{{% /md %}}</dd>
-    <dt class="property-optional"
+{{% /md %}}</dd><dt class="property-optional"
             title="Optional">
         <span id="contentkeys_go">
 <a href="#contentkeys_go" style="color: inherit; text-decoration: inherit;">Content<wbr>Keys</a>
@@ -560,8 +533,7 @@ The StreamingLocator resource accepts the following [input]({{< relref "/docs/in
         <span class="property-type"><a href="#streaminglocatorcontentkey">[]Streaming<wbr>Locator<wbr>Content<wbr>Key</a></span>
     </dt>
     <dd>{{% md %}}One or more `content_key` blocks as defined below. Changing this forces a new Streaming Locator to be created.
-{{% /md %}}</dd>
-    <dt class="property-optional"
+{{% /md %}}</dd><dt class="property-optional"
             title="Optional">
         <span id="defaultcontentkeypolicyname_go">
 <a href="#defaultcontentkeypolicyname_go" style="color: inherit; text-decoration: inherit;">Default<wbr>Content<wbr>Key<wbr>Policy<wbr>Name</a>
@@ -570,8 +542,7 @@ The StreamingLocator resource accepts the following [input]({{< relref "/docs/in
         <span class="property-type">string</span>
     </dt>
     <dd>{{% md %}}Name of the default Content Key Policy used by this Streaming Locator.Changing this forces a new Streaming Locator to be created.
-{{% /md %}}</dd>
-    <dt class="property-optional"
+{{% /md %}}</dd><dt class="property-optional"
             title="Optional">
         <span id="endtime_go">
 <a href="#endtime_go" style="color: inherit; text-decoration: inherit;">End<wbr>Time</a>
@@ -580,8 +551,7 @@ The StreamingLocator resource accepts the following [input]({{< relref "/docs/in
         <span class="property-type">string</span>
     </dt>
     <dd>{{% md %}}The end time of the Streaming Locator. Changing this forces a new Streaming Locator to be created.
-{{% /md %}}</dd>
-    <dt class="property-optional"
+{{% /md %}}</dd><dt class="property-optional"
             title="Optional">
         <span id="name_go">
 <a href="#name_go" style="color: inherit; text-decoration: inherit;">Name</a>
@@ -590,8 +560,7 @@ The StreamingLocator resource accepts the following [input]({{< relref "/docs/in
         <span class="property-type">string</span>
     </dt>
     <dd>{{% md %}}The name which should be used for this Streaming Locator. Changing this forces a new Streaming Locator to be created.
-{{% /md %}}</dd>
-    <dt class="property-optional"
+{{% /md %}}</dd><dt class="property-optional"
             title="Optional">
         <span id="starttime_go">
 <a href="#starttime_go" style="color: inherit; text-decoration: inherit;">Start<wbr>Time</a>
@@ -600,8 +569,7 @@ The StreamingLocator resource accepts the following [input]({{< relref "/docs/in
         <span class="property-type">string</span>
     </dt>
     <dd>{{% md %}}The start time of the Streaming Locator. Changing this forces a new Streaming Locator to be created.
-{{% /md %}}</dd>
-    <dt class="property-optional"
+{{% /md %}}</dd><dt class="property-optional"
             title="Optional">
         <span id="streaminglocatorid_go">
 <a href="#streaminglocatorid_go" style="color: inherit; text-decoration: inherit;">Streaming<wbr>Locator<wbr>Id</a>
@@ -610,14 +578,11 @@ The StreamingLocator resource accepts the following [input]({{< relref "/docs/in
         <span class="property-type">string</span>
     </dt>
     <dd>{{% md %}}The ID of the Streaming Locator. Changing this forces a new Streaming Locator to be created.
-{{% /md %}}</dd>
-</dl>
+{{% /md %}}</dd></dl>
 {{% /choosable %}}
 
 {{% choosable language nodejs %}}
-<dl class="resources-properties">
-
-    <dt class="property-required"
+<dl class="resources-properties"><dt class="property-required"
             title="Required">
         <span id="assetname_nodejs">
 <a href="#assetname_nodejs" style="color: inherit; text-decoration: inherit;">asset<wbr>Name</a>
@@ -626,8 +591,7 @@ The StreamingLocator resource accepts the following [input]({{< relref "/docs/in
         <span class="property-type">string</span>
     </dt>
     <dd>{{% md %}}Asset Name. Changing this forces a new Streaming Locator to be created.
-{{% /md %}}</dd>
-    <dt class="property-required"
+{{% /md %}}</dd><dt class="property-required"
             title="Required">
         <span id="mediaservicesaccountname_nodejs">
 <a href="#mediaservicesaccountname_nodejs" style="color: inherit; text-decoration: inherit;">media<wbr>Services<wbr>Account<wbr>Name</a>
@@ -636,8 +600,7 @@ The StreamingLocator resource accepts the following [input]({{< relref "/docs/in
         <span class="property-type">string</span>
     </dt>
     <dd>{{% md %}}The Media Services account name. Changing this forces a new Streaming Locator to be created.
-{{% /md %}}</dd>
-    <dt class="property-required"
+{{% /md %}}</dd><dt class="property-required"
             title="Required">
         <span id="resourcegroupname_nodejs">
 <a href="#resourcegroupname_nodejs" style="color: inherit; text-decoration: inherit;">resource<wbr>Group<wbr>Name</a>
@@ -646,8 +609,7 @@ The StreamingLocator resource accepts the following [input]({{< relref "/docs/in
         <span class="property-type">string</span>
     </dt>
     <dd>{{% md %}}The name of the Resource Group where the Streaming Locator should exist. Changing this forces a new Streaming Locator to be created.
-{{% /md %}}</dd>
-    <dt class="property-required"
+{{% /md %}}</dd><dt class="property-required"
             title="Required">
         <span id="streamingpolicyname_nodejs">
 <a href="#streamingpolicyname_nodejs" style="color: inherit; text-decoration: inherit;">streaming<wbr>Policy<wbr>Name</a>
@@ -656,8 +618,7 @@ The StreamingLocator resource accepts the following [input]({{< relref "/docs/in
         <span class="property-type">string</span>
     </dt>
     <dd>{{% md %}}Name of the Streaming Policy used by this Streaming Locator. Either specify the name of Streaming Policy you created or use one of the predefined Streaming Policies. The predefined Streaming Policies available are: `Predefined_DownloadOnly`, `Predefined_ClearStreamingOnly`, `Predefined_DownloadAndClearStreaming`, `Predefined_ClearKey`, `Predefined_MultiDrmCencStreaming` and `Predefined_MultiDrmStreaming`. Changing this forces a new Streaming Locator to be created.
-{{% /md %}}</dd>
-    <dt class="property-optional"
+{{% /md %}}</dd><dt class="property-optional"
             title="Optional">
         <span id="alternativemediaid_nodejs">
 <a href="#alternativemediaid_nodejs" style="color: inherit; text-decoration: inherit;">alternative<wbr>Media<wbr>Id</a>
@@ -666,8 +627,7 @@ The StreamingLocator resource accepts the following [input]({{< relref "/docs/in
         <span class="property-type">string</span>
     </dt>
     <dd>{{% md %}}Alternative Media ID of this Streaming Locator. Changing this forces a new Streaming Locator to be created.
-{{% /md %}}</dd>
-    <dt class="property-optional"
+{{% /md %}}</dd><dt class="property-optional"
             title="Optional">
         <span id="contentkeys_nodejs">
 <a href="#contentkeys_nodejs" style="color: inherit; text-decoration: inherit;">content<wbr>Keys</a>
@@ -676,8 +636,7 @@ The StreamingLocator resource accepts the following [input]({{< relref "/docs/in
         <span class="property-type"><a href="#streaminglocatorcontentkey">Streaming<wbr>Locator<wbr>Content<wbr>Key[]</a></span>
     </dt>
     <dd>{{% md %}}One or more `content_key` blocks as defined below. Changing this forces a new Streaming Locator to be created.
-{{% /md %}}</dd>
-    <dt class="property-optional"
+{{% /md %}}</dd><dt class="property-optional"
             title="Optional">
         <span id="defaultcontentkeypolicyname_nodejs">
 <a href="#defaultcontentkeypolicyname_nodejs" style="color: inherit; text-decoration: inherit;">default<wbr>Content<wbr>Key<wbr>Policy<wbr>Name</a>
@@ -686,8 +645,7 @@ The StreamingLocator resource accepts the following [input]({{< relref "/docs/in
         <span class="property-type">string</span>
     </dt>
     <dd>{{% md %}}Name of the default Content Key Policy used by this Streaming Locator.Changing this forces a new Streaming Locator to be created.
-{{% /md %}}</dd>
-    <dt class="property-optional"
+{{% /md %}}</dd><dt class="property-optional"
             title="Optional">
         <span id="endtime_nodejs">
 <a href="#endtime_nodejs" style="color: inherit; text-decoration: inherit;">end<wbr>Time</a>
@@ -696,8 +654,7 @@ The StreamingLocator resource accepts the following [input]({{< relref "/docs/in
         <span class="property-type">string</span>
     </dt>
     <dd>{{% md %}}The end time of the Streaming Locator. Changing this forces a new Streaming Locator to be created.
-{{% /md %}}</dd>
-    <dt class="property-optional"
+{{% /md %}}</dd><dt class="property-optional"
             title="Optional">
         <span id="name_nodejs">
 <a href="#name_nodejs" style="color: inherit; text-decoration: inherit;">name</a>
@@ -706,8 +663,7 @@ The StreamingLocator resource accepts the following [input]({{< relref "/docs/in
         <span class="property-type">string</span>
     </dt>
     <dd>{{% md %}}The name which should be used for this Streaming Locator. Changing this forces a new Streaming Locator to be created.
-{{% /md %}}</dd>
-    <dt class="property-optional"
+{{% /md %}}</dd><dt class="property-optional"
             title="Optional">
         <span id="starttime_nodejs">
 <a href="#starttime_nodejs" style="color: inherit; text-decoration: inherit;">start<wbr>Time</a>
@@ -716,8 +672,7 @@ The StreamingLocator resource accepts the following [input]({{< relref "/docs/in
         <span class="property-type">string</span>
     </dt>
     <dd>{{% md %}}The start time of the Streaming Locator. Changing this forces a new Streaming Locator to be created.
-{{% /md %}}</dd>
-    <dt class="property-optional"
+{{% /md %}}</dd><dt class="property-optional"
             title="Optional">
         <span id="streaminglocatorid_nodejs">
 <a href="#streaminglocatorid_nodejs" style="color: inherit; text-decoration: inherit;">streaming<wbr>Locator<wbr>Id</a>
@@ -726,14 +681,11 @@ The StreamingLocator resource accepts the following [input]({{< relref "/docs/in
         <span class="property-type">string</span>
     </dt>
     <dd>{{% md %}}The ID of the Streaming Locator. Changing this forces a new Streaming Locator to be created.
-{{% /md %}}</dd>
-</dl>
+{{% /md %}}</dd></dl>
 {{% /choosable %}}
 
 {{% choosable language python %}}
-<dl class="resources-properties">
-
-    <dt class="property-required"
+<dl class="resources-properties"><dt class="property-required"
             title="Required">
         <span id="asset_name_python">
 <a href="#asset_name_python" style="color: inherit; text-decoration: inherit;">asset_<wbr>name</a>
@@ -742,8 +694,7 @@ The StreamingLocator resource accepts the following [input]({{< relref "/docs/in
         <span class="property-type">str</span>
     </dt>
     <dd>{{% md %}}Asset Name. Changing this forces a new Streaming Locator to be created.
-{{% /md %}}</dd>
-    <dt class="property-required"
+{{% /md %}}</dd><dt class="property-required"
             title="Required">
         <span id="media_services_account_name_python">
 <a href="#media_services_account_name_python" style="color: inherit; text-decoration: inherit;">media_<wbr>services_<wbr>account_<wbr>name</a>
@@ -752,8 +703,7 @@ The StreamingLocator resource accepts the following [input]({{< relref "/docs/in
         <span class="property-type">str</span>
     </dt>
     <dd>{{% md %}}The Media Services account name. Changing this forces a new Streaming Locator to be created.
-{{% /md %}}</dd>
-    <dt class="property-required"
+{{% /md %}}</dd><dt class="property-required"
             title="Required">
         <span id="resource_group_name_python">
 <a href="#resource_group_name_python" style="color: inherit; text-decoration: inherit;">resource_<wbr>group_<wbr>name</a>
@@ -762,8 +712,7 @@ The StreamingLocator resource accepts the following [input]({{< relref "/docs/in
         <span class="property-type">str</span>
     </dt>
     <dd>{{% md %}}The name of the Resource Group where the Streaming Locator should exist. Changing this forces a new Streaming Locator to be created.
-{{% /md %}}</dd>
-    <dt class="property-required"
+{{% /md %}}</dd><dt class="property-required"
             title="Required">
         <span id="streaming_policy_name_python">
 <a href="#streaming_policy_name_python" style="color: inherit; text-decoration: inherit;">streaming_<wbr>policy_<wbr>name</a>
@@ -772,8 +721,7 @@ The StreamingLocator resource accepts the following [input]({{< relref "/docs/in
         <span class="property-type">str</span>
     </dt>
     <dd>{{% md %}}Name of the Streaming Policy used by this Streaming Locator. Either specify the name of Streaming Policy you created or use one of the predefined Streaming Policies. The predefined Streaming Policies available are: `Predefined_DownloadOnly`, `Predefined_ClearStreamingOnly`, `Predefined_DownloadAndClearStreaming`, `Predefined_ClearKey`, `Predefined_MultiDrmCencStreaming` and `Predefined_MultiDrmStreaming`. Changing this forces a new Streaming Locator to be created.
-{{% /md %}}</dd>
-    <dt class="property-optional"
+{{% /md %}}</dd><dt class="property-optional"
             title="Optional">
         <span id="alternative_media_id_python">
 <a href="#alternative_media_id_python" style="color: inherit; text-decoration: inherit;">alternative_<wbr>media_<wbr>id</a>
@@ -782,8 +730,7 @@ The StreamingLocator resource accepts the following [input]({{< relref "/docs/in
         <span class="property-type">str</span>
     </dt>
     <dd>{{% md %}}Alternative Media ID of this Streaming Locator. Changing this forces a new Streaming Locator to be created.
-{{% /md %}}</dd>
-    <dt class="property-optional"
+{{% /md %}}</dd><dt class="property-optional"
             title="Optional">
         <span id="content_keys_python">
 <a href="#content_keys_python" style="color: inherit; text-decoration: inherit;">content_<wbr>keys</a>
@@ -792,8 +739,7 @@ The StreamingLocator resource accepts the following [input]({{< relref "/docs/in
         <span class="property-type"><a href="#streaminglocatorcontentkey">Sequence[Streaming<wbr>Locator<wbr>Content<wbr>Key<wbr>Args]</a></span>
     </dt>
     <dd>{{% md %}}One or more `content_key` blocks as defined below. Changing this forces a new Streaming Locator to be created.
-{{% /md %}}</dd>
-    <dt class="property-optional"
+{{% /md %}}</dd><dt class="property-optional"
             title="Optional">
         <span id="default_content_key_policy_name_python">
 <a href="#default_content_key_policy_name_python" style="color: inherit; text-decoration: inherit;">default_<wbr>content_<wbr>key_<wbr>policy_<wbr>name</a>
@@ -802,8 +748,7 @@ The StreamingLocator resource accepts the following [input]({{< relref "/docs/in
         <span class="property-type">str</span>
     </dt>
     <dd>{{% md %}}Name of the default Content Key Policy used by this Streaming Locator.Changing this forces a new Streaming Locator to be created.
-{{% /md %}}</dd>
-    <dt class="property-optional"
+{{% /md %}}</dd><dt class="property-optional"
             title="Optional">
         <span id="end_time_python">
 <a href="#end_time_python" style="color: inherit; text-decoration: inherit;">end_<wbr>time</a>
@@ -812,8 +757,7 @@ The StreamingLocator resource accepts the following [input]({{< relref "/docs/in
         <span class="property-type">str</span>
     </dt>
     <dd>{{% md %}}The end time of the Streaming Locator. Changing this forces a new Streaming Locator to be created.
-{{% /md %}}</dd>
-    <dt class="property-optional"
+{{% /md %}}</dd><dt class="property-optional"
             title="Optional">
         <span id="name_python">
 <a href="#name_python" style="color: inherit; text-decoration: inherit;">name</a>
@@ -822,8 +766,7 @@ The StreamingLocator resource accepts the following [input]({{< relref "/docs/in
         <span class="property-type">str</span>
     </dt>
     <dd>{{% md %}}The name which should be used for this Streaming Locator. Changing this forces a new Streaming Locator to be created.
-{{% /md %}}</dd>
-    <dt class="property-optional"
+{{% /md %}}</dd><dt class="property-optional"
             title="Optional">
         <span id="start_time_python">
 <a href="#start_time_python" style="color: inherit; text-decoration: inherit;">start_<wbr>time</a>
@@ -832,8 +775,7 @@ The StreamingLocator resource accepts the following [input]({{< relref "/docs/in
         <span class="property-type">str</span>
     </dt>
     <dd>{{% md %}}The start time of the Streaming Locator. Changing this forces a new Streaming Locator to be created.
-{{% /md %}}</dd>
-    <dt class="property-optional"
+{{% /md %}}</dd><dt class="property-optional"
             title="Optional">
         <span id="streaming_locator_id_python">
 <a href="#streaming_locator_id_python" style="color: inherit; text-decoration: inherit;">streaming_<wbr>locator_<wbr>id</a>
@@ -842,8 +784,7 @@ The StreamingLocator resource accepts the following [input]({{< relref "/docs/in
         <span class="property-type">str</span>
     </dt>
     <dd>{{% md %}}The ID of the Streaming Locator. Changing this forces a new Streaming Locator to be created.
-{{% /md %}}</dd>
-</dl>
+{{% /md %}}</dd></dl>
 {{% /choosable %}}
 
 
@@ -854,9 +795,7 @@ All [input](#inputs) properties are implicitly available as output properties. A
 
 
 {{% choosable language csharp %}}
-<dl class="resources-properties">
-
-    <dt class="property-"
+<dl class="resources-properties"><dt class="property-"
             title="">
         <span id="id_csharp">
 <a href="#id_csharp" style="color: inherit; text-decoration: inherit;">Id</a>
@@ -864,14 +803,11 @@ All [input](#inputs) properties are implicitly available as output properties. A
         <span class="property-indicator"></span>
         <span class="property-type">string</span>
     </dt>
-    <dd>{{% md %}}The provider-assigned unique ID for this managed resource.{{% /md %}}</dd>
-</dl>
+    <dd>{{% md %}}The provider-assigned unique ID for this managed resource.{{% /md %}}</dd></dl>
 {{% /choosable %}}
 
 {{% choosable language go %}}
-<dl class="resources-properties">
-
-    <dt class="property-"
+<dl class="resources-properties"><dt class="property-"
             title="">
         <span id="id_go">
 <a href="#id_go" style="color: inherit; text-decoration: inherit;">Id</a>
@@ -879,14 +815,11 @@ All [input](#inputs) properties are implicitly available as output properties. A
         <span class="property-indicator"></span>
         <span class="property-type">string</span>
     </dt>
-    <dd>{{% md %}}The provider-assigned unique ID for this managed resource.{{% /md %}}</dd>
-</dl>
+    <dd>{{% md %}}The provider-assigned unique ID for this managed resource.{{% /md %}}</dd></dl>
 {{% /choosable %}}
 
 {{% choosable language nodejs %}}
-<dl class="resources-properties">
-
-    <dt class="property-"
+<dl class="resources-properties"><dt class="property-"
             title="">
         <span id="id_nodejs">
 <a href="#id_nodejs" style="color: inherit; text-decoration: inherit;">id</a>
@@ -894,14 +827,11 @@ All [input](#inputs) properties are implicitly available as output properties. A
         <span class="property-indicator"></span>
         <span class="property-type">string</span>
     </dt>
-    <dd>{{% md %}}The provider-assigned unique ID for this managed resource.{{% /md %}}</dd>
-</dl>
+    <dd>{{% md %}}The provider-assigned unique ID for this managed resource.{{% /md %}}</dd></dl>
 {{% /choosable %}}
 
 {{% choosable language python %}}
-<dl class="resources-properties">
-
-    <dt class="property-"
+<dl class="resources-properties"><dt class="property-"
             title="">
         <span id="id_python">
 <a href="#id_python" style="color: inherit; text-decoration: inherit;">id</a>
@@ -909,8 +839,7 @@ All [input](#inputs) properties are implicitly available as output properties. A
         <span class="property-indicator"></span>
         <span class="property-type">str</span>
     </dt>
-    <dd>{{% md %}}The provider-assigned unique ID for this managed resource.{{% /md %}}</dd>
-</dl>
+    <dd>{{% md %}}The provider-assigned unique ID for this managed resource.{{% /md %}}</dd></dl>
 {{% /choosable %}}
 
 
@@ -1037,9 +966,7 @@ The following state arguments are supported:
 
 
 {{% choosable language csharp %}}
-<dl class="resources-properties">
-
-    <dt class="property-optional"
+<dl class="resources-properties"><dt class="property-optional"
             title="Optional">
         <span id="state_alternativemediaid_csharp">
 <a href="#state_alternativemediaid_csharp" style="color: inherit; text-decoration: inherit;">Alternative<wbr>Media<wbr>Id</a>
@@ -1048,8 +975,7 @@ The following state arguments are supported:
         <span class="property-type">string</span>
     </dt>
     <dd>{{% md %}}Alternative Media ID of this Streaming Locator. Changing this forces a new Streaming Locator to be created.
-{{% /md %}}</dd>
-    <dt class="property-optional"
+{{% /md %}}</dd><dt class="property-optional"
             title="Optional">
         <span id="state_assetname_csharp">
 <a href="#state_assetname_csharp" style="color: inherit; text-decoration: inherit;">Asset<wbr>Name</a>
@@ -1058,8 +984,7 @@ The following state arguments are supported:
         <span class="property-type">string</span>
     </dt>
     <dd>{{% md %}}Asset Name. Changing this forces a new Streaming Locator to be created.
-{{% /md %}}</dd>
-    <dt class="property-optional"
+{{% /md %}}</dd><dt class="property-optional"
             title="Optional">
         <span id="state_contentkeys_csharp">
 <a href="#state_contentkeys_csharp" style="color: inherit; text-decoration: inherit;">Content<wbr>Keys</a>
@@ -1068,8 +993,7 @@ The following state arguments are supported:
         <span class="property-type"><a href="#streaminglocatorcontentkey">List&lt;Streaming<wbr>Locator<wbr>Content<wbr>Key<wbr>Args&gt;</a></span>
     </dt>
     <dd>{{% md %}}One or more `content_key` blocks as defined below. Changing this forces a new Streaming Locator to be created.
-{{% /md %}}</dd>
-    <dt class="property-optional"
+{{% /md %}}</dd><dt class="property-optional"
             title="Optional">
         <span id="state_defaultcontentkeypolicyname_csharp">
 <a href="#state_defaultcontentkeypolicyname_csharp" style="color: inherit; text-decoration: inherit;">Default<wbr>Content<wbr>Key<wbr>Policy<wbr>Name</a>
@@ -1078,8 +1002,7 @@ The following state arguments are supported:
         <span class="property-type">string</span>
     </dt>
     <dd>{{% md %}}Name of the default Content Key Policy used by this Streaming Locator.Changing this forces a new Streaming Locator to be created.
-{{% /md %}}</dd>
-    <dt class="property-optional"
+{{% /md %}}</dd><dt class="property-optional"
             title="Optional">
         <span id="state_endtime_csharp">
 <a href="#state_endtime_csharp" style="color: inherit; text-decoration: inherit;">End<wbr>Time</a>
@@ -1088,8 +1011,7 @@ The following state arguments are supported:
         <span class="property-type">string</span>
     </dt>
     <dd>{{% md %}}The end time of the Streaming Locator. Changing this forces a new Streaming Locator to be created.
-{{% /md %}}</dd>
-    <dt class="property-optional"
+{{% /md %}}</dd><dt class="property-optional"
             title="Optional">
         <span id="state_mediaservicesaccountname_csharp">
 <a href="#state_mediaservicesaccountname_csharp" style="color: inherit; text-decoration: inherit;">Media<wbr>Services<wbr>Account<wbr>Name</a>
@@ -1098,8 +1020,7 @@ The following state arguments are supported:
         <span class="property-type">string</span>
     </dt>
     <dd>{{% md %}}The Media Services account name. Changing this forces a new Streaming Locator to be created.
-{{% /md %}}</dd>
-    <dt class="property-optional"
+{{% /md %}}</dd><dt class="property-optional"
             title="Optional">
         <span id="state_name_csharp">
 <a href="#state_name_csharp" style="color: inherit; text-decoration: inherit;">Name</a>
@@ -1108,8 +1029,7 @@ The following state arguments are supported:
         <span class="property-type">string</span>
     </dt>
     <dd>{{% md %}}The name which should be used for this Streaming Locator. Changing this forces a new Streaming Locator to be created.
-{{% /md %}}</dd>
-    <dt class="property-optional"
+{{% /md %}}</dd><dt class="property-optional"
             title="Optional">
         <span id="state_resourcegroupname_csharp">
 <a href="#state_resourcegroupname_csharp" style="color: inherit; text-decoration: inherit;">Resource<wbr>Group<wbr>Name</a>
@@ -1118,8 +1038,7 @@ The following state arguments are supported:
         <span class="property-type">string</span>
     </dt>
     <dd>{{% md %}}The name of the Resource Group where the Streaming Locator should exist. Changing this forces a new Streaming Locator to be created.
-{{% /md %}}</dd>
-    <dt class="property-optional"
+{{% /md %}}</dd><dt class="property-optional"
             title="Optional">
         <span id="state_starttime_csharp">
 <a href="#state_starttime_csharp" style="color: inherit; text-decoration: inherit;">Start<wbr>Time</a>
@@ -1128,8 +1047,7 @@ The following state arguments are supported:
         <span class="property-type">string</span>
     </dt>
     <dd>{{% md %}}The start time of the Streaming Locator. Changing this forces a new Streaming Locator to be created.
-{{% /md %}}</dd>
-    <dt class="property-optional"
+{{% /md %}}</dd><dt class="property-optional"
             title="Optional">
         <span id="state_streaminglocatorid_csharp">
 <a href="#state_streaminglocatorid_csharp" style="color: inherit; text-decoration: inherit;">Streaming<wbr>Locator<wbr>Id</a>
@@ -1138,8 +1056,7 @@ The following state arguments are supported:
         <span class="property-type">string</span>
     </dt>
     <dd>{{% md %}}The ID of the Streaming Locator. Changing this forces a new Streaming Locator to be created.
-{{% /md %}}</dd>
-    <dt class="property-optional"
+{{% /md %}}</dd><dt class="property-optional"
             title="Optional">
         <span id="state_streamingpolicyname_csharp">
 <a href="#state_streamingpolicyname_csharp" style="color: inherit; text-decoration: inherit;">Streaming<wbr>Policy<wbr>Name</a>
@@ -1148,14 +1065,11 @@ The following state arguments are supported:
         <span class="property-type">string</span>
     </dt>
     <dd>{{% md %}}Name of the Streaming Policy used by this Streaming Locator. Either specify the name of Streaming Policy you created or use one of the predefined Streaming Policies. The predefined Streaming Policies available are: `Predefined_DownloadOnly`, `Predefined_ClearStreamingOnly`, `Predefined_DownloadAndClearStreaming`, `Predefined_ClearKey`, `Predefined_MultiDrmCencStreaming` and `Predefined_MultiDrmStreaming`. Changing this forces a new Streaming Locator to be created.
-{{% /md %}}</dd>
-</dl>
+{{% /md %}}</dd></dl>
 {{% /choosable %}}
 
 {{% choosable language go %}}
-<dl class="resources-properties">
-
-    <dt class="property-optional"
+<dl class="resources-properties"><dt class="property-optional"
             title="Optional">
         <span id="state_alternativemediaid_go">
 <a href="#state_alternativemediaid_go" style="color: inherit; text-decoration: inherit;">Alternative<wbr>Media<wbr>Id</a>
@@ -1164,8 +1078,7 @@ The following state arguments are supported:
         <span class="property-type">string</span>
     </dt>
     <dd>{{% md %}}Alternative Media ID of this Streaming Locator. Changing this forces a new Streaming Locator to be created.
-{{% /md %}}</dd>
-    <dt class="property-optional"
+{{% /md %}}</dd><dt class="property-optional"
             title="Optional">
         <span id="state_assetname_go">
 <a href="#state_assetname_go" style="color: inherit; text-decoration: inherit;">Asset<wbr>Name</a>
@@ -1174,8 +1087,7 @@ The following state arguments are supported:
         <span class="property-type">string</span>
     </dt>
     <dd>{{% md %}}Asset Name. Changing this forces a new Streaming Locator to be created.
-{{% /md %}}</dd>
-    <dt class="property-optional"
+{{% /md %}}</dd><dt class="property-optional"
             title="Optional">
         <span id="state_contentkeys_go">
 <a href="#state_contentkeys_go" style="color: inherit; text-decoration: inherit;">Content<wbr>Keys</a>
@@ -1184,8 +1096,7 @@ The following state arguments are supported:
         <span class="property-type"><a href="#streaminglocatorcontentkey">[]Streaming<wbr>Locator<wbr>Content<wbr>Key</a></span>
     </dt>
     <dd>{{% md %}}One or more `content_key` blocks as defined below. Changing this forces a new Streaming Locator to be created.
-{{% /md %}}</dd>
-    <dt class="property-optional"
+{{% /md %}}</dd><dt class="property-optional"
             title="Optional">
         <span id="state_defaultcontentkeypolicyname_go">
 <a href="#state_defaultcontentkeypolicyname_go" style="color: inherit; text-decoration: inherit;">Default<wbr>Content<wbr>Key<wbr>Policy<wbr>Name</a>
@@ -1194,8 +1105,7 @@ The following state arguments are supported:
         <span class="property-type">string</span>
     </dt>
     <dd>{{% md %}}Name of the default Content Key Policy used by this Streaming Locator.Changing this forces a new Streaming Locator to be created.
-{{% /md %}}</dd>
-    <dt class="property-optional"
+{{% /md %}}</dd><dt class="property-optional"
             title="Optional">
         <span id="state_endtime_go">
 <a href="#state_endtime_go" style="color: inherit; text-decoration: inherit;">End<wbr>Time</a>
@@ -1204,8 +1114,7 @@ The following state arguments are supported:
         <span class="property-type">string</span>
     </dt>
     <dd>{{% md %}}The end time of the Streaming Locator. Changing this forces a new Streaming Locator to be created.
-{{% /md %}}</dd>
-    <dt class="property-optional"
+{{% /md %}}</dd><dt class="property-optional"
             title="Optional">
         <span id="state_mediaservicesaccountname_go">
 <a href="#state_mediaservicesaccountname_go" style="color: inherit; text-decoration: inherit;">Media<wbr>Services<wbr>Account<wbr>Name</a>
@@ -1214,8 +1123,7 @@ The following state arguments are supported:
         <span class="property-type">string</span>
     </dt>
     <dd>{{% md %}}The Media Services account name. Changing this forces a new Streaming Locator to be created.
-{{% /md %}}</dd>
-    <dt class="property-optional"
+{{% /md %}}</dd><dt class="property-optional"
             title="Optional">
         <span id="state_name_go">
 <a href="#state_name_go" style="color: inherit; text-decoration: inherit;">Name</a>
@@ -1224,8 +1132,7 @@ The following state arguments are supported:
         <span class="property-type">string</span>
     </dt>
     <dd>{{% md %}}The name which should be used for this Streaming Locator. Changing this forces a new Streaming Locator to be created.
-{{% /md %}}</dd>
-    <dt class="property-optional"
+{{% /md %}}</dd><dt class="property-optional"
             title="Optional">
         <span id="state_resourcegroupname_go">
 <a href="#state_resourcegroupname_go" style="color: inherit; text-decoration: inherit;">Resource<wbr>Group<wbr>Name</a>
@@ -1234,8 +1141,7 @@ The following state arguments are supported:
         <span class="property-type">string</span>
     </dt>
     <dd>{{% md %}}The name of the Resource Group where the Streaming Locator should exist. Changing this forces a new Streaming Locator to be created.
-{{% /md %}}</dd>
-    <dt class="property-optional"
+{{% /md %}}</dd><dt class="property-optional"
             title="Optional">
         <span id="state_starttime_go">
 <a href="#state_starttime_go" style="color: inherit; text-decoration: inherit;">Start<wbr>Time</a>
@@ -1244,8 +1150,7 @@ The following state arguments are supported:
         <span class="property-type">string</span>
     </dt>
     <dd>{{% md %}}The start time of the Streaming Locator. Changing this forces a new Streaming Locator to be created.
-{{% /md %}}</dd>
-    <dt class="property-optional"
+{{% /md %}}</dd><dt class="property-optional"
             title="Optional">
         <span id="state_streaminglocatorid_go">
 <a href="#state_streaminglocatorid_go" style="color: inherit; text-decoration: inherit;">Streaming<wbr>Locator<wbr>Id</a>
@@ -1254,8 +1159,7 @@ The following state arguments are supported:
         <span class="property-type">string</span>
     </dt>
     <dd>{{% md %}}The ID of the Streaming Locator. Changing this forces a new Streaming Locator to be created.
-{{% /md %}}</dd>
-    <dt class="property-optional"
+{{% /md %}}</dd><dt class="property-optional"
             title="Optional">
         <span id="state_streamingpolicyname_go">
 <a href="#state_streamingpolicyname_go" style="color: inherit; text-decoration: inherit;">Streaming<wbr>Policy<wbr>Name</a>
@@ -1264,14 +1168,11 @@ The following state arguments are supported:
         <span class="property-type">string</span>
     </dt>
     <dd>{{% md %}}Name of the Streaming Policy used by this Streaming Locator. Either specify the name of Streaming Policy you created or use one of the predefined Streaming Policies. The predefined Streaming Policies available are: `Predefined_DownloadOnly`, `Predefined_ClearStreamingOnly`, `Predefined_DownloadAndClearStreaming`, `Predefined_ClearKey`, `Predefined_MultiDrmCencStreaming` and `Predefined_MultiDrmStreaming`. Changing this forces a new Streaming Locator to be created.
-{{% /md %}}</dd>
-</dl>
+{{% /md %}}</dd></dl>
 {{% /choosable %}}
 
 {{% choosable language nodejs %}}
-<dl class="resources-properties">
-
-    <dt class="property-optional"
+<dl class="resources-properties"><dt class="property-optional"
             title="Optional">
         <span id="state_alternativemediaid_nodejs">
 <a href="#state_alternativemediaid_nodejs" style="color: inherit; text-decoration: inherit;">alternative<wbr>Media<wbr>Id</a>
@@ -1280,8 +1181,7 @@ The following state arguments are supported:
         <span class="property-type">string</span>
     </dt>
     <dd>{{% md %}}Alternative Media ID of this Streaming Locator. Changing this forces a new Streaming Locator to be created.
-{{% /md %}}</dd>
-    <dt class="property-optional"
+{{% /md %}}</dd><dt class="property-optional"
             title="Optional">
         <span id="state_assetname_nodejs">
 <a href="#state_assetname_nodejs" style="color: inherit; text-decoration: inherit;">asset<wbr>Name</a>
@@ -1290,8 +1190,7 @@ The following state arguments are supported:
         <span class="property-type">string</span>
     </dt>
     <dd>{{% md %}}Asset Name. Changing this forces a new Streaming Locator to be created.
-{{% /md %}}</dd>
-    <dt class="property-optional"
+{{% /md %}}</dd><dt class="property-optional"
             title="Optional">
         <span id="state_contentkeys_nodejs">
 <a href="#state_contentkeys_nodejs" style="color: inherit; text-decoration: inherit;">content<wbr>Keys</a>
@@ -1300,8 +1199,7 @@ The following state arguments are supported:
         <span class="property-type"><a href="#streaminglocatorcontentkey">Streaming<wbr>Locator<wbr>Content<wbr>Key[]</a></span>
     </dt>
     <dd>{{% md %}}One or more `content_key` blocks as defined below. Changing this forces a new Streaming Locator to be created.
-{{% /md %}}</dd>
-    <dt class="property-optional"
+{{% /md %}}</dd><dt class="property-optional"
             title="Optional">
         <span id="state_defaultcontentkeypolicyname_nodejs">
 <a href="#state_defaultcontentkeypolicyname_nodejs" style="color: inherit; text-decoration: inherit;">default<wbr>Content<wbr>Key<wbr>Policy<wbr>Name</a>
@@ -1310,8 +1208,7 @@ The following state arguments are supported:
         <span class="property-type">string</span>
     </dt>
     <dd>{{% md %}}Name of the default Content Key Policy used by this Streaming Locator.Changing this forces a new Streaming Locator to be created.
-{{% /md %}}</dd>
-    <dt class="property-optional"
+{{% /md %}}</dd><dt class="property-optional"
             title="Optional">
         <span id="state_endtime_nodejs">
 <a href="#state_endtime_nodejs" style="color: inherit; text-decoration: inherit;">end<wbr>Time</a>
@@ -1320,8 +1217,7 @@ The following state arguments are supported:
         <span class="property-type">string</span>
     </dt>
     <dd>{{% md %}}The end time of the Streaming Locator. Changing this forces a new Streaming Locator to be created.
-{{% /md %}}</dd>
-    <dt class="property-optional"
+{{% /md %}}</dd><dt class="property-optional"
             title="Optional">
         <span id="state_mediaservicesaccountname_nodejs">
 <a href="#state_mediaservicesaccountname_nodejs" style="color: inherit; text-decoration: inherit;">media<wbr>Services<wbr>Account<wbr>Name</a>
@@ -1330,8 +1226,7 @@ The following state arguments are supported:
         <span class="property-type">string</span>
     </dt>
     <dd>{{% md %}}The Media Services account name. Changing this forces a new Streaming Locator to be created.
-{{% /md %}}</dd>
-    <dt class="property-optional"
+{{% /md %}}</dd><dt class="property-optional"
             title="Optional">
         <span id="state_name_nodejs">
 <a href="#state_name_nodejs" style="color: inherit; text-decoration: inherit;">name</a>
@@ -1340,8 +1235,7 @@ The following state arguments are supported:
         <span class="property-type">string</span>
     </dt>
     <dd>{{% md %}}The name which should be used for this Streaming Locator. Changing this forces a new Streaming Locator to be created.
-{{% /md %}}</dd>
-    <dt class="property-optional"
+{{% /md %}}</dd><dt class="property-optional"
             title="Optional">
         <span id="state_resourcegroupname_nodejs">
 <a href="#state_resourcegroupname_nodejs" style="color: inherit; text-decoration: inherit;">resource<wbr>Group<wbr>Name</a>
@@ -1350,8 +1244,7 @@ The following state arguments are supported:
         <span class="property-type">string</span>
     </dt>
     <dd>{{% md %}}The name of the Resource Group where the Streaming Locator should exist. Changing this forces a new Streaming Locator to be created.
-{{% /md %}}</dd>
-    <dt class="property-optional"
+{{% /md %}}</dd><dt class="property-optional"
             title="Optional">
         <span id="state_starttime_nodejs">
 <a href="#state_starttime_nodejs" style="color: inherit; text-decoration: inherit;">start<wbr>Time</a>
@@ -1360,8 +1253,7 @@ The following state arguments are supported:
         <span class="property-type">string</span>
     </dt>
     <dd>{{% md %}}The start time of the Streaming Locator. Changing this forces a new Streaming Locator to be created.
-{{% /md %}}</dd>
-    <dt class="property-optional"
+{{% /md %}}</dd><dt class="property-optional"
             title="Optional">
         <span id="state_streaminglocatorid_nodejs">
 <a href="#state_streaminglocatorid_nodejs" style="color: inherit; text-decoration: inherit;">streaming<wbr>Locator<wbr>Id</a>
@@ -1370,8 +1262,7 @@ The following state arguments are supported:
         <span class="property-type">string</span>
     </dt>
     <dd>{{% md %}}The ID of the Streaming Locator. Changing this forces a new Streaming Locator to be created.
-{{% /md %}}</dd>
-    <dt class="property-optional"
+{{% /md %}}</dd><dt class="property-optional"
             title="Optional">
         <span id="state_streamingpolicyname_nodejs">
 <a href="#state_streamingpolicyname_nodejs" style="color: inherit; text-decoration: inherit;">streaming<wbr>Policy<wbr>Name</a>
@@ -1380,14 +1271,11 @@ The following state arguments are supported:
         <span class="property-type">string</span>
     </dt>
     <dd>{{% md %}}Name of the Streaming Policy used by this Streaming Locator. Either specify the name of Streaming Policy you created or use one of the predefined Streaming Policies. The predefined Streaming Policies available are: `Predefined_DownloadOnly`, `Predefined_ClearStreamingOnly`, `Predefined_DownloadAndClearStreaming`, `Predefined_ClearKey`, `Predefined_MultiDrmCencStreaming` and `Predefined_MultiDrmStreaming`. Changing this forces a new Streaming Locator to be created.
-{{% /md %}}</dd>
-</dl>
+{{% /md %}}</dd></dl>
 {{% /choosable %}}
 
 {{% choosable language python %}}
-<dl class="resources-properties">
-
-    <dt class="property-optional"
+<dl class="resources-properties"><dt class="property-optional"
             title="Optional">
         <span id="state_alternative_media_id_python">
 <a href="#state_alternative_media_id_python" style="color: inherit; text-decoration: inherit;">alternative_<wbr>media_<wbr>id</a>
@@ -1396,8 +1284,7 @@ The following state arguments are supported:
         <span class="property-type">str</span>
     </dt>
     <dd>{{% md %}}Alternative Media ID of this Streaming Locator. Changing this forces a new Streaming Locator to be created.
-{{% /md %}}</dd>
-    <dt class="property-optional"
+{{% /md %}}</dd><dt class="property-optional"
             title="Optional">
         <span id="state_asset_name_python">
 <a href="#state_asset_name_python" style="color: inherit; text-decoration: inherit;">asset_<wbr>name</a>
@@ -1406,8 +1293,7 @@ The following state arguments are supported:
         <span class="property-type">str</span>
     </dt>
     <dd>{{% md %}}Asset Name. Changing this forces a new Streaming Locator to be created.
-{{% /md %}}</dd>
-    <dt class="property-optional"
+{{% /md %}}</dd><dt class="property-optional"
             title="Optional">
         <span id="state_content_keys_python">
 <a href="#state_content_keys_python" style="color: inherit; text-decoration: inherit;">content_<wbr>keys</a>
@@ -1416,8 +1302,7 @@ The following state arguments are supported:
         <span class="property-type"><a href="#streaminglocatorcontentkey">Sequence[Streaming<wbr>Locator<wbr>Content<wbr>Key<wbr>Args]</a></span>
     </dt>
     <dd>{{% md %}}One or more `content_key` blocks as defined below. Changing this forces a new Streaming Locator to be created.
-{{% /md %}}</dd>
-    <dt class="property-optional"
+{{% /md %}}</dd><dt class="property-optional"
             title="Optional">
         <span id="state_default_content_key_policy_name_python">
 <a href="#state_default_content_key_policy_name_python" style="color: inherit; text-decoration: inherit;">default_<wbr>content_<wbr>key_<wbr>policy_<wbr>name</a>
@@ -1426,8 +1311,7 @@ The following state arguments are supported:
         <span class="property-type">str</span>
     </dt>
     <dd>{{% md %}}Name of the default Content Key Policy used by this Streaming Locator.Changing this forces a new Streaming Locator to be created.
-{{% /md %}}</dd>
-    <dt class="property-optional"
+{{% /md %}}</dd><dt class="property-optional"
             title="Optional">
         <span id="state_end_time_python">
 <a href="#state_end_time_python" style="color: inherit; text-decoration: inherit;">end_<wbr>time</a>
@@ -1436,8 +1320,7 @@ The following state arguments are supported:
         <span class="property-type">str</span>
     </dt>
     <dd>{{% md %}}The end time of the Streaming Locator. Changing this forces a new Streaming Locator to be created.
-{{% /md %}}</dd>
-    <dt class="property-optional"
+{{% /md %}}</dd><dt class="property-optional"
             title="Optional">
         <span id="state_media_services_account_name_python">
 <a href="#state_media_services_account_name_python" style="color: inherit; text-decoration: inherit;">media_<wbr>services_<wbr>account_<wbr>name</a>
@@ -1446,8 +1329,7 @@ The following state arguments are supported:
         <span class="property-type">str</span>
     </dt>
     <dd>{{% md %}}The Media Services account name. Changing this forces a new Streaming Locator to be created.
-{{% /md %}}</dd>
-    <dt class="property-optional"
+{{% /md %}}</dd><dt class="property-optional"
             title="Optional">
         <span id="state_name_python">
 <a href="#state_name_python" style="color: inherit; text-decoration: inherit;">name</a>
@@ -1456,8 +1338,7 @@ The following state arguments are supported:
         <span class="property-type">str</span>
     </dt>
     <dd>{{% md %}}The name which should be used for this Streaming Locator. Changing this forces a new Streaming Locator to be created.
-{{% /md %}}</dd>
-    <dt class="property-optional"
+{{% /md %}}</dd><dt class="property-optional"
             title="Optional">
         <span id="state_resource_group_name_python">
 <a href="#state_resource_group_name_python" style="color: inherit; text-decoration: inherit;">resource_<wbr>group_<wbr>name</a>
@@ -1466,8 +1347,7 @@ The following state arguments are supported:
         <span class="property-type">str</span>
     </dt>
     <dd>{{% md %}}The name of the Resource Group where the Streaming Locator should exist. Changing this forces a new Streaming Locator to be created.
-{{% /md %}}</dd>
-    <dt class="property-optional"
+{{% /md %}}</dd><dt class="property-optional"
             title="Optional">
         <span id="state_start_time_python">
 <a href="#state_start_time_python" style="color: inherit; text-decoration: inherit;">start_<wbr>time</a>
@@ -1476,8 +1356,7 @@ The following state arguments are supported:
         <span class="property-type">str</span>
     </dt>
     <dd>{{% md %}}The start time of the Streaming Locator. Changing this forces a new Streaming Locator to be created.
-{{% /md %}}</dd>
-    <dt class="property-optional"
+{{% /md %}}</dd><dt class="property-optional"
             title="Optional">
         <span id="state_streaming_locator_id_python">
 <a href="#state_streaming_locator_id_python" style="color: inherit; text-decoration: inherit;">streaming_<wbr>locator_<wbr>id</a>
@@ -1486,8 +1365,7 @@ The following state arguments are supported:
         <span class="property-type">str</span>
     </dt>
     <dd>{{% md %}}The ID of the Streaming Locator. Changing this forces a new Streaming Locator to be created.
-{{% /md %}}</dd>
-    <dt class="property-optional"
+{{% /md %}}</dd><dt class="property-optional"
             title="Optional">
         <span id="state_streaming_policy_name_python">
 <a href="#state_streaming_policy_name_python" style="color: inherit; text-decoration: inherit;">streaming_<wbr>policy_<wbr>name</a>
@@ -1496,8 +1374,7 @@ The following state arguments are supported:
         <span class="property-type">str</span>
     </dt>
     <dd>{{% md %}}Name of the Streaming Policy used by this Streaming Locator. Either specify the name of Streaming Policy you created or use one of the predefined Streaming Policies. The predefined Streaming Policies available are: `Predefined_DownloadOnly`, `Predefined_ClearStreamingOnly`, `Predefined_DownloadAndClearStreaming`, `Predefined_ClearKey`, `Predefined_MultiDrmCencStreaming` and `Predefined_MultiDrmStreaming`. Changing this forces a new Streaming Locator to be created.
-{{% /md %}}</dd>
-</dl>
+{{% /md %}}</dd></dl>
 {{% /choosable %}}
 
 
@@ -1512,9 +1389,7 @@ The following state arguments are supported:
 <h4 id="streaminglocatorcontentkey">Streaming<wbr>Locator<wbr>Content<wbr>Key</h4>
 
 {{% choosable language csharp %}}
-<dl class="resources-properties">
-
-    <dt class="property-optional"
+<dl class="resources-properties"><dt class="property-optional"
             title="Optional">
         <span id="contentkeyid_csharp">
 <a href="#contentkeyid_csharp" style="color: inherit; text-decoration: inherit;">Content<wbr>Key<wbr>Id</a>
@@ -1523,8 +1398,7 @@ The following state arguments are supported:
         <span class="property-type">string</span>
     </dt>
     <dd>{{% md %}}ID of Content Key. Changing this forces a new Streaming Locator to be created.
-{{% /md %}}</dd>
-    <dt class="property-optional"
+{{% /md %}}</dd><dt class="property-optional"
             title="Optional">
         <span id="labelreferenceinstreamingpolicy_csharp">
 <a href="#labelreferenceinstreamingpolicy_csharp" style="color: inherit; text-decoration: inherit;">Label<wbr>Reference<wbr>In<wbr>Streaming<wbr>Policy</a>
@@ -1533,8 +1407,7 @@ The following state arguments are supported:
         <span class="property-type">string</span>
     </dt>
     <dd>{{% md %}}Label of Content Key as specified in the Streaming Policy. Changing this forces a new Streaming Locator to be created.
-{{% /md %}}</dd>
-    <dt class="property-optional"
+{{% /md %}}</dd><dt class="property-optional"
             title="Optional">
         <span id="policyname_csharp">
 <a href="#policyname_csharp" style="color: inherit; text-decoration: inherit;">Policy<wbr>Name</a>
@@ -1543,8 +1416,7 @@ The following state arguments are supported:
         <span class="property-type">string</span>
     </dt>
     <dd>{{% md %}}Content Key Policy used by Content Key. Changing this forces a new Streaming Locator to be created.
-{{% /md %}}</dd>
-    <dt class="property-optional"
+{{% /md %}}</dd><dt class="property-optional"
             title="Optional">
         <span id="type_csharp">
 <a href="#type_csharp" style="color: inherit; text-decoration: inherit;">Type</a>
@@ -1553,8 +1425,7 @@ The following state arguments are supported:
         <span class="property-type">string</span>
     </dt>
     <dd>{{% md %}}Encryption type of Content Key. Supported values are `CommonEncryptionCbcs`, `CommonEncryptionCenc` or `EnvelopeEncryption`. Changing this forces a new Streaming Locator to be created.
-{{% /md %}}</dd>
-    <dt class="property-optional"
+{{% /md %}}</dd><dt class="property-optional"
             title="Optional">
         <span id="value_csharp">
 <a href="#value_csharp" style="color: inherit; text-decoration: inherit;">Value</a>
@@ -1563,14 +1434,11 @@ The following state arguments are supported:
         <span class="property-type">string</span>
     </dt>
     <dd>{{% md %}}Value of Content Key. Changing this forces a new Streaming Locator to be created.
-{{% /md %}}</dd>
-</dl>
+{{% /md %}}</dd></dl>
 {{% /choosable %}}
 
 {{% choosable language go %}}
-<dl class="resources-properties">
-
-    <dt class="property-optional"
+<dl class="resources-properties"><dt class="property-optional"
             title="Optional">
         <span id="contentkeyid_go">
 <a href="#contentkeyid_go" style="color: inherit; text-decoration: inherit;">Content<wbr>Key<wbr>Id</a>
@@ -1579,8 +1447,7 @@ The following state arguments are supported:
         <span class="property-type">string</span>
     </dt>
     <dd>{{% md %}}ID of Content Key. Changing this forces a new Streaming Locator to be created.
-{{% /md %}}</dd>
-    <dt class="property-optional"
+{{% /md %}}</dd><dt class="property-optional"
             title="Optional">
         <span id="labelreferenceinstreamingpolicy_go">
 <a href="#labelreferenceinstreamingpolicy_go" style="color: inherit; text-decoration: inherit;">Label<wbr>Reference<wbr>In<wbr>Streaming<wbr>Policy</a>
@@ -1589,8 +1456,7 @@ The following state arguments are supported:
         <span class="property-type">string</span>
     </dt>
     <dd>{{% md %}}Label of Content Key as specified in the Streaming Policy. Changing this forces a new Streaming Locator to be created.
-{{% /md %}}</dd>
-    <dt class="property-optional"
+{{% /md %}}</dd><dt class="property-optional"
             title="Optional">
         <span id="policyname_go">
 <a href="#policyname_go" style="color: inherit; text-decoration: inherit;">Policy<wbr>Name</a>
@@ -1599,8 +1465,7 @@ The following state arguments are supported:
         <span class="property-type">string</span>
     </dt>
     <dd>{{% md %}}Content Key Policy used by Content Key. Changing this forces a new Streaming Locator to be created.
-{{% /md %}}</dd>
-    <dt class="property-optional"
+{{% /md %}}</dd><dt class="property-optional"
             title="Optional">
         <span id="type_go">
 <a href="#type_go" style="color: inherit; text-decoration: inherit;">Type</a>
@@ -1609,8 +1474,7 @@ The following state arguments are supported:
         <span class="property-type">string</span>
     </dt>
     <dd>{{% md %}}Encryption type of Content Key. Supported values are `CommonEncryptionCbcs`, `CommonEncryptionCenc` or `EnvelopeEncryption`. Changing this forces a new Streaming Locator to be created.
-{{% /md %}}</dd>
-    <dt class="property-optional"
+{{% /md %}}</dd><dt class="property-optional"
             title="Optional">
         <span id="value_go">
 <a href="#value_go" style="color: inherit; text-decoration: inherit;">Value</a>
@@ -1619,14 +1483,11 @@ The following state arguments are supported:
         <span class="property-type">string</span>
     </dt>
     <dd>{{% md %}}Value of Content Key. Changing this forces a new Streaming Locator to be created.
-{{% /md %}}</dd>
-</dl>
+{{% /md %}}</dd></dl>
 {{% /choosable %}}
 
 {{% choosable language nodejs %}}
-<dl class="resources-properties">
-
-    <dt class="property-optional"
+<dl class="resources-properties"><dt class="property-optional"
             title="Optional">
         <span id="contentkeyid_nodejs">
 <a href="#contentkeyid_nodejs" style="color: inherit; text-decoration: inherit;">content<wbr>Key<wbr>Id</a>
@@ -1635,8 +1496,7 @@ The following state arguments are supported:
         <span class="property-type">string</span>
     </dt>
     <dd>{{% md %}}ID of Content Key. Changing this forces a new Streaming Locator to be created.
-{{% /md %}}</dd>
-    <dt class="property-optional"
+{{% /md %}}</dd><dt class="property-optional"
             title="Optional">
         <span id="labelreferenceinstreamingpolicy_nodejs">
 <a href="#labelreferenceinstreamingpolicy_nodejs" style="color: inherit; text-decoration: inherit;">label<wbr>Reference<wbr>In<wbr>Streaming<wbr>Policy</a>
@@ -1645,8 +1505,7 @@ The following state arguments are supported:
         <span class="property-type">string</span>
     </dt>
     <dd>{{% md %}}Label of Content Key as specified in the Streaming Policy. Changing this forces a new Streaming Locator to be created.
-{{% /md %}}</dd>
-    <dt class="property-optional"
+{{% /md %}}</dd><dt class="property-optional"
             title="Optional">
         <span id="policyname_nodejs">
 <a href="#policyname_nodejs" style="color: inherit; text-decoration: inherit;">policy<wbr>Name</a>
@@ -1655,8 +1514,7 @@ The following state arguments are supported:
         <span class="property-type">string</span>
     </dt>
     <dd>{{% md %}}Content Key Policy used by Content Key. Changing this forces a new Streaming Locator to be created.
-{{% /md %}}</dd>
-    <dt class="property-optional"
+{{% /md %}}</dd><dt class="property-optional"
             title="Optional">
         <span id="type_nodejs">
 <a href="#type_nodejs" style="color: inherit; text-decoration: inherit;">type</a>
@@ -1665,8 +1523,7 @@ The following state arguments are supported:
         <span class="property-type">string</span>
     </dt>
     <dd>{{% md %}}Encryption type of Content Key. Supported values are `CommonEncryptionCbcs`, `CommonEncryptionCenc` or `EnvelopeEncryption`. Changing this forces a new Streaming Locator to be created.
-{{% /md %}}</dd>
-    <dt class="property-optional"
+{{% /md %}}</dd><dt class="property-optional"
             title="Optional">
         <span id="value_nodejs">
 <a href="#value_nodejs" style="color: inherit; text-decoration: inherit;">value</a>
@@ -1675,14 +1532,11 @@ The following state arguments are supported:
         <span class="property-type">string</span>
     </dt>
     <dd>{{% md %}}Value of Content Key. Changing this forces a new Streaming Locator to be created.
-{{% /md %}}</dd>
-</dl>
+{{% /md %}}</dd></dl>
 {{% /choosable %}}
 
 {{% choosable language python %}}
-<dl class="resources-properties">
-
-    <dt class="property-optional"
+<dl class="resources-properties"><dt class="property-optional"
             title="Optional">
         <span id="content_key_id_python">
 <a href="#content_key_id_python" style="color: inherit; text-decoration: inherit;">content_<wbr>key_<wbr>id</a>
@@ -1691,8 +1545,7 @@ The following state arguments are supported:
         <span class="property-type">str</span>
     </dt>
     <dd>{{% md %}}ID of Content Key. Changing this forces a new Streaming Locator to be created.
-{{% /md %}}</dd>
-    <dt class="property-optional"
+{{% /md %}}</dd><dt class="property-optional"
             title="Optional">
         <span id="label_reference_in_streaming_policy_python">
 <a href="#label_reference_in_streaming_policy_python" style="color: inherit; text-decoration: inherit;">label_<wbr>reference_<wbr>in_<wbr>streaming_<wbr>policy</a>
@@ -1701,8 +1554,7 @@ The following state arguments are supported:
         <span class="property-type">str</span>
     </dt>
     <dd>{{% md %}}Label of Content Key as specified in the Streaming Policy. Changing this forces a new Streaming Locator to be created.
-{{% /md %}}</dd>
-    <dt class="property-optional"
+{{% /md %}}</dd><dt class="property-optional"
             title="Optional">
         <span id="policy_name_python">
 <a href="#policy_name_python" style="color: inherit; text-decoration: inherit;">policy_<wbr>name</a>
@@ -1711,8 +1563,7 @@ The following state arguments are supported:
         <span class="property-type">str</span>
     </dt>
     <dd>{{% md %}}Content Key Policy used by Content Key. Changing this forces a new Streaming Locator to be created.
-{{% /md %}}</dd>
-    <dt class="property-optional"
+{{% /md %}}</dd><dt class="property-optional"
             title="Optional">
         <span id="type_python">
 <a href="#type_python" style="color: inherit; text-decoration: inherit;">type</a>
@@ -1721,8 +1572,7 @@ The following state arguments are supported:
         <span class="property-type">str</span>
     </dt>
     <dd>{{% md %}}Encryption type of Content Key. Supported values are `CommonEncryptionCbcs`, `CommonEncryptionCenc` or `EnvelopeEncryption`. Changing this forces a new Streaming Locator to be created.
-{{% /md %}}</dd>
-    <dt class="property-optional"
+{{% /md %}}</dd><dt class="property-optional"
             title="Optional">
         <span id="value_python">
 <a href="#value_python" style="color: inherit; text-decoration: inherit;">value</a>
@@ -1731,8 +1581,7 @@ The following state arguments are supported:
         <span class="property-type">str</span>
     </dt>
     <dd>{{% md %}}Value of Content Key. Changing this forces a new Streaming Locator to be created.
-{{% /md %}}</dd>
-</dl>
+{{% /md %}}</dd></dl>
 {{% /choosable %}}
 ## Import
 
@@ -1753,6 +1602,6 @@ Streaming Locators can be imported using the `resource id`, e.g.
 	<dt>License</dt>
 	<dd>Apache-2.0</dd>
 	<dt>Notes</dt>
-	<dd>This Pulumi package is based on the [`azurerm` Terraform Provider](https://github.com/terraform-providers/terraform-provider-azurerm).</dd>
+	<dd>{{% md %}}This Pulumi package is based on the [`azurerm` Terraform Provider](https://github.com/terraform-providers/terraform-provider-azurerm).{{% /md %}}</dd>
 </dl>
 

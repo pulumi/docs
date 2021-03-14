@@ -35,9 +35,7 @@ meta_desc: "Documentation for the vsphere.ResourcePool resource with examples, i
 
 {{% choosable language nodejs %}}
 
-<dl class="resources-properties">
-  
-    <dt
+<dl class="resources-properties"><dt
         class="property-required" title="Required">
         <span>name</span>
         <span class="property-indicator"></span>
@@ -45,9 +43,7 @@ meta_desc: "Documentation for the vsphere.ResourcePool resource with examples, i
     </dt>
     <dd>
       The unique name of the resource.
-    </dd>
-  
-    <dt
+    </dd><dt
         class="property-required" title="Required">
         <span>args</span>
         <span class="property-indicator"></span>
@@ -55,9 +51,7 @@ meta_desc: "Documentation for the vsphere.ResourcePool resource with examples, i
     </dt>
     <dd>
       The arguments to resource properties.
-    </dd>
-  
-    <dt
+    </dd><dt
         class="property-optional" title="Optional">
         <span>opts</span>
         <span class="property-indicator"></span>
@@ -65,10 +59,7 @@ meta_desc: "Documentation for the vsphere.ResourcePool resource with examples, i
     </dt>
     <dd>
       Bag of options to control resource&#39;s behavior.
-    </dd>
-  
-
-</dl>
+    </dd></dl>
 
 {{% /choosable %}}
 
@@ -94,9 +85,7 @@ meta_desc: "Documentation for the vsphere.ResourcePool resource with examples, i
 
 {{% choosable language go %}}
 
-<dl class="resources-properties">
-  
-    <dt
+<dl class="resources-properties"><dt
         class="property-optional" title="Optional">
         <span>ctx</span>
         <span class="property-indicator"></span>
@@ -104,9 +93,7 @@ meta_desc: "Documentation for the vsphere.ResourcePool resource with examples, i
     </dt>
     <dd>
       Context object for the current deployment.
-    </dd>
-  
-    <dt
+    </dd><dt
         class="property-required" title="Required">
         <span>name</span>
         <span class="property-indicator"></span>
@@ -114,9 +101,7 @@ meta_desc: "Documentation for the vsphere.ResourcePool resource with examples, i
     </dt>
     <dd>
       The unique name of the resource.
-    </dd>
-  
-    <dt
+    </dd><dt
         class="property-required" title="Required">
         <span>args</span>
         <span class="property-indicator"></span>
@@ -124,9 +109,7 @@ meta_desc: "Documentation for the vsphere.ResourcePool resource with examples, i
     </dt>
     <dd>
       The arguments to resource properties.
-    </dd>
-  
-    <dt
+    </dd><dt
         class="property-optional" title="Optional">
         <span>opts</span>
         <span class="property-indicator"></span>
@@ -134,18 +117,13 @@ meta_desc: "Documentation for the vsphere.ResourcePool resource with examples, i
     </dt>
     <dd>
       Bag of options to control resource&#39;s behavior.
-    </dd>
-  
-
-</dl>
+    </dd></dl>
 
 {{% /choosable %}}
 
 {{% choosable language csharp %}}
 
-<dl class="resources-properties">
-  
-    <dt
+<dl class="resources-properties"><dt
         class="property-required" title="Required">
         <span>name</span>
         <span class="property-indicator"></span>
@@ -153,9 +131,7 @@ meta_desc: "Documentation for the vsphere.ResourcePool resource with examples, i
     </dt>
     <dd>
       The unique name of the resource.
-    </dd>
-  
-    <dt
+    </dd><dt
         class="property-required" title="Required">
         <span>args</span>
         <span class="property-indicator"></span>
@@ -163,9 +139,7 @@ meta_desc: "Documentation for the vsphere.ResourcePool resource with examples, i
     </dt>
     <dd>
       The arguments to resource properties.
-    </dd>
-  
-    <dt
+    </dd><dt
         class="property-optional" title="Optional">
         <span>opts</span>
         <span class="property-indicator"></span>
@@ -173,10 +147,7 @@ meta_desc: "Documentation for the vsphere.ResourcePool resource with examples, i
     </dt>
     <dd>
       Bag of options to control resource&#39;s behavior.
-    </dd>
-  
-
-</dl>
+    </dd></dl>
 
 {{% /choosable %}}
 
@@ -191,9 +162,7 @@ The ResourcePool resource accepts the following [input]({{< relref "/docs/intro/
 
 
 {{% choosable language csharp %}}
-<dl class="resources-properties">
-
-    <dt class="property-required"
+<dl class="resources-properties"><dt class="property-required"
             title="Required">
         <span id="parentresourcepoolid_csharp">
 <a href="#parentresourcepoolid_csharp" style="color: inherit; text-decoration: inherit;">Parent<wbr>Resource<wbr>Pool<wbr>Id</a>
@@ -206,8 +175,7 @@ of the parent resource pool. This can be the root resource pool for a cluster
 or standalone host, or a resource pool itself. When moving a resource pool
 from one parent resource pool to another, both must share a common root
 resource pool or the move will fail.
-{{% /md %}}</dd>
-    <dt class="property-optional"
+{{% /md %}}</dd><dt class="property-optional"
             title="Optional">
         <span id="cpuexpandable_csharp">
 <a href="#cpuexpandable_csharp" style="color: inherit; text-decoration: inherit;">Cpu<wbr>Expandable</a>
@@ -218,8 +186,7 @@ resource pool or the move will fail.
     <dd>{{% md %}}Determines if the reservation on a resource
 pool can grow beyond the specified value if the parent resource pool has
 unreserved resources. Default: `true`
-{{% /md %}}</dd>
-    <dt class="property-optional"
+{{% /md %}}</dd><dt class="property-optional"
             title="Optional">
         <span id="cpulimit_csharp">
 <a href="#cpulimit_csharp" style="color: inherit; text-decoration: inherit;">Cpu<wbr>Limit</a>
@@ -230,8 +197,7 @@ unreserved resources. Default: `true`
     <dd>{{% md %}}The CPU utilization of a resource pool will not exceed
 this limit, even if there are available resources. Set to `-1` for unlimited.
 Default: `-1`
-{{% /md %}}</dd>
-    <dt class="property-optional"
+{{% /md %}}</dd><dt class="property-optional"
             title="Optional">
         <span id="cpureservation_csharp">
 <a href="#cpureservation_csharp" style="color: inherit; text-decoration: inherit;">Cpu<wbr>Reservation</a>
@@ -241,8 +207,7 @@ Default: `-1`
     </dt>
     <dd>{{% md %}}Amount of CPU (MHz) that is guaranteed
 available to the resource pool. Default: `0`
-{{% /md %}}</dd>
-    <dt class="property-optional"
+{{% /md %}}</dd><dt class="property-optional"
             title="Optional">
         <span id="cpusharelevel_csharp">
 <a href="#cpusharelevel_csharp" style="color: inherit; text-decoration: inherit;">Cpu<wbr>Share<wbr>Level</a>
@@ -255,8 +220,7 @@ simplified view of shares. Levels map to a pre-determined set of numeric
 values for shares. Can be one of `low`, `normal`, `high`, or `custom`. When
 `low`, `normal`, or `high` are specified values in `cpu_shares` will be
 ignored.  Default: `normal`
-{{% /md %}}</dd>
-    <dt class="property-optional"
+{{% /md %}}</dd><dt class="property-optional"
             title="Optional">
         <span id="cpushares_csharp">
 <a href="#cpushares_csharp" style="color: inherit; text-decoration: inherit;">Cpu<wbr>Shares</a>
@@ -267,8 +231,7 @@ ignored.  Default: `normal`
     <dd>{{% md %}}The number of shares allocated for CPU. Used to
 determine resource allocation in case of resource contention. If this is set,
 `cpu_share_level` must be `custom`.
-{{% /md %}}</dd>
-    <dt class="property-optional"
+{{% /md %}}</dd><dt class="property-optional"
             title="Optional">
         <span id="customattributes_csharp">
 <a href="#customattributes_csharp" style="color: inherit; text-decoration: inherit;">Custom<wbr>Attributes</a>
@@ -277,8 +240,7 @@ determine resource allocation in case of resource contention. If this is set,
         <span class="property-type">Dictionary&lt;string, string&gt;</span>
     </dt>
     <dd>{{% md %}}A list of custom attributes to set on this resource.
-{{% /md %}}</dd>
-    <dt class="property-optional"
+{{% /md %}}</dd><dt class="property-optional"
             title="Optional">
         <span id="memoryexpandable_csharp">
 <a href="#memoryexpandable_csharp" style="color: inherit; text-decoration: inherit;">Memory<wbr>Expandable</a>
@@ -289,8 +251,7 @@ determine resource allocation in case of resource contention. If this is set,
     <dd>{{% md %}}Determines if the reservation on a resource
 pool can grow beyond the specified value if the parent resource pool has
 unreserved resources. Default: `true`
-{{% /md %}}</dd>
-    <dt class="property-optional"
+{{% /md %}}</dd><dt class="property-optional"
             title="Optional">
         <span id="memorylimit_csharp">
 <a href="#memorylimit_csharp" style="color: inherit; text-decoration: inherit;">Memory<wbr>Limit</a>
@@ -301,8 +262,7 @@ unreserved resources. Default: `true`
     <dd>{{% md %}}The CPU utilization of a resource pool will not exceed
 this limit, even if there are available resources. Set to `-1` for unlimited.
 Default: `-1`
-{{% /md %}}</dd>
-    <dt class="property-optional"
+{{% /md %}}</dd><dt class="property-optional"
             title="Optional">
         <span id="memoryreservation_csharp">
 <a href="#memoryreservation_csharp" style="color: inherit; text-decoration: inherit;">Memory<wbr>Reservation</a>
@@ -312,8 +272,7 @@ Default: `-1`
     </dt>
     <dd>{{% md %}}Amount of CPU (MHz) that is guaranteed
 available to the resource pool. Default: `0`
-{{% /md %}}</dd>
-    <dt class="property-optional"
+{{% /md %}}</dd><dt class="property-optional"
             title="Optional">
         <span id="memorysharelevel_csharp">
 <a href="#memorysharelevel_csharp" style="color: inherit; text-decoration: inherit;">Memory<wbr>Share<wbr>Level</a>
@@ -326,8 +285,7 @@ simplified view of shares. Levels map to a pre-determined set of numeric
 values for shares. Can be one of `low`, `normal`, `high`, or `custom`. When
 `low`, `normal`, or `high` are specified values in `memory_shares` will be
 ignored.  Default: `normal`
-{{% /md %}}</dd>
-    <dt class="property-optional"
+{{% /md %}}</dd><dt class="property-optional"
             title="Optional">
         <span id="memoryshares_csharp">
 <a href="#memoryshares_csharp" style="color: inherit; text-decoration: inherit;">Memory<wbr>Shares</a>
@@ -338,8 +296,7 @@ ignored.  Default: `normal`
     <dd>{{% md %}}The number of shares allocated for CPU. Used to
 determine resource allocation in case of resource contention. If this is set,
 `memory_share_level` must be `custom`.
-{{% /md %}}</dd>
-    <dt class="property-optional"
+{{% /md %}}</dd><dt class="property-optional"
             title="Optional">
         <span id="name_csharp">
 <a href="#name_csharp" style="color: inherit; text-decoration: inherit;">Name</a>
@@ -348,8 +305,7 @@ determine resource allocation in case of resource contention. If this is set,
         <span class="property-type">string</span>
     </dt>
     <dd>{{% md %}}The name of the resource pool.
-{{% /md %}}</dd>
-    <dt class="property-optional"
+{{% /md %}}</dd><dt class="property-optional"
             title="Optional">
         <span id="tags_csharp">
 <a href="#tags_csharp" style="color: inherit; text-decoration: inherit;">Tags</a>
@@ -358,14 +314,11 @@ determine resource allocation in case of resource contention. If this is set,
         <span class="property-type">List&lt;string&gt;</span>
     </dt>
     <dd>{{% md %}}The IDs of any tags to attach to this resource.
-{{% /md %}}</dd>
-</dl>
+{{% /md %}}</dd></dl>
 {{% /choosable %}}
 
 {{% choosable language go %}}
-<dl class="resources-properties">
-
-    <dt class="property-required"
+<dl class="resources-properties"><dt class="property-required"
             title="Required">
         <span id="parentresourcepoolid_go">
 <a href="#parentresourcepoolid_go" style="color: inherit; text-decoration: inherit;">Parent<wbr>Resource<wbr>Pool<wbr>Id</a>
@@ -378,8 +331,7 @@ of the parent resource pool. This can be the root resource pool for a cluster
 or standalone host, or a resource pool itself. When moving a resource pool
 from one parent resource pool to another, both must share a common root
 resource pool or the move will fail.
-{{% /md %}}</dd>
-    <dt class="property-optional"
+{{% /md %}}</dd><dt class="property-optional"
             title="Optional">
         <span id="cpuexpandable_go">
 <a href="#cpuexpandable_go" style="color: inherit; text-decoration: inherit;">Cpu<wbr>Expandable</a>
@@ -390,8 +342,7 @@ resource pool or the move will fail.
     <dd>{{% md %}}Determines if the reservation on a resource
 pool can grow beyond the specified value if the parent resource pool has
 unreserved resources. Default: `true`
-{{% /md %}}</dd>
-    <dt class="property-optional"
+{{% /md %}}</dd><dt class="property-optional"
             title="Optional">
         <span id="cpulimit_go">
 <a href="#cpulimit_go" style="color: inherit; text-decoration: inherit;">Cpu<wbr>Limit</a>
@@ -402,8 +353,7 @@ unreserved resources. Default: `true`
     <dd>{{% md %}}The CPU utilization of a resource pool will not exceed
 this limit, even if there are available resources. Set to `-1` for unlimited.
 Default: `-1`
-{{% /md %}}</dd>
-    <dt class="property-optional"
+{{% /md %}}</dd><dt class="property-optional"
             title="Optional">
         <span id="cpureservation_go">
 <a href="#cpureservation_go" style="color: inherit; text-decoration: inherit;">Cpu<wbr>Reservation</a>
@@ -413,8 +363,7 @@ Default: `-1`
     </dt>
     <dd>{{% md %}}Amount of CPU (MHz) that is guaranteed
 available to the resource pool. Default: `0`
-{{% /md %}}</dd>
-    <dt class="property-optional"
+{{% /md %}}</dd><dt class="property-optional"
             title="Optional">
         <span id="cpusharelevel_go">
 <a href="#cpusharelevel_go" style="color: inherit; text-decoration: inherit;">Cpu<wbr>Share<wbr>Level</a>
@@ -427,8 +376,7 @@ simplified view of shares. Levels map to a pre-determined set of numeric
 values for shares. Can be one of `low`, `normal`, `high`, or `custom`. When
 `low`, `normal`, or `high` are specified values in `cpu_shares` will be
 ignored.  Default: `normal`
-{{% /md %}}</dd>
-    <dt class="property-optional"
+{{% /md %}}</dd><dt class="property-optional"
             title="Optional">
         <span id="cpushares_go">
 <a href="#cpushares_go" style="color: inherit; text-decoration: inherit;">Cpu<wbr>Shares</a>
@@ -439,8 +387,7 @@ ignored.  Default: `normal`
     <dd>{{% md %}}The number of shares allocated for CPU. Used to
 determine resource allocation in case of resource contention. If this is set,
 `cpu_share_level` must be `custom`.
-{{% /md %}}</dd>
-    <dt class="property-optional"
+{{% /md %}}</dd><dt class="property-optional"
             title="Optional">
         <span id="customattributes_go">
 <a href="#customattributes_go" style="color: inherit; text-decoration: inherit;">Custom<wbr>Attributes</a>
@@ -449,8 +396,7 @@ determine resource allocation in case of resource contention. If this is set,
         <span class="property-type">map[string]string</span>
     </dt>
     <dd>{{% md %}}A list of custom attributes to set on this resource.
-{{% /md %}}</dd>
-    <dt class="property-optional"
+{{% /md %}}</dd><dt class="property-optional"
             title="Optional">
         <span id="memoryexpandable_go">
 <a href="#memoryexpandable_go" style="color: inherit; text-decoration: inherit;">Memory<wbr>Expandable</a>
@@ -461,8 +407,7 @@ determine resource allocation in case of resource contention. If this is set,
     <dd>{{% md %}}Determines if the reservation on a resource
 pool can grow beyond the specified value if the parent resource pool has
 unreserved resources. Default: `true`
-{{% /md %}}</dd>
-    <dt class="property-optional"
+{{% /md %}}</dd><dt class="property-optional"
             title="Optional">
         <span id="memorylimit_go">
 <a href="#memorylimit_go" style="color: inherit; text-decoration: inherit;">Memory<wbr>Limit</a>
@@ -473,8 +418,7 @@ unreserved resources. Default: `true`
     <dd>{{% md %}}The CPU utilization of a resource pool will not exceed
 this limit, even if there are available resources. Set to `-1` for unlimited.
 Default: `-1`
-{{% /md %}}</dd>
-    <dt class="property-optional"
+{{% /md %}}</dd><dt class="property-optional"
             title="Optional">
         <span id="memoryreservation_go">
 <a href="#memoryreservation_go" style="color: inherit; text-decoration: inherit;">Memory<wbr>Reservation</a>
@@ -484,8 +428,7 @@ Default: `-1`
     </dt>
     <dd>{{% md %}}Amount of CPU (MHz) that is guaranteed
 available to the resource pool. Default: `0`
-{{% /md %}}</dd>
-    <dt class="property-optional"
+{{% /md %}}</dd><dt class="property-optional"
             title="Optional">
         <span id="memorysharelevel_go">
 <a href="#memorysharelevel_go" style="color: inherit; text-decoration: inherit;">Memory<wbr>Share<wbr>Level</a>
@@ -498,8 +441,7 @@ simplified view of shares. Levels map to a pre-determined set of numeric
 values for shares. Can be one of `low`, `normal`, `high`, or `custom`. When
 `low`, `normal`, or `high` are specified values in `memory_shares` will be
 ignored.  Default: `normal`
-{{% /md %}}</dd>
-    <dt class="property-optional"
+{{% /md %}}</dd><dt class="property-optional"
             title="Optional">
         <span id="memoryshares_go">
 <a href="#memoryshares_go" style="color: inherit; text-decoration: inherit;">Memory<wbr>Shares</a>
@@ -510,8 +452,7 @@ ignored.  Default: `normal`
     <dd>{{% md %}}The number of shares allocated for CPU. Used to
 determine resource allocation in case of resource contention. If this is set,
 `memory_share_level` must be `custom`.
-{{% /md %}}</dd>
-    <dt class="property-optional"
+{{% /md %}}</dd><dt class="property-optional"
             title="Optional">
         <span id="name_go">
 <a href="#name_go" style="color: inherit; text-decoration: inherit;">Name</a>
@@ -520,8 +461,7 @@ determine resource allocation in case of resource contention. If this is set,
         <span class="property-type">string</span>
     </dt>
     <dd>{{% md %}}The name of the resource pool.
-{{% /md %}}</dd>
-    <dt class="property-optional"
+{{% /md %}}</dd><dt class="property-optional"
             title="Optional">
         <span id="tags_go">
 <a href="#tags_go" style="color: inherit; text-decoration: inherit;">Tags</a>
@@ -530,14 +470,11 @@ determine resource allocation in case of resource contention. If this is set,
         <span class="property-type">[]string</span>
     </dt>
     <dd>{{% md %}}The IDs of any tags to attach to this resource.
-{{% /md %}}</dd>
-</dl>
+{{% /md %}}</dd></dl>
 {{% /choosable %}}
 
 {{% choosable language nodejs %}}
-<dl class="resources-properties">
-
-    <dt class="property-required"
+<dl class="resources-properties"><dt class="property-required"
             title="Required">
         <span id="parentresourcepoolid_nodejs">
 <a href="#parentresourcepoolid_nodejs" style="color: inherit; text-decoration: inherit;">parent<wbr>Resource<wbr>Pool<wbr>Id</a>
@@ -550,8 +487,7 @@ of the parent resource pool. This can be the root resource pool for a cluster
 or standalone host, or a resource pool itself. When moving a resource pool
 from one parent resource pool to another, both must share a common root
 resource pool or the move will fail.
-{{% /md %}}</dd>
-    <dt class="property-optional"
+{{% /md %}}</dd><dt class="property-optional"
             title="Optional">
         <span id="cpuexpandable_nodejs">
 <a href="#cpuexpandable_nodejs" style="color: inherit; text-decoration: inherit;">cpu<wbr>Expandable</a>
@@ -562,8 +498,7 @@ resource pool or the move will fail.
     <dd>{{% md %}}Determines if the reservation on a resource
 pool can grow beyond the specified value if the parent resource pool has
 unreserved resources. Default: `true`
-{{% /md %}}</dd>
-    <dt class="property-optional"
+{{% /md %}}</dd><dt class="property-optional"
             title="Optional">
         <span id="cpulimit_nodejs">
 <a href="#cpulimit_nodejs" style="color: inherit; text-decoration: inherit;">cpu<wbr>Limit</a>
@@ -574,8 +509,7 @@ unreserved resources. Default: `true`
     <dd>{{% md %}}The CPU utilization of a resource pool will not exceed
 this limit, even if there are available resources. Set to `-1` for unlimited.
 Default: `-1`
-{{% /md %}}</dd>
-    <dt class="property-optional"
+{{% /md %}}</dd><dt class="property-optional"
             title="Optional">
         <span id="cpureservation_nodejs">
 <a href="#cpureservation_nodejs" style="color: inherit; text-decoration: inherit;">cpu<wbr>Reservation</a>
@@ -585,8 +519,7 @@ Default: `-1`
     </dt>
     <dd>{{% md %}}Amount of CPU (MHz) that is guaranteed
 available to the resource pool. Default: `0`
-{{% /md %}}</dd>
-    <dt class="property-optional"
+{{% /md %}}</dd><dt class="property-optional"
             title="Optional">
         <span id="cpusharelevel_nodejs">
 <a href="#cpusharelevel_nodejs" style="color: inherit; text-decoration: inherit;">cpu<wbr>Share<wbr>Level</a>
@@ -599,8 +532,7 @@ simplified view of shares. Levels map to a pre-determined set of numeric
 values for shares. Can be one of `low`, `normal`, `high`, or `custom`. When
 `low`, `normal`, or `high` are specified values in `cpu_shares` will be
 ignored.  Default: `normal`
-{{% /md %}}</dd>
-    <dt class="property-optional"
+{{% /md %}}</dd><dt class="property-optional"
             title="Optional">
         <span id="cpushares_nodejs">
 <a href="#cpushares_nodejs" style="color: inherit; text-decoration: inherit;">cpu<wbr>Shares</a>
@@ -611,8 +543,7 @@ ignored.  Default: `normal`
     <dd>{{% md %}}The number of shares allocated for CPU. Used to
 determine resource allocation in case of resource contention. If this is set,
 `cpu_share_level` must be `custom`.
-{{% /md %}}</dd>
-    <dt class="property-optional"
+{{% /md %}}</dd><dt class="property-optional"
             title="Optional">
         <span id="customattributes_nodejs">
 <a href="#customattributes_nodejs" style="color: inherit; text-decoration: inherit;">custom<wbr>Attributes</a>
@@ -621,8 +552,7 @@ determine resource allocation in case of resource contention. If this is set,
         <span class="property-type">{[key: string]: string}</span>
     </dt>
     <dd>{{% md %}}A list of custom attributes to set on this resource.
-{{% /md %}}</dd>
-    <dt class="property-optional"
+{{% /md %}}</dd><dt class="property-optional"
             title="Optional">
         <span id="memoryexpandable_nodejs">
 <a href="#memoryexpandable_nodejs" style="color: inherit; text-decoration: inherit;">memory<wbr>Expandable</a>
@@ -633,8 +563,7 @@ determine resource allocation in case of resource contention. If this is set,
     <dd>{{% md %}}Determines if the reservation on a resource
 pool can grow beyond the specified value if the parent resource pool has
 unreserved resources. Default: `true`
-{{% /md %}}</dd>
-    <dt class="property-optional"
+{{% /md %}}</dd><dt class="property-optional"
             title="Optional">
         <span id="memorylimit_nodejs">
 <a href="#memorylimit_nodejs" style="color: inherit; text-decoration: inherit;">memory<wbr>Limit</a>
@@ -645,8 +574,7 @@ unreserved resources. Default: `true`
     <dd>{{% md %}}The CPU utilization of a resource pool will not exceed
 this limit, even if there are available resources. Set to `-1` for unlimited.
 Default: `-1`
-{{% /md %}}</dd>
-    <dt class="property-optional"
+{{% /md %}}</dd><dt class="property-optional"
             title="Optional">
         <span id="memoryreservation_nodejs">
 <a href="#memoryreservation_nodejs" style="color: inherit; text-decoration: inherit;">memory<wbr>Reservation</a>
@@ -656,8 +584,7 @@ Default: `-1`
     </dt>
     <dd>{{% md %}}Amount of CPU (MHz) that is guaranteed
 available to the resource pool. Default: `0`
-{{% /md %}}</dd>
-    <dt class="property-optional"
+{{% /md %}}</dd><dt class="property-optional"
             title="Optional">
         <span id="memorysharelevel_nodejs">
 <a href="#memorysharelevel_nodejs" style="color: inherit; text-decoration: inherit;">memory<wbr>Share<wbr>Level</a>
@@ -670,8 +597,7 @@ simplified view of shares. Levels map to a pre-determined set of numeric
 values for shares. Can be one of `low`, `normal`, `high`, or `custom`. When
 `low`, `normal`, or `high` are specified values in `memory_shares` will be
 ignored.  Default: `normal`
-{{% /md %}}</dd>
-    <dt class="property-optional"
+{{% /md %}}</dd><dt class="property-optional"
             title="Optional">
         <span id="memoryshares_nodejs">
 <a href="#memoryshares_nodejs" style="color: inherit; text-decoration: inherit;">memory<wbr>Shares</a>
@@ -682,8 +608,7 @@ ignored.  Default: `normal`
     <dd>{{% md %}}The number of shares allocated for CPU. Used to
 determine resource allocation in case of resource contention. If this is set,
 `memory_share_level` must be `custom`.
-{{% /md %}}</dd>
-    <dt class="property-optional"
+{{% /md %}}</dd><dt class="property-optional"
             title="Optional">
         <span id="name_nodejs">
 <a href="#name_nodejs" style="color: inherit; text-decoration: inherit;">name</a>
@@ -692,8 +617,7 @@ determine resource allocation in case of resource contention. If this is set,
         <span class="property-type">string</span>
     </dt>
     <dd>{{% md %}}The name of the resource pool.
-{{% /md %}}</dd>
-    <dt class="property-optional"
+{{% /md %}}</dd><dt class="property-optional"
             title="Optional">
         <span id="tags_nodejs">
 <a href="#tags_nodejs" style="color: inherit; text-decoration: inherit;">tags</a>
@@ -702,14 +626,11 @@ determine resource allocation in case of resource contention. If this is set,
         <span class="property-type">string[]</span>
     </dt>
     <dd>{{% md %}}The IDs of any tags to attach to this resource.
-{{% /md %}}</dd>
-</dl>
+{{% /md %}}</dd></dl>
 {{% /choosable %}}
 
 {{% choosable language python %}}
-<dl class="resources-properties">
-
-    <dt class="property-required"
+<dl class="resources-properties"><dt class="property-required"
             title="Required">
         <span id="parent_resource_pool_id_python">
 <a href="#parent_resource_pool_id_python" style="color: inherit; text-decoration: inherit;">parent_<wbr>resource_<wbr>pool_<wbr>id</a>
@@ -722,8 +643,7 @@ of the parent resource pool. This can be the root resource pool for a cluster
 or standalone host, or a resource pool itself. When moving a resource pool
 from one parent resource pool to another, both must share a common root
 resource pool or the move will fail.
-{{% /md %}}</dd>
-    <dt class="property-optional"
+{{% /md %}}</dd><dt class="property-optional"
             title="Optional">
         <span id="cpu_expandable_python">
 <a href="#cpu_expandable_python" style="color: inherit; text-decoration: inherit;">cpu_<wbr>expandable</a>
@@ -734,8 +654,7 @@ resource pool or the move will fail.
     <dd>{{% md %}}Determines if the reservation on a resource
 pool can grow beyond the specified value if the parent resource pool has
 unreserved resources. Default: `true`
-{{% /md %}}</dd>
-    <dt class="property-optional"
+{{% /md %}}</dd><dt class="property-optional"
             title="Optional">
         <span id="cpu_limit_python">
 <a href="#cpu_limit_python" style="color: inherit; text-decoration: inherit;">cpu_<wbr>limit</a>
@@ -746,8 +665,7 @@ unreserved resources. Default: `true`
     <dd>{{% md %}}The CPU utilization of a resource pool will not exceed
 this limit, even if there are available resources. Set to `-1` for unlimited.
 Default: `-1`
-{{% /md %}}</dd>
-    <dt class="property-optional"
+{{% /md %}}</dd><dt class="property-optional"
             title="Optional">
         <span id="cpu_reservation_python">
 <a href="#cpu_reservation_python" style="color: inherit; text-decoration: inherit;">cpu_<wbr>reservation</a>
@@ -757,8 +675,7 @@ Default: `-1`
     </dt>
     <dd>{{% md %}}Amount of CPU (MHz) that is guaranteed
 available to the resource pool. Default: `0`
-{{% /md %}}</dd>
-    <dt class="property-optional"
+{{% /md %}}</dd><dt class="property-optional"
             title="Optional">
         <span id="cpu_share_level_python">
 <a href="#cpu_share_level_python" style="color: inherit; text-decoration: inherit;">cpu_<wbr>share_<wbr>level</a>
@@ -771,8 +688,7 @@ simplified view of shares. Levels map to a pre-determined set of numeric
 values for shares. Can be one of `low`, `normal`, `high`, or `custom`. When
 `low`, `normal`, or `high` are specified values in `cpu_shares` will be
 ignored.  Default: `normal`
-{{% /md %}}</dd>
-    <dt class="property-optional"
+{{% /md %}}</dd><dt class="property-optional"
             title="Optional">
         <span id="cpu_shares_python">
 <a href="#cpu_shares_python" style="color: inherit; text-decoration: inherit;">cpu_<wbr>shares</a>
@@ -783,8 +699,7 @@ ignored.  Default: `normal`
     <dd>{{% md %}}The number of shares allocated for CPU. Used to
 determine resource allocation in case of resource contention. If this is set,
 `cpu_share_level` must be `custom`.
-{{% /md %}}</dd>
-    <dt class="property-optional"
+{{% /md %}}</dd><dt class="property-optional"
             title="Optional">
         <span id="custom_attributes_python">
 <a href="#custom_attributes_python" style="color: inherit; text-decoration: inherit;">custom_<wbr>attributes</a>
@@ -793,8 +708,7 @@ determine resource allocation in case of resource contention. If this is set,
         <span class="property-type">Mapping[str, str]</span>
     </dt>
     <dd>{{% md %}}A list of custom attributes to set on this resource.
-{{% /md %}}</dd>
-    <dt class="property-optional"
+{{% /md %}}</dd><dt class="property-optional"
             title="Optional">
         <span id="memory_expandable_python">
 <a href="#memory_expandable_python" style="color: inherit; text-decoration: inherit;">memory_<wbr>expandable</a>
@@ -805,8 +719,7 @@ determine resource allocation in case of resource contention. If this is set,
     <dd>{{% md %}}Determines if the reservation on a resource
 pool can grow beyond the specified value if the parent resource pool has
 unreserved resources. Default: `true`
-{{% /md %}}</dd>
-    <dt class="property-optional"
+{{% /md %}}</dd><dt class="property-optional"
             title="Optional">
         <span id="memory_limit_python">
 <a href="#memory_limit_python" style="color: inherit; text-decoration: inherit;">memory_<wbr>limit</a>
@@ -817,8 +730,7 @@ unreserved resources. Default: `true`
     <dd>{{% md %}}The CPU utilization of a resource pool will not exceed
 this limit, even if there are available resources. Set to `-1` for unlimited.
 Default: `-1`
-{{% /md %}}</dd>
-    <dt class="property-optional"
+{{% /md %}}</dd><dt class="property-optional"
             title="Optional">
         <span id="memory_reservation_python">
 <a href="#memory_reservation_python" style="color: inherit; text-decoration: inherit;">memory_<wbr>reservation</a>
@@ -828,8 +740,7 @@ Default: `-1`
     </dt>
     <dd>{{% md %}}Amount of CPU (MHz) that is guaranteed
 available to the resource pool. Default: `0`
-{{% /md %}}</dd>
-    <dt class="property-optional"
+{{% /md %}}</dd><dt class="property-optional"
             title="Optional">
         <span id="memory_share_level_python">
 <a href="#memory_share_level_python" style="color: inherit; text-decoration: inherit;">memory_<wbr>share_<wbr>level</a>
@@ -842,8 +753,7 @@ simplified view of shares. Levels map to a pre-determined set of numeric
 values for shares. Can be one of `low`, `normal`, `high`, or `custom`. When
 `low`, `normal`, or `high` are specified values in `memory_shares` will be
 ignored.  Default: `normal`
-{{% /md %}}</dd>
-    <dt class="property-optional"
+{{% /md %}}</dd><dt class="property-optional"
             title="Optional">
         <span id="memory_shares_python">
 <a href="#memory_shares_python" style="color: inherit; text-decoration: inherit;">memory_<wbr>shares</a>
@@ -854,8 +764,7 @@ ignored.  Default: `normal`
     <dd>{{% md %}}The number of shares allocated for CPU. Used to
 determine resource allocation in case of resource contention. If this is set,
 `memory_share_level` must be `custom`.
-{{% /md %}}</dd>
-    <dt class="property-optional"
+{{% /md %}}</dd><dt class="property-optional"
             title="Optional">
         <span id="name_python">
 <a href="#name_python" style="color: inherit; text-decoration: inherit;">name</a>
@@ -864,8 +773,7 @@ determine resource allocation in case of resource contention. If this is set,
         <span class="property-type">str</span>
     </dt>
     <dd>{{% md %}}The name of the resource pool.
-{{% /md %}}</dd>
-    <dt class="property-optional"
+{{% /md %}}</dd><dt class="property-optional"
             title="Optional">
         <span id="tags_python">
 <a href="#tags_python" style="color: inherit; text-decoration: inherit;">tags</a>
@@ -874,8 +782,7 @@ determine resource allocation in case of resource contention. If this is set,
         <span class="property-type">Sequence[str]</span>
     </dt>
     <dd>{{% md %}}The IDs of any tags to attach to this resource.
-{{% /md %}}</dd>
-</dl>
+{{% /md %}}</dd></dl>
 {{% /choosable %}}
 
 
@@ -886,9 +793,7 @@ All [input](#inputs) properties are implicitly available as output properties. A
 
 
 {{% choosable language csharp %}}
-<dl class="resources-properties">
-
-    <dt class="property-"
+<dl class="resources-properties"><dt class="property-"
             title="">
         <span id="id_csharp">
 <a href="#id_csharp" style="color: inherit; text-decoration: inherit;">Id</a>
@@ -896,14 +801,11 @@ All [input](#inputs) properties are implicitly available as output properties. A
         <span class="property-indicator"></span>
         <span class="property-type">string</span>
     </dt>
-    <dd>{{% md %}}The provider-assigned unique ID for this managed resource.{{% /md %}}</dd>
-</dl>
+    <dd>{{% md %}}The provider-assigned unique ID for this managed resource.{{% /md %}}</dd></dl>
 {{% /choosable %}}
 
 {{% choosable language go %}}
-<dl class="resources-properties">
-
-    <dt class="property-"
+<dl class="resources-properties"><dt class="property-"
             title="">
         <span id="id_go">
 <a href="#id_go" style="color: inherit; text-decoration: inherit;">Id</a>
@@ -911,14 +813,11 @@ All [input](#inputs) properties are implicitly available as output properties. A
         <span class="property-indicator"></span>
         <span class="property-type">string</span>
     </dt>
-    <dd>{{% md %}}The provider-assigned unique ID for this managed resource.{{% /md %}}</dd>
-</dl>
+    <dd>{{% md %}}The provider-assigned unique ID for this managed resource.{{% /md %}}</dd></dl>
 {{% /choosable %}}
 
 {{% choosable language nodejs %}}
-<dl class="resources-properties">
-
-    <dt class="property-"
+<dl class="resources-properties"><dt class="property-"
             title="">
         <span id="id_nodejs">
 <a href="#id_nodejs" style="color: inherit; text-decoration: inherit;">id</a>
@@ -926,14 +825,11 @@ All [input](#inputs) properties are implicitly available as output properties. A
         <span class="property-indicator"></span>
         <span class="property-type">string</span>
     </dt>
-    <dd>{{% md %}}The provider-assigned unique ID for this managed resource.{{% /md %}}</dd>
-</dl>
+    <dd>{{% md %}}The provider-assigned unique ID for this managed resource.{{% /md %}}</dd></dl>
 {{% /choosable %}}
 
 {{% choosable language python %}}
-<dl class="resources-properties">
-
-    <dt class="property-"
+<dl class="resources-properties"><dt class="property-"
             title="">
         <span id="id_python">
 <a href="#id_python" style="color: inherit; text-decoration: inherit;">id</a>
@@ -941,8 +837,7 @@ All [input](#inputs) properties are implicitly available as output properties. A
         <span class="property-indicator"></span>
         <span class="property-type">str</span>
     </dt>
-    <dd>{{% md %}}The provider-assigned unique ID for this managed resource.{{% /md %}}</dd>
-</dl>
+    <dd>{{% md %}}The provider-assigned unique ID for this managed resource.{{% /md %}}</dd></dl>
 {{% /choosable %}}
 
 
@@ -1069,9 +964,7 @@ The following state arguments are supported:
 
 
 {{% choosable language csharp %}}
-<dl class="resources-properties">
-
-    <dt class="property-optional"
+<dl class="resources-properties"><dt class="property-optional"
             title="Optional">
         <span id="state_cpuexpandable_csharp">
 <a href="#state_cpuexpandable_csharp" style="color: inherit; text-decoration: inherit;">Cpu<wbr>Expandable</a>
@@ -1082,8 +975,7 @@ The following state arguments are supported:
     <dd>{{% md %}}Determines if the reservation on a resource
 pool can grow beyond the specified value if the parent resource pool has
 unreserved resources. Default: `true`
-{{% /md %}}</dd>
-    <dt class="property-optional"
+{{% /md %}}</dd><dt class="property-optional"
             title="Optional">
         <span id="state_cpulimit_csharp">
 <a href="#state_cpulimit_csharp" style="color: inherit; text-decoration: inherit;">Cpu<wbr>Limit</a>
@@ -1094,8 +986,7 @@ unreserved resources. Default: `true`
     <dd>{{% md %}}The CPU utilization of a resource pool will not exceed
 this limit, even if there are available resources. Set to `-1` for unlimited.
 Default: `-1`
-{{% /md %}}</dd>
-    <dt class="property-optional"
+{{% /md %}}</dd><dt class="property-optional"
             title="Optional">
         <span id="state_cpureservation_csharp">
 <a href="#state_cpureservation_csharp" style="color: inherit; text-decoration: inherit;">Cpu<wbr>Reservation</a>
@@ -1105,8 +996,7 @@ Default: `-1`
     </dt>
     <dd>{{% md %}}Amount of CPU (MHz) that is guaranteed
 available to the resource pool. Default: `0`
-{{% /md %}}</dd>
-    <dt class="property-optional"
+{{% /md %}}</dd><dt class="property-optional"
             title="Optional">
         <span id="state_cpusharelevel_csharp">
 <a href="#state_cpusharelevel_csharp" style="color: inherit; text-decoration: inherit;">Cpu<wbr>Share<wbr>Level</a>
@@ -1119,8 +1009,7 @@ simplified view of shares. Levels map to a pre-determined set of numeric
 values for shares. Can be one of `low`, `normal`, `high`, or `custom`. When
 `low`, `normal`, or `high` are specified values in `cpu_shares` will be
 ignored.  Default: `normal`
-{{% /md %}}</dd>
-    <dt class="property-optional"
+{{% /md %}}</dd><dt class="property-optional"
             title="Optional">
         <span id="state_cpushares_csharp">
 <a href="#state_cpushares_csharp" style="color: inherit; text-decoration: inherit;">Cpu<wbr>Shares</a>
@@ -1131,8 +1020,7 @@ ignored.  Default: `normal`
     <dd>{{% md %}}The number of shares allocated for CPU. Used to
 determine resource allocation in case of resource contention. If this is set,
 `cpu_share_level` must be `custom`.
-{{% /md %}}</dd>
-    <dt class="property-optional"
+{{% /md %}}</dd><dt class="property-optional"
             title="Optional">
         <span id="state_customattributes_csharp">
 <a href="#state_customattributes_csharp" style="color: inherit; text-decoration: inherit;">Custom<wbr>Attributes</a>
@@ -1141,8 +1029,7 @@ determine resource allocation in case of resource contention. If this is set,
         <span class="property-type">Dictionary&lt;string, string&gt;</span>
     </dt>
     <dd>{{% md %}}A list of custom attributes to set on this resource.
-{{% /md %}}</dd>
-    <dt class="property-optional"
+{{% /md %}}</dd><dt class="property-optional"
             title="Optional">
         <span id="state_memoryexpandable_csharp">
 <a href="#state_memoryexpandable_csharp" style="color: inherit; text-decoration: inherit;">Memory<wbr>Expandable</a>
@@ -1153,8 +1040,7 @@ determine resource allocation in case of resource contention. If this is set,
     <dd>{{% md %}}Determines if the reservation on a resource
 pool can grow beyond the specified value if the parent resource pool has
 unreserved resources. Default: `true`
-{{% /md %}}</dd>
-    <dt class="property-optional"
+{{% /md %}}</dd><dt class="property-optional"
             title="Optional">
         <span id="state_memorylimit_csharp">
 <a href="#state_memorylimit_csharp" style="color: inherit; text-decoration: inherit;">Memory<wbr>Limit</a>
@@ -1165,8 +1051,7 @@ unreserved resources. Default: `true`
     <dd>{{% md %}}The CPU utilization of a resource pool will not exceed
 this limit, even if there are available resources. Set to `-1` for unlimited.
 Default: `-1`
-{{% /md %}}</dd>
-    <dt class="property-optional"
+{{% /md %}}</dd><dt class="property-optional"
             title="Optional">
         <span id="state_memoryreservation_csharp">
 <a href="#state_memoryreservation_csharp" style="color: inherit; text-decoration: inherit;">Memory<wbr>Reservation</a>
@@ -1176,8 +1061,7 @@ Default: `-1`
     </dt>
     <dd>{{% md %}}Amount of CPU (MHz) that is guaranteed
 available to the resource pool. Default: `0`
-{{% /md %}}</dd>
-    <dt class="property-optional"
+{{% /md %}}</dd><dt class="property-optional"
             title="Optional">
         <span id="state_memorysharelevel_csharp">
 <a href="#state_memorysharelevel_csharp" style="color: inherit; text-decoration: inherit;">Memory<wbr>Share<wbr>Level</a>
@@ -1190,8 +1074,7 @@ simplified view of shares. Levels map to a pre-determined set of numeric
 values for shares. Can be one of `low`, `normal`, `high`, or `custom`. When
 `low`, `normal`, or `high` are specified values in `memory_shares` will be
 ignored.  Default: `normal`
-{{% /md %}}</dd>
-    <dt class="property-optional"
+{{% /md %}}</dd><dt class="property-optional"
             title="Optional">
         <span id="state_memoryshares_csharp">
 <a href="#state_memoryshares_csharp" style="color: inherit; text-decoration: inherit;">Memory<wbr>Shares</a>
@@ -1202,8 +1085,7 @@ ignored.  Default: `normal`
     <dd>{{% md %}}The number of shares allocated for CPU. Used to
 determine resource allocation in case of resource contention. If this is set,
 `memory_share_level` must be `custom`.
-{{% /md %}}</dd>
-    <dt class="property-optional"
+{{% /md %}}</dd><dt class="property-optional"
             title="Optional">
         <span id="state_name_csharp">
 <a href="#state_name_csharp" style="color: inherit; text-decoration: inherit;">Name</a>
@@ -1212,8 +1094,7 @@ determine resource allocation in case of resource contention. If this is set,
         <span class="property-type">string</span>
     </dt>
     <dd>{{% md %}}The name of the resource pool.
-{{% /md %}}</dd>
-    <dt class="property-optional"
+{{% /md %}}</dd><dt class="property-optional"
             title="Optional">
         <span id="state_parentresourcepoolid_csharp">
 <a href="#state_parentresourcepoolid_csharp" style="color: inherit; text-decoration: inherit;">Parent<wbr>Resource<wbr>Pool<wbr>Id</a>
@@ -1226,8 +1107,7 @@ of the parent resource pool. This can be the root resource pool for a cluster
 or standalone host, or a resource pool itself. When moving a resource pool
 from one parent resource pool to another, both must share a common root
 resource pool or the move will fail.
-{{% /md %}}</dd>
-    <dt class="property-optional"
+{{% /md %}}</dd><dt class="property-optional"
             title="Optional">
         <span id="state_tags_csharp">
 <a href="#state_tags_csharp" style="color: inherit; text-decoration: inherit;">Tags</a>
@@ -1236,14 +1116,11 @@ resource pool or the move will fail.
         <span class="property-type">List&lt;string&gt;</span>
     </dt>
     <dd>{{% md %}}The IDs of any tags to attach to this resource.
-{{% /md %}}</dd>
-</dl>
+{{% /md %}}</dd></dl>
 {{% /choosable %}}
 
 {{% choosable language go %}}
-<dl class="resources-properties">
-
-    <dt class="property-optional"
+<dl class="resources-properties"><dt class="property-optional"
             title="Optional">
         <span id="state_cpuexpandable_go">
 <a href="#state_cpuexpandable_go" style="color: inherit; text-decoration: inherit;">Cpu<wbr>Expandable</a>
@@ -1254,8 +1131,7 @@ resource pool or the move will fail.
     <dd>{{% md %}}Determines if the reservation on a resource
 pool can grow beyond the specified value if the parent resource pool has
 unreserved resources. Default: `true`
-{{% /md %}}</dd>
-    <dt class="property-optional"
+{{% /md %}}</dd><dt class="property-optional"
             title="Optional">
         <span id="state_cpulimit_go">
 <a href="#state_cpulimit_go" style="color: inherit; text-decoration: inherit;">Cpu<wbr>Limit</a>
@@ -1266,8 +1142,7 @@ unreserved resources. Default: `true`
     <dd>{{% md %}}The CPU utilization of a resource pool will not exceed
 this limit, even if there are available resources. Set to `-1` for unlimited.
 Default: `-1`
-{{% /md %}}</dd>
-    <dt class="property-optional"
+{{% /md %}}</dd><dt class="property-optional"
             title="Optional">
         <span id="state_cpureservation_go">
 <a href="#state_cpureservation_go" style="color: inherit; text-decoration: inherit;">Cpu<wbr>Reservation</a>
@@ -1277,8 +1152,7 @@ Default: `-1`
     </dt>
     <dd>{{% md %}}Amount of CPU (MHz) that is guaranteed
 available to the resource pool. Default: `0`
-{{% /md %}}</dd>
-    <dt class="property-optional"
+{{% /md %}}</dd><dt class="property-optional"
             title="Optional">
         <span id="state_cpusharelevel_go">
 <a href="#state_cpusharelevel_go" style="color: inherit; text-decoration: inherit;">Cpu<wbr>Share<wbr>Level</a>
@@ -1291,8 +1165,7 @@ simplified view of shares. Levels map to a pre-determined set of numeric
 values for shares. Can be one of `low`, `normal`, `high`, or `custom`. When
 `low`, `normal`, or `high` are specified values in `cpu_shares` will be
 ignored.  Default: `normal`
-{{% /md %}}</dd>
-    <dt class="property-optional"
+{{% /md %}}</dd><dt class="property-optional"
             title="Optional">
         <span id="state_cpushares_go">
 <a href="#state_cpushares_go" style="color: inherit; text-decoration: inherit;">Cpu<wbr>Shares</a>
@@ -1303,8 +1176,7 @@ ignored.  Default: `normal`
     <dd>{{% md %}}The number of shares allocated for CPU. Used to
 determine resource allocation in case of resource contention. If this is set,
 `cpu_share_level` must be `custom`.
-{{% /md %}}</dd>
-    <dt class="property-optional"
+{{% /md %}}</dd><dt class="property-optional"
             title="Optional">
         <span id="state_customattributes_go">
 <a href="#state_customattributes_go" style="color: inherit; text-decoration: inherit;">Custom<wbr>Attributes</a>
@@ -1313,8 +1185,7 @@ determine resource allocation in case of resource contention. If this is set,
         <span class="property-type">map[string]string</span>
     </dt>
     <dd>{{% md %}}A list of custom attributes to set on this resource.
-{{% /md %}}</dd>
-    <dt class="property-optional"
+{{% /md %}}</dd><dt class="property-optional"
             title="Optional">
         <span id="state_memoryexpandable_go">
 <a href="#state_memoryexpandable_go" style="color: inherit; text-decoration: inherit;">Memory<wbr>Expandable</a>
@@ -1325,8 +1196,7 @@ determine resource allocation in case of resource contention. If this is set,
     <dd>{{% md %}}Determines if the reservation on a resource
 pool can grow beyond the specified value if the parent resource pool has
 unreserved resources. Default: `true`
-{{% /md %}}</dd>
-    <dt class="property-optional"
+{{% /md %}}</dd><dt class="property-optional"
             title="Optional">
         <span id="state_memorylimit_go">
 <a href="#state_memorylimit_go" style="color: inherit; text-decoration: inherit;">Memory<wbr>Limit</a>
@@ -1337,8 +1207,7 @@ unreserved resources. Default: `true`
     <dd>{{% md %}}The CPU utilization of a resource pool will not exceed
 this limit, even if there are available resources. Set to `-1` for unlimited.
 Default: `-1`
-{{% /md %}}</dd>
-    <dt class="property-optional"
+{{% /md %}}</dd><dt class="property-optional"
             title="Optional">
         <span id="state_memoryreservation_go">
 <a href="#state_memoryreservation_go" style="color: inherit; text-decoration: inherit;">Memory<wbr>Reservation</a>
@@ -1348,8 +1217,7 @@ Default: `-1`
     </dt>
     <dd>{{% md %}}Amount of CPU (MHz) that is guaranteed
 available to the resource pool. Default: `0`
-{{% /md %}}</dd>
-    <dt class="property-optional"
+{{% /md %}}</dd><dt class="property-optional"
             title="Optional">
         <span id="state_memorysharelevel_go">
 <a href="#state_memorysharelevel_go" style="color: inherit; text-decoration: inherit;">Memory<wbr>Share<wbr>Level</a>
@@ -1362,8 +1230,7 @@ simplified view of shares. Levels map to a pre-determined set of numeric
 values for shares. Can be one of `low`, `normal`, `high`, or `custom`. When
 `low`, `normal`, or `high` are specified values in `memory_shares` will be
 ignored.  Default: `normal`
-{{% /md %}}</dd>
-    <dt class="property-optional"
+{{% /md %}}</dd><dt class="property-optional"
             title="Optional">
         <span id="state_memoryshares_go">
 <a href="#state_memoryshares_go" style="color: inherit; text-decoration: inherit;">Memory<wbr>Shares</a>
@@ -1374,8 +1241,7 @@ ignored.  Default: `normal`
     <dd>{{% md %}}The number of shares allocated for CPU. Used to
 determine resource allocation in case of resource contention. If this is set,
 `memory_share_level` must be `custom`.
-{{% /md %}}</dd>
-    <dt class="property-optional"
+{{% /md %}}</dd><dt class="property-optional"
             title="Optional">
         <span id="state_name_go">
 <a href="#state_name_go" style="color: inherit; text-decoration: inherit;">Name</a>
@@ -1384,8 +1250,7 @@ determine resource allocation in case of resource contention. If this is set,
         <span class="property-type">string</span>
     </dt>
     <dd>{{% md %}}The name of the resource pool.
-{{% /md %}}</dd>
-    <dt class="property-optional"
+{{% /md %}}</dd><dt class="property-optional"
             title="Optional">
         <span id="state_parentresourcepoolid_go">
 <a href="#state_parentresourcepoolid_go" style="color: inherit; text-decoration: inherit;">Parent<wbr>Resource<wbr>Pool<wbr>Id</a>
@@ -1398,8 +1263,7 @@ of the parent resource pool. This can be the root resource pool for a cluster
 or standalone host, or a resource pool itself. When moving a resource pool
 from one parent resource pool to another, both must share a common root
 resource pool or the move will fail.
-{{% /md %}}</dd>
-    <dt class="property-optional"
+{{% /md %}}</dd><dt class="property-optional"
             title="Optional">
         <span id="state_tags_go">
 <a href="#state_tags_go" style="color: inherit; text-decoration: inherit;">Tags</a>
@@ -1408,14 +1272,11 @@ resource pool or the move will fail.
         <span class="property-type">[]string</span>
     </dt>
     <dd>{{% md %}}The IDs of any tags to attach to this resource.
-{{% /md %}}</dd>
-</dl>
+{{% /md %}}</dd></dl>
 {{% /choosable %}}
 
 {{% choosable language nodejs %}}
-<dl class="resources-properties">
-
-    <dt class="property-optional"
+<dl class="resources-properties"><dt class="property-optional"
             title="Optional">
         <span id="state_cpuexpandable_nodejs">
 <a href="#state_cpuexpandable_nodejs" style="color: inherit; text-decoration: inherit;">cpu<wbr>Expandable</a>
@@ -1426,8 +1287,7 @@ resource pool or the move will fail.
     <dd>{{% md %}}Determines if the reservation on a resource
 pool can grow beyond the specified value if the parent resource pool has
 unreserved resources. Default: `true`
-{{% /md %}}</dd>
-    <dt class="property-optional"
+{{% /md %}}</dd><dt class="property-optional"
             title="Optional">
         <span id="state_cpulimit_nodejs">
 <a href="#state_cpulimit_nodejs" style="color: inherit; text-decoration: inherit;">cpu<wbr>Limit</a>
@@ -1438,8 +1298,7 @@ unreserved resources. Default: `true`
     <dd>{{% md %}}The CPU utilization of a resource pool will not exceed
 this limit, even if there are available resources. Set to `-1` for unlimited.
 Default: `-1`
-{{% /md %}}</dd>
-    <dt class="property-optional"
+{{% /md %}}</dd><dt class="property-optional"
             title="Optional">
         <span id="state_cpureservation_nodejs">
 <a href="#state_cpureservation_nodejs" style="color: inherit; text-decoration: inherit;">cpu<wbr>Reservation</a>
@@ -1449,8 +1308,7 @@ Default: `-1`
     </dt>
     <dd>{{% md %}}Amount of CPU (MHz) that is guaranteed
 available to the resource pool. Default: `0`
-{{% /md %}}</dd>
-    <dt class="property-optional"
+{{% /md %}}</dd><dt class="property-optional"
             title="Optional">
         <span id="state_cpusharelevel_nodejs">
 <a href="#state_cpusharelevel_nodejs" style="color: inherit; text-decoration: inherit;">cpu<wbr>Share<wbr>Level</a>
@@ -1463,8 +1321,7 @@ simplified view of shares. Levels map to a pre-determined set of numeric
 values for shares. Can be one of `low`, `normal`, `high`, or `custom`. When
 `low`, `normal`, or `high` are specified values in `cpu_shares` will be
 ignored.  Default: `normal`
-{{% /md %}}</dd>
-    <dt class="property-optional"
+{{% /md %}}</dd><dt class="property-optional"
             title="Optional">
         <span id="state_cpushares_nodejs">
 <a href="#state_cpushares_nodejs" style="color: inherit; text-decoration: inherit;">cpu<wbr>Shares</a>
@@ -1475,8 +1332,7 @@ ignored.  Default: `normal`
     <dd>{{% md %}}The number of shares allocated for CPU. Used to
 determine resource allocation in case of resource contention. If this is set,
 `cpu_share_level` must be `custom`.
-{{% /md %}}</dd>
-    <dt class="property-optional"
+{{% /md %}}</dd><dt class="property-optional"
             title="Optional">
         <span id="state_customattributes_nodejs">
 <a href="#state_customattributes_nodejs" style="color: inherit; text-decoration: inherit;">custom<wbr>Attributes</a>
@@ -1485,8 +1341,7 @@ determine resource allocation in case of resource contention. If this is set,
         <span class="property-type">{[key: string]: string}</span>
     </dt>
     <dd>{{% md %}}A list of custom attributes to set on this resource.
-{{% /md %}}</dd>
-    <dt class="property-optional"
+{{% /md %}}</dd><dt class="property-optional"
             title="Optional">
         <span id="state_memoryexpandable_nodejs">
 <a href="#state_memoryexpandable_nodejs" style="color: inherit; text-decoration: inherit;">memory<wbr>Expandable</a>
@@ -1497,8 +1352,7 @@ determine resource allocation in case of resource contention. If this is set,
     <dd>{{% md %}}Determines if the reservation on a resource
 pool can grow beyond the specified value if the parent resource pool has
 unreserved resources. Default: `true`
-{{% /md %}}</dd>
-    <dt class="property-optional"
+{{% /md %}}</dd><dt class="property-optional"
             title="Optional">
         <span id="state_memorylimit_nodejs">
 <a href="#state_memorylimit_nodejs" style="color: inherit; text-decoration: inherit;">memory<wbr>Limit</a>
@@ -1509,8 +1363,7 @@ unreserved resources. Default: `true`
     <dd>{{% md %}}The CPU utilization of a resource pool will not exceed
 this limit, even if there are available resources. Set to `-1` for unlimited.
 Default: `-1`
-{{% /md %}}</dd>
-    <dt class="property-optional"
+{{% /md %}}</dd><dt class="property-optional"
             title="Optional">
         <span id="state_memoryreservation_nodejs">
 <a href="#state_memoryreservation_nodejs" style="color: inherit; text-decoration: inherit;">memory<wbr>Reservation</a>
@@ -1520,8 +1373,7 @@ Default: `-1`
     </dt>
     <dd>{{% md %}}Amount of CPU (MHz) that is guaranteed
 available to the resource pool. Default: `0`
-{{% /md %}}</dd>
-    <dt class="property-optional"
+{{% /md %}}</dd><dt class="property-optional"
             title="Optional">
         <span id="state_memorysharelevel_nodejs">
 <a href="#state_memorysharelevel_nodejs" style="color: inherit; text-decoration: inherit;">memory<wbr>Share<wbr>Level</a>
@@ -1534,8 +1386,7 @@ simplified view of shares. Levels map to a pre-determined set of numeric
 values for shares. Can be one of `low`, `normal`, `high`, or `custom`. When
 `low`, `normal`, or `high` are specified values in `memory_shares` will be
 ignored.  Default: `normal`
-{{% /md %}}</dd>
-    <dt class="property-optional"
+{{% /md %}}</dd><dt class="property-optional"
             title="Optional">
         <span id="state_memoryshares_nodejs">
 <a href="#state_memoryshares_nodejs" style="color: inherit; text-decoration: inherit;">memory<wbr>Shares</a>
@@ -1546,8 +1397,7 @@ ignored.  Default: `normal`
     <dd>{{% md %}}The number of shares allocated for CPU. Used to
 determine resource allocation in case of resource contention. If this is set,
 `memory_share_level` must be `custom`.
-{{% /md %}}</dd>
-    <dt class="property-optional"
+{{% /md %}}</dd><dt class="property-optional"
             title="Optional">
         <span id="state_name_nodejs">
 <a href="#state_name_nodejs" style="color: inherit; text-decoration: inherit;">name</a>
@@ -1556,8 +1406,7 @@ determine resource allocation in case of resource contention. If this is set,
         <span class="property-type">string</span>
     </dt>
     <dd>{{% md %}}The name of the resource pool.
-{{% /md %}}</dd>
-    <dt class="property-optional"
+{{% /md %}}</dd><dt class="property-optional"
             title="Optional">
         <span id="state_parentresourcepoolid_nodejs">
 <a href="#state_parentresourcepoolid_nodejs" style="color: inherit; text-decoration: inherit;">parent<wbr>Resource<wbr>Pool<wbr>Id</a>
@@ -1570,8 +1419,7 @@ of the parent resource pool. This can be the root resource pool for a cluster
 or standalone host, or a resource pool itself. When moving a resource pool
 from one parent resource pool to another, both must share a common root
 resource pool or the move will fail.
-{{% /md %}}</dd>
-    <dt class="property-optional"
+{{% /md %}}</dd><dt class="property-optional"
             title="Optional">
         <span id="state_tags_nodejs">
 <a href="#state_tags_nodejs" style="color: inherit; text-decoration: inherit;">tags</a>
@@ -1580,14 +1428,11 @@ resource pool or the move will fail.
         <span class="property-type">string[]</span>
     </dt>
     <dd>{{% md %}}The IDs of any tags to attach to this resource.
-{{% /md %}}</dd>
-</dl>
+{{% /md %}}</dd></dl>
 {{% /choosable %}}
 
 {{% choosable language python %}}
-<dl class="resources-properties">
-
-    <dt class="property-optional"
+<dl class="resources-properties"><dt class="property-optional"
             title="Optional">
         <span id="state_cpu_expandable_python">
 <a href="#state_cpu_expandable_python" style="color: inherit; text-decoration: inherit;">cpu_<wbr>expandable</a>
@@ -1598,8 +1443,7 @@ resource pool or the move will fail.
     <dd>{{% md %}}Determines if the reservation on a resource
 pool can grow beyond the specified value if the parent resource pool has
 unreserved resources. Default: `true`
-{{% /md %}}</dd>
-    <dt class="property-optional"
+{{% /md %}}</dd><dt class="property-optional"
             title="Optional">
         <span id="state_cpu_limit_python">
 <a href="#state_cpu_limit_python" style="color: inherit; text-decoration: inherit;">cpu_<wbr>limit</a>
@@ -1610,8 +1454,7 @@ unreserved resources. Default: `true`
     <dd>{{% md %}}The CPU utilization of a resource pool will not exceed
 this limit, even if there are available resources. Set to `-1` for unlimited.
 Default: `-1`
-{{% /md %}}</dd>
-    <dt class="property-optional"
+{{% /md %}}</dd><dt class="property-optional"
             title="Optional">
         <span id="state_cpu_reservation_python">
 <a href="#state_cpu_reservation_python" style="color: inherit; text-decoration: inherit;">cpu_<wbr>reservation</a>
@@ -1621,8 +1464,7 @@ Default: `-1`
     </dt>
     <dd>{{% md %}}Amount of CPU (MHz) that is guaranteed
 available to the resource pool. Default: `0`
-{{% /md %}}</dd>
-    <dt class="property-optional"
+{{% /md %}}</dd><dt class="property-optional"
             title="Optional">
         <span id="state_cpu_share_level_python">
 <a href="#state_cpu_share_level_python" style="color: inherit; text-decoration: inherit;">cpu_<wbr>share_<wbr>level</a>
@@ -1635,8 +1477,7 @@ simplified view of shares. Levels map to a pre-determined set of numeric
 values for shares. Can be one of `low`, `normal`, `high`, or `custom`. When
 `low`, `normal`, or `high` are specified values in `cpu_shares` will be
 ignored.  Default: `normal`
-{{% /md %}}</dd>
-    <dt class="property-optional"
+{{% /md %}}</dd><dt class="property-optional"
             title="Optional">
         <span id="state_cpu_shares_python">
 <a href="#state_cpu_shares_python" style="color: inherit; text-decoration: inherit;">cpu_<wbr>shares</a>
@@ -1647,8 +1488,7 @@ ignored.  Default: `normal`
     <dd>{{% md %}}The number of shares allocated for CPU. Used to
 determine resource allocation in case of resource contention. If this is set,
 `cpu_share_level` must be `custom`.
-{{% /md %}}</dd>
-    <dt class="property-optional"
+{{% /md %}}</dd><dt class="property-optional"
             title="Optional">
         <span id="state_custom_attributes_python">
 <a href="#state_custom_attributes_python" style="color: inherit; text-decoration: inherit;">custom_<wbr>attributes</a>
@@ -1657,8 +1497,7 @@ determine resource allocation in case of resource contention. If this is set,
         <span class="property-type">Mapping[str, str]</span>
     </dt>
     <dd>{{% md %}}A list of custom attributes to set on this resource.
-{{% /md %}}</dd>
-    <dt class="property-optional"
+{{% /md %}}</dd><dt class="property-optional"
             title="Optional">
         <span id="state_memory_expandable_python">
 <a href="#state_memory_expandable_python" style="color: inherit; text-decoration: inherit;">memory_<wbr>expandable</a>
@@ -1669,8 +1508,7 @@ determine resource allocation in case of resource contention. If this is set,
     <dd>{{% md %}}Determines if the reservation on a resource
 pool can grow beyond the specified value if the parent resource pool has
 unreserved resources. Default: `true`
-{{% /md %}}</dd>
-    <dt class="property-optional"
+{{% /md %}}</dd><dt class="property-optional"
             title="Optional">
         <span id="state_memory_limit_python">
 <a href="#state_memory_limit_python" style="color: inherit; text-decoration: inherit;">memory_<wbr>limit</a>
@@ -1681,8 +1519,7 @@ unreserved resources. Default: `true`
     <dd>{{% md %}}The CPU utilization of a resource pool will not exceed
 this limit, even if there are available resources. Set to `-1` for unlimited.
 Default: `-1`
-{{% /md %}}</dd>
-    <dt class="property-optional"
+{{% /md %}}</dd><dt class="property-optional"
             title="Optional">
         <span id="state_memory_reservation_python">
 <a href="#state_memory_reservation_python" style="color: inherit; text-decoration: inherit;">memory_<wbr>reservation</a>
@@ -1692,8 +1529,7 @@ Default: `-1`
     </dt>
     <dd>{{% md %}}Amount of CPU (MHz) that is guaranteed
 available to the resource pool. Default: `0`
-{{% /md %}}</dd>
-    <dt class="property-optional"
+{{% /md %}}</dd><dt class="property-optional"
             title="Optional">
         <span id="state_memory_share_level_python">
 <a href="#state_memory_share_level_python" style="color: inherit; text-decoration: inherit;">memory_<wbr>share_<wbr>level</a>
@@ -1706,8 +1542,7 @@ simplified view of shares. Levels map to a pre-determined set of numeric
 values for shares. Can be one of `low`, `normal`, `high`, or `custom`. When
 `low`, `normal`, or `high` are specified values in `memory_shares` will be
 ignored.  Default: `normal`
-{{% /md %}}</dd>
-    <dt class="property-optional"
+{{% /md %}}</dd><dt class="property-optional"
             title="Optional">
         <span id="state_memory_shares_python">
 <a href="#state_memory_shares_python" style="color: inherit; text-decoration: inherit;">memory_<wbr>shares</a>
@@ -1718,8 +1553,7 @@ ignored.  Default: `normal`
     <dd>{{% md %}}The number of shares allocated for CPU. Used to
 determine resource allocation in case of resource contention. If this is set,
 `memory_share_level` must be `custom`.
-{{% /md %}}</dd>
-    <dt class="property-optional"
+{{% /md %}}</dd><dt class="property-optional"
             title="Optional">
         <span id="state_name_python">
 <a href="#state_name_python" style="color: inherit; text-decoration: inherit;">name</a>
@@ -1728,8 +1562,7 @@ determine resource allocation in case of resource contention. If this is set,
         <span class="property-type">str</span>
     </dt>
     <dd>{{% md %}}The name of the resource pool.
-{{% /md %}}</dd>
-    <dt class="property-optional"
+{{% /md %}}</dd><dt class="property-optional"
             title="Optional">
         <span id="state_parent_resource_pool_id_python">
 <a href="#state_parent_resource_pool_id_python" style="color: inherit; text-decoration: inherit;">parent_<wbr>resource_<wbr>pool_<wbr>id</a>
@@ -1742,8 +1575,7 @@ of the parent resource pool. This can be the root resource pool for a cluster
 or standalone host, or a resource pool itself. When moving a resource pool
 from one parent resource pool to another, both must share a common root
 resource pool or the move will fail.
-{{% /md %}}</dd>
-    <dt class="property-optional"
+{{% /md %}}</dd><dt class="property-optional"
             title="Optional">
         <span id="state_tags_python">
 <a href="#state_tags_python" style="color: inherit; text-decoration: inherit;">tags</a>
@@ -1752,8 +1584,7 @@ resource pool or the move will fail.
         <span class="property-type">Sequence[str]</span>
     </dt>
     <dd>{{% md %}}The IDs of any tags to attach to this resource.
-{{% /md %}}</dd>
-</dl>
+{{% /md %}}</dd></dl>
 {{% /choosable %}}
 
 
@@ -1769,6 +1600,6 @@ resource pool or the move will fail.
 	<dt>License</dt>
 	<dd>Apache-2.0</dd>
 	<dt>Notes</dt>
-	<dd>This Pulumi package is based on the [`vsphere` Terraform Provider](https://github.com/hashicorp/terraform-provider-vsphere).</dd>
+	<dd>{{% md %}}This Pulumi package is based on the [`vsphere` Terraform Provider](https://github.com/hashicorp/terraform-provider-vsphere).{{% /md %}}</dd>
 </dl>
 

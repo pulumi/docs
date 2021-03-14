@@ -36,11 +36,17 @@ This resource exports the following attributes:
 * `vendor` - The upstream distribution vendor. Nil for private Images.
 
 {{% examples %}}
+
 ## Example Usage
 
 {{< chooser language "typescript,python,go,csharp" / >}}
 
-{{% example csharp %}}
+
+
+
+
+{{< example csharp >}}
+
 ```csharp
 using Pulumi;
 using Linode = Pulumi.Linode;
@@ -72,9 +78,12 @@ class MyStack : Stack
 }
 ```
 
-{{% /example %}}
 
-{{% example go %}}
+{{< /example >}}
+
+
+{{< example go >}}
+
 ```go
 package main
 
@@ -116,9 +125,12 @@ func main() {
 }
 ```
 
-{{% /example %}}
 
-{{% example python %}}
+{{< /example >}}
+
+
+{{< example python >}}
+
 ```python
 import pulumi
 import pulumi_linode as linode
@@ -137,9 +149,12 @@ bar_based = linode.Instance("barBased",
     type=foo.type)
 ```
 
-{{% /example %}}
 
-{{% example typescript %}}
+{{< /example >}}
+
+
+{{< example typescript >}}
+
 
 ```typescript
 import * as pulumi from "@pulumi/pulumi";
@@ -162,9 +177,16 @@ const barBased = new linode.Instance("bar_based", {
 });
 ```
 
-{{% /example %}}
+
+{{< /example >}}
+
+
+
+
 
 {{% /examples %}}
+
+
 
 
 ## Create a Image Resource {#create}
@@ -189,9 +211,7 @@ const barBased = new linode.Instance("bar_based", {
 
 {{% choosable language nodejs %}}
 
-<dl class="resources-properties">
-  
-    <dt
+<dl class="resources-properties"><dt
         class="property-required" title="Required">
         <span>name</span>
         <span class="property-indicator"></span>
@@ -199,9 +219,7 @@ const barBased = new linode.Instance("bar_based", {
     </dt>
     <dd>
       The unique name of the resource.
-    </dd>
-  
-    <dt
+    </dd><dt
         class="property-required" title="Required">
         <span>args</span>
         <span class="property-indicator"></span>
@@ -209,9 +227,7 @@ const barBased = new linode.Instance("bar_based", {
     </dt>
     <dd>
       The arguments to resource properties.
-    </dd>
-  
-    <dt
+    </dd><dt
         class="property-optional" title="Optional">
         <span>opts</span>
         <span class="property-indicator"></span>
@@ -219,10 +235,7 @@ const barBased = new linode.Instance("bar_based", {
     </dt>
     <dd>
       Bag of options to control resource&#39;s behavior.
-    </dd>
-  
-
-</dl>
+    </dd></dl>
 
 {{% /choosable %}}
 
@@ -248,9 +261,7 @@ const barBased = new linode.Instance("bar_based", {
 
 {{% choosable language go %}}
 
-<dl class="resources-properties">
-  
-    <dt
+<dl class="resources-properties"><dt
         class="property-optional" title="Optional">
         <span>ctx</span>
         <span class="property-indicator"></span>
@@ -258,9 +269,7 @@ const barBased = new linode.Instance("bar_based", {
     </dt>
     <dd>
       Context object for the current deployment.
-    </dd>
-  
-    <dt
+    </dd><dt
         class="property-required" title="Required">
         <span>name</span>
         <span class="property-indicator"></span>
@@ -268,9 +277,7 @@ const barBased = new linode.Instance("bar_based", {
     </dt>
     <dd>
       The unique name of the resource.
-    </dd>
-  
-    <dt
+    </dd><dt
         class="property-required" title="Required">
         <span>args</span>
         <span class="property-indicator"></span>
@@ -278,9 +285,7 @@ const barBased = new linode.Instance("bar_based", {
     </dt>
     <dd>
       The arguments to resource properties.
-    </dd>
-  
-    <dt
+    </dd><dt
         class="property-optional" title="Optional">
         <span>opts</span>
         <span class="property-indicator"></span>
@@ -288,18 +293,13 @@ const barBased = new linode.Instance("bar_based", {
     </dt>
     <dd>
       Bag of options to control resource&#39;s behavior.
-    </dd>
-  
-
-</dl>
+    </dd></dl>
 
 {{% /choosable %}}
 
 {{% choosable language csharp %}}
 
-<dl class="resources-properties">
-  
-    <dt
+<dl class="resources-properties"><dt
         class="property-required" title="Required">
         <span>name</span>
         <span class="property-indicator"></span>
@@ -307,9 +307,7 @@ const barBased = new linode.Instance("bar_based", {
     </dt>
     <dd>
       The unique name of the resource.
-    </dd>
-  
-    <dt
+    </dd><dt
         class="property-required" title="Required">
         <span>args</span>
         <span class="property-indicator"></span>
@@ -317,9 +315,7 @@ const barBased = new linode.Instance("bar_based", {
     </dt>
     <dd>
       The arguments to resource properties.
-    </dd>
-  
-    <dt
+    </dd><dt
         class="property-optional" title="Optional">
         <span>opts</span>
         <span class="property-indicator"></span>
@@ -327,10 +323,7 @@ const barBased = new linode.Instance("bar_based", {
     </dt>
     <dd>
       Bag of options to control resource&#39;s behavior.
-    </dd>
-  
-
-</dl>
+    </dd></dl>
 
 {{% /choosable %}}
 
@@ -345,9 +338,7 @@ The Image resource accepts the following [input]({{< relref "/docs/intro/concept
 
 
 {{% choosable language csharp %}}
-<dl class="resources-properties">
-
-    <dt class="property-required"
+<dl class="resources-properties"><dt class="property-required"
             title="Required">
         <span id="diskid_csharp">
 <a href="#diskid_csharp" style="color: inherit; text-decoration: inherit;">Disk<wbr>Id</a>
@@ -356,8 +347,7 @@ The Image resource accepts the following [input]({{< relref "/docs/intro/concept
         <span class="property-type">int</span>
     </dt>
     <dd>{{% md %}}The ID of the Linode Disk that this Image will be created from.
-{{% /md %}}</dd>
-    <dt class="property-required"
+{{% /md %}}</dd><dt class="property-required"
             title="Required">
         <span id="label_csharp">
 <a href="#label_csharp" style="color: inherit; text-decoration: inherit;">Label</a>
@@ -366,8 +356,7 @@ The Image resource accepts the following [input]({{< relref "/docs/intro/concept
         <span class="property-type">string</span>
     </dt>
     <dd>{{% md %}}A short description of the Image. Labels cannot contain special characters.
-{{% /md %}}</dd>
-    <dt class="property-required"
+{{% /md %}}</dd><dt class="property-required"
             title="Required">
         <span id="linodeid_csharp">
 <a href="#linodeid_csharp" style="color: inherit; text-decoration: inherit;">Linode<wbr>Id</a>
@@ -376,8 +365,7 @@ The Image resource accepts the following [input]({{< relref "/docs/intro/concept
         <span class="property-type">int</span>
     </dt>
     <dd>{{% md %}}The ID of the Linode that this Image will be created from.
-{{% /md %}}</dd>
-    <dt class="property-optional"
+{{% /md %}}</dd><dt class="property-optional"
             title="Optional">
         <span id="description_csharp">
 <a href="#description_csharp" style="color: inherit; text-decoration: inherit;">Description</a>
@@ -386,14 +374,11 @@ The Image resource accepts the following [input]({{< relref "/docs/intro/concept
         <span class="property-type">string</span>
     </dt>
     <dd>{{% md %}}A detailed description of this Image.
-{{% /md %}}</dd>
-</dl>
+{{% /md %}}</dd></dl>
 {{% /choosable %}}
 
 {{% choosable language go %}}
-<dl class="resources-properties">
-
-    <dt class="property-required"
+<dl class="resources-properties"><dt class="property-required"
             title="Required">
         <span id="diskid_go">
 <a href="#diskid_go" style="color: inherit; text-decoration: inherit;">Disk<wbr>Id</a>
@@ -402,8 +387,7 @@ The Image resource accepts the following [input]({{< relref "/docs/intro/concept
         <span class="property-type">int</span>
     </dt>
     <dd>{{% md %}}The ID of the Linode Disk that this Image will be created from.
-{{% /md %}}</dd>
-    <dt class="property-required"
+{{% /md %}}</dd><dt class="property-required"
             title="Required">
         <span id="label_go">
 <a href="#label_go" style="color: inherit; text-decoration: inherit;">Label</a>
@@ -412,8 +396,7 @@ The Image resource accepts the following [input]({{< relref "/docs/intro/concept
         <span class="property-type">string</span>
     </dt>
     <dd>{{% md %}}A short description of the Image. Labels cannot contain special characters.
-{{% /md %}}</dd>
-    <dt class="property-required"
+{{% /md %}}</dd><dt class="property-required"
             title="Required">
         <span id="linodeid_go">
 <a href="#linodeid_go" style="color: inherit; text-decoration: inherit;">Linode<wbr>Id</a>
@@ -422,8 +405,7 @@ The Image resource accepts the following [input]({{< relref "/docs/intro/concept
         <span class="property-type">int</span>
     </dt>
     <dd>{{% md %}}The ID of the Linode that this Image will be created from.
-{{% /md %}}</dd>
-    <dt class="property-optional"
+{{% /md %}}</dd><dt class="property-optional"
             title="Optional">
         <span id="description_go">
 <a href="#description_go" style="color: inherit; text-decoration: inherit;">Description</a>
@@ -432,14 +414,11 @@ The Image resource accepts the following [input]({{< relref "/docs/intro/concept
         <span class="property-type">string</span>
     </dt>
     <dd>{{% md %}}A detailed description of this Image.
-{{% /md %}}</dd>
-</dl>
+{{% /md %}}</dd></dl>
 {{% /choosable %}}
 
 {{% choosable language nodejs %}}
-<dl class="resources-properties">
-
-    <dt class="property-required"
+<dl class="resources-properties"><dt class="property-required"
             title="Required">
         <span id="diskid_nodejs">
 <a href="#diskid_nodejs" style="color: inherit; text-decoration: inherit;">disk<wbr>Id</a>
@@ -448,8 +427,7 @@ The Image resource accepts the following [input]({{< relref "/docs/intro/concept
         <span class="property-type">number</span>
     </dt>
     <dd>{{% md %}}The ID of the Linode Disk that this Image will be created from.
-{{% /md %}}</dd>
-    <dt class="property-required"
+{{% /md %}}</dd><dt class="property-required"
             title="Required">
         <span id="label_nodejs">
 <a href="#label_nodejs" style="color: inherit; text-decoration: inherit;">label</a>
@@ -458,8 +436,7 @@ The Image resource accepts the following [input]({{< relref "/docs/intro/concept
         <span class="property-type">string</span>
     </dt>
     <dd>{{% md %}}A short description of the Image. Labels cannot contain special characters.
-{{% /md %}}</dd>
-    <dt class="property-required"
+{{% /md %}}</dd><dt class="property-required"
             title="Required">
         <span id="linodeid_nodejs">
 <a href="#linodeid_nodejs" style="color: inherit; text-decoration: inherit;">linode<wbr>Id</a>
@@ -468,8 +445,7 @@ The Image resource accepts the following [input]({{< relref "/docs/intro/concept
         <span class="property-type">number</span>
     </dt>
     <dd>{{% md %}}The ID of the Linode that this Image will be created from.
-{{% /md %}}</dd>
-    <dt class="property-optional"
+{{% /md %}}</dd><dt class="property-optional"
             title="Optional">
         <span id="description_nodejs">
 <a href="#description_nodejs" style="color: inherit; text-decoration: inherit;">description</a>
@@ -478,14 +454,11 @@ The Image resource accepts the following [input]({{< relref "/docs/intro/concept
         <span class="property-type">string</span>
     </dt>
     <dd>{{% md %}}A detailed description of this Image.
-{{% /md %}}</dd>
-</dl>
+{{% /md %}}</dd></dl>
 {{% /choosable %}}
 
 {{% choosable language python %}}
-<dl class="resources-properties">
-
-    <dt class="property-required"
+<dl class="resources-properties"><dt class="property-required"
             title="Required">
         <span id="disk_id_python">
 <a href="#disk_id_python" style="color: inherit; text-decoration: inherit;">disk_<wbr>id</a>
@@ -494,8 +467,7 @@ The Image resource accepts the following [input]({{< relref "/docs/intro/concept
         <span class="property-type">int</span>
     </dt>
     <dd>{{% md %}}The ID of the Linode Disk that this Image will be created from.
-{{% /md %}}</dd>
-    <dt class="property-required"
+{{% /md %}}</dd><dt class="property-required"
             title="Required">
         <span id="label_python">
 <a href="#label_python" style="color: inherit; text-decoration: inherit;">label</a>
@@ -504,8 +476,7 @@ The Image resource accepts the following [input]({{< relref "/docs/intro/concept
         <span class="property-type">str</span>
     </dt>
     <dd>{{% md %}}A short description of the Image. Labels cannot contain special characters.
-{{% /md %}}</dd>
-    <dt class="property-required"
+{{% /md %}}</dd><dt class="property-required"
             title="Required">
         <span id="linode_id_python">
 <a href="#linode_id_python" style="color: inherit; text-decoration: inherit;">linode_<wbr>id</a>
@@ -514,8 +485,7 @@ The Image resource accepts the following [input]({{< relref "/docs/intro/concept
         <span class="property-type">int</span>
     </dt>
     <dd>{{% md %}}The ID of the Linode that this Image will be created from.
-{{% /md %}}</dd>
-    <dt class="property-optional"
+{{% /md %}}</dd><dt class="property-optional"
             title="Optional">
         <span id="description_python">
 <a href="#description_python" style="color: inherit; text-decoration: inherit;">description</a>
@@ -524,8 +494,7 @@ The Image resource accepts the following [input]({{< relref "/docs/intro/concept
         <span class="property-type">str</span>
     </dt>
     <dd>{{% md %}}A detailed description of this Image.
-{{% /md %}}</dd>
-</dl>
+{{% /md %}}</dd></dl>
 {{% /choosable %}}
 
 
@@ -536,9 +505,7 @@ All [input](#inputs) properties are implicitly available as output properties. A
 
 
 {{% choosable language csharp %}}
-<dl class="resources-properties">
-
-    <dt class="property-"
+<dl class="resources-properties"><dt class="property-"
             title="">
         <span id="created_csharp">
 <a href="#created_csharp" style="color: inherit; text-decoration: inherit;">Created</a>
@@ -547,8 +514,7 @@ All [input](#inputs) properties are implicitly available as output properties. A
         <span class="property-type">string</span>
     </dt>
     <dd>{{% md %}}When this Image was created.
-{{% /md %}}</dd>
-    <dt class="property-"
+{{% /md %}}</dd><dt class="property-"
             title="">
         <span id="createdby_csharp">
 <a href="#createdby_csharp" style="color: inherit; text-decoration: inherit;">Created<wbr>By</a>
@@ -557,8 +523,7 @@ All [input](#inputs) properties are implicitly available as output properties. A
         <span class="property-type">string</span>
     </dt>
     <dd>{{% md %}}The name of the User who created this Image.
-{{% /md %}}</dd>
-    <dt class="property-"
+{{% /md %}}</dd><dt class="property-"
             title="">
         <span id="deprecated_csharp">
 <a href="#deprecated_csharp" style="color: inherit; text-decoration: inherit;">Deprecated</a>
@@ -567,8 +532,7 @@ All [input](#inputs) properties are implicitly available as output properties. A
         <span class="property-type">bool</span>
     </dt>
     <dd>{{% md %}}Whether or not this Image is deprecated. Will only be True for deprecated public Images.
-{{% /md %}}</dd>
-    <dt class="property-"
+{{% /md %}}</dd><dt class="property-"
             title="">
         <span id="expiry_csharp">
 <a href="#expiry_csharp" style="color: inherit; text-decoration: inherit;">Expiry</a>
@@ -577,8 +541,7 @@ All [input](#inputs) properties are implicitly available as output properties. A
         <span class="property-type">string</span>
     </dt>
     <dd>{{% md %}}Only Images created automatically (from a deleted Linode; type=automatic) will expire.
-{{% /md %}}</dd>
-    <dt class="property-"
+{{% /md %}}</dd><dt class="property-"
             title="">
         <span id="id_csharp">
 <a href="#id_csharp" style="color: inherit; text-decoration: inherit;">Id</a>
@@ -586,8 +549,7 @@ All [input](#inputs) properties are implicitly available as output properties. A
         <span class="property-indicator"></span>
         <span class="property-type">string</span>
     </dt>
-    <dd>{{% md %}}The provider-assigned unique ID for this managed resource.{{% /md %}}</dd>
-    <dt class="property-"
+    <dd>{{% md %}}The provider-assigned unique ID for this managed resource.{{% /md %}}</dd><dt class="property-"
             title="">
         <span id="ispublic_csharp">
 <a href="#ispublic_csharp" style="color: inherit; text-decoration: inherit;">Is<wbr>Public</a>
@@ -596,8 +558,7 @@ All [input](#inputs) properties are implicitly available as output properties. A
         <span class="property-type">bool</span>
     </dt>
     <dd>{{% md %}}True if the Image is public.
-{{% /md %}}</dd>
-    <dt class="property-"
+{{% /md %}}</dd><dt class="property-"
             title="">
         <span id="size_csharp">
 <a href="#size_csharp" style="color: inherit; text-decoration: inherit;">Size</a>
@@ -606,8 +567,7 @@ All [input](#inputs) properties are implicitly available as output properties. A
         <span class="property-type">int</span>
     </dt>
     <dd>{{% md %}}The minimum size this Image needs to deploy. Size is in MB.
-{{% /md %}}</dd>
-    <dt class="property-"
+{{% /md %}}</dd><dt class="property-"
             title="">
         <span id="type_csharp">
 <a href="#type_csharp" style="color: inherit; text-decoration: inherit;">Type</a>
@@ -617,8 +577,7 @@ All [input](#inputs) properties are implicitly available as output properties. A
     </dt>
     <dd>{{% md %}}How the Image was created. 'Manual' Images can be created at any time. 'Automatic' images are created automatically from
 a deleted Linode.
-{{% /md %}}</dd>
-    <dt class="property-"
+{{% /md %}}</dd><dt class="property-"
             title="">
         <span id="vendor_csharp">
 <a href="#vendor_csharp" style="color: inherit; text-decoration: inherit;">Vendor</a>
@@ -627,14 +586,11 @@ a deleted Linode.
         <span class="property-type">string</span>
     </dt>
     <dd>{{% md %}}The upstream distribution vendor. Nil for private Images.
-{{% /md %}}</dd>
-</dl>
+{{% /md %}}</dd></dl>
 {{% /choosable %}}
 
 {{% choosable language go %}}
-<dl class="resources-properties">
-
-    <dt class="property-"
+<dl class="resources-properties"><dt class="property-"
             title="">
         <span id="created_go">
 <a href="#created_go" style="color: inherit; text-decoration: inherit;">Created</a>
@@ -643,8 +599,7 @@ a deleted Linode.
         <span class="property-type">string</span>
     </dt>
     <dd>{{% md %}}When this Image was created.
-{{% /md %}}</dd>
-    <dt class="property-"
+{{% /md %}}</dd><dt class="property-"
             title="">
         <span id="createdby_go">
 <a href="#createdby_go" style="color: inherit; text-decoration: inherit;">Created<wbr>By</a>
@@ -653,8 +608,7 @@ a deleted Linode.
         <span class="property-type">string</span>
     </dt>
     <dd>{{% md %}}The name of the User who created this Image.
-{{% /md %}}</dd>
-    <dt class="property-"
+{{% /md %}}</dd><dt class="property-"
             title="">
         <span id="deprecated_go">
 <a href="#deprecated_go" style="color: inherit; text-decoration: inherit;">Deprecated</a>
@@ -663,8 +617,7 @@ a deleted Linode.
         <span class="property-type">bool</span>
     </dt>
     <dd>{{% md %}}Whether or not this Image is deprecated. Will only be True for deprecated public Images.
-{{% /md %}}</dd>
-    <dt class="property-"
+{{% /md %}}</dd><dt class="property-"
             title="">
         <span id="expiry_go">
 <a href="#expiry_go" style="color: inherit; text-decoration: inherit;">Expiry</a>
@@ -673,8 +626,7 @@ a deleted Linode.
         <span class="property-type">string</span>
     </dt>
     <dd>{{% md %}}Only Images created automatically (from a deleted Linode; type=automatic) will expire.
-{{% /md %}}</dd>
-    <dt class="property-"
+{{% /md %}}</dd><dt class="property-"
             title="">
         <span id="id_go">
 <a href="#id_go" style="color: inherit; text-decoration: inherit;">Id</a>
@@ -682,8 +634,7 @@ a deleted Linode.
         <span class="property-indicator"></span>
         <span class="property-type">string</span>
     </dt>
-    <dd>{{% md %}}The provider-assigned unique ID for this managed resource.{{% /md %}}</dd>
-    <dt class="property-"
+    <dd>{{% md %}}The provider-assigned unique ID for this managed resource.{{% /md %}}</dd><dt class="property-"
             title="">
         <span id="ispublic_go">
 <a href="#ispublic_go" style="color: inherit; text-decoration: inherit;">Is<wbr>Public</a>
@@ -692,8 +643,7 @@ a deleted Linode.
         <span class="property-type">bool</span>
     </dt>
     <dd>{{% md %}}True if the Image is public.
-{{% /md %}}</dd>
-    <dt class="property-"
+{{% /md %}}</dd><dt class="property-"
             title="">
         <span id="size_go">
 <a href="#size_go" style="color: inherit; text-decoration: inherit;">Size</a>
@@ -702,8 +652,7 @@ a deleted Linode.
         <span class="property-type">int</span>
     </dt>
     <dd>{{% md %}}The minimum size this Image needs to deploy. Size is in MB.
-{{% /md %}}</dd>
-    <dt class="property-"
+{{% /md %}}</dd><dt class="property-"
             title="">
         <span id="type_go">
 <a href="#type_go" style="color: inherit; text-decoration: inherit;">Type</a>
@@ -713,8 +662,7 @@ a deleted Linode.
     </dt>
     <dd>{{% md %}}How the Image was created. 'Manual' Images can be created at any time. 'Automatic' images are created automatically from
 a deleted Linode.
-{{% /md %}}</dd>
-    <dt class="property-"
+{{% /md %}}</dd><dt class="property-"
             title="">
         <span id="vendor_go">
 <a href="#vendor_go" style="color: inherit; text-decoration: inherit;">Vendor</a>
@@ -723,14 +671,11 @@ a deleted Linode.
         <span class="property-type">string</span>
     </dt>
     <dd>{{% md %}}The upstream distribution vendor. Nil for private Images.
-{{% /md %}}</dd>
-</dl>
+{{% /md %}}</dd></dl>
 {{% /choosable %}}
 
 {{% choosable language nodejs %}}
-<dl class="resources-properties">
-
-    <dt class="property-"
+<dl class="resources-properties"><dt class="property-"
             title="">
         <span id="created_nodejs">
 <a href="#created_nodejs" style="color: inherit; text-decoration: inherit;">created</a>
@@ -739,8 +684,7 @@ a deleted Linode.
         <span class="property-type">string</span>
     </dt>
     <dd>{{% md %}}When this Image was created.
-{{% /md %}}</dd>
-    <dt class="property-"
+{{% /md %}}</dd><dt class="property-"
             title="">
         <span id="createdby_nodejs">
 <a href="#createdby_nodejs" style="color: inherit; text-decoration: inherit;">created<wbr>By</a>
@@ -749,8 +693,7 @@ a deleted Linode.
         <span class="property-type">string</span>
     </dt>
     <dd>{{% md %}}The name of the User who created this Image.
-{{% /md %}}</dd>
-    <dt class="property-"
+{{% /md %}}</dd><dt class="property-"
             title="">
         <span id="deprecated_nodejs">
 <a href="#deprecated_nodejs" style="color: inherit; text-decoration: inherit;">deprecated</a>
@@ -759,8 +702,7 @@ a deleted Linode.
         <span class="property-type">boolean</span>
     </dt>
     <dd>{{% md %}}Whether or not this Image is deprecated. Will only be True for deprecated public Images.
-{{% /md %}}</dd>
-    <dt class="property-"
+{{% /md %}}</dd><dt class="property-"
             title="">
         <span id="expiry_nodejs">
 <a href="#expiry_nodejs" style="color: inherit; text-decoration: inherit;">expiry</a>
@@ -769,8 +711,7 @@ a deleted Linode.
         <span class="property-type">string</span>
     </dt>
     <dd>{{% md %}}Only Images created automatically (from a deleted Linode; type=automatic) will expire.
-{{% /md %}}</dd>
-    <dt class="property-"
+{{% /md %}}</dd><dt class="property-"
             title="">
         <span id="id_nodejs">
 <a href="#id_nodejs" style="color: inherit; text-decoration: inherit;">id</a>
@@ -778,8 +719,7 @@ a deleted Linode.
         <span class="property-indicator"></span>
         <span class="property-type">string</span>
     </dt>
-    <dd>{{% md %}}The provider-assigned unique ID for this managed resource.{{% /md %}}</dd>
-    <dt class="property-"
+    <dd>{{% md %}}The provider-assigned unique ID for this managed resource.{{% /md %}}</dd><dt class="property-"
             title="">
         <span id="ispublic_nodejs">
 <a href="#ispublic_nodejs" style="color: inherit; text-decoration: inherit;">is<wbr>Public</a>
@@ -788,8 +728,7 @@ a deleted Linode.
         <span class="property-type">boolean</span>
     </dt>
     <dd>{{% md %}}True if the Image is public.
-{{% /md %}}</dd>
-    <dt class="property-"
+{{% /md %}}</dd><dt class="property-"
             title="">
         <span id="size_nodejs">
 <a href="#size_nodejs" style="color: inherit; text-decoration: inherit;">size</a>
@@ -798,8 +737,7 @@ a deleted Linode.
         <span class="property-type">number</span>
     </dt>
     <dd>{{% md %}}The minimum size this Image needs to deploy. Size is in MB.
-{{% /md %}}</dd>
-    <dt class="property-"
+{{% /md %}}</dd><dt class="property-"
             title="">
         <span id="type_nodejs">
 <a href="#type_nodejs" style="color: inherit; text-decoration: inherit;">type</a>
@@ -809,8 +747,7 @@ a deleted Linode.
     </dt>
     <dd>{{% md %}}How the Image was created. 'Manual' Images can be created at any time. 'Automatic' images are created automatically from
 a deleted Linode.
-{{% /md %}}</dd>
-    <dt class="property-"
+{{% /md %}}</dd><dt class="property-"
             title="">
         <span id="vendor_nodejs">
 <a href="#vendor_nodejs" style="color: inherit; text-decoration: inherit;">vendor</a>
@@ -819,14 +756,11 @@ a deleted Linode.
         <span class="property-type">string</span>
     </dt>
     <dd>{{% md %}}The upstream distribution vendor. Nil for private Images.
-{{% /md %}}</dd>
-</dl>
+{{% /md %}}</dd></dl>
 {{% /choosable %}}
 
 {{% choosable language python %}}
-<dl class="resources-properties">
-
-    <dt class="property-"
+<dl class="resources-properties"><dt class="property-"
             title="">
         <span id="created_python">
 <a href="#created_python" style="color: inherit; text-decoration: inherit;">created</a>
@@ -835,8 +769,7 @@ a deleted Linode.
         <span class="property-type">str</span>
     </dt>
     <dd>{{% md %}}When this Image was created.
-{{% /md %}}</dd>
-    <dt class="property-"
+{{% /md %}}</dd><dt class="property-"
             title="">
         <span id="created_by_python">
 <a href="#created_by_python" style="color: inherit; text-decoration: inherit;">created_<wbr>by</a>
@@ -845,8 +778,7 @@ a deleted Linode.
         <span class="property-type">str</span>
     </dt>
     <dd>{{% md %}}The name of the User who created this Image.
-{{% /md %}}</dd>
-    <dt class="property-"
+{{% /md %}}</dd><dt class="property-"
             title="">
         <span id="deprecated_python">
 <a href="#deprecated_python" style="color: inherit; text-decoration: inherit;">deprecated</a>
@@ -855,8 +787,7 @@ a deleted Linode.
         <span class="property-type">bool</span>
     </dt>
     <dd>{{% md %}}Whether or not this Image is deprecated. Will only be True for deprecated public Images.
-{{% /md %}}</dd>
-    <dt class="property-"
+{{% /md %}}</dd><dt class="property-"
             title="">
         <span id="expiry_python">
 <a href="#expiry_python" style="color: inherit; text-decoration: inherit;">expiry</a>
@@ -865,8 +796,7 @@ a deleted Linode.
         <span class="property-type">str</span>
     </dt>
     <dd>{{% md %}}Only Images created automatically (from a deleted Linode; type=automatic) will expire.
-{{% /md %}}</dd>
-    <dt class="property-"
+{{% /md %}}</dd><dt class="property-"
             title="">
         <span id="id_python">
 <a href="#id_python" style="color: inherit; text-decoration: inherit;">id</a>
@@ -874,8 +804,7 @@ a deleted Linode.
         <span class="property-indicator"></span>
         <span class="property-type">str</span>
     </dt>
-    <dd>{{% md %}}The provider-assigned unique ID for this managed resource.{{% /md %}}</dd>
-    <dt class="property-"
+    <dd>{{% md %}}The provider-assigned unique ID for this managed resource.{{% /md %}}</dd><dt class="property-"
             title="">
         <span id="is_public_python">
 <a href="#is_public_python" style="color: inherit; text-decoration: inherit;">is_<wbr>public</a>
@@ -884,8 +813,7 @@ a deleted Linode.
         <span class="property-type">bool</span>
     </dt>
     <dd>{{% md %}}True if the Image is public.
-{{% /md %}}</dd>
-    <dt class="property-"
+{{% /md %}}</dd><dt class="property-"
             title="">
         <span id="size_python">
 <a href="#size_python" style="color: inherit; text-decoration: inherit;">size</a>
@@ -894,8 +822,7 @@ a deleted Linode.
         <span class="property-type">int</span>
     </dt>
     <dd>{{% md %}}The minimum size this Image needs to deploy. Size is in MB.
-{{% /md %}}</dd>
-    <dt class="property-"
+{{% /md %}}</dd><dt class="property-"
             title="">
         <span id="type_python">
 <a href="#type_python" style="color: inherit; text-decoration: inherit;">type</a>
@@ -905,8 +832,7 @@ a deleted Linode.
     </dt>
     <dd>{{% md %}}How the Image was created. 'Manual' Images can be created at any time. 'Automatic' images are created automatically from
 a deleted Linode.
-{{% /md %}}</dd>
-    <dt class="property-"
+{{% /md %}}</dd><dt class="property-"
             title="">
         <span id="vendor_python">
 <a href="#vendor_python" style="color: inherit; text-decoration: inherit;">vendor</a>
@@ -915,8 +841,7 @@ a deleted Linode.
         <span class="property-type">str</span>
     </dt>
     <dd>{{% md %}}The upstream distribution vendor. Nil for private Images.
-{{% /md %}}</dd>
-</dl>
+{{% /md %}}</dd></dl>
 {{% /choosable %}}
 
 
@@ -1043,9 +968,7 @@ The following state arguments are supported:
 
 
 {{% choosable language csharp %}}
-<dl class="resources-properties">
-
-    <dt class="property-optional"
+<dl class="resources-properties"><dt class="property-optional"
             title="Optional">
         <span id="state_created_csharp">
 <a href="#state_created_csharp" style="color: inherit; text-decoration: inherit;">Created</a>
@@ -1054,8 +977,7 @@ The following state arguments are supported:
         <span class="property-type">string</span>
     </dt>
     <dd>{{% md %}}When this Image was created.
-{{% /md %}}</dd>
-    <dt class="property-optional"
+{{% /md %}}</dd><dt class="property-optional"
             title="Optional">
         <span id="state_createdby_csharp">
 <a href="#state_createdby_csharp" style="color: inherit; text-decoration: inherit;">Created<wbr>By</a>
@@ -1064,8 +986,7 @@ The following state arguments are supported:
         <span class="property-type">string</span>
     </dt>
     <dd>{{% md %}}The name of the User who created this Image.
-{{% /md %}}</dd>
-    <dt class="property-optional"
+{{% /md %}}</dd><dt class="property-optional"
             title="Optional">
         <span id="state_deprecated_csharp">
 <a href="#state_deprecated_csharp" style="color: inherit; text-decoration: inherit;">Deprecated</a>
@@ -1074,8 +995,7 @@ The following state arguments are supported:
         <span class="property-type">bool</span>
     </dt>
     <dd>{{% md %}}Whether or not this Image is deprecated. Will only be True for deprecated public Images.
-{{% /md %}}</dd>
-    <dt class="property-optional"
+{{% /md %}}</dd><dt class="property-optional"
             title="Optional">
         <span id="state_description_csharp">
 <a href="#state_description_csharp" style="color: inherit; text-decoration: inherit;">Description</a>
@@ -1084,8 +1004,7 @@ The following state arguments are supported:
         <span class="property-type">string</span>
     </dt>
     <dd>{{% md %}}A detailed description of this Image.
-{{% /md %}}</dd>
-    <dt class="property-optional"
+{{% /md %}}</dd><dt class="property-optional"
             title="Optional">
         <span id="state_diskid_csharp">
 <a href="#state_diskid_csharp" style="color: inherit; text-decoration: inherit;">Disk<wbr>Id</a>
@@ -1094,8 +1013,7 @@ The following state arguments are supported:
         <span class="property-type">int</span>
     </dt>
     <dd>{{% md %}}The ID of the Linode Disk that this Image will be created from.
-{{% /md %}}</dd>
-    <dt class="property-optional"
+{{% /md %}}</dd><dt class="property-optional"
             title="Optional">
         <span id="state_expiry_csharp">
 <a href="#state_expiry_csharp" style="color: inherit; text-decoration: inherit;">Expiry</a>
@@ -1104,8 +1022,7 @@ The following state arguments are supported:
         <span class="property-type">string</span>
     </dt>
     <dd>{{% md %}}Only Images created automatically (from a deleted Linode; type=automatic) will expire.
-{{% /md %}}</dd>
-    <dt class="property-optional"
+{{% /md %}}</dd><dt class="property-optional"
             title="Optional">
         <span id="state_ispublic_csharp">
 <a href="#state_ispublic_csharp" style="color: inherit; text-decoration: inherit;">Is<wbr>Public</a>
@@ -1114,8 +1031,7 @@ The following state arguments are supported:
         <span class="property-type">bool</span>
     </dt>
     <dd>{{% md %}}True if the Image is public.
-{{% /md %}}</dd>
-    <dt class="property-optional"
+{{% /md %}}</dd><dt class="property-optional"
             title="Optional">
         <span id="state_label_csharp">
 <a href="#state_label_csharp" style="color: inherit; text-decoration: inherit;">Label</a>
@@ -1124,8 +1040,7 @@ The following state arguments are supported:
         <span class="property-type">string</span>
     </dt>
     <dd>{{% md %}}A short description of the Image. Labels cannot contain special characters.
-{{% /md %}}</dd>
-    <dt class="property-optional"
+{{% /md %}}</dd><dt class="property-optional"
             title="Optional">
         <span id="state_linodeid_csharp">
 <a href="#state_linodeid_csharp" style="color: inherit; text-decoration: inherit;">Linode<wbr>Id</a>
@@ -1134,8 +1049,7 @@ The following state arguments are supported:
         <span class="property-type">int</span>
     </dt>
     <dd>{{% md %}}The ID of the Linode that this Image will be created from.
-{{% /md %}}</dd>
-    <dt class="property-optional"
+{{% /md %}}</dd><dt class="property-optional"
             title="Optional">
         <span id="state_size_csharp">
 <a href="#state_size_csharp" style="color: inherit; text-decoration: inherit;">Size</a>
@@ -1144,8 +1058,7 @@ The following state arguments are supported:
         <span class="property-type">int</span>
     </dt>
     <dd>{{% md %}}The minimum size this Image needs to deploy. Size is in MB.
-{{% /md %}}</dd>
-    <dt class="property-optional"
+{{% /md %}}</dd><dt class="property-optional"
             title="Optional">
         <span id="state_type_csharp">
 <a href="#state_type_csharp" style="color: inherit; text-decoration: inherit;">Type</a>
@@ -1155,8 +1068,7 @@ The following state arguments are supported:
     </dt>
     <dd>{{% md %}}How the Image was created. 'Manual' Images can be created at any time. 'Automatic' images are created automatically from
 a deleted Linode.
-{{% /md %}}</dd>
-    <dt class="property-optional"
+{{% /md %}}</dd><dt class="property-optional"
             title="Optional">
         <span id="state_vendor_csharp">
 <a href="#state_vendor_csharp" style="color: inherit; text-decoration: inherit;">Vendor</a>
@@ -1165,14 +1077,11 @@ a deleted Linode.
         <span class="property-type">string</span>
     </dt>
     <dd>{{% md %}}The upstream distribution vendor. Nil for private Images.
-{{% /md %}}</dd>
-</dl>
+{{% /md %}}</dd></dl>
 {{% /choosable %}}
 
 {{% choosable language go %}}
-<dl class="resources-properties">
-
-    <dt class="property-optional"
+<dl class="resources-properties"><dt class="property-optional"
             title="Optional">
         <span id="state_created_go">
 <a href="#state_created_go" style="color: inherit; text-decoration: inherit;">Created</a>
@@ -1181,8 +1090,7 @@ a deleted Linode.
         <span class="property-type">string</span>
     </dt>
     <dd>{{% md %}}When this Image was created.
-{{% /md %}}</dd>
-    <dt class="property-optional"
+{{% /md %}}</dd><dt class="property-optional"
             title="Optional">
         <span id="state_createdby_go">
 <a href="#state_createdby_go" style="color: inherit; text-decoration: inherit;">Created<wbr>By</a>
@@ -1191,8 +1099,7 @@ a deleted Linode.
         <span class="property-type">string</span>
     </dt>
     <dd>{{% md %}}The name of the User who created this Image.
-{{% /md %}}</dd>
-    <dt class="property-optional"
+{{% /md %}}</dd><dt class="property-optional"
             title="Optional">
         <span id="state_deprecated_go">
 <a href="#state_deprecated_go" style="color: inherit; text-decoration: inherit;">Deprecated</a>
@@ -1201,8 +1108,7 @@ a deleted Linode.
         <span class="property-type">bool</span>
     </dt>
     <dd>{{% md %}}Whether or not this Image is deprecated. Will only be True for deprecated public Images.
-{{% /md %}}</dd>
-    <dt class="property-optional"
+{{% /md %}}</dd><dt class="property-optional"
             title="Optional">
         <span id="state_description_go">
 <a href="#state_description_go" style="color: inherit; text-decoration: inherit;">Description</a>
@@ -1211,8 +1117,7 @@ a deleted Linode.
         <span class="property-type">string</span>
     </dt>
     <dd>{{% md %}}A detailed description of this Image.
-{{% /md %}}</dd>
-    <dt class="property-optional"
+{{% /md %}}</dd><dt class="property-optional"
             title="Optional">
         <span id="state_diskid_go">
 <a href="#state_diskid_go" style="color: inherit; text-decoration: inherit;">Disk<wbr>Id</a>
@@ -1221,8 +1126,7 @@ a deleted Linode.
         <span class="property-type">int</span>
     </dt>
     <dd>{{% md %}}The ID of the Linode Disk that this Image will be created from.
-{{% /md %}}</dd>
-    <dt class="property-optional"
+{{% /md %}}</dd><dt class="property-optional"
             title="Optional">
         <span id="state_expiry_go">
 <a href="#state_expiry_go" style="color: inherit; text-decoration: inherit;">Expiry</a>
@@ -1231,8 +1135,7 @@ a deleted Linode.
         <span class="property-type">string</span>
     </dt>
     <dd>{{% md %}}Only Images created automatically (from a deleted Linode; type=automatic) will expire.
-{{% /md %}}</dd>
-    <dt class="property-optional"
+{{% /md %}}</dd><dt class="property-optional"
             title="Optional">
         <span id="state_ispublic_go">
 <a href="#state_ispublic_go" style="color: inherit; text-decoration: inherit;">Is<wbr>Public</a>
@@ -1241,8 +1144,7 @@ a deleted Linode.
         <span class="property-type">bool</span>
     </dt>
     <dd>{{% md %}}True if the Image is public.
-{{% /md %}}</dd>
-    <dt class="property-optional"
+{{% /md %}}</dd><dt class="property-optional"
             title="Optional">
         <span id="state_label_go">
 <a href="#state_label_go" style="color: inherit; text-decoration: inherit;">Label</a>
@@ -1251,8 +1153,7 @@ a deleted Linode.
         <span class="property-type">string</span>
     </dt>
     <dd>{{% md %}}A short description of the Image. Labels cannot contain special characters.
-{{% /md %}}</dd>
-    <dt class="property-optional"
+{{% /md %}}</dd><dt class="property-optional"
             title="Optional">
         <span id="state_linodeid_go">
 <a href="#state_linodeid_go" style="color: inherit; text-decoration: inherit;">Linode<wbr>Id</a>
@@ -1261,8 +1162,7 @@ a deleted Linode.
         <span class="property-type">int</span>
     </dt>
     <dd>{{% md %}}The ID of the Linode that this Image will be created from.
-{{% /md %}}</dd>
-    <dt class="property-optional"
+{{% /md %}}</dd><dt class="property-optional"
             title="Optional">
         <span id="state_size_go">
 <a href="#state_size_go" style="color: inherit; text-decoration: inherit;">Size</a>
@@ -1271,8 +1171,7 @@ a deleted Linode.
         <span class="property-type">int</span>
     </dt>
     <dd>{{% md %}}The minimum size this Image needs to deploy. Size is in MB.
-{{% /md %}}</dd>
-    <dt class="property-optional"
+{{% /md %}}</dd><dt class="property-optional"
             title="Optional">
         <span id="state_type_go">
 <a href="#state_type_go" style="color: inherit; text-decoration: inherit;">Type</a>
@@ -1282,8 +1181,7 @@ a deleted Linode.
     </dt>
     <dd>{{% md %}}How the Image was created. 'Manual' Images can be created at any time. 'Automatic' images are created automatically from
 a deleted Linode.
-{{% /md %}}</dd>
-    <dt class="property-optional"
+{{% /md %}}</dd><dt class="property-optional"
             title="Optional">
         <span id="state_vendor_go">
 <a href="#state_vendor_go" style="color: inherit; text-decoration: inherit;">Vendor</a>
@@ -1292,14 +1190,11 @@ a deleted Linode.
         <span class="property-type">string</span>
     </dt>
     <dd>{{% md %}}The upstream distribution vendor. Nil for private Images.
-{{% /md %}}</dd>
-</dl>
+{{% /md %}}</dd></dl>
 {{% /choosable %}}
 
 {{% choosable language nodejs %}}
-<dl class="resources-properties">
-
-    <dt class="property-optional"
+<dl class="resources-properties"><dt class="property-optional"
             title="Optional">
         <span id="state_created_nodejs">
 <a href="#state_created_nodejs" style="color: inherit; text-decoration: inherit;">created</a>
@@ -1308,8 +1203,7 @@ a deleted Linode.
         <span class="property-type">string</span>
     </dt>
     <dd>{{% md %}}When this Image was created.
-{{% /md %}}</dd>
-    <dt class="property-optional"
+{{% /md %}}</dd><dt class="property-optional"
             title="Optional">
         <span id="state_createdby_nodejs">
 <a href="#state_createdby_nodejs" style="color: inherit; text-decoration: inherit;">created<wbr>By</a>
@@ -1318,8 +1212,7 @@ a deleted Linode.
         <span class="property-type">string</span>
     </dt>
     <dd>{{% md %}}The name of the User who created this Image.
-{{% /md %}}</dd>
-    <dt class="property-optional"
+{{% /md %}}</dd><dt class="property-optional"
             title="Optional">
         <span id="state_deprecated_nodejs">
 <a href="#state_deprecated_nodejs" style="color: inherit; text-decoration: inherit;">deprecated</a>
@@ -1328,8 +1221,7 @@ a deleted Linode.
         <span class="property-type">boolean</span>
     </dt>
     <dd>{{% md %}}Whether or not this Image is deprecated. Will only be True for deprecated public Images.
-{{% /md %}}</dd>
-    <dt class="property-optional"
+{{% /md %}}</dd><dt class="property-optional"
             title="Optional">
         <span id="state_description_nodejs">
 <a href="#state_description_nodejs" style="color: inherit; text-decoration: inherit;">description</a>
@@ -1338,8 +1230,7 @@ a deleted Linode.
         <span class="property-type">string</span>
     </dt>
     <dd>{{% md %}}A detailed description of this Image.
-{{% /md %}}</dd>
-    <dt class="property-optional"
+{{% /md %}}</dd><dt class="property-optional"
             title="Optional">
         <span id="state_diskid_nodejs">
 <a href="#state_diskid_nodejs" style="color: inherit; text-decoration: inherit;">disk<wbr>Id</a>
@@ -1348,8 +1239,7 @@ a deleted Linode.
         <span class="property-type">number</span>
     </dt>
     <dd>{{% md %}}The ID of the Linode Disk that this Image will be created from.
-{{% /md %}}</dd>
-    <dt class="property-optional"
+{{% /md %}}</dd><dt class="property-optional"
             title="Optional">
         <span id="state_expiry_nodejs">
 <a href="#state_expiry_nodejs" style="color: inherit; text-decoration: inherit;">expiry</a>
@@ -1358,8 +1248,7 @@ a deleted Linode.
         <span class="property-type">string</span>
     </dt>
     <dd>{{% md %}}Only Images created automatically (from a deleted Linode; type=automatic) will expire.
-{{% /md %}}</dd>
-    <dt class="property-optional"
+{{% /md %}}</dd><dt class="property-optional"
             title="Optional">
         <span id="state_ispublic_nodejs">
 <a href="#state_ispublic_nodejs" style="color: inherit; text-decoration: inherit;">is<wbr>Public</a>
@@ -1368,8 +1257,7 @@ a deleted Linode.
         <span class="property-type">boolean</span>
     </dt>
     <dd>{{% md %}}True if the Image is public.
-{{% /md %}}</dd>
-    <dt class="property-optional"
+{{% /md %}}</dd><dt class="property-optional"
             title="Optional">
         <span id="state_label_nodejs">
 <a href="#state_label_nodejs" style="color: inherit; text-decoration: inherit;">label</a>
@@ -1378,8 +1266,7 @@ a deleted Linode.
         <span class="property-type">string</span>
     </dt>
     <dd>{{% md %}}A short description of the Image. Labels cannot contain special characters.
-{{% /md %}}</dd>
-    <dt class="property-optional"
+{{% /md %}}</dd><dt class="property-optional"
             title="Optional">
         <span id="state_linodeid_nodejs">
 <a href="#state_linodeid_nodejs" style="color: inherit; text-decoration: inherit;">linode<wbr>Id</a>
@@ -1388,8 +1275,7 @@ a deleted Linode.
         <span class="property-type">number</span>
     </dt>
     <dd>{{% md %}}The ID of the Linode that this Image will be created from.
-{{% /md %}}</dd>
-    <dt class="property-optional"
+{{% /md %}}</dd><dt class="property-optional"
             title="Optional">
         <span id="state_size_nodejs">
 <a href="#state_size_nodejs" style="color: inherit; text-decoration: inherit;">size</a>
@@ -1398,8 +1284,7 @@ a deleted Linode.
         <span class="property-type">number</span>
     </dt>
     <dd>{{% md %}}The minimum size this Image needs to deploy. Size is in MB.
-{{% /md %}}</dd>
-    <dt class="property-optional"
+{{% /md %}}</dd><dt class="property-optional"
             title="Optional">
         <span id="state_type_nodejs">
 <a href="#state_type_nodejs" style="color: inherit; text-decoration: inherit;">type</a>
@@ -1409,8 +1294,7 @@ a deleted Linode.
     </dt>
     <dd>{{% md %}}How the Image was created. 'Manual' Images can be created at any time. 'Automatic' images are created automatically from
 a deleted Linode.
-{{% /md %}}</dd>
-    <dt class="property-optional"
+{{% /md %}}</dd><dt class="property-optional"
             title="Optional">
         <span id="state_vendor_nodejs">
 <a href="#state_vendor_nodejs" style="color: inherit; text-decoration: inherit;">vendor</a>
@@ -1419,14 +1303,11 @@ a deleted Linode.
         <span class="property-type">string</span>
     </dt>
     <dd>{{% md %}}The upstream distribution vendor. Nil for private Images.
-{{% /md %}}</dd>
-</dl>
+{{% /md %}}</dd></dl>
 {{% /choosable %}}
 
 {{% choosable language python %}}
-<dl class="resources-properties">
-
-    <dt class="property-optional"
+<dl class="resources-properties"><dt class="property-optional"
             title="Optional">
         <span id="state_created_python">
 <a href="#state_created_python" style="color: inherit; text-decoration: inherit;">created</a>
@@ -1435,8 +1316,7 @@ a deleted Linode.
         <span class="property-type">str</span>
     </dt>
     <dd>{{% md %}}When this Image was created.
-{{% /md %}}</dd>
-    <dt class="property-optional"
+{{% /md %}}</dd><dt class="property-optional"
             title="Optional">
         <span id="state_created_by_python">
 <a href="#state_created_by_python" style="color: inherit; text-decoration: inherit;">created_<wbr>by</a>
@@ -1445,8 +1325,7 @@ a deleted Linode.
         <span class="property-type">str</span>
     </dt>
     <dd>{{% md %}}The name of the User who created this Image.
-{{% /md %}}</dd>
-    <dt class="property-optional"
+{{% /md %}}</dd><dt class="property-optional"
             title="Optional">
         <span id="state_deprecated_python">
 <a href="#state_deprecated_python" style="color: inherit; text-decoration: inherit;">deprecated</a>
@@ -1455,8 +1334,7 @@ a deleted Linode.
         <span class="property-type">bool</span>
     </dt>
     <dd>{{% md %}}Whether or not this Image is deprecated. Will only be True for deprecated public Images.
-{{% /md %}}</dd>
-    <dt class="property-optional"
+{{% /md %}}</dd><dt class="property-optional"
             title="Optional">
         <span id="state_description_python">
 <a href="#state_description_python" style="color: inherit; text-decoration: inherit;">description</a>
@@ -1465,8 +1343,7 @@ a deleted Linode.
         <span class="property-type">str</span>
     </dt>
     <dd>{{% md %}}A detailed description of this Image.
-{{% /md %}}</dd>
-    <dt class="property-optional"
+{{% /md %}}</dd><dt class="property-optional"
             title="Optional">
         <span id="state_disk_id_python">
 <a href="#state_disk_id_python" style="color: inherit; text-decoration: inherit;">disk_<wbr>id</a>
@@ -1475,8 +1352,7 @@ a deleted Linode.
         <span class="property-type">int</span>
     </dt>
     <dd>{{% md %}}The ID of the Linode Disk that this Image will be created from.
-{{% /md %}}</dd>
-    <dt class="property-optional"
+{{% /md %}}</dd><dt class="property-optional"
             title="Optional">
         <span id="state_expiry_python">
 <a href="#state_expiry_python" style="color: inherit; text-decoration: inherit;">expiry</a>
@@ -1485,8 +1361,7 @@ a deleted Linode.
         <span class="property-type">str</span>
     </dt>
     <dd>{{% md %}}Only Images created automatically (from a deleted Linode; type=automatic) will expire.
-{{% /md %}}</dd>
-    <dt class="property-optional"
+{{% /md %}}</dd><dt class="property-optional"
             title="Optional">
         <span id="state_is_public_python">
 <a href="#state_is_public_python" style="color: inherit; text-decoration: inherit;">is_<wbr>public</a>
@@ -1495,8 +1370,7 @@ a deleted Linode.
         <span class="property-type">bool</span>
     </dt>
     <dd>{{% md %}}True if the Image is public.
-{{% /md %}}</dd>
-    <dt class="property-optional"
+{{% /md %}}</dd><dt class="property-optional"
             title="Optional">
         <span id="state_label_python">
 <a href="#state_label_python" style="color: inherit; text-decoration: inherit;">label</a>
@@ -1505,8 +1379,7 @@ a deleted Linode.
         <span class="property-type">str</span>
     </dt>
     <dd>{{% md %}}A short description of the Image. Labels cannot contain special characters.
-{{% /md %}}</dd>
-    <dt class="property-optional"
+{{% /md %}}</dd><dt class="property-optional"
             title="Optional">
         <span id="state_linode_id_python">
 <a href="#state_linode_id_python" style="color: inherit; text-decoration: inherit;">linode_<wbr>id</a>
@@ -1515,8 +1388,7 @@ a deleted Linode.
         <span class="property-type">int</span>
     </dt>
     <dd>{{% md %}}The ID of the Linode that this Image will be created from.
-{{% /md %}}</dd>
-    <dt class="property-optional"
+{{% /md %}}</dd><dt class="property-optional"
             title="Optional">
         <span id="state_size_python">
 <a href="#state_size_python" style="color: inherit; text-decoration: inherit;">size</a>
@@ -1525,8 +1397,7 @@ a deleted Linode.
         <span class="property-type">int</span>
     </dt>
     <dd>{{% md %}}The minimum size this Image needs to deploy. Size is in MB.
-{{% /md %}}</dd>
-    <dt class="property-optional"
+{{% /md %}}</dd><dt class="property-optional"
             title="Optional">
         <span id="state_type_python">
 <a href="#state_type_python" style="color: inherit; text-decoration: inherit;">type</a>
@@ -1536,8 +1407,7 @@ a deleted Linode.
     </dt>
     <dd>{{% md %}}How the Image was created. 'Manual' Images can be created at any time. 'Automatic' images are created automatically from
 a deleted Linode.
-{{% /md %}}</dd>
-    <dt class="property-optional"
+{{% /md %}}</dd><dt class="property-optional"
             title="Optional">
         <span id="state_vendor_python">
 <a href="#state_vendor_python" style="color: inherit; text-decoration: inherit;">vendor</a>
@@ -1546,8 +1416,7 @@ a deleted Linode.
         <span class="property-type">str</span>
     </dt>
     <dd>{{% md %}}The upstream distribution vendor. Nil for private Images.
-{{% /md %}}</dd>
-</dl>
+{{% /md %}}</dd></dl>
 {{% /choosable %}}
 
 
@@ -1573,6 +1442,6 @@ Linodes Images can be imported using the Linode Image `id`, e.g.
 	<dt>License</dt>
 	<dd>Apache-2.0</dd>
 	<dt>Notes</dt>
-	<dd>This Pulumi package is based on the [`linode` Terraform Provider](https://github.com/linode/terraform-provider-linode).</dd>
+	<dd>{{% md %}}This Pulumi package is based on the [`linode` Terraform Provider](https://github.com/linode/terraform-provider-linode).{{% /md %}}</dd>
 </dl>
 

@@ -13,11 +13,17 @@ meta_desc: "Documentation for the azure.storage.Table resource with examples, in
 Manages a Table within an Azure Storage Account.
 
 {{% examples %}}
+
 ## Example Usage
 
 {{< chooser language "typescript,python,go,csharp" / >}}
 
-{{% example csharp %}}
+
+
+
+
+{{< example csharp >}}
+
 ```csharp
 using Pulumi;
 using Azure = Pulumi.Azure;
@@ -46,9 +52,12 @@ class MyStack : Stack
 }
 ```
 
-{{% /example %}}
 
-{{% example go %}}
+{{< /example >}}
+
+
+{{< example go >}}
+
 ```go
 package main
 
@@ -86,9 +95,12 @@ func main() {
 }
 ```
 
-{{% /example %}}
 
-{{% example python %}}
+{{< /example >}}
+
+
+{{< example python >}}
+
 ```python
 import pulumi
 import pulumi_azure as azure
@@ -102,9 +114,12 @@ example_account = azure.storage.Account("exampleAccount",
 example_table = azure.storage.Table("exampleTable", storage_account_name=example_account.name)
 ```
 
-{{% /example %}}
 
-{{% example typescript %}}
+{{< /example >}}
+
+
+{{< example typescript >}}
+
 
 ```typescript
 import * as pulumi from "@pulumi/pulumi";
@@ -120,9 +135,16 @@ const exampleAccount = new azure.storage.Account("exampleAccount", {
 const exampleTable = new azure.storage.Table("exampleTable", {storageAccountName: exampleAccount.name});
 ```
 
-{{% /example %}}
+
+{{< /example >}}
+
+
+
+
 
 {{% /examples %}}
+
+
 
 
 ## Create a Table Resource {#create}
@@ -147,9 +169,7 @@ const exampleTable = new azure.storage.Table("exampleTable", {storageAccountName
 
 {{% choosable language nodejs %}}
 
-<dl class="resources-properties">
-  
-    <dt
+<dl class="resources-properties"><dt
         class="property-required" title="Required">
         <span>name</span>
         <span class="property-indicator"></span>
@@ -157,9 +177,7 @@ const exampleTable = new azure.storage.Table("exampleTable", {storageAccountName
     </dt>
     <dd>
       The unique name of the resource.
-    </dd>
-  
-    <dt
+    </dd><dt
         class="property-required" title="Required">
         <span>args</span>
         <span class="property-indicator"></span>
@@ -167,9 +185,7 @@ const exampleTable = new azure.storage.Table("exampleTable", {storageAccountName
     </dt>
     <dd>
       The arguments to resource properties.
-    </dd>
-  
-    <dt
+    </dd><dt
         class="property-optional" title="Optional">
         <span>opts</span>
         <span class="property-indicator"></span>
@@ -177,10 +193,7 @@ const exampleTable = new azure.storage.Table("exampleTable", {storageAccountName
     </dt>
     <dd>
       Bag of options to control resource&#39;s behavior.
-    </dd>
-  
-
-</dl>
+    </dd></dl>
 
 {{% /choosable %}}
 
@@ -206,9 +219,7 @@ const exampleTable = new azure.storage.Table("exampleTable", {storageAccountName
 
 {{% choosable language go %}}
 
-<dl class="resources-properties">
-  
-    <dt
+<dl class="resources-properties"><dt
         class="property-optional" title="Optional">
         <span>ctx</span>
         <span class="property-indicator"></span>
@@ -216,9 +227,7 @@ const exampleTable = new azure.storage.Table("exampleTable", {storageAccountName
     </dt>
     <dd>
       Context object for the current deployment.
-    </dd>
-  
-    <dt
+    </dd><dt
         class="property-required" title="Required">
         <span>name</span>
         <span class="property-indicator"></span>
@@ -226,9 +235,7 @@ const exampleTable = new azure.storage.Table("exampleTable", {storageAccountName
     </dt>
     <dd>
       The unique name of the resource.
-    </dd>
-  
-    <dt
+    </dd><dt
         class="property-required" title="Required">
         <span>args</span>
         <span class="property-indicator"></span>
@@ -236,9 +243,7 @@ const exampleTable = new azure.storage.Table("exampleTable", {storageAccountName
     </dt>
     <dd>
       The arguments to resource properties.
-    </dd>
-  
-    <dt
+    </dd><dt
         class="property-optional" title="Optional">
         <span>opts</span>
         <span class="property-indicator"></span>
@@ -246,18 +251,13 @@ const exampleTable = new azure.storage.Table("exampleTable", {storageAccountName
     </dt>
     <dd>
       Bag of options to control resource&#39;s behavior.
-    </dd>
-  
-
-</dl>
+    </dd></dl>
 
 {{% /choosable %}}
 
 {{% choosable language csharp %}}
 
-<dl class="resources-properties">
-  
-    <dt
+<dl class="resources-properties"><dt
         class="property-required" title="Required">
         <span>name</span>
         <span class="property-indicator"></span>
@@ -265,9 +265,7 @@ const exampleTable = new azure.storage.Table("exampleTable", {storageAccountName
     </dt>
     <dd>
       The unique name of the resource.
-    </dd>
-  
-    <dt
+    </dd><dt
         class="property-required" title="Required">
         <span>args</span>
         <span class="property-indicator"></span>
@@ -275,9 +273,7 @@ const exampleTable = new azure.storage.Table("exampleTable", {storageAccountName
     </dt>
     <dd>
       The arguments to resource properties.
-    </dd>
-  
-    <dt
+    </dd><dt
         class="property-optional" title="Optional">
         <span>opts</span>
         <span class="property-indicator"></span>
@@ -285,10 +281,7 @@ const exampleTable = new azure.storage.Table("exampleTable", {storageAccountName
     </dt>
     <dd>
       Bag of options to control resource&#39;s behavior.
-    </dd>
-  
-
-</dl>
+    </dd></dl>
 
 {{% /choosable %}}
 
@@ -303,9 +296,7 @@ The Table resource accepts the following [input]({{< relref "/docs/intro/concept
 
 
 {{% choosable language csharp %}}
-<dl class="resources-properties">
-
-    <dt class="property-required"
+<dl class="resources-properties"><dt class="property-required"
             title="Required">
         <span id="storageaccountname_csharp">
 <a href="#storageaccountname_csharp" style="color: inherit; text-decoration: inherit;">Storage<wbr>Account<wbr>Name</a>
@@ -315,8 +306,7 @@ The Table resource accepts the following [input]({{< relref "/docs/intro/concept
     </dt>
     <dd>{{% md %}}Specifies the storage account in which to create the storage table.
 Changing this forces a new resource to be created.
-{{% /md %}}</dd>
-    <dt class="property-optional"
+{{% /md %}}</dd><dt class="property-optional"
             title="Optional">
         <span id="acls_csharp">
 <a href="#acls_csharp" style="color: inherit; text-decoration: inherit;">Acls</a>
@@ -325,8 +315,7 @@ Changing this forces a new resource to be created.
         <span class="property-type"><a href="#tableacl">List&lt;Table<wbr>Acl<wbr>Args&gt;</a></span>
     </dt>
     <dd>{{% md %}}One or more `acl` blocks as defined below.
-{{% /md %}}</dd>
-    <dt class="property-optional"
+{{% /md %}}</dd><dt class="property-optional"
             title="Optional">
         <span id="name_csharp">
 <a href="#name_csharp" style="color: inherit; text-decoration: inherit;">Name</a>
@@ -335,14 +324,11 @@ Changing this forces a new resource to be created.
         <span class="property-type">string</span>
     </dt>
     <dd>{{% md %}}The name of the storage table. Must be unique within the storage account the table is located.
-{{% /md %}}</dd>
-</dl>
+{{% /md %}}</dd></dl>
 {{% /choosable %}}
 
 {{% choosable language go %}}
-<dl class="resources-properties">
-
-    <dt class="property-required"
+<dl class="resources-properties"><dt class="property-required"
             title="Required">
         <span id="storageaccountname_go">
 <a href="#storageaccountname_go" style="color: inherit; text-decoration: inherit;">Storage<wbr>Account<wbr>Name</a>
@@ -352,8 +338,7 @@ Changing this forces a new resource to be created.
     </dt>
     <dd>{{% md %}}Specifies the storage account in which to create the storage table.
 Changing this forces a new resource to be created.
-{{% /md %}}</dd>
-    <dt class="property-optional"
+{{% /md %}}</dd><dt class="property-optional"
             title="Optional">
         <span id="acls_go">
 <a href="#acls_go" style="color: inherit; text-decoration: inherit;">Acls</a>
@@ -362,8 +347,7 @@ Changing this forces a new resource to be created.
         <span class="property-type"><a href="#tableacl">[]Table<wbr>Acl</a></span>
     </dt>
     <dd>{{% md %}}One or more `acl` blocks as defined below.
-{{% /md %}}</dd>
-    <dt class="property-optional"
+{{% /md %}}</dd><dt class="property-optional"
             title="Optional">
         <span id="name_go">
 <a href="#name_go" style="color: inherit; text-decoration: inherit;">Name</a>
@@ -372,14 +356,11 @@ Changing this forces a new resource to be created.
         <span class="property-type">string</span>
     </dt>
     <dd>{{% md %}}The name of the storage table. Must be unique within the storage account the table is located.
-{{% /md %}}</dd>
-</dl>
+{{% /md %}}</dd></dl>
 {{% /choosable %}}
 
 {{% choosable language nodejs %}}
-<dl class="resources-properties">
-
-    <dt class="property-required"
+<dl class="resources-properties"><dt class="property-required"
             title="Required">
         <span id="storageaccountname_nodejs">
 <a href="#storageaccountname_nodejs" style="color: inherit; text-decoration: inherit;">storage<wbr>Account<wbr>Name</a>
@@ -389,8 +370,7 @@ Changing this forces a new resource to be created.
     </dt>
     <dd>{{% md %}}Specifies the storage account in which to create the storage table.
 Changing this forces a new resource to be created.
-{{% /md %}}</dd>
-    <dt class="property-optional"
+{{% /md %}}</dd><dt class="property-optional"
             title="Optional">
         <span id="acls_nodejs">
 <a href="#acls_nodejs" style="color: inherit; text-decoration: inherit;">acls</a>
@@ -399,8 +379,7 @@ Changing this forces a new resource to be created.
         <span class="property-type"><a href="#tableacl">Table<wbr>Acl[]</a></span>
     </dt>
     <dd>{{% md %}}One or more `acl` blocks as defined below.
-{{% /md %}}</dd>
-    <dt class="property-optional"
+{{% /md %}}</dd><dt class="property-optional"
             title="Optional">
         <span id="name_nodejs">
 <a href="#name_nodejs" style="color: inherit; text-decoration: inherit;">name</a>
@@ -409,14 +388,11 @@ Changing this forces a new resource to be created.
         <span class="property-type">string</span>
     </dt>
     <dd>{{% md %}}The name of the storage table. Must be unique within the storage account the table is located.
-{{% /md %}}</dd>
-</dl>
+{{% /md %}}</dd></dl>
 {{% /choosable %}}
 
 {{% choosable language python %}}
-<dl class="resources-properties">
-
-    <dt class="property-required"
+<dl class="resources-properties"><dt class="property-required"
             title="Required">
         <span id="storage_account_name_python">
 <a href="#storage_account_name_python" style="color: inherit; text-decoration: inherit;">storage_<wbr>account_<wbr>name</a>
@@ -426,8 +402,7 @@ Changing this forces a new resource to be created.
     </dt>
     <dd>{{% md %}}Specifies the storage account in which to create the storage table.
 Changing this forces a new resource to be created.
-{{% /md %}}</dd>
-    <dt class="property-optional"
+{{% /md %}}</dd><dt class="property-optional"
             title="Optional">
         <span id="acls_python">
 <a href="#acls_python" style="color: inherit; text-decoration: inherit;">acls</a>
@@ -436,8 +411,7 @@ Changing this forces a new resource to be created.
         <span class="property-type"><a href="#tableacl">Sequence[Table<wbr>Acl<wbr>Args]</a></span>
     </dt>
     <dd>{{% md %}}One or more `acl` blocks as defined below.
-{{% /md %}}</dd>
-    <dt class="property-optional"
+{{% /md %}}</dd><dt class="property-optional"
             title="Optional">
         <span id="name_python">
 <a href="#name_python" style="color: inherit; text-decoration: inherit;">name</a>
@@ -446,8 +420,7 @@ Changing this forces a new resource to be created.
         <span class="property-type">str</span>
     </dt>
     <dd>{{% md %}}The name of the storage table. Must be unique within the storage account the table is located.
-{{% /md %}}</dd>
-</dl>
+{{% /md %}}</dd></dl>
 {{% /choosable %}}
 
 
@@ -458,9 +431,7 @@ All [input](#inputs) properties are implicitly available as output properties. A
 
 
 {{% choosable language csharp %}}
-<dl class="resources-properties">
-
-    <dt class="property-"
+<dl class="resources-properties"><dt class="property-"
             title="">
         <span id="id_csharp">
 <a href="#id_csharp" style="color: inherit; text-decoration: inherit;">Id</a>
@@ -468,14 +439,11 @@ All [input](#inputs) properties are implicitly available as output properties. A
         <span class="property-indicator"></span>
         <span class="property-type">string</span>
     </dt>
-    <dd>{{% md %}}The provider-assigned unique ID for this managed resource.{{% /md %}}</dd>
-</dl>
+    <dd>{{% md %}}The provider-assigned unique ID for this managed resource.{{% /md %}}</dd></dl>
 {{% /choosable %}}
 
 {{% choosable language go %}}
-<dl class="resources-properties">
-
-    <dt class="property-"
+<dl class="resources-properties"><dt class="property-"
             title="">
         <span id="id_go">
 <a href="#id_go" style="color: inherit; text-decoration: inherit;">Id</a>
@@ -483,14 +451,11 @@ All [input](#inputs) properties are implicitly available as output properties. A
         <span class="property-indicator"></span>
         <span class="property-type">string</span>
     </dt>
-    <dd>{{% md %}}The provider-assigned unique ID for this managed resource.{{% /md %}}</dd>
-</dl>
+    <dd>{{% md %}}The provider-assigned unique ID for this managed resource.{{% /md %}}</dd></dl>
 {{% /choosable %}}
 
 {{% choosable language nodejs %}}
-<dl class="resources-properties">
-
-    <dt class="property-"
+<dl class="resources-properties"><dt class="property-"
             title="">
         <span id="id_nodejs">
 <a href="#id_nodejs" style="color: inherit; text-decoration: inherit;">id</a>
@@ -498,14 +463,11 @@ All [input](#inputs) properties are implicitly available as output properties. A
         <span class="property-indicator"></span>
         <span class="property-type">string</span>
     </dt>
-    <dd>{{% md %}}The provider-assigned unique ID for this managed resource.{{% /md %}}</dd>
-</dl>
+    <dd>{{% md %}}The provider-assigned unique ID for this managed resource.{{% /md %}}</dd></dl>
 {{% /choosable %}}
 
 {{% choosable language python %}}
-<dl class="resources-properties">
-
-    <dt class="property-"
+<dl class="resources-properties"><dt class="property-"
             title="">
         <span id="id_python">
 <a href="#id_python" style="color: inherit; text-decoration: inherit;">id</a>
@@ -513,8 +475,7 @@ All [input](#inputs) properties are implicitly available as output properties. A
         <span class="property-indicator"></span>
         <span class="property-type">str</span>
     </dt>
-    <dd>{{% md %}}The provider-assigned unique ID for this managed resource.{{% /md %}}</dd>
-</dl>
+    <dd>{{% md %}}The provider-assigned unique ID for this managed resource.{{% /md %}}</dd></dl>
 {{% /choosable %}}
 
 
@@ -641,9 +602,7 @@ The following state arguments are supported:
 
 
 {{% choosable language csharp %}}
-<dl class="resources-properties">
-
-    <dt class="property-optional"
+<dl class="resources-properties"><dt class="property-optional"
             title="Optional">
         <span id="state_acls_csharp">
 <a href="#state_acls_csharp" style="color: inherit; text-decoration: inherit;">Acls</a>
@@ -652,8 +611,7 @@ The following state arguments are supported:
         <span class="property-type"><a href="#tableacl">List&lt;Table<wbr>Acl<wbr>Args&gt;</a></span>
     </dt>
     <dd>{{% md %}}One or more `acl` blocks as defined below.
-{{% /md %}}</dd>
-    <dt class="property-optional"
+{{% /md %}}</dd><dt class="property-optional"
             title="Optional">
         <span id="state_name_csharp">
 <a href="#state_name_csharp" style="color: inherit; text-decoration: inherit;">Name</a>
@@ -662,8 +620,7 @@ The following state arguments are supported:
         <span class="property-type">string</span>
     </dt>
     <dd>{{% md %}}The name of the storage table. Must be unique within the storage account the table is located.
-{{% /md %}}</dd>
-    <dt class="property-optional"
+{{% /md %}}</dd><dt class="property-optional"
             title="Optional">
         <span id="state_storageaccountname_csharp">
 <a href="#state_storageaccountname_csharp" style="color: inherit; text-decoration: inherit;">Storage<wbr>Account<wbr>Name</a>
@@ -673,14 +630,11 @@ The following state arguments are supported:
     </dt>
     <dd>{{% md %}}Specifies the storage account in which to create the storage table.
 Changing this forces a new resource to be created.
-{{% /md %}}</dd>
-</dl>
+{{% /md %}}</dd></dl>
 {{% /choosable %}}
 
 {{% choosable language go %}}
-<dl class="resources-properties">
-
-    <dt class="property-optional"
+<dl class="resources-properties"><dt class="property-optional"
             title="Optional">
         <span id="state_acls_go">
 <a href="#state_acls_go" style="color: inherit; text-decoration: inherit;">Acls</a>
@@ -689,8 +643,7 @@ Changing this forces a new resource to be created.
         <span class="property-type"><a href="#tableacl">[]Table<wbr>Acl</a></span>
     </dt>
     <dd>{{% md %}}One or more `acl` blocks as defined below.
-{{% /md %}}</dd>
-    <dt class="property-optional"
+{{% /md %}}</dd><dt class="property-optional"
             title="Optional">
         <span id="state_name_go">
 <a href="#state_name_go" style="color: inherit; text-decoration: inherit;">Name</a>
@@ -699,8 +652,7 @@ Changing this forces a new resource to be created.
         <span class="property-type">string</span>
     </dt>
     <dd>{{% md %}}The name of the storage table. Must be unique within the storage account the table is located.
-{{% /md %}}</dd>
-    <dt class="property-optional"
+{{% /md %}}</dd><dt class="property-optional"
             title="Optional">
         <span id="state_storageaccountname_go">
 <a href="#state_storageaccountname_go" style="color: inherit; text-decoration: inherit;">Storage<wbr>Account<wbr>Name</a>
@@ -710,14 +662,11 @@ Changing this forces a new resource to be created.
     </dt>
     <dd>{{% md %}}Specifies the storage account in which to create the storage table.
 Changing this forces a new resource to be created.
-{{% /md %}}</dd>
-</dl>
+{{% /md %}}</dd></dl>
 {{% /choosable %}}
 
 {{% choosable language nodejs %}}
-<dl class="resources-properties">
-
-    <dt class="property-optional"
+<dl class="resources-properties"><dt class="property-optional"
             title="Optional">
         <span id="state_acls_nodejs">
 <a href="#state_acls_nodejs" style="color: inherit; text-decoration: inherit;">acls</a>
@@ -726,8 +675,7 @@ Changing this forces a new resource to be created.
         <span class="property-type"><a href="#tableacl">Table<wbr>Acl[]</a></span>
     </dt>
     <dd>{{% md %}}One or more `acl` blocks as defined below.
-{{% /md %}}</dd>
-    <dt class="property-optional"
+{{% /md %}}</dd><dt class="property-optional"
             title="Optional">
         <span id="state_name_nodejs">
 <a href="#state_name_nodejs" style="color: inherit; text-decoration: inherit;">name</a>
@@ -736,8 +684,7 @@ Changing this forces a new resource to be created.
         <span class="property-type">string</span>
     </dt>
     <dd>{{% md %}}The name of the storage table. Must be unique within the storage account the table is located.
-{{% /md %}}</dd>
-    <dt class="property-optional"
+{{% /md %}}</dd><dt class="property-optional"
             title="Optional">
         <span id="state_storageaccountname_nodejs">
 <a href="#state_storageaccountname_nodejs" style="color: inherit; text-decoration: inherit;">storage<wbr>Account<wbr>Name</a>
@@ -747,14 +694,11 @@ Changing this forces a new resource to be created.
     </dt>
     <dd>{{% md %}}Specifies the storage account in which to create the storage table.
 Changing this forces a new resource to be created.
-{{% /md %}}</dd>
-</dl>
+{{% /md %}}</dd></dl>
 {{% /choosable %}}
 
 {{% choosable language python %}}
-<dl class="resources-properties">
-
-    <dt class="property-optional"
+<dl class="resources-properties"><dt class="property-optional"
             title="Optional">
         <span id="state_acls_python">
 <a href="#state_acls_python" style="color: inherit; text-decoration: inherit;">acls</a>
@@ -763,8 +707,7 @@ Changing this forces a new resource to be created.
         <span class="property-type"><a href="#tableacl">Sequence[Table<wbr>Acl<wbr>Args]</a></span>
     </dt>
     <dd>{{% md %}}One or more `acl` blocks as defined below.
-{{% /md %}}</dd>
-    <dt class="property-optional"
+{{% /md %}}</dd><dt class="property-optional"
             title="Optional">
         <span id="state_name_python">
 <a href="#state_name_python" style="color: inherit; text-decoration: inherit;">name</a>
@@ -773,8 +716,7 @@ Changing this forces a new resource to be created.
         <span class="property-type">str</span>
     </dt>
     <dd>{{% md %}}The name of the storage table. Must be unique within the storage account the table is located.
-{{% /md %}}</dd>
-    <dt class="property-optional"
+{{% /md %}}</dd><dt class="property-optional"
             title="Optional">
         <span id="state_storage_account_name_python">
 <a href="#state_storage_account_name_python" style="color: inherit; text-decoration: inherit;">storage_<wbr>account_<wbr>name</a>
@@ -784,8 +726,7 @@ Changing this forces a new resource to be created.
     </dt>
     <dd>{{% md %}}Specifies the storage account in which to create the storage table.
 Changing this forces a new resource to be created.
-{{% /md %}}</dd>
-</dl>
+{{% /md %}}</dd></dl>
 {{% /choosable %}}
 
 
@@ -800,9 +741,7 @@ Changing this forces a new resource to be created.
 <h4 id="tableacl">Table<wbr>Acl</h4>
 
 {{% choosable language csharp %}}
-<dl class="resources-properties">
-
-    <dt class="property-required"
+<dl class="resources-properties"><dt class="property-required"
             title="Required">
         <span id="id_csharp">
 <a href="#id_csharp" style="color: inherit; text-decoration: inherit;">Id</a>
@@ -811,8 +750,7 @@ Changing this forces a new resource to be created.
         <span class="property-type">string</span>
     </dt>
     <dd>{{% md %}}The ID which should be used for this Shared Identifier.
-{{% /md %}}</dd>
-    <dt class="property-optional"
+{{% /md %}}</dd><dt class="property-optional"
             title="Optional">
         <span id="accesspolicies_csharp">
 <a href="#accesspolicies_csharp" style="color: inherit; text-decoration: inherit;">Access<wbr>Policies</a>
@@ -821,14 +759,11 @@ Changing this forces a new resource to be created.
         <span class="property-type"><a href="#tableaclaccesspolicy">List&lt;Table<wbr>Acl<wbr>Access<wbr>Policy<wbr>Args&gt;</a></span>
     </dt>
     <dd>{{% md %}}An `access_policy` block as defined below.
-{{% /md %}}</dd>
-</dl>
+{{% /md %}}</dd></dl>
 {{% /choosable %}}
 
 {{% choosable language go %}}
-<dl class="resources-properties">
-
-    <dt class="property-required"
+<dl class="resources-properties"><dt class="property-required"
             title="Required">
         <span id="id_go">
 <a href="#id_go" style="color: inherit; text-decoration: inherit;">Id</a>
@@ -837,8 +772,7 @@ Changing this forces a new resource to be created.
         <span class="property-type">string</span>
     </dt>
     <dd>{{% md %}}The ID which should be used for this Shared Identifier.
-{{% /md %}}</dd>
-    <dt class="property-optional"
+{{% /md %}}</dd><dt class="property-optional"
             title="Optional">
         <span id="accesspolicies_go">
 <a href="#accesspolicies_go" style="color: inherit; text-decoration: inherit;">Access<wbr>Policies</a>
@@ -847,14 +781,11 @@ Changing this forces a new resource to be created.
         <span class="property-type"><a href="#tableaclaccesspolicy">[]Table<wbr>Acl<wbr>Access<wbr>Policy</a></span>
     </dt>
     <dd>{{% md %}}An `access_policy` block as defined below.
-{{% /md %}}</dd>
-</dl>
+{{% /md %}}</dd></dl>
 {{% /choosable %}}
 
 {{% choosable language nodejs %}}
-<dl class="resources-properties">
-
-    <dt class="property-required"
+<dl class="resources-properties"><dt class="property-required"
             title="Required">
         <span id="id_nodejs">
 <a href="#id_nodejs" style="color: inherit; text-decoration: inherit;">id</a>
@@ -863,8 +794,7 @@ Changing this forces a new resource to be created.
         <span class="property-type">string</span>
     </dt>
     <dd>{{% md %}}The ID which should be used for this Shared Identifier.
-{{% /md %}}</dd>
-    <dt class="property-optional"
+{{% /md %}}</dd><dt class="property-optional"
             title="Optional">
         <span id="accesspolicies_nodejs">
 <a href="#accesspolicies_nodejs" style="color: inherit; text-decoration: inherit;">access<wbr>Policies</a>
@@ -873,14 +803,11 @@ Changing this forces a new resource to be created.
         <span class="property-type"><a href="#tableaclaccesspolicy">Table<wbr>Acl<wbr>Access<wbr>Policy[]</a></span>
     </dt>
     <dd>{{% md %}}An `access_policy` block as defined below.
-{{% /md %}}</dd>
-</dl>
+{{% /md %}}</dd></dl>
 {{% /choosable %}}
 
 {{% choosable language python %}}
-<dl class="resources-properties">
-
-    <dt class="property-required"
+<dl class="resources-properties"><dt class="property-required"
             title="Required">
         <span id="id_python">
 <a href="#id_python" style="color: inherit; text-decoration: inherit;">id</a>
@@ -889,8 +816,7 @@ Changing this forces a new resource to be created.
         <span class="property-type">str</span>
     </dt>
     <dd>{{% md %}}The ID which should be used for this Shared Identifier.
-{{% /md %}}</dd>
-    <dt class="property-optional"
+{{% /md %}}</dd><dt class="property-optional"
             title="Optional">
         <span id="access_policies_python">
 <a href="#access_policies_python" style="color: inherit; text-decoration: inherit;">access_<wbr>policies</a>
@@ -899,16 +825,13 @@ Changing this forces a new resource to be created.
         <span class="property-type"><a href="#tableaclaccesspolicy">Sequence[Table<wbr>Acl<wbr>Access<wbr>Policy<wbr>Args]</a></span>
     </dt>
     <dd>{{% md %}}An `access_policy` block as defined below.
-{{% /md %}}</dd>
-</dl>
+{{% /md %}}</dd></dl>
 {{% /choosable %}}
 
 <h4 id="tableaclaccesspolicy">Table<wbr>Acl<wbr>Access<wbr>Policy</h4>
 
 {{% choosable language csharp %}}
-<dl class="resources-properties">
-
-    <dt class="property-required"
+<dl class="resources-properties"><dt class="property-required"
             title="Required">
         <span id="expiry_csharp">
 <a href="#expiry_csharp" style="color: inherit; text-decoration: inherit;">Expiry</a>
@@ -917,8 +840,7 @@ Changing this forces a new resource to be created.
         <span class="property-type">string</span>
     </dt>
     <dd>{{% md %}}The ISO8061 UTC time at which this Access Policy should be valid until.
-{{% /md %}}</dd>
-    <dt class="property-required"
+{{% /md %}}</dd><dt class="property-required"
             title="Required">
         <span id="permissions_csharp">
 <a href="#permissions_csharp" style="color: inherit; text-decoration: inherit;">Permissions</a>
@@ -927,8 +849,7 @@ Changing this forces a new resource to be created.
         <span class="property-type">string</span>
     </dt>
     <dd>{{% md %}}The permissions which should associated with this Shared Identifier.
-{{% /md %}}</dd>
-    <dt class="property-required"
+{{% /md %}}</dd><dt class="property-required"
             title="Required">
         <span id="start_csharp">
 <a href="#start_csharp" style="color: inherit; text-decoration: inherit;">Start</a>
@@ -937,14 +858,11 @@ Changing this forces a new resource to be created.
         <span class="property-type">string</span>
     </dt>
     <dd>{{% md %}}The ISO8061 UTC time at which this Access Policy should be valid from.
-{{% /md %}}</dd>
-</dl>
+{{% /md %}}</dd></dl>
 {{% /choosable %}}
 
 {{% choosable language go %}}
-<dl class="resources-properties">
-
-    <dt class="property-required"
+<dl class="resources-properties"><dt class="property-required"
             title="Required">
         <span id="expiry_go">
 <a href="#expiry_go" style="color: inherit; text-decoration: inherit;">Expiry</a>
@@ -953,8 +871,7 @@ Changing this forces a new resource to be created.
         <span class="property-type">string</span>
     </dt>
     <dd>{{% md %}}The ISO8061 UTC time at which this Access Policy should be valid until.
-{{% /md %}}</dd>
-    <dt class="property-required"
+{{% /md %}}</dd><dt class="property-required"
             title="Required">
         <span id="permissions_go">
 <a href="#permissions_go" style="color: inherit; text-decoration: inherit;">Permissions</a>
@@ -963,8 +880,7 @@ Changing this forces a new resource to be created.
         <span class="property-type">string</span>
     </dt>
     <dd>{{% md %}}The permissions which should associated with this Shared Identifier.
-{{% /md %}}</dd>
-    <dt class="property-required"
+{{% /md %}}</dd><dt class="property-required"
             title="Required">
         <span id="start_go">
 <a href="#start_go" style="color: inherit; text-decoration: inherit;">Start</a>
@@ -973,14 +889,11 @@ Changing this forces a new resource to be created.
         <span class="property-type">string</span>
     </dt>
     <dd>{{% md %}}The ISO8061 UTC time at which this Access Policy should be valid from.
-{{% /md %}}</dd>
-</dl>
+{{% /md %}}</dd></dl>
 {{% /choosable %}}
 
 {{% choosable language nodejs %}}
-<dl class="resources-properties">
-
-    <dt class="property-required"
+<dl class="resources-properties"><dt class="property-required"
             title="Required">
         <span id="expiry_nodejs">
 <a href="#expiry_nodejs" style="color: inherit; text-decoration: inherit;">expiry</a>
@@ -989,8 +902,7 @@ Changing this forces a new resource to be created.
         <span class="property-type">string</span>
     </dt>
     <dd>{{% md %}}The ISO8061 UTC time at which this Access Policy should be valid until.
-{{% /md %}}</dd>
-    <dt class="property-required"
+{{% /md %}}</dd><dt class="property-required"
             title="Required">
         <span id="permissions_nodejs">
 <a href="#permissions_nodejs" style="color: inherit; text-decoration: inherit;">permissions</a>
@@ -999,8 +911,7 @@ Changing this forces a new resource to be created.
         <span class="property-type">string</span>
     </dt>
     <dd>{{% md %}}The permissions which should associated with this Shared Identifier.
-{{% /md %}}</dd>
-    <dt class="property-required"
+{{% /md %}}</dd><dt class="property-required"
             title="Required">
         <span id="start_nodejs">
 <a href="#start_nodejs" style="color: inherit; text-decoration: inherit;">start</a>
@@ -1009,14 +920,11 @@ Changing this forces a new resource to be created.
         <span class="property-type">string</span>
     </dt>
     <dd>{{% md %}}The ISO8061 UTC time at which this Access Policy should be valid from.
-{{% /md %}}</dd>
-</dl>
+{{% /md %}}</dd></dl>
 {{% /choosable %}}
 
 {{% choosable language python %}}
-<dl class="resources-properties">
-
-    <dt class="property-required"
+<dl class="resources-properties"><dt class="property-required"
             title="Required">
         <span id="expiry_python">
 <a href="#expiry_python" style="color: inherit; text-decoration: inherit;">expiry</a>
@@ -1025,8 +933,7 @@ Changing this forces a new resource to be created.
         <span class="property-type">str</span>
     </dt>
     <dd>{{% md %}}The ISO8061 UTC time at which this Access Policy should be valid until.
-{{% /md %}}</dd>
-    <dt class="property-required"
+{{% /md %}}</dd><dt class="property-required"
             title="Required">
         <span id="permissions_python">
 <a href="#permissions_python" style="color: inherit; text-decoration: inherit;">permissions</a>
@@ -1035,8 +942,7 @@ Changing this forces a new resource to be created.
         <span class="property-type">str</span>
     </dt>
     <dd>{{% md %}}The permissions which should associated with this Shared Identifier.
-{{% /md %}}</dd>
-    <dt class="property-required"
+{{% /md %}}</dd><dt class="property-required"
             title="Required">
         <span id="start_python">
 <a href="#start_python" style="color: inherit; text-decoration: inherit;">start</a>
@@ -1045,8 +951,7 @@ Changing this forces a new resource to be created.
         <span class="property-type">str</span>
     </dt>
     <dd>{{% md %}}The ISO8061 UTC time at which this Access Policy should be valid from.
-{{% /md %}}</dd>
-</dl>
+{{% /md %}}</dd></dl>
 {{% /choosable %}}
 ## Import
 
@@ -1067,6 +972,6 @@ Table's within a Storage Account can be imported using the `resource id`, e.g.
 	<dt>License</dt>
 	<dd>Apache-2.0</dd>
 	<dt>Notes</dt>
-	<dd>This Pulumi package is based on the [`azurerm` Terraform Provider](https://github.com/terraform-providers/terraform-provider-azurerm).</dd>
+	<dd>{{% md %}}This Pulumi package is based on the [`azurerm` Terraform Provider](https://github.com/terraform-providers/terraform-provider-azurerm).{{% /md %}}</dd>
 </dl>
 

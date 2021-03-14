@@ -23,7 +23,7 @@ This page contains detailed instructions for [installing Pulumi](#installing-pul
 
 {{< chooser os "macos,windows,linux" >}}
 
-{{< choosable os macos >}}
+{{% choosable os macos %}}
 
 macOS Sierra (10.12) or later is required.
 
@@ -66,9 +66,9 @@ If you do not wish to use the previous options, you can install Pulumi manually.
 
 1. Extract the tarball and move the binaries in the `pulumi` directory to a directory included in your system's `$PATH`.
 
-{{< /choosable >}}
+{{% /choosable %}}
 
-{{< choosable os linux >}}
+{{% choosable os linux %}}
 
 ### Installation Script
 
@@ -91,9 +91,9 @@ Alternatively, you can install Pulumi manually. We provide a prebuilt binary for
 
 1. Extract the tarball and move the binaries in the `pulumi` directory to a directory included in your system's `$PATH`.
 
-{{< /choosable >}}
+{{% /choosable %}}
 
-{{< choosable os windows >}}
+{{% choosable os windows %}}
 
 Windows 8 and 10 are supported.
 
@@ -137,44 +137,44 @@ Alternatively, you can install Pulumi manually.
 
 1. Add `C:\pulumi\bin` to your path via **System Properties** -> **Advanced** -> **Environment Variables** -> **User Variables** -> **Path** -> **Edit**.
 
-{{< /choosable >}}
+{{% /choosable %}}
 
-{{< /chooser >}}
+{{% /chooser %}}
 
 ## Verifying your Installation
 
 After installing Pulumi, verify everything is in working order by running the `pulumi` CLI:
 
-{{< chooser os "macos,windows,linux" >}}
+{{% chooser os "macos,windows,linux" %}}
 
-{{< choosable os macos >}}
-
-```bash
-$ pulumi version
-v{{< latest-version >}}
-```
-
-{{< /choosable >}}
-
-{{< choosable os linux >}}
+{{% choosable os macos %}}
 
 ```bash
 $ pulumi version
 v{{< latest-version >}}
 ```
 
-{{< /choosable >}}
+{{% /choosable %}}
 
-{{< choosable os windows >}}
+{{% choosable os linux %}}
+
+```bash
+$ pulumi version
+v{{< latest-version >}}
+```
+
+{{% /choosable %}}
+
+{{% choosable os windows %}}
 
 ```bash
 > pulumi version
 v{{< latest-version >}}
 ```
 
-{{< /choosable >}}
+{{% /choosable %}}
 
-{{< /chooser >}}
+{{% /chooser %}}
 
 ### Pulumi Not Found Error
 
@@ -184,20 +184,9 @@ If you get an error that `pulumi` could not be found, it means your path has not
 
 If a new version of Pulumi is available, the CLI produces the following example warning when running any of the available commands:
 
-{{< chooser os "macos,windows,linux" >}}
+{{% chooser os "macos,windows,linux" %}}
 
-{{< choosable os macos >}}
-
-```
-warning: A new version of Pulumi is available. To upgrade from version '0.17.26' to '{{< latest-version >}}', run
-   $ curl -sSL https://get.pulumi.com | sh
-
-or visit https://pulumi.com/docs/reference/install/ for manual instructions and release notes.
-```
-
-{{< /choosable >}}
-
-{{< choosable os linux >}}
+{{% choosable os macos %}}
 
 ```
 warning: A new version of Pulumi is available. To upgrade from version '0.17.26' to '{{< latest-version >}}', run
@@ -206,9 +195,20 @@ warning: A new version of Pulumi is available. To upgrade from version '0.17.26'
 or visit https://pulumi.com/docs/reference/install/ for manual instructions and release notes.
 ```
 
-{{< /choosable >}}
+{{% /choosable %}}
 
-{{< choosable os windows >}}
+{{% choosable os linux %}}
+
+```
+warning: A new version of Pulumi is available. To upgrade from version '0.17.26' to '{{< latest-version >}}', run
+   $ curl -sSL https://get.pulumi.com | sh
+
+or visit https://pulumi.com/docs/reference/install/ for manual instructions and release notes.
+```
+
+{{% /choosable %}}
+
+{{% choosable os windows %}}
 
 ```
 warning: A new version of Pulumi is available. To upgrade from version '0.17.26' to '{{< latest-version >}}', run
@@ -217,23 +217,23 @@ warning: A new version of Pulumi is available. To upgrade from version '0.17.26'
 or visit https://pulumi.com/docs/reference/install/ for manual instructions and release notes.
 ```
 
-{{< /choosable >}}
+{{% /choosable %}}
 
-{{< /chooser >}}
+{{% /chooser %}}
 
 {{< skip-version-check >}}
 
 ## Upgrading Pulumi
 
-If you are upgrading to Pulumi 2.0, please see our [migration guide]({{< relref "migrating-2.0" >}}).
+If you are upgrading to Pulumi 2.0, please see our [migration guide]({{< relref "/docs/get-started/install/migrating-2.0.md" >}}).
 
 ## Installing Previous Versions
 
 You can find the list of versions on the [Available Versions]({{< relref "/docs/get-started/install/versions" >}}) page.
 
-{{< chooser os "macos,windows,linux" >}}
+{{% chooser os "macos,windows,linux" %}}
 
-{{< choosable os macos >}}
+{{% choosable os macos %}}
 
 ### Installation Script
 
@@ -241,9 +241,9 @@ You can find the list of versions on the [Available Versions]({{< relref "/docs/
 $ curl -fsSL https://get.pulumi.com | sh -s -- --version <version>
 ```
 
-{{< /choosable >}}
+{{% /choosable %}}
 
-{{< choosable os linux >}}
+{{% choosable os linux %}}
 
 ### Installation Script
 
@@ -253,9 +253,9 @@ To install, run our installation script:
 $ curl -fsSL https://get.pulumi.com | sh -s -- --version <version>
 ```
 
-{{< /choosable >}}
+{{% /choosable %}}
 
-{{< choosable os windows >}}
+{{% choosable os windows %}}
 
 ### Chocolatey
 
@@ -275,9 +275,9 @@ You can specify a specific version with [Chocolatey package manager](https://cho
 > @"%SystemRoot%\System32\WindowsPowerShell\v1.0\powershell.exe" -NoProfile -InputFormat None -ExecutionPolicy Bypass -Command "[Net.ServicePointManager]::SecurityProtocol = [Net.SecurityProtocolType]::Tls12; $version = '<version>'; iex ((New-Object System.Net.WebClient).DownloadString('https://get.pulumi.com/install.ps1')).Replace('${latestVersion}', $version)" && SET "PATH=%PATH%;%USERPROFILE%\.pulumi\bin"
 ```
 
-{{< /choosable >}}
+{{% /choosable %}}
 
-{{< /chooser >}}
+{{% /chooser %}}
 
 ## Uninstalling Pulumi
 

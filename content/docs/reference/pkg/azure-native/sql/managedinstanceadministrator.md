@@ -14,11 +14,17 @@ An Azure SQL managed instance administrator.
 API Version: 2020-08-01-preview.
 
 {{% examples %}}
+
 ## Example Usage
 
 {{< chooser language "typescript,python,go,csharp" / >}}
+
+
 ### Create administrator of managed instance
-{{% example csharp %}}
+
+
+{{< example csharp >}}
+
 ```csharp
 using Pulumi;
 using AzureNative = Pulumi.AzureNative;
@@ -43,9 +49,12 @@ class MyStack : Stack
 
 ```
 
-{{% /example %}}
 
-{{% example go %}}
+{{< /example >}}
+
+
+{{< example go >}}
+
 
 ```go
 package main
@@ -75,9 +84,12 @@ func main() {
 
 ```
 
-{{% /example %}}
 
-{{% example python %}}
+{{< /example >}}
+
+
+{{< example python >}}
+
 
 ```python
 import pulumi
@@ -94,9 +106,12 @@ managed_instance_administrator = azure_native.sql.ManagedInstanceAdministrator("
 
 ```
 
-{{% /example %}}
 
-{{% example typescript %}}
+{{< /example >}}
+
+
+{{< example typescript >}}
+
 
 ```typescript
 import * as pulumi from "@pulumi/pulumi";
@@ -114,10 +129,17 @@ const managedInstanceAdministrator = new azure_native.sql.ManagedInstanceAdminis
 
 ```
 
-{{% /example %}}
+
+{{< /example >}}
+
+
+
 
 ### Update administrator of managed instance
-{{% example csharp %}}
+
+
+{{< example csharp >}}
+
 ```csharp
 using Pulumi;
 using AzureNative = Pulumi.AzureNative;
@@ -142,9 +164,12 @@ class MyStack : Stack
 
 ```
 
-{{% /example %}}
 
-{{% example go %}}
+{{< /example >}}
+
+
+{{< example go >}}
+
 
 ```go
 package main
@@ -174,9 +199,12 @@ func main() {
 
 ```
 
-{{% /example %}}
 
-{{% example python %}}
+{{< /example >}}
+
+
+{{< example python >}}
+
 
 ```python
 import pulumi
@@ -193,9 +221,12 @@ managed_instance_administrator = azure_native.sql.ManagedInstanceAdministrator("
 
 ```
 
-{{% /example %}}
 
-{{% example typescript %}}
+{{< /example >}}
+
+
+{{< example typescript >}}
+
 
 ```typescript
 import * as pulumi from "@pulumi/pulumi";
@@ -213,9 +244,16 @@ const managedInstanceAdministrator = new azure_native.sql.ManagedInstanceAdminis
 
 ```
 
-{{% /example %}}
+
+{{< /example >}}
+
+
+
+
 
 {{% /examples %}}
+
+
 
 
 ## Create a ManagedInstanceAdministrator Resource {#create}
@@ -240,9 +278,7 @@ const managedInstanceAdministrator = new azure_native.sql.ManagedInstanceAdminis
 
 {{% choosable language nodejs %}}
 
-<dl class="resources-properties">
-  
-    <dt
+<dl class="resources-properties"><dt
         class="property-required" title="Required">
         <span>name</span>
         <span class="property-indicator"></span>
@@ -250,9 +286,7 @@ const managedInstanceAdministrator = new azure_native.sql.ManagedInstanceAdminis
     </dt>
     <dd>
       The unique name of the resource.
-    </dd>
-  
-    <dt
+    </dd><dt
         class="property-required" title="Required">
         <span>args</span>
         <span class="property-indicator"></span>
@@ -260,9 +294,7 @@ const managedInstanceAdministrator = new azure_native.sql.ManagedInstanceAdminis
     </dt>
     <dd>
       The arguments to resource properties.
-    </dd>
-  
-    <dt
+    </dd><dt
         class="property-optional" title="Optional">
         <span>opts</span>
         <span class="property-indicator"></span>
@@ -270,10 +302,7 @@ const managedInstanceAdministrator = new azure_native.sql.ManagedInstanceAdminis
     </dt>
     <dd>
       Bag of options to control resource&#39;s behavior.
-    </dd>
-  
-
-</dl>
+    </dd></dl>
 
 {{% /choosable %}}
 
@@ -299,9 +328,7 @@ const managedInstanceAdministrator = new azure_native.sql.ManagedInstanceAdminis
 
 {{% choosable language go %}}
 
-<dl class="resources-properties">
-  
-    <dt
+<dl class="resources-properties"><dt
         class="property-optional" title="Optional">
         <span>ctx</span>
         <span class="property-indicator"></span>
@@ -309,9 +336,7 @@ const managedInstanceAdministrator = new azure_native.sql.ManagedInstanceAdminis
     </dt>
     <dd>
       Context object for the current deployment.
-    </dd>
-  
-    <dt
+    </dd><dt
         class="property-required" title="Required">
         <span>name</span>
         <span class="property-indicator"></span>
@@ -319,9 +344,7 @@ const managedInstanceAdministrator = new azure_native.sql.ManagedInstanceAdminis
     </dt>
     <dd>
       The unique name of the resource.
-    </dd>
-  
-    <dt
+    </dd><dt
         class="property-required" title="Required">
         <span>args</span>
         <span class="property-indicator"></span>
@@ -329,9 +352,7 @@ const managedInstanceAdministrator = new azure_native.sql.ManagedInstanceAdminis
     </dt>
     <dd>
       The arguments to resource properties.
-    </dd>
-  
-    <dt
+    </dd><dt
         class="property-optional" title="Optional">
         <span>opts</span>
         <span class="property-indicator"></span>
@@ -339,18 +360,13 @@ const managedInstanceAdministrator = new azure_native.sql.ManagedInstanceAdminis
     </dt>
     <dd>
       Bag of options to control resource&#39;s behavior.
-    </dd>
-  
-
-</dl>
+    </dd></dl>
 
 {{% /choosable %}}
 
 {{% choosable language csharp %}}
 
-<dl class="resources-properties">
-  
-    <dt
+<dl class="resources-properties"><dt
         class="property-required" title="Required">
         <span>name</span>
         <span class="property-indicator"></span>
@@ -358,9 +374,7 @@ const managedInstanceAdministrator = new azure_native.sql.ManagedInstanceAdminis
     </dt>
     <dd>
       The unique name of the resource.
-    </dd>
-  
-    <dt
+    </dd><dt
         class="property-required" title="Required">
         <span>args</span>
         <span class="property-indicator"></span>
@@ -368,9 +382,7 @@ const managedInstanceAdministrator = new azure_native.sql.ManagedInstanceAdminis
     </dt>
     <dd>
       The arguments to resource properties.
-    </dd>
-  
-    <dt
+    </dd><dt
         class="property-optional" title="Optional">
         <span>opts</span>
         <span class="property-indicator"></span>
@@ -378,10 +390,7 @@ const managedInstanceAdministrator = new azure_native.sql.ManagedInstanceAdminis
     </dt>
     <dd>
       Bag of options to control resource&#39;s behavior.
-    </dd>
-  
-
-</dl>
+    </dd></dl>
 
 {{% /choosable %}}
 
@@ -396,9 +405,7 @@ The ManagedInstanceAdministrator resource accepts the following [input]({{< relr
 
 
 {{% choosable language csharp %}}
-<dl class="resources-properties">
-
-    <dt class="property-required"
+<dl class="resources-properties"><dt class="property-required"
             title="Required">
         <span id="administratortype_csharp">
 <a href="#administratortype_csharp" style="color: inherit; text-decoration: inherit;">Administrator<wbr>Type</a>
@@ -406,8 +413,7 @@ The ManagedInstanceAdministrator resource accepts the following [input]({{< relr
         <span class="property-indicator"></span>
         <span class="property-type">string | <a href="#managedinstanceadministratortype">Pulumi.<wbr>Azure<wbr>Native.<wbr>Sql.<wbr>Managed<wbr>Instance<wbr>Administrator<wbr>Type</a></span>
     </dt>
-    <dd>{{% md %}}Type of the managed instance administrator.{{% /md %}}</dd>
-    <dt class="property-required"
+    <dd>{{% md %}}Type of the managed instance administrator.{{% /md %}}</dd><dt class="property-required"
             title="Required">
         <span id="login_csharp">
 <a href="#login_csharp" style="color: inherit; text-decoration: inherit;">Login</a>
@@ -415,8 +421,7 @@ The ManagedInstanceAdministrator resource accepts the following [input]({{< relr
         <span class="property-indicator"></span>
         <span class="property-type">string</span>
     </dt>
-    <dd>{{% md %}}Login name of the managed instance administrator.{{% /md %}}</dd>
-    <dt class="property-required"
+    <dd>{{% md %}}Login name of the managed instance administrator.{{% /md %}}</dd><dt class="property-required"
             title="Required">
         <span id="managedinstancename_csharp">
 <a href="#managedinstancename_csharp" style="color: inherit; text-decoration: inherit;">Managed<wbr>Instance<wbr>Name</a>
@@ -424,8 +429,7 @@ The ManagedInstanceAdministrator resource accepts the following [input]({{< relr
         <span class="property-indicator"></span>
         <span class="property-type">string</span>
     </dt>
-    <dd>{{% md %}}The name of the managed instance.{{% /md %}}</dd>
-    <dt class="property-required"
+    <dd>{{% md %}}The name of the managed instance.{{% /md %}}</dd><dt class="property-required"
             title="Required">
         <span id="resourcegroupname_csharp">
 <a href="#resourcegroupname_csharp" style="color: inherit; text-decoration: inherit;">Resource<wbr>Group<wbr>Name</a>
@@ -433,8 +437,7 @@ The ManagedInstanceAdministrator resource accepts the following [input]({{< relr
         <span class="property-indicator"></span>
         <span class="property-type">string</span>
     </dt>
-    <dd>{{% md %}}The name of the resource group that contains the resource. You can obtain this value from the Azure Resource Manager API or the portal.{{% /md %}}</dd>
-    <dt class="property-required"
+    <dd>{{% md %}}The name of the resource group that contains the resource. You can obtain this value from the Azure Resource Manager API or the portal.{{% /md %}}</dd><dt class="property-required"
             title="Required">
         <span id="sid_csharp">
 <a href="#sid_csharp" style="color: inherit; text-decoration: inherit;">Sid</a>
@@ -442,8 +445,7 @@ The ManagedInstanceAdministrator resource accepts the following [input]({{< relr
         <span class="property-indicator"></span>
         <span class="property-type">string</span>
     </dt>
-    <dd>{{% md %}}SID (object ID) of the managed instance administrator.{{% /md %}}</dd>
-    <dt class="property-optional"
+    <dd>{{% md %}}SID (object ID) of the managed instance administrator.{{% /md %}}</dd><dt class="property-optional"
             title="Optional">
         <span id="administratorname_csharp">
 <a href="#administratorname_csharp" style="color: inherit; text-decoration: inherit;">Administrator<wbr>Name</a>
@@ -451,8 +453,7 @@ The ManagedInstanceAdministrator resource accepts the following [input]({{< relr
         <span class="property-indicator"></span>
         <span class="property-type">string</span>
     </dt>
-    <dd>{{% md %}}{{% /md %}}</dd>
-    <dt class="property-optional"
+    <dd>{{% md %}}{{% /md %}}</dd><dt class="property-optional"
             title="Optional">
         <span id="tenantid_csharp">
 <a href="#tenantid_csharp" style="color: inherit; text-decoration: inherit;">Tenant<wbr>Id</a>
@@ -460,14 +461,11 @@ The ManagedInstanceAdministrator resource accepts the following [input]({{< relr
         <span class="property-indicator"></span>
         <span class="property-type">string</span>
     </dt>
-    <dd>{{% md %}}Tenant ID of the managed instance administrator.{{% /md %}}</dd>
-</dl>
+    <dd>{{% md %}}Tenant ID of the managed instance administrator.{{% /md %}}</dd></dl>
 {{% /choosable %}}
 
 {{% choosable language go %}}
-<dl class="resources-properties">
-
-    <dt class="property-required"
+<dl class="resources-properties"><dt class="property-required"
             title="Required">
         <span id="administratortype_go">
 <a href="#administratortype_go" style="color: inherit; text-decoration: inherit;">Administrator<wbr>Type</a>
@@ -475,8 +473,7 @@ The ManagedInstanceAdministrator resource accepts the following [input]({{< relr
         <span class="property-indicator"></span>
         <span class="property-type">string | <a href="#managedinstanceadministratortype">Managed<wbr>Instance<wbr>Administrator<wbr>Type</a></span>
     </dt>
-    <dd>{{% md %}}Type of the managed instance administrator.{{% /md %}}</dd>
-    <dt class="property-required"
+    <dd>{{% md %}}Type of the managed instance administrator.{{% /md %}}</dd><dt class="property-required"
             title="Required">
         <span id="login_go">
 <a href="#login_go" style="color: inherit; text-decoration: inherit;">Login</a>
@@ -484,8 +481,7 @@ The ManagedInstanceAdministrator resource accepts the following [input]({{< relr
         <span class="property-indicator"></span>
         <span class="property-type">string</span>
     </dt>
-    <dd>{{% md %}}Login name of the managed instance administrator.{{% /md %}}</dd>
-    <dt class="property-required"
+    <dd>{{% md %}}Login name of the managed instance administrator.{{% /md %}}</dd><dt class="property-required"
             title="Required">
         <span id="managedinstancename_go">
 <a href="#managedinstancename_go" style="color: inherit; text-decoration: inherit;">Managed<wbr>Instance<wbr>Name</a>
@@ -493,8 +489,7 @@ The ManagedInstanceAdministrator resource accepts the following [input]({{< relr
         <span class="property-indicator"></span>
         <span class="property-type">string</span>
     </dt>
-    <dd>{{% md %}}The name of the managed instance.{{% /md %}}</dd>
-    <dt class="property-required"
+    <dd>{{% md %}}The name of the managed instance.{{% /md %}}</dd><dt class="property-required"
             title="Required">
         <span id="resourcegroupname_go">
 <a href="#resourcegroupname_go" style="color: inherit; text-decoration: inherit;">Resource<wbr>Group<wbr>Name</a>
@@ -502,8 +497,7 @@ The ManagedInstanceAdministrator resource accepts the following [input]({{< relr
         <span class="property-indicator"></span>
         <span class="property-type">string</span>
     </dt>
-    <dd>{{% md %}}The name of the resource group that contains the resource. You can obtain this value from the Azure Resource Manager API or the portal.{{% /md %}}</dd>
-    <dt class="property-required"
+    <dd>{{% md %}}The name of the resource group that contains the resource. You can obtain this value from the Azure Resource Manager API or the portal.{{% /md %}}</dd><dt class="property-required"
             title="Required">
         <span id="sid_go">
 <a href="#sid_go" style="color: inherit; text-decoration: inherit;">Sid</a>
@@ -511,8 +505,7 @@ The ManagedInstanceAdministrator resource accepts the following [input]({{< relr
         <span class="property-indicator"></span>
         <span class="property-type">string</span>
     </dt>
-    <dd>{{% md %}}SID (object ID) of the managed instance administrator.{{% /md %}}</dd>
-    <dt class="property-optional"
+    <dd>{{% md %}}SID (object ID) of the managed instance administrator.{{% /md %}}</dd><dt class="property-optional"
             title="Optional">
         <span id="administratorname_go">
 <a href="#administratorname_go" style="color: inherit; text-decoration: inherit;">Administrator<wbr>Name</a>
@@ -520,8 +513,7 @@ The ManagedInstanceAdministrator resource accepts the following [input]({{< relr
         <span class="property-indicator"></span>
         <span class="property-type">string</span>
     </dt>
-    <dd>{{% md %}}{{% /md %}}</dd>
-    <dt class="property-optional"
+    <dd>{{% md %}}{{% /md %}}</dd><dt class="property-optional"
             title="Optional">
         <span id="tenantid_go">
 <a href="#tenantid_go" style="color: inherit; text-decoration: inherit;">Tenant<wbr>Id</a>
@@ -529,14 +521,11 @@ The ManagedInstanceAdministrator resource accepts the following [input]({{< relr
         <span class="property-indicator"></span>
         <span class="property-type">string</span>
     </dt>
-    <dd>{{% md %}}Tenant ID of the managed instance administrator.{{% /md %}}</dd>
-</dl>
+    <dd>{{% md %}}Tenant ID of the managed instance administrator.{{% /md %}}</dd></dl>
 {{% /choosable %}}
 
 {{% choosable language nodejs %}}
-<dl class="resources-properties">
-
-    <dt class="property-required"
+<dl class="resources-properties"><dt class="property-required"
             title="Required">
         <span id="administratortype_nodejs">
 <a href="#administratortype_nodejs" style="color: inherit; text-decoration: inherit;">administrator<wbr>Type</a>
@@ -544,8 +533,7 @@ The ManagedInstanceAdministrator resource accepts the following [input]({{< relr
         <span class="property-indicator"></span>
         <span class="property-type">string | <a href="#managedinstanceadministratortype">Managed<wbr>Instance<wbr>Administrator<wbr>Type</a></span>
     </dt>
-    <dd>{{% md %}}Type of the managed instance administrator.{{% /md %}}</dd>
-    <dt class="property-required"
+    <dd>{{% md %}}Type of the managed instance administrator.{{% /md %}}</dd><dt class="property-required"
             title="Required">
         <span id="login_nodejs">
 <a href="#login_nodejs" style="color: inherit; text-decoration: inherit;">login</a>
@@ -553,8 +541,7 @@ The ManagedInstanceAdministrator resource accepts the following [input]({{< relr
         <span class="property-indicator"></span>
         <span class="property-type">string</span>
     </dt>
-    <dd>{{% md %}}Login name of the managed instance administrator.{{% /md %}}</dd>
-    <dt class="property-required"
+    <dd>{{% md %}}Login name of the managed instance administrator.{{% /md %}}</dd><dt class="property-required"
             title="Required">
         <span id="managedinstancename_nodejs">
 <a href="#managedinstancename_nodejs" style="color: inherit; text-decoration: inherit;">managed<wbr>Instance<wbr>Name</a>
@@ -562,8 +549,7 @@ The ManagedInstanceAdministrator resource accepts the following [input]({{< relr
         <span class="property-indicator"></span>
         <span class="property-type">string</span>
     </dt>
-    <dd>{{% md %}}The name of the managed instance.{{% /md %}}</dd>
-    <dt class="property-required"
+    <dd>{{% md %}}The name of the managed instance.{{% /md %}}</dd><dt class="property-required"
             title="Required">
         <span id="resourcegroupname_nodejs">
 <a href="#resourcegroupname_nodejs" style="color: inherit; text-decoration: inherit;">resource<wbr>Group<wbr>Name</a>
@@ -571,8 +557,7 @@ The ManagedInstanceAdministrator resource accepts the following [input]({{< relr
         <span class="property-indicator"></span>
         <span class="property-type">string</span>
     </dt>
-    <dd>{{% md %}}The name of the resource group that contains the resource. You can obtain this value from the Azure Resource Manager API or the portal.{{% /md %}}</dd>
-    <dt class="property-required"
+    <dd>{{% md %}}The name of the resource group that contains the resource. You can obtain this value from the Azure Resource Manager API or the portal.{{% /md %}}</dd><dt class="property-required"
             title="Required">
         <span id="sid_nodejs">
 <a href="#sid_nodejs" style="color: inherit; text-decoration: inherit;">sid</a>
@@ -580,8 +565,7 @@ The ManagedInstanceAdministrator resource accepts the following [input]({{< relr
         <span class="property-indicator"></span>
         <span class="property-type">string</span>
     </dt>
-    <dd>{{% md %}}SID (object ID) of the managed instance administrator.{{% /md %}}</dd>
-    <dt class="property-optional"
+    <dd>{{% md %}}SID (object ID) of the managed instance administrator.{{% /md %}}</dd><dt class="property-optional"
             title="Optional">
         <span id="administratorname_nodejs">
 <a href="#administratorname_nodejs" style="color: inherit; text-decoration: inherit;">administrator<wbr>Name</a>
@@ -589,8 +573,7 @@ The ManagedInstanceAdministrator resource accepts the following [input]({{< relr
         <span class="property-indicator"></span>
         <span class="property-type">string</span>
     </dt>
-    <dd>{{% md %}}{{% /md %}}</dd>
-    <dt class="property-optional"
+    <dd>{{% md %}}{{% /md %}}</dd><dt class="property-optional"
             title="Optional">
         <span id="tenantid_nodejs">
 <a href="#tenantid_nodejs" style="color: inherit; text-decoration: inherit;">tenant<wbr>Id</a>
@@ -598,14 +581,11 @@ The ManagedInstanceAdministrator resource accepts the following [input]({{< relr
         <span class="property-indicator"></span>
         <span class="property-type">string</span>
     </dt>
-    <dd>{{% md %}}Tenant ID of the managed instance administrator.{{% /md %}}</dd>
-</dl>
+    <dd>{{% md %}}Tenant ID of the managed instance administrator.{{% /md %}}</dd></dl>
 {{% /choosable %}}
 
 {{% choosable language python %}}
-<dl class="resources-properties">
-
-    <dt class="property-required"
+<dl class="resources-properties"><dt class="property-required"
             title="Required">
         <span id="administrator_type_python">
 <a href="#administrator_type_python" style="color: inherit; text-decoration: inherit;">administrator_<wbr>type</a>
@@ -613,8 +593,7 @@ The ManagedInstanceAdministrator resource accepts the following [input]({{< relr
         <span class="property-indicator"></span>
         <span class="property-type">str | <a href="#managedinstanceadministratortype">Managed<wbr>Instance<wbr>Administrator<wbr>Type</a></span>
     </dt>
-    <dd>{{% md %}}Type of the managed instance administrator.{{% /md %}}</dd>
-    <dt class="property-required"
+    <dd>{{% md %}}Type of the managed instance administrator.{{% /md %}}</dd><dt class="property-required"
             title="Required">
         <span id="login_python">
 <a href="#login_python" style="color: inherit; text-decoration: inherit;">login</a>
@@ -622,8 +601,7 @@ The ManagedInstanceAdministrator resource accepts the following [input]({{< relr
         <span class="property-indicator"></span>
         <span class="property-type">str</span>
     </dt>
-    <dd>{{% md %}}Login name of the managed instance administrator.{{% /md %}}</dd>
-    <dt class="property-required"
+    <dd>{{% md %}}Login name of the managed instance administrator.{{% /md %}}</dd><dt class="property-required"
             title="Required">
         <span id="managed_instance_name_python">
 <a href="#managed_instance_name_python" style="color: inherit; text-decoration: inherit;">managed_<wbr>instance_<wbr>name</a>
@@ -631,8 +609,7 @@ The ManagedInstanceAdministrator resource accepts the following [input]({{< relr
         <span class="property-indicator"></span>
         <span class="property-type">str</span>
     </dt>
-    <dd>{{% md %}}The name of the managed instance.{{% /md %}}</dd>
-    <dt class="property-required"
+    <dd>{{% md %}}The name of the managed instance.{{% /md %}}</dd><dt class="property-required"
             title="Required">
         <span id="resource_group_name_python">
 <a href="#resource_group_name_python" style="color: inherit; text-decoration: inherit;">resource_<wbr>group_<wbr>name</a>
@@ -640,8 +617,7 @@ The ManagedInstanceAdministrator resource accepts the following [input]({{< relr
         <span class="property-indicator"></span>
         <span class="property-type">str</span>
     </dt>
-    <dd>{{% md %}}The name of the resource group that contains the resource. You can obtain this value from the Azure Resource Manager API or the portal.{{% /md %}}</dd>
-    <dt class="property-required"
+    <dd>{{% md %}}The name of the resource group that contains the resource. You can obtain this value from the Azure Resource Manager API or the portal.{{% /md %}}</dd><dt class="property-required"
             title="Required">
         <span id="sid_python">
 <a href="#sid_python" style="color: inherit; text-decoration: inherit;">sid</a>
@@ -649,8 +625,7 @@ The ManagedInstanceAdministrator resource accepts the following [input]({{< relr
         <span class="property-indicator"></span>
         <span class="property-type">str</span>
     </dt>
-    <dd>{{% md %}}SID (object ID) of the managed instance administrator.{{% /md %}}</dd>
-    <dt class="property-optional"
+    <dd>{{% md %}}SID (object ID) of the managed instance administrator.{{% /md %}}</dd><dt class="property-optional"
             title="Optional">
         <span id="administrator_name_python">
 <a href="#administrator_name_python" style="color: inherit; text-decoration: inherit;">administrator_<wbr>name</a>
@@ -658,8 +633,7 @@ The ManagedInstanceAdministrator resource accepts the following [input]({{< relr
         <span class="property-indicator"></span>
         <span class="property-type">str</span>
     </dt>
-    <dd>{{% md %}}{{% /md %}}</dd>
-    <dt class="property-optional"
+    <dd>{{% md %}}{{% /md %}}</dd><dt class="property-optional"
             title="Optional">
         <span id="tenant_id_python">
 <a href="#tenant_id_python" style="color: inherit; text-decoration: inherit;">tenant_<wbr>id</a>
@@ -667,8 +641,7 @@ The ManagedInstanceAdministrator resource accepts the following [input]({{< relr
         <span class="property-indicator"></span>
         <span class="property-type">str</span>
     </dt>
-    <dd>{{% md %}}Tenant ID of the managed instance administrator.{{% /md %}}</dd>
-</dl>
+    <dd>{{% md %}}Tenant ID of the managed instance administrator.{{% /md %}}</dd></dl>
 {{% /choosable %}}
 
 
@@ -679,9 +652,7 @@ All [input](#inputs) properties are implicitly available as output properties. A
 
 
 {{% choosable language csharp %}}
-<dl class="resources-properties">
-
-    <dt class="property-"
+<dl class="resources-properties"><dt class="property-"
             title="">
         <span id="id_csharp">
 <a href="#id_csharp" style="color: inherit; text-decoration: inherit;">Id</a>
@@ -689,8 +660,7 @@ All [input](#inputs) properties are implicitly available as output properties. A
         <span class="property-indicator"></span>
         <span class="property-type">string</span>
     </dt>
-    <dd>{{% md %}}The provider-assigned unique ID for this managed resource.{{% /md %}}</dd>
-    <dt class="property-"
+    <dd>{{% md %}}The provider-assigned unique ID for this managed resource.{{% /md %}}</dd><dt class="property-"
             title="">
         <span id="name_csharp">
 <a href="#name_csharp" style="color: inherit; text-decoration: inherit;">Name</a>
@@ -698,8 +668,7 @@ All [input](#inputs) properties are implicitly available as output properties. A
         <span class="property-indicator"></span>
         <span class="property-type">string</span>
     </dt>
-    <dd>{{% md %}}Resource name.{{% /md %}}</dd>
-    <dt class="property-"
+    <dd>{{% md %}}Resource name.{{% /md %}}</dd><dt class="property-"
             title="">
         <span id="type_csharp">
 <a href="#type_csharp" style="color: inherit; text-decoration: inherit;">Type</a>
@@ -707,14 +676,11 @@ All [input](#inputs) properties are implicitly available as output properties. A
         <span class="property-indicator"></span>
         <span class="property-type">string</span>
     </dt>
-    <dd>{{% md %}}Resource type.{{% /md %}}</dd>
-</dl>
+    <dd>{{% md %}}Resource type.{{% /md %}}</dd></dl>
 {{% /choosable %}}
 
 {{% choosable language go %}}
-<dl class="resources-properties">
-
-    <dt class="property-"
+<dl class="resources-properties"><dt class="property-"
             title="">
         <span id="id_go">
 <a href="#id_go" style="color: inherit; text-decoration: inherit;">Id</a>
@@ -722,8 +688,7 @@ All [input](#inputs) properties are implicitly available as output properties. A
         <span class="property-indicator"></span>
         <span class="property-type">string</span>
     </dt>
-    <dd>{{% md %}}The provider-assigned unique ID for this managed resource.{{% /md %}}</dd>
-    <dt class="property-"
+    <dd>{{% md %}}The provider-assigned unique ID for this managed resource.{{% /md %}}</dd><dt class="property-"
             title="">
         <span id="name_go">
 <a href="#name_go" style="color: inherit; text-decoration: inherit;">Name</a>
@@ -731,8 +696,7 @@ All [input](#inputs) properties are implicitly available as output properties. A
         <span class="property-indicator"></span>
         <span class="property-type">string</span>
     </dt>
-    <dd>{{% md %}}Resource name.{{% /md %}}</dd>
-    <dt class="property-"
+    <dd>{{% md %}}Resource name.{{% /md %}}</dd><dt class="property-"
             title="">
         <span id="type_go">
 <a href="#type_go" style="color: inherit; text-decoration: inherit;">Type</a>
@@ -740,14 +704,11 @@ All [input](#inputs) properties are implicitly available as output properties. A
         <span class="property-indicator"></span>
         <span class="property-type">string</span>
     </dt>
-    <dd>{{% md %}}Resource type.{{% /md %}}</dd>
-</dl>
+    <dd>{{% md %}}Resource type.{{% /md %}}</dd></dl>
 {{% /choosable %}}
 
 {{% choosable language nodejs %}}
-<dl class="resources-properties">
-
-    <dt class="property-"
+<dl class="resources-properties"><dt class="property-"
             title="">
         <span id="id_nodejs">
 <a href="#id_nodejs" style="color: inherit; text-decoration: inherit;">id</a>
@@ -755,8 +716,7 @@ All [input](#inputs) properties are implicitly available as output properties. A
         <span class="property-indicator"></span>
         <span class="property-type">string</span>
     </dt>
-    <dd>{{% md %}}The provider-assigned unique ID for this managed resource.{{% /md %}}</dd>
-    <dt class="property-"
+    <dd>{{% md %}}The provider-assigned unique ID for this managed resource.{{% /md %}}</dd><dt class="property-"
             title="">
         <span id="name_nodejs">
 <a href="#name_nodejs" style="color: inherit; text-decoration: inherit;">name</a>
@@ -764,8 +724,7 @@ All [input](#inputs) properties are implicitly available as output properties. A
         <span class="property-indicator"></span>
         <span class="property-type">string</span>
     </dt>
-    <dd>{{% md %}}Resource name.{{% /md %}}</dd>
-    <dt class="property-"
+    <dd>{{% md %}}Resource name.{{% /md %}}</dd><dt class="property-"
             title="">
         <span id="type_nodejs">
 <a href="#type_nodejs" style="color: inherit; text-decoration: inherit;">type</a>
@@ -773,14 +732,11 @@ All [input](#inputs) properties are implicitly available as output properties. A
         <span class="property-indicator"></span>
         <span class="property-type">string</span>
     </dt>
-    <dd>{{% md %}}Resource type.{{% /md %}}</dd>
-</dl>
+    <dd>{{% md %}}Resource type.{{% /md %}}</dd></dl>
 {{% /choosable %}}
 
 {{% choosable language python %}}
-<dl class="resources-properties">
-
-    <dt class="property-"
+<dl class="resources-properties"><dt class="property-"
             title="">
         <span id="id_python">
 <a href="#id_python" style="color: inherit; text-decoration: inherit;">id</a>
@@ -788,8 +744,7 @@ All [input](#inputs) properties are implicitly available as output properties. A
         <span class="property-indicator"></span>
         <span class="property-type">str</span>
     </dt>
-    <dd>{{% md %}}The provider-assigned unique ID for this managed resource.{{% /md %}}</dd>
-    <dt class="property-"
+    <dd>{{% md %}}The provider-assigned unique ID for this managed resource.{{% /md %}}</dd><dt class="property-"
             title="">
         <span id="name_python">
 <a href="#name_python" style="color: inherit; text-decoration: inherit;">name</a>
@@ -797,8 +752,7 @@ All [input](#inputs) properties are implicitly available as output properties. A
         <span class="property-indicator"></span>
         <span class="property-type">str</span>
     </dt>
-    <dd>{{% md %}}Resource name.{{% /md %}}</dd>
-    <dt class="property-"
+    <dd>{{% md %}}Resource name.{{% /md %}}</dd><dt class="property-"
             title="">
         <span id="type_python">
 <a href="#type_python" style="color: inherit; text-decoration: inherit;">type</a>
@@ -806,8 +760,7 @@ All [input](#inputs) properties are implicitly available as output properties. A
         <span class="property-indicator"></span>
         <span class="property-type">str</span>
     </dt>
-    <dd>{{% md %}}Resource type.{{% /md %}}</dd>
-</dl>
+    <dd>{{% md %}}Resource type.{{% /md %}}</dd></dl>
 {{% /choosable %}}
 
 
@@ -823,31 +776,23 @@ All [input](#inputs) properties are implicitly available as output properties. A
 <h4 id="managedinstanceadministratortype">Managed<wbr>Instance<wbr>Administrator<wbr>Type</h4>
 
 {{% choosable language csharp %}}
-<dl class="tabular">
-    <dt>Active<wbr>Directory</dt>
-    <dd>ActiveDirectory</dd>
-</dl>
+<dl class="tabular"><dt>Active<wbr>Directory</dt>
+    <dd>ActiveDirectory</dd></dl>
 {{% /choosable %}}
 
 {{% choosable language go %}}
-<dl class="tabular">
-    <dt>Managed<wbr>Instance<wbr>Administrator<wbr>Type<wbr>Active<wbr>Directory</dt>
-    <dd>ActiveDirectory</dd>
-</dl>
+<dl class="tabular"><dt>Managed<wbr>Instance<wbr>Administrator<wbr>Type<wbr>Active<wbr>Directory</dt>
+    <dd>ActiveDirectory</dd></dl>
 {{% /choosable %}}
 
 {{% choosable language nodejs %}}
-<dl class="tabular">
-    <dt>Active<wbr>Directory</dt>
-    <dd>ActiveDirectory</dd>
-</dl>
+<dl class="tabular"><dt>Active<wbr>Directory</dt>
+    <dd>ActiveDirectory</dd></dl>
 {{% /choosable %}}
 
 {{% choosable language python %}}
-<dl class="tabular">
-    <dt>ACTIVE_DIRECTORY</dt>
-    <dd>ActiveDirectory</dd>
-</dl>
+<dl class="tabular"><dt>ACTIVE_DIRECTORY</dt>
+    <dd>ActiveDirectory</dd></dl>
 {{% /choosable %}}
 ## Import
 

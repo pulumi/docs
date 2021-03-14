@@ -51,9 +51,7 @@ The following arguments are supported:
 
 
 {{% choosable language csharp %}}
-<dl class="resources-properties">
-
-    <dt class="property-required"
+<dl class="resources-properties"><dt class="property-required"
             title="Required">
         <span id="commitmentplanname_csharp">
 <a href="#commitmentplanname_csharp" style="color: inherit; text-decoration: inherit;">Commitment<wbr>Plan<wbr>Name</a>
@@ -61,8 +59,7 @@ The following arguments are supported:
         <span class="property-indicator"></span>
         <span class="property-type">string</span>
     </dt>
-    <dd>{{% md %}}The Azure ML commitment plan name.{{% /md %}}</dd>
-    <dt class="property-required"
+    <dd>{{% md %}}The Azure ML commitment plan name.{{% /md %}}</dd><dt class="property-required"
             title="Required">
         <span id="resourcegroupname_csharp">
 <a href="#resourcegroupname_csharp" style="color: inherit; text-decoration: inherit;">Resource<wbr>Group<wbr>Name</a>
@@ -70,14 +67,11 @@ The following arguments are supported:
         <span class="property-indicator"></span>
         <span class="property-type">string</span>
     </dt>
-    <dd>{{% md %}}The resource group name.{{% /md %}}</dd>
-</dl>
+    <dd>{{% md %}}The resource group name.{{% /md %}}</dd></dl>
 {{% /choosable %}}
 
 {{% choosable language go %}}
-<dl class="resources-properties">
-
-    <dt class="property-required"
+<dl class="resources-properties"><dt class="property-required"
             title="Required">
         <span id="commitmentplanname_go">
 <a href="#commitmentplanname_go" style="color: inherit; text-decoration: inherit;">Commitment<wbr>Plan<wbr>Name</a>
@@ -85,8 +79,7 @@ The following arguments are supported:
         <span class="property-indicator"></span>
         <span class="property-type">string</span>
     </dt>
-    <dd>{{% md %}}The Azure ML commitment plan name.{{% /md %}}</dd>
-    <dt class="property-required"
+    <dd>{{% md %}}The Azure ML commitment plan name.{{% /md %}}</dd><dt class="property-required"
             title="Required">
         <span id="resourcegroupname_go">
 <a href="#resourcegroupname_go" style="color: inherit; text-decoration: inherit;">Resource<wbr>Group<wbr>Name</a>
@@ -94,14 +87,11 @@ The following arguments are supported:
         <span class="property-indicator"></span>
         <span class="property-type">string</span>
     </dt>
-    <dd>{{% md %}}The resource group name.{{% /md %}}</dd>
-</dl>
+    <dd>{{% md %}}The resource group name.{{% /md %}}</dd></dl>
 {{% /choosable %}}
 
 {{% choosable language nodejs %}}
-<dl class="resources-properties">
-
-    <dt class="property-required"
+<dl class="resources-properties"><dt class="property-required"
             title="Required">
         <span id="commitmentplanname_nodejs">
 <a href="#commitmentplanname_nodejs" style="color: inherit; text-decoration: inherit;">commitment<wbr>Plan<wbr>Name</a>
@@ -109,8 +99,7 @@ The following arguments are supported:
         <span class="property-indicator"></span>
         <span class="property-type">string</span>
     </dt>
-    <dd>{{% md %}}The Azure ML commitment plan name.{{% /md %}}</dd>
-    <dt class="property-required"
+    <dd>{{% md %}}The Azure ML commitment plan name.{{% /md %}}</dd><dt class="property-required"
             title="Required">
         <span id="resourcegroupname_nodejs">
 <a href="#resourcegroupname_nodejs" style="color: inherit; text-decoration: inherit;">resource<wbr>Group<wbr>Name</a>
@@ -118,14 +107,11 @@ The following arguments are supported:
         <span class="property-indicator"></span>
         <span class="property-type">string</span>
     </dt>
-    <dd>{{% md %}}The resource group name.{{% /md %}}</dd>
-</dl>
+    <dd>{{% md %}}The resource group name.{{% /md %}}</dd></dl>
 {{% /choosable %}}
 
 {{% choosable language python %}}
-<dl class="resources-properties">
-
-    <dt class="property-required"
+<dl class="resources-properties"><dt class="property-required"
             title="Required">
         <span id="commitment_plan_name_python">
 <a href="#commitment_plan_name_python" style="color: inherit; text-decoration: inherit;">commitment_<wbr>plan_<wbr>name</a>
@@ -133,8 +119,7 @@ The following arguments are supported:
         <span class="property-indicator"></span>
         <span class="property-type">str</span>
     </dt>
-    <dd>{{% md %}}The Azure ML commitment plan name.{{% /md %}}</dd>
-    <dt class="property-required"
+    <dd>{{% md %}}The Azure ML commitment plan name.{{% /md %}}</dd><dt class="property-required"
             title="Required">
         <span id="resource_group_name_python">
 <a href="#resource_group_name_python" style="color: inherit; text-decoration: inherit;">resource_<wbr>group_<wbr>name</a>
@@ -142,8 +127,7 @@ The following arguments are supported:
         <span class="property-indicator"></span>
         <span class="property-type">str</span>
     </dt>
-    <dd>{{% md %}}The resource group name.{{% /md %}}</dd>
-</dl>
+    <dd>{{% md %}}The resource group name.{{% /md %}}</dd></dl>
 {{% /choosable %}}
 
 
@@ -156,9 +140,7 @@ The following output properties are available:
 
 
 {{% choosable language csharp %}}
-<dl class="resources-properties">
-
-    <dt class="property-"
+<dl class="resources-properties"><dt class="property-"
             title="">
         <span id="id_csharp">
 <a href="#id_csharp" style="color: inherit; text-decoration: inherit;">Id</a>
@@ -166,8 +148,7 @@ The following output properties are available:
         <span class="property-indicator"></span>
         <span class="property-type">string</span>
     </dt>
-    <dd>{{% md %}}Resource Id.{{% /md %}}</dd>
-    <dt class="property-"
+    <dd>{{% md %}}Resource Id.{{% /md %}}</dd><dt class="property-"
             title="">
         <span id="location_csharp">
 <a href="#location_csharp" style="color: inherit; text-decoration: inherit;">Location</a>
@@ -175,8 +156,7 @@ The following output properties are available:
         <span class="property-indicator"></span>
         <span class="property-type">string</span>
     </dt>
-    <dd>{{% md %}}Resource location.{{% /md %}}</dd>
-    <dt class="property-"
+    <dd>{{% md %}}Resource location.{{% /md %}}</dd><dt class="property-"
             title="">
         <span id="name_csharp">
 <a href="#name_csharp" style="color: inherit; text-decoration: inherit;">Name</a>
@@ -184,8 +164,7 @@ The following output properties are available:
         <span class="property-indicator"></span>
         <span class="property-type">string</span>
     </dt>
-    <dd>{{% md %}}Resource name.{{% /md %}}</dd>
-    <dt class="property-"
+    <dd>{{% md %}}Resource name.{{% /md %}}</dd><dt class="property-"
             title="">
         <span id="properties_csharp">
 <a href="#properties_csharp" style="color: inherit; text-decoration: inherit;">Properties</a>
@@ -193,8 +172,7 @@ The following output properties are available:
         <span class="property-indicator"></span>
         <span class="property-type"><a href="#commitmentplanpropertiesresponse">Pulumi.<wbr>Azure<wbr>Native.<wbr>Machine<wbr>Learning.<wbr>Outputs.<wbr>Commitment<wbr>Plan<wbr>Properties<wbr>Response</a></span>
     </dt>
-    <dd>{{% md %}}The commitment plan properties.{{% /md %}}</dd>
-    <dt class="property-"
+    <dd>{{% md %}}The commitment plan properties.{{% /md %}}</dd><dt class="property-"
             title="">
         <span id="type_csharp">
 <a href="#type_csharp" style="color: inherit; text-decoration: inherit;">Type</a>
@@ -202,8 +180,7 @@ The following output properties are available:
         <span class="property-indicator"></span>
         <span class="property-type">string</span>
     </dt>
-    <dd>{{% md %}}Resource type.{{% /md %}}</dd>
-    <dt class="property-"
+    <dd>{{% md %}}Resource type.{{% /md %}}</dd><dt class="property-"
             title="">
         <span id="etag_csharp">
 <a href="#etag_csharp" style="color: inherit; text-decoration: inherit;">Etag</a>
@@ -211,8 +188,7 @@ The following output properties are available:
         <span class="property-indicator"></span>
         <span class="property-type">string</span>
     </dt>
-    <dd>{{% md %}}An entity tag used to enforce optimistic concurrency.{{% /md %}}</dd>
-    <dt class="property-"
+    <dd>{{% md %}}An entity tag used to enforce optimistic concurrency.{{% /md %}}</dd><dt class="property-"
             title="">
         <span id="sku_csharp">
 <a href="#sku_csharp" style="color: inherit; text-decoration: inherit;">Sku</a>
@@ -220,8 +196,7 @@ The following output properties are available:
         <span class="property-indicator"></span>
         <span class="property-type"><a href="#resourceskuresponse">Pulumi.<wbr>Azure<wbr>Native.<wbr>Machine<wbr>Learning.<wbr>Outputs.<wbr>Resource<wbr>Sku<wbr>Response</a></span>
     </dt>
-    <dd>{{% md %}}The commitment plan SKU.{{% /md %}}</dd>
-    <dt class="property-"
+    <dd>{{% md %}}The commitment plan SKU.{{% /md %}}</dd><dt class="property-"
             title="">
         <span id="tags_csharp">
 <a href="#tags_csharp" style="color: inherit; text-decoration: inherit;">Tags</a>
@@ -229,14 +204,11 @@ The following output properties are available:
         <span class="property-indicator"></span>
         <span class="property-type">Dictionary&lt;string, string&gt;</span>
     </dt>
-    <dd>{{% md %}}User-defined tags for the resource.{{% /md %}}</dd>
-</dl>
+    <dd>{{% md %}}User-defined tags for the resource.{{% /md %}}</dd></dl>
 {{% /choosable %}}
 
 {{% choosable language go %}}
-<dl class="resources-properties">
-
-    <dt class="property-"
+<dl class="resources-properties"><dt class="property-"
             title="">
         <span id="id_go">
 <a href="#id_go" style="color: inherit; text-decoration: inherit;">Id</a>
@@ -244,8 +216,7 @@ The following output properties are available:
         <span class="property-indicator"></span>
         <span class="property-type">string</span>
     </dt>
-    <dd>{{% md %}}Resource Id.{{% /md %}}</dd>
-    <dt class="property-"
+    <dd>{{% md %}}Resource Id.{{% /md %}}</dd><dt class="property-"
             title="">
         <span id="location_go">
 <a href="#location_go" style="color: inherit; text-decoration: inherit;">Location</a>
@@ -253,8 +224,7 @@ The following output properties are available:
         <span class="property-indicator"></span>
         <span class="property-type">string</span>
     </dt>
-    <dd>{{% md %}}Resource location.{{% /md %}}</dd>
-    <dt class="property-"
+    <dd>{{% md %}}Resource location.{{% /md %}}</dd><dt class="property-"
             title="">
         <span id="name_go">
 <a href="#name_go" style="color: inherit; text-decoration: inherit;">Name</a>
@@ -262,8 +232,7 @@ The following output properties are available:
         <span class="property-indicator"></span>
         <span class="property-type">string</span>
     </dt>
-    <dd>{{% md %}}Resource name.{{% /md %}}</dd>
-    <dt class="property-"
+    <dd>{{% md %}}Resource name.{{% /md %}}</dd><dt class="property-"
             title="">
         <span id="properties_go">
 <a href="#properties_go" style="color: inherit; text-decoration: inherit;">Properties</a>
@@ -271,8 +240,7 @@ The following output properties are available:
         <span class="property-indicator"></span>
         <span class="property-type"><a href="#commitmentplanpropertiesresponse">Commitment<wbr>Plan<wbr>Properties<wbr>Response</a></span>
     </dt>
-    <dd>{{% md %}}The commitment plan properties.{{% /md %}}</dd>
-    <dt class="property-"
+    <dd>{{% md %}}The commitment plan properties.{{% /md %}}</dd><dt class="property-"
             title="">
         <span id="type_go">
 <a href="#type_go" style="color: inherit; text-decoration: inherit;">Type</a>
@@ -280,8 +248,7 @@ The following output properties are available:
         <span class="property-indicator"></span>
         <span class="property-type">string</span>
     </dt>
-    <dd>{{% md %}}Resource type.{{% /md %}}</dd>
-    <dt class="property-"
+    <dd>{{% md %}}Resource type.{{% /md %}}</dd><dt class="property-"
             title="">
         <span id="etag_go">
 <a href="#etag_go" style="color: inherit; text-decoration: inherit;">Etag</a>
@@ -289,8 +256,7 @@ The following output properties are available:
         <span class="property-indicator"></span>
         <span class="property-type">string</span>
     </dt>
-    <dd>{{% md %}}An entity tag used to enforce optimistic concurrency.{{% /md %}}</dd>
-    <dt class="property-"
+    <dd>{{% md %}}An entity tag used to enforce optimistic concurrency.{{% /md %}}</dd><dt class="property-"
             title="">
         <span id="sku_go">
 <a href="#sku_go" style="color: inherit; text-decoration: inherit;">Sku</a>
@@ -298,8 +264,7 @@ The following output properties are available:
         <span class="property-indicator"></span>
         <span class="property-type"><a href="#resourceskuresponse">Resource<wbr>Sku<wbr>Response</a></span>
     </dt>
-    <dd>{{% md %}}The commitment plan SKU.{{% /md %}}</dd>
-    <dt class="property-"
+    <dd>{{% md %}}The commitment plan SKU.{{% /md %}}</dd><dt class="property-"
             title="">
         <span id="tags_go">
 <a href="#tags_go" style="color: inherit; text-decoration: inherit;">Tags</a>
@@ -307,14 +272,11 @@ The following output properties are available:
         <span class="property-indicator"></span>
         <span class="property-type">map[string]string</span>
     </dt>
-    <dd>{{% md %}}User-defined tags for the resource.{{% /md %}}</dd>
-</dl>
+    <dd>{{% md %}}User-defined tags for the resource.{{% /md %}}</dd></dl>
 {{% /choosable %}}
 
 {{% choosable language nodejs %}}
-<dl class="resources-properties">
-
-    <dt class="property-"
+<dl class="resources-properties"><dt class="property-"
             title="">
         <span id="id_nodejs">
 <a href="#id_nodejs" style="color: inherit; text-decoration: inherit;">id</a>
@@ -322,8 +284,7 @@ The following output properties are available:
         <span class="property-indicator"></span>
         <span class="property-type">string</span>
     </dt>
-    <dd>{{% md %}}Resource Id.{{% /md %}}</dd>
-    <dt class="property-"
+    <dd>{{% md %}}Resource Id.{{% /md %}}</dd><dt class="property-"
             title="">
         <span id="location_nodejs">
 <a href="#location_nodejs" style="color: inherit; text-decoration: inherit;">location</a>
@@ -331,8 +292,7 @@ The following output properties are available:
         <span class="property-indicator"></span>
         <span class="property-type">string</span>
     </dt>
-    <dd>{{% md %}}Resource location.{{% /md %}}</dd>
-    <dt class="property-"
+    <dd>{{% md %}}Resource location.{{% /md %}}</dd><dt class="property-"
             title="">
         <span id="name_nodejs">
 <a href="#name_nodejs" style="color: inherit; text-decoration: inherit;">name</a>
@@ -340,8 +300,7 @@ The following output properties are available:
         <span class="property-indicator"></span>
         <span class="property-type">string</span>
     </dt>
-    <dd>{{% md %}}Resource name.{{% /md %}}</dd>
-    <dt class="property-"
+    <dd>{{% md %}}Resource name.{{% /md %}}</dd><dt class="property-"
             title="">
         <span id="properties_nodejs">
 <a href="#properties_nodejs" style="color: inherit; text-decoration: inherit;">properties</a>
@@ -349,8 +308,7 @@ The following output properties are available:
         <span class="property-indicator"></span>
         <span class="property-type"><a href="#commitmentplanpropertiesresponse">Commitment<wbr>Plan<wbr>Properties<wbr>Response</a></span>
     </dt>
-    <dd>{{% md %}}The commitment plan properties.{{% /md %}}</dd>
-    <dt class="property-"
+    <dd>{{% md %}}The commitment plan properties.{{% /md %}}</dd><dt class="property-"
             title="">
         <span id="type_nodejs">
 <a href="#type_nodejs" style="color: inherit; text-decoration: inherit;">type</a>
@@ -358,8 +316,7 @@ The following output properties are available:
         <span class="property-indicator"></span>
         <span class="property-type">string</span>
     </dt>
-    <dd>{{% md %}}Resource type.{{% /md %}}</dd>
-    <dt class="property-"
+    <dd>{{% md %}}Resource type.{{% /md %}}</dd><dt class="property-"
             title="">
         <span id="etag_nodejs">
 <a href="#etag_nodejs" style="color: inherit; text-decoration: inherit;">etag</a>
@@ -367,8 +324,7 @@ The following output properties are available:
         <span class="property-indicator"></span>
         <span class="property-type">string</span>
     </dt>
-    <dd>{{% md %}}An entity tag used to enforce optimistic concurrency.{{% /md %}}</dd>
-    <dt class="property-"
+    <dd>{{% md %}}An entity tag used to enforce optimistic concurrency.{{% /md %}}</dd><dt class="property-"
             title="">
         <span id="sku_nodejs">
 <a href="#sku_nodejs" style="color: inherit; text-decoration: inherit;">sku</a>
@@ -376,8 +332,7 @@ The following output properties are available:
         <span class="property-indicator"></span>
         <span class="property-type"><a href="#resourceskuresponse">Resource<wbr>Sku<wbr>Response</a></span>
     </dt>
-    <dd>{{% md %}}The commitment plan SKU.{{% /md %}}</dd>
-    <dt class="property-"
+    <dd>{{% md %}}The commitment plan SKU.{{% /md %}}</dd><dt class="property-"
             title="">
         <span id="tags_nodejs">
 <a href="#tags_nodejs" style="color: inherit; text-decoration: inherit;">tags</a>
@@ -385,14 +340,11 @@ The following output properties are available:
         <span class="property-indicator"></span>
         <span class="property-type">{[key: string]: string}</span>
     </dt>
-    <dd>{{% md %}}User-defined tags for the resource.{{% /md %}}</dd>
-</dl>
+    <dd>{{% md %}}User-defined tags for the resource.{{% /md %}}</dd></dl>
 {{% /choosable %}}
 
 {{% choosable language python %}}
-<dl class="resources-properties">
-
-    <dt class="property-"
+<dl class="resources-properties"><dt class="property-"
             title="">
         <span id="id_python">
 <a href="#id_python" style="color: inherit; text-decoration: inherit;">id</a>
@@ -400,8 +352,7 @@ The following output properties are available:
         <span class="property-indicator"></span>
         <span class="property-type">str</span>
     </dt>
-    <dd>{{% md %}}Resource Id.{{% /md %}}</dd>
-    <dt class="property-"
+    <dd>{{% md %}}Resource Id.{{% /md %}}</dd><dt class="property-"
             title="">
         <span id="location_python">
 <a href="#location_python" style="color: inherit; text-decoration: inherit;">location</a>
@@ -409,8 +360,7 @@ The following output properties are available:
         <span class="property-indicator"></span>
         <span class="property-type">str</span>
     </dt>
-    <dd>{{% md %}}Resource location.{{% /md %}}</dd>
-    <dt class="property-"
+    <dd>{{% md %}}Resource location.{{% /md %}}</dd><dt class="property-"
             title="">
         <span id="name_python">
 <a href="#name_python" style="color: inherit; text-decoration: inherit;">name</a>
@@ -418,8 +368,7 @@ The following output properties are available:
         <span class="property-indicator"></span>
         <span class="property-type">str</span>
     </dt>
-    <dd>{{% md %}}Resource name.{{% /md %}}</dd>
-    <dt class="property-"
+    <dd>{{% md %}}Resource name.{{% /md %}}</dd><dt class="property-"
             title="">
         <span id="properties_python">
 <a href="#properties_python" style="color: inherit; text-decoration: inherit;">properties</a>
@@ -427,8 +376,7 @@ The following output properties are available:
         <span class="property-indicator"></span>
         <span class="property-type"><a href="#commitmentplanpropertiesresponse">Commitment<wbr>Plan<wbr>Properties<wbr>Response</a></span>
     </dt>
-    <dd>{{% md %}}The commitment plan properties.{{% /md %}}</dd>
-    <dt class="property-"
+    <dd>{{% md %}}The commitment plan properties.{{% /md %}}</dd><dt class="property-"
             title="">
         <span id="type_python">
 <a href="#type_python" style="color: inherit; text-decoration: inherit;">type</a>
@@ -436,8 +384,7 @@ The following output properties are available:
         <span class="property-indicator"></span>
         <span class="property-type">str</span>
     </dt>
-    <dd>{{% md %}}Resource type.{{% /md %}}</dd>
-    <dt class="property-"
+    <dd>{{% md %}}Resource type.{{% /md %}}</dd><dt class="property-"
             title="">
         <span id="etag_python">
 <a href="#etag_python" style="color: inherit; text-decoration: inherit;">etag</a>
@@ -445,8 +392,7 @@ The following output properties are available:
         <span class="property-indicator"></span>
         <span class="property-type">str</span>
     </dt>
-    <dd>{{% md %}}An entity tag used to enforce optimistic concurrency.{{% /md %}}</dd>
-    <dt class="property-"
+    <dd>{{% md %}}An entity tag used to enforce optimistic concurrency.{{% /md %}}</dd><dt class="property-"
             title="">
         <span id="sku_python">
 <a href="#sku_python" style="color: inherit; text-decoration: inherit;">sku</a>
@@ -454,8 +400,7 @@ The following output properties are available:
         <span class="property-indicator"></span>
         <span class="property-type"><a href="#resourceskuresponse">Resource<wbr>Sku<wbr>Response</a></span>
     </dt>
-    <dd>{{% md %}}The commitment plan SKU.{{% /md %}}</dd>
-    <dt class="property-"
+    <dd>{{% md %}}The commitment plan SKU.{{% /md %}}</dd><dt class="property-"
             title="">
         <span id="tags_python">
 <a href="#tags_python" style="color: inherit; text-decoration: inherit;">tags</a>
@@ -463,8 +408,7 @@ The following output properties are available:
         <span class="property-indicator"></span>
         <span class="property-type">Mapping[str, str]</span>
     </dt>
-    <dd>{{% md %}}User-defined tags for the resource.{{% /md %}}</dd>
-</dl>
+    <dd>{{% md %}}User-defined tags for the resource.{{% /md %}}</dd></dl>
 {{% /choosable %}}
 
 
@@ -478,9 +422,7 @@ The following output properties are available:
 
 
 {{% choosable language csharp %}}
-<dl class="resources-properties">
-
-    <dt class="property-required"
+<dl class="resources-properties"><dt class="property-required"
             title="Required">
         <span id="chargeforoverage_csharp">
 <a href="#chargeforoverage_csharp" style="color: inherit; text-decoration: inherit;">Charge<wbr>For<wbr>Overage</a>
@@ -488,8 +430,7 @@ The following output properties are available:
         <span class="property-indicator"></span>
         <span class="property-type">bool</span>
     </dt>
-    <dd>{{% md %}}Indicates whether usage beyond the commitment plan's included quantities will be charged.{{% /md %}}</dd>
-    <dt class="property-required"
+    <dd>{{% md %}}Indicates whether usage beyond the commitment plan's included quantities will be charged.{{% /md %}}</dd><dt class="property-required"
             title="Required">
         <span id="chargeforplan_csharp">
 <a href="#chargeforplan_csharp" style="color: inherit; text-decoration: inherit;">Charge<wbr>For<wbr>Plan</a>
@@ -497,8 +438,7 @@ The following output properties are available:
         <span class="property-indicator"></span>
         <span class="property-type">bool</span>
     </dt>
-    <dd>{{% md %}}Indicates whether the commitment plan will incur a charge.{{% /md %}}</dd>
-    <dt class="property-required"
+    <dd>{{% md %}}Indicates whether the commitment plan will incur a charge.{{% /md %}}</dd><dt class="property-required"
             title="Required">
         <span id="creationdate_csharp">
 <a href="#creationdate_csharp" style="color: inherit; text-decoration: inherit;">Creation<wbr>Date</a>
@@ -506,8 +446,7 @@ The following output properties are available:
         <span class="property-indicator"></span>
         <span class="property-type">string</span>
     </dt>
-    <dd>{{% md %}}The date at which this commitment plan was created, in ISO 8601 format.{{% /md %}}</dd>
-    <dt class="property-required"
+    <dd>{{% md %}}The date at which this commitment plan was created, in ISO 8601 format.{{% /md %}}</dd><dt class="property-required"
             title="Required">
         <span id="includedquantities_csharp">
 <a href="#includedquantities_csharp" style="color: inherit; text-decoration: inherit;">Included<wbr>Quantities</a>
@@ -515,8 +454,7 @@ The following output properties are available:
         <span class="property-indicator"></span>
         <span class="property-type">Dictionary&lt;string, Pulumi.<wbr>Azure<wbr>Native.<wbr>Machine<wbr>Learning.<wbr>Inputs.<wbr>Plan<wbr>Quantity<wbr>Response<wbr>Args&gt;</span>
     </dt>
-    <dd>{{% md %}}The included resource quantities this plan gives you.{{% /md %}}</dd>
-    <dt class="property-required"
+    <dd>{{% md %}}The included resource quantities this plan gives you.{{% /md %}}</dd><dt class="property-required"
             title="Required">
         <span id="maxassociationlimit_csharp">
 <a href="#maxassociationlimit_csharp" style="color: inherit; text-decoration: inherit;">Max<wbr>Association<wbr>Limit</a>
@@ -524,8 +462,7 @@ The following output properties are available:
         <span class="property-indicator"></span>
         <span class="property-type">int</span>
     </dt>
-    <dd>{{% md %}}The maximum number of commitment associations that can be children of this commitment plan.{{% /md %}}</dd>
-    <dt class="property-required"
+    <dd>{{% md %}}The maximum number of commitment associations that can be children of this commitment plan.{{% /md %}}</dd><dt class="property-required"
             title="Required">
         <span id="maxcapacitylimit_csharp">
 <a href="#maxcapacitylimit_csharp" style="color: inherit; text-decoration: inherit;">Max<wbr>Capacity<wbr>Limit</a>
@@ -533,8 +470,7 @@ The following output properties are available:
         <span class="property-indicator"></span>
         <span class="property-type">int</span>
     </dt>
-    <dd>{{% md %}}The maximum scale-out capacity for this commitment plan.{{% /md %}}</dd>
-    <dt class="property-required"
+    <dd>{{% md %}}The maximum scale-out capacity for this commitment plan.{{% /md %}}</dd><dt class="property-required"
             title="Required">
         <span id="mincapacitylimit_csharp">
 <a href="#mincapacitylimit_csharp" style="color: inherit; text-decoration: inherit;">Min<wbr>Capacity<wbr>Limit</a>
@@ -542,8 +478,7 @@ The following output properties are available:
         <span class="property-indicator"></span>
         <span class="property-type">int</span>
     </dt>
-    <dd>{{% md %}}The minimum scale-out capacity for this commitment plan.{{% /md %}}</dd>
-    <dt class="property-required"
+    <dd>{{% md %}}The minimum scale-out capacity for this commitment plan.{{% /md %}}</dd><dt class="property-required"
             title="Required">
         <span id="planmeter_csharp">
 <a href="#planmeter_csharp" style="color: inherit; text-decoration: inherit;">Plan<wbr>Meter</a>
@@ -551,8 +486,7 @@ The following output properties are available:
         <span class="property-indicator"></span>
         <span class="property-type">string</span>
     </dt>
-    <dd>{{% md %}}The Azure meter which will be used to charge for this commitment plan.{{% /md %}}</dd>
-    <dt class="property-required"
+    <dd>{{% md %}}The Azure meter which will be used to charge for this commitment plan.{{% /md %}}</dd><dt class="property-required"
             title="Required">
         <span id="refillfrequencyindays_csharp">
 <a href="#refillfrequencyindays_csharp" style="color: inherit; text-decoration: inherit;">Refill<wbr>Frequency<wbr>In<wbr>Days</a>
@@ -560,8 +494,7 @@ The following output properties are available:
         <span class="property-indicator"></span>
         <span class="property-type">int</span>
     </dt>
-    <dd>{{% md %}}The frequency at which this commitment plan's included quantities are refilled.{{% /md %}}</dd>
-    <dt class="property-required"
+    <dd>{{% md %}}The frequency at which this commitment plan's included quantities are refilled.{{% /md %}}</dd><dt class="property-required"
             title="Required">
         <span id="suspendplanonoverage_csharp">
 <a href="#suspendplanonoverage_csharp" style="color: inherit; text-decoration: inherit;">Suspend<wbr>Plan<wbr>On<wbr>Overage</a>
@@ -569,14 +502,11 @@ The following output properties are available:
         <span class="property-indicator"></span>
         <span class="property-type">bool</span>
     </dt>
-    <dd>{{% md %}}Indicates whether this commitment plan will be moved into a suspended state if usage goes beyond the commitment plan's included quantities.{{% /md %}}</dd>
-</dl>
+    <dd>{{% md %}}Indicates whether this commitment plan will be moved into a suspended state if usage goes beyond the commitment plan's included quantities.{{% /md %}}</dd></dl>
 {{% /choosable %}}
 
 {{% choosable language go %}}
-<dl class="resources-properties">
-
-    <dt class="property-required"
+<dl class="resources-properties"><dt class="property-required"
             title="Required">
         <span id="chargeforoverage_go">
 <a href="#chargeforoverage_go" style="color: inherit; text-decoration: inherit;">Charge<wbr>For<wbr>Overage</a>
@@ -584,8 +514,7 @@ The following output properties are available:
         <span class="property-indicator"></span>
         <span class="property-type">bool</span>
     </dt>
-    <dd>{{% md %}}Indicates whether usage beyond the commitment plan's included quantities will be charged.{{% /md %}}</dd>
-    <dt class="property-required"
+    <dd>{{% md %}}Indicates whether usage beyond the commitment plan's included quantities will be charged.{{% /md %}}</dd><dt class="property-required"
             title="Required">
         <span id="chargeforplan_go">
 <a href="#chargeforplan_go" style="color: inherit; text-decoration: inherit;">Charge<wbr>For<wbr>Plan</a>
@@ -593,8 +522,7 @@ The following output properties are available:
         <span class="property-indicator"></span>
         <span class="property-type">bool</span>
     </dt>
-    <dd>{{% md %}}Indicates whether the commitment plan will incur a charge.{{% /md %}}</dd>
-    <dt class="property-required"
+    <dd>{{% md %}}Indicates whether the commitment plan will incur a charge.{{% /md %}}</dd><dt class="property-required"
             title="Required">
         <span id="creationdate_go">
 <a href="#creationdate_go" style="color: inherit; text-decoration: inherit;">Creation<wbr>Date</a>
@@ -602,8 +530,7 @@ The following output properties are available:
         <span class="property-indicator"></span>
         <span class="property-type">string</span>
     </dt>
-    <dd>{{% md %}}The date at which this commitment plan was created, in ISO 8601 format.{{% /md %}}</dd>
-    <dt class="property-required"
+    <dd>{{% md %}}The date at which this commitment plan was created, in ISO 8601 format.{{% /md %}}</dd><dt class="property-required"
             title="Required">
         <span id="includedquantities_go">
 <a href="#includedquantities_go" style="color: inherit; text-decoration: inherit;">Included<wbr>Quantities</a>
@@ -611,8 +538,7 @@ The following output properties are available:
         <span class="property-indicator"></span>
         <span class="property-type">map[string]Plan<wbr>Quantity<wbr>Response</span>
     </dt>
-    <dd>{{% md %}}The included resource quantities this plan gives you.{{% /md %}}</dd>
-    <dt class="property-required"
+    <dd>{{% md %}}The included resource quantities this plan gives you.{{% /md %}}</dd><dt class="property-required"
             title="Required">
         <span id="maxassociationlimit_go">
 <a href="#maxassociationlimit_go" style="color: inherit; text-decoration: inherit;">Max<wbr>Association<wbr>Limit</a>
@@ -620,8 +546,7 @@ The following output properties are available:
         <span class="property-indicator"></span>
         <span class="property-type">int</span>
     </dt>
-    <dd>{{% md %}}The maximum number of commitment associations that can be children of this commitment plan.{{% /md %}}</dd>
-    <dt class="property-required"
+    <dd>{{% md %}}The maximum number of commitment associations that can be children of this commitment plan.{{% /md %}}</dd><dt class="property-required"
             title="Required">
         <span id="maxcapacitylimit_go">
 <a href="#maxcapacitylimit_go" style="color: inherit; text-decoration: inherit;">Max<wbr>Capacity<wbr>Limit</a>
@@ -629,8 +554,7 @@ The following output properties are available:
         <span class="property-indicator"></span>
         <span class="property-type">int</span>
     </dt>
-    <dd>{{% md %}}The maximum scale-out capacity for this commitment plan.{{% /md %}}</dd>
-    <dt class="property-required"
+    <dd>{{% md %}}The maximum scale-out capacity for this commitment plan.{{% /md %}}</dd><dt class="property-required"
             title="Required">
         <span id="mincapacitylimit_go">
 <a href="#mincapacitylimit_go" style="color: inherit; text-decoration: inherit;">Min<wbr>Capacity<wbr>Limit</a>
@@ -638,8 +562,7 @@ The following output properties are available:
         <span class="property-indicator"></span>
         <span class="property-type">int</span>
     </dt>
-    <dd>{{% md %}}The minimum scale-out capacity for this commitment plan.{{% /md %}}</dd>
-    <dt class="property-required"
+    <dd>{{% md %}}The minimum scale-out capacity for this commitment plan.{{% /md %}}</dd><dt class="property-required"
             title="Required">
         <span id="planmeter_go">
 <a href="#planmeter_go" style="color: inherit; text-decoration: inherit;">Plan<wbr>Meter</a>
@@ -647,8 +570,7 @@ The following output properties are available:
         <span class="property-indicator"></span>
         <span class="property-type">string</span>
     </dt>
-    <dd>{{% md %}}The Azure meter which will be used to charge for this commitment plan.{{% /md %}}</dd>
-    <dt class="property-required"
+    <dd>{{% md %}}The Azure meter which will be used to charge for this commitment plan.{{% /md %}}</dd><dt class="property-required"
             title="Required">
         <span id="refillfrequencyindays_go">
 <a href="#refillfrequencyindays_go" style="color: inherit; text-decoration: inherit;">Refill<wbr>Frequency<wbr>In<wbr>Days</a>
@@ -656,8 +578,7 @@ The following output properties are available:
         <span class="property-indicator"></span>
         <span class="property-type">int</span>
     </dt>
-    <dd>{{% md %}}The frequency at which this commitment plan's included quantities are refilled.{{% /md %}}</dd>
-    <dt class="property-required"
+    <dd>{{% md %}}The frequency at which this commitment plan's included quantities are refilled.{{% /md %}}</dd><dt class="property-required"
             title="Required">
         <span id="suspendplanonoverage_go">
 <a href="#suspendplanonoverage_go" style="color: inherit; text-decoration: inherit;">Suspend<wbr>Plan<wbr>On<wbr>Overage</a>
@@ -665,14 +586,11 @@ The following output properties are available:
         <span class="property-indicator"></span>
         <span class="property-type">bool</span>
     </dt>
-    <dd>{{% md %}}Indicates whether this commitment plan will be moved into a suspended state if usage goes beyond the commitment plan's included quantities.{{% /md %}}</dd>
-</dl>
+    <dd>{{% md %}}Indicates whether this commitment plan will be moved into a suspended state if usage goes beyond the commitment plan's included quantities.{{% /md %}}</dd></dl>
 {{% /choosable %}}
 
 {{% choosable language nodejs %}}
-<dl class="resources-properties">
-
-    <dt class="property-required"
+<dl class="resources-properties"><dt class="property-required"
             title="Required">
         <span id="chargeforoverage_nodejs">
 <a href="#chargeforoverage_nodejs" style="color: inherit; text-decoration: inherit;">charge<wbr>For<wbr>Overage</a>
@@ -680,8 +598,7 @@ The following output properties are available:
         <span class="property-indicator"></span>
         <span class="property-type">boolean</span>
     </dt>
-    <dd>{{% md %}}Indicates whether usage beyond the commitment plan's included quantities will be charged.{{% /md %}}</dd>
-    <dt class="property-required"
+    <dd>{{% md %}}Indicates whether usage beyond the commitment plan's included quantities will be charged.{{% /md %}}</dd><dt class="property-required"
             title="Required">
         <span id="chargeforplan_nodejs">
 <a href="#chargeforplan_nodejs" style="color: inherit; text-decoration: inherit;">charge<wbr>For<wbr>Plan</a>
@@ -689,8 +606,7 @@ The following output properties are available:
         <span class="property-indicator"></span>
         <span class="property-type">boolean</span>
     </dt>
-    <dd>{{% md %}}Indicates whether the commitment plan will incur a charge.{{% /md %}}</dd>
-    <dt class="property-required"
+    <dd>{{% md %}}Indicates whether the commitment plan will incur a charge.{{% /md %}}</dd><dt class="property-required"
             title="Required">
         <span id="creationdate_nodejs">
 <a href="#creationdate_nodejs" style="color: inherit; text-decoration: inherit;">creation<wbr>Date</a>
@@ -698,8 +614,7 @@ The following output properties are available:
         <span class="property-indicator"></span>
         <span class="property-type">string</span>
     </dt>
-    <dd>{{% md %}}The date at which this commitment plan was created, in ISO 8601 format.{{% /md %}}</dd>
-    <dt class="property-required"
+    <dd>{{% md %}}The date at which this commitment plan was created, in ISO 8601 format.{{% /md %}}</dd><dt class="property-required"
             title="Required">
         <span id="includedquantities_nodejs">
 <a href="#includedquantities_nodejs" style="color: inherit; text-decoration: inherit;">included<wbr>Quantities</a>
@@ -707,8 +622,7 @@ The following output properties are available:
         <span class="property-indicator"></span>
         <span class="property-type">{[key: string]: Plan<wbr>Quantity<wbr>Response}</span>
     </dt>
-    <dd>{{% md %}}The included resource quantities this plan gives you.{{% /md %}}</dd>
-    <dt class="property-required"
+    <dd>{{% md %}}The included resource quantities this plan gives you.{{% /md %}}</dd><dt class="property-required"
             title="Required">
         <span id="maxassociationlimit_nodejs">
 <a href="#maxassociationlimit_nodejs" style="color: inherit; text-decoration: inherit;">max<wbr>Association<wbr>Limit</a>
@@ -716,8 +630,7 @@ The following output properties are available:
         <span class="property-indicator"></span>
         <span class="property-type">number</span>
     </dt>
-    <dd>{{% md %}}The maximum number of commitment associations that can be children of this commitment plan.{{% /md %}}</dd>
-    <dt class="property-required"
+    <dd>{{% md %}}The maximum number of commitment associations that can be children of this commitment plan.{{% /md %}}</dd><dt class="property-required"
             title="Required">
         <span id="maxcapacitylimit_nodejs">
 <a href="#maxcapacitylimit_nodejs" style="color: inherit; text-decoration: inherit;">max<wbr>Capacity<wbr>Limit</a>
@@ -725,8 +638,7 @@ The following output properties are available:
         <span class="property-indicator"></span>
         <span class="property-type">number</span>
     </dt>
-    <dd>{{% md %}}The maximum scale-out capacity for this commitment plan.{{% /md %}}</dd>
-    <dt class="property-required"
+    <dd>{{% md %}}The maximum scale-out capacity for this commitment plan.{{% /md %}}</dd><dt class="property-required"
             title="Required">
         <span id="mincapacitylimit_nodejs">
 <a href="#mincapacitylimit_nodejs" style="color: inherit; text-decoration: inherit;">min<wbr>Capacity<wbr>Limit</a>
@@ -734,8 +646,7 @@ The following output properties are available:
         <span class="property-indicator"></span>
         <span class="property-type">number</span>
     </dt>
-    <dd>{{% md %}}The minimum scale-out capacity for this commitment plan.{{% /md %}}</dd>
-    <dt class="property-required"
+    <dd>{{% md %}}The minimum scale-out capacity for this commitment plan.{{% /md %}}</dd><dt class="property-required"
             title="Required">
         <span id="planmeter_nodejs">
 <a href="#planmeter_nodejs" style="color: inherit; text-decoration: inherit;">plan<wbr>Meter</a>
@@ -743,8 +654,7 @@ The following output properties are available:
         <span class="property-indicator"></span>
         <span class="property-type">string</span>
     </dt>
-    <dd>{{% md %}}The Azure meter which will be used to charge for this commitment plan.{{% /md %}}</dd>
-    <dt class="property-required"
+    <dd>{{% md %}}The Azure meter which will be used to charge for this commitment plan.{{% /md %}}</dd><dt class="property-required"
             title="Required">
         <span id="refillfrequencyindays_nodejs">
 <a href="#refillfrequencyindays_nodejs" style="color: inherit; text-decoration: inherit;">refill<wbr>Frequency<wbr>In<wbr>Days</a>
@@ -752,8 +662,7 @@ The following output properties are available:
         <span class="property-indicator"></span>
         <span class="property-type">number</span>
     </dt>
-    <dd>{{% md %}}The frequency at which this commitment plan's included quantities are refilled.{{% /md %}}</dd>
-    <dt class="property-required"
+    <dd>{{% md %}}The frequency at which this commitment plan's included quantities are refilled.{{% /md %}}</dd><dt class="property-required"
             title="Required">
         <span id="suspendplanonoverage_nodejs">
 <a href="#suspendplanonoverage_nodejs" style="color: inherit; text-decoration: inherit;">suspend<wbr>Plan<wbr>On<wbr>Overage</a>
@@ -761,14 +670,11 @@ The following output properties are available:
         <span class="property-indicator"></span>
         <span class="property-type">boolean</span>
     </dt>
-    <dd>{{% md %}}Indicates whether this commitment plan will be moved into a suspended state if usage goes beyond the commitment plan's included quantities.{{% /md %}}</dd>
-</dl>
+    <dd>{{% md %}}Indicates whether this commitment plan will be moved into a suspended state if usage goes beyond the commitment plan's included quantities.{{% /md %}}</dd></dl>
 {{% /choosable %}}
 
 {{% choosable language python %}}
-<dl class="resources-properties">
-
-    <dt class="property-required"
+<dl class="resources-properties"><dt class="property-required"
             title="Required">
         <span id="charge_for_overage_python">
 <a href="#charge_for_overage_python" style="color: inherit; text-decoration: inherit;">charge_<wbr>for_<wbr>overage</a>
@@ -776,8 +682,7 @@ The following output properties are available:
         <span class="property-indicator"></span>
         <span class="property-type">bool</span>
     </dt>
-    <dd>{{% md %}}Indicates whether usage beyond the commitment plan's included quantities will be charged.{{% /md %}}</dd>
-    <dt class="property-required"
+    <dd>{{% md %}}Indicates whether usage beyond the commitment plan's included quantities will be charged.{{% /md %}}</dd><dt class="property-required"
             title="Required">
         <span id="charge_for_plan_python">
 <a href="#charge_for_plan_python" style="color: inherit; text-decoration: inherit;">charge_<wbr>for_<wbr>plan</a>
@@ -785,8 +690,7 @@ The following output properties are available:
         <span class="property-indicator"></span>
         <span class="property-type">bool</span>
     </dt>
-    <dd>{{% md %}}Indicates whether the commitment plan will incur a charge.{{% /md %}}</dd>
-    <dt class="property-required"
+    <dd>{{% md %}}Indicates whether the commitment plan will incur a charge.{{% /md %}}</dd><dt class="property-required"
             title="Required">
         <span id="creation_date_python">
 <a href="#creation_date_python" style="color: inherit; text-decoration: inherit;">creation_<wbr>date</a>
@@ -794,8 +698,7 @@ The following output properties are available:
         <span class="property-indicator"></span>
         <span class="property-type">str</span>
     </dt>
-    <dd>{{% md %}}The date at which this commitment plan was created, in ISO 8601 format.{{% /md %}}</dd>
-    <dt class="property-required"
+    <dd>{{% md %}}The date at which this commitment plan was created, in ISO 8601 format.{{% /md %}}</dd><dt class="property-required"
             title="Required">
         <span id="included_quantities_python">
 <a href="#included_quantities_python" style="color: inherit; text-decoration: inherit;">included_<wbr>quantities</a>
@@ -803,8 +706,7 @@ The following output properties are available:
         <span class="property-indicator"></span>
         <span class="property-type">Mapping[str, Plan<wbr>Quantity<wbr>Response<wbr>Args]</span>
     </dt>
-    <dd>{{% md %}}The included resource quantities this plan gives you.{{% /md %}}</dd>
-    <dt class="property-required"
+    <dd>{{% md %}}The included resource quantities this plan gives you.{{% /md %}}</dd><dt class="property-required"
             title="Required">
         <span id="max_association_limit_python">
 <a href="#max_association_limit_python" style="color: inherit; text-decoration: inherit;">max_<wbr>association_<wbr>limit</a>
@@ -812,8 +714,7 @@ The following output properties are available:
         <span class="property-indicator"></span>
         <span class="property-type">int</span>
     </dt>
-    <dd>{{% md %}}The maximum number of commitment associations that can be children of this commitment plan.{{% /md %}}</dd>
-    <dt class="property-required"
+    <dd>{{% md %}}The maximum number of commitment associations that can be children of this commitment plan.{{% /md %}}</dd><dt class="property-required"
             title="Required">
         <span id="max_capacity_limit_python">
 <a href="#max_capacity_limit_python" style="color: inherit; text-decoration: inherit;">max_<wbr>capacity_<wbr>limit</a>
@@ -821,8 +722,7 @@ The following output properties are available:
         <span class="property-indicator"></span>
         <span class="property-type">int</span>
     </dt>
-    <dd>{{% md %}}The maximum scale-out capacity for this commitment plan.{{% /md %}}</dd>
-    <dt class="property-required"
+    <dd>{{% md %}}The maximum scale-out capacity for this commitment plan.{{% /md %}}</dd><dt class="property-required"
             title="Required">
         <span id="min_capacity_limit_python">
 <a href="#min_capacity_limit_python" style="color: inherit; text-decoration: inherit;">min_<wbr>capacity_<wbr>limit</a>
@@ -830,8 +730,7 @@ The following output properties are available:
         <span class="property-indicator"></span>
         <span class="property-type">int</span>
     </dt>
-    <dd>{{% md %}}The minimum scale-out capacity for this commitment plan.{{% /md %}}</dd>
-    <dt class="property-required"
+    <dd>{{% md %}}The minimum scale-out capacity for this commitment plan.{{% /md %}}</dd><dt class="property-required"
             title="Required">
         <span id="plan_meter_python">
 <a href="#plan_meter_python" style="color: inherit; text-decoration: inherit;">plan_<wbr>meter</a>
@@ -839,8 +738,7 @@ The following output properties are available:
         <span class="property-indicator"></span>
         <span class="property-type">str</span>
     </dt>
-    <dd>{{% md %}}The Azure meter which will be used to charge for this commitment plan.{{% /md %}}</dd>
-    <dt class="property-required"
+    <dd>{{% md %}}The Azure meter which will be used to charge for this commitment plan.{{% /md %}}</dd><dt class="property-required"
             title="Required">
         <span id="refill_frequency_in_days_python">
 <a href="#refill_frequency_in_days_python" style="color: inherit; text-decoration: inherit;">refill_<wbr>frequency_<wbr>in_<wbr>days</a>
@@ -848,8 +746,7 @@ The following output properties are available:
         <span class="property-indicator"></span>
         <span class="property-type">int</span>
     </dt>
-    <dd>{{% md %}}The frequency at which this commitment plan's included quantities are refilled.{{% /md %}}</dd>
-    <dt class="property-required"
+    <dd>{{% md %}}The frequency at which this commitment plan's included quantities are refilled.{{% /md %}}</dd><dt class="property-required"
             title="Required">
         <span id="suspend_plan_on_overage_python">
 <a href="#suspend_plan_on_overage_python" style="color: inherit; text-decoration: inherit;">suspend_<wbr>plan_<wbr>on_<wbr>overage</a>
@@ -857,8 +754,7 @@ The following output properties are available:
         <span class="property-indicator"></span>
         <span class="property-type">bool</span>
     </dt>
-    <dd>{{% md %}}Indicates whether this commitment plan will be moved into a suspended state if usage goes beyond the commitment plan's included quantities.{{% /md %}}</dd>
-</dl>
+    <dd>{{% md %}}Indicates whether this commitment plan will be moved into a suspended state if usage goes beyond the commitment plan's included quantities.{{% /md %}}</dd></dl>
 {{% /choosable %}}
 
 <h4 id="planquantityresponse">Plan<wbr>Quantity<wbr>Response</h4>
@@ -866,9 +762,7 @@ The following output properties are available:
 
 
 {{% choosable language csharp %}}
-<dl class="resources-properties">
-
-    <dt class="property-required"
+<dl class="resources-properties"><dt class="property-required"
             title="Required">
         <span id="allowance_csharp">
 <a href="#allowance_csharp" style="color: inherit; text-decoration: inherit;">Allowance</a>
@@ -876,8 +770,7 @@ The following output properties are available:
         <span class="property-indicator"></span>
         <span class="property-type">double</span>
     </dt>
-    <dd>{{% md %}}The quantity added to the commitment plan at an interval specified by its allowance frequency.{{% /md %}}</dd>
-    <dt class="property-required"
+    <dd>{{% md %}}The quantity added to the commitment plan at an interval specified by its allowance frequency.{{% /md %}}</dd><dt class="property-required"
             title="Required">
         <span id="amount_csharp">
 <a href="#amount_csharp" style="color: inherit; text-decoration: inherit;">Amount</a>
@@ -885,8 +778,7 @@ The following output properties are available:
         <span class="property-indicator"></span>
         <span class="property-type">double</span>
     </dt>
-    <dd>{{% md %}}The quantity available to the plan the last time usage was calculated.{{% /md %}}</dd>
-    <dt class="property-required"
+    <dd>{{% md %}}The quantity available to the plan the last time usage was calculated.{{% /md %}}</dd><dt class="property-required"
             title="Required">
         <span id="includedquantitymeter_csharp">
 <a href="#includedquantitymeter_csharp" style="color: inherit; text-decoration: inherit;">Included<wbr>Quantity<wbr>Meter</a>
@@ -894,8 +786,7 @@ The following output properties are available:
         <span class="property-indicator"></span>
         <span class="property-type">string</span>
     </dt>
-    <dd>{{% md %}}The Azure meter for usage against included quantities.{{% /md %}}</dd>
-    <dt class="property-required"
+    <dd>{{% md %}}The Azure meter for usage against included quantities.{{% /md %}}</dd><dt class="property-required"
             title="Required">
         <span id="overagemeter_csharp">
 <a href="#overagemeter_csharp" style="color: inherit; text-decoration: inherit;">Overage<wbr>Meter</a>
@@ -903,14 +794,11 @@ The following output properties are available:
         <span class="property-indicator"></span>
         <span class="property-type">string</span>
     </dt>
-    <dd>{{% md %}}The Azure meter for usage which exceeds included quantities.{{% /md %}}</dd>
-</dl>
+    <dd>{{% md %}}The Azure meter for usage which exceeds included quantities.{{% /md %}}</dd></dl>
 {{% /choosable %}}
 
 {{% choosable language go %}}
-<dl class="resources-properties">
-
-    <dt class="property-required"
+<dl class="resources-properties"><dt class="property-required"
             title="Required">
         <span id="allowance_go">
 <a href="#allowance_go" style="color: inherit; text-decoration: inherit;">Allowance</a>
@@ -918,8 +806,7 @@ The following output properties are available:
         <span class="property-indicator"></span>
         <span class="property-type">float64</span>
     </dt>
-    <dd>{{% md %}}The quantity added to the commitment plan at an interval specified by its allowance frequency.{{% /md %}}</dd>
-    <dt class="property-required"
+    <dd>{{% md %}}The quantity added to the commitment plan at an interval specified by its allowance frequency.{{% /md %}}</dd><dt class="property-required"
             title="Required">
         <span id="amount_go">
 <a href="#amount_go" style="color: inherit; text-decoration: inherit;">Amount</a>
@@ -927,8 +814,7 @@ The following output properties are available:
         <span class="property-indicator"></span>
         <span class="property-type">float64</span>
     </dt>
-    <dd>{{% md %}}The quantity available to the plan the last time usage was calculated.{{% /md %}}</dd>
-    <dt class="property-required"
+    <dd>{{% md %}}The quantity available to the plan the last time usage was calculated.{{% /md %}}</dd><dt class="property-required"
             title="Required">
         <span id="includedquantitymeter_go">
 <a href="#includedquantitymeter_go" style="color: inherit; text-decoration: inherit;">Included<wbr>Quantity<wbr>Meter</a>
@@ -936,8 +822,7 @@ The following output properties are available:
         <span class="property-indicator"></span>
         <span class="property-type">string</span>
     </dt>
-    <dd>{{% md %}}The Azure meter for usage against included quantities.{{% /md %}}</dd>
-    <dt class="property-required"
+    <dd>{{% md %}}The Azure meter for usage against included quantities.{{% /md %}}</dd><dt class="property-required"
             title="Required">
         <span id="overagemeter_go">
 <a href="#overagemeter_go" style="color: inherit; text-decoration: inherit;">Overage<wbr>Meter</a>
@@ -945,14 +830,11 @@ The following output properties are available:
         <span class="property-indicator"></span>
         <span class="property-type">string</span>
     </dt>
-    <dd>{{% md %}}The Azure meter for usage which exceeds included quantities.{{% /md %}}</dd>
-</dl>
+    <dd>{{% md %}}The Azure meter for usage which exceeds included quantities.{{% /md %}}</dd></dl>
 {{% /choosable %}}
 
 {{% choosable language nodejs %}}
-<dl class="resources-properties">
-
-    <dt class="property-required"
+<dl class="resources-properties"><dt class="property-required"
             title="Required">
         <span id="allowance_nodejs">
 <a href="#allowance_nodejs" style="color: inherit; text-decoration: inherit;">allowance</a>
@@ -960,8 +842,7 @@ The following output properties are available:
         <span class="property-indicator"></span>
         <span class="property-type">number</span>
     </dt>
-    <dd>{{% md %}}The quantity added to the commitment plan at an interval specified by its allowance frequency.{{% /md %}}</dd>
-    <dt class="property-required"
+    <dd>{{% md %}}The quantity added to the commitment plan at an interval specified by its allowance frequency.{{% /md %}}</dd><dt class="property-required"
             title="Required">
         <span id="amount_nodejs">
 <a href="#amount_nodejs" style="color: inherit; text-decoration: inherit;">amount</a>
@@ -969,8 +850,7 @@ The following output properties are available:
         <span class="property-indicator"></span>
         <span class="property-type">number</span>
     </dt>
-    <dd>{{% md %}}The quantity available to the plan the last time usage was calculated.{{% /md %}}</dd>
-    <dt class="property-required"
+    <dd>{{% md %}}The quantity available to the plan the last time usage was calculated.{{% /md %}}</dd><dt class="property-required"
             title="Required">
         <span id="includedquantitymeter_nodejs">
 <a href="#includedquantitymeter_nodejs" style="color: inherit; text-decoration: inherit;">included<wbr>Quantity<wbr>Meter</a>
@@ -978,8 +858,7 @@ The following output properties are available:
         <span class="property-indicator"></span>
         <span class="property-type">string</span>
     </dt>
-    <dd>{{% md %}}The Azure meter for usage against included quantities.{{% /md %}}</dd>
-    <dt class="property-required"
+    <dd>{{% md %}}The Azure meter for usage against included quantities.{{% /md %}}</dd><dt class="property-required"
             title="Required">
         <span id="overagemeter_nodejs">
 <a href="#overagemeter_nodejs" style="color: inherit; text-decoration: inherit;">overage<wbr>Meter</a>
@@ -987,14 +866,11 @@ The following output properties are available:
         <span class="property-indicator"></span>
         <span class="property-type">string</span>
     </dt>
-    <dd>{{% md %}}The Azure meter for usage which exceeds included quantities.{{% /md %}}</dd>
-</dl>
+    <dd>{{% md %}}The Azure meter for usage which exceeds included quantities.{{% /md %}}</dd></dl>
 {{% /choosable %}}
 
 {{% choosable language python %}}
-<dl class="resources-properties">
-
-    <dt class="property-required"
+<dl class="resources-properties"><dt class="property-required"
             title="Required">
         <span id="allowance_python">
 <a href="#allowance_python" style="color: inherit; text-decoration: inherit;">allowance</a>
@@ -1002,8 +878,7 @@ The following output properties are available:
         <span class="property-indicator"></span>
         <span class="property-type">float</span>
     </dt>
-    <dd>{{% md %}}The quantity added to the commitment plan at an interval specified by its allowance frequency.{{% /md %}}</dd>
-    <dt class="property-required"
+    <dd>{{% md %}}The quantity added to the commitment plan at an interval specified by its allowance frequency.{{% /md %}}</dd><dt class="property-required"
             title="Required">
         <span id="amount_python">
 <a href="#amount_python" style="color: inherit; text-decoration: inherit;">amount</a>
@@ -1011,8 +886,7 @@ The following output properties are available:
         <span class="property-indicator"></span>
         <span class="property-type">float</span>
     </dt>
-    <dd>{{% md %}}The quantity available to the plan the last time usage was calculated.{{% /md %}}</dd>
-    <dt class="property-required"
+    <dd>{{% md %}}The quantity available to the plan the last time usage was calculated.{{% /md %}}</dd><dt class="property-required"
             title="Required">
         <span id="included_quantity_meter_python">
 <a href="#included_quantity_meter_python" style="color: inherit; text-decoration: inherit;">included_<wbr>quantity_<wbr>meter</a>
@@ -1020,8 +894,7 @@ The following output properties are available:
         <span class="property-indicator"></span>
         <span class="property-type">str</span>
     </dt>
-    <dd>{{% md %}}The Azure meter for usage against included quantities.{{% /md %}}</dd>
-    <dt class="property-required"
+    <dd>{{% md %}}The Azure meter for usage against included quantities.{{% /md %}}</dd><dt class="property-required"
             title="Required">
         <span id="overage_meter_python">
 <a href="#overage_meter_python" style="color: inherit; text-decoration: inherit;">overage_<wbr>meter</a>
@@ -1029,8 +902,7 @@ The following output properties are available:
         <span class="property-indicator"></span>
         <span class="property-type">str</span>
     </dt>
-    <dd>{{% md %}}The Azure meter for usage which exceeds included quantities.{{% /md %}}</dd>
-</dl>
+    <dd>{{% md %}}The Azure meter for usage which exceeds included quantities.{{% /md %}}</dd></dl>
 {{% /choosable %}}
 
 <h4 id="resourceskuresponse">Resource<wbr>Sku<wbr>Response</h4>
@@ -1038,9 +910,7 @@ The following output properties are available:
 
 
 {{% choosable language csharp %}}
-<dl class="resources-properties">
-
-    <dt class="property-optional"
+<dl class="resources-properties"><dt class="property-optional"
             title="Optional">
         <span id="capacity_csharp">
 <a href="#capacity_csharp" style="color: inherit; text-decoration: inherit;">Capacity</a>
@@ -1048,8 +918,7 @@ The following output properties are available:
         <span class="property-indicator"></span>
         <span class="property-type">int</span>
     </dt>
-    <dd>{{% md %}}The scale-out capacity of the resource. 1 is 1x, 2 is 2x, etc. This impacts the quantities and cost of any commitment plan resource.{{% /md %}}</dd>
-    <dt class="property-optional"
+    <dd>{{% md %}}The scale-out capacity of the resource. 1 is 1x, 2 is 2x, etc. This impacts the quantities and cost of any commitment plan resource.{{% /md %}}</dd><dt class="property-optional"
             title="Optional">
         <span id="name_csharp">
 <a href="#name_csharp" style="color: inherit; text-decoration: inherit;">Name</a>
@@ -1057,8 +926,7 @@ The following output properties are available:
         <span class="property-indicator"></span>
         <span class="property-type">string</span>
     </dt>
-    <dd>{{% md %}}The SKU name. Along with tier, uniquely identifies the SKU.{{% /md %}}</dd>
-    <dt class="property-optional"
+    <dd>{{% md %}}The SKU name. Along with tier, uniquely identifies the SKU.{{% /md %}}</dd><dt class="property-optional"
             title="Optional">
         <span id="tier_csharp">
 <a href="#tier_csharp" style="color: inherit; text-decoration: inherit;">Tier</a>
@@ -1066,14 +934,11 @@ The following output properties are available:
         <span class="property-indicator"></span>
         <span class="property-type">string</span>
     </dt>
-    <dd>{{% md %}}The SKU tier. Along with name, uniquely identifies the SKU.{{% /md %}}</dd>
-</dl>
+    <dd>{{% md %}}The SKU tier. Along with name, uniquely identifies the SKU.{{% /md %}}</dd></dl>
 {{% /choosable %}}
 
 {{% choosable language go %}}
-<dl class="resources-properties">
-
-    <dt class="property-optional"
+<dl class="resources-properties"><dt class="property-optional"
             title="Optional">
         <span id="capacity_go">
 <a href="#capacity_go" style="color: inherit; text-decoration: inherit;">Capacity</a>
@@ -1081,8 +946,7 @@ The following output properties are available:
         <span class="property-indicator"></span>
         <span class="property-type">int</span>
     </dt>
-    <dd>{{% md %}}The scale-out capacity of the resource. 1 is 1x, 2 is 2x, etc. This impacts the quantities and cost of any commitment plan resource.{{% /md %}}</dd>
-    <dt class="property-optional"
+    <dd>{{% md %}}The scale-out capacity of the resource. 1 is 1x, 2 is 2x, etc. This impacts the quantities and cost of any commitment plan resource.{{% /md %}}</dd><dt class="property-optional"
             title="Optional">
         <span id="name_go">
 <a href="#name_go" style="color: inherit; text-decoration: inherit;">Name</a>
@@ -1090,8 +954,7 @@ The following output properties are available:
         <span class="property-indicator"></span>
         <span class="property-type">string</span>
     </dt>
-    <dd>{{% md %}}The SKU name. Along with tier, uniquely identifies the SKU.{{% /md %}}</dd>
-    <dt class="property-optional"
+    <dd>{{% md %}}The SKU name. Along with tier, uniquely identifies the SKU.{{% /md %}}</dd><dt class="property-optional"
             title="Optional">
         <span id="tier_go">
 <a href="#tier_go" style="color: inherit; text-decoration: inherit;">Tier</a>
@@ -1099,14 +962,11 @@ The following output properties are available:
         <span class="property-indicator"></span>
         <span class="property-type">string</span>
     </dt>
-    <dd>{{% md %}}The SKU tier. Along with name, uniquely identifies the SKU.{{% /md %}}</dd>
-</dl>
+    <dd>{{% md %}}The SKU tier. Along with name, uniquely identifies the SKU.{{% /md %}}</dd></dl>
 {{% /choosable %}}
 
 {{% choosable language nodejs %}}
-<dl class="resources-properties">
-
-    <dt class="property-optional"
+<dl class="resources-properties"><dt class="property-optional"
             title="Optional">
         <span id="capacity_nodejs">
 <a href="#capacity_nodejs" style="color: inherit; text-decoration: inherit;">capacity</a>
@@ -1114,8 +974,7 @@ The following output properties are available:
         <span class="property-indicator"></span>
         <span class="property-type">number</span>
     </dt>
-    <dd>{{% md %}}The scale-out capacity of the resource. 1 is 1x, 2 is 2x, etc. This impacts the quantities and cost of any commitment plan resource.{{% /md %}}</dd>
-    <dt class="property-optional"
+    <dd>{{% md %}}The scale-out capacity of the resource. 1 is 1x, 2 is 2x, etc. This impacts the quantities and cost of any commitment plan resource.{{% /md %}}</dd><dt class="property-optional"
             title="Optional">
         <span id="name_nodejs">
 <a href="#name_nodejs" style="color: inherit; text-decoration: inherit;">name</a>
@@ -1123,8 +982,7 @@ The following output properties are available:
         <span class="property-indicator"></span>
         <span class="property-type">string</span>
     </dt>
-    <dd>{{% md %}}The SKU name. Along with tier, uniquely identifies the SKU.{{% /md %}}</dd>
-    <dt class="property-optional"
+    <dd>{{% md %}}The SKU name. Along with tier, uniquely identifies the SKU.{{% /md %}}</dd><dt class="property-optional"
             title="Optional">
         <span id="tier_nodejs">
 <a href="#tier_nodejs" style="color: inherit; text-decoration: inherit;">tier</a>
@@ -1132,14 +990,11 @@ The following output properties are available:
         <span class="property-indicator"></span>
         <span class="property-type">string</span>
     </dt>
-    <dd>{{% md %}}The SKU tier. Along with name, uniquely identifies the SKU.{{% /md %}}</dd>
-</dl>
+    <dd>{{% md %}}The SKU tier. Along with name, uniquely identifies the SKU.{{% /md %}}</dd></dl>
 {{% /choosable %}}
 
 {{% choosable language python %}}
-<dl class="resources-properties">
-
-    <dt class="property-optional"
+<dl class="resources-properties"><dt class="property-optional"
             title="Optional">
         <span id="capacity_python">
 <a href="#capacity_python" style="color: inherit; text-decoration: inherit;">capacity</a>
@@ -1147,8 +1002,7 @@ The following output properties are available:
         <span class="property-indicator"></span>
         <span class="property-type">int</span>
     </dt>
-    <dd>{{% md %}}The scale-out capacity of the resource. 1 is 1x, 2 is 2x, etc. This impacts the quantities and cost of any commitment plan resource.{{% /md %}}</dd>
-    <dt class="property-optional"
+    <dd>{{% md %}}The scale-out capacity of the resource. 1 is 1x, 2 is 2x, etc. This impacts the quantities and cost of any commitment plan resource.{{% /md %}}</dd><dt class="property-optional"
             title="Optional">
         <span id="name_python">
 <a href="#name_python" style="color: inherit; text-decoration: inherit;">name</a>
@@ -1156,8 +1010,7 @@ The following output properties are available:
         <span class="property-indicator"></span>
         <span class="property-type">str</span>
     </dt>
-    <dd>{{% md %}}The SKU name. Along with tier, uniquely identifies the SKU.{{% /md %}}</dd>
-    <dt class="property-optional"
+    <dd>{{% md %}}The SKU name. Along with tier, uniquely identifies the SKU.{{% /md %}}</dd><dt class="property-optional"
             title="Optional">
         <span id="tier_python">
 <a href="#tier_python" style="color: inherit; text-decoration: inherit;">tier</a>
@@ -1165,8 +1018,7 @@ The following output properties are available:
         <span class="property-indicator"></span>
         <span class="property-type">str</span>
     </dt>
-    <dd>{{% md %}}The SKU tier. Along with name, uniquely identifies the SKU.{{% /md %}}</dd>
-</dl>
+    <dd>{{% md %}}The SKU tier. Along with name, uniquely identifies the SKU.{{% /md %}}</dd></dl>
 {{% /choosable %}}
 
 

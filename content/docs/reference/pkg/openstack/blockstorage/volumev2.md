@@ -13,11 +13,17 @@ meta_desc: "Documentation for the openstack.blockstorage.VolumeV2 resource with 
 Manages a V2 volume resource within OpenStack.
 
 {{% examples %}}
+
 ## Example Usage
 
 {{< chooser language "typescript,python,go,csharp" / >}}
 
-{{% example csharp %}}
+
+
+
+
+{{< example csharp >}}
+
 ```csharp
 using Pulumi;
 using OpenStack = Pulumi.OpenStack;
@@ -37,9 +43,12 @@ class MyStack : Stack
 }
 ```
 
-{{% /example %}}
 
-{{% example go %}}
+{{< /example >}}
+
+
+{{< example go >}}
+
 ```go
 package main
 
@@ -63,9 +72,12 @@ func main() {
 }
 ```
 
-{{% /example %}}
 
-{{% example python %}}
+{{< /example >}}
+
+
+{{< example python >}}
+
 ```python
 import pulumi
 import pulumi_openstack as openstack
@@ -76,9 +88,12 @@ volume1 = openstack.blockstorage.VolumeV2("volume1",
     size=3)
 ```
 
-{{% /example %}}
 
-{{% example typescript %}}
+{{< /example >}}
+
+
+{{< example typescript >}}
+
 
 ```typescript
 import * as pulumi from "@pulumi/pulumi";
@@ -91,9 +106,16 @@ const volume1 = new openstack.blockstorage.VolumeV2("volume_1", {
 });
 ```
 
-{{% /example %}}
+
+{{< /example >}}
+
+
+
+
 
 {{% /examples %}}
+
+
 
 
 ## Create a VolumeV2 Resource {#create}
@@ -118,9 +140,7 @@ const volume1 = new openstack.blockstorage.VolumeV2("volume_1", {
 
 {{% choosable language nodejs %}}
 
-<dl class="resources-properties">
-  
-    <dt
+<dl class="resources-properties"><dt
         class="property-required" title="Required">
         <span>name</span>
         <span class="property-indicator"></span>
@@ -128,9 +148,7 @@ const volume1 = new openstack.blockstorage.VolumeV2("volume_1", {
     </dt>
     <dd>
       The unique name of the resource.
-    </dd>
-  
-    <dt
+    </dd><dt
         class="property-required" title="Required">
         <span>args</span>
         <span class="property-indicator"></span>
@@ -138,9 +156,7 @@ const volume1 = new openstack.blockstorage.VolumeV2("volume_1", {
     </dt>
     <dd>
       The arguments to resource properties.
-    </dd>
-  
-    <dt
+    </dd><dt
         class="property-optional" title="Optional">
         <span>opts</span>
         <span class="property-indicator"></span>
@@ -148,10 +164,7 @@ const volume1 = new openstack.blockstorage.VolumeV2("volume_1", {
     </dt>
     <dd>
       Bag of options to control resource&#39;s behavior.
-    </dd>
-  
-
-</dl>
+    </dd></dl>
 
 {{% /choosable %}}
 
@@ -177,9 +190,7 @@ const volume1 = new openstack.blockstorage.VolumeV2("volume_1", {
 
 {{% choosable language go %}}
 
-<dl class="resources-properties">
-  
-    <dt
+<dl class="resources-properties"><dt
         class="property-optional" title="Optional">
         <span>ctx</span>
         <span class="property-indicator"></span>
@@ -187,9 +198,7 @@ const volume1 = new openstack.blockstorage.VolumeV2("volume_1", {
     </dt>
     <dd>
       Context object for the current deployment.
-    </dd>
-  
-    <dt
+    </dd><dt
         class="property-required" title="Required">
         <span>name</span>
         <span class="property-indicator"></span>
@@ -197,9 +206,7 @@ const volume1 = new openstack.blockstorage.VolumeV2("volume_1", {
     </dt>
     <dd>
       The unique name of the resource.
-    </dd>
-  
-    <dt
+    </dd><dt
         class="property-required" title="Required">
         <span>args</span>
         <span class="property-indicator"></span>
@@ -207,9 +214,7 @@ const volume1 = new openstack.blockstorage.VolumeV2("volume_1", {
     </dt>
     <dd>
       The arguments to resource properties.
-    </dd>
-  
-    <dt
+    </dd><dt
         class="property-optional" title="Optional">
         <span>opts</span>
         <span class="property-indicator"></span>
@@ -217,18 +222,13 @@ const volume1 = new openstack.blockstorage.VolumeV2("volume_1", {
     </dt>
     <dd>
       Bag of options to control resource&#39;s behavior.
-    </dd>
-  
-
-</dl>
+    </dd></dl>
 
 {{% /choosable %}}
 
 {{% choosable language csharp %}}
 
-<dl class="resources-properties">
-  
-    <dt
+<dl class="resources-properties"><dt
         class="property-required" title="Required">
         <span>name</span>
         <span class="property-indicator"></span>
@@ -236,9 +236,7 @@ const volume1 = new openstack.blockstorage.VolumeV2("volume_1", {
     </dt>
     <dd>
       The unique name of the resource.
-    </dd>
-  
-    <dt
+    </dd><dt
         class="property-required" title="Required">
         <span>args</span>
         <span class="property-indicator"></span>
@@ -246,9 +244,7 @@ const volume1 = new openstack.blockstorage.VolumeV2("volume_1", {
     </dt>
     <dd>
       The arguments to resource properties.
-    </dd>
-  
-    <dt
+    </dd><dt
         class="property-optional" title="Optional">
         <span>opts</span>
         <span class="property-indicator"></span>
@@ -256,10 +252,7 @@ const volume1 = new openstack.blockstorage.VolumeV2("volume_1", {
     </dt>
     <dd>
       Bag of options to control resource&#39;s behavior.
-    </dd>
-  
-
-</dl>
+    </dd></dl>
 
 {{% /choosable %}}
 
@@ -274,9 +267,7 @@ The VolumeV2 resource accepts the following [input]({{< relref "/docs/intro/conc
 
 
 {{% choosable language csharp %}}
-<dl class="resources-properties">
-
-    <dt class="property-required"
+<dl class="resources-properties"><dt class="property-required"
             title="Required">
         <span id="size_csharp">
 <a href="#size_csharp" style="color: inherit; text-decoration: inherit;">Size</a>
@@ -286,8 +277,7 @@ The VolumeV2 resource accepts the following [input]({{< relref "/docs/intro/conc
     </dt>
     <dd>{{% md %}}The size of the volume to create (in gigabytes). Changing
 this creates a new volume.
-{{% /md %}}</dd>
-    <dt class="property-optional"
+{{% /md %}}</dd><dt class="property-optional"
             title="Optional">
         <span id="availabilityzone_csharp">
 <a href="#availabilityzone_csharp" style="color: inherit; text-decoration: inherit;">Availability<wbr>Zone</a>
@@ -297,8 +287,7 @@ this creates a new volume.
     </dt>
     <dd>{{% md %}}The availability zone for the volume.
 Changing this creates a new volume.
-{{% /md %}}</dd>
-    <dt class="property-optional"
+{{% /md %}}</dd><dt class="property-optional"
             title="Optional">
         <span id="consistencygroupid_csharp">
 <a href="#consistencygroupid_csharp" style="color: inherit; text-decoration: inherit;">Consistency<wbr>Group<wbr>Id</a>
@@ -308,8 +297,7 @@ Changing this creates a new volume.
     </dt>
     <dd>{{% md %}}The consistency group to place the volume
 in.
-{{% /md %}}</dd>
-    <dt class="property-optional"
+{{% /md %}}</dd><dt class="property-optional"
             title="Optional">
         <span id="description_csharp">
 <a href="#description_csharp" style="color: inherit; text-decoration: inherit;">Description</a>
@@ -319,8 +307,7 @@ in.
     </dt>
     <dd>{{% md %}}A description of the volume. Changing this updates
 the volume's description.
-{{% /md %}}</dd>
-    <dt class="property-optional"
+{{% /md %}}</dd><dt class="property-optional"
             title="Optional">
         <span id="imageid_csharp">
 <a href="#imageid_csharp" style="color: inherit; text-decoration: inherit;">Image<wbr>Id</a>
@@ -330,8 +317,7 @@ the volume's description.
     </dt>
     <dd>{{% md %}}The image ID from which to create the volume.
 Changing this creates a new volume.
-{{% /md %}}</dd>
-    <dt class="property-optional"
+{{% /md %}}</dd><dt class="property-optional"
             title="Optional">
         <span id="metadata_csharp">
 <a href="#metadata_csharp" style="color: inherit; text-decoration: inherit;">Metadata</a>
@@ -341,8 +327,7 @@ Changing this creates a new volume.
     </dt>
     <dd>{{% md %}}Metadata key/value pairs to associate with the volume.
 Changing this updates the existing volume metadata.
-{{% /md %}}</dd>
-    <dt class="property-optional"
+{{% /md %}}</dd><dt class="property-optional"
             title="Optional">
         <span id="name_csharp">
 <a href="#name_csharp" style="color: inherit; text-decoration: inherit;">Name</a>
@@ -352,8 +337,7 @@ Changing this updates the existing volume metadata.
     </dt>
     <dd>{{% md %}}A unique name for the volume. Changing this updates the
 volume's name.
-{{% /md %}}</dd>
-    <dt class="property-optional"
+{{% /md %}}</dd><dt class="property-optional"
             title="Optional">
         <span id="region_csharp">
 <a href="#region_csharp" style="color: inherit; text-decoration: inherit;">Region</a>
@@ -364,8 +348,7 @@ volume's name.
     <dd>{{% md %}}The region in which to create the volume. If
 omitted, the `region` argument of the provider is used. Changing this
 creates a new volume.
-{{% /md %}}</dd>
-    <dt class="property-optional"
+{{% /md %}}</dd><dt class="property-optional"
             title="Optional">
         <span id="schedulerhints_csharp">
 <a href="#schedulerhints_csharp" style="color: inherit; text-decoration: inherit;">Scheduler<wbr>Hints</a>
@@ -375,8 +358,7 @@ creates a new volume.
     </dt>
     <dd>{{% md %}}Provide the Cinder scheduler with hints on where
 to instantiate a volume in the OpenStack cloud. The available hints are described below.
-{{% /md %}}</dd>
-    <dt class="property-optional"
+{{% /md %}}</dd><dt class="property-optional"
             title="Optional">
         <span id="snapshotid_csharp">
 <a href="#snapshotid_csharp" style="color: inherit; text-decoration: inherit;">Snapshot<wbr>Id</a>
@@ -386,8 +368,7 @@ to instantiate a volume in the OpenStack cloud. The available hints are describe
     </dt>
     <dd>{{% md %}}The snapshot ID from which to create the volume.
 Changing this creates a new volume.
-{{% /md %}}</dd>
-    <dt class="property-optional"
+{{% /md %}}</dd><dt class="property-optional"
             title="Optional">
         <span id="sourcereplica_csharp">
 <a href="#sourcereplica_csharp" style="color: inherit; text-decoration: inherit;">Source<wbr>Replica</a>
@@ -396,8 +377,7 @@ Changing this creates a new volume.
         <span class="property-type">string</span>
     </dt>
     <dd>{{% md %}}The volume ID to replicate with.
-{{% /md %}}</dd>
-    <dt class="property-optional"
+{{% /md %}}</dd><dt class="property-optional"
             title="Optional">
         <span id="sourcevolid_csharp">
 <a href="#sourcevolid_csharp" style="color: inherit; text-decoration: inherit;">Source<wbr>Vol<wbr>Id</a>
@@ -407,8 +387,7 @@ Changing this creates a new volume.
     </dt>
     <dd>{{% md %}}The volume ID from which to create the volume.
 Changing this creates a new volume.
-{{% /md %}}</dd>
-    <dt class="property-optional"
+{{% /md %}}</dd><dt class="property-optional"
             title="Optional">
         <span id="volumetype_csharp">
 <a href="#volumetype_csharp" style="color: inherit; text-decoration: inherit;">Volume<wbr>Type</a>
@@ -418,14 +397,11 @@ Changing this creates a new volume.
     </dt>
     <dd>{{% md %}}The type of volume to create.
 Changing this creates a new volume.
-{{% /md %}}</dd>
-</dl>
+{{% /md %}}</dd></dl>
 {{% /choosable %}}
 
 {{% choosable language go %}}
-<dl class="resources-properties">
-
-    <dt class="property-required"
+<dl class="resources-properties"><dt class="property-required"
             title="Required">
         <span id="size_go">
 <a href="#size_go" style="color: inherit; text-decoration: inherit;">Size</a>
@@ -435,8 +411,7 @@ Changing this creates a new volume.
     </dt>
     <dd>{{% md %}}The size of the volume to create (in gigabytes). Changing
 this creates a new volume.
-{{% /md %}}</dd>
-    <dt class="property-optional"
+{{% /md %}}</dd><dt class="property-optional"
             title="Optional">
         <span id="availabilityzone_go">
 <a href="#availabilityzone_go" style="color: inherit; text-decoration: inherit;">Availability<wbr>Zone</a>
@@ -446,8 +421,7 @@ this creates a new volume.
     </dt>
     <dd>{{% md %}}The availability zone for the volume.
 Changing this creates a new volume.
-{{% /md %}}</dd>
-    <dt class="property-optional"
+{{% /md %}}</dd><dt class="property-optional"
             title="Optional">
         <span id="consistencygroupid_go">
 <a href="#consistencygroupid_go" style="color: inherit; text-decoration: inherit;">Consistency<wbr>Group<wbr>Id</a>
@@ -457,8 +431,7 @@ Changing this creates a new volume.
     </dt>
     <dd>{{% md %}}The consistency group to place the volume
 in.
-{{% /md %}}</dd>
-    <dt class="property-optional"
+{{% /md %}}</dd><dt class="property-optional"
             title="Optional">
         <span id="description_go">
 <a href="#description_go" style="color: inherit; text-decoration: inherit;">Description</a>
@@ -468,8 +441,7 @@ in.
     </dt>
     <dd>{{% md %}}A description of the volume. Changing this updates
 the volume's description.
-{{% /md %}}</dd>
-    <dt class="property-optional"
+{{% /md %}}</dd><dt class="property-optional"
             title="Optional">
         <span id="imageid_go">
 <a href="#imageid_go" style="color: inherit; text-decoration: inherit;">Image<wbr>Id</a>
@@ -479,8 +451,7 @@ the volume's description.
     </dt>
     <dd>{{% md %}}The image ID from which to create the volume.
 Changing this creates a new volume.
-{{% /md %}}</dd>
-    <dt class="property-optional"
+{{% /md %}}</dd><dt class="property-optional"
             title="Optional">
         <span id="metadata_go">
 <a href="#metadata_go" style="color: inherit; text-decoration: inherit;">Metadata</a>
@@ -490,8 +461,7 @@ Changing this creates a new volume.
     </dt>
     <dd>{{% md %}}Metadata key/value pairs to associate with the volume.
 Changing this updates the existing volume metadata.
-{{% /md %}}</dd>
-    <dt class="property-optional"
+{{% /md %}}</dd><dt class="property-optional"
             title="Optional">
         <span id="name_go">
 <a href="#name_go" style="color: inherit; text-decoration: inherit;">Name</a>
@@ -501,8 +471,7 @@ Changing this updates the existing volume metadata.
     </dt>
     <dd>{{% md %}}A unique name for the volume. Changing this updates the
 volume's name.
-{{% /md %}}</dd>
-    <dt class="property-optional"
+{{% /md %}}</dd><dt class="property-optional"
             title="Optional">
         <span id="region_go">
 <a href="#region_go" style="color: inherit; text-decoration: inherit;">Region</a>
@@ -513,8 +482,7 @@ volume's name.
     <dd>{{% md %}}The region in which to create the volume. If
 omitted, the `region` argument of the provider is used. Changing this
 creates a new volume.
-{{% /md %}}</dd>
-    <dt class="property-optional"
+{{% /md %}}</dd><dt class="property-optional"
             title="Optional">
         <span id="schedulerhints_go">
 <a href="#schedulerhints_go" style="color: inherit; text-decoration: inherit;">Scheduler<wbr>Hints</a>
@@ -524,8 +492,7 @@ creates a new volume.
     </dt>
     <dd>{{% md %}}Provide the Cinder scheduler with hints on where
 to instantiate a volume in the OpenStack cloud. The available hints are described below.
-{{% /md %}}</dd>
-    <dt class="property-optional"
+{{% /md %}}</dd><dt class="property-optional"
             title="Optional">
         <span id="snapshotid_go">
 <a href="#snapshotid_go" style="color: inherit; text-decoration: inherit;">Snapshot<wbr>Id</a>
@@ -535,8 +502,7 @@ to instantiate a volume in the OpenStack cloud. The available hints are describe
     </dt>
     <dd>{{% md %}}The snapshot ID from which to create the volume.
 Changing this creates a new volume.
-{{% /md %}}</dd>
-    <dt class="property-optional"
+{{% /md %}}</dd><dt class="property-optional"
             title="Optional">
         <span id="sourcereplica_go">
 <a href="#sourcereplica_go" style="color: inherit; text-decoration: inherit;">Source<wbr>Replica</a>
@@ -545,8 +511,7 @@ Changing this creates a new volume.
         <span class="property-type">string</span>
     </dt>
     <dd>{{% md %}}The volume ID to replicate with.
-{{% /md %}}</dd>
-    <dt class="property-optional"
+{{% /md %}}</dd><dt class="property-optional"
             title="Optional">
         <span id="sourcevolid_go">
 <a href="#sourcevolid_go" style="color: inherit; text-decoration: inherit;">Source<wbr>Vol<wbr>Id</a>
@@ -556,8 +521,7 @@ Changing this creates a new volume.
     </dt>
     <dd>{{% md %}}The volume ID from which to create the volume.
 Changing this creates a new volume.
-{{% /md %}}</dd>
-    <dt class="property-optional"
+{{% /md %}}</dd><dt class="property-optional"
             title="Optional">
         <span id="volumetype_go">
 <a href="#volumetype_go" style="color: inherit; text-decoration: inherit;">Volume<wbr>Type</a>
@@ -567,14 +531,11 @@ Changing this creates a new volume.
     </dt>
     <dd>{{% md %}}The type of volume to create.
 Changing this creates a new volume.
-{{% /md %}}</dd>
-</dl>
+{{% /md %}}</dd></dl>
 {{% /choosable %}}
 
 {{% choosable language nodejs %}}
-<dl class="resources-properties">
-
-    <dt class="property-required"
+<dl class="resources-properties"><dt class="property-required"
             title="Required">
         <span id="size_nodejs">
 <a href="#size_nodejs" style="color: inherit; text-decoration: inherit;">size</a>
@@ -584,8 +545,7 @@ Changing this creates a new volume.
     </dt>
     <dd>{{% md %}}The size of the volume to create (in gigabytes). Changing
 this creates a new volume.
-{{% /md %}}</dd>
-    <dt class="property-optional"
+{{% /md %}}</dd><dt class="property-optional"
             title="Optional">
         <span id="availabilityzone_nodejs">
 <a href="#availabilityzone_nodejs" style="color: inherit; text-decoration: inherit;">availability<wbr>Zone</a>
@@ -595,8 +555,7 @@ this creates a new volume.
     </dt>
     <dd>{{% md %}}The availability zone for the volume.
 Changing this creates a new volume.
-{{% /md %}}</dd>
-    <dt class="property-optional"
+{{% /md %}}</dd><dt class="property-optional"
             title="Optional">
         <span id="consistencygroupid_nodejs">
 <a href="#consistencygroupid_nodejs" style="color: inherit; text-decoration: inherit;">consistency<wbr>Group<wbr>Id</a>
@@ -606,8 +565,7 @@ Changing this creates a new volume.
     </dt>
     <dd>{{% md %}}The consistency group to place the volume
 in.
-{{% /md %}}</dd>
-    <dt class="property-optional"
+{{% /md %}}</dd><dt class="property-optional"
             title="Optional">
         <span id="description_nodejs">
 <a href="#description_nodejs" style="color: inherit; text-decoration: inherit;">description</a>
@@ -617,8 +575,7 @@ in.
     </dt>
     <dd>{{% md %}}A description of the volume. Changing this updates
 the volume's description.
-{{% /md %}}</dd>
-    <dt class="property-optional"
+{{% /md %}}</dd><dt class="property-optional"
             title="Optional">
         <span id="imageid_nodejs">
 <a href="#imageid_nodejs" style="color: inherit; text-decoration: inherit;">image<wbr>Id</a>
@@ -628,8 +585,7 @@ the volume's description.
     </dt>
     <dd>{{% md %}}The image ID from which to create the volume.
 Changing this creates a new volume.
-{{% /md %}}</dd>
-    <dt class="property-optional"
+{{% /md %}}</dd><dt class="property-optional"
             title="Optional">
         <span id="metadata_nodejs">
 <a href="#metadata_nodejs" style="color: inherit; text-decoration: inherit;">metadata</a>
@@ -639,8 +595,7 @@ Changing this creates a new volume.
     </dt>
     <dd>{{% md %}}Metadata key/value pairs to associate with the volume.
 Changing this updates the existing volume metadata.
-{{% /md %}}</dd>
-    <dt class="property-optional"
+{{% /md %}}</dd><dt class="property-optional"
             title="Optional">
         <span id="name_nodejs">
 <a href="#name_nodejs" style="color: inherit; text-decoration: inherit;">name</a>
@@ -650,8 +605,7 @@ Changing this updates the existing volume metadata.
     </dt>
     <dd>{{% md %}}A unique name for the volume. Changing this updates the
 volume's name.
-{{% /md %}}</dd>
-    <dt class="property-optional"
+{{% /md %}}</dd><dt class="property-optional"
             title="Optional">
         <span id="region_nodejs">
 <a href="#region_nodejs" style="color: inherit; text-decoration: inherit;">region</a>
@@ -662,8 +616,7 @@ volume's name.
     <dd>{{% md %}}The region in which to create the volume. If
 omitted, the `region` argument of the provider is used. Changing this
 creates a new volume.
-{{% /md %}}</dd>
-    <dt class="property-optional"
+{{% /md %}}</dd><dt class="property-optional"
             title="Optional">
         <span id="schedulerhints_nodejs">
 <a href="#schedulerhints_nodejs" style="color: inherit; text-decoration: inherit;">scheduler<wbr>Hints</a>
@@ -673,8 +626,7 @@ creates a new volume.
     </dt>
     <dd>{{% md %}}Provide the Cinder scheduler with hints on where
 to instantiate a volume in the OpenStack cloud. The available hints are described below.
-{{% /md %}}</dd>
-    <dt class="property-optional"
+{{% /md %}}</dd><dt class="property-optional"
             title="Optional">
         <span id="snapshotid_nodejs">
 <a href="#snapshotid_nodejs" style="color: inherit; text-decoration: inherit;">snapshot<wbr>Id</a>
@@ -684,8 +636,7 @@ to instantiate a volume in the OpenStack cloud. The available hints are describe
     </dt>
     <dd>{{% md %}}The snapshot ID from which to create the volume.
 Changing this creates a new volume.
-{{% /md %}}</dd>
-    <dt class="property-optional"
+{{% /md %}}</dd><dt class="property-optional"
             title="Optional">
         <span id="sourcereplica_nodejs">
 <a href="#sourcereplica_nodejs" style="color: inherit; text-decoration: inherit;">source<wbr>Replica</a>
@@ -694,8 +645,7 @@ Changing this creates a new volume.
         <span class="property-type">string</span>
     </dt>
     <dd>{{% md %}}The volume ID to replicate with.
-{{% /md %}}</dd>
-    <dt class="property-optional"
+{{% /md %}}</dd><dt class="property-optional"
             title="Optional">
         <span id="sourcevolid_nodejs">
 <a href="#sourcevolid_nodejs" style="color: inherit; text-decoration: inherit;">source<wbr>Vol<wbr>Id</a>
@@ -705,8 +655,7 @@ Changing this creates a new volume.
     </dt>
     <dd>{{% md %}}The volume ID from which to create the volume.
 Changing this creates a new volume.
-{{% /md %}}</dd>
-    <dt class="property-optional"
+{{% /md %}}</dd><dt class="property-optional"
             title="Optional">
         <span id="volumetype_nodejs">
 <a href="#volumetype_nodejs" style="color: inherit; text-decoration: inherit;">volume<wbr>Type</a>
@@ -716,14 +665,11 @@ Changing this creates a new volume.
     </dt>
     <dd>{{% md %}}The type of volume to create.
 Changing this creates a new volume.
-{{% /md %}}</dd>
-</dl>
+{{% /md %}}</dd></dl>
 {{% /choosable %}}
 
 {{% choosable language python %}}
-<dl class="resources-properties">
-
-    <dt class="property-required"
+<dl class="resources-properties"><dt class="property-required"
             title="Required">
         <span id="size_python">
 <a href="#size_python" style="color: inherit; text-decoration: inherit;">size</a>
@@ -733,8 +679,7 @@ Changing this creates a new volume.
     </dt>
     <dd>{{% md %}}The size of the volume to create (in gigabytes). Changing
 this creates a new volume.
-{{% /md %}}</dd>
-    <dt class="property-optional"
+{{% /md %}}</dd><dt class="property-optional"
             title="Optional">
         <span id="availability_zone_python">
 <a href="#availability_zone_python" style="color: inherit; text-decoration: inherit;">availability_<wbr>zone</a>
@@ -744,8 +689,7 @@ this creates a new volume.
     </dt>
     <dd>{{% md %}}The availability zone for the volume.
 Changing this creates a new volume.
-{{% /md %}}</dd>
-    <dt class="property-optional"
+{{% /md %}}</dd><dt class="property-optional"
             title="Optional">
         <span id="consistency_group_id_python">
 <a href="#consistency_group_id_python" style="color: inherit; text-decoration: inherit;">consistency_<wbr>group_<wbr>id</a>
@@ -755,8 +699,7 @@ Changing this creates a new volume.
     </dt>
     <dd>{{% md %}}The consistency group to place the volume
 in.
-{{% /md %}}</dd>
-    <dt class="property-optional"
+{{% /md %}}</dd><dt class="property-optional"
             title="Optional">
         <span id="description_python">
 <a href="#description_python" style="color: inherit; text-decoration: inherit;">description</a>
@@ -766,8 +709,7 @@ in.
     </dt>
     <dd>{{% md %}}A description of the volume. Changing this updates
 the volume's description.
-{{% /md %}}</dd>
-    <dt class="property-optional"
+{{% /md %}}</dd><dt class="property-optional"
             title="Optional">
         <span id="image_id_python">
 <a href="#image_id_python" style="color: inherit; text-decoration: inherit;">image_<wbr>id</a>
@@ -777,8 +719,7 @@ the volume's description.
     </dt>
     <dd>{{% md %}}The image ID from which to create the volume.
 Changing this creates a new volume.
-{{% /md %}}</dd>
-    <dt class="property-optional"
+{{% /md %}}</dd><dt class="property-optional"
             title="Optional">
         <span id="metadata_python">
 <a href="#metadata_python" style="color: inherit; text-decoration: inherit;">metadata</a>
@@ -788,8 +729,7 @@ Changing this creates a new volume.
     </dt>
     <dd>{{% md %}}Metadata key/value pairs to associate with the volume.
 Changing this updates the existing volume metadata.
-{{% /md %}}</dd>
-    <dt class="property-optional"
+{{% /md %}}</dd><dt class="property-optional"
             title="Optional">
         <span id="name_python">
 <a href="#name_python" style="color: inherit; text-decoration: inherit;">name</a>
@@ -799,8 +739,7 @@ Changing this updates the existing volume metadata.
     </dt>
     <dd>{{% md %}}A unique name for the volume. Changing this updates the
 volume's name.
-{{% /md %}}</dd>
-    <dt class="property-optional"
+{{% /md %}}</dd><dt class="property-optional"
             title="Optional">
         <span id="region_python">
 <a href="#region_python" style="color: inherit; text-decoration: inherit;">region</a>
@@ -811,8 +750,7 @@ volume's name.
     <dd>{{% md %}}The region in which to create the volume. If
 omitted, the `region` argument of the provider is used. Changing this
 creates a new volume.
-{{% /md %}}</dd>
-    <dt class="property-optional"
+{{% /md %}}</dd><dt class="property-optional"
             title="Optional">
         <span id="scheduler_hints_python">
 <a href="#scheduler_hints_python" style="color: inherit; text-decoration: inherit;">scheduler_<wbr>hints</a>
@@ -822,8 +760,7 @@ creates a new volume.
     </dt>
     <dd>{{% md %}}Provide the Cinder scheduler with hints on where
 to instantiate a volume in the OpenStack cloud. The available hints are described below.
-{{% /md %}}</dd>
-    <dt class="property-optional"
+{{% /md %}}</dd><dt class="property-optional"
             title="Optional">
         <span id="snapshot_id_python">
 <a href="#snapshot_id_python" style="color: inherit; text-decoration: inherit;">snapshot_<wbr>id</a>
@@ -833,8 +770,7 @@ to instantiate a volume in the OpenStack cloud. The available hints are describe
     </dt>
     <dd>{{% md %}}The snapshot ID from which to create the volume.
 Changing this creates a new volume.
-{{% /md %}}</dd>
-    <dt class="property-optional"
+{{% /md %}}</dd><dt class="property-optional"
             title="Optional">
         <span id="source_replica_python">
 <a href="#source_replica_python" style="color: inherit; text-decoration: inherit;">source_<wbr>replica</a>
@@ -843,8 +779,7 @@ Changing this creates a new volume.
         <span class="property-type">str</span>
     </dt>
     <dd>{{% md %}}The volume ID to replicate with.
-{{% /md %}}</dd>
-    <dt class="property-optional"
+{{% /md %}}</dd><dt class="property-optional"
             title="Optional">
         <span id="source_vol_id_python">
 <a href="#source_vol_id_python" style="color: inherit; text-decoration: inherit;">source_<wbr>vol_<wbr>id</a>
@@ -854,8 +789,7 @@ Changing this creates a new volume.
     </dt>
     <dd>{{% md %}}The volume ID from which to create the volume.
 Changing this creates a new volume.
-{{% /md %}}</dd>
-    <dt class="property-optional"
+{{% /md %}}</dd><dt class="property-optional"
             title="Optional">
         <span id="volume_type_python">
 <a href="#volume_type_python" style="color: inherit; text-decoration: inherit;">volume_<wbr>type</a>
@@ -865,8 +799,7 @@ Changing this creates a new volume.
     </dt>
     <dd>{{% md %}}The type of volume to create.
 Changing this creates a new volume.
-{{% /md %}}</dd>
-</dl>
+{{% /md %}}</dd></dl>
 {{% /choosable %}}
 
 
@@ -877,9 +810,7 @@ All [input](#inputs) properties are implicitly available as output properties. A
 
 
 {{% choosable language csharp %}}
-<dl class="resources-properties">
-
-    <dt class="property-"
+<dl class="resources-properties"><dt class="property-"
             title="">
         <span id="attachments_csharp">
 <a href="#attachments_csharp" style="color: inherit; text-decoration: inherit;">Attachments</a>
@@ -890,8 +821,7 @@ All [input](#inputs) properties are implicitly available as output properties. A
     <dd>{{% md %}}If a volume is attached to an instance, this attribute will
 display the Attachment ID, Instance ID, and the Device as the Instance
 sees it.
-{{% /md %}}</dd>
-    <dt class="property-"
+{{% /md %}}</dd><dt class="property-"
             title="">
         <span id="id_csharp">
 <a href="#id_csharp" style="color: inherit; text-decoration: inherit;">Id</a>
@@ -899,14 +829,11 @@ sees it.
         <span class="property-indicator"></span>
         <span class="property-type">string</span>
     </dt>
-    <dd>{{% md %}}The provider-assigned unique ID for this managed resource.{{% /md %}}</dd>
-</dl>
+    <dd>{{% md %}}The provider-assigned unique ID for this managed resource.{{% /md %}}</dd></dl>
 {{% /choosable %}}
 
 {{% choosable language go %}}
-<dl class="resources-properties">
-
-    <dt class="property-"
+<dl class="resources-properties"><dt class="property-"
             title="">
         <span id="attachments_go">
 <a href="#attachments_go" style="color: inherit; text-decoration: inherit;">Attachments</a>
@@ -917,8 +844,7 @@ sees it.
     <dd>{{% md %}}If a volume is attached to an instance, this attribute will
 display the Attachment ID, Instance ID, and the Device as the Instance
 sees it.
-{{% /md %}}</dd>
-    <dt class="property-"
+{{% /md %}}</dd><dt class="property-"
             title="">
         <span id="id_go">
 <a href="#id_go" style="color: inherit; text-decoration: inherit;">Id</a>
@@ -926,14 +852,11 @@ sees it.
         <span class="property-indicator"></span>
         <span class="property-type">string</span>
     </dt>
-    <dd>{{% md %}}The provider-assigned unique ID for this managed resource.{{% /md %}}</dd>
-</dl>
+    <dd>{{% md %}}The provider-assigned unique ID for this managed resource.{{% /md %}}</dd></dl>
 {{% /choosable %}}
 
 {{% choosable language nodejs %}}
-<dl class="resources-properties">
-
-    <dt class="property-"
+<dl class="resources-properties"><dt class="property-"
             title="">
         <span id="attachments_nodejs">
 <a href="#attachments_nodejs" style="color: inherit; text-decoration: inherit;">attachments</a>
@@ -944,8 +867,7 @@ sees it.
     <dd>{{% md %}}If a volume is attached to an instance, this attribute will
 display the Attachment ID, Instance ID, and the Device as the Instance
 sees it.
-{{% /md %}}</dd>
-    <dt class="property-"
+{{% /md %}}</dd><dt class="property-"
             title="">
         <span id="id_nodejs">
 <a href="#id_nodejs" style="color: inherit; text-decoration: inherit;">id</a>
@@ -953,14 +875,11 @@ sees it.
         <span class="property-indicator"></span>
         <span class="property-type">string</span>
     </dt>
-    <dd>{{% md %}}The provider-assigned unique ID for this managed resource.{{% /md %}}</dd>
-</dl>
+    <dd>{{% md %}}The provider-assigned unique ID for this managed resource.{{% /md %}}</dd></dl>
 {{% /choosable %}}
 
 {{% choosable language python %}}
-<dl class="resources-properties">
-
-    <dt class="property-"
+<dl class="resources-properties"><dt class="property-"
             title="">
         <span id="attachments_python">
 <a href="#attachments_python" style="color: inherit; text-decoration: inherit;">attachments</a>
@@ -971,8 +890,7 @@ sees it.
     <dd>{{% md %}}If a volume is attached to an instance, this attribute will
 display the Attachment ID, Instance ID, and the Device as the Instance
 sees it.
-{{% /md %}}</dd>
-    <dt class="property-"
+{{% /md %}}</dd><dt class="property-"
             title="">
         <span id="id_python">
 <a href="#id_python" style="color: inherit; text-decoration: inherit;">id</a>
@@ -980,8 +898,7 @@ sees it.
         <span class="property-indicator"></span>
         <span class="property-type">str</span>
     </dt>
-    <dd>{{% md %}}The provider-assigned unique ID for this managed resource.{{% /md %}}</dd>
-</dl>
+    <dd>{{% md %}}The provider-assigned unique ID for this managed resource.{{% /md %}}</dd></dl>
 {{% /choosable %}}
 
 
@@ -1108,9 +1025,7 @@ The following state arguments are supported:
 
 
 {{% choosable language csharp %}}
-<dl class="resources-properties">
-
-    <dt class="property-optional"
+<dl class="resources-properties"><dt class="property-optional"
             title="Optional">
         <span id="state_attachments_csharp">
 <a href="#state_attachments_csharp" style="color: inherit; text-decoration: inherit;">Attachments</a>
@@ -1121,8 +1036,7 @@ The following state arguments are supported:
     <dd>{{% md %}}If a volume is attached to an instance, this attribute will
 display the Attachment ID, Instance ID, and the Device as the Instance
 sees it.
-{{% /md %}}</dd>
-    <dt class="property-optional"
+{{% /md %}}</dd><dt class="property-optional"
             title="Optional">
         <span id="state_availabilityzone_csharp">
 <a href="#state_availabilityzone_csharp" style="color: inherit; text-decoration: inherit;">Availability<wbr>Zone</a>
@@ -1132,8 +1046,7 @@ sees it.
     </dt>
     <dd>{{% md %}}The availability zone for the volume.
 Changing this creates a new volume.
-{{% /md %}}</dd>
-    <dt class="property-optional"
+{{% /md %}}</dd><dt class="property-optional"
             title="Optional">
         <span id="state_consistencygroupid_csharp">
 <a href="#state_consistencygroupid_csharp" style="color: inherit; text-decoration: inherit;">Consistency<wbr>Group<wbr>Id</a>
@@ -1143,8 +1056,7 @@ Changing this creates a new volume.
     </dt>
     <dd>{{% md %}}The consistency group to place the volume
 in.
-{{% /md %}}</dd>
-    <dt class="property-optional"
+{{% /md %}}</dd><dt class="property-optional"
             title="Optional">
         <span id="state_description_csharp">
 <a href="#state_description_csharp" style="color: inherit; text-decoration: inherit;">Description</a>
@@ -1154,8 +1066,7 @@ in.
     </dt>
     <dd>{{% md %}}A description of the volume. Changing this updates
 the volume's description.
-{{% /md %}}</dd>
-    <dt class="property-optional"
+{{% /md %}}</dd><dt class="property-optional"
             title="Optional">
         <span id="state_imageid_csharp">
 <a href="#state_imageid_csharp" style="color: inherit; text-decoration: inherit;">Image<wbr>Id</a>
@@ -1165,8 +1076,7 @@ the volume's description.
     </dt>
     <dd>{{% md %}}The image ID from which to create the volume.
 Changing this creates a new volume.
-{{% /md %}}</dd>
-    <dt class="property-optional"
+{{% /md %}}</dd><dt class="property-optional"
             title="Optional">
         <span id="state_metadata_csharp">
 <a href="#state_metadata_csharp" style="color: inherit; text-decoration: inherit;">Metadata</a>
@@ -1176,8 +1086,7 @@ Changing this creates a new volume.
     </dt>
     <dd>{{% md %}}Metadata key/value pairs to associate with the volume.
 Changing this updates the existing volume metadata.
-{{% /md %}}</dd>
-    <dt class="property-optional"
+{{% /md %}}</dd><dt class="property-optional"
             title="Optional">
         <span id="state_name_csharp">
 <a href="#state_name_csharp" style="color: inherit; text-decoration: inherit;">Name</a>
@@ -1187,8 +1096,7 @@ Changing this updates the existing volume metadata.
     </dt>
     <dd>{{% md %}}A unique name for the volume. Changing this updates the
 volume's name.
-{{% /md %}}</dd>
-    <dt class="property-optional"
+{{% /md %}}</dd><dt class="property-optional"
             title="Optional">
         <span id="state_region_csharp">
 <a href="#state_region_csharp" style="color: inherit; text-decoration: inherit;">Region</a>
@@ -1199,8 +1107,7 @@ volume's name.
     <dd>{{% md %}}The region in which to create the volume. If
 omitted, the `region` argument of the provider is used. Changing this
 creates a new volume.
-{{% /md %}}</dd>
-    <dt class="property-optional"
+{{% /md %}}</dd><dt class="property-optional"
             title="Optional">
         <span id="state_schedulerhints_csharp">
 <a href="#state_schedulerhints_csharp" style="color: inherit; text-decoration: inherit;">Scheduler<wbr>Hints</a>
@@ -1210,8 +1117,7 @@ creates a new volume.
     </dt>
     <dd>{{% md %}}Provide the Cinder scheduler with hints on where
 to instantiate a volume in the OpenStack cloud. The available hints are described below.
-{{% /md %}}</dd>
-    <dt class="property-optional"
+{{% /md %}}</dd><dt class="property-optional"
             title="Optional">
         <span id="state_size_csharp">
 <a href="#state_size_csharp" style="color: inherit; text-decoration: inherit;">Size</a>
@@ -1221,8 +1127,7 @@ to instantiate a volume in the OpenStack cloud. The available hints are describe
     </dt>
     <dd>{{% md %}}The size of the volume to create (in gigabytes). Changing
 this creates a new volume.
-{{% /md %}}</dd>
-    <dt class="property-optional"
+{{% /md %}}</dd><dt class="property-optional"
             title="Optional">
         <span id="state_snapshotid_csharp">
 <a href="#state_snapshotid_csharp" style="color: inherit; text-decoration: inherit;">Snapshot<wbr>Id</a>
@@ -1232,8 +1137,7 @@ this creates a new volume.
     </dt>
     <dd>{{% md %}}The snapshot ID from which to create the volume.
 Changing this creates a new volume.
-{{% /md %}}</dd>
-    <dt class="property-optional"
+{{% /md %}}</dd><dt class="property-optional"
             title="Optional">
         <span id="state_sourcereplica_csharp">
 <a href="#state_sourcereplica_csharp" style="color: inherit; text-decoration: inherit;">Source<wbr>Replica</a>
@@ -1242,8 +1146,7 @@ Changing this creates a new volume.
         <span class="property-type">string</span>
     </dt>
     <dd>{{% md %}}The volume ID to replicate with.
-{{% /md %}}</dd>
-    <dt class="property-optional"
+{{% /md %}}</dd><dt class="property-optional"
             title="Optional">
         <span id="state_sourcevolid_csharp">
 <a href="#state_sourcevolid_csharp" style="color: inherit; text-decoration: inherit;">Source<wbr>Vol<wbr>Id</a>
@@ -1253,8 +1156,7 @@ Changing this creates a new volume.
     </dt>
     <dd>{{% md %}}The volume ID from which to create the volume.
 Changing this creates a new volume.
-{{% /md %}}</dd>
-    <dt class="property-optional"
+{{% /md %}}</dd><dt class="property-optional"
             title="Optional">
         <span id="state_volumetype_csharp">
 <a href="#state_volumetype_csharp" style="color: inherit; text-decoration: inherit;">Volume<wbr>Type</a>
@@ -1264,14 +1166,11 @@ Changing this creates a new volume.
     </dt>
     <dd>{{% md %}}The type of volume to create.
 Changing this creates a new volume.
-{{% /md %}}</dd>
-</dl>
+{{% /md %}}</dd></dl>
 {{% /choosable %}}
 
 {{% choosable language go %}}
-<dl class="resources-properties">
-
-    <dt class="property-optional"
+<dl class="resources-properties"><dt class="property-optional"
             title="Optional">
         <span id="state_attachments_go">
 <a href="#state_attachments_go" style="color: inherit; text-decoration: inherit;">Attachments</a>
@@ -1282,8 +1181,7 @@ Changing this creates a new volume.
     <dd>{{% md %}}If a volume is attached to an instance, this attribute will
 display the Attachment ID, Instance ID, and the Device as the Instance
 sees it.
-{{% /md %}}</dd>
-    <dt class="property-optional"
+{{% /md %}}</dd><dt class="property-optional"
             title="Optional">
         <span id="state_availabilityzone_go">
 <a href="#state_availabilityzone_go" style="color: inherit; text-decoration: inherit;">Availability<wbr>Zone</a>
@@ -1293,8 +1191,7 @@ sees it.
     </dt>
     <dd>{{% md %}}The availability zone for the volume.
 Changing this creates a new volume.
-{{% /md %}}</dd>
-    <dt class="property-optional"
+{{% /md %}}</dd><dt class="property-optional"
             title="Optional">
         <span id="state_consistencygroupid_go">
 <a href="#state_consistencygroupid_go" style="color: inherit; text-decoration: inherit;">Consistency<wbr>Group<wbr>Id</a>
@@ -1304,8 +1201,7 @@ Changing this creates a new volume.
     </dt>
     <dd>{{% md %}}The consistency group to place the volume
 in.
-{{% /md %}}</dd>
-    <dt class="property-optional"
+{{% /md %}}</dd><dt class="property-optional"
             title="Optional">
         <span id="state_description_go">
 <a href="#state_description_go" style="color: inherit; text-decoration: inherit;">Description</a>
@@ -1315,8 +1211,7 @@ in.
     </dt>
     <dd>{{% md %}}A description of the volume. Changing this updates
 the volume's description.
-{{% /md %}}</dd>
-    <dt class="property-optional"
+{{% /md %}}</dd><dt class="property-optional"
             title="Optional">
         <span id="state_imageid_go">
 <a href="#state_imageid_go" style="color: inherit; text-decoration: inherit;">Image<wbr>Id</a>
@@ -1326,8 +1221,7 @@ the volume's description.
     </dt>
     <dd>{{% md %}}The image ID from which to create the volume.
 Changing this creates a new volume.
-{{% /md %}}</dd>
-    <dt class="property-optional"
+{{% /md %}}</dd><dt class="property-optional"
             title="Optional">
         <span id="state_metadata_go">
 <a href="#state_metadata_go" style="color: inherit; text-decoration: inherit;">Metadata</a>
@@ -1337,8 +1231,7 @@ Changing this creates a new volume.
     </dt>
     <dd>{{% md %}}Metadata key/value pairs to associate with the volume.
 Changing this updates the existing volume metadata.
-{{% /md %}}</dd>
-    <dt class="property-optional"
+{{% /md %}}</dd><dt class="property-optional"
             title="Optional">
         <span id="state_name_go">
 <a href="#state_name_go" style="color: inherit; text-decoration: inherit;">Name</a>
@@ -1348,8 +1241,7 @@ Changing this updates the existing volume metadata.
     </dt>
     <dd>{{% md %}}A unique name for the volume. Changing this updates the
 volume's name.
-{{% /md %}}</dd>
-    <dt class="property-optional"
+{{% /md %}}</dd><dt class="property-optional"
             title="Optional">
         <span id="state_region_go">
 <a href="#state_region_go" style="color: inherit; text-decoration: inherit;">Region</a>
@@ -1360,8 +1252,7 @@ volume's name.
     <dd>{{% md %}}The region in which to create the volume. If
 omitted, the `region` argument of the provider is used. Changing this
 creates a new volume.
-{{% /md %}}</dd>
-    <dt class="property-optional"
+{{% /md %}}</dd><dt class="property-optional"
             title="Optional">
         <span id="state_schedulerhints_go">
 <a href="#state_schedulerhints_go" style="color: inherit; text-decoration: inherit;">Scheduler<wbr>Hints</a>
@@ -1371,8 +1262,7 @@ creates a new volume.
     </dt>
     <dd>{{% md %}}Provide the Cinder scheduler with hints on where
 to instantiate a volume in the OpenStack cloud. The available hints are described below.
-{{% /md %}}</dd>
-    <dt class="property-optional"
+{{% /md %}}</dd><dt class="property-optional"
             title="Optional">
         <span id="state_size_go">
 <a href="#state_size_go" style="color: inherit; text-decoration: inherit;">Size</a>
@@ -1382,8 +1272,7 @@ to instantiate a volume in the OpenStack cloud. The available hints are describe
     </dt>
     <dd>{{% md %}}The size of the volume to create (in gigabytes). Changing
 this creates a new volume.
-{{% /md %}}</dd>
-    <dt class="property-optional"
+{{% /md %}}</dd><dt class="property-optional"
             title="Optional">
         <span id="state_snapshotid_go">
 <a href="#state_snapshotid_go" style="color: inherit; text-decoration: inherit;">Snapshot<wbr>Id</a>
@@ -1393,8 +1282,7 @@ this creates a new volume.
     </dt>
     <dd>{{% md %}}The snapshot ID from which to create the volume.
 Changing this creates a new volume.
-{{% /md %}}</dd>
-    <dt class="property-optional"
+{{% /md %}}</dd><dt class="property-optional"
             title="Optional">
         <span id="state_sourcereplica_go">
 <a href="#state_sourcereplica_go" style="color: inherit; text-decoration: inherit;">Source<wbr>Replica</a>
@@ -1403,8 +1291,7 @@ Changing this creates a new volume.
         <span class="property-type">string</span>
     </dt>
     <dd>{{% md %}}The volume ID to replicate with.
-{{% /md %}}</dd>
-    <dt class="property-optional"
+{{% /md %}}</dd><dt class="property-optional"
             title="Optional">
         <span id="state_sourcevolid_go">
 <a href="#state_sourcevolid_go" style="color: inherit; text-decoration: inherit;">Source<wbr>Vol<wbr>Id</a>
@@ -1414,8 +1301,7 @@ Changing this creates a new volume.
     </dt>
     <dd>{{% md %}}The volume ID from which to create the volume.
 Changing this creates a new volume.
-{{% /md %}}</dd>
-    <dt class="property-optional"
+{{% /md %}}</dd><dt class="property-optional"
             title="Optional">
         <span id="state_volumetype_go">
 <a href="#state_volumetype_go" style="color: inherit; text-decoration: inherit;">Volume<wbr>Type</a>
@@ -1425,14 +1311,11 @@ Changing this creates a new volume.
     </dt>
     <dd>{{% md %}}The type of volume to create.
 Changing this creates a new volume.
-{{% /md %}}</dd>
-</dl>
+{{% /md %}}</dd></dl>
 {{% /choosable %}}
 
 {{% choosable language nodejs %}}
-<dl class="resources-properties">
-
-    <dt class="property-optional"
+<dl class="resources-properties"><dt class="property-optional"
             title="Optional">
         <span id="state_attachments_nodejs">
 <a href="#state_attachments_nodejs" style="color: inherit; text-decoration: inherit;">attachments</a>
@@ -1443,8 +1326,7 @@ Changing this creates a new volume.
     <dd>{{% md %}}If a volume is attached to an instance, this attribute will
 display the Attachment ID, Instance ID, and the Device as the Instance
 sees it.
-{{% /md %}}</dd>
-    <dt class="property-optional"
+{{% /md %}}</dd><dt class="property-optional"
             title="Optional">
         <span id="state_availabilityzone_nodejs">
 <a href="#state_availabilityzone_nodejs" style="color: inherit; text-decoration: inherit;">availability<wbr>Zone</a>
@@ -1454,8 +1336,7 @@ sees it.
     </dt>
     <dd>{{% md %}}The availability zone for the volume.
 Changing this creates a new volume.
-{{% /md %}}</dd>
-    <dt class="property-optional"
+{{% /md %}}</dd><dt class="property-optional"
             title="Optional">
         <span id="state_consistencygroupid_nodejs">
 <a href="#state_consistencygroupid_nodejs" style="color: inherit; text-decoration: inherit;">consistency<wbr>Group<wbr>Id</a>
@@ -1465,8 +1346,7 @@ Changing this creates a new volume.
     </dt>
     <dd>{{% md %}}The consistency group to place the volume
 in.
-{{% /md %}}</dd>
-    <dt class="property-optional"
+{{% /md %}}</dd><dt class="property-optional"
             title="Optional">
         <span id="state_description_nodejs">
 <a href="#state_description_nodejs" style="color: inherit; text-decoration: inherit;">description</a>
@@ -1476,8 +1356,7 @@ in.
     </dt>
     <dd>{{% md %}}A description of the volume. Changing this updates
 the volume's description.
-{{% /md %}}</dd>
-    <dt class="property-optional"
+{{% /md %}}</dd><dt class="property-optional"
             title="Optional">
         <span id="state_imageid_nodejs">
 <a href="#state_imageid_nodejs" style="color: inherit; text-decoration: inherit;">image<wbr>Id</a>
@@ -1487,8 +1366,7 @@ the volume's description.
     </dt>
     <dd>{{% md %}}The image ID from which to create the volume.
 Changing this creates a new volume.
-{{% /md %}}</dd>
-    <dt class="property-optional"
+{{% /md %}}</dd><dt class="property-optional"
             title="Optional">
         <span id="state_metadata_nodejs">
 <a href="#state_metadata_nodejs" style="color: inherit; text-decoration: inherit;">metadata</a>
@@ -1498,8 +1376,7 @@ Changing this creates a new volume.
     </dt>
     <dd>{{% md %}}Metadata key/value pairs to associate with the volume.
 Changing this updates the existing volume metadata.
-{{% /md %}}</dd>
-    <dt class="property-optional"
+{{% /md %}}</dd><dt class="property-optional"
             title="Optional">
         <span id="state_name_nodejs">
 <a href="#state_name_nodejs" style="color: inherit; text-decoration: inherit;">name</a>
@@ -1509,8 +1386,7 @@ Changing this updates the existing volume metadata.
     </dt>
     <dd>{{% md %}}A unique name for the volume. Changing this updates the
 volume's name.
-{{% /md %}}</dd>
-    <dt class="property-optional"
+{{% /md %}}</dd><dt class="property-optional"
             title="Optional">
         <span id="state_region_nodejs">
 <a href="#state_region_nodejs" style="color: inherit; text-decoration: inherit;">region</a>
@@ -1521,8 +1397,7 @@ volume's name.
     <dd>{{% md %}}The region in which to create the volume. If
 omitted, the `region` argument of the provider is used. Changing this
 creates a new volume.
-{{% /md %}}</dd>
-    <dt class="property-optional"
+{{% /md %}}</dd><dt class="property-optional"
             title="Optional">
         <span id="state_schedulerhints_nodejs">
 <a href="#state_schedulerhints_nodejs" style="color: inherit; text-decoration: inherit;">scheduler<wbr>Hints</a>
@@ -1532,8 +1407,7 @@ creates a new volume.
     </dt>
     <dd>{{% md %}}Provide the Cinder scheduler with hints on where
 to instantiate a volume in the OpenStack cloud. The available hints are described below.
-{{% /md %}}</dd>
-    <dt class="property-optional"
+{{% /md %}}</dd><dt class="property-optional"
             title="Optional">
         <span id="state_size_nodejs">
 <a href="#state_size_nodejs" style="color: inherit; text-decoration: inherit;">size</a>
@@ -1543,8 +1417,7 @@ to instantiate a volume in the OpenStack cloud. The available hints are describe
     </dt>
     <dd>{{% md %}}The size of the volume to create (in gigabytes). Changing
 this creates a new volume.
-{{% /md %}}</dd>
-    <dt class="property-optional"
+{{% /md %}}</dd><dt class="property-optional"
             title="Optional">
         <span id="state_snapshotid_nodejs">
 <a href="#state_snapshotid_nodejs" style="color: inherit; text-decoration: inherit;">snapshot<wbr>Id</a>
@@ -1554,8 +1427,7 @@ this creates a new volume.
     </dt>
     <dd>{{% md %}}The snapshot ID from which to create the volume.
 Changing this creates a new volume.
-{{% /md %}}</dd>
-    <dt class="property-optional"
+{{% /md %}}</dd><dt class="property-optional"
             title="Optional">
         <span id="state_sourcereplica_nodejs">
 <a href="#state_sourcereplica_nodejs" style="color: inherit; text-decoration: inherit;">source<wbr>Replica</a>
@@ -1564,8 +1436,7 @@ Changing this creates a new volume.
         <span class="property-type">string</span>
     </dt>
     <dd>{{% md %}}The volume ID to replicate with.
-{{% /md %}}</dd>
-    <dt class="property-optional"
+{{% /md %}}</dd><dt class="property-optional"
             title="Optional">
         <span id="state_sourcevolid_nodejs">
 <a href="#state_sourcevolid_nodejs" style="color: inherit; text-decoration: inherit;">source<wbr>Vol<wbr>Id</a>
@@ -1575,8 +1446,7 @@ Changing this creates a new volume.
     </dt>
     <dd>{{% md %}}The volume ID from which to create the volume.
 Changing this creates a new volume.
-{{% /md %}}</dd>
-    <dt class="property-optional"
+{{% /md %}}</dd><dt class="property-optional"
             title="Optional">
         <span id="state_volumetype_nodejs">
 <a href="#state_volumetype_nodejs" style="color: inherit; text-decoration: inherit;">volume<wbr>Type</a>
@@ -1586,14 +1456,11 @@ Changing this creates a new volume.
     </dt>
     <dd>{{% md %}}The type of volume to create.
 Changing this creates a new volume.
-{{% /md %}}</dd>
-</dl>
+{{% /md %}}</dd></dl>
 {{% /choosable %}}
 
 {{% choosable language python %}}
-<dl class="resources-properties">
-
-    <dt class="property-optional"
+<dl class="resources-properties"><dt class="property-optional"
             title="Optional">
         <span id="state_attachments_python">
 <a href="#state_attachments_python" style="color: inherit; text-decoration: inherit;">attachments</a>
@@ -1604,8 +1471,7 @@ Changing this creates a new volume.
     <dd>{{% md %}}If a volume is attached to an instance, this attribute will
 display the Attachment ID, Instance ID, and the Device as the Instance
 sees it.
-{{% /md %}}</dd>
-    <dt class="property-optional"
+{{% /md %}}</dd><dt class="property-optional"
             title="Optional">
         <span id="state_availability_zone_python">
 <a href="#state_availability_zone_python" style="color: inherit; text-decoration: inherit;">availability_<wbr>zone</a>
@@ -1615,8 +1481,7 @@ sees it.
     </dt>
     <dd>{{% md %}}The availability zone for the volume.
 Changing this creates a new volume.
-{{% /md %}}</dd>
-    <dt class="property-optional"
+{{% /md %}}</dd><dt class="property-optional"
             title="Optional">
         <span id="state_consistency_group_id_python">
 <a href="#state_consistency_group_id_python" style="color: inherit; text-decoration: inherit;">consistency_<wbr>group_<wbr>id</a>
@@ -1626,8 +1491,7 @@ Changing this creates a new volume.
     </dt>
     <dd>{{% md %}}The consistency group to place the volume
 in.
-{{% /md %}}</dd>
-    <dt class="property-optional"
+{{% /md %}}</dd><dt class="property-optional"
             title="Optional">
         <span id="state_description_python">
 <a href="#state_description_python" style="color: inherit; text-decoration: inherit;">description</a>
@@ -1637,8 +1501,7 @@ in.
     </dt>
     <dd>{{% md %}}A description of the volume. Changing this updates
 the volume's description.
-{{% /md %}}</dd>
-    <dt class="property-optional"
+{{% /md %}}</dd><dt class="property-optional"
             title="Optional">
         <span id="state_image_id_python">
 <a href="#state_image_id_python" style="color: inherit; text-decoration: inherit;">image_<wbr>id</a>
@@ -1648,8 +1511,7 @@ the volume's description.
     </dt>
     <dd>{{% md %}}The image ID from which to create the volume.
 Changing this creates a new volume.
-{{% /md %}}</dd>
-    <dt class="property-optional"
+{{% /md %}}</dd><dt class="property-optional"
             title="Optional">
         <span id="state_metadata_python">
 <a href="#state_metadata_python" style="color: inherit; text-decoration: inherit;">metadata</a>
@@ -1659,8 +1521,7 @@ Changing this creates a new volume.
     </dt>
     <dd>{{% md %}}Metadata key/value pairs to associate with the volume.
 Changing this updates the existing volume metadata.
-{{% /md %}}</dd>
-    <dt class="property-optional"
+{{% /md %}}</dd><dt class="property-optional"
             title="Optional">
         <span id="state_name_python">
 <a href="#state_name_python" style="color: inherit; text-decoration: inherit;">name</a>
@@ -1670,8 +1531,7 @@ Changing this updates the existing volume metadata.
     </dt>
     <dd>{{% md %}}A unique name for the volume. Changing this updates the
 volume's name.
-{{% /md %}}</dd>
-    <dt class="property-optional"
+{{% /md %}}</dd><dt class="property-optional"
             title="Optional">
         <span id="state_region_python">
 <a href="#state_region_python" style="color: inherit; text-decoration: inherit;">region</a>
@@ -1682,8 +1542,7 @@ volume's name.
     <dd>{{% md %}}The region in which to create the volume. If
 omitted, the `region` argument of the provider is used. Changing this
 creates a new volume.
-{{% /md %}}</dd>
-    <dt class="property-optional"
+{{% /md %}}</dd><dt class="property-optional"
             title="Optional">
         <span id="state_scheduler_hints_python">
 <a href="#state_scheduler_hints_python" style="color: inherit; text-decoration: inherit;">scheduler_<wbr>hints</a>
@@ -1693,8 +1552,7 @@ creates a new volume.
     </dt>
     <dd>{{% md %}}Provide the Cinder scheduler with hints on where
 to instantiate a volume in the OpenStack cloud. The available hints are described below.
-{{% /md %}}</dd>
-    <dt class="property-optional"
+{{% /md %}}</dd><dt class="property-optional"
             title="Optional">
         <span id="state_size_python">
 <a href="#state_size_python" style="color: inherit; text-decoration: inherit;">size</a>
@@ -1704,8 +1562,7 @@ to instantiate a volume in the OpenStack cloud. The available hints are describe
     </dt>
     <dd>{{% md %}}The size of the volume to create (in gigabytes). Changing
 this creates a new volume.
-{{% /md %}}</dd>
-    <dt class="property-optional"
+{{% /md %}}</dd><dt class="property-optional"
             title="Optional">
         <span id="state_snapshot_id_python">
 <a href="#state_snapshot_id_python" style="color: inherit; text-decoration: inherit;">snapshot_<wbr>id</a>
@@ -1715,8 +1572,7 @@ this creates a new volume.
     </dt>
     <dd>{{% md %}}The snapshot ID from which to create the volume.
 Changing this creates a new volume.
-{{% /md %}}</dd>
-    <dt class="property-optional"
+{{% /md %}}</dd><dt class="property-optional"
             title="Optional">
         <span id="state_source_replica_python">
 <a href="#state_source_replica_python" style="color: inherit; text-decoration: inherit;">source_<wbr>replica</a>
@@ -1725,8 +1581,7 @@ Changing this creates a new volume.
         <span class="property-type">str</span>
     </dt>
     <dd>{{% md %}}The volume ID to replicate with.
-{{% /md %}}</dd>
-    <dt class="property-optional"
+{{% /md %}}</dd><dt class="property-optional"
             title="Optional">
         <span id="state_source_vol_id_python">
 <a href="#state_source_vol_id_python" style="color: inherit; text-decoration: inherit;">source_<wbr>vol_<wbr>id</a>
@@ -1736,8 +1591,7 @@ Changing this creates a new volume.
     </dt>
     <dd>{{% md %}}The volume ID from which to create the volume.
 Changing this creates a new volume.
-{{% /md %}}</dd>
-    <dt class="property-optional"
+{{% /md %}}</dd><dt class="property-optional"
             title="Optional">
         <span id="state_volume_type_python">
 <a href="#state_volume_type_python" style="color: inherit; text-decoration: inherit;">volume_<wbr>type</a>
@@ -1747,8 +1601,7 @@ Changing this creates a new volume.
     </dt>
     <dd>{{% md %}}The type of volume to create.
 Changing this creates a new volume.
-{{% /md %}}</dd>
-</dl>
+{{% /md %}}</dd></dl>
 {{% /choosable %}}
 
 
@@ -1763,9 +1616,7 @@ Changing this creates a new volume.
 <h4 id="volumev2attachment">Volume<wbr>V2Attachment</h4>
 
 {{% choosable language csharp %}}
-<dl class="resources-properties">
-
-    <dt class="property-optional"
+<dl class="resources-properties"><dt class="property-optional"
             title="Optional">
         <span id="device_csharp">
 <a href="#device_csharp" style="color: inherit; text-decoration: inherit;">Device</a>
@@ -1773,8 +1624,7 @@ Changing this creates a new volume.
         <span class="property-indicator"></span>
         <span class="property-type">string</span>
     </dt>
-    <dd>{{% md %}}{{% /md %}}</dd>
-    <dt class="property-optional"
+    <dd>{{% md %}}{{% /md %}}</dd><dt class="property-optional"
             title="Optional">
         <span id="id_csharp">
 <a href="#id_csharp" style="color: inherit; text-decoration: inherit;">Id</a>
@@ -1782,8 +1632,7 @@ Changing this creates a new volume.
         <span class="property-indicator"></span>
         <span class="property-type">string</span>
     </dt>
-    <dd>{{% md %}}{{% /md %}}</dd>
-    <dt class="property-optional"
+    <dd>{{% md %}}{{% /md %}}</dd><dt class="property-optional"
             title="Optional">
         <span id="instanceid_csharp">
 <a href="#instanceid_csharp" style="color: inherit; text-decoration: inherit;">Instance<wbr>Id</a>
@@ -1791,14 +1640,11 @@ Changing this creates a new volume.
         <span class="property-indicator"></span>
         <span class="property-type">string</span>
     </dt>
-    <dd>{{% md %}}{{% /md %}}</dd>
-</dl>
+    <dd>{{% md %}}{{% /md %}}</dd></dl>
 {{% /choosable %}}
 
 {{% choosable language go %}}
-<dl class="resources-properties">
-
-    <dt class="property-optional"
+<dl class="resources-properties"><dt class="property-optional"
             title="Optional">
         <span id="device_go">
 <a href="#device_go" style="color: inherit; text-decoration: inherit;">Device</a>
@@ -1806,8 +1652,7 @@ Changing this creates a new volume.
         <span class="property-indicator"></span>
         <span class="property-type">string</span>
     </dt>
-    <dd>{{% md %}}{{% /md %}}</dd>
-    <dt class="property-optional"
+    <dd>{{% md %}}{{% /md %}}</dd><dt class="property-optional"
             title="Optional">
         <span id="id_go">
 <a href="#id_go" style="color: inherit; text-decoration: inherit;">Id</a>
@@ -1815,8 +1660,7 @@ Changing this creates a new volume.
         <span class="property-indicator"></span>
         <span class="property-type">string</span>
     </dt>
-    <dd>{{% md %}}{{% /md %}}</dd>
-    <dt class="property-optional"
+    <dd>{{% md %}}{{% /md %}}</dd><dt class="property-optional"
             title="Optional">
         <span id="instanceid_go">
 <a href="#instanceid_go" style="color: inherit; text-decoration: inherit;">Instance<wbr>Id</a>
@@ -1824,14 +1668,11 @@ Changing this creates a new volume.
         <span class="property-indicator"></span>
         <span class="property-type">string</span>
     </dt>
-    <dd>{{% md %}}{{% /md %}}</dd>
-</dl>
+    <dd>{{% md %}}{{% /md %}}</dd></dl>
 {{% /choosable %}}
 
 {{% choosable language nodejs %}}
-<dl class="resources-properties">
-
-    <dt class="property-optional"
+<dl class="resources-properties"><dt class="property-optional"
             title="Optional">
         <span id="device_nodejs">
 <a href="#device_nodejs" style="color: inherit; text-decoration: inherit;">device</a>
@@ -1839,8 +1680,7 @@ Changing this creates a new volume.
         <span class="property-indicator"></span>
         <span class="property-type">string</span>
     </dt>
-    <dd>{{% md %}}{{% /md %}}</dd>
-    <dt class="property-optional"
+    <dd>{{% md %}}{{% /md %}}</dd><dt class="property-optional"
             title="Optional">
         <span id="id_nodejs">
 <a href="#id_nodejs" style="color: inherit; text-decoration: inherit;">id</a>
@@ -1848,8 +1688,7 @@ Changing this creates a new volume.
         <span class="property-indicator"></span>
         <span class="property-type">string</span>
     </dt>
-    <dd>{{% md %}}{{% /md %}}</dd>
-    <dt class="property-optional"
+    <dd>{{% md %}}{{% /md %}}</dd><dt class="property-optional"
             title="Optional">
         <span id="instanceid_nodejs">
 <a href="#instanceid_nodejs" style="color: inherit; text-decoration: inherit;">instance<wbr>Id</a>
@@ -1857,14 +1696,11 @@ Changing this creates a new volume.
         <span class="property-indicator"></span>
         <span class="property-type">string</span>
     </dt>
-    <dd>{{% md %}}{{% /md %}}</dd>
-</dl>
+    <dd>{{% md %}}{{% /md %}}</dd></dl>
 {{% /choosable %}}
 
 {{% choosable language python %}}
-<dl class="resources-properties">
-
-    <dt class="property-optional"
+<dl class="resources-properties"><dt class="property-optional"
             title="Optional">
         <span id="device_python">
 <a href="#device_python" style="color: inherit; text-decoration: inherit;">device</a>
@@ -1872,8 +1708,7 @@ Changing this creates a new volume.
         <span class="property-indicator"></span>
         <span class="property-type">str</span>
     </dt>
-    <dd>{{% md %}}{{% /md %}}</dd>
-    <dt class="property-optional"
+    <dd>{{% md %}}{{% /md %}}</dd><dt class="property-optional"
             title="Optional">
         <span id="id_python">
 <a href="#id_python" style="color: inherit; text-decoration: inherit;">id</a>
@@ -1881,8 +1716,7 @@ Changing this creates a new volume.
         <span class="property-indicator"></span>
         <span class="property-type">str</span>
     </dt>
-    <dd>{{% md %}}{{% /md %}}</dd>
-    <dt class="property-optional"
+    <dd>{{% md %}}{{% /md %}}</dd><dt class="property-optional"
             title="Optional">
         <span id="instance_id_python">
 <a href="#instance_id_python" style="color: inherit; text-decoration: inherit;">instance_<wbr>id</a>
@@ -1890,16 +1724,13 @@ Changing this creates a new volume.
         <span class="property-indicator"></span>
         <span class="property-type">str</span>
     </dt>
-    <dd>{{% md %}}{{% /md %}}</dd>
-</dl>
+    <dd>{{% md %}}{{% /md %}}</dd></dl>
 {{% /choosable %}}
 
 <h4 id="volumev2schedulerhint">Volume<wbr>V2Scheduler<wbr>Hint</h4>
 
 {{% choosable language csharp %}}
-<dl class="resources-properties">
-
-    <dt class="property-optional"
+<dl class="resources-properties"><dt class="property-optional"
             title="Optional">
         <span id="additionalproperties_csharp">
 <a href="#additionalproperties_csharp" style="color: inherit; text-decoration: inherit;">Additional<wbr>Properties</a>
@@ -1909,8 +1740,7 @@ Changing this creates a new volume.
     </dt>
     <dd>{{% md %}}Arbitrary key/value pairs of additional
 properties to pass to the scheduler.
-{{% /md %}}</dd>
-    <dt class="property-optional"
+{{% /md %}}</dd><dt class="property-optional"
             title="Optional">
         <span id="differenthosts_csharp">
 <a href="#differenthosts_csharp" style="color: inherit; text-decoration: inherit;">Different<wbr>Hosts</a>
@@ -1920,8 +1750,7 @@ properties to pass to the scheduler.
     </dt>
     <dd>{{% md %}}The volume should be scheduled on a 
 different host from the set of volumes specified in the list provided.
-{{% /md %}}</dd>
-    <dt class="property-optional"
+{{% /md %}}</dd><dt class="property-optional"
             title="Optional">
         <span id="localtoinstance_csharp">
 <a href="#localtoinstance_csharp" style="color: inherit; text-decoration: inherit;">Local<wbr>To<wbr>Instance</a>
@@ -1931,8 +1760,7 @@ different host from the set of volumes specified in the list provided.
     </dt>
     <dd>{{% md %}}An instance UUID. The volume should be 
 scheduled on the same host as the instance.
-{{% /md %}}</dd>
-    <dt class="property-optional"
+{{% /md %}}</dd><dt class="property-optional"
             title="Optional">
         <span id="query_csharp">
 <a href="#query_csharp" style="color: inherit; text-decoration: inherit;">Query</a>
@@ -1946,8 +1774,7 @@ which is described
 [here](https://docs.openstack.org/cinder/latest/configuration/block-storage/scheduler-filters.html#jsonfilter).
 At this time, only simple queries are supported. Compound queries using
 `and`, `or`, or `not` are not supported. An example of a simple query is:
-{{% /md %}}</dd>
-    <dt class="property-optional"
+{{% /md %}}</dd><dt class="property-optional"
             title="Optional">
         <span id="samehosts_csharp">
 <a href="#samehosts_csharp" style="color: inherit; text-decoration: inherit;">Same<wbr>Hosts</a>
@@ -1957,14 +1784,11 @@ At this time, only simple queries are supported. Compound queries using
     </dt>
     <dd>{{% md %}}A list of volume UUIDs. The volume should be
 scheduled on the same host as another volume specified in the list provided.
-{{% /md %}}</dd>
-</dl>
+{{% /md %}}</dd></dl>
 {{% /choosable %}}
 
 {{% choosable language go %}}
-<dl class="resources-properties">
-
-    <dt class="property-optional"
+<dl class="resources-properties"><dt class="property-optional"
             title="Optional">
         <span id="additionalproperties_go">
 <a href="#additionalproperties_go" style="color: inherit; text-decoration: inherit;">Additional<wbr>Properties</a>
@@ -1974,8 +1798,7 @@ scheduled on the same host as another volume specified in the list provided.
     </dt>
     <dd>{{% md %}}Arbitrary key/value pairs of additional
 properties to pass to the scheduler.
-{{% /md %}}</dd>
-    <dt class="property-optional"
+{{% /md %}}</dd><dt class="property-optional"
             title="Optional">
         <span id="differenthosts_go">
 <a href="#differenthosts_go" style="color: inherit; text-decoration: inherit;">Different<wbr>Hosts</a>
@@ -1985,8 +1808,7 @@ properties to pass to the scheduler.
     </dt>
     <dd>{{% md %}}The volume should be scheduled on a 
 different host from the set of volumes specified in the list provided.
-{{% /md %}}</dd>
-    <dt class="property-optional"
+{{% /md %}}</dd><dt class="property-optional"
             title="Optional">
         <span id="localtoinstance_go">
 <a href="#localtoinstance_go" style="color: inherit; text-decoration: inherit;">Local<wbr>To<wbr>Instance</a>
@@ -1996,8 +1818,7 @@ different host from the set of volumes specified in the list provided.
     </dt>
     <dd>{{% md %}}An instance UUID. The volume should be 
 scheduled on the same host as the instance.
-{{% /md %}}</dd>
-    <dt class="property-optional"
+{{% /md %}}</dd><dt class="property-optional"
             title="Optional">
         <span id="query_go">
 <a href="#query_go" style="color: inherit; text-decoration: inherit;">Query</a>
@@ -2011,8 +1832,7 @@ which is described
 [here](https://docs.openstack.org/cinder/latest/configuration/block-storage/scheduler-filters.html#jsonfilter).
 At this time, only simple queries are supported. Compound queries using
 `and`, `or`, or `not` are not supported. An example of a simple query is:
-{{% /md %}}</dd>
-    <dt class="property-optional"
+{{% /md %}}</dd><dt class="property-optional"
             title="Optional">
         <span id="samehosts_go">
 <a href="#samehosts_go" style="color: inherit; text-decoration: inherit;">Same<wbr>Hosts</a>
@@ -2022,14 +1842,11 @@ At this time, only simple queries are supported. Compound queries using
     </dt>
     <dd>{{% md %}}A list of volume UUIDs. The volume should be
 scheduled on the same host as another volume specified in the list provided.
-{{% /md %}}</dd>
-</dl>
+{{% /md %}}</dd></dl>
 {{% /choosable %}}
 
 {{% choosable language nodejs %}}
-<dl class="resources-properties">
-
-    <dt class="property-optional"
+<dl class="resources-properties"><dt class="property-optional"
             title="Optional">
         <span id="additionalproperties_nodejs">
 <a href="#additionalproperties_nodejs" style="color: inherit; text-decoration: inherit;">additional<wbr>Properties</a>
@@ -2039,8 +1856,7 @@ scheduled on the same host as another volume specified in the list provided.
     </dt>
     <dd>{{% md %}}Arbitrary key/value pairs of additional
 properties to pass to the scheduler.
-{{% /md %}}</dd>
-    <dt class="property-optional"
+{{% /md %}}</dd><dt class="property-optional"
             title="Optional">
         <span id="differenthosts_nodejs">
 <a href="#differenthosts_nodejs" style="color: inherit; text-decoration: inherit;">different<wbr>Hosts</a>
@@ -2050,8 +1866,7 @@ properties to pass to the scheduler.
     </dt>
     <dd>{{% md %}}The volume should be scheduled on a 
 different host from the set of volumes specified in the list provided.
-{{% /md %}}</dd>
-    <dt class="property-optional"
+{{% /md %}}</dd><dt class="property-optional"
             title="Optional">
         <span id="localtoinstance_nodejs">
 <a href="#localtoinstance_nodejs" style="color: inherit; text-decoration: inherit;">local<wbr>To<wbr>Instance</a>
@@ -2061,8 +1876,7 @@ different host from the set of volumes specified in the list provided.
     </dt>
     <dd>{{% md %}}An instance UUID. The volume should be 
 scheduled on the same host as the instance.
-{{% /md %}}</dd>
-    <dt class="property-optional"
+{{% /md %}}</dd><dt class="property-optional"
             title="Optional">
         <span id="query_nodejs">
 <a href="#query_nodejs" style="color: inherit; text-decoration: inherit;">query</a>
@@ -2076,8 +1890,7 @@ which is described
 [here](https://docs.openstack.org/cinder/latest/configuration/block-storage/scheduler-filters.html#jsonfilter).
 At this time, only simple queries are supported. Compound queries using
 `and`, `or`, or `not` are not supported. An example of a simple query is:
-{{% /md %}}</dd>
-    <dt class="property-optional"
+{{% /md %}}</dd><dt class="property-optional"
             title="Optional">
         <span id="samehosts_nodejs">
 <a href="#samehosts_nodejs" style="color: inherit; text-decoration: inherit;">same<wbr>Hosts</a>
@@ -2087,14 +1900,11 @@ At this time, only simple queries are supported. Compound queries using
     </dt>
     <dd>{{% md %}}A list of volume UUIDs. The volume should be
 scheduled on the same host as another volume specified in the list provided.
-{{% /md %}}</dd>
-</dl>
+{{% /md %}}</dd></dl>
 {{% /choosable %}}
 
 {{% choosable language python %}}
-<dl class="resources-properties">
-
-    <dt class="property-optional"
+<dl class="resources-properties"><dt class="property-optional"
             title="Optional">
         <span id="additional_properties_python">
 <a href="#additional_properties_python" style="color: inherit; text-decoration: inherit;">additional_<wbr>properties</a>
@@ -2104,8 +1914,7 @@ scheduled on the same host as another volume specified in the list provided.
     </dt>
     <dd>{{% md %}}Arbitrary key/value pairs of additional
 properties to pass to the scheduler.
-{{% /md %}}</dd>
-    <dt class="property-optional"
+{{% /md %}}</dd><dt class="property-optional"
             title="Optional">
         <span id="different_hosts_python">
 <a href="#different_hosts_python" style="color: inherit; text-decoration: inherit;">different_<wbr>hosts</a>
@@ -2115,8 +1924,7 @@ properties to pass to the scheduler.
     </dt>
     <dd>{{% md %}}The volume should be scheduled on a 
 different host from the set of volumes specified in the list provided.
-{{% /md %}}</dd>
-    <dt class="property-optional"
+{{% /md %}}</dd><dt class="property-optional"
             title="Optional">
         <span id="local_to_instance_python">
 <a href="#local_to_instance_python" style="color: inherit; text-decoration: inherit;">local_<wbr>to_<wbr>instance</a>
@@ -2126,8 +1934,7 @@ different host from the set of volumes specified in the list provided.
     </dt>
     <dd>{{% md %}}An instance UUID. The volume should be 
 scheduled on the same host as the instance.
-{{% /md %}}</dd>
-    <dt class="property-optional"
+{{% /md %}}</dd><dt class="property-optional"
             title="Optional">
         <span id="query_python">
 <a href="#query_python" style="color: inherit; text-decoration: inherit;">query</a>
@@ -2141,8 +1948,7 @@ which is described
 [here](https://docs.openstack.org/cinder/latest/configuration/block-storage/scheduler-filters.html#jsonfilter).
 At this time, only simple queries are supported. Compound queries using
 `and`, `or`, or `not` are not supported. An example of a simple query is:
-{{% /md %}}</dd>
-    <dt class="property-optional"
+{{% /md %}}</dd><dt class="property-optional"
             title="Optional">
         <span id="same_hosts_python">
 <a href="#same_hosts_python" style="color: inherit; text-decoration: inherit;">same_<wbr>hosts</a>
@@ -2152,8 +1958,7 @@ At this time, only simple queries are supported. Compound queries using
     </dt>
     <dd>{{% md %}}A list of volume UUIDs. The volume should be
 scheduled on the same host as another volume specified in the list provided.
-{{% /md %}}</dd>
-</dl>
+{{% /md %}}</dd></dl>
 {{% /choosable %}}
 ## Import
 
@@ -2174,6 +1979,6 @@ Volumes can be imported using the `id`, e.g.
 	<dt>License</dt>
 	<dd>Apache-2.0</dd>
 	<dt>Notes</dt>
-	<dd>This Pulumi package is based on the [`openstack` Terraform Provider](https://github.com/terraform-provider-openstack/terraform-provider-openstack).</dd>
+	<dd>{{% md %}}This Pulumi package is based on the [`openstack` Terraform Provider](https://github.com/terraform-provider-openstack/terraform-provider-openstack).{{% /md %}}</dd>
 </dl>
 

@@ -36,11 +36,17 @@ To get more information about RegionDisk, see:
 state as plain-text. [Read more about secrets in state](https://www.pulumi.com/docs/intro/concepts/programming-model/#secrets).
 
 {{% examples %}}
+
 ## Example Usage
 
 {{< chooser language "typescript,python,go,csharp" / >}}
+
+
 ### Region Disk Basic
-{{% example csharp %}}
+
+
+{{< example csharp >}}
+
 ```csharp
 using Pulumi;
 using Gcp = Pulumi.Gcp;
@@ -78,9 +84,12 @@ class MyStack : Stack
 }
 ```
 
-{{% /example %}}
 
-{{% example go %}}
+{{< /example >}}
+
+
+{{< example go >}}
+
 ```go
 package main
 
@@ -125,9 +134,12 @@ func main() {
 }
 ```
 
-{{% /example %}}
 
-{{% example python %}}
+{{< /example >}}
+
+
+{{< example python >}}
+
 ```python
 import pulumi
 import pulumi_gcp as gcp
@@ -151,9 +163,12 @@ regiondisk = gcp.compute.RegionDisk("regiondisk",
     ])
 ```
 
-{{% /example %}}
 
-{{% example typescript %}}
+{{< /example >}}
+
+
+{{< example typescript >}}
+
 
 ```typescript
 import * as pulumi from "@pulumi/pulumi";
@@ -181,9 +196,16 @@ const regiondisk = new gcp.compute.RegionDisk("regiondisk", {
 });
 ```
 
-{{% /example %}}
+
+{{< /example >}}
+
+
+
+
 
 {{% /examples %}}
+
+
 
 
 ## Create a RegionDisk Resource {#create}
@@ -208,9 +230,7 @@ const regiondisk = new gcp.compute.RegionDisk("regiondisk", {
 
 {{% choosable language nodejs %}}
 
-<dl class="resources-properties">
-  
-    <dt
+<dl class="resources-properties"><dt
         class="property-required" title="Required">
         <span>name</span>
         <span class="property-indicator"></span>
@@ -218,9 +238,7 @@ const regiondisk = new gcp.compute.RegionDisk("regiondisk", {
     </dt>
     <dd>
       The unique name of the resource.
-    </dd>
-  
-    <dt
+    </dd><dt
         class="property-required" title="Required">
         <span>args</span>
         <span class="property-indicator"></span>
@@ -228,9 +246,7 @@ const regiondisk = new gcp.compute.RegionDisk("regiondisk", {
     </dt>
     <dd>
       The arguments to resource properties.
-    </dd>
-  
-    <dt
+    </dd><dt
         class="property-optional" title="Optional">
         <span>opts</span>
         <span class="property-indicator"></span>
@@ -238,10 +254,7 @@ const regiondisk = new gcp.compute.RegionDisk("regiondisk", {
     </dt>
     <dd>
       Bag of options to control resource&#39;s behavior.
-    </dd>
-  
-
-</dl>
+    </dd></dl>
 
 {{% /choosable %}}
 
@@ -267,9 +280,7 @@ const regiondisk = new gcp.compute.RegionDisk("regiondisk", {
 
 {{% choosable language go %}}
 
-<dl class="resources-properties">
-  
-    <dt
+<dl class="resources-properties"><dt
         class="property-optional" title="Optional">
         <span>ctx</span>
         <span class="property-indicator"></span>
@@ -277,9 +288,7 @@ const regiondisk = new gcp.compute.RegionDisk("regiondisk", {
     </dt>
     <dd>
       Context object for the current deployment.
-    </dd>
-  
-    <dt
+    </dd><dt
         class="property-required" title="Required">
         <span>name</span>
         <span class="property-indicator"></span>
@@ -287,9 +296,7 @@ const regiondisk = new gcp.compute.RegionDisk("regiondisk", {
     </dt>
     <dd>
       The unique name of the resource.
-    </dd>
-  
-    <dt
+    </dd><dt
         class="property-required" title="Required">
         <span>args</span>
         <span class="property-indicator"></span>
@@ -297,9 +304,7 @@ const regiondisk = new gcp.compute.RegionDisk("regiondisk", {
     </dt>
     <dd>
       The arguments to resource properties.
-    </dd>
-  
-    <dt
+    </dd><dt
         class="property-optional" title="Optional">
         <span>opts</span>
         <span class="property-indicator"></span>
@@ -307,18 +312,13 @@ const regiondisk = new gcp.compute.RegionDisk("regiondisk", {
     </dt>
     <dd>
       Bag of options to control resource&#39;s behavior.
-    </dd>
-  
-
-</dl>
+    </dd></dl>
 
 {{% /choosable %}}
 
 {{% choosable language csharp %}}
 
-<dl class="resources-properties">
-  
-    <dt
+<dl class="resources-properties"><dt
         class="property-required" title="Required">
         <span>name</span>
         <span class="property-indicator"></span>
@@ -326,9 +326,7 @@ const regiondisk = new gcp.compute.RegionDisk("regiondisk", {
     </dt>
     <dd>
       The unique name of the resource.
-    </dd>
-  
-    <dt
+    </dd><dt
         class="property-required" title="Required">
         <span>args</span>
         <span class="property-indicator"></span>
@@ -336,9 +334,7 @@ const regiondisk = new gcp.compute.RegionDisk("regiondisk", {
     </dt>
     <dd>
       The arguments to resource properties.
-    </dd>
-  
-    <dt
+    </dd><dt
         class="property-optional" title="Optional">
         <span>opts</span>
         <span class="property-indicator"></span>
@@ -346,10 +342,7 @@ const regiondisk = new gcp.compute.RegionDisk("regiondisk", {
     </dt>
     <dd>
       Bag of options to control resource&#39;s behavior.
-    </dd>
-  
-
-</dl>
+    </dd></dl>
 
 {{% /choosable %}}
 
@@ -364,9 +357,7 @@ The RegionDisk resource accepts the following [input]({{< relref "/docs/intro/co
 
 
 {{% choosable language csharp %}}
-<dl class="resources-properties">
-
-    <dt class="property-required"
+<dl class="resources-properties"><dt class="property-required"
             title="Required">
         <span id="replicazones_csharp">
 <a href="#replicazones_csharp" style="color: inherit; text-decoration: inherit;">Replica<wbr>Zones</a>
@@ -375,8 +366,7 @@ The RegionDisk resource accepts the following [input]({{< relref "/docs/intro/co
         <span class="property-type">List&lt;string&gt;</span>
     </dt>
     <dd>{{% md %}}URLs of the zones where the disk should be replicated to.
-{{% /md %}}</dd>
-    <dt class="property-optional"
+{{% /md %}}</dd><dt class="property-optional"
             title="Optional">
         <span id="description_csharp">
 <a href="#description_csharp" style="color: inherit; text-decoration: inherit;">Description</a>
@@ -386,8 +376,7 @@ The RegionDisk resource accepts the following [input]({{< relref "/docs/intro/co
     </dt>
     <dd>{{% md %}}An optional description of this resource. Provide this property when
 you create the resource.
-{{% /md %}}</dd>
-    <dt class="property-optional"
+{{% /md %}}</dd><dt class="property-optional"
             title="Optional">
         <span id="diskencryptionkey_csharp">
 <a href="#diskencryptionkey_csharp" style="color: inherit; text-decoration: inherit;">Disk<wbr>Encryption<wbr>Key</a>
@@ -405,8 +394,7 @@ If you do not provide an encryption key when creating the disk, then
 the disk will be encrypted using an automatically generated key and
 you do not need to provide a key to use the disk later.
 Structure is documented below.
-{{% /md %}}</dd>
-    <dt class="property-optional"
+{{% /md %}}</dd><dt class="property-optional"
             title="Optional">
         <span id="labels_csharp">
 <a href="#labels_csharp" style="color: inherit; text-decoration: inherit;">Labels</a>
@@ -415,8 +403,7 @@ Structure is documented below.
         <span class="property-type">Dictionary&lt;string, string&gt;</span>
     </dt>
     <dd>{{% md %}}Labels to apply to this disk.  A list of key->value pairs.
-{{% /md %}}</dd>
-    <dt class="property-optional"
+{{% /md %}}</dd><dt class="property-optional"
             title="Optional">
         <span id="name_csharp">
 <a href="#name_csharp" style="color: inherit; text-decoration: inherit;">Name</a>
@@ -431,8 +418,7 @@ the regular expression `a-z?` which means the
 first character must be a lowercase letter, and all following
 characters must be a dash, lowercase letter, or digit, except the last
 character, which cannot be a dash.
-{{% /md %}}</dd>
-    <dt class="property-optional"
+{{% /md %}}</dd><dt class="property-optional"
             title="Optional">
         <span id="physicalblocksizebytes_csharp">
 <a href="#physicalblocksizebytes_csharp" style="color: inherit; text-decoration: inherit;">Physical<wbr>Block<wbr>Size<wbr>Bytes</a>
@@ -445,8 +431,7 @@ in a request, a default value is used. Currently supported sizes
 are 4096 and 16384, other sizes may be added in the future.
 If an unsupported value is requested, the error message will list
 the supported values for the caller's project.
-{{% /md %}}</dd>
-    <dt class="property-optional"
+{{% /md %}}</dd><dt class="property-optional"
             title="Optional">
         <span id="project_csharp">
 <a href="#project_csharp" style="color: inherit; text-decoration: inherit;">Project</a>
@@ -456,8 +441,7 @@ the supported values for the caller's project.
     </dt>
     <dd>{{% md %}}The ID of the project in which the resource belongs.
 If it is not provided, the provider project is used.
-{{% /md %}}</dd>
-    <dt class="property-optional"
+{{% /md %}}</dd><dt class="property-optional"
             title="Optional">
         <span id="region_csharp">
 <a href="#region_csharp" style="color: inherit; text-decoration: inherit;">Region</a>
@@ -466,8 +450,7 @@ If it is not provided, the provider project is used.
         <span class="property-type">string</span>
     </dt>
     <dd>{{% md %}}A reference to the region where the disk resides.
-{{% /md %}}</dd>
-    <dt class="property-optional"
+{{% /md %}}</dd><dt class="property-optional"
             title="Optional">
         <span id="size_csharp">
 <a href="#size_csharp" style="color: inherit; text-decoration: inherit;">Size</a>
@@ -482,8 +465,7 @@ persistent disk.
 If you specify this field along with sourceImage or sourceSnapshot,
 the value of sizeGb must not be less than the size of the sourceImage
 or the size of the snapshot.
-{{% /md %}}</dd>
-    <dt class="property-optional"
+{{% /md %}}</dd><dt class="property-optional"
             title="Optional">
         <span id="snapshot_csharp">
 <a href="#snapshot_csharp" style="color: inherit; text-decoration: inherit;">Snapshot</a>
@@ -498,8 +480,7 @@ valid values:
 * `projects/project/global/snapshots/snapshot`
 * `global/snapshots/snapshot`
 * `snapshot`
-{{% /md %}}</dd>
-    <dt class="property-optional"
+{{% /md %}}</dd><dt class="property-optional"
             title="Optional">
         <span id="sourcesnapshotencryptionkey_csharp">
 <a href="#sourcesnapshotencryptionkey_csharp" style="color: inherit; text-decoration: inherit;">Source<wbr>Snapshot<wbr>Encryption<wbr>Key</a>
@@ -511,8 +492,7 @@ valid values:
 if the source snapshot is protected by a customer-supplied encryption
 key.
 Structure is documented below.
-{{% /md %}}</dd>
-    <dt class="property-optional"
+{{% /md %}}</dd><dt class="property-optional"
             title="Optional">
         <span id="type_csharp">
 <a href="#type_csharp" style="color: inherit; text-decoration: inherit;">Type</a>
@@ -522,14 +502,11 @@ Structure is documented below.
     </dt>
     <dd>{{% md %}}URL of the disk type resource describing which disk type to use to
 create the disk. Provide this when creating the disk.
-{{% /md %}}</dd>
-</dl>
+{{% /md %}}</dd></dl>
 {{% /choosable %}}
 
 {{% choosable language go %}}
-<dl class="resources-properties">
-
-    <dt class="property-required"
+<dl class="resources-properties"><dt class="property-required"
             title="Required">
         <span id="replicazones_go">
 <a href="#replicazones_go" style="color: inherit; text-decoration: inherit;">Replica<wbr>Zones</a>
@@ -538,8 +515,7 @@ create the disk. Provide this when creating the disk.
         <span class="property-type">[]string</span>
     </dt>
     <dd>{{% md %}}URLs of the zones where the disk should be replicated to.
-{{% /md %}}</dd>
-    <dt class="property-optional"
+{{% /md %}}</dd><dt class="property-optional"
             title="Optional">
         <span id="description_go">
 <a href="#description_go" style="color: inherit; text-decoration: inherit;">Description</a>
@@ -549,8 +525,7 @@ create the disk. Provide this when creating the disk.
     </dt>
     <dd>{{% md %}}An optional description of this resource. Provide this property when
 you create the resource.
-{{% /md %}}</dd>
-    <dt class="property-optional"
+{{% /md %}}</dd><dt class="property-optional"
             title="Optional">
         <span id="diskencryptionkey_go">
 <a href="#diskencryptionkey_go" style="color: inherit; text-decoration: inherit;">Disk<wbr>Encryption<wbr>Key</a>
@@ -568,8 +543,7 @@ If you do not provide an encryption key when creating the disk, then
 the disk will be encrypted using an automatically generated key and
 you do not need to provide a key to use the disk later.
 Structure is documented below.
-{{% /md %}}</dd>
-    <dt class="property-optional"
+{{% /md %}}</dd><dt class="property-optional"
             title="Optional">
         <span id="labels_go">
 <a href="#labels_go" style="color: inherit; text-decoration: inherit;">Labels</a>
@@ -578,8 +552,7 @@ Structure is documented below.
         <span class="property-type">map[string]string</span>
     </dt>
     <dd>{{% md %}}Labels to apply to this disk.  A list of key->value pairs.
-{{% /md %}}</dd>
-    <dt class="property-optional"
+{{% /md %}}</dd><dt class="property-optional"
             title="Optional">
         <span id="name_go">
 <a href="#name_go" style="color: inherit; text-decoration: inherit;">Name</a>
@@ -594,8 +567,7 @@ the regular expression `a-z?` which means the
 first character must be a lowercase letter, and all following
 characters must be a dash, lowercase letter, or digit, except the last
 character, which cannot be a dash.
-{{% /md %}}</dd>
-    <dt class="property-optional"
+{{% /md %}}</dd><dt class="property-optional"
             title="Optional">
         <span id="physicalblocksizebytes_go">
 <a href="#physicalblocksizebytes_go" style="color: inherit; text-decoration: inherit;">Physical<wbr>Block<wbr>Size<wbr>Bytes</a>
@@ -608,8 +580,7 @@ in a request, a default value is used. Currently supported sizes
 are 4096 and 16384, other sizes may be added in the future.
 If an unsupported value is requested, the error message will list
 the supported values for the caller's project.
-{{% /md %}}</dd>
-    <dt class="property-optional"
+{{% /md %}}</dd><dt class="property-optional"
             title="Optional">
         <span id="project_go">
 <a href="#project_go" style="color: inherit; text-decoration: inherit;">Project</a>
@@ -619,8 +590,7 @@ the supported values for the caller's project.
     </dt>
     <dd>{{% md %}}The ID of the project in which the resource belongs.
 If it is not provided, the provider project is used.
-{{% /md %}}</dd>
-    <dt class="property-optional"
+{{% /md %}}</dd><dt class="property-optional"
             title="Optional">
         <span id="region_go">
 <a href="#region_go" style="color: inherit; text-decoration: inherit;">Region</a>
@@ -629,8 +599,7 @@ If it is not provided, the provider project is used.
         <span class="property-type">string</span>
     </dt>
     <dd>{{% md %}}A reference to the region where the disk resides.
-{{% /md %}}</dd>
-    <dt class="property-optional"
+{{% /md %}}</dd><dt class="property-optional"
             title="Optional">
         <span id="size_go">
 <a href="#size_go" style="color: inherit; text-decoration: inherit;">Size</a>
@@ -645,8 +614,7 @@ persistent disk.
 If you specify this field along with sourceImage or sourceSnapshot,
 the value of sizeGb must not be less than the size of the sourceImage
 or the size of the snapshot.
-{{% /md %}}</dd>
-    <dt class="property-optional"
+{{% /md %}}</dd><dt class="property-optional"
             title="Optional">
         <span id="snapshot_go">
 <a href="#snapshot_go" style="color: inherit; text-decoration: inherit;">Snapshot</a>
@@ -661,8 +629,7 @@ valid values:
 * `projects/project/global/snapshots/snapshot`
 * `global/snapshots/snapshot`
 * `snapshot`
-{{% /md %}}</dd>
-    <dt class="property-optional"
+{{% /md %}}</dd><dt class="property-optional"
             title="Optional">
         <span id="sourcesnapshotencryptionkey_go">
 <a href="#sourcesnapshotencryptionkey_go" style="color: inherit; text-decoration: inherit;">Source<wbr>Snapshot<wbr>Encryption<wbr>Key</a>
@@ -674,8 +641,7 @@ valid values:
 if the source snapshot is protected by a customer-supplied encryption
 key.
 Structure is documented below.
-{{% /md %}}</dd>
-    <dt class="property-optional"
+{{% /md %}}</dd><dt class="property-optional"
             title="Optional">
         <span id="type_go">
 <a href="#type_go" style="color: inherit; text-decoration: inherit;">Type</a>
@@ -685,14 +651,11 @@ Structure is documented below.
     </dt>
     <dd>{{% md %}}URL of the disk type resource describing which disk type to use to
 create the disk. Provide this when creating the disk.
-{{% /md %}}</dd>
-</dl>
+{{% /md %}}</dd></dl>
 {{% /choosable %}}
 
 {{% choosable language nodejs %}}
-<dl class="resources-properties">
-
-    <dt class="property-required"
+<dl class="resources-properties"><dt class="property-required"
             title="Required">
         <span id="replicazones_nodejs">
 <a href="#replicazones_nodejs" style="color: inherit; text-decoration: inherit;">replica<wbr>Zones</a>
@@ -701,8 +664,7 @@ create the disk. Provide this when creating the disk.
         <span class="property-type">string[]</span>
     </dt>
     <dd>{{% md %}}URLs of the zones where the disk should be replicated to.
-{{% /md %}}</dd>
-    <dt class="property-optional"
+{{% /md %}}</dd><dt class="property-optional"
             title="Optional">
         <span id="description_nodejs">
 <a href="#description_nodejs" style="color: inherit; text-decoration: inherit;">description</a>
@@ -712,8 +674,7 @@ create the disk. Provide this when creating the disk.
     </dt>
     <dd>{{% md %}}An optional description of this resource. Provide this property when
 you create the resource.
-{{% /md %}}</dd>
-    <dt class="property-optional"
+{{% /md %}}</dd><dt class="property-optional"
             title="Optional">
         <span id="diskencryptionkey_nodejs">
 <a href="#diskencryptionkey_nodejs" style="color: inherit; text-decoration: inherit;">disk<wbr>Encryption<wbr>Key</a>
@@ -731,8 +692,7 @@ If you do not provide an encryption key when creating the disk, then
 the disk will be encrypted using an automatically generated key and
 you do not need to provide a key to use the disk later.
 Structure is documented below.
-{{% /md %}}</dd>
-    <dt class="property-optional"
+{{% /md %}}</dd><dt class="property-optional"
             title="Optional">
         <span id="labels_nodejs">
 <a href="#labels_nodejs" style="color: inherit; text-decoration: inherit;">labels</a>
@@ -741,8 +701,7 @@ Structure is documented below.
         <span class="property-type">{[key: string]: string}</span>
     </dt>
     <dd>{{% md %}}Labels to apply to this disk.  A list of key->value pairs.
-{{% /md %}}</dd>
-    <dt class="property-optional"
+{{% /md %}}</dd><dt class="property-optional"
             title="Optional">
         <span id="name_nodejs">
 <a href="#name_nodejs" style="color: inherit; text-decoration: inherit;">name</a>
@@ -757,8 +716,7 @@ the regular expression `a-z?` which means the
 first character must be a lowercase letter, and all following
 characters must be a dash, lowercase letter, or digit, except the last
 character, which cannot be a dash.
-{{% /md %}}</dd>
-    <dt class="property-optional"
+{{% /md %}}</dd><dt class="property-optional"
             title="Optional">
         <span id="physicalblocksizebytes_nodejs">
 <a href="#physicalblocksizebytes_nodejs" style="color: inherit; text-decoration: inherit;">physical<wbr>Block<wbr>Size<wbr>Bytes</a>
@@ -771,8 +729,7 @@ in a request, a default value is used. Currently supported sizes
 are 4096 and 16384, other sizes may be added in the future.
 If an unsupported value is requested, the error message will list
 the supported values for the caller's project.
-{{% /md %}}</dd>
-    <dt class="property-optional"
+{{% /md %}}</dd><dt class="property-optional"
             title="Optional">
         <span id="project_nodejs">
 <a href="#project_nodejs" style="color: inherit; text-decoration: inherit;">project</a>
@@ -782,8 +739,7 @@ the supported values for the caller's project.
     </dt>
     <dd>{{% md %}}The ID of the project in which the resource belongs.
 If it is not provided, the provider project is used.
-{{% /md %}}</dd>
-    <dt class="property-optional"
+{{% /md %}}</dd><dt class="property-optional"
             title="Optional">
         <span id="region_nodejs">
 <a href="#region_nodejs" style="color: inherit; text-decoration: inherit;">region</a>
@@ -792,8 +748,7 @@ If it is not provided, the provider project is used.
         <span class="property-type">string</span>
     </dt>
     <dd>{{% md %}}A reference to the region where the disk resides.
-{{% /md %}}</dd>
-    <dt class="property-optional"
+{{% /md %}}</dd><dt class="property-optional"
             title="Optional">
         <span id="size_nodejs">
 <a href="#size_nodejs" style="color: inherit; text-decoration: inherit;">size</a>
@@ -808,8 +763,7 @@ persistent disk.
 If you specify this field along with sourceImage or sourceSnapshot,
 the value of sizeGb must not be less than the size of the sourceImage
 or the size of the snapshot.
-{{% /md %}}</dd>
-    <dt class="property-optional"
+{{% /md %}}</dd><dt class="property-optional"
             title="Optional">
         <span id="snapshot_nodejs">
 <a href="#snapshot_nodejs" style="color: inherit; text-decoration: inherit;">snapshot</a>
@@ -824,8 +778,7 @@ valid values:
 * `projects/project/global/snapshots/snapshot`
 * `global/snapshots/snapshot`
 * `snapshot`
-{{% /md %}}</dd>
-    <dt class="property-optional"
+{{% /md %}}</dd><dt class="property-optional"
             title="Optional">
         <span id="sourcesnapshotencryptionkey_nodejs">
 <a href="#sourcesnapshotencryptionkey_nodejs" style="color: inherit; text-decoration: inherit;">source<wbr>Snapshot<wbr>Encryption<wbr>Key</a>
@@ -837,8 +790,7 @@ valid values:
 if the source snapshot is protected by a customer-supplied encryption
 key.
 Structure is documented below.
-{{% /md %}}</dd>
-    <dt class="property-optional"
+{{% /md %}}</dd><dt class="property-optional"
             title="Optional">
         <span id="type_nodejs">
 <a href="#type_nodejs" style="color: inherit; text-decoration: inherit;">type</a>
@@ -848,14 +800,11 @@ Structure is documented below.
     </dt>
     <dd>{{% md %}}URL of the disk type resource describing which disk type to use to
 create the disk. Provide this when creating the disk.
-{{% /md %}}</dd>
-</dl>
+{{% /md %}}</dd></dl>
 {{% /choosable %}}
 
 {{% choosable language python %}}
-<dl class="resources-properties">
-
-    <dt class="property-required"
+<dl class="resources-properties"><dt class="property-required"
             title="Required">
         <span id="replica_zones_python">
 <a href="#replica_zones_python" style="color: inherit; text-decoration: inherit;">replica_<wbr>zones</a>
@@ -864,8 +813,7 @@ create the disk. Provide this when creating the disk.
         <span class="property-type">Sequence[str]</span>
     </dt>
     <dd>{{% md %}}URLs of the zones where the disk should be replicated to.
-{{% /md %}}</dd>
-    <dt class="property-optional"
+{{% /md %}}</dd><dt class="property-optional"
             title="Optional">
         <span id="description_python">
 <a href="#description_python" style="color: inherit; text-decoration: inherit;">description</a>
@@ -875,8 +823,7 @@ create the disk. Provide this when creating the disk.
     </dt>
     <dd>{{% md %}}An optional description of this resource. Provide this property when
 you create the resource.
-{{% /md %}}</dd>
-    <dt class="property-optional"
+{{% /md %}}</dd><dt class="property-optional"
             title="Optional">
         <span id="disk_encryption_key_python">
 <a href="#disk_encryption_key_python" style="color: inherit; text-decoration: inherit;">disk_<wbr>encryption_<wbr>key</a>
@@ -894,8 +841,7 @@ If you do not provide an encryption key when creating the disk, then
 the disk will be encrypted using an automatically generated key and
 you do not need to provide a key to use the disk later.
 Structure is documented below.
-{{% /md %}}</dd>
-    <dt class="property-optional"
+{{% /md %}}</dd><dt class="property-optional"
             title="Optional">
         <span id="labels_python">
 <a href="#labels_python" style="color: inherit; text-decoration: inherit;">labels</a>
@@ -904,8 +850,7 @@ Structure is documented below.
         <span class="property-type">Mapping[str, str]</span>
     </dt>
     <dd>{{% md %}}Labels to apply to this disk.  A list of key->value pairs.
-{{% /md %}}</dd>
-    <dt class="property-optional"
+{{% /md %}}</dd><dt class="property-optional"
             title="Optional">
         <span id="name_python">
 <a href="#name_python" style="color: inherit; text-decoration: inherit;">name</a>
@@ -920,8 +865,7 @@ the regular expression `a-z?` which means the
 first character must be a lowercase letter, and all following
 characters must be a dash, lowercase letter, or digit, except the last
 character, which cannot be a dash.
-{{% /md %}}</dd>
-    <dt class="property-optional"
+{{% /md %}}</dd><dt class="property-optional"
             title="Optional">
         <span id="physical_block_size_bytes_python">
 <a href="#physical_block_size_bytes_python" style="color: inherit; text-decoration: inherit;">physical_<wbr>block_<wbr>size_<wbr>bytes</a>
@@ -934,8 +878,7 @@ in a request, a default value is used. Currently supported sizes
 are 4096 and 16384, other sizes may be added in the future.
 If an unsupported value is requested, the error message will list
 the supported values for the caller's project.
-{{% /md %}}</dd>
-    <dt class="property-optional"
+{{% /md %}}</dd><dt class="property-optional"
             title="Optional">
         <span id="project_python">
 <a href="#project_python" style="color: inherit; text-decoration: inherit;">project</a>
@@ -945,8 +888,7 @@ the supported values for the caller's project.
     </dt>
     <dd>{{% md %}}The ID of the project in which the resource belongs.
 If it is not provided, the provider project is used.
-{{% /md %}}</dd>
-    <dt class="property-optional"
+{{% /md %}}</dd><dt class="property-optional"
             title="Optional">
         <span id="region_python">
 <a href="#region_python" style="color: inherit; text-decoration: inherit;">region</a>
@@ -955,8 +897,7 @@ If it is not provided, the provider project is used.
         <span class="property-type">str</span>
     </dt>
     <dd>{{% md %}}A reference to the region where the disk resides.
-{{% /md %}}</dd>
-    <dt class="property-optional"
+{{% /md %}}</dd><dt class="property-optional"
             title="Optional">
         <span id="size_python">
 <a href="#size_python" style="color: inherit; text-decoration: inherit;">size</a>
@@ -971,8 +912,7 @@ persistent disk.
 If you specify this field along with sourceImage or sourceSnapshot,
 the value of sizeGb must not be less than the size of the sourceImage
 or the size of the snapshot.
-{{% /md %}}</dd>
-    <dt class="property-optional"
+{{% /md %}}</dd><dt class="property-optional"
             title="Optional">
         <span id="snapshot_python">
 <a href="#snapshot_python" style="color: inherit; text-decoration: inherit;">snapshot</a>
@@ -987,8 +927,7 @@ valid values:
 * `projects/project/global/snapshots/snapshot`
 * `global/snapshots/snapshot`
 * `snapshot`
-{{% /md %}}</dd>
-    <dt class="property-optional"
+{{% /md %}}</dd><dt class="property-optional"
             title="Optional">
         <span id="source_snapshot_encryption_key_python">
 <a href="#source_snapshot_encryption_key_python" style="color: inherit; text-decoration: inherit;">source_<wbr>snapshot_<wbr>encryption_<wbr>key</a>
@@ -1000,8 +939,7 @@ valid values:
 if the source snapshot is protected by a customer-supplied encryption
 key.
 Structure is documented below.
-{{% /md %}}</dd>
-    <dt class="property-optional"
+{{% /md %}}</dd><dt class="property-optional"
             title="Optional">
         <span id="type_python">
 <a href="#type_python" style="color: inherit; text-decoration: inherit;">type</a>
@@ -1011,8 +949,7 @@ Structure is documented below.
     </dt>
     <dd>{{% md %}}URL of the disk type resource describing which disk type to use to
 create the disk. Provide this when creating the disk.
-{{% /md %}}</dd>
-</dl>
+{{% /md %}}</dd></dl>
 {{% /choosable %}}
 
 
@@ -1023,9 +960,7 @@ All [input](#inputs) properties are implicitly available as output properties. A
 
 
 {{% choosable language csharp %}}
-<dl class="resources-properties">
-
-    <dt class="property-"
+<dl class="resources-properties"><dt class="property-"
             title="">
         <span id="creationtimestamp_csharp">
 <a href="#creationtimestamp_csharp" style="color: inherit; text-decoration: inherit;">Creation<wbr>Timestamp</a>
@@ -1034,8 +969,7 @@ All [input](#inputs) properties are implicitly available as output properties. A
         <span class="property-type">string</span>
     </dt>
     <dd>{{% md %}}Creation timestamp in RFC3339 text format.
-{{% /md %}}</dd>
-    <dt class="property-"
+{{% /md %}}</dd><dt class="property-"
             title="">
         <span id="id_csharp">
 <a href="#id_csharp" style="color: inherit; text-decoration: inherit;">Id</a>
@@ -1043,8 +977,7 @@ All [input](#inputs) properties are implicitly available as output properties. A
         <span class="property-indicator"></span>
         <span class="property-type">string</span>
     </dt>
-    <dd>{{% md %}}The provider-assigned unique ID for this managed resource.{{% /md %}}</dd>
-    <dt class="property-"
+    <dd>{{% md %}}The provider-assigned unique ID for this managed resource.{{% /md %}}</dd><dt class="property-"
             title="">
         <span id="labelfingerprint_csharp">
 <a href="#labelfingerprint_csharp" style="color: inherit; text-decoration: inherit;">Label<wbr>Fingerprint</a>
@@ -1053,8 +986,7 @@ All [input](#inputs) properties are implicitly available as output properties. A
         <span class="property-type">string</span>
     </dt>
     <dd>{{% md %}}The fingerprint used for optimistic locking of this resource. Used internally during updates.
-{{% /md %}}</dd>
-    <dt class="property-"
+{{% /md %}}</dd><dt class="property-"
             title="">
         <span id="lastattachtimestamp_csharp">
 <a href="#lastattachtimestamp_csharp" style="color: inherit; text-decoration: inherit;">Last<wbr>Attach<wbr>Timestamp</a>
@@ -1063,8 +995,7 @@ All [input](#inputs) properties are implicitly available as output properties. A
         <span class="property-type">string</span>
     </dt>
     <dd>{{% md %}}Last attach timestamp in RFC3339 text format.
-{{% /md %}}</dd>
-    <dt class="property-"
+{{% /md %}}</dd><dt class="property-"
             title="">
         <span id="lastdetachtimestamp_csharp">
 <a href="#lastdetachtimestamp_csharp" style="color: inherit; text-decoration: inherit;">Last<wbr>Detach<wbr>Timestamp</a>
@@ -1073,8 +1004,7 @@ All [input](#inputs) properties are implicitly available as output properties. A
         <span class="property-type">string</span>
     </dt>
     <dd>{{% md %}}Last detach timestamp in RFC3339 text format.
-{{% /md %}}</dd>
-    <dt class="property-"
+{{% /md %}}</dd><dt class="property-"
             title="">
         <span id="selflink_csharp">
 <a href="#selflink_csharp" style="color: inherit; text-decoration: inherit;">Self<wbr>Link</a>
@@ -1083,8 +1013,7 @@ All [input](#inputs) properties are implicitly available as output properties. A
         <span class="property-type">string</span>
     </dt>
     <dd>{{% md %}}The URI of the created resource.
-{{% /md %}}</dd>
-    <dt class="property-"
+{{% /md %}}</dd><dt class="property-"
             title="">
         <span id="sourcesnapshotid_csharp">
 <a href="#sourcesnapshotid_csharp" style="color: inherit; text-decoration: inherit;">Source<wbr>Snapshot<wbr>Id</a>
@@ -1095,8 +1024,7 @@ All [input](#inputs) properties are implicitly available as output properties. A
     <dd>{{% md %}}The unique ID of the snapshot used to create this disk. This value identifies the exact snapshot that was used to create
 this persistent disk. For example, if you created the persistent disk from a snapshot that was later deleted and
 recreated under the same name, the source snapshot ID would identify the exact version of the snapshot that was used.
-{{% /md %}}</dd>
-    <dt class="property-"
+{{% /md %}}</dd><dt class="property-"
             title="">
         <span id="users_csharp">
 <a href="#users_csharp" style="color: inherit; text-decoration: inherit;">Users</a>
@@ -1105,14 +1033,11 @@ recreated under the same name, the source snapshot ID would identify the exact v
         <span class="property-type">List&lt;string&gt;</span>
     </dt>
     <dd>{{% md %}}Links to the users of the disk (attached instances) in form: project/zones/zone/instances/instance
-{{% /md %}}</dd>
-</dl>
+{{% /md %}}</dd></dl>
 {{% /choosable %}}
 
 {{% choosable language go %}}
-<dl class="resources-properties">
-
-    <dt class="property-"
+<dl class="resources-properties"><dt class="property-"
             title="">
         <span id="creationtimestamp_go">
 <a href="#creationtimestamp_go" style="color: inherit; text-decoration: inherit;">Creation<wbr>Timestamp</a>
@@ -1121,8 +1046,7 @@ recreated under the same name, the source snapshot ID would identify the exact v
         <span class="property-type">string</span>
     </dt>
     <dd>{{% md %}}Creation timestamp in RFC3339 text format.
-{{% /md %}}</dd>
-    <dt class="property-"
+{{% /md %}}</dd><dt class="property-"
             title="">
         <span id="id_go">
 <a href="#id_go" style="color: inherit; text-decoration: inherit;">Id</a>
@@ -1130,8 +1054,7 @@ recreated under the same name, the source snapshot ID would identify the exact v
         <span class="property-indicator"></span>
         <span class="property-type">string</span>
     </dt>
-    <dd>{{% md %}}The provider-assigned unique ID for this managed resource.{{% /md %}}</dd>
-    <dt class="property-"
+    <dd>{{% md %}}The provider-assigned unique ID for this managed resource.{{% /md %}}</dd><dt class="property-"
             title="">
         <span id="labelfingerprint_go">
 <a href="#labelfingerprint_go" style="color: inherit; text-decoration: inherit;">Label<wbr>Fingerprint</a>
@@ -1140,8 +1063,7 @@ recreated under the same name, the source snapshot ID would identify the exact v
         <span class="property-type">string</span>
     </dt>
     <dd>{{% md %}}The fingerprint used for optimistic locking of this resource. Used internally during updates.
-{{% /md %}}</dd>
-    <dt class="property-"
+{{% /md %}}</dd><dt class="property-"
             title="">
         <span id="lastattachtimestamp_go">
 <a href="#lastattachtimestamp_go" style="color: inherit; text-decoration: inherit;">Last<wbr>Attach<wbr>Timestamp</a>
@@ -1150,8 +1072,7 @@ recreated under the same name, the source snapshot ID would identify the exact v
         <span class="property-type">string</span>
     </dt>
     <dd>{{% md %}}Last attach timestamp in RFC3339 text format.
-{{% /md %}}</dd>
-    <dt class="property-"
+{{% /md %}}</dd><dt class="property-"
             title="">
         <span id="lastdetachtimestamp_go">
 <a href="#lastdetachtimestamp_go" style="color: inherit; text-decoration: inherit;">Last<wbr>Detach<wbr>Timestamp</a>
@@ -1160,8 +1081,7 @@ recreated under the same name, the source snapshot ID would identify the exact v
         <span class="property-type">string</span>
     </dt>
     <dd>{{% md %}}Last detach timestamp in RFC3339 text format.
-{{% /md %}}</dd>
-    <dt class="property-"
+{{% /md %}}</dd><dt class="property-"
             title="">
         <span id="selflink_go">
 <a href="#selflink_go" style="color: inherit; text-decoration: inherit;">Self<wbr>Link</a>
@@ -1170,8 +1090,7 @@ recreated under the same name, the source snapshot ID would identify the exact v
         <span class="property-type">string</span>
     </dt>
     <dd>{{% md %}}The URI of the created resource.
-{{% /md %}}</dd>
-    <dt class="property-"
+{{% /md %}}</dd><dt class="property-"
             title="">
         <span id="sourcesnapshotid_go">
 <a href="#sourcesnapshotid_go" style="color: inherit; text-decoration: inherit;">Source<wbr>Snapshot<wbr>Id</a>
@@ -1182,8 +1101,7 @@ recreated under the same name, the source snapshot ID would identify the exact v
     <dd>{{% md %}}The unique ID of the snapshot used to create this disk. This value identifies the exact snapshot that was used to create
 this persistent disk. For example, if you created the persistent disk from a snapshot that was later deleted and
 recreated under the same name, the source snapshot ID would identify the exact version of the snapshot that was used.
-{{% /md %}}</dd>
-    <dt class="property-"
+{{% /md %}}</dd><dt class="property-"
             title="">
         <span id="users_go">
 <a href="#users_go" style="color: inherit; text-decoration: inherit;">Users</a>
@@ -1192,14 +1110,11 @@ recreated under the same name, the source snapshot ID would identify the exact v
         <span class="property-type">[]string</span>
     </dt>
     <dd>{{% md %}}Links to the users of the disk (attached instances) in form: project/zones/zone/instances/instance
-{{% /md %}}</dd>
-</dl>
+{{% /md %}}</dd></dl>
 {{% /choosable %}}
 
 {{% choosable language nodejs %}}
-<dl class="resources-properties">
-
-    <dt class="property-"
+<dl class="resources-properties"><dt class="property-"
             title="">
         <span id="creationtimestamp_nodejs">
 <a href="#creationtimestamp_nodejs" style="color: inherit; text-decoration: inherit;">creation<wbr>Timestamp</a>
@@ -1208,8 +1123,7 @@ recreated under the same name, the source snapshot ID would identify the exact v
         <span class="property-type">string</span>
     </dt>
     <dd>{{% md %}}Creation timestamp in RFC3339 text format.
-{{% /md %}}</dd>
-    <dt class="property-"
+{{% /md %}}</dd><dt class="property-"
             title="">
         <span id="id_nodejs">
 <a href="#id_nodejs" style="color: inherit; text-decoration: inherit;">id</a>
@@ -1217,8 +1131,7 @@ recreated under the same name, the source snapshot ID would identify the exact v
         <span class="property-indicator"></span>
         <span class="property-type">string</span>
     </dt>
-    <dd>{{% md %}}The provider-assigned unique ID for this managed resource.{{% /md %}}</dd>
-    <dt class="property-"
+    <dd>{{% md %}}The provider-assigned unique ID for this managed resource.{{% /md %}}</dd><dt class="property-"
             title="">
         <span id="labelfingerprint_nodejs">
 <a href="#labelfingerprint_nodejs" style="color: inherit; text-decoration: inherit;">label<wbr>Fingerprint</a>
@@ -1227,8 +1140,7 @@ recreated under the same name, the source snapshot ID would identify the exact v
         <span class="property-type">string</span>
     </dt>
     <dd>{{% md %}}The fingerprint used for optimistic locking of this resource. Used internally during updates.
-{{% /md %}}</dd>
-    <dt class="property-"
+{{% /md %}}</dd><dt class="property-"
             title="">
         <span id="lastattachtimestamp_nodejs">
 <a href="#lastattachtimestamp_nodejs" style="color: inherit; text-decoration: inherit;">last<wbr>Attach<wbr>Timestamp</a>
@@ -1237,8 +1149,7 @@ recreated under the same name, the source snapshot ID would identify the exact v
         <span class="property-type">string</span>
     </dt>
     <dd>{{% md %}}Last attach timestamp in RFC3339 text format.
-{{% /md %}}</dd>
-    <dt class="property-"
+{{% /md %}}</dd><dt class="property-"
             title="">
         <span id="lastdetachtimestamp_nodejs">
 <a href="#lastdetachtimestamp_nodejs" style="color: inherit; text-decoration: inherit;">last<wbr>Detach<wbr>Timestamp</a>
@@ -1247,8 +1158,7 @@ recreated under the same name, the source snapshot ID would identify the exact v
         <span class="property-type">string</span>
     </dt>
     <dd>{{% md %}}Last detach timestamp in RFC3339 text format.
-{{% /md %}}</dd>
-    <dt class="property-"
+{{% /md %}}</dd><dt class="property-"
             title="">
         <span id="selflink_nodejs">
 <a href="#selflink_nodejs" style="color: inherit; text-decoration: inherit;">self<wbr>Link</a>
@@ -1257,8 +1167,7 @@ recreated under the same name, the source snapshot ID would identify the exact v
         <span class="property-type">string</span>
     </dt>
     <dd>{{% md %}}The URI of the created resource.
-{{% /md %}}</dd>
-    <dt class="property-"
+{{% /md %}}</dd><dt class="property-"
             title="">
         <span id="sourcesnapshotid_nodejs">
 <a href="#sourcesnapshotid_nodejs" style="color: inherit; text-decoration: inherit;">source<wbr>Snapshot<wbr>Id</a>
@@ -1269,8 +1178,7 @@ recreated under the same name, the source snapshot ID would identify the exact v
     <dd>{{% md %}}The unique ID of the snapshot used to create this disk. This value identifies the exact snapshot that was used to create
 this persistent disk. For example, if you created the persistent disk from a snapshot that was later deleted and
 recreated under the same name, the source snapshot ID would identify the exact version of the snapshot that was used.
-{{% /md %}}</dd>
-    <dt class="property-"
+{{% /md %}}</dd><dt class="property-"
             title="">
         <span id="users_nodejs">
 <a href="#users_nodejs" style="color: inherit; text-decoration: inherit;">users</a>
@@ -1279,14 +1187,11 @@ recreated under the same name, the source snapshot ID would identify the exact v
         <span class="property-type">string[]</span>
     </dt>
     <dd>{{% md %}}Links to the users of the disk (attached instances) in form: project/zones/zone/instances/instance
-{{% /md %}}</dd>
-</dl>
+{{% /md %}}</dd></dl>
 {{% /choosable %}}
 
 {{% choosable language python %}}
-<dl class="resources-properties">
-
-    <dt class="property-"
+<dl class="resources-properties"><dt class="property-"
             title="">
         <span id="creation_timestamp_python">
 <a href="#creation_timestamp_python" style="color: inherit; text-decoration: inherit;">creation_<wbr>timestamp</a>
@@ -1295,8 +1200,7 @@ recreated under the same name, the source snapshot ID would identify the exact v
         <span class="property-type">str</span>
     </dt>
     <dd>{{% md %}}Creation timestamp in RFC3339 text format.
-{{% /md %}}</dd>
-    <dt class="property-"
+{{% /md %}}</dd><dt class="property-"
             title="">
         <span id="id_python">
 <a href="#id_python" style="color: inherit; text-decoration: inherit;">id</a>
@@ -1304,8 +1208,7 @@ recreated under the same name, the source snapshot ID would identify the exact v
         <span class="property-indicator"></span>
         <span class="property-type">str</span>
     </dt>
-    <dd>{{% md %}}The provider-assigned unique ID for this managed resource.{{% /md %}}</dd>
-    <dt class="property-"
+    <dd>{{% md %}}The provider-assigned unique ID for this managed resource.{{% /md %}}</dd><dt class="property-"
             title="">
         <span id="label_fingerprint_python">
 <a href="#label_fingerprint_python" style="color: inherit; text-decoration: inherit;">label_<wbr>fingerprint</a>
@@ -1314,8 +1217,7 @@ recreated under the same name, the source snapshot ID would identify the exact v
         <span class="property-type">str</span>
     </dt>
     <dd>{{% md %}}The fingerprint used for optimistic locking of this resource. Used internally during updates.
-{{% /md %}}</dd>
-    <dt class="property-"
+{{% /md %}}</dd><dt class="property-"
             title="">
         <span id="last_attach_timestamp_python">
 <a href="#last_attach_timestamp_python" style="color: inherit; text-decoration: inherit;">last_<wbr>attach_<wbr>timestamp</a>
@@ -1324,8 +1226,7 @@ recreated under the same name, the source snapshot ID would identify the exact v
         <span class="property-type">str</span>
     </dt>
     <dd>{{% md %}}Last attach timestamp in RFC3339 text format.
-{{% /md %}}</dd>
-    <dt class="property-"
+{{% /md %}}</dd><dt class="property-"
             title="">
         <span id="last_detach_timestamp_python">
 <a href="#last_detach_timestamp_python" style="color: inherit; text-decoration: inherit;">last_<wbr>detach_<wbr>timestamp</a>
@@ -1334,8 +1235,7 @@ recreated under the same name, the source snapshot ID would identify the exact v
         <span class="property-type">str</span>
     </dt>
     <dd>{{% md %}}Last detach timestamp in RFC3339 text format.
-{{% /md %}}</dd>
-    <dt class="property-"
+{{% /md %}}</dd><dt class="property-"
             title="">
         <span id="self_link_python">
 <a href="#self_link_python" style="color: inherit; text-decoration: inherit;">self_<wbr>link</a>
@@ -1344,8 +1244,7 @@ recreated under the same name, the source snapshot ID would identify the exact v
         <span class="property-type">str</span>
     </dt>
     <dd>{{% md %}}The URI of the created resource.
-{{% /md %}}</dd>
-    <dt class="property-"
+{{% /md %}}</dd><dt class="property-"
             title="">
         <span id="source_snapshot_id_python">
 <a href="#source_snapshot_id_python" style="color: inherit; text-decoration: inherit;">source_<wbr>snapshot_<wbr>id</a>
@@ -1356,8 +1255,7 @@ recreated under the same name, the source snapshot ID would identify the exact v
     <dd>{{% md %}}The unique ID of the snapshot used to create this disk. This value identifies the exact snapshot that was used to create
 this persistent disk. For example, if you created the persistent disk from a snapshot that was later deleted and
 recreated under the same name, the source snapshot ID would identify the exact version of the snapshot that was used.
-{{% /md %}}</dd>
-    <dt class="property-"
+{{% /md %}}</dd><dt class="property-"
             title="">
         <span id="users_python">
 <a href="#users_python" style="color: inherit; text-decoration: inherit;">users</a>
@@ -1366,8 +1264,7 @@ recreated under the same name, the source snapshot ID would identify the exact v
         <span class="property-type">Sequence[str]</span>
     </dt>
     <dd>{{% md %}}Links to the users of the disk (attached instances) in form: project/zones/zone/instances/instance
-{{% /md %}}</dd>
-</dl>
+{{% /md %}}</dd></dl>
 {{% /choosable %}}
 
 
@@ -1494,9 +1391,7 @@ The following state arguments are supported:
 
 
 {{% choosable language csharp %}}
-<dl class="resources-properties">
-
-    <dt class="property-optional"
+<dl class="resources-properties"><dt class="property-optional"
             title="Optional">
         <span id="state_creationtimestamp_csharp">
 <a href="#state_creationtimestamp_csharp" style="color: inherit; text-decoration: inherit;">Creation<wbr>Timestamp</a>
@@ -1505,8 +1400,7 @@ The following state arguments are supported:
         <span class="property-type">string</span>
     </dt>
     <dd>{{% md %}}Creation timestamp in RFC3339 text format.
-{{% /md %}}</dd>
-    <dt class="property-optional"
+{{% /md %}}</dd><dt class="property-optional"
             title="Optional">
         <span id="state_description_csharp">
 <a href="#state_description_csharp" style="color: inherit; text-decoration: inherit;">Description</a>
@@ -1516,8 +1410,7 @@ The following state arguments are supported:
     </dt>
     <dd>{{% md %}}An optional description of this resource. Provide this property when
 you create the resource.
-{{% /md %}}</dd>
-    <dt class="property-optional"
+{{% /md %}}</dd><dt class="property-optional"
             title="Optional">
         <span id="state_diskencryptionkey_csharp">
 <a href="#state_diskencryptionkey_csharp" style="color: inherit; text-decoration: inherit;">Disk<wbr>Encryption<wbr>Key</a>
@@ -1535,8 +1428,7 @@ If you do not provide an encryption key when creating the disk, then
 the disk will be encrypted using an automatically generated key and
 you do not need to provide a key to use the disk later.
 Structure is documented below.
-{{% /md %}}</dd>
-    <dt class="property-optional"
+{{% /md %}}</dd><dt class="property-optional"
             title="Optional">
         <span id="state_labelfingerprint_csharp">
 <a href="#state_labelfingerprint_csharp" style="color: inherit; text-decoration: inherit;">Label<wbr>Fingerprint</a>
@@ -1545,8 +1437,7 @@ Structure is documented below.
         <span class="property-type">string</span>
     </dt>
     <dd>{{% md %}}The fingerprint used for optimistic locking of this resource. Used internally during updates.
-{{% /md %}}</dd>
-    <dt class="property-optional"
+{{% /md %}}</dd><dt class="property-optional"
             title="Optional">
         <span id="state_labels_csharp">
 <a href="#state_labels_csharp" style="color: inherit; text-decoration: inherit;">Labels</a>
@@ -1555,8 +1446,7 @@ Structure is documented below.
         <span class="property-type">Dictionary&lt;string, string&gt;</span>
     </dt>
     <dd>{{% md %}}Labels to apply to this disk.  A list of key->value pairs.
-{{% /md %}}</dd>
-    <dt class="property-optional"
+{{% /md %}}</dd><dt class="property-optional"
             title="Optional">
         <span id="state_lastattachtimestamp_csharp">
 <a href="#state_lastattachtimestamp_csharp" style="color: inherit; text-decoration: inherit;">Last<wbr>Attach<wbr>Timestamp</a>
@@ -1565,8 +1455,7 @@ Structure is documented below.
         <span class="property-type">string</span>
     </dt>
     <dd>{{% md %}}Last attach timestamp in RFC3339 text format.
-{{% /md %}}</dd>
-    <dt class="property-optional"
+{{% /md %}}</dd><dt class="property-optional"
             title="Optional">
         <span id="state_lastdetachtimestamp_csharp">
 <a href="#state_lastdetachtimestamp_csharp" style="color: inherit; text-decoration: inherit;">Last<wbr>Detach<wbr>Timestamp</a>
@@ -1575,8 +1464,7 @@ Structure is documented below.
         <span class="property-type">string</span>
     </dt>
     <dd>{{% md %}}Last detach timestamp in RFC3339 text format.
-{{% /md %}}</dd>
-    <dt class="property-optional"
+{{% /md %}}</dd><dt class="property-optional"
             title="Optional">
         <span id="state_name_csharp">
 <a href="#state_name_csharp" style="color: inherit; text-decoration: inherit;">Name</a>
@@ -1591,8 +1479,7 @@ the regular expression `a-z?` which means the
 first character must be a lowercase letter, and all following
 characters must be a dash, lowercase letter, or digit, except the last
 character, which cannot be a dash.
-{{% /md %}}</dd>
-    <dt class="property-optional"
+{{% /md %}}</dd><dt class="property-optional"
             title="Optional">
         <span id="state_physicalblocksizebytes_csharp">
 <a href="#state_physicalblocksizebytes_csharp" style="color: inherit; text-decoration: inherit;">Physical<wbr>Block<wbr>Size<wbr>Bytes</a>
@@ -1605,8 +1492,7 @@ in a request, a default value is used. Currently supported sizes
 are 4096 and 16384, other sizes may be added in the future.
 If an unsupported value is requested, the error message will list
 the supported values for the caller's project.
-{{% /md %}}</dd>
-    <dt class="property-optional"
+{{% /md %}}</dd><dt class="property-optional"
             title="Optional">
         <span id="state_project_csharp">
 <a href="#state_project_csharp" style="color: inherit; text-decoration: inherit;">Project</a>
@@ -1616,8 +1502,7 @@ the supported values for the caller's project.
     </dt>
     <dd>{{% md %}}The ID of the project in which the resource belongs.
 If it is not provided, the provider project is used.
-{{% /md %}}</dd>
-    <dt class="property-optional"
+{{% /md %}}</dd><dt class="property-optional"
             title="Optional">
         <span id="state_region_csharp">
 <a href="#state_region_csharp" style="color: inherit; text-decoration: inherit;">Region</a>
@@ -1626,8 +1511,7 @@ If it is not provided, the provider project is used.
         <span class="property-type">string</span>
     </dt>
     <dd>{{% md %}}A reference to the region where the disk resides.
-{{% /md %}}</dd>
-    <dt class="property-optional"
+{{% /md %}}</dd><dt class="property-optional"
             title="Optional">
         <span id="state_replicazones_csharp">
 <a href="#state_replicazones_csharp" style="color: inherit; text-decoration: inherit;">Replica<wbr>Zones</a>
@@ -1636,8 +1520,7 @@ If it is not provided, the provider project is used.
         <span class="property-type">List&lt;string&gt;</span>
     </dt>
     <dd>{{% md %}}URLs of the zones where the disk should be replicated to.
-{{% /md %}}</dd>
-    <dt class="property-optional"
+{{% /md %}}</dd><dt class="property-optional"
             title="Optional">
         <span id="state_selflink_csharp">
 <a href="#state_selflink_csharp" style="color: inherit; text-decoration: inherit;">Self<wbr>Link</a>
@@ -1646,8 +1529,7 @@ If it is not provided, the provider project is used.
         <span class="property-type">string</span>
     </dt>
     <dd>{{% md %}}The URI of the created resource.
-{{% /md %}}</dd>
-    <dt class="property-optional"
+{{% /md %}}</dd><dt class="property-optional"
             title="Optional">
         <span id="state_size_csharp">
 <a href="#state_size_csharp" style="color: inherit; text-decoration: inherit;">Size</a>
@@ -1662,8 +1544,7 @@ persistent disk.
 If you specify this field along with sourceImage or sourceSnapshot,
 the value of sizeGb must not be less than the size of the sourceImage
 or the size of the snapshot.
-{{% /md %}}</dd>
-    <dt class="property-optional"
+{{% /md %}}</dd><dt class="property-optional"
             title="Optional">
         <span id="state_snapshot_csharp">
 <a href="#state_snapshot_csharp" style="color: inherit; text-decoration: inherit;">Snapshot</a>
@@ -1678,8 +1559,7 @@ valid values:
 * `projects/project/global/snapshots/snapshot`
 * `global/snapshots/snapshot`
 * `snapshot`
-{{% /md %}}</dd>
-    <dt class="property-optional"
+{{% /md %}}</dd><dt class="property-optional"
             title="Optional">
         <span id="state_sourcesnapshotencryptionkey_csharp">
 <a href="#state_sourcesnapshotencryptionkey_csharp" style="color: inherit; text-decoration: inherit;">Source<wbr>Snapshot<wbr>Encryption<wbr>Key</a>
@@ -1691,8 +1571,7 @@ valid values:
 if the source snapshot is protected by a customer-supplied encryption
 key.
 Structure is documented below.
-{{% /md %}}</dd>
-    <dt class="property-optional"
+{{% /md %}}</dd><dt class="property-optional"
             title="Optional">
         <span id="state_sourcesnapshotid_csharp">
 <a href="#state_sourcesnapshotid_csharp" style="color: inherit; text-decoration: inherit;">Source<wbr>Snapshot<wbr>Id</a>
@@ -1703,8 +1582,7 @@ Structure is documented below.
     <dd>{{% md %}}The unique ID of the snapshot used to create this disk. This value identifies the exact snapshot that was used to create
 this persistent disk. For example, if you created the persistent disk from a snapshot that was later deleted and
 recreated under the same name, the source snapshot ID would identify the exact version of the snapshot that was used.
-{{% /md %}}</dd>
-    <dt class="property-optional"
+{{% /md %}}</dd><dt class="property-optional"
             title="Optional">
         <span id="state_type_csharp">
 <a href="#state_type_csharp" style="color: inherit; text-decoration: inherit;">Type</a>
@@ -1714,8 +1592,7 @@ recreated under the same name, the source snapshot ID would identify the exact v
     </dt>
     <dd>{{% md %}}URL of the disk type resource describing which disk type to use to
 create the disk. Provide this when creating the disk.
-{{% /md %}}</dd>
-    <dt class="property-optional"
+{{% /md %}}</dd><dt class="property-optional"
             title="Optional">
         <span id="state_users_csharp">
 <a href="#state_users_csharp" style="color: inherit; text-decoration: inherit;">Users</a>
@@ -1724,14 +1601,11 @@ create the disk. Provide this when creating the disk.
         <span class="property-type">List&lt;string&gt;</span>
     </dt>
     <dd>{{% md %}}Links to the users of the disk (attached instances) in form: project/zones/zone/instances/instance
-{{% /md %}}</dd>
-</dl>
+{{% /md %}}</dd></dl>
 {{% /choosable %}}
 
 {{% choosable language go %}}
-<dl class="resources-properties">
-
-    <dt class="property-optional"
+<dl class="resources-properties"><dt class="property-optional"
             title="Optional">
         <span id="state_creationtimestamp_go">
 <a href="#state_creationtimestamp_go" style="color: inherit; text-decoration: inherit;">Creation<wbr>Timestamp</a>
@@ -1740,8 +1614,7 @@ create the disk. Provide this when creating the disk.
         <span class="property-type">string</span>
     </dt>
     <dd>{{% md %}}Creation timestamp in RFC3339 text format.
-{{% /md %}}</dd>
-    <dt class="property-optional"
+{{% /md %}}</dd><dt class="property-optional"
             title="Optional">
         <span id="state_description_go">
 <a href="#state_description_go" style="color: inherit; text-decoration: inherit;">Description</a>
@@ -1751,8 +1624,7 @@ create the disk. Provide this when creating the disk.
     </dt>
     <dd>{{% md %}}An optional description of this resource. Provide this property when
 you create the resource.
-{{% /md %}}</dd>
-    <dt class="property-optional"
+{{% /md %}}</dd><dt class="property-optional"
             title="Optional">
         <span id="state_diskencryptionkey_go">
 <a href="#state_diskencryptionkey_go" style="color: inherit; text-decoration: inherit;">Disk<wbr>Encryption<wbr>Key</a>
@@ -1770,8 +1642,7 @@ If you do not provide an encryption key when creating the disk, then
 the disk will be encrypted using an automatically generated key and
 you do not need to provide a key to use the disk later.
 Structure is documented below.
-{{% /md %}}</dd>
-    <dt class="property-optional"
+{{% /md %}}</dd><dt class="property-optional"
             title="Optional">
         <span id="state_labelfingerprint_go">
 <a href="#state_labelfingerprint_go" style="color: inherit; text-decoration: inherit;">Label<wbr>Fingerprint</a>
@@ -1780,8 +1651,7 @@ Structure is documented below.
         <span class="property-type">string</span>
     </dt>
     <dd>{{% md %}}The fingerprint used for optimistic locking of this resource. Used internally during updates.
-{{% /md %}}</dd>
-    <dt class="property-optional"
+{{% /md %}}</dd><dt class="property-optional"
             title="Optional">
         <span id="state_labels_go">
 <a href="#state_labels_go" style="color: inherit; text-decoration: inherit;">Labels</a>
@@ -1790,8 +1660,7 @@ Structure is documented below.
         <span class="property-type">map[string]string</span>
     </dt>
     <dd>{{% md %}}Labels to apply to this disk.  A list of key->value pairs.
-{{% /md %}}</dd>
-    <dt class="property-optional"
+{{% /md %}}</dd><dt class="property-optional"
             title="Optional">
         <span id="state_lastattachtimestamp_go">
 <a href="#state_lastattachtimestamp_go" style="color: inherit; text-decoration: inherit;">Last<wbr>Attach<wbr>Timestamp</a>
@@ -1800,8 +1669,7 @@ Structure is documented below.
         <span class="property-type">string</span>
     </dt>
     <dd>{{% md %}}Last attach timestamp in RFC3339 text format.
-{{% /md %}}</dd>
-    <dt class="property-optional"
+{{% /md %}}</dd><dt class="property-optional"
             title="Optional">
         <span id="state_lastdetachtimestamp_go">
 <a href="#state_lastdetachtimestamp_go" style="color: inherit; text-decoration: inherit;">Last<wbr>Detach<wbr>Timestamp</a>
@@ -1810,8 +1678,7 @@ Structure is documented below.
         <span class="property-type">string</span>
     </dt>
     <dd>{{% md %}}Last detach timestamp in RFC3339 text format.
-{{% /md %}}</dd>
-    <dt class="property-optional"
+{{% /md %}}</dd><dt class="property-optional"
             title="Optional">
         <span id="state_name_go">
 <a href="#state_name_go" style="color: inherit; text-decoration: inherit;">Name</a>
@@ -1826,8 +1693,7 @@ the regular expression `a-z?` which means the
 first character must be a lowercase letter, and all following
 characters must be a dash, lowercase letter, or digit, except the last
 character, which cannot be a dash.
-{{% /md %}}</dd>
-    <dt class="property-optional"
+{{% /md %}}</dd><dt class="property-optional"
             title="Optional">
         <span id="state_physicalblocksizebytes_go">
 <a href="#state_physicalblocksizebytes_go" style="color: inherit; text-decoration: inherit;">Physical<wbr>Block<wbr>Size<wbr>Bytes</a>
@@ -1840,8 +1706,7 @@ in a request, a default value is used. Currently supported sizes
 are 4096 and 16384, other sizes may be added in the future.
 If an unsupported value is requested, the error message will list
 the supported values for the caller's project.
-{{% /md %}}</dd>
-    <dt class="property-optional"
+{{% /md %}}</dd><dt class="property-optional"
             title="Optional">
         <span id="state_project_go">
 <a href="#state_project_go" style="color: inherit; text-decoration: inherit;">Project</a>
@@ -1851,8 +1716,7 @@ the supported values for the caller's project.
     </dt>
     <dd>{{% md %}}The ID of the project in which the resource belongs.
 If it is not provided, the provider project is used.
-{{% /md %}}</dd>
-    <dt class="property-optional"
+{{% /md %}}</dd><dt class="property-optional"
             title="Optional">
         <span id="state_region_go">
 <a href="#state_region_go" style="color: inherit; text-decoration: inherit;">Region</a>
@@ -1861,8 +1725,7 @@ If it is not provided, the provider project is used.
         <span class="property-type">string</span>
     </dt>
     <dd>{{% md %}}A reference to the region where the disk resides.
-{{% /md %}}</dd>
-    <dt class="property-optional"
+{{% /md %}}</dd><dt class="property-optional"
             title="Optional">
         <span id="state_replicazones_go">
 <a href="#state_replicazones_go" style="color: inherit; text-decoration: inherit;">Replica<wbr>Zones</a>
@@ -1871,8 +1734,7 @@ If it is not provided, the provider project is used.
         <span class="property-type">[]string</span>
     </dt>
     <dd>{{% md %}}URLs of the zones where the disk should be replicated to.
-{{% /md %}}</dd>
-    <dt class="property-optional"
+{{% /md %}}</dd><dt class="property-optional"
             title="Optional">
         <span id="state_selflink_go">
 <a href="#state_selflink_go" style="color: inherit; text-decoration: inherit;">Self<wbr>Link</a>
@@ -1881,8 +1743,7 @@ If it is not provided, the provider project is used.
         <span class="property-type">string</span>
     </dt>
     <dd>{{% md %}}The URI of the created resource.
-{{% /md %}}</dd>
-    <dt class="property-optional"
+{{% /md %}}</dd><dt class="property-optional"
             title="Optional">
         <span id="state_size_go">
 <a href="#state_size_go" style="color: inherit; text-decoration: inherit;">Size</a>
@@ -1897,8 +1758,7 @@ persistent disk.
 If you specify this field along with sourceImage or sourceSnapshot,
 the value of sizeGb must not be less than the size of the sourceImage
 or the size of the snapshot.
-{{% /md %}}</dd>
-    <dt class="property-optional"
+{{% /md %}}</dd><dt class="property-optional"
             title="Optional">
         <span id="state_snapshot_go">
 <a href="#state_snapshot_go" style="color: inherit; text-decoration: inherit;">Snapshot</a>
@@ -1913,8 +1773,7 @@ valid values:
 * `projects/project/global/snapshots/snapshot`
 * `global/snapshots/snapshot`
 * `snapshot`
-{{% /md %}}</dd>
-    <dt class="property-optional"
+{{% /md %}}</dd><dt class="property-optional"
             title="Optional">
         <span id="state_sourcesnapshotencryptionkey_go">
 <a href="#state_sourcesnapshotencryptionkey_go" style="color: inherit; text-decoration: inherit;">Source<wbr>Snapshot<wbr>Encryption<wbr>Key</a>
@@ -1926,8 +1785,7 @@ valid values:
 if the source snapshot is protected by a customer-supplied encryption
 key.
 Structure is documented below.
-{{% /md %}}</dd>
-    <dt class="property-optional"
+{{% /md %}}</dd><dt class="property-optional"
             title="Optional">
         <span id="state_sourcesnapshotid_go">
 <a href="#state_sourcesnapshotid_go" style="color: inherit; text-decoration: inherit;">Source<wbr>Snapshot<wbr>Id</a>
@@ -1938,8 +1796,7 @@ Structure is documented below.
     <dd>{{% md %}}The unique ID of the snapshot used to create this disk. This value identifies the exact snapshot that was used to create
 this persistent disk. For example, if you created the persistent disk from a snapshot that was later deleted and
 recreated under the same name, the source snapshot ID would identify the exact version of the snapshot that was used.
-{{% /md %}}</dd>
-    <dt class="property-optional"
+{{% /md %}}</dd><dt class="property-optional"
             title="Optional">
         <span id="state_type_go">
 <a href="#state_type_go" style="color: inherit; text-decoration: inherit;">Type</a>
@@ -1949,8 +1806,7 @@ recreated under the same name, the source snapshot ID would identify the exact v
     </dt>
     <dd>{{% md %}}URL of the disk type resource describing which disk type to use to
 create the disk. Provide this when creating the disk.
-{{% /md %}}</dd>
-    <dt class="property-optional"
+{{% /md %}}</dd><dt class="property-optional"
             title="Optional">
         <span id="state_users_go">
 <a href="#state_users_go" style="color: inherit; text-decoration: inherit;">Users</a>
@@ -1959,14 +1815,11 @@ create the disk. Provide this when creating the disk.
         <span class="property-type">[]string</span>
     </dt>
     <dd>{{% md %}}Links to the users of the disk (attached instances) in form: project/zones/zone/instances/instance
-{{% /md %}}</dd>
-</dl>
+{{% /md %}}</dd></dl>
 {{% /choosable %}}
 
 {{% choosable language nodejs %}}
-<dl class="resources-properties">
-
-    <dt class="property-optional"
+<dl class="resources-properties"><dt class="property-optional"
             title="Optional">
         <span id="state_creationtimestamp_nodejs">
 <a href="#state_creationtimestamp_nodejs" style="color: inherit; text-decoration: inherit;">creation<wbr>Timestamp</a>
@@ -1975,8 +1828,7 @@ create the disk. Provide this when creating the disk.
         <span class="property-type">string</span>
     </dt>
     <dd>{{% md %}}Creation timestamp in RFC3339 text format.
-{{% /md %}}</dd>
-    <dt class="property-optional"
+{{% /md %}}</dd><dt class="property-optional"
             title="Optional">
         <span id="state_description_nodejs">
 <a href="#state_description_nodejs" style="color: inherit; text-decoration: inherit;">description</a>
@@ -1986,8 +1838,7 @@ create the disk. Provide this when creating the disk.
     </dt>
     <dd>{{% md %}}An optional description of this resource. Provide this property when
 you create the resource.
-{{% /md %}}</dd>
-    <dt class="property-optional"
+{{% /md %}}</dd><dt class="property-optional"
             title="Optional">
         <span id="state_diskencryptionkey_nodejs">
 <a href="#state_diskencryptionkey_nodejs" style="color: inherit; text-decoration: inherit;">disk<wbr>Encryption<wbr>Key</a>
@@ -2005,8 +1856,7 @@ If you do not provide an encryption key when creating the disk, then
 the disk will be encrypted using an automatically generated key and
 you do not need to provide a key to use the disk later.
 Structure is documented below.
-{{% /md %}}</dd>
-    <dt class="property-optional"
+{{% /md %}}</dd><dt class="property-optional"
             title="Optional">
         <span id="state_labelfingerprint_nodejs">
 <a href="#state_labelfingerprint_nodejs" style="color: inherit; text-decoration: inherit;">label<wbr>Fingerprint</a>
@@ -2015,8 +1865,7 @@ Structure is documented below.
         <span class="property-type">string</span>
     </dt>
     <dd>{{% md %}}The fingerprint used for optimistic locking of this resource. Used internally during updates.
-{{% /md %}}</dd>
-    <dt class="property-optional"
+{{% /md %}}</dd><dt class="property-optional"
             title="Optional">
         <span id="state_labels_nodejs">
 <a href="#state_labels_nodejs" style="color: inherit; text-decoration: inherit;">labels</a>
@@ -2025,8 +1874,7 @@ Structure is documented below.
         <span class="property-type">{[key: string]: string}</span>
     </dt>
     <dd>{{% md %}}Labels to apply to this disk.  A list of key->value pairs.
-{{% /md %}}</dd>
-    <dt class="property-optional"
+{{% /md %}}</dd><dt class="property-optional"
             title="Optional">
         <span id="state_lastattachtimestamp_nodejs">
 <a href="#state_lastattachtimestamp_nodejs" style="color: inherit; text-decoration: inherit;">last<wbr>Attach<wbr>Timestamp</a>
@@ -2035,8 +1883,7 @@ Structure is documented below.
         <span class="property-type">string</span>
     </dt>
     <dd>{{% md %}}Last attach timestamp in RFC3339 text format.
-{{% /md %}}</dd>
-    <dt class="property-optional"
+{{% /md %}}</dd><dt class="property-optional"
             title="Optional">
         <span id="state_lastdetachtimestamp_nodejs">
 <a href="#state_lastdetachtimestamp_nodejs" style="color: inherit; text-decoration: inherit;">last<wbr>Detach<wbr>Timestamp</a>
@@ -2045,8 +1892,7 @@ Structure is documented below.
         <span class="property-type">string</span>
     </dt>
     <dd>{{% md %}}Last detach timestamp in RFC3339 text format.
-{{% /md %}}</dd>
-    <dt class="property-optional"
+{{% /md %}}</dd><dt class="property-optional"
             title="Optional">
         <span id="state_name_nodejs">
 <a href="#state_name_nodejs" style="color: inherit; text-decoration: inherit;">name</a>
@@ -2061,8 +1907,7 @@ the regular expression `a-z?` which means the
 first character must be a lowercase letter, and all following
 characters must be a dash, lowercase letter, or digit, except the last
 character, which cannot be a dash.
-{{% /md %}}</dd>
-    <dt class="property-optional"
+{{% /md %}}</dd><dt class="property-optional"
             title="Optional">
         <span id="state_physicalblocksizebytes_nodejs">
 <a href="#state_physicalblocksizebytes_nodejs" style="color: inherit; text-decoration: inherit;">physical<wbr>Block<wbr>Size<wbr>Bytes</a>
@@ -2075,8 +1920,7 @@ in a request, a default value is used. Currently supported sizes
 are 4096 and 16384, other sizes may be added in the future.
 If an unsupported value is requested, the error message will list
 the supported values for the caller's project.
-{{% /md %}}</dd>
-    <dt class="property-optional"
+{{% /md %}}</dd><dt class="property-optional"
             title="Optional">
         <span id="state_project_nodejs">
 <a href="#state_project_nodejs" style="color: inherit; text-decoration: inherit;">project</a>
@@ -2086,8 +1930,7 @@ the supported values for the caller's project.
     </dt>
     <dd>{{% md %}}The ID of the project in which the resource belongs.
 If it is not provided, the provider project is used.
-{{% /md %}}</dd>
-    <dt class="property-optional"
+{{% /md %}}</dd><dt class="property-optional"
             title="Optional">
         <span id="state_region_nodejs">
 <a href="#state_region_nodejs" style="color: inherit; text-decoration: inherit;">region</a>
@@ -2096,8 +1939,7 @@ If it is not provided, the provider project is used.
         <span class="property-type">string</span>
     </dt>
     <dd>{{% md %}}A reference to the region where the disk resides.
-{{% /md %}}</dd>
-    <dt class="property-optional"
+{{% /md %}}</dd><dt class="property-optional"
             title="Optional">
         <span id="state_replicazones_nodejs">
 <a href="#state_replicazones_nodejs" style="color: inherit; text-decoration: inherit;">replica<wbr>Zones</a>
@@ -2106,8 +1948,7 @@ If it is not provided, the provider project is used.
         <span class="property-type">string[]</span>
     </dt>
     <dd>{{% md %}}URLs of the zones where the disk should be replicated to.
-{{% /md %}}</dd>
-    <dt class="property-optional"
+{{% /md %}}</dd><dt class="property-optional"
             title="Optional">
         <span id="state_selflink_nodejs">
 <a href="#state_selflink_nodejs" style="color: inherit; text-decoration: inherit;">self<wbr>Link</a>
@@ -2116,8 +1957,7 @@ If it is not provided, the provider project is used.
         <span class="property-type">string</span>
     </dt>
     <dd>{{% md %}}The URI of the created resource.
-{{% /md %}}</dd>
-    <dt class="property-optional"
+{{% /md %}}</dd><dt class="property-optional"
             title="Optional">
         <span id="state_size_nodejs">
 <a href="#state_size_nodejs" style="color: inherit; text-decoration: inherit;">size</a>
@@ -2132,8 +1972,7 @@ persistent disk.
 If you specify this field along with sourceImage or sourceSnapshot,
 the value of sizeGb must not be less than the size of the sourceImage
 or the size of the snapshot.
-{{% /md %}}</dd>
-    <dt class="property-optional"
+{{% /md %}}</dd><dt class="property-optional"
             title="Optional">
         <span id="state_snapshot_nodejs">
 <a href="#state_snapshot_nodejs" style="color: inherit; text-decoration: inherit;">snapshot</a>
@@ -2148,8 +1987,7 @@ valid values:
 * `projects/project/global/snapshots/snapshot`
 * `global/snapshots/snapshot`
 * `snapshot`
-{{% /md %}}</dd>
-    <dt class="property-optional"
+{{% /md %}}</dd><dt class="property-optional"
             title="Optional">
         <span id="state_sourcesnapshotencryptionkey_nodejs">
 <a href="#state_sourcesnapshotencryptionkey_nodejs" style="color: inherit; text-decoration: inherit;">source<wbr>Snapshot<wbr>Encryption<wbr>Key</a>
@@ -2161,8 +1999,7 @@ valid values:
 if the source snapshot is protected by a customer-supplied encryption
 key.
 Structure is documented below.
-{{% /md %}}</dd>
-    <dt class="property-optional"
+{{% /md %}}</dd><dt class="property-optional"
             title="Optional">
         <span id="state_sourcesnapshotid_nodejs">
 <a href="#state_sourcesnapshotid_nodejs" style="color: inherit; text-decoration: inherit;">source<wbr>Snapshot<wbr>Id</a>
@@ -2173,8 +2010,7 @@ Structure is documented below.
     <dd>{{% md %}}The unique ID of the snapshot used to create this disk. This value identifies the exact snapshot that was used to create
 this persistent disk. For example, if you created the persistent disk from a snapshot that was later deleted and
 recreated under the same name, the source snapshot ID would identify the exact version of the snapshot that was used.
-{{% /md %}}</dd>
-    <dt class="property-optional"
+{{% /md %}}</dd><dt class="property-optional"
             title="Optional">
         <span id="state_type_nodejs">
 <a href="#state_type_nodejs" style="color: inherit; text-decoration: inherit;">type</a>
@@ -2184,8 +2020,7 @@ recreated under the same name, the source snapshot ID would identify the exact v
     </dt>
     <dd>{{% md %}}URL of the disk type resource describing which disk type to use to
 create the disk. Provide this when creating the disk.
-{{% /md %}}</dd>
-    <dt class="property-optional"
+{{% /md %}}</dd><dt class="property-optional"
             title="Optional">
         <span id="state_users_nodejs">
 <a href="#state_users_nodejs" style="color: inherit; text-decoration: inherit;">users</a>
@@ -2194,14 +2029,11 @@ create the disk. Provide this when creating the disk.
         <span class="property-type">string[]</span>
     </dt>
     <dd>{{% md %}}Links to the users of the disk (attached instances) in form: project/zones/zone/instances/instance
-{{% /md %}}</dd>
-</dl>
+{{% /md %}}</dd></dl>
 {{% /choosable %}}
 
 {{% choosable language python %}}
-<dl class="resources-properties">
-
-    <dt class="property-optional"
+<dl class="resources-properties"><dt class="property-optional"
             title="Optional">
         <span id="state_creation_timestamp_python">
 <a href="#state_creation_timestamp_python" style="color: inherit; text-decoration: inherit;">creation_<wbr>timestamp</a>
@@ -2210,8 +2042,7 @@ create the disk. Provide this when creating the disk.
         <span class="property-type">str</span>
     </dt>
     <dd>{{% md %}}Creation timestamp in RFC3339 text format.
-{{% /md %}}</dd>
-    <dt class="property-optional"
+{{% /md %}}</dd><dt class="property-optional"
             title="Optional">
         <span id="state_description_python">
 <a href="#state_description_python" style="color: inherit; text-decoration: inherit;">description</a>
@@ -2221,8 +2052,7 @@ create the disk. Provide this when creating the disk.
     </dt>
     <dd>{{% md %}}An optional description of this resource. Provide this property when
 you create the resource.
-{{% /md %}}</dd>
-    <dt class="property-optional"
+{{% /md %}}</dd><dt class="property-optional"
             title="Optional">
         <span id="state_disk_encryption_key_python">
 <a href="#state_disk_encryption_key_python" style="color: inherit; text-decoration: inherit;">disk_<wbr>encryption_<wbr>key</a>
@@ -2240,8 +2070,7 @@ If you do not provide an encryption key when creating the disk, then
 the disk will be encrypted using an automatically generated key and
 you do not need to provide a key to use the disk later.
 Structure is documented below.
-{{% /md %}}</dd>
-    <dt class="property-optional"
+{{% /md %}}</dd><dt class="property-optional"
             title="Optional">
         <span id="state_label_fingerprint_python">
 <a href="#state_label_fingerprint_python" style="color: inherit; text-decoration: inherit;">label_<wbr>fingerprint</a>
@@ -2250,8 +2079,7 @@ Structure is documented below.
         <span class="property-type">str</span>
     </dt>
     <dd>{{% md %}}The fingerprint used for optimistic locking of this resource. Used internally during updates.
-{{% /md %}}</dd>
-    <dt class="property-optional"
+{{% /md %}}</dd><dt class="property-optional"
             title="Optional">
         <span id="state_labels_python">
 <a href="#state_labels_python" style="color: inherit; text-decoration: inherit;">labels</a>
@@ -2260,8 +2088,7 @@ Structure is documented below.
         <span class="property-type">Mapping[str, str]</span>
     </dt>
     <dd>{{% md %}}Labels to apply to this disk.  A list of key->value pairs.
-{{% /md %}}</dd>
-    <dt class="property-optional"
+{{% /md %}}</dd><dt class="property-optional"
             title="Optional">
         <span id="state_last_attach_timestamp_python">
 <a href="#state_last_attach_timestamp_python" style="color: inherit; text-decoration: inherit;">last_<wbr>attach_<wbr>timestamp</a>
@@ -2270,8 +2097,7 @@ Structure is documented below.
         <span class="property-type">str</span>
     </dt>
     <dd>{{% md %}}Last attach timestamp in RFC3339 text format.
-{{% /md %}}</dd>
-    <dt class="property-optional"
+{{% /md %}}</dd><dt class="property-optional"
             title="Optional">
         <span id="state_last_detach_timestamp_python">
 <a href="#state_last_detach_timestamp_python" style="color: inherit; text-decoration: inherit;">last_<wbr>detach_<wbr>timestamp</a>
@@ -2280,8 +2106,7 @@ Structure is documented below.
         <span class="property-type">str</span>
     </dt>
     <dd>{{% md %}}Last detach timestamp in RFC3339 text format.
-{{% /md %}}</dd>
-    <dt class="property-optional"
+{{% /md %}}</dd><dt class="property-optional"
             title="Optional">
         <span id="state_name_python">
 <a href="#state_name_python" style="color: inherit; text-decoration: inherit;">name</a>
@@ -2296,8 +2121,7 @@ the regular expression `a-z?` which means the
 first character must be a lowercase letter, and all following
 characters must be a dash, lowercase letter, or digit, except the last
 character, which cannot be a dash.
-{{% /md %}}</dd>
-    <dt class="property-optional"
+{{% /md %}}</dd><dt class="property-optional"
             title="Optional">
         <span id="state_physical_block_size_bytes_python">
 <a href="#state_physical_block_size_bytes_python" style="color: inherit; text-decoration: inherit;">physical_<wbr>block_<wbr>size_<wbr>bytes</a>
@@ -2310,8 +2134,7 @@ in a request, a default value is used. Currently supported sizes
 are 4096 and 16384, other sizes may be added in the future.
 If an unsupported value is requested, the error message will list
 the supported values for the caller's project.
-{{% /md %}}</dd>
-    <dt class="property-optional"
+{{% /md %}}</dd><dt class="property-optional"
             title="Optional">
         <span id="state_project_python">
 <a href="#state_project_python" style="color: inherit; text-decoration: inherit;">project</a>
@@ -2321,8 +2144,7 @@ the supported values for the caller's project.
     </dt>
     <dd>{{% md %}}The ID of the project in which the resource belongs.
 If it is not provided, the provider project is used.
-{{% /md %}}</dd>
-    <dt class="property-optional"
+{{% /md %}}</dd><dt class="property-optional"
             title="Optional">
         <span id="state_region_python">
 <a href="#state_region_python" style="color: inherit; text-decoration: inherit;">region</a>
@@ -2331,8 +2153,7 @@ If it is not provided, the provider project is used.
         <span class="property-type">str</span>
     </dt>
     <dd>{{% md %}}A reference to the region where the disk resides.
-{{% /md %}}</dd>
-    <dt class="property-optional"
+{{% /md %}}</dd><dt class="property-optional"
             title="Optional">
         <span id="state_replica_zones_python">
 <a href="#state_replica_zones_python" style="color: inherit; text-decoration: inherit;">replica_<wbr>zones</a>
@@ -2341,8 +2162,7 @@ If it is not provided, the provider project is used.
         <span class="property-type">Sequence[str]</span>
     </dt>
     <dd>{{% md %}}URLs of the zones where the disk should be replicated to.
-{{% /md %}}</dd>
-    <dt class="property-optional"
+{{% /md %}}</dd><dt class="property-optional"
             title="Optional">
         <span id="state_self_link_python">
 <a href="#state_self_link_python" style="color: inherit; text-decoration: inherit;">self_<wbr>link</a>
@@ -2351,8 +2171,7 @@ If it is not provided, the provider project is used.
         <span class="property-type">str</span>
     </dt>
     <dd>{{% md %}}The URI of the created resource.
-{{% /md %}}</dd>
-    <dt class="property-optional"
+{{% /md %}}</dd><dt class="property-optional"
             title="Optional">
         <span id="state_size_python">
 <a href="#state_size_python" style="color: inherit; text-decoration: inherit;">size</a>
@@ -2367,8 +2186,7 @@ persistent disk.
 If you specify this field along with sourceImage or sourceSnapshot,
 the value of sizeGb must not be less than the size of the sourceImage
 or the size of the snapshot.
-{{% /md %}}</dd>
-    <dt class="property-optional"
+{{% /md %}}</dd><dt class="property-optional"
             title="Optional">
         <span id="state_snapshot_python">
 <a href="#state_snapshot_python" style="color: inherit; text-decoration: inherit;">snapshot</a>
@@ -2383,8 +2201,7 @@ valid values:
 * `projects/project/global/snapshots/snapshot`
 * `global/snapshots/snapshot`
 * `snapshot`
-{{% /md %}}</dd>
-    <dt class="property-optional"
+{{% /md %}}</dd><dt class="property-optional"
             title="Optional">
         <span id="state_source_snapshot_encryption_key_python">
 <a href="#state_source_snapshot_encryption_key_python" style="color: inherit; text-decoration: inherit;">source_<wbr>snapshot_<wbr>encryption_<wbr>key</a>
@@ -2396,8 +2213,7 @@ valid values:
 if the source snapshot is protected by a customer-supplied encryption
 key.
 Structure is documented below.
-{{% /md %}}</dd>
-    <dt class="property-optional"
+{{% /md %}}</dd><dt class="property-optional"
             title="Optional">
         <span id="state_source_snapshot_id_python">
 <a href="#state_source_snapshot_id_python" style="color: inherit; text-decoration: inherit;">source_<wbr>snapshot_<wbr>id</a>
@@ -2408,8 +2224,7 @@ Structure is documented below.
     <dd>{{% md %}}The unique ID of the snapshot used to create this disk. This value identifies the exact snapshot that was used to create
 this persistent disk. For example, if you created the persistent disk from a snapshot that was later deleted and
 recreated under the same name, the source snapshot ID would identify the exact version of the snapshot that was used.
-{{% /md %}}</dd>
-    <dt class="property-optional"
+{{% /md %}}</dd><dt class="property-optional"
             title="Optional">
         <span id="state_type_python">
 <a href="#state_type_python" style="color: inherit; text-decoration: inherit;">type</a>
@@ -2419,8 +2234,7 @@ recreated under the same name, the source snapshot ID would identify the exact v
     </dt>
     <dd>{{% md %}}URL of the disk type resource describing which disk type to use to
 create the disk. Provide this when creating the disk.
-{{% /md %}}</dd>
-    <dt class="property-optional"
+{{% /md %}}</dd><dt class="property-optional"
             title="Optional">
         <span id="state_users_python">
 <a href="#state_users_python" style="color: inherit; text-decoration: inherit;">users</a>
@@ -2429,8 +2243,7 @@ create the disk. Provide this when creating the disk.
         <span class="property-type">Sequence[str]</span>
     </dt>
     <dd>{{% md %}}Links to the users of the disk (attached instances) in form: project/zones/zone/instances/instance
-{{% /md %}}</dd>
-</dl>
+{{% /md %}}</dd></dl>
 {{% /choosable %}}
 
 
@@ -2445,9 +2258,7 @@ create the disk. Provide this when creating the disk.
 <h4 id="regiondiskdiskencryptionkey">Region<wbr>Disk<wbr>Disk<wbr>Encryption<wbr>Key</h4>
 
 {{% choosable language csharp %}}
-<dl class="resources-properties">
-
-    <dt class="property-optional"
+<dl class="resources-properties"><dt class="property-optional"
             title="Optional">
         <span id="kmskeyname_csharp">
 <a href="#kmskeyname_csharp" style="color: inherit; text-decoration: inherit;">Kms<wbr>Key<wbr>Name</a>
@@ -2456,8 +2267,7 @@ create the disk. Provide this when creating the disk.
         <span class="property-type">string</span>
     </dt>
     <dd>{{% md %}}The name of the encryption key that is stored in Google Cloud KMS.
-{{% /md %}}</dd>
-    <dt class="property-optional"
+{{% /md %}}</dd><dt class="property-optional"
             title="Optional">
         <span id="rawkey_csharp">
 <a href="#rawkey_csharp" style="color: inherit; text-decoration: inherit;">Raw<wbr>Key</a>
@@ -2467,8 +2277,7 @@ create the disk. Provide this when creating the disk.
     </dt>
     <dd>{{% md %}}Specifies a 256-bit customer-supplied encryption key, encoded in
 RFC 4648 base64 to either encrypt or decrypt this resource.
-{{% /md %}}</dd>
-    <dt class="property-optional"
+{{% /md %}}</dd><dt class="property-optional"
             title="Optional">
         <span id="sha256_csharp">
 <a href="#sha256_csharp" style="color: inherit; text-decoration: inherit;">Sha256</a>
@@ -2479,14 +2288,11 @@ RFC 4648 base64 to either encrypt or decrypt this resource.
     <dd>{{% md %}}-
 The RFC 4648 base64 encoded SHA-256 hash of the customer-supplied
 encryption key that protects this resource.
-{{% /md %}}</dd>
-</dl>
+{{% /md %}}</dd></dl>
 {{% /choosable %}}
 
 {{% choosable language go %}}
-<dl class="resources-properties">
-
-    <dt class="property-optional"
+<dl class="resources-properties"><dt class="property-optional"
             title="Optional">
         <span id="kmskeyname_go">
 <a href="#kmskeyname_go" style="color: inherit; text-decoration: inherit;">Kms<wbr>Key<wbr>Name</a>
@@ -2495,8 +2301,7 @@ encryption key that protects this resource.
         <span class="property-type">string</span>
     </dt>
     <dd>{{% md %}}The name of the encryption key that is stored in Google Cloud KMS.
-{{% /md %}}</dd>
-    <dt class="property-optional"
+{{% /md %}}</dd><dt class="property-optional"
             title="Optional">
         <span id="rawkey_go">
 <a href="#rawkey_go" style="color: inherit; text-decoration: inherit;">Raw<wbr>Key</a>
@@ -2506,8 +2311,7 @@ encryption key that protects this resource.
     </dt>
     <dd>{{% md %}}Specifies a 256-bit customer-supplied encryption key, encoded in
 RFC 4648 base64 to either encrypt or decrypt this resource.
-{{% /md %}}</dd>
-    <dt class="property-optional"
+{{% /md %}}</dd><dt class="property-optional"
             title="Optional">
         <span id="sha256_go">
 <a href="#sha256_go" style="color: inherit; text-decoration: inherit;">Sha256</a>
@@ -2518,14 +2322,11 @@ RFC 4648 base64 to either encrypt or decrypt this resource.
     <dd>{{% md %}}-
 The RFC 4648 base64 encoded SHA-256 hash of the customer-supplied
 encryption key that protects this resource.
-{{% /md %}}</dd>
-</dl>
+{{% /md %}}</dd></dl>
 {{% /choosable %}}
 
 {{% choosable language nodejs %}}
-<dl class="resources-properties">
-
-    <dt class="property-optional"
+<dl class="resources-properties"><dt class="property-optional"
             title="Optional">
         <span id="kmskeyname_nodejs">
 <a href="#kmskeyname_nodejs" style="color: inherit; text-decoration: inherit;">kms<wbr>Key<wbr>Name</a>
@@ -2534,8 +2335,7 @@ encryption key that protects this resource.
         <span class="property-type">string</span>
     </dt>
     <dd>{{% md %}}The name of the encryption key that is stored in Google Cloud KMS.
-{{% /md %}}</dd>
-    <dt class="property-optional"
+{{% /md %}}</dd><dt class="property-optional"
             title="Optional">
         <span id="rawkey_nodejs">
 <a href="#rawkey_nodejs" style="color: inherit; text-decoration: inherit;">raw<wbr>Key</a>
@@ -2545,8 +2345,7 @@ encryption key that protects this resource.
     </dt>
     <dd>{{% md %}}Specifies a 256-bit customer-supplied encryption key, encoded in
 RFC 4648 base64 to either encrypt or decrypt this resource.
-{{% /md %}}</dd>
-    <dt class="property-optional"
+{{% /md %}}</dd><dt class="property-optional"
             title="Optional">
         <span id="sha256_nodejs">
 <a href="#sha256_nodejs" style="color: inherit; text-decoration: inherit;">sha256</a>
@@ -2557,14 +2356,11 @@ RFC 4648 base64 to either encrypt or decrypt this resource.
     <dd>{{% md %}}-
 The RFC 4648 base64 encoded SHA-256 hash of the customer-supplied
 encryption key that protects this resource.
-{{% /md %}}</dd>
-</dl>
+{{% /md %}}</dd></dl>
 {{% /choosable %}}
 
 {{% choosable language python %}}
-<dl class="resources-properties">
-
-    <dt class="property-optional"
+<dl class="resources-properties"><dt class="property-optional"
             title="Optional">
         <span id="kms_key_name_python">
 <a href="#kms_key_name_python" style="color: inherit; text-decoration: inherit;">kms_<wbr>key_<wbr>name</a>
@@ -2573,8 +2369,7 @@ encryption key that protects this resource.
         <span class="property-type">str</span>
     </dt>
     <dd>{{% md %}}The name of the encryption key that is stored in Google Cloud KMS.
-{{% /md %}}</dd>
-    <dt class="property-optional"
+{{% /md %}}</dd><dt class="property-optional"
             title="Optional">
         <span id="raw_key_python">
 <a href="#raw_key_python" style="color: inherit; text-decoration: inherit;">raw_<wbr>key</a>
@@ -2584,8 +2379,7 @@ encryption key that protects this resource.
     </dt>
     <dd>{{% md %}}Specifies a 256-bit customer-supplied encryption key, encoded in
 RFC 4648 base64 to either encrypt or decrypt this resource.
-{{% /md %}}</dd>
-    <dt class="property-optional"
+{{% /md %}}</dd><dt class="property-optional"
             title="Optional">
         <span id="sha256_python">
 <a href="#sha256_python" style="color: inherit; text-decoration: inherit;">sha256</a>
@@ -2596,16 +2390,13 @@ RFC 4648 base64 to either encrypt or decrypt this resource.
     <dd>{{% md %}}-
 The RFC 4648 base64 encoded SHA-256 hash of the customer-supplied
 encryption key that protects this resource.
-{{% /md %}}</dd>
-</dl>
+{{% /md %}}</dd></dl>
 {{% /choosable %}}
 
 <h4 id="regiondisksourcesnapshotencryptionkey">Region<wbr>Disk<wbr>Source<wbr>Snapshot<wbr>Encryption<wbr>Key</h4>
 
 {{% choosable language csharp %}}
-<dl class="resources-properties">
-
-    <dt class="property-optional"
+<dl class="resources-properties"><dt class="property-optional"
             title="Optional">
         <span id="kmskeyname_csharp">
 <a href="#kmskeyname_csharp" style="color: inherit; text-decoration: inherit;">Kms<wbr>Key<wbr>Name</a>
@@ -2614,8 +2405,7 @@ encryption key that protects this resource.
         <span class="property-type">string</span>
     </dt>
     <dd>{{% md %}}The name of the encryption key that is stored in Google Cloud KMS.
-{{% /md %}}</dd>
-    <dt class="property-optional"
+{{% /md %}}</dd><dt class="property-optional"
             title="Optional">
         <span id="rawkey_csharp">
 <a href="#rawkey_csharp" style="color: inherit; text-decoration: inherit;">Raw<wbr>Key</a>
@@ -2625,8 +2415,7 @@ encryption key that protects this resource.
     </dt>
     <dd>{{% md %}}Specifies a 256-bit customer-supplied encryption key, encoded in
 RFC 4648 base64 to either encrypt or decrypt this resource.
-{{% /md %}}</dd>
-    <dt class="property-optional"
+{{% /md %}}</dd><dt class="property-optional"
             title="Optional">
         <span id="sha256_csharp">
 <a href="#sha256_csharp" style="color: inherit; text-decoration: inherit;">Sha256</a>
@@ -2637,14 +2426,11 @@ RFC 4648 base64 to either encrypt or decrypt this resource.
     <dd>{{% md %}}-
 The RFC 4648 base64 encoded SHA-256 hash of the customer-supplied
 encryption key that protects this resource.
-{{% /md %}}</dd>
-</dl>
+{{% /md %}}</dd></dl>
 {{% /choosable %}}
 
 {{% choosable language go %}}
-<dl class="resources-properties">
-
-    <dt class="property-optional"
+<dl class="resources-properties"><dt class="property-optional"
             title="Optional">
         <span id="kmskeyname_go">
 <a href="#kmskeyname_go" style="color: inherit; text-decoration: inherit;">Kms<wbr>Key<wbr>Name</a>
@@ -2653,8 +2439,7 @@ encryption key that protects this resource.
         <span class="property-type">string</span>
     </dt>
     <dd>{{% md %}}The name of the encryption key that is stored in Google Cloud KMS.
-{{% /md %}}</dd>
-    <dt class="property-optional"
+{{% /md %}}</dd><dt class="property-optional"
             title="Optional">
         <span id="rawkey_go">
 <a href="#rawkey_go" style="color: inherit; text-decoration: inherit;">Raw<wbr>Key</a>
@@ -2664,8 +2449,7 @@ encryption key that protects this resource.
     </dt>
     <dd>{{% md %}}Specifies a 256-bit customer-supplied encryption key, encoded in
 RFC 4648 base64 to either encrypt or decrypt this resource.
-{{% /md %}}</dd>
-    <dt class="property-optional"
+{{% /md %}}</dd><dt class="property-optional"
             title="Optional">
         <span id="sha256_go">
 <a href="#sha256_go" style="color: inherit; text-decoration: inherit;">Sha256</a>
@@ -2676,14 +2460,11 @@ RFC 4648 base64 to either encrypt or decrypt this resource.
     <dd>{{% md %}}-
 The RFC 4648 base64 encoded SHA-256 hash of the customer-supplied
 encryption key that protects this resource.
-{{% /md %}}</dd>
-</dl>
+{{% /md %}}</dd></dl>
 {{% /choosable %}}
 
 {{% choosable language nodejs %}}
-<dl class="resources-properties">
-
-    <dt class="property-optional"
+<dl class="resources-properties"><dt class="property-optional"
             title="Optional">
         <span id="kmskeyname_nodejs">
 <a href="#kmskeyname_nodejs" style="color: inherit; text-decoration: inherit;">kms<wbr>Key<wbr>Name</a>
@@ -2692,8 +2473,7 @@ encryption key that protects this resource.
         <span class="property-type">string</span>
     </dt>
     <dd>{{% md %}}The name of the encryption key that is stored in Google Cloud KMS.
-{{% /md %}}</dd>
-    <dt class="property-optional"
+{{% /md %}}</dd><dt class="property-optional"
             title="Optional">
         <span id="rawkey_nodejs">
 <a href="#rawkey_nodejs" style="color: inherit; text-decoration: inherit;">raw<wbr>Key</a>
@@ -2703,8 +2483,7 @@ encryption key that protects this resource.
     </dt>
     <dd>{{% md %}}Specifies a 256-bit customer-supplied encryption key, encoded in
 RFC 4648 base64 to either encrypt or decrypt this resource.
-{{% /md %}}</dd>
-    <dt class="property-optional"
+{{% /md %}}</dd><dt class="property-optional"
             title="Optional">
         <span id="sha256_nodejs">
 <a href="#sha256_nodejs" style="color: inherit; text-decoration: inherit;">sha256</a>
@@ -2715,14 +2494,11 @@ RFC 4648 base64 to either encrypt or decrypt this resource.
     <dd>{{% md %}}-
 The RFC 4648 base64 encoded SHA-256 hash of the customer-supplied
 encryption key that protects this resource.
-{{% /md %}}</dd>
-</dl>
+{{% /md %}}</dd></dl>
 {{% /choosable %}}
 
 {{% choosable language python %}}
-<dl class="resources-properties">
-
-    <dt class="property-optional"
+<dl class="resources-properties"><dt class="property-optional"
             title="Optional">
         <span id="kms_key_name_python">
 <a href="#kms_key_name_python" style="color: inherit; text-decoration: inherit;">kms_<wbr>key_<wbr>name</a>
@@ -2731,8 +2507,7 @@ encryption key that protects this resource.
         <span class="property-type">str</span>
     </dt>
     <dd>{{% md %}}The name of the encryption key that is stored in Google Cloud KMS.
-{{% /md %}}</dd>
-    <dt class="property-optional"
+{{% /md %}}</dd><dt class="property-optional"
             title="Optional">
         <span id="raw_key_python">
 <a href="#raw_key_python" style="color: inherit; text-decoration: inherit;">raw_<wbr>key</a>
@@ -2742,8 +2517,7 @@ encryption key that protects this resource.
     </dt>
     <dd>{{% md %}}Specifies a 256-bit customer-supplied encryption key, encoded in
 RFC 4648 base64 to either encrypt or decrypt this resource.
-{{% /md %}}</dd>
-    <dt class="property-optional"
+{{% /md %}}</dd><dt class="property-optional"
             title="Optional">
         <span id="sha256_python">
 <a href="#sha256_python" style="color: inherit; text-decoration: inherit;">sha256</a>
@@ -2754,8 +2528,7 @@ RFC 4648 base64 to either encrypt or decrypt this resource.
     <dd>{{% md %}}-
 The RFC 4648 base64 encoded SHA-256 hash of the customer-supplied
 encryption key that protects this resource.
-{{% /md %}}</dd>
-</dl>
+{{% /md %}}</dd></dl>
 {{% /choosable %}}
 ## Import
 
@@ -2788,6 +2561,6 @@ RegionDisk can be imported using any of these accepted formats
 	<dt>License</dt>
 	<dd>Apache-2.0</dd>
 	<dt>Notes</dt>
-	<dd>This Pulumi package is based on the [`google-beta` Terraform Provider](https://github.com/hashicorp/terraform-provider-google-beta).</dd>
+	<dd>{{% md %}}This Pulumi package is based on the [`google-beta` Terraform Provider](https://github.com/hashicorp/terraform-provider-google-beta).{{% /md %}}</dd>
 </dl>
 

@@ -17,11 +17,17 @@ block with the `attach` parameter.
 
 
 {{% examples %}}
+
 ## Example Usage
 
 {{< chooser language "typescript,python,go,csharp" / >}}
 
-{{% example csharp %}}
+
+
+
+
+{{< example csharp >}}
+
 ```csharp
 using Pulumi;
 using VSphere = Pulumi.VSphere;
@@ -43,9 +49,12 @@ class MyStack : Stack
 }
 ```
 
-{{% /example %}}
 
-{{% example go %}}
+{{< /example >}}
+
+
+{{< example go >}}
+
 ```go
 package main
 
@@ -71,9 +80,12 @@ func main() {
 }
 ```
 
-{{% /example %}}
 
-{{% example python %}}
+{{< /example >}}
+
+
+{{< example python >}}
+
 ```python
 import pulumi
 import pulumi_vsphere as vsphere
@@ -86,9 +98,12 @@ my_disk = vsphere.VirtualDisk("myDisk",
     vmdk_path="myDisk.vmdk")
 ```
 
-{{% /example %}}
 
-{{% example typescript %}}
+{{< /example >}}
+
+
+{{< example typescript >}}
+
 
 ```typescript
 import * as pulumi from "@pulumi/pulumi";
@@ -103,9 +118,16 @@ const myDisk = new vsphere.VirtualDisk("myDisk", {
 });
 ```
 
-{{% /example %}}
+
+{{< /example >}}
+
+
+
+
 
 {{% /examples %}}
+
+
 
 
 ## Create a VirtualDisk Resource {#create}
@@ -130,9 +152,7 @@ const myDisk = new vsphere.VirtualDisk("myDisk", {
 
 {{% choosable language nodejs %}}
 
-<dl class="resources-properties">
-  
-    <dt
+<dl class="resources-properties"><dt
         class="property-required" title="Required">
         <span>name</span>
         <span class="property-indicator"></span>
@@ -140,9 +160,7 @@ const myDisk = new vsphere.VirtualDisk("myDisk", {
     </dt>
     <dd>
       The unique name of the resource.
-    </dd>
-  
-    <dt
+    </dd><dt
         class="property-required" title="Required">
         <span>args</span>
         <span class="property-indicator"></span>
@@ -150,9 +168,7 @@ const myDisk = new vsphere.VirtualDisk("myDisk", {
     </dt>
     <dd>
       The arguments to resource properties.
-    </dd>
-  
-    <dt
+    </dd><dt
         class="property-optional" title="Optional">
         <span>opts</span>
         <span class="property-indicator"></span>
@@ -160,10 +176,7 @@ const myDisk = new vsphere.VirtualDisk("myDisk", {
     </dt>
     <dd>
       Bag of options to control resource&#39;s behavior.
-    </dd>
-  
-
-</dl>
+    </dd></dl>
 
 {{% /choosable %}}
 
@@ -189,9 +202,7 @@ const myDisk = new vsphere.VirtualDisk("myDisk", {
 
 {{% choosable language go %}}
 
-<dl class="resources-properties">
-  
-    <dt
+<dl class="resources-properties"><dt
         class="property-optional" title="Optional">
         <span>ctx</span>
         <span class="property-indicator"></span>
@@ -199,9 +210,7 @@ const myDisk = new vsphere.VirtualDisk("myDisk", {
     </dt>
     <dd>
       Context object for the current deployment.
-    </dd>
-  
-    <dt
+    </dd><dt
         class="property-required" title="Required">
         <span>name</span>
         <span class="property-indicator"></span>
@@ -209,9 +218,7 @@ const myDisk = new vsphere.VirtualDisk("myDisk", {
     </dt>
     <dd>
       The unique name of the resource.
-    </dd>
-  
-    <dt
+    </dd><dt
         class="property-required" title="Required">
         <span>args</span>
         <span class="property-indicator"></span>
@@ -219,9 +226,7 @@ const myDisk = new vsphere.VirtualDisk("myDisk", {
     </dt>
     <dd>
       The arguments to resource properties.
-    </dd>
-  
-    <dt
+    </dd><dt
         class="property-optional" title="Optional">
         <span>opts</span>
         <span class="property-indicator"></span>
@@ -229,18 +234,13 @@ const myDisk = new vsphere.VirtualDisk("myDisk", {
     </dt>
     <dd>
       Bag of options to control resource&#39;s behavior.
-    </dd>
-  
-
-</dl>
+    </dd></dl>
 
 {{% /choosable %}}
 
 {{% choosable language csharp %}}
 
-<dl class="resources-properties">
-  
-    <dt
+<dl class="resources-properties"><dt
         class="property-required" title="Required">
         <span>name</span>
         <span class="property-indicator"></span>
@@ -248,9 +248,7 @@ const myDisk = new vsphere.VirtualDisk("myDisk", {
     </dt>
     <dd>
       The unique name of the resource.
-    </dd>
-  
-    <dt
+    </dd><dt
         class="property-required" title="Required">
         <span>args</span>
         <span class="property-indicator"></span>
@@ -258,9 +256,7 @@ const myDisk = new vsphere.VirtualDisk("myDisk", {
     </dt>
     <dd>
       The arguments to resource properties.
-    </dd>
-  
-    <dt
+    </dd><dt
         class="property-optional" title="Optional">
         <span>opts</span>
         <span class="property-indicator"></span>
@@ -268,10 +264,7 @@ const myDisk = new vsphere.VirtualDisk("myDisk", {
     </dt>
     <dd>
       Bag of options to control resource&#39;s behavior.
-    </dd>
-  
-
-</dl>
+    </dd></dl>
 
 {{% /choosable %}}
 
@@ -286,9 +279,7 @@ The VirtualDisk resource accepts the following [input]({{< relref "/docs/intro/c
 
 
 {{% choosable language csharp %}}
-<dl class="resources-properties">
-
-    <dt class="property-required"
+<dl class="resources-properties"><dt class="property-required"
             title="Required">
         <span id="datastore_csharp">
 <a href="#datastore_csharp" style="color: inherit; text-decoration: inherit;">Datastore</a>
@@ -298,8 +289,7 @@ The VirtualDisk resource accepts the following [input]({{< relref "/docs/intro/c
     </dt>
     <dd>{{% md %}}The name of the datastore in which to create the
 disk.
-{{% /md %}}</dd>
-    <dt class="property-required"
+{{% /md %}}</dd><dt class="property-required"
             title="Required">
         <span id="size_csharp">
 <a href="#size_csharp" style="color: inherit; text-decoration: inherit;">Size</a>
@@ -308,8 +298,7 @@ disk.
         <span class="property-type">int</span>
     </dt>
     <dd>{{% md %}}Size of the disk (in GB).
-{{% /md %}}</dd>
-    <dt class="property-required"
+{{% /md %}}</dd><dt class="property-required"
             title="Required">
         <span id="vmdkpath_csharp">
 <a href="#vmdkpath_csharp" style="color: inherit; text-decoration: inherit;">Vmdk<wbr>Path</a>
@@ -319,8 +308,7 @@ disk.
     </dt>
     <dd>{{% md %}}The path, including filename, of the virtual disk to
 be created.  This needs to end in `.vmdk`.
-{{% /md %}}</dd>
-    <dt class="property-optional property-deprecated"
+{{% /md %}}</dd><dt class="property-optional property-deprecated"
             title="Optional, Deprecated">
         <span id="adaptertype_csharp">
 <a href="#adaptertype_csharp" style="color: inherit; text-decoration: inherit;">Adapter<wbr>Type</a>
@@ -330,8 +318,7 @@ be created.  This needs to end in `.vmdk`.
     </dt>
     <dd>{{% md %}}The adapter type for this virtual disk. Can be
 one of `ide`, `lsiLogic`, or `busLogic`.  Default: `lsiLogic`.
-{{% /md %}}<p class="property-message">Deprecated: {{% md %}}this attribute has no effect on controller types - please use scsi_type in vsphere_virtual_machine instead{{% /md %}}</p></dd>
-    <dt class="property-optional"
+{{% /md %}}<p class="property-message">Deprecated: {{% md %}}this attribute has no effect on controller types - please use scsi_type in vsphere_virtual_machine instead{{% /md %}}</p></dd><dt class="property-optional"
             title="Optional">
         <span id="createdirectories_csharp">
 <a href="#createdirectories_csharp" style="color: inherit; text-decoration: inherit;">Create<wbr>Directories</a>
@@ -342,8 +329,7 @@ one of `ide`, `lsiLogic`, or `busLogic`.  Default: `lsiLogic`.
     <dd>{{% md %}}Tells the resource to create any
 directories that are a part of the `vmdk_path` parameter if they are missing.
 Default: `false`.
-{{% /md %}}</dd>
-    <dt class="property-optional"
+{{% /md %}}</dd><dt class="property-optional"
             title="Optional">
         <span id="datacenter_csharp">
 <a href="#datacenter_csharp" style="color: inherit; text-decoration: inherit;">Datacenter</a>
@@ -354,8 +340,7 @@ Default: `false`.
     <dd>{{% md %}}The name of the datacenter in which to create the
 disk. Can be omitted when when ESXi or if there is only one datacenter in
 your infrastructure.
-{{% /md %}}</dd>
-    <dt class="property-optional"
+{{% /md %}}</dd><dt class="property-optional"
             title="Optional">
         <span id="type_csharp">
 <a href="#type_csharp" style="color: inherit; text-decoration: inherit;">Type</a>
@@ -367,14 +352,11 @@ your infrastructure.
 `eagerZeroedThick`, `lazy`, or `thin`. Default: `eagerZeroedThick`. For
 information on what each kind of disk provisioning policy means, click
 [here][docs-vmware-vm-disk-provisioning].
-{{% /md %}}</dd>
-</dl>
+{{% /md %}}</dd></dl>
 {{% /choosable %}}
 
 {{% choosable language go %}}
-<dl class="resources-properties">
-
-    <dt class="property-required"
+<dl class="resources-properties"><dt class="property-required"
             title="Required">
         <span id="datastore_go">
 <a href="#datastore_go" style="color: inherit; text-decoration: inherit;">Datastore</a>
@@ -384,8 +366,7 @@ information on what each kind of disk provisioning policy means, click
     </dt>
     <dd>{{% md %}}The name of the datastore in which to create the
 disk.
-{{% /md %}}</dd>
-    <dt class="property-required"
+{{% /md %}}</dd><dt class="property-required"
             title="Required">
         <span id="size_go">
 <a href="#size_go" style="color: inherit; text-decoration: inherit;">Size</a>
@@ -394,8 +375,7 @@ disk.
         <span class="property-type">int</span>
     </dt>
     <dd>{{% md %}}Size of the disk (in GB).
-{{% /md %}}</dd>
-    <dt class="property-required"
+{{% /md %}}</dd><dt class="property-required"
             title="Required">
         <span id="vmdkpath_go">
 <a href="#vmdkpath_go" style="color: inherit; text-decoration: inherit;">Vmdk<wbr>Path</a>
@@ -405,8 +385,7 @@ disk.
     </dt>
     <dd>{{% md %}}The path, including filename, of the virtual disk to
 be created.  This needs to end in `.vmdk`.
-{{% /md %}}</dd>
-    <dt class="property-optional property-deprecated"
+{{% /md %}}</dd><dt class="property-optional property-deprecated"
             title="Optional, Deprecated">
         <span id="adaptertype_go">
 <a href="#adaptertype_go" style="color: inherit; text-decoration: inherit;">Adapter<wbr>Type</a>
@@ -416,8 +395,7 @@ be created.  This needs to end in `.vmdk`.
     </dt>
     <dd>{{% md %}}The adapter type for this virtual disk. Can be
 one of `ide`, `lsiLogic`, or `busLogic`.  Default: `lsiLogic`.
-{{% /md %}}<p class="property-message">Deprecated: {{% md %}}this attribute has no effect on controller types - please use scsi_type in vsphere_virtual_machine instead{{% /md %}}</p></dd>
-    <dt class="property-optional"
+{{% /md %}}<p class="property-message">Deprecated: {{% md %}}this attribute has no effect on controller types - please use scsi_type in vsphere_virtual_machine instead{{% /md %}}</p></dd><dt class="property-optional"
             title="Optional">
         <span id="createdirectories_go">
 <a href="#createdirectories_go" style="color: inherit; text-decoration: inherit;">Create<wbr>Directories</a>
@@ -428,8 +406,7 @@ one of `ide`, `lsiLogic`, or `busLogic`.  Default: `lsiLogic`.
     <dd>{{% md %}}Tells the resource to create any
 directories that are a part of the `vmdk_path` parameter if they are missing.
 Default: `false`.
-{{% /md %}}</dd>
-    <dt class="property-optional"
+{{% /md %}}</dd><dt class="property-optional"
             title="Optional">
         <span id="datacenter_go">
 <a href="#datacenter_go" style="color: inherit; text-decoration: inherit;">Datacenter</a>
@@ -440,8 +417,7 @@ Default: `false`.
     <dd>{{% md %}}The name of the datacenter in which to create the
 disk. Can be omitted when when ESXi or if there is only one datacenter in
 your infrastructure.
-{{% /md %}}</dd>
-    <dt class="property-optional"
+{{% /md %}}</dd><dt class="property-optional"
             title="Optional">
         <span id="type_go">
 <a href="#type_go" style="color: inherit; text-decoration: inherit;">Type</a>
@@ -453,14 +429,11 @@ your infrastructure.
 `eagerZeroedThick`, `lazy`, or `thin`. Default: `eagerZeroedThick`. For
 information on what each kind of disk provisioning policy means, click
 [here][docs-vmware-vm-disk-provisioning].
-{{% /md %}}</dd>
-</dl>
+{{% /md %}}</dd></dl>
 {{% /choosable %}}
 
 {{% choosable language nodejs %}}
-<dl class="resources-properties">
-
-    <dt class="property-required"
+<dl class="resources-properties"><dt class="property-required"
             title="Required">
         <span id="datastore_nodejs">
 <a href="#datastore_nodejs" style="color: inherit; text-decoration: inherit;">datastore</a>
@@ -470,8 +443,7 @@ information on what each kind of disk provisioning policy means, click
     </dt>
     <dd>{{% md %}}The name of the datastore in which to create the
 disk.
-{{% /md %}}</dd>
-    <dt class="property-required"
+{{% /md %}}</dd><dt class="property-required"
             title="Required">
         <span id="size_nodejs">
 <a href="#size_nodejs" style="color: inherit; text-decoration: inherit;">size</a>
@@ -480,8 +452,7 @@ disk.
         <span class="property-type">number</span>
     </dt>
     <dd>{{% md %}}Size of the disk (in GB).
-{{% /md %}}</dd>
-    <dt class="property-required"
+{{% /md %}}</dd><dt class="property-required"
             title="Required">
         <span id="vmdkpath_nodejs">
 <a href="#vmdkpath_nodejs" style="color: inherit; text-decoration: inherit;">vmdk<wbr>Path</a>
@@ -491,8 +462,7 @@ disk.
     </dt>
     <dd>{{% md %}}The path, including filename, of the virtual disk to
 be created.  This needs to end in `.vmdk`.
-{{% /md %}}</dd>
-    <dt class="property-optional property-deprecated"
+{{% /md %}}</dd><dt class="property-optional property-deprecated"
             title="Optional, Deprecated">
         <span id="adaptertype_nodejs">
 <a href="#adaptertype_nodejs" style="color: inherit; text-decoration: inherit;">adapter<wbr>Type</a>
@@ -502,8 +472,7 @@ be created.  This needs to end in `.vmdk`.
     </dt>
     <dd>{{% md %}}The adapter type for this virtual disk. Can be
 one of `ide`, `lsiLogic`, or `busLogic`.  Default: `lsiLogic`.
-{{% /md %}}<p class="property-message">Deprecated: {{% md %}}this attribute has no effect on controller types - please use scsi_type in vsphere_virtual_machine instead{{% /md %}}</p></dd>
-    <dt class="property-optional"
+{{% /md %}}<p class="property-message">Deprecated: {{% md %}}this attribute has no effect on controller types - please use scsi_type in vsphere_virtual_machine instead{{% /md %}}</p></dd><dt class="property-optional"
             title="Optional">
         <span id="createdirectories_nodejs">
 <a href="#createdirectories_nodejs" style="color: inherit; text-decoration: inherit;">create<wbr>Directories</a>
@@ -514,8 +483,7 @@ one of `ide`, `lsiLogic`, or `busLogic`.  Default: `lsiLogic`.
     <dd>{{% md %}}Tells the resource to create any
 directories that are a part of the `vmdk_path` parameter if they are missing.
 Default: `false`.
-{{% /md %}}</dd>
-    <dt class="property-optional"
+{{% /md %}}</dd><dt class="property-optional"
             title="Optional">
         <span id="datacenter_nodejs">
 <a href="#datacenter_nodejs" style="color: inherit; text-decoration: inherit;">datacenter</a>
@@ -526,8 +494,7 @@ Default: `false`.
     <dd>{{% md %}}The name of the datacenter in which to create the
 disk. Can be omitted when when ESXi or if there is only one datacenter in
 your infrastructure.
-{{% /md %}}</dd>
-    <dt class="property-optional"
+{{% /md %}}</dd><dt class="property-optional"
             title="Optional">
         <span id="type_nodejs">
 <a href="#type_nodejs" style="color: inherit; text-decoration: inherit;">type</a>
@@ -539,14 +506,11 @@ your infrastructure.
 `eagerZeroedThick`, `lazy`, or `thin`. Default: `eagerZeroedThick`. For
 information on what each kind of disk provisioning policy means, click
 [here][docs-vmware-vm-disk-provisioning].
-{{% /md %}}</dd>
-</dl>
+{{% /md %}}</dd></dl>
 {{% /choosable %}}
 
 {{% choosable language python %}}
-<dl class="resources-properties">
-
-    <dt class="property-required"
+<dl class="resources-properties"><dt class="property-required"
             title="Required">
         <span id="datastore_python">
 <a href="#datastore_python" style="color: inherit; text-decoration: inherit;">datastore</a>
@@ -556,8 +520,7 @@ information on what each kind of disk provisioning policy means, click
     </dt>
     <dd>{{% md %}}The name of the datastore in which to create the
 disk.
-{{% /md %}}</dd>
-    <dt class="property-required"
+{{% /md %}}</dd><dt class="property-required"
             title="Required">
         <span id="size_python">
 <a href="#size_python" style="color: inherit; text-decoration: inherit;">size</a>
@@ -566,8 +529,7 @@ disk.
         <span class="property-type">int</span>
     </dt>
     <dd>{{% md %}}Size of the disk (in GB).
-{{% /md %}}</dd>
-    <dt class="property-required"
+{{% /md %}}</dd><dt class="property-required"
             title="Required">
         <span id="vmdk_path_python">
 <a href="#vmdk_path_python" style="color: inherit; text-decoration: inherit;">vmdk_<wbr>path</a>
@@ -577,8 +539,7 @@ disk.
     </dt>
     <dd>{{% md %}}The path, including filename, of the virtual disk to
 be created.  This needs to end in `.vmdk`.
-{{% /md %}}</dd>
-    <dt class="property-optional property-deprecated"
+{{% /md %}}</dd><dt class="property-optional property-deprecated"
             title="Optional, Deprecated">
         <span id="adapter_type_python">
 <a href="#adapter_type_python" style="color: inherit; text-decoration: inherit;">adapter_<wbr>type</a>
@@ -588,8 +549,7 @@ be created.  This needs to end in `.vmdk`.
     </dt>
     <dd>{{% md %}}The adapter type for this virtual disk. Can be
 one of `ide`, `lsiLogic`, or `busLogic`.  Default: `lsiLogic`.
-{{% /md %}}<p class="property-message">Deprecated: {{% md %}}this attribute has no effect on controller types - please use scsi_type in vsphere_virtual_machine instead{{% /md %}}</p></dd>
-    <dt class="property-optional"
+{{% /md %}}<p class="property-message">Deprecated: {{% md %}}this attribute has no effect on controller types - please use scsi_type in vsphere_virtual_machine instead{{% /md %}}</p></dd><dt class="property-optional"
             title="Optional">
         <span id="create_directories_python">
 <a href="#create_directories_python" style="color: inherit; text-decoration: inherit;">create_<wbr>directories</a>
@@ -600,8 +560,7 @@ one of `ide`, `lsiLogic`, or `busLogic`.  Default: `lsiLogic`.
     <dd>{{% md %}}Tells the resource to create any
 directories that are a part of the `vmdk_path` parameter if they are missing.
 Default: `false`.
-{{% /md %}}</dd>
-    <dt class="property-optional"
+{{% /md %}}</dd><dt class="property-optional"
             title="Optional">
         <span id="datacenter_python">
 <a href="#datacenter_python" style="color: inherit; text-decoration: inherit;">datacenter</a>
@@ -612,8 +571,7 @@ Default: `false`.
     <dd>{{% md %}}The name of the datacenter in which to create the
 disk. Can be omitted when when ESXi or if there is only one datacenter in
 your infrastructure.
-{{% /md %}}</dd>
-    <dt class="property-optional"
+{{% /md %}}</dd><dt class="property-optional"
             title="Optional">
         <span id="type_python">
 <a href="#type_python" style="color: inherit; text-decoration: inherit;">type</a>
@@ -625,8 +583,7 @@ your infrastructure.
 `eagerZeroedThick`, `lazy`, or `thin`. Default: `eagerZeroedThick`. For
 information on what each kind of disk provisioning policy means, click
 [here][docs-vmware-vm-disk-provisioning].
-{{% /md %}}</dd>
-</dl>
+{{% /md %}}</dd></dl>
 {{% /choosable %}}
 
 
@@ -637,9 +594,7 @@ All [input](#inputs) properties are implicitly available as output properties. A
 
 
 {{% choosable language csharp %}}
-<dl class="resources-properties">
-
-    <dt class="property-"
+<dl class="resources-properties"><dt class="property-"
             title="">
         <span id="id_csharp">
 <a href="#id_csharp" style="color: inherit; text-decoration: inherit;">Id</a>
@@ -647,14 +602,11 @@ All [input](#inputs) properties are implicitly available as output properties. A
         <span class="property-indicator"></span>
         <span class="property-type">string</span>
     </dt>
-    <dd>{{% md %}}The provider-assigned unique ID for this managed resource.{{% /md %}}</dd>
-</dl>
+    <dd>{{% md %}}The provider-assigned unique ID for this managed resource.{{% /md %}}</dd></dl>
 {{% /choosable %}}
 
 {{% choosable language go %}}
-<dl class="resources-properties">
-
-    <dt class="property-"
+<dl class="resources-properties"><dt class="property-"
             title="">
         <span id="id_go">
 <a href="#id_go" style="color: inherit; text-decoration: inherit;">Id</a>
@@ -662,14 +614,11 @@ All [input](#inputs) properties are implicitly available as output properties. A
         <span class="property-indicator"></span>
         <span class="property-type">string</span>
     </dt>
-    <dd>{{% md %}}The provider-assigned unique ID for this managed resource.{{% /md %}}</dd>
-</dl>
+    <dd>{{% md %}}The provider-assigned unique ID for this managed resource.{{% /md %}}</dd></dl>
 {{% /choosable %}}
 
 {{% choosable language nodejs %}}
-<dl class="resources-properties">
-
-    <dt class="property-"
+<dl class="resources-properties"><dt class="property-"
             title="">
         <span id="id_nodejs">
 <a href="#id_nodejs" style="color: inherit; text-decoration: inherit;">id</a>
@@ -677,14 +626,11 @@ All [input](#inputs) properties are implicitly available as output properties. A
         <span class="property-indicator"></span>
         <span class="property-type">string</span>
     </dt>
-    <dd>{{% md %}}The provider-assigned unique ID for this managed resource.{{% /md %}}</dd>
-</dl>
+    <dd>{{% md %}}The provider-assigned unique ID for this managed resource.{{% /md %}}</dd></dl>
 {{% /choosable %}}
 
 {{% choosable language python %}}
-<dl class="resources-properties">
-
-    <dt class="property-"
+<dl class="resources-properties"><dt class="property-"
             title="">
         <span id="id_python">
 <a href="#id_python" style="color: inherit; text-decoration: inherit;">id</a>
@@ -692,8 +638,7 @@ All [input](#inputs) properties are implicitly available as output properties. A
         <span class="property-indicator"></span>
         <span class="property-type">str</span>
     </dt>
-    <dd>{{% md %}}The provider-assigned unique ID for this managed resource.{{% /md %}}</dd>
-</dl>
+    <dd>{{% md %}}The provider-assigned unique ID for this managed resource.{{% /md %}}</dd></dl>
 {{% /choosable %}}
 
 
@@ -820,9 +765,7 @@ The following state arguments are supported:
 
 
 {{% choosable language csharp %}}
-<dl class="resources-properties">
-
-    <dt class="property-optional property-deprecated"
+<dl class="resources-properties"><dt class="property-optional property-deprecated"
             title="Optional, Deprecated">
         <span id="state_adaptertype_csharp">
 <a href="#state_adaptertype_csharp" style="color: inherit; text-decoration: inherit;">Adapter<wbr>Type</a>
@@ -832,8 +775,7 @@ The following state arguments are supported:
     </dt>
     <dd>{{% md %}}The adapter type for this virtual disk. Can be
 one of `ide`, `lsiLogic`, or `busLogic`.  Default: `lsiLogic`.
-{{% /md %}}<p class="property-message">Deprecated: {{% md %}}this attribute has no effect on controller types - please use scsi_type in vsphere_virtual_machine instead{{% /md %}}</p></dd>
-    <dt class="property-optional"
+{{% /md %}}<p class="property-message">Deprecated: {{% md %}}this attribute has no effect on controller types - please use scsi_type in vsphere_virtual_machine instead{{% /md %}}</p></dd><dt class="property-optional"
             title="Optional">
         <span id="state_createdirectories_csharp">
 <a href="#state_createdirectories_csharp" style="color: inherit; text-decoration: inherit;">Create<wbr>Directories</a>
@@ -844,8 +786,7 @@ one of `ide`, `lsiLogic`, or `busLogic`.  Default: `lsiLogic`.
     <dd>{{% md %}}Tells the resource to create any
 directories that are a part of the `vmdk_path` parameter if they are missing.
 Default: `false`.
-{{% /md %}}</dd>
-    <dt class="property-optional"
+{{% /md %}}</dd><dt class="property-optional"
             title="Optional">
         <span id="state_datacenter_csharp">
 <a href="#state_datacenter_csharp" style="color: inherit; text-decoration: inherit;">Datacenter</a>
@@ -856,8 +797,7 @@ Default: `false`.
     <dd>{{% md %}}The name of the datacenter in which to create the
 disk. Can be omitted when when ESXi or if there is only one datacenter in
 your infrastructure.
-{{% /md %}}</dd>
-    <dt class="property-optional"
+{{% /md %}}</dd><dt class="property-optional"
             title="Optional">
         <span id="state_datastore_csharp">
 <a href="#state_datastore_csharp" style="color: inherit; text-decoration: inherit;">Datastore</a>
@@ -867,8 +807,7 @@ your infrastructure.
     </dt>
     <dd>{{% md %}}The name of the datastore in which to create the
 disk.
-{{% /md %}}</dd>
-    <dt class="property-optional"
+{{% /md %}}</dd><dt class="property-optional"
             title="Optional">
         <span id="state_size_csharp">
 <a href="#state_size_csharp" style="color: inherit; text-decoration: inherit;">Size</a>
@@ -877,8 +816,7 @@ disk.
         <span class="property-type">int</span>
     </dt>
     <dd>{{% md %}}Size of the disk (in GB).
-{{% /md %}}</dd>
-    <dt class="property-optional"
+{{% /md %}}</dd><dt class="property-optional"
             title="Optional">
         <span id="state_type_csharp">
 <a href="#state_type_csharp" style="color: inherit; text-decoration: inherit;">Type</a>
@@ -890,8 +828,7 @@ disk.
 `eagerZeroedThick`, `lazy`, or `thin`. Default: `eagerZeroedThick`. For
 information on what each kind of disk provisioning policy means, click
 [here][docs-vmware-vm-disk-provisioning].
-{{% /md %}}</dd>
-    <dt class="property-optional"
+{{% /md %}}</dd><dt class="property-optional"
             title="Optional">
         <span id="state_vmdkpath_csharp">
 <a href="#state_vmdkpath_csharp" style="color: inherit; text-decoration: inherit;">Vmdk<wbr>Path</a>
@@ -901,14 +838,11 @@ information on what each kind of disk provisioning policy means, click
     </dt>
     <dd>{{% md %}}The path, including filename, of the virtual disk to
 be created.  This needs to end in `.vmdk`.
-{{% /md %}}</dd>
-</dl>
+{{% /md %}}</dd></dl>
 {{% /choosable %}}
 
 {{% choosable language go %}}
-<dl class="resources-properties">
-
-    <dt class="property-optional property-deprecated"
+<dl class="resources-properties"><dt class="property-optional property-deprecated"
             title="Optional, Deprecated">
         <span id="state_adaptertype_go">
 <a href="#state_adaptertype_go" style="color: inherit; text-decoration: inherit;">Adapter<wbr>Type</a>
@@ -918,8 +852,7 @@ be created.  This needs to end in `.vmdk`.
     </dt>
     <dd>{{% md %}}The adapter type for this virtual disk. Can be
 one of `ide`, `lsiLogic`, or `busLogic`.  Default: `lsiLogic`.
-{{% /md %}}<p class="property-message">Deprecated: {{% md %}}this attribute has no effect on controller types - please use scsi_type in vsphere_virtual_machine instead{{% /md %}}</p></dd>
-    <dt class="property-optional"
+{{% /md %}}<p class="property-message">Deprecated: {{% md %}}this attribute has no effect on controller types - please use scsi_type in vsphere_virtual_machine instead{{% /md %}}</p></dd><dt class="property-optional"
             title="Optional">
         <span id="state_createdirectories_go">
 <a href="#state_createdirectories_go" style="color: inherit; text-decoration: inherit;">Create<wbr>Directories</a>
@@ -930,8 +863,7 @@ one of `ide`, `lsiLogic`, or `busLogic`.  Default: `lsiLogic`.
     <dd>{{% md %}}Tells the resource to create any
 directories that are a part of the `vmdk_path` parameter if they are missing.
 Default: `false`.
-{{% /md %}}</dd>
-    <dt class="property-optional"
+{{% /md %}}</dd><dt class="property-optional"
             title="Optional">
         <span id="state_datacenter_go">
 <a href="#state_datacenter_go" style="color: inherit; text-decoration: inherit;">Datacenter</a>
@@ -942,8 +874,7 @@ Default: `false`.
     <dd>{{% md %}}The name of the datacenter in which to create the
 disk. Can be omitted when when ESXi or if there is only one datacenter in
 your infrastructure.
-{{% /md %}}</dd>
-    <dt class="property-optional"
+{{% /md %}}</dd><dt class="property-optional"
             title="Optional">
         <span id="state_datastore_go">
 <a href="#state_datastore_go" style="color: inherit; text-decoration: inherit;">Datastore</a>
@@ -953,8 +884,7 @@ your infrastructure.
     </dt>
     <dd>{{% md %}}The name of the datastore in which to create the
 disk.
-{{% /md %}}</dd>
-    <dt class="property-optional"
+{{% /md %}}</dd><dt class="property-optional"
             title="Optional">
         <span id="state_size_go">
 <a href="#state_size_go" style="color: inherit; text-decoration: inherit;">Size</a>
@@ -963,8 +893,7 @@ disk.
         <span class="property-type">int</span>
     </dt>
     <dd>{{% md %}}Size of the disk (in GB).
-{{% /md %}}</dd>
-    <dt class="property-optional"
+{{% /md %}}</dd><dt class="property-optional"
             title="Optional">
         <span id="state_type_go">
 <a href="#state_type_go" style="color: inherit; text-decoration: inherit;">Type</a>
@@ -976,8 +905,7 @@ disk.
 `eagerZeroedThick`, `lazy`, or `thin`. Default: `eagerZeroedThick`. For
 information on what each kind of disk provisioning policy means, click
 [here][docs-vmware-vm-disk-provisioning].
-{{% /md %}}</dd>
-    <dt class="property-optional"
+{{% /md %}}</dd><dt class="property-optional"
             title="Optional">
         <span id="state_vmdkpath_go">
 <a href="#state_vmdkpath_go" style="color: inherit; text-decoration: inherit;">Vmdk<wbr>Path</a>
@@ -987,14 +915,11 @@ information on what each kind of disk provisioning policy means, click
     </dt>
     <dd>{{% md %}}The path, including filename, of the virtual disk to
 be created.  This needs to end in `.vmdk`.
-{{% /md %}}</dd>
-</dl>
+{{% /md %}}</dd></dl>
 {{% /choosable %}}
 
 {{% choosable language nodejs %}}
-<dl class="resources-properties">
-
-    <dt class="property-optional property-deprecated"
+<dl class="resources-properties"><dt class="property-optional property-deprecated"
             title="Optional, Deprecated">
         <span id="state_adaptertype_nodejs">
 <a href="#state_adaptertype_nodejs" style="color: inherit; text-decoration: inherit;">adapter<wbr>Type</a>
@@ -1004,8 +929,7 @@ be created.  This needs to end in `.vmdk`.
     </dt>
     <dd>{{% md %}}The adapter type for this virtual disk. Can be
 one of `ide`, `lsiLogic`, or `busLogic`.  Default: `lsiLogic`.
-{{% /md %}}<p class="property-message">Deprecated: {{% md %}}this attribute has no effect on controller types - please use scsi_type in vsphere_virtual_machine instead{{% /md %}}</p></dd>
-    <dt class="property-optional"
+{{% /md %}}<p class="property-message">Deprecated: {{% md %}}this attribute has no effect on controller types - please use scsi_type in vsphere_virtual_machine instead{{% /md %}}</p></dd><dt class="property-optional"
             title="Optional">
         <span id="state_createdirectories_nodejs">
 <a href="#state_createdirectories_nodejs" style="color: inherit; text-decoration: inherit;">create<wbr>Directories</a>
@@ -1016,8 +940,7 @@ one of `ide`, `lsiLogic`, or `busLogic`.  Default: `lsiLogic`.
     <dd>{{% md %}}Tells the resource to create any
 directories that are a part of the `vmdk_path` parameter if they are missing.
 Default: `false`.
-{{% /md %}}</dd>
-    <dt class="property-optional"
+{{% /md %}}</dd><dt class="property-optional"
             title="Optional">
         <span id="state_datacenter_nodejs">
 <a href="#state_datacenter_nodejs" style="color: inherit; text-decoration: inherit;">datacenter</a>
@@ -1028,8 +951,7 @@ Default: `false`.
     <dd>{{% md %}}The name of the datacenter in which to create the
 disk. Can be omitted when when ESXi or if there is only one datacenter in
 your infrastructure.
-{{% /md %}}</dd>
-    <dt class="property-optional"
+{{% /md %}}</dd><dt class="property-optional"
             title="Optional">
         <span id="state_datastore_nodejs">
 <a href="#state_datastore_nodejs" style="color: inherit; text-decoration: inherit;">datastore</a>
@@ -1039,8 +961,7 @@ your infrastructure.
     </dt>
     <dd>{{% md %}}The name of the datastore in which to create the
 disk.
-{{% /md %}}</dd>
-    <dt class="property-optional"
+{{% /md %}}</dd><dt class="property-optional"
             title="Optional">
         <span id="state_size_nodejs">
 <a href="#state_size_nodejs" style="color: inherit; text-decoration: inherit;">size</a>
@@ -1049,8 +970,7 @@ disk.
         <span class="property-type">number</span>
     </dt>
     <dd>{{% md %}}Size of the disk (in GB).
-{{% /md %}}</dd>
-    <dt class="property-optional"
+{{% /md %}}</dd><dt class="property-optional"
             title="Optional">
         <span id="state_type_nodejs">
 <a href="#state_type_nodejs" style="color: inherit; text-decoration: inherit;">type</a>
@@ -1062,8 +982,7 @@ disk.
 `eagerZeroedThick`, `lazy`, or `thin`. Default: `eagerZeroedThick`. For
 information on what each kind of disk provisioning policy means, click
 [here][docs-vmware-vm-disk-provisioning].
-{{% /md %}}</dd>
-    <dt class="property-optional"
+{{% /md %}}</dd><dt class="property-optional"
             title="Optional">
         <span id="state_vmdkpath_nodejs">
 <a href="#state_vmdkpath_nodejs" style="color: inherit; text-decoration: inherit;">vmdk<wbr>Path</a>
@@ -1073,14 +992,11 @@ information on what each kind of disk provisioning policy means, click
     </dt>
     <dd>{{% md %}}The path, including filename, of the virtual disk to
 be created.  This needs to end in `.vmdk`.
-{{% /md %}}</dd>
-</dl>
+{{% /md %}}</dd></dl>
 {{% /choosable %}}
 
 {{% choosable language python %}}
-<dl class="resources-properties">
-
-    <dt class="property-optional property-deprecated"
+<dl class="resources-properties"><dt class="property-optional property-deprecated"
             title="Optional, Deprecated">
         <span id="state_adapter_type_python">
 <a href="#state_adapter_type_python" style="color: inherit; text-decoration: inherit;">adapter_<wbr>type</a>
@@ -1090,8 +1006,7 @@ be created.  This needs to end in `.vmdk`.
     </dt>
     <dd>{{% md %}}The adapter type for this virtual disk. Can be
 one of `ide`, `lsiLogic`, or `busLogic`.  Default: `lsiLogic`.
-{{% /md %}}<p class="property-message">Deprecated: {{% md %}}this attribute has no effect on controller types - please use scsi_type in vsphere_virtual_machine instead{{% /md %}}</p></dd>
-    <dt class="property-optional"
+{{% /md %}}<p class="property-message">Deprecated: {{% md %}}this attribute has no effect on controller types - please use scsi_type in vsphere_virtual_machine instead{{% /md %}}</p></dd><dt class="property-optional"
             title="Optional">
         <span id="state_create_directories_python">
 <a href="#state_create_directories_python" style="color: inherit; text-decoration: inherit;">create_<wbr>directories</a>
@@ -1102,8 +1017,7 @@ one of `ide`, `lsiLogic`, or `busLogic`.  Default: `lsiLogic`.
     <dd>{{% md %}}Tells the resource to create any
 directories that are a part of the `vmdk_path` parameter if they are missing.
 Default: `false`.
-{{% /md %}}</dd>
-    <dt class="property-optional"
+{{% /md %}}</dd><dt class="property-optional"
             title="Optional">
         <span id="state_datacenter_python">
 <a href="#state_datacenter_python" style="color: inherit; text-decoration: inherit;">datacenter</a>
@@ -1114,8 +1028,7 @@ Default: `false`.
     <dd>{{% md %}}The name of the datacenter in which to create the
 disk. Can be omitted when when ESXi or if there is only one datacenter in
 your infrastructure.
-{{% /md %}}</dd>
-    <dt class="property-optional"
+{{% /md %}}</dd><dt class="property-optional"
             title="Optional">
         <span id="state_datastore_python">
 <a href="#state_datastore_python" style="color: inherit; text-decoration: inherit;">datastore</a>
@@ -1125,8 +1038,7 @@ your infrastructure.
     </dt>
     <dd>{{% md %}}The name of the datastore in which to create the
 disk.
-{{% /md %}}</dd>
-    <dt class="property-optional"
+{{% /md %}}</dd><dt class="property-optional"
             title="Optional">
         <span id="state_size_python">
 <a href="#state_size_python" style="color: inherit; text-decoration: inherit;">size</a>
@@ -1135,8 +1047,7 @@ disk.
         <span class="property-type">int</span>
     </dt>
     <dd>{{% md %}}Size of the disk (in GB).
-{{% /md %}}</dd>
-    <dt class="property-optional"
+{{% /md %}}</dd><dt class="property-optional"
             title="Optional">
         <span id="state_type_python">
 <a href="#state_type_python" style="color: inherit; text-decoration: inherit;">type</a>
@@ -1148,8 +1059,7 @@ disk.
 `eagerZeroedThick`, `lazy`, or `thin`. Default: `eagerZeroedThick`. For
 information on what each kind of disk provisioning policy means, click
 [here][docs-vmware-vm-disk-provisioning].
-{{% /md %}}</dd>
-    <dt class="property-optional"
+{{% /md %}}</dd><dt class="property-optional"
             title="Optional">
         <span id="state_vmdk_path_python">
 <a href="#state_vmdk_path_python" style="color: inherit; text-decoration: inherit;">vmdk_<wbr>path</a>
@@ -1159,8 +1069,7 @@ information on what each kind of disk provisioning policy means, click
     </dt>
     <dd>{{% md %}}The path, including filename, of the virtual disk to
 be created.  This needs to end in `.vmdk`.
-{{% /md %}}</dd>
-</dl>
+{{% /md %}}</dd></dl>
 {{% /choosable %}}
 
 
@@ -1176,6 +1085,6 @@ be created.  This needs to end in `.vmdk`.
 	<dt>License</dt>
 	<dd>Apache-2.0</dd>
 	<dt>Notes</dt>
-	<dd>This Pulumi package is based on the [`vsphere` Terraform Provider](https://github.com/hashicorp/terraform-provider-vsphere).</dd>
+	<dd>{{% md %}}This Pulumi package is based on the [`vsphere` Terraform Provider](https://github.com/hashicorp/terraform-provider-vsphere).{{% /md %}}</dd>
 </dl>
 

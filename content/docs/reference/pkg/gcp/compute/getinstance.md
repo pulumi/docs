@@ -17,11 +17,17 @@ and
 
 
 {{% examples %}}
+
 ## Example Usage
 
 {{< chooser language "typescript,python,go,csharp" / >}}
 
-{{% example csharp %}}
+
+
+
+
+{{< example csharp >}}
+
 ```csharp
 using Pulumi;
 using Gcp = Pulumi.Gcp;
@@ -40,9 +46,12 @@ class MyStack : Stack
 }
 ```
 
-{{% /example %}}
 
-{{% example go %}}
+{{< /example >}}
+
+
+{{< example go >}}
+
 ```go
 package main
 
@@ -67,9 +76,12 @@ func main() {
 }
 ```
 
-{{% /example %}}
 
-{{% example python %}}
+{{< /example >}}
+
+
+{{< example python >}}
+
 ```python
 import pulumi
 import pulumi_gcp as gcp
@@ -78,9 +90,12 @@ appserver = gcp.compute.get_instance(name="primary-application-server",
     zone="us-central1-a")
 ```
 
-{{% /example %}}
 
-{{% example typescript %}}
+{{< /example >}}
+
+
+{{< example typescript >}}
+
 
 ```typescript
 import * as pulumi from "@pulumi/pulumi";
@@ -92,9 +107,16 @@ const appserver = pulumi.output(gcp.compute.getInstance({
 }, { async: true }));
 ```
 
-{{% /example %}}
+
+{{< /example >}}
+
+
+
+
 
 {{% /examples %}}
+
+
 
 
 ## Using getInstance {#using}
@@ -132,9 +154,7 @@ The following arguments are supported:
 
 
 {{% choosable language csharp %}}
-<dl class="resources-properties">
-
-    <dt class="property-optional"
+<dl class="resources-properties"><dt class="property-optional"
             title="Optional">
         <span id="name_csharp">
 <a href="#name_csharp" style="color: inherit; text-decoration: inherit;">Name</a>
@@ -143,8 +163,7 @@ The following arguments are supported:
         <span class="property-type">string</span>
     </dt>
     <dd>{{% md %}}The name of the instance. One of `name` or `self_link` must be provided.
-{{% /md %}}</dd>
-    <dt class="property-optional"
+{{% /md %}}</dd><dt class="property-optional"
             title="Optional">
         <span id="project_csharp">
 <a href="#project_csharp" style="color: inherit; text-decoration: inherit;">Project</a>
@@ -155,8 +174,7 @@ The following arguments are supported:
     <dd>{{% md %}}The ID of the project in which the resource belongs.
 If `self_link` is provided, this value is ignored.  If neither `self_link`
 nor `project` are provided, the provider project is used.
-{{% /md %}}</dd>
-    <dt class="property-optional"
+{{% /md %}}</dd><dt class="property-optional"
             title="Optional">
         <span id="selflink_csharp">
 <a href="#selflink_csharp" style="color: inherit; text-decoration: inherit;">Self<wbr>Link</a>
@@ -165,8 +183,7 @@ nor `project` are provided, the provider project is used.
         <span class="property-type">string</span>
     </dt>
     <dd>{{% md %}}The self link of the instance. One of `name` or `self_link` must be provided.
-{{% /md %}}</dd>
-    <dt class="property-optional"
+{{% /md %}}</dd><dt class="property-optional"
             title="Optional">
         <span id="zone_csharp">
 <a href="#zone_csharp" style="color: inherit; text-decoration: inherit;">Zone</a>
@@ -177,14 +194,11 @@ nor `project` are provided, the provider project is used.
     <dd>{{% md %}}The zone of the instance. If `self_link` is provided, this
 value is ignored.  If neither `self_link` nor `zone` are provided, the
 provider zone is used.
-{{% /md %}}</dd>
-</dl>
+{{% /md %}}</dd></dl>
 {{% /choosable %}}
 
 {{% choosable language go %}}
-<dl class="resources-properties">
-
-    <dt class="property-optional"
+<dl class="resources-properties"><dt class="property-optional"
             title="Optional">
         <span id="name_go">
 <a href="#name_go" style="color: inherit; text-decoration: inherit;">Name</a>
@@ -193,8 +207,7 @@ provider zone is used.
         <span class="property-type">string</span>
     </dt>
     <dd>{{% md %}}The name of the instance. One of `name` or `self_link` must be provided.
-{{% /md %}}</dd>
-    <dt class="property-optional"
+{{% /md %}}</dd><dt class="property-optional"
             title="Optional">
         <span id="project_go">
 <a href="#project_go" style="color: inherit; text-decoration: inherit;">Project</a>
@@ -205,8 +218,7 @@ provider zone is used.
     <dd>{{% md %}}The ID of the project in which the resource belongs.
 If `self_link` is provided, this value is ignored.  If neither `self_link`
 nor `project` are provided, the provider project is used.
-{{% /md %}}</dd>
-    <dt class="property-optional"
+{{% /md %}}</dd><dt class="property-optional"
             title="Optional">
         <span id="selflink_go">
 <a href="#selflink_go" style="color: inherit; text-decoration: inherit;">Self<wbr>Link</a>
@@ -215,8 +227,7 @@ nor `project` are provided, the provider project is used.
         <span class="property-type">string</span>
     </dt>
     <dd>{{% md %}}The self link of the instance. One of `name` or `self_link` must be provided.
-{{% /md %}}</dd>
-    <dt class="property-optional"
+{{% /md %}}</dd><dt class="property-optional"
             title="Optional">
         <span id="zone_go">
 <a href="#zone_go" style="color: inherit; text-decoration: inherit;">Zone</a>
@@ -227,14 +238,11 @@ nor `project` are provided, the provider project is used.
     <dd>{{% md %}}The zone of the instance. If `self_link` is provided, this
 value is ignored.  If neither `self_link` nor `zone` are provided, the
 provider zone is used.
-{{% /md %}}</dd>
-</dl>
+{{% /md %}}</dd></dl>
 {{% /choosable %}}
 
 {{% choosable language nodejs %}}
-<dl class="resources-properties">
-
-    <dt class="property-optional"
+<dl class="resources-properties"><dt class="property-optional"
             title="Optional">
         <span id="name_nodejs">
 <a href="#name_nodejs" style="color: inherit; text-decoration: inherit;">name</a>
@@ -243,8 +251,7 @@ provider zone is used.
         <span class="property-type">string</span>
     </dt>
     <dd>{{% md %}}The name of the instance. One of `name` or `self_link` must be provided.
-{{% /md %}}</dd>
-    <dt class="property-optional"
+{{% /md %}}</dd><dt class="property-optional"
             title="Optional">
         <span id="project_nodejs">
 <a href="#project_nodejs" style="color: inherit; text-decoration: inherit;">project</a>
@@ -255,8 +262,7 @@ provider zone is used.
     <dd>{{% md %}}The ID of the project in which the resource belongs.
 If `self_link` is provided, this value is ignored.  If neither `self_link`
 nor `project` are provided, the provider project is used.
-{{% /md %}}</dd>
-    <dt class="property-optional"
+{{% /md %}}</dd><dt class="property-optional"
             title="Optional">
         <span id="selflink_nodejs">
 <a href="#selflink_nodejs" style="color: inherit; text-decoration: inherit;">self<wbr>Link</a>
@@ -265,8 +271,7 @@ nor `project` are provided, the provider project is used.
         <span class="property-type">string</span>
     </dt>
     <dd>{{% md %}}The self link of the instance. One of `name` or `self_link` must be provided.
-{{% /md %}}</dd>
-    <dt class="property-optional"
+{{% /md %}}</dd><dt class="property-optional"
             title="Optional">
         <span id="zone_nodejs">
 <a href="#zone_nodejs" style="color: inherit; text-decoration: inherit;">zone</a>
@@ -277,14 +282,11 @@ nor `project` are provided, the provider project is used.
     <dd>{{% md %}}The zone of the instance. If `self_link` is provided, this
 value is ignored.  If neither `self_link` nor `zone` are provided, the
 provider zone is used.
-{{% /md %}}</dd>
-</dl>
+{{% /md %}}</dd></dl>
 {{% /choosable %}}
 
 {{% choosable language python %}}
-<dl class="resources-properties">
-
-    <dt class="property-optional"
+<dl class="resources-properties"><dt class="property-optional"
             title="Optional">
         <span id="name_python">
 <a href="#name_python" style="color: inherit; text-decoration: inherit;">name</a>
@@ -293,8 +295,7 @@ provider zone is used.
         <span class="property-type">str</span>
     </dt>
     <dd>{{% md %}}The name of the instance. One of `name` or `self_link` must be provided.
-{{% /md %}}</dd>
-    <dt class="property-optional"
+{{% /md %}}</dd><dt class="property-optional"
             title="Optional">
         <span id="project_python">
 <a href="#project_python" style="color: inherit; text-decoration: inherit;">project</a>
@@ -305,8 +306,7 @@ provider zone is used.
     <dd>{{% md %}}The ID of the project in which the resource belongs.
 If `self_link` is provided, this value is ignored.  If neither `self_link`
 nor `project` are provided, the provider project is used.
-{{% /md %}}</dd>
-    <dt class="property-optional"
+{{% /md %}}</dd><dt class="property-optional"
             title="Optional">
         <span id="self_link_python">
 <a href="#self_link_python" style="color: inherit; text-decoration: inherit;">self_<wbr>link</a>
@@ -315,8 +315,7 @@ nor `project` are provided, the provider project is used.
         <span class="property-type">str</span>
     </dt>
     <dd>{{% md %}}The self link of the instance. One of `name` or `self_link` must be provided.
-{{% /md %}}</dd>
-    <dt class="property-optional"
+{{% /md %}}</dd><dt class="property-optional"
             title="Optional">
         <span id="zone_python">
 <a href="#zone_python" style="color: inherit; text-decoration: inherit;">zone</a>
@@ -327,8 +326,7 @@ nor `project` are provided, the provider project is used.
     <dd>{{% md %}}The zone of the instance. If `self_link` is provided, this
 value is ignored.  If neither `self_link` nor `zone` are provided, the
 provider zone is used.
-{{% /md %}}</dd>
-</dl>
+{{% /md %}}</dd></dl>
 {{% /choosable %}}
 
 
@@ -341,9 +339,7 @@ The following output properties are available:
 
 
 {{% choosable language csharp %}}
-<dl class="resources-properties">
-
-    <dt class="property-"
+<dl class="resources-properties"><dt class="property-"
             title="">
         <span id="allowstoppingforupdate_csharp">
 <a href="#allowstoppingforupdate_csharp" style="color: inherit; text-decoration: inherit;">Allow<wbr>Stopping<wbr>For<wbr>Update</a>
@@ -351,8 +347,7 @@ The following output properties are available:
         <span class="property-indicator"></span>
         <span class="property-type">bool</span>
     </dt>
-    <dd>{{% md %}}{{% /md %}}</dd>
-    <dt class="property-"
+    <dd>{{% md %}}{{% /md %}}</dd><dt class="property-"
             title="">
         <span id="attacheddisks_csharp">
 <a href="#attacheddisks_csharp" style="color: inherit; text-decoration: inherit;">Attached<wbr>Disks</a>
@@ -361,8 +356,7 @@ The following output properties are available:
         <span class="property-type"><a href="#getinstanceattacheddisk">List&lt;Get<wbr>Instance<wbr>Attached<wbr>Disk&gt;</a></span>
     </dt>
     <dd>{{% md %}}List of disks attached to the instance. Structure is documented below.
-{{% /md %}}</dd>
-    <dt class="property-"
+{{% /md %}}</dd><dt class="property-"
             title="">
         <span id="bootdisks_csharp">
 <a href="#bootdisks_csharp" style="color: inherit; text-decoration: inherit;">Boot<wbr>Disks</a>
@@ -371,8 +365,7 @@ The following output properties are available:
         <span class="property-type"><a href="#getinstancebootdisk">List&lt;Get<wbr>Instance<wbr>Boot<wbr>Disk&gt;</a></span>
     </dt>
     <dd>{{% md %}}The boot disk for the instance. Structure is documented below.
-{{% /md %}}</dd>
-    <dt class="property-"
+{{% /md %}}</dd><dt class="property-"
             title="">
         <span id="canipforward_csharp">
 <a href="#canipforward_csharp" style="color: inherit; text-decoration: inherit;">Can<wbr>Ip<wbr>Forward</a>
@@ -381,8 +374,7 @@ The following output properties are available:
         <span class="property-type">bool</span>
     </dt>
     <dd>{{% md %}}Whether sending and receiving of packets with non-matching source or destination IPs is allowed.
-{{% /md %}}</dd>
-    <dt class="property-"
+{{% /md %}}</dd><dt class="property-"
             title="">
         <span id="confidentialinstanceconfigs_csharp">
 <a href="#confidentialinstanceconfigs_csharp" style="color: inherit; text-decoration: inherit;">Confidential<wbr>Instance<wbr>Configs</a>
@@ -390,8 +382,7 @@ The following output properties are available:
         <span class="property-indicator"></span>
         <span class="property-type"><a href="#getinstanceconfidentialinstanceconfig">List&lt;Get<wbr>Instance<wbr>Confidential<wbr>Instance<wbr>Config&gt;</a></span>
     </dt>
-    <dd>{{% md %}}{{% /md %}}</dd>
-    <dt class="property-"
+    <dd>{{% md %}}{{% /md %}}</dd><dt class="property-"
             title="">
         <span id="cpuplatform_csharp">
 <a href="#cpuplatform_csharp" style="color: inherit; text-decoration: inherit;">Cpu<wbr>Platform</a>
@@ -400,8 +391,7 @@ The following output properties are available:
         <span class="property-type">string</span>
     </dt>
     <dd>{{% md %}}The CPU platform used by this instance.
-{{% /md %}}</dd>
-    <dt class="property-"
+{{% /md %}}</dd><dt class="property-"
             title="">
         <span id="currentstatus_csharp">
 <a href="#currentstatus_csharp" style="color: inherit; text-decoration: inherit;">Current<wbr>Status</a>
@@ -409,8 +399,7 @@ The following output properties are available:
         <span class="property-indicator"></span>
         <span class="property-type">string</span>
     </dt>
-    <dd>{{% md %}}{{% /md %}}</dd>
-    <dt class="property-"
+    <dd>{{% md %}}{{% /md %}}</dd><dt class="property-"
             title="">
         <span id="deletionprotection_csharp">
 <a href="#deletionprotection_csharp" style="color: inherit; text-decoration: inherit;">Deletion<wbr>Protection</a>
@@ -419,8 +408,7 @@ The following output properties are available:
         <span class="property-type">bool</span>
     </dt>
     <dd>{{% md %}}Whether deletion protection is enabled on this instance.
-{{% /md %}}</dd>
-    <dt class="property-"
+{{% /md %}}</dd><dt class="property-"
             title="">
         <span id="description_csharp">
 <a href="#description_csharp" style="color: inherit; text-decoration: inherit;">Description</a>
@@ -429,8 +417,7 @@ The following output properties are available:
         <span class="property-type">string</span>
     </dt>
     <dd>{{% md %}}A brief description of the resource.
-{{% /md %}}</dd>
-    <dt class="property-"
+{{% /md %}}</dd><dt class="property-"
             title="">
         <span id="desiredstatus_csharp">
 <a href="#desiredstatus_csharp" style="color: inherit; text-decoration: inherit;">Desired<wbr>Status</a>
@@ -438,8 +425,7 @@ The following output properties are available:
         <span class="property-indicator"></span>
         <span class="property-type">string</span>
     </dt>
-    <dd>{{% md %}}{{% /md %}}</dd>
-    <dt class="property-"
+    <dd>{{% md %}}{{% /md %}}</dd><dt class="property-"
             title="">
         <span id="enabledisplay_csharp">
 <a href="#enabledisplay_csharp" style="color: inherit; text-decoration: inherit;">Enable<wbr>Display</a>
@@ -447,8 +433,7 @@ The following output properties are available:
         <span class="property-indicator"></span>
         <span class="property-type">bool</span>
     </dt>
-    <dd>{{% md %}}{{% /md %}}</dd>
-    <dt class="property-"
+    <dd>{{% md %}}{{% /md %}}</dd><dt class="property-"
             title="">
         <span id="guestaccelerators_csharp">
 <a href="#guestaccelerators_csharp" style="color: inherit; text-decoration: inherit;">Guest<wbr>Accelerators</a>
@@ -457,8 +442,7 @@ The following output properties are available:
         <span class="property-type"><a href="#getinstanceguestaccelerator">List&lt;Get<wbr>Instance<wbr>Guest<wbr>Accelerator&gt;</a></span>
     </dt>
     <dd>{{% md %}}List of the type and count of accelerator cards attached to the instance. Structure is documented below.
-{{% /md %}}</dd>
-    <dt class="property-"
+{{% /md %}}</dd><dt class="property-"
             title="">
         <span id="hostname_csharp">
 <a href="#hostname_csharp" style="color: inherit; text-decoration: inherit;">Hostname</a>
@@ -466,8 +450,7 @@ The following output properties are available:
         <span class="property-indicator"></span>
         <span class="property-type">string</span>
     </dt>
-    <dd>{{% md %}}{{% /md %}}</dd>
-    <dt class="property-"
+    <dd>{{% md %}}{{% /md %}}</dd><dt class="property-"
             title="">
         <span id="id_csharp">
 <a href="#id_csharp" style="color: inherit; text-decoration: inherit;">Id</a>
@@ -476,8 +459,7 @@ The following output properties are available:
         <span class="property-type">string</span>
     </dt>
     <dd>{{% md %}}The provider-assigned unique ID for this managed resource.
-{{% /md %}}</dd>
-    <dt class="property-"
+{{% /md %}}</dd><dt class="property-"
             title="">
         <span id="instanceid_csharp">
 <a href="#instanceid_csharp" style="color: inherit; text-decoration: inherit;">Instance<wbr>Id</a>
@@ -486,8 +468,7 @@ The following output properties are available:
         <span class="property-type">string</span>
     </dt>
     <dd>{{% md %}}The server-assigned unique identifier of this instance.
-{{% /md %}}</dd>
-    <dt class="property-"
+{{% /md %}}</dd><dt class="property-"
             title="">
         <span id="labelfingerprint_csharp">
 <a href="#labelfingerprint_csharp" style="color: inherit; text-decoration: inherit;">Label<wbr>Fingerprint</a>
@@ -496,8 +477,7 @@ The following output properties are available:
         <span class="property-type">string</span>
     </dt>
     <dd>{{% md %}}The unique fingerprint of the labels.
-{{% /md %}}</dd>
-    <dt class="property-"
+{{% /md %}}</dd><dt class="property-"
             title="">
         <span id="labels_csharp">
 <a href="#labels_csharp" style="color: inherit; text-decoration: inherit;">Labels</a>
@@ -506,8 +486,7 @@ The following output properties are available:
         <span class="property-type">Dictionary&lt;string, string&gt;</span>
     </dt>
     <dd>{{% md %}}A set of key/value label pairs assigned to the instance.
-{{% /md %}}</dd>
-    <dt class="property-"
+{{% /md %}}</dd><dt class="property-"
             title="">
         <span id="machinetype_csharp">
 <a href="#machinetype_csharp" style="color: inherit; text-decoration: inherit;">Machine<wbr>Type</a>
@@ -516,8 +495,7 @@ The following output properties are available:
         <span class="property-type">string</span>
     </dt>
     <dd>{{% md %}}The machine type to create.
-{{% /md %}}</dd>
-    <dt class="property-"
+{{% /md %}}</dd><dt class="property-"
             title="">
         <span id="metadata_csharp">
 <a href="#metadata_csharp" style="color: inherit; text-decoration: inherit;">Metadata</a>
@@ -526,8 +504,7 @@ The following output properties are available:
         <span class="property-type">Dictionary&lt;string, string&gt;</span>
     </dt>
     <dd>{{% md %}}Metadata key/value pairs made available within the instance.
-{{% /md %}}</dd>
-    <dt class="property-"
+{{% /md %}}</dd><dt class="property-"
             title="">
         <span id="metadatafingerprint_csharp">
 <a href="#metadatafingerprint_csharp" style="color: inherit; text-decoration: inherit;">Metadata<wbr>Fingerprint</a>
@@ -536,8 +513,7 @@ The following output properties are available:
         <span class="property-type">string</span>
     </dt>
     <dd>{{% md %}}The unique fingerprint of the metadata.
-{{% /md %}}</dd>
-    <dt class="property-"
+{{% /md %}}</dd><dt class="property-"
             title="">
         <span id="metadatastartupscript_csharp">
 <a href="#metadatastartupscript_csharp" style="color: inherit; text-decoration: inherit;">Metadata<wbr>Startup<wbr>Script</a>
@@ -545,8 +521,7 @@ The following output properties are available:
         <span class="property-indicator"></span>
         <span class="property-type">string</span>
     </dt>
-    <dd>{{% md %}}{{% /md %}}</dd>
-    <dt class="property-"
+    <dd>{{% md %}}{{% /md %}}</dd><dt class="property-"
             title="">
         <span id="mincpuplatform_csharp">
 <a href="#mincpuplatform_csharp" style="color: inherit; text-decoration: inherit;">Min<wbr>Cpu<wbr>Platform</a>
@@ -555,8 +530,7 @@ The following output properties are available:
         <span class="property-type">string</span>
     </dt>
     <dd>{{% md %}}The minimum CPU platform specified for the VM instance.
-{{% /md %}}</dd>
-    <dt class="property-"
+{{% /md %}}</dd><dt class="property-"
             title="">
         <span id="networkinterfaces_csharp">
 <a href="#networkinterfaces_csharp" style="color: inherit; text-decoration: inherit;">Network<wbr>Interfaces</a>
@@ -565,8 +539,7 @@ The following output properties are available:
         <span class="property-type"><a href="#getinstancenetworkinterface">List&lt;Get<wbr>Instance<wbr>Network<wbr>Interface&gt;</a></span>
     </dt>
     <dd>{{% md %}}The networks attached to the instance. Structure is documented below.
-{{% /md %}}</dd>
-    <dt class="property-"
+{{% /md %}}</dd><dt class="property-"
             title="">
         <span id="resourcepolicies_csharp">
 <a href="#resourcepolicies_csharp" style="color: inherit; text-decoration: inherit;">Resource<wbr>Policies</a>
@@ -574,8 +547,7 @@ The following output properties are available:
         <span class="property-indicator"></span>
         <span class="property-type">List&lt;string&gt;</span>
     </dt>
-    <dd>{{% md %}}{{% /md %}}</dd>
-    <dt class="property-"
+    <dd>{{% md %}}{{% /md %}}</dd><dt class="property-"
             title="">
         <span id="schedulings_csharp">
 <a href="#schedulings_csharp" style="color: inherit; text-decoration: inherit;">Schedulings</a>
@@ -584,8 +556,7 @@ The following output properties are available:
         <span class="property-type"><a href="#getinstancescheduling">List&lt;Get<wbr>Instance<wbr>Scheduling&gt;</a></span>
     </dt>
     <dd>{{% md %}}The scheduling strategy being used by the instance.
-{{% /md %}}</dd>
-    <dt class="property-"
+{{% /md %}}</dd><dt class="property-"
             title="">
         <span id="scratchdisks_csharp">
 <a href="#scratchdisks_csharp" style="color: inherit; text-decoration: inherit;">Scratch<wbr>Disks</a>
@@ -594,8 +565,7 @@ The following output properties are available:
         <span class="property-type"><a href="#getinstancescratchdisk">List&lt;Get<wbr>Instance<wbr>Scratch<wbr>Disk&gt;</a></span>
     </dt>
     <dd>{{% md %}}The scratch disks attached to the instance. Structure is documented below.
-{{% /md %}}</dd>
-    <dt class="property-"
+{{% /md %}}</dd><dt class="property-"
             title="">
         <span id="serviceaccounts_csharp">
 <a href="#serviceaccounts_csharp" style="color: inherit; text-decoration: inherit;">Service<wbr>Accounts</a>
@@ -604,8 +574,7 @@ The following output properties are available:
         <span class="property-type"><a href="#getinstanceserviceaccount">List&lt;Get<wbr>Instance<wbr>Service<wbr>Account&gt;</a></span>
     </dt>
     <dd>{{% md %}}The service account to attach to the instance. Structure is documented below.
-{{% /md %}}</dd>
-    <dt class="property-"
+{{% /md %}}</dd><dt class="property-"
             title="">
         <span id="shieldedinstanceconfigs_csharp">
 <a href="#shieldedinstanceconfigs_csharp" style="color: inherit; text-decoration: inherit;">Shielded<wbr>Instance<wbr>Configs</a>
@@ -614,8 +583,7 @@ The following output properties are available:
         <span class="property-type"><a href="#getinstanceshieldedinstanceconfig">List&lt;Get<wbr>Instance<wbr>Shielded<wbr>Instance<wbr>Config&gt;</a></span>
     </dt>
     <dd>{{% md %}}The shielded vm config being used by the instance. Structure is documented below.
-{{% /md %}}</dd>
-    <dt class="property-"
+{{% /md %}}</dd><dt class="property-"
             title="">
         <span id="tags_csharp">
 <a href="#tags_csharp" style="color: inherit; text-decoration: inherit;">Tags</a>
@@ -624,8 +592,7 @@ The following output properties are available:
         <span class="property-type">List&lt;string&gt;</span>
     </dt>
     <dd>{{% md %}}The list of tags attached to the instance.
-{{% /md %}}</dd>
-    <dt class="property-"
+{{% /md %}}</dd><dt class="property-"
             title="">
         <span id="tagsfingerprint_csharp">
 <a href="#tagsfingerprint_csharp" style="color: inherit; text-decoration: inherit;">Tags<wbr>Fingerprint</a>
@@ -634,8 +601,7 @@ The following output properties are available:
         <span class="property-type">string</span>
     </dt>
     <dd>{{% md %}}The unique fingerprint of the tags.
-{{% /md %}}</dd>
-    <dt class="property-"
+{{% /md %}}</dd><dt class="property-"
             title="">
         <span id="name_csharp">
 <a href="#name_csharp" style="color: inherit; text-decoration: inherit;">Name</a>
@@ -643,8 +609,7 @@ The following output properties are available:
         <span class="property-indicator"></span>
         <span class="property-type">string</span>
     </dt>
-    <dd>{{% md %}}{{% /md %}}</dd>
-    <dt class="property-"
+    <dd>{{% md %}}{{% /md %}}</dd><dt class="property-"
             title="">
         <span id="project_csharp">
 <a href="#project_csharp" style="color: inherit; text-decoration: inherit;">Project</a>
@@ -652,8 +617,7 @@ The following output properties are available:
         <span class="property-indicator"></span>
         <span class="property-type">string</span>
     </dt>
-    <dd>{{% md %}}{{% /md %}}</dd>
-    <dt class="property-"
+    <dd>{{% md %}}{{% /md %}}</dd><dt class="property-"
             title="">
         <span id="selflink_csharp">
 <a href="#selflink_csharp" style="color: inherit; text-decoration: inherit;">Self<wbr>Link</a>
@@ -662,8 +626,7 @@ The following output properties are available:
         <span class="property-type">string</span>
     </dt>
     <dd>{{% md %}}The URI of the created resource.
-{{% /md %}}</dd>
-    <dt class="property-"
+{{% /md %}}</dd><dt class="property-"
             title="">
         <span id="zone_csharp">
 <a href="#zone_csharp" style="color: inherit; text-decoration: inherit;">Zone</a>
@@ -671,14 +634,11 @@ The following output properties are available:
         <span class="property-indicator"></span>
         <span class="property-type">string</span>
     </dt>
-    <dd>{{% md %}}{{% /md %}}</dd>
-</dl>
+    <dd>{{% md %}}{{% /md %}}</dd></dl>
 {{% /choosable %}}
 
 {{% choosable language go %}}
-<dl class="resources-properties">
-
-    <dt class="property-"
+<dl class="resources-properties"><dt class="property-"
             title="">
         <span id="allowstoppingforupdate_go">
 <a href="#allowstoppingforupdate_go" style="color: inherit; text-decoration: inherit;">Allow<wbr>Stopping<wbr>For<wbr>Update</a>
@@ -686,8 +646,7 @@ The following output properties are available:
         <span class="property-indicator"></span>
         <span class="property-type">bool</span>
     </dt>
-    <dd>{{% md %}}{{% /md %}}</dd>
-    <dt class="property-"
+    <dd>{{% md %}}{{% /md %}}</dd><dt class="property-"
             title="">
         <span id="attacheddisks_go">
 <a href="#attacheddisks_go" style="color: inherit; text-decoration: inherit;">Attached<wbr>Disks</a>
@@ -696,8 +655,7 @@ The following output properties are available:
         <span class="property-type"><a href="#getinstanceattacheddisk">[]Get<wbr>Instance<wbr>Attached<wbr>Disk</a></span>
     </dt>
     <dd>{{% md %}}List of disks attached to the instance. Structure is documented below.
-{{% /md %}}</dd>
-    <dt class="property-"
+{{% /md %}}</dd><dt class="property-"
             title="">
         <span id="bootdisks_go">
 <a href="#bootdisks_go" style="color: inherit; text-decoration: inherit;">Boot<wbr>Disks</a>
@@ -706,8 +664,7 @@ The following output properties are available:
         <span class="property-type"><a href="#getinstancebootdisk">[]Get<wbr>Instance<wbr>Boot<wbr>Disk</a></span>
     </dt>
     <dd>{{% md %}}The boot disk for the instance. Structure is documented below.
-{{% /md %}}</dd>
-    <dt class="property-"
+{{% /md %}}</dd><dt class="property-"
             title="">
         <span id="canipforward_go">
 <a href="#canipforward_go" style="color: inherit; text-decoration: inherit;">Can<wbr>Ip<wbr>Forward</a>
@@ -716,8 +673,7 @@ The following output properties are available:
         <span class="property-type">bool</span>
     </dt>
     <dd>{{% md %}}Whether sending and receiving of packets with non-matching source or destination IPs is allowed.
-{{% /md %}}</dd>
-    <dt class="property-"
+{{% /md %}}</dd><dt class="property-"
             title="">
         <span id="confidentialinstanceconfigs_go">
 <a href="#confidentialinstanceconfigs_go" style="color: inherit; text-decoration: inherit;">Confidential<wbr>Instance<wbr>Configs</a>
@@ -725,8 +681,7 @@ The following output properties are available:
         <span class="property-indicator"></span>
         <span class="property-type"><a href="#getinstanceconfidentialinstanceconfig">[]Get<wbr>Instance<wbr>Confidential<wbr>Instance<wbr>Config</a></span>
     </dt>
-    <dd>{{% md %}}{{% /md %}}</dd>
-    <dt class="property-"
+    <dd>{{% md %}}{{% /md %}}</dd><dt class="property-"
             title="">
         <span id="cpuplatform_go">
 <a href="#cpuplatform_go" style="color: inherit; text-decoration: inherit;">Cpu<wbr>Platform</a>
@@ -735,8 +690,7 @@ The following output properties are available:
         <span class="property-type">string</span>
     </dt>
     <dd>{{% md %}}The CPU platform used by this instance.
-{{% /md %}}</dd>
-    <dt class="property-"
+{{% /md %}}</dd><dt class="property-"
             title="">
         <span id="currentstatus_go">
 <a href="#currentstatus_go" style="color: inherit; text-decoration: inherit;">Current<wbr>Status</a>
@@ -744,8 +698,7 @@ The following output properties are available:
         <span class="property-indicator"></span>
         <span class="property-type">string</span>
     </dt>
-    <dd>{{% md %}}{{% /md %}}</dd>
-    <dt class="property-"
+    <dd>{{% md %}}{{% /md %}}</dd><dt class="property-"
             title="">
         <span id="deletionprotection_go">
 <a href="#deletionprotection_go" style="color: inherit; text-decoration: inherit;">Deletion<wbr>Protection</a>
@@ -754,8 +707,7 @@ The following output properties are available:
         <span class="property-type">bool</span>
     </dt>
     <dd>{{% md %}}Whether deletion protection is enabled on this instance.
-{{% /md %}}</dd>
-    <dt class="property-"
+{{% /md %}}</dd><dt class="property-"
             title="">
         <span id="description_go">
 <a href="#description_go" style="color: inherit; text-decoration: inherit;">Description</a>
@@ -764,8 +716,7 @@ The following output properties are available:
         <span class="property-type">string</span>
     </dt>
     <dd>{{% md %}}A brief description of the resource.
-{{% /md %}}</dd>
-    <dt class="property-"
+{{% /md %}}</dd><dt class="property-"
             title="">
         <span id="desiredstatus_go">
 <a href="#desiredstatus_go" style="color: inherit; text-decoration: inherit;">Desired<wbr>Status</a>
@@ -773,8 +724,7 @@ The following output properties are available:
         <span class="property-indicator"></span>
         <span class="property-type">string</span>
     </dt>
-    <dd>{{% md %}}{{% /md %}}</dd>
-    <dt class="property-"
+    <dd>{{% md %}}{{% /md %}}</dd><dt class="property-"
             title="">
         <span id="enabledisplay_go">
 <a href="#enabledisplay_go" style="color: inherit; text-decoration: inherit;">Enable<wbr>Display</a>
@@ -782,8 +732,7 @@ The following output properties are available:
         <span class="property-indicator"></span>
         <span class="property-type">bool</span>
     </dt>
-    <dd>{{% md %}}{{% /md %}}</dd>
-    <dt class="property-"
+    <dd>{{% md %}}{{% /md %}}</dd><dt class="property-"
             title="">
         <span id="guestaccelerators_go">
 <a href="#guestaccelerators_go" style="color: inherit; text-decoration: inherit;">Guest<wbr>Accelerators</a>
@@ -792,8 +741,7 @@ The following output properties are available:
         <span class="property-type"><a href="#getinstanceguestaccelerator">[]Get<wbr>Instance<wbr>Guest<wbr>Accelerator</a></span>
     </dt>
     <dd>{{% md %}}List of the type and count of accelerator cards attached to the instance. Structure is documented below.
-{{% /md %}}</dd>
-    <dt class="property-"
+{{% /md %}}</dd><dt class="property-"
             title="">
         <span id="hostname_go">
 <a href="#hostname_go" style="color: inherit; text-decoration: inherit;">Hostname</a>
@@ -801,8 +749,7 @@ The following output properties are available:
         <span class="property-indicator"></span>
         <span class="property-type">string</span>
     </dt>
-    <dd>{{% md %}}{{% /md %}}</dd>
-    <dt class="property-"
+    <dd>{{% md %}}{{% /md %}}</dd><dt class="property-"
             title="">
         <span id="id_go">
 <a href="#id_go" style="color: inherit; text-decoration: inherit;">Id</a>
@@ -811,8 +758,7 @@ The following output properties are available:
         <span class="property-type">string</span>
     </dt>
     <dd>{{% md %}}The provider-assigned unique ID for this managed resource.
-{{% /md %}}</dd>
-    <dt class="property-"
+{{% /md %}}</dd><dt class="property-"
             title="">
         <span id="instanceid_go">
 <a href="#instanceid_go" style="color: inherit; text-decoration: inherit;">Instance<wbr>Id</a>
@@ -821,8 +767,7 @@ The following output properties are available:
         <span class="property-type">string</span>
     </dt>
     <dd>{{% md %}}The server-assigned unique identifier of this instance.
-{{% /md %}}</dd>
-    <dt class="property-"
+{{% /md %}}</dd><dt class="property-"
             title="">
         <span id="labelfingerprint_go">
 <a href="#labelfingerprint_go" style="color: inherit; text-decoration: inherit;">Label<wbr>Fingerprint</a>
@@ -831,8 +776,7 @@ The following output properties are available:
         <span class="property-type">string</span>
     </dt>
     <dd>{{% md %}}The unique fingerprint of the labels.
-{{% /md %}}</dd>
-    <dt class="property-"
+{{% /md %}}</dd><dt class="property-"
             title="">
         <span id="labels_go">
 <a href="#labels_go" style="color: inherit; text-decoration: inherit;">Labels</a>
@@ -841,8 +785,7 @@ The following output properties are available:
         <span class="property-type">map[string]string</span>
     </dt>
     <dd>{{% md %}}A set of key/value label pairs assigned to the instance.
-{{% /md %}}</dd>
-    <dt class="property-"
+{{% /md %}}</dd><dt class="property-"
             title="">
         <span id="machinetype_go">
 <a href="#machinetype_go" style="color: inherit; text-decoration: inherit;">Machine<wbr>Type</a>
@@ -851,8 +794,7 @@ The following output properties are available:
         <span class="property-type">string</span>
     </dt>
     <dd>{{% md %}}The machine type to create.
-{{% /md %}}</dd>
-    <dt class="property-"
+{{% /md %}}</dd><dt class="property-"
             title="">
         <span id="metadata_go">
 <a href="#metadata_go" style="color: inherit; text-decoration: inherit;">Metadata</a>
@@ -861,8 +803,7 @@ The following output properties are available:
         <span class="property-type">map[string]string</span>
     </dt>
     <dd>{{% md %}}Metadata key/value pairs made available within the instance.
-{{% /md %}}</dd>
-    <dt class="property-"
+{{% /md %}}</dd><dt class="property-"
             title="">
         <span id="metadatafingerprint_go">
 <a href="#metadatafingerprint_go" style="color: inherit; text-decoration: inherit;">Metadata<wbr>Fingerprint</a>
@@ -871,8 +812,7 @@ The following output properties are available:
         <span class="property-type">string</span>
     </dt>
     <dd>{{% md %}}The unique fingerprint of the metadata.
-{{% /md %}}</dd>
-    <dt class="property-"
+{{% /md %}}</dd><dt class="property-"
             title="">
         <span id="metadatastartupscript_go">
 <a href="#metadatastartupscript_go" style="color: inherit; text-decoration: inherit;">Metadata<wbr>Startup<wbr>Script</a>
@@ -880,8 +820,7 @@ The following output properties are available:
         <span class="property-indicator"></span>
         <span class="property-type">string</span>
     </dt>
-    <dd>{{% md %}}{{% /md %}}</dd>
-    <dt class="property-"
+    <dd>{{% md %}}{{% /md %}}</dd><dt class="property-"
             title="">
         <span id="mincpuplatform_go">
 <a href="#mincpuplatform_go" style="color: inherit; text-decoration: inherit;">Min<wbr>Cpu<wbr>Platform</a>
@@ -890,8 +829,7 @@ The following output properties are available:
         <span class="property-type">string</span>
     </dt>
     <dd>{{% md %}}The minimum CPU platform specified for the VM instance.
-{{% /md %}}</dd>
-    <dt class="property-"
+{{% /md %}}</dd><dt class="property-"
             title="">
         <span id="networkinterfaces_go">
 <a href="#networkinterfaces_go" style="color: inherit; text-decoration: inherit;">Network<wbr>Interfaces</a>
@@ -900,8 +838,7 @@ The following output properties are available:
         <span class="property-type"><a href="#getinstancenetworkinterface">[]Get<wbr>Instance<wbr>Network<wbr>Interface</a></span>
     </dt>
     <dd>{{% md %}}The networks attached to the instance. Structure is documented below.
-{{% /md %}}</dd>
-    <dt class="property-"
+{{% /md %}}</dd><dt class="property-"
             title="">
         <span id="resourcepolicies_go">
 <a href="#resourcepolicies_go" style="color: inherit; text-decoration: inherit;">Resource<wbr>Policies</a>
@@ -909,8 +846,7 @@ The following output properties are available:
         <span class="property-indicator"></span>
         <span class="property-type">[]string</span>
     </dt>
-    <dd>{{% md %}}{{% /md %}}</dd>
-    <dt class="property-"
+    <dd>{{% md %}}{{% /md %}}</dd><dt class="property-"
             title="">
         <span id="schedulings_go">
 <a href="#schedulings_go" style="color: inherit; text-decoration: inherit;">Schedulings</a>
@@ -919,8 +855,7 @@ The following output properties are available:
         <span class="property-type"><a href="#getinstancescheduling">[]Get<wbr>Instance<wbr>Scheduling</a></span>
     </dt>
     <dd>{{% md %}}The scheduling strategy being used by the instance.
-{{% /md %}}</dd>
-    <dt class="property-"
+{{% /md %}}</dd><dt class="property-"
             title="">
         <span id="scratchdisks_go">
 <a href="#scratchdisks_go" style="color: inherit; text-decoration: inherit;">Scratch<wbr>Disks</a>
@@ -929,8 +864,7 @@ The following output properties are available:
         <span class="property-type"><a href="#getinstancescratchdisk">[]Get<wbr>Instance<wbr>Scratch<wbr>Disk</a></span>
     </dt>
     <dd>{{% md %}}The scratch disks attached to the instance. Structure is documented below.
-{{% /md %}}</dd>
-    <dt class="property-"
+{{% /md %}}</dd><dt class="property-"
             title="">
         <span id="serviceaccounts_go">
 <a href="#serviceaccounts_go" style="color: inherit; text-decoration: inherit;">Service<wbr>Accounts</a>
@@ -939,8 +873,7 @@ The following output properties are available:
         <span class="property-type"><a href="#getinstanceserviceaccount">[]Get<wbr>Instance<wbr>Service<wbr>Account</a></span>
     </dt>
     <dd>{{% md %}}The service account to attach to the instance. Structure is documented below.
-{{% /md %}}</dd>
-    <dt class="property-"
+{{% /md %}}</dd><dt class="property-"
             title="">
         <span id="shieldedinstanceconfigs_go">
 <a href="#shieldedinstanceconfigs_go" style="color: inherit; text-decoration: inherit;">Shielded<wbr>Instance<wbr>Configs</a>
@@ -949,8 +882,7 @@ The following output properties are available:
         <span class="property-type"><a href="#getinstanceshieldedinstanceconfig">[]Get<wbr>Instance<wbr>Shielded<wbr>Instance<wbr>Config</a></span>
     </dt>
     <dd>{{% md %}}The shielded vm config being used by the instance. Structure is documented below.
-{{% /md %}}</dd>
-    <dt class="property-"
+{{% /md %}}</dd><dt class="property-"
             title="">
         <span id="tags_go">
 <a href="#tags_go" style="color: inherit; text-decoration: inherit;">Tags</a>
@@ -959,8 +891,7 @@ The following output properties are available:
         <span class="property-type">[]string</span>
     </dt>
     <dd>{{% md %}}The list of tags attached to the instance.
-{{% /md %}}</dd>
-    <dt class="property-"
+{{% /md %}}</dd><dt class="property-"
             title="">
         <span id="tagsfingerprint_go">
 <a href="#tagsfingerprint_go" style="color: inherit; text-decoration: inherit;">Tags<wbr>Fingerprint</a>
@@ -969,8 +900,7 @@ The following output properties are available:
         <span class="property-type">string</span>
     </dt>
     <dd>{{% md %}}The unique fingerprint of the tags.
-{{% /md %}}</dd>
-    <dt class="property-"
+{{% /md %}}</dd><dt class="property-"
             title="">
         <span id="name_go">
 <a href="#name_go" style="color: inherit; text-decoration: inherit;">Name</a>
@@ -978,8 +908,7 @@ The following output properties are available:
         <span class="property-indicator"></span>
         <span class="property-type">string</span>
     </dt>
-    <dd>{{% md %}}{{% /md %}}</dd>
-    <dt class="property-"
+    <dd>{{% md %}}{{% /md %}}</dd><dt class="property-"
             title="">
         <span id="project_go">
 <a href="#project_go" style="color: inherit; text-decoration: inherit;">Project</a>
@@ -987,8 +916,7 @@ The following output properties are available:
         <span class="property-indicator"></span>
         <span class="property-type">string</span>
     </dt>
-    <dd>{{% md %}}{{% /md %}}</dd>
-    <dt class="property-"
+    <dd>{{% md %}}{{% /md %}}</dd><dt class="property-"
             title="">
         <span id="selflink_go">
 <a href="#selflink_go" style="color: inherit; text-decoration: inherit;">Self<wbr>Link</a>
@@ -997,8 +925,7 @@ The following output properties are available:
         <span class="property-type">string</span>
     </dt>
     <dd>{{% md %}}The URI of the created resource.
-{{% /md %}}</dd>
-    <dt class="property-"
+{{% /md %}}</dd><dt class="property-"
             title="">
         <span id="zone_go">
 <a href="#zone_go" style="color: inherit; text-decoration: inherit;">Zone</a>
@@ -1006,14 +933,11 @@ The following output properties are available:
         <span class="property-indicator"></span>
         <span class="property-type">string</span>
     </dt>
-    <dd>{{% md %}}{{% /md %}}</dd>
-</dl>
+    <dd>{{% md %}}{{% /md %}}</dd></dl>
 {{% /choosable %}}
 
 {{% choosable language nodejs %}}
-<dl class="resources-properties">
-
-    <dt class="property-"
+<dl class="resources-properties"><dt class="property-"
             title="">
         <span id="allowstoppingforupdate_nodejs">
 <a href="#allowstoppingforupdate_nodejs" style="color: inherit; text-decoration: inherit;">allow<wbr>Stopping<wbr>For<wbr>Update</a>
@@ -1021,8 +945,7 @@ The following output properties are available:
         <span class="property-indicator"></span>
         <span class="property-type">boolean</span>
     </dt>
-    <dd>{{% md %}}{{% /md %}}</dd>
-    <dt class="property-"
+    <dd>{{% md %}}{{% /md %}}</dd><dt class="property-"
             title="">
         <span id="attacheddisks_nodejs">
 <a href="#attacheddisks_nodejs" style="color: inherit; text-decoration: inherit;">attached<wbr>Disks</a>
@@ -1031,8 +954,7 @@ The following output properties are available:
         <span class="property-type"><a href="#getinstanceattacheddisk">Get<wbr>Instance<wbr>Attached<wbr>Disk[]</a></span>
     </dt>
     <dd>{{% md %}}List of disks attached to the instance. Structure is documented below.
-{{% /md %}}</dd>
-    <dt class="property-"
+{{% /md %}}</dd><dt class="property-"
             title="">
         <span id="bootdisks_nodejs">
 <a href="#bootdisks_nodejs" style="color: inherit; text-decoration: inherit;">boot<wbr>Disks</a>
@@ -1041,8 +963,7 @@ The following output properties are available:
         <span class="property-type"><a href="#getinstancebootdisk">Get<wbr>Instance<wbr>Boot<wbr>Disk[]</a></span>
     </dt>
     <dd>{{% md %}}The boot disk for the instance. Structure is documented below.
-{{% /md %}}</dd>
-    <dt class="property-"
+{{% /md %}}</dd><dt class="property-"
             title="">
         <span id="canipforward_nodejs">
 <a href="#canipforward_nodejs" style="color: inherit; text-decoration: inherit;">can<wbr>Ip<wbr>Forward</a>
@@ -1051,8 +972,7 @@ The following output properties are available:
         <span class="property-type">boolean</span>
     </dt>
     <dd>{{% md %}}Whether sending and receiving of packets with non-matching source or destination IPs is allowed.
-{{% /md %}}</dd>
-    <dt class="property-"
+{{% /md %}}</dd><dt class="property-"
             title="">
         <span id="confidentialinstanceconfigs_nodejs">
 <a href="#confidentialinstanceconfigs_nodejs" style="color: inherit; text-decoration: inherit;">confidential<wbr>Instance<wbr>Configs</a>
@@ -1060,8 +980,7 @@ The following output properties are available:
         <span class="property-indicator"></span>
         <span class="property-type"><a href="#getinstanceconfidentialinstanceconfig">Get<wbr>Instance<wbr>Confidential<wbr>Instance<wbr>Config[]</a></span>
     </dt>
-    <dd>{{% md %}}{{% /md %}}</dd>
-    <dt class="property-"
+    <dd>{{% md %}}{{% /md %}}</dd><dt class="property-"
             title="">
         <span id="cpuplatform_nodejs">
 <a href="#cpuplatform_nodejs" style="color: inherit; text-decoration: inherit;">cpu<wbr>Platform</a>
@@ -1070,8 +989,7 @@ The following output properties are available:
         <span class="property-type">string</span>
     </dt>
     <dd>{{% md %}}The CPU platform used by this instance.
-{{% /md %}}</dd>
-    <dt class="property-"
+{{% /md %}}</dd><dt class="property-"
             title="">
         <span id="currentstatus_nodejs">
 <a href="#currentstatus_nodejs" style="color: inherit; text-decoration: inherit;">current<wbr>Status</a>
@@ -1079,8 +997,7 @@ The following output properties are available:
         <span class="property-indicator"></span>
         <span class="property-type">string</span>
     </dt>
-    <dd>{{% md %}}{{% /md %}}</dd>
-    <dt class="property-"
+    <dd>{{% md %}}{{% /md %}}</dd><dt class="property-"
             title="">
         <span id="deletionprotection_nodejs">
 <a href="#deletionprotection_nodejs" style="color: inherit; text-decoration: inherit;">deletion<wbr>Protection</a>
@@ -1089,8 +1006,7 @@ The following output properties are available:
         <span class="property-type">boolean</span>
     </dt>
     <dd>{{% md %}}Whether deletion protection is enabled on this instance.
-{{% /md %}}</dd>
-    <dt class="property-"
+{{% /md %}}</dd><dt class="property-"
             title="">
         <span id="description_nodejs">
 <a href="#description_nodejs" style="color: inherit; text-decoration: inherit;">description</a>
@@ -1099,8 +1015,7 @@ The following output properties are available:
         <span class="property-type">string</span>
     </dt>
     <dd>{{% md %}}A brief description of the resource.
-{{% /md %}}</dd>
-    <dt class="property-"
+{{% /md %}}</dd><dt class="property-"
             title="">
         <span id="desiredstatus_nodejs">
 <a href="#desiredstatus_nodejs" style="color: inherit; text-decoration: inherit;">desired<wbr>Status</a>
@@ -1108,8 +1023,7 @@ The following output properties are available:
         <span class="property-indicator"></span>
         <span class="property-type">string</span>
     </dt>
-    <dd>{{% md %}}{{% /md %}}</dd>
-    <dt class="property-"
+    <dd>{{% md %}}{{% /md %}}</dd><dt class="property-"
             title="">
         <span id="enabledisplay_nodejs">
 <a href="#enabledisplay_nodejs" style="color: inherit; text-decoration: inherit;">enable<wbr>Display</a>
@@ -1117,8 +1031,7 @@ The following output properties are available:
         <span class="property-indicator"></span>
         <span class="property-type">boolean</span>
     </dt>
-    <dd>{{% md %}}{{% /md %}}</dd>
-    <dt class="property-"
+    <dd>{{% md %}}{{% /md %}}</dd><dt class="property-"
             title="">
         <span id="guestaccelerators_nodejs">
 <a href="#guestaccelerators_nodejs" style="color: inherit; text-decoration: inherit;">guest<wbr>Accelerators</a>
@@ -1127,8 +1040,7 @@ The following output properties are available:
         <span class="property-type"><a href="#getinstanceguestaccelerator">Get<wbr>Instance<wbr>Guest<wbr>Accelerator[]</a></span>
     </dt>
     <dd>{{% md %}}List of the type and count of accelerator cards attached to the instance. Structure is documented below.
-{{% /md %}}</dd>
-    <dt class="property-"
+{{% /md %}}</dd><dt class="property-"
             title="">
         <span id="hostname_nodejs">
 <a href="#hostname_nodejs" style="color: inherit; text-decoration: inherit;">hostname</a>
@@ -1136,8 +1048,7 @@ The following output properties are available:
         <span class="property-indicator"></span>
         <span class="property-type">string</span>
     </dt>
-    <dd>{{% md %}}{{% /md %}}</dd>
-    <dt class="property-"
+    <dd>{{% md %}}{{% /md %}}</dd><dt class="property-"
             title="">
         <span id="id_nodejs">
 <a href="#id_nodejs" style="color: inherit; text-decoration: inherit;">id</a>
@@ -1146,8 +1057,7 @@ The following output properties are available:
         <span class="property-type">string</span>
     </dt>
     <dd>{{% md %}}The provider-assigned unique ID for this managed resource.
-{{% /md %}}</dd>
-    <dt class="property-"
+{{% /md %}}</dd><dt class="property-"
             title="">
         <span id="instanceid_nodejs">
 <a href="#instanceid_nodejs" style="color: inherit; text-decoration: inherit;">instance<wbr>Id</a>
@@ -1156,8 +1066,7 @@ The following output properties are available:
         <span class="property-type">string</span>
     </dt>
     <dd>{{% md %}}The server-assigned unique identifier of this instance.
-{{% /md %}}</dd>
-    <dt class="property-"
+{{% /md %}}</dd><dt class="property-"
             title="">
         <span id="labelfingerprint_nodejs">
 <a href="#labelfingerprint_nodejs" style="color: inherit; text-decoration: inherit;">label<wbr>Fingerprint</a>
@@ -1166,8 +1075,7 @@ The following output properties are available:
         <span class="property-type">string</span>
     </dt>
     <dd>{{% md %}}The unique fingerprint of the labels.
-{{% /md %}}</dd>
-    <dt class="property-"
+{{% /md %}}</dd><dt class="property-"
             title="">
         <span id="labels_nodejs">
 <a href="#labels_nodejs" style="color: inherit; text-decoration: inherit;">labels</a>
@@ -1176,8 +1084,7 @@ The following output properties are available:
         <span class="property-type">{[key: string]: string}</span>
     </dt>
     <dd>{{% md %}}A set of key/value label pairs assigned to the instance.
-{{% /md %}}</dd>
-    <dt class="property-"
+{{% /md %}}</dd><dt class="property-"
             title="">
         <span id="machinetype_nodejs">
 <a href="#machinetype_nodejs" style="color: inherit; text-decoration: inherit;">machine<wbr>Type</a>
@@ -1186,8 +1093,7 @@ The following output properties are available:
         <span class="property-type">string</span>
     </dt>
     <dd>{{% md %}}The machine type to create.
-{{% /md %}}</dd>
-    <dt class="property-"
+{{% /md %}}</dd><dt class="property-"
             title="">
         <span id="metadata_nodejs">
 <a href="#metadata_nodejs" style="color: inherit; text-decoration: inherit;">metadata</a>
@@ -1196,8 +1102,7 @@ The following output properties are available:
         <span class="property-type">{[key: string]: string}</span>
     </dt>
     <dd>{{% md %}}Metadata key/value pairs made available within the instance.
-{{% /md %}}</dd>
-    <dt class="property-"
+{{% /md %}}</dd><dt class="property-"
             title="">
         <span id="metadatafingerprint_nodejs">
 <a href="#metadatafingerprint_nodejs" style="color: inherit; text-decoration: inherit;">metadata<wbr>Fingerprint</a>
@@ -1206,8 +1111,7 @@ The following output properties are available:
         <span class="property-type">string</span>
     </dt>
     <dd>{{% md %}}The unique fingerprint of the metadata.
-{{% /md %}}</dd>
-    <dt class="property-"
+{{% /md %}}</dd><dt class="property-"
             title="">
         <span id="metadatastartupscript_nodejs">
 <a href="#metadatastartupscript_nodejs" style="color: inherit; text-decoration: inherit;">metadata<wbr>Startup<wbr>Script</a>
@@ -1215,8 +1119,7 @@ The following output properties are available:
         <span class="property-indicator"></span>
         <span class="property-type">string</span>
     </dt>
-    <dd>{{% md %}}{{% /md %}}</dd>
-    <dt class="property-"
+    <dd>{{% md %}}{{% /md %}}</dd><dt class="property-"
             title="">
         <span id="mincpuplatform_nodejs">
 <a href="#mincpuplatform_nodejs" style="color: inherit; text-decoration: inherit;">min<wbr>Cpu<wbr>Platform</a>
@@ -1225,8 +1128,7 @@ The following output properties are available:
         <span class="property-type">string</span>
     </dt>
     <dd>{{% md %}}The minimum CPU platform specified for the VM instance.
-{{% /md %}}</dd>
-    <dt class="property-"
+{{% /md %}}</dd><dt class="property-"
             title="">
         <span id="networkinterfaces_nodejs">
 <a href="#networkinterfaces_nodejs" style="color: inherit; text-decoration: inherit;">network<wbr>Interfaces</a>
@@ -1235,8 +1137,7 @@ The following output properties are available:
         <span class="property-type"><a href="#getinstancenetworkinterface">Get<wbr>Instance<wbr>Network<wbr>Interface[]</a></span>
     </dt>
     <dd>{{% md %}}The networks attached to the instance. Structure is documented below.
-{{% /md %}}</dd>
-    <dt class="property-"
+{{% /md %}}</dd><dt class="property-"
             title="">
         <span id="resourcepolicies_nodejs">
 <a href="#resourcepolicies_nodejs" style="color: inherit; text-decoration: inherit;">resource<wbr>Policies</a>
@@ -1244,8 +1145,7 @@ The following output properties are available:
         <span class="property-indicator"></span>
         <span class="property-type">string[]</span>
     </dt>
-    <dd>{{% md %}}{{% /md %}}</dd>
-    <dt class="property-"
+    <dd>{{% md %}}{{% /md %}}</dd><dt class="property-"
             title="">
         <span id="schedulings_nodejs">
 <a href="#schedulings_nodejs" style="color: inherit; text-decoration: inherit;">schedulings</a>
@@ -1254,8 +1154,7 @@ The following output properties are available:
         <span class="property-type"><a href="#getinstancescheduling">Get<wbr>Instance<wbr>Scheduling[]</a></span>
     </dt>
     <dd>{{% md %}}The scheduling strategy being used by the instance.
-{{% /md %}}</dd>
-    <dt class="property-"
+{{% /md %}}</dd><dt class="property-"
             title="">
         <span id="scratchdisks_nodejs">
 <a href="#scratchdisks_nodejs" style="color: inherit; text-decoration: inherit;">scratch<wbr>Disks</a>
@@ -1264,8 +1163,7 @@ The following output properties are available:
         <span class="property-type"><a href="#getinstancescratchdisk">Get<wbr>Instance<wbr>Scratch<wbr>Disk[]</a></span>
     </dt>
     <dd>{{% md %}}The scratch disks attached to the instance. Structure is documented below.
-{{% /md %}}</dd>
-    <dt class="property-"
+{{% /md %}}</dd><dt class="property-"
             title="">
         <span id="serviceaccounts_nodejs">
 <a href="#serviceaccounts_nodejs" style="color: inherit; text-decoration: inherit;">service<wbr>Accounts</a>
@@ -1274,8 +1172,7 @@ The following output properties are available:
         <span class="property-type"><a href="#getinstanceserviceaccount">Get<wbr>Instance<wbr>Service<wbr>Account[]</a></span>
     </dt>
     <dd>{{% md %}}The service account to attach to the instance. Structure is documented below.
-{{% /md %}}</dd>
-    <dt class="property-"
+{{% /md %}}</dd><dt class="property-"
             title="">
         <span id="shieldedinstanceconfigs_nodejs">
 <a href="#shieldedinstanceconfigs_nodejs" style="color: inherit; text-decoration: inherit;">shielded<wbr>Instance<wbr>Configs</a>
@@ -1284,8 +1181,7 @@ The following output properties are available:
         <span class="property-type"><a href="#getinstanceshieldedinstanceconfig">Get<wbr>Instance<wbr>Shielded<wbr>Instance<wbr>Config[]</a></span>
     </dt>
     <dd>{{% md %}}The shielded vm config being used by the instance. Structure is documented below.
-{{% /md %}}</dd>
-    <dt class="property-"
+{{% /md %}}</dd><dt class="property-"
             title="">
         <span id="tags_nodejs">
 <a href="#tags_nodejs" style="color: inherit; text-decoration: inherit;">tags</a>
@@ -1294,8 +1190,7 @@ The following output properties are available:
         <span class="property-type">string[]</span>
     </dt>
     <dd>{{% md %}}The list of tags attached to the instance.
-{{% /md %}}</dd>
-    <dt class="property-"
+{{% /md %}}</dd><dt class="property-"
             title="">
         <span id="tagsfingerprint_nodejs">
 <a href="#tagsfingerprint_nodejs" style="color: inherit; text-decoration: inherit;">tags<wbr>Fingerprint</a>
@@ -1304,8 +1199,7 @@ The following output properties are available:
         <span class="property-type">string</span>
     </dt>
     <dd>{{% md %}}The unique fingerprint of the tags.
-{{% /md %}}</dd>
-    <dt class="property-"
+{{% /md %}}</dd><dt class="property-"
             title="">
         <span id="name_nodejs">
 <a href="#name_nodejs" style="color: inherit; text-decoration: inherit;">name</a>
@@ -1313,8 +1207,7 @@ The following output properties are available:
         <span class="property-indicator"></span>
         <span class="property-type">string</span>
     </dt>
-    <dd>{{% md %}}{{% /md %}}</dd>
-    <dt class="property-"
+    <dd>{{% md %}}{{% /md %}}</dd><dt class="property-"
             title="">
         <span id="project_nodejs">
 <a href="#project_nodejs" style="color: inherit; text-decoration: inherit;">project</a>
@@ -1322,8 +1215,7 @@ The following output properties are available:
         <span class="property-indicator"></span>
         <span class="property-type">string</span>
     </dt>
-    <dd>{{% md %}}{{% /md %}}</dd>
-    <dt class="property-"
+    <dd>{{% md %}}{{% /md %}}</dd><dt class="property-"
             title="">
         <span id="selflink_nodejs">
 <a href="#selflink_nodejs" style="color: inherit; text-decoration: inherit;">self<wbr>Link</a>
@@ -1332,8 +1224,7 @@ The following output properties are available:
         <span class="property-type">string</span>
     </dt>
     <dd>{{% md %}}The URI of the created resource.
-{{% /md %}}</dd>
-    <dt class="property-"
+{{% /md %}}</dd><dt class="property-"
             title="">
         <span id="zone_nodejs">
 <a href="#zone_nodejs" style="color: inherit; text-decoration: inherit;">zone</a>
@@ -1341,14 +1232,11 @@ The following output properties are available:
         <span class="property-indicator"></span>
         <span class="property-type">string</span>
     </dt>
-    <dd>{{% md %}}{{% /md %}}</dd>
-</dl>
+    <dd>{{% md %}}{{% /md %}}</dd></dl>
 {{% /choosable %}}
 
 {{% choosable language python %}}
-<dl class="resources-properties">
-
-    <dt class="property-"
+<dl class="resources-properties"><dt class="property-"
             title="">
         <span id="allow_stopping_for_update_python">
 <a href="#allow_stopping_for_update_python" style="color: inherit; text-decoration: inherit;">allow_<wbr>stopping_<wbr>for_<wbr>update</a>
@@ -1356,8 +1244,7 @@ The following output properties are available:
         <span class="property-indicator"></span>
         <span class="property-type">bool</span>
     </dt>
-    <dd>{{% md %}}{{% /md %}}</dd>
-    <dt class="property-"
+    <dd>{{% md %}}{{% /md %}}</dd><dt class="property-"
             title="">
         <span id="attached_disks_python">
 <a href="#attached_disks_python" style="color: inherit; text-decoration: inherit;">attached_<wbr>disks</a>
@@ -1366,8 +1253,7 @@ The following output properties are available:
         <span class="property-type"><a href="#getinstanceattacheddisk">Sequence[Get<wbr>Instance<wbr>Attached<wbr>Disk]</a></span>
     </dt>
     <dd>{{% md %}}List of disks attached to the instance. Structure is documented below.
-{{% /md %}}</dd>
-    <dt class="property-"
+{{% /md %}}</dd><dt class="property-"
             title="">
         <span id="boot_disks_python">
 <a href="#boot_disks_python" style="color: inherit; text-decoration: inherit;">boot_<wbr>disks</a>
@@ -1376,8 +1262,7 @@ The following output properties are available:
         <span class="property-type"><a href="#getinstancebootdisk">Sequence[Get<wbr>Instance<wbr>Boot<wbr>Disk]</a></span>
     </dt>
     <dd>{{% md %}}The boot disk for the instance. Structure is documented below.
-{{% /md %}}</dd>
-    <dt class="property-"
+{{% /md %}}</dd><dt class="property-"
             title="">
         <span id="can_ip_forward_python">
 <a href="#can_ip_forward_python" style="color: inherit; text-decoration: inherit;">can_<wbr>ip_<wbr>forward</a>
@@ -1386,8 +1271,7 @@ The following output properties are available:
         <span class="property-type">bool</span>
     </dt>
     <dd>{{% md %}}Whether sending and receiving of packets with non-matching source or destination IPs is allowed.
-{{% /md %}}</dd>
-    <dt class="property-"
+{{% /md %}}</dd><dt class="property-"
             title="">
         <span id="confidential_instance_configs_python">
 <a href="#confidential_instance_configs_python" style="color: inherit; text-decoration: inherit;">confidential_<wbr>instance_<wbr>configs</a>
@@ -1395,8 +1279,7 @@ The following output properties are available:
         <span class="property-indicator"></span>
         <span class="property-type"><a href="#getinstanceconfidentialinstanceconfig">Sequence[Get<wbr>Instance<wbr>Confidential<wbr>Instance<wbr>Config]</a></span>
     </dt>
-    <dd>{{% md %}}{{% /md %}}</dd>
-    <dt class="property-"
+    <dd>{{% md %}}{{% /md %}}</dd><dt class="property-"
             title="">
         <span id="cpu_platform_python">
 <a href="#cpu_platform_python" style="color: inherit; text-decoration: inherit;">cpu_<wbr>platform</a>
@@ -1405,8 +1288,7 @@ The following output properties are available:
         <span class="property-type">str</span>
     </dt>
     <dd>{{% md %}}The CPU platform used by this instance.
-{{% /md %}}</dd>
-    <dt class="property-"
+{{% /md %}}</dd><dt class="property-"
             title="">
         <span id="current_status_python">
 <a href="#current_status_python" style="color: inherit; text-decoration: inherit;">current_<wbr>status</a>
@@ -1414,8 +1296,7 @@ The following output properties are available:
         <span class="property-indicator"></span>
         <span class="property-type">str</span>
     </dt>
-    <dd>{{% md %}}{{% /md %}}</dd>
-    <dt class="property-"
+    <dd>{{% md %}}{{% /md %}}</dd><dt class="property-"
             title="">
         <span id="deletion_protection_python">
 <a href="#deletion_protection_python" style="color: inherit; text-decoration: inherit;">deletion_<wbr>protection</a>
@@ -1424,8 +1305,7 @@ The following output properties are available:
         <span class="property-type">bool</span>
     </dt>
     <dd>{{% md %}}Whether deletion protection is enabled on this instance.
-{{% /md %}}</dd>
-    <dt class="property-"
+{{% /md %}}</dd><dt class="property-"
             title="">
         <span id="description_python">
 <a href="#description_python" style="color: inherit; text-decoration: inherit;">description</a>
@@ -1434,8 +1314,7 @@ The following output properties are available:
         <span class="property-type">str</span>
     </dt>
     <dd>{{% md %}}A brief description of the resource.
-{{% /md %}}</dd>
-    <dt class="property-"
+{{% /md %}}</dd><dt class="property-"
             title="">
         <span id="desired_status_python">
 <a href="#desired_status_python" style="color: inherit; text-decoration: inherit;">desired_<wbr>status</a>
@@ -1443,8 +1322,7 @@ The following output properties are available:
         <span class="property-indicator"></span>
         <span class="property-type">str</span>
     </dt>
-    <dd>{{% md %}}{{% /md %}}</dd>
-    <dt class="property-"
+    <dd>{{% md %}}{{% /md %}}</dd><dt class="property-"
             title="">
         <span id="enable_display_python">
 <a href="#enable_display_python" style="color: inherit; text-decoration: inherit;">enable_<wbr>display</a>
@@ -1452,8 +1330,7 @@ The following output properties are available:
         <span class="property-indicator"></span>
         <span class="property-type">bool</span>
     </dt>
-    <dd>{{% md %}}{{% /md %}}</dd>
-    <dt class="property-"
+    <dd>{{% md %}}{{% /md %}}</dd><dt class="property-"
             title="">
         <span id="guest_accelerators_python">
 <a href="#guest_accelerators_python" style="color: inherit; text-decoration: inherit;">guest_<wbr>accelerators</a>
@@ -1462,8 +1339,7 @@ The following output properties are available:
         <span class="property-type"><a href="#getinstanceguestaccelerator">Sequence[Get<wbr>Instance<wbr>Guest<wbr>Accelerator]</a></span>
     </dt>
     <dd>{{% md %}}List of the type and count of accelerator cards attached to the instance. Structure is documented below.
-{{% /md %}}</dd>
-    <dt class="property-"
+{{% /md %}}</dd><dt class="property-"
             title="">
         <span id="hostname_python">
 <a href="#hostname_python" style="color: inherit; text-decoration: inherit;">hostname</a>
@@ -1471,8 +1347,7 @@ The following output properties are available:
         <span class="property-indicator"></span>
         <span class="property-type">str</span>
     </dt>
-    <dd>{{% md %}}{{% /md %}}</dd>
-    <dt class="property-"
+    <dd>{{% md %}}{{% /md %}}</dd><dt class="property-"
             title="">
         <span id="id_python">
 <a href="#id_python" style="color: inherit; text-decoration: inherit;">id</a>
@@ -1481,8 +1356,7 @@ The following output properties are available:
         <span class="property-type">str</span>
     </dt>
     <dd>{{% md %}}The provider-assigned unique ID for this managed resource.
-{{% /md %}}</dd>
-    <dt class="property-"
+{{% /md %}}</dd><dt class="property-"
             title="">
         <span id="instance_id_python">
 <a href="#instance_id_python" style="color: inherit; text-decoration: inherit;">instance_<wbr>id</a>
@@ -1491,8 +1365,7 @@ The following output properties are available:
         <span class="property-type">str</span>
     </dt>
     <dd>{{% md %}}The server-assigned unique identifier of this instance.
-{{% /md %}}</dd>
-    <dt class="property-"
+{{% /md %}}</dd><dt class="property-"
             title="">
         <span id="label_fingerprint_python">
 <a href="#label_fingerprint_python" style="color: inherit; text-decoration: inherit;">label_<wbr>fingerprint</a>
@@ -1501,8 +1374,7 @@ The following output properties are available:
         <span class="property-type">str</span>
     </dt>
     <dd>{{% md %}}The unique fingerprint of the labels.
-{{% /md %}}</dd>
-    <dt class="property-"
+{{% /md %}}</dd><dt class="property-"
             title="">
         <span id="labels_python">
 <a href="#labels_python" style="color: inherit; text-decoration: inherit;">labels</a>
@@ -1511,8 +1383,7 @@ The following output properties are available:
         <span class="property-type">Mapping[str, str]</span>
     </dt>
     <dd>{{% md %}}A set of key/value label pairs assigned to the instance.
-{{% /md %}}</dd>
-    <dt class="property-"
+{{% /md %}}</dd><dt class="property-"
             title="">
         <span id="machine_type_python">
 <a href="#machine_type_python" style="color: inherit; text-decoration: inherit;">machine_<wbr>type</a>
@@ -1521,8 +1392,7 @@ The following output properties are available:
         <span class="property-type">str</span>
     </dt>
     <dd>{{% md %}}The machine type to create.
-{{% /md %}}</dd>
-    <dt class="property-"
+{{% /md %}}</dd><dt class="property-"
             title="">
         <span id="metadata_python">
 <a href="#metadata_python" style="color: inherit; text-decoration: inherit;">metadata</a>
@@ -1531,8 +1401,7 @@ The following output properties are available:
         <span class="property-type">Mapping[str, str]</span>
     </dt>
     <dd>{{% md %}}Metadata key/value pairs made available within the instance.
-{{% /md %}}</dd>
-    <dt class="property-"
+{{% /md %}}</dd><dt class="property-"
             title="">
         <span id="metadata_fingerprint_python">
 <a href="#metadata_fingerprint_python" style="color: inherit; text-decoration: inherit;">metadata_<wbr>fingerprint</a>
@@ -1541,8 +1410,7 @@ The following output properties are available:
         <span class="property-type">str</span>
     </dt>
     <dd>{{% md %}}The unique fingerprint of the metadata.
-{{% /md %}}</dd>
-    <dt class="property-"
+{{% /md %}}</dd><dt class="property-"
             title="">
         <span id="metadata_startup_script_python">
 <a href="#metadata_startup_script_python" style="color: inherit; text-decoration: inherit;">metadata_<wbr>startup_<wbr>script</a>
@@ -1550,8 +1418,7 @@ The following output properties are available:
         <span class="property-indicator"></span>
         <span class="property-type">str</span>
     </dt>
-    <dd>{{% md %}}{{% /md %}}</dd>
-    <dt class="property-"
+    <dd>{{% md %}}{{% /md %}}</dd><dt class="property-"
             title="">
         <span id="min_cpu_platform_python">
 <a href="#min_cpu_platform_python" style="color: inherit; text-decoration: inherit;">min_<wbr>cpu_<wbr>platform</a>
@@ -1560,8 +1427,7 @@ The following output properties are available:
         <span class="property-type">str</span>
     </dt>
     <dd>{{% md %}}The minimum CPU platform specified for the VM instance.
-{{% /md %}}</dd>
-    <dt class="property-"
+{{% /md %}}</dd><dt class="property-"
             title="">
         <span id="network_interfaces_python">
 <a href="#network_interfaces_python" style="color: inherit; text-decoration: inherit;">network_<wbr>interfaces</a>
@@ -1570,8 +1436,7 @@ The following output properties are available:
         <span class="property-type"><a href="#getinstancenetworkinterface">Sequence[Get<wbr>Instance<wbr>Network<wbr>Interface]</a></span>
     </dt>
     <dd>{{% md %}}The networks attached to the instance. Structure is documented below.
-{{% /md %}}</dd>
-    <dt class="property-"
+{{% /md %}}</dd><dt class="property-"
             title="">
         <span id="resource_policies_python">
 <a href="#resource_policies_python" style="color: inherit; text-decoration: inherit;">resource_<wbr>policies</a>
@@ -1579,8 +1444,7 @@ The following output properties are available:
         <span class="property-indicator"></span>
         <span class="property-type">Sequence[str]</span>
     </dt>
-    <dd>{{% md %}}{{% /md %}}</dd>
-    <dt class="property-"
+    <dd>{{% md %}}{{% /md %}}</dd><dt class="property-"
             title="">
         <span id="schedulings_python">
 <a href="#schedulings_python" style="color: inherit; text-decoration: inherit;">schedulings</a>
@@ -1589,8 +1453,7 @@ The following output properties are available:
         <span class="property-type"><a href="#getinstancescheduling">Sequence[Get<wbr>Instance<wbr>Scheduling]</a></span>
     </dt>
     <dd>{{% md %}}The scheduling strategy being used by the instance.
-{{% /md %}}</dd>
-    <dt class="property-"
+{{% /md %}}</dd><dt class="property-"
             title="">
         <span id="scratch_disks_python">
 <a href="#scratch_disks_python" style="color: inherit; text-decoration: inherit;">scratch_<wbr>disks</a>
@@ -1599,8 +1462,7 @@ The following output properties are available:
         <span class="property-type"><a href="#getinstancescratchdisk">Sequence[Get<wbr>Instance<wbr>Scratch<wbr>Disk]</a></span>
     </dt>
     <dd>{{% md %}}The scratch disks attached to the instance. Structure is documented below.
-{{% /md %}}</dd>
-    <dt class="property-"
+{{% /md %}}</dd><dt class="property-"
             title="">
         <span id="service_accounts_python">
 <a href="#service_accounts_python" style="color: inherit; text-decoration: inherit;">service_<wbr>accounts</a>
@@ -1609,8 +1471,7 @@ The following output properties are available:
         <span class="property-type"><a href="#getinstanceserviceaccount">Sequence[Get<wbr>Instance<wbr>Service<wbr>Account]</a></span>
     </dt>
     <dd>{{% md %}}The service account to attach to the instance. Structure is documented below.
-{{% /md %}}</dd>
-    <dt class="property-"
+{{% /md %}}</dd><dt class="property-"
             title="">
         <span id="shielded_instance_configs_python">
 <a href="#shielded_instance_configs_python" style="color: inherit; text-decoration: inherit;">shielded_<wbr>instance_<wbr>configs</a>
@@ -1619,8 +1480,7 @@ The following output properties are available:
         <span class="property-type"><a href="#getinstanceshieldedinstanceconfig">Sequence[Get<wbr>Instance<wbr>Shielded<wbr>Instance<wbr>Config]</a></span>
     </dt>
     <dd>{{% md %}}The shielded vm config being used by the instance. Structure is documented below.
-{{% /md %}}</dd>
-    <dt class="property-"
+{{% /md %}}</dd><dt class="property-"
             title="">
         <span id="tags_python">
 <a href="#tags_python" style="color: inherit; text-decoration: inherit;">tags</a>
@@ -1629,8 +1489,7 @@ The following output properties are available:
         <span class="property-type">Sequence[str]</span>
     </dt>
     <dd>{{% md %}}The list of tags attached to the instance.
-{{% /md %}}</dd>
-    <dt class="property-"
+{{% /md %}}</dd><dt class="property-"
             title="">
         <span id="tags_fingerprint_python">
 <a href="#tags_fingerprint_python" style="color: inherit; text-decoration: inherit;">tags_<wbr>fingerprint</a>
@@ -1639,8 +1498,7 @@ The following output properties are available:
         <span class="property-type">str</span>
     </dt>
     <dd>{{% md %}}The unique fingerprint of the tags.
-{{% /md %}}</dd>
-    <dt class="property-"
+{{% /md %}}</dd><dt class="property-"
             title="">
         <span id="name_python">
 <a href="#name_python" style="color: inherit; text-decoration: inherit;">name</a>
@@ -1648,8 +1506,7 @@ The following output properties are available:
         <span class="property-indicator"></span>
         <span class="property-type">str</span>
     </dt>
-    <dd>{{% md %}}{{% /md %}}</dd>
-    <dt class="property-"
+    <dd>{{% md %}}{{% /md %}}</dd><dt class="property-"
             title="">
         <span id="project_python">
 <a href="#project_python" style="color: inherit; text-decoration: inherit;">project</a>
@@ -1657,8 +1514,7 @@ The following output properties are available:
         <span class="property-indicator"></span>
         <span class="property-type">str</span>
     </dt>
-    <dd>{{% md %}}{{% /md %}}</dd>
-    <dt class="property-"
+    <dd>{{% md %}}{{% /md %}}</dd><dt class="property-"
             title="">
         <span id="self_link_python">
 <a href="#self_link_python" style="color: inherit; text-decoration: inherit;">self_<wbr>link</a>
@@ -1667,8 +1523,7 @@ The following output properties are available:
         <span class="property-type">str</span>
     </dt>
     <dd>{{% md %}}The URI of the created resource.
-{{% /md %}}</dd>
-    <dt class="property-"
+{{% /md %}}</dd><dt class="property-"
             title="">
         <span id="zone_python">
 <a href="#zone_python" style="color: inherit; text-decoration: inherit;">zone</a>
@@ -1676,8 +1531,7 @@ The following output properties are available:
         <span class="property-indicator"></span>
         <span class="property-type">str</span>
     </dt>
-    <dd>{{% md %}}{{% /md %}}</dd>
-</dl>
+    <dd>{{% md %}}{{% /md %}}</dd></dl>
 {{% /choosable %}}
 
 
@@ -1691,9 +1545,7 @@ The following output properties are available:
 
 
 {{% choosable language csharp %}}
-<dl class="resources-properties">
-
-    <dt class="property-required"
+<dl class="resources-properties"><dt class="property-required"
             title="Required">
         <span id="devicename_csharp">
 <a href="#devicename_csharp" style="color: inherit; text-decoration: inherit;">Device<wbr>Name</a>
@@ -1703,8 +1555,7 @@ The following output properties are available:
     </dt>
     <dd>{{% md %}}Name with which the attached disk is accessible
 under `/dev/disk/by-id/`
-{{% /md %}}</dd>
-    <dt class="property-required"
+{{% /md %}}</dd><dt class="property-required"
             title="Required">
         <span id="diskencryptionkeyraw_csharp">
 <a href="#diskencryptionkeyraw_csharp" style="color: inherit; text-decoration: inherit;">Disk<wbr>Encryption<wbr>Key<wbr>Raw</a>
@@ -1712,8 +1563,7 @@ under `/dev/disk/by-id/`
         <span class="property-indicator"></span>
         <span class="property-type">string</span>
     </dt>
-    <dd>{{% md %}}{{% /md %}}</dd>
-    <dt class="property-required"
+    <dd>{{% md %}}{{% /md %}}</dd><dt class="property-required"
             title="Required">
         <span id="diskencryptionkeysha256_csharp">
 <a href="#diskencryptionkeysha256_csharp" style="color: inherit; text-decoration: inherit;">Disk<wbr>Encryption<wbr>Key<wbr>Sha256</a>
@@ -1721,8 +1571,7 @@ under `/dev/disk/by-id/`
         <span class="property-indicator"></span>
         <span class="property-type">string</span>
     </dt>
-    <dd>{{% md %}}{{% /md %}}</dd>
-    <dt class="property-required"
+    <dd>{{% md %}}{{% /md %}}</dd><dt class="property-required"
             title="Required">
         <span id="kmskeyselflink_csharp">
 <a href="#kmskeyselflink_csharp" style="color: inherit; text-decoration: inherit;">Kms<wbr>Key<wbr>Self<wbr>Link</a>
@@ -1730,8 +1579,7 @@ under `/dev/disk/by-id/`
         <span class="property-indicator"></span>
         <span class="property-type">string</span>
     </dt>
-    <dd>{{% md %}}{{% /md %}}</dd>
-    <dt class="property-required"
+    <dd>{{% md %}}{{% /md %}}</dd><dt class="property-required"
             title="Required">
         <span id="mode_csharp">
 <a href="#mode_csharp" style="color: inherit; text-decoration: inherit;">Mode</a>
@@ -1740,8 +1588,7 @@ under `/dev/disk/by-id/`
         <span class="property-type">string</span>
     </dt>
     <dd>{{% md %}}Read/write mode for the disk. One of `"READ_ONLY"` or `"READ_WRITE"`.
-{{% /md %}}</dd>
-    <dt class="property-required"
+{{% /md %}}</dd><dt class="property-required"
             title="Required">
         <span id="source_csharp">
 <a href="#source_csharp" style="color: inherit; text-decoration: inherit;">Source</a>
@@ -1750,14 +1597,11 @@ under `/dev/disk/by-id/`
         <span class="property-type">string</span>
     </dt>
     <dd>{{% md %}}The name or self_link of the disk attached to this instance.
-{{% /md %}}</dd>
-</dl>
+{{% /md %}}</dd></dl>
 {{% /choosable %}}
 
 {{% choosable language go %}}
-<dl class="resources-properties">
-
-    <dt class="property-required"
+<dl class="resources-properties"><dt class="property-required"
             title="Required">
         <span id="devicename_go">
 <a href="#devicename_go" style="color: inherit; text-decoration: inherit;">Device<wbr>Name</a>
@@ -1767,8 +1611,7 @@ under `/dev/disk/by-id/`
     </dt>
     <dd>{{% md %}}Name with which the attached disk is accessible
 under `/dev/disk/by-id/`
-{{% /md %}}</dd>
-    <dt class="property-required"
+{{% /md %}}</dd><dt class="property-required"
             title="Required">
         <span id="diskencryptionkeyraw_go">
 <a href="#diskencryptionkeyraw_go" style="color: inherit; text-decoration: inherit;">Disk<wbr>Encryption<wbr>Key<wbr>Raw</a>
@@ -1776,8 +1619,7 @@ under `/dev/disk/by-id/`
         <span class="property-indicator"></span>
         <span class="property-type">string</span>
     </dt>
-    <dd>{{% md %}}{{% /md %}}</dd>
-    <dt class="property-required"
+    <dd>{{% md %}}{{% /md %}}</dd><dt class="property-required"
             title="Required">
         <span id="diskencryptionkeysha256_go">
 <a href="#diskencryptionkeysha256_go" style="color: inherit; text-decoration: inherit;">Disk<wbr>Encryption<wbr>Key<wbr>Sha256</a>
@@ -1785,8 +1627,7 @@ under `/dev/disk/by-id/`
         <span class="property-indicator"></span>
         <span class="property-type">string</span>
     </dt>
-    <dd>{{% md %}}{{% /md %}}</dd>
-    <dt class="property-required"
+    <dd>{{% md %}}{{% /md %}}</dd><dt class="property-required"
             title="Required">
         <span id="kmskeyselflink_go">
 <a href="#kmskeyselflink_go" style="color: inherit; text-decoration: inherit;">Kms<wbr>Key<wbr>Self<wbr>Link</a>
@@ -1794,8 +1635,7 @@ under `/dev/disk/by-id/`
         <span class="property-indicator"></span>
         <span class="property-type">string</span>
     </dt>
-    <dd>{{% md %}}{{% /md %}}</dd>
-    <dt class="property-required"
+    <dd>{{% md %}}{{% /md %}}</dd><dt class="property-required"
             title="Required">
         <span id="mode_go">
 <a href="#mode_go" style="color: inherit; text-decoration: inherit;">Mode</a>
@@ -1804,8 +1644,7 @@ under `/dev/disk/by-id/`
         <span class="property-type">string</span>
     </dt>
     <dd>{{% md %}}Read/write mode for the disk. One of `"READ_ONLY"` or `"READ_WRITE"`.
-{{% /md %}}</dd>
-    <dt class="property-required"
+{{% /md %}}</dd><dt class="property-required"
             title="Required">
         <span id="source_go">
 <a href="#source_go" style="color: inherit; text-decoration: inherit;">Source</a>
@@ -1814,14 +1653,11 @@ under `/dev/disk/by-id/`
         <span class="property-type">string</span>
     </dt>
     <dd>{{% md %}}The name or self_link of the disk attached to this instance.
-{{% /md %}}</dd>
-</dl>
+{{% /md %}}</dd></dl>
 {{% /choosable %}}
 
 {{% choosable language nodejs %}}
-<dl class="resources-properties">
-
-    <dt class="property-required"
+<dl class="resources-properties"><dt class="property-required"
             title="Required">
         <span id="devicename_nodejs">
 <a href="#devicename_nodejs" style="color: inherit; text-decoration: inherit;">device<wbr>Name</a>
@@ -1831,8 +1667,7 @@ under `/dev/disk/by-id/`
     </dt>
     <dd>{{% md %}}Name with which the attached disk is accessible
 under `/dev/disk/by-id/`
-{{% /md %}}</dd>
-    <dt class="property-required"
+{{% /md %}}</dd><dt class="property-required"
             title="Required">
         <span id="diskencryptionkeyraw_nodejs">
 <a href="#diskencryptionkeyraw_nodejs" style="color: inherit; text-decoration: inherit;">disk<wbr>Encryption<wbr>Key<wbr>Raw</a>
@@ -1840,8 +1675,7 @@ under `/dev/disk/by-id/`
         <span class="property-indicator"></span>
         <span class="property-type">string</span>
     </dt>
-    <dd>{{% md %}}{{% /md %}}</dd>
-    <dt class="property-required"
+    <dd>{{% md %}}{{% /md %}}</dd><dt class="property-required"
             title="Required">
         <span id="diskencryptionkeysha256_nodejs">
 <a href="#diskencryptionkeysha256_nodejs" style="color: inherit; text-decoration: inherit;">disk<wbr>Encryption<wbr>Key<wbr>Sha256</a>
@@ -1849,8 +1683,7 @@ under `/dev/disk/by-id/`
         <span class="property-indicator"></span>
         <span class="property-type">string</span>
     </dt>
-    <dd>{{% md %}}{{% /md %}}</dd>
-    <dt class="property-required"
+    <dd>{{% md %}}{{% /md %}}</dd><dt class="property-required"
             title="Required">
         <span id="kmskeyselflink_nodejs">
 <a href="#kmskeyselflink_nodejs" style="color: inherit; text-decoration: inherit;">kms<wbr>Key<wbr>Self<wbr>Link</a>
@@ -1858,8 +1691,7 @@ under `/dev/disk/by-id/`
         <span class="property-indicator"></span>
         <span class="property-type">string</span>
     </dt>
-    <dd>{{% md %}}{{% /md %}}</dd>
-    <dt class="property-required"
+    <dd>{{% md %}}{{% /md %}}</dd><dt class="property-required"
             title="Required">
         <span id="mode_nodejs">
 <a href="#mode_nodejs" style="color: inherit; text-decoration: inherit;">mode</a>
@@ -1868,8 +1700,7 @@ under `/dev/disk/by-id/`
         <span class="property-type">string</span>
     </dt>
     <dd>{{% md %}}Read/write mode for the disk. One of `"READ_ONLY"` or `"READ_WRITE"`.
-{{% /md %}}</dd>
-    <dt class="property-required"
+{{% /md %}}</dd><dt class="property-required"
             title="Required">
         <span id="source_nodejs">
 <a href="#source_nodejs" style="color: inherit; text-decoration: inherit;">source</a>
@@ -1878,14 +1709,11 @@ under `/dev/disk/by-id/`
         <span class="property-type">string</span>
     </dt>
     <dd>{{% md %}}The name or self_link of the disk attached to this instance.
-{{% /md %}}</dd>
-</dl>
+{{% /md %}}</dd></dl>
 {{% /choosable %}}
 
 {{% choosable language python %}}
-<dl class="resources-properties">
-
-    <dt class="property-required"
+<dl class="resources-properties"><dt class="property-required"
             title="Required">
         <span id="device_name_python">
 <a href="#device_name_python" style="color: inherit; text-decoration: inherit;">device_<wbr>name</a>
@@ -1895,8 +1723,7 @@ under `/dev/disk/by-id/`
     </dt>
     <dd>{{% md %}}Name with which the attached disk is accessible
 under `/dev/disk/by-id/`
-{{% /md %}}</dd>
-    <dt class="property-required"
+{{% /md %}}</dd><dt class="property-required"
             title="Required">
         <span id="disk_encryption_key_raw_python">
 <a href="#disk_encryption_key_raw_python" style="color: inherit; text-decoration: inherit;">disk_<wbr>encryption_<wbr>key_<wbr>raw</a>
@@ -1904,8 +1731,7 @@ under `/dev/disk/by-id/`
         <span class="property-indicator"></span>
         <span class="property-type">str</span>
     </dt>
-    <dd>{{% md %}}{{% /md %}}</dd>
-    <dt class="property-required"
+    <dd>{{% md %}}{{% /md %}}</dd><dt class="property-required"
             title="Required">
         <span id="disk_encryption_key_sha256_python">
 <a href="#disk_encryption_key_sha256_python" style="color: inherit; text-decoration: inherit;">disk_<wbr>encryption_<wbr>key_<wbr>sha256</a>
@@ -1913,8 +1739,7 @@ under `/dev/disk/by-id/`
         <span class="property-indicator"></span>
         <span class="property-type">str</span>
     </dt>
-    <dd>{{% md %}}{{% /md %}}</dd>
-    <dt class="property-required"
+    <dd>{{% md %}}{{% /md %}}</dd><dt class="property-required"
             title="Required">
         <span id="kms_key_self_link_python">
 <a href="#kms_key_self_link_python" style="color: inherit; text-decoration: inherit;">kms_<wbr>key_<wbr>self_<wbr>link</a>
@@ -1922,8 +1747,7 @@ under `/dev/disk/by-id/`
         <span class="property-indicator"></span>
         <span class="property-type">str</span>
     </dt>
-    <dd>{{% md %}}{{% /md %}}</dd>
-    <dt class="property-required"
+    <dd>{{% md %}}{{% /md %}}</dd><dt class="property-required"
             title="Required">
         <span id="mode_python">
 <a href="#mode_python" style="color: inherit; text-decoration: inherit;">mode</a>
@@ -1932,8 +1756,7 @@ under `/dev/disk/by-id/`
         <span class="property-type">str</span>
     </dt>
     <dd>{{% md %}}Read/write mode for the disk. One of `"READ_ONLY"` or `"READ_WRITE"`.
-{{% /md %}}</dd>
-    <dt class="property-required"
+{{% /md %}}</dd><dt class="property-required"
             title="Required">
         <span id="source_python">
 <a href="#source_python" style="color: inherit; text-decoration: inherit;">source</a>
@@ -1942,8 +1765,7 @@ under `/dev/disk/by-id/`
         <span class="property-type">str</span>
     </dt>
     <dd>{{% md %}}The name or self_link of the disk attached to this instance.
-{{% /md %}}</dd>
-</dl>
+{{% /md %}}</dd></dl>
 {{% /choosable %}}
 
 <h4 id="getinstancebootdisk">Get<wbr>Instance<wbr>Boot<wbr>Disk</h4>
@@ -1951,9 +1773,7 @@ under `/dev/disk/by-id/`
 
 
 {{% choosable language csharp %}}
-<dl class="resources-properties">
-
-    <dt class="property-required"
+<dl class="resources-properties"><dt class="property-required"
             title="Required">
         <span id="autodelete_csharp">
 <a href="#autodelete_csharp" style="color: inherit; text-decoration: inherit;">Auto<wbr>Delete</a>
@@ -1962,8 +1782,7 @@ under `/dev/disk/by-id/`
         <span class="property-type">bool</span>
     </dt>
     <dd>{{% md %}}Whether the disk will be auto-deleted when the instance is deleted.
-{{% /md %}}</dd>
-    <dt class="property-required"
+{{% /md %}}</dd><dt class="property-required"
             title="Required">
         <span id="devicename_csharp">
 <a href="#devicename_csharp" style="color: inherit; text-decoration: inherit;">Device<wbr>Name</a>
@@ -1973,8 +1792,7 @@ under `/dev/disk/by-id/`
     </dt>
     <dd>{{% md %}}Name with which the attached disk is accessible
 under `/dev/disk/by-id/`
-{{% /md %}}</dd>
-    <dt class="property-required"
+{{% /md %}}</dd><dt class="property-required"
             title="Required">
         <span id="diskencryptionkeyraw_csharp">
 <a href="#diskencryptionkeyraw_csharp" style="color: inherit; text-decoration: inherit;">Disk<wbr>Encryption<wbr>Key<wbr>Raw</a>
@@ -1982,8 +1800,7 @@ under `/dev/disk/by-id/`
         <span class="property-indicator"></span>
         <span class="property-type">string</span>
     </dt>
-    <dd>{{% md %}}{{% /md %}}</dd>
-    <dt class="property-required"
+    <dd>{{% md %}}{{% /md %}}</dd><dt class="property-required"
             title="Required">
         <span id="diskencryptionkeysha256_csharp">
 <a href="#diskencryptionkeysha256_csharp" style="color: inherit; text-decoration: inherit;">Disk<wbr>Encryption<wbr>Key<wbr>Sha256</a>
@@ -1991,8 +1808,7 @@ under `/dev/disk/by-id/`
         <span class="property-indicator"></span>
         <span class="property-type">string</span>
     </dt>
-    <dd>{{% md %}}{{% /md %}}</dd>
-    <dt class="property-required"
+    <dd>{{% md %}}{{% /md %}}</dd><dt class="property-required"
             title="Required">
         <span id="initializeparams_csharp">
 <a href="#initializeparams_csharp" style="color: inherit; text-decoration: inherit;">Initialize<wbr>Params</a>
@@ -2002,8 +1818,7 @@ under `/dev/disk/by-id/`
     </dt>
     <dd>{{% md %}}Parameters with which a disk was created alongside the instance.
 Structure is documented below.
-{{% /md %}}</dd>
-    <dt class="property-required"
+{{% /md %}}</dd><dt class="property-required"
             title="Required">
         <span id="kmskeyselflink_csharp">
 <a href="#kmskeyselflink_csharp" style="color: inherit; text-decoration: inherit;">Kms<wbr>Key<wbr>Self<wbr>Link</a>
@@ -2011,8 +1826,7 @@ Structure is documented below.
         <span class="property-indicator"></span>
         <span class="property-type">string</span>
     </dt>
-    <dd>{{% md %}}{{% /md %}}</dd>
-    <dt class="property-required"
+    <dd>{{% md %}}{{% /md %}}</dd><dt class="property-required"
             title="Required">
         <span id="mode_csharp">
 <a href="#mode_csharp" style="color: inherit; text-decoration: inherit;">Mode</a>
@@ -2021,8 +1835,7 @@ Structure is documented below.
         <span class="property-type">string</span>
     </dt>
     <dd>{{% md %}}Read/write mode for the disk. One of `"READ_ONLY"` or `"READ_WRITE"`.
-{{% /md %}}</dd>
-    <dt class="property-required"
+{{% /md %}}</dd><dt class="property-required"
             title="Required">
         <span id="source_csharp">
 <a href="#source_csharp" style="color: inherit; text-decoration: inherit;">Source</a>
@@ -2031,14 +1844,11 @@ Structure is documented below.
         <span class="property-type">string</span>
     </dt>
     <dd>{{% md %}}The name or self_link of the disk attached to this instance.
-{{% /md %}}</dd>
-</dl>
+{{% /md %}}</dd></dl>
 {{% /choosable %}}
 
 {{% choosable language go %}}
-<dl class="resources-properties">
-
-    <dt class="property-required"
+<dl class="resources-properties"><dt class="property-required"
             title="Required">
         <span id="autodelete_go">
 <a href="#autodelete_go" style="color: inherit; text-decoration: inherit;">Auto<wbr>Delete</a>
@@ -2047,8 +1857,7 @@ Structure is documented below.
         <span class="property-type">bool</span>
     </dt>
     <dd>{{% md %}}Whether the disk will be auto-deleted when the instance is deleted.
-{{% /md %}}</dd>
-    <dt class="property-required"
+{{% /md %}}</dd><dt class="property-required"
             title="Required">
         <span id="devicename_go">
 <a href="#devicename_go" style="color: inherit; text-decoration: inherit;">Device<wbr>Name</a>
@@ -2058,8 +1867,7 @@ Structure is documented below.
     </dt>
     <dd>{{% md %}}Name with which the attached disk is accessible
 under `/dev/disk/by-id/`
-{{% /md %}}</dd>
-    <dt class="property-required"
+{{% /md %}}</dd><dt class="property-required"
             title="Required">
         <span id="diskencryptionkeyraw_go">
 <a href="#diskencryptionkeyraw_go" style="color: inherit; text-decoration: inherit;">Disk<wbr>Encryption<wbr>Key<wbr>Raw</a>
@@ -2067,8 +1875,7 @@ under `/dev/disk/by-id/`
         <span class="property-indicator"></span>
         <span class="property-type">string</span>
     </dt>
-    <dd>{{% md %}}{{% /md %}}</dd>
-    <dt class="property-required"
+    <dd>{{% md %}}{{% /md %}}</dd><dt class="property-required"
             title="Required">
         <span id="diskencryptionkeysha256_go">
 <a href="#diskencryptionkeysha256_go" style="color: inherit; text-decoration: inherit;">Disk<wbr>Encryption<wbr>Key<wbr>Sha256</a>
@@ -2076,8 +1883,7 @@ under `/dev/disk/by-id/`
         <span class="property-indicator"></span>
         <span class="property-type">string</span>
     </dt>
-    <dd>{{% md %}}{{% /md %}}</dd>
-    <dt class="property-required"
+    <dd>{{% md %}}{{% /md %}}</dd><dt class="property-required"
             title="Required">
         <span id="initializeparams_go">
 <a href="#initializeparams_go" style="color: inherit; text-decoration: inherit;">Initialize<wbr>Params</a>
@@ -2087,8 +1893,7 @@ under `/dev/disk/by-id/`
     </dt>
     <dd>{{% md %}}Parameters with which a disk was created alongside the instance.
 Structure is documented below.
-{{% /md %}}</dd>
-    <dt class="property-required"
+{{% /md %}}</dd><dt class="property-required"
             title="Required">
         <span id="kmskeyselflink_go">
 <a href="#kmskeyselflink_go" style="color: inherit; text-decoration: inherit;">Kms<wbr>Key<wbr>Self<wbr>Link</a>
@@ -2096,8 +1901,7 @@ Structure is documented below.
         <span class="property-indicator"></span>
         <span class="property-type">string</span>
     </dt>
-    <dd>{{% md %}}{{% /md %}}</dd>
-    <dt class="property-required"
+    <dd>{{% md %}}{{% /md %}}</dd><dt class="property-required"
             title="Required">
         <span id="mode_go">
 <a href="#mode_go" style="color: inherit; text-decoration: inherit;">Mode</a>
@@ -2106,8 +1910,7 @@ Structure is documented below.
         <span class="property-type">string</span>
     </dt>
     <dd>{{% md %}}Read/write mode for the disk. One of `"READ_ONLY"` or `"READ_WRITE"`.
-{{% /md %}}</dd>
-    <dt class="property-required"
+{{% /md %}}</dd><dt class="property-required"
             title="Required">
         <span id="source_go">
 <a href="#source_go" style="color: inherit; text-decoration: inherit;">Source</a>
@@ -2116,14 +1919,11 @@ Structure is documented below.
         <span class="property-type">string</span>
     </dt>
     <dd>{{% md %}}The name or self_link of the disk attached to this instance.
-{{% /md %}}</dd>
-</dl>
+{{% /md %}}</dd></dl>
 {{% /choosable %}}
 
 {{% choosable language nodejs %}}
-<dl class="resources-properties">
-
-    <dt class="property-required"
+<dl class="resources-properties"><dt class="property-required"
             title="Required">
         <span id="autodelete_nodejs">
 <a href="#autodelete_nodejs" style="color: inherit; text-decoration: inherit;">auto<wbr>Delete</a>
@@ -2132,8 +1932,7 @@ Structure is documented below.
         <span class="property-type">boolean</span>
     </dt>
     <dd>{{% md %}}Whether the disk will be auto-deleted when the instance is deleted.
-{{% /md %}}</dd>
-    <dt class="property-required"
+{{% /md %}}</dd><dt class="property-required"
             title="Required">
         <span id="devicename_nodejs">
 <a href="#devicename_nodejs" style="color: inherit; text-decoration: inherit;">device<wbr>Name</a>
@@ -2143,8 +1942,7 @@ Structure is documented below.
     </dt>
     <dd>{{% md %}}Name with which the attached disk is accessible
 under `/dev/disk/by-id/`
-{{% /md %}}</dd>
-    <dt class="property-required"
+{{% /md %}}</dd><dt class="property-required"
             title="Required">
         <span id="diskencryptionkeyraw_nodejs">
 <a href="#diskencryptionkeyraw_nodejs" style="color: inherit; text-decoration: inherit;">disk<wbr>Encryption<wbr>Key<wbr>Raw</a>
@@ -2152,8 +1950,7 @@ under `/dev/disk/by-id/`
         <span class="property-indicator"></span>
         <span class="property-type">string</span>
     </dt>
-    <dd>{{% md %}}{{% /md %}}</dd>
-    <dt class="property-required"
+    <dd>{{% md %}}{{% /md %}}</dd><dt class="property-required"
             title="Required">
         <span id="diskencryptionkeysha256_nodejs">
 <a href="#diskencryptionkeysha256_nodejs" style="color: inherit; text-decoration: inherit;">disk<wbr>Encryption<wbr>Key<wbr>Sha256</a>
@@ -2161,8 +1958,7 @@ under `/dev/disk/by-id/`
         <span class="property-indicator"></span>
         <span class="property-type">string</span>
     </dt>
-    <dd>{{% md %}}{{% /md %}}</dd>
-    <dt class="property-required"
+    <dd>{{% md %}}{{% /md %}}</dd><dt class="property-required"
             title="Required">
         <span id="initializeparams_nodejs">
 <a href="#initializeparams_nodejs" style="color: inherit; text-decoration: inherit;">initialize<wbr>Params</a>
@@ -2172,8 +1968,7 @@ under `/dev/disk/by-id/`
     </dt>
     <dd>{{% md %}}Parameters with which a disk was created alongside the instance.
 Structure is documented below.
-{{% /md %}}</dd>
-    <dt class="property-required"
+{{% /md %}}</dd><dt class="property-required"
             title="Required">
         <span id="kmskeyselflink_nodejs">
 <a href="#kmskeyselflink_nodejs" style="color: inherit; text-decoration: inherit;">kms<wbr>Key<wbr>Self<wbr>Link</a>
@@ -2181,8 +1976,7 @@ Structure is documented below.
         <span class="property-indicator"></span>
         <span class="property-type">string</span>
     </dt>
-    <dd>{{% md %}}{{% /md %}}</dd>
-    <dt class="property-required"
+    <dd>{{% md %}}{{% /md %}}</dd><dt class="property-required"
             title="Required">
         <span id="mode_nodejs">
 <a href="#mode_nodejs" style="color: inherit; text-decoration: inherit;">mode</a>
@@ -2191,8 +1985,7 @@ Structure is documented below.
         <span class="property-type">string</span>
     </dt>
     <dd>{{% md %}}Read/write mode for the disk. One of `"READ_ONLY"` or `"READ_WRITE"`.
-{{% /md %}}</dd>
-    <dt class="property-required"
+{{% /md %}}</dd><dt class="property-required"
             title="Required">
         <span id="source_nodejs">
 <a href="#source_nodejs" style="color: inherit; text-decoration: inherit;">source</a>
@@ -2201,14 +1994,11 @@ Structure is documented below.
         <span class="property-type">string</span>
     </dt>
     <dd>{{% md %}}The name or self_link of the disk attached to this instance.
-{{% /md %}}</dd>
-</dl>
+{{% /md %}}</dd></dl>
 {{% /choosable %}}
 
 {{% choosable language python %}}
-<dl class="resources-properties">
-
-    <dt class="property-required"
+<dl class="resources-properties"><dt class="property-required"
             title="Required">
         <span id="auto_delete_python">
 <a href="#auto_delete_python" style="color: inherit; text-decoration: inherit;">auto_<wbr>delete</a>
@@ -2217,8 +2007,7 @@ Structure is documented below.
         <span class="property-type">bool</span>
     </dt>
     <dd>{{% md %}}Whether the disk will be auto-deleted when the instance is deleted.
-{{% /md %}}</dd>
-    <dt class="property-required"
+{{% /md %}}</dd><dt class="property-required"
             title="Required">
         <span id="device_name_python">
 <a href="#device_name_python" style="color: inherit; text-decoration: inherit;">device_<wbr>name</a>
@@ -2228,8 +2017,7 @@ Structure is documented below.
     </dt>
     <dd>{{% md %}}Name with which the attached disk is accessible
 under `/dev/disk/by-id/`
-{{% /md %}}</dd>
-    <dt class="property-required"
+{{% /md %}}</dd><dt class="property-required"
             title="Required">
         <span id="disk_encryption_key_raw_python">
 <a href="#disk_encryption_key_raw_python" style="color: inherit; text-decoration: inherit;">disk_<wbr>encryption_<wbr>key_<wbr>raw</a>
@@ -2237,8 +2025,7 @@ under `/dev/disk/by-id/`
         <span class="property-indicator"></span>
         <span class="property-type">str</span>
     </dt>
-    <dd>{{% md %}}{{% /md %}}</dd>
-    <dt class="property-required"
+    <dd>{{% md %}}{{% /md %}}</dd><dt class="property-required"
             title="Required">
         <span id="disk_encryption_key_sha256_python">
 <a href="#disk_encryption_key_sha256_python" style="color: inherit; text-decoration: inherit;">disk_<wbr>encryption_<wbr>key_<wbr>sha256</a>
@@ -2246,8 +2033,7 @@ under `/dev/disk/by-id/`
         <span class="property-indicator"></span>
         <span class="property-type">str</span>
     </dt>
-    <dd>{{% md %}}{{% /md %}}</dd>
-    <dt class="property-required"
+    <dd>{{% md %}}{{% /md %}}</dd><dt class="property-required"
             title="Required">
         <span id="initialize_params_python">
 <a href="#initialize_params_python" style="color: inherit; text-decoration: inherit;">initialize_<wbr>params</a>
@@ -2257,8 +2043,7 @@ under `/dev/disk/by-id/`
     </dt>
     <dd>{{% md %}}Parameters with which a disk was created alongside the instance.
 Structure is documented below.
-{{% /md %}}</dd>
-    <dt class="property-required"
+{{% /md %}}</dd><dt class="property-required"
             title="Required">
         <span id="kms_key_self_link_python">
 <a href="#kms_key_self_link_python" style="color: inherit; text-decoration: inherit;">kms_<wbr>key_<wbr>self_<wbr>link</a>
@@ -2266,8 +2051,7 @@ Structure is documented below.
         <span class="property-indicator"></span>
         <span class="property-type">str</span>
     </dt>
-    <dd>{{% md %}}{{% /md %}}</dd>
-    <dt class="property-required"
+    <dd>{{% md %}}{{% /md %}}</dd><dt class="property-required"
             title="Required">
         <span id="mode_python">
 <a href="#mode_python" style="color: inherit; text-decoration: inherit;">mode</a>
@@ -2276,8 +2060,7 @@ Structure is documented below.
         <span class="property-type">str</span>
     </dt>
     <dd>{{% md %}}Read/write mode for the disk. One of `"READ_ONLY"` or `"READ_WRITE"`.
-{{% /md %}}</dd>
-    <dt class="property-required"
+{{% /md %}}</dd><dt class="property-required"
             title="Required">
         <span id="source_python">
 <a href="#source_python" style="color: inherit; text-decoration: inherit;">source</a>
@@ -2286,8 +2069,7 @@ Structure is documented below.
         <span class="property-type">str</span>
     </dt>
     <dd>{{% md %}}The name or self_link of the disk attached to this instance.
-{{% /md %}}</dd>
-</dl>
+{{% /md %}}</dd></dl>
 {{% /choosable %}}
 
 <h4 id="getinstancebootdiskinitializeparam">Get<wbr>Instance<wbr>Boot<wbr>Disk<wbr>Initialize<wbr>Param</h4>
@@ -2295,9 +2077,7 @@ Structure is documented below.
 
 
 {{% choosable language csharp %}}
-<dl class="resources-properties">
-
-    <dt class="property-required"
+<dl class="resources-properties"><dt class="property-required"
             title="Required">
         <span id="image_csharp">
 <a href="#image_csharp" style="color: inherit; text-decoration: inherit;">Image</a>
@@ -2306,8 +2086,7 @@ Structure is documented below.
         <span class="property-type">string</span>
     </dt>
     <dd>{{% md %}}The image from which this disk was initialised.
-{{% /md %}}</dd>
-    <dt class="property-required"
+{{% /md %}}</dd><dt class="property-required"
             title="Required">
         <span id="labels_csharp">
 <a href="#labels_csharp" style="color: inherit; text-decoration: inherit;">Labels</a>
@@ -2316,8 +2095,7 @@ Structure is documented below.
         <span class="property-type">Dictionary&lt;string, object&gt;</span>
     </dt>
     <dd>{{% md %}}A set of key/value label pairs assigned to the instance.
-{{% /md %}}</dd>
-    <dt class="property-required"
+{{% /md %}}</dd><dt class="property-required"
             title="Required">
         <span id="size_csharp">
 <a href="#size_csharp" style="color: inherit; text-decoration: inherit;">Size</a>
@@ -2326,8 +2104,7 @@ Structure is documented below.
         <span class="property-type">int</span>
     </dt>
     <dd>{{% md %}}The size of the image in gigabytes.
-{{% /md %}}</dd>
-    <dt class="property-required"
+{{% /md %}}</dd><dt class="property-required"
             title="Required">
         <span id="type_csharp">
 <a href="#type_csharp" style="color: inherit; text-decoration: inherit;">Type</a>
@@ -2336,14 +2113,11 @@ Structure is documented below.
         <span class="property-type">string</span>
     </dt>
     <dd>{{% md %}}The accelerator type resource exposed to this instance. E.g. `nvidia-tesla-k80`.
-{{% /md %}}</dd>
-</dl>
+{{% /md %}}</dd></dl>
 {{% /choosable %}}
 
 {{% choosable language go %}}
-<dl class="resources-properties">
-
-    <dt class="property-required"
+<dl class="resources-properties"><dt class="property-required"
             title="Required">
         <span id="image_go">
 <a href="#image_go" style="color: inherit; text-decoration: inherit;">Image</a>
@@ -2352,8 +2126,7 @@ Structure is documented below.
         <span class="property-type">string</span>
     </dt>
     <dd>{{% md %}}The image from which this disk was initialised.
-{{% /md %}}</dd>
-    <dt class="property-required"
+{{% /md %}}</dd><dt class="property-required"
             title="Required">
         <span id="labels_go">
 <a href="#labels_go" style="color: inherit; text-decoration: inherit;">Labels</a>
@@ -2362,8 +2135,7 @@ Structure is documented below.
         <span class="property-type">map[string]interface{}</span>
     </dt>
     <dd>{{% md %}}A set of key/value label pairs assigned to the instance.
-{{% /md %}}</dd>
-    <dt class="property-required"
+{{% /md %}}</dd><dt class="property-required"
             title="Required">
         <span id="size_go">
 <a href="#size_go" style="color: inherit; text-decoration: inherit;">Size</a>
@@ -2372,8 +2144,7 @@ Structure is documented below.
         <span class="property-type">int</span>
     </dt>
     <dd>{{% md %}}The size of the image in gigabytes.
-{{% /md %}}</dd>
-    <dt class="property-required"
+{{% /md %}}</dd><dt class="property-required"
             title="Required">
         <span id="type_go">
 <a href="#type_go" style="color: inherit; text-decoration: inherit;">Type</a>
@@ -2382,14 +2153,11 @@ Structure is documented below.
         <span class="property-type">string</span>
     </dt>
     <dd>{{% md %}}The accelerator type resource exposed to this instance. E.g. `nvidia-tesla-k80`.
-{{% /md %}}</dd>
-</dl>
+{{% /md %}}</dd></dl>
 {{% /choosable %}}
 
 {{% choosable language nodejs %}}
-<dl class="resources-properties">
-
-    <dt class="property-required"
+<dl class="resources-properties"><dt class="property-required"
             title="Required">
         <span id="image_nodejs">
 <a href="#image_nodejs" style="color: inherit; text-decoration: inherit;">image</a>
@@ -2398,8 +2166,7 @@ Structure is documented below.
         <span class="property-type">string</span>
     </dt>
     <dd>{{% md %}}The image from which this disk was initialised.
-{{% /md %}}</dd>
-    <dt class="property-required"
+{{% /md %}}</dd><dt class="property-required"
             title="Required">
         <span id="labels_nodejs">
 <a href="#labels_nodejs" style="color: inherit; text-decoration: inherit;">labels</a>
@@ -2408,8 +2175,7 @@ Structure is documented below.
         <span class="property-type">{[key: string]: any}</span>
     </dt>
     <dd>{{% md %}}A set of key/value label pairs assigned to the instance.
-{{% /md %}}</dd>
-    <dt class="property-required"
+{{% /md %}}</dd><dt class="property-required"
             title="Required">
         <span id="size_nodejs">
 <a href="#size_nodejs" style="color: inherit; text-decoration: inherit;">size</a>
@@ -2418,8 +2184,7 @@ Structure is documented below.
         <span class="property-type">number</span>
     </dt>
     <dd>{{% md %}}The size of the image in gigabytes.
-{{% /md %}}</dd>
-    <dt class="property-required"
+{{% /md %}}</dd><dt class="property-required"
             title="Required">
         <span id="type_nodejs">
 <a href="#type_nodejs" style="color: inherit; text-decoration: inherit;">type</a>
@@ -2428,14 +2193,11 @@ Structure is documented below.
         <span class="property-type">string</span>
     </dt>
     <dd>{{% md %}}The accelerator type resource exposed to this instance. E.g. `nvidia-tesla-k80`.
-{{% /md %}}</dd>
-</dl>
+{{% /md %}}</dd></dl>
 {{% /choosable %}}
 
 {{% choosable language python %}}
-<dl class="resources-properties">
-
-    <dt class="property-required"
+<dl class="resources-properties"><dt class="property-required"
             title="Required">
         <span id="image_python">
 <a href="#image_python" style="color: inherit; text-decoration: inherit;">image</a>
@@ -2444,8 +2206,7 @@ Structure is documented below.
         <span class="property-type">str</span>
     </dt>
     <dd>{{% md %}}The image from which this disk was initialised.
-{{% /md %}}</dd>
-    <dt class="property-required"
+{{% /md %}}</dd><dt class="property-required"
             title="Required">
         <span id="labels_python">
 <a href="#labels_python" style="color: inherit; text-decoration: inherit;">labels</a>
@@ -2454,8 +2215,7 @@ Structure is documented below.
         <span class="property-type">Mapping[str, Any]</span>
     </dt>
     <dd>{{% md %}}A set of key/value label pairs assigned to the instance.
-{{% /md %}}</dd>
-    <dt class="property-required"
+{{% /md %}}</dd><dt class="property-required"
             title="Required">
         <span id="size_python">
 <a href="#size_python" style="color: inherit; text-decoration: inherit;">size</a>
@@ -2464,8 +2224,7 @@ Structure is documented below.
         <span class="property-type">int</span>
     </dt>
     <dd>{{% md %}}The size of the image in gigabytes.
-{{% /md %}}</dd>
-    <dt class="property-required"
+{{% /md %}}</dd><dt class="property-required"
             title="Required">
         <span id="type_python">
 <a href="#type_python" style="color: inherit; text-decoration: inherit;">type</a>
@@ -2474,8 +2233,7 @@ Structure is documented below.
         <span class="property-type">str</span>
     </dt>
     <dd>{{% md %}}The accelerator type resource exposed to this instance. E.g. `nvidia-tesla-k80`.
-{{% /md %}}</dd>
-</dl>
+{{% /md %}}</dd></dl>
 {{% /choosable %}}
 
 <h4 id="getinstanceconfidentialinstanceconfig">Get<wbr>Instance<wbr>Confidential<wbr>Instance<wbr>Config</h4>
@@ -2483,9 +2241,7 @@ Structure is documented below.
 
 
 {{% choosable language csharp %}}
-<dl class="resources-properties">
-
-    <dt class="property-required"
+<dl class="resources-properties"><dt class="property-required"
             title="Required">
         <span id="enableconfidentialcompute_csharp">
 <a href="#enableconfidentialcompute_csharp" style="color: inherit; text-decoration: inherit;">Enable<wbr>Confidential<wbr>Compute</a>
@@ -2493,14 +2249,11 @@ Structure is documented below.
         <span class="property-indicator"></span>
         <span class="property-type">bool</span>
     </dt>
-    <dd>{{% md %}}{{% /md %}}</dd>
-</dl>
+    <dd>{{% md %}}{{% /md %}}</dd></dl>
 {{% /choosable %}}
 
 {{% choosable language go %}}
-<dl class="resources-properties">
-
-    <dt class="property-required"
+<dl class="resources-properties"><dt class="property-required"
             title="Required">
         <span id="enableconfidentialcompute_go">
 <a href="#enableconfidentialcompute_go" style="color: inherit; text-decoration: inherit;">Enable<wbr>Confidential<wbr>Compute</a>
@@ -2508,14 +2261,11 @@ Structure is documented below.
         <span class="property-indicator"></span>
         <span class="property-type">bool</span>
     </dt>
-    <dd>{{% md %}}{{% /md %}}</dd>
-</dl>
+    <dd>{{% md %}}{{% /md %}}</dd></dl>
 {{% /choosable %}}
 
 {{% choosable language nodejs %}}
-<dl class="resources-properties">
-
-    <dt class="property-required"
+<dl class="resources-properties"><dt class="property-required"
             title="Required">
         <span id="enableconfidentialcompute_nodejs">
 <a href="#enableconfidentialcompute_nodejs" style="color: inherit; text-decoration: inherit;">enable<wbr>Confidential<wbr>Compute</a>
@@ -2523,14 +2273,11 @@ Structure is documented below.
         <span class="property-indicator"></span>
         <span class="property-type">boolean</span>
     </dt>
-    <dd>{{% md %}}{{% /md %}}</dd>
-</dl>
+    <dd>{{% md %}}{{% /md %}}</dd></dl>
 {{% /choosable %}}
 
 {{% choosable language python %}}
-<dl class="resources-properties">
-
-    <dt class="property-required"
+<dl class="resources-properties"><dt class="property-required"
             title="Required">
         <span id="enable_confidential_compute_python">
 <a href="#enable_confidential_compute_python" style="color: inherit; text-decoration: inherit;">enable_<wbr>confidential_<wbr>compute</a>
@@ -2538,8 +2285,7 @@ Structure is documented below.
         <span class="property-indicator"></span>
         <span class="property-type">bool</span>
     </dt>
-    <dd>{{% md %}}{{% /md %}}</dd>
-</dl>
+    <dd>{{% md %}}{{% /md %}}</dd></dl>
 {{% /choosable %}}
 
 <h4 id="getinstanceguestaccelerator">Get<wbr>Instance<wbr>Guest<wbr>Accelerator</h4>
@@ -2547,9 +2293,7 @@ Structure is documented below.
 
 
 {{% choosable language csharp %}}
-<dl class="resources-properties">
-
-    <dt class="property-required"
+<dl class="resources-properties"><dt class="property-required"
             title="Required">
         <span id="count_csharp">
 <a href="#count_csharp" style="color: inherit; text-decoration: inherit;">Count</a>
@@ -2558,8 +2302,7 @@ Structure is documented below.
         <span class="property-type">int</span>
     </dt>
     <dd>{{% md %}}The number of the guest accelerator cards exposed to this instance.
-{{% /md %}}</dd>
-    <dt class="property-required"
+{{% /md %}}</dd><dt class="property-required"
             title="Required">
         <span id="type_csharp">
 <a href="#type_csharp" style="color: inherit; text-decoration: inherit;">Type</a>
@@ -2568,14 +2311,11 @@ Structure is documented below.
         <span class="property-type">string</span>
     </dt>
     <dd>{{% md %}}The accelerator type resource exposed to this instance. E.g. `nvidia-tesla-k80`.
-{{% /md %}}</dd>
-</dl>
+{{% /md %}}</dd></dl>
 {{% /choosable %}}
 
 {{% choosable language go %}}
-<dl class="resources-properties">
-
-    <dt class="property-required"
+<dl class="resources-properties"><dt class="property-required"
             title="Required">
         <span id="count_go">
 <a href="#count_go" style="color: inherit; text-decoration: inherit;">Count</a>
@@ -2584,8 +2324,7 @@ Structure is documented below.
         <span class="property-type">int</span>
     </dt>
     <dd>{{% md %}}The number of the guest accelerator cards exposed to this instance.
-{{% /md %}}</dd>
-    <dt class="property-required"
+{{% /md %}}</dd><dt class="property-required"
             title="Required">
         <span id="type_go">
 <a href="#type_go" style="color: inherit; text-decoration: inherit;">Type</a>
@@ -2594,14 +2333,11 @@ Structure is documented below.
         <span class="property-type">string</span>
     </dt>
     <dd>{{% md %}}The accelerator type resource exposed to this instance. E.g. `nvidia-tesla-k80`.
-{{% /md %}}</dd>
-</dl>
+{{% /md %}}</dd></dl>
 {{% /choosable %}}
 
 {{% choosable language nodejs %}}
-<dl class="resources-properties">
-
-    <dt class="property-required"
+<dl class="resources-properties"><dt class="property-required"
             title="Required">
         <span id="count_nodejs">
 <a href="#count_nodejs" style="color: inherit; text-decoration: inherit;">count</a>
@@ -2610,8 +2346,7 @@ Structure is documented below.
         <span class="property-type">number</span>
     </dt>
     <dd>{{% md %}}The number of the guest accelerator cards exposed to this instance.
-{{% /md %}}</dd>
-    <dt class="property-required"
+{{% /md %}}</dd><dt class="property-required"
             title="Required">
         <span id="type_nodejs">
 <a href="#type_nodejs" style="color: inherit; text-decoration: inherit;">type</a>
@@ -2620,14 +2355,11 @@ Structure is documented below.
         <span class="property-type">string</span>
     </dt>
     <dd>{{% md %}}The accelerator type resource exposed to this instance. E.g. `nvidia-tesla-k80`.
-{{% /md %}}</dd>
-</dl>
+{{% /md %}}</dd></dl>
 {{% /choosable %}}
 
 {{% choosable language python %}}
-<dl class="resources-properties">
-
-    <dt class="property-required"
+<dl class="resources-properties"><dt class="property-required"
             title="Required">
         <span id="count_python">
 <a href="#count_python" style="color: inherit; text-decoration: inherit;">count</a>
@@ -2636,8 +2368,7 @@ Structure is documented below.
         <span class="property-type">int</span>
     </dt>
     <dd>{{% md %}}The number of the guest accelerator cards exposed to this instance.
-{{% /md %}}</dd>
-    <dt class="property-required"
+{{% /md %}}</dd><dt class="property-required"
             title="Required">
         <span id="type_python">
 <a href="#type_python" style="color: inherit; text-decoration: inherit;">type</a>
@@ -2646,8 +2377,7 @@ Structure is documented below.
         <span class="property-type">str</span>
     </dt>
     <dd>{{% md %}}The accelerator type resource exposed to this instance. E.g. `nvidia-tesla-k80`.
-{{% /md %}}</dd>
-</dl>
+{{% /md %}}</dd></dl>
 {{% /choosable %}}
 
 <h4 id="getinstancenetworkinterface">Get<wbr>Instance<wbr>Network<wbr>Interface</h4>
@@ -2655,9 +2385,7 @@ Structure is documented below.
 
 
 {{% choosable language csharp %}}
-<dl class="resources-properties">
-
-    <dt class="property-required"
+<dl class="resources-properties"><dt class="property-required"
             title="Required">
         <span id="accessconfigs_csharp">
 <a href="#accessconfigs_csharp" style="color: inherit; text-decoration: inherit;">Access<wbr>Configs</a>
@@ -2667,8 +2395,7 @@ Structure is documented below.
     </dt>
     <dd>{{% md %}}Access configurations, i.e. IPs via which this
 instance can be accessed via the Internet. Structure documented below.
-{{% /md %}}</dd>
-    <dt class="property-required"
+{{% /md %}}</dd><dt class="property-required"
             title="Required">
         <span id="aliasipranges_csharp">
 <a href="#aliasipranges_csharp" style="color: inherit; text-decoration: inherit;">Alias<wbr>Ip<wbr>Ranges</a>
@@ -2677,8 +2404,7 @@ instance can be accessed via the Internet. Structure documented below.
         <span class="property-type"><a href="#getinstancenetworkinterfacealiasiprange">List&lt;Get<wbr>Instance<wbr>Network<wbr>Interface<wbr>Alias<wbr>Ip<wbr>Range<wbr>Args&gt;</a></span>
     </dt>
     <dd>{{% md %}}An array of alias IP ranges for this network interface. Structure documented below.
-{{% /md %}}</dd>
-    <dt class="property-required"
+{{% /md %}}</dd><dt class="property-required"
             title="Required">
         <span id="name_csharp">
 <a href="#name_csharp" style="color: inherit; text-decoration: inherit;">Name</a>
@@ -2687,8 +2413,7 @@ instance can be accessed via the Internet. Structure documented below.
         <span class="property-type">string</span>
     </dt>
     <dd>{{% md %}}The name of the instance. One of `name` or `self_link` must be provided.
-{{% /md %}}</dd>
-    <dt class="property-required"
+{{% /md %}}</dd><dt class="property-required"
             title="Required">
         <span id="network_csharp">
 <a href="#network_csharp" style="color: inherit; text-decoration: inherit;">Network</a>
@@ -2697,8 +2422,7 @@ instance can be accessed via the Internet. Structure documented below.
         <span class="property-type">string</span>
     </dt>
     <dd>{{% md %}}The name or self_link of the network attached to this interface.
-{{% /md %}}</dd>
-    <dt class="property-required"
+{{% /md %}}</dd><dt class="property-required"
             title="Required">
         <span id="networkip_csharp">
 <a href="#networkip_csharp" style="color: inherit; text-decoration: inherit;">Network<wbr>Ip</a>
@@ -2707,8 +2431,7 @@ instance can be accessed via the Internet. Structure documented below.
         <span class="property-type">string</span>
     </dt>
     <dd>{{% md %}}The private IP address assigned to the instance.
-{{% /md %}}</dd>
-    <dt class="property-required"
+{{% /md %}}</dd><dt class="property-required"
             title="Required">
         <span id="nictype_csharp">
 <a href="#nictype_csharp" style="color: inherit; text-decoration: inherit;">Nic<wbr>Type</a>
@@ -2716,8 +2439,7 @@ instance can be accessed via the Internet. Structure documented below.
         <span class="property-indicator"></span>
         <span class="property-type">string</span>
     </dt>
-    <dd>{{% md %}}{{% /md %}}</dd>
-    <dt class="property-required"
+    <dd>{{% md %}}{{% /md %}}</dd><dt class="property-required"
             title="Required">
         <span id="subnetwork_csharp">
 <a href="#subnetwork_csharp" style="color: inherit; text-decoration: inherit;">Subnetwork</a>
@@ -2726,8 +2448,7 @@ instance can be accessed via the Internet. Structure documented below.
         <span class="property-type">string</span>
     </dt>
     <dd>{{% md %}}The name or self_link of the subnetwork attached to this interface.
-{{% /md %}}</dd>
-    <dt class="property-required"
+{{% /md %}}</dd><dt class="property-required"
             title="Required">
         <span id="subnetworkproject_csharp">
 <a href="#subnetworkproject_csharp" style="color: inherit; text-decoration: inherit;">Subnetwork<wbr>Project</a>
@@ -2736,14 +2457,11 @@ instance can be accessed via the Internet. Structure documented below.
         <span class="property-type">string</span>
     </dt>
     <dd>{{% md %}}The project in which the subnetwork belongs.
-{{% /md %}}</dd>
-</dl>
+{{% /md %}}</dd></dl>
 {{% /choosable %}}
 
 {{% choosable language go %}}
-<dl class="resources-properties">
-
-    <dt class="property-required"
+<dl class="resources-properties"><dt class="property-required"
             title="Required">
         <span id="accessconfigs_go">
 <a href="#accessconfigs_go" style="color: inherit; text-decoration: inherit;">Access<wbr>Configs</a>
@@ -2753,8 +2471,7 @@ instance can be accessed via the Internet. Structure documented below.
     </dt>
     <dd>{{% md %}}Access configurations, i.e. IPs via which this
 instance can be accessed via the Internet. Structure documented below.
-{{% /md %}}</dd>
-    <dt class="property-required"
+{{% /md %}}</dd><dt class="property-required"
             title="Required">
         <span id="aliasipranges_go">
 <a href="#aliasipranges_go" style="color: inherit; text-decoration: inherit;">Alias<wbr>Ip<wbr>Ranges</a>
@@ -2763,8 +2480,7 @@ instance can be accessed via the Internet. Structure documented below.
         <span class="property-type"><a href="#getinstancenetworkinterfacealiasiprange">[]Get<wbr>Instance<wbr>Network<wbr>Interface<wbr>Alias<wbr>Ip<wbr>Range</a></span>
     </dt>
     <dd>{{% md %}}An array of alias IP ranges for this network interface. Structure documented below.
-{{% /md %}}</dd>
-    <dt class="property-required"
+{{% /md %}}</dd><dt class="property-required"
             title="Required">
         <span id="name_go">
 <a href="#name_go" style="color: inherit; text-decoration: inherit;">Name</a>
@@ -2773,8 +2489,7 @@ instance can be accessed via the Internet. Structure documented below.
         <span class="property-type">string</span>
     </dt>
     <dd>{{% md %}}The name of the instance. One of `name` or `self_link` must be provided.
-{{% /md %}}</dd>
-    <dt class="property-required"
+{{% /md %}}</dd><dt class="property-required"
             title="Required">
         <span id="network_go">
 <a href="#network_go" style="color: inherit; text-decoration: inherit;">Network</a>
@@ -2783,8 +2498,7 @@ instance can be accessed via the Internet. Structure documented below.
         <span class="property-type">string</span>
     </dt>
     <dd>{{% md %}}The name or self_link of the network attached to this interface.
-{{% /md %}}</dd>
-    <dt class="property-required"
+{{% /md %}}</dd><dt class="property-required"
             title="Required">
         <span id="networkip_go">
 <a href="#networkip_go" style="color: inherit; text-decoration: inherit;">Network<wbr>Ip</a>
@@ -2793,8 +2507,7 @@ instance can be accessed via the Internet. Structure documented below.
         <span class="property-type">string</span>
     </dt>
     <dd>{{% md %}}The private IP address assigned to the instance.
-{{% /md %}}</dd>
-    <dt class="property-required"
+{{% /md %}}</dd><dt class="property-required"
             title="Required">
         <span id="nictype_go">
 <a href="#nictype_go" style="color: inherit; text-decoration: inherit;">Nic<wbr>Type</a>
@@ -2802,8 +2515,7 @@ instance can be accessed via the Internet. Structure documented below.
         <span class="property-indicator"></span>
         <span class="property-type">string</span>
     </dt>
-    <dd>{{% md %}}{{% /md %}}</dd>
-    <dt class="property-required"
+    <dd>{{% md %}}{{% /md %}}</dd><dt class="property-required"
             title="Required">
         <span id="subnetwork_go">
 <a href="#subnetwork_go" style="color: inherit; text-decoration: inherit;">Subnetwork</a>
@@ -2812,8 +2524,7 @@ instance can be accessed via the Internet. Structure documented below.
         <span class="property-type">string</span>
     </dt>
     <dd>{{% md %}}The name or self_link of the subnetwork attached to this interface.
-{{% /md %}}</dd>
-    <dt class="property-required"
+{{% /md %}}</dd><dt class="property-required"
             title="Required">
         <span id="subnetworkproject_go">
 <a href="#subnetworkproject_go" style="color: inherit; text-decoration: inherit;">Subnetwork<wbr>Project</a>
@@ -2822,14 +2533,11 @@ instance can be accessed via the Internet. Structure documented below.
         <span class="property-type">string</span>
     </dt>
     <dd>{{% md %}}The project in which the subnetwork belongs.
-{{% /md %}}</dd>
-</dl>
+{{% /md %}}</dd></dl>
 {{% /choosable %}}
 
 {{% choosable language nodejs %}}
-<dl class="resources-properties">
-
-    <dt class="property-required"
+<dl class="resources-properties"><dt class="property-required"
             title="Required">
         <span id="accessconfigs_nodejs">
 <a href="#accessconfigs_nodejs" style="color: inherit; text-decoration: inherit;">access<wbr>Configs</a>
@@ -2839,8 +2547,7 @@ instance can be accessed via the Internet. Structure documented below.
     </dt>
     <dd>{{% md %}}Access configurations, i.e. IPs via which this
 instance can be accessed via the Internet. Structure documented below.
-{{% /md %}}</dd>
-    <dt class="property-required"
+{{% /md %}}</dd><dt class="property-required"
             title="Required">
         <span id="aliasipranges_nodejs">
 <a href="#aliasipranges_nodejs" style="color: inherit; text-decoration: inherit;">alias<wbr>Ip<wbr>Ranges</a>
@@ -2849,8 +2556,7 @@ instance can be accessed via the Internet. Structure documented below.
         <span class="property-type"><a href="#getinstancenetworkinterfacealiasiprange">Get<wbr>Instance<wbr>Network<wbr>Interface<wbr>Alias<wbr>Ip<wbr>Range[]</a></span>
     </dt>
     <dd>{{% md %}}An array of alias IP ranges for this network interface. Structure documented below.
-{{% /md %}}</dd>
-    <dt class="property-required"
+{{% /md %}}</dd><dt class="property-required"
             title="Required">
         <span id="name_nodejs">
 <a href="#name_nodejs" style="color: inherit; text-decoration: inherit;">name</a>
@@ -2859,8 +2565,7 @@ instance can be accessed via the Internet. Structure documented below.
         <span class="property-type">string</span>
     </dt>
     <dd>{{% md %}}The name of the instance. One of `name` or `self_link` must be provided.
-{{% /md %}}</dd>
-    <dt class="property-required"
+{{% /md %}}</dd><dt class="property-required"
             title="Required">
         <span id="network_nodejs">
 <a href="#network_nodejs" style="color: inherit; text-decoration: inherit;">network</a>
@@ -2869,8 +2574,7 @@ instance can be accessed via the Internet. Structure documented below.
         <span class="property-type">string</span>
     </dt>
     <dd>{{% md %}}The name or self_link of the network attached to this interface.
-{{% /md %}}</dd>
-    <dt class="property-required"
+{{% /md %}}</dd><dt class="property-required"
             title="Required">
         <span id="networkip_nodejs">
 <a href="#networkip_nodejs" style="color: inherit; text-decoration: inherit;">network<wbr>Ip</a>
@@ -2879,8 +2583,7 @@ instance can be accessed via the Internet. Structure documented below.
         <span class="property-type">string</span>
     </dt>
     <dd>{{% md %}}The private IP address assigned to the instance.
-{{% /md %}}</dd>
-    <dt class="property-required"
+{{% /md %}}</dd><dt class="property-required"
             title="Required">
         <span id="nictype_nodejs">
 <a href="#nictype_nodejs" style="color: inherit; text-decoration: inherit;">nic<wbr>Type</a>
@@ -2888,8 +2591,7 @@ instance can be accessed via the Internet. Structure documented below.
         <span class="property-indicator"></span>
         <span class="property-type">string</span>
     </dt>
-    <dd>{{% md %}}{{% /md %}}</dd>
-    <dt class="property-required"
+    <dd>{{% md %}}{{% /md %}}</dd><dt class="property-required"
             title="Required">
         <span id="subnetwork_nodejs">
 <a href="#subnetwork_nodejs" style="color: inherit; text-decoration: inherit;">subnetwork</a>
@@ -2898,8 +2600,7 @@ instance can be accessed via the Internet. Structure documented below.
         <span class="property-type">string</span>
     </dt>
     <dd>{{% md %}}The name or self_link of the subnetwork attached to this interface.
-{{% /md %}}</dd>
-    <dt class="property-required"
+{{% /md %}}</dd><dt class="property-required"
             title="Required">
         <span id="subnetworkproject_nodejs">
 <a href="#subnetworkproject_nodejs" style="color: inherit; text-decoration: inherit;">subnetwork<wbr>Project</a>
@@ -2908,14 +2609,11 @@ instance can be accessed via the Internet. Structure documented below.
         <span class="property-type">string</span>
     </dt>
     <dd>{{% md %}}The project in which the subnetwork belongs.
-{{% /md %}}</dd>
-</dl>
+{{% /md %}}</dd></dl>
 {{% /choosable %}}
 
 {{% choosable language python %}}
-<dl class="resources-properties">
-
-    <dt class="property-required"
+<dl class="resources-properties"><dt class="property-required"
             title="Required">
         <span id="access_configs_python">
 <a href="#access_configs_python" style="color: inherit; text-decoration: inherit;">access_<wbr>configs</a>
@@ -2925,8 +2623,7 @@ instance can be accessed via the Internet. Structure documented below.
     </dt>
     <dd>{{% md %}}Access configurations, i.e. IPs via which this
 instance can be accessed via the Internet. Structure documented below.
-{{% /md %}}</dd>
-    <dt class="property-required"
+{{% /md %}}</dd><dt class="property-required"
             title="Required">
         <span id="alias_ip_ranges_python">
 <a href="#alias_ip_ranges_python" style="color: inherit; text-decoration: inherit;">alias_<wbr>ip_<wbr>ranges</a>
@@ -2935,8 +2632,7 @@ instance can be accessed via the Internet. Structure documented below.
         <span class="property-type"><a href="#getinstancenetworkinterfacealiasiprange">Sequence[Get<wbr>Instance<wbr>Network<wbr>Interface<wbr>Alias<wbr>Ip<wbr>Range<wbr>Args]</a></span>
     </dt>
     <dd>{{% md %}}An array of alias IP ranges for this network interface. Structure documented below.
-{{% /md %}}</dd>
-    <dt class="property-required"
+{{% /md %}}</dd><dt class="property-required"
             title="Required">
         <span id="name_python">
 <a href="#name_python" style="color: inherit; text-decoration: inherit;">name</a>
@@ -2945,8 +2641,7 @@ instance can be accessed via the Internet. Structure documented below.
         <span class="property-type">str</span>
     </dt>
     <dd>{{% md %}}The name of the instance. One of `name` or `self_link` must be provided.
-{{% /md %}}</dd>
-    <dt class="property-required"
+{{% /md %}}</dd><dt class="property-required"
             title="Required">
         <span id="network_python">
 <a href="#network_python" style="color: inherit; text-decoration: inherit;">network</a>
@@ -2955,8 +2650,7 @@ instance can be accessed via the Internet. Structure documented below.
         <span class="property-type">str</span>
     </dt>
     <dd>{{% md %}}The name or self_link of the network attached to this interface.
-{{% /md %}}</dd>
-    <dt class="property-required"
+{{% /md %}}</dd><dt class="property-required"
             title="Required">
         <span id="network_ip_python">
 <a href="#network_ip_python" style="color: inherit; text-decoration: inherit;">network_<wbr>ip</a>
@@ -2965,8 +2659,7 @@ instance can be accessed via the Internet. Structure documented below.
         <span class="property-type">str</span>
     </dt>
     <dd>{{% md %}}The private IP address assigned to the instance.
-{{% /md %}}</dd>
-    <dt class="property-required"
+{{% /md %}}</dd><dt class="property-required"
             title="Required">
         <span id="nic_type_python">
 <a href="#nic_type_python" style="color: inherit; text-decoration: inherit;">nic_<wbr>type</a>
@@ -2974,8 +2667,7 @@ instance can be accessed via the Internet. Structure documented below.
         <span class="property-indicator"></span>
         <span class="property-type">str</span>
     </dt>
-    <dd>{{% md %}}{{% /md %}}</dd>
-    <dt class="property-required"
+    <dd>{{% md %}}{{% /md %}}</dd><dt class="property-required"
             title="Required">
         <span id="subnetwork_python">
 <a href="#subnetwork_python" style="color: inherit; text-decoration: inherit;">subnetwork</a>
@@ -2984,8 +2676,7 @@ instance can be accessed via the Internet. Structure documented below.
         <span class="property-type">str</span>
     </dt>
     <dd>{{% md %}}The name or self_link of the subnetwork attached to this interface.
-{{% /md %}}</dd>
-    <dt class="property-required"
+{{% /md %}}</dd><dt class="property-required"
             title="Required">
         <span id="subnetwork_project_python">
 <a href="#subnetwork_project_python" style="color: inherit; text-decoration: inherit;">subnetwork_<wbr>project</a>
@@ -2994,8 +2685,7 @@ instance can be accessed via the Internet. Structure documented below.
         <span class="property-type">str</span>
     </dt>
     <dd>{{% md %}}The project in which the subnetwork belongs.
-{{% /md %}}</dd>
-</dl>
+{{% /md %}}</dd></dl>
 {{% /choosable %}}
 
 <h4 id="getinstancenetworkinterfaceaccessconfig">Get<wbr>Instance<wbr>Network<wbr>Interface<wbr>Access<wbr>Config</h4>
@@ -3003,9 +2693,7 @@ instance can be accessed via the Internet. Structure documented below.
 
 
 {{% choosable language csharp %}}
-<dl class="resources-properties">
-
-    <dt class="property-required"
+<dl class="resources-properties"><dt class="property-required"
             title="Required">
         <span id="natip_csharp">
 <a href="#natip_csharp" style="color: inherit; text-decoration: inherit;">Nat<wbr>Ip</a>
@@ -3015,8 +2703,7 @@ instance can be accessed via the Internet. Structure documented below.
     </dt>
     <dd>{{% md %}}The IP address that is be 1:1 mapped to the instance's
 network ip.
-{{% /md %}}</dd>
-    <dt class="property-required"
+{{% /md %}}</dd><dt class="property-required"
             title="Required">
         <span id="networktier_csharp">
 <a href="#networktier_csharp" style="color: inherit; text-decoration: inherit;">Network<wbr>Tier</a>
@@ -3025,8 +2712,7 @@ network ip.
         <span class="property-type">string</span>
     </dt>
     <dd>{{% md %}}The [networking tier][network-tier] used for configuring this instance. One of `PREMIUM` or `STANDARD`.
-{{% /md %}}</dd>
-    <dt class="property-required"
+{{% /md %}}</dd><dt class="property-required"
             title="Required">
         <span id="publicptrdomainname_csharp">
 <a href="#publicptrdomainname_csharp" style="color: inherit; text-decoration: inherit;">Public<wbr>Ptr<wbr>Domain<wbr>Name</a>
@@ -3035,14 +2721,11 @@ network ip.
         <span class="property-type">string</span>
     </dt>
     <dd>{{% md %}}The DNS domain name for the public PTR record.
-{{% /md %}}</dd>
-</dl>
+{{% /md %}}</dd></dl>
 {{% /choosable %}}
 
 {{% choosable language go %}}
-<dl class="resources-properties">
-
-    <dt class="property-required"
+<dl class="resources-properties"><dt class="property-required"
             title="Required">
         <span id="natip_go">
 <a href="#natip_go" style="color: inherit; text-decoration: inherit;">Nat<wbr>Ip</a>
@@ -3052,8 +2735,7 @@ network ip.
     </dt>
     <dd>{{% md %}}The IP address that is be 1:1 mapped to the instance's
 network ip.
-{{% /md %}}</dd>
-    <dt class="property-required"
+{{% /md %}}</dd><dt class="property-required"
             title="Required">
         <span id="networktier_go">
 <a href="#networktier_go" style="color: inherit; text-decoration: inherit;">Network<wbr>Tier</a>
@@ -3062,8 +2744,7 @@ network ip.
         <span class="property-type">string</span>
     </dt>
     <dd>{{% md %}}The [networking tier][network-tier] used for configuring this instance. One of `PREMIUM` or `STANDARD`.
-{{% /md %}}</dd>
-    <dt class="property-required"
+{{% /md %}}</dd><dt class="property-required"
             title="Required">
         <span id="publicptrdomainname_go">
 <a href="#publicptrdomainname_go" style="color: inherit; text-decoration: inherit;">Public<wbr>Ptr<wbr>Domain<wbr>Name</a>
@@ -3072,14 +2753,11 @@ network ip.
         <span class="property-type">string</span>
     </dt>
     <dd>{{% md %}}The DNS domain name for the public PTR record.
-{{% /md %}}</dd>
-</dl>
+{{% /md %}}</dd></dl>
 {{% /choosable %}}
 
 {{% choosable language nodejs %}}
-<dl class="resources-properties">
-
-    <dt class="property-required"
+<dl class="resources-properties"><dt class="property-required"
             title="Required">
         <span id="natip_nodejs">
 <a href="#natip_nodejs" style="color: inherit; text-decoration: inherit;">nat<wbr>Ip</a>
@@ -3089,8 +2767,7 @@ network ip.
     </dt>
     <dd>{{% md %}}The IP address that is be 1:1 mapped to the instance's
 network ip.
-{{% /md %}}</dd>
-    <dt class="property-required"
+{{% /md %}}</dd><dt class="property-required"
             title="Required">
         <span id="networktier_nodejs">
 <a href="#networktier_nodejs" style="color: inherit; text-decoration: inherit;">network<wbr>Tier</a>
@@ -3099,8 +2776,7 @@ network ip.
         <span class="property-type">string</span>
     </dt>
     <dd>{{% md %}}The [networking tier][network-tier] used for configuring this instance. One of `PREMIUM` or `STANDARD`.
-{{% /md %}}</dd>
-    <dt class="property-required"
+{{% /md %}}</dd><dt class="property-required"
             title="Required">
         <span id="publicptrdomainname_nodejs">
 <a href="#publicptrdomainname_nodejs" style="color: inherit; text-decoration: inherit;">public<wbr>Ptr<wbr>Domain<wbr>Name</a>
@@ -3109,14 +2785,11 @@ network ip.
         <span class="property-type">string</span>
     </dt>
     <dd>{{% md %}}The DNS domain name for the public PTR record.
-{{% /md %}}</dd>
-</dl>
+{{% /md %}}</dd></dl>
 {{% /choosable %}}
 
 {{% choosable language python %}}
-<dl class="resources-properties">
-
-    <dt class="property-required"
+<dl class="resources-properties"><dt class="property-required"
             title="Required">
         <span id="nat_ip_python">
 <a href="#nat_ip_python" style="color: inherit; text-decoration: inherit;">nat_<wbr>ip</a>
@@ -3126,8 +2799,7 @@ network ip.
     </dt>
     <dd>{{% md %}}The IP address that is be 1:1 mapped to the instance's
 network ip.
-{{% /md %}}</dd>
-    <dt class="property-required"
+{{% /md %}}</dd><dt class="property-required"
             title="Required">
         <span id="network_tier_python">
 <a href="#network_tier_python" style="color: inherit; text-decoration: inherit;">network_<wbr>tier</a>
@@ -3136,8 +2808,7 @@ network ip.
         <span class="property-type">str</span>
     </dt>
     <dd>{{% md %}}The [networking tier][network-tier] used for configuring this instance. One of `PREMIUM` or `STANDARD`.
-{{% /md %}}</dd>
-    <dt class="property-required"
+{{% /md %}}</dd><dt class="property-required"
             title="Required">
         <span id="public_ptr_domain_name_python">
 <a href="#public_ptr_domain_name_python" style="color: inherit; text-decoration: inherit;">public_<wbr>ptr_<wbr>domain_<wbr>name</a>
@@ -3146,8 +2817,7 @@ network ip.
         <span class="property-type">str</span>
     </dt>
     <dd>{{% md %}}The DNS domain name for the public PTR record.
-{{% /md %}}</dd>
-</dl>
+{{% /md %}}</dd></dl>
 {{% /choosable %}}
 
 <h4 id="getinstancenetworkinterfacealiasiprange">Get<wbr>Instance<wbr>Network<wbr>Interface<wbr>Alias<wbr>Ip<wbr>Range</h4>
@@ -3155,9 +2825,7 @@ network ip.
 
 
 {{% choosable language csharp %}}
-<dl class="resources-properties">
-
-    <dt class="property-required"
+<dl class="resources-properties"><dt class="property-required"
             title="Required">
         <span id="ipcidrrange_csharp">
 <a href="#ipcidrrange_csharp" style="color: inherit; text-decoration: inherit;">Ip<wbr>Cidr<wbr>Range</a>
@@ -3166,8 +2834,7 @@ network ip.
         <span class="property-type">string</span>
     </dt>
     <dd>{{% md %}}The IP CIDR range represented by this alias IP range.
-{{% /md %}}</dd>
-    <dt class="property-required"
+{{% /md %}}</dd><dt class="property-required"
             title="Required">
         <span id="subnetworkrangename_csharp">
 <a href="#subnetworkrangename_csharp" style="color: inherit; text-decoration: inherit;">Subnetwork<wbr>Range<wbr>Name</a>
@@ -3178,14 +2845,11 @@ network ip.
     <dd>{{% md %}}The subnetwork secondary range name specifying
 the secondary range from which to allocate the IP CIDR range for this alias IP
 range.
-{{% /md %}}</dd>
-</dl>
+{{% /md %}}</dd></dl>
 {{% /choosable %}}
 
 {{% choosable language go %}}
-<dl class="resources-properties">
-
-    <dt class="property-required"
+<dl class="resources-properties"><dt class="property-required"
             title="Required">
         <span id="ipcidrrange_go">
 <a href="#ipcidrrange_go" style="color: inherit; text-decoration: inherit;">Ip<wbr>Cidr<wbr>Range</a>
@@ -3194,8 +2858,7 @@ range.
         <span class="property-type">string</span>
     </dt>
     <dd>{{% md %}}The IP CIDR range represented by this alias IP range.
-{{% /md %}}</dd>
-    <dt class="property-required"
+{{% /md %}}</dd><dt class="property-required"
             title="Required">
         <span id="subnetworkrangename_go">
 <a href="#subnetworkrangename_go" style="color: inherit; text-decoration: inherit;">Subnetwork<wbr>Range<wbr>Name</a>
@@ -3206,14 +2869,11 @@ range.
     <dd>{{% md %}}The subnetwork secondary range name specifying
 the secondary range from which to allocate the IP CIDR range for this alias IP
 range.
-{{% /md %}}</dd>
-</dl>
+{{% /md %}}</dd></dl>
 {{% /choosable %}}
 
 {{% choosable language nodejs %}}
-<dl class="resources-properties">
-
-    <dt class="property-required"
+<dl class="resources-properties"><dt class="property-required"
             title="Required">
         <span id="ipcidrrange_nodejs">
 <a href="#ipcidrrange_nodejs" style="color: inherit; text-decoration: inherit;">ip<wbr>Cidr<wbr>Range</a>
@@ -3222,8 +2882,7 @@ range.
         <span class="property-type">string</span>
     </dt>
     <dd>{{% md %}}The IP CIDR range represented by this alias IP range.
-{{% /md %}}</dd>
-    <dt class="property-required"
+{{% /md %}}</dd><dt class="property-required"
             title="Required">
         <span id="subnetworkrangename_nodejs">
 <a href="#subnetworkrangename_nodejs" style="color: inherit; text-decoration: inherit;">subnetwork<wbr>Range<wbr>Name</a>
@@ -3234,14 +2893,11 @@ range.
     <dd>{{% md %}}The subnetwork secondary range name specifying
 the secondary range from which to allocate the IP CIDR range for this alias IP
 range.
-{{% /md %}}</dd>
-</dl>
+{{% /md %}}</dd></dl>
 {{% /choosable %}}
 
 {{% choosable language python %}}
-<dl class="resources-properties">
-
-    <dt class="property-required"
+<dl class="resources-properties"><dt class="property-required"
             title="Required">
         <span id="ip_cidr_range_python">
 <a href="#ip_cidr_range_python" style="color: inherit; text-decoration: inherit;">ip_<wbr>cidr_<wbr>range</a>
@@ -3250,8 +2906,7 @@ range.
         <span class="property-type">str</span>
     </dt>
     <dd>{{% md %}}The IP CIDR range represented by this alias IP range.
-{{% /md %}}</dd>
-    <dt class="property-required"
+{{% /md %}}</dd><dt class="property-required"
             title="Required">
         <span id="subnetwork_range_name_python">
 <a href="#subnetwork_range_name_python" style="color: inherit; text-decoration: inherit;">subnetwork_<wbr>range_<wbr>name</a>
@@ -3262,8 +2917,7 @@ range.
     <dd>{{% md %}}The subnetwork secondary range name specifying
 the secondary range from which to allocate the IP CIDR range for this alias IP
 range.
-{{% /md %}}</dd>
-</dl>
+{{% /md %}}</dd></dl>
 {{% /choosable %}}
 
 <h4 id="getinstancescheduling">Get<wbr>Instance<wbr>Scheduling</h4>
@@ -3271,9 +2925,7 @@ range.
 
 
 {{% choosable language csharp %}}
-<dl class="resources-properties">
-
-    <dt class="property-required"
+<dl class="resources-properties"><dt class="property-required"
             title="Required">
         <span id="automaticrestart_csharp">
 <a href="#automaticrestart_csharp" style="color: inherit; text-decoration: inherit;">Automatic<wbr>Restart</a>
@@ -3283,8 +2935,7 @@ range.
     </dt>
     <dd>{{% md %}}Specifies if the instance should be
 restarted if it was terminated by Compute Engine (not a user).
-{{% /md %}}</dd>
-    <dt class="property-required"
+{{% /md %}}</dd><dt class="property-required"
             title="Required">
         <span id="minnodecpus_csharp">
 <a href="#minnodecpus_csharp" style="color: inherit; text-decoration: inherit;">Min<wbr>Node<wbr>Cpus</a>
@@ -3292,8 +2943,7 @@ restarted if it was terminated by Compute Engine (not a user).
         <span class="property-indicator"></span>
         <span class="property-type">int</span>
     </dt>
-    <dd>{{% md %}}{{% /md %}}</dd>
-    <dt class="property-required"
+    <dd>{{% md %}}{{% /md %}}</dd><dt class="property-required"
             title="Required">
         <span id="nodeaffinities_csharp">
 <a href="#nodeaffinities_csharp" style="color: inherit; text-decoration: inherit;">Node<wbr>Affinities</a>
@@ -3301,8 +2951,7 @@ restarted if it was terminated by Compute Engine (not a user).
         <span class="property-indicator"></span>
         <span class="property-type"><a href="#getinstanceschedulingnodeaffinity">List&lt;Get<wbr>Instance<wbr>Scheduling<wbr>Node<wbr>Affinity<wbr>Args&gt;</a></span>
     </dt>
-    <dd>{{% md %}}{{% /md %}}</dd>
-    <dt class="property-required"
+    <dd>{{% md %}}{{% /md %}}</dd><dt class="property-required"
             title="Required">
         <span id="onhostmaintenance_csharp">
 <a href="#onhostmaintenance_csharp" style="color: inherit; text-decoration: inherit;">On<wbr>Host<wbr>Maintenance</a>
@@ -3313,8 +2962,7 @@ restarted if it was terminated by Compute Engine (not a user).
     <dd>{{% md %}}Describes maintenance behavior for the
 instance. One of `MIGRATE` or `TERMINATE`, for more info, read
 [here](https://cloud.google.com/compute/docs/instances/setting-instance-scheduling-options)
-{{% /md %}}</dd>
-    <dt class="property-required"
+{{% /md %}}</dd><dt class="property-required"
             title="Required">
         <span id="preemptible_csharp">
 <a href="#preemptible_csharp" style="color: inherit; text-decoration: inherit;">Preemptible</a>
@@ -3323,14 +2971,11 @@ instance. One of `MIGRATE` or `TERMINATE`, for more info, read
         <span class="property-type">bool</span>
     </dt>
     <dd>{{% md %}}Whether the instance is preemptible.
-{{% /md %}}</dd>
-</dl>
+{{% /md %}}</dd></dl>
 {{% /choosable %}}
 
 {{% choosable language go %}}
-<dl class="resources-properties">
-
-    <dt class="property-required"
+<dl class="resources-properties"><dt class="property-required"
             title="Required">
         <span id="automaticrestart_go">
 <a href="#automaticrestart_go" style="color: inherit; text-decoration: inherit;">Automatic<wbr>Restart</a>
@@ -3340,8 +2985,7 @@ instance. One of `MIGRATE` or `TERMINATE`, for more info, read
     </dt>
     <dd>{{% md %}}Specifies if the instance should be
 restarted if it was terminated by Compute Engine (not a user).
-{{% /md %}}</dd>
-    <dt class="property-required"
+{{% /md %}}</dd><dt class="property-required"
             title="Required">
         <span id="minnodecpus_go">
 <a href="#minnodecpus_go" style="color: inherit; text-decoration: inherit;">Min<wbr>Node<wbr>Cpus</a>
@@ -3349,8 +2993,7 @@ restarted if it was terminated by Compute Engine (not a user).
         <span class="property-indicator"></span>
         <span class="property-type">int</span>
     </dt>
-    <dd>{{% md %}}{{% /md %}}</dd>
-    <dt class="property-required"
+    <dd>{{% md %}}{{% /md %}}</dd><dt class="property-required"
             title="Required">
         <span id="nodeaffinities_go">
 <a href="#nodeaffinities_go" style="color: inherit; text-decoration: inherit;">Node<wbr>Affinities</a>
@@ -3358,8 +3001,7 @@ restarted if it was terminated by Compute Engine (not a user).
         <span class="property-indicator"></span>
         <span class="property-type"><a href="#getinstanceschedulingnodeaffinity">[]Get<wbr>Instance<wbr>Scheduling<wbr>Node<wbr>Affinity</a></span>
     </dt>
-    <dd>{{% md %}}{{% /md %}}</dd>
-    <dt class="property-required"
+    <dd>{{% md %}}{{% /md %}}</dd><dt class="property-required"
             title="Required">
         <span id="onhostmaintenance_go">
 <a href="#onhostmaintenance_go" style="color: inherit; text-decoration: inherit;">On<wbr>Host<wbr>Maintenance</a>
@@ -3370,8 +3012,7 @@ restarted if it was terminated by Compute Engine (not a user).
     <dd>{{% md %}}Describes maintenance behavior for the
 instance. One of `MIGRATE` or `TERMINATE`, for more info, read
 [here](https://cloud.google.com/compute/docs/instances/setting-instance-scheduling-options)
-{{% /md %}}</dd>
-    <dt class="property-required"
+{{% /md %}}</dd><dt class="property-required"
             title="Required">
         <span id="preemptible_go">
 <a href="#preemptible_go" style="color: inherit; text-decoration: inherit;">Preemptible</a>
@@ -3380,14 +3021,11 @@ instance. One of `MIGRATE` or `TERMINATE`, for more info, read
         <span class="property-type">bool</span>
     </dt>
     <dd>{{% md %}}Whether the instance is preemptible.
-{{% /md %}}</dd>
-</dl>
+{{% /md %}}</dd></dl>
 {{% /choosable %}}
 
 {{% choosable language nodejs %}}
-<dl class="resources-properties">
-
-    <dt class="property-required"
+<dl class="resources-properties"><dt class="property-required"
             title="Required">
         <span id="automaticrestart_nodejs">
 <a href="#automaticrestart_nodejs" style="color: inherit; text-decoration: inherit;">automatic<wbr>Restart</a>
@@ -3397,8 +3035,7 @@ instance. One of `MIGRATE` or `TERMINATE`, for more info, read
     </dt>
     <dd>{{% md %}}Specifies if the instance should be
 restarted if it was terminated by Compute Engine (not a user).
-{{% /md %}}</dd>
-    <dt class="property-required"
+{{% /md %}}</dd><dt class="property-required"
             title="Required">
         <span id="minnodecpus_nodejs">
 <a href="#minnodecpus_nodejs" style="color: inherit; text-decoration: inherit;">min<wbr>Node<wbr>Cpus</a>
@@ -3406,8 +3043,7 @@ restarted if it was terminated by Compute Engine (not a user).
         <span class="property-indicator"></span>
         <span class="property-type">number</span>
     </dt>
-    <dd>{{% md %}}{{% /md %}}</dd>
-    <dt class="property-required"
+    <dd>{{% md %}}{{% /md %}}</dd><dt class="property-required"
             title="Required">
         <span id="nodeaffinities_nodejs">
 <a href="#nodeaffinities_nodejs" style="color: inherit; text-decoration: inherit;">node<wbr>Affinities</a>
@@ -3415,8 +3051,7 @@ restarted if it was terminated by Compute Engine (not a user).
         <span class="property-indicator"></span>
         <span class="property-type"><a href="#getinstanceschedulingnodeaffinity">Get<wbr>Instance<wbr>Scheduling<wbr>Node<wbr>Affinity[]</a></span>
     </dt>
-    <dd>{{% md %}}{{% /md %}}</dd>
-    <dt class="property-required"
+    <dd>{{% md %}}{{% /md %}}</dd><dt class="property-required"
             title="Required">
         <span id="onhostmaintenance_nodejs">
 <a href="#onhostmaintenance_nodejs" style="color: inherit; text-decoration: inherit;">on<wbr>Host<wbr>Maintenance</a>
@@ -3427,8 +3062,7 @@ restarted if it was terminated by Compute Engine (not a user).
     <dd>{{% md %}}Describes maintenance behavior for the
 instance. One of `MIGRATE` or `TERMINATE`, for more info, read
 [here](https://cloud.google.com/compute/docs/instances/setting-instance-scheduling-options)
-{{% /md %}}</dd>
-    <dt class="property-required"
+{{% /md %}}</dd><dt class="property-required"
             title="Required">
         <span id="preemptible_nodejs">
 <a href="#preemptible_nodejs" style="color: inherit; text-decoration: inherit;">preemptible</a>
@@ -3437,14 +3071,11 @@ instance. One of `MIGRATE` or `TERMINATE`, for more info, read
         <span class="property-type">boolean</span>
     </dt>
     <dd>{{% md %}}Whether the instance is preemptible.
-{{% /md %}}</dd>
-</dl>
+{{% /md %}}</dd></dl>
 {{% /choosable %}}
 
 {{% choosable language python %}}
-<dl class="resources-properties">
-
-    <dt class="property-required"
+<dl class="resources-properties"><dt class="property-required"
             title="Required">
         <span id="automatic_restart_python">
 <a href="#automatic_restart_python" style="color: inherit; text-decoration: inherit;">automatic_<wbr>restart</a>
@@ -3454,8 +3085,7 @@ instance. One of `MIGRATE` or `TERMINATE`, for more info, read
     </dt>
     <dd>{{% md %}}Specifies if the instance should be
 restarted if it was terminated by Compute Engine (not a user).
-{{% /md %}}</dd>
-    <dt class="property-required"
+{{% /md %}}</dd><dt class="property-required"
             title="Required">
         <span id="min_node_cpus_python">
 <a href="#min_node_cpus_python" style="color: inherit; text-decoration: inherit;">min_<wbr>node_<wbr>cpus</a>
@@ -3463,8 +3093,7 @@ restarted if it was terminated by Compute Engine (not a user).
         <span class="property-indicator"></span>
         <span class="property-type">int</span>
     </dt>
-    <dd>{{% md %}}{{% /md %}}</dd>
-    <dt class="property-required"
+    <dd>{{% md %}}{{% /md %}}</dd><dt class="property-required"
             title="Required">
         <span id="node_affinities_python">
 <a href="#node_affinities_python" style="color: inherit; text-decoration: inherit;">node_<wbr>affinities</a>
@@ -3472,8 +3101,7 @@ restarted if it was terminated by Compute Engine (not a user).
         <span class="property-indicator"></span>
         <span class="property-type"><a href="#getinstanceschedulingnodeaffinity">Sequence[Get<wbr>Instance<wbr>Scheduling<wbr>Node<wbr>Affinity<wbr>Args]</a></span>
     </dt>
-    <dd>{{% md %}}{{% /md %}}</dd>
-    <dt class="property-required"
+    <dd>{{% md %}}{{% /md %}}</dd><dt class="property-required"
             title="Required">
         <span id="on_host_maintenance_python">
 <a href="#on_host_maintenance_python" style="color: inherit; text-decoration: inherit;">on_<wbr>host_<wbr>maintenance</a>
@@ -3484,8 +3112,7 @@ restarted if it was terminated by Compute Engine (not a user).
     <dd>{{% md %}}Describes maintenance behavior for the
 instance. One of `MIGRATE` or `TERMINATE`, for more info, read
 [here](https://cloud.google.com/compute/docs/instances/setting-instance-scheduling-options)
-{{% /md %}}</dd>
-    <dt class="property-required"
+{{% /md %}}</dd><dt class="property-required"
             title="Required">
         <span id="preemptible_python">
 <a href="#preemptible_python" style="color: inherit; text-decoration: inherit;">preemptible</a>
@@ -3494,8 +3121,7 @@ instance. One of `MIGRATE` or `TERMINATE`, for more info, read
         <span class="property-type">bool</span>
     </dt>
     <dd>{{% md %}}Whether the instance is preemptible.
-{{% /md %}}</dd>
-</dl>
+{{% /md %}}</dd></dl>
 {{% /choosable %}}
 
 <h4 id="getinstanceschedulingnodeaffinity">Get<wbr>Instance<wbr>Scheduling<wbr>Node<wbr>Affinity</h4>
@@ -3503,9 +3129,7 @@ instance. One of `MIGRATE` or `TERMINATE`, for more info, read
 
 
 {{% choosable language csharp %}}
-<dl class="resources-properties">
-
-    <dt class="property-required"
+<dl class="resources-properties"><dt class="property-required"
             title="Required">
         <span id="key_csharp">
 <a href="#key_csharp" style="color: inherit; text-decoration: inherit;">Key</a>
@@ -3513,8 +3137,7 @@ instance. One of `MIGRATE` or `TERMINATE`, for more info, read
         <span class="property-indicator"></span>
         <span class="property-type">string</span>
     </dt>
-    <dd>{{% md %}}{{% /md %}}</dd>
-    <dt class="property-required"
+    <dd>{{% md %}}{{% /md %}}</dd><dt class="property-required"
             title="Required">
         <span id="operator_csharp">
 <a href="#operator_csharp" style="color: inherit; text-decoration: inherit;">Operator</a>
@@ -3522,8 +3145,7 @@ instance. One of `MIGRATE` or `TERMINATE`, for more info, read
         <span class="property-indicator"></span>
         <span class="property-type">string</span>
     </dt>
-    <dd>{{% md %}}{{% /md %}}</dd>
-    <dt class="property-required"
+    <dd>{{% md %}}{{% /md %}}</dd><dt class="property-required"
             title="Required">
         <span id="values_csharp">
 <a href="#values_csharp" style="color: inherit; text-decoration: inherit;">Values</a>
@@ -3531,14 +3153,11 @@ instance. One of `MIGRATE` or `TERMINATE`, for more info, read
         <span class="property-indicator"></span>
         <span class="property-type">List&lt;string&gt;</span>
     </dt>
-    <dd>{{% md %}}{{% /md %}}</dd>
-</dl>
+    <dd>{{% md %}}{{% /md %}}</dd></dl>
 {{% /choosable %}}
 
 {{% choosable language go %}}
-<dl class="resources-properties">
-
-    <dt class="property-required"
+<dl class="resources-properties"><dt class="property-required"
             title="Required">
         <span id="key_go">
 <a href="#key_go" style="color: inherit; text-decoration: inherit;">Key</a>
@@ -3546,8 +3165,7 @@ instance. One of `MIGRATE` or `TERMINATE`, for more info, read
         <span class="property-indicator"></span>
         <span class="property-type">string</span>
     </dt>
-    <dd>{{% md %}}{{% /md %}}</dd>
-    <dt class="property-required"
+    <dd>{{% md %}}{{% /md %}}</dd><dt class="property-required"
             title="Required">
         <span id="operator_go">
 <a href="#operator_go" style="color: inherit; text-decoration: inherit;">Operator</a>
@@ -3555,8 +3173,7 @@ instance. One of `MIGRATE` or `TERMINATE`, for more info, read
         <span class="property-indicator"></span>
         <span class="property-type">string</span>
     </dt>
-    <dd>{{% md %}}{{% /md %}}</dd>
-    <dt class="property-required"
+    <dd>{{% md %}}{{% /md %}}</dd><dt class="property-required"
             title="Required">
         <span id="values_go">
 <a href="#values_go" style="color: inherit; text-decoration: inherit;">Values</a>
@@ -3564,14 +3181,11 @@ instance. One of `MIGRATE` or `TERMINATE`, for more info, read
         <span class="property-indicator"></span>
         <span class="property-type">[]string</span>
     </dt>
-    <dd>{{% md %}}{{% /md %}}</dd>
-</dl>
+    <dd>{{% md %}}{{% /md %}}</dd></dl>
 {{% /choosable %}}
 
 {{% choosable language nodejs %}}
-<dl class="resources-properties">
-
-    <dt class="property-required"
+<dl class="resources-properties"><dt class="property-required"
             title="Required">
         <span id="key_nodejs">
 <a href="#key_nodejs" style="color: inherit; text-decoration: inherit;">key</a>
@@ -3579,8 +3193,7 @@ instance. One of `MIGRATE` or `TERMINATE`, for more info, read
         <span class="property-indicator"></span>
         <span class="property-type">string</span>
     </dt>
-    <dd>{{% md %}}{{% /md %}}</dd>
-    <dt class="property-required"
+    <dd>{{% md %}}{{% /md %}}</dd><dt class="property-required"
             title="Required">
         <span id="operator_nodejs">
 <a href="#operator_nodejs" style="color: inherit; text-decoration: inherit;">operator</a>
@@ -3588,8 +3201,7 @@ instance. One of `MIGRATE` or `TERMINATE`, for more info, read
         <span class="property-indicator"></span>
         <span class="property-type">string</span>
     </dt>
-    <dd>{{% md %}}{{% /md %}}</dd>
-    <dt class="property-required"
+    <dd>{{% md %}}{{% /md %}}</dd><dt class="property-required"
             title="Required">
         <span id="values_nodejs">
 <a href="#values_nodejs" style="color: inherit; text-decoration: inherit;">values</a>
@@ -3597,14 +3209,11 @@ instance. One of `MIGRATE` or `TERMINATE`, for more info, read
         <span class="property-indicator"></span>
         <span class="property-type">string[]</span>
     </dt>
-    <dd>{{% md %}}{{% /md %}}</dd>
-</dl>
+    <dd>{{% md %}}{{% /md %}}</dd></dl>
 {{% /choosable %}}
 
 {{% choosable language python %}}
-<dl class="resources-properties">
-
-    <dt class="property-required"
+<dl class="resources-properties"><dt class="property-required"
             title="Required">
         <span id="key_python">
 <a href="#key_python" style="color: inherit; text-decoration: inherit;">key</a>
@@ -3612,8 +3221,7 @@ instance. One of `MIGRATE` or `TERMINATE`, for more info, read
         <span class="property-indicator"></span>
         <span class="property-type">str</span>
     </dt>
-    <dd>{{% md %}}{{% /md %}}</dd>
-    <dt class="property-required"
+    <dd>{{% md %}}{{% /md %}}</dd><dt class="property-required"
             title="Required">
         <span id="operator_python">
 <a href="#operator_python" style="color: inherit; text-decoration: inherit;">operator</a>
@@ -3621,8 +3229,7 @@ instance. One of `MIGRATE` or `TERMINATE`, for more info, read
         <span class="property-indicator"></span>
         <span class="property-type">str</span>
     </dt>
-    <dd>{{% md %}}{{% /md %}}</dd>
-    <dt class="property-required"
+    <dd>{{% md %}}{{% /md %}}</dd><dt class="property-required"
             title="Required">
         <span id="values_python">
 <a href="#values_python" style="color: inherit; text-decoration: inherit;">values</a>
@@ -3630,8 +3237,7 @@ instance. One of `MIGRATE` or `TERMINATE`, for more info, read
         <span class="property-indicator"></span>
         <span class="property-type">Sequence[str]</span>
     </dt>
-    <dd>{{% md %}}{{% /md %}}</dd>
-</dl>
+    <dd>{{% md %}}{{% /md %}}</dd></dl>
 {{% /choosable %}}
 
 <h4 id="getinstancescratchdisk">Get<wbr>Instance<wbr>Scratch<wbr>Disk</h4>
@@ -3639,9 +3245,7 @@ instance. One of `MIGRATE` or `TERMINATE`, for more info, read
 
 
 {{% choosable language csharp %}}
-<dl class="resources-properties">
-
-    <dt class="property-required"
+<dl class="resources-properties"><dt class="property-required"
             title="Required">
         <span id="interface_csharp">
 <a href="#interface_csharp" style="color: inherit; text-decoration: inherit;">Interface</a>
@@ -3650,14 +3254,11 @@ instance. One of `MIGRATE` or `TERMINATE`, for more info, read
         <span class="property-type">string</span>
     </dt>
     <dd>{{% md %}}The disk interface used for attaching this disk. One of `SCSI` or `NVME`.
-{{% /md %}}</dd>
-</dl>
+{{% /md %}}</dd></dl>
 {{% /choosable %}}
 
 {{% choosable language go %}}
-<dl class="resources-properties">
-
-    <dt class="property-required"
+<dl class="resources-properties"><dt class="property-required"
             title="Required">
         <span id="interface_go">
 <a href="#interface_go" style="color: inherit; text-decoration: inherit;">Interface</a>
@@ -3666,14 +3267,11 @@ instance. One of `MIGRATE` or `TERMINATE`, for more info, read
         <span class="property-type">string</span>
     </dt>
     <dd>{{% md %}}The disk interface used for attaching this disk. One of `SCSI` or `NVME`.
-{{% /md %}}</dd>
-</dl>
+{{% /md %}}</dd></dl>
 {{% /choosable %}}
 
 {{% choosable language nodejs %}}
-<dl class="resources-properties">
-
-    <dt class="property-required"
+<dl class="resources-properties"><dt class="property-required"
             title="Required">
         <span id="interface_nodejs">
 <a href="#interface_nodejs" style="color: inherit; text-decoration: inherit;">interface</a>
@@ -3682,14 +3280,11 @@ instance. One of `MIGRATE` or `TERMINATE`, for more info, read
         <span class="property-type">string</span>
     </dt>
     <dd>{{% md %}}The disk interface used for attaching this disk. One of `SCSI` or `NVME`.
-{{% /md %}}</dd>
-</dl>
+{{% /md %}}</dd></dl>
 {{% /choosable %}}
 
 {{% choosable language python %}}
-<dl class="resources-properties">
-
-    <dt class="property-required"
+<dl class="resources-properties"><dt class="property-required"
             title="Required">
         <span id="interface_python">
 <a href="#interface_python" style="color: inherit; text-decoration: inherit;">interface</a>
@@ -3698,8 +3293,7 @@ instance. One of `MIGRATE` or `TERMINATE`, for more info, read
         <span class="property-type">str</span>
     </dt>
     <dd>{{% md %}}The disk interface used for attaching this disk. One of `SCSI` or `NVME`.
-{{% /md %}}</dd>
-</dl>
+{{% /md %}}</dd></dl>
 {{% /choosable %}}
 
 <h4 id="getinstanceserviceaccount">Get<wbr>Instance<wbr>Service<wbr>Account</h4>
@@ -3707,9 +3301,7 @@ instance. One of `MIGRATE` or `TERMINATE`, for more info, read
 
 
 {{% choosable language csharp %}}
-<dl class="resources-properties">
-
-    <dt class="property-required"
+<dl class="resources-properties"><dt class="property-required"
             title="Required">
         <span id="email_csharp">
 <a href="#email_csharp" style="color: inherit; text-decoration: inherit;">Email</a>
@@ -3718,8 +3310,7 @@ instance. One of `MIGRATE` or `TERMINATE`, for more info, read
         <span class="property-type">string</span>
     </dt>
     <dd>{{% md %}}The service account e-mail address.
-{{% /md %}}</dd>
-    <dt class="property-required"
+{{% /md %}}</dd><dt class="property-required"
             title="Required">
         <span id="scopes_csharp">
 <a href="#scopes_csharp" style="color: inherit; text-decoration: inherit;">Scopes</a>
@@ -3728,14 +3319,11 @@ instance. One of `MIGRATE` or `TERMINATE`, for more info, read
         <span class="property-type">List&lt;string&gt;</span>
     </dt>
     <dd>{{% md %}}A list of service scopes.
-{{% /md %}}</dd>
-</dl>
+{{% /md %}}</dd></dl>
 {{% /choosable %}}
 
 {{% choosable language go %}}
-<dl class="resources-properties">
-
-    <dt class="property-required"
+<dl class="resources-properties"><dt class="property-required"
             title="Required">
         <span id="email_go">
 <a href="#email_go" style="color: inherit; text-decoration: inherit;">Email</a>
@@ -3744,8 +3332,7 @@ instance. One of `MIGRATE` or `TERMINATE`, for more info, read
         <span class="property-type">string</span>
     </dt>
     <dd>{{% md %}}The service account e-mail address.
-{{% /md %}}</dd>
-    <dt class="property-required"
+{{% /md %}}</dd><dt class="property-required"
             title="Required">
         <span id="scopes_go">
 <a href="#scopes_go" style="color: inherit; text-decoration: inherit;">Scopes</a>
@@ -3754,14 +3341,11 @@ instance. One of `MIGRATE` or `TERMINATE`, for more info, read
         <span class="property-type">[]string</span>
     </dt>
     <dd>{{% md %}}A list of service scopes.
-{{% /md %}}</dd>
-</dl>
+{{% /md %}}</dd></dl>
 {{% /choosable %}}
 
 {{% choosable language nodejs %}}
-<dl class="resources-properties">
-
-    <dt class="property-required"
+<dl class="resources-properties"><dt class="property-required"
             title="Required">
         <span id="email_nodejs">
 <a href="#email_nodejs" style="color: inherit; text-decoration: inherit;">email</a>
@@ -3770,8 +3354,7 @@ instance. One of `MIGRATE` or `TERMINATE`, for more info, read
         <span class="property-type">string</span>
     </dt>
     <dd>{{% md %}}The service account e-mail address.
-{{% /md %}}</dd>
-    <dt class="property-required"
+{{% /md %}}</dd><dt class="property-required"
             title="Required">
         <span id="scopes_nodejs">
 <a href="#scopes_nodejs" style="color: inherit; text-decoration: inherit;">scopes</a>
@@ -3780,14 +3363,11 @@ instance. One of `MIGRATE` or `TERMINATE`, for more info, read
         <span class="property-type">string[]</span>
     </dt>
     <dd>{{% md %}}A list of service scopes.
-{{% /md %}}</dd>
-</dl>
+{{% /md %}}</dd></dl>
 {{% /choosable %}}
 
 {{% choosable language python %}}
-<dl class="resources-properties">
-
-    <dt class="property-required"
+<dl class="resources-properties"><dt class="property-required"
             title="Required">
         <span id="email_python">
 <a href="#email_python" style="color: inherit; text-decoration: inherit;">email</a>
@@ -3796,8 +3376,7 @@ instance. One of `MIGRATE` or `TERMINATE`, for more info, read
         <span class="property-type">str</span>
     </dt>
     <dd>{{% md %}}The service account e-mail address.
-{{% /md %}}</dd>
-    <dt class="property-required"
+{{% /md %}}</dd><dt class="property-required"
             title="Required">
         <span id="scopes_python">
 <a href="#scopes_python" style="color: inherit; text-decoration: inherit;">scopes</a>
@@ -3806,8 +3385,7 @@ instance. One of `MIGRATE` or `TERMINATE`, for more info, read
         <span class="property-type">Sequence[str]</span>
     </dt>
     <dd>{{% md %}}A list of service scopes.
-{{% /md %}}</dd>
-</dl>
+{{% /md %}}</dd></dl>
 {{% /choosable %}}
 
 <h4 id="getinstanceshieldedinstanceconfig">Get<wbr>Instance<wbr>Shielded<wbr>Instance<wbr>Config</h4>
@@ -3815,9 +3393,7 @@ instance. One of `MIGRATE` or `TERMINATE`, for more info, read
 
 
 {{% choosable language csharp %}}
-<dl class="resources-properties">
-
-    <dt class="property-required"
+<dl class="resources-properties"><dt class="property-required"
             title="Required">
         <span id="enableintegritymonitoring_csharp">
 <a href="#enableintegritymonitoring_csharp" style="color: inherit; text-decoration: inherit;">Enable<wbr>Integrity<wbr>Monitoring</a>
@@ -3825,8 +3401,7 @@ instance. One of `MIGRATE` or `TERMINATE`, for more info, read
         <span class="property-indicator"></span>
         <span class="property-type">bool</span>
     </dt>
-    <dd>{{% md %}}{{% /md %}}</dd>
-    <dt class="property-required"
+    <dd>{{% md %}}{{% /md %}}</dd><dt class="property-required"
             title="Required">
         <span id="enablesecureboot_csharp">
 <a href="#enablesecureboot_csharp" style="color: inherit; text-decoration: inherit;">Enable<wbr>Secure<wbr>Boot</a>
@@ -3834,8 +3409,7 @@ instance. One of `MIGRATE` or `TERMINATE`, for more info, read
         <span class="property-indicator"></span>
         <span class="property-type">bool</span>
     </dt>
-    <dd>{{% md %}}{{% /md %}}</dd>
-    <dt class="property-required"
+    <dd>{{% md %}}{{% /md %}}</dd><dt class="property-required"
             title="Required">
         <span id="enablevtpm_csharp">
 <a href="#enablevtpm_csharp" style="color: inherit; text-decoration: inherit;">Enable<wbr>Vtpm</a>
@@ -3843,14 +3417,11 @@ instance. One of `MIGRATE` or `TERMINATE`, for more info, read
         <span class="property-indicator"></span>
         <span class="property-type">bool</span>
     </dt>
-    <dd>{{% md %}}{{% /md %}}</dd>
-</dl>
+    <dd>{{% md %}}{{% /md %}}</dd></dl>
 {{% /choosable %}}
 
 {{% choosable language go %}}
-<dl class="resources-properties">
-
-    <dt class="property-required"
+<dl class="resources-properties"><dt class="property-required"
             title="Required">
         <span id="enableintegritymonitoring_go">
 <a href="#enableintegritymonitoring_go" style="color: inherit; text-decoration: inherit;">Enable<wbr>Integrity<wbr>Monitoring</a>
@@ -3858,8 +3429,7 @@ instance. One of `MIGRATE` or `TERMINATE`, for more info, read
         <span class="property-indicator"></span>
         <span class="property-type">bool</span>
     </dt>
-    <dd>{{% md %}}{{% /md %}}</dd>
-    <dt class="property-required"
+    <dd>{{% md %}}{{% /md %}}</dd><dt class="property-required"
             title="Required">
         <span id="enablesecureboot_go">
 <a href="#enablesecureboot_go" style="color: inherit; text-decoration: inherit;">Enable<wbr>Secure<wbr>Boot</a>
@@ -3867,8 +3437,7 @@ instance. One of `MIGRATE` or `TERMINATE`, for more info, read
         <span class="property-indicator"></span>
         <span class="property-type">bool</span>
     </dt>
-    <dd>{{% md %}}{{% /md %}}</dd>
-    <dt class="property-required"
+    <dd>{{% md %}}{{% /md %}}</dd><dt class="property-required"
             title="Required">
         <span id="enablevtpm_go">
 <a href="#enablevtpm_go" style="color: inherit; text-decoration: inherit;">Enable<wbr>Vtpm</a>
@@ -3876,14 +3445,11 @@ instance. One of `MIGRATE` or `TERMINATE`, for more info, read
         <span class="property-indicator"></span>
         <span class="property-type">bool</span>
     </dt>
-    <dd>{{% md %}}{{% /md %}}</dd>
-</dl>
+    <dd>{{% md %}}{{% /md %}}</dd></dl>
 {{% /choosable %}}
 
 {{% choosable language nodejs %}}
-<dl class="resources-properties">
-
-    <dt class="property-required"
+<dl class="resources-properties"><dt class="property-required"
             title="Required">
         <span id="enableintegritymonitoring_nodejs">
 <a href="#enableintegritymonitoring_nodejs" style="color: inherit; text-decoration: inherit;">enable<wbr>Integrity<wbr>Monitoring</a>
@@ -3891,8 +3457,7 @@ instance. One of `MIGRATE` or `TERMINATE`, for more info, read
         <span class="property-indicator"></span>
         <span class="property-type">boolean</span>
     </dt>
-    <dd>{{% md %}}{{% /md %}}</dd>
-    <dt class="property-required"
+    <dd>{{% md %}}{{% /md %}}</dd><dt class="property-required"
             title="Required">
         <span id="enablesecureboot_nodejs">
 <a href="#enablesecureboot_nodejs" style="color: inherit; text-decoration: inherit;">enable<wbr>Secure<wbr>Boot</a>
@@ -3900,8 +3465,7 @@ instance. One of `MIGRATE` or `TERMINATE`, for more info, read
         <span class="property-indicator"></span>
         <span class="property-type">boolean</span>
     </dt>
-    <dd>{{% md %}}{{% /md %}}</dd>
-    <dt class="property-required"
+    <dd>{{% md %}}{{% /md %}}</dd><dt class="property-required"
             title="Required">
         <span id="enablevtpm_nodejs">
 <a href="#enablevtpm_nodejs" style="color: inherit; text-decoration: inherit;">enable<wbr>Vtpm</a>
@@ -3909,14 +3473,11 @@ instance. One of `MIGRATE` or `TERMINATE`, for more info, read
         <span class="property-indicator"></span>
         <span class="property-type">boolean</span>
     </dt>
-    <dd>{{% md %}}{{% /md %}}</dd>
-</dl>
+    <dd>{{% md %}}{{% /md %}}</dd></dl>
 {{% /choosable %}}
 
 {{% choosable language python %}}
-<dl class="resources-properties">
-
-    <dt class="property-required"
+<dl class="resources-properties"><dt class="property-required"
             title="Required">
         <span id="enable_integrity_monitoring_python">
 <a href="#enable_integrity_monitoring_python" style="color: inherit; text-decoration: inherit;">enable_<wbr>integrity_<wbr>monitoring</a>
@@ -3924,8 +3485,7 @@ instance. One of `MIGRATE` or `TERMINATE`, for more info, read
         <span class="property-indicator"></span>
         <span class="property-type">bool</span>
     </dt>
-    <dd>{{% md %}}{{% /md %}}</dd>
-    <dt class="property-required"
+    <dd>{{% md %}}{{% /md %}}</dd><dt class="property-required"
             title="Required">
         <span id="enable_secure_boot_python">
 <a href="#enable_secure_boot_python" style="color: inherit; text-decoration: inherit;">enable_<wbr>secure_<wbr>boot</a>
@@ -3933,8 +3493,7 @@ instance. One of `MIGRATE` or `TERMINATE`, for more info, read
         <span class="property-indicator"></span>
         <span class="property-type">bool</span>
     </dt>
-    <dd>{{% md %}}{{% /md %}}</dd>
-    <dt class="property-required"
+    <dd>{{% md %}}{{% /md %}}</dd><dt class="property-required"
             title="Required">
         <span id="enable_vtpm_python">
 <a href="#enable_vtpm_python" style="color: inherit; text-decoration: inherit;">enable_<wbr>vtpm</a>
@@ -3942,8 +3501,7 @@ instance. One of `MIGRATE` or `TERMINATE`, for more info, read
         <span class="property-indicator"></span>
         <span class="property-type">bool</span>
     </dt>
-    <dd>{{% md %}}{{% /md %}}</dd>
-</dl>
+    <dd>{{% md %}}{{% /md %}}</dd></dl>
 {{% /choosable %}}
 
 
@@ -3957,6 +3515,6 @@ instance. One of `MIGRATE` or `TERMINATE`, for more info, read
 	<dt>License</dt>
 	<dd>Apache-2.0</dd>
 	<dt>Notes</dt>
-	<dd>This Pulumi package is based on the [`google-beta` Terraform Provider](https://github.com/hashicorp/terraform-provider-google-beta).</dd>
+	<dd>{{% md %}}This Pulumi package is based on the [`google-beta` Terraform Provider](https://github.com/hashicorp/terraform-provider-google-beta).{{% /md %}}</dd>
 </dl>
 

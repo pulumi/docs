@@ -14,11 +14,17 @@ A managed Cassandra data center.
 API Version: 2021-03-01-preview.
 
 {{% examples %}}
+
 ## Example Usage
 
 {{< chooser language "typescript,python,go,csharp" / >}}
+
+
 ### CosmosDBManagedCassandraDataCenterCreate
-{{% example csharp %}}
+
+
+{{< example csharp >}}
+
 ```csharp
 using Pulumi;
 using AzureNative = Pulumi.AzureNative;
@@ -46,9 +52,12 @@ class MyStack : Stack
 
 ```
 
-{{% /example %}}
 
-{{% example go %}}
+{{< /example >}}
+
+
+{{< example go >}}
+
 
 ```go
 package main
@@ -80,9 +89,12 @@ func main() {
 
 ```
 
-{{% /example %}}
 
-{{% example python %}}
+{{< /example >}}
+
+
+{{< example python >}}
+
 
 ```python
 import pulumi
@@ -101,9 +113,12 @@ cassandra_data_center = azure_native.documentdb.CassandraDataCenter("cassandraDa
 
 ```
 
-{{% /example %}}
 
-{{% example typescript %}}
+{{< /example >}}
+
+
+{{< example typescript >}}
+
 
 ```typescript
 import * as pulumi from "@pulumi/pulumi";
@@ -123,9 +138,16 @@ const cassandraDataCenter = new azure_native.documentdb.CassandraDataCenter("cas
 
 ```
 
-{{% /example %}}
+
+{{< /example >}}
+
+
+
+
 
 {{% /examples %}}
+
+
 
 
 ## Create a CassandraDataCenter Resource {#create}
@@ -150,9 +172,7 @@ const cassandraDataCenter = new azure_native.documentdb.CassandraDataCenter("cas
 
 {{% choosable language nodejs %}}
 
-<dl class="resources-properties">
-  
-    <dt
+<dl class="resources-properties"><dt
         class="property-required" title="Required">
         <span>name</span>
         <span class="property-indicator"></span>
@@ -160,9 +180,7 @@ const cassandraDataCenter = new azure_native.documentdb.CassandraDataCenter("cas
     </dt>
     <dd>
       The unique name of the resource.
-    </dd>
-  
-    <dt
+    </dd><dt
         class="property-required" title="Required">
         <span>args</span>
         <span class="property-indicator"></span>
@@ -170,9 +188,7 @@ const cassandraDataCenter = new azure_native.documentdb.CassandraDataCenter("cas
     </dt>
     <dd>
       The arguments to resource properties.
-    </dd>
-  
-    <dt
+    </dd><dt
         class="property-optional" title="Optional">
         <span>opts</span>
         <span class="property-indicator"></span>
@@ -180,10 +196,7 @@ const cassandraDataCenter = new azure_native.documentdb.CassandraDataCenter("cas
     </dt>
     <dd>
       Bag of options to control resource&#39;s behavior.
-    </dd>
-  
-
-</dl>
+    </dd></dl>
 
 {{% /choosable %}}
 
@@ -209,9 +222,7 @@ const cassandraDataCenter = new azure_native.documentdb.CassandraDataCenter("cas
 
 {{% choosable language go %}}
 
-<dl class="resources-properties">
-  
-    <dt
+<dl class="resources-properties"><dt
         class="property-optional" title="Optional">
         <span>ctx</span>
         <span class="property-indicator"></span>
@@ -219,9 +230,7 @@ const cassandraDataCenter = new azure_native.documentdb.CassandraDataCenter("cas
     </dt>
     <dd>
       Context object for the current deployment.
-    </dd>
-  
-    <dt
+    </dd><dt
         class="property-required" title="Required">
         <span>name</span>
         <span class="property-indicator"></span>
@@ -229,9 +238,7 @@ const cassandraDataCenter = new azure_native.documentdb.CassandraDataCenter("cas
     </dt>
     <dd>
       The unique name of the resource.
-    </dd>
-  
-    <dt
+    </dd><dt
         class="property-required" title="Required">
         <span>args</span>
         <span class="property-indicator"></span>
@@ -239,9 +246,7 @@ const cassandraDataCenter = new azure_native.documentdb.CassandraDataCenter("cas
     </dt>
     <dd>
       The arguments to resource properties.
-    </dd>
-  
-    <dt
+    </dd><dt
         class="property-optional" title="Optional">
         <span>opts</span>
         <span class="property-indicator"></span>
@@ -249,18 +254,13 @@ const cassandraDataCenter = new azure_native.documentdb.CassandraDataCenter("cas
     </dt>
     <dd>
       Bag of options to control resource&#39;s behavior.
-    </dd>
-  
-
-</dl>
+    </dd></dl>
 
 {{% /choosable %}}
 
 {{% choosable language csharp %}}
 
-<dl class="resources-properties">
-  
-    <dt
+<dl class="resources-properties"><dt
         class="property-required" title="Required">
         <span>name</span>
         <span class="property-indicator"></span>
@@ -268,9 +268,7 @@ const cassandraDataCenter = new azure_native.documentdb.CassandraDataCenter("cas
     </dt>
     <dd>
       The unique name of the resource.
-    </dd>
-  
-    <dt
+    </dd><dt
         class="property-required" title="Required">
         <span>args</span>
         <span class="property-indicator"></span>
@@ -278,9 +276,7 @@ const cassandraDataCenter = new azure_native.documentdb.CassandraDataCenter("cas
     </dt>
     <dd>
       The arguments to resource properties.
-    </dd>
-  
-    <dt
+    </dd><dt
         class="property-optional" title="Optional">
         <span>opts</span>
         <span class="property-indicator"></span>
@@ -288,10 +284,7 @@ const cassandraDataCenter = new azure_native.documentdb.CassandraDataCenter("cas
     </dt>
     <dd>
       Bag of options to control resource&#39;s behavior.
-    </dd>
-  
-
-</dl>
+    </dd></dl>
 
 {{% /choosable %}}
 
@@ -306,9 +299,7 @@ The CassandraDataCenter resource accepts the following [input]({{< relref "/docs
 
 
 {{% choosable language csharp %}}
-<dl class="resources-properties">
-
-    <dt class="property-required"
+<dl class="resources-properties"><dt class="property-required"
             title="Required">
         <span id="clustername_csharp">
 <a href="#clustername_csharp" style="color: inherit; text-decoration: inherit;">Cluster<wbr>Name</a>
@@ -316,8 +307,7 @@ The CassandraDataCenter resource accepts the following [input]({{< relref "/docs
         <span class="property-indicator"></span>
         <span class="property-type">string</span>
     </dt>
-    <dd>{{% md %}}Managed Cassandra cluster name.{{% /md %}}</dd>
-    <dt class="property-required"
+    <dd>{{% md %}}Managed Cassandra cluster name.{{% /md %}}</dd><dt class="property-required"
             title="Required">
         <span id="resourcegroupname_csharp">
 <a href="#resourcegroupname_csharp" style="color: inherit; text-decoration: inherit;">Resource<wbr>Group<wbr>Name</a>
@@ -325,8 +315,7 @@ The CassandraDataCenter resource accepts the following [input]({{< relref "/docs
         <span class="property-indicator"></span>
         <span class="property-type">string</span>
     </dt>
-    <dd>{{% md %}}The name of the resource group. The name is case insensitive.{{% /md %}}</dd>
-    <dt class="property-optional"
+    <dd>{{% md %}}The name of the resource group. The name is case insensitive.{{% /md %}}</dd><dt class="property-optional"
             title="Optional">
         <span id="datacentername_csharp">
 <a href="#datacentername_csharp" style="color: inherit; text-decoration: inherit;">Data<wbr>Center<wbr>Name</a>
@@ -334,8 +323,7 @@ The CassandraDataCenter resource accepts the following [input]({{< relref "/docs
         <span class="property-indicator"></span>
         <span class="property-type">string</span>
     </dt>
-    <dd>{{% md %}}Data center name in a managed Cassandra cluster.{{% /md %}}</dd>
-    <dt class="property-optional"
+    <dd>{{% md %}}Data center name in a managed Cassandra cluster.{{% /md %}}</dd><dt class="property-optional"
             title="Optional">
         <span id="properties_csharp">
 <a href="#properties_csharp" style="color: inherit; text-decoration: inherit;">Properties</a>
@@ -343,14 +331,11 @@ The CassandraDataCenter resource accepts the following [input]({{< relref "/docs
         <span class="property-indicator"></span>
         <span class="property-type"><a href="#datacenterresourceproperties">Pulumi.<wbr>Azure<wbr>Native.<wbr>Document<wbr>DB.<wbr>Inputs.<wbr>Data<wbr>Center<wbr>Resource<wbr>Properties<wbr>Args</a></span>
     </dt>
-    <dd>{{% md %}}Properties of a managed Cassandra data center.{{% /md %}}</dd>
-</dl>
+    <dd>{{% md %}}Properties of a managed Cassandra data center.{{% /md %}}</dd></dl>
 {{% /choosable %}}
 
 {{% choosable language go %}}
-<dl class="resources-properties">
-
-    <dt class="property-required"
+<dl class="resources-properties"><dt class="property-required"
             title="Required">
         <span id="clustername_go">
 <a href="#clustername_go" style="color: inherit; text-decoration: inherit;">Cluster<wbr>Name</a>
@@ -358,8 +343,7 @@ The CassandraDataCenter resource accepts the following [input]({{< relref "/docs
         <span class="property-indicator"></span>
         <span class="property-type">string</span>
     </dt>
-    <dd>{{% md %}}Managed Cassandra cluster name.{{% /md %}}</dd>
-    <dt class="property-required"
+    <dd>{{% md %}}Managed Cassandra cluster name.{{% /md %}}</dd><dt class="property-required"
             title="Required">
         <span id="resourcegroupname_go">
 <a href="#resourcegroupname_go" style="color: inherit; text-decoration: inherit;">Resource<wbr>Group<wbr>Name</a>
@@ -367,8 +351,7 @@ The CassandraDataCenter resource accepts the following [input]({{< relref "/docs
         <span class="property-indicator"></span>
         <span class="property-type">string</span>
     </dt>
-    <dd>{{% md %}}The name of the resource group. The name is case insensitive.{{% /md %}}</dd>
-    <dt class="property-optional"
+    <dd>{{% md %}}The name of the resource group. The name is case insensitive.{{% /md %}}</dd><dt class="property-optional"
             title="Optional">
         <span id="datacentername_go">
 <a href="#datacentername_go" style="color: inherit; text-decoration: inherit;">Data<wbr>Center<wbr>Name</a>
@@ -376,8 +359,7 @@ The CassandraDataCenter resource accepts the following [input]({{< relref "/docs
         <span class="property-indicator"></span>
         <span class="property-type">string</span>
     </dt>
-    <dd>{{% md %}}Data center name in a managed Cassandra cluster.{{% /md %}}</dd>
-    <dt class="property-optional"
+    <dd>{{% md %}}Data center name in a managed Cassandra cluster.{{% /md %}}</dd><dt class="property-optional"
             title="Optional">
         <span id="properties_go">
 <a href="#properties_go" style="color: inherit; text-decoration: inherit;">Properties</a>
@@ -385,14 +367,11 @@ The CassandraDataCenter resource accepts the following [input]({{< relref "/docs
         <span class="property-indicator"></span>
         <span class="property-type"><a href="#datacenterresourceproperties">Data<wbr>Center<wbr>Resource<wbr>Properties</a></span>
     </dt>
-    <dd>{{% md %}}Properties of a managed Cassandra data center.{{% /md %}}</dd>
-</dl>
+    <dd>{{% md %}}Properties of a managed Cassandra data center.{{% /md %}}</dd></dl>
 {{% /choosable %}}
 
 {{% choosable language nodejs %}}
-<dl class="resources-properties">
-
-    <dt class="property-required"
+<dl class="resources-properties"><dt class="property-required"
             title="Required">
         <span id="clustername_nodejs">
 <a href="#clustername_nodejs" style="color: inherit; text-decoration: inherit;">cluster<wbr>Name</a>
@@ -400,8 +379,7 @@ The CassandraDataCenter resource accepts the following [input]({{< relref "/docs
         <span class="property-indicator"></span>
         <span class="property-type">string</span>
     </dt>
-    <dd>{{% md %}}Managed Cassandra cluster name.{{% /md %}}</dd>
-    <dt class="property-required"
+    <dd>{{% md %}}Managed Cassandra cluster name.{{% /md %}}</dd><dt class="property-required"
             title="Required">
         <span id="resourcegroupname_nodejs">
 <a href="#resourcegroupname_nodejs" style="color: inherit; text-decoration: inherit;">resource<wbr>Group<wbr>Name</a>
@@ -409,8 +387,7 @@ The CassandraDataCenter resource accepts the following [input]({{< relref "/docs
         <span class="property-indicator"></span>
         <span class="property-type">string</span>
     </dt>
-    <dd>{{% md %}}The name of the resource group. The name is case insensitive.{{% /md %}}</dd>
-    <dt class="property-optional"
+    <dd>{{% md %}}The name of the resource group. The name is case insensitive.{{% /md %}}</dd><dt class="property-optional"
             title="Optional">
         <span id="datacentername_nodejs">
 <a href="#datacentername_nodejs" style="color: inherit; text-decoration: inherit;">data<wbr>Center<wbr>Name</a>
@@ -418,8 +395,7 @@ The CassandraDataCenter resource accepts the following [input]({{< relref "/docs
         <span class="property-indicator"></span>
         <span class="property-type">string</span>
     </dt>
-    <dd>{{% md %}}Data center name in a managed Cassandra cluster.{{% /md %}}</dd>
-    <dt class="property-optional"
+    <dd>{{% md %}}Data center name in a managed Cassandra cluster.{{% /md %}}</dd><dt class="property-optional"
             title="Optional">
         <span id="properties_nodejs">
 <a href="#properties_nodejs" style="color: inherit; text-decoration: inherit;">properties</a>
@@ -427,14 +403,11 @@ The CassandraDataCenter resource accepts the following [input]({{< relref "/docs
         <span class="property-indicator"></span>
         <span class="property-type"><a href="#datacenterresourceproperties">Data<wbr>Center<wbr>Resource<wbr>Properties</a></span>
     </dt>
-    <dd>{{% md %}}Properties of a managed Cassandra data center.{{% /md %}}</dd>
-</dl>
+    <dd>{{% md %}}Properties of a managed Cassandra data center.{{% /md %}}</dd></dl>
 {{% /choosable %}}
 
 {{% choosable language python %}}
-<dl class="resources-properties">
-
-    <dt class="property-required"
+<dl class="resources-properties"><dt class="property-required"
             title="Required">
         <span id="cluster_name_python">
 <a href="#cluster_name_python" style="color: inherit; text-decoration: inherit;">cluster_<wbr>name</a>
@@ -442,8 +415,7 @@ The CassandraDataCenter resource accepts the following [input]({{< relref "/docs
         <span class="property-indicator"></span>
         <span class="property-type">str</span>
     </dt>
-    <dd>{{% md %}}Managed Cassandra cluster name.{{% /md %}}</dd>
-    <dt class="property-required"
+    <dd>{{% md %}}Managed Cassandra cluster name.{{% /md %}}</dd><dt class="property-required"
             title="Required">
         <span id="resource_group_name_python">
 <a href="#resource_group_name_python" style="color: inherit; text-decoration: inherit;">resource_<wbr>group_<wbr>name</a>
@@ -451,8 +423,7 @@ The CassandraDataCenter resource accepts the following [input]({{< relref "/docs
         <span class="property-indicator"></span>
         <span class="property-type">str</span>
     </dt>
-    <dd>{{% md %}}The name of the resource group. The name is case insensitive.{{% /md %}}</dd>
-    <dt class="property-optional"
+    <dd>{{% md %}}The name of the resource group. The name is case insensitive.{{% /md %}}</dd><dt class="property-optional"
             title="Optional">
         <span id="data_center_name_python">
 <a href="#data_center_name_python" style="color: inherit; text-decoration: inherit;">data_<wbr>center_<wbr>name</a>
@@ -460,8 +431,7 @@ The CassandraDataCenter resource accepts the following [input]({{< relref "/docs
         <span class="property-indicator"></span>
         <span class="property-type">str</span>
     </dt>
-    <dd>{{% md %}}Data center name in a managed Cassandra cluster.{{% /md %}}</dd>
-    <dt class="property-optional"
+    <dd>{{% md %}}Data center name in a managed Cassandra cluster.{{% /md %}}</dd><dt class="property-optional"
             title="Optional">
         <span id="properties_python">
 <a href="#properties_python" style="color: inherit; text-decoration: inherit;">properties</a>
@@ -469,8 +439,7 @@ The CassandraDataCenter resource accepts the following [input]({{< relref "/docs
         <span class="property-indicator"></span>
         <span class="property-type"><a href="#datacenterresourceproperties">Data<wbr>Center<wbr>Resource<wbr>Properties<wbr>Args</a></span>
     </dt>
-    <dd>{{% md %}}Properties of a managed Cassandra data center.{{% /md %}}</dd>
-</dl>
+    <dd>{{% md %}}Properties of a managed Cassandra data center.{{% /md %}}</dd></dl>
 {{% /choosable %}}
 
 
@@ -481,9 +450,7 @@ All [input](#inputs) properties are implicitly available as output properties. A
 
 
 {{% choosable language csharp %}}
-<dl class="resources-properties">
-
-    <dt class="property-"
+<dl class="resources-properties"><dt class="property-"
             title="">
         <span id="id_csharp">
 <a href="#id_csharp" style="color: inherit; text-decoration: inherit;">Id</a>
@@ -491,8 +458,7 @@ All [input](#inputs) properties are implicitly available as output properties. A
         <span class="property-indicator"></span>
         <span class="property-type">string</span>
     </dt>
-    <dd>{{% md %}}The provider-assigned unique ID for this managed resource.{{% /md %}}</dd>
-    <dt class="property-"
+    <dd>{{% md %}}The provider-assigned unique ID for this managed resource.{{% /md %}}</dd><dt class="property-"
             title="">
         <span id="name_csharp">
 <a href="#name_csharp" style="color: inherit; text-decoration: inherit;">Name</a>
@@ -500,8 +466,7 @@ All [input](#inputs) properties are implicitly available as output properties. A
         <span class="property-indicator"></span>
         <span class="property-type">string</span>
     </dt>
-    <dd>{{% md %}}The name of the resource{{% /md %}}</dd>
-    <dt class="property-"
+    <dd>{{% md %}}The name of the resource{{% /md %}}</dd><dt class="property-"
             title="">
         <span id="type_csharp">
 <a href="#type_csharp" style="color: inherit; text-decoration: inherit;">Type</a>
@@ -509,14 +474,11 @@ All [input](#inputs) properties are implicitly available as output properties. A
         <span class="property-indicator"></span>
         <span class="property-type">string</span>
     </dt>
-    <dd>{{% md %}}The type of the resource. E.g. "Microsoft.Compute/virtualMachines" or "Microsoft.Storage/storageAccounts"{{% /md %}}</dd>
-</dl>
+    <dd>{{% md %}}The type of the resource. E.g. "Microsoft.Compute/virtualMachines" or "Microsoft.Storage/storageAccounts"{{% /md %}}</dd></dl>
 {{% /choosable %}}
 
 {{% choosable language go %}}
-<dl class="resources-properties">
-
-    <dt class="property-"
+<dl class="resources-properties"><dt class="property-"
             title="">
         <span id="id_go">
 <a href="#id_go" style="color: inherit; text-decoration: inherit;">Id</a>
@@ -524,8 +486,7 @@ All [input](#inputs) properties are implicitly available as output properties. A
         <span class="property-indicator"></span>
         <span class="property-type">string</span>
     </dt>
-    <dd>{{% md %}}The provider-assigned unique ID for this managed resource.{{% /md %}}</dd>
-    <dt class="property-"
+    <dd>{{% md %}}The provider-assigned unique ID for this managed resource.{{% /md %}}</dd><dt class="property-"
             title="">
         <span id="name_go">
 <a href="#name_go" style="color: inherit; text-decoration: inherit;">Name</a>
@@ -533,8 +494,7 @@ All [input](#inputs) properties are implicitly available as output properties. A
         <span class="property-indicator"></span>
         <span class="property-type">string</span>
     </dt>
-    <dd>{{% md %}}The name of the resource{{% /md %}}</dd>
-    <dt class="property-"
+    <dd>{{% md %}}The name of the resource{{% /md %}}</dd><dt class="property-"
             title="">
         <span id="type_go">
 <a href="#type_go" style="color: inherit; text-decoration: inherit;">Type</a>
@@ -542,14 +502,11 @@ All [input](#inputs) properties are implicitly available as output properties. A
         <span class="property-indicator"></span>
         <span class="property-type">string</span>
     </dt>
-    <dd>{{% md %}}The type of the resource. E.g. "Microsoft.Compute/virtualMachines" or "Microsoft.Storage/storageAccounts"{{% /md %}}</dd>
-</dl>
+    <dd>{{% md %}}The type of the resource. E.g. "Microsoft.Compute/virtualMachines" or "Microsoft.Storage/storageAccounts"{{% /md %}}</dd></dl>
 {{% /choosable %}}
 
 {{% choosable language nodejs %}}
-<dl class="resources-properties">
-
-    <dt class="property-"
+<dl class="resources-properties"><dt class="property-"
             title="">
         <span id="id_nodejs">
 <a href="#id_nodejs" style="color: inherit; text-decoration: inherit;">id</a>
@@ -557,8 +514,7 @@ All [input](#inputs) properties are implicitly available as output properties. A
         <span class="property-indicator"></span>
         <span class="property-type">string</span>
     </dt>
-    <dd>{{% md %}}The provider-assigned unique ID for this managed resource.{{% /md %}}</dd>
-    <dt class="property-"
+    <dd>{{% md %}}The provider-assigned unique ID for this managed resource.{{% /md %}}</dd><dt class="property-"
             title="">
         <span id="name_nodejs">
 <a href="#name_nodejs" style="color: inherit; text-decoration: inherit;">name</a>
@@ -566,8 +522,7 @@ All [input](#inputs) properties are implicitly available as output properties. A
         <span class="property-indicator"></span>
         <span class="property-type">string</span>
     </dt>
-    <dd>{{% md %}}The name of the resource{{% /md %}}</dd>
-    <dt class="property-"
+    <dd>{{% md %}}The name of the resource{{% /md %}}</dd><dt class="property-"
             title="">
         <span id="type_nodejs">
 <a href="#type_nodejs" style="color: inherit; text-decoration: inherit;">type</a>
@@ -575,14 +530,11 @@ All [input](#inputs) properties are implicitly available as output properties. A
         <span class="property-indicator"></span>
         <span class="property-type">string</span>
     </dt>
-    <dd>{{% md %}}The type of the resource. E.g. "Microsoft.Compute/virtualMachines" or "Microsoft.Storage/storageAccounts"{{% /md %}}</dd>
-</dl>
+    <dd>{{% md %}}The type of the resource. E.g. "Microsoft.Compute/virtualMachines" or "Microsoft.Storage/storageAccounts"{{% /md %}}</dd></dl>
 {{% /choosable %}}
 
 {{% choosable language python %}}
-<dl class="resources-properties">
-
-    <dt class="property-"
+<dl class="resources-properties"><dt class="property-"
             title="">
         <span id="id_python">
 <a href="#id_python" style="color: inherit; text-decoration: inherit;">id</a>
@@ -590,8 +542,7 @@ All [input](#inputs) properties are implicitly available as output properties. A
         <span class="property-indicator"></span>
         <span class="property-type">str</span>
     </dt>
-    <dd>{{% md %}}The provider-assigned unique ID for this managed resource.{{% /md %}}</dd>
-    <dt class="property-"
+    <dd>{{% md %}}The provider-assigned unique ID for this managed resource.{{% /md %}}</dd><dt class="property-"
             title="">
         <span id="name_python">
 <a href="#name_python" style="color: inherit; text-decoration: inherit;">name</a>
@@ -599,8 +550,7 @@ All [input](#inputs) properties are implicitly available as output properties. A
         <span class="property-indicator"></span>
         <span class="property-type">str</span>
     </dt>
-    <dd>{{% md %}}The name of the resource{{% /md %}}</dd>
-    <dt class="property-"
+    <dd>{{% md %}}The name of the resource{{% /md %}}</dd><dt class="property-"
             title="">
         <span id="type_python">
 <a href="#type_python" style="color: inherit; text-decoration: inherit;">type</a>
@@ -608,8 +558,7 @@ All [input](#inputs) properties are implicitly available as output properties. A
         <span class="property-indicator"></span>
         <span class="property-type">str</span>
     </dt>
-    <dd>{{% md %}}The type of the resource. E.g. "Microsoft.Compute/virtualMachines" or "Microsoft.Storage/storageAccounts"{{% /md %}}</dd>
-</dl>
+    <dd>{{% md %}}The type of the resource. E.g. "Microsoft.Compute/virtualMachines" or "Microsoft.Storage/storageAccounts"{{% /md %}}</dd></dl>
 {{% /choosable %}}
 
 
@@ -625,9 +574,7 @@ All [input](#inputs) properties are implicitly available as output properties. A
 <h4 id="datacenterresourceproperties">Data<wbr>Center<wbr>Resource<wbr>Properties</h4>
 
 {{% choosable language csharp %}}
-<dl class="resources-properties">
-
-    <dt class="property-optional"
+<dl class="resources-properties"><dt class="property-optional"
             title="Optional">
         <span id="base64encodedcassandrayamlfragment_csharp">
 <a href="#base64encodedcassandrayamlfragment_csharp" style="color: inherit; text-decoration: inherit;">Base64Encoded<wbr>Cassandra<wbr>Yaml<wbr>Fragment</a>
@@ -635,8 +582,7 @@ All [input](#inputs) properties are implicitly available as output properties. A
         <span class="property-indicator"></span>
         <span class="property-type">string</span>
     </dt>
-    <dd>{{% md %}}A fragment of a cassandra.yaml configuration file to be included in the cassandra.yaml for all nodes in this data center. The fragment should be Base64 encoded, and only a subset of keys are allowed.{{% /md %}}</dd>
-    <dt class="property-optional"
+    <dd>{{% md %}}A fragment of a cassandra.yaml configuration file to be included in the cassandra.yaml for all nodes in this data center. The fragment should be Base64 encoded, and only a subset of keys are allowed.{{% /md %}}</dd><dt class="property-optional"
             title="Optional">
         <span id="datacenterlocation_csharp">
 <a href="#datacenterlocation_csharp" style="color: inherit; text-decoration: inherit;">Data<wbr>Center<wbr>Location</a>
@@ -644,8 +590,7 @@ All [input](#inputs) properties are implicitly available as output properties. A
         <span class="property-indicator"></span>
         <span class="property-type">string</span>
     </dt>
-    <dd>{{% md %}}The region this data center should be created in.{{% /md %}}</dd>
-    <dt class="property-optional"
+    <dd>{{% md %}}The region this data center should be created in.{{% /md %}}</dd><dt class="property-optional"
             title="Optional">
         <span id="delegatedsubnetid_csharp">
 <a href="#delegatedsubnetid_csharp" style="color: inherit; text-decoration: inherit;">Delegated<wbr>Subnet<wbr>Id</a>
@@ -653,8 +598,7 @@ All [input](#inputs) properties are implicitly available as output properties. A
         <span class="property-indicator"></span>
         <span class="property-type">string</span>
     </dt>
-    <dd>{{% md %}}Resource id of a subnet the nodes in this data center should have their network interfaces connected to. The subnet must be in the same region specified in 'dataCenterLocation' and must be able to route to the subnet specified in the cluster's 'delegatedManagementSubnetId' property. This resource id will be of the form '/subscriptions/<subscription id>/resourceGroups/<resource group>/providers/Microsoft.Network/virtualNetworks/<virtual network>/subnets/<subnet>'.{{% /md %}}</dd>
-    <dt class="property-optional"
+    <dd>{{% md %}}Resource id of a subnet the nodes in this data center should have their network interfaces connected to. The subnet must be in the same region specified in 'dataCenterLocation' and must be able to route to the subnet specified in the cluster's 'delegatedManagementSubnetId' property. This resource id will be of the form '/subscriptions/<subscription id>/resourceGroups/<resource group>/providers/Microsoft.Network/virtualNetworks/<virtual network>/subnets/<subnet>'.{{% /md %}}</dd><dt class="property-optional"
             title="Optional">
         <span id="nodecount_csharp">
 <a href="#nodecount_csharp" style="color: inherit; text-decoration: inherit;">Node<wbr>Count</a>
@@ -662,8 +606,7 @@ All [input](#inputs) properties are implicitly available as output properties. A
         <span class="property-indicator"></span>
         <span class="property-type">int</span>
     </dt>
-    <dd>{{% md %}}The number of nodes the data center should have. This is the desired number. After it is set, it may take some time for the data center to be scaled to match. To monitor the number of nodes and their status, use the fetchNodeStatus method on the cluster.{{% /md %}}</dd>
-    <dt class="property-optional"
+    <dd>{{% md %}}The number of nodes the data center should have. This is the desired number. After it is set, it may take some time for the data center to be scaled to match. To monitor the number of nodes and their status, use the fetchNodeStatus method on the cluster.{{% /md %}}</dd><dt class="property-optional"
             title="Optional">
         <span id="provisioningstate_csharp">
 <a href="#provisioningstate_csharp" style="color: inherit; text-decoration: inherit;">Provisioning<wbr>State</a>
@@ -671,14 +614,11 @@ All [input](#inputs) properties are implicitly available as output properties. A
         <span class="property-indicator"></span>
         <span class="property-type">string | <a href="#managedcassandraprovisioningstate">Pulumi.<wbr>Azure<wbr>Native.<wbr>Document<wbr>DB.<wbr>Managed<wbr>Cassandra<wbr>Provisioning<wbr>State</a></span>
     </dt>
-    <dd>{{% md %}}The status of the resource at the time the operation was called.{{% /md %}}</dd>
-</dl>
+    <dd>{{% md %}}The status of the resource at the time the operation was called.{{% /md %}}</dd></dl>
 {{% /choosable %}}
 
 {{% choosable language go %}}
-<dl class="resources-properties">
-
-    <dt class="property-optional"
+<dl class="resources-properties"><dt class="property-optional"
             title="Optional">
         <span id="base64encodedcassandrayamlfragment_go">
 <a href="#base64encodedcassandrayamlfragment_go" style="color: inherit; text-decoration: inherit;">Base64Encoded<wbr>Cassandra<wbr>Yaml<wbr>Fragment</a>
@@ -686,8 +626,7 @@ All [input](#inputs) properties are implicitly available as output properties. A
         <span class="property-indicator"></span>
         <span class="property-type">string</span>
     </dt>
-    <dd>{{% md %}}A fragment of a cassandra.yaml configuration file to be included in the cassandra.yaml for all nodes in this data center. The fragment should be Base64 encoded, and only a subset of keys are allowed.{{% /md %}}</dd>
-    <dt class="property-optional"
+    <dd>{{% md %}}A fragment of a cassandra.yaml configuration file to be included in the cassandra.yaml for all nodes in this data center. The fragment should be Base64 encoded, and only a subset of keys are allowed.{{% /md %}}</dd><dt class="property-optional"
             title="Optional">
         <span id="datacenterlocation_go">
 <a href="#datacenterlocation_go" style="color: inherit; text-decoration: inherit;">Data<wbr>Center<wbr>Location</a>
@@ -695,8 +634,7 @@ All [input](#inputs) properties are implicitly available as output properties. A
         <span class="property-indicator"></span>
         <span class="property-type">string</span>
     </dt>
-    <dd>{{% md %}}The region this data center should be created in.{{% /md %}}</dd>
-    <dt class="property-optional"
+    <dd>{{% md %}}The region this data center should be created in.{{% /md %}}</dd><dt class="property-optional"
             title="Optional">
         <span id="delegatedsubnetid_go">
 <a href="#delegatedsubnetid_go" style="color: inherit; text-decoration: inherit;">Delegated<wbr>Subnet<wbr>Id</a>
@@ -704,8 +642,7 @@ All [input](#inputs) properties are implicitly available as output properties. A
         <span class="property-indicator"></span>
         <span class="property-type">string</span>
     </dt>
-    <dd>{{% md %}}Resource id of a subnet the nodes in this data center should have their network interfaces connected to. The subnet must be in the same region specified in 'dataCenterLocation' and must be able to route to the subnet specified in the cluster's 'delegatedManagementSubnetId' property. This resource id will be of the form '/subscriptions/<subscription id>/resourceGroups/<resource group>/providers/Microsoft.Network/virtualNetworks/<virtual network>/subnets/<subnet>'.{{% /md %}}</dd>
-    <dt class="property-optional"
+    <dd>{{% md %}}Resource id of a subnet the nodes in this data center should have their network interfaces connected to. The subnet must be in the same region specified in 'dataCenterLocation' and must be able to route to the subnet specified in the cluster's 'delegatedManagementSubnetId' property. This resource id will be of the form '/subscriptions/<subscription id>/resourceGroups/<resource group>/providers/Microsoft.Network/virtualNetworks/<virtual network>/subnets/<subnet>'.{{% /md %}}</dd><dt class="property-optional"
             title="Optional">
         <span id="nodecount_go">
 <a href="#nodecount_go" style="color: inherit; text-decoration: inherit;">Node<wbr>Count</a>
@@ -713,8 +650,7 @@ All [input](#inputs) properties are implicitly available as output properties. A
         <span class="property-indicator"></span>
         <span class="property-type">int</span>
     </dt>
-    <dd>{{% md %}}The number of nodes the data center should have. This is the desired number. After it is set, it may take some time for the data center to be scaled to match. To monitor the number of nodes and their status, use the fetchNodeStatus method on the cluster.{{% /md %}}</dd>
-    <dt class="property-optional"
+    <dd>{{% md %}}The number of nodes the data center should have. This is the desired number. After it is set, it may take some time for the data center to be scaled to match. To monitor the number of nodes and their status, use the fetchNodeStatus method on the cluster.{{% /md %}}</dd><dt class="property-optional"
             title="Optional">
         <span id="provisioningstate_go">
 <a href="#provisioningstate_go" style="color: inherit; text-decoration: inherit;">Provisioning<wbr>State</a>
@@ -722,14 +658,11 @@ All [input](#inputs) properties are implicitly available as output properties. A
         <span class="property-indicator"></span>
         <span class="property-type">string | <a href="#managedcassandraprovisioningstate">Managed<wbr>Cassandra<wbr>Provisioning<wbr>State</a></span>
     </dt>
-    <dd>{{% md %}}The status of the resource at the time the operation was called.{{% /md %}}</dd>
-</dl>
+    <dd>{{% md %}}The status of the resource at the time the operation was called.{{% /md %}}</dd></dl>
 {{% /choosable %}}
 
 {{% choosable language nodejs %}}
-<dl class="resources-properties">
-
-    <dt class="property-optional"
+<dl class="resources-properties"><dt class="property-optional"
             title="Optional">
         <span id="base64encodedcassandrayamlfragment_nodejs">
 <a href="#base64encodedcassandrayamlfragment_nodejs" style="color: inherit; text-decoration: inherit;">base64Encoded<wbr>Cassandra<wbr>Yaml<wbr>Fragment</a>
@@ -737,8 +670,7 @@ All [input](#inputs) properties are implicitly available as output properties. A
         <span class="property-indicator"></span>
         <span class="property-type">string</span>
     </dt>
-    <dd>{{% md %}}A fragment of a cassandra.yaml configuration file to be included in the cassandra.yaml for all nodes in this data center. The fragment should be Base64 encoded, and only a subset of keys are allowed.{{% /md %}}</dd>
-    <dt class="property-optional"
+    <dd>{{% md %}}A fragment of a cassandra.yaml configuration file to be included in the cassandra.yaml for all nodes in this data center. The fragment should be Base64 encoded, and only a subset of keys are allowed.{{% /md %}}</dd><dt class="property-optional"
             title="Optional">
         <span id="datacenterlocation_nodejs">
 <a href="#datacenterlocation_nodejs" style="color: inherit; text-decoration: inherit;">data<wbr>Center<wbr>Location</a>
@@ -746,8 +678,7 @@ All [input](#inputs) properties are implicitly available as output properties. A
         <span class="property-indicator"></span>
         <span class="property-type">string</span>
     </dt>
-    <dd>{{% md %}}The region this data center should be created in.{{% /md %}}</dd>
-    <dt class="property-optional"
+    <dd>{{% md %}}The region this data center should be created in.{{% /md %}}</dd><dt class="property-optional"
             title="Optional">
         <span id="delegatedsubnetid_nodejs">
 <a href="#delegatedsubnetid_nodejs" style="color: inherit; text-decoration: inherit;">delegated<wbr>Subnet<wbr>Id</a>
@@ -755,8 +686,7 @@ All [input](#inputs) properties are implicitly available as output properties. A
         <span class="property-indicator"></span>
         <span class="property-type">string</span>
     </dt>
-    <dd>{{% md %}}Resource id of a subnet the nodes in this data center should have their network interfaces connected to. The subnet must be in the same region specified in 'dataCenterLocation' and must be able to route to the subnet specified in the cluster's 'delegatedManagementSubnetId' property. This resource id will be of the form '/subscriptions/<subscription id>/resourceGroups/<resource group>/providers/Microsoft.Network/virtualNetworks/<virtual network>/subnets/<subnet>'.{{% /md %}}</dd>
-    <dt class="property-optional"
+    <dd>{{% md %}}Resource id of a subnet the nodes in this data center should have their network interfaces connected to. The subnet must be in the same region specified in 'dataCenterLocation' and must be able to route to the subnet specified in the cluster's 'delegatedManagementSubnetId' property. This resource id will be of the form '/subscriptions/<subscription id>/resourceGroups/<resource group>/providers/Microsoft.Network/virtualNetworks/<virtual network>/subnets/<subnet>'.{{% /md %}}</dd><dt class="property-optional"
             title="Optional">
         <span id="nodecount_nodejs">
 <a href="#nodecount_nodejs" style="color: inherit; text-decoration: inherit;">node<wbr>Count</a>
@@ -764,8 +694,7 @@ All [input](#inputs) properties are implicitly available as output properties. A
         <span class="property-indicator"></span>
         <span class="property-type">number</span>
     </dt>
-    <dd>{{% md %}}The number of nodes the data center should have. This is the desired number. After it is set, it may take some time for the data center to be scaled to match. To monitor the number of nodes and their status, use the fetchNodeStatus method on the cluster.{{% /md %}}</dd>
-    <dt class="property-optional"
+    <dd>{{% md %}}The number of nodes the data center should have. This is the desired number. After it is set, it may take some time for the data center to be scaled to match. To monitor the number of nodes and their status, use the fetchNodeStatus method on the cluster.{{% /md %}}</dd><dt class="property-optional"
             title="Optional">
         <span id="provisioningstate_nodejs">
 <a href="#provisioningstate_nodejs" style="color: inherit; text-decoration: inherit;">provisioning<wbr>State</a>
@@ -773,14 +702,11 @@ All [input](#inputs) properties are implicitly available as output properties. A
         <span class="property-indicator"></span>
         <span class="property-type">string | <a href="#managedcassandraprovisioningstate">Managed<wbr>Cassandra<wbr>Provisioning<wbr>State</a></span>
     </dt>
-    <dd>{{% md %}}The status of the resource at the time the operation was called.{{% /md %}}</dd>
-</dl>
+    <dd>{{% md %}}The status of the resource at the time the operation was called.{{% /md %}}</dd></dl>
 {{% /choosable %}}
 
 {{% choosable language python %}}
-<dl class="resources-properties">
-
-    <dt class="property-optional"
+<dl class="resources-properties"><dt class="property-optional"
             title="Optional">
         <span id="base64_encoded_cassandra_yaml_fragment_python">
 <a href="#base64_encoded_cassandra_yaml_fragment_python" style="color: inherit; text-decoration: inherit;">base64_<wbr>encoded_<wbr>cassandra_<wbr>yaml_<wbr>fragment</a>
@@ -788,8 +714,7 @@ All [input](#inputs) properties are implicitly available as output properties. A
         <span class="property-indicator"></span>
         <span class="property-type">str</span>
     </dt>
-    <dd>{{% md %}}A fragment of a cassandra.yaml configuration file to be included in the cassandra.yaml for all nodes in this data center. The fragment should be Base64 encoded, and only a subset of keys are allowed.{{% /md %}}</dd>
-    <dt class="property-optional"
+    <dd>{{% md %}}A fragment of a cassandra.yaml configuration file to be included in the cassandra.yaml for all nodes in this data center. The fragment should be Base64 encoded, and only a subset of keys are allowed.{{% /md %}}</dd><dt class="property-optional"
             title="Optional">
         <span id="data_center_location_python">
 <a href="#data_center_location_python" style="color: inherit; text-decoration: inherit;">data_<wbr>center_<wbr>location</a>
@@ -797,8 +722,7 @@ All [input](#inputs) properties are implicitly available as output properties. A
         <span class="property-indicator"></span>
         <span class="property-type">str</span>
     </dt>
-    <dd>{{% md %}}The region this data center should be created in.{{% /md %}}</dd>
-    <dt class="property-optional"
+    <dd>{{% md %}}The region this data center should be created in.{{% /md %}}</dd><dt class="property-optional"
             title="Optional">
         <span id="delegated_subnet_id_python">
 <a href="#delegated_subnet_id_python" style="color: inherit; text-decoration: inherit;">delegated_<wbr>subnet_<wbr>id</a>
@@ -806,8 +730,7 @@ All [input](#inputs) properties are implicitly available as output properties. A
         <span class="property-indicator"></span>
         <span class="property-type">str</span>
     </dt>
-    <dd>{{% md %}}Resource id of a subnet the nodes in this data center should have their network interfaces connected to. The subnet must be in the same region specified in 'dataCenterLocation' and must be able to route to the subnet specified in the cluster's 'delegatedManagementSubnetId' property. This resource id will be of the form '/subscriptions/<subscription id>/resourceGroups/<resource group>/providers/Microsoft.Network/virtualNetworks/<virtual network>/subnets/<subnet>'.{{% /md %}}</dd>
-    <dt class="property-optional"
+    <dd>{{% md %}}Resource id of a subnet the nodes in this data center should have their network interfaces connected to. The subnet must be in the same region specified in 'dataCenterLocation' and must be able to route to the subnet specified in the cluster's 'delegatedManagementSubnetId' property. This resource id will be of the form '/subscriptions/<subscription id>/resourceGroups/<resource group>/providers/Microsoft.Network/virtualNetworks/<virtual network>/subnets/<subnet>'.{{% /md %}}</dd><dt class="property-optional"
             title="Optional">
         <span id="node_count_python">
 <a href="#node_count_python" style="color: inherit; text-decoration: inherit;">node_<wbr>count</a>
@@ -815,8 +738,7 @@ All [input](#inputs) properties are implicitly available as output properties. A
         <span class="property-indicator"></span>
         <span class="property-type">int</span>
     </dt>
-    <dd>{{% md %}}The number of nodes the data center should have. This is the desired number. After it is set, it may take some time for the data center to be scaled to match. To monitor the number of nodes and their status, use the fetchNodeStatus method on the cluster.{{% /md %}}</dd>
-    <dt class="property-optional"
+    <dd>{{% md %}}The number of nodes the data center should have. This is the desired number. After it is set, it may take some time for the data center to be scaled to match. To monitor the number of nodes and their status, use the fetchNodeStatus method on the cluster.{{% /md %}}</dd><dt class="property-optional"
             title="Optional">
         <span id="provisioning_state_python">
 <a href="#provisioning_state_python" style="color: inherit; text-decoration: inherit;">provisioning_<wbr>state</a>
@@ -824,16 +746,13 @@ All [input](#inputs) properties are implicitly available as output properties. A
         <span class="property-indicator"></span>
         <span class="property-type">str | <a href="#managedcassandraprovisioningstate">Managed<wbr>Cassandra<wbr>Provisioning<wbr>State</a></span>
     </dt>
-    <dd>{{% md %}}The status of the resource at the time the operation was called.{{% /md %}}</dd>
-</dl>
+    <dd>{{% md %}}The status of the resource at the time the operation was called.{{% /md %}}</dd></dl>
 {{% /choosable %}}
 
 <h4 id="datacenterresourceresponseproperties">Data<wbr>Center<wbr>Resource<wbr>Response<wbr>Properties</h4>
 
 {{% choosable language csharp %}}
-<dl class="resources-properties">
-
-    <dt class="property-required"
+<dl class="resources-properties"><dt class="property-required"
             title="Required">
         <span id="seednodes_csharp">
 <a href="#seednodes_csharp" style="color: inherit; text-decoration: inherit;">Seed<wbr>Nodes</a>
@@ -841,8 +760,7 @@ All [input](#inputs) properties are implicitly available as output properties. A
         <span class="property-indicator"></span>
         <span class="property-type"><a href="#seednoderesponse">List&lt;Pulumi.<wbr>Azure<wbr>Native.<wbr>Document<wbr>DB.<wbr>Inputs.<wbr>Seed<wbr>Node<wbr>Response<wbr>Args&gt;</a></span>
     </dt>
-    <dd>{{% md %}}IP addresses for seed nodes in this data center. This is for reference. Generally you will want to use the seedNodes property on the cluster, which aggregates the seed nodes from all data centers in the cluster.{{% /md %}}</dd>
-    <dt class="property-optional"
+    <dd>{{% md %}}IP addresses for seed nodes in this data center. This is for reference. Generally you will want to use the seedNodes property on the cluster, which aggregates the seed nodes from all data centers in the cluster.{{% /md %}}</dd><dt class="property-optional"
             title="Optional">
         <span id="base64encodedcassandrayamlfragment_csharp">
 <a href="#base64encodedcassandrayamlfragment_csharp" style="color: inherit; text-decoration: inherit;">Base64Encoded<wbr>Cassandra<wbr>Yaml<wbr>Fragment</a>
@@ -850,8 +768,7 @@ All [input](#inputs) properties are implicitly available as output properties. A
         <span class="property-indicator"></span>
         <span class="property-type">string</span>
     </dt>
-    <dd>{{% md %}}A fragment of a cassandra.yaml configuration file to be included in the cassandra.yaml for all nodes in this data center. The fragment should be Base64 encoded, and only a subset of keys are allowed.{{% /md %}}</dd>
-    <dt class="property-optional"
+    <dd>{{% md %}}A fragment of a cassandra.yaml configuration file to be included in the cassandra.yaml for all nodes in this data center. The fragment should be Base64 encoded, and only a subset of keys are allowed.{{% /md %}}</dd><dt class="property-optional"
             title="Optional">
         <span id="datacenterlocation_csharp">
 <a href="#datacenterlocation_csharp" style="color: inherit; text-decoration: inherit;">Data<wbr>Center<wbr>Location</a>
@@ -859,8 +776,7 @@ All [input](#inputs) properties are implicitly available as output properties. A
         <span class="property-indicator"></span>
         <span class="property-type">string</span>
     </dt>
-    <dd>{{% md %}}The region this data center should be created in.{{% /md %}}</dd>
-    <dt class="property-optional"
+    <dd>{{% md %}}The region this data center should be created in.{{% /md %}}</dd><dt class="property-optional"
             title="Optional">
         <span id="delegatedsubnetid_csharp">
 <a href="#delegatedsubnetid_csharp" style="color: inherit; text-decoration: inherit;">Delegated<wbr>Subnet<wbr>Id</a>
@@ -868,8 +784,7 @@ All [input](#inputs) properties are implicitly available as output properties. A
         <span class="property-indicator"></span>
         <span class="property-type">string</span>
     </dt>
-    <dd>{{% md %}}Resource id of a subnet the nodes in this data center should have their network interfaces connected to. The subnet must be in the same region specified in 'dataCenterLocation' and must be able to route to the subnet specified in the cluster's 'delegatedManagementSubnetId' property. This resource id will be of the form '/subscriptions/<subscription id>/resourceGroups/<resource group>/providers/Microsoft.Network/virtualNetworks/<virtual network>/subnets/<subnet>'.{{% /md %}}</dd>
-    <dt class="property-optional"
+    <dd>{{% md %}}Resource id of a subnet the nodes in this data center should have their network interfaces connected to. The subnet must be in the same region specified in 'dataCenterLocation' and must be able to route to the subnet specified in the cluster's 'delegatedManagementSubnetId' property. This resource id will be of the form '/subscriptions/<subscription id>/resourceGroups/<resource group>/providers/Microsoft.Network/virtualNetworks/<virtual network>/subnets/<subnet>'.{{% /md %}}</dd><dt class="property-optional"
             title="Optional">
         <span id="nodecount_csharp">
 <a href="#nodecount_csharp" style="color: inherit; text-decoration: inherit;">Node<wbr>Count</a>
@@ -877,8 +792,7 @@ All [input](#inputs) properties are implicitly available as output properties. A
         <span class="property-indicator"></span>
         <span class="property-type">int</span>
     </dt>
-    <dd>{{% md %}}The number of nodes the data center should have. This is the desired number. After it is set, it may take some time for the data center to be scaled to match. To monitor the number of nodes and their status, use the fetchNodeStatus method on the cluster.{{% /md %}}</dd>
-    <dt class="property-optional"
+    <dd>{{% md %}}The number of nodes the data center should have. This is the desired number. After it is set, it may take some time for the data center to be scaled to match. To monitor the number of nodes and their status, use the fetchNodeStatus method on the cluster.{{% /md %}}</dd><dt class="property-optional"
             title="Optional">
         <span id="provisioningstate_csharp">
 <a href="#provisioningstate_csharp" style="color: inherit; text-decoration: inherit;">Provisioning<wbr>State</a>
@@ -886,14 +800,11 @@ All [input](#inputs) properties are implicitly available as output properties. A
         <span class="property-indicator"></span>
         <span class="property-type">string</span>
     </dt>
-    <dd>{{% md %}}The status of the resource at the time the operation was called.{{% /md %}}</dd>
-</dl>
+    <dd>{{% md %}}The status of the resource at the time the operation was called.{{% /md %}}</dd></dl>
 {{% /choosable %}}
 
 {{% choosable language go %}}
-<dl class="resources-properties">
-
-    <dt class="property-required"
+<dl class="resources-properties"><dt class="property-required"
             title="Required">
         <span id="seednodes_go">
 <a href="#seednodes_go" style="color: inherit; text-decoration: inherit;">Seed<wbr>Nodes</a>
@@ -901,8 +812,7 @@ All [input](#inputs) properties are implicitly available as output properties. A
         <span class="property-indicator"></span>
         <span class="property-type"><a href="#seednoderesponse">[]Seed<wbr>Node<wbr>Response</a></span>
     </dt>
-    <dd>{{% md %}}IP addresses for seed nodes in this data center. This is for reference. Generally you will want to use the seedNodes property on the cluster, which aggregates the seed nodes from all data centers in the cluster.{{% /md %}}</dd>
-    <dt class="property-optional"
+    <dd>{{% md %}}IP addresses for seed nodes in this data center. This is for reference. Generally you will want to use the seedNodes property on the cluster, which aggregates the seed nodes from all data centers in the cluster.{{% /md %}}</dd><dt class="property-optional"
             title="Optional">
         <span id="base64encodedcassandrayamlfragment_go">
 <a href="#base64encodedcassandrayamlfragment_go" style="color: inherit; text-decoration: inherit;">Base64Encoded<wbr>Cassandra<wbr>Yaml<wbr>Fragment</a>
@@ -910,8 +820,7 @@ All [input](#inputs) properties are implicitly available as output properties. A
         <span class="property-indicator"></span>
         <span class="property-type">string</span>
     </dt>
-    <dd>{{% md %}}A fragment of a cassandra.yaml configuration file to be included in the cassandra.yaml for all nodes in this data center. The fragment should be Base64 encoded, and only a subset of keys are allowed.{{% /md %}}</dd>
-    <dt class="property-optional"
+    <dd>{{% md %}}A fragment of a cassandra.yaml configuration file to be included in the cassandra.yaml for all nodes in this data center. The fragment should be Base64 encoded, and only a subset of keys are allowed.{{% /md %}}</dd><dt class="property-optional"
             title="Optional">
         <span id="datacenterlocation_go">
 <a href="#datacenterlocation_go" style="color: inherit; text-decoration: inherit;">Data<wbr>Center<wbr>Location</a>
@@ -919,8 +828,7 @@ All [input](#inputs) properties are implicitly available as output properties. A
         <span class="property-indicator"></span>
         <span class="property-type">string</span>
     </dt>
-    <dd>{{% md %}}The region this data center should be created in.{{% /md %}}</dd>
-    <dt class="property-optional"
+    <dd>{{% md %}}The region this data center should be created in.{{% /md %}}</dd><dt class="property-optional"
             title="Optional">
         <span id="delegatedsubnetid_go">
 <a href="#delegatedsubnetid_go" style="color: inherit; text-decoration: inherit;">Delegated<wbr>Subnet<wbr>Id</a>
@@ -928,8 +836,7 @@ All [input](#inputs) properties are implicitly available as output properties. A
         <span class="property-indicator"></span>
         <span class="property-type">string</span>
     </dt>
-    <dd>{{% md %}}Resource id of a subnet the nodes in this data center should have their network interfaces connected to. The subnet must be in the same region specified in 'dataCenterLocation' and must be able to route to the subnet specified in the cluster's 'delegatedManagementSubnetId' property. This resource id will be of the form '/subscriptions/<subscription id>/resourceGroups/<resource group>/providers/Microsoft.Network/virtualNetworks/<virtual network>/subnets/<subnet>'.{{% /md %}}</dd>
-    <dt class="property-optional"
+    <dd>{{% md %}}Resource id of a subnet the nodes in this data center should have their network interfaces connected to. The subnet must be in the same region specified in 'dataCenterLocation' and must be able to route to the subnet specified in the cluster's 'delegatedManagementSubnetId' property. This resource id will be of the form '/subscriptions/<subscription id>/resourceGroups/<resource group>/providers/Microsoft.Network/virtualNetworks/<virtual network>/subnets/<subnet>'.{{% /md %}}</dd><dt class="property-optional"
             title="Optional">
         <span id="nodecount_go">
 <a href="#nodecount_go" style="color: inherit; text-decoration: inherit;">Node<wbr>Count</a>
@@ -937,8 +844,7 @@ All [input](#inputs) properties are implicitly available as output properties. A
         <span class="property-indicator"></span>
         <span class="property-type">int</span>
     </dt>
-    <dd>{{% md %}}The number of nodes the data center should have. This is the desired number. After it is set, it may take some time for the data center to be scaled to match. To monitor the number of nodes and their status, use the fetchNodeStatus method on the cluster.{{% /md %}}</dd>
-    <dt class="property-optional"
+    <dd>{{% md %}}The number of nodes the data center should have. This is the desired number. After it is set, it may take some time for the data center to be scaled to match. To monitor the number of nodes and their status, use the fetchNodeStatus method on the cluster.{{% /md %}}</dd><dt class="property-optional"
             title="Optional">
         <span id="provisioningstate_go">
 <a href="#provisioningstate_go" style="color: inherit; text-decoration: inherit;">Provisioning<wbr>State</a>
@@ -946,14 +852,11 @@ All [input](#inputs) properties are implicitly available as output properties. A
         <span class="property-indicator"></span>
         <span class="property-type">string</span>
     </dt>
-    <dd>{{% md %}}The status of the resource at the time the operation was called.{{% /md %}}</dd>
-</dl>
+    <dd>{{% md %}}The status of the resource at the time the operation was called.{{% /md %}}</dd></dl>
 {{% /choosable %}}
 
 {{% choosable language nodejs %}}
-<dl class="resources-properties">
-
-    <dt class="property-required"
+<dl class="resources-properties"><dt class="property-required"
             title="Required">
         <span id="seednodes_nodejs">
 <a href="#seednodes_nodejs" style="color: inherit; text-decoration: inherit;">seed<wbr>Nodes</a>
@@ -961,8 +864,7 @@ All [input](#inputs) properties are implicitly available as output properties. A
         <span class="property-indicator"></span>
         <span class="property-type"><a href="#seednoderesponse">Seed<wbr>Node<wbr>Response[]</a></span>
     </dt>
-    <dd>{{% md %}}IP addresses for seed nodes in this data center. This is for reference. Generally you will want to use the seedNodes property on the cluster, which aggregates the seed nodes from all data centers in the cluster.{{% /md %}}</dd>
-    <dt class="property-optional"
+    <dd>{{% md %}}IP addresses for seed nodes in this data center. This is for reference. Generally you will want to use the seedNodes property on the cluster, which aggregates the seed nodes from all data centers in the cluster.{{% /md %}}</dd><dt class="property-optional"
             title="Optional">
         <span id="base64encodedcassandrayamlfragment_nodejs">
 <a href="#base64encodedcassandrayamlfragment_nodejs" style="color: inherit; text-decoration: inherit;">base64Encoded<wbr>Cassandra<wbr>Yaml<wbr>Fragment</a>
@@ -970,8 +872,7 @@ All [input](#inputs) properties are implicitly available as output properties. A
         <span class="property-indicator"></span>
         <span class="property-type">string</span>
     </dt>
-    <dd>{{% md %}}A fragment of a cassandra.yaml configuration file to be included in the cassandra.yaml for all nodes in this data center. The fragment should be Base64 encoded, and only a subset of keys are allowed.{{% /md %}}</dd>
-    <dt class="property-optional"
+    <dd>{{% md %}}A fragment of a cassandra.yaml configuration file to be included in the cassandra.yaml for all nodes in this data center. The fragment should be Base64 encoded, and only a subset of keys are allowed.{{% /md %}}</dd><dt class="property-optional"
             title="Optional">
         <span id="datacenterlocation_nodejs">
 <a href="#datacenterlocation_nodejs" style="color: inherit; text-decoration: inherit;">data<wbr>Center<wbr>Location</a>
@@ -979,8 +880,7 @@ All [input](#inputs) properties are implicitly available as output properties. A
         <span class="property-indicator"></span>
         <span class="property-type">string</span>
     </dt>
-    <dd>{{% md %}}The region this data center should be created in.{{% /md %}}</dd>
-    <dt class="property-optional"
+    <dd>{{% md %}}The region this data center should be created in.{{% /md %}}</dd><dt class="property-optional"
             title="Optional">
         <span id="delegatedsubnetid_nodejs">
 <a href="#delegatedsubnetid_nodejs" style="color: inherit; text-decoration: inherit;">delegated<wbr>Subnet<wbr>Id</a>
@@ -988,8 +888,7 @@ All [input](#inputs) properties are implicitly available as output properties. A
         <span class="property-indicator"></span>
         <span class="property-type">string</span>
     </dt>
-    <dd>{{% md %}}Resource id of a subnet the nodes in this data center should have their network interfaces connected to. The subnet must be in the same region specified in 'dataCenterLocation' and must be able to route to the subnet specified in the cluster's 'delegatedManagementSubnetId' property. This resource id will be of the form '/subscriptions/<subscription id>/resourceGroups/<resource group>/providers/Microsoft.Network/virtualNetworks/<virtual network>/subnets/<subnet>'.{{% /md %}}</dd>
-    <dt class="property-optional"
+    <dd>{{% md %}}Resource id of a subnet the nodes in this data center should have their network interfaces connected to. The subnet must be in the same region specified in 'dataCenterLocation' and must be able to route to the subnet specified in the cluster's 'delegatedManagementSubnetId' property. This resource id will be of the form '/subscriptions/<subscription id>/resourceGroups/<resource group>/providers/Microsoft.Network/virtualNetworks/<virtual network>/subnets/<subnet>'.{{% /md %}}</dd><dt class="property-optional"
             title="Optional">
         <span id="nodecount_nodejs">
 <a href="#nodecount_nodejs" style="color: inherit; text-decoration: inherit;">node<wbr>Count</a>
@@ -997,8 +896,7 @@ All [input](#inputs) properties are implicitly available as output properties. A
         <span class="property-indicator"></span>
         <span class="property-type">number</span>
     </dt>
-    <dd>{{% md %}}The number of nodes the data center should have. This is the desired number. After it is set, it may take some time for the data center to be scaled to match. To monitor the number of nodes and their status, use the fetchNodeStatus method on the cluster.{{% /md %}}</dd>
-    <dt class="property-optional"
+    <dd>{{% md %}}The number of nodes the data center should have. This is the desired number. After it is set, it may take some time for the data center to be scaled to match. To monitor the number of nodes and their status, use the fetchNodeStatus method on the cluster.{{% /md %}}</dd><dt class="property-optional"
             title="Optional">
         <span id="provisioningstate_nodejs">
 <a href="#provisioningstate_nodejs" style="color: inherit; text-decoration: inherit;">provisioning<wbr>State</a>
@@ -1006,14 +904,11 @@ All [input](#inputs) properties are implicitly available as output properties. A
         <span class="property-indicator"></span>
         <span class="property-type">string</span>
     </dt>
-    <dd>{{% md %}}The status of the resource at the time the operation was called.{{% /md %}}</dd>
-</dl>
+    <dd>{{% md %}}The status of the resource at the time the operation was called.{{% /md %}}</dd></dl>
 {{% /choosable %}}
 
 {{% choosable language python %}}
-<dl class="resources-properties">
-
-    <dt class="property-required"
+<dl class="resources-properties"><dt class="property-required"
             title="Required">
         <span id="seed_nodes_python">
 <a href="#seed_nodes_python" style="color: inherit; text-decoration: inherit;">seed_<wbr>nodes</a>
@@ -1021,8 +916,7 @@ All [input](#inputs) properties are implicitly available as output properties. A
         <span class="property-indicator"></span>
         <span class="property-type"><a href="#seednoderesponse">Sequence[Seed<wbr>Node<wbr>Response<wbr>Args]</a></span>
     </dt>
-    <dd>{{% md %}}IP addresses for seed nodes in this data center. This is for reference. Generally you will want to use the seedNodes property on the cluster, which aggregates the seed nodes from all data centers in the cluster.{{% /md %}}</dd>
-    <dt class="property-optional"
+    <dd>{{% md %}}IP addresses for seed nodes in this data center. This is for reference. Generally you will want to use the seedNodes property on the cluster, which aggregates the seed nodes from all data centers in the cluster.{{% /md %}}</dd><dt class="property-optional"
             title="Optional">
         <span id="base64_encoded_cassandra_yaml_fragment_python">
 <a href="#base64_encoded_cassandra_yaml_fragment_python" style="color: inherit; text-decoration: inherit;">base64_<wbr>encoded_<wbr>cassandra_<wbr>yaml_<wbr>fragment</a>
@@ -1030,8 +924,7 @@ All [input](#inputs) properties are implicitly available as output properties. A
         <span class="property-indicator"></span>
         <span class="property-type">str</span>
     </dt>
-    <dd>{{% md %}}A fragment of a cassandra.yaml configuration file to be included in the cassandra.yaml for all nodes in this data center. The fragment should be Base64 encoded, and only a subset of keys are allowed.{{% /md %}}</dd>
-    <dt class="property-optional"
+    <dd>{{% md %}}A fragment of a cassandra.yaml configuration file to be included in the cassandra.yaml for all nodes in this data center. The fragment should be Base64 encoded, and only a subset of keys are allowed.{{% /md %}}</dd><dt class="property-optional"
             title="Optional">
         <span id="data_center_location_python">
 <a href="#data_center_location_python" style="color: inherit; text-decoration: inherit;">data_<wbr>center_<wbr>location</a>
@@ -1039,8 +932,7 @@ All [input](#inputs) properties are implicitly available as output properties. A
         <span class="property-indicator"></span>
         <span class="property-type">str</span>
     </dt>
-    <dd>{{% md %}}The region this data center should be created in.{{% /md %}}</dd>
-    <dt class="property-optional"
+    <dd>{{% md %}}The region this data center should be created in.{{% /md %}}</dd><dt class="property-optional"
             title="Optional">
         <span id="delegated_subnet_id_python">
 <a href="#delegated_subnet_id_python" style="color: inherit; text-decoration: inherit;">delegated_<wbr>subnet_<wbr>id</a>
@@ -1048,8 +940,7 @@ All [input](#inputs) properties are implicitly available as output properties. A
         <span class="property-indicator"></span>
         <span class="property-type">str</span>
     </dt>
-    <dd>{{% md %}}Resource id of a subnet the nodes in this data center should have their network interfaces connected to. The subnet must be in the same region specified in 'dataCenterLocation' and must be able to route to the subnet specified in the cluster's 'delegatedManagementSubnetId' property. This resource id will be of the form '/subscriptions/<subscription id>/resourceGroups/<resource group>/providers/Microsoft.Network/virtualNetworks/<virtual network>/subnets/<subnet>'.{{% /md %}}</dd>
-    <dt class="property-optional"
+    <dd>{{% md %}}Resource id of a subnet the nodes in this data center should have their network interfaces connected to. The subnet must be in the same region specified in 'dataCenterLocation' and must be able to route to the subnet specified in the cluster's 'delegatedManagementSubnetId' property. This resource id will be of the form '/subscriptions/<subscription id>/resourceGroups/<resource group>/providers/Microsoft.Network/virtualNetworks/<virtual network>/subnets/<subnet>'.{{% /md %}}</dd><dt class="property-optional"
             title="Optional">
         <span id="node_count_python">
 <a href="#node_count_python" style="color: inherit; text-decoration: inherit;">node_<wbr>count</a>
@@ -1057,8 +948,7 @@ All [input](#inputs) properties are implicitly available as output properties. A
         <span class="property-indicator"></span>
         <span class="property-type">int</span>
     </dt>
-    <dd>{{% md %}}The number of nodes the data center should have. This is the desired number. After it is set, it may take some time for the data center to be scaled to match. To monitor the number of nodes and their status, use the fetchNodeStatus method on the cluster.{{% /md %}}</dd>
-    <dt class="property-optional"
+    <dd>{{% md %}}The number of nodes the data center should have. This is the desired number. After it is set, it may take some time for the data center to be scaled to match. To monitor the number of nodes and their status, use the fetchNodeStatus method on the cluster.{{% /md %}}</dd><dt class="property-optional"
             title="Optional">
         <span id="provisioning_state_python">
 <a href="#provisioning_state_python" style="color: inherit; text-decoration: inherit;">provisioning_<wbr>state</a>
@@ -1066,86 +956,55 @@ All [input](#inputs) properties are implicitly available as output properties. A
         <span class="property-indicator"></span>
         <span class="property-type">str</span>
     </dt>
-    <dd>{{% md %}}The status of the resource at the time the operation was called.{{% /md %}}</dd>
-</dl>
+    <dd>{{% md %}}The status of the resource at the time the operation was called.{{% /md %}}</dd></dl>
 {{% /choosable %}}
 
 <h4 id="managedcassandraprovisioningstate">Managed<wbr>Cassandra<wbr>Provisioning<wbr>State</h4>
 
 {{% choosable language csharp %}}
-<dl class="tabular">
-    <dt>Creating</dt>
-    <dd>Creating</dd>
-    <dt>Updating</dt>
-    <dd>Updating</dd>
-    <dt>Deleting</dt>
-    <dd>Deleting</dd>
-    <dt>Succeeded</dt>
-    <dd>Succeeded</dd>
-    <dt>Failed</dt>
-    <dd>Failed</dd>
-    <dt>Canceled</dt>
-    <dd>Canceled</dd>
-</dl>
+<dl class="tabular"><dt>Creating</dt>
+    <dd>Creating</dd><dt>Updating</dt>
+    <dd>Updating</dd><dt>Deleting</dt>
+    <dd>Deleting</dd><dt>Succeeded</dt>
+    <dd>Succeeded</dd><dt>Failed</dt>
+    <dd>Failed</dd><dt>Canceled</dt>
+    <dd>Canceled</dd></dl>
 {{% /choosable %}}
 
 {{% choosable language go %}}
-<dl class="tabular">
-    <dt>Managed<wbr>Cassandra<wbr>Provisioning<wbr>State<wbr>Creating</dt>
-    <dd>Creating</dd>
-    <dt>Managed<wbr>Cassandra<wbr>Provisioning<wbr>State<wbr>Updating</dt>
-    <dd>Updating</dd>
-    <dt>Managed<wbr>Cassandra<wbr>Provisioning<wbr>State<wbr>Deleting</dt>
-    <dd>Deleting</dd>
-    <dt>Managed<wbr>Cassandra<wbr>Provisioning<wbr>State<wbr>Succeeded</dt>
-    <dd>Succeeded</dd>
-    <dt>Managed<wbr>Cassandra<wbr>Provisioning<wbr>State<wbr>Failed</dt>
-    <dd>Failed</dd>
-    <dt>Managed<wbr>Cassandra<wbr>Provisioning<wbr>State<wbr>Canceled</dt>
-    <dd>Canceled</dd>
-</dl>
+<dl class="tabular"><dt>Managed<wbr>Cassandra<wbr>Provisioning<wbr>State<wbr>Creating</dt>
+    <dd>Creating</dd><dt>Managed<wbr>Cassandra<wbr>Provisioning<wbr>State<wbr>Updating</dt>
+    <dd>Updating</dd><dt>Managed<wbr>Cassandra<wbr>Provisioning<wbr>State<wbr>Deleting</dt>
+    <dd>Deleting</dd><dt>Managed<wbr>Cassandra<wbr>Provisioning<wbr>State<wbr>Succeeded</dt>
+    <dd>Succeeded</dd><dt>Managed<wbr>Cassandra<wbr>Provisioning<wbr>State<wbr>Failed</dt>
+    <dd>Failed</dd><dt>Managed<wbr>Cassandra<wbr>Provisioning<wbr>State<wbr>Canceled</dt>
+    <dd>Canceled</dd></dl>
 {{% /choosable %}}
 
 {{% choosable language nodejs %}}
-<dl class="tabular">
-    <dt>Creating</dt>
-    <dd>Creating</dd>
-    <dt>Updating</dt>
-    <dd>Updating</dd>
-    <dt>Deleting</dt>
-    <dd>Deleting</dd>
-    <dt>Succeeded</dt>
-    <dd>Succeeded</dd>
-    <dt>Failed</dt>
-    <dd>Failed</dd>
-    <dt>Canceled</dt>
-    <dd>Canceled</dd>
-</dl>
+<dl class="tabular"><dt>Creating</dt>
+    <dd>Creating</dd><dt>Updating</dt>
+    <dd>Updating</dd><dt>Deleting</dt>
+    <dd>Deleting</dd><dt>Succeeded</dt>
+    <dd>Succeeded</dd><dt>Failed</dt>
+    <dd>Failed</dd><dt>Canceled</dt>
+    <dd>Canceled</dd></dl>
 {{% /choosable %}}
 
 {{% choosable language python %}}
-<dl class="tabular">
-    <dt>CREATING</dt>
-    <dd>Creating</dd>
-    <dt>UPDATING</dt>
-    <dd>Updating</dd>
-    <dt>DELETING</dt>
-    <dd>Deleting</dd>
-    <dt>SUCCEEDED</dt>
-    <dd>Succeeded</dd>
-    <dt>FAILED</dt>
-    <dd>Failed</dd>
-    <dt>CANCELED</dt>
-    <dd>Canceled</dd>
-</dl>
+<dl class="tabular"><dt>CREATING</dt>
+    <dd>Creating</dd><dt>UPDATING</dt>
+    <dd>Updating</dd><dt>DELETING</dt>
+    <dd>Deleting</dd><dt>SUCCEEDED</dt>
+    <dd>Succeeded</dd><dt>FAILED</dt>
+    <dd>Failed</dd><dt>CANCELED</dt>
+    <dd>Canceled</dd></dl>
 {{% /choosable %}}
 
 <h4 id="seednoderesponse">Seed<wbr>Node<wbr>Response</h4>
 
 {{% choosable language csharp %}}
-<dl class="resources-properties">
-
-    <dt class="property-optional"
+<dl class="resources-properties"><dt class="property-optional"
             title="Optional">
         <span id="ipaddress_csharp">
 <a href="#ipaddress_csharp" style="color: inherit; text-decoration: inherit;">Ip<wbr>Address</a>
@@ -1153,14 +1012,11 @@ All [input](#inputs) properties are implicitly available as output properties. A
         <span class="property-indicator"></span>
         <span class="property-type">string</span>
     </dt>
-    <dd>{{% md %}}IP address of this seed node.{{% /md %}}</dd>
-</dl>
+    <dd>{{% md %}}IP address of this seed node.{{% /md %}}</dd></dl>
 {{% /choosable %}}
 
 {{% choosable language go %}}
-<dl class="resources-properties">
-
-    <dt class="property-optional"
+<dl class="resources-properties"><dt class="property-optional"
             title="Optional">
         <span id="ipaddress_go">
 <a href="#ipaddress_go" style="color: inherit; text-decoration: inherit;">Ip<wbr>Address</a>
@@ -1168,14 +1024,11 @@ All [input](#inputs) properties are implicitly available as output properties. A
         <span class="property-indicator"></span>
         <span class="property-type">string</span>
     </dt>
-    <dd>{{% md %}}IP address of this seed node.{{% /md %}}</dd>
-</dl>
+    <dd>{{% md %}}IP address of this seed node.{{% /md %}}</dd></dl>
 {{% /choosable %}}
 
 {{% choosable language nodejs %}}
-<dl class="resources-properties">
-
-    <dt class="property-optional"
+<dl class="resources-properties"><dt class="property-optional"
             title="Optional">
         <span id="ipaddress_nodejs">
 <a href="#ipaddress_nodejs" style="color: inherit; text-decoration: inherit;">ip<wbr>Address</a>
@@ -1183,14 +1036,11 @@ All [input](#inputs) properties are implicitly available as output properties. A
         <span class="property-indicator"></span>
         <span class="property-type">string</span>
     </dt>
-    <dd>{{% md %}}IP address of this seed node.{{% /md %}}</dd>
-</dl>
+    <dd>{{% md %}}IP address of this seed node.{{% /md %}}</dd></dl>
 {{% /choosable %}}
 
 {{% choosable language python %}}
-<dl class="resources-properties">
-
-    <dt class="property-optional"
+<dl class="resources-properties"><dt class="property-optional"
             title="Optional">
         <span id="ip_address_python">
 <a href="#ip_address_python" style="color: inherit; text-decoration: inherit;">ip_<wbr>address</a>
@@ -1198,8 +1048,7 @@ All [input](#inputs) properties are implicitly available as output properties. A
         <span class="property-indicator"></span>
         <span class="property-type">str</span>
     </dt>
-    <dd>{{% md %}}IP address of this seed node.{{% /md %}}</dd>
-</dl>
+    <dd>{{% md %}}IP address of this seed node.{{% /md %}}</dd></dl>
 {{% /choosable %}}
 ## Import
 

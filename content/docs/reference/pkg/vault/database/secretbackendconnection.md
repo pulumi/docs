@@ -43,9 +43,7 @@ Database secret backend connections can be imported using the `backend`, `/confi
 
 {{% choosable language nodejs %}}
 
-<dl class="resources-properties">
-  
-    <dt
+<dl class="resources-properties"><dt
         class="property-required" title="Required">
         <span>name</span>
         <span class="property-indicator"></span>
@@ -53,9 +51,7 @@ Database secret backend connections can be imported using the `backend`, `/confi
     </dt>
     <dd>
       The unique name of the resource.
-    </dd>
-  
-    <dt
+    </dd><dt
         class="property-required" title="Required">
         <span>args</span>
         <span class="property-indicator"></span>
@@ -63,9 +59,7 @@ Database secret backend connections can be imported using the `backend`, `/confi
     </dt>
     <dd>
       The arguments to resource properties.
-    </dd>
-  
-    <dt
+    </dd><dt
         class="property-optional" title="Optional">
         <span>opts</span>
         <span class="property-indicator"></span>
@@ -73,10 +67,7 @@ Database secret backend connections can be imported using the `backend`, `/confi
     </dt>
     <dd>
       Bag of options to control resource&#39;s behavior.
-    </dd>
-  
-
-</dl>
+    </dd></dl>
 
 {{% /choosable %}}
 
@@ -102,9 +93,7 @@ Database secret backend connections can be imported using the `backend`, `/confi
 
 {{% choosable language go %}}
 
-<dl class="resources-properties">
-  
-    <dt
+<dl class="resources-properties"><dt
         class="property-optional" title="Optional">
         <span>ctx</span>
         <span class="property-indicator"></span>
@@ -112,9 +101,7 @@ Database secret backend connections can be imported using the `backend`, `/confi
     </dt>
     <dd>
       Context object for the current deployment.
-    </dd>
-  
-    <dt
+    </dd><dt
         class="property-required" title="Required">
         <span>name</span>
         <span class="property-indicator"></span>
@@ -122,9 +109,7 @@ Database secret backend connections can be imported using the `backend`, `/confi
     </dt>
     <dd>
       The unique name of the resource.
-    </dd>
-  
-    <dt
+    </dd><dt
         class="property-required" title="Required">
         <span>args</span>
         <span class="property-indicator"></span>
@@ -132,9 +117,7 @@ Database secret backend connections can be imported using the `backend`, `/confi
     </dt>
     <dd>
       The arguments to resource properties.
-    </dd>
-  
-    <dt
+    </dd><dt
         class="property-optional" title="Optional">
         <span>opts</span>
         <span class="property-indicator"></span>
@@ -142,18 +125,13 @@ Database secret backend connections can be imported using the `backend`, `/confi
     </dt>
     <dd>
       Bag of options to control resource&#39;s behavior.
-    </dd>
-  
-
-</dl>
+    </dd></dl>
 
 {{% /choosable %}}
 
 {{% choosable language csharp %}}
 
-<dl class="resources-properties">
-  
-    <dt
+<dl class="resources-properties"><dt
         class="property-required" title="Required">
         <span>name</span>
         <span class="property-indicator"></span>
@@ -161,9 +139,7 @@ Database secret backend connections can be imported using the `backend`, `/confi
     </dt>
     <dd>
       The unique name of the resource.
-    </dd>
-  
-    <dt
+    </dd><dt
         class="property-required" title="Required">
         <span>args</span>
         <span class="property-indicator"></span>
@@ -171,9 +147,7 @@ Database secret backend connections can be imported using the `backend`, `/confi
     </dt>
     <dd>
       The arguments to resource properties.
-    </dd>
-  
-    <dt
+    </dd><dt
         class="property-optional" title="Optional">
         <span>opts</span>
         <span class="property-indicator"></span>
@@ -181,10 +155,7 @@ Database secret backend connections can be imported using the `backend`, `/confi
     </dt>
     <dd>
       Bag of options to control resource&#39;s behavior.
-    </dd>
-  
-
-</dl>
+    </dd></dl>
 
 {{% /choosable %}}
 
@@ -199,9 +170,7 @@ The SecretBackendConnection resource accepts the following [input]({{< relref "/
 
 
 {{% choosable language csharp %}}
-<dl class="resources-properties">
-
-    <dt class="property-required"
+<dl class="resources-properties"><dt class="property-required"
             title="Required">
         <span id="backend_csharp">
 <a href="#backend_csharp" style="color: inherit; text-decoration: inherit;">Backend</a>
@@ -210,8 +179,7 @@ The SecretBackendConnection resource accepts the following [input]({{< relref "/
         <span class="property-type">string</span>
     </dt>
     <dd>{{% md %}}The unique name of the Vault mount to configure.
-{{% /md %}}</dd>
-    <dt class="property-optional"
+{{% /md %}}</dd><dt class="property-optional"
             title="Optional">
         <span id="allowedroles_csharp">
 <a href="#allowedroles_csharp" style="color: inherit; text-decoration: inherit;">Allowed<wbr>Roles</a>
@@ -221,8 +189,7 @@ The SecretBackendConnection resource accepts the following [input]({{< relref "/
     </dt>
     <dd>{{% md %}}A list of roles that are allowed to use this
 connection.
-{{% /md %}}</dd>
-    <dt class="property-optional"
+{{% /md %}}</dd><dt class="property-optional"
             title="Optional">
         <span id="cassandra_csharp">
 <a href="#cassandra_csharp" style="color: inherit; text-decoration: inherit;">Cassandra</a>
@@ -231,8 +198,7 @@ connection.
         <span class="property-type"><a href="#secretbackendconnectioncassandra">Secret<wbr>Backend<wbr>Connection<wbr>Cassandra<wbr>Args</a></span>
     </dt>
     <dd>{{% md %}}A nested block containing configuration options for Cassandra connections.
-{{% /md %}}</dd>
-    <dt class="property-optional"
+{{% /md %}}</dd><dt class="property-optional"
             title="Optional">
         <span id="data_csharp">
 <a href="#data_csharp" style="color: inherit; text-decoration: inherit;">Data</a>
@@ -241,8 +207,7 @@ connection.
         <span class="property-type">Dictionary&lt;string, object&gt;</span>
     </dt>
     <dd>{{% md %}}A map of sensitive data to pass to the endpoint. Useful for templated connection strings.
-{{% /md %}}</dd>
-    <dt class="property-optional"
+{{% /md %}}</dd><dt class="property-optional"
             title="Optional">
         <span id="elasticsearch_csharp">
 <a href="#elasticsearch_csharp" style="color: inherit; text-decoration: inherit;">Elasticsearch</a>
@@ -251,8 +216,7 @@ connection.
         <span class="property-type"><a href="#secretbackendconnectionelasticsearch">Secret<wbr>Backend<wbr>Connection<wbr>Elasticsearch<wbr>Args</a></span>
     </dt>
     <dd>{{% md %}}A nested block containing configuration options for Elasticsearch connections.
-{{% /md %}}</dd>
-    <dt class="property-optional"
+{{% /md %}}</dd><dt class="property-optional"
             title="Optional">
         <span id="hana_csharp">
 <a href="#hana_csharp" style="color: inherit; text-decoration: inherit;">Hana</a>
@@ -261,8 +225,7 @@ connection.
         <span class="property-type"><a href="#secretbackendconnectionhana">Secret<wbr>Backend<wbr>Connection<wbr>Hana<wbr>Args</a></span>
     </dt>
     <dd>{{% md %}}A nested block containing configuration options for SAP HanaDB connections.
-{{% /md %}}</dd>
-    <dt class="property-optional"
+{{% /md %}}</dd><dt class="property-optional"
             title="Optional">
         <span id="mongodb_csharp">
 <a href="#mongodb_csharp" style="color: inherit; text-decoration: inherit;">Mongodb</a>
@@ -271,8 +234,7 @@ connection.
         <span class="property-type"><a href="#secretbackendconnectionmongodb">Secret<wbr>Backend<wbr>Connection<wbr>Mongodb<wbr>Args</a></span>
     </dt>
     <dd>{{% md %}}A nested block containing configuration options for MongoDB connections.
-{{% /md %}}</dd>
-    <dt class="property-optional"
+{{% /md %}}</dd><dt class="property-optional"
             title="Optional">
         <span id="mongodbatlas_csharp">
 <a href="#mongodbatlas_csharp" style="color: inherit; text-decoration: inherit;">Mongodbatlas</a>
@@ -281,8 +243,7 @@ connection.
         <span class="property-type"><a href="#secretbackendconnectionmongodbatlas">Secret<wbr>Backend<wbr>Connection<wbr>Mongodbatlas<wbr>Args</a></span>
     </dt>
     <dd>{{% md %}}Connection parameters for the mongodbatlas-database-plugin plugin.
-{{% /md %}}</dd>
-    <dt class="property-optional"
+{{% /md %}}</dd><dt class="property-optional"
             title="Optional">
         <span id="mssql_csharp">
 <a href="#mssql_csharp" style="color: inherit; text-decoration: inherit;">Mssql</a>
@@ -291,8 +252,7 @@ connection.
         <span class="property-type"><a href="#secretbackendconnectionmssql">Secret<wbr>Backend<wbr>Connection<wbr>Mssql<wbr>Args</a></span>
     </dt>
     <dd>{{% md %}}A nested block containing configuration options for MSSQL connections.
-{{% /md %}}</dd>
-    <dt class="property-optional"
+{{% /md %}}</dd><dt class="property-optional"
             title="Optional">
         <span id="mysql_csharp">
 <a href="#mysql_csharp" style="color: inherit; text-decoration: inherit;">Mysql</a>
@@ -301,8 +261,7 @@ connection.
         <span class="property-type"><a href="#secretbackendconnectionmysql">Secret<wbr>Backend<wbr>Connection<wbr>Mysql<wbr>Args</a></span>
     </dt>
     <dd>{{% md %}}A nested block containing configuration options for MySQL connections.
-{{% /md %}}</dd>
-    <dt class="property-optional"
+{{% /md %}}</dd><dt class="property-optional"
             title="Optional">
         <span id="mysqlaurora_csharp">
 <a href="#mysqlaurora_csharp" style="color: inherit; text-decoration: inherit;">Mysql<wbr>Aurora</a>
@@ -311,8 +270,7 @@ connection.
         <span class="property-type"><a href="#secretbackendconnectionmysqlaurora">Secret<wbr>Backend<wbr>Connection<wbr>Mysql<wbr>Aurora<wbr>Args</a></span>
     </dt>
     <dd>{{% md %}}A nested block containing configuration options for Aurora MySQL connections.
-{{% /md %}}</dd>
-    <dt class="property-optional"
+{{% /md %}}</dd><dt class="property-optional"
             title="Optional">
         <span id="mysqllegacy_csharp">
 <a href="#mysqllegacy_csharp" style="color: inherit; text-decoration: inherit;">Mysql<wbr>Legacy</a>
@@ -321,8 +279,7 @@ connection.
         <span class="property-type"><a href="#secretbackendconnectionmysqllegacy">Secret<wbr>Backend<wbr>Connection<wbr>Mysql<wbr>Legacy<wbr>Args</a></span>
     </dt>
     <dd>{{% md %}}A nested block containing configuration options for legacy MySQL connections.
-{{% /md %}}</dd>
-    <dt class="property-optional"
+{{% /md %}}</dd><dt class="property-optional"
             title="Optional">
         <span id="mysqlrds_csharp">
 <a href="#mysqlrds_csharp" style="color: inherit; text-decoration: inherit;">Mysql<wbr>Rds</a>
@@ -331,8 +288,7 @@ connection.
         <span class="property-type"><a href="#secretbackendconnectionmysqlrds">Secret<wbr>Backend<wbr>Connection<wbr>Mysql<wbr>Rds<wbr>Args</a></span>
     </dt>
     <dd>{{% md %}}A nested block containing configuration options for RDS MySQL connections.
-{{% /md %}}</dd>
-    <dt class="property-optional"
+{{% /md %}}</dd><dt class="property-optional"
             title="Optional">
         <span id="name_csharp">
 <a href="#name_csharp" style="color: inherit; text-decoration: inherit;">Name</a>
@@ -341,8 +297,7 @@ connection.
         <span class="property-type">string</span>
     </dt>
     <dd>{{% md %}}A unique name to give the database connection.
-{{% /md %}}</dd>
-    <dt class="property-optional"
+{{% /md %}}</dd><dt class="property-optional"
             title="Optional">
         <span id="oracle_csharp">
 <a href="#oracle_csharp" style="color: inherit; text-decoration: inherit;">Oracle</a>
@@ -351,8 +306,7 @@ connection.
         <span class="property-type"><a href="#secretbackendconnectionoracle">Secret<wbr>Backend<wbr>Connection<wbr>Oracle<wbr>Args</a></span>
     </dt>
     <dd>{{% md %}}A nested block containing configuration options for Oracle connections.
-{{% /md %}}</dd>
-    <dt class="property-optional"
+{{% /md %}}</dd><dt class="property-optional"
             title="Optional">
         <span id="postgresql_csharp">
 <a href="#postgresql_csharp" style="color: inherit; text-decoration: inherit;">Postgresql</a>
@@ -361,8 +315,7 @@ connection.
         <span class="property-type"><a href="#secretbackendconnectionpostgresql">Secret<wbr>Backend<wbr>Connection<wbr>Postgresql<wbr>Args</a></span>
     </dt>
     <dd>{{% md %}}A nested block containing configuration options for PostgreSQL connections.
-{{% /md %}}</dd>
-    <dt class="property-optional"
+{{% /md %}}</dd><dt class="property-optional"
             title="Optional">
         <span id="rootrotationstatements_csharp">
 <a href="#rootrotationstatements_csharp" style="color: inherit; text-decoration: inherit;">Root<wbr>Rotation<wbr>Statements</a>
@@ -371,8 +324,7 @@ connection.
         <span class="property-type">List&lt;string&gt;</span>
     </dt>
     <dd>{{% md %}}A list of database statements to be executed to rotate the root user's credentials.
-{{% /md %}}</dd>
-    <dt class="property-optional"
+{{% /md %}}</dd><dt class="property-optional"
             title="Optional">
         <span id="verifyconnection_csharp">
 <a href="#verifyconnection_csharp" style="color: inherit; text-decoration: inherit;">Verify<wbr>Connection</a>
@@ -382,14 +334,11 @@ connection.
     </dt>
     <dd>{{% md %}}Whether the connection should be verified on
 initial configuration or not.
-{{% /md %}}</dd>
-</dl>
+{{% /md %}}</dd></dl>
 {{% /choosable %}}
 
 {{% choosable language go %}}
-<dl class="resources-properties">
-
-    <dt class="property-required"
+<dl class="resources-properties"><dt class="property-required"
             title="Required">
         <span id="backend_go">
 <a href="#backend_go" style="color: inherit; text-decoration: inherit;">Backend</a>
@@ -398,8 +347,7 @@ initial configuration or not.
         <span class="property-type">string</span>
     </dt>
     <dd>{{% md %}}The unique name of the Vault mount to configure.
-{{% /md %}}</dd>
-    <dt class="property-optional"
+{{% /md %}}</dd><dt class="property-optional"
             title="Optional">
         <span id="allowedroles_go">
 <a href="#allowedroles_go" style="color: inherit; text-decoration: inherit;">Allowed<wbr>Roles</a>
@@ -409,8 +357,7 @@ initial configuration or not.
     </dt>
     <dd>{{% md %}}A list of roles that are allowed to use this
 connection.
-{{% /md %}}</dd>
-    <dt class="property-optional"
+{{% /md %}}</dd><dt class="property-optional"
             title="Optional">
         <span id="cassandra_go">
 <a href="#cassandra_go" style="color: inherit; text-decoration: inherit;">Cassandra</a>
@@ -419,8 +366,7 @@ connection.
         <span class="property-type"><a href="#secretbackendconnectioncassandra">Secret<wbr>Backend<wbr>Connection<wbr>Cassandra</a></span>
     </dt>
     <dd>{{% md %}}A nested block containing configuration options for Cassandra connections.
-{{% /md %}}</dd>
-    <dt class="property-optional"
+{{% /md %}}</dd><dt class="property-optional"
             title="Optional">
         <span id="data_go">
 <a href="#data_go" style="color: inherit; text-decoration: inherit;">Data</a>
@@ -429,8 +375,7 @@ connection.
         <span class="property-type">map[string]interface{}</span>
     </dt>
     <dd>{{% md %}}A map of sensitive data to pass to the endpoint. Useful for templated connection strings.
-{{% /md %}}</dd>
-    <dt class="property-optional"
+{{% /md %}}</dd><dt class="property-optional"
             title="Optional">
         <span id="elasticsearch_go">
 <a href="#elasticsearch_go" style="color: inherit; text-decoration: inherit;">Elasticsearch</a>
@@ -439,8 +384,7 @@ connection.
         <span class="property-type"><a href="#secretbackendconnectionelasticsearch">Secret<wbr>Backend<wbr>Connection<wbr>Elasticsearch</a></span>
     </dt>
     <dd>{{% md %}}A nested block containing configuration options for Elasticsearch connections.
-{{% /md %}}</dd>
-    <dt class="property-optional"
+{{% /md %}}</dd><dt class="property-optional"
             title="Optional">
         <span id="hana_go">
 <a href="#hana_go" style="color: inherit; text-decoration: inherit;">Hana</a>
@@ -449,8 +393,7 @@ connection.
         <span class="property-type"><a href="#secretbackendconnectionhana">Secret<wbr>Backend<wbr>Connection<wbr>Hana</a></span>
     </dt>
     <dd>{{% md %}}A nested block containing configuration options for SAP HanaDB connections.
-{{% /md %}}</dd>
-    <dt class="property-optional"
+{{% /md %}}</dd><dt class="property-optional"
             title="Optional">
         <span id="mongodb_go">
 <a href="#mongodb_go" style="color: inherit; text-decoration: inherit;">Mongodb</a>
@@ -459,8 +402,7 @@ connection.
         <span class="property-type"><a href="#secretbackendconnectionmongodb">Secret<wbr>Backend<wbr>Connection<wbr>Mongodb</a></span>
     </dt>
     <dd>{{% md %}}A nested block containing configuration options for MongoDB connections.
-{{% /md %}}</dd>
-    <dt class="property-optional"
+{{% /md %}}</dd><dt class="property-optional"
             title="Optional">
         <span id="mongodbatlas_go">
 <a href="#mongodbatlas_go" style="color: inherit; text-decoration: inherit;">Mongodbatlas</a>
@@ -469,8 +411,7 @@ connection.
         <span class="property-type"><a href="#secretbackendconnectionmongodbatlas">Secret<wbr>Backend<wbr>Connection<wbr>Mongodbatlas</a></span>
     </dt>
     <dd>{{% md %}}Connection parameters for the mongodbatlas-database-plugin plugin.
-{{% /md %}}</dd>
-    <dt class="property-optional"
+{{% /md %}}</dd><dt class="property-optional"
             title="Optional">
         <span id="mssql_go">
 <a href="#mssql_go" style="color: inherit; text-decoration: inherit;">Mssql</a>
@@ -479,8 +420,7 @@ connection.
         <span class="property-type"><a href="#secretbackendconnectionmssql">Secret<wbr>Backend<wbr>Connection<wbr>Mssql</a></span>
     </dt>
     <dd>{{% md %}}A nested block containing configuration options for MSSQL connections.
-{{% /md %}}</dd>
-    <dt class="property-optional"
+{{% /md %}}</dd><dt class="property-optional"
             title="Optional">
         <span id="mysql_go">
 <a href="#mysql_go" style="color: inherit; text-decoration: inherit;">Mysql</a>
@@ -489,8 +429,7 @@ connection.
         <span class="property-type"><a href="#secretbackendconnectionmysql">Secret<wbr>Backend<wbr>Connection<wbr>Mysql</a></span>
     </dt>
     <dd>{{% md %}}A nested block containing configuration options for MySQL connections.
-{{% /md %}}</dd>
-    <dt class="property-optional"
+{{% /md %}}</dd><dt class="property-optional"
             title="Optional">
         <span id="mysqlaurora_go">
 <a href="#mysqlaurora_go" style="color: inherit; text-decoration: inherit;">Mysql<wbr>Aurora</a>
@@ -499,8 +438,7 @@ connection.
         <span class="property-type"><a href="#secretbackendconnectionmysqlaurora">Secret<wbr>Backend<wbr>Connection<wbr>Mysql<wbr>Aurora</a></span>
     </dt>
     <dd>{{% md %}}A nested block containing configuration options for Aurora MySQL connections.
-{{% /md %}}</dd>
-    <dt class="property-optional"
+{{% /md %}}</dd><dt class="property-optional"
             title="Optional">
         <span id="mysqllegacy_go">
 <a href="#mysqllegacy_go" style="color: inherit; text-decoration: inherit;">Mysql<wbr>Legacy</a>
@@ -509,8 +447,7 @@ connection.
         <span class="property-type"><a href="#secretbackendconnectionmysqllegacy">Secret<wbr>Backend<wbr>Connection<wbr>Mysql<wbr>Legacy</a></span>
     </dt>
     <dd>{{% md %}}A nested block containing configuration options for legacy MySQL connections.
-{{% /md %}}</dd>
-    <dt class="property-optional"
+{{% /md %}}</dd><dt class="property-optional"
             title="Optional">
         <span id="mysqlrds_go">
 <a href="#mysqlrds_go" style="color: inherit; text-decoration: inherit;">Mysql<wbr>Rds</a>
@@ -519,8 +456,7 @@ connection.
         <span class="property-type"><a href="#secretbackendconnectionmysqlrds">Secret<wbr>Backend<wbr>Connection<wbr>Mysql<wbr>Rds</a></span>
     </dt>
     <dd>{{% md %}}A nested block containing configuration options for RDS MySQL connections.
-{{% /md %}}</dd>
-    <dt class="property-optional"
+{{% /md %}}</dd><dt class="property-optional"
             title="Optional">
         <span id="name_go">
 <a href="#name_go" style="color: inherit; text-decoration: inherit;">Name</a>
@@ -529,8 +465,7 @@ connection.
         <span class="property-type">string</span>
     </dt>
     <dd>{{% md %}}A unique name to give the database connection.
-{{% /md %}}</dd>
-    <dt class="property-optional"
+{{% /md %}}</dd><dt class="property-optional"
             title="Optional">
         <span id="oracle_go">
 <a href="#oracle_go" style="color: inherit; text-decoration: inherit;">Oracle</a>
@@ -539,8 +474,7 @@ connection.
         <span class="property-type"><a href="#secretbackendconnectionoracle">Secret<wbr>Backend<wbr>Connection<wbr>Oracle</a></span>
     </dt>
     <dd>{{% md %}}A nested block containing configuration options for Oracle connections.
-{{% /md %}}</dd>
-    <dt class="property-optional"
+{{% /md %}}</dd><dt class="property-optional"
             title="Optional">
         <span id="postgresql_go">
 <a href="#postgresql_go" style="color: inherit; text-decoration: inherit;">Postgresql</a>
@@ -549,8 +483,7 @@ connection.
         <span class="property-type"><a href="#secretbackendconnectionpostgresql">Secret<wbr>Backend<wbr>Connection<wbr>Postgresql</a></span>
     </dt>
     <dd>{{% md %}}A nested block containing configuration options for PostgreSQL connections.
-{{% /md %}}</dd>
-    <dt class="property-optional"
+{{% /md %}}</dd><dt class="property-optional"
             title="Optional">
         <span id="rootrotationstatements_go">
 <a href="#rootrotationstatements_go" style="color: inherit; text-decoration: inherit;">Root<wbr>Rotation<wbr>Statements</a>
@@ -559,8 +492,7 @@ connection.
         <span class="property-type">[]string</span>
     </dt>
     <dd>{{% md %}}A list of database statements to be executed to rotate the root user's credentials.
-{{% /md %}}</dd>
-    <dt class="property-optional"
+{{% /md %}}</dd><dt class="property-optional"
             title="Optional">
         <span id="verifyconnection_go">
 <a href="#verifyconnection_go" style="color: inherit; text-decoration: inherit;">Verify<wbr>Connection</a>
@@ -570,14 +502,11 @@ connection.
     </dt>
     <dd>{{% md %}}Whether the connection should be verified on
 initial configuration or not.
-{{% /md %}}</dd>
-</dl>
+{{% /md %}}</dd></dl>
 {{% /choosable %}}
 
 {{% choosable language nodejs %}}
-<dl class="resources-properties">
-
-    <dt class="property-required"
+<dl class="resources-properties"><dt class="property-required"
             title="Required">
         <span id="backend_nodejs">
 <a href="#backend_nodejs" style="color: inherit; text-decoration: inherit;">backend</a>
@@ -586,8 +515,7 @@ initial configuration or not.
         <span class="property-type">string</span>
     </dt>
     <dd>{{% md %}}The unique name of the Vault mount to configure.
-{{% /md %}}</dd>
-    <dt class="property-optional"
+{{% /md %}}</dd><dt class="property-optional"
             title="Optional">
         <span id="allowedroles_nodejs">
 <a href="#allowedroles_nodejs" style="color: inherit; text-decoration: inherit;">allowed<wbr>Roles</a>
@@ -597,8 +525,7 @@ initial configuration or not.
     </dt>
     <dd>{{% md %}}A list of roles that are allowed to use this
 connection.
-{{% /md %}}</dd>
-    <dt class="property-optional"
+{{% /md %}}</dd><dt class="property-optional"
             title="Optional">
         <span id="cassandra_nodejs">
 <a href="#cassandra_nodejs" style="color: inherit; text-decoration: inherit;">cassandra</a>
@@ -607,8 +534,7 @@ connection.
         <span class="property-type"><a href="#secretbackendconnectioncassandra">Secret<wbr>Backend<wbr>Connection<wbr>Cassandra</a></span>
     </dt>
     <dd>{{% md %}}A nested block containing configuration options for Cassandra connections.
-{{% /md %}}</dd>
-    <dt class="property-optional"
+{{% /md %}}</dd><dt class="property-optional"
             title="Optional">
         <span id="data_nodejs">
 <a href="#data_nodejs" style="color: inherit; text-decoration: inherit;">data</a>
@@ -617,8 +543,7 @@ connection.
         <span class="property-type">{[key: string]: any}</span>
     </dt>
     <dd>{{% md %}}A map of sensitive data to pass to the endpoint. Useful for templated connection strings.
-{{% /md %}}</dd>
-    <dt class="property-optional"
+{{% /md %}}</dd><dt class="property-optional"
             title="Optional">
         <span id="elasticsearch_nodejs">
 <a href="#elasticsearch_nodejs" style="color: inherit; text-decoration: inherit;">elasticsearch</a>
@@ -627,8 +552,7 @@ connection.
         <span class="property-type"><a href="#secretbackendconnectionelasticsearch">Secret<wbr>Backend<wbr>Connection<wbr>Elasticsearch</a></span>
     </dt>
     <dd>{{% md %}}A nested block containing configuration options for Elasticsearch connections.
-{{% /md %}}</dd>
-    <dt class="property-optional"
+{{% /md %}}</dd><dt class="property-optional"
             title="Optional">
         <span id="hana_nodejs">
 <a href="#hana_nodejs" style="color: inherit; text-decoration: inherit;">hana</a>
@@ -637,8 +561,7 @@ connection.
         <span class="property-type"><a href="#secretbackendconnectionhana">Secret<wbr>Backend<wbr>Connection<wbr>Hana</a></span>
     </dt>
     <dd>{{% md %}}A nested block containing configuration options for SAP HanaDB connections.
-{{% /md %}}</dd>
-    <dt class="property-optional"
+{{% /md %}}</dd><dt class="property-optional"
             title="Optional">
         <span id="mongodb_nodejs">
 <a href="#mongodb_nodejs" style="color: inherit; text-decoration: inherit;">mongodb</a>
@@ -647,8 +570,7 @@ connection.
         <span class="property-type"><a href="#secretbackendconnectionmongodb">Secret<wbr>Backend<wbr>Connection<wbr>Mongodb</a></span>
     </dt>
     <dd>{{% md %}}A nested block containing configuration options for MongoDB connections.
-{{% /md %}}</dd>
-    <dt class="property-optional"
+{{% /md %}}</dd><dt class="property-optional"
             title="Optional">
         <span id="mongodbatlas_nodejs">
 <a href="#mongodbatlas_nodejs" style="color: inherit; text-decoration: inherit;">mongodbatlas</a>
@@ -657,8 +579,7 @@ connection.
         <span class="property-type"><a href="#secretbackendconnectionmongodbatlas">Secret<wbr>Backend<wbr>Connection<wbr>Mongodbatlas</a></span>
     </dt>
     <dd>{{% md %}}Connection parameters for the mongodbatlas-database-plugin plugin.
-{{% /md %}}</dd>
-    <dt class="property-optional"
+{{% /md %}}</dd><dt class="property-optional"
             title="Optional">
         <span id="mssql_nodejs">
 <a href="#mssql_nodejs" style="color: inherit; text-decoration: inherit;">mssql</a>
@@ -667,8 +588,7 @@ connection.
         <span class="property-type"><a href="#secretbackendconnectionmssql">Secret<wbr>Backend<wbr>Connection<wbr>Mssql</a></span>
     </dt>
     <dd>{{% md %}}A nested block containing configuration options for MSSQL connections.
-{{% /md %}}</dd>
-    <dt class="property-optional"
+{{% /md %}}</dd><dt class="property-optional"
             title="Optional">
         <span id="mysql_nodejs">
 <a href="#mysql_nodejs" style="color: inherit; text-decoration: inherit;">mysql</a>
@@ -677,8 +597,7 @@ connection.
         <span class="property-type"><a href="#secretbackendconnectionmysql">Secret<wbr>Backend<wbr>Connection<wbr>Mysql</a></span>
     </dt>
     <dd>{{% md %}}A nested block containing configuration options for MySQL connections.
-{{% /md %}}</dd>
-    <dt class="property-optional"
+{{% /md %}}</dd><dt class="property-optional"
             title="Optional">
         <span id="mysqlaurora_nodejs">
 <a href="#mysqlaurora_nodejs" style="color: inherit; text-decoration: inherit;">mysql<wbr>Aurora</a>
@@ -687,8 +606,7 @@ connection.
         <span class="property-type"><a href="#secretbackendconnectionmysqlaurora">Secret<wbr>Backend<wbr>Connection<wbr>Mysql<wbr>Aurora</a></span>
     </dt>
     <dd>{{% md %}}A nested block containing configuration options for Aurora MySQL connections.
-{{% /md %}}</dd>
-    <dt class="property-optional"
+{{% /md %}}</dd><dt class="property-optional"
             title="Optional">
         <span id="mysqllegacy_nodejs">
 <a href="#mysqllegacy_nodejs" style="color: inherit; text-decoration: inherit;">mysql<wbr>Legacy</a>
@@ -697,8 +615,7 @@ connection.
         <span class="property-type"><a href="#secretbackendconnectionmysqllegacy">Secret<wbr>Backend<wbr>Connection<wbr>Mysql<wbr>Legacy</a></span>
     </dt>
     <dd>{{% md %}}A nested block containing configuration options for legacy MySQL connections.
-{{% /md %}}</dd>
-    <dt class="property-optional"
+{{% /md %}}</dd><dt class="property-optional"
             title="Optional">
         <span id="mysqlrds_nodejs">
 <a href="#mysqlrds_nodejs" style="color: inherit; text-decoration: inherit;">mysql<wbr>Rds</a>
@@ -707,8 +624,7 @@ connection.
         <span class="property-type"><a href="#secretbackendconnectionmysqlrds">Secret<wbr>Backend<wbr>Connection<wbr>Mysql<wbr>Rds</a></span>
     </dt>
     <dd>{{% md %}}A nested block containing configuration options for RDS MySQL connections.
-{{% /md %}}</dd>
-    <dt class="property-optional"
+{{% /md %}}</dd><dt class="property-optional"
             title="Optional">
         <span id="name_nodejs">
 <a href="#name_nodejs" style="color: inherit; text-decoration: inherit;">name</a>
@@ -717,8 +633,7 @@ connection.
         <span class="property-type">string</span>
     </dt>
     <dd>{{% md %}}A unique name to give the database connection.
-{{% /md %}}</dd>
-    <dt class="property-optional"
+{{% /md %}}</dd><dt class="property-optional"
             title="Optional">
         <span id="oracle_nodejs">
 <a href="#oracle_nodejs" style="color: inherit; text-decoration: inherit;">oracle</a>
@@ -727,8 +642,7 @@ connection.
         <span class="property-type"><a href="#secretbackendconnectionoracle">Secret<wbr>Backend<wbr>Connection<wbr>Oracle</a></span>
     </dt>
     <dd>{{% md %}}A nested block containing configuration options for Oracle connections.
-{{% /md %}}</dd>
-    <dt class="property-optional"
+{{% /md %}}</dd><dt class="property-optional"
             title="Optional">
         <span id="postgresql_nodejs">
 <a href="#postgresql_nodejs" style="color: inherit; text-decoration: inherit;">postgresql</a>
@@ -737,8 +651,7 @@ connection.
         <span class="property-type"><a href="#secretbackendconnectionpostgresql">Secret<wbr>Backend<wbr>Connection<wbr>Postgresql</a></span>
     </dt>
     <dd>{{% md %}}A nested block containing configuration options for PostgreSQL connections.
-{{% /md %}}</dd>
-    <dt class="property-optional"
+{{% /md %}}</dd><dt class="property-optional"
             title="Optional">
         <span id="rootrotationstatements_nodejs">
 <a href="#rootrotationstatements_nodejs" style="color: inherit; text-decoration: inherit;">root<wbr>Rotation<wbr>Statements</a>
@@ -747,8 +660,7 @@ connection.
         <span class="property-type">string[]</span>
     </dt>
     <dd>{{% md %}}A list of database statements to be executed to rotate the root user's credentials.
-{{% /md %}}</dd>
-    <dt class="property-optional"
+{{% /md %}}</dd><dt class="property-optional"
             title="Optional">
         <span id="verifyconnection_nodejs">
 <a href="#verifyconnection_nodejs" style="color: inherit; text-decoration: inherit;">verify<wbr>Connection</a>
@@ -758,14 +670,11 @@ connection.
     </dt>
     <dd>{{% md %}}Whether the connection should be verified on
 initial configuration or not.
-{{% /md %}}</dd>
-</dl>
+{{% /md %}}</dd></dl>
 {{% /choosable %}}
 
 {{% choosable language python %}}
-<dl class="resources-properties">
-
-    <dt class="property-required"
+<dl class="resources-properties"><dt class="property-required"
             title="Required">
         <span id="backend_python">
 <a href="#backend_python" style="color: inherit; text-decoration: inherit;">backend</a>
@@ -774,8 +683,7 @@ initial configuration or not.
         <span class="property-type">str</span>
     </dt>
     <dd>{{% md %}}The unique name of the Vault mount to configure.
-{{% /md %}}</dd>
-    <dt class="property-optional"
+{{% /md %}}</dd><dt class="property-optional"
             title="Optional">
         <span id="allowed_roles_python">
 <a href="#allowed_roles_python" style="color: inherit; text-decoration: inherit;">allowed_<wbr>roles</a>
@@ -785,8 +693,7 @@ initial configuration or not.
     </dt>
     <dd>{{% md %}}A list of roles that are allowed to use this
 connection.
-{{% /md %}}</dd>
-    <dt class="property-optional"
+{{% /md %}}</dd><dt class="property-optional"
             title="Optional">
         <span id="cassandra_python">
 <a href="#cassandra_python" style="color: inherit; text-decoration: inherit;">cassandra</a>
@@ -795,8 +702,7 @@ connection.
         <span class="property-type"><a href="#secretbackendconnectioncassandra">Secret<wbr>Backend<wbr>Connection<wbr>Cassandra<wbr>Args</a></span>
     </dt>
     <dd>{{% md %}}A nested block containing configuration options for Cassandra connections.
-{{% /md %}}</dd>
-    <dt class="property-optional"
+{{% /md %}}</dd><dt class="property-optional"
             title="Optional">
         <span id="data_python">
 <a href="#data_python" style="color: inherit; text-decoration: inherit;">data</a>
@@ -805,8 +711,7 @@ connection.
         <span class="property-type">Mapping[str, Any]</span>
     </dt>
     <dd>{{% md %}}A map of sensitive data to pass to the endpoint. Useful for templated connection strings.
-{{% /md %}}</dd>
-    <dt class="property-optional"
+{{% /md %}}</dd><dt class="property-optional"
             title="Optional">
         <span id="elasticsearch_python">
 <a href="#elasticsearch_python" style="color: inherit; text-decoration: inherit;">elasticsearch</a>
@@ -815,8 +720,7 @@ connection.
         <span class="property-type"><a href="#secretbackendconnectionelasticsearch">Secret<wbr>Backend<wbr>Connection<wbr>Elasticsearch<wbr>Args</a></span>
     </dt>
     <dd>{{% md %}}A nested block containing configuration options for Elasticsearch connections.
-{{% /md %}}</dd>
-    <dt class="property-optional"
+{{% /md %}}</dd><dt class="property-optional"
             title="Optional">
         <span id="hana_python">
 <a href="#hana_python" style="color: inherit; text-decoration: inherit;">hana</a>
@@ -825,8 +729,7 @@ connection.
         <span class="property-type"><a href="#secretbackendconnectionhana">Secret<wbr>Backend<wbr>Connection<wbr>Hana<wbr>Args</a></span>
     </dt>
     <dd>{{% md %}}A nested block containing configuration options for SAP HanaDB connections.
-{{% /md %}}</dd>
-    <dt class="property-optional"
+{{% /md %}}</dd><dt class="property-optional"
             title="Optional">
         <span id="mongodb_python">
 <a href="#mongodb_python" style="color: inherit; text-decoration: inherit;">mongodb</a>
@@ -835,8 +738,7 @@ connection.
         <span class="property-type"><a href="#secretbackendconnectionmongodb">Secret<wbr>Backend<wbr>Connection<wbr>Mongodb<wbr>Args</a></span>
     </dt>
     <dd>{{% md %}}A nested block containing configuration options for MongoDB connections.
-{{% /md %}}</dd>
-    <dt class="property-optional"
+{{% /md %}}</dd><dt class="property-optional"
             title="Optional">
         <span id="mongodbatlas_python">
 <a href="#mongodbatlas_python" style="color: inherit; text-decoration: inherit;">mongodbatlas</a>
@@ -845,8 +747,7 @@ connection.
         <span class="property-type"><a href="#secretbackendconnectionmongodbatlas">Secret<wbr>Backend<wbr>Connection<wbr>Mongodbatlas<wbr>Args</a></span>
     </dt>
     <dd>{{% md %}}Connection parameters for the mongodbatlas-database-plugin plugin.
-{{% /md %}}</dd>
-    <dt class="property-optional"
+{{% /md %}}</dd><dt class="property-optional"
             title="Optional">
         <span id="mssql_python">
 <a href="#mssql_python" style="color: inherit; text-decoration: inherit;">mssql</a>
@@ -855,8 +756,7 @@ connection.
         <span class="property-type"><a href="#secretbackendconnectionmssql">Secret<wbr>Backend<wbr>Connection<wbr>Mssql<wbr>Args</a></span>
     </dt>
     <dd>{{% md %}}A nested block containing configuration options for MSSQL connections.
-{{% /md %}}</dd>
-    <dt class="property-optional"
+{{% /md %}}</dd><dt class="property-optional"
             title="Optional">
         <span id="mysql_python">
 <a href="#mysql_python" style="color: inherit; text-decoration: inherit;">mysql</a>
@@ -865,8 +765,7 @@ connection.
         <span class="property-type"><a href="#secretbackendconnectionmysql">Secret<wbr>Backend<wbr>Connection<wbr>Mysql<wbr>Args</a></span>
     </dt>
     <dd>{{% md %}}A nested block containing configuration options for MySQL connections.
-{{% /md %}}</dd>
-    <dt class="property-optional"
+{{% /md %}}</dd><dt class="property-optional"
             title="Optional">
         <span id="mysql_aurora_python">
 <a href="#mysql_aurora_python" style="color: inherit; text-decoration: inherit;">mysql_<wbr>aurora</a>
@@ -875,8 +774,7 @@ connection.
         <span class="property-type"><a href="#secretbackendconnectionmysqlaurora">Secret<wbr>Backend<wbr>Connection<wbr>Mysql<wbr>Aurora<wbr>Args</a></span>
     </dt>
     <dd>{{% md %}}A nested block containing configuration options for Aurora MySQL connections.
-{{% /md %}}</dd>
-    <dt class="property-optional"
+{{% /md %}}</dd><dt class="property-optional"
             title="Optional">
         <span id="mysql_legacy_python">
 <a href="#mysql_legacy_python" style="color: inherit; text-decoration: inherit;">mysql_<wbr>legacy</a>
@@ -885,8 +783,7 @@ connection.
         <span class="property-type"><a href="#secretbackendconnectionmysqllegacy">Secret<wbr>Backend<wbr>Connection<wbr>Mysql<wbr>Legacy<wbr>Args</a></span>
     </dt>
     <dd>{{% md %}}A nested block containing configuration options for legacy MySQL connections.
-{{% /md %}}</dd>
-    <dt class="property-optional"
+{{% /md %}}</dd><dt class="property-optional"
             title="Optional">
         <span id="mysql_rds_python">
 <a href="#mysql_rds_python" style="color: inherit; text-decoration: inherit;">mysql_<wbr>rds</a>
@@ -895,8 +792,7 @@ connection.
         <span class="property-type"><a href="#secretbackendconnectionmysqlrds">Secret<wbr>Backend<wbr>Connection<wbr>Mysql<wbr>Rds<wbr>Args</a></span>
     </dt>
     <dd>{{% md %}}A nested block containing configuration options for RDS MySQL connections.
-{{% /md %}}</dd>
-    <dt class="property-optional"
+{{% /md %}}</dd><dt class="property-optional"
             title="Optional">
         <span id="name_python">
 <a href="#name_python" style="color: inherit; text-decoration: inherit;">name</a>
@@ -905,8 +801,7 @@ connection.
         <span class="property-type">str</span>
     </dt>
     <dd>{{% md %}}A unique name to give the database connection.
-{{% /md %}}</dd>
-    <dt class="property-optional"
+{{% /md %}}</dd><dt class="property-optional"
             title="Optional">
         <span id="oracle_python">
 <a href="#oracle_python" style="color: inherit; text-decoration: inherit;">oracle</a>
@@ -915,8 +810,7 @@ connection.
         <span class="property-type"><a href="#secretbackendconnectionoracle">Secret<wbr>Backend<wbr>Connection<wbr>Oracle<wbr>Args</a></span>
     </dt>
     <dd>{{% md %}}A nested block containing configuration options for Oracle connections.
-{{% /md %}}</dd>
-    <dt class="property-optional"
+{{% /md %}}</dd><dt class="property-optional"
             title="Optional">
         <span id="postgresql_python">
 <a href="#postgresql_python" style="color: inherit; text-decoration: inherit;">postgresql</a>
@@ -925,8 +819,7 @@ connection.
         <span class="property-type"><a href="#secretbackendconnectionpostgresql">Secret<wbr>Backend<wbr>Connection<wbr>Postgresql<wbr>Args</a></span>
     </dt>
     <dd>{{% md %}}A nested block containing configuration options for PostgreSQL connections.
-{{% /md %}}</dd>
-    <dt class="property-optional"
+{{% /md %}}</dd><dt class="property-optional"
             title="Optional">
         <span id="root_rotation_statements_python">
 <a href="#root_rotation_statements_python" style="color: inherit; text-decoration: inherit;">root_<wbr>rotation_<wbr>statements</a>
@@ -935,8 +828,7 @@ connection.
         <span class="property-type">Sequence[str]</span>
     </dt>
     <dd>{{% md %}}A list of database statements to be executed to rotate the root user's credentials.
-{{% /md %}}</dd>
-    <dt class="property-optional"
+{{% /md %}}</dd><dt class="property-optional"
             title="Optional">
         <span id="verify_connection_python">
 <a href="#verify_connection_python" style="color: inherit; text-decoration: inherit;">verify_<wbr>connection</a>
@@ -946,8 +838,7 @@ connection.
     </dt>
     <dd>{{% md %}}Whether the connection should be verified on
 initial configuration or not.
-{{% /md %}}</dd>
-</dl>
+{{% /md %}}</dd></dl>
 {{% /choosable %}}
 
 
@@ -958,9 +849,7 @@ All [input](#inputs) properties are implicitly available as output properties. A
 
 
 {{% choosable language csharp %}}
-<dl class="resources-properties">
-
-    <dt class="property-"
+<dl class="resources-properties"><dt class="property-"
             title="">
         <span id="id_csharp">
 <a href="#id_csharp" style="color: inherit; text-decoration: inherit;">Id</a>
@@ -968,14 +857,11 @@ All [input](#inputs) properties are implicitly available as output properties. A
         <span class="property-indicator"></span>
         <span class="property-type">string</span>
     </dt>
-    <dd>{{% md %}}The provider-assigned unique ID for this managed resource.{{% /md %}}</dd>
-</dl>
+    <dd>{{% md %}}The provider-assigned unique ID for this managed resource.{{% /md %}}</dd></dl>
 {{% /choosable %}}
 
 {{% choosable language go %}}
-<dl class="resources-properties">
-
-    <dt class="property-"
+<dl class="resources-properties"><dt class="property-"
             title="">
         <span id="id_go">
 <a href="#id_go" style="color: inherit; text-decoration: inherit;">Id</a>
@@ -983,14 +869,11 @@ All [input](#inputs) properties are implicitly available as output properties. A
         <span class="property-indicator"></span>
         <span class="property-type">string</span>
     </dt>
-    <dd>{{% md %}}The provider-assigned unique ID for this managed resource.{{% /md %}}</dd>
-</dl>
+    <dd>{{% md %}}The provider-assigned unique ID for this managed resource.{{% /md %}}</dd></dl>
 {{% /choosable %}}
 
 {{% choosable language nodejs %}}
-<dl class="resources-properties">
-
-    <dt class="property-"
+<dl class="resources-properties"><dt class="property-"
             title="">
         <span id="id_nodejs">
 <a href="#id_nodejs" style="color: inherit; text-decoration: inherit;">id</a>
@@ -998,14 +881,11 @@ All [input](#inputs) properties are implicitly available as output properties. A
         <span class="property-indicator"></span>
         <span class="property-type">string</span>
     </dt>
-    <dd>{{% md %}}The provider-assigned unique ID for this managed resource.{{% /md %}}</dd>
-</dl>
+    <dd>{{% md %}}The provider-assigned unique ID for this managed resource.{{% /md %}}</dd></dl>
 {{% /choosable %}}
 
 {{% choosable language python %}}
-<dl class="resources-properties">
-
-    <dt class="property-"
+<dl class="resources-properties"><dt class="property-"
             title="">
         <span id="id_python">
 <a href="#id_python" style="color: inherit; text-decoration: inherit;">id</a>
@@ -1013,8 +893,7 @@ All [input](#inputs) properties are implicitly available as output properties. A
         <span class="property-indicator"></span>
         <span class="property-type">str</span>
     </dt>
-    <dd>{{% md %}}The provider-assigned unique ID for this managed resource.{{% /md %}}</dd>
-</dl>
+    <dd>{{% md %}}The provider-assigned unique ID for this managed resource.{{% /md %}}</dd></dl>
 {{% /choosable %}}
 
 
@@ -1141,9 +1020,7 @@ The following state arguments are supported:
 
 
 {{% choosable language csharp %}}
-<dl class="resources-properties">
-
-    <dt class="property-optional"
+<dl class="resources-properties"><dt class="property-optional"
             title="Optional">
         <span id="state_allowedroles_csharp">
 <a href="#state_allowedroles_csharp" style="color: inherit; text-decoration: inherit;">Allowed<wbr>Roles</a>
@@ -1153,8 +1030,7 @@ The following state arguments are supported:
     </dt>
     <dd>{{% md %}}A list of roles that are allowed to use this
 connection.
-{{% /md %}}</dd>
-    <dt class="property-optional"
+{{% /md %}}</dd><dt class="property-optional"
             title="Optional">
         <span id="state_backend_csharp">
 <a href="#state_backend_csharp" style="color: inherit; text-decoration: inherit;">Backend</a>
@@ -1163,8 +1039,7 @@ connection.
         <span class="property-type">string</span>
     </dt>
     <dd>{{% md %}}The unique name of the Vault mount to configure.
-{{% /md %}}</dd>
-    <dt class="property-optional"
+{{% /md %}}</dd><dt class="property-optional"
             title="Optional">
         <span id="state_cassandra_csharp">
 <a href="#state_cassandra_csharp" style="color: inherit; text-decoration: inherit;">Cassandra</a>
@@ -1173,8 +1048,7 @@ connection.
         <span class="property-type"><a href="#secretbackendconnectioncassandra">Secret<wbr>Backend<wbr>Connection<wbr>Cassandra<wbr>Args</a></span>
     </dt>
     <dd>{{% md %}}A nested block containing configuration options for Cassandra connections.
-{{% /md %}}</dd>
-    <dt class="property-optional"
+{{% /md %}}</dd><dt class="property-optional"
             title="Optional">
         <span id="state_data_csharp">
 <a href="#state_data_csharp" style="color: inherit; text-decoration: inherit;">Data</a>
@@ -1183,8 +1057,7 @@ connection.
         <span class="property-type">Dictionary&lt;string, object&gt;</span>
     </dt>
     <dd>{{% md %}}A map of sensitive data to pass to the endpoint. Useful for templated connection strings.
-{{% /md %}}</dd>
-    <dt class="property-optional"
+{{% /md %}}</dd><dt class="property-optional"
             title="Optional">
         <span id="state_elasticsearch_csharp">
 <a href="#state_elasticsearch_csharp" style="color: inherit; text-decoration: inherit;">Elasticsearch</a>
@@ -1193,8 +1066,7 @@ connection.
         <span class="property-type"><a href="#secretbackendconnectionelasticsearch">Secret<wbr>Backend<wbr>Connection<wbr>Elasticsearch<wbr>Args</a></span>
     </dt>
     <dd>{{% md %}}A nested block containing configuration options for Elasticsearch connections.
-{{% /md %}}</dd>
-    <dt class="property-optional"
+{{% /md %}}</dd><dt class="property-optional"
             title="Optional">
         <span id="state_hana_csharp">
 <a href="#state_hana_csharp" style="color: inherit; text-decoration: inherit;">Hana</a>
@@ -1203,8 +1075,7 @@ connection.
         <span class="property-type"><a href="#secretbackendconnectionhana">Secret<wbr>Backend<wbr>Connection<wbr>Hana<wbr>Args</a></span>
     </dt>
     <dd>{{% md %}}A nested block containing configuration options for SAP HanaDB connections.
-{{% /md %}}</dd>
-    <dt class="property-optional"
+{{% /md %}}</dd><dt class="property-optional"
             title="Optional">
         <span id="state_mongodb_csharp">
 <a href="#state_mongodb_csharp" style="color: inherit; text-decoration: inherit;">Mongodb</a>
@@ -1213,8 +1084,7 @@ connection.
         <span class="property-type"><a href="#secretbackendconnectionmongodb">Secret<wbr>Backend<wbr>Connection<wbr>Mongodb<wbr>Args</a></span>
     </dt>
     <dd>{{% md %}}A nested block containing configuration options for MongoDB connections.
-{{% /md %}}</dd>
-    <dt class="property-optional"
+{{% /md %}}</dd><dt class="property-optional"
             title="Optional">
         <span id="state_mongodbatlas_csharp">
 <a href="#state_mongodbatlas_csharp" style="color: inherit; text-decoration: inherit;">Mongodbatlas</a>
@@ -1223,8 +1093,7 @@ connection.
         <span class="property-type"><a href="#secretbackendconnectionmongodbatlas">Secret<wbr>Backend<wbr>Connection<wbr>Mongodbatlas<wbr>Args</a></span>
     </dt>
     <dd>{{% md %}}Connection parameters for the mongodbatlas-database-plugin plugin.
-{{% /md %}}</dd>
-    <dt class="property-optional"
+{{% /md %}}</dd><dt class="property-optional"
             title="Optional">
         <span id="state_mssql_csharp">
 <a href="#state_mssql_csharp" style="color: inherit; text-decoration: inherit;">Mssql</a>
@@ -1233,8 +1102,7 @@ connection.
         <span class="property-type"><a href="#secretbackendconnectionmssql">Secret<wbr>Backend<wbr>Connection<wbr>Mssql<wbr>Args</a></span>
     </dt>
     <dd>{{% md %}}A nested block containing configuration options for MSSQL connections.
-{{% /md %}}</dd>
-    <dt class="property-optional"
+{{% /md %}}</dd><dt class="property-optional"
             title="Optional">
         <span id="state_mysql_csharp">
 <a href="#state_mysql_csharp" style="color: inherit; text-decoration: inherit;">Mysql</a>
@@ -1243,8 +1111,7 @@ connection.
         <span class="property-type"><a href="#secretbackendconnectionmysql">Secret<wbr>Backend<wbr>Connection<wbr>Mysql<wbr>Args</a></span>
     </dt>
     <dd>{{% md %}}A nested block containing configuration options for MySQL connections.
-{{% /md %}}</dd>
-    <dt class="property-optional"
+{{% /md %}}</dd><dt class="property-optional"
             title="Optional">
         <span id="state_mysqlaurora_csharp">
 <a href="#state_mysqlaurora_csharp" style="color: inherit; text-decoration: inherit;">Mysql<wbr>Aurora</a>
@@ -1253,8 +1120,7 @@ connection.
         <span class="property-type"><a href="#secretbackendconnectionmysqlaurora">Secret<wbr>Backend<wbr>Connection<wbr>Mysql<wbr>Aurora<wbr>Args</a></span>
     </dt>
     <dd>{{% md %}}A nested block containing configuration options for Aurora MySQL connections.
-{{% /md %}}</dd>
-    <dt class="property-optional"
+{{% /md %}}</dd><dt class="property-optional"
             title="Optional">
         <span id="state_mysqllegacy_csharp">
 <a href="#state_mysqllegacy_csharp" style="color: inherit; text-decoration: inherit;">Mysql<wbr>Legacy</a>
@@ -1263,8 +1129,7 @@ connection.
         <span class="property-type"><a href="#secretbackendconnectionmysqllegacy">Secret<wbr>Backend<wbr>Connection<wbr>Mysql<wbr>Legacy<wbr>Args</a></span>
     </dt>
     <dd>{{% md %}}A nested block containing configuration options for legacy MySQL connections.
-{{% /md %}}</dd>
-    <dt class="property-optional"
+{{% /md %}}</dd><dt class="property-optional"
             title="Optional">
         <span id="state_mysqlrds_csharp">
 <a href="#state_mysqlrds_csharp" style="color: inherit; text-decoration: inherit;">Mysql<wbr>Rds</a>
@@ -1273,8 +1138,7 @@ connection.
         <span class="property-type"><a href="#secretbackendconnectionmysqlrds">Secret<wbr>Backend<wbr>Connection<wbr>Mysql<wbr>Rds<wbr>Args</a></span>
     </dt>
     <dd>{{% md %}}A nested block containing configuration options for RDS MySQL connections.
-{{% /md %}}</dd>
-    <dt class="property-optional"
+{{% /md %}}</dd><dt class="property-optional"
             title="Optional">
         <span id="state_name_csharp">
 <a href="#state_name_csharp" style="color: inherit; text-decoration: inherit;">Name</a>
@@ -1283,8 +1147,7 @@ connection.
         <span class="property-type">string</span>
     </dt>
     <dd>{{% md %}}A unique name to give the database connection.
-{{% /md %}}</dd>
-    <dt class="property-optional"
+{{% /md %}}</dd><dt class="property-optional"
             title="Optional">
         <span id="state_oracle_csharp">
 <a href="#state_oracle_csharp" style="color: inherit; text-decoration: inherit;">Oracle</a>
@@ -1293,8 +1156,7 @@ connection.
         <span class="property-type"><a href="#secretbackendconnectionoracle">Secret<wbr>Backend<wbr>Connection<wbr>Oracle<wbr>Args</a></span>
     </dt>
     <dd>{{% md %}}A nested block containing configuration options for Oracle connections.
-{{% /md %}}</dd>
-    <dt class="property-optional"
+{{% /md %}}</dd><dt class="property-optional"
             title="Optional">
         <span id="state_postgresql_csharp">
 <a href="#state_postgresql_csharp" style="color: inherit; text-decoration: inherit;">Postgresql</a>
@@ -1303,8 +1165,7 @@ connection.
         <span class="property-type"><a href="#secretbackendconnectionpostgresql">Secret<wbr>Backend<wbr>Connection<wbr>Postgresql<wbr>Args</a></span>
     </dt>
     <dd>{{% md %}}A nested block containing configuration options for PostgreSQL connections.
-{{% /md %}}</dd>
-    <dt class="property-optional"
+{{% /md %}}</dd><dt class="property-optional"
             title="Optional">
         <span id="state_rootrotationstatements_csharp">
 <a href="#state_rootrotationstatements_csharp" style="color: inherit; text-decoration: inherit;">Root<wbr>Rotation<wbr>Statements</a>
@@ -1313,8 +1174,7 @@ connection.
         <span class="property-type">List&lt;string&gt;</span>
     </dt>
     <dd>{{% md %}}A list of database statements to be executed to rotate the root user's credentials.
-{{% /md %}}</dd>
-    <dt class="property-optional"
+{{% /md %}}</dd><dt class="property-optional"
             title="Optional">
         <span id="state_verifyconnection_csharp">
 <a href="#state_verifyconnection_csharp" style="color: inherit; text-decoration: inherit;">Verify<wbr>Connection</a>
@@ -1324,14 +1184,11 @@ connection.
     </dt>
     <dd>{{% md %}}Whether the connection should be verified on
 initial configuration or not.
-{{% /md %}}</dd>
-</dl>
+{{% /md %}}</dd></dl>
 {{% /choosable %}}
 
 {{% choosable language go %}}
-<dl class="resources-properties">
-
-    <dt class="property-optional"
+<dl class="resources-properties"><dt class="property-optional"
             title="Optional">
         <span id="state_allowedroles_go">
 <a href="#state_allowedroles_go" style="color: inherit; text-decoration: inherit;">Allowed<wbr>Roles</a>
@@ -1341,8 +1198,7 @@ initial configuration or not.
     </dt>
     <dd>{{% md %}}A list of roles that are allowed to use this
 connection.
-{{% /md %}}</dd>
-    <dt class="property-optional"
+{{% /md %}}</dd><dt class="property-optional"
             title="Optional">
         <span id="state_backend_go">
 <a href="#state_backend_go" style="color: inherit; text-decoration: inherit;">Backend</a>
@@ -1351,8 +1207,7 @@ connection.
         <span class="property-type">string</span>
     </dt>
     <dd>{{% md %}}The unique name of the Vault mount to configure.
-{{% /md %}}</dd>
-    <dt class="property-optional"
+{{% /md %}}</dd><dt class="property-optional"
             title="Optional">
         <span id="state_cassandra_go">
 <a href="#state_cassandra_go" style="color: inherit; text-decoration: inherit;">Cassandra</a>
@@ -1361,8 +1216,7 @@ connection.
         <span class="property-type"><a href="#secretbackendconnectioncassandra">Secret<wbr>Backend<wbr>Connection<wbr>Cassandra</a></span>
     </dt>
     <dd>{{% md %}}A nested block containing configuration options for Cassandra connections.
-{{% /md %}}</dd>
-    <dt class="property-optional"
+{{% /md %}}</dd><dt class="property-optional"
             title="Optional">
         <span id="state_data_go">
 <a href="#state_data_go" style="color: inherit; text-decoration: inherit;">Data</a>
@@ -1371,8 +1225,7 @@ connection.
         <span class="property-type">map[string]interface{}</span>
     </dt>
     <dd>{{% md %}}A map of sensitive data to pass to the endpoint. Useful for templated connection strings.
-{{% /md %}}</dd>
-    <dt class="property-optional"
+{{% /md %}}</dd><dt class="property-optional"
             title="Optional">
         <span id="state_elasticsearch_go">
 <a href="#state_elasticsearch_go" style="color: inherit; text-decoration: inherit;">Elasticsearch</a>
@@ -1381,8 +1234,7 @@ connection.
         <span class="property-type"><a href="#secretbackendconnectionelasticsearch">Secret<wbr>Backend<wbr>Connection<wbr>Elasticsearch</a></span>
     </dt>
     <dd>{{% md %}}A nested block containing configuration options for Elasticsearch connections.
-{{% /md %}}</dd>
-    <dt class="property-optional"
+{{% /md %}}</dd><dt class="property-optional"
             title="Optional">
         <span id="state_hana_go">
 <a href="#state_hana_go" style="color: inherit; text-decoration: inherit;">Hana</a>
@@ -1391,8 +1243,7 @@ connection.
         <span class="property-type"><a href="#secretbackendconnectionhana">Secret<wbr>Backend<wbr>Connection<wbr>Hana</a></span>
     </dt>
     <dd>{{% md %}}A nested block containing configuration options for SAP HanaDB connections.
-{{% /md %}}</dd>
-    <dt class="property-optional"
+{{% /md %}}</dd><dt class="property-optional"
             title="Optional">
         <span id="state_mongodb_go">
 <a href="#state_mongodb_go" style="color: inherit; text-decoration: inherit;">Mongodb</a>
@@ -1401,8 +1252,7 @@ connection.
         <span class="property-type"><a href="#secretbackendconnectionmongodb">Secret<wbr>Backend<wbr>Connection<wbr>Mongodb</a></span>
     </dt>
     <dd>{{% md %}}A nested block containing configuration options for MongoDB connections.
-{{% /md %}}</dd>
-    <dt class="property-optional"
+{{% /md %}}</dd><dt class="property-optional"
             title="Optional">
         <span id="state_mongodbatlas_go">
 <a href="#state_mongodbatlas_go" style="color: inherit; text-decoration: inherit;">Mongodbatlas</a>
@@ -1411,8 +1261,7 @@ connection.
         <span class="property-type"><a href="#secretbackendconnectionmongodbatlas">Secret<wbr>Backend<wbr>Connection<wbr>Mongodbatlas</a></span>
     </dt>
     <dd>{{% md %}}Connection parameters for the mongodbatlas-database-plugin plugin.
-{{% /md %}}</dd>
-    <dt class="property-optional"
+{{% /md %}}</dd><dt class="property-optional"
             title="Optional">
         <span id="state_mssql_go">
 <a href="#state_mssql_go" style="color: inherit; text-decoration: inherit;">Mssql</a>
@@ -1421,8 +1270,7 @@ connection.
         <span class="property-type"><a href="#secretbackendconnectionmssql">Secret<wbr>Backend<wbr>Connection<wbr>Mssql</a></span>
     </dt>
     <dd>{{% md %}}A nested block containing configuration options for MSSQL connections.
-{{% /md %}}</dd>
-    <dt class="property-optional"
+{{% /md %}}</dd><dt class="property-optional"
             title="Optional">
         <span id="state_mysql_go">
 <a href="#state_mysql_go" style="color: inherit; text-decoration: inherit;">Mysql</a>
@@ -1431,8 +1279,7 @@ connection.
         <span class="property-type"><a href="#secretbackendconnectionmysql">Secret<wbr>Backend<wbr>Connection<wbr>Mysql</a></span>
     </dt>
     <dd>{{% md %}}A nested block containing configuration options for MySQL connections.
-{{% /md %}}</dd>
-    <dt class="property-optional"
+{{% /md %}}</dd><dt class="property-optional"
             title="Optional">
         <span id="state_mysqlaurora_go">
 <a href="#state_mysqlaurora_go" style="color: inherit; text-decoration: inherit;">Mysql<wbr>Aurora</a>
@@ -1441,8 +1288,7 @@ connection.
         <span class="property-type"><a href="#secretbackendconnectionmysqlaurora">Secret<wbr>Backend<wbr>Connection<wbr>Mysql<wbr>Aurora</a></span>
     </dt>
     <dd>{{% md %}}A nested block containing configuration options for Aurora MySQL connections.
-{{% /md %}}</dd>
-    <dt class="property-optional"
+{{% /md %}}</dd><dt class="property-optional"
             title="Optional">
         <span id="state_mysqllegacy_go">
 <a href="#state_mysqllegacy_go" style="color: inherit; text-decoration: inherit;">Mysql<wbr>Legacy</a>
@@ -1451,8 +1297,7 @@ connection.
         <span class="property-type"><a href="#secretbackendconnectionmysqllegacy">Secret<wbr>Backend<wbr>Connection<wbr>Mysql<wbr>Legacy</a></span>
     </dt>
     <dd>{{% md %}}A nested block containing configuration options for legacy MySQL connections.
-{{% /md %}}</dd>
-    <dt class="property-optional"
+{{% /md %}}</dd><dt class="property-optional"
             title="Optional">
         <span id="state_mysqlrds_go">
 <a href="#state_mysqlrds_go" style="color: inherit; text-decoration: inherit;">Mysql<wbr>Rds</a>
@@ -1461,8 +1306,7 @@ connection.
         <span class="property-type"><a href="#secretbackendconnectionmysqlrds">Secret<wbr>Backend<wbr>Connection<wbr>Mysql<wbr>Rds</a></span>
     </dt>
     <dd>{{% md %}}A nested block containing configuration options for RDS MySQL connections.
-{{% /md %}}</dd>
-    <dt class="property-optional"
+{{% /md %}}</dd><dt class="property-optional"
             title="Optional">
         <span id="state_name_go">
 <a href="#state_name_go" style="color: inherit; text-decoration: inherit;">Name</a>
@@ -1471,8 +1315,7 @@ connection.
         <span class="property-type">string</span>
     </dt>
     <dd>{{% md %}}A unique name to give the database connection.
-{{% /md %}}</dd>
-    <dt class="property-optional"
+{{% /md %}}</dd><dt class="property-optional"
             title="Optional">
         <span id="state_oracle_go">
 <a href="#state_oracle_go" style="color: inherit; text-decoration: inherit;">Oracle</a>
@@ -1481,8 +1324,7 @@ connection.
         <span class="property-type"><a href="#secretbackendconnectionoracle">Secret<wbr>Backend<wbr>Connection<wbr>Oracle</a></span>
     </dt>
     <dd>{{% md %}}A nested block containing configuration options for Oracle connections.
-{{% /md %}}</dd>
-    <dt class="property-optional"
+{{% /md %}}</dd><dt class="property-optional"
             title="Optional">
         <span id="state_postgresql_go">
 <a href="#state_postgresql_go" style="color: inherit; text-decoration: inherit;">Postgresql</a>
@@ -1491,8 +1333,7 @@ connection.
         <span class="property-type"><a href="#secretbackendconnectionpostgresql">Secret<wbr>Backend<wbr>Connection<wbr>Postgresql</a></span>
     </dt>
     <dd>{{% md %}}A nested block containing configuration options for PostgreSQL connections.
-{{% /md %}}</dd>
-    <dt class="property-optional"
+{{% /md %}}</dd><dt class="property-optional"
             title="Optional">
         <span id="state_rootrotationstatements_go">
 <a href="#state_rootrotationstatements_go" style="color: inherit; text-decoration: inherit;">Root<wbr>Rotation<wbr>Statements</a>
@@ -1501,8 +1342,7 @@ connection.
         <span class="property-type">[]string</span>
     </dt>
     <dd>{{% md %}}A list of database statements to be executed to rotate the root user's credentials.
-{{% /md %}}</dd>
-    <dt class="property-optional"
+{{% /md %}}</dd><dt class="property-optional"
             title="Optional">
         <span id="state_verifyconnection_go">
 <a href="#state_verifyconnection_go" style="color: inherit; text-decoration: inherit;">Verify<wbr>Connection</a>
@@ -1512,14 +1352,11 @@ connection.
     </dt>
     <dd>{{% md %}}Whether the connection should be verified on
 initial configuration or not.
-{{% /md %}}</dd>
-</dl>
+{{% /md %}}</dd></dl>
 {{% /choosable %}}
 
 {{% choosable language nodejs %}}
-<dl class="resources-properties">
-
-    <dt class="property-optional"
+<dl class="resources-properties"><dt class="property-optional"
             title="Optional">
         <span id="state_allowedroles_nodejs">
 <a href="#state_allowedroles_nodejs" style="color: inherit; text-decoration: inherit;">allowed<wbr>Roles</a>
@@ -1529,8 +1366,7 @@ initial configuration or not.
     </dt>
     <dd>{{% md %}}A list of roles that are allowed to use this
 connection.
-{{% /md %}}</dd>
-    <dt class="property-optional"
+{{% /md %}}</dd><dt class="property-optional"
             title="Optional">
         <span id="state_backend_nodejs">
 <a href="#state_backend_nodejs" style="color: inherit; text-decoration: inherit;">backend</a>
@@ -1539,8 +1375,7 @@ connection.
         <span class="property-type">string</span>
     </dt>
     <dd>{{% md %}}The unique name of the Vault mount to configure.
-{{% /md %}}</dd>
-    <dt class="property-optional"
+{{% /md %}}</dd><dt class="property-optional"
             title="Optional">
         <span id="state_cassandra_nodejs">
 <a href="#state_cassandra_nodejs" style="color: inherit; text-decoration: inherit;">cassandra</a>
@@ -1549,8 +1384,7 @@ connection.
         <span class="property-type"><a href="#secretbackendconnectioncassandra">Secret<wbr>Backend<wbr>Connection<wbr>Cassandra</a></span>
     </dt>
     <dd>{{% md %}}A nested block containing configuration options for Cassandra connections.
-{{% /md %}}</dd>
-    <dt class="property-optional"
+{{% /md %}}</dd><dt class="property-optional"
             title="Optional">
         <span id="state_data_nodejs">
 <a href="#state_data_nodejs" style="color: inherit; text-decoration: inherit;">data</a>
@@ -1559,8 +1393,7 @@ connection.
         <span class="property-type">{[key: string]: any}</span>
     </dt>
     <dd>{{% md %}}A map of sensitive data to pass to the endpoint. Useful for templated connection strings.
-{{% /md %}}</dd>
-    <dt class="property-optional"
+{{% /md %}}</dd><dt class="property-optional"
             title="Optional">
         <span id="state_elasticsearch_nodejs">
 <a href="#state_elasticsearch_nodejs" style="color: inherit; text-decoration: inherit;">elasticsearch</a>
@@ -1569,8 +1402,7 @@ connection.
         <span class="property-type"><a href="#secretbackendconnectionelasticsearch">Secret<wbr>Backend<wbr>Connection<wbr>Elasticsearch</a></span>
     </dt>
     <dd>{{% md %}}A nested block containing configuration options for Elasticsearch connections.
-{{% /md %}}</dd>
-    <dt class="property-optional"
+{{% /md %}}</dd><dt class="property-optional"
             title="Optional">
         <span id="state_hana_nodejs">
 <a href="#state_hana_nodejs" style="color: inherit; text-decoration: inherit;">hana</a>
@@ -1579,8 +1411,7 @@ connection.
         <span class="property-type"><a href="#secretbackendconnectionhana">Secret<wbr>Backend<wbr>Connection<wbr>Hana</a></span>
     </dt>
     <dd>{{% md %}}A nested block containing configuration options for SAP HanaDB connections.
-{{% /md %}}</dd>
-    <dt class="property-optional"
+{{% /md %}}</dd><dt class="property-optional"
             title="Optional">
         <span id="state_mongodb_nodejs">
 <a href="#state_mongodb_nodejs" style="color: inherit; text-decoration: inherit;">mongodb</a>
@@ -1589,8 +1420,7 @@ connection.
         <span class="property-type"><a href="#secretbackendconnectionmongodb">Secret<wbr>Backend<wbr>Connection<wbr>Mongodb</a></span>
     </dt>
     <dd>{{% md %}}A nested block containing configuration options for MongoDB connections.
-{{% /md %}}</dd>
-    <dt class="property-optional"
+{{% /md %}}</dd><dt class="property-optional"
             title="Optional">
         <span id="state_mongodbatlas_nodejs">
 <a href="#state_mongodbatlas_nodejs" style="color: inherit; text-decoration: inherit;">mongodbatlas</a>
@@ -1599,8 +1429,7 @@ connection.
         <span class="property-type"><a href="#secretbackendconnectionmongodbatlas">Secret<wbr>Backend<wbr>Connection<wbr>Mongodbatlas</a></span>
     </dt>
     <dd>{{% md %}}Connection parameters for the mongodbatlas-database-plugin plugin.
-{{% /md %}}</dd>
-    <dt class="property-optional"
+{{% /md %}}</dd><dt class="property-optional"
             title="Optional">
         <span id="state_mssql_nodejs">
 <a href="#state_mssql_nodejs" style="color: inherit; text-decoration: inherit;">mssql</a>
@@ -1609,8 +1438,7 @@ connection.
         <span class="property-type"><a href="#secretbackendconnectionmssql">Secret<wbr>Backend<wbr>Connection<wbr>Mssql</a></span>
     </dt>
     <dd>{{% md %}}A nested block containing configuration options for MSSQL connections.
-{{% /md %}}</dd>
-    <dt class="property-optional"
+{{% /md %}}</dd><dt class="property-optional"
             title="Optional">
         <span id="state_mysql_nodejs">
 <a href="#state_mysql_nodejs" style="color: inherit; text-decoration: inherit;">mysql</a>
@@ -1619,8 +1447,7 @@ connection.
         <span class="property-type"><a href="#secretbackendconnectionmysql">Secret<wbr>Backend<wbr>Connection<wbr>Mysql</a></span>
     </dt>
     <dd>{{% md %}}A nested block containing configuration options for MySQL connections.
-{{% /md %}}</dd>
-    <dt class="property-optional"
+{{% /md %}}</dd><dt class="property-optional"
             title="Optional">
         <span id="state_mysqlaurora_nodejs">
 <a href="#state_mysqlaurora_nodejs" style="color: inherit; text-decoration: inherit;">mysql<wbr>Aurora</a>
@@ -1629,8 +1456,7 @@ connection.
         <span class="property-type"><a href="#secretbackendconnectionmysqlaurora">Secret<wbr>Backend<wbr>Connection<wbr>Mysql<wbr>Aurora</a></span>
     </dt>
     <dd>{{% md %}}A nested block containing configuration options for Aurora MySQL connections.
-{{% /md %}}</dd>
-    <dt class="property-optional"
+{{% /md %}}</dd><dt class="property-optional"
             title="Optional">
         <span id="state_mysqllegacy_nodejs">
 <a href="#state_mysqllegacy_nodejs" style="color: inherit; text-decoration: inherit;">mysql<wbr>Legacy</a>
@@ -1639,8 +1465,7 @@ connection.
         <span class="property-type"><a href="#secretbackendconnectionmysqllegacy">Secret<wbr>Backend<wbr>Connection<wbr>Mysql<wbr>Legacy</a></span>
     </dt>
     <dd>{{% md %}}A nested block containing configuration options for legacy MySQL connections.
-{{% /md %}}</dd>
-    <dt class="property-optional"
+{{% /md %}}</dd><dt class="property-optional"
             title="Optional">
         <span id="state_mysqlrds_nodejs">
 <a href="#state_mysqlrds_nodejs" style="color: inherit; text-decoration: inherit;">mysql<wbr>Rds</a>
@@ -1649,8 +1474,7 @@ connection.
         <span class="property-type"><a href="#secretbackendconnectionmysqlrds">Secret<wbr>Backend<wbr>Connection<wbr>Mysql<wbr>Rds</a></span>
     </dt>
     <dd>{{% md %}}A nested block containing configuration options for RDS MySQL connections.
-{{% /md %}}</dd>
-    <dt class="property-optional"
+{{% /md %}}</dd><dt class="property-optional"
             title="Optional">
         <span id="state_name_nodejs">
 <a href="#state_name_nodejs" style="color: inherit; text-decoration: inherit;">name</a>
@@ -1659,8 +1483,7 @@ connection.
         <span class="property-type">string</span>
     </dt>
     <dd>{{% md %}}A unique name to give the database connection.
-{{% /md %}}</dd>
-    <dt class="property-optional"
+{{% /md %}}</dd><dt class="property-optional"
             title="Optional">
         <span id="state_oracle_nodejs">
 <a href="#state_oracle_nodejs" style="color: inherit; text-decoration: inherit;">oracle</a>
@@ -1669,8 +1492,7 @@ connection.
         <span class="property-type"><a href="#secretbackendconnectionoracle">Secret<wbr>Backend<wbr>Connection<wbr>Oracle</a></span>
     </dt>
     <dd>{{% md %}}A nested block containing configuration options for Oracle connections.
-{{% /md %}}</dd>
-    <dt class="property-optional"
+{{% /md %}}</dd><dt class="property-optional"
             title="Optional">
         <span id="state_postgresql_nodejs">
 <a href="#state_postgresql_nodejs" style="color: inherit; text-decoration: inherit;">postgresql</a>
@@ -1679,8 +1501,7 @@ connection.
         <span class="property-type"><a href="#secretbackendconnectionpostgresql">Secret<wbr>Backend<wbr>Connection<wbr>Postgresql</a></span>
     </dt>
     <dd>{{% md %}}A nested block containing configuration options for PostgreSQL connections.
-{{% /md %}}</dd>
-    <dt class="property-optional"
+{{% /md %}}</dd><dt class="property-optional"
             title="Optional">
         <span id="state_rootrotationstatements_nodejs">
 <a href="#state_rootrotationstatements_nodejs" style="color: inherit; text-decoration: inherit;">root<wbr>Rotation<wbr>Statements</a>
@@ -1689,8 +1510,7 @@ connection.
         <span class="property-type">string[]</span>
     </dt>
     <dd>{{% md %}}A list of database statements to be executed to rotate the root user's credentials.
-{{% /md %}}</dd>
-    <dt class="property-optional"
+{{% /md %}}</dd><dt class="property-optional"
             title="Optional">
         <span id="state_verifyconnection_nodejs">
 <a href="#state_verifyconnection_nodejs" style="color: inherit; text-decoration: inherit;">verify<wbr>Connection</a>
@@ -1700,14 +1520,11 @@ connection.
     </dt>
     <dd>{{% md %}}Whether the connection should be verified on
 initial configuration or not.
-{{% /md %}}</dd>
-</dl>
+{{% /md %}}</dd></dl>
 {{% /choosable %}}
 
 {{% choosable language python %}}
-<dl class="resources-properties">
-
-    <dt class="property-optional"
+<dl class="resources-properties"><dt class="property-optional"
             title="Optional">
         <span id="state_allowed_roles_python">
 <a href="#state_allowed_roles_python" style="color: inherit; text-decoration: inherit;">allowed_<wbr>roles</a>
@@ -1717,8 +1534,7 @@ initial configuration or not.
     </dt>
     <dd>{{% md %}}A list of roles that are allowed to use this
 connection.
-{{% /md %}}</dd>
-    <dt class="property-optional"
+{{% /md %}}</dd><dt class="property-optional"
             title="Optional">
         <span id="state_backend_python">
 <a href="#state_backend_python" style="color: inherit; text-decoration: inherit;">backend</a>
@@ -1727,8 +1543,7 @@ connection.
         <span class="property-type">str</span>
     </dt>
     <dd>{{% md %}}The unique name of the Vault mount to configure.
-{{% /md %}}</dd>
-    <dt class="property-optional"
+{{% /md %}}</dd><dt class="property-optional"
             title="Optional">
         <span id="state_cassandra_python">
 <a href="#state_cassandra_python" style="color: inherit; text-decoration: inherit;">cassandra</a>
@@ -1737,8 +1552,7 @@ connection.
         <span class="property-type"><a href="#secretbackendconnectioncassandra">Secret<wbr>Backend<wbr>Connection<wbr>Cassandra<wbr>Args</a></span>
     </dt>
     <dd>{{% md %}}A nested block containing configuration options for Cassandra connections.
-{{% /md %}}</dd>
-    <dt class="property-optional"
+{{% /md %}}</dd><dt class="property-optional"
             title="Optional">
         <span id="state_data_python">
 <a href="#state_data_python" style="color: inherit; text-decoration: inherit;">data</a>
@@ -1747,8 +1561,7 @@ connection.
         <span class="property-type">Mapping[str, Any]</span>
     </dt>
     <dd>{{% md %}}A map of sensitive data to pass to the endpoint. Useful for templated connection strings.
-{{% /md %}}</dd>
-    <dt class="property-optional"
+{{% /md %}}</dd><dt class="property-optional"
             title="Optional">
         <span id="state_elasticsearch_python">
 <a href="#state_elasticsearch_python" style="color: inherit; text-decoration: inherit;">elasticsearch</a>
@@ -1757,8 +1570,7 @@ connection.
         <span class="property-type"><a href="#secretbackendconnectionelasticsearch">Secret<wbr>Backend<wbr>Connection<wbr>Elasticsearch<wbr>Args</a></span>
     </dt>
     <dd>{{% md %}}A nested block containing configuration options for Elasticsearch connections.
-{{% /md %}}</dd>
-    <dt class="property-optional"
+{{% /md %}}</dd><dt class="property-optional"
             title="Optional">
         <span id="state_hana_python">
 <a href="#state_hana_python" style="color: inherit; text-decoration: inherit;">hana</a>
@@ -1767,8 +1579,7 @@ connection.
         <span class="property-type"><a href="#secretbackendconnectionhana">Secret<wbr>Backend<wbr>Connection<wbr>Hana<wbr>Args</a></span>
     </dt>
     <dd>{{% md %}}A nested block containing configuration options for SAP HanaDB connections.
-{{% /md %}}</dd>
-    <dt class="property-optional"
+{{% /md %}}</dd><dt class="property-optional"
             title="Optional">
         <span id="state_mongodb_python">
 <a href="#state_mongodb_python" style="color: inherit; text-decoration: inherit;">mongodb</a>
@@ -1777,8 +1588,7 @@ connection.
         <span class="property-type"><a href="#secretbackendconnectionmongodb">Secret<wbr>Backend<wbr>Connection<wbr>Mongodb<wbr>Args</a></span>
     </dt>
     <dd>{{% md %}}A nested block containing configuration options for MongoDB connections.
-{{% /md %}}</dd>
-    <dt class="property-optional"
+{{% /md %}}</dd><dt class="property-optional"
             title="Optional">
         <span id="state_mongodbatlas_python">
 <a href="#state_mongodbatlas_python" style="color: inherit; text-decoration: inherit;">mongodbatlas</a>
@@ -1787,8 +1597,7 @@ connection.
         <span class="property-type"><a href="#secretbackendconnectionmongodbatlas">Secret<wbr>Backend<wbr>Connection<wbr>Mongodbatlas<wbr>Args</a></span>
     </dt>
     <dd>{{% md %}}Connection parameters for the mongodbatlas-database-plugin plugin.
-{{% /md %}}</dd>
-    <dt class="property-optional"
+{{% /md %}}</dd><dt class="property-optional"
             title="Optional">
         <span id="state_mssql_python">
 <a href="#state_mssql_python" style="color: inherit; text-decoration: inherit;">mssql</a>
@@ -1797,8 +1606,7 @@ connection.
         <span class="property-type"><a href="#secretbackendconnectionmssql">Secret<wbr>Backend<wbr>Connection<wbr>Mssql<wbr>Args</a></span>
     </dt>
     <dd>{{% md %}}A nested block containing configuration options for MSSQL connections.
-{{% /md %}}</dd>
-    <dt class="property-optional"
+{{% /md %}}</dd><dt class="property-optional"
             title="Optional">
         <span id="state_mysql_python">
 <a href="#state_mysql_python" style="color: inherit; text-decoration: inherit;">mysql</a>
@@ -1807,8 +1615,7 @@ connection.
         <span class="property-type"><a href="#secretbackendconnectionmysql">Secret<wbr>Backend<wbr>Connection<wbr>Mysql<wbr>Args</a></span>
     </dt>
     <dd>{{% md %}}A nested block containing configuration options for MySQL connections.
-{{% /md %}}</dd>
-    <dt class="property-optional"
+{{% /md %}}</dd><dt class="property-optional"
             title="Optional">
         <span id="state_mysql_aurora_python">
 <a href="#state_mysql_aurora_python" style="color: inherit; text-decoration: inherit;">mysql_<wbr>aurora</a>
@@ -1817,8 +1624,7 @@ connection.
         <span class="property-type"><a href="#secretbackendconnectionmysqlaurora">Secret<wbr>Backend<wbr>Connection<wbr>Mysql<wbr>Aurora<wbr>Args</a></span>
     </dt>
     <dd>{{% md %}}A nested block containing configuration options for Aurora MySQL connections.
-{{% /md %}}</dd>
-    <dt class="property-optional"
+{{% /md %}}</dd><dt class="property-optional"
             title="Optional">
         <span id="state_mysql_legacy_python">
 <a href="#state_mysql_legacy_python" style="color: inherit; text-decoration: inherit;">mysql_<wbr>legacy</a>
@@ -1827,8 +1633,7 @@ connection.
         <span class="property-type"><a href="#secretbackendconnectionmysqllegacy">Secret<wbr>Backend<wbr>Connection<wbr>Mysql<wbr>Legacy<wbr>Args</a></span>
     </dt>
     <dd>{{% md %}}A nested block containing configuration options for legacy MySQL connections.
-{{% /md %}}</dd>
-    <dt class="property-optional"
+{{% /md %}}</dd><dt class="property-optional"
             title="Optional">
         <span id="state_mysql_rds_python">
 <a href="#state_mysql_rds_python" style="color: inherit; text-decoration: inherit;">mysql_<wbr>rds</a>
@@ -1837,8 +1642,7 @@ connection.
         <span class="property-type"><a href="#secretbackendconnectionmysqlrds">Secret<wbr>Backend<wbr>Connection<wbr>Mysql<wbr>Rds<wbr>Args</a></span>
     </dt>
     <dd>{{% md %}}A nested block containing configuration options for RDS MySQL connections.
-{{% /md %}}</dd>
-    <dt class="property-optional"
+{{% /md %}}</dd><dt class="property-optional"
             title="Optional">
         <span id="state_name_python">
 <a href="#state_name_python" style="color: inherit; text-decoration: inherit;">name</a>
@@ -1847,8 +1651,7 @@ connection.
         <span class="property-type">str</span>
     </dt>
     <dd>{{% md %}}A unique name to give the database connection.
-{{% /md %}}</dd>
-    <dt class="property-optional"
+{{% /md %}}</dd><dt class="property-optional"
             title="Optional">
         <span id="state_oracle_python">
 <a href="#state_oracle_python" style="color: inherit; text-decoration: inherit;">oracle</a>
@@ -1857,8 +1660,7 @@ connection.
         <span class="property-type"><a href="#secretbackendconnectionoracle">Secret<wbr>Backend<wbr>Connection<wbr>Oracle<wbr>Args</a></span>
     </dt>
     <dd>{{% md %}}A nested block containing configuration options for Oracle connections.
-{{% /md %}}</dd>
-    <dt class="property-optional"
+{{% /md %}}</dd><dt class="property-optional"
             title="Optional">
         <span id="state_postgresql_python">
 <a href="#state_postgresql_python" style="color: inherit; text-decoration: inherit;">postgresql</a>
@@ -1867,8 +1669,7 @@ connection.
         <span class="property-type"><a href="#secretbackendconnectionpostgresql">Secret<wbr>Backend<wbr>Connection<wbr>Postgresql<wbr>Args</a></span>
     </dt>
     <dd>{{% md %}}A nested block containing configuration options for PostgreSQL connections.
-{{% /md %}}</dd>
-    <dt class="property-optional"
+{{% /md %}}</dd><dt class="property-optional"
             title="Optional">
         <span id="state_root_rotation_statements_python">
 <a href="#state_root_rotation_statements_python" style="color: inherit; text-decoration: inherit;">root_<wbr>rotation_<wbr>statements</a>
@@ -1877,8 +1678,7 @@ connection.
         <span class="property-type">Sequence[str]</span>
     </dt>
     <dd>{{% md %}}A list of database statements to be executed to rotate the root user's credentials.
-{{% /md %}}</dd>
-    <dt class="property-optional"
+{{% /md %}}</dd><dt class="property-optional"
             title="Optional">
         <span id="state_verify_connection_python">
 <a href="#state_verify_connection_python" style="color: inherit; text-decoration: inherit;">verify_<wbr>connection</a>
@@ -1888,8 +1688,7 @@ connection.
     </dt>
     <dd>{{% md %}}Whether the connection should be verified on
 initial configuration or not.
-{{% /md %}}</dd>
-</dl>
+{{% /md %}}</dd></dl>
 {{% /choosable %}}
 
 
@@ -1904,9 +1703,7 @@ initial configuration or not.
 <h4 id="secretbackendconnectioncassandra">Secret<wbr>Backend<wbr>Connection<wbr>Cassandra</h4>
 
 {{% choosable language csharp %}}
-<dl class="resources-properties">
-
-    <dt class="property-optional"
+<dl class="resources-properties"><dt class="property-optional"
             title="Optional">
         <span id="connecttimeout_csharp">
 <a href="#connecttimeout_csharp" style="color: inherit; text-decoration: inherit;">Connect<wbr>Timeout</a>
@@ -1916,8 +1713,7 @@ initial configuration or not.
     </dt>
     <dd>{{% md %}}The number of seconds to use as a connection
 timeout.
-{{% /md %}}</dd>
-    <dt class="property-optional"
+{{% /md %}}</dd><dt class="property-optional"
             title="Optional">
         <span id="hosts_csharp">
 <a href="#hosts_csharp" style="color: inherit; text-decoration: inherit;">Hosts</a>
@@ -1926,8 +1722,7 @@ timeout.
         <span class="property-type">List&lt;string&gt;</span>
     </dt>
     <dd>{{% md %}}The hosts to connect to.
-{{% /md %}}</dd>
-    <dt class="property-optional"
+{{% /md %}}</dd><dt class="property-optional"
             title="Optional">
         <span id="insecuretls_csharp">
 <a href="#insecuretls_csharp" style="color: inherit; text-decoration: inherit;">Insecure<wbr>Tls</a>
@@ -1937,8 +1732,7 @@ timeout.
     </dt>
     <dd>{{% md %}}Whether to skip verification of the server
 certificate when using TLS.
-{{% /md %}}</dd>
-    <dt class="property-optional"
+{{% /md %}}</dd><dt class="property-optional"
             title="Optional">
         <span id="password_csharp">
 <a href="#password_csharp" style="color: inherit; text-decoration: inherit;">Password</a>
@@ -1947,8 +1741,7 @@ certificate when using TLS.
         <span class="property-type">string</span>
     </dt>
     <dd>{{% md %}}The password to be used in the connection.
-{{% /md %}}</dd>
-    <dt class="property-optional"
+{{% /md %}}</dd><dt class="property-optional"
             title="Optional">
         <span id="pembundle_csharp">
 <a href="#pembundle_csharp" style="color: inherit; text-decoration: inherit;">Pem<wbr>Bundle</a>
@@ -1958,8 +1751,7 @@ certificate when using TLS.
     </dt>
     <dd>{{% md %}}Concatenated PEM blocks configuring the certificate
 chain.
-{{% /md %}}</dd>
-    <dt class="property-optional"
+{{% /md %}}</dd><dt class="property-optional"
             title="Optional">
         <span id="pemjson_csharp">
 <a href="#pemjson_csharp" style="color: inherit; text-decoration: inherit;">Pem<wbr>Json</a>
@@ -1968,8 +1760,7 @@ chain.
         <span class="property-type">string</span>
     </dt>
     <dd>{{% md %}}A JSON structure configuring the certificate chain.
-{{% /md %}}</dd>
-    <dt class="property-optional"
+{{% /md %}}</dd><dt class="property-optional"
             title="Optional">
         <span id="port_csharp">
 <a href="#port_csharp" style="color: inherit; text-decoration: inherit;">Port</a>
@@ -1979,8 +1770,7 @@ chain.
     </dt>
     <dd>{{% md %}}The default port to connect to if no port is specified as
 part of the host.
-{{% /md %}}</dd>
-    <dt class="property-optional"
+{{% /md %}}</dd><dt class="property-optional"
             title="Optional">
         <span id="protocolversion_csharp">
 <a href="#protocolversion_csharp" style="color: inherit; text-decoration: inherit;">Protocol<wbr>Version</a>
@@ -1989,8 +1779,7 @@ part of the host.
         <span class="property-type">int</span>
     </dt>
     <dd>{{% md %}}The CQL protocol version to use.
-{{% /md %}}</dd>
-    <dt class="property-optional"
+{{% /md %}}</dd><dt class="property-optional"
             title="Optional">
         <span id="tls_csharp">
 <a href="#tls_csharp" style="color: inherit; text-decoration: inherit;">Tls</a>
@@ -1999,8 +1788,7 @@ part of the host.
         <span class="property-type">bool</span>
     </dt>
     <dd>{{% md %}}Whether to use TLS when connecting to Cassandra.
-{{% /md %}}</dd>
-    <dt class="property-optional"
+{{% /md %}}</dd><dt class="property-optional"
             title="Optional">
         <span id="username_csharp">
 <a href="#username_csharp" style="color: inherit; text-decoration: inherit;">Username</a>
@@ -2009,14 +1797,11 @@ part of the host.
         <span class="property-type">string</span>
     </dt>
     <dd>{{% md %}}The username to be used in the connection.
-{{% /md %}}</dd>
-</dl>
+{{% /md %}}</dd></dl>
 {{% /choosable %}}
 
 {{% choosable language go %}}
-<dl class="resources-properties">
-
-    <dt class="property-optional"
+<dl class="resources-properties"><dt class="property-optional"
             title="Optional">
         <span id="connecttimeout_go">
 <a href="#connecttimeout_go" style="color: inherit; text-decoration: inherit;">Connect<wbr>Timeout</a>
@@ -2026,8 +1811,7 @@ part of the host.
     </dt>
     <dd>{{% md %}}The number of seconds to use as a connection
 timeout.
-{{% /md %}}</dd>
-    <dt class="property-optional"
+{{% /md %}}</dd><dt class="property-optional"
             title="Optional">
         <span id="hosts_go">
 <a href="#hosts_go" style="color: inherit; text-decoration: inherit;">Hosts</a>
@@ -2036,8 +1820,7 @@ timeout.
         <span class="property-type">[]string</span>
     </dt>
     <dd>{{% md %}}The hosts to connect to.
-{{% /md %}}</dd>
-    <dt class="property-optional"
+{{% /md %}}</dd><dt class="property-optional"
             title="Optional">
         <span id="insecuretls_go">
 <a href="#insecuretls_go" style="color: inherit; text-decoration: inherit;">Insecure<wbr>Tls</a>
@@ -2047,8 +1830,7 @@ timeout.
     </dt>
     <dd>{{% md %}}Whether to skip verification of the server
 certificate when using TLS.
-{{% /md %}}</dd>
-    <dt class="property-optional"
+{{% /md %}}</dd><dt class="property-optional"
             title="Optional">
         <span id="password_go">
 <a href="#password_go" style="color: inherit; text-decoration: inherit;">Password</a>
@@ -2057,8 +1839,7 @@ certificate when using TLS.
         <span class="property-type">string</span>
     </dt>
     <dd>{{% md %}}The password to be used in the connection.
-{{% /md %}}</dd>
-    <dt class="property-optional"
+{{% /md %}}</dd><dt class="property-optional"
             title="Optional">
         <span id="pembundle_go">
 <a href="#pembundle_go" style="color: inherit; text-decoration: inherit;">Pem<wbr>Bundle</a>
@@ -2068,8 +1849,7 @@ certificate when using TLS.
     </dt>
     <dd>{{% md %}}Concatenated PEM blocks configuring the certificate
 chain.
-{{% /md %}}</dd>
-    <dt class="property-optional"
+{{% /md %}}</dd><dt class="property-optional"
             title="Optional">
         <span id="pemjson_go">
 <a href="#pemjson_go" style="color: inherit; text-decoration: inherit;">Pem<wbr>Json</a>
@@ -2078,8 +1858,7 @@ chain.
         <span class="property-type">string</span>
     </dt>
     <dd>{{% md %}}A JSON structure configuring the certificate chain.
-{{% /md %}}</dd>
-    <dt class="property-optional"
+{{% /md %}}</dd><dt class="property-optional"
             title="Optional">
         <span id="port_go">
 <a href="#port_go" style="color: inherit; text-decoration: inherit;">Port</a>
@@ -2089,8 +1868,7 @@ chain.
     </dt>
     <dd>{{% md %}}The default port to connect to if no port is specified as
 part of the host.
-{{% /md %}}</dd>
-    <dt class="property-optional"
+{{% /md %}}</dd><dt class="property-optional"
             title="Optional">
         <span id="protocolversion_go">
 <a href="#protocolversion_go" style="color: inherit; text-decoration: inherit;">Protocol<wbr>Version</a>
@@ -2099,8 +1877,7 @@ part of the host.
         <span class="property-type">int</span>
     </dt>
     <dd>{{% md %}}The CQL protocol version to use.
-{{% /md %}}</dd>
-    <dt class="property-optional"
+{{% /md %}}</dd><dt class="property-optional"
             title="Optional">
         <span id="tls_go">
 <a href="#tls_go" style="color: inherit; text-decoration: inherit;">Tls</a>
@@ -2109,8 +1886,7 @@ part of the host.
         <span class="property-type">bool</span>
     </dt>
     <dd>{{% md %}}Whether to use TLS when connecting to Cassandra.
-{{% /md %}}</dd>
-    <dt class="property-optional"
+{{% /md %}}</dd><dt class="property-optional"
             title="Optional">
         <span id="username_go">
 <a href="#username_go" style="color: inherit; text-decoration: inherit;">Username</a>
@@ -2119,14 +1895,11 @@ part of the host.
         <span class="property-type">string</span>
     </dt>
     <dd>{{% md %}}The username to be used in the connection.
-{{% /md %}}</dd>
-</dl>
+{{% /md %}}</dd></dl>
 {{% /choosable %}}
 
 {{% choosable language nodejs %}}
-<dl class="resources-properties">
-
-    <dt class="property-optional"
+<dl class="resources-properties"><dt class="property-optional"
             title="Optional">
         <span id="connecttimeout_nodejs">
 <a href="#connecttimeout_nodejs" style="color: inherit; text-decoration: inherit;">connect<wbr>Timeout</a>
@@ -2136,8 +1909,7 @@ part of the host.
     </dt>
     <dd>{{% md %}}The number of seconds to use as a connection
 timeout.
-{{% /md %}}</dd>
-    <dt class="property-optional"
+{{% /md %}}</dd><dt class="property-optional"
             title="Optional">
         <span id="hosts_nodejs">
 <a href="#hosts_nodejs" style="color: inherit; text-decoration: inherit;">hosts</a>
@@ -2146,8 +1918,7 @@ timeout.
         <span class="property-type">string[]</span>
     </dt>
     <dd>{{% md %}}The hosts to connect to.
-{{% /md %}}</dd>
-    <dt class="property-optional"
+{{% /md %}}</dd><dt class="property-optional"
             title="Optional">
         <span id="insecuretls_nodejs">
 <a href="#insecuretls_nodejs" style="color: inherit; text-decoration: inherit;">insecure<wbr>Tls</a>
@@ -2157,8 +1928,7 @@ timeout.
     </dt>
     <dd>{{% md %}}Whether to skip verification of the server
 certificate when using TLS.
-{{% /md %}}</dd>
-    <dt class="property-optional"
+{{% /md %}}</dd><dt class="property-optional"
             title="Optional">
         <span id="password_nodejs">
 <a href="#password_nodejs" style="color: inherit; text-decoration: inherit;">password</a>
@@ -2167,8 +1937,7 @@ certificate when using TLS.
         <span class="property-type">string</span>
     </dt>
     <dd>{{% md %}}The password to be used in the connection.
-{{% /md %}}</dd>
-    <dt class="property-optional"
+{{% /md %}}</dd><dt class="property-optional"
             title="Optional">
         <span id="pembundle_nodejs">
 <a href="#pembundle_nodejs" style="color: inherit; text-decoration: inherit;">pem<wbr>Bundle</a>
@@ -2178,8 +1947,7 @@ certificate when using TLS.
     </dt>
     <dd>{{% md %}}Concatenated PEM blocks configuring the certificate
 chain.
-{{% /md %}}</dd>
-    <dt class="property-optional"
+{{% /md %}}</dd><dt class="property-optional"
             title="Optional">
         <span id="pemjson_nodejs">
 <a href="#pemjson_nodejs" style="color: inherit; text-decoration: inherit;">pem<wbr>Json</a>
@@ -2188,8 +1956,7 @@ chain.
         <span class="property-type">string</span>
     </dt>
     <dd>{{% md %}}A JSON structure configuring the certificate chain.
-{{% /md %}}</dd>
-    <dt class="property-optional"
+{{% /md %}}</dd><dt class="property-optional"
             title="Optional">
         <span id="port_nodejs">
 <a href="#port_nodejs" style="color: inherit; text-decoration: inherit;">port</a>
@@ -2199,8 +1966,7 @@ chain.
     </dt>
     <dd>{{% md %}}The default port to connect to if no port is specified as
 part of the host.
-{{% /md %}}</dd>
-    <dt class="property-optional"
+{{% /md %}}</dd><dt class="property-optional"
             title="Optional">
         <span id="protocolversion_nodejs">
 <a href="#protocolversion_nodejs" style="color: inherit; text-decoration: inherit;">protocol<wbr>Version</a>
@@ -2209,8 +1975,7 @@ part of the host.
         <span class="property-type">number</span>
     </dt>
     <dd>{{% md %}}The CQL protocol version to use.
-{{% /md %}}</dd>
-    <dt class="property-optional"
+{{% /md %}}</dd><dt class="property-optional"
             title="Optional">
         <span id="tls_nodejs">
 <a href="#tls_nodejs" style="color: inherit; text-decoration: inherit;">tls</a>
@@ -2219,8 +1984,7 @@ part of the host.
         <span class="property-type">boolean</span>
     </dt>
     <dd>{{% md %}}Whether to use TLS when connecting to Cassandra.
-{{% /md %}}</dd>
-    <dt class="property-optional"
+{{% /md %}}</dd><dt class="property-optional"
             title="Optional">
         <span id="username_nodejs">
 <a href="#username_nodejs" style="color: inherit; text-decoration: inherit;">username</a>
@@ -2229,14 +1993,11 @@ part of the host.
         <span class="property-type">string</span>
     </dt>
     <dd>{{% md %}}The username to be used in the connection.
-{{% /md %}}</dd>
-</dl>
+{{% /md %}}</dd></dl>
 {{% /choosable %}}
 
 {{% choosable language python %}}
-<dl class="resources-properties">
-
-    <dt class="property-optional"
+<dl class="resources-properties"><dt class="property-optional"
             title="Optional">
         <span id="connect_timeout_python">
 <a href="#connect_timeout_python" style="color: inherit; text-decoration: inherit;">connect_<wbr>timeout</a>
@@ -2246,8 +2007,7 @@ part of the host.
     </dt>
     <dd>{{% md %}}The number of seconds to use as a connection
 timeout.
-{{% /md %}}</dd>
-    <dt class="property-optional"
+{{% /md %}}</dd><dt class="property-optional"
             title="Optional">
         <span id="hosts_python">
 <a href="#hosts_python" style="color: inherit; text-decoration: inherit;">hosts</a>
@@ -2256,8 +2016,7 @@ timeout.
         <span class="property-type">Sequence[str]</span>
     </dt>
     <dd>{{% md %}}The hosts to connect to.
-{{% /md %}}</dd>
-    <dt class="property-optional"
+{{% /md %}}</dd><dt class="property-optional"
             title="Optional">
         <span id="insecure_tls_python">
 <a href="#insecure_tls_python" style="color: inherit; text-decoration: inherit;">insecure_<wbr>tls</a>
@@ -2267,8 +2026,7 @@ timeout.
     </dt>
     <dd>{{% md %}}Whether to skip verification of the server
 certificate when using TLS.
-{{% /md %}}</dd>
-    <dt class="property-optional"
+{{% /md %}}</dd><dt class="property-optional"
             title="Optional">
         <span id="password_python">
 <a href="#password_python" style="color: inherit; text-decoration: inherit;">password</a>
@@ -2277,8 +2035,7 @@ certificate when using TLS.
         <span class="property-type">str</span>
     </dt>
     <dd>{{% md %}}The password to be used in the connection.
-{{% /md %}}</dd>
-    <dt class="property-optional"
+{{% /md %}}</dd><dt class="property-optional"
             title="Optional">
         <span id="pem_bundle_python">
 <a href="#pem_bundle_python" style="color: inherit; text-decoration: inherit;">pem_<wbr>bundle</a>
@@ -2288,8 +2045,7 @@ certificate when using TLS.
     </dt>
     <dd>{{% md %}}Concatenated PEM blocks configuring the certificate
 chain.
-{{% /md %}}</dd>
-    <dt class="property-optional"
+{{% /md %}}</dd><dt class="property-optional"
             title="Optional">
         <span id="pem_json_python">
 <a href="#pem_json_python" style="color: inherit; text-decoration: inherit;">pem_<wbr>json</a>
@@ -2298,8 +2054,7 @@ chain.
         <span class="property-type">str</span>
     </dt>
     <dd>{{% md %}}A JSON structure configuring the certificate chain.
-{{% /md %}}</dd>
-    <dt class="property-optional"
+{{% /md %}}</dd><dt class="property-optional"
             title="Optional">
         <span id="port_python">
 <a href="#port_python" style="color: inherit; text-decoration: inherit;">port</a>
@@ -2309,8 +2064,7 @@ chain.
     </dt>
     <dd>{{% md %}}The default port to connect to if no port is specified as
 part of the host.
-{{% /md %}}</dd>
-    <dt class="property-optional"
+{{% /md %}}</dd><dt class="property-optional"
             title="Optional">
         <span id="protocol_version_python">
 <a href="#protocol_version_python" style="color: inherit; text-decoration: inherit;">protocol_<wbr>version</a>
@@ -2319,8 +2073,7 @@ part of the host.
         <span class="property-type">int</span>
     </dt>
     <dd>{{% md %}}The CQL protocol version to use.
-{{% /md %}}</dd>
-    <dt class="property-optional"
+{{% /md %}}</dd><dt class="property-optional"
             title="Optional">
         <span id="tls_python">
 <a href="#tls_python" style="color: inherit; text-decoration: inherit;">tls</a>
@@ -2329,8 +2082,7 @@ part of the host.
         <span class="property-type">bool</span>
     </dt>
     <dd>{{% md %}}Whether to use TLS when connecting to Cassandra.
-{{% /md %}}</dd>
-    <dt class="property-optional"
+{{% /md %}}</dd><dt class="property-optional"
             title="Optional">
         <span id="username_python">
 <a href="#username_python" style="color: inherit; text-decoration: inherit;">username</a>
@@ -2339,16 +2091,13 @@ part of the host.
         <span class="property-type">str</span>
     </dt>
     <dd>{{% md %}}The username to be used in the connection.
-{{% /md %}}</dd>
-</dl>
+{{% /md %}}</dd></dl>
 {{% /choosable %}}
 
 <h4 id="secretbackendconnectionelasticsearch">Secret<wbr>Backend<wbr>Connection<wbr>Elasticsearch</h4>
 
 {{% choosable language csharp %}}
-<dl class="resources-properties">
-
-    <dt class="property-required"
+<dl class="resources-properties"><dt class="property-required"
             title="Required">
         <span id="password_csharp">
 <a href="#password_csharp" style="color: inherit; text-decoration: inherit;">Password</a>
@@ -2357,8 +2106,7 @@ part of the host.
         <span class="property-type">string</span>
     </dt>
     <dd>{{% md %}}The password to be used in the connection.
-{{% /md %}}</dd>
-    <dt class="property-required"
+{{% /md %}}</dd><dt class="property-required"
             title="Required">
         <span id="url_csharp">
 <a href="#url_csharp" style="color: inherit; text-decoration: inherit;">Url</a>
@@ -2368,8 +2116,7 @@ part of the host.
     </dt>
     <dd>{{% md %}}The URL for Elasticsearch's API. https requires certificate
 by trusted CA if used.
-{{% /md %}}</dd>
-    <dt class="property-required"
+{{% /md %}}</dd><dt class="property-required"
             title="Required">
         <span id="username_csharp">
 <a href="#username_csharp" style="color: inherit; text-decoration: inherit;">Username</a>
@@ -2378,14 +2125,11 @@ by trusted CA if used.
         <span class="property-type">string</span>
     </dt>
     <dd>{{% md %}}The username to be used in the connection.
-{{% /md %}}</dd>
-</dl>
+{{% /md %}}</dd></dl>
 {{% /choosable %}}
 
 {{% choosable language go %}}
-<dl class="resources-properties">
-
-    <dt class="property-required"
+<dl class="resources-properties"><dt class="property-required"
             title="Required">
         <span id="password_go">
 <a href="#password_go" style="color: inherit; text-decoration: inherit;">Password</a>
@@ -2394,8 +2138,7 @@ by trusted CA if used.
         <span class="property-type">string</span>
     </dt>
     <dd>{{% md %}}The password to be used in the connection.
-{{% /md %}}</dd>
-    <dt class="property-required"
+{{% /md %}}</dd><dt class="property-required"
             title="Required">
         <span id="url_go">
 <a href="#url_go" style="color: inherit; text-decoration: inherit;">Url</a>
@@ -2405,8 +2148,7 @@ by trusted CA if used.
     </dt>
     <dd>{{% md %}}The URL for Elasticsearch's API. https requires certificate
 by trusted CA if used.
-{{% /md %}}</dd>
-    <dt class="property-required"
+{{% /md %}}</dd><dt class="property-required"
             title="Required">
         <span id="username_go">
 <a href="#username_go" style="color: inherit; text-decoration: inherit;">Username</a>
@@ -2415,14 +2157,11 @@ by trusted CA if used.
         <span class="property-type">string</span>
     </dt>
     <dd>{{% md %}}The username to be used in the connection.
-{{% /md %}}</dd>
-</dl>
+{{% /md %}}</dd></dl>
 {{% /choosable %}}
 
 {{% choosable language nodejs %}}
-<dl class="resources-properties">
-
-    <dt class="property-required"
+<dl class="resources-properties"><dt class="property-required"
             title="Required">
         <span id="password_nodejs">
 <a href="#password_nodejs" style="color: inherit; text-decoration: inherit;">password</a>
@@ -2431,8 +2170,7 @@ by trusted CA if used.
         <span class="property-type">string</span>
     </dt>
     <dd>{{% md %}}The password to be used in the connection.
-{{% /md %}}</dd>
-    <dt class="property-required"
+{{% /md %}}</dd><dt class="property-required"
             title="Required">
         <span id="url_nodejs">
 <a href="#url_nodejs" style="color: inherit; text-decoration: inherit;">url</a>
@@ -2442,8 +2180,7 @@ by trusted CA if used.
     </dt>
     <dd>{{% md %}}The URL for Elasticsearch's API. https requires certificate
 by trusted CA if used.
-{{% /md %}}</dd>
-    <dt class="property-required"
+{{% /md %}}</dd><dt class="property-required"
             title="Required">
         <span id="username_nodejs">
 <a href="#username_nodejs" style="color: inherit; text-decoration: inherit;">username</a>
@@ -2452,14 +2189,11 @@ by trusted CA if used.
         <span class="property-type">string</span>
     </dt>
     <dd>{{% md %}}The username to be used in the connection.
-{{% /md %}}</dd>
-</dl>
+{{% /md %}}</dd></dl>
 {{% /choosable %}}
 
 {{% choosable language python %}}
-<dl class="resources-properties">
-
-    <dt class="property-required"
+<dl class="resources-properties"><dt class="property-required"
             title="Required">
         <span id="password_python">
 <a href="#password_python" style="color: inherit; text-decoration: inherit;">password</a>
@@ -2468,8 +2202,7 @@ by trusted CA if used.
         <span class="property-type">str</span>
     </dt>
     <dd>{{% md %}}The password to be used in the connection.
-{{% /md %}}</dd>
-    <dt class="property-required"
+{{% /md %}}</dd><dt class="property-required"
             title="Required">
         <span id="url_python">
 <a href="#url_python" style="color: inherit; text-decoration: inherit;">url</a>
@@ -2479,8 +2212,7 @@ by trusted CA if used.
     </dt>
     <dd>{{% md %}}The URL for Elasticsearch's API. https requires certificate
 by trusted CA if used.
-{{% /md %}}</dd>
-    <dt class="property-required"
+{{% /md %}}</dd><dt class="property-required"
             title="Required">
         <span id="username_python">
 <a href="#username_python" style="color: inherit; text-decoration: inherit;">username</a>
@@ -2489,16 +2221,13 @@ by trusted CA if used.
         <span class="property-type">str</span>
     </dt>
     <dd>{{% md %}}The username to be used in the connection.
-{{% /md %}}</dd>
-</dl>
+{{% /md %}}</dd></dl>
 {{% /choosable %}}
 
 <h4 id="secretbackendconnectionhana">Secret<wbr>Backend<wbr>Connection<wbr>Hana</h4>
 
 {{% choosable language csharp %}}
-<dl class="resources-properties">
-
-    <dt class="property-optional"
+<dl class="resources-properties"><dt class="property-optional"
             title="Optional">
         <span id="connectionurl_csharp">
 <a href="#connectionurl_csharp" style="color: inherit; text-decoration: inherit;">Connection<wbr>Url</a>
@@ -2510,8 +2239,7 @@ by trusted CA if used.
 the [Vault
 docs](https://www.vaultproject.io/api-docs/secret/databases/oracle.html#sample-payload)
 for an example.
-{{% /md %}}</dd>
-    <dt class="property-optional"
+{{% /md %}}</dd><dt class="property-optional"
             title="Optional">
         <span id="maxconnectionlifetime_csharp">
 <a href="#maxconnectionlifetime_csharp" style="color: inherit; text-decoration: inherit;">Max<wbr>Connection<wbr>Lifetime</a>
@@ -2521,8 +2249,7 @@ for an example.
     </dt>
     <dd>{{% md %}}The maximum number of seconds to keep
 a connection alive for.
-{{% /md %}}</dd>
-    <dt class="property-optional"
+{{% /md %}}</dd><dt class="property-optional"
             title="Optional">
         <span id="maxidleconnections_csharp">
 <a href="#maxidleconnections_csharp" style="color: inherit; text-decoration: inherit;">Max<wbr>Idle<wbr>Connections</a>
@@ -2532,8 +2259,7 @@ a connection alive for.
     </dt>
     <dd>{{% md %}}The maximum number of idle connections to
 maintain.
-{{% /md %}}</dd>
-    <dt class="property-optional"
+{{% /md %}}</dd><dt class="property-optional"
             title="Optional">
         <span id="maxopenconnections_csharp">
 <a href="#maxopenconnections_csharp" style="color: inherit; text-decoration: inherit;">Max<wbr>Open<wbr>Connections</a>
@@ -2543,14 +2269,11 @@ maintain.
     </dt>
     <dd>{{% md %}}The maximum number of open connections to
 use.
-{{% /md %}}</dd>
-</dl>
+{{% /md %}}</dd></dl>
 {{% /choosable %}}
 
 {{% choosable language go %}}
-<dl class="resources-properties">
-
-    <dt class="property-optional"
+<dl class="resources-properties"><dt class="property-optional"
             title="Optional">
         <span id="connectionurl_go">
 <a href="#connectionurl_go" style="color: inherit; text-decoration: inherit;">Connection<wbr>Url</a>
@@ -2562,8 +2285,7 @@ use.
 the [Vault
 docs](https://www.vaultproject.io/api-docs/secret/databases/oracle.html#sample-payload)
 for an example.
-{{% /md %}}</dd>
-    <dt class="property-optional"
+{{% /md %}}</dd><dt class="property-optional"
             title="Optional">
         <span id="maxconnectionlifetime_go">
 <a href="#maxconnectionlifetime_go" style="color: inherit; text-decoration: inherit;">Max<wbr>Connection<wbr>Lifetime</a>
@@ -2573,8 +2295,7 @@ for an example.
     </dt>
     <dd>{{% md %}}The maximum number of seconds to keep
 a connection alive for.
-{{% /md %}}</dd>
-    <dt class="property-optional"
+{{% /md %}}</dd><dt class="property-optional"
             title="Optional">
         <span id="maxidleconnections_go">
 <a href="#maxidleconnections_go" style="color: inherit; text-decoration: inherit;">Max<wbr>Idle<wbr>Connections</a>
@@ -2584,8 +2305,7 @@ a connection alive for.
     </dt>
     <dd>{{% md %}}The maximum number of idle connections to
 maintain.
-{{% /md %}}</dd>
-    <dt class="property-optional"
+{{% /md %}}</dd><dt class="property-optional"
             title="Optional">
         <span id="maxopenconnections_go">
 <a href="#maxopenconnections_go" style="color: inherit; text-decoration: inherit;">Max<wbr>Open<wbr>Connections</a>
@@ -2595,14 +2315,11 @@ maintain.
     </dt>
     <dd>{{% md %}}The maximum number of open connections to
 use.
-{{% /md %}}</dd>
-</dl>
+{{% /md %}}</dd></dl>
 {{% /choosable %}}
 
 {{% choosable language nodejs %}}
-<dl class="resources-properties">
-
-    <dt class="property-optional"
+<dl class="resources-properties"><dt class="property-optional"
             title="Optional">
         <span id="connectionurl_nodejs">
 <a href="#connectionurl_nodejs" style="color: inherit; text-decoration: inherit;">connection<wbr>Url</a>
@@ -2614,8 +2331,7 @@ use.
 the [Vault
 docs](https://www.vaultproject.io/api-docs/secret/databases/oracle.html#sample-payload)
 for an example.
-{{% /md %}}</dd>
-    <dt class="property-optional"
+{{% /md %}}</dd><dt class="property-optional"
             title="Optional">
         <span id="maxconnectionlifetime_nodejs">
 <a href="#maxconnectionlifetime_nodejs" style="color: inherit; text-decoration: inherit;">max<wbr>Connection<wbr>Lifetime</a>
@@ -2625,8 +2341,7 @@ for an example.
     </dt>
     <dd>{{% md %}}The maximum number of seconds to keep
 a connection alive for.
-{{% /md %}}</dd>
-    <dt class="property-optional"
+{{% /md %}}</dd><dt class="property-optional"
             title="Optional">
         <span id="maxidleconnections_nodejs">
 <a href="#maxidleconnections_nodejs" style="color: inherit; text-decoration: inherit;">max<wbr>Idle<wbr>Connections</a>
@@ -2636,8 +2351,7 @@ a connection alive for.
     </dt>
     <dd>{{% md %}}The maximum number of idle connections to
 maintain.
-{{% /md %}}</dd>
-    <dt class="property-optional"
+{{% /md %}}</dd><dt class="property-optional"
             title="Optional">
         <span id="maxopenconnections_nodejs">
 <a href="#maxopenconnections_nodejs" style="color: inherit; text-decoration: inherit;">max<wbr>Open<wbr>Connections</a>
@@ -2647,14 +2361,11 @@ maintain.
     </dt>
     <dd>{{% md %}}The maximum number of open connections to
 use.
-{{% /md %}}</dd>
-</dl>
+{{% /md %}}</dd></dl>
 {{% /choosable %}}
 
 {{% choosable language python %}}
-<dl class="resources-properties">
-
-    <dt class="property-optional"
+<dl class="resources-properties"><dt class="property-optional"
             title="Optional">
         <span id="connection_url_python">
 <a href="#connection_url_python" style="color: inherit; text-decoration: inherit;">connection_<wbr>url</a>
@@ -2666,8 +2377,7 @@ use.
 the [Vault
 docs](https://www.vaultproject.io/api-docs/secret/databases/oracle.html#sample-payload)
 for an example.
-{{% /md %}}</dd>
-    <dt class="property-optional"
+{{% /md %}}</dd><dt class="property-optional"
             title="Optional">
         <span id="max_connection_lifetime_python">
 <a href="#max_connection_lifetime_python" style="color: inherit; text-decoration: inherit;">max_<wbr>connection_<wbr>lifetime</a>
@@ -2677,8 +2387,7 @@ for an example.
     </dt>
     <dd>{{% md %}}The maximum number of seconds to keep
 a connection alive for.
-{{% /md %}}</dd>
-    <dt class="property-optional"
+{{% /md %}}</dd><dt class="property-optional"
             title="Optional">
         <span id="max_idle_connections_python">
 <a href="#max_idle_connections_python" style="color: inherit; text-decoration: inherit;">max_<wbr>idle_<wbr>connections</a>
@@ -2688,8 +2397,7 @@ a connection alive for.
     </dt>
     <dd>{{% md %}}The maximum number of idle connections to
 maintain.
-{{% /md %}}</dd>
-    <dt class="property-optional"
+{{% /md %}}</dd><dt class="property-optional"
             title="Optional">
         <span id="max_open_connections_python">
 <a href="#max_open_connections_python" style="color: inherit; text-decoration: inherit;">max_<wbr>open_<wbr>connections</a>
@@ -2699,16 +2407,13 @@ maintain.
     </dt>
     <dd>{{% md %}}The maximum number of open connections to
 use.
-{{% /md %}}</dd>
-</dl>
+{{% /md %}}</dd></dl>
 {{% /choosable %}}
 
 <h4 id="secretbackendconnectionmongodb">Secret<wbr>Backend<wbr>Connection<wbr>Mongodb</h4>
 
 {{% choosable language csharp %}}
-<dl class="resources-properties">
-
-    <dt class="property-optional"
+<dl class="resources-properties"><dt class="property-optional"
             title="Optional">
         <span id="connectionurl_csharp">
 <a href="#connectionurl_csharp" style="color: inherit; text-decoration: inherit;">Connection<wbr>Url</a>
@@ -2720,8 +2425,7 @@ use.
 the [Vault
 docs](https://www.vaultproject.io/api-docs/secret/databases/oracle.html#sample-payload)
 for an example.
-{{% /md %}}</dd>
-    <dt class="property-optional"
+{{% /md %}}</dd><dt class="property-optional"
             title="Optional">
         <span id="maxconnectionlifetime_csharp">
 <a href="#maxconnectionlifetime_csharp" style="color: inherit; text-decoration: inherit;">Max<wbr>Connection<wbr>Lifetime</a>
@@ -2731,8 +2435,7 @@ for an example.
     </dt>
     <dd>{{% md %}}The maximum number of seconds to keep
 a connection alive for.
-{{% /md %}}</dd>
-    <dt class="property-optional"
+{{% /md %}}</dd><dt class="property-optional"
             title="Optional">
         <span id="maxidleconnections_csharp">
 <a href="#maxidleconnections_csharp" style="color: inherit; text-decoration: inherit;">Max<wbr>Idle<wbr>Connections</a>
@@ -2742,8 +2445,7 @@ a connection alive for.
     </dt>
     <dd>{{% md %}}The maximum number of idle connections to
 maintain.
-{{% /md %}}</dd>
-    <dt class="property-optional"
+{{% /md %}}</dd><dt class="property-optional"
             title="Optional">
         <span id="maxopenconnections_csharp">
 <a href="#maxopenconnections_csharp" style="color: inherit; text-decoration: inherit;">Max<wbr>Open<wbr>Connections</a>
@@ -2753,14 +2455,11 @@ maintain.
     </dt>
     <dd>{{% md %}}The maximum number of open connections to
 use.
-{{% /md %}}</dd>
-</dl>
+{{% /md %}}</dd></dl>
 {{% /choosable %}}
 
 {{% choosable language go %}}
-<dl class="resources-properties">
-
-    <dt class="property-optional"
+<dl class="resources-properties"><dt class="property-optional"
             title="Optional">
         <span id="connectionurl_go">
 <a href="#connectionurl_go" style="color: inherit; text-decoration: inherit;">Connection<wbr>Url</a>
@@ -2772,8 +2471,7 @@ use.
 the [Vault
 docs](https://www.vaultproject.io/api-docs/secret/databases/oracle.html#sample-payload)
 for an example.
-{{% /md %}}</dd>
-    <dt class="property-optional"
+{{% /md %}}</dd><dt class="property-optional"
             title="Optional">
         <span id="maxconnectionlifetime_go">
 <a href="#maxconnectionlifetime_go" style="color: inherit; text-decoration: inherit;">Max<wbr>Connection<wbr>Lifetime</a>
@@ -2783,8 +2481,7 @@ for an example.
     </dt>
     <dd>{{% md %}}The maximum number of seconds to keep
 a connection alive for.
-{{% /md %}}</dd>
-    <dt class="property-optional"
+{{% /md %}}</dd><dt class="property-optional"
             title="Optional">
         <span id="maxidleconnections_go">
 <a href="#maxidleconnections_go" style="color: inherit; text-decoration: inherit;">Max<wbr>Idle<wbr>Connections</a>
@@ -2794,8 +2491,7 @@ a connection alive for.
     </dt>
     <dd>{{% md %}}The maximum number of idle connections to
 maintain.
-{{% /md %}}</dd>
-    <dt class="property-optional"
+{{% /md %}}</dd><dt class="property-optional"
             title="Optional">
         <span id="maxopenconnections_go">
 <a href="#maxopenconnections_go" style="color: inherit; text-decoration: inherit;">Max<wbr>Open<wbr>Connections</a>
@@ -2805,14 +2501,11 @@ maintain.
     </dt>
     <dd>{{% md %}}The maximum number of open connections to
 use.
-{{% /md %}}</dd>
-</dl>
+{{% /md %}}</dd></dl>
 {{% /choosable %}}
 
 {{% choosable language nodejs %}}
-<dl class="resources-properties">
-
-    <dt class="property-optional"
+<dl class="resources-properties"><dt class="property-optional"
             title="Optional">
         <span id="connectionurl_nodejs">
 <a href="#connectionurl_nodejs" style="color: inherit; text-decoration: inherit;">connection<wbr>Url</a>
@@ -2824,8 +2517,7 @@ use.
 the [Vault
 docs](https://www.vaultproject.io/api-docs/secret/databases/oracle.html#sample-payload)
 for an example.
-{{% /md %}}</dd>
-    <dt class="property-optional"
+{{% /md %}}</dd><dt class="property-optional"
             title="Optional">
         <span id="maxconnectionlifetime_nodejs">
 <a href="#maxconnectionlifetime_nodejs" style="color: inherit; text-decoration: inherit;">max<wbr>Connection<wbr>Lifetime</a>
@@ -2835,8 +2527,7 @@ for an example.
     </dt>
     <dd>{{% md %}}The maximum number of seconds to keep
 a connection alive for.
-{{% /md %}}</dd>
-    <dt class="property-optional"
+{{% /md %}}</dd><dt class="property-optional"
             title="Optional">
         <span id="maxidleconnections_nodejs">
 <a href="#maxidleconnections_nodejs" style="color: inherit; text-decoration: inherit;">max<wbr>Idle<wbr>Connections</a>
@@ -2846,8 +2537,7 @@ a connection alive for.
     </dt>
     <dd>{{% md %}}The maximum number of idle connections to
 maintain.
-{{% /md %}}</dd>
-    <dt class="property-optional"
+{{% /md %}}</dd><dt class="property-optional"
             title="Optional">
         <span id="maxopenconnections_nodejs">
 <a href="#maxopenconnections_nodejs" style="color: inherit; text-decoration: inherit;">max<wbr>Open<wbr>Connections</a>
@@ -2857,14 +2547,11 @@ maintain.
     </dt>
     <dd>{{% md %}}The maximum number of open connections to
 use.
-{{% /md %}}</dd>
-</dl>
+{{% /md %}}</dd></dl>
 {{% /choosable %}}
 
 {{% choosable language python %}}
-<dl class="resources-properties">
-
-    <dt class="property-optional"
+<dl class="resources-properties"><dt class="property-optional"
             title="Optional">
         <span id="connection_url_python">
 <a href="#connection_url_python" style="color: inherit; text-decoration: inherit;">connection_<wbr>url</a>
@@ -2876,8 +2563,7 @@ use.
 the [Vault
 docs](https://www.vaultproject.io/api-docs/secret/databases/oracle.html#sample-payload)
 for an example.
-{{% /md %}}</dd>
-    <dt class="property-optional"
+{{% /md %}}</dd><dt class="property-optional"
             title="Optional">
         <span id="max_connection_lifetime_python">
 <a href="#max_connection_lifetime_python" style="color: inherit; text-decoration: inherit;">max_<wbr>connection_<wbr>lifetime</a>
@@ -2887,8 +2573,7 @@ for an example.
     </dt>
     <dd>{{% md %}}The maximum number of seconds to keep
 a connection alive for.
-{{% /md %}}</dd>
-    <dt class="property-optional"
+{{% /md %}}</dd><dt class="property-optional"
             title="Optional">
         <span id="max_idle_connections_python">
 <a href="#max_idle_connections_python" style="color: inherit; text-decoration: inherit;">max_<wbr>idle_<wbr>connections</a>
@@ -2898,8 +2583,7 @@ a connection alive for.
     </dt>
     <dd>{{% md %}}The maximum number of idle connections to
 maintain.
-{{% /md %}}</dd>
-    <dt class="property-optional"
+{{% /md %}}</dd><dt class="property-optional"
             title="Optional">
         <span id="max_open_connections_python">
 <a href="#max_open_connections_python" style="color: inherit; text-decoration: inherit;">max_<wbr>open_<wbr>connections</a>
@@ -2909,16 +2593,13 @@ maintain.
     </dt>
     <dd>{{% md %}}The maximum number of open connections to
 use.
-{{% /md %}}</dd>
-</dl>
+{{% /md %}}</dd></dl>
 {{% /choosable %}}
 
 <h4 id="secretbackendconnectionmongodbatlas">Secret<wbr>Backend<wbr>Connection<wbr>Mongodbatlas</h4>
 
 {{% choosable language csharp %}}
-<dl class="resources-properties">
-
-    <dt class="property-required"
+<dl class="resources-properties"><dt class="property-required"
             title="Required">
         <span id="privatekey_csharp">
 <a href="#privatekey_csharp" style="color: inherit; text-decoration: inherit;">Private<wbr>Key</a>
@@ -2926,8 +2607,7 @@ use.
         <span class="property-indicator"></span>
         <span class="property-type">string</span>
     </dt>
-    <dd>{{% md %}}{{% /md %}}</dd>
-    <dt class="property-required"
+    <dd>{{% md %}}{{% /md %}}</dd><dt class="property-required"
             title="Required">
         <span id="projectid_csharp">
 <a href="#projectid_csharp" style="color: inherit; text-decoration: inherit;">Project<wbr>Id</a>
@@ -2935,8 +2615,7 @@ use.
         <span class="property-indicator"></span>
         <span class="property-type">string</span>
     </dt>
-    <dd>{{% md %}}{{% /md %}}</dd>
-    <dt class="property-required"
+    <dd>{{% md %}}{{% /md %}}</dd><dt class="property-required"
             title="Required">
         <span id="publickey_csharp">
 <a href="#publickey_csharp" style="color: inherit; text-decoration: inherit;">Public<wbr>Key</a>
@@ -2944,14 +2623,11 @@ use.
         <span class="property-indicator"></span>
         <span class="property-type">string</span>
     </dt>
-    <dd>{{% md %}}{{% /md %}}</dd>
-</dl>
+    <dd>{{% md %}}{{% /md %}}</dd></dl>
 {{% /choosable %}}
 
 {{% choosable language go %}}
-<dl class="resources-properties">
-
-    <dt class="property-required"
+<dl class="resources-properties"><dt class="property-required"
             title="Required">
         <span id="privatekey_go">
 <a href="#privatekey_go" style="color: inherit; text-decoration: inherit;">Private<wbr>Key</a>
@@ -2959,8 +2635,7 @@ use.
         <span class="property-indicator"></span>
         <span class="property-type">string</span>
     </dt>
-    <dd>{{% md %}}{{% /md %}}</dd>
-    <dt class="property-required"
+    <dd>{{% md %}}{{% /md %}}</dd><dt class="property-required"
             title="Required">
         <span id="projectid_go">
 <a href="#projectid_go" style="color: inherit; text-decoration: inherit;">Project<wbr>Id</a>
@@ -2968,8 +2643,7 @@ use.
         <span class="property-indicator"></span>
         <span class="property-type">string</span>
     </dt>
-    <dd>{{% md %}}{{% /md %}}</dd>
-    <dt class="property-required"
+    <dd>{{% md %}}{{% /md %}}</dd><dt class="property-required"
             title="Required">
         <span id="publickey_go">
 <a href="#publickey_go" style="color: inherit; text-decoration: inherit;">Public<wbr>Key</a>
@@ -2977,14 +2651,11 @@ use.
         <span class="property-indicator"></span>
         <span class="property-type">string</span>
     </dt>
-    <dd>{{% md %}}{{% /md %}}</dd>
-</dl>
+    <dd>{{% md %}}{{% /md %}}</dd></dl>
 {{% /choosable %}}
 
 {{% choosable language nodejs %}}
-<dl class="resources-properties">
-
-    <dt class="property-required"
+<dl class="resources-properties"><dt class="property-required"
             title="Required">
         <span id="privatekey_nodejs">
 <a href="#privatekey_nodejs" style="color: inherit; text-decoration: inherit;">private<wbr>Key</a>
@@ -2992,8 +2663,7 @@ use.
         <span class="property-indicator"></span>
         <span class="property-type">string</span>
     </dt>
-    <dd>{{% md %}}{{% /md %}}</dd>
-    <dt class="property-required"
+    <dd>{{% md %}}{{% /md %}}</dd><dt class="property-required"
             title="Required">
         <span id="projectid_nodejs">
 <a href="#projectid_nodejs" style="color: inherit; text-decoration: inherit;">project<wbr>Id</a>
@@ -3001,8 +2671,7 @@ use.
         <span class="property-indicator"></span>
         <span class="property-type">string</span>
     </dt>
-    <dd>{{% md %}}{{% /md %}}</dd>
-    <dt class="property-required"
+    <dd>{{% md %}}{{% /md %}}</dd><dt class="property-required"
             title="Required">
         <span id="publickey_nodejs">
 <a href="#publickey_nodejs" style="color: inherit; text-decoration: inherit;">public<wbr>Key</a>
@@ -3010,14 +2679,11 @@ use.
         <span class="property-indicator"></span>
         <span class="property-type">string</span>
     </dt>
-    <dd>{{% md %}}{{% /md %}}</dd>
-</dl>
+    <dd>{{% md %}}{{% /md %}}</dd></dl>
 {{% /choosable %}}
 
 {{% choosable language python %}}
-<dl class="resources-properties">
-
-    <dt class="property-required"
+<dl class="resources-properties"><dt class="property-required"
             title="Required">
         <span id="private_key_python">
 <a href="#private_key_python" style="color: inherit; text-decoration: inherit;">private_<wbr>key</a>
@@ -3025,8 +2691,7 @@ use.
         <span class="property-indicator"></span>
         <span class="property-type">str</span>
     </dt>
-    <dd>{{% md %}}{{% /md %}}</dd>
-    <dt class="property-required"
+    <dd>{{% md %}}{{% /md %}}</dd><dt class="property-required"
             title="Required">
         <span id="project_id_python">
 <a href="#project_id_python" style="color: inherit; text-decoration: inherit;">project_<wbr>id</a>
@@ -3034,8 +2699,7 @@ use.
         <span class="property-indicator"></span>
         <span class="property-type">str</span>
     </dt>
-    <dd>{{% md %}}{{% /md %}}</dd>
-    <dt class="property-required"
+    <dd>{{% md %}}{{% /md %}}</dd><dt class="property-required"
             title="Required">
         <span id="public_key_python">
 <a href="#public_key_python" style="color: inherit; text-decoration: inherit;">public_<wbr>key</a>
@@ -3043,16 +2707,13 @@ use.
         <span class="property-indicator"></span>
         <span class="property-type">str</span>
     </dt>
-    <dd>{{% md %}}{{% /md %}}</dd>
-</dl>
+    <dd>{{% md %}}{{% /md %}}</dd></dl>
 {{% /choosable %}}
 
 <h4 id="secretbackendconnectionmssql">Secret<wbr>Backend<wbr>Connection<wbr>Mssql</h4>
 
 {{% choosable language csharp %}}
-<dl class="resources-properties">
-
-    <dt class="property-optional"
+<dl class="resources-properties"><dt class="property-optional"
             title="Optional">
         <span id="connectionurl_csharp">
 <a href="#connectionurl_csharp" style="color: inherit; text-decoration: inherit;">Connection<wbr>Url</a>
@@ -3064,8 +2725,7 @@ use.
 the [Vault
 docs](https://www.vaultproject.io/api-docs/secret/databases/oracle.html#sample-payload)
 for an example.
-{{% /md %}}</dd>
-    <dt class="property-optional"
+{{% /md %}}</dd><dt class="property-optional"
             title="Optional">
         <span id="maxconnectionlifetime_csharp">
 <a href="#maxconnectionlifetime_csharp" style="color: inherit; text-decoration: inherit;">Max<wbr>Connection<wbr>Lifetime</a>
@@ -3075,8 +2735,7 @@ for an example.
     </dt>
     <dd>{{% md %}}The maximum number of seconds to keep
 a connection alive for.
-{{% /md %}}</dd>
-    <dt class="property-optional"
+{{% /md %}}</dd><dt class="property-optional"
             title="Optional">
         <span id="maxidleconnections_csharp">
 <a href="#maxidleconnections_csharp" style="color: inherit; text-decoration: inherit;">Max<wbr>Idle<wbr>Connections</a>
@@ -3086,8 +2745,7 @@ a connection alive for.
     </dt>
     <dd>{{% md %}}The maximum number of idle connections to
 maintain.
-{{% /md %}}</dd>
-    <dt class="property-optional"
+{{% /md %}}</dd><dt class="property-optional"
             title="Optional">
         <span id="maxopenconnections_csharp">
 <a href="#maxopenconnections_csharp" style="color: inherit; text-decoration: inherit;">Max<wbr>Open<wbr>Connections</a>
@@ -3097,14 +2755,11 @@ maintain.
     </dt>
     <dd>{{% md %}}The maximum number of open connections to
 use.
-{{% /md %}}</dd>
-</dl>
+{{% /md %}}</dd></dl>
 {{% /choosable %}}
 
 {{% choosable language go %}}
-<dl class="resources-properties">
-
-    <dt class="property-optional"
+<dl class="resources-properties"><dt class="property-optional"
             title="Optional">
         <span id="connectionurl_go">
 <a href="#connectionurl_go" style="color: inherit; text-decoration: inherit;">Connection<wbr>Url</a>
@@ -3116,8 +2771,7 @@ use.
 the [Vault
 docs](https://www.vaultproject.io/api-docs/secret/databases/oracle.html#sample-payload)
 for an example.
-{{% /md %}}</dd>
-    <dt class="property-optional"
+{{% /md %}}</dd><dt class="property-optional"
             title="Optional">
         <span id="maxconnectionlifetime_go">
 <a href="#maxconnectionlifetime_go" style="color: inherit; text-decoration: inherit;">Max<wbr>Connection<wbr>Lifetime</a>
@@ -3127,8 +2781,7 @@ for an example.
     </dt>
     <dd>{{% md %}}The maximum number of seconds to keep
 a connection alive for.
-{{% /md %}}</dd>
-    <dt class="property-optional"
+{{% /md %}}</dd><dt class="property-optional"
             title="Optional">
         <span id="maxidleconnections_go">
 <a href="#maxidleconnections_go" style="color: inherit; text-decoration: inherit;">Max<wbr>Idle<wbr>Connections</a>
@@ -3138,8 +2791,7 @@ a connection alive for.
     </dt>
     <dd>{{% md %}}The maximum number of idle connections to
 maintain.
-{{% /md %}}</dd>
-    <dt class="property-optional"
+{{% /md %}}</dd><dt class="property-optional"
             title="Optional">
         <span id="maxopenconnections_go">
 <a href="#maxopenconnections_go" style="color: inherit; text-decoration: inherit;">Max<wbr>Open<wbr>Connections</a>
@@ -3149,14 +2801,11 @@ maintain.
     </dt>
     <dd>{{% md %}}The maximum number of open connections to
 use.
-{{% /md %}}</dd>
-</dl>
+{{% /md %}}</dd></dl>
 {{% /choosable %}}
 
 {{% choosable language nodejs %}}
-<dl class="resources-properties">
-
-    <dt class="property-optional"
+<dl class="resources-properties"><dt class="property-optional"
             title="Optional">
         <span id="connectionurl_nodejs">
 <a href="#connectionurl_nodejs" style="color: inherit; text-decoration: inherit;">connection<wbr>Url</a>
@@ -3168,8 +2817,7 @@ use.
 the [Vault
 docs](https://www.vaultproject.io/api-docs/secret/databases/oracle.html#sample-payload)
 for an example.
-{{% /md %}}</dd>
-    <dt class="property-optional"
+{{% /md %}}</dd><dt class="property-optional"
             title="Optional">
         <span id="maxconnectionlifetime_nodejs">
 <a href="#maxconnectionlifetime_nodejs" style="color: inherit; text-decoration: inherit;">max<wbr>Connection<wbr>Lifetime</a>
@@ -3179,8 +2827,7 @@ for an example.
     </dt>
     <dd>{{% md %}}The maximum number of seconds to keep
 a connection alive for.
-{{% /md %}}</dd>
-    <dt class="property-optional"
+{{% /md %}}</dd><dt class="property-optional"
             title="Optional">
         <span id="maxidleconnections_nodejs">
 <a href="#maxidleconnections_nodejs" style="color: inherit; text-decoration: inherit;">max<wbr>Idle<wbr>Connections</a>
@@ -3190,8 +2837,7 @@ a connection alive for.
     </dt>
     <dd>{{% md %}}The maximum number of idle connections to
 maintain.
-{{% /md %}}</dd>
-    <dt class="property-optional"
+{{% /md %}}</dd><dt class="property-optional"
             title="Optional">
         <span id="maxopenconnections_nodejs">
 <a href="#maxopenconnections_nodejs" style="color: inherit; text-decoration: inherit;">max<wbr>Open<wbr>Connections</a>
@@ -3201,14 +2847,11 @@ maintain.
     </dt>
     <dd>{{% md %}}The maximum number of open connections to
 use.
-{{% /md %}}</dd>
-</dl>
+{{% /md %}}</dd></dl>
 {{% /choosable %}}
 
 {{% choosable language python %}}
-<dl class="resources-properties">
-
-    <dt class="property-optional"
+<dl class="resources-properties"><dt class="property-optional"
             title="Optional">
         <span id="connection_url_python">
 <a href="#connection_url_python" style="color: inherit; text-decoration: inherit;">connection_<wbr>url</a>
@@ -3220,8 +2863,7 @@ use.
 the [Vault
 docs](https://www.vaultproject.io/api-docs/secret/databases/oracle.html#sample-payload)
 for an example.
-{{% /md %}}</dd>
-    <dt class="property-optional"
+{{% /md %}}</dd><dt class="property-optional"
             title="Optional">
         <span id="max_connection_lifetime_python">
 <a href="#max_connection_lifetime_python" style="color: inherit; text-decoration: inherit;">max_<wbr>connection_<wbr>lifetime</a>
@@ -3231,8 +2873,7 @@ for an example.
     </dt>
     <dd>{{% md %}}The maximum number of seconds to keep
 a connection alive for.
-{{% /md %}}</dd>
-    <dt class="property-optional"
+{{% /md %}}</dd><dt class="property-optional"
             title="Optional">
         <span id="max_idle_connections_python">
 <a href="#max_idle_connections_python" style="color: inherit; text-decoration: inherit;">max_<wbr>idle_<wbr>connections</a>
@@ -3242,8 +2883,7 @@ a connection alive for.
     </dt>
     <dd>{{% md %}}The maximum number of idle connections to
 maintain.
-{{% /md %}}</dd>
-    <dt class="property-optional"
+{{% /md %}}</dd><dt class="property-optional"
             title="Optional">
         <span id="max_open_connections_python">
 <a href="#max_open_connections_python" style="color: inherit; text-decoration: inherit;">max_<wbr>open_<wbr>connections</a>
@@ -3253,16 +2893,13 @@ maintain.
     </dt>
     <dd>{{% md %}}The maximum number of open connections to
 use.
-{{% /md %}}</dd>
-</dl>
+{{% /md %}}</dd></dl>
 {{% /choosable %}}
 
 <h4 id="secretbackendconnectionmysql">Secret<wbr>Backend<wbr>Connection<wbr>Mysql</h4>
 
 {{% choosable language csharp %}}
-<dl class="resources-properties">
-
-    <dt class="property-optional"
+<dl class="resources-properties"><dt class="property-optional"
             title="Optional">
         <span id="connectionurl_csharp">
 <a href="#connectionurl_csharp" style="color: inherit; text-decoration: inherit;">Connection<wbr>Url</a>
@@ -3274,8 +2911,7 @@ use.
 the [Vault
 docs](https://www.vaultproject.io/api-docs/secret/databases/oracle.html#sample-payload)
 for an example.
-{{% /md %}}</dd>
-    <dt class="property-optional"
+{{% /md %}}</dd><dt class="property-optional"
             title="Optional">
         <span id="maxconnectionlifetime_csharp">
 <a href="#maxconnectionlifetime_csharp" style="color: inherit; text-decoration: inherit;">Max<wbr>Connection<wbr>Lifetime</a>
@@ -3285,8 +2921,7 @@ for an example.
     </dt>
     <dd>{{% md %}}The maximum number of seconds to keep
 a connection alive for.
-{{% /md %}}</dd>
-    <dt class="property-optional"
+{{% /md %}}</dd><dt class="property-optional"
             title="Optional">
         <span id="maxidleconnections_csharp">
 <a href="#maxidleconnections_csharp" style="color: inherit; text-decoration: inherit;">Max<wbr>Idle<wbr>Connections</a>
@@ -3296,8 +2931,7 @@ a connection alive for.
     </dt>
     <dd>{{% md %}}The maximum number of idle connections to
 maintain.
-{{% /md %}}</dd>
-    <dt class="property-optional"
+{{% /md %}}</dd><dt class="property-optional"
             title="Optional">
         <span id="maxopenconnections_csharp">
 <a href="#maxopenconnections_csharp" style="color: inherit; text-decoration: inherit;">Max<wbr>Open<wbr>Connections</a>
@@ -3307,14 +2941,11 @@ maintain.
     </dt>
     <dd>{{% md %}}The maximum number of open connections to
 use.
-{{% /md %}}</dd>
-</dl>
+{{% /md %}}</dd></dl>
 {{% /choosable %}}
 
 {{% choosable language go %}}
-<dl class="resources-properties">
-
-    <dt class="property-optional"
+<dl class="resources-properties"><dt class="property-optional"
             title="Optional">
         <span id="connectionurl_go">
 <a href="#connectionurl_go" style="color: inherit; text-decoration: inherit;">Connection<wbr>Url</a>
@@ -3326,8 +2957,7 @@ use.
 the [Vault
 docs](https://www.vaultproject.io/api-docs/secret/databases/oracle.html#sample-payload)
 for an example.
-{{% /md %}}</dd>
-    <dt class="property-optional"
+{{% /md %}}</dd><dt class="property-optional"
             title="Optional">
         <span id="maxconnectionlifetime_go">
 <a href="#maxconnectionlifetime_go" style="color: inherit; text-decoration: inherit;">Max<wbr>Connection<wbr>Lifetime</a>
@@ -3337,8 +2967,7 @@ for an example.
     </dt>
     <dd>{{% md %}}The maximum number of seconds to keep
 a connection alive for.
-{{% /md %}}</dd>
-    <dt class="property-optional"
+{{% /md %}}</dd><dt class="property-optional"
             title="Optional">
         <span id="maxidleconnections_go">
 <a href="#maxidleconnections_go" style="color: inherit; text-decoration: inherit;">Max<wbr>Idle<wbr>Connections</a>
@@ -3348,8 +2977,7 @@ a connection alive for.
     </dt>
     <dd>{{% md %}}The maximum number of idle connections to
 maintain.
-{{% /md %}}</dd>
-    <dt class="property-optional"
+{{% /md %}}</dd><dt class="property-optional"
             title="Optional">
         <span id="maxopenconnections_go">
 <a href="#maxopenconnections_go" style="color: inherit; text-decoration: inherit;">Max<wbr>Open<wbr>Connections</a>
@@ -3359,14 +2987,11 @@ maintain.
     </dt>
     <dd>{{% md %}}The maximum number of open connections to
 use.
-{{% /md %}}</dd>
-</dl>
+{{% /md %}}</dd></dl>
 {{% /choosable %}}
 
 {{% choosable language nodejs %}}
-<dl class="resources-properties">
-
-    <dt class="property-optional"
+<dl class="resources-properties"><dt class="property-optional"
             title="Optional">
         <span id="connectionurl_nodejs">
 <a href="#connectionurl_nodejs" style="color: inherit; text-decoration: inherit;">connection<wbr>Url</a>
@@ -3378,8 +3003,7 @@ use.
 the [Vault
 docs](https://www.vaultproject.io/api-docs/secret/databases/oracle.html#sample-payload)
 for an example.
-{{% /md %}}</dd>
-    <dt class="property-optional"
+{{% /md %}}</dd><dt class="property-optional"
             title="Optional">
         <span id="maxconnectionlifetime_nodejs">
 <a href="#maxconnectionlifetime_nodejs" style="color: inherit; text-decoration: inherit;">max<wbr>Connection<wbr>Lifetime</a>
@@ -3389,8 +3013,7 @@ for an example.
     </dt>
     <dd>{{% md %}}The maximum number of seconds to keep
 a connection alive for.
-{{% /md %}}</dd>
-    <dt class="property-optional"
+{{% /md %}}</dd><dt class="property-optional"
             title="Optional">
         <span id="maxidleconnections_nodejs">
 <a href="#maxidleconnections_nodejs" style="color: inherit; text-decoration: inherit;">max<wbr>Idle<wbr>Connections</a>
@@ -3400,8 +3023,7 @@ a connection alive for.
     </dt>
     <dd>{{% md %}}The maximum number of idle connections to
 maintain.
-{{% /md %}}</dd>
-    <dt class="property-optional"
+{{% /md %}}</dd><dt class="property-optional"
             title="Optional">
         <span id="maxopenconnections_nodejs">
 <a href="#maxopenconnections_nodejs" style="color: inherit; text-decoration: inherit;">max<wbr>Open<wbr>Connections</a>
@@ -3411,14 +3033,11 @@ maintain.
     </dt>
     <dd>{{% md %}}The maximum number of open connections to
 use.
-{{% /md %}}</dd>
-</dl>
+{{% /md %}}</dd></dl>
 {{% /choosable %}}
 
 {{% choosable language python %}}
-<dl class="resources-properties">
-
-    <dt class="property-optional"
+<dl class="resources-properties"><dt class="property-optional"
             title="Optional">
         <span id="connection_url_python">
 <a href="#connection_url_python" style="color: inherit; text-decoration: inherit;">connection_<wbr>url</a>
@@ -3430,8 +3049,7 @@ use.
 the [Vault
 docs](https://www.vaultproject.io/api-docs/secret/databases/oracle.html#sample-payload)
 for an example.
-{{% /md %}}</dd>
-    <dt class="property-optional"
+{{% /md %}}</dd><dt class="property-optional"
             title="Optional">
         <span id="max_connection_lifetime_python">
 <a href="#max_connection_lifetime_python" style="color: inherit; text-decoration: inherit;">max_<wbr>connection_<wbr>lifetime</a>
@@ -3441,8 +3059,7 @@ for an example.
     </dt>
     <dd>{{% md %}}The maximum number of seconds to keep
 a connection alive for.
-{{% /md %}}</dd>
-    <dt class="property-optional"
+{{% /md %}}</dd><dt class="property-optional"
             title="Optional">
         <span id="max_idle_connections_python">
 <a href="#max_idle_connections_python" style="color: inherit; text-decoration: inherit;">max_<wbr>idle_<wbr>connections</a>
@@ -3452,8 +3069,7 @@ a connection alive for.
     </dt>
     <dd>{{% md %}}The maximum number of idle connections to
 maintain.
-{{% /md %}}</dd>
-    <dt class="property-optional"
+{{% /md %}}</dd><dt class="property-optional"
             title="Optional">
         <span id="max_open_connections_python">
 <a href="#max_open_connections_python" style="color: inherit; text-decoration: inherit;">max_<wbr>open_<wbr>connections</a>
@@ -3463,16 +3079,13 @@ maintain.
     </dt>
     <dd>{{% md %}}The maximum number of open connections to
 use.
-{{% /md %}}</dd>
-</dl>
+{{% /md %}}</dd></dl>
 {{% /choosable %}}
 
 <h4 id="secretbackendconnectionmysqlaurora">Secret<wbr>Backend<wbr>Connection<wbr>Mysql<wbr>Aurora</h4>
 
 {{% choosable language csharp %}}
-<dl class="resources-properties">
-
-    <dt class="property-optional"
+<dl class="resources-properties"><dt class="property-optional"
             title="Optional">
         <span id="connectionurl_csharp">
 <a href="#connectionurl_csharp" style="color: inherit; text-decoration: inherit;">Connection<wbr>Url</a>
@@ -3484,8 +3097,7 @@ use.
 the [Vault
 docs](https://www.vaultproject.io/api-docs/secret/databases/oracle.html#sample-payload)
 for an example.
-{{% /md %}}</dd>
-    <dt class="property-optional"
+{{% /md %}}</dd><dt class="property-optional"
             title="Optional">
         <span id="maxconnectionlifetime_csharp">
 <a href="#maxconnectionlifetime_csharp" style="color: inherit; text-decoration: inherit;">Max<wbr>Connection<wbr>Lifetime</a>
@@ -3495,8 +3107,7 @@ for an example.
     </dt>
     <dd>{{% md %}}The maximum number of seconds to keep
 a connection alive for.
-{{% /md %}}</dd>
-    <dt class="property-optional"
+{{% /md %}}</dd><dt class="property-optional"
             title="Optional">
         <span id="maxidleconnections_csharp">
 <a href="#maxidleconnections_csharp" style="color: inherit; text-decoration: inherit;">Max<wbr>Idle<wbr>Connections</a>
@@ -3506,8 +3117,7 @@ a connection alive for.
     </dt>
     <dd>{{% md %}}The maximum number of idle connections to
 maintain.
-{{% /md %}}</dd>
-    <dt class="property-optional"
+{{% /md %}}</dd><dt class="property-optional"
             title="Optional">
         <span id="maxopenconnections_csharp">
 <a href="#maxopenconnections_csharp" style="color: inherit; text-decoration: inherit;">Max<wbr>Open<wbr>Connections</a>
@@ -3517,14 +3127,11 @@ maintain.
     </dt>
     <dd>{{% md %}}The maximum number of open connections to
 use.
-{{% /md %}}</dd>
-</dl>
+{{% /md %}}</dd></dl>
 {{% /choosable %}}
 
 {{% choosable language go %}}
-<dl class="resources-properties">
-
-    <dt class="property-optional"
+<dl class="resources-properties"><dt class="property-optional"
             title="Optional">
         <span id="connectionurl_go">
 <a href="#connectionurl_go" style="color: inherit; text-decoration: inherit;">Connection<wbr>Url</a>
@@ -3536,8 +3143,7 @@ use.
 the [Vault
 docs](https://www.vaultproject.io/api-docs/secret/databases/oracle.html#sample-payload)
 for an example.
-{{% /md %}}</dd>
-    <dt class="property-optional"
+{{% /md %}}</dd><dt class="property-optional"
             title="Optional">
         <span id="maxconnectionlifetime_go">
 <a href="#maxconnectionlifetime_go" style="color: inherit; text-decoration: inherit;">Max<wbr>Connection<wbr>Lifetime</a>
@@ -3547,8 +3153,7 @@ for an example.
     </dt>
     <dd>{{% md %}}The maximum number of seconds to keep
 a connection alive for.
-{{% /md %}}</dd>
-    <dt class="property-optional"
+{{% /md %}}</dd><dt class="property-optional"
             title="Optional">
         <span id="maxidleconnections_go">
 <a href="#maxidleconnections_go" style="color: inherit; text-decoration: inherit;">Max<wbr>Idle<wbr>Connections</a>
@@ -3558,8 +3163,7 @@ a connection alive for.
     </dt>
     <dd>{{% md %}}The maximum number of idle connections to
 maintain.
-{{% /md %}}</dd>
-    <dt class="property-optional"
+{{% /md %}}</dd><dt class="property-optional"
             title="Optional">
         <span id="maxopenconnections_go">
 <a href="#maxopenconnections_go" style="color: inherit; text-decoration: inherit;">Max<wbr>Open<wbr>Connections</a>
@@ -3569,14 +3173,11 @@ maintain.
     </dt>
     <dd>{{% md %}}The maximum number of open connections to
 use.
-{{% /md %}}</dd>
-</dl>
+{{% /md %}}</dd></dl>
 {{% /choosable %}}
 
 {{% choosable language nodejs %}}
-<dl class="resources-properties">
-
-    <dt class="property-optional"
+<dl class="resources-properties"><dt class="property-optional"
             title="Optional">
         <span id="connectionurl_nodejs">
 <a href="#connectionurl_nodejs" style="color: inherit; text-decoration: inherit;">connection<wbr>Url</a>
@@ -3588,8 +3189,7 @@ use.
 the [Vault
 docs](https://www.vaultproject.io/api-docs/secret/databases/oracle.html#sample-payload)
 for an example.
-{{% /md %}}</dd>
-    <dt class="property-optional"
+{{% /md %}}</dd><dt class="property-optional"
             title="Optional">
         <span id="maxconnectionlifetime_nodejs">
 <a href="#maxconnectionlifetime_nodejs" style="color: inherit; text-decoration: inherit;">max<wbr>Connection<wbr>Lifetime</a>
@@ -3599,8 +3199,7 @@ for an example.
     </dt>
     <dd>{{% md %}}The maximum number of seconds to keep
 a connection alive for.
-{{% /md %}}</dd>
-    <dt class="property-optional"
+{{% /md %}}</dd><dt class="property-optional"
             title="Optional">
         <span id="maxidleconnections_nodejs">
 <a href="#maxidleconnections_nodejs" style="color: inherit; text-decoration: inherit;">max<wbr>Idle<wbr>Connections</a>
@@ -3610,8 +3209,7 @@ a connection alive for.
     </dt>
     <dd>{{% md %}}The maximum number of idle connections to
 maintain.
-{{% /md %}}</dd>
-    <dt class="property-optional"
+{{% /md %}}</dd><dt class="property-optional"
             title="Optional">
         <span id="maxopenconnections_nodejs">
 <a href="#maxopenconnections_nodejs" style="color: inherit; text-decoration: inherit;">max<wbr>Open<wbr>Connections</a>
@@ -3621,14 +3219,11 @@ maintain.
     </dt>
     <dd>{{% md %}}The maximum number of open connections to
 use.
-{{% /md %}}</dd>
-</dl>
+{{% /md %}}</dd></dl>
 {{% /choosable %}}
 
 {{% choosable language python %}}
-<dl class="resources-properties">
-
-    <dt class="property-optional"
+<dl class="resources-properties"><dt class="property-optional"
             title="Optional">
         <span id="connection_url_python">
 <a href="#connection_url_python" style="color: inherit; text-decoration: inherit;">connection_<wbr>url</a>
@@ -3640,8 +3235,7 @@ use.
 the [Vault
 docs](https://www.vaultproject.io/api-docs/secret/databases/oracle.html#sample-payload)
 for an example.
-{{% /md %}}</dd>
-    <dt class="property-optional"
+{{% /md %}}</dd><dt class="property-optional"
             title="Optional">
         <span id="max_connection_lifetime_python">
 <a href="#max_connection_lifetime_python" style="color: inherit; text-decoration: inherit;">max_<wbr>connection_<wbr>lifetime</a>
@@ -3651,8 +3245,7 @@ for an example.
     </dt>
     <dd>{{% md %}}The maximum number of seconds to keep
 a connection alive for.
-{{% /md %}}</dd>
-    <dt class="property-optional"
+{{% /md %}}</dd><dt class="property-optional"
             title="Optional">
         <span id="max_idle_connections_python">
 <a href="#max_idle_connections_python" style="color: inherit; text-decoration: inherit;">max_<wbr>idle_<wbr>connections</a>
@@ -3662,8 +3255,7 @@ a connection alive for.
     </dt>
     <dd>{{% md %}}The maximum number of idle connections to
 maintain.
-{{% /md %}}</dd>
-    <dt class="property-optional"
+{{% /md %}}</dd><dt class="property-optional"
             title="Optional">
         <span id="max_open_connections_python">
 <a href="#max_open_connections_python" style="color: inherit; text-decoration: inherit;">max_<wbr>open_<wbr>connections</a>
@@ -3673,16 +3265,13 @@ maintain.
     </dt>
     <dd>{{% md %}}The maximum number of open connections to
 use.
-{{% /md %}}</dd>
-</dl>
+{{% /md %}}</dd></dl>
 {{% /choosable %}}
 
 <h4 id="secretbackendconnectionmysqllegacy">Secret<wbr>Backend<wbr>Connection<wbr>Mysql<wbr>Legacy</h4>
 
 {{% choosable language csharp %}}
-<dl class="resources-properties">
-
-    <dt class="property-optional"
+<dl class="resources-properties"><dt class="property-optional"
             title="Optional">
         <span id="connectionurl_csharp">
 <a href="#connectionurl_csharp" style="color: inherit; text-decoration: inherit;">Connection<wbr>Url</a>
@@ -3694,8 +3283,7 @@ use.
 the [Vault
 docs](https://www.vaultproject.io/api-docs/secret/databases/oracle.html#sample-payload)
 for an example.
-{{% /md %}}</dd>
-    <dt class="property-optional"
+{{% /md %}}</dd><dt class="property-optional"
             title="Optional">
         <span id="maxconnectionlifetime_csharp">
 <a href="#maxconnectionlifetime_csharp" style="color: inherit; text-decoration: inherit;">Max<wbr>Connection<wbr>Lifetime</a>
@@ -3705,8 +3293,7 @@ for an example.
     </dt>
     <dd>{{% md %}}The maximum number of seconds to keep
 a connection alive for.
-{{% /md %}}</dd>
-    <dt class="property-optional"
+{{% /md %}}</dd><dt class="property-optional"
             title="Optional">
         <span id="maxidleconnections_csharp">
 <a href="#maxidleconnections_csharp" style="color: inherit; text-decoration: inherit;">Max<wbr>Idle<wbr>Connections</a>
@@ -3716,8 +3303,7 @@ a connection alive for.
     </dt>
     <dd>{{% md %}}The maximum number of idle connections to
 maintain.
-{{% /md %}}</dd>
-    <dt class="property-optional"
+{{% /md %}}</dd><dt class="property-optional"
             title="Optional">
         <span id="maxopenconnections_csharp">
 <a href="#maxopenconnections_csharp" style="color: inherit; text-decoration: inherit;">Max<wbr>Open<wbr>Connections</a>
@@ -3727,14 +3313,11 @@ maintain.
     </dt>
     <dd>{{% md %}}The maximum number of open connections to
 use.
-{{% /md %}}</dd>
-</dl>
+{{% /md %}}</dd></dl>
 {{% /choosable %}}
 
 {{% choosable language go %}}
-<dl class="resources-properties">
-
-    <dt class="property-optional"
+<dl class="resources-properties"><dt class="property-optional"
             title="Optional">
         <span id="connectionurl_go">
 <a href="#connectionurl_go" style="color: inherit; text-decoration: inherit;">Connection<wbr>Url</a>
@@ -3746,8 +3329,7 @@ use.
 the [Vault
 docs](https://www.vaultproject.io/api-docs/secret/databases/oracle.html#sample-payload)
 for an example.
-{{% /md %}}</dd>
-    <dt class="property-optional"
+{{% /md %}}</dd><dt class="property-optional"
             title="Optional">
         <span id="maxconnectionlifetime_go">
 <a href="#maxconnectionlifetime_go" style="color: inherit; text-decoration: inherit;">Max<wbr>Connection<wbr>Lifetime</a>
@@ -3757,8 +3339,7 @@ for an example.
     </dt>
     <dd>{{% md %}}The maximum number of seconds to keep
 a connection alive for.
-{{% /md %}}</dd>
-    <dt class="property-optional"
+{{% /md %}}</dd><dt class="property-optional"
             title="Optional">
         <span id="maxidleconnections_go">
 <a href="#maxidleconnections_go" style="color: inherit; text-decoration: inherit;">Max<wbr>Idle<wbr>Connections</a>
@@ -3768,8 +3349,7 @@ a connection alive for.
     </dt>
     <dd>{{% md %}}The maximum number of idle connections to
 maintain.
-{{% /md %}}</dd>
-    <dt class="property-optional"
+{{% /md %}}</dd><dt class="property-optional"
             title="Optional">
         <span id="maxopenconnections_go">
 <a href="#maxopenconnections_go" style="color: inherit; text-decoration: inherit;">Max<wbr>Open<wbr>Connections</a>
@@ -3779,14 +3359,11 @@ maintain.
     </dt>
     <dd>{{% md %}}The maximum number of open connections to
 use.
-{{% /md %}}</dd>
-</dl>
+{{% /md %}}</dd></dl>
 {{% /choosable %}}
 
 {{% choosable language nodejs %}}
-<dl class="resources-properties">
-
-    <dt class="property-optional"
+<dl class="resources-properties"><dt class="property-optional"
             title="Optional">
         <span id="connectionurl_nodejs">
 <a href="#connectionurl_nodejs" style="color: inherit; text-decoration: inherit;">connection<wbr>Url</a>
@@ -3798,8 +3375,7 @@ use.
 the [Vault
 docs](https://www.vaultproject.io/api-docs/secret/databases/oracle.html#sample-payload)
 for an example.
-{{% /md %}}</dd>
-    <dt class="property-optional"
+{{% /md %}}</dd><dt class="property-optional"
             title="Optional">
         <span id="maxconnectionlifetime_nodejs">
 <a href="#maxconnectionlifetime_nodejs" style="color: inherit; text-decoration: inherit;">max<wbr>Connection<wbr>Lifetime</a>
@@ -3809,8 +3385,7 @@ for an example.
     </dt>
     <dd>{{% md %}}The maximum number of seconds to keep
 a connection alive for.
-{{% /md %}}</dd>
-    <dt class="property-optional"
+{{% /md %}}</dd><dt class="property-optional"
             title="Optional">
         <span id="maxidleconnections_nodejs">
 <a href="#maxidleconnections_nodejs" style="color: inherit; text-decoration: inherit;">max<wbr>Idle<wbr>Connections</a>
@@ -3820,8 +3395,7 @@ a connection alive for.
     </dt>
     <dd>{{% md %}}The maximum number of idle connections to
 maintain.
-{{% /md %}}</dd>
-    <dt class="property-optional"
+{{% /md %}}</dd><dt class="property-optional"
             title="Optional">
         <span id="maxopenconnections_nodejs">
 <a href="#maxopenconnections_nodejs" style="color: inherit; text-decoration: inherit;">max<wbr>Open<wbr>Connections</a>
@@ -3831,14 +3405,11 @@ maintain.
     </dt>
     <dd>{{% md %}}The maximum number of open connections to
 use.
-{{% /md %}}</dd>
-</dl>
+{{% /md %}}</dd></dl>
 {{% /choosable %}}
 
 {{% choosable language python %}}
-<dl class="resources-properties">
-
-    <dt class="property-optional"
+<dl class="resources-properties"><dt class="property-optional"
             title="Optional">
         <span id="connection_url_python">
 <a href="#connection_url_python" style="color: inherit; text-decoration: inherit;">connection_<wbr>url</a>
@@ -3850,8 +3421,7 @@ use.
 the [Vault
 docs](https://www.vaultproject.io/api-docs/secret/databases/oracle.html#sample-payload)
 for an example.
-{{% /md %}}</dd>
-    <dt class="property-optional"
+{{% /md %}}</dd><dt class="property-optional"
             title="Optional">
         <span id="max_connection_lifetime_python">
 <a href="#max_connection_lifetime_python" style="color: inherit; text-decoration: inherit;">max_<wbr>connection_<wbr>lifetime</a>
@@ -3861,8 +3431,7 @@ for an example.
     </dt>
     <dd>{{% md %}}The maximum number of seconds to keep
 a connection alive for.
-{{% /md %}}</dd>
-    <dt class="property-optional"
+{{% /md %}}</dd><dt class="property-optional"
             title="Optional">
         <span id="max_idle_connections_python">
 <a href="#max_idle_connections_python" style="color: inherit; text-decoration: inherit;">max_<wbr>idle_<wbr>connections</a>
@@ -3872,8 +3441,7 @@ a connection alive for.
     </dt>
     <dd>{{% md %}}The maximum number of idle connections to
 maintain.
-{{% /md %}}</dd>
-    <dt class="property-optional"
+{{% /md %}}</dd><dt class="property-optional"
             title="Optional">
         <span id="max_open_connections_python">
 <a href="#max_open_connections_python" style="color: inherit; text-decoration: inherit;">max_<wbr>open_<wbr>connections</a>
@@ -3883,16 +3451,13 @@ maintain.
     </dt>
     <dd>{{% md %}}The maximum number of open connections to
 use.
-{{% /md %}}</dd>
-</dl>
+{{% /md %}}</dd></dl>
 {{% /choosable %}}
 
 <h4 id="secretbackendconnectionmysqlrds">Secret<wbr>Backend<wbr>Connection<wbr>Mysql<wbr>Rds</h4>
 
 {{% choosable language csharp %}}
-<dl class="resources-properties">
-
-    <dt class="property-optional"
+<dl class="resources-properties"><dt class="property-optional"
             title="Optional">
         <span id="connectionurl_csharp">
 <a href="#connectionurl_csharp" style="color: inherit; text-decoration: inherit;">Connection<wbr>Url</a>
@@ -3904,8 +3469,7 @@ use.
 the [Vault
 docs](https://www.vaultproject.io/api-docs/secret/databases/oracle.html#sample-payload)
 for an example.
-{{% /md %}}</dd>
-    <dt class="property-optional"
+{{% /md %}}</dd><dt class="property-optional"
             title="Optional">
         <span id="maxconnectionlifetime_csharp">
 <a href="#maxconnectionlifetime_csharp" style="color: inherit; text-decoration: inherit;">Max<wbr>Connection<wbr>Lifetime</a>
@@ -3915,8 +3479,7 @@ for an example.
     </dt>
     <dd>{{% md %}}The maximum number of seconds to keep
 a connection alive for.
-{{% /md %}}</dd>
-    <dt class="property-optional"
+{{% /md %}}</dd><dt class="property-optional"
             title="Optional">
         <span id="maxidleconnections_csharp">
 <a href="#maxidleconnections_csharp" style="color: inherit; text-decoration: inherit;">Max<wbr>Idle<wbr>Connections</a>
@@ -3926,8 +3489,7 @@ a connection alive for.
     </dt>
     <dd>{{% md %}}The maximum number of idle connections to
 maintain.
-{{% /md %}}</dd>
-    <dt class="property-optional"
+{{% /md %}}</dd><dt class="property-optional"
             title="Optional">
         <span id="maxopenconnections_csharp">
 <a href="#maxopenconnections_csharp" style="color: inherit; text-decoration: inherit;">Max<wbr>Open<wbr>Connections</a>
@@ -3937,14 +3499,11 @@ maintain.
     </dt>
     <dd>{{% md %}}The maximum number of open connections to
 use.
-{{% /md %}}</dd>
-</dl>
+{{% /md %}}</dd></dl>
 {{% /choosable %}}
 
 {{% choosable language go %}}
-<dl class="resources-properties">
-
-    <dt class="property-optional"
+<dl class="resources-properties"><dt class="property-optional"
             title="Optional">
         <span id="connectionurl_go">
 <a href="#connectionurl_go" style="color: inherit; text-decoration: inherit;">Connection<wbr>Url</a>
@@ -3956,8 +3515,7 @@ use.
 the [Vault
 docs](https://www.vaultproject.io/api-docs/secret/databases/oracle.html#sample-payload)
 for an example.
-{{% /md %}}</dd>
-    <dt class="property-optional"
+{{% /md %}}</dd><dt class="property-optional"
             title="Optional">
         <span id="maxconnectionlifetime_go">
 <a href="#maxconnectionlifetime_go" style="color: inherit; text-decoration: inherit;">Max<wbr>Connection<wbr>Lifetime</a>
@@ -3967,8 +3525,7 @@ for an example.
     </dt>
     <dd>{{% md %}}The maximum number of seconds to keep
 a connection alive for.
-{{% /md %}}</dd>
-    <dt class="property-optional"
+{{% /md %}}</dd><dt class="property-optional"
             title="Optional">
         <span id="maxidleconnections_go">
 <a href="#maxidleconnections_go" style="color: inherit; text-decoration: inherit;">Max<wbr>Idle<wbr>Connections</a>
@@ -3978,8 +3535,7 @@ a connection alive for.
     </dt>
     <dd>{{% md %}}The maximum number of idle connections to
 maintain.
-{{% /md %}}</dd>
-    <dt class="property-optional"
+{{% /md %}}</dd><dt class="property-optional"
             title="Optional">
         <span id="maxopenconnections_go">
 <a href="#maxopenconnections_go" style="color: inherit; text-decoration: inherit;">Max<wbr>Open<wbr>Connections</a>
@@ -3989,14 +3545,11 @@ maintain.
     </dt>
     <dd>{{% md %}}The maximum number of open connections to
 use.
-{{% /md %}}</dd>
-</dl>
+{{% /md %}}</dd></dl>
 {{% /choosable %}}
 
 {{% choosable language nodejs %}}
-<dl class="resources-properties">
-
-    <dt class="property-optional"
+<dl class="resources-properties"><dt class="property-optional"
             title="Optional">
         <span id="connectionurl_nodejs">
 <a href="#connectionurl_nodejs" style="color: inherit; text-decoration: inherit;">connection<wbr>Url</a>
@@ -4008,8 +3561,7 @@ use.
 the [Vault
 docs](https://www.vaultproject.io/api-docs/secret/databases/oracle.html#sample-payload)
 for an example.
-{{% /md %}}</dd>
-    <dt class="property-optional"
+{{% /md %}}</dd><dt class="property-optional"
             title="Optional">
         <span id="maxconnectionlifetime_nodejs">
 <a href="#maxconnectionlifetime_nodejs" style="color: inherit; text-decoration: inherit;">max<wbr>Connection<wbr>Lifetime</a>
@@ -4019,8 +3571,7 @@ for an example.
     </dt>
     <dd>{{% md %}}The maximum number of seconds to keep
 a connection alive for.
-{{% /md %}}</dd>
-    <dt class="property-optional"
+{{% /md %}}</dd><dt class="property-optional"
             title="Optional">
         <span id="maxidleconnections_nodejs">
 <a href="#maxidleconnections_nodejs" style="color: inherit; text-decoration: inherit;">max<wbr>Idle<wbr>Connections</a>
@@ -4030,8 +3581,7 @@ a connection alive for.
     </dt>
     <dd>{{% md %}}The maximum number of idle connections to
 maintain.
-{{% /md %}}</dd>
-    <dt class="property-optional"
+{{% /md %}}</dd><dt class="property-optional"
             title="Optional">
         <span id="maxopenconnections_nodejs">
 <a href="#maxopenconnections_nodejs" style="color: inherit; text-decoration: inherit;">max<wbr>Open<wbr>Connections</a>
@@ -4041,14 +3591,11 @@ maintain.
     </dt>
     <dd>{{% md %}}The maximum number of open connections to
 use.
-{{% /md %}}</dd>
-</dl>
+{{% /md %}}</dd></dl>
 {{% /choosable %}}
 
 {{% choosable language python %}}
-<dl class="resources-properties">
-
-    <dt class="property-optional"
+<dl class="resources-properties"><dt class="property-optional"
             title="Optional">
         <span id="connection_url_python">
 <a href="#connection_url_python" style="color: inherit; text-decoration: inherit;">connection_<wbr>url</a>
@@ -4060,8 +3607,7 @@ use.
 the [Vault
 docs](https://www.vaultproject.io/api-docs/secret/databases/oracle.html#sample-payload)
 for an example.
-{{% /md %}}</dd>
-    <dt class="property-optional"
+{{% /md %}}</dd><dt class="property-optional"
             title="Optional">
         <span id="max_connection_lifetime_python">
 <a href="#max_connection_lifetime_python" style="color: inherit; text-decoration: inherit;">max_<wbr>connection_<wbr>lifetime</a>
@@ -4071,8 +3617,7 @@ for an example.
     </dt>
     <dd>{{% md %}}The maximum number of seconds to keep
 a connection alive for.
-{{% /md %}}</dd>
-    <dt class="property-optional"
+{{% /md %}}</dd><dt class="property-optional"
             title="Optional">
         <span id="max_idle_connections_python">
 <a href="#max_idle_connections_python" style="color: inherit; text-decoration: inherit;">max_<wbr>idle_<wbr>connections</a>
@@ -4082,8 +3627,7 @@ a connection alive for.
     </dt>
     <dd>{{% md %}}The maximum number of idle connections to
 maintain.
-{{% /md %}}</dd>
-    <dt class="property-optional"
+{{% /md %}}</dd><dt class="property-optional"
             title="Optional">
         <span id="max_open_connections_python">
 <a href="#max_open_connections_python" style="color: inherit; text-decoration: inherit;">max_<wbr>open_<wbr>connections</a>
@@ -4093,16 +3637,13 @@ maintain.
     </dt>
     <dd>{{% md %}}The maximum number of open connections to
 use.
-{{% /md %}}</dd>
-</dl>
+{{% /md %}}</dd></dl>
 {{% /choosable %}}
 
 <h4 id="secretbackendconnectionoracle">Secret<wbr>Backend<wbr>Connection<wbr>Oracle</h4>
 
 {{% choosable language csharp %}}
-<dl class="resources-properties">
-
-    <dt class="property-optional"
+<dl class="resources-properties"><dt class="property-optional"
             title="Optional">
         <span id="connectionurl_csharp">
 <a href="#connectionurl_csharp" style="color: inherit; text-decoration: inherit;">Connection<wbr>Url</a>
@@ -4114,8 +3655,7 @@ use.
 the [Vault
 docs](https://www.vaultproject.io/api-docs/secret/databases/oracle.html#sample-payload)
 for an example.
-{{% /md %}}</dd>
-    <dt class="property-optional"
+{{% /md %}}</dd><dt class="property-optional"
             title="Optional">
         <span id="maxconnectionlifetime_csharp">
 <a href="#maxconnectionlifetime_csharp" style="color: inherit; text-decoration: inherit;">Max<wbr>Connection<wbr>Lifetime</a>
@@ -4125,8 +3665,7 @@ for an example.
     </dt>
     <dd>{{% md %}}The maximum number of seconds to keep
 a connection alive for.
-{{% /md %}}</dd>
-    <dt class="property-optional"
+{{% /md %}}</dd><dt class="property-optional"
             title="Optional">
         <span id="maxidleconnections_csharp">
 <a href="#maxidleconnections_csharp" style="color: inherit; text-decoration: inherit;">Max<wbr>Idle<wbr>Connections</a>
@@ -4136,8 +3675,7 @@ a connection alive for.
     </dt>
     <dd>{{% md %}}The maximum number of idle connections to
 maintain.
-{{% /md %}}</dd>
-    <dt class="property-optional"
+{{% /md %}}</dd><dt class="property-optional"
             title="Optional">
         <span id="maxopenconnections_csharp">
 <a href="#maxopenconnections_csharp" style="color: inherit; text-decoration: inherit;">Max<wbr>Open<wbr>Connections</a>
@@ -4147,14 +3685,11 @@ maintain.
     </dt>
     <dd>{{% md %}}The maximum number of open connections to
 use.
-{{% /md %}}</dd>
-</dl>
+{{% /md %}}</dd></dl>
 {{% /choosable %}}
 
 {{% choosable language go %}}
-<dl class="resources-properties">
-
-    <dt class="property-optional"
+<dl class="resources-properties"><dt class="property-optional"
             title="Optional">
         <span id="connectionurl_go">
 <a href="#connectionurl_go" style="color: inherit; text-decoration: inherit;">Connection<wbr>Url</a>
@@ -4166,8 +3701,7 @@ use.
 the [Vault
 docs](https://www.vaultproject.io/api-docs/secret/databases/oracle.html#sample-payload)
 for an example.
-{{% /md %}}</dd>
-    <dt class="property-optional"
+{{% /md %}}</dd><dt class="property-optional"
             title="Optional">
         <span id="maxconnectionlifetime_go">
 <a href="#maxconnectionlifetime_go" style="color: inherit; text-decoration: inherit;">Max<wbr>Connection<wbr>Lifetime</a>
@@ -4177,8 +3711,7 @@ for an example.
     </dt>
     <dd>{{% md %}}The maximum number of seconds to keep
 a connection alive for.
-{{% /md %}}</dd>
-    <dt class="property-optional"
+{{% /md %}}</dd><dt class="property-optional"
             title="Optional">
         <span id="maxidleconnections_go">
 <a href="#maxidleconnections_go" style="color: inherit; text-decoration: inherit;">Max<wbr>Idle<wbr>Connections</a>
@@ -4188,8 +3721,7 @@ a connection alive for.
     </dt>
     <dd>{{% md %}}The maximum number of idle connections to
 maintain.
-{{% /md %}}</dd>
-    <dt class="property-optional"
+{{% /md %}}</dd><dt class="property-optional"
             title="Optional">
         <span id="maxopenconnections_go">
 <a href="#maxopenconnections_go" style="color: inherit; text-decoration: inherit;">Max<wbr>Open<wbr>Connections</a>
@@ -4199,14 +3731,11 @@ maintain.
     </dt>
     <dd>{{% md %}}The maximum number of open connections to
 use.
-{{% /md %}}</dd>
-</dl>
+{{% /md %}}</dd></dl>
 {{% /choosable %}}
 
 {{% choosable language nodejs %}}
-<dl class="resources-properties">
-
-    <dt class="property-optional"
+<dl class="resources-properties"><dt class="property-optional"
             title="Optional">
         <span id="connectionurl_nodejs">
 <a href="#connectionurl_nodejs" style="color: inherit; text-decoration: inherit;">connection<wbr>Url</a>
@@ -4218,8 +3747,7 @@ use.
 the [Vault
 docs](https://www.vaultproject.io/api-docs/secret/databases/oracle.html#sample-payload)
 for an example.
-{{% /md %}}</dd>
-    <dt class="property-optional"
+{{% /md %}}</dd><dt class="property-optional"
             title="Optional">
         <span id="maxconnectionlifetime_nodejs">
 <a href="#maxconnectionlifetime_nodejs" style="color: inherit; text-decoration: inherit;">max<wbr>Connection<wbr>Lifetime</a>
@@ -4229,8 +3757,7 @@ for an example.
     </dt>
     <dd>{{% md %}}The maximum number of seconds to keep
 a connection alive for.
-{{% /md %}}</dd>
-    <dt class="property-optional"
+{{% /md %}}</dd><dt class="property-optional"
             title="Optional">
         <span id="maxidleconnections_nodejs">
 <a href="#maxidleconnections_nodejs" style="color: inherit; text-decoration: inherit;">max<wbr>Idle<wbr>Connections</a>
@@ -4240,8 +3767,7 @@ a connection alive for.
     </dt>
     <dd>{{% md %}}The maximum number of idle connections to
 maintain.
-{{% /md %}}</dd>
-    <dt class="property-optional"
+{{% /md %}}</dd><dt class="property-optional"
             title="Optional">
         <span id="maxopenconnections_nodejs">
 <a href="#maxopenconnections_nodejs" style="color: inherit; text-decoration: inherit;">max<wbr>Open<wbr>Connections</a>
@@ -4251,14 +3777,11 @@ maintain.
     </dt>
     <dd>{{% md %}}The maximum number of open connections to
 use.
-{{% /md %}}</dd>
-</dl>
+{{% /md %}}</dd></dl>
 {{% /choosable %}}
 
 {{% choosable language python %}}
-<dl class="resources-properties">
-
-    <dt class="property-optional"
+<dl class="resources-properties"><dt class="property-optional"
             title="Optional">
         <span id="connection_url_python">
 <a href="#connection_url_python" style="color: inherit; text-decoration: inherit;">connection_<wbr>url</a>
@@ -4270,8 +3793,7 @@ use.
 the [Vault
 docs](https://www.vaultproject.io/api-docs/secret/databases/oracle.html#sample-payload)
 for an example.
-{{% /md %}}</dd>
-    <dt class="property-optional"
+{{% /md %}}</dd><dt class="property-optional"
             title="Optional">
         <span id="max_connection_lifetime_python">
 <a href="#max_connection_lifetime_python" style="color: inherit; text-decoration: inherit;">max_<wbr>connection_<wbr>lifetime</a>
@@ -4281,8 +3803,7 @@ for an example.
     </dt>
     <dd>{{% md %}}The maximum number of seconds to keep
 a connection alive for.
-{{% /md %}}</dd>
-    <dt class="property-optional"
+{{% /md %}}</dd><dt class="property-optional"
             title="Optional">
         <span id="max_idle_connections_python">
 <a href="#max_idle_connections_python" style="color: inherit; text-decoration: inherit;">max_<wbr>idle_<wbr>connections</a>
@@ -4292,8 +3813,7 @@ a connection alive for.
     </dt>
     <dd>{{% md %}}The maximum number of idle connections to
 maintain.
-{{% /md %}}</dd>
-    <dt class="property-optional"
+{{% /md %}}</dd><dt class="property-optional"
             title="Optional">
         <span id="max_open_connections_python">
 <a href="#max_open_connections_python" style="color: inherit; text-decoration: inherit;">max_<wbr>open_<wbr>connections</a>
@@ -4303,16 +3823,13 @@ maintain.
     </dt>
     <dd>{{% md %}}The maximum number of open connections to
 use.
-{{% /md %}}</dd>
-</dl>
+{{% /md %}}</dd></dl>
 {{% /choosable %}}
 
 <h4 id="secretbackendconnectionpostgresql">Secret<wbr>Backend<wbr>Connection<wbr>Postgresql</h4>
 
 {{% choosable language csharp %}}
-<dl class="resources-properties">
-
-    <dt class="property-optional"
+<dl class="resources-properties"><dt class="property-optional"
             title="Optional">
         <span id="connectionurl_csharp">
 <a href="#connectionurl_csharp" style="color: inherit; text-decoration: inherit;">Connection<wbr>Url</a>
@@ -4324,8 +3841,7 @@ use.
 the [Vault
 docs](https://www.vaultproject.io/api-docs/secret/databases/oracle.html#sample-payload)
 for an example.
-{{% /md %}}</dd>
-    <dt class="property-optional"
+{{% /md %}}</dd><dt class="property-optional"
             title="Optional">
         <span id="maxconnectionlifetime_csharp">
 <a href="#maxconnectionlifetime_csharp" style="color: inherit; text-decoration: inherit;">Max<wbr>Connection<wbr>Lifetime</a>
@@ -4335,8 +3851,7 @@ for an example.
     </dt>
     <dd>{{% md %}}The maximum number of seconds to keep
 a connection alive for.
-{{% /md %}}</dd>
-    <dt class="property-optional"
+{{% /md %}}</dd><dt class="property-optional"
             title="Optional">
         <span id="maxidleconnections_csharp">
 <a href="#maxidleconnections_csharp" style="color: inherit; text-decoration: inherit;">Max<wbr>Idle<wbr>Connections</a>
@@ -4346,8 +3861,7 @@ a connection alive for.
     </dt>
     <dd>{{% md %}}The maximum number of idle connections to
 maintain.
-{{% /md %}}</dd>
-    <dt class="property-optional"
+{{% /md %}}</dd><dt class="property-optional"
             title="Optional">
         <span id="maxopenconnections_csharp">
 <a href="#maxopenconnections_csharp" style="color: inherit; text-decoration: inherit;">Max<wbr>Open<wbr>Connections</a>
@@ -4357,14 +3871,11 @@ maintain.
     </dt>
     <dd>{{% md %}}The maximum number of open connections to
 use.
-{{% /md %}}</dd>
-</dl>
+{{% /md %}}</dd></dl>
 {{% /choosable %}}
 
 {{% choosable language go %}}
-<dl class="resources-properties">
-
-    <dt class="property-optional"
+<dl class="resources-properties"><dt class="property-optional"
             title="Optional">
         <span id="connectionurl_go">
 <a href="#connectionurl_go" style="color: inherit; text-decoration: inherit;">Connection<wbr>Url</a>
@@ -4376,8 +3887,7 @@ use.
 the [Vault
 docs](https://www.vaultproject.io/api-docs/secret/databases/oracle.html#sample-payload)
 for an example.
-{{% /md %}}</dd>
-    <dt class="property-optional"
+{{% /md %}}</dd><dt class="property-optional"
             title="Optional">
         <span id="maxconnectionlifetime_go">
 <a href="#maxconnectionlifetime_go" style="color: inherit; text-decoration: inherit;">Max<wbr>Connection<wbr>Lifetime</a>
@@ -4387,8 +3897,7 @@ for an example.
     </dt>
     <dd>{{% md %}}The maximum number of seconds to keep
 a connection alive for.
-{{% /md %}}</dd>
-    <dt class="property-optional"
+{{% /md %}}</dd><dt class="property-optional"
             title="Optional">
         <span id="maxidleconnections_go">
 <a href="#maxidleconnections_go" style="color: inherit; text-decoration: inherit;">Max<wbr>Idle<wbr>Connections</a>
@@ -4398,8 +3907,7 @@ a connection alive for.
     </dt>
     <dd>{{% md %}}The maximum number of idle connections to
 maintain.
-{{% /md %}}</dd>
-    <dt class="property-optional"
+{{% /md %}}</dd><dt class="property-optional"
             title="Optional">
         <span id="maxopenconnections_go">
 <a href="#maxopenconnections_go" style="color: inherit; text-decoration: inherit;">Max<wbr>Open<wbr>Connections</a>
@@ -4409,14 +3917,11 @@ maintain.
     </dt>
     <dd>{{% md %}}The maximum number of open connections to
 use.
-{{% /md %}}</dd>
-</dl>
+{{% /md %}}</dd></dl>
 {{% /choosable %}}
 
 {{% choosable language nodejs %}}
-<dl class="resources-properties">
-
-    <dt class="property-optional"
+<dl class="resources-properties"><dt class="property-optional"
             title="Optional">
         <span id="connectionurl_nodejs">
 <a href="#connectionurl_nodejs" style="color: inherit; text-decoration: inherit;">connection<wbr>Url</a>
@@ -4428,8 +3933,7 @@ use.
 the [Vault
 docs](https://www.vaultproject.io/api-docs/secret/databases/oracle.html#sample-payload)
 for an example.
-{{% /md %}}</dd>
-    <dt class="property-optional"
+{{% /md %}}</dd><dt class="property-optional"
             title="Optional">
         <span id="maxconnectionlifetime_nodejs">
 <a href="#maxconnectionlifetime_nodejs" style="color: inherit; text-decoration: inherit;">max<wbr>Connection<wbr>Lifetime</a>
@@ -4439,8 +3943,7 @@ for an example.
     </dt>
     <dd>{{% md %}}The maximum number of seconds to keep
 a connection alive for.
-{{% /md %}}</dd>
-    <dt class="property-optional"
+{{% /md %}}</dd><dt class="property-optional"
             title="Optional">
         <span id="maxidleconnections_nodejs">
 <a href="#maxidleconnections_nodejs" style="color: inherit; text-decoration: inherit;">max<wbr>Idle<wbr>Connections</a>
@@ -4450,8 +3953,7 @@ a connection alive for.
     </dt>
     <dd>{{% md %}}The maximum number of idle connections to
 maintain.
-{{% /md %}}</dd>
-    <dt class="property-optional"
+{{% /md %}}</dd><dt class="property-optional"
             title="Optional">
         <span id="maxopenconnections_nodejs">
 <a href="#maxopenconnections_nodejs" style="color: inherit; text-decoration: inherit;">max<wbr>Open<wbr>Connections</a>
@@ -4461,14 +3963,11 @@ maintain.
     </dt>
     <dd>{{% md %}}The maximum number of open connections to
 use.
-{{% /md %}}</dd>
-</dl>
+{{% /md %}}</dd></dl>
 {{% /choosable %}}
 
 {{% choosable language python %}}
-<dl class="resources-properties">
-
-    <dt class="property-optional"
+<dl class="resources-properties"><dt class="property-optional"
             title="Optional">
         <span id="connection_url_python">
 <a href="#connection_url_python" style="color: inherit; text-decoration: inherit;">connection_<wbr>url</a>
@@ -4480,8 +3979,7 @@ use.
 the [Vault
 docs](https://www.vaultproject.io/api-docs/secret/databases/oracle.html#sample-payload)
 for an example.
-{{% /md %}}</dd>
-    <dt class="property-optional"
+{{% /md %}}</dd><dt class="property-optional"
             title="Optional">
         <span id="max_connection_lifetime_python">
 <a href="#max_connection_lifetime_python" style="color: inherit; text-decoration: inherit;">max_<wbr>connection_<wbr>lifetime</a>
@@ -4491,8 +3989,7 @@ for an example.
     </dt>
     <dd>{{% md %}}The maximum number of seconds to keep
 a connection alive for.
-{{% /md %}}</dd>
-    <dt class="property-optional"
+{{% /md %}}</dd><dt class="property-optional"
             title="Optional">
         <span id="max_idle_connections_python">
 <a href="#max_idle_connections_python" style="color: inherit; text-decoration: inherit;">max_<wbr>idle_<wbr>connections</a>
@@ -4502,8 +3999,7 @@ a connection alive for.
     </dt>
     <dd>{{% md %}}The maximum number of idle connections to
 maintain.
-{{% /md %}}</dd>
-    <dt class="property-optional"
+{{% /md %}}</dd><dt class="property-optional"
             title="Optional">
         <span id="max_open_connections_python">
 <a href="#max_open_connections_python" style="color: inherit; text-decoration: inherit;">max_<wbr>open_<wbr>connections</a>
@@ -4513,8 +4009,7 @@ maintain.
     </dt>
     <dd>{{% md %}}The maximum number of open connections to
 use.
-{{% /md %}}</dd>
-</dl>
+{{% /md %}}</dd></dl>
 {{% /choosable %}}
 
 
@@ -4525,6 +4020,6 @@ use.
 	<dt>License</dt>
 	<dd>Apache-2.0</dd>
 	<dt>Notes</dt>
-	<dd>This Pulumi package is based on the [`vault` Terraform Provider](https://github.com/hashicorp/terraform-provider-vault).</dd>
+	<dd>{{% md %}}This Pulumi package is based on the [`vault` Terraform Provider](https://github.com/hashicorp/terraform-provider-vault).{{% /md %}}</dd>
 </dl>
 

@@ -16,11 +16,17 @@ The Connection Pool resource allows the creation and management of Aiven Connect
 
 
 {{% examples %}}
+
 ## Example Usage
 
 {{< chooser language "typescript,python,go,csharp" / >}}
 
-{{% example csharp %}}
+
+
+
+
+{{< example csharp >}}
+
 ```csharp
 using Pulumi;
 using Aiven = Pulumi.Aiven;
@@ -44,9 +50,12 @@ class MyStack : Stack
 }
 ```
 
-{{% /example %}}
 
-{{% example go %}}
+{{< /example >}}
+
+
+{{< example go >}}
+
 ```go
 package main
 
@@ -74,9 +83,12 @@ func main() {
 }
 ```
 
-{{% /example %}}
 
-{{% example python %}}
+{{< /example >}}
+
+
+{{< example python >}}
+
 ```python
 import pulumi
 import pulumi_aiven as aiven
@@ -91,9 +103,12 @@ mytestpool = aiven.ConnectionPool("mytestpool",
     username=aiven_service_user["myserviceuser"]["username"])
 ```
 
-{{% /example %}}
 
-{{% example typescript %}}
+{{< /example >}}
+
+
+{{< example typescript >}}
+
 
 ```typescript
 import * as pulumi from "@pulumi/pulumi";
@@ -110,9 +125,16 @@ const mytestpool = new aiven.ConnectionPool("mytestpool", {
 });
 ```
 
-{{% /example %}}
+
+{{< /example >}}
+
+
+
+
 
 {{% /examples %}}
+
+
 
 
 ## Create a ConnectionPool Resource {#create}
@@ -137,9 +159,7 @@ const mytestpool = new aiven.ConnectionPool("mytestpool", {
 
 {{% choosable language nodejs %}}
 
-<dl class="resources-properties">
-  
-    <dt
+<dl class="resources-properties"><dt
         class="property-required" title="Required">
         <span>name</span>
         <span class="property-indicator"></span>
@@ -147,9 +167,7 @@ const mytestpool = new aiven.ConnectionPool("mytestpool", {
     </dt>
     <dd>
       The unique name of the resource.
-    </dd>
-  
-    <dt
+    </dd><dt
         class="property-required" title="Required">
         <span>args</span>
         <span class="property-indicator"></span>
@@ -157,9 +175,7 @@ const mytestpool = new aiven.ConnectionPool("mytestpool", {
     </dt>
     <dd>
       The arguments to resource properties.
-    </dd>
-  
-    <dt
+    </dd><dt
         class="property-optional" title="Optional">
         <span>opts</span>
         <span class="property-indicator"></span>
@@ -167,10 +183,7 @@ const mytestpool = new aiven.ConnectionPool("mytestpool", {
     </dt>
     <dd>
       Bag of options to control resource&#39;s behavior.
-    </dd>
-  
-
-</dl>
+    </dd></dl>
 
 {{% /choosable %}}
 
@@ -196,9 +209,7 @@ const mytestpool = new aiven.ConnectionPool("mytestpool", {
 
 {{% choosable language go %}}
 
-<dl class="resources-properties">
-  
-    <dt
+<dl class="resources-properties"><dt
         class="property-optional" title="Optional">
         <span>ctx</span>
         <span class="property-indicator"></span>
@@ -206,9 +217,7 @@ const mytestpool = new aiven.ConnectionPool("mytestpool", {
     </dt>
     <dd>
       Context object for the current deployment.
-    </dd>
-  
-    <dt
+    </dd><dt
         class="property-required" title="Required">
         <span>name</span>
         <span class="property-indicator"></span>
@@ -216,9 +225,7 @@ const mytestpool = new aiven.ConnectionPool("mytestpool", {
     </dt>
     <dd>
       The unique name of the resource.
-    </dd>
-  
-    <dt
+    </dd><dt
         class="property-required" title="Required">
         <span>args</span>
         <span class="property-indicator"></span>
@@ -226,9 +233,7 @@ const mytestpool = new aiven.ConnectionPool("mytestpool", {
     </dt>
     <dd>
       The arguments to resource properties.
-    </dd>
-  
-    <dt
+    </dd><dt
         class="property-optional" title="Optional">
         <span>opts</span>
         <span class="property-indicator"></span>
@@ -236,18 +241,13 @@ const mytestpool = new aiven.ConnectionPool("mytestpool", {
     </dt>
     <dd>
       Bag of options to control resource&#39;s behavior.
-    </dd>
-  
-
-</dl>
+    </dd></dl>
 
 {{% /choosable %}}
 
 {{% choosable language csharp %}}
 
-<dl class="resources-properties">
-  
-    <dt
+<dl class="resources-properties"><dt
         class="property-required" title="Required">
         <span>name</span>
         <span class="property-indicator"></span>
@@ -255,9 +255,7 @@ const mytestpool = new aiven.ConnectionPool("mytestpool", {
     </dt>
     <dd>
       The unique name of the resource.
-    </dd>
-  
-    <dt
+    </dd><dt
         class="property-required" title="Required">
         <span>args</span>
         <span class="property-indicator"></span>
@@ -265,9 +263,7 @@ const mytestpool = new aiven.ConnectionPool("mytestpool", {
     </dt>
     <dd>
       The arguments to resource properties.
-    </dd>
-  
-    <dt
+    </dd><dt
         class="property-optional" title="Optional">
         <span>opts</span>
         <span class="property-indicator"></span>
@@ -275,10 +271,7 @@ const mytestpool = new aiven.ConnectionPool("mytestpool", {
     </dt>
     <dd>
       Bag of options to control resource&#39;s behavior.
-    </dd>
-  
-
-</dl>
+    </dd></dl>
 
 {{% /choosable %}}
 
@@ -293,9 +286,7 @@ The ConnectionPool resource accepts the following [input]({{< relref "/docs/intr
 
 
 {{% choosable language csharp %}}
-<dl class="resources-properties">
-
-    <dt class="property-required"
+<dl class="resources-properties"><dt class="property-required"
             title="Required">
         <span id="databasename_csharp">
 <a href="#databasename_csharp" style="color: inherit; text-decoration: inherit;">Database<wbr>Name</a>
@@ -305,8 +296,7 @@ The ConnectionPool resource accepts the following [input]({{< relref "/docs/intr
     </dt>
     <dd>{{% md %}}is the name of the database the pool connects to. This should be
 defined using reference as shown above to set up dependencies correctly.
-{{% /md %}}</dd>
-    <dt class="property-required"
+{{% /md %}}</dd><dt class="property-required"
             title="Required">
         <span id="poolname_csharp">
 <a href="#poolname_csharp" style="color: inherit; text-decoration: inherit;">Pool<wbr>Name</a>
@@ -315,8 +305,7 @@ defined using reference as shown above to set up dependencies correctly.
         <span class="property-type">string</span>
     </dt>
     <dd>{{% md %}}is the name of the pool.
-{{% /md %}}</dd>
-    <dt class="property-required"
+{{% /md %}}</dd><dt class="property-required"
             title="Required">
         <span id="project_csharp">
 <a href="#project_csharp" style="color: inherit; text-decoration: inherit;">Project</a>
@@ -328,8 +317,7 @@ defined using reference as shown above to set up dependencies correctly.
 belongs to. They should be defined using reference as shown above to set up dependencies
 correctly. These properties cannot be changed once the service is created. Doing so will
 result in the connection pool being deleted and new one created instead.
-{{% /md %}}</dd>
-    <dt class="property-required"
+{{% /md %}}</dd><dt class="property-required"
             title="Required">
         <span id="servicename_csharp">
 <a href="#servicename_csharp" style="color: inherit; text-decoration: inherit;">Service<wbr>Name</a>
@@ -338,8 +326,7 @@ result in the connection pool being deleted and new one created instead.
         <span class="property-type">string</span>
     </dt>
     <dd>{{% md %}}Service to link the connection pool to
-{{% /md %}}</dd>
-    <dt class="property-required"
+{{% /md %}}</dd><dt class="property-required"
             title="Required">
         <span id="username_csharp">
 <a href="#username_csharp" style="color: inherit; text-decoration: inherit;">Username</a>
@@ -349,8 +336,7 @@ result in the connection pool being deleted and new one created instead.
     </dt>
     <dd>{{% md %}}is the name of the service user used to connect to the database. This should
 be defined using reference as shown above to set up dependencies correctly.
-{{% /md %}}</dd>
-    <dt class="property-optional"
+{{% /md %}}</dd><dt class="property-optional"
             title="Optional">
         <span id="poolmode_csharp">
 <a href="#poolmode_csharp" style="color: inherit; text-decoration: inherit;">Pool<wbr>Mode</a>
@@ -359,8 +345,7 @@ be defined using reference as shown above to set up dependencies correctly.
         <span class="property-type">string</span>
     </dt>
     <dd>{{% md %}}is the mode the pool operates in (session, transaction, statement).
-{{% /md %}}</dd>
-    <dt class="property-optional"
+{{% /md %}}</dd><dt class="property-optional"
             title="Optional">
         <span id="poolsize_csharp">
 <a href="#poolsize_csharp" style="color: inherit; text-decoration: inherit;">Pool<wbr>Size</a>
@@ -371,14 +356,11 @@ be defined using reference as shown above to set up dependencies correctly.
     <dd>{{% md %}}is the number of connections the pool may create towards the backend
 server. This does not affect the number of incoming connections, which is always a much
 larger number.
-{{% /md %}}</dd>
-</dl>
+{{% /md %}}</dd></dl>
 {{% /choosable %}}
 
 {{% choosable language go %}}
-<dl class="resources-properties">
-
-    <dt class="property-required"
+<dl class="resources-properties"><dt class="property-required"
             title="Required">
         <span id="databasename_go">
 <a href="#databasename_go" style="color: inherit; text-decoration: inherit;">Database<wbr>Name</a>
@@ -388,8 +370,7 @@ larger number.
     </dt>
     <dd>{{% md %}}is the name of the database the pool connects to. This should be
 defined using reference as shown above to set up dependencies correctly.
-{{% /md %}}</dd>
-    <dt class="property-required"
+{{% /md %}}</dd><dt class="property-required"
             title="Required">
         <span id="poolname_go">
 <a href="#poolname_go" style="color: inherit; text-decoration: inherit;">Pool<wbr>Name</a>
@@ -398,8 +379,7 @@ defined using reference as shown above to set up dependencies correctly.
         <span class="property-type">string</span>
     </dt>
     <dd>{{% md %}}is the name of the pool.
-{{% /md %}}</dd>
-    <dt class="property-required"
+{{% /md %}}</dd><dt class="property-required"
             title="Required">
         <span id="project_go">
 <a href="#project_go" style="color: inherit; text-decoration: inherit;">Project</a>
@@ -411,8 +391,7 @@ defined using reference as shown above to set up dependencies correctly.
 belongs to. They should be defined using reference as shown above to set up dependencies
 correctly. These properties cannot be changed once the service is created. Doing so will
 result in the connection pool being deleted and new one created instead.
-{{% /md %}}</dd>
-    <dt class="property-required"
+{{% /md %}}</dd><dt class="property-required"
             title="Required">
         <span id="servicename_go">
 <a href="#servicename_go" style="color: inherit; text-decoration: inherit;">Service<wbr>Name</a>
@@ -421,8 +400,7 @@ result in the connection pool being deleted and new one created instead.
         <span class="property-type">string</span>
     </dt>
     <dd>{{% md %}}Service to link the connection pool to
-{{% /md %}}</dd>
-    <dt class="property-required"
+{{% /md %}}</dd><dt class="property-required"
             title="Required">
         <span id="username_go">
 <a href="#username_go" style="color: inherit; text-decoration: inherit;">Username</a>
@@ -432,8 +410,7 @@ result in the connection pool being deleted and new one created instead.
     </dt>
     <dd>{{% md %}}is the name of the service user used to connect to the database. This should
 be defined using reference as shown above to set up dependencies correctly.
-{{% /md %}}</dd>
-    <dt class="property-optional"
+{{% /md %}}</dd><dt class="property-optional"
             title="Optional">
         <span id="poolmode_go">
 <a href="#poolmode_go" style="color: inherit; text-decoration: inherit;">Pool<wbr>Mode</a>
@@ -442,8 +419,7 @@ be defined using reference as shown above to set up dependencies correctly.
         <span class="property-type">string</span>
     </dt>
     <dd>{{% md %}}is the mode the pool operates in (session, transaction, statement).
-{{% /md %}}</dd>
-    <dt class="property-optional"
+{{% /md %}}</dd><dt class="property-optional"
             title="Optional">
         <span id="poolsize_go">
 <a href="#poolsize_go" style="color: inherit; text-decoration: inherit;">Pool<wbr>Size</a>
@@ -454,14 +430,11 @@ be defined using reference as shown above to set up dependencies correctly.
     <dd>{{% md %}}is the number of connections the pool may create towards the backend
 server. This does not affect the number of incoming connections, which is always a much
 larger number.
-{{% /md %}}</dd>
-</dl>
+{{% /md %}}</dd></dl>
 {{% /choosable %}}
 
 {{% choosable language nodejs %}}
-<dl class="resources-properties">
-
-    <dt class="property-required"
+<dl class="resources-properties"><dt class="property-required"
             title="Required">
         <span id="databasename_nodejs">
 <a href="#databasename_nodejs" style="color: inherit; text-decoration: inherit;">database<wbr>Name</a>
@@ -471,8 +444,7 @@ larger number.
     </dt>
     <dd>{{% md %}}is the name of the database the pool connects to. This should be
 defined using reference as shown above to set up dependencies correctly.
-{{% /md %}}</dd>
-    <dt class="property-required"
+{{% /md %}}</dd><dt class="property-required"
             title="Required">
         <span id="poolname_nodejs">
 <a href="#poolname_nodejs" style="color: inherit; text-decoration: inherit;">pool<wbr>Name</a>
@@ -481,8 +453,7 @@ defined using reference as shown above to set up dependencies correctly.
         <span class="property-type">string</span>
     </dt>
     <dd>{{% md %}}is the name of the pool.
-{{% /md %}}</dd>
-    <dt class="property-required"
+{{% /md %}}</dd><dt class="property-required"
             title="Required">
         <span id="project_nodejs">
 <a href="#project_nodejs" style="color: inherit; text-decoration: inherit;">project</a>
@@ -494,8 +465,7 @@ defined using reference as shown above to set up dependencies correctly.
 belongs to. They should be defined using reference as shown above to set up dependencies
 correctly. These properties cannot be changed once the service is created. Doing so will
 result in the connection pool being deleted and new one created instead.
-{{% /md %}}</dd>
-    <dt class="property-required"
+{{% /md %}}</dd><dt class="property-required"
             title="Required">
         <span id="servicename_nodejs">
 <a href="#servicename_nodejs" style="color: inherit; text-decoration: inherit;">service<wbr>Name</a>
@@ -504,8 +474,7 @@ result in the connection pool being deleted and new one created instead.
         <span class="property-type">string</span>
     </dt>
     <dd>{{% md %}}Service to link the connection pool to
-{{% /md %}}</dd>
-    <dt class="property-required"
+{{% /md %}}</dd><dt class="property-required"
             title="Required">
         <span id="username_nodejs">
 <a href="#username_nodejs" style="color: inherit; text-decoration: inherit;">username</a>
@@ -515,8 +484,7 @@ result in the connection pool being deleted and new one created instead.
     </dt>
     <dd>{{% md %}}is the name of the service user used to connect to the database. This should
 be defined using reference as shown above to set up dependencies correctly.
-{{% /md %}}</dd>
-    <dt class="property-optional"
+{{% /md %}}</dd><dt class="property-optional"
             title="Optional">
         <span id="poolmode_nodejs">
 <a href="#poolmode_nodejs" style="color: inherit; text-decoration: inherit;">pool<wbr>Mode</a>
@@ -525,8 +493,7 @@ be defined using reference as shown above to set up dependencies correctly.
         <span class="property-type">string</span>
     </dt>
     <dd>{{% md %}}is the mode the pool operates in (session, transaction, statement).
-{{% /md %}}</dd>
-    <dt class="property-optional"
+{{% /md %}}</dd><dt class="property-optional"
             title="Optional">
         <span id="poolsize_nodejs">
 <a href="#poolsize_nodejs" style="color: inherit; text-decoration: inherit;">pool<wbr>Size</a>
@@ -537,14 +504,11 @@ be defined using reference as shown above to set up dependencies correctly.
     <dd>{{% md %}}is the number of connections the pool may create towards the backend
 server. This does not affect the number of incoming connections, which is always a much
 larger number.
-{{% /md %}}</dd>
-</dl>
+{{% /md %}}</dd></dl>
 {{% /choosable %}}
 
 {{% choosable language python %}}
-<dl class="resources-properties">
-
-    <dt class="property-required"
+<dl class="resources-properties"><dt class="property-required"
             title="Required">
         <span id="database_name_python">
 <a href="#database_name_python" style="color: inherit; text-decoration: inherit;">database_<wbr>name</a>
@@ -554,8 +518,7 @@ larger number.
     </dt>
     <dd>{{% md %}}is the name of the database the pool connects to. This should be
 defined using reference as shown above to set up dependencies correctly.
-{{% /md %}}</dd>
-    <dt class="property-required"
+{{% /md %}}</dd><dt class="property-required"
             title="Required">
         <span id="pool_name_python">
 <a href="#pool_name_python" style="color: inherit; text-decoration: inherit;">pool_<wbr>name</a>
@@ -564,8 +527,7 @@ defined using reference as shown above to set up dependencies correctly.
         <span class="property-type">str</span>
     </dt>
     <dd>{{% md %}}is the name of the pool.
-{{% /md %}}</dd>
-    <dt class="property-required"
+{{% /md %}}</dd><dt class="property-required"
             title="Required">
         <span id="project_python">
 <a href="#project_python" style="color: inherit; text-decoration: inherit;">project</a>
@@ -577,8 +539,7 @@ defined using reference as shown above to set up dependencies correctly.
 belongs to. They should be defined using reference as shown above to set up dependencies
 correctly. These properties cannot be changed once the service is created. Doing so will
 result in the connection pool being deleted and new one created instead.
-{{% /md %}}</dd>
-    <dt class="property-required"
+{{% /md %}}</dd><dt class="property-required"
             title="Required">
         <span id="service_name_python">
 <a href="#service_name_python" style="color: inherit; text-decoration: inherit;">service_<wbr>name</a>
@@ -587,8 +548,7 @@ result in the connection pool being deleted and new one created instead.
         <span class="property-type">str</span>
     </dt>
     <dd>{{% md %}}Service to link the connection pool to
-{{% /md %}}</dd>
-    <dt class="property-required"
+{{% /md %}}</dd><dt class="property-required"
             title="Required">
         <span id="username_python">
 <a href="#username_python" style="color: inherit; text-decoration: inherit;">username</a>
@@ -598,8 +558,7 @@ result in the connection pool being deleted and new one created instead.
     </dt>
     <dd>{{% md %}}is the name of the service user used to connect to the database. This should
 be defined using reference as shown above to set up dependencies correctly.
-{{% /md %}}</dd>
-    <dt class="property-optional"
+{{% /md %}}</dd><dt class="property-optional"
             title="Optional">
         <span id="pool_mode_python">
 <a href="#pool_mode_python" style="color: inherit; text-decoration: inherit;">pool_<wbr>mode</a>
@@ -608,8 +567,7 @@ be defined using reference as shown above to set up dependencies correctly.
         <span class="property-type">str</span>
     </dt>
     <dd>{{% md %}}is the mode the pool operates in (session, transaction, statement).
-{{% /md %}}</dd>
-    <dt class="property-optional"
+{{% /md %}}</dd><dt class="property-optional"
             title="Optional">
         <span id="pool_size_python">
 <a href="#pool_size_python" style="color: inherit; text-decoration: inherit;">pool_<wbr>size</a>
@@ -620,8 +578,7 @@ be defined using reference as shown above to set up dependencies correctly.
     <dd>{{% md %}}is the number of connections the pool may create towards the backend
 server. This does not affect the number of incoming connections, which is always a much
 larger number.
-{{% /md %}}</dd>
-</dl>
+{{% /md %}}</dd></dl>
 {{% /choosable %}}
 
 
@@ -632,9 +589,7 @@ All [input](#inputs) properties are implicitly available as output properties. A
 
 
 {{% choosable language csharp %}}
-<dl class="resources-properties">
-
-    <dt class="property-"
+<dl class="resources-properties"><dt class="property-"
             title="">
         <span id="connectionuri_csharp">
 <a href="#connectionuri_csharp" style="color: inherit; text-decoration: inherit;">Connection<wbr>Uri</a>
@@ -644,8 +599,7 @@ All [input](#inputs) properties are implicitly available as output properties. A
     </dt>
     <dd>{{% md %}}(Optional) is a computed property that tells the URI for connecting to the pool.
 This value cannot be set, only read.
-{{% /md %}}</dd>
-    <dt class="property-"
+{{% /md %}}</dd><dt class="property-"
             title="">
         <span id="id_csharp">
 <a href="#id_csharp" style="color: inherit; text-decoration: inherit;">Id</a>
@@ -653,14 +607,11 @@ This value cannot be set, only read.
         <span class="property-indicator"></span>
         <span class="property-type">string</span>
     </dt>
-    <dd>{{% md %}}The provider-assigned unique ID for this managed resource.{{% /md %}}</dd>
-</dl>
+    <dd>{{% md %}}The provider-assigned unique ID for this managed resource.{{% /md %}}</dd></dl>
 {{% /choosable %}}
 
 {{% choosable language go %}}
-<dl class="resources-properties">
-
-    <dt class="property-"
+<dl class="resources-properties"><dt class="property-"
             title="">
         <span id="connectionuri_go">
 <a href="#connectionuri_go" style="color: inherit; text-decoration: inherit;">Connection<wbr>Uri</a>
@@ -670,8 +621,7 @@ This value cannot be set, only read.
     </dt>
     <dd>{{% md %}}(Optional) is a computed property that tells the URI for connecting to the pool.
 This value cannot be set, only read.
-{{% /md %}}</dd>
-    <dt class="property-"
+{{% /md %}}</dd><dt class="property-"
             title="">
         <span id="id_go">
 <a href="#id_go" style="color: inherit; text-decoration: inherit;">Id</a>
@@ -679,14 +629,11 @@ This value cannot be set, only read.
         <span class="property-indicator"></span>
         <span class="property-type">string</span>
     </dt>
-    <dd>{{% md %}}The provider-assigned unique ID for this managed resource.{{% /md %}}</dd>
-</dl>
+    <dd>{{% md %}}The provider-assigned unique ID for this managed resource.{{% /md %}}</dd></dl>
 {{% /choosable %}}
 
 {{% choosable language nodejs %}}
-<dl class="resources-properties">
-
-    <dt class="property-"
+<dl class="resources-properties"><dt class="property-"
             title="">
         <span id="connectionuri_nodejs">
 <a href="#connectionuri_nodejs" style="color: inherit; text-decoration: inherit;">connection<wbr>Uri</a>
@@ -696,8 +643,7 @@ This value cannot be set, only read.
     </dt>
     <dd>{{% md %}}(Optional) is a computed property that tells the URI for connecting to the pool.
 This value cannot be set, only read.
-{{% /md %}}</dd>
-    <dt class="property-"
+{{% /md %}}</dd><dt class="property-"
             title="">
         <span id="id_nodejs">
 <a href="#id_nodejs" style="color: inherit; text-decoration: inherit;">id</a>
@@ -705,14 +651,11 @@ This value cannot be set, only read.
         <span class="property-indicator"></span>
         <span class="property-type">string</span>
     </dt>
-    <dd>{{% md %}}The provider-assigned unique ID for this managed resource.{{% /md %}}</dd>
-</dl>
+    <dd>{{% md %}}The provider-assigned unique ID for this managed resource.{{% /md %}}</dd></dl>
 {{% /choosable %}}
 
 {{% choosable language python %}}
-<dl class="resources-properties">
-
-    <dt class="property-"
+<dl class="resources-properties"><dt class="property-"
             title="">
         <span id="connection_uri_python">
 <a href="#connection_uri_python" style="color: inherit; text-decoration: inherit;">connection_<wbr>uri</a>
@@ -722,8 +665,7 @@ This value cannot be set, only read.
     </dt>
     <dd>{{% md %}}(Optional) is a computed property that tells the URI for connecting to the pool.
 This value cannot be set, only read.
-{{% /md %}}</dd>
-    <dt class="property-"
+{{% /md %}}</dd><dt class="property-"
             title="">
         <span id="id_python">
 <a href="#id_python" style="color: inherit; text-decoration: inherit;">id</a>
@@ -731,8 +673,7 @@ This value cannot be set, only read.
         <span class="property-indicator"></span>
         <span class="property-type">str</span>
     </dt>
-    <dd>{{% md %}}The provider-assigned unique ID for this managed resource.{{% /md %}}</dd>
-</dl>
+    <dd>{{% md %}}The provider-assigned unique ID for this managed resource.{{% /md %}}</dd></dl>
 {{% /choosable %}}
 
 
@@ -859,9 +800,7 @@ The following state arguments are supported:
 
 
 {{% choosable language csharp %}}
-<dl class="resources-properties">
-
-    <dt class="property-optional"
+<dl class="resources-properties"><dt class="property-optional"
             title="Optional">
         <span id="state_connectionuri_csharp">
 <a href="#state_connectionuri_csharp" style="color: inherit; text-decoration: inherit;">Connection<wbr>Uri</a>
@@ -871,8 +810,7 @@ The following state arguments are supported:
     </dt>
     <dd>{{% md %}}(Optional) is a computed property that tells the URI for connecting to the pool.
 This value cannot be set, only read.
-{{% /md %}}</dd>
-    <dt class="property-optional"
+{{% /md %}}</dd><dt class="property-optional"
             title="Optional">
         <span id="state_databasename_csharp">
 <a href="#state_databasename_csharp" style="color: inherit; text-decoration: inherit;">Database<wbr>Name</a>
@@ -882,8 +820,7 @@ This value cannot be set, only read.
     </dt>
     <dd>{{% md %}}is the name of the database the pool connects to. This should be
 defined using reference as shown above to set up dependencies correctly.
-{{% /md %}}</dd>
-    <dt class="property-optional"
+{{% /md %}}</dd><dt class="property-optional"
             title="Optional">
         <span id="state_poolmode_csharp">
 <a href="#state_poolmode_csharp" style="color: inherit; text-decoration: inherit;">Pool<wbr>Mode</a>
@@ -892,8 +829,7 @@ defined using reference as shown above to set up dependencies correctly.
         <span class="property-type">string</span>
     </dt>
     <dd>{{% md %}}is the mode the pool operates in (session, transaction, statement).
-{{% /md %}}</dd>
-    <dt class="property-optional"
+{{% /md %}}</dd><dt class="property-optional"
             title="Optional">
         <span id="state_poolname_csharp">
 <a href="#state_poolname_csharp" style="color: inherit; text-decoration: inherit;">Pool<wbr>Name</a>
@@ -902,8 +838,7 @@ defined using reference as shown above to set up dependencies correctly.
         <span class="property-type">string</span>
     </dt>
     <dd>{{% md %}}is the name of the pool.
-{{% /md %}}</dd>
-    <dt class="property-optional"
+{{% /md %}}</dd><dt class="property-optional"
             title="Optional">
         <span id="state_poolsize_csharp">
 <a href="#state_poolsize_csharp" style="color: inherit; text-decoration: inherit;">Pool<wbr>Size</a>
@@ -914,8 +849,7 @@ defined using reference as shown above to set up dependencies correctly.
     <dd>{{% md %}}is the number of connections the pool may create towards the backend
 server. This does not affect the number of incoming connections, which is always a much
 larger number.
-{{% /md %}}</dd>
-    <dt class="property-optional"
+{{% /md %}}</dd><dt class="property-optional"
             title="Optional">
         <span id="state_project_csharp">
 <a href="#state_project_csharp" style="color: inherit; text-decoration: inherit;">Project</a>
@@ -927,8 +861,7 @@ larger number.
 belongs to. They should be defined using reference as shown above to set up dependencies
 correctly. These properties cannot be changed once the service is created. Doing so will
 result in the connection pool being deleted and new one created instead.
-{{% /md %}}</dd>
-    <dt class="property-optional"
+{{% /md %}}</dd><dt class="property-optional"
             title="Optional">
         <span id="state_servicename_csharp">
 <a href="#state_servicename_csharp" style="color: inherit; text-decoration: inherit;">Service<wbr>Name</a>
@@ -937,8 +870,7 @@ result in the connection pool being deleted and new one created instead.
         <span class="property-type">string</span>
     </dt>
     <dd>{{% md %}}Service to link the connection pool to
-{{% /md %}}</dd>
-    <dt class="property-optional"
+{{% /md %}}</dd><dt class="property-optional"
             title="Optional">
         <span id="state_username_csharp">
 <a href="#state_username_csharp" style="color: inherit; text-decoration: inherit;">Username</a>
@@ -948,14 +880,11 @@ result in the connection pool being deleted and new one created instead.
     </dt>
     <dd>{{% md %}}is the name of the service user used to connect to the database. This should
 be defined using reference as shown above to set up dependencies correctly.
-{{% /md %}}</dd>
-</dl>
+{{% /md %}}</dd></dl>
 {{% /choosable %}}
 
 {{% choosable language go %}}
-<dl class="resources-properties">
-
-    <dt class="property-optional"
+<dl class="resources-properties"><dt class="property-optional"
             title="Optional">
         <span id="state_connectionuri_go">
 <a href="#state_connectionuri_go" style="color: inherit; text-decoration: inherit;">Connection<wbr>Uri</a>
@@ -965,8 +894,7 @@ be defined using reference as shown above to set up dependencies correctly.
     </dt>
     <dd>{{% md %}}(Optional) is a computed property that tells the URI for connecting to the pool.
 This value cannot be set, only read.
-{{% /md %}}</dd>
-    <dt class="property-optional"
+{{% /md %}}</dd><dt class="property-optional"
             title="Optional">
         <span id="state_databasename_go">
 <a href="#state_databasename_go" style="color: inherit; text-decoration: inherit;">Database<wbr>Name</a>
@@ -976,8 +904,7 @@ This value cannot be set, only read.
     </dt>
     <dd>{{% md %}}is the name of the database the pool connects to. This should be
 defined using reference as shown above to set up dependencies correctly.
-{{% /md %}}</dd>
-    <dt class="property-optional"
+{{% /md %}}</dd><dt class="property-optional"
             title="Optional">
         <span id="state_poolmode_go">
 <a href="#state_poolmode_go" style="color: inherit; text-decoration: inherit;">Pool<wbr>Mode</a>
@@ -986,8 +913,7 @@ defined using reference as shown above to set up dependencies correctly.
         <span class="property-type">string</span>
     </dt>
     <dd>{{% md %}}is the mode the pool operates in (session, transaction, statement).
-{{% /md %}}</dd>
-    <dt class="property-optional"
+{{% /md %}}</dd><dt class="property-optional"
             title="Optional">
         <span id="state_poolname_go">
 <a href="#state_poolname_go" style="color: inherit; text-decoration: inherit;">Pool<wbr>Name</a>
@@ -996,8 +922,7 @@ defined using reference as shown above to set up dependencies correctly.
         <span class="property-type">string</span>
     </dt>
     <dd>{{% md %}}is the name of the pool.
-{{% /md %}}</dd>
-    <dt class="property-optional"
+{{% /md %}}</dd><dt class="property-optional"
             title="Optional">
         <span id="state_poolsize_go">
 <a href="#state_poolsize_go" style="color: inherit; text-decoration: inherit;">Pool<wbr>Size</a>
@@ -1008,8 +933,7 @@ defined using reference as shown above to set up dependencies correctly.
     <dd>{{% md %}}is the number of connections the pool may create towards the backend
 server. This does not affect the number of incoming connections, which is always a much
 larger number.
-{{% /md %}}</dd>
-    <dt class="property-optional"
+{{% /md %}}</dd><dt class="property-optional"
             title="Optional">
         <span id="state_project_go">
 <a href="#state_project_go" style="color: inherit; text-decoration: inherit;">Project</a>
@@ -1021,8 +945,7 @@ larger number.
 belongs to. They should be defined using reference as shown above to set up dependencies
 correctly. These properties cannot be changed once the service is created. Doing so will
 result in the connection pool being deleted and new one created instead.
-{{% /md %}}</dd>
-    <dt class="property-optional"
+{{% /md %}}</dd><dt class="property-optional"
             title="Optional">
         <span id="state_servicename_go">
 <a href="#state_servicename_go" style="color: inherit; text-decoration: inherit;">Service<wbr>Name</a>
@@ -1031,8 +954,7 @@ result in the connection pool being deleted and new one created instead.
         <span class="property-type">string</span>
     </dt>
     <dd>{{% md %}}Service to link the connection pool to
-{{% /md %}}</dd>
-    <dt class="property-optional"
+{{% /md %}}</dd><dt class="property-optional"
             title="Optional">
         <span id="state_username_go">
 <a href="#state_username_go" style="color: inherit; text-decoration: inherit;">Username</a>
@@ -1042,14 +964,11 @@ result in the connection pool being deleted and new one created instead.
     </dt>
     <dd>{{% md %}}is the name of the service user used to connect to the database. This should
 be defined using reference as shown above to set up dependencies correctly.
-{{% /md %}}</dd>
-</dl>
+{{% /md %}}</dd></dl>
 {{% /choosable %}}
 
 {{% choosable language nodejs %}}
-<dl class="resources-properties">
-
-    <dt class="property-optional"
+<dl class="resources-properties"><dt class="property-optional"
             title="Optional">
         <span id="state_connectionuri_nodejs">
 <a href="#state_connectionuri_nodejs" style="color: inherit; text-decoration: inherit;">connection<wbr>Uri</a>
@@ -1059,8 +978,7 @@ be defined using reference as shown above to set up dependencies correctly.
     </dt>
     <dd>{{% md %}}(Optional) is a computed property that tells the URI for connecting to the pool.
 This value cannot be set, only read.
-{{% /md %}}</dd>
-    <dt class="property-optional"
+{{% /md %}}</dd><dt class="property-optional"
             title="Optional">
         <span id="state_databasename_nodejs">
 <a href="#state_databasename_nodejs" style="color: inherit; text-decoration: inherit;">database<wbr>Name</a>
@@ -1070,8 +988,7 @@ This value cannot be set, only read.
     </dt>
     <dd>{{% md %}}is the name of the database the pool connects to. This should be
 defined using reference as shown above to set up dependencies correctly.
-{{% /md %}}</dd>
-    <dt class="property-optional"
+{{% /md %}}</dd><dt class="property-optional"
             title="Optional">
         <span id="state_poolmode_nodejs">
 <a href="#state_poolmode_nodejs" style="color: inherit; text-decoration: inherit;">pool<wbr>Mode</a>
@@ -1080,8 +997,7 @@ defined using reference as shown above to set up dependencies correctly.
         <span class="property-type">string</span>
     </dt>
     <dd>{{% md %}}is the mode the pool operates in (session, transaction, statement).
-{{% /md %}}</dd>
-    <dt class="property-optional"
+{{% /md %}}</dd><dt class="property-optional"
             title="Optional">
         <span id="state_poolname_nodejs">
 <a href="#state_poolname_nodejs" style="color: inherit; text-decoration: inherit;">pool<wbr>Name</a>
@@ -1090,8 +1006,7 @@ defined using reference as shown above to set up dependencies correctly.
         <span class="property-type">string</span>
     </dt>
     <dd>{{% md %}}is the name of the pool.
-{{% /md %}}</dd>
-    <dt class="property-optional"
+{{% /md %}}</dd><dt class="property-optional"
             title="Optional">
         <span id="state_poolsize_nodejs">
 <a href="#state_poolsize_nodejs" style="color: inherit; text-decoration: inherit;">pool<wbr>Size</a>
@@ -1102,8 +1017,7 @@ defined using reference as shown above to set up dependencies correctly.
     <dd>{{% md %}}is the number of connections the pool may create towards the backend
 server. This does not affect the number of incoming connections, which is always a much
 larger number.
-{{% /md %}}</dd>
-    <dt class="property-optional"
+{{% /md %}}</dd><dt class="property-optional"
             title="Optional">
         <span id="state_project_nodejs">
 <a href="#state_project_nodejs" style="color: inherit; text-decoration: inherit;">project</a>
@@ -1115,8 +1029,7 @@ larger number.
 belongs to. They should be defined using reference as shown above to set up dependencies
 correctly. These properties cannot be changed once the service is created. Doing so will
 result in the connection pool being deleted and new one created instead.
-{{% /md %}}</dd>
-    <dt class="property-optional"
+{{% /md %}}</dd><dt class="property-optional"
             title="Optional">
         <span id="state_servicename_nodejs">
 <a href="#state_servicename_nodejs" style="color: inherit; text-decoration: inherit;">service<wbr>Name</a>
@@ -1125,8 +1038,7 @@ result in the connection pool being deleted and new one created instead.
         <span class="property-type">string</span>
     </dt>
     <dd>{{% md %}}Service to link the connection pool to
-{{% /md %}}</dd>
-    <dt class="property-optional"
+{{% /md %}}</dd><dt class="property-optional"
             title="Optional">
         <span id="state_username_nodejs">
 <a href="#state_username_nodejs" style="color: inherit; text-decoration: inherit;">username</a>
@@ -1136,14 +1048,11 @@ result in the connection pool being deleted and new one created instead.
     </dt>
     <dd>{{% md %}}is the name of the service user used to connect to the database. This should
 be defined using reference as shown above to set up dependencies correctly.
-{{% /md %}}</dd>
-</dl>
+{{% /md %}}</dd></dl>
 {{% /choosable %}}
 
 {{% choosable language python %}}
-<dl class="resources-properties">
-
-    <dt class="property-optional"
+<dl class="resources-properties"><dt class="property-optional"
             title="Optional">
         <span id="state_connection_uri_python">
 <a href="#state_connection_uri_python" style="color: inherit; text-decoration: inherit;">connection_<wbr>uri</a>
@@ -1153,8 +1062,7 @@ be defined using reference as shown above to set up dependencies correctly.
     </dt>
     <dd>{{% md %}}(Optional) is a computed property that tells the URI for connecting to the pool.
 This value cannot be set, only read.
-{{% /md %}}</dd>
-    <dt class="property-optional"
+{{% /md %}}</dd><dt class="property-optional"
             title="Optional">
         <span id="state_database_name_python">
 <a href="#state_database_name_python" style="color: inherit; text-decoration: inherit;">database_<wbr>name</a>
@@ -1164,8 +1072,7 @@ This value cannot be set, only read.
     </dt>
     <dd>{{% md %}}is the name of the database the pool connects to. This should be
 defined using reference as shown above to set up dependencies correctly.
-{{% /md %}}</dd>
-    <dt class="property-optional"
+{{% /md %}}</dd><dt class="property-optional"
             title="Optional">
         <span id="state_pool_mode_python">
 <a href="#state_pool_mode_python" style="color: inherit; text-decoration: inherit;">pool_<wbr>mode</a>
@@ -1174,8 +1081,7 @@ defined using reference as shown above to set up dependencies correctly.
         <span class="property-type">str</span>
     </dt>
     <dd>{{% md %}}is the mode the pool operates in (session, transaction, statement).
-{{% /md %}}</dd>
-    <dt class="property-optional"
+{{% /md %}}</dd><dt class="property-optional"
             title="Optional">
         <span id="state_pool_name_python">
 <a href="#state_pool_name_python" style="color: inherit; text-decoration: inherit;">pool_<wbr>name</a>
@@ -1184,8 +1090,7 @@ defined using reference as shown above to set up dependencies correctly.
         <span class="property-type">str</span>
     </dt>
     <dd>{{% md %}}is the name of the pool.
-{{% /md %}}</dd>
-    <dt class="property-optional"
+{{% /md %}}</dd><dt class="property-optional"
             title="Optional">
         <span id="state_pool_size_python">
 <a href="#state_pool_size_python" style="color: inherit; text-decoration: inherit;">pool_<wbr>size</a>
@@ -1196,8 +1101,7 @@ defined using reference as shown above to set up dependencies correctly.
     <dd>{{% md %}}is the number of connections the pool may create towards the backend
 server. This does not affect the number of incoming connections, which is always a much
 larger number.
-{{% /md %}}</dd>
-    <dt class="property-optional"
+{{% /md %}}</dd><dt class="property-optional"
             title="Optional">
         <span id="state_project_python">
 <a href="#state_project_python" style="color: inherit; text-decoration: inherit;">project</a>
@@ -1209,8 +1113,7 @@ larger number.
 belongs to. They should be defined using reference as shown above to set up dependencies
 correctly. These properties cannot be changed once the service is created. Doing so will
 result in the connection pool being deleted and new one created instead.
-{{% /md %}}</dd>
-    <dt class="property-optional"
+{{% /md %}}</dd><dt class="property-optional"
             title="Optional">
         <span id="state_service_name_python">
 <a href="#state_service_name_python" style="color: inherit; text-decoration: inherit;">service_<wbr>name</a>
@@ -1219,8 +1122,7 @@ result in the connection pool being deleted and new one created instead.
         <span class="property-type">str</span>
     </dt>
     <dd>{{% md %}}Service to link the connection pool to
-{{% /md %}}</dd>
-    <dt class="property-optional"
+{{% /md %}}</dd><dt class="property-optional"
             title="Optional">
         <span id="state_username_python">
 <a href="#state_username_python" style="color: inherit; text-decoration: inherit;">username</a>
@@ -1230,8 +1132,7 @@ result in the connection pool being deleted and new one created instead.
     </dt>
     <dd>{{% md %}}is the name of the service user used to connect to the database. This should
 be defined using reference as shown above to set up dependencies correctly.
-{{% /md %}}</dd>
-</dl>
+{{% /md %}}</dd></dl>
 {{% /choosable %}}
 
 
@@ -1247,6 +1148,6 @@ be defined using reference as shown above to set up dependencies correctly.
 	<dt>License</dt>
 	<dd>Apache-2.0</dd>
 	<dt>Notes</dt>
-	<dd>This Pulumi package is based on the [`aiven` Terraform Provider](https://github.com/aiven/terraform-provider-aiven).</dd>
+	<dd>{{% md %}}This Pulumi package is based on the [`aiven` Terraform Provider](https://github.com/aiven/terraform-provider-aiven).{{% /md %}}</dd>
 </dl>
 

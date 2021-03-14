@@ -50,9 +50,7 @@ The following arguments are supported:
 
 
 {{% choosable language csharp %}}
-<dl class="resources-properties">
-
-    <dt class="property-required"
+<dl class="resources-properties"><dt class="property-required"
             title="Required">
         <span id="name_csharp">
 <a href="#name_csharp" style="color: inherit; text-decoration: inherit;">Name</a>
@@ -60,8 +58,7 @@ The following arguments are supported:
         <span class="property-indicator"></span>
         <span class="property-type">string</span>
     </dt>
-    <dd>{{% md %}}Name of the resource.{{% /md %}}</dd>
-    <dt class="property-required"
+    <dd>{{% md %}}Name of the resource.{{% /md %}}</dd><dt class="property-required"
             title="Required">
         <span id="resourcegroupname_csharp">
 <a href="#resourcegroupname_csharp" style="color: inherit; text-decoration: inherit;">Resource<wbr>Group<wbr>Name</a>
@@ -69,8 +66,7 @@ The following arguments are supported:
         <span class="property-indicator"></span>
         <span class="property-type">string</span>
     </dt>
-    <dd>{{% md %}}Resource group to which the resource belongs.{{% /md %}}</dd>
-    <dt class="property-required"
+    <dd>{{% md %}}Resource group to which the resource belongs.{{% /md %}}</dd><dt class="property-required"
             title="Required">
         <span id="targetcontainerhostresourceid_csharp">
 <a href="#targetcontainerhostresourceid_csharp" style="color: inherit; text-decoration: inherit;">Target<wbr>Container<wbr>Host<wbr>Resource<wbr>Id</a>
@@ -78,14 +74,11 @@ The following arguments are supported:
         <span class="property-indicator"></span>
         <span class="property-type">string</span>
     </dt>
-    <dd>{{% md %}}Resource ID of the target container host mapped to the Azure Dev Spaces Controller.{{% /md %}}</dd>
-</dl>
+    <dd>{{% md %}}Resource ID of the target container host mapped to the Azure Dev Spaces Controller.{{% /md %}}</dd></dl>
 {{% /choosable %}}
 
 {{% choosable language go %}}
-<dl class="resources-properties">
-
-    <dt class="property-required"
+<dl class="resources-properties"><dt class="property-required"
             title="Required">
         <span id="name_go">
 <a href="#name_go" style="color: inherit; text-decoration: inherit;">Name</a>
@@ -93,8 +86,7 @@ The following arguments are supported:
         <span class="property-indicator"></span>
         <span class="property-type">string</span>
     </dt>
-    <dd>{{% md %}}Name of the resource.{{% /md %}}</dd>
-    <dt class="property-required"
+    <dd>{{% md %}}Name of the resource.{{% /md %}}</dd><dt class="property-required"
             title="Required">
         <span id="resourcegroupname_go">
 <a href="#resourcegroupname_go" style="color: inherit; text-decoration: inherit;">Resource<wbr>Group<wbr>Name</a>
@@ -102,8 +94,7 @@ The following arguments are supported:
         <span class="property-indicator"></span>
         <span class="property-type">string</span>
     </dt>
-    <dd>{{% md %}}Resource group to which the resource belongs.{{% /md %}}</dd>
-    <dt class="property-required"
+    <dd>{{% md %}}Resource group to which the resource belongs.{{% /md %}}</dd><dt class="property-required"
             title="Required">
         <span id="targetcontainerhostresourceid_go">
 <a href="#targetcontainerhostresourceid_go" style="color: inherit; text-decoration: inherit;">Target<wbr>Container<wbr>Host<wbr>Resource<wbr>Id</a>
@@ -111,14 +102,11 @@ The following arguments are supported:
         <span class="property-indicator"></span>
         <span class="property-type">string</span>
     </dt>
-    <dd>{{% md %}}Resource ID of the target container host mapped to the Azure Dev Spaces Controller.{{% /md %}}</dd>
-</dl>
+    <dd>{{% md %}}Resource ID of the target container host mapped to the Azure Dev Spaces Controller.{{% /md %}}</dd></dl>
 {{% /choosable %}}
 
 {{% choosable language nodejs %}}
-<dl class="resources-properties">
-
-    <dt class="property-required"
+<dl class="resources-properties"><dt class="property-required"
             title="Required">
         <span id="name_nodejs">
 <a href="#name_nodejs" style="color: inherit; text-decoration: inherit;">name</a>
@@ -126,8 +114,7 @@ The following arguments are supported:
         <span class="property-indicator"></span>
         <span class="property-type">string</span>
     </dt>
-    <dd>{{% md %}}Name of the resource.{{% /md %}}</dd>
-    <dt class="property-required"
+    <dd>{{% md %}}Name of the resource.{{% /md %}}</dd><dt class="property-required"
             title="Required">
         <span id="resourcegroupname_nodejs">
 <a href="#resourcegroupname_nodejs" style="color: inherit; text-decoration: inherit;">resource<wbr>Group<wbr>Name</a>
@@ -135,8 +122,7 @@ The following arguments are supported:
         <span class="property-indicator"></span>
         <span class="property-type">string</span>
     </dt>
-    <dd>{{% md %}}Resource group to which the resource belongs.{{% /md %}}</dd>
-    <dt class="property-required"
+    <dd>{{% md %}}Resource group to which the resource belongs.{{% /md %}}</dd><dt class="property-required"
             title="Required">
         <span id="targetcontainerhostresourceid_nodejs">
 <a href="#targetcontainerhostresourceid_nodejs" style="color: inherit; text-decoration: inherit;">target<wbr>Container<wbr>Host<wbr>Resource<wbr>Id</a>
@@ -144,14 +130,11 @@ The following arguments are supported:
         <span class="property-indicator"></span>
         <span class="property-type">string</span>
     </dt>
-    <dd>{{% md %}}Resource ID of the target container host mapped to the Azure Dev Spaces Controller.{{% /md %}}</dd>
-</dl>
+    <dd>{{% md %}}Resource ID of the target container host mapped to the Azure Dev Spaces Controller.{{% /md %}}</dd></dl>
 {{% /choosable %}}
 
 {{% choosable language python %}}
-<dl class="resources-properties">
-
-    <dt class="property-required"
+<dl class="resources-properties"><dt class="property-required"
             title="Required">
         <span id="name_python">
 <a href="#name_python" style="color: inherit; text-decoration: inherit;">name</a>
@@ -159,8 +142,7 @@ The following arguments are supported:
         <span class="property-indicator"></span>
         <span class="property-type">str</span>
     </dt>
-    <dd>{{% md %}}Name of the resource.{{% /md %}}</dd>
-    <dt class="property-required"
+    <dd>{{% md %}}Name of the resource.{{% /md %}}</dd><dt class="property-required"
             title="Required">
         <span id="resource_group_name_python">
 <a href="#resource_group_name_python" style="color: inherit; text-decoration: inherit;">resource_<wbr>group_<wbr>name</a>
@@ -168,8 +150,7 @@ The following arguments are supported:
         <span class="property-indicator"></span>
         <span class="property-type">str</span>
     </dt>
-    <dd>{{% md %}}Resource group to which the resource belongs.{{% /md %}}</dd>
-    <dt class="property-required"
+    <dd>{{% md %}}Resource group to which the resource belongs.{{% /md %}}</dd><dt class="property-required"
             title="Required">
         <span id="target_container_host_resource_id_python">
 <a href="#target_container_host_resource_id_python" style="color: inherit; text-decoration: inherit;">target_<wbr>container_<wbr>host_<wbr>resource_<wbr>id</a>
@@ -177,8 +158,7 @@ The following arguments are supported:
         <span class="property-indicator"></span>
         <span class="property-type">str</span>
     </dt>
-    <dd>{{% md %}}Resource ID of the target container host mapped to the Azure Dev Spaces Controller.{{% /md %}}</dd>
-</dl>
+    <dd>{{% md %}}Resource ID of the target container host mapped to the Azure Dev Spaces Controller.{{% /md %}}</dd></dl>
 {{% /choosable %}}
 
 
@@ -191,9 +171,7 @@ The following output properties are available:
 
 
 {{% choosable language csharp %}}
-<dl class="resources-properties">
-
-    <dt class="property-"
+<dl class="resources-properties"><dt class="property-"
             title="">
         <span id="connectiondetailslist_csharp">
 <a href="#connectiondetailslist_csharp" style="color: inherit; text-decoration: inherit;">Connection<wbr>Details<wbr>List</a>
@@ -201,14 +179,11 @@ The following output properties are available:
         <span class="property-indicator"></span>
         <span class="property-type"><a href="#controllerconnectiondetailsresponse">List&lt;Pulumi.<wbr>Azure<wbr>Native.<wbr>Dev<wbr>Spaces.<wbr>Outputs.<wbr>Controller<wbr>Connection<wbr>Details<wbr>Response&gt;</a></span>
     </dt>
-    <dd>{{% md %}}List of Azure Dev Spaces Controller connection details.{{% /md %}}</dd>
-</dl>
+    <dd>{{% md %}}List of Azure Dev Spaces Controller connection details.{{% /md %}}</dd></dl>
 {{% /choosable %}}
 
 {{% choosable language go %}}
-<dl class="resources-properties">
-
-    <dt class="property-"
+<dl class="resources-properties"><dt class="property-"
             title="">
         <span id="connectiondetailslist_go">
 <a href="#connectiondetailslist_go" style="color: inherit; text-decoration: inherit;">Connection<wbr>Details<wbr>List</a>
@@ -216,14 +191,11 @@ The following output properties are available:
         <span class="property-indicator"></span>
         <span class="property-type"><a href="#controllerconnectiondetailsresponse">[]Controller<wbr>Connection<wbr>Details<wbr>Response</a></span>
     </dt>
-    <dd>{{% md %}}List of Azure Dev Spaces Controller connection details.{{% /md %}}</dd>
-</dl>
+    <dd>{{% md %}}List of Azure Dev Spaces Controller connection details.{{% /md %}}</dd></dl>
 {{% /choosable %}}
 
 {{% choosable language nodejs %}}
-<dl class="resources-properties">
-
-    <dt class="property-"
+<dl class="resources-properties"><dt class="property-"
             title="">
         <span id="connectiondetailslist_nodejs">
 <a href="#connectiondetailslist_nodejs" style="color: inherit; text-decoration: inherit;">connection<wbr>Details<wbr>List</a>
@@ -231,14 +203,11 @@ The following output properties are available:
         <span class="property-indicator"></span>
         <span class="property-type"><a href="#controllerconnectiondetailsresponse">Controller<wbr>Connection<wbr>Details<wbr>Response[]</a></span>
     </dt>
-    <dd>{{% md %}}List of Azure Dev Spaces Controller connection details.{{% /md %}}</dd>
-</dl>
+    <dd>{{% md %}}List of Azure Dev Spaces Controller connection details.{{% /md %}}</dd></dl>
 {{% /choosable %}}
 
 {{% choosable language python %}}
-<dl class="resources-properties">
-
-    <dt class="property-"
+<dl class="resources-properties"><dt class="property-"
             title="">
         <span id="connection_details_list_python">
 <a href="#connection_details_list_python" style="color: inherit; text-decoration: inherit;">connection_<wbr>details_<wbr>list</a>
@@ -246,8 +215,7 @@ The following output properties are available:
         <span class="property-indicator"></span>
         <span class="property-type"><a href="#controllerconnectiondetailsresponse">Sequence[Controller<wbr>Connection<wbr>Details<wbr>Response]</a></span>
     </dt>
-    <dd>{{% md %}}List of Azure Dev Spaces Controller connection details.{{% /md %}}</dd>
-</dl>
+    <dd>{{% md %}}List of Azure Dev Spaces Controller connection details.{{% /md %}}</dd></dl>
 {{% /choosable %}}
 
 
@@ -261,9 +229,7 @@ The following output properties are available:
 
 
 {{% choosable language csharp %}}
-<dl class="resources-properties">
-
-    <dt class="property-optional"
+<dl class="resources-properties"><dt class="property-optional"
             title="Optional">
         <span id="orchestratorspecificconnectiondetails_csharp">
 <a href="#orchestratorspecificconnectiondetails_csharp" style="color: inherit; text-decoration: inherit;">Orchestrator<wbr>Specific<wbr>Connection<wbr>Details</a>
@@ -271,14 +237,11 @@ The following output properties are available:
         <span class="property-indicator"></span>
         <span class="property-type"><a href="#kubernetesconnectiondetailsresponse">Pulumi.<wbr>Azure<wbr>Native.<wbr>Dev<wbr>Spaces.<wbr>Inputs.<wbr>Kubernetes<wbr>Connection<wbr>Details<wbr>Response<wbr>Args</a></span>
     </dt>
-    <dd>{{% md %}}Base class for types that supply values used to connect to container orchestrators{{% /md %}}</dd>
-</dl>
+    <dd>{{% md %}}Base class for types that supply values used to connect to container orchestrators{{% /md %}}</dd></dl>
 {{% /choosable %}}
 
 {{% choosable language go %}}
-<dl class="resources-properties">
-
-    <dt class="property-optional"
+<dl class="resources-properties"><dt class="property-optional"
             title="Optional">
         <span id="orchestratorspecificconnectiondetails_go">
 <a href="#orchestratorspecificconnectiondetails_go" style="color: inherit; text-decoration: inherit;">Orchestrator<wbr>Specific<wbr>Connection<wbr>Details</a>
@@ -286,14 +249,11 @@ The following output properties are available:
         <span class="property-indicator"></span>
         <span class="property-type"><a href="#kubernetesconnectiondetailsresponse">Kubernetes<wbr>Connection<wbr>Details<wbr>Response</a></span>
     </dt>
-    <dd>{{% md %}}Base class for types that supply values used to connect to container orchestrators{{% /md %}}</dd>
-</dl>
+    <dd>{{% md %}}Base class for types that supply values used to connect to container orchestrators{{% /md %}}</dd></dl>
 {{% /choosable %}}
 
 {{% choosable language nodejs %}}
-<dl class="resources-properties">
-
-    <dt class="property-optional"
+<dl class="resources-properties"><dt class="property-optional"
             title="Optional">
         <span id="orchestratorspecificconnectiondetails_nodejs">
 <a href="#orchestratorspecificconnectiondetails_nodejs" style="color: inherit; text-decoration: inherit;">orchestrator<wbr>Specific<wbr>Connection<wbr>Details</a>
@@ -301,14 +261,11 @@ The following output properties are available:
         <span class="property-indicator"></span>
         <span class="property-type"><a href="#kubernetesconnectiondetailsresponse">Kubernetes<wbr>Connection<wbr>Details<wbr>Response</a></span>
     </dt>
-    <dd>{{% md %}}Base class for types that supply values used to connect to container orchestrators{{% /md %}}</dd>
-</dl>
+    <dd>{{% md %}}Base class for types that supply values used to connect to container orchestrators{{% /md %}}</dd></dl>
 {{% /choosable %}}
 
 {{% choosable language python %}}
-<dl class="resources-properties">
-
-    <dt class="property-optional"
+<dl class="resources-properties"><dt class="property-optional"
             title="Optional">
         <span id="orchestrator_specific_connection_details_python">
 <a href="#orchestrator_specific_connection_details_python" style="color: inherit; text-decoration: inherit;">orchestrator_<wbr>specific_<wbr>connection_<wbr>details</a>
@@ -316,8 +273,7 @@ The following output properties are available:
         <span class="property-indicator"></span>
         <span class="property-type"><a href="#kubernetesconnectiondetailsresponse">Kubernetes<wbr>Connection<wbr>Details<wbr>Response<wbr>Args</a></span>
     </dt>
-    <dd>{{% md %}}Base class for types that supply values used to connect to container orchestrators{{% /md %}}</dd>
-</dl>
+    <dd>{{% md %}}Base class for types that supply values used to connect to container orchestrators{{% /md %}}</dd></dl>
 {{% /choosable %}}
 
 <h4 id="kubernetesconnectiondetailsresponse">Kubernetes<wbr>Connection<wbr>Details<wbr>Response</h4>
@@ -325,9 +281,7 @@ The following output properties are available:
 
 
 {{% choosable language csharp %}}
-<dl class="resources-properties">
-
-    <dt class="property-optional"
+<dl class="resources-properties"><dt class="property-optional"
             title="Optional">
         <span id="kubeconfig_csharp">
 <a href="#kubeconfig_csharp" style="color: inherit; text-decoration: inherit;">Kube<wbr>Config</a>
@@ -335,14 +289,11 @@ The following output properties are available:
         <span class="property-indicator"></span>
         <span class="property-type">string</span>
     </dt>
-    <dd>{{% md %}}Gets the kubeconfig for the cluster.{{% /md %}}</dd>
-</dl>
+    <dd>{{% md %}}Gets the kubeconfig for the cluster.{{% /md %}}</dd></dl>
 {{% /choosable %}}
 
 {{% choosable language go %}}
-<dl class="resources-properties">
-
-    <dt class="property-optional"
+<dl class="resources-properties"><dt class="property-optional"
             title="Optional">
         <span id="kubeconfig_go">
 <a href="#kubeconfig_go" style="color: inherit; text-decoration: inherit;">Kube<wbr>Config</a>
@@ -350,14 +301,11 @@ The following output properties are available:
         <span class="property-indicator"></span>
         <span class="property-type">string</span>
     </dt>
-    <dd>{{% md %}}Gets the kubeconfig for the cluster.{{% /md %}}</dd>
-</dl>
+    <dd>{{% md %}}Gets the kubeconfig for the cluster.{{% /md %}}</dd></dl>
 {{% /choosable %}}
 
 {{% choosable language nodejs %}}
-<dl class="resources-properties">
-
-    <dt class="property-optional"
+<dl class="resources-properties"><dt class="property-optional"
             title="Optional">
         <span id="kubeconfig_nodejs">
 <a href="#kubeconfig_nodejs" style="color: inherit; text-decoration: inherit;">kube<wbr>Config</a>
@@ -365,14 +313,11 @@ The following output properties are available:
         <span class="property-indicator"></span>
         <span class="property-type">string</span>
     </dt>
-    <dd>{{% md %}}Gets the kubeconfig for the cluster.{{% /md %}}</dd>
-</dl>
+    <dd>{{% md %}}Gets the kubeconfig for the cluster.{{% /md %}}</dd></dl>
 {{% /choosable %}}
 
 {{% choosable language python %}}
-<dl class="resources-properties">
-
-    <dt class="property-optional"
+<dl class="resources-properties"><dt class="property-optional"
             title="Optional">
         <span id="kube_config_python">
 <a href="#kube_config_python" style="color: inherit; text-decoration: inherit;">kube_<wbr>config</a>
@@ -380,8 +325,7 @@ The following output properties are available:
         <span class="property-indicator"></span>
         <span class="property-type">str</span>
     </dt>
-    <dd>{{% md %}}Gets the kubeconfig for the cluster.{{% /md %}}</dd>
-</dl>
+    <dd>{{% md %}}Gets the kubeconfig for the cluster.{{% /md %}}</dd></dl>
 {{% /choosable %}}
 
 

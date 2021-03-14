@@ -17,11 +17,17 @@ You must enable the
 the marketplace prior to using this resource.
 
 {{% examples %}}
+
 ## Example Usage
 
 {{< chooser language "typescript,python,go,csharp" / >}}
+
+
 ### Identity Platform Tenant Inbound Saml Config Basic
-{{% example csharp %}}
+
+
+{{< example csharp >}}
+
 ```csharp
 using System.IO;
 using Pulumi;
@@ -63,13 +69,19 @@ class MyStack : Stack
 }
 ```
 
-{{% /example %}}
 
-{{% example go %}}
+{{< /example >}}
+
+
+{{< example go >}}
+
 Coming soon!
-{{% /example %}}
 
-{{% example python %}}
+{{< /example >}}
+
+
+{{< example python >}}
+
 ```python
 import pulumi
 import pulumi_gcp as gcp
@@ -92,9 +104,12 @@ tenant_saml_config = gcp.identityplatform.TenantInboundSamlConfig("tenantSamlCon
     ))
 ```
 
-{{% /example %}}
 
-{{% example typescript %}}
+{{< /example >}}
+
+
+{{< example typescript >}}
+
 
 ```typescript
 import * as pulumi from "@pulumi/pulumi";
@@ -120,9 +135,16 @@ const tenantSamlConfig = new gcp.identityplatform.TenantInboundSamlConfig("tenan
 });
 ```
 
-{{% /example %}}
+
+{{< /example >}}
+
+
+
+
 
 {{% /examples %}}
+
+
 
 
 ## Create a TenantInboundSamlConfig Resource {#create}
@@ -147,9 +169,7 @@ const tenantSamlConfig = new gcp.identityplatform.TenantInboundSamlConfig("tenan
 
 {{% choosable language nodejs %}}
 
-<dl class="resources-properties">
-  
-    <dt
+<dl class="resources-properties"><dt
         class="property-required" title="Required">
         <span>name</span>
         <span class="property-indicator"></span>
@@ -157,9 +177,7 @@ const tenantSamlConfig = new gcp.identityplatform.TenantInboundSamlConfig("tenan
     </dt>
     <dd>
       The unique name of the resource.
-    </dd>
-  
-    <dt
+    </dd><dt
         class="property-required" title="Required">
         <span>args</span>
         <span class="property-indicator"></span>
@@ -167,9 +185,7 @@ const tenantSamlConfig = new gcp.identityplatform.TenantInboundSamlConfig("tenan
     </dt>
     <dd>
       The arguments to resource properties.
-    </dd>
-  
-    <dt
+    </dd><dt
         class="property-optional" title="Optional">
         <span>opts</span>
         <span class="property-indicator"></span>
@@ -177,10 +193,7 @@ const tenantSamlConfig = new gcp.identityplatform.TenantInboundSamlConfig("tenan
     </dt>
     <dd>
       Bag of options to control resource&#39;s behavior.
-    </dd>
-  
-
-</dl>
+    </dd></dl>
 
 {{% /choosable %}}
 
@@ -206,9 +219,7 @@ const tenantSamlConfig = new gcp.identityplatform.TenantInboundSamlConfig("tenan
 
 {{% choosable language go %}}
 
-<dl class="resources-properties">
-  
-    <dt
+<dl class="resources-properties"><dt
         class="property-optional" title="Optional">
         <span>ctx</span>
         <span class="property-indicator"></span>
@@ -216,9 +227,7 @@ const tenantSamlConfig = new gcp.identityplatform.TenantInboundSamlConfig("tenan
     </dt>
     <dd>
       Context object for the current deployment.
-    </dd>
-  
-    <dt
+    </dd><dt
         class="property-required" title="Required">
         <span>name</span>
         <span class="property-indicator"></span>
@@ -226,9 +235,7 @@ const tenantSamlConfig = new gcp.identityplatform.TenantInboundSamlConfig("tenan
     </dt>
     <dd>
       The unique name of the resource.
-    </dd>
-  
-    <dt
+    </dd><dt
         class="property-required" title="Required">
         <span>args</span>
         <span class="property-indicator"></span>
@@ -236,9 +243,7 @@ const tenantSamlConfig = new gcp.identityplatform.TenantInboundSamlConfig("tenan
     </dt>
     <dd>
       The arguments to resource properties.
-    </dd>
-  
-    <dt
+    </dd><dt
         class="property-optional" title="Optional">
         <span>opts</span>
         <span class="property-indicator"></span>
@@ -246,18 +251,13 @@ const tenantSamlConfig = new gcp.identityplatform.TenantInboundSamlConfig("tenan
     </dt>
     <dd>
       Bag of options to control resource&#39;s behavior.
-    </dd>
-  
-
-</dl>
+    </dd></dl>
 
 {{% /choosable %}}
 
 {{% choosable language csharp %}}
 
-<dl class="resources-properties">
-  
-    <dt
+<dl class="resources-properties"><dt
         class="property-required" title="Required">
         <span>name</span>
         <span class="property-indicator"></span>
@@ -265,9 +265,7 @@ const tenantSamlConfig = new gcp.identityplatform.TenantInboundSamlConfig("tenan
     </dt>
     <dd>
       The unique name of the resource.
-    </dd>
-  
-    <dt
+    </dd><dt
         class="property-required" title="Required">
         <span>args</span>
         <span class="property-indicator"></span>
@@ -275,9 +273,7 @@ const tenantSamlConfig = new gcp.identityplatform.TenantInboundSamlConfig("tenan
     </dt>
     <dd>
       The arguments to resource properties.
-    </dd>
-  
-    <dt
+    </dd><dt
         class="property-optional" title="Optional">
         <span>opts</span>
         <span class="property-indicator"></span>
@@ -285,10 +281,7 @@ const tenantSamlConfig = new gcp.identityplatform.TenantInboundSamlConfig("tenan
     </dt>
     <dd>
       Bag of options to control resource&#39;s behavior.
-    </dd>
-  
-
-</dl>
+    </dd></dl>
 
 {{% /choosable %}}
 
@@ -303,9 +296,7 @@ The TenantInboundSamlConfig resource accepts the following [input]({{< relref "/
 
 
 {{% choosable language csharp %}}
-<dl class="resources-properties">
-
-    <dt class="property-required"
+<dl class="resources-properties"><dt class="property-required"
             title="Required">
         <span id="displayname_csharp">
 <a href="#displayname_csharp" style="color: inherit; text-decoration: inherit;">Display<wbr>Name</a>
@@ -314,8 +305,7 @@ The TenantInboundSamlConfig resource accepts the following [input]({{< relref "/
         <span class="property-type">string</span>
     </dt>
     <dd>{{% md %}}Human friendly display name.
-{{% /md %}}</dd>
-    <dt class="property-required"
+{{% /md %}}</dd><dt class="property-required"
             title="Required">
         <span id="idpconfig_csharp">
 <a href="#idpconfig_csharp" style="color: inherit; text-decoration: inherit;">Idp<wbr>Config</a>
@@ -325,8 +315,7 @@ The TenantInboundSamlConfig resource accepts the following [input]({{< relref "/
     </dt>
     <dd>{{% md %}}SAML IdP configuration when the project acts as the relying party
 Structure is documented below.
-{{% /md %}}</dd>
-    <dt class="property-required"
+{{% /md %}}</dd><dt class="property-required"
             title="Required">
         <span id="spconfig_csharp">
 <a href="#spconfig_csharp" style="color: inherit; text-decoration: inherit;">Sp<wbr>Config</a>
@@ -337,8 +326,7 @@ Structure is documented below.
     <dd>{{% md %}}SAML SP (Service Provider) configuration when the project acts as the relying party to receive
 and accept an authentication assertion issued by a SAML identity provider.
 Structure is documented below.
-{{% /md %}}</dd>
-    <dt class="property-required"
+{{% /md %}}</dd><dt class="property-required"
             title="Required">
         <span id="tenant_csharp">
 <a href="#tenant_csharp" style="color: inherit; text-decoration: inherit;">Tenant</a>
@@ -347,8 +335,7 @@ Structure is documented below.
         <span class="property-type">string</span>
     </dt>
     <dd>{{% md %}}The name of the tenant where this inbound SAML config resource exists
-{{% /md %}}</dd>
-    <dt class="property-optional"
+{{% /md %}}</dd><dt class="property-optional"
             title="Optional">
         <span id="enabled_csharp">
 <a href="#enabled_csharp" style="color: inherit; text-decoration: inherit;">Enabled</a>
@@ -357,8 +344,7 @@ Structure is documented below.
         <span class="property-type">bool</span>
     </dt>
     <dd>{{% md %}}If this config allows users to sign in with the provider.
-{{% /md %}}</dd>
-    <dt class="property-optional"
+{{% /md %}}</dd><dt class="property-optional"
             title="Optional">
         <span id="name_csharp">
 <a href="#name_csharp" style="color: inherit; text-decoration: inherit;">Name</a>
@@ -369,8 +355,7 @@ Structure is documented below.
     <dd>{{% md %}}The name of the InboundSamlConfig resource. Must start with 'saml.' and can only have alphanumeric characters,
 hyphens, underscores or periods. The part after 'saml.' must also start with a lowercase letter, end with an
 alphanumeric character, and have at least 2 characters.
-{{% /md %}}</dd>
-    <dt class="property-optional"
+{{% /md %}}</dd><dt class="property-optional"
             title="Optional">
         <span id="project_csharp">
 <a href="#project_csharp" style="color: inherit; text-decoration: inherit;">Project</a>
@@ -380,14 +365,11 @@ alphanumeric character, and have at least 2 characters.
     </dt>
     <dd>{{% md %}}The ID of the project in which the resource belongs.
 If it is not provided, the provider project is used.
-{{% /md %}}</dd>
-</dl>
+{{% /md %}}</dd></dl>
 {{% /choosable %}}
 
 {{% choosable language go %}}
-<dl class="resources-properties">
-
-    <dt class="property-required"
+<dl class="resources-properties"><dt class="property-required"
             title="Required">
         <span id="displayname_go">
 <a href="#displayname_go" style="color: inherit; text-decoration: inherit;">Display<wbr>Name</a>
@@ -396,8 +378,7 @@ If it is not provided, the provider project is used.
         <span class="property-type">string</span>
     </dt>
     <dd>{{% md %}}Human friendly display name.
-{{% /md %}}</dd>
-    <dt class="property-required"
+{{% /md %}}</dd><dt class="property-required"
             title="Required">
         <span id="idpconfig_go">
 <a href="#idpconfig_go" style="color: inherit; text-decoration: inherit;">Idp<wbr>Config</a>
@@ -407,8 +388,7 @@ If it is not provided, the provider project is used.
     </dt>
     <dd>{{% md %}}SAML IdP configuration when the project acts as the relying party
 Structure is documented below.
-{{% /md %}}</dd>
-    <dt class="property-required"
+{{% /md %}}</dd><dt class="property-required"
             title="Required">
         <span id="spconfig_go">
 <a href="#spconfig_go" style="color: inherit; text-decoration: inherit;">Sp<wbr>Config</a>
@@ -419,8 +399,7 @@ Structure is documented below.
     <dd>{{% md %}}SAML SP (Service Provider) configuration when the project acts as the relying party to receive
 and accept an authentication assertion issued by a SAML identity provider.
 Structure is documented below.
-{{% /md %}}</dd>
-    <dt class="property-required"
+{{% /md %}}</dd><dt class="property-required"
             title="Required">
         <span id="tenant_go">
 <a href="#tenant_go" style="color: inherit; text-decoration: inherit;">Tenant</a>
@@ -429,8 +408,7 @@ Structure is documented below.
         <span class="property-type">string</span>
     </dt>
     <dd>{{% md %}}The name of the tenant where this inbound SAML config resource exists
-{{% /md %}}</dd>
-    <dt class="property-optional"
+{{% /md %}}</dd><dt class="property-optional"
             title="Optional">
         <span id="enabled_go">
 <a href="#enabled_go" style="color: inherit; text-decoration: inherit;">Enabled</a>
@@ -439,8 +417,7 @@ Structure is documented below.
         <span class="property-type">bool</span>
     </dt>
     <dd>{{% md %}}If this config allows users to sign in with the provider.
-{{% /md %}}</dd>
-    <dt class="property-optional"
+{{% /md %}}</dd><dt class="property-optional"
             title="Optional">
         <span id="name_go">
 <a href="#name_go" style="color: inherit; text-decoration: inherit;">Name</a>
@@ -451,8 +428,7 @@ Structure is documented below.
     <dd>{{% md %}}The name of the InboundSamlConfig resource. Must start with 'saml.' and can only have alphanumeric characters,
 hyphens, underscores or periods. The part after 'saml.' must also start with a lowercase letter, end with an
 alphanumeric character, and have at least 2 characters.
-{{% /md %}}</dd>
-    <dt class="property-optional"
+{{% /md %}}</dd><dt class="property-optional"
             title="Optional">
         <span id="project_go">
 <a href="#project_go" style="color: inherit; text-decoration: inherit;">Project</a>
@@ -462,14 +438,11 @@ alphanumeric character, and have at least 2 characters.
     </dt>
     <dd>{{% md %}}The ID of the project in which the resource belongs.
 If it is not provided, the provider project is used.
-{{% /md %}}</dd>
-</dl>
+{{% /md %}}</dd></dl>
 {{% /choosable %}}
 
 {{% choosable language nodejs %}}
-<dl class="resources-properties">
-
-    <dt class="property-required"
+<dl class="resources-properties"><dt class="property-required"
             title="Required">
         <span id="displayname_nodejs">
 <a href="#displayname_nodejs" style="color: inherit; text-decoration: inherit;">display<wbr>Name</a>
@@ -478,8 +451,7 @@ If it is not provided, the provider project is used.
         <span class="property-type">string</span>
     </dt>
     <dd>{{% md %}}Human friendly display name.
-{{% /md %}}</dd>
-    <dt class="property-required"
+{{% /md %}}</dd><dt class="property-required"
             title="Required">
         <span id="idpconfig_nodejs">
 <a href="#idpconfig_nodejs" style="color: inherit; text-decoration: inherit;">idp<wbr>Config</a>
@@ -489,8 +461,7 @@ If it is not provided, the provider project is used.
     </dt>
     <dd>{{% md %}}SAML IdP configuration when the project acts as the relying party
 Structure is documented below.
-{{% /md %}}</dd>
-    <dt class="property-required"
+{{% /md %}}</dd><dt class="property-required"
             title="Required">
         <span id="spconfig_nodejs">
 <a href="#spconfig_nodejs" style="color: inherit; text-decoration: inherit;">sp<wbr>Config</a>
@@ -501,8 +472,7 @@ Structure is documented below.
     <dd>{{% md %}}SAML SP (Service Provider) configuration when the project acts as the relying party to receive
 and accept an authentication assertion issued by a SAML identity provider.
 Structure is documented below.
-{{% /md %}}</dd>
-    <dt class="property-required"
+{{% /md %}}</dd><dt class="property-required"
             title="Required">
         <span id="tenant_nodejs">
 <a href="#tenant_nodejs" style="color: inherit; text-decoration: inherit;">tenant</a>
@@ -511,8 +481,7 @@ Structure is documented below.
         <span class="property-type">string</span>
     </dt>
     <dd>{{% md %}}The name of the tenant where this inbound SAML config resource exists
-{{% /md %}}</dd>
-    <dt class="property-optional"
+{{% /md %}}</dd><dt class="property-optional"
             title="Optional">
         <span id="enabled_nodejs">
 <a href="#enabled_nodejs" style="color: inherit; text-decoration: inherit;">enabled</a>
@@ -521,8 +490,7 @@ Structure is documented below.
         <span class="property-type">boolean</span>
     </dt>
     <dd>{{% md %}}If this config allows users to sign in with the provider.
-{{% /md %}}</dd>
-    <dt class="property-optional"
+{{% /md %}}</dd><dt class="property-optional"
             title="Optional">
         <span id="name_nodejs">
 <a href="#name_nodejs" style="color: inherit; text-decoration: inherit;">name</a>
@@ -533,8 +501,7 @@ Structure is documented below.
     <dd>{{% md %}}The name of the InboundSamlConfig resource. Must start with 'saml.' and can only have alphanumeric characters,
 hyphens, underscores or periods. The part after 'saml.' must also start with a lowercase letter, end with an
 alphanumeric character, and have at least 2 characters.
-{{% /md %}}</dd>
-    <dt class="property-optional"
+{{% /md %}}</dd><dt class="property-optional"
             title="Optional">
         <span id="project_nodejs">
 <a href="#project_nodejs" style="color: inherit; text-decoration: inherit;">project</a>
@@ -544,14 +511,11 @@ alphanumeric character, and have at least 2 characters.
     </dt>
     <dd>{{% md %}}The ID of the project in which the resource belongs.
 If it is not provided, the provider project is used.
-{{% /md %}}</dd>
-</dl>
+{{% /md %}}</dd></dl>
 {{% /choosable %}}
 
 {{% choosable language python %}}
-<dl class="resources-properties">
-
-    <dt class="property-required"
+<dl class="resources-properties"><dt class="property-required"
             title="Required">
         <span id="display_name_python">
 <a href="#display_name_python" style="color: inherit; text-decoration: inherit;">display_<wbr>name</a>
@@ -560,8 +524,7 @@ If it is not provided, the provider project is used.
         <span class="property-type">str</span>
     </dt>
     <dd>{{% md %}}Human friendly display name.
-{{% /md %}}</dd>
-    <dt class="property-required"
+{{% /md %}}</dd><dt class="property-required"
             title="Required">
         <span id="idp_config_python">
 <a href="#idp_config_python" style="color: inherit; text-decoration: inherit;">idp_<wbr>config</a>
@@ -571,8 +534,7 @@ If it is not provided, the provider project is used.
     </dt>
     <dd>{{% md %}}SAML IdP configuration when the project acts as the relying party
 Structure is documented below.
-{{% /md %}}</dd>
-    <dt class="property-required"
+{{% /md %}}</dd><dt class="property-required"
             title="Required">
         <span id="sp_config_python">
 <a href="#sp_config_python" style="color: inherit; text-decoration: inherit;">sp_<wbr>config</a>
@@ -583,8 +545,7 @@ Structure is documented below.
     <dd>{{% md %}}SAML SP (Service Provider) configuration when the project acts as the relying party to receive
 and accept an authentication assertion issued by a SAML identity provider.
 Structure is documented below.
-{{% /md %}}</dd>
-    <dt class="property-required"
+{{% /md %}}</dd><dt class="property-required"
             title="Required">
         <span id="tenant_python">
 <a href="#tenant_python" style="color: inherit; text-decoration: inherit;">tenant</a>
@@ -593,8 +554,7 @@ Structure is documented below.
         <span class="property-type">str</span>
     </dt>
     <dd>{{% md %}}The name of the tenant where this inbound SAML config resource exists
-{{% /md %}}</dd>
-    <dt class="property-optional"
+{{% /md %}}</dd><dt class="property-optional"
             title="Optional">
         <span id="enabled_python">
 <a href="#enabled_python" style="color: inherit; text-decoration: inherit;">enabled</a>
@@ -603,8 +563,7 @@ Structure is documented below.
         <span class="property-type">bool</span>
     </dt>
     <dd>{{% md %}}If this config allows users to sign in with the provider.
-{{% /md %}}</dd>
-    <dt class="property-optional"
+{{% /md %}}</dd><dt class="property-optional"
             title="Optional">
         <span id="name_python">
 <a href="#name_python" style="color: inherit; text-decoration: inherit;">name</a>
@@ -615,8 +574,7 @@ Structure is documented below.
     <dd>{{% md %}}The name of the InboundSamlConfig resource. Must start with 'saml.' and can only have alphanumeric characters,
 hyphens, underscores or periods. The part after 'saml.' must also start with a lowercase letter, end with an
 alphanumeric character, and have at least 2 characters.
-{{% /md %}}</dd>
-    <dt class="property-optional"
+{{% /md %}}</dd><dt class="property-optional"
             title="Optional">
         <span id="project_python">
 <a href="#project_python" style="color: inherit; text-decoration: inherit;">project</a>
@@ -626,8 +584,7 @@ alphanumeric character, and have at least 2 characters.
     </dt>
     <dd>{{% md %}}The ID of the project in which the resource belongs.
 If it is not provided, the provider project is used.
-{{% /md %}}</dd>
-</dl>
+{{% /md %}}</dd></dl>
 {{% /choosable %}}
 
 
@@ -638,9 +595,7 @@ All [input](#inputs) properties are implicitly available as output properties. A
 
 
 {{% choosable language csharp %}}
-<dl class="resources-properties">
-
-    <dt class="property-"
+<dl class="resources-properties"><dt class="property-"
             title="">
         <span id="id_csharp">
 <a href="#id_csharp" style="color: inherit; text-decoration: inherit;">Id</a>
@@ -648,14 +603,11 @@ All [input](#inputs) properties are implicitly available as output properties. A
         <span class="property-indicator"></span>
         <span class="property-type">string</span>
     </dt>
-    <dd>{{% md %}}The provider-assigned unique ID for this managed resource.{{% /md %}}</dd>
-</dl>
+    <dd>{{% md %}}The provider-assigned unique ID for this managed resource.{{% /md %}}</dd></dl>
 {{% /choosable %}}
 
 {{% choosable language go %}}
-<dl class="resources-properties">
-
-    <dt class="property-"
+<dl class="resources-properties"><dt class="property-"
             title="">
         <span id="id_go">
 <a href="#id_go" style="color: inherit; text-decoration: inherit;">Id</a>
@@ -663,14 +615,11 @@ All [input](#inputs) properties are implicitly available as output properties. A
         <span class="property-indicator"></span>
         <span class="property-type">string</span>
     </dt>
-    <dd>{{% md %}}The provider-assigned unique ID for this managed resource.{{% /md %}}</dd>
-</dl>
+    <dd>{{% md %}}The provider-assigned unique ID for this managed resource.{{% /md %}}</dd></dl>
 {{% /choosable %}}
 
 {{% choosable language nodejs %}}
-<dl class="resources-properties">
-
-    <dt class="property-"
+<dl class="resources-properties"><dt class="property-"
             title="">
         <span id="id_nodejs">
 <a href="#id_nodejs" style="color: inherit; text-decoration: inherit;">id</a>
@@ -678,14 +627,11 @@ All [input](#inputs) properties are implicitly available as output properties. A
         <span class="property-indicator"></span>
         <span class="property-type">string</span>
     </dt>
-    <dd>{{% md %}}The provider-assigned unique ID for this managed resource.{{% /md %}}</dd>
-</dl>
+    <dd>{{% md %}}The provider-assigned unique ID for this managed resource.{{% /md %}}</dd></dl>
 {{% /choosable %}}
 
 {{% choosable language python %}}
-<dl class="resources-properties">
-
-    <dt class="property-"
+<dl class="resources-properties"><dt class="property-"
             title="">
         <span id="id_python">
 <a href="#id_python" style="color: inherit; text-decoration: inherit;">id</a>
@@ -693,8 +639,7 @@ All [input](#inputs) properties are implicitly available as output properties. A
         <span class="property-indicator"></span>
         <span class="property-type">str</span>
     </dt>
-    <dd>{{% md %}}The provider-assigned unique ID for this managed resource.{{% /md %}}</dd>
-</dl>
+    <dd>{{% md %}}The provider-assigned unique ID for this managed resource.{{% /md %}}</dd></dl>
 {{% /choosable %}}
 
 
@@ -821,9 +766,7 @@ The following state arguments are supported:
 
 
 {{% choosable language csharp %}}
-<dl class="resources-properties">
-
-    <dt class="property-optional"
+<dl class="resources-properties"><dt class="property-optional"
             title="Optional">
         <span id="state_displayname_csharp">
 <a href="#state_displayname_csharp" style="color: inherit; text-decoration: inherit;">Display<wbr>Name</a>
@@ -832,8 +775,7 @@ The following state arguments are supported:
         <span class="property-type">string</span>
     </dt>
     <dd>{{% md %}}Human friendly display name.
-{{% /md %}}</dd>
-    <dt class="property-optional"
+{{% /md %}}</dd><dt class="property-optional"
             title="Optional">
         <span id="state_enabled_csharp">
 <a href="#state_enabled_csharp" style="color: inherit; text-decoration: inherit;">Enabled</a>
@@ -842,8 +784,7 @@ The following state arguments are supported:
         <span class="property-type">bool</span>
     </dt>
     <dd>{{% md %}}If this config allows users to sign in with the provider.
-{{% /md %}}</dd>
-    <dt class="property-optional"
+{{% /md %}}</dd><dt class="property-optional"
             title="Optional">
         <span id="state_idpconfig_csharp">
 <a href="#state_idpconfig_csharp" style="color: inherit; text-decoration: inherit;">Idp<wbr>Config</a>
@@ -853,8 +794,7 @@ The following state arguments are supported:
     </dt>
     <dd>{{% md %}}SAML IdP configuration when the project acts as the relying party
 Structure is documented below.
-{{% /md %}}</dd>
-    <dt class="property-optional"
+{{% /md %}}</dd><dt class="property-optional"
             title="Optional">
         <span id="state_name_csharp">
 <a href="#state_name_csharp" style="color: inherit; text-decoration: inherit;">Name</a>
@@ -865,8 +805,7 @@ Structure is documented below.
     <dd>{{% md %}}The name of the InboundSamlConfig resource. Must start with 'saml.' and can only have alphanumeric characters,
 hyphens, underscores or periods. The part after 'saml.' must also start with a lowercase letter, end with an
 alphanumeric character, and have at least 2 characters.
-{{% /md %}}</dd>
-    <dt class="property-optional"
+{{% /md %}}</dd><dt class="property-optional"
             title="Optional">
         <span id="state_project_csharp">
 <a href="#state_project_csharp" style="color: inherit; text-decoration: inherit;">Project</a>
@@ -876,8 +815,7 @@ alphanumeric character, and have at least 2 characters.
     </dt>
     <dd>{{% md %}}The ID of the project in which the resource belongs.
 If it is not provided, the provider project is used.
-{{% /md %}}</dd>
-    <dt class="property-optional"
+{{% /md %}}</dd><dt class="property-optional"
             title="Optional">
         <span id="state_spconfig_csharp">
 <a href="#state_spconfig_csharp" style="color: inherit; text-decoration: inherit;">Sp<wbr>Config</a>
@@ -888,8 +826,7 @@ If it is not provided, the provider project is used.
     <dd>{{% md %}}SAML SP (Service Provider) configuration when the project acts as the relying party to receive
 and accept an authentication assertion issued by a SAML identity provider.
 Structure is documented below.
-{{% /md %}}</dd>
-    <dt class="property-optional"
+{{% /md %}}</dd><dt class="property-optional"
             title="Optional">
         <span id="state_tenant_csharp">
 <a href="#state_tenant_csharp" style="color: inherit; text-decoration: inherit;">Tenant</a>
@@ -898,14 +835,11 @@ Structure is documented below.
         <span class="property-type">string</span>
     </dt>
     <dd>{{% md %}}The name of the tenant where this inbound SAML config resource exists
-{{% /md %}}</dd>
-</dl>
+{{% /md %}}</dd></dl>
 {{% /choosable %}}
 
 {{% choosable language go %}}
-<dl class="resources-properties">
-
-    <dt class="property-optional"
+<dl class="resources-properties"><dt class="property-optional"
             title="Optional">
         <span id="state_displayname_go">
 <a href="#state_displayname_go" style="color: inherit; text-decoration: inherit;">Display<wbr>Name</a>
@@ -914,8 +848,7 @@ Structure is documented below.
         <span class="property-type">string</span>
     </dt>
     <dd>{{% md %}}Human friendly display name.
-{{% /md %}}</dd>
-    <dt class="property-optional"
+{{% /md %}}</dd><dt class="property-optional"
             title="Optional">
         <span id="state_enabled_go">
 <a href="#state_enabled_go" style="color: inherit; text-decoration: inherit;">Enabled</a>
@@ -924,8 +857,7 @@ Structure is documented below.
         <span class="property-type">bool</span>
     </dt>
     <dd>{{% md %}}If this config allows users to sign in with the provider.
-{{% /md %}}</dd>
-    <dt class="property-optional"
+{{% /md %}}</dd><dt class="property-optional"
             title="Optional">
         <span id="state_idpconfig_go">
 <a href="#state_idpconfig_go" style="color: inherit; text-decoration: inherit;">Idp<wbr>Config</a>
@@ -935,8 +867,7 @@ Structure is documented below.
     </dt>
     <dd>{{% md %}}SAML IdP configuration when the project acts as the relying party
 Structure is documented below.
-{{% /md %}}</dd>
-    <dt class="property-optional"
+{{% /md %}}</dd><dt class="property-optional"
             title="Optional">
         <span id="state_name_go">
 <a href="#state_name_go" style="color: inherit; text-decoration: inherit;">Name</a>
@@ -947,8 +878,7 @@ Structure is documented below.
     <dd>{{% md %}}The name of the InboundSamlConfig resource. Must start with 'saml.' and can only have alphanumeric characters,
 hyphens, underscores or periods. The part after 'saml.' must also start with a lowercase letter, end with an
 alphanumeric character, and have at least 2 characters.
-{{% /md %}}</dd>
-    <dt class="property-optional"
+{{% /md %}}</dd><dt class="property-optional"
             title="Optional">
         <span id="state_project_go">
 <a href="#state_project_go" style="color: inherit; text-decoration: inherit;">Project</a>
@@ -958,8 +888,7 @@ alphanumeric character, and have at least 2 characters.
     </dt>
     <dd>{{% md %}}The ID of the project in which the resource belongs.
 If it is not provided, the provider project is used.
-{{% /md %}}</dd>
-    <dt class="property-optional"
+{{% /md %}}</dd><dt class="property-optional"
             title="Optional">
         <span id="state_spconfig_go">
 <a href="#state_spconfig_go" style="color: inherit; text-decoration: inherit;">Sp<wbr>Config</a>
@@ -970,8 +899,7 @@ If it is not provided, the provider project is used.
     <dd>{{% md %}}SAML SP (Service Provider) configuration when the project acts as the relying party to receive
 and accept an authentication assertion issued by a SAML identity provider.
 Structure is documented below.
-{{% /md %}}</dd>
-    <dt class="property-optional"
+{{% /md %}}</dd><dt class="property-optional"
             title="Optional">
         <span id="state_tenant_go">
 <a href="#state_tenant_go" style="color: inherit; text-decoration: inherit;">Tenant</a>
@@ -980,14 +908,11 @@ Structure is documented below.
         <span class="property-type">string</span>
     </dt>
     <dd>{{% md %}}The name of the tenant where this inbound SAML config resource exists
-{{% /md %}}</dd>
-</dl>
+{{% /md %}}</dd></dl>
 {{% /choosable %}}
 
 {{% choosable language nodejs %}}
-<dl class="resources-properties">
-
-    <dt class="property-optional"
+<dl class="resources-properties"><dt class="property-optional"
             title="Optional">
         <span id="state_displayname_nodejs">
 <a href="#state_displayname_nodejs" style="color: inherit; text-decoration: inherit;">display<wbr>Name</a>
@@ -996,8 +921,7 @@ Structure is documented below.
         <span class="property-type">string</span>
     </dt>
     <dd>{{% md %}}Human friendly display name.
-{{% /md %}}</dd>
-    <dt class="property-optional"
+{{% /md %}}</dd><dt class="property-optional"
             title="Optional">
         <span id="state_enabled_nodejs">
 <a href="#state_enabled_nodejs" style="color: inherit; text-decoration: inherit;">enabled</a>
@@ -1006,8 +930,7 @@ Structure is documented below.
         <span class="property-type">boolean</span>
     </dt>
     <dd>{{% md %}}If this config allows users to sign in with the provider.
-{{% /md %}}</dd>
-    <dt class="property-optional"
+{{% /md %}}</dd><dt class="property-optional"
             title="Optional">
         <span id="state_idpconfig_nodejs">
 <a href="#state_idpconfig_nodejs" style="color: inherit; text-decoration: inherit;">idp<wbr>Config</a>
@@ -1017,8 +940,7 @@ Structure is documented below.
     </dt>
     <dd>{{% md %}}SAML IdP configuration when the project acts as the relying party
 Structure is documented below.
-{{% /md %}}</dd>
-    <dt class="property-optional"
+{{% /md %}}</dd><dt class="property-optional"
             title="Optional">
         <span id="state_name_nodejs">
 <a href="#state_name_nodejs" style="color: inherit; text-decoration: inherit;">name</a>
@@ -1029,8 +951,7 @@ Structure is documented below.
     <dd>{{% md %}}The name of the InboundSamlConfig resource. Must start with 'saml.' and can only have alphanumeric characters,
 hyphens, underscores or periods. The part after 'saml.' must also start with a lowercase letter, end with an
 alphanumeric character, and have at least 2 characters.
-{{% /md %}}</dd>
-    <dt class="property-optional"
+{{% /md %}}</dd><dt class="property-optional"
             title="Optional">
         <span id="state_project_nodejs">
 <a href="#state_project_nodejs" style="color: inherit; text-decoration: inherit;">project</a>
@@ -1040,8 +961,7 @@ alphanumeric character, and have at least 2 characters.
     </dt>
     <dd>{{% md %}}The ID of the project in which the resource belongs.
 If it is not provided, the provider project is used.
-{{% /md %}}</dd>
-    <dt class="property-optional"
+{{% /md %}}</dd><dt class="property-optional"
             title="Optional">
         <span id="state_spconfig_nodejs">
 <a href="#state_spconfig_nodejs" style="color: inherit; text-decoration: inherit;">sp<wbr>Config</a>
@@ -1052,8 +972,7 @@ If it is not provided, the provider project is used.
     <dd>{{% md %}}SAML SP (Service Provider) configuration when the project acts as the relying party to receive
 and accept an authentication assertion issued by a SAML identity provider.
 Structure is documented below.
-{{% /md %}}</dd>
-    <dt class="property-optional"
+{{% /md %}}</dd><dt class="property-optional"
             title="Optional">
         <span id="state_tenant_nodejs">
 <a href="#state_tenant_nodejs" style="color: inherit; text-decoration: inherit;">tenant</a>
@@ -1062,14 +981,11 @@ Structure is documented below.
         <span class="property-type">string</span>
     </dt>
     <dd>{{% md %}}The name of the tenant where this inbound SAML config resource exists
-{{% /md %}}</dd>
-</dl>
+{{% /md %}}</dd></dl>
 {{% /choosable %}}
 
 {{% choosable language python %}}
-<dl class="resources-properties">
-
-    <dt class="property-optional"
+<dl class="resources-properties"><dt class="property-optional"
             title="Optional">
         <span id="state_display_name_python">
 <a href="#state_display_name_python" style="color: inherit; text-decoration: inherit;">display_<wbr>name</a>
@@ -1078,8 +994,7 @@ Structure is documented below.
         <span class="property-type">str</span>
     </dt>
     <dd>{{% md %}}Human friendly display name.
-{{% /md %}}</dd>
-    <dt class="property-optional"
+{{% /md %}}</dd><dt class="property-optional"
             title="Optional">
         <span id="state_enabled_python">
 <a href="#state_enabled_python" style="color: inherit; text-decoration: inherit;">enabled</a>
@@ -1088,8 +1003,7 @@ Structure is documented below.
         <span class="property-type">bool</span>
     </dt>
     <dd>{{% md %}}If this config allows users to sign in with the provider.
-{{% /md %}}</dd>
-    <dt class="property-optional"
+{{% /md %}}</dd><dt class="property-optional"
             title="Optional">
         <span id="state_idp_config_python">
 <a href="#state_idp_config_python" style="color: inherit; text-decoration: inherit;">idp_<wbr>config</a>
@@ -1099,8 +1013,7 @@ Structure is documented below.
     </dt>
     <dd>{{% md %}}SAML IdP configuration when the project acts as the relying party
 Structure is documented below.
-{{% /md %}}</dd>
-    <dt class="property-optional"
+{{% /md %}}</dd><dt class="property-optional"
             title="Optional">
         <span id="state_name_python">
 <a href="#state_name_python" style="color: inherit; text-decoration: inherit;">name</a>
@@ -1111,8 +1024,7 @@ Structure is documented below.
     <dd>{{% md %}}The name of the InboundSamlConfig resource. Must start with 'saml.' and can only have alphanumeric characters,
 hyphens, underscores or periods. The part after 'saml.' must also start with a lowercase letter, end with an
 alphanumeric character, and have at least 2 characters.
-{{% /md %}}</dd>
-    <dt class="property-optional"
+{{% /md %}}</dd><dt class="property-optional"
             title="Optional">
         <span id="state_project_python">
 <a href="#state_project_python" style="color: inherit; text-decoration: inherit;">project</a>
@@ -1122,8 +1034,7 @@ alphanumeric character, and have at least 2 characters.
     </dt>
     <dd>{{% md %}}The ID of the project in which the resource belongs.
 If it is not provided, the provider project is used.
-{{% /md %}}</dd>
-    <dt class="property-optional"
+{{% /md %}}</dd><dt class="property-optional"
             title="Optional">
         <span id="state_sp_config_python">
 <a href="#state_sp_config_python" style="color: inherit; text-decoration: inherit;">sp_<wbr>config</a>
@@ -1134,8 +1045,7 @@ If it is not provided, the provider project is used.
     <dd>{{% md %}}SAML SP (Service Provider) configuration when the project acts as the relying party to receive
 and accept an authentication assertion issued by a SAML identity provider.
 Structure is documented below.
-{{% /md %}}</dd>
-    <dt class="property-optional"
+{{% /md %}}</dd><dt class="property-optional"
             title="Optional">
         <span id="state_tenant_python">
 <a href="#state_tenant_python" style="color: inherit; text-decoration: inherit;">tenant</a>
@@ -1144,8 +1054,7 @@ Structure is documented below.
         <span class="property-type">str</span>
     </dt>
     <dd>{{% md %}}The name of the tenant where this inbound SAML config resource exists
-{{% /md %}}</dd>
-</dl>
+{{% /md %}}</dd></dl>
 {{% /choosable %}}
 
 
@@ -1160,9 +1069,7 @@ Structure is documented below.
 <h4 id="tenantinboundsamlconfigidpconfig">Tenant<wbr>Inbound<wbr>Saml<wbr>Config<wbr>Idp<wbr>Config</h4>
 
 {{% choosable language csharp %}}
-<dl class="resources-properties">
-
-    <dt class="property-required"
+<dl class="resources-properties"><dt class="property-required"
             title="Required">
         <span id="idpcertificates_csharp">
 <a href="#idpcertificates_csharp" style="color: inherit; text-decoration: inherit;">Idp<wbr>Certificates</a>
@@ -1172,8 +1079,7 @@ Structure is documented below.
     </dt>
     <dd>{{% md %}}The IDP's certificate data to verify the signature in the SAMLResponse issued by the IDP.
 Structure is documented below.
-{{% /md %}}</dd>
-    <dt class="property-required"
+{{% /md %}}</dd><dt class="property-required"
             title="Required">
         <span id="idpentityid_csharp">
 <a href="#idpentityid_csharp" style="color: inherit; text-decoration: inherit;">Idp<wbr>Entity<wbr>Id</a>
@@ -1182,8 +1088,7 @@ Structure is documented below.
         <span class="property-type">string</span>
     </dt>
     <dd>{{% md %}}Unique identifier for all SAML entities
-{{% /md %}}</dd>
-    <dt class="property-required"
+{{% /md %}}</dd><dt class="property-required"
             title="Required">
         <span id="ssourl_csharp">
 <a href="#ssourl_csharp" style="color: inherit; text-decoration: inherit;">Sso<wbr>Url</a>
@@ -1192,8 +1097,7 @@ Structure is documented below.
         <span class="property-type">string</span>
     </dt>
     <dd>{{% md %}}URL to send Authentication request to.
-{{% /md %}}</dd>
-    <dt class="property-optional"
+{{% /md %}}</dd><dt class="property-optional"
             title="Optional">
         <span id="signrequest_csharp">
 <a href="#signrequest_csharp" style="color: inherit; text-decoration: inherit;">Sign<wbr>Request</a>
@@ -1202,14 +1106,11 @@ Structure is documented below.
         <span class="property-type">bool</span>
     </dt>
     <dd>{{% md %}}Indicates if outbounding SAMLRequest should be signed.
-{{% /md %}}</dd>
-</dl>
+{{% /md %}}</dd></dl>
 {{% /choosable %}}
 
 {{% choosable language go %}}
-<dl class="resources-properties">
-
-    <dt class="property-required"
+<dl class="resources-properties"><dt class="property-required"
             title="Required">
         <span id="idpcertificates_go">
 <a href="#idpcertificates_go" style="color: inherit; text-decoration: inherit;">Idp<wbr>Certificates</a>
@@ -1219,8 +1120,7 @@ Structure is documented below.
     </dt>
     <dd>{{% md %}}The IDP's certificate data to verify the signature in the SAMLResponse issued by the IDP.
 Structure is documented below.
-{{% /md %}}</dd>
-    <dt class="property-required"
+{{% /md %}}</dd><dt class="property-required"
             title="Required">
         <span id="idpentityid_go">
 <a href="#idpentityid_go" style="color: inherit; text-decoration: inherit;">Idp<wbr>Entity<wbr>Id</a>
@@ -1229,8 +1129,7 @@ Structure is documented below.
         <span class="property-type">string</span>
     </dt>
     <dd>{{% md %}}Unique identifier for all SAML entities
-{{% /md %}}</dd>
-    <dt class="property-required"
+{{% /md %}}</dd><dt class="property-required"
             title="Required">
         <span id="ssourl_go">
 <a href="#ssourl_go" style="color: inherit; text-decoration: inherit;">Sso<wbr>Url</a>
@@ -1239,8 +1138,7 @@ Structure is documented below.
         <span class="property-type">string</span>
     </dt>
     <dd>{{% md %}}URL to send Authentication request to.
-{{% /md %}}</dd>
-    <dt class="property-optional"
+{{% /md %}}</dd><dt class="property-optional"
             title="Optional">
         <span id="signrequest_go">
 <a href="#signrequest_go" style="color: inherit; text-decoration: inherit;">Sign<wbr>Request</a>
@@ -1249,14 +1147,11 @@ Structure is documented below.
         <span class="property-type">bool</span>
     </dt>
     <dd>{{% md %}}Indicates if outbounding SAMLRequest should be signed.
-{{% /md %}}</dd>
-</dl>
+{{% /md %}}</dd></dl>
 {{% /choosable %}}
 
 {{% choosable language nodejs %}}
-<dl class="resources-properties">
-
-    <dt class="property-required"
+<dl class="resources-properties"><dt class="property-required"
             title="Required">
         <span id="idpcertificates_nodejs">
 <a href="#idpcertificates_nodejs" style="color: inherit; text-decoration: inherit;">idp<wbr>Certificates</a>
@@ -1266,8 +1161,7 @@ Structure is documented below.
     </dt>
     <dd>{{% md %}}The IDP's certificate data to verify the signature in the SAMLResponse issued by the IDP.
 Structure is documented below.
-{{% /md %}}</dd>
-    <dt class="property-required"
+{{% /md %}}</dd><dt class="property-required"
             title="Required">
         <span id="idpentityid_nodejs">
 <a href="#idpentityid_nodejs" style="color: inherit; text-decoration: inherit;">idp<wbr>Entity<wbr>Id</a>
@@ -1276,8 +1170,7 @@ Structure is documented below.
         <span class="property-type">string</span>
     </dt>
     <dd>{{% md %}}Unique identifier for all SAML entities
-{{% /md %}}</dd>
-    <dt class="property-required"
+{{% /md %}}</dd><dt class="property-required"
             title="Required">
         <span id="ssourl_nodejs">
 <a href="#ssourl_nodejs" style="color: inherit; text-decoration: inherit;">sso<wbr>Url</a>
@@ -1286,8 +1179,7 @@ Structure is documented below.
         <span class="property-type">string</span>
     </dt>
     <dd>{{% md %}}URL to send Authentication request to.
-{{% /md %}}</dd>
-    <dt class="property-optional"
+{{% /md %}}</dd><dt class="property-optional"
             title="Optional">
         <span id="signrequest_nodejs">
 <a href="#signrequest_nodejs" style="color: inherit; text-decoration: inherit;">sign<wbr>Request</a>
@@ -1296,14 +1188,11 @@ Structure is documented below.
         <span class="property-type">boolean</span>
     </dt>
     <dd>{{% md %}}Indicates if outbounding SAMLRequest should be signed.
-{{% /md %}}</dd>
-</dl>
+{{% /md %}}</dd></dl>
 {{% /choosable %}}
 
 {{% choosable language python %}}
-<dl class="resources-properties">
-
-    <dt class="property-required"
+<dl class="resources-properties"><dt class="property-required"
             title="Required">
         <span id="idp_certificates_python">
 <a href="#idp_certificates_python" style="color: inherit; text-decoration: inherit;">idp_<wbr>certificates</a>
@@ -1313,8 +1202,7 @@ Structure is documented below.
     </dt>
     <dd>{{% md %}}The IDP's certificate data to verify the signature in the SAMLResponse issued by the IDP.
 Structure is documented below.
-{{% /md %}}</dd>
-    <dt class="property-required"
+{{% /md %}}</dd><dt class="property-required"
             title="Required">
         <span id="idp_entity_id_python">
 <a href="#idp_entity_id_python" style="color: inherit; text-decoration: inherit;">idp_<wbr>entity_<wbr>id</a>
@@ -1323,8 +1211,7 @@ Structure is documented below.
         <span class="property-type">str</span>
     </dt>
     <dd>{{% md %}}Unique identifier for all SAML entities
-{{% /md %}}</dd>
-    <dt class="property-required"
+{{% /md %}}</dd><dt class="property-required"
             title="Required">
         <span id="sso_url_python">
 <a href="#sso_url_python" style="color: inherit; text-decoration: inherit;">sso_<wbr>url</a>
@@ -1333,8 +1220,7 @@ Structure is documented below.
         <span class="property-type">str</span>
     </dt>
     <dd>{{% md %}}URL to send Authentication request to.
-{{% /md %}}</dd>
-    <dt class="property-optional"
+{{% /md %}}</dd><dt class="property-optional"
             title="Optional">
         <span id="sign_request_python">
 <a href="#sign_request_python" style="color: inherit; text-decoration: inherit;">sign_<wbr>request</a>
@@ -1343,16 +1229,13 @@ Structure is documented below.
         <span class="property-type">bool</span>
     </dt>
     <dd>{{% md %}}Indicates if outbounding SAMLRequest should be signed.
-{{% /md %}}</dd>
-</dl>
+{{% /md %}}</dd></dl>
 {{% /choosable %}}
 
 <h4 id="tenantinboundsamlconfigidpconfigidpcertificate">Tenant<wbr>Inbound<wbr>Saml<wbr>Config<wbr>Idp<wbr>Config<wbr>Idp<wbr>Certificate</h4>
 
 {{% choosable language csharp %}}
-<dl class="resources-properties">
-
-    <dt class="property-optional"
+<dl class="resources-properties"><dt class="property-optional"
             title="Optional">
         <span id="x509certificate_csharp">
 <a href="#x509certificate_csharp" style="color: inherit; text-decoration: inherit;">X509Certificate</a>
@@ -1362,14 +1245,11 @@ Structure is documented below.
     </dt>
     <dd>{{% md %}}-
 The x509 certificate
-{{% /md %}}</dd>
-</dl>
+{{% /md %}}</dd></dl>
 {{% /choosable %}}
 
 {{% choosable language go %}}
-<dl class="resources-properties">
-
-    <dt class="property-optional"
+<dl class="resources-properties"><dt class="property-optional"
             title="Optional">
         <span id="x509certificate_go">
 <a href="#x509certificate_go" style="color: inherit; text-decoration: inherit;">X509Certificate</a>
@@ -1379,14 +1259,11 @@ The x509 certificate
     </dt>
     <dd>{{% md %}}-
 The x509 certificate
-{{% /md %}}</dd>
-</dl>
+{{% /md %}}</dd></dl>
 {{% /choosable %}}
 
 {{% choosable language nodejs %}}
-<dl class="resources-properties">
-
-    <dt class="property-optional"
+<dl class="resources-properties"><dt class="property-optional"
             title="Optional">
         <span id="x509certificate_nodejs">
 <a href="#x509certificate_nodejs" style="color: inherit; text-decoration: inherit;">x509Certificate</a>
@@ -1396,14 +1273,11 @@ The x509 certificate
     </dt>
     <dd>{{% md %}}-
 The x509 certificate
-{{% /md %}}</dd>
-</dl>
+{{% /md %}}</dd></dl>
 {{% /choosable %}}
 
 {{% choosable language python %}}
-<dl class="resources-properties">
-
-    <dt class="property-optional"
+<dl class="resources-properties"><dt class="property-optional"
             title="Optional">
         <span id="x509_certificate_python">
 <a href="#x509_certificate_python" style="color: inherit; text-decoration: inherit;">x509_<wbr>certificate</a>
@@ -1413,16 +1287,13 @@ The x509 certificate
     </dt>
     <dd>{{% md %}}-
 The x509 certificate
-{{% /md %}}</dd>
-</dl>
+{{% /md %}}</dd></dl>
 {{% /choosable %}}
 
 <h4 id="tenantinboundsamlconfigspconfig">Tenant<wbr>Inbound<wbr>Saml<wbr>Config<wbr>Sp<wbr>Config</h4>
 
 {{% choosable language csharp %}}
-<dl class="resources-properties">
-
-    <dt class="property-required"
+<dl class="resources-properties"><dt class="property-required"
             title="Required">
         <span id="callbackuri_csharp">
 <a href="#callbackuri_csharp" style="color: inherit; text-decoration: inherit;">Callback<wbr>Uri</a>
@@ -1431,8 +1302,7 @@ The x509 certificate
         <span class="property-type">string</span>
     </dt>
     <dd>{{% md %}}Callback URI where responses from IDP are handled. Must start with `https://`.
-{{% /md %}}</dd>
-    <dt class="property-required"
+{{% /md %}}</dd><dt class="property-required"
             title="Required">
         <span id="spentityid_csharp">
 <a href="#spentityid_csharp" style="color: inherit; text-decoration: inherit;">Sp<wbr>Entity<wbr>Id</a>
@@ -1441,8 +1311,7 @@ The x509 certificate
         <span class="property-type">string</span>
     </dt>
     <dd>{{% md %}}Unique identifier for all SAML entities.
-{{% /md %}}</dd>
-    <dt class="property-optional"
+{{% /md %}}</dd><dt class="property-optional"
             title="Optional">
         <span id="spcertificates_csharp">
 <a href="#spcertificates_csharp" style="color: inherit; text-decoration: inherit;">Sp<wbr>Certificates</a>
@@ -1453,14 +1322,11 @@ The x509 certificate
     <dd>{{% md %}}-
 The IDP's certificate data to verify the signature in the SAMLResponse issued by the IDP.
 Structure is documented below.
-{{% /md %}}</dd>
-</dl>
+{{% /md %}}</dd></dl>
 {{% /choosable %}}
 
 {{% choosable language go %}}
-<dl class="resources-properties">
-
-    <dt class="property-required"
+<dl class="resources-properties"><dt class="property-required"
             title="Required">
         <span id="callbackuri_go">
 <a href="#callbackuri_go" style="color: inherit; text-decoration: inherit;">Callback<wbr>Uri</a>
@@ -1469,8 +1335,7 @@ Structure is documented below.
         <span class="property-type">string</span>
     </dt>
     <dd>{{% md %}}Callback URI where responses from IDP are handled. Must start with `https://`.
-{{% /md %}}</dd>
-    <dt class="property-required"
+{{% /md %}}</dd><dt class="property-required"
             title="Required">
         <span id="spentityid_go">
 <a href="#spentityid_go" style="color: inherit; text-decoration: inherit;">Sp<wbr>Entity<wbr>Id</a>
@@ -1479,8 +1344,7 @@ Structure is documented below.
         <span class="property-type">string</span>
     </dt>
     <dd>{{% md %}}Unique identifier for all SAML entities.
-{{% /md %}}</dd>
-    <dt class="property-optional"
+{{% /md %}}</dd><dt class="property-optional"
             title="Optional">
         <span id="spcertificates_go">
 <a href="#spcertificates_go" style="color: inherit; text-decoration: inherit;">Sp<wbr>Certificates</a>
@@ -1491,14 +1355,11 @@ Structure is documented below.
     <dd>{{% md %}}-
 The IDP's certificate data to verify the signature in the SAMLResponse issued by the IDP.
 Structure is documented below.
-{{% /md %}}</dd>
-</dl>
+{{% /md %}}</dd></dl>
 {{% /choosable %}}
 
 {{% choosable language nodejs %}}
-<dl class="resources-properties">
-
-    <dt class="property-required"
+<dl class="resources-properties"><dt class="property-required"
             title="Required">
         <span id="callbackuri_nodejs">
 <a href="#callbackuri_nodejs" style="color: inherit; text-decoration: inherit;">callback<wbr>Uri</a>
@@ -1507,8 +1368,7 @@ Structure is documented below.
         <span class="property-type">string</span>
     </dt>
     <dd>{{% md %}}Callback URI where responses from IDP are handled. Must start with `https://`.
-{{% /md %}}</dd>
-    <dt class="property-required"
+{{% /md %}}</dd><dt class="property-required"
             title="Required">
         <span id="spentityid_nodejs">
 <a href="#spentityid_nodejs" style="color: inherit; text-decoration: inherit;">sp<wbr>Entity<wbr>Id</a>
@@ -1517,8 +1377,7 @@ Structure is documented below.
         <span class="property-type">string</span>
     </dt>
     <dd>{{% md %}}Unique identifier for all SAML entities.
-{{% /md %}}</dd>
-    <dt class="property-optional"
+{{% /md %}}</dd><dt class="property-optional"
             title="Optional">
         <span id="spcertificates_nodejs">
 <a href="#spcertificates_nodejs" style="color: inherit; text-decoration: inherit;">sp<wbr>Certificates</a>
@@ -1529,14 +1388,11 @@ Structure is documented below.
     <dd>{{% md %}}-
 The IDP's certificate data to verify the signature in the SAMLResponse issued by the IDP.
 Structure is documented below.
-{{% /md %}}</dd>
-</dl>
+{{% /md %}}</dd></dl>
 {{% /choosable %}}
 
 {{% choosable language python %}}
-<dl class="resources-properties">
-
-    <dt class="property-required"
+<dl class="resources-properties"><dt class="property-required"
             title="Required">
         <span id="callback_uri_python">
 <a href="#callback_uri_python" style="color: inherit; text-decoration: inherit;">callback_<wbr>uri</a>
@@ -1545,8 +1401,7 @@ Structure is documented below.
         <span class="property-type">str</span>
     </dt>
     <dd>{{% md %}}Callback URI where responses from IDP are handled. Must start with `https://`.
-{{% /md %}}</dd>
-    <dt class="property-required"
+{{% /md %}}</dd><dt class="property-required"
             title="Required">
         <span id="sp_entity_id_python">
 <a href="#sp_entity_id_python" style="color: inherit; text-decoration: inherit;">sp_<wbr>entity_<wbr>id</a>
@@ -1555,8 +1410,7 @@ Structure is documented below.
         <span class="property-type">str</span>
     </dt>
     <dd>{{% md %}}Unique identifier for all SAML entities.
-{{% /md %}}</dd>
-    <dt class="property-optional"
+{{% /md %}}</dd><dt class="property-optional"
             title="Optional">
         <span id="sp_certificates_python">
 <a href="#sp_certificates_python" style="color: inherit; text-decoration: inherit;">sp_<wbr>certificates</a>
@@ -1567,16 +1421,13 @@ Structure is documented below.
     <dd>{{% md %}}-
 The IDP's certificate data to verify the signature in the SAMLResponse issued by the IDP.
 Structure is documented below.
-{{% /md %}}</dd>
-</dl>
+{{% /md %}}</dd></dl>
 {{% /choosable %}}
 
 <h4 id="tenantinboundsamlconfigspconfigspcertificate">Tenant<wbr>Inbound<wbr>Saml<wbr>Config<wbr>Sp<wbr>Config<wbr>Sp<wbr>Certificate</h4>
 
 {{% choosable language csharp %}}
-<dl class="resources-properties">
-
-    <dt class="property-optional"
+<dl class="resources-properties"><dt class="property-optional"
             title="Optional">
         <span id="x509certificate_csharp">
 <a href="#x509certificate_csharp" style="color: inherit; text-decoration: inherit;">X509Certificate</a>
@@ -1586,14 +1437,11 @@ Structure is documented below.
     </dt>
     <dd>{{% md %}}-
 The x509 certificate
-{{% /md %}}</dd>
-</dl>
+{{% /md %}}</dd></dl>
 {{% /choosable %}}
 
 {{% choosable language go %}}
-<dl class="resources-properties">
-
-    <dt class="property-optional"
+<dl class="resources-properties"><dt class="property-optional"
             title="Optional">
         <span id="x509certificate_go">
 <a href="#x509certificate_go" style="color: inherit; text-decoration: inherit;">X509Certificate</a>
@@ -1603,14 +1451,11 @@ The x509 certificate
     </dt>
     <dd>{{% md %}}-
 The x509 certificate
-{{% /md %}}</dd>
-</dl>
+{{% /md %}}</dd></dl>
 {{% /choosable %}}
 
 {{% choosable language nodejs %}}
-<dl class="resources-properties">
-
-    <dt class="property-optional"
+<dl class="resources-properties"><dt class="property-optional"
             title="Optional">
         <span id="x509certificate_nodejs">
 <a href="#x509certificate_nodejs" style="color: inherit; text-decoration: inherit;">x509Certificate</a>
@@ -1620,14 +1465,11 @@ The x509 certificate
     </dt>
     <dd>{{% md %}}-
 The x509 certificate
-{{% /md %}}</dd>
-</dl>
+{{% /md %}}</dd></dl>
 {{% /choosable %}}
 
 {{% choosable language python %}}
-<dl class="resources-properties">
-
-    <dt class="property-optional"
+<dl class="resources-properties"><dt class="property-optional"
             title="Optional">
         <span id="x509_certificate_python">
 <a href="#x509_certificate_python" style="color: inherit; text-decoration: inherit;">x509_<wbr>certificate</a>
@@ -1637,8 +1479,7 @@ The x509 certificate
     </dt>
     <dd>{{% md %}}-
 The x509 certificate
-{{% /md %}}</dd>
-</dl>
+{{% /md %}}</dd></dl>
 {{% /choosable %}}
 ## Import
 
@@ -1667,6 +1508,6 @@ TenantInboundSamlConfig can be imported using any of these accepted formats
 	<dt>License</dt>
 	<dd>Apache-2.0</dd>
 	<dt>Notes</dt>
-	<dd>This Pulumi package is based on the [`google-beta` Terraform Provider](https://github.com/hashicorp/terraform-provider-google-beta).</dd>
+	<dd>{{% md %}}This Pulumi package is based on the [`google-beta` Terraform Provider](https://github.com/hashicorp/terraform-provider-google-beta).{{% /md %}}</dd>
 </dl>
 

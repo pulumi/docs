@@ -1,8 +1,8 @@
 
 ---
 title: "ServiceEndpointKubernetes"
-title_tag: "Resource ServiceEndpointKubernetes | Package Azure DevOps"
-meta_desc: "Explore the ServiceEndpointKubernetes resource of the Azure DevOps package, including examples, input properties, output properties, lookup functions, and supporting types. Manages a Kubernetes service endpoint within Azure DevOps."
+title_tag: "azuredevops.ServiceEndpointKubernetes"
+meta_desc: "Documentation for the azuredevops.ServiceEndpointKubernetes resource with examples, input properties, output properties, lookup functions, and supporting types."
 ---
 
 
@@ -40,9 +40,7 @@ Manages a Kubernetes service endpoint within Azure DevOps.
 
 {{% choosable language nodejs %}}
 
-<dl class="resources-properties">
-  
-    <dt
+<dl class="resources-properties"><dt
         class="property-required" title="Required">
         <span>name</span>
         <span class="property-indicator"></span>
@@ -50,9 +48,7 @@ Manages a Kubernetes service endpoint within Azure DevOps.
     </dt>
     <dd>
       The unique name of the resource.
-    </dd>
-  
-    <dt
+    </dd><dt
         class="property-required" title="Required">
         <span>args</span>
         <span class="property-indicator"></span>
@@ -60,9 +56,7 @@ Manages a Kubernetes service endpoint within Azure DevOps.
     </dt>
     <dd>
       The arguments to resource properties.
-    </dd>
-  
-    <dt
+    </dd><dt
         class="property-optional" title="Optional">
         <span>opts</span>
         <span class="property-indicator"></span>
@@ -70,10 +64,7 @@ Manages a Kubernetes service endpoint within Azure DevOps.
     </dt>
     <dd>
       Bag of options to control resource&#39;s behavior.
-    </dd>
-  
-
-</dl>
+    </dd></dl>
 
 {{% /choosable %}}
 
@@ -99,9 +90,7 @@ Manages a Kubernetes service endpoint within Azure DevOps.
 
 {{% choosable language go %}}
 
-<dl class="resources-properties">
-  
-    <dt
+<dl class="resources-properties"><dt
         class="property-optional" title="Optional">
         <span>ctx</span>
         <span class="property-indicator"></span>
@@ -109,9 +98,7 @@ Manages a Kubernetes service endpoint within Azure DevOps.
     </dt>
     <dd>
       Context object for the current deployment.
-    </dd>
-  
-    <dt
+    </dd><dt
         class="property-required" title="Required">
         <span>name</span>
         <span class="property-indicator"></span>
@@ -119,9 +106,7 @@ Manages a Kubernetes service endpoint within Azure DevOps.
     </dt>
     <dd>
       The unique name of the resource.
-    </dd>
-  
-    <dt
+    </dd><dt
         class="property-required" title="Required">
         <span>args</span>
         <span class="property-indicator"></span>
@@ -129,9 +114,7 @@ Manages a Kubernetes service endpoint within Azure DevOps.
     </dt>
     <dd>
       The arguments to resource properties.
-    </dd>
-  
-    <dt
+    </dd><dt
         class="property-optional" title="Optional">
         <span>opts</span>
         <span class="property-indicator"></span>
@@ -139,18 +122,13 @@ Manages a Kubernetes service endpoint within Azure DevOps.
     </dt>
     <dd>
       Bag of options to control resource&#39;s behavior.
-    </dd>
-  
-
-</dl>
+    </dd></dl>
 
 {{% /choosable %}}
 
 {{% choosable language csharp %}}
 
-<dl class="resources-properties">
-  
-    <dt
+<dl class="resources-properties"><dt
         class="property-required" title="Required">
         <span>name</span>
         <span class="property-indicator"></span>
@@ -158,9 +136,7 @@ Manages a Kubernetes service endpoint within Azure DevOps.
     </dt>
     <dd>
       The unique name of the resource.
-    </dd>
-  
-    <dt
+    </dd><dt
         class="property-required" title="Required">
         <span>args</span>
         <span class="property-indicator"></span>
@@ -168,9 +144,7 @@ Manages a Kubernetes service endpoint within Azure DevOps.
     </dt>
     <dd>
       The arguments to resource properties.
-    </dd>
-  
-    <dt
+    </dd><dt
         class="property-optional" title="Optional">
         <span>opts</span>
         <span class="property-indicator"></span>
@@ -178,10 +152,7 @@ Manages a Kubernetes service endpoint within Azure DevOps.
     </dt>
     <dd>
       Bag of options to control resource&#39;s behavior.
-    </dd>
-  
-
-</dl>
+    </dd></dl>
 
 {{% /choosable %}}
 
@@ -196,9 +167,7 @@ The ServiceEndpointKubernetes resource accepts the following [input]({{< relref 
 
 
 {{% choosable language csharp %}}
-<dl class="resources-properties">
-
-    <dt class="property-required"
+<dl class="resources-properties"><dt class="property-required"
             title="Required">
         <span id="apiserverurl_csharp">
 <a href="#apiserverurl_csharp" style="color: inherit; text-decoration: inherit;">Apiserver<wbr>Url</a>
@@ -207,8 +176,7 @@ The ServiceEndpointKubernetes resource accepts the following [input]({{< relref 
         <span class="property-type">string</span>
     </dt>
     <dd>{{% md %}}The Service Endpoint description.
-{{% /md %}}</dd>
-    <dt class="property-required"
+{{% /md %}}</dd><dt class="property-required"
             title="Required">
         <span id="authorizationtype_csharp">
 <a href="#authorizationtype_csharp" style="color: inherit; text-decoration: inherit;">Authorization<wbr>Type</a>
@@ -217,8 +185,7 @@ The ServiceEndpointKubernetes resource accepts the following [input]({{< relref 
         <span class="property-type">string</span>
     </dt>
     <dd>{{% md %}}The authentication method used to authenticate on the Kubernetes cluster. The value should be one of AzureSubscription, Kubeconfig, ServiceAccount.
-{{% /md %}}</dd>
-    <dt class="property-required"
+{{% /md %}}</dd><dt class="property-required"
             title="Required">
         <span id="projectid_csharp">
 <a href="#projectid_csharp" style="color: inherit; text-decoration: inherit;">Project<wbr>Id</a>
@@ -227,8 +194,7 @@ The ServiceEndpointKubernetes resource accepts the following [input]({{< relref 
         <span class="property-type">string</span>
     </dt>
     <dd>{{% md %}}The project ID or project name.
-{{% /md %}}</dd>
-    <dt class="property-required"
+{{% /md %}}</dd><dt class="property-required"
             title="Required">
         <span id="serviceendpointname_csharp">
 <a href="#serviceendpointname_csharp" style="color: inherit; text-decoration: inherit;">Service<wbr>Endpoint<wbr>Name</a>
@@ -237,8 +203,7 @@ The ServiceEndpointKubernetes resource accepts the following [input]({{< relref 
         <span class="property-type">string</span>
     </dt>
     <dd>{{% md %}}The Service Endpoint name.
-{{% /md %}}</dd>
-    <dt class="property-optional"
+{{% /md %}}</dd><dt class="property-optional"
             title="Optional">
         <span id="authorization_csharp">
 <a href="#authorization_csharp" style="color: inherit; text-decoration: inherit;">Authorization</a>
@@ -246,8 +211,7 @@ The ServiceEndpointKubernetes resource accepts the following [input]({{< relref 
         <span class="property-indicator"></span>
         <span class="property-type">Dictionary&lt;string, string&gt;</span>
     </dt>
-    <dd>{{% md %}}{{% /md %}}</dd>
-    <dt class="property-optional"
+    <dd>{{% md %}}{{% /md %}}</dd><dt class="property-optional"
             title="Optional">
         <span id="azuresubscriptions_csharp">
 <a href="#azuresubscriptions_csharp" style="color: inherit; text-decoration: inherit;">Azure<wbr>Subscriptions</a>
@@ -256,8 +220,7 @@ The ServiceEndpointKubernetes resource accepts the following [input]({{< relref 
         <span class="property-type"><a href="#serviceendpointkubernetesazuresubscription">List&lt;Pulumi.<wbr>Azure<wbr>Dev<wbr>Ops.<wbr>Inputs.<wbr>Service<wbr>Endpoint<wbr>Kubernetes<wbr>Azure<wbr>Subscription<wbr>Args&gt;</a></span>
     </dt>
     <dd>{{% md %}}The configuration for authorization_type="AzureSubscription".
-{{% /md %}}</dd>
-    <dt class="property-optional"
+{{% /md %}}</dd><dt class="property-optional"
             title="Optional">
         <span id="description_csharp">
 <a href="#description_csharp" style="color: inherit; text-decoration: inherit;">Description</a>
@@ -265,8 +228,7 @@ The ServiceEndpointKubernetes resource accepts the following [input]({{< relref 
         <span class="property-indicator"></span>
         <span class="property-type">string</span>
     </dt>
-    <dd>{{% md %}}{{% /md %}}</dd>
-    <dt class="property-optional"
+    <dd>{{% md %}}{{% /md %}}</dd><dt class="property-optional"
             title="Optional">
         <span id="kubeconfigs_csharp">
 <a href="#kubeconfigs_csharp" style="color: inherit; text-decoration: inherit;">Kubeconfigs</a>
@@ -275,8 +237,7 @@ The ServiceEndpointKubernetes resource accepts the following [input]({{< relref 
         <span class="property-type"><a href="#serviceendpointkuberneteskubeconfig">List&lt;Pulumi.<wbr>Azure<wbr>Dev<wbr>Ops.<wbr>Inputs.<wbr>Service<wbr>Endpoint<wbr>Kubernetes<wbr>Kubeconfig<wbr>Args&gt;</a></span>
     </dt>
     <dd>{{% md %}}The configuration for authorization_type="Kubeconfig".
-{{% /md %}}</dd>
-    <dt class="property-optional"
+{{% /md %}}</dd><dt class="property-optional"
             title="Optional">
         <span id="serviceaccounts_csharp">
 <a href="#serviceaccounts_csharp" style="color: inherit; text-decoration: inherit;">Service<wbr>Accounts</a>
@@ -285,14 +246,11 @@ The ServiceEndpointKubernetes resource accepts the following [input]({{< relref 
         <span class="property-type"><a href="#serviceendpointkubernetesserviceaccount">List&lt;Pulumi.<wbr>Azure<wbr>Dev<wbr>Ops.<wbr>Inputs.<wbr>Service<wbr>Endpoint<wbr>Kubernetes<wbr>Service<wbr>Account<wbr>Args&gt;</a></span>
     </dt>
     <dd>{{% md %}}The configuration for authorization_type="ServiceAccount". This type uses the credentials of a service account currently deployed to the cluster.
-{{% /md %}}</dd>
-</dl>
+{{% /md %}}</dd></dl>
 {{% /choosable %}}
 
 {{% choosable language go %}}
-<dl class="resources-properties">
-
-    <dt class="property-required"
+<dl class="resources-properties"><dt class="property-required"
             title="Required">
         <span id="apiserverurl_go">
 <a href="#apiserverurl_go" style="color: inherit; text-decoration: inherit;">Apiserver<wbr>Url</a>
@@ -301,8 +259,7 @@ The ServiceEndpointKubernetes resource accepts the following [input]({{< relref 
         <span class="property-type">string</span>
     </dt>
     <dd>{{% md %}}The Service Endpoint description.
-{{% /md %}}</dd>
-    <dt class="property-required"
+{{% /md %}}</dd><dt class="property-required"
             title="Required">
         <span id="authorizationtype_go">
 <a href="#authorizationtype_go" style="color: inherit; text-decoration: inherit;">Authorization<wbr>Type</a>
@@ -311,8 +268,7 @@ The ServiceEndpointKubernetes resource accepts the following [input]({{< relref 
         <span class="property-type">string</span>
     </dt>
     <dd>{{% md %}}The authentication method used to authenticate on the Kubernetes cluster. The value should be one of AzureSubscription, Kubeconfig, ServiceAccount.
-{{% /md %}}</dd>
-    <dt class="property-required"
+{{% /md %}}</dd><dt class="property-required"
             title="Required">
         <span id="projectid_go">
 <a href="#projectid_go" style="color: inherit; text-decoration: inherit;">Project<wbr>Id</a>
@@ -321,8 +277,7 @@ The ServiceEndpointKubernetes resource accepts the following [input]({{< relref 
         <span class="property-type">string</span>
     </dt>
     <dd>{{% md %}}The project ID or project name.
-{{% /md %}}</dd>
-    <dt class="property-required"
+{{% /md %}}</dd><dt class="property-required"
             title="Required">
         <span id="serviceendpointname_go">
 <a href="#serviceendpointname_go" style="color: inherit; text-decoration: inherit;">Service<wbr>Endpoint<wbr>Name</a>
@@ -331,8 +286,7 @@ The ServiceEndpointKubernetes resource accepts the following [input]({{< relref 
         <span class="property-type">string</span>
     </dt>
     <dd>{{% md %}}The Service Endpoint name.
-{{% /md %}}</dd>
-    <dt class="property-optional"
+{{% /md %}}</dd><dt class="property-optional"
             title="Optional">
         <span id="authorization_go">
 <a href="#authorization_go" style="color: inherit; text-decoration: inherit;">Authorization</a>
@@ -340,8 +294,7 @@ The ServiceEndpointKubernetes resource accepts the following [input]({{< relref 
         <span class="property-indicator"></span>
         <span class="property-type">map[string]string</span>
     </dt>
-    <dd>{{% md %}}{{% /md %}}</dd>
-    <dt class="property-optional"
+    <dd>{{% md %}}{{% /md %}}</dd><dt class="property-optional"
             title="Optional">
         <span id="azuresubscriptions_go">
 <a href="#azuresubscriptions_go" style="color: inherit; text-decoration: inherit;">Azure<wbr>Subscriptions</a>
@@ -350,8 +303,7 @@ The ServiceEndpointKubernetes resource accepts the following [input]({{< relref 
         <span class="property-type"><a href="#serviceendpointkubernetesazuresubscription">[]Service<wbr>Endpoint<wbr>Kubernetes<wbr>Azure<wbr>Subscription</a></span>
     </dt>
     <dd>{{% md %}}The configuration for authorization_type="AzureSubscription".
-{{% /md %}}</dd>
-    <dt class="property-optional"
+{{% /md %}}</dd><dt class="property-optional"
             title="Optional">
         <span id="description_go">
 <a href="#description_go" style="color: inherit; text-decoration: inherit;">Description</a>
@@ -359,8 +311,7 @@ The ServiceEndpointKubernetes resource accepts the following [input]({{< relref 
         <span class="property-indicator"></span>
         <span class="property-type">string</span>
     </dt>
-    <dd>{{% md %}}{{% /md %}}</dd>
-    <dt class="property-optional"
+    <dd>{{% md %}}{{% /md %}}</dd><dt class="property-optional"
             title="Optional">
         <span id="kubeconfigs_go">
 <a href="#kubeconfigs_go" style="color: inherit; text-decoration: inherit;">Kubeconfigs</a>
@@ -369,8 +320,7 @@ The ServiceEndpointKubernetes resource accepts the following [input]({{< relref 
         <span class="property-type"><a href="#serviceendpointkuberneteskubeconfig">[]Service<wbr>Endpoint<wbr>Kubernetes<wbr>Kubeconfig</a></span>
     </dt>
     <dd>{{% md %}}The configuration for authorization_type="Kubeconfig".
-{{% /md %}}</dd>
-    <dt class="property-optional"
+{{% /md %}}</dd><dt class="property-optional"
             title="Optional">
         <span id="serviceaccounts_go">
 <a href="#serviceaccounts_go" style="color: inherit; text-decoration: inherit;">Service<wbr>Accounts</a>
@@ -379,14 +329,11 @@ The ServiceEndpointKubernetes resource accepts the following [input]({{< relref 
         <span class="property-type"><a href="#serviceendpointkubernetesserviceaccount">[]Service<wbr>Endpoint<wbr>Kubernetes<wbr>Service<wbr>Account</a></span>
     </dt>
     <dd>{{% md %}}The configuration for authorization_type="ServiceAccount". This type uses the credentials of a service account currently deployed to the cluster.
-{{% /md %}}</dd>
-</dl>
+{{% /md %}}</dd></dl>
 {{% /choosable %}}
 
 {{% choosable language nodejs %}}
-<dl class="resources-properties">
-
-    <dt class="property-required"
+<dl class="resources-properties"><dt class="property-required"
             title="Required">
         <span id="apiserverurl_nodejs">
 <a href="#apiserverurl_nodejs" style="color: inherit; text-decoration: inherit;">apiserver<wbr>Url</a>
@@ -395,8 +342,7 @@ The ServiceEndpointKubernetes resource accepts the following [input]({{< relref 
         <span class="property-type">string</span>
     </dt>
     <dd>{{% md %}}The Service Endpoint description.
-{{% /md %}}</dd>
-    <dt class="property-required"
+{{% /md %}}</dd><dt class="property-required"
             title="Required">
         <span id="authorizationtype_nodejs">
 <a href="#authorizationtype_nodejs" style="color: inherit; text-decoration: inherit;">authorization<wbr>Type</a>
@@ -405,8 +351,7 @@ The ServiceEndpointKubernetes resource accepts the following [input]({{< relref 
         <span class="property-type">string</span>
     </dt>
     <dd>{{% md %}}The authentication method used to authenticate on the Kubernetes cluster. The value should be one of AzureSubscription, Kubeconfig, ServiceAccount.
-{{% /md %}}</dd>
-    <dt class="property-required"
+{{% /md %}}</dd><dt class="property-required"
             title="Required">
         <span id="projectid_nodejs">
 <a href="#projectid_nodejs" style="color: inherit; text-decoration: inherit;">project<wbr>Id</a>
@@ -415,8 +360,7 @@ The ServiceEndpointKubernetes resource accepts the following [input]({{< relref 
         <span class="property-type">string</span>
     </dt>
     <dd>{{% md %}}The project ID or project name.
-{{% /md %}}</dd>
-    <dt class="property-required"
+{{% /md %}}</dd><dt class="property-required"
             title="Required">
         <span id="serviceendpointname_nodejs">
 <a href="#serviceendpointname_nodejs" style="color: inherit; text-decoration: inherit;">service<wbr>Endpoint<wbr>Name</a>
@@ -425,8 +369,7 @@ The ServiceEndpointKubernetes resource accepts the following [input]({{< relref 
         <span class="property-type">string</span>
     </dt>
     <dd>{{% md %}}The Service Endpoint name.
-{{% /md %}}</dd>
-    <dt class="property-optional"
+{{% /md %}}</dd><dt class="property-optional"
             title="Optional">
         <span id="authorization_nodejs">
 <a href="#authorization_nodejs" style="color: inherit; text-decoration: inherit;">authorization</a>
@@ -434,8 +377,7 @@ The ServiceEndpointKubernetes resource accepts the following [input]({{< relref 
         <span class="property-indicator"></span>
         <span class="property-type">{[key: string]: string}</span>
     </dt>
-    <dd>{{% md %}}{{% /md %}}</dd>
-    <dt class="property-optional"
+    <dd>{{% md %}}{{% /md %}}</dd><dt class="property-optional"
             title="Optional">
         <span id="azuresubscriptions_nodejs">
 <a href="#azuresubscriptions_nodejs" style="color: inherit; text-decoration: inherit;">azure<wbr>Subscriptions</a>
@@ -444,8 +386,7 @@ The ServiceEndpointKubernetes resource accepts the following [input]({{< relref 
         <span class="property-type"><a href="#serviceendpointkubernetesazuresubscription">Service<wbr>Endpoint<wbr>Kubernetes<wbr>Azure<wbr>Subscription[]</a></span>
     </dt>
     <dd>{{% md %}}The configuration for authorization_type="AzureSubscription".
-{{% /md %}}</dd>
-    <dt class="property-optional"
+{{% /md %}}</dd><dt class="property-optional"
             title="Optional">
         <span id="description_nodejs">
 <a href="#description_nodejs" style="color: inherit; text-decoration: inherit;">description</a>
@@ -453,8 +394,7 @@ The ServiceEndpointKubernetes resource accepts the following [input]({{< relref 
         <span class="property-indicator"></span>
         <span class="property-type">string</span>
     </dt>
-    <dd>{{% md %}}{{% /md %}}</dd>
-    <dt class="property-optional"
+    <dd>{{% md %}}{{% /md %}}</dd><dt class="property-optional"
             title="Optional">
         <span id="kubeconfigs_nodejs">
 <a href="#kubeconfigs_nodejs" style="color: inherit; text-decoration: inherit;">kubeconfigs</a>
@@ -463,8 +403,7 @@ The ServiceEndpointKubernetes resource accepts the following [input]({{< relref 
         <span class="property-type"><a href="#serviceendpointkuberneteskubeconfig">Service<wbr>Endpoint<wbr>Kubernetes<wbr>Kubeconfig[]</a></span>
     </dt>
     <dd>{{% md %}}The configuration for authorization_type="Kubeconfig".
-{{% /md %}}</dd>
-    <dt class="property-optional"
+{{% /md %}}</dd><dt class="property-optional"
             title="Optional">
         <span id="serviceaccounts_nodejs">
 <a href="#serviceaccounts_nodejs" style="color: inherit; text-decoration: inherit;">service<wbr>Accounts</a>
@@ -473,14 +412,11 @@ The ServiceEndpointKubernetes resource accepts the following [input]({{< relref 
         <span class="property-type"><a href="#serviceendpointkubernetesserviceaccount">Service<wbr>Endpoint<wbr>Kubernetes<wbr>Service<wbr>Account[]</a></span>
     </dt>
     <dd>{{% md %}}The configuration for authorization_type="ServiceAccount". This type uses the credentials of a service account currently deployed to the cluster.
-{{% /md %}}</dd>
-</dl>
+{{% /md %}}</dd></dl>
 {{% /choosable %}}
 
 {{% choosable language python %}}
-<dl class="resources-properties">
-
-    <dt class="property-required"
+<dl class="resources-properties"><dt class="property-required"
             title="Required">
         <span id="apiserver_url_python">
 <a href="#apiserver_url_python" style="color: inherit; text-decoration: inherit;">apiserver_<wbr>url</a>
@@ -489,8 +425,7 @@ The ServiceEndpointKubernetes resource accepts the following [input]({{< relref 
         <span class="property-type">str</span>
     </dt>
     <dd>{{% md %}}The Service Endpoint description.
-{{% /md %}}</dd>
-    <dt class="property-required"
+{{% /md %}}</dd><dt class="property-required"
             title="Required">
         <span id="authorization_type_python">
 <a href="#authorization_type_python" style="color: inherit; text-decoration: inherit;">authorization_<wbr>type</a>
@@ -499,8 +434,7 @@ The ServiceEndpointKubernetes resource accepts the following [input]({{< relref 
         <span class="property-type">str</span>
     </dt>
     <dd>{{% md %}}The authentication method used to authenticate on the Kubernetes cluster. The value should be one of AzureSubscription, Kubeconfig, ServiceAccount.
-{{% /md %}}</dd>
-    <dt class="property-required"
+{{% /md %}}</dd><dt class="property-required"
             title="Required">
         <span id="project_id_python">
 <a href="#project_id_python" style="color: inherit; text-decoration: inherit;">project_<wbr>id</a>
@@ -509,8 +443,7 @@ The ServiceEndpointKubernetes resource accepts the following [input]({{< relref 
         <span class="property-type">str</span>
     </dt>
     <dd>{{% md %}}The project ID or project name.
-{{% /md %}}</dd>
-    <dt class="property-required"
+{{% /md %}}</dd><dt class="property-required"
             title="Required">
         <span id="service_endpoint_name_python">
 <a href="#service_endpoint_name_python" style="color: inherit; text-decoration: inherit;">service_<wbr>endpoint_<wbr>name</a>
@@ -519,8 +452,7 @@ The ServiceEndpointKubernetes resource accepts the following [input]({{< relref 
         <span class="property-type">str</span>
     </dt>
     <dd>{{% md %}}The Service Endpoint name.
-{{% /md %}}</dd>
-    <dt class="property-optional"
+{{% /md %}}</dd><dt class="property-optional"
             title="Optional">
         <span id="authorization_python">
 <a href="#authorization_python" style="color: inherit; text-decoration: inherit;">authorization</a>
@@ -528,8 +460,7 @@ The ServiceEndpointKubernetes resource accepts the following [input]({{< relref 
         <span class="property-indicator"></span>
         <span class="property-type">Mapping[str, str]</span>
     </dt>
-    <dd>{{% md %}}{{% /md %}}</dd>
-    <dt class="property-optional"
+    <dd>{{% md %}}{{% /md %}}</dd><dt class="property-optional"
             title="Optional">
         <span id="azure_subscriptions_python">
 <a href="#azure_subscriptions_python" style="color: inherit; text-decoration: inherit;">azure_<wbr>subscriptions</a>
@@ -538,8 +469,7 @@ The ServiceEndpointKubernetes resource accepts the following [input]({{< relref 
         <span class="property-type"><a href="#serviceendpointkubernetesazuresubscription">Sequence[Service<wbr>Endpoint<wbr>Kubernetes<wbr>Azure<wbr>Subscription<wbr>Args]</a></span>
     </dt>
     <dd>{{% md %}}The configuration for authorization_type="AzureSubscription".
-{{% /md %}}</dd>
-    <dt class="property-optional"
+{{% /md %}}</dd><dt class="property-optional"
             title="Optional">
         <span id="description_python">
 <a href="#description_python" style="color: inherit; text-decoration: inherit;">description</a>
@@ -547,8 +477,7 @@ The ServiceEndpointKubernetes resource accepts the following [input]({{< relref 
         <span class="property-indicator"></span>
         <span class="property-type">str</span>
     </dt>
-    <dd>{{% md %}}{{% /md %}}</dd>
-    <dt class="property-optional"
+    <dd>{{% md %}}{{% /md %}}</dd><dt class="property-optional"
             title="Optional">
         <span id="kubeconfigs_python">
 <a href="#kubeconfigs_python" style="color: inherit; text-decoration: inherit;">kubeconfigs</a>
@@ -557,8 +486,7 @@ The ServiceEndpointKubernetes resource accepts the following [input]({{< relref 
         <span class="property-type"><a href="#serviceendpointkuberneteskubeconfig">Sequence[Service<wbr>Endpoint<wbr>Kubernetes<wbr>Kubeconfig<wbr>Args]</a></span>
     </dt>
     <dd>{{% md %}}The configuration for authorization_type="Kubeconfig".
-{{% /md %}}</dd>
-    <dt class="property-optional"
+{{% /md %}}</dd><dt class="property-optional"
             title="Optional">
         <span id="service_accounts_python">
 <a href="#service_accounts_python" style="color: inherit; text-decoration: inherit;">service_<wbr>accounts</a>
@@ -567,8 +495,7 @@ The ServiceEndpointKubernetes resource accepts the following [input]({{< relref 
         <span class="property-type"><a href="#serviceendpointkubernetesserviceaccount">Sequence[Service<wbr>Endpoint<wbr>Kubernetes<wbr>Service<wbr>Account<wbr>Args]</a></span>
     </dt>
     <dd>{{% md %}}The configuration for authorization_type="ServiceAccount". This type uses the credentials of a service account currently deployed to the cluster.
-{{% /md %}}</dd>
-</dl>
+{{% /md %}}</dd></dl>
 {{% /choosable %}}
 
 
@@ -579,9 +506,7 @@ All [input](#inputs) properties are implicitly available as output properties. A
 
 
 {{% choosable language csharp %}}
-<dl class="resources-properties">
-
-    <dt class="property-"
+<dl class="resources-properties"><dt class="property-"
             title="">
         <span id="id_csharp">
 <a href="#id_csharp" style="color: inherit; text-decoration: inherit;">Id</a>
@@ -589,14 +514,11 @@ All [input](#inputs) properties are implicitly available as output properties. A
         <span class="property-indicator"></span>
         <span class="property-type">string</span>
     </dt>
-    <dd>{{% md %}}The provider-assigned unique ID for this managed resource.{{% /md %}}</dd>
-</dl>
+    <dd>{{% md %}}The provider-assigned unique ID for this managed resource.{{% /md %}}</dd></dl>
 {{% /choosable %}}
 
 {{% choosable language go %}}
-<dl class="resources-properties">
-
-    <dt class="property-"
+<dl class="resources-properties"><dt class="property-"
             title="">
         <span id="id_go">
 <a href="#id_go" style="color: inherit; text-decoration: inherit;">Id</a>
@@ -604,14 +526,11 @@ All [input](#inputs) properties are implicitly available as output properties. A
         <span class="property-indicator"></span>
         <span class="property-type">string</span>
     </dt>
-    <dd>{{% md %}}The provider-assigned unique ID for this managed resource.{{% /md %}}</dd>
-</dl>
+    <dd>{{% md %}}The provider-assigned unique ID for this managed resource.{{% /md %}}</dd></dl>
 {{% /choosable %}}
 
 {{% choosable language nodejs %}}
-<dl class="resources-properties">
-
-    <dt class="property-"
+<dl class="resources-properties"><dt class="property-"
             title="">
         <span id="id_nodejs">
 <a href="#id_nodejs" style="color: inherit; text-decoration: inherit;">id</a>
@@ -619,14 +538,11 @@ All [input](#inputs) properties are implicitly available as output properties. A
         <span class="property-indicator"></span>
         <span class="property-type">string</span>
     </dt>
-    <dd>{{% md %}}The provider-assigned unique ID for this managed resource.{{% /md %}}</dd>
-</dl>
+    <dd>{{% md %}}The provider-assigned unique ID for this managed resource.{{% /md %}}</dd></dl>
 {{% /choosable %}}
 
 {{% choosable language python %}}
-<dl class="resources-properties">
-
-    <dt class="property-"
+<dl class="resources-properties"><dt class="property-"
             title="">
         <span id="id_python">
 <a href="#id_python" style="color: inherit; text-decoration: inherit;">id</a>
@@ -634,8 +550,7 @@ All [input](#inputs) properties are implicitly available as output properties. A
         <span class="property-indicator"></span>
         <span class="property-type">str</span>
     </dt>
-    <dd>{{% md %}}The provider-assigned unique ID for this managed resource.{{% /md %}}</dd>
-</dl>
+    <dd>{{% md %}}The provider-assigned unique ID for this managed resource.{{% /md %}}</dd></dl>
 {{% /choosable %}}
 
 
@@ -762,9 +677,7 @@ The following state arguments are supported:
 
 
 {{% choosable language csharp %}}
-<dl class="resources-properties">
-
-    <dt class="property-optional"
+<dl class="resources-properties"><dt class="property-optional"
             title="Optional">
         <span id="state_apiserverurl_csharp">
 <a href="#state_apiserverurl_csharp" style="color: inherit; text-decoration: inherit;">Apiserver<wbr>Url</a>
@@ -773,8 +686,7 @@ The following state arguments are supported:
         <span class="property-type">string</span>
     </dt>
     <dd>{{% md %}}The Service Endpoint description.
-{{% /md %}}</dd>
-    <dt class="property-optional"
+{{% /md %}}</dd><dt class="property-optional"
             title="Optional">
         <span id="state_authorization_csharp">
 <a href="#state_authorization_csharp" style="color: inherit; text-decoration: inherit;">Authorization</a>
@@ -782,8 +694,7 @@ The following state arguments are supported:
         <span class="property-indicator"></span>
         <span class="property-type">Dictionary&lt;string, string&gt;</span>
     </dt>
-    <dd>{{% md %}}{{% /md %}}</dd>
-    <dt class="property-optional"
+    <dd>{{% md %}}{{% /md %}}</dd><dt class="property-optional"
             title="Optional">
         <span id="state_authorizationtype_csharp">
 <a href="#state_authorizationtype_csharp" style="color: inherit; text-decoration: inherit;">Authorization<wbr>Type</a>
@@ -792,8 +703,7 @@ The following state arguments are supported:
         <span class="property-type">string</span>
     </dt>
     <dd>{{% md %}}The authentication method used to authenticate on the Kubernetes cluster. The value should be one of AzureSubscription, Kubeconfig, ServiceAccount.
-{{% /md %}}</dd>
-    <dt class="property-optional"
+{{% /md %}}</dd><dt class="property-optional"
             title="Optional">
         <span id="state_azuresubscriptions_csharp">
 <a href="#state_azuresubscriptions_csharp" style="color: inherit; text-decoration: inherit;">Azure<wbr>Subscriptions</a>
@@ -802,8 +712,7 @@ The following state arguments are supported:
         <span class="property-type"><a href="#serviceendpointkubernetesazuresubscription">List&lt;Pulumi.<wbr>Azure<wbr>Dev<wbr>Ops.<wbr>Inputs.<wbr>Service<wbr>Endpoint<wbr>Kubernetes<wbr>Azure<wbr>Subscription<wbr>Args&gt;</a></span>
     </dt>
     <dd>{{% md %}}The configuration for authorization_type="AzureSubscription".
-{{% /md %}}</dd>
-    <dt class="property-optional"
+{{% /md %}}</dd><dt class="property-optional"
             title="Optional">
         <span id="state_description_csharp">
 <a href="#state_description_csharp" style="color: inherit; text-decoration: inherit;">Description</a>
@@ -811,8 +720,7 @@ The following state arguments are supported:
         <span class="property-indicator"></span>
         <span class="property-type">string</span>
     </dt>
-    <dd>{{% md %}}{{% /md %}}</dd>
-    <dt class="property-optional"
+    <dd>{{% md %}}{{% /md %}}</dd><dt class="property-optional"
             title="Optional">
         <span id="state_kubeconfigs_csharp">
 <a href="#state_kubeconfigs_csharp" style="color: inherit; text-decoration: inherit;">Kubeconfigs</a>
@@ -821,8 +729,7 @@ The following state arguments are supported:
         <span class="property-type"><a href="#serviceendpointkuberneteskubeconfig">List&lt;Pulumi.<wbr>Azure<wbr>Dev<wbr>Ops.<wbr>Inputs.<wbr>Service<wbr>Endpoint<wbr>Kubernetes<wbr>Kubeconfig<wbr>Args&gt;</a></span>
     </dt>
     <dd>{{% md %}}The configuration for authorization_type="Kubeconfig".
-{{% /md %}}</dd>
-    <dt class="property-optional"
+{{% /md %}}</dd><dt class="property-optional"
             title="Optional">
         <span id="state_projectid_csharp">
 <a href="#state_projectid_csharp" style="color: inherit; text-decoration: inherit;">Project<wbr>Id</a>
@@ -831,8 +738,7 @@ The following state arguments are supported:
         <span class="property-type">string</span>
     </dt>
     <dd>{{% md %}}The project ID or project name.
-{{% /md %}}</dd>
-    <dt class="property-optional"
+{{% /md %}}</dd><dt class="property-optional"
             title="Optional">
         <span id="state_serviceaccounts_csharp">
 <a href="#state_serviceaccounts_csharp" style="color: inherit; text-decoration: inherit;">Service<wbr>Accounts</a>
@@ -841,8 +747,7 @@ The following state arguments are supported:
         <span class="property-type"><a href="#serviceendpointkubernetesserviceaccount">List&lt;Pulumi.<wbr>Azure<wbr>Dev<wbr>Ops.<wbr>Inputs.<wbr>Service<wbr>Endpoint<wbr>Kubernetes<wbr>Service<wbr>Account<wbr>Args&gt;</a></span>
     </dt>
     <dd>{{% md %}}The configuration for authorization_type="ServiceAccount". This type uses the credentials of a service account currently deployed to the cluster.
-{{% /md %}}</dd>
-    <dt class="property-optional"
+{{% /md %}}</dd><dt class="property-optional"
             title="Optional">
         <span id="state_serviceendpointname_csharp">
 <a href="#state_serviceendpointname_csharp" style="color: inherit; text-decoration: inherit;">Service<wbr>Endpoint<wbr>Name</a>
@@ -851,14 +756,11 @@ The following state arguments are supported:
         <span class="property-type">string</span>
     </dt>
     <dd>{{% md %}}The Service Endpoint name.
-{{% /md %}}</dd>
-</dl>
+{{% /md %}}</dd></dl>
 {{% /choosable %}}
 
 {{% choosable language go %}}
-<dl class="resources-properties">
-
-    <dt class="property-optional"
+<dl class="resources-properties"><dt class="property-optional"
             title="Optional">
         <span id="state_apiserverurl_go">
 <a href="#state_apiserverurl_go" style="color: inherit; text-decoration: inherit;">Apiserver<wbr>Url</a>
@@ -867,8 +769,7 @@ The following state arguments are supported:
         <span class="property-type">string</span>
     </dt>
     <dd>{{% md %}}The Service Endpoint description.
-{{% /md %}}</dd>
-    <dt class="property-optional"
+{{% /md %}}</dd><dt class="property-optional"
             title="Optional">
         <span id="state_authorization_go">
 <a href="#state_authorization_go" style="color: inherit; text-decoration: inherit;">Authorization</a>
@@ -876,8 +777,7 @@ The following state arguments are supported:
         <span class="property-indicator"></span>
         <span class="property-type">map[string]string</span>
     </dt>
-    <dd>{{% md %}}{{% /md %}}</dd>
-    <dt class="property-optional"
+    <dd>{{% md %}}{{% /md %}}</dd><dt class="property-optional"
             title="Optional">
         <span id="state_authorizationtype_go">
 <a href="#state_authorizationtype_go" style="color: inherit; text-decoration: inherit;">Authorization<wbr>Type</a>
@@ -886,8 +786,7 @@ The following state arguments are supported:
         <span class="property-type">string</span>
     </dt>
     <dd>{{% md %}}The authentication method used to authenticate on the Kubernetes cluster. The value should be one of AzureSubscription, Kubeconfig, ServiceAccount.
-{{% /md %}}</dd>
-    <dt class="property-optional"
+{{% /md %}}</dd><dt class="property-optional"
             title="Optional">
         <span id="state_azuresubscriptions_go">
 <a href="#state_azuresubscriptions_go" style="color: inherit; text-decoration: inherit;">Azure<wbr>Subscriptions</a>
@@ -896,8 +795,7 @@ The following state arguments are supported:
         <span class="property-type"><a href="#serviceendpointkubernetesazuresubscription">[]Service<wbr>Endpoint<wbr>Kubernetes<wbr>Azure<wbr>Subscription</a></span>
     </dt>
     <dd>{{% md %}}The configuration for authorization_type="AzureSubscription".
-{{% /md %}}</dd>
-    <dt class="property-optional"
+{{% /md %}}</dd><dt class="property-optional"
             title="Optional">
         <span id="state_description_go">
 <a href="#state_description_go" style="color: inherit; text-decoration: inherit;">Description</a>
@@ -905,8 +803,7 @@ The following state arguments are supported:
         <span class="property-indicator"></span>
         <span class="property-type">string</span>
     </dt>
-    <dd>{{% md %}}{{% /md %}}</dd>
-    <dt class="property-optional"
+    <dd>{{% md %}}{{% /md %}}</dd><dt class="property-optional"
             title="Optional">
         <span id="state_kubeconfigs_go">
 <a href="#state_kubeconfigs_go" style="color: inherit; text-decoration: inherit;">Kubeconfigs</a>
@@ -915,8 +812,7 @@ The following state arguments are supported:
         <span class="property-type"><a href="#serviceendpointkuberneteskubeconfig">[]Service<wbr>Endpoint<wbr>Kubernetes<wbr>Kubeconfig</a></span>
     </dt>
     <dd>{{% md %}}The configuration for authorization_type="Kubeconfig".
-{{% /md %}}</dd>
-    <dt class="property-optional"
+{{% /md %}}</dd><dt class="property-optional"
             title="Optional">
         <span id="state_projectid_go">
 <a href="#state_projectid_go" style="color: inherit; text-decoration: inherit;">Project<wbr>Id</a>
@@ -925,8 +821,7 @@ The following state arguments are supported:
         <span class="property-type">string</span>
     </dt>
     <dd>{{% md %}}The project ID or project name.
-{{% /md %}}</dd>
-    <dt class="property-optional"
+{{% /md %}}</dd><dt class="property-optional"
             title="Optional">
         <span id="state_serviceaccounts_go">
 <a href="#state_serviceaccounts_go" style="color: inherit; text-decoration: inherit;">Service<wbr>Accounts</a>
@@ -935,8 +830,7 @@ The following state arguments are supported:
         <span class="property-type"><a href="#serviceendpointkubernetesserviceaccount">[]Service<wbr>Endpoint<wbr>Kubernetes<wbr>Service<wbr>Account</a></span>
     </dt>
     <dd>{{% md %}}The configuration for authorization_type="ServiceAccount". This type uses the credentials of a service account currently deployed to the cluster.
-{{% /md %}}</dd>
-    <dt class="property-optional"
+{{% /md %}}</dd><dt class="property-optional"
             title="Optional">
         <span id="state_serviceendpointname_go">
 <a href="#state_serviceendpointname_go" style="color: inherit; text-decoration: inherit;">Service<wbr>Endpoint<wbr>Name</a>
@@ -945,14 +839,11 @@ The following state arguments are supported:
         <span class="property-type">string</span>
     </dt>
     <dd>{{% md %}}The Service Endpoint name.
-{{% /md %}}</dd>
-</dl>
+{{% /md %}}</dd></dl>
 {{% /choosable %}}
 
 {{% choosable language nodejs %}}
-<dl class="resources-properties">
-
-    <dt class="property-optional"
+<dl class="resources-properties"><dt class="property-optional"
             title="Optional">
         <span id="state_apiserverurl_nodejs">
 <a href="#state_apiserverurl_nodejs" style="color: inherit; text-decoration: inherit;">apiserver<wbr>Url</a>
@@ -961,8 +852,7 @@ The following state arguments are supported:
         <span class="property-type">string</span>
     </dt>
     <dd>{{% md %}}The Service Endpoint description.
-{{% /md %}}</dd>
-    <dt class="property-optional"
+{{% /md %}}</dd><dt class="property-optional"
             title="Optional">
         <span id="state_authorization_nodejs">
 <a href="#state_authorization_nodejs" style="color: inherit; text-decoration: inherit;">authorization</a>
@@ -970,8 +860,7 @@ The following state arguments are supported:
         <span class="property-indicator"></span>
         <span class="property-type">{[key: string]: string}</span>
     </dt>
-    <dd>{{% md %}}{{% /md %}}</dd>
-    <dt class="property-optional"
+    <dd>{{% md %}}{{% /md %}}</dd><dt class="property-optional"
             title="Optional">
         <span id="state_authorizationtype_nodejs">
 <a href="#state_authorizationtype_nodejs" style="color: inherit; text-decoration: inherit;">authorization<wbr>Type</a>
@@ -980,8 +869,7 @@ The following state arguments are supported:
         <span class="property-type">string</span>
     </dt>
     <dd>{{% md %}}The authentication method used to authenticate on the Kubernetes cluster. The value should be one of AzureSubscription, Kubeconfig, ServiceAccount.
-{{% /md %}}</dd>
-    <dt class="property-optional"
+{{% /md %}}</dd><dt class="property-optional"
             title="Optional">
         <span id="state_azuresubscriptions_nodejs">
 <a href="#state_azuresubscriptions_nodejs" style="color: inherit; text-decoration: inherit;">azure<wbr>Subscriptions</a>
@@ -990,8 +878,7 @@ The following state arguments are supported:
         <span class="property-type"><a href="#serviceendpointkubernetesazuresubscription">Service<wbr>Endpoint<wbr>Kubernetes<wbr>Azure<wbr>Subscription[]</a></span>
     </dt>
     <dd>{{% md %}}The configuration for authorization_type="AzureSubscription".
-{{% /md %}}</dd>
-    <dt class="property-optional"
+{{% /md %}}</dd><dt class="property-optional"
             title="Optional">
         <span id="state_description_nodejs">
 <a href="#state_description_nodejs" style="color: inherit; text-decoration: inherit;">description</a>
@@ -999,8 +886,7 @@ The following state arguments are supported:
         <span class="property-indicator"></span>
         <span class="property-type">string</span>
     </dt>
-    <dd>{{% md %}}{{% /md %}}</dd>
-    <dt class="property-optional"
+    <dd>{{% md %}}{{% /md %}}</dd><dt class="property-optional"
             title="Optional">
         <span id="state_kubeconfigs_nodejs">
 <a href="#state_kubeconfigs_nodejs" style="color: inherit; text-decoration: inherit;">kubeconfigs</a>
@@ -1009,8 +895,7 @@ The following state arguments are supported:
         <span class="property-type"><a href="#serviceendpointkuberneteskubeconfig">Service<wbr>Endpoint<wbr>Kubernetes<wbr>Kubeconfig[]</a></span>
     </dt>
     <dd>{{% md %}}The configuration for authorization_type="Kubeconfig".
-{{% /md %}}</dd>
-    <dt class="property-optional"
+{{% /md %}}</dd><dt class="property-optional"
             title="Optional">
         <span id="state_projectid_nodejs">
 <a href="#state_projectid_nodejs" style="color: inherit; text-decoration: inherit;">project<wbr>Id</a>
@@ -1019,8 +904,7 @@ The following state arguments are supported:
         <span class="property-type">string</span>
     </dt>
     <dd>{{% md %}}The project ID or project name.
-{{% /md %}}</dd>
-    <dt class="property-optional"
+{{% /md %}}</dd><dt class="property-optional"
             title="Optional">
         <span id="state_serviceaccounts_nodejs">
 <a href="#state_serviceaccounts_nodejs" style="color: inherit; text-decoration: inherit;">service<wbr>Accounts</a>
@@ -1029,8 +913,7 @@ The following state arguments are supported:
         <span class="property-type"><a href="#serviceendpointkubernetesserviceaccount">Service<wbr>Endpoint<wbr>Kubernetes<wbr>Service<wbr>Account[]</a></span>
     </dt>
     <dd>{{% md %}}The configuration for authorization_type="ServiceAccount". This type uses the credentials of a service account currently deployed to the cluster.
-{{% /md %}}</dd>
-    <dt class="property-optional"
+{{% /md %}}</dd><dt class="property-optional"
             title="Optional">
         <span id="state_serviceendpointname_nodejs">
 <a href="#state_serviceendpointname_nodejs" style="color: inherit; text-decoration: inherit;">service<wbr>Endpoint<wbr>Name</a>
@@ -1039,14 +922,11 @@ The following state arguments are supported:
         <span class="property-type">string</span>
     </dt>
     <dd>{{% md %}}The Service Endpoint name.
-{{% /md %}}</dd>
-</dl>
+{{% /md %}}</dd></dl>
 {{% /choosable %}}
 
 {{% choosable language python %}}
-<dl class="resources-properties">
-
-    <dt class="property-optional"
+<dl class="resources-properties"><dt class="property-optional"
             title="Optional">
         <span id="state_apiserver_url_python">
 <a href="#state_apiserver_url_python" style="color: inherit; text-decoration: inherit;">apiserver_<wbr>url</a>
@@ -1055,8 +935,7 @@ The following state arguments are supported:
         <span class="property-type">str</span>
     </dt>
     <dd>{{% md %}}The Service Endpoint description.
-{{% /md %}}</dd>
-    <dt class="property-optional"
+{{% /md %}}</dd><dt class="property-optional"
             title="Optional">
         <span id="state_authorization_python">
 <a href="#state_authorization_python" style="color: inherit; text-decoration: inherit;">authorization</a>
@@ -1064,8 +943,7 @@ The following state arguments are supported:
         <span class="property-indicator"></span>
         <span class="property-type">Mapping[str, str]</span>
     </dt>
-    <dd>{{% md %}}{{% /md %}}</dd>
-    <dt class="property-optional"
+    <dd>{{% md %}}{{% /md %}}</dd><dt class="property-optional"
             title="Optional">
         <span id="state_authorization_type_python">
 <a href="#state_authorization_type_python" style="color: inherit; text-decoration: inherit;">authorization_<wbr>type</a>
@@ -1074,8 +952,7 @@ The following state arguments are supported:
         <span class="property-type">str</span>
     </dt>
     <dd>{{% md %}}The authentication method used to authenticate on the Kubernetes cluster. The value should be one of AzureSubscription, Kubeconfig, ServiceAccount.
-{{% /md %}}</dd>
-    <dt class="property-optional"
+{{% /md %}}</dd><dt class="property-optional"
             title="Optional">
         <span id="state_azure_subscriptions_python">
 <a href="#state_azure_subscriptions_python" style="color: inherit; text-decoration: inherit;">azure_<wbr>subscriptions</a>
@@ -1084,8 +961,7 @@ The following state arguments are supported:
         <span class="property-type"><a href="#serviceendpointkubernetesazuresubscription">Sequence[Service<wbr>Endpoint<wbr>Kubernetes<wbr>Azure<wbr>Subscription<wbr>Args]</a></span>
     </dt>
     <dd>{{% md %}}The configuration for authorization_type="AzureSubscription".
-{{% /md %}}</dd>
-    <dt class="property-optional"
+{{% /md %}}</dd><dt class="property-optional"
             title="Optional">
         <span id="state_description_python">
 <a href="#state_description_python" style="color: inherit; text-decoration: inherit;">description</a>
@@ -1093,8 +969,7 @@ The following state arguments are supported:
         <span class="property-indicator"></span>
         <span class="property-type">str</span>
     </dt>
-    <dd>{{% md %}}{{% /md %}}</dd>
-    <dt class="property-optional"
+    <dd>{{% md %}}{{% /md %}}</dd><dt class="property-optional"
             title="Optional">
         <span id="state_kubeconfigs_python">
 <a href="#state_kubeconfigs_python" style="color: inherit; text-decoration: inherit;">kubeconfigs</a>
@@ -1103,8 +978,7 @@ The following state arguments are supported:
         <span class="property-type"><a href="#serviceendpointkuberneteskubeconfig">Sequence[Service<wbr>Endpoint<wbr>Kubernetes<wbr>Kubeconfig<wbr>Args]</a></span>
     </dt>
     <dd>{{% md %}}The configuration for authorization_type="Kubeconfig".
-{{% /md %}}</dd>
-    <dt class="property-optional"
+{{% /md %}}</dd><dt class="property-optional"
             title="Optional">
         <span id="state_project_id_python">
 <a href="#state_project_id_python" style="color: inherit; text-decoration: inherit;">project_<wbr>id</a>
@@ -1113,8 +987,7 @@ The following state arguments are supported:
         <span class="property-type">str</span>
     </dt>
     <dd>{{% md %}}The project ID or project name.
-{{% /md %}}</dd>
-    <dt class="property-optional"
+{{% /md %}}</dd><dt class="property-optional"
             title="Optional">
         <span id="state_service_accounts_python">
 <a href="#state_service_accounts_python" style="color: inherit; text-decoration: inherit;">service_<wbr>accounts</a>
@@ -1123,8 +996,7 @@ The following state arguments are supported:
         <span class="property-type"><a href="#serviceendpointkubernetesserviceaccount">Sequence[Service<wbr>Endpoint<wbr>Kubernetes<wbr>Service<wbr>Account<wbr>Args]</a></span>
     </dt>
     <dd>{{% md %}}The configuration for authorization_type="ServiceAccount". This type uses the credentials of a service account currently deployed to the cluster.
-{{% /md %}}</dd>
-    <dt class="property-optional"
+{{% /md %}}</dd><dt class="property-optional"
             title="Optional">
         <span id="state_service_endpoint_name_python">
 <a href="#state_service_endpoint_name_python" style="color: inherit; text-decoration: inherit;">service_<wbr>endpoint_<wbr>name</a>
@@ -1133,8 +1005,7 @@ The following state arguments are supported:
         <span class="property-type">str</span>
     </dt>
     <dd>{{% md %}}The Service Endpoint name.
-{{% /md %}}</dd>
-</dl>
+{{% /md %}}</dd></dl>
 {{% /choosable %}}
 
 
@@ -1149,9 +1020,7 @@ The following state arguments are supported:
 <h4 id="serviceendpointkubernetesazuresubscription">Service<wbr>Endpoint<wbr>Kubernetes<wbr>Azure<wbr>Subscription</h4>
 
 {{% choosable language csharp %}}
-<dl class="resources-properties">
-
-    <dt class="property-required"
+<dl class="resources-properties"><dt class="property-required"
             title="Required">
         <span id="clustername_csharp">
 <a href="#clustername_csharp" style="color: inherit; text-decoration: inherit;">Cluster<wbr>Name</a>
@@ -1160,8 +1029,7 @@ The following state arguments are supported:
         <span class="property-type">string</span>
     </dt>
     <dd>{{% md %}}The name of the Kubernetes cluster.
-{{% /md %}}</dd>
-    <dt class="property-required"
+{{% /md %}}</dd><dt class="property-required"
             title="Required">
         <span id="resourcegroupid_csharp">
 <a href="#resourcegroupid_csharp" style="color: inherit; text-decoration: inherit;">Resourcegroup<wbr>Id</a>
@@ -1170,8 +1038,7 @@ The following state arguments are supported:
         <span class="property-type">string</span>
     </dt>
     <dd>{{% md %}}The resource group name, to which the Kubernetes cluster is deployed.
-{{% /md %}}</dd>
-    <dt class="property-required"
+{{% /md %}}</dd><dt class="property-required"
             title="Required">
         <span id="subscriptionid_csharp">
 <a href="#subscriptionid_csharp" style="color: inherit; text-decoration: inherit;">Subscription<wbr>Id</a>
@@ -1180,8 +1047,7 @@ The following state arguments are supported:
         <span class="property-type">string</span>
     </dt>
     <dd>{{% md %}}The id of the Azure subscription.
-{{% /md %}}</dd>
-    <dt class="property-required"
+{{% /md %}}</dd><dt class="property-required"
             title="Required">
         <span id="subscriptionname_csharp">
 <a href="#subscriptionname_csharp" style="color: inherit; text-decoration: inherit;">Subscription<wbr>Name</a>
@@ -1190,8 +1056,7 @@ The following state arguments are supported:
         <span class="property-type">string</span>
     </dt>
     <dd>{{% md %}}The name of the Azure subscription.
-{{% /md %}}</dd>
-    <dt class="property-required"
+{{% /md %}}</dd><dt class="property-required"
             title="Required">
         <span id="tenantid_csharp">
 <a href="#tenantid_csharp" style="color: inherit; text-decoration: inherit;">Tenant<wbr>Id</a>
@@ -1200,8 +1065,7 @@ The following state arguments are supported:
         <span class="property-type">string</span>
     </dt>
     <dd>{{% md %}}The id of the tenant used by the subscription.
-{{% /md %}}</dd>
-    <dt class="property-optional"
+{{% /md %}}</dd><dt class="property-optional"
             title="Optional">
         <span id="azureenvironment_csharp">
 <a href="#azureenvironment_csharp" style="color: inherit; text-decoration: inherit;">Azure<wbr>Environment</a>
@@ -1210,8 +1074,7 @@ The following state arguments are supported:
         <span class="property-type">string</span>
     </dt>
     <dd>{{% md %}}Azure environment refers to whether the public cloud offering or domestic (government) clouds are being used. Currently, only the public cloud is supported. The value must be AzureCloud. This is also the default-value.
-{{% /md %}}</dd>
-    <dt class="property-optional"
+{{% /md %}}</dd><dt class="property-optional"
             title="Optional">
         <span id="clusteradmin_csharp">
 <a href="#clusteradmin_csharp" style="color: inherit; text-decoration: inherit;">Cluster<wbr>Admin</a>
@@ -1220,8 +1083,7 @@ The following state arguments are supported:
         <span class="property-type">bool</span>
     </dt>
     <dd>{{% md %}}Set this option to allow use cluster admin credentials.
-{{% /md %}}</dd>
-    <dt class="property-optional"
+{{% /md %}}</dd><dt class="property-optional"
             title="Optional">
         <span id="namespace_csharp">
 <a href="#namespace_csharp" style="color: inherit; text-decoration: inherit;">Namespace</a>
@@ -1230,14 +1092,11 @@ The following state arguments are supported:
         <span class="property-type">string</span>
     </dt>
     <dd>{{% md %}}The Kubernetes namespace. Default value is "default".
-{{% /md %}}</dd>
-</dl>
+{{% /md %}}</dd></dl>
 {{% /choosable %}}
 
 {{% choosable language go %}}
-<dl class="resources-properties">
-
-    <dt class="property-required"
+<dl class="resources-properties"><dt class="property-required"
             title="Required">
         <span id="clustername_go">
 <a href="#clustername_go" style="color: inherit; text-decoration: inherit;">Cluster<wbr>Name</a>
@@ -1246,8 +1105,7 @@ The following state arguments are supported:
         <span class="property-type">string</span>
     </dt>
     <dd>{{% md %}}The name of the Kubernetes cluster.
-{{% /md %}}</dd>
-    <dt class="property-required"
+{{% /md %}}</dd><dt class="property-required"
             title="Required">
         <span id="resourcegroupid_go">
 <a href="#resourcegroupid_go" style="color: inherit; text-decoration: inherit;">Resourcegroup<wbr>Id</a>
@@ -1256,8 +1114,7 @@ The following state arguments are supported:
         <span class="property-type">string</span>
     </dt>
     <dd>{{% md %}}The resource group name, to which the Kubernetes cluster is deployed.
-{{% /md %}}</dd>
-    <dt class="property-required"
+{{% /md %}}</dd><dt class="property-required"
             title="Required">
         <span id="subscriptionid_go">
 <a href="#subscriptionid_go" style="color: inherit; text-decoration: inherit;">Subscription<wbr>Id</a>
@@ -1266,8 +1123,7 @@ The following state arguments are supported:
         <span class="property-type">string</span>
     </dt>
     <dd>{{% md %}}The id of the Azure subscription.
-{{% /md %}}</dd>
-    <dt class="property-required"
+{{% /md %}}</dd><dt class="property-required"
             title="Required">
         <span id="subscriptionname_go">
 <a href="#subscriptionname_go" style="color: inherit; text-decoration: inherit;">Subscription<wbr>Name</a>
@@ -1276,8 +1132,7 @@ The following state arguments are supported:
         <span class="property-type">string</span>
     </dt>
     <dd>{{% md %}}The name of the Azure subscription.
-{{% /md %}}</dd>
-    <dt class="property-required"
+{{% /md %}}</dd><dt class="property-required"
             title="Required">
         <span id="tenantid_go">
 <a href="#tenantid_go" style="color: inherit; text-decoration: inherit;">Tenant<wbr>Id</a>
@@ -1286,8 +1141,7 @@ The following state arguments are supported:
         <span class="property-type">string</span>
     </dt>
     <dd>{{% md %}}The id of the tenant used by the subscription.
-{{% /md %}}</dd>
-    <dt class="property-optional"
+{{% /md %}}</dd><dt class="property-optional"
             title="Optional">
         <span id="azureenvironment_go">
 <a href="#azureenvironment_go" style="color: inherit; text-decoration: inherit;">Azure<wbr>Environment</a>
@@ -1296,8 +1150,7 @@ The following state arguments are supported:
         <span class="property-type">string</span>
     </dt>
     <dd>{{% md %}}Azure environment refers to whether the public cloud offering or domestic (government) clouds are being used. Currently, only the public cloud is supported. The value must be AzureCloud. This is also the default-value.
-{{% /md %}}</dd>
-    <dt class="property-optional"
+{{% /md %}}</dd><dt class="property-optional"
             title="Optional">
         <span id="clusteradmin_go">
 <a href="#clusteradmin_go" style="color: inherit; text-decoration: inherit;">Cluster<wbr>Admin</a>
@@ -1306,8 +1159,7 @@ The following state arguments are supported:
         <span class="property-type">bool</span>
     </dt>
     <dd>{{% md %}}Set this option to allow use cluster admin credentials.
-{{% /md %}}</dd>
-    <dt class="property-optional"
+{{% /md %}}</dd><dt class="property-optional"
             title="Optional">
         <span id="namespace_go">
 <a href="#namespace_go" style="color: inherit; text-decoration: inherit;">Namespace</a>
@@ -1316,14 +1168,11 @@ The following state arguments are supported:
         <span class="property-type">string</span>
     </dt>
     <dd>{{% md %}}The Kubernetes namespace. Default value is "default".
-{{% /md %}}</dd>
-</dl>
+{{% /md %}}</dd></dl>
 {{% /choosable %}}
 
 {{% choosable language nodejs %}}
-<dl class="resources-properties">
-
-    <dt class="property-required"
+<dl class="resources-properties"><dt class="property-required"
             title="Required">
         <span id="clustername_nodejs">
 <a href="#clustername_nodejs" style="color: inherit; text-decoration: inherit;">cluster<wbr>Name</a>
@@ -1332,8 +1181,7 @@ The following state arguments are supported:
         <span class="property-type">string</span>
     </dt>
     <dd>{{% md %}}The name of the Kubernetes cluster.
-{{% /md %}}</dd>
-    <dt class="property-required"
+{{% /md %}}</dd><dt class="property-required"
             title="Required">
         <span id="resourcegroupid_nodejs">
 <a href="#resourcegroupid_nodejs" style="color: inherit; text-decoration: inherit;">resourcegroup<wbr>Id</a>
@@ -1342,8 +1190,7 @@ The following state arguments are supported:
         <span class="property-type">string</span>
     </dt>
     <dd>{{% md %}}The resource group name, to which the Kubernetes cluster is deployed.
-{{% /md %}}</dd>
-    <dt class="property-required"
+{{% /md %}}</dd><dt class="property-required"
             title="Required">
         <span id="subscriptionid_nodejs">
 <a href="#subscriptionid_nodejs" style="color: inherit; text-decoration: inherit;">subscription<wbr>Id</a>
@@ -1352,8 +1199,7 @@ The following state arguments are supported:
         <span class="property-type">string</span>
     </dt>
     <dd>{{% md %}}The id of the Azure subscription.
-{{% /md %}}</dd>
-    <dt class="property-required"
+{{% /md %}}</dd><dt class="property-required"
             title="Required">
         <span id="subscriptionname_nodejs">
 <a href="#subscriptionname_nodejs" style="color: inherit; text-decoration: inherit;">subscription<wbr>Name</a>
@@ -1362,8 +1208,7 @@ The following state arguments are supported:
         <span class="property-type">string</span>
     </dt>
     <dd>{{% md %}}The name of the Azure subscription.
-{{% /md %}}</dd>
-    <dt class="property-required"
+{{% /md %}}</dd><dt class="property-required"
             title="Required">
         <span id="tenantid_nodejs">
 <a href="#tenantid_nodejs" style="color: inherit; text-decoration: inherit;">tenant<wbr>Id</a>
@@ -1372,8 +1217,7 @@ The following state arguments are supported:
         <span class="property-type">string</span>
     </dt>
     <dd>{{% md %}}The id of the tenant used by the subscription.
-{{% /md %}}</dd>
-    <dt class="property-optional"
+{{% /md %}}</dd><dt class="property-optional"
             title="Optional">
         <span id="azureenvironment_nodejs">
 <a href="#azureenvironment_nodejs" style="color: inherit; text-decoration: inherit;">azure<wbr>Environment</a>
@@ -1382,8 +1226,7 @@ The following state arguments are supported:
         <span class="property-type">string</span>
     </dt>
     <dd>{{% md %}}Azure environment refers to whether the public cloud offering or domestic (government) clouds are being used. Currently, only the public cloud is supported. The value must be AzureCloud. This is also the default-value.
-{{% /md %}}</dd>
-    <dt class="property-optional"
+{{% /md %}}</dd><dt class="property-optional"
             title="Optional">
         <span id="clusteradmin_nodejs">
 <a href="#clusteradmin_nodejs" style="color: inherit; text-decoration: inherit;">cluster<wbr>Admin</a>
@@ -1392,8 +1235,7 @@ The following state arguments are supported:
         <span class="property-type">boolean</span>
     </dt>
     <dd>{{% md %}}Set this option to allow use cluster admin credentials.
-{{% /md %}}</dd>
-    <dt class="property-optional"
+{{% /md %}}</dd><dt class="property-optional"
             title="Optional">
         <span id="namespace_nodejs">
 <a href="#namespace_nodejs" style="color: inherit; text-decoration: inherit;">namespace</a>
@@ -1402,14 +1244,11 @@ The following state arguments are supported:
         <span class="property-type">string</span>
     </dt>
     <dd>{{% md %}}The Kubernetes namespace. Default value is "default".
-{{% /md %}}</dd>
-</dl>
+{{% /md %}}</dd></dl>
 {{% /choosable %}}
 
 {{% choosable language python %}}
-<dl class="resources-properties">
-
-    <dt class="property-required"
+<dl class="resources-properties"><dt class="property-required"
             title="Required">
         <span id="cluster_name_python">
 <a href="#cluster_name_python" style="color: inherit; text-decoration: inherit;">cluster_<wbr>name</a>
@@ -1418,8 +1257,7 @@ The following state arguments are supported:
         <span class="property-type">str</span>
     </dt>
     <dd>{{% md %}}The name of the Kubernetes cluster.
-{{% /md %}}</dd>
-    <dt class="property-required"
+{{% /md %}}</dd><dt class="property-required"
             title="Required">
         <span id="resourcegroup_id_python">
 <a href="#resourcegroup_id_python" style="color: inherit; text-decoration: inherit;">resourcegroup_<wbr>id</a>
@@ -1428,8 +1266,7 @@ The following state arguments are supported:
         <span class="property-type">str</span>
     </dt>
     <dd>{{% md %}}The resource group name, to which the Kubernetes cluster is deployed.
-{{% /md %}}</dd>
-    <dt class="property-required"
+{{% /md %}}</dd><dt class="property-required"
             title="Required">
         <span id="subscription_id_python">
 <a href="#subscription_id_python" style="color: inherit; text-decoration: inherit;">subscription_<wbr>id</a>
@@ -1438,8 +1275,7 @@ The following state arguments are supported:
         <span class="property-type">str</span>
     </dt>
     <dd>{{% md %}}The id of the Azure subscription.
-{{% /md %}}</dd>
-    <dt class="property-required"
+{{% /md %}}</dd><dt class="property-required"
             title="Required">
         <span id="subscription_name_python">
 <a href="#subscription_name_python" style="color: inherit; text-decoration: inherit;">subscription_<wbr>name</a>
@@ -1448,8 +1284,7 @@ The following state arguments are supported:
         <span class="property-type">str</span>
     </dt>
     <dd>{{% md %}}The name of the Azure subscription.
-{{% /md %}}</dd>
-    <dt class="property-required"
+{{% /md %}}</dd><dt class="property-required"
             title="Required">
         <span id="tenant_id_python">
 <a href="#tenant_id_python" style="color: inherit; text-decoration: inherit;">tenant_<wbr>id</a>
@@ -1458,8 +1293,7 @@ The following state arguments are supported:
         <span class="property-type">str</span>
     </dt>
     <dd>{{% md %}}The id of the tenant used by the subscription.
-{{% /md %}}</dd>
-    <dt class="property-optional"
+{{% /md %}}</dd><dt class="property-optional"
             title="Optional">
         <span id="azure_environment_python">
 <a href="#azure_environment_python" style="color: inherit; text-decoration: inherit;">azure_<wbr>environment</a>
@@ -1468,8 +1302,7 @@ The following state arguments are supported:
         <span class="property-type">str</span>
     </dt>
     <dd>{{% md %}}Azure environment refers to whether the public cloud offering or domestic (government) clouds are being used. Currently, only the public cloud is supported. The value must be AzureCloud. This is also the default-value.
-{{% /md %}}</dd>
-    <dt class="property-optional"
+{{% /md %}}</dd><dt class="property-optional"
             title="Optional">
         <span id="cluster_admin_python">
 <a href="#cluster_admin_python" style="color: inherit; text-decoration: inherit;">cluster_<wbr>admin</a>
@@ -1478,8 +1311,7 @@ The following state arguments are supported:
         <span class="property-type">bool</span>
     </dt>
     <dd>{{% md %}}Set this option to allow use cluster admin credentials.
-{{% /md %}}</dd>
-    <dt class="property-optional"
+{{% /md %}}</dd><dt class="property-optional"
             title="Optional">
         <span id="namespace_python">
 <a href="#namespace_python" style="color: inherit; text-decoration: inherit;">namespace</a>
@@ -1488,16 +1320,13 @@ The following state arguments are supported:
         <span class="property-type">str</span>
     </dt>
     <dd>{{% md %}}The Kubernetes namespace. Default value is "default".
-{{% /md %}}</dd>
-</dl>
+{{% /md %}}</dd></dl>
 {{% /choosable %}}
 
 <h4 id="serviceendpointkuberneteskubeconfig">Service<wbr>Endpoint<wbr>Kubernetes<wbr>Kubeconfig</h4>
 
 {{% choosable language csharp %}}
-<dl class="resources-properties">
-
-    <dt class="property-required"
+<dl class="resources-properties"><dt class="property-required"
             title="Required">
         <span id="kubeconfig_csharp">
 <a href="#kubeconfig_csharp" style="color: inherit; text-decoration: inherit;">Kube<wbr>Config</a>
@@ -1506,8 +1335,7 @@ The following state arguments are supported:
         <span class="property-type">string</span>
     </dt>
     <dd>{{% md %}}The content of the kubeconfig in yaml notation to be used to communicate with the API-Server of Kubernetes.
-{{% /md %}}</dd>
-    <dt class="property-optional"
+{{% /md %}}</dd><dt class="property-optional"
             title="Optional">
         <span id="acceptuntrustedcerts_csharp">
 <a href="#acceptuntrustedcerts_csharp" style="color: inherit; text-decoration: inherit;">Accept<wbr>Untrusted<wbr>Certs</a>
@@ -1516,8 +1344,7 @@ The following state arguments are supported:
         <span class="property-type">bool</span>
     </dt>
     <dd>{{% md %}}Set this option to allow clients to accept a self-signed certificate.
-{{% /md %}}</dd>
-    <dt class="property-optional"
+{{% /md %}}</dd><dt class="property-optional"
             title="Optional">
         <span id="clustercontext_csharp">
 <a href="#clustercontext_csharp" style="color: inherit; text-decoration: inherit;">Cluster<wbr>Context</a>
@@ -1526,8 +1353,7 @@ The following state arguments are supported:
         <span class="property-type">string</span>
     </dt>
     <dd>{{% md %}}Context within the kubeconfig file that is to be used for identifying the cluster. Default value is the current-context set in kubeconfig.
-{{% /md %}}</dd>
-    <dt class="property-optional"
+{{% /md %}}</dd><dt class="property-optional"
             title="Optional">
         <span id="kubeconfighash_csharp">
 <a href="#kubeconfighash_csharp" style="color: inherit; text-decoration: inherit;">Kube<wbr>Config<wbr>Hash</a>
@@ -1535,14 +1361,11 @@ The following state arguments are supported:
         <span class="property-indicator"></span>
         <span class="property-type">string</span>
     </dt>
-    <dd>{{% md %}}{{% /md %}}</dd>
-</dl>
+    <dd>{{% md %}}{{% /md %}}</dd></dl>
 {{% /choosable %}}
 
 {{% choosable language go %}}
-<dl class="resources-properties">
-
-    <dt class="property-required"
+<dl class="resources-properties"><dt class="property-required"
             title="Required">
         <span id="kubeconfig_go">
 <a href="#kubeconfig_go" style="color: inherit; text-decoration: inherit;">Kube<wbr>Config</a>
@@ -1551,8 +1374,7 @@ The following state arguments are supported:
         <span class="property-type">string</span>
     </dt>
     <dd>{{% md %}}The content of the kubeconfig in yaml notation to be used to communicate with the API-Server of Kubernetes.
-{{% /md %}}</dd>
-    <dt class="property-optional"
+{{% /md %}}</dd><dt class="property-optional"
             title="Optional">
         <span id="acceptuntrustedcerts_go">
 <a href="#acceptuntrustedcerts_go" style="color: inherit; text-decoration: inherit;">Accept<wbr>Untrusted<wbr>Certs</a>
@@ -1561,8 +1383,7 @@ The following state arguments are supported:
         <span class="property-type">bool</span>
     </dt>
     <dd>{{% md %}}Set this option to allow clients to accept a self-signed certificate.
-{{% /md %}}</dd>
-    <dt class="property-optional"
+{{% /md %}}</dd><dt class="property-optional"
             title="Optional">
         <span id="clustercontext_go">
 <a href="#clustercontext_go" style="color: inherit; text-decoration: inherit;">Cluster<wbr>Context</a>
@@ -1571,8 +1392,7 @@ The following state arguments are supported:
         <span class="property-type">string</span>
     </dt>
     <dd>{{% md %}}Context within the kubeconfig file that is to be used for identifying the cluster. Default value is the current-context set in kubeconfig.
-{{% /md %}}</dd>
-    <dt class="property-optional"
+{{% /md %}}</dd><dt class="property-optional"
             title="Optional">
         <span id="kubeconfighash_go">
 <a href="#kubeconfighash_go" style="color: inherit; text-decoration: inherit;">Kube<wbr>Config<wbr>Hash</a>
@@ -1580,14 +1400,11 @@ The following state arguments are supported:
         <span class="property-indicator"></span>
         <span class="property-type">string</span>
     </dt>
-    <dd>{{% md %}}{{% /md %}}</dd>
-</dl>
+    <dd>{{% md %}}{{% /md %}}</dd></dl>
 {{% /choosable %}}
 
 {{% choosable language nodejs %}}
-<dl class="resources-properties">
-
-    <dt class="property-required"
+<dl class="resources-properties"><dt class="property-required"
             title="Required">
         <span id="kubeconfig_nodejs">
 <a href="#kubeconfig_nodejs" style="color: inherit; text-decoration: inherit;">kube<wbr>Config</a>
@@ -1596,8 +1413,7 @@ The following state arguments are supported:
         <span class="property-type">string</span>
     </dt>
     <dd>{{% md %}}The content of the kubeconfig in yaml notation to be used to communicate with the API-Server of Kubernetes.
-{{% /md %}}</dd>
-    <dt class="property-optional"
+{{% /md %}}</dd><dt class="property-optional"
             title="Optional">
         <span id="acceptuntrustedcerts_nodejs">
 <a href="#acceptuntrustedcerts_nodejs" style="color: inherit; text-decoration: inherit;">accept<wbr>Untrusted<wbr>Certs</a>
@@ -1606,8 +1422,7 @@ The following state arguments are supported:
         <span class="property-type">boolean</span>
     </dt>
     <dd>{{% md %}}Set this option to allow clients to accept a self-signed certificate.
-{{% /md %}}</dd>
-    <dt class="property-optional"
+{{% /md %}}</dd><dt class="property-optional"
             title="Optional">
         <span id="clustercontext_nodejs">
 <a href="#clustercontext_nodejs" style="color: inherit; text-decoration: inherit;">cluster<wbr>Context</a>
@@ -1616,8 +1431,7 @@ The following state arguments are supported:
         <span class="property-type">string</span>
     </dt>
     <dd>{{% md %}}Context within the kubeconfig file that is to be used for identifying the cluster. Default value is the current-context set in kubeconfig.
-{{% /md %}}</dd>
-    <dt class="property-optional"
+{{% /md %}}</dd><dt class="property-optional"
             title="Optional">
         <span id="kubeconfighash_nodejs">
 <a href="#kubeconfighash_nodejs" style="color: inherit; text-decoration: inherit;">kube<wbr>Config<wbr>Hash</a>
@@ -1625,14 +1439,11 @@ The following state arguments are supported:
         <span class="property-indicator"></span>
         <span class="property-type">string</span>
     </dt>
-    <dd>{{% md %}}{{% /md %}}</dd>
-</dl>
+    <dd>{{% md %}}{{% /md %}}</dd></dl>
 {{% /choosable %}}
 
 {{% choosable language python %}}
-<dl class="resources-properties">
-
-    <dt class="property-required"
+<dl class="resources-properties"><dt class="property-required"
             title="Required">
         <span id="kube_config_python">
 <a href="#kube_config_python" style="color: inherit; text-decoration: inherit;">kube_<wbr>config</a>
@@ -1641,8 +1452,7 @@ The following state arguments are supported:
         <span class="property-type">str</span>
     </dt>
     <dd>{{% md %}}The content of the kubeconfig in yaml notation to be used to communicate with the API-Server of Kubernetes.
-{{% /md %}}</dd>
-    <dt class="property-optional"
+{{% /md %}}</dd><dt class="property-optional"
             title="Optional">
         <span id="accept_untrusted_certs_python">
 <a href="#accept_untrusted_certs_python" style="color: inherit; text-decoration: inherit;">accept_<wbr>untrusted_<wbr>certs</a>
@@ -1651,8 +1461,7 @@ The following state arguments are supported:
         <span class="property-type">bool</span>
     </dt>
     <dd>{{% md %}}Set this option to allow clients to accept a self-signed certificate.
-{{% /md %}}</dd>
-    <dt class="property-optional"
+{{% /md %}}</dd><dt class="property-optional"
             title="Optional">
         <span id="cluster_context_python">
 <a href="#cluster_context_python" style="color: inherit; text-decoration: inherit;">cluster_<wbr>context</a>
@@ -1661,8 +1470,7 @@ The following state arguments are supported:
         <span class="property-type">str</span>
     </dt>
     <dd>{{% md %}}Context within the kubeconfig file that is to be used for identifying the cluster. Default value is the current-context set in kubeconfig.
-{{% /md %}}</dd>
-    <dt class="property-optional"
+{{% /md %}}</dd><dt class="property-optional"
             title="Optional">
         <span id="kube_config_hash_python">
 <a href="#kube_config_hash_python" style="color: inherit; text-decoration: inherit;">kube_<wbr>config_<wbr>hash</a>
@@ -1670,16 +1478,13 @@ The following state arguments are supported:
         <span class="property-indicator"></span>
         <span class="property-type">str</span>
     </dt>
-    <dd>{{% md %}}{{% /md %}}</dd>
-</dl>
+    <dd>{{% md %}}{{% /md %}}</dd></dl>
 {{% /choosable %}}
 
 <h4 id="serviceendpointkubernetesserviceaccount">Service<wbr>Endpoint<wbr>Kubernetes<wbr>Service<wbr>Account</h4>
 
 {{% choosable language csharp %}}
-<dl class="resources-properties">
-
-    <dt class="property-required"
+<dl class="resources-properties"><dt class="property-required"
             title="Required">
         <span id="cacert_csharp">
 <a href="#cacert_csharp" style="color: inherit; text-decoration: inherit;">Ca<wbr>Cert</a>
@@ -1688,8 +1493,7 @@ The following state arguments are supported:
         <span class="property-type">string</span>
     </dt>
     <dd>{{% md %}}The certificate from a Kubernetes secret object.
-{{% /md %}}</dd>
-    <dt class="property-required"
+{{% /md %}}</dd><dt class="property-required"
             title="Required">
         <span id="token_csharp">
 <a href="#token_csharp" style="color: inherit; text-decoration: inherit;">Token</a>
@@ -1698,8 +1502,7 @@ The following state arguments are supported:
         <span class="property-type">string</span>
     </dt>
     <dd>{{% md %}}The token from a Kubernetes secret object.
-{{% /md %}}</dd>
-    <dt class="property-optional"
+{{% /md %}}</dd><dt class="property-optional"
             title="Optional">
         <span id="cacerthash_csharp">
 <a href="#cacerthash_csharp" style="color: inherit; text-decoration: inherit;">Ca<wbr>Cert<wbr>Hash</a>
@@ -1707,8 +1510,7 @@ The following state arguments are supported:
         <span class="property-indicator"></span>
         <span class="property-type">string</span>
     </dt>
-    <dd>{{% md %}}{{% /md %}}</dd>
-    <dt class="property-optional"
+    <dd>{{% md %}}{{% /md %}}</dd><dt class="property-optional"
             title="Optional">
         <span id="tokenhash_csharp">
 <a href="#tokenhash_csharp" style="color: inherit; text-decoration: inherit;">Token<wbr>Hash</a>
@@ -1716,14 +1518,11 @@ The following state arguments are supported:
         <span class="property-indicator"></span>
         <span class="property-type">string</span>
     </dt>
-    <dd>{{% md %}}{{% /md %}}</dd>
-</dl>
+    <dd>{{% md %}}{{% /md %}}</dd></dl>
 {{% /choosable %}}
 
 {{% choosable language go %}}
-<dl class="resources-properties">
-
-    <dt class="property-required"
+<dl class="resources-properties"><dt class="property-required"
             title="Required">
         <span id="cacert_go">
 <a href="#cacert_go" style="color: inherit; text-decoration: inherit;">Ca<wbr>Cert</a>
@@ -1732,8 +1531,7 @@ The following state arguments are supported:
         <span class="property-type">string</span>
     </dt>
     <dd>{{% md %}}The certificate from a Kubernetes secret object.
-{{% /md %}}</dd>
-    <dt class="property-required"
+{{% /md %}}</dd><dt class="property-required"
             title="Required">
         <span id="token_go">
 <a href="#token_go" style="color: inherit; text-decoration: inherit;">Token</a>
@@ -1742,8 +1540,7 @@ The following state arguments are supported:
         <span class="property-type">string</span>
     </dt>
     <dd>{{% md %}}The token from a Kubernetes secret object.
-{{% /md %}}</dd>
-    <dt class="property-optional"
+{{% /md %}}</dd><dt class="property-optional"
             title="Optional">
         <span id="cacerthash_go">
 <a href="#cacerthash_go" style="color: inherit; text-decoration: inherit;">Ca<wbr>Cert<wbr>Hash</a>
@@ -1751,8 +1548,7 @@ The following state arguments are supported:
         <span class="property-indicator"></span>
         <span class="property-type">string</span>
     </dt>
-    <dd>{{% md %}}{{% /md %}}</dd>
-    <dt class="property-optional"
+    <dd>{{% md %}}{{% /md %}}</dd><dt class="property-optional"
             title="Optional">
         <span id="tokenhash_go">
 <a href="#tokenhash_go" style="color: inherit; text-decoration: inherit;">Token<wbr>Hash</a>
@@ -1760,14 +1556,11 @@ The following state arguments are supported:
         <span class="property-indicator"></span>
         <span class="property-type">string</span>
     </dt>
-    <dd>{{% md %}}{{% /md %}}</dd>
-</dl>
+    <dd>{{% md %}}{{% /md %}}</dd></dl>
 {{% /choosable %}}
 
 {{% choosable language nodejs %}}
-<dl class="resources-properties">
-
-    <dt class="property-required"
+<dl class="resources-properties"><dt class="property-required"
             title="Required">
         <span id="cacert_nodejs">
 <a href="#cacert_nodejs" style="color: inherit; text-decoration: inherit;">ca<wbr>Cert</a>
@@ -1776,8 +1569,7 @@ The following state arguments are supported:
         <span class="property-type">string</span>
     </dt>
     <dd>{{% md %}}The certificate from a Kubernetes secret object.
-{{% /md %}}</dd>
-    <dt class="property-required"
+{{% /md %}}</dd><dt class="property-required"
             title="Required">
         <span id="token_nodejs">
 <a href="#token_nodejs" style="color: inherit; text-decoration: inherit;">token</a>
@@ -1786,8 +1578,7 @@ The following state arguments are supported:
         <span class="property-type">string</span>
     </dt>
     <dd>{{% md %}}The token from a Kubernetes secret object.
-{{% /md %}}</dd>
-    <dt class="property-optional"
+{{% /md %}}</dd><dt class="property-optional"
             title="Optional">
         <span id="cacerthash_nodejs">
 <a href="#cacerthash_nodejs" style="color: inherit; text-decoration: inherit;">ca<wbr>Cert<wbr>Hash</a>
@@ -1795,8 +1586,7 @@ The following state arguments are supported:
         <span class="property-indicator"></span>
         <span class="property-type">string</span>
     </dt>
-    <dd>{{% md %}}{{% /md %}}</dd>
-    <dt class="property-optional"
+    <dd>{{% md %}}{{% /md %}}</dd><dt class="property-optional"
             title="Optional">
         <span id="tokenhash_nodejs">
 <a href="#tokenhash_nodejs" style="color: inherit; text-decoration: inherit;">token<wbr>Hash</a>
@@ -1804,14 +1594,11 @@ The following state arguments are supported:
         <span class="property-indicator"></span>
         <span class="property-type">string</span>
     </dt>
-    <dd>{{% md %}}{{% /md %}}</dd>
-</dl>
+    <dd>{{% md %}}{{% /md %}}</dd></dl>
 {{% /choosable %}}
 
 {{% choosable language python %}}
-<dl class="resources-properties">
-
-    <dt class="property-required"
+<dl class="resources-properties"><dt class="property-required"
             title="Required">
         <span id="ca_cert_python">
 <a href="#ca_cert_python" style="color: inherit; text-decoration: inherit;">ca_<wbr>cert</a>
@@ -1820,8 +1607,7 @@ The following state arguments are supported:
         <span class="property-type">str</span>
     </dt>
     <dd>{{% md %}}The certificate from a Kubernetes secret object.
-{{% /md %}}</dd>
-    <dt class="property-required"
+{{% /md %}}</dd><dt class="property-required"
             title="Required">
         <span id="token_python">
 <a href="#token_python" style="color: inherit; text-decoration: inherit;">token</a>
@@ -1830,8 +1616,7 @@ The following state arguments are supported:
         <span class="property-type">str</span>
     </dt>
     <dd>{{% md %}}The token from a Kubernetes secret object.
-{{% /md %}}</dd>
-    <dt class="property-optional"
+{{% /md %}}</dd><dt class="property-optional"
             title="Optional">
         <span id="ca_cert_hash_python">
 <a href="#ca_cert_hash_python" style="color: inherit; text-decoration: inherit;">ca_<wbr>cert_<wbr>hash</a>
@@ -1839,8 +1624,7 @@ The following state arguments are supported:
         <span class="property-indicator"></span>
         <span class="property-type">str</span>
     </dt>
-    <dd>{{% md %}}{{% /md %}}</dd>
-    <dt class="property-optional"
+    <dd>{{% md %}}{{% /md %}}</dd><dt class="property-optional"
             title="Optional">
         <span id="token_hash_python">
 <a href="#token_hash_python" style="color: inherit; text-decoration: inherit;">token_<wbr>hash</a>
@@ -1848,8 +1632,7 @@ The following state arguments are supported:
         <span class="property-indicator"></span>
         <span class="property-type">str</span>
     </dt>
-    <dd>{{% md %}}{{% /md %}}</dd>
-</dl>
+    <dd>{{% md %}}{{% /md %}}</dd></dl>
 {{% /choosable %}}
 ## Import
 
@@ -1870,6 +1653,6 @@ Azure DevOps Service Endpoint Kubernetes can be imported using **projectID/servi
 	<dt>License</dt>
 	<dd>Apache-2.0</dd>
 	<dt>Notes</dt>
-	<dd>This Pulumi package is based on the [`azuredevops` Terraform Provider](https://github.com/microsoft/terraform-provider-azuredevops).</dd>
+	<dd>{{% md %}}This Pulumi package is based on the [`azuredevops` Terraform Provider](https://github.com/microsoft/terraform-provider-azuredevops).{{% /md %}}</dd>
 </dl>
 

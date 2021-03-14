@@ -51,9 +51,7 @@ The following arguments are supported:
 
 
 {{% choosable language csharp %}}
-<dl class="resources-properties">
-
-    <dt class="property-required"
+<dl class="resources-properties"><dt class="property-required"
             title="Required">
         <span id="resourcegroupname_csharp">
 <a href="#resourcegroupname_csharp" style="color: inherit; text-decoration: inherit;">Resource<wbr>Group<wbr>Name</a>
@@ -61,8 +59,7 @@ The following arguments are supported:
         <span class="property-indicator"></span>
         <span class="property-type">string</span>
     </dt>
-    <dd>{{% md %}}The resource group name.{{% /md %}}</dd>
-    <dt class="property-required"
+    <dd>{{% md %}}The resource group name.{{% /md %}}</dd><dt class="property-required"
             title="Required">
         <span id="triggername_csharp">
 <a href="#triggername_csharp" style="color: inherit; text-decoration: inherit;">Trigger<wbr>Name</a>
@@ -70,8 +67,7 @@ The following arguments are supported:
         <span class="property-indicator"></span>
         <span class="property-type">string</span>
     </dt>
-    <dd>{{% md %}}The workflow trigger name.{{% /md %}}</dd>
-    <dt class="property-required"
+    <dd>{{% md %}}The workflow trigger name.{{% /md %}}</dd><dt class="property-required"
             title="Required">
         <span id="versionid_csharp">
 <a href="#versionid_csharp" style="color: inherit; text-decoration: inherit;">Version<wbr>Id</a>
@@ -79,8 +75,7 @@ The following arguments are supported:
         <span class="property-indicator"></span>
         <span class="property-type">string</span>
     </dt>
-    <dd>{{% md %}}The workflow versionId.{{% /md %}}</dd>
-    <dt class="property-required"
+    <dd>{{% md %}}The workflow versionId.{{% /md %}}</dd><dt class="property-required"
             title="Required">
         <span id="workflowname_csharp">
 <a href="#workflowname_csharp" style="color: inherit; text-decoration: inherit;">Workflow<wbr>Name</a>
@@ -88,8 +83,7 @@ The following arguments are supported:
         <span class="property-indicator"></span>
         <span class="property-type">string</span>
     </dt>
-    <dd>{{% md %}}The workflow name.{{% /md %}}</dd>
-    <dt class="property-optional"
+    <dd>{{% md %}}The workflow name.{{% /md %}}</dd><dt class="property-optional"
             title="Optional">
         <span id="keytype_csharp">
 <a href="#keytype_csharp" style="color: inherit; text-decoration: inherit;">Key<wbr>Type</a>
@@ -97,8 +91,7 @@ The following arguments are supported:
         <span class="property-indicator"></span>
         <span class="property-type">string | <a href="#keytype">Pulumi.<wbr>Azure<wbr>Native.<wbr>Logic.<wbr>Key<wbr>Type</a></span>
     </dt>
-    <dd>{{% md %}}The key type.{{% /md %}}</dd>
-    <dt class="property-optional"
+    <dd>{{% md %}}The key type.{{% /md %}}</dd><dt class="property-optional"
             title="Optional">
         <span id="notafter_csharp">
 <a href="#notafter_csharp" style="color: inherit; text-decoration: inherit;">Not<wbr>After</a>
@@ -106,14 +99,11 @@ The following arguments are supported:
         <span class="property-indicator"></span>
         <span class="property-type">string</span>
     </dt>
-    <dd>{{% md %}}The expiry time.{{% /md %}}</dd>
-</dl>
+    <dd>{{% md %}}The expiry time.{{% /md %}}</dd></dl>
 {{% /choosable %}}
 
 {{% choosable language go %}}
-<dl class="resources-properties">
-
-    <dt class="property-required"
+<dl class="resources-properties"><dt class="property-required"
             title="Required">
         <span id="resourcegroupname_go">
 <a href="#resourcegroupname_go" style="color: inherit; text-decoration: inherit;">Resource<wbr>Group<wbr>Name</a>
@@ -121,8 +111,7 @@ The following arguments are supported:
         <span class="property-indicator"></span>
         <span class="property-type">string</span>
     </dt>
-    <dd>{{% md %}}The resource group name.{{% /md %}}</dd>
-    <dt class="property-required"
+    <dd>{{% md %}}The resource group name.{{% /md %}}</dd><dt class="property-required"
             title="Required">
         <span id="triggername_go">
 <a href="#triggername_go" style="color: inherit; text-decoration: inherit;">Trigger<wbr>Name</a>
@@ -130,8 +119,7 @@ The following arguments are supported:
         <span class="property-indicator"></span>
         <span class="property-type">string</span>
     </dt>
-    <dd>{{% md %}}The workflow trigger name.{{% /md %}}</dd>
-    <dt class="property-required"
+    <dd>{{% md %}}The workflow trigger name.{{% /md %}}</dd><dt class="property-required"
             title="Required">
         <span id="versionid_go">
 <a href="#versionid_go" style="color: inherit; text-decoration: inherit;">Version<wbr>Id</a>
@@ -139,8 +127,7 @@ The following arguments are supported:
         <span class="property-indicator"></span>
         <span class="property-type">string</span>
     </dt>
-    <dd>{{% md %}}The workflow versionId.{{% /md %}}</dd>
-    <dt class="property-required"
+    <dd>{{% md %}}The workflow versionId.{{% /md %}}</dd><dt class="property-required"
             title="Required">
         <span id="workflowname_go">
 <a href="#workflowname_go" style="color: inherit; text-decoration: inherit;">Workflow<wbr>Name</a>
@@ -148,8 +135,7 @@ The following arguments are supported:
         <span class="property-indicator"></span>
         <span class="property-type">string</span>
     </dt>
-    <dd>{{% md %}}The workflow name.{{% /md %}}</dd>
-    <dt class="property-optional"
+    <dd>{{% md %}}The workflow name.{{% /md %}}</dd><dt class="property-optional"
             title="Optional">
         <span id="keytype_go">
 <a href="#keytype_go" style="color: inherit; text-decoration: inherit;">Key<wbr>Type</a>
@@ -157,8 +143,7 @@ The following arguments are supported:
         <span class="property-indicator"></span>
         <span class="property-type">string | <a href="#keytype">Key<wbr>Type</a></span>
     </dt>
-    <dd>{{% md %}}The key type.{{% /md %}}</dd>
-    <dt class="property-optional"
+    <dd>{{% md %}}The key type.{{% /md %}}</dd><dt class="property-optional"
             title="Optional">
         <span id="notafter_go">
 <a href="#notafter_go" style="color: inherit; text-decoration: inherit;">Not<wbr>After</a>
@@ -166,14 +151,11 @@ The following arguments are supported:
         <span class="property-indicator"></span>
         <span class="property-type">string</span>
     </dt>
-    <dd>{{% md %}}The expiry time.{{% /md %}}</dd>
-</dl>
+    <dd>{{% md %}}The expiry time.{{% /md %}}</dd></dl>
 {{% /choosable %}}
 
 {{% choosable language nodejs %}}
-<dl class="resources-properties">
-
-    <dt class="property-required"
+<dl class="resources-properties"><dt class="property-required"
             title="Required">
         <span id="resourcegroupname_nodejs">
 <a href="#resourcegroupname_nodejs" style="color: inherit; text-decoration: inherit;">resource<wbr>Group<wbr>Name</a>
@@ -181,8 +163,7 @@ The following arguments are supported:
         <span class="property-indicator"></span>
         <span class="property-type">string</span>
     </dt>
-    <dd>{{% md %}}The resource group name.{{% /md %}}</dd>
-    <dt class="property-required"
+    <dd>{{% md %}}The resource group name.{{% /md %}}</dd><dt class="property-required"
             title="Required">
         <span id="triggername_nodejs">
 <a href="#triggername_nodejs" style="color: inherit; text-decoration: inherit;">trigger<wbr>Name</a>
@@ -190,8 +171,7 @@ The following arguments are supported:
         <span class="property-indicator"></span>
         <span class="property-type">string</span>
     </dt>
-    <dd>{{% md %}}The workflow trigger name.{{% /md %}}</dd>
-    <dt class="property-required"
+    <dd>{{% md %}}The workflow trigger name.{{% /md %}}</dd><dt class="property-required"
             title="Required">
         <span id="versionid_nodejs">
 <a href="#versionid_nodejs" style="color: inherit; text-decoration: inherit;">version<wbr>Id</a>
@@ -199,8 +179,7 @@ The following arguments are supported:
         <span class="property-indicator"></span>
         <span class="property-type">string</span>
     </dt>
-    <dd>{{% md %}}The workflow versionId.{{% /md %}}</dd>
-    <dt class="property-required"
+    <dd>{{% md %}}The workflow versionId.{{% /md %}}</dd><dt class="property-required"
             title="Required">
         <span id="workflowname_nodejs">
 <a href="#workflowname_nodejs" style="color: inherit; text-decoration: inherit;">workflow<wbr>Name</a>
@@ -208,8 +187,7 @@ The following arguments are supported:
         <span class="property-indicator"></span>
         <span class="property-type">string</span>
     </dt>
-    <dd>{{% md %}}The workflow name.{{% /md %}}</dd>
-    <dt class="property-optional"
+    <dd>{{% md %}}The workflow name.{{% /md %}}</dd><dt class="property-optional"
             title="Optional">
         <span id="keytype_nodejs">
 <a href="#keytype_nodejs" style="color: inherit; text-decoration: inherit;">key<wbr>Type</a>
@@ -217,8 +195,7 @@ The following arguments are supported:
         <span class="property-indicator"></span>
         <span class="property-type">string | <a href="#keytype">Key<wbr>Type</a></span>
     </dt>
-    <dd>{{% md %}}The key type.{{% /md %}}</dd>
-    <dt class="property-optional"
+    <dd>{{% md %}}The key type.{{% /md %}}</dd><dt class="property-optional"
             title="Optional">
         <span id="notafter_nodejs">
 <a href="#notafter_nodejs" style="color: inherit; text-decoration: inherit;">not<wbr>After</a>
@@ -226,14 +203,11 @@ The following arguments are supported:
         <span class="property-indicator"></span>
         <span class="property-type">string</span>
     </dt>
-    <dd>{{% md %}}The expiry time.{{% /md %}}</dd>
-</dl>
+    <dd>{{% md %}}The expiry time.{{% /md %}}</dd></dl>
 {{% /choosable %}}
 
 {{% choosable language python %}}
-<dl class="resources-properties">
-
-    <dt class="property-required"
+<dl class="resources-properties"><dt class="property-required"
             title="Required">
         <span id="resource_group_name_python">
 <a href="#resource_group_name_python" style="color: inherit; text-decoration: inherit;">resource_<wbr>group_<wbr>name</a>
@@ -241,8 +215,7 @@ The following arguments are supported:
         <span class="property-indicator"></span>
         <span class="property-type">str</span>
     </dt>
-    <dd>{{% md %}}The resource group name.{{% /md %}}</dd>
-    <dt class="property-required"
+    <dd>{{% md %}}The resource group name.{{% /md %}}</dd><dt class="property-required"
             title="Required">
         <span id="trigger_name_python">
 <a href="#trigger_name_python" style="color: inherit; text-decoration: inherit;">trigger_<wbr>name</a>
@@ -250,8 +223,7 @@ The following arguments are supported:
         <span class="property-indicator"></span>
         <span class="property-type">str</span>
     </dt>
-    <dd>{{% md %}}The workflow trigger name.{{% /md %}}</dd>
-    <dt class="property-required"
+    <dd>{{% md %}}The workflow trigger name.{{% /md %}}</dd><dt class="property-required"
             title="Required">
         <span id="version_id_python">
 <a href="#version_id_python" style="color: inherit; text-decoration: inherit;">version_<wbr>id</a>
@@ -259,8 +231,7 @@ The following arguments are supported:
         <span class="property-indicator"></span>
         <span class="property-type">str</span>
     </dt>
-    <dd>{{% md %}}The workflow versionId.{{% /md %}}</dd>
-    <dt class="property-required"
+    <dd>{{% md %}}The workflow versionId.{{% /md %}}</dd><dt class="property-required"
             title="Required">
         <span id="workflow_name_python">
 <a href="#workflow_name_python" style="color: inherit; text-decoration: inherit;">workflow_<wbr>name</a>
@@ -268,8 +239,7 @@ The following arguments are supported:
         <span class="property-indicator"></span>
         <span class="property-type">str</span>
     </dt>
-    <dd>{{% md %}}The workflow name.{{% /md %}}</dd>
-    <dt class="property-optional"
+    <dd>{{% md %}}The workflow name.{{% /md %}}</dd><dt class="property-optional"
             title="Optional">
         <span id="key_type_python">
 <a href="#key_type_python" style="color: inherit; text-decoration: inherit;">key_<wbr>type</a>
@@ -277,8 +247,7 @@ The following arguments are supported:
         <span class="property-indicator"></span>
         <span class="property-type">str | <a href="#keytype">Key<wbr>Type</a></span>
     </dt>
-    <dd>{{% md %}}The key type.{{% /md %}}</dd>
-    <dt class="property-optional"
+    <dd>{{% md %}}The key type.{{% /md %}}</dd><dt class="property-optional"
             title="Optional">
         <span id="not_after_python">
 <a href="#not_after_python" style="color: inherit; text-decoration: inherit;">not_<wbr>after</a>
@@ -286,8 +255,7 @@ The following arguments are supported:
         <span class="property-indicator"></span>
         <span class="property-type">str</span>
     </dt>
-    <dd>{{% md %}}The expiry time.{{% /md %}}</dd>
-</dl>
+    <dd>{{% md %}}The expiry time.{{% /md %}}</dd></dl>
 {{% /choosable %}}
 
 
@@ -300,9 +268,7 @@ The following output properties are available:
 
 
 {{% choosable language csharp %}}
-<dl class="resources-properties">
-
-    <dt class="property-"
+<dl class="resources-properties"><dt class="property-"
             title="">
         <span id="basepath_csharp">
 <a href="#basepath_csharp" style="color: inherit; text-decoration: inherit;">Base<wbr>Path</a>
@@ -310,8 +276,7 @@ The following output properties are available:
         <span class="property-indicator"></span>
         <span class="property-type">string</span>
     </dt>
-    <dd>{{% md %}}Gets the workflow trigger callback URL base path.{{% /md %}}</dd>
-    <dt class="property-"
+    <dd>{{% md %}}Gets the workflow trigger callback URL base path.{{% /md %}}</dd><dt class="property-"
             title="">
         <span id="method_csharp">
 <a href="#method_csharp" style="color: inherit; text-decoration: inherit;">Method</a>
@@ -319,8 +284,7 @@ The following output properties are available:
         <span class="property-indicator"></span>
         <span class="property-type">string</span>
     </dt>
-    <dd>{{% md %}}Gets the workflow trigger callback URL HTTP method.{{% /md %}}</dd>
-    <dt class="property-"
+    <dd>{{% md %}}Gets the workflow trigger callback URL HTTP method.{{% /md %}}</dd><dt class="property-"
             title="">
         <span id="relativepath_csharp">
 <a href="#relativepath_csharp" style="color: inherit; text-decoration: inherit;">Relative<wbr>Path</a>
@@ -328,8 +292,7 @@ The following output properties are available:
         <span class="property-indicator"></span>
         <span class="property-type">string</span>
     </dt>
-    <dd>{{% md %}}Gets the workflow trigger callback URL relative path.{{% /md %}}</dd>
-    <dt class="property-"
+    <dd>{{% md %}}Gets the workflow trigger callback URL relative path.{{% /md %}}</dd><dt class="property-"
             title="">
         <span id="value_csharp">
 <a href="#value_csharp" style="color: inherit; text-decoration: inherit;">Value</a>
@@ -337,8 +300,7 @@ The following output properties are available:
         <span class="property-indicator"></span>
         <span class="property-type">string</span>
     </dt>
-    <dd>{{% md %}}Gets the workflow trigger callback URL.{{% /md %}}</dd>
-    <dt class="property-"
+    <dd>{{% md %}}Gets the workflow trigger callback URL.{{% /md %}}</dd><dt class="property-"
             title="">
         <span id="queries_csharp">
 <a href="#queries_csharp" style="color: inherit; text-decoration: inherit;">Queries</a>
@@ -346,8 +308,7 @@ The following output properties are available:
         <span class="property-indicator"></span>
         <span class="property-type"><a href="#workflowtriggerlistcallbackurlqueriesresponse">Pulumi.<wbr>Azure<wbr>Native.<wbr>Logic.<wbr>Outputs.<wbr>Workflow<wbr>Trigger<wbr>List<wbr>Callback<wbr>Url<wbr>Queries<wbr>Response</a></span>
     </dt>
-    <dd>{{% md %}}Gets the workflow trigger callback URL query parameters.{{% /md %}}</dd>
-    <dt class="property-"
+    <dd>{{% md %}}Gets the workflow trigger callback URL query parameters.{{% /md %}}</dd><dt class="property-"
             title="">
         <span id="relativepathparameters_csharp">
 <a href="#relativepathparameters_csharp" style="color: inherit; text-decoration: inherit;">Relative<wbr>Path<wbr>Parameters</a>
@@ -355,14 +316,11 @@ The following output properties are available:
         <span class="property-indicator"></span>
         <span class="property-type">List&lt;string&gt;</span>
     </dt>
-    <dd>{{% md %}}Gets the workflow trigger callback URL relative path parameters.{{% /md %}}</dd>
-</dl>
+    <dd>{{% md %}}Gets the workflow trigger callback URL relative path parameters.{{% /md %}}</dd></dl>
 {{% /choosable %}}
 
 {{% choosable language go %}}
-<dl class="resources-properties">
-
-    <dt class="property-"
+<dl class="resources-properties"><dt class="property-"
             title="">
         <span id="basepath_go">
 <a href="#basepath_go" style="color: inherit; text-decoration: inherit;">Base<wbr>Path</a>
@@ -370,8 +328,7 @@ The following output properties are available:
         <span class="property-indicator"></span>
         <span class="property-type">string</span>
     </dt>
-    <dd>{{% md %}}Gets the workflow trigger callback URL base path.{{% /md %}}</dd>
-    <dt class="property-"
+    <dd>{{% md %}}Gets the workflow trigger callback URL base path.{{% /md %}}</dd><dt class="property-"
             title="">
         <span id="method_go">
 <a href="#method_go" style="color: inherit; text-decoration: inherit;">Method</a>
@@ -379,8 +336,7 @@ The following output properties are available:
         <span class="property-indicator"></span>
         <span class="property-type">string</span>
     </dt>
-    <dd>{{% md %}}Gets the workflow trigger callback URL HTTP method.{{% /md %}}</dd>
-    <dt class="property-"
+    <dd>{{% md %}}Gets the workflow trigger callback URL HTTP method.{{% /md %}}</dd><dt class="property-"
             title="">
         <span id="relativepath_go">
 <a href="#relativepath_go" style="color: inherit; text-decoration: inherit;">Relative<wbr>Path</a>
@@ -388,8 +344,7 @@ The following output properties are available:
         <span class="property-indicator"></span>
         <span class="property-type">string</span>
     </dt>
-    <dd>{{% md %}}Gets the workflow trigger callback URL relative path.{{% /md %}}</dd>
-    <dt class="property-"
+    <dd>{{% md %}}Gets the workflow trigger callback URL relative path.{{% /md %}}</dd><dt class="property-"
             title="">
         <span id="value_go">
 <a href="#value_go" style="color: inherit; text-decoration: inherit;">Value</a>
@@ -397,8 +352,7 @@ The following output properties are available:
         <span class="property-indicator"></span>
         <span class="property-type">string</span>
     </dt>
-    <dd>{{% md %}}Gets the workflow trigger callback URL.{{% /md %}}</dd>
-    <dt class="property-"
+    <dd>{{% md %}}Gets the workflow trigger callback URL.{{% /md %}}</dd><dt class="property-"
             title="">
         <span id="queries_go">
 <a href="#queries_go" style="color: inherit; text-decoration: inherit;">Queries</a>
@@ -406,8 +360,7 @@ The following output properties are available:
         <span class="property-indicator"></span>
         <span class="property-type"><a href="#workflowtriggerlistcallbackurlqueriesresponse">Workflow<wbr>Trigger<wbr>List<wbr>Callback<wbr>Url<wbr>Queries<wbr>Response</a></span>
     </dt>
-    <dd>{{% md %}}Gets the workflow trigger callback URL query parameters.{{% /md %}}</dd>
-    <dt class="property-"
+    <dd>{{% md %}}Gets the workflow trigger callback URL query parameters.{{% /md %}}</dd><dt class="property-"
             title="">
         <span id="relativepathparameters_go">
 <a href="#relativepathparameters_go" style="color: inherit; text-decoration: inherit;">Relative<wbr>Path<wbr>Parameters</a>
@@ -415,14 +368,11 @@ The following output properties are available:
         <span class="property-indicator"></span>
         <span class="property-type">[]string</span>
     </dt>
-    <dd>{{% md %}}Gets the workflow trigger callback URL relative path parameters.{{% /md %}}</dd>
-</dl>
+    <dd>{{% md %}}Gets the workflow trigger callback URL relative path parameters.{{% /md %}}</dd></dl>
 {{% /choosable %}}
 
 {{% choosable language nodejs %}}
-<dl class="resources-properties">
-
-    <dt class="property-"
+<dl class="resources-properties"><dt class="property-"
             title="">
         <span id="basepath_nodejs">
 <a href="#basepath_nodejs" style="color: inherit; text-decoration: inherit;">base<wbr>Path</a>
@@ -430,8 +380,7 @@ The following output properties are available:
         <span class="property-indicator"></span>
         <span class="property-type">string</span>
     </dt>
-    <dd>{{% md %}}Gets the workflow trigger callback URL base path.{{% /md %}}</dd>
-    <dt class="property-"
+    <dd>{{% md %}}Gets the workflow trigger callback URL base path.{{% /md %}}</dd><dt class="property-"
             title="">
         <span id="method_nodejs">
 <a href="#method_nodejs" style="color: inherit; text-decoration: inherit;">method</a>
@@ -439,8 +388,7 @@ The following output properties are available:
         <span class="property-indicator"></span>
         <span class="property-type">string</span>
     </dt>
-    <dd>{{% md %}}Gets the workflow trigger callback URL HTTP method.{{% /md %}}</dd>
-    <dt class="property-"
+    <dd>{{% md %}}Gets the workflow trigger callback URL HTTP method.{{% /md %}}</dd><dt class="property-"
             title="">
         <span id="relativepath_nodejs">
 <a href="#relativepath_nodejs" style="color: inherit; text-decoration: inherit;">relative<wbr>Path</a>
@@ -448,8 +396,7 @@ The following output properties are available:
         <span class="property-indicator"></span>
         <span class="property-type">string</span>
     </dt>
-    <dd>{{% md %}}Gets the workflow trigger callback URL relative path.{{% /md %}}</dd>
-    <dt class="property-"
+    <dd>{{% md %}}Gets the workflow trigger callback URL relative path.{{% /md %}}</dd><dt class="property-"
             title="">
         <span id="value_nodejs">
 <a href="#value_nodejs" style="color: inherit; text-decoration: inherit;">value</a>
@@ -457,8 +404,7 @@ The following output properties are available:
         <span class="property-indicator"></span>
         <span class="property-type">string</span>
     </dt>
-    <dd>{{% md %}}Gets the workflow trigger callback URL.{{% /md %}}</dd>
-    <dt class="property-"
+    <dd>{{% md %}}Gets the workflow trigger callback URL.{{% /md %}}</dd><dt class="property-"
             title="">
         <span id="queries_nodejs">
 <a href="#queries_nodejs" style="color: inherit; text-decoration: inherit;">queries</a>
@@ -466,8 +412,7 @@ The following output properties are available:
         <span class="property-indicator"></span>
         <span class="property-type"><a href="#workflowtriggerlistcallbackurlqueriesresponse">Workflow<wbr>Trigger<wbr>List<wbr>Callback<wbr>Url<wbr>Queries<wbr>Response</a></span>
     </dt>
-    <dd>{{% md %}}Gets the workflow trigger callback URL query parameters.{{% /md %}}</dd>
-    <dt class="property-"
+    <dd>{{% md %}}Gets the workflow trigger callback URL query parameters.{{% /md %}}</dd><dt class="property-"
             title="">
         <span id="relativepathparameters_nodejs">
 <a href="#relativepathparameters_nodejs" style="color: inherit; text-decoration: inherit;">relative<wbr>Path<wbr>Parameters</a>
@@ -475,14 +420,11 @@ The following output properties are available:
         <span class="property-indicator"></span>
         <span class="property-type">string[]</span>
     </dt>
-    <dd>{{% md %}}Gets the workflow trigger callback URL relative path parameters.{{% /md %}}</dd>
-</dl>
+    <dd>{{% md %}}Gets the workflow trigger callback URL relative path parameters.{{% /md %}}</dd></dl>
 {{% /choosable %}}
 
 {{% choosable language python %}}
-<dl class="resources-properties">
-
-    <dt class="property-"
+<dl class="resources-properties"><dt class="property-"
             title="">
         <span id="base_path_python">
 <a href="#base_path_python" style="color: inherit; text-decoration: inherit;">base_<wbr>path</a>
@@ -490,8 +432,7 @@ The following output properties are available:
         <span class="property-indicator"></span>
         <span class="property-type">str</span>
     </dt>
-    <dd>{{% md %}}Gets the workflow trigger callback URL base path.{{% /md %}}</dd>
-    <dt class="property-"
+    <dd>{{% md %}}Gets the workflow trigger callback URL base path.{{% /md %}}</dd><dt class="property-"
             title="">
         <span id="method_python">
 <a href="#method_python" style="color: inherit; text-decoration: inherit;">method</a>
@@ -499,8 +440,7 @@ The following output properties are available:
         <span class="property-indicator"></span>
         <span class="property-type">str</span>
     </dt>
-    <dd>{{% md %}}Gets the workflow trigger callback URL HTTP method.{{% /md %}}</dd>
-    <dt class="property-"
+    <dd>{{% md %}}Gets the workflow trigger callback URL HTTP method.{{% /md %}}</dd><dt class="property-"
             title="">
         <span id="relative_path_python">
 <a href="#relative_path_python" style="color: inherit; text-decoration: inherit;">relative_<wbr>path</a>
@@ -508,8 +448,7 @@ The following output properties are available:
         <span class="property-indicator"></span>
         <span class="property-type">str</span>
     </dt>
-    <dd>{{% md %}}Gets the workflow trigger callback URL relative path.{{% /md %}}</dd>
-    <dt class="property-"
+    <dd>{{% md %}}Gets the workflow trigger callback URL relative path.{{% /md %}}</dd><dt class="property-"
             title="">
         <span id="value_python">
 <a href="#value_python" style="color: inherit; text-decoration: inherit;">value</a>
@@ -517,8 +456,7 @@ The following output properties are available:
         <span class="property-indicator"></span>
         <span class="property-type">str</span>
     </dt>
-    <dd>{{% md %}}Gets the workflow trigger callback URL.{{% /md %}}</dd>
-    <dt class="property-"
+    <dd>{{% md %}}Gets the workflow trigger callback URL.{{% /md %}}</dd><dt class="property-"
             title="">
         <span id="queries_python">
 <a href="#queries_python" style="color: inherit; text-decoration: inherit;">queries</a>
@@ -526,8 +464,7 @@ The following output properties are available:
         <span class="property-indicator"></span>
         <span class="property-type"><a href="#workflowtriggerlistcallbackurlqueriesresponse">Workflow<wbr>Trigger<wbr>List<wbr>Callback<wbr>Url<wbr>Queries<wbr>Response</a></span>
     </dt>
-    <dd>{{% md %}}Gets the workflow trigger callback URL query parameters.{{% /md %}}</dd>
-    <dt class="property-"
+    <dd>{{% md %}}Gets the workflow trigger callback URL query parameters.{{% /md %}}</dd><dt class="property-"
             title="">
         <span id="relative_path_parameters_python">
 <a href="#relative_path_parameters_python" style="color: inherit; text-decoration: inherit;">relative_<wbr>path_<wbr>parameters</a>
@@ -535,8 +472,7 @@ The following output properties are available:
         <span class="property-indicator"></span>
         <span class="property-type">Sequence[str]</span>
     </dt>
-    <dd>{{% md %}}Gets the workflow trigger callback URL relative path parameters.{{% /md %}}</dd>
-</dl>
+    <dd>{{% md %}}Gets the workflow trigger callback URL relative path parameters.{{% /md %}}</dd></dl>
 {{% /choosable %}}
 
 
@@ -554,9 +490,7 @@ The following output properties are available:
 
 
 {{% choosable language csharp %}}
-<dl class="resources-properties">
-
-    <dt class="property-optional"
+<dl class="resources-properties"><dt class="property-optional"
             title="Optional">
         <span id="apiversion_csharp">
 <a href="#apiversion_csharp" style="color: inherit; text-decoration: inherit;">Api<wbr>Version</a>
@@ -564,8 +498,7 @@ The following output properties are available:
         <span class="property-indicator"></span>
         <span class="property-type">string</span>
     </dt>
-    <dd>{{% md %}}The api version.{{% /md %}}</dd>
-    <dt class="property-optional"
+    <dd>{{% md %}}The api version.{{% /md %}}</dd><dt class="property-optional"
             title="Optional">
         <span id="se_csharp">
 <a href="#se_csharp" style="color: inherit; text-decoration: inherit;">Se</a>
@@ -573,8 +506,7 @@ The following output properties are available:
         <span class="property-indicator"></span>
         <span class="property-type">string</span>
     </dt>
-    <dd>{{% md %}}The SAS timestamp.{{% /md %}}</dd>
-    <dt class="property-optional"
+    <dd>{{% md %}}The SAS timestamp.{{% /md %}}</dd><dt class="property-optional"
             title="Optional">
         <span id="sig_csharp">
 <a href="#sig_csharp" style="color: inherit; text-decoration: inherit;">Sig</a>
@@ -582,8 +514,7 @@ The following output properties are available:
         <span class="property-indicator"></span>
         <span class="property-type">string</span>
     </dt>
-    <dd>{{% md %}}The SAS signature.{{% /md %}}</dd>
-    <dt class="property-optional"
+    <dd>{{% md %}}The SAS signature.{{% /md %}}</dd><dt class="property-optional"
             title="Optional">
         <span id="sp_csharp">
 <a href="#sp_csharp" style="color: inherit; text-decoration: inherit;">Sp</a>
@@ -591,8 +522,7 @@ The following output properties are available:
         <span class="property-indicator"></span>
         <span class="property-type">string</span>
     </dt>
-    <dd>{{% md %}}The SAS permissions.{{% /md %}}</dd>
-    <dt class="property-optional"
+    <dd>{{% md %}}The SAS permissions.{{% /md %}}</dd><dt class="property-optional"
             title="Optional">
         <span id="sv_csharp">
 <a href="#sv_csharp" style="color: inherit; text-decoration: inherit;">Sv</a>
@@ -600,14 +530,11 @@ The following output properties are available:
         <span class="property-indicator"></span>
         <span class="property-type">string</span>
     </dt>
-    <dd>{{% md %}}The SAS version.{{% /md %}}</dd>
-</dl>
+    <dd>{{% md %}}The SAS version.{{% /md %}}</dd></dl>
 {{% /choosable %}}
 
 {{% choosable language go %}}
-<dl class="resources-properties">
-
-    <dt class="property-optional"
+<dl class="resources-properties"><dt class="property-optional"
             title="Optional">
         <span id="apiversion_go">
 <a href="#apiversion_go" style="color: inherit; text-decoration: inherit;">Api<wbr>Version</a>
@@ -615,8 +542,7 @@ The following output properties are available:
         <span class="property-indicator"></span>
         <span class="property-type">string</span>
     </dt>
-    <dd>{{% md %}}The api version.{{% /md %}}</dd>
-    <dt class="property-optional"
+    <dd>{{% md %}}The api version.{{% /md %}}</dd><dt class="property-optional"
             title="Optional">
         <span id="se_go">
 <a href="#se_go" style="color: inherit; text-decoration: inherit;">Se</a>
@@ -624,8 +550,7 @@ The following output properties are available:
         <span class="property-indicator"></span>
         <span class="property-type">string</span>
     </dt>
-    <dd>{{% md %}}The SAS timestamp.{{% /md %}}</dd>
-    <dt class="property-optional"
+    <dd>{{% md %}}The SAS timestamp.{{% /md %}}</dd><dt class="property-optional"
             title="Optional">
         <span id="sig_go">
 <a href="#sig_go" style="color: inherit; text-decoration: inherit;">Sig</a>
@@ -633,8 +558,7 @@ The following output properties are available:
         <span class="property-indicator"></span>
         <span class="property-type">string</span>
     </dt>
-    <dd>{{% md %}}The SAS signature.{{% /md %}}</dd>
-    <dt class="property-optional"
+    <dd>{{% md %}}The SAS signature.{{% /md %}}</dd><dt class="property-optional"
             title="Optional">
         <span id="sp_go">
 <a href="#sp_go" style="color: inherit; text-decoration: inherit;">Sp</a>
@@ -642,8 +566,7 @@ The following output properties are available:
         <span class="property-indicator"></span>
         <span class="property-type">string</span>
     </dt>
-    <dd>{{% md %}}The SAS permissions.{{% /md %}}</dd>
-    <dt class="property-optional"
+    <dd>{{% md %}}The SAS permissions.{{% /md %}}</dd><dt class="property-optional"
             title="Optional">
         <span id="sv_go">
 <a href="#sv_go" style="color: inherit; text-decoration: inherit;">Sv</a>
@@ -651,14 +574,11 @@ The following output properties are available:
         <span class="property-indicator"></span>
         <span class="property-type">string</span>
     </dt>
-    <dd>{{% md %}}The SAS version.{{% /md %}}</dd>
-</dl>
+    <dd>{{% md %}}The SAS version.{{% /md %}}</dd></dl>
 {{% /choosable %}}
 
 {{% choosable language nodejs %}}
-<dl class="resources-properties">
-
-    <dt class="property-optional"
+<dl class="resources-properties"><dt class="property-optional"
             title="Optional">
         <span id="apiversion_nodejs">
 <a href="#apiversion_nodejs" style="color: inherit; text-decoration: inherit;">api<wbr>Version</a>
@@ -666,8 +586,7 @@ The following output properties are available:
         <span class="property-indicator"></span>
         <span class="property-type">string</span>
     </dt>
-    <dd>{{% md %}}The api version.{{% /md %}}</dd>
-    <dt class="property-optional"
+    <dd>{{% md %}}The api version.{{% /md %}}</dd><dt class="property-optional"
             title="Optional">
         <span id="se_nodejs">
 <a href="#se_nodejs" style="color: inherit; text-decoration: inherit;">se</a>
@@ -675,8 +594,7 @@ The following output properties are available:
         <span class="property-indicator"></span>
         <span class="property-type">string</span>
     </dt>
-    <dd>{{% md %}}The SAS timestamp.{{% /md %}}</dd>
-    <dt class="property-optional"
+    <dd>{{% md %}}The SAS timestamp.{{% /md %}}</dd><dt class="property-optional"
             title="Optional">
         <span id="sig_nodejs">
 <a href="#sig_nodejs" style="color: inherit; text-decoration: inherit;">sig</a>
@@ -684,8 +602,7 @@ The following output properties are available:
         <span class="property-indicator"></span>
         <span class="property-type">string</span>
     </dt>
-    <dd>{{% md %}}The SAS signature.{{% /md %}}</dd>
-    <dt class="property-optional"
+    <dd>{{% md %}}The SAS signature.{{% /md %}}</dd><dt class="property-optional"
             title="Optional">
         <span id="sp_nodejs">
 <a href="#sp_nodejs" style="color: inherit; text-decoration: inherit;">sp</a>
@@ -693,8 +610,7 @@ The following output properties are available:
         <span class="property-indicator"></span>
         <span class="property-type">string</span>
     </dt>
-    <dd>{{% md %}}The SAS permissions.{{% /md %}}</dd>
-    <dt class="property-optional"
+    <dd>{{% md %}}The SAS permissions.{{% /md %}}</dd><dt class="property-optional"
             title="Optional">
         <span id="sv_nodejs">
 <a href="#sv_nodejs" style="color: inherit; text-decoration: inherit;">sv</a>
@@ -702,14 +618,11 @@ The following output properties are available:
         <span class="property-indicator"></span>
         <span class="property-type">string</span>
     </dt>
-    <dd>{{% md %}}The SAS version.{{% /md %}}</dd>
-</dl>
+    <dd>{{% md %}}The SAS version.{{% /md %}}</dd></dl>
 {{% /choosable %}}
 
 {{% choosable language python %}}
-<dl class="resources-properties">
-
-    <dt class="property-optional"
+<dl class="resources-properties"><dt class="property-optional"
             title="Optional">
         <span id="api_version_python">
 <a href="#api_version_python" style="color: inherit; text-decoration: inherit;">api_<wbr>version</a>
@@ -717,8 +630,7 @@ The following output properties are available:
         <span class="property-indicator"></span>
         <span class="property-type">str</span>
     </dt>
-    <dd>{{% md %}}The api version.{{% /md %}}</dd>
-    <dt class="property-optional"
+    <dd>{{% md %}}The api version.{{% /md %}}</dd><dt class="property-optional"
             title="Optional">
         <span id="se_python">
 <a href="#se_python" style="color: inherit; text-decoration: inherit;">se</a>
@@ -726,8 +638,7 @@ The following output properties are available:
         <span class="property-indicator"></span>
         <span class="property-type">str</span>
     </dt>
-    <dd>{{% md %}}The SAS timestamp.{{% /md %}}</dd>
-    <dt class="property-optional"
+    <dd>{{% md %}}The SAS timestamp.{{% /md %}}</dd><dt class="property-optional"
             title="Optional">
         <span id="sig_python">
 <a href="#sig_python" style="color: inherit; text-decoration: inherit;">sig</a>
@@ -735,8 +646,7 @@ The following output properties are available:
         <span class="property-indicator"></span>
         <span class="property-type">str</span>
     </dt>
-    <dd>{{% md %}}The SAS signature.{{% /md %}}</dd>
-    <dt class="property-optional"
+    <dd>{{% md %}}The SAS signature.{{% /md %}}</dd><dt class="property-optional"
             title="Optional">
         <span id="sp_python">
 <a href="#sp_python" style="color: inherit; text-decoration: inherit;">sp</a>
@@ -744,8 +654,7 @@ The following output properties are available:
         <span class="property-indicator"></span>
         <span class="property-type">str</span>
     </dt>
-    <dd>{{% md %}}The SAS permissions.{{% /md %}}</dd>
-    <dt class="property-optional"
+    <dd>{{% md %}}The SAS permissions.{{% /md %}}</dd><dt class="property-optional"
             title="Optional">
         <span id="sv_python">
 <a href="#sv_python" style="color: inherit; text-decoration: inherit;">sv</a>
@@ -753,8 +662,7 @@ The following output properties are available:
         <span class="property-indicator"></span>
         <span class="property-type">str</span>
     </dt>
-    <dd>{{% md %}}The SAS version.{{% /md %}}</dd>
-</dl>
+    <dd>{{% md %}}The SAS version.{{% /md %}}</dd></dl>
 {{% /choosable %}}
 
 

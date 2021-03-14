@@ -16,23 +16,38 @@ information.
 
 
 {{% examples %}}
+
 ## Example Usage
 
 {{< chooser language "typescript,python,go,csharp" / >}}
 
-{{% example csharp %}}
-Coming soon!
-{{% /example %}}
 
-{{% example go %}}
-Coming soon!
-{{% /example %}}
 
-{{% example python %}}
-Coming soon!
-{{% /example %}}
 
-{{% example typescript %}}
+
+{{< example csharp >}}
+
+Coming soon!
+
+{{< /example >}}
+
+
+{{< example go >}}
+
+Coming soon!
+
+{{< /example >}}
+
+
+{{< example python >}}
+
+Coming soon!
+
+{{< /example >}}
+
+
+{{< example typescript >}}
+
 
 ```typescript
 import * as pulumi from "@pulumi/pulumi";
@@ -45,9 +60,16 @@ const config = pulumi.output(vault.kubernetes.getAuthBackendConfig({
 export const tokenReviewerJwt = config.tokenReviewerJwt;
 ```
 
-{{% /example %}}
+
+{{< /example >}}
+
+
+
+
 
 {{% /examples %}}
+
+
 
 
 ## Using getAuthBackendConfig {#using}
@@ -85,9 +107,7 @@ The following arguments are supported:
 
 
 {{% choosable language csharp %}}
-<dl class="resources-properties">
-
-    <dt class="property-optional"
+<dl class="resources-properties"><dt class="property-optional"
             title="Optional">
         <span id="backend_csharp">
 <a href="#backend_csharp" style="color: inherit; text-decoration: inherit;">Backend</a>
@@ -97,8 +117,7 @@ The following arguments are supported:
     </dt>
     <dd>{{% md %}}The unique name for the Kubernetes backend the config to
 retrieve Role attributes for resides in. Defaults to "kubernetes".
-{{% /md %}}</dd>
-    <dt class="property-optional"
+{{% /md %}}</dd><dt class="property-optional"
             title="Optional">
         <span id="disableissvalidation_csharp">
 <a href="#disableissvalidation_csharp" style="color: inherit; text-decoration: inherit;">Disable<wbr>Iss<wbr>Validation</a>
@@ -106,8 +125,7 @@ retrieve Role attributes for resides in. Defaults to "kubernetes".
         <span class="property-indicator"></span>
         <span class="property-type">bool</span>
     </dt>
-    <dd>{{% md %}}{{% /md %}}</dd>
-    <dt class="property-optional"
+    <dd>{{% md %}}{{% /md %}}</dd><dt class="property-optional"
             title="Optional">
         <span id="disablelocalcajwt_csharp">
 <a href="#disablelocalcajwt_csharp" style="color: inherit; text-decoration: inherit;">Disable<wbr>Local<wbr>Ca<wbr>Jwt</a>
@@ -115,8 +133,7 @@ retrieve Role attributes for resides in. Defaults to "kubernetes".
         <span class="property-indicator"></span>
         <span class="property-type">bool</span>
     </dt>
-    <dd>{{% md %}}{{% /md %}}</dd>
-    <dt class="property-optional"
+    <dd>{{% md %}}{{% /md %}}</dd><dt class="property-optional"
             title="Optional">
         <span id="issuer_csharp">
 <a href="#issuer_csharp" style="color: inherit; text-decoration: inherit;">Issuer</a>
@@ -125,8 +142,7 @@ retrieve Role attributes for resides in. Defaults to "kubernetes".
         <span class="property-type">string</span>
     </dt>
     <dd>{{% md %}}Optional JWT issuer. If no issuer is specified, `kubernetes.io/serviceaccount` will be used as the default issuer.
-{{% /md %}}</dd>
-    <dt class="property-optional"
+{{% /md %}}</dd><dt class="property-optional"
             title="Optional">
         <span id="kubernetescacert_csharp">
 <a href="#kubernetescacert_csharp" style="color: inherit; text-decoration: inherit;">Kubernetes<wbr>Ca<wbr>Cert</a>
@@ -135,8 +151,7 @@ retrieve Role attributes for resides in. Defaults to "kubernetes".
         <span class="property-type">string</span>
     </dt>
     <dd>{{% md %}}PEM encoded CA cert for use by the TLS client used to talk with the Kubernetes API.
-{{% /md %}}</dd>
-    <dt class="property-optional"
+{{% /md %}}</dd><dt class="property-optional"
             title="Optional">
         <span id="kuberneteshost_csharp">
 <a href="#kuberneteshost_csharp" style="color: inherit; text-decoration: inherit;">Kubernetes<wbr>Host</a>
@@ -145,8 +160,7 @@ retrieve Role attributes for resides in. Defaults to "kubernetes".
         <span class="property-type">string</span>
     </dt>
     <dd>{{% md %}}Host must be a host string, a host:port pair, or a URL to the base of the Kubernetes API server.
-{{% /md %}}</dd>
-    <dt class="property-optional"
+{{% /md %}}</dd><dt class="property-optional"
             title="Optional">
         <span id="pemkeys_csharp">
 <a href="#pemkeys_csharp" style="color: inherit; text-decoration: inherit;">Pem<wbr>Keys</a>
@@ -155,14 +169,11 @@ retrieve Role attributes for resides in. Defaults to "kubernetes".
         <span class="property-type">List&lt;string&gt;</span>
     </dt>
     <dd>{{% md %}}Optional list of PEM-formatted public keys or certificates used to verify the signatures of Kubernetes service account JWTs. If a certificate is given, its public key will be extracted. Not every installation of Kubernetes exposes these keys.
-{{% /md %}}</dd>
-</dl>
+{{% /md %}}</dd></dl>
 {{% /choosable %}}
 
 {{% choosable language go %}}
-<dl class="resources-properties">
-
-    <dt class="property-optional"
+<dl class="resources-properties"><dt class="property-optional"
             title="Optional">
         <span id="backend_go">
 <a href="#backend_go" style="color: inherit; text-decoration: inherit;">Backend</a>
@@ -172,8 +183,7 @@ retrieve Role attributes for resides in. Defaults to "kubernetes".
     </dt>
     <dd>{{% md %}}The unique name for the Kubernetes backend the config to
 retrieve Role attributes for resides in. Defaults to "kubernetes".
-{{% /md %}}</dd>
-    <dt class="property-optional"
+{{% /md %}}</dd><dt class="property-optional"
             title="Optional">
         <span id="disableissvalidation_go">
 <a href="#disableissvalidation_go" style="color: inherit; text-decoration: inherit;">Disable<wbr>Iss<wbr>Validation</a>
@@ -181,8 +191,7 @@ retrieve Role attributes for resides in. Defaults to "kubernetes".
         <span class="property-indicator"></span>
         <span class="property-type">bool</span>
     </dt>
-    <dd>{{% md %}}{{% /md %}}</dd>
-    <dt class="property-optional"
+    <dd>{{% md %}}{{% /md %}}</dd><dt class="property-optional"
             title="Optional">
         <span id="disablelocalcajwt_go">
 <a href="#disablelocalcajwt_go" style="color: inherit; text-decoration: inherit;">Disable<wbr>Local<wbr>Ca<wbr>Jwt</a>
@@ -190,8 +199,7 @@ retrieve Role attributes for resides in. Defaults to "kubernetes".
         <span class="property-indicator"></span>
         <span class="property-type">bool</span>
     </dt>
-    <dd>{{% md %}}{{% /md %}}</dd>
-    <dt class="property-optional"
+    <dd>{{% md %}}{{% /md %}}</dd><dt class="property-optional"
             title="Optional">
         <span id="issuer_go">
 <a href="#issuer_go" style="color: inherit; text-decoration: inherit;">Issuer</a>
@@ -200,8 +208,7 @@ retrieve Role attributes for resides in. Defaults to "kubernetes".
         <span class="property-type">string</span>
     </dt>
     <dd>{{% md %}}Optional JWT issuer. If no issuer is specified, `kubernetes.io/serviceaccount` will be used as the default issuer.
-{{% /md %}}</dd>
-    <dt class="property-optional"
+{{% /md %}}</dd><dt class="property-optional"
             title="Optional">
         <span id="kubernetescacert_go">
 <a href="#kubernetescacert_go" style="color: inherit; text-decoration: inherit;">Kubernetes<wbr>Ca<wbr>Cert</a>
@@ -210,8 +217,7 @@ retrieve Role attributes for resides in. Defaults to "kubernetes".
         <span class="property-type">string</span>
     </dt>
     <dd>{{% md %}}PEM encoded CA cert for use by the TLS client used to talk with the Kubernetes API.
-{{% /md %}}</dd>
-    <dt class="property-optional"
+{{% /md %}}</dd><dt class="property-optional"
             title="Optional">
         <span id="kuberneteshost_go">
 <a href="#kuberneteshost_go" style="color: inherit; text-decoration: inherit;">Kubernetes<wbr>Host</a>
@@ -220,8 +226,7 @@ retrieve Role attributes for resides in. Defaults to "kubernetes".
         <span class="property-type">string</span>
     </dt>
     <dd>{{% md %}}Host must be a host string, a host:port pair, or a URL to the base of the Kubernetes API server.
-{{% /md %}}</dd>
-    <dt class="property-optional"
+{{% /md %}}</dd><dt class="property-optional"
             title="Optional">
         <span id="pemkeys_go">
 <a href="#pemkeys_go" style="color: inherit; text-decoration: inherit;">Pem<wbr>Keys</a>
@@ -230,14 +235,11 @@ retrieve Role attributes for resides in. Defaults to "kubernetes".
         <span class="property-type">[]string</span>
     </dt>
     <dd>{{% md %}}Optional list of PEM-formatted public keys or certificates used to verify the signatures of Kubernetes service account JWTs. If a certificate is given, its public key will be extracted. Not every installation of Kubernetes exposes these keys.
-{{% /md %}}</dd>
-</dl>
+{{% /md %}}</dd></dl>
 {{% /choosable %}}
 
 {{% choosable language nodejs %}}
-<dl class="resources-properties">
-
-    <dt class="property-optional"
+<dl class="resources-properties"><dt class="property-optional"
             title="Optional">
         <span id="backend_nodejs">
 <a href="#backend_nodejs" style="color: inherit; text-decoration: inherit;">backend</a>
@@ -247,8 +249,7 @@ retrieve Role attributes for resides in. Defaults to "kubernetes".
     </dt>
     <dd>{{% md %}}The unique name for the Kubernetes backend the config to
 retrieve Role attributes for resides in. Defaults to "kubernetes".
-{{% /md %}}</dd>
-    <dt class="property-optional"
+{{% /md %}}</dd><dt class="property-optional"
             title="Optional">
         <span id="disableissvalidation_nodejs">
 <a href="#disableissvalidation_nodejs" style="color: inherit; text-decoration: inherit;">disable<wbr>Iss<wbr>Validation</a>
@@ -256,8 +257,7 @@ retrieve Role attributes for resides in. Defaults to "kubernetes".
         <span class="property-indicator"></span>
         <span class="property-type">boolean</span>
     </dt>
-    <dd>{{% md %}}{{% /md %}}</dd>
-    <dt class="property-optional"
+    <dd>{{% md %}}{{% /md %}}</dd><dt class="property-optional"
             title="Optional">
         <span id="disablelocalcajwt_nodejs">
 <a href="#disablelocalcajwt_nodejs" style="color: inherit; text-decoration: inherit;">disable<wbr>Local<wbr>Ca<wbr>Jwt</a>
@@ -265,8 +265,7 @@ retrieve Role attributes for resides in. Defaults to "kubernetes".
         <span class="property-indicator"></span>
         <span class="property-type">boolean</span>
     </dt>
-    <dd>{{% md %}}{{% /md %}}</dd>
-    <dt class="property-optional"
+    <dd>{{% md %}}{{% /md %}}</dd><dt class="property-optional"
             title="Optional">
         <span id="issuer_nodejs">
 <a href="#issuer_nodejs" style="color: inherit; text-decoration: inherit;">issuer</a>
@@ -275,8 +274,7 @@ retrieve Role attributes for resides in. Defaults to "kubernetes".
         <span class="property-type">string</span>
     </dt>
     <dd>{{% md %}}Optional JWT issuer. If no issuer is specified, `kubernetes.io/serviceaccount` will be used as the default issuer.
-{{% /md %}}</dd>
-    <dt class="property-optional"
+{{% /md %}}</dd><dt class="property-optional"
             title="Optional">
         <span id="kubernetescacert_nodejs">
 <a href="#kubernetescacert_nodejs" style="color: inherit; text-decoration: inherit;">kubernetes<wbr>Ca<wbr>Cert</a>
@@ -285,8 +283,7 @@ retrieve Role attributes for resides in. Defaults to "kubernetes".
         <span class="property-type">string</span>
     </dt>
     <dd>{{% md %}}PEM encoded CA cert for use by the TLS client used to talk with the Kubernetes API.
-{{% /md %}}</dd>
-    <dt class="property-optional"
+{{% /md %}}</dd><dt class="property-optional"
             title="Optional">
         <span id="kuberneteshost_nodejs">
 <a href="#kuberneteshost_nodejs" style="color: inherit; text-decoration: inherit;">kubernetes<wbr>Host</a>
@@ -295,8 +292,7 @@ retrieve Role attributes for resides in. Defaults to "kubernetes".
         <span class="property-type">string</span>
     </dt>
     <dd>{{% md %}}Host must be a host string, a host:port pair, or a URL to the base of the Kubernetes API server.
-{{% /md %}}</dd>
-    <dt class="property-optional"
+{{% /md %}}</dd><dt class="property-optional"
             title="Optional">
         <span id="pemkeys_nodejs">
 <a href="#pemkeys_nodejs" style="color: inherit; text-decoration: inherit;">pem<wbr>Keys</a>
@@ -305,14 +301,11 @@ retrieve Role attributes for resides in. Defaults to "kubernetes".
         <span class="property-type">string[]</span>
     </dt>
     <dd>{{% md %}}Optional list of PEM-formatted public keys or certificates used to verify the signatures of Kubernetes service account JWTs. If a certificate is given, its public key will be extracted. Not every installation of Kubernetes exposes these keys.
-{{% /md %}}</dd>
-</dl>
+{{% /md %}}</dd></dl>
 {{% /choosable %}}
 
 {{% choosable language python %}}
-<dl class="resources-properties">
-
-    <dt class="property-optional"
+<dl class="resources-properties"><dt class="property-optional"
             title="Optional">
         <span id="backend_python">
 <a href="#backend_python" style="color: inherit; text-decoration: inherit;">backend</a>
@@ -322,8 +315,7 @@ retrieve Role attributes for resides in. Defaults to "kubernetes".
     </dt>
     <dd>{{% md %}}The unique name for the Kubernetes backend the config to
 retrieve Role attributes for resides in. Defaults to "kubernetes".
-{{% /md %}}</dd>
-    <dt class="property-optional"
+{{% /md %}}</dd><dt class="property-optional"
             title="Optional">
         <span id="disable_iss_validation_python">
 <a href="#disable_iss_validation_python" style="color: inherit; text-decoration: inherit;">disable_<wbr>iss_<wbr>validation</a>
@@ -331,8 +323,7 @@ retrieve Role attributes for resides in. Defaults to "kubernetes".
         <span class="property-indicator"></span>
         <span class="property-type">bool</span>
     </dt>
-    <dd>{{% md %}}{{% /md %}}</dd>
-    <dt class="property-optional"
+    <dd>{{% md %}}{{% /md %}}</dd><dt class="property-optional"
             title="Optional">
         <span id="disable_local_ca_jwt_python">
 <a href="#disable_local_ca_jwt_python" style="color: inherit; text-decoration: inherit;">disable_<wbr>local_<wbr>ca_<wbr>jwt</a>
@@ -340,8 +331,7 @@ retrieve Role attributes for resides in. Defaults to "kubernetes".
         <span class="property-indicator"></span>
         <span class="property-type">bool</span>
     </dt>
-    <dd>{{% md %}}{{% /md %}}</dd>
-    <dt class="property-optional"
+    <dd>{{% md %}}{{% /md %}}</dd><dt class="property-optional"
             title="Optional">
         <span id="issuer_python">
 <a href="#issuer_python" style="color: inherit; text-decoration: inherit;">issuer</a>
@@ -350,8 +340,7 @@ retrieve Role attributes for resides in. Defaults to "kubernetes".
         <span class="property-type">str</span>
     </dt>
     <dd>{{% md %}}Optional JWT issuer. If no issuer is specified, `kubernetes.io/serviceaccount` will be used as the default issuer.
-{{% /md %}}</dd>
-    <dt class="property-optional"
+{{% /md %}}</dd><dt class="property-optional"
             title="Optional">
         <span id="kubernetes_ca_cert_python">
 <a href="#kubernetes_ca_cert_python" style="color: inherit; text-decoration: inherit;">kubernetes_<wbr>ca_<wbr>cert</a>
@@ -360,8 +349,7 @@ retrieve Role attributes for resides in. Defaults to "kubernetes".
         <span class="property-type">str</span>
     </dt>
     <dd>{{% md %}}PEM encoded CA cert for use by the TLS client used to talk with the Kubernetes API.
-{{% /md %}}</dd>
-    <dt class="property-optional"
+{{% /md %}}</dd><dt class="property-optional"
             title="Optional">
         <span id="kubernetes_host_python">
 <a href="#kubernetes_host_python" style="color: inherit; text-decoration: inherit;">kubernetes_<wbr>host</a>
@@ -370,8 +358,7 @@ retrieve Role attributes for resides in. Defaults to "kubernetes".
         <span class="property-type">str</span>
     </dt>
     <dd>{{% md %}}Host must be a host string, a host:port pair, or a URL to the base of the Kubernetes API server.
-{{% /md %}}</dd>
-    <dt class="property-optional"
+{{% /md %}}</dd><dt class="property-optional"
             title="Optional">
         <span id="pem_keys_python">
 <a href="#pem_keys_python" style="color: inherit; text-decoration: inherit;">pem_<wbr>keys</a>
@@ -380,8 +367,7 @@ retrieve Role attributes for resides in. Defaults to "kubernetes".
         <span class="property-type">Sequence[str]</span>
     </dt>
     <dd>{{% md %}}Optional list of PEM-formatted public keys or certificates used to verify the signatures of Kubernetes service account JWTs. If a certificate is given, its public key will be extracted. Not every installation of Kubernetes exposes these keys.
-{{% /md %}}</dd>
-</dl>
+{{% /md %}}</dd></dl>
 {{% /choosable %}}
 
 
@@ -394,9 +380,7 @@ The following output properties are available:
 
 
 {{% choosable language csharp %}}
-<dl class="resources-properties">
-
-    <dt class="property-"
+<dl class="resources-properties"><dt class="property-"
             title="">
         <span id="disableissvalidation_csharp">
 <a href="#disableissvalidation_csharp" style="color: inherit; text-decoration: inherit;">Disable<wbr>Iss<wbr>Validation</a>
@@ -404,8 +388,7 @@ The following output properties are available:
         <span class="property-indicator"></span>
         <span class="property-type">bool</span>
     </dt>
-    <dd>{{% md %}}{{% /md %}}</dd>
-    <dt class="property-"
+    <dd>{{% md %}}{{% /md %}}</dd><dt class="property-"
             title="">
         <span id="disablelocalcajwt_csharp">
 <a href="#disablelocalcajwt_csharp" style="color: inherit; text-decoration: inherit;">Disable<wbr>Local<wbr>Ca<wbr>Jwt</a>
@@ -413,8 +396,7 @@ The following output properties are available:
         <span class="property-indicator"></span>
         <span class="property-type">bool</span>
     </dt>
-    <dd>{{% md %}}{{% /md %}}</dd>
-    <dt class="property-"
+    <dd>{{% md %}}{{% /md %}}</dd><dt class="property-"
             title="">
         <span id="id_csharp">
 <a href="#id_csharp" style="color: inherit; text-decoration: inherit;">Id</a>
@@ -423,8 +405,7 @@ The following output properties are available:
         <span class="property-type">string</span>
     </dt>
     <dd>{{% md %}}The provider-assigned unique ID for this managed resource.
-{{% /md %}}</dd>
-    <dt class="property-"
+{{% /md %}}</dd><dt class="property-"
             title="">
         <span id="issuer_csharp">
 <a href="#issuer_csharp" style="color: inherit; text-decoration: inherit;">Issuer</a>
@@ -433,8 +414,7 @@ The following output properties are available:
         <span class="property-type">string</span>
     </dt>
     <dd>{{% md %}}Optional JWT issuer. If no issuer is specified, `kubernetes.io/serviceaccount` will be used as the default issuer.
-{{% /md %}}</dd>
-    <dt class="property-"
+{{% /md %}}</dd><dt class="property-"
             title="">
         <span id="kubernetescacert_csharp">
 <a href="#kubernetescacert_csharp" style="color: inherit; text-decoration: inherit;">Kubernetes<wbr>Ca<wbr>Cert</a>
@@ -443,8 +423,7 @@ The following output properties are available:
         <span class="property-type">string</span>
     </dt>
     <dd>{{% md %}}PEM encoded CA cert for use by the TLS client used to talk with the Kubernetes API.
-{{% /md %}}</dd>
-    <dt class="property-"
+{{% /md %}}</dd><dt class="property-"
             title="">
         <span id="kuberneteshost_csharp">
 <a href="#kuberneteshost_csharp" style="color: inherit; text-decoration: inherit;">Kubernetes<wbr>Host</a>
@@ -453,8 +432,7 @@ The following output properties are available:
         <span class="property-type">string</span>
     </dt>
     <dd>{{% md %}}Host must be a host string, a host:port pair, or a URL to the base of the Kubernetes API server.
-{{% /md %}}</dd>
-    <dt class="property-"
+{{% /md %}}</dd><dt class="property-"
             title="">
         <span id="pemkeys_csharp">
 <a href="#pemkeys_csharp" style="color: inherit; text-decoration: inherit;">Pem<wbr>Keys</a>
@@ -463,8 +441,7 @@ The following output properties are available:
         <span class="property-type">List&lt;string&gt;</span>
     </dt>
     <dd>{{% md %}}Optional list of PEM-formatted public keys or certificates used to verify the signatures of Kubernetes service account JWTs. If a certificate is given, its public key will be extracted. Not every installation of Kubernetes exposes these keys.
-{{% /md %}}</dd>
-    <dt class="property-"
+{{% /md %}}</dd><dt class="property-"
             title="">
         <span id="backend_csharp">
 <a href="#backend_csharp" style="color: inherit; text-decoration: inherit;">Backend</a>
@@ -472,14 +449,11 @@ The following output properties are available:
         <span class="property-indicator"></span>
         <span class="property-type">string</span>
     </dt>
-    <dd>{{% md %}}{{% /md %}}</dd>
-</dl>
+    <dd>{{% md %}}{{% /md %}}</dd></dl>
 {{% /choosable %}}
 
 {{% choosable language go %}}
-<dl class="resources-properties">
-
-    <dt class="property-"
+<dl class="resources-properties"><dt class="property-"
             title="">
         <span id="disableissvalidation_go">
 <a href="#disableissvalidation_go" style="color: inherit; text-decoration: inherit;">Disable<wbr>Iss<wbr>Validation</a>
@@ -487,8 +461,7 @@ The following output properties are available:
         <span class="property-indicator"></span>
         <span class="property-type">bool</span>
     </dt>
-    <dd>{{% md %}}{{% /md %}}</dd>
-    <dt class="property-"
+    <dd>{{% md %}}{{% /md %}}</dd><dt class="property-"
             title="">
         <span id="disablelocalcajwt_go">
 <a href="#disablelocalcajwt_go" style="color: inherit; text-decoration: inherit;">Disable<wbr>Local<wbr>Ca<wbr>Jwt</a>
@@ -496,8 +469,7 @@ The following output properties are available:
         <span class="property-indicator"></span>
         <span class="property-type">bool</span>
     </dt>
-    <dd>{{% md %}}{{% /md %}}</dd>
-    <dt class="property-"
+    <dd>{{% md %}}{{% /md %}}</dd><dt class="property-"
             title="">
         <span id="id_go">
 <a href="#id_go" style="color: inherit; text-decoration: inherit;">Id</a>
@@ -506,8 +478,7 @@ The following output properties are available:
         <span class="property-type">string</span>
     </dt>
     <dd>{{% md %}}The provider-assigned unique ID for this managed resource.
-{{% /md %}}</dd>
-    <dt class="property-"
+{{% /md %}}</dd><dt class="property-"
             title="">
         <span id="issuer_go">
 <a href="#issuer_go" style="color: inherit; text-decoration: inherit;">Issuer</a>
@@ -516,8 +487,7 @@ The following output properties are available:
         <span class="property-type">string</span>
     </dt>
     <dd>{{% md %}}Optional JWT issuer. If no issuer is specified, `kubernetes.io/serviceaccount` will be used as the default issuer.
-{{% /md %}}</dd>
-    <dt class="property-"
+{{% /md %}}</dd><dt class="property-"
             title="">
         <span id="kubernetescacert_go">
 <a href="#kubernetescacert_go" style="color: inherit; text-decoration: inherit;">Kubernetes<wbr>Ca<wbr>Cert</a>
@@ -526,8 +496,7 @@ The following output properties are available:
         <span class="property-type">string</span>
     </dt>
     <dd>{{% md %}}PEM encoded CA cert for use by the TLS client used to talk with the Kubernetes API.
-{{% /md %}}</dd>
-    <dt class="property-"
+{{% /md %}}</dd><dt class="property-"
             title="">
         <span id="kuberneteshost_go">
 <a href="#kuberneteshost_go" style="color: inherit; text-decoration: inherit;">Kubernetes<wbr>Host</a>
@@ -536,8 +505,7 @@ The following output properties are available:
         <span class="property-type">string</span>
     </dt>
     <dd>{{% md %}}Host must be a host string, a host:port pair, or a URL to the base of the Kubernetes API server.
-{{% /md %}}</dd>
-    <dt class="property-"
+{{% /md %}}</dd><dt class="property-"
             title="">
         <span id="pemkeys_go">
 <a href="#pemkeys_go" style="color: inherit; text-decoration: inherit;">Pem<wbr>Keys</a>
@@ -546,8 +514,7 @@ The following output properties are available:
         <span class="property-type">[]string</span>
     </dt>
     <dd>{{% md %}}Optional list of PEM-formatted public keys or certificates used to verify the signatures of Kubernetes service account JWTs. If a certificate is given, its public key will be extracted. Not every installation of Kubernetes exposes these keys.
-{{% /md %}}</dd>
-    <dt class="property-"
+{{% /md %}}</dd><dt class="property-"
             title="">
         <span id="backend_go">
 <a href="#backend_go" style="color: inherit; text-decoration: inherit;">Backend</a>
@@ -555,14 +522,11 @@ The following output properties are available:
         <span class="property-indicator"></span>
         <span class="property-type">string</span>
     </dt>
-    <dd>{{% md %}}{{% /md %}}</dd>
-</dl>
+    <dd>{{% md %}}{{% /md %}}</dd></dl>
 {{% /choosable %}}
 
 {{% choosable language nodejs %}}
-<dl class="resources-properties">
-
-    <dt class="property-"
+<dl class="resources-properties"><dt class="property-"
             title="">
         <span id="disableissvalidation_nodejs">
 <a href="#disableissvalidation_nodejs" style="color: inherit; text-decoration: inherit;">disable<wbr>Iss<wbr>Validation</a>
@@ -570,8 +534,7 @@ The following output properties are available:
         <span class="property-indicator"></span>
         <span class="property-type">boolean</span>
     </dt>
-    <dd>{{% md %}}{{% /md %}}</dd>
-    <dt class="property-"
+    <dd>{{% md %}}{{% /md %}}</dd><dt class="property-"
             title="">
         <span id="disablelocalcajwt_nodejs">
 <a href="#disablelocalcajwt_nodejs" style="color: inherit; text-decoration: inherit;">disable<wbr>Local<wbr>Ca<wbr>Jwt</a>
@@ -579,8 +542,7 @@ The following output properties are available:
         <span class="property-indicator"></span>
         <span class="property-type">boolean</span>
     </dt>
-    <dd>{{% md %}}{{% /md %}}</dd>
-    <dt class="property-"
+    <dd>{{% md %}}{{% /md %}}</dd><dt class="property-"
             title="">
         <span id="id_nodejs">
 <a href="#id_nodejs" style="color: inherit; text-decoration: inherit;">id</a>
@@ -589,8 +551,7 @@ The following output properties are available:
         <span class="property-type">string</span>
     </dt>
     <dd>{{% md %}}The provider-assigned unique ID for this managed resource.
-{{% /md %}}</dd>
-    <dt class="property-"
+{{% /md %}}</dd><dt class="property-"
             title="">
         <span id="issuer_nodejs">
 <a href="#issuer_nodejs" style="color: inherit; text-decoration: inherit;">issuer</a>
@@ -599,8 +560,7 @@ The following output properties are available:
         <span class="property-type">string</span>
     </dt>
     <dd>{{% md %}}Optional JWT issuer. If no issuer is specified, `kubernetes.io/serviceaccount` will be used as the default issuer.
-{{% /md %}}</dd>
-    <dt class="property-"
+{{% /md %}}</dd><dt class="property-"
             title="">
         <span id="kubernetescacert_nodejs">
 <a href="#kubernetescacert_nodejs" style="color: inherit; text-decoration: inherit;">kubernetes<wbr>Ca<wbr>Cert</a>
@@ -609,8 +569,7 @@ The following output properties are available:
         <span class="property-type">string</span>
     </dt>
     <dd>{{% md %}}PEM encoded CA cert for use by the TLS client used to talk with the Kubernetes API.
-{{% /md %}}</dd>
-    <dt class="property-"
+{{% /md %}}</dd><dt class="property-"
             title="">
         <span id="kuberneteshost_nodejs">
 <a href="#kuberneteshost_nodejs" style="color: inherit; text-decoration: inherit;">kubernetes<wbr>Host</a>
@@ -619,8 +578,7 @@ The following output properties are available:
         <span class="property-type">string</span>
     </dt>
     <dd>{{% md %}}Host must be a host string, a host:port pair, or a URL to the base of the Kubernetes API server.
-{{% /md %}}</dd>
-    <dt class="property-"
+{{% /md %}}</dd><dt class="property-"
             title="">
         <span id="pemkeys_nodejs">
 <a href="#pemkeys_nodejs" style="color: inherit; text-decoration: inherit;">pem<wbr>Keys</a>
@@ -629,8 +587,7 @@ The following output properties are available:
         <span class="property-type">string[]</span>
     </dt>
     <dd>{{% md %}}Optional list of PEM-formatted public keys or certificates used to verify the signatures of Kubernetes service account JWTs. If a certificate is given, its public key will be extracted. Not every installation of Kubernetes exposes these keys.
-{{% /md %}}</dd>
-    <dt class="property-"
+{{% /md %}}</dd><dt class="property-"
             title="">
         <span id="backend_nodejs">
 <a href="#backend_nodejs" style="color: inherit; text-decoration: inherit;">backend</a>
@@ -638,14 +595,11 @@ The following output properties are available:
         <span class="property-indicator"></span>
         <span class="property-type">string</span>
     </dt>
-    <dd>{{% md %}}{{% /md %}}</dd>
-</dl>
+    <dd>{{% md %}}{{% /md %}}</dd></dl>
 {{% /choosable %}}
 
 {{% choosable language python %}}
-<dl class="resources-properties">
-
-    <dt class="property-"
+<dl class="resources-properties"><dt class="property-"
             title="">
         <span id="disable_iss_validation_python">
 <a href="#disable_iss_validation_python" style="color: inherit; text-decoration: inherit;">disable_<wbr>iss_<wbr>validation</a>
@@ -653,8 +607,7 @@ The following output properties are available:
         <span class="property-indicator"></span>
         <span class="property-type">bool</span>
     </dt>
-    <dd>{{% md %}}{{% /md %}}</dd>
-    <dt class="property-"
+    <dd>{{% md %}}{{% /md %}}</dd><dt class="property-"
             title="">
         <span id="disable_local_ca_jwt_python">
 <a href="#disable_local_ca_jwt_python" style="color: inherit; text-decoration: inherit;">disable_<wbr>local_<wbr>ca_<wbr>jwt</a>
@@ -662,8 +615,7 @@ The following output properties are available:
         <span class="property-indicator"></span>
         <span class="property-type">bool</span>
     </dt>
-    <dd>{{% md %}}{{% /md %}}</dd>
-    <dt class="property-"
+    <dd>{{% md %}}{{% /md %}}</dd><dt class="property-"
             title="">
         <span id="id_python">
 <a href="#id_python" style="color: inherit; text-decoration: inherit;">id</a>
@@ -672,8 +624,7 @@ The following output properties are available:
         <span class="property-type">str</span>
     </dt>
     <dd>{{% md %}}The provider-assigned unique ID for this managed resource.
-{{% /md %}}</dd>
-    <dt class="property-"
+{{% /md %}}</dd><dt class="property-"
             title="">
         <span id="issuer_python">
 <a href="#issuer_python" style="color: inherit; text-decoration: inherit;">issuer</a>
@@ -682,8 +633,7 @@ The following output properties are available:
         <span class="property-type">str</span>
     </dt>
     <dd>{{% md %}}Optional JWT issuer. If no issuer is specified, `kubernetes.io/serviceaccount` will be used as the default issuer.
-{{% /md %}}</dd>
-    <dt class="property-"
+{{% /md %}}</dd><dt class="property-"
             title="">
         <span id="kubernetes_ca_cert_python">
 <a href="#kubernetes_ca_cert_python" style="color: inherit; text-decoration: inherit;">kubernetes_<wbr>ca_<wbr>cert</a>
@@ -692,8 +642,7 @@ The following output properties are available:
         <span class="property-type">str</span>
     </dt>
     <dd>{{% md %}}PEM encoded CA cert for use by the TLS client used to talk with the Kubernetes API.
-{{% /md %}}</dd>
-    <dt class="property-"
+{{% /md %}}</dd><dt class="property-"
             title="">
         <span id="kubernetes_host_python">
 <a href="#kubernetes_host_python" style="color: inherit; text-decoration: inherit;">kubernetes_<wbr>host</a>
@@ -702,8 +651,7 @@ The following output properties are available:
         <span class="property-type">str</span>
     </dt>
     <dd>{{% md %}}Host must be a host string, a host:port pair, or a URL to the base of the Kubernetes API server.
-{{% /md %}}</dd>
-    <dt class="property-"
+{{% /md %}}</dd><dt class="property-"
             title="">
         <span id="pem_keys_python">
 <a href="#pem_keys_python" style="color: inherit; text-decoration: inherit;">pem_<wbr>keys</a>
@@ -712,8 +660,7 @@ The following output properties are available:
         <span class="property-type">Sequence[str]</span>
     </dt>
     <dd>{{% md %}}Optional list of PEM-formatted public keys or certificates used to verify the signatures of Kubernetes service account JWTs. If a certificate is given, its public key will be extracted. Not every installation of Kubernetes exposes these keys.
-{{% /md %}}</dd>
-    <dt class="property-"
+{{% /md %}}</dd><dt class="property-"
             title="">
         <span id="backend_python">
 <a href="#backend_python" style="color: inherit; text-decoration: inherit;">backend</a>
@@ -721,8 +668,7 @@ The following output properties are available:
         <span class="property-indicator"></span>
         <span class="property-type">str</span>
     </dt>
-    <dd>{{% md %}}{{% /md %}}</dd>
-</dl>
+    <dd>{{% md %}}{{% /md %}}</dd></dl>
 {{% /choosable %}}
 
 
@@ -736,6 +682,6 @@ The following output properties are available:
 	<dt>License</dt>
 	<dd>Apache-2.0</dd>
 	<dt>Notes</dt>
-	<dd>This Pulumi package is based on the [`vault` Terraform Provider](https://github.com/hashicorp/terraform-provider-vault).</dd>
+	<dd>{{% md %}}This Pulumi package is based on the [`vault` Terraform Provider](https://github.com/hashicorp/terraform-provider-vault).{{% /md %}}</dd>
 </dl>
 

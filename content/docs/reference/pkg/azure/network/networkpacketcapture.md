@@ -13,23 +13,38 @@ meta_desc: "Documentation for the azure.network.NetworkPacketCapture resource wi
 Configures Network Packet Capturing against a Virtual Machine using a Network Watcher.
 
 {{% examples %}}
+
 ## Example Usage
 
 {{< chooser language "typescript,python,go,csharp" / >}}
 
-{{% example csharp %}}
-Coming soon!
-{{% /example %}}
 
-{{% example go %}}
-Coming soon!
-{{% /example %}}
 
-{{% example python %}}
-Coming soon!
-{{% /example %}}
 
-{{% example typescript %}}
+
+{{< example csharp >}}
+
+Coming soon!
+
+{{< /example >}}
+
+
+{{< example go >}}
+
+Coming soon!
+
+{{< /example >}}
+
+
+{{< example python >}}
+
+Coming soon!
+
+{{< /example >}}
+
+
+{{< example typescript >}}
+
 
 ```typescript
 import * as pulumi from "@pulumi/pulumi";
@@ -112,9 +127,16 @@ const exampleNetworkPacketCapture = new azure.network.NetworkPacketCapture("exam
 });
 ```
 
-{{% /example %}}
+
+{{< /example >}}
+
+
+
+
 
 {{% /examples %}}
+
+
 
 
 ## Create a NetworkPacketCapture Resource {#create}
@@ -139,9 +161,7 @@ const exampleNetworkPacketCapture = new azure.network.NetworkPacketCapture("exam
 
 {{% choosable language nodejs %}}
 
-<dl class="resources-properties">
-  
-    <dt
+<dl class="resources-properties"><dt
         class="property-required" title="Required">
         <span>name</span>
         <span class="property-indicator"></span>
@@ -149,9 +169,7 @@ const exampleNetworkPacketCapture = new azure.network.NetworkPacketCapture("exam
     </dt>
     <dd>
       The unique name of the resource.
-    </dd>
-  
-    <dt
+    </dd><dt
         class="property-required" title="Required">
         <span>args</span>
         <span class="property-indicator"></span>
@@ -159,9 +177,7 @@ const exampleNetworkPacketCapture = new azure.network.NetworkPacketCapture("exam
     </dt>
     <dd>
       The arguments to resource properties.
-    </dd>
-  
-    <dt
+    </dd><dt
         class="property-optional" title="Optional">
         <span>opts</span>
         <span class="property-indicator"></span>
@@ -169,10 +185,7 @@ const exampleNetworkPacketCapture = new azure.network.NetworkPacketCapture("exam
     </dt>
     <dd>
       Bag of options to control resource&#39;s behavior.
-    </dd>
-  
-
-</dl>
+    </dd></dl>
 
 {{% /choosable %}}
 
@@ -198,9 +211,7 @@ const exampleNetworkPacketCapture = new azure.network.NetworkPacketCapture("exam
 
 {{% choosable language go %}}
 
-<dl class="resources-properties">
-  
-    <dt
+<dl class="resources-properties"><dt
         class="property-optional" title="Optional">
         <span>ctx</span>
         <span class="property-indicator"></span>
@@ -208,9 +219,7 @@ const exampleNetworkPacketCapture = new azure.network.NetworkPacketCapture("exam
     </dt>
     <dd>
       Context object for the current deployment.
-    </dd>
-  
-    <dt
+    </dd><dt
         class="property-required" title="Required">
         <span>name</span>
         <span class="property-indicator"></span>
@@ -218,9 +227,7 @@ const exampleNetworkPacketCapture = new azure.network.NetworkPacketCapture("exam
     </dt>
     <dd>
       The unique name of the resource.
-    </dd>
-  
-    <dt
+    </dd><dt
         class="property-required" title="Required">
         <span>args</span>
         <span class="property-indicator"></span>
@@ -228,9 +235,7 @@ const exampleNetworkPacketCapture = new azure.network.NetworkPacketCapture("exam
     </dt>
     <dd>
       The arguments to resource properties.
-    </dd>
-  
-    <dt
+    </dd><dt
         class="property-optional" title="Optional">
         <span>opts</span>
         <span class="property-indicator"></span>
@@ -238,18 +243,13 @@ const exampleNetworkPacketCapture = new azure.network.NetworkPacketCapture("exam
     </dt>
     <dd>
       Bag of options to control resource&#39;s behavior.
-    </dd>
-  
-
-</dl>
+    </dd></dl>
 
 {{% /choosable %}}
 
 {{% choosable language csharp %}}
 
-<dl class="resources-properties">
-  
-    <dt
+<dl class="resources-properties"><dt
         class="property-required" title="Required">
         <span>name</span>
         <span class="property-indicator"></span>
@@ -257,9 +257,7 @@ const exampleNetworkPacketCapture = new azure.network.NetworkPacketCapture("exam
     </dt>
     <dd>
       The unique name of the resource.
-    </dd>
-  
-    <dt
+    </dd><dt
         class="property-required" title="Required">
         <span>args</span>
         <span class="property-indicator"></span>
@@ -267,9 +265,7 @@ const exampleNetworkPacketCapture = new azure.network.NetworkPacketCapture("exam
     </dt>
     <dd>
       The arguments to resource properties.
-    </dd>
-  
-    <dt
+    </dd><dt
         class="property-optional" title="Optional">
         <span>opts</span>
         <span class="property-indicator"></span>
@@ -277,10 +273,7 @@ const exampleNetworkPacketCapture = new azure.network.NetworkPacketCapture("exam
     </dt>
     <dd>
       Bag of options to control resource&#39;s behavior.
-    </dd>
-  
-
-</dl>
+    </dd></dl>
 
 {{% /choosable %}}
 
@@ -295,9 +288,7 @@ The NetworkPacketCapture resource accepts the following [input]({{< relref "/doc
 
 
 {{% choosable language csharp %}}
-<dl class="resources-properties">
-
-    <dt class="property-required"
+<dl class="resources-properties"><dt class="property-required"
             title="Required">
         <span id="networkwatchername_csharp">
 <a href="#networkwatchername_csharp" style="color: inherit; text-decoration: inherit;">Network<wbr>Watcher<wbr>Name</a>
@@ -306,8 +297,7 @@ The NetworkPacketCapture resource accepts the following [input]({{< relref "/doc
         <span class="property-type">string</span>
     </dt>
     <dd>{{% md %}}The name of the Network Watcher. Changing this forces a new resource to be created.
-{{% /md %}}</dd>
-    <dt class="property-required"
+{{% /md %}}</dd><dt class="property-required"
             title="Required">
         <span id="resourcegroupname_csharp">
 <a href="#resourcegroupname_csharp" style="color: inherit; text-decoration: inherit;">Resource<wbr>Group<wbr>Name</a>
@@ -316,8 +306,7 @@ The NetworkPacketCapture resource accepts the following [input]({{< relref "/doc
         <span class="property-type">string</span>
     </dt>
     <dd>{{% md %}}The name of the resource group in which the Network Watcher exists. Changing this forces a new resource to be created.
-{{% /md %}}</dd>
-    <dt class="property-required"
+{{% /md %}}</dd><dt class="property-required"
             title="Required">
         <span id="storagelocation_csharp">
 <a href="#storagelocation_csharp" style="color: inherit; text-decoration: inherit;">Storage<wbr>Location</a>
@@ -326,8 +315,7 @@ The NetworkPacketCapture resource accepts the following [input]({{< relref "/doc
         <span class="property-type"><a href="#networkpacketcapturestoragelocation">Network<wbr>Packet<wbr>Capture<wbr>Storage<wbr>Location<wbr>Args</a></span>
     </dt>
     <dd>{{% md %}}A `storage_location` block as defined below. Changing this forces a new resource to be created.
-{{% /md %}}</dd>
-    <dt class="property-required"
+{{% /md %}}</dd><dt class="property-required"
             title="Required">
         <span id="targetresourceid_csharp">
 <a href="#targetresourceid_csharp" style="color: inherit; text-decoration: inherit;">Target<wbr>Resource<wbr>Id</a>
@@ -336,8 +324,7 @@ The NetworkPacketCapture resource accepts the following [input]({{< relref "/doc
         <span class="property-type">string</span>
     </dt>
     <dd>{{% md %}}The ID of the Resource to capture packets from. Changing this forces a new resource to be created.
-{{% /md %}}</dd>
-    <dt class="property-optional"
+{{% /md %}}</dd><dt class="property-optional"
             title="Optional">
         <span id="filters_csharp">
 <a href="#filters_csharp" style="color: inherit; text-decoration: inherit;">Filters</a>
@@ -346,8 +333,7 @@ The NetworkPacketCapture resource accepts the following [input]({{< relref "/doc
         <span class="property-type"><a href="#networkpacketcapturefilter">List&lt;Network<wbr>Packet<wbr>Capture<wbr>Filter<wbr>Args&gt;</a></span>
     </dt>
     <dd>{{% md %}}One or more `filter` blocks as defined below. Changing this forces a new resource to be created.
-{{% /md %}}</dd>
-    <dt class="property-optional"
+{{% /md %}}</dd><dt class="property-optional"
             title="Optional">
         <span id="maximumbytesperpacket_csharp">
 <a href="#maximumbytesperpacket_csharp" style="color: inherit; text-decoration: inherit;">Maximum<wbr>Bytes<wbr>Per<wbr>Packet</a>
@@ -356,8 +342,7 @@ The NetworkPacketCapture resource accepts the following [input]({{< relref "/doc
         <span class="property-type">int</span>
     </dt>
     <dd>{{% md %}}The number of bytes captured per packet. The remaining bytes are truncated. Defaults to `0` (Entire Packet Captured). Changing this forces a new resource to be created.
-{{% /md %}}</dd>
-    <dt class="property-optional"
+{{% /md %}}</dd><dt class="property-optional"
             title="Optional">
         <span id="maximumbytespersession_csharp">
 <a href="#maximumbytespersession_csharp" style="color: inherit; text-decoration: inherit;">Maximum<wbr>Bytes<wbr>Per<wbr>Session</a>
@@ -366,8 +351,7 @@ The NetworkPacketCapture resource accepts the following [input]({{< relref "/doc
         <span class="property-type">int</span>
     </dt>
     <dd>{{% md %}}Maximum size of the capture in Bytes. Defaults to `1073741824` (1GB). Changing this forces a new resource to be created.
-{{% /md %}}</dd>
-    <dt class="property-optional"
+{{% /md %}}</dd><dt class="property-optional"
             title="Optional">
         <span id="maximumcaptureduration_csharp">
 <a href="#maximumcaptureduration_csharp" style="color: inherit; text-decoration: inherit;">Maximum<wbr>Capture<wbr>Duration</a>
@@ -376,8 +360,7 @@ The NetworkPacketCapture resource accepts the following [input]({{< relref "/doc
         <span class="property-type">int</span>
     </dt>
     <dd>{{% md %}}The maximum duration of the capture session in seconds. Defaults to `18000` (5 hours). Changing this forces a new resource to be created.
-{{% /md %}}</dd>
-    <dt class="property-optional"
+{{% /md %}}</dd><dt class="property-optional"
             title="Optional">
         <span id="name_csharp">
 <a href="#name_csharp" style="color: inherit; text-decoration: inherit;">Name</a>
@@ -386,14 +369,11 @@ The NetworkPacketCapture resource accepts the following [input]({{< relref "/doc
         <span class="property-type">string</span>
     </dt>
     <dd>{{% md %}}The name to use for this Network Packet Capture. Changing this forces a new resource to be created.
-{{% /md %}}</dd>
-</dl>
+{{% /md %}}</dd></dl>
 {{% /choosable %}}
 
 {{% choosable language go %}}
-<dl class="resources-properties">
-
-    <dt class="property-required"
+<dl class="resources-properties"><dt class="property-required"
             title="Required">
         <span id="networkwatchername_go">
 <a href="#networkwatchername_go" style="color: inherit; text-decoration: inherit;">Network<wbr>Watcher<wbr>Name</a>
@@ -402,8 +382,7 @@ The NetworkPacketCapture resource accepts the following [input]({{< relref "/doc
         <span class="property-type">string</span>
     </dt>
     <dd>{{% md %}}The name of the Network Watcher. Changing this forces a new resource to be created.
-{{% /md %}}</dd>
-    <dt class="property-required"
+{{% /md %}}</dd><dt class="property-required"
             title="Required">
         <span id="resourcegroupname_go">
 <a href="#resourcegroupname_go" style="color: inherit; text-decoration: inherit;">Resource<wbr>Group<wbr>Name</a>
@@ -412,8 +391,7 @@ The NetworkPacketCapture resource accepts the following [input]({{< relref "/doc
         <span class="property-type">string</span>
     </dt>
     <dd>{{% md %}}The name of the resource group in which the Network Watcher exists. Changing this forces a new resource to be created.
-{{% /md %}}</dd>
-    <dt class="property-required"
+{{% /md %}}</dd><dt class="property-required"
             title="Required">
         <span id="storagelocation_go">
 <a href="#storagelocation_go" style="color: inherit; text-decoration: inherit;">Storage<wbr>Location</a>
@@ -422,8 +400,7 @@ The NetworkPacketCapture resource accepts the following [input]({{< relref "/doc
         <span class="property-type"><a href="#networkpacketcapturestoragelocation">Network<wbr>Packet<wbr>Capture<wbr>Storage<wbr>Location</a></span>
     </dt>
     <dd>{{% md %}}A `storage_location` block as defined below. Changing this forces a new resource to be created.
-{{% /md %}}</dd>
-    <dt class="property-required"
+{{% /md %}}</dd><dt class="property-required"
             title="Required">
         <span id="targetresourceid_go">
 <a href="#targetresourceid_go" style="color: inherit; text-decoration: inherit;">Target<wbr>Resource<wbr>Id</a>
@@ -432,8 +409,7 @@ The NetworkPacketCapture resource accepts the following [input]({{< relref "/doc
         <span class="property-type">string</span>
     </dt>
     <dd>{{% md %}}The ID of the Resource to capture packets from. Changing this forces a new resource to be created.
-{{% /md %}}</dd>
-    <dt class="property-optional"
+{{% /md %}}</dd><dt class="property-optional"
             title="Optional">
         <span id="filters_go">
 <a href="#filters_go" style="color: inherit; text-decoration: inherit;">Filters</a>
@@ -442,8 +418,7 @@ The NetworkPacketCapture resource accepts the following [input]({{< relref "/doc
         <span class="property-type"><a href="#networkpacketcapturefilter">[]Network<wbr>Packet<wbr>Capture<wbr>Filter</a></span>
     </dt>
     <dd>{{% md %}}One or more `filter` blocks as defined below. Changing this forces a new resource to be created.
-{{% /md %}}</dd>
-    <dt class="property-optional"
+{{% /md %}}</dd><dt class="property-optional"
             title="Optional">
         <span id="maximumbytesperpacket_go">
 <a href="#maximumbytesperpacket_go" style="color: inherit; text-decoration: inherit;">Maximum<wbr>Bytes<wbr>Per<wbr>Packet</a>
@@ -452,8 +427,7 @@ The NetworkPacketCapture resource accepts the following [input]({{< relref "/doc
         <span class="property-type">int</span>
     </dt>
     <dd>{{% md %}}The number of bytes captured per packet. The remaining bytes are truncated. Defaults to `0` (Entire Packet Captured). Changing this forces a new resource to be created.
-{{% /md %}}</dd>
-    <dt class="property-optional"
+{{% /md %}}</dd><dt class="property-optional"
             title="Optional">
         <span id="maximumbytespersession_go">
 <a href="#maximumbytespersession_go" style="color: inherit; text-decoration: inherit;">Maximum<wbr>Bytes<wbr>Per<wbr>Session</a>
@@ -462,8 +436,7 @@ The NetworkPacketCapture resource accepts the following [input]({{< relref "/doc
         <span class="property-type">int</span>
     </dt>
     <dd>{{% md %}}Maximum size of the capture in Bytes. Defaults to `1073741824` (1GB). Changing this forces a new resource to be created.
-{{% /md %}}</dd>
-    <dt class="property-optional"
+{{% /md %}}</dd><dt class="property-optional"
             title="Optional">
         <span id="maximumcaptureduration_go">
 <a href="#maximumcaptureduration_go" style="color: inherit; text-decoration: inherit;">Maximum<wbr>Capture<wbr>Duration</a>
@@ -472,8 +445,7 @@ The NetworkPacketCapture resource accepts the following [input]({{< relref "/doc
         <span class="property-type">int</span>
     </dt>
     <dd>{{% md %}}The maximum duration of the capture session in seconds. Defaults to `18000` (5 hours). Changing this forces a new resource to be created.
-{{% /md %}}</dd>
-    <dt class="property-optional"
+{{% /md %}}</dd><dt class="property-optional"
             title="Optional">
         <span id="name_go">
 <a href="#name_go" style="color: inherit; text-decoration: inherit;">Name</a>
@@ -482,14 +454,11 @@ The NetworkPacketCapture resource accepts the following [input]({{< relref "/doc
         <span class="property-type">string</span>
     </dt>
     <dd>{{% md %}}The name to use for this Network Packet Capture. Changing this forces a new resource to be created.
-{{% /md %}}</dd>
-</dl>
+{{% /md %}}</dd></dl>
 {{% /choosable %}}
 
 {{% choosable language nodejs %}}
-<dl class="resources-properties">
-
-    <dt class="property-required"
+<dl class="resources-properties"><dt class="property-required"
             title="Required">
         <span id="networkwatchername_nodejs">
 <a href="#networkwatchername_nodejs" style="color: inherit; text-decoration: inherit;">network<wbr>Watcher<wbr>Name</a>
@@ -498,8 +467,7 @@ The NetworkPacketCapture resource accepts the following [input]({{< relref "/doc
         <span class="property-type">string</span>
     </dt>
     <dd>{{% md %}}The name of the Network Watcher. Changing this forces a new resource to be created.
-{{% /md %}}</dd>
-    <dt class="property-required"
+{{% /md %}}</dd><dt class="property-required"
             title="Required">
         <span id="resourcegroupname_nodejs">
 <a href="#resourcegroupname_nodejs" style="color: inherit; text-decoration: inherit;">resource<wbr>Group<wbr>Name</a>
@@ -508,8 +476,7 @@ The NetworkPacketCapture resource accepts the following [input]({{< relref "/doc
         <span class="property-type">string</span>
     </dt>
     <dd>{{% md %}}The name of the resource group in which the Network Watcher exists. Changing this forces a new resource to be created.
-{{% /md %}}</dd>
-    <dt class="property-required"
+{{% /md %}}</dd><dt class="property-required"
             title="Required">
         <span id="storagelocation_nodejs">
 <a href="#storagelocation_nodejs" style="color: inherit; text-decoration: inherit;">storage<wbr>Location</a>
@@ -518,8 +485,7 @@ The NetworkPacketCapture resource accepts the following [input]({{< relref "/doc
         <span class="property-type"><a href="#networkpacketcapturestoragelocation">Network<wbr>Packet<wbr>Capture<wbr>Storage<wbr>Location</a></span>
     </dt>
     <dd>{{% md %}}A `storage_location` block as defined below. Changing this forces a new resource to be created.
-{{% /md %}}</dd>
-    <dt class="property-required"
+{{% /md %}}</dd><dt class="property-required"
             title="Required">
         <span id="targetresourceid_nodejs">
 <a href="#targetresourceid_nodejs" style="color: inherit; text-decoration: inherit;">target<wbr>Resource<wbr>Id</a>
@@ -528,8 +494,7 @@ The NetworkPacketCapture resource accepts the following [input]({{< relref "/doc
         <span class="property-type">string</span>
     </dt>
     <dd>{{% md %}}The ID of the Resource to capture packets from. Changing this forces a new resource to be created.
-{{% /md %}}</dd>
-    <dt class="property-optional"
+{{% /md %}}</dd><dt class="property-optional"
             title="Optional">
         <span id="filters_nodejs">
 <a href="#filters_nodejs" style="color: inherit; text-decoration: inherit;">filters</a>
@@ -538,8 +503,7 @@ The NetworkPacketCapture resource accepts the following [input]({{< relref "/doc
         <span class="property-type"><a href="#networkpacketcapturefilter">Network<wbr>Packet<wbr>Capture<wbr>Filter[]</a></span>
     </dt>
     <dd>{{% md %}}One or more `filter` blocks as defined below. Changing this forces a new resource to be created.
-{{% /md %}}</dd>
-    <dt class="property-optional"
+{{% /md %}}</dd><dt class="property-optional"
             title="Optional">
         <span id="maximumbytesperpacket_nodejs">
 <a href="#maximumbytesperpacket_nodejs" style="color: inherit; text-decoration: inherit;">maximum<wbr>Bytes<wbr>Per<wbr>Packet</a>
@@ -548,8 +512,7 @@ The NetworkPacketCapture resource accepts the following [input]({{< relref "/doc
         <span class="property-type">number</span>
     </dt>
     <dd>{{% md %}}The number of bytes captured per packet. The remaining bytes are truncated. Defaults to `0` (Entire Packet Captured). Changing this forces a new resource to be created.
-{{% /md %}}</dd>
-    <dt class="property-optional"
+{{% /md %}}</dd><dt class="property-optional"
             title="Optional">
         <span id="maximumbytespersession_nodejs">
 <a href="#maximumbytespersession_nodejs" style="color: inherit; text-decoration: inherit;">maximum<wbr>Bytes<wbr>Per<wbr>Session</a>
@@ -558,8 +521,7 @@ The NetworkPacketCapture resource accepts the following [input]({{< relref "/doc
         <span class="property-type">number</span>
     </dt>
     <dd>{{% md %}}Maximum size of the capture in Bytes. Defaults to `1073741824` (1GB). Changing this forces a new resource to be created.
-{{% /md %}}</dd>
-    <dt class="property-optional"
+{{% /md %}}</dd><dt class="property-optional"
             title="Optional">
         <span id="maximumcaptureduration_nodejs">
 <a href="#maximumcaptureduration_nodejs" style="color: inherit; text-decoration: inherit;">maximum<wbr>Capture<wbr>Duration</a>
@@ -568,8 +530,7 @@ The NetworkPacketCapture resource accepts the following [input]({{< relref "/doc
         <span class="property-type">number</span>
     </dt>
     <dd>{{% md %}}The maximum duration of the capture session in seconds. Defaults to `18000` (5 hours). Changing this forces a new resource to be created.
-{{% /md %}}</dd>
-    <dt class="property-optional"
+{{% /md %}}</dd><dt class="property-optional"
             title="Optional">
         <span id="name_nodejs">
 <a href="#name_nodejs" style="color: inherit; text-decoration: inherit;">name</a>
@@ -578,14 +539,11 @@ The NetworkPacketCapture resource accepts the following [input]({{< relref "/doc
         <span class="property-type">string</span>
     </dt>
     <dd>{{% md %}}The name to use for this Network Packet Capture. Changing this forces a new resource to be created.
-{{% /md %}}</dd>
-</dl>
+{{% /md %}}</dd></dl>
 {{% /choosable %}}
 
 {{% choosable language python %}}
-<dl class="resources-properties">
-
-    <dt class="property-required"
+<dl class="resources-properties"><dt class="property-required"
             title="Required">
         <span id="network_watcher_name_python">
 <a href="#network_watcher_name_python" style="color: inherit; text-decoration: inherit;">network_<wbr>watcher_<wbr>name</a>
@@ -594,8 +552,7 @@ The NetworkPacketCapture resource accepts the following [input]({{< relref "/doc
         <span class="property-type">str</span>
     </dt>
     <dd>{{% md %}}The name of the Network Watcher. Changing this forces a new resource to be created.
-{{% /md %}}</dd>
-    <dt class="property-required"
+{{% /md %}}</dd><dt class="property-required"
             title="Required">
         <span id="resource_group_name_python">
 <a href="#resource_group_name_python" style="color: inherit; text-decoration: inherit;">resource_<wbr>group_<wbr>name</a>
@@ -604,8 +561,7 @@ The NetworkPacketCapture resource accepts the following [input]({{< relref "/doc
         <span class="property-type">str</span>
     </dt>
     <dd>{{% md %}}The name of the resource group in which the Network Watcher exists. Changing this forces a new resource to be created.
-{{% /md %}}</dd>
-    <dt class="property-required"
+{{% /md %}}</dd><dt class="property-required"
             title="Required">
         <span id="storage_location_python">
 <a href="#storage_location_python" style="color: inherit; text-decoration: inherit;">storage_<wbr>location</a>
@@ -614,8 +570,7 @@ The NetworkPacketCapture resource accepts the following [input]({{< relref "/doc
         <span class="property-type"><a href="#networkpacketcapturestoragelocation">Network<wbr>Packet<wbr>Capture<wbr>Storage<wbr>Location<wbr>Args</a></span>
     </dt>
     <dd>{{% md %}}A `storage_location` block as defined below. Changing this forces a new resource to be created.
-{{% /md %}}</dd>
-    <dt class="property-required"
+{{% /md %}}</dd><dt class="property-required"
             title="Required">
         <span id="target_resource_id_python">
 <a href="#target_resource_id_python" style="color: inherit; text-decoration: inherit;">target_<wbr>resource_<wbr>id</a>
@@ -624,8 +579,7 @@ The NetworkPacketCapture resource accepts the following [input]({{< relref "/doc
         <span class="property-type">str</span>
     </dt>
     <dd>{{% md %}}The ID of the Resource to capture packets from. Changing this forces a new resource to be created.
-{{% /md %}}</dd>
-    <dt class="property-optional"
+{{% /md %}}</dd><dt class="property-optional"
             title="Optional">
         <span id="filters_python">
 <a href="#filters_python" style="color: inherit; text-decoration: inherit;">filters</a>
@@ -634,8 +588,7 @@ The NetworkPacketCapture resource accepts the following [input]({{< relref "/doc
         <span class="property-type"><a href="#networkpacketcapturefilter">Sequence[Network<wbr>Packet<wbr>Capture<wbr>Filter<wbr>Args]</a></span>
     </dt>
     <dd>{{% md %}}One or more `filter` blocks as defined below. Changing this forces a new resource to be created.
-{{% /md %}}</dd>
-    <dt class="property-optional"
+{{% /md %}}</dd><dt class="property-optional"
             title="Optional">
         <span id="maximum_bytes_per_packet_python">
 <a href="#maximum_bytes_per_packet_python" style="color: inherit; text-decoration: inherit;">maximum_<wbr>bytes_<wbr>per_<wbr>packet</a>
@@ -644,8 +597,7 @@ The NetworkPacketCapture resource accepts the following [input]({{< relref "/doc
         <span class="property-type">int</span>
     </dt>
     <dd>{{% md %}}The number of bytes captured per packet. The remaining bytes are truncated. Defaults to `0` (Entire Packet Captured). Changing this forces a new resource to be created.
-{{% /md %}}</dd>
-    <dt class="property-optional"
+{{% /md %}}</dd><dt class="property-optional"
             title="Optional">
         <span id="maximum_bytes_per_session_python">
 <a href="#maximum_bytes_per_session_python" style="color: inherit; text-decoration: inherit;">maximum_<wbr>bytes_<wbr>per_<wbr>session</a>
@@ -654,8 +606,7 @@ The NetworkPacketCapture resource accepts the following [input]({{< relref "/doc
         <span class="property-type">int</span>
     </dt>
     <dd>{{% md %}}Maximum size of the capture in Bytes. Defaults to `1073741824` (1GB). Changing this forces a new resource to be created.
-{{% /md %}}</dd>
-    <dt class="property-optional"
+{{% /md %}}</dd><dt class="property-optional"
             title="Optional">
         <span id="maximum_capture_duration_python">
 <a href="#maximum_capture_duration_python" style="color: inherit; text-decoration: inherit;">maximum_<wbr>capture_<wbr>duration</a>
@@ -664,8 +615,7 @@ The NetworkPacketCapture resource accepts the following [input]({{< relref "/doc
         <span class="property-type">int</span>
     </dt>
     <dd>{{% md %}}The maximum duration of the capture session in seconds. Defaults to `18000` (5 hours). Changing this forces a new resource to be created.
-{{% /md %}}</dd>
-    <dt class="property-optional"
+{{% /md %}}</dd><dt class="property-optional"
             title="Optional">
         <span id="name_python">
 <a href="#name_python" style="color: inherit; text-decoration: inherit;">name</a>
@@ -674,8 +624,7 @@ The NetworkPacketCapture resource accepts the following [input]({{< relref "/doc
         <span class="property-type">str</span>
     </dt>
     <dd>{{% md %}}The name to use for this Network Packet Capture. Changing this forces a new resource to be created.
-{{% /md %}}</dd>
-</dl>
+{{% /md %}}</dd></dl>
 {{% /choosable %}}
 
 
@@ -686,9 +635,7 @@ All [input](#inputs) properties are implicitly available as output properties. A
 
 
 {{% choosable language csharp %}}
-<dl class="resources-properties">
-
-    <dt class="property-"
+<dl class="resources-properties"><dt class="property-"
             title="">
         <span id="id_csharp">
 <a href="#id_csharp" style="color: inherit; text-decoration: inherit;">Id</a>
@@ -696,14 +643,11 @@ All [input](#inputs) properties are implicitly available as output properties. A
         <span class="property-indicator"></span>
         <span class="property-type">string</span>
     </dt>
-    <dd>{{% md %}}The provider-assigned unique ID for this managed resource.{{% /md %}}</dd>
-</dl>
+    <dd>{{% md %}}The provider-assigned unique ID for this managed resource.{{% /md %}}</dd></dl>
 {{% /choosable %}}
 
 {{% choosable language go %}}
-<dl class="resources-properties">
-
-    <dt class="property-"
+<dl class="resources-properties"><dt class="property-"
             title="">
         <span id="id_go">
 <a href="#id_go" style="color: inherit; text-decoration: inherit;">Id</a>
@@ -711,14 +655,11 @@ All [input](#inputs) properties are implicitly available as output properties. A
         <span class="property-indicator"></span>
         <span class="property-type">string</span>
     </dt>
-    <dd>{{% md %}}The provider-assigned unique ID for this managed resource.{{% /md %}}</dd>
-</dl>
+    <dd>{{% md %}}The provider-assigned unique ID for this managed resource.{{% /md %}}</dd></dl>
 {{% /choosable %}}
 
 {{% choosable language nodejs %}}
-<dl class="resources-properties">
-
-    <dt class="property-"
+<dl class="resources-properties"><dt class="property-"
             title="">
         <span id="id_nodejs">
 <a href="#id_nodejs" style="color: inherit; text-decoration: inherit;">id</a>
@@ -726,14 +667,11 @@ All [input](#inputs) properties are implicitly available as output properties. A
         <span class="property-indicator"></span>
         <span class="property-type">string</span>
     </dt>
-    <dd>{{% md %}}The provider-assigned unique ID for this managed resource.{{% /md %}}</dd>
-</dl>
+    <dd>{{% md %}}The provider-assigned unique ID for this managed resource.{{% /md %}}</dd></dl>
 {{% /choosable %}}
 
 {{% choosable language python %}}
-<dl class="resources-properties">
-
-    <dt class="property-"
+<dl class="resources-properties"><dt class="property-"
             title="">
         <span id="id_python">
 <a href="#id_python" style="color: inherit; text-decoration: inherit;">id</a>
@@ -741,8 +679,7 @@ All [input](#inputs) properties are implicitly available as output properties. A
         <span class="property-indicator"></span>
         <span class="property-type">str</span>
     </dt>
-    <dd>{{% md %}}The provider-assigned unique ID for this managed resource.{{% /md %}}</dd>
-</dl>
+    <dd>{{% md %}}The provider-assigned unique ID for this managed resource.{{% /md %}}</dd></dl>
 {{% /choosable %}}
 
 
@@ -869,9 +806,7 @@ The following state arguments are supported:
 
 
 {{% choosable language csharp %}}
-<dl class="resources-properties">
-
-    <dt class="property-optional"
+<dl class="resources-properties"><dt class="property-optional"
             title="Optional">
         <span id="state_filters_csharp">
 <a href="#state_filters_csharp" style="color: inherit; text-decoration: inherit;">Filters</a>
@@ -880,8 +815,7 @@ The following state arguments are supported:
         <span class="property-type"><a href="#networkpacketcapturefilter">List&lt;Network<wbr>Packet<wbr>Capture<wbr>Filter<wbr>Args&gt;</a></span>
     </dt>
     <dd>{{% md %}}One or more `filter` blocks as defined below. Changing this forces a new resource to be created.
-{{% /md %}}</dd>
-    <dt class="property-optional"
+{{% /md %}}</dd><dt class="property-optional"
             title="Optional">
         <span id="state_maximumbytesperpacket_csharp">
 <a href="#state_maximumbytesperpacket_csharp" style="color: inherit; text-decoration: inherit;">Maximum<wbr>Bytes<wbr>Per<wbr>Packet</a>
@@ -890,8 +824,7 @@ The following state arguments are supported:
         <span class="property-type">int</span>
     </dt>
     <dd>{{% md %}}The number of bytes captured per packet. The remaining bytes are truncated. Defaults to `0` (Entire Packet Captured). Changing this forces a new resource to be created.
-{{% /md %}}</dd>
-    <dt class="property-optional"
+{{% /md %}}</dd><dt class="property-optional"
             title="Optional">
         <span id="state_maximumbytespersession_csharp">
 <a href="#state_maximumbytespersession_csharp" style="color: inherit; text-decoration: inherit;">Maximum<wbr>Bytes<wbr>Per<wbr>Session</a>
@@ -900,8 +833,7 @@ The following state arguments are supported:
         <span class="property-type">int</span>
     </dt>
     <dd>{{% md %}}Maximum size of the capture in Bytes. Defaults to `1073741824` (1GB). Changing this forces a new resource to be created.
-{{% /md %}}</dd>
-    <dt class="property-optional"
+{{% /md %}}</dd><dt class="property-optional"
             title="Optional">
         <span id="state_maximumcaptureduration_csharp">
 <a href="#state_maximumcaptureduration_csharp" style="color: inherit; text-decoration: inherit;">Maximum<wbr>Capture<wbr>Duration</a>
@@ -910,8 +842,7 @@ The following state arguments are supported:
         <span class="property-type">int</span>
     </dt>
     <dd>{{% md %}}The maximum duration of the capture session in seconds. Defaults to `18000` (5 hours). Changing this forces a new resource to be created.
-{{% /md %}}</dd>
-    <dt class="property-optional"
+{{% /md %}}</dd><dt class="property-optional"
             title="Optional">
         <span id="state_name_csharp">
 <a href="#state_name_csharp" style="color: inherit; text-decoration: inherit;">Name</a>
@@ -920,8 +851,7 @@ The following state arguments are supported:
         <span class="property-type">string</span>
     </dt>
     <dd>{{% md %}}The name to use for this Network Packet Capture. Changing this forces a new resource to be created.
-{{% /md %}}</dd>
-    <dt class="property-optional"
+{{% /md %}}</dd><dt class="property-optional"
             title="Optional">
         <span id="state_networkwatchername_csharp">
 <a href="#state_networkwatchername_csharp" style="color: inherit; text-decoration: inherit;">Network<wbr>Watcher<wbr>Name</a>
@@ -930,8 +860,7 @@ The following state arguments are supported:
         <span class="property-type">string</span>
     </dt>
     <dd>{{% md %}}The name of the Network Watcher. Changing this forces a new resource to be created.
-{{% /md %}}</dd>
-    <dt class="property-optional"
+{{% /md %}}</dd><dt class="property-optional"
             title="Optional">
         <span id="state_resourcegroupname_csharp">
 <a href="#state_resourcegroupname_csharp" style="color: inherit; text-decoration: inherit;">Resource<wbr>Group<wbr>Name</a>
@@ -940,8 +869,7 @@ The following state arguments are supported:
         <span class="property-type">string</span>
     </dt>
     <dd>{{% md %}}The name of the resource group in which the Network Watcher exists. Changing this forces a new resource to be created.
-{{% /md %}}</dd>
-    <dt class="property-optional"
+{{% /md %}}</dd><dt class="property-optional"
             title="Optional">
         <span id="state_storagelocation_csharp">
 <a href="#state_storagelocation_csharp" style="color: inherit; text-decoration: inherit;">Storage<wbr>Location</a>
@@ -950,8 +878,7 @@ The following state arguments are supported:
         <span class="property-type"><a href="#networkpacketcapturestoragelocation">Network<wbr>Packet<wbr>Capture<wbr>Storage<wbr>Location<wbr>Args</a></span>
     </dt>
     <dd>{{% md %}}A `storage_location` block as defined below. Changing this forces a new resource to be created.
-{{% /md %}}</dd>
-    <dt class="property-optional"
+{{% /md %}}</dd><dt class="property-optional"
             title="Optional">
         <span id="state_targetresourceid_csharp">
 <a href="#state_targetresourceid_csharp" style="color: inherit; text-decoration: inherit;">Target<wbr>Resource<wbr>Id</a>
@@ -960,14 +887,11 @@ The following state arguments are supported:
         <span class="property-type">string</span>
     </dt>
     <dd>{{% md %}}The ID of the Resource to capture packets from. Changing this forces a new resource to be created.
-{{% /md %}}</dd>
-</dl>
+{{% /md %}}</dd></dl>
 {{% /choosable %}}
 
 {{% choosable language go %}}
-<dl class="resources-properties">
-
-    <dt class="property-optional"
+<dl class="resources-properties"><dt class="property-optional"
             title="Optional">
         <span id="state_filters_go">
 <a href="#state_filters_go" style="color: inherit; text-decoration: inherit;">Filters</a>
@@ -976,8 +900,7 @@ The following state arguments are supported:
         <span class="property-type"><a href="#networkpacketcapturefilter">[]Network<wbr>Packet<wbr>Capture<wbr>Filter</a></span>
     </dt>
     <dd>{{% md %}}One or more `filter` blocks as defined below. Changing this forces a new resource to be created.
-{{% /md %}}</dd>
-    <dt class="property-optional"
+{{% /md %}}</dd><dt class="property-optional"
             title="Optional">
         <span id="state_maximumbytesperpacket_go">
 <a href="#state_maximumbytesperpacket_go" style="color: inherit; text-decoration: inherit;">Maximum<wbr>Bytes<wbr>Per<wbr>Packet</a>
@@ -986,8 +909,7 @@ The following state arguments are supported:
         <span class="property-type">int</span>
     </dt>
     <dd>{{% md %}}The number of bytes captured per packet. The remaining bytes are truncated. Defaults to `0` (Entire Packet Captured). Changing this forces a new resource to be created.
-{{% /md %}}</dd>
-    <dt class="property-optional"
+{{% /md %}}</dd><dt class="property-optional"
             title="Optional">
         <span id="state_maximumbytespersession_go">
 <a href="#state_maximumbytespersession_go" style="color: inherit; text-decoration: inherit;">Maximum<wbr>Bytes<wbr>Per<wbr>Session</a>
@@ -996,8 +918,7 @@ The following state arguments are supported:
         <span class="property-type">int</span>
     </dt>
     <dd>{{% md %}}Maximum size of the capture in Bytes. Defaults to `1073741824` (1GB). Changing this forces a new resource to be created.
-{{% /md %}}</dd>
-    <dt class="property-optional"
+{{% /md %}}</dd><dt class="property-optional"
             title="Optional">
         <span id="state_maximumcaptureduration_go">
 <a href="#state_maximumcaptureduration_go" style="color: inherit; text-decoration: inherit;">Maximum<wbr>Capture<wbr>Duration</a>
@@ -1006,8 +927,7 @@ The following state arguments are supported:
         <span class="property-type">int</span>
     </dt>
     <dd>{{% md %}}The maximum duration of the capture session in seconds. Defaults to `18000` (5 hours). Changing this forces a new resource to be created.
-{{% /md %}}</dd>
-    <dt class="property-optional"
+{{% /md %}}</dd><dt class="property-optional"
             title="Optional">
         <span id="state_name_go">
 <a href="#state_name_go" style="color: inherit; text-decoration: inherit;">Name</a>
@@ -1016,8 +936,7 @@ The following state arguments are supported:
         <span class="property-type">string</span>
     </dt>
     <dd>{{% md %}}The name to use for this Network Packet Capture. Changing this forces a new resource to be created.
-{{% /md %}}</dd>
-    <dt class="property-optional"
+{{% /md %}}</dd><dt class="property-optional"
             title="Optional">
         <span id="state_networkwatchername_go">
 <a href="#state_networkwatchername_go" style="color: inherit; text-decoration: inherit;">Network<wbr>Watcher<wbr>Name</a>
@@ -1026,8 +945,7 @@ The following state arguments are supported:
         <span class="property-type">string</span>
     </dt>
     <dd>{{% md %}}The name of the Network Watcher. Changing this forces a new resource to be created.
-{{% /md %}}</dd>
-    <dt class="property-optional"
+{{% /md %}}</dd><dt class="property-optional"
             title="Optional">
         <span id="state_resourcegroupname_go">
 <a href="#state_resourcegroupname_go" style="color: inherit; text-decoration: inherit;">Resource<wbr>Group<wbr>Name</a>
@@ -1036,8 +954,7 @@ The following state arguments are supported:
         <span class="property-type">string</span>
     </dt>
     <dd>{{% md %}}The name of the resource group in which the Network Watcher exists. Changing this forces a new resource to be created.
-{{% /md %}}</dd>
-    <dt class="property-optional"
+{{% /md %}}</dd><dt class="property-optional"
             title="Optional">
         <span id="state_storagelocation_go">
 <a href="#state_storagelocation_go" style="color: inherit; text-decoration: inherit;">Storage<wbr>Location</a>
@@ -1046,8 +963,7 @@ The following state arguments are supported:
         <span class="property-type"><a href="#networkpacketcapturestoragelocation">Network<wbr>Packet<wbr>Capture<wbr>Storage<wbr>Location</a></span>
     </dt>
     <dd>{{% md %}}A `storage_location` block as defined below. Changing this forces a new resource to be created.
-{{% /md %}}</dd>
-    <dt class="property-optional"
+{{% /md %}}</dd><dt class="property-optional"
             title="Optional">
         <span id="state_targetresourceid_go">
 <a href="#state_targetresourceid_go" style="color: inherit; text-decoration: inherit;">Target<wbr>Resource<wbr>Id</a>
@@ -1056,14 +972,11 @@ The following state arguments are supported:
         <span class="property-type">string</span>
     </dt>
     <dd>{{% md %}}The ID of the Resource to capture packets from. Changing this forces a new resource to be created.
-{{% /md %}}</dd>
-</dl>
+{{% /md %}}</dd></dl>
 {{% /choosable %}}
 
 {{% choosable language nodejs %}}
-<dl class="resources-properties">
-
-    <dt class="property-optional"
+<dl class="resources-properties"><dt class="property-optional"
             title="Optional">
         <span id="state_filters_nodejs">
 <a href="#state_filters_nodejs" style="color: inherit; text-decoration: inherit;">filters</a>
@@ -1072,8 +985,7 @@ The following state arguments are supported:
         <span class="property-type"><a href="#networkpacketcapturefilter">Network<wbr>Packet<wbr>Capture<wbr>Filter[]</a></span>
     </dt>
     <dd>{{% md %}}One or more `filter` blocks as defined below. Changing this forces a new resource to be created.
-{{% /md %}}</dd>
-    <dt class="property-optional"
+{{% /md %}}</dd><dt class="property-optional"
             title="Optional">
         <span id="state_maximumbytesperpacket_nodejs">
 <a href="#state_maximumbytesperpacket_nodejs" style="color: inherit; text-decoration: inherit;">maximum<wbr>Bytes<wbr>Per<wbr>Packet</a>
@@ -1082,8 +994,7 @@ The following state arguments are supported:
         <span class="property-type">number</span>
     </dt>
     <dd>{{% md %}}The number of bytes captured per packet. The remaining bytes are truncated. Defaults to `0` (Entire Packet Captured). Changing this forces a new resource to be created.
-{{% /md %}}</dd>
-    <dt class="property-optional"
+{{% /md %}}</dd><dt class="property-optional"
             title="Optional">
         <span id="state_maximumbytespersession_nodejs">
 <a href="#state_maximumbytespersession_nodejs" style="color: inherit; text-decoration: inherit;">maximum<wbr>Bytes<wbr>Per<wbr>Session</a>
@@ -1092,8 +1003,7 @@ The following state arguments are supported:
         <span class="property-type">number</span>
     </dt>
     <dd>{{% md %}}Maximum size of the capture in Bytes. Defaults to `1073741824` (1GB). Changing this forces a new resource to be created.
-{{% /md %}}</dd>
-    <dt class="property-optional"
+{{% /md %}}</dd><dt class="property-optional"
             title="Optional">
         <span id="state_maximumcaptureduration_nodejs">
 <a href="#state_maximumcaptureduration_nodejs" style="color: inherit; text-decoration: inherit;">maximum<wbr>Capture<wbr>Duration</a>
@@ -1102,8 +1012,7 @@ The following state arguments are supported:
         <span class="property-type">number</span>
     </dt>
     <dd>{{% md %}}The maximum duration of the capture session in seconds. Defaults to `18000` (5 hours). Changing this forces a new resource to be created.
-{{% /md %}}</dd>
-    <dt class="property-optional"
+{{% /md %}}</dd><dt class="property-optional"
             title="Optional">
         <span id="state_name_nodejs">
 <a href="#state_name_nodejs" style="color: inherit; text-decoration: inherit;">name</a>
@@ -1112,8 +1021,7 @@ The following state arguments are supported:
         <span class="property-type">string</span>
     </dt>
     <dd>{{% md %}}The name to use for this Network Packet Capture. Changing this forces a new resource to be created.
-{{% /md %}}</dd>
-    <dt class="property-optional"
+{{% /md %}}</dd><dt class="property-optional"
             title="Optional">
         <span id="state_networkwatchername_nodejs">
 <a href="#state_networkwatchername_nodejs" style="color: inherit; text-decoration: inherit;">network<wbr>Watcher<wbr>Name</a>
@@ -1122,8 +1030,7 @@ The following state arguments are supported:
         <span class="property-type">string</span>
     </dt>
     <dd>{{% md %}}The name of the Network Watcher. Changing this forces a new resource to be created.
-{{% /md %}}</dd>
-    <dt class="property-optional"
+{{% /md %}}</dd><dt class="property-optional"
             title="Optional">
         <span id="state_resourcegroupname_nodejs">
 <a href="#state_resourcegroupname_nodejs" style="color: inherit; text-decoration: inherit;">resource<wbr>Group<wbr>Name</a>
@@ -1132,8 +1039,7 @@ The following state arguments are supported:
         <span class="property-type">string</span>
     </dt>
     <dd>{{% md %}}The name of the resource group in which the Network Watcher exists. Changing this forces a new resource to be created.
-{{% /md %}}</dd>
-    <dt class="property-optional"
+{{% /md %}}</dd><dt class="property-optional"
             title="Optional">
         <span id="state_storagelocation_nodejs">
 <a href="#state_storagelocation_nodejs" style="color: inherit; text-decoration: inherit;">storage<wbr>Location</a>
@@ -1142,8 +1048,7 @@ The following state arguments are supported:
         <span class="property-type"><a href="#networkpacketcapturestoragelocation">Network<wbr>Packet<wbr>Capture<wbr>Storage<wbr>Location</a></span>
     </dt>
     <dd>{{% md %}}A `storage_location` block as defined below. Changing this forces a new resource to be created.
-{{% /md %}}</dd>
-    <dt class="property-optional"
+{{% /md %}}</dd><dt class="property-optional"
             title="Optional">
         <span id="state_targetresourceid_nodejs">
 <a href="#state_targetresourceid_nodejs" style="color: inherit; text-decoration: inherit;">target<wbr>Resource<wbr>Id</a>
@@ -1152,14 +1057,11 @@ The following state arguments are supported:
         <span class="property-type">string</span>
     </dt>
     <dd>{{% md %}}The ID of the Resource to capture packets from. Changing this forces a new resource to be created.
-{{% /md %}}</dd>
-</dl>
+{{% /md %}}</dd></dl>
 {{% /choosable %}}
 
 {{% choosable language python %}}
-<dl class="resources-properties">
-
-    <dt class="property-optional"
+<dl class="resources-properties"><dt class="property-optional"
             title="Optional">
         <span id="state_filters_python">
 <a href="#state_filters_python" style="color: inherit; text-decoration: inherit;">filters</a>
@@ -1168,8 +1070,7 @@ The following state arguments are supported:
         <span class="property-type"><a href="#networkpacketcapturefilter">Sequence[Network<wbr>Packet<wbr>Capture<wbr>Filter<wbr>Args]</a></span>
     </dt>
     <dd>{{% md %}}One or more `filter` blocks as defined below. Changing this forces a new resource to be created.
-{{% /md %}}</dd>
-    <dt class="property-optional"
+{{% /md %}}</dd><dt class="property-optional"
             title="Optional">
         <span id="state_maximum_bytes_per_packet_python">
 <a href="#state_maximum_bytes_per_packet_python" style="color: inherit; text-decoration: inherit;">maximum_<wbr>bytes_<wbr>per_<wbr>packet</a>
@@ -1178,8 +1079,7 @@ The following state arguments are supported:
         <span class="property-type">int</span>
     </dt>
     <dd>{{% md %}}The number of bytes captured per packet. The remaining bytes are truncated. Defaults to `0` (Entire Packet Captured). Changing this forces a new resource to be created.
-{{% /md %}}</dd>
-    <dt class="property-optional"
+{{% /md %}}</dd><dt class="property-optional"
             title="Optional">
         <span id="state_maximum_bytes_per_session_python">
 <a href="#state_maximum_bytes_per_session_python" style="color: inherit; text-decoration: inherit;">maximum_<wbr>bytes_<wbr>per_<wbr>session</a>
@@ -1188,8 +1088,7 @@ The following state arguments are supported:
         <span class="property-type">int</span>
     </dt>
     <dd>{{% md %}}Maximum size of the capture in Bytes. Defaults to `1073741824` (1GB). Changing this forces a new resource to be created.
-{{% /md %}}</dd>
-    <dt class="property-optional"
+{{% /md %}}</dd><dt class="property-optional"
             title="Optional">
         <span id="state_maximum_capture_duration_python">
 <a href="#state_maximum_capture_duration_python" style="color: inherit; text-decoration: inherit;">maximum_<wbr>capture_<wbr>duration</a>
@@ -1198,8 +1097,7 @@ The following state arguments are supported:
         <span class="property-type">int</span>
     </dt>
     <dd>{{% md %}}The maximum duration of the capture session in seconds. Defaults to `18000` (5 hours). Changing this forces a new resource to be created.
-{{% /md %}}</dd>
-    <dt class="property-optional"
+{{% /md %}}</dd><dt class="property-optional"
             title="Optional">
         <span id="state_name_python">
 <a href="#state_name_python" style="color: inherit; text-decoration: inherit;">name</a>
@@ -1208,8 +1106,7 @@ The following state arguments are supported:
         <span class="property-type">str</span>
     </dt>
     <dd>{{% md %}}The name to use for this Network Packet Capture. Changing this forces a new resource to be created.
-{{% /md %}}</dd>
-    <dt class="property-optional"
+{{% /md %}}</dd><dt class="property-optional"
             title="Optional">
         <span id="state_network_watcher_name_python">
 <a href="#state_network_watcher_name_python" style="color: inherit; text-decoration: inherit;">network_<wbr>watcher_<wbr>name</a>
@@ -1218,8 +1115,7 @@ The following state arguments are supported:
         <span class="property-type">str</span>
     </dt>
     <dd>{{% md %}}The name of the Network Watcher. Changing this forces a new resource to be created.
-{{% /md %}}</dd>
-    <dt class="property-optional"
+{{% /md %}}</dd><dt class="property-optional"
             title="Optional">
         <span id="state_resource_group_name_python">
 <a href="#state_resource_group_name_python" style="color: inherit; text-decoration: inherit;">resource_<wbr>group_<wbr>name</a>
@@ -1228,8 +1124,7 @@ The following state arguments are supported:
         <span class="property-type">str</span>
     </dt>
     <dd>{{% md %}}The name of the resource group in which the Network Watcher exists. Changing this forces a new resource to be created.
-{{% /md %}}</dd>
-    <dt class="property-optional"
+{{% /md %}}</dd><dt class="property-optional"
             title="Optional">
         <span id="state_storage_location_python">
 <a href="#state_storage_location_python" style="color: inherit; text-decoration: inherit;">storage_<wbr>location</a>
@@ -1238,8 +1133,7 @@ The following state arguments are supported:
         <span class="property-type"><a href="#networkpacketcapturestoragelocation">Network<wbr>Packet<wbr>Capture<wbr>Storage<wbr>Location<wbr>Args</a></span>
     </dt>
     <dd>{{% md %}}A `storage_location` block as defined below. Changing this forces a new resource to be created.
-{{% /md %}}</dd>
-    <dt class="property-optional"
+{{% /md %}}</dd><dt class="property-optional"
             title="Optional">
         <span id="state_target_resource_id_python">
 <a href="#state_target_resource_id_python" style="color: inherit; text-decoration: inherit;">target_<wbr>resource_<wbr>id</a>
@@ -1248,8 +1142,7 @@ The following state arguments are supported:
         <span class="property-type">str</span>
     </dt>
     <dd>{{% md %}}The ID of the Resource to capture packets from. Changing this forces a new resource to be created.
-{{% /md %}}</dd>
-</dl>
+{{% /md %}}</dd></dl>
 {{% /choosable %}}
 
 
@@ -1264,9 +1157,7 @@ The following state arguments are supported:
 <h4 id="networkpacketcapturefilter">Network<wbr>Packet<wbr>Capture<wbr>Filter</h4>
 
 {{% choosable language csharp %}}
-<dl class="resources-properties">
-
-    <dt class="property-required"
+<dl class="resources-properties"><dt class="property-required"
             title="Required">
         <span id="protocol_csharp">
 <a href="#protocol_csharp" style="color: inherit; text-decoration: inherit;">Protocol</a>
@@ -1275,8 +1166,7 @@ The following state arguments are supported:
         <span class="property-type">string</span>
     </dt>
     <dd>{{% md %}}The Protocol to be filtered on. Possible values include `Any`, `TCP` and `UDP`. Changing this forces a new resource to be created.
-{{% /md %}}</dd>
-    <dt class="property-optional"
+{{% /md %}}</dd><dt class="property-optional"
             title="Optional">
         <span id="localipaddress_csharp">
 <a href="#localipaddress_csharp" style="color: inherit; text-decoration: inherit;">Local<wbr>Ip<wbr>Address</a>
@@ -1285,8 +1175,7 @@ The following state arguments are supported:
         <span class="property-type">string</span>
     </dt>
     <dd>{{% md %}}The local IP Address to be filtered on. Notation: "127.0.0.1" for single address entry. "127.0.0.1-127.0.0.255" for range. "127.0.0.1;127.0.0.5" for multiple entries. Multiple ranges not currently supported. Mixing ranges with multiple entries not currently supported. Changing this forces a new resource to be created.
-{{% /md %}}</dd>
-    <dt class="property-optional"
+{{% /md %}}</dd><dt class="property-optional"
             title="Optional">
         <span id="localport_csharp">
 <a href="#localport_csharp" style="color: inherit; text-decoration: inherit;">Local<wbr>Port</a>
@@ -1295,8 +1184,7 @@ The following state arguments are supported:
         <span class="property-type">string</span>
     </dt>
     <dd>{{% md %}}The local port to be filtered on. Notation: "80" for single port entry."80-85" for range. "80;443;" for multiple entries. Multiple ranges not currently supported. Mixing ranges with multiple entries not currently supported. Changing this forces a new resource to be created.
-{{% /md %}}</dd>
-    <dt class="property-optional"
+{{% /md %}}</dd><dt class="property-optional"
             title="Optional">
         <span id="remoteipaddress_csharp">
 <a href="#remoteipaddress_csharp" style="color: inherit; text-decoration: inherit;">Remote<wbr>Ip<wbr>Address</a>
@@ -1305,8 +1193,7 @@ The following state arguments are supported:
         <span class="property-type">string</span>
     </dt>
     <dd>{{% md %}}The remote IP Address to be filtered on. Notation: "127.0.0.1" for single address entry. "127.0.0.1-127.0.0.255" for range. "127.0.0.1;127.0.0.5;" for multiple entries. Multiple ranges not currently supported. Mixing ranges with multiple entries not currently supported.. Changing this forces a new resource to be created.
-{{% /md %}}</dd>
-    <dt class="property-optional"
+{{% /md %}}</dd><dt class="property-optional"
             title="Optional">
         <span id="remoteport_csharp">
 <a href="#remoteport_csharp" style="color: inherit; text-decoration: inherit;">Remote<wbr>Port</a>
@@ -1315,14 +1202,11 @@ The following state arguments are supported:
         <span class="property-type">string</span>
     </dt>
     <dd>{{% md %}}The remote port to be filtered on. Notation: "80" for single port entry."80-85" for range. "80;443;" for multiple entries. Multiple ranges not currently supported. Mixing ranges with multiple entries not currently supported. Changing this forces a new resource to be created.
-{{% /md %}}</dd>
-</dl>
+{{% /md %}}</dd></dl>
 {{% /choosable %}}
 
 {{% choosable language go %}}
-<dl class="resources-properties">
-
-    <dt class="property-required"
+<dl class="resources-properties"><dt class="property-required"
             title="Required">
         <span id="protocol_go">
 <a href="#protocol_go" style="color: inherit; text-decoration: inherit;">Protocol</a>
@@ -1331,8 +1215,7 @@ The following state arguments are supported:
         <span class="property-type">string</span>
     </dt>
     <dd>{{% md %}}The Protocol to be filtered on. Possible values include `Any`, `TCP` and `UDP`. Changing this forces a new resource to be created.
-{{% /md %}}</dd>
-    <dt class="property-optional"
+{{% /md %}}</dd><dt class="property-optional"
             title="Optional">
         <span id="localipaddress_go">
 <a href="#localipaddress_go" style="color: inherit; text-decoration: inherit;">Local<wbr>Ip<wbr>Address</a>
@@ -1341,8 +1224,7 @@ The following state arguments are supported:
         <span class="property-type">string</span>
     </dt>
     <dd>{{% md %}}The local IP Address to be filtered on. Notation: "127.0.0.1" for single address entry. "127.0.0.1-127.0.0.255" for range. "127.0.0.1;127.0.0.5" for multiple entries. Multiple ranges not currently supported. Mixing ranges with multiple entries not currently supported. Changing this forces a new resource to be created.
-{{% /md %}}</dd>
-    <dt class="property-optional"
+{{% /md %}}</dd><dt class="property-optional"
             title="Optional">
         <span id="localport_go">
 <a href="#localport_go" style="color: inherit; text-decoration: inherit;">Local<wbr>Port</a>
@@ -1351,8 +1233,7 @@ The following state arguments are supported:
         <span class="property-type">string</span>
     </dt>
     <dd>{{% md %}}The local port to be filtered on. Notation: "80" for single port entry."80-85" for range. "80;443;" for multiple entries. Multiple ranges not currently supported. Mixing ranges with multiple entries not currently supported. Changing this forces a new resource to be created.
-{{% /md %}}</dd>
-    <dt class="property-optional"
+{{% /md %}}</dd><dt class="property-optional"
             title="Optional">
         <span id="remoteipaddress_go">
 <a href="#remoteipaddress_go" style="color: inherit; text-decoration: inherit;">Remote<wbr>Ip<wbr>Address</a>
@@ -1361,8 +1242,7 @@ The following state arguments are supported:
         <span class="property-type">string</span>
     </dt>
     <dd>{{% md %}}The remote IP Address to be filtered on. Notation: "127.0.0.1" for single address entry. "127.0.0.1-127.0.0.255" for range. "127.0.0.1;127.0.0.5;" for multiple entries. Multiple ranges not currently supported. Mixing ranges with multiple entries not currently supported.. Changing this forces a new resource to be created.
-{{% /md %}}</dd>
-    <dt class="property-optional"
+{{% /md %}}</dd><dt class="property-optional"
             title="Optional">
         <span id="remoteport_go">
 <a href="#remoteport_go" style="color: inherit; text-decoration: inherit;">Remote<wbr>Port</a>
@@ -1371,14 +1251,11 @@ The following state arguments are supported:
         <span class="property-type">string</span>
     </dt>
     <dd>{{% md %}}The remote port to be filtered on. Notation: "80" for single port entry."80-85" for range. "80;443;" for multiple entries. Multiple ranges not currently supported. Mixing ranges with multiple entries not currently supported. Changing this forces a new resource to be created.
-{{% /md %}}</dd>
-</dl>
+{{% /md %}}</dd></dl>
 {{% /choosable %}}
 
 {{% choosable language nodejs %}}
-<dl class="resources-properties">
-
-    <dt class="property-required"
+<dl class="resources-properties"><dt class="property-required"
             title="Required">
         <span id="protocol_nodejs">
 <a href="#protocol_nodejs" style="color: inherit; text-decoration: inherit;">protocol</a>
@@ -1387,8 +1264,7 @@ The following state arguments are supported:
         <span class="property-type">string</span>
     </dt>
     <dd>{{% md %}}The Protocol to be filtered on. Possible values include `Any`, `TCP` and `UDP`. Changing this forces a new resource to be created.
-{{% /md %}}</dd>
-    <dt class="property-optional"
+{{% /md %}}</dd><dt class="property-optional"
             title="Optional">
         <span id="localipaddress_nodejs">
 <a href="#localipaddress_nodejs" style="color: inherit; text-decoration: inherit;">local<wbr>Ip<wbr>Address</a>
@@ -1397,8 +1273,7 @@ The following state arguments are supported:
         <span class="property-type">string</span>
     </dt>
     <dd>{{% md %}}The local IP Address to be filtered on. Notation: "127.0.0.1" for single address entry. "127.0.0.1-127.0.0.255" for range. "127.0.0.1;127.0.0.5" for multiple entries. Multiple ranges not currently supported. Mixing ranges with multiple entries not currently supported. Changing this forces a new resource to be created.
-{{% /md %}}</dd>
-    <dt class="property-optional"
+{{% /md %}}</dd><dt class="property-optional"
             title="Optional">
         <span id="localport_nodejs">
 <a href="#localport_nodejs" style="color: inherit; text-decoration: inherit;">local<wbr>Port</a>
@@ -1407,8 +1282,7 @@ The following state arguments are supported:
         <span class="property-type">string</span>
     </dt>
     <dd>{{% md %}}The local port to be filtered on. Notation: "80" for single port entry."80-85" for range. "80;443;" for multiple entries. Multiple ranges not currently supported. Mixing ranges with multiple entries not currently supported. Changing this forces a new resource to be created.
-{{% /md %}}</dd>
-    <dt class="property-optional"
+{{% /md %}}</dd><dt class="property-optional"
             title="Optional">
         <span id="remoteipaddress_nodejs">
 <a href="#remoteipaddress_nodejs" style="color: inherit; text-decoration: inherit;">remote<wbr>Ip<wbr>Address</a>
@@ -1417,8 +1291,7 @@ The following state arguments are supported:
         <span class="property-type">string</span>
     </dt>
     <dd>{{% md %}}The remote IP Address to be filtered on. Notation: "127.0.0.1" for single address entry. "127.0.0.1-127.0.0.255" for range. "127.0.0.1;127.0.0.5;" for multiple entries. Multiple ranges not currently supported. Mixing ranges with multiple entries not currently supported.. Changing this forces a new resource to be created.
-{{% /md %}}</dd>
-    <dt class="property-optional"
+{{% /md %}}</dd><dt class="property-optional"
             title="Optional">
         <span id="remoteport_nodejs">
 <a href="#remoteport_nodejs" style="color: inherit; text-decoration: inherit;">remote<wbr>Port</a>
@@ -1427,14 +1300,11 @@ The following state arguments are supported:
         <span class="property-type">string</span>
     </dt>
     <dd>{{% md %}}The remote port to be filtered on. Notation: "80" for single port entry."80-85" for range. "80;443;" for multiple entries. Multiple ranges not currently supported. Mixing ranges with multiple entries not currently supported. Changing this forces a new resource to be created.
-{{% /md %}}</dd>
-</dl>
+{{% /md %}}</dd></dl>
 {{% /choosable %}}
 
 {{% choosable language python %}}
-<dl class="resources-properties">
-
-    <dt class="property-required"
+<dl class="resources-properties"><dt class="property-required"
             title="Required">
         <span id="protocol_python">
 <a href="#protocol_python" style="color: inherit; text-decoration: inherit;">protocol</a>
@@ -1443,8 +1313,7 @@ The following state arguments are supported:
         <span class="property-type">str</span>
     </dt>
     <dd>{{% md %}}The Protocol to be filtered on. Possible values include `Any`, `TCP` and `UDP`. Changing this forces a new resource to be created.
-{{% /md %}}</dd>
-    <dt class="property-optional"
+{{% /md %}}</dd><dt class="property-optional"
             title="Optional">
         <span id="local_ip_address_python">
 <a href="#local_ip_address_python" style="color: inherit; text-decoration: inherit;">local_<wbr>ip_<wbr>address</a>
@@ -1453,8 +1322,7 @@ The following state arguments are supported:
         <span class="property-type">str</span>
     </dt>
     <dd>{{% md %}}The local IP Address to be filtered on. Notation: "127.0.0.1" for single address entry. "127.0.0.1-127.0.0.255" for range. "127.0.0.1;127.0.0.5" for multiple entries. Multiple ranges not currently supported. Mixing ranges with multiple entries not currently supported. Changing this forces a new resource to be created.
-{{% /md %}}</dd>
-    <dt class="property-optional"
+{{% /md %}}</dd><dt class="property-optional"
             title="Optional">
         <span id="local_port_python">
 <a href="#local_port_python" style="color: inherit; text-decoration: inherit;">local_<wbr>port</a>
@@ -1463,8 +1331,7 @@ The following state arguments are supported:
         <span class="property-type">str</span>
     </dt>
     <dd>{{% md %}}The local port to be filtered on. Notation: "80" for single port entry."80-85" for range. "80;443;" for multiple entries. Multiple ranges not currently supported. Mixing ranges with multiple entries not currently supported. Changing this forces a new resource to be created.
-{{% /md %}}</dd>
-    <dt class="property-optional"
+{{% /md %}}</dd><dt class="property-optional"
             title="Optional">
         <span id="remote_ip_address_python">
 <a href="#remote_ip_address_python" style="color: inherit; text-decoration: inherit;">remote_<wbr>ip_<wbr>address</a>
@@ -1473,8 +1340,7 @@ The following state arguments are supported:
         <span class="property-type">str</span>
     </dt>
     <dd>{{% md %}}The remote IP Address to be filtered on. Notation: "127.0.0.1" for single address entry. "127.0.0.1-127.0.0.255" for range. "127.0.0.1;127.0.0.5;" for multiple entries. Multiple ranges not currently supported. Mixing ranges with multiple entries not currently supported.. Changing this forces a new resource to be created.
-{{% /md %}}</dd>
-    <dt class="property-optional"
+{{% /md %}}</dd><dt class="property-optional"
             title="Optional">
         <span id="remote_port_python">
 <a href="#remote_port_python" style="color: inherit; text-decoration: inherit;">remote_<wbr>port</a>
@@ -1483,16 +1349,13 @@ The following state arguments are supported:
         <span class="property-type">str</span>
     </dt>
     <dd>{{% md %}}The remote port to be filtered on. Notation: "80" for single port entry."80-85" for range. "80;443;" for multiple entries. Multiple ranges not currently supported. Mixing ranges with multiple entries not currently supported. Changing this forces a new resource to be created.
-{{% /md %}}</dd>
-</dl>
+{{% /md %}}</dd></dl>
 {{% /choosable %}}
 
 <h4 id="networkpacketcapturestoragelocation">Network<wbr>Packet<wbr>Capture<wbr>Storage<wbr>Location</h4>
 
 {{% choosable language csharp %}}
-<dl class="resources-properties">
-
-    <dt class="property-optional"
+<dl class="resources-properties"><dt class="property-optional"
             title="Optional">
         <span id="filepath_csharp">
 <a href="#filepath_csharp" style="color: inherit; text-decoration: inherit;">File<wbr>Path</a>
@@ -1501,8 +1364,7 @@ The following state arguments are supported:
         <span class="property-type">string</span>
     </dt>
     <dd>{{% md %}}A valid local path on the targeting VM. Must include the name of the capture file (*.cap). For linux virtual machine it must start with `/var/captures`.
-{{% /md %}}</dd>
-    <dt class="property-optional"
+{{% /md %}}</dd><dt class="property-optional"
             title="Optional">
         <span id="storageaccountid_csharp">
 <a href="#storageaccountid_csharp" style="color: inherit; text-decoration: inherit;">Storage<wbr>Account<wbr>Id</a>
@@ -1511,8 +1373,7 @@ The following state arguments are supported:
         <span class="property-type">string</span>
     </dt>
     <dd>{{% md %}}The ID of the storage account to save the packet capture session
-{{% /md %}}</dd>
-    <dt class="property-optional"
+{{% /md %}}</dd><dt class="property-optional"
             title="Optional">
         <span id="storagepath_csharp">
 <a href="#storagepath_csharp" style="color: inherit; text-decoration: inherit;">Storage<wbr>Path</a>
@@ -1521,14 +1382,11 @@ The following state arguments are supported:
         <span class="property-type">string</span>
     </dt>
     <dd>{{% md %}}The URI of the storage path to save the packet capture.
-{{% /md %}}</dd>
-</dl>
+{{% /md %}}</dd></dl>
 {{% /choosable %}}
 
 {{% choosable language go %}}
-<dl class="resources-properties">
-
-    <dt class="property-optional"
+<dl class="resources-properties"><dt class="property-optional"
             title="Optional">
         <span id="filepath_go">
 <a href="#filepath_go" style="color: inherit; text-decoration: inherit;">File<wbr>Path</a>
@@ -1537,8 +1395,7 @@ The following state arguments are supported:
         <span class="property-type">string</span>
     </dt>
     <dd>{{% md %}}A valid local path on the targeting VM. Must include the name of the capture file (*.cap). For linux virtual machine it must start with `/var/captures`.
-{{% /md %}}</dd>
-    <dt class="property-optional"
+{{% /md %}}</dd><dt class="property-optional"
             title="Optional">
         <span id="storageaccountid_go">
 <a href="#storageaccountid_go" style="color: inherit; text-decoration: inherit;">Storage<wbr>Account<wbr>Id</a>
@@ -1547,8 +1404,7 @@ The following state arguments are supported:
         <span class="property-type">string</span>
     </dt>
     <dd>{{% md %}}The ID of the storage account to save the packet capture session
-{{% /md %}}</dd>
-    <dt class="property-optional"
+{{% /md %}}</dd><dt class="property-optional"
             title="Optional">
         <span id="storagepath_go">
 <a href="#storagepath_go" style="color: inherit; text-decoration: inherit;">Storage<wbr>Path</a>
@@ -1557,14 +1413,11 @@ The following state arguments are supported:
         <span class="property-type">string</span>
     </dt>
     <dd>{{% md %}}The URI of the storage path to save the packet capture.
-{{% /md %}}</dd>
-</dl>
+{{% /md %}}</dd></dl>
 {{% /choosable %}}
 
 {{% choosable language nodejs %}}
-<dl class="resources-properties">
-
-    <dt class="property-optional"
+<dl class="resources-properties"><dt class="property-optional"
             title="Optional">
         <span id="filepath_nodejs">
 <a href="#filepath_nodejs" style="color: inherit; text-decoration: inherit;">file<wbr>Path</a>
@@ -1573,8 +1426,7 @@ The following state arguments are supported:
         <span class="property-type">string</span>
     </dt>
     <dd>{{% md %}}A valid local path on the targeting VM. Must include the name of the capture file (*.cap). For linux virtual machine it must start with `/var/captures`.
-{{% /md %}}</dd>
-    <dt class="property-optional"
+{{% /md %}}</dd><dt class="property-optional"
             title="Optional">
         <span id="storageaccountid_nodejs">
 <a href="#storageaccountid_nodejs" style="color: inherit; text-decoration: inherit;">storage<wbr>Account<wbr>Id</a>
@@ -1583,8 +1435,7 @@ The following state arguments are supported:
         <span class="property-type">string</span>
     </dt>
     <dd>{{% md %}}The ID of the storage account to save the packet capture session
-{{% /md %}}</dd>
-    <dt class="property-optional"
+{{% /md %}}</dd><dt class="property-optional"
             title="Optional">
         <span id="storagepath_nodejs">
 <a href="#storagepath_nodejs" style="color: inherit; text-decoration: inherit;">storage<wbr>Path</a>
@@ -1593,14 +1444,11 @@ The following state arguments are supported:
         <span class="property-type">string</span>
     </dt>
     <dd>{{% md %}}The URI of the storage path to save the packet capture.
-{{% /md %}}</dd>
-</dl>
+{{% /md %}}</dd></dl>
 {{% /choosable %}}
 
 {{% choosable language python %}}
-<dl class="resources-properties">
-
-    <dt class="property-optional"
+<dl class="resources-properties"><dt class="property-optional"
             title="Optional">
         <span id="file_path_python">
 <a href="#file_path_python" style="color: inherit; text-decoration: inherit;">file_<wbr>path</a>
@@ -1609,8 +1457,7 @@ The following state arguments are supported:
         <span class="property-type">str</span>
     </dt>
     <dd>{{% md %}}A valid local path on the targeting VM. Must include the name of the capture file (*.cap). For linux virtual machine it must start with `/var/captures`.
-{{% /md %}}</dd>
-    <dt class="property-optional"
+{{% /md %}}</dd><dt class="property-optional"
             title="Optional">
         <span id="storage_account_id_python">
 <a href="#storage_account_id_python" style="color: inherit; text-decoration: inherit;">storage_<wbr>account_<wbr>id</a>
@@ -1619,8 +1466,7 @@ The following state arguments are supported:
         <span class="property-type">str</span>
     </dt>
     <dd>{{% md %}}The ID of the storage account to save the packet capture session
-{{% /md %}}</dd>
-    <dt class="property-optional"
+{{% /md %}}</dd><dt class="property-optional"
             title="Optional">
         <span id="storage_path_python">
 <a href="#storage_path_python" style="color: inherit; text-decoration: inherit;">storage_<wbr>path</a>
@@ -1629,8 +1475,7 @@ The following state arguments are supported:
         <span class="property-type">str</span>
     </dt>
     <dd>{{% md %}}The URI of the storage path to save the packet capture.
-{{% /md %}}</dd>
-</dl>
+{{% /md %}}</dd></dl>
 {{% /choosable %}}
 ## Import
 
@@ -1651,6 +1496,6 @@ Packet Captures can be imported using the `resource id`, e.g.
 	<dt>License</dt>
 	<dd>Apache-2.0</dd>
 	<dt>Notes</dt>
-	<dd>This Pulumi package is based on the [`azurerm` Terraform Provider](https://github.com/terraform-providers/terraform-provider-azurerm).</dd>
+	<dd>{{% md %}}This Pulumi package is based on the [`azurerm` Terraform Provider](https://github.com/terraform-providers/terraform-provider-azurerm).{{% /md %}}</dd>
 </dl>
 

@@ -35,11 +35,17 @@ To get more information about Environments, see:
   * Please review the [known issues](https://cloud.google.com/composer/docs/known-issues) for Composer if you are having problems.
 
 {{% examples %}}
+
 ## Example Usage
 
 {{< chooser language "typescript,python,go,csharp" / >}}
+
+
 ### Basic Usage
-{{% example csharp %}}
+
+
+{{< example csharp >}}
+
 ```csharp
 using Pulumi;
 using Gcp = Pulumi.Gcp;
@@ -57,9 +63,12 @@ class MyStack : Stack
 }
 ```
 
-{{% /example %}}
 
-{{% example go %}}
+{{< /example >}}
+
+
+{{< example go >}}
+
 ```go
 package main
 
@@ -81,9 +90,12 @@ func main() {
 }
 ```
 
-{{% /example %}}
 
-{{% example python %}}
+{{< /example >}}
+
+
+{{< example python >}}
+
 ```python
 import pulumi
 import pulumi_gcp as gcp
@@ -91,9 +103,12 @@ import pulumi_gcp as gcp
 test = gcp.composer.Environment("test", region="us-central1")
 ```
 
-{{% /example %}}
 
-{{% example typescript %}}
+{{< /example >}}
+
+
+{{< example typescript >}}
+
 ```typescript
 import * as pulumi from "@pulumi/pulumi";
 import * as gcp from "@pulumi/gcp";
@@ -103,10 +118,17 @@ const test = new gcp.composer.Environment("test", {
 });
 ```
 
-{{% /example %}}
+
+{{< /example >}}
+
+
+
 
 ### With GKE and Compute Resource Dependencies
-{{% example csharp %}}
+
+
+{{< example csharp >}}
+
 ```csharp
 using Pulumi;
 using Gcp = Pulumi.Gcp;
@@ -156,9 +178,12 @@ class MyStack : Stack
 }
 ```
 
-{{% /example %}}
 
-{{% example go %}}
+{{< /example >}}
+
+
+{{< example go >}}
+
 ```go
 package main
 
@@ -225,9 +250,12 @@ func main() {
 }
 ```
 
-{{% /example %}}
 
-{{% example python %}}
+{{< /example >}}
+
+
+{{< example python >}}
+
 ```python
 import pulumi
 import pulumi_gcp as gcp
@@ -257,9 +285,12 @@ composer_worker = gcp.projects.IAMMember("composer-worker",
     member=test_account.email.apply(lambda email: f"serviceAccount:{email}"))
 ```
 
-{{% /example %}}
 
-{{% example typescript %}}
+{{< /example >}}
+
+
+{{< example typescript >}}
+
 
 ```typescript
 import * as pulumi from "@pulumi/pulumi";
@@ -294,10 +325,17 @@ const composer_worker = new gcp.projects.IAMMember("composer-worker", {
 });
 ```
 
-{{% /example %}}
+
+{{< /example >}}
+
+
+
 
 ### With Software (Airflow) Config
-{{% example csharp %}}
+
+
+{{< example csharp >}}
+
 ```csharp
 using Pulumi;
 using Gcp = Pulumi.Gcp;
@@ -334,9 +372,12 @@ class MyStack : Stack
 }
 ```
 
-{{% /example %}}
 
-{{% example go %}}
+{{< /example >}}
+
+
+{{< example go >}}
+
 ```go
 package main
 
@@ -372,9 +413,12 @@ func main() {
 }
 ```
 
-{{% /example %}}
 
-{{% example python %}}
+{{< /example >}}
+
+
+{{< example python >}}
+
 ```python
 import pulumi
 import pulumi_gcp as gcp
@@ -397,9 +441,12 @@ test = gcp.composer.Environment("test",
     region="us-central1")
 ```
 
-{{% /example %}}
 
-{{% example typescript %}}
+{{< /example >}}
+
+
+{{< example typescript >}}
+
 ```typescript
 import * as pulumi from "@pulumi/pulumi";
 import * as gcp from "@pulumi/gcp";
@@ -423,9 +470,16 @@ const test = new gcp.composer.Environment("test", {
 });
 ```
 
-{{% /example %}}
+
+{{< /example >}}
+
+
+
+
 
 {{% /examples %}}
+
+
 
 
 ## Create a Environment Resource {#create}
@@ -450,9 +504,7 @@ const test = new gcp.composer.Environment("test", {
 
 {{% choosable language nodejs %}}
 
-<dl class="resources-properties">
-  
-    <dt
+<dl class="resources-properties"><dt
         class="property-required" title="Required">
         <span>name</span>
         <span class="property-indicator"></span>
@@ -460,9 +512,7 @@ const test = new gcp.composer.Environment("test", {
     </dt>
     <dd>
       The unique name of the resource.
-    </dd>
-  
-    <dt
+    </dd><dt
         class="property-optional" title="Optional">
         <span>args</span>
         <span class="property-indicator"></span>
@@ -470,9 +520,7 @@ const test = new gcp.composer.Environment("test", {
     </dt>
     <dd>
       The arguments to resource properties.
-    </dd>
-  
-    <dt
+    </dd><dt
         class="property-optional" title="Optional">
         <span>opts</span>
         <span class="property-indicator"></span>
@@ -480,10 +528,7 @@ const test = new gcp.composer.Environment("test", {
     </dt>
     <dd>
       Bag of options to control resource&#39;s behavior.
-    </dd>
-  
-
-</dl>
+    </dd></dl>
 
 {{% /choosable %}}
 
@@ -509,9 +554,7 @@ const test = new gcp.composer.Environment("test", {
 
 {{% choosable language go %}}
 
-<dl class="resources-properties">
-  
-    <dt
+<dl class="resources-properties"><dt
         class="property-optional" title="Optional">
         <span>ctx</span>
         <span class="property-indicator"></span>
@@ -519,9 +562,7 @@ const test = new gcp.composer.Environment("test", {
     </dt>
     <dd>
       Context object for the current deployment.
-    </dd>
-  
-    <dt
+    </dd><dt
         class="property-required" title="Required">
         <span>name</span>
         <span class="property-indicator"></span>
@@ -529,9 +570,7 @@ const test = new gcp.composer.Environment("test", {
     </dt>
     <dd>
       The unique name of the resource.
-    </dd>
-  
-    <dt
+    </dd><dt
         class="property-optional" title="Optional">
         <span>args</span>
         <span class="property-indicator"></span>
@@ -539,9 +578,7 @@ const test = new gcp.composer.Environment("test", {
     </dt>
     <dd>
       The arguments to resource properties.
-    </dd>
-  
-    <dt
+    </dd><dt
         class="property-optional" title="Optional">
         <span>opts</span>
         <span class="property-indicator"></span>
@@ -549,18 +586,13 @@ const test = new gcp.composer.Environment("test", {
     </dt>
     <dd>
       Bag of options to control resource&#39;s behavior.
-    </dd>
-  
-
-</dl>
+    </dd></dl>
 
 {{% /choosable %}}
 
 {{% choosable language csharp %}}
 
-<dl class="resources-properties">
-  
-    <dt
+<dl class="resources-properties"><dt
         class="property-required" title="Required">
         <span>name</span>
         <span class="property-indicator"></span>
@@ -568,9 +600,7 @@ const test = new gcp.composer.Environment("test", {
     </dt>
     <dd>
       The unique name of the resource.
-    </dd>
-  
-    <dt
+    </dd><dt
         class="property-optional" title="Optional">
         <span>args</span>
         <span class="property-indicator"></span>
@@ -578,9 +608,7 @@ const test = new gcp.composer.Environment("test", {
     </dt>
     <dd>
       The arguments to resource properties.
-    </dd>
-  
-    <dt
+    </dd><dt
         class="property-optional" title="Optional">
         <span>opts</span>
         <span class="property-indicator"></span>
@@ -588,10 +616,7 @@ const test = new gcp.composer.Environment("test", {
     </dt>
     <dd>
       Bag of options to control resource&#39;s behavior.
-    </dd>
-  
-
-</dl>
+    </dd></dl>
 
 {{% /choosable %}}
 
@@ -606,9 +631,7 @@ The Environment resource accepts the following [input]({{< relref "/docs/intro/c
 
 
 {{% choosable language csharp %}}
-<dl class="resources-properties">
-
-    <dt class="property-optional"
+<dl class="resources-properties"><dt class="property-optional"
             title="Optional">
         <span id="config_csharp">
 <a href="#config_csharp" style="color: inherit; text-decoration: inherit;">Config</a>
@@ -617,8 +640,7 @@ The Environment resource accepts the following [input]({{< relref "/docs/intro/c
         <span class="property-type"><a href="#environmentconfig">Environment<wbr>Config<wbr>Args</a></span>
     </dt>
     <dd>{{% md %}}Configuration parameters for this environment  Structure is documented below.
-{{% /md %}}</dd>
-    <dt class="property-optional"
+{{% /md %}}</dd><dt class="property-optional"
             title="Optional">
         <span id="labels_csharp">
 <a href="#labels_csharp" style="color: inherit; text-decoration: inherit;">Labels</a>
@@ -635,8 +657,7 @@ Label values must be between 0 and 63 characters long and must
 conform to the regular expression `(a-z?)?`.
 No more than 64 labels can be associated with a given environment.
 Both keys and values must be <= 128 bytes in size.
-{{% /md %}}</dd>
-    <dt class="property-optional"
+{{% /md %}}</dd><dt class="property-optional"
             title="Optional">
         <span id="name_csharp">
 <a href="#name_csharp" style="color: inherit; text-decoration: inherit;">Name</a>
@@ -645,8 +666,7 @@ Both keys and values must be <= 128 bytes in size.
         <span class="property-type">string</span>
     </dt>
     <dd>{{% md %}}Name of the environment
-{{% /md %}}</dd>
-    <dt class="property-optional"
+{{% /md %}}</dd><dt class="property-optional"
             title="Optional">
         <span id="project_csharp">
 <a href="#project_csharp" style="color: inherit; text-decoration: inherit;">Project</a>
@@ -656,8 +676,7 @@ Both keys and values must be <= 128 bytes in size.
     </dt>
     <dd>{{% md %}}The ID of the project in which the resource belongs.
 If it is not provided, the provider project is used.
-{{% /md %}}</dd>
-    <dt class="property-optional"
+{{% /md %}}</dd><dt class="property-optional"
             title="Optional">
         <span id="region_csharp">
 <a href="#region_csharp" style="color: inherit; text-decoration: inherit;">Region</a>
@@ -666,14 +685,11 @@ If it is not provided, the provider project is used.
         <span class="property-type">string</span>
     </dt>
     <dd>{{% md %}}The location or Compute Engine region for the environment.
-{{% /md %}}</dd>
-</dl>
+{{% /md %}}</dd></dl>
 {{% /choosable %}}
 
 {{% choosable language go %}}
-<dl class="resources-properties">
-
-    <dt class="property-optional"
+<dl class="resources-properties"><dt class="property-optional"
             title="Optional">
         <span id="config_go">
 <a href="#config_go" style="color: inherit; text-decoration: inherit;">Config</a>
@@ -682,8 +698,7 @@ If it is not provided, the provider project is used.
         <span class="property-type"><a href="#environmentconfig">Environment<wbr>Config</a></span>
     </dt>
     <dd>{{% md %}}Configuration parameters for this environment  Structure is documented below.
-{{% /md %}}</dd>
-    <dt class="property-optional"
+{{% /md %}}</dd><dt class="property-optional"
             title="Optional">
         <span id="labels_go">
 <a href="#labels_go" style="color: inherit; text-decoration: inherit;">Labels</a>
@@ -700,8 +715,7 @@ Label values must be between 0 and 63 characters long and must
 conform to the regular expression `(a-z?)?`.
 No more than 64 labels can be associated with a given environment.
 Both keys and values must be <= 128 bytes in size.
-{{% /md %}}</dd>
-    <dt class="property-optional"
+{{% /md %}}</dd><dt class="property-optional"
             title="Optional">
         <span id="name_go">
 <a href="#name_go" style="color: inherit; text-decoration: inherit;">Name</a>
@@ -710,8 +724,7 @@ Both keys and values must be <= 128 bytes in size.
         <span class="property-type">string</span>
     </dt>
     <dd>{{% md %}}Name of the environment
-{{% /md %}}</dd>
-    <dt class="property-optional"
+{{% /md %}}</dd><dt class="property-optional"
             title="Optional">
         <span id="project_go">
 <a href="#project_go" style="color: inherit; text-decoration: inherit;">Project</a>
@@ -721,8 +734,7 @@ Both keys and values must be <= 128 bytes in size.
     </dt>
     <dd>{{% md %}}The ID of the project in which the resource belongs.
 If it is not provided, the provider project is used.
-{{% /md %}}</dd>
-    <dt class="property-optional"
+{{% /md %}}</dd><dt class="property-optional"
             title="Optional">
         <span id="region_go">
 <a href="#region_go" style="color: inherit; text-decoration: inherit;">Region</a>
@@ -731,14 +743,11 @@ If it is not provided, the provider project is used.
         <span class="property-type">string</span>
     </dt>
     <dd>{{% md %}}The location or Compute Engine region for the environment.
-{{% /md %}}</dd>
-</dl>
+{{% /md %}}</dd></dl>
 {{% /choosable %}}
 
 {{% choosable language nodejs %}}
-<dl class="resources-properties">
-
-    <dt class="property-optional"
+<dl class="resources-properties"><dt class="property-optional"
             title="Optional">
         <span id="config_nodejs">
 <a href="#config_nodejs" style="color: inherit; text-decoration: inherit;">config</a>
@@ -747,8 +756,7 @@ If it is not provided, the provider project is used.
         <span class="property-type"><a href="#environmentconfig">Environment<wbr>Config</a></span>
     </dt>
     <dd>{{% md %}}Configuration parameters for this environment  Structure is documented below.
-{{% /md %}}</dd>
-    <dt class="property-optional"
+{{% /md %}}</dd><dt class="property-optional"
             title="Optional">
         <span id="labels_nodejs">
 <a href="#labels_nodejs" style="color: inherit; text-decoration: inherit;">labels</a>
@@ -765,8 +773,7 @@ Label values must be between 0 and 63 characters long and must
 conform to the regular expression `(a-z?)?`.
 No more than 64 labels can be associated with a given environment.
 Both keys and values must be <= 128 bytes in size.
-{{% /md %}}</dd>
-    <dt class="property-optional"
+{{% /md %}}</dd><dt class="property-optional"
             title="Optional">
         <span id="name_nodejs">
 <a href="#name_nodejs" style="color: inherit; text-decoration: inherit;">name</a>
@@ -775,8 +782,7 @@ Both keys and values must be <= 128 bytes in size.
         <span class="property-type">string</span>
     </dt>
     <dd>{{% md %}}Name of the environment
-{{% /md %}}</dd>
-    <dt class="property-optional"
+{{% /md %}}</dd><dt class="property-optional"
             title="Optional">
         <span id="project_nodejs">
 <a href="#project_nodejs" style="color: inherit; text-decoration: inherit;">project</a>
@@ -786,8 +792,7 @@ Both keys and values must be <= 128 bytes in size.
     </dt>
     <dd>{{% md %}}The ID of the project in which the resource belongs.
 If it is not provided, the provider project is used.
-{{% /md %}}</dd>
-    <dt class="property-optional"
+{{% /md %}}</dd><dt class="property-optional"
             title="Optional">
         <span id="region_nodejs">
 <a href="#region_nodejs" style="color: inherit; text-decoration: inherit;">region</a>
@@ -796,14 +801,11 @@ If it is not provided, the provider project is used.
         <span class="property-type">string</span>
     </dt>
     <dd>{{% md %}}The location or Compute Engine region for the environment.
-{{% /md %}}</dd>
-</dl>
+{{% /md %}}</dd></dl>
 {{% /choosable %}}
 
 {{% choosable language python %}}
-<dl class="resources-properties">
-
-    <dt class="property-optional"
+<dl class="resources-properties"><dt class="property-optional"
             title="Optional">
         <span id="config_python">
 <a href="#config_python" style="color: inherit; text-decoration: inherit;">config</a>
@@ -812,8 +814,7 @@ If it is not provided, the provider project is used.
         <span class="property-type"><a href="#environmentconfig">Environment<wbr>Config<wbr>Args</a></span>
     </dt>
     <dd>{{% md %}}Configuration parameters for this environment  Structure is documented below.
-{{% /md %}}</dd>
-    <dt class="property-optional"
+{{% /md %}}</dd><dt class="property-optional"
             title="Optional">
         <span id="labels_python">
 <a href="#labels_python" style="color: inherit; text-decoration: inherit;">labels</a>
@@ -830,8 +831,7 @@ Label values must be between 0 and 63 characters long and must
 conform to the regular expression `(a-z?)?`.
 No more than 64 labels can be associated with a given environment.
 Both keys and values must be <= 128 bytes in size.
-{{% /md %}}</dd>
-    <dt class="property-optional"
+{{% /md %}}</dd><dt class="property-optional"
             title="Optional">
         <span id="name_python">
 <a href="#name_python" style="color: inherit; text-decoration: inherit;">name</a>
@@ -840,8 +840,7 @@ Both keys and values must be <= 128 bytes in size.
         <span class="property-type">str</span>
     </dt>
     <dd>{{% md %}}Name of the environment
-{{% /md %}}</dd>
-    <dt class="property-optional"
+{{% /md %}}</dd><dt class="property-optional"
             title="Optional">
         <span id="project_python">
 <a href="#project_python" style="color: inherit; text-decoration: inherit;">project</a>
@@ -851,8 +850,7 @@ Both keys and values must be <= 128 bytes in size.
     </dt>
     <dd>{{% md %}}The ID of the project in which the resource belongs.
 If it is not provided, the provider project is used.
-{{% /md %}}</dd>
-    <dt class="property-optional"
+{{% /md %}}</dd><dt class="property-optional"
             title="Optional">
         <span id="region_python">
 <a href="#region_python" style="color: inherit; text-decoration: inherit;">region</a>
@@ -861,8 +859,7 @@ If it is not provided, the provider project is used.
         <span class="property-type">str</span>
     </dt>
     <dd>{{% md %}}The location or Compute Engine region for the environment.
-{{% /md %}}</dd>
-</dl>
+{{% /md %}}</dd></dl>
 {{% /choosable %}}
 
 
@@ -873,9 +870,7 @@ All [input](#inputs) properties are implicitly available as output properties. A
 
 
 {{% choosable language csharp %}}
-<dl class="resources-properties">
-
-    <dt class="property-"
+<dl class="resources-properties"><dt class="property-"
             title="">
         <span id="id_csharp">
 <a href="#id_csharp" style="color: inherit; text-decoration: inherit;">Id</a>
@@ -883,14 +878,11 @@ All [input](#inputs) properties are implicitly available as output properties. A
         <span class="property-indicator"></span>
         <span class="property-type">string</span>
     </dt>
-    <dd>{{% md %}}The provider-assigned unique ID for this managed resource.{{% /md %}}</dd>
-</dl>
+    <dd>{{% md %}}The provider-assigned unique ID for this managed resource.{{% /md %}}</dd></dl>
 {{% /choosable %}}
 
 {{% choosable language go %}}
-<dl class="resources-properties">
-
-    <dt class="property-"
+<dl class="resources-properties"><dt class="property-"
             title="">
         <span id="id_go">
 <a href="#id_go" style="color: inherit; text-decoration: inherit;">Id</a>
@@ -898,14 +890,11 @@ All [input](#inputs) properties are implicitly available as output properties. A
         <span class="property-indicator"></span>
         <span class="property-type">string</span>
     </dt>
-    <dd>{{% md %}}The provider-assigned unique ID for this managed resource.{{% /md %}}</dd>
-</dl>
+    <dd>{{% md %}}The provider-assigned unique ID for this managed resource.{{% /md %}}</dd></dl>
 {{% /choosable %}}
 
 {{% choosable language nodejs %}}
-<dl class="resources-properties">
-
-    <dt class="property-"
+<dl class="resources-properties"><dt class="property-"
             title="">
         <span id="id_nodejs">
 <a href="#id_nodejs" style="color: inherit; text-decoration: inherit;">id</a>
@@ -913,14 +902,11 @@ All [input](#inputs) properties are implicitly available as output properties. A
         <span class="property-indicator"></span>
         <span class="property-type">string</span>
     </dt>
-    <dd>{{% md %}}The provider-assigned unique ID for this managed resource.{{% /md %}}</dd>
-</dl>
+    <dd>{{% md %}}The provider-assigned unique ID for this managed resource.{{% /md %}}</dd></dl>
 {{% /choosable %}}
 
 {{% choosable language python %}}
-<dl class="resources-properties">
-
-    <dt class="property-"
+<dl class="resources-properties"><dt class="property-"
             title="">
         <span id="id_python">
 <a href="#id_python" style="color: inherit; text-decoration: inherit;">id</a>
@@ -928,8 +914,7 @@ All [input](#inputs) properties are implicitly available as output properties. A
         <span class="property-indicator"></span>
         <span class="property-type">str</span>
     </dt>
-    <dd>{{% md %}}The provider-assigned unique ID for this managed resource.{{% /md %}}</dd>
-</dl>
+    <dd>{{% md %}}The provider-assigned unique ID for this managed resource.{{% /md %}}</dd></dl>
 {{% /choosable %}}
 
 
@@ -1056,9 +1041,7 @@ The following state arguments are supported:
 
 
 {{% choosable language csharp %}}
-<dl class="resources-properties">
-
-    <dt class="property-optional"
+<dl class="resources-properties"><dt class="property-optional"
             title="Optional">
         <span id="state_config_csharp">
 <a href="#state_config_csharp" style="color: inherit; text-decoration: inherit;">Config</a>
@@ -1067,8 +1050,7 @@ The following state arguments are supported:
         <span class="property-type"><a href="#environmentconfig">Environment<wbr>Config<wbr>Args</a></span>
     </dt>
     <dd>{{% md %}}Configuration parameters for this environment  Structure is documented below.
-{{% /md %}}</dd>
-    <dt class="property-optional"
+{{% /md %}}</dd><dt class="property-optional"
             title="Optional">
         <span id="state_labels_csharp">
 <a href="#state_labels_csharp" style="color: inherit; text-decoration: inherit;">Labels</a>
@@ -1085,8 +1067,7 @@ Label values must be between 0 and 63 characters long and must
 conform to the regular expression `(a-z?)?`.
 No more than 64 labels can be associated with a given environment.
 Both keys and values must be <= 128 bytes in size.
-{{% /md %}}</dd>
-    <dt class="property-optional"
+{{% /md %}}</dd><dt class="property-optional"
             title="Optional">
         <span id="state_name_csharp">
 <a href="#state_name_csharp" style="color: inherit; text-decoration: inherit;">Name</a>
@@ -1095,8 +1076,7 @@ Both keys and values must be <= 128 bytes in size.
         <span class="property-type">string</span>
     </dt>
     <dd>{{% md %}}Name of the environment
-{{% /md %}}</dd>
-    <dt class="property-optional"
+{{% /md %}}</dd><dt class="property-optional"
             title="Optional">
         <span id="state_project_csharp">
 <a href="#state_project_csharp" style="color: inherit; text-decoration: inherit;">Project</a>
@@ -1106,8 +1086,7 @@ Both keys and values must be <= 128 bytes in size.
     </dt>
     <dd>{{% md %}}The ID of the project in which the resource belongs.
 If it is not provided, the provider project is used.
-{{% /md %}}</dd>
-    <dt class="property-optional"
+{{% /md %}}</dd><dt class="property-optional"
             title="Optional">
         <span id="state_region_csharp">
 <a href="#state_region_csharp" style="color: inherit; text-decoration: inherit;">Region</a>
@@ -1116,14 +1095,11 @@ If it is not provided, the provider project is used.
         <span class="property-type">string</span>
     </dt>
     <dd>{{% md %}}The location or Compute Engine region for the environment.
-{{% /md %}}</dd>
-</dl>
+{{% /md %}}</dd></dl>
 {{% /choosable %}}
 
 {{% choosable language go %}}
-<dl class="resources-properties">
-
-    <dt class="property-optional"
+<dl class="resources-properties"><dt class="property-optional"
             title="Optional">
         <span id="state_config_go">
 <a href="#state_config_go" style="color: inherit; text-decoration: inherit;">Config</a>
@@ -1132,8 +1108,7 @@ If it is not provided, the provider project is used.
         <span class="property-type"><a href="#environmentconfig">Environment<wbr>Config</a></span>
     </dt>
     <dd>{{% md %}}Configuration parameters for this environment  Structure is documented below.
-{{% /md %}}</dd>
-    <dt class="property-optional"
+{{% /md %}}</dd><dt class="property-optional"
             title="Optional">
         <span id="state_labels_go">
 <a href="#state_labels_go" style="color: inherit; text-decoration: inherit;">Labels</a>
@@ -1150,8 +1125,7 @@ Label values must be between 0 and 63 characters long and must
 conform to the regular expression `(a-z?)?`.
 No more than 64 labels can be associated with a given environment.
 Both keys and values must be <= 128 bytes in size.
-{{% /md %}}</dd>
-    <dt class="property-optional"
+{{% /md %}}</dd><dt class="property-optional"
             title="Optional">
         <span id="state_name_go">
 <a href="#state_name_go" style="color: inherit; text-decoration: inherit;">Name</a>
@@ -1160,8 +1134,7 @@ Both keys and values must be <= 128 bytes in size.
         <span class="property-type">string</span>
     </dt>
     <dd>{{% md %}}Name of the environment
-{{% /md %}}</dd>
-    <dt class="property-optional"
+{{% /md %}}</dd><dt class="property-optional"
             title="Optional">
         <span id="state_project_go">
 <a href="#state_project_go" style="color: inherit; text-decoration: inherit;">Project</a>
@@ -1171,8 +1144,7 @@ Both keys and values must be <= 128 bytes in size.
     </dt>
     <dd>{{% md %}}The ID of the project in which the resource belongs.
 If it is not provided, the provider project is used.
-{{% /md %}}</dd>
-    <dt class="property-optional"
+{{% /md %}}</dd><dt class="property-optional"
             title="Optional">
         <span id="state_region_go">
 <a href="#state_region_go" style="color: inherit; text-decoration: inherit;">Region</a>
@@ -1181,14 +1153,11 @@ If it is not provided, the provider project is used.
         <span class="property-type">string</span>
     </dt>
     <dd>{{% md %}}The location or Compute Engine region for the environment.
-{{% /md %}}</dd>
-</dl>
+{{% /md %}}</dd></dl>
 {{% /choosable %}}
 
 {{% choosable language nodejs %}}
-<dl class="resources-properties">
-
-    <dt class="property-optional"
+<dl class="resources-properties"><dt class="property-optional"
             title="Optional">
         <span id="state_config_nodejs">
 <a href="#state_config_nodejs" style="color: inherit; text-decoration: inherit;">config</a>
@@ -1197,8 +1166,7 @@ If it is not provided, the provider project is used.
         <span class="property-type"><a href="#environmentconfig">Environment<wbr>Config</a></span>
     </dt>
     <dd>{{% md %}}Configuration parameters for this environment  Structure is documented below.
-{{% /md %}}</dd>
-    <dt class="property-optional"
+{{% /md %}}</dd><dt class="property-optional"
             title="Optional">
         <span id="state_labels_nodejs">
 <a href="#state_labels_nodejs" style="color: inherit; text-decoration: inherit;">labels</a>
@@ -1215,8 +1183,7 @@ Label values must be between 0 and 63 characters long and must
 conform to the regular expression `(a-z?)?`.
 No more than 64 labels can be associated with a given environment.
 Both keys and values must be <= 128 bytes in size.
-{{% /md %}}</dd>
-    <dt class="property-optional"
+{{% /md %}}</dd><dt class="property-optional"
             title="Optional">
         <span id="state_name_nodejs">
 <a href="#state_name_nodejs" style="color: inherit; text-decoration: inherit;">name</a>
@@ -1225,8 +1192,7 @@ Both keys and values must be <= 128 bytes in size.
         <span class="property-type">string</span>
     </dt>
     <dd>{{% md %}}Name of the environment
-{{% /md %}}</dd>
-    <dt class="property-optional"
+{{% /md %}}</dd><dt class="property-optional"
             title="Optional">
         <span id="state_project_nodejs">
 <a href="#state_project_nodejs" style="color: inherit; text-decoration: inherit;">project</a>
@@ -1236,8 +1202,7 @@ Both keys and values must be <= 128 bytes in size.
     </dt>
     <dd>{{% md %}}The ID of the project in which the resource belongs.
 If it is not provided, the provider project is used.
-{{% /md %}}</dd>
-    <dt class="property-optional"
+{{% /md %}}</dd><dt class="property-optional"
             title="Optional">
         <span id="state_region_nodejs">
 <a href="#state_region_nodejs" style="color: inherit; text-decoration: inherit;">region</a>
@@ -1246,14 +1211,11 @@ If it is not provided, the provider project is used.
         <span class="property-type">string</span>
     </dt>
     <dd>{{% md %}}The location or Compute Engine region for the environment.
-{{% /md %}}</dd>
-</dl>
+{{% /md %}}</dd></dl>
 {{% /choosable %}}
 
 {{% choosable language python %}}
-<dl class="resources-properties">
-
-    <dt class="property-optional"
+<dl class="resources-properties"><dt class="property-optional"
             title="Optional">
         <span id="state_config_python">
 <a href="#state_config_python" style="color: inherit; text-decoration: inherit;">config</a>
@@ -1262,8 +1224,7 @@ If it is not provided, the provider project is used.
         <span class="property-type"><a href="#environmentconfig">Environment<wbr>Config<wbr>Args</a></span>
     </dt>
     <dd>{{% md %}}Configuration parameters for this environment  Structure is documented below.
-{{% /md %}}</dd>
-    <dt class="property-optional"
+{{% /md %}}</dd><dt class="property-optional"
             title="Optional">
         <span id="state_labels_python">
 <a href="#state_labels_python" style="color: inherit; text-decoration: inherit;">labels</a>
@@ -1280,8 +1241,7 @@ Label values must be between 0 and 63 characters long and must
 conform to the regular expression `(a-z?)?`.
 No more than 64 labels can be associated with a given environment.
 Both keys and values must be <= 128 bytes in size.
-{{% /md %}}</dd>
-    <dt class="property-optional"
+{{% /md %}}</dd><dt class="property-optional"
             title="Optional">
         <span id="state_name_python">
 <a href="#state_name_python" style="color: inherit; text-decoration: inherit;">name</a>
@@ -1290,8 +1250,7 @@ Both keys and values must be <= 128 bytes in size.
         <span class="property-type">str</span>
     </dt>
     <dd>{{% md %}}Name of the environment
-{{% /md %}}</dd>
-    <dt class="property-optional"
+{{% /md %}}</dd><dt class="property-optional"
             title="Optional">
         <span id="state_project_python">
 <a href="#state_project_python" style="color: inherit; text-decoration: inherit;">project</a>
@@ -1301,8 +1260,7 @@ Both keys and values must be <= 128 bytes in size.
     </dt>
     <dd>{{% md %}}The ID of the project in which the resource belongs.
 If it is not provided, the provider project is used.
-{{% /md %}}</dd>
-    <dt class="property-optional"
+{{% /md %}}</dd><dt class="property-optional"
             title="Optional">
         <span id="state_region_python">
 <a href="#state_region_python" style="color: inherit; text-decoration: inherit;">region</a>
@@ -1311,8 +1269,7 @@ If it is not provided, the provider project is used.
         <span class="property-type">str</span>
     </dt>
     <dd>{{% md %}}The location or Compute Engine region for the environment.
-{{% /md %}}</dd>
-</dl>
+{{% /md %}}</dd></dl>
 {{% /choosable %}}
 
 
@@ -1327,9 +1284,7 @@ If it is not provided, the provider project is used.
 <h4 id="environmentconfig">Environment<wbr>Config</h4>
 
 {{% choosable language csharp %}}
-<dl class="resources-properties">
-
-    <dt class="property-optional"
+<dl class="resources-properties"><dt class="property-optional"
             title="Optional">
         <span id="airflowuri_csharp">
 <a href="#airflowuri_csharp" style="color: inherit; text-decoration: inherit;">Airflow<wbr>Uri</a>
@@ -1337,8 +1292,7 @@ If it is not provided, the provider project is used.
         <span class="property-indicator"></span>
         <span class="property-type">string</span>
     </dt>
-    <dd>{{% md %}}{{% /md %}}</dd>
-    <dt class="property-optional"
+    <dd>{{% md %}}{{% /md %}}</dd><dt class="property-optional"
             title="Optional">
         <span id="daggcsprefix_csharp">
 <a href="#daggcsprefix_csharp" style="color: inherit; text-decoration: inherit;">Dag<wbr>Gcs<wbr>Prefix</a>
@@ -1346,8 +1300,7 @@ If it is not provided, the provider project is used.
         <span class="property-indicator"></span>
         <span class="property-type">string</span>
     </dt>
-    <dd>{{% md %}}{{% /md %}}</dd>
-    <dt class="property-optional"
+    <dd>{{% md %}}{{% /md %}}</dd><dt class="property-optional"
             title="Optional">
         <span id="databaseconfig_csharp">
 <a href="#databaseconfig_csharp" style="color: inherit; text-decoration: inherit;">Database<wbr>Config</a>
@@ -1356,8 +1309,7 @@ If it is not provided, the provider project is used.
         <span class="property-type"><a href="#environmentconfigdatabaseconfig">Environment<wbr>Config<wbr>Database<wbr>Config<wbr>Args</a></span>
     </dt>
     <dd>{{% md %}}The configuration settings for Cloud SQL instance used internally by Apache Airflow software.
-{{% /md %}}</dd>
-    <dt class="property-optional"
+{{% /md %}}</dd><dt class="property-optional"
             title="Optional">
         <span id="gkecluster_csharp">
 <a href="#gkecluster_csharp" style="color: inherit; text-decoration: inherit;">Gke<wbr>Cluster</a>
@@ -1365,8 +1317,7 @@ If it is not provided, the provider project is used.
         <span class="property-indicator"></span>
         <span class="property-type">string</span>
     </dt>
-    <dd>{{% md %}}{{% /md %}}</dd>
-    <dt class="property-optional"
+    <dd>{{% md %}}{{% /md %}}</dd><dt class="property-optional"
             title="Optional">
         <span id="nodeconfig_csharp">
 <a href="#nodeconfig_csharp" style="color: inherit; text-decoration: inherit;">Node<wbr>Config</a>
@@ -1375,8 +1326,7 @@ If it is not provided, the provider project is used.
         <span class="property-type"><a href="#environmentconfignodeconfig">Environment<wbr>Config<wbr>Node<wbr>Config<wbr>Args</a></span>
     </dt>
     <dd>{{% md %}}The configuration used for the Kubernetes Engine cluster.  Structure is documented below.
-{{% /md %}}</dd>
-    <dt class="property-optional"
+{{% /md %}}</dd><dt class="property-optional"
             title="Optional">
         <span id="nodecount_csharp">
 <a href="#nodecount_csharp" style="color: inherit; text-decoration: inherit;">Node<wbr>Count</a>
@@ -1386,8 +1336,7 @@ If it is not provided, the provider project is used.
     </dt>
     <dd>{{% md %}}The number of nodes in the Kubernetes Engine cluster that
 will be used to run this environment.
-{{% /md %}}</dd>
-    <dt class="property-optional"
+{{% /md %}}</dd><dt class="property-optional"
             title="Optional">
         <span id="privateenvironmentconfig_csharp">
 <a href="#privateenvironmentconfig_csharp" style="color: inherit; text-decoration: inherit;">Private<wbr>Environment<wbr>Config</a>
@@ -1396,8 +1345,7 @@ will be used to run this environment.
         <span class="property-type"><a href="#environmentconfigprivateenvironmentconfig">Environment<wbr>Config<wbr>Private<wbr>Environment<wbr>Config<wbr>Args</a></span>
     </dt>
     <dd>{{% md %}}The configuration used for the Private IP Cloud Composer environment. Structure is documented below.
-{{% /md %}}</dd>
-    <dt class="property-optional"
+{{% /md %}}</dd><dt class="property-optional"
             title="Optional">
         <span id="softwareconfig_csharp">
 <a href="#softwareconfig_csharp" style="color: inherit; text-decoration: inherit;">Software<wbr>Config</a>
@@ -1406,8 +1354,7 @@ will be used to run this environment.
         <span class="property-type"><a href="#environmentconfigsoftwareconfig">Environment<wbr>Config<wbr>Software<wbr>Config<wbr>Args</a></span>
     </dt>
     <dd>{{% md %}}The configuration settings for software inside the environment.  Structure is documented below.
-{{% /md %}}</dd>
-    <dt class="property-optional"
+{{% /md %}}</dd><dt class="property-optional"
             title="Optional">
         <span id="webserverconfig_csharp">
 <a href="#webserverconfig_csharp" style="color: inherit; text-decoration: inherit;">Web<wbr>Server<wbr>Config</a>
@@ -1416,8 +1363,7 @@ will be used to run this environment.
         <span class="property-type"><a href="#environmentconfigwebserverconfig">Environment<wbr>Config<wbr>Web<wbr>Server<wbr>Config<wbr>Args</a></span>
     </dt>
     <dd>{{% md %}}The configuration settings for the Airflow web server App Engine instance.
-{{% /md %}}</dd>
-    <dt class="property-optional"
+{{% /md %}}</dd><dt class="property-optional"
             title="Optional">
         <span id="webservernetworkaccesscontrol_csharp">
 <a href="#webservernetworkaccesscontrol_csharp" style="color: inherit; text-decoration: inherit;">Web<wbr>Server<wbr>Network<wbr>Access<wbr>Control</a>
@@ -1426,14 +1372,11 @@ will be used to run this environment.
         <span class="property-type"><a href="#environmentconfigwebservernetworkaccesscontrol">Environment<wbr>Config<wbr>Web<wbr>Server<wbr>Network<wbr>Access<wbr>Control<wbr>Args</a></span>
     </dt>
     <dd>{{% md %}}The network-level access control policy for the Airflow web server. If unspecified, no network-level access restrictions will be applied.
-{{% /md %}}</dd>
-</dl>
+{{% /md %}}</dd></dl>
 {{% /choosable %}}
 
 {{% choosable language go %}}
-<dl class="resources-properties">
-
-    <dt class="property-optional"
+<dl class="resources-properties"><dt class="property-optional"
             title="Optional">
         <span id="airflowuri_go">
 <a href="#airflowuri_go" style="color: inherit; text-decoration: inherit;">Airflow<wbr>Uri</a>
@@ -1441,8 +1384,7 @@ will be used to run this environment.
         <span class="property-indicator"></span>
         <span class="property-type">string</span>
     </dt>
-    <dd>{{% md %}}{{% /md %}}</dd>
-    <dt class="property-optional"
+    <dd>{{% md %}}{{% /md %}}</dd><dt class="property-optional"
             title="Optional">
         <span id="daggcsprefix_go">
 <a href="#daggcsprefix_go" style="color: inherit; text-decoration: inherit;">Dag<wbr>Gcs<wbr>Prefix</a>
@@ -1450,8 +1392,7 @@ will be used to run this environment.
         <span class="property-indicator"></span>
         <span class="property-type">string</span>
     </dt>
-    <dd>{{% md %}}{{% /md %}}</dd>
-    <dt class="property-optional"
+    <dd>{{% md %}}{{% /md %}}</dd><dt class="property-optional"
             title="Optional">
         <span id="databaseconfig_go">
 <a href="#databaseconfig_go" style="color: inherit; text-decoration: inherit;">Database<wbr>Config</a>
@@ -1460,8 +1401,7 @@ will be used to run this environment.
         <span class="property-type"><a href="#environmentconfigdatabaseconfig">Environment<wbr>Config<wbr>Database<wbr>Config</a></span>
     </dt>
     <dd>{{% md %}}The configuration settings for Cloud SQL instance used internally by Apache Airflow software.
-{{% /md %}}</dd>
-    <dt class="property-optional"
+{{% /md %}}</dd><dt class="property-optional"
             title="Optional">
         <span id="gkecluster_go">
 <a href="#gkecluster_go" style="color: inherit; text-decoration: inherit;">Gke<wbr>Cluster</a>
@@ -1469,8 +1409,7 @@ will be used to run this environment.
         <span class="property-indicator"></span>
         <span class="property-type">string</span>
     </dt>
-    <dd>{{% md %}}{{% /md %}}</dd>
-    <dt class="property-optional"
+    <dd>{{% md %}}{{% /md %}}</dd><dt class="property-optional"
             title="Optional">
         <span id="nodeconfig_go">
 <a href="#nodeconfig_go" style="color: inherit; text-decoration: inherit;">Node<wbr>Config</a>
@@ -1479,8 +1418,7 @@ will be used to run this environment.
         <span class="property-type"><a href="#environmentconfignodeconfig">Environment<wbr>Config<wbr>Node<wbr>Config</a></span>
     </dt>
     <dd>{{% md %}}The configuration used for the Kubernetes Engine cluster.  Structure is documented below.
-{{% /md %}}</dd>
-    <dt class="property-optional"
+{{% /md %}}</dd><dt class="property-optional"
             title="Optional">
         <span id="nodecount_go">
 <a href="#nodecount_go" style="color: inherit; text-decoration: inherit;">Node<wbr>Count</a>
@@ -1490,8 +1428,7 @@ will be used to run this environment.
     </dt>
     <dd>{{% md %}}The number of nodes in the Kubernetes Engine cluster that
 will be used to run this environment.
-{{% /md %}}</dd>
-    <dt class="property-optional"
+{{% /md %}}</dd><dt class="property-optional"
             title="Optional">
         <span id="privateenvironmentconfig_go">
 <a href="#privateenvironmentconfig_go" style="color: inherit; text-decoration: inherit;">Private<wbr>Environment<wbr>Config</a>
@@ -1500,8 +1437,7 @@ will be used to run this environment.
         <span class="property-type"><a href="#environmentconfigprivateenvironmentconfig">Environment<wbr>Config<wbr>Private<wbr>Environment<wbr>Config</a></span>
     </dt>
     <dd>{{% md %}}The configuration used for the Private IP Cloud Composer environment. Structure is documented below.
-{{% /md %}}</dd>
-    <dt class="property-optional"
+{{% /md %}}</dd><dt class="property-optional"
             title="Optional">
         <span id="softwareconfig_go">
 <a href="#softwareconfig_go" style="color: inherit; text-decoration: inherit;">Software<wbr>Config</a>
@@ -1510,8 +1446,7 @@ will be used to run this environment.
         <span class="property-type"><a href="#environmentconfigsoftwareconfig">Environment<wbr>Config<wbr>Software<wbr>Config</a></span>
     </dt>
     <dd>{{% md %}}The configuration settings for software inside the environment.  Structure is documented below.
-{{% /md %}}</dd>
-    <dt class="property-optional"
+{{% /md %}}</dd><dt class="property-optional"
             title="Optional">
         <span id="webserverconfig_go">
 <a href="#webserverconfig_go" style="color: inherit; text-decoration: inherit;">Web<wbr>Server<wbr>Config</a>
@@ -1520,8 +1455,7 @@ will be used to run this environment.
         <span class="property-type"><a href="#environmentconfigwebserverconfig">Environment<wbr>Config<wbr>Web<wbr>Server<wbr>Config</a></span>
     </dt>
     <dd>{{% md %}}The configuration settings for the Airflow web server App Engine instance.
-{{% /md %}}</dd>
-    <dt class="property-optional"
+{{% /md %}}</dd><dt class="property-optional"
             title="Optional">
         <span id="webservernetworkaccesscontrol_go">
 <a href="#webservernetworkaccesscontrol_go" style="color: inherit; text-decoration: inherit;">Web<wbr>Server<wbr>Network<wbr>Access<wbr>Control</a>
@@ -1530,14 +1464,11 @@ will be used to run this environment.
         <span class="property-type"><a href="#environmentconfigwebservernetworkaccesscontrol">Environment<wbr>Config<wbr>Web<wbr>Server<wbr>Network<wbr>Access<wbr>Control</a></span>
     </dt>
     <dd>{{% md %}}The network-level access control policy for the Airflow web server. If unspecified, no network-level access restrictions will be applied.
-{{% /md %}}</dd>
-</dl>
+{{% /md %}}</dd></dl>
 {{% /choosable %}}
 
 {{% choosable language nodejs %}}
-<dl class="resources-properties">
-
-    <dt class="property-optional"
+<dl class="resources-properties"><dt class="property-optional"
             title="Optional">
         <span id="airflowuri_nodejs">
 <a href="#airflowuri_nodejs" style="color: inherit; text-decoration: inherit;">airflow<wbr>Uri</a>
@@ -1545,8 +1476,7 @@ will be used to run this environment.
         <span class="property-indicator"></span>
         <span class="property-type">string</span>
     </dt>
-    <dd>{{% md %}}{{% /md %}}</dd>
-    <dt class="property-optional"
+    <dd>{{% md %}}{{% /md %}}</dd><dt class="property-optional"
             title="Optional">
         <span id="daggcsprefix_nodejs">
 <a href="#daggcsprefix_nodejs" style="color: inherit; text-decoration: inherit;">dag<wbr>Gcs<wbr>Prefix</a>
@@ -1554,8 +1484,7 @@ will be used to run this environment.
         <span class="property-indicator"></span>
         <span class="property-type">string</span>
     </dt>
-    <dd>{{% md %}}{{% /md %}}</dd>
-    <dt class="property-optional"
+    <dd>{{% md %}}{{% /md %}}</dd><dt class="property-optional"
             title="Optional">
         <span id="databaseconfig_nodejs">
 <a href="#databaseconfig_nodejs" style="color: inherit; text-decoration: inherit;">database<wbr>Config</a>
@@ -1564,8 +1493,7 @@ will be used to run this environment.
         <span class="property-type"><a href="#environmentconfigdatabaseconfig">Environment<wbr>Config<wbr>Database<wbr>Config</a></span>
     </dt>
     <dd>{{% md %}}The configuration settings for Cloud SQL instance used internally by Apache Airflow software.
-{{% /md %}}</dd>
-    <dt class="property-optional"
+{{% /md %}}</dd><dt class="property-optional"
             title="Optional">
         <span id="gkecluster_nodejs">
 <a href="#gkecluster_nodejs" style="color: inherit; text-decoration: inherit;">gke<wbr>Cluster</a>
@@ -1573,8 +1501,7 @@ will be used to run this environment.
         <span class="property-indicator"></span>
         <span class="property-type">string</span>
     </dt>
-    <dd>{{% md %}}{{% /md %}}</dd>
-    <dt class="property-optional"
+    <dd>{{% md %}}{{% /md %}}</dd><dt class="property-optional"
             title="Optional">
         <span id="nodeconfig_nodejs">
 <a href="#nodeconfig_nodejs" style="color: inherit; text-decoration: inherit;">node<wbr>Config</a>
@@ -1583,8 +1510,7 @@ will be used to run this environment.
         <span class="property-type"><a href="#environmentconfignodeconfig">Environment<wbr>Config<wbr>Node<wbr>Config</a></span>
     </dt>
     <dd>{{% md %}}The configuration used for the Kubernetes Engine cluster.  Structure is documented below.
-{{% /md %}}</dd>
-    <dt class="property-optional"
+{{% /md %}}</dd><dt class="property-optional"
             title="Optional">
         <span id="nodecount_nodejs">
 <a href="#nodecount_nodejs" style="color: inherit; text-decoration: inherit;">node<wbr>Count</a>
@@ -1594,8 +1520,7 @@ will be used to run this environment.
     </dt>
     <dd>{{% md %}}The number of nodes in the Kubernetes Engine cluster that
 will be used to run this environment.
-{{% /md %}}</dd>
-    <dt class="property-optional"
+{{% /md %}}</dd><dt class="property-optional"
             title="Optional">
         <span id="privateenvironmentconfig_nodejs">
 <a href="#privateenvironmentconfig_nodejs" style="color: inherit; text-decoration: inherit;">private<wbr>Environment<wbr>Config</a>
@@ -1604,8 +1529,7 @@ will be used to run this environment.
         <span class="property-type"><a href="#environmentconfigprivateenvironmentconfig">Environment<wbr>Config<wbr>Private<wbr>Environment<wbr>Config</a></span>
     </dt>
     <dd>{{% md %}}The configuration used for the Private IP Cloud Composer environment. Structure is documented below.
-{{% /md %}}</dd>
-    <dt class="property-optional"
+{{% /md %}}</dd><dt class="property-optional"
             title="Optional">
         <span id="softwareconfig_nodejs">
 <a href="#softwareconfig_nodejs" style="color: inherit; text-decoration: inherit;">software<wbr>Config</a>
@@ -1614,8 +1538,7 @@ will be used to run this environment.
         <span class="property-type"><a href="#environmentconfigsoftwareconfig">Environment<wbr>Config<wbr>Software<wbr>Config</a></span>
     </dt>
     <dd>{{% md %}}The configuration settings for software inside the environment.  Structure is documented below.
-{{% /md %}}</dd>
-    <dt class="property-optional"
+{{% /md %}}</dd><dt class="property-optional"
             title="Optional">
         <span id="webserverconfig_nodejs">
 <a href="#webserverconfig_nodejs" style="color: inherit; text-decoration: inherit;">web<wbr>Server<wbr>Config</a>
@@ -1624,8 +1547,7 @@ will be used to run this environment.
         <span class="property-type"><a href="#environmentconfigwebserverconfig">Environment<wbr>Config<wbr>Web<wbr>Server<wbr>Config</a></span>
     </dt>
     <dd>{{% md %}}The configuration settings for the Airflow web server App Engine instance.
-{{% /md %}}</dd>
-    <dt class="property-optional"
+{{% /md %}}</dd><dt class="property-optional"
             title="Optional">
         <span id="webservernetworkaccesscontrol_nodejs">
 <a href="#webservernetworkaccesscontrol_nodejs" style="color: inherit; text-decoration: inherit;">web<wbr>Server<wbr>Network<wbr>Access<wbr>Control</a>
@@ -1634,14 +1556,11 @@ will be used to run this environment.
         <span class="property-type"><a href="#environmentconfigwebservernetworkaccesscontrol">Environment<wbr>Config<wbr>Web<wbr>Server<wbr>Network<wbr>Access<wbr>Control</a></span>
     </dt>
     <dd>{{% md %}}The network-level access control policy for the Airflow web server. If unspecified, no network-level access restrictions will be applied.
-{{% /md %}}</dd>
-</dl>
+{{% /md %}}</dd></dl>
 {{% /choosable %}}
 
 {{% choosable language python %}}
-<dl class="resources-properties">
-
-    <dt class="property-optional"
+<dl class="resources-properties"><dt class="property-optional"
             title="Optional">
         <span id="airflow_uri_python">
 <a href="#airflow_uri_python" style="color: inherit; text-decoration: inherit;">airflow_<wbr>uri</a>
@@ -1649,8 +1568,7 @@ will be used to run this environment.
         <span class="property-indicator"></span>
         <span class="property-type">str</span>
     </dt>
-    <dd>{{% md %}}{{% /md %}}</dd>
-    <dt class="property-optional"
+    <dd>{{% md %}}{{% /md %}}</dd><dt class="property-optional"
             title="Optional">
         <span id="dag_gcs_prefix_python">
 <a href="#dag_gcs_prefix_python" style="color: inherit; text-decoration: inherit;">dag_<wbr>gcs_<wbr>prefix</a>
@@ -1658,8 +1576,7 @@ will be used to run this environment.
         <span class="property-indicator"></span>
         <span class="property-type">str</span>
     </dt>
-    <dd>{{% md %}}{{% /md %}}</dd>
-    <dt class="property-optional"
+    <dd>{{% md %}}{{% /md %}}</dd><dt class="property-optional"
             title="Optional">
         <span id="database_config_python">
 <a href="#database_config_python" style="color: inherit; text-decoration: inherit;">database_<wbr>config</a>
@@ -1668,8 +1585,7 @@ will be used to run this environment.
         <span class="property-type"><a href="#environmentconfigdatabaseconfig">Environment<wbr>Config<wbr>Database<wbr>Config<wbr>Args</a></span>
     </dt>
     <dd>{{% md %}}The configuration settings for Cloud SQL instance used internally by Apache Airflow software.
-{{% /md %}}</dd>
-    <dt class="property-optional"
+{{% /md %}}</dd><dt class="property-optional"
             title="Optional">
         <span id="gke_cluster_python">
 <a href="#gke_cluster_python" style="color: inherit; text-decoration: inherit;">gke_<wbr>cluster</a>
@@ -1677,8 +1593,7 @@ will be used to run this environment.
         <span class="property-indicator"></span>
         <span class="property-type">str</span>
     </dt>
-    <dd>{{% md %}}{{% /md %}}</dd>
-    <dt class="property-optional"
+    <dd>{{% md %}}{{% /md %}}</dd><dt class="property-optional"
             title="Optional">
         <span id="node_config_python">
 <a href="#node_config_python" style="color: inherit; text-decoration: inherit;">node_<wbr>config</a>
@@ -1687,8 +1602,7 @@ will be used to run this environment.
         <span class="property-type"><a href="#environmentconfignodeconfig">Environment<wbr>Config<wbr>Node<wbr>Config<wbr>Args</a></span>
     </dt>
     <dd>{{% md %}}The configuration used for the Kubernetes Engine cluster.  Structure is documented below.
-{{% /md %}}</dd>
-    <dt class="property-optional"
+{{% /md %}}</dd><dt class="property-optional"
             title="Optional">
         <span id="node_count_python">
 <a href="#node_count_python" style="color: inherit; text-decoration: inherit;">node_<wbr>count</a>
@@ -1698,8 +1612,7 @@ will be used to run this environment.
     </dt>
     <dd>{{% md %}}The number of nodes in the Kubernetes Engine cluster that
 will be used to run this environment.
-{{% /md %}}</dd>
-    <dt class="property-optional"
+{{% /md %}}</dd><dt class="property-optional"
             title="Optional">
         <span id="private_environment_config_python">
 <a href="#private_environment_config_python" style="color: inherit; text-decoration: inherit;">private_<wbr>environment_<wbr>config</a>
@@ -1708,8 +1621,7 @@ will be used to run this environment.
         <span class="property-type"><a href="#environmentconfigprivateenvironmentconfig">Environment<wbr>Config<wbr>Private<wbr>Environment<wbr>Config<wbr>Args</a></span>
     </dt>
     <dd>{{% md %}}The configuration used for the Private IP Cloud Composer environment. Structure is documented below.
-{{% /md %}}</dd>
-    <dt class="property-optional"
+{{% /md %}}</dd><dt class="property-optional"
             title="Optional">
         <span id="software_config_python">
 <a href="#software_config_python" style="color: inherit; text-decoration: inherit;">software_<wbr>config</a>
@@ -1718,8 +1630,7 @@ will be used to run this environment.
         <span class="property-type"><a href="#environmentconfigsoftwareconfig">Environment<wbr>Config<wbr>Software<wbr>Config<wbr>Args</a></span>
     </dt>
     <dd>{{% md %}}The configuration settings for software inside the environment.  Structure is documented below.
-{{% /md %}}</dd>
-    <dt class="property-optional"
+{{% /md %}}</dd><dt class="property-optional"
             title="Optional">
         <span id="web_server_config_python">
 <a href="#web_server_config_python" style="color: inherit; text-decoration: inherit;">web_<wbr>server_<wbr>config</a>
@@ -1728,8 +1639,7 @@ will be used to run this environment.
         <span class="property-type"><a href="#environmentconfigwebserverconfig">Environment<wbr>Config<wbr>Web<wbr>Server<wbr>Config<wbr>Args</a></span>
     </dt>
     <dd>{{% md %}}The configuration settings for the Airflow web server App Engine instance.
-{{% /md %}}</dd>
-    <dt class="property-optional"
+{{% /md %}}</dd><dt class="property-optional"
             title="Optional">
         <span id="web_server_network_access_control_python">
 <a href="#web_server_network_access_control_python" style="color: inherit; text-decoration: inherit;">web_<wbr>server_<wbr>network_<wbr>access_<wbr>control</a>
@@ -1738,16 +1648,13 @@ will be used to run this environment.
         <span class="property-type"><a href="#environmentconfigwebservernetworkaccesscontrol">Environment<wbr>Config<wbr>Web<wbr>Server<wbr>Network<wbr>Access<wbr>Control<wbr>Args</a></span>
     </dt>
     <dd>{{% md %}}The network-level access control policy for the Airflow web server. If unspecified, no network-level access restrictions will be applied.
-{{% /md %}}</dd>
-</dl>
+{{% /md %}}</dd></dl>
 {{% /choosable %}}
 
 <h4 id="environmentconfigdatabaseconfig">Environment<wbr>Config<wbr>Database<wbr>Config</h4>
 
 {{% choosable language csharp %}}
-<dl class="resources-properties">
-
-    <dt class="property-required"
+<dl class="resources-properties"><dt class="property-required"
             title="Required">
         <span id="machinetype_csharp">
 <a href="#machinetype_csharp" style="color: inherit; text-decoration: inherit;">Machine<wbr>Type</a>
@@ -1759,14 +1666,11 @@ will be used to run this environment.
 composer-n1-webserver-4 or composer-n1-webserver-8.
 Value custom is returned only in response, if Airflow web server parameters were
 manually changed to a non-standard values.
-{{% /md %}}</dd>
-</dl>
+{{% /md %}}</dd></dl>
 {{% /choosable %}}
 
 {{% choosable language go %}}
-<dl class="resources-properties">
-
-    <dt class="property-required"
+<dl class="resources-properties"><dt class="property-required"
             title="Required">
         <span id="machinetype_go">
 <a href="#machinetype_go" style="color: inherit; text-decoration: inherit;">Machine<wbr>Type</a>
@@ -1778,14 +1682,11 @@ manually changed to a non-standard values.
 composer-n1-webserver-4 or composer-n1-webserver-8.
 Value custom is returned only in response, if Airflow web server parameters were
 manually changed to a non-standard values.
-{{% /md %}}</dd>
-</dl>
+{{% /md %}}</dd></dl>
 {{% /choosable %}}
 
 {{% choosable language nodejs %}}
-<dl class="resources-properties">
-
-    <dt class="property-required"
+<dl class="resources-properties"><dt class="property-required"
             title="Required">
         <span id="machinetype_nodejs">
 <a href="#machinetype_nodejs" style="color: inherit; text-decoration: inherit;">machine<wbr>Type</a>
@@ -1797,14 +1698,11 @@ manually changed to a non-standard values.
 composer-n1-webserver-4 or composer-n1-webserver-8.
 Value custom is returned only in response, if Airflow web server parameters were
 manually changed to a non-standard values.
-{{% /md %}}</dd>
-</dl>
+{{% /md %}}</dd></dl>
 {{% /choosable %}}
 
 {{% choosable language python %}}
-<dl class="resources-properties">
-
-    <dt class="property-required"
+<dl class="resources-properties"><dt class="property-required"
             title="Required">
         <span id="machine_type_python">
 <a href="#machine_type_python" style="color: inherit; text-decoration: inherit;">machine_<wbr>type</a>
@@ -1816,16 +1714,13 @@ manually changed to a non-standard values.
 composer-n1-webserver-4 or composer-n1-webserver-8.
 Value custom is returned only in response, if Airflow web server parameters were
 manually changed to a non-standard values.
-{{% /md %}}</dd>
-</dl>
+{{% /md %}}</dd></dl>
 {{% /choosable %}}
 
 <h4 id="environmentconfignodeconfig">Environment<wbr>Config<wbr>Node<wbr>Config</h4>
 
 {{% choosable language csharp %}}
-<dl class="resources-properties">
-
-    <dt class="property-required"
+<dl class="resources-properties"><dt class="property-required"
             title="Required">
         <span id="zone_csharp">
 <a href="#zone_csharp" style="color: inherit; text-decoration: inherit;">Zone</a>
@@ -1837,8 +1732,7 @@ manually changed to a non-standard values.
 Apache Airflow software, specified as the zone name or
 relative resource name (e.g. "projects/{project}/zones/{zone}"). Must belong to the enclosing environment's project
 and region.
-{{% /md %}}</dd>
-    <dt class="property-optional"
+{{% /md %}}</dd><dt class="property-optional"
             title="Optional">
         <span id="disksizegb_csharp">
 <a href="#disksizegb_csharp" style="color: inherit; text-decoration: inherit;">Disk<wbr>Size<wbr>Gb</a>
@@ -1848,8 +1742,7 @@ and region.
     </dt>
     <dd>{{% md %}}The disk size in GB used for node VMs. Minimum size is 20GB.
 If unspecified, defaults to 100GB. Cannot be updated.
-{{% /md %}}</dd>
-    <dt class="property-optional"
+{{% /md %}}</dd><dt class="property-optional"
             title="Optional">
         <span id="ipallocationpolicy_csharp">
 <a href="#ipallocationpolicy_csharp" style="color: inherit; text-decoration: inherit;">Ip<wbr>Allocation<wbr>Policy</a>
@@ -1860,8 +1753,7 @@ If unspecified, defaults to 100GB. Cannot be updated.
     <dd>{{% md %}}Configuration for controlling how IPs are allocated in the GKE cluster.
 Structure is documented below.
 Cannot be updated.
-{{% /md %}}</dd>
-    <dt class="property-optional"
+{{% /md %}}</dd><dt class="property-optional"
             title="Optional">
         <span id="machinetype_csharp">
 <a href="#machinetype_csharp" style="color: inherit; text-decoration: inherit;">Machine<wbr>Type</a>
@@ -1873,8 +1765,7 @@ Cannot be updated.
 composer-n1-webserver-4 or composer-n1-webserver-8.
 Value custom is returned only in response, if Airflow web server parameters were
 manually changed to a non-standard values.
-{{% /md %}}</dd>
-    <dt class="property-optional"
+{{% /md %}}</dd><dt class="property-optional"
             title="Optional">
         <span id="network_csharp">
 <a href="#network_csharp" style="color: inherit; text-decoration: inherit;">Network</a>
@@ -1885,8 +1776,7 @@ manually changed to a non-standard values.
     <dd>{{% md %}}The Compute Engine network to be used for machine
 communications, specified as a self-link, relative resource name
 (e.g. "projects/{project}/global/networks/{network}"), by name.
-{{% /md %}}</dd>
-    <dt class="property-optional"
+{{% /md %}}</dd><dt class="property-optional"
             title="Optional">
         <span id="oauthscopes_csharp">
 <a href="#oauthscopes_csharp" style="color: inherit; text-decoration: inherit;">Oauth<wbr>Scopes</a>
@@ -1897,8 +1787,7 @@ communications, specified as a self-link, relative resource name
     <dd>{{% md %}}The set of Google API scopes to be made available on all node
 VMs. Cannot be updated. If empty, defaults to
 `["https://www.googleapis.com/auth/cloud-platform"]`
-{{% /md %}}</dd>
-    <dt class="property-optional"
+{{% /md %}}</dd><dt class="property-optional"
             title="Optional">
         <span id="serviceaccount_csharp">
 <a href="#serviceaccount_csharp" style="color: inherit; text-decoration: inherit;">Service<wbr>Account</a>
@@ -1911,8 +1800,7 @@ node VMs. If a service account is not specified, the "default"
 Compute Engine service account is used. Cannot be updated. If given,
 note that the service account must have `roles/composer.worker`
 for any GCP resources created under the Cloud Composer Environment.
-{{% /md %}}</dd>
-    <dt class="property-optional"
+{{% /md %}}</dd><dt class="property-optional"
             title="Optional">
         <span id="subnetwork_csharp">
 <a href="#subnetwork_csharp" style="color: inherit; text-decoration: inherit;">Subnetwork</a>
@@ -1924,8 +1812,7 @@ for any GCP resources created under the Cloud Composer Environment.
 communications, , specified as a self-link, relative resource name (e.g.
 "projects/{project}/regions/{region}/subnetworks/{subnetwork}"), or by name. If subnetwork is provided,
 network must also be provided and the subnetwork must belong to the enclosing environment's project and region.
-{{% /md %}}</dd>
-    <dt class="property-optional"
+{{% /md %}}</dd><dt class="property-optional"
             title="Optional">
         <span id="tags_csharp">
 <a href="#tags_csharp" style="color: inherit; text-decoration: inherit;">Tags</a>
@@ -1937,14 +1824,11 @@ network must also be provided and the subnetwork must belong to the enclosing en
 used to identify valid sources or targets for network
 firewalls. Each tag within the list must comply with RFC1035.
 Cannot be updated.
-{{% /md %}}</dd>
-</dl>
+{{% /md %}}</dd></dl>
 {{% /choosable %}}
 
 {{% choosable language go %}}
-<dl class="resources-properties">
-
-    <dt class="property-required"
+<dl class="resources-properties"><dt class="property-required"
             title="Required">
         <span id="zone_go">
 <a href="#zone_go" style="color: inherit; text-decoration: inherit;">Zone</a>
@@ -1956,8 +1840,7 @@ Cannot be updated.
 Apache Airflow software, specified as the zone name or
 relative resource name (e.g. "projects/{project}/zones/{zone}"). Must belong to the enclosing environment's project
 and region.
-{{% /md %}}</dd>
-    <dt class="property-optional"
+{{% /md %}}</dd><dt class="property-optional"
             title="Optional">
         <span id="disksizegb_go">
 <a href="#disksizegb_go" style="color: inherit; text-decoration: inherit;">Disk<wbr>Size<wbr>Gb</a>
@@ -1967,8 +1850,7 @@ and region.
     </dt>
     <dd>{{% md %}}The disk size in GB used for node VMs. Minimum size is 20GB.
 If unspecified, defaults to 100GB. Cannot be updated.
-{{% /md %}}</dd>
-    <dt class="property-optional"
+{{% /md %}}</dd><dt class="property-optional"
             title="Optional">
         <span id="ipallocationpolicy_go">
 <a href="#ipallocationpolicy_go" style="color: inherit; text-decoration: inherit;">Ip<wbr>Allocation<wbr>Policy</a>
@@ -1979,8 +1861,7 @@ If unspecified, defaults to 100GB. Cannot be updated.
     <dd>{{% md %}}Configuration for controlling how IPs are allocated in the GKE cluster.
 Structure is documented below.
 Cannot be updated.
-{{% /md %}}</dd>
-    <dt class="property-optional"
+{{% /md %}}</dd><dt class="property-optional"
             title="Optional">
         <span id="machinetype_go">
 <a href="#machinetype_go" style="color: inherit; text-decoration: inherit;">Machine<wbr>Type</a>
@@ -1992,8 +1873,7 @@ Cannot be updated.
 composer-n1-webserver-4 or composer-n1-webserver-8.
 Value custom is returned only in response, if Airflow web server parameters were
 manually changed to a non-standard values.
-{{% /md %}}</dd>
-    <dt class="property-optional"
+{{% /md %}}</dd><dt class="property-optional"
             title="Optional">
         <span id="network_go">
 <a href="#network_go" style="color: inherit; text-decoration: inherit;">Network</a>
@@ -2004,8 +1884,7 @@ manually changed to a non-standard values.
     <dd>{{% md %}}The Compute Engine network to be used for machine
 communications, specified as a self-link, relative resource name
 (e.g. "projects/{project}/global/networks/{network}"), by name.
-{{% /md %}}</dd>
-    <dt class="property-optional"
+{{% /md %}}</dd><dt class="property-optional"
             title="Optional">
         <span id="oauthscopes_go">
 <a href="#oauthscopes_go" style="color: inherit; text-decoration: inherit;">Oauth<wbr>Scopes</a>
@@ -2016,8 +1895,7 @@ communications, specified as a self-link, relative resource name
     <dd>{{% md %}}The set of Google API scopes to be made available on all node
 VMs. Cannot be updated. If empty, defaults to
 `["https://www.googleapis.com/auth/cloud-platform"]`
-{{% /md %}}</dd>
-    <dt class="property-optional"
+{{% /md %}}</dd><dt class="property-optional"
             title="Optional">
         <span id="serviceaccount_go">
 <a href="#serviceaccount_go" style="color: inherit; text-decoration: inherit;">Service<wbr>Account</a>
@@ -2030,8 +1908,7 @@ node VMs. If a service account is not specified, the "default"
 Compute Engine service account is used. Cannot be updated. If given,
 note that the service account must have `roles/composer.worker`
 for any GCP resources created under the Cloud Composer Environment.
-{{% /md %}}</dd>
-    <dt class="property-optional"
+{{% /md %}}</dd><dt class="property-optional"
             title="Optional">
         <span id="subnetwork_go">
 <a href="#subnetwork_go" style="color: inherit; text-decoration: inherit;">Subnetwork</a>
@@ -2043,8 +1920,7 @@ for any GCP resources created under the Cloud Composer Environment.
 communications, , specified as a self-link, relative resource name (e.g.
 "projects/{project}/regions/{region}/subnetworks/{subnetwork}"), or by name. If subnetwork is provided,
 network must also be provided and the subnetwork must belong to the enclosing environment's project and region.
-{{% /md %}}</dd>
-    <dt class="property-optional"
+{{% /md %}}</dd><dt class="property-optional"
             title="Optional">
         <span id="tags_go">
 <a href="#tags_go" style="color: inherit; text-decoration: inherit;">Tags</a>
@@ -2056,14 +1932,11 @@ network must also be provided and the subnetwork must belong to the enclosing en
 used to identify valid sources or targets for network
 firewalls. Each tag within the list must comply with RFC1035.
 Cannot be updated.
-{{% /md %}}</dd>
-</dl>
+{{% /md %}}</dd></dl>
 {{% /choosable %}}
 
 {{% choosable language nodejs %}}
-<dl class="resources-properties">
-
-    <dt class="property-required"
+<dl class="resources-properties"><dt class="property-required"
             title="Required">
         <span id="zone_nodejs">
 <a href="#zone_nodejs" style="color: inherit; text-decoration: inherit;">zone</a>
@@ -2075,8 +1948,7 @@ Cannot be updated.
 Apache Airflow software, specified as the zone name or
 relative resource name (e.g. "projects/{project}/zones/{zone}"). Must belong to the enclosing environment's project
 and region.
-{{% /md %}}</dd>
-    <dt class="property-optional"
+{{% /md %}}</dd><dt class="property-optional"
             title="Optional">
         <span id="disksizegb_nodejs">
 <a href="#disksizegb_nodejs" style="color: inherit; text-decoration: inherit;">disk<wbr>Size<wbr>Gb</a>
@@ -2086,8 +1958,7 @@ and region.
     </dt>
     <dd>{{% md %}}The disk size in GB used for node VMs. Minimum size is 20GB.
 If unspecified, defaults to 100GB. Cannot be updated.
-{{% /md %}}</dd>
-    <dt class="property-optional"
+{{% /md %}}</dd><dt class="property-optional"
             title="Optional">
         <span id="ipallocationpolicy_nodejs">
 <a href="#ipallocationpolicy_nodejs" style="color: inherit; text-decoration: inherit;">ip<wbr>Allocation<wbr>Policy</a>
@@ -2098,8 +1969,7 @@ If unspecified, defaults to 100GB. Cannot be updated.
     <dd>{{% md %}}Configuration for controlling how IPs are allocated in the GKE cluster.
 Structure is documented below.
 Cannot be updated.
-{{% /md %}}</dd>
-    <dt class="property-optional"
+{{% /md %}}</dd><dt class="property-optional"
             title="Optional">
         <span id="machinetype_nodejs">
 <a href="#machinetype_nodejs" style="color: inherit; text-decoration: inherit;">machine<wbr>Type</a>
@@ -2111,8 +1981,7 @@ Cannot be updated.
 composer-n1-webserver-4 or composer-n1-webserver-8.
 Value custom is returned only in response, if Airflow web server parameters were
 manually changed to a non-standard values.
-{{% /md %}}</dd>
-    <dt class="property-optional"
+{{% /md %}}</dd><dt class="property-optional"
             title="Optional">
         <span id="network_nodejs">
 <a href="#network_nodejs" style="color: inherit; text-decoration: inherit;">network</a>
@@ -2123,8 +1992,7 @@ manually changed to a non-standard values.
     <dd>{{% md %}}The Compute Engine network to be used for machine
 communications, specified as a self-link, relative resource name
 (e.g. "projects/{project}/global/networks/{network}"), by name.
-{{% /md %}}</dd>
-    <dt class="property-optional"
+{{% /md %}}</dd><dt class="property-optional"
             title="Optional">
         <span id="oauthscopes_nodejs">
 <a href="#oauthscopes_nodejs" style="color: inherit; text-decoration: inherit;">oauth<wbr>Scopes</a>
@@ -2135,8 +2003,7 @@ communications, specified as a self-link, relative resource name
     <dd>{{% md %}}The set of Google API scopes to be made available on all node
 VMs. Cannot be updated. If empty, defaults to
 `["https://www.googleapis.com/auth/cloud-platform"]`
-{{% /md %}}</dd>
-    <dt class="property-optional"
+{{% /md %}}</dd><dt class="property-optional"
             title="Optional">
         <span id="serviceaccount_nodejs">
 <a href="#serviceaccount_nodejs" style="color: inherit; text-decoration: inherit;">service<wbr>Account</a>
@@ -2149,8 +2016,7 @@ node VMs. If a service account is not specified, the "default"
 Compute Engine service account is used. Cannot be updated. If given,
 note that the service account must have `roles/composer.worker`
 for any GCP resources created under the Cloud Composer Environment.
-{{% /md %}}</dd>
-    <dt class="property-optional"
+{{% /md %}}</dd><dt class="property-optional"
             title="Optional">
         <span id="subnetwork_nodejs">
 <a href="#subnetwork_nodejs" style="color: inherit; text-decoration: inherit;">subnetwork</a>
@@ -2162,8 +2028,7 @@ for any GCP resources created under the Cloud Composer Environment.
 communications, , specified as a self-link, relative resource name (e.g.
 "projects/{project}/regions/{region}/subnetworks/{subnetwork}"), or by name. If subnetwork is provided,
 network must also be provided and the subnetwork must belong to the enclosing environment's project and region.
-{{% /md %}}</dd>
-    <dt class="property-optional"
+{{% /md %}}</dd><dt class="property-optional"
             title="Optional">
         <span id="tags_nodejs">
 <a href="#tags_nodejs" style="color: inherit; text-decoration: inherit;">tags</a>
@@ -2175,14 +2040,11 @@ network must also be provided and the subnetwork must belong to the enclosing en
 used to identify valid sources or targets for network
 firewalls. Each tag within the list must comply with RFC1035.
 Cannot be updated.
-{{% /md %}}</dd>
-</dl>
+{{% /md %}}</dd></dl>
 {{% /choosable %}}
 
 {{% choosable language python %}}
-<dl class="resources-properties">
-
-    <dt class="property-required"
+<dl class="resources-properties"><dt class="property-required"
             title="Required">
         <span id="zone_python">
 <a href="#zone_python" style="color: inherit; text-decoration: inherit;">zone</a>
@@ -2194,8 +2056,7 @@ Cannot be updated.
 Apache Airflow software, specified as the zone name or
 relative resource name (e.g. "projects/{project}/zones/{zone}"). Must belong to the enclosing environment's project
 and region.
-{{% /md %}}</dd>
-    <dt class="property-optional"
+{{% /md %}}</dd><dt class="property-optional"
             title="Optional">
         <span id="disk_size_gb_python">
 <a href="#disk_size_gb_python" style="color: inherit; text-decoration: inherit;">disk_<wbr>size_<wbr>gb</a>
@@ -2205,8 +2066,7 @@ and region.
     </dt>
     <dd>{{% md %}}The disk size in GB used for node VMs. Minimum size is 20GB.
 If unspecified, defaults to 100GB. Cannot be updated.
-{{% /md %}}</dd>
-    <dt class="property-optional"
+{{% /md %}}</dd><dt class="property-optional"
             title="Optional">
         <span id="ip_allocation_policy_python">
 <a href="#ip_allocation_policy_python" style="color: inherit; text-decoration: inherit;">ip_<wbr>allocation_<wbr>policy</a>
@@ -2217,8 +2077,7 @@ If unspecified, defaults to 100GB. Cannot be updated.
     <dd>{{% md %}}Configuration for controlling how IPs are allocated in the GKE cluster.
 Structure is documented below.
 Cannot be updated.
-{{% /md %}}</dd>
-    <dt class="property-optional"
+{{% /md %}}</dd><dt class="property-optional"
             title="Optional">
         <span id="machine_type_python">
 <a href="#machine_type_python" style="color: inherit; text-decoration: inherit;">machine_<wbr>type</a>
@@ -2230,8 +2089,7 @@ Cannot be updated.
 composer-n1-webserver-4 or composer-n1-webserver-8.
 Value custom is returned only in response, if Airflow web server parameters were
 manually changed to a non-standard values.
-{{% /md %}}</dd>
-    <dt class="property-optional"
+{{% /md %}}</dd><dt class="property-optional"
             title="Optional">
         <span id="network_python">
 <a href="#network_python" style="color: inherit; text-decoration: inherit;">network</a>
@@ -2242,8 +2100,7 @@ manually changed to a non-standard values.
     <dd>{{% md %}}The Compute Engine network to be used for machine
 communications, specified as a self-link, relative resource name
 (e.g. "projects/{project}/global/networks/{network}"), by name.
-{{% /md %}}</dd>
-    <dt class="property-optional"
+{{% /md %}}</dd><dt class="property-optional"
             title="Optional">
         <span id="oauth_scopes_python">
 <a href="#oauth_scopes_python" style="color: inherit; text-decoration: inherit;">oauth_<wbr>scopes</a>
@@ -2254,8 +2111,7 @@ communications, specified as a self-link, relative resource name
     <dd>{{% md %}}The set of Google API scopes to be made available on all node
 VMs. Cannot be updated. If empty, defaults to
 `["https://www.googleapis.com/auth/cloud-platform"]`
-{{% /md %}}</dd>
-    <dt class="property-optional"
+{{% /md %}}</dd><dt class="property-optional"
             title="Optional">
         <span id="service_account_python">
 <a href="#service_account_python" style="color: inherit; text-decoration: inherit;">service_<wbr>account</a>
@@ -2268,8 +2124,7 @@ node VMs. If a service account is not specified, the "default"
 Compute Engine service account is used. Cannot be updated. If given,
 note that the service account must have `roles/composer.worker`
 for any GCP resources created under the Cloud Composer Environment.
-{{% /md %}}</dd>
-    <dt class="property-optional"
+{{% /md %}}</dd><dt class="property-optional"
             title="Optional">
         <span id="subnetwork_python">
 <a href="#subnetwork_python" style="color: inherit; text-decoration: inherit;">subnetwork</a>
@@ -2281,8 +2136,7 @@ for any GCP resources created under the Cloud Composer Environment.
 communications, , specified as a self-link, relative resource name (e.g.
 "projects/{project}/regions/{region}/subnetworks/{subnetwork}"), or by name. If subnetwork is provided,
 network must also be provided and the subnetwork must belong to the enclosing environment's project and region.
-{{% /md %}}</dd>
-    <dt class="property-optional"
+{{% /md %}}</dd><dt class="property-optional"
             title="Optional">
         <span id="tags_python">
 <a href="#tags_python" style="color: inherit; text-decoration: inherit;">tags</a>
@@ -2294,16 +2148,13 @@ network must also be provided and the subnetwork must belong to the enclosing en
 used to identify valid sources or targets for network
 firewalls. Each tag within the list must comply with RFC1035.
 Cannot be updated.
-{{% /md %}}</dd>
-</dl>
+{{% /md %}}</dd></dl>
 {{% /choosable %}}
 
 <h4 id="environmentconfignodeconfigipallocationpolicy">Environment<wbr>Config<wbr>Node<wbr>Config<wbr>Ip<wbr>Allocation<wbr>Policy</h4>
 
 {{% choosable language csharp %}}
-<dl class="resources-properties">
-
-    <dt class="property-required"
+<dl class="resources-properties"><dt class="property-required"
             title="Required">
         <span id="useipaliases_csharp">
 <a href="#useipaliases_csharp" style="color: inherit; text-decoration: inherit;">Use<wbr>Ip<wbr>Aliases</a>
@@ -2313,8 +2164,7 @@ Cannot be updated.
     </dt>
     <dd>{{% md %}}Whether or not to enable Alias IPs in the GKE cluster. If true, a VPC-native cluster is created.
 Defaults to true if the `ip_allocation_policy` block is present in config.
-{{% /md %}}</dd>
-    <dt class="property-optional"
+{{% /md %}}</dd><dt class="property-optional"
             title="Optional">
         <span id="clusteripv4cidrblock_csharp">
 <a href="#clusteripv4cidrblock_csharp" style="color: inherit; text-decoration: inherit;">Cluster<wbr>Ipv4Cidr<wbr>Block</a>
@@ -2328,8 +2178,7 @@ Set to /netmask (e.g. /14) to have GKE choose a range with a specific netmask.
 Set to a CIDR notation (e.g. 10.96.0.0/14) from the RFC-1918 private networks
 (e.g. 10.0.0.0/8, 172.16.0.0/12, 192.168.0.0/16) to pick a specific range to use.
 Specify either `cluster_secondary_range_name` or `cluster_ipv4_cidr_block` but not both.
-{{% /md %}}</dd>
-    <dt class="property-optional"
+{{% /md %}}</dd><dt class="property-optional"
             title="Optional">
         <span id="clustersecondaryrangename_csharp">
 <a href="#clustersecondaryrangename_csharp" style="color: inherit; text-decoration: inherit;">Cluster<wbr>Secondary<wbr>Range<wbr>Name</a>
@@ -2340,8 +2189,7 @@ Specify either `cluster_secondary_range_name` or `cluster_ipv4_cidr_block` but n
     <dd>{{% md %}}The name of the cluster's secondary range used to allocate IP addresses to pods.
 Specify either `cluster_secondary_range_name` or `cluster_ipv4_cidr_block` but not both.
 This field is applicable only when `use_ip_aliases` is true.
-{{% /md %}}</dd>
-    <dt class="property-optional"
+{{% /md %}}</dd><dt class="property-optional"
             title="Optional">
         <span id="servicesipv4cidrblock_csharp">
 <a href="#servicesipv4cidrblock_csharp" style="color: inherit; text-decoration: inherit;">Services<wbr>Ipv4Cidr<wbr>Block</a>
@@ -2355,8 +2203,7 @@ Set to /netmask (e.g. /14) to have GKE choose a range with a specific netmask.
 Set to a CIDR notation (e.g. 10.96.0.0/14) from the RFC-1918 private networks
 (e.g. 10.0.0.0/8, 172.16.0.0/12, 192.168.0.0/16) to pick a specific range to use.
 Specify either `services_secondary_range_name` or `services_ipv4_cidr_block` but not both.
-{{% /md %}}</dd>
-    <dt class="property-optional"
+{{% /md %}}</dd><dt class="property-optional"
             title="Optional">
         <span id="servicessecondaryrangename_csharp">
 <a href="#servicessecondaryrangename_csharp" style="color: inherit; text-decoration: inherit;">Services<wbr>Secondary<wbr>Range<wbr>Name</a>
@@ -2367,14 +2214,11 @@ Specify either `services_secondary_range_name` or `services_ipv4_cidr_block` but
     <dd>{{% md %}}The name of the services' secondary range used to allocate IP addresses to the cluster.
 Specify either `services_secondary_range_name` or `services_ipv4_cidr_block` but not both.
 This field is applicable only when `use_ip_aliases` is true.
-{{% /md %}}</dd>
-</dl>
+{{% /md %}}</dd></dl>
 {{% /choosable %}}
 
 {{% choosable language go %}}
-<dl class="resources-properties">
-
-    <dt class="property-required"
+<dl class="resources-properties"><dt class="property-required"
             title="Required">
         <span id="useipaliases_go">
 <a href="#useipaliases_go" style="color: inherit; text-decoration: inherit;">Use<wbr>Ip<wbr>Aliases</a>
@@ -2384,8 +2228,7 @@ This field is applicable only when `use_ip_aliases` is true.
     </dt>
     <dd>{{% md %}}Whether or not to enable Alias IPs in the GKE cluster. If true, a VPC-native cluster is created.
 Defaults to true if the `ip_allocation_policy` block is present in config.
-{{% /md %}}</dd>
-    <dt class="property-optional"
+{{% /md %}}</dd><dt class="property-optional"
             title="Optional">
         <span id="clusteripv4cidrblock_go">
 <a href="#clusteripv4cidrblock_go" style="color: inherit; text-decoration: inherit;">Cluster<wbr>Ipv4Cidr<wbr>Block</a>
@@ -2399,8 +2242,7 @@ Set to /netmask (e.g. /14) to have GKE choose a range with a specific netmask.
 Set to a CIDR notation (e.g. 10.96.0.0/14) from the RFC-1918 private networks
 (e.g. 10.0.0.0/8, 172.16.0.0/12, 192.168.0.0/16) to pick a specific range to use.
 Specify either `cluster_secondary_range_name` or `cluster_ipv4_cidr_block` but not both.
-{{% /md %}}</dd>
-    <dt class="property-optional"
+{{% /md %}}</dd><dt class="property-optional"
             title="Optional">
         <span id="clustersecondaryrangename_go">
 <a href="#clustersecondaryrangename_go" style="color: inherit; text-decoration: inherit;">Cluster<wbr>Secondary<wbr>Range<wbr>Name</a>
@@ -2411,8 +2253,7 @@ Specify either `cluster_secondary_range_name` or `cluster_ipv4_cidr_block` but n
     <dd>{{% md %}}The name of the cluster's secondary range used to allocate IP addresses to pods.
 Specify either `cluster_secondary_range_name` or `cluster_ipv4_cidr_block` but not both.
 This field is applicable only when `use_ip_aliases` is true.
-{{% /md %}}</dd>
-    <dt class="property-optional"
+{{% /md %}}</dd><dt class="property-optional"
             title="Optional">
         <span id="servicesipv4cidrblock_go">
 <a href="#servicesipv4cidrblock_go" style="color: inherit; text-decoration: inherit;">Services<wbr>Ipv4Cidr<wbr>Block</a>
@@ -2426,8 +2267,7 @@ Set to /netmask (e.g. /14) to have GKE choose a range with a specific netmask.
 Set to a CIDR notation (e.g. 10.96.0.0/14) from the RFC-1918 private networks
 (e.g. 10.0.0.0/8, 172.16.0.0/12, 192.168.0.0/16) to pick a specific range to use.
 Specify either `services_secondary_range_name` or `services_ipv4_cidr_block` but not both.
-{{% /md %}}</dd>
-    <dt class="property-optional"
+{{% /md %}}</dd><dt class="property-optional"
             title="Optional">
         <span id="servicessecondaryrangename_go">
 <a href="#servicessecondaryrangename_go" style="color: inherit; text-decoration: inherit;">Services<wbr>Secondary<wbr>Range<wbr>Name</a>
@@ -2438,14 +2278,11 @@ Specify either `services_secondary_range_name` or `services_ipv4_cidr_block` but
     <dd>{{% md %}}The name of the services' secondary range used to allocate IP addresses to the cluster.
 Specify either `services_secondary_range_name` or `services_ipv4_cidr_block` but not both.
 This field is applicable only when `use_ip_aliases` is true.
-{{% /md %}}</dd>
-</dl>
+{{% /md %}}</dd></dl>
 {{% /choosable %}}
 
 {{% choosable language nodejs %}}
-<dl class="resources-properties">
-
-    <dt class="property-required"
+<dl class="resources-properties"><dt class="property-required"
             title="Required">
         <span id="useipaliases_nodejs">
 <a href="#useipaliases_nodejs" style="color: inherit; text-decoration: inherit;">use<wbr>Ip<wbr>Aliases</a>
@@ -2455,8 +2292,7 @@ This field is applicable only when `use_ip_aliases` is true.
     </dt>
     <dd>{{% md %}}Whether or not to enable Alias IPs in the GKE cluster. If true, a VPC-native cluster is created.
 Defaults to true if the `ip_allocation_policy` block is present in config.
-{{% /md %}}</dd>
-    <dt class="property-optional"
+{{% /md %}}</dd><dt class="property-optional"
             title="Optional">
         <span id="clusteripv4cidrblock_nodejs">
 <a href="#clusteripv4cidrblock_nodejs" style="color: inherit; text-decoration: inherit;">cluster<wbr>Ipv4Cidr<wbr>Block</a>
@@ -2470,8 +2306,7 @@ Set to /netmask (e.g. /14) to have GKE choose a range with a specific netmask.
 Set to a CIDR notation (e.g. 10.96.0.0/14) from the RFC-1918 private networks
 (e.g. 10.0.0.0/8, 172.16.0.0/12, 192.168.0.0/16) to pick a specific range to use.
 Specify either `cluster_secondary_range_name` or `cluster_ipv4_cidr_block` but not both.
-{{% /md %}}</dd>
-    <dt class="property-optional"
+{{% /md %}}</dd><dt class="property-optional"
             title="Optional">
         <span id="clustersecondaryrangename_nodejs">
 <a href="#clustersecondaryrangename_nodejs" style="color: inherit; text-decoration: inherit;">cluster<wbr>Secondary<wbr>Range<wbr>Name</a>
@@ -2482,8 +2317,7 @@ Specify either `cluster_secondary_range_name` or `cluster_ipv4_cidr_block` but n
     <dd>{{% md %}}The name of the cluster's secondary range used to allocate IP addresses to pods.
 Specify either `cluster_secondary_range_name` or `cluster_ipv4_cidr_block` but not both.
 This field is applicable only when `use_ip_aliases` is true.
-{{% /md %}}</dd>
-    <dt class="property-optional"
+{{% /md %}}</dd><dt class="property-optional"
             title="Optional">
         <span id="servicesipv4cidrblock_nodejs">
 <a href="#servicesipv4cidrblock_nodejs" style="color: inherit; text-decoration: inherit;">services<wbr>Ipv4Cidr<wbr>Block</a>
@@ -2497,8 +2331,7 @@ Set to /netmask (e.g. /14) to have GKE choose a range with a specific netmask.
 Set to a CIDR notation (e.g. 10.96.0.0/14) from the RFC-1918 private networks
 (e.g. 10.0.0.0/8, 172.16.0.0/12, 192.168.0.0/16) to pick a specific range to use.
 Specify either `services_secondary_range_name` or `services_ipv4_cidr_block` but not both.
-{{% /md %}}</dd>
-    <dt class="property-optional"
+{{% /md %}}</dd><dt class="property-optional"
             title="Optional">
         <span id="servicessecondaryrangename_nodejs">
 <a href="#servicessecondaryrangename_nodejs" style="color: inherit; text-decoration: inherit;">services<wbr>Secondary<wbr>Range<wbr>Name</a>
@@ -2509,14 +2342,11 @@ Specify either `services_secondary_range_name` or `services_ipv4_cidr_block` but
     <dd>{{% md %}}The name of the services' secondary range used to allocate IP addresses to the cluster.
 Specify either `services_secondary_range_name` or `services_ipv4_cidr_block` but not both.
 This field is applicable only when `use_ip_aliases` is true.
-{{% /md %}}</dd>
-</dl>
+{{% /md %}}</dd></dl>
 {{% /choosable %}}
 
 {{% choosable language python %}}
-<dl class="resources-properties">
-
-    <dt class="property-required"
+<dl class="resources-properties"><dt class="property-required"
             title="Required">
         <span id="use_ip_aliases_python">
 <a href="#use_ip_aliases_python" style="color: inherit; text-decoration: inherit;">use_<wbr>ip_<wbr>aliases</a>
@@ -2526,8 +2356,7 @@ This field is applicable only when `use_ip_aliases` is true.
     </dt>
     <dd>{{% md %}}Whether or not to enable Alias IPs in the GKE cluster. If true, a VPC-native cluster is created.
 Defaults to true if the `ip_allocation_policy` block is present in config.
-{{% /md %}}</dd>
-    <dt class="property-optional"
+{{% /md %}}</dd><dt class="property-optional"
             title="Optional">
         <span id="cluster_ipv4_cidr_block_python">
 <a href="#cluster_ipv4_cidr_block_python" style="color: inherit; text-decoration: inherit;">cluster_<wbr>ipv4_<wbr>cidr_<wbr>block</a>
@@ -2541,8 +2370,7 @@ Set to /netmask (e.g. /14) to have GKE choose a range with a specific netmask.
 Set to a CIDR notation (e.g. 10.96.0.0/14) from the RFC-1918 private networks
 (e.g. 10.0.0.0/8, 172.16.0.0/12, 192.168.0.0/16) to pick a specific range to use.
 Specify either `cluster_secondary_range_name` or `cluster_ipv4_cidr_block` but not both.
-{{% /md %}}</dd>
-    <dt class="property-optional"
+{{% /md %}}</dd><dt class="property-optional"
             title="Optional">
         <span id="cluster_secondary_range_name_python">
 <a href="#cluster_secondary_range_name_python" style="color: inherit; text-decoration: inherit;">cluster_<wbr>secondary_<wbr>range_<wbr>name</a>
@@ -2553,8 +2381,7 @@ Specify either `cluster_secondary_range_name` or `cluster_ipv4_cidr_block` but n
     <dd>{{% md %}}The name of the cluster's secondary range used to allocate IP addresses to pods.
 Specify either `cluster_secondary_range_name` or `cluster_ipv4_cidr_block` but not both.
 This field is applicable only when `use_ip_aliases` is true.
-{{% /md %}}</dd>
-    <dt class="property-optional"
+{{% /md %}}</dd><dt class="property-optional"
             title="Optional">
         <span id="services_ipv4_cidr_block_python">
 <a href="#services_ipv4_cidr_block_python" style="color: inherit; text-decoration: inherit;">services_<wbr>ipv4_<wbr>cidr_<wbr>block</a>
@@ -2568,8 +2395,7 @@ Set to /netmask (e.g. /14) to have GKE choose a range with a specific netmask.
 Set to a CIDR notation (e.g. 10.96.0.0/14) from the RFC-1918 private networks
 (e.g. 10.0.0.0/8, 172.16.0.0/12, 192.168.0.0/16) to pick a specific range to use.
 Specify either `services_secondary_range_name` or `services_ipv4_cidr_block` but not both.
-{{% /md %}}</dd>
-    <dt class="property-optional"
+{{% /md %}}</dd><dt class="property-optional"
             title="Optional">
         <span id="services_secondary_range_name_python">
 <a href="#services_secondary_range_name_python" style="color: inherit; text-decoration: inherit;">services_<wbr>secondary_<wbr>range_<wbr>name</a>
@@ -2580,16 +2406,13 @@ Specify either `services_secondary_range_name` or `services_ipv4_cidr_block` but
     <dd>{{% md %}}The name of the services' secondary range used to allocate IP addresses to the cluster.
 Specify either `services_secondary_range_name` or `services_ipv4_cidr_block` but not both.
 This field is applicable only when `use_ip_aliases` is true.
-{{% /md %}}</dd>
-</dl>
+{{% /md %}}</dd></dl>
 {{% /choosable %}}
 
 <h4 id="environmentconfigprivateenvironmentconfig">Environment<wbr>Config<wbr>Private<wbr>Environment<wbr>Config</h4>
 
 {{% choosable language csharp %}}
-<dl class="resources-properties">
-
-    <dt class="property-optional"
+<dl class="resources-properties"><dt class="property-optional"
             title="Optional">
         <span id="cloudsqlipv4cidrblock_csharp">
 <a href="#cloudsqlipv4cidrblock_csharp" style="color: inherit; text-decoration: inherit;">Cloud<wbr>Sql<wbr>Ipv4Cidr<wbr>Block</a>
@@ -2598,8 +2421,7 @@ This field is applicable only when `use_ip_aliases` is true.
         <span class="property-type">string</span>
     </dt>
     <dd>{{% md %}}The CIDR block from which IP range in tenant project will be reserved for Cloud SQL. Needs to be disjoint from `web_server_ipv4_cidr_block`
-{{% /md %}}</dd>
-    <dt class="property-optional"
+{{% /md %}}</dd><dt class="property-optional"
             title="Optional">
         <span id="enableprivateendpoint_csharp">
 <a href="#enableprivateendpoint_csharp" style="color: inherit; text-decoration: inherit;">Enable<wbr>Private<wbr>Endpoint</a>
@@ -2609,8 +2431,7 @@ This field is applicable only when `use_ip_aliases` is true.
     </dt>
     <dd>{{% md %}}-
 If true, access to the public endpoint of the GKE cluster is denied.
-{{% /md %}}</dd>
-    <dt class="property-optional"
+{{% /md %}}</dd><dt class="property-optional"
             title="Optional">
         <span id="masteripv4cidrblock_csharp">
 <a href="#masteripv4cidrblock_csharp" style="color: inherit; text-decoration: inherit;">Master<wbr>Ipv4Cidr<wbr>Block</a>
@@ -2623,8 +2444,7 @@ for assigning internal IP addresses to the cluster master or set of masters and 
 internal load balancer virtual IP. This range must not overlap with any other ranges
 in use within the cluster's network.
 If left blank, the default value of '172.16.0.0/28' is used.
-{{% /md %}}</dd>
-    <dt class="property-optional"
+{{% /md %}}</dd><dt class="property-optional"
             title="Optional">
         <span id="webserveripv4cidrblock_csharp">
 <a href="#webserveripv4cidrblock_csharp" style="color: inherit; text-decoration: inherit;">Web<wbr>Server<wbr>Ipv4Cidr<wbr>Block</a>
@@ -2633,14 +2453,11 @@ If left blank, the default value of '172.16.0.0/28' is used.
         <span class="property-type">string</span>
     </dt>
     <dd>{{% md %}}The CIDR block from which IP range for web server will be reserved. Needs to be disjoint from `master_ipv4_cidr_block` and `cloud_sql_ipv4_cidr_block`.
-{{% /md %}}</dd>
-</dl>
+{{% /md %}}</dd></dl>
 {{% /choosable %}}
 
 {{% choosable language go %}}
-<dl class="resources-properties">
-
-    <dt class="property-optional"
+<dl class="resources-properties"><dt class="property-optional"
             title="Optional">
         <span id="cloudsqlipv4cidrblock_go">
 <a href="#cloudsqlipv4cidrblock_go" style="color: inherit; text-decoration: inherit;">Cloud<wbr>Sql<wbr>Ipv4Cidr<wbr>Block</a>
@@ -2649,8 +2466,7 @@ If left blank, the default value of '172.16.0.0/28' is used.
         <span class="property-type">string</span>
     </dt>
     <dd>{{% md %}}The CIDR block from which IP range in tenant project will be reserved for Cloud SQL. Needs to be disjoint from `web_server_ipv4_cidr_block`
-{{% /md %}}</dd>
-    <dt class="property-optional"
+{{% /md %}}</dd><dt class="property-optional"
             title="Optional">
         <span id="enableprivateendpoint_go">
 <a href="#enableprivateendpoint_go" style="color: inherit; text-decoration: inherit;">Enable<wbr>Private<wbr>Endpoint</a>
@@ -2660,8 +2476,7 @@ If left blank, the default value of '172.16.0.0/28' is used.
     </dt>
     <dd>{{% md %}}-
 If true, access to the public endpoint of the GKE cluster is denied.
-{{% /md %}}</dd>
-    <dt class="property-optional"
+{{% /md %}}</dd><dt class="property-optional"
             title="Optional">
         <span id="masteripv4cidrblock_go">
 <a href="#masteripv4cidrblock_go" style="color: inherit; text-decoration: inherit;">Master<wbr>Ipv4Cidr<wbr>Block</a>
@@ -2674,8 +2489,7 @@ for assigning internal IP addresses to the cluster master or set of masters and 
 internal load balancer virtual IP. This range must not overlap with any other ranges
 in use within the cluster's network.
 If left blank, the default value of '172.16.0.0/28' is used.
-{{% /md %}}</dd>
-    <dt class="property-optional"
+{{% /md %}}</dd><dt class="property-optional"
             title="Optional">
         <span id="webserveripv4cidrblock_go">
 <a href="#webserveripv4cidrblock_go" style="color: inherit; text-decoration: inherit;">Web<wbr>Server<wbr>Ipv4Cidr<wbr>Block</a>
@@ -2684,14 +2498,11 @@ If left blank, the default value of '172.16.0.0/28' is used.
         <span class="property-type">string</span>
     </dt>
     <dd>{{% md %}}The CIDR block from which IP range for web server will be reserved. Needs to be disjoint from `master_ipv4_cidr_block` and `cloud_sql_ipv4_cidr_block`.
-{{% /md %}}</dd>
-</dl>
+{{% /md %}}</dd></dl>
 {{% /choosable %}}
 
 {{% choosable language nodejs %}}
-<dl class="resources-properties">
-
-    <dt class="property-optional"
+<dl class="resources-properties"><dt class="property-optional"
             title="Optional">
         <span id="cloudsqlipv4cidrblock_nodejs">
 <a href="#cloudsqlipv4cidrblock_nodejs" style="color: inherit; text-decoration: inherit;">cloud<wbr>Sql<wbr>Ipv4Cidr<wbr>Block</a>
@@ -2700,8 +2511,7 @@ If left blank, the default value of '172.16.0.0/28' is used.
         <span class="property-type">string</span>
     </dt>
     <dd>{{% md %}}The CIDR block from which IP range in tenant project will be reserved for Cloud SQL. Needs to be disjoint from `web_server_ipv4_cidr_block`
-{{% /md %}}</dd>
-    <dt class="property-optional"
+{{% /md %}}</dd><dt class="property-optional"
             title="Optional">
         <span id="enableprivateendpoint_nodejs">
 <a href="#enableprivateendpoint_nodejs" style="color: inherit; text-decoration: inherit;">enable<wbr>Private<wbr>Endpoint</a>
@@ -2711,8 +2521,7 @@ If left blank, the default value of '172.16.0.0/28' is used.
     </dt>
     <dd>{{% md %}}-
 If true, access to the public endpoint of the GKE cluster is denied.
-{{% /md %}}</dd>
-    <dt class="property-optional"
+{{% /md %}}</dd><dt class="property-optional"
             title="Optional">
         <span id="masteripv4cidrblock_nodejs">
 <a href="#masteripv4cidrblock_nodejs" style="color: inherit; text-decoration: inherit;">master<wbr>Ipv4Cidr<wbr>Block</a>
@@ -2725,8 +2534,7 @@ for assigning internal IP addresses to the cluster master or set of masters and 
 internal load balancer virtual IP. This range must not overlap with any other ranges
 in use within the cluster's network.
 If left blank, the default value of '172.16.0.0/28' is used.
-{{% /md %}}</dd>
-    <dt class="property-optional"
+{{% /md %}}</dd><dt class="property-optional"
             title="Optional">
         <span id="webserveripv4cidrblock_nodejs">
 <a href="#webserveripv4cidrblock_nodejs" style="color: inherit; text-decoration: inherit;">web<wbr>Server<wbr>Ipv4Cidr<wbr>Block</a>
@@ -2735,14 +2543,11 @@ If left blank, the default value of '172.16.0.0/28' is used.
         <span class="property-type">string</span>
     </dt>
     <dd>{{% md %}}The CIDR block from which IP range for web server will be reserved. Needs to be disjoint from `master_ipv4_cidr_block` and `cloud_sql_ipv4_cidr_block`.
-{{% /md %}}</dd>
-</dl>
+{{% /md %}}</dd></dl>
 {{% /choosable %}}
 
 {{% choosable language python %}}
-<dl class="resources-properties">
-
-    <dt class="property-optional"
+<dl class="resources-properties"><dt class="property-optional"
             title="Optional">
         <span id="cloud_sql_ipv4_cidr_block_python">
 <a href="#cloud_sql_ipv4_cidr_block_python" style="color: inherit; text-decoration: inherit;">cloud_<wbr>sql_<wbr>ipv4_<wbr>cidr_<wbr>block</a>
@@ -2751,8 +2556,7 @@ If left blank, the default value of '172.16.0.0/28' is used.
         <span class="property-type">str</span>
     </dt>
     <dd>{{% md %}}The CIDR block from which IP range in tenant project will be reserved for Cloud SQL. Needs to be disjoint from `web_server_ipv4_cidr_block`
-{{% /md %}}</dd>
-    <dt class="property-optional"
+{{% /md %}}</dd><dt class="property-optional"
             title="Optional">
         <span id="enable_private_endpoint_python">
 <a href="#enable_private_endpoint_python" style="color: inherit; text-decoration: inherit;">enable_<wbr>private_<wbr>endpoint</a>
@@ -2762,8 +2566,7 @@ If left blank, the default value of '172.16.0.0/28' is used.
     </dt>
     <dd>{{% md %}}-
 If true, access to the public endpoint of the GKE cluster is denied.
-{{% /md %}}</dd>
-    <dt class="property-optional"
+{{% /md %}}</dd><dt class="property-optional"
             title="Optional">
         <span id="master_ipv4_cidr_block_python">
 <a href="#master_ipv4_cidr_block_python" style="color: inherit; text-decoration: inherit;">master_<wbr>ipv4_<wbr>cidr_<wbr>block</a>
@@ -2776,8 +2579,7 @@ for assigning internal IP addresses to the cluster master or set of masters and 
 internal load balancer virtual IP. This range must not overlap with any other ranges
 in use within the cluster's network.
 If left blank, the default value of '172.16.0.0/28' is used.
-{{% /md %}}</dd>
-    <dt class="property-optional"
+{{% /md %}}</dd><dt class="property-optional"
             title="Optional">
         <span id="web_server_ipv4_cidr_block_python">
 <a href="#web_server_ipv4_cidr_block_python" style="color: inherit; text-decoration: inherit;">web_<wbr>server_<wbr>ipv4_<wbr>cidr_<wbr>block</a>
@@ -2786,16 +2588,13 @@ If left blank, the default value of '172.16.0.0/28' is used.
         <span class="property-type">str</span>
     </dt>
     <dd>{{% md %}}The CIDR block from which IP range for web server will be reserved. Needs to be disjoint from `master_ipv4_cidr_block` and `cloud_sql_ipv4_cidr_block`.
-{{% /md %}}</dd>
-</dl>
+{{% /md %}}</dd></dl>
 {{% /choosable %}}
 
 <h4 id="environmentconfigsoftwareconfig">Environment<wbr>Config<wbr>Software<wbr>Config</h4>
 
 {{% choosable language csharp %}}
-<dl class="resources-properties">
-
-    <dt class="property-optional"
+<dl class="resources-properties"><dt class="property-optional"
             title="Optional">
         <span id="airflowconfigoverrides_csharp">
 <a href="#airflowconfigoverrides_csharp" style="color: inherit; text-decoration: inherit;">Airflow<wbr>Config<wbr>Overrides</a>
@@ -2806,8 +2605,7 @@ If left blank, the default value of '172.16.0.0/28' is used.
     <dd>{{% md %}}-
 (Optional) Apache Airflow configuration properties to override. Property keys contain the section and property names,
 separated by a hyphen, for example "core-dags_are_paused_at_creation".
-{{% /md %}}</dd>
-    <dt class="property-optional"
+{{% /md %}}</dd><dt class="property-optional"
             title="Optional">
         <span id="envvariables_csharp">
 <a href="#envvariables_csharp" style="color: inherit; text-decoration: inherit;">Env<wbr>Variables</a>
@@ -2849,8 +2647,7 @@ func main() {
 	})
 }
 ```
-{{% /md %}}</dd>
-    <dt class="property-optional"
+{{% /md %}}</dd><dt class="property-optional"
             title="Optional">
         <span id="imageversion_csharp">
 <a href="#imageversion_csharp" style="color: inherit; text-decoration: inherit;">Image<wbr>Version</a>
@@ -2866,8 +2663,7 @@ The Cloud Composer portion of the version is a semantic version.
 The portion of the image version following 'airflow-' is an official Apache Airflow repository release name.
 See [documentation](https://cloud.google.com/composer/docs/reference/rest/v1beta1/projects.locations.environments#softwareconfig)
 for allowed release names.
-{{% /md %}}</dd>
-    <dt class="property-optional"
+{{% /md %}}</dd><dt class="property-optional"
             title="Optional">
         <span id="pypipackages_csharp">
 <a href="#pypipackages_csharp" style="color: inherit; text-decoration: inherit;">Pypi<wbr>Packages</a>
@@ -2879,8 +2675,7 @@ for allowed release names.
 in the environment. Keys refer to the lowercase package name (e.g. "numpy"). Values are the lowercase extras and
 version specifier (e.g. "==1.12.0", "[devel,gcp_api]", "[devel]>=1.8.2, <1.9.2"). To specify a package without
 pinning it to a version specifier, use the empty string as the value.
-{{% /md %}}</dd>
-    <dt class="property-optional"
+{{% /md %}}</dd><dt class="property-optional"
             title="Optional">
         <span id="pythonversion_csharp">
 <a href="#pythonversion_csharp" style="color: inherit; text-decoration: inherit;">Python<wbr>Version</a>
@@ -2891,14 +2686,11 @@ pinning it to a version specifier, use the empty string as the value.
     <dd>{{% md %}}-
 The major version of Python used to run the Apache Airflow scheduler, worker, and webserver processes.
 Can be set to '2' or '3'. If not specified, the default is '2'. Cannot be updated.
-{{% /md %}}</dd>
-</dl>
+{{% /md %}}</dd></dl>
 {{% /choosable %}}
 
 {{% choosable language go %}}
-<dl class="resources-properties">
-
-    <dt class="property-optional"
+<dl class="resources-properties"><dt class="property-optional"
             title="Optional">
         <span id="airflowconfigoverrides_go">
 <a href="#airflowconfigoverrides_go" style="color: inherit; text-decoration: inherit;">Airflow<wbr>Config<wbr>Overrides</a>
@@ -2909,8 +2701,7 @@ Can be set to '2' or '3'. If not specified, the default is '2'. Cannot be update
     <dd>{{% md %}}-
 (Optional) Apache Airflow configuration properties to override. Property keys contain the section and property names,
 separated by a hyphen, for example "core-dags_are_paused_at_creation".
-{{% /md %}}</dd>
-    <dt class="property-optional"
+{{% /md %}}</dd><dt class="property-optional"
             title="Optional">
         <span id="envvariables_go">
 <a href="#envvariables_go" style="color: inherit; text-decoration: inherit;">Env<wbr>Variables</a>
@@ -2952,8 +2743,7 @@ func main() {
 	})
 }
 ```
-{{% /md %}}</dd>
-    <dt class="property-optional"
+{{% /md %}}</dd><dt class="property-optional"
             title="Optional">
         <span id="imageversion_go">
 <a href="#imageversion_go" style="color: inherit; text-decoration: inherit;">Image<wbr>Version</a>
@@ -2969,8 +2759,7 @@ The Cloud Composer portion of the version is a semantic version.
 The portion of the image version following 'airflow-' is an official Apache Airflow repository release name.
 See [documentation](https://cloud.google.com/composer/docs/reference/rest/v1beta1/projects.locations.environments#softwareconfig)
 for allowed release names.
-{{% /md %}}</dd>
-    <dt class="property-optional"
+{{% /md %}}</dd><dt class="property-optional"
             title="Optional">
         <span id="pypipackages_go">
 <a href="#pypipackages_go" style="color: inherit; text-decoration: inherit;">Pypi<wbr>Packages</a>
@@ -2982,8 +2771,7 @@ for allowed release names.
 in the environment. Keys refer to the lowercase package name (e.g. "numpy"). Values are the lowercase extras and
 version specifier (e.g. "==1.12.0", "[devel,gcp_api]", "[devel]>=1.8.2, <1.9.2"). To specify a package without
 pinning it to a version specifier, use the empty string as the value.
-{{% /md %}}</dd>
-    <dt class="property-optional"
+{{% /md %}}</dd><dt class="property-optional"
             title="Optional">
         <span id="pythonversion_go">
 <a href="#pythonversion_go" style="color: inherit; text-decoration: inherit;">Python<wbr>Version</a>
@@ -2994,14 +2782,11 @@ pinning it to a version specifier, use the empty string as the value.
     <dd>{{% md %}}-
 The major version of Python used to run the Apache Airflow scheduler, worker, and webserver processes.
 Can be set to '2' or '3'. If not specified, the default is '2'. Cannot be updated.
-{{% /md %}}</dd>
-</dl>
+{{% /md %}}</dd></dl>
 {{% /choosable %}}
 
 {{% choosable language nodejs %}}
-<dl class="resources-properties">
-
-    <dt class="property-optional"
+<dl class="resources-properties"><dt class="property-optional"
             title="Optional">
         <span id="airflowconfigoverrides_nodejs">
 <a href="#airflowconfigoverrides_nodejs" style="color: inherit; text-decoration: inherit;">airflow<wbr>Config<wbr>Overrides</a>
@@ -3012,8 +2797,7 @@ Can be set to '2' or '3'. If not specified, the default is '2'. Cannot be update
     <dd>{{% md %}}-
 (Optional) Apache Airflow configuration properties to override. Property keys contain the section and property names,
 separated by a hyphen, for example "core-dags_are_paused_at_creation".
-{{% /md %}}</dd>
-    <dt class="property-optional"
+{{% /md %}}</dd><dt class="property-optional"
             title="Optional">
         <span id="envvariables_nodejs">
 <a href="#envvariables_nodejs" style="color: inherit; text-decoration: inherit;">env<wbr>Variables</a>
@@ -3055,8 +2839,7 @@ func main() {
 	})
 }
 ```
-{{% /md %}}</dd>
-    <dt class="property-optional"
+{{% /md %}}</dd><dt class="property-optional"
             title="Optional">
         <span id="imageversion_nodejs">
 <a href="#imageversion_nodejs" style="color: inherit; text-decoration: inherit;">image<wbr>Version</a>
@@ -3072,8 +2855,7 @@ The Cloud Composer portion of the version is a semantic version.
 The portion of the image version following 'airflow-' is an official Apache Airflow repository release name.
 See [documentation](https://cloud.google.com/composer/docs/reference/rest/v1beta1/projects.locations.environments#softwareconfig)
 for allowed release names.
-{{% /md %}}</dd>
-    <dt class="property-optional"
+{{% /md %}}</dd><dt class="property-optional"
             title="Optional">
         <span id="pypipackages_nodejs">
 <a href="#pypipackages_nodejs" style="color: inherit; text-decoration: inherit;">pypi<wbr>Packages</a>
@@ -3085,8 +2867,7 @@ for allowed release names.
 in the environment. Keys refer to the lowercase package name (e.g. "numpy"). Values are the lowercase extras and
 version specifier (e.g. "==1.12.0", "[devel,gcp_api]", "[devel]>=1.8.2, <1.9.2"). To specify a package without
 pinning it to a version specifier, use the empty string as the value.
-{{% /md %}}</dd>
-    <dt class="property-optional"
+{{% /md %}}</dd><dt class="property-optional"
             title="Optional">
         <span id="pythonversion_nodejs">
 <a href="#pythonversion_nodejs" style="color: inherit; text-decoration: inherit;">python<wbr>Version</a>
@@ -3097,14 +2878,11 @@ pinning it to a version specifier, use the empty string as the value.
     <dd>{{% md %}}-
 The major version of Python used to run the Apache Airflow scheduler, worker, and webserver processes.
 Can be set to '2' or '3'. If not specified, the default is '2'. Cannot be updated.
-{{% /md %}}</dd>
-</dl>
+{{% /md %}}</dd></dl>
 {{% /choosable %}}
 
 {{% choosable language python %}}
-<dl class="resources-properties">
-
-    <dt class="property-optional"
+<dl class="resources-properties"><dt class="property-optional"
             title="Optional">
         <span id="airflow_config_overrides_python">
 <a href="#airflow_config_overrides_python" style="color: inherit; text-decoration: inherit;">airflow_<wbr>config_<wbr>overrides</a>
@@ -3115,8 +2893,7 @@ Can be set to '2' or '3'. If not specified, the default is '2'. Cannot be update
     <dd>{{% md %}}-
 (Optional) Apache Airflow configuration properties to override. Property keys contain the section and property names,
 separated by a hyphen, for example "core-dags_are_paused_at_creation".
-{{% /md %}}</dd>
-    <dt class="property-optional"
+{{% /md %}}</dd><dt class="property-optional"
             title="Optional">
         <span id="env_variables_python">
 <a href="#env_variables_python" style="color: inherit; text-decoration: inherit;">env_<wbr>variables</a>
@@ -3158,8 +2935,7 @@ func main() {
 	})
 }
 ```
-{{% /md %}}</dd>
-    <dt class="property-optional"
+{{% /md %}}</dd><dt class="property-optional"
             title="Optional">
         <span id="image_version_python">
 <a href="#image_version_python" style="color: inherit; text-decoration: inherit;">image_<wbr>version</a>
@@ -3175,8 +2951,7 @@ The Cloud Composer portion of the version is a semantic version.
 The portion of the image version following 'airflow-' is an official Apache Airflow repository release name.
 See [documentation](https://cloud.google.com/composer/docs/reference/rest/v1beta1/projects.locations.environments#softwareconfig)
 for allowed release names.
-{{% /md %}}</dd>
-    <dt class="property-optional"
+{{% /md %}}</dd><dt class="property-optional"
             title="Optional">
         <span id="pypi_packages_python">
 <a href="#pypi_packages_python" style="color: inherit; text-decoration: inherit;">pypi_<wbr>packages</a>
@@ -3188,8 +2963,7 @@ for allowed release names.
 in the environment. Keys refer to the lowercase package name (e.g. "numpy"). Values are the lowercase extras and
 version specifier (e.g. "==1.12.0", "[devel,gcp_api]", "[devel]>=1.8.2, <1.9.2"). To specify a package without
 pinning it to a version specifier, use the empty string as the value.
-{{% /md %}}</dd>
-    <dt class="property-optional"
+{{% /md %}}</dd><dt class="property-optional"
             title="Optional">
         <span id="python_version_python">
 <a href="#python_version_python" style="color: inherit; text-decoration: inherit;">python_<wbr>version</a>
@@ -3200,16 +2974,13 @@ pinning it to a version specifier, use the empty string as the value.
     <dd>{{% md %}}-
 The major version of Python used to run the Apache Airflow scheduler, worker, and webserver processes.
 Can be set to '2' or '3'. If not specified, the default is '2'. Cannot be updated.
-{{% /md %}}</dd>
-</dl>
+{{% /md %}}</dd></dl>
 {{% /choosable %}}
 
 <h4 id="environmentconfigwebserverconfig">Environment<wbr>Config<wbr>Web<wbr>Server<wbr>Config</h4>
 
 {{% choosable language csharp %}}
-<dl class="resources-properties">
-
-    <dt class="property-required"
+<dl class="resources-properties"><dt class="property-required"
             title="Required">
         <span id="machinetype_csharp">
 <a href="#machinetype_csharp" style="color: inherit; text-decoration: inherit;">Machine<wbr>Type</a>
@@ -3221,14 +2992,11 @@ Can be set to '2' or '3'. If not specified, the default is '2'. Cannot be update
 composer-n1-webserver-4 or composer-n1-webserver-8.
 Value custom is returned only in response, if Airflow web server parameters were
 manually changed to a non-standard values.
-{{% /md %}}</dd>
-</dl>
+{{% /md %}}</dd></dl>
 {{% /choosable %}}
 
 {{% choosable language go %}}
-<dl class="resources-properties">
-
-    <dt class="property-required"
+<dl class="resources-properties"><dt class="property-required"
             title="Required">
         <span id="machinetype_go">
 <a href="#machinetype_go" style="color: inherit; text-decoration: inherit;">Machine<wbr>Type</a>
@@ -3240,14 +3008,11 @@ manually changed to a non-standard values.
 composer-n1-webserver-4 or composer-n1-webserver-8.
 Value custom is returned only in response, if Airflow web server parameters were
 manually changed to a non-standard values.
-{{% /md %}}</dd>
-</dl>
+{{% /md %}}</dd></dl>
 {{% /choosable %}}
 
 {{% choosable language nodejs %}}
-<dl class="resources-properties">
-
-    <dt class="property-required"
+<dl class="resources-properties"><dt class="property-required"
             title="Required">
         <span id="machinetype_nodejs">
 <a href="#machinetype_nodejs" style="color: inherit; text-decoration: inherit;">machine<wbr>Type</a>
@@ -3259,14 +3024,11 @@ manually changed to a non-standard values.
 composer-n1-webserver-4 or composer-n1-webserver-8.
 Value custom is returned only in response, if Airflow web server parameters were
 manually changed to a non-standard values.
-{{% /md %}}</dd>
-</dl>
+{{% /md %}}</dd></dl>
 {{% /choosable %}}
 
 {{% choosable language python %}}
-<dl class="resources-properties">
-
-    <dt class="property-required"
+<dl class="resources-properties"><dt class="property-required"
             title="Required">
         <span id="machine_type_python">
 <a href="#machine_type_python" style="color: inherit; text-decoration: inherit;">machine_<wbr>type</a>
@@ -3278,16 +3040,13 @@ manually changed to a non-standard values.
 composer-n1-webserver-4 or composer-n1-webserver-8.
 Value custom is returned only in response, if Airflow web server parameters were
 manually changed to a non-standard values.
-{{% /md %}}</dd>
-</dl>
+{{% /md %}}</dd></dl>
 {{% /choosable %}}
 
 <h4 id="environmentconfigwebservernetworkaccesscontrol">Environment<wbr>Config<wbr>Web<wbr>Server<wbr>Network<wbr>Access<wbr>Control</h4>
 
 {{% choosable language csharp %}}
-<dl class="resources-properties">
-
-    <dt class="property-optional"
+<dl class="resources-properties"><dt class="property-optional"
             title="Optional">
         <span id="allowedipranges_csharp">
 <a href="#allowedipranges_csharp" style="color: inherit; text-decoration: inherit;">Allowed<wbr>Ip<wbr>Ranges</a>
@@ -3297,14 +3056,11 @@ manually changed to a non-standard values.
     </dt>
     <dd>{{% md %}}-
 A collection of allowed IP ranges with descriptions. Structure is documented below.
-{{% /md %}}</dd>
-</dl>
+{{% /md %}}</dd></dl>
 {{% /choosable %}}
 
 {{% choosable language go %}}
-<dl class="resources-properties">
-
-    <dt class="property-optional"
+<dl class="resources-properties"><dt class="property-optional"
             title="Optional">
         <span id="allowedipranges_go">
 <a href="#allowedipranges_go" style="color: inherit; text-decoration: inherit;">Allowed<wbr>Ip<wbr>Ranges</a>
@@ -3314,14 +3070,11 @@ A collection of allowed IP ranges with descriptions. Structure is documented bel
     </dt>
     <dd>{{% md %}}-
 A collection of allowed IP ranges with descriptions. Structure is documented below.
-{{% /md %}}</dd>
-</dl>
+{{% /md %}}</dd></dl>
 {{% /choosable %}}
 
 {{% choosable language nodejs %}}
-<dl class="resources-properties">
-
-    <dt class="property-optional"
+<dl class="resources-properties"><dt class="property-optional"
             title="Optional">
         <span id="allowedipranges_nodejs">
 <a href="#allowedipranges_nodejs" style="color: inherit; text-decoration: inherit;">allowed<wbr>Ip<wbr>Ranges</a>
@@ -3331,14 +3084,11 @@ A collection of allowed IP ranges with descriptions. Structure is documented bel
     </dt>
     <dd>{{% md %}}-
 A collection of allowed IP ranges with descriptions. Structure is documented below.
-{{% /md %}}</dd>
-</dl>
+{{% /md %}}</dd></dl>
 {{% /choosable %}}
 
 {{% choosable language python %}}
-<dl class="resources-properties">
-
-    <dt class="property-optional"
+<dl class="resources-properties"><dt class="property-optional"
             title="Optional">
         <span id="allowed_ip_ranges_python">
 <a href="#allowed_ip_ranges_python" style="color: inherit; text-decoration: inherit;">allowed_<wbr>ip_<wbr>ranges</a>
@@ -3348,16 +3098,13 @@ A collection of allowed IP ranges with descriptions. Structure is documented bel
     </dt>
     <dd>{{% md %}}-
 A collection of allowed IP ranges with descriptions. Structure is documented below.
-{{% /md %}}</dd>
-</dl>
+{{% /md %}}</dd></dl>
 {{% /choosable %}}
 
 <h4 id="environmentconfigwebservernetworkaccesscontrolallowediprange">Environment<wbr>Config<wbr>Web<wbr>Server<wbr>Network<wbr>Access<wbr>Control<wbr>Allowed<wbr>Ip<wbr>Range</h4>
 
 {{% choosable language csharp %}}
-<dl class="resources-properties">
-
-    <dt class="property-required"
+<dl class="resources-properties"><dt class="property-required"
             title="Required">
         <span id="value_csharp">
 <a href="#value_csharp" style="color: inherit; text-decoration: inherit;">Value</a>
@@ -3369,8 +3116,7 @@ A collection of allowed IP ranges with descriptions. Structure is documented bel
 Examples: `192.168.1.1` or `192.168.0.0/16` or `2001:db8::/32` or `2001:0db8:0000:0042:0000:8a2e:0370:7334`.
 IP range prefixes should be properly truncated. For example,
 `1.2.3.4/24` should be truncated to `1.2.3.0/24`. Similarly, for IPv6, `2001:db8::1/32` should be truncated to `2001:db8::/32`.
-{{% /md %}}</dd>
-    <dt class="property-optional"
+{{% /md %}}</dd><dt class="property-optional"
             title="Optional">
         <span id="description_csharp">
 <a href="#description_csharp" style="color: inherit; text-decoration: inherit;">Description</a>
@@ -3379,14 +3125,11 @@ IP range prefixes should be properly truncated. For example,
         <span class="property-type">string</span>
     </dt>
     <dd>{{% md %}}A description of this ip range.
-{{% /md %}}</dd>
-</dl>
+{{% /md %}}</dd></dl>
 {{% /choosable %}}
 
 {{% choosable language go %}}
-<dl class="resources-properties">
-
-    <dt class="property-required"
+<dl class="resources-properties"><dt class="property-required"
             title="Required">
         <span id="value_go">
 <a href="#value_go" style="color: inherit; text-decoration: inherit;">Value</a>
@@ -3398,8 +3141,7 @@ IP range prefixes should be properly truncated. For example,
 Examples: `192.168.1.1` or `192.168.0.0/16` or `2001:db8::/32` or `2001:0db8:0000:0042:0000:8a2e:0370:7334`.
 IP range prefixes should be properly truncated. For example,
 `1.2.3.4/24` should be truncated to `1.2.3.0/24`. Similarly, for IPv6, `2001:db8::1/32` should be truncated to `2001:db8::/32`.
-{{% /md %}}</dd>
-    <dt class="property-optional"
+{{% /md %}}</dd><dt class="property-optional"
             title="Optional">
         <span id="description_go">
 <a href="#description_go" style="color: inherit; text-decoration: inherit;">Description</a>
@@ -3408,14 +3150,11 @@ IP range prefixes should be properly truncated. For example,
         <span class="property-type">string</span>
     </dt>
     <dd>{{% md %}}A description of this ip range.
-{{% /md %}}</dd>
-</dl>
+{{% /md %}}</dd></dl>
 {{% /choosable %}}
 
 {{% choosable language nodejs %}}
-<dl class="resources-properties">
-
-    <dt class="property-required"
+<dl class="resources-properties"><dt class="property-required"
             title="Required">
         <span id="value_nodejs">
 <a href="#value_nodejs" style="color: inherit; text-decoration: inherit;">value</a>
@@ -3427,8 +3166,7 @@ IP range prefixes should be properly truncated. For example,
 Examples: `192.168.1.1` or `192.168.0.0/16` or `2001:db8::/32` or `2001:0db8:0000:0042:0000:8a2e:0370:7334`.
 IP range prefixes should be properly truncated. For example,
 `1.2.3.4/24` should be truncated to `1.2.3.0/24`. Similarly, for IPv6, `2001:db8::1/32` should be truncated to `2001:db8::/32`.
-{{% /md %}}</dd>
-    <dt class="property-optional"
+{{% /md %}}</dd><dt class="property-optional"
             title="Optional">
         <span id="description_nodejs">
 <a href="#description_nodejs" style="color: inherit; text-decoration: inherit;">description</a>
@@ -3437,14 +3175,11 @@ IP range prefixes should be properly truncated. For example,
         <span class="property-type">string</span>
     </dt>
     <dd>{{% md %}}A description of this ip range.
-{{% /md %}}</dd>
-</dl>
+{{% /md %}}</dd></dl>
 {{% /choosable %}}
 
 {{% choosable language python %}}
-<dl class="resources-properties">
-
-    <dt class="property-required"
+<dl class="resources-properties"><dt class="property-required"
             title="Required">
         <span id="value_python">
 <a href="#value_python" style="color: inherit; text-decoration: inherit;">value</a>
@@ -3456,8 +3191,7 @@ IP range prefixes should be properly truncated. For example,
 Examples: `192.168.1.1` or `192.168.0.0/16` or `2001:db8::/32` or `2001:0db8:0000:0042:0000:8a2e:0370:7334`.
 IP range prefixes should be properly truncated. For example,
 `1.2.3.4/24` should be truncated to `1.2.3.0/24`. Similarly, for IPv6, `2001:db8::1/32` should be truncated to `2001:db8::/32`.
-{{% /md %}}</dd>
-    <dt class="property-optional"
+{{% /md %}}</dd><dt class="property-optional"
             title="Optional">
         <span id="description_python">
 <a href="#description_python" style="color: inherit; text-decoration: inherit;">description</a>
@@ -3466,8 +3200,7 @@ IP range prefixes should be properly truncated. For example,
         <span class="property-type">str</span>
     </dt>
     <dd>{{% md %}}A description of this ip range.
-{{% /md %}}</dd>
-</dl>
+{{% /md %}}</dd></dl>
 {{% /choosable %}}
 ## Import
 
@@ -3496,6 +3229,6 @@ Environment can be imported using any of these accepted formats
 	<dt>License</dt>
 	<dd>Apache-2.0</dd>
 	<dt>Notes</dt>
-	<dd>This Pulumi package is based on the [`google-beta` Terraform Provider](https://github.com/hashicorp/terraform-provider-google-beta).</dd>
+	<dd>{{% md %}}This Pulumi package is based on the [`google-beta` Terraform Provider](https://github.com/hashicorp/terraform-provider-google-beta).{{% /md %}}</dd>
 </dl>
 

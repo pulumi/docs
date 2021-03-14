@@ -19,11 +19,17 @@ meta_desc: "Documentation for the mongodbatlas.PrivateLinkEndpointService resour
 > **NOTE:** Groups and projects are synonymous terms. You may find group_id in the official documentation.
 
 {{% examples %}}
+
 ## Example Usage
 
 {{< chooser language "typescript,python,go,csharp" / >}}
 
-{{% example csharp %}}
+
+
+
+
+{{< example csharp >}}
+
 ```csharp
 using Pulumi;
 using Aws = Pulumi.Aws;
@@ -65,9 +71,12 @@ class MyStack : Stack
 }
 ```
 
-{{% /example %}}
 
-{{% example go %}}
+{{< /example >}}
+
+
+{{< example go >}}
+
 ```go
 package main
 
@@ -115,9 +124,12 @@ func main() {
 }
 ```
 
-{{% /example %}}
 
-{{% example python %}}
+{{< /example >}}
+
+
+{{< example python >}}
+
 ```python
 import pulumi
 import pulumi_aws as aws
@@ -140,9 +152,12 @@ test_private_link_endpoint_service = mongodbatlas.PrivateLinkEndpointService("te
     provider_name="AWS")
 ```
 
-{{% /example %}}
 
-{{% example typescript %}}
+{{< /example >}}
+
+
+{{< example typescript >}}
+
 
 ```typescript
 import * as pulumi from "@pulumi/pulumi";
@@ -169,9 +184,16 @@ const testPrivateLinkEndpointService = new mongodbatlas.PrivateLinkEndpointServi
 });
 ```
 
-{{% /example %}}
+
+{{< /example >}}
+
+
+
+
 
 {{% /examples %}}
+
+
 
 
 ## Create a PrivateLinkEndpointService Resource {#create}
@@ -196,9 +218,7 @@ const testPrivateLinkEndpointService = new mongodbatlas.PrivateLinkEndpointServi
 
 {{% choosable language nodejs %}}
 
-<dl class="resources-properties">
-  
-    <dt
+<dl class="resources-properties"><dt
         class="property-required" title="Required">
         <span>name</span>
         <span class="property-indicator"></span>
@@ -206,9 +226,7 @@ const testPrivateLinkEndpointService = new mongodbatlas.PrivateLinkEndpointServi
     </dt>
     <dd>
       The unique name of the resource.
-    </dd>
-  
-    <dt
+    </dd><dt
         class="property-required" title="Required">
         <span>args</span>
         <span class="property-indicator"></span>
@@ -216,9 +234,7 @@ const testPrivateLinkEndpointService = new mongodbatlas.PrivateLinkEndpointServi
     </dt>
     <dd>
       The arguments to resource properties.
-    </dd>
-  
-    <dt
+    </dd><dt
         class="property-optional" title="Optional">
         <span>opts</span>
         <span class="property-indicator"></span>
@@ -226,10 +242,7 @@ const testPrivateLinkEndpointService = new mongodbatlas.PrivateLinkEndpointServi
     </dt>
     <dd>
       Bag of options to control resource&#39;s behavior.
-    </dd>
-  
-
-</dl>
+    </dd></dl>
 
 {{% /choosable %}}
 
@@ -255,9 +268,7 @@ const testPrivateLinkEndpointService = new mongodbatlas.PrivateLinkEndpointServi
 
 {{% choosable language go %}}
 
-<dl class="resources-properties">
-  
-    <dt
+<dl class="resources-properties"><dt
         class="property-optional" title="Optional">
         <span>ctx</span>
         <span class="property-indicator"></span>
@@ -265,9 +276,7 @@ const testPrivateLinkEndpointService = new mongodbatlas.PrivateLinkEndpointServi
     </dt>
     <dd>
       Context object for the current deployment.
-    </dd>
-  
-    <dt
+    </dd><dt
         class="property-required" title="Required">
         <span>name</span>
         <span class="property-indicator"></span>
@@ -275,9 +284,7 @@ const testPrivateLinkEndpointService = new mongodbatlas.PrivateLinkEndpointServi
     </dt>
     <dd>
       The unique name of the resource.
-    </dd>
-  
-    <dt
+    </dd><dt
         class="property-required" title="Required">
         <span>args</span>
         <span class="property-indicator"></span>
@@ -285,9 +292,7 @@ const testPrivateLinkEndpointService = new mongodbatlas.PrivateLinkEndpointServi
     </dt>
     <dd>
       The arguments to resource properties.
-    </dd>
-  
-    <dt
+    </dd><dt
         class="property-optional" title="Optional">
         <span>opts</span>
         <span class="property-indicator"></span>
@@ -295,18 +300,13 @@ const testPrivateLinkEndpointService = new mongodbatlas.PrivateLinkEndpointServi
     </dt>
     <dd>
       Bag of options to control resource&#39;s behavior.
-    </dd>
-  
-
-</dl>
+    </dd></dl>
 
 {{% /choosable %}}
 
 {{% choosable language csharp %}}
 
-<dl class="resources-properties">
-  
-    <dt
+<dl class="resources-properties"><dt
         class="property-required" title="Required">
         <span>name</span>
         <span class="property-indicator"></span>
@@ -314,9 +314,7 @@ const testPrivateLinkEndpointService = new mongodbatlas.PrivateLinkEndpointServi
     </dt>
     <dd>
       The unique name of the resource.
-    </dd>
-  
-    <dt
+    </dd><dt
         class="property-required" title="Required">
         <span>args</span>
         <span class="property-indicator"></span>
@@ -324,9 +322,7 @@ const testPrivateLinkEndpointService = new mongodbatlas.PrivateLinkEndpointServi
     </dt>
     <dd>
       The arguments to resource properties.
-    </dd>
-  
-    <dt
+    </dd><dt
         class="property-optional" title="Optional">
         <span>opts</span>
         <span class="property-indicator"></span>
@@ -334,10 +330,7 @@ const testPrivateLinkEndpointService = new mongodbatlas.PrivateLinkEndpointServi
     </dt>
     <dd>
       Bag of options to control resource&#39;s behavior.
-    </dd>
-  
-
-</dl>
+    </dd></dl>
 
 {{% /choosable %}}
 
@@ -352,9 +345,7 @@ The PrivateLinkEndpointService resource accepts the following [input]({{< relref
 
 
 {{% choosable language csharp %}}
-<dl class="resources-properties">
-
-    <dt class="property-required"
+<dl class="resources-properties"><dt class="property-required"
             title="Required">
         <span id="endpointserviceid_csharp">
 <a href="#endpointserviceid_csharp" style="color: inherit; text-decoration: inherit;">Endpoint<wbr>Service<wbr>Id</a>
@@ -363,8 +354,7 @@ The PrivateLinkEndpointService resource accepts the following [input]({{< relref
         <span class="property-type">string</span>
     </dt>
     <dd>{{% md %}}Unique identifier of the interface endpoint you created in your VPC with the `AWS` or `AZURE` resource.
-{{% /md %}}</dd>
-    <dt class="property-required"
+{{% /md %}}</dd><dt class="property-required"
             title="Required">
         <span id="privatelinkid_csharp">
 <a href="#privatelinkid_csharp" style="color: inherit; text-decoration: inherit;">Private<wbr>Link<wbr>Id</a>
@@ -373,8 +363,7 @@ The PrivateLinkEndpointService resource accepts the following [input]({{< relref
         <span class="property-type">string</span>
     </dt>
     <dd>{{% md %}}Unique identifier of the `AWS` or `AZURE` PrivateLink connection which is created by `mongodbatlas.PrivateLinkEndpoint` resource.
-{{% /md %}}</dd>
-    <dt class="property-required"
+{{% /md %}}</dd><dt class="property-required"
             title="Required">
         <span id="projectid_csharp">
 <a href="#projectid_csharp" style="color: inherit; text-decoration: inherit;">Project<wbr>Id</a>
@@ -383,8 +372,7 @@ The PrivateLinkEndpointService resource accepts the following [input]({{< relref
         <span class="property-type">string</span>
     </dt>
     <dd>{{% md %}}Unique identifier for the project.
-{{% /md %}}</dd>
-    <dt class="property-required"
+{{% /md %}}</dd><dt class="property-required"
             title="Required">
         <span id="providername_csharp">
 <a href="#providername_csharp" style="color: inherit; text-decoration: inherit;">Provider<wbr>Name</a>
@@ -393,8 +381,7 @@ The PrivateLinkEndpointService resource accepts the following [input]({{< relref
         <span class="property-type">string</span>
     </dt>
     <dd>{{% md %}}Cloud provider for which you want to create a private endpoint. Atlas accepts `AWS` or `AZURE`.
-{{% /md %}}</dd>
-    <dt class="property-optional"
+{{% /md %}}</dd><dt class="property-optional"
             title="Optional">
         <span id="privateendpointipaddress_csharp">
 <a href="#privateendpointipaddress_csharp" style="color: inherit; text-decoration: inherit;">Private<wbr>Endpoint<wbr>Ip<wbr>Address</a>
@@ -403,14 +390,11 @@ The PrivateLinkEndpointService resource accepts the following [input]({{< relref
         <span class="property-type">string</span>
     </dt>
     <dd>{{% md %}}Private IP address of the private endpoint network interface you created in your Azure VNet. Only for `AZURE`.
-{{% /md %}}</dd>
-</dl>
+{{% /md %}}</dd></dl>
 {{% /choosable %}}
 
 {{% choosable language go %}}
-<dl class="resources-properties">
-
-    <dt class="property-required"
+<dl class="resources-properties"><dt class="property-required"
             title="Required">
         <span id="endpointserviceid_go">
 <a href="#endpointserviceid_go" style="color: inherit; text-decoration: inherit;">Endpoint<wbr>Service<wbr>Id</a>
@@ -419,8 +403,7 @@ The PrivateLinkEndpointService resource accepts the following [input]({{< relref
         <span class="property-type">string</span>
     </dt>
     <dd>{{% md %}}Unique identifier of the interface endpoint you created in your VPC with the `AWS` or `AZURE` resource.
-{{% /md %}}</dd>
-    <dt class="property-required"
+{{% /md %}}</dd><dt class="property-required"
             title="Required">
         <span id="privatelinkid_go">
 <a href="#privatelinkid_go" style="color: inherit; text-decoration: inherit;">Private<wbr>Link<wbr>Id</a>
@@ -429,8 +412,7 @@ The PrivateLinkEndpointService resource accepts the following [input]({{< relref
         <span class="property-type">string</span>
     </dt>
     <dd>{{% md %}}Unique identifier of the `AWS` or `AZURE` PrivateLink connection which is created by `mongodbatlas.PrivateLinkEndpoint` resource.
-{{% /md %}}</dd>
-    <dt class="property-required"
+{{% /md %}}</dd><dt class="property-required"
             title="Required">
         <span id="projectid_go">
 <a href="#projectid_go" style="color: inherit; text-decoration: inherit;">Project<wbr>Id</a>
@@ -439,8 +421,7 @@ The PrivateLinkEndpointService resource accepts the following [input]({{< relref
         <span class="property-type">string</span>
     </dt>
     <dd>{{% md %}}Unique identifier for the project.
-{{% /md %}}</dd>
-    <dt class="property-required"
+{{% /md %}}</dd><dt class="property-required"
             title="Required">
         <span id="providername_go">
 <a href="#providername_go" style="color: inherit; text-decoration: inherit;">Provider<wbr>Name</a>
@@ -449,8 +430,7 @@ The PrivateLinkEndpointService resource accepts the following [input]({{< relref
         <span class="property-type">string</span>
     </dt>
     <dd>{{% md %}}Cloud provider for which you want to create a private endpoint. Atlas accepts `AWS` or `AZURE`.
-{{% /md %}}</dd>
-    <dt class="property-optional"
+{{% /md %}}</dd><dt class="property-optional"
             title="Optional">
         <span id="privateendpointipaddress_go">
 <a href="#privateendpointipaddress_go" style="color: inherit; text-decoration: inherit;">Private<wbr>Endpoint<wbr>Ip<wbr>Address</a>
@@ -459,14 +439,11 @@ The PrivateLinkEndpointService resource accepts the following [input]({{< relref
         <span class="property-type">string</span>
     </dt>
     <dd>{{% md %}}Private IP address of the private endpoint network interface you created in your Azure VNet. Only for `AZURE`.
-{{% /md %}}</dd>
-</dl>
+{{% /md %}}</dd></dl>
 {{% /choosable %}}
 
 {{% choosable language nodejs %}}
-<dl class="resources-properties">
-
-    <dt class="property-required"
+<dl class="resources-properties"><dt class="property-required"
             title="Required">
         <span id="endpointserviceid_nodejs">
 <a href="#endpointserviceid_nodejs" style="color: inherit; text-decoration: inherit;">endpoint<wbr>Service<wbr>Id</a>
@@ -475,8 +452,7 @@ The PrivateLinkEndpointService resource accepts the following [input]({{< relref
         <span class="property-type">string</span>
     </dt>
     <dd>{{% md %}}Unique identifier of the interface endpoint you created in your VPC with the `AWS` or `AZURE` resource.
-{{% /md %}}</dd>
-    <dt class="property-required"
+{{% /md %}}</dd><dt class="property-required"
             title="Required">
         <span id="privatelinkid_nodejs">
 <a href="#privatelinkid_nodejs" style="color: inherit; text-decoration: inherit;">private<wbr>Link<wbr>Id</a>
@@ -485,8 +461,7 @@ The PrivateLinkEndpointService resource accepts the following [input]({{< relref
         <span class="property-type">string</span>
     </dt>
     <dd>{{% md %}}Unique identifier of the `AWS` or `AZURE` PrivateLink connection which is created by `mongodbatlas.PrivateLinkEndpoint` resource.
-{{% /md %}}</dd>
-    <dt class="property-required"
+{{% /md %}}</dd><dt class="property-required"
             title="Required">
         <span id="projectid_nodejs">
 <a href="#projectid_nodejs" style="color: inherit; text-decoration: inherit;">project<wbr>Id</a>
@@ -495,8 +470,7 @@ The PrivateLinkEndpointService resource accepts the following [input]({{< relref
         <span class="property-type">string</span>
     </dt>
     <dd>{{% md %}}Unique identifier for the project.
-{{% /md %}}</dd>
-    <dt class="property-required"
+{{% /md %}}</dd><dt class="property-required"
             title="Required">
         <span id="providername_nodejs">
 <a href="#providername_nodejs" style="color: inherit; text-decoration: inherit;">provider<wbr>Name</a>
@@ -505,8 +479,7 @@ The PrivateLinkEndpointService resource accepts the following [input]({{< relref
         <span class="property-type">string</span>
     </dt>
     <dd>{{% md %}}Cloud provider for which you want to create a private endpoint. Atlas accepts `AWS` or `AZURE`.
-{{% /md %}}</dd>
-    <dt class="property-optional"
+{{% /md %}}</dd><dt class="property-optional"
             title="Optional">
         <span id="privateendpointipaddress_nodejs">
 <a href="#privateendpointipaddress_nodejs" style="color: inherit; text-decoration: inherit;">private<wbr>Endpoint<wbr>Ip<wbr>Address</a>
@@ -515,14 +488,11 @@ The PrivateLinkEndpointService resource accepts the following [input]({{< relref
         <span class="property-type">string</span>
     </dt>
     <dd>{{% md %}}Private IP address of the private endpoint network interface you created in your Azure VNet. Only for `AZURE`.
-{{% /md %}}</dd>
-</dl>
+{{% /md %}}</dd></dl>
 {{% /choosable %}}
 
 {{% choosable language python %}}
-<dl class="resources-properties">
-
-    <dt class="property-required"
+<dl class="resources-properties"><dt class="property-required"
             title="Required">
         <span id="endpoint_service_id_python">
 <a href="#endpoint_service_id_python" style="color: inherit; text-decoration: inherit;">endpoint_<wbr>service_<wbr>id</a>
@@ -531,8 +501,7 @@ The PrivateLinkEndpointService resource accepts the following [input]({{< relref
         <span class="property-type">str</span>
     </dt>
     <dd>{{% md %}}Unique identifier of the interface endpoint you created in your VPC with the `AWS` or `AZURE` resource.
-{{% /md %}}</dd>
-    <dt class="property-required"
+{{% /md %}}</dd><dt class="property-required"
             title="Required">
         <span id="private_link_id_python">
 <a href="#private_link_id_python" style="color: inherit; text-decoration: inherit;">private_<wbr>link_<wbr>id</a>
@@ -541,8 +510,7 @@ The PrivateLinkEndpointService resource accepts the following [input]({{< relref
         <span class="property-type">str</span>
     </dt>
     <dd>{{% md %}}Unique identifier of the `AWS` or `AZURE` PrivateLink connection which is created by `mongodbatlas.PrivateLinkEndpoint` resource.
-{{% /md %}}</dd>
-    <dt class="property-required"
+{{% /md %}}</dd><dt class="property-required"
             title="Required">
         <span id="project_id_python">
 <a href="#project_id_python" style="color: inherit; text-decoration: inherit;">project_<wbr>id</a>
@@ -551,8 +519,7 @@ The PrivateLinkEndpointService resource accepts the following [input]({{< relref
         <span class="property-type">str</span>
     </dt>
     <dd>{{% md %}}Unique identifier for the project.
-{{% /md %}}</dd>
-    <dt class="property-required"
+{{% /md %}}</dd><dt class="property-required"
             title="Required">
         <span id="provider_name_python">
 <a href="#provider_name_python" style="color: inherit; text-decoration: inherit;">provider_<wbr>name</a>
@@ -561,8 +528,7 @@ The PrivateLinkEndpointService resource accepts the following [input]({{< relref
         <span class="property-type">str</span>
     </dt>
     <dd>{{% md %}}Cloud provider for which you want to create a private endpoint. Atlas accepts `AWS` or `AZURE`.
-{{% /md %}}</dd>
-    <dt class="property-optional"
+{{% /md %}}</dd><dt class="property-optional"
             title="Optional">
         <span id="private_endpoint_ip_address_python">
 <a href="#private_endpoint_ip_address_python" style="color: inherit; text-decoration: inherit;">private_<wbr>endpoint_<wbr>ip_<wbr>address</a>
@@ -571,8 +537,7 @@ The PrivateLinkEndpointService resource accepts the following [input]({{< relref
         <span class="property-type">str</span>
     </dt>
     <dd>{{% md %}}Private IP address of the private endpoint network interface you created in your Azure VNet. Only for `AZURE`.
-{{% /md %}}</dd>
-</dl>
+{{% /md %}}</dd></dl>
 {{% /choosable %}}
 
 
@@ -583,9 +548,7 @@ All [input](#inputs) properties are implicitly available as output properties. A
 
 
 {{% choosable language csharp %}}
-<dl class="resources-properties">
-
-    <dt class="property-"
+<dl class="resources-properties"><dt class="property-"
             title="">
         <span id="awsconnectionstatus_csharp">
 <a href="#awsconnectionstatus_csharp" style="color: inherit; text-decoration: inherit;">Aws<wbr>Connection<wbr>Status</a>
@@ -595,8 +558,7 @@ All [input](#inputs) properties are implicitly available as output properties. A
     </dt>
     <dd>{{% md %}}Status of the interface endpoint for AWS.
 Returns one of the following values:
-{{% /md %}}</dd>
-    <dt class="property-"
+{{% /md %}}</dd><dt class="property-"
             title="">
         <span id="azurestatus_csharp">
 <a href="#azurestatus_csharp" style="color: inherit; text-decoration: inherit;">Azure<wbr>Status</a>
@@ -606,8 +568,7 @@ Returns one of the following values:
     </dt>
     <dd>{{% md %}}Status of the interface endpoint for AZURE.
 Returns one of the following values:
-{{% /md %}}</dd>
-    <dt class="property-"
+{{% /md %}}</dd><dt class="property-"
             title="">
         <span id="deleterequested_csharp">
 <a href="#deleterequested_csharp" style="color: inherit; text-decoration: inherit;">Delete<wbr>Requested</a>
@@ -616,8 +577,7 @@ Returns one of the following values:
         <span class="property-type">bool</span>
     </dt>
     <dd>{{% md %}}Indicates if Atlas received a request to remove the interface endpoint from the private endpoint connection.
-{{% /md %}}</dd>
-    <dt class="property-"
+{{% /md %}}</dd><dt class="property-"
             title="">
         <span id="errormessage_csharp">
 <a href="#errormessage_csharp" style="color: inherit; text-decoration: inherit;">Error<wbr>Message</a>
@@ -626,8 +586,7 @@ Returns one of the following values:
         <span class="property-type">string</span>
     </dt>
     <dd>{{% md %}}Error message pertaining to the interface endpoint. Returns null if there are no errors.
-{{% /md %}}</dd>
-    <dt class="property-"
+{{% /md %}}</dd><dt class="property-"
             title="">
         <span id="id_csharp">
 <a href="#id_csharp" style="color: inherit; text-decoration: inherit;">Id</a>
@@ -635,8 +594,7 @@ Returns one of the following values:
         <span class="property-indicator"></span>
         <span class="property-type">string</span>
     </dt>
-    <dd>{{% md %}}The provider-assigned unique ID for this managed resource.{{% /md %}}</dd>
-    <dt class="property-"
+    <dd>{{% md %}}The provider-assigned unique ID for this managed resource.{{% /md %}}</dd><dt class="property-"
             title="">
         <span id="interfaceendpointid_csharp">
 <a href="#interfaceendpointid_csharp" style="color: inherit; text-decoration: inherit;">Interface<wbr>Endpoint<wbr>Id</a>
@@ -645,8 +603,7 @@ Returns one of the following values:
         <span class="property-type">string</span>
     </dt>
     <dd>{{% md %}}Unique identifier of the interface endpoint.
-{{% /md %}}</dd>
-    <dt class="property-"
+{{% /md %}}</dd><dt class="property-"
             title="">
         <span id="privateendpointconnectionname_csharp">
 <a href="#privateendpointconnectionname_csharp" style="color: inherit; text-decoration: inherit;">Private<wbr>Endpoint<wbr>Connection<wbr>Name</a>
@@ -655,8 +612,7 @@ Returns one of the following values:
         <span class="property-type">string</span>
     </dt>
     <dd>{{% md %}}Name of the connection for this private endpoint that Atlas generates.
-{{% /md %}}</dd>
-    <dt class="property-"
+{{% /md %}}</dd><dt class="property-"
             title="">
         <span id="privateendpointresourceid_csharp">
 <a href="#privateendpointresourceid_csharp" style="color: inherit; text-decoration: inherit;">Private<wbr>Endpoint<wbr>Resource<wbr>Id</a>
@@ -665,14 +621,11 @@ Returns one of the following values:
         <span class="property-type">string</span>
     </dt>
     <dd>{{% md %}}Unique identifier of the private endpoint.
-{{% /md %}}</dd>
-</dl>
+{{% /md %}}</dd></dl>
 {{% /choosable %}}
 
 {{% choosable language go %}}
-<dl class="resources-properties">
-
-    <dt class="property-"
+<dl class="resources-properties"><dt class="property-"
             title="">
         <span id="awsconnectionstatus_go">
 <a href="#awsconnectionstatus_go" style="color: inherit; text-decoration: inherit;">Aws<wbr>Connection<wbr>Status</a>
@@ -682,8 +635,7 @@ Returns one of the following values:
     </dt>
     <dd>{{% md %}}Status of the interface endpoint for AWS.
 Returns one of the following values:
-{{% /md %}}</dd>
-    <dt class="property-"
+{{% /md %}}</dd><dt class="property-"
             title="">
         <span id="azurestatus_go">
 <a href="#azurestatus_go" style="color: inherit; text-decoration: inherit;">Azure<wbr>Status</a>
@@ -693,8 +645,7 @@ Returns one of the following values:
     </dt>
     <dd>{{% md %}}Status of the interface endpoint for AZURE.
 Returns one of the following values:
-{{% /md %}}</dd>
-    <dt class="property-"
+{{% /md %}}</dd><dt class="property-"
             title="">
         <span id="deleterequested_go">
 <a href="#deleterequested_go" style="color: inherit; text-decoration: inherit;">Delete<wbr>Requested</a>
@@ -703,8 +654,7 @@ Returns one of the following values:
         <span class="property-type">bool</span>
     </dt>
     <dd>{{% md %}}Indicates if Atlas received a request to remove the interface endpoint from the private endpoint connection.
-{{% /md %}}</dd>
-    <dt class="property-"
+{{% /md %}}</dd><dt class="property-"
             title="">
         <span id="errormessage_go">
 <a href="#errormessage_go" style="color: inherit; text-decoration: inherit;">Error<wbr>Message</a>
@@ -713,8 +663,7 @@ Returns one of the following values:
         <span class="property-type">string</span>
     </dt>
     <dd>{{% md %}}Error message pertaining to the interface endpoint. Returns null if there are no errors.
-{{% /md %}}</dd>
-    <dt class="property-"
+{{% /md %}}</dd><dt class="property-"
             title="">
         <span id="id_go">
 <a href="#id_go" style="color: inherit; text-decoration: inherit;">Id</a>
@@ -722,8 +671,7 @@ Returns one of the following values:
         <span class="property-indicator"></span>
         <span class="property-type">string</span>
     </dt>
-    <dd>{{% md %}}The provider-assigned unique ID for this managed resource.{{% /md %}}</dd>
-    <dt class="property-"
+    <dd>{{% md %}}The provider-assigned unique ID for this managed resource.{{% /md %}}</dd><dt class="property-"
             title="">
         <span id="interfaceendpointid_go">
 <a href="#interfaceendpointid_go" style="color: inherit; text-decoration: inherit;">Interface<wbr>Endpoint<wbr>Id</a>
@@ -732,8 +680,7 @@ Returns one of the following values:
         <span class="property-type">string</span>
     </dt>
     <dd>{{% md %}}Unique identifier of the interface endpoint.
-{{% /md %}}</dd>
-    <dt class="property-"
+{{% /md %}}</dd><dt class="property-"
             title="">
         <span id="privateendpointconnectionname_go">
 <a href="#privateendpointconnectionname_go" style="color: inherit; text-decoration: inherit;">Private<wbr>Endpoint<wbr>Connection<wbr>Name</a>
@@ -742,8 +689,7 @@ Returns one of the following values:
         <span class="property-type">string</span>
     </dt>
     <dd>{{% md %}}Name of the connection for this private endpoint that Atlas generates.
-{{% /md %}}</dd>
-    <dt class="property-"
+{{% /md %}}</dd><dt class="property-"
             title="">
         <span id="privateendpointresourceid_go">
 <a href="#privateendpointresourceid_go" style="color: inherit; text-decoration: inherit;">Private<wbr>Endpoint<wbr>Resource<wbr>Id</a>
@@ -752,14 +698,11 @@ Returns one of the following values:
         <span class="property-type">string</span>
     </dt>
     <dd>{{% md %}}Unique identifier of the private endpoint.
-{{% /md %}}</dd>
-</dl>
+{{% /md %}}</dd></dl>
 {{% /choosable %}}
 
 {{% choosable language nodejs %}}
-<dl class="resources-properties">
-
-    <dt class="property-"
+<dl class="resources-properties"><dt class="property-"
             title="">
         <span id="awsconnectionstatus_nodejs">
 <a href="#awsconnectionstatus_nodejs" style="color: inherit; text-decoration: inherit;">aws<wbr>Connection<wbr>Status</a>
@@ -769,8 +712,7 @@ Returns one of the following values:
     </dt>
     <dd>{{% md %}}Status of the interface endpoint for AWS.
 Returns one of the following values:
-{{% /md %}}</dd>
-    <dt class="property-"
+{{% /md %}}</dd><dt class="property-"
             title="">
         <span id="azurestatus_nodejs">
 <a href="#azurestatus_nodejs" style="color: inherit; text-decoration: inherit;">azure<wbr>Status</a>
@@ -780,8 +722,7 @@ Returns one of the following values:
     </dt>
     <dd>{{% md %}}Status of the interface endpoint for AZURE.
 Returns one of the following values:
-{{% /md %}}</dd>
-    <dt class="property-"
+{{% /md %}}</dd><dt class="property-"
             title="">
         <span id="deleterequested_nodejs">
 <a href="#deleterequested_nodejs" style="color: inherit; text-decoration: inherit;">delete<wbr>Requested</a>
@@ -790,8 +731,7 @@ Returns one of the following values:
         <span class="property-type">boolean</span>
     </dt>
     <dd>{{% md %}}Indicates if Atlas received a request to remove the interface endpoint from the private endpoint connection.
-{{% /md %}}</dd>
-    <dt class="property-"
+{{% /md %}}</dd><dt class="property-"
             title="">
         <span id="errormessage_nodejs">
 <a href="#errormessage_nodejs" style="color: inherit; text-decoration: inherit;">error<wbr>Message</a>
@@ -800,8 +740,7 @@ Returns one of the following values:
         <span class="property-type">string</span>
     </dt>
     <dd>{{% md %}}Error message pertaining to the interface endpoint. Returns null if there are no errors.
-{{% /md %}}</dd>
-    <dt class="property-"
+{{% /md %}}</dd><dt class="property-"
             title="">
         <span id="id_nodejs">
 <a href="#id_nodejs" style="color: inherit; text-decoration: inherit;">id</a>
@@ -809,8 +748,7 @@ Returns one of the following values:
         <span class="property-indicator"></span>
         <span class="property-type">string</span>
     </dt>
-    <dd>{{% md %}}The provider-assigned unique ID for this managed resource.{{% /md %}}</dd>
-    <dt class="property-"
+    <dd>{{% md %}}The provider-assigned unique ID for this managed resource.{{% /md %}}</dd><dt class="property-"
             title="">
         <span id="interfaceendpointid_nodejs">
 <a href="#interfaceendpointid_nodejs" style="color: inherit; text-decoration: inherit;">interface<wbr>Endpoint<wbr>Id</a>
@@ -819,8 +757,7 @@ Returns one of the following values:
         <span class="property-type">string</span>
     </dt>
     <dd>{{% md %}}Unique identifier of the interface endpoint.
-{{% /md %}}</dd>
-    <dt class="property-"
+{{% /md %}}</dd><dt class="property-"
             title="">
         <span id="privateendpointconnectionname_nodejs">
 <a href="#privateendpointconnectionname_nodejs" style="color: inherit; text-decoration: inherit;">private<wbr>Endpoint<wbr>Connection<wbr>Name</a>
@@ -829,8 +766,7 @@ Returns one of the following values:
         <span class="property-type">string</span>
     </dt>
     <dd>{{% md %}}Name of the connection for this private endpoint that Atlas generates.
-{{% /md %}}</dd>
-    <dt class="property-"
+{{% /md %}}</dd><dt class="property-"
             title="">
         <span id="privateendpointresourceid_nodejs">
 <a href="#privateendpointresourceid_nodejs" style="color: inherit; text-decoration: inherit;">private<wbr>Endpoint<wbr>Resource<wbr>Id</a>
@@ -839,14 +775,11 @@ Returns one of the following values:
         <span class="property-type">string</span>
     </dt>
     <dd>{{% md %}}Unique identifier of the private endpoint.
-{{% /md %}}</dd>
-</dl>
+{{% /md %}}</dd></dl>
 {{% /choosable %}}
 
 {{% choosable language python %}}
-<dl class="resources-properties">
-
-    <dt class="property-"
+<dl class="resources-properties"><dt class="property-"
             title="">
         <span id="aws_connection_status_python">
 <a href="#aws_connection_status_python" style="color: inherit; text-decoration: inherit;">aws_<wbr>connection_<wbr>status</a>
@@ -856,8 +789,7 @@ Returns one of the following values:
     </dt>
     <dd>{{% md %}}Status of the interface endpoint for AWS.
 Returns one of the following values:
-{{% /md %}}</dd>
-    <dt class="property-"
+{{% /md %}}</dd><dt class="property-"
             title="">
         <span id="azure_status_python">
 <a href="#azure_status_python" style="color: inherit; text-decoration: inherit;">azure_<wbr>status</a>
@@ -867,8 +799,7 @@ Returns one of the following values:
     </dt>
     <dd>{{% md %}}Status of the interface endpoint for AZURE.
 Returns one of the following values:
-{{% /md %}}</dd>
-    <dt class="property-"
+{{% /md %}}</dd><dt class="property-"
             title="">
         <span id="delete_requested_python">
 <a href="#delete_requested_python" style="color: inherit; text-decoration: inherit;">delete_<wbr>requested</a>
@@ -877,8 +808,7 @@ Returns one of the following values:
         <span class="property-type">bool</span>
     </dt>
     <dd>{{% md %}}Indicates if Atlas received a request to remove the interface endpoint from the private endpoint connection.
-{{% /md %}}</dd>
-    <dt class="property-"
+{{% /md %}}</dd><dt class="property-"
             title="">
         <span id="error_message_python">
 <a href="#error_message_python" style="color: inherit; text-decoration: inherit;">error_<wbr>message</a>
@@ -887,8 +817,7 @@ Returns one of the following values:
         <span class="property-type">str</span>
     </dt>
     <dd>{{% md %}}Error message pertaining to the interface endpoint. Returns null if there are no errors.
-{{% /md %}}</dd>
-    <dt class="property-"
+{{% /md %}}</dd><dt class="property-"
             title="">
         <span id="id_python">
 <a href="#id_python" style="color: inherit; text-decoration: inherit;">id</a>
@@ -896,8 +825,7 @@ Returns one of the following values:
         <span class="property-indicator"></span>
         <span class="property-type">str</span>
     </dt>
-    <dd>{{% md %}}The provider-assigned unique ID for this managed resource.{{% /md %}}</dd>
-    <dt class="property-"
+    <dd>{{% md %}}The provider-assigned unique ID for this managed resource.{{% /md %}}</dd><dt class="property-"
             title="">
         <span id="interface_endpoint_id_python">
 <a href="#interface_endpoint_id_python" style="color: inherit; text-decoration: inherit;">interface_<wbr>endpoint_<wbr>id</a>
@@ -906,8 +834,7 @@ Returns one of the following values:
         <span class="property-type">str</span>
     </dt>
     <dd>{{% md %}}Unique identifier of the interface endpoint.
-{{% /md %}}</dd>
-    <dt class="property-"
+{{% /md %}}</dd><dt class="property-"
             title="">
         <span id="private_endpoint_connection_name_python">
 <a href="#private_endpoint_connection_name_python" style="color: inherit; text-decoration: inherit;">private_<wbr>endpoint_<wbr>connection_<wbr>name</a>
@@ -916,8 +843,7 @@ Returns one of the following values:
         <span class="property-type">str</span>
     </dt>
     <dd>{{% md %}}Name of the connection for this private endpoint that Atlas generates.
-{{% /md %}}</dd>
-    <dt class="property-"
+{{% /md %}}</dd><dt class="property-"
             title="">
         <span id="private_endpoint_resource_id_python">
 <a href="#private_endpoint_resource_id_python" style="color: inherit; text-decoration: inherit;">private_<wbr>endpoint_<wbr>resource_<wbr>id</a>
@@ -926,8 +852,7 @@ Returns one of the following values:
         <span class="property-type">str</span>
     </dt>
     <dd>{{% md %}}Unique identifier of the private endpoint.
-{{% /md %}}</dd>
-</dl>
+{{% /md %}}</dd></dl>
 {{% /choosable %}}
 
 
@@ -1054,9 +979,7 @@ The following state arguments are supported:
 
 
 {{% choosable language csharp %}}
-<dl class="resources-properties">
-
-    <dt class="property-optional"
+<dl class="resources-properties"><dt class="property-optional"
             title="Optional">
         <span id="state_awsconnectionstatus_csharp">
 <a href="#state_awsconnectionstatus_csharp" style="color: inherit; text-decoration: inherit;">Aws<wbr>Connection<wbr>Status</a>
@@ -1066,8 +989,7 @@ The following state arguments are supported:
     </dt>
     <dd>{{% md %}}Status of the interface endpoint for AWS.
 Returns one of the following values:
-{{% /md %}}</dd>
-    <dt class="property-optional"
+{{% /md %}}</dd><dt class="property-optional"
             title="Optional">
         <span id="state_azurestatus_csharp">
 <a href="#state_azurestatus_csharp" style="color: inherit; text-decoration: inherit;">Azure<wbr>Status</a>
@@ -1077,8 +999,7 @@ Returns one of the following values:
     </dt>
     <dd>{{% md %}}Status of the interface endpoint for AZURE.
 Returns one of the following values:
-{{% /md %}}</dd>
-    <dt class="property-optional"
+{{% /md %}}</dd><dt class="property-optional"
             title="Optional">
         <span id="state_deleterequested_csharp">
 <a href="#state_deleterequested_csharp" style="color: inherit; text-decoration: inherit;">Delete<wbr>Requested</a>
@@ -1087,8 +1008,7 @@ Returns one of the following values:
         <span class="property-type">bool</span>
     </dt>
     <dd>{{% md %}}Indicates if Atlas received a request to remove the interface endpoint from the private endpoint connection.
-{{% /md %}}</dd>
-    <dt class="property-optional"
+{{% /md %}}</dd><dt class="property-optional"
             title="Optional">
         <span id="state_endpointserviceid_csharp">
 <a href="#state_endpointserviceid_csharp" style="color: inherit; text-decoration: inherit;">Endpoint<wbr>Service<wbr>Id</a>
@@ -1097,8 +1017,7 @@ Returns one of the following values:
         <span class="property-type">string</span>
     </dt>
     <dd>{{% md %}}Unique identifier of the interface endpoint you created in your VPC with the `AWS` or `AZURE` resource.
-{{% /md %}}</dd>
-    <dt class="property-optional"
+{{% /md %}}</dd><dt class="property-optional"
             title="Optional">
         <span id="state_errormessage_csharp">
 <a href="#state_errormessage_csharp" style="color: inherit; text-decoration: inherit;">Error<wbr>Message</a>
@@ -1107,8 +1026,7 @@ Returns one of the following values:
         <span class="property-type">string</span>
     </dt>
     <dd>{{% md %}}Error message pertaining to the interface endpoint. Returns null if there are no errors.
-{{% /md %}}</dd>
-    <dt class="property-optional"
+{{% /md %}}</dd><dt class="property-optional"
             title="Optional">
         <span id="state_interfaceendpointid_csharp">
 <a href="#state_interfaceendpointid_csharp" style="color: inherit; text-decoration: inherit;">Interface<wbr>Endpoint<wbr>Id</a>
@@ -1117,8 +1035,7 @@ Returns one of the following values:
         <span class="property-type">string</span>
     </dt>
     <dd>{{% md %}}Unique identifier of the interface endpoint.
-{{% /md %}}</dd>
-    <dt class="property-optional"
+{{% /md %}}</dd><dt class="property-optional"
             title="Optional">
         <span id="state_privateendpointconnectionname_csharp">
 <a href="#state_privateendpointconnectionname_csharp" style="color: inherit; text-decoration: inherit;">Private<wbr>Endpoint<wbr>Connection<wbr>Name</a>
@@ -1127,8 +1044,7 @@ Returns one of the following values:
         <span class="property-type">string</span>
     </dt>
     <dd>{{% md %}}Name of the connection for this private endpoint that Atlas generates.
-{{% /md %}}</dd>
-    <dt class="property-optional"
+{{% /md %}}</dd><dt class="property-optional"
             title="Optional">
         <span id="state_privateendpointipaddress_csharp">
 <a href="#state_privateendpointipaddress_csharp" style="color: inherit; text-decoration: inherit;">Private<wbr>Endpoint<wbr>Ip<wbr>Address</a>
@@ -1137,8 +1053,7 @@ Returns one of the following values:
         <span class="property-type">string</span>
     </dt>
     <dd>{{% md %}}Private IP address of the private endpoint network interface you created in your Azure VNet. Only for `AZURE`.
-{{% /md %}}</dd>
-    <dt class="property-optional"
+{{% /md %}}</dd><dt class="property-optional"
             title="Optional">
         <span id="state_privateendpointresourceid_csharp">
 <a href="#state_privateendpointresourceid_csharp" style="color: inherit; text-decoration: inherit;">Private<wbr>Endpoint<wbr>Resource<wbr>Id</a>
@@ -1147,8 +1062,7 @@ Returns one of the following values:
         <span class="property-type">string</span>
     </dt>
     <dd>{{% md %}}Unique identifier of the private endpoint.
-{{% /md %}}</dd>
-    <dt class="property-optional"
+{{% /md %}}</dd><dt class="property-optional"
             title="Optional">
         <span id="state_privatelinkid_csharp">
 <a href="#state_privatelinkid_csharp" style="color: inherit; text-decoration: inherit;">Private<wbr>Link<wbr>Id</a>
@@ -1157,8 +1071,7 @@ Returns one of the following values:
         <span class="property-type">string</span>
     </dt>
     <dd>{{% md %}}Unique identifier of the `AWS` or `AZURE` PrivateLink connection which is created by `mongodbatlas.PrivateLinkEndpoint` resource.
-{{% /md %}}</dd>
-    <dt class="property-optional"
+{{% /md %}}</dd><dt class="property-optional"
             title="Optional">
         <span id="state_projectid_csharp">
 <a href="#state_projectid_csharp" style="color: inherit; text-decoration: inherit;">Project<wbr>Id</a>
@@ -1167,8 +1080,7 @@ Returns one of the following values:
         <span class="property-type">string</span>
     </dt>
     <dd>{{% md %}}Unique identifier for the project.
-{{% /md %}}</dd>
-    <dt class="property-optional"
+{{% /md %}}</dd><dt class="property-optional"
             title="Optional">
         <span id="state_providername_csharp">
 <a href="#state_providername_csharp" style="color: inherit; text-decoration: inherit;">Provider<wbr>Name</a>
@@ -1177,14 +1089,11 @@ Returns one of the following values:
         <span class="property-type">string</span>
     </dt>
     <dd>{{% md %}}Cloud provider for which you want to create a private endpoint. Atlas accepts `AWS` or `AZURE`.
-{{% /md %}}</dd>
-</dl>
+{{% /md %}}</dd></dl>
 {{% /choosable %}}
 
 {{% choosable language go %}}
-<dl class="resources-properties">
-
-    <dt class="property-optional"
+<dl class="resources-properties"><dt class="property-optional"
             title="Optional">
         <span id="state_awsconnectionstatus_go">
 <a href="#state_awsconnectionstatus_go" style="color: inherit; text-decoration: inherit;">Aws<wbr>Connection<wbr>Status</a>
@@ -1194,8 +1103,7 @@ Returns one of the following values:
     </dt>
     <dd>{{% md %}}Status of the interface endpoint for AWS.
 Returns one of the following values:
-{{% /md %}}</dd>
-    <dt class="property-optional"
+{{% /md %}}</dd><dt class="property-optional"
             title="Optional">
         <span id="state_azurestatus_go">
 <a href="#state_azurestatus_go" style="color: inherit; text-decoration: inherit;">Azure<wbr>Status</a>
@@ -1205,8 +1113,7 @@ Returns one of the following values:
     </dt>
     <dd>{{% md %}}Status of the interface endpoint for AZURE.
 Returns one of the following values:
-{{% /md %}}</dd>
-    <dt class="property-optional"
+{{% /md %}}</dd><dt class="property-optional"
             title="Optional">
         <span id="state_deleterequested_go">
 <a href="#state_deleterequested_go" style="color: inherit; text-decoration: inherit;">Delete<wbr>Requested</a>
@@ -1215,8 +1122,7 @@ Returns one of the following values:
         <span class="property-type">bool</span>
     </dt>
     <dd>{{% md %}}Indicates if Atlas received a request to remove the interface endpoint from the private endpoint connection.
-{{% /md %}}</dd>
-    <dt class="property-optional"
+{{% /md %}}</dd><dt class="property-optional"
             title="Optional">
         <span id="state_endpointserviceid_go">
 <a href="#state_endpointserviceid_go" style="color: inherit; text-decoration: inherit;">Endpoint<wbr>Service<wbr>Id</a>
@@ -1225,8 +1131,7 @@ Returns one of the following values:
         <span class="property-type">string</span>
     </dt>
     <dd>{{% md %}}Unique identifier of the interface endpoint you created in your VPC with the `AWS` or `AZURE` resource.
-{{% /md %}}</dd>
-    <dt class="property-optional"
+{{% /md %}}</dd><dt class="property-optional"
             title="Optional">
         <span id="state_errormessage_go">
 <a href="#state_errormessage_go" style="color: inherit; text-decoration: inherit;">Error<wbr>Message</a>
@@ -1235,8 +1140,7 @@ Returns one of the following values:
         <span class="property-type">string</span>
     </dt>
     <dd>{{% md %}}Error message pertaining to the interface endpoint. Returns null if there are no errors.
-{{% /md %}}</dd>
-    <dt class="property-optional"
+{{% /md %}}</dd><dt class="property-optional"
             title="Optional">
         <span id="state_interfaceendpointid_go">
 <a href="#state_interfaceendpointid_go" style="color: inherit; text-decoration: inherit;">Interface<wbr>Endpoint<wbr>Id</a>
@@ -1245,8 +1149,7 @@ Returns one of the following values:
         <span class="property-type">string</span>
     </dt>
     <dd>{{% md %}}Unique identifier of the interface endpoint.
-{{% /md %}}</dd>
-    <dt class="property-optional"
+{{% /md %}}</dd><dt class="property-optional"
             title="Optional">
         <span id="state_privateendpointconnectionname_go">
 <a href="#state_privateendpointconnectionname_go" style="color: inherit; text-decoration: inherit;">Private<wbr>Endpoint<wbr>Connection<wbr>Name</a>
@@ -1255,8 +1158,7 @@ Returns one of the following values:
         <span class="property-type">string</span>
     </dt>
     <dd>{{% md %}}Name of the connection for this private endpoint that Atlas generates.
-{{% /md %}}</dd>
-    <dt class="property-optional"
+{{% /md %}}</dd><dt class="property-optional"
             title="Optional">
         <span id="state_privateendpointipaddress_go">
 <a href="#state_privateendpointipaddress_go" style="color: inherit; text-decoration: inherit;">Private<wbr>Endpoint<wbr>Ip<wbr>Address</a>
@@ -1265,8 +1167,7 @@ Returns one of the following values:
         <span class="property-type">string</span>
     </dt>
     <dd>{{% md %}}Private IP address of the private endpoint network interface you created in your Azure VNet. Only for `AZURE`.
-{{% /md %}}</dd>
-    <dt class="property-optional"
+{{% /md %}}</dd><dt class="property-optional"
             title="Optional">
         <span id="state_privateendpointresourceid_go">
 <a href="#state_privateendpointresourceid_go" style="color: inherit; text-decoration: inherit;">Private<wbr>Endpoint<wbr>Resource<wbr>Id</a>
@@ -1275,8 +1176,7 @@ Returns one of the following values:
         <span class="property-type">string</span>
     </dt>
     <dd>{{% md %}}Unique identifier of the private endpoint.
-{{% /md %}}</dd>
-    <dt class="property-optional"
+{{% /md %}}</dd><dt class="property-optional"
             title="Optional">
         <span id="state_privatelinkid_go">
 <a href="#state_privatelinkid_go" style="color: inherit; text-decoration: inherit;">Private<wbr>Link<wbr>Id</a>
@@ -1285,8 +1185,7 @@ Returns one of the following values:
         <span class="property-type">string</span>
     </dt>
     <dd>{{% md %}}Unique identifier of the `AWS` or `AZURE` PrivateLink connection which is created by `mongodbatlas.PrivateLinkEndpoint` resource.
-{{% /md %}}</dd>
-    <dt class="property-optional"
+{{% /md %}}</dd><dt class="property-optional"
             title="Optional">
         <span id="state_projectid_go">
 <a href="#state_projectid_go" style="color: inherit; text-decoration: inherit;">Project<wbr>Id</a>
@@ -1295,8 +1194,7 @@ Returns one of the following values:
         <span class="property-type">string</span>
     </dt>
     <dd>{{% md %}}Unique identifier for the project.
-{{% /md %}}</dd>
-    <dt class="property-optional"
+{{% /md %}}</dd><dt class="property-optional"
             title="Optional">
         <span id="state_providername_go">
 <a href="#state_providername_go" style="color: inherit; text-decoration: inherit;">Provider<wbr>Name</a>
@@ -1305,14 +1203,11 @@ Returns one of the following values:
         <span class="property-type">string</span>
     </dt>
     <dd>{{% md %}}Cloud provider for which you want to create a private endpoint. Atlas accepts `AWS` or `AZURE`.
-{{% /md %}}</dd>
-</dl>
+{{% /md %}}</dd></dl>
 {{% /choosable %}}
 
 {{% choosable language nodejs %}}
-<dl class="resources-properties">
-
-    <dt class="property-optional"
+<dl class="resources-properties"><dt class="property-optional"
             title="Optional">
         <span id="state_awsconnectionstatus_nodejs">
 <a href="#state_awsconnectionstatus_nodejs" style="color: inherit; text-decoration: inherit;">aws<wbr>Connection<wbr>Status</a>
@@ -1322,8 +1217,7 @@ Returns one of the following values:
     </dt>
     <dd>{{% md %}}Status of the interface endpoint for AWS.
 Returns one of the following values:
-{{% /md %}}</dd>
-    <dt class="property-optional"
+{{% /md %}}</dd><dt class="property-optional"
             title="Optional">
         <span id="state_azurestatus_nodejs">
 <a href="#state_azurestatus_nodejs" style="color: inherit; text-decoration: inherit;">azure<wbr>Status</a>
@@ -1333,8 +1227,7 @@ Returns one of the following values:
     </dt>
     <dd>{{% md %}}Status of the interface endpoint for AZURE.
 Returns one of the following values:
-{{% /md %}}</dd>
-    <dt class="property-optional"
+{{% /md %}}</dd><dt class="property-optional"
             title="Optional">
         <span id="state_deleterequested_nodejs">
 <a href="#state_deleterequested_nodejs" style="color: inherit; text-decoration: inherit;">delete<wbr>Requested</a>
@@ -1343,8 +1236,7 @@ Returns one of the following values:
         <span class="property-type">boolean</span>
     </dt>
     <dd>{{% md %}}Indicates if Atlas received a request to remove the interface endpoint from the private endpoint connection.
-{{% /md %}}</dd>
-    <dt class="property-optional"
+{{% /md %}}</dd><dt class="property-optional"
             title="Optional">
         <span id="state_endpointserviceid_nodejs">
 <a href="#state_endpointserviceid_nodejs" style="color: inherit; text-decoration: inherit;">endpoint<wbr>Service<wbr>Id</a>
@@ -1353,8 +1245,7 @@ Returns one of the following values:
         <span class="property-type">string</span>
     </dt>
     <dd>{{% md %}}Unique identifier of the interface endpoint you created in your VPC with the `AWS` or `AZURE` resource.
-{{% /md %}}</dd>
-    <dt class="property-optional"
+{{% /md %}}</dd><dt class="property-optional"
             title="Optional">
         <span id="state_errormessage_nodejs">
 <a href="#state_errormessage_nodejs" style="color: inherit; text-decoration: inherit;">error<wbr>Message</a>
@@ -1363,8 +1254,7 @@ Returns one of the following values:
         <span class="property-type">string</span>
     </dt>
     <dd>{{% md %}}Error message pertaining to the interface endpoint. Returns null if there are no errors.
-{{% /md %}}</dd>
-    <dt class="property-optional"
+{{% /md %}}</dd><dt class="property-optional"
             title="Optional">
         <span id="state_interfaceendpointid_nodejs">
 <a href="#state_interfaceendpointid_nodejs" style="color: inherit; text-decoration: inherit;">interface<wbr>Endpoint<wbr>Id</a>
@@ -1373,8 +1263,7 @@ Returns one of the following values:
         <span class="property-type">string</span>
     </dt>
     <dd>{{% md %}}Unique identifier of the interface endpoint.
-{{% /md %}}</dd>
-    <dt class="property-optional"
+{{% /md %}}</dd><dt class="property-optional"
             title="Optional">
         <span id="state_privateendpointconnectionname_nodejs">
 <a href="#state_privateendpointconnectionname_nodejs" style="color: inherit; text-decoration: inherit;">private<wbr>Endpoint<wbr>Connection<wbr>Name</a>
@@ -1383,8 +1272,7 @@ Returns one of the following values:
         <span class="property-type">string</span>
     </dt>
     <dd>{{% md %}}Name of the connection for this private endpoint that Atlas generates.
-{{% /md %}}</dd>
-    <dt class="property-optional"
+{{% /md %}}</dd><dt class="property-optional"
             title="Optional">
         <span id="state_privateendpointipaddress_nodejs">
 <a href="#state_privateendpointipaddress_nodejs" style="color: inherit; text-decoration: inherit;">private<wbr>Endpoint<wbr>Ip<wbr>Address</a>
@@ -1393,8 +1281,7 @@ Returns one of the following values:
         <span class="property-type">string</span>
     </dt>
     <dd>{{% md %}}Private IP address of the private endpoint network interface you created in your Azure VNet. Only for `AZURE`.
-{{% /md %}}</dd>
-    <dt class="property-optional"
+{{% /md %}}</dd><dt class="property-optional"
             title="Optional">
         <span id="state_privateendpointresourceid_nodejs">
 <a href="#state_privateendpointresourceid_nodejs" style="color: inherit; text-decoration: inherit;">private<wbr>Endpoint<wbr>Resource<wbr>Id</a>
@@ -1403,8 +1290,7 @@ Returns one of the following values:
         <span class="property-type">string</span>
     </dt>
     <dd>{{% md %}}Unique identifier of the private endpoint.
-{{% /md %}}</dd>
-    <dt class="property-optional"
+{{% /md %}}</dd><dt class="property-optional"
             title="Optional">
         <span id="state_privatelinkid_nodejs">
 <a href="#state_privatelinkid_nodejs" style="color: inherit; text-decoration: inherit;">private<wbr>Link<wbr>Id</a>
@@ -1413,8 +1299,7 @@ Returns one of the following values:
         <span class="property-type">string</span>
     </dt>
     <dd>{{% md %}}Unique identifier of the `AWS` or `AZURE` PrivateLink connection which is created by `mongodbatlas.PrivateLinkEndpoint` resource.
-{{% /md %}}</dd>
-    <dt class="property-optional"
+{{% /md %}}</dd><dt class="property-optional"
             title="Optional">
         <span id="state_projectid_nodejs">
 <a href="#state_projectid_nodejs" style="color: inherit; text-decoration: inherit;">project<wbr>Id</a>
@@ -1423,8 +1308,7 @@ Returns one of the following values:
         <span class="property-type">string</span>
     </dt>
     <dd>{{% md %}}Unique identifier for the project.
-{{% /md %}}</dd>
-    <dt class="property-optional"
+{{% /md %}}</dd><dt class="property-optional"
             title="Optional">
         <span id="state_providername_nodejs">
 <a href="#state_providername_nodejs" style="color: inherit; text-decoration: inherit;">provider<wbr>Name</a>
@@ -1433,14 +1317,11 @@ Returns one of the following values:
         <span class="property-type">string</span>
     </dt>
     <dd>{{% md %}}Cloud provider for which you want to create a private endpoint. Atlas accepts `AWS` or `AZURE`.
-{{% /md %}}</dd>
-</dl>
+{{% /md %}}</dd></dl>
 {{% /choosable %}}
 
 {{% choosable language python %}}
-<dl class="resources-properties">
-
-    <dt class="property-optional"
+<dl class="resources-properties"><dt class="property-optional"
             title="Optional">
         <span id="state_aws_connection_status_python">
 <a href="#state_aws_connection_status_python" style="color: inherit; text-decoration: inherit;">aws_<wbr>connection_<wbr>status</a>
@@ -1450,8 +1331,7 @@ Returns one of the following values:
     </dt>
     <dd>{{% md %}}Status of the interface endpoint for AWS.
 Returns one of the following values:
-{{% /md %}}</dd>
-    <dt class="property-optional"
+{{% /md %}}</dd><dt class="property-optional"
             title="Optional">
         <span id="state_azure_status_python">
 <a href="#state_azure_status_python" style="color: inherit; text-decoration: inherit;">azure_<wbr>status</a>
@@ -1461,8 +1341,7 @@ Returns one of the following values:
     </dt>
     <dd>{{% md %}}Status of the interface endpoint for AZURE.
 Returns one of the following values:
-{{% /md %}}</dd>
-    <dt class="property-optional"
+{{% /md %}}</dd><dt class="property-optional"
             title="Optional">
         <span id="state_delete_requested_python">
 <a href="#state_delete_requested_python" style="color: inherit; text-decoration: inherit;">delete_<wbr>requested</a>
@@ -1471,8 +1350,7 @@ Returns one of the following values:
         <span class="property-type">bool</span>
     </dt>
     <dd>{{% md %}}Indicates if Atlas received a request to remove the interface endpoint from the private endpoint connection.
-{{% /md %}}</dd>
-    <dt class="property-optional"
+{{% /md %}}</dd><dt class="property-optional"
             title="Optional">
         <span id="state_endpoint_service_id_python">
 <a href="#state_endpoint_service_id_python" style="color: inherit; text-decoration: inherit;">endpoint_<wbr>service_<wbr>id</a>
@@ -1481,8 +1359,7 @@ Returns one of the following values:
         <span class="property-type">str</span>
     </dt>
     <dd>{{% md %}}Unique identifier of the interface endpoint you created in your VPC with the `AWS` or `AZURE` resource.
-{{% /md %}}</dd>
-    <dt class="property-optional"
+{{% /md %}}</dd><dt class="property-optional"
             title="Optional">
         <span id="state_error_message_python">
 <a href="#state_error_message_python" style="color: inherit; text-decoration: inherit;">error_<wbr>message</a>
@@ -1491,8 +1368,7 @@ Returns one of the following values:
         <span class="property-type">str</span>
     </dt>
     <dd>{{% md %}}Error message pertaining to the interface endpoint. Returns null if there are no errors.
-{{% /md %}}</dd>
-    <dt class="property-optional"
+{{% /md %}}</dd><dt class="property-optional"
             title="Optional">
         <span id="state_interface_endpoint_id_python">
 <a href="#state_interface_endpoint_id_python" style="color: inherit; text-decoration: inherit;">interface_<wbr>endpoint_<wbr>id</a>
@@ -1501,8 +1377,7 @@ Returns one of the following values:
         <span class="property-type">str</span>
     </dt>
     <dd>{{% md %}}Unique identifier of the interface endpoint.
-{{% /md %}}</dd>
-    <dt class="property-optional"
+{{% /md %}}</dd><dt class="property-optional"
             title="Optional">
         <span id="state_private_endpoint_connection_name_python">
 <a href="#state_private_endpoint_connection_name_python" style="color: inherit; text-decoration: inherit;">private_<wbr>endpoint_<wbr>connection_<wbr>name</a>
@@ -1511,8 +1386,7 @@ Returns one of the following values:
         <span class="property-type">str</span>
     </dt>
     <dd>{{% md %}}Name of the connection for this private endpoint that Atlas generates.
-{{% /md %}}</dd>
-    <dt class="property-optional"
+{{% /md %}}</dd><dt class="property-optional"
             title="Optional">
         <span id="state_private_endpoint_ip_address_python">
 <a href="#state_private_endpoint_ip_address_python" style="color: inherit; text-decoration: inherit;">private_<wbr>endpoint_<wbr>ip_<wbr>address</a>
@@ -1521,8 +1395,7 @@ Returns one of the following values:
         <span class="property-type">str</span>
     </dt>
     <dd>{{% md %}}Private IP address of the private endpoint network interface you created in your Azure VNet. Only for `AZURE`.
-{{% /md %}}</dd>
-    <dt class="property-optional"
+{{% /md %}}</dd><dt class="property-optional"
             title="Optional">
         <span id="state_private_endpoint_resource_id_python">
 <a href="#state_private_endpoint_resource_id_python" style="color: inherit; text-decoration: inherit;">private_<wbr>endpoint_<wbr>resource_<wbr>id</a>
@@ -1531,8 +1404,7 @@ Returns one of the following values:
         <span class="property-type">str</span>
     </dt>
     <dd>{{% md %}}Unique identifier of the private endpoint.
-{{% /md %}}</dd>
-    <dt class="property-optional"
+{{% /md %}}</dd><dt class="property-optional"
             title="Optional">
         <span id="state_private_link_id_python">
 <a href="#state_private_link_id_python" style="color: inherit; text-decoration: inherit;">private_<wbr>link_<wbr>id</a>
@@ -1541,8 +1413,7 @@ Returns one of the following values:
         <span class="property-type">str</span>
     </dt>
     <dd>{{% md %}}Unique identifier of the `AWS` or `AZURE` PrivateLink connection which is created by `mongodbatlas.PrivateLinkEndpoint` resource.
-{{% /md %}}</dd>
-    <dt class="property-optional"
+{{% /md %}}</dd><dt class="property-optional"
             title="Optional">
         <span id="state_project_id_python">
 <a href="#state_project_id_python" style="color: inherit; text-decoration: inherit;">project_<wbr>id</a>
@@ -1551,8 +1422,7 @@ Returns one of the following values:
         <span class="property-type">str</span>
     </dt>
     <dd>{{% md %}}Unique identifier for the project.
-{{% /md %}}</dd>
-    <dt class="property-optional"
+{{% /md %}}</dd><dt class="property-optional"
             title="Optional">
         <span id="state_provider_name_python">
 <a href="#state_provider_name_python" style="color: inherit; text-decoration: inherit;">provider_<wbr>name</a>
@@ -1561,8 +1431,7 @@ Returns one of the following values:
         <span class="property-type">str</span>
     </dt>
     <dd>{{% md %}}Cloud provider for which you want to create a private endpoint. Atlas accepts `AWS` or `AZURE`.
-{{% /md %}}</dd>
-</dl>
+{{% /md %}}</dd></dl>
 {{% /choosable %}}
 
 
@@ -1590,6 +1459,6 @@ Private Endpoint Link Connection can be imported using project ID and username, 
 	<dt>License</dt>
 	<dd>Apache-2.0</dd>
 	<dt>Notes</dt>
-	<dd>This Pulumi package is based on the [`mongodbatlas` Terraform Provider](https://github.com/mongodb/terraform-provider-mongodbatlas).</dd>
+	<dd>{{% md %}}This Pulumi package is based on the [`mongodbatlas` Terraform Provider](https://github.com/mongodb/terraform-provider-mongodbatlas).{{% /md %}}</dd>
 </dl>
 

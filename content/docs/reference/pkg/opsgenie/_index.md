@@ -1,6 +1,6 @@
 ---
-title: "opsgenie"
-title_tag: "Module opsgenie | Package opsgenie"
+title: "Opsgenie"
+title_tag: "opsgenie.Opsgenie"
 meta_desc: "A Pulumi package for creating and managing opsgenie cloud resources."
 menu:
     reference:
@@ -53,7 +53,7 @@ A Pulumi package for creating and managing opsgenie cloud resources.
 	<dt>License</dt>
 	<dd>Apache-2.0</dd>
 	<dt>Notes</dt>
-	<dd>This Pulumi package is based on the [`opsgenie` Terraform Provider](https://github.com/opsgenie/terraform-provider-opsgenie).</dd>
+	<dd>{{% md %}}This Pulumi package is based on the [`opsgenie` Terraform Provider](https://github.com/opsgenie/terraform-provider-opsgenie).{{% /md %}}</dd>
 	<dt>Version</dt>
 	<dd>0.1.3</dd>
 </dl>

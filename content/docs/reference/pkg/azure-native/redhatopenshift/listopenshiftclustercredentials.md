@@ -51,9 +51,7 @@ The following arguments are supported:
 
 
 {{% choosable language csharp %}}
-<dl class="resources-properties">
-
-    <dt class="property-required"
+<dl class="resources-properties"><dt class="property-required"
             title="Required">
         <span id="resourcegroupname_csharp">
 <a href="#resourcegroupname_csharp" style="color: inherit; text-decoration: inherit;">Resource<wbr>Group<wbr>Name</a>
@@ -61,8 +59,7 @@ The following arguments are supported:
         <span class="property-indicator"></span>
         <span class="property-type">string</span>
     </dt>
-    <dd>{{% md %}}The name of the resource group. The name is case insensitive.{{% /md %}}</dd>
-    <dt class="property-required"
+    <dd>{{% md %}}The name of the resource group. The name is case insensitive.{{% /md %}}</dd><dt class="property-required"
             title="Required">
         <span id="resourcename_csharp">
 <a href="#resourcename_csharp" style="color: inherit; text-decoration: inherit;">Resource<wbr>Name</a>
@@ -70,14 +67,11 @@ The following arguments are supported:
         <span class="property-indicator"></span>
         <span class="property-type">string</span>
     </dt>
-    <dd>{{% md %}}The name of the OpenShift cluster resource.{{% /md %}}</dd>
-</dl>
+    <dd>{{% md %}}The name of the OpenShift cluster resource.{{% /md %}}</dd></dl>
 {{% /choosable %}}
 
 {{% choosable language go %}}
-<dl class="resources-properties">
-
-    <dt class="property-required"
+<dl class="resources-properties"><dt class="property-required"
             title="Required">
         <span id="resourcegroupname_go">
 <a href="#resourcegroupname_go" style="color: inherit; text-decoration: inherit;">Resource<wbr>Group<wbr>Name</a>
@@ -85,8 +79,7 @@ The following arguments are supported:
         <span class="property-indicator"></span>
         <span class="property-type">string</span>
     </dt>
-    <dd>{{% md %}}The name of the resource group. The name is case insensitive.{{% /md %}}</dd>
-    <dt class="property-required"
+    <dd>{{% md %}}The name of the resource group. The name is case insensitive.{{% /md %}}</dd><dt class="property-required"
             title="Required">
         <span id="resourcename_go">
 <a href="#resourcename_go" style="color: inherit; text-decoration: inherit;">Resource<wbr>Name</a>
@@ -94,14 +87,11 @@ The following arguments are supported:
         <span class="property-indicator"></span>
         <span class="property-type">string</span>
     </dt>
-    <dd>{{% md %}}The name of the OpenShift cluster resource.{{% /md %}}</dd>
-</dl>
+    <dd>{{% md %}}The name of the OpenShift cluster resource.{{% /md %}}</dd></dl>
 {{% /choosable %}}
 
 {{% choosable language nodejs %}}
-<dl class="resources-properties">
-
-    <dt class="property-required"
+<dl class="resources-properties"><dt class="property-required"
             title="Required">
         <span id="resourcegroupname_nodejs">
 <a href="#resourcegroupname_nodejs" style="color: inherit; text-decoration: inherit;">resource<wbr>Group<wbr>Name</a>
@@ -109,8 +99,7 @@ The following arguments are supported:
         <span class="property-indicator"></span>
         <span class="property-type">string</span>
     </dt>
-    <dd>{{% md %}}The name of the resource group. The name is case insensitive.{{% /md %}}</dd>
-    <dt class="property-required"
+    <dd>{{% md %}}The name of the resource group. The name is case insensitive.{{% /md %}}</dd><dt class="property-required"
             title="Required">
         <span id="resourcename_nodejs">
 <a href="#resourcename_nodejs" style="color: inherit; text-decoration: inherit;">resource<wbr>Name</a>
@@ -118,14 +107,11 @@ The following arguments are supported:
         <span class="property-indicator"></span>
         <span class="property-type">string</span>
     </dt>
-    <dd>{{% md %}}The name of the OpenShift cluster resource.{{% /md %}}</dd>
-</dl>
+    <dd>{{% md %}}The name of the OpenShift cluster resource.{{% /md %}}</dd></dl>
 {{% /choosable %}}
 
 {{% choosable language python %}}
-<dl class="resources-properties">
-
-    <dt class="property-required"
+<dl class="resources-properties"><dt class="property-required"
             title="Required">
         <span id="resource_group_name_python">
 <a href="#resource_group_name_python" style="color: inherit; text-decoration: inherit;">resource_<wbr>group_<wbr>name</a>
@@ -133,8 +119,7 @@ The following arguments are supported:
         <span class="property-indicator"></span>
         <span class="property-type">str</span>
     </dt>
-    <dd>{{% md %}}The name of the resource group. The name is case insensitive.{{% /md %}}</dd>
-    <dt class="property-required"
+    <dd>{{% md %}}The name of the resource group. The name is case insensitive.{{% /md %}}</dd><dt class="property-required"
             title="Required">
         <span id="resource_name_python">
 <a href="#resource_name_python" style="color: inherit; text-decoration: inherit;">resource_<wbr>name</a>
@@ -142,8 +127,7 @@ The following arguments are supported:
         <span class="property-indicator"></span>
         <span class="property-type">str</span>
     </dt>
-    <dd>{{% md %}}The name of the OpenShift cluster resource.{{% /md %}}</dd>
-</dl>
+    <dd>{{% md %}}The name of the OpenShift cluster resource.{{% /md %}}</dd></dl>
 {{% /choosable %}}
 
 
@@ -156,9 +140,7 @@ The following output properties are available:
 
 
 {{% choosable language csharp %}}
-<dl class="resources-properties">
-
-    <dt class="property-"
+<dl class="resources-properties"><dt class="property-"
             title="">
         <span id="kubeadminpassword_csharp">
 <a href="#kubeadminpassword_csharp" style="color: inherit; text-decoration: inherit;">Kubeadmin<wbr>Password</a>
@@ -166,8 +148,7 @@ The following output properties are available:
         <span class="property-indicator"></span>
         <span class="property-type">string</span>
     </dt>
-    <dd>{{% md %}}The password for the kubeadmin user{{% /md %}}</dd>
-    <dt class="property-"
+    <dd>{{% md %}}The password for the kubeadmin user{{% /md %}}</dd><dt class="property-"
             title="">
         <span id="kubeadminusername_csharp">
 <a href="#kubeadminusername_csharp" style="color: inherit; text-decoration: inherit;">Kubeadmin<wbr>Username</a>
@@ -175,14 +156,11 @@ The following output properties are available:
         <span class="property-indicator"></span>
         <span class="property-type">string</span>
     </dt>
-    <dd>{{% md %}}The username for the kubeadmin user{{% /md %}}</dd>
-</dl>
+    <dd>{{% md %}}The username for the kubeadmin user{{% /md %}}</dd></dl>
 {{% /choosable %}}
 
 {{% choosable language go %}}
-<dl class="resources-properties">
-
-    <dt class="property-"
+<dl class="resources-properties"><dt class="property-"
             title="">
         <span id="kubeadminpassword_go">
 <a href="#kubeadminpassword_go" style="color: inherit; text-decoration: inherit;">Kubeadmin<wbr>Password</a>
@@ -190,8 +168,7 @@ The following output properties are available:
         <span class="property-indicator"></span>
         <span class="property-type">string</span>
     </dt>
-    <dd>{{% md %}}The password for the kubeadmin user{{% /md %}}</dd>
-    <dt class="property-"
+    <dd>{{% md %}}The password for the kubeadmin user{{% /md %}}</dd><dt class="property-"
             title="">
         <span id="kubeadminusername_go">
 <a href="#kubeadminusername_go" style="color: inherit; text-decoration: inherit;">Kubeadmin<wbr>Username</a>
@@ -199,14 +176,11 @@ The following output properties are available:
         <span class="property-indicator"></span>
         <span class="property-type">string</span>
     </dt>
-    <dd>{{% md %}}The username for the kubeadmin user{{% /md %}}</dd>
-</dl>
+    <dd>{{% md %}}The username for the kubeadmin user{{% /md %}}</dd></dl>
 {{% /choosable %}}
 
 {{% choosable language nodejs %}}
-<dl class="resources-properties">
-
-    <dt class="property-"
+<dl class="resources-properties"><dt class="property-"
             title="">
         <span id="kubeadminpassword_nodejs">
 <a href="#kubeadminpassword_nodejs" style="color: inherit; text-decoration: inherit;">kubeadmin<wbr>Password</a>
@@ -214,8 +188,7 @@ The following output properties are available:
         <span class="property-indicator"></span>
         <span class="property-type">string</span>
     </dt>
-    <dd>{{% md %}}The password for the kubeadmin user{{% /md %}}</dd>
-    <dt class="property-"
+    <dd>{{% md %}}The password for the kubeadmin user{{% /md %}}</dd><dt class="property-"
             title="">
         <span id="kubeadminusername_nodejs">
 <a href="#kubeadminusername_nodejs" style="color: inherit; text-decoration: inherit;">kubeadmin<wbr>Username</a>
@@ -223,14 +196,11 @@ The following output properties are available:
         <span class="property-indicator"></span>
         <span class="property-type">string</span>
     </dt>
-    <dd>{{% md %}}The username for the kubeadmin user{{% /md %}}</dd>
-</dl>
+    <dd>{{% md %}}The username for the kubeadmin user{{% /md %}}</dd></dl>
 {{% /choosable %}}
 
 {{% choosable language python %}}
-<dl class="resources-properties">
-
-    <dt class="property-"
+<dl class="resources-properties"><dt class="property-"
             title="">
         <span id="kubeadmin_password_python">
 <a href="#kubeadmin_password_python" style="color: inherit; text-decoration: inherit;">kubeadmin_<wbr>password</a>
@@ -238,8 +208,7 @@ The following output properties are available:
         <span class="property-indicator"></span>
         <span class="property-type">str</span>
     </dt>
-    <dd>{{% md %}}The password for the kubeadmin user{{% /md %}}</dd>
-    <dt class="property-"
+    <dd>{{% md %}}The password for the kubeadmin user{{% /md %}}</dd><dt class="property-"
             title="">
         <span id="kubeadmin_username_python">
 <a href="#kubeadmin_username_python" style="color: inherit; text-decoration: inherit;">kubeadmin_<wbr>username</a>
@@ -247,8 +216,7 @@ The following output properties are available:
         <span class="property-indicator"></span>
         <span class="property-type">str</span>
     </dt>
-    <dd>{{% md %}}The username for the kubeadmin user{{% /md %}}</dd>
-</dl>
+    <dd>{{% md %}}The username for the kubeadmin user{{% /md %}}</dd></dl>
 {{% /choosable %}}
 
 

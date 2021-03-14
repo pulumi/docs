@@ -51,9 +51,7 @@ CertificateAuthority can be imported using any of these accepted formats
 
 {{% choosable language nodejs %}}
 
-<dl class="resources-properties">
-  
-    <dt
+<dl class="resources-properties"><dt
         class="property-required" title="Required">
         <span>name</span>
         <span class="property-indicator"></span>
@@ -61,9 +59,7 @@ CertificateAuthority can be imported using any of these accepted formats
     </dt>
     <dd>
       The unique name of the resource.
-    </dd>
-  
-    <dt
+    </dd><dt
         class="property-required" title="Required">
         <span>args</span>
         <span class="property-indicator"></span>
@@ -71,9 +67,7 @@ CertificateAuthority can be imported using any of these accepted formats
     </dt>
     <dd>
       The arguments to resource properties.
-    </dd>
-  
-    <dt
+    </dd><dt
         class="property-optional" title="Optional">
         <span>opts</span>
         <span class="property-indicator"></span>
@@ -81,10 +75,7 @@ CertificateAuthority can be imported using any of these accepted formats
     </dt>
     <dd>
       Bag of options to control resource&#39;s behavior.
-    </dd>
-  
-
-</dl>
+    </dd></dl>
 
 {{% /choosable %}}
 
@@ -110,9 +101,7 @@ CertificateAuthority can be imported using any of these accepted formats
 
 {{% choosable language go %}}
 
-<dl class="resources-properties">
-  
-    <dt
+<dl class="resources-properties"><dt
         class="property-optional" title="Optional">
         <span>ctx</span>
         <span class="property-indicator"></span>
@@ -120,9 +109,7 @@ CertificateAuthority can be imported using any of these accepted formats
     </dt>
     <dd>
       Context object for the current deployment.
-    </dd>
-  
-    <dt
+    </dd><dt
         class="property-required" title="Required">
         <span>name</span>
         <span class="property-indicator"></span>
@@ -130,9 +117,7 @@ CertificateAuthority can be imported using any of these accepted formats
     </dt>
     <dd>
       The unique name of the resource.
-    </dd>
-  
-    <dt
+    </dd><dt
         class="property-required" title="Required">
         <span>args</span>
         <span class="property-indicator"></span>
@@ -140,9 +125,7 @@ CertificateAuthority can be imported using any of these accepted formats
     </dt>
     <dd>
       The arguments to resource properties.
-    </dd>
-  
-    <dt
+    </dd><dt
         class="property-optional" title="Optional">
         <span>opts</span>
         <span class="property-indicator"></span>
@@ -150,18 +133,13 @@ CertificateAuthority can be imported using any of these accepted formats
     </dt>
     <dd>
       Bag of options to control resource&#39;s behavior.
-    </dd>
-  
-
-</dl>
+    </dd></dl>
 
 {{% /choosable %}}
 
 {{% choosable language csharp %}}
 
-<dl class="resources-properties">
-  
-    <dt
+<dl class="resources-properties"><dt
         class="property-required" title="Required">
         <span>name</span>
         <span class="property-indicator"></span>
@@ -169,9 +147,7 @@ CertificateAuthority can be imported using any of these accepted formats
     </dt>
     <dd>
       The unique name of the resource.
-    </dd>
-  
-    <dt
+    </dd><dt
         class="property-required" title="Required">
         <span>args</span>
         <span class="property-indicator"></span>
@@ -179,9 +155,7 @@ CertificateAuthority can be imported using any of these accepted formats
     </dt>
     <dd>
       The arguments to resource properties.
-    </dd>
-  
-    <dt
+    </dd><dt
         class="property-optional" title="Optional">
         <span>opts</span>
         <span class="property-indicator"></span>
@@ -189,10 +163,7 @@ CertificateAuthority can be imported using any of these accepted formats
     </dt>
     <dd>
       Bag of options to control resource&#39;s behavior.
-    </dd>
-  
-
-</dl>
+    </dd></dl>
 
 {{% /choosable %}}
 
@@ -207,9 +178,7 @@ The Authority resource accepts the following [input]({{< relref "/docs/intro/con
 
 
 {{% choosable language csharp %}}
-<dl class="resources-properties">
-
-    <dt class="property-required"
+<dl class="resources-properties"><dt class="property-required"
             title="Required">
         <span id="certificateauthorityid_csharp">
 <a href="#certificateauthorityid_csharp" style="color: inherit; text-decoration: inherit;">Certificate<wbr>Authority<wbr>Id</a>
@@ -218,8 +187,7 @@ The Authority resource accepts the following [input]({{< relref "/docs/intro/con
         <span class="property-type">string</span>
     </dt>
     <dd>{{% md %}}The user provided Resource ID for this Certificate Authority.
-{{% /md %}}</dd>
-    <dt class="property-required"
+{{% /md %}}</dd><dt class="property-required"
             title="Required">
         <span id="config_csharp">
 <a href="#config_csharp" style="color: inherit; text-decoration: inherit;">Config</a>
@@ -229,8 +197,7 @@ The Authority resource accepts the following [input]({{< relref "/docs/intro/con
     </dt>
     <dd>{{% md %}}The config used to create a self-signed X.509 certificate or CSR.
 Structure is documented below.
-{{% /md %}}</dd>
-    <dt class="property-required"
+{{% /md %}}</dd><dt class="property-required"
             title="Required">
         <span id="keyspec_csharp">
 <a href="#keyspec_csharp" style="color: inherit; text-decoration: inherit;">Key<wbr>Spec</a>
@@ -242,8 +209,7 @@ Structure is documented below.
 is a self-signed CertificateAuthority, this key is also used to sign the self-signed CA
 certificate. Otherwise, it is used to sign a CSR.
 Structure is documented below.
-{{% /md %}}</dd>
-    <dt class="property-required"
+{{% /md %}}</dd><dt class="property-required"
             title="Required">
         <span id="location_csharp">
 <a href="#location_csharp" style="color: inherit; text-decoration: inherit;">Location</a>
@@ -253,8 +219,7 @@ Structure is documented below.
     </dt>
     <dd>{{% md %}}Location of the CertificateAuthority. A full list of valid locations can be found by
 running `gcloud beta privateca locations list`.
-{{% /md %}}</dd>
-    <dt class="property-optional"
+{{% /md %}}</dd><dt class="property-optional"
             title="Optional">
         <span id="disableondelete_csharp">
 <a href="#disableondelete_csharp" style="color: inherit; text-decoration: inherit;">Disable<wbr>On<wbr>Delete</a>
@@ -265,8 +230,7 @@ running `gcloud beta privateca locations list`.
     <dd>{{% md %}}If set to `true`, the Certificate Authority will be disabled
 on delete. If the Certitificate Authorities is not disabled,
 it cannot be deleted. Use with care. Defaults to `false`.
-{{% /md %}}</dd>
-    <dt class="property-optional"
+{{% /md %}}</dd><dt class="property-optional"
             title="Optional">
         <span id="gcsbucket_csharp">
 <a href="#gcsbucket_csharp" style="color: inherit; text-decoration: inherit;">Gcs<wbr>Bucket</a>
@@ -279,8 +243,7 @@ such as the CA certificate and CRLs. This must be a bucket name, without any pre
 (such as `gs://`) or suffixes (such as `.googleapis.com`). For example, to use a bucket named
 my-bucket, you would simply specify `my-bucket`. If not specified, a managed bucket will be
 created.
-{{% /md %}}</dd>
-    <dt class="property-optional"
+{{% /md %}}</dd><dt class="property-optional"
             title="Optional">
         <span id="issuingoptions_csharp">
 <a href="#issuingoptions_csharp" style="color: inherit; text-decoration: inherit;">Issuing<wbr>Options</a>
@@ -290,8 +253,7 @@ created.
     </dt>
     <dd>{{% md %}}Options that affect all certificates issued by a CertificateAuthority.
 Structure is documented below.
-{{% /md %}}</dd>
-    <dt class="property-optional"
+{{% /md %}}</dd><dt class="property-optional"
             title="Optional">
         <span id="labels_csharp">
 <a href="#labels_csharp" style="color: inherit; text-decoration: inherit;">Labels</a>
@@ -302,8 +264,7 @@ Structure is documented below.
     <dd>{{% md %}}Labels with user-defined metadata.
 An object containing a list of "key": value pairs. Example: { "name": "wrench", "mass":
 "1.3kg", "count": "3" }.
-{{% /md %}}</dd>
-    <dt class="property-optional"
+{{% /md %}}</dd><dt class="property-optional"
             title="Optional">
         <span id="lifetime_csharp">
 <a href="#lifetime_csharp" style="color: inherit; text-decoration: inherit;">Lifetime</a>
@@ -314,8 +275,7 @@ An object containing a list of "key": value pairs. Example: { "name": "wrench", 
     <dd>{{% md %}}The desired lifetime of the CA certificate. Used to create the "notBeforeTime" and
 "notAfterTime" fields inside an X.509 certificate. A duration in seconds with up to nine
 fractional digits, terminated by 's'. Example: "3.5s".
-{{% /md %}}</dd>
-    <dt class="property-optional"
+{{% /md %}}</dd><dt class="property-optional"
             title="Optional">
         <span id="project_csharp">
 <a href="#project_csharp" style="color: inherit; text-decoration: inherit;">Project</a>
@@ -325,8 +285,7 @@ fractional digits, terminated by 's'. Example: "3.5s".
     </dt>
     <dd>{{% md %}}The ID of the project in which the resource belongs.
 If it is not provided, the provider project is used.
-{{% /md %}}</dd>
-    <dt class="property-optional"
+{{% /md %}}</dd><dt class="property-optional"
             title="Optional">
         <span id="tier_csharp">
 <a href="#tier_csharp" style="color: inherit; text-decoration: inherit;">Tier</a>
@@ -339,8 +298,7 @@ server side certificates issued, and support certificate revocation. For more de
 please check the [associated documentation](https://cloud.google.com/certificate-authority-service/docs/tiers).
 Default value is `ENTERPRISE`.
 Possible values are `ENTERPRISE` and `DEVOPS`.
-{{% /md %}}</dd>
-    <dt class="property-optional"
+{{% /md %}}</dd><dt class="property-optional"
             title="Optional">
         <span id="type_csharp">
 <a href="#type_csharp" style="color: inherit; text-decoration: inherit;">Type</a>
@@ -354,14 +312,11 @@ be manually activated (via Cloud Console of `gcloud`) before they can
 issue certificates.
 Default value is `SELF_SIGNED`.
 Possible values are `SELF_SIGNED` and `SUBORDINATE`.
-{{% /md %}}</dd>
-</dl>
+{{% /md %}}</dd></dl>
 {{% /choosable %}}
 
 {{% choosable language go %}}
-<dl class="resources-properties">
-
-    <dt class="property-required"
+<dl class="resources-properties"><dt class="property-required"
             title="Required">
         <span id="certificateauthorityid_go">
 <a href="#certificateauthorityid_go" style="color: inherit; text-decoration: inherit;">Certificate<wbr>Authority<wbr>Id</a>
@@ -370,8 +325,7 @@ Possible values are `SELF_SIGNED` and `SUBORDINATE`.
         <span class="property-type">string</span>
     </dt>
     <dd>{{% md %}}The user provided Resource ID for this Certificate Authority.
-{{% /md %}}</dd>
-    <dt class="property-required"
+{{% /md %}}</dd><dt class="property-required"
             title="Required">
         <span id="config_go">
 <a href="#config_go" style="color: inherit; text-decoration: inherit;">Config</a>
@@ -381,8 +335,7 @@ Possible values are `SELF_SIGNED` and `SUBORDINATE`.
     </dt>
     <dd>{{% md %}}The config used to create a self-signed X.509 certificate or CSR.
 Structure is documented below.
-{{% /md %}}</dd>
-    <dt class="property-required"
+{{% /md %}}</dd><dt class="property-required"
             title="Required">
         <span id="keyspec_go">
 <a href="#keyspec_go" style="color: inherit; text-decoration: inherit;">Key<wbr>Spec</a>
@@ -394,8 +347,7 @@ Structure is documented below.
 is a self-signed CertificateAuthority, this key is also used to sign the self-signed CA
 certificate. Otherwise, it is used to sign a CSR.
 Structure is documented below.
-{{% /md %}}</dd>
-    <dt class="property-required"
+{{% /md %}}</dd><dt class="property-required"
             title="Required">
         <span id="location_go">
 <a href="#location_go" style="color: inherit; text-decoration: inherit;">Location</a>
@@ -405,8 +357,7 @@ Structure is documented below.
     </dt>
     <dd>{{% md %}}Location of the CertificateAuthority. A full list of valid locations can be found by
 running `gcloud beta privateca locations list`.
-{{% /md %}}</dd>
-    <dt class="property-optional"
+{{% /md %}}</dd><dt class="property-optional"
             title="Optional">
         <span id="disableondelete_go">
 <a href="#disableondelete_go" style="color: inherit; text-decoration: inherit;">Disable<wbr>On<wbr>Delete</a>
@@ -417,8 +368,7 @@ running `gcloud beta privateca locations list`.
     <dd>{{% md %}}If set to `true`, the Certificate Authority will be disabled
 on delete. If the Certitificate Authorities is not disabled,
 it cannot be deleted. Use with care. Defaults to `false`.
-{{% /md %}}</dd>
-    <dt class="property-optional"
+{{% /md %}}</dd><dt class="property-optional"
             title="Optional">
         <span id="gcsbucket_go">
 <a href="#gcsbucket_go" style="color: inherit; text-decoration: inherit;">Gcs<wbr>Bucket</a>
@@ -431,8 +381,7 @@ such as the CA certificate and CRLs. This must be a bucket name, without any pre
 (such as `gs://`) or suffixes (such as `.googleapis.com`). For example, to use a bucket named
 my-bucket, you would simply specify `my-bucket`. If not specified, a managed bucket will be
 created.
-{{% /md %}}</dd>
-    <dt class="property-optional"
+{{% /md %}}</dd><dt class="property-optional"
             title="Optional">
         <span id="issuingoptions_go">
 <a href="#issuingoptions_go" style="color: inherit; text-decoration: inherit;">Issuing<wbr>Options</a>
@@ -442,8 +391,7 @@ created.
     </dt>
     <dd>{{% md %}}Options that affect all certificates issued by a CertificateAuthority.
 Structure is documented below.
-{{% /md %}}</dd>
-    <dt class="property-optional"
+{{% /md %}}</dd><dt class="property-optional"
             title="Optional">
         <span id="labels_go">
 <a href="#labels_go" style="color: inherit; text-decoration: inherit;">Labels</a>
@@ -454,8 +402,7 @@ Structure is documented below.
     <dd>{{% md %}}Labels with user-defined metadata.
 An object containing a list of "key": value pairs. Example: { "name": "wrench", "mass":
 "1.3kg", "count": "3" }.
-{{% /md %}}</dd>
-    <dt class="property-optional"
+{{% /md %}}</dd><dt class="property-optional"
             title="Optional">
         <span id="lifetime_go">
 <a href="#lifetime_go" style="color: inherit; text-decoration: inherit;">Lifetime</a>
@@ -466,8 +413,7 @@ An object containing a list of "key": value pairs. Example: { "name": "wrench", 
     <dd>{{% md %}}The desired lifetime of the CA certificate. Used to create the "notBeforeTime" and
 "notAfterTime" fields inside an X.509 certificate. A duration in seconds with up to nine
 fractional digits, terminated by 's'. Example: "3.5s".
-{{% /md %}}</dd>
-    <dt class="property-optional"
+{{% /md %}}</dd><dt class="property-optional"
             title="Optional">
         <span id="project_go">
 <a href="#project_go" style="color: inherit; text-decoration: inherit;">Project</a>
@@ -477,8 +423,7 @@ fractional digits, terminated by 's'. Example: "3.5s".
     </dt>
     <dd>{{% md %}}The ID of the project in which the resource belongs.
 If it is not provided, the provider project is used.
-{{% /md %}}</dd>
-    <dt class="property-optional"
+{{% /md %}}</dd><dt class="property-optional"
             title="Optional">
         <span id="tier_go">
 <a href="#tier_go" style="color: inherit; text-decoration: inherit;">Tier</a>
@@ -491,8 +436,7 @@ server side certificates issued, and support certificate revocation. For more de
 please check the [associated documentation](https://cloud.google.com/certificate-authority-service/docs/tiers).
 Default value is `ENTERPRISE`.
 Possible values are `ENTERPRISE` and `DEVOPS`.
-{{% /md %}}</dd>
-    <dt class="property-optional"
+{{% /md %}}</dd><dt class="property-optional"
             title="Optional">
         <span id="type_go">
 <a href="#type_go" style="color: inherit; text-decoration: inherit;">Type</a>
@@ -506,14 +450,11 @@ be manually activated (via Cloud Console of `gcloud`) before they can
 issue certificates.
 Default value is `SELF_SIGNED`.
 Possible values are `SELF_SIGNED` and `SUBORDINATE`.
-{{% /md %}}</dd>
-</dl>
+{{% /md %}}</dd></dl>
 {{% /choosable %}}
 
 {{% choosable language nodejs %}}
-<dl class="resources-properties">
-
-    <dt class="property-required"
+<dl class="resources-properties"><dt class="property-required"
             title="Required">
         <span id="certificateauthorityid_nodejs">
 <a href="#certificateauthorityid_nodejs" style="color: inherit; text-decoration: inherit;">certificate<wbr>Authority<wbr>Id</a>
@@ -522,8 +463,7 @@ Possible values are `SELF_SIGNED` and `SUBORDINATE`.
         <span class="property-type">string</span>
     </dt>
     <dd>{{% md %}}The user provided Resource ID for this Certificate Authority.
-{{% /md %}}</dd>
-    <dt class="property-required"
+{{% /md %}}</dd><dt class="property-required"
             title="Required">
         <span id="config_nodejs">
 <a href="#config_nodejs" style="color: inherit; text-decoration: inherit;">config</a>
@@ -533,8 +473,7 @@ Possible values are `SELF_SIGNED` and `SUBORDINATE`.
     </dt>
     <dd>{{% md %}}The config used to create a self-signed X.509 certificate or CSR.
 Structure is documented below.
-{{% /md %}}</dd>
-    <dt class="property-required"
+{{% /md %}}</dd><dt class="property-required"
             title="Required">
         <span id="keyspec_nodejs">
 <a href="#keyspec_nodejs" style="color: inherit; text-decoration: inherit;">key<wbr>Spec</a>
@@ -546,8 +485,7 @@ Structure is documented below.
 is a self-signed CertificateAuthority, this key is also used to sign the self-signed CA
 certificate. Otherwise, it is used to sign a CSR.
 Structure is documented below.
-{{% /md %}}</dd>
-    <dt class="property-required"
+{{% /md %}}</dd><dt class="property-required"
             title="Required">
         <span id="location_nodejs">
 <a href="#location_nodejs" style="color: inherit; text-decoration: inherit;">location</a>
@@ -557,8 +495,7 @@ Structure is documented below.
     </dt>
     <dd>{{% md %}}Location of the CertificateAuthority. A full list of valid locations can be found by
 running `gcloud beta privateca locations list`.
-{{% /md %}}</dd>
-    <dt class="property-optional"
+{{% /md %}}</dd><dt class="property-optional"
             title="Optional">
         <span id="disableondelete_nodejs">
 <a href="#disableondelete_nodejs" style="color: inherit; text-decoration: inherit;">disable<wbr>On<wbr>Delete</a>
@@ -569,8 +506,7 @@ running `gcloud beta privateca locations list`.
     <dd>{{% md %}}If set to `true`, the Certificate Authority will be disabled
 on delete. If the Certitificate Authorities is not disabled,
 it cannot be deleted. Use with care. Defaults to `false`.
-{{% /md %}}</dd>
-    <dt class="property-optional"
+{{% /md %}}</dd><dt class="property-optional"
             title="Optional">
         <span id="gcsbucket_nodejs">
 <a href="#gcsbucket_nodejs" style="color: inherit; text-decoration: inherit;">gcs<wbr>Bucket</a>
@@ -583,8 +519,7 @@ such as the CA certificate and CRLs. This must be a bucket name, without any pre
 (such as `gs://`) or suffixes (such as `.googleapis.com`). For example, to use a bucket named
 my-bucket, you would simply specify `my-bucket`. If not specified, a managed bucket will be
 created.
-{{% /md %}}</dd>
-    <dt class="property-optional"
+{{% /md %}}</dd><dt class="property-optional"
             title="Optional">
         <span id="issuingoptions_nodejs">
 <a href="#issuingoptions_nodejs" style="color: inherit; text-decoration: inherit;">issuing<wbr>Options</a>
@@ -594,8 +529,7 @@ created.
     </dt>
     <dd>{{% md %}}Options that affect all certificates issued by a CertificateAuthority.
 Structure is documented below.
-{{% /md %}}</dd>
-    <dt class="property-optional"
+{{% /md %}}</dd><dt class="property-optional"
             title="Optional">
         <span id="labels_nodejs">
 <a href="#labels_nodejs" style="color: inherit; text-decoration: inherit;">labels</a>
@@ -606,8 +540,7 @@ Structure is documented below.
     <dd>{{% md %}}Labels with user-defined metadata.
 An object containing a list of "key": value pairs. Example: { "name": "wrench", "mass":
 "1.3kg", "count": "3" }.
-{{% /md %}}</dd>
-    <dt class="property-optional"
+{{% /md %}}</dd><dt class="property-optional"
             title="Optional">
         <span id="lifetime_nodejs">
 <a href="#lifetime_nodejs" style="color: inherit; text-decoration: inherit;">lifetime</a>
@@ -618,8 +551,7 @@ An object containing a list of "key": value pairs. Example: { "name": "wrench", 
     <dd>{{% md %}}The desired lifetime of the CA certificate. Used to create the "notBeforeTime" and
 "notAfterTime" fields inside an X.509 certificate. A duration in seconds with up to nine
 fractional digits, terminated by 's'. Example: "3.5s".
-{{% /md %}}</dd>
-    <dt class="property-optional"
+{{% /md %}}</dd><dt class="property-optional"
             title="Optional">
         <span id="project_nodejs">
 <a href="#project_nodejs" style="color: inherit; text-decoration: inherit;">project</a>
@@ -629,8 +561,7 @@ fractional digits, terminated by 's'. Example: "3.5s".
     </dt>
     <dd>{{% md %}}The ID of the project in which the resource belongs.
 If it is not provided, the provider project is used.
-{{% /md %}}</dd>
-    <dt class="property-optional"
+{{% /md %}}</dd><dt class="property-optional"
             title="Optional">
         <span id="tier_nodejs">
 <a href="#tier_nodejs" style="color: inherit; text-decoration: inherit;">tier</a>
@@ -643,8 +574,7 @@ server side certificates issued, and support certificate revocation. For more de
 please check the [associated documentation](https://cloud.google.com/certificate-authority-service/docs/tiers).
 Default value is `ENTERPRISE`.
 Possible values are `ENTERPRISE` and `DEVOPS`.
-{{% /md %}}</dd>
-    <dt class="property-optional"
+{{% /md %}}</dd><dt class="property-optional"
             title="Optional">
         <span id="type_nodejs">
 <a href="#type_nodejs" style="color: inherit; text-decoration: inherit;">type</a>
@@ -658,14 +588,11 @@ be manually activated (via Cloud Console of `gcloud`) before they can
 issue certificates.
 Default value is `SELF_SIGNED`.
 Possible values are `SELF_SIGNED` and `SUBORDINATE`.
-{{% /md %}}</dd>
-</dl>
+{{% /md %}}</dd></dl>
 {{% /choosable %}}
 
 {{% choosable language python %}}
-<dl class="resources-properties">
-
-    <dt class="property-required"
+<dl class="resources-properties"><dt class="property-required"
             title="Required">
         <span id="certificate_authority_id_python">
 <a href="#certificate_authority_id_python" style="color: inherit; text-decoration: inherit;">certificate_<wbr>authority_<wbr>id</a>
@@ -674,8 +601,7 @@ Possible values are `SELF_SIGNED` and `SUBORDINATE`.
         <span class="property-type">str</span>
     </dt>
     <dd>{{% md %}}The user provided Resource ID for this Certificate Authority.
-{{% /md %}}</dd>
-    <dt class="property-required"
+{{% /md %}}</dd><dt class="property-required"
             title="Required">
         <span id="config_python">
 <a href="#config_python" style="color: inherit; text-decoration: inherit;">config</a>
@@ -685,8 +611,7 @@ Possible values are `SELF_SIGNED` and `SUBORDINATE`.
     </dt>
     <dd>{{% md %}}The config used to create a self-signed X.509 certificate or CSR.
 Structure is documented below.
-{{% /md %}}</dd>
-    <dt class="property-required"
+{{% /md %}}</dd><dt class="property-required"
             title="Required">
         <span id="key_spec_python">
 <a href="#key_spec_python" style="color: inherit; text-decoration: inherit;">key_<wbr>spec</a>
@@ -698,8 +623,7 @@ Structure is documented below.
 is a self-signed CertificateAuthority, this key is also used to sign the self-signed CA
 certificate. Otherwise, it is used to sign a CSR.
 Structure is documented below.
-{{% /md %}}</dd>
-    <dt class="property-required"
+{{% /md %}}</dd><dt class="property-required"
             title="Required">
         <span id="location_python">
 <a href="#location_python" style="color: inherit; text-decoration: inherit;">location</a>
@@ -709,8 +633,7 @@ Structure is documented below.
     </dt>
     <dd>{{% md %}}Location of the CertificateAuthority. A full list of valid locations can be found by
 running `gcloud beta privateca locations list`.
-{{% /md %}}</dd>
-    <dt class="property-optional"
+{{% /md %}}</dd><dt class="property-optional"
             title="Optional">
         <span id="disable_on_delete_python">
 <a href="#disable_on_delete_python" style="color: inherit; text-decoration: inherit;">disable_<wbr>on_<wbr>delete</a>
@@ -721,8 +644,7 @@ running `gcloud beta privateca locations list`.
     <dd>{{% md %}}If set to `true`, the Certificate Authority will be disabled
 on delete. If the Certitificate Authorities is not disabled,
 it cannot be deleted. Use with care. Defaults to `false`.
-{{% /md %}}</dd>
-    <dt class="property-optional"
+{{% /md %}}</dd><dt class="property-optional"
             title="Optional">
         <span id="gcs_bucket_python">
 <a href="#gcs_bucket_python" style="color: inherit; text-decoration: inherit;">gcs_<wbr>bucket</a>
@@ -735,8 +657,7 @@ such as the CA certificate and CRLs. This must be a bucket name, without any pre
 (such as `gs://`) or suffixes (such as `.googleapis.com`). For example, to use a bucket named
 my-bucket, you would simply specify `my-bucket`. If not specified, a managed bucket will be
 created.
-{{% /md %}}</dd>
-    <dt class="property-optional"
+{{% /md %}}</dd><dt class="property-optional"
             title="Optional">
         <span id="issuing_options_python">
 <a href="#issuing_options_python" style="color: inherit; text-decoration: inherit;">issuing_<wbr>options</a>
@@ -746,8 +667,7 @@ created.
     </dt>
     <dd>{{% md %}}Options that affect all certificates issued by a CertificateAuthority.
 Structure is documented below.
-{{% /md %}}</dd>
-    <dt class="property-optional"
+{{% /md %}}</dd><dt class="property-optional"
             title="Optional">
         <span id="labels_python">
 <a href="#labels_python" style="color: inherit; text-decoration: inherit;">labels</a>
@@ -758,8 +678,7 @@ Structure is documented below.
     <dd>{{% md %}}Labels with user-defined metadata.
 An object containing a list of "key": value pairs. Example: { "name": "wrench", "mass":
 "1.3kg", "count": "3" }.
-{{% /md %}}</dd>
-    <dt class="property-optional"
+{{% /md %}}</dd><dt class="property-optional"
             title="Optional">
         <span id="lifetime_python">
 <a href="#lifetime_python" style="color: inherit; text-decoration: inherit;">lifetime</a>
@@ -770,8 +689,7 @@ An object containing a list of "key": value pairs. Example: { "name": "wrench", 
     <dd>{{% md %}}The desired lifetime of the CA certificate. Used to create the "notBeforeTime" and
 "notAfterTime" fields inside an X.509 certificate. A duration in seconds with up to nine
 fractional digits, terminated by 's'. Example: "3.5s".
-{{% /md %}}</dd>
-    <dt class="property-optional"
+{{% /md %}}</dd><dt class="property-optional"
             title="Optional">
         <span id="project_python">
 <a href="#project_python" style="color: inherit; text-decoration: inherit;">project</a>
@@ -781,8 +699,7 @@ fractional digits, terminated by 's'. Example: "3.5s".
     </dt>
     <dd>{{% md %}}The ID of the project in which the resource belongs.
 If it is not provided, the provider project is used.
-{{% /md %}}</dd>
-    <dt class="property-optional"
+{{% /md %}}</dd><dt class="property-optional"
             title="Optional">
         <span id="tier_python">
 <a href="#tier_python" style="color: inherit; text-decoration: inherit;">tier</a>
@@ -795,8 +712,7 @@ server side certificates issued, and support certificate revocation. For more de
 please check the [associated documentation](https://cloud.google.com/certificate-authority-service/docs/tiers).
 Default value is `ENTERPRISE`.
 Possible values are `ENTERPRISE` and `DEVOPS`.
-{{% /md %}}</dd>
-    <dt class="property-optional"
+{{% /md %}}</dd><dt class="property-optional"
             title="Optional">
         <span id="type_python">
 <a href="#type_python" style="color: inherit; text-decoration: inherit;">type</a>
@@ -810,8 +726,7 @@ be manually activated (via Cloud Console of `gcloud`) before they can
 issue certificates.
 Default value is `SELF_SIGNED`.
 Possible values are `SELF_SIGNED` and `SUBORDINATE`.
-{{% /md %}}</dd>
-</dl>
+{{% /md %}}</dd></dl>
 {{% /choosable %}}
 
 
@@ -822,9 +737,7 @@ All [input](#inputs) properties are implicitly available as output properties. A
 
 
 {{% choosable language csharp %}}
-<dl class="resources-properties">
-
-    <dt class="property-"
+<dl class="resources-properties"><dt class="property-"
             title="">
         <span id="accessurls_csharp">
 <a href="#accessurls_csharp" style="color: inherit; text-decoration: inherit;">Access<wbr>Urls</a>
@@ -833,8 +746,7 @@ All [input](#inputs) properties are implicitly available as output properties. A
         <span class="property-type"><a href="#authorityaccessurl">List&lt;Authority<wbr>Access<wbr>Url&gt;</a></span>
     </dt>
     <dd>{{% md %}}URLs for accessing content published by this CA, such as the CA certificate and CRLs.
-{{% /md %}}</dd>
-    <dt class="property-"
+{{% /md %}}</dd><dt class="property-"
             title="">
         <span id="createtime_csharp">
 <a href="#createtime_csharp" style="color: inherit; text-decoration: inherit;">Create<wbr>Time</a>
@@ -844,8 +756,7 @@ All [input](#inputs) properties are implicitly available as output properties. A
     </dt>
     <dd>{{% md %}}The time at which this CertificateAuthority was created. A timestamp in RFC3339 UTC "Zulu" format, with nanosecond
 resolution and up to nine fractional digits. Examples: "2014-10-02T15:01:23Z" and "2014-10-02T15:01:23.045123456Z".
-{{% /md %}}</dd>
-    <dt class="property-"
+{{% /md %}}</dd><dt class="property-"
             title="">
         <span id="id_csharp">
 <a href="#id_csharp" style="color: inherit; text-decoration: inherit;">Id</a>
@@ -853,8 +764,7 @@ resolution and up to nine fractional digits. Examples: "2014-10-02T15:01:23Z" an
         <span class="property-indicator"></span>
         <span class="property-type">string</span>
     </dt>
-    <dd>{{% md %}}The provider-assigned unique ID for this managed resource.{{% /md %}}</dd>
-    <dt class="property-"
+    <dd>{{% md %}}The provider-assigned unique ID for this managed resource.{{% /md %}}</dd><dt class="property-"
             title="">
         <span id="name_csharp">
 <a href="#name_csharp" style="color: inherit; text-decoration: inherit;">Name</a>
@@ -863,8 +773,7 @@ resolution and up to nine fractional digits. Examples: "2014-10-02T15:01:23Z" an
         <span class="property-type">string</span>
     </dt>
     <dd>{{% md %}}The resource name for this CertificateAuthority in the format projects/*/locations/*/certificateAuthorities/*.
-{{% /md %}}</dd>
-    <dt class="property-"
+{{% /md %}}</dd><dt class="property-"
             title="">
         <span id="pemcacertificates_csharp">
 <a href="#pemcacertificates_csharp" style="color: inherit; text-decoration: inherit;">Pem<wbr>Ca<wbr>Certificates</a>
@@ -875,8 +784,7 @@ resolution and up to nine fractional digits. Examples: "2014-10-02T15:01:23Z" an
     <dd>{{% md %}}This CertificateAuthority's certificate chain, including the current CertificateAuthority's certificate. Ordered such
 that the root issuer is the final element (consistent with RFC 5246). For a self-signed CA, this will only list the
 current CertificateAuthority's certificate.
-{{% /md %}}</dd>
-    <dt class="property-"
+{{% /md %}}</dd><dt class="property-"
             title="">
         <span id="state_csharp">
 <a href="#state_csharp" style="color: inherit; text-decoration: inherit;">State</a>
@@ -885,8 +793,7 @@ current CertificateAuthority's certificate.
         <span class="property-type">string</span>
     </dt>
     <dd>{{% md %}}The State for this CertificateAuthority.
-{{% /md %}}</dd>
-    <dt class="property-"
+{{% /md %}}</dd><dt class="property-"
             title="">
         <span id="updatetime_csharp">
 <a href="#updatetime_csharp" style="color: inherit; text-decoration: inherit;">Update<wbr>Time</a>
@@ -896,14 +803,11 @@ current CertificateAuthority's certificate.
     </dt>
     <dd>{{% md %}}The time at which this CertificateAuthority was updated. A timestamp in RFC3339 UTC "Zulu" format, with nanosecond
 resolution and up to nine fractional digits. Examples: "2014-10-02T15:01:23Z" and "2014-10-02T15:01:23.045123456Z".
-{{% /md %}}</dd>
-</dl>
+{{% /md %}}</dd></dl>
 {{% /choosable %}}
 
 {{% choosable language go %}}
-<dl class="resources-properties">
-
-    <dt class="property-"
+<dl class="resources-properties"><dt class="property-"
             title="">
         <span id="accessurls_go">
 <a href="#accessurls_go" style="color: inherit; text-decoration: inherit;">Access<wbr>Urls</a>
@@ -912,8 +816,7 @@ resolution and up to nine fractional digits. Examples: "2014-10-02T15:01:23Z" an
         <span class="property-type"><a href="#authorityaccessurl">[]Authority<wbr>Access<wbr>Url</a></span>
     </dt>
     <dd>{{% md %}}URLs for accessing content published by this CA, such as the CA certificate and CRLs.
-{{% /md %}}</dd>
-    <dt class="property-"
+{{% /md %}}</dd><dt class="property-"
             title="">
         <span id="createtime_go">
 <a href="#createtime_go" style="color: inherit; text-decoration: inherit;">Create<wbr>Time</a>
@@ -923,8 +826,7 @@ resolution and up to nine fractional digits. Examples: "2014-10-02T15:01:23Z" an
     </dt>
     <dd>{{% md %}}The time at which this CertificateAuthority was created. A timestamp in RFC3339 UTC "Zulu" format, with nanosecond
 resolution and up to nine fractional digits. Examples: "2014-10-02T15:01:23Z" and "2014-10-02T15:01:23.045123456Z".
-{{% /md %}}</dd>
-    <dt class="property-"
+{{% /md %}}</dd><dt class="property-"
             title="">
         <span id="id_go">
 <a href="#id_go" style="color: inherit; text-decoration: inherit;">Id</a>
@@ -932,8 +834,7 @@ resolution and up to nine fractional digits. Examples: "2014-10-02T15:01:23Z" an
         <span class="property-indicator"></span>
         <span class="property-type">string</span>
     </dt>
-    <dd>{{% md %}}The provider-assigned unique ID for this managed resource.{{% /md %}}</dd>
-    <dt class="property-"
+    <dd>{{% md %}}The provider-assigned unique ID for this managed resource.{{% /md %}}</dd><dt class="property-"
             title="">
         <span id="name_go">
 <a href="#name_go" style="color: inherit; text-decoration: inherit;">Name</a>
@@ -942,8 +843,7 @@ resolution and up to nine fractional digits. Examples: "2014-10-02T15:01:23Z" an
         <span class="property-type">string</span>
     </dt>
     <dd>{{% md %}}The resource name for this CertificateAuthority in the format projects/*/locations/*/certificateAuthorities/*.
-{{% /md %}}</dd>
-    <dt class="property-"
+{{% /md %}}</dd><dt class="property-"
             title="">
         <span id="pemcacertificates_go">
 <a href="#pemcacertificates_go" style="color: inherit; text-decoration: inherit;">Pem<wbr>Ca<wbr>Certificates</a>
@@ -954,8 +854,7 @@ resolution and up to nine fractional digits. Examples: "2014-10-02T15:01:23Z" an
     <dd>{{% md %}}This CertificateAuthority's certificate chain, including the current CertificateAuthority's certificate. Ordered such
 that the root issuer is the final element (consistent with RFC 5246). For a self-signed CA, this will only list the
 current CertificateAuthority's certificate.
-{{% /md %}}</dd>
-    <dt class="property-"
+{{% /md %}}</dd><dt class="property-"
             title="">
         <span id="state_go">
 <a href="#state_go" style="color: inherit; text-decoration: inherit;">State</a>
@@ -964,8 +863,7 @@ current CertificateAuthority's certificate.
         <span class="property-type">string</span>
     </dt>
     <dd>{{% md %}}The State for this CertificateAuthority.
-{{% /md %}}</dd>
-    <dt class="property-"
+{{% /md %}}</dd><dt class="property-"
             title="">
         <span id="updatetime_go">
 <a href="#updatetime_go" style="color: inherit; text-decoration: inherit;">Update<wbr>Time</a>
@@ -975,14 +873,11 @@ current CertificateAuthority's certificate.
     </dt>
     <dd>{{% md %}}The time at which this CertificateAuthority was updated. A timestamp in RFC3339 UTC "Zulu" format, with nanosecond
 resolution and up to nine fractional digits. Examples: "2014-10-02T15:01:23Z" and "2014-10-02T15:01:23.045123456Z".
-{{% /md %}}</dd>
-</dl>
+{{% /md %}}</dd></dl>
 {{% /choosable %}}
 
 {{% choosable language nodejs %}}
-<dl class="resources-properties">
-
-    <dt class="property-"
+<dl class="resources-properties"><dt class="property-"
             title="">
         <span id="accessurls_nodejs">
 <a href="#accessurls_nodejs" style="color: inherit; text-decoration: inherit;">access<wbr>Urls</a>
@@ -991,8 +886,7 @@ resolution and up to nine fractional digits. Examples: "2014-10-02T15:01:23Z" an
         <span class="property-type"><a href="#authorityaccessurl">Authority<wbr>Access<wbr>Url[]</a></span>
     </dt>
     <dd>{{% md %}}URLs for accessing content published by this CA, such as the CA certificate and CRLs.
-{{% /md %}}</dd>
-    <dt class="property-"
+{{% /md %}}</dd><dt class="property-"
             title="">
         <span id="createtime_nodejs">
 <a href="#createtime_nodejs" style="color: inherit; text-decoration: inherit;">create<wbr>Time</a>
@@ -1002,8 +896,7 @@ resolution and up to nine fractional digits. Examples: "2014-10-02T15:01:23Z" an
     </dt>
     <dd>{{% md %}}The time at which this CertificateAuthority was created. A timestamp in RFC3339 UTC "Zulu" format, with nanosecond
 resolution and up to nine fractional digits. Examples: "2014-10-02T15:01:23Z" and "2014-10-02T15:01:23.045123456Z".
-{{% /md %}}</dd>
-    <dt class="property-"
+{{% /md %}}</dd><dt class="property-"
             title="">
         <span id="id_nodejs">
 <a href="#id_nodejs" style="color: inherit; text-decoration: inherit;">id</a>
@@ -1011,8 +904,7 @@ resolution and up to nine fractional digits. Examples: "2014-10-02T15:01:23Z" an
         <span class="property-indicator"></span>
         <span class="property-type">string</span>
     </dt>
-    <dd>{{% md %}}The provider-assigned unique ID for this managed resource.{{% /md %}}</dd>
-    <dt class="property-"
+    <dd>{{% md %}}The provider-assigned unique ID for this managed resource.{{% /md %}}</dd><dt class="property-"
             title="">
         <span id="name_nodejs">
 <a href="#name_nodejs" style="color: inherit; text-decoration: inherit;">name</a>
@@ -1021,8 +913,7 @@ resolution and up to nine fractional digits. Examples: "2014-10-02T15:01:23Z" an
         <span class="property-type">string</span>
     </dt>
     <dd>{{% md %}}The resource name for this CertificateAuthority in the format projects/*/locations/*/certificateAuthorities/*.
-{{% /md %}}</dd>
-    <dt class="property-"
+{{% /md %}}</dd><dt class="property-"
             title="">
         <span id="pemcacertificates_nodejs">
 <a href="#pemcacertificates_nodejs" style="color: inherit; text-decoration: inherit;">pem<wbr>Ca<wbr>Certificates</a>
@@ -1033,8 +924,7 @@ resolution and up to nine fractional digits. Examples: "2014-10-02T15:01:23Z" an
     <dd>{{% md %}}This CertificateAuthority's certificate chain, including the current CertificateAuthority's certificate. Ordered such
 that the root issuer is the final element (consistent with RFC 5246). For a self-signed CA, this will only list the
 current CertificateAuthority's certificate.
-{{% /md %}}</dd>
-    <dt class="property-"
+{{% /md %}}</dd><dt class="property-"
             title="">
         <span id="state_nodejs">
 <a href="#state_nodejs" style="color: inherit; text-decoration: inherit;">state</a>
@@ -1043,8 +933,7 @@ current CertificateAuthority's certificate.
         <span class="property-type">string</span>
     </dt>
     <dd>{{% md %}}The State for this CertificateAuthority.
-{{% /md %}}</dd>
-    <dt class="property-"
+{{% /md %}}</dd><dt class="property-"
             title="">
         <span id="updatetime_nodejs">
 <a href="#updatetime_nodejs" style="color: inherit; text-decoration: inherit;">update<wbr>Time</a>
@@ -1054,14 +943,11 @@ current CertificateAuthority's certificate.
     </dt>
     <dd>{{% md %}}The time at which this CertificateAuthority was updated. A timestamp in RFC3339 UTC "Zulu" format, with nanosecond
 resolution and up to nine fractional digits. Examples: "2014-10-02T15:01:23Z" and "2014-10-02T15:01:23.045123456Z".
-{{% /md %}}</dd>
-</dl>
+{{% /md %}}</dd></dl>
 {{% /choosable %}}
 
 {{% choosable language python %}}
-<dl class="resources-properties">
-
-    <dt class="property-"
+<dl class="resources-properties"><dt class="property-"
             title="">
         <span id="access_urls_python">
 <a href="#access_urls_python" style="color: inherit; text-decoration: inherit;">access_<wbr>urls</a>
@@ -1070,8 +956,7 @@ resolution and up to nine fractional digits. Examples: "2014-10-02T15:01:23Z" an
         <span class="property-type"><a href="#authorityaccessurl">Sequence[Authority<wbr>Access<wbr>Url]</a></span>
     </dt>
     <dd>{{% md %}}URLs for accessing content published by this CA, such as the CA certificate and CRLs.
-{{% /md %}}</dd>
-    <dt class="property-"
+{{% /md %}}</dd><dt class="property-"
             title="">
         <span id="create_time_python">
 <a href="#create_time_python" style="color: inherit; text-decoration: inherit;">create_<wbr>time</a>
@@ -1081,8 +966,7 @@ resolution and up to nine fractional digits. Examples: "2014-10-02T15:01:23Z" an
     </dt>
     <dd>{{% md %}}The time at which this CertificateAuthority was created. A timestamp in RFC3339 UTC "Zulu" format, with nanosecond
 resolution and up to nine fractional digits. Examples: "2014-10-02T15:01:23Z" and "2014-10-02T15:01:23.045123456Z".
-{{% /md %}}</dd>
-    <dt class="property-"
+{{% /md %}}</dd><dt class="property-"
             title="">
         <span id="id_python">
 <a href="#id_python" style="color: inherit; text-decoration: inherit;">id</a>
@@ -1090,8 +974,7 @@ resolution and up to nine fractional digits. Examples: "2014-10-02T15:01:23Z" an
         <span class="property-indicator"></span>
         <span class="property-type">str</span>
     </dt>
-    <dd>{{% md %}}The provider-assigned unique ID for this managed resource.{{% /md %}}</dd>
-    <dt class="property-"
+    <dd>{{% md %}}The provider-assigned unique ID for this managed resource.{{% /md %}}</dd><dt class="property-"
             title="">
         <span id="name_python">
 <a href="#name_python" style="color: inherit; text-decoration: inherit;">name</a>
@@ -1100,8 +983,7 @@ resolution and up to nine fractional digits. Examples: "2014-10-02T15:01:23Z" an
         <span class="property-type">str</span>
     </dt>
     <dd>{{% md %}}The resource name for this CertificateAuthority in the format projects/*/locations/*/certificateAuthorities/*.
-{{% /md %}}</dd>
-    <dt class="property-"
+{{% /md %}}</dd><dt class="property-"
             title="">
         <span id="pem_ca_certificates_python">
 <a href="#pem_ca_certificates_python" style="color: inherit; text-decoration: inherit;">pem_<wbr>ca_<wbr>certificates</a>
@@ -1112,8 +994,7 @@ resolution and up to nine fractional digits. Examples: "2014-10-02T15:01:23Z" an
     <dd>{{% md %}}This CertificateAuthority's certificate chain, including the current CertificateAuthority's certificate. Ordered such
 that the root issuer is the final element (consistent with RFC 5246). For a self-signed CA, this will only list the
 current CertificateAuthority's certificate.
-{{% /md %}}</dd>
-    <dt class="property-"
+{{% /md %}}</dd><dt class="property-"
             title="">
         <span id="state_python">
 <a href="#state_python" style="color: inherit; text-decoration: inherit;">state</a>
@@ -1122,8 +1003,7 @@ current CertificateAuthority's certificate.
         <span class="property-type">str</span>
     </dt>
     <dd>{{% md %}}The State for this CertificateAuthority.
-{{% /md %}}</dd>
-    <dt class="property-"
+{{% /md %}}</dd><dt class="property-"
             title="">
         <span id="update_time_python">
 <a href="#update_time_python" style="color: inherit; text-decoration: inherit;">update_<wbr>time</a>
@@ -1133,8 +1013,7 @@ current CertificateAuthority's certificate.
     </dt>
     <dd>{{% md %}}The time at which this CertificateAuthority was updated. A timestamp in RFC3339 UTC "Zulu" format, with nanosecond
 resolution and up to nine fractional digits. Examples: "2014-10-02T15:01:23Z" and "2014-10-02T15:01:23.045123456Z".
-{{% /md %}}</dd>
-</dl>
+{{% /md %}}</dd></dl>
 {{% /choosable %}}
 
 
@@ -1261,9 +1140,7 @@ The following state arguments are supported:
 
 
 {{% choosable language csharp %}}
-<dl class="resources-properties">
-
-    <dt class="property-optional"
+<dl class="resources-properties"><dt class="property-optional"
             title="Optional">
         <span id="state_accessurls_csharp">
 <a href="#state_accessurls_csharp" style="color: inherit; text-decoration: inherit;">Access<wbr>Urls</a>
@@ -1272,8 +1149,7 @@ The following state arguments are supported:
         <span class="property-type"><a href="#authorityaccessurl">List&lt;Authority<wbr>Access<wbr>Url<wbr>Args&gt;</a></span>
     </dt>
     <dd>{{% md %}}URLs for accessing content published by this CA, such as the CA certificate and CRLs.
-{{% /md %}}</dd>
-    <dt class="property-optional"
+{{% /md %}}</dd><dt class="property-optional"
             title="Optional">
         <span id="state_certificateauthorityid_csharp">
 <a href="#state_certificateauthorityid_csharp" style="color: inherit; text-decoration: inherit;">Certificate<wbr>Authority<wbr>Id</a>
@@ -1282,8 +1158,7 @@ The following state arguments are supported:
         <span class="property-type">string</span>
     </dt>
     <dd>{{% md %}}The user provided Resource ID for this Certificate Authority.
-{{% /md %}}</dd>
-    <dt class="property-optional"
+{{% /md %}}</dd><dt class="property-optional"
             title="Optional">
         <span id="state_config_csharp">
 <a href="#state_config_csharp" style="color: inherit; text-decoration: inherit;">Config</a>
@@ -1293,8 +1168,7 @@ The following state arguments are supported:
     </dt>
     <dd>{{% md %}}The config used to create a self-signed X.509 certificate or CSR.
 Structure is documented below.
-{{% /md %}}</dd>
-    <dt class="property-optional"
+{{% /md %}}</dd><dt class="property-optional"
             title="Optional">
         <span id="state_createtime_csharp">
 <a href="#state_createtime_csharp" style="color: inherit; text-decoration: inherit;">Create<wbr>Time</a>
@@ -1304,8 +1178,7 @@ Structure is documented below.
     </dt>
     <dd>{{% md %}}The time at which this CertificateAuthority was created. A timestamp in RFC3339 UTC "Zulu" format, with nanosecond
 resolution and up to nine fractional digits. Examples: "2014-10-02T15:01:23Z" and "2014-10-02T15:01:23.045123456Z".
-{{% /md %}}</dd>
-    <dt class="property-optional"
+{{% /md %}}</dd><dt class="property-optional"
             title="Optional">
         <span id="state_disableondelete_csharp">
 <a href="#state_disableondelete_csharp" style="color: inherit; text-decoration: inherit;">Disable<wbr>On<wbr>Delete</a>
@@ -1316,8 +1189,7 @@ resolution and up to nine fractional digits. Examples: "2014-10-02T15:01:23Z" an
     <dd>{{% md %}}If set to `true`, the Certificate Authority will be disabled
 on delete. If the Certitificate Authorities is not disabled,
 it cannot be deleted. Use with care. Defaults to `false`.
-{{% /md %}}</dd>
-    <dt class="property-optional"
+{{% /md %}}</dd><dt class="property-optional"
             title="Optional">
         <span id="state_gcsbucket_csharp">
 <a href="#state_gcsbucket_csharp" style="color: inherit; text-decoration: inherit;">Gcs<wbr>Bucket</a>
@@ -1330,8 +1202,7 @@ such as the CA certificate and CRLs. This must be a bucket name, without any pre
 (such as `gs://`) or suffixes (such as `.googleapis.com`). For example, to use a bucket named
 my-bucket, you would simply specify `my-bucket`. If not specified, a managed bucket will be
 created.
-{{% /md %}}</dd>
-    <dt class="property-optional"
+{{% /md %}}</dd><dt class="property-optional"
             title="Optional">
         <span id="state_issuingoptions_csharp">
 <a href="#state_issuingoptions_csharp" style="color: inherit; text-decoration: inherit;">Issuing<wbr>Options</a>
@@ -1341,8 +1212,7 @@ created.
     </dt>
     <dd>{{% md %}}Options that affect all certificates issued by a CertificateAuthority.
 Structure is documented below.
-{{% /md %}}</dd>
-    <dt class="property-optional"
+{{% /md %}}</dd><dt class="property-optional"
             title="Optional">
         <span id="state_keyspec_csharp">
 <a href="#state_keyspec_csharp" style="color: inherit; text-decoration: inherit;">Key<wbr>Spec</a>
@@ -1354,8 +1224,7 @@ Structure is documented below.
 is a self-signed CertificateAuthority, this key is also used to sign the self-signed CA
 certificate. Otherwise, it is used to sign a CSR.
 Structure is documented below.
-{{% /md %}}</dd>
-    <dt class="property-optional"
+{{% /md %}}</dd><dt class="property-optional"
             title="Optional">
         <span id="state_labels_csharp">
 <a href="#state_labels_csharp" style="color: inherit; text-decoration: inherit;">Labels</a>
@@ -1366,8 +1235,7 @@ Structure is documented below.
     <dd>{{% md %}}Labels with user-defined metadata.
 An object containing a list of "key": value pairs. Example: { "name": "wrench", "mass":
 "1.3kg", "count": "3" }.
-{{% /md %}}</dd>
-    <dt class="property-optional"
+{{% /md %}}</dd><dt class="property-optional"
             title="Optional">
         <span id="state_lifetime_csharp">
 <a href="#state_lifetime_csharp" style="color: inherit; text-decoration: inherit;">Lifetime</a>
@@ -1378,8 +1246,7 @@ An object containing a list of "key": value pairs. Example: { "name": "wrench", 
     <dd>{{% md %}}The desired lifetime of the CA certificate. Used to create the "notBeforeTime" and
 "notAfterTime" fields inside an X.509 certificate. A duration in seconds with up to nine
 fractional digits, terminated by 's'. Example: "3.5s".
-{{% /md %}}</dd>
-    <dt class="property-optional"
+{{% /md %}}</dd><dt class="property-optional"
             title="Optional">
         <span id="state_location_csharp">
 <a href="#state_location_csharp" style="color: inherit; text-decoration: inherit;">Location</a>
@@ -1389,8 +1256,7 @@ fractional digits, terminated by 's'. Example: "3.5s".
     </dt>
     <dd>{{% md %}}Location of the CertificateAuthority. A full list of valid locations can be found by
 running `gcloud beta privateca locations list`.
-{{% /md %}}</dd>
-    <dt class="property-optional"
+{{% /md %}}</dd><dt class="property-optional"
             title="Optional">
         <span id="state_name_csharp">
 <a href="#state_name_csharp" style="color: inherit; text-decoration: inherit;">Name</a>
@@ -1399,8 +1265,7 @@ running `gcloud beta privateca locations list`.
         <span class="property-type">string</span>
     </dt>
     <dd>{{% md %}}The resource name for this CertificateAuthority in the format projects/*/locations/*/certificateAuthorities/*.
-{{% /md %}}</dd>
-    <dt class="property-optional"
+{{% /md %}}</dd><dt class="property-optional"
             title="Optional">
         <span id="state_pemcacertificates_csharp">
 <a href="#state_pemcacertificates_csharp" style="color: inherit; text-decoration: inherit;">Pem<wbr>Ca<wbr>Certificates</a>
@@ -1411,8 +1276,7 @@ running `gcloud beta privateca locations list`.
     <dd>{{% md %}}This CertificateAuthority's certificate chain, including the current CertificateAuthority's certificate. Ordered such
 that the root issuer is the final element (consistent with RFC 5246). For a self-signed CA, this will only list the
 current CertificateAuthority's certificate.
-{{% /md %}}</dd>
-    <dt class="property-optional"
+{{% /md %}}</dd><dt class="property-optional"
             title="Optional">
         <span id="state_project_csharp">
 <a href="#state_project_csharp" style="color: inherit; text-decoration: inherit;">Project</a>
@@ -1422,8 +1286,7 @@ current CertificateAuthority's certificate.
     </dt>
     <dd>{{% md %}}The ID of the project in which the resource belongs.
 If it is not provided, the provider project is used.
-{{% /md %}}</dd>
-    <dt class="property-optional"
+{{% /md %}}</dd><dt class="property-optional"
             title="Optional">
         <span id="state_state_csharp">
 <a href="#state_state_csharp" style="color: inherit; text-decoration: inherit;">State</a>
@@ -1432,8 +1295,7 @@ If it is not provided, the provider project is used.
         <span class="property-type">string</span>
     </dt>
     <dd>{{% md %}}The State for this CertificateAuthority.
-{{% /md %}}</dd>
-    <dt class="property-optional"
+{{% /md %}}</dd><dt class="property-optional"
             title="Optional">
         <span id="state_tier_csharp">
 <a href="#state_tier_csharp" style="color: inherit; text-decoration: inherit;">Tier</a>
@@ -1446,8 +1308,7 @@ server side certificates issued, and support certificate revocation. For more de
 please check the [associated documentation](https://cloud.google.com/certificate-authority-service/docs/tiers).
 Default value is `ENTERPRISE`.
 Possible values are `ENTERPRISE` and `DEVOPS`.
-{{% /md %}}</dd>
-    <dt class="property-optional"
+{{% /md %}}</dd><dt class="property-optional"
             title="Optional">
         <span id="state_type_csharp">
 <a href="#state_type_csharp" style="color: inherit; text-decoration: inherit;">Type</a>
@@ -1461,8 +1322,7 @@ be manually activated (via Cloud Console of `gcloud`) before they can
 issue certificates.
 Default value is `SELF_SIGNED`.
 Possible values are `SELF_SIGNED` and `SUBORDINATE`.
-{{% /md %}}</dd>
-    <dt class="property-optional"
+{{% /md %}}</dd><dt class="property-optional"
             title="Optional">
         <span id="state_updatetime_csharp">
 <a href="#state_updatetime_csharp" style="color: inherit; text-decoration: inherit;">Update<wbr>Time</a>
@@ -1472,14 +1332,11 @@ Possible values are `SELF_SIGNED` and `SUBORDINATE`.
     </dt>
     <dd>{{% md %}}The time at which this CertificateAuthority was updated. A timestamp in RFC3339 UTC "Zulu" format, with nanosecond
 resolution and up to nine fractional digits. Examples: "2014-10-02T15:01:23Z" and "2014-10-02T15:01:23.045123456Z".
-{{% /md %}}</dd>
-</dl>
+{{% /md %}}</dd></dl>
 {{% /choosable %}}
 
 {{% choosable language go %}}
-<dl class="resources-properties">
-
-    <dt class="property-optional"
+<dl class="resources-properties"><dt class="property-optional"
             title="Optional">
         <span id="state_accessurls_go">
 <a href="#state_accessurls_go" style="color: inherit; text-decoration: inherit;">Access<wbr>Urls</a>
@@ -1488,8 +1345,7 @@ resolution and up to nine fractional digits. Examples: "2014-10-02T15:01:23Z" an
         <span class="property-type"><a href="#authorityaccessurl">[]Authority<wbr>Access<wbr>Url</a></span>
     </dt>
     <dd>{{% md %}}URLs for accessing content published by this CA, such as the CA certificate and CRLs.
-{{% /md %}}</dd>
-    <dt class="property-optional"
+{{% /md %}}</dd><dt class="property-optional"
             title="Optional">
         <span id="state_certificateauthorityid_go">
 <a href="#state_certificateauthorityid_go" style="color: inherit; text-decoration: inherit;">Certificate<wbr>Authority<wbr>Id</a>
@@ -1498,8 +1354,7 @@ resolution and up to nine fractional digits. Examples: "2014-10-02T15:01:23Z" an
         <span class="property-type">string</span>
     </dt>
     <dd>{{% md %}}The user provided Resource ID for this Certificate Authority.
-{{% /md %}}</dd>
-    <dt class="property-optional"
+{{% /md %}}</dd><dt class="property-optional"
             title="Optional">
         <span id="state_config_go">
 <a href="#state_config_go" style="color: inherit; text-decoration: inherit;">Config</a>
@@ -1509,8 +1364,7 @@ resolution and up to nine fractional digits. Examples: "2014-10-02T15:01:23Z" an
     </dt>
     <dd>{{% md %}}The config used to create a self-signed X.509 certificate or CSR.
 Structure is documented below.
-{{% /md %}}</dd>
-    <dt class="property-optional"
+{{% /md %}}</dd><dt class="property-optional"
             title="Optional">
         <span id="state_createtime_go">
 <a href="#state_createtime_go" style="color: inherit; text-decoration: inherit;">Create<wbr>Time</a>
@@ -1520,8 +1374,7 @@ Structure is documented below.
     </dt>
     <dd>{{% md %}}The time at which this CertificateAuthority was created. A timestamp in RFC3339 UTC "Zulu" format, with nanosecond
 resolution and up to nine fractional digits. Examples: "2014-10-02T15:01:23Z" and "2014-10-02T15:01:23.045123456Z".
-{{% /md %}}</dd>
-    <dt class="property-optional"
+{{% /md %}}</dd><dt class="property-optional"
             title="Optional">
         <span id="state_disableondelete_go">
 <a href="#state_disableondelete_go" style="color: inherit; text-decoration: inherit;">Disable<wbr>On<wbr>Delete</a>
@@ -1532,8 +1385,7 @@ resolution and up to nine fractional digits. Examples: "2014-10-02T15:01:23Z" an
     <dd>{{% md %}}If set to `true`, the Certificate Authority will be disabled
 on delete. If the Certitificate Authorities is not disabled,
 it cannot be deleted. Use with care. Defaults to `false`.
-{{% /md %}}</dd>
-    <dt class="property-optional"
+{{% /md %}}</dd><dt class="property-optional"
             title="Optional">
         <span id="state_gcsbucket_go">
 <a href="#state_gcsbucket_go" style="color: inherit; text-decoration: inherit;">Gcs<wbr>Bucket</a>
@@ -1546,8 +1398,7 @@ such as the CA certificate and CRLs. This must be a bucket name, without any pre
 (such as `gs://`) or suffixes (such as `.googleapis.com`). For example, to use a bucket named
 my-bucket, you would simply specify `my-bucket`. If not specified, a managed bucket will be
 created.
-{{% /md %}}</dd>
-    <dt class="property-optional"
+{{% /md %}}</dd><dt class="property-optional"
             title="Optional">
         <span id="state_issuingoptions_go">
 <a href="#state_issuingoptions_go" style="color: inherit; text-decoration: inherit;">Issuing<wbr>Options</a>
@@ -1557,8 +1408,7 @@ created.
     </dt>
     <dd>{{% md %}}Options that affect all certificates issued by a CertificateAuthority.
 Structure is documented below.
-{{% /md %}}</dd>
-    <dt class="property-optional"
+{{% /md %}}</dd><dt class="property-optional"
             title="Optional">
         <span id="state_keyspec_go">
 <a href="#state_keyspec_go" style="color: inherit; text-decoration: inherit;">Key<wbr>Spec</a>
@@ -1570,8 +1420,7 @@ Structure is documented below.
 is a self-signed CertificateAuthority, this key is also used to sign the self-signed CA
 certificate. Otherwise, it is used to sign a CSR.
 Structure is documented below.
-{{% /md %}}</dd>
-    <dt class="property-optional"
+{{% /md %}}</dd><dt class="property-optional"
             title="Optional">
         <span id="state_labels_go">
 <a href="#state_labels_go" style="color: inherit; text-decoration: inherit;">Labels</a>
@@ -1582,8 +1431,7 @@ Structure is documented below.
     <dd>{{% md %}}Labels with user-defined metadata.
 An object containing a list of "key": value pairs. Example: { "name": "wrench", "mass":
 "1.3kg", "count": "3" }.
-{{% /md %}}</dd>
-    <dt class="property-optional"
+{{% /md %}}</dd><dt class="property-optional"
             title="Optional">
         <span id="state_lifetime_go">
 <a href="#state_lifetime_go" style="color: inherit; text-decoration: inherit;">Lifetime</a>
@@ -1594,8 +1442,7 @@ An object containing a list of "key": value pairs. Example: { "name": "wrench", 
     <dd>{{% md %}}The desired lifetime of the CA certificate. Used to create the "notBeforeTime" and
 "notAfterTime" fields inside an X.509 certificate. A duration in seconds with up to nine
 fractional digits, terminated by 's'. Example: "3.5s".
-{{% /md %}}</dd>
-    <dt class="property-optional"
+{{% /md %}}</dd><dt class="property-optional"
             title="Optional">
         <span id="state_location_go">
 <a href="#state_location_go" style="color: inherit; text-decoration: inherit;">Location</a>
@@ -1605,8 +1452,7 @@ fractional digits, terminated by 's'. Example: "3.5s".
     </dt>
     <dd>{{% md %}}Location of the CertificateAuthority. A full list of valid locations can be found by
 running `gcloud beta privateca locations list`.
-{{% /md %}}</dd>
-    <dt class="property-optional"
+{{% /md %}}</dd><dt class="property-optional"
             title="Optional">
         <span id="state_name_go">
 <a href="#state_name_go" style="color: inherit; text-decoration: inherit;">Name</a>
@@ -1615,8 +1461,7 @@ running `gcloud beta privateca locations list`.
         <span class="property-type">string</span>
     </dt>
     <dd>{{% md %}}The resource name for this CertificateAuthority in the format projects/*/locations/*/certificateAuthorities/*.
-{{% /md %}}</dd>
-    <dt class="property-optional"
+{{% /md %}}</dd><dt class="property-optional"
             title="Optional">
         <span id="state_pemcacertificates_go">
 <a href="#state_pemcacertificates_go" style="color: inherit; text-decoration: inherit;">Pem<wbr>Ca<wbr>Certificates</a>
@@ -1627,8 +1472,7 @@ running `gcloud beta privateca locations list`.
     <dd>{{% md %}}This CertificateAuthority's certificate chain, including the current CertificateAuthority's certificate. Ordered such
 that the root issuer is the final element (consistent with RFC 5246). For a self-signed CA, this will only list the
 current CertificateAuthority's certificate.
-{{% /md %}}</dd>
-    <dt class="property-optional"
+{{% /md %}}</dd><dt class="property-optional"
             title="Optional">
         <span id="state_project_go">
 <a href="#state_project_go" style="color: inherit; text-decoration: inherit;">Project</a>
@@ -1638,8 +1482,7 @@ current CertificateAuthority's certificate.
     </dt>
     <dd>{{% md %}}The ID of the project in which the resource belongs.
 If it is not provided, the provider project is used.
-{{% /md %}}</dd>
-    <dt class="property-optional"
+{{% /md %}}</dd><dt class="property-optional"
             title="Optional">
         <span id="state_state_go">
 <a href="#state_state_go" style="color: inherit; text-decoration: inherit;">State</a>
@@ -1648,8 +1491,7 @@ If it is not provided, the provider project is used.
         <span class="property-type">string</span>
     </dt>
     <dd>{{% md %}}The State for this CertificateAuthority.
-{{% /md %}}</dd>
-    <dt class="property-optional"
+{{% /md %}}</dd><dt class="property-optional"
             title="Optional">
         <span id="state_tier_go">
 <a href="#state_tier_go" style="color: inherit; text-decoration: inherit;">Tier</a>
@@ -1662,8 +1504,7 @@ server side certificates issued, and support certificate revocation. For more de
 please check the [associated documentation](https://cloud.google.com/certificate-authority-service/docs/tiers).
 Default value is `ENTERPRISE`.
 Possible values are `ENTERPRISE` and `DEVOPS`.
-{{% /md %}}</dd>
-    <dt class="property-optional"
+{{% /md %}}</dd><dt class="property-optional"
             title="Optional">
         <span id="state_type_go">
 <a href="#state_type_go" style="color: inherit; text-decoration: inherit;">Type</a>
@@ -1677,8 +1518,7 @@ be manually activated (via Cloud Console of `gcloud`) before they can
 issue certificates.
 Default value is `SELF_SIGNED`.
 Possible values are `SELF_SIGNED` and `SUBORDINATE`.
-{{% /md %}}</dd>
-    <dt class="property-optional"
+{{% /md %}}</dd><dt class="property-optional"
             title="Optional">
         <span id="state_updatetime_go">
 <a href="#state_updatetime_go" style="color: inherit; text-decoration: inherit;">Update<wbr>Time</a>
@@ -1688,14 +1528,11 @@ Possible values are `SELF_SIGNED` and `SUBORDINATE`.
     </dt>
     <dd>{{% md %}}The time at which this CertificateAuthority was updated. A timestamp in RFC3339 UTC "Zulu" format, with nanosecond
 resolution and up to nine fractional digits. Examples: "2014-10-02T15:01:23Z" and "2014-10-02T15:01:23.045123456Z".
-{{% /md %}}</dd>
-</dl>
+{{% /md %}}</dd></dl>
 {{% /choosable %}}
 
 {{% choosable language nodejs %}}
-<dl class="resources-properties">
-
-    <dt class="property-optional"
+<dl class="resources-properties"><dt class="property-optional"
             title="Optional">
         <span id="state_accessurls_nodejs">
 <a href="#state_accessurls_nodejs" style="color: inherit; text-decoration: inherit;">access<wbr>Urls</a>
@@ -1704,8 +1541,7 @@ resolution and up to nine fractional digits. Examples: "2014-10-02T15:01:23Z" an
         <span class="property-type"><a href="#authorityaccessurl">Authority<wbr>Access<wbr>Url[]</a></span>
     </dt>
     <dd>{{% md %}}URLs for accessing content published by this CA, such as the CA certificate and CRLs.
-{{% /md %}}</dd>
-    <dt class="property-optional"
+{{% /md %}}</dd><dt class="property-optional"
             title="Optional">
         <span id="state_certificateauthorityid_nodejs">
 <a href="#state_certificateauthorityid_nodejs" style="color: inherit; text-decoration: inherit;">certificate<wbr>Authority<wbr>Id</a>
@@ -1714,8 +1550,7 @@ resolution and up to nine fractional digits. Examples: "2014-10-02T15:01:23Z" an
         <span class="property-type">string</span>
     </dt>
     <dd>{{% md %}}The user provided Resource ID for this Certificate Authority.
-{{% /md %}}</dd>
-    <dt class="property-optional"
+{{% /md %}}</dd><dt class="property-optional"
             title="Optional">
         <span id="state_config_nodejs">
 <a href="#state_config_nodejs" style="color: inherit; text-decoration: inherit;">config</a>
@@ -1725,8 +1560,7 @@ resolution and up to nine fractional digits. Examples: "2014-10-02T15:01:23Z" an
     </dt>
     <dd>{{% md %}}The config used to create a self-signed X.509 certificate or CSR.
 Structure is documented below.
-{{% /md %}}</dd>
-    <dt class="property-optional"
+{{% /md %}}</dd><dt class="property-optional"
             title="Optional">
         <span id="state_createtime_nodejs">
 <a href="#state_createtime_nodejs" style="color: inherit; text-decoration: inherit;">create<wbr>Time</a>
@@ -1736,8 +1570,7 @@ Structure is documented below.
     </dt>
     <dd>{{% md %}}The time at which this CertificateAuthority was created. A timestamp in RFC3339 UTC "Zulu" format, with nanosecond
 resolution and up to nine fractional digits. Examples: "2014-10-02T15:01:23Z" and "2014-10-02T15:01:23.045123456Z".
-{{% /md %}}</dd>
-    <dt class="property-optional"
+{{% /md %}}</dd><dt class="property-optional"
             title="Optional">
         <span id="state_disableondelete_nodejs">
 <a href="#state_disableondelete_nodejs" style="color: inherit; text-decoration: inherit;">disable<wbr>On<wbr>Delete</a>
@@ -1748,8 +1581,7 @@ resolution and up to nine fractional digits. Examples: "2014-10-02T15:01:23Z" an
     <dd>{{% md %}}If set to `true`, the Certificate Authority will be disabled
 on delete. If the Certitificate Authorities is not disabled,
 it cannot be deleted. Use with care. Defaults to `false`.
-{{% /md %}}</dd>
-    <dt class="property-optional"
+{{% /md %}}</dd><dt class="property-optional"
             title="Optional">
         <span id="state_gcsbucket_nodejs">
 <a href="#state_gcsbucket_nodejs" style="color: inherit; text-decoration: inherit;">gcs<wbr>Bucket</a>
@@ -1762,8 +1594,7 @@ such as the CA certificate and CRLs. This must be a bucket name, without any pre
 (such as `gs://`) or suffixes (such as `.googleapis.com`). For example, to use a bucket named
 my-bucket, you would simply specify `my-bucket`. If not specified, a managed bucket will be
 created.
-{{% /md %}}</dd>
-    <dt class="property-optional"
+{{% /md %}}</dd><dt class="property-optional"
             title="Optional">
         <span id="state_issuingoptions_nodejs">
 <a href="#state_issuingoptions_nodejs" style="color: inherit; text-decoration: inherit;">issuing<wbr>Options</a>
@@ -1773,8 +1604,7 @@ created.
     </dt>
     <dd>{{% md %}}Options that affect all certificates issued by a CertificateAuthority.
 Structure is documented below.
-{{% /md %}}</dd>
-    <dt class="property-optional"
+{{% /md %}}</dd><dt class="property-optional"
             title="Optional">
         <span id="state_keyspec_nodejs">
 <a href="#state_keyspec_nodejs" style="color: inherit; text-decoration: inherit;">key<wbr>Spec</a>
@@ -1786,8 +1616,7 @@ Structure is documented below.
 is a self-signed CertificateAuthority, this key is also used to sign the self-signed CA
 certificate. Otherwise, it is used to sign a CSR.
 Structure is documented below.
-{{% /md %}}</dd>
-    <dt class="property-optional"
+{{% /md %}}</dd><dt class="property-optional"
             title="Optional">
         <span id="state_labels_nodejs">
 <a href="#state_labels_nodejs" style="color: inherit; text-decoration: inherit;">labels</a>
@@ -1798,8 +1627,7 @@ Structure is documented below.
     <dd>{{% md %}}Labels with user-defined metadata.
 An object containing a list of "key": value pairs. Example: { "name": "wrench", "mass":
 "1.3kg", "count": "3" }.
-{{% /md %}}</dd>
-    <dt class="property-optional"
+{{% /md %}}</dd><dt class="property-optional"
             title="Optional">
         <span id="state_lifetime_nodejs">
 <a href="#state_lifetime_nodejs" style="color: inherit; text-decoration: inherit;">lifetime</a>
@@ -1810,8 +1638,7 @@ An object containing a list of "key": value pairs. Example: { "name": "wrench", 
     <dd>{{% md %}}The desired lifetime of the CA certificate. Used to create the "notBeforeTime" and
 "notAfterTime" fields inside an X.509 certificate. A duration in seconds with up to nine
 fractional digits, terminated by 's'. Example: "3.5s".
-{{% /md %}}</dd>
-    <dt class="property-optional"
+{{% /md %}}</dd><dt class="property-optional"
             title="Optional">
         <span id="state_location_nodejs">
 <a href="#state_location_nodejs" style="color: inherit; text-decoration: inherit;">location</a>
@@ -1821,8 +1648,7 @@ fractional digits, terminated by 's'. Example: "3.5s".
     </dt>
     <dd>{{% md %}}Location of the CertificateAuthority. A full list of valid locations can be found by
 running `gcloud beta privateca locations list`.
-{{% /md %}}</dd>
-    <dt class="property-optional"
+{{% /md %}}</dd><dt class="property-optional"
             title="Optional">
         <span id="state_name_nodejs">
 <a href="#state_name_nodejs" style="color: inherit; text-decoration: inherit;">name</a>
@@ -1831,8 +1657,7 @@ running `gcloud beta privateca locations list`.
         <span class="property-type">string</span>
     </dt>
     <dd>{{% md %}}The resource name for this CertificateAuthority in the format projects/*/locations/*/certificateAuthorities/*.
-{{% /md %}}</dd>
-    <dt class="property-optional"
+{{% /md %}}</dd><dt class="property-optional"
             title="Optional">
         <span id="state_pemcacertificates_nodejs">
 <a href="#state_pemcacertificates_nodejs" style="color: inherit; text-decoration: inherit;">pem<wbr>Ca<wbr>Certificates</a>
@@ -1843,8 +1668,7 @@ running `gcloud beta privateca locations list`.
     <dd>{{% md %}}This CertificateAuthority's certificate chain, including the current CertificateAuthority's certificate. Ordered such
 that the root issuer is the final element (consistent with RFC 5246). For a self-signed CA, this will only list the
 current CertificateAuthority's certificate.
-{{% /md %}}</dd>
-    <dt class="property-optional"
+{{% /md %}}</dd><dt class="property-optional"
             title="Optional">
         <span id="state_project_nodejs">
 <a href="#state_project_nodejs" style="color: inherit; text-decoration: inherit;">project</a>
@@ -1854,8 +1678,7 @@ current CertificateAuthority's certificate.
     </dt>
     <dd>{{% md %}}The ID of the project in which the resource belongs.
 If it is not provided, the provider project is used.
-{{% /md %}}</dd>
-    <dt class="property-optional"
+{{% /md %}}</dd><dt class="property-optional"
             title="Optional">
         <span id="state_state_nodejs">
 <a href="#state_state_nodejs" style="color: inherit; text-decoration: inherit;">state</a>
@@ -1864,8 +1687,7 @@ If it is not provided, the provider project is used.
         <span class="property-type">string</span>
     </dt>
     <dd>{{% md %}}The State for this CertificateAuthority.
-{{% /md %}}</dd>
-    <dt class="property-optional"
+{{% /md %}}</dd><dt class="property-optional"
             title="Optional">
         <span id="state_tier_nodejs">
 <a href="#state_tier_nodejs" style="color: inherit; text-decoration: inherit;">tier</a>
@@ -1878,8 +1700,7 @@ server side certificates issued, and support certificate revocation. For more de
 please check the [associated documentation](https://cloud.google.com/certificate-authority-service/docs/tiers).
 Default value is `ENTERPRISE`.
 Possible values are `ENTERPRISE` and `DEVOPS`.
-{{% /md %}}</dd>
-    <dt class="property-optional"
+{{% /md %}}</dd><dt class="property-optional"
             title="Optional">
         <span id="state_type_nodejs">
 <a href="#state_type_nodejs" style="color: inherit; text-decoration: inherit;">type</a>
@@ -1893,8 +1714,7 @@ be manually activated (via Cloud Console of `gcloud`) before they can
 issue certificates.
 Default value is `SELF_SIGNED`.
 Possible values are `SELF_SIGNED` and `SUBORDINATE`.
-{{% /md %}}</dd>
-    <dt class="property-optional"
+{{% /md %}}</dd><dt class="property-optional"
             title="Optional">
         <span id="state_updatetime_nodejs">
 <a href="#state_updatetime_nodejs" style="color: inherit; text-decoration: inherit;">update<wbr>Time</a>
@@ -1904,14 +1724,11 @@ Possible values are `SELF_SIGNED` and `SUBORDINATE`.
     </dt>
     <dd>{{% md %}}The time at which this CertificateAuthority was updated. A timestamp in RFC3339 UTC "Zulu" format, with nanosecond
 resolution and up to nine fractional digits. Examples: "2014-10-02T15:01:23Z" and "2014-10-02T15:01:23.045123456Z".
-{{% /md %}}</dd>
-</dl>
+{{% /md %}}</dd></dl>
 {{% /choosable %}}
 
 {{% choosable language python %}}
-<dl class="resources-properties">
-
-    <dt class="property-optional"
+<dl class="resources-properties"><dt class="property-optional"
             title="Optional">
         <span id="state_access_urls_python">
 <a href="#state_access_urls_python" style="color: inherit; text-decoration: inherit;">access_<wbr>urls</a>
@@ -1920,8 +1737,7 @@ resolution and up to nine fractional digits. Examples: "2014-10-02T15:01:23Z" an
         <span class="property-type"><a href="#authorityaccessurl">Sequence[Authority<wbr>Access<wbr>Url<wbr>Args]</a></span>
     </dt>
     <dd>{{% md %}}URLs for accessing content published by this CA, such as the CA certificate and CRLs.
-{{% /md %}}</dd>
-    <dt class="property-optional"
+{{% /md %}}</dd><dt class="property-optional"
             title="Optional">
         <span id="state_certificate_authority_id_python">
 <a href="#state_certificate_authority_id_python" style="color: inherit; text-decoration: inherit;">certificate_<wbr>authority_<wbr>id</a>
@@ -1930,8 +1746,7 @@ resolution and up to nine fractional digits. Examples: "2014-10-02T15:01:23Z" an
         <span class="property-type">str</span>
     </dt>
     <dd>{{% md %}}The user provided Resource ID for this Certificate Authority.
-{{% /md %}}</dd>
-    <dt class="property-optional"
+{{% /md %}}</dd><dt class="property-optional"
             title="Optional">
         <span id="state_config_python">
 <a href="#state_config_python" style="color: inherit; text-decoration: inherit;">config</a>
@@ -1941,8 +1756,7 @@ resolution and up to nine fractional digits. Examples: "2014-10-02T15:01:23Z" an
     </dt>
     <dd>{{% md %}}The config used to create a self-signed X.509 certificate or CSR.
 Structure is documented below.
-{{% /md %}}</dd>
-    <dt class="property-optional"
+{{% /md %}}</dd><dt class="property-optional"
             title="Optional">
         <span id="state_create_time_python">
 <a href="#state_create_time_python" style="color: inherit; text-decoration: inherit;">create_<wbr>time</a>
@@ -1952,8 +1766,7 @@ Structure is documented below.
     </dt>
     <dd>{{% md %}}The time at which this CertificateAuthority was created. A timestamp in RFC3339 UTC "Zulu" format, with nanosecond
 resolution and up to nine fractional digits. Examples: "2014-10-02T15:01:23Z" and "2014-10-02T15:01:23.045123456Z".
-{{% /md %}}</dd>
-    <dt class="property-optional"
+{{% /md %}}</dd><dt class="property-optional"
             title="Optional">
         <span id="state_disable_on_delete_python">
 <a href="#state_disable_on_delete_python" style="color: inherit; text-decoration: inherit;">disable_<wbr>on_<wbr>delete</a>
@@ -1964,8 +1777,7 @@ resolution and up to nine fractional digits. Examples: "2014-10-02T15:01:23Z" an
     <dd>{{% md %}}If set to `true`, the Certificate Authority will be disabled
 on delete. If the Certitificate Authorities is not disabled,
 it cannot be deleted. Use with care. Defaults to `false`.
-{{% /md %}}</dd>
-    <dt class="property-optional"
+{{% /md %}}</dd><dt class="property-optional"
             title="Optional">
         <span id="state_gcs_bucket_python">
 <a href="#state_gcs_bucket_python" style="color: inherit; text-decoration: inherit;">gcs_<wbr>bucket</a>
@@ -1978,8 +1790,7 @@ such as the CA certificate and CRLs. This must be a bucket name, without any pre
 (such as `gs://`) or suffixes (such as `.googleapis.com`). For example, to use a bucket named
 my-bucket, you would simply specify `my-bucket`. If not specified, a managed bucket will be
 created.
-{{% /md %}}</dd>
-    <dt class="property-optional"
+{{% /md %}}</dd><dt class="property-optional"
             title="Optional">
         <span id="state_issuing_options_python">
 <a href="#state_issuing_options_python" style="color: inherit; text-decoration: inherit;">issuing_<wbr>options</a>
@@ -1989,8 +1800,7 @@ created.
     </dt>
     <dd>{{% md %}}Options that affect all certificates issued by a CertificateAuthority.
 Structure is documented below.
-{{% /md %}}</dd>
-    <dt class="property-optional"
+{{% /md %}}</dd><dt class="property-optional"
             title="Optional">
         <span id="state_key_spec_python">
 <a href="#state_key_spec_python" style="color: inherit; text-decoration: inherit;">key_<wbr>spec</a>
@@ -2002,8 +1812,7 @@ Structure is documented below.
 is a self-signed CertificateAuthority, this key is also used to sign the self-signed CA
 certificate. Otherwise, it is used to sign a CSR.
 Structure is documented below.
-{{% /md %}}</dd>
-    <dt class="property-optional"
+{{% /md %}}</dd><dt class="property-optional"
             title="Optional">
         <span id="state_labels_python">
 <a href="#state_labels_python" style="color: inherit; text-decoration: inherit;">labels</a>
@@ -2014,8 +1823,7 @@ Structure is documented below.
     <dd>{{% md %}}Labels with user-defined metadata.
 An object containing a list of "key": value pairs. Example: { "name": "wrench", "mass":
 "1.3kg", "count": "3" }.
-{{% /md %}}</dd>
-    <dt class="property-optional"
+{{% /md %}}</dd><dt class="property-optional"
             title="Optional">
         <span id="state_lifetime_python">
 <a href="#state_lifetime_python" style="color: inherit; text-decoration: inherit;">lifetime</a>
@@ -2026,8 +1834,7 @@ An object containing a list of "key": value pairs. Example: { "name": "wrench", 
     <dd>{{% md %}}The desired lifetime of the CA certificate. Used to create the "notBeforeTime" and
 "notAfterTime" fields inside an X.509 certificate. A duration in seconds with up to nine
 fractional digits, terminated by 's'. Example: "3.5s".
-{{% /md %}}</dd>
-    <dt class="property-optional"
+{{% /md %}}</dd><dt class="property-optional"
             title="Optional">
         <span id="state_location_python">
 <a href="#state_location_python" style="color: inherit; text-decoration: inherit;">location</a>
@@ -2037,8 +1844,7 @@ fractional digits, terminated by 's'. Example: "3.5s".
     </dt>
     <dd>{{% md %}}Location of the CertificateAuthority. A full list of valid locations can be found by
 running `gcloud beta privateca locations list`.
-{{% /md %}}</dd>
-    <dt class="property-optional"
+{{% /md %}}</dd><dt class="property-optional"
             title="Optional">
         <span id="state_name_python">
 <a href="#state_name_python" style="color: inherit; text-decoration: inherit;">name</a>
@@ -2047,8 +1853,7 @@ running `gcloud beta privateca locations list`.
         <span class="property-type">str</span>
     </dt>
     <dd>{{% md %}}The resource name for this CertificateAuthority in the format projects/*/locations/*/certificateAuthorities/*.
-{{% /md %}}</dd>
-    <dt class="property-optional"
+{{% /md %}}</dd><dt class="property-optional"
             title="Optional">
         <span id="state_pem_ca_certificates_python">
 <a href="#state_pem_ca_certificates_python" style="color: inherit; text-decoration: inherit;">pem_<wbr>ca_<wbr>certificates</a>
@@ -2059,8 +1864,7 @@ running `gcloud beta privateca locations list`.
     <dd>{{% md %}}This CertificateAuthority's certificate chain, including the current CertificateAuthority's certificate. Ordered such
 that the root issuer is the final element (consistent with RFC 5246). For a self-signed CA, this will only list the
 current CertificateAuthority's certificate.
-{{% /md %}}</dd>
-    <dt class="property-optional"
+{{% /md %}}</dd><dt class="property-optional"
             title="Optional">
         <span id="state_project_python">
 <a href="#state_project_python" style="color: inherit; text-decoration: inherit;">project</a>
@@ -2070,8 +1874,7 @@ current CertificateAuthority's certificate.
     </dt>
     <dd>{{% md %}}The ID of the project in which the resource belongs.
 If it is not provided, the provider project is used.
-{{% /md %}}</dd>
-    <dt class="property-optional"
+{{% /md %}}</dd><dt class="property-optional"
             title="Optional">
         <span id="state_state_python">
 <a href="#state_state_python" style="color: inherit; text-decoration: inherit;">state</a>
@@ -2080,8 +1883,7 @@ If it is not provided, the provider project is used.
         <span class="property-type">str</span>
     </dt>
     <dd>{{% md %}}The State for this CertificateAuthority.
-{{% /md %}}</dd>
-    <dt class="property-optional"
+{{% /md %}}</dd><dt class="property-optional"
             title="Optional">
         <span id="state_tier_python">
 <a href="#state_tier_python" style="color: inherit; text-decoration: inherit;">tier</a>
@@ -2094,8 +1896,7 @@ server side certificates issued, and support certificate revocation. For more de
 please check the [associated documentation](https://cloud.google.com/certificate-authority-service/docs/tiers).
 Default value is `ENTERPRISE`.
 Possible values are `ENTERPRISE` and `DEVOPS`.
-{{% /md %}}</dd>
-    <dt class="property-optional"
+{{% /md %}}</dd><dt class="property-optional"
             title="Optional">
         <span id="state_type_python">
 <a href="#state_type_python" style="color: inherit; text-decoration: inherit;">type</a>
@@ -2109,8 +1910,7 @@ be manually activated (via Cloud Console of `gcloud`) before they can
 issue certificates.
 Default value is `SELF_SIGNED`.
 Possible values are `SELF_SIGNED` and `SUBORDINATE`.
-{{% /md %}}</dd>
-    <dt class="property-optional"
+{{% /md %}}</dd><dt class="property-optional"
             title="Optional">
         <span id="state_update_time_python">
 <a href="#state_update_time_python" style="color: inherit; text-decoration: inherit;">update_<wbr>time</a>
@@ -2120,8 +1920,7 @@ Possible values are `SELF_SIGNED` and `SUBORDINATE`.
     </dt>
     <dd>{{% md %}}The time at which this CertificateAuthority was updated. A timestamp in RFC3339 UTC "Zulu" format, with nanosecond
 resolution and up to nine fractional digits. Examples: "2014-10-02T15:01:23Z" and "2014-10-02T15:01:23.045123456Z".
-{{% /md %}}</dd>
-</dl>
+{{% /md %}}</dd></dl>
 {{% /choosable %}}
 
 
@@ -2136,9 +1935,7 @@ resolution and up to nine fractional digits. Examples: "2014-10-02T15:01:23Z" an
 <h4 id="authorityaccessurl">Authority<wbr>Access<wbr>Url</h4>
 
 {{% choosable language csharp %}}
-<dl class="resources-properties">
-
-    <dt class="property-optional"
+<dl class="resources-properties"><dt class="property-optional"
             title="Optional">
         <span id="cacertificateaccessurl_csharp">
 <a href="#cacertificateaccessurl_csharp" style="color: inherit; text-decoration: inherit;">Ca<wbr>Certificate<wbr>Access<wbr>Url</a>
@@ -2146,8 +1943,7 @@ resolution and up to nine fractional digits. Examples: "2014-10-02T15:01:23Z" an
         <span class="property-indicator"></span>
         <span class="property-type">string</span>
     </dt>
-    <dd>{{% md %}}{{% /md %}}</dd>
-    <dt class="property-optional"
+    <dd>{{% md %}}{{% /md %}}</dd><dt class="property-optional"
             title="Optional">
         <span id="crlaccessurl_csharp">
 <a href="#crlaccessurl_csharp" style="color: inherit; text-decoration: inherit;">Crl<wbr>Access<wbr>Url</a>
@@ -2155,14 +1951,11 @@ resolution and up to nine fractional digits. Examples: "2014-10-02T15:01:23Z" an
         <span class="property-indicator"></span>
         <span class="property-type">string</span>
     </dt>
-    <dd>{{% md %}}{{% /md %}}</dd>
-</dl>
+    <dd>{{% md %}}{{% /md %}}</dd></dl>
 {{% /choosable %}}
 
 {{% choosable language go %}}
-<dl class="resources-properties">
-
-    <dt class="property-optional"
+<dl class="resources-properties"><dt class="property-optional"
             title="Optional">
         <span id="cacertificateaccessurl_go">
 <a href="#cacertificateaccessurl_go" style="color: inherit; text-decoration: inherit;">Ca<wbr>Certificate<wbr>Access<wbr>Url</a>
@@ -2170,8 +1963,7 @@ resolution and up to nine fractional digits. Examples: "2014-10-02T15:01:23Z" an
         <span class="property-indicator"></span>
         <span class="property-type">string</span>
     </dt>
-    <dd>{{% md %}}{{% /md %}}</dd>
-    <dt class="property-optional"
+    <dd>{{% md %}}{{% /md %}}</dd><dt class="property-optional"
             title="Optional">
         <span id="crlaccessurl_go">
 <a href="#crlaccessurl_go" style="color: inherit; text-decoration: inherit;">Crl<wbr>Access<wbr>Url</a>
@@ -2179,14 +1971,11 @@ resolution and up to nine fractional digits. Examples: "2014-10-02T15:01:23Z" an
         <span class="property-indicator"></span>
         <span class="property-type">string</span>
     </dt>
-    <dd>{{% md %}}{{% /md %}}</dd>
-</dl>
+    <dd>{{% md %}}{{% /md %}}</dd></dl>
 {{% /choosable %}}
 
 {{% choosable language nodejs %}}
-<dl class="resources-properties">
-
-    <dt class="property-optional"
+<dl class="resources-properties"><dt class="property-optional"
             title="Optional">
         <span id="cacertificateaccessurl_nodejs">
 <a href="#cacertificateaccessurl_nodejs" style="color: inherit; text-decoration: inherit;">ca<wbr>Certificate<wbr>Access<wbr>Url</a>
@@ -2194,8 +1983,7 @@ resolution and up to nine fractional digits. Examples: "2014-10-02T15:01:23Z" an
         <span class="property-indicator"></span>
         <span class="property-type">string</span>
     </dt>
-    <dd>{{% md %}}{{% /md %}}</dd>
-    <dt class="property-optional"
+    <dd>{{% md %}}{{% /md %}}</dd><dt class="property-optional"
             title="Optional">
         <span id="crlaccessurl_nodejs">
 <a href="#crlaccessurl_nodejs" style="color: inherit; text-decoration: inherit;">crl<wbr>Access<wbr>Url</a>
@@ -2203,14 +1991,11 @@ resolution and up to nine fractional digits. Examples: "2014-10-02T15:01:23Z" an
         <span class="property-indicator"></span>
         <span class="property-type">string</span>
     </dt>
-    <dd>{{% md %}}{{% /md %}}</dd>
-</dl>
+    <dd>{{% md %}}{{% /md %}}</dd></dl>
 {{% /choosable %}}
 
 {{% choosable language python %}}
-<dl class="resources-properties">
-
-    <dt class="property-optional"
+<dl class="resources-properties"><dt class="property-optional"
             title="Optional">
         <span id="ca_certificate_access_url_python">
 <a href="#ca_certificate_access_url_python" style="color: inherit; text-decoration: inherit;">ca_<wbr>certificate_<wbr>access_<wbr>url</a>
@@ -2218,8 +2003,7 @@ resolution and up to nine fractional digits. Examples: "2014-10-02T15:01:23Z" an
         <span class="property-indicator"></span>
         <span class="property-type">str</span>
     </dt>
-    <dd>{{% md %}}{{% /md %}}</dd>
-    <dt class="property-optional"
+    <dd>{{% md %}}{{% /md %}}</dd><dt class="property-optional"
             title="Optional">
         <span id="crl_access_url_python">
 <a href="#crl_access_url_python" style="color: inherit; text-decoration: inherit;">crl_<wbr>access_<wbr>url</a>
@@ -2227,16 +2011,13 @@ resolution and up to nine fractional digits. Examples: "2014-10-02T15:01:23Z" an
         <span class="property-indicator"></span>
         <span class="property-type">str</span>
     </dt>
-    <dd>{{% md %}}{{% /md %}}</dd>
-</dl>
+    <dd>{{% md %}}{{% /md %}}</dd></dl>
 {{% /choosable %}}
 
 <h4 id="authorityconfig">Authority<wbr>Config</h4>
 
 {{% choosable language csharp %}}
-<dl class="resources-properties">
-
-    <dt class="property-required"
+<dl class="resources-properties"><dt class="property-required"
             title="Required">
         <span id="reusableconfig_csharp">
 <a href="#reusableconfig_csharp" style="color: inherit; text-decoration: inherit;">Reusable<wbr>Config</a>
@@ -2248,8 +2029,7 @@ resolution and up to nine fractional digits. Examples: "2014-10-02T15:01:23Z" an
 `projects/*/locations/*/reusableConfigs/*`.
 . Alternatively, one of the short names
 found by running `gcloud beta privateca reusable-configs list`.
-{{% /md %}}</dd>
-    <dt class="property-required"
+{{% /md %}}</dd><dt class="property-required"
             title="Required">
         <span id="subjectconfig_csharp">
 <a href="#subjectconfig_csharp" style="color: inherit; text-decoration: inherit;">Subject<wbr>Config</a>
@@ -2259,14 +2039,11 @@ found by running `gcloud beta privateca reusable-configs list`.
     </dt>
     <dd>{{% md %}}Specifies some of the values in a certificate that are related to the subject.
 Structure is documented below.
-{{% /md %}}</dd>
-</dl>
+{{% /md %}}</dd></dl>
 {{% /choosable %}}
 
 {{% choosable language go %}}
-<dl class="resources-properties">
-
-    <dt class="property-required"
+<dl class="resources-properties"><dt class="property-required"
             title="Required">
         <span id="reusableconfig_go">
 <a href="#reusableconfig_go" style="color: inherit; text-decoration: inherit;">Reusable<wbr>Config</a>
@@ -2278,8 +2055,7 @@ Structure is documented below.
 `projects/*/locations/*/reusableConfigs/*`.
 . Alternatively, one of the short names
 found by running `gcloud beta privateca reusable-configs list`.
-{{% /md %}}</dd>
-    <dt class="property-required"
+{{% /md %}}</dd><dt class="property-required"
             title="Required">
         <span id="subjectconfig_go">
 <a href="#subjectconfig_go" style="color: inherit; text-decoration: inherit;">Subject<wbr>Config</a>
@@ -2289,14 +2065,11 @@ found by running `gcloud beta privateca reusable-configs list`.
     </dt>
     <dd>{{% md %}}Specifies some of the values in a certificate that are related to the subject.
 Structure is documented below.
-{{% /md %}}</dd>
-</dl>
+{{% /md %}}</dd></dl>
 {{% /choosable %}}
 
 {{% choosable language nodejs %}}
-<dl class="resources-properties">
-
-    <dt class="property-required"
+<dl class="resources-properties"><dt class="property-required"
             title="Required">
         <span id="reusableconfig_nodejs">
 <a href="#reusableconfig_nodejs" style="color: inherit; text-decoration: inherit;">reusable<wbr>Config</a>
@@ -2308,8 +2081,7 @@ Structure is documented below.
 `projects/*/locations/*/reusableConfigs/*`.
 . Alternatively, one of the short names
 found by running `gcloud beta privateca reusable-configs list`.
-{{% /md %}}</dd>
-    <dt class="property-required"
+{{% /md %}}</dd><dt class="property-required"
             title="Required">
         <span id="subjectconfig_nodejs">
 <a href="#subjectconfig_nodejs" style="color: inherit; text-decoration: inherit;">subject<wbr>Config</a>
@@ -2319,14 +2091,11 @@ found by running `gcloud beta privateca reusable-configs list`.
     </dt>
     <dd>{{% md %}}Specifies some of the values in a certificate that are related to the subject.
 Structure is documented below.
-{{% /md %}}</dd>
-</dl>
+{{% /md %}}</dd></dl>
 {{% /choosable %}}
 
 {{% choosable language python %}}
-<dl class="resources-properties">
-
-    <dt class="property-required"
+<dl class="resources-properties"><dt class="property-required"
             title="Required">
         <span id="reusable_config_python">
 <a href="#reusable_config_python" style="color: inherit; text-decoration: inherit;">reusable_<wbr>config</a>
@@ -2338,8 +2107,7 @@ Structure is documented below.
 `projects/*/locations/*/reusableConfigs/*`.
 . Alternatively, one of the short names
 found by running `gcloud beta privateca reusable-configs list`.
-{{% /md %}}</dd>
-    <dt class="property-required"
+{{% /md %}}</dd><dt class="property-required"
             title="Required">
         <span id="subject_config_python">
 <a href="#subject_config_python" style="color: inherit; text-decoration: inherit;">subject_<wbr>config</a>
@@ -2349,16 +2117,13 @@ found by running `gcloud beta privateca reusable-configs list`.
     </dt>
     <dd>{{% md %}}Specifies some of the values in a certificate that are related to the subject.
 Structure is documented below.
-{{% /md %}}</dd>
-</dl>
+{{% /md %}}</dd></dl>
 {{% /choosable %}}
 
 <h4 id="authorityconfigreusableconfig">Authority<wbr>Config<wbr>Reusable<wbr>Config</h4>
 
 {{% choosable language csharp %}}
-<dl class="resources-properties">
-
-    <dt class="property-required"
+<dl class="resources-properties"><dt class="property-required"
             title="Required">
         <span id="reusableconfig_csharp">
 <a href="#reusableconfig_csharp" style="color: inherit; text-decoration: inherit;">Reusable<wbr>Config</a>
@@ -2370,14 +2135,11 @@ Structure is documented below.
 `projects/*/locations/*/reusableConfigs/*`.
 . Alternatively, one of the short names
 found by running `gcloud beta privateca reusable-configs list`.
-{{% /md %}}</dd>
-</dl>
+{{% /md %}}</dd></dl>
 {{% /choosable %}}
 
 {{% choosable language go %}}
-<dl class="resources-properties">
-
-    <dt class="property-required"
+<dl class="resources-properties"><dt class="property-required"
             title="Required">
         <span id="reusableconfig_go">
 <a href="#reusableconfig_go" style="color: inherit; text-decoration: inherit;">Reusable<wbr>Config</a>
@@ -2389,14 +2151,11 @@ found by running `gcloud beta privateca reusable-configs list`.
 `projects/*/locations/*/reusableConfigs/*`.
 . Alternatively, one of the short names
 found by running `gcloud beta privateca reusable-configs list`.
-{{% /md %}}</dd>
-</dl>
+{{% /md %}}</dd></dl>
 {{% /choosable %}}
 
 {{% choosable language nodejs %}}
-<dl class="resources-properties">
-
-    <dt class="property-required"
+<dl class="resources-properties"><dt class="property-required"
             title="Required">
         <span id="reusableconfig_nodejs">
 <a href="#reusableconfig_nodejs" style="color: inherit; text-decoration: inherit;">reusable<wbr>Config</a>
@@ -2408,14 +2167,11 @@ found by running `gcloud beta privateca reusable-configs list`.
 `projects/*/locations/*/reusableConfigs/*`.
 . Alternatively, one of the short names
 found by running `gcloud beta privateca reusable-configs list`.
-{{% /md %}}</dd>
-</dl>
+{{% /md %}}</dd></dl>
 {{% /choosable %}}
 
 {{% choosable language python %}}
-<dl class="resources-properties">
-
-    <dt class="property-required"
+<dl class="resources-properties"><dt class="property-required"
             title="Required">
         <span id="reusable_config_python">
 <a href="#reusable_config_python" style="color: inherit; text-decoration: inherit;">reusable_<wbr>config</a>
@@ -2427,16 +2183,13 @@ found by running `gcloud beta privateca reusable-configs list`.
 `projects/*/locations/*/reusableConfigs/*`.
 . Alternatively, one of the short names
 found by running `gcloud beta privateca reusable-configs list`.
-{{% /md %}}</dd>
-</dl>
+{{% /md %}}</dd></dl>
 {{% /choosable %}}
 
 <h4 id="authorityconfigsubjectconfig">Authority<wbr>Config<wbr>Subject<wbr>Config</h4>
 
 {{% choosable language csharp %}}
-<dl class="resources-properties">
-
-    <dt class="property-required"
+<dl class="resources-properties"><dt class="property-required"
             title="Required">
         <span id="commonname_csharp">
 <a href="#commonname_csharp" style="color: inherit; text-decoration: inherit;">Common<wbr>Name</a>
@@ -2445,8 +2198,7 @@ found by running `gcloud beta privateca reusable-configs list`.
         <span class="property-type">string</span>
     </dt>
     <dd>{{% md %}}The common name of the distinguished name.
-{{% /md %}}</dd>
-    <dt class="property-required"
+{{% /md %}}</dd><dt class="property-required"
             title="Required">
         <span id="subject_csharp">
 <a href="#subject_csharp" style="color: inherit; text-decoration: inherit;">Subject</a>
@@ -2456,8 +2208,7 @@ found by running `gcloud beta privateca reusable-configs list`.
     </dt>
     <dd>{{% md %}}Contains distinguished name fields such as the location and organization.
 Structure is documented below.
-{{% /md %}}</dd>
-    <dt class="property-optional"
+{{% /md %}}</dd><dt class="property-optional"
             title="Optional">
         <span id="subjectaltname_csharp">
 <a href="#subjectaltname_csharp" style="color: inherit; text-decoration: inherit;">Subject<wbr>Alt<wbr>Name</a>
@@ -2467,14 +2218,11 @@ Structure is documented below.
     </dt>
     <dd>{{% md %}}The subject alternative name fields.
 Structure is documented below.
-{{% /md %}}</dd>
-</dl>
+{{% /md %}}</dd></dl>
 {{% /choosable %}}
 
 {{% choosable language go %}}
-<dl class="resources-properties">
-
-    <dt class="property-required"
+<dl class="resources-properties"><dt class="property-required"
             title="Required">
         <span id="commonname_go">
 <a href="#commonname_go" style="color: inherit; text-decoration: inherit;">Common<wbr>Name</a>
@@ -2483,8 +2231,7 @@ Structure is documented below.
         <span class="property-type">string</span>
     </dt>
     <dd>{{% md %}}The common name of the distinguished name.
-{{% /md %}}</dd>
-    <dt class="property-required"
+{{% /md %}}</dd><dt class="property-required"
             title="Required">
         <span id="subject_go">
 <a href="#subject_go" style="color: inherit; text-decoration: inherit;">Subject</a>
@@ -2494,8 +2241,7 @@ Structure is documented below.
     </dt>
     <dd>{{% md %}}Contains distinguished name fields such as the location and organization.
 Structure is documented below.
-{{% /md %}}</dd>
-    <dt class="property-optional"
+{{% /md %}}</dd><dt class="property-optional"
             title="Optional">
         <span id="subjectaltname_go">
 <a href="#subjectaltname_go" style="color: inherit; text-decoration: inherit;">Subject<wbr>Alt<wbr>Name</a>
@@ -2505,14 +2251,11 @@ Structure is documented below.
     </dt>
     <dd>{{% md %}}The subject alternative name fields.
 Structure is documented below.
-{{% /md %}}</dd>
-</dl>
+{{% /md %}}</dd></dl>
 {{% /choosable %}}
 
 {{% choosable language nodejs %}}
-<dl class="resources-properties">
-
-    <dt class="property-required"
+<dl class="resources-properties"><dt class="property-required"
             title="Required">
         <span id="commonname_nodejs">
 <a href="#commonname_nodejs" style="color: inherit; text-decoration: inherit;">common<wbr>Name</a>
@@ -2521,8 +2264,7 @@ Structure is documented below.
         <span class="property-type">string</span>
     </dt>
     <dd>{{% md %}}The common name of the distinguished name.
-{{% /md %}}</dd>
-    <dt class="property-required"
+{{% /md %}}</dd><dt class="property-required"
             title="Required">
         <span id="subject_nodejs">
 <a href="#subject_nodejs" style="color: inherit; text-decoration: inherit;">subject</a>
@@ -2532,8 +2274,7 @@ Structure is documented below.
     </dt>
     <dd>{{% md %}}Contains distinguished name fields such as the location and organization.
 Structure is documented below.
-{{% /md %}}</dd>
-    <dt class="property-optional"
+{{% /md %}}</dd><dt class="property-optional"
             title="Optional">
         <span id="subjectaltname_nodejs">
 <a href="#subjectaltname_nodejs" style="color: inherit; text-decoration: inherit;">subject<wbr>Alt<wbr>Name</a>
@@ -2543,14 +2284,11 @@ Structure is documented below.
     </dt>
     <dd>{{% md %}}The subject alternative name fields.
 Structure is documented below.
-{{% /md %}}</dd>
-</dl>
+{{% /md %}}</dd></dl>
 {{% /choosable %}}
 
 {{% choosable language python %}}
-<dl class="resources-properties">
-
-    <dt class="property-required"
+<dl class="resources-properties"><dt class="property-required"
             title="Required">
         <span id="common_name_python">
 <a href="#common_name_python" style="color: inherit; text-decoration: inherit;">common_<wbr>name</a>
@@ -2559,8 +2297,7 @@ Structure is documented below.
         <span class="property-type">str</span>
     </dt>
     <dd>{{% md %}}The common name of the distinguished name.
-{{% /md %}}</dd>
-    <dt class="property-required"
+{{% /md %}}</dd><dt class="property-required"
             title="Required">
         <span id="subject_python">
 <a href="#subject_python" style="color: inherit; text-decoration: inherit;">subject</a>
@@ -2570,8 +2307,7 @@ Structure is documented below.
     </dt>
     <dd>{{% md %}}Contains distinguished name fields such as the location and organization.
 Structure is documented below.
-{{% /md %}}</dd>
-    <dt class="property-optional"
+{{% /md %}}</dd><dt class="property-optional"
             title="Optional">
         <span id="subject_alt_name_python">
 <a href="#subject_alt_name_python" style="color: inherit; text-decoration: inherit;">subject_<wbr>alt_<wbr>name</a>
@@ -2581,16 +2317,13 @@ Structure is documented below.
     </dt>
     <dd>{{% md %}}The subject alternative name fields.
 Structure is documented below.
-{{% /md %}}</dd>
-</dl>
+{{% /md %}}</dd></dl>
 {{% /choosable %}}
 
 <h4 id="authorityconfigsubjectconfigsubject">Authority<wbr>Config<wbr>Subject<wbr>Config<wbr>Subject</h4>
 
 {{% choosable language csharp %}}
-<dl class="resources-properties">
-
-    <dt class="property-required"
+<dl class="resources-properties"><dt class="property-required"
             title="Required">
         <span id="organization_csharp">
 <a href="#organization_csharp" style="color: inherit; text-decoration: inherit;">Organization</a>
@@ -2599,8 +2332,7 @@ Structure is documented below.
         <span class="property-type">string</span>
     </dt>
     <dd>{{% md %}}The organization of the subject.
-{{% /md %}}</dd>
-    <dt class="property-optional"
+{{% /md %}}</dd><dt class="property-optional"
             title="Optional">
         <span id="countrycode_csharp">
 <a href="#countrycode_csharp" style="color: inherit; text-decoration: inherit;">Country<wbr>Code</a>
@@ -2609,8 +2341,7 @@ Structure is documented below.
         <span class="property-type">string</span>
     </dt>
     <dd>{{% md %}}The country code of the subject.
-{{% /md %}}</dd>
-    <dt class="property-optional"
+{{% /md %}}</dd><dt class="property-optional"
             title="Optional">
         <span id="locality_csharp">
 <a href="#locality_csharp" style="color: inherit; text-decoration: inherit;">Locality</a>
@@ -2619,8 +2350,7 @@ Structure is documented below.
         <span class="property-type">string</span>
     </dt>
     <dd>{{% md %}}The locality or city of the subject.
-{{% /md %}}</dd>
-    <dt class="property-optional"
+{{% /md %}}</dd><dt class="property-optional"
             title="Optional">
         <span id="organizationalunit_csharp">
 <a href="#organizationalunit_csharp" style="color: inherit; text-decoration: inherit;">Organizational<wbr>Unit</a>
@@ -2629,8 +2359,7 @@ Structure is documented below.
         <span class="property-type">string</span>
     </dt>
     <dd>{{% md %}}The organizational unit of the subject.
-{{% /md %}}</dd>
-    <dt class="property-optional"
+{{% /md %}}</dd><dt class="property-optional"
             title="Optional">
         <span id="postalcode_csharp">
 <a href="#postalcode_csharp" style="color: inherit; text-decoration: inherit;">Postal<wbr>Code</a>
@@ -2639,8 +2368,7 @@ Structure is documented below.
         <span class="property-type">string</span>
     </dt>
     <dd>{{% md %}}The postal code of the subject.
-{{% /md %}}</dd>
-    <dt class="property-optional"
+{{% /md %}}</dd><dt class="property-optional"
             title="Optional">
         <span id="province_csharp">
 <a href="#province_csharp" style="color: inherit; text-decoration: inherit;">Province</a>
@@ -2649,8 +2377,7 @@ Structure is documented below.
         <span class="property-type">string</span>
     </dt>
     <dd>{{% md %}}The province, territory, or regional state of the subject.
-{{% /md %}}</dd>
-    <dt class="property-optional"
+{{% /md %}}</dd><dt class="property-optional"
             title="Optional">
         <span id="streetaddress_csharp">
 <a href="#streetaddress_csharp" style="color: inherit; text-decoration: inherit;">Street<wbr>Address</a>
@@ -2659,14 +2386,11 @@ Structure is documented below.
         <span class="property-type">string</span>
     </dt>
     <dd>{{% md %}}The street address of the subject.
-{{% /md %}}</dd>
-</dl>
+{{% /md %}}</dd></dl>
 {{% /choosable %}}
 
 {{% choosable language go %}}
-<dl class="resources-properties">
-
-    <dt class="property-required"
+<dl class="resources-properties"><dt class="property-required"
             title="Required">
         <span id="organization_go">
 <a href="#organization_go" style="color: inherit; text-decoration: inherit;">Organization</a>
@@ -2675,8 +2399,7 @@ Structure is documented below.
         <span class="property-type">string</span>
     </dt>
     <dd>{{% md %}}The organization of the subject.
-{{% /md %}}</dd>
-    <dt class="property-optional"
+{{% /md %}}</dd><dt class="property-optional"
             title="Optional">
         <span id="countrycode_go">
 <a href="#countrycode_go" style="color: inherit; text-decoration: inherit;">Country<wbr>Code</a>
@@ -2685,8 +2408,7 @@ Structure is documented below.
         <span class="property-type">string</span>
     </dt>
     <dd>{{% md %}}The country code of the subject.
-{{% /md %}}</dd>
-    <dt class="property-optional"
+{{% /md %}}</dd><dt class="property-optional"
             title="Optional">
         <span id="locality_go">
 <a href="#locality_go" style="color: inherit; text-decoration: inherit;">Locality</a>
@@ -2695,8 +2417,7 @@ Structure is documented below.
         <span class="property-type">string</span>
     </dt>
     <dd>{{% md %}}The locality or city of the subject.
-{{% /md %}}</dd>
-    <dt class="property-optional"
+{{% /md %}}</dd><dt class="property-optional"
             title="Optional">
         <span id="organizationalunit_go">
 <a href="#organizationalunit_go" style="color: inherit; text-decoration: inherit;">Organizational<wbr>Unit</a>
@@ -2705,8 +2426,7 @@ Structure is documented below.
         <span class="property-type">string</span>
     </dt>
     <dd>{{% md %}}The organizational unit of the subject.
-{{% /md %}}</dd>
-    <dt class="property-optional"
+{{% /md %}}</dd><dt class="property-optional"
             title="Optional">
         <span id="postalcode_go">
 <a href="#postalcode_go" style="color: inherit; text-decoration: inherit;">Postal<wbr>Code</a>
@@ -2715,8 +2435,7 @@ Structure is documented below.
         <span class="property-type">string</span>
     </dt>
     <dd>{{% md %}}The postal code of the subject.
-{{% /md %}}</dd>
-    <dt class="property-optional"
+{{% /md %}}</dd><dt class="property-optional"
             title="Optional">
         <span id="province_go">
 <a href="#province_go" style="color: inherit; text-decoration: inherit;">Province</a>
@@ -2725,8 +2444,7 @@ Structure is documented below.
         <span class="property-type">string</span>
     </dt>
     <dd>{{% md %}}The province, territory, or regional state of the subject.
-{{% /md %}}</dd>
-    <dt class="property-optional"
+{{% /md %}}</dd><dt class="property-optional"
             title="Optional">
         <span id="streetaddress_go">
 <a href="#streetaddress_go" style="color: inherit; text-decoration: inherit;">Street<wbr>Address</a>
@@ -2735,14 +2453,11 @@ Structure is documented below.
         <span class="property-type">string</span>
     </dt>
     <dd>{{% md %}}The street address of the subject.
-{{% /md %}}</dd>
-</dl>
+{{% /md %}}</dd></dl>
 {{% /choosable %}}
 
 {{% choosable language nodejs %}}
-<dl class="resources-properties">
-
-    <dt class="property-required"
+<dl class="resources-properties"><dt class="property-required"
             title="Required">
         <span id="organization_nodejs">
 <a href="#organization_nodejs" style="color: inherit; text-decoration: inherit;">organization</a>
@@ -2751,8 +2466,7 @@ Structure is documented below.
         <span class="property-type">string</span>
     </dt>
     <dd>{{% md %}}The organization of the subject.
-{{% /md %}}</dd>
-    <dt class="property-optional"
+{{% /md %}}</dd><dt class="property-optional"
             title="Optional">
         <span id="countrycode_nodejs">
 <a href="#countrycode_nodejs" style="color: inherit; text-decoration: inherit;">country<wbr>Code</a>
@@ -2761,8 +2475,7 @@ Structure is documented below.
         <span class="property-type">string</span>
     </dt>
     <dd>{{% md %}}The country code of the subject.
-{{% /md %}}</dd>
-    <dt class="property-optional"
+{{% /md %}}</dd><dt class="property-optional"
             title="Optional">
         <span id="locality_nodejs">
 <a href="#locality_nodejs" style="color: inherit; text-decoration: inherit;">locality</a>
@@ -2771,8 +2484,7 @@ Structure is documented below.
         <span class="property-type">string</span>
     </dt>
     <dd>{{% md %}}The locality or city of the subject.
-{{% /md %}}</dd>
-    <dt class="property-optional"
+{{% /md %}}</dd><dt class="property-optional"
             title="Optional">
         <span id="organizationalunit_nodejs">
 <a href="#organizationalunit_nodejs" style="color: inherit; text-decoration: inherit;">organizational<wbr>Unit</a>
@@ -2781,8 +2493,7 @@ Structure is documented below.
         <span class="property-type">string</span>
     </dt>
     <dd>{{% md %}}The organizational unit of the subject.
-{{% /md %}}</dd>
-    <dt class="property-optional"
+{{% /md %}}</dd><dt class="property-optional"
             title="Optional">
         <span id="postalcode_nodejs">
 <a href="#postalcode_nodejs" style="color: inherit; text-decoration: inherit;">postal<wbr>Code</a>
@@ -2791,8 +2502,7 @@ Structure is documented below.
         <span class="property-type">string</span>
     </dt>
     <dd>{{% md %}}The postal code of the subject.
-{{% /md %}}</dd>
-    <dt class="property-optional"
+{{% /md %}}</dd><dt class="property-optional"
             title="Optional">
         <span id="province_nodejs">
 <a href="#province_nodejs" style="color: inherit; text-decoration: inherit;">province</a>
@@ -2801,8 +2511,7 @@ Structure is documented below.
         <span class="property-type">string</span>
     </dt>
     <dd>{{% md %}}The province, territory, or regional state of the subject.
-{{% /md %}}</dd>
-    <dt class="property-optional"
+{{% /md %}}</dd><dt class="property-optional"
             title="Optional">
         <span id="streetaddress_nodejs">
 <a href="#streetaddress_nodejs" style="color: inherit; text-decoration: inherit;">street<wbr>Address</a>
@@ -2811,14 +2520,11 @@ Structure is documented below.
         <span class="property-type">string</span>
     </dt>
     <dd>{{% md %}}The street address of the subject.
-{{% /md %}}</dd>
-</dl>
+{{% /md %}}</dd></dl>
 {{% /choosable %}}
 
 {{% choosable language python %}}
-<dl class="resources-properties">
-
-    <dt class="property-required"
+<dl class="resources-properties"><dt class="property-required"
             title="Required">
         <span id="organization_python">
 <a href="#organization_python" style="color: inherit; text-decoration: inherit;">organization</a>
@@ -2827,8 +2533,7 @@ Structure is documented below.
         <span class="property-type">str</span>
     </dt>
     <dd>{{% md %}}The organization of the subject.
-{{% /md %}}</dd>
-    <dt class="property-optional"
+{{% /md %}}</dd><dt class="property-optional"
             title="Optional">
         <span id="country_code_python">
 <a href="#country_code_python" style="color: inherit; text-decoration: inherit;">country_<wbr>code</a>
@@ -2837,8 +2542,7 @@ Structure is documented below.
         <span class="property-type">str</span>
     </dt>
     <dd>{{% md %}}The country code of the subject.
-{{% /md %}}</dd>
-    <dt class="property-optional"
+{{% /md %}}</dd><dt class="property-optional"
             title="Optional">
         <span id="locality_python">
 <a href="#locality_python" style="color: inherit; text-decoration: inherit;">locality</a>
@@ -2847,8 +2551,7 @@ Structure is documented below.
         <span class="property-type">str</span>
     </dt>
     <dd>{{% md %}}The locality or city of the subject.
-{{% /md %}}</dd>
-    <dt class="property-optional"
+{{% /md %}}</dd><dt class="property-optional"
             title="Optional">
         <span id="organizational_unit_python">
 <a href="#organizational_unit_python" style="color: inherit; text-decoration: inherit;">organizational_<wbr>unit</a>
@@ -2857,8 +2560,7 @@ Structure is documented below.
         <span class="property-type">str</span>
     </dt>
     <dd>{{% md %}}The organizational unit of the subject.
-{{% /md %}}</dd>
-    <dt class="property-optional"
+{{% /md %}}</dd><dt class="property-optional"
             title="Optional">
         <span id="postal_code_python">
 <a href="#postal_code_python" style="color: inherit; text-decoration: inherit;">postal_<wbr>code</a>
@@ -2867,8 +2569,7 @@ Structure is documented below.
         <span class="property-type">str</span>
     </dt>
     <dd>{{% md %}}The postal code of the subject.
-{{% /md %}}</dd>
-    <dt class="property-optional"
+{{% /md %}}</dd><dt class="property-optional"
             title="Optional">
         <span id="province_python">
 <a href="#province_python" style="color: inherit; text-decoration: inherit;">province</a>
@@ -2877,8 +2578,7 @@ Structure is documented below.
         <span class="property-type">str</span>
     </dt>
     <dd>{{% md %}}The province, territory, or regional state of the subject.
-{{% /md %}}</dd>
-    <dt class="property-optional"
+{{% /md %}}</dd><dt class="property-optional"
             title="Optional">
         <span id="street_address_python">
 <a href="#street_address_python" style="color: inherit; text-decoration: inherit;">street_<wbr>address</a>
@@ -2887,16 +2587,13 @@ Structure is documented below.
         <span class="property-type">str</span>
     </dt>
     <dd>{{% md %}}The street address of the subject.
-{{% /md %}}</dd>
-</dl>
+{{% /md %}}</dd></dl>
 {{% /choosable %}}
 
 <h4 id="authorityconfigsubjectconfigsubjectaltname">Authority<wbr>Config<wbr>Subject<wbr>Config<wbr>Subject<wbr>Alt<wbr>Name</h4>
 
 {{% choosable language csharp %}}
-<dl class="resources-properties">
-
-    <dt class="property-optional"
+<dl class="resources-properties"><dt class="property-optional"
             title="Optional">
         <span id="dnsnames_csharp">
 <a href="#dnsnames_csharp" style="color: inherit; text-decoration: inherit;">Dns<wbr>Names</a>
@@ -2905,8 +2602,7 @@ Structure is documented below.
         <span class="property-type">List&lt;string&gt;</span>
     </dt>
     <dd>{{% md %}}Contains only valid, fully-qualified host names.
-{{% /md %}}</dd>
-    <dt class="property-optional"
+{{% /md %}}</dd><dt class="property-optional"
             title="Optional">
         <span id="emailaddresses_csharp">
 <a href="#emailaddresses_csharp" style="color: inherit; text-decoration: inherit;">Email<wbr>Addresses</a>
@@ -2915,8 +2611,7 @@ Structure is documented below.
         <span class="property-type">List&lt;string&gt;</span>
     </dt>
     <dd>{{% md %}}Contains only valid RFC 2822 E-mail addresses.
-{{% /md %}}</dd>
-    <dt class="property-optional"
+{{% /md %}}</dd><dt class="property-optional"
             title="Optional">
         <span id="ipaddresses_csharp">
 <a href="#ipaddresses_csharp" style="color: inherit; text-decoration: inherit;">Ip<wbr>Addresses</a>
@@ -2925,8 +2620,7 @@ Structure is documented below.
         <span class="property-type">List&lt;string&gt;</span>
     </dt>
     <dd>{{% md %}}Contains only valid 32-bit IPv4 addresses or RFC 4291 IPv6 addresses.
-{{% /md %}}</dd>
-    <dt class="property-optional"
+{{% /md %}}</dd><dt class="property-optional"
             title="Optional">
         <span id="uris_csharp">
 <a href="#uris_csharp" style="color: inherit; text-decoration: inherit;">Uris</a>
@@ -2935,14 +2629,11 @@ Structure is documented below.
         <span class="property-type">List&lt;string&gt;</span>
     </dt>
     <dd>{{% md %}}Contains only valid RFC 3986 URIs.
-{{% /md %}}</dd>
-</dl>
+{{% /md %}}</dd></dl>
 {{% /choosable %}}
 
 {{% choosable language go %}}
-<dl class="resources-properties">
-
-    <dt class="property-optional"
+<dl class="resources-properties"><dt class="property-optional"
             title="Optional">
         <span id="dnsnames_go">
 <a href="#dnsnames_go" style="color: inherit; text-decoration: inherit;">Dns<wbr>Names</a>
@@ -2951,8 +2642,7 @@ Structure is documented below.
         <span class="property-type">[]string</span>
     </dt>
     <dd>{{% md %}}Contains only valid, fully-qualified host names.
-{{% /md %}}</dd>
-    <dt class="property-optional"
+{{% /md %}}</dd><dt class="property-optional"
             title="Optional">
         <span id="emailaddresses_go">
 <a href="#emailaddresses_go" style="color: inherit; text-decoration: inherit;">Email<wbr>Addresses</a>
@@ -2961,8 +2651,7 @@ Structure is documented below.
         <span class="property-type">[]string</span>
     </dt>
     <dd>{{% md %}}Contains only valid RFC 2822 E-mail addresses.
-{{% /md %}}</dd>
-    <dt class="property-optional"
+{{% /md %}}</dd><dt class="property-optional"
             title="Optional">
         <span id="ipaddresses_go">
 <a href="#ipaddresses_go" style="color: inherit; text-decoration: inherit;">Ip<wbr>Addresses</a>
@@ -2971,8 +2660,7 @@ Structure is documented below.
         <span class="property-type">[]string</span>
     </dt>
     <dd>{{% md %}}Contains only valid 32-bit IPv4 addresses or RFC 4291 IPv6 addresses.
-{{% /md %}}</dd>
-    <dt class="property-optional"
+{{% /md %}}</dd><dt class="property-optional"
             title="Optional">
         <span id="uris_go">
 <a href="#uris_go" style="color: inherit; text-decoration: inherit;">Uris</a>
@@ -2981,14 +2669,11 @@ Structure is documented below.
         <span class="property-type">[]string</span>
     </dt>
     <dd>{{% md %}}Contains only valid RFC 3986 URIs.
-{{% /md %}}</dd>
-</dl>
+{{% /md %}}</dd></dl>
 {{% /choosable %}}
 
 {{% choosable language nodejs %}}
-<dl class="resources-properties">
-
-    <dt class="property-optional"
+<dl class="resources-properties"><dt class="property-optional"
             title="Optional">
         <span id="dnsnames_nodejs">
 <a href="#dnsnames_nodejs" style="color: inherit; text-decoration: inherit;">dns<wbr>Names</a>
@@ -2997,8 +2682,7 @@ Structure is documented below.
         <span class="property-type">string[]</span>
     </dt>
     <dd>{{% md %}}Contains only valid, fully-qualified host names.
-{{% /md %}}</dd>
-    <dt class="property-optional"
+{{% /md %}}</dd><dt class="property-optional"
             title="Optional">
         <span id="emailaddresses_nodejs">
 <a href="#emailaddresses_nodejs" style="color: inherit; text-decoration: inherit;">email<wbr>Addresses</a>
@@ -3007,8 +2691,7 @@ Structure is documented below.
         <span class="property-type">string[]</span>
     </dt>
     <dd>{{% md %}}Contains only valid RFC 2822 E-mail addresses.
-{{% /md %}}</dd>
-    <dt class="property-optional"
+{{% /md %}}</dd><dt class="property-optional"
             title="Optional">
         <span id="ipaddresses_nodejs">
 <a href="#ipaddresses_nodejs" style="color: inherit; text-decoration: inherit;">ip<wbr>Addresses</a>
@@ -3017,8 +2700,7 @@ Structure is documented below.
         <span class="property-type">string[]</span>
     </dt>
     <dd>{{% md %}}Contains only valid 32-bit IPv4 addresses or RFC 4291 IPv6 addresses.
-{{% /md %}}</dd>
-    <dt class="property-optional"
+{{% /md %}}</dd><dt class="property-optional"
             title="Optional">
         <span id="uris_nodejs">
 <a href="#uris_nodejs" style="color: inherit; text-decoration: inherit;">uris</a>
@@ -3027,14 +2709,11 @@ Structure is documented below.
         <span class="property-type">string[]</span>
     </dt>
     <dd>{{% md %}}Contains only valid RFC 3986 URIs.
-{{% /md %}}</dd>
-</dl>
+{{% /md %}}</dd></dl>
 {{% /choosable %}}
 
 {{% choosable language python %}}
-<dl class="resources-properties">
-
-    <dt class="property-optional"
+<dl class="resources-properties"><dt class="property-optional"
             title="Optional">
         <span id="dns_names_python">
 <a href="#dns_names_python" style="color: inherit; text-decoration: inherit;">dns_<wbr>names</a>
@@ -3043,8 +2722,7 @@ Structure is documented below.
         <span class="property-type">Sequence[str]</span>
     </dt>
     <dd>{{% md %}}Contains only valid, fully-qualified host names.
-{{% /md %}}</dd>
-    <dt class="property-optional"
+{{% /md %}}</dd><dt class="property-optional"
             title="Optional">
         <span id="email_addresses_python">
 <a href="#email_addresses_python" style="color: inherit; text-decoration: inherit;">email_<wbr>addresses</a>
@@ -3053,8 +2731,7 @@ Structure is documented below.
         <span class="property-type">Sequence[str]</span>
     </dt>
     <dd>{{% md %}}Contains only valid RFC 2822 E-mail addresses.
-{{% /md %}}</dd>
-    <dt class="property-optional"
+{{% /md %}}</dd><dt class="property-optional"
             title="Optional">
         <span id="ip_addresses_python">
 <a href="#ip_addresses_python" style="color: inherit; text-decoration: inherit;">ip_<wbr>addresses</a>
@@ -3063,8 +2740,7 @@ Structure is documented below.
         <span class="property-type">Sequence[str]</span>
     </dt>
     <dd>{{% md %}}Contains only valid 32-bit IPv4 addresses or RFC 4291 IPv6 addresses.
-{{% /md %}}</dd>
-    <dt class="property-optional"
+{{% /md %}}</dd><dt class="property-optional"
             title="Optional">
         <span id="uris_python">
 <a href="#uris_python" style="color: inherit; text-decoration: inherit;">uris</a>
@@ -3073,16 +2749,13 @@ Structure is documented below.
         <span class="property-type">Sequence[str]</span>
     </dt>
     <dd>{{% md %}}Contains only valid RFC 3986 URIs.
-{{% /md %}}</dd>
-</dl>
+{{% /md %}}</dd></dl>
 {{% /choosable %}}
 
 <h4 id="authorityissuingoptions">Authority<wbr>Issuing<wbr>Options</h4>
 
 {{% choosable language csharp %}}
-<dl class="resources-properties">
-
-    <dt class="property-optional"
+<dl class="resources-properties"><dt class="property-optional"
             title="Optional">
         <span id="includecacerturl_csharp">
 <a href="#includecacerturl_csharp" style="color: inherit; text-decoration: inherit;">Include<wbr>Ca<wbr>Cert<wbr>Url</a>
@@ -3092,8 +2765,7 @@ Structure is documented below.
     </dt>
     <dd>{{% md %}}When true, includes a URL to the issuing CA certificate in the "authority
 information access" X.509 extension.
-{{% /md %}}</dd>
-    <dt class="property-optional"
+{{% /md %}}</dd><dt class="property-optional"
             title="Optional">
         <span id="includecrlaccessurl_csharp">
 <a href="#includecrlaccessurl_csharp" style="color: inherit; text-decoration: inherit;">Include<wbr>Crl<wbr>Access<wbr>Url</a>
@@ -3104,14 +2776,11 @@ information access" X.509 extension.
     <dd>{{% md %}}When true, includes a URL to the CRL corresponding to certificates issued from a
 CertificateAuthority. CRLs will expire 7 days from their creation. However, we will
 rebuild daily. CRLs are also rebuilt shortly after a certificate is revoked.
-{{% /md %}}</dd>
-</dl>
+{{% /md %}}</dd></dl>
 {{% /choosable %}}
 
 {{% choosable language go %}}
-<dl class="resources-properties">
-
-    <dt class="property-optional"
+<dl class="resources-properties"><dt class="property-optional"
             title="Optional">
         <span id="includecacerturl_go">
 <a href="#includecacerturl_go" style="color: inherit; text-decoration: inherit;">Include<wbr>Ca<wbr>Cert<wbr>Url</a>
@@ -3121,8 +2790,7 @@ rebuild daily. CRLs are also rebuilt shortly after a certificate is revoked.
     </dt>
     <dd>{{% md %}}When true, includes a URL to the issuing CA certificate in the "authority
 information access" X.509 extension.
-{{% /md %}}</dd>
-    <dt class="property-optional"
+{{% /md %}}</dd><dt class="property-optional"
             title="Optional">
         <span id="includecrlaccessurl_go">
 <a href="#includecrlaccessurl_go" style="color: inherit; text-decoration: inherit;">Include<wbr>Crl<wbr>Access<wbr>Url</a>
@@ -3133,14 +2801,11 @@ information access" X.509 extension.
     <dd>{{% md %}}When true, includes a URL to the CRL corresponding to certificates issued from a
 CertificateAuthority. CRLs will expire 7 days from their creation. However, we will
 rebuild daily. CRLs are also rebuilt shortly after a certificate is revoked.
-{{% /md %}}</dd>
-</dl>
+{{% /md %}}</dd></dl>
 {{% /choosable %}}
 
 {{% choosable language nodejs %}}
-<dl class="resources-properties">
-
-    <dt class="property-optional"
+<dl class="resources-properties"><dt class="property-optional"
             title="Optional">
         <span id="includecacerturl_nodejs">
 <a href="#includecacerturl_nodejs" style="color: inherit; text-decoration: inherit;">include<wbr>Ca<wbr>Cert<wbr>Url</a>
@@ -3150,8 +2815,7 @@ rebuild daily. CRLs are also rebuilt shortly after a certificate is revoked.
     </dt>
     <dd>{{% md %}}When true, includes a URL to the issuing CA certificate in the "authority
 information access" X.509 extension.
-{{% /md %}}</dd>
-    <dt class="property-optional"
+{{% /md %}}</dd><dt class="property-optional"
             title="Optional">
         <span id="includecrlaccessurl_nodejs">
 <a href="#includecrlaccessurl_nodejs" style="color: inherit; text-decoration: inherit;">include<wbr>Crl<wbr>Access<wbr>Url</a>
@@ -3162,14 +2826,11 @@ information access" X.509 extension.
     <dd>{{% md %}}When true, includes a URL to the CRL corresponding to certificates issued from a
 CertificateAuthority. CRLs will expire 7 days from their creation. However, we will
 rebuild daily. CRLs are also rebuilt shortly after a certificate is revoked.
-{{% /md %}}</dd>
-</dl>
+{{% /md %}}</dd></dl>
 {{% /choosable %}}
 
 {{% choosable language python %}}
-<dl class="resources-properties">
-
-    <dt class="property-optional"
+<dl class="resources-properties"><dt class="property-optional"
             title="Optional">
         <span id="include_ca_cert_url_python">
 <a href="#include_ca_cert_url_python" style="color: inherit; text-decoration: inherit;">include_<wbr>ca_<wbr>cert_<wbr>url</a>
@@ -3179,8 +2840,7 @@ rebuild daily. CRLs are also rebuilt shortly after a certificate is revoked.
     </dt>
     <dd>{{% md %}}When true, includes a URL to the issuing CA certificate in the "authority
 information access" X.509 extension.
-{{% /md %}}</dd>
-    <dt class="property-optional"
+{{% /md %}}</dd><dt class="property-optional"
             title="Optional">
         <span id="include_crl_access_url_python">
 <a href="#include_crl_access_url_python" style="color: inherit; text-decoration: inherit;">include_<wbr>crl_<wbr>access_<wbr>url</a>
@@ -3191,16 +2851,13 @@ information access" X.509 extension.
     <dd>{{% md %}}When true, includes a URL to the CRL corresponding to certificates issued from a
 CertificateAuthority. CRLs will expire 7 days from their creation. However, we will
 rebuild daily. CRLs are also rebuilt shortly after a certificate is revoked.
-{{% /md %}}</dd>
-</dl>
+{{% /md %}}</dd></dl>
 {{% /choosable %}}
 
 <h4 id="authoritykeyspec">Authority<wbr>Key<wbr>Spec</h4>
 
 {{% choosable language csharp %}}
-<dl class="resources-properties">
-
-    <dt class="property-optional"
+<dl class="resources-properties"><dt class="property-optional"
             title="Optional">
         <span id="algorithm_csharp">
 <a href="#algorithm_csharp" style="color: inherit; text-decoration: inherit;">Algorithm</a>
@@ -3211,8 +2868,7 @@ rebuild daily. CRLs are also rebuilt shortly after a certificate is revoked.
     <dd>{{% md %}}The algorithm to use for creating a managed Cloud KMS key for a for a simplified
 experience. All managed keys will be have their ProtectionLevel as HSM.
 Possible values are `SIGN_HASH_ALGORITHM_UNSPECIFIED`, `RSA_PSS_2048_SHA256`, `RSA_PSS_3072_SHA256`, `RSA_PSS_4096_SHA256`, `RSA_PKCS1_2048_SHA256`, `RSA_PKCS1_3072_SHA256`, `RSA_PKCS1_4096_SHA256`, `EC_P256_SHA256`, and `EC_P384_SHA384`.
-{{% /md %}}</dd>
-    <dt class="property-optional"
+{{% /md %}}</dd><dt class="property-optional"
             title="Optional">
         <span id="cloudkmskeyversion_csharp">
 <a href="#cloudkmskeyversion_csharp" style="color: inherit; text-decoration: inherit;">Cloud<wbr>Kms<wbr>Key<wbr>Version</a>
@@ -3222,14 +2878,11 @@ Possible values are `SIGN_HASH_ALGORITHM_UNSPECIFIED`, `RSA_PSS_2048_SHA256`, `R
     </dt>
     <dd>{{% md %}}The resource name for an existing Cloud KMS CryptoKeyVersion in the format
 `projects/*/locations/*/keyRings/*/cryptoKeys/*/cryptoKeyVersions/*`.
-{{% /md %}}</dd>
-</dl>
+{{% /md %}}</dd></dl>
 {{% /choosable %}}
 
 {{% choosable language go %}}
-<dl class="resources-properties">
-
-    <dt class="property-optional"
+<dl class="resources-properties"><dt class="property-optional"
             title="Optional">
         <span id="algorithm_go">
 <a href="#algorithm_go" style="color: inherit; text-decoration: inherit;">Algorithm</a>
@@ -3240,8 +2893,7 @@ Possible values are `SIGN_HASH_ALGORITHM_UNSPECIFIED`, `RSA_PSS_2048_SHA256`, `R
     <dd>{{% md %}}The algorithm to use for creating a managed Cloud KMS key for a for a simplified
 experience. All managed keys will be have their ProtectionLevel as HSM.
 Possible values are `SIGN_HASH_ALGORITHM_UNSPECIFIED`, `RSA_PSS_2048_SHA256`, `RSA_PSS_3072_SHA256`, `RSA_PSS_4096_SHA256`, `RSA_PKCS1_2048_SHA256`, `RSA_PKCS1_3072_SHA256`, `RSA_PKCS1_4096_SHA256`, `EC_P256_SHA256`, and `EC_P384_SHA384`.
-{{% /md %}}</dd>
-    <dt class="property-optional"
+{{% /md %}}</dd><dt class="property-optional"
             title="Optional">
         <span id="cloudkmskeyversion_go">
 <a href="#cloudkmskeyversion_go" style="color: inherit; text-decoration: inherit;">Cloud<wbr>Kms<wbr>Key<wbr>Version</a>
@@ -3251,14 +2903,11 @@ Possible values are `SIGN_HASH_ALGORITHM_UNSPECIFIED`, `RSA_PSS_2048_SHA256`, `R
     </dt>
     <dd>{{% md %}}The resource name for an existing Cloud KMS CryptoKeyVersion in the format
 `projects/*/locations/*/keyRings/*/cryptoKeys/*/cryptoKeyVersions/*`.
-{{% /md %}}</dd>
-</dl>
+{{% /md %}}</dd></dl>
 {{% /choosable %}}
 
 {{% choosable language nodejs %}}
-<dl class="resources-properties">
-
-    <dt class="property-optional"
+<dl class="resources-properties"><dt class="property-optional"
             title="Optional">
         <span id="algorithm_nodejs">
 <a href="#algorithm_nodejs" style="color: inherit; text-decoration: inherit;">algorithm</a>
@@ -3269,8 +2918,7 @@ Possible values are `SIGN_HASH_ALGORITHM_UNSPECIFIED`, `RSA_PSS_2048_SHA256`, `R
     <dd>{{% md %}}The algorithm to use for creating a managed Cloud KMS key for a for a simplified
 experience. All managed keys will be have their ProtectionLevel as HSM.
 Possible values are `SIGN_HASH_ALGORITHM_UNSPECIFIED`, `RSA_PSS_2048_SHA256`, `RSA_PSS_3072_SHA256`, `RSA_PSS_4096_SHA256`, `RSA_PKCS1_2048_SHA256`, `RSA_PKCS1_3072_SHA256`, `RSA_PKCS1_4096_SHA256`, `EC_P256_SHA256`, and `EC_P384_SHA384`.
-{{% /md %}}</dd>
-    <dt class="property-optional"
+{{% /md %}}</dd><dt class="property-optional"
             title="Optional">
         <span id="cloudkmskeyversion_nodejs">
 <a href="#cloudkmskeyversion_nodejs" style="color: inherit; text-decoration: inherit;">cloud<wbr>Kms<wbr>Key<wbr>Version</a>
@@ -3280,14 +2928,11 @@ Possible values are `SIGN_HASH_ALGORITHM_UNSPECIFIED`, `RSA_PSS_2048_SHA256`, `R
     </dt>
     <dd>{{% md %}}The resource name for an existing Cloud KMS CryptoKeyVersion in the format
 `projects/*/locations/*/keyRings/*/cryptoKeys/*/cryptoKeyVersions/*`.
-{{% /md %}}</dd>
-</dl>
+{{% /md %}}</dd></dl>
 {{% /choosable %}}
 
 {{% choosable language python %}}
-<dl class="resources-properties">
-
-    <dt class="property-optional"
+<dl class="resources-properties"><dt class="property-optional"
             title="Optional">
         <span id="algorithm_python">
 <a href="#algorithm_python" style="color: inherit; text-decoration: inherit;">algorithm</a>
@@ -3298,8 +2943,7 @@ Possible values are `SIGN_HASH_ALGORITHM_UNSPECIFIED`, `RSA_PSS_2048_SHA256`, `R
     <dd>{{% md %}}The algorithm to use for creating a managed Cloud KMS key for a for a simplified
 experience. All managed keys will be have their ProtectionLevel as HSM.
 Possible values are `SIGN_HASH_ALGORITHM_UNSPECIFIED`, `RSA_PSS_2048_SHA256`, `RSA_PSS_3072_SHA256`, `RSA_PSS_4096_SHA256`, `RSA_PKCS1_2048_SHA256`, `RSA_PKCS1_3072_SHA256`, `RSA_PKCS1_4096_SHA256`, `EC_P256_SHA256`, and `EC_P384_SHA384`.
-{{% /md %}}</dd>
-    <dt class="property-optional"
+{{% /md %}}</dd><dt class="property-optional"
             title="Optional">
         <span id="cloud_kms_key_version_python">
 <a href="#cloud_kms_key_version_python" style="color: inherit; text-decoration: inherit;">cloud_<wbr>kms_<wbr>key_<wbr>version</a>
@@ -3309,8 +2953,7 @@ Possible values are `SIGN_HASH_ALGORITHM_UNSPECIFIED`, `RSA_PSS_2048_SHA256`, `R
     </dt>
     <dd>{{% md %}}The resource name for an existing Cloud KMS CryptoKeyVersion in the format
 `projects/*/locations/*/keyRings/*/cryptoKeys/*/cryptoKeyVersions/*`.
-{{% /md %}}</dd>
-</dl>
+{{% /md %}}</dd></dl>
 {{% /choosable %}}
 
 
@@ -3321,6 +2964,6 @@ Possible values are `SIGN_HASH_ALGORITHM_UNSPECIFIED`, `RSA_PSS_2048_SHA256`, `R
 	<dt>License</dt>
 	<dd>Apache-2.0</dd>
 	<dt>Notes</dt>
-	<dd>This Pulumi package is based on the [`google-beta` Terraform Provider](https://github.com/hashicorp/terraform-provider-google-beta).</dd>
+	<dd>{{% md %}}This Pulumi package is based on the [`google-beta` Terraform Provider](https://github.com/hashicorp/terraform-provider-google-beta).{{% /md %}}</dd>
 </dl>
 

@@ -14,11 +14,17 @@ The integration account partner.
 API Version: 2019-05-01.
 
 {{% examples %}}
+
 ## Example Usage
 
 {{< chooser language "typescript,python,go,csharp" / >}}
+
+
 ### Create or update a partner
-{{% example csharp %}}
+
+
+{{< example csharp >}}
+
 ```csharp
 using Pulumi;
 using AzureNative = Pulumi.AzureNative;
@@ -57,9 +63,12 @@ class MyStack : Stack
 
 ```
 
-{{% /example %}}
 
-{{% example go %}}
+{{< /example >}}
+
+
+{{< example go >}}
+
 
 ```go
 package main
@@ -99,9 +108,12 @@ func main() {
 
 ```
 
-{{% /example %}}
 
-{{% example python %}}
+{{< /example >}}
+
+
+{{< example python >}}
+
 
 ```python
 import pulumi
@@ -126,9 +138,12 @@ integration_account_partner = azure_native.logic.IntegrationAccountPartner("inte
 
 ```
 
-{{% /example %}}
 
-{{% example typescript %}}
+{{< /example >}}
+
+
+{{< example typescript >}}
+
 
 ```typescript
 import * as pulumi from "@pulumi/pulumi";
@@ -154,9 +169,16 @@ const integrationAccountPartner = new azure_native.logic.IntegrationAccountPartn
 
 ```
 
-{{% /example %}}
+
+{{< /example >}}
+
+
+
+
 
 {{% /examples %}}
+
+
 
 
 ## Create a IntegrationAccountPartner Resource {#create}
@@ -181,9 +203,7 @@ const integrationAccountPartner = new azure_native.logic.IntegrationAccountPartn
 
 {{% choosable language nodejs %}}
 
-<dl class="resources-properties">
-  
-    <dt
+<dl class="resources-properties"><dt
         class="property-required" title="Required">
         <span>name</span>
         <span class="property-indicator"></span>
@@ -191,9 +211,7 @@ const integrationAccountPartner = new azure_native.logic.IntegrationAccountPartn
     </dt>
     <dd>
       The unique name of the resource.
-    </dd>
-  
-    <dt
+    </dd><dt
         class="property-required" title="Required">
         <span>args</span>
         <span class="property-indicator"></span>
@@ -201,9 +219,7 @@ const integrationAccountPartner = new azure_native.logic.IntegrationAccountPartn
     </dt>
     <dd>
       The arguments to resource properties.
-    </dd>
-  
-    <dt
+    </dd><dt
         class="property-optional" title="Optional">
         <span>opts</span>
         <span class="property-indicator"></span>
@@ -211,10 +227,7 @@ const integrationAccountPartner = new azure_native.logic.IntegrationAccountPartn
     </dt>
     <dd>
       Bag of options to control resource&#39;s behavior.
-    </dd>
-  
-
-</dl>
+    </dd></dl>
 
 {{% /choosable %}}
 
@@ -240,9 +253,7 @@ const integrationAccountPartner = new azure_native.logic.IntegrationAccountPartn
 
 {{% choosable language go %}}
 
-<dl class="resources-properties">
-  
-    <dt
+<dl class="resources-properties"><dt
         class="property-optional" title="Optional">
         <span>ctx</span>
         <span class="property-indicator"></span>
@@ -250,9 +261,7 @@ const integrationAccountPartner = new azure_native.logic.IntegrationAccountPartn
     </dt>
     <dd>
       Context object for the current deployment.
-    </dd>
-  
-    <dt
+    </dd><dt
         class="property-required" title="Required">
         <span>name</span>
         <span class="property-indicator"></span>
@@ -260,9 +269,7 @@ const integrationAccountPartner = new azure_native.logic.IntegrationAccountPartn
     </dt>
     <dd>
       The unique name of the resource.
-    </dd>
-  
-    <dt
+    </dd><dt
         class="property-required" title="Required">
         <span>args</span>
         <span class="property-indicator"></span>
@@ -270,9 +277,7 @@ const integrationAccountPartner = new azure_native.logic.IntegrationAccountPartn
     </dt>
     <dd>
       The arguments to resource properties.
-    </dd>
-  
-    <dt
+    </dd><dt
         class="property-optional" title="Optional">
         <span>opts</span>
         <span class="property-indicator"></span>
@@ -280,18 +285,13 @@ const integrationAccountPartner = new azure_native.logic.IntegrationAccountPartn
     </dt>
     <dd>
       Bag of options to control resource&#39;s behavior.
-    </dd>
-  
-
-</dl>
+    </dd></dl>
 
 {{% /choosable %}}
 
 {{% choosable language csharp %}}
 
-<dl class="resources-properties">
-  
-    <dt
+<dl class="resources-properties"><dt
         class="property-required" title="Required">
         <span>name</span>
         <span class="property-indicator"></span>
@@ -299,9 +299,7 @@ const integrationAccountPartner = new azure_native.logic.IntegrationAccountPartn
     </dt>
     <dd>
       The unique name of the resource.
-    </dd>
-  
-    <dt
+    </dd><dt
         class="property-required" title="Required">
         <span>args</span>
         <span class="property-indicator"></span>
@@ -309,9 +307,7 @@ const integrationAccountPartner = new azure_native.logic.IntegrationAccountPartn
     </dt>
     <dd>
       The arguments to resource properties.
-    </dd>
-  
-    <dt
+    </dd><dt
         class="property-optional" title="Optional">
         <span>opts</span>
         <span class="property-indicator"></span>
@@ -319,10 +315,7 @@ const integrationAccountPartner = new azure_native.logic.IntegrationAccountPartn
     </dt>
     <dd>
       Bag of options to control resource&#39;s behavior.
-    </dd>
-  
-
-</dl>
+    </dd></dl>
 
 {{% /choosable %}}
 
@@ -337,9 +330,7 @@ The IntegrationAccountPartner resource accepts the following [input]({{< relref 
 
 
 {{% choosable language csharp %}}
-<dl class="resources-properties">
-
-    <dt class="property-required"
+<dl class="resources-properties"><dt class="property-required"
             title="Required">
         <span id="content_csharp">
 <a href="#content_csharp" style="color: inherit; text-decoration: inherit;">Content</a>
@@ -347,8 +338,7 @@ The IntegrationAccountPartner resource accepts the following [input]({{< relref 
         <span class="property-indicator"></span>
         <span class="property-type"><a href="#partnercontent">Pulumi.<wbr>Azure<wbr>Native.<wbr>Logic.<wbr>Inputs.<wbr>Partner<wbr>Content<wbr>Args</a></span>
     </dt>
-    <dd>{{% md %}}The partner content.{{% /md %}}</dd>
-    <dt class="property-required"
+    <dd>{{% md %}}The partner content.{{% /md %}}</dd><dt class="property-required"
             title="Required">
         <span id="integrationaccountname_csharp">
 <a href="#integrationaccountname_csharp" style="color: inherit; text-decoration: inherit;">Integration<wbr>Account<wbr>Name</a>
@@ -356,8 +346,7 @@ The IntegrationAccountPartner resource accepts the following [input]({{< relref 
         <span class="property-indicator"></span>
         <span class="property-type">string</span>
     </dt>
-    <dd>{{% md %}}The integration account name.{{% /md %}}</dd>
-    <dt class="property-required"
+    <dd>{{% md %}}The integration account name.{{% /md %}}</dd><dt class="property-required"
             title="Required">
         <span id="partnertype_csharp">
 <a href="#partnertype_csharp" style="color: inherit; text-decoration: inherit;">Partner<wbr>Type</a>
@@ -365,8 +354,7 @@ The IntegrationAccountPartner resource accepts the following [input]({{< relref 
         <span class="property-indicator"></span>
         <span class="property-type">string | <a href="#partnertype">Pulumi.<wbr>Azure<wbr>Native.<wbr>Logic.<wbr>Partner<wbr>Type</a></span>
     </dt>
-    <dd>{{% md %}}The partner type.{{% /md %}}</dd>
-    <dt class="property-required"
+    <dd>{{% md %}}The partner type.{{% /md %}}</dd><dt class="property-required"
             title="Required">
         <span id="resourcegroupname_csharp">
 <a href="#resourcegroupname_csharp" style="color: inherit; text-decoration: inherit;">Resource<wbr>Group<wbr>Name</a>
@@ -374,8 +362,7 @@ The IntegrationAccountPartner resource accepts the following [input]({{< relref 
         <span class="property-indicator"></span>
         <span class="property-type">string</span>
     </dt>
-    <dd>{{% md %}}The resource group name.{{% /md %}}</dd>
-    <dt class="property-optional"
+    <dd>{{% md %}}The resource group name.{{% /md %}}</dd><dt class="property-optional"
             title="Optional">
         <span id="location_csharp">
 <a href="#location_csharp" style="color: inherit; text-decoration: inherit;">Location</a>
@@ -383,8 +370,7 @@ The IntegrationAccountPartner resource accepts the following [input]({{< relref 
         <span class="property-indicator"></span>
         <span class="property-type">string</span>
     </dt>
-    <dd>{{% md %}}The resource location.{{% /md %}}</dd>
-    <dt class="property-optional"
+    <dd>{{% md %}}The resource location.{{% /md %}}</dd><dt class="property-optional"
             title="Optional">
         <span id="metadata_csharp">
 <a href="#metadata_csharp" style="color: inherit; text-decoration: inherit;">Metadata</a>
@@ -392,8 +378,7 @@ The IntegrationAccountPartner resource accepts the following [input]({{< relref 
         <span class="property-indicator"></span>
         <span class="property-type">object</span>
     </dt>
-    <dd>{{% md %}}The metadata.{{% /md %}}</dd>
-    <dt class="property-optional"
+    <dd>{{% md %}}The metadata.{{% /md %}}</dd><dt class="property-optional"
             title="Optional">
         <span id="partnername_csharp">
 <a href="#partnername_csharp" style="color: inherit; text-decoration: inherit;">Partner<wbr>Name</a>
@@ -401,8 +386,7 @@ The IntegrationAccountPartner resource accepts the following [input]({{< relref 
         <span class="property-indicator"></span>
         <span class="property-type">string</span>
     </dt>
-    <dd>{{% md %}}The integration account partner name.{{% /md %}}</dd>
-    <dt class="property-optional"
+    <dd>{{% md %}}The integration account partner name.{{% /md %}}</dd><dt class="property-optional"
             title="Optional">
         <span id="tags_csharp">
 <a href="#tags_csharp" style="color: inherit; text-decoration: inherit;">Tags</a>
@@ -410,14 +394,11 @@ The IntegrationAccountPartner resource accepts the following [input]({{< relref 
         <span class="property-indicator"></span>
         <span class="property-type">Dictionary&lt;string, string&gt;</span>
     </dt>
-    <dd>{{% md %}}The resource tags.{{% /md %}}</dd>
-</dl>
+    <dd>{{% md %}}The resource tags.{{% /md %}}</dd></dl>
 {{% /choosable %}}
 
 {{% choosable language go %}}
-<dl class="resources-properties">
-
-    <dt class="property-required"
+<dl class="resources-properties"><dt class="property-required"
             title="Required">
         <span id="content_go">
 <a href="#content_go" style="color: inherit; text-decoration: inherit;">Content</a>
@@ -425,8 +406,7 @@ The IntegrationAccountPartner resource accepts the following [input]({{< relref 
         <span class="property-indicator"></span>
         <span class="property-type"><a href="#partnercontent">Partner<wbr>Content</a></span>
     </dt>
-    <dd>{{% md %}}The partner content.{{% /md %}}</dd>
-    <dt class="property-required"
+    <dd>{{% md %}}The partner content.{{% /md %}}</dd><dt class="property-required"
             title="Required">
         <span id="integrationaccountname_go">
 <a href="#integrationaccountname_go" style="color: inherit; text-decoration: inherit;">Integration<wbr>Account<wbr>Name</a>
@@ -434,8 +414,7 @@ The IntegrationAccountPartner resource accepts the following [input]({{< relref 
         <span class="property-indicator"></span>
         <span class="property-type">string</span>
     </dt>
-    <dd>{{% md %}}The integration account name.{{% /md %}}</dd>
-    <dt class="property-required"
+    <dd>{{% md %}}The integration account name.{{% /md %}}</dd><dt class="property-required"
             title="Required">
         <span id="partnertype_go">
 <a href="#partnertype_go" style="color: inherit; text-decoration: inherit;">Partner<wbr>Type</a>
@@ -443,8 +422,7 @@ The IntegrationAccountPartner resource accepts the following [input]({{< relref 
         <span class="property-indicator"></span>
         <span class="property-type">string | <a href="#partnertype">Partner<wbr>Type</a></span>
     </dt>
-    <dd>{{% md %}}The partner type.{{% /md %}}</dd>
-    <dt class="property-required"
+    <dd>{{% md %}}The partner type.{{% /md %}}</dd><dt class="property-required"
             title="Required">
         <span id="resourcegroupname_go">
 <a href="#resourcegroupname_go" style="color: inherit; text-decoration: inherit;">Resource<wbr>Group<wbr>Name</a>
@@ -452,8 +430,7 @@ The IntegrationAccountPartner resource accepts the following [input]({{< relref 
         <span class="property-indicator"></span>
         <span class="property-type">string</span>
     </dt>
-    <dd>{{% md %}}The resource group name.{{% /md %}}</dd>
-    <dt class="property-optional"
+    <dd>{{% md %}}The resource group name.{{% /md %}}</dd><dt class="property-optional"
             title="Optional">
         <span id="location_go">
 <a href="#location_go" style="color: inherit; text-decoration: inherit;">Location</a>
@@ -461,8 +438,7 @@ The IntegrationAccountPartner resource accepts the following [input]({{< relref 
         <span class="property-indicator"></span>
         <span class="property-type">string</span>
     </dt>
-    <dd>{{% md %}}The resource location.{{% /md %}}</dd>
-    <dt class="property-optional"
+    <dd>{{% md %}}The resource location.{{% /md %}}</dd><dt class="property-optional"
             title="Optional">
         <span id="metadata_go">
 <a href="#metadata_go" style="color: inherit; text-decoration: inherit;">Metadata</a>
@@ -470,8 +446,7 @@ The IntegrationAccountPartner resource accepts the following [input]({{< relref 
         <span class="property-indicator"></span>
         <span class="property-type">interface{}</span>
     </dt>
-    <dd>{{% md %}}The metadata.{{% /md %}}</dd>
-    <dt class="property-optional"
+    <dd>{{% md %}}The metadata.{{% /md %}}</dd><dt class="property-optional"
             title="Optional">
         <span id="partnername_go">
 <a href="#partnername_go" style="color: inherit; text-decoration: inherit;">Partner<wbr>Name</a>
@@ -479,8 +454,7 @@ The IntegrationAccountPartner resource accepts the following [input]({{< relref 
         <span class="property-indicator"></span>
         <span class="property-type">string</span>
     </dt>
-    <dd>{{% md %}}The integration account partner name.{{% /md %}}</dd>
-    <dt class="property-optional"
+    <dd>{{% md %}}The integration account partner name.{{% /md %}}</dd><dt class="property-optional"
             title="Optional">
         <span id="tags_go">
 <a href="#tags_go" style="color: inherit; text-decoration: inherit;">Tags</a>
@@ -488,14 +462,11 @@ The IntegrationAccountPartner resource accepts the following [input]({{< relref 
         <span class="property-indicator"></span>
         <span class="property-type">map[string]string</span>
     </dt>
-    <dd>{{% md %}}The resource tags.{{% /md %}}</dd>
-</dl>
+    <dd>{{% md %}}The resource tags.{{% /md %}}</dd></dl>
 {{% /choosable %}}
 
 {{% choosable language nodejs %}}
-<dl class="resources-properties">
-
-    <dt class="property-required"
+<dl class="resources-properties"><dt class="property-required"
             title="Required">
         <span id="content_nodejs">
 <a href="#content_nodejs" style="color: inherit; text-decoration: inherit;">content</a>
@@ -503,8 +474,7 @@ The IntegrationAccountPartner resource accepts the following [input]({{< relref 
         <span class="property-indicator"></span>
         <span class="property-type"><a href="#partnercontent">Partner<wbr>Content</a></span>
     </dt>
-    <dd>{{% md %}}The partner content.{{% /md %}}</dd>
-    <dt class="property-required"
+    <dd>{{% md %}}The partner content.{{% /md %}}</dd><dt class="property-required"
             title="Required">
         <span id="integrationaccountname_nodejs">
 <a href="#integrationaccountname_nodejs" style="color: inherit; text-decoration: inherit;">integration<wbr>Account<wbr>Name</a>
@@ -512,8 +482,7 @@ The IntegrationAccountPartner resource accepts the following [input]({{< relref 
         <span class="property-indicator"></span>
         <span class="property-type">string</span>
     </dt>
-    <dd>{{% md %}}The integration account name.{{% /md %}}</dd>
-    <dt class="property-required"
+    <dd>{{% md %}}The integration account name.{{% /md %}}</dd><dt class="property-required"
             title="Required">
         <span id="partnertype_nodejs">
 <a href="#partnertype_nodejs" style="color: inherit; text-decoration: inherit;">partner<wbr>Type</a>
@@ -521,8 +490,7 @@ The IntegrationAccountPartner resource accepts the following [input]({{< relref 
         <span class="property-indicator"></span>
         <span class="property-type">string | <a href="#partnertype">Partner<wbr>Type</a></span>
     </dt>
-    <dd>{{% md %}}The partner type.{{% /md %}}</dd>
-    <dt class="property-required"
+    <dd>{{% md %}}The partner type.{{% /md %}}</dd><dt class="property-required"
             title="Required">
         <span id="resourcegroupname_nodejs">
 <a href="#resourcegroupname_nodejs" style="color: inherit; text-decoration: inherit;">resource<wbr>Group<wbr>Name</a>
@@ -530,8 +498,7 @@ The IntegrationAccountPartner resource accepts the following [input]({{< relref 
         <span class="property-indicator"></span>
         <span class="property-type">string</span>
     </dt>
-    <dd>{{% md %}}The resource group name.{{% /md %}}</dd>
-    <dt class="property-optional"
+    <dd>{{% md %}}The resource group name.{{% /md %}}</dd><dt class="property-optional"
             title="Optional">
         <span id="location_nodejs">
 <a href="#location_nodejs" style="color: inherit; text-decoration: inherit;">location</a>
@@ -539,8 +506,7 @@ The IntegrationAccountPartner resource accepts the following [input]({{< relref 
         <span class="property-indicator"></span>
         <span class="property-type">string</span>
     </dt>
-    <dd>{{% md %}}The resource location.{{% /md %}}</dd>
-    <dt class="property-optional"
+    <dd>{{% md %}}The resource location.{{% /md %}}</dd><dt class="property-optional"
             title="Optional">
         <span id="metadata_nodejs">
 <a href="#metadata_nodejs" style="color: inherit; text-decoration: inherit;">metadata</a>
@@ -548,8 +514,7 @@ The IntegrationAccountPartner resource accepts the following [input]({{< relref 
         <span class="property-indicator"></span>
         <span class="property-type">any</span>
     </dt>
-    <dd>{{% md %}}The metadata.{{% /md %}}</dd>
-    <dt class="property-optional"
+    <dd>{{% md %}}The metadata.{{% /md %}}</dd><dt class="property-optional"
             title="Optional">
         <span id="partnername_nodejs">
 <a href="#partnername_nodejs" style="color: inherit; text-decoration: inherit;">partner<wbr>Name</a>
@@ -557,8 +522,7 @@ The IntegrationAccountPartner resource accepts the following [input]({{< relref 
         <span class="property-indicator"></span>
         <span class="property-type">string</span>
     </dt>
-    <dd>{{% md %}}The integration account partner name.{{% /md %}}</dd>
-    <dt class="property-optional"
+    <dd>{{% md %}}The integration account partner name.{{% /md %}}</dd><dt class="property-optional"
             title="Optional">
         <span id="tags_nodejs">
 <a href="#tags_nodejs" style="color: inherit; text-decoration: inherit;">tags</a>
@@ -566,14 +530,11 @@ The IntegrationAccountPartner resource accepts the following [input]({{< relref 
         <span class="property-indicator"></span>
         <span class="property-type">{[key: string]: string}</span>
     </dt>
-    <dd>{{% md %}}The resource tags.{{% /md %}}</dd>
-</dl>
+    <dd>{{% md %}}The resource tags.{{% /md %}}</dd></dl>
 {{% /choosable %}}
 
 {{% choosable language python %}}
-<dl class="resources-properties">
-
-    <dt class="property-required"
+<dl class="resources-properties"><dt class="property-required"
             title="Required">
         <span id="content_python">
 <a href="#content_python" style="color: inherit; text-decoration: inherit;">content</a>
@@ -581,8 +542,7 @@ The IntegrationAccountPartner resource accepts the following [input]({{< relref 
         <span class="property-indicator"></span>
         <span class="property-type"><a href="#partnercontent">Partner<wbr>Content<wbr>Args</a></span>
     </dt>
-    <dd>{{% md %}}The partner content.{{% /md %}}</dd>
-    <dt class="property-required"
+    <dd>{{% md %}}The partner content.{{% /md %}}</dd><dt class="property-required"
             title="Required">
         <span id="integration_account_name_python">
 <a href="#integration_account_name_python" style="color: inherit; text-decoration: inherit;">integration_<wbr>account_<wbr>name</a>
@@ -590,8 +550,7 @@ The IntegrationAccountPartner resource accepts the following [input]({{< relref 
         <span class="property-indicator"></span>
         <span class="property-type">str</span>
     </dt>
-    <dd>{{% md %}}The integration account name.{{% /md %}}</dd>
-    <dt class="property-required"
+    <dd>{{% md %}}The integration account name.{{% /md %}}</dd><dt class="property-required"
             title="Required">
         <span id="partner_type_python">
 <a href="#partner_type_python" style="color: inherit; text-decoration: inherit;">partner_<wbr>type</a>
@@ -599,8 +558,7 @@ The IntegrationAccountPartner resource accepts the following [input]({{< relref 
         <span class="property-indicator"></span>
         <span class="property-type">str | <a href="#partnertype">Partner<wbr>Type</a></span>
     </dt>
-    <dd>{{% md %}}The partner type.{{% /md %}}</dd>
-    <dt class="property-required"
+    <dd>{{% md %}}The partner type.{{% /md %}}</dd><dt class="property-required"
             title="Required">
         <span id="resource_group_name_python">
 <a href="#resource_group_name_python" style="color: inherit; text-decoration: inherit;">resource_<wbr>group_<wbr>name</a>
@@ -608,8 +566,7 @@ The IntegrationAccountPartner resource accepts the following [input]({{< relref 
         <span class="property-indicator"></span>
         <span class="property-type">str</span>
     </dt>
-    <dd>{{% md %}}The resource group name.{{% /md %}}</dd>
-    <dt class="property-optional"
+    <dd>{{% md %}}The resource group name.{{% /md %}}</dd><dt class="property-optional"
             title="Optional">
         <span id="location_python">
 <a href="#location_python" style="color: inherit; text-decoration: inherit;">location</a>
@@ -617,8 +574,7 @@ The IntegrationAccountPartner resource accepts the following [input]({{< relref 
         <span class="property-indicator"></span>
         <span class="property-type">str</span>
     </dt>
-    <dd>{{% md %}}The resource location.{{% /md %}}</dd>
-    <dt class="property-optional"
+    <dd>{{% md %}}The resource location.{{% /md %}}</dd><dt class="property-optional"
             title="Optional">
         <span id="metadata_python">
 <a href="#metadata_python" style="color: inherit; text-decoration: inherit;">metadata</a>
@@ -626,8 +582,7 @@ The IntegrationAccountPartner resource accepts the following [input]({{< relref 
         <span class="property-indicator"></span>
         <span class="property-type">Any</span>
     </dt>
-    <dd>{{% md %}}The metadata.{{% /md %}}</dd>
-    <dt class="property-optional"
+    <dd>{{% md %}}The metadata.{{% /md %}}</dd><dt class="property-optional"
             title="Optional">
         <span id="partner_name_python">
 <a href="#partner_name_python" style="color: inherit; text-decoration: inherit;">partner_<wbr>name</a>
@@ -635,8 +590,7 @@ The IntegrationAccountPartner resource accepts the following [input]({{< relref 
         <span class="property-indicator"></span>
         <span class="property-type">str</span>
     </dt>
-    <dd>{{% md %}}The integration account partner name.{{% /md %}}</dd>
-    <dt class="property-optional"
+    <dd>{{% md %}}The integration account partner name.{{% /md %}}</dd><dt class="property-optional"
             title="Optional">
         <span id="tags_python">
 <a href="#tags_python" style="color: inherit; text-decoration: inherit;">tags</a>
@@ -644,8 +598,7 @@ The IntegrationAccountPartner resource accepts the following [input]({{< relref 
         <span class="property-indicator"></span>
         <span class="property-type">Mapping[str, str]</span>
     </dt>
-    <dd>{{% md %}}The resource tags.{{% /md %}}</dd>
-</dl>
+    <dd>{{% md %}}The resource tags.{{% /md %}}</dd></dl>
 {{% /choosable %}}
 
 
@@ -656,9 +609,7 @@ All [input](#inputs) properties are implicitly available as output properties. A
 
 
 {{% choosable language csharp %}}
-<dl class="resources-properties">
-
-    <dt class="property-"
+<dl class="resources-properties"><dt class="property-"
             title="">
         <span id="changedtime_csharp">
 <a href="#changedtime_csharp" style="color: inherit; text-decoration: inherit;">Changed<wbr>Time</a>
@@ -666,8 +617,7 @@ All [input](#inputs) properties are implicitly available as output properties. A
         <span class="property-indicator"></span>
         <span class="property-type">string</span>
     </dt>
-    <dd>{{% md %}}The changed time.{{% /md %}}</dd>
-    <dt class="property-"
+    <dd>{{% md %}}The changed time.{{% /md %}}</dd><dt class="property-"
             title="">
         <span id="createdtime_csharp">
 <a href="#createdtime_csharp" style="color: inherit; text-decoration: inherit;">Created<wbr>Time</a>
@@ -675,8 +625,7 @@ All [input](#inputs) properties are implicitly available as output properties. A
         <span class="property-indicator"></span>
         <span class="property-type">string</span>
     </dt>
-    <dd>{{% md %}}The created time.{{% /md %}}</dd>
-    <dt class="property-"
+    <dd>{{% md %}}The created time.{{% /md %}}</dd><dt class="property-"
             title="">
         <span id="id_csharp">
 <a href="#id_csharp" style="color: inherit; text-decoration: inherit;">Id</a>
@@ -684,8 +633,7 @@ All [input](#inputs) properties are implicitly available as output properties. A
         <span class="property-indicator"></span>
         <span class="property-type">string</span>
     </dt>
-    <dd>{{% md %}}The provider-assigned unique ID for this managed resource.{{% /md %}}</dd>
-    <dt class="property-"
+    <dd>{{% md %}}The provider-assigned unique ID for this managed resource.{{% /md %}}</dd><dt class="property-"
             title="">
         <span id="name_csharp">
 <a href="#name_csharp" style="color: inherit; text-decoration: inherit;">Name</a>
@@ -693,8 +641,7 @@ All [input](#inputs) properties are implicitly available as output properties. A
         <span class="property-indicator"></span>
         <span class="property-type">string</span>
     </dt>
-    <dd>{{% md %}}Gets the resource name.{{% /md %}}</dd>
-    <dt class="property-"
+    <dd>{{% md %}}Gets the resource name.{{% /md %}}</dd><dt class="property-"
             title="">
         <span id="type_csharp">
 <a href="#type_csharp" style="color: inherit; text-decoration: inherit;">Type</a>
@@ -702,14 +649,11 @@ All [input](#inputs) properties are implicitly available as output properties. A
         <span class="property-indicator"></span>
         <span class="property-type">string</span>
     </dt>
-    <dd>{{% md %}}Gets the resource type.{{% /md %}}</dd>
-</dl>
+    <dd>{{% md %}}Gets the resource type.{{% /md %}}</dd></dl>
 {{% /choosable %}}
 
 {{% choosable language go %}}
-<dl class="resources-properties">
-
-    <dt class="property-"
+<dl class="resources-properties"><dt class="property-"
             title="">
         <span id="changedtime_go">
 <a href="#changedtime_go" style="color: inherit; text-decoration: inherit;">Changed<wbr>Time</a>
@@ -717,8 +661,7 @@ All [input](#inputs) properties are implicitly available as output properties. A
         <span class="property-indicator"></span>
         <span class="property-type">string</span>
     </dt>
-    <dd>{{% md %}}The changed time.{{% /md %}}</dd>
-    <dt class="property-"
+    <dd>{{% md %}}The changed time.{{% /md %}}</dd><dt class="property-"
             title="">
         <span id="createdtime_go">
 <a href="#createdtime_go" style="color: inherit; text-decoration: inherit;">Created<wbr>Time</a>
@@ -726,8 +669,7 @@ All [input](#inputs) properties are implicitly available as output properties. A
         <span class="property-indicator"></span>
         <span class="property-type">string</span>
     </dt>
-    <dd>{{% md %}}The created time.{{% /md %}}</dd>
-    <dt class="property-"
+    <dd>{{% md %}}The created time.{{% /md %}}</dd><dt class="property-"
             title="">
         <span id="id_go">
 <a href="#id_go" style="color: inherit; text-decoration: inherit;">Id</a>
@@ -735,8 +677,7 @@ All [input](#inputs) properties are implicitly available as output properties. A
         <span class="property-indicator"></span>
         <span class="property-type">string</span>
     </dt>
-    <dd>{{% md %}}The provider-assigned unique ID for this managed resource.{{% /md %}}</dd>
-    <dt class="property-"
+    <dd>{{% md %}}The provider-assigned unique ID for this managed resource.{{% /md %}}</dd><dt class="property-"
             title="">
         <span id="name_go">
 <a href="#name_go" style="color: inherit; text-decoration: inherit;">Name</a>
@@ -744,8 +685,7 @@ All [input](#inputs) properties are implicitly available as output properties. A
         <span class="property-indicator"></span>
         <span class="property-type">string</span>
     </dt>
-    <dd>{{% md %}}Gets the resource name.{{% /md %}}</dd>
-    <dt class="property-"
+    <dd>{{% md %}}Gets the resource name.{{% /md %}}</dd><dt class="property-"
             title="">
         <span id="type_go">
 <a href="#type_go" style="color: inherit; text-decoration: inherit;">Type</a>
@@ -753,14 +693,11 @@ All [input](#inputs) properties are implicitly available as output properties. A
         <span class="property-indicator"></span>
         <span class="property-type">string</span>
     </dt>
-    <dd>{{% md %}}Gets the resource type.{{% /md %}}</dd>
-</dl>
+    <dd>{{% md %}}Gets the resource type.{{% /md %}}</dd></dl>
 {{% /choosable %}}
 
 {{% choosable language nodejs %}}
-<dl class="resources-properties">
-
-    <dt class="property-"
+<dl class="resources-properties"><dt class="property-"
             title="">
         <span id="changedtime_nodejs">
 <a href="#changedtime_nodejs" style="color: inherit; text-decoration: inherit;">changed<wbr>Time</a>
@@ -768,8 +705,7 @@ All [input](#inputs) properties are implicitly available as output properties. A
         <span class="property-indicator"></span>
         <span class="property-type">string</span>
     </dt>
-    <dd>{{% md %}}The changed time.{{% /md %}}</dd>
-    <dt class="property-"
+    <dd>{{% md %}}The changed time.{{% /md %}}</dd><dt class="property-"
             title="">
         <span id="createdtime_nodejs">
 <a href="#createdtime_nodejs" style="color: inherit; text-decoration: inherit;">created<wbr>Time</a>
@@ -777,8 +713,7 @@ All [input](#inputs) properties are implicitly available as output properties. A
         <span class="property-indicator"></span>
         <span class="property-type">string</span>
     </dt>
-    <dd>{{% md %}}The created time.{{% /md %}}</dd>
-    <dt class="property-"
+    <dd>{{% md %}}The created time.{{% /md %}}</dd><dt class="property-"
             title="">
         <span id="id_nodejs">
 <a href="#id_nodejs" style="color: inherit; text-decoration: inherit;">id</a>
@@ -786,8 +721,7 @@ All [input](#inputs) properties are implicitly available as output properties. A
         <span class="property-indicator"></span>
         <span class="property-type">string</span>
     </dt>
-    <dd>{{% md %}}The provider-assigned unique ID for this managed resource.{{% /md %}}</dd>
-    <dt class="property-"
+    <dd>{{% md %}}The provider-assigned unique ID for this managed resource.{{% /md %}}</dd><dt class="property-"
             title="">
         <span id="name_nodejs">
 <a href="#name_nodejs" style="color: inherit; text-decoration: inherit;">name</a>
@@ -795,8 +729,7 @@ All [input](#inputs) properties are implicitly available as output properties. A
         <span class="property-indicator"></span>
         <span class="property-type">string</span>
     </dt>
-    <dd>{{% md %}}Gets the resource name.{{% /md %}}</dd>
-    <dt class="property-"
+    <dd>{{% md %}}Gets the resource name.{{% /md %}}</dd><dt class="property-"
             title="">
         <span id="type_nodejs">
 <a href="#type_nodejs" style="color: inherit; text-decoration: inherit;">type</a>
@@ -804,14 +737,11 @@ All [input](#inputs) properties are implicitly available as output properties. A
         <span class="property-indicator"></span>
         <span class="property-type">string</span>
     </dt>
-    <dd>{{% md %}}Gets the resource type.{{% /md %}}</dd>
-</dl>
+    <dd>{{% md %}}Gets the resource type.{{% /md %}}</dd></dl>
 {{% /choosable %}}
 
 {{% choosable language python %}}
-<dl class="resources-properties">
-
-    <dt class="property-"
+<dl class="resources-properties"><dt class="property-"
             title="">
         <span id="changed_time_python">
 <a href="#changed_time_python" style="color: inherit; text-decoration: inherit;">changed_<wbr>time</a>
@@ -819,8 +749,7 @@ All [input](#inputs) properties are implicitly available as output properties. A
         <span class="property-indicator"></span>
         <span class="property-type">str</span>
     </dt>
-    <dd>{{% md %}}The changed time.{{% /md %}}</dd>
-    <dt class="property-"
+    <dd>{{% md %}}The changed time.{{% /md %}}</dd><dt class="property-"
             title="">
         <span id="created_time_python">
 <a href="#created_time_python" style="color: inherit; text-decoration: inherit;">created_<wbr>time</a>
@@ -828,8 +757,7 @@ All [input](#inputs) properties are implicitly available as output properties. A
         <span class="property-indicator"></span>
         <span class="property-type">str</span>
     </dt>
-    <dd>{{% md %}}The created time.{{% /md %}}</dd>
-    <dt class="property-"
+    <dd>{{% md %}}The created time.{{% /md %}}</dd><dt class="property-"
             title="">
         <span id="id_python">
 <a href="#id_python" style="color: inherit; text-decoration: inherit;">id</a>
@@ -837,8 +765,7 @@ All [input](#inputs) properties are implicitly available as output properties. A
         <span class="property-indicator"></span>
         <span class="property-type">str</span>
     </dt>
-    <dd>{{% md %}}The provider-assigned unique ID for this managed resource.{{% /md %}}</dd>
-    <dt class="property-"
+    <dd>{{% md %}}The provider-assigned unique ID for this managed resource.{{% /md %}}</dd><dt class="property-"
             title="">
         <span id="name_python">
 <a href="#name_python" style="color: inherit; text-decoration: inherit;">name</a>
@@ -846,8 +773,7 @@ All [input](#inputs) properties are implicitly available as output properties. A
         <span class="property-indicator"></span>
         <span class="property-type">str</span>
     </dt>
-    <dd>{{% md %}}Gets the resource name.{{% /md %}}</dd>
-    <dt class="property-"
+    <dd>{{% md %}}Gets the resource name.{{% /md %}}</dd><dt class="property-"
             title="">
         <span id="type_python">
 <a href="#type_python" style="color: inherit; text-decoration: inherit;">type</a>
@@ -855,8 +781,7 @@ All [input](#inputs) properties are implicitly available as output properties. A
         <span class="property-indicator"></span>
         <span class="property-type">str</span>
     </dt>
-    <dd>{{% md %}}Gets the resource type.{{% /md %}}</dd>
-</dl>
+    <dd>{{% md %}}Gets the resource type.{{% /md %}}</dd></dl>
 {{% /choosable %}}
 
 
@@ -872,9 +797,7 @@ All [input](#inputs) properties are implicitly available as output properties. A
 <h4 id="b2bpartnercontent">B2BPartner<wbr>Content</h4>
 
 {{% choosable language csharp %}}
-<dl class="resources-properties">
-
-    <dt class="property-optional"
+<dl class="resources-properties"><dt class="property-optional"
             title="Optional">
         <span id="businessidentities_csharp">
 <a href="#businessidentities_csharp" style="color: inherit; text-decoration: inherit;">Business<wbr>Identities</a>
@@ -882,14 +805,11 @@ All [input](#inputs) properties are implicitly available as output properties. A
         <span class="property-indicator"></span>
         <span class="property-type"><a href="#businessidentity">List&lt;Pulumi.<wbr>Azure<wbr>Native.<wbr>Logic.<wbr>Inputs.<wbr>Business<wbr>Identity<wbr>Args&gt;</a></span>
     </dt>
-    <dd>{{% md %}}The list of partner business identities.{{% /md %}}</dd>
-</dl>
+    <dd>{{% md %}}The list of partner business identities.{{% /md %}}</dd></dl>
 {{% /choosable %}}
 
 {{% choosable language go %}}
-<dl class="resources-properties">
-
-    <dt class="property-optional"
+<dl class="resources-properties"><dt class="property-optional"
             title="Optional">
         <span id="businessidentities_go">
 <a href="#businessidentities_go" style="color: inherit; text-decoration: inherit;">Business<wbr>Identities</a>
@@ -897,14 +817,11 @@ All [input](#inputs) properties are implicitly available as output properties. A
         <span class="property-indicator"></span>
         <span class="property-type"><a href="#businessidentity">[]Business<wbr>Identity</a></span>
     </dt>
-    <dd>{{% md %}}The list of partner business identities.{{% /md %}}</dd>
-</dl>
+    <dd>{{% md %}}The list of partner business identities.{{% /md %}}</dd></dl>
 {{% /choosable %}}
 
 {{% choosable language nodejs %}}
-<dl class="resources-properties">
-
-    <dt class="property-optional"
+<dl class="resources-properties"><dt class="property-optional"
             title="Optional">
         <span id="businessidentities_nodejs">
 <a href="#businessidentities_nodejs" style="color: inherit; text-decoration: inherit;">business<wbr>Identities</a>
@@ -912,14 +829,11 @@ All [input](#inputs) properties are implicitly available as output properties. A
         <span class="property-indicator"></span>
         <span class="property-type"><a href="#businessidentity">Business<wbr>Identity[]</a></span>
     </dt>
-    <dd>{{% md %}}The list of partner business identities.{{% /md %}}</dd>
-</dl>
+    <dd>{{% md %}}The list of partner business identities.{{% /md %}}</dd></dl>
 {{% /choosable %}}
 
 {{% choosable language python %}}
-<dl class="resources-properties">
-
-    <dt class="property-optional"
+<dl class="resources-properties"><dt class="property-optional"
             title="Optional">
         <span id="business_identities_python">
 <a href="#business_identities_python" style="color: inherit; text-decoration: inherit;">business_<wbr>identities</a>
@@ -927,16 +841,13 @@ All [input](#inputs) properties are implicitly available as output properties. A
         <span class="property-indicator"></span>
         <span class="property-type"><a href="#businessidentity">Sequence[Business<wbr>Identity<wbr>Args]</a></span>
     </dt>
-    <dd>{{% md %}}The list of partner business identities.{{% /md %}}</dd>
-</dl>
+    <dd>{{% md %}}The list of partner business identities.{{% /md %}}</dd></dl>
 {{% /choosable %}}
 
 <h4 id="b2bpartnercontentresponse">B2BPartner<wbr>Content<wbr>Response</h4>
 
 {{% choosable language csharp %}}
-<dl class="resources-properties">
-
-    <dt class="property-optional"
+<dl class="resources-properties"><dt class="property-optional"
             title="Optional">
         <span id="businessidentities_csharp">
 <a href="#businessidentities_csharp" style="color: inherit; text-decoration: inherit;">Business<wbr>Identities</a>
@@ -944,14 +855,11 @@ All [input](#inputs) properties are implicitly available as output properties. A
         <span class="property-indicator"></span>
         <span class="property-type"><a href="#businessidentityresponse">List&lt;Pulumi.<wbr>Azure<wbr>Native.<wbr>Logic.<wbr>Inputs.<wbr>Business<wbr>Identity<wbr>Response<wbr>Args&gt;</a></span>
     </dt>
-    <dd>{{% md %}}The list of partner business identities.{{% /md %}}</dd>
-</dl>
+    <dd>{{% md %}}The list of partner business identities.{{% /md %}}</dd></dl>
 {{% /choosable %}}
 
 {{% choosable language go %}}
-<dl class="resources-properties">
-
-    <dt class="property-optional"
+<dl class="resources-properties"><dt class="property-optional"
             title="Optional">
         <span id="businessidentities_go">
 <a href="#businessidentities_go" style="color: inherit; text-decoration: inherit;">Business<wbr>Identities</a>
@@ -959,14 +867,11 @@ All [input](#inputs) properties are implicitly available as output properties. A
         <span class="property-indicator"></span>
         <span class="property-type"><a href="#businessidentityresponse">[]Business<wbr>Identity<wbr>Response</a></span>
     </dt>
-    <dd>{{% md %}}The list of partner business identities.{{% /md %}}</dd>
-</dl>
+    <dd>{{% md %}}The list of partner business identities.{{% /md %}}</dd></dl>
 {{% /choosable %}}
 
 {{% choosable language nodejs %}}
-<dl class="resources-properties">
-
-    <dt class="property-optional"
+<dl class="resources-properties"><dt class="property-optional"
             title="Optional">
         <span id="businessidentities_nodejs">
 <a href="#businessidentities_nodejs" style="color: inherit; text-decoration: inherit;">business<wbr>Identities</a>
@@ -974,14 +879,11 @@ All [input](#inputs) properties are implicitly available as output properties. A
         <span class="property-indicator"></span>
         <span class="property-type"><a href="#businessidentityresponse">Business<wbr>Identity<wbr>Response[]</a></span>
     </dt>
-    <dd>{{% md %}}The list of partner business identities.{{% /md %}}</dd>
-</dl>
+    <dd>{{% md %}}The list of partner business identities.{{% /md %}}</dd></dl>
 {{% /choosable %}}
 
 {{% choosable language python %}}
-<dl class="resources-properties">
-
-    <dt class="property-optional"
+<dl class="resources-properties"><dt class="property-optional"
             title="Optional">
         <span id="business_identities_python">
 <a href="#business_identities_python" style="color: inherit; text-decoration: inherit;">business_<wbr>identities</a>
@@ -989,16 +891,13 @@ All [input](#inputs) properties are implicitly available as output properties. A
         <span class="property-indicator"></span>
         <span class="property-type"><a href="#businessidentityresponse">Sequence[Business<wbr>Identity<wbr>Response<wbr>Args]</a></span>
     </dt>
-    <dd>{{% md %}}The list of partner business identities.{{% /md %}}</dd>
-</dl>
+    <dd>{{% md %}}The list of partner business identities.{{% /md %}}</dd></dl>
 {{% /choosable %}}
 
 <h4 id="businessidentity">Business<wbr>Identity</h4>
 
 {{% choosable language csharp %}}
-<dl class="resources-properties">
-
-    <dt class="property-required"
+<dl class="resources-properties"><dt class="property-required"
             title="Required">
         <span id="qualifier_csharp">
 <a href="#qualifier_csharp" style="color: inherit; text-decoration: inherit;">Qualifier</a>
@@ -1006,8 +905,7 @@ All [input](#inputs) properties are implicitly available as output properties. A
         <span class="property-indicator"></span>
         <span class="property-type">string</span>
     </dt>
-    <dd>{{% md %}}The business identity qualifier e.g. as2identity, ZZ, ZZZ, 31, 32{{% /md %}}</dd>
-    <dt class="property-required"
+    <dd>{{% md %}}The business identity qualifier e.g. as2identity, ZZ, ZZZ, 31, 32{{% /md %}}</dd><dt class="property-required"
             title="Required">
         <span id="value_csharp">
 <a href="#value_csharp" style="color: inherit; text-decoration: inherit;">Value</a>
@@ -1015,14 +913,11 @@ All [input](#inputs) properties are implicitly available as output properties. A
         <span class="property-indicator"></span>
         <span class="property-type">string</span>
     </dt>
-    <dd>{{% md %}}The user defined business identity value.{{% /md %}}</dd>
-</dl>
+    <dd>{{% md %}}The user defined business identity value.{{% /md %}}</dd></dl>
 {{% /choosable %}}
 
 {{% choosable language go %}}
-<dl class="resources-properties">
-
-    <dt class="property-required"
+<dl class="resources-properties"><dt class="property-required"
             title="Required">
         <span id="qualifier_go">
 <a href="#qualifier_go" style="color: inherit; text-decoration: inherit;">Qualifier</a>
@@ -1030,8 +925,7 @@ All [input](#inputs) properties are implicitly available as output properties. A
         <span class="property-indicator"></span>
         <span class="property-type">string</span>
     </dt>
-    <dd>{{% md %}}The business identity qualifier e.g. as2identity, ZZ, ZZZ, 31, 32{{% /md %}}</dd>
-    <dt class="property-required"
+    <dd>{{% md %}}The business identity qualifier e.g. as2identity, ZZ, ZZZ, 31, 32{{% /md %}}</dd><dt class="property-required"
             title="Required">
         <span id="value_go">
 <a href="#value_go" style="color: inherit; text-decoration: inherit;">Value</a>
@@ -1039,14 +933,11 @@ All [input](#inputs) properties are implicitly available as output properties. A
         <span class="property-indicator"></span>
         <span class="property-type">string</span>
     </dt>
-    <dd>{{% md %}}The user defined business identity value.{{% /md %}}</dd>
-</dl>
+    <dd>{{% md %}}The user defined business identity value.{{% /md %}}</dd></dl>
 {{% /choosable %}}
 
 {{% choosable language nodejs %}}
-<dl class="resources-properties">
-
-    <dt class="property-required"
+<dl class="resources-properties"><dt class="property-required"
             title="Required">
         <span id="qualifier_nodejs">
 <a href="#qualifier_nodejs" style="color: inherit; text-decoration: inherit;">qualifier</a>
@@ -1054,8 +945,7 @@ All [input](#inputs) properties are implicitly available as output properties. A
         <span class="property-indicator"></span>
         <span class="property-type">string</span>
     </dt>
-    <dd>{{% md %}}The business identity qualifier e.g. as2identity, ZZ, ZZZ, 31, 32{{% /md %}}</dd>
-    <dt class="property-required"
+    <dd>{{% md %}}The business identity qualifier e.g. as2identity, ZZ, ZZZ, 31, 32{{% /md %}}</dd><dt class="property-required"
             title="Required">
         <span id="value_nodejs">
 <a href="#value_nodejs" style="color: inherit; text-decoration: inherit;">value</a>
@@ -1063,14 +953,11 @@ All [input](#inputs) properties are implicitly available as output properties. A
         <span class="property-indicator"></span>
         <span class="property-type">string</span>
     </dt>
-    <dd>{{% md %}}The user defined business identity value.{{% /md %}}</dd>
-</dl>
+    <dd>{{% md %}}The user defined business identity value.{{% /md %}}</dd></dl>
 {{% /choosable %}}
 
 {{% choosable language python %}}
-<dl class="resources-properties">
-
-    <dt class="property-required"
+<dl class="resources-properties"><dt class="property-required"
             title="Required">
         <span id="qualifier_python">
 <a href="#qualifier_python" style="color: inherit; text-decoration: inherit;">qualifier</a>
@@ -1078,8 +965,7 @@ All [input](#inputs) properties are implicitly available as output properties. A
         <span class="property-indicator"></span>
         <span class="property-type">str</span>
     </dt>
-    <dd>{{% md %}}The business identity qualifier e.g. as2identity, ZZ, ZZZ, 31, 32{{% /md %}}</dd>
-    <dt class="property-required"
+    <dd>{{% md %}}The business identity qualifier e.g. as2identity, ZZ, ZZZ, 31, 32{{% /md %}}</dd><dt class="property-required"
             title="Required">
         <span id="value_python">
 <a href="#value_python" style="color: inherit; text-decoration: inherit;">value</a>
@@ -1087,16 +973,13 @@ All [input](#inputs) properties are implicitly available as output properties. A
         <span class="property-indicator"></span>
         <span class="property-type">str</span>
     </dt>
-    <dd>{{% md %}}The user defined business identity value.{{% /md %}}</dd>
-</dl>
+    <dd>{{% md %}}The user defined business identity value.{{% /md %}}</dd></dl>
 {{% /choosable %}}
 
 <h4 id="businessidentityresponse">Business<wbr>Identity<wbr>Response</h4>
 
 {{% choosable language csharp %}}
-<dl class="resources-properties">
-
-    <dt class="property-required"
+<dl class="resources-properties"><dt class="property-required"
             title="Required">
         <span id="qualifier_csharp">
 <a href="#qualifier_csharp" style="color: inherit; text-decoration: inherit;">Qualifier</a>
@@ -1104,8 +987,7 @@ All [input](#inputs) properties are implicitly available as output properties. A
         <span class="property-indicator"></span>
         <span class="property-type">string</span>
     </dt>
-    <dd>{{% md %}}The business identity qualifier e.g. as2identity, ZZ, ZZZ, 31, 32{{% /md %}}</dd>
-    <dt class="property-required"
+    <dd>{{% md %}}The business identity qualifier e.g. as2identity, ZZ, ZZZ, 31, 32{{% /md %}}</dd><dt class="property-required"
             title="Required">
         <span id="value_csharp">
 <a href="#value_csharp" style="color: inherit; text-decoration: inherit;">Value</a>
@@ -1113,14 +995,11 @@ All [input](#inputs) properties are implicitly available as output properties. A
         <span class="property-indicator"></span>
         <span class="property-type">string</span>
     </dt>
-    <dd>{{% md %}}The user defined business identity value.{{% /md %}}</dd>
-</dl>
+    <dd>{{% md %}}The user defined business identity value.{{% /md %}}</dd></dl>
 {{% /choosable %}}
 
 {{% choosable language go %}}
-<dl class="resources-properties">
-
-    <dt class="property-required"
+<dl class="resources-properties"><dt class="property-required"
             title="Required">
         <span id="qualifier_go">
 <a href="#qualifier_go" style="color: inherit; text-decoration: inherit;">Qualifier</a>
@@ -1128,8 +1007,7 @@ All [input](#inputs) properties are implicitly available as output properties. A
         <span class="property-indicator"></span>
         <span class="property-type">string</span>
     </dt>
-    <dd>{{% md %}}The business identity qualifier e.g. as2identity, ZZ, ZZZ, 31, 32{{% /md %}}</dd>
-    <dt class="property-required"
+    <dd>{{% md %}}The business identity qualifier e.g. as2identity, ZZ, ZZZ, 31, 32{{% /md %}}</dd><dt class="property-required"
             title="Required">
         <span id="value_go">
 <a href="#value_go" style="color: inherit; text-decoration: inherit;">Value</a>
@@ -1137,14 +1015,11 @@ All [input](#inputs) properties are implicitly available as output properties. A
         <span class="property-indicator"></span>
         <span class="property-type">string</span>
     </dt>
-    <dd>{{% md %}}The user defined business identity value.{{% /md %}}</dd>
-</dl>
+    <dd>{{% md %}}The user defined business identity value.{{% /md %}}</dd></dl>
 {{% /choosable %}}
 
 {{% choosable language nodejs %}}
-<dl class="resources-properties">
-
-    <dt class="property-required"
+<dl class="resources-properties"><dt class="property-required"
             title="Required">
         <span id="qualifier_nodejs">
 <a href="#qualifier_nodejs" style="color: inherit; text-decoration: inherit;">qualifier</a>
@@ -1152,8 +1027,7 @@ All [input](#inputs) properties are implicitly available as output properties. A
         <span class="property-indicator"></span>
         <span class="property-type">string</span>
     </dt>
-    <dd>{{% md %}}The business identity qualifier e.g. as2identity, ZZ, ZZZ, 31, 32{{% /md %}}</dd>
-    <dt class="property-required"
+    <dd>{{% md %}}The business identity qualifier e.g. as2identity, ZZ, ZZZ, 31, 32{{% /md %}}</dd><dt class="property-required"
             title="Required">
         <span id="value_nodejs">
 <a href="#value_nodejs" style="color: inherit; text-decoration: inherit;">value</a>
@@ -1161,14 +1035,11 @@ All [input](#inputs) properties are implicitly available as output properties. A
         <span class="property-indicator"></span>
         <span class="property-type">string</span>
     </dt>
-    <dd>{{% md %}}The user defined business identity value.{{% /md %}}</dd>
-</dl>
+    <dd>{{% md %}}The user defined business identity value.{{% /md %}}</dd></dl>
 {{% /choosable %}}
 
 {{% choosable language python %}}
-<dl class="resources-properties">
-
-    <dt class="property-required"
+<dl class="resources-properties"><dt class="property-required"
             title="Required">
         <span id="qualifier_python">
 <a href="#qualifier_python" style="color: inherit; text-decoration: inherit;">qualifier</a>
@@ -1176,8 +1047,7 @@ All [input](#inputs) properties are implicitly available as output properties. A
         <span class="property-indicator"></span>
         <span class="property-type">str</span>
     </dt>
-    <dd>{{% md %}}The business identity qualifier e.g. as2identity, ZZ, ZZZ, 31, 32{{% /md %}}</dd>
-    <dt class="property-required"
+    <dd>{{% md %}}The business identity qualifier e.g. as2identity, ZZ, ZZZ, 31, 32{{% /md %}}</dd><dt class="property-required"
             title="Required">
         <span id="value_python">
 <a href="#value_python" style="color: inherit; text-decoration: inherit;">value</a>
@@ -1185,16 +1055,13 @@ All [input](#inputs) properties are implicitly available as output properties. A
         <span class="property-indicator"></span>
         <span class="property-type">str</span>
     </dt>
-    <dd>{{% md %}}The user defined business identity value.{{% /md %}}</dd>
-</dl>
+    <dd>{{% md %}}The user defined business identity value.{{% /md %}}</dd></dl>
 {{% /choosable %}}
 
 <h4 id="partnercontent">Partner<wbr>Content</h4>
 
 {{% choosable language csharp %}}
-<dl class="resources-properties">
-
-    <dt class="property-optional"
+<dl class="resources-properties"><dt class="property-optional"
             title="Optional">
         <span id="b2b_csharp">
 <a href="#b2b_csharp" style="color: inherit; text-decoration: inherit;">B2b</a>
@@ -1202,14 +1069,11 @@ All [input](#inputs) properties are implicitly available as output properties. A
         <span class="property-indicator"></span>
         <span class="property-type"><a href="#b2bpartnercontent">Pulumi.<wbr>Azure<wbr>Native.<wbr>Logic.<wbr>Inputs.<wbr>B2BPartner<wbr>Content<wbr>Args</a></span>
     </dt>
-    <dd>{{% md %}}The B2B partner content.{{% /md %}}</dd>
-</dl>
+    <dd>{{% md %}}The B2B partner content.{{% /md %}}</dd></dl>
 {{% /choosable %}}
 
 {{% choosable language go %}}
-<dl class="resources-properties">
-
-    <dt class="property-optional"
+<dl class="resources-properties"><dt class="property-optional"
             title="Optional">
         <span id="b2b_go">
 <a href="#b2b_go" style="color: inherit; text-decoration: inherit;">B2b</a>
@@ -1217,14 +1081,11 @@ All [input](#inputs) properties are implicitly available as output properties. A
         <span class="property-indicator"></span>
         <span class="property-type"><a href="#b2bpartnercontent">B2BPartner<wbr>Content</a></span>
     </dt>
-    <dd>{{% md %}}The B2B partner content.{{% /md %}}</dd>
-</dl>
+    <dd>{{% md %}}The B2B partner content.{{% /md %}}</dd></dl>
 {{% /choosable %}}
 
 {{% choosable language nodejs %}}
-<dl class="resources-properties">
-
-    <dt class="property-optional"
+<dl class="resources-properties"><dt class="property-optional"
             title="Optional">
         <span id="b2b_nodejs">
 <a href="#b2b_nodejs" style="color: inherit; text-decoration: inherit;">b2b</a>
@@ -1232,14 +1093,11 @@ All [input](#inputs) properties are implicitly available as output properties. A
         <span class="property-indicator"></span>
         <span class="property-type"><a href="#b2bpartnercontent">B2BPartner<wbr>Content</a></span>
     </dt>
-    <dd>{{% md %}}The B2B partner content.{{% /md %}}</dd>
-</dl>
+    <dd>{{% md %}}The B2B partner content.{{% /md %}}</dd></dl>
 {{% /choosable %}}
 
 {{% choosable language python %}}
-<dl class="resources-properties">
-
-    <dt class="property-optional"
+<dl class="resources-properties"><dt class="property-optional"
             title="Optional">
         <span id="b2b_python">
 <a href="#b2b_python" style="color: inherit; text-decoration: inherit;">b2b</a>
@@ -1247,16 +1105,13 @@ All [input](#inputs) properties are implicitly available as output properties. A
         <span class="property-indicator"></span>
         <span class="property-type"><a href="#b2bpartnercontent">B2BPartner<wbr>Content<wbr>Args</a></span>
     </dt>
-    <dd>{{% md %}}The B2B partner content.{{% /md %}}</dd>
-</dl>
+    <dd>{{% md %}}The B2B partner content.{{% /md %}}</dd></dl>
 {{% /choosable %}}
 
 <h4 id="partnercontentresponse">Partner<wbr>Content<wbr>Response</h4>
 
 {{% choosable language csharp %}}
-<dl class="resources-properties">
-
-    <dt class="property-optional"
+<dl class="resources-properties"><dt class="property-optional"
             title="Optional">
         <span id="b2b_csharp">
 <a href="#b2b_csharp" style="color: inherit; text-decoration: inherit;">B2b</a>
@@ -1264,14 +1119,11 @@ All [input](#inputs) properties are implicitly available as output properties. A
         <span class="property-indicator"></span>
         <span class="property-type"><a href="#b2bpartnercontentresponse">Pulumi.<wbr>Azure<wbr>Native.<wbr>Logic.<wbr>Inputs.<wbr>B2BPartner<wbr>Content<wbr>Response<wbr>Args</a></span>
     </dt>
-    <dd>{{% md %}}The B2B partner content.{{% /md %}}</dd>
-</dl>
+    <dd>{{% md %}}The B2B partner content.{{% /md %}}</dd></dl>
 {{% /choosable %}}
 
 {{% choosable language go %}}
-<dl class="resources-properties">
-
-    <dt class="property-optional"
+<dl class="resources-properties"><dt class="property-optional"
             title="Optional">
         <span id="b2b_go">
 <a href="#b2b_go" style="color: inherit; text-decoration: inherit;">B2b</a>
@@ -1279,14 +1131,11 @@ All [input](#inputs) properties are implicitly available as output properties. A
         <span class="property-indicator"></span>
         <span class="property-type"><a href="#b2bpartnercontentresponse">B2BPartner<wbr>Content<wbr>Response</a></span>
     </dt>
-    <dd>{{% md %}}The B2B partner content.{{% /md %}}</dd>
-</dl>
+    <dd>{{% md %}}The B2B partner content.{{% /md %}}</dd></dl>
 {{% /choosable %}}
 
 {{% choosable language nodejs %}}
-<dl class="resources-properties">
-
-    <dt class="property-optional"
+<dl class="resources-properties"><dt class="property-optional"
             title="Optional">
         <span id="b2b_nodejs">
 <a href="#b2b_nodejs" style="color: inherit; text-decoration: inherit;">b2b</a>
@@ -1294,14 +1143,11 @@ All [input](#inputs) properties are implicitly available as output properties. A
         <span class="property-indicator"></span>
         <span class="property-type"><a href="#b2bpartnercontentresponse">B2BPartner<wbr>Content<wbr>Response</a></span>
     </dt>
-    <dd>{{% md %}}The B2B partner content.{{% /md %}}</dd>
-</dl>
+    <dd>{{% md %}}The B2B partner content.{{% /md %}}</dd></dl>
 {{% /choosable %}}
 
 {{% choosable language python %}}
-<dl class="resources-properties">
-
-    <dt class="property-optional"
+<dl class="resources-properties"><dt class="property-optional"
             title="Optional">
         <span id="b2b_python">
 <a href="#b2b_python" style="color: inherit; text-decoration: inherit;">b2b</a>
@@ -1309,46 +1155,33 @@ All [input](#inputs) properties are implicitly available as output properties. A
         <span class="property-indicator"></span>
         <span class="property-type"><a href="#b2bpartnercontentresponse">B2BPartner<wbr>Content<wbr>Response<wbr>Args</a></span>
     </dt>
-    <dd>{{% md %}}The B2B partner content.{{% /md %}}</dd>
-</dl>
+    <dd>{{% md %}}The B2B partner content.{{% /md %}}</dd></dl>
 {{% /choosable %}}
 
 <h4 id="partnertype">Partner<wbr>Type</h4>
 
 {{% choosable language csharp %}}
-<dl class="tabular">
-    <dt>Not<wbr>Specified</dt>
-    <dd>NotSpecified</dd>
-    <dt>B2B</dt>
-    <dd>B2B</dd>
-</dl>
+<dl class="tabular"><dt>Not<wbr>Specified</dt>
+    <dd>NotSpecified</dd><dt>B2B</dt>
+    <dd>B2B</dd></dl>
 {{% /choosable %}}
 
 {{% choosable language go %}}
-<dl class="tabular">
-    <dt>Partner<wbr>Type<wbr>Not<wbr>Specified</dt>
-    <dd>NotSpecified</dd>
-    <dt>Partner<wbr>Type<wbr>B2B</dt>
-    <dd>B2B</dd>
-</dl>
+<dl class="tabular"><dt>Partner<wbr>Type<wbr>Not<wbr>Specified</dt>
+    <dd>NotSpecified</dd><dt>Partner<wbr>Type<wbr>B2B</dt>
+    <dd>B2B</dd></dl>
 {{% /choosable %}}
 
 {{% choosable language nodejs %}}
-<dl class="tabular">
-    <dt>Not<wbr>Specified</dt>
-    <dd>NotSpecified</dd>
-    <dt>B2B</dt>
-    <dd>B2B</dd>
-</dl>
+<dl class="tabular"><dt>Not<wbr>Specified</dt>
+    <dd>NotSpecified</dd><dt>B2B</dt>
+    <dd>B2B</dd></dl>
 {{% /choosable %}}
 
 {{% choosable language python %}}
-<dl class="tabular">
-    <dt>NOT_SPECIFIED</dt>
-    <dd>NotSpecified</dd>
-    <dt>B2_B</dt>
-    <dd>B2B</dd>
-</dl>
+<dl class="tabular"><dt>NOT_SPECIFIED</dt>
+    <dd>NotSpecified</dd><dt>B2_B</dt>
+    <dd>B2B</dd></dl>
 {{% /choosable %}}
 ## Import
 

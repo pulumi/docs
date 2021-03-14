@@ -51,9 +51,7 @@ The following arguments are supported:
 
 
 {{% choosable language csharp %}}
-<dl class="resources-properties">
-
-    <dt class="property-required"
+<dl class="resources-properties"><dt class="property-required"
             title="Required">
         <span id="resourcegroupname_csharp">
 <a href="#resourcegroupname_csharp" style="color: inherit; text-decoration: inherit;">Resource<wbr>Group<wbr>Name</a>
@@ -61,8 +59,7 @@ The following arguments are supported:
         <span class="property-indicator"></span>
         <span class="property-type">string</span>
     </dt>
-    <dd>{{% md %}}The name of the resource group.{{% /md %}}</dd>
-    <dt class="property-required"
+    <dd>{{% md %}}The name of the resource group.{{% /md %}}</dd><dt class="property-required"
             title="Required">
         <span id="resourcename_csharp">
 <a href="#resourcename_csharp" style="color: inherit; text-decoration: inherit;">Resource<wbr>Name</a>
@@ -70,14 +67,11 @@ The following arguments are supported:
         <span class="property-indicator"></span>
         <span class="property-type">string</span>
     </dt>
-    <dd>{{% md %}}The name of the managed cluster resource.{{% /md %}}</dd>
-</dl>
+    <dd>{{% md %}}The name of the managed cluster resource.{{% /md %}}</dd></dl>
 {{% /choosable %}}
 
 {{% choosable language go %}}
-<dl class="resources-properties">
-
-    <dt class="property-required"
+<dl class="resources-properties"><dt class="property-required"
             title="Required">
         <span id="resourcegroupname_go">
 <a href="#resourcegroupname_go" style="color: inherit; text-decoration: inherit;">Resource<wbr>Group<wbr>Name</a>
@@ -85,8 +79,7 @@ The following arguments are supported:
         <span class="property-indicator"></span>
         <span class="property-type">string</span>
     </dt>
-    <dd>{{% md %}}The name of the resource group.{{% /md %}}</dd>
-    <dt class="property-required"
+    <dd>{{% md %}}The name of the resource group.{{% /md %}}</dd><dt class="property-required"
             title="Required">
         <span id="resourcename_go">
 <a href="#resourcename_go" style="color: inherit; text-decoration: inherit;">Resource<wbr>Name</a>
@@ -94,14 +87,11 @@ The following arguments are supported:
         <span class="property-indicator"></span>
         <span class="property-type">string</span>
     </dt>
-    <dd>{{% md %}}The name of the managed cluster resource.{{% /md %}}</dd>
-</dl>
+    <dd>{{% md %}}The name of the managed cluster resource.{{% /md %}}</dd></dl>
 {{% /choosable %}}
 
 {{% choosable language nodejs %}}
-<dl class="resources-properties">
-
-    <dt class="property-required"
+<dl class="resources-properties"><dt class="property-required"
             title="Required">
         <span id="resourcegroupname_nodejs">
 <a href="#resourcegroupname_nodejs" style="color: inherit; text-decoration: inherit;">resource<wbr>Group<wbr>Name</a>
@@ -109,8 +99,7 @@ The following arguments are supported:
         <span class="property-indicator"></span>
         <span class="property-type">string</span>
     </dt>
-    <dd>{{% md %}}The name of the resource group.{{% /md %}}</dd>
-    <dt class="property-required"
+    <dd>{{% md %}}The name of the resource group.{{% /md %}}</dd><dt class="property-required"
             title="Required">
         <span id="resourcename_nodejs">
 <a href="#resourcename_nodejs" style="color: inherit; text-decoration: inherit;">resource<wbr>Name</a>
@@ -118,14 +107,11 @@ The following arguments are supported:
         <span class="property-indicator"></span>
         <span class="property-type">string</span>
     </dt>
-    <dd>{{% md %}}The name of the managed cluster resource.{{% /md %}}</dd>
-</dl>
+    <dd>{{% md %}}The name of the managed cluster resource.{{% /md %}}</dd></dl>
 {{% /choosable %}}
 
 {{% choosable language python %}}
-<dl class="resources-properties">
-
-    <dt class="property-required"
+<dl class="resources-properties"><dt class="property-required"
             title="Required">
         <span id="resource_group_name_python">
 <a href="#resource_group_name_python" style="color: inherit; text-decoration: inherit;">resource_<wbr>group_<wbr>name</a>
@@ -133,8 +119,7 @@ The following arguments are supported:
         <span class="property-indicator"></span>
         <span class="property-type">str</span>
     </dt>
-    <dd>{{% md %}}The name of the resource group.{{% /md %}}</dd>
-    <dt class="property-required"
+    <dd>{{% md %}}The name of the resource group.{{% /md %}}</dd><dt class="property-required"
             title="Required">
         <span id="resource_name_python">
 <a href="#resource_name_python" style="color: inherit; text-decoration: inherit;">resource_<wbr>name</a>
@@ -142,8 +127,7 @@ The following arguments are supported:
         <span class="property-indicator"></span>
         <span class="property-type">str</span>
     </dt>
-    <dd>{{% md %}}The name of the managed cluster resource.{{% /md %}}</dd>
-</dl>
+    <dd>{{% md %}}The name of the managed cluster resource.{{% /md %}}</dd></dl>
 {{% /choosable %}}
 
 
@@ -156,9 +140,7 @@ The following output properties are available:
 
 
 {{% choosable language csharp %}}
-<dl class="resources-properties">
-
-    <dt class="property-"
+<dl class="resources-properties"><dt class="property-"
             title="">
         <span id="kubeconfigs_csharp">
 <a href="#kubeconfigs_csharp" style="color: inherit; text-decoration: inherit;">Kubeconfigs</a>
@@ -166,14 +148,11 @@ The following output properties are available:
         <span class="property-indicator"></span>
         <span class="property-type"><a href="#credentialresultresponse">List&lt;Pulumi.<wbr>Azure<wbr>Native.<wbr>Container<wbr>Service.<wbr>Outputs.<wbr>Credential<wbr>Result<wbr>Response&gt;</a></span>
     </dt>
-    <dd>{{% md %}}Base64-encoded Kubernetes configuration file.{{% /md %}}</dd>
-</dl>
+    <dd>{{% md %}}Base64-encoded Kubernetes configuration file.{{% /md %}}</dd></dl>
 {{% /choosable %}}
 
 {{% choosable language go %}}
-<dl class="resources-properties">
-
-    <dt class="property-"
+<dl class="resources-properties"><dt class="property-"
             title="">
         <span id="kubeconfigs_go">
 <a href="#kubeconfigs_go" style="color: inherit; text-decoration: inherit;">Kubeconfigs</a>
@@ -181,14 +160,11 @@ The following output properties are available:
         <span class="property-indicator"></span>
         <span class="property-type"><a href="#credentialresultresponse">[]Credential<wbr>Result<wbr>Response</a></span>
     </dt>
-    <dd>{{% md %}}Base64-encoded Kubernetes configuration file.{{% /md %}}</dd>
-</dl>
+    <dd>{{% md %}}Base64-encoded Kubernetes configuration file.{{% /md %}}</dd></dl>
 {{% /choosable %}}
 
 {{% choosable language nodejs %}}
-<dl class="resources-properties">
-
-    <dt class="property-"
+<dl class="resources-properties"><dt class="property-"
             title="">
         <span id="kubeconfigs_nodejs">
 <a href="#kubeconfigs_nodejs" style="color: inherit; text-decoration: inherit;">kubeconfigs</a>
@@ -196,14 +172,11 @@ The following output properties are available:
         <span class="property-indicator"></span>
         <span class="property-type"><a href="#credentialresultresponse">Credential<wbr>Result<wbr>Response[]</a></span>
     </dt>
-    <dd>{{% md %}}Base64-encoded Kubernetes configuration file.{{% /md %}}</dd>
-</dl>
+    <dd>{{% md %}}Base64-encoded Kubernetes configuration file.{{% /md %}}</dd></dl>
 {{% /choosable %}}
 
 {{% choosable language python %}}
-<dl class="resources-properties">
-
-    <dt class="property-"
+<dl class="resources-properties"><dt class="property-"
             title="">
         <span id="kubeconfigs_python">
 <a href="#kubeconfigs_python" style="color: inherit; text-decoration: inherit;">kubeconfigs</a>
@@ -211,8 +184,7 @@ The following output properties are available:
         <span class="property-indicator"></span>
         <span class="property-type"><a href="#credentialresultresponse">Sequence[Credential<wbr>Result<wbr>Response]</a></span>
     </dt>
-    <dd>{{% md %}}Base64-encoded Kubernetes configuration file.{{% /md %}}</dd>
-</dl>
+    <dd>{{% md %}}Base64-encoded Kubernetes configuration file.{{% /md %}}</dd></dl>
 {{% /choosable %}}
 
 
@@ -226,9 +198,7 @@ The following output properties are available:
 
 
 {{% choosable language csharp %}}
-<dl class="resources-properties">
-
-    <dt class="property-required"
+<dl class="resources-properties"><dt class="property-required"
             title="Required">
         <span id="name_csharp">
 <a href="#name_csharp" style="color: inherit; text-decoration: inherit;">Name</a>
@@ -236,8 +206,7 @@ The following output properties are available:
         <span class="property-indicator"></span>
         <span class="property-type">string</span>
     </dt>
-    <dd>{{% md %}}The name of the credential.{{% /md %}}</dd>
-    <dt class="property-required"
+    <dd>{{% md %}}The name of the credential.{{% /md %}}</dd><dt class="property-required"
             title="Required">
         <span id="value_csharp">
 <a href="#value_csharp" style="color: inherit; text-decoration: inherit;">Value</a>
@@ -245,14 +214,11 @@ The following output properties are available:
         <span class="property-indicator"></span>
         <span class="property-type">string</span>
     </dt>
-    <dd>{{% md %}}Base64-encoded Kubernetes configuration file.{{% /md %}}</dd>
-</dl>
+    <dd>{{% md %}}Base64-encoded Kubernetes configuration file.{{% /md %}}</dd></dl>
 {{% /choosable %}}
 
 {{% choosable language go %}}
-<dl class="resources-properties">
-
-    <dt class="property-required"
+<dl class="resources-properties"><dt class="property-required"
             title="Required">
         <span id="name_go">
 <a href="#name_go" style="color: inherit; text-decoration: inherit;">Name</a>
@@ -260,8 +226,7 @@ The following output properties are available:
         <span class="property-indicator"></span>
         <span class="property-type">string</span>
     </dt>
-    <dd>{{% md %}}The name of the credential.{{% /md %}}</dd>
-    <dt class="property-required"
+    <dd>{{% md %}}The name of the credential.{{% /md %}}</dd><dt class="property-required"
             title="Required">
         <span id="value_go">
 <a href="#value_go" style="color: inherit; text-decoration: inherit;">Value</a>
@@ -269,14 +234,11 @@ The following output properties are available:
         <span class="property-indicator"></span>
         <span class="property-type">string</span>
     </dt>
-    <dd>{{% md %}}Base64-encoded Kubernetes configuration file.{{% /md %}}</dd>
-</dl>
+    <dd>{{% md %}}Base64-encoded Kubernetes configuration file.{{% /md %}}</dd></dl>
 {{% /choosable %}}
 
 {{% choosable language nodejs %}}
-<dl class="resources-properties">
-
-    <dt class="property-required"
+<dl class="resources-properties"><dt class="property-required"
             title="Required">
         <span id="name_nodejs">
 <a href="#name_nodejs" style="color: inherit; text-decoration: inherit;">name</a>
@@ -284,8 +246,7 @@ The following output properties are available:
         <span class="property-indicator"></span>
         <span class="property-type">string</span>
     </dt>
-    <dd>{{% md %}}The name of the credential.{{% /md %}}</dd>
-    <dt class="property-required"
+    <dd>{{% md %}}The name of the credential.{{% /md %}}</dd><dt class="property-required"
             title="Required">
         <span id="value_nodejs">
 <a href="#value_nodejs" style="color: inherit; text-decoration: inherit;">value</a>
@@ -293,14 +254,11 @@ The following output properties are available:
         <span class="property-indicator"></span>
         <span class="property-type">string</span>
     </dt>
-    <dd>{{% md %}}Base64-encoded Kubernetes configuration file.{{% /md %}}</dd>
-</dl>
+    <dd>{{% md %}}Base64-encoded Kubernetes configuration file.{{% /md %}}</dd></dl>
 {{% /choosable %}}
 
 {{% choosable language python %}}
-<dl class="resources-properties">
-
-    <dt class="property-required"
+<dl class="resources-properties"><dt class="property-required"
             title="Required">
         <span id="name_python">
 <a href="#name_python" style="color: inherit; text-decoration: inherit;">name</a>
@@ -308,8 +266,7 @@ The following output properties are available:
         <span class="property-indicator"></span>
         <span class="property-type">str</span>
     </dt>
-    <dd>{{% md %}}The name of the credential.{{% /md %}}</dd>
-    <dt class="property-required"
+    <dd>{{% md %}}The name of the credential.{{% /md %}}</dd><dt class="property-required"
             title="Required">
         <span id="value_python">
 <a href="#value_python" style="color: inherit; text-decoration: inherit;">value</a>
@@ -317,8 +274,7 @@ The following output properties are available:
         <span class="property-indicator"></span>
         <span class="property-type">str</span>
     </dt>
-    <dd>{{% md %}}Base64-encoded Kubernetes configuration file.{{% /md %}}</dd>
-</dl>
+    <dd>{{% md %}}Base64-encoded Kubernetes configuration file.{{% /md %}}</dd></dl>
 {{% /choosable %}}
 
 

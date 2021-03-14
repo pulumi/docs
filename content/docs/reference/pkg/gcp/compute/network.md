@@ -19,11 +19,17 @@ To get more information about Network, see:
     * [Official Documentation](https://cloud.google.com/vpc/docs/vpc)
 
 {{% examples %}}
+
 ## Example Usage
 
 {{< chooser language "typescript,python,go,csharp" / >}}
+
+
 ### Network Basic
-{{% example csharp %}}
+
+
+{{< example csharp >}}
+
 ```csharp
 using Pulumi;
 using Gcp = Pulumi.Gcp;
@@ -40,9 +46,12 @@ class MyStack : Stack
 }
 ```
 
-{{% /example %}}
 
-{{% example go %}}
+{{< /example >}}
+
+
+{{< example go >}}
+
 ```go
 package main
 
@@ -62,9 +71,12 @@ func main() {
 }
 ```
 
-{{% /example %}}
 
-{{% example python %}}
+{{< /example >}}
+
+
+{{< example python >}}
+
 ```python
 import pulumi
 import pulumi_gcp as gcp
@@ -72,9 +84,12 @@ import pulumi_gcp as gcp
 vpc_network = gcp.compute.Network("vpcNetwork")
 ```
 
-{{% /example %}}
 
-{{% example typescript %}}
+{{< /example >}}
+
+
+{{< example typescript >}}
+
 
 ```typescript
 import * as pulumi from "@pulumi/pulumi";
@@ -83,10 +98,17 @@ import * as gcp from "@pulumi/gcp";
 const vpcNetwork = new gcp.compute.Network("vpc_network", {});
 ```
 
-{{% /example %}}
+
+{{< /example >}}
+
+
+
 
 ### Network Custom Mtu
-{{% example csharp %}}
+
+
+{{< example csharp >}}
+
 ```csharp
 using Pulumi;
 using Gcp = Pulumi.Gcp;
@@ -104,9 +126,12 @@ class MyStack : Stack
 }
 ```
 
-{{% /example %}}
 
-{{% example go %}}
+{{< /example >}}
+
+
+{{< example go >}}
+
 ```go
 package main
 
@@ -128,9 +153,12 @@ func main() {
 }
 ```
 
-{{% /example %}}
 
-{{% example python %}}
+{{< /example >}}
+
+
+{{< example python >}}
+
 ```python
 import pulumi
 import pulumi_gcp as gcp
@@ -138,9 +166,12 @@ import pulumi_gcp as gcp
 vpc_network = gcp.compute.Network("vpcNetwork", mtu=1500)
 ```
 
-{{% /example %}}
 
-{{% example typescript %}}
+{{< /example >}}
+
+
+{{< example typescript >}}
+
 
 ```typescript
 import * as pulumi from "@pulumi/pulumi";
@@ -151,9 +182,16 @@ const vpcNetwork = new gcp.compute.Network("vpc_network", {
 });
 ```
 
-{{% /example %}}
+
+{{< /example >}}
+
+
+
+
 
 {{% /examples %}}
+
+
 
 
 ## Create a Network Resource {#create}
@@ -178,9 +216,7 @@ const vpcNetwork = new gcp.compute.Network("vpc_network", {
 
 {{% choosable language nodejs %}}
 
-<dl class="resources-properties">
-  
-    <dt
+<dl class="resources-properties"><dt
         class="property-required" title="Required">
         <span>name</span>
         <span class="property-indicator"></span>
@@ -188,9 +224,7 @@ const vpcNetwork = new gcp.compute.Network("vpc_network", {
     </dt>
     <dd>
       The unique name of the resource.
-    </dd>
-  
-    <dt
+    </dd><dt
         class="property-optional" title="Optional">
         <span>args</span>
         <span class="property-indicator"></span>
@@ -198,9 +232,7 @@ const vpcNetwork = new gcp.compute.Network("vpc_network", {
     </dt>
     <dd>
       The arguments to resource properties.
-    </dd>
-  
-    <dt
+    </dd><dt
         class="property-optional" title="Optional">
         <span>opts</span>
         <span class="property-indicator"></span>
@@ -208,10 +240,7 @@ const vpcNetwork = new gcp.compute.Network("vpc_network", {
     </dt>
     <dd>
       Bag of options to control resource&#39;s behavior.
-    </dd>
-  
-
-</dl>
+    </dd></dl>
 
 {{% /choosable %}}
 
@@ -237,9 +266,7 @@ const vpcNetwork = new gcp.compute.Network("vpc_network", {
 
 {{% choosable language go %}}
 
-<dl class="resources-properties">
-  
-    <dt
+<dl class="resources-properties"><dt
         class="property-optional" title="Optional">
         <span>ctx</span>
         <span class="property-indicator"></span>
@@ -247,9 +274,7 @@ const vpcNetwork = new gcp.compute.Network("vpc_network", {
     </dt>
     <dd>
       Context object for the current deployment.
-    </dd>
-  
-    <dt
+    </dd><dt
         class="property-required" title="Required">
         <span>name</span>
         <span class="property-indicator"></span>
@@ -257,9 +282,7 @@ const vpcNetwork = new gcp.compute.Network("vpc_network", {
     </dt>
     <dd>
       The unique name of the resource.
-    </dd>
-  
-    <dt
+    </dd><dt
         class="property-optional" title="Optional">
         <span>args</span>
         <span class="property-indicator"></span>
@@ -267,9 +290,7 @@ const vpcNetwork = new gcp.compute.Network("vpc_network", {
     </dt>
     <dd>
       The arguments to resource properties.
-    </dd>
-  
-    <dt
+    </dd><dt
         class="property-optional" title="Optional">
         <span>opts</span>
         <span class="property-indicator"></span>
@@ -277,18 +298,13 @@ const vpcNetwork = new gcp.compute.Network("vpc_network", {
     </dt>
     <dd>
       Bag of options to control resource&#39;s behavior.
-    </dd>
-  
-
-</dl>
+    </dd></dl>
 
 {{% /choosable %}}
 
 {{% choosable language csharp %}}
 
-<dl class="resources-properties">
-  
-    <dt
+<dl class="resources-properties"><dt
         class="property-required" title="Required">
         <span>name</span>
         <span class="property-indicator"></span>
@@ -296,9 +312,7 @@ const vpcNetwork = new gcp.compute.Network("vpc_network", {
     </dt>
     <dd>
       The unique name of the resource.
-    </dd>
-  
-    <dt
+    </dd><dt
         class="property-optional" title="Optional">
         <span>args</span>
         <span class="property-indicator"></span>
@@ -306,9 +320,7 @@ const vpcNetwork = new gcp.compute.Network("vpc_network", {
     </dt>
     <dd>
       The arguments to resource properties.
-    </dd>
-  
-    <dt
+    </dd><dt
         class="property-optional" title="Optional">
         <span>opts</span>
         <span class="property-indicator"></span>
@@ -316,10 +328,7 @@ const vpcNetwork = new gcp.compute.Network("vpc_network", {
     </dt>
     <dd>
       Bag of options to control resource&#39;s behavior.
-    </dd>
-  
-
-</dl>
+    </dd></dl>
 
 {{% /choosable %}}
 
@@ -334,9 +343,7 @@ The Network resource accepts the following [input]({{< relref "/docs/intro/conce
 
 
 {{% choosable language csharp %}}
-<dl class="resources-properties">
-
-    <dt class="property-optional"
+<dl class="resources-properties"><dt class="property-optional"
             title="Optional">
         <span id="autocreatesubnetworks_csharp">
 <a href="#autocreatesubnetworks_csharp" style="color: inherit; text-decoration: inherit;">Auto<wbr>Create<wbr>Subnetworks</a>
@@ -349,8 +356,7 @@ it will create a subnet for each region automatically across the
 `10.128.0.0/9` address range.
 When set to `false`, the network is created in "custom subnet mode" so
 the user can explicitly connect subnetwork resources.
-{{% /md %}}</dd>
-    <dt class="property-optional"
+{{% /md %}}</dd><dt class="property-optional"
             title="Optional">
         <span id="deletedefaultroutesoncreate_csharp">
 <a href="#deletedefaultroutesoncreate_csharp" style="color: inherit; text-decoration: inherit;">Delete<wbr>Default<wbr>Routes<wbr>On<wbr>Create</a>
@@ -360,8 +366,7 @@ the user can explicitly connect subnetwork resources.
     </dt>
     <dd>{{% md %}}If set to `true`, default routes (`0.0.0.0/0`) will be deleted
 immediately after network creation. Defaults to `false`.
-{{% /md %}}</dd>
-    <dt class="property-optional"
+{{% /md %}}</dd><dt class="property-optional"
             title="Optional">
         <span id="description_csharp">
 <a href="#description_csharp" style="color: inherit; text-decoration: inherit;">Description</a>
@@ -371,8 +376,7 @@ immediately after network creation. Defaults to `false`.
     </dt>
     <dd>{{% md %}}An optional description of this resource. The resource must be
 recreated to modify this field.
-{{% /md %}}</dd>
-    <dt class="property-optional"
+{{% /md %}}</dd><dt class="property-optional"
             title="Optional">
         <span id="mtu_csharp">
 <a href="#mtu_csharp" style="color: inherit; text-decoration: inherit;">Mtu</a>
@@ -382,8 +386,7 @@ recreated to modify this field.
     </dt>
     <dd>{{% md %}}Maximum Transmission Unit in bytes. The minimum value for this field is 1460
 and the maximum value is 1500 bytes.
-{{% /md %}}</dd>
-    <dt class="property-optional"
+{{% /md %}}</dd><dt class="property-optional"
             title="Optional">
         <span id="name_csharp">
 <a href="#name_csharp" style="color: inherit; text-decoration: inherit;">Name</a>
@@ -398,8 +401,7 @@ the regular expression `a-z?` which means the
 first character must be a lowercase letter, and all following
 characters must be a dash, lowercase letter, or digit, except the last
 character, which cannot be a dash.
-{{% /md %}}</dd>
-    <dt class="property-optional"
+{{% /md %}}</dd><dt class="property-optional"
             title="Optional">
         <span id="project_csharp">
 <a href="#project_csharp" style="color: inherit; text-decoration: inherit;">Project</a>
@@ -409,8 +411,7 @@ character, which cannot be a dash.
     </dt>
     <dd>{{% md %}}The ID of the project in which the resource belongs.
 If it is not provided, the provider project is used.
-{{% /md %}}</dd>
-    <dt class="property-optional"
+{{% /md %}}</dd><dt class="property-optional"
             title="Optional">
         <span id="routingmode_csharp">
 <a href="#routingmode_csharp" style="color: inherit; text-decoration: inherit;">Routing<wbr>Mode</a>
@@ -424,14 +425,11 @@ of this network in the same region as the router. If set to `GLOBAL`,
 this network's cloud routers will advertise routes with all
 subnetworks of this network, across regions.
 Possible values are `REGIONAL` and `GLOBAL`.
-{{% /md %}}</dd>
-</dl>
+{{% /md %}}</dd></dl>
 {{% /choosable %}}
 
 {{% choosable language go %}}
-<dl class="resources-properties">
-
-    <dt class="property-optional"
+<dl class="resources-properties"><dt class="property-optional"
             title="Optional">
         <span id="autocreatesubnetworks_go">
 <a href="#autocreatesubnetworks_go" style="color: inherit; text-decoration: inherit;">Auto<wbr>Create<wbr>Subnetworks</a>
@@ -444,8 +442,7 @@ it will create a subnet for each region automatically across the
 `10.128.0.0/9` address range.
 When set to `false`, the network is created in "custom subnet mode" so
 the user can explicitly connect subnetwork resources.
-{{% /md %}}</dd>
-    <dt class="property-optional"
+{{% /md %}}</dd><dt class="property-optional"
             title="Optional">
         <span id="deletedefaultroutesoncreate_go">
 <a href="#deletedefaultroutesoncreate_go" style="color: inherit; text-decoration: inherit;">Delete<wbr>Default<wbr>Routes<wbr>On<wbr>Create</a>
@@ -455,8 +452,7 @@ the user can explicitly connect subnetwork resources.
     </dt>
     <dd>{{% md %}}If set to `true`, default routes (`0.0.0.0/0`) will be deleted
 immediately after network creation. Defaults to `false`.
-{{% /md %}}</dd>
-    <dt class="property-optional"
+{{% /md %}}</dd><dt class="property-optional"
             title="Optional">
         <span id="description_go">
 <a href="#description_go" style="color: inherit; text-decoration: inherit;">Description</a>
@@ -466,8 +462,7 @@ immediately after network creation. Defaults to `false`.
     </dt>
     <dd>{{% md %}}An optional description of this resource. The resource must be
 recreated to modify this field.
-{{% /md %}}</dd>
-    <dt class="property-optional"
+{{% /md %}}</dd><dt class="property-optional"
             title="Optional">
         <span id="mtu_go">
 <a href="#mtu_go" style="color: inherit; text-decoration: inherit;">Mtu</a>
@@ -477,8 +472,7 @@ recreated to modify this field.
     </dt>
     <dd>{{% md %}}Maximum Transmission Unit in bytes. The minimum value for this field is 1460
 and the maximum value is 1500 bytes.
-{{% /md %}}</dd>
-    <dt class="property-optional"
+{{% /md %}}</dd><dt class="property-optional"
             title="Optional">
         <span id="name_go">
 <a href="#name_go" style="color: inherit; text-decoration: inherit;">Name</a>
@@ -493,8 +487,7 @@ the regular expression `a-z?` which means the
 first character must be a lowercase letter, and all following
 characters must be a dash, lowercase letter, or digit, except the last
 character, which cannot be a dash.
-{{% /md %}}</dd>
-    <dt class="property-optional"
+{{% /md %}}</dd><dt class="property-optional"
             title="Optional">
         <span id="project_go">
 <a href="#project_go" style="color: inherit; text-decoration: inherit;">Project</a>
@@ -504,8 +497,7 @@ character, which cannot be a dash.
     </dt>
     <dd>{{% md %}}The ID of the project in which the resource belongs.
 If it is not provided, the provider project is used.
-{{% /md %}}</dd>
-    <dt class="property-optional"
+{{% /md %}}</dd><dt class="property-optional"
             title="Optional">
         <span id="routingmode_go">
 <a href="#routingmode_go" style="color: inherit; text-decoration: inherit;">Routing<wbr>Mode</a>
@@ -519,14 +511,11 @@ of this network in the same region as the router. If set to `GLOBAL`,
 this network's cloud routers will advertise routes with all
 subnetworks of this network, across regions.
 Possible values are `REGIONAL` and `GLOBAL`.
-{{% /md %}}</dd>
-</dl>
+{{% /md %}}</dd></dl>
 {{% /choosable %}}
 
 {{% choosable language nodejs %}}
-<dl class="resources-properties">
-
-    <dt class="property-optional"
+<dl class="resources-properties"><dt class="property-optional"
             title="Optional">
         <span id="autocreatesubnetworks_nodejs">
 <a href="#autocreatesubnetworks_nodejs" style="color: inherit; text-decoration: inherit;">auto<wbr>Create<wbr>Subnetworks</a>
@@ -539,8 +528,7 @@ it will create a subnet for each region automatically across the
 `10.128.0.0/9` address range.
 When set to `false`, the network is created in "custom subnet mode" so
 the user can explicitly connect subnetwork resources.
-{{% /md %}}</dd>
-    <dt class="property-optional"
+{{% /md %}}</dd><dt class="property-optional"
             title="Optional">
         <span id="deletedefaultroutesoncreate_nodejs">
 <a href="#deletedefaultroutesoncreate_nodejs" style="color: inherit; text-decoration: inherit;">delete<wbr>Default<wbr>Routes<wbr>On<wbr>Create</a>
@@ -550,8 +538,7 @@ the user can explicitly connect subnetwork resources.
     </dt>
     <dd>{{% md %}}If set to `true`, default routes (`0.0.0.0/0`) will be deleted
 immediately after network creation. Defaults to `false`.
-{{% /md %}}</dd>
-    <dt class="property-optional"
+{{% /md %}}</dd><dt class="property-optional"
             title="Optional">
         <span id="description_nodejs">
 <a href="#description_nodejs" style="color: inherit; text-decoration: inherit;">description</a>
@@ -561,8 +548,7 @@ immediately after network creation. Defaults to `false`.
     </dt>
     <dd>{{% md %}}An optional description of this resource. The resource must be
 recreated to modify this field.
-{{% /md %}}</dd>
-    <dt class="property-optional"
+{{% /md %}}</dd><dt class="property-optional"
             title="Optional">
         <span id="mtu_nodejs">
 <a href="#mtu_nodejs" style="color: inherit; text-decoration: inherit;">mtu</a>
@@ -572,8 +558,7 @@ recreated to modify this field.
     </dt>
     <dd>{{% md %}}Maximum Transmission Unit in bytes. The minimum value for this field is 1460
 and the maximum value is 1500 bytes.
-{{% /md %}}</dd>
-    <dt class="property-optional"
+{{% /md %}}</dd><dt class="property-optional"
             title="Optional">
         <span id="name_nodejs">
 <a href="#name_nodejs" style="color: inherit; text-decoration: inherit;">name</a>
@@ -588,8 +573,7 @@ the regular expression `a-z?` which means the
 first character must be a lowercase letter, and all following
 characters must be a dash, lowercase letter, or digit, except the last
 character, which cannot be a dash.
-{{% /md %}}</dd>
-    <dt class="property-optional"
+{{% /md %}}</dd><dt class="property-optional"
             title="Optional">
         <span id="project_nodejs">
 <a href="#project_nodejs" style="color: inherit; text-decoration: inherit;">project</a>
@@ -599,8 +583,7 @@ character, which cannot be a dash.
     </dt>
     <dd>{{% md %}}The ID of the project in which the resource belongs.
 If it is not provided, the provider project is used.
-{{% /md %}}</dd>
-    <dt class="property-optional"
+{{% /md %}}</dd><dt class="property-optional"
             title="Optional">
         <span id="routingmode_nodejs">
 <a href="#routingmode_nodejs" style="color: inherit; text-decoration: inherit;">routing<wbr>Mode</a>
@@ -614,14 +597,11 @@ of this network in the same region as the router. If set to `GLOBAL`,
 this network's cloud routers will advertise routes with all
 subnetworks of this network, across regions.
 Possible values are `REGIONAL` and `GLOBAL`.
-{{% /md %}}</dd>
-</dl>
+{{% /md %}}</dd></dl>
 {{% /choosable %}}
 
 {{% choosable language python %}}
-<dl class="resources-properties">
-
-    <dt class="property-optional"
+<dl class="resources-properties"><dt class="property-optional"
             title="Optional">
         <span id="auto_create_subnetworks_python">
 <a href="#auto_create_subnetworks_python" style="color: inherit; text-decoration: inherit;">auto_<wbr>create_<wbr>subnetworks</a>
@@ -634,8 +614,7 @@ it will create a subnet for each region automatically across the
 `10.128.0.0/9` address range.
 When set to `false`, the network is created in "custom subnet mode" so
 the user can explicitly connect subnetwork resources.
-{{% /md %}}</dd>
-    <dt class="property-optional"
+{{% /md %}}</dd><dt class="property-optional"
             title="Optional">
         <span id="delete_default_routes_on_create_python">
 <a href="#delete_default_routes_on_create_python" style="color: inherit; text-decoration: inherit;">delete_<wbr>default_<wbr>routes_<wbr>on_<wbr>create</a>
@@ -645,8 +624,7 @@ the user can explicitly connect subnetwork resources.
     </dt>
     <dd>{{% md %}}If set to `true`, default routes (`0.0.0.0/0`) will be deleted
 immediately after network creation. Defaults to `false`.
-{{% /md %}}</dd>
-    <dt class="property-optional"
+{{% /md %}}</dd><dt class="property-optional"
             title="Optional">
         <span id="description_python">
 <a href="#description_python" style="color: inherit; text-decoration: inherit;">description</a>
@@ -656,8 +634,7 @@ immediately after network creation. Defaults to `false`.
     </dt>
     <dd>{{% md %}}An optional description of this resource. The resource must be
 recreated to modify this field.
-{{% /md %}}</dd>
-    <dt class="property-optional"
+{{% /md %}}</dd><dt class="property-optional"
             title="Optional">
         <span id="mtu_python">
 <a href="#mtu_python" style="color: inherit; text-decoration: inherit;">mtu</a>
@@ -667,8 +644,7 @@ recreated to modify this field.
     </dt>
     <dd>{{% md %}}Maximum Transmission Unit in bytes. The minimum value for this field is 1460
 and the maximum value is 1500 bytes.
-{{% /md %}}</dd>
-    <dt class="property-optional"
+{{% /md %}}</dd><dt class="property-optional"
             title="Optional">
         <span id="name_python">
 <a href="#name_python" style="color: inherit; text-decoration: inherit;">name</a>
@@ -683,8 +659,7 @@ the regular expression `a-z?` which means the
 first character must be a lowercase letter, and all following
 characters must be a dash, lowercase letter, or digit, except the last
 character, which cannot be a dash.
-{{% /md %}}</dd>
-    <dt class="property-optional"
+{{% /md %}}</dd><dt class="property-optional"
             title="Optional">
         <span id="project_python">
 <a href="#project_python" style="color: inherit; text-decoration: inherit;">project</a>
@@ -694,8 +669,7 @@ character, which cannot be a dash.
     </dt>
     <dd>{{% md %}}The ID of the project in which the resource belongs.
 If it is not provided, the provider project is used.
-{{% /md %}}</dd>
-    <dt class="property-optional"
+{{% /md %}}</dd><dt class="property-optional"
             title="Optional">
         <span id="routing_mode_python">
 <a href="#routing_mode_python" style="color: inherit; text-decoration: inherit;">routing_<wbr>mode</a>
@@ -709,8 +683,7 @@ of this network in the same region as the router. If set to `GLOBAL`,
 this network's cloud routers will advertise routes with all
 subnetworks of this network, across regions.
 Possible values are `REGIONAL` and `GLOBAL`.
-{{% /md %}}</dd>
-</dl>
+{{% /md %}}</dd></dl>
 {{% /choosable %}}
 
 
@@ -721,9 +694,7 @@ All [input](#inputs) properties are implicitly available as output properties. A
 
 
 {{% choosable language csharp %}}
-<dl class="resources-properties">
-
-    <dt class="property-"
+<dl class="resources-properties"><dt class="property-"
             title="">
         <span id="gatewayipv4_csharp">
 <a href="#gatewayipv4_csharp" style="color: inherit; text-decoration: inherit;">Gateway<wbr>Ipv4</a>
@@ -732,8 +703,7 @@ All [input](#inputs) properties are implicitly available as output properties. A
         <span class="property-type">string</span>
     </dt>
     <dd>{{% md %}}The gateway address for default routing out of the network. This value is selected by GCP.
-{{% /md %}}</dd>
-    <dt class="property-"
+{{% /md %}}</dd><dt class="property-"
             title="">
         <span id="id_csharp">
 <a href="#id_csharp" style="color: inherit; text-decoration: inherit;">Id</a>
@@ -741,8 +711,7 @@ All [input](#inputs) properties are implicitly available as output properties. A
         <span class="property-indicator"></span>
         <span class="property-type">string</span>
     </dt>
-    <dd>{{% md %}}The provider-assigned unique ID for this managed resource.{{% /md %}}</dd>
-    <dt class="property-"
+    <dd>{{% md %}}The provider-assigned unique ID for this managed resource.{{% /md %}}</dd><dt class="property-"
             title="">
         <span id="selflink_csharp">
 <a href="#selflink_csharp" style="color: inherit; text-decoration: inherit;">Self<wbr>Link</a>
@@ -751,14 +720,11 @@ All [input](#inputs) properties are implicitly available as output properties. A
         <span class="property-type">string</span>
     </dt>
     <dd>{{% md %}}The URI of the created resource.
-{{% /md %}}</dd>
-</dl>
+{{% /md %}}</dd></dl>
 {{% /choosable %}}
 
 {{% choosable language go %}}
-<dl class="resources-properties">
-
-    <dt class="property-"
+<dl class="resources-properties"><dt class="property-"
             title="">
         <span id="gatewayipv4_go">
 <a href="#gatewayipv4_go" style="color: inherit; text-decoration: inherit;">Gateway<wbr>Ipv4</a>
@@ -767,8 +733,7 @@ All [input](#inputs) properties are implicitly available as output properties. A
         <span class="property-type">string</span>
     </dt>
     <dd>{{% md %}}The gateway address for default routing out of the network. This value is selected by GCP.
-{{% /md %}}</dd>
-    <dt class="property-"
+{{% /md %}}</dd><dt class="property-"
             title="">
         <span id="id_go">
 <a href="#id_go" style="color: inherit; text-decoration: inherit;">Id</a>
@@ -776,8 +741,7 @@ All [input](#inputs) properties are implicitly available as output properties. A
         <span class="property-indicator"></span>
         <span class="property-type">string</span>
     </dt>
-    <dd>{{% md %}}The provider-assigned unique ID for this managed resource.{{% /md %}}</dd>
-    <dt class="property-"
+    <dd>{{% md %}}The provider-assigned unique ID for this managed resource.{{% /md %}}</dd><dt class="property-"
             title="">
         <span id="selflink_go">
 <a href="#selflink_go" style="color: inherit; text-decoration: inherit;">Self<wbr>Link</a>
@@ -786,14 +750,11 @@ All [input](#inputs) properties are implicitly available as output properties. A
         <span class="property-type">string</span>
     </dt>
     <dd>{{% md %}}The URI of the created resource.
-{{% /md %}}</dd>
-</dl>
+{{% /md %}}</dd></dl>
 {{% /choosable %}}
 
 {{% choosable language nodejs %}}
-<dl class="resources-properties">
-
-    <dt class="property-"
+<dl class="resources-properties"><dt class="property-"
             title="">
         <span id="gatewayipv4_nodejs">
 <a href="#gatewayipv4_nodejs" style="color: inherit; text-decoration: inherit;">gateway<wbr>Ipv4</a>
@@ -802,8 +763,7 @@ All [input](#inputs) properties are implicitly available as output properties. A
         <span class="property-type">string</span>
     </dt>
     <dd>{{% md %}}The gateway address for default routing out of the network. This value is selected by GCP.
-{{% /md %}}</dd>
-    <dt class="property-"
+{{% /md %}}</dd><dt class="property-"
             title="">
         <span id="id_nodejs">
 <a href="#id_nodejs" style="color: inherit; text-decoration: inherit;">id</a>
@@ -811,8 +771,7 @@ All [input](#inputs) properties are implicitly available as output properties. A
         <span class="property-indicator"></span>
         <span class="property-type">string</span>
     </dt>
-    <dd>{{% md %}}The provider-assigned unique ID for this managed resource.{{% /md %}}</dd>
-    <dt class="property-"
+    <dd>{{% md %}}The provider-assigned unique ID for this managed resource.{{% /md %}}</dd><dt class="property-"
             title="">
         <span id="selflink_nodejs">
 <a href="#selflink_nodejs" style="color: inherit; text-decoration: inherit;">self<wbr>Link</a>
@@ -821,14 +780,11 @@ All [input](#inputs) properties are implicitly available as output properties. A
         <span class="property-type">string</span>
     </dt>
     <dd>{{% md %}}The URI of the created resource.
-{{% /md %}}</dd>
-</dl>
+{{% /md %}}</dd></dl>
 {{% /choosable %}}
 
 {{% choosable language python %}}
-<dl class="resources-properties">
-
-    <dt class="property-"
+<dl class="resources-properties"><dt class="property-"
             title="">
         <span id="gateway_ipv4_python">
 <a href="#gateway_ipv4_python" style="color: inherit; text-decoration: inherit;">gateway_<wbr>ipv4</a>
@@ -837,8 +793,7 @@ All [input](#inputs) properties are implicitly available as output properties. A
         <span class="property-type">str</span>
     </dt>
     <dd>{{% md %}}The gateway address for default routing out of the network. This value is selected by GCP.
-{{% /md %}}</dd>
-    <dt class="property-"
+{{% /md %}}</dd><dt class="property-"
             title="">
         <span id="id_python">
 <a href="#id_python" style="color: inherit; text-decoration: inherit;">id</a>
@@ -846,8 +801,7 @@ All [input](#inputs) properties are implicitly available as output properties. A
         <span class="property-indicator"></span>
         <span class="property-type">str</span>
     </dt>
-    <dd>{{% md %}}The provider-assigned unique ID for this managed resource.{{% /md %}}</dd>
-    <dt class="property-"
+    <dd>{{% md %}}The provider-assigned unique ID for this managed resource.{{% /md %}}</dd><dt class="property-"
             title="">
         <span id="self_link_python">
 <a href="#self_link_python" style="color: inherit; text-decoration: inherit;">self_<wbr>link</a>
@@ -856,8 +810,7 @@ All [input](#inputs) properties are implicitly available as output properties. A
         <span class="property-type">str</span>
     </dt>
     <dd>{{% md %}}The URI of the created resource.
-{{% /md %}}</dd>
-</dl>
+{{% /md %}}</dd></dl>
 {{% /choosable %}}
 
 
@@ -984,9 +937,7 @@ The following state arguments are supported:
 
 
 {{% choosable language csharp %}}
-<dl class="resources-properties">
-
-    <dt class="property-optional"
+<dl class="resources-properties"><dt class="property-optional"
             title="Optional">
         <span id="state_autocreatesubnetworks_csharp">
 <a href="#state_autocreatesubnetworks_csharp" style="color: inherit; text-decoration: inherit;">Auto<wbr>Create<wbr>Subnetworks</a>
@@ -999,8 +950,7 @@ it will create a subnet for each region automatically across the
 `10.128.0.0/9` address range.
 When set to `false`, the network is created in "custom subnet mode" so
 the user can explicitly connect subnetwork resources.
-{{% /md %}}</dd>
-    <dt class="property-optional"
+{{% /md %}}</dd><dt class="property-optional"
             title="Optional">
         <span id="state_deletedefaultroutesoncreate_csharp">
 <a href="#state_deletedefaultroutesoncreate_csharp" style="color: inherit; text-decoration: inherit;">Delete<wbr>Default<wbr>Routes<wbr>On<wbr>Create</a>
@@ -1010,8 +960,7 @@ the user can explicitly connect subnetwork resources.
     </dt>
     <dd>{{% md %}}If set to `true`, default routes (`0.0.0.0/0`) will be deleted
 immediately after network creation. Defaults to `false`.
-{{% /md %}}</dd>
-    <dt class="property-optional"
+{{% /md %}}</dd><dt class="property-optional"
             title="Optional">
         <span id="state_description_csharp">
 <a href="#state_description_csharp" style="color: inherit; text-decoration: inherit;">Description</a>
@@ -1021,8 +970,7 @@ immediately after network creation. Defaults to `false`.
     </dt>
     <dd>{{% md %}}An optional description of this resource. The resource must be
 recreated to modify this field.
-{{% /md %}}</dd>
-    <dt class="property-optional"
+{{% /md %}}</dd><dt class="property-optional"
             title="Optional">
         <span id="state_gatewayipv4_csharp">
 <a href="#state_gatewayipv4_csharp" style="color: inherit; text-decoration: inherit;">Gateway<wbr>Ipv4</a>
@@ -1031,8 +979,7 @@ recreated to modify this field.
         <span class="property-type">string</span>
     </dt>
     <dd>{{% md %}}The gateway address for default routing out of the network. This value is selected by GCP.
-{{% /md %}}</dd>
-    <dt class="property-optional"
+{{% /md %}}</dd><dt class="property-optional"
             title="Optional">
         <span id="state_mtu_csharp">
 <a href="#state_mtu_csharp" style="color: inherit; text-decoration: inherit;">Mtu</a>
@@ -1042,8 +989,7 @@ recreated to modify this field.
     </dt>
     <dd>{{% md %}}Maximum Transmission Unit in bytes. The minimum value for this field is 1460
 and the maximum value is 1500 bytes.
-{{% /md %}}</dd>
-    <dt class="property-optional"
+{{% /md %}}</dd><dt class="property-optional"
             title="Optional">
         <span id="state_name_csharp">
 <a href="#state_name_csharp" style="color: inherit; text-decoration: inherit;">Name</a>
@@ -1058,8 +1004,7 @@ the regular expression `a-z?` which means the
 first character must be a lowercase letter, and all following
 characters must be a dash, lowercase letter, or digit, except the last
 character, which cannot be a dash.
-{{% /md %}}</dd>
-    <dt class="property-optional"
+{{% /md %}}</dd><dt class="property-optional"
             title="Optional">
         <span id="state_project_csharp">
 <a href="#state_project_csharp" style="color: inherit; text-decoration: inherit;">Project</a>
@@ -1069,8 +1014,7 @@ character, which cannot be a dash.
     </dt>
     <dd>{{% md %}}The ID of the project in which the resource belongs.
 If it is not provided, the provider project is used.
-{{% /md %}}</dd>
-    <dt class="property-optional"
+{{% /md %}}</dd><dt class="property-optional"
             title="Optional">
         <span id="state_routingmode_csharp">
 <a href="#state_routingmode_csharp" style="color: inherit; text-decoration: inherit;">Routing<wbr>Mode</a>
@@ -1084,8 +1028,7 @@ of this network in the same region as the router. If set to `GLOBAL`,
 this network's cloud routers will advertise routes with all
 subnetworks of this network, across regions.
 Possible values are `REGIONAL` and `GLOBAL`.
-{{% /md %}}</dd>
-    <dt class="property-optional"
+{{% /md %}}</dd><dt class="property-optional"
             title="Optional">
         <span id="state_selflink_csharp">
 <a href="#state_selflink_csharp" style="color: inherit; text-decoration: inherit;">Self<wbr>Link</a>
@@ -1094,14 +1037,11 @@ Possible values are `REGIONAL` and `GLOBAL`.
         <span class="property-type">string</span>
     </dt>
     <dd>{{% md %}}The URI of the created resource.
-{{% /md %}}</dd>
-</dl>
+{{% /md %}}</dd></dl>
 {{% /choosable %}}
 
 {{% choosable language go %}}
-<dl class="resources-properties">
-
-    <dt class="property-optional"
+<dl class="resources-properties"><dt class="property-optional"
             title="Optional">
         <span id="state_autocreatesubnetworks_go">
 <a href="#state_autocreatesubnetworks_go" style="color: inherit; text-decoration: inherit;">Auto<wbr>Create<wbr>Subnetworks</a>
@@ -1114,8 +1054,7 @@ it will create a subnet for each region automatically across the
 `10.128.0.0/9` address range.
 When set to `false`, the network is created in "custom subnet mode" so
 the user can explicitly connect subnetwork resources.
-{{% /md %}}</dd>
-    <dt class="property-optional"
+{{% /md %}}</dd><dt class="property-optional"
             title="Optional">
         <span id="state_deletedefaultroutesoncreate_go">
 <a href="#state_deletedefaultroutesoncreate_go" style="color: inherit; text-decoration: inherit;">Delete<wbr>Default<wbr>Routes<wbr>On<wbr>Create</a>
@@ -1125,8 +1064,7 @@ the user can explicitly connect subnetwork resources.
     </dt>
     <dd>{{% md %}}If set to `true`, default routes (`0.0.0.0/0`) will be deleted
 immediately after network creation. Defaults to `false`.
-{{% /md %}}</dd>
-    <dt class="property-optional"
+{{% /md %}}</dd><dt class="property-optional"
             title="Optional">
         <span id="state_description_go">
 <a href="#state_description_go" style="color: inherit; text-decoration: inherit;">Description</a>
@@ -1136,8 +1074,7 @@ immediately after network creation. Defaults to `false`.
     </dt>
     <dd>{{% md %}}An optional description of this resource. The resource must be
 recreated to modify this field.
-{{% /md %}}</dd>
-    <dt class="property-optional"
+{{% /md %}}</dd><dt class="property-optional"
             title="Optional">
         <span id="state_gatewayipv4_go">
 <a href="#state_gatewayipv4_go" style="color: inherit; text-decoration: inherit;">Gateway<wbr>Ipv4</a>
@@ -1146,8 +1083,7 @@ recreated to modify this field.
         <span class="property-type">string</span>
     </dt>
     <dd>{{% md %}}The gateway address for default routing out of the network. This value is selected by GCP.
-{{% /md %}}</dd>
-    <dt class="property-optional"
+{{% /md %}}</dd><dt class="property-optional"
             title="Optional">
         <span id="state_mtu_go">
 <a href="#state_mtu_go" style="color: inherit; text-decoration: inherit;">Mtu</a>
@@ -1157,8 +1093,7 @@ recreated to modify this field.
     </dt>
     <dd>{{% md %}}Maximum Transmission Unit in bytes. The minimum value for this field is 1460
 and the maximum value is 1500 bytes.
-{{% /md %}}</dd>
-    <dt class="property-optional"
+{{% /md %}}</dd><dt class="property-optional"
             title="Optional">
         <span id="state_name_go">
 <a href="#state_name_go" style="color: inherit; text-decoration: inherit;">Name</a>
@@ -1173,8 +1108,7 @@ the regular expression `a-z?` which means the
 first character must be a lowercase letter, and all following
 characters must be a dash, lowercase letter, or digit, except the last
 character, which cannot be a dash.
-{{% /md %}}</dd>
-    <dt class="property-optional"
+{{% /md %}}</dd><dt class="property-optional"
             title="Optional">
         <span id="state_project_go">
 <a href="#state_project_go" style="color: inherit; text-decoration: inherit;">Project</a>
@@ -1184,8 +1118,7 @@ character, which cannot be a dash.
     </dt>
     <dd>{{% md %}}The ID of the project in which the resource belongs.
 If it is not provided, the provider project is used.
-{{% /md %}}</dd>
-    <dt class="property-optional"
+{{% /md %}}</dd><dt class="property-optional"
             title="Optional">
         <span id="state_routingmode_go">
 <a href="#state_routingmode_go" style="color: inherit; text-decoration: inherit;">Routing<wbr>Mode</a>
@@ -1199,8 +1132,7 @@ of this network in the same region as the router. If set to `GLOBAL`,
 this network's cloud routers will advertise routes with all
 subnetworks of this network, across regions.
 Possible values are `REGIONAL` and `GLOBAL`.
-{{% /md %}}</dd>
-    <dt class="property-optional"
+{{% /md %}}</dd><dt class="property-optional"
             title="Optional">
         <span id="state_selflink_go">
 <a href="#state_selflink_go" style="color: inherit; text-decoration: inherit;">Self<wbr>Link</a>
@@ -1209,14 +1141,11 @@ Possible values are `REGIONAL` and `GLOBAL`.
         <span class="property-type">string</span>
     </dt>
     <dd>{{% md %}}The URI of the created resource.
-{{% /md %}}</dd>
-</dl>
+{{% /md %}}</dd></dl>
 {{% /choosable %}}
 
 {{% choosable language nodejs %}}
-<dl class="resources-properties">
-
-    <dt class="property-optional"
+<dl class="resources-properties"><dt class="property-optional"
             title="Optional">
         <span id="state_autocreatesubnetworks_nodejs">
 <a href="#state_autocreatesubnetworks_nodejs" style="color: inherit; text-decoration: inherit;">auto<wbr>Create<wbr>Subnetworks</a>
@@ -1229,8 +1158,7 @@ it will create a subnet for each region automatically across the
 `10.128.0.0/9` address range.
 When set to `false`, the network is created in "custom subnet mode" so
 the user can explicitly connect subnetwork resources.
-{{% /md %}}</dd>
-    <dt class="property-optional"
+{{% /md %}}</dd><dt class="property-optional"
             title="Optional">
         <span id="state_deletedefaultroutesoncreate_nodejs">
 <a href="#state_deletedefaultroutesoncreate_nodejs" style="color: inherit; text-decoration: inherit;">delete<wbr>Default<wbr>Routes<wbr>On<wbr>Create</a>
@@ -1240,8 +1168,7 @@ the user can explicitly connect subnetwork resources.
     </dt>
     <dd>{{% md %}}If set to `true`, default routes (`0.0.0.0/0`) will be deleted
 immediately after network creation. Defaults to `false`.
-{{% /md %}}</dd>
-    <dt class="property-optional"
+{{% /md %}}</dd><dt class="property-optional"
             title="Optional">
         <span id="state_description_nodejs">
 <a href="#state_description_nodejs" style="color: inherit; text-decoration: inherit;">description</a>
@@ -1251,8 +1178,7 @@ immediately after network creation. Defaults to `false`.
     </dt>
     <dd>{{% md %}}An optional description of this resource. The resource must be
 recreated to modify this field.
-{{% /md %}}</dd>
-    <dt class="property-optional"
+{{% /md %}}</dd><dt class="property-optional"
             title="Optional">
         <span id="state_gatewayipv4_nodejs">
 <a href="#state_gatewayipv4_nodejs" style="color: inherit; text-decoration: inherit;">gateway<wbr>Ipv4</a>
@@ -1261,8 +1187,7 @@ recreated to modify this field.
         <span class="property-type">string</span>
     </dt>
     <dd>{{% md %}}The gateway address for default routing out of the network. This value is selected by GCP.
-{{% /md %}}</dd>
-    <dt class="property-optional"
+{{% /md %}}</dd><dt class="property-optional"
             title="Optional">
         <span id="state_mtu_nodejs">
 <a href="#state_mtu_nodejs" style="color: inherit; text-decoration: inherit;">mtu</a>
@@ -1272,8 +1197,7 @@ recreated to modify this field.
     </dt>
     <dd>{{% md %}}Maximum Transmission Unit in bytes. The minimum value for this field is 1460
 and the maximum value is 1500 bytes.
-{{% /md %}}</dd>
-    <dt class="property-optional"
+{{% /md %}}</dd><dt class="property-optional"
             title="Optional">
         <span id="state_name_nodejs">
 <a href="#state_name_nodejs" style="color: inherit; text-decoration: inherit;">name</a>
@@ -1288,8 +1212,7 @@ the regular expression `a-z?` which means the
 first character must be a lowercase letter, and all following
 characters must be a dash, lowercase letter, or digit, except the last
 character, which cannot be a dash.
-{{% /md %}}</dd>
-    <dt class="property-optional"
+{{% /md %}}</dd><dt class="property-optional"
             title="Optional">
         <span id="state_project_nodejs">
 <a href="#state_project_nodejs" style="color: inherit; text-decoration: inherit;">project</a>
@@ -1299,8 +1222,7 @@ character, which cannot be a dash.
     </dt>
     <dd>{{% md %}}The ID of the project in which the resource belongs.
 If it is not provided, the provider project is used.
-{{% /md %}}</dd>
-    <dt class="property-optional"
+{{% /md %}}</dd><dt class="property-optional"
             title="Optional">
         <span id="state_routingmode_nodejs">
 <a href="#state_routingmode_nodejs" style="color: inherit; text-decoration: inherit;">routing<wbr>Mode</a>
@@ -1314,8 +1236,7 @@ of this network in the same region as the router. If set to `GLOBAL`,
 this network's cloud routers will advertise routes with all
 subnetworks of this network, across regions.
 Possible values are `REGIONAL` and `GLOBAL`.
-{{% /md %}}</dd>
-    <dt class="property-optional"
+{{% /md %}}</dd><dt class="property-optional"
             title="Optional">
         <span id="state_selflink_nodejs">
 <a href="#state_selflink_nodejs" style="color: inherit; text-decoration: inherit;">self<wbr>Link</a>
@@ -1324,14 +1245,11 @@ Possible values are `REGIONAL` and `GLOBAL`.
         <span class="property-type">string</span>
     </dt>
     <dd>{{% md %}}The URI of the created resource.
-{{% /md %}}</dd>
-</dl>
+{{% /md %}}</dd></dl>
 {{% /choosable %}}
 
 {{% choosable language python %}}
-<dl class="resources-properties">
-
-    <dt class="property-optional"
+<dl class="resources-properties"><dt class="property-optional"
             title="Optional">
         <span id="state_auto_create_subnetworks_python">
 <a href="#state_auto_create_subnetworks_python" style="color: inherit; text-decoration: inherit;">auto_<wbr>create_<wbr>subnetworks</a>
@@ -1344,8 +1262,7 @@ it will create a subnet for each region automatically across the
 `10.128.0.0/9` address range.
 When set to `false`, the network is created in "custom subnet mode" so
 the user can explicitly connect subnetwork resources.
-{{% /md %}}</dd>
-    <dt class="property-optional"
+{{% /md %}}</dd><dt class="property-optional"
             title="Optional">
         <span id="state_delete_default_routes_on_create_python">
 <a href="#state_delete_default_routes_on_create_python" style="color: inherit; text-decoration: inherit;">delete_<wbr>default_<wbr>routes_<wbr>on_<wbr>create</a>
@@ -1355,8 +1272,7 @@ the user can explicitly connect subnetwork resources.
     </dt>
     <dd>{{% md %}}If set to `true`, default routes (`0.0.0.0/0`) will be deleted
 immediately after network creation. Defaults to `false`.
-{{% /md %}}</dd>
-    <dt class="property-optional"
+{{% /md %}}</dd><dt class="property-optional"
             title="Optional">
         <span id="state_description_python">
 <a href="#state_description_python" style="color: inherit; text-decoration: inherit;">description</a>
@@ -1366,8 +1282,7 @@ immediately after network creation. Defaults to `false`.
     </dt>
     <dd>{{% md %}}An optional description of this resource. The resource must be
 recreated to modify this field.
-{{% /md %}}</dd>
-    <dt class="property-optional"
+{{% /md %}}</dd><dt class="property-optional"
             title="Optional">
         <span id="state_gateway_ipv4_python">
 <a href="#state_gateway_ipv4_python" style="color: inherit; text-decoration: inherit;">gateway_<wbr>ipv4</a>
@@ -1376,8 +1291,7 @@ recreated to modify this field.
         <span class="property-type">str</span>
     </dt>
     <dd>{{% md %}}The gateway address for default routing out of the network. This value is selected by GCP.
-{{% /md %}}</dd>
-    <dt class="property-optional"
+{{% /md %}}</dd><dt class="property-optional"
             title="Optional">
         <span id="state_mtu_python">
 <a href="#state_mtu_python" style="color: inherit; text-decoration: inherit;">mtu</a>
@@ -1387,8 +1301,7 @@ recreated to modify this field.
     </dt>
     <dd>{{% md %}}Maximum Transmission Unit in bytes. The minimum value for this field is 1460
 and the maximum value is 1500 bytes.
-{{% /md %}}</dd>
-    <dt class="property-optional"
+{{% /md %}}</dd><dt class="property-optional"
             title="Optional">
         <span id="state_name_python">
 <a href="#state_name_python" style="color: inherit; text-decoration: inherit;">name</a>
@@ -1403,8 +1316,7 @@ the regular expression `a-z?` which means the
 first character must be a lowercase letter, and all following
 characters must be a dash, lowercase letter, or digit, except the last
 character, which cannot be a dash.
-{{% /md %}}</dd>
-    <dt class="property-optional"
+{{% /md %}}</dd><dt class="property-optional"
             title="Optional">
         <span id="state_project_python">
 <a href="#state_project_python" style="color: inherit; text-decoration: inherit;">project</a>
@@ -1414,8 +1326,7 @@ character, which cannot be a dash.
     </dt>
     <dd>{{% md %}}The ID of the project in which the resource belongs.
 If it is not provided, the provider project is used.
-{{% /md %}}</dd>
-    <dt class="property-optional"
+{{% /md %}}</dd><dt class="property-optional"
             title="Optional">
         <span id="state_routing_mode_python">
 <a href="#state_routing_mode_python" style="color: inherit; text-decoration: inherit;">routing_<wbr>mode</a>
@@ -1429,8 +1340,7 @@ of this network in the same region as the router. If set to `GLOBAL`,
 this network's cloud routers will advertise routes with all
 subnetworks of this network, across regions.
 Possible values are `REGIONAL` and `GLOBAL`.
-{{% /md %}}</dd>
-    <dt class="property-optional"
+{{% /md %}}</dd><dt class="property-optional"
             title="Optional">
         <span id="state_self_link_python">
 <a href="#state_self_link_python" style="color: inherit; text-decoration: inherit;">self_<wbr>link</a>
@@ -1439,8 +1349,7 @@ Possible values are `REGIONAL` and `GLOBAL`.
         <span class="property-type">str</span>
     </dt>
     <dd>{{% md %}}The URI of the created resource.
-{{% /md %}}</dd>
-</dl>
+{{% /md %}}</dd></dl>
 {{% /choosable %}}
 
 
@@ -1474,6 +1383,6 @@ Network can be imported using any of these accepted formats
 	<dt>License</dt>
 	<dd>Apache-2.0</dd>
 	<dt>Notes</dt>
-	<dd>This Pulumi package is based on the [`google-beta` Terraform Provider](https://github.com/hashicorp/terraform-provider-google-beta).</dd>
+	<dd>{{% md %}}This Pulumi package is based on the [`google-beta` Terraform Provider](https://github.com/hashicorp/terraform-provider-google-beta).{{% /md %}}</dd>
 </dl>
 

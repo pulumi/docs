@@ -35,9 +35,7 @@ meta_desc: "Documentation for the postgresql.Database resource with examples, in
 
 {{% choosable language nodejs %}}
 
-<dl class="resources-properties">
-  
-    <dt
+<dl class="resources-properties"><dt
         class="property-required" title="Required">
         <span>name</span>
         <span class="property-indicator"></span>
@@ -45,9 +43,7 @@ meta_desc: "Documentation for the postgresql.Database resource with examples, in
     </dt>
     <dd>
       The unique name of the resource.
-    </dd>
-  
-    <dt
+    </dd><dt
         class="property-optional" title="Optional">
         <span>args</span>
         <span class="property-indicator"></span>
@@ -55,9 +51,7 @@ meta_desc: "Documentation for the postgresql.Database resource with examples, in
     </dt>
     <dd>
       The arguments to resource properties.
-    </dd>
-  
-    <dt
+    </dd><dt
         class="property-optional" title="Optional">
         <span>opts</span>
         <span class="property-indicator"></span>
@@ -65,10 +59,7 @@ meta_desc: "Documentation for the postgresql.Database resource with examples, in
     </dt>
     <dd>
       Bag of options to control resource&#39;s behavior.
-    </dd>
-  
-
-</dl>
+    </dd></dl>
 
 {{% /choosable %}}
 
@@ -94,9 +85,7 @@ meta_desc: "Documentation for the postgresql.Database resource with examples, in
 
 {{% choosable language go %}}
 
-<dl class="resources-properties">
-  
-    <dt
+<dl class="resources-properties"><dt
         class="property-optional" title="Optional">
         <span>ctx</span>
         <span class="property-indicator"></span>
@@ -104,9 +93,7 @@ meta_desc: "Documentation for the postgresql.Database resource with examples, in
     </dt>
     <dd>
       Context object for the current deployment.
-    </dd>
-  
-    <dt
+    </dd><dt
         class="property-required" title="Required">
         <span>name</span>
         <span class="property-indicator"></span>
@@ -114,9 +101,7 @@ meta_desc: "Documentation for the postgresql.Database resource with examples, in
     </dt>
     <dd>
       The unique name of the resource.
-    </dd>
-  
-    <dt
+    </dd><dt
         class="property-optional" title="Optional">
         <span>args</span>
         <span class="property-indicator"></span>
@@ -124,9 +109,7 @@ meta_desc: "Documentation for the postgresql.Database resource with examples, in
     </dt>
     <dd>
       The arguments to resource properties.
-    </dd>
-  
-    <dt
+    </dd><dt
         class="property-optional" title="Optional">
         <span>opts</span>
         <span class="property-indicator"></span>
@@ -134,18 +117,13 @@ meta_desc: "Documentation for the postgresql.Database resource with examples, in
     </dt>
     <dd>
       Bag of options to control resource&#39;s behavior.
-    </dd>
-  
-
-</dl>
+    </dd></dl>
 
 {{% /choosable %}}
 
 {{% choosable language csharp %}}
 
-<dl class="resources-properties">
-  
-    <dt
+<dl class="resources-properties"><dt
         class="property-required" title="Required">
         <span>name</span>
         <span class="property-indicator"></span>
@@ -153,9 +131,7 @@ meta_desc: "Documentation for the postgresql.Database resource with examples, in
     </dt>
     <dd>
       The unique name of the resource.
-    </dd>
-  
-    <dt
+    </dd><dt
         class="property-optional" title="Optional">
         <span>args</span>
         <span class="property-indicator"></span>
@@ -163,9 +139,7 @@ meta_desc: "Documentation for the postgresql.Database resource with examples, in
     </dt>
     <dd>
       The arguments to resource properties.
-    </dd>
-  
-    <dt
+    </dd><dt
         class="property-optional" title="Optional">
         <span>opts</span>
         <span class="property-indicator"></span>
@@ -173,10 +147,7 @@ meta_desc: "Documentation for the postgresql.Database resource with examples, in
     </dt>
     <dd>
       Bag of options to control resource&#39;s behavior.
-    </dd>
-  
-
-</dl>
+    </dd></dl>
 
 {{% /choosable %}}
 
@@ -191,9 +162,7 @@ The Database resource accepts the following [input]({{< relref "/docs/intro/conc
 
 
 {{% choosable language csharp %}}
-<dl class="resources-properties">
-
-    <dt class="property-optional"
+<dl class="resources-properties"><dt class="property-optional"
             title="Optional">
         <span id="allowconnections_csharp">
 <a href="#allowconnections_csharp" style="color: inherit; text-decoration: inherit;">Allow<wbr>Connections</a>
@@ -204,8 +173,7 @@ The Database resource accepts the following [input]({{< relref "/docs/intro/conc
     <dd>{{% md %}}If `false` then no one can connect to this
 database. The default is `true`, allowing connections (except as restricted by
 other mechanisms, such as `GRANT` or `REVOKE CONNECT`).
-{{% /md %}}</dd>
-    <dt class="property-optional"
+{{% /md %}}</dd><dt class="property-optional"
             title="Optional">
         <span id="connectionlimit_csharp">
 <a href="#connectionlimit_csharp" style="color: inherit; text-decoration: inherit;">Connection<wbr>Limit</a>
@@ -215,8 +183,7 @@ other mechanisms, such as `GRANT` or `REVOKE CONNECT`).
     </dt>
     <dd>{{% md %}}How many concurrent connections can be
 established to this database. `-1` (the default) means no limit.
-{{% /md %}}</dd>
-    <dt class="property-optional"
+{{% /md %}}</dd><dt class="property-optional"
             title="Optional">
         <span id="encoding_csharp">
 <a href="#encoding_csharp" style="color: inherit; text-decoration: inherit;">Encoding</a>
@@ -225,8 +192,7 @@ established to this database. `-1` (the default) means no limit.
         <span class="property-type">string</span>
     </dt>
     <dd>{{% md %}}Character set encoding to use in the new database
-{{% /md %}}</dd>
-    <dt class="property-optional"
+{{% /md %}}</dd><dt class="property-optional"
             title="Optional">
         <span id="istemplate_csharp">
 <a href="#istemplate_csharp" style="color: inherit; text-decoration: inherit;">Is<wbr>Template</a>
@@ -237,8 +203,7 @@ established to this database. `-1` (the default) means no limit.
     <dd>{{% md %}}If `true`, then this database can be cloned by any
 user with `CREATEDB` privileges; if `false` (the default), then only
 superusers or the owner of the database can clone it.
-{{% /md %}}</dd>
-    <dt class="property-optional"
+{{% /md %}}</dd><dt class="property-optional"
             title="Optional">
         <span id="lccollate_csharp">
 <a href="#lccollate_csharp" style="color: inherit; text-decoration: inherit;">Lc<wbr>Collate</a>
@@ -247,8 +212,7 @@ superusers or the owner of the database can clone it.
         <span class="property-type">string</span>
     </dt>
     <dd>{{% md %}}Collation order (LC_COLLATE) to use in the new database
-{{% /md %}}</dd>
-    <dt class="property-optional"
+{{% /md %}}</dd><dt class="property-optional"
             title="Optional">
         <span id="lcctype_csharp">
 <a href="#lcctype_csharp" style="color: inherit; text-decoration: inherit;">Lc<wbr>Ctype</a>
@@ -257,8 +221,7 @@ superusers or the owner of the database can clone it.
         <span class="property-type">string</span>
     </dt>
     <dd>{{% md %}}Character classification (LC_CTYPE) to use in the new database
-{{% /md %}}</dd>
-    <dt class="property-optional"
+{{% /md %}}</dd><dt class="property-optional"
             title="Optional">
         <span id="name_csharp">
 <a href="#name_csharp" style="color: inherit; text-decoration: inherit;">Name</a>
@@ -268,8 +231,7 @@ superusers or the owner of the database can clone it.
     </dt>
     <dd>{{% md %}}The name of the database. Must be unique on the PostgreSQL
 server instance where it is configured.
-{{% /md %}}</dd>
-    <dt class="property-optional"
+{{% /md %}}</dd><dt class="property-optional"
             title="Optional">
         <span id="owner_csharp">
 <a href="#owner_csharp" style="color: inherit; text-decoration: inherit;">Owner</a>
@@ -282,8 +244,7 @@ server instance where it is configured.
 create a database owned by another role or to change the owner of an existing
 database, you must be a direct or indirect member of the specified role, or
 the username in the provider is a superuser.
-{{% /md %}}</dd>
-    <dt class="property-optional"
+{{% /md %}}</dd><dt class="property-optional"
             title="Optional">
         <span id="tablespacename_csharp">
 <a href="#tablespacename_csharp" style="color: inherit; text-decoration: inherit;">Tablespace<wbr>Name</a>
@@ -295,8 +256,7 @@ the username in the provider is a superuser.
 associated with the database, or `DEFAULT` to use the template database's
 tablespace.  This tablespace will be the default tablespace used for objects
 created in this database.
-{{% /md %}}</dd>
-    <dt class="property-optional"
+{{% /md %}}</dd><dt class="property-optional"
             title="Optional">
         <span id="template_csharp">
 <a href="#template_csharp" style="color: inherit; text-decoration: inherit;">Template</a>
@@ -305,14 +265,11 @@ created in this database.
         <span class="property-type">string</span>
     </dt>
     <dd>{{% md %}}The name of the template from which to create the new database
-{{% /md %}}</dd>
-</dl>
+{{% /md %}}</dd></dl>
 {{% /choosable %}}
 
 {{% choosable language go %}}
-<dl class="resources-properties">
-
-    <dt class="property-optional"
+<dl class="resources-properties"><dt class="property-optional"
             title="Optional">
         <span id="allowconnections_go">
 <a href="#allowconnections_go" style="color: inherit; text-decoration: inherit;">Allow<wbr>Connections</a>
@@ -323,8 +280,7 @@ created in this database.
     <dd>{{% md %}}If `false` then no one can connect to this
 database. The default is `true`, allowing connections (except as restricted by
 other mechanisms, such as `GRANT` or `REVOKE CONNECT`).
-{{% /md %}}</dd>
-    <dt class="property-optional"
+{{% /md %}}</dd><dt class="property-optional"
             title="Optional">
         <span id="connectionlimit_go">
 <a href="#connectionlimit_go" style="color: inherit; text-decoration: inherit;">Connection<wbr>Limit</a>
@@ -334,8 +290,7 @@ other mechanisms, such as `GRANT` or `REVOKE CONNECT`).
     </dt>
     <dd>{{% md %}}How many concurrent connections can be
 established to this database. `-1` (the default) means no limit.
-{{% /md %}}</dd>
-    <dt class="property-optional"
+{{% /md %}}</dd><dt class="property-optional"
             title="Optional">
         <span id="encoding_go">
 <a href="#encoding_go" style="color: inherit; text-decoration: inherit;">Encoding</a>
@@ -344,8 +299,7 @@ established to this database. `-1` (the default) means no limit.
         <span class="property-type">string</span>
     </dt>
     <dd>{{% md %}}Character set encoding to use in the new database
-{{% /md %}}</dd>
-    <dt class="property-optional"
+{{% /md %}}</dd><dt class="property-optional"
             title="Optional">
         <span id="istemplate_go">
 <a href="#istemplate_go" style="color: inherit; text-decoration: inherit;">Is<wbr>Template</a>
@@ -356,8 +310,7 @@ established to this database. `-1` (the default) means no limit.
     <dd>{{% md %}}If `true`, then this database can be cloned by any
 user with `CREATEDB` privileges; if `false` (the default), then only
 superusers or the owner of the database can clone it.
-{{% /md %}}</dd>
-    <dt class="property-optional"
+{{% /md %}}</dd><dt class="property-optional"
             title="Optional">
         <span id="lccollate_go">
 <a href="#lccollate_go" style="color: inherit; text-decoration: inherit;">Lc<wbr>Collate</a>
@@ -366,8 +319,7 @@ superusers or the owner of the database can clone it.
         <span class="property-type">string</span>
     </dt>
     <dd>{{% md %}}Collation order (LC_COLLATE) to use in the new database
-{{% /md %}}</dd>
-    <dt class="property-optional"
+{{% /md %}}</dd><dt class="property-optional"
             title="Optional">
         <span id="lcctype_go">
 <a href="#lcctype_go" style="color: inherit; text-decoration: inherit;">Lc<wbr>Ctype</a>
@@ -376,8 +328,7 @@ superusers or the owner of the database can clone it.
         <span class="property-type">string</span>
     </dt>
     <dd>{{% md %}}Character classification (LC_CTYPE) to use in the new database
-{{% /md %}}</dd>
-    <dt class="property-optional"
+{{% /md %}}</dd><dt class="property-optional"
             title="Optional">
         <span id="name_go">
 <a href="#name_go" style="color: inherit; text-decoration: inherit;">Name</a>
@@ -387,8 +338,7 @@ superusers or the owner of the database can clone it.
     </dt>
     <dd>{{% md %}}The name of the database. Must be unique on the PostgreSQL
 server instance where it is configured.
-{{% /md %}}</dd>
-    <dt class="property-optional"
+{{% /md %}}</dd><dt class="property-optional"
             title="Optional">
         <span id="owner_go">
 <a href="#owner_go" style="color: inherit; text-decoration: inherit;">Owner</a>
@@ -401,8 +351,7 @@ server instance where it is configured.
 create a database owned by another role or to change the owner of an existing
 database, you must be a direct or indirect member of the specified role, or
 the username in the provider is a superuser.
-{{% /md %}}</dd>
-    <dt class="property-optional"
+{{% /md %}}</dd><dt class="property-optional"
             title="Optional">
         <span id="tablespacename_go">
 <a href="#tablespacename_go" style="color: inherit; text-decoration: inherit;">Tablespace<wbr>Name</a>
@@ -414,8 +363,7 @@ the username in the provider is a superuser.
 associated with the database, or `DEFAULT` to use the template database's
 tablespace.  This tablespace will be the default tablespace used for objects
 created in this database.
-{{% /md %}}</dd>
-    <dt class="property-optional"
+{{% /md %}}</dd><dt class="property-optional"
             title="Optional">
         <span id="template_go">
 <a href="#template_go" style="color: inherit; text-decoration: inherit;">Template</a>
@@ -424,14 +372,11 @@ created in this database.
         <span class="property-type">string</span>
     </dt>
     <dd>{{% md %}}The name of the template from which to create the new database
-{{% /md %}}</dd>
-</dl>
+{{% /md %}}</dd></dl>
 {{% /choosable %}}
 
 {{% choosable language nodejs %}}
-<dl class="resources-properties">
-
-    <dt class="property-optional"
+<dl class="resources-properties"><dt class="property-optional"
             title="Optional">
         <span id="allowconnections_nodejs">
 <a href="#allowconnections_nodejs" style="color: inherit; text-decoration: inherit;">allow<wbr>Connections</a>
@@ -442,8 +387,7 @@ created in this database.
     <dd>{{% md %}}If `false` then no one can connect to this
 database. The default is `true`, allowing connections (except as restricted by
 other mechanisms, such as `GRANT` or `REVOKE CONNECT`).
-{{% /md %}}</dd>
-    <dt class="property-optional"
+{{% /md %}}</dd><dt class="property-optional"
             title="Optional">
         <span id="connectionlimit_nodejs">
 <a href="#connectionlimit_nodejs" style="color: inherit; text-decoration: inherit;">connection<wbr>Limit</a>
@@ -453,8 +397,7 @@ other mechanisms, such as `GRANT` or `REVOKE CONNECT`).
     </dt>
     <dd>{{% md %}}How many concurrent connections can be
 established to this database. `-1` (the default) means no limit.
-{{% /md %}}</dd>
-    <dt class="property-optional"
+{{% /md %}}</dd><dt class="property-optional"
             title="Optional">
         <span id="encoding_nodejs">
 <a href="#encoding_nodejs" style="color: inherit; text-decoration: inherit;">encoding</a>
@@ -463,8 +406,7 @@ established to this database. `-1` (the default) means no limit.
         <span class="property-type">string</span>
     </dt>
     <dd>{{% md %}}Character set encoding to use in the new database
-{{% /md %}}</dd>
-    <dt class="property-optional"
+{{% /md %}}</dd><dt class="property-optional"
             title="Optional">
         <span id="istemplate_nodejs">
 <a href="#istemplate_nodejs" style="color: inherit; text-decoration: inherit;">is<wbr>Template</a>
@@ -475,8 +417,7 @@ established to this database. `-1` (the default) means no limit.
     <dd>{{% md %}}If `true`, then this database can be cloned by any
 user with `CREATEDB` privileges; if `false` (the default), then only
 superusers or the owner of the database can clone it.
-{{% /md %}}</dd>
-    <dt class="property-optional"
+{{% /md %}}</dd><dt class="property-optional"
             title="Optional">
         <span id="lccollate_nodejs">
 <a href="#lccollate_nodejs" style="color: inherit; text-decoration: inherit;">lc<wbr>Collate</a>
@@ -485,8 +426,7 @@ superusers or the owner of the database can clone it.
         <span class="property-type">string</span>
     </dt>
     <dd>{{% md %}}Collation order (LC_COLLATE) to use in the new database
-{{% /md %}}</dd>
-    <dt class="property-optional"
+{{% /md %}}</dd><dt class="property-optional"
             title="Optional">
         <span id="lcctype_nodejs">
 <a href="#lcctype_nodejs" style="color: inherit; text-decoration: inherit;">lc<wbr>Ctype</a>
@@ -495,8 +435,7 @@ superusers or the owner of the database can clone it.
         <span class="property-type">string</span>
     </dt>
     <dd>{{% md %}}Character classification (LC_CTYPE) to use in the new database
-{{% /md %}}</dd>
-    <dt class="property-optional"
+{{% /md %}}</dd><dt class="property-optional"
             title="Optional">
         <span id="name_nodejs">
 <a href="#name_nodejs" style="color: inherit; text-decoration: inherit;">name</a>
@@ -506,8 +445,7 @@ superusers or the owner of the database can clone it.
     </dt>
     <dd>{{% md %}}The name of the database. Must be unique on the PostgreSQL
 server instance where it is configured.
-{{% /md %}}</dd>
-    <dt class="property-optional"
+{{% /md %}}</dd><dt class="property-optional"
             title="Optional">
         <span id="owner_nodejs">
 <a href="#owner_nodejs" style="color: inherit; text-decoration: inherit;">owner</a>
@@ -520,8 +458,7 @@ server instance where it is configured.
 create a database owned by another role or to change the owner of an existing
 database, you must be a direct or indirect member of the specified role, or
 the username in the provider is a superuser.
-{{% /md %}}</dd>
-    <dt class="property-optional"
+{{% /md %}}</dd><dt class="property-optional"
             title="Optional">
         <span id="tablespacename_nodejs">
 <a href="#tablespacename_nodejs" style="color: inherit; text-decoration: inherit;">tablespace<wbr>Name</a>
@@ -533,8 +470,7 @@ the username in the provider is a superuser.
 associated with the database, or `DEFAULT` to use the template database's
 tablespace.  This tablespace will be the default tablespace used for objects
 created in this database.
-{{% /md %}}</dd>
-    <dt class="property-optional"
+{{% /md %}}</dd><dt class="property-optional"
             title="Optional">
         <span id="template_nodejs">
 <a href="#template_nodejs" style="color: inherit; text-decoration: inherit;">template</a>
@@ -543,14 +479,11 @@ created in this database.
         <span class="property-type">string</span>
     </dt>
     <dd>{{% md %}}The name of the template from which to create the new database
-{{% /md %}}</dd>
-</dl>
+{{% /md %}}</dd></dl>
 {{% /choosable %}}
 
 {{% choosable language python %}}
-<dl class="resources-properties">
-
-    <dt class="property-optional"
+<dl class="resources-properties"><dt class="property-optional"
             title="Optional">
         <span id="allow_connections_python">
 <a href="#allow_connections_python" style="color: inherit; text-decoration: inherit;">allow_<wbr>connections</a>
@@ -561,8 +494,7 @@ created in this database.
     <dd>{{% md %}}If `false` then no one can connect to this
 database. The default is `true`, allowing connections (except as restricted by
 other mechanisms, such as `GRANT` or `REVOKE CONNECT`).
-{{% /md %}}</dd>
-    <dt class="property-optional"
+{{% /md %}}</dd><dt class="property-optional"
             title="Optional">
         <span id="connection_limit_python">
 <a href="#connection_limit_python" style="color: inherit; text-decoration: inherit;">connection_<wbr>limit</a>
@@ -572,8 +504,7 @@ other mechanisms, such as `GRANT` or `REVOKE CONNECT`).
     </dt>
     <dd>{{% md %}}How many concurrent connections can be
 established to this database. `-1` (the default) means no limit.
-{{% /md %}}</dd>
-    <dt class="property-optional"
+{{% /md %}}</dd><dt class="property-optional"
             title="Optional">
         <span id="encoding_python">
 <a href="#encoding_python" style="color: inherit; text-decoration: inherit;">encoding</a>
@@ -582,8 +513,7 @@ established to this database. `-1` (the default) means no limit.
         <span class="property-type">str</span>
     </dt>
     <dd>{{% md %}}Character set encoding to use in the new database
-{{% /md %}}</dd>
-    <dt class="property-optional"
+{{% /md %}}</dd><dt class="property-optional"
             title="Optional">
         <span id="is_template_python">
 <a href="#is_template_python" style="color: inherit; text-decoration: inherit;">is_<wbr>template</a>
@@ -594,8 +524,7 @@ established to this database. `-1` (the default) means no limit.
     <dd>{{% md %}}If `true`, then this database can be cloned by any
 user with `CREATEDB` privileges; if `false` (the default), then only
 superusers or the owner of the database can clone it.
-{{% /md %}}</dd>
-    <dt class="property-optional"
+{{% /md %}}</dd><dt class="property-optional"
             title="Optional">
         <span id="lc_collate_python">
 <a href="#lc_collate_python" style="color: inherit; text-decoration: inherit;">lc_<wbr>collate</a>
@@ -604,8 +533,7 @@ superusers or the owner of the database can clone it.
         <span class="property-type">str</span>
     </dt>
     <dd>{{% md %}}Collation order (LC_COLLATE) to use in the new database
-{{% /md %}}</dd>
-    <dt class="property-optional"
+{{% /md %}}</dd><dt class="property-optional"
             title="Optional">
         <span id="lc_ctype_python">
 <a href="#lc_ctype_python" style="color: inherit; text-decoration: inherit;">lc_<wbr>ctype</a>
@@ -614,8 +542,7 @@ superusers or the owner of the database can clone it.
         <span class="property-type">str</span>
     </dt>
     <dd>{{% md %}}Character classification (LC_CTYPE) to use in the new database
-{{% /md %}}</dd>
-    <dt class="property-optional"
+{{% /md %}}</dd><dt class="property-optional"
             title="Optional">
         <span id="name_python">
 <a href="#name_python" style="color: inherit; text-decoration: inherit;">name</a>
@@ -625,8 +552,7 @@ superusers or the owner of the database can clone it.
     </dt>
     <dd>{{% md %}}The name of the database. Must be unique on the PostgreSQL
 server instance where it is configured.
-{{% /md %}}</dd>
-    <dt class="property-optional"
+{{% /md %}}</dd><dt class="property-optional"
             title="Optional">
         <span id="owner_python">
 <a href="#owner_python" style="color: inherit; text-decoration: inherit;">owner</a>
@@ -639,8 +565,7 @@ server instance where it is configured.
 create a database owned by another role or to change the owner of an existing
 database, you must be a direct or indirect member of the specified role, or
 the username in the provider is a superuser.
-{{% /md %}}</dd>
-    <dt class="property-optional"
+{{% /md %}}</dd><dt class="property-optional"
             title="Optional">
         <span id="tablespace_name_python">
 <a href="#tablespace_name_python" style="color: inherit; text-decoration: inherit;">tablespace_<wbr>name</a>
@@ -652,8 +577,7 @@ the username in the provider is a superuser.
 associated with the database, or `DEFAULT` to use the template database's
 tablespace.  This tablespace will be the default tablespace used for objects
 created in this database.
-{{% /md %}}</dd>
-    <dt class="property-optional"
+{{% /md %}}</dd><dt class="property-optional"
             title="Optional">
         <span id="template_python">
 <a href="#template_python" style="color: inherit; text-decoration: inherit;">template</a>
@@ -662,8 +586,7 @@ created in this database.
         <span class="property-type">str</span>
     </dt>
     <dd>{{% md %}}The name of the template from which to create the new database
-{{% /md %}}</dd>
-</dl>
+{{% /md %}}</dd></dl>
 {{% /choosable %}}
 
 
@@ -674,9 +597,7 @@ All [input](#inputs) properties are implicitly available as output properties. A
 
 
 {{% choosable language csharp %}}
-<dl class="resources-properties">
-
-    <dt class="property-"
+<dl class="resources-properties"><dt class="property-"
             title="">
         <span id="id_csharp">
 <a href="#id_csharp" style="color: inherit; text-decoration: inherit;">Id</a>
@@ -684,14 +605,11 @@ All [input](#inputs) properties are implicitly available as output properties. A
         <span class="property-indicator"></span>
         <span class="property-type">string</span>
     </dt>
-    <dd>{{% md %}}The provider-assigned unique ID for this managed resource.{{% /md %}}</dd>
-</dl>
+    <dd>{{% md %}}The provider-assigned unique ID for this managed resource.{{% /md %}}</dd></dl>
 {{% /choosable %}}
 
 {{% choosable language go %}}
-<dl class="resources-properties">
-
-    <dt class="property-"
+<dl class="resources-properties"><dt class="property-"
             title="">
         <span id="id_go">
 <a href="#id_go" style="color: inherit; text-decoration: inherit;">Id</a>
@@ -699,14 +617,11 @@ All [input](#inputs) properties are implicitly available as output properties. A
         <span class="property-indicator"></span>
         <span class="property-type">string</span>
     </dt>
-    <dd>{{% md %}}The provider-assigned unique ID for this managed resource.{{% /md %}}</dd>
-</dl>
+    <dd>{{% md %}}The provider-assigned unique ID for this managed resource.{{% /md %}}</dd></dl>
 {{% /choosable %}}
 
 {{% choosable language nodejs %}}
-<dl class="resources-properties">
-
-    <dt class="property-"
+<dl class="resources-properties"><dt class="property-"
             title="">
         <span id="id_nodejs">
 <a href="#id_nodejs" style="color: inherit; text-decoration: inherit;">id</a>
@@ -714,14 +629,11 @@ All [input](#inputs) properties are implicitly available as output properties. A
         <span class="property-indicator"></span>
         <span class="property-type">string</span>
     </dt>
-    <dd>{{% md %}}The provider-assigned unique ID for this managed resource.{{% /md %}}</dd>
-</dl>
+    <dd>{{% md %}}The provider-assigned unique ID for this managed resource.{{% /md %}}</dd></dl>
 {{% /choosable %}}
 
 {{% choosable language python %}}
-<dl class="resources-properties">
-
-    <dt class="property-"
+<dl class="resources-properties"><dt class="property-"
             title="">
         <span id="id_python">
 <a href="#id_python" style="color: inherit; text-decoration: inherit;">id</a>
@@ -729,8 +641,7 @@ All [input](#inputs) properties are implicitly available as output properties. A
         <span class="property-indicator"></span>
         <span class="property-type">str</span>
     </dt>
-    <dd>{{% md %}}The provider-assigned unique ID for this managed resource.{{% /md %}}</dd>
-</dl>
+    <dd>{{% md %}}The provider-assigned unique ID for this managed resource.{{% /md %}}</dd></dl>
 {{% /choosable %}}
 
 
@@ -857,9 +768,7 @@ The following state arguments are supported:
 
 
 {{% choosable language csharp %}}
-<dl class="resources-properties">
-
-    <dt class="property-optional"
+<dl class="resources-properties"><dt class="property-optional"
             title="Optional">
         <span id="state_allowconnections_csharp">
 <a href="#state_allowconnections_csharp" style="color: inherit; text-decoration: inherit;">Allow<wbr>Connections</a>
@@ -870,8 +779,7 @@ The following state arguments are supported:
     <dd>{{% md %}}If `false` then no one can connect to this
 database. The default is `true`, allowing connections (except as restricted by
 other mechanisms, such as `GRANT` or `REVOKE CONNECT`).
-{{% /md %}}</dd>
-    <dt class="property-optional"
+{{% /md %}}</dd><dt class="property-optional"
             title="Optional">
         <span id="state_connectionlimit_csharp">
 <a href="#state_connectionlimit_csharp" style="color: inherit; text-decoration: inherit;">Connection<wbr>Limit</a>
@@ -881,8 +789,7 @@ other mechanisms, such as `GRANT` or `REVOKE CONNECT`).
     </dt>
     <dd>{{% md %}}How many concurrent connections can be
 established to this database. `-1` (the default) means no limit.
-{{% /md %}}</dd>
-    <dt class="property-optional"
+{{% /md %}}</dd><dt class="property-optional"
             title="Optional">
         <span id="state_encoding_csharp">
 <a href="#state_encoding_csharp" style="color: inherit; text-decoration: inherit;">Encoding</a>
@@ -891,8 +798,7 @@ established to this database. `-1` (the default) means no limit.
         <span class="property-type">string</span>
     </dt>
     <dd>{{% md %}}Character set encoding to use in the new database
-{{% /md %}}</dd>
-    <dt class="property-optional"
+{{% /md %}}</dd><dt class="property-optional"
             title="Optional">
         <span id="state_istemplate_csharp">
 <a href="#state_istemplate_csharp" style="color: inherit; text-decoration: inherit;">Is<wbr>Template</a>
@@ -903,8 +809,7 @@ established to this database. `-1` (the default) means no limit.
     <dd>{{% md %}}If `true`, then this database can be cloned by any
 user with `CREATEDB` privileges; if `false` (the default), then only
 superusers or the owner of the database can clone it.
-{{% /md %}}</dd>
-    <dt class="property-optional"
+{{% /md %}}</dd><dt class="property-optional"
             title="Optional">
         <span id="state_lccollate_csharp">
 <a href="#state_lccollate_csharp" style="color: inherit; text-decoration: inherit;">Lc<wbr>Collate</a>
@@ -913,8 +818,7 @@ superusers or the owner of the database can clone it.
         <span class="property-type">string</span>
     </dt>
     <dd>{{% md %}}Collation order (LC_COLLATE) to use in the new database
-{{% /md %}}</dd>
-    <dt class="property-optional"
+{{% /md %}}</dd><dt class="property-optional"
             title="Optional">
         <span id="state_lcctype_csharp">
 <a href="#state_lcctype_csharp" style="color: inherit; text-decoration: inherit;">Lc<wbr>Ctype</a>
@@ -923,8 +827,7 @@ superusers or the owner of the database can clone it.
         <span class="property-type">string</span>
     </dt>
     <dd>{{% md %}}Character classification (LC_CTYPE) to use in the new database
-{{% /md %}}</dd>
-    <dt class="property-optional"
+{{% /md %}}</dd><dt class="property-optional"
             title="Optional">
         <span id="state_name_csharp">
 <a href="#state_name_csharp" style="color: inherit; text-decoration: inherit;">Name</a>
@@ -934,8 +837,7 @@ superusers or the owner of the database can clone it.
     </dt>
     <dd>{{% md %}}The name of the database. Must be unique on the PostgreSQL
 server instance where it is configured.
-{{% /md %}}</dd>
-    <dt class="property-optional"
+{{% /md %}}</dd><dt class="property-optional"
             title="Optional">
         <span id="state_owner_csharp">
 <a href="#state_owner_csharp" style="color: inherit; text-decoration: inherit;">Owner</a>
@@ -948,8 +850,7 @@ server instance where it is configured.
 create a database owned by another role or to change the owner of an existing
 database, you must be a direct or indirect member of the specified role, or
 the username in the provider is a superuser.
-{{% /md %}}</dd>
-    <dt class="property-optional"
+{{% /md %}}</dd><dt class="property-optional"
             title="Optional">
         <span id="state_tablespacename_csharp">
 <a href="#state_tablespacename_csharp" style="color: inherit; text-decoration: inherit;">Tablespace<wbr>Name</a>
@@ -961,8 +862,7 @@ the username in the provider is a superuser.
 associated with the database, or `DEFAULT` to use the template database's
 tablespace.  This tablespace will be the default tablespace used for objects
 created in this database.
-{{% /md %}}</dd>
-    <dt class="property-optional"
+{{% /md %}}</dd><dt class="property-optional"
             title="Optional">
         <span id="state_template_csharp">
 <a href="#state_template_csharp" style="color: inherit; text-decoration: inherit;">Template</a>
@@ -971,14 +871,11 @@ created in this database.
         <span class="property-type">string</span>
     </dt>
     <dd>{{% md %}}The name of the template from which to create the new database
-{{% /md %}}</dd>
-</dl>
+{{% /md %}}</dd></dl>
 {{% /choosable %}}
 
 {{% choosable language go %}}
-<dl class="resources-properties">
-
-    <dt class="property-optional"
+<dl class="resources-properties"><dt class="property-optional"
             title="Optional">
         <span id="state_allowconnections_go">
 <a href="#state_allowconnections_go" style="color: inherit; text-decoration: inherit;">Allow<wbr>Connections</a>
@@ -989,8 +886,7 @@ created in this database.
     <dd>{{% md %}}If `false` then no one can connect to this
 database. The default is `true`, allowing connections (except as restricted by
 other mechanisms, such as `GRANT` or `REVOKE CONNECT`).
-{{% /md %}}</dd>
-    <dt class="property-optional"
+{{% /md %}}</dd><dt class="property-optional"
             title="Optional">
         <span id="state_connectionlimit_go">
 <a href="#state_connectionlimit_go" style="color: inherit; text-decoration: inherit;">Connection<wbr>Limit</a>
@@ -1000,8 +896,7 @@ other mechanisms, such as `GRANT` or `REVOKE CONNECT`).
     </dt>
     <dd>{{% md %}}How many concurrent connections can be
 established to this database. `-1` (the default) means no limit.
-{{% /md %}}</dd>
-    <dt class="property-optional"
+{{% /md %}}</dd><dt class="property-optional"
             title="Optional">
         <span id="state_encoding_go">
 <a href="#state_encoding_go" style="color: inherit; text-decoration: inherit;">Encoding</a>
@@ -1010,8 +905,7 @@ established to this database. `-1` (the default) means no limit.
         <span class="property-type">string</span>
     </dt>
     <dd>{{% md %}}Character set encoding to use in the new database
-{{% /md %}}</dd>
-    <dt class="property-optional"
+{{% /md %}}</dd><dt class="property-optional"
             title="Optional">
         <span id="state_istemplate_go">
 <a href="#state_istemplate_go" style="color: inherit; text-decoration: inherit;">Is<wbr>Template</a>
@@ -1022,8 +916,7 @@ established to this database. `-1` (the default) means no limit.
     <dd>{{% md %}}If `true`, then this database can be cloned by any
 user with `CREATEDB` privileges; if `false` (the default), then only
 superusers or the owner of the database can clone it.
-{{% /md %}}</dd>
-    <dt class="property-optional"
+{{% /md %}}</dd><dt class="property-optional"
             title="Optional">
         <span id="state_lccollate_go">
 <a href="#state_lccollate_go" style="color: inherit; text-decoration: inherit;">Lc<wbr>Collate</a>
@@ -1032,8 +925,7 @@ superusers or the owner of the database can clone it.
         <span class="property-type">string</span>
     </dt>
     <dd>{{% md %}}Collation order (LC_COLLATE) to use in the new database
-{{% /md %}}</dd>
-    <dt class="property-optional"
+{{% /md %}}</dd><dt class="property-optional"
             title="Optional">
         <span id="state_lcctype_go">
 <a href="#state_lcctype_go" style="color: inherit; text-decoration: inherit;">Lc<wbr>Ctype</a>
@@ -1042,8 +934,7 @@ superusers or the owner of the database can clone it.
         <span class="property-type">string</span>
     </dt>
     <dd>{{% md %}}Character classification (LC_CTYPE) to use in the new database
-{{% /md %}}</dd>
-    <dt class="property-optional"
+{{% /md %}}</dd><dt class="property-optional"
             title="Optional">
         <span id="state_name_go">
 <a href="#state_name_go" style="color: inherit; text-decoration: inherit;">Name</a>
@@ -1053,8 +944,7 @@ superusers or the owner of the database can clone it.
     </dt>
     <dd>{{% md %}}The name of the database. Must be unique on the PostgreSQL
 server instance where it is configured.
-{{% /md %}}</dd>
-    <dt class="property-optional"
+{{% /md %}}</dd><dt class="property-optional"
             title="Optional">
         <span id="state_owner_go">
 <a href="#state_owner_go" style="color: inherit; text-decoration: inherit;">Owner</a>
@@ -1067,8 +957,7 @@ server instance where it is configured.
 create a database owned by another role or to change the owner of an existing
 database, you must be a direct or indirect member of the specified role, or
 the username in the provider is a superuser.
-{{% /md %}}</dd>
-    <dt class="property-optional"
+{{% /md %}}</dd><dt class="property-optional"
             title="Optional">
         <span id="state_tablespacename_go">
 <a href="#state_tablespacename_go" style="color: inherit; text-decoration: inherit;">Tablespace<wbr>Name</a>
@@ -1080,8 +969,7 @@ the username in the provider is a superuser.
 associated with the database, or `DEFAULT` to use the template database's
 tablespace.  This tablespace will be the default tablespace used for objects
 created in this database.
-{{% /md %}}</dd>
-    <dt class="property-optional"
+{{% /md %}}</dd><dt class="property-optional"
             title="Optional">
         <span id="state_template_go">
 <a href="#state_template_go" style="color: inherit; text-decoration: inherit;">Template</a>
@@ -1090,14 +978,11 @@ created in this database.
         <span class="property-type">string</span>
     </dt>
     <dd>{{% md %}}The name of the template from which to create the new database
-{{% /md %}}</dd>
-</dl>
+{{% /md %}}</dd></dl>
 {{% /choosable %}}
 
 {{% choosable language nodejs %}}
-<dl class="resources-properties">
-
-    <dt class="property-optional"
+<dl class="resources-properties"><dt class="property-optional"
             title="Optional">
         <span id="state_allowconnections_nodejs">
 <a href="#state_allowconnections_nodejs" style="color: inherit; text-decoration: inherit;">allow<wbr>Connections</a>
@@ -1108,8 +993,7 @@ created in this database.
     <dd>{{% md %}}If `false` then no one can connect to this
 database. The default is `true`, allowing connections (except as restricted by
 other mechanisms, such as `GRANT` or `REVOKE CONNECT`).
-{{% /md %}}</dd>
-    <dt class="property-optional"
+{{% /md %}}</dd><dt class="property-optional"
             title="Optional">
         <span id="state_connectionlimit_nodejs">
 <a href="#state_connectionlimit_nodejs" style="color: inherit; text-decoration: inherit;">connection<wbr>Limit</a>
@@ -1119,8 +1003,7 @@ other mechanisms, such as `GRANT` or `REVOKE CONNECT`).
     </dt>
     <dd>{{% md %}}How many concurrent connections can be
 established to this database. `-1` (the default) means no limit.
-{{% /md %}}</dd>
-    <dt class="property-optional"
+{{% /md %}}</dd><dt class="property-optional"
             title="Optional">
         <span id="state_encoding_nodejs">
 <a href="#state_encoding_nodejs" style="color: inherit; text-decoration: inherit;">encoding</a>
@@ -1129,8 +1012,7 @@ established to this database. `-1` (the default) means no limit.
         <span class="property-type">string</span>
     </dt>
     <dd>{{% md %}}Character set encoding to use in the new database
-{{% /md %}}</dd>
-    <dt class="property-optional"
+{{% /md %}}</dd><dt class="property-optional"
             title="Optional">
         <span id="state_istemplate_nodejs">
 <a href="#state_istemplate_nodejs" style="color: inherit; text-decoration: inherit;">is<wbr>Template</a>
@@ -1141,8 +1023,7 @@ established to this database. `-1` (the default) means no limit.
     <dd>{{% md %}}If `true`, then this database can be cloned by any
 user with `CREATEDB` privileges; if `false` (the default), then only
 superusers or the owner of the database can clone it.
-{{% /md %}}</dd>
-    <dt class="property-optional"
+{{% /md %}}</dd><dt class="property-optional"
             title="Optional">
         <span id="state_lccollate_nodejs">
 <a href="#state_lccollate_nodejs" style="color: inherit; text-decoration: inherit;">lc<wbr>Collate</a>
@@ -1151,8 +1032,7 @@ superusers or the owner of the database can clone it.
         <span class="property-type">string</span>
     </dt>
     <dd>{{% md %}}Collation order (LC_COLLATE) to use in the new database
-{{% /md %}}</dd>
-    <dt class="property-optional"
+{{% /md %}}</dd><dt class="property-optional"
             title="Optional">
         <span id="state_lcctype_nodejs">
 <a href="#state_lcctype_nodejs" style="color: inherit; text-decoration: inherit;">lc<wbr>Ctype</a>
@@ -1161,8 +1041,7 @@ superusers or the owner of the database can clone it.
         <span class="property-type">string</span>
     </dt>
     <dd>{{% md %}}Character classification (LC_CTYPE) to use in the new database
-{{% /md %}}</dd>
-    <dt class="property-optional"
+{{% /md %}}</dd><dt class="property-optional"
             title="Optional">
         <span id="state_name_nodejs">
 <a href="#state_name_nodejs" style="color: inherit; text-decoration: inherit;">name</a>
@@ -1172,8 +1051,7 @@ superusers or the owner of the database can clone it.
     </dt>
     <dd>{{% md %}}The name of the database. Must be unique on the PostgreSQL
 server instance where it is configured.
-{{% /md %}}</dd>
-    <dt class="property-optional"
+{{% /md %}}</dd><dt class="property-optional"
             title="Optional">
         <span id="state_owner_nodejs">
 <a href="#state_owner_nodejs" style="color: inherit; text-decoration: inherit;">owner</a>
@@ -1186,8 +1064,7 @@ server instance where it is configured.
 create a database owned by another role or to change the owner of an existing
 database, you must be a direct or indirect member of the specified role, or
 the username in the provider is a superuser.
-{{% /md %}}</dd>
-    <dt class="property-optional"
+{{% /md %}}</dd><dt class="property-optional"
             title="Optional">
         <span id="state_tablespacename_nodejs">
 <a href="#state_tablespacename_nodejs" style="color: inherit; text-decoration: inherit;">tablespace<wbr>Name</a>
@@ -1199,8 +1076,7 @@ the username in the provider is a superuser.
 associated with the database, or `DEFAULT` to use the template database's
 tablespace.  This tablespace will be the default tablespace used for objects
 created in this database.
-{{% /md %}}</dd>
-    <dt class="property-optional"
+{{% /md %}}</dd><dt class="property-optional"
             title="Optional">
         <span id="state_template_nodejs">
 <a href="#state_template_nodejs" style="color: inherit; text-decoration: inherit;">template</a>
@@ -1209,14 +1085,11 @@ created in this database.
         <span class="property-type">string</span>
     </dt>
     <dd>{{% md %}}The name of the template from which to create the new database
-{{% /md %}}</dd>
-</dl>
+{{% /md %}}</dd></dl>
 {{% /choosable %}}
 
 {{% choosable language python %}}
-<dl class="resources-properties">
-
-    <dt class="property-optional"
+<dl class="resources-properties"><dt class="property-optional"
             title="Optional">
         <span id="state_allow_connections_python">
 <a href="#state_allow_connections_python" style="color: inherit; text-decoration: inherit;">allow_<wbr>connections</a>
@@ -1227,8 +1100,7 @@ created in this database.
     <dd>{{% md %}}If `false` then no one can connect to this
 database. The default is `true`, allowing connections (except as restricted by
 other mechanisms, such as `GRANT` or `REVOKE CONNECT`).
-{{% /md %}}</dd>
-    <dt class="property-optional"
+{{% /md %}}</dd><dt class="property-optional"
             title="Optional">
         <span id="state_connection_limit_python">
 <a href="#state_connection_limit_python" style="color: inherit; text-decoration: inherit;">connection_<wbr>limit</a>
@@ -1238,8 +1110,7 @@ other mechanisms, such as `GRANT` or `REVOKE CONNECT`).
     </dt>
     <dd>{{% md %}}How many concurrent connections can be
 established to this database. `-1` (the default) means no limit.
-{{% /md %}}</dd>
-    <dt class="property-optional"
+{{% /md %}}</dd><dt class="property-optional"
             title="Optional">
         <span id="state_encoding_python">
 <a href="#state_encoding_python" style="color: inherit; text-decoration: inherit;">encoding</a>
@@ -1248,8 +1119,7 @@ established to this database. `-1` (the default) means no limit.
         <span class="property-type">str</span>
     </dt>
     <dd>{{% md %}}Character set encoding to use in the new database
-{{% /md %}}</dd>
-    <dt class="property-optional"
+{{% /md %}}</dd><dt class="property-optional"
             title="Optional">
         <span id="state_is_template_python">
 <a href="#state_is_template_python" style="color: inherit; text-decoration: inherit;">is_<wbr>template</a>
@@ -1260,8 +1130,7 @@ established to this database. `-1` (the default) means no limit.
     <dd>{{% md %}}If `true`, then this database can be cloned by any
 user with `CREATEDB` privileges; if `false` (the default), then only
 superusers or the owner of the database can clone it.
-{{% /md %}}</dd>
-    <dt class="property-optional"
+{{% /md %}}</dd><dt class="property-optional"
             title="Optional">
         <span id="state_lc_collate_python">
 <a href="#state_lc_collate_python" style="color: inherit; text-decoration: inherit;">lc_<wbr>collate</a>
@@ -1270,8 +1139,7 @@ superusers or the owner of the database can clone it.
         <span class="property-type">str</span>
     </dt>
     <dd>{{% md %}}Collation order (LC_COLLATE) to use in the new database
-{{% /md %}}</dd>
-    <dt class="property-optional"
+{{% /md %}}</dd><dt class="property-optional"
             title="Optional">
         <span id="state_lc_ctype_python">
 <a href="#state_lc_ctype_python" style="color: inherit; text-decoration: inherit;">lc_<wbr>ctype</a>
@@ -1280,8 +1148,7 @@ superusers or the owner of the database can clone it.
         <span class="property-type">str</span>
     </dt>
     <dd>{{% md %}}Character classification (LC_CTYPE) to use in the new database
-{{% /md %}}</dd>
-    <dt class="property-optional"
+{{% /md %}}</dd><dt class="property-optional"
             title="Optional">
         <span id="state_name_python">
 <a href="#state_name_python" style="color: inherit; text-decoration: inherit;">name</a>
@@ -1291,8 +1158,7 @@ superusers or the owner of the database can clone it.
     </dt>
     <dd>{{% md %}}The name of the database. Must be unique on the PostgreSQL
 server instance where it is configured.
-{{% /md %}}</dd>
-    <dt class="property-optional"
+{{% /md %}}</dd><dt class="property-optional"
             title="Optional">
         <span id="state_owner_python">
 <a href="#state_owner_python" style="color: inherit; text-decoration: inherit;">owner</a>
@@ -1305,8 +1171,7 @@ server instance where it is configured.
 create a database owned by another role or to change the owner of an existing
 database, you must be a direct or indirect member of the specified role, or
 the username in the provider is a superuser.
-{{% /md %}}</dd>
-    <dt class="property-optional"
+{{% /md %}}</dd><dt class="property-optional"
             title="Optional">
         <span id="state_tablespace_name_python">
 <a href="#state_tablespace_name_python" style="color: inherit; text-decoration: inherit;">tablespace_<wbr>name</a>
@@ -1318,8 +1183,7 @@ the username in the provider is a superuser.
 associated with the database, or `DEFAULT` to use the template database's
 tablespace.  This tablespace will be the default tablespace used for objects
 created in this database.
-{{% /md %}}</dd>
-    <dt class="property-optional"
+{{% /md %}}</dd><dt class="property-optional"
             title="Optional">
         <span id="state_template_python">
 <a href="#state_template_python" style="color: inherit; text-decoration: inherit;">template</a>
@@ -1328,8 +1192,7 @@ created in this database.
         <span class="property-type">str</span>
     </dt>
     <dd>{{% md %}}The name of the template from which to create the new database
-{{% /md %}}</dd>
-</dl>
+{{% /md %}}</dd></dl>
 {{% /choosable %}}
 
 
@@ -1345,6 +1208,6 @@ created in this database.
 	<dt>License</dt>
 	<dd>Apache-2.0</dd>
 	<dt>Notes</dt>
-	<dd>This Pulumi package is based on the [`postgresql` Terraform Provider](https://github.com/terraform-providers/terraform-provider-postgresql).</dd>
+	<dd>{{% md %}}This Pulumi package is based on the [`postgresql` Terraform Provider](https://github.com/terraform-providers/terraform-provider-postgresql).{{% /md %}}</dd>
 </dl>
 

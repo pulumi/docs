@@ -126,11 +126,17 @@ func main() {
 You can also find a specific Prefix List using the `aws.ec2.getPrefixList` data source.
 
 {{% examples %}}
+
 ## Example Usage
 
 {{< chooser language "typescript,python,go,csharp" / >}}
 
-{{% example csharp %}}
+
+
+
+
+{{< example csharp >}}
+
 ```csharp
 using Pulumi;
 using Aws = Pulumi.Aws;
@@ -156,13 +162,19 @@ class MyStack : Stack
 }
 ```
 
-{{% /example %}}
 
-{{% example go %}}
+{{< /example >}}
+
+
+{{< example go >}}
+
 Coming soon!
-{{% /example %}}
 
-{{% example python %}}
+{{< /example >}}
+
+
+{{< example python >}}
+
 ```python
 import pulumi
 import pulumi_aws as aws
@@ -176,9 +188,12 @@ example = aws.ec2.SecurityGroupRule("example",
     security_group_id="sg-123456")
 ```
 
-{{% /example %}}
 
-{{% example typescript %}}
+{{< /example >}}
+
+
+{{< example typescript >}}
+
 
 ```typescript
 import * as pulumi from "@pulumi/pulumi";
@@ -194,9 +209,16 @@ const example = new aws.ec2.SecurityGroupRule("example", {
 });
 ```
 
-{{% /example %}}
+
+{{< /example >}}
+
+
+
+
 
 {{% /examples %}}
+
+
 
 
 ## Create a SecurityGroupRule Resource {#create}
@@ -221,9 +243,7 @@ const example = new aws.ec2.SecurityGroupRule("example", {
 
 {{% choosable language nodejs %}}
 
-<dl class="resources-properties">
-  
-    <dt
+<dl class="resources-properties"><dt
         class="property-required" title="Required">
         <span>name</span>
         <span class="property-indicator"></span>
@@ -231,9 +251,7 @@ const example = new aws.ec2.SecurityGroupRule("example", {
     </dt>
     <dd>
       The unique name of the resource.
-    </dd>
-  
-    <dt
+    </dd><dt
         class="property-required" title="Required">
         <span>args</span>
         <span class="property-indicator"></span>
@@ -241,9 +259,7 @@ const example = new aws.ec2.SecurityGroupRule("example", {
     </dt>
     <dd>
       The arguments to resource properties.
-    </dd>
-  
-    <dt
+    </dd><dt
         class="property-optional" title="Optional">
         <span>opts</span>
         <span class="property-indicator"></span>
@@ -251,10 +267,7 @@ const example = new aws.ec2.SecurityGroupRule("example", {
     </dt>
     <dd>
       Bag of options to control resource&#39;s behavior.
-    </dd>
-  
-
-</dl>
+    </dd></dl>
 
 {{% /choosable %}}
 
@@ -280,9 +293,7 @@ const example = new aws.ec2.SecurityGroupRule("example", {
 
 {{% choosable language go %}}
 
-<dl class="resources-properties">
-  
-    <dt
+<dl class="resources-properties"><dt
         class="property-optional" title="Optional">
         <span>ctx</span>
         <span class="property-indicator"></span>
@@ -290,9 +301,7 @@ const example = new aws.ec2.SecurityGroupRule("example", {
     </dt>
     <dd>
       Context object for the current deployment.
-    </dd>
-  
-    <dt
+    </dd><dt
         class="property-required" title="Required">
         <span>name</span>
         <span class="property-indicator"></span>
@@ -300,9 +309,7 @@ const example = new aws.ec2.SecurityGroupRule("example", {
     </dt>
     <dd>
       The unique name of the resource.
-    </dd>
-  
-    <dt
+    </dd><dt
         class="property-required" title="Required">
         <span>args</span>
         <span class="property-indicator"></span>
@@ -310,9 +317,7 @@ const example = new aws.ec2.SecurityGroupRule("example", {
     </dt>
     <dd>
       The arguments to resource properties.
-    </dd>
-  
-    <dt
+    </dd><dt
         class="property-optional" title="Optional">
         <span>opts</span>
         <span class="property-indicator"></span>
@@ -320,18 +325,13 @@ const example = new aws.ec2.SecurityGroupRule("example", {
     </dt>
     <dd>
       Bag of options to control resource&#39;s behavior.
-    </dd>
-  
-
-</dl>
+    </dd></dl>
 
 {{% /choosable %}}
 
 {{% choosable language csharp %}}
 
-<dl class="resources-properties">
-  
-    <dt
+<dl class="resources-properties"><dt
         class="property-required" title="Required">
         <span>name</span>
         <span class="property-indicator"></span>
@@ -339,9 +339,7 @@ const example = new aws.ec2.SecurityGroupRule("example", {
     </dt>
     <dd>
       The unique name of the resource.
-    </dd>
-  
-    <dt
+    </dd><dt
         class="property-required" title="Required">
         <span>args</span>
         <span class="property-indicator"></span>
@@ -349,9 +347,7 @@ const example = new aws.ec2.SecurityGroupRule("example", {
     </dt>
     <dd>
       The arguments to resource properties.
-    </dd>
-  
-    <dt
+    </dd><dt
         class="property-optional" title="Optional">
         <span>opts</span>
         <span class="property-indicator"></span>
@@ -359,10 +355,7 @@ const example = new aws.ec2.SecurityGroupRule("example", {
     </dt>
     <dd>
       Bag of options to control resource&#39;s behavior.
-    </dd>
-  
-
-</dl>
+    </dd></dl>
 
 {{% /choosable %}}
 
@@ -377,9 +370,7 @@ The SecurityGroupRule resource accepts the following [input]({{< relref "/docs/i
 
 
 {{% choosable language csharp %}}
-<dl class="resources-properties">
-
-    <dt class="property-required"
+<dl class="resources-properties"><dt class="property-required"
             title="Required">
         <span id="fromport_csharp">
 <a href="#fromport_csharp" style="color: inherit; text-decoration: inherit;">From<wbr>Port</a>
@@ -388,8 +379,7 @@ The SecurityGroupRule resource accepts the following [input]({{< relref "/docs/i
         <span class="property-type">int</span>
     </dt>
     <dd>{{% md %}}The start port (or ICMP type number if protocol is "icmp" or "icmpv6").
-{{% /md %}}</dd>
-    <dt class="property-required"
+{{% /md %}}</dd><dt class="property-required"
             title="Required">
         <span id="protocol_csharp">
 <a href="#protocol_csharp" style="color: inherit; text-decoration: inherit;">Protocol</a>
@@ -398,8 +388,7 @@ The SecurityGroupRule resource accepts the following [input]({{< relref "/docs/i
         <span class="property-type">string | <a href="#protocoltype">Pulumi.<wbr>Aws.<wbr>Ec2.<wbr>Protocol<wbr>Type</a></span>
     </dt>
     <dd>{{% md %}}The protocol. If not icmp, icmpv6, tcp, udp, or all use the [protocol number](https://www.iana.org/assignments/protocol-numbers/protocol-numbers.xhtml)
-{{% /md %}}</dd>
-    <dt class="property-required"
+{{% /md %}}</dd><dt class="property-required"
             title="Required">
         <span id="securitygroupid_csharp">
 <a href="#securitygroupid_csharp" style="color: inherit; text-decoration: inherit;">Security<wbr>Group<wbr>Id</a>
@@ -408,8 +397,7 @@ The SecurityGroupRule resource accepts the following [input]({{< relref "/docs/i
         <span class="property-type">string</span>
     </dt>
     <dd>{{% md %}}The security group to apply this rule to.
-{{% /md %}}</dd>
-    <dt class="property-required"
+{{% /md %}}</dd><dt class="property-required"
             title="Required">
         <span id="toport_csharp">
 <a href="#toport_csharp" style="color: inherit; text-decoration: inherit;">To<wbr>Port</a>
@@ -418,8 +406,7 @@ The SecurityGroupRule resource accepts the following [input]({{< relref "/docs/i
         <span class="property-type">int</span>
     </dt>
     <dd>{{% md %}}The end port (or ICMP code if protocol is "icmp").
-{{% /md %}}</dd>
-    <dt class="property-required"
+{{% /md %}}</dd><dt class="property-required"
             title="Required">
         <span id="type_csharp">
 <a href="#type_csharp" style="color: inherit; text-decoration: inherit;">Type</a>
@@ -429,8 +416,7 @@ The SecurityGroupRule resource accepts the following [input]({{< relref "/docs/i
     </dt>
     <dd>{{% md %}}The type of rule being created. Valid options are `ingress` (inbound)
 or `egress` (outbound).
-{{% /md %}}</dd>
-    <dt class="property-optional"
+{{% /md %}}</dd><dt class="property-optional"
             title="Optional">
         <span id="cidrblocks_csharp">
 <a href="#cidrblocks_csharp" style="color: inherit; text-decoration: inherit;">Cidr<wbr>Blocks</a>
@@ -439,8 +425,7 @@ or `egress` (outbound).
         <span class="property-type">List&lt;string&gt;</span>
     </dt>
     <dd>{{% md %}}List of CIDR blocks. Cannot be specified with `source_security_group_id`.
-{{% /md %}}</dd>
-    <dt class="property-optional"
+{{% /md %}}</dd><dt class="property-optional"
             title="Optional">
         <span id="description_csharp">
 <a href="#description_csharp" style="color: inherit; text-decoration: inherit;">Description</a>
@@ -449,8 +434,7 @@ or `egress` (outbound).
         <span class="property-type">string</span>
     </dt>
     <dd>{{% md %}}Description of the rule.
-{{% /md %}}</dd>
-    <dt class="property-optional"
+{{% /md %}}</dd><dt class="property-optional"
             title="Optional">
         <span id="ipv6cidrblocks_csharp">
 <a href="#ipv6cidrblocks_csharp" style="color: inherit; text-decoration: inherit;">Ipv6Cidr<wbr>Blocks</a>
@@ -459,8 +443,7 @@ or `egress` (outbound).
         <span class="property-type">List&lt;string&gt;</span>
     </dt>
     <dd>{{% md %}}List of IPv6 CIDR blocks.
-{{% /md %}}</dd>
-    <dt class="property-optional"
+{{% /md %}}</dd><dt class="property-optional"
             title="Optional">
         <span id="prefixlistids_csharp">
 <a href="#prefixlistids_csharp" style="color: inherit; text-decoration: inherit;">Prefix<wbr>List<wbr>Ids</a>
@@ -469,8 +452,7 @@ or `egress` (outbound).
         <span class="property-type">List&lt;string&gt;</span>
     </dt>
     <dd>{{% md %}}List of Prefix List IDs.
-{{% /md %}}</dd>
-    <dt class="property-optional"
+{{% /md %}}</dd><dt class="property-optional"
             title="Optional">
         <span id="self_csharp">
 <a href="#self_csharp" style="color: inherit; text-decoration: inherit;">Self</a>
@@ -480,8 +462,7 @@ or `egress` (outbound).
     </dt>
     <dd>{{% md %}}If true, the security group itself will be added as
 a source to this ingress rule. Cannot be specified with `source_security_group_id`.
-{{% /md %}}</dd>
-    <dt class="property-optional"
+{{% /md %}}</dd><dt class="property-optional"
             title="Optional">
         <span id="sourcesecuritygroupid_csharp">
 <a href="#sourcesecuritygroupid_csharp" style="color: inherit; text-decoration: inherit;">Source<wbr>Security<wbr>Group<wbr>Id</a>
@@ -491,14 +472,11 @@ a source to this ingress rule. Cannot be specified with `source_security_group_i
     </dt>
     <dd>{{% md %}}The security group id to allow access to/from,
 depending on the `type`. Cannot be specified with `cidr_blocks` and `self`.
-{{% /md %}}</dd>
-</dl>
+{{% /md %}}</dd></dl>
 {{% /choosable %}}
 
 {{% choosable language go %}}
-<dl class="resources-properties">
-
-    <dt class="property-required"
+<dl class="resources-properties"><dt class="property-required"
             title="Required">
         <span id="fromport_go">
 <a href="#fromport_go" style="color: inherit; text-decoration: inherit;">From<wbr>Port</a>
@@ -507,8 +485,7 @@ depending on the `type`. Cannot be specified with `cidr_blocks` and `self`.
         <span class="property-type">int</span>
     </dt>
     <dd>{{% md %}}The start port (or ICMP type number if protocol is "icmp" or "icmpv6").
-{{% /md %}}</dd>
-    <dt class="property-required"
+{{% /md %}}</dd><dt class="property-required"
             title="Required">
         <span id="protocol_go">
 <a href="#protocol_go" style="color: inherit; text-decoration: inherit;">Protocol</a>
@@ -517,8 +494,7 @@ depending on the `type`. Cannot be specified with `cidr_blocks` and `self`.
         <span class="property-type">string | <a href="#protocoltype">Protocol<wbr>Type</a></span>
     </dt>
     <dd>{{% md %}}The protocol. If not icmp, icmpv6, tcp, udp, or all use the [protocol number](https://www.iana.org/assignments/protocol-numbers/protocol-numbers.xhtml)
-{{% /md %}}</dd>
-    <dt class="property-required"
+{{% /md %}}</dd><dt class="property-required"
             title="Required">
         <span id="securitygroupid_go">
 <a href="#securitygroupid_go" style="color: inherit; text-decoration: inherit;">Security<wbr>Group<wbr>Id</a>
@@ -527,8 +503,7 @@ depending on the `type`. Cannot be specified with `cidr_blocks` and `self`.
         <span class="property-type">string</span>
     </dt>
     <dd>{{% md %}}The security group to apply this rule to.
-{{% /md %}}</dd>
-    <dt class="property-required"
+{{% /md %}}</dd><dt class="property-required"
             title="Required">
         <span id="toport_go">
 <a href="#toport_go" style="color: inherit; text-decoration: inherit;">To<wbr>Port</a>
@@ -537,8 +512,7 @@ depending on the `type`. Cannot be specified with `cidr_blocks` and `self`.
         <span class="property-type">int</span>
     </dt>
     <dd>{{% md %}}The end port (or ICMP code if protocol is "icmp").
-{{% /md %}}</dd>
-    <dt class="property-required"
+{{% /md %}}</dd><dt class="property-required"
             title="Required">
         <span id="type_go">
 <a href="#type_go" style="color: inherit; text-decoration: inherit;">Type</a>
@@ -548,8 +522,7 @@ depending on the `type`. Cannot be specified with `cidr_blocks` and `self`.
     </dt>
     <dd>{{% md %}}The type of rule being created. Valid options are `ingress` (inbound)
 or `egress` (outbound).
-{{% /md %}}</dd>
-    <dt class="property-optional"
+{{% /md %}}</dd><dt class="property-optional"
             title="Optional">
         <span id="cidrblocks_go">
 <a href="#cidrblocks_go" style="color: inherit; text-decoration: inherit;">Cidr<wbr>Blocks</a>
@@ -558,8 +531,7 @@ or `egress` (outbound).
         <span class="property-type">[]string</span>
     </dt>
     <dd>{{% md %}}List of CIDR blocks. Cannot be specified with `source_security_group_id`.
-{{% /md %}}</dd>
-    <dt class="property-optional"
+{{% /md %}}</dd><dt class="property-optional"
             title="Optional">
         <span id="description_go">
 <a href="#description_go" style="color: inherit; text-decoration: inherit;">Description</a>
@@ -568,8 +540,7 @@ or `egress` (outbound).
         <span class="property-type">string</span>
     </dt>
     <dd>{{% md %}}Description of the rule.
-{{% /md %}}</dd>
-    <dt class="property-optional"
+{{% /md %}}</dd><dt class="property-optional"
             title="Optional">
         <span id="ipv6cidrblocks_go">
 <a href="#ipv6cidrblocks_go" style="color: inherit; text-decoration: inherit;">Ipv6Cidr<wbr>Blocks</a>
@@ -578,8 +549,7 @@ or `egress` (outbound).
         <span class="property-type">[]string</span>
     </dt>
     <dd>{{% md %}}List of IPv6 CIDR blocks.
-{{% /md %}}</dd>
-    <dt class="property-optional"
+{{% /md %}}</dd><dt class="property-optional"
             title="Optional">
         <span id="prefixlistids_go">
 <a href="#prefixlistids_go" style="color: inherit; text-decoration: inherit;">Prefix<wbr>List<wbr>Ids</a>
@@ -588,8 +558,7 @@ or `egress` (outbound).
         <span class="property-type">[]string</span>
     </dt>
     <dd>{{% md %}}List of Prefix List IDs.
-{{% /md %}}</dd>
-    <dt class="property-optional"
+{{% /md %}}</dd><dt class="property-optional"
             title="Optional">
         <span id="self_go">
 <a href="#self_go" style="color: inherit; text-decoration: inherit;">Self</a>
@@ -599,8 +568,7 @@ or `egress` (outbound).
     </dt>
     <dd>{{% md %}}If true, the security group itself will be added as
 a source to this ingress rule. Cannot be specified with `source_security_group_id`.
-{{% /md %}}</dd>
-    <dt class="property-optional"
+{{% /md %}}</dd><dt class="property-optional"
             title="Optional">
         <span id="sourcesecuritygroupid_go">
 <a href="#sourcesecuritygroupid_go" style="color: inherit; text-decoration: inherit;">Source<wbr>Security<wbr>Group<wbr>Id</a>
@@ -610,14 +578,11 @@ a source to this ingress rule. Cannot be specified with `source_security_group_i
     </dt>
     <dd>{{% md %}}The security group id to allow access to/from,
 depending on the `type`. Cannot be specified with `cidr_blocks` and `self`.
-{{% /md %}}</dd>
-</dl>
+{{% /md %}}</dd></dl>
 {{% /choosable %}}
 
 {{% choosable language nodejs %}}
-<dl class="resources-properties">
-
-    <dt class="property-required"
+<dl class="resources-properties"><dt class="property-required"
             title="Required">
         <span id="fromport_nodejs">
 <a href="#fromport_nodejs" style="color: inherit; text-decoration: inherit;">from<wbr>Port</a>
@@ -626,8 +591,7 @@ depending on the `type`. Cannot be specified with `cidr_blocks` and `self`.
         <span class="property-type">number</span>
     </dt>
     <dd>{{% md %}}The start port (or ICMP type number if protocol is "icmp" or "icmpv6").
-{{% /md %}}</dd>
-    <dt class="property-required"
+{{% /md %}}</dd><dt class="property-required"
             title="Required">
         <span id="protocol_nodejs">
 <a href="#protocol_nodejs" style="color: inherit; text-decoration: inherit;">protocol</a>
@@ -636,8 +600,7 @@ depending on the `type`. Cannot be specified with `cidr_blocks` and `self`.
         <span class="property-type">string | <a href="#protocoltype">Protocol<wbr>Type</a></span>
     </dt>
     <dd>{{% md %}}The protocol. If not icmp, icmpv6, tcp, udp, or all use the [protocol number](https://www.iana.org/assignments/protocol-numbers/protocol-numbers.xhtml)
-{{% /md %}}</dd>
-    <dt class="property-required"
+{{% /md %}}</dd><dt class="property-required"
             title="Required">
         <span id="securitygroupid_nodejs">
 <a href="#securitygroupid_nodejs" style="color: inherit; text-decoration: inherit;">security<wbr>Group<wbr>Id</a>
@@ -646,8 +609,7 @@ depending on the `type`. Cannot be specified with `cidr_blocks` and `self`.
         <span class="property-type">string</span>
     </dt>
     <dd>{{% md %}}The security group to apply this rule to.
-{{% /md %}}</dd>
-    <dt class="property-required"
+{{% /md %}}</dd><dt class="property-required"
             title="Required">
         <span id="toport_nodejs">
 <a href="#toport_nodejs" style="color: inherit; text-decoration: inherit;">to<wbr>Port</a>
@@ -656,8 +618,7 @@ depending on the `type`. Cannot be specified with `cidr_blocks` and `self`.
         <span class="property-type">number</span>
     </dt>
     <dd>{{% md %}}The end port (or ICMP code if protocol is "icmp").
-{{% /md %}}</dd>
-    <dt class="property-required"
+{{% /md %}}</dd><dt class="property-required"
             title="Required">
         <span id="type_nodejs">
 <a href="#type_nodejs" style="color: inherit; text-decoration: inherit;">type</a>
@@ -667,8 +628,7 @@ depending on the `type`. Cannot be specified with `cidr_blocks` and `self`.
     </dt>
     <dd>{{% md %}}The type of rule being created. Valid options are `ingress` (inbound)
 or `egress` (outbound).
-{{% /md %}}</dd>
-    <dt class="property-optional"
+{{% /md %}}</dd><dt class="property-optional"
             title="Optional">
         <span id="cidrblocks_nodejs">
 <a href="#cidrblocks_nodejs" style="color: inherit; text-decoration: inherit;">cidr<wbr>Blocks</a>
@@ -677,8 +637,7 @@ or `egress` (outbound).
         <span class="property-type">string[]</span>
     </dt>
     <dd>{{% md %}}List of CIDR blocks. Cannot be specified with `source_security_group_id`.
-{{% /md %}}</dd>
-    <dt class="property-optional"
+{{% /md %}}</dd><dt class="property-optional"
             title="Optional">
         <span id="description_nodejs">
 <a href="#description_nodejs" style="color: inherit; text-decoration: inherit;">description</a>
@@ -687,8 +646,7 @@ or `egress` (outbound).
         <span class="property-type">string</span>
     </dt>
     <dd>{{% md %}}Description of the rule.
-{{% /md %}}</dd>
-    <dt class="property-optional"
+{{% /md %}}</dd><dt class="property-optional"
             title="Optional">
         <span id="ipv6cidrblocks_nodejs">
 <a href="#ipv6cidrblocks_nodejs" style="color: inherit; text-decoration: inherit;">ipv6Cidr<wbr>Blocks</a>
@@ -697,8 +655,7 @@ or `egress` (outbound).
         <span class="property-type">string[]</span>
     </dt>
     <dd>{{% md %}}List of IPv6 CIDR blocks.
-{{% /md %}}</dd>
-    <dt class="property-optional"
+{{% /md %}}</dd><dt class="property-optional"
             title="Optional">
         <span id="prefixlistids_nodejs">
 <a href="#prefixlistids_nodejs" style="color: inherit; text-decoration: inherit;">prefix<wbr>List<wbr>Ids</a>
@@ -707,8 +664,7 @@ or `egress` (outbound).
         <span class="property-type">string[]</span>
     </dt>
     <dd>{{% md %}}List of Prefix List IDs.
-{{% /md %}}</dd>
-    <dt class="property-optional"
+{{% /md %}}</dd><dt class="property-optional"
             title="Optional">
         <span id="self_nodejs">
 <a href="#self_nodejs" style="color: inherit; text-decoration: inherit;">self</a>
@@ -718,8 +674,7 @@ or `egress` (outbound).
     </dt>
     <dd>{{% md %}}If true, the security group itself will be added as
 a source to this ingress rule. Cannot be specified with `source_security_group_id`.
-{{% /md %}}</dd>
-    <dt class="property-optional"
+{{% /md %}}</dd><dt class="property-optional"
             title="Optional">
         <span id="sourcesecuritygroupid_nodejs">
 <a href="#sourcesecuritygroupid_nodejs" style="color: inherit; text-decoration: inherit;">source<wbr>Security<wbr>Group<wbr>Id</a>
@@ -729,14 +684,11 @@ a source to this ingress rule. Cannot be specified with `source_security_group_i
     </dt>
     <dd>{{% md %}}The security group id to allow access to/from,
 depending on the `type`. Cannot be specified with `cidr_blocks` and `self`.
-{{% /md %}}</dd>
-</dl>
+{{% /md %}}</dd></dl>
 {{% /choosable %}}
 
 {{% choosable language python %}}
-<dl class="resources-properties">
-
-    <dt class="property-required"
+<dl class="resources-properties"><dt class="property-required"
             title="Required">
         <span id="from_port_python">
 <a href="#from_port_python" style="color: inherit; text-decoration: inherit;">from_<wbr>port</a>
@@ -745,8 +697,7 @@ depending on the `type`. Cannot be specified with `cidr_blocks` and `self`.
         <span class="property-type">int</span>
     </dt>
     <dd>{{% md %}}The start port (or ICMP type number if protocol is "icmp" or "icmpv6").
-{{% /md %}}</dd>
-    <dt class="property-required"
+{{% /md %}}</dd><dt class="property-required"
             title="Required">
         <span id="protocol_python">
 <a href="#protocol_python" style="color: inherit; text-decoration: inherit;">protocol</a>
@@ -755,8 +706,7 @@ depending on the `type`. Cannot be specified with `cidr_blocks` and `self`.
         <span class="property-type">str | <a href="#protocoltype">Protocol<wbr>Type</a></span>
     </dt>
     <dd>{{% md %}}The protocol. If not icmp, icmpv6, tcp, udp, or all use the [protocol number](https://www.iana.org/assignments/protocol-numbers/protocol-numbers.xhtml)
-{{% /md %}}</dd>
-    <dt class="property-required"
+{{% /md %}}</dd><dt class="property-required"
             title="Required">
         <span id="security_group_id_python">
 <a href="#security_group_id_python" style="color: inherit; text-decoration: inherit;">security_<wbr>group_<wbr>id</a>
@@ -765,8 +715,7 @@ depending on the `type`. Cannot be specified with `cidr_blocks` and `self`.
         <span class="property-type">str</span>
     </dt>
     <dd>{{% md %}}The security group to apply this rule to.
-{{% /md %}}</dd>
-    <dt class="property-required"
+{{% /md %}}</dd><dt class="property-required"
             title="Required">
         <span id="to_port_python">
 <a href="#to_port_python" style="color: inherit; text-decoration: inherit;">to_<wbr>port</a>
@@ -775,8 +724,7 @@ depending on the `type`. Cannot be specified with `cidr_blocks` and `self`.
         <span class="property-type">int</span>
     </dt>
     <dd>{{% md %}}The end port (or ICMP code if protocol is "icmp").
-{{% /md %}}</dd>
-    <dt class="property-required"
+{{% /md %}}</dd><dt class="property-required"
             title="Required">
         <span id="type_python">
 <a href="#type_python" style="color: inherit; text-decoration: inherit;">type</a>
@@ -786,8 +734,7 @@ depending on the `type`. Cannot be specified with `cidr_blocks` and `self`.
     </dt>
     <dd>{{% md %}}The type of rule being created. Valid options are `ingress` (inbound)
 or `egress` (outbound).
-{{% /md %}}</dd>
-    <dt class="property-optional"
+{{% /md %}}</dd><dt class="property-optional"
             title="Optional">
         <span id="cidr_blocks_python">
 <a href="#cidr_blocks_python" style="color: inherit; text-decoration: inherit;">cidr_<wbr>blocks</a>
@@ -796,8 +743,7 @@ or `egress` (outbound).
         <span class="property-type">Sequence[str]</span>
     </dt>
     <dd>{{% md %}}List of CIDR blocks. Cannot be specified with `source_security_group_id`.
-{{% /md %}}</dd>
-    <dt class="property-optional"
+{{% /md %}}</dd><dt class="property-optional"
             title="Optional">
         <span id="description_python">
 <a href="#description_python" style="color: inherit; text-decoration: inherit;">description</a>
@@ -806,8 +752,7 @@ or `egress` (outbound).
         <span class="property-type">str</span>
     </dt>
     <dd>{{% md %}}Description of the rule.
-{{% /md %}}</dd>
-    <dt class="property-optional"
+{{% /md %}}</dd><dt class="property-optional"
             title="Optional">
         <span id="ipv6_cidr_blocks_python">
 <a href="#ipv6_cidr_blocks_python" style="color: inherit; text-decoration: inherit;">ipv6_<wbr>cidr_<wbr>blocks</a>
@@ -816,8 +761,7 @@ or `egress` (outbound).
         <span class="property-type">Sequence[str]</span>
     </dt>
     <dd>{{% md %}}List of IPv6 CIDR blocks.
-{{% /md %}}</dd>
-    <dt class="property-optional"
+{{% /md %}}</dd><dt class="property-optional"
             title="Optional">
         <span id="prefix_list_ids_python">
 <a href="#prefix_list_ids_python" style="color: inherit; text-decoration: inherit;">prefix_<wbr>list_<wbr>ids</a>
@@ -826,8 +770,7 @@ or `egress` (outbound).
         <span class="property-type">Sequence[str]</span>
     </dt>
     <dd>{{% md %}}List of Prefix List IDs.
-{{% /md %}}</dd>
-    <dt class="property-optional"
+{{% /md %}}</dd><dt class="property-optional"
             title="Optional">
         <span id="self_python">
 <a href="#self_python" style="color: inherit; text-decoration: inherit;">self</a>
@@ -837,8 +780,7 @@ or `egress` (outbound).
     </dt>
     <dd>{{% md %}}If true, the security group itself will be added as
 a source to this ingress rule. Cannot be specified with `source_security_group_id`.
-{{% /md %}}</dd>
-    <dt class="property-optional"
+{{% /md %}}</dd><dt class="property-optional"
             title="Optional">
         <span id="source_security_group_id_python">
 <a href="#source_security_group_id_python" style="color: inherit; text-decoration: inherit;">source_<wbr>security_<wbr>group_<wbr>id</a>
@@ -848,8 +790,7 @@ a source to this ingress rule. Cannot be specified with `source_security_group_i
     </dt>
     <dd>{{% md %}}The security group id to allow access to/from,
 depending on the `type`. Cannot be specified with `cidr_blocks` and `self`.
-{{% /md %}}</dd>
-</dl>
+{{% /md %}}</dd></dl>
 {{% /choosable %}}
 
 
@@ -860,9 +801,7 @@ All [input](#inputs) properties are implicitly available as output properties. A
 
 
 {{% choosable language csharp %}}
-<dl class="resources-properties">
-
-    <dt class="property-"
+<dl class="resources-properties"><dt class="property-"
             title="">
         <span id="id_csharp">
 <a href="#id_csharp" style="color: inherit; text-decoration: inherit;">Id</a>
@@ -870,14 +809,11 @@ All [input](#inputs) properties are implicitly available as output properties. A
         <span class="property-indicator"></span>
         <span class="property-type">string</span>
     </dt>
-    <dd>{{% md %}}The provider-assigned unique ID for this managed resource.{{% /md %}}</dd>
-</dl>
+    <dd>{{% md %}}The provider-assigned unique ID for this managed resource.{{% /md %}}</dd></dl>
 {{% /choosable %}}
 
 {{% choosable language go %}}
-<dl class="resources-properties">
-
-    <dt class="property-"
+<dl class="resources-properties"><dt class="property-"
             title="">
         <span id="id_go">
 <a href="#id_go" style="color: inherit; text-decoration: inherit;">Id</a>
@@ -885,14 +821,11 @@ All [input](#inputs) properties are implicitly available as output properties. A
         <span class="property-indicator"></span>
         <span class="property-type">string</span>
     </dt>
-    <dd>{{% md %}}The provider-assigned unique ID for this managed resource.{{% /md %}}</dd>
-</dl>
+    <dd>{{% md %}}The provider-assigned unique ID for this managed resource.{{% /md %}}</dd></dl>
 {{% /choosable %}}
 
 {{% choosable language nodejs %}}
-<dl class="resources-properties">
-
-    <dt class="property-"
+<dl class="resources-properties"><dt class="property-"
             title="">
         <span id="id_nodejs">
 <a href="#id_nodejs" style="color: inherit; text-decoration: inherit;">id</a>
@@ -900,14 +833,11 @@ All [input](#inputs) properties are implicitly available as output properties. A
         <span class="property-indicator"></span>
         <span class="property-type">string</span>
     </dt>
-    <dd>{{% md %}}The provider-assigned unique ID for this managed resource.{{% /md %}}</dd>
-</dl>
+    <dd>{{% md %}}The provider-assigned unique ID for this managed resource.{{% /md %}}</dd></dl>
 {{% /choosable %}}
 
 {{% choosable language python %}}
-<dl class="resources-properties">
-
-    <dt class="property-"
+<dl class="resources-properties"><dt class="property-"
             title="">
         <span id="id_python">
 <a href="#id_python" style="color: inherit; text-decoration: inherit;">id</a>
@@ -915,8 +845,7 @@ All [input](#inputs) properties are implicitly available as output properties. A
         <span class="property-indicator"></span>
         <span class="property-type">str</span>
     </dt>
-    <dd>{{% md %}}The provider-assigned unique ID for this managed resource.{{% /md %}}</dd>
-</dl>
+    <dd>{{% md %}}The provider-assigned unique ID for this managed resource.{{% /md %}}</dd></dl>
 {{% /choosable %}}
 
 
@@ -1043,9 +972,7 @@ The following state arguments are supported:
 
 
 {{% choosable language csharp %}}
-<dl class="resources-properties">
-
-    <dt class="property-optional"
+<dl class="resources-properties"><dt class="property-optional"
             title="Optional">
         <span id="state_cidrblocks_csharp">
 <a href="#state_cidrblocks_csharp" style="color: inherit; text-decoration: inherit;">Cidr<wbr>Blocks</a>
@@ -1054,8 +981,7 @@ The following state arguments are supported:
         <span class="property-type">List&lt;string&gt;</span>
     </dt>
     <dd>{{% md %}}List of CIDR blocks. Cannot be specified with `source_security_group_id`.
-{{% /md %}}</dd>
-    <dt class="property-optional"
+{{% /md %}}</dd><dt class="property-optional"
             title="Optional">
         <span id="state_description_csharp">
 <a href="#state_description_csharp" style="color: inherit; text-decoration: inherit;">Description</a>
@@ -1064,8 +990,7 @@ The following state arguments are supported:
         <span class="property-type">string</span>
     </dt>
     <dd>{{% md %}}Description of the rule.
-{{% /md %}}</dd>
-    <dt class="property-optional"
+{{% /md %}}</dd><dt class="property-optional"
             title="Optional">
         <span id="state_fromport_csharp">
 <a href="#state_fromport_csharp" style="color: inherit; text-decoration: inherit;">From<wbr>Port</a>
@@ -1074,8 +999,7 @@ The following state arguments are supported:
         <span class="property-type">int</span>
     </dt>
     <dd>{{% md %}}The start port (or ICMP type number if protocol is "icmp" or "icmpv6").
-{{% /md %}}</dd>
-    <dt class="property-optional"
+{{% /md %}}</dd><dt class="property-optional"
             title="Optional">
         <span id="state_ipv6cidrblocks_csharp">
 <a href="#state_ipv6cidrblocks_csharp" style="color: inherit; text-decoration: inherit;">Ipv6Cidr<wbr>Blocks</a>
@@ -1084,8 +1008,7 @@ The following state arguments are supported:
         <span class="property-type">List&lt;string&gt;</span>
     </dt>
     <dd>{{% md %}}List of IPv6 CIDR blocks.
-{{% /md %}}</dd>
-    <dt class="property-optional"
+{{% /md %}}</dd><dt class="property-optional"
             title="Optional">
         <span id="state_prefixlistids_csharp">
 <a href="#state_prefixlistids_csharp" style="color: inherit; text-decoration: inherit;">Prefix<wbr>List<wbr>Ids</a>
@@ -1094,8 +1017,7 @@ The following state arguments are supported:
         <span class="property-type">List&lt;string&gt;</span>
     </dt>
     <dd>{{% md %}}List of Prefix List IDs.
-{{% /md %}}</dd>
-    <dt class="property-optional"
+{{% /md %}}</dd><dt class="property-optional"
             title="Optional">
         <span id="state_protocol_csharp">
 <a href="#state_protocol_csharp" style="color: inherit; text-decoration: inherit;">Protocol</a>
@@ -1104,8 +1026,7 @@ The following state arguments are supported:
         <span class="property-type">string | <a href="#protocoltype">Pulumi.<wbr>Aws.<wbr>Ec2.<wbr>Protocol<wbr>Type</a></span>
     </dt>
     <dd>{{% md %}}The protocol. If not icmp, icmpv6, tcp, udp, or all use the [protocol number](https://www.iana.org/assignments/protocol-numbers/protocol-numbers.xhtml)
-{{% /md %}}</dd>
-    <dt class="property-optional"
+{{% /md %}}</dd><dt class="property-optional"
             title="Optional">
         <span id="state_securitygroupid_csharp">
 <a href="#state_securitygroupid_csharp" style="color: inherit; text-decoration: inherit;">Security<wbr>Group<wbr>Id</a>
@@ -1114,8 +1035,7 @@ The following state arguments are supported:
         <span class="property-type">string</span>
     </dt>
     <dd>{{% md %}}The security group to apply this rule to.
-{{% /md %}}</dd>
-    <dt class="property-optional"
+{{% /md %}}</dd><dt class="property-optional"
             title="Optional">
         <span id="state_self_csharp">
 <a href="#state_self_csharp" style="color: inherit; text-decoration: inherit;">Self</a>
@@ -1125,8 +1045,7 @@ The following state arguments are supported:
     </dt>
     <dd>{{% md %}}If true, the security group itself will be added as
 a source to this ingress rule. Cannot be specified with `source_security_group_id`.
-{{% /md %}}</dd>
-    <dt class="property-optional"
+{{% /md %}}</dd><dt class="property-optional"
             title="Optional">
         <span id="state_sourcesecuritygroupid_csharp">
 <a href="#state_sourcesecuritygroupid_csharp" style="color: inherit; text-decoration: inherit;">Source<wbr>Security<wbr>Group<wbr>Id</a>
@@ -1136,8 +1055,7 @@ a source to this ingress rule. Cannot be specified with `source_security_group_i
     </dt>
     <dd>{{% md %}}The security group id to allow access to/from,
 depending on the `type`. Cannot be specified with `cidr_blocks` and `self`.
-{{% /md %}}</dd>
-    <dt class="property-optional"
+{{% /md %}}</dd><dt class="property-optional"
             title="Optional">
         <span id="state_toport_csharp">
 <a href="#state_toport_csharp" style="color: inherit; text-decoration: inherit;">To<wbr>Port</a>
@@ -1146,8 +1064,7 @@ depending on the `type`. Cannot be specified with `cidr_blocks` and `self`.
         <span class="property-type">int</span>
     </dt>
     <dd>{{% md %}}The end port (or ICMP code if protocol is "icmp").
-{{% /md %}}</dd>
-    <dt class="property-optional"
+{{% /md %}}</dd><dt class="property-optional"
             title="Optional">
         <span id="state_type_csharp">
 <a href="#state_type_csharp" style="color: inherit; text-decoration: inherit;">Type</a>
@@ -1157,14 +1074,11 @@ depending on the `type`. Cannot be specified with `cidr_blocks` and `self`.
     </dt>
     <dd>{{% md %}}The type of rule being created. Valid options are `ingress` (inbound)
 or `egress` (outbound).
-{{% /md %}}</dd>
-</dl>
+{{% /md %}}</dd></dl>
 {{% /choosable %}}
 
 {{% choosable language go %}}
-<dl class="resources-properties">
-
-    <dt class="property-optional"
+<dl class="resources-properties"><dt class="property-optional"
             title="Optional">
         <span id="state_cidrblocks_go">
 <a href="#state_cidrblocks_go" style="color: inherit; text-decoration: inherit;">Cidr<wbr>Blocks</a>
@@ -1173,8 +1087,7 @@ or `egress` (outbound).
         <span class="property-type">[]string</span>
     </dt>
     <dd>{{% md %}}List of CIDR blocks. Cannot be specified with `source_security_group_id`.
-{{% /md %}}</dd>
-    <dt class="property-optional"
+{{% /md %}}</dd><dt class="property-optional"
             title="Optional">
         <span id="state_description_go">
 <a href="#state_description_go" style="color: inherit; text-decoration: inherit;">Description</a>
@@ -1183,8 +1096,7 @@ or `egress` (outbound).
         <span class="property-type">string</span>
     </dt>
     <dd>{{% md %}}Description of the rule.
-{{% /md %}}</dd>
-    <dt class="property-optional"
+{{% /md %}}</dd><dt class="property-optional"
             title="Optional">
         <span id="state_fromport_go">
 <a href="#state_fromport_go" style="color: inherit; text-decoration: inherit;">From<wbr>Port</a>
@@ -1193,8 +1105,7 @@ or `egress` (outbound).
         <span class="property-type">int</span>
     </dt>
     <dd>{{% md %}}The start port (or ICMP type number if protocol is "icmp" or "icmpv6").
-{{% /md %}}</dd>
-    <dt class="property-optional"
+{{% /md %}}</dd><dt class="property-optional"
             title="Optional">
         <span id="state_ipv6cidrblocks_go">
 <a href="#state_ipv6cidrblocks_go" style="color: inherit; text-decoration: inherit;">Ipv6Cidr<wbr>Blocks</a>
@@ -1203,8 +1114,7 @@ or `egress` (outbound).
         <span class="property-type">[]string</span>
     </dt>
     <dd>{{% md %}}List of IPv6 CIDR blocks.
-{{% /md %}}</dd>
-    <dt class="property-optional"
+{{% /md %}}</dd><dt class="property-optional"
             title="Optional">
         <span id="state_prefixlistids_go">
 <a href="#state_prefixlistids_go" style="color: inherit; text-decoration: inherit;">Prefix<wbr>List<wbr>Ids</a>
@@ -1213,8 +1123,7 @@ or `egress` (outbound).
         <span class="property-type">[]string</span>
     </dt>
     <dd>{{% md %}}List of Prefix List IDs.
-{{% /md %}}</dd>
-    <dt class="property-optional"
+{{% /md %}}</dd><dt class="property-optional"
             title="Optional">
         <span id="state_protocol_go">
 <a href="#state_protocol_go" style="color: inherit; text-decoration: inherit;">Protocol</a>
@@ -1223,8 +1132,7 @@ or `egress` (outbound).
         <span class="property-type">string | <a href="#protocoltype">Protocol<wbr>Type</a></span>
     </dt>
     <dd>{{% md %}}The protocol. If not icmp, icmpv6, tcp, udp, or all use the [protocol number](https://www.iana.org/assignments/protocol-numbers/protocol-numbers.xhtml)
-{{% /md %}}</dd>
-    <dt class="property-optional"
+{{% /md %}}</dd><dt class="property-optional"
             title="Optional">
         <span id="state_securitygroupid_go">
 <a href="#state_securitygroupid_go" style="color: inherit; text-decoration: inherit;">Security<wbr>Group<wbr>Id</a>
@@ -1233,8 +1141,7 @@ or `egress` (outbound).
         <span class="property-type">string</span>
     </dt>
     <dd>{{% md %}}The security group to apply this rule to.
-{{% /md %}}</dd>
-    <dt class="property-optional"
+{{% /md %}}</dd><dt class="property-optional"
             title="Optional">
         <span id="state_self_go">
 <a href="#state_self_go" style="color: inherit; text-decoration: inherit;">Self</a>
@@ -1244,8 +1151,7 @@ or `egress` (outbound).
     </dt>
     <dd>{{% md %}}If true, the security group itself will be added as
 a source to this ingress rule. Cannot be specified with `source_security_group_id`.
-{{% /md %}}</dd>
-    <dt class="property-optional"
+{{% /md %}}</dd><dt class="property-optional"
             title="Optional">
         <span id="state_sourcesecuritygroupid_go">
 <a href="#state_sourcesecuritygroupid_go" style="color: inherit; text-decoration: inherit;">Source<wbr>Security<wbr>Group<wbr>Id</a>
@@ -1255,8 +1161,7 @@ a source to this ingress rule. Cannot be specified with `source_security_group_i
     </dt>
     <dd>{{% md %}}The security group id to allow access to/from,
 depending on the `type`. Cannot be specified with `cidr_blocks` and `self`.
-{{% /md %}}</dd>
-    <dt class="property-optional"
+{{% /md %}}</dd><dt class="property-optional"
             title="Optional">
         <span id="state_toport_go">
 <a href="#state_toport_go" style="color: inherit; text-decoration: inherit;">To<wbr>Port</a>
@@ -1265,8 +1170,7 @@ depending on the `type`. Cannot be specified with `cidr_blocks` and `self`.
         <span class="property-type">int</span>
     </dt>
     <dd>{{% md %}}The end port (or ICMP code if protocol is "icmp").
-{{% /md %}}</dd>
-    <dt class="property-optional"
+{{% /md %}}</dd><dt class="property-optional"
             title="Optional">
         <span id="state_type_go">
 <a href="#state_type_go" style="color: inherit; text-decoration: inherit;">Type</a>
@@ -1276,14 +1180,11 @@ depending on the `type`. Cannot be specified with `cidr_blocks` and `self`.
     </dt>
     <dd>{{% md %}}The type of rule being created. Valid options are `ingress` (inbound)
 or `egress` (outbound).
-{{% /md %}}</dd>
-</dl>
+{{% /md %}}</dd></dl>
 {{% /choosable %}}
 
 {{% choosable language nodejs %}}
-<dl class="resources-properties">
-
-    <dt class="property-optional"
+<dl class="resources-properties"><dt class="property-optional"
             title="Optional">
         <span id="state_cidrblocks_nodejs">
 <a href="#state_cidrblocks_nodejs" style="color: inherit; text-decoration: inherit;">cidr<wbr>Blocks</a>
@@ -1292,8 +1193,7 @@ or `egress` (outbound).
         <span class="property-type">string[]</span>
     </dt>
     <dd>{{% md %}}List of CIDR blocks. Cannot be specified with `source_security_group_id`.
-{{% /md %}}</dd>
-    <dt class="property-optional"
+{{% /md %}}</dd><dt class="property-optional"
             title="Optional">
         <span id="state_description_nodejs">
 <a href="#state_description_nodejs" style="color: inherit; text-decoration: inherit;">description</a>
@@ -1302,8 +1202,7 @@ or `egress` (outbound).
         <span class="property-type">string</span>
     </dt>
     <dd>{{% md %}}Description of the rule.
-{{% /md %}}</dd>
-    <dt class="property-optional"
+{{% /md %}}</dd><dt class="property-optional"
             title="Optional">
         <span id="state_fromport_nodejs">
 <a href="#state_fromport_nodejs" style="color: inherit; text-decoration: inherit;">from<wbr>Port</a>
@@ -1312,8 +1211,7 @@ or `egress` (outbound).
         <span class="property-type">number</span>
     </dt>
     <dd>{{% md %}}The start port (or ICMP type number if protocol is "icmp" or "icmpv6").
-{{% /md %}}</dd>
-    <dt class="property-optional"
+{{% /md %}}</dd><dt class="property-optional"
             title="Optional">
         <span id="state_ipv6cidrblocks_nodejs">
 <a href="#state_ipv6cidrblocks_nodejs" style="color: inherit; text-decoration: inherit;">ipv6Cidr<wbr>Blocks</a>
@@ -1322,8 +1220,7 @@ or `egress` (outbound).
         <span class="property-type">string[]</span>
     </dt>
     <dd>{{% md %}}List of IPv6 CIDR blocks.
-{{% /md %}}</dd>
-    <dt class="property-optional"
+{{% /md %}}</dd><dt class="property-optional"
             title="Optional">
         <span id="state_prefixlistids_nodejs">
 <a href="#state_prefixlistids_nodejs" style="color: inherit; text-decoration: inherit;">prefix<wbr>List<wbr>Ids</a>
@@ -1332,8 +1229,7 @@ or `egress` (outbound).
         <span class="property-type">string[]</span>
     </dt>
     <dd>{{% md %}}List of Prefix List IDs.
-{{% /md %}}</dd>
-    <dt class="property-optional"
+{{% /md %}}</dd><dt class="property-optional"
             title="Optional">
         <span id="state_protocol_nodejs">
 <a href="#state_protocol_nodejs" style="color: inherit; text-decoration: inherit;">protocol</a>
@@ -1342,8 +1238,7 @@ or `egress` (outbound).
         <span class="property-type">string | <a href="#protocoltype">Protocol<wbr>Type</a></span>
     </dt>
     <dd>{{% md %}}The protocol. If not icmp, icmpv6, tcp, udp, or all use the [protocol number](https://www.iana.org/assignments/protocol-numbers/protocol-numbers.xhtml)
-{{% /md %}}</dd>
-    <dt class="property-optional"
+{{% /md %}}</dd><dt class="property-optional"
             title="Optional">
         <span id="state_securitygroupid_nodejs">
 <a href="#state_securitygroupid_nodejs" style="color: inherit; text-decoration: inherit;">security<wbr>Group<wbr>Id</a>
@@ -1352,8 +1247,7 @@ or `egress` (outbound).
         <span class="property-type">string</span>
     </dt>
     <dd>{{% md %}}The security group to apply this rule to.
-{{% /md %}}</dd>
-    <dt class="property-optional"
+{{% /md %}}</dd><dt class="property-optional"
             title="Optional">
         <span id="state_self_nodejs">
 <a href="#state_self_nodejs" style="color: inherit; text-decoration: inherit;">self</a>
@@ -1363,8 +1257,7 @@ or `egress` (outbound).
     </dt>
     <dd>{{% md %}}If true, the security group itself will be added as
 a source to this ingress rule. Cannot be specified with `source_security_group_id`.
-{{% /md %}}</dd>
-    <dt class="property-optional"
+{{% /md %}}</dd><dt class="property-optional"
             title="Optional">
         <span id="state_sourcesecuritygroupid_nodejs">
 <a href="#state_sourcesecuritygroupid_nodejs" style="color: inherit; text-decoration: inherit;">source<wbr>Security<wbr>Group<wbr>Id</a>
@@ -1374,8 +1267,7 @@ a source to this ingress rule. Cannot be specified with `source_security_group_i
     </dt>
     <dd>{{% md %}}The security group id to allow access to/from,
 depending on the `type`. Cannot be specified with `cidr_blocks` and `self`.
-{{% /md %}}</dd>
-    <dt class="property-optional"
+{{% /md %}}</dd><dt class="property-optional"
             title="Optional">
         <span id="state_toport_nodejs">
 <a href="#state_toport_nodejs" style="color: inherit; text-decoration: inherit;">to<wbr>Port</a>
@@ -1384,8 +1276,7 @@ depending on the `type`. Cannot be specified with `cidr_blocks` and `self`.
         <span class="property-type">number</span>
     </dt>
     <dd>{{% md %}}The end port (or ICMP code if protocol is "icmp").
-{{% /md %}}</dd>
-    <dt class="property-optional"
+{{% /md %}}</dd><dt class="property-optional"
             title="Optional">
         <span id="state_type_nodejs">
 <a href="#state_type_nodejs" style="color: inherit; text-decoration: inherit;">type</a>
@@ -1395,14 +1286,11 @@ depending on the `type`. Cannot be specified with `cidr_blocks` and `self`.
     </dt>
     <dd>{{% md %}}The type of rule being created. Valid options are `ingress` (inbound)
 or `egress` (outbound).
-{{% /md %}}</dd>
-</dl>
+{{% /md %}}</dd></dl>
 {{% /choosable %}}
 
 {{% choosable language python %}}
-<dl class="resources-properties">
-
-    <dt class="property-optional"
+<dl class="resources-properties"><dt class="property-optional"
             title="Optional">
         <span id="state_cidr_blocks_python">
 <a href="#state_cidr_blocks_python" style="color: inherit; text-decoration: inherit;">cidr_<wbr>blocks</a>
@@ -1411,8 +1299,7 @@ or `egress` (outbound).
         <span class="property-type">Sequence[str]</span>
     </dt>
     <dd>{{% md %}}List of CIDR blocks. Cannot be specified with `source_security_group_id`.
-{{% /md %}}</dd>
-    <dt class="property-optional"
+{{% /md %}}</dd><dt class="property-optional"
             title="Optional">
         <span id="state_description_python">
 <a href="#state_description_python" style="color: inherit; text-decoration: inherit;">description</a>
@@ -1421,8 +1308,7 @@ or `egress` (outbound).
         <span class="property-type">str</span>
     </dt>
     <dd>{{% md %}}Description of the rule.
-{{% /md %}}</dd>
-    <dt class="property-optional"
+{{% /md %}}</dd><dt class="property-optional"
             title="Optional">
         <span id="state_from_port_python">
 <a href="#state_from_port_python" style="color: inherit; text-decoration: inherit;">from_<wbr>port</a>
@@ -1431,8 +1317,7 @@ or `egress` (outbound).
         <span class="property-type">int</span>
     </dt>
     <dd>{{% md %}}The start port (or ICMP type number if protocol is "icmp" or "icmpv6").
-{{% /md %}}</dd>
-    <dt class="property-optional"
+{{% /md %}}</dd><dt class="property-optional"
             title="Optional">
         <span id="state_ipv6_cidr_blocks_python">
 <a href="#state_ipv6_cidr_blocks_python" style="color: inherit; text-decoration: inherit;">ipv6_<wbr>cidr_<wbr>blocks</a>
@@ -1441,8 +1326,7 @@ or `egress` (outbound).
         <span class="property-type">Sequence[str]</span>
     </dt>
     <dd>{{% md %}}List of IPv6 CIDR blocks.
-{{% /md %}}</dd>
-    <dt class="property-optional"
+{{% /md %}}</dd><dt class="property-optional"
             title="Optional">
         <span id="state_prefix_list_ids_python">
 <a href="#state_prefix_list_ids_python" style="color: inherit; text-decoration: inherit;">prefix_<wbr>list_<wbr>ids</a>
@@ -1451,8 +1335,7 @@ or `egress` (outbound).
         <span class="property-type">Sequence[str]</span>
     </dt>
     <dd>{{% md %}}List of Prefix List IDs.
-{{% /md %}}</dd>
-    <dt class="property-optional"
+{{% /md %}}</dd><dt class="property-optional"
             title="Optional">
         <span id="state_protocol_python">
 <a href="#state_protocol_python" style="color: inherit; text-decoration: inherit;">protocol</a>
@@ -1461,8 +1344,7 @@ or `egress` (outbound).
         <span class="property-type">str | <a href="#protocoltype">Protocol<wbr>Type</a></span>
     </dt>
     <dd>{{% md %}}The protocol. If not icmp, icmpv6, tcp, udp, or all use the [protocol number](https://www.iana.org/assignments/protocol-numbers/protocol-numbers.xhtml)
-{{% /md %}}</dd>
-    <dt class="property-optional"
+{{% /md %}}</dd><dt class="property-optional"
             title="Optional">
         <span id="state_security_group_id_python">
 <a href="#state_security_group_id_python" style="color: inherit; text-decoration: inherit;">security_<wbr>group_<wbr>id</a>
@@ -1471,8 +1353,7 @@ or `egress` (outbound).
         <span class="property-type">str</span>
     </dt>
     <dd>{{% md %}}The security group to apply this rule to.
-{{% /md %}}</dd>
-    <dt class="property-optional"
+{{% /md %}}</dd><dt class="property-optional"
             title="Optional">
         <span id="state_self_python">
 <a href="#state_self_python" style="color: inherit; text-decoration: inherit;">self</a>
@@ -1482,8 +1363,7 @@ or `egress` (outbound).
     </dt>
     <dd>{{% md %}}If true, the security group itself will be added as
 a source to this ingress rule. Cannot be specified with `source_security_group_id`.
-{{% /md %}}</dd>
-    <dt class="property-optional"
+{{% /md %}}</dd><dt class="property-optional"
             title="Optional">
         <span id="state_source_security_group_id_python">
 <a href="#state_source_security_group_id_python" style="color: inherit; text-decoration: inherit;">source_<wbr>security_<wbr>group_<wbr>id</a>
@@ -1493,8 +1373,7 @@ a source to this ingress rule. Cannot be specified with `source_security_group_i
     </dt>
     <dd>{{% md %}}The security group id to allow access to/from,
 depending on the `type`. Cannot be specified with `cidr_blocks` and `self`.
-{{% /md %}}</dd>
-    <dt class="property-optional"
+{{% /md %}}</dd><dt class="property-optional"
             title="Optional">
         <span id="state_to_port_python">
 <a href="#state_to_port_python" style="color: inherit; text-decoration: inherit;">to_<wbr>port</a>
@@ -1503,8 +1382,7 @@ depending on the `type`. Cannot be specified with `cidr_blocks` and `self`.
         <span class="property-type">int</span>
     </dt>
     <dd>{{% md %}}The end port (or ICMP code if protocol is "icmp").
-{{% /md %}}</dd>
-    <dt class="property-optional"
+{{% /md %}}</dd><dt class="property-optional"
             title="Optional">
         <span id="state_type_python">
 <a href="#state_type_python" style="color: inherit; text-decoration: inherit;">type</a>
@@ -1514,8 +1392,7 @@ depending on the `type`. Cannot be specified with `cidr_blocks` and `self`.
     </dt>
     <dd>{{% md %}}The type of rule being created. Valid options are `ingress` (inbound)
 or `egress` (outbound).
-{{% /md %}}</dd>
-</dl>
+{{% /md %}}</dd></dl>
 {{% /choosable %}}
 
 
@@ -1530,55 +1407,35 @@ or `egress` (outbound).
 <h4 id="protocoltype">Protocol<wbr>Type</h4>
 
 {{% choosable language csharp %}}
-<dl class="tabular">
-    <dt>All</dt>
-    <dd>all</dd>
-    <dt>TCP</dt>
-    <dd>tcp</dd>
-    <dt>UDP</dt>
-    <dd>udp</dd>
-    <dt>ICMP</dt>
-    <dd>icmp</dd>
-</dl>
+<dl class="tabular"><dt>All</dt>
+    <dd>all</dd><dt>TCP</dt>
+    <dd>tcp</dd><dt>UDP</dt>
+    <dd>udp</dd><dt>ICMP</dt>
+    <dd>icmp</dd></dl>
 {{% /choosable %}}
 
 {{% choosable language go %}}
-<dl class="tabular">
-    <dt>Protocol<wbr>Type<wbr>All</dt>
-    <dd>all</dd>
-    <dt>Protocol<wbr>Type<wbr>TCP</dt>
-    <dd>tcp</dd>
-    <dt>Protocol<wbr>Type<wbr>UDP</dt>
-    <dd>udp</dd>
-    <dt>Protocol<wbr>Type<wbr>ICMP</dt>
-    <dd>icmp</dd>
-</dl>
+<dl class="tabular"><dt>Protocol<wbr>Type<wbr>All</dt>
+    <dd>all</dd><dt>Protocol<wbr>Type<wbr>TCP</dt>
+    <dd>tcp</dd><dt>Protocol<wbr>Type<wbr>UDP</dt>
+    <dd>udp</dd><dt>Protocol<wbr>Type<wbr>ICMP</dt>
+    <dd>icmp</dd></dl>
 {{% /choosable %}}
 
 {{% choosable language nodejs %}}
-<dl class="tabular">
-    <dt>All</dt>
-    <dd>all</dd>
-    <dt>TCP</dt>
-    <dd>tcp</dd>
-    <dt>UDP</dt>
-    <dd>udp</dd>
-    <dt>ICMP</dt>
-    <dd>icmp</dd>
-</dl>
+<dl class="tabular"><dt>All</dt>
+    <dd>all</dd><dt>TCP</dt>
+    <dd>tcp</dd><dt>UDP</dt>
+    <dd>udp</dd><dt>ICMP</dt>
+    <dd>icmp</dd></dl>
 {{% /choosable %}}
 
 {{% choosable language python %}}
-<dl class="tabular">
-    <dt>ALL</dt>
-    <dd>all</dd>
-    <dt>TCP</dt>
-    <dd>tcp</dd>
-    <dt>UDP</dt>
-    <dd>udp</dd>
-    <dt>ICMP</dt>
-    <dd>icmp</dd>
-</dl>
+<dl class="tabular"><dt>ALL</dt>
+    <dd>all</dd><dt>TCP</dt>
+    <dd>tcp</dd><dt>UDP</dt>
+    <dd>udp</dd><dt>ICMP</dt>
+    <dd>icmp</dd></dl>
 {{% /choosable %}}
 ## Import
 
@@ -1629,6 +1486,6 @@ or `egress` (outbound).
 	<dt>License</dt>
 	<dd>Apache-2.0</dd>
 	<dt>Notes</dt>
-	<dd>This Pulumi package is based on the [`aws` Terraform Provider](https://github.com/terraform-providers/terraform-provider-aws).</dd>
+	<dd>{{% md %}}This Pulumi package is based on the [`aws` Terraform Provider](https://github.com/terraform-providers/terraform-provider-aws).{{% /md %}}</dd>
 </dl>
 

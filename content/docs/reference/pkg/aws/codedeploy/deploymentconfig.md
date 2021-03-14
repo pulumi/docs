@@ -13,11 +13,17 @@ meta_desc: "Documentation for the aws.codedeploy.DeploymentConfig resource with 
 Provides a CodeDeploy deployment config for an application
 
 {{% examples %}}
+
 ## Example Usage
 
 {{< chooser language "typescript,python,go,csharp" / >}}
+
+
 ### Server Usage
-{{% example csharp %}}
+
+
+{{< example csharp >}}
+
 ```csharp
 using Pulumi;
 using Aws = Pulumi.Aws;
@@ -84,9 +90,12 @@ class MyStack : Stack
 }
 ```
 
-{{% /example %}}
 
-{{% example go %}}
+{{< /example >}}
+
+
+{{< example go >}}
+
 ```go
 package main
 
@@ -149,9 +158,12 @@ func main() {
 }
 ```
 
-{{% /example %}}
 
-{{% example python %}}
+{{< /example >}}
+
+
+{{< example python >}}
+
 ```python
 import pulumi
 import pulumi_aws as aws
@@ -187,9 +199,12 @@ foo_deployment_group = aws.codedeploy.DeploymentGroup("fooDeploymentGroup",
     ))
 ```
 
-{{% /example %}}
 
-{{% example typescript %}}
+{{< /example >}}
+
+
+{{< example typescript >}}
+
 
 ```typescript
 import * as pulumi from "@pulumi/pulumi";
@@ -228,10 +243,17 @@ const fooDeploymentGroup = new aws.codedeploy.DeploymentGroup("fooDeploymentGrou
 });
 ```
 
-{{% /example %}}
+
+{{< /example >}}
+
+
+
 
 ### Lambda Usage
-{{% example csharp %}}
+
+
+{{< example csharp >}}
+
 ```csharp
 using Pulumi;
 using Aws = Pulumi.Aws;
@@ -282,9 +304,12 @@ class MyStack : Stack
 }
 ```
 
-{{% /example %}}
 
-{{% example go %}}
+{{< /example >}}
+
+
+{{< example go >}}
+
 ```go
 package main
 
@@ -335,9 +360,12 @@ func main() {
 }
 ```
 
-{{% /example %}}
 
-{{% example python %}}
+{{< /example >}}
+
+
+{{< example python >}}
+
 ```python
 import pulumi
 import pulumi_aws as aws
@@ -367,9 +395,12 @@ foo_deployment_group = aws.codedeploy.DeploymentGroup("fooDeploymentGroup",
     ))
 ```
 
-{{% /example %}}
 
-{{% example typescript %}}
+{{< /example >}}
+
+
+{{< example typescript >}}
+
 
 ```typescript
 import * as pulumi from "@pulumi/pulumi";
@@ -402,9 +433,16 @@ const fooDeploymentGroup = new aws.codedeploy.DeploymentGroup("fooDeploymentGrou
 });
 ```
 
-{{% /example %}}
+
+{{< /example >}}
+
+
+
+
 
 {{% /examples %}}
+
+
 
 
 ## Create a DeploymentConfig Resource {#create}
@@ -429,9 +467,7 @@ const fooDeploymentGroup = new aws.codedeploy.DeploymentGroup("fooDeploymentGrou
 
 {{% choosable language nodejs %}}
 
-<dl class="resources-properties">
-  
-    <dt
+<dl class="resources-properties"><dt
         class="property-required" title="Required">
         <span>name</span>
         <span class="property-indicator"></span>
@@ -439,9 +475,7 @@ const fooDeploymentGroup = new aws.codedeploy.DeploymentGroup("fooDeploymentGrou
     </dt>
     <dd>
       The unique name of the resource.
-    </dd>
-  
-    <dt
+    </dd><dt
         class="property-required" title="Required">
         <span>args</span>
         <span class="property-indicator"></span>
@@ -449,9 +483,7 @@ const fooDeploymentGroup = new aws.codedeploy.DeploymentGroup("fooDeploymentGrou
     </dt>
     <dd>
       The arguments to resource properties.
-    </dd>
-  
-    <dt
+    </dd><dt
         class="property-optional" title="Optional">
         <span>opts</span>
         <span class="property-indicator"></span>
@@ -459,10 +491,7 @@ const fooDeploymentGroup = new aws.codedeploy.DeploymentGroup("fooDeploymentGrou
     </dt>
     <dd>
       Bag of options to control resource&#39;s behavior.
-    </dd>
-  
-
-</dl>
+    </dd></dl>
 
 {{% /choosable %}}
 
@@ -488,9 +517,7 @@ const fooDeploymentGroup = new aws.codedeploy.DeploymentGroup("fooDeploymentGrou
 
 {{% choosable language go %}}
 
-<dl class="resources-properties">
-  
-    <dt
+<dl class="resources-properties"><dt
         class="property-optional" title="Optional">
         <span>ctx</span>
         <span class="property-indicator"></span>
@@ -498,9 +525,7 @@ const fooDeploymentGroup = new aws.codedeploy.DeploymentGroup("fooDeploymentGrou
     </dt>
     <dd>
       Context object for the current deployment.
-    </dd>
-  
-    <dt
+    </dd><dt
         class="property-required" title="Required">
         <span>name</span>
         <span class="property-indicator"></span>
@@ -508,9 +533,7 @@ const fooDeploymentGroup = new aws.codedeploy.DeploymentGroup("fooDeploymentGrou
     </dt>
     <dd>
       The unique name of the resource.
-    </dd>
-  
-    <dt
+    </dd><dt
         class="property-required" title="Required">
         <span>args</span>
         <span class="property-indicator"></span>
@@ -518,9 +541,7 @@ const fooDeploymentGroup = new aws.codedeploy.DeploymentGroup("fooDeploymentGrou
     </dt>
     <dd>
       The arguments to resource properties.
-    </dd>
-  
-    <dt
+    </dd><dt
         class="property-optional" title="Optional">
         <span>opts</span>
         <span class="property-indicator"></span>
@@ -528,18 +549,13 @@ const fooDeploymentGroup = new aws.codedeploy.DeploymentGroup("fooDeploymentGrou
     </dt>
     <dd>
       Bag of options to control resource&#39;s behavior.
-    </dd>
-  
-
-</dl>
+    </dd></dl>
 
 {{% /choosable %}}
 
 {{% choosable language csharp %}}
 
-<dl class="resources-properties">
-  
-    <dt
+<dl class="resources-properties"><dt
         class="property-required" title="Required">
         <span>name</span>
         <span class="property-indicator"></span>
@@ -547,9 +563,7 @@ const fooDeploymentGroup = new aws.codedeploy.DeploymentGroup("fooDeploymentGrou
     </dt>
     <dd>
       The unique name of the resource.
-    </dd>
-  
-    <dt
+    </dd><dt
         class="property-required" title="Required">
         <span>args</span>
         <span class="property-indicator"></span>
@@ -557,9 +571,7 @@ const fooDeploymentGroup = new aws.codedeploy.DeploymentGroup("fooDeploymentGrou
     </dt>
     <dd>
       The arguments to resource properties.
-    </dd>
-  
-    <dt
+    </dd><dt
         class="property-optional" title="Optional">
         <span>opts</span>
         <span class="property-indicator"></span>
@@ -567,10 +579,7 @@ const fooDeploymentGroup = new aws.codedeploy.DeploymentGroup("fooDeploymentGrou
     </dt>
     <dd>
       Bag of options to control resource&#39;s behavior.
-    </dd>
-  
-
-</dl>
+    </dd></dl>
 
 {{% /choosable %}}
 
@@ -585,9 +594,7 @@ The DeploymentConfig resource accepts the following [input]({{< relref "/docs/in
 
 
 {{% choosable language csharp %}}
-<dl class="resources-properties">
-
-    <dt class="property-required"
+<dl class="resources-properties"><dt class="property-required"
             title="Required">
         <span id="deploymentconfigname_csharp">
 <a href="#deploymentconfigname_csharp" style="color: inherit; text-decoration: inherit;">Deployment<wbr>Config<wbr>Name</a>
@@ -596,8 +603,7 @@ The DeploymentConfig resource accepts the following [input]({{< relref "/docs/in
         <span class="property-type">string</span>
     </dt>
     <dd>{{% md %}}The name of the deployment config.
-{{% /md %}}</dd>
-    <dt class="property-optional"
+{{% /md %}}</dd><dt class="property-optional"
             title="Optional">
         <span id="computeplatform_csharp">
 <a href="#computeplatform_csharp" style="color: inherit; text-decoration: inherit;">Compute<wbr>Platform</a>
@@ -606,8 +612,7 @@ The DeploymentConfig resource accepts the following [input]({{< relref "/docs/in
         <span class="property-type">string</span>
     </dt>
     <dd>{{% md %}}The compute platform can be `Server`, `Lambda`, or `ECS`. Default is `Server`.
-{{% /md %}}</dd>
-    <dt class="property-optional"
+{{% /md %}}</dd><dt class="property-optional"
             title="Optional">
         <span id="minimumhealthyhosts_csharp">
 <a href="#minimumhealthyhosts_csharp" style="color: inherit; text-decoration: inherit;">Minimum<wbr>Healthy<wbr>Hosts</a>
@@ -616,8 +621,7 @@ The DeploymentConfig resource accepts the following [input]({{< relref "/docs/in
         <span class="property-type"><a href="#deploymentconfigminimumhealthyhosts">Deployment<wbr>Config<wbr>Minimum<wbr>Healthy<wbr>Hosts<wbr>Args</a></span>
     </dt>
     <dd>{{% md %}}A minimum_healthy_hosts block. Required for `Server` compute platform. Minimum Healthy Hosts are documented below.
-{{% /md %}}</dd>
-    <dt class="property-optional"
+{{% /md %}}</dd><dt class="property-optional"
             title="Optional">
         <span id="trafficroutingconfig_csharp">
 <a href="#trafficroutingconfig_csharp" style="color: inherit; text-decoration: inherit;">Traffic<wbr>Routing<wbr>Config</a>
@@ -626,14 +630,11 @@ The DeploymentConfig resource accepts the following [input]({{< relref "/docs/in
         <span class="property-type"><a href="#deploymentconfigtrafficroutingconfig">Deployment<wbr>Config<wbr>Traffic<wbr>Routing<wbr>Config<wbr>Args</a></span>
     </dt>
     <dd>{{% md %}}A traffic_routing_config block. Traffic Routing Config is documented below.
-{{% /md %}}</dd>
-</dl>
+{{% /md %}}</dd></dl>
 {{% /choosable %}}
 
 {{% choosable language go %}}
-<dl class="resources-properties">
-
-    <dt class="property-required"
+<dl class="resources-properties"><dt class="property-required"
             title="Required">
         <span id="deploymentconfigname_go">
 <a href="#deploymentconfigname_go" style="color: inherit; text-decoration: inherit;">Deployment<wbr>Config<wbr>Name</a>
@@ -642,8 +643,7 @@ The DeploymentConfig resource accepts the following [input]({{< relref "/docs/in
         <span class="property-type">string</span>
     </dt>
     <dd>{{% md %}}The name of the deployment config.
-{{% /md %}}</dd>
-    <dt class="property-optional"
+{{% /md %}}</dd><dt class="property-optional"
             title="Optional">
         <span id="computeplatform_go">
 <a href="#computeplatform_go" style="color: inherit; text-decoration: inherit;">Compute<wbr>Platform</a>
@@ -652,8 +652,7 @@ The DeploymentConfig resource accepts the following [input]({{< relref "/docs/in
         <span class="property-type">string</span>
     </dt>
     <dd>{{% md %}}The compute platform can be `Server`, `Lambda`, or `ECS`. Default is `Server`.
-{{% /md %}}</dd>
-    <dt class="property-optional"
+{{% /md %}}</dd><dt class="property-optional"
             title="Optional">
         <span id="minimumhealthyhosts_go">
 <a href="#minimumhealthyhosts_go" style="color: inherit; text-decoration: inherit;">Minimum<wbr>Healthy<wbr>Hosts</a>
@@ -662,8 +661,7 @@ The DeploymentConfig resource accepts the following [input]({{< relref "/docs/in
         <span class="property-type"><a href="#deploymentconfigminimumhealthyhosts">Deployment<wbr>Config<wbr>Minimum<wbr>Healthy<wbr>Hosts</a></span>
     </dt>
     <dd>{{% md %}}A minimum_healthy_hosts block. Required for `Server` compute platform. Minimum Healthy Hosts are documented below.
-{{% /md %}}</dd>
-    <dt class="property-optional"
+{{% /md %}}</dd><dt class="property-optional"
             title="Optional">
         <span id="trafficroutingconfig_go">
 <a href="#trafficroutingconfig_go" style="color: inherit; text-decoration: inherit;">Traffic<wbr>Routing<wbr>Config</a>
@@ -672,14 +670,11 @@ The DeploymentConfig resource accepts the following [input]({{< relref "/docs/in
         <span class="property-type"><a href="#deploymentconfigtrafficroutingconfig">Deployment<wbr>Config<wbr>Traffic<wbr>Routing<wbr>Config</a></span>
     </dt>
     <dd>{{% md %}}A traffic_routing_config block. Traffic Routing Config is documented below.
-{{% /md %}}</dd>
-</dl>
+{{% /md %}}</dd></dl>
 {{% /choosable %}}
 
 {{% choosable language nodejs %}}
-<dl class="resources-properties">
-
-    <dt class="property-required"
+<dl class="resources-properties"><dt class="property-required"
             title="Required">
         <span id="deploymentconfigname_nodejs">
 <a href="#deploymentconfigname_nodejs" style="color: inherit; text-decoration: inherit;">deployment<wbr>Config<wbr>Name</a>
@@ -688,8 +683,7 @@ The DeploymentConfig resource accepts the following [input]({{< relref "/docs/in
         <span class="property-type">string</span>
     </dt>
     <dd>{{% md %}}The name of the deployment config.
-{{% /md %}}</dd>
-    <dt class="property-optional"
+{{% /md %}}</dd><dt class="property-optional"
             title="Optional">
         <span id="computeplatform_nodejs">
 <a href="#computeplatform_nodejs" style="color: inherit; text-decoration: inherit;">compute<wbr>Platform</a>
@@ -698,8 +692,7 @@ The DeploymentConfig resource accepts the following [input]({{< relref "/docs/in
         <span class="property-type">string</span>
     </dt>
     <dd>{{% md %}}The compute platform can be `Server`, `Lambda`, or `ECS`. Default is `Server`.
-{{% /md %}}</dd>
-    <dt class="property-optional"
+{{% /md %}}</dd><dt class="property-optional"
             title="Optional">
         <span id="minimumhealthyhosts_nodejs">
 <a href="#minimumhealthyhosts_nodejs" style="color: inherit; text-decoration: inherit;">minimum<wbr>Healthy<wbr>Hosts</a>
@@ -708,8 +701,7 @@ The DeploymentConfig resource accepts the following [input]({{< relref "/docs/in
         <span class="property-type"><a href="#deploymentconfigminimumhealthyhosts">Deployment<wbr>Config<wbr>Minimum<wbr>Healthy<wbr>Hosts</a></span>
     </dt>
     <dd>{{% md %}}A minimum_healthy_hosts block. Required for `Server` compute platform. Minimum Healthy Hosts are documented below.
-{{% /md %}}</dd>
-    <dt class="property-optional"
+{{% /md %}}</dd><dt class="property-optional"
             title="Optional">
         <span id="trafficroutingconfig_nodejs">
 <a href="#trafficroutingconfig_nodejs" style="color: inherit; text-decoration: inherit;">traffic<wbr>Routing<wbr>Config</a>
@@ -718,14 +710,11 @@ The DeploymentConfig resource accepts the following [input]({{< relref "/docs/in
         <span class="property-type"><a href="#deploymentconfigtrafficroutingconfig">Deployment<wbr>Config<wbr>Traffic<wbr>Routing<wbr>Config</a></span>
     </dt>
     <dd>{{% md %}}A traffic_routing_config block. Traffic Routing Config is documented below.
-{{% /md %}}</dd>
-</dl>
+{{% /md %}}</dd></dl>
 {{% /choosable %}}
 
 {{% choosable language python %}}
-<dl class="resources-properties">
-
-    <dt class="property-required"
+<dl class="resources-properties"><dt class="property-required"
             title="Required">
         <span id="deployment_config_name_python">
 <a href="#deployment_config_name_python" style="color: inherit; text-decoration: inherit;">deployment_<wbr>config_<wbr>name</a>
@@ -734,8 +723,7 @@ The DeploymentConfig resource accepts the following [input]({{< relref "/docs/in
         <span class="property-type">str</span>
     </dt>
     <dd>{{% md %}}The name of the deployment config.
-{{% /md %}}</dd>
-    <dt class="property-optional"
+{{% /md %}}</dd><dt class="property-optional"
             title="Optional">
         <span id="compute_platform_python">
 <a href="#compute_platform_python" style="color: inherit; text-decoration: inherit;">compute_<wbr>platform</a>
@@ -744,8 +732,7 @@ The DeploymentConfig resource accepts the following [input]({{< relref "/docs/in
         <span class="property-type">str</span>
     </dt>
     <dd>{{% md %}}The compute platform can be `Server`, `Lambda`, or `ECS`. Default is `Server`.
-{{% /md %}}</dd>
-    <dt class="property-optional"
+{{% /md %}}</dd><dt class="property-optional"
             title="Optional">
         <span id="minimum_healthy_hosts_python">
 <a href="#minimum_healthy_hosts_python" style="color: inherit; text-decoration: inherit;">minimum_<wbr>healthy_<wbr>hosts</a>
@@ -754,8 +741,7 @@ The DeploymentConfig resource accepts the following [input]({{< relref "/docs/in
         <span class="property-type"><a href="#deploymentconfigminimumhealthyhosts">Deployment<wbr>Config<wbr>Minimum<wbr>Healthy<wbr>Hosts<wbr>Args</a></span>
     </dt>
     <dd>{{% md %}}A minimum_healthy_hosts block. Required for `Server` compute platform. Minimum Healthy Hosts are documented below.
-{{% /md %}}</dd>
-    <dt class="property-optional"
+{{% /md %}}</dd><dt class="property-optional"
             title="Optional">
         <span id="traffic_routing_config_python">
 <a href="#traffic_routing_config_python" style="color: inherit; text-decoration: inherit;">traffic_<wbr>routing_<wbr>config</a>
@@ -764,8 +750,7 @@ The DeploymentConfig resource accepts the following [input]({{< relref "/docs/in
         <span class="property-type"><a href="#deploymentconfigtrafficroutingconfig">Deployment<wbr>Config<wbr>Traffic<wbr>Routing<wbr>Config<wbr>Args</a></span>
     </dt>
     <dd>{{% md %}}A traffic_routing_config block. Traffic Routing Config is documented below.
-{{% /md %}}</dd>
-</dl>
+{{% /md %}}</dd></dl>
 {{% /choosable %}}
 
 
@@ -776,9 +761,7 @@ All [input](#inputs) properties are implicitly available as output properties. A
 
 
 {{% choosable language csharp %}}
-<dl class="resources-properties">
-
-    <dt class="property-"
+<dl class="resources-properties"><dt class="property-"
             title="">
         <span id="deploymentconfigid_csharp">
 <a href="#deploymentconfigid_csharp" style="color: inherit; text-decoration: inherit;">Deployment<wbr>Config<wbr>Id</a>
@@ -787,8 +770,7 @@ All [input](#inputs) properties are implicitly available as output properties. A
         <span class="property-type">string</span>
     </dt>
     <dd>{{% md %}}The AWS Assigned deployment config id
-{{% /md %}}</dd>
-    <dt class="property-"
+{{% /md %}}</dd><dt class="property-"
             title="">
         <span id="id_csharp">
 <a href="#id_csharp" style="color: inherit; text-decoration: inherit;">Id</a>
@@ -796,14 +778,11 @@ All [input](#inputs) properties are implicitly available as output properties. A
         <span class="property-indicator"></span>
         <span class="property-type">string</span>
     </dt>
-    <dd>{{% md %}}The provider-assigned unique ID for this managed resource.{{% /md %}}</dd>
-</dl>
+    <dd>{{% md %}}The provider-assigned unique ID for this managed resource.{{% /md %}}</dd></dl>
 {{% /choosable %}}
 
 {{% choosable language go %}}
-<dl class="resources-properties">
-
-    <dt class="property-"
+<dl class="resources-properties"><dt class="property-"
             title="">
         <span id="deploymentconfigid_go">
 <a href="#deploymentconfigid_go" style="color: inherit; text-decoration: inherit;">Deployment<wbr>Config<wbr>Id</a>
@@ -812,8 +791,7 @@ All [input](#inputs) properties are implicitly available as output properties. A
         <span class="property-type">string</span>
     </dt>
     <dd>{{% md %}}The AWS Assigned deployment config id
-{{% /md %}}</dd>
-    <dt class="property-"
+{{% /md %}}</dd><dt class="property-"
             title="">
         <span id="id_go">
 <a href="#id_go" style="color: inherit; text-decoration: inherit;">Id</a>
@@ -821,14 +799,11 @@ All [input](#inputs) properties are implicitly available as output properties. A
         <span class="property-indicator"></span>
         <span class="property-type">string</span>
     </dt>
-    <dd>{{% md %}}The provider-assigned unique ID for this managed resource.{{% /md %}}</dd>
-</dl>
+    <dd>{{% md %}}The provider-assigned unique ID for this managed resource.{{% /md %}}</dd></dl>
 {{% /choosable %}}
 
 {{% choosable language nodejs %}}
-<dl class="resources-properties">
-
-    <dt class="property-"
+<dl class="resources-properties"><dt class="property-"
             title="">
         <span id="deploymentconfigid_nodejs">
 <a href="#deploymentconfigid_nodejs" style="color: inherit; text-decoration: inherit;">deployment<wbr>Config<wbr>Id</a>
@@ -837,8 +812,7 @@ All [input](#inputs) properties are implicitly available as output properties. A
         <span class="property-type">string</span>
     </dt>
     <dd>{{% md %}}The AWS Assigned deployment config id
-{{% /md %}}</dd>
-    <dt class="property-"
+{{% /md %}}</dd><dt class="property-"
             title="">
         <span id="id_nodejs">
 <a href="#id_nodejs" style="color: inherit; text-decoration: inherit;">id</a>
@@ -846,14 +820,11 @@ All [input](#inputs) properties are implicitly available as output properties. A
         <span class="property-indicator"></span>
         <span class="property-type">string</span>
     </dt>
-    <dd>{{% md %}}The provider-assigned unique ID for this managed resource.{{% /md %}}</dd>
-</dl>
+    <dd>{{% md %}}The provider-assigned unique ID for this managed resource.{{% /md %}}</dd></dl>
 {{% /choosable %}}
 
 {{% choosable language python %}}
-<dl class="resources-properties">
-
-    <dt class="property-"
+<dl class="resources-properties"><dt class="property-"
             title="">
         <span id="deployment_config_id_python">
 <a href="#deployment_config_id_python" style="color: inherit; text-decoration: inherit;">deployment_<wbr>config_<wbr>id</a>
@@ -862,8 +833,7 @@ All [input](#inputs) properties are implicitly available as output properties. A
         <span class="property-type">str</span>
     </dt>
     <dd>{{% md %}}The AWS Assigned deployment config id
-{{% /md %}}</dd>
-    <dt class="property-"
+{{% /md %}}</dd><dt class="property-"
             title="">
         <span id="id_python">
 <a href="#id_python" style="color: inherit; text-decoration: inherit;">id</a>
@@ -871,8 +841,7 @@ All [input](#inputs) properties are implicitly available as output properties. A
         <span class="property-indicator"></span>
         <span class="property-type">str</span>
     </dt>
-    <dd>{{% md %}}The provider-assigned unique ID for this managed resource.{{% /md %}}</dd>
-</dl>
+    <dd>{{% md %}}The provider-assigned unique ID for this managed resource.{{% /md %}}</dd></dl>
 {{% /choosable %}}
 
 
@@ -999,9 +968,7 @@ The following state arguments are supported:
 
 
 {{% choosable language csharp %}}
-<dl class="resources-properties">
-
-    <dt class="property-optional"
+<dl class="resources-properties"><dt class="property-optional"
             title="Optional">
         <span id="state_computeplatform_csharp">
 <a href="#state_computeplatform_csharp" style="color: inherit; text-decoration: inherit;">Compute<wbr>Platform</a>
@@ -1010,8 +977,7 @@ The following state arguments are supported:
         <span class="property-type">string</span>
     </dt>
     <dd>{{% md %}}The compute platform can be `Server`, `Lambda`, or `ECS`. Default is `Server`.
-{{% /md %}}</dd>
-    <dt class="property-optional"
+{{% /md %}}</dd><dt class="property-optional"
             title="Optional">
         <span id="state_deploymentconfigid_csharp">
 <a href="#state_deploymentconfigid_csharp" style="color: inherit; text-decoration: inherit;">Deployment<wbr>Config<wbr>Id</a>
@@ -1020,8 +986,7 @@ The following state arguments are supported:
         <span class="property-type">string</span>
     </dt>
     <dd>{{% md %}}The AWS Assigned deployment config id
-{{% /md %}}</dd>
-    <dt class="property-optional"
+{{% /md %}}</dd><dt class="property-optional"
             title="Optional">
         <span id="state_deploymentconfigname_csharp">
 <a href="#state_deploymentconfigname_csharp" style="color: inherit; text-decoration: inherit;">Deployment<wbr>Config<wbr>Name</a>
@@ -1030,8 +995,7 @@ The following state arguments are supported:
         <span class="property-type">string</span>
     </dt>
     <dd>{{% md %}}The name of the deployment config.
-{{% /md %}}</dd>
-    <dt class="property-optional"
+{{% /md %}}</dd><dt class="property-optional"
             title="Optional">
         <span id="state_minimumhealthyhosts_csharp">
 <a href="#state_minimumhealthyhosts_csharp" style="color: inherit; text-decoration: inherit;">Minimum<wbr>Healthy<wbr>Hosts</a>
@@ -1040,8 +1004,7 @@ The following state arguments are supported:
         <span class="property-type"><a href="#deploymentconfigminimumhealthyhosts">Deployment<wbr>Config<wbr>Minimum<wbr>Healthy<wbr>Hosts<wbr>Args</a></span>
     </dt>
     <dd>{{% md %}}A minimum_healthy_hosts block. Required for `Server` compute platform. Minimum Healthy Hosts are documented below.
-{{% /md %}}</dd>
-    <dt class="property-optional"
+{{% /md %}}</dd><dt class="property-optional"
             title="Optional">
         <span id="state_trafficroutingconfig_csharp">
 <a href="#state_trafficroutingconfig_csharp" style="color: inherit; text-decoration: inherit;">Traffic<wbr>Routing<wbr>Config</a>
@@ -1050,14 +1013,11 @@ The following state arguments are supported:
         <span class="property-type"><a href="#deploymentconfigtrafficroutingconfig">Deployment<wbr>Config<wbr>Traffic<wbr>Routing<wbr>Config<wbr>Args</a></span>
     </dt>
     <dd>{{% md %}}A traffic_routing_config block. Traffic Routing Config is documented below.
-{{% /md %}}</dd>
-</dl>
+{{% /md %}}</dd></dl>
 {{% /choosable %}}
 
 {{% choosable language go %}}
-<dl class="resources-properties">
-
-    <dt class="property-optional"
+<dl class="resources-properties"><dt class="property-optional"
             title="Optional">
         <span id="state_computeplatform_go">
 <a href="#state_computeplatform_go" style="color: inherit; text-decoration: inherit;">Compute<wbr>Platform</a>
@@ -1066,8 +1026,7 @@ The following state arguments are supported:
         <span class="property-type">string</span>
     </dt>
     <dd>{{% md %}}The compute platform can be `Server`, `Lambda`, or `ECS`. Default is `Server`.
-{{% /md %}}</dd>
-    <dt class="property-optional"
+{{% /md %}}</dd><dt class="property-optional"
             title="Optional">
         <span id="state_deploymentconfigid_go">
 <a href="#state_deploymentconfigid_go" style="color: inherit; text-decoration: inherit;">Deployment<wbr>Config<wbr>Id</a>
@@ -1076,8 +1035,7 @@ The following state arguments are supported:
         <span class="property-type">string</span>
     </dt>
     <dd>{{% md %}}The AWS Assigned deployment config id
-{{% /md %}}</dd>
-    <dt class="property-optional"
+{{% /md %}}</dd><dt class="property-optional"
             title="Optional">
         <span id="state_deploymentconfigname_go">
 <a href="#state_deploymentconfigname_go" style="color: inherit; text-decoration: inherit;">Deployment<wbr>Config<wbr>Name</a>
@@ -1086,8 +1044,7 @@ The following state arguments are supported:
         <span class="property-type">string</span>
     </dt>
     <dd>{{% md %}}The name of the deployment config.
-{{% /md %}}</dd>
-    <dt class="property-optional"
+{{% /md %}}</dd><dt class="property-optional"
             title="Optional">
         <span id="state_minimumhealthyhosts_go">
 <a href="#state_minimumhealthyhosts_go" style="color: inherit; text-decoration: inherit;">Minimum<wbr>Healthy<wbr>Hosts</a>
@@ -1096,8 +1053,7 @@ The following state arguments are supported:
         <span class="property-type"><a href="#deploymentconfigminimumhealthyhosts">Deployment<wbr>Config<wbr>Minimum<wbr>Healthy<wbr>Hosts</a></span>
     </dt>
     <dd>{{% md %}}A minimum_healthy_hosts block. Required for `Server` compute platform. Minimum Healthy Hosts are documented below.
-{{% /md %}}</dd>
-    <dt class="property-optional"
+{{% /md %}}</dd><dt class="property-optional"
             title="Optional">
         <span id="state_trafficroutingconfig_go">
 <a href="#state_trafficroutingconfig_go" style="color: inherit; text-decoration: inherit;">Traffic<wbr>Routing<wbr>Config</a>
@@ -1106,14 +1062,11 @@ The following state arguments are supported:
         <span class="property-type"><a href="#deploymentconfigtrafficroutingconfig">Deployment<wbr>Config<wbr>Traffic<wbr>Routing<wbr>Config</a></span>
     </dt>
     <dd>{{% md %}}A traffic_routing_config block. Traffic Routing Config is documented below.
-{{% /md %}}</dd>
-</dl>
+{{% /md %}}</dd></dl>
 {{% /choosable %}}
 
 {{% choosable language nodejs %}}
-<dl class="resources-properties">
-
-    <dt class="property-optional"
+<dl class="resources-properties"><dt class="property-optional"
             title="Optional">
         <span id="state_computeplatform_nodejs">
 <a href="#state_computeplatform_nodejs" style="color: inherit; text-decoration: inherit;">compute<wbr>Platform</a>
@@ -1122,8 +1075,7 @@ The following state arguments are supported:
         <span class="property-type">string</span>
     </dt>
     <dd>{{% md %}}The compute platform can be `Server`, `Lambda`, or `ECS`. Default is `Server`.
-{{% /md %}}</dd>
-    <dt class="property-optional"
+{{% /md %}}</dd><dt class="property-optional"
             title="Optional">
         <span id="state_deploymentconfigid_nodejs">
 <a href="#state_deploymentconfigid_nodejs" style="color: inherit; text-decoration: inherit;">deployment<wbr>Config<wbr>Id</a>
@@ -1132,8 +1084,7 @@ The following state arguments are supported:
         <span class="property-type">string</span>
     </dt>
     <dd>{{% md %}}The AWS Assigned deployment config id
-{{% /md %}}</dd>
-    <dt class="property-optional"
+{{% /md %}}</dd><dt class="property-optional"
             title="Optional">
         <span id="state_deploymentconfigname_nodejs">
 <a href="#state_deploymentconfigname_nodejs" style="color: inherit; text-decoration: inherit;">deployment<wbr>Config<wbr>Name</a>
@@ -1142,8 +1093,7 @@ The following state arguments are supported:
         <span class="property-type">string</span>
     </dt>
     <dd>{{% md %}}The name of the deployment config.
-{{% /md %}}</dd>
-    <dt class="property-optional"
+{{% /md %}}</dd><dt class="property-optional"
             title="Optional">
         <span id="state_minimumhealthyhosts_nodejs">
 <a href="#state_minimumhealthyhosts_nodejs" style="color: inherit; text-decoration: inherit;">minimum<wbr>Healthy<wbr>Hosts</a>
@@ -1152,8 +1102,7 @@ The following state arguments are supported:
         <span class="property-type"><a href="#deploymentconfigminimumhealthyhosts">Deployment<wbr>Config<wbr>Minimum<wbr>Healthy<wbr>Hosts</a></span>
     </dt>
     <dd>{{% md %}}A minimum_healthy_hosts block. Required for `Server` compute platform. Minimum Healthy Hosts are documented below.
-{{% /md %}}</dd>
-    <dt class="property-optional"
+{{% /md %}}</dd><dt class="property-optional"
             title="Optional">
         <span id="state_trafficroutingconfig_nodejs">
 <a href="#state_trafficroutingconfig_nodejs" style="color: inherit; text-decoration: inherit;">traffic<wbr>Routing<wbr>Config</a>
@@ -1162,14 +1111,11 @@ The following state arguments are supported:
         <span class="property-type"><a href="#deploymentconfigtrafficroutingconfig">Deployment<wbr>Config<wbr>Traffic<wbr>Routing<wbr>Config</a></span>
     </dt>
     <dd>{{% md %}}A traffic_routing_config block. Traffic Routing Config is documented below.
-{{% /md %}}</dd>
-</dl>
+{{% /md %}}</dd></dl>
 {{% /choosable %}}
 
 {{% choosable language python %}}
-<dl class="resources-properties">
-
-    <dt class="property-optional"
+<dl class="resources-properties"><dt class="property-optional"
             title="Optional">
         <span id="state_compute_platform_python">
 <a href="#state_compute_platform_python" style="color: inherit; text-decoration: inherit;">compute_<wbr>platform</a>
@@ -1178,8 +1124,7 @@ The following state arguments are supported:
         <span class="property-type">str</span>
     </dt>
     <dd>{{% md %}}The compute platform can be `Server`, `Lambda`, or `ECS`. Default is `Server`.
-{{% /md %}}</dd>
-    <dt class="property-optional"
+{{% /md %}}</dd><dt class="property-optional"
             title="Optional">
         <span id="state_deployment_config_id_python">
 <a href="#state_deployment_config_id_python" style="color: inherit; text-decoration: inherit;">deployment_<wbr>config_<wbr>id</a>
@@ -1188,8 +1133,7 @@ The following state arguments are supported:
         <span class="property-type">str</span>
     </dt>
     <dd>{{% md %}}The AWS Assigned deployment config id
-{{% /md %}}</dd>
-    <dt class="property-optional"
+{{% /md %}}</dd><dt class="property-optional"
             title="Optional">
         <span id="state_deployment_config_name_python">
 <a href="#state_deployment_config_name_python" style="color: inherit; text-decoration: inherit;">deployment_<wbr>config_<wbr>name</a>
@@ -1198,8 +1142,7 @@ The following state arguments are supported:
         <span class="property-type">str</span>
     </dt>
     <dd>{{% md %}}The name of the deployment config.
-{{% /md %}}</dd>
-    <dt class="property-optional"
+{{% /md %}}</dd><dt class="property-optional"
             title="Optional">
         <span id="state_minimum_healthy_hosts_python">
 <a href="#state_minimum_healthy_hosts_python" style="color: inherit; text-decoration: inherit;">minimum_<wbr>healthy_<wbr>hosts</a>
@@ -1208,8 +1151,7 @@ The following state arguments are supported:
         <span class="property-type"><a href="#deploymentconfigminimumhealthyhosts">Deployment<wbr>Config<wbr>Minimum<wbr>Healthy<wbr>Hosts<wbr>Args</a></span>
     </dt>
     <dd>{{% md %}}A minimum_healthy_hosts block. Required for `Server` compute platform. Minimum Healthy Hosts are documented below.
-{{% /md %}}</dd>
-    <dt class="property-optional"
+{{% /md %}}</dd><dt class="property-optional"
             title="Optional">
         <span id="state_traffic_routing_config_python">
 <a href="#state_traffic_routing_config_python" style="color: inherit; text-decoration: inherit;">traffic_<wbr>routing_<wbr>config</a>
@@ -1218,8 +1160,7 @@ The following state arguments are supported:
         <span class="property-type"><a href="#deploymentconfigtrafficroutingconfig">Deployment<wbr>Config<wbr>Traffic<wbr>Routing<wbr>Config<wbr>Args</a></span>
     </dt>
     <dd>{{% md %}}A traffic_routing_config block. Traffic Routing Config is documented below.
-{{% /md %}}</dd>
-</dl>
+{{% /md %}}</dd></dl>
 {{% /choosable %}}
 
 
@@ -1234,9 +1175,7 @@ The following state arguments are supported:
 <h4 id="deploymentconfigminimumhealthyhosts">Deployment<wbr>Config<wbr>Minimum<wbr>Healthy<wbr>Hosts</h4>
 
 {{% choosable language csharp %}}
-<dl class="resources-properties">
-
-    <dt class="property-optional"
+<dl class="resources-properties"><dt class="property-optional"
             title="Optional">
         <span id="type_csharp">
 <a href="#type_csharp" style="color: inherit; text-decoration: inherit;">Type</a>
@@ -1245,8 +1184,7 @@ The following state arguments are supported:
         <span class="property-type">string</span>
     </dt>
     <dd>{{% md %}}The type can either be `FLEET_PERCENT` or `HOST_COUNT`.
-{{% /md %}}</dd>
-    <dt class="property-optional"
+{{% /md %}}</dd><dt class="property-optional"
             title="Optional">
         <span id="value_csharp">
 <a href="#value_csharp" style="color: inherit; text-decoration: inherit;">Value</a>
@@ -1258,14 +1196,11 @@ The following state arguments are supported:
 a percentage of the total number of instances in the deployment. If you specify FLEET_PERCENT, at the start of the
 deployment, AWS CodeDeploy converts the percentage to the equivalent number of instance and rounds up fractional instances.
 When the type is `HOST_COUNT`, the value represents the minimum number of healthy instances as an absolute value.
-{{% /md %}}</dd>
-</dl>
+{{% /md %}}</dd></dl>
 {{% /choosable %}}
 
 {{% choosable language go %}}
-<dl class="resources-properties">
-
-    <dt class="property-optional"
+<dl class="resources-properties"><dt class="property-optional"
             title="Optional">
         <span id="type_go">
 <a href="#type_go" style="color: inherit; text-decoration: inherit;">Type</a>
@@ -1274,8 +1209,7 @@ When the type is `HOST_COUNT`, the value represents the minimum number of health
         <span class="property-type">string</span>
     </dt>
     <dd>{{% md %}}The type can either be `FLEET_PERCENT` or `HOST_COUNT`.
-{{% /md %}}</dd>
-    <dt class="property-optional"
+{{% /md %}}</dd><dt class="property-optional"
             title="Optional">
         <span id="value_go">
 <a href="#value_go" style="color: inherit; text-decoration: inherit;">Value</a>
@@ -1287,14 +1221,11 @@ When the type is `HOST_COUNT`, the value represents the minimum number of health
 a percentage of the total number of instances in the deployment. If you specify FLEET_PERCENT, at the start of the
 deployment, AWS CodeDeploy converts the percentage to the equivalent number of instance and rounds up fractional instances.
 When the type is `HOST_COUNT`, the value represents the minimum number of healthy instances as an absolute value.
-{{% /md %}}</dd>
-</dl>
+{{% /md %}}</dd></dl>
 {{% /choosable %}}
 
 {{% choosable language nodejs %}}
-<dl class="resources-properties">
-
-    <dt class="property-optional"
+<dl class="resources-properties"><dt class="property-optional"
             title="Optional">
         <span id="type_nodejs">
 <a href="#type_nodejs" style="color: inherit; text-decoration: inherit;">type</a>
@@ -1303,8 +1234,7 @@ When the type is `HOST_COUNT`, the value represents the minimum number of health
         <span class="property-type">string</span>
     </dt>
     <dd>{{% md %}}The type can either be `FLEET_PERCENT` or `HOST_COUNT`.
-{{% /md %}}</dd>
-    <dt class="property-optional"
+{{% /md %}}</dd><dt class="property-optional"
             title="Optional">
         <span id="value_nodejs">
 <a href="#value_nodejs" style="color: inherit; text-decoration: inherit;">value</a>
@@ -1316,14 +1246,11 @@ When the type is `HOST_COUNT`, the value represents the minimum number of health
 a percentage of the total number of instances in the deployment. If you specify FLEET_PERCENT, at the start of the
 deployment, AWS CodeDeploy converts the percentage to the equivalent number of instance and rounds up fractional instances.
 When the type is `HOST_COUNT`, the value represents the minimum number of healthy instances as an absolute value.
-{{% /md %}}</dd>
-</dl>
+{{% /md %}}</dd></dl>
 {{% /choosable %}}
 
 {{% choosable language python %}}
-<dl class="resources-properties">
-
-    <dt class="property-optional"
+<dl class="resources-properties"><dt class="property-optional"
             title="Optional">
         <span id="type_python">
 <a href="#type_python" style="color: inherit; text-decoration: inherit;">type</a>
@@ -1332,8 +1259,7 @@ When the type is `HOST_COUNT`, the value represents the minimum number of health
         <span class="property-type">str</span>
     </dt>
     <dd>{{% md %}}The type can either be `FLEET_PERCENT` or `HOST_COUNT`.
-{{% /md %}}</dd>
-    <dt class="property-optional"
+{{% /md %}}</dd><dt class="property-optional"
             title="Optional">
         <span id="value_python">
 <a href="#value_python" style="color: inherit; text-decoration: inherit;">value</a>
@@ -1345,16 +1271,13 @@ When the type is `HOST_COUNT`, the value represents the minimum number of health
 a percentage of the total number of instances in the deployment. If you specify FLEET_PERCENT, at the start of the
 deployment, AWS CodeDeploy converts the percentage to the equivalent number of instance and rounds up fractional instances.
 When the type is `HOST_COUNT`, the value represents the minimum number of healthy instances as an absolute value.
-{{% /md %}}</dd>
-</dl>
+{{% /md %}}</dd></dl>
 {{% /choosable %}}
 
 <h4 id="deploymentconfigtrafficroutingconfig">Deployment<wbr>Config<wbr>Traffic<wbr>Routing<wbr>Config</h4>
 
 {{% choosable language csharp %}}
-<dl class="resources-properties">
-
-    <dt class="property-optional"
+<dl class="resources-properties"><dt class="property-optional"
             title="Optional">
         <span id="timebasedcanary_csharp">
 <a href="#timebasedcanary_csharp" style="color: inherit; text-decoration: inherit;">Time<wbr>Based<wbr>Canary</a>
@@ -1363,8 +1286,7 @@ When the type is `HOST_COUNT`, the value represents the minimum number of health
         <span class="property-type"><a href="#deploymentconfigtrafficroutingconfigtimebasedcanary">Deployment<wbr>Config<wbr>Traffic<wbr>Routing<wbr>Config<wbr>Time<wbr>Based<wbr>Canary<wbr>Args</a></span>
     </dt>
     <dd>{{% md %}}The time based canary configuration information. If `type` is `TimeBasedLinear`, use `time_based_linear` instead.
-{{% /md %}}</dd>
-    <dt class="property-optional"
+{{% /md %}}</dd><dt class="property-optional"
             title="Optional">
         <span id="timebasedlinear_csharp">
 <a href="#timebasedlinear_csharp" style="color: inherit; text-decoration: inherit;">Time<wbr>Based<wbr>Linear</a>
@@ -1373,8 +1295,7 @@ When the type is `HOST_COUNT`, the value represents the minimum number of health
         <span class="property-type"><a href="#deploymentconfigtrafficroutingconfigtimebasedlinear">Deployment<wbr>Config<wbr>Traffic<wbr>Routing<wbr>Config<wbr>Time<wbr>Based<wbr>Linear<wbr>Args</a></span>
     </dt>
     <dd>{{% md %}}The time based linear configuration information. If `type` is `TimeBasedCanary`, use `time_based_canary` instead.
-{{% /md %}}</dd>
-    <dt class="property-optional"
+{{% /md %}}</dd><dt class="property-optional"
             title="Optional">
         <span id="type_csharp">
 <a href="#type_csharp" style="color: inherit; text-decoration: inherit;">Type</a>
@@ -1383,14 +1304,11 @@ When the type is `HOST_COUNT`, the value represents the minimum number of health
         <span class="property-type">string</span>
     </dt>
     <dd>{{% md %}}Type of traffic routing config. One of `TimeBasedCanary`, `TimeBasedLinear`, `AllAtOnce`.
-{{% /md %}}</dd>
-</dl>
+{{% /md %}}</dd></dl>
 {{% /choosable %}}
 
 {{% choosable language go %}}
-<dl class="resources-properties">
-
-    <dt class="property-optional"
+<dl class="resources-properties"><dt class="property-optional"
             title="Optional">
         <span id="timebasedcanary_go">
 <a href="#timebasedcanary_go" style="color: inherit; text-decoration: inherit;">Time<wbr>Based<wbr>Canary</a>
@@ -1399,8 +1317,7 @@ When the type is `HOST_COUNT`, the value represents the minimum number of health
         <span class="property-type"><a href="#deploymentconfigtrafficroutingconfigtimebasedcanary">Deployment<wbr>Config<wbr>Traffic<wbr>Routing<wbr>Config<wbr>Time<wbr>Based<wbr>Canary</a></span>
     </dt>
     <dd>{{% md %}}The time based canary configuration information. If `type` is `TimeBasedLinear`, use `time_based_linear` instead.
-{{% /md %}}</dd>
-    <dt class="property-optional"
+{{% /md %}}</dd><dt class="property-optional"
             title="Optional">
         <span id="timebasedlinear_go">
 <a href="#timebasedlinear_go" style="color: inherit; text-decoration: inherit;">Time<wbr>Based<wbr>Linear</a>
@@ -1409,8 +1326,7 @@ When the type is `HOST_COUNT`, the value represents the minimum number of health
         <span class="property-type"><a href="#deploymentconfigtrafficroutingconfigtimebasedlinear">Deployment<wbr>Config<wbr>Traffic<wbr>Routing<wbr>Config<wbr>Time<wbr>Based<wbr>Linear</a></span>
     </dt>
     <dd>{{% md %}}The time based linear configuration information. If `type` is `TimeBasedCanary`, use `time_based_canary` instead.
-{{% /md %}}</dd>
-    <dt class="property-optional"
+{{% /md %}}</dd><dt class="property-optional"
             title="Optional">
         <span id="type_go">
 <a href="#type_go" style="color: inherit; text-decoration: inherit;">Type</a>
@@ -1419,14 +1335,11 @@ When the type is `HOST_COUNT`, the value represents the minimum number of health
         <span class="property-type">string</span>
     </dt>
     <dd>{{% md %}}Type of traffic routing config. One of `TimeBasedCanary`, `TimeBasedLinear`, `AllAtOnce`.
-{{% /md %}}</dd>
-</dl>
+{{% /md %}}</dd></dl>
 {{% /choosable %}}
 
 {{% choosable language nodejs %}}
-<dl class="resources-properties">
-
-    <dt class="property-optional"
+<dl class="resources-properties"><dt class="property-optional"
             title="Optional">
         <span id="timebasedcanary_nodejs">
 <a href="#timebasedcanary_nodejs" style="color: inherit; text-decoration: inherit;">time<wbr>Based<wbr>Canary</a>
@@ -1435,8 +1348,7 @@ When the type is `HOST_COUNT`, the value represents the minimum number of health
         <span class="property-type"><a href="#deploymentconfigtrafficroutingconfigtimebasedcanary">Deployment<wbr>Config<wbr>Traffic<wbr>Routing<wbr>Config<wbr>Time<wbr>Based<wbr>Canary</a></span>
     </dt>
     <dd>{{% md %}}The time based canary configuration information. If `type` is `TimeBasedLinear`, use `time_based_linear` instead.
-{{% /md %}}</dd>
-    <dt class="property-optional"
+{{% /md %}}</dd><dt class="property-optional"
             title="Optional">
         <span id="timebasedlinear_nodejs">
 <a href="#timebasedlinear_nodejs" style="color: inherit; text-decoration: inherit;">time<wbr>Based<wbr>Linear</a>
@@ -1445,8 +1357,7 @@ When the type is `HOST_COUNT`, the value represents the minimum number of health
         <span class="property-type"><a href="#deploymentconfigtrafficroutingconfigtimebasedlinear">Deployment<wbr>Config<wbr>Traffic<wbr>Routing<wbr>Config<wbr>Time<wbr>Based<wbr>Linear</a></span>
     </dt>
     <dd>{{% md %}}The time based linear configuration information. If `type` is `TimeBasedCanary`, use `time_based_canary` instead.
-{{% /md %}}</dd>
-    <dt class="property-optional"
+{{% /md %}}</dd><dt class="property-optional"
             title="Optional">
         <span id="type_nodejs">
 <a href="#type_nodejs" style="color: inherit; text-decoration: inherit;">type</a>
@@ -1455,14 +1366,11 @@ When the type is `HOST_COUNT`, the value represents the minimum number of health
         <span class="property-type">string</span>
     </dt>
     <dd>{{% md %}}Type of traffic routing config. One of `TimeBasedCanary`, `TimeBasedLinear`, `AllAtOnce`.
-{{% /md %}}</dd>
-</dl>
+{{% /md %}}</dd></dl>
 {{% /choosable %}}
 
 {{% choosable language python %}}
-<dl class="resources-properties">
-
-    <dt class="property-optional"
+<dl class="resources-properties"><dt class="property-optional"
             title="Optional">
         <span id="time_based_canary_python">
 <a href="#time_based_canary_python" style="color: inherit; text-decoration: inherit;">time_<wbr>based_<wbr>canary</a>
@@ -1471,8 +1379,7 @@ When the type is `HOST_COUNT`, the value represents the minimum number of health
         <span class="property-type"><a href="#deploymentconfigtrafficroutingconfigtimebasedcanary">Deployment<wbr>Config<wbr>Traffic<wbr>Routing<wbr>Config<wbr>Time<wbr>Based<wbr>Canary<wbr>Args</a></span>
     </dt>
     <dd>{{% md %}}The time based canary configuration information. If `type` is `TimeBasedLinear`, use `time_based_linear` instead.
-{{% /md %}}</dd>
-    <dt class="property-optional"
+{{% /md %}}</dd><dt class="property-optional"
             title="Optional">
         <span id="time_based_linear_python">
 <a href="#time_based_linear_python" style="color: inherit; text-decoration: inherit;">time_<wbr>based_<wbr>linear</a>
@@ -1481,8 +1388,7 @@ When the type is `HOST_COUNT`, the value represents the minimum number of health
         <span class="property-type"><a href="#deploymentconfigtrafficroutingconfigtimebasedlinear">Deployment<wbr>Config<wbr>Traffic<wbr>Routing<wbr>Config<wbr>Time<wbr>Based<wbr>Linear<wbr>Args</a></span>
     </dt>
     <dd>{{% md %}}The time based linear configuration information. If `type` is `TimeBasedCanary`, use `time_based_canary` instead.
-{{% /md %}}</dd>
-    <dt class="property-optional"
+{{% /md %}}</dd><dt class="property-optional"
             title="Optional">
         <span id="type_python">
 <a href="#type_python" style="color: inherit; text-decoration: inherit;">type</a>
@@ -1491,16 +1397,13 @@ When the type is `HOST_COUNT`, the value represents the minimum number of health
         <span class="property-type">str</span>
     </dt>
     <dd>{{% md %}}Type of traffic routing config. One of `TimeBasedCanary`, `TimeBasedLinear`, `AllAtOnce`.
-{{% /md %}}</dd>
-</dl>
+{{% /md %}}</dd></dl>
 {{% /choosable %}}
 
 <h4 id="deploymentconfigtrafficroutingconfigtimebasedcanary">Deployment<wbr>Config<wbr>Traffic<wbr>Routing<wbr>Config<wbr>Time<wbr>Based<wbr>Canary</h4>
 
 {{% choosable language csharp %}}
-<dl class="resources-properties">
-
-    <dt class="property-optional"
+<dl class="resources-properties"><dt class="property-optional"
             title="Optional">
         <span id="interval_csharp">
 <a href="#interval_csharp" style="color: inherit; text-decoration: inherit;">Interval</a>
@@ -1509,8 +1412,7 @@ When the type is `HOST_COUNT`, the value represents the minimum number of health
         <span class="property-type">int</span>
     </dt>
     <dd>{{% md %}}The number of minutes between the first and second traffic shifts of a `TimeBasedCanary` deployment.
-{{% /md %}}</dd>
-    <dt class="property-optional"
+{{% /md %}}</dd><dt class="property-optional"
             title="Optional">
         <span id="percentage_csharp">
 <a href="#percentage_csharp" style="color: inherit; text-decoration: inherit;">Percentage</a>
@@ -1519,14 +1421,11 @@ When the type is `HOST_COUNT`, the value represents the minimum number of health
         <span class="property-type">int</span>
     </dt>
     <dd>{{% md %}}The percentage of traffic to shift in the first increment of a `TimeBasedCanary` deployment.
-{{% /md %}}</dd>
-</dl>
+{{% /md %}}</dd></dl>
 {{% /choosable %}}
 
 {{% choosable language go %}}
-<dl class="resources-properties">
-
-    <dt class="property-optional"
+<dl class="resources-properties"><dt class="property-optional"
             title="Optional">
         <span id="interval_go">
 <a href="#interval_go" style="color: inherit; text-decoration: inherit;">Interval</a>
@@ -1535,8 +1434,7 @@ When the type is `HOST_COUNT`, the value represents the minimum number of health
         <span class="property-type">int</span>
     </dt>
     <dd>{{% md %}}The number of minutes between the first and second traffic shifts of a `TimeBasedCanary` deployment.
-{{% /md %}}</dd>
-    <dt class="property-optional"
+{{% /md %}}</dd><dt class="property-optional"
             title="Optional">
         <span id="percentage_go">
 <a href="#percentage_go" style="color: inherit; text-decoration: inherit;">Percentage</a>
@@ -1545,14 +1443,11 @@ When the type is `HOST_COUNT`, the value represents the minimum number of health
         <span class="property-type">int</span>
     </dt>
     <dd>{{% md %}}The percentage of traffic to shift in the first increment of a `TimeBasedCanary` deployment.
-{{% /md %}}</dd>
-</dl>
+{{% /md %}}</dd></dl>
 {{% /choosable %}}
 
 {{% choosable language nodejs %}}
-<dl class="resources-properties">
-
-    <dt class="property-optional"
+<dl class="resources-properties"><dt class="property-optional"
             title="Optional">
         <span id="interval_nodejs">
 <a href="#interval_nodejs" style="color: inherit; text-decoration: inherit;">interval</a>
@@ -1561,8 +1456,7 @@ When the type is `HOST_COUNT`, the value represents the minimum number of health
         <span class="property-type">number</span>
     </dt>
     <dd>{{% md %}}The number of minutes between the first and second traffic shifts of a `TimeBasedCanary` deployment.
-{{% /md %}}</dd>
-    <dt class="property-optional"
+{{% /md %}}</dd><dt class="property-optional"
             title="Optional">
         <span id="percentage_nodejs">
 <a href="#percentage_nodejs" style="color: inherit; text-decoration: inherit;">percentage</a>
@@ -1571,14 +1465,11 @@ When the type is `HOST_COUNT`, the value represents the minimum number of health
         <span class="property-type">number</span>
     </dt>
     <dd>{{% md %}}The percentage of traffic to shift in the first increment of a `TimeBasedCanary` deployment.
-{{% /md %}}</dd>
-</dl>
+{{% /md %}}</dd></dl>
 {{% /choosable %}}
 
 {{% choosable language python %}}
-<dl class="resources-properties">
-
-    <dt class="property-optional"
+<dl class="resources-properties"><dt class="property-optional"
             title="Optional">
         <span id="interval_python">
 <a href="#interval_python" style="color: inherit; text-decoration: inherit;">interval</a>
@@ -1587,8 +1478,7 @@ When the type is `HOST_COUNT`, the value represents the minimum number of health
         <span class="property-type">int</span>
     </dt>
     <dd>{{% md %}}The number of minutes between the first and second traffic shifts of a `TimeBasedCanary` deployment.
-{{% /md %}}</dd>
-    <dt class="property-optional"
+{{% /md %}}</dd><dt class="property-optional"
             title="Optional">
         <span id="percentage_python">
 <a href="#percentage_python" style="color: inherit; text-decoration: inherit;">percentage</a>
@@ -1597,16 +1487,13 @@ When the type is `HOST_COUNT`, the value represents the minimum number of health
         <span class="property-type">int</span>
     </dt>
     <dd>{{% md %}}The percentage of traffic to shift in the first increment of a `TimeBasedCanary` deployment.
-{{% /md %}}</dd>
-</dl>
+{{% /md %}}</dd></dl>
 {{% /choosable %}}
 
 <h4 id="deploymentconfigtrafficroutingconfigtimebasedlinear">Deployment<wbr>Config<wbr>Traffic<wbr>Routing<wbr>Config<wbr>Time<wbr>Based<wbr>Linear</h4>
 
 {{% choosable language csharp %}}
-<dl class="resources-properties">
-
-    <dt class="property-optional"
+<dl class="resources-properties"><dt class="property-optional"
             title="Optional">
         <span id="interval_csharp">
 <a href="#interval_csharp" style="color: inherit; text-decoration: inherit;">Interval</a>
@@ -1615,8 +1502,7 @@ When the type is `HOST_COUNT`, the value represents the minimum number of health
         <span class="property-type">int</span>
     </dt>
     <dd>{{% md %}}The number of minutes between each incremental traffic shift of a `TimeBasedLinear` deployment.
-{{% /md %}}</dd>
-    <dt class="property-optional"
+{{% /md %}}</dd><dt class="property-optional"
             title="Optional">
         <span id="percentage_csharp">
 <a href="#percentage_csharp" style="color: inherit; text-decoration: inherit;">Percentage</a>
@@ -1625,14 +1511,11 @@ When the type is `HOST_COUNT`, the value represents the minimum number of health
         <span class="property-type">int</span>
     </dt>
     <dd>{{% md %}}The percentage of traffic that is shifted at the start of each increment of a `TimeBasedLinear` deployment.
-{{% /md %}}</dd>
-</dl>
+{{% /md %}}</dd></dl>
 {{% /choosable %}}
 
 {{% choosable language go %}}
-<dl class="resources-properties">
-
-    <dt class="property-optional"
+<dl class="resources-properties"><dt class="property-optional"
             title="Optional">
         <span id="interval_go">
 <a href="#interval_go" style="color: inherit; text-decoration: inherit;">Interval</a>
@@ -1641,8 +1524,7 @@ When the type is `HOST_COUNT`, the value represents the minimum number of health
         <span class="property-type">int</span>
     </dt>
     <dd>{{% md %}}The number of minutes between each incremental traffic shift of a `TimeBasedLinear` deployment.
-{{% /md %}}</dd>
-    <dt class="property-optional"
+{{% /md %}}</dd><dt class="property-optional"
             title="Optional">
         <span id="percentage_go">
 <a href="#percentage_go" style="color: inherit; text-decoration: inherit;">Percentage</a>
@@ -1651,14 +1533,11 @@ When the type is `HOST_COUNT`, the value represents the minimum number of health
         <span class="property-type">int</span>
     </dt>
     <dd>{{% md %}}The percentage of traffic that is shifted at the start of each increment of a `TimeBasedLinear` deployment.
-{{% /md %}}</dd>
-</dl>
+{{% /md %}}</dd></dl>
 {{% /choosable %}}
 
 {{% choosable language nodejs %}}
-<dl class="resources-properties">
-
-    <dt class="property-optional"
+<dl class="resources-properties"><dt class="property-optional"
             title="Optional">
         <span id="interval_nodejs">
 <a href="#interval_nodejs" style="color: inherit; text-decoration: inherit;">interval</a>
@@ -1667,8 +1546,7 @@ When the type is `HOST_COUNT`, the value represents the minimum number of health
         <span class="property-type">number</span>
     </dt>
     <dd>{{% md %}}The number of minutes between each incremental traffic shift of a `TimeBasedLinear` deployment.
-{{% /md %}}</dd>
-    <dt class="property-optional"
+{{% /md %}}</dd><dt class="property-optional"
             title="Optional">
         <span id="percentage_nodejs">
 <a href="#percentage_nodejs" style="color: inherit; text-decoration: inherit;">percentage</a>
@@ -1677,14 +1555,11 @@ When the type is `HOST_COUNT`, the value represents the minimum number of health
         <span class="property-type">number</span>
     </dt>
     <dd>{{% md %}}The percentage of traffic that is shifted at the start of each increment of a `TimeBasedLinear` deployment.
-{{% /md %}}</dd>
-</dl>
+{{% /md %}}</dd></dl>
 {{% /choosable %}}
 
 {{% choosable language python %}}
-<dl class="resources-properties">
-
-    <dt class="property-optional"
+<dl class="resources-properties"><dt class="property-optional"
             title="Optional">
         <span id="interval_python">
 <a href="#interval_python" style="color: inherit; text-decoration: inherit;">interval</a>
@@ -1693,8 +1568,7 @@ When the type is `HOST_COUNT`, the value represents the minimum number of health
         <span class="property-type">int</span>
     </dt>
     <dd>{{% md %}}The number of minutes between each incremental traffic shift of a `TimeBasedLinear` deployment.
-{{% /md %}}</dd>
-    <dt class="property-optional"
+{{% /md %}}</dd><dt class="property-optional"
             title="Optional">
         <span id="percentage_python">
 <a href="#percentage_python" style="color: inherit; text-decoration: inherit;">percentage</a>
@@ -1703,8 +1577,7 @@ When the type is `HOST_COUNT`, the value represents the minimum number of health
         <span class="property-type">int</span>
     </dt>
     <dd>{{% md %}}The percentage of traffic that is shifted at the start of each increment of a `TimeBasedLinear` deployment.
-{{% /md %}}</dd>
-</dl>
+{{% /md %}}</dd></dl>
 {{% /choosable %}}
 ## Import
 
@@ -1725,6 +1598,6 @@ CodeDeploy Deployment Configurations can be imported using the `deployment_confi
 	<dt>License</dt>
 	<dd>Apache-2.0</dd>
 	<dt>Notes</dt>
-	<dd>This Pulumi package is based on the [`aws` Terraform Provider](https://github.com/terraform-providers/terraform-provider-aws).</dd>
+	<dd>{{% md %}}This Pulumi package is based on the [`aws` Terraform Provider](https://github.com/terraform-providers/terraform-provider-aws).{{% /md %}}</dd>
 </dl>
 

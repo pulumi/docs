@@ -51,9 +51,7 @@ The following arguments are supported:
 
 
 {{% choosable language csharp %}}
-<dl class="resources-properties">
-
-    <dt class="property-required"
+<dl class="resources-properties"><dt class="property-required"
             title="Required">
         <span id="name_csharp">
 <a href="#name_csharp" style="color: inherit; text-decoration: inherit;">Name</a>
@@ -61,8 +59,7 @@ The following arguments are supported:
         <span class="property-indicator"></span>
         <span class="property-type">string</span>
     </dt>
-    <dd>{{% md %}}The name of the web app.{{% /md %}}</dd>
-    <dt class="property-required"
+    <dd>{{% md %}}The name of the web app.{{% /md %}}</dd><dt class="property-required"
             title="Required">
         <span id="namespacename_csharp">
 <a href="#namespacename_csharp" style="color: inherit; text-decoration: inherit;">Namespace<wbr>Name</a>
@@ -70,8 +67,7 @@ The following arguments are supported:
         <span class="property-indicator"></span>
         <span class="property-type">string</span>
     </dt>
-    <dd>{{% md %}}The namespace for this hybrid connection.{{% /md %}}</dd>
-    <dt class="property-required"
+    <dd>{{% md %}}The namespace for this hybrid connection.{{% /md %}}</dd><dt class="property-required"
             title="Required">
         <span id="relayname_csharp">
 <a href="#relayname_csharp" style="color: inherit; text-decoration: inherit;">Relay<wbr>Name</a>
@@ -79,8 +75,7 @@ The following arguments are supported:
         <span class="property-indicator"></span>
         <span class="property-type">string</span>
     </dt>
-    <dd>{{% md %}}The relay name for this hybrid connection.{{% /md %}}</dd>
-    <dt class="property-required"
+    <dd>{{% md %}}The relay name for this hybrid connection.{{% /md %}}</dd><dt class="property-required"
             title="Required">
         <span id="resourcegroupname_csharp">
 <a href="#resourcegroupname_csharp" style="color: inherit; text-decoration: inherit;">Resource<wbr>Group<wbr>Name</a>
@@ -88,14 +83,11 @@ The following arguments are supported:
         <span class="property-indicator"></span>
         <span class="property-type">string</span>
     </dt>
-    <dd>{{% md %}}Name of the resource group to which the resource belongs.{{% /md %}}</dd>
-</dl>
+    <dd>{{% md %}}Name of the resource group to which the resource belongs.{{% /md %}}</dd></dl>
 {{% /choosable %}}
 
 {{% choosable language go %}}
-<dl class="resources-properties">
-
-    <dt class="property-required"
+<dl class="resources-properties"><dt class="property-required"
             title="Required">
         <span id="name_go">
 <a href="#name_go" style="color: inherit; text-decoration: inherit;">Name</a>
@@ -103,8 +95,7 @@ The following arguments are supported:
         <span class="property-indicator"></span>
         <span class="property-type">string</span>
     </dt>
-    <dd>{{% md %}}The name of the web app.{{% /md %}}</dd>
-    <dt class="property-required"
+    <dd>{{% md %}}The name of the web app.{{% /md %}}</dd><dt class="property-required"
             title="Required">
         <span id="namespacename_go">
 <a href="#namespacename_go" style="color: inherit; text-decoration: inherit;">Namespace<wbr>Name</a>
@@ -112,8 +103,7 @@ The following arguments are supported:
         <span class="property-indicator"></span>
         <span class="property-type">string</span>
     </dt>
-    <dd>{{% md %}}The namespace for this hybrid connection.{{% /md %}}</dd>
-    <dt class="property-required"
+    <dd>{{% md %}}The namespace for this hybrid connection.{{% /md %}}</dd><dt class="property-required"
             title="Required">
         <span id="relayname_go">
 <a href="#relayname_go" style="color: inherit; text-decoration: inherit;">Relay<wbr>Name</a>
@@ -121,8 +111,7 @@ The following arguments are supported:
         <span class="property-indicator"></span>
         <span class="property-type">string</span>
     </dt>
-    <dd>{{% md %}}The relay name for this hybrid connection.{{% /md %}}</dd>
-    <dt class="property-required"
+    <dd>{{% md %}}The relay name for this hybrid connection.{{% /md %}}</dd><dt class="property-required"
             title="Required">
         <span id="resourcegroupname_go">
 <a href="#resourcegroupname_go" style="color: inherit; text-decoration: inherit;">Resource<wbr>Group<wbr>Name</a>
@@ -130,14 +119,11 @@ The following arguments are supported:
         <span class="property-indicator"></span>
         <span class="property-type">string</span>
     </dt>
-    <dd>{{% md %}}Name of the resource group to which the resource belongs.{{% /md %}}</dd>
-</dl>
+    <dd>{{% md %}}Name of the resource group to which the resource belongs.{{% /md %}}</dd></dl>
 {{% /choosable %}}
 
 {{% choosable language nodejs %}}
-<dl class="resources-properties">
-
-    <dt class="property-required"
+<dl class="resources-properties"><dt class="property-required"
             title="Required">
         <span id="name_nodejs">
 <a href="#name_nodejs" style="color: inherit; text-decoration: inherit;">name</a>
@@ -145,8 +131,7 @@ The following arguments are supported:
         <span class="property-indicator"></span>
         <span class="property-type">string</span>
     </dt>
-    <dd>{{% md %}}The name of the web app.{{% /md %}}</dd>
-    <dt class="property-required"
+    <dd>{{% md %}}The name of the web app.{{% /md %}}</dd><dt class="property-required"
             title="Required">
         <span id="namespacename_nodejs">
 <a href="#namespacename_nodejs" style="color: inherit; text-decoration: inherit;">namespace<wbr>Name</a>
@@ -154,8 +139,7 @@ The following arguments are supported:
         <span class="property-indicator"></span>
         <span class="property-type">string</span>
     </dt>
-    <dd>{{% md %}}The namespace for this hybrid connection.{{% /md %}}</dd>
-    <dt class="property-required"
+    <dd>{{% md %}}The namespace for this hybrid connection.{{% /md %}}</dd><dt class="property-required"
             title="Required">
         <span id="relayname_nodejs">
 <a href="#relayname_nodejs" style="color: inherit; text-decoration: inherit;">relay<wbr>Name</a>
@@ -163,8 +147,7 @@ The following arguments are supported:
         <span class="property-indicator"></span>
         <span class="property-type">string</span>
     </dt>
-    <dd>{{% md %}}The relay name for this hybrid connection.{{% /md %}}</dd>
-    <dt class="property-required"
+    <dd>{{% md %}}The relay name for this hybrid connection.{{% /md %}}</dd><dt class="property-required"
             title="Required">
         <span id="resourcegroupname_nodejs">
 <a href="#resourcegroupname_nodejs" style="color: inherit; text-decoration: inherit;">resource<wbr>Group<wbr>Name</a>
@@ -172,14 +155,11 @@ The following arguments are supported:
         <span class="property-indicator"></span>
         <span class="property-type">string</span>
     </dt>
-    <dd>{{% md %}}Name of the resource group to which the resource belongs.{{% /md %}}</dd>
-</dl>
+    <dd>{{% md %}}Name of the resource group to which the resource belongs.{{% /md %}}</dd></dl>
 {{% /choosable %}}
 
 {{% choosable language python %}}
-<dl class="resources-properties">
-
-    <dt class="property-required"
+<dl class="resources-properties"><dt class="property-required"
             title="Required">
         <span id="name_python">
 <a href="#name_python" style="color: inherit; text-decoration: inherit;">name</a>
@@ -187,8 +167,7 @@ The following arguments are supported:
         <span class="property-indicator"></span>
         <span class="property-type">str</span>
     </dt>
-    <dd>{{% md %}}The name of the web app.{{% /md %}}</dd>
-    <dt class="property-required"
+    <dd>{{% md %}}The name of the web app.{{% /md %}}</dd><dt class="property-required"
             title="Required">
         <span id="namespace_name_python">
 <a href="#namespace_name_python" style="color: inherit; text-decoration: inherit;">namespace_<wbr>name</a>
@@ -196,8 +175,7 @@ The following arguments are supported:
         <span class="property-indicator"></span>
         <span class="property-type">str</span>
     </dt>
-    <dd>{{% md %}}The namespace for this hybrid connection.{{% /md %}}</dd>
-    <dt class="property-required"
+    <dd>{{% md %}}The namespace for this hybrid connection.{{% /md %}}</dd><dt class="property-required"
             title="Required">
         <span id="relay_name_python">
 <a href="#relay_name_python" style="color: inherit; text-decoration: inherit;">relay_<wbr>name</a>
@@ -205,8 +183,7 @@ The following arguments are supported:
         <span class="property-indicator"></span>
         <span class="property-type">str</span>
     </dt>
-    <dd>{{% md %}}The relay name for this hybrid connection.{{% /md %}}</dd>
-    <dt class="property-required"
+    <dd>{{% md %}}The relay name for this hybrid connection.{{% /md %}}</dd><dt class="property-required"
             title="Required">
         <span id="resource_group_name_python">
 <a href="#resource_group_name_python" style="color: inherit; text-decoration: inherit;">resource_<wbr>group_<wbr>name</a>
@@ -214,8 +191,7 @@ The following arguments are supported:
         <span class="property-indicator"></span>
         <span class="property-type">str</span>
     </dt>
-    <dd>{{% md %}}Name of the resource group to which the resource belongs.{{% /md %}}</dd>
-</dl>
+    <dd>{{% md %}}Name of the resource group to which the resource belongs.{{% /md %}}</dd></dl>
 {{% /choosable %}}
 
 
@@ -228,9 +204,7 @@ The following output properties are available:
 
 
 {{% choosable language csharp %}}
-<dl class="resources-properties">
-
-    <dt class="property-"
+<dl class="resources-properties"><dt class="property-"
             title="">
         <span id="id_csharp">
 <a href="#id_csharp" style="color: inherit; text-decoration: inherit;">Id</a>
@@ -238,8 +212,7 @@ The following output properties are available:
         <span class="property-indicator"></span>
         <span class="property-type">string</span>
     </dt>
-    <dd>{{% md %}}Resource Id.{{% /md %}}</dd>
-    <dt class="property-"
+    <dd>{{% md %}}Resource Id.{{% /md %}}</dd><dt class="property-"
             title="">
         <span id="name_csharp">
 <a href="#name_csharp" style="color: inherit; text-decoration: inherit;">Name</a>
@@ -247,8 +220,7 @@ The following output properties are available:
         <span class="property-indicator"></span>
         <span class="property-type">string</span>
     </dt>
-    <dd>{{% md %}}Resource Name.{{% /md %}}</dd>
-    <dt class="property-"
+    <dd>{{% md %}}Resource Name.{{% /md %}}</dd><dt class="property-"
             title="">
         <span id="sendkeyname_csharp">
 <a href="#sendkeyname_csharp" style="color: inherit; text-decoration: inherit;">Send<wbr>Key<wbr>Name</a>
@@ -256,8 +228,7 @@ The following output properties are available:
         <span class="property-indicator"></span>
         <span class="property-type">string</span>
     </dt>
-    <dd>{{% md %}}The name of the send key.{{% /md %}}</dd>
-    <dt class="property-"
+    <dd>{{% md %}}The name of the send key.{{% /md %}}</dd><dt class="property-"
             title="">
         <span id="sendkeyvalue_csharp">
 <a href="#sendkeyvalue_csharp" style="color: inherit; text-decoration: inherit;">Send<wbr>Key<wbr>Value</a>
@@ -265,8 +236,7 @@ The following output properties are available:
         <span class="property-indicator"></span>
         <span class="property-type">string</span>
     </dt>
-    <dd>{{% md %}}The value of the send key.{{% /md %}}</dd>
-    <dt class="property-"
+    <dd>{{% md %}}The value of the send key.{{% /md %}}</dd><dt class="property-"
             title="">
         <span id="type_csharp">
 <a href="#type_csharp" style="color: inherit; text-decoration: inherit;">Type</a>
@@ -274,8 +244,7 @@ The following output properties are available:
         <span class="property-indicator"></span>
         <span class="property-type">string</span>
     </dt>
-    <dd>{{% md %}}Resource type.{{% /md %}}</dd>
-    <dt class="property-"
+    <dd>{{% md %}}Resource type.{{% /md %}}</dd><dt class="property-"
             title="">
         <span id="kind_csharp">
 <a href="#kind_csharp" style="color: inherit; text-decoration: inherit;">Kind</a>
@@ -283,14 +252,11 @@ The following output properties are available:
         <span class="property-indicator"></span>
         <span class="property-type">string</span>
     </dt>
-    <dd>{{% md %}}Kind of resource.{{% /md %}}</dd>
-</dl>
+    <dd>{{% md %}}Kind of resource.{{% /md %}}</dd></dl>
 {{% /choosable %}}
 
 {{% choosable language go %}}
-<dl class="resources-properties">
-
-    <dt class="property-"
+<dl class="resources-properties"><dt class="property-"
             title="">
         <span id="id_go">
 <a href="#id_go" style="color: inherit; text-decoration: inherit;">Id</a>
@@ -298,8 +264,7 @@ The following output properties are available:
         <span class="property-indicator"></span>
         <span class="property-type">string</span>
     </dt>
-    <dd>{{% md %}}Resource Id.{{% /md %}}</dd>
-    <dt class="property-"
+    <dd>{{% md %}}Resource Id.{{% /md %}}</dd><dt class="property-"
             title="">
         <span id="name_go">
 <a href="#name_go" style="color: inherit; text-decoration: inherit;">Name</a>
@@ -307,8 +272,7 @@ The following output properties are available:
         <span class="property-indicator"></span>
         <span class="property-type">string</span>
     </dt>
-    <dd>{{% md %}}Resource Name.{{% /md %}}</dd>
-    <dt class="property-"
+    <dd>{{% md %}}Resource Name.{{% /md %}}</dd><dt class="property-"
             title="">
         <span id="sendkeyname_go">
 <a href="#sendkeyname_go" style="color: inherit; text-decoration: inherit;">Send<wbr>Key<wbr>Name</a>
@@ -316,8 +280,7 @@ The following output properties are available:
         <span class="property-indicator"></span>
         <span class="property-type">string</span>
     </dt>
-    <dd>{{% md %}}The name of the send key.{{% /md %}}</dd>
-    <dt class="property-"
+    <dd>{{% md %}}The name of the send key.{{% /md %}}</dd><dt class="property-"
             title="">
         <span id="sendkeyvalue_go">
 <a href="#sendkeyvalue_go" style="color: inherit; text-decoration: inherit;">Send<wbr>Key<wbr>Value</a>
@@ -325,8 +288,7 @@ The following output properties are available:
         <span class="property-indicator"></span>
         <span class="property-type">string</span>
     </dt>
-    <dd>{{% md %}}The value of the send key.{{% /md %}}</dd>
-    <dt class="property-"
+    <dd>{{% md %}}The value of the send key.{{% /md %}}</dd><dt class="property-"
             title="">
         <span id="type_go">
 <a href="#type_go" style="color: inherit; text-decoration: inherit;">Type</a>
@@ -334,8 +296,7 @@ The following output properties are available:
         <span class="property-indicator"></span>
         <span class="property-type">string</span>
     </dt>
-    <dd>{{% md %}}Resource type.{{% /md %}}</dd>
-    <dt class="property-"
+    <dd>{{% md %}}Resource type.{{% /md %}}</dd><dt class="property-"
             title="">
         <span id="kind_go">
 <a href="#kind_go" style="color: inherit; text-decoration: inherit;">Kind</a>
@@ -343,14 +304,11 @@ The following output properties are available:
         <span class="property-indicator"></span>
         <span class="property-type">string</span>
     </dt>
-    <dd>{{% md %}}Kind of resource.{{% /md %}}</dd>
-</dl>
+    <dd>{{% md %}}Kind of resource.{{% /md %}}</dd></dl>
 {{% /choosable %}}
 
 {{% choosable language nodejs %}}
-<dl class="resources-properties">
-
-    <dt class="property-"
+<dl class="resources-properties"><dt class="property-"
             title="">
         <span id="id_nodejs">
 <a href="#id_nodejs" style="color: inherit; text-decoration: inherit;">id</a>
@@ -358,8 +316,7 @@ The following output properties are available:
         <span class="property-indicator"></span>
         <span class="property-type">string</span>
     </dt>
-    <dd>{{% md %}}Resource Id.{{% /md %}}</dd>
-    <dt class="property-"
+    <dd>{{% md %}}Resource Id.{{% /md %}}</dd><dt class="property-"
             title="">
         <span id="name_nodejs">
 <a href="#name_nodejs" style="color: inherit; text-decoration: inherit;">name</a>
@@ -367,8 +324,7 @@ The following output properties are available:
         <span class="property-indicator"></span>
         <span class="property-type">string</span>
     </dt>
-    <dd>{{% md %}}Resource Name.{{% /md %}}</dd>
-    <dt class="property-"
+    <dd>{{% md %}}Resource Name.{{% /md %}}</dd><dt class="property-"
             title="">
         <span id="sendkeyname_nodejs">
 <a href="#sendkeyname_nodejs" style="color: inherit; text-decoration: inherit;">send<wbr>Key<wbr>Name</a>
@@ -376,8 +332,7 @@ The following output properties are available:
         <span class="property-indicator"></span>
         <span class="property-type">string</span>
     </dt>
-    <dd>{{% md %}}The name of the send key.{{% /md %}}</dd>
-    <dt class="property-"
+    <dd>{{% md %}}The name of the send key.{{% /md %}}</dd><dt class="property-"
             title="">
         <span id="sendkeyvalue_nodejs">
 <a href="#sendkeyvalue_nodejs" style="color: inherit; text-decoration: inherit;">send<wbr>Key<wbr>Value</a>
@@ -385,8 +340,7 @@ The following output properties are available:
         <span class="property-indicator"></span>
         <span class="property-type">string</span>
     </dt>
-    <dd>{{% md %}}The value of the send key.{{% /md %}}</dd>
-    <dt class="property-"
+    <dd>{{% md %}}The value of the send key.{{% /md %}}</dd><dt class="property-"
             title="">
         <span id="type_nodejs">
 <a href="#type_nodejs" style="color: inherit; text-decoration: inherit;">type</a>
@@ -394,8 +348,7 @@ The following output properties are available:
         <span class="property-indicator"></span>
         <span class="property-type">string</span>
     </dt>
-    <dd>{{% md %}}Resource type.{{% /md %}}</dd>
-    <dt class="property-"
+    <dd>{{% md %}}Resource type.{{% /md %}}</dd><dt class="property-"
             title="">
         <span id="kind_nodejs">
 <a href="#kind_nodejs" style="color: inherit; text-decoration: inherit;">kind</a>
@@ -403,14 +356,11 @@ The following output properties are available:
         <span class="property-indicator"></span>
         <span class="property-type">string</span>
     </dt>
-    <dd>{{% md %}}Kind of resource.{{% /md %}}</dd>
-</dl>
+    <dd>{{% md %}}Kind of resource.{{% /md %}}</dd></dl>
 {{% /choosable %}}
 
 {{% choosable language python %}}
-<dl class="resources-properties">
-
-    <dt class="property-"
+<dl class="resources-properties"><dt class="property-"
             title="">
         <span id="id_python">
 <a href="#id_python" style="color: inherit; text-decoration: inherit;">id</a>
@@ -418,8 +368,7 @@ The following output properties are available:
         <span class="property-indicator"></span>
         <span class="property-type">str</span>
     </dt>
-    <dd>{{% md %}}Resource Id.{{% /md %}}</dd>
-    <dt class="property-"
+    <dd>{{% md %}}Resource Id.{{% /md %}}</dd><dt class="property-"
             title="">
         <span id="name_python">
 <a href="#name_python" style="color: inherit; text-decoration: inherit;">name</a>
@@ -427,8 +376,7 @@ The following output properties are available:
         <span class="property-indicator"></span>
         <span class="property-type">str</span>
     </dt>
-    <dd>{{% md %}}Resource Name.{{% /md %}}</dd>
-    <dt class="property-"
+    <dd>{{% md %}}Resource Name.{{% /md %}}</dd><dt class="property-"
             title="">
         <span id="send_key_name_python">
 <a href="#send_key_name_python" style="color: inherit; text-decoration: inherit;">send_<wbr>key_<wbr>name</a>
@@ -436,8 +384,7 @@ The following output properties are available:
         <span class="property-indicator"></span>
         <span class="property-type">str</span>
     </dt>
-    <dd>{{% md %}}The name of the send key.{{% /md %}}</dd>
-    <dt class="property-"
+    <dd>{{% md %}}The name of the send key.{{% /md %}}</dd><dt class="property-"
             title="">
         <span id="send_key_value_python">
 <a href="#send_key_value_python" style="color: inherit; text-decoration: inherit;">send_<wbr>key_<wbr>value</a>
@@ -445,8 +392,7 @@ The following output properties are available:
         <span class="property-indicator"></span>
         <span class="property-type">str</span>
     </dt>
-    <dd>{{% md %}}The value of the send key.{{% /md %}}</dd>
-    <dt class="property-"
+    <dd>{{% md %}}The value of the send key.{{% /md %}}</dd><dt class="property-"
             title="">
         <span id="type_python">
 <a href="#type_python" style="color: inherit; text-decoration: inherit;">type</a>
@@ -454,8 +400,7 @@ The following output properties are available:
         <span class="property-indicator"></span>
         <span class="property-type">str</span>
     </dt>
-    <dd>{{% md %}}Resource type.{{% /md %}}</dd>
-    <dt class="property-"
+    <dd>{{% md %}}Resource type.{{% /md %}}</dd><dt class="property-"
             title="">
         <span id="kind_python">
 <a href="#kind_python" style="color: inherit; text-decoration: inherit;">kind</a>
@@ -463,8 +408,7 @@ The following output properties are available:
         <span class="property-indicator"></span>
         <span class="property-type">str</span>
     </dt>
-    <dd>{{% md %}}Kind of resource.{{% /md %}}</dd>
-</dl>
+    <dd>{{% md %}}Kind of resource.{{% /md %}}</dd></dl>
 {{% /choosable %}}
 
 

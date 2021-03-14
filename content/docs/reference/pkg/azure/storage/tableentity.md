@@ -13,23 +13,38 @@ meta_desc: "Documentation for the azure.storage.TableEntity resource with exampl
 Manages an Entity within a Table in an Azure Storage Account.
 
 {{% examples %}}
+
 ## Example Usage
 
 {{< chooser language "typescript,python,go,csharp" / >}}
 
-{{% example csharp %}}
-Coming soon!
-{{% /example %}}
 
-{{% example go %}}
-Coming soon!
-{{% /example %}}
 
-{{% example python %}}
-Coming soon!
-{{% /example %}}
 
-{{% example typescript %}}
+
+{{< example csharp >}}
+
+Coming soon!
+
+{{< /example >}}
+
+
+{{< example go >}}
+
+Coming soon!
+
+{{< /example >}}
+
+
+{{< example python >}}
+
+Coming soon!
+
+{{< /example >}}
+
+
+{{< example typescript >}}
+
 
 ```typescript
 import * as pulumi from "@pulumi/pulumi";
@@ -57,9 +72,16 @@ const exampleTableEntity = new azure.storage.TableEntity("exampleTableEntity", {
 });
 ```
 
-{{% /example %}}
+
+{{< /example >}}
+
+
+
+
 
 {{% /examples %}}
+
+
 
 
 ## Create a TableEntity Resource {#create}
@@ -84,9 +106,7 @@ const exampleTableEntity = new azure.storage.TableEntity("exampleTableEntity", {
 
 {{% choosable language nodejs %}}
 
-<dl class="resources-properties">
-  
-    <dt
+<dl class="resources-properties"><dt
         class="property-required" title="Required">
         <span>name</span>
         <span class="property-indicator"></span>
@@ -94,9 +114,7 @@ const exampleTableEntity = new azure.storage.TableEntity("exampleTableEntity", {
     </dt>
     <dd>
       The unique name of the resource.
-    </dd>
-  
-    <dt
+    </dd><dt
         class="property-required" title="Required">
         <span>args</span>
         <span class="property-indicator"></span>
@@ -104,9 +122,7 @@ const exampleTableEntity = new azure.storage.TableEntity("exampleTableEntity", {
     </dt>
     <dd>
       The arguments to resource properties.
-    </dd>
-  
-    <dt
+    </dd><dt
         class="property-optional" title="Optional">
         <span>opts</span>
         <span class="property-indicator"></span>
@@ -114,10 +130,7 @@ const exampleTableEntity = new azure.storage.TableEntity("exampleTableEntity", {
     </dt>
     <dd>
       Bag of options to control resource&#39;s behavior.
-    </dd>
-  
-
-</dl>
+    </dd></dl>
 
 {{% /choosable %}}
 
@@ -143,9 +156,7 @@ const exampleTableEntity = new azure.storage.TableEntity("exampleTableEntity", {
 
 {{% choosable language go %}}
 
-<dl class="resources-properties">
-  
-    <dt
+<dl class="resources-properties"><dt
         class="property-optional" title="Optional">
         <span>ctx</span>
         <span class="property-indicator"></span>
@@ -153,9 +164,7 @@ const exampleTableEntity = new azure.storage.TableEntity("exampleTableEntity", {
     </dt>
     <dd>
       Context object for the current deployment.
-    </dd>
-  
-    <dt
+    </dd><dt
         class="property-required" title="Required">
         <span>name</span>
         <span class="property-indicator"></span>
@@ -163,9 +172,7 @@ const exampleTableEntity = new azure.storage.TableEntity("exampleTableEntity", {
     </dt>
     <dd>
       The unique name of the resource.
-    </dd>
-  
-    <dt
+    </dd><dt
         class="property-required" title="Required">
         <span>args</span>
         <span class="property-indicator"></span>
@@ -173,9 +180,7 @@ const exampleTableEntity = new azure.storage.TableEntity("exampleTableEntity", {
     </dt>
     <dd>
       The arguments to resource properties.
-    </dd>
-  
-    <dt
+    </dd><dt
         class="property-optional" title="Optional">
         <span>opts</span>
         <span class="property-indicator"></span>
@@ -183,18 +188,13 @@ const exampleTableEntity = new azure.storage.TableEntity("exampleTableEntity", {
     </dt>
     <dd>
       Bag of options to control resource&#39;s behavior.
-    </dd>
-  
-
-</dl>
+    </dd></dl>
 
 {{% /choosable %}}
 
 {{% choosable language csharp %}}
 
-<dl class="resources-properties">
-  
-    <dt
+<dl class="resources-properties"><dt
         class="property-required" title="Required">
         <span>name</span>
         <span class="property-indicator"></span>
@@ -202,9 +202,7 @@ const exampleTableEntity = new azure.storage.TableEntity("exampleTableEntity", {
     </dt>
     <dd>
       The unique name of the resource.
-    </dd>
-  
-    <dt
+    </dd><dt
         class="property-required" title="Required">
         <span>args</span>
         <span class="property-indicator"></span>
@@ -212,9 +210,7 @@ const exampleTableEntity = new azure.storage.TableEntity("exampleTableEntity", {
     </dt>
     <dd>
       The arguments to resource properties.
-    </dd>
-  
-    <dt
+    </dd><dt
         class="property-optional" title="Optional">
         <span>opts</span>
         <span class="property-indicator"></span>
@@ -222,10 +218,7 @@ const exampleTableEntity = new azure.storage.TableEntity("exampleTableEntity", {
     </dt>
     <dd>
       Bag of options to control resource&#39;s behavior.
-    </dd>
-  
-
-</dl>
+    </dd></dl>
 
 {{% /choosable %}}
 
@@ -240,9 +233,7 @@ The TableEntity resource accepts the following [input]({{< relref "/docs/intro/c
 
 
 {{% choosable language csharp %}}
-<dl class="resources-properties">
-
-    <dt class="property-required"
+<dl class="resources-properties"><dt class="property-required"
             title="Required">
         <span id="entity_csharp">
 <a href="#entity_csharp" style="color: inherit; text-decoration: inherit;">Entity</a>
@@ -251,8 +242,7 @@ The TableEntity resource accepts the following [input]({{< relref "/docs/intro/c
         <span class="property-type">Dictionary&lt;string, string&gt;</span>
     </dt>
     <dd>{{% md %}}A map of key/value pairs that describe the entity to be inserted/merged in to the storage table.
-{{% /md %}}</dd>
-    <dt class="property-required"
+{{% /md %}}</dd><dt class="property-required"
             title="Required">
         <span id="partitionkey_csharp">
 <a href="#partitionkey_csharp" style="color: inherit; text-decoration: inherit;">Partition<wbr>Key</a>
@@ -261,8 +251,7 @@ The TableEntity resource accepts the following [input]({{< relref "/docs/intro/c
         <span class="property-type">string</span>
     </dt>
     <dd>{{% md %}}The key for the partition where the entity will be inserted/merged. Changing this forces a new resource.
-{{% /md %}}</dd>
-    <dt class="property-required"
+{{% /md %}}</dd><dt class="property-required"
             title="Required">
         <span id="rowkey_csharp">
 <a href="#rowkey_csharp" style="color: inherit; text-decoration: inherit;">Row<wbr>Key</a>
@@ -271,8 +260,7 @@ The TableEntity resource accepts the following [input]({{< relref "/docs/intro/c
         <span class="property-type">string</span>
     </dt>
     <dd>{{% md %}}The key for the row where the entity will be inserted/merged. Changing this forces a new resource.
-{{% /md %}}</dd>
-    <dt class="property-required"
+{{% /md %}}</dd><dt class="property-required"
             title="Required">
         <span id="storageaccountname_csharp">
 <a href="#storageaccountname_csharp" style="color: inherit; text-decoration: inherit;">Storage<wbr>Account<wbr>Name</a>
@@ -282,8 +270,7 @@ The TableEntity resource accepts the following [input]({{< relref "/docs/intro/c
     </dt>
     <dd>{{% md %}}Specifies the storage account in which to create the storage table entity.
 Changing this forces a new resource to be created.
-{{% /md %}}</dd>
-    <dt class="property-required"
+{{% /md %}}</dd><dt class="property-required"
             title="Required">
         <span id="tablename_csharp">
 <a href="#tablename_csharp" style="color: inherit; text-decoration: inherit;">Table<wbr>Name</a>
@@ -293,14 +280,11 @@ Changing this forces a new resource to be created.
     </dt>
     <dd>{{% md %}}The name of the storage table in which to create the storage table entity.
 Changing this forces a new resource to be created.
-{{% /md %}}</dd>
-</dl>
+{{% /md %}}</dd></dl>
 {{% /choosable %}}
 
 {{% choosable language go %}}
-<dl class="resources-properties">
-
-    <dt class="property-required"
+<dl class="resources-properties"><dt class="property-required"
             title="Required">
         <span id="entity_go">
 <a href="#entity_go" style="color: inherit; text-decoration: inherit;">Entity</a>
@@ -309,8 +293,7 @@ Changing this forces a new resource to be created.
         <span class="property-type">map[string]string</span>
     </dt>
     <dd>{{% md %}}A map of key/value pairs that describe the entity to be inserted/merged in to the storage table.
-{{% /md %}}</dd>
-    <dt class="property-required"
+{{% /md %}}</dd><dt class="property-required"
             title="Required">
         <span id="partitionkey_go">
 <a href="#partitionkey_go" style="color: inherit; text-decoration: inherit;">Partition<wbr>Key</a>
@@ -319,8 +302,7 @@ Changing this forces a new resource to be created.
         <span class="property-type">string</span>
     </dt>
     <dd>{{% md %}}The key for the partition where the entity will be inserted/merged. Changing this forces a new resource.
-{{% /md %}}</dd>
-    <dt class="property-required"
+{{% /md %}}</dd><dt class="property-required"
             title="Required">
         <span id="rowkey_go">
 <a href="#rowkey_go" style="color: inherit; text-decoration: inherit;">Row<wbr>Key</a>
@@ -329,8 +311,7 @@ Changing this forces a new resource to be created.
         <span class="property-type">string</span>
     </dt>
     <dd>{{% md %}}The key for the row where the entity will be inserted/merged. Changing this forces a new resource.
-{{% /md %}}</dd>
-    <dt class="property-required"
+{{% /md %}}</dd><dt class="property-required"
             title="Required">
         <span id="storageaccountname_go">
 <a href="#storageaccountname_go" style="color: inherit; text-decoration: inherit;">Storage<wbr>Account<wbr>Name</a>
@@ -340,8 +321,7 @@ Changing this forces a new resource to be created.
     </dt>
     <dd>{{% md %}}Specifies the storage account in which to create the storage table entity.
 Changing this forces a new resource to be created.
-{{% /md %}}</dd>
-    <dt class="property-required"
+{{% /md %}}</dd><dt class="property-required"
             title="Required">
         <span id="tablename_go">
 <a href="#tablename_go" style="color: inherit; text-decoration: inherit;">Table<wbr>Name</a>
@@ -351,14 +331,11 @@ Changing this forces a new resource to be created.
     </dt>
     <dd>{{% md %}}The name of the storage table in which to create the storage table entity.
 Changing this forces a new resource to be created.
-{{% /md %}}</dd>
-</dl>
+{{% /md %}}</dd></dl>
 {{% /choosable %}}
 
 {{% choosable language nodejs %}}
-<dl class="resources-properties">
-
-    <dt class="property-required"
+<dl class="resources-properties"><dt class="property-required"
             title="Required">
         <span id="entity_nodejs">
 <a href="#entity_nodejs" style="color: inherit; text-decoration: inherit;">entity</a>
@@ -367,8 +344,7 @@ Changing this forces a new resource to be created.
         <span class="property-type">{[key: string]: string}</span>
     </dt>
     <dd>{{% md %}}A map of key/value pairs that describe the entity to be inserted/merged in to the storage table.
-{{% /md %}}</dd>
-    <dt class="property-required"
+{{% /md %}}</dd><dt class="property-required"
             title="Required">
         <span id="partitionkey_nodejs">
 <a href="#partitionkey_nodejs" style="color: inherit; text-decoration: inherit;">partition<wbr>Key</a>
@@ -377,8 +353,7 @@ Changing this forces a new resource to be created.
         <span class="property-type">string</span>
     </dt>
     <dd>{{% md %}}The key for the partition where the entity will be inserted/merged. Changing this forces a new resource.
-{{% /md %}}</dd>
-    <dt class="property-required"
+{{% /md %}}</dd><dt class="property-required"
             title="Required">
         <span id="rowkey_nodejs">
 <a href="#rowkey_nodejs" style="color: inherit; text-decoration: inherit;">row<wbr>Key</a>
@@ -387,8 +362,7 @@ Changing this forces a new resource to be created.
         <span class="property-type">string</span>
     </dt>
     <dd>{{% md %}}The key for the row where the entity will be inserted/merged. Changing this forces a new resource.
-{{% /md %}}</dd>
-    <dt class="property-required"
+{{% /md %}}</dd><dt class="property-required"
             title="Required">
         <span id="storageaccountname_nodejs">
 <a href="#storageaccountname_nodejs" style="color: inherit; text-decoration: inherit;">storage<wbr>Account<wbr>Name</a>
@@ -398,8 +372,7 @@ Changing this forces a new resource to be created.
     </dt>
     <dd>{{% md %}}Specifies the storage account in which to create the storage table entity.
 Changing this forces a new resource to be created.
-{{% /md %}}</dd>
-    <dt class="property-required"
+{{% /md %}}</dd><dt class="property-required"
             title="Required">
         <span id="tablename_nodejs">
 <a href="#tablename_nodejs" style="color: inherit; text-decoration: inherit;">table<wbr>Name</a>
@@ -409,14 +382,11 @@ Changing this forces a new resource to be created.
     </dt>
     <dd>{{% md %}}The name of the storage table in which to create the storage table entity.
 Changing this forces a new resource to be created.
-{{% /md %}}</dd>
-</dl>
+{{% /md %}}</dd></dl>
 {{% /choosable %}}
 
 {{% choosable language python %}}
-<dl class="resources-properties">
-
-    <dt class="property-required"
+<dl class="resources-properties"><dt class="property-required"
             title="Required">
         <span id="entity_python">
 <a href="#entity_python" style="color: inherit; text-decoration: inherit;">entity</a>
@@ -425,8 +395,7 @@ Changing this forces a new resource to be created.
         <span class="property-type">Mapping[str, str]</span>
     </dt>
     <dd>{{% md %}}A map of key/value pairs that describe the entity to be inserted/merged in to the storage table.
-{{% /md %}}</dd>
-    <dt class="property-required"
+{{% /md %}}</dd><dt class="property-required"
             title="Required">
         <span id="partition_key_python">
 <a href="#partition_key_python" style="color: inherit; text-decoration: inherit;">partition_<wbr>key</a>
@@ -435,8 +404,7 @@ Changing this forces a new resource to be created.
         <span class="property-type">str</span>
     </dt>
     <dd>{{% md %}}The key for the partition where the entity will be inserted/merged. Changing this forces a new resource.
-{{% /md %}}</dd>
-    <dt class="property-required"
+{{% /md %}}</dd><dt class="property-required"
             title="Required">
         <span id="row_key_python">
 <a href="#row_key_python" style="color: inherit; text-decoration: inherit;">row_<wbr>key</a>
@@ -445,8 +413,7 @@ Changing this forces a new resource to be created.
         <span class="property-type">str</span>
     </dt>
     <dd>{{% md %}}The key for the row where the entity will be inserted/merged. Changing this forces a new resource.
-{{% /md %}}</dd>
-    <dt class="property-required"
+{{% /md %}}</dd><dt class="property-required"
             title="Required">
         <span id="storage_account_name_python">
 <a href="#storage_account_name_python" style="color: inherit; text-decoration: inherit;">storage_<wbr>account_<wbr>name</a>
@@ -456,8 +423,7 @@ Changing this forces a new resource to be created.
     </dt>
     <dd>{{% md %}}Specifies the storage account in which to create the storage table entity.
 Changing this forces a new resource to be created.
-{{% /md %}}</dd>
-    <dt class="property-required"
+{{% /md %}}</dd><dt class="property-required"
             title="Required">
         <span id="table_name_python">
 <a href="#table_name_python" style="color: inherit; text-decoration: inherit;">table_<wbr>name</a>
@@ -467,8 +433,7 @@ Changing this forces a new resource to be created.
     </dt>
     <dd>{{% md %}}The name of the storage table in which to create the storage table entity.
 Changing this forces a new resource to be created.
-{{% /md %}}</dd>
-</dl>
+{{% /md %}}</dd></dl>
 {{% /choosable %}}
 
 
@@ -479,9 +444,7 @@ All [input](#inputs) properties are implicitly available as output properties. A
 
 
 {{% choosable language csharp %}}
-<dl class="resources-properties">
-
-    <dt class="property-"
+<dl class="resources-properties"><dt class="property-"
             title="">
         <span id="id_csharp">
 <a href="#id_csharp" style="color: inherit; text-decoration: inherit;">Id</a>
@@ -489,14 +452,11 @@ All [input](#inputs) properties are implicitly available as output properties. A
         <span class="property-indicator"></span>
         <span class="property-type">string</span>
     </dt>
-    <dd>{{% md %}}The provider-assigned unique ID for this managed resource.{{% /md %}}</dd>
-</dl>
+    <dd>{{% md %}}The provider-assigned unique ID for this managed resource.{{% /md %}}</dd></dl>
 {{% /choosable %}}
 
 {{% choosable language go %}}
-<dl class="resources-properties">
-
-    <dt class="property-"
+<dl class="resources-properties"><dt class="property-"
             title="">
         <span id="id_go">
 <a href="#id_go" style="color: inherit; text-decoration: inherit;">Id</a>
@@ -504,14 +464,11 @@ All [input](#inputs) properties are implicitly available as output properties. A
         <span class="property-indicator"></span>
         <span class="property-type">string</span>
     </dt>
-    <dd>{{% md %}}The provider-assigned unique ID for this managed resource.{{% /md %}}</dd>
-</dl>
+    <dd>{{% md %}}The provider-assigned unique ID for this managed resource.{{% /md %}}</dd></dl>
 {{% /choosable %}}
 
 {{% choosable language nodejs %}}
-<dl class="resources-properties">
-
-    <dt class="property-"
+<dl class="resources-properties"><dt class="property-"
             title="">
         <span id="id_nodejs">
 <a href="#id_nodejs" style="color: inherit; text-decoration: inherit;">id</a>
@@ -519,14 +476,11 @@ All [input](#inputs) properties are implicitly available as output properties. A
         <span class="property-indicator"></span>
         <span class="property-type">string</span>
     </dt>
-    <dd>{{% md %}}The provider-assigned unique ID for this managed resource.{{% /md %}}</dd>
-</dl>
+    <dd>{{% md %}}The provider-assigned unique ID for this managed resource.{{% /md %}}</dd></dl>
 {{% /choosable %}}
 
 {{% choosable language python %}}
-<dl class="resources-properties">
-
-    <dt class="property-"
+<dl class="resources-properties"><dt class="property-"
             title="">
         <span id="id_python">
 <a href="#id_python" style="color: inherit; text-decoration: inherit;">id</a>
@@ -534,8 +488,7 @@ All [input](#inputs) properties are implicitly available as output properties. A
         <span class="property-indicator"></span>
         <span class="property-type">str</span>
     </dt>
-    <dd>{{% md %}}The provider-assigned unique ID for this managed resource.{{% /md %}}</dd>
-</dl>
+    <dd>{{% md %}}The provider-assigned unique ID for this managed resource.{{% /md %}}</dd></dl>
 {{% /choosable %}}
 
 
@@ -662,9 +615,7 @@ The following state arguments are supported:
 
 
 {{% choosable language csharp %}}
-<dl class="resources-properties">
-
-    <dt class="property-optional"
+<dl class="resources-properties"><dt class="property-optional"
             title="Optional">
         <span id="state_entity_csharp">
 <a href="#state_entity_csharp" style="color: inherit; text-decoration: inherit;">Entity</a>
@@ -673,8 +624,7 @@ The following state arguments are supported:
         <span class="property-type">Dictionary&lt;string, string&gt;</span>
     </dt>
     <dd>{{% md %}}A map of key/value pairs that describe the entity to be inserted/merged in to the storage table.
-{{% /md %}}</dd>
-    <dt class="property-optional"
+{{% /md %}}</dd><dt class="property-optional"
             title="Optional">
         <span id="state_partitionkey_csharp">
 <a href="#state_partitionkey_csharp" style="color: inherit; text-decoration: inherit;">Partition<wbr>Key</a>
@@ -683,8 +633,7 @@ The following state arguments are supported:
         <span class="property-type">string</span>
     </dt>
     <dd>{{% md %}}The key for the partition where the entity will be inserted/merged. Changing this forces a new resource.
-{{% /md %}}</dd>
-    <dt class="property-optional"
+{{% /md %}}</dd><dt class="property-optional"
             title="Optional">
         <span id="state_rowkey_csharp">
 <a href="#state_rowkey_csharp" style="color: inherit; text-decoration: inherit;">Row<wbr>Key</a>
@@ -693,8 +642,7 @@ The following state arguments are supported:
         <span class="property-type">string</span>
     </dt>
     <dd>{{% md %}}The key for the row where the entity will be inserted/merged. Changing this forces a new resource.
-{{% /md %}}</dd>
-    <dt class="property-optional"
+{{% /md %}}</dd><dt class="property-optional"
             title="Optional">
         <span id="state_storageaccountname_csharp">
 <a href="#state_storageaccountname_csharp" style="color: inherit; text-decoration: inherit;">Storage<wbr>Account<wbr>Name</a>
@@ -704,8 +652,7 @@ The following state arguments are supported:
     </dt>
     <dd>{{% md %}}Specifies the storage account in which to create the storage table entity.
 Changing this forces a new resource to be created.
-{{% /md %}}</dd>
-    <dt class="property-optional"
+{{% /md %}}</dd><dt class="property-optional"
             title="Optional">
         <span id="state_tablename_csharp">
 <a href="#state_tablename_csharp" style="color: inherit; text-decoration: inherit;">Table<wbr>Name</a>
@@ -715,14 +662,11 @@ Changing this forces a new resource to be created.
     </dt>
     <dd>{{% md %}}The name of the storage table in which to create the storage table entity.
 Changing this forces a new resource to be created.
-{{% /md %}}</dd>
-</dl>
+{{% /md %}}</dd></dl>
 {{% /choosable %}}
 
 {{% choosable language go %}}
-<dl class="resources-properties">
-
-    <dt class="property-optional"
+<dl class="resources-properties"><dt class="property-optional"
             title="Optional">
         <span id="state_entity_go">
 <a href="#state_entity_go" style="color: inherit; text-decoration: inherit;">Entity</a>
@@ -731,8 +675,7 @@ Changing this forces a new resource to be created.
         <span class="property-type">map[string]string</span>
     </dt>
     <dd>{{% md %}}A map of key/value pairs that describe the entity to be inserted/merged in to the storage table.
-{{% /md %}}</dd>
-    <dt class="property-optional"
+{{% /md %}}</dd><dt class="property-optional"
             title="Optional">
         <span id="state_partitionkey_go">
 <a href="#state_partitionkey_go" style="color: inherit; text-decoration: inherit;">Partition<wbr>Key</a>
@@ -741,8 +684,7 @@ Changing this forces a new resource to be created.
         <span class="property-type">string</span>
     </dt>
     <dd>{{% md %}}The key for the partition where the entity will be inserted/merged. Changing this forces a new resource.
-{{% /md %}}</dd>
-    <dt class="property-optional"
+{{% /md %}}</dd><dt class="property-optional"
             title="Optional">
         <span id="state_rowkey_go">
 <a href="#state_rowkey_go" style="color: inherit; text-decoration: inherit;">Row<wbr>Key</a>
@@ -751,8 +693,7 @@ Changing this forces a new resource to be created.
         <span class="property-type">string</span>
     </dt>
     <dd>{{% md %}}The key for the row where the entity will be inserted/merged. Changing this forces a new resource.
-{{% /md %}}</dd>
-    <dt class="property-optional"
+{{% /md %}}</dd><dt class="property-optional"
             title="Optional">
         <span id="state_storageaccountname_go">
 <a href="#state_storageaccountname_go" style="color: inherit; text-decoration: inherit;">Storage<wbr>Account<wbr>Name</a>
@@ -762,8 +703,7 @@ Changing this forces a new resource to be created.
     </dt>
     <dd>{{% md %}}Specifies the storage account in which to create the storage table entity.
 Changing this forces a new resource to be created.
-{{% /md %}}</dd>
-    <dt class="property-optional"
+{{% /md %}}</dd><dt class="property-optional"
             title="Optional">
         <span id="state_tablename_go">
 <a href="#state_tablename_go" style="color: inherit; text-decoration: inherit;">Table<wbr>Name</a>
@@ -773,14 +713,11 @@ Changing this forces a new resource to be created.
     </dt>
     <dd>{{% md %}}The name of the storage table in which to create the storage table entity.
 Changing this forces a new resource to be created.
-{{% /md %}}</dd>
-</dl>
+{{% /md %}}</dd></dl>
 {{% /choosable %}}
 
 {{% choosable language nodejs %}}
-<dl class="resources-properties">
-
-    <dt class="property-optional"
+<dl class="resources-properties"><dt class="property-optional"
             title="Optional">
         <span id="state_entity_nodejs">
 <a href="#state_entity_nodejs" style="color: inherit; text-decoration: inherit;">entity</a>
@@ -789,8 +726,7 @@ Changing this forces a new resource to be created.
         <span class="property-type">{[key: string]: string}</span>
     </dt>
     <dd>{{% md %}}A map of key/value pairs that describe the entity to be inserted/merged in to the storage table.
-{{% /md %}}</dd>
-    <dt class="property-optional"
+{{% /md %}}</dd><dt class="property-optional"
             title="Optional">
         <span id="state_partitionkey_nodejs">
 <a href="#state_partitionkey_nodejs" style="color: inherit; text-decoration: inherit;">partition<wbr>Key</a>
@@ -799,8 +735,7 @@ Changing this forces a new resource to be created.
         <span class="property-type">string</span>
     </dt>
     <dd>{{% md %}}The key for the partition where the entity will be inserted/merged. Changing this forces a new resource.
-{{% /md %}}</dd>
-    <dt class="property-optional"
+{{% /md %}}</dd><dt class="property-optional"
             title="Optional">
         <span id="state_rowkey_nodejs">
 <a href="#state_rowkey_nodejs" style="color: inherit; text-decoration: inherit;">row<wbr>Key</a>
@@ -809,8 +744,7 @@ Changing this forces a new resource to be created.
         <span class="property-type">string</span>
     </dt>
     <dd>{{% md %}}The key for the row where the entity will be inserted/merged. Changing this forces a new resource.
-{{% /md %}}</dd>
-    <dt class="property-optional"
+{{% /md %}}</dd><dt class="property-optional"
             title="Optional">
         <span id="state_storageaccountname_nodejs">
 <a href="#state_storageaccountname_nodejs" style="color: inherit; text-decoration: inherit;">storage<wbr>Account<wbr>Name</a>
@@ -820,8 +754,7 @@ Changing this forces a new resource to be created.
     </dt>
     <dd>{{% md %}}Specifies the storage account in which to create the storage table entity.
 Changing this forces a new resource to be created.
-{{% /md %}}</dd>
-    <dt class="property-optional"
+{{% /md %}}</dd><dt class="property-optional"
             title="Optional">
         <span id="state_tablename_nodejs">
 <a href="#state_tablename_nodejs" style="color: inherit; text-decoration: inherit;">table<wbr>Name</a>
@@ -831,14 +764,11 @@ Changing this forces a new resource to be created.
     </dt>
     <dd>{{% md %}}The name of the storage table in which to create the storage table entity.
 Changing this forces a new resource to be created.
-{{% /md %}}</dd>
-</dl>
+{{% /md %}}</dd></dl>
 {{% /choosable %}}
 
 {{% choosable language python %}}
-<dl class="resources-properties">
-
-    <dt class="property-optional"
+<dl class="resources-properties"><dt class="property-optional"
             title="Optional">
         <span id="state_entity_python">
 <a href="#state_entity_python" style="color: inherit; text-decoration: inherit;">entity</a>
@@ -847,8 +777,7 @@ Changing this forces a new resource to be created.
         <span class="property-type">Mapping[str, str]</span>
     </dt>
     <dd>{{% md %}}A map of key/value pairs that describe the entity to be inserted/merged in to the storage table.
-{{% /md %}}</dd>
-    <dt class="property-optional"
+{{% /md %}}</dd><dt class="property-optional"
             title="Optional">
         <span id="state_partition_key_python">
 <a href="#state_partition_key_python" style="color: inherit; text-decoration: inherit;">partition_<wbr>key</a>
@@ -857,8 +786,7 @@ Changing this forces a new resource to be created.
         <span class="property-type">str</span>
     </dt>
     <dd>{{% md %}}The key for the partition where the entity will be inserted/merged. Changing this forces a new resource.
-{{% /md %}}</dd>
-    <dt class="property-optional"
+{{% /md %}}</dd><dt class="property-optional"
             title="Optional">
         <span id="state_row_key_python">
 <a href="#state_row_key_python" style="color: inherit; text-decoration: inherit;">row_<wbr>key</a>
@@ -867,8 +795,7 @@ Changing this forces a new resource to be created.
         <span class="property-type">str</span>
     </dt>
     <dd>{{% md %}}The key for the row where the entity will be inserted/merged. Changing this forces a new resource.
-{{% /md %}}</dd>
-    <dt class="property-optional"
+{{% /md %}}</dd><dt class="property-optional"
             title="Optional">
         <span id="state_storage_account_name_python">
 <a href="#state_storage_account_name_python" style="color: inherit; text-decoration: inherit;">storage_<wbr>account_<wbr>name</a>
@@ -878,8 +805,7 @@ Changing this forces a new resource to be created.
     </dt>
     <dd>{{% md %}}Specifies the storage account in which to create the storage table entity.
 Changing this forces a new resource to be created.
-{{% /md %}}</dd>
-    <dt class="property-optional"
+{{% /md %}}</dd><dt class="property-optional"
             title="Optional">
         <span id="state_table_name_python">
 <a href="#state_table_name_python" style="color: inherit; text-decoration: inherit;">table_<wbr>name</a>
@@ -889,8 +815,7 @@ Changing this forces a new resource to be created.
     </dt>
     <dd>{{% md %}}The name of the storage table in which to create the storage table entity.
 Changing this forces a new resource to be created.
-{{% /md %}}</dd>
-</dl>
+{{% /md %}}</dd></dl>
 {{% /choosable %}}
 
 
@@ -916,6 +841,6 @@ Entities within a Table in an Azure Storage Account can be imported using the `r
 	<dt>License</dt>
 	<dd>Apache-2.0</dd>
 	<dt>Notes</dt>
-	<dd>This Pulumi package is based on the [`azurerm` Terraform Provider](https://github.com/terraform-providers/terraform-provider-azurerm).</dd>
+	<dd>{{% md %}}This Pulumi package is based on the [`azurerm` Terraform Provider](https://github.com/terraform-providers/terraform-provider-azurerm).{{% /md %}}</dd>
 </dl>
 

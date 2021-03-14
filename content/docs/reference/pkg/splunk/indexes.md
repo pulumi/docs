@@ -1,8 +1,8 @@
 
 ---
 title: "Indexes"
-title_tag: "Resource Indexes | Package Splunk"
-meta_desc: "Explore the Indexes resource of the Splunk package, including examples, input properties, output properties, lookup functions, and supporting types. ## # Resource: splunk.Indexes"
+title_tag: "splunk.Indexes"
+meta_desc: "Documentation for the splunk.Indexes resource with examples, input properties, output properties, lookup functions, and supporting types."
 ---
 
 
@@ -21,11 +21,17 @@ To enable indexes_list_all capability restrictions on the data/indexes endpoint,
 
 
 {{% examples %}}
+
 ## Example Usage
 
 {{< chooser language "typescript,python,go,csharp" / >}}
 
-{{% example csharp %}}
+
+
+
+
+{{< example csharp >}}
+
 ```csharp
 using Pulumi;
 using Splunk = Pulumi.Splunk;
@@ -44,9 +50,12 @@ class MyStack : Stack
 }
 ```
 
-{{% /example %}}
 
-{{% example go %}}
+{{< /example >}}
+
+
+{{< example go >}}
+
 ```go
 package main
 
@@ -69,9 +78,12 @@ func main() {
 }
 ```
 
-{{% /example %}}
 
-{{% example python %}}
+{{< /example >}}
+
+
+{{< example python >}}
+
 ```python
 import pulumi
 import pulumi_splunk as splunk
@@ -81,9 +93,12 @@ user01_index = splunk.Indexes("user01-index",
     max_total_data_size_mb=1000000)
 ```
 
-{{% /example %}}
 
-{{% example typescript %}}
+{{< /example >}}
+
+
+{{< example typescript >}}
+
 
 ```typescript
 import * as pulumi from "@pulumi/pulumi";
@@ -95,9 +110,16 @@ const user01_index = new splunk.Indexes("user01-index", {
 });
 ```
 
-{{% /example %}}
+
+{{< /example >}}
+
+
+
+
 
 {{% /examples %}}
+
+
 
 
 ## Create a Indexes Resource {#create}
@@ -122,9 +144,7 @@ const user01_index = new splunk.Indexes("user01-index", {
 
 {{% choosable language nodejs %}}
 
-<dl class="resources-properties">
-  
-    <dt
+<dl class="resources-properties"><dt
         class="property-required" title="Required">
         <span>name</span>
         <span class="property-indicator"></span>
@@ -132,9 +152,7 @@ const user01_index = new splunk.Indexes("user01-index", {
     </dt>
     <dd>
       The unique name of the resource.
-    </dd>
-  
-    <dt
+    </dd><dt
         class="property-optional" title="Optional">
         <span>args</span>
         <span class="property-indicator"></span>
@@ -142,9 +160,7 @@ const user01_index = new splunk.Indexes("user01-index", {
     </dt>
     <dd>
       The arguments to resource properties.
-    </dd>
-  
-    <dt
+    </dd><dt
         class="property-optional" title="Optional">
         <span>opts</span>
         <span class="property-indicator"></span>
@@ -152,10 +168,7 @@ const user01_index = new splunk.Indexes("user01-index", {
     </dt>
     <dd>
       Bag of options to control resource&#39;s behavior.
-    </dd>
-  
-
-</dl>
+    </dd></dl>
 
 {{% /choosable %}}
 
@@ -181,9 +194,7 @@ const user01_index = new splunk.Indexes("user01-index", {
 
 {{% choosable language go %}}
 
-<dl class="resources-properties">
-  
-    <dt
+<dl class="resources-properties"><dt
         class="property-optional" title="Optional">
         <span>ctx</span>
         <span class="property-indicator"></span>
@@ -191,9 +202,7 @@ const user01_index = new splunk.Indexes("user01-index", {
     </dt>
     <dd>
       Context object for the current deployment.
-    </dd>
-  
-    <dt
+    </dd><dt
         class="property-required" title="Required">
         <span>name</span>
         <span class="property-indicator"></span>
@@ -201,9 +210,7 @@ const user01_index = new splunk.Indexes("user01-index", {
     </dt>
     <dd>
       The unique name of the resource.
-    </dd>
-  
-    <dt
+    </dd><dt
         class="property-optional" title="Optional">
         <span>args</span>
         <span class="property-indicator"></span>
@@ -211,9 +218,7 @@ const user01_index = new splunk.Indexes("user01-index", {
     </dt>
     <dd>
       The arguments to resource properties.
-    </dd>
-  
-    <dt
+    </dd><dt
         class="property-optional" title="Optional">
         <span>opts</span>
         <span class="property-indicator"></span>
@@ -221,18 +226,13 @@ const user01_index = new splunk.Indexes("user01-index", {
     </dt>
     <dd>
       Bag of options to control resource&#39;s behavior.
-    </dd>
-  
-
-</dl>
+    </dd></dl>
 
 {{% /choosable %}}
 
 {{% choosable language csharp %}}
 
-<dl class="resources-properties">
-  
-    <dt
+<dl class="resources-properties"><dt
         class="property-required" title="Required">
         <span>name</span>
         <span class="property-indicator"></span>
@@ -240,9 +240,7 @@ const user01_index = new splunk.Indexes("user01-index", {
     </dt>
     <dd>
       The unique name of the resource.
-    </dd>
-  
-    <dt
+    </dd><dt
         class="property-optional" title="Optional">
         <span>args</span>
         <span class="property-indicator"></span>
@@ -250,9 +248,7 @@ const user01_index = new splunk.Indexes("user01-index", {
     </dt>
     <dd>
       The arguments to resource properties.
-    </dd>
-  
-    <dt
+    </dd><dt
         class="property-optional" title="Optional">
         <span>opts</span>
         <span class="property-indicator"></span>
@@ -260,10 +256,7 @@ const user01_index = new splunk.Indexes("user01-index", {
     </dt>
     <dd>
       Bag of options to control resource&#39;s behavior.
-    </dd>
-  
-
-</dl>
+    </dd></dl>
 
 {{% /choosable %}}
 
@@ -278,9 +271,7 @@ The Indexes resource accepts the following [input]({{< relref "/docs/intro/conce
 
 
 {{% choosable language csharp %}}
-<dl class="resources-properties">
-
-    <dt class="property-optional"
+<dl class="resources-properties"><dt class="property-optional"
             title="Optional">
         <span id="acl_csharp">
 <a href="#acl_csharp" style="color: inherit; text-decoration: inherit;">Acl</a>
@@ -289,8 +280,7 @@ The Indexes resource accepts the following [input]({{< relref "/docs/intro/conce
         <span class="property-type"><a href="#indexesacl">Indexes<wbr>Acl<wbr>Args</a></span>
     </dt>
     <dd>{{% md %}}The app/user context that is the namespace for the resource
-{{% /md %}}</dd>
-    <dt class="property-optional"
+{{% /md %}}</dd><dt class="property-optional"
             title="Optional">
         <span id="blocksignsize_csharp">
 <a href="#blocksignsize_csharp" style="color: inherit; text-decoration: inherit;">Block<wbr>Sign<wbr>Size</a>
@@ -299,8 +289,7 @@ The Indexes resource accepts the following [input]({{< relref "/docs/intro/conce
         <span class="property-type">int</span>
     </dt>
     <dd>{{% md %}}Controls how many events make up a block for block signatures. If this is set to 0, block signing is disabled for this index. <br>A recommended value is 100.
-{{% /md %}}</dd>
-    <dt class="property-optional"
+{{% /md %}}</dd><dt class="property-optional"
             title="Optional">
         <span id="bucketrebuildmemoryhint_csharp">
 <a href="#bucketrebuildmemoryhint_csharp" style="color: inherit; text-decoration: inherit;">Bucket<wbr>Rebuild<wbr>Memory<wbr>Hint</a>
@@ -315,8 +304,7 @@ less than 2GB RAM = 67108864 (64MB) tsidx
 2GB to 8GB RAM = 134217728 (128MB) tsidx
 more than 8GB RAM = 268435456 (256MB) tsidx<br>
 Values other than "auto" must be 16MB-1GB. Highest legal value (of the numerical part) is 4294967295 You can specify the value using a size suffix: "16777216" or "16MB" are equivalent.
-{{% /md %}}</dd>
-    <dt class="property-optional"
+{{% /md %}}</dd><dt class="property-optional"
             title="Optional">
         <span id="coldpath_csharp">
 <a href="#coldpath_csharp" style="color: inherit; text-decoration: inherit;">Cold<wbr>Path</a>
@@ -325,8 +313,7 @@ Values other than "auto" must be 16MB-1GB. Highest legal value (of the numerical
         <span class="property-type">string</span>
     </dt>
     <dd>{{% md %}}An absolute path that contains the colddbs for the index. The path must be readable and writable. Cold databases are opened as needed when searching.
-{{% /md %}}</dd>
-    <dt class="property-optional"
+{{% /md %}}</dd><dt class="property-optional"
             title="Optional">
         <span id="coldtofrozendir_csharp">
 <a href="#coldtofrozendir_csharp" style="color: inherit; text-decoration: inherit;">Cold<wbr>To<wbr>Frozen<wbr>Dir</a>
@@ -342,8 +329,7 @@ To thaw, run splunk rebuild <bucket dir> on the bucket, then move to the thawed 
 Old style buckets (Pre-4.2): gzip all the .data and .tsidx files<br>
 To thaw, gunzip the zipped files and move the bucket into the thawed directory<br>
 If both coldToFrozenDir and coldToFrozenScript are specified, coldToFrozenDir takes precedence
-{{% /md %}}</dd>
-    <dt class="property-optional"
+{{% /md %}}</dd><dt class="property-optional"
             title="Optional">
         <span id="coldtofrozenscript_csharp">
 <a href="#coldtofrozenscript_csharp" style="color: inherit; text-decoration: inherit;">Cold<wbr>To<wbr>Frozen<wbr>Script</a>
@@ -355,8 +341,7 @@ If both coldToFrozenDir and coldToFrozenScript are specified, coldToFrozenDir ta
 <br>If your script requires a program to run it (for example, python), specify the program followed by the path. The script must be in $SPLUNK_HOME/bin or one of its subdirectories.
 <br>Splunk software ships with an example archiving script in $SPLUNK_HOME/bin called coldToFrozenExample.py. DO NOT use this example script directly. It uses a default path, and if modified in place any changes are overwritten on upgrade.
 <br>It is best to copy the example script to a new file in bin and modify it for your system. Most importantly, change the default archive path to an existing directory that fits your needs.
-{{% /md %}}</dd>
-    <dt class="property-optional"
+{{% /md %}}</dd><dt class="property-optional"
             title="Optional">
         <span id="compressrawdata_csharp">
 <a href="#compressrawdata_csharp" style="color: inherit; text-decoration: inherit;">Compress<wbr>Rawdata</a>
@@ -365,8 +350,7 @@ If both coldToFrozenDir and coldToFrozenScript are specified, coldToFrozenDir ta
         <span class="property-type">bool</span>
     </dt>
     <dd>{{% md %}}This parameter is ignored. The splunkd process always compresses raw data.
-{{% /md %}}</dd>
-    <dt class="property-optional"
+{{% /md %}}</dd><dt class="property-optional"
             title="Optional">
         <span id="datatype_csharp">
 <a href="#datatype_csharp" style="color: inherit; text-decoration: inherit;">Datatype</a>
@@ -375,8 +359,7 @@ If both coldToFrozenDir and coldToFrozenScript are specified, coldToFrozenDir ta
         <span class="property-type">string</span>
     </dt>
     <dd>{{% md %}}Valid values: (event | metric). Specifies the type of index.
-{{% /md %}}</dd>
-    <dt class="property-optional"
+{{% /md %}}</dd><dt class="property-optional"
             title="Optional">
         <span id="enableonlinebucketrepair_csharp">
 <a href="#enableonlinebucketrepair_csharp" style="color: inherit; text-decoration: inherit;">Enable<wbr>Online<wbr>Bucket<wbr>Repair</a>
@@ -386,8 +369,7 @@ If both coldToFrozenDir and coldToFrozenScript are specified, coldToFrozenDir ta
     </dt>
     <dd>{{% md %}}Enables asynchronous "online fsck" bucket repair, which runs concurrently with Splunk software.
 When enabled, you do not have to wait until buckets are repaired to start the Splunk platform. However, you might observe a slight performance degratation.
-{{% /md %}}</dd>
-    <dt class="property-optional"
+{{% /md %}}</dd><dt class="property-optional"
             title="Optional">
         <span id="frozentimeperiodinsecs_csharp">
 <a href="#frozentimeperiodinsecs_csharp" style="color: inherit; text-decoration: inherit;">Frozen<wbr>Time<wbr>Period<wbr>In<wbr>Secs</a>
@@ -397,8 +379,7 @@ When enabled, you do not have to wait until buckets are repaired to start the Sp
     </dt>
     <dd>{{% md %}}Number of seconds after which indexed data rolls to frozen.
 Defaults to 188697600 (6 years).Freezing data means it is removed from the index. If you need to archive your data, refer to coldToFrozenDir and coldToFrozenScript parameter documentation.
-{{% /md %}}</dd>
-    <dt class="property-optional"
+{{% /md %}}</dd><dt class="property-optional"
             title="Optional">
         <span id="homepath_csharp">
 <a href="#homepath_csharp" style="color: inherit; text-decoration: inherit;">Home<wbr>Path</a>
@@ -409,8 +390,7 @@ Defaults to 188697600 (6 years).Freezing data means it is removed from the index
     <dd>{{% md %}}An absolute path that contains the hot and warm buckets for the index.
 Required. Splunk software does not start if an index lacks a valid homePath.
 <br>Caution: The path must be readable and writable.
-{{% /md %}}</dd>
-    <dt class="property-optional"
+{{% /md %}}</dd><dt class="property-optional"
             title="Optional">
         <span id="maxbloombackfillbucketage_csharp">
 <a href="#maxbloombackfillbucketage_csharp" style="color: inherit; text-decoration: inherit;">Max<wbr>Bloom<wbr>Backfill<wbr>Bucket<wbr>Age</a>
@@ -420,8 +400,7 @@ Required. Splunk software does not start if an index lacks a valid homePath.
     </dt>
     <dd>{{% md %}}Valid values are: Integer[m|s|h|d].
 <br>If a warm or cold bucket is older than the specified age, do not create or rebuild its bloomfilter. Specify 0 to never rebuild bloomfilters.
-{{% /md %}}</dd>
-    <dt class="property-optional"
+{{% /md %}}</dd><dt class="property-optional"
             title="Optional">
         <span id="maxconcurrentoptimizes_csharp">
 <a href="#maxconcurrentoptimizes_csharp" style="color: inherit; text-decoration: inherit;">Max<wbr>Concurrent<wbr>Optimizes</a>
@@ -431,8 +410,7 @@ Required. Splunk software does not start if an index lacks a valid homePath.
     </dt>
     <dd>{{% md %}}The number of concurrent optimize processes that can run against a hot bucket.
 This number should be increased if instructed by Splunk Support. Typically the default value should suffice.
-{{% /md %}}</dd>
-    <dt class="property-optional"
+{{% /md %}}</dd><dt class="property-optional"
             title="Optional">
         <span id="maxdatasize_csharp">
 <a href="#maxdatasize_csharp" style="color: inherit; text-decoration: inherit;">Max<wbr>Data<wbr>Size</a>
@@ -442,8 +420,7 @@ This number should be increased if instructed by Splunk Support. Typically the d
     </dt>
     <dd>{{% md %}}The maximum size in MB for a hot DB to reach before a roll to warm is triggered. Specifying "auto" or "auto_high_volume" causes Splunk software to autotune this parameter (recommended).
 Use "auto_high_volume" for high volume indexes (such as the main index); otherwise, use "auto". A "high volume index" would typically be considered one that gets over 10GB of data per day.
-{{% /md %}}</dd>
-    <dt class="property-optional"
+{{% /md %}}</dd><dt class="property-optional"
             title="Optional">
         <span id="maxhotbuckets_csharp">
 <a href="#maxhotbuckets_csharp" style="color: inherit; text-decoration: inherit;">Max<wbr>Hot<wbr>Buckets</a>
@@ -453,8 +430,7 @@ Use "auto_high_volume" for high volume indexes (such as the main index); otherwi
     </dt>
     <dd>{{% md %}}Maximum hot buckets that can exist per index. Defaults to 3.
 <br>When maxHotBuckets is exceeded, Splunk software rolls the least recently used (LRU) hot bucket to warm. Both normal hot buckets and quarantined hot buckets count towards this total. This setting operates independently of maxHotIdleSecs, which can also cause hot buckets to roll.
-{{% /md %}}</dd>
-    <dt class="property-optional"
+{{% /md %}}</dd><dt class="property-optional"
             title="Optional">
         <span id="maxhotidlesecs_csharp">
 <a href="#maxhotidlesecs_csharp" style="color: inherit; text-decoration: inherit;">Max<wbr>Hot<wbr>Idle<wbr>Secs</a>
@@ -463,8 +439,7 @@ Use "auto_high_volume" for high volume indexes (such as the main index); otherwi
         <span class="property-type">int</span>
     </dt>
     <dd>{{% md %}}Maximum life, in seconds, of a hot bucket. Defaults to 0. If a hot bucket exceeds maxHotIdleSecs, Splunk software rolls it to warm. This setting operates independently of maxHotBuckets, which can also cause hot buckets to roll. A value of 0 turns off the idle check (equivalent to INFINITE idle time).
-{{% /md %}}</dd>
-    <dt class="property-optional"
+{{% /md %}}</dd><dt class="property-optional"
             title="Optional">
         <span id="maxhotspansecs_csharp">
 <a href="#maxhotspansecs_csharp" style="color: inherit; text-decoration: inherit;">Max<wbr>Hot<wbr>Span<wbr>Secs</a>
@@ -473,8 +448,7 @@ Use "auto_high_volume" for high volume indexes (such as the main index); otherwi
         <span class="property-type">int</span>
     </dt>
     <dd>{{% md %}}Upper bound of target maximum timespan of hot/warm buckets in seconds. Defaults to 7776000 seconds (90 days).
-{{% /md %}}</dd>
-    <dt class="property-optional"
+{{% /md %}}</dd><dt class="property-optional"
             title="Optional">
         <span id="maxmemmb_csharp">
 <a href="#maxmemmb_csharp" style="color: inherit; text-decoration: inherit;">Max<wbr>Mem<wbr>Mb</a>
@@ -483,8 +457,7 @@ Use "auto_high_volume" for high volume indexes (such as the main index); otherwi
         <span class="property-type">int</span>
     </dt>
     <dd>{{% md %}}The amount of memory, expressed in MB, to allocate for buffering a single tsidx file into memory before flushing to disk. Defaults to 5. The default is recommended for all environments.
-{{% /md %}}</dd>
-    <dt class="property-optional"
+{{% /md %}}</dd><dt class="property-optional"
             title="Optional">
         <span id="maxmetaentries_csharp">
 <a href="#maxmetaentries_csharp" style="color: inherit; text-decoration: inherit;">Max<wbr>Meta<wbr>Entries</a>
@@ -493,8 +466,7 @@ Use "auto_high_volume" for high volume indexes (such as the main index); otherwi
         <span class="property-type">int</span>
     </dt>
     <dd>{{% md %}}Upper limit, in seconds, on how long an event can sit in raw slice. Applies only if replication is enabled for this index. Otherwise ignored. If there are any acknowledged events sharing this raw slice, this paramater does not apply. In this case, maxTimeUnreplicatedWithAcks applies. Highest legal value is 2147483647. To disable this parameter, set to 0.
-{{% /md %}}</dd>
-    <dt class="property-optional"
+{{% /md %}}</dd><dt class="property-optional"
             title="Optional">
         <span id="maxtimeunreplicatednoacks_csharp">
 <a href="#maxtimeunreplicatednoacks_csharp" style="color: inherit; text-decoration: inherit;">Max<wbr>Time<wbr>Unreplicated<wbr>No<wbr>Acks</a>
@@ -505,8 +477,7 @@ Use "auto_high_volume" for high volume indexes (such as the main index); otherwi
     <dd>{{% md %}}Upper limit, in seconds, on how long an event can sit in raw slice. Applies only if replication is enabled for this index. Otherwise ignored.
 If there are any acknowledged events sharing this raw slice, this paramater does not apply. In this case, maxTimeUnreplicatedWithAcks applies.
 Highest legal value is 2147483647. To disable this parameter, set to 0.
-{{% /md %}}</dd>
-    <dt class="property-optional"
+{{% /md %}}</dd><dt class="property-optional"
             title="Optional">
         <span id="maxtimeunreplicatedwithacks_csharp">
 <a href="#maxtimeunreplicatedwithacks_csharp" style="color: inherit; text-decoration: inherit;">Max<wbr>Time<wbr>Unreplicated<wbr>With<wbr>Acks</a>
@@ -517,8 +488,7 @@ Highest legal value is 2147483647. To disable this parameter, set to 0.
     <dd>{{% md %}}Upper limit, in seconds, on how long events can sit unacknowledged in a raw slice. Applies only if you have enabled acks on forwarders and have replication enabled (with clustering).
 Note: This is an advanced parameter. Make sure you understand the settings on all forwarders before changing this. This number should not exceed ack timeout configured on any forwarder, and should actually be set to at most half of the minimum value of that timeout. You can find this setting in outputs.conf readTimeout setting under the tcpout stanza.
 To disable, set to 0, but this is NOT recommended. Highest legal value is 2147483647.
-{{% /md %}}</dd>
-    <dt class="property-optional"
+{{% /md %}}</dd><dt class="property-optional"
             title="Optional">
         <span id="maxtotaldatasizemb_csharp">
 <a href="#maxtotaldatasizemb_csharp" style="color: inherit; text-decoration: inherit;">Max<wbr>Total<wbr>Data<wbr>Size<wbr>Mb</a>
@@ -527,8 +497,7 @@ To disable, set to 0, but this is NOT recommended. Highest legal value is 214748
         <span class="property-type">int</span>
     </dt>
     <dd>{{% md %}}The maximum size of an index (in MB). If an index grows larger than the maximum size, the oldest data is frozen.
-{{% /md %}}</dd>
-    <dt class="property-optional"
+{{% /md %}}</dd><dt class="property-optional"
             title="Optional">
         <span id="maxwarmdbcount_csharp">
 <a href="#maxwarmdbcount_csharp" style="color: inherit; text-decoration: inherit;">Max<wbr>Warm<wbr>Db<wbr>Count</a>
@@ -537,8 +506,7 @@ To disable, set to 0, but this is NOT recommended. Highest legal value is 214748
         <span class="property-type">int</span>
     </dt>
     <dd>{{% md %}}The maximum number of warm buckets. If this number is exceeded, the warm bucket/s with the lowest value for their latest times is moved to cold.
-{{% /md %}}</dd>
-    <dt class="property-optional"
+{{% /md %}}</dd><dt class="property-optional"
             title="Optional">
         <span id="minrawfilesyncsecs_csharp">
 <a href="#minrawfilesyncsecs_csharp" style="color: inherit; text-decoration: inherit;">Min<wbr>Raw<wbr>File<wbr>Sync<wbr>Secs</a>
@@ -550,8 +518,7 @@ To disable, set to 0, but this is NOT recommended. Highest legal value is 214748
 This parameter sets how frequently splunkd forces a filesystem sync while compressing journal slices.
 During this period, uncompressed slices are left on disk even after they are compressed. Then splunkd forces a filesystem sync of the compressed journal and removes the accumulated uncompressed files.
 If 0 is specified, splunkd forces a filesystem sync after every slice completes compressing. Specifying "disable" disables syncing entirely: uncompressed slices are removed as soon as compression is complete.
-{{% /md %}}</dd>
-    <dt class="property-optional"
+{{% /md %}}</dd><dt class="property-optional"
             title="Optional">
         <span id="minstreamgroupqueuesize_csharp">
 <a href="#minstreamgroupqueuesize_csharp" style="color: inherit; text-decoration: inherit;">Min<wbr>Stream<wbr>Group<wbr>Queue<wbr>Size</a>
@@ -560,8 +527,7 @@ If 0 is specified, splunkd forces a filesystem sync after every slice completes 
         <span class="property-type">int</span>
     </dt>
     <dd>{{% md %}}Minimum size of the queue that stores events in memory before committing them to a tsidx file.
-{{% /md %}}</dd>
-    <dt class="property-optional"
+{{% /md %}}</dd><dt class="property-optional"
             title="Optional">
         <span id="name_csharp">
 <a href="#name_csharp" style="color: inherit; text-decoration: inherit;">Name</a>
@@ -570,8 +536,7 @@ If 0 is specified, splunkd forces a filesystem sync after every slice completes 
         <span class="property-type">string</span>
     </dt>
     <dd>{{% md %}}The name of the index to create.
-{{% /md %}}</dd>
-    <dt class="property-optional"
+{{% /md %}}</dd><dt class="property-optional"
             title="Optional">
         <span id="partialservicemetaperiod_csharp">
 <a href="#partialservicemetaperiod_csharp" style="color: inherit; text-decoration: inherit;">Partial<wbr>Service<wbr>Meta<wbr>Period</a>
@@ -583,8 +548,7 @@ If 0 is specified, splunkd forces a filesystem sync after every slice completes 
 partialServiceMetaPeriod specifies, in seconds, how frequently it should sync. Zero means that this feature is turned off and serviceMetaPeriod is the only time when metadata sync happens.
 If the value of partialServiceMetaPeriod is greater than serviceMetaPeriod, this setting has no effect.
 By default it is turned off (zero).
-{{% /md %}}</dd>
-    <dt class="property-optional"
+{{% /md %}}</dd><dt class="property-optional"
             title="Optional">
         <span id="processtrackerserviceinterval_csharp">
 <a href="#processtrackerserviceinterval_csharp" style="color: inherit; text-decoration: inherit;">Process<wbr>Tracker<wbr>Service<wbr>Interval</a>
@@ -595,8 +559,7 @@ By default it is turned off (zero).
     <dd>{{% md %}}Specifies, in seconds, how often the indexer checks the status of the child OS processes it launched to see if it can launch new processes for queued requests. Defaults to 15.
 If set to 0, the indexer checks child process status every second.
 Highest legal value is 4294967295.
-{{% /md %}}</dd>
-    <dt class="property-optional"
+{{% /md %}}</dd><dt class="property-optional"
             title="Optional">
         <span id="quarantinefuturesecs_csharp">
 <a href="#quarantinefuturesecs_csharp" style="color: inherit; text-decoration: inherit;">Quarantine<wbr>Future<wbr>Secs</a>
@@ -606,8 +569,7 @@ Highest legal value is 4294967295.
     </dt>
     <dd>{{% md %}}Events with timestamp of quarantineFutureSecs newer than "now" are dropped into quarantine bucket. Defaults to 2592000 (30 days).
 This is a mechanism to prevent main hot buckets from being polluted with fringe events.
-{{% /md %}}</dd>
-    <dt class="property-optional"
+{{% /md %}}</dd><dt class="property-optional"
             title="Optional">
         <span id="quarantinepastsecs_csharp">
 <a href="#quarantinepastsecs_csharp" style="color: inherit; text-decoration: inherit;">Quarantine<wbr>Past<wbr>Secs</a>
@@ -616,8 +578,7 @@ This is a mechanism to prevent main hot buckets from being polluted with fringe 
         <span class="property-type">int</span>
     </dt>
     <dd>{{% md %}}Events with timestamp of quarantinePastSecs older than "now" are dropped into quarantine bucket. Defaults to 77760000 (900 days). This is a mechanism to prevent the main hot buckets from being polluted with fringe events.
-{{% /md %}}</dd>
-    <dt class="property-optional"
+{{% /md %}}</dd><dt class="property-optional"
             title="Optional">
         <span id="rawchunksizebytes_csharp">
 <a href="#rawchunksizebytes_csharp" style="color: inherit; text-decoration: inherit;">Raw<wbr>Chunk<wbr>Size<wbr>Bytes</a>
@@ -626,8 +587,7 @@ This is a mechanism to prevent main hot buckets from being polluted with fringe 
         <span class="property-type">int</span>
     </dt>
     <dd>{{% md %}}Target uncompressed size in bytes for individual raw slice in the rawdata journal of the index. Defaults to 131072 (128KB). 0 is not a valid value. If 0 is specified, rawChunkSizeBytes is set to the default value.
-{{% /md %}}</dd>
-    <dt class="property-optional"
+{{% /md %}}</dd><dt class="property-optional"
             title="Optional">
         <span id="repfactor_csharp">
 <a href="#repfactor_csharp" style="color: inherit; text-decoration: inherit;">Rep<wbr>Factor</a>
@@ -638,8 +598,7 @@ This is a mechanism to prevent main hot buckets from being polluted with fringe 
     <dd>{{% md %}}Index replication control. This parameter applies to only clustering slaves.
 auto = Use the master index replication configuration value.
 0 = Turn off replication for this index.
-{{% /md %}}</dd>
-    <dt class="property-optional"
+{{% /md %}}</dd><dt class="property-optional"
             title="Optional">
         <span id="rotateperiodinsecs_csharp">
 <a href="#rotateperiodinsecs_csharp" style="color: inherit; text-decoration: inherit;">Rotate<wbr>Period<wbr>In<wbr>Secs</a>
@@ -648,8 +607,7 @@ auto = Use the master index replication configuration value.
         <span class="property-type">int</span>
     </dt>
     <dd>{{% md %}}How frequently (in seconds) to check if a new hot bucket needs to be created. Also, how frequently to check if there are any warm/cold buckets that should be rolled/frozen.
-{{% /md %}}</dd>
-    <dt class="property-optional"
+{{% /md %}}</dd><dt class="property-optional"
             title="Optional">
         <span id="servicemetaperiod_csharp">
 <a href="#servicemetaperiod_csharp" style="color: inherit; text-decoration: inherit;">Service<wbr>Meta<wbr>Period</a>
@@ -659,8 +617,7 @@ auto = Use the master index replication configuration value.
     </dt>
     <dd>{{% md %}}Defines how frequently metadata is synced to disk, in seconds. Defaults to 25 (seconds).
 You may want to set this to a higher value if the sum of your metadata file sizes is larger than many tens of megabytes, to avoid the hit on I/O in the indexing fast path.
-{{% /md %}}</dd>
-    <dt class="property-optional"
+{{% /md %}}</dd><dt class="property-optional"
             title="Optional">
         <span id="syncmeta_csharp">
 <a href="#syncmeta_csharp" style="color: inherit; text-decoration: inherit;">Sync<wbr>Meta</a>
@@ -669,8 +626,7 @@ You may want to set this to a higher value if the sum of your metadata file size
         <span class="property-type">bool</span>
     </dt>
     <dd>{{% md %}}When true, a sync operation is called before file descriptor is closed on metadata file updates. This functionality improves integrity of metadata files, especially in regards to operating system crashes/machine failures.
-{{% /md %}}</dd>
-    <dt class="property-optional"
+{{% /md %}}</dd><dt class="property-optional"
             title="Optional">
         <span id="thawedpath_csharp">
 <a href="#thawedpath_csharp" style="color: inherit; text-decoration: inherit;">Thawed<wbr>Path</a>
@@ -681,8 +637,7 @@ You may want to set this to a higher value if the sum of your metadata file size
     <dd>{{% md %}}An absolute path that contains the thawed (resurrected) databases for the index.
 Cannot be defined in terms of a volume definition.
 Required. Splunk software does not start if an index lacks a valid thawedPath.
-{{% /md %}}</dd>
-    <dt class="property-optional"
+{{% /md %}}</dd><dt class="property-optional"
             title="Optional">
         <span id="throttlecheckperiod_csharp">
 <a href="#throttlecheckperiod_csharp" style="color: inherit; text-decoration: inherit;">Throttle<wbr>Check<wbr>Period</a>
@@ -691,8 +646,7 @@ Required. Splunk software does not start if an index lacks a valid thawedPath.
         <span class="property-type">int</span>
     </dt>
     <dd>{{% md %}}Defines how frequently Splunk software checks for index throttling condition, in seconds. Defaults to 15 (seconds).
-{{% /md %}}</dd>
-    <dt class="property-optional"
+{{% /md %}}</dd><dt class="property-optional"
             title="Optional">
         <span id="tstatshomepath_csharp">
 <a href="#tstatshomepath_csharp" style="color: inherit; text-decoration: inherit;">Tstats<wbr>Home<wbr>Path</a>
@@ -702,8 +656,7 @@ Required. Splunk software does not start if an index lacks a valid thawedPath.
     </dt>
     <dd>{{% md %}}Location to store datamodel acceleration TSIDX data for this index. Restart splunkd after changing this parameter.
 If specified, it must be defined in terms of a volume definition.
-{{% /md %}}</dd>
-    <dt class="property-optional"
+{{% /md %}}</dd><dt class="property-optional"
             title="Optional">
         <span id="warmtocoldscript_csharp">
 <a href="#warmtocoldscript_csharp" style="color: inherit; text-decoration: inherit;">Warm<wbr>To<wbr>Cold<wbr>Script</a>
@@ -713,14 +666,11 @@ If specified, it must be defined in terms of a volume definition.
     </dt>
     <dd>{{% md %}}Path to a script to run when moving data from warm to cold.
 This attribute is supported for backwards compatibility with Splunk software versions older than 4.0. Contact Splunk support if you need help configuring this setting.
-{{% /md %}}</dd>
-</dl>
+{{% /md %}}</dd></dl>
 {{% /choosable %}}
 
 {{% choosable language go %}}
-<dl class="resources-properties">
-
-    <dt class="property-optional"
+<dl class="resources-properties"><dt class="property-optional"
             title="Optional">
         <span id="acl_go">
 <a href="#acl_go" style="color: inherit; text-decoration: inherit;">Acl</a>
@@ -729,8 +679,7 @@ This attribute is supported for backwards compatibility with Splunk software ver
         <span class="property-type"><a href="#indexesacl">Indexes<wbr>Acl</a></span>
     </dt>
     <dd>{{% md %}}The app/user context that is the namespace for the resource
-{{% /md %}}</dd>
-    <dt class="property-optional"
+{{% /md %}}</dd><dt class="property-optional"
             title="Optional">
         <span id="blocksignsize_go">
 <a href="#blocksignsize_go" style="color: inherit; text-decoration: inherit;">Block<wbr>Sign<wbr>Size</a>
@@ -739,8 +688,7 @@ This attribute is supported for backwards compatibility with Splunk software ver
         <span class="property-type">int</span>
     </dt>
     <dd>{{% md %}}Controls how many events make up a block for block signatures. If this is set to 0, block signing is disabled for this index. <br>A recommended value is 100.
-{{% /md %}}</dd>
-    <dt class="property-optional"
+{{% /md %}}</dd><dt class="property-optional"
             title="Optional">
         <span id="bucketrebuildmemoryhint_go">
 <a href="#bucketrebuildmemoryhint_go" style="color: inherit; text-decoration: inherit;">Bucket<wbr>Rebuild<wbr>Memory<wbr>Hint</a>
@@ -755,8 +703,7 @@ less than 2GB RAM = 67108864 (64MB) tsidx
 2GB to 8GB RAM = 134217728 (128MB) tsidx
 more than 8GB RAM = 268435456 (256MB) tsidx<br>
 Values other than "auto" must be 16MB-1GB. Highest legal value (of the numerical part) is 4294967295 You can specify the value using a size suffix: "16777216" or "16MB" are equivalent.
-{{% /md %}}</dd>
-    <dt class="property-optional"
+{{% /md %}}</dd><dt class="property-optional"
             title="Optional">
         <span id="coldpath_go">
 <a href="#coldpath_go" style="color: inherit; text-decoration: inherit;">Cold<wbr>Path</a>
@@ -765,8 +712,7 @@ Values other than "auto" must be 16MB-1GB. Highest legal value (of the numerical
         <span class="property-type">string</span>
     </dt>
     <dd>{{% md %}}An absolute path that contains the colddbs for the index. The path must be readable and writable. Cold databases are opened as needed when searching.
-{{% /md %}}</dd>
-    <dt class="property-optional"
+{{% /md %}}</dd><dt class="property-optional"
             title="Optional">
         <span id="coldtofrozendir_go">
 <a href="#coldtofrozendir_go" style="color: inherit; text-decoration: inherit;">Cold<wbr>To<wbr>Frozen<wbr>Dir</a>
@@ -782,8 +728,7 @@ To thaw, run splunk rebuild <bucket dir> on the bucket, then move to the thawed 
 Old style buckets (Pre-4.2): gzip all the .data and .tsidx files<br>
 To thaw, gunzip the zipped files and move the bucket into the thawed directory<br>
 If both coldToFrozenDir and coldToFrozenScript are specified, coldToFrozenDir takes precedence
-{{% /md %}}</dd>
-    <dt class="property-optional"
+{{% /md %}}</dd><dt class="property-optional"
             title="Optional">
         <span id="coldtofrozenscript_go">
 <a href="#coldtofrozenscript_go" style="color: inherit; text-decoration: inherit;">Cold<wbr>To<wbr>Frozen<wbr>Script</a>
@@ -795,8 +740,7 @@ If both coldToFrozenDir and coldToFrozenScript are specified, coldToFrozenDir ta
 <br>If your script requires a program to run it (for example, python), specify the program followed by the path. The script must be in $SPLUNK_HOME/bin or one of its subdirectories.
 <br>Splunk software ships with an example archiving script in $SPLUNK_HOME/bin called coldToFrozenExample.py. DO NOT use this example script directly. It uses a default path, and if modified in place any changes are overwritten on upgrade.
 <br>It is best to copy the example script to a new file in bin and modify it for your system. Most importantly, change the default archive path to an existing directory that fits your needs.
-{{% /md %}}</dd>
-    <dt class="property-optional"
+{{% /md %}}</dd><dt class="property-optional"
             title="Optional">
         <span id="compressrawdata_go">
 <a href="#compressrawdata_go" style="color: inherit; text-decoration: inherit;">Compress<wbr>Rawdata</a>
@@ -805,8 +749,7 @@ If both coldToFrozenDir and coldToFrozenScript are specified, coldToFrozenDir ta
         <span class="property-type">bool</span>
     </dt>
     <dd>{{% md %}}This parameter is ignored. The splunkd process always compresses raw data.
-{{% /md %}}</dd>
-    <dt class="property-optional"
+{{% /md %}}</dd><dt class="property-optional"
             title="Optional">
         <span id="datatype_go">
 <a href="#datatype_go" style="color: inherit; text-decoration: inherit;">Datatype</a>
@@ -815,8 +758,7 @@ If both coldToFrozenDir and coldToFrozenScript are specified, coldToFrozenDir ta
         <span class="property-type">string</span>
     </dt>
     <dd>{{% md %}}Valid values: (event | metric). Specifies the type of index.
-{{% /md %}}</dd>
-    <dt class="property-optional"
+{{% /md %}}</dd><dt class="property-optional"
             title="Optional">
         <span id="enableonlinebucketrepair_go">
 <a href="#enableonlinebucketrepair_go" style="color: inherit; text-decoration: inherit;">Enable<wbr>Online<wbr>Bucket<wbr>Repair</a>
@@ -826,8 +768,7 @@ If both coldToFrozenDir and coldToFrozenScript are specified, coldToFrozenDir ta
     </dt>
     <dd>{{% md %}}Enables asynchronous "online fsck" bucket repair, which runs concurrently with Splunk software.
 When enabled, you do not have to wait until buckets are repaired to start the Splunk platform. However, you might observe a slight performance degratation.
-{{% /md %}}</dd>
-    <dt class="property-optional"
+{{% /md %}}</dd><dt class="property-optional"
             title="Optional">
         <span id="frozentimeperiodinsecs_go">
 <a href="#frozentimeperiodinsecs_go" style="color: inherit; text-decoration: inherit;">Frozen<wbr>Time<wbr>Period<wbr>In<wbr>Secs</a>
@@ -837,8 +778,7 @@ When enabled, you do not have to wait until buckets are repaired to start the Sp
     </dt>
     <dd>{{% md %}}Number of seconds after which indexed data rolls to frozen.
 Defaults to 188697600 (6 years).Freezing data means it is removed from the index. If you need to archive your data, refer to coldToFrozenDir and coldToFrozenScript parameter documentation.
-{{% /md %}}</dd>
-    <dt class="property-optional"
+{{% /md %}}</dd><dt class="property-optional"
             title="Optional">
         <span id="homepath_go">
 <a href="#homepath_go" style="color: inherit; text-decoration: inherit;">Home<wbr>Path</a>
@@ -849,8 +789,7 @@ Defaults to 188697600 (6 years).Freezing data means it is removed from the index
     <dd>{{% md %}}An absolute path that contains the hot and warm buckets for the index.
 Required. Splunk software does not start if an index lacks a valid homePath.
 <br>Caution: The path must be readable and writable.
-{{% /md %}}</dd>
-    <dt class="property-optional"
+{{% /md %}}</dd><dt class="property-optional"
             title="Optional">
         <span id="maxbloombackfillbucketage_go">
 <a href="#maxbloombackfillbucketage_go" style="color: inherit; text-decoration: inherit;">Max<wbr>Bloom<wbr>Backfill<wbr>Bucket<wbr>Age</a>
@@ -860,8 +799,7 @@ Required. Splunk software does not start if an index lacks a valid homePath.
     </dt>
     <dd>{{% md %}}Valid values are: Integer[m|s|h|d].
 <br>If a warm or cold bucket is older than the specified age, do not create or rebuild its bloomfilter. Specify 0 to never rebuild bloomfilters.
-{{% /md %}}</dd>
-    <dt class="property-optional"
+{{% /md %}}</dd><dt class="property-optional"
             title="Optional">
         <span id="maxconcurrentoptimizes_go">
 <a href="#maxconcurrentoptimizes_go" style="color: inherit; text-decoration: inherit;">Max<wbr>Concurrent<wbr>Optimizes</a>
@@ -871,8 +809,7 @@ Required. Splunk software does not start if an index lacks a valid homePath.
     </dt>
     <dd>{{% md %}}The number of concurrent optimize processes that can run against a hot bucket.
 This number should be increased if instructed by Splunk Support. Typically the default value should suffice.
-{{% /md %}}</dd>
-    <dt class="property-optional"
+{{% /md %}}</dd><dt class="property-optional"
             title="Optional">
         <span id="maxdatasize_go">
 <a href="#maxdatasize_go" style="color: inherit; text-decoration: inherit;">Max<wbr>Data<wbr>Size</a>
@@ -882,8 +819,7 @@ This number should be increased if instructed by Splunk Support. Typically the d
     </dt>
     <dd>{{% md %}}The maximum size in MB for a hot DB to reach before a roll to warm is triggered. Specifying "auto" or "auto_high_volume" causes Splunk software to autotune this parameter (recommended).
 Use "auto_high_volume" for high volume indexes (such as the main index); otherwise, use "auto". A "high volume index" would typically be considered one that gets over 10GB of data per day.
-{{% /md %}}</dd>
-    <dt class="property-optional"
+{{% /md %}}</dd><dt class="property-optional"
             title="Optional">
         <span id="maxhotbuckets_go">
 <a href="#maxhotbuckets_go" style="color: inherit; text-decoration: inherit;">Max<wbr>Hot<wbr>Buckets</a>
@@ -893,8 +829,7 @@ Use "auto_high_volume" for high volume indexes (such as the main index); otherwi
     </dt>
     <dd>{{% md %}}Maximum hot buckets that can exist per index. Defaults to 3.
 <br>When maxHotBuckets is exceeded, Splunk software rolls the least recently used (LRU) hot bucket to warm. Both normal hot buckets and quarantined hot buckets count towards this total. This setting operates independently of maxHotIdleSecs, which can also cause hot buckets to roll.
-{{% /md %}}</dd>
-    <dt class="property-optional"
+{{% /md %}}</dd><dt class="property-optional"
             title="Optional">
         <span id="maxhotidlesecs_go">
 <a href="#maxhotidlesecs_go" style="color: inherit; text-decoration: inherit;">Max<wbr>Hot<wbr>Idle<wbr>Secs</a>
@@ -903,8 +838,7 @@ Use "auto_high_volume" for high volume indexes (such as the main index); otherwi
         <span class="property-type">int</span>
     </dt>
     <dd>{{% md %}}Maximum life, in seconds, of a hot bucket. Defaults to 0. If a hot bucket exceeds maxHotIdleSecs, Splunk software rolls it to warm. This setting operates independently of maxHotBuckets, which can also cause hot buckets to roll. A value of 0 turns off the idle check (equivalent to INFINITE idle time).
-{{% /md %}}</dd>
-    <dt class="property-optional"
+{{% /md %}}</dd><dt class="property-optional"
             title="Optional">
         <span id="maxhotspansecs_go">
 <a href="#maxhotspansecs_go" style="color: inherit; text-decoration: inherit;">Max<wbr>Hot<wbr>Span<wbr>Secs</a>
@@ -913,8 +847,7 @@ Use "auto_high_volume" for high volume indexes (such as the main index); otherwi
         <span class="property-type">int</span>
     </dt>
     <dd>{{% md %}}Upper bound of target maximum timespan of hot/warm buckets in seconds. Defaults to 7776000 seconds (90 days).
-{{% /md %}}</dd>
-    <dt class="property-optional"
+{{% /md %}}</dd><dt class="property-optional"
             title="Optional">
         <span id="maxmemmb_go">
 <a href="#maxmemmb_go" style="color: inherit; text-decoration: inherit;">Max<wbr>Mem<wbr>Mb</a>
@@ -923,8 +856,7 @@ Use "auto_high_volume" for high volume indexes (such as the main index); otherwi
         <span class="property-type">int</span>
     </dt>
     <dd>{{% md %}}The amount of memory, expressed in MB, to allocate for buffering a single tsidx file into memory before flushing to disk. Defaults to 5. The default is recommended for all environments.
-{{% /md %}}</dd>
-    <dt class="property-optional"
+{{% /md %}}</dd><dt class="property-optional"
             title="Optional">
         <span id="maxmetaentries_go">
 <a href="#maxmetaentries_go" style="color: inherit; text-decoration: inherit;">Max<wbr>Meta<wbr>Entries</a>
@@ -933,8 +865,7 @@ Use "auto_high_volume" for high volume indexes (such as the main index); otherwi
         <span class="property-type">int</span>
     </dt>
     <dd>{{% md %}}Upper limit, in seconds, on how long an event can sit in raw slice. Applies only if replication is enabled for this index. Otherwise ignored. If there are any acknowledged events sharing this raw slice, this paramater does not apply. In this case, maxTimeUnreplicatedWithAcks applies. Highest legal value is 2147483647. To disable this parameter, set to 0.
-{{% /md %}}</dd>
-    <dt class="property-optional"
+{{% /md %}}</dd><dt class="property-optional"
             title="Optional">
         <span id="maxtimeunreplicatednoacks_go">
 <a href="#maxtimeunreplicatednoacks_go" style="color: inherit; text-decoration: inherit;">Max<wbr>Time<wbr>Unreplicated<wbr>No<wbr>Acks</a>
@@ -945,8 +876,7 @@ Use "auto_high_volume" for high volume indexes (such as the main index); otherwi
     <dd>{{% md %}}Upper limit, in seconds, on how long an event can sit in raw slice. Applies only if replication is enabled for this index. Otherwise ignored.
 If there are any acknowledged events sharing this raw slice, this paramater does not apply. In this case, maxTimeUnreplicatedWithAcks applies.
 Highest legal value is 2147483647. To disable this parameter, set to 0.
-{{% /md %}}</dd>
-    <dt class="property-optional"
+{{% /md %}}</dd><dt class="property-optional"
             title="Optional">
         <span id="maxtimeunreplicatedwithacks_go">
 <a href="#maxtimeunreplicatedwithacks_go" style="color: inherit; text-decoration: inherit;">Max<wbr>Time<wbr>Unreplicated<wbr>With<wbr>Acks</a>
@@ -957,8 +887,7 @@ Highest legal value is 2147483647. To disable this parameter, set to 0.
     <dd>{{% md %}}Upper limit, in seconds, on how long events can sit unacknowledged in a raw slice. Applies only if you have enabled acks on forwarders and have replication enabled (with clustering).
 Note: This is an advanced parameter. Make sure you understand the settings on all forwarders before changing this. This number should not exceed ack timeout configured on any forwarder, and should actually be set to at most half of the minimum value of that timeout. You can find this setting in outputs.conf readTimeout setting under the tcpout stanza.
 To disable, set to 0, but this is NOT recommended. Highest legal value is 2147483647.
-{{% /md %}}</dd>
-    <dt class="property-optional"
+{{% /md %}}</dd><dt class="property-optional"
             title="Optional">
         <span id="maxtotaldatasizemb_go">
 <a href="#maxtotaldatasizemb_go" style="color: inherit; text-decoration: inherit;">Max<wbr>Total<wbr>Data<wbr>Size<wbr>Mb</a>
@@ -967,8 +896,7 @@ To disable, set to 0, but this is NOT recommended. Highest legal value is 214748
         <span class="property-type">int</span>
     </dt>
     <dd>{{% md %}}The maximum size of an index (in MB). If an index grows larger than the maximum size, the oldest data is frozen.
-{{% /md %}}</dd>
-    <dt class="property-optional"
+{{% /md %}}</dd><dt class="property-optional"
             title="Optional">
         <span id="maxwarmdbcount_go">
 <a href="#maxwarmdbcount_go" style="color: inherit; text-decoration: inherit;">Max<wbr>Warm<wbr>Db<wbr>Count</a>
@@ -977,8 +905,7 @@ To disable, set to 0, but this is NOT recommended. Highest legal value is 214748
         <span class="property-type">int</span>
     </dt>
     <dd>{{% md %}}The maximum number of warm buckets. If this number is exceeded, the warm bucket/s with the lowest value for their latest times is moved to cold.
-{{% /md %}}</dd>
-    <dt class="property-optional"
+{{% /md %}}</dd><dt class="property-optional"
             title="Optional">
         <span id="minrawfilesyncsecs_go">
 <a href="#minrawfilesyncsecs_go" style="color: inherit; text-decoration: inherit;">Min<wbr>Raw<wbr>File<wbr>Sync<wbr>Secs</a>
@@ -990,8 +917,7 @@ To disable, set to 0, but this is NOT recommended. Highest legal value is 214748
 This parameter sets how frequently splunkd forces a filesystem sync while compressing journal slices.
 During this period, uncompressed slices are left on disk even after they are compressed. Then splunkd forces a filesystem sync of the compressed journal and removes the accumulated uncompressed files.
 If 0 is specified, splunkd forces a filesystem sync after every slice completes compressing. Specifying "disable" disables syncing entirely: uncompressed slices are removed as soon as compression is complete.
-{{% /md %}}</dd>
-    <dt class="property-optional"
+{{% /md %}}</dd><dt class="property-optional"
             title="Optional">
         <span id="minstreamgroupqueuesize_go">
 <a href="#minstreamgroupqueuesize_go" style="color: inherit; text-decoration: inherit;">Min<wbr>Stream<wbr>Group<wbr>Queue<wbr>Size</a>
@@ -1000,8 +926,7 @@ If 0 is specified, splunkd forces a filesystem sync after every slice completes 
         <span class="property-type">int</span>
     </dt>
     <dd>{{% md %}}Minimum size of the queue that stores events in memory before committing them to a tsidx file.
-{{% /md %}}</dd>
-    <dt class="property-optional"
+{{% /md %}}</dd><dt class="property-optional"
             title="Optional">
         <span id="name_go">
 <a href="#name_go" style="color: inherit; text-decoration: inherit;">Name</a>
@@ -1010,8 +935,7 @@ If 0 is specified, splunkd forces a filesystem sync after every slice completes 
         <span class="property-type">string</span>
     </dt>
     <dd>{{% md %}}The name of the index to create.
-{{% /md %}}</dd>
-    <dt class="property-optional"
+{{% /md %}}</dd><dt class="property-optional"
             title="Optional">
         <span id="partialservicemetaperiod_go">
 <a href="#partialservicemetaperiod_go" style="color: inherit; text-decoration: inherit;">Partial<wbr>Service<wbr>Meta<wbr>Period</a>
@@ -1023,8 +947,7 @@ If 0 is specified, splunkd forces a filesystem sync after every slice completes 
 partialServiceMetaPeriod specifies, in seconds, how frequently it should sync. Zero means that this feature is turned off and serviceMetaPeriod is the only time when metadata sync happens.
 If the value of partialServiceMetaPeriod is greater than serviceMetaPeriod, this setting has no effect.
 By default it is turned off (zero).
-{{% /md %}}</dd>
-    <dt class="property-optional"
+{{% /md %}}</dd><dt class="property-optional"
             title="Optional">
         <span id="processtrackerserviceinterval_go">
 <a href="#processtrackerserviceinterval_go" style="color: inherit; text-decoration: inherit;">Process<wbr>Tracker<wbr>Service<wbr>Interval</a>
@@ -1035,8 +958,7 @@ By default it is turned off (zero).
     <dd>{{% md %}}Specifies, in seconds, how often the indexer checks the status of the child OS processes it launched to see if it can launch new processes for queued requests. Defaults to 15.
 If set to 0, the indexer checks child process status every second.
 Highest legal value is 4294967295.
-{{% /md %}}</dd>
-    <dt class="property-optional"
+{{% /md %}}</dd><dt class="property-optional"
             title="Optional">
         <span id="quarantinefuturesecs_go">
 <a href="#quarantinefuturesecs_go" style="color: inherit; text-decoration: inherit;">Quarantine<wbr>Future<wbr>Secs</a>
@@ -1046,8 +968,7 @@ Highest legal value is 4294967295.
     </dt>
     <dd>{{% md %}}Events with timestamp of quarantineFutureSecs newer than "now" are dropped into quarantine bucket. Defaults to 2592000 (30 days).
 This is a mechanism to prevent main hot buckets from being polluted with fringe events.
-{{% /md %}}</dd>
-    <dt class="property-optional"
+{{% /md %}}</dd><dt class="property-optional"
             title="Optional">
         <span id="quarantinepastsecs_go">
 <a href="#quarantinepastsecs_go" style="color: inherit; text-decoration: inherit;">Quarantine<wbr>Past<wbr>Secs</a>
@@ -1056,8 +977,7 @@ This is a mechanism to prevent main hot buckets from being polluted with fringe 
         <span class="property-type">int</span>
     </dt>
     <dd>{{% md %}}Events with timestamp of quarantinePastSecs older than "now" are dropped into quarantine bucket. Defaults to 77760000 (900 days). This is a mechanism to prevent the main hot buckets from being polluted with fringe events.
-{{% /md %}}</dd>
-    <dt class="property-optional"
+{{% /md %}}</dd><dt class="property-optional"
             title="Optional">
         <span id="rawchunksizebytes_go">
 <a href="#rawchunksizebytes_go" style="color: inherit; text-decoration: inherit;">Raw<wbr>Chunk<wbr>Size<wbr>Bytes</a>
@@ -1066,8 +986,7 @@ This is a mechanism to prevent main hot buckets from being polluted with fringe 
         <span class="property-type">int</span>
     </dt>
     <dd>{{% md %}}Target uncompressed size in bytes for individual raw slice in the rawdata journal of the index. Defaults to 131072 (128KB). 0 is not a valid value. If 0 is specified, rawChunkSizeBytes is set to the default value.
-{{% /md %}}</dd>
-    <dt class="property-optional"
+{{% /md %}}</dd><dt class="property-optional"
             title="Optional">
         <span id="repfactor_go">
 <a href="#repfactor_go" style="color: inherit; text-decoration: inherit;">Rep<wbr>Factor</a>
@@ -1078,8 +997,7 @@ This is a mechanism to prevent main hot buckets from being polluted with fringe 
     <dd>{{% md %}}Index replication control. This parameter applies to only clustering slaves.
 auto = Use the master index replication configuration value.
 0 = Turn off replication for this index.
-{{% /md %}}</dd>
-    <dt class="property-optional"
+{{% /md %}}</dd><dt class="property-optional"
             title="Optional">
         <span id="rotateperiodinsecs_go">
 <a href="#rotateperiodinsecs_go" style="color: inherit; text-decoration: inherit;">Rotate<wbr>Period<wbr>In<wbr>Secs</a>
@@ -1088,8 +1006,7 @@ auto = Use the master index replication configuration value.
         <span class="property-type">int</span>
     </dt>
     <dd>{{% md %}}How frequently (in seconds) to check if a new hot bucket needs to be created. Also, how frequently to check if there are any warm/cold buckets that should be rolled/frozen.
-{{% /md %}}</dd>
-    <dt class="property-optional"
+{{% /md %}}</dd><dt class="property-optional"
             title="Optional">
         <span id="servicemetaperiod_go">
 <a href="#servicemetaperiod_go" style="color: inherit; text-decoration: inherit;">Service<wbr>Meta<wbr>Period</a>
@@ -1099,8 +1016,7 @@ auto = Use the master index replication configuration value.
     </dt>
     <dd>{{% md %}}Defines how frequently metadata is synced to disk, in seconds. Defaults to 25 (seconds).
 You may want to set this to a higher value if the sum of your metadata file sizes is larger than many tens of megabytes, to avoid the hit on I/O in the indexing fast path.
-{{% /md %}}</dd>
-    <dt class="property-optional"
+{{% /md %}}</dd><dt class="property-optional"
             title="Optional">
         <span id="syncmeta_go">
 <a href="#syncmeta_go" style="color: inherit; text-decoration: inherit;">Sync<wbr>Meta</a>
@@ -1109,8 +1025,7 @@ You may want to set this to a higher value if the sum of your metadata file size
         <span class="property-type">bool</span>
     </dt>
     <dd>{{% md %}}When true, a sync operation is called before file descriptor is closed on metadata file updates. This functionality improves integrity of metadata files, especially in regards to operating system crashes/machine failures.
-{{% /md %}}</dd>
-    <dt class="property-optional"
+{{% /md %}}</dd><dt class="property-optional"
             title="Optional">
         <span id="thawedpath_go">
 <a href="#thawedpath_go" style="color: inherit; text-decoration: inherit;">Thawed<wbr>Path</a>
@@ -1121,8 +1036,7 @@ You may want to set this to a higher value if the sum of your metadata file size
     <dd>{{% md %}}An absolute path that contains the thawed (resurrected) databases for the index.
 Cannot be defined in terms of a volume definition.
 Required. Splunk software does not start if an index lacks a valid thawedPath.
-{{% /md %}}</dd>
-    <dt class="property-optional"
+{{% /md %}}</dd><dt class="property-optional"
             title="Optional">
         <span id="throttlecheckperiod_go">
 <a href="#throttlecheckperiod_go" style="color: inherit; text-decoration: inherit;">Throttle<wbr>Check<wbr>Period</a>
@@ -1131,8 +1045,7 @@ Required. Splunk software does not start if an index lacks a valid thawedPath.
         <span class="property-type">int</span>
     </dt>
     <dd>{{% md %}}Defines how frequently Splunk software checks for index throttling condition, in seconds. Defaults to 15 (seconds).
-{{% /md %}}</dd>
-    <dt class="property-optional"
+{{% /md %}}</dd><dt class="property-optional"
             title="Optional">
         <span id="tstatshomepath_go">
 <a href="#tstatshomepath_go" style="color: inherit; text-decoration: inherit;">Tstats<wbr>Home<wbr>Path</a>
@@ -1142,8 +1055,7 @@ Required. Splunk software does not start if an index lacks a valid thawedPath.
     </dt>
     <dd>{{% md %}}Location to store datamodel acceleration TSIDX data for this index. Restart splunkd after changing this parameter.
 If specified, it must be defined in terms of a volume definition.
-{{% /md %}}</dd>
-    <dt class="property-optional"
+{{% /md %}}</dd><dt class="property-optional"
             title="Optional">
         <span id="warmtocoldscript_go">
 <a href="#warmtocoldscript_go" style="color: inherit; text-decoration: inherit;">Warm<wbr>To<wbr>Cold<wbr>Script</a>
@@ -1153,14 +1065,11 @@ If specified, it must be defined in terms of a volume definition.
     </dt>
     <dd>{{% md %}}Path to a script to run when moving data from warm to cold.
 This attribute is supported for backwards compatibility with Splunk software versions older than 4.0. Contact Splunk support if you need help configuring this setting.
-{{% /md %}}</dd>
-</dl>
+{{% /md %}}</dd></dl>
 {{% /choosable %}}
 
 {{% choosable language nodejs %}}
-<dl class="resources-properties">
-
-    <dt class="property-optional"
+<dl class="resources-properties"><dt class="property-optional"
             title="Optional">
         <span id="acl_nodejs">
 <a href="#acl_nodejs" style="color: inherit; text-decoration: inherit;">acl</a>
@@ -1169,8 +1078,7 @@ This attribute is supported for backwards compatibility with Splunk software ver
         <span class="property-type"><a href="#indexesacl">Indexes<wbr>Acl</a></span>
     </dt>
     <dd>{{% md %}}The app/user context that is the namespace for the resource
-{{% /md %}}</dd>
-    <dt class="property-optional"
+{{% /md %}}</dd><dt class="property-optional"
             title="Optional">
         <span id="blocksignsize_nodejs">
 <a href="#blocksignsize_nodejs" style="color: inherit; text-decoration: inherit;">block<wbr>Sign<wbr>Size</a>
@@ -1179,8 +1087,7 @@ This attribute is supported for backwards compatibility with Splunk software ver
         <span class="property-type">number</span>
     </dt>
     <dd>{{% md %}}Controls how many events make up a block for block signatures. If this is set to 0, block signing is disabled for this index. <br>A recommended value is 100.
-{{% /md %}}</dd>
-    <dt class="property-optional"
+{{% /md %}}</dd><dt class="property-optional"
             title="Optional">
         <span id="bucketrebuildmemoryhint_nodejs">
 <a href="#bucketrebuildmemoryhint_nodejs" style="color: inherit; text-decoration: inherit;">bucket<wbr>Rebuild<wbr>Memory<wbr>Hint</a>
@@ -1195,8 +1102,7 @@ less than 2GB RAM = 67108864 (64MB) tsidx
 2GB to 8GB RAM = 134217728 (128MB) tsidx
 more than 8GB RAM = 268435456 (256MB) tsidx<br>
 Values other than "auto" must be 16MB-1GB. Highest legal value (of the numerical part) is 4294967295 You can specify the value using a size suffix: "16777216" or "16MB" are equivalent.
-{{% /md %}}</dd>
-    <dt class="property-optional"
+{{% /md %}}</dd><dt class="property-optional"
             title="Optional">
         <span id="coldpath_nodejs">
 <a href="#coldpath_nodejs" style="color: inherit; text-decoration: inherit;">cold<wbr>Path</a>
@@ -1205,8 +1111,7 @@ Values other than "auto" must be 16MB-1GB. Highest legal value (of the numerical
         <span class="property-type">string</span>
     </dt>
     <dd>{{% md %}}An absolute path that contains the colddbs for the index. The path must be readable and writable. Cold databases are opened as needed when searching.
-{{% /md %}}</dd>
-    <dt class="property-optional"
+{{% /md %}}</dd><dt class="property-optional"
             title="Optional">
         <span id="coldtofrozendir_nodejs">
 <a href="#coldtofrozendir_nodejs" style="color: inherit; text-decoration: inherit;">cold<wbr>To<wbr>Frozen<wbr>Dir</a>
@@ -1222,8 +1127,7 @@ To thaw, run splunk rebuild <bucket dir> on the bucket, then move to the thawed 
 Old style buckets (Pre-4.2): gzip all the .data and .tsidx files<br>
 To thaw, gunzip the zipped files and move the bucket into the thawed directory<br>
 If both coldToFrozenDir and coldToFrozenScript are specified, coldToFrozenDir takes precedence
-{{% /md %}}</dd>
-    <dt class="property-optional"
+{{% /md %}}</dd><dt class="property-optional"
             title="Optional">
         <span id="coldtofrozenscript_nodejs">
 <a href="#coldtofrozenscript_nodejs" style="color: inherit; text-decoration: inherit;">cold<wbr>To<wbr>Frozen<wbr>Script</a>
@@ -1235,8 +1139,7 @@ If both coldToFrozenDir and coldToFrozenScript are specified, coldToFrozenDir ta
 <br>If your script requires a program to run it (for example, python), specify the program followed by the path. The script must be in $SPLUNK_HOME/bin or one of its subdirectories.
 <br>Splunk software ships with an example archiving script in $SPLUNK_HOME/bin called coldToFrozenExample.py. DO NOT use this example script directly. It uses a default path, and if modified in place any changes are overwritten on upgrade.
 <br>It is best to copy the example script to a new file in bin and modify it for your system. Most importantly, change the default archive path to an existing directory that fits your needs.
-{{% /md %}}</dd>
-    <dt class="property-optional"
+{{% /md %}}</dd><dt class="property-optional"
             title="Optional">
         <span id="compressrawdata_nodejs">
 <a href="#compressrawdata_nodejs" style="color: inherit; text-decoration: inherit;">compress<wbr>Rawdata</a>
@@ -1245,8 +1148,7 @@ If both coldToFrozenDir and coldToFrozenScript are specified, coldToFrozenDir ta
         <span class="property-type">boolean</span>
     </dt>
     <dd>{{% md %}}This parameter is ignored. The splunkd process always compresses raw data.
-{{% /md %}}</dd>
-    <dt class="property-optional"
+{{% /md %}}</dd><dt class="property-optional"
             title="Optional">
         <span id="datatype_nodejs">
 <a href="#datatype_nodejs" style="color: inherit; text-decoration: inherit;">datatype</a>
@@ -1255,8 +1157,7 @@ If both coldToFrozenDir and coldToFrozenScript are specified, coldToFrozenDir ta
         <span class="property-type">string</span>
     </dt>
     <dd>{{% md %}}Valid values: (event | metric). Specifies the type of index.
-{{% /md %}}</dd>
-    <dt class="property-optional"
+{{% /md %}}</dd><dt class="property-optional"
             title="Optional">
         <span id="enableonlinebucketrepair_nodejs">
 <a href="#enableonlinebucketrepair_nodejs" style="color: inherit; text-decoration: inherit;">enable<wbr>Online<wbr>Bucket<wbr>Repair</a>
@@ -1266,8 +1167,7 @@ If both coldToFrozenDir and coldToFrozenScript are specified, coldToFrozenDir ta
     </dt>
     <dd>{{% md %}}Enables asynchronous "online fsck" bucket repair, which runs concurrently with Splunk software.
 When enabled, you do not have to wait until buckets are repaired to start the Splunk platform. However, you might observe a slight performance degratation.
-{{% /md %}}</dd>
-    <dt class="property-optional"
+{{% /md %}}</dd><dt class="property-optional"
             title="Optional">
         <span id="frozentimeperiodinsecs_nodejs">
 <a href="#frozentimeperiodinsecs_nodejs" style="color: inherit; text-decoration: inherit;">frozen<wbr>Time<wbr>Period<wbr>In<wbr>Secs</a>
@@ -1277,8 +1177,7 @@ When enabled, you do not have to wait until buckets are repaired to start the Sp
     </dt>
     <dd>{{% md %}}Number of seconds after which indexed data rolls to frozen.
 Defaults to 188697600 (6 years).Freezing data means it is removed from the index. If you need to archive your data, refer to coldToFrozenDir and coldToFrozenScript parameter documentation.
-{{% /md %}}</dd>
-    <dt class="property-optional"
+{{% /md %}}</dd><dt class="property-optional"
             title="Optional">
         <span id="homepath_nodejs">
 <a href="#homepath_nodejs" style="color: inherit; text-decoration: inherit;">home<wbr>Path</a>
@@ -1289,8 +1188,7 @@ Defaults to 188697600 (6 years).Freezing data means it is removed from the index
     <dd>{{% md %}}An absolute path that contains the hot and warm buckets for the index.
 Required. Splunk software does not start if an index lacks a valid homePath.
 <br>Caution: The path must be readable and writable.
-{{% /md %}}</dd>
-    <dt class="property-optional"
+{{% /md %}}</dd><dt class="property-optional"
             title="Optional">
         <span id="maxbloombackfillbucketage_nodejs">
 <a href="#maxbloombackfillbucketage_nodejs" style="color: inherit; text-decoration: inherit;">max<wbr>Bloom<wbr>Backfill<wbr>Bucket<wbr>Age</a>
@@ -1300,8 +1198,7 @@ Required. Splunk software does not start if an index lacks a valid homePath.
     </dt>
     <dd>{{% md %}}Valid values are: Integer[m|s|h|d].
 <br>If a warm or cold bucket is older than the specified age, do not create or rebuild its bloomfilter. Specify 0 to never rebuild bloomfilters.
-{{% /md %}}</dd>
-    <dt class="property-optional"
+{{% /md %}}</dd><dt class="property-optional"
             title="Optional">
         <span id="maxconcurrentoptimizes_nodejs">
 <a href="#maxconcurrentoptimizes_nodejs" style="color: inherit; text-decoration: inherit;">max<wbr>Concurrent<wbr>Optimizes</a>
@@ -1311,8 +1208,7 @@ Required. Splunk software does not start if an index lacks a valid homePath.
     </dt>
     <dd>{{% md %}}The number of concurrent optimize processes that can run against a hot bucket.
 This number should be increased if instructed by Splunk Support. Typically the default value should suffice.
-{{% /md %}}</dd>
-    <dt class="property-optional"
+{{% /md %}}</dd><dt class="property-optional"
             title="Optional">
         <span id="maxdatasize_nodejs">
 <a href="#maxdatasize_nodejs" style="color: inherit; text-decoration: inherit;">max<wbr>Data<wbr>Size</a>
@@ -1322,8 +1218,7 @@ This number should be increased if instructed by Splunk Support. Typically the d
     </dt>
     <dd>{{% md %}}The maximum size in MB for a hot DB to reach before a roll to warm is triggered. Specifying "auto" or "auto_high_volume" causes Splunk software to autotune this parameter (recommended).
 Use "auto_high_volume" for high volume indexes (such as the main index); otherwise, use "auto". A "high volume index" would typically be considered one that gets over 10GB of data per day.
-{{% /md %}}</dd>
-    <dt class="property-optional"
+{{% /md %}}</dd><dt class="property-optional"
             title="Optional">
         <span id="maxhotbuckets_nodejs">
 <a href="#maxhotbuckets_nodejs" style="color: inherit; text-decoration: inherit;">max<wbr>Hot<wbr>Buckets</a>
@@ -1333,8 +1228,7 @@ Use "auto_high_volume" for high volume indexes (such as the main index); otherwi
     </dt>
     <dd>{{% md %}}Maximum hot buckets that can exist per index. Defaults to 3.
 <br>When maxHotBuckets is exceeded, Splunk software rolls the least recently used (LRU) hot bucket to warm. Both normal hot buckets and quarantined hot buckets count towards this total. This setting operates independently of maxHotIdleSecs, which can also cause hot buckets to roll.
-{{% /md %}}</dd>
-    <dt class="property-optional"
+{{% /md %}}</dd><dt class="property-optional"
             title="Optional">
         <span id="maxhotidlesecs_nodejs">
 <a href="#maxhotidlesecs_nodejs" style="color: inherit; text-decoration: inherit;">max<wbr>Hot<wbr>Idle<wbr>Secs</a>
@@ -1343,8 +1237,7 @@ Use "auto_high_volume" for high volume indexes (such as the main index); otherwi
         <span class="property-type">number</span>
     </dt>
     <dd>{{% md %}}Maximum life, in seconds, of a hot bucket. Defaults to 0. If a hot bucket exceeds maxHotIdleSecs, Splunk software rolls it to warm. This setting operates independently of maxHotBuckets, which can also cause hot buckets to roll. A value of 0 turns off the idle check (equivalent to INFINITE idle time).
-{{% /md %}}</dd>
-    <dt class="property-optional"
+{{% /md %}}</dd><dt class="property-optional"
             title="Optional">
         <span id="maxhotspansecs_nodejs">
 <a href="#maxhotspansecs_nodejs" style="color: inherit; text-decoration: inherit;">max<wbr>Hot<wbr>Span<wbr>Secs</a>
@@ -1353,8 +1246,7 @@ Use "auto_high_volume" for high volume indexes (such as the main index); otherwi
         <span class="property-type">number</span>
     </dt>
     <dd>{{% md %}}Upper bound of target maximum timespan of hot/warm buckets in seconds. Defaults to 7776000 seconds (90 days).
-{{% /md %}}</dd>
-    <dt class="property-optional"
+{{% /md %}}</dd><dt class="property-optional"
             title="Optional">
         <span id="maxmemmb_nodejs">
 <a href="#maxmemmb_nodejs" style="color: inherit; text-decoration: inherit;">max<wbr>Mem<wbr>Mb</a>
@@ -1363,8 +1255,7 @@ Use "auto_high_volume" for high volume indexes (such as the main index); otherwi
         <span class="property-type">number</span>
     </dt>
     <dd>{{% md %}}The amount of memory, expressed in MB, to allocate for buffering a single tsidx file into memory before flushing to disk. Defaults to 5. The default is recommended for all environments.
-{{% /md %}}</dd>
-    <dt class="property-optional"
+{{% /md %}}</dd><dt class="property-optional"
             title="Optional">
         <span id="maxmetaentries_nodejs">
 <a href="#maxmetaentries_nodejs" style="color: inherit; text-decoration: inherit;">max<wbr>Meta<wbr>Entries</a>
@@ -1373,8 +1264,7 @@ Use "auto_high_volume" for high volume indexes (such as the main index); otherwi
         <span class="property-type">number</span>
     </dt>
     <dd>{{% md %}}Upper limit, in seconds, on how long an event can sit in raw slice. Applies only if replication is enabled for this index. Otherwise ignored. If there are any acknowledged events sharing this raw slice, this paramater does not apply. In this case, maxTimeUnreplicatedWithAcks applies. Highest legal value is 2147483647. To disable this parameter, set to 0.
-{{% /md %}}</dd>
-    <dt class="property-optional"
+{{% /md %}}</dd><dt class="property-optional"
             title="Optional">
         <span id="maxtimeunreplicatednoacks_nodejs">
 <a href="#maxtimeunreplicatednoacks_nodejs" style="color: inherit; text-decoration: inherit;">max<wbr>Time<wbr>Unreplicated<wbr>No<wbr>Acks</a>
@@ -1385,8 +1275,7 @@ Use "auto_high_volume" for high volume indexes (such as the main index); otherwi
     <dd>{{% md %}}Upper limit, in seconds, on how long an event can sit in raw slice. Applies only if replication is enabled for this index. Otherwise ignored.
 If there are any acknowledged events sharing this raw slice, this paramater does not apply. In this case, maxTimeUnreplicatedWithAcks applies.
 Highest legal value is 2147483647. To disable this parameter, set to 0.
-{{% /md %}}</dd>
-    <dt class="property-optional"
+{{% /md %}}</dd><dt class="property-optional"
             title="Optional">
         <span id="maxtimeunreplicatedwithacks_nodejs">
 <a href="#maxtimeunreplicatedwithacks_nodejs" style="color: inherit; text-decoration: inherit;">max<wbr>Time<wbr>Unreplicated<wbr>With<wbr>Acks</a>
@@ -1397,8 +1286,7 @@ Highest legal value is 2147483647. To disable this parameter, set to 0.
     <dd>{{% md %}}Upper limit, in seconds, on how long events can sit unacknowledged in a raw slice. Applies only if you have enabled acks on forwarders and have replication enabled (with clustering).
 Note: This is an advanced parameter. Make sure you understand the settings on all forwarders before changing this. This number should not exceed ack timeout configured on any forwarder, and should actually be set to at most half of the minimum value of that timeout. You can find this setting in outputs.conf readTimeout setting under the tcpout stanza.
 To disable, set to 0, but this is NOT recommended. Highest legal value is 2147483647.
-{{% /md %}}</dd>
-    <dt class="property-optional"
+{{% /md %}}</dd><dt class="property-optional"
             title="Optional">
         <span id="maxtotaldatasizemb_nodejs">
 <a href="#maxtotaldatasizemb_nodejs" style="color: inherit; text-decoration: inherit;">max<wbr>Total<wbr>Data<wbr>Size<wbr>Mb</a>
@@ -1407,8 +1295,7 @@ To disable, set to 0, but this is NOT recommended. Highest legal value is 214748
         <span class="property-type">number</span>
     </dt>
     <dd>{{% md %}}The maximum size of an index (in MB). If an index grows larger than the maximum size, the oldest data is frozen.
-{{% /md %}}</dd>
-    <dt class="property-optional"
+{{% /md %}}</dd><dt class="property-optional"
             title="Optional">
         <span id="maxwarmdbcount_nodejs">
 <a href="#maxwarmdbcount_nodejs" style="color: inherit; text-decoration: inherit;">max<wbr>Warm<wbr>Db<wbr>Count</a>
@@ -1417,8 +1304,7 @@ To disable, set to 0, but this is NOT recommended. Highest legal value is 214748
         <span class="property-type">number</span>
     </dt>
     <dd>{{% md %}}The maximum number of warm buckets. If this number is exceeded, the warm bucket/s with the lowest value for their latest times is moved to cold.
-{{% /md %}}</dd>
-    <dt class="property-optional"
+{{% /md %}}</dd><dt class="property-optional"
             title="Optional">
         <span id="minrawfilesyncsecs_nodejs">
 <a href="#minrawfilesyncsecs_nodejs" style="color: inherit; text-decoration: inherit;">min<wbr>Raw<wbr>File<wbr>Sync<wbr>Secs</a>
@@ -1430,8 +1316,7 @@ To disable, set to 0, but this is NOT recommended. Highest legal value is 214748
 This parameter sets how frequently splunkd forces a filesystem sync while compressing journal slices.
 During this period, uncompressed slices are left on disk even after they are compressed. Then splunkd forces a filesystem sync of the compressed journal and removes the accumulated uncompressed files.
 If 0 is specified, splunkd forces a filesystem sync after every slice completes compressing. Specifying "disable" disables syncing entirely: uncompressed slices are removed as soon as compression is complete.
-{{% /md %}}</dd>
-    <dt class="property-optional"
+{{% /md %}}</dd><dt class="property-optional"
             title="Optional">
         <span id="minstreamgroupqueuesize_nodejs">
 <a href="#minstreamgroupqueuesize_nodejs" style="color: inherit; text-decoration: inherit;">min<wbr>Stream<wbr>Group<wbr>Queue<wbr>Size</a>
@@ -1440,8 +1325,7 @@ If 0 is specified, splunkd forces a filesystem sync after every slice completes 
         <span class="property-type">number</span>
     </dt>
     <dd>{{% md %}}Minimum size of the queue that stores events in memory before committing them to a tsidx file.
-{{% /md %}}</dd>
-    <dt class="property-optional"
+{{% /md %}}</dd><dt class="property-optional"
             title="Optional">
         <span id="name_nodejs">
 <a href="#name_nodejs" style="color: inherit; text-decoration: inherit;">name</a>
@@ -1450,8 +1334,7 @@ If 0 is specified, splunkd forces a filesystem sync after every slice completes 
         <span class="property-type">string</span>
     </dt>
     <dd>{{% md %}}The name of the index to create.
-{{% /md %}}</dd>
-    <dt class="property-optional"
+{{% /md %}}</dd><dt class="property-optional"
             title="Optional">
         <span id="partialservicemetaperiod_nodejs">
 <a href="#partialservicemetaperiod_nodejs" style="color: inherit; text-decoration: inherit;">partial<wbr>Service<wbr>Meta<wbr>Period</a>
@@ -1463,8 +1346,7 @@ If 0 is specified, splunkd forces a filesystem sync after every slice completes 
 partialServiceMetaPeriod specifies, in seconds, how frequently it should sync. Zero means that this feature is turned off and serviceMetaPeriod is the only time when metadata sync happens.
 If the value of partialServiceMetaPeriod is greater than serviceMetaPeriod, this setting has no effect.
 By default it is turned off (zero).
-{{% /md %}}</dd>
-    <dt class="property-optional"
+{{% /md %}}</dd><dt class="property-optional"
             title="Optional">
         <span id="processtrackerserviceinterval_nodejs">
 <a href="#processtrackerserviceinterval_nodejs" style="color: inherit; text-decoration: inherit;">process<wbr>Tracker<wbr>Service<wbr>Interval</a>
@@ -1475,8 +1357,7 @@ By default it is turned off (zero).
     <dd>{{% md %}}Specifies, in seconds, how often the indexer checks the status of the child OS processes it launched to see if it can launch new processes for queued requests. Defaults to 15.
 If set to 0, the indexer checks child process status every second.
 Highest legal value is 4294967295.
-{{% /md %}}</dd>
-    <dt class="property-optional"
+{{% /md %}}</dd><dt class="property-optional"
             title="Optional">
         <span id="quarantinefuturesecs_nodejs">
 <a href="#quarantinefuturesecs_nodejs" style="color: inherit; text-decoration: inherit;">quarantine<wbr>Future<wbr>Secs</a>
@@ -1486,8 +1367,7 @@ Highest legal value is 4294967295.
     </dt>
     <dd>{{% md %}}Events with timestamp of quarantineFutureSecs newer than "now" are dropped into quarantine bucket. Defaults to 2592000 (30 days).
 This is a mechanism to prevent main hot buckets from being polluted with fringe events.
-{{% /md %}}</dd>
-    <dt class="property-optional"
+{{% /md %}}</dd><dt class="property-optional"
             title="Optional">
         <span id="quarantinepastsecs_nodejs">
 <a href="#quarantinepastsecs_nodejs" style="color: inherit; text-decoration: inherit;">quarantine<wbr>Past<wbr>Secs</a>
@@ -1496,8 +1376,7 @@ This is a mechanism to prevent main hot buckets from being polluted with fringe 
         <span class="property-type">number</span>
     </dt>
     <dd>{{% md %}}Events with timestamp of quarantinePastSecs older than "now" are dropped into quarantine bucket. Defaults to 77760000 (900 days). This is a mechanism to prevent the main hot buckets from being polluted with fringe events.
-{{% /md %}}</dd>
-    <dt class="property-optional"
+{{% /md %}}</dd><dt class="property-optional"
             title="Optional">
         <span id="rawchunksizebytes_nodejs">
 <a href="#rawchunksizebytes_nodejs" style="color: inherit; text-decoration: inherit;">raw<wbr>Chunk<wbr>Size<wbr>Bytes</a>
@@ -1506,8 +1385,7 @@ This is a mechanism to prevent main hot buckets from being polluted with fringe 
         <span class="property-type">number</span>
     </dt>
     <dd>{{% md %}}Target uncompressed size in bytes for individual raw slice in the rawdata journal of the index. Defaults to 131072 (128KB). 0 is not a valid value. If 0 is specified, rawChunkSizeBytes is set to the default value.
-{{% /md %}}</dd>
-    <dt class="property-optional"
+{{% /md %}}</dd><dt class="property-optional"
             title="Optional">
         <span id="repfactor_nodejs">
 <a href="#repfactor_nodejs" style="color: inherit; text-decoration: inherit;">rep<wbr>Factor</a>
@@ -1518,8 +1396,7 @@ This is a mechanism to prevent main hot buckets from being polluted with fringe 
     <dd>{{% md %}}Index replication control. This parameter applies to only clustering slaves.
 auto = Use the master index replication configuration value.
 0 = Turn off replication for this index.
-{{% /md %}}</dd>
-    <dt class="property-optional"
+{{% /md %}}</dd><dt class="property-optional"
             title="Optional">
         <span id="rotateperiodinsecs_nodejs">
 <a href="#rotateperiodinsecs_nodejs" style="color: inherit; text-decoration: inherit;">rotate<wbr>Period<wbr>In<wbr>Secs</a>
@@ -1528,8 +1405,7 @@ auto = Use the master index replication configuration value.
         <span class="property-type">number</span>
     </dt>
     <dd>{{% md %}}How frequently (in seconds) to check if a new hot bucket needs to be created. Also, how frequently to check if there are any warm/cold buckets that should be rolled/frozen.
-{{% /md %}}</dd>
-    <dt class="property-optional"
+{{% /md %}}</dd><dt class="property-optional"
             title="Optional">
         <span id="servicemetaperiod_nodejs">
 <a href="#servicemetaperiod_nodejs" style="color: inherit; text-decoration: inherit;">service<wbr>Meta<wbr>Period</a>
@@ -1539,8 +1415,7 @@ auto = Use the master index replication configuration value.
     </dt>
     <dd>{{% md %}}Defines how frequently metadata is synced to disk, in seconds. Defaults to 25 (seconds).
 You may want to set this to a higher value if the sum of your metadata file sizes is larger than many tens of megabytes, to avoid the hit on I/O in the indexing fast path.
-{{% /md %}}</dd>
-    <dt class="property-optional"
+{{% /md %}}</dd><dt class="property-optional"
             title="Optional">
         <span id="syncmeta_nodejs">
 <a href="#syncmeta_nodejs" style="color: inherit; text-decoration: inherit;">sync<wbr>Meta</a>
@@ -1549,8 +1424,7 @@ You may want to set this to a higher value if the sum of your metadata file size
         <span class="property-type">boolean</span>
     </dt>
     <dd>{{% md %}}When true, a sync operation is called before file descriptor is closed on metadata file updates. This functionality improves integrity of metadata files, especially in regards to operating system crashes/machine failures.
-{{% /md %}}</dd>
-    <dt class="property-optional"
+{{% /md %}}</dd><dt class="property-optional"
             title="Optional">
         <span id="thawedpath_nodejs">
 <a href="#thawedpath_nodejs" style="color: inherit; text-decoration: inherit;">thawed<wbr>Path</a>
@@ -1561,8 +1435,7 @@ You may want to set this to a higher value if the sum of your metadata file size
     <dd>{{% md %}}An absolute path that contains the thawed (resurrected) databases for the index.
 Cannot be defined in terms of a volume definition.
 Required. Splunk software does not start if an index lacks a valid thawedPath.
-{{% /md %}}</dd>
-    <dt class="property-optional"
+{{% /md %}}</dd><dt class="property-optional"
             title="Optional">
         <span id="throttlecheckperiod_nodejs">
 <a href="#throttlecheckperiod_nodejs" style="color: inherit; text-decoration: inherit;">throttle<wbr>Check<wbr>Period</a>
@@ -1571,8 +1444,7 @@ Required. Splunk software does not start if an index lacks a valid thawedPath.
         <span class="property-type">number</span>
     </dt>
     <dd>{{% md %}}Defines how frequently Splunk software checks for index throttling condition, in seconds. Defaults to 15 (seconds).
-{{% /md %}}</dd>
-    <dt class="property-optional"
+{{% /md %}}</dd><dt class="property-optional"
             title="Optional">
         <span id="tstatshomepath_nodejs">
 <a href="#tstatshomepath_nodejs" style="color: inherit; text-decoration: inherit;">tstats<wbr>Home<wbr>Path</a>
@@ -1582,8 +1454,7 @@ Required. Splunk software does not start if an index lacks a valid thawedPath.
     </dt>
     <dd>{{% md %}}Location to store datamodel acceleration TSIDX data for this index. Restart splunkd after changing this parameter.
 If specified, it must be defined in terms of a volume definition.
-{{% /md %}}</dd>
-    <dt class="property-optional"
+{{% /md %}}</dd><dt class="property-optional"
             title="Optional">
         <span id="warmtocoldscript_nodejs">
 <a href="#warmtocoldscript_nodejs" style="color: inherit; text-decoration: inherit;">warm<wbr>To<wbr>Cold<wbr>Script</a>
@@ -1593,14 +1464,11 @@ If specified, it must be defined in terms of a volume definition.
     </dt>
     <dd>{{% md %}}Path to a script to run when moving data from warm to cold.
 This attribute is supported for backwards compatibility with Splunk software versions older than 4.0. Contact Splunk support if you need help configuring this setting.
-{{% /md %}}</dd>
-</dl>
+{{% /md %}}</dd></dl>
 {{% /choosable %}}
 
 {{% choosable language python %}}
-<dl class="resources-properties">
-
-    <dt class="property-optional"
+<dl class="resources-properties"><dt class="property-optional"
             title="Optional">
         <span id="acl_python">
 <a href="#acl_python" style="color: inherit; text-decoration: inherit;">acl</a>
@@ -1609,8 +1477,7 @@ This attribute is supported for backwards compatibility with Splunk software ver
         <span class="property-type"><a href="#indexesacl">Indexes<wbr>Acl<wbr>Args</a></span>
     </dt>
     <dd>{{% md %}}The app/user context that is the namespace for the resource
-{{% /md %}}</dd>
-    <dt class="property-optional"
+{{% /md %}}</dd><dt class="property-optional"
             title="Optional">
         <span id="block_sign_size_python">
 <a href="#block_sign_size_python" style="color: inherit; text-decoration: inherit;">block_<wbr>sign_<wbr>size</a>
@@ -1619,8 +1486,7 @@ This attribute is supported for backwards compatibility with Splunk software ver
         <span class="property-type">int</span>
     </dt>
     <dd>{{% md %}}Controls how many events make up a block for block signatures. If this is set to 0, block signing is disabled for this index. <br>A recommended value is 100.
-{{% /md %}}</dd>
-    <dt class="property-optional"
+{{% /md %}}</dd><dt class="property-optional"
             title="Optional">
         <span id="bucket_rebuild_memory_hint_python">
 <a href="#bucket_rebuild_memory_hint_python" style="color: inherit; text-decoration: inherit;">bucket_<wbr>rebuild_<wbr>memory_<wbr>hint</a>
@@ -1635,8 +1501,7 @@ less than 2GB RAM = 67108864 (64MB) tsidx
 2GB to 8GB RAM = 134217728 (128MB) tsidx
 more than 8GB RAM = 268435456 (256MB) tsidx<br>
 Values other than "auto" must be 16MB-1GB. Highest legal value (of the numerical part) is 4294967295 You can specify the value using a size suffix: "16777216" or "16MB" are equivalent.
-{{% /md %}}</dd>
-    <dt class="property-optional"
+{{% /md %}}</dd><dt class="property-optional"
             title="Optional">
         <span id="cold_path_python">
 <a href="#cold_path_python" style="color: inherit; text-decoration: inherit;">cold_<wbr>path</a>
@@ -1645,8 +1510,7 @@ Values other than "auto" must be 16MB-1GB. Highest legal value (of the numerical
         <span class="property-type">str</span>
     </dt>
     <dd>{{% md %}}An absolute path that contains the colddbs for the index. The path must be readable and writable. Cold databases are opened as needed when searching.
-{{% /md %}}</dd>
-    <dt class="property-optional"
+{{% /md %}}</dd><dt class="property-optional"
             title="Optional">
         <span id="cold_to_frozen_dir_python">
 <a href="#cold_to_frozen_dir_python" style="color: inherit; text-decoration: inherit;">cold_<wbr>to_<wbr>frozen_<wbr>dir</a>
@@ -1662,8 +1526,7 @@ To thaw, run splunk rebuild <bucket dir> on the bucket, then move to the thawed 
 Old style buckets (Pre-4.2): gzip all the .data and .tsidx files<br>
 To thaw, gunzip the zipped files and move the bucket into the thawed directory<br>
 If both coldToFrozenDir and coldToFrozenScript are specified, coldToFrozenDir takes precedence
-{{% /md %}}</dd>
-    <dt class="property-optional"
+{{% /md %}}</dd><dt class="property-optional"
             title="Optional">
         <span id="cold_to_frozen_script_python">
 <a href="#cold_to_frozen_script_python" style="color: inherit; text-decoration: inherit;">cold_<wbr>to_<wbr>frozen_<wbr>script</a>
@@ -1675,8 +1538,7 @@ If both coldToFrozenDir and coldToFrozenScript are specified, coldToFrozenDir ta
 <br>If your script requires a program to run it (for example, python), specify the program followed by the path. The script must be in $SPLUNK_HOME/bin or one of its subdirectories.
 <br>Splunk software ships with an example archiving script in $SPLUNK_HOME/bin called coldToFrozenExample.py. DO NOT use this example script directly. It uses a default path, and if modified in place any changes are overwritten on upgrade.
 <br>It is best to copy the example script to a new file in bin and modify it for your system. Most importantly, change the default archive path to an existing directory that fits your needs.
-{{% /md %}}</dd>
-    <dt class="property-optional"
+{{% /md %}}</dd><dt class="property-optional"
             title="Optional">
         <span id="compress_rawdata_python">
 <a href="#compress_rawdata_python" style="color: inherit; text-decoration: inherit;">compress_<wbr>rawdata</a>
@@ -1685,8 +1547,7 @@ If both coldToFrozenDir and coldToFrozenScript are specified, coldToFrozenDir ta
         <span class="property-type">bool</span>
     </dt>
     <dd>{{% md %}}This parameter is ignored. The splunkd process always compresses raw data.
-{{% /md %}}</dd>
-    <dt class="property-optional"
+{{% /md %}}</dd><dt class="property-optional"
             title="Optional">
         <span id="datatype_python">
 <a href="#datatype_python" style="color: inherit; text-decoration: inherit;">datatype</a>
@@ -1695,8 +1556,7 @@ If both coldToFrozenDir and coldToFrozenScript are specified, coldToFrozenDir ta
         <span class="property-type">str</span>
     </dt>
     <dd>{{% md %}}Valid values: (event | metric). Specifies the type of index.
-{{% /md %}}</dd>
-    <dt class="property-optional"
+{{% /md %}}</dd><dt class="property-optional"
             title="Optional">
         <span id="enable_online_bucket_repair_python">
 <a href="#enable_online_bucket_repair_python" style="color: inherit; text-decoration: inherit;">enable_<wbr>online_<wbr>bucket_<wbr>repair</a>
@@ -1706,8 +1566,7 @@ If both coldToFrozenDir and coldToFrozenScript are specified, coldToFrozenDir ta
     </dt>
     <dd>{{% md %}}Enables asynchronous "online fsck" bucket repair, which runs concurrently with Splunk software.
 When enabled, you do not have to wait until buckets are repaired to start the Splunk platform. However, you might observe a slight performance degratation.
-{{% /md %}}</dd>
-    <dt class="property-optional"
+{{% /md %}}</dd><dt class="property-optional"
             title="Optional">
         <span id="frozen_time_period_in_secs_python">
 <a href="#frozen_time_period_in_secs_python" style="color: inherit; text-decoration: inherit;">frozen_<wbr>time_<wbr>period_<wbr>in_<wbr>secs</a>
@@ -1717,8 +1576,7 @@ When enabled, you do not have to wait until buckets are repaired to start the Sp
     </dt>
     <dd>{{% md %}}Number of seconds after which indexed data rolls to frozen.
 Defaults to 188697600 (6 years).Freezing data means it is removed from the index. If you need to archive your data, refer to coldToFrozenDir and coldToFrozenScript parameter documentation.
-{{% /md %}}</dd>
-    <dt class="property-optional"
+{{% /md %}}</dd><dt class="property-optional"
             title="Optional">
         <span id="home_path_python">
 <a href="#home_path_python" style="color: inherit; text-decoration: inherit;">home_<wbr>path</a>
@@ -1729,8 +1587,7 @@ Defaults to 188697600 (6 years).Freezing data means it is removed from the index
     <dd>{{% md %}}An absolute path that contains the hot and warm buckets for the index.
 Required. Splunk software does not start if an index lacks a valid homePath.
 <br>Caution: The path must be readable and writable.
-{{% /md %}}</dd>
-    <dt class="property-optional"
+{{% /md %}}</dd><dt class="property-optional"
             title="Optional">
         <span id="max_bloom_backfill_bucket_age_python">
 <a href="#max_bloom_backfill_bucket_age_python" style="color: inherit; text-decoration: inherit;">max_<wbr>bloom_<wbr>backfill_<wbr>bucket_<wbr>age</a>
@@ -1740,8 +1597,7 @@ Required. Splunk software does not start if an index lacks a valid homePath.
     </dt>
     <dd>{{% md %}}Valid values are: Integer[m|s|h|d].
 <br>If a warm or cold bucket is older than the specified age, do not create or rebuild its bloomfilter. Specify 0 to never rebuild bloomfilters.
-{{% /md %}}</dd>
-    <dt class="property-optional"
+{{% /md %}}</dd><dt class="property-optional"
             title="Optional">
         <span id="max_concurrent_optimizes_python">
 <a href="#max_concurrent_optimizes_python" style="color: inherit; text-decoration: inherit;">max_<wbr>concurrent_<wbr>optimizes</a>
@@ -1751,8 +1607,7 @@ Required. Splunk software does not start if an index lacks a valid homePath.
     </dt>
     <dd>{{% md %}}The number of concurrent optimize processes that can run against a hot bucket.
 This number should be increased if instructed by Splunk Support. Typically the default value should suffice.
-{{% /md %}}</dd>
-    <dt class="property-optional"
+{{% /md %}}</dd><dt class="property-optional"
             title="Optional">
         <span id="max_data_size_python">
 <a href="#max_data_size_python" style="color: inherit; text-decoration: inherit;">max_<wbr>data_<wbr>size</a>
@@ -1762,8 +1617,7 @@ This number should be increased if instructed by Splunk Support. Typically the d
     </dt>
     <dd>{{% md %}}The maximum size in MB for a hot DB to reach before a roll to warm is triggered. Specifying "auto" or "auto_high_volume" causes Splunk software to autotune this parameter (recommended).
 Use "auto_high_volume" for high volume indexes (such as the main index); otherwise, use "auto". A "high volume index" would typically be considered one that gets over 10GB of data per day.
-{{% /md %}}</dd>
-    <dt class="property-optional"
+{{% /md %}}</dd><dt class="property-optional"
             title="Optional">
         <span id="max_hot_buckets_python">
 <a href="#max_hot_buckets_python" style="color: inherit; text-decoration: inherit;">max_<wbr>hot_<wbr>buckets</a>
@@ -1773,8 +1627,7 @@ Use "auto_high_volume" for high volume indexes (such as the main index); otherwi
     </dt>
     <dd>{{% md %}}Maximum hot buckets that can exist per index. Defaults to 3.
 <br>When maxHotBuckets is exceeded, Splunk software rolls the least recently used (LRU) hot bucket to warm. Both normal hot buckets and quarantined hot buckets count towards this total. This setting operates independently of maxHotIdleSecs, which can also cause hot buckets to roll.
-{{% /md %}}</dd>
-    <dt class="property-optional"
+{{% /md %}}</dd><dt class="property-optional"
             title="Optional">
         <span id="max_hot_idle_secs_python">
 <a href="#max_hot_idle_secs_python" style="color: inherit; text-decoration: inherit;">max_<wbr>hot_<wbr>idle_<wbr>secs</a>
@@ -1783,8 +1636,7 @@ Use "auto_high_volume" for high volume indexes (such as the main index); otherwi
         <span class="property-type">int</span>
     </dt>
     <dd>{{% md %}}Maximum life, in seconds, of a hot bucket. Defaults to 0. If a hot bucket exceeds maxHotIdleSecs, Splunk software rolls it to warm. This setting operates independently of maxHotBuckets, which can also cause hot buckets to roll. A value of 0 turns off the idle check (equivalent to INFINITE idle time).
-{{% /md %}}</dd>
-    <dt class="property-optional"
+{{% /md %}}</dd><dt class="property-optional"
             title="Optional">
         <span id="max_hot_span_secs_python">
 <a href="#max_hot_span_secs_python" style="color: inherit; text-decoration: inherit;">max_<wbr>hot_<wbr>span_<wbr>secs</a>
@@ -1793,8 +1645,7 @@ Use "auto_high_volume" for high volume indexes (such as the main index); otherwi
         <span class="property-type">int</span>
     </dt>
     <dd>{{% md %}}Upper bound of target maximum timespan of hot/warm buckets in seconds. Defaults to 7776000 seconds (90 days).
-{{% /md %}}</dd>
-    <dt class="property-optional"
+{{% /md %}}</dd><dt class="property-optional"
             title="Optional">
         <span id="max_mem_mb_python">
 <a href="#max_mem_mb_python" style="color: inherit; text-decoration: inherit;">max_<wbr>mem_<wbr>mb</a>
@@ -1803,8 +1654,7 @@ Use "auto_high_volume" for high volume indexes (such as the main index); otherwi
         <span class="property-type">int</span>
     </dt>
     <dd>{{% md %}}The amount of memory, expressed in MB, to allocate for buffering a single tsidx file into memory before flushing to disk. Defaults to 5. The default is recommended for all environments.
-{{% /md %}}</dd>
-    <dt class="property-optional"
+{{% /md %}}</dd><dt class="property-optional"
             title="Optional">
         <span id="max_meta_entries_python">
 <a href="#max_meta_entries_python" style="color: inherit; text-decoration: inherit;">max_<wbr>meta_<wbr>entries</a>
@@ -1813,8 +1663,7 @@ Use "auto_high_volume" for high volume indexes (such as the main index); otherwi
         <span class="property-type">int</span>
     </dt>
     <dd>{{% md %}}Upper limit, in seconds, on how long an event can sit in raw slice. Applies only if replication is enabled for this index. Otherwise ignored. If there are any acknowledged events sharing this raw slice, this paramater does not apply. In this case, maxTimeUnreplicatedWithAcks applies. Highest legal value is 2147483647. To disable this parameter, set to 0.
-{{% /md %}}</dd>
-    <dt class="property-optional"
+{{% /md %}}</dd><dt class="property-optional"
             title="Optional">
         <span id="max_time_unreplicated_no_acks_python">
 <a href="#max_time_unreplicated_no_acks_python" style="color: inherit; text-decoration: inherit;">max_<wbr>time_<wbr>unreplicated_<wbr>no_<wbr>acks</a>
@@ -1825,8 +1674,7 @@ Use "auto_high_volume" for high volume indexes (such as the main index); otherwi
     <dd>{{% md %}}Upper limit, in seconds, on how long an event can sit in raw slice. Applies only if replication is enabled for this index. Otherwise ignored.
 If there are any acknowledged events sharing this raw slice, this paramater does not apply. In this case, maxTimeUnreplicatedWithAcks applies.
 Highest legal value is 2147483647. To disable this parameter, set to 0.
-{{% /md %}}</dd>
-    <dt class="property-optional"
+{{% /md %}}</dd><dt class="property-optional"
             title="Optional">
         <span id="max_time_unreplicated_with_acks_python">
 <a href="#max_time_unreplicated_with_acks_python" style="color: inherit; text-decoration: inherit;">max_<wbr>time_<wbr>unreplicated_<wbr>with_<wbr>acks</a>
@@ -1837,8 +1685,7 @@ Highest legal value is 2147483647. To disable this parameter, set to 0.
     <dd>{{% md %}}Upper limit, in seconds, on how long events can sit unacknowledged in a raw slice. Applies only if you have enabled acks on forwarders and have replication enabled (with clustering).
 Note: This is an advanced parameter. Make sure you understand the settings on all forwarders before changing this. This number should not exceed ack timeout configured on any forwarder, and should actually be set to at most half of the minimum value of that timeout. You can find this setting in outputs.conf readTimeout setting under the tcpout stanza.
 To disable, set to 0, but this is NOT recommended. Highest legal value is 2147483647.
-{{% /md %}}</dd>
-    <dt class="property-optional"
+{{% /md %}}</dd><dt class="property-optional"
             title="Optional">
         <span id="max_total_data_size_mb_python">
 <a href="#max_total_data_size_mb_python" style="color: inherit; text-decoration: inherit;">max_<wbr>total_<wbr>data_<wbr>size_<wbr>mb</a>
@@ -1847,8 +1694,7 @@ To disable, set to 0, but this is NOT recommended. Highest legal value is 214748
         <span class="property-type">int</span>
     </dt>
     <dd>{{% md %}}The maximum size of an index (in MB). If an index grows larger than the maximum size, the oldest data is frozen.
-{{% /md %}}</dd>
-    <dt class="property-optional"
+{{% /md %}}</dd><dt class="property-optional"
             title="Optional">
         <span id="max_warm_db_count_python">
 <a href="#max_warm_db_count_python" style="color: inherit; text-decoration: inherit;">max_<wbr>warm_<wbr>db_<wbr>count</a>
@@ -1857,8 +1703,7 @@ To disable, set to 0, but this is NOT recommended. Highest legal value is 214748
         <span class="property-type">int</span>
     </dt>
     <dd>{{% md %}}The maximum number of warm buckets. If this number is exceeded, the warm bucket/s with the lowest value for their latest times is moved to cold.
-{{% /md %}}</dd>
-    <dt class="property-optional"
+{{% /md %}}</dd><dt class="property-optional"
             title="Optional">
         <span id="min_raw_file_sync_secs_python">
 <a href="#min_raw_file_sync_secs_python" style="color: inherit; text-decoration: inherit;">min_<wbr>raw_<wbr>file_<wbr>sync_<wbr>secs</a>
@@ -1870,8 +1715,7 @@ To disable, set to 0, but this is NOT recommended. Highest legal value is 214748
 This parameter sets how frequently splunkd forces a filesystem sync while compressing journal slices.
 During this period, uncompressed slices are left on disk even after they are compressed. Then splunkd forces a filesystem sync of the compressed journal and removes the accumulated uncompressed files.
 If 0 is specified, splunkd forces a filesystem sync after every slice completes compressing. Specifying "disable" disables syncing entirely: uncompressed slices are removed as soon as compression is complete.
-{{% /md %}}</dd>
-    <dt class="property-optional"
+{{% /md %}}</dd><dt class="property-optional"
             title="Optional">
         <span id="min_stream_group_queue_size_python">
 <a href="#min_stream_group_queue_size_python" style="color: inherit; text-decoration: inherit;">min_<wbr>stream_<wbr>group_<wbr>queue_<wbr>size</a>
@@ -1880,8 +1724,7 @@ If 0 is specified, splunkd forces a filesystem sync after every slice completes 
         <span class="property-type">int</span>
     </dt>
     <dd>{{% md %}}Minimum size of the queue that stores events in memory before committing them to a tsidx file.
-{{% /md %}}</dd>
-    <dt class="property-optional"
+{{% /md %}}</dd><dt class="property-optional"
             title="Optional">
         <span id="name_python">
 <a href="#name_python" style="color: inherit; text-decoration: inherit;">name</a>
@@ -1890,8 +1733,7 @@ If 0 is specified, splunkd forces a filesystem sync after every slice completes 
         <span class="property-type">str</span>
     </dt>
     <dd>{{% md %}}The name of the index to create.
-{{% /md %}}</dd>
-    <dt class="property-optional"
+{{% /md %}}</dd><dt class="property-optional"
             title="Optional">
         <span id="partial_service_meta_period_python">
 <a href="#partial_service_meta_period_python" style="color: inherit; text-decoration: inherit;">partial_<wbr>service_<wbr>meta_<wbr>period</a>
@@ -1903,8 +1745,7 @@ If 0 is specified, splunkd forces a filesystem sync after every slice completes 
 partialServiceMetaPeriod specifies, in seconds, how frequently it should sync. Zero means that this feature is turned off and serviceMetaPeriod is the only time when metadata sync happens.
 If the value of partialServiceMetaPeriod is greater than serviceMetaPeriod, this setting has no effect.
 By default it is turned off (zero).
-{{% /md %}}</dd>
-    <dt class="property-optional"
+{{% /md %}}</dd><dt class="property-optional"
             title="Optional">
         <span id="process_tracker_service_interval_python">
 <a href="#process_tracker_service_interval_python" style="color: inherit; text-decoration: inherit;">process_<wbr>tracker_<wbr>service_<wbr>interval</a>
@@ -1915,8 +1756,7 @@ By default it is turned off (zero).
     <dd>{{% md %}}Specifies, in seconds, how often the indexer checks the status of the child OS processes it launched to see if it can launch new processes for queued requests. Defaults to 15.
 If set to 0, the indexer checks child process status every second.
 Highest legal value is 4294967295.
-{{% /md %}}</dd>
-    <dt class="property-optional"
+{{% /md %}}</dd><dt class="property-optional"
             title="Optional">
         <span id="quarantine_future_secs_python">
 <a href="#quarantine_future_secs_python" style="color: inherit; text-decoration: inherit;">quarantine_<wbr>future_<wbr>secs</a>
@@ -1926,8 +1766,7 @@ Highest legal value is 4294967295.
     </dt>
     <dd>{{% md %}}Events with timestamp of quarantineFutureSecs newer than "now" are dropped into quarantine bucket. Defaults to 2592000 (30 days).
 This is a mechanism to prevent main hot buckets from being polluted with fringe events.
-{{% /md %}}</dd>
-    <dt class="property-optional"
+{{% /md %}}</dd><dt class="property-optional"
             title="Optional">
         <span id="quarantine_past_secs_python">
 <a href="#quarantine_past_secs_python" style="color: inherit; text-decoration: inherit;">quarantine_<wbr>past_<wbr>secs</a>
@@ -1936,8 +1775,7 @@ This is a mechanism to prevent main hot buckets from being polluted with fringe 
         <span class="property-type">int</span>
     </dt>
     <dd>{{% md %}}Events with timestamp of quarantinePastSecs older than "now" are dropped into quarantine bucket. Defaults to 77760000 (900 days). This is a mechanism to prevent the main hot buckets from being polluted with fringe events.
-{{% /md %}}</dd>
-    <dt class="property-optional"
+{{% /md %}}</dd><dt class="property-optional"
             title="Optional">
         <span id="raw_chunk_size_bytes_python">
 <a href="#raw_chunk_size_bytes_python" style="color: inherit; text-decoration: inherit;">raw_<wbr>chunk_<wbr>size_<wbr>bytes</a>
@@ -1946,8 +1784,7 @@ This is a mechanism to prevent main hot buckets from being polluted with fringe 
         <span class="property-type">int</span>
     </dt>
     <dd>{{% md %}}Target uncompressed size in bytes for individual raw slice in the rawdata journal of the index. Defaults to 131072 (128KB). 0 is not a valid value. If 0 is specified, rawChunkSizeBytes is set to the default value.
-{{% /md %}}</dd>
-    <dt class="property-optional"
+{{% /md %}}</dd><dt class="property-optional"
             title="Optional">
         <span id="rep_factor_python">
 <a href="#rep_factor_python" style="color: inherit; text-decoration: inherit;">rep_<wbr>factor</a>
@@ -1958,8 +1795,7 @@ This is a mechanism to prevent main hot buckets from being polluted with fringe 
     <dd>{{% md %}}Index replication control. This parameter applies to only clustering slaves.
 auto = Use the master index replication configuration value.
 0 = Turn off replication for this index.
-{{% /md %}}</dd>
-    <dt class="property-optional"
+{{% /md %}}</dd><dt class="property-optional"
             title="Optional">
         <span id="rotate_period_in_secs_python">
 <a href="#rotate_period_in_secs_python" style="color: inherit; text-decoration: inherit;">rotate_<wbr>period_<wbr>in_<wbr>secs</a>
@@ -1968,8 +1804,7 @@ auto = Use the master index replication configuration value.
         <span class="property-type">int</span>
     </dt>
     <dd>{{% md %}}How frequently (in seconds) to check if a new hot bucket needs to be created. Also, how frequently to check if there are any warm/cold buckets that should be rolled/frozen.
-{{% /md %}}</dd>
-    <dt class="property-optional"
+{{% /md %}}</dd><dt class="property-optional"
             title="Optional">
         <span id="service_meta_period_python">
 <a href="#service_meta_period_python" style="color: inherit; text-decoration: inherit;">service_<wbr>meta_<wbr>period</a>
@@ -1979,8 +1814,7 @@ auto = Use the master index replication configuration value.
     </dt>
     <dd>{{% md %}}Defines how frequently metadata is synced to disk, in seconds. Defaults to 25 (seconds).
 You may want to set this to a higher value if the sum of your metadata file sizes is larger than many tens of megabytes, to avoid the hit on I/O in the indexing fast path.
-{{% /md %}}</dd>
-    <dt class="property-optional"
+{{% /md %}}</dd><dt class="property-optional"
             title="Optional">
         <span id="sync_meta_python">
 <a href="#sync_meta_python" style="color: inherit; text-decoration: inherit;">sync_<wbr>meta</a>
@@ -1989,8 +1823,7 @@ You may want to set this to a higher value if the sum of your metadata file size
         <span class="property-type">bool</span>
     </dt>
     <dd>{{% md %}}When true, a sync operation is called before file descriptor is closed on metadata file updates. This functionality improves integrity of metadata files, especially in regards to operating system crashes/machine failures.
-{{% /md %}}</dd>
-    <dt class="property-optional"
+{{% /md %}}</dd><dt class="property-optional"
             title="Optional">
         <span id="thawed_path_python">
 <a href="#thawed_path_python" style="color: inherit; text-decoration: inherit;">thawed_<wbr>path</a>
@@ -2001,8 +1834,7 @@ You may want to set this to a higher value if the sum of your metadata file size
     <dd>{{% md %}}An absolute path that contains the thawed (resurrected) databases for the index.
 Cannot be defined in terms of a volume definition.
 Required. Splunk software does not start if an index lacks a valid thawedPath.
-{{% /md %}}</dd>
-    <dt class="property-optional"
+{{% /md %}}</dd><dt class="property-optional"
             title="Optional">
         <span id="throttle_check_period_python">
 <a href="#throttle_check_period_python" style="color: inherit; text-decoration: inherit;">throttle_<wbr>check_<wbr>period</a>
@@ -2011,8 +1843,7 @@ Required. Splunk software does not start if an index lacks a valid thawedPath.
         <span class="property-type">int</span>
     </dt>
     <dd>{{% md %}}Defines how frequently Splunk software checks for index throttling condition, in seconds. Defaults to 15 (seconds).
-{{% /md %}}</dd>
-    <dt class="property-optional"
+{{% /md %}}</dd><dt class="property-optional"
             title="Optional">
         <span id="tstats_home_path_python">
 <a href="#tstats_home_path_python" style="color: inherit; text-decoration: inherit;">tstats_<wbr>home_<wbr>path</a>
@@ -2022,8 +1853,7 @@ Required. Splunk software does not start if an index lacks a valid thawedPath.
     </dt>
     <dd>{{% md %}}Location to store datamodel acceleration TSIDX data for this index. Restart splunkd after changing this parameter.
 If specified, it must be defined in terms of a volume definition.
-{{% /md %}}</dd>
-    <dt class="property-optional"
+{{% /md %}}</dd><dt class="property-optional"
             title="Optional">
         <span id="warm_to_cold_script_python">
 <a href="#warm_to_cold_script_python" style="color: inherit; text-decoration: inherit;">warm_<wbr>to_<wbr>cold_<wbr>script</a>
@@ -2033,8 +1863,7 @@ If specified, it must be defined in terms of a volume definition.
     </dt>
     <dd>{{% md %}}Path to a script to run when moving data from warm to cold.
 This attribute is supported for backwards compatibility with Splunk software versions older than 4.0. Contact Splunk support if you need help configuring this setting.
-{{% /md %}}</dd>
-</dl>
+{{% /md %}}</dd></dl>
 {{% /choosable %}}
 
 
@@ -2045,9 +1874,7 @@ All [input](#inputs) properties are implicitly available as output properties. A
 
 
 {{% choosable language csharp %}}
-<dl class="resources-properties">
-
-    <dt class="property-"
+<dl class="resources-properties"><dt class="property-"
             title="">
         <span id="id_csharp">
 <a href="#id_csharp" style="color: inherit; text-decoration: inherit;">Id</a>
@@ -2055,14 +1882,11 @@ All [input](#inputs) properties are implicitly available as output properties. A
         <span class="property-indicator"></span>
         <span class="property-type">string</span>
     </dt>
-    <dd>{{% md %}}The provider-assigned unique ID for this managed resource.{{% /md %}}</dd>
-</dl>
+    <dd>{{% md %}}The provider-assigned unique ID for this managed resource.{{% /md %}}</dd></dl>
 {{% /choosable %}}
 
 {{% choosable language go %}}
-<dl class="resources-properties">
-
-    <dt class="property-"
+<dl class="resources-properties"><dt class="property-"
             title="">
         <span id="id_go">
 <a href="#id_go" style="color: inherit; text-decoration: inherit;">Id</a>
@@ -2070,14 +1894,11 @@ All [input](#inputs) properties are implicitly available as output properties. A
         <span class="property-indicator"></span>
         <span class="property-type">string</span>
     </dt>
-    <dd>{{% md %}}The provider-assigned unique ID for this managed resource.{{% /md %}}</dd>
-</dl>
+    <dd>{{% md %}}The provider-assigned unique ID for this managed resource.{{% /md %}}</dd></dl>
 {{% /choosable %}}
 
 {{% choosable language nodejs %}}
-<dl class="resources-properties">
-
-    <dt class="property-"
+<dl class="resources-properties"><dt class="property-"
             title="">
         <span id="id_nodejs">
 <a href="#id_nodejs" style="color: inherit; text-decoration: inherit;">id</a>
@@ -2085,14 +1906,11 @@ All [input](#inputs) properties are implicitly available as output properties. A
         <span class="property-indicator"></span>
         <span class="property-type">string</span>
     </dt>
-    <dd>{{% md %}}The provider-assigned unique ID for this managed resource.{{% /md %}}</dd>
-</dl>
+    <dd>{{% md %}}The provider-assigned unique ID for this managed resource.{{% /md %}}</dd></dl>
 {{% /choosable %}}
 
 {{% choosable language python %}}
-<dl class="resources-properties">
-
-    <dt class="property-"
+<dl class="resources-properties"><dt class="property-"
             title="">
         <span id="id_python">
 <a href="#id_python" style="color: inherit; text-decoration: inherit;">id</a>
@@ -2100,8 +1918,7 @@ All [input](#inputs) properties are implicitly available as output properties. A
         <span class="property-indicator"></span>
         <span class="property-type">str</span>
     </dt>
-    <dd>{{% md %}}The provider-assigned unique ID for this managed resource.{{% /md %}}</dd>
-</dl>
+    <dd>{{% md %}}The provider-assigned unique ID for this managed resource.{{% /md %}}</dd></dl>
 {{% /choosable %}}
 
 
@@ -2228,9 +2045,7 @@ The following state arguments are supported:
 
 
 {{% choosable language csharp %}}
-<dl class="resources-properties">
-
-    <dt class="property-optional"
+<dl class="resources-properties"><dt class="property-optional"
             title="Optional">
         <span id="state_acl_csharp">
 <a href="#state_acl_csharp" style="color: inherit; text-decoration: inherit;">Acl</a>
@@ -2239,8 +2054,7 @@ The following state arguments are supported:
         <span class="property-type"><a href="#indexesacl">Indexes<wbr>Acl<wbr>Args</a></span>
     </dt>
     <dd>{{% md %}}The app/user context that is the namespace for the resource
-{{% /md %}}</dd>
-    <dt class="property-optional"
+{{% /md %}}</dd><dt class="property-optional"
             title="Optional">
         <span id="state_blocksignsize_csharp">
 <a href="#state_blocksignsize_csharp" style="color: inherit; text-decoration: inherit;">Block<wbr>Sign<wbr>Size</a>
@@ -2249,8 +2063,7 @@ The following state arguments are supported:
         <span class="property-type">int</span>
     </dt>
     <dd>{{% md %}}Controls how many events make up a block for block signatures. If this is set to 0, block signing is disabled for this index. <br>A recommended value is 100.
-{{% /md %}}</dd>
-    <dt class="property-optional"
+{{% /md %}}</dd><dt class="property-optional"
             title="Optional">
         <span id="state_bucketrebuildmemoryhint_csharp">
 <a href="#state_bucketrebuildmemoryhint_csharp" style="color: inherit; text-decoration: inherit;">Bucket<wbr>Rebuild<wbr>Memory<wbr>Hint</a>
@@ -2265,8 +2078,7 @@ less than 2GB RAM = 67108864 (64MB) tsidx
 2GB to 8GB RAM = 134217728 (128MB) tsidx
 more than 8GB RAM = 268435456 (256MB) tsidx<br>
 Values other than "auto" must be 16MB-1GB. Highest legal value (of the numerical part) is 4294967295 You can specify the value using a size suffix: "16777216" or "16MB" are equivalent.
-{{% /md %}}</dd>
-    <dt class="property-optional"
+{{% /md %}}</dd><dt class="property-optional"
             title="Optional">
         <span id="state_coldpath_csharp">
 <a href="#state_coldpath_csharp" style="color: inherit; text-decoration: inherit;">Cold<wbr>Path</a>
@@ -2275,8 +2087,7 @@ Values other than "auto" must be 16MB-1GB. Highest legal value (of the numerical
         <span class="property-type">string</span>
     </dt>
     <dd>{{% md %}}An absolute path that contains the colddbs for the index. The path must be readable and writable. Cold databases are opened as needed when searching.
-{{% /md %}}</dd>
-    <dt class="property-optional"
+{{% /md %}}</dd><dt class="property-optional"
             title="Optional">
         <span id="state_coldtofrozendir_csharp">
 <a href="#state_coldtofrozendir_csharp" style="color: inherit; text-decoration: inherit;">Cold<wbr>To<wbr>Frozen<wbr>Dir</a>
@@ -2292,8 +2103,7 @@ To thaw, run splunk rebuild <bucket dir> on the bucket, then move to the thawed 
 Old style buckets (Pre-4.2): gzip all the .data and .tsidx files<br>
 To thaw, gunzip the zipped files and move the bucket into the thawed directory<br>
 If both coldToFrozenDir and coldToFrozenScript are specified, coldToFrozenDir takes precedence
-{{% /md %}}</dd>
-    <dt class="property-optional"
+{{% /md %}}</dd><dt class="property-optional"
             title="Optional">
         <span id="state_coldtofrozenscript_csharp">
 <a href="#state_coldtofrozenscript_csharp" style="color: inherit; text-decoration: inherit;">Cold<wbr>To<wbr>Frozen<wbr>Script</a>
@@ -2305,8 +2115,7 @@ If both coldToFrozenDir and coldToFrozenScript are specified, coldToFrozenDir ta
 <br>If your script requires a program to run it (for example, python), specify the program followed by the path. The script must be in $SPLUNK_HOME/bin or one of its subdirectories.
 <br>Splunk software ships with an example archiving script in $SPLUNK_HOME/bin called coldToFrozenExample.py. DO NOT use this example script directly. It uses a default path, and if modified in place any changes are overwritten on upgrade.
 <br>It is best to copy the example script to a new file in bin and modify it for your system. Most importantly, change the default archive path to an existing directory that fits your needs.
-{{% /md %}}</dd>
-    <dt class="property-optional"
+{{% /md %}}</dd><dt class="property-optional"
             title="Optional">
         <span id="state_compressrawdata_csharp">
 <a href="#state_compressrawdata_csharp" style="color: inherit; text-decoration: inherit;">Compress<wbr>Rawdata</a>
@@ -2315,8 +2124,7 @@ If both coldToFrozenDir and coldToFrozenScript are specified, coldToFrozenDir ta
         <span class="property-type">bool</span>
     </dt>
     <dd>{{% md %}}This parameter is ignored. The splunkd process always compresses raw data.
-{{% /md %}}</dd>
-    <dt class="property-optional"
+{{% /md %}}</dd><dt class="property-optional"
             title="Optional">
         <span id="state_datatype_csharp">
 <a href="#state_datatype_csharp" style="color: inherit; text-decoration: inherit;">Datatype</a>
@@ -2325,8 +2133,7 @@ If both coldToFrozenDir and coldToFrozenScript are specified, coldToFrozenDir ta
         <span class="property-type">string</span>
     </dt>
     <dd>{{% md %}}Valid values: (event | metric). Specifies the type of index.
-{{% /md %}}</dd>
-    <dt class="property-optional"
+{{% /md %}}</dd><dt class="property-optional"
             title="Optional">
         <span id="state_enableonlinebucketrepair_csharp">
 <a href="#state_enableonlinebucketrepair_csharp" style="color: inherit; text-decoration: inherit;">Enable<wbr>Online<wbr>Bucket<wbr>Repair</a>
@@ -2336,8 +2143,7 @@ If both coldToFrozenDir and coldToFrozenScript are specified, coldToFrozenDir ta
     </dt>
     <dd>{{% md %}}Enables asynchronous "online fsck" bucket repair, which runs concurrently with Splunk software.
 When enabled, you do not have to wait until buckets are repaired to start the Splunk platform. However, you might observe a slight performance degratation.
-{{% /md %}}</dd>
-    <dt class="property-optional"
+{{% /md %}}</dd><dt class="property-optional"
             title="Optional">
         <span id="state_frozentimeperiodinsecs_csharp">
 <a href="#state_frozentimeperiodinsecs_csharp" style="color: inherit; text-decoration: inherit;">Frozen<wbr>Time<wbr>Period<wbr>In<wbr>Secs</a>
@@ -2347,8 +2153,7 @@ When enabled, you do not have to wait until buckets are repaired to start the Sp
     </dt>
     <dd>{{% md %}}Number of seconds after which indexed data rolls to frozen.
 Defaults to 188697600 (6 years).Freezing data means it is removed from the index. If you need to archive your data, refer to coldToFrozenDir and coldToFrozenScript parameter documentation.
-{{% /md %}}</dd>
-    <dt class="property-optional"
+{{% /md %}}</dd><dt class="property-optional"
             title="Optional">
         <span id="state_homepath_csharp">
 <a href="#state_homepath_csharp" style="color: inherit; text-decoration: inherit;">Home<wbr>Path</a>
@@ -2359,8 +2164,7 @@ Defaults to 188697600 (6 years).Freezing data means it is removed from the index
     <dd>{{% md %}}An absolute path that contains the hot and warm buckets for the index.
 Required. Splunk software does not start if an index lacks a valid homePath.
 <br>Caution: The path must be readable and writable.
-{{% /md %}}</dd>
-    <dt class="property-optional"
+{{% /md %}}</dd><dt class="property-optional"
             title="Optional">
         <span id="state_maxbloombackfillbucketage_csharp">
 <a href="#state_maxbloombackfillbucketage_csharp" style="color: inherit; text-decoration: inherit;">Max<wbr>Bloom<wbr>Backfill<wbr>Bucket<wbr>Age</a>
@@ -2370,8 +2174,7 @@ Required. Splunk software does not start if an index lacks a valid homePath.
     </dt>
     <dd>{{% md %}}Valid values are: Integer[m|s|h|d].
 <br>If a warm or cold bucket is older than the specified age, do not create or rebuild its bloomfilter. Specify 0 to never rebuild bloomfilters.
-{{% /md %}}</dd>
-    <dt class="property-optional"
+{{% /md %}}</dd><dt class="property-optional"
             title="Optional">
         <span id="state_maxconcurrentoptimizes_csharp">
 <a href="#state_maxconcurrentoptimizes_csharp" style="color: inherit; text-decoration: inherit;">Max<wbr>Concurrent<wbr>Optimizes</a>
@@ -2381,8 +2184,7 @@ Required. Splunk software does not start if an index lacks a valid homePath.
     </dt>
     <dd>{{% md %}}The number of concurrent optimize processes that can run against a hot bucket.
 This number should be increased if instructed by Splunk Support. Typically the default value should suffice.
-{{% /md %}}</dd>
-    <dt class="property-optional"
+{{% /md %}}</dd><dt class="property-optional"
             title="Optional">
         <span id="state_maxdatasize_csharp">
 <a href="#state_maxdatasize_csharp" style="color: inherit; text-decoration: inherit;">Max<wbr>Data<wbr>Size</a>
@@ -2392,8 +2194,7 @@ This number should be increased if instructed by Splunk Support. Typically the d
     </dt>
     <dd>{{% md %}}The maximum size in MB for a hot DB to reach before a roll to warm is triggered. Specifying "auto" or "auto_high_volume" causes Splunk software to autotune this parameter (recommended).
 Use "auto_high_volume" for high volume indexes (such as the main index); otherwise, use "auto". A "high volume index" would typically be considered one that gets over 10GB of data per day.
-{{% /md %}}</dd>
-    <dt class="property-optional"
+{{% /md %}}</dd><dt class="property-optional"
             title="Optional">
         <span id="state_maxhotbuckets_csharp">
 <a href="#state_maxhotbuckets_csharp" style="color: inherit; text-decoration: inherit;">Max<wbr>Hot<wbr>Buckets</a>
@@ -2403,8 +2204,7 @@ Use "auto_high_volume" for high volume indexes (such as the main index); otherwi
     </dt>
     <dd>{{% md %}}Maximum hot buckets that can exist per index. Defaults to 3.
 <br>When maxHotBuckets is exceeded, Splunk software rolls the least recently used (LRU) hot bucket to warm. Both normal hot buckets and quarantined hot buckets count towards this total. This setting operates independently of maxHotIdleSecs, which can also cause hot buckets to roll.
-{{% /md %}}</dd>
-    <dt class="property-optional"
+{{% /md %}}</dd><dt class="property-optional"
             title="Optional">
         <span id="state_maxhotidlesecs_csharp">
 <a href="#state_maxhotidlesecs_csharp" style="color: inherit; text-decoration: inherit;">Max<wbr>Hot<wbr>Idle<wbr>Secs</a>
@@ -2413,8 +2213,7 @@ Use "auto_high_volume" for high volume indexes (such as the main index); otherwi
         <span class="property-type">int</span>
     </dt>
     <dd>{{% md %}}Maximum life, in seconds, of a hot bucket. Defaults to 0. If a hot bucket exceeds maxHotIdleSecs, Splunk software rolls it to warm. This setting operates independently of maxHotBuckets, which can also cause hot buckets to roll. A value of 0 turns off the idle check (equivalent to INFINITE idle time).
-{{% /md %}}</dd>
-    <dt class="property-optional"
+{{% /md %}}</dd><dt class="property-optional"
             title="Optional">
         <span id="state_maxhotspansecs_csharp">
 <a href="#state_maxhotspansecs_csharp" style="color: inherit; text-decoration: inherit;">Max<wbr>Hot<wbr>Span<wbr>Secs</a>
@@ -2423,8 +2222,7 @@ Use "auto_high_volume" for high volume indexes (such as the main index); otherwi
         <span class="property-type">int</span>
     </dt>
     <dd>{{% md %}}Upper bound of target maximum timespan of hot/warm buckets in seconds. Defaults to 7776000 seconds (90 days).
-{{% /md %}}</dd>
-    <dt class="property-optional"
+{{% /md %}}</dd><dt class="property-optional"
             title="Optional">
         <span id="state_maxmemmb_csharp">
 <a href="#state_maxmemmb_csharp" style="color: inherit; text-decoration: inherit;">Max<wbr>Mem<wbr>Mb</a>
@@ -2433,8 +2231,7 @@ Use "auto_high_volume" for high volume indexes (such as the main index); otherwi
         <span class="property-type">int</span>
     </dt>
     <dd>{{% md %}}The amount of memory, expressed in MB, to allocate for buffering a single tsidx file into memory before flushing to disk. Defaults to 5. The default is recommended for all environments.
-{{% /md %}}</dd>
-    <dt class="property-optional"
+{{% /md %}}</dd><dt class="property-optional"
             title="Optional">
         <span id="state_maxmetaentries_csharp">
 <a href="#state_maxmetaentries_csharp" style="color: inherit; text-decoration: inherit;">Max<wbr>Meta<wbr>Entries</a>
@@ -2443,8 +2240,7 @@ Use "auto_high_volume" for high volume indexes (such as the main index); otherwi
         <span class="property-type">int</span>
     </dt>
     <dd>{{% md %}}Upper limit, in seconds, on how long an event can sit in raw slice. Applies only if replication is enabled for this index. Otherwise ignored. If there are any acknowledged events sharing this raw slice, this paramater does not apply. In this case, maxTimeUnreplicatedWithAcks applies. Highest legal value is 2147483647. To disable this parameter, set to 0.
-{{% /md %}}</dd>
-    <dt class="property-optional"
+{{% /md %}}</dd><dt class="property-optional"
             title="Optional">
         <span id="state_maxtimeunreplicatednoacks_csharp">
 <a href="#state_maxtimeunreplicatednoacks_csharp" style="color: inherit; text-decoration: inherit;">Max<wbr>Time<wbr>Unreplicated<wbr>No<wbr>Acks</a>
@@ -2455,8 +2251,7 @@ Use "auto_high_volume" for high volume indexes (such as the main index); otherwi
     <dd>{{% md %}}Upper limit, in seconds, on how long an event can sit in raw slice. Applies only if replication is enabled for this index. Otherwise ignored.
 If there are any acknowledged events sharing this raw slice, this paramater does not apply. In this case, maxTimeUnreplicatedWithAcks applies.
 Highest legal value is 2147483647. To disable this parameter, set to 0.
-{{% /md %}}</dd>
-    <dt class="property-optional"
+{{% /md %}}</dd><dt class="property-optional"
             title="Optional">
         <span id="state_maxtimeunreplicatedwithacks_csharp">
 <a href="#state_maxtimeunreplicatedwithacks_csharp" style="color: inherit; text-decoration: inherit;">Max<wbr>Time<wbr>Unreplicated<wbr>With<wbr>Acks</a>
@@ -2467,8 +2262,7 @@ Highest legal value is 2147483647. To disable this parameter, set to 0.
     <dd>{{% md %}}Upper limit, in seconds, on how long events can sit unacknowledged in a raw slice. Applies only if you have enabled acks on forwarders and have replication enabled (with clustering).
 Note: This is an advanced parameter. Make sure you understand the settings on all forwarders before changing this. This number should not exceed ack timeout configured on any forwarder, and should actually be set to at most half of the minimum value of that timeout. You can find this setting in outputs.conf readTimeout setting under the tcpout stanza.
 To disable, set to 0, but this is NOT recommended. Highest legal value is 2147483647.
-{{% /md %}}</dd>
-    <dt class="property-optional"
+{{% /md %}}</dd><dt class="property-optional"
             title="Optional">
         <span id="state_maxtotaldatasizemb_csharp">
 <a href="#state_maxtotaldatasizemb_csharp" style="color: inherit; text-decoration: inherit;">Max<wbr>Total<wbr>Data<wbr>Size<wbr>Mb</a>
@@ -2477,8 +2271,7 @@ To disable, set to 0, but this is NOT recommended. Highest legal value is 214748
         <span class="property-type">int</span>
     </dt>
     <dd>{{% md %}}The maximum size of an index (in MB). If an index grows larger than the maximum size, the oldest data is frozen.
-{{% /md %}}</dd>
-    <dt class="property-optional"
+{{% /md %}}</dd><dt class="property-optional"
             title="Optional">
         <span id="state_maxwarmdbcount_csharp">
 <a href="#state_maxwarmdbcount_csharp" style="color: inherit; text-decoration: inherit;">Max<wbr>Warm<wbr>Db<wbr>Count</a>
@@ -2487,8 +2280,7 @@ To disable, set to 0, but this is NOT recommended. Highest legal value is 214748
         <span class="property-type">int</span>
     </dt>
     <dd>{{% md %}}The maximum number of warm buckets. If this number is exceeded, the warm bucket/s with the lowest value for their latest times is moved to cold.
-{{% /md %}}</dd>
-    <dt class="property-optional"
+{{% /md %}}</dd><dt class="property-optional"
             title="Optional">
         <span id="state_minrawfilesyncsecs_csharp">
 <a href="#state_minrawfilesyncsecs_csharp" style="color: inherit; text-decoration: inherit;">Min<wbr>Raw<wbr>File<wbr>Sync<wbr>Secs</a>
@@ -2500,8 +2292,7 @@ To disable, set to 0, but this is NOT recommended. Highest legal value is 214748
 This parameter sets how frequently splunkd forces a filesystem sync while compressing journal slices.
 During this period, uncompressed slices are left on disk even after they are compressed. Then splunkd forces a filesystem sync of the compressed journal and removes the accumulated uncompressed files.
 If 0 is specified, splunkd forces a filesystem sync after every slice completes compressing. Specifying "disable" disables syncing entirely: uncompressed slices are removed as soon as compression is complete.
-{{% /md %}}</dd>
-    <dt class="property-optional"
+{{% /md %}}</dd><dt class="property-optional"
             title="Optional">
         <span id="state_minstreamgroupqueuesize_csharp">
 <a href="#state_minstreamgroupqueuesize_csharp" style="color: inherit; text-decoration: inherit;">Min<wbr>Stream<wbr>Group<wbr>Queue<wbr>Size</a>
@@ -2510,8 +2301,7 @@ If 0 is specified, splunkd forces a filesystem sync after every slice completes 
         <span class="property-type">int</span>
     </dt>
     <dd>{{% md %}}Minimum size of the queue that stores events in memory before committing them to a tsidx file.
-{{% /md %}}</dd>
-    <dt class="property-optional"
+{{% /md %}}</dd><dt class="property-optional"
             title="Optional">
         <span id="state_name_csharp">
 <a href="#state_name_csharp" style="color: inherit; text-decoration: inherit;">Name</a>
@@ -2520,8 +2310,7 @@ If 0 is specified, splunkd forces a filesystem sync after every slice completes 
         <span class="property-type">string</span>
     </dt>
     <dd>{{% md %}}The name of the index to create.
-{{% /md %}}</dd>
-    <dt class="property-optional"
+{{% /md %}}</dd><dt class="property-optional"
             title="Optional">
         <span id="state_partialservicemetaperiod_csharp">
 <a href="#state_partialservicemetaperiod_csharp" style="color: inherit; text-decoration: inherit;">Partial<wbr>Service<wbr>Meta<wbr>Period</a>
@@ -2533,8 +2322,7 @@ If 0 is specified, splunkd forces a filesystem sync after every slice completes 
 partialServiceMetaPeriod specifies, in seconds, how frequently it should sync. Zero means that this feature is turned off and serviceMetaPeriod is the only time when metadata sync happens.
 If the value of partialServiceMetaPeriod is greater than serviceMetaPeriod, this setting has no effect.
 By default it is turned off (zero).
-{{% /md %}}</dd>
-    <dt class="property-optional"
+{{% /md %}}</dd><dt class="property-optional"
             title="Optional">
         <span id="state_processtrackerserviceinterval_csharp">
 <a href="#state_processtrackerserviceinterval_csharp" style="color: inherit; text-decoration: inherit;">Process<wbr>Tracker<wbr>Service<wbr>Interval</a>
@@ -2545,8 +2333,7 @@ By default it is turned off (zero).
     <dd>{{% md %}}Specifies, in seconds, how often the indexer checks the status of the child OS processes it launched to see if it can launch new processes for queued requests. Defaults to 15.
 If set to 0, the indexer checks child process status every second.
 Highest legal value is 4294967295.
-{{% /md %}}</dd>
-    <dt class="property-optional"
+{{% /md %}}</dd><dt class="property-optional"
             title="Optional">
         <span id="state_quarantinefuturesecs_csharp">
 <a href="#state_quarantinefuturesecs_csharp" style="color: inherit; text-decoration: inherit;">Quarantine<wbr>Future<wbr>Secs</a>
@@ -2556,8 +2343,7 @@ Highest legal value is 4294967295.
     </dt>
     <dd>{{% md %}}Events with timestamp of quarantineFutureSecs newer than "now" are dropped into quarantine bucket. Defaults to 2592000 (30 days).
 This is a mechanism to prevent main hot buckets from being polluted with fringe events.
-{{% /md %}}</dd>
-    <dt class="property-optional"
+{{% /md %}}</dd><dt class="property-optional"
             title="Optional">
         <span id="state_quarantinepastsecs_csharp">
 <a href="#state_quarantinepastsecs_csharp" style="color: inherit; text-decoration: inherit;">Quarantine<wbr>Past<wbr>Secs</a>
@@ -2566,8 +2352,7 @@ This is a mechanism to prevent main hot buckets from being polluted with fringe 
         <span class="property-type">int</span>
     </dt>
     <dd>{{% md %}}Events with timestamp of quarantinePastSecs older than "now" are dropped into quarantine bucket. Defaults to 77760000 (900 days). This is a mechanism to prevent the main hot buckets from being polluted with fringe events.
-{{% /md %}}</dd>
-    <dt class="property-optional"
+{{% /md %}}</dd><dt class="property-optional"
             title="Optional">
         <span id="state_rawchunksizebytes_csharp">
 <a href="#state_rawchunksizebytes_csharp" style="color: inherit; text-decoration: inherit;">Raw<wbr>Chunk<wbr>Size<wbr>Bytes</a>
@@ -2576,8 +2361,7 @@ This is a mechanism to prevent main hot buckets from being polluted with fringe 
         <span class="property-type">int</span>
     </dt>
     <dd>{{% md %}}Target uncompressed size in bytes for individual raw slice in the rawdata journal of the index. Defaults to 131072 (128KB). 0 is not a valid value. If 0 is specified, rawChunkSizeBytes is set to the default value.
-{{% /md %}}</dd>
-    <dt class="property-optional"
+{{% /md %}}</dd><dt class="property-optional"
             title="Optional">
         <span id="state_repfactor_csharp">
 <a href="#state_repfactor_csharp" style="color: inherit; text-decoration: inherit;">Rep<wbr>Factor</a>
@@ -2588,8 +2372,7 @@ This is a mechanism to prevent main hot buckets from being polluted with fringe 
     <dd>{{% md %}}Index replication control. This parameter applies to only clustering slaves.
 auto = Use the master index replication configuration value.
 0 = Turn off replication for this index.
-{{% /md %}}</dd>
-    <dt class="property-optional"
+{{% /md %}}</dd><dt class="property-optional"
             title="Optional">
         <span id="state_rotateperiodinsecs_csharp">
 <a href="#state_rotateperiodinsecs_csharp" style="color: inherit; text-decoration: inherit;">Rotate<wbr>Period<wbr>In<wbr>Secs</a>
@@ -2598,8 +2381,7 @@ auto = Use the master index replication configuration value.
         <span class="property-type">int</span>
     </dt>
     <dd>{{% md %}}How frequently (in seconds) to check if a new hot bucket needs to be created. Also, how frequently to check if there are any warm/cold buckets that should be rolled/frozen.
-{{% /md %}}</dd>
-    <dt class="property-optional"
+{{% /md %}}</dd><dt class="property-optional"
             title="Optional">
         <span id="state_servicemetaperiod_csharp">
 <a href="#state_servicemetaperiod_csharp" style="color: inherit; text-decoration: inherit;">Service<wbr>Meta<wbr>Period</a>
@@ -2609,8 +2391,7 @@ auto = Use the master index replication configuration value.
     </dt>
     <dd>{{% md %}}Defines how frequently metadata is synced to disk, in seconds. Defaults to 25 (seconds).
 You may want to set this to a higher value if the sum of your metadata file sizes is larger than many tens of megabytes, to avoid the hit on I/O in the indexing fast path.
-{{% /md %}}</dd>
-    <dt class="property-optional"
+{{% /md %}}</dd><dt class="property-optional"
             title="Optional">
         <span id="state_syncmeta_csharp">
 <a href="#state_syncmeta_csharp" style="color: inherit; text-decoration: inherit;">Sync<wbr>Meta</a>
@@ -2619,8 +2400,7 @@ You may want to set this to a higher value if the sum of your metadata file size
         <span class="property-type">bool</span>
     </dt>
     <dd>{{% md %}}When true, a sync operation is called before file descriptor is closed on metadata file updates. This functionality improves integrity of metadata files, especially in regards to operating system crashes/machine failures.
-{{% /md %}}</dd>
-    <dt class="property-optional"
+{{% /md %}}</dd><dt class="property-optional"
             title="Optional">
         <span id="state_thawedpath_csharp">
 <a href="#state_thawedpath_csharp" style="color: inherit; text-decoration: inherit;">Thawed<wbr>Path</a>
@@ -2631,8 +2411,7 @@ You may want to set this to a higher value if the sum of your metadata file size
     <dd>{{% md %}}An absolute path that contains the thawed (resurrected) databases for the index.
 Cannot be defined in terms of a volume definition.
 Required. Splunk software does not start if an index lacks a valid thawedPath.
-{{% /md %}}</dd>
-    <dt class="property-optional"
+{{% /md %}}</dd><dt class="property-optional"
             title="Optional">
         <span id="state_throttlecheckperiod_csharp">
 <a href="#state_throttlecheckperiod_csharp" style="color: inherit; text-decoration: inherit;">Throttle<wbr>Check<wbr>Period</a>
@@ -2641,8 +2420,7 @@ Required. Splunk software does not start if an index lacks a valid thawedPath.
         <span class="property-type">int</span>
     </dt>
     <dd>{{% md %}}Defines how frequently Splunk software checks for index throttling condition, in seconds. Defaults to 15 (seconds).
-{{% /md %}}</dd>
-    <dt class="property-optional"
+{{% /md %}}</dd><dt class="property-optional"
             title="Optional">
         <span id="state_tstatshomepath_csharp">
 <a href="#state_tstatshomepath_csharp" style="color: inherit; text-decoration: inherit;">Tstats<wbr>Home<wbr>Path</a>
@@ -2652,8 +2430,7 @@ Required. Splunk software does not start if an index lacks a valid thawedPath.
     </dt>
     <dd>{{% md %}}Location to store datamodel acceleration TSIDX data for this index. Restart splunkd after changing this parameter.
 If specified, it must be defined in terms of a volume definition.
-{{% /md %}}</dd>
-    <dt class="property-optional"
+{{% /md %}}</dd><dt class="property-optional"
             title="Optional">
         <span id="state_warmtocoldscript_csharp">
 <a href="#state_warmtocoldscript_csharp" style="color: inherit; text-decoration: inherit;">Warm<wbr>To<wbr>Cold<wbr>Script</a>
@@ -2663,14 +2440,11 @@ If specified, it must be defined in terms of a volume definition.
     </dt>
     <dd>{{% md %}}Path to a script to run when moving data from warm to cold.
 This attribute is supported for backwards compatibility with Splunk software versions older than 4.0. Contact Splunk support if you need help configuring this setting.
-{{% /md %}}</dd>
-</dl>
+{{% /md %}}</dd></dl>
 {{% /choosable %}}
 
 {{% choosable language go %}}
-<dl class="resources-properties">
-
-    <dt class="property-optional"
+<dl class="resources-properties"><dt class="property-optional"
             title="Optional">
         <span id="state_acl_go">
 <a href="#state_acl_go" style="color: inherit; text-decoration: inherit;">Acl</a>
@@ -2679,8 +2453,7 @@ This attribute is supported for backwards compatibility with Splunk software ver
         <span class="property-type"><a href="#indexesacl">Indexes<wbr>Acl</a></span>
     </dt>
     <dd>{{% md %}}The app/user context that is the namespace for the resource
-{{% /md %}}</dd>
-    <dt class="property-optional"
+{{% /md %}}</dd><dt class="property-optional"
             title="Optional">
         <span id="state_blocksignsize_go">
 <a href="#state_blocksignsize_go" style="color: inherit; text-decoration: inherit;">Block<wbr>Sign<wbr>Size</a>
@@ -2689,8 +2462,7 @@ This attribute is supported for backwards compatibility with Splunk software ver
         <span class="property-type">int</span>
     </dt>
     <dd>{{% md %}}Controls how many events make up a block for block signatures. If this is set to 0, block signing is disabled for this index. <br>A recommended value is 100.
-{{% /md %}}</dd>
-    <dt class="property-optional"
+{{% /md %}}</dd><dt class="property-optional"
             title="Optional">
         <span id="state_bucketrebuildmemoryhint_go">
 <a href="#state_bucketrebuildmemoryhint_go" style="color: inherit; text-decoration: inherit;">Bucket<wbr>Rebuild<wbr>Memory<wbr>Hint</a>
@@ -2705,8 +2477,7 @@ less than 2GB RAM = 67108864 (64MB) tsidx
 2GB to 8GB RAM = 134217728 (128MB) tsidx
 more than 8GB RAM = 268435456 (256MB) tsidx<br>
 Values other than "auto" must be 16MB-1GB. Highest legal value (of the numerical part) is 4294967295 You can specify the value using a size suffix: "16777216" or "16MB" are equivalent.
-{{% /md %}}</dd>
-    <dt class="property-optional"
+{{% /md %}}</dd><dt class="property-optional"
             title="Optional">
         <span id="state_coldpath_go">
 <a href="#state_coldpath_go" style="color: inherit; text-decoration: inherit;">Cold<wbr>Path</a>
@@ -2715,8 +2486,7 @@ Values other than "auto" must be 16MB-1GB. Highest legal value (of the numerical
         <span class="property-type">string</span>
     </dt>
     <dd>{{% md %}}An absolute path that contains the colddbs for the index. The path must be readable and writable. Cold databases are opened as needed when searching.
-{{% /md %}}</dd>
-    <dt class="property-optional"
+{{% /md %}}</dd><dt class="property-optional"
             title="Optional">
         <span id="state_coldtofrozendir_go">
 <a href="#state_coldtofrozendir_go" style="color: inherit; text-decoration: inherit;">Cold<wbr>To<wbr>Frozen<wbr>Dir</a>
@@ -2732,8 +2502,7 @@ To thaw, run splunk rebuild <bucket dir> on the bucket, then move to the thawed 
 Old style buckets (Pre-4.2): gzip all the .data and .tsidx files<br>
 To thaw, gunzip the zipped files and move the bucket into the thawed directory<br>
 If both coldToFrozenDir and coldToFrozenScript are specified, coldToFrozenDir takes precedence
-{{% /md %}}</dd>
-    <dt class="property-optional"
+{{% /md %}}</dd><dt class="property-optional"
             title="Optional">
         <span id="state_coldtofrozenscript_go">
 <a href="#state_coldtofrozenscript_go" style="color: inherit; text-decoration: inherit;">Cold<wbr>To<wbr>Frozen<wbr>Script</a>
@@ -2745,8 +2514,7 @@ If both coldToFrozenDir and coldToFrozenScript are specified, coldToFrozenDir ta
 <br>If your script requires a program to run it (for example, python), specify the program followed by the path. The script must be in $SPLUNK_HOME/bin or one of its subdirectories.
 <br>Splunk software ships with an example archiving script in $SPLUNK_HOME/bin called coldToFrozenExample.py. DO NOT use this example script directly. It uses a default path, and if modified in place any changes are overwritten on upgrade.
 <br>It is best to copy the example script to a new file in bin and modify it for your system. Most importantly, change the default archive path to an existing directory that fits your needs.
-{{% /md %}}</dd>
-    <dt class="property-optional"
+{{% /md %}}</dd><dt class="property-optional"
             title="Optional">
         <span id="state_compressrawdata_go">
 <a href="#state_compressrawdata_go" style="color: inherit; text-decoration: inherit;">Compress<wbr>Rawdata</a>
@@ -2755,8 +2523,7 @@ If both coldToFrozenDir and coldToFrozenScript are specified, coldToFrozenDir ta
         <span class="property-type">bool</span>
     </dt>
     <dd>{{% md %}}This parameter is ignored. The splunkd process always compresses raw data.
-{{% /md %}}</dd>
-    <dt class="property-optional"
+{{% /md %}}</dd><dt class="property-optional"
             title="Optional">
         <span id="state_datatype_go">
 <a href="#state_datatype_go" style="color: inherit; text-decoration: inherit;">Datatype</a>
@@ -2765,8 +2532,7 @@ If both coldToFrozenDir and coldToFrozenScript are specified, coldToFrozenDir ta
         <span class="property-type">string</span>
     </dt>
     <dd>{{% md %}}Valid values: (event | metric). Specifies the type of index.
-{{% /md %}}</dd>
-    <dt class="property-optional"
+{{% /md %}}</dd><dt class="property-optional"
             title="Optional">
         <span id="state_enableonlinebucketrepair_go">
 <a href="#state_enableonlinebucketrepair_go" style="color: inherit; text-decoration: inherit;">Enable<wbr>Online<wbr>Bucket<wbr>Repair</a>
@@ -2776,8 +2542,7 @@ If both coldToFrozenDir and coldToFrozenScript are specified, coldToFrozenDir ta
     </dt>
     <dd>{{% md %}}Enables asynchronous "online fsck" bucket repair, which runs concurrently with Splunk software.
 When enabled, you do not have to wait until buckets are repaired to start the Splunk platform. However, you might observe a slight performance degratation.
-{{% /md %}}</dd>
-    <dt class="property-optional"
+{{% /md %}}</dd><dt class="property-optional"
             title="Optional">
         <span id="state_frozentimeperiodinsecs_go">
 <a href="#state_frozentimeperiodinsecs_go" style="color: inherit; text-decoration: inherit;">Frozen<wbr>Time<wbr>Period<wbr>In<wbr>Secs</a>
@@ -2787,8 +2552,7 @@ When enabled, you do not have to wait until buckets are repaired to start the Sp
     </dt>
     <dd>{{% md %}}Number of seconds after which indexed data rolls to frozen.
 Defaults to 188697600 (6 years).Freezing data means it is removed from the index. If you need to archive your data, refer to coldToFrozenDir and coldToFrozenScript parameter documentation.
-{{% /md %}}</dd>
-    <dt class="property-optional"
+{{% /md %}}</dd><dt class="property-optional"
             title="Optional">
         <span id="state_homepath_go">
 <a href="#state_homepath_go" style="color: inherit; text-decoration: inherit;">Home<wbr>Path</a>
@@ -2799,8 +2563,7 @@ Defaults to 188697600 (6 years).Freezing data means it is removed from the index
     <dd>{{% md %}}An absolute path that contains the hot and warm buckets for the index.
 Required. Splunk software does not start if an index lacks a valid homePath.
 <br>Caution: The path must be readable and writable.
-{{% /md %}}</dd>
-    <dt class="property-optional"
+{{% /md %}}</dd><dt class="property-optional"
             title="Optional">
         <span id="state_maxbloombackfillbucketage_go">
 <a href="#state_maxbloombackfillbucketage_go" style="color: inherit; text-decoration: inherit;">Max<wbr>Bloom<wbr>Backfill<wbr>Bucket<wbr>Age</a>
@@ -2810,8 +2573,7 @@ Required. Splunk software does not start if an index lacks a valid homePath.
     </dt>
     <dd>{{% md %}}Valid values are: Integer[m|s|h|d].
 <br>If a warm or cold bucket is older than the specified age, do not create or rebuild its bloomfilter. Specify 0 to never rebuild bloomfilters.
-{{% /md %}}</dd>
-    <dt class="property-optional"
+{{% /md %}}</dd><dt class="property-optional"
             title="Optional">
         <span id="state_maxconcurrentoptimizes_go">
 <a href="#state_maxconcurrentoptimizes_go" style="color: inherit; text-decoration: inherit;">Max<wbr>Concurrent<wbr>Optimizes</a>
@@ -2821,8 +2583,7 @@ Required. Splunk software does not start if an index lacks a valid homePath.
     </dt>
     <dd>{{% md %}}The number of concurrent optimize processes that can run against a hot bucket.
 This number should be increased if instructed by Splunk Support. Typically the default value should suffice.
-{{% /md %}}</dd>
-    <dt class="property-optional"
+{{% /md %}}</dd><dt class="property-optional"
             title="Optional">
         <span id="state_maxdatasize_go">
 <a href="#state_maxdatasize_go" style="color: inherit; text-decoration: inherit;">Max<wbr>Data<wbr>Size</a>
@@ -2832,8 +2593,7 @@ This number should be increased if instructed by Splunk Support. Typically the d
     </dt>
     <dd>{{% md %}}The maximum size in MB for a hot DB to reach before a roll to warm is triggered. Specifying "auto" or "auto_high_volume" causes Splunk software to autotune this parameter (recommended).
 Use "auto_high_volume" for high volume indexes (such as the main index); otherwise, use "auto". A "high volume index" would typically be considered one that gets over 10GB of data per day.
-{{% /md %}}</dd>
-    <dt class="property-optional"
+{{% /md %}}</dd><dt class="property-optional"
             title="Optional">
         <span id="state_maxhotbuckets_go">
 <a href="#state_maxhotbuckets_go" style="color: inherit; text-decoration: inherit;">Max<wbr>Hot<wbr>Buckets</a>
@@ -2843,8 +2603,7 @@ Use "auto_high_volume" for high volume indexes (such as the main index); otherwi
     </dt>
     <dd>{{% md %}}Maximum hot buckets that can exist per index. Defaults to 3.
 <br>When maxHotBuckets is exceeded, Splunk software rolls the least recently used (LRU) hot bucket to warm. Both normal hot buckets and quarantined hot buckets count towards this total. This setting operates independently of maxHotIdleSecs, which can also cause hot buckets to roll.
-{{% /md %}}</dd>
-    <dt class="property-optional"
+{{% /md %}}</dd><dt class="property-optional"
             title="Optional">
         <span id="state_maxhotidlesecs_go">
 <a href="#state_maxhotidlesecs_go" style="color: inherit; text-decoration: inherit;">Max<wbr>Hot<wbr>Idle<wbr>Secs</a>
@@ -2853,8 +2612,7 @@ Use "auto_high_volume" for high volume indexes (such as the main index); otherwi
         <span class="property-type">int</span>
     </dt>
     <dd>{{% md %}}Maximum life, in seconds, of a hot bucket. Defaults to 0. If a hot bucket exceeds maxHotIdleSecs, Splunk software rolls it to warm. This setting operates independently of maxHotBuckets, which can also cause hot buckets to roll. A value of 0 turns off the idle check (equivalent to INFINITE idle time).
-{{% /md %}}</dd>
-    <dt class="property-optional"
+{{% /md %}}</dd><dt class="property-optional"
             title="Optional">
         <span id="state_maxhotspansecs_go">
 <a href="#state_maxhotspansecs_go" style="color: inherit; text-decoration: inherit;">Max<wbr>Hot<wbr>Span<wbr>Secs</a>
@@ -2863,8 +2621,7 @@ Use "auto_high_volume" for high volume indexes (such as the main index); otherwi
         <span class="property-type">int</span>
     </dt>
     <dd>{{% md %}}Upper bound of target maximum timespan of hot/warm buckets in seconds. Defaults to 7776000 seconds (90 days).
-{{% /md %}}</dd>
-    <dt class="property-optional"
+{{% /md %}}</dd><dt class="property-optional"
             title="Optional">
         <span id="state_maxmemmb_go">
 <a href="#state_maxmemmb_go" style="color: inherit; text-decoration: inherit;">Max<wbr>Mem<wbr>Mb</a>
@@ -2873,8 +2630,7 @@ Use "auto_high_volume" for high volume indexes (such as the main index); otherwi
         <span class="property-type">int</span>
     </dt>
     <dd>{{% md %}}The amount of memory, expressed in MB, to allocate for buffering a single tsidx file into memory before flushing to disk. Defaults to 5. The default is recommended for all environments.
-{{% /md %}}</dd>
-    <dt class="property-optional"
+{{% /md %}}</dd><dt class="property-optional"
             title="Optional">
         <span id="state_maxmetaentries_go">
 <a href="#state_maxmetaentries_go" style="color: inherit; text-decoration: inherit;">Max<wbr>Meta<wbr>Entries</a>
@@ -2883,8 +2639,7 @@ Use "auto_high_volume" for high volume indexes (such as the main index); otherwi
         <span class="property-type">int</span>
     </dt>
     <dd>{{% md %}}Upper limit, in seconds, on how long an event can sit in raw slice. Applies only if replication is enabled for this index. Otherwise ignored. If there are any acknowledged events sharing this raw slice, this paramater does not apply. In this case, maxTimeUnreplicatedWithAcks applies. Highest legal value is 2147483647. To disable this parameter, set to 0.
-{{% /md %}}</dd>
-    <dt class="property-optional"
+{{% /md %}}</dd><dt class="property-optional"
             title="Optional">
         <span id="state_maxtimeunreplicatednoacks_go">
 <a href="#state_maxtimeunreplicatednoacks_go" style="color: inherit; text-decoration: inherit;">Max<wbr>Time<wbr>Unreplicated<wbr>No<wbr>Acks</a>
@@ -2895,8 +2650,7 @@ Use "auto_high_volume" for high volume indexes (such as the main index); otherwi
     <dd>{{% md %}}Upper limit, in seconds, on how long an event can sit in raw slice. Applies only if replication is enabled for this index. Otherwise ignored.
 If there are any acknowledged events sharing this raw slice, this paramater does not apply. In this case, maxTimeUnreplicatedWithAcks applies.
 Highest legal value is 2147483647. To disable this parameter, set to 0.
-{{% /md %}}</dd>
-    <dt class="property-optional"
+{{% /md %}}</dd><dt class="property-optional"
             title="Optional">
         <span id="state_maxtimeunreplicatedwithacks_go">
 <a href="#state_maxtimeunreplicatedwithacks_go" style="color: inherit; text-decoration: inherit;">Max<wbr>Time<wbr>Unreplicated<wbr>With<wbr>Acks</a>
@@ -2907,8 +2661,7 @@ Highest legal value is 2147483647. To disable this parameter, set to 0.
     <dd>{{% md %}}Upper limit, in seconds, on how long events can sit unacknowledged in a raw slice. Applies only if you have enabled acks on forwarders and have replication enabled (with clustering).
 Note: This is an advanced parameter. Make sure you understand the settings on all forwarders before changing this. This number should not exceed ack timeout configured on any forwarder, and should actually be set to at most half of the minimum value of that timeout. You can find this setting in outputs.conf readTimeout setting under the tcpout stanza.
 To disable, set to 0, but this is NOT recommended. Highest legal value is 2147483647.
-{{% /md %}}</dd>
-    <dt class="property-optional"
+{{% /md %}}</dd><dt class="property-optional"
             title="Optional">
         <span id="state_maxtotaldatasizemb_go">
 <a href="#state_maxtotaldatasizemb_go" style="color: inherit; text-decoration: inherit;">Max<wbr>Total<wbr>Data<wbr>Size<wbr>Mb</a>
@@ -2917,8 +2670,7 @@ To disable, set to 0, but this is NOT recommended. Highest legal value is 214748
         <span class="property-type">int</span>
     </dt>
     <dd>{{% md %}}The maximum size of an index (in MB). If an index grows larger than the maximum size, the oldest data is frozen.
-{{% /md %}}</dd>
-    <dt class="property-optional"
+{{% /md %}}</dd><dt class="property-optional"
             title="Optional">
         <span id="state_maxwarmdbcount_go">
 <a href="#state_maxwarmdbcount_go" style="color: inherit; text-decoration: inherit;">Max<wbr>Warm<wbr>Db<wbr>Count</a>
@@ -2927,8 +2679,7 @@ To disable, set to 0, but this is NOT recommended. Highest legal value is 214748
         <span class="property-type">int</span>
     </dt>
     <dd>{{% md %}}The maximum number of warm buckets. If this number is exceeded, the warm bucket/s with the lowest value for their latest times is moved to cold.
-{{% /md %}}</dd>
-    <dt class="property-optional"
+{{% /md %}}</dd><dt class="property-optional"
             title="Optional">
         <span id="state_minrawfilesyncsecs_go">
 <a href="#state_minrawfilesyncsecs_go" style="color: inherit; text-decoration: inherit;">Min<wbr>Raw<wbr>File<wbr>Sync<wbr>Secs</a>
@@ -2940,8 +2691,7 @@ To disable, set to 0, but this is NOT recommended. Highest legal value is 214748
 This parameter sets how frequently splunkd forces a filesystem sync while compressing journal slices.
 During this period, uncompressed slices are left on disk even after they are compressed. Then splunkd forces a filesystem sync of the compressed journal and removes the accumulated uncompressed files.
 If 0 is specified, splunkd forces a filesystem sync after every slice completes compressing. Specifying "disable" disables syncing entirely: uncompressed slices are removed as soon as compression is complete.
-{{% /md %}}</dd>
-    <dt class="property-optional"
+{{% /md %}}</dd><dt class="property-optional"
             title="Optional">
         <span id="state_minstreamgroupqueuesize_go">
 <a href="#state_minstreamgroupqueuesize_go" style="color: inherit; text-decoration: inherit;">Min<wbr>Stream<wbr>Group<wbr>Queue<wbr>Size</a>
@@ -2950,8 +2700,7 @@ If 0 is specified, splunkd forces a filesystem sync after every slice completes 
         <span class="property-type">int</span>
     </dt>
     <dd>{{% md %}}Minimum size of the queue that stores events in memory before committing them to a tsidx file.
-{{% /md %}}</dd>
-    <dt class="property-optional"
+{{% /md %}}</dd><dt class="property-optional"
             title="Optional">
         <span id="state_name_go">
 <a href="#state_name_go" style="color: inherit; text-decoration: inherit;">Name</a>
@@ -2960,8 +2709,7 @@ If 0 is specified, splunkd forces a filesystem sync after every slice completes 
         <span class="property-type">string</span>
     </dt>
     <dd>{{% md %}}The name of the index to create.
-{{% /md %}}</dd>
-    <dt class="property-optional"
+{{% /md %}}</dd><dt class="property-optional"
             title="Optional">
         <span id="state_partialservicemetaperiod_go">
 <a href="#state_partialservicemetaperiod_go" style="color: inherit; text-decoration: inherit;">Partial<wbr>Service<wbr>Meta<wbr>Period</a>
@@ -2973,8 +2721,7 @@ If 0 is specified, splunkd forces a filesystem sync after every slice completes 
 partialServiceMetaPeriod specifies, in seconds, how frequently it should sync. Zero means that this feature is turned off and serviceMetaPeriod is the only time when metadata sync happens.
 If the value of partialServiceMetaPeriod is greater than serviceMetaPeriod, this setting has no effect.
 By default it is turned off (zero).
-{{% /md %}}</dd>
-    <dt class="property-optional"
+{{% /md %}}</dd><dt class="property-optional"
             title="Optional">
         <span id="state_processtrackerserviceinterval_go">
 <a href="#state_processtrackerserviceinterval_go" style="color: inherit; text-decoration: inherit;">Process<wbr>Tracker<wbr>Service<wbr>Interval</a>
@@ -2985,8 +2732,7 @@ By default it is turned off (zero).
     <dd>{{% md %}}Specifies, in seconds, how often the indexer checks the status of the child OS processes it launched to see if it can launch new processes for queued requests. Defaults to 15.
 If set to 0, the indexer checks child process status every second.
 Highest legal value is 4294967295.
-{{% /md %}}</dd>
-    <dt class="property-optional"
+{{% /md %}}</dd><dt class="property-optional"
             title="Optional">
         <span id="state_quarantinefuturesecs_go">
 <a href="#state_quarantinefuturesecs_go" style="color: inherit; text-decoration: inherit;">Quarantine<wbr>Future<wbr>Secs</a>
@@ -2996,8 +2742,7 @@ Highest legal value is 4294967295.
     </dt>
     <dd>{{% md %}}Events with timestamp of quarantineFutureSecs newer than "now" are dropped into quarantine bucket. Defaults to 2592000 (30 days).
 This is a mechanism to prevent main hot buckets from being polluted with fringe events.
-{{% /md %}}</dd>
-    <dt class="property-optional"
+{{% /md %}}</dd><dt class="property-optional"
             title="Optional">
         <span id="state_quarantinepastsecs_go">
 <a href="#state_quarantinepastsecs_go" style="color: inherit; text-decoration: inherit;">Quarantine<wbr>Past<wbr>Secs</a>
@@ -3006,8 +2751,7 @@ This is a mechanism to prevent main hot buckets from being polluted with fringe 
         <span class="property-type">int</span>
     </dt>
     <dd>{{% md %}}Events with timestamp of quarantinePastSecs older than "now" are dropped into quarantine bucket. Defaults to 77760000 (900 days). This is a mechanism to prevent the main hot buckets from being polluted with fringe events.
-{{% /md %}}</dd>
-    <dt class="property-optional"
+{{% /md %}}</dd><dt class="property-optional"
             title="Optional">
         <span id="state_rawchunksizebytes_go">
 <a href="#state_rawchunksizebytes_go" style="color: inherit; text-decoration: inherit;">Raw<wbr>Chunk<wbr>Size<wbr>Bytes</a>
@@ -3016,8 +2760,7 @@ This is a mechanism to prevent main hot buckets from being polluted with fringe 
         <span class="property-type">int</span>
     </dt>
     <dd>{{% md %}}Target uncompressed size in bytes for individual raw slice in the rawdata journal of the index. Defaults to 131072 (128KB). 0 is not a valid value. If 0 is specified, rawChunkSizeBytes is set to the default value.
-{{% /md %}}</dd>
-    <dt class="property-optional"
+{{% /md %}}</dd><dt class="property-optional"
             title="Optional">
         <span id="state_repfactor_go">
 <a href="#state_repfactor_go" style="color: inherit; text-decoration: inherit;">Rep<wbr>Factor</a>
@@ -3028,8 +2771,7 @@ This is a mechanism to prevent main hot buckets from being polluted with fringe 
     <dd>{{% md %}}Index replication control. This parameter applies to only clustering slaves.
 auto = Use the master index replication configuration value.
 0 = Turn off replication for this index.
-{{% /md %}}</dd>
-    <dt class="property-optional"
+{{% /md %}}</dd><dt class="property-optional"
             title="Optional">
         <span id="state_rotateperiodinsecs_go">
 <a href="#state_rotateperiodinsecs_go" style="color: inherit; text-decoration: inherit;">Rotate<wbr>Period<wbr>In<wbr>Secs</a>
@@ -3038,8 +2780,7 @@ auto = Use the master index replication configuration value.
         <span class="property-type">int</span>
     </dt>
     <dd>{{% md %}}How frequently (in seconds) to check if a new hot bucket needs to be created. Also, how frequently to check if there are any warm/cold buckets that should be rolled/frozen.
-{{% /md %}}</dd>
-    <dt class="property-optional"
+{{% /md %}}</dd><dt class="property-optional"
             title="Optional">
         <span id="state_servicemetaperiod_go">
 <a href="#state_servicemetaperiod_go" style="color: inherit; text-decoration: inherit;">Service<wbr>Meta<wbr>Period</a>
@@ -3049,8 +2790,7 @@ auto = Use the master index replication configuration value.
     </dt>
     <dd>{{% md %}}Defines how frequently metadata is synced to disk, in seconds. Defaults to 25 (seconds).
 You may want to set this to a higher value if the sum of your metadata file sizes is larger than many tens of megabytes, to avoid the hit on I/O in the indexing fast path.
-{{% /md %}}</dd>
-    <dt class="property-optional"
+{{% /md %}}</dd><dt class="property-optional"
             title="Optional">
         <span id="state_syncmeta_go">
 <a href="#state_syncmeta_go" style="color: inherit; text-decoration: inherit;">Sync<wbr>Meta</a>
@@ -3059,8 +2799,7 @@ You may want to set this to a higher value if the sum of your metadata file size
         <span class="property-type">bool</span>
     </dt>
     <dd>{{% md %}}When true, a sync operation is called before file descriptor is closed on metadata file updates. This functionality improves integrity of metadata files, especially in regards to operating system crashes/machine failures.
-{{% /md %}}</dd>
-    <dt class="property-optional"
+{{% /md %}}</dd><dt class="property-optional"
             title="Optional">
         <span id="state_thawedpath_go">
 <a href="#state_thawedpath_go" style="color: inherit; text-decoration: inherit;">Thawed<wbr>Path</a>
@@ -3071,8 +2810,7 @@ You may want to set this to a higher value if the sum of your metadata file size
     <dd>{{% md %}}An absolute path that contains the thawed (resurrected) databases for the index.
 Cannot be defined in terms of a volume definition.
 Required. Splunk software does not start if an index lacks a valid thawedPath.
-{{% /md %}}</dd>
-    <dt class="property-optional"
+{{% /md %}}</dd><dt class="property-optional"
             title="Optional">
         <span id="state_throttlecheckperiod_go">
 <a href="#state_throttlecheckperiod_go" style="color: inherit; text-decoration: inherit;">Throttle<wbr>Check<wbr>Period</a>
@@ -3081,8 +2819,7 @@ Required. Splunk software does not start if an index lacks a valid thawedPath.
         <span class="property-type">int</span>
     </dt>
     <dd>{{% md %}}Defines how frequently Splunk software checks for index throttling condition, in seconds. Defaults to 15 (seconds).
-{{% /md %}}</dd>
-    <dt class="property-optional"
+{{% /md %}}</dd><dt class="property-optional"
             title="Optional">
         <span id="state_tstatshomepath_go">
 <a href="#state_tstatshomepath_go" style="color: inherit; text-decoration: inherit;">Tstats<wbr>Home<wbr>Path</a>
@@ -3092,8 +2829,7 @@ Required. Splunk software does not start if an index lacks a valid thawedPath.
     </dt>
     <dd>{{% md %}}Location to store datamodel acceleration TSIDX data for this index. Restart splunkd after changing this parameter.
 If specified, it must be defined in terms of a volume definition.
-{{% /md %}}</dd>
-    <dt class="property-optional"
+{{% /md %}}</dd><dt class="property-optional"
             title="Optional">
         <span id="state_warmtocoldscript_go">
 <a href="#state_warmtocoldscript_go" style="color: inherit; text-decoration: inherit;">Warm<wbr>To<wbr>Cold<wbr>Script</a>
@@ -3103,14 +2839,11 @@ If specified, it must be defined in terms of a volume definition.
     </dt>
     <dd>{{% md %}}Path to a script to run when moving data from warm to cold.
 This attribute is supported for backwards compatibility with Splunk software versions older than 4.0. Contact Splunk support if you need help configuring this setting.
-{{% /md %}}</dd>
-</dl>
+{{% /md %}}</dd></dl>
 {{% /choosable %}}
 
 {{% choosable language nodejs %}}
-<dl class="resources-properties">
-
-    <dt class="property-optional"
+<dl class="resources-properties"><dt class="property-optional"
             title="Optional">
         <span id="state_acl_nodejs">
 <a href="#state_acl_nodejs" style="color: inherit; text-decoration: inherit;">acl</a>
@@ -3119,8 +2852,7 @@ This attribute is supported for backwards compatibility with Splunk software ver
         <span class="property-type"><a href="#indexesacl">Indexes<wbr>Acl</a></span>
     </dt>
     <dd>{{% md %}}The app/user context that is the namespace for the resource
-{{% /md %}}</dd>
-    <dt class="property-optional"
+{{% /md %}}</dd><dt class="property-optional"
             title="Optional">
         <span id="state_blocksignsize_nodejs">
 <a href="#state_blocksignsize_nodejs" style="color: inherit; text-decoration: inherit;">block<wbr>Sign<wbr>Size</a>
@@ -3129,8 +2861,7 @@ This attribute is supported for backwards compatibility with Splunk software ver
         <span class="property-type">number</span>
     </dt>
     <dd>{{% md %}}Controls how many events make up a block for block signatures. If this is set to 0, block signing is disabled for this index. <br>A recommended value is 100.
-{{% /md %}}</dd>
-    <dt class="property-optional"
+{{% /md %}}</dd><dt class="property-optional"
             title="Optional">
         <span id="state_bucketrebuildmemoryhint_nodejs">
 <a href="#state_bucketrebuildmemoryhint_nodejs" style="color: inherit; text-decoration: inherit;">bucket<wbr>Rebuild<wbr>Memory<wbr>Hint</a>
@@ -3145,8 +2876,7 @@ less than 2GB RAM = 67108864 (64MB) tsidx
 2GB to 8GB RAM = 134217728 (128MB) tsidx
 more than 8GB RAM = 268435456 (256MB) tsidx<br>
 Values other than "auto" must be 16MB-1GB. Highest legal value (of the numerical part) is 4294967295 You can specify the value using a size suffix: "16777216" or "16MB" are equivalent.
-{{% /md %}}</dd>
-    <dt class="property-optional"
+{{% /md %}}</dd><dt class="property-optional"
             title="Optional">
         <span id="state_coldpath_nodejs">
 <a href="#state_coldpath_nodejs" style="color: inherit; text-decoration: inherit;">cold<wbr>Path</a>
@@ -3155,8 +2885,7 @@ Values other than "auto" must be 16MB-1GB. Highest legal value (of the numerical
         <span class="property-type">string</span>
     </dt>
     <dd>{{% md %}}An absolute path that contains the colddbs for the index. The path must be readable and writable. Cold databases are opened as needed when searching.
-{{% /md %}}</dd>
-    <dt class="property-optional"
+{{% /md %}}</dd><dt class="property-optional"
             title="Optional">
         <span id="state_coldtofrozendir_nodejs">
 <a href="#state_coldtofrozendir_nodejs" style="color: inherit; text-decoration: inherit;">cold<wbr>To<wbr>Frozen<wbr>Dir</a>
@@ -3172,8 +2901,7 @@ To thaw, run splunk rebuild <bucket dir> on the bucket, then move to the thawed 
 Old style buckets (Pre-4.2): gzip all the .data and .tsidx files<br>
 To thaw, gunzip the zipped files and move the bucket into the thawed directory<br>
 If both coldToFrozenDir and coldToFrozenScript are specified, coldToFrozenDir takes precedence
-{{% /md %}}</dd>
-    <dt class="property-optional"
+{{% /md %}}</dd><dt class="property-optional"
             title="Optional">
         <span id="state_coldtofrozenscript_nodejs">
 <a href="#state_coldtofrozenscript_nodejs" style="color: inherit; text-decoration: inherit;">cold<wbr>To<wbr>Frozen<wbr>Script</a>
@@ -3185,8 +2913,7 @@ If both coldToFrozenDir and coldToFrozenScript are specified, coldToFrozenDir ta
 <br>If your script requires a program to run it (for example, python), specify the program followed by the path. The script must be in $SPLUNK_HOME/bin or one of its subdirectories.
 <br>Splunk software ships with an example archiving script in $SPLUNK_HOME/bin called coldToFrozenExample.py. DO NOT use this example script directly. It uses a default path, and if modified in place any changes are overwritten on upgrade.
 <br>It is best to copy the example script to a new file in bin and modify it for your system. Most importantly, change the default archive path to an existing directory that fits your needs.
-{{% /md %}}</dd>
-    <dt class="property-optional"
+{{% /md %}}</dd><dt class="property-optional"
             title="Optional">
         <span id="state_compressrawdata_nodejs">
 <a href="#state_compressrawdata_nodejs" style="color: inherit; text-decoration: inherit;">compress<wbr>Rawdata</a>
@@ -3195,8 +2922,7 @@ If both coldToFrozenDir and coldToFrozenScript are specified, coldToFrozenDir ta
         <span class="property-type">boolean</span>
     </dt>
     <dd>{{% md %}}This parameter is ignored. The splunkd process always compresses raw data.
-{{% /md %}}</dd>
-    <dt class="property-optional"
+{{% /md %}}</dd><dt class="property-optional"
             title="Optional">
         <span id="state_datatype_nodejs">
 <a href="#state_datatype_nodejs" style="color: inherit; text-decoration: inherit;">datatype</a>
@@ -3205,8 +2931,7 @@ If both coldToFrozenDir and coldToFrozenScript are specified, coldToFrozenDir ta
         <span class="property-type">string</span>
     </dt>
     <dd>{{% md %}}Valid values: (event | metric). Specifies the type of index.
-{{% /md %}}</dd>
-    <dt class="property-optional"
+{{% /md %}}</dd><dt class="property-optional"
             title="Optional">
         <span id="state_enableonlinebucketrepair_nodejs">
 <a href="#state_enableonlinebucketrepair_nodejs" style="color: inherit; text-decoration: inherit;">enable<wbr>Online<wbr>Bucket<wbr>Repair</a>
@@ -3216,8 +2941,7 @@ If both coldToFrozenDir and coldToFrozenScript are specified, coldToFrozenDir ta
     </dt>
     <dd>{{% md %}}Enables asynchronous "online fsck" bucket repair, which runs concurrently with Splunk software.
 When enabled, you do not have to wait until buckets are repaired to start the Splunk platform. However, you might observe a slight performance degratation.
-{{% /md %}}</dd>
-    <dt class="property-optional"
+{{% /md %}}</dd><dt class="property-optional"
             title="Optional">
         <span id="state_frozentimeperiodinsecs_nodejs">
 <a href="#state_frozentimeperiodinsecs_nodejs" style="color: inherit; text-decoration: inherit;">frozen<wbr>Time<wbr>Period<wbr>In<wbr>Secs</a>
@@ -3227,8 +2951,7 @@ When enabled, you do not have to wait until buckets are repaired to start the Sp
     </dt>
     <dd>{{% md %}}Number of seconds after which indexed data rolls to frozen.
 Defaults to 188697600 (6 years).Freezing data means it is removed from the index. If you need to archive your data, refer to coldToFrozenDir and coldToFrozenScript parameter documentation.
-{{% /md %}}</dd>
-    <dt class="property-optional"
+{{% /md %}}</dd><dt class="property-optional"
             title="Optional">
         <span id="state_homepath_nodejs">
 <a href="#state_homepath_nodejs" style="color: inherit; text-decoration: inherit;">home<wbr>Path</a>
@@ -3239,8 +2962,7 @@ Defaults to 188697600 (6 years).Freezing data means it is removed from the index
     <dd>{{% md %}}An absolute path that contains the hot and warm buckets for the index.
 Required. Splunk software does not start if an index lacks a valid homePath.
 <br>Caution: The path must be readable and writable.
-{{% /md %}}</dd>
-    <dt class="property-optional"
+{{% /md %}}</dd><dt class="property-optional"
             title="Optional">
         <span id="state_maxbloombackfillbucketage_nodejs">
 <a href="#state_maxbloombackfillbucketage_nodejs" style="color: inherit; text-decoration: inherit;">max<wbr>Bloom<wbr>Backfill<wbr>Bucket<wbr>Age</a>
@@ -3250,8 +2972,7 @@ Required. Splunk software does not start if an index lacks a valid homePath.
     </dt>
     <dd>{{% md %}}Valid values are: Integer[m|s|h|d].
 <br>If a warm or cold bucket is older than the specified age, do not create or rebuild its bloomfilter. Specify 0 to never rebuild bloomfilters.
-{{% /md %}}</dd>
-    <dt class="property-optional"
+{{% /md %}}</dd><dt class="property-optional"
             title="Optional">
         <span id="state_maxconcurrentoptimizes_nodejs">
 <a href="#state_maxconcurrentoptimizes_nodejs" style="color: inherit; text-decoration: inherit;">max<wbr>Concurrent<wbr>Optimizes</a>
@@ -3261,8 +2982,7 @@ Required. Splunk software does not start if an index lacks a valid homePath.
     </dt>
     <dd>{{% md %}}The number of concurrent optimize processes that can run against a hot bucket.
 This number should be increased if instructed by Splunk Support. Typically the default value should suffice.
-{{% /md %}}</dd>
-    <dt class="property-optional"
+{{% /md %}}</dd><dt class="property-optional"
             title="Optional">
         <span id="state_maxdatasize_nodejs">
 <a href="#state_maxdatasize_nodejs" style="color: inherit; text-decoration: inherit;">max<wbr>Data<wbr>Size</a>
@@ -3272,8 +2992,7 @@ This number should be increased if instructed by Splunk Support. Typically the d
     </dt>
     <dd>{{% md %}}The maximum size in MB for a hot DB to reach before a roll to warm is triggered. Specifying "auto" or "auto_high_volume" causes Splunk software to autotune this parameter (recommended).
 Use "auto_high_volume" for high volume indexes (such as the main index); otherwise, use "auto". A "high volume index" would typically be considered one that gets over 10GB of data per day.
-{{% /md %}}</dd>
-    <dt class="property-optional"
+{{% /md %}}</dd><dt class="property-optional"
             title="Optional">
         <span id="state_maxhotbuckets_nodejs">
 <a href="#state_maxhotbuckets_nodejs" style="color: inherit; text-decoration: inherit;">max<wbr>Hot<wbr>Buckets</a>
@@ -3283,8 +3002,7 @@ Use "auto_high_volume" for high volume indexes (such as the main index); otherwi
     </dt>
     <dd>{{% md %}}Maximum hot buckets that can exist per index. Defaults to 3.
 <br>When maxHotBuckets is exceeded, Splunk software rolls the least recently used (LRU) hot bucket to warm. Both normal hot buckets and quarantined hot buckets count towards this total. This setting operates independently of maxHotIdleSecs, which can also cause hot buckets to roll.
-{{% /md %}}</dd>
-    <dt class="property-optional"
+{{% /md %}}</dd><dt class="property-optional"
             title="Optional">
         <span id="state_maxhotidlesecs_nodejs">
 <a href="#state_maxhotidlesecs_nodejs" style="color: inherit; text-decoration: inherit;">max<wbr>Hot<wbr>Idle<wbr>Secs</a>
@@ -3293,8 +3011,7 @@ Use "auto_high_volume" for high volume indexes (such as the main index); otherwi
         <span class="property-type">number</span>
     </dt>
     <dd>{{% md %}}Maximum life, in seconds, of a hot bucket. Defaults to 0. If a hot bucket exceeds maxHotIdleSecs, Splunk software rolls it to warm. This setting operates independently of maxHotBuckets, which can also cause hot buckets to roll. A value of 0 turns off the idle check (equivalent to INFINITE idle time).
-{{% /md %}}</dd>
-    <dt class="property-optional"
+{{% /md %}}</dd><dt class="property-optional"
             title="Optional">
         <span id="state_maxhotspansecs_nodejs">
 <a href="#state_maxhotspansecs_nodejs" style="color: inherit; text-decoration: inherit;">max<wbr>Hot<wbr>Span<wbr>Secs</a>
@@ -3303,8 +3020,7 @@ Use "auto_high_volume" for high volume indexes (such as the main index); otherwi
         <span class="property-type">number</span>
     </dt>
     <dd>{{% md %}}Upper bound of target maximum timespan of hot/warm buckets in seconds. Defaults to 7776000 seconds (90 days).
-{{% /md %}}</dd>
-    <dt class="property-optional"
+{{% /md %}}</dd><dt class="property-optional"
             title="Optional">
         <span id="state_maxmemmb_nodejs">
 <a href="#state_maxmemmb_nodejs" style="color: inherit; text-decoration: inherit;">max<wbr>Mem<wbr>Mb</a>
@@ -3313,8 +3029,7 @@ Use "auto_high_volume" for high volume indexes (such as the main index); otherwi
         <span class="property-type">number</span>
     </dt>
     <dd>{{% md %}}The amount of memory, expressed in MB, to allocate for buffering a single tsidx file into memory before flushing to disk. Defaults to 5. The default is recommended for all environments.
-{{% /md %}}</dd>
-    <dt class="property-optional"
+{{% /md %}}</dd><dt class="property-optional"
             title="Optional">
         <span id="state_maxmetaentries_nodejs">
 <a href="#state_maxmetaentries_nodejs" style="color: inherit; text-decoration: inherit;">max<wbr>Meta<wbr>Entries</a>
@@ -3323,8 +3038,7 @@ Use "auto_high_volume" for high volume indexes (such as the main index); otherwi
         <span class="property-type">number</span>
     </dt>
     <dd>{{% md %}}Upper limit, in seconds, on how long an event can sit in raw slice. Applies only if replication is enabled for this index. Otherwise ignored. If there are any acknowledged events sharing this raw slice, this paramater does not apply. In this case, maxTimeUnreplicatedWithAcks applies. Highest legal value is 2147483647. To disable this parameter, set to 0.
-{{% /md %}}</dd>
-    <dt class="property-optional"
+{{% /md %}}</dd><dt class="property-optional"
             title="Optional">
         <span id="state_maxtimeunreplicatednoacks_nodejs">
 <a href="#state_maxtimeunreplicatednoacks_nodejs" style="color: inherit; text-decoration: inherit;">max<wbr>Time<wbr>Unreplicated<wbr>No<wbr>Acks</a>
@@ -3335,8 +3049,7 @@ Use "auto_high_volume" for high volume indexes (such as the main index); otherwi
     <dd>{{% md %}}Upper limit, in seconds, on how long an event can sit in raw slice. Applies only if replication is enabled for this index. Otherwise ignored.
 If there are any acknowledged events sharing this raw slice, this paramater does not apply. In this case, maxTimeUnreplicatedWithAcks applies.
 Highest legal value is 2147483647. To disable this parameter, set to 0.
-{{% /md %}}</dd>
-    <dt class="property-optional"
+{{% /md %}}</dd><dt class="property-optional"
             title="Optional">
         <span id="state_maxtimeunreplicatedwithacks_nodejs">
 <a href="#state_maxtimeunreplicatedwithacks_nodejs" style="color: inherit; text-decoration: inherit;">max<wbr>Time<wbr>Unreplicated<wbr>With<wbr>Acks</a>
@@ -3347,8 +3060,7 @@ Highest legal value is 2147483647. To disable this parameter, set to 0.
     <dd>{{% md %}}Upper limit, in seconds, on how long events can sit unacknowledged in a raw slice. Applies only if you have enabled acks on forwarders and have replication enabled (with clustering).
 Note: This is an advanced parameter. Make sure you understand the settings on all forwarders before changing this. This number should not exceed ack timeout configured on any forwarder, and should actually be set to at most half of the minimum value of that timeout. You can find this setting in outputs.conf readTimeout setting under the tcpout stanza.
 To disable, set to 0, but this is NOT recommended. Highest legal value is 2147483647.
-{{% /md %}}</dd>
-    <dt class="property-optional"
+{{% /md %}}</dd><dt class="property-optional"
             title="Optional">
         <span id="state_maxtotaldatasizemb_nodejs">
 <a href="#state_maxtotaldatasizemb_nodejs" style="color: inherit; text-decoration: inherit;">max<wbr>Total<wbr>Data<wbr>Size<wbr>Mb</a>
@@ -3357,8 +3069,7 @@ To disable, set to 0, but this is NOT recommended. Highest legal value is 214748
         <span class="property-type">number</span>
     </dt>
     <dd>{{% md %}}The maximum size of an index (in MB). If an index grows larger than the maximum size, the oldest data is frozen.
-{{% /md %}}</dd>
-    <dt class="property-optional"
+{{% /md %}}</dd><dt class="property-optional"
             title="Optional">
         <span id="state_maxwarmdbcount_nodejs">
 <a href="#state_maxwarmdbcount_nodejs" style="color: inherit; text-decoration: inherit;">max<wbr>Warm<wbr>Db<wbr>Count</a>
@@ -3367,8 +3078,7 @@ To disable, set to 0, but this is NOT recommended. Highest legal value is 214748
         <span class="property-type">number</span>
     </dt>
     <dd>{{% md %}}The maximum number of warm buckets. If this number is exceeded, the warm bucket/s with the lowest value for their latest times is moved to cold.
-{{% /md %}}</dd>
-    <dt class="property-optional"
+{{% /md %}}</dd><dt class="property-optional"
             title="Optional">
         <span id="state_minrawfilesyncsecs_nodejs">
 <a href="#state_minrawfilesyncsecs_nodejs" style="color: inherit; text-decoration: inherit;">min<wbr>Raw<wbr>File<wbr>Sync<wbr>Secs</a>
@@ -3380,8 +3090,7 @@ To disable, set to 0, but this is NOT recommended. Highest legal value is 214748
 This parameter sets how frequently splunkd forces a filesystem sync while compressing journal slices.
 During this period, uncompressed slices are left on disk even after they are compressed. Then splunkd forces a filesystem sync of the compressed journal and removes the accumulated uncompressed files.
 If 0 is specified, splunkd forces a filesystem sync after every slice completes compressing. Specifying "disable" disables syncing entirely: uncompressed slices are removed as soon as compression is complete.
-{{% /md %}}</dd>
-    <dt class="property-optional"
+{{% /md %}}</dd><dt class="property-optional"
             title="Optional">
         <span id="state_minstreamgroupqueuesize_nodejs">
 <a href="#state_minstreamgroupqueuesize_nodejs" style="color: inherit; text-decoration: inherit;">min<wbr>Stream<wbr>Group<wbr>Queue<wbr>Size</a>
@@ -3390,8 +3099,7 @@ If 0 is specified, splunkd forces a filesystem sync after every slice completes 
         <span class="property-type">number</span>
     </dt>
     <dd>{{% md %}}Minimum size of the queue that stores events in memory before committing them to a tsidx file.
-{{% /md %}}</dd>
-    <dt class="property-optional"
+{{% /md %}}</dd><dt class="property-optional"
             title="Optional">
         <span id="state_name_nodejs">
 <a href="#state_name_nodejs" style="color: inherit; text-decoration: inherit;">name</a>
@@ -3400,8 +3108,7 @@ If 0 is specified, splunkd forces a filesystem sync after every slice completes 
         <span class="property-type">string</span>
     </dt>
     <dd>{{% md %}}The name of the index to create.
-{{% /md %}}</dd>
-    <dt class="property-optional"
+{{% /md %}}</dd><dt class="property-optional"
             title="Optional">
         <span id="state_partialservicemetaperiod_nodejs">
 <a href="#state_partialservicemetaperiod_nodejs" style="color: inherit; text-decoration: inherit;">partial<wbr>Service<wbr>Meta<wbr>Period</a>
@@ -3413,8 +3120,7 @@ If 0 is specified, splunkd forces a filesystem sync after every slice completes 
 partialServiceMetaPeriod specifies, in seconds, how frequently it should sync. Zero means that this feature is turned off and serviceMetaPeriod is the only time when metadata sync happens.
 If the value of partialServiceMetaPeriod is greater than serviceMetaPeriod, this setting has no effect.
 By default it is turned off (zero).
-{{% /md %}}</dd>
-    <dt class="property-optional"
+{{% /md %}}</dd><dt class="property-optional"
             title="Optional">
         <span id="state_processtrackerserviceinterval_nodejs">
 <a href="#state_processtrackerserviceinterval_nodejs" style="color: inherit; text-decoration: inherit;">process<wbr>Tracker<wbr>Service<wbr>Interval</a>
@@ -3425,8 +3131,7 @@ By default it is turned off (zero).
     <dd>{{% md %}}Specifies, in seconds, how often the indexer checks the status of the child OS processes it launched to see if it can launch new processes for queued requests. Defaults to 15.
 If set to 0, the indexer checks child process status every second.
 Highest legal value is 4294967295.
-{{% /md %}}</dd>
-    <dt class="property-optional"
+{{% /md %}}</dd><dt class="property-optional"
             title="Optional">
         <span id="state_quarantinefuturesecs_nodejs">
 <a href="#state_quarantinefuturesecs_nodejs" style="color: inherit; text-decoration: inherit;">quarantine<wbr>Future<wbr>Secs</a>
@@ -3436,8 +3141,7 @@ Highest legal value is 4294967295.
     </dt>
     <dd>{{% md %}}Events with timestamp of quarantineFutureSecs newer than "now" are dropped into quarantine bucket. Defaults to 2592000 (30 days).
 This is a mechanism to prevent main hot buckets from being polluted with fringe events.
-{{% /md %}}</dd>
-    <dt class="property-optional"
+{{% /md %}}</dd><dt class="property-optional"
             title="Optional">
         <span id="state_quarantinepastsecs_nodejs">
 <a href="#state_quarantinepastsecs_nodejs" style="color: inherit; text-decoration: inherit;">quarantine<wbr>Past<wbr>Secs</a>
@@ -3446,8 +3150,7 @@ This is a mechanism to prevent main hot buckets from being polluted with fringe 
         <span class="property-type">number</span>
     </dt>
     <dd>{{% md %}}Events with timestamp of quarantinePastSecs older than "now" are dropped into quarantine bucket. Defaults to 77760000 (900 days). This is a mechanism to prevent the main hot buckets from being polluted with fringe events.
-{{% /md %}}</dd>
-    <dt class="property-optional"
+{{% /md %}}</dd><dt class="property-optional"
             title="Optional">
         <span id="state_rawchunksizebytes_nodejs">
 <a href="#state_rawchunksizebytes_nodejs" style="color: inherit; text-decoration: inherit;">raw<wbr>Chunk<wbr>Size<wbr>Bytes</a>
@@ -3456,8 +3159,7 @@ This is a mechanism to prevent main hot buckets from being polluted with fringe 
         <span class="property-type">number</span>
     </dt>
     <dd>{{% md %}}Target uncompressed size in bytes for individual raw slice in the rawdata journal of the index. Defaults to 131072 (128KB). 0 is not a valid value. If 0 is specified, rawChunkSizeBytes is set to the default value.
-{{% /md %}}</dd>
-    <dt class="property-optional"
+{{% /md %}}</dd><dt class="property-optional"
             title="Optional">
         <span id="state_repfactor_nodejs">
 <a href="#state_repfactor_nodejs" style="color: inherit; text-decoration: inherit;">rep<wbr>Factor</a>
@@ -3468,8 +3170,7 @@ This is a mechanism to prevent main hot buckets from being polluted with fringe 
     <dd>{{% md %}}Index replication control. This parameter applies to only clustering slaves.
 auto = Use the master index replication configuration value.
 0 = Turn off replication for this index.
-{{% /md %}}</dd>
-    <dt class="property-optional"
+{{% /md %}}</dd><dt class="property-optional"
             title="Optional">
         <span id="state_rotateperiodinsecs_nodejs">
 <a href="#state_rotateperiodinsecs_nodejs" style="color: inherit; text-decoration: inherit;">rotate<wbr>Period<wbr>In<wbr>Secs</a>
@@ -3478,8 +3179,7 @@ auto = Use the master index replication configuration value.
         <span class="property-type">number</span>
     </dt>
     <dd>{{% md %}}How frequently (in seconds) to check if a new hot bucket needs to be created. Also, how frequently to check if there are any warm/cold buckets that should be rolled/frozen.
-{{% /md %}}</dd>
-    <dt class="property-optional"
+{{% /md %}}</dd><dt class="property-optional"
             title="Optional">
         <span id="state_servicemetaperiod_nodejs">
 <a href="#state_servicemetaperiod_nodejs" style="color: inherit; text-decoration: inherit;">service<wbr>Meta<wbr>Period</a>
@@ -3489,8 +3189,7 @@ auto = Use the master index replication configuration value.
     </dt>
     <dd>{{% md %}}Defines how frequently metadata is synced to disk, in seconds. Defaults to 25 (seconds).
 You may want to set this to a higher value if the sum of your metadata file sizes is larger than many tens of megabytes, to avoid the hit on I/O in the indexing fast path.
-{{% /md %}}</dd>
-    <dt class="property-optional"
+{{% /md %}}</dd><dt class="property-optional"
             title="Optional">
         <span id="state_syncmeta_nodejs">
 <a href="#state_syncmeta_nodejs" style="color: inherit; text-decoration: inherit;">sync<wbr>Meta</a>
@@ -3499,8 +3198,7 @@ You may want to set this to a higher value if the sum of your metadata file size
         <span class="property-type">boolean</span>
     </dt>
     <dd>{{% md %}}When true, a sync operation is called before file descriptor is closed on metadata file updates. This functionality improves integrity of metadata files, especially in regards to operating system crashes/machine failures.
-{{% /md %}}</dd>
-    <dt class="property-optional"
+{{% /md %}}</dd><dt class="property-optional"
             title="Optional">
         <span id="state_thawedpath_nodejs">
 <a href="#state_thawedpath_nodejs" style="color: inherit; text-decoration: inherit;">thawed<wbr>Path</a>
@@ -3511,8 +3209,7 @@ You may want to set this to a higher value if the sum of your metadata file size
     <dd>{{% md %}}An absolute path that contains the thawed (resurrected) databases for the index.
 Cannot be defined in terms of a volume definition.
 Required. Splunk software does not start if an index lacks a valid thawedPath.
-{{% /md %}}</dd>
-    <dt class="property-optional"
+{{% /md %}}</dd><dt class="property-optional"
             title="Optional">
         <span id="state_throttlecheckperiod_nodejs">
 <a href="#state_throttlecheckperiod_nodejs" style="color: inherit; text-decoration: inherit;">throttle<wbr>Check<wbr>Period</a>
@@ -3521,8 +3218,7 @@ Required. Splunk software does not start if an index lacks a valid thawedPath.
         <span class="property-type">number</span>
     </dt>
     <dd>{{% md %}}Defines how frequently Splunk software checks for index throttling condition, in seconds. Defaults to 15 (seconds).
-{{% /md %}}</dd>
-    <dt class="property-optional"
+{{% /md %}}</dd><dt class="property-optional"
             title="Optional">
         <span id="state_tstatshomepath_nodejs">
 <a href="#state_tstatshomepath_nodejs" style="color: inherit; text-decoration: inherit;">tstats<wbr>Home<wbr>Path</a>
@@ -3532,8 +3228,7 @@ Required. Splunk software does not start if an index lacks a valid thawedPath.
     </dt>
     <dd>{{% md %}}Location to store datamodel acceleration TSIDX data for this index. Restart splunkd after changing this parameter.
 If specified, it must be defined in terms of a volume definition.
-{{% /md %}}</dd>
-    <dt class="property-optional"
+{{% /md %}}</dd><dt class="property-optional"
             title="Optional">
         <span id="state_warmtocoldscript_nodejs">
 <a href="#state_warmtocoldscript_nodejs" style="color: inherit; text-decoration: inherit;">warm<wbr>To<wbr>Cold<wbr>Script</a>
@@ -3543,14 +3238,11 @@ If specified, it must be defined in terms of a volume definition.
     </dt>
     <dd>{{% md %}}Path to a script to run when moving data from warm to cold.
 This attribute is supported for backwards compatibility with Splunk software versions older than 4.0. Contact Splunk support if you need help configuring this setting.
-{{% /md %}}</dd>
-</dl>
+{{% /md %}}</dd></dl>
 {{% /choosable %}}
 
 {{% choosable language python %}}
-<dl class="resources-properties">
-
-    <dt class="property-optional"
+<dl class="resources-properties"><dt class="property-optional"
             title="Optional">
         <span id="state_acl_python">
 <a href="#state_acl_python" style="color: inherit; text-decoration: inherit;">acl</a>
@@ -3559,8 +3251,7 @@ This attribute is supported for backwards compatibility with Splunk software ver
         <span class="property-type"><a href="#indexesacl">Indexes<wbr>Acl<wbr>Args</a></span>
     </dt>
     <dd>{{% md %}}The app/user context that is the namespace for the resource
-{{% /md %}}</dd>
-    <dt class="property-optional"
+{{% /md %}}</dd><dt class="property-optional"
             title="Optional">
         <span id="state_block_sign_size_python">
 <a href="#state_block_sign_size_python" style="color: inherit; text-decoration: inherit;">block_<wbr>sign_<wbr>size</a>
@@ -3569,8 +3260,7 @@ This attribute is supported for backwards compatibility with Splunk software ver
         <span class="property-type">int</span>
     </dt>
     <dd>{{% md %}}Controls how many events make up a block for block signatures. If this is set to 0, block signing is disabled for this index. <br>A recommended value is 100.
-{{% /md %}}</dd>
-    <dt class="property-optional"
+{{% /md %}}</dd><dt class="property-optional"
             title="Optional">
         <span id="state_bucket_rebuild_memory_hint_python">
 <a href="#state_bucket_rebuild_memory_hint_python" style="color: inherit; text-decoration: inherit;">bucket_<wbr>rebuild_<wbr>memory_<wbr>hint</a>
@@ -3585,8 +3275,7 @@ less than 2GB RAM = 67108864 (64MB) tsidx
 2GB to 8GB RAM = 134217728 (128MB) tsidx
 more than 8GB RAM = 268435456 (256MB) tsidx<br>
 Values other than "auto" must be 16MB-1GB. Highest legal value (of the numerical part) is 4294967295 You can specify the value using a size suffix: "16777216" or "16MB" are equivalent.
-{{% /md %}}</dd>
-    <dt class="property-optional"
+{{% /md %}}</dd><dt class="property-optional"
             title="Optional">
         <span id="state_cold_path_python">
 <a href="#state_cold_path_python" style="color: inherit; text-decoration: inherit;">cold_<wbr>path</a>
@@ -3595,8 +3284,7 @@ Values other than "auto" must be 16MB-1GB. Highest legal value (of the numerical
         <span class="property-type">str</span>
     </dt>
     <dd>{{% md %}}An absolute path that contains the colddbs for the index. The path must be readable and writable. Cold databases are opened as needed when searching.
-{{% /md %}}</dd>
-    <dt class="property-optional"
+{{% /md %}}</dd><dt class="property-optional"
             title="Optional">
         <span id="state_cold_to_frozen_dir_python">
 <a href="#state_cold_to_frozen_dir_python" style="color: inherit; text-decoration: inherit;">cold_<wbr>to_<wbr>frozen_<wbr>dir</a>
@@ -3612,8 +3300,7 @@ To thaw, run splunk rebuild <bucket dir> on the bucket, then move to the thawed 
 Old style buckets (Pre-4.2): gzip all the .data and .tsidx files<br>
 To thaw, gunzip the zipped files and move the bucket into the thawed directory<br>
 If both coldToFrozenDir and coldToFrozenScript are specified, coldToFrozenDir takes precedence
-{{% /md %}}</dd>
-    <dt class="property-optional"
+{{% /md %}}</dd><dt class="property-optional"
             title="Optional">
         <span id="state_cold_to_frozen_script_python">
 <a href="#state_cold_to_frozen_script_python" style="color: inherit; text-decoration: inherit;">cold_<wbr>to_<wbr>frozen_<wbr>script</a>
@@ -3625,8 +3312,7 @@ If both coldToFrozenDir and coldToFrozenScript are specified, coldToFrozenDir ta
 <br>If your script requires a program to run it (for example, python), specify the program followed by the path. The script must be in $SPLUNK_HOME/bin or one of its subdirectories.
 <br>Splunk software ships with an example archiving script in $SPLUNK_HOME/bin called coldToFrozenExample.py. DO NOT use this example script directly. It uses a default path, and if modified in place any changes are overwritten on upgrade.
 <br>It is best to copy the example script to a new file in bin and modify it for your system. Most importantly, change the default archive path to an existing directory that fits your needs.
-{{% /md %}}</dd>
-    <dt class="property-optional"
+{{% /md %}}</dd><dt class="property-optional"
             title="Optional">
         <span id="state_compress_rawdata_python">
 <a href="#state_compress_rawdata_python" style="color: inherit; text-decoration: inherit;">compress_<wbr>rawdata</a>
@@ -3635,8 +3321,7 @@ If both coldToFrozenDir and coldToFrozenScript are specified, coldToFrozenDir ta
         <span class="property-type">bool</span>
     </dt>
     <dd>{{% md %}}This parameter is ignored. The splunkd process always compresses raw data.
-{{% /md %}}</dd>
-    <dt class="property-optional"
+{{% /md %}}</dd><dt class="property-optional"
             title="Optional">
         <span id="state_datatype_python">
 <a href="#state_datatype_python" style="color: inherit; text-decoration: inherit;">datatype</a>
@@ -3645,8 +3330,7 @@ If both coldToFrozenDir and coldToFrozenScript are specified, coldToFrozenDir ta
         <span class="property-type">str</span>
     </dt>
     <dd>{{% md %}}Valid values: (event | metric). Specifies the type of index.
-{{% /md %}}</dd>
-    <dt class="property-optional"
+{{% /md %}}</dd><dt class="property-optional"
             title="Optional">
         <span id="state_enable_online_bucket_repair_python">
 <a href="#state_enable_online_bucket_repair_python" style="color: inherit; text-decoration: inherit;">enable_<wbr>online_<wbr>bucket_<wbr>repair</a>
@@ -3656,8 +3340,7 @@ If both coldToFrozenDir and coldToFrozenScript are specified, coldToFrozenDir ta
     </dt>
     <dd>{{% md %}}Enables asynchronous "online fsck" bucket repair, which runs concurrently with Splunk software.
 When enabled, you do not have to wait until buckets are repaired to start the Splunk platform. However, you might observe a slight performance degratation.
-{{% /md %}}</dd>
-    <dt class="property-optional"
+{{% /md %}}</dd><dt class="property-optional"
             title="Optional">
         <span id="state_frozen_time_period_in_secs_python">
 <a href="#state_frozen_time_period_in_secs_python" style="color: inherit; text-decoration: inherit;">frozen_<wbr>time_<wbr>period_<wbr>in_<wbr>secs</a>
@@ -3667,8 +3350,7 @@ When enabled, you do not have to wait until buckets are repaired to start the Sp
     </dt>
     <dd>{{% md %}}Number of seconds after which indexed data rolls to frozen.
 Defaults to 188697600 (6 years).Freezing data means it is removed from the index. If you need to archive your data, refer to coldToFrozenDir and coldToFrozenScript parameter documentation.
-{{% /md %}}</dd>
-    <dt class="property-optional"
+{{% /md %}}</dd><dt class="property-optional"
             title="Optional">
         <span id="state_home_path_python">
 <a href="#state_home_path_python" style="color: inherit; text-decoration: inherit;">home_<wbr>path</a>
@@ -3679,8 +3361,7 @@ Defaults to 188697600 (6 years).Freezing data means it is removed from the index
     <dd>{{% md %}}An absolute path that contains the hot and warm buckets for the index.
 Required. Splunk software does not start if an index lacks a valid homePath.
 <br>Caution: The path must be readable and writable.
-{{% /md %}}</dd>
-    <dt class="property-optional"
+{{% /md %}}</dd><dt class="property-optional"
             title="Optional">
         <span id="state_max_bloom_backfill_bucket_age_python">
 <a href="#state_max_bloom_backfill_bucket_age_python" style="color: inherit; text-decoration: inherit;">max_<wbr>bloom_<wbr>backfill_<wbr>bucket_<wbr>age</a>
@@ -3690,8 +3371,7 @@ Required. Splunk software does not start if an index lacks a valid homePath.
     </dt>
     <dd>{{% md %}}Valid values are: Integer[m|s|h|d].
 <br>If a warm or cold bucket is older than the specified age, do not create or rebuild its bloomfilter. Specify 0 to never rebuild bloomfilters.
-{{% /md %}}</dd>
-    <dt class="property-optional"
+{{% /md %}}</dd><dt class="property-optional"
             title="Optional">
         <span id="state_max_concurrent_optimizes_python">
 <a href="#state_max_concurrent_optimizes_python" style="color: inherit; text-decoration: inherit;">max_<wbr>concurrent_<wbr>optimizes</a>
@@ -3701,8 +3381,7 @@ Required. Splunk software does not start if an index lacks a valid homePath.
     </dt>
     <dd>{{% md %}}The number of concurrent optimize processes that can run against a hot bucket.
 This number should be increased if instructed by Splunk Support. Typically the default value should suffice.
-{{% /md %}}</dd>
-    <dt class="property-optional"
+{{% /md %}}</dd><dt class="property-optional"
             title="Optional">
         <span id="state_max_data_size_python">
 <a href="#state_max_data_size_python" style="color: inherit; text-decoration: inherit;">max_<wbr>data_<wbr>size</a>
@@ -3712,8 +3391,7 @@ This number should be increased if instructed by Splunk Support. Typically the d
     </dt>
     <dd>{{% md %}}The maximum size in MB for a hot DB to reach before a roll to warm is triggered. Specifying "auto" or "auto_high_volume" causes Splunk software to autotune this parameter (recommended).
 Use "auto_high_volume" for high volume indexes (such as the main index); otherwise, use "auto". A "high volume index" would typically be considered one that gets over 10GB of data per day.
-{{% /md %}}</dd>
-    <dt class="property-optional"
+{{% /md %}}</dd><dt class="property-optional"
             title="Optional">
         <span id="state_max_hot_buckets_python">
 <a href="#state_max_hot_buckets_python" style="color: inherit; text-decoration: inherit;">max_<wbr>hot_<wbr>buckets</a>
@@ -3723,8 +3401,7 @@ Use "auto_high_volume" for high volume indexes (such as the main index); otherwi
     </dt>
     <dd>{{% md %}}Maximum hot buckets that can exist per index. Defaults to 3.
 <br>When maxHotBuckets is exceeded, Splunk software rolls the least recently used (LRU) hot bucket to warm. Both normal hot buckets and quarantined hot buckets count towards this total. This setting operates independently of maxHotIdleSecs, which can also cause hot buckets to roll.
-{{% /md %}}</dd>
-    <dt class="property-optional"
+{{% /md %}}</dd><dt class="property-optional"
             title="Optional">
         <span id="state_max_hot_idle_secs_python">
 <a href="#state_max_hot_idle_secs_python" style="color: inherit; text-decoration: inherit;">max_<wbr>hot_<wbr>idle_<wbr>secs</a>
@@ -3733,8 +3410,7 @@ Use "auto_high_volume" for high volume indexes (such as the main index); otherwi
         <span class="property-type">int</span>
     </dt>
     <dd>{{% md %}}Maximum life, in seconds, of a hot bucket. Defaults to 0. If a hot bucket exceeds maxHotIdleSecs, Splunk software rolls it to warm. This setting operates independently of maxHotBuckets, which can also cause hot buckets to roll. A value of 0 turns off the idle check (equivalent to INFINITE idle time).
-{{% /md %}}</dd>
-    <dt class="property-optional"
+{{% /md %}}</dd><dt class="property-optional"
             title="Optional">
         <span id="state_max_hot_span_secs_python">
 <a href="#state_max_hot_span_secs_python" style="color: inherit; text-decoration: inherit;">max_<wbr>hot_<wbr>span_<wbr>secs</a>
@@ -3743,8 +3419,7 @@ Use "auto_high_volume" for high volume indexes (such as the main index); otherwi
         <span class="property-type">int</span>
     </dt>
     <dd>{{% md %}}Upper bound of target maximum timespan of hot/warm buckets in seconds. Defaults to 7776000 seconds (90 days).
-{{% /md %}}</dd>
-    <dt class="property-optional"
+{{% /md %}}</dd><dt class="property-optional"
             title="Optional">
         <span id="state_max_mem_mb_python">
 <a href="#state_max_mem_mb_python" style="color: inherit; text-decoration: inherit;">max_<wbr>mem_<wbr>mb</a>
@@ -3753,8 +3428,7 @@ Use "auto_high_volume" for high volume indexes (such as the main index); otherwi
         <span class="property-type">int</span>
     </dt>
     <dd>{{% md %}}The amount of memory, expressed in MB, to allocate for buffering a single tsidx file into memory before flushing to disk. Defaults to 5. The default is recommended for all environments.
-{{% /md %}}</dd>
-    <dt class="property-optional"
+{{% /md %}}</dd><dt class="property-optional"
             title="Optional">
         <span id="state_max_meta_entries_python">
 <a href="#state_max_meta_entries_python" style="color: inherit; text-decoration: inherit;">max_<wbr>meta_<wbr>entries</a>
@@ -3763,8 +3437,7 @@ Use "auto_high_volume" for high volume indexes (such as the main index); otherwi
         <span class="property-type">int</span>
     </dt>
     <dd>{{% md %}}Upper limit, in seconds, on how long an event can sit in raw slice. Applies only if replication is enabled for this index. Otherwise ignored. If there are any acknowledged events sharing this raw slice, this paramater does not apply. In this case, maxTimeUnreplicatedWithAcks applies. Highest legal value is 2147483647. To disable this parameter, set to 0.
-{{% /md %}}</dd>
-    <dt class="property-optional"
+{{% /md %}}</dd><dt class="property-optional"
             title="Optional">
         <span id="state_max_time_unreplicated_no_acks_python">
 <a href="#state_max_time_unreplicated_no_acks_python" style="color: inherit; text-decoration: inherit;">max_<wbr>time_<wbr>unreplicated_<wbr>no_<wbr>acks</a>
@@ -3775,8 +3448,7 @@ Use "auto_high_volume" for high volume indexes (such as the main index); otherwi
     <dd>{{% md %}}Upper limit, in seconds, on how long an event can sit in raw slice. Applies only if replication is enabled for this index. Otherwise ignored.
 If there are any acknowledged events sharing this raw slice, this paramater does not apply. In this case, maxTimeUnreplicatedWithAcks applies.
 Highest legal value is 2147483647. To disable this parameter, set to 0.
-{{% /md %}}</dd>
-    <dt class="property-optional"
+{{% /md %}}</dd><dt class="property-optional"
             title="Optional">
         <span id="state_max_time_unreplicated_with_acks_python">
 <a href="#state_max_time_unreplicated_with_acks_python" style="color: inherit; text-decoration: inherit;">max_<wbr>time_<wbr>unreplicated_<wbr>with_<wbr>acks</a>
@@ -3787,8 +3459,7 @@ Highest legal value is 2147483647. To disable this parameter, set to 0.
     <dd>{{% md %}}Upper limit, in seconds, on how long events can sit unacknowledged in a raw slice. Applies only if you have enabled acks on forwarders and have replication enabled (with clustering).
 Note: This is an advanced parameter. Make sure you understand the settings on all forwarders before changing this. This number should not exceed ack timeout configured on any forwarder, and should actually be set to at most half of the minimum value of that timeout. You can find this setting in outputs.conf readTimeout setting under the tcpout stanza.
 To disable, set to 0, but this is NOT recommended. Highest legal value is 2147483647.
-{{% /md %}}</dd>
-    <dt class="property-optional"
+{{% /md %}}</dd><dt class="property-optional"
             title="Optional">
         <span id="state_max_total_data_size_mb_python">
 <a href="#state_max_total_data_size_mb_python" style="color: inherit; text-decoration: inherit;">max_<wbr>total_<wbr>data_<wbr>size_<wbr>mb</a>
@@ -3797,8 +3468,7 @@ To disable, set to 0, but this is NOT recommended. Highest legal value is 214748
         <span class="property-type">int</span>
     </dt>
     <dd>{{% md %}}The maximum size of an index (in MB). If an index grows larger than the maximum size, the oldest data is frozen.
-{{% /md %}}</dd>
-    <dt class="property-optional"
+{{% /md %}}</dd><dt class="property-optional"
             title="Optional">
         <span id="state_max_warm_db_count_python">
 <a href="#state_max_warm_db_count_python" style="color: inherit; text-decoration: inherit;">max_<wbr>warm_<wbr>db_<wbr>count</a>
@@ -3807,8 +3477,7 @@ To disable, set to 0, but this is NOT recommended. Highest legal value is 214748
         <span class="property-type">int</span>
     </dt>
     <dd>{{% md %}}The maximum number of warm buckets. If this number is exceeded, the warm bucket/s with the lowest value for their latest times is moved to cold.
-{{% /md %}}</dd>
-    <dt class="property-optional"
+{{% /md %}}</dd><dt class="property-optional"
             title="Optional">
         <span id="state_min_raw_file_sync_secs_python">
 <a href="#state_min_raw_file_sync_secs_python" style="color: inherit; text-decoration: inherit;">min_<wbr>raw_<wbr>file_<wbr>sync_<wbr>secs</a>
@@ -3820,8 +3489,7 @@ To disable, set to 0, but this is NOT recommended. Highest legal value is 214748
 This parameter sets how frequently splunkd forces a filesystem sync while compressing journal slices.
 During this period, uncompressed slices are left on disk even after they are compressed. Then splunkd forces a filesystem sync of the compressed journal and removes the accumulated uncompressed files.
 If 0 is specified, splunkd forces a filesystem sync after every slice completes compressing. Specifying "disable" disables syncing entirely: uncompressed slices are removed as soon as compression is complete.
-{{% /md %}}</dd>
-    <dt class="property-optional"
+{{% /md %}}</dd><dt class="property-optional"
             title="Optional">
         <span id="state_min_stream_group_queue_size_python">
 <a href="#state_min_stream_group_queue_size_python" style="color: inherit; text-decoration: inherit;">min_<wbr>stream_<wbr>group_<wbr>queue_<wbr>size</a>
@@ -3830,8 +3498,7 @@ If 0 is specified, splunkd forces a filesystem sync after every slice completes 
         <span class="property-type">int</span>
     </dt>
     <dd>{{% md %}}Minimum size of the queue that stores events in memory before committing them to a tsidx file.
-{{% /md %}}</dd>
-    <dt class="property-optional"
+{{% /md %}}</dd><dt class="property-optional"
             title="Optional">
         <span id="state_name_python">
 <a href="#state_name_python" style="color: inherit; text-decoration: inherit;">name</a>
@@ -3840,8 +3507,7 @@ If 0 is specified, splunkd forces a filesystem sync after every slice completes 
         <span class="property-type">str</span>
     </dt>
     <dd>{{% md %}}The name of the index to create.
-{{% /md %}}</dd>
-    <dt class="property-optional"
+{{% /md %}}</dd><dt class="property-optional"
             title="Optional">
         <span id="state_partial_service_meta_period_python">
 <a href="#state_partial_service_meta_period_python" style="color: inherit; text-decoration: inherit;">partial_<wbr>service_<wbr>meta_<wbr>period</a>
@@ -3853,8 +3519,7 @@ If 0 is specified, splunkd forces a filesystem sync after every slice completes 
 partialServiceMetaPeriod specifies, in seconds, how frequently it should sync. Zero means that this feature is turned off and serviceMetaPeriod is the only time when metadata sync happens.
 If the value of partialServiceMetaPeriod is greater than serviceMetaPeriod, this setting has no effect.
 By default it is turned off (zero).
-{{% /md %}}</dd>
-    <dt class="property-optional"
+{{% /md %}}</dd><dt class="property-optional"
             title="Optional">
         <span id="state_process_tracker_service_interval_python">
 <a href="#state_process_tracker_service_interval_python" style="color: inherit; text-decoration: inherit;">process_<wbr>tracker_<wbr>service_<wbr>interval</a>
@@ -3865,8 +3530,7 @@ By default it is turned off (zero).
     <dd>{{% md %}}Specifies, in seconds, how often the indexer checks the status of the child OS processes it launched to see if it can launch new processes for queued requests. Defaults to 15.
 If set to 0, the indexer checks child process status every second.
 Highest legal value is 4294967295.
-{{% /md %}}</dd>
-    <dt class="property-optional"
+{{% /md %}}</dd><dt class="property-optional"
             title="Optional">
         <span id="state_quarantine_future_secs_python">
 <a href="#state_quarantine_future_secs_python" style="color: inherit; text-decoration: inherit;">quarantine_<wbr>future_<wbr>secs</a>
@@ -3876,8 +3540,7 @@ Highest legal value is 4294967295.
     </dt>
     <dd>{{% md %}}Events with timestamp of quarantineFutureSecs newer than "now" are dropped into quarantine bucket. Defaults to 2592000 (30 days).
 This is a mechanism to prevent main hot buckets from being polluted with fringe events.
-{{% /md %}}</dd>
-    <dt class="property-optional"
+{{% /md %}}</dd><dt class="property-optional"
             title="Optional">
         <span id="state_quarantine_past_secs_python">
 <a href="#state_quarantine_past_secs_python" style="color: inherit; text-decoration: inherit;">quarantine_<wbr>past_<wbr>secs</a>
@@ -3886,8 +3549,7 @@ This is a mechanism to prevent main hot buckets from being polluted with fringe 
         <span class="property-type">int</span>
     </dt>
     <dd>{{% md %}}Events with timestamp of quarantinePastSecs older than "now" are dropped into quarantine bucket. Defaults to 77760000 (900 days). This is a mechanism to prevent the main hot buckets from being polluted with fringe events.
-{{% /md %}}</dd>
-    <dt class="property-optional"
+{{% /md %}}</dd><dt class="property-optional"
             title="Optional">
         <span id="state_raw_chunk_size_bytes_python">
 <a href="#state_raw_chunk_size_bytes_python" style="color: inherit; text-decoration: inherit;">raw_<wbr>chunk_<wbr>size_<wbr>bytes</a>
@@ -3896,8 +3558,7 @@ This is a mechanism to prevent main hot buckets from being polluted with fringe 
         <span class="property-type">int</span>
     </dt>
     <dd>{{% md %}}Target uncompressed size in bytes for individual raw slice in the rawdata journal of the index. Defaults to 131072 (128KB). 0 is not a valid value. If 0 is specified, rawChunkSizeBytes is set to the default value.
-{{% /md %}}</dd>
-    <dt class="property-optional"
+{{% /md %}}</dd><dt class="property-optional"
             title="Optional">
         <span id="state_rep_factor_python">
 <a href="#state_rep_factor_python" style="color: inherit; text-decoration: inherit;">rep_<wbr>factor</a>
@@ -3908,8 +3569,7 @@ This is a mechanism to prevent main hot buckets from being polluted with fringe 
     <dd>{{% md %}}Index replication control. This parameter applies to only clustering slaves.
 auto = Use the master index replication configuration value.
 0 = Turn off replication for this index.
-{{% /md %}}</dd>
-    <dt class="property-optional"
+{{% /md %}}</dd><dt class="property-optional"
             title="Optional">
         <span id="state_rotate_period_in_secs_python">
 <a href="#state_rotate_period_in_secs_python" style="color: inherit; text-decoration: inherit;">rotate_<wbr>period_<wbr>in_<wbr>secs</a>
@@ -3918,8 +3578,7 @@ auto = Use the master index replication configuration value.
         <span class="property-type">int</span>
     </dt>
     <dd>{{% md %}}How frequently (in seconds) to check if a new hot bucket needs to be created. Also, how frequently to check if there are any warm/cold buckets that should be rolled/frozen.
-{{% /md %}}</dd>
-    <dt class="property-optional"
+{{% /md %}}</dd><dt class="property-optional"
             title="Optional">
         <span id="state_service_meta_period_python">
 <a href="#state_service_meta_period_python" style="color: inherit; text-decoration: inherit;">service_<wbr>meta_<wbr>period</a>
@@ -3929,8 +3588,7 @@ auto = Use the master index replication configuration value.
     </dt>
     <dd>{{% md %}}Defines how frequently metadata is synced to disk, in seconds. Defaults to 25 (seconds).
 You may want to set this to a higher value if the sum of your metadata file sizes is larger than many tens of megabytes, to avoid the hit on I/O in the indexing fast path.
-{{% /md %}}</dd>
-    <dt class="property-optional"
+{{% /md %}}</dd><dt class="property-optional"
             title="Optional">
         <span id="state_sync_meta_python">
 <a href="#state_sync_meta_python" style="color: inherit; text-decoration: inherit;">sync_<wbr>meta</a>
@@ -3939,8 +3597,7 @@ You may want to set this to a higher value if the sum of your metadata file size
         <span class="property-type">bool</span>
     </dt>
     <dd>{{% md %}}When true, a sync operation is called before file descriptor is closed on metadata file updates. This functionality improves integrity of metadata files, especially in regards to operating system crashes/machine failures.
-{{% /md %}}</dd>
-    <dt class="property-optional"
+{{% /md %}}</dd><dt class="property-optional"
             title="Optional">
         <span id="state_thawed_path_python">
 <a href="#state_thawed_path_python" style="color: inherit; text-decoration: inherit;">thawed_<wbr>path</a>
@@ -3951,8 +3608,7 @@ You may want to set this to a higher value if the sum of your metadata file size
     <dd>{{% md %}}An absolute path that contains the thawed (resurrected) databases for the index.
 Cannot be defined in terms of a volume definition.
 Required. Splunk software does not start if an index lacks a valid thawedPath.
-{{% /md %}}</dd>
-    <dt class="property-optional"
+{{% /md %}}</dd><dt class="property-optional"
             title="Optional">
         <span id="state_throttle_check_period_python">
 <a href="#state_throttle_check_period_python" style="color: inherit; text-decoration: inherit;">throttle_<wbr>check_<wbr>period</a>
@@ -3961,8 +3617,7 @@ Required. Splunk software does not start if an index lacks a valid thawedPath.
         <span class="property-type">int</span>
     </dt>
     <dd>{{% md %}}Defines how frequently Splunk software checks for index throttling condition, in seconds. Defaults to 15 (seconds).
-{{% /md %}}</dd>
-    <dt class="property-optional"
+{{% /md %}}</dd><dt class="property-optional"
             title="Optional">
         <span id="state_tstats_home_path_python">
 <a href="#state_tstats_home_path_python" style="color: inherit; text-decoration: inherit;">tstats_<wbr>home_<wbr>path</a>
@@ -3972,8 +3627,7 @@ Required. Splunk software does not start if an index lacks a valid thawedPath.
     </dt>
     <dd>{{% md %}}Location to store datamodel acceleration TSIDX data for this index. Restart splunkd after changing this parameter.
 If specified, it must be defined in terms of a volume definition.
-{{% /md %}}</dd>
-    <dt class="property-optional"
+{{% /md %}}</dd><dt class="property-optional"
             title="Optional">
         <span id="state_warm_to_cold_script_python">
 <a href="#state_warm_to_cold_script_python" style="color: inherit; text-decoration: inherit;">warm_<wbr>to_<wbr>cold_<wbr>script</a>
@@ -3983,8 +3637,7 @@ If specified, it must be defined in terms of a volume definition.
     </dt>
     <dd>{{% md %}}Path to a script to run when moving data from warm to cold.
 This attribute is supported for backwards compatibility with Splunk software versions older than 4.0. Contact Splunk support if you need help configuring this setting.
-{{% /md %}}</dd>
-</dl>
+{{% /md %}}</dd></dl>
 {{% /choosable %}}
 
 
@@ -3999,9 +3652,7 @@ This attribute is supported for backwards compatibility with Splunk software ver
 <h4 id="indexesacl">Indexes<wbr>Acl</h4>
 
 {{% choosable language csharp %}}
-<dl class="resources-properties">
-
-    <dt class="property-optional"
+<dl class="resources-properties"><dt class="property-optional"
             title="Optional">
         <span id="app_csharp">
 <a href="#app_csharp" style="color: inherit; text-decoration: inherit;">App</a>
@@ -4009,8 +3660,7 @@ This attribute is supported for backwards compatibility with Splunk software ver
         <span class="property-indicator"></span>
         <span class="property-type">string</span>
     </dt>
-    <dd>{{% md %}}{{% /md %}}</dd>
-    <dt class="property-optional"
+    <dd>{{% md %}}{{% /md %}}</dd><dt class="property-optional"
             title="Optional">
         <span id="canchangeperms_csharp">
 <a href="#canchangeperms_csharp" style="color: inherit; text-decoration: inherit;">Can<wbr>Change<wbr>Perms</a>
@@ -4018,8 +3668,7 @@ This attribute is supported for backwards compatibility with Splunk software ver
         <span class="property-indicator"></span>
         <span class="property-type">bool</span>
     </dt>
-    <dd>{{% md %}}{{% /md %}}</dd>
-    <dt class="property-optional"
+    <dd>{{% md %}}{{% /md %}}</dd><dt class="property-optional"
             title="Optional">
         <span id="canshareapp_csharp">
 <a href="#canshareapp_csharp" style="color: inherit; text-decoration: inherit;">Can<wbr>Share<wbr>App</a>
@@ -4027,8 +3676,7 @@ This attribute is supported for backwards compatibility with Splunk software ver
         <span class="property-indicator"></span>
         <span class="property-type">bool</span>
     </dt>
-    <dd>{{% md %}}{{% /md %}}</dd>
-    <dt class="property-optional"
+    <dd>{{% md %}}{{% /md %}}</dd><dt class="property-optional"
             title="Optional">
         <span id="canshareglobal_csharp">
 <a href="#canshareglobal_csharp" style="color: inherit; text-decoration: inherit;">Can<wbr>Share<wbr>Global</a>
@@ -4036,8 +3684,7 @@ This attribute is supported for backwards compatibility with Splunk software ver
         <span class="property-indicator"></span>
         <span class="property-type">bool</span>
     </dt>
-    <dd>{{% md %}}{{% /md %}}</dd>
-    <dt class="property-optional"
+    <dd>{{% md %}}{{% /md %}}</dd><dt class="property-optional"
             title="Optional">
         <span id="canshareuser_csharp">
 <a href="#canshareuser_csharp" style="color: inherit; text-decoration: inherit;">Can<wbr>Share<wbr>User</a>
@@ -4045,8 +3692,7 @@ This attribute is supported for backwards compatibility with Splunk software ver
         <span class="property-indicator"></span>
         <span class="property-type">bool</span>
     </dt>
-    <dd>{{% md %}}{{% /md %}}</dd>
-    <dt class="property-optional"
+    <dd>{{% md %}}{{% /md %}}</dd><dt class="property-optional"
             title="Optional">
         <span id="canwrite_csharp">
 <a href="#canwrite_csharp" style="color: inherit; text-decoration: inherit;">Can<wbr>Write</a>
@@ -4054,8 +3700,7 @@ This attribute is supported for backwards compatibility with Splunk software ver
         <span class="property-indicator"></span>
         <span class="property-type">bool</span>
     </dt>
-    <dd>{{% md %}}{{% /md %}}</dd>
-    <dt class="property-optional"
+    <dd>{{% md %}}{{% /md %}}</dd><dt class="property-optional"
             title="Optional">
         <span id="owner_csharp">
 <a href="#owner_csharp" style="color: inherit; text-decoration: inherit;">Owner</a>
@@ -4063,8 +3708,7 @@ This attribute is supported for backwards compatibility with Splunk software ver
         <span class="property-indicator"></span>
         <span class="property-type">string</span>
     </dt>
-    <dd>{{% md %}}{{% /md %}}</dd>
-    <dt class="property-optional"
+    <dd>{{% md %}}{{% /md %}}</dd><dt class="property-optional"
             title="Optional">
         <span id="reads_csharp">
 <a href="#reads_csharp" style="color: inherit; text-decoration: inherit;">Reads</a>
@@ -4072,8 +3716,7 @@ This attribute is supported for backwards compatibility with Splunk software ver
         <span class="property-indicator"></span>
         <span class="property-type">List&lt;string&gt;</span>
     </dt>
-    <dd>{{% md %}}{{% /md %}}</dd>
-    <dt class="property-optional"
+    <dd>{{% md %}}{{% /md %}}</dd><dt class="property-optional"
             title="Optional">
         <span id="removable_csharp">
 <a href="#removable_csharp" style="color: inherit; text-decoration: inherit;">Removable</a>
@@ -4081,8 +3724,7 @@ This attribute is supported for backwards compatibility with Splunk software ver
         <span class="property-indicator"></span>
         <span class="property-type">bool</span>
     </dt>
-    <dd>{{% md %}}{{% /md %}}</dd>
-    <dt class="property-optional"
+    <dd>{{% md %}}{{% /md %}}</dd><dt class="property-optional"
             title="Optional">
         <span id="sharing_csharp">
 <a href="#sharing_csharp" style="color: inherit; text-decoration: inherit;">Sharing</a>
@@ -4090,8 +3732,7 @@ This attribute is supported for backwards compatibility with Splunk software ver
         <span class="property-indicator"></span>
         <span class="property-type">string</span>
     </dt>
-    <dd>{{% md %}}{{% /md %}}</dd>
-    <dt class="property-optional"
+    <dd>{{% md %}}{{% /md %}}</dd><dt class="property-optional"
             title="Optional">
         <span id="writes_csharp">
 <a href="#writes_csharp" style="color: inherit; text-decoration: inherit;">Writes</a>
@@ -4099,14 +3740,11 @@ This attribute is supported for backwards compatibility with Splunk software ver
         <span class="property-indicator"></span>
         <span class="property-type">List&lt;string&gt;</span>
     </dt>
-    <dd>{{% md %}}{{% /md %}}</dd>
-</dl>
+    <dd>{{% md %}}{{% /md %}}</dd></dl>
 {{% /choosable %}}
 
 {{% choosable language go %}}
-<dl class="resources-properties">
-
-    <dt class="property-optional"
+<dl class="resources-properties"><dt class="property-optional"
             title="Optional">
         <span id="app_go">
 <a href="#app_go" style="color: inherit; text-decoration: inherit;">App</a>
@@ -4114,8 +3752,7 @@ This attribute is supported for backwards compatibility with Splunk software ver
         <span class="property-indicator"></span>
         <span class="property-type">string</span>
     </dt>
-    <dd>{{% md %}}{{% /md %}}</dd>
-    <dt class="property-optional"
+    <dd>{{% md %}}{{% /md %}}</dd><dt class="property-optional"
             title="Optional">
         <span id="canchangeperms_go">
 <a href="#canchangeperms_go" style="color: inherit; text-decoration: inherit;">Can<wbr>Change<wbr>Perms</a>
@@ -4123,8 +3760,7 @@ This attribute is supported for backwards compatibility with Splunk software ver
         <span class="property-indicator"></span>
         <span class="property-type">bool</span>
     </dt>
-    <dd>{{% md %}}{{% /md %}}</dd>
-    <dt class="property-optional"
+    <dd>{{% md %}}{{% /md %}}</dd><dt class="property-optional"
             title="Optional">
         <span id="canshareapp_go">
 <a href="#canshareapp_go" style="color: inherit; text-decoration: inherit;">Can<wbr>Share<wbr>App</a>
@@ -4132,8 +3768,7 @@ This attribute is supported for backwards compatibility with Splunk software ver
         <span class="property-indicator"></span>
         <span class="property-type">bool</span>
     </dt>
-    <dd>{{% md %}}{{% /md %}}</dd>
-    <dt class="property-optional"
+    <dd>{{% md %}}{{% /md %}}</dd><dt class="property-optional"
             title="Optional">
         <span id="canshareglobal_go">
 <a href="#canshareglobal_go" style="color: inherit; text-decoration: inherit;">Can<wbr>Share<wbr>Global</a>
@@ -4141,8 +3776,7 @@ This attribute is supported for backwards compatibility with Splunk software ver
         <span class="property-indicator"></span>
         <span class="property-type">bool</span>
     </dt>
-    <dd>{{% md %}}{{% /md %}}</dd>
-    <dt class="property-optional"
+    <dd>{{% md %}}{{% /md %}}</dd><dt class="property-optional"
             title="Optional">
         <span id="canshareuser_go">
 <a href="#canshareuser_go" style="color: inherit; text-decoration: inherit;">Can<wbr>Share<wbr>User</a>
@@ -4150,8 +3784,7 @@ This attribute is supported for backwards compatibility with Splunk software ver
         <span class="property-indicator"></span>
         <span class="property-type">bool</span>
     </dt>
-    <dd>{{% md %}}{{% /md %}}</dd>
-    <dt class="property-optional"
+    <dd>{{% md %}}{{% /md %}}</dd><dt class="property-optional"
             title="Optional">
         <span id="canwrite_go">
 <a href="#canwrite_go" style="color: inherit; text-decoration: inherit;">Can<wbr>Write</a>
@@ -4159,8 +3792,7 @@ This attribute is supported for backwards compatibility with Splunk software ver
         <span class="property-indicator"></span>
         <span class="property-type">bool</span>
     </dt>
-    <dd>{{% md %}}{{% /md %}}</dd>
-    <dt class="property-optional"
+    <dd>{{% md %}}{{% /md %}}</dd><dt class="property-optional"
             title="Optional">
         <span id="owner_go">
 <a href="#owner_go" style="color: inherit; text-decoration: inherit;">Owner</a>
@@ -4168,8 +3800,7 @@ This attribute is supported for backwards compatibility with Splunk software ver
         <span class="property-indicator"></span>
         <span class="property-type">string</span>
     </dt>
-    <dd>{{% md %}}{{% /md %}}</dd>
-    <dt class="property-optional"
+    <dd>{{% md %}}{{% /md %}}</dd><dt class="property-optional"
             title="Optional">
         <span id="reads_go">
 <a href="#reads_go" style="color: inherit; text-decoration: inherit;">Reads</a>
@@ -4177,8 +3808,7 @@ This attribute is supported for backwards compatibility with Splunk software ver
         <span class="property-indicator"></span>
         <span class="property-type">[]string</span>
     </dt>
-    <dd>{{% md %}}{{% /md %}}</dd>
-    <dt class="property-optional"
+    <dd>{{% md %}}{{% /md %}}</dd><dt class="property-optional"
             title="Optional">
         <span id="removable_go">
 <a href="#removable_go" style="color: inherit; text-decoration: inherit;">Removable</a>
@@ -4186,8 +3816,7 @@ This attribute is supported for backwards compatibility with Splunk software ver
         <span class="property-indicator"></span>
         <span class="property-type">bool</span>
     </dt>
-    <dd>{{% md %}}{{% /md %}}</dd>
-    <dt class="property-optional"
+    <dd>{{% md %}}{{% /md %}}</dd><dt class="property-optional"
             title="Optional">
         <span id="sharing_go">
 <a href="#sharing_go" style="color: inherit; text-decoration: inherit;">Sharing</a>
@@ -4195,8 +3824,7 @@ This attribute is supported for backwards compatibility with Splunk software ver
         <span class="property-indicator"></span>
         <span class="property-type">string</span>
     </dt>
-    <dd>{{% md %}}{{% /md %}}</dd>
-    <dt class="property-optional"
+    <dd>{{% md %}}{{% /md %}}</dd><dt class="property-optional"
             title="Optional">
         <span id="writes_go">
 <a href="#writes_go" style="color: inherit; text-decoration: inherit;">Writes</a>
@@ -4204,14 +3832,11 @@ This attribute is supported for backwards compatibility with Splunk software ver
         <span class="property-indicator"></span>
         <span class="property-type">[]string</span>
     </dt>
-    <dd>{{% md %}}{{% /md %}}</dd>
-</dl>
+    <dd>{{% md %}}{{% /md %}}</dd></dl>
 {{% /choosable %}}
 
 {{% choosable language nodejs %}}
-<dl class="resources-properties">
-
-    <dt class="property-optional"
+<dl class="resources-properties"><dt class="property-optional"
             title="Optional">
         <span id="app_nodejs">
 <a href="#app_nodejs" style="color: inherit; text-decoration: inherit;">app</a>
@@ -4219,8 +3844,7 @@ This attribute is supported for backwards compatibility with Splunk software ver
         <span class="property-indicator"></span>
         <span class="property-type">string</span>
     </dt>
-    <dd>{{% md %}}{{% /md %}}</dd>
-    <dt class="property-optional"
+    <dd>{{% md %}}{{% /md %}}</dd><dt class="property-optional"
             title="Optional">
         <span id="canchangeperms_nodejs">
 <a href="#canchangeperms_nodejs" style="color: inherit; text-decoration: inherit;">can<wbr>Change<wbr>Perms</a>
@@ -4228,8 +3852,7 @@ This attribute is supported for backwards compatibility with Splunk software ver
         <span class="property-indicator"></span>
         <span class="property-type">boolean</span>
     </dt>
-    <dd>{{% md %}}{{% /md %}}</dd>
-    <dt class="property-optional"
+    <dd>{{% md %}}{{% /md %}}</dd><dt class="property-optional"
             title="Optional">
         <span id="canshareapp_nodejs">
 <a href="#canshareapp_nodejs" style="color: inherit; text-decoration: inherit;">can<wbr>Share<wbr>App</a>
@@ -4237,8 +3860,7 @@ This attribute is supported for backwards compatibility with Splunk software ver
         <span class="property-indicator"></span>
         <span class="property-type">boolean</span>
     </dt>
-    <dd>{{% md %}}{{% /md %}}</dd>
-    <dt class="property-optional"
+    <dd>{{% md %}}{{% /md %}}</dd><dt class="property-optional"
             title="Optional">
         <span id="canshareglobal_nodejs">
 <a href="#canshareglobal_nodejs" style="color: inherit; text-decoration: inherit;">can<wbr>Share<wbr>Global</a>
@@ -4246,8 +3868,7 @@ This attribute is supported for backwards compatibility with Splunk software ver
         <span class="property-indicator"></span>
         <span class="property-type">boolean</span>
     </dt>
-    <dd>{{% md %}}{{% /md %}}</dd>
-    <dt class="property-optional"
+    <dd>{{% md %}}{{% /md %}}</dd><dt class="property-optional"
             title="Optional">
         <span id="canshareuser_nodejs">
 <a href="#canshareuser_nodejs" style="color: inherit; text-decoration: inherit;">can<wbr>Share<wbr>User</a>
@@ -4255,8 +3876,7 @@ This attribute is supported for backwards compatibility with Splunk software ver
         <span class="property-indicator"></span>
         <span class="property-type">boolean</span>
     </dt>
-    <dd>{{% md %}}{{% /md %}}</dd>
-    <dt class="property-optional"
+    <dd>{{% md %}}{{% /md %}}</dd><dt class="property-optional"
             title="Optional">
         <span id="canwrite_nodejs">
 <a href="#canwrite_nodejs" style="color: inherit; text-decoration: inherit;">can<wbr>Write</a>
@@ -4264,8 +3884,7 @@ This attribute is supported for backwards compatibility with Splunk software ver
         <span class="property-indicator"></span>
         <span class="property-type">boolean</span>
     </dt>
-    <dd>{{% md %}}{{% /md %}}</dd>
-    <dt class="property-optional"
+    <dd>{{% md %}}{{% /md %}}</dd><dt class="property-optional"
             title="Optional">
         <span id="owner_nodejs">
 <a href="#owner_nodejs" style="color: inherit; text-decoration: inherit;">owner</a>
@@ -4273,8 +3892,7 @@ This attribute is supported for backwards compatibility with Splunk software ver
         <span class="property-indicator"></span>
         <span class="property-type">string</span>
     </dt>
-    <dd>{{% md %}}{{% /md %}}</dd>
-    <dt class="property-optional"
+    <dd>{{% md %}}{{% /md %}}</dd><dt class="property-optional"
             title="Optional">
         <span id="reads_nodejs">
 <a href="#reads_nodejs" style="color: inherit; text-decoration: inherit;">reads</a>
@@ -4282,8 +3900,7 @@ This attribute is supported for backwards compatibility with Splunk software ver
         <span class="property-indicator"></span>
         <span class="property-type">string[]</span>
     </dt>
-    <dd>{{% md %}}{{% /md %}}</dd>
-    <dt class="property-optional"
+    <dd>{{% md %}}{{% /md %}}</dd><dt class="property-optional"
             title="Optional">
         <span id="removable_nodejs">
 <a href="#removable_nodejs" style="color: inherit; text-decoration: inherit;">removable</a>
@@ -4291,8 +3908,7 @@ This attribute is supported for backwards compatibility with Splunk software ver
         <span class="property-indicator"></span>
         <span class="property-type">boolean</span>
     </dt>
-    <dd>{{% md %}}{{% /md %}}</dd>
-    <dt class="property-optional"
+    <dd>{{% md %}}{{% /md %}}</dd><dt class="property-optional"
             title="Optional">
         <span id="sharing_nodejs">
 <a href="#sharing_nodejs" style="color: inherit; text-decoration: inherit;">sharing</a>
@@ -4300,8 +3916,7 @@ This attribute is supported for backwards compatibility with Splunk software ver
         <span class="property-indicator"></span>
         <span class="property-type">string</span>
     </dt>
-    <dd>{{% md %}}{{% /md %}}</dd>
-    <dt class="property-optional"
+    <dd>{{% md %}}{{% /md %}}</dd><dt class="property-optional"
             title="Optional">
         <span id="writes_nodejs">
 <a href="#writes_nodejs" style="color: inherit; text-decoration: inherit;">writes</a>
@@ -4309,14 +3924,11 @@ This attribute is supported for backwards compatibility with Splunk software ver
         <span class="property-indicator"></span>
         <span class="property-type">string[]</span>
     </dt>
-    <dd>{{% md %}}{{% /md %}}</dd>
-</dl>
+    <dd>{{% md %}}{{% /md %}}</dd></dl>
 {{% /choosable %}}
 
 {{% choosable language python %}}
-<dl class="resources-properties">
-
-    <dt class="property-optional"
+<dl class="resources-properties"><dt class="property-optional"
             title="Optional">
         <span id="app_python">
 <a href="#app_python" style="color: inherit; text-decoration: inherit;">app</a>
@@ -4324,8 +3936,7 @@ This attribute is supported for backwards compatibility with Splunk software ver
         <span class="property-indicator"></span>
         <span class="property-type">str</span>
     </dt>
-    <dd>{{% md %}}{{% /md %}}</dd>
-    <dt class="property-optional"
+    <dd>{{% md %}}{{% /md %}}</dd><dt class="property-optional"
             title="Optional">
         <span id="can_change_perms_python">
 <a href="#can_change_perms_python" style="color: inherit; text-decoration: inherit;">can_<wbr>change_<wbr>perms</a>
@@ -4333,8 +3944,7 @@ This attribute is supported for backwards compatibility with Splunk software ver
         <span class="property-indicator"></span>
         <span class="property-type">bool</span>
     </dt>
-    <dd>{{% md %}}{{% /md %}}</dd>
-    <dt class="property-optional"
+    <dd>{{% md %}}{{% /md %}}</dd><dt class="property-optional"
             title="Optional">
         <span id="can_share_app_python">
 <a href="#can_share_app_python" style="color: inherit; text-decoration: inherit;">can_<wbr>share_<wbr>app</a>
@@ -4342,8 +3952,7 @@ This attribute is supported for backwards compatibility with Splunk software ver
         <span class="property-indicator"></span>
         <span class="property-type">bool</span>
     </dt>
-    <dd>{{% md %}}{{% /md %}}</dd>
-    <dt class="property-optional"
+    <dd>{{% md %}}{{% /md %}}</dd><dt class="property-optional"
             title="Optional">
         <span id="can_share_global_python">
 <a href="#can_share_global_python" style="color: inherit; text-decoration: inherit;">can_<wbr>share_<wbr>global</a>
@@ -4351,8 +3960,7 @@ This attribute is supported for backwards compatibility with Splunk software ver
         <span class="property-indicator"></span>
         <span class="property-type">bool</span>
     </dt>
-    <dd>{{% md %}}{{% /md %}}</dd>
-    <dt class="property-optional"
+    <dd>{{% md %}}{{% /md %}}</dd><dt class="property-optional"
             title="Optional">
         <span id="can_share_user_python">
 <a href="#can_share_user_python" style="color: inherit; text-decoration: inherit;">can_<wbr>share_<wbr>user</a>
@@ -4360,8 +3968,7 @@ This attribute is supported for backwards compatibility with Splunk software ver
         <span class="property-indicator"></span>
         <span class="property-type">bool</span>
     </dt>
-    <dd>{{% md %}}{{% /md %}}</dd>
-    <dt class="property-optional"
+    <dd>{{% md %}}{{% /md %}}</dd><dt class="property-optional"
             title="Optional">
         <span id="can_write_python">
 <a href="#can_write_python" style="color: inherit; text-decoration: inherit;">can_<wbr>write</a>
@@ -4369,8 +3976,7 @@ This attribute is supported for backwards compatibility with Splunk software ver
         <span class="property-indicator"></span>
         <span class="property-type">bool</span>
     </dt>
-    <dd>{{% md %}}{{% /md %}}</dd>
-    <dt class="property-optional"
+    <dd>{{% md %}}{{% /md %}}</dd><dt class="property-optional"
             title="Optional">
         <span id="owner_python">
 <a href="#owner_python" style="color: inherit; text-decoration: inherit;">owner</a>
@@ -4378,8 +3984,7 @@ This attribute is supported for backwards compatibility with Splunk software ver
         <span class="property-indicator"></span>
         <span class="property-type">str</span>
     </dt>
-    <dd>{{% md %}}{{% /md %}}</dd>
-    <dt class="property-optional"
+    <dd>{{% md %}}{{% /md %}}</dd><dt class="property-optional"
             title="Optional">
         <span id="reads_python">
 <a href="#reads_python" style="color: inherit; text-decoration: inherit;">reads</a>
@@ -4387,8 +3992,7 @@ This attribute is supported for backwards compatibility with Splunk software ver
         <span class="property-indicator"></span>
         <span class="property-type">Sequence[str]</span>
     </dt>
-    <dd>{{% md %}}{{% /md %}}</dd>
-    <dt class="property-optional"
+    <dd>{{% md %}}{{% /md %}}</dd><dt class="property-optional"
             title="Optional">
         <span id="removable_python">
 <a href="#removable_python" style="color: inherit; text-decoration: inherit;">removable</a>
@@ -4396,8 +4000,7 @@ This attribute is supported for backwards compatibility with Splunk software ver
         <span class="property-indicator"></span>
         <span class="property-type">bool</span>
     </dt>
-    <dd>{{% md %}}{{% /md %}}</dd>
-    <dt class="property-optional"
+    <dd>{{% md %}}{{% /md %}}</dd><dt class="property-optional"
             title="Optional">
         <span id="sharing_python">
 <a href="#sharing_python" style="color: inherit; text-decoration: inherit;">sharing</a>
@@ -4405,8 +4008,7 @@ This attribute is supported for backwards compatibility with Splunk software ver
         <span class="property-indicator"></span>
         <span class="property-type">str</span>
     </dt>
-    <dd>{{% md %}}{{% /md %}}</dd>
-    <dt class="property-optional"
+    <dd>{{% md %}}{{% /md %}}</dd><dt class="property-optional"
             title="Optional">
         <span id="writes_python">
 <a href="#writes_python" style="color: inherit; text-decoration: inherit;">writes</a>
@@ -4414,8 +4016,7 @@ This attribute is supported for backwards compatibility with Splunk software ver
         <span class="property-indicator"></span>
         <span class="property-type">Sequence[str]</span>
     </dt>
-    <dd>{{% md %}}{{% /md %}}</dd>
-</dl>
+    <dd>{{% md %}}{{% /md %}}</dd></dl>
 {{% /choosable %}}
 
 
@@ -4426,6 +4027,6 @@ This attribute is supported for backwards compatibility with Splunk software ver
 	<dt>License</dt>
 	<dd>Apache-2.0</dd>
 	<dt>Notes</dt>
-	<dd>This Pulumi package is based on the [`splunk` Terraform Provider](https://github.com/splunk/terraform-provider-splunk).</dd>
+	<dd>{{% md %}}This Pulumi package is based on the [`splunk` Terraform Provider](https://github.com/splunk/terraform-provider-splunk).{{% /md %}}</dd>
 </dl>
 

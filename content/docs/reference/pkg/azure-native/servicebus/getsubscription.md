@@ -51,9 +51,7 @@ The following arguments are supported:
 
 
 {{% choosable language csharp %}}
-<dl class="resources-properties">
-
-    <dt class="property-required"
+<dl class="resources-properties"><dt class="property-required"
             title="Required">
         <span id="namespacename_csharp">
 <a href="#namespacename_csharp" style="color: inherit; text-decoration: inherit;">Namespace<wbr>Name</a>
@@ -61,8 +59,7 @@ The following arguments are supported:
         <span class="property-indicator"></span>
         <span class="property-type">string</span>
     </dt>
-    <dd>{{% md %}}The namespace name{{% /md %}}</dd>
-    <dt class="property-required"
+    <dd>{{% md %}}The namespace name{{% /md %}}</dd><dt class="property-required"
             title="Required">
         <span id="resourcegroupname_csharp">
 <a href="#resourcegroupname_csharp" style="color: inherit; text-decoration: inherit;">Resource<wbr>Group<wbr>Name</a>
@@ -70,8 +67,7 @@ The following arguments are supported:
         <span class="property-indicator"></span>
         <span class="property-type">string</span>
     </dt>
-    <dd>{{% md %}}Name of the Resource group within the Azure subscription.{{% /md %}}</dd>
-    <dt class="property-required"
+    <dd>{{% md %}}Name of the Resource group within the Azure subscription.{{% /md %}}</dd><dt class="property-required"
             title="Required">
         <span id="subscriptionname_csharp">
 <a href="#subscriptionname_csharp" style="color: inherit; text-decoration: inherit;">Subscription<wbr>Name</a>
@@ -79,8 +75,7 @@ The following arguments are supported:
         <span class="property-indicator"></span>
         <span class="property-type">string</span>
     </dt>
-    <dd>{{% md %}}The subscription name.{{% /md %}}</dd>
-    <dt class="property-required"
+    <dd>{{% md %}}The subscription name.{{% /md %}}</dd><dt class="property-required"
             title="Required">
         <span id="topicname_csharp">
 <a href="#topicname_csharp" style="color: inherit; text-decoration: inherit;">Topic<wbr>Name</a>
@@ -88,14 +83,11 @@ The following arguments are supported:
         <span class="property-indicator"></span>
         <span class="property-type">string</span>
     </dt>
-    <dd>{{% md %}}The topic name.{{% /md %}}</dd>
-</dl>
+    <dd>{{% md %}}The topic name.{{% /md %}}</dd></dl>
 {{% /choosable %}}
 
 {{% choosable language go %}}
-<dl class="resources-properties">
-
-    <dt class="property-required"
+<dl class="resources-properties"><dt class="property-required"
             title="Required">
         <span id="namespacename_go">
 <a href="#namespacename_go" style="color: inherit; text-decoration: inherit;">Namespace<wbr>Name</a>
@@ -103,8 +95,7 @@ The following arguments are supported:
         <span class="property-indicator"></span>
         <span class="property-type">string</span>
     </dt>
-    <dd>{{% md %}}The namespace name{{% /md %}}</dd>
-    <dt class="property-required"
+    <dd>{{% md %}}The namespace name{{% /md %}}</dd><dt class="property-required"
             title="Required">
         <span id="resourcegroupname_go">
 <a href="#resourcegroupname_go" style="color: inherit; text-decoration: inherit;">Resource<wbr>Group<wbr>Name</a>
@@ -112,8 +103,7 @@ The following arguments are supported:
         <span class="property-indicator"></span>
         <span class="property-type">string</span>
     </dt>
-    <dd>{{% md %}}Name of the Resource group within the Azure subscription.{{% /md %}}</dd>
-    <dt class="property-required"
+    <dd>{{% md %}}Name of the Resource group within the Azure subscription.{{% /md %}}</dd><dt class="property-required"
             title="Required">
         <span id="subscriptionname_go">
 <a href="#subscriptionname_go" style="color: inherit; text-decoration: inherit;">Subscription<wbr>Name</a>
@@ -121,8 +111,7 @@ The following arguments are supported:
         <span class="property-indicator"></span>
         <span class="property-type">string</span>
     </dt>
-    <dd>{{% md %}}The subscription name.{{% /md %}}</dd>
-    <dt class="property-required"
+    <dd>{{% md %}}The subscription name.{{% /md %}}</dd><dt class="property-required"
             title="Required">
         <span id="topicname_go">
 <a href="#topicname_go" style="color: inherit; text-decoration: inherit;">Topic<wbr>Name</a>
@@ -130,14 +119,11 @@ The following arguments are supported:
         <span class="property-indicator"></span>
         <span class="property-type">string</span>
     </dt>
-    <dd>{{% md %}}The topic name.{{% /md %}}</dd>
-</dl>
+    <dd>{{% md %}}The topic name.{{% /md %}}</dd></dl>
 {{% /choosable %}}
 
 {{% choosable language nodejs %}}
-<dl class="resources-properties">
-
-    <dt class="property-required"
+<dl class="resources-properties"><dt class="property-required"
             title="Required">
         <span id="namespacename_nodejs">
 <a href="#namespacename_nodejs" style="color: inherit; text-decoration: inherit;">namespace<wbr>Name</a>
@@ -145,8 +131,7 @@ The following arguments are supported:
         <span class="property-indicator"></span>
         <span class="property-type">string</span>
     </dt>
-    <dd>{{% md %}}The namespace name{{% /md %}}</dd>
-    <dt class="property-required"
+    <dd>{{% md %}}The namespace name{{% /md %}}</dd><dt class="property-required"
             title="Required">
         <span id="resourcegroupname_nodejs">
 <a href="#resourcegroupname_nodejs" style="color: inherit; text-decoration: inherit;">resource<wbr>Group<wbr>Name</a>
@@ -154,8 +139,7 @@ The following arguments are supported:
         <span class="property-indicator"></span>
         <span class="property-type">string</span>
     </dt>
-    <dd>{{% md %}}Name of the Resource group within the Azure subscription.{{% /md %}}</dd>
-    <dt class="property-required"
+    <dd>{{% md %}}Name of the Resource group within the Azure subscription.{{% /md %}}</dd><dt class="property-required"
             title="Required">
         <span id="subscriptionname_nodejs">
 <a href="#subscriptionname_nodejs" style="color: inherit; text-decoration: inherit;">subscription<wbr>Name</a>
@@ -163,8 +147,7 @@ The following arguments are supported:
         <span class="property-indicator"></span>
         <span class="property-type">string</span>
     </dt>
-    <dd>{{% md %}}The subscription name.{{% /md %}}</dd>
-    <dt class="property-required"
+    <dd>{{% md %}}The subscription name.{{% /md %}}</dd><dt class="property-required"
             title="Required">
         <span id="topicname_nodejs">
 <a href="#topicname_nodejs" style="color: inherit; text-decoration: inherit;">topic<wbr>Name</a>
@@ -172,14 +155,11 @@ The following arguments are supported:
         <span class="property-indicator"></span>
         <span class="property-type">string</span>
     </dt>
-    <dd>{{% md %}}The topic name.{{% /md %}}</dd>
-</dl>
+    <dd>{{% md %}}The topic name.{{% /md %}}</dd></dl>
 {{% /choosable %}}
 
 {{% choosable language python %}}
-<dl class="resources-properties">
-
-    <dt class="property-required"
+<dl class="resources-properties"><dt class="property-required"
             title="Required">
         <span id="namespace_name_python">
 <a href="#namespace_name_python" style="color: inherit; text-decoration: inherit;">namespace_<wbr>name</a>
@@ -187,8 +167,7 @@ The following arguments are supported:
         <span class="property-indicator"></span>
         <span class="property-type">str</span>
     </dt>
-    <dd>{{% md %}}The namespace name{{% /md %}}</dd>
-    <dt class="property-required"
+    <dd>{{% md %}}The namespace name{{% /md %}}</dd><dt class="property-required"
             title="Required">
         <span id="resource_group_name_python">
 <a href="#resource_group_name_python" style="color: inherit; text-decoration: inherit;">resource_<wbr>group_<wbr>name</a>
@@ -196,8 +175,7 @@ The following arguments are supported:
         <span class="property-indicator"></span>
         <span class="property-type">str</span>
     </dt>
-    <dd>{{% md %}}Name of the Resource group within the Azure subscription.{{% /md %}}</dd>
-    <dt class="property-required"
+    <dd>{{% md %}}Name of the Resource group within the Azure subscription.{{% /md %}}</dd><dt class="property-required"
             title="Required">
         <span id="subscription_name_python">
 <a href="#subscription_name_python" style="color: inherit; text-decoration: inherit;">subscription_<wbr>name</a>
@@ -205,8 +183,7 @@ The following arguments are supported:
         <span class="property-indicator"></span>
         <span class="property-type">str</span>
     </dt>
-    <dd>{{% md %}}The subscription name.{{% /md %}}</dd>
-    <dt class="property-required"
+    <dd>{{% md %}}The subscription name.{{% /md %}}</dd><dt class="property-required"
             title="Required">
         <span id="topic_name_python">
 <a href="#topic_name_python" style="color: inherit; text-decoration: inherit;">topic_<wbr>name</a>
@@ -214,8 +191,7 @@ The following arguments are supported:
         <span class="property-indicator"></span>
         <span class="property-type">str</span>
     </dt>
-    <dd>{{% md %}}The topic name.{{% /md %}}</dd>
-</dl>
+    <dd>{{% md %}}The topic name.{{% /md %}}</dd></dl>
 {{% /choosable %}}
 
 
@@ -228,9 +204,7 @@ The following output properties are available:
 
 
 {{% choosable language csharp %}}
-<dl class="resources-properties">
-
-    <dt class="property-"
+<dl class="resources-properties"><dt class="property-"
             title="">
         <span id="accessedat_csharp">
 <a href="#accessedat_csharp" style="color: inherit; text-decoration: inherit;">Accessed<wbr>At</a>
@@ -238,8 +212,7 @@ The following output properties are available:
         <span class="property-indicator"></span>
         <span class="property-type">string</span>
     </dt>
-    <dd>{{% md %}}Last time there was a receive request to this subscription.{{% /md %}}</dd>
-    <dt class="property-"
+    <dd>{{% md %}}Last time there was a receive request to this subscription.{{% /md %}}</dd><dt class="property-"
             title="">
         <span id="countdetails_csharp">
 <a href="#countdetails_csharp" style="color: inherit; text-decoration: inherit;">Count<wbr>Details</a>
@@ -247,8 +220,7 @@ The following output properties are available:
         <span class="property-indicator"></span>
         <span class="property-type"><a href="#messagecountdetailsresponse">Pulumi.<wbr>Azure<wbr>Native.<wbr>Service<wbr>Bus.<wbr>Outputs.<wbr>Message<wbr>Count<wbr>Details<wbr>Response</a></span>
     </dt>
-    <dd>{{% md %}}Message count details{{% /md %}}</dd>
-    <dt class="property-"
+    <dd>{{% md %}}Message count details{{% /md %}}</dd><dt class="property-"
             title="">
         <span id="createdat_csharp">
 <a href="#createdat_csharp" style="color: inherit; text-decoration: inherit;">Created<wbr>At</a>
@@ -256,8 +228,7 @@ The following output properties are available:
         <span class="property-indicator"></span>
         <span class="property-type">string</span>
     </dt>
-    <dd>{{% md %}}Exact time the message was created.{{% /md %}}</dd>
-    <dt class="property-"
+    <dd>{{% md %}}Exact time the message was created.{{% /md %}}</dd><dt class="property-"
             title="">
         <span id="id_csharp">
 <a href="#id_csharp" style="color: inherit; text-decoration: inherit;">Id</a>
@@ -265,8 +236,7 @@ The following output properties are available:
         <span class="property-indicator"></span>
         <span class="property-type">string</span>
     </dt>
-    <dd>{{% md %}}Resource Id{{% /md %}}</dd>
-    <dt class="property-"
+    <dd>{{% md %}}Resource Id{{% /md %}}</dd><dt class="property-"
             title="">
         <span id="messagecount_csharp">
 <a href="#messagecount_csharp" style="color: inherit; text-decoration: inherit;">Message<wbr>Count</a>
@@ -274,8 +244,7 @@ The following output properties are available:
         <span class="property-indicator"></span>
         <span class="property-type">double</span>
     </dt>
-    <dd>{{% md %}}Number of messages.{{% /md %}}</dd>
-    <dt class="property-"
+    <dd>{{% md %}}Number of messages.{{% /md %}}</dd><dt class="property-"
             title="">
         <span id="name_csharp">
 <a href="#name_csharp" style="color: inherit; text-decoration: inherit;">Name</a>
@@ -283,8 +252,7 @@ The following output properties are available:
         <span class="property-indicator"></span>
         <span class="property-type">string</span>
     </dt>
-    <dd>{{% md %}}Resource name{{% /md %}}</dd>
-    <dt class="property-"
+    <dd>{{% md %}}Resource name{{% /md %}}</dd><dt class="property-"
             title="">
         <span id="type_csharp">
 <a href="#type_csharp" style="color: inherit; text-decoration: inherit;">Type</a>
@@ -292,8 +260,7 @@ The following output properties are available:
         <span class="property-indicator"></span>
         <span class="property-type">string</span>
     </dt>
-    <dd>{{% md %}}Resource type{{% /md %}}</dd>
-    <dt class="property-"
+    <dd>{{% md %}}Resource type{{% /md %}}</dd><dt class="property-"
             title="">
         <span id="updatedat_csharp">
 <a href="#updatedat_csharp" style="color: inherit; text-decoration: inherit;">Updated<wbr>At</a>
@@ -301,8 +268,7 @@ The following output properties are available:
         <span class="property-indicator"></span>
         <span class="property-type">string</span>
     </dt>
-    <dd>{{% md %}}The exact time the message was updated.{{% /md %}}</dd>
-    <dt class="property-"
+    <dd>{{% md %}}The exact time the message was updated.{{% /md %}}</dd><dt class="property-"
             title="">
         <span id="autodeleteonidle_csharp">
 <a href="#autodeleteonidle_csharp" style="color: inherit; text-decoration: inherit;">Auto<wbr>Delete<wbr>On<wbr>Idle</a>
@@ -310,8 +276,7 @@ The following output properties are available:
         <span class="property-indicator"></span>
         <span class="property-type">string</span>
     </dt>
-    <dd>{{% md %}}ISO 8061 timeSpan idle interval after which the topic is automatically deleted. The minimum duration is 5 minutes.{{% /md %}}</dd>
-    <dt class="property-"
+    <dd>{{% md %}}ISO 8061 timeSpan idle interval after which the topic is automatically deleted. The minimum duration is 5 minutes.{{% /md %}}</dd><dt class="property-"
             title="">
         <span id="deadletteringonfilterevaluationexceptions_csharp">
 <a href="#deadletteringonfilterevaluationexceptions_csharp" style="color: inherit; text-decoration: inherit;">Dead<wbr>Lettering<wbr>On<wbr>Filter<wbr>Evaluation<wbr>Exceptions</a>
@@ -319,8 +284,7 @@ The following output properties are available:
         <span class="property-indicator"></span>
         <span class="property-type">bool</span>
     </dt>
-    <dd>{{% md %}}Value that indicates whether a subscription has dead letter support on filter evaluation exceptions.{{% /md %}}</dd>
-    <dt class="property-"
+    <dd>{{% md %}}Value that indicates whether a subscription has dead letter support on filter evaluation exceptions.{{% /md %}}</dd><dt class="property-"
             title="">
         <span id="deadletteringonmessageexpiration_csharp">
 <a href="#deadletteringonmessageexpiration_csharp" style="color: inherit; text-decoration: inherit;">Dead<wbr>Lettering<wbr>On<wbr>Message<wbr>Expiration</a>
@@ -328,8 +292,7 @@ The following output properties are available:
         <span class="property-indicator"></span>
         <span class="property-type">bool</span>
     </dt>
-    <dd>{{% md %}}Value that indicates whether a subscription has dead letter support when a message expires.{{% /md %}}</dd>
-    <dt class="property-"
+    <dd>{{% md %}}Value that indicates whether a subscription has dead letter support when a message expires.{{% /md %}}</dd><dt class="property-"
             title="">
         <span id="defaultmessagetimetolive_csharp">
 <a href="#defaultmessagetimetolive_csharp" style="color: inherit; text-decoration: inherit;">Default<wbr>Message<wbr>Time<wbr>To<wbr>Live</a>
@@ -337,8 +300,7 @@ The following output properties are available:
         <span class="property-indicator"></span>
         <span class="property-type">string</span>
     </dt>
-    <dd>{{% md %}}ISO 8061 Default message timespan to live value. This is the duration after which the message expires, starting from when the message is sent to Service Bus. This is the default value used when TimeToLive is not set on a message itself.{{% /md %}}</dd>
-    <dt class="property-"
+    <dd>{{% md %}}ISO 8061 Default message timespan to live value. This is the duration after which the message expires, starting from when the message is sent to Service Bus. This is the default value used when TimeToLive is not set on a message itself.{{% /md %}}</dd><dt class="property-"
             title="">
         <span id="duplicatedetectionhistorytimewindow_csharp">
 <a href="#duplicatedetectionhistorytimewindow_csharp" style="color: inherit; text-decoration: inherit;">Duplicate<wbr>Detection<wbr>History<wbr>Time<wbr>Window</a>
@@ -346,8 +308,7 @@ The following output properties are available:
         <span class="property-indicator"></span>
         <span class="property-type">string</span>
     </dt>
-    <dd>{{% md %}}ISO 8601 timeSpan structure that defines the duration of the duplicate detection history. The default value is 10 minutes.{{% /md %}}</dd>
-    <dt class="property-"
+    <dd>{{% md %}}ISO 8601 timeSpan structure that defines the duration of the duplicate detection history. The default value is 10 minutes.{{% /md %}}</dd><dt class="property-"
             title="">
         <span id="enablebatchedoperations_csharp">
 <a href="#enablebatchedoperations_csharp" style="color: inherit; text-decoration: inherit;">Enable<wbr>Batched<wbr>Operations</a>
@@ -355,8 +316,7 @@ The following output properties are available:
         <span class="property-indicator"></span>
         <span class="property-type">bool</span>
     </dt>
-    <dd>{{% md %}}Value that indicates whether server-side batched operations are enabled.{{% /md %}}</dd>
-    <dt class="property-"
+    <dd>{{% md %}}Value that indicates whether server-side batched operations are enabled.{{% /md %}}</dd><dt class="property-"
             title="">
         <span id="forwarddeadletteredmessagesto_csharp">
 <a href="#forwarddeadletteredmessagesto_csharp" style="color: inherit; text-decoration: inherit;">Forward<wbr>Dead<wbr>Lettered<wbr>Messages<wbr>To</a>
@@ -364,8 +324,7 @@ The following output properties are available:
         <span class="property-indicator"></span>
         <span class="property-type">string</span>
     </dt>
-    <dd>{{% md %}}Queue/Topic name to forward the Dead Letter message{{% /md %}}</dd>
-    <dt class="property-"
+    <dd>{{% md %}}Queue/Topic name to forward the Dead Letter message{{% /md %}}</dd><dt class="property-"
             title="">
         <span id="forwardto_csharp">
 <a href="#forwardto_csharp" style="color: inherit; text-decoration: inherit;">Forward<wbr>To</a>
@@ -373,8 +332,7 @@ The following output properties are available:
         <span class="property-indicator"></span>
         <span class="property-type">string</span>
     </dt>
-    <dd>{{% md %}}Queue/Topic name to forward the messages{{% /md %}}</dd>
-    <dt class="property-"
+    <dd>{{% md %}}Queue/Topic name to forward the messages{{% /md %}}</dd><dt class="property-"
             title="">
         <span id="lockduration_csharp">
 <a href="#lockduration_csharp" style="color: inherit; text-decoration: inherit;">Lock<wbr>Duration</a>
@@ -382,8 +340,7 @@ The following output properties are available:
         <span class="property-indicator"></span>
         <span class="property-type">string</span>
     </dt>
-    <dd>{{% md %}}ISO 8061 lock duration timespan for the subscription. The default value is 1 minute.{{% /md %}}</dd>
-    <dt class="property-"
+    <dd>{{% md %}}ISO 8061 lock duration timespan for the subscription. The default value is 1 minute.{{% /md %}}</dd><dt class="property-"
             title="">
         <span id="maxdeliverycount_csharp">
 <a href="#maxdeliverycount_csharp" style="color: inherit; text-decoration: inherit;">Max<wbr>Delivery<wbr>Count</a>
@@ -391,8 +348,7 @@ The following output properties are available:
         <span class="property-indicator"></span>
         <span class="property-type">int</span>
     </dt>
-    <dd>{{% md %}}Number of maximum deliveries.{{% /md %}}</dd>
-    <dt class="property-"
+    <dd>{{% md %}}Number of maximum deliveries.{{% /md %}}</dd><dt class="property-"
             title="">
         <span id="requiressession_csharp">
 <a href="#requiressession_csharp" style="color: inherit; text-decoration: inherit;">Requires<wbr>Session</a>
@@ -400,8 +356,7 @@ The following output properties are available:
         <span class="property-indicator"></span>
         <span class="property-type">bool</span>
     </dt>
-    <dd>{{% md %}}Value indicating if a subscription supports the concept of sessions.{{% /md %}}</dd>
-    <dt class="property-"
+    <dd>{{% md %}}Value indicating if a subscription supports the concept of sessions.{{% /md %}}</dd><dt class="property-"
             title="">
         <span id="status_csharp">
 <a href="#status_csharp" style="color: inherit; text-decoration: inherit;">Status</a>
@@ -409,14 +364,11 @@ The following output properties are available:
         <span class="property-indicator"></span>
         <span class="property-type">string</span>
     </dt>
-    <dd>{{% md %}}Enumerates the possible values for the status of a messaging entity.{{% /md %}}</dd>
-</dl>
+    <dd>{{% md %}}Enumerates the possible values for the status of a messaging entity.{{% /md %}}</dd></dl>
 {{% /choosable %}}
 
 {{% choosable language go %}}
-<dl class="resources-properties">
-
-    <dt class="property-"
+<dl class="resources-properties"><dt class="property-"
             title="">
         <span id="accessedat_go">
 <a href="#accessedat_go" style="color: inherit; text-decoration: inherit;">Accessed<wbr>At</a>
@@ -424,8 +376,7 @@ The following output properties are available:
         <span class="property-indicator"></span>
         <span class="property-type">string</span>
     </dt>
-    <dd>{{% md %}}Last time there was a receive request to this subscription.{{% /md %}}</dd>
-    <dt class="property-"
+    <dd>{{% md %}}Last time there was a receive request to this subscription.{{% /md %}}</dd><dt class="property-"
             title="">
         <span id="countdetails_go">
 <a href="#countdetails_go" style="color: inherit; text-decoration: inherit;">Count<wbr>Details</a>
@@ -433,8 +384,7 @@ The following output properties are available:
         <span class="property-indicator"></span>
         <span class="property-type"><a href="#messagecountdetailsresponse">Message<wbr>Count<wbr>Details<wbr>Response</a></span>
     </dt>
-    <dd>{{% md %}}Message count details{{% /md %}}</dd>
-    <dt class="property-"
+    <dd>{{% md %}}Message count details{{% /md %}}</dd><dt class="property-"
             title="">
         <span id="createdat_go">
 <a href="#createdat_go" style="color: inherit; text-decoration: inherit;">Created<wbr>At</a>
@@ -442,8 +392,7 @@ The following output properties are available:
         <span class="property-indicator"></span>
         <span class="property-type">string</span>
     </dt>
-    <dd>{{% md %}}Exact time the message was created.{{% /md %}}</dd>
-    <dt class="property-"
+    <dd>{{% md %}}Exact time the message was created.{{% /md %}}</dd><dt class="property-"
             title="">
         <span id="id_go">
 <a href="#id_go" style="color: inherit; text-decoration: inherit;">Id</a>
@@ -451,8 +400,7 @@ The following output properties are available:
         <span class="property-indicator"></span>
         <span class="property-type">string</span>
     </dt>
-    <dd>{{% md %}}Resource Id{{% /md %}}</dd>
-    <dt class="property-"
+    <dd>{{% md %}}Resource Id{{% /md %}}</dd><dt class="property-"
             title="">
         <span id="messagecount_go">
 <a href="#messagecount_go" style="color: inherit; text-decoration: inherit;">Message<wbr>Count</a>
@@ -460,8 +408,7 @@ The following output properties are available:
         <span class="property-indicator"></span>
         <span class="property-type">float64</span>
     </dt>
-    <dd>{{% md %}}Number of messages.{{% /md %}}</dd>
-    <dt class="property-"
+    <dd>{{% md %}}Number of messages.{{% /md %}}</dd><dt class="property-"
             title="">
         <span id="name_go">
 <a href="#name_go" style="color: inherit; text-decoration: inherit;">Name</a>
@@ -469,8 +416,7 @@ The following output properties are available:
         <span class="property-indicator"></span>
         <span class="property-type">string</span>
     </dt>
-    <dd>{{% md %}}Resource name{{% /md %}}</dd>
-    <dt class="property-"
+    <dd>{{% md %}}Resource name{{% /md %}}</dd><dt class="property-"
             title="">
         <span id="type_go">
 <a href="#type_go" style="color: inherit; text-decoration: inherit;">Type</a>
@@ -478,8 +424,7 @@ The following output properties are available:
         <span class="property-indicator"></span>
         <span class="property-type">string</span>
     </dt>
-    <dd>{{% md %}}Resource type{{% /md %}}</dd>
-    <dt class="property-"
+    <dd>{{% md %}}Resource type{{% /md %}}</dd><dt class="property-"
             title="">
         <span id="updatedat_go">
 <a href="#updatedat_go" style="color: inherit; text-decoration: inherit;">Updated<wbr>At</a>
@@ -487,8 +432,7 @@ The following output properties are available:
         <span class="property-indicator"></span>
         <span class="property-type">string</span>
     </dt>
-    <dd>{{% md %}}The exact time the message was updated.{{% /md %}}</dd>
-    <dt class="property-"
+    <dd>{{% md %}}The exact time the message was updated.{{% /md %}}</dd><dt class="property-"
             title="">
         <span id="autodeleteonidle_go">
 <a href="#autodeleteonidle_go" style="color: inherit; text-decoration: inherit;">Auto<wbr>Delete<wbr>On<wbr>Idle</a>
@@ -496,8 +440,7 @@ The following output properties are available:
         <span class="property-indicator"></span>
         <span class="property-type">string</span>
     </dt>
-    <dd>{{% md %}}ISO 8061 timeSpan idle interval after which the topic is automatically deleted. The minimum duration is 5 minutes.{{% /md %}}</dd>
-    <dt class="property-"
+    <dd>{{% md %}}ISO 8061 timeSpan idle interval after which the topic is automatically deleted. The minimum duration is 5 minutes.{{% /md %}}</dd><dt class="property-"
             title="">
         <span id="deadletteringonfilterevaluationexceptions_go">
 <a href="#deadletteringonfilterevaluationexceptions_go" style="color: inherit; text-decoration: inherit;">Dead<wbr>Lettering<wbr>On<wbr>Filter<wbr>Evaluation<wbr>Exceptions</a>
@@ -505,8 +448,7 @@ The following output properties are available:
         <span class="property-indicator"></span>
         <span class="property-type">bool</span>
     </dt>
-    <dd>{{% md %}}Value that indicates whether a subscription has dead letter support on filter evaluation exceptions.{{% /md %}}</dd>
-    <dt class="property-"
+    <dd>{{% md %}}Value that indicates whether a subscription has dead letter support on filter evaluation exceptions.{{% /md %}}</dd><dt class="property-"
             title="">
         <span id="deadletteringonmessageexpiration_go">
 <a href="#deadletteringonmessageexpiration_go" style="color: inherit; text-decoration: inherit;">Dead<wbr>Lettering<wbr>On<wbr>Message<wbr>Expiration</a>
@@ -514,8 +456,7 @@ The following output properties are available:
         <span class="property-indicator"></span>
         <span class="property-type">bool</span>
     </dt>
-    <dd>{{% md %}}Value that indicates whether a subscription has dead letter support when a message expires.{{% /md %}}</dd>
-    <dt class="property-"
+    <dd>{{% md %}}Value that indicates whether a subscription has dead letter support when a message expires.{{% /md %}}</dd><dt class="property-"
             title="">
         <span id="defaultmessagetimetolive_go">
 <a href="#defaultmessagetimetolive_go" style="color: inherit; text-decoration: inherit;">Default<wbr>Message<wbr>Time<wbr>To<wbr>Live</a>
@@ -523,8 +464,7 @@ The following output properties are available:
         <span class="property-indicator"></span>
         <span class="property-type">string</span>
     </dt>
-    <dd>{{% md %}}ISO 8061 Default message timespan to live value. This is the duration after which the message expires, starting from when the message is sent to Service Bus. This is the default value used when TimeToLive is not set on a message itself.{{% /md %}}</dd>
-    <dt class="property-"
+    <dd>{{% md %}}ISO 8061 Default message timespan to live value. This is the duration after which the message expires, starting from when the message is sent to Service Bus. This is the default value used when TimeToLive is not set on a message itself.{{% /md %}}</dd><dt class="property-"
             title="">
         <span id="duplicatedetectionhistorytimewindow_go">
 <a href="#duplicatedetectionhistorytimewindow_go" style="color: inherit; text-decoration: inherit;">Duplicate<wbr>Detection<wbr>History<wbr>Time<wbr>Window</a>
@@ -532,8 +472,7 @@ The following output properties are available:
         <span class="property-indicator"></span>
         <span class="property-type">string</span>
     </dt>
-    <dd>{{% md %}}ISO 8601 timeSpan structure that defines the duration of the duplicate detection history. The default value is 10 minutes.{{% /md %}}</dd>
-    <dt class="property-"
+    <dd>{{% md %}}ISO 8601 timeSpan structure that defines the duration of the duplicate detection history. The default value is 10 minutes.{{% /md %}}</dd><dt class="property-"
             title="">
         <span id="enablebatchedoperations_go">
 <a href="#enablebatchedoperations_go" style="color: inherit; text-decoration: inherit;">Enable<wbr>Batched<wbr>Operations</a>
@@ -541,8 +480,7 @@ The following output properties are available:
         <span class="property-indicator"></span>
         <span class="property-type">bool</span>
     </dt>
-    <dd>{{% md %}}Value that indicates whether server-side batched operations are enabled.{{% /md %}}</dd>
-    <dt class="property-"
+    <dd>{{% md %}}Value that indicates whether server-side batched operations are enabled.{{% /md %}}</dd><dt class="property-"
             title="">
         <span id="forwarddeadletteredmessagesto_go">
 <a href="#forwarddeadletteredmessagesto_go" style="color: inherit; text-decoration: inherit;">Forward<wbr>Dead<wbr>Lettered<wbr>Messages<wbr>To</a>
@@ -550,8 +488,7 @@ The following output properties are available:
         <span class="property-indicator"></span>
         <span class="property-type">string</span>
     </dt>
-    <dd>{{% md %}}Queue/Topic name to forward the Dead Letter message{{% /md %}}</dd>
-    <dt class="property-"
+    <dd>{{% md %}}Queue/Topic name to forward the Dead Letter message{{% /md %}}</dd><dt class="property-"
             title="">
         <span id="forwardto_go">
 <a href="#forwardto_go" style="color: inherit; text-decoration: inherit;">Forward<wbr>To</a>
@@ -559,8 +496,7 @@ The following output properties are available:
         <span class="property-indicator"></span>
         <span class="property-type">string</span>
     </dt>
-    <dd>{{% md %}}Queue/Topic name to forward the messages{{% /md %}}</dd>
-    <dt class="property-"
+    <dd>{{% md %}}Queue/Topic name to forward the messages{{% /md %}}</dd><dt class="property-"
             title="">
         <span id="lockduration_go">
 <a href="#lockduration_go" style="color: inherit; text-decoration: inherit;">Lock<wbr>Duration</a>
@@ -568,8 +504,7 @@ The following output properties are available:
         <span class="property-indicator"></span>
         <span class="property-type">string</span>
     </dt>
-    <dd>{{% md %}}ISO 8061 lock duration timespan for the subscription. The default value is 1 minute.{{% /md %}}</dd>
-    <dt class="property-"
+    <dd>{{% md %}}ISO 8061 lock duration timespan for the subscription. The default value is 1 minute.{{% /md %}}</dd><dt class="property-"
             title="">
         <span id="maxdeliverycount_go">
 <a href="#maxdeliverycount_go" style="color: inherit; text-decoration: inherit;">Max<wbr>Delivery<wbr>Count</a>
@@ -577,8 +512,7 @@ The following output properties are available:
         <span class="property-indicator"></span>
         <span class="property-type">int</span>
     </dt>
-    <dd>{{% md %}}Number of maximum deliveries.{{% /md %}}</dd>
-    <dt class="property-"
+    <dd>{{% md %}}Number of maximum deliveries.{{% /md %}}</dd><dt class="property-"
             title="">
         <span id="requiressession_go">
 <a href="#requiressession_go" style="color: inherit; text-decoration: inherit;">Requires<wbr>Session</a>
@@ -586,8 +520,7 @@ The following output properties are available:
         <span class="property-indicator"></span>
         <span class="property-type">bool</span>
     </dt>
-    <dd>{{% md %}}Value indicating if a subscription supports the concept of sessions.{{% /md %}}</dd>
-    <dt class="property-"
+    <dd>{{% md %}}Value indicating if a subscription supports the concept of sessions.{{% /md %}}</dd><dt class="property-"
             title="">
         <span id="status_go">
 <a href="#status_go" style="color: inherit; text-decoration: inherit;">Status</a>
@@ -595,14 +528,11 @@ The following output properties are available:
         <span class="property-indicator"></span>
         <span class="property-type">string</span>
     </dt>
-    <dd>{{% md %}}Enumerates the possible values for the status of a messaging entity.{{% /md %}}</dd>
-</dl>
+    <dd>{{% md %}}Enumerates the possible values for the status of a messaging entity.{{% /md %}}</dd></dl>
 {{% /choosable %}}
 
 {{% choosable language nodejs %}}
-<dl class="resources-properties">
-
-    <dt class="property-"
+<dl class="resources-properties"><dt class="property-"
             title="">
         <span id="accessedat_nodejs">
 <a href="#accessedat_nodejs" style="color: inherit; text-decoration: inherit;">accessed<wbr>At</a>
@@ -610,8 +540,7 @@ The following output properties are available:
         <span class="property-indicator"></span>
         <span class="property-type">string</span>
     </dt>
-    <dd>{{% md %}}Last time there was a receive request to this subscription.{{% /md %}}</dd>
-    <dt class="property-"
+    <dd>{{% md %}}Last time there was a receive request to this subscription.{{% /md %}}</dd><dt class="property-"
             title="">
         <span id="countdetails_nodejs">
 <a href="#countdetails_nodejs" style="color: inherit; text-decoration: inherit;">count<wbr>Details</a>
@@ -619,8 +548,7 @@ The following output properties are available:
         <span class="property-indicator"></span>
         <span class="property-type"><a href="#messagecountdetailsresponse">Message<wbr>Count<wbr>Details<wbr>Response</a></span>
     </dt>
-    <dd>{{% md %}}Message count details{{% /md %}}</dd>
-    <dt class="property-"
+    <dd>{{% md %}}Message count details{{% /md %}}</dd><dt class="property-"
             title="">
         <span id="createdat_nodejs">
 <a href="#createdat_nodejs" style="color: inherit; text-decoration: inherit;">created<wbr>At</a>
@@ -628,8 +556,7 @@ The following output properties are available:
         <span class="property-indicator"></span>
         <span class="property-type">string</span>
     </dt>
-    <dd>{{% md %}}Exact time the message was created.{{% /md %}}</dd>
-    <dt class="property-"
+    <dd>{{% md %}}Exact time the message was created.{{% /md %}}</dd><dt class="property-"
             title="">
         <span id="id_nodejs">
 <a href="#id_nodejs" style="color: inherit; text-decoration: inherit;">id</a>
@@ -637,8 +564,7 @@ The following output properties are available:
         <span class="property-indicator"></span>
         <span class="property-type">string</span>
     </dt>
-    <dd>{{% md %}}Resource Id{{% /md %}}</dd>
-    <dt class="property-"
+    <dd>{{% md %}}Resource Id{{% /md %}}</dd><dt class="property-"
             title="">
         <span id="messagecount_nodejs">
 <a href="#messagecount_nodejs" style="color: inherit; text-decoration: inherit;">message<wbr>Count</a>
@@ -646,8 +572,7 @@ The following output properties are available:
         <span class="property-indicator"></span>
         <span class="property-type">number</span>
     </dt>
-    <dd>{{% md %}}Number of messages.{{% /md %}}</dd>
-    <dt class="property-"
+    <dd>{{% md %}}Number of messages.{{% /md %}}</dd><dt class="property-"
             title="">
         <span id="name_nodejs">
 <a href="#name_nodejs" style="color: inherit; text-decoration: inherit;">name</a>
@@ -655,8 +580,7 @@ The following output properties are available:
         <span class="property-indicator"></span>
         <span class="property-type">string</span>
     </dt>
-    <dd>{{% md %}}Resource name{{% /md %}}</dd>
-    <dt class="property-"
+    <dd>{{% md %}}Resource name{{% /md %}}</dd><dt class="property-"
             title="">
         <span id="type_nodejs">
 <a href="#type_nodejs" style="color: inherit; text-decoration: inherit;">type</a>
@@ -664,8 +588,7 @@ The following output properties are available:
         <span class="property-indicator"></span>
         <span class="property-type">string</span>
     </dt>
-    <dd>{{% md %}}Resource type{{% /md %}}</dd>
-    <dt class="property-"
+    <dd>{{% md %}}Resource type{{% /md %}}</dd><dt class="property-"
             title="">
         <span id="updatedat_nodejs">
 <a href="#updatedat_nodejs" style="color: inherit; text-decoration: inherit;">updated<wbr>At</a>
@@ -673,8 +596,7 @@ The following output properties are available:
         <span class="property-indicator"></span>
         <span class="property-type">string</span>
     </dt>
-    <dd>{{% md %}}The exact time the message was updated.{{% /md %}}</dd>
-    <dt class="property-"
+    <dd>{{% md %}}The exact time the message was updated.{{% /md %}}</dd><dt class="property-"
             title="">
         <span id="autodeleteonidle_nodejs">
 <a href="#autodeleteonidle_nodejs" style="color: inherit; text-decoration: inherit;">auto<wbr>Delete<wbr>On<wbr>Idle</a>
@@ -682,8 +604,7 @@ The following output properties are available:
         <span class="property-indicator"></span>
         <span class="property-type">string</span>
     </dt>
-    <dd>{{% md %}}ISO 8061 timeSpan idle interval after which the topic is automatically deleted. The minimum duration is 5 minutes.{{% /md %}}</dd>
-    <dt class="property-"
+    <dd>{{% md %}}ISO 8061 timeSpan idle interval after which the topic is automatically deleted. The minimum duration is 5 minutes.{{% /md %}}</dd><dt class="property-"
             title="">
         <span id="deadletteringonfilterevaluationexceptions_nodejs">
 <a href="#deadletteringonfilterevaluationexceptions_nodejs" style="color: inherit; text-decoration: inherit;">dead<wbr>Lettering<wbr>On<wbr>Filter<wbr>Evaluation<wbr>Exceptions</a>
@@ -691,8 +612,7 @@ The following output properties are available:
         <span class="property-indicator"></span>
         <span class="property-type">boolean</span>
     </dt>
-    <dd>{{% md %}}Value that indicates whether a subscription has dead letter support on filter evaluation exceptions.{{% /md %}}</dd>
-    <dt class="property-"
+    <dd>{{% md %}}Value that indicates whether a subscription has dead letter support on filter evaluation exceptions.{{% /md %}}</dd><dt class="property-"
             title="">
         <span id="deadletteringonmessageexpiration_nodejs">
 <a href="#deadletteringonmessageexpiration_nodejs" style="color: inherit; text-decoration: inherit;">dead<wbr>Lettering<wbr>On<wbr>Message<wbr>Expiration</a>
@@ -700,8 +620,7 @@ The following output properties are available:
         <span class="property-indicator"></span>
         <span class="property-type">boolean</span>
     </dt>
-    <dd>{{% md %}}Value that indicates whether a subscription has dead letter support when a message expires.{{% /md %}}</dd>
-    <dt class="property-"
+    <dd>{{% md %}}Value that indicates whether a subscription has dead letter support when a message expires.{{% /md %}}</dd><dt class="property-"
             title="">
         <span id="defaultmessagetimetolive_nodejs">
 <a href="#defaultmessagetimetolive_nodejs" style="color: inherit; text-decoration: inherit;">default<wbr>Message<wbr>Time<wbr>To<wbr>Live</a>
@@ -709,8 +628,7 @@ The following output properties are available:
         <span class="property-indicator"></span>
         <span class="property-type">string</span>
     </dt>
-    <dd>{{% md %}}ISO 8061 Default message timespan to live value. This is the duration after which the message expires, starting from when the message is sent to Service Bus. This is the default value used when TimeToLive is not set on a message itself.{{% /md %}}</dd>
-    <dt class="property-"
+    <dd>{{% md %}}ISO 8061 Default message timespan to live value. This is the duration after which the message expires, starting from when the message is sent to Service Bus. This is the default value used when TimeToLive is not set on a message itself.{{% /md %}}</dd><dt class="property-"
             title="">
         <span id="duplicatedetectionhistorytimewindow_nodejs">
 <a href="#duplicatedetectionhistorytimewindow_nodejs" style="color: inherit; text-decoration: inherit;">duplicate<wbr>Detection<wbr>History<wbr>Time<wbr>Window</a>
@@ -718,8 +636,7 @@ The following output properties are available:
         <span class="property-indicator"></span>
         <span class="property-type">string</span>
     </dt>
-    <dd>{{% md %}}ISO 8601 timeSpan structure that defines the duration of the duplicate detection history. The default value is 10 minutes.{{% /md %}}</dd>
-    <dt class="property-"
+    <dd>{{% md %}}ISO 8601 timeSpan structure that defines the duration of the duplicate detection history. The default value is 10 minutes.{{% /md %}}</dd><dt class="property-"
             title="">
         <span id="enablebatchedoperations_nodejs">
 <a href="#enablebatchedoperations_nodejs" style="color: inherit; text-decoration: inherit;">enable<wbr>Batched<wbr>Operations</a>
@@ -727,8 +644,7 @@ The following output properties are available:
         <span class="property-indicator"></span>
         <span class="property-type">boolean</span>
     </dt>
-    <dd>{{% md %}}Value that indicates whether server-side batched operations are enabled.{{% /md %}}</dd>
-    <dt class="property-"
+    <dd>{{% md %}}Value that indicates whether server-side batched operations are enabled.{{% /md %}}</dd><dt class="property-"
             title="">
         <span id="forwarddeadletteredmessagesto_nodejs">
 <a href="#forwarddeadletteredmessagesto_nodejs" style="color: inherit; text-decoration: inherit;">forward<wbr>Dead<wbr>Lettered<wbr>Messages<wbr>To</a>
@@ -736,8 +652,7 @@ The following output properties are available:
         <span class="property-indicator"></span>
         <span class="property-type">string</span>
     </dt>
-    <dd>{{% md %}}Queue/Topic name to forward the Dead Letter message{{% /md %}}</dd>
-    <dt class="property-"
+    <dd>{{% md %}}Queue/Topic name to forward the Dead Letter message{{% /md %}}</dd><dt class="property-"
             title="">
         <span id="forwardto_nodejs">
 <a href="#forwardto_nodejs" style="color: inherit; text-decoration: inherit;">forward<wbr>To</a>
@@ -745,8 +660,7 @@ The following output properties are available:
         <span class="property-indicator"></span>
         <span class="property-type">string</span>
     </dt>
-    <dd>{{% md %}}Queue/Topic name to forward the messages{{% /md %}}</dd>
-    <dt class="property-"
+    <dd>{{% md %}}Queue/Topic name to forward the messages{{% /md %}}</dd><dt class="property-"
             title="">
         <span id="lockduration_nodejs">
 <a href="#lockduration_nodejs" style="color: inherit; text-decoration: inherit;">lock<wbr>Duration</a>
@@ -754,8 +668,7 @@ The following output properties are available:
         <span class="property-indicator"></span>
         <span class="property-type">string</span>
     </dt>
-    <dd>{{% md %}}ISO 8061 lock duration timespan for the subscription. The default value is 1 minute.{{% /md %}}</dd>
-    <dt class="property-"
+    <dd>{{% md %}}ISO 8061 lock duration timespan for the subscription. The default value is 1 minute.{{% /md %}}</dd><dt class="property-"
             title="">
         <span id="maxdeliverycount_nodejs">
 <a href="#maxdeliverycount_nodejs" style="color: inherit; text-decoration: inherit;">max<wbr>Delivery<wbr>Count</a>
@@ -763,8 +676,7 @@ The following output properties are available:
         <span class="property-indicator"></span>
         <span class="property-type">number</span>
     </dt>
-    <dd>{{% md %}}Number of maximum deliveries.{{% /md %}}</dd>
-    <dt class="property-"
+    <dd>{{% md %}}Number of maximum deliveries.{{% /md %}}</dd><dt class="property-"
             title="">
         <span id="requiressession_nodejs">
 <a href="#requiressession_nodejs" style="color: inherit; text-decoration: inherit;">requires<wbr>Session</a>
@@ -772,8 +684,7 @@ The following output properties are available:
         <span class="property-indicator"></span>
         <span class="property-type">boolean</span>
     </dt>
-    <dd>{{% md %}}Value indicating if a subscription supports the concept of sessions.{{% /md %}}</dd>
-    <dt class="property-"
+    <dd>{{% md %}}Value indicating if a subscription supports the concept of sessions.{{% /md %}}</dd><dt class="property-"
             title="">
         <span id="status_nodejs">
 <a href="#status_nodejs" style="color: inherit; text-decoration: inherit;">status</a>
@@ -781,14 +692,11 @@ The following output properties are available:
         <span class="property-indicator"></span>
         <span class="property-type">string</span>
     </dt>
-    <dd>{{% md %}}Enumerates the possible values for the status of a messaging entity.{{% /md %}}</dd>
-</dl>
+    <dd>{{% md %}}Enumerates the possible values for the status of a messaging entity.{{% /md %}}</dd></dl>
 {{% /choosable %}}
 
 {{% choosable language python %}}
-<dl class="resources-properties">
-
-    <dt class="property-"
+<dl class="resources-properties"><dt class="property-"
             title="">
         <span id="accessed_at_python">
 <a href="#accessed_at_python" style="color: inherit; text-decoration: inherit;">accessed_<wbr>at</a>
@@ -796,8 +704,7 @@ The following output properties are available:
         <span class="property-indicator"></span>
         <span class="property-type">str</span>
     </dt>
-    <dd>{{% md %}}Last time there was a receive request to this subscription.{{% /md %}}</dd>
-    <dt class="property-"
+    <dd>{{% md %}}Last time there was a receive request to this subscription.{{% /md %}}</dd><dt class="property-"
             title="">
         <span id="count_details_python">
 <a href="#count_details_python" style="color: inherit; text-decoration: inherit;">count_<wbr>details</a>
@@ -805,8 +712,7 @@ The following output properties are available:
         <span class="property-indicator"></span>
         <span class="property-type"><a href="#messagecountdetailsresponse">Message<wbr>Count<wbr>Details<wbr>Response</a></span>
     </dt>
-    <dd>{{% md %}}Message count details{{% /md %}}</dd>
-    <dt class="property-"
+    <dd>{{% md %}}Message count details{{% /md %}}</dd><dt class="property-"
             title="">
         <span id="created_at_python">
 <a href="#created_at_python" style="color: inherit; text-decoration: inherit;">created_<wbr>at</a>
@@ -814,8 +720,7 @@ The following output properties are available:
         <span class="property-indicator"></span>
         <span class="property-type">str</span>
     </dt>
-    <dd>{{% md %}}Exact time the message was created.{{% /md %}}</dd>
-    <dt class="property-"
+    <dd>{{% md %}}Exact time the message was created.{{% /md %}}</dd><dt class="property-"
             title="">
         <span id="id_python">
 <a href="#id_python" style="color: inherit; text-decoration: inherit;">id</a>
@@ -823,8 +728,7 @@ The following output properties are available:
         <span class="property-indicator"></span>
         <span class="property-type">str</span>
     </dt>
-    <dd>{{% md %}}Resource Id{{% /md %}}</dd>
-    <dt class="property-"
+    <dd>{{% md %}}Resource Id{{% /md %}}</dd><dt class="property-"
             title="">
         <span id="message_count_python">
 <a href="#message_count_python" style="color: inherit; text-decoration: inherit;">message_<wbr>count</a>
@@ -832,8 +736,7 @@ The following output properties are available:
         <span class="property-indicator"></span>
         <span class="property-type">float</span>
     </dt>
-    <dd>{{% md %}}Number of messages.{{% /md %}}</dd>
-    <dt class="property-"
+    <dd>{{% md %}}Number of messages.{{% /md %}}</dd><dt class="property-"
             title="">
         <span id="name_python">
 <a href="#name_python" style="color: inherit; text-decoration: inherit;">name</a>
@@ -841,8 +744,7 @@ The following output properties are available:
         <span class="property-indicator"></span>
         <span class="property-type">str</span>
     </dt>
-    <dd>{{% md %}}Resource name{{% /md %}}</dd>
-    <dt class="property-"
+    <dd>{{% md %}}Resource name{{% /md %}}</dd><dt class="property-"
             title="">
         <span id="type_python">
 <a href="#type_python" style="color: inherit; text-decoration: inherit;">type</a>
@@ -850,8 +752,7 @@ The following output properties are available:
         <span class="property-indicator"></span>
         <span class="property-type">str</span>
     </dt>
-    <dd>{{% md %}}Resource type{{% /md %}}</dd>
-    <dt class="property-"
+    <dd>{{% md %}}Resource type{{% /md %}}</dd><dt class="property-"
             title="">
         <span id="updated_at_python">
 <a href="#updated_at_python" style="color: inherit; text-decoration: inherit;">updated_<wbr>at</a>
@@ -859,8 +760,7 @@ The following output properties are available:
         <span class="property-indicator"></span>
         <span class="property-type">str</span>
     </dt>
-    <dd>{{% md %}}The exact time the message was updated.{{% /md %}}</dd>
-    <dt class="property-"
+    <dd>{{% md %}}The exact time the message was updated.{{% /md %}}</dd><dt class="property-"
             title="">
         <span id="auto_delete_on_idle_python">
 <a href="#auto_delete_on_idle_python" style="color: inherit; text-decoration: inherit;">auto_<wbr>delete_<wbr>on_<wbr>idle</a>
@@ -868,8 +768,7 @@ The following output properties are available:
         <span class="property-indicator"></span>
         <span class="property-type">str</span>
     </dt>
-    <dd>{{% md %}}ISO 8061 timeSpan idle interval after which the topic is automatically deleted. The minimum duration is 5 minutes.{{% /md %}}</dd>
-    <dt class="property-"
+    <dd>{{% md %}}ISO 8061 timeSpan idle interval after which the topic is automatically deleted. The minimum duration is 5 minutes.{{% /md %}}</dd><dt class="property-"
             title="">
         <span id="dead_lettering_on_filter_evaluation_exceptions_python">
 <a href="#dead_lettering_on_filter_evaluation_exceptions_python" style="color: inherit; text-decoration: inherit;">dead_<wbr>lettering_<wbr>on_<wbr>filter_<wbr>evaluation_<wbr>exceptions</a>
@@ -877,8 +776,7 @@ The following output properties are available:
         <span class="property-indicator"></span>
         <span class="property-type">bool</span>
     </dt>
-    <dd>{{% md %}}Value that indicates whether a subscription has dead letter support on filter evaluation exceptions.{{% /md %}}</dd>
-    <dt class="property-"
+    <dd>{{% md %}}Value that indicates whether a subscription has dead letter support on filter evaluation exceptions.{{% /md %}}</dd><dt class="property-"
             title="">
         <span id="dead_lettering_on_message_expiration_python">
 <a href="#dead_lettering_on_message_expiration_python" style="color: inherit; text-decoration: inherit;">dead_<wbr>lettering_<wbr>on_<wbr>message_<wbr>expiration</a>
@@ -886,8 +784,7 @@ The following output properties are available:
         <span class="property-indicator"></span>
         <span class="property-type">bool</span>
     </dt>
-    <dd>{{% md %}}Value that indicates whether a subscription has dead letter support when a message expires.{{% /md %}}</dd>
-    <dt class="property-"
+    <dd>{{% md %}}Value that indicates whether a subscription has dead letter support when a message expires.{{% /md %}}</dd><dt class="property-"
             title="">
         <span id="default_message_time_to_live_python">
 <a href="#default_message_time_to_live_python" style="color: inherit; text-decoration: inherit;">default_<wbr>message_<wbr>time_<wbr>to_<wbr>live</a>
@@ -895,8 +792,7 @@ The following output properties are available:
         <span class="property-indicator"></span>
         <span class="property-type">str</span>
     </dt>
-    <dd>{{% md %}}ISO 8061 Default message timespan to live value. This is the duration after which the message expires, starting from when the message is sent to Service Bus. This is the default value used when TimeToLive is not set on a message itself.{{% /md %}}</dd>
-    <dt class="property-"
+    <dd>{{% md %}}ISO 8061 Default message timespan to live value. This is the duration after which the message expires, starting from when the message is sent to Service Bus. This is the default value used when TimeToLive is not set on a message itself.{{% /md %}}</dd><dt class="property-"
             title="">
         <span id="duplicate_detection_history_time_window_python">
 <a href="#duplicate_detection_history_time_window_python" style="color: inherit; text-decoration: inherit;">duplicate_<wbr>detection_<wbr>history_<wbr>time_<wbr>window</a>
@@ -904,8 +800,7 @@ The following output properties are available:
         <span class="property-indicator"></span>
         <span class="property-type">str</span>
     </dt>
-    <dd>{{% md %}}ISO 8601 timeSpan structure that defines the duration of the duplicate detection history. The default value is 10 minutes.{{% /md %}}</dd>
-    <dt class="property-"
+    <dd>{{% md %}}ISO 8601 timeSpan structure that defines the duration of the duplicate detection history. The default value is 10 minutes.{{% /md %}}</dd><dt class="property-"
             title="">
         <span id="enable_batched_operations_python">
 <a href="#enable_batched_operations_python" style="color: inherit; text-decoration: inherit;">enable_<wbr>batched_<wbr>operations</a>
@@ -913,8 +808,7 @@ The following output properties are available:
         <span class="property-indicator"></span>
         <span class="property-type">bool</span>
     </dt>
-    <dd>{{% md %}}Value that indicates whether server-side batched operations are enabled.{{% /md %}}</dd>
-    <dt class="property-"
+    <dd>{{% md %}}Value that indicates whether server-side batched operations are enabled.{{% /md %}}</dd><dt class="property-"
             title="">
         <span id="forward_dead_lettered_messages_to_python">
 <a href="#forward_dead_lettered_messages_to_python" style="color: inherit; text-decoration: inherit;">forward_<wbr>dead_<wbr>lettered_<wbr>messages_<wbr>to</a>
@@ -922,8 +816,7 @@ The following output properties are available:
         <span class="property-indicator"></span>
         <span class="property-type">str</span>
     </dt>
-    <dd>{{% md %}}Queue/Topic name to forward the Dead Letter message{{% /md %}}</dd>
-    <dt class="property-"
+    <dd>{{% md %}}Queue/Topic name to forward the Dead Letter message{{% /md %}}</dd><dt class="property-"
             title="">
         <span id="forward_to_python">
 <a href="#forward_to_python" style="color: inherit; text-decoration: inherit;">forward_<wbr>to</a>
@@ -931,8 +824,7 @@ The following output properties are available:
         <span class="property-indicator"></span>
         <span class="property-type">str</span>
     </dt>
-    <dd>{{% md %}}Queue/Topic name to forward the messages{{% /md %}}</dd>
-    <dt class="property-"
+    <dd>{{% md %}}Queue/Topic name to forward the messages{{% /md %}}</dd><dt class="property-"
             title="">
         <span id="lock_duration_python">
 <a href="#lock_duration_python" style="color: inherit; text-decoration: inherit;">lock_<wbr>duration</a>
@@ -940,8 +832,7 @@ The following output properties are available:
         <span class="property-indicator"></span>
         <span class="property-type">str</span>
     </dt>
-    <dd>{{% md %}}ISO 8061 lock duration timespan for the subscription. The default value is 1 minute.{{% /md %}}</dd>
-    <dt class="property-"
+    <dd>{{% md %}}ISO 8061 lock duration timespan for the subscription. The default value is 1 minute.{{% /md %}}</dd><dt class="property-"
             title="">
         <span id="max_delivery_count_python">
 <a href="#max_delivery_count_python" style="color: inherit; text-decoration: inherit;">max_<wbr>delivery_<wbr>count</a>
@@ -949,8 +840,7 @@ The following output properties are available:
         <span class="property-indicator"></span>
         <span class="property-type">int</span>
     </dt>
-    <dd>{{% md %}}Number of maximum deliveries.{{% /md %}}</dd>
-    <dt class="property-"
+    <dd>{{% md %}}Number of maximum deliveries.{{% /md %}}</dd><dt class="property-"
             title="">
         <span id="requires_session_python">
 <a href="#requires_session_python" style="color: inherit; text-decoration: inherit;">requires_<wbr>session</a>
@@ -958,8 +848,7 @@ The following output properties are available:
         <span class="property-indicator"></span>
         <span class="property-type">bool</span>
     </dt>
-    <dd>{{% md %}}Value indicating if a subscription supports the concept of sessions.{{% /md %}}</dd>
-    <dt class="property-"
+    <dd>{{% md %}}Value indicating if a subscription supports the concept of sessions.{{% /md %}}</dd><dt class="property-"
             title="">
         <span id="status_python">
 <a href="#status_python" style="color: inherit; text-decoration: inherit;">status</a>
@@ -967,8 +856,7 @@ The following output properties are available:
         <span class="property-indicator"></span>
         <span class="property-type">str</span>
     </dt>
-    <dd>{{% md %}}Enumerates the possible values for the status of a messaging entity.{{% /md %}}</dd>
-</dl>
+    <dd>{{% md %}}Enumerates the possible values for the status of a messaging entity.{{% /md %}}</dd></dl>
 {{% /choosable %}}
 
 
@@ -982,9 +870,7 @@ The following output properties are available:
 
 
 {{% choosable language csharp %}}
-<dl class="resources-properties">
-
-    <dt class="property-required"
+<dl class="resources-properties"><dt class="property-required"
             title="Required">
         <span id="activemessagecount_csharp">
 <a href="#activemessagecount_csharp" style="color: inherit; text-decoration: inherit;">Active<wbr>Message<wbr>Count</a>
@@ -992,8 +878,7 @@ The following output properties are available:
         <span class="property-indicator"></span>
         <span class="property-type">double</span>
     </dt>
-    <dd>{{% md %}}Number of active messages in the queue, topic, or subscription.{{% /md %}}</dd>
-    <dt class="property-required"
+    <dd>{{% md %}}Number of active messages in the queue, topic, or subscription.{{% /md %}}</dd><dt class="property-required"
             title="Required">
         <span id="deadlettermessagecount_csharp">
 <a href="#deadlettermessagecount_csharp" style="color: inherit; text-decoration: inherit;">Dead<wbr>Letter<wbr>Message<wbr>Count</a>
@@ -1001,8 +886,7 @@ The following output properties are available:
         <span class="property-indicator"></span>
         <span class="property-type">double</span>
     </dt>
-    <dd>{{% md %}}Number of messages that are dead lettered.{{% /md %}}</dd>
-    <dt class="property-required"
+    <dd>{{% md %}}Number of messages that are dead lettered.{{% /md %}}</dd><dt class="property-required"
             title="Required">
         <span id="scheduledmessagecount_csharp">
 <a href="#scheduledmessagecount_csharp" style="color: inherit; text-decoration: inherit;">Scheduled<wbr>Message<wbr>Count</a>
@@ -1010,8 +894,7 @@ The following output properties are available:
         <span class="property-indicator"></span>
         <span class="property-type">double</span>
     </dt>
-    <dd>{{% md %}}Number of scheduled messages.{{% /md %}}</dd>
-    <dt class="property-required"
+    <dd>{{% md %}}Number of scheduled messages.{{% /md %}}</dd><dt class="property-required"
             title="Required">
         <span id="transferdeadlettermessagecount_csharp">
 <a href="#transferdeadlettermessagecount_csharp" style="color: inherit; text-decoration: inherit;">Transfer<wbr>Dead<wbr>Letter<wbr>Message<wbr>Count</a>
@@ -1019,8 +902,7 @@ The following output properties are available:
         <span class="property-indicator"></span>
         <span class="property-type">double</span>
     </dt>
-    <dd>{{% md %}}Number of messages transferred into dead letters.{{% /md %}}</dd>
-    <dt class="property-required"
+    <dd>{{% md %}}Number of messages transferred into dead letters.{{% /md %}}</dd><dt class="property-required"
             title="Required">
         <span id="transfermessagecount_csharp">
 <a href="#transfermessagecount_csharp" style="color: inherit; text-decoration: inherit;">Transfer<wbr>Message<wbr>Count</a>
@@ -1028,14 +910,11 @@ The following output properties are available:
         <span class="property-indicator"></span>
         <span class="property-type">double</span>
     </dt>
-    <dd>{{% md %}}Number of messages transferred to another queue, topic, or subscription.{{% /md %}}</dd>
-</dl>
+    <dd>{{% md %}}Number of messages transferred to another queue, topic, or subscription.{{% /md %}}</dd></dl>
 {{% /choosable %}}
 
 {{% choosable language go %}}
-<dl class="resources-properties">
-
-    <dt class="property-required"
+<dl class="resources-properties"><dt class="property-required"
             title="Required">
         <span id="activemessagecount_go">
 <a href="#activemessagecount_go" style="color: inherit; text-decoration: inherit;">Active<wbr>Message<wbr>Count</a>
@@ -1043,8 +922,7 @@ The following output properties are available:
         <span class="property-indicator"></span>
         <span class="property-type">float64</span>
     </dt>
-    <dd>{{% md %}}Number of active messages in the queue, topic, or subscription.{{% /md %}}</dd>
-    <dt class="property-required"
+    <dd>{{% md %}}Number of active messages in the queue, topic, or subscription.{{% /md %}}</dd><dt class="property-required"
             title="Required">
         <span id="deadlettermessagecount_go">
 <a href="#deadlettermessagecount_go" style="color: inherit; text-decoration: inherit;">Dead<wbr>Letter<wbr>Message<wbr>Count</a>
@@ -1052,8 +930,7 @@ The following output properties are available:
         <span class="property-indicator"></span>
         <span class="property-type">float64</span>
     </dt>
-    <dd>{{% md %}}Number of messages that are dead lettered.{{% /md %}}</dd>
-    <dt class="property-required"
+    <dd>{{% md %}}Number of messages that are dead lettered.{{% /md %}}</dd><dt class="property-required"
             title="Required">
         <span id="scheduledmessagecount_go">
 <a href="#scheduledmessagecount_go" style="color: inherit; text-decoration: inherit;">Scheduled<wbr>Message<wbr>Count</a>
@@ -1061,8 +938,7 @@ The following output properties are available:
         <span class="property-indicator"></span>
         <span class="property-type">float64</span>
     </dt>
-    <dd>{{% md %}}Number of scheduled messages.{{% /md %}}</dd>
-    <dt class="property-required"
+    <dd>{{% md %}}Number of scheduled messages.{{% /md %}}</dd><dt class="property-required"
             title="Required">
         <span id="transferdeadlettermessagecount_go">
 <a href="#transferdeadlettermessagecount_go" style="color: inherit; text-decoration: inherit;">Transfer<wbr>Dead<wbr>Letter<wbr>Message<wbr>Count</a>
@@ -1070,8 +946,7 @@ The following output properties are available:
         <span class="property-indicator"></span>
         <span class="property-type">float64</span>
     </dt>
-    <dd>{{% md %}}Number of messages transferred into dead letters.{{% /md %}}</dd>
-    <dt class="property-required"
+    <dd>{{% md %}}Number of messages transferred into dead letters.{{% /md %}}</dd><dt class="property-required"
             title="Required">
         <span id="transfermessagecount_go">
 <a href="#transfermessagecount_go" style="color: inherit; text-decoration: inherit;">Transfer<wbr>Message<wbr>Count</a>
@@ -1079,14 +954,11 @@ The following output properties are available:
         <span class="property-indicator"></span>
         <span class="property-type">float64</span>
     </dt>
-    <dd>{{% md %}}Number of messages transferred to another queue, topic, or subscription.{{% /md %}}</dd>
-</dl>
+    <dd>{{% md %}}Number of messages transferred to another queue, topic, or subscription.{{% /md %}}</dd></dl>
 {{% /choosable %}}
 
 {{% choosable language nodejs %}}
-<dl class="resources-properties">
-
-    <dt class="property-required"
+<dl class="resources-properties"><dt class="property-required"
             title="Required">
         <span id="activemessagecount_nodejs">
 <a href="#activemessagecount_nodejs" style="color: inherit; text-decoration: inherit;">active<wbr>Message<wbr>Count</a>
@@ -1094,8 +966,7 @@ The following output properties are available:
         <span class="property-indicator"></span>
         <span class="property-type">number</span>
     </dt>
-    <dd>{{% md %}}Number of active messages in the queue, topic, or subscription.{{% /md %}}</dd>
-    <dt class="property-required"
+    <dd>{{% md %}}Number of active messages in the queue, topic, or subscription.{{% /md %}}</dd><dt class="property-required"
             title="Required">
         <span id="deadlettermessagecount_nodejs">
 <a href="#deadlettermessagecount_nodejs" style="color: inherit; text-decoration: inherit;">dead<wbr>Letter<wbr>Message<wbr>Count</a>
@@ -1103,8 +974,7 @@ The following output properties are available:
         <span class="property-indicator"></span>
         <span class="property-type">number</span>
     </dt>
-    <dd>{{% md %}}Number of messages that are dead lettered.{{% /md %}}</dd>
-    <dt class="property-required"
+    <dd>{{% md %}}Number of messages that are dead lettered.{{% /md %}}</dd><dt class="property-required"
             title="Required">
         <span id="scheduledmessagecount_nodejs">
 <a href="#scheduledmessagecount_nodejs" style="color: inherit; text-decoration: inherit;">scheduled<wbr>Message<wbr>Count</a>
@@ -1112,8 +982,7 @@ The following output properties are available:
         <span class="property-indicator"></span>
         <span class="property-type">number</span>
     </dt>
-    <dd>{{% md %}}Number of scheduled messages.{{% /md %}}</dd>
-    <dt class="property-required"
+    <dd>{{% md %}}Number of scheduled messages.{{% /md %}}</dd><dt class="property-required"
             title="Required">
         <span id="transferdeadlettermessagecount_nodejs">
 <a href="#transferdeadlettermessagecount_nodejs" style="color: inherit; text-decoration: inherit;">transfer<wbr>Dead<wbr>Letter<wbr>Message<wbr>Count</a>
@@ -1121,8 +990,7 @@ The following output properties are available:
         <span class="property-indicator"></span>
         <span class="property-type">number</span>
     </dt>
-    <dd>{{% md %}}Number of messages transferred into dead letters.{{% /md %}}</dd>
-    <dt class="property-required"
+    <dd>{{% md %}}Number of messages transferred into dead letters.{{% /md %}}</dd><dt class="property-required"
             title="Required">
         <span id="transfermessagecount_nodejs">
 <a href="#transfermessagecount_nodejs" style="color: inherit; text-decoration: inherit;">transfer<wbr>Message<wbr>Count</a>
@@ -1130,14 +998,11 @@ The following output properties are available:
         <span class="property-indicator"></span>
         <span class="property-type">number</span>
     </dt>
-    <dd>{{% md %}}Number of messages transferred to another queue, topic, or subscription.{{% /md %}}</dd>
-</dl>
+    <dd>{{% md %}}Number of messages transferred to another queue, topic, or subscription.{{% /md %}}</dd></dl>
 {{% /choosable %}}
 
 {{% choosable language python %}}
-<dl class="resources-properties">
-
-    <dt class="property-required"
+<dl class="resources-properties"><dt class="property-required"
             title="Required">
         <span id="active_message_count_python">
 <a href="#active_message_count_python" style="color: inherit; text-decoration: inherit;">active_<wbr>message_<wbr>count</a>
@@ -1145,8 +1010,7 @@ The following output properties are available:
         <span class="property-indicator"></span>
         <span class="property-type">float</span>
     </dt>
-    <dd>{{% md %}}Number of active messages in the queue, topic, or subscription.{{% /md %}}</dd>
-    <dt class="property-required"
+    <dd>{{% md %}}Number of active messages in the queue, topic, or subscription.{{% /md %}}</dd><dt class="property-required"
             title="Required">
         <span id="dead_letter_message_count_python">
 <a href="#dead_letter_message_count_python" style="color: inherit; text-decoration: inherit;">dead_<wbr>letter_<wbr>message_<wbr>count</a>
@@ -1154,8 +1018,7 @@ The following output properties are available:
         <span class="property-indicator"></span>
         <span class="property-type">float</span>
     </dt>
-    <dd>{{% md %}}Number of messages that are dead lettered.{{% /md %}}</dd>
-    <dt class="property-required"
+    <dd>{{% md %}}Number of messages that are dead lettered.{{% /md %}}</dd><dt class="property-required"
             title="Required">
         <span id="scheduled_message_count_python">
 <a href="#scheduled_message_count_python" style="color: inherit; text-decoration: inherit;">scheduled_<wbr>message_<wbr>count</a>
@@ -1163,8 +1026,7 @@ The following output properties are available:
         <span class="property-indicator"></span>
         <span class="property-type">float</span>
     </dt>
-    <dd>{{% md %}}Number of scheduled messages.{{% /md %}}</dd>
-    <dt class="property-required"
+    <dd>{{% md %}}Number of scheduled messages.{{% /md %}}</dd><dt class="property-required"
             title="Required">
         <span id="transfer_dead_letter_message_count_python">
 <a href="#transfer_dead_letter_message_count_python" style="color: inherit; text-decoration: inherit;">transfer_<wbr>dead_<wbr>letter_<wbr>message_<wbr>count</a>
@@ -1172,8 +1034,7 @@ The following output properties are available:
         <span class="property-indicator"></span>
         <span class="property-type">float</span>
     </dt>
-    <dd>{{% md %}}Number of messages transferred into dead letters.{{% /md %}}</dd>
-    <dt class="property-required"
+    <dd>{{% md %}}Number of messages transferred into dead letters.{{% /md %}}</dd><dt class="property-required"
             title="Required">
         <span id="transfer_message_count_python">
 <a href="#transfer_message_count_python" style="color: inherit; text-decoration: inherit;">transfer_<wbr>message_<wbr>count</a>
@@ -1181,8 +1042,7 @@ The following output properties are available:
         <span class="property-indicator"></span>
         <span class="property-type">float</span>
     </dt>
-    <dd>{{% md %}}Number of messages transferred to another queue, topic, or subscription.{{% /md %}}</dd>
-</dl>
+    <dd>{{% md %}}Number of messages transferred to another queue, topic, or subscription.{{% /md %}}</dd></dl>
 {{% /choosable %}}
 
 

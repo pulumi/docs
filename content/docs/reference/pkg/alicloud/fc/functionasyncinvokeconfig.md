@@ -16,11 +16,17 @@ Manages an asynchronous invocation configuration for a FC Function or Alias.\
 > **NOTE:** Available in 1.100.0+
 
 {{% examples %}}
+
 ## Example Usage
 
 {{< chooser language "typescript,python,go,csharp" / >}}
+
+
 ### Destination Configuration
-{{% example csharp %}}
+
+
+{{< example csharp >}}
+
 ```csharp
 using Pulumi;
 using AliCloud = Pulumi.AliCloud;
@@ -50,9 +56,12 @@ class MyStack : Stack
 }
 ```
 
-{{% /example %}}
 
-{{% example go %}}
+{{< /example >}}
+
+
+{{< example go >}}
+
 ```go
 package main
 
@@ -83,9 +92,12 @@ func main() {
 }
 ```
 
-{{% /example %}}
 
-{{% example python %}}
+{{< /example >}}
+
+
+{{< example python >}}
+
 ```python
 import pulumi
 import pulumi_alicloud as alicloud
@@ -103,9 +115,12 @@ example = alicloud.fc.FunctionAsyncInvokeConfig("example",
     ))
 ```
 
-{{% /example %}}
 
-{{% example typescript %}}
+{{< /example >}}
+
+
+{{< example typescript >}}
+
 
 ```typescript
 import * as pulumi from "@pulumi/pulumi";
@@ -125,10 +140,17 @@ const example = new alicloud.fc.FunctionAsyncInvokeConfig("example", {
 });
 ```
 
-{{% /example %}}
+
+{{< /example >}}
+
+
+
 
 ### Error Handling Configuration
-{{% example csharp %}}
+
+
+{{< example csharp >}}
+
 ```csharp
 using Pulumi;
 using AliCloud = Pulumi.AliCloud;
@@ -149,9 +171,12 @@ class MyStack : Stack
 }
 ```
 
-{{% /example %}}
 
-{{% example go %}}
+{{< /example >}}
+
+
+{{< example go >}}
+
 ```go
 package main
 
@@ -176,9 +201,12 @@ func main() {
 }
 ```
 
-{{% /example %}}
 
-{{% example python %}}
+{{< /example >}}
+
+
+{{< example python >}}
+
 ```python
 import pulumi
 import pulumi_alicloud as alicloud
@@ -190,9 +218,12 @@ example = alicloud.fc.FunctionAsyncInvokeConfig("example",
     maximum_retry_attempts=0)
 ```
 
-{{% /example %}}
 
-{{% example typescript %}}
+{{< /example >}}
+
+
+{{< example typescript >}}
+
 
 ```typescript
 import * as pulumi from "@pulumi/pulumi";
@@ -206,10 +237,17 @@ const example = new alicloud.fc.FunctionAsyncInvokeConfig("example", {
 });
 ```
 
-{{% /example %}}
+
+{{< /example >}}
+
+
+
 
 ### Configuration for Function Latest Unpublished Version
-{{% example csharp %}}
+
+
+{{< example csharp >}}
+
 ```csharp
 using Pulumi;
 using AliCloud = Pulumi.AliCloud;
@@ -230,9 +268,12 @@ class MyStack : Stack
 }
 ```
 
-{{% /example %}}
 
-{{% example go %}}
+{{< /example >}}
+
+
+{{< example go >}}
+
 ```go
 package main
 
@@ -256,9 +297,12 @@ func main() {
 }
 ```
 
-{{% /example %}}
 
-{{% example python %}}
+{{< /example >}}
+
+
+{{< example python >}}
+
 ```python
 import pulumi
 import pulumi_alicloud as alicloud
@@ -270,9 +314,12 @@ example = alicloud.fc.FunctionAsyncInvokeConfig("example",
 # ... other configuration ...
 ```
 
-{{% /example %}}
 
-{{% example typescript %}}
+{{< /example >}}
+
+
+{{< example typescript >}}
+
 
 ```typescript
 import * as pulumi from "@pulumi/pulumi";
@@ -286,9 +333,16 @@ const example = new alicloud.fc.FunctionAsyncInvokeConfig("example", {
 // ... other configuration ...
 ```
 
-{{% /example %}}
+
+{{< /example >}}
+
+
+
+
 
 {{% /examples %}}
+
+
 
 
 ## Create a FunctionAsyncInvokeConfig Resource {#create}
@@ -313,9 +367,7 @@ const example = new alicloud.fc.FunctionAsyncInvokeConfig("example", {
 
 {{% choosable language nodejs %}}
 
-<dl class="resources-properties">
-  
-    <dt
+<dl class="resources-properties"><dt
         class="property-required" title="Required">
         <span>name</span>
         <span class="property-indicator"></span>
@@ -323,9 +375,7 @@ const example = new alicloud.fc.FunctionAsyncInvokeConfig("example", {
     </dt>
     <dd>
       The unique name of the resource.
-    </dd>
-  
-    <dt
+    </dd><dt
         class="property-required" title="Required">
         <span>args</span>
         <span class="property-indicator"></span>
@@ -333,9 +383,7 @@ const example = new alicloud.fc.FunctionAsyncInvokeConfig("example", {
     </dt>
     <dd>
       The arguments to resource properties.
-    </dd>
-  
-    <dt
+    </dd><dt
         class="property-optional" title="Optional">
         <span>opts</span>
         <span class="property-indicator"></span>
@@ -343,10 +391,7 @@ const example = new alicloud.fc.FunctionAsyncInvokeConfig("example", {
     </dt>
     <dd>
       Bag of options to control resource&#39;s behavior.
-    </dd>
-  
-
-</dl>
+    </dd></dl>
 
 {{% /choosable %}}
 
@@ -372,9 +417,7 @@ const example = new alicloud.fc.FunctionAsyncInvokeConfig("example", {
 
 {{% choosable language go %}}
 
-<dl class="resources-properties">
-  
-    <dt
+<dl class="resources-properties"><dt
         class="property-optional" title="Optional">
         <span>ctx</span>
         <span class="property-indicator"></span>
@@ -382,9 +425,7 @@ const example = new alicloud.fc.FunctionAsyncInvokeConfig("example", {
     </dt>
     <dd>
       Context object for the current deployment.
-    </dd>
-  
-    <dt
+    </dd><dt
         class="property-required" title="Required">
         <span>name</span>
         <span class="property-indicator"></span>
@@ -392,9 +433,7 @@ const example = new alicloud.fc.FunctionAsyncInvokeConfig("example", {
     </dt>
     <dd>
       The unique name of the resource.
-    </dd>
-  
-    <dt
+    </dd><dt
         class="property-required" title="Required">
         <span>args</span>
         <span class="property-indicator"></span>
@@ -402,9 +441,7 @@ const example = new alicloud.fc.FunctionAsyncInvokeConfig("example", {
     </dt>
     <dd>
       The arguments to resource properties.
-    </dd>
-  
-    <dt
+    </dd><dt
         class="property-optional" title="Optional">
         <span>opts</span>
         <span class="property-indicator"></span>
@@ -412,18 +449,13 @@ const example = new alicloud.fc.FunctionAsyncInvokeConfig("example", {
     </dt>
     <dd>
       Bag of options to control resource&#39;s behavior.
-    </dd>
-  
-
-</dl>
+    </dd></dl>
 
 {{% /choosable %}}
 
 {{% choosable language csharp %}}
 
-<dl class="resources-properties">
-  
-    <dt
+<dl class="resources-properties"><dt
         class="property-required" title="Required">
         <span>name</span>
         <span class="property-indicator"></span>
@@ -431,9 +463,7 @@ const example = new alicloud.fc.FunctionAsyncInvokeConfig("example", {
     </dt>
     <dd>
       The unique name of the resource.
-    </dd>
-  
-    <dt
+    </dd><dt
         class="property-required" title="Required">
         <span>args</span>
         <span class="property-indicator"></span>
@@ -441,9 +471,7 @@ const example = new alicloud.fc.FunctionAsyncInvokeConfig("example", {
     </dt>
     <dd>
       The arguments to resource properties.
-    </dd>
-  
-    <dt
+    </dd><dt
         class="property-optional" title="Optional">
         <span>opts</span>
         <span class="property-indicator"></span>
@@ -451,10 +479,7 @@ const example = new alicloud.fc.FunctionAsyncInvokeConfig("example", {
     </dt>
     <dd>
       Bag of options to control resource&#39;s behavior.
-    </dd>
-  
-
-</dl>
+    </dd></dl>
 
 {{% /choosable %}}
 
@@ -469,9 +494,7 @@ The FunctionAsyncInvokeConfig resource accepts the following [input]({{< relref 
 
 
 {{% choosable language csharp %}}
-<dl class="resources-properties">
-
-    <dt class="property-required"
+<dl class="resources-properties"><dt class="property-required"
             title="Required">
         <span id="functionname_csharp">
 <a href="#functionname_csharp" style="color: inherit; text-decoration: inherit;">Function<wbr>Name</a>
@@ -480,8 +503,7 @@ The FunctionAsyncInvokeConfig resource accepts the following [input]({{< relref 
         <span class="property-type">string</span>
     </dt>
     <dd>{{% md %}}Name of the Function Compute Function.
-{{% /md %}}</dd>
-    <dt class="property-required"
+{{% /md %}}</dd><dt class="property-required"
             title="Required">
         <span id="servicename_csharp">
 <a href="#servicename_csharp" style="color: inherit; text-decoration: inherit;">Service<wbr>Name</a>
@@ -490,8 +512,7 @@ The FunctionAsyncInvokeConfig resource accepts the following [input]({{< relref 
         <span class="property-type">string</span>
     </dt>
     <dd>{{% md %}}Name of the Function Compute Function, omitting any version or alias qualifier.
-{{% /md %}}</dd>
-    <dt class="property-optional"
+{{% /md %}}</dd><dt class="property-optional"
             title="Optional">
         <span id="destinationconfig_csharp">
 <a href="#destinationconfig_csharp" style="color: inherit; text-decoration: inherit;">Destination<wbr>Config</a>
@@ -500,8 +521,7 @@ The FunctionAsyncInvokeConfig resource accepts the following [input]({{< relref 
         <span class="property-type"><a href="#functionasyncinvokeconfigdestinationconfig">Pulumi.<wbr>Ali<wbr>Cloud.<wbr>FC.<wbr>Inputs.<wbr>Function<wbr>Async<wbr>Invoke<wbr>Config<wbr>Destination<wbr>Config<wbr>Args</a></span>
     </dt>
     <dd>{{% md %}}Configuration block with destination configuration. See below for details.
-{{% /md %}}</dd>
-    <dt class="property-optional"
+{{% /md %}}</dd><dt class="property-optional"
             title="Optional">
         <span id="maximumeventageinseconds_csharp">
 <a href="#maximumeventageinseconds_csharp" style="color: inherit; text-decoration: inherit;">Maximum<wbr>Event<wbr>Age<wbr>In<wbr>Seconds</a>
@@ -510,8 +530,7 @@ The FunctionAsyncInvokeConfig resource accepts the following [input]({{< relref 
         <span class="property-type">int</span>
     </dt>
     <dd>{{% md %}}Maximum age of a request that Function Compute sends to a function for processing in seconds. Valid values between 60 and 21600.
-{{% /md %}}</dd>
-    <dt class="property-optional"
+{{% /md %}}</dd><dt class="property-optional"
             title="Optional">
         <span id="maximumretryattempts_csharp">
 <a href="#maximumretryattempts_csharp" style="color: inherit; text-decoration: inherit;">Maximum<wbr>Retry<wbr>Attempts</a>
@@ -520,8 +539,7 @@ The FunctionAsyncInvokeConfig resource accepts the following [input]({{< relref 
         <span class="property-type">int</span>
     </dt>
     <dd>{{% md %}}Maximum number of times to retry when the function returns an error. Valid values between 0 and 2. Defaults to 2.
-{{% /md %}}</dd>
-    <dt class="property-optional"
+{{% /md %}}</dd><dt class="property-optional"
             title="Optional">
         <span id="qualifier_csharp">
 <a href="#qualifier_csharp" style="color: inherit; text-decoration: inherit;">Qualifier</a>
@@ -530,14 +548,11 @@ The FunctionAsyncInvokeConfig resource accepts the following [input]({{< relref 
         <span class="property-type">string</span>
     </dt>
     <dd>{{% md %}}Function Compute Function published version, `LATEST`, or Function Compute Alias name. The default value is `LATEST`.
-{{% /md %}}</dd>
-</dl>
+{{% /md %}}</dd></dl>
 {{% /choosable %}}
 
 {{% choosable language go %}}
-<dl class="resources-properties">
-
-    <dt class="property-required"
+<dl class="resources-properties"><dt class="property-required"
             title="Required">
         <span id="functionname_go">
 <a href="#functionname_go" style="color: inherit; text-decoration: inherit;">Function<wbr>Name</a>
@@ -546,8 +561,7 @@ The FunctionAsyncInvokeConfig resource accepts the following [input]({{< relref 
         <span class="property-type">string</span>
     </dt>
     <dd>{{% md %}}Name of the Function Compute Function.
-{{% /md %}}</dd>
-    <dt class="property-required"
+{{% /md %}}</dd><dt class="property-required"
             title="Required">
         <span id="servicename_go">
 <a href="#servicename_go" style="color: inherit; text-decoration: inherit;">Service<wbr>Name</a>
@@ -556,8 +570,7 @@ The FunctionAsyncInvokeConfig resource accepts the following [input]({{< relref 
         <span class="property-type">string</span>
     </dt>
     <dd>{{% md %}}Name of the Function Compute Function, omitting any version or alias qualifier.
-{{% /md %}}</dd>
-    <dt class="property-optional"
+{{% /md %}}</dd><dt class="property-optional"
             title="Optional">
         <span id="destinationconfig_go">
 <a href="#destinationconfig_go" style="color: inherit; text-decoration: inherit;">Destination<wbr>Config</a>
@@ -566,8 +579,7 @@ The FunctionAsyncInvokeConfig resource accepts the following [input]({{< relref 
         <span class="property-type"><a href="#functionasyncinvokeconfigdestinationconfig">Function<wbr>Async<wbr>Invoke<wbr>Config<wbr>Destination<wbr>Config</a></span>
     </dt>
     <dd>{{% md %}}Configuration block with destination configuration. See below for details.
-{{% /md %}}</dd>
-    <dt class="property-optional"
+{{% /md %}}</dd><dt class="property-optional"
             title="Optional">
         <span id="maximumeventageinseconds_go">
 <a href="#maximumeventageinseconds_go" style="color: inherit; text-decoration: inherit;">Maximum<wbr>Event<wbr>Age<wbr>In<wbr>Seconds</a>
@@ -576,8 +588,7 @@ The FunctionAsyncInvokeConfig resource accepts the following [input]({{< relref 
         <span class="property-type">int</span>
     </dt>
     <dd>{{% md %}}Maximum age of a request that Function Compute sends to a function for processing in seconds. Valid values between 60 and 21600.
-{{% /md %}}</dd>
-    <dt class="property-optional"
+{{% /md %}}</dd><dt class="property-optional"
             title="Optional">
         <span id="maximumretryattempts_go">
 <a href="#maximumretryattempts_go" style="color: inherit; text-decoration: inherit;">Maximum<wbr>Retry<wbr>Attempts</a>
@@ -586,8 +597,7 @@ The FunctionAsyncInvokeConfig resource accepts the following [input]({{< relref 
         <span class="property-type">int</span>
     </dt>
     <dd>{{% md %}}Maximum number of times to retry when the function returns an error. Valid values between 0 and 2. Defaults to 2.
-{{% /md %}}</dd>
-    <dt class="property-optional"
+{{% /md %}}</dd><dt class="property-optional"
             title="Optional">
         <span id="qualifier_go">
 <a href="#qualifier_go" style="color: inherit; text-decoration: inherit;">Qualifier</a>
@@ -596,14 +606,11 @@ The FunctionAsyncInvokeConfig resource accepts the following [input]({{< relref 
         <span class="property-type">string</span>
     </dt>
     <dd>{{% md %}}Function Compute Function published version, `LATEST`, or Function Compute Alias name. The default value is `LATEST`.
-{{% /md %}}</dd>
-</dl>
+{{% /md %}}</dd></dl>
 {{% /choosable %}}
 
 {{% choosable language nodejs %}}
-<dl class="resources-properties">
-
-    <dt class="property-required"
+<dl class="resources-properties"><dt class="property-required"
             title="Required">
         <span id="functionname_nodejs">
 <a href="#functionname_nodejs" style="color: inherit; text-decoration: inherit;">function<wbr>Name</a>
@@ -612,8 +619,7 @@ The FunctionAsyncInvokeConfig resource accepts the following [input]({{< relref 
         <span class="property-type">string</span>
     </dt>
     <dd>{{% md %}}Name of the Function Compute Function.
-{{% /md %}}</dd>
-    <dt class="property-required"
+{{% /md %}}</dd><dt class="property-required"
             title="Required">
         <span id="servicename_nodejs">
 <a href="#servicename_nodejs" style="color: inherit; text-decoration: inherit;">service<wbr>Name</a>
@@ -622,8 +628,7 @@ The FunctionAsyncInvokeConfig resource accepts the following [input]({{< relref 
         <span class="property-type">string</span>
     </dt>
     <dd>{{% md %}}Name of the Function Compute Function, omitting any version or alias qualifier.
-{{% /md %}}</dd>
-    <dt class="property-optional"
+{{% /md %}}</dd><dt class="property-optional"
             title="Optional">
         <span id="destinationconfig_nodejs">
 <a href="#destinationconfig_nodejs" style="color: inherit; text-decoration: inherit;">destination<wbr>Config</a>
@@ -632,8 +637,7 @@ The FunctionAsyncInvokeConfig resource accepts the following [input]({{< relref 
         <span class="property-type"><a href="#functionasyncinvokeconfigdestinationconfig">Function<wbr>Async<wbr>Invoke<wbr>Config<wbr>Destination<wbr>Config</a></span>
     </dt>
     <dd>{{% md %}}Configuration block with destination configuration. See below for details.
-{{% /md %}}</dd>
-    <dt class="property-optional"
+{{% /md %}}</dd><dt class="property-optional"
             title="Optional">
         <span id="maximumeventageinseconds_nodejs">
 <a href="#maximumeventageinseconds_nodejs" style="color: inherit; text-decoration: inherit;">maximum<wbr>Event<wbr>Age<wbr>In<wbr>Seconds</a>
@@ -642,8 +646,7 @@ The FunctionAsyncInvokeConfig resource accepts the following [input]({{< relref 
         <span class="property-type">number</span>
     </dt>
     <dd>{{% md %}}Maximum age of a request that Function Compute sends to a function for processing in seconds. Valid values between 60 and 21600.
-{{% /md %}}</dd>
-    <dt class="property-optional"
+{{% /md %}}</dd><dt class="property-optional"
             title="Optional">
         <span id="maximumretryattempts_nodejs">
 <a href="#maximumretryattempts_nodejs" style="color: inherit; text-decoration: inherit;">maximum<wbr>Retry<wbr>Attempts</a>
@@ -652,8 +655,7 @@ The FunctionAsyncInvokeConfig resource accepts the following [input]({{< relref 
         <span class="property-type">number</span>
     </dt>
     <dd>{{% md %}}Maximum number of times to retry when the function returns an error. Valid values between 0 and 2. Defaults to 2.
-{{% /md %}}</dd>
-    <dt class="property-optional"
+{{% /md %}}</dd><dt class="property-optional"
             title="Optional">
         <span id="qualifier_nodejs">
 <a href="#qualifier_nodejs" style="color: inherit; text-decoration: inherit;">qualifier</a>
@@ -662,14 +664,11 @@ The FunctionAsyncInvokeConfig resource accepts the following [input]({{< relref 
         <span class="property-type">string</span>
     </dt>
     <dd>{{% md %}}Function Compute Function published version, `LATEST`, or Function Compute Alias name. The default value is `LATEST`.
-{{% /md %}}</dd>
-</dl>
+{{% /md %}}</dd></dl>
 {{% /choosable %}}
 
 {{% choosable language python %}}
-<dl class="resources-properties">
-
-    <dt class="property-required"
+<dl class="resources-properties"><dt class="property-required"
             title="Required">
         <span id="function_name_python">
 <a href="#function_name_python" style="color: inherit; text-decoration: inherit;">function_<wbr>name</a>
@@ -678,8 +677,7 @@ The FunctionAsyncInvokeConfig resource accepts the following [input]({{< relref 
         <span class="property-type">str</span>
     </dt>
     <dd>{{% md %}}Name of the Function Compute Function.
-{{% /md %}}</dd>
-    <dt class="property-required"
+{{% /md %}}</dd><dt class="property-required"
             title="Required">
         <span id="service_name_python">
 <a href="#service_name_python" style="color: inherit; text-decoration: inherit;">service_<wbr>name</a>
@@ -688,8 +686,7 @@ The FunctionAsyncInvokeConfig resource accepts the following [input]({{< relref 
         <span class="property-type">str</span>
     </dt>
     <dd>{{% md %}}Name of the Function Compute Function, omitting any version or alias qualifier.
-{{% /md %}}</dd>
-    <dt class="property-optional"
+{{% /md %}}</dd><dt class="property-optional"
             title="Optional">
         <span id="destination_config_python">
 <a href="#destination_config_python" style="color: inherit; text-decoration: inherit;">destination_<wbr>config</a>
@@ -698,8 +695,7 @@ The FunctionAsyncInvokeConfig resource accepts the following [input]({{< relref 
         <span class="property-type"><a href="#functionasyncinvokeconfigdestinationconfig">Function<wbr>Async<wbr>Invoke<wbr>Config<wbr>Destination<wbr>Config<wbr>Args</a></span>
     </dt>
     <dd>{{% md %}}Configuration block with destination configuration. See below for details.
-{{% /md %}}</dd>
-    <dt class="property-optional"
+{{% /md %}}</dd><dt class="property-optional"
             title="Optional">
         <span id="maximum_event_age_in_seconds_python">
 <a href="#maximum_event_age_in_seconds_python" style="color: inherit; text-decoration: inherit;">maximum_<wbr>event_<wbr>age_<wbr>in_<wbr>seconds</a>
@@ -708,8 +704,7 @@ The FunctionAsyncInvokeConfig resource accepts the following [input]({{< relref 
         <span class="property-type">int</span>
     </dt>
     <dd>{{% md %}}Maximum age of a request that Function Compute sends to a function for processing in seconds. Valid values between 60 and 21600.
-{{% /md %}}</dd>
-    <dt class="property-optional"
+{{% /md %}}</dd><dt class="property-optional"
             title="Optional">
         <span id="maximum_retry_attempts_python">
 <a href="#maximum_retry_attempts_python" style="color: inherit; text-decoration: inherit;">maximum_<wbr>retry_<wbr>attempts</a>
@@ -718,8 +713,7 @@ The FunctionAsyncInvokeConfig resource accepts the following [input]({{< relref 
         <span class="property-type">int</span>
     </dt>
     <dd>{{% md %}}Maximum number of times to retry when the function returns an error. Valid values between 0 and 2. Defaults to 2.
-{{% /md %}}</dd>
-    <dt class="property-optional"
+{{% /md %}}</dd><dt class="property-optional"
             title="Optional">
         <span id="qualifier_python">
 <a href="#qualifier_python" style="color: inherit; text-decoration: inherit;">qualifier</a>
@@ -728,8 +722,7 @@ The FunctionAsyncInvokeConfig resource accepts the following [input]({{< relref 
         <span class="property-type">str</span>
     </dt>
     <dd>{{% md %}}Function Compute Function published version, `LATEST`, or Function Compute Alias name. The default value is `LATEST`.
-{{% /md %}}</dd>
-</dl>
+{{% /md %}}</dd></dl>
 {{% /choosable %}}
 
 
@@ -740,9 +733,7 @@ All [input](#inputs) properties are implicitly available as output properties. A
 
 
 {{% choosable language csharp %}}
-<dl class="resources-properties">
-
-    <dt class="property-"
+<dl class="resources-properties"><dt class="property-"
             title="">
         <span id="createdtime_csharp">
 <a href="#createdtime_csharp" style="color: inherit; text-decoration: inherit;">Created<wbr>Time</a>
@@ -751,8 +742,7 @@ All [input](#inputs) properties are implicitly available as output properties. A
         <span class="property-type">string</span>
     </dt>
     <dd>{{% md %}}The date this resource was created.
-{{% /md %}}</dd>
-    <dt class="property-"
+{{% /md %}}</dd><dt class="property-"
             title="">
         <span id="id_csharp">
 <a href="#id_csharp" style="color: inherit; text-decoration: inherit;">Id</a>
@@ -760,8 +750,7 @@ All [input](#inputs) properties are implicitly available as output properties. A
         <span class="property-indicator"></span>
         <span class="property-type">string</span>
     </dt>
-    <dd>{{% md %}}The provider-assigned unique ID for this managed resource.{{% /md %}}</dd>
-    <dt class="property-"
+    <dd>{{% md %}}The provider-assigned unique ID for this managed resource.{{% /md %}}</dd><dt class="property-"
             title="">
         <span id="lastmodifiedtime_csharp">
 <a href="#lastmodifiedtime_csharp" style="color: inherit; text-decoration: inherit;">Last<wbr>Modified<wbr>Time</a>
@@ -770,14 +759,11 @@ All [input](#inputs) properties are implicitly available as output properties. A
         <span class="property-type">string</span>
     </dt>
     <dd>{{% md %}}The date this resource was last modified.
-{{% /md %}}</dd>
-</dl>
+{{% /md %}}</dd></dl>
 {{% /choosable %}}
 
 {{% choosable language go %}}
-<dl class="resources-properties">
-
-    <dt class="property-"
+<dl class="resources-properties"><dt class="property-"
             title="">
         <span id="createdtime_go">
 <a href="#createdtime_go" style="color: inherit; text-decoration: inherit;">Created<wbr>Time</a>
@@ -786,8 +772,7 @@ All [input](#inputs) properties are implicitly available as output properties. A
         <span class="property-type">string</span>
     </dt>
     <dd>{{% md %}}The date this resource was created.
-{{% /md %}}</dd>
-    <dt class="property-"
+{{% /md %}}</dd><dt class="property-"
             title="">
         <span id="id_go">
 <a href="#id_go" style="color: inherit; text-decoration: inherit;">Id</a>
@@ -795,8 +780,7 @@ All [input](#inputs) properties are implicitly available as output properties. A
         <span class="property-indicator"></span>
         <span class="property-type">string</span>
     </dt>
-    <dd>{{% md %}}The provider-assigned unique ID for this managed resource.{{% /md %}}</dd>
-    <dt class="property-"
+    <dd>{{% md %}}The provider-assigned unique ID for this managed resource.{{% /md %}}</dd><dt class="property-"
             title="">
         <span id="lastmodifiedtime_go">
 <a href="#lastmodifiedtime_go" style="color: inherit; text-decoration: inherit;">Last<wbr>Modified<wbr>Time</a>
@@ -805,14 +789,11 @@ All [input](#inputs) properties are implicitly available as output properties. A
         <span class="property-type">string</span>
     </dt>
     <dd>{{% md %}}The date this resource was last modified.
-{{% /md %}}</dd>
-</dl>
+{{% /md %}}</dd></dl>
 {{% /choosable %}}
 
 {{% choosable language nodejs %}}
-<dl class="resources-properties">
-
-    <dt class="property-"
+<dl class="resources-properties"><dt class="property-"
             title="">
         <span id="createdtime_nodejs">
 <a href="#createdtime_nodejs" style="color: inherit; text-decoration: inherit;">created<wbr>Time</a>
@@ -821,8 +802,7 @@ All [input](#inputs) properties are implicitly available as output properties. A
         <span class="property-type">string</span>
     </dt>
     <dd>{{% md %}}The date this resource was created.
-{{% /md %}}</dd>
-    <dt class="property-"
+{{% /md %}}</dd><dt class="property-"
             title="">
         <span id="id_nodejs">
 <a href="#id_nodejs" style="color: inherit; text-decoration: inherit;">id</a>
@@ -830,8 +810,7 @@ All [input](#inputs) properties are implicitly available as output properties. A
         <span class="property-indicator"></span>
         <span class="property-type">string</span>
     </dt>
-    <dd>{{% md %}}The provider-assigned unique ID for this managed resource.{{% /md %}}</dd>
-    <dt class="property-"
+    <dd>{{% md %}}The provider-assigned unique ID for this managed resource.{{% /md %}}</dd><dt class="property-"
             title="">
         <span id="lastmodifiedtime_nodejs">
 <a href="#lastmodifiedtime_nodejs" style="color: inherit; text-decoration: inherit;">last<wbr>Modified<wbr>Time</a>
@@ -840,14 +819,11 @@ All [input](#inputs) properties are implicitly available as output properties. A
         <span class="property-type">string</span>
     </dt>
     <dd>{{% md %}}The date this resource was last modified.
-{{% /md %}}</dd>
-</dl>
+{{% /md %}}</dd></dl>
 {{% /choosable %}}
 
 {{% choosable language python %}}
-<dl class="resources-properties">
-
-    <dt class="property-"
+<dl class="resources-properties"><dt class="property-"
             title="">
         <span id="created_time_python">
 <a href="#created_time_python" style="color: inherit; text-decoration: inherit;">created_<wbr>time</a>
@@ -856,8 +832,7 @@ All [input](#inputs) properties are implicitly available as output properties. A
         <span class="property-type">str</span>
     </dt>
     <dd>{{% md %}}The date this resource was created.
-{{% /md %}}</dd>
-    <dt class="property-"
+{{% /md %}}</dd><dt class="property-"
             title="">
         <span id="id_python">
 <a href="#id_python" style="color: inherit; text-decoration: inherit;">id</a>
@@ -865,8 +840,7 @@ All [input](#inputs) properties are implicitly available as output properties. A
         <span class="property-indicator"></span>
         <span class="property-type">str</span>
     </dt>
-    <dd>{{% md %}}The provider-assigned unique ID for this managed resource.{{% /md %}}</dd>
-    <dt class="property-"
+    <dd>{{% md %}}The provider-assigned unique ID for this managed resource.{{% /md %}}</dd><dt class="property-"
             title="">
         <span id="last_modified_time_python">
 <a href="#last_modified_time_python" style="color: inherit; text-decoration: inherit;">last_<wbr>modified_<wbr>time</a>
@@ -875,8 +849,7 @@ All [input](#inputs) properties are implicitly available as output properties. A
         <span class="property-type">str</span>
     </dt>
     <dd>{{% md %}}The date this resource was last modified.
-{{% /md %}}</dd>
-</dl>
+{{% /md %}}</dd></dl>
 {{% /choosable %}}
 
 
@@ -1003,9 +976,7 @@ The following state arguments are supported:
 
 
 {{% choosable language csharp %}}
-<dl class="resources-properties">
-
-    <dt class="property-optional"
+<dl class="resources-properties"><dt class="property-optional"
             title="Optional">
         <span id="state_createdtime_csharp">
 <a href="#state_createdtime_csharp" style="color: inherit; text-decoration: inherit;">Created<wbr>Time</a>
@@ -1014,8 +985,7 @@ The following state arguments are supported:
         <span class="property-type">string</span>
     </dt>
     <dd>{{% md %}}The date this resource was created.
-{{% /md %}}</dd>
-    <dt class="property-optional"
+{{% /md %}}</dd><dt class="property-optional"
             title="Optional">
         <span id="state_destinationconfig_csharp">
 <a href="#state_destinationconfig_csharp" style="color: inherit; text-decoration: inherit;">Destination<wbr>Config</a>
@@ -1024,8 +994,7 @@ The following state arguments are supported:
         <span class="property-type"><a href="#functionasyncinvokeconfigdestinationconfig">Pulumi.<wbr>Ali<wbr>Cloud.<wbr>FC.<wbr>Inputs.<wbr>Function<wbr>Async<wbr>Invoke<wbr>Config<wbr>Destination<wbr>Config<wbr>Args</a></span>
     </dt>
     <dd>{{% md %}}Configuration block with destination configuration. See below for details.
-{{% /md %}}</dd>
-    <dt class="property-optional"
+{{% /md %}}</dd><dt class="property-optional"
             title="Optional">
         <span id="state_functionname_csharp">
 <a href="#state_functionname_csharp" style="color: inherit; text-decoration: inherit;">Function<wbr>Name</a>
@@ -1034,8 +1003,7 @@ The following state arguments are supported:
         <span class="property-type">string</span>
     </dt>
     <dd>{{% md %}}Name of the Function Compute Function.
-{{% /md %}}</dd>
-    <dt class="property-optional"
+{{% /md %}}</dd><dt class="property-optional"
             title="Optional">
         <span id="state_lastmodifiedtime_csharp">
 <a href="#state_lastmodifiedtime_csharp" style="color: inherit; text-decoration: inherit;">Last<wbr>Modified<wbr>Time</a>
@@ -1044,8 +1012,7 @@ The following state arguments are supported:
         <span class="property-type">string</span>
     </dt>
     <dd>{{% md %}}The date this resource was last modified.
-{{% /md %}}</dd>
-    <dt class="property-optional"
+{{% /md %}}</dd><dt class="property-optional"
             title="Optional">
         <span id="state_maximumeventageinseconds_csharp">
 <a href="#state_maximumeventageinseconds_csharp" style="color: inherit; text-decoration: inherit;">Maximum<wbr>Event<wbr>Age<wbr>In<wbr>Seconds</a>
@@ -1054,8 +1021,7 @@ The following state arguments are supported:
         <span class="property-type">int</span>
     </dt>
     <dd>{{% md %}}Maximum age of a request that Function Compute sends to a function for processing in seconds. Valid values between 60 and 21600.
-{{% /md %}}</dd>
-    <dt class="property-optional"
+{{% /md %}}</dd><dt class="property-optional"
             title="Optional">
         <span id="state_maximumretryattempts_csharp">
 <a href="#state_maximumretryattempts_csharp" style="color: inherit; text-decoration: inherit;">Maximum<wbr>Retry<wbr>Attempts</a>
@@ -1064,8 +1030,7 @@ The following state arguments are supported:
         <span class="property-type">int</span>
     </dt>
     <dd>{{% md %}}Maximum number of times to retry when the function returns an error. Valid values between 0 and 2. Defaults to 2.
-{{% /md %}}</dd>
-    <dt class="property-optional"
+{{% /md %}}</dd><dt class="property-optional"
             title="Optional">
         <span id="state_qualifier_csharp">
 <a href="#state_qualifier_csharp" style="color: inherit; text-decoration: inherit;">Qualifier</a>
@@ -1074,8 +1039,7 @@ The following state arguments are supported:
         <span class="property-type">string</span>
     </dt>
     <dd>{{% md %}}Function Compute Function published version, `LATEST`, or Function Compute Alias name. The default value is `LATEST`.
-{{% /md %}}</dd>
-    <dt class="property-optional"
+{{% /md %}}</dd><dt class="property-optional"
             title="Optional">
         <span id="state_servicename_csharp">
 <a href="#state_servicename_csharp" style="color: inherit; text-decoration: inherit;">Service<wbr>Name</a>
@@ -1084,14 +1048,11 @@ The following state arguments are supported:
         <span class="property-type">string</span>
     </dt>
     <dd>{{% md %}}Name of the Function Compute Function, omitting any version or alias qualifier.
-{{% /md %}}</dd>
-</dl>
+{{% /md %}}</dd></dl>
 {{% /choosable %}}
 
 {{% choosable language go %}}
-<dl class="resources-properties">
-
-    <dt class="property-optional"
+<dl class="resources-properties"><dt class="property-optional"
             title="Optional">
         <span id="state_createdtime_go">
 <a href="#state_createdtime_go" style="color: inherit; text-decoration: inherit;">Created<wbr>Time</a>
@@ -1100,8 +1061,7 @@ The following state arguments are supported:
         <span class="property-type">string</span>
     </dt>
     <dd>{{% md %}}The date this resource was created.
-{{% /md %}}</dd>
-    <dt class="property-optional"
+{{% /md %}}</dd><dt class="property-optional"
             title="Optional">
         <span id="state_destinationconfig_go">
 <a href="#state_destinationconfig_go" style="color: inherit; text-decoration: inherit;">Destination<wbr>Config</a>
@@ -1110,8 +1070,7 @@ The following state arguments are supported:
         <span class="property-type"><a href="#functionasyncinvokeconfigdestinationconfig">Function<wbr>Async<wbr>Invoke<wbr>Config<wbr>Destination<wbr>Config</a></span>
     </dt>
     <dd>{{% md %}}Configuration block with destination configuration. See below for details.
-{{% /md %}}</dd>
-    <dt class="property-optional"
+{{% /md %}}</dd><dt class="property-optional"
             title="Optional">
         <span id="state_functionname_go">
 <a href="#state_functionname_go" style="color: inherit; text-decoration: inherit;">Function<wbr>Name</a>
@@ -1120,8 +1079,7 @@ The following state arguments are supported:
         <span class="property-type">string</span>
     </dt>
     <dd>{{% md %}}Name of the Function Compute Function.
-{{% /md %}}</dd>
-    <dt class="property-optional"
+{{% /md %}}</dd><dt class="property-optional"
             title="Optional">
         <span id="state_lastmodifiedtime_go">
 <a href="#state_lastmodifiedtime_go" style="color: inherit; text-decoration: inherit;">Last<wbr>Modified<wbr>Time</a>
@@ -1130,8 +1088,7 @@ The following state arguments are supported:
         <span class="property-type">string</span>
     </dt>
     <dd>{{% md %}}The date this resource was last modified.
-{{% /md %}}</dd>
-    <dt class="property-optional"
+{{% /md %}}</dd><dt class="property-optional"
             title="Optional">
         <span id="state_maximumeventageinseconds_go">
 <a href="#state_maximumeventageinseconds_go" style="color: inherit; text-decoration: inherit;">Maximum<wbr>Event<wbr>Age<wbr>In<wbr>Seconds</a>
@@ -1140,8 +1097,7 @@ The following state arguments are supported:
         <span class="property-type">int</span>
     </dt>
     <dd>{{% md %}}Maximum age of a request that Function Compute sends to a function for processing in seconds. Valid values between 60 and 21600.
-{{% /md %}}</dd>
-    <dt class="property-optional"
+{{% /md %}}</dd><dt class="property-optional"
             title="Optional">
         <span id="state_maximumretryattempts_go">
 <a href="#state_maximumretryattempts_go" style="color: inherit; text-decoration: inherit;">Maximum<wbr>Retry<wbr>Attempts</a>
@@ -1150,8 +1106,7 @@ The following state arguments are supported:
         <span class="property-type">int</span>
     </dt>
     <dd>{{% md %}}Maximum number of times to retry when the function returns an error. Valid values between 0 and 2. Defaults to 2.
-{{% /md %}}</dd>
-    <dt class="property-optional"
+{{% /md %}}</dd><dt class="property-optional"
             title="Optional">
         <span id="state_qualifier_go">
 <a href="#state_qualifier_go" style="color: inherit; text-decoration: inherit;">Qualifier</a>
@@ -1160,8 +1115,7 @@ The following state arguments are supported:
         <span class="property-type">string</span>
     </dt>
     <dd>{{% md %}}Function Compute Function published version, `LATEST`, or Function Compute Alias name. The default value is `LATEST`.
-{{% /md %}}</dd>
-    <dt class="property-optional"
+{{% /md %}}</dd><dt class="property-optional"
             title="Optional">
         <span id="state_servicename_go">
 <a href="#state_servicename_go" style="color: inherit; text-decoration: inherit;">Service<wbr>Name</a>
@@ -1170,14 +1124,11 @@ The following state arguments are supported:
         <span class="property-type">string</span>
     </dt>
     <dd>{{% md %}}Name of the Function Compute Function, omitting any version or alias qualifier.
-{{% /md %}}</dd>
-</dl>
+{{% /md %}}</dd></dl>
 {{% /choosable %}}
 
 {{% choosable language nodejs %}}
-<dl class="resources-properties">
-
-    <dt class="property-optional"
+<dl class="resources-properties"><dt class="property-optional"
             title="Optional">
         <span id="state_createdtime_nodejs">
 <a href="#state_createdtime_nodejs" style="color: inherit; text-decoration: inherit;">created<wbr>Time</a>
@@ -1186,8 +1137,7 @@ The following state arguments are supported:
         <span class="property-type">string</span>
     </dt>
     <dd>{{% md %}}The date this resource was created.
-{{% /md %}}</dd>
-    <dt class="property-optional"
+{{% /md %}}</dd><dt class="property-optional"
             title="Optional">
         <span id="state_destinationconfig_nodejs">
 <a href="#state_destinationconfig_nodejs" style="color: inherit; text-decoration: inherit;">destination<wbr>Config</a>
@@ -1196,8 +1146,7 @@ The following state arguments are supported:
         <span class="property-type"><a href="#functionasyncinvokeconfigdestinationconfig">Function<wbr>Async<wbr>Invoke<wbr>Config<wbr>Destination<wbr>Config</a></span>
     </dt>
     <dd>{{% md %}}Configuration block with destination configuration. See below for details.
-{{% /md %}}</dd>
-    <dt class="property-optional"
+{{% /md %}}</dd><dt class="property-optional"
             title="Optional">
         <span id="state_functionname_nodejs">
 <a href="#state_functionname_nodejs" style="color: inherit; text-decoration: inherit;">function<wbr>Name</a>
@@ -1206,8 +1155,7 @@ The following state arguments are supported:
         <span class="property-type">string</span>
     </dt>
     <dd>{{% md %}}Name of the Function Compute Function.
-{{% /md %}}</dd>
-    <dt class="property-optional"
+{{% /md %}}</dd><dt class="property-optional"
             title="Optional">
         <span id="state_lastmodifiedtime_nodejs">
 <a href="#state_lastmodifiedtime_nodejs" style="color: inherit; text-decoration: inherit;">last<wbr>Modified<wbr>Time</a>
@@ -1216,8 +1164,7 @@ The following state arguments are supported:
         <span class="property-type">string</span>
     </dt>
     <dd>{{% md %}}The date this resource was last modified.
-{{% /md %}}</dd>
-    <dt class="property-optional"
+{{% /md %}}</dd><dt class="property-optional"
             title="Optional">
         <span id="state_maximumeventageinseconds_nodejs">
 <a href="#state_maximumeventageinseconds_nodejs" style="color: inherit; text-decoration: inherit;">maximum<wbr>Event<wbr>Age<wbr>In<wbr>Seconds</a>
@@ -1226,8 +1173,7 @@ The following state arguments are supported:
         <span class="property-type">number</span>
     </dt>
     <dd>{{% md %}}Maximum age of a request that Function Compute sends to a function for processing in seconds. Valid values between 60 and 21600.
-{{% /md %}}</dd>
-    <dt class="property-optional"
+{{% /md %}}</dd><dt class="property-optional"
             title="Optional">
         <span id="state_maximumretryattempts_nodejs">
 <a href="#state_maximumretryattempts_nodejs" style="color: inherit; text-decoration: inherit;">maximum<wbr>Retry<wbr>Attempts</a>
@@ -1236,8 +1182,7 @@ The following state arguments are supported:
         <span class="property-type">number</span>
     </dt>
     <dd>{{% md %}}Maximum number of times to retry when the function returns an error. Valid values between 0 and 2. Defaults to 2.
-{{% /md %}}</dd>
-    <dt class="property-optional"
+{{% /md %}}</dd><dt class="property-optional"
             title="Optional">
         <span id="state_qualifier_nodejs">
 <a href="#state_qualifier_nodejs" style="color: inherit; text-decoration: inherit;">qualifier</a>
@@ -1246,8 +1191,7 @@ The following state arguments are supported:
         <span class="property-type">string</span>
     </dt>
     <dd>{{% md %}}Function Compute Function published version, `LATEST`, or Function Compute Alias name. The default value is `LATEST`.
-{{% /md %}}</dd>
-    <dt class="property-optional"
+{{% /md %}}</dd><dt class="property-optional"
             title="Optional">
         <span id="state_servicename_nodejs">
 <a href="#state_servicename_nodejs" style="color: inherit; text-decoration: inherit;">service<wbr>Name</a>
@@ -1256,14 +1200,11 @@ The following state arguments are supported:
         <span class="property-type">string</span>
     </dt>
     <dd>{{% md %}}Name of the Function Compute Function, omitting any version or alias qualifier.
-{{% /md %}}</dd>
-</dl>
+{{% /md %}}</dd></dl>
 {{% /choosable %}}
 
 {{% choosable language python %}}
-<dl class="resources-properties">
-
-    <dt class="property-optional"
+<dl class="resources-properties"><dt class="property-optional"
             title="Optional">
         <span id="state_created_time_python">
 <a href="#state_created_time_python" style="color: inherit; text-decoration: inherit;">created_<wbr>time</a>
@@ -1272,8 +1213,7 @@ The following state arguments are supported:
         <span class="property-type">str</span>
     </dt>
     <dd>{{% md %}}The date this resource was created.
-{{% /md %}}</dd>
-    <dt class="property-optional"
+{{% /md %}}</dd><dt class="property-optional"
             title="Optional">
         <span id="state_destination_config_python">
 <a href="#state_destination_config_python" style="color: inherit; text-decoration: inherit;">destination_<wbr>config</a>
@@ -1282,8 +1222,7 @@ The following state arguments are supported:
         <span class="property-type"><a href="#functionasyncinvokeconfigdestinationconfig">Function<wbr>Async<wbr>Invoke<wbr>Config<wbr>Destination<wbr>Config<wbr>Args</a></span>
     </dt>
     <dd>{{% md %}}Configuration block with destination configuration. See below for details.
-{{% /md %}}</dd>
-    <dt class="property-optional"
+{{% /md %}}</dd><dt class="property-optional"
             title="Optional">
         <span id="state_function_name_python">
 <a href="#state_function_name_python" style="color: inherit; text-decoration: inherit;">function_<wbr>name</a>
@@ -1292,8 +1231,7 @@ The following state arguments are supported:
         <span class="property-type">str</span>
     </dt>
     <dd>{{% md %}}Name of the Function Compute Function.
-{{% /md %}}</dd>
-    <dt class="property-optional"
+{{% /md %}}</dd><dt class="property-optional"
             title="Optional">
         <span id="state_last_modified_time_python">
 <a href="#state_last_modified_time_python" style="color: inherit; text-decoration: inherit;">last_<wbr>modified_<wbr>time</a>
@@ -1302,8 +1240,7 @@ The following state arguments are supported:
         <span class="property-type">str</span>
     </dt>
     <dd>{{% md %}}The date this resource was last modified.
-{{% /md %}}</dd>
-    <dt class="property-optional"
+{{% /md %}}</dd><dt class="property-optional"
             title="Optional">
         <span id="state_maximum_event_age_in_seconds_python">
 <a href="#state_maximum_event_age_in_seconds_python" style="color: inherit; text-decoration: inherit;">maximum_<wbr>event_<wbr>age_<wbr>in_<wbr>seconds</a>
@@ -1312,8 +1249,7 @@ The following state arguments are supported:
         <span class="property-type">int</span>
     </dt>
     <dd>{{% md %}}Maximum age of a request that Function Compute sends to a function for processing in seconds. Valid values between 60 and 21600.
-{{% /md %}}</dd>
-    <dt class="property-optional"
+{{% /md %}}</dd><dt class="property-optional"
             title="Optional">
         <span id="state_maximum_retry_attempts_python">
 <a href="#state_maximum_retry_attempts_python" style="color: inherit; text-decoration: inherit;">maximum_<wbr>retry_<wbr>attempts</a>
@@ -1322,8 +1258,7 @@ The following state arguments are supported:
         <span class="property-type">int</span>
     </dt>
     <dd>{{% md %}}Maximum number of times to retry when the function returns an error. Valid values between 0 and 2. Defaults to 2.
-{{% /md %}}</dd>
-    <dt class="property-optional"
+{{% /md %}}</dd><dt class="property-optional"
             title="Optional">
         <span id="state_qualifier_python">
 <a href="#state_qualifier_python" style="color: inherit; text-decoration: inherit;">qualifier</a>
@@ -1332,8 +1267,7 @@ The following state arguments are supported:
         <span class="property-type">str</span>
     </dt>
     <dd>{{% md %}}Function Compute Function published version, `LATEST`, or Function Compute Alias name. The default value is `LATEST`.
-{{% /md %}}</dd>
-    <dt class="property-optional"
+{{% /md %}}</dd><dt class="property-optional"
             title="Optional">
         <span id="state_service_name_python">
 <a href="#state_service_name_python" style="color: inherit; text-decoration: inherit;">service_<wbr>name</a>
@@ -1342,8 +1276,7 @@ The following state arguments are supported:
         <span class="property-type">str</span>
     </dt>
     <dd>{{% md %}}Name of the Function Compute Function, omitting any version or alias qualifier.
-{{% /md %}}</dd>
-</dl>
+{{% /md %}}</dd></dl>
 {{% /choosable %}}
 
 
@@ -1358,9 +1291,7 @@ The following state arguments are supported:
 <h4 id="functionasyncinvokeconfigdestinationconfig">Function<wbr>Async<wbr>Invoke<wbr>Config<wbr>Destination<wbr>Config</h4>
 
 {{% choosable language csharp %}}
-<dl class="resources-properties">
-
-    <dt class="property-optional"
+<dl class="resources-properties"><dt class="property-optional"
             title="Optional">
         <span id="onfailure_csharp">
 <a href="#onfailure_csharp" style="color: inherit; text-decoration: inherit;">On<wbr>Failure</a>
@@ -1369,8 +1300,7 @@ The following state arguments are supported:
         <span class="property-type"><a href="#functionasyncinvokeconfigdestinationconfigonfailure">Pulumi.<wbr>Ali<wbr>Cloud.<wbr>FC.<wbr>Inputs.<wbr>Function<wbr>Async<wbr>Invoke<wbr>Config<wbr>Destination<wbr>Config<wbr>On<wbr>Failure<wbr>Args</a></span>
     </dt>
     <dd>{{% md %}}Configuration block with destination configuration for failed asynchronous invocations. See below for details.
-{{% /md %}}</dd>
-    <dt class="property-optional"
+{{% /md %}}</dd><dt class="property-optional"
             title="Optional">
         <span id="onsuccess_csharp">
 <a href="#onsuccess_csharp" style="color: inherit; text-decoration: inherit;">On<wbr>Success</a>
@@ -1379,14 +1309,11 @@ The following state arguments are supported:
         <span class="property-type"><a href="#functionasyncinvokeconfigdestinationconfigonsuccess">Pulumi.<wbr>Ali<wbr>Cloud.<wbr>FC.<wbr>Inputs.<wbr>Function<wbr>Async<wbr>Invoke<wbr>Config<wbr>Destination<wbr>Config<wbr>On<wbr>Success<wbr>Args</a></span>
     </dt>
     <dd>{{% md %}}Configuration block with destination configuration for successful asynchronous invocations. See below for details.
-{{% /md %}}</dd>
-</dl>
+{{% /md %}}</dd></dl>
 {{% /choosable %}}
 
 {{% choosable language go %}}
-<dl class="resources-properties">
-
-    <dt class="property-optional"
+<dl class="resources-properties"><dt class="property-optional"
             title="Optional">
         <span id="onfailure_go">
 <a href="#onfailure_go" style="color: inherit; text-decoration: inherit;">On<wbr>Failure</a>
@@ -1395,8 +1322,7 @@ The following state arguments are supported:
         <span class="property-type"><a href="#functionasyncinvokeconfigdestinationconfigonfailure">Function<wbr>Async<wbr>Invoke<wbr>Config<wbr>Destination<wbr>Config<wbr>On<wbr>Failure</a></span>
     </dt>
     <dd>{{% md %}}Configuration block with destination configuration for failed asynchronous invocations. See below for details.
-{{% /md %}}</dd>
-    <dt class="property-optional"
+{{% /md %}}</dd><dt class="property-optional"
             title="Optional">
         <span id="onsuccess_go">
 <a href="#onsuccess_go" style="color: inherit; text-decoration: inherit;">On<wbr>Success</a>
@@ -1405,14 +1331,11 @@ The following state arguments are supported:
         <span class="property-type"><a href="#functionasyncinvokeconfigdestinationconfigonsuccess">Function<wbr>Async<wbr>Invoke<wbr>Config<wbr>Destination<wbr>Config<wbr>On<wbr>Success</a></span>
     </dt>
     <dd>{{% md %}}Configuration block with destination configuration for successful asynchronous invocations. See below for details.
-{{% /md %}}</dd>
-</dl>
+{{% /md %}}</dd></dl>
 {{% /choosable %}}
 
 {{% choosable language nodejs %}}
-<dl class="resources-properties">
-
-    <dt class="property-optional"
+<dl class="resources-properties"><dt class="property-optional"
             title="Optional">
         <span id="onfailure_nodejs">
 <a href="#onfailure_nodejs" style="color: inherit; text-decoration: inherit;">on<wbr>Failure</a>
@@ -1421,8 +1344,7 @@ The following state arguments are supported:
         <span class="property-type"><a href="#functionasyncinvokeconfigdestinationconfigonfailure">Function<wbr>Async<wbr>Invoke<wbr>Config<wbr>Destination<wbr>Config<wbr>On<wbr>Failure</a></span>
     </dt>
     <dd>{{% md %}}Configuration block with destination configuration for failed asynchronous invocations. See below for details.
-{{% /md %}}</dd>
-    <dt class="property-optional"
+{{% /md %}}</dd><dt class="property-optional"
             title="Optional">
         <span id="onsuccess_nodejs">
 <a href="#onsuccess_nodejs" style="color: inherit; text-decoration: inherit;">on<wbr>Success</a>
@@ -1431,14 +1353,11 @@ The following state arguments are supported:
         <span class="property-type"><a href="#functionasyncinvokeconfigdestinationconfigonsuccess">Function<wbr>Async<wbr>Invoke<wbr>Config<wbr>Destination<wbr>Config<wbr>On<wbr>Success</a></span>
     </dt>
     <dd>{{% md %}}Configuration block with destination configuration for successful asynchronous invocations. See below for details.
-{{% /md %}}</dd>
-</dl>
+{{% /md %}}</dd></dl>
 {{% /choosable %}}
 
 {{% choosable language python %}}
-<dl class="resources-properties">
-
-    <dt class="property-optional"
+<dl class="resources-properties"><dt class="property-optional"
             title="Optional">
         <span id="on_failure_python">
 <a href="#on_failure_python" style="color: inherit; text-decoration: inherit;">on_<wbr>failure</a>
@@ -1447,8 +1366,7 @@ The following state arguments are supported:
         <span class="property-type"><a href="#functionasyncinvokeconfigdestinationconfigonfailure">Function<wbr>Async<wbr>Invoke<wbr>Config<wbr>Destination<wbr>Config<wbr>On<wbr>Failure<wbr>Args</a></span>
     </dt>
     <dd>{{% md %}}Configuration block with destination configuration for failed asynchronous invocations. See below for details.
-{{% /md %}}</dd>
-    <dt class="property-optional"
+{{% /md %}}</dd><dt class="property-optional"
             title="Optional">
         <span id="on_success_python">
 <a href="#on_success_python" style="color: inherit; text-decoration: inherit;">on_<wbr>success</a>
@@ -1457,16 +1375,13 @@ The following state arguments are supported:
         <span class="property-type"><a href="#functionasyncinvokeconfigdestinationconfigonsuccess">Function<wbr>Async<wbr>Invoke<wbr>Config<wbr>Destination<wbr>Config<wbr>On<wbr>Success<wbr>Args</a></span>
     </dt>
     <dd>{{% md %}}Configuration block with destination configuration for successful asynchronous invocations. See below for details.
-{{% /md %}}</dd>
-</dl>
+{{% /md %}}</dd></dl>
 {{% /choosable %}}
 
 <h4 id="functionasyncinvokeconfigdestinationconfigonfailure">Function<wbr>Async<wbr>Invoke<wbr>Config<wbr>Destination<wbr>Config<wbr>On<wbr>Failure</h4>
 
 {{% choosable language csharp %}}
-<dl class="resources-properties">
-
-    <dt class="property-required"
+<dl class="resources-properties"><dt class="property-required"
             title="Required">
         <span id="destination_csharp">
 <a href="#destination_csharp" style="color: inherit; text-decoration: inherit;">Destination</a>
@@ -1475,14 +1390,11 @@ The following state arguments are supported:
         <span class="property-type">string</span>
     </dt>
     <dd>{{% md %}}Alicloud Resource Name (ARN) of the destination resource. See the [Developer Guide](https://www.alibabacloud.com/help/doc-detail/181866.htm) for acceptable resource types and associated RAM permissions.
-{{% /md %}}</dd>
-</dl>
+{{% /md %}}</dd></dl>
 {{% /choosable %}}
 
 {{% choosable language go %}}
-<dl class="resources-properties">
-
-    <dt class="property-required"
+<dl class="resources-properties"><dt class="property-required"
             title="Required">
         <span id="destination_go">
 <a href="#destination_go" style="color: inherit; text-decoration: inherit;">Destination</a>
@@ -1491,14 +1403,11 @@ The following state arguments are supported:
         <span class="property-type">string</span>
     </dt>
     <dd>{{% md %}}Alicloud Resource Name (ARN) of the destination resource. See the [Developer Guide](https://www.alibabacloud.com/help/doc-detail/181866.htm) for acceptable resource types and associated RAM permissions.
-{{% /md %}}</dd>
-</dl>
+{{% /md %}}</dd></dl>
 {{% /choosable %}}
 
 {{% choosable language nodejs %}}
-<dl class="resources-properties">
-
-    <dt class="property-required"
+<dl class="resources-properties"><dt class="property-required"
             title="Required">
         <span id="destination_nodejs">
 <a href="#destination_nodejs" style="color: inherit; text-decoration: inherit;">destination</a>
@@ -1507,14 +1416,11 @@ The following state arguments are supported:
         <span class="property-type">string</span>
     </dt>
     <dd>{{% md %}}Alicloud Resource Name (ARN) of the destination resource. See the [Developer Guide](https://www.alibabacloud.com/help/doc-detail/181866.htm) for acceptable resource types and associated RAM permissions.
-{{% /md %}}</dd>
-</dl>
+{{% /md %}}</dd></dl>
 {{% /choosable %}}
 
 {{% choosable language python %}}
-<dl class="resources-properties">
-
-    <dt class="property-required"
+<dl class="resources-properties"><dt class="property-required"
             title="Required">
         <span id="destination_python">
 <a href="#destination_python" style="color: inherit; text-decoration: inherit;">destination</a>
@@ -1523,16 +1429,13 @@ The following state arguments are supported:
         <span class="property-type">str</span>
     </dt>
     <dd>{{% md %}}Alicloud Resource Name (ARN) of the destination resource. See the [Developer Guide](https://www.alibabacloud.com/help/doc-detail/181866.htm) for acceptable resource types and associated RAM permissions.
-{{% /md %}}</dd>
-</dl>
+{{% /md %}}</dd></dl>
 {{% /choosable %}}
 
 <h4 id="functionasyncinvokeconfigdestinationconfigonsuccess">Function<wbr>Async<wbr>Invoke<wbr>Config<wbr>Destination<wbr>Config<wbr>On<wbr>Success</h4>
 
 {{% choosable language csharp %}}
-<dl class="resources-properties">
-
-    <dt class="property-required"
+<dl class="resources-properties"><dt class="property-required"
             title="Required">
         <span id="destination_csharp">
 <a href="#destination_csharp" style="color: inherit; text-decoration: inherit;">Destination</a>
@@ -1541,14 +1444,11 @@ The following state arguments are supported:
         <span class="property-type">string</span>
     </dt>
     <dd>{{% md %}}Alicloud Resource Name (ARN) of the destination resource. See the [Developer Guide](https://www.alibabacloud.com/help/doc-detail/181866.htm) for acceptable resource types and associated RAM permissions.
-{{% /md %}}</dd>
-</dl>
+{{% /md %}}</dd></dl>
 {{% /choosable %}}
 
 {{% choosable language go %}}
-<dl class="resources-properties">
-
-    <dt class="property-required"
+<dl class="resources-properties"><dt class="property-required"
             title="Required">
         <span id="destination_go">
 <a href="#destination_go" style="color: inherit; text-decoration: inherit;">Destination</a>
@@ -1557,14 +1457,11 @@ The following state arguments are supported:
         <span class="property-type">string</span>
     </dt>
     <dd>{{% md %}}Alicloud Resource Name (ARN) of the destination resource. See the [Developer Guide](https://www.alibabacloud.com/help/doc-detail/181866.htm) for acceptable resource types and associated RAM permissions.
-{{% /md %}}</dd>
-</dl>
+{{% /md %}}</dd></dl>
 {{% /choosable %}}
 
 {{% choosable language nodejs %}}
-<dl class="resources-properties">
-
-    <dt class="property-required"
+<dl class="resources-properties"><dt class="property-required"
             title="Required">
         <span id="destination_nodejs">
 <a href="#destination_nodejs" style="color: inherit; text-decoration: inherit;">destination</a>
@@ -1573,14 +1470,11 @@ The following state arguments are supported:
         <span class="property-type">string</span>
     </dt>
     <dd>{{% md %}}Alicloud Resource Name (ARN) of the destination resource. See the [Developer Guide](https://www.alibabacloud.com/help/doc-detail/181866.htm) for acceptable resource types and associated RAM permissions.
-{{% /md %}}</dd>
-</dl>
+{{% /md %}}</dd></dl>
 {{% /choosable %}}
 
 {{% choosable language python %}}
-<dl class="resources-properties">
-
-    <dt class="property-required"
+<dl class="resources-properties"><dt class="property-required"
             title="Required">
         <span id="destination_python">
 <a href="#destination_python" style="color: inherit; text-decoration: inherit;">destination</a>
@@ -1589,8 +1483,7 @@ The following state arguments are supported:
         <span class="property-type">str</span>
     </dt>
     <dd>{{% md %}}Alicloud Resource Name (ARN) of the destination resource. See the [Developer Guide](https://www.alibabacloud.com/help/doc-detail/181866.htm) for acceptable resource types and associated RAM permissions.
-{{% /md %}}</dd>
-</dl>
+{{% /md %}}</dd></dl>
 {{% /choosable %}}
 ## Import
 
@@ -1611,6 +1504,6 @@ Function Compute Function Async Invoke Configs can be imported using the id, e.g
 	<dt>License</dt>
 	<dd>Apache-2.0</dd>
 	<dt>Notes</dt>
-	<dd>This Pulumi package is based on the [`alicloud` Terraform Provider](https://github.com/aliyun/terraform-provider-alicloud).</dd>
+	<dd>{{% md %}}This Pulumi package is based on the [`alicloud` Terraform Provider](https://github.com/aliyun/terraform-provider-alicloud).{{% /md %}}</dd>
 </dl>
 

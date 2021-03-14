@@ -45,9 +45,7 @@ This is an example of the import command being applied to the resource named `fa
 
 {{% choosable language nodejs %}}
 
-<dl class="resources-properties">
-  
-    <dt
+<dl class="resources-properties"><dt
         class="property-required" title="Required">
         <span>name</span>
         <span class="property-indicator"></span>
@@ -55,9 +53,7 @@ This is an example of the import command being applied to the resource named `fa
     </dt>
     <dd>
       The unique name of the resource.
-    </dd>
-  
-    <dt
+    </dd><dt
         class="property-required" title="Required">
         <span>args</span>
         <span class="property-indicator"></span>
@@ -65,9 +61,7 @@ This is an example of the import command being applied to the resource named `fa
     </dt>
     <dd>
       The arguments to resource properties.
-    </dd>
-  
-    <dt
+    </dd><dt
         class="property-optional" title="Optional">
         <span>opts</span>
         <span class="property-indicator"></span>
@@ -75,10 +69,7 @@ This is an example of the import command being applied to the resource named `fa
     </dt>
     <dd>
       Bag of options to control resource&#39;s behavior.
-    </dd>
-  
-
-</dl>
+    </dd></dl>
 
 {{% /choosable %}}
 
@@ -104,9 +95,7 @@ This is an example of the import command being applied to the resource named `fa
 
 {{% choosable language go %}}
 
-<dl class="resources-properties">
-  
-    <dt
+<dl class="resources-properties"><dt
         class="property-optional" title="Optional">
         <span>ctx</span>
         <span class="property-indicator"></span>
@@ -114,9 +103,7 @@ This is an example of the import command being applied to the resource named `fa
     </dt>
     <dd>
       Context object for the current deployment.
-    </dd>
-  
-    <dt
+    </dd><dt
         class="property-required" title="Required">
         <span>name</span>
         <span class="property-indicator"></span>
@@ -124,9 +111,7 @@ This is an example of the import command being applied to the resource named `fa
     </dt>
     <dd>
       The unique name of the resource.
-    </dd>
-  
-    <dt
+    </dd><dt
         class="property-required" title="Required">
         <span>args</span>
         <span class="property-indicator"></span>
@@ -134,9 +119,7 @@ This is an example of the import command being applied to the resource named `fa
     </dt>
     <dd>
       The arguments to resource properties.
-    </dd>
-  
-    <dt
+    </dd><dt
         class="property-optional" title="Optional">
         <span>opts</span>
         <span class="property-indicator"></span>
@@ -144,18 +127,13 @@ This is an example of the import command being applied to the resource named `fa
     </dt>
     <dd>
       Bag of options to control resource&#39;s behavior.
-    </dd>
-  
-
-</dl>
+    </dd></dl>
 
 {{% /choosable %}}
 
 {{% choosable language csharp %}}
 
-<dl class="resources-properties">
-  
-    <dt
+<dl class="resources-properties"><dt
         class="property-required" title="Required">
         <span>name</span>
         <span class="property-indicator"></span>
@@ -163,9 +141,7 @@ This is an example of the import command being applied to the resource named `fa
     </dt>
     <dd>
       The unique name of the resource.
-    </dd>
-  
-    <dt
+    </dd><dt
         class="property-required" title="Required">
         <span>args</span>
         <span class="property-indicator"></span>
@@ -173,9 +149,7 @@ This is an example of the import command being applied to the resource named `fa
     </dt>
     <dd>
       The arguments to resource properties.
-    </dd>
-  
-    <dt
+    </dd><dt
         class="property-optional" title="Optional">
         <span>opts</span>
         <span class="property-indicator"></span>
@@ -183,10 +157,7 @@ This is an example of the import command being applied to the resource named `fa
     </dt>
     <dd>
       Bag of options to control resource&#39;s behavior.
-    </dd>
-  
-
-</dl>
+    </dd></dl>
 
 {{% /choosable %}}
 
@@ -201,9 +172,7 @@ The ServiceWafConfiguration resource accepts the following [input]({{< relref "/
 
 
 {{% choosable language csharp %}}
-<dl class="resources-properties">
-
-    <dt class="property-required"
+<dl class="resources-properties"><dt class="property-required"
             title="Required">
         <span id="wafid_csharp">
 <a href="#wafid_csharp" style="color: inherit; text-decoration: inherit;">Waf<wbr>Id</a>
@@ -212,8 +181,7 @@ The ServiceWafConfiguration resource accepts the following [input]({{< relref "/
         <span class="property-type">string</span>
     </dt>
     <dd>{{% md %}}The ID of the Web Application Firewall that the configuration belongs to.
-{{% /md %}}</dd>
-    <dt class="property-optional"
+{{% /md %}}</dd><dt class="property-optional"
             title="Optional">
         <span id="allowedhttpversions_csharp">
 <a href="#allowedhttpversions_csharp" style="color: inherit; text-decoration: inherit;">Allowed<wbr>Http<wbr>Versions</a>
@@ -222,8 +190,7 @@ The ServiceWafConfiguration resource accepts the following [input]({{< relref "/
         <span class="property-type">string</span>
     </dt>
     <dd>{{% md %}}Allowed HTTP versions.
-{{% /md %}}</dd>
-    <dt class="property-optional"
+{{% /md %}}</dd><dt class="property-optional"
             title="Optional">
         <span id="allowedmethods_csharp">
 <a href="#allowedmethods_csharp" style="color: inherit; text-decoration: inherit;">Allowed<wbr>Methods</a>
@@ -232,8 +199,7 @@ The ServiceWafConfiguration resource accepts the following [input]({{< relref "/
         <span class="property-type">string</span>
     </dt>
     <dd>{{% md %}}A space-separated list of HTTP method names.
-{{% /md %}}</dd>
-    <dt class="property-optional"
+{{% /md %}}</dd><dt class="property-optional"
             title="Optional">
         <span id="allowedrequestcontenttype_csharp">
 <a href="#allowedrequestcontenttype_csharp" style="color: inherit; text-decoration: inherit;">Allowed<wbr>Request<wbr>Content<wbr>Type</a>
@@ -242,8 +208,7 @@ The ServiceWafConfiguration resource accepts the following [input]({{< relref "/
         <span class="property-type">string</span>
     </dt>
     <dd>{{% md %}}Allowed request content types.
-{{% /md %}}</dd>
-    <dt class="property-optional"
+{{% /md %}}</dd><dt class="property-optional"
             title="Optional">
         <span id="allowedrequestcontenttypecharset_csharp">
 <a href="#allowedrequestcontenttypecharset_csharp" style="color: inherit; text-decoration: inherit;">Allowed<wbr>Request<wbr>Content<wbr>Type<wbr>Charset</a>
@@ -252,8 +217,7 @@ The ServiceWafConfiguration resource accepts the following [input]({{< relref "/
         <span class="property-type">string</span>
     </dt>
     <dd>{{% md %}}Allowed request content type charset.
-{{% /md %}}</dd>
-    <dt class="property-optional"
+{{% /md %}}</dd><dt class="property-optional"
             title="Optional">
         <span id="arglength_csharp">
 <a href="#arglength_csharp" style="color: inherit; text-decoration: inherit;">Arg<wbr>Length</a>
@@ -262,8 +226,7 @@ The ServiceWafConfiguration resource accepts the following [input]({{< relref "/
         <span class="property-type">int</span>
     </dt>
     <dd>{{% md %}}The maximum number of arguments allowed.
-{{% /md %}}</dd>
-    <dt class="property-optional"
+{{% /md %}}</dd><dt class="property-optional"
             title="Optional">
         <span id="argnamelength_csharp">
 <a href="#argnamelength_csharp" style="color: inherit; text-decoration: inherit;">Arg<wbr>Name<wbr>Length</a>
@@ -272,8 +235,7 @@ The ServiceWafConfiguration resource accepts the following [input]({{< relref "/
         <span class="property-type">int</span>
     </dt>
     <dd>{{% md %}}The maximum allowed argument name length.
-{{% /md %}}</dd>
-    <dt class="property-optional"
+{{% /md %}}</dd><dt class="property-optional"
             title="Optional">
         <span id="combinedfilesizes_csharp">
 <a href="#combinedfilesizes_csharp" style="color: inherit; text-decoration: inherit;">Combined<wbr>File<wbr>Sizes</a>
@@ -282,8 +244,7 @@ The ServiceWafConfiguration resource accepts the following [input]({{< relref "/
         <span class="property-type">int</span>
     </dt>
     <dd>{{% md %}}The maximum allowed size of all files.
-{{% /md %}}</dd>
-    <dt class="property-optional"
+{{% /md %}}</dd><dt class="property-optional"
             title="Optional">
         <span id="criticalanomalyscore_csharp">
 <a href="#criticalanomalyscore_csharp" style="color: inherit; text-decoration: inherit;">Critical<wbr>Anomaly<wbr>Score</a>
@@ -292,8 +253,7 @@ The ServiceWafConfiguration resource accepts the following [input]({{< relref "/
         <span class="property-type">int</span>
     </dt>
     <dd>{{% md %}}Score value to add for critical anomalies.
-{{% /md %}}</dd>
-    <dt class="property-optional"
+{{% /md %}}</dd><dt class="property-optional"
             title="Optional">
         <span id="crsvalidateutf8encoding_csharp">
 <a href="#crsvalidateutf8encoding_csharp" style="color: inherit; text-decoration: inherit;">Crs<wbr>Validate<wbr>Utf8Encoding</a>
@@ -302,8 +262,7 @@ The ServiceWafConfiguration resource accepts the following [input]({{< relref "/
         <span class="property-type">bool</span>
     </dt>
     <dd>{{% md %}}CRS validate UTF8 encoding.
-{{% /md %}}</dd>
-    <dt class="property-optional"
+{{% /md %}}</dd><dt class="property-optional"
             title="Optional">
         <span id="erroranomalyscore_csharp">
 <a href="#erroranomalyscore_csharp" style="color: inherit; text-decoration: inherit;">Error<wbr>Anomaly<wbr>Score</a>
@@ -312,8 +271,7 @@ The ServiceWafConfiguration resource accepts the following [input]({{< relref "/
         <span class="property-type">int</span>
     </dt>
     <dd>{{% md %}}Score value to add for error anomalies.
-{{% /md %}}</dd>
-    <dt class="property-optional"
+{{% /md %}}</dd><dt class="property-optional"
             title="Optional">
         <span id="highriskcountrycodes_csharp">
 <a href="#highriskcountrycodes_csharp" style="color: inherit; text-decoration: inherit;">High<wbr>Risk<wbr>Country<wbr>Codes</a>
@@ -322,8 +280,7 @@ The ServiceWafConfiguration resource accepts the following [input]({{< relref "/
         <span class="property-type">string</span>
     </dt>
     <dd>{{% md %}}A space-separated list of country codes in ISO 3166-1 (two-letter) format.
-{{% /md %}}</dd>
-    <dt class="property-optional"
+{{% /md %}}</dd><dt class="property-optional"
             title="Optional">
         <span id="httpviolationscorethreshold_csharp">
 <a href="#httpviolationscorethreshold_csharp" style="color: inherit; text-decoration: inherit;">Http<wbr>Violation<wbr>Score<wbr>Threshold</a>
@@ -332,8 +289,7 @@ The ServiceWafConfiguration resource accepts the following [input]({{< relref "/
         <span class="property-type">int</span>
     </dt>
     <dd>{{% md %}}HTTP violation threshold.
-{{% /md %}}</dd>
-    <dt class="property-optional"
+{{% /md %}}</dd><dt class="property-optional"
             title="Optional">
         <span id="inboundanomalyscorethreshold_csharp">
 <a href="#inboundanomalyscorethreshold_csharp" style="color: inherit; text-decoration: inherit;">Inbound<wbr>Anomaly<wbr>Score<wbr>Threshold</a>
@@ -342,8 +298,7 @@ The ServiceWafConfiguration resource accepts the following [input]({{< relref "/
         <span class="property-type">int</span>
     </dt>
     <dd>{{% md %}}Inbound anomaly threshold.
-{{% /md %}}</dd>
-    <dt class="property-optional"
+{{% /md %}}</dd><dt class="property-optional"
             title="Optional">
         <span id="lfiscorethreshold_csharp">
 <a href="#lfiscorethreshold_csharp" style="color: inherit; text-decoration: inherit;">Lfi<wbr>Score<wbr>Threshold</a>
@@ -352,8 +307,7 @@ The ServiceWafConfiguration resource accepts the following [input]({{< relref "/
         <span class="property-type">int</span>
     </dt>
     <dd>{{% md %}}Local file inclusion attack threshold.
-{{% /md %}}</dd>
-    <dt class="property-optional"
+{{% /md %}}</dd><dt class="property-optional"
             title="Optional">
         <span id="maxfilesize_csharp">
 <a href="#maxfilesize_csharp" style="color: inherit; text-decoration: inherit;">Max<wbr>File<wbr>Size</a>
@@ -362,8 +316,7 @@ The ServiceWafConfiguration resource accepts the following [input]({{< relref "/
         <span class="property-type">int</span>
     </dt>
     <dd>{{% md %}}The maximum allowed file size, in bytes.
-{{% /md %}}</dd>
-    <dt class="property-optional"
+{{% /md %}}</dd><dt class="property-optional"
             title="Optional">
         <span id="maxnumargs_csharp">
 <a href="#maxnumargs_csharp" style="color: inherit; text-decoration: inherit;">Max<wbr>Num<wbr>Args</a>
@@ -372,8 +325,7 @@ The ServiceWafConfiguration resource accepts the following [input]({{< relref "/
         <span class="property-type">int</span>
     </dt>
     <dd>{{% md %}}The maximum number of arguments allowed.
-{{% /md %}}</dd>
-    <dt class="property-optional"
+{{% /md %}}</dd><dt class="property-optional"
             title="Optional">
         <span id="noticeanomalyscore_csharp">
 <a href="#noticeanomalyscore_csharp" style="color: inherit; text-decoration: inherit;">Notice<wbr>Anomaly<wbr>Score</a>
@@ -382,8 +334,7 @@ The ServiceWafConfiguration resource accepts the following [input]({{< relref "/
         <span class="property-type">int</span>
     </dt>
     <dd>{{% md %}}Score value to add for notice anomalies.
-{{% /md %}}</dd>
-    <dt class="property-optional"
+{{% /md %}}</dd><dt class="property-optional"
             title="Optional">
         <span id="paranoialevel_csharp">
 <a href="#paranoialevel_csharp" style="color: inherit; text-decoration: inherit;">Paranoia<wbr>Level</a>
@@ -392,8 +343,7 @@ The ServiceWafConfiguration resource accepts the following [input]({{< relref "/
         <span class="property-type">int</span>
     </dt>
     <dd>{{% md %}}The configured paranoia level.
-{{% /md %}}</dd>
-    <dt class="property-optional"
+{{% /md %}}</dd><dt class="property-optional"
             title="Optional">
         <span id="phpinjectionscorethreshold_csharp">
 <a href="#phpinjectionscorethreshold_csharp" style="color: inherit; text-decoration: inherit;">Php<wbr>Injection<wbr>Score<wbr>Threshold</a>
@@ -402,8 +352,7 @@ The ServiceWafConfiguration resource accepts the following [input]({{< relref "/
         <span class="property-type">int</span>
     </dt>
     <dd>{{% md %}}PHP injection threshold.
-{{% /md %}}</dd>
-    <dt class="property-optional"
+{{% /md %}}</dd><dt class="property-optional"
             title="Optional">
         <span id="rcescorethreshold_csharp">
 <a href="#rcescorethreshold_csharp" style="color: inherit; text-decoration: inherit;">Rce<wbr>Score<wbr>Threshold</a>
@@ -412,8 +361,7 @@ The ServiceWafConfiguration resource accepts the following [input]({{< relref "/
         <span class="property-type">int</span>
     </dt>
     <dd>{{% md %}}Remote code execution threshold.
-{{% /md %}}</dd>
-    <dt class="property-optional"
+{{% /md %}}</dd><dt class="property-optional"
             title="Optional">
         <span id="restrictedextensions_csharp">
 <a href="#restrictedextensions_csharp" style="color: inherit; text-decoration: inherit;">Restricted<wbr>Extensions</a>
@@ -422,8 +370,7 @@ The ServiceWafConfiguration resource accepts the following [input]({{< relref "/
         <span class="property-type">string</span>
     </dt>
     <dd>{{% md %}}A space-separated list of allowed file extensions.
-{{% /md %}}</dd>
-    <dt class="property-optional"
+{{% /md %}}</dd><dt class="property-optional"
             title="Optional">
         <span id="restrictedheaders_csharp">
 <a href="#restrictedheaders_csharp" style="color: inherit; text-decoration: inherit;">Restricted<wbr>Headers</a>
@@ -432,8 +379,7 @@ The ServiceWafConfiguration resource accepts the following [input]({{< relref "/
         <span class="property-type">string</span>
     </dt>
     <dd>{{% md %}}A space-separated list of allowed header names.
-{{% /md %}}</dd>
-    <dt class="property-optional"
+{{% /md %}}</dd><dt class="property-optional"
             title="Optional">
         <span id="rfiscorethreshold_csharp">
 <a href="#rfiscorethreshold_csharp" style="color: inherit; text-decoration: inherit;">Rfi<wbr>Score<wbr>Threshold</a>
@@ -442,8 +388,7 @@ The ServiceWafConfiguration resource accepts the following [input]({{< relref "/
         <span class="property-type">int</span>
     </dt>
     <dd>{{% md %}}Remote file inclusion attack threshold.
-{{% /md %}}</dd>
-    <dt class="property-optional"
+{{% /md %}}</dd><dt class="property-optional"
             title="Optional">
         <span id="ruleexclusions_csharp">
 <a href="#ruleexclusions_csharp" style="color: inherit; text-decoration: inherit;">Rule<wbr>Exclusions</a>
@@ -452,8 +397,7 @@ The ServiceWafConfiguration resource accepts the following [input]({{< relref "/
         <span class="property-type"><a href="#servicewafconfigurationruleexclusion">List&lt;Service<wbr>Waf<wbr>Configuration<wbr>Rule<wbr>Exclusion<wbr>Args&gt;</a></span>
     </dt>
     <dd>{{% md %}}The Web Application Firewall's rule exclusions. Defined below
-{{% /md %}}</dd>
-    <dt class="property-optional"
+{{% /md %}}</dd><dt class="property-optional"
             title="Optional">
         <span id="rules_csharp">
 <a href="#rules_csharp" style="color: inherit; text-decoration: inherit;">Rules</a>
@@ -462,8 +406,7 @@ The ServiceWafConfiguration resource accepts the following [input]({{< relref "/
         <span class="property-type"><a href="#servicewafconfigurationrule">List&lt;Service<wbr>Waf<wbr>Configuration<wbr>Rule<wbr>Args&gt;</a></span>
     </dt>
     <dd>{{% md %}}The Web Application Firewall's active rules. Defined below
-{{% /md %}}</dd>
-    <dt class="property-optional"
+{{% /md %}}</dd><dt class="property-optional"
             title="Optional">
         <span id="sessionfixationscorethreshold_csharp">
 <a href="#sessionfixationscorethreshold_csharp" style="color: inherit; text-decoration: inherit;">Session<wbr>Fixation<wbr>Score<wbr>Threshold</a>
@@ -472,8 +415,7 @@ The ServiceWafConfiguration resource accepts the following [input]({{< relref "/
         <span class="property-type">int</span>
     </dt>
     <dd>{{% md %}}Session fixation attack threshold.
-{{% /md %}}</dd>
-    <dt class="property-optional"
+{{% /md %}}</dd><dt class="property-optional"
             title="Optional">
         <span id="sqlinjectionscorethreshold_csharp">
 <a href="#sqlinjectionscorethreshold_csharp" style="color: inherit; text-decoration: inherit;">Sql<wbr>Injection<wbr>Score<wbr>Threshold</a>
@@ -482,8 +424,7 @@ The ServiceWafConfiguration resource accepts the following [input]({{< relref "/
         <span class="property-type">int</span>
     </dt>
     <dd>{{% md %}}SQL injection attack threshold.
-{{% /md %}}</dd>
-    <dt class="property-optional"
+{{% /md %}}</dd><dt class="property-optional"
             title="Optional">
         <span id="totalarglength_csharp">
 <a href="#totalarglength_csharp" style="color: inherit; text-decoration: inherit;">Total<wbr>Arg<wbr>Length</a>
@@ -492,8 +433,7 @@ The ServiceWafConfiguration resource accepts the following [input]({{< relref "/
         <span class="property-type">int</span>
     </dt>
     <dd>{{% md %}}The maximum size of argument names and values.
-{{% /md %}}</dd>
-    <dt class="property-optional"
+{{% /md %}}</dd><dt class="property-optional"
             title="Optional">
         <span id="warninganomalyscore_csharp">
 <a href="#warninganomalyscore_csharp" style="color: inherit; text-decoration: inherit;">Warning<wbr>Anomaly<wbr>Score</a>
@@ -502,8 +442,7 @@ The ServiceWafConfiguration resource accepts the following [input]({{< relref "/
         <span class="property-type">int</span>
     </dt>
     <dd>{{% md %}}Score value to add for warning anomalies.
-{{% /md %}}</dd>
-    <dt class="property-optional"
+{{% /md %}}</dd><dt class="property-optional"
             title="Optional">
         <span id="xssscorethreshold_csharp">
 <a href="#xssscorethreshold_csharp" style="color: inherit; text-decoration: inherit;">Xss<wbr>Score<wbr>Threshold</a>
@@ -512,14 +451,11 @@ The ServiceWafConfiguration resource accepts the following [input]({{< relref "/
         <span class="property-type">int</span>
     </dt>
     <dd>{{% md %}}XSS attack threshold.
-{{% /md %}}</dd>
-</dl>
+{{% /md %}}</dd></dl>
 {{% /choosable %}}
 
 {{% choosable language go %}}
-<dl class="resources-properties">
-
-    <dt class="property-required"
+<dl class="resources-properties"><dt class="property-required"
             title="Required">
         <span id="wafid_go">
 <a href="#wafid_go" style="color: inherit; text-decoration: inherit;">Waf<wbr>Id</a>
@@ -528,8 +464,7 @@ The ServiceWafConfiguration resource accepts the following [input]({{< relref "/
         <span class="property-type">string</span>
     </dt>
     <dd>{{% md %}}The ID of the Web Application Firewall that the configuration belongs to.
-{{% /md %}}</dd>
-    <dt class="property-optional"
+{{% /md %}}</dd><dt class="property-optional"
             title="Optional">
         <span id="allowedhttpversions_go">
 <a href="#allowedhttpversions_go" style="color: inherit; text-decoration: inherit;">Allowed<wbr>Http<wbr>Versions</a>
@@ -538,8 +473,7 @@ The ServiceWafConfiguration resource accepts the following [input]({{< relref "/
         <span class="property-type">string</span>
     </dt>
     <dd>{{% md %}}Allowed HTTP versions.
-{{% /md %}}</dd>
-    <dt class="property-optional"
+{{% /md %}}</dd><dt class="property-optional"
             title="Optional">
         <span id="allowedmethods_go">
 <a href="#allowedmethods_go" style="color: inherit; text-decoration: inherit;">Allowed<wbr>Methods</a>
@@ -548,8 +482,7 @@ The ServiceWafConfiguration resource accepts the following [input]({{< relref "/
         <span class="property-type">string</span>
     </dt>
     <dd>{{% md %}}A space-separated list of HTTP method names.
-{{% /md %}}</dd>
-    <dt class="property-optional"
+{{% /md %}}</dd><dt class="property-optional"
             title="Optional">
         <span id="allowedrequestcontenttype_go">
 <a href="#allowedrequestcontenttype_go" style="color: inherit; text-decoration: inherit;">Allowed<wbr>Request<wbr>Content<wbr>Type</a>
@@ -558,8 +491,7 @@ The ServiceWafConfiguration resource accepts the following [input]({{< relref "/
         <span class="property-type">string</span>
     </dt>
     <dd>{{% md %}}Allowed request content types.
-{{% /md %}}</dd>
-    <dt class="property-optional"
+{{% /md %}}</dd><dt class="property-optional"
             title="Optional">
         <span id="allowedrequestcontenttypecharset_go">
 <a href="#allowedrequestcontenttypecharset_go" style="color: inherit; text-decoration: inherit;">Allowed<wbr>Request<wbr>Content<wbr>Type<wbr>Charset</a>
@@ -568,8 +500,7 @@ The ServiceWafConfiguration resource accepts the following [input]({{< relref "/
         <span class="property-type">string</span>
     </dt>
     <dd>{{% md %}}Allowed request content type charset.
-{{% /md %}}</dd>
-    <dt class="property-optional"
+{{% /md %}}</dd><dt class="property-optional"
             title="Optional">
         <span id="arglength_go">
 <a href="#arglength_go" style="color: inherit; text-decoration: inherit;">Arg<wbr>Length</a>
@@ -578,8 +509,7 @@ The ServiceWafConfiguration resource accepts the following [input]({{< relref "/
         <span class="property-type">int</span>
     </dt>
     <dd>{{% md %}}The maximum number of arguments allowed.
-{{% /md %}}</dd>
-    <dt class="property-optional"
+{{% /md %}}</dd><dt class="property-optional"
             title="Optional">
         <span id="argnamelength_go">
 <a href="#argnamelength_go" style="color: inherit; text-decoration: inherit;">Arg<wbr>Name<wbr>Length</a>
@@ -588,8 +518,7 @@ The ServiceWafConfiguration resource accepts the following [input]({{< relref "/
         <span class="property-type">int</span>
     </dt>
     <dd>{{% md %}}The maximum allowed argument name length.
-{{% /md %}}</dd>
-    <dt class="property-optional"
+{{% /md %}}</dd><dt class="property-optional"
             title="Optional">
         <span id="combinedfilesizes_go">
 <a href="#combinedfilesizes_go" style="color: inherit; text-decoration: inherit;">Combined<wbr>File<wbr>Sizes</a>
@@ -598,8 +527,7 @@ The ServiceWafConfiguration resource accepts the following [input]({{< relref "/
         <span class="property-type">int</span>
     </dt>
     <dd>{{% md %}}The maximum allowed size of all files.
-{{% /md %}}</dd>
-    <dt class="property-optional"
+{{% /md %}}</dd><dt class="property-optional"
             title="Optional">
         <span id="criticalanomalyscore_go">
 <a href="#criticalanomalyscore_go" style="color: inherit; text-decoration: inherit;">Critical<wbr>Anomaly<wbr>Score</a>
@@ -608,8 +536,7 @@ The ServiceWafConfiguration resource accepts the following [input]({{< relref "/
         <span class="property-type">int</span>
     </dt>
     <dd>{{% md %}}Score value to add for critical anomalies.
-{{% /md %}}</dd>
-    <dt class="property-optional"
+{{% /md %}}</dd><dt class="property-optional"
             title="Optional">
         <span id="crsvalidateutf8encoding_go">
 <a href="#crsvalidateutf8encoding_go" style="color: inherit; text-decoration: inherit;">Crs<wbr>Validate<wbr>Utf8Encoding</a>
@@ -618,8 +545,7 @@ The ServiceWafConfiguration resource accepts the following [input]({{< relref "/
         <span class="property-type">bool</span>
     </dt>
     <dd>{{% md %}}CRS validate UTF8 encoding.
-{{% /md %}}</dd>
-    <dt class="property-optional"
+{{% /md %}}</dd><dt class="property-optional"
             title="Optional">
         <span id="erroranomalyscore_go">
 <a href="#erroranomalyscore_go" style="color: inherit; text-decoration: inherit;">Error<wbr>Anomaly<wbr>Score</a>
@@ -628,8 +554,7 @@ The ServiceWafConfiguration resource accepts the following [input]({{< relref "/
         <span class="property-type">int</span>
     </dt>
     <dd>{{% md %}}Score value to add for error anomalies.
-{{% /md %}}</dd>
-    <dt class="property-optional"
+{{% /md %}}</dd><dt class="property-optional"
             title="Optional">
         <span id="highriskcountrycodes_go">
 <a href="#highriskcountrycodes_go" style="color: inherit; text-decoration: inherit;">High<wbr>Risk<wbr>Country<wbr>Codes</a>
@@ -638,8 +563,7 @@ The ServiceWafConfiguration resource accepts the following [input]({{< relref "/
         <span class="property-type">string</span>
     </dt>
     <dd>{{% md %}}A space-separated list of country codes in ISO 3166-1 (two-letter) format.
-{{% /md %}}</dd>
-    <dt class="property-optional"
+{{% /md %}}</dd><dt class="property-optional"
             title="Optional">
         <span id="httpviolationscorethreshold_go">
 <a href="#httpviolationscorethreshold_go" style="color: inherit; text-decoration: inherit;">Http<wbr>Violation<wbr>Score<wbr>Threshold</a>
@@ -648,8 +572,7 @@ The ServiceWafConfiguration resource accepts the following [input]({{< relref "/
         <span class="property-type">int</span>
     </dt>
     <dd>{{% md %}}HTTP violation threshold.
-{{% /md %}}</dd>
-    <dt class="property-optional"
+{{% /md %}}</dd><dt class="property-optional"
             title="Optional">
         <span id="inboundanomalyscorethreshold_go">
 <a href="#inboundanomalyscorethreshold_go" style="color: inherit; text-decoration: inherit;">Inbound<wbr>Anomaly<wbr>Score<wbr>Threshold</a>
@@ -658,8 +581,7 @@ The ServiceWafConfiguration resource accepts the following [input]({{< relref "/
         <span class="property-type">int</span>
     </dt>
     <dd>{{% md %}}Inbound anomaly threshold.
-{{% /md %}}</dd>
-    <dt class="property-optional"
+{{% /md %}}</dd><dt class="property-optional"
             title="Optional">
         <span id="lfiscorethreshold_go">
 <a href="#lfiscorethreshold_go" style="color: inherit; text-decoration: inherit;">Lfi<wbr>Score<wbr>Threshold</a>
@@ -668,8 +590,7 @@ The ServiceWafConfiguration resource accepts the following [input]({{< relref "/
         <span class="property-type">int</span>
     </dt>
     <dd>{{% md %}}Local file inclusion attack threshold.
-{{% /md %}}</dd>
-    <dt class="property-optional"
+{{% /md %}}</dd><dt class="property-optional"
             title="Optional">
         <span id="maxfilesize_go">
 <a href="#maxfilesize_go" style="color: inherit; text-decoration: inherit;">Max<wbr>File<wbr>Size</a>
@@ -678,8 +599,7 @@ The ServiceWafConfiguration resource accepts the following [input]({{< relref "/
         <span class="property-type">int</span>
     </dt>
     <dd>{{% md %}}The maximum allowed file size, in bytes.
-{{% /md %}}</dd>
-    <dt class="property-optional"
+{{% /md %}}</dd><dt class="property-optional"
             title="Optional">
         <span id="maxnumargs_go">
 <a href="#maxnumargs_go" style="color: inherit; text-decoration: inherit;">Max<wbr>Num<wbr>Args</a>
@@ -688,8 +608,7 @@ The ServiceWafConfiguration resource accepts the following [input]({{< relref "/
         <span class="property-type">int</span>
     </dt>
     <dd>{{% md %}}The maximum number of arguments allowed.
-{{% /md %}}</dd>
-    <dt class="property-optional"
+{{% /md %}}</dd><dt class="property-optional"
             title="Optional">
         <span id="noticeanomalyscore_go">
 <a href="#noticeanomalyscore_go" style="color: inherit; text-decoration: inherit;">Notice<wbr>Anomaly<wbr>Score</a>
@@ -698,8 +617,7 @@ The ServiceWafConfiguration resource accepts the following [input]({{< relref "/
         <span class="property-type">int</span>
     </dt>
     <dd>{{% md %}}Score value to add for notice anomalies.
-{{% /md %}}</dd>
-    <dt class="property-optional"
+{{% /md %}}</dd><dt class="property-optional"
             title="Optional">
         <span id="paranoialevel_go">
 <a href="#paranoialevel_go" style="color: inherit; text-decoration: inherit;">Paranoia<wbr>Level</a>
@@ -708,8 +626,7 @@ The ServiceWafConfiguration resource accepts the following [input]({{< relref "/
         <span class="property-type">int</span>
     </dt>
     <dd>{{% md %}}The configured paranoia level.
-{{% /md %}}</dd>
-    <dt class="property-optional"
+{{% /md %}}</dd><dt class="property-optional"
             title="Optional">
         <span id="phpinjectionscorethreshold_go">
 <a href="#phpinjectionscorethreshold_go" style="color: inherit; text-decoration: inherit;">Php<wbr>Injection<wbr>Score<wbr>Threshold</a>
@@ -718,8 +635,7 @@ The ServiceWafConfiguration resource accepts the following [input]({{< relref "/
         <span class="property-type">int</span>
     </dt>
     <dd>{{% md %}}PHP injection threshold.
-{{% /md %}}</dd>
-    <dt class="property-optional"
+{{% /md %}}</dd><dt class="property-optional"
             title="Optional">
         <span id="rcescorethreshold_go">
 <a href="#rcescorethreshold_go" style="color: inherit; text-decoration: inherit;">Rce<wbr>Score<wbr>Threshold</a>
@@ -728,8 +644,7 @@ The ServiceWafConfiguration resource accepts the following [input]({{< relref "/
         <span class="property-type">int</span>
     </dt>
     <dd>{{% md %}}Remote code execution threshold.
-{{% /md %}}</dd>
-    <dt class="property-optional"
+{{% /md %}}</dd><dt class="property-optional"
             title="Optional">
         <span id="restrictedextensions_go">
 <a href="#restrictedextensions_go" style="color: inherit; text-decoration: inherit;">Restricted<wbr>Extensions</a>
@@ -738,8 +653,7 @@ The ServiceWafConfiguration resource accepts the following [input]({{< relref "/
         <span class="property-type">string</span>
     </dt>
     <dd>{{% md %}}A space-separated list of allowed file extensions.
-{{% /md %}}</dd>
-    <dt class="property-optional"
+{{% /md %}}</dd><dt class="property-optional"
             title="Optional">
         <span id="restrictedheaders_go">
 <a href="#restrictedheaders_go" style="color: inherit; text-decoration: inherit;">Restricted<wbr>Headers</a>
@@ -748,8 +662,7 @@ The ServiceWafConfiguration resource accepts the following [input]({{< relref "/
         <span class="property-type">string</span>
     </dt>
     <dd>{{% md %}}A space-separated list of allowed header names.
-{{% /md %}}</dd>
-    <dt class="property-optional"
+{{% /md %}}</dd><dt class="property-optional"
             title="Optional">
         <span id="rfiscorethreshold_go">
 <a href="#rfiscorethreshold_go" style="color: inherit; text-decoration: inherit;">Rfi<wbr>Score<wbr>Threshold</a>
@@ -758,8 +671,7 @@ The ServiceWafConfiguration resource accepts the following [input]({{< relref "/
         <span class="property-type">int</span>
     </dt>
     <dd>{{% md %}}Remote file inclusion attack threshold.
-{{% /md %}}</dd>
-    <dt class="property-optional"
+{{% /md %}}</dd><dt class="property-optional"
             title="Optional">
         <span id="ruleexclusions_go">
 <a href="#ruleexclusions_go" style="color: inherit; text-decoration: inherit;">Rule<wbr>Exclusions</a>
@@ -768,8 +680,7 @@ The ServiceWafConfiguration resource accepts the following [input]({{< relref "/
         <span class="property-type"><a href="#servicewafconfigurationruleexclusion">[]Service<wbr>Waf<wbr>Configuration<wbr>Rule<wbr>Exclusion</a></span>
     </dt>
     <dd>{{% md %}}The Web Application Firewall's rule exclusions. Defined below
-{{% /md %}}</dd>
-    <dt class="property-optional"
+{{% /md %}}</dd><dt class="property-optional"
             title="Optional">
         <span id="rules_go">
 <a href="#rules_go" style="color: inherit; text-decoration: inherit;">Rules</a>
@@ -778,8 +689,7 @@ The ServiceWafConfiguration resource accepts the following [input]({{< relref "/
         <span class="property-type"><a href="#servicewafconfigurationrule">[]Service<wbr>Waf<wbr>Configuration<wbr>Rule</a></span>
     </dt>
     <dd>{{% md %}}The Web Application Firewall's active rules. Defined below
-{{% /md %}}</dd>
-    <dt class="property-optional"
+{{% /md %}}</dd><dt class="property-optional"
             title="Optional">
         <span id="sessionfixationscorethreshold_go">
 <a href="#sessionfixationscorethreshold_go" style="color: inherit; text-decoration: inherit;">Session<wbr>Fixation<wbr>Score<wbr>Threshold</a>
@@ -788,8 +698,7 @@ The ServiceWafConfiguration resource accepts the following [input]({{< relref "/
         <span class="property-type">int</span>
     </dt>
     <dd>{{% md %}}Session fixation attack threshold.
-{{% /md %}}</dd>
-    <dt class="property-optional"
+{{% /md %}}</dd><dt class="property-optional"
             title="Optional">
         <span id="sqlinjectionscorethreshold_go">
 <a href="#sqlinjectionscorethreshold_go" style="color: inherit; text-decoration: inherit;">Sql<wbr>Injection<wbr>Score<wbr>Threshold</a>
@@ -798,8 +707,7 @@ The ServiceWafConfiguration resource accepts the following [input]({{< relref "/
         <span class="property-type">int</span>
     </dt>
     <dd>{{% md %}}SQL injection attack threshold.
-{{% /md %}}</dd>
-    <dt class="property-optional"
+{{% /md %}}</dd><dt class="property-optional"
             title="Optional">
         <span id="totalarglength_go">
 <a href="#totalarglength_go" style="color: inherit; text-decoration: inherit;">Total<wbr>Arg<wbr>Length</a>
@@ -808,8 +716,7 @@ The ServiceWafConfiguration resource accepts the following [input]({{< relref "/
         <span class="property-type">int</span>
     </dt>
     <dd>{{% md %}}The maximum size of argument names and values.
-{{% /md %}}</dd>
-    <dt class="property-optional"
+{{% /md %}}</dd><dt class="property-optional"
             title="Optional">
         <span id="warninganomalyscore_go">
 <a href="#warninganomalyscore_go" style="color: inherit; text-decoration: inherit;">Warning<wbr>Anomaly<wbr>Score</a>
@@ -818,8 +725,7 @@ The ServiceWafConfiguration resource accepts the following [input]({{< relref "/
         <span class="property-type">int</span>
     </dt>
     <dd>{{% md %}}Score value to add for warning anomalies.
-{{% /md %}}</dd>
-    <dt class="property-optional"
+{{% /md %}}</dd><dt class="property-optional"
             title="Optional">
         <span id="xssscorethreshold_go">
 <a href="#xssscorethreshold_go" style="color: inherit; text-decoration: inherit;">Xss<wbr>Score<wbr>Threshold</a>
@@ -828,14 +734,11 @@ The ServiceWafConfiguration resource accepts the following [input]({{< relref "/
         <span class="property-type">int</span>
     </dt>
     <dd>{{% md %}}XSS attack threshold.
-{{% /md %}}</dd>
-</dl>
+{{% /md %}}</dd></dl>
 {{% /choosable %}}
 
 {{% choosable language nodejs %}}
-<dl class="resources-properties">
-
-    <dt class="property-required"
+<dl class="resources-properties"><dt class="property-required"
             title="Required">
         <span id="wafid_nodejs">
 <a href="#wafid_nodejs" style="color: inherit; text-decoration: inherit;">waf<wbr>Id</a>
@@ -844,8 +747,7 @@ The ServiceWafConfiguration resource accepts the following [input]({{< relref "/
         <span class="property-type">string</span>
     </dt>
     <dd>{{% md %}}The ID of the Web Application Firewall that the configuration belongs to.
-{{% /md %}}</dd>
-    <dt class="property-optional"
+{{% /md %}}</dd><dt class="property-optional"
             title="Optional">
         <span id="allowedhttpversions_nodejs">
 <a href="#allowedhttpversions_nodejs" style="color: inherit; text-decoration: inherit;">allowed<wbr>Http<wbr>Versions</a>
@@ -854,8 +756,7 @@ The ServiceWafConfiguration resource accepts the following [input]({{< relref "/
         <span class="property-type">string</span>
     </dt>
     <dd>{{% md %}}Allowed HTTP versions.
-{{% /md %}}</dd>
-    <dt class="property-optional"
+{{% /md %}}</dd><dt class="property-optional"
             title="Optional">
         <span id="allowedmethods_nodejs">
 <a href="#allowedmethods_nodejs" style="color: inherit; text-decoration: inherit;">allowed<wbr>Methods</a>
@@ -864,8 +765,7 @@ The ServiceWafConfiguration resource accepts the following [input]({{< relref "/
         <span class="property-type">string</span>
     </dt>
     <dd>{{% md %}}A space-separated list of HTTP method names.
-{{% /md %}}</dd>
-    <dt class="property-optional"
+{{% /md %}}</dd><dt class="property-optional"
             title="Optional">
         <span id="allowedrequestcontenttype_nodejs">
 <a href="#allowedrequestcontenttype_nodejs" style="color: inherit; text-decoration: inherit;">allowed<wbr>Request<wbr>Content<wbr>Type</a>
@@ -874,8 +774,7 @@ The ServiceWafConfiguration resource accepts the following [input]({{< relref "/
         <span class="property-type">string</span>
     </dt>
     <dd>{{% md %}}Allowed request content types.
-{{% /md %}}</dd>
-    <dt class="property-optional"
+{{% /md %}}</dd><dt class="property-optional"
             title="Optional">
         <span id="allowedrequestcontenttypecharset_nodejs">
 <a href="#allowedrequestcontenttypecharset_nodejs" style="color: inherit; text-decoration: inherit;">allowed<wbr>Request<wbr>Content<wbr>Type<wbr>Charset</a>
@@ -884,8 +783,7 @@ The ServiceWafConfiguration resource accepts the following [input]({{< relref "/
         <span class="property-type">string</span>
     </dt>
     <dd>{{% md %}}Allowed request content type charset.
-{{% /md %}}</dd>
-    <dt class="property-optional"
+{{% /md %}}</dd><dt class="property-optional"
             title="Optional">
         <span id="arglength_nodejs">
 <a href="#arglength_nodejs" style="color: inherit; text-decoration: inherit;">arg<wbr>Length</a>
@@ -894,8 +792,7 @@ The ServiceWafConfiguration resource accepts the following [input]({{< relref "/
         <span class="property-type">number</span>
     </dt>
     <dd>{{% md %}}The maximum number of arguments allowed.
-{{% /md %}}</dd>
-    <dt class="property-optional"
+{{% /md %}}</dd><dt class="property-optional"
             title="Optional">
         <span id="argnamelength_nodejs">
 <a href="#argnamelength_nodejs" style="color: inherit; text-decoration: inherit;">arg<wbr>Name<wbr>Length</a>
@@ -904,8 +801,7 @@ The ServiceWafConfiguration resource accepts the following [input]({{< relref "/
         <span class="property-type">number</span>
     </dt>
     <dd>{{% md %}}The maximum allowed argument name length.
-{{% /md %}}</dd>
-    <dt class="property-optional"
+{{% /md %}}</dd><dt class="property-optional"
             title="Optional">
         <span id="combinedfilesizes_nodejs">
 <a href="#combinedfilesizes_nodejs" style="color: inherit; text-decoration: inherit;">combined<wbr>File<wbr>Sizes</a>
@@ -914,8 +810,7 @@ The ServiceWafConfiguration resource accepts the following [input]({{< relref "/
         <span class="property-type">number</span>
     </dt>
     <dd>{{% md %}}The maximum allowed size of all files.
-{{% /md %}}</dd>
-    <dt class="property-optional"
+{{% /md %}}</dd><dt class="property-optional"
             title="Optional">
         <span id="criticalanomalyscore_nodejs">
 <a href="#criticalanomalyscore_nodejs" style="color: inherit; text-decoration: inherit;">critical<wbr>Anomaly<wbr>Score</a>
@@ -924,8 +819,7 @@ The ServiceWafConfiguration resource accepts the following [input]({{< relref "/
         <span class="property-type">number</span>
     </dt>
     <dd>{{% md %}}Score value to add for critical anomalies.
-{{% /md %}}</dd>
-    <dt class="property-optional"
+{{% /md %}}</dd><dt class="property-optional"
             title="Optional">
         <span id="crsvalidateutf8encoding_nodejs">
 <a href="#crsvalidateutf8encoding_nodejs" style="color: inherit; text-decoration: inherit;">crs<wbr>Validate<wbr>Utf8Encoding</a>
@@ -934,8 +828,7 @@ The ServiceWafConfiguration resource accepts the following [input]({{< relref "/
         <span class="property-type">boolean</span>
     </dt>
     <dd>{{% md %}}CRS validate UTF8 encoding.
-{{% /md %}}</dd>
-    <dt class="property-optional"
+{{% /md %}}</dd><dt class="property-optional"
             title="Optional">
         <span id="erroranomalyscore_nodejs">
 <a href="#erroranomalyscore_nodejs" style="color: inherit; text-decoration: inherit;">error<wbr>Anomaly<wbr>Score</a>
@@ -944,8 +837,7 @@ The ServiceWafConfiguration resource accepts the following [input]({{< relref "/
         <span class="property-type">number</span>
     </dt>
     <dd>{{% md %}}Score value to add for error anomalies.
-{{% /md %}}</dd>
-    <dt class="property-optional"
+{{% /md %}}</dd><dt class="property-optional"
             title="Optional">
         <span id="highriskcountrycodes_nodejs">
 <a href="#highriskcountrycodes_nodejs" style="color: inherit; text-decoration: inherit;">high<wbr>Risk<wbr>Country<wbr>Codes</a>
@@ -954,8 +846,7 @@ The ServiceWafConfiguration resource accepts the following [input]({{< relref "/
         <span class="property-type">string</span>
     </dt>
     <dd>{{% md %}}A space-separated list of country codes in ISO 3166-1 (two-letter) format.
-{{% /md %}}</dd>
-    <dt class="property-optional"
+{{% /md %}}</dd><dt class="property-optional"
             title="Optional">
         <span id="httpviolationscorethreshold_nodejs">
 <a href="#httpviolationscorethreshold_nodejs" style="color: inherit; text-decoration: inherit;">http<wbr>Violation<wbr>Score<wbr>Threshold</a>
@@ -964,8 +855,7 @@ The ServiceWafConfiguration resource accepts the following [input]({{< relref "/
         <span class="property-type">number</span>
     </dt>
     <dd>{{% md %}}HTTP violation threshold.
-{{% /md %}}</dd>
-    <dt class="property-optional"
+{{% /md %}}</dd><dt class="property-optional"
             title="Optional">
         <span id="inboundanomalyscorethreshold_nodejs">
 <a href="#inboundanomalyscorethreshold_nodejs" style="color: inherit; text-decoration: inherit;">inbound<wbr>Anomaly<wbr>Score<wbr>Threshold</a>
@@ -974,8 +864,7 @@ The ServiceWafConfiguration resource accepts the following [input]({{< relref "/
         <span class="property-type">number</span>
     </dt>
     <dd>{{% md %}}Inbound anomaly threshold.
-{{% /md %}}</dd>
-    <dt class="property-optional"
+{{% /md %}}</dd><dt class="property-optional"
             title="Optional">
         <span id="lfiscorethreshold_nodejs">
 <a href="#lfiscorethreshold_nodejs" style="color: inherit; text-decoration: inherit;">lfi<wbr>Score<wbr>Threshold</a>
@@ -984,8 +873,7 @@ The ServiceWafConfiguration resource accepts the following [input]({{< relref "/
         <span class="property-type">number</span>
     </dt>
     <dd>{{% md %}}Local file inclusion attack threshold.
-{{% /md %}}</dd>
-    <dt class="property-optional"
+{{% /md %}}</dd><dt class="property-optional"
             title="Optional">
         <span id="maxfilesize_nodejs">
 <a href="#maxfilesize_nodejs" style="color: inherit; text-decoration: inherit;">max<wbr>File<wbr>Size</a>
@@ -994,8 +882,7 @@ The ServiceWafConfiguration resource accepts the following [input]({{< relref "/
         <span class="property-type">number</span>
     </dt>
     <dd>{{% md %}}The maximum allowed file size, in bytes.
-{{% /md %}}</dd>
-    <dt class="property-optional"
+{{% /md %}}</dd><dt class="property-optional"
             title="Optional">
         <span id="maxnumargs_nodejs">
 <a href="#maxnumargs_nodejs" style="color: inherit; text-decoration: inherit;">max<wbr>Num<wbr>Args</a>
@@ -1004,8 +891,7 @@ The ServiceWafConfiguration resource accepts the following [input]({{< relref "/
         <span class="property-type">number</span>
     </dt>
     <dd>{{% md %}}The maximum number of arguments allowed.
-{{% /md %}}</dd>
-    <dt class="property-optional"
+{{% /md %}}</dd><dt class="property-optional"
             title="Optional">
         <span id="noticeanomalyscore_nodejs">
 <a href="#noticeanomalyscore_nodejs" style="color: inherit; text-decoration: inherit;">notice<wbr>Anomaly<wbr>Score</a>
@@ -1014,8 +900,7 @@ The ServiceWafConfiguration resource accepts the following [input]({{< relref "/
         <span class="property-type">number</span>
     </dt>
     <dd>{{% md %}}Score value to add for notice anomalies.
-{{% /md %}}</dd>
-    <dt class="property-optional"
+{{% /md %}}</dd><dt class="property-optional"
             title="Optional">
         <span id="paranoialevel_nodejs">
 <a href="#paranoialevel_nodejs" style="color: inherit; text-decoration: inherit;">paranoia<wbr>Level</a>
@@ -1024,8 +909,7 @@ The ServiceWafConfiguration resource accepts the following [input]({{< relref "/
         <span class="property-type">number</span>
     </dt>
     <dd>{{% md %}}The configured paranoia level.
-{{% /md %}}</dd>
-    <dt class="property-optional"
+{{% /md %}}</dd><dt class="property-optional"
             title="Optional">
         <span id="phpinjectionscorethreshold_nodejs">
 <a href="#phpinjectionscorethreshold_nodejs" style="color: inherit; text-decoration: inherit;">php<wbr>Injection<wbr>Score<wbr>Threshold</a>
@@ -1034,8 +918,7 @@ The ServiceWafConfiguration resource accepts the following [input]({{< relref "/
         <span class="property-type">number</span>
     </dt>
     <dd>{{% md %}}PHP injection threshold.
-{{% /md %}}</dd>
-    <dt class="property-optional"
+{{% /md %}}</dd><dt class="property-optional"
             title="Optional">
         <span id="rcescorethreshold_nodejs">
 <a href="#rcescorethreshold_nodejs" style="color: inherit; text-decoration: inherit;">rce<wbr>Score<wbr>Threshold</a>
@@ -1044,8 +927,7 @@ The ServiceWafConfiguration resource accepts the following [input]({{< relref "/
         <span class="property-type">number</span>
     </dt>
     <dd>{{% md %}}Remote code execution threshold.
-{{% /md %}}</dd>
-    <dt class="property-optional"
+{{% /md %}}</dd><dt class="property-optional"
             title="Optional">
         <span id="restrictedextensions_nodejs">
 <a href="#restrictedextensions_nodejs" style="color: inherit; text-decoration: inherit;">restricted<wbr>Extensions</a>
@@ -1054,8 +936,7 @@ The ServiceWafConfiguration resource accepts the following [input]({{< relref "/
         <span class="property-type">string</span>
     </dt>
     <dd>{{% md %}}A space-separated list of allowed file extensions.
-{{% /md %}}</dd>
-    <dt class="property-optional"
+{{% /md %}}</dd><dt class="property-optional"
             title="Optional">
         <span id="restrictedheaders_nodejs">
 <a href="#restrictedheaders_nodejs" style="color: inherit; text-decoration: inherit;">restricted<wbr>Headers</a>
@@ -1064,8 +945,7 @@ The ServiceWafConfiguration resource accepts the following [input]({{< relref "/
         <span class="property-type">string</span>
     </dt>
     <dd>{{% md %}}A space-separated list of allowed header names.
-{{% /md %}}</dd>
-    <dt class="property-optional"
+{{% /md %}}</dd><dt class="property-optional"
             title="Optional">
         <span id="rfiscorethreshold_nodejs">
 <a href="#rfiscorethreshold_nodejs" style="color: inherit; text-decoration: inherit;">rfi<wbr>Score<wbr>Threshold</a>
@@ -1074,8 +954,7 @@ The ServiceWafConfiguration resource accepts the following [input]({{< relref "/
         <span class="property-type">number</span>
     </dt>
     <dd>{{% md %}}Remote file inclusion attack threshold.
-{{% /md %}}</dd>
-    <dt class="property-optional"
+{{% /md %}}</dd><dt class="property-optional"
             title="Optional">
         <span id="ruleexclusions_nodejs">
 <a href="#ruleexclusions_nodejs" style="color: inherit; text-decoration: inherit;">rule<wbr>Exclusions</a>
@@ -1084,8 +963,7 @@ The ServiceWafConfiguration resource accepts the following [input]({{< relref "/
         <span class="property-type"><a href="#servicewafconfigurationruleexclusion">Service<wbr>Waf<wbr>Configuration<wbr>Rule<wbr>Exclusion[]</a></span>
     </dt>
     <dd>{{% md %}}The Web Application Firewall's rule exclusions. Defined below
-{{% /md %}}</dd>
-    <dt class="property-optional"
+{{% /md %}}</dd><dt class="property-optional"
             title="Optional">
         <span id="rules_nodejs">
 <a href="#rules_nodejs" style="color: inherit; text-decoration: inherit;">rules</a>
@@ -1094,8 +972,7 @@ The ServiceWafConfiguration resource accepts the following [input]({{< relref "/
         <span class="property-type"><a href="#servicewafconfigurationrule">Service<wbr>Waf<wbr>Configuration<wbr>Rule[]</a></span>
     </dt>
     <dd>{{% md %}}The Web Application Firewall's active rules. Defined below
-{{% /md %}}</dd>
-    <dt class="property-optional"
+{{% /md %}}</dd><dt class="property-optional"
             title="Optional">
         <span id="sessionfixationscorethreshold_nodejs">
 <a href="#sessionfixationscorethreshold_nodejs" style="color: inherit; text-decoration: inherit;">session<wbr>Fixation<wbr>Score<wbr>Threshold</a>
@@ -1104,8 +981,7 @@ The ServiceWafConfiguration resource accepts the following [input]({{< relref "/
         <span class="property-type">number</span>
     </dt>
     <dd>{{% md %}}Session fixation attack threshold.
-{{% /md %}}</dd>
-    <dt class="property-optional"
+{{% /md %}}</dd><dt class="property-optional"
             title="Optional">
         <span id="sqlinjectionscorethreshold_nodejs">
 <a href="#sqlinjectionscorethreshold_nodejs" style="color: inherit; text-decoration: inherit;">sql<wbr>Injection<wbr>Score<wbr>Threshold</a>
@@ -1114,8 +990,7 @@ The ServiceWafConfiguration resource accepts the following [input]({{< relref "/
         <span class="property-type">number</span>
     </dt>
     <dd>{{% md %}}SQL injection attack threshold.
-{{% /md %}}</dd>
-    <dt class="property-optional"
+{{% /md %}}</dd><dt class="property-optional"
             title="Optional">
         <span id="totalarglength_nodejs">
 <a href="#totalarglength_nodejs" style="color: inherit; text-decoration: inherit;">total<wbr>Arg<wbr>Length</a>
@@ -1124,8 +999,7 @@ The ServiceWafConfiguration resource accepts the following [input]({{< relref "/
         <span class="property-type">number</span>
     </dt>
     <dd>{{% md %}}The maximum size of argument names and values.
-{{% /md %}}</dd>
-    <dt class="property-optional"
+{{% /md %}}</dd><dt class="property-optional"
             title="Optional">
         <span id="warninganomalyscore_nodejs">
 <a href="#warninganomalyscore_nodejs" style="color: inherit; text-decoration: inherit;">warning<wbr>Anomaly<wbr>Score</a>
@@ -1134,8 +1008,7 @@ The ServiceWafConfiguration resource accepts the following [input]({{< relref "/
         <span class="property-type">number</span>
     </dt>
     <dd>{{% md %}}Score value to add for warning anomalies.
-{{% /md %}}</dd>
-    <dt class="property-optional"
+{{% /md %}}</dd><dt class="property-optional"
             title="Optional">
         <span id="xssscorethreshold_nodejs">
 <a href="#xssscorethreshold_nodejs" style="color: inherit; text-decoration: inherit;">xss<wbr>Score<wbr>Threshold</a>
@@ -1144,14 +1017,11 @@ The ServiceWafConfiguration resource accepts the following [input]({{< relref "/
         <span class="property-type">number</span>
     </dt>
     <dd>{{% md %}}XSS attack threshold.
-{{% /md %}}</dd>
-</dl>
+{{% /md %}}</dd></dl>
 {{% /choosable %}}
 
 {{% choosable language python %}}
-<dl class="resources-properties">
-
-    <dt class="property-required"
+<dl class="resources-properties"><dt class="property-required"
             title="Required">
         <span id="waf_id_python">
 <a href="#waf_id_python" style="color: inherit; text-decoration: inherit;">waf_<wbr>id</a>
@@ -1160,8 +1030,7 @@ The ServiceWafConfiguration resource accepts the following [input]({{< relref "/
         <span class="property-type">str</span>
     </dt>
     <dd>{{% md %}}The ID of the Web Application Firewall that the configuration belongs to.
-{{% /md %}}</dd>
-    <dt class="property-optional"
+{{% /md %}}</dd><dt class="property-optional"
             title="Optional">
         <span id="allowed_http_versions_python">
 <a href="#allowed_http_versions_python" style="color: inherit; text-decoration: inherit;">allowed_<wbr>http_<wbr>versions</a>
@@ -1170,8 +1039,7 @@ The ServiceWafConfiguration resource accepts the following [input]({{< relref "/
         <span class="property-type">str</span>
     </dt>
     <dd>{{% md %}}Allowed HTTP versions.
-{{% /md %}}</dd>
-    <dt class="property-optional"
+{{% /md %}}</dd><dt class="property-optional"
             title="Optional">
         <span id="allowed_methods_python">
 <a href="#allowed_methods_python" style="color: inherit; text-decoration: inherit;">allowed_<wbr>methods</a>
@@ -1180,8 +1048,7 @@ The ServiceWafConfiguration resource accepts the following [input]({{< relref "/
         <span class="property-type">str</span>
     </dt>
     <dd>{{% md %}}A space-separated list of HTTP method names.
-{{% /md %}}</dd>
-    <dt class="property-optional"
+{{% /md %}}</dd><dt class="property-optional"
             title="Optional">
         <span id="allowed_request_content_type_python">
 <a href="#allowed_request_content_type_python" style="color: inherit; text-decoration: inherit;">allowed_<wbr>request_<wbr>content_<wbr>type</a>
@@ -1190,8 +1057,7 @@ The ServiceWafConfiguration resource accepts the following [input]({{< relref "/
         <span class="property-type">str</span>
     </dt>
     <dd>{{% md %}}Allowed request content types.
-{{% /md %}}</dd>
-    <dt class="property-optional"
+{{% /md %}}</dd><dt class="property-optional"
             title="Optional">
         <span id="allowed_request_content_type_charset_python">
 <a href="#allowed_request_content_type_charset_python" style="color: inherit; text-decoration: inherit;">allowed_<wbr>request_<wbr>content_<wbr>type_<wbr>charset</a>
@@ -1200,8 +1066,7 @@ The ServiceWafConfiguration resource accepts the following [input]({{< relref "/
         <span class="property-type">str</span>
     </dt>
     <dd>{{% md %}}Allowed request content type charset.
-{{% /md %}}</dd>
-    <dt class="property-optional"
+{{% /md %}}</dd><dt class="property-optional"
             title="Optional">
         <span id="arg_length_python">
 <a href="#arg_length_python" style="color: inherit; text-decoration: inherit;">arg_<wbr>length</a>
@@ -1210,8 +1075,7 @@ The ServiceWafConfiguration resource accepts the following [input]({{< relref "/
         <span class="property-type">int</span>
     </dt>
     <dd>{{% md %}}The maximum number of arguments allowed.
-{{% /md %}}</dd>
-    <dt class="property-optional"
+{{% /md %}}</dd><dt class="property-optional"
             title="Optional">
         <span id="arg_name_length_python">
 <a href="#arg_name_length_python" style="color: inherit; text-decoration: inherit;">arg_<wbr>name_<wbr>length</a>
@@ -1220,8 +1084,7 @@ The ServiceWafConfiguration resource accepts the following [input]({{< relref "/
         <span class="property-type">int</span>
     </dt>
     <dd>{{% md %}}The maximum allowed argument name length.
-{{% /md %}}</dd>
-    <dt class="property-optional"
+{{% /md %}}</dd><dt class="property-optional"
             title="Optional">
         <span id="combined_file_sizes_python">
 <a href="#combined_file_sizes_python" style="color: inherit; text-decoration: inherit;">combined_<wbr>file_<wbr>sizes</a>
@@ -1230,8 +1093,7 @@ The ServiceWafConfiguration resource accepts the following [input]({{< relref "/
         <span class="property-type">int</span>
     </dt>
     <dd>{{% md %}}The maximum allowed size of all files.
-{{% /md %}}</dd>
-    <dt class="property-optional"
+{{% /md %}}</dd><dt class="property-optional"
             title="Optional">
         <span id="critical_anomaly_score_python">
 <a href="#critical_anomaly_score_python" style="color: inherit; text-decoration: inherit;">critical_<wbr>anomaly_<wbr>score</a>
@@ -1240,8 +1102,7 @@ The ServiceWafConfiguration resource accepts the following [input]({{< relref "/
         <span class="property-type">int</span>
     </dt>
     <dd>{{% md %}}Score value to add for critical anomalies.
-{{% /md %}}</dd>
-    <dt class="property-optional"
+{{% /md %}}</dd><dt class="property-optional"
             title="Optional">
         <span id="crs_validate_utf8_encoding_python">
 <a href="#crs_validate_utf8_encoding_python" style="color: inherit; text-decoration: inherit;">crs_<wbr>validate_<wbr>utf8_<wbr>encoding</a>
@@ -1250,8 +1111,7 @@ The ServiceWafConfiguration resource accepts the following [input]({{< relref "/
         <span class="property-type">bool</span>
     </dt>
     <dd>{{% md %}}CRS validate UTF8 encoding.
-{{% /md %}}</dd>
-    <dt class="property-optional"
+{{% /md %}}</dd><dt class="property-optional"
             title="Optional">
         <span id="error_anomaly_score_python">
 <a href="#error_anomaly_score_python" style="color: inherit; text-decoration: inherit;">error_<wbr>anomaly_<wbr>score</a>
@@ -1260,8 +1120,7 @@ The ServiceWafConfiguration resource accepts the following [input]({{< relref "/
         <span class="property-type">int</span>
     </dt>
     <dd>{{% md %}}Score value to add for error anomalies.
-{{% /md %}}</dd>
-    <dt class="property-optional"
+{{% /md %}}</dd><dt class="property-optional"
             title="Optional">
         <span id="high_risk_country_codes_python">
 <a href="#high_risk_country_codes_python" style="color: inherit; text-decoration: inherit;">high_<wbr>risk_<wbr>country_<wbr>codes</a>
@@ -1270,8 +1129,7 @@ The ServiceWafConfiguration resource accepts the following [input]({{< relref "/
         <span class="property-type">str</span>
     </dt>
     <dd>{{% md %}}A space-separated list of country codes in ISO 3166-1 (two-letter) format.
-{{% /md %}}</dd>
-    <dt class="property-optional"
+{{% /md %}}</dd><dt class="property-optional"
             title="Optional">
         <span id="http_violation_score_threshold_python">
 <a href="#http_violation_score_threshold_python" style="color: inherit; text-decoration: inherit;">http_<wbr>violation_<wbr>score_<wbr>threshold</a>
@@ -1280,8 +1138,7 @@ The ServiceWafConfiguration resource accepts the following [input]({{< relref "/
         <span class="property-type">int</span>
     </dt>
     <dd>{{% md %}}HTTP violation threshold.
-{{% /md %}}</dd>
-    <dt class="property-optional"
+{{% /md %}}</dd><dt class="property-optional"
             title="Optional">
         <span id="inbound_anomaly_score_threshold_python">
 <a href="#inbound_anomaly_score_threshold_python" style="color: inherit; text-decoration: inherit;">inbound_<wbr>anomaly_<wbr>score_<wbr>threshold</a>
@@ -1290,8 +1147,7 @@ The ServiceWafConfiguration resource accepts the following [input]({{< relref "/
         <span class="property-type">int</span>
     </dt>
     <dd>{{% md %}}Inbound anomaly threshold.
-{{% /md %}}</dd>
-    <dt class="property-optional"
+{{% /md %}}</dd><dt class="property-optional"
             title="Optional">
         <span id="lfi_score_threshold_python">
 <a href="#lfi_score_threshold_python" style="color: inherit; text-decoration: inherit;">lfi_<wbr>score_<wbr>threshold</a>
@@ -1300,8 +1156,7 @@ The ServiceWafConfiguration resource accepts the following [input]({{< relref "/
         <span class="property-type">int</span>
     </dt>
     <dd>{{% md %}}Local file inclusion attack threshold.
-{{% /md %}}</dd>
-    <dt class="property-optional"
+{{% /md %}}</dd><dt class="property-optional"
             title="Optional">
         <span id="max_file_size_python">
 <a href="#max_file_size_python" style="color: inherit; text-decoration: inherit;">max_<wbr>file_<wbr>size</a>
@@ -1310,8 +1165,7 @@ The ServiceWafConfiguration resource accepts the following [input]({{< relref "/
         <span class="property-type">int</span>
     </dt>
     <dd>{{% md %}}The maximum allowed file size, in bytes.
-{{% /md %}}</dd>
-    <dt class="property-optional"
+{{% /md %}}</dd><dt class="property-optional"
             title="Optional">
         <span id="max_num_args_python">
 <a href="#max_num_args_python" style="color: inherit; text-decoration: inherit;">max_<wbr>num_<wbr>args</a>
@@ -1320,8 +1174,7 @@ The ServiceWafConfiguration resource accepts the following [input]({{< relref "/
         <span class="property-type">int</span>
     </dt>
     <dd>{{% md %}}The maximum number of arguments allowed.
-{{% /md %}}</dd>
-    <dt class="property-optional"
+{{% /md %}}</dd><dt class="property-optional"
             title="Optional">
         <span id="notice_anomaly_score_python">
 <a href="#notice_anomaly_score_python" style="color: inherit; text-decoration: inherit;">notice_<wbr>anomaly_<wbr>score</a>
@@ -1330,8 +1183,7 @@ The ServiceWafConfiguration resource accepts the following [input]({{< relref "/
         <span class="property-type">int</span>
     </dt>
     <dd>{{% md %}}Score value to add for notice anomalies.
-{{% /md %}}</dd>
-    <dt class="property-optional"
+{{% /md %}}</dd><dt class="property-optional"
             title="Optional">
         <span id="paranoia_level_python">
 <a href="#paranoia_level_python" style="color: inherit; text-decoration: inherit;">paranoia_<wbr>level</a>
@@ -1340,8 +1192,7 @@ The ServiceWafConfiguration resource accepts the following [input]({{< relref "/
         <span class="property-type">int</span>
     </dt>
     <dd>{{% md %}}The configured paranoia level.
-{{% /md %}}</dd>
-    <dt class="property-optional"
+{{% /md %}}</dd><dt class="property-optional"
             title="Optional">
         <span id="php_injection_score_threshold_python">
 <a href="#php_injection_score_threshold_python" style="color: inherit; text-decoration: inherit;">php_<wbr>injection_<wbr>score_<wbr>threshold</a>
@@ -1350,8 +1201,7 @@ The ServiceWafConfiguration resource accepts the following [input]({{< relref "/
         <span class="property-type">int</span>
     </dt>
     <dd>{{% md %}}PHP injection threshold.
-{{% /md %}}</dd>
-    <dt class="property-optional"
+{{% /md %}}</dd><dt class="property-optional"
             title="Optional">
         <span id="rce_score_threshold_python">
 <a href="#rce_score_threshold_python" style="color: inherit; text-decoration: inherit;">rce_<wbr>score_<wbr>threshold</a>
@@ -1360,8 +1210,7 @@ The ServiceWafConfiguration resource accepts the following [input]({{< relref "/
         <span class="property-type">int</span>
     </dt>
     <dd>{{% md %}}Remote code execution threshold.
-{{% /md %}}</dd>
-    <dt class="property-optional"
+{{% /md %}}</dd><dt class="property-optional"
             title="Optional">
         <span id="restricted_extensions_python">
 <a href="#restricted_extensions_python" style="color: inherit; text-decoration: inherit;">restricted_<wbr>extensions</a>
@@ -1370,8 +1219,7 @@ The ServiceWafConfiguration resource accepts the following [input]({{< relref "/
         <span class="property-type">str</span>
     </dt>
     <dd>{{% md %}}A space-separated list of allowed file extensions.
-{{% /md %}}</dd>
-    <dt class="property-optional"
+{{% /md %}}</dd><dt class="property-optional"
             title="Optional">
         <span id="restricted_headers_python">
 <a href="#restricted_headers_python" style="color: inherit; text-decoration: inherit;">restricted_<wbr>headers</a>
@@ -1380,8 +1228,7 @@ The ServiceWafConfiguration resource accepts the following [input]({{< relref "/
         <span class="property-type">str</span>
     </dt>
     <dd>{{% md %}}A space-separated list of allowed header names.
-{{% /md %}}</dd>
-    <dt class="property-optional"
+{{% /md %}}</dd><dt class="property-optional"
             title="Optional">
         <span id="rfi_score_threshold_python">
 <a href="#rfi_score_threshold_python" style="color: inherit; text-decoration: inherit;">rfi_<wbr>score_<wbr>threshold</a>
@@ -1390,8 +1237,7 @@ The ServiceWafConfiguration resource accepts the following [input]({{< relref "/
         <span class="property-type">int</span>
     </dt>
     <dd>{{% md %}}Remote file inclusion attack threshold.
-{{% /md %}}</dd>
-    <dt class="property-optional"
+{{% /md %}}</dd><dt class="property-optional"
             title="Optional">
         <span id="rule_exclusions_python">
 <a href="#rule_exclusions_python" style="color: inherit; text-decoration: inherit;">rule_<wbr>exclusions</a>
@@ -1400,8 +1246,7 @@ The ServiceWafConfiguration resource accepts the following [input]({{< relref "/
         <span class="property-type"><a href="#servicewafconfigurationruleexclusion">Sequence[Service<wbr>Waf<wbr>Configuration<wbr>Rule<wbr>Exclusion<wbr>Args]</a></span>
     </dt>
     <dd>{{% md %}}The Web Application Firewall's rule exclusions. Defined below
-{{% /md %}}</dd>
-    <dt class="property-optional"
+{{% /md %}}</dd><dt class="property-optional"
             title="Optional">
         <span id="rules_python">
 <a href="#rules_python" style="color: inherit; text-decoration: inherit;">rules</a>
@@ -1410,8 +1255,7 @@ The ServiceWafConfiguration resource accepts the following [input]({{< relref "/
         <span class="property-type"><a href="#servicewafconfigurationrule">Sequence[Service<wbr>Waf<wbr>Configuration<wbr>Rule<wbr>Args]</a></span>
     </dt>
     <dd>{{% md %}}The Web Application Firewall's active rules. Defined below
-{{% /md %}}</dd>
-    <dt class="property-optional"
+{{% /md %}}</dd><dt class="property-optional"
             title="Optional">
         <span id="session_fixation_score_threshold_python">
 <a href="#session_fixation_score_threshold_python" style="color: inherit; text-decoration: inherit;">session_<wbr>fixation_<wbr>score_<wbr>threshold</a>
@@ -1420,8 +1264,7 @@ The ServiceWafConfiguration resource accepts the following [input]({{< relref "/
         <span class="property-type">int</span>
     </dt>
     <dd>{{% md %}}Session fixation attack threshold.
-{{% /md %}}</dd>
-    <dt class="property-optional"
+{{% /md %}}</dd><dt class="property-optional"
             title="Optional">
         <span id="sql_injection_score_threshold_python">
 <a href="#sql_injection_score_threshold_python" style="color: inherit; text-decoration: inherit;">sql_<wbr>injection_<wbr>score_<wbr>threshold</a>
@@ -1430,8 +1273,7 @@ The ServiceWafConfiguration resource accepts the following [input]({{< relref "/
         <span class="property-type">int</span>
     </dt>
     <dd>{{% md %}}SQL injection attack threshold.
-{{% /md %}}</dd>
-    <dt class="property-optional"
+{{% /md %}}</dd><dt class="property-optional"
             title="Optional">
         <span id="total_arg_length_python">
 <a href="#total_arg_length_python" style="color: inherit; text-decoration: inherit;">total_<wbr>arg_<wbr>length</a>
@@ -1440,8 +1282,7 @@ The ServiceWafConfiguration resource accepts the following [input]({{< relref "/
         <span class="property-type">int</span>
     </dt>
     <dd>{{% md %}}The maximum size of argument names and values.
-{{% /md %}}</dd>
-    <dt class="property-optional"
+{{% /md %}}</dd><dt class="property-optional"
             title="Optional">
         <span id="warning_anomaly_score_python">
 <a href="#warning_anomaly_score_python" style="color: inherit; text-decoration: inherit;">warning_<wbr>anomaly_<wbr>score</a>
@@ -1450,8 +1291,7 @@ The ServiceWafConfiguration resource accepts the following [input]({{< relref "/
         <span class="property-type">int</span>
     </dt>
     <dd>{{% md %}}Score value to add for warning anomalies.
-{{% /md %}}</dd>
-    <dt class="property-optional"
+{{% /md %}}</dd><dt class="property-optional"
             title="Optional">
         <span id="xss_score_threshold_python">
 <a href="#xss_score_threshold_python" style="color: inherit; text-decoration: inherit;">xss_<wbr>score_<wbr>threshold</a>
@@ -1460,8 +1300,7 @@ The ServiceWafConfiguration resource accepts the following [input]({{< relref "/
         <span class="property-type">int</span>
     </dt>
     <dd>{{% md %}}XSS attack threshold.
-{{% /md %}}</dd>
-</dl>
+{{% /md %}}</dd></dl>
 {{% /choosable %}}
 
 
@@ -1472,9 +1311,7 @@ All [input](#inputs) properties are implicitly available as output properties. A
 
 
 {{% choosable language csharp %}}
-<dl class="resources-properties">
-
-    <dt class="property-"
+<dl class="resources-properties"><dt class="property-"
             title="">
         <span id="id_csharp">
 <a href="#id_csharp" style="color: inherit; text-decoration: inherit;">Id</a>
@@ -1482,14 +1319,11 @@ All [input](#inputs) properties are implicitly available as output properties. A
         <span class="property-indicator"></span>
         <span class="property-type">string</span>
     </dt>
-    <dd>{{% md %}}The provider-assigned unique ID for this managed resource.{{% /md %}}</dd>
-</dl>
+    <dd>{{% md %}}The provider-assigned unique ID for this managed resource.{{% /md %}}</dd></dl>
 {{% /choosable %}}
 
 {{% choosable language go %}}
-<dl class="resources-properties">
-
-    <dt class="property-"
+<dl class="resources-properties"><dt class="property-"
             title="">
         <span id="id_go">
 <a href="#id_go" style="color: inherit; text-decoration: inherit;">Id</a>
@@ -1497,14 +1331,11 @@ All [input](#inputs) properties are implicitly available as output properties. A
         <span class="property-indicator"></span>
         <span class="property-type">string</span>
     </dt>
-    <dd>{{% md %}}The provider-assigned unique ID for this managed resource.{{% /md %}}</dd>
-</dl>
+    <dd>{{% md %}}The provider-assigned unique ID for this managed resource.{{% /md %}}</dd></dl>
 {{% /choosable %}}
 
 {{% choosable language nodejs %}}
-<dl class="resources-properties">
-
-    <dt class="property-"
+<dl class="resources-properties"><dt class="property-"
             title="">
         <span id="id_nodejs">
 <a href="#id_nodejs" style="color: inherit; text-decoration: inherit;">id</a>
@@ -1512,14 +1343,11 @@ All [input](#inputs) properties are implicitly available as output properties. A
         <span class="property-indicator"></span>
         <span class="property-type">string</span>
     </dt>
-    <dd>{{% md %}}The provider-assigned unique ID for this managed resource.{{% /md %}}</dd>
-</dl>
+    <dd>{{% md %}}The provider-assigned unique ID for this managed resource.{{% /md %}}</dd></dl>
 {{% /choosable %}}
 
 {{% choosable language python %}}
-<dl class="resources-properties">
-
-    <dt class="property-"
+<dl class="resources-properties"><dt class="property-"
             title="">
         <span id="id_python">
 <a href="#id_python" style="color: inherit; text-decoration: inherit;">id</a>
@@ -1527,8 +1355,7 @@ All [input](#inputs) properties are implicitly available as output properties. A
         <span class="property-indicator"></span>
         <span class="property-type">str</span>
     </dt>
-    <dd>{{% md %}}The provider-assigned unique ID for this managed resource.{{% /md %}}</dd>
-</dl>
+    <dd>{{% md %}}The provider-assigned unique ID for this managed resource.{{% /md %}}</dd></dl>
 {{% /choosable %}}
 
 
@@ -1655,9 +1482,7 @@ The following state arguments are supported:
 
 
 {{% choosable language csharp %}}
-<dl class="resources-properties">
-
-    <dt class="property-optional"
+<dl class="resources-properties"><dt class="property-optional"
             title="Optional">
         <span id="state_allowedhttpversions_csharp">
 <a href="#state_allowedhttpversions_csharp" style="color: inherit; text-decoration: inherit;">Allowed<wbr>Http<wbr>Versions</a>
@@ -1666,8 +1491,7 @@ The following state arguments are supported:
         <span class="property-type">string</span>
     </dt>
     <dd>{{% md %}}Allowed HTTP versions.
-{{% /md %}}</dd>
-    <dt class="property-optional"
+{{% /md %}}</dd><dt class="property-optional"
             title="Optional">
         <span id="state_allowedmethods_csharp">
 <a href="#state_allowedmethods_csharp" style="color: inherit; text-decoration: inherit;">Allowed<wbr>Methods</a>
@@ -1676,8 +1500,7 @@ The following state arguments are supported:
         <span class="property-type">string</span>
     </dt>
     <dd>{{% md %}}A space-separated list of HTTP method names.
-{{% /md %}}</dd>
-    <dt class="property-optional"
+{{% /md %}}</dd><dt class="property-optional"
             title="Optional">
         <span id="state_allowedrequestcontenttype_csharp">
 <a href="#state_allowedrequestcontenttype_csharp" style="color: inherit; text-decoration: inherit;">Allowed<wbr>Request<wbr>Content<wbr>Type</a>
@@ -1686,8 +1509,7 @@ The following state arguments are supported:
         <span class="property-type">string</span>
     </dt>
     <dd>{{% md %}}Allowed request content types.
-{{% /md %}}</dd>
-    <dt class="property-optional"
+{{% /md %}}</dd><dt class="property-optional"
             title="Optional">
         <span id="state_allowedrequestcontenttypecharset_csharp">
 <a href="#state_allowedrequestcontenttypecharset_csharp" style="color: inherit; text-decoration: inherit;">Allowed<wbr>Request<wbr>Content<wbr>Type<wbr>Charset</a>
@@ -1696,8 +1518,7 @@ The following state arguments are supported:
         <span class="property-type">string</span>
     </dt>
     <dd>{{% md %}}Allowed request content type charset.
-{{% /md %}}</dd>
-    <dt class="property-optional"
+{{% /md %}}</dd><dt class="property-optional"
             title="Optional">
         <span id="state_arglength_csharp">
 <a href="#state_arglength_csharp" style="color: inherit; text-decoration: inherit;">Arg<wbr>Length</a>
@@ -1706,8 +1527,7 @@ The following state arguments are supported:
         <span class="property-type">int</span>
     </dt>
     <dd>{{% md %}}The maximum number of arguments allowed.
-{{% /md %}}</dd>
-    <dt class="property-optional"
+{{% /md %}}</dd><dt class="property-optional"
             title="Optional">
         <span id="state_argnamelength_csharp">
 <a href="#state_argnamelength_csharp" style="color: inherit; text-decoration: inherit;">Arg<wbr>Name<wbr>Length</a>
@@ -1716,8 +1536,7 @@ The following state arguments are supported:
         <span class="property-type">int</span>
     </dt>
     <dd>{{% md %}}The maximum allowed argument name length.
-{{% /md %}}</dd>
-    <dt class="property-optional"
+{{% /md %}}</dd><dt class="property-optional"
             title="Optional">
         <span id="state_combinedfilesizes_csharp">
 <a href="#state_combinedfilesizes_csharp" style="color: inherit; text-decoration: inherit;">Combined<wbr>File<wbr>Sizes</a>
@@ -1726,8 +1545,7 @@ The following state arguments are supported:
         <span class="property-type">int</span>
     </dt>
     <dd>{{% md %}}The maximum allowed size of all files.
-{{% /md %}}</dd>
-    <dt class="property-optional"
+{{% /md %}}</dd><dt class="property-optional"
             title="Optional">
         <span id="state_criticalanomalyscore_csharp">
 <a href="#state_criticalanomalyscore_csharp" style="color: inherit; text-decoration: inherit;">Critical<wbr>Anomaly<wbr>Score</a>
@@ -1736,8 +1554,7 @@ The following state arguments are supported:
         <span class="property-type">int</span>
     </dt>
     <dd>{{% md %}}Score value to add for critical anomalies.
-{{% /md %}}</dd>
-    <dt class="property-optional"
+{{% /md %}}</dd><dt class="property-optional"
             title="Optional">
         <span id="state_crsvalidateutf8encoding_csharp">
 <a href="#state_crsvalidateutf8encoding_csharp" style="color: inherit; text-decoration: inherit;">Crs<wbr>Validate<wbr>Utf8Encoding</a>
@@ -1746,8 +1563,7 @@ The following state arguments are supported:
         <span class="property-type">bool</span>
     </dt>
     <dd>{{% md %}}CRS validate UTF8 encoding.
-{{% /md %}}</dd>
-    <dt class="property-optional"
+{{% /md %}}</dd><dt class="property-optional"
             title="Optional">
         <span id="state_erroranomalyscore_csharp">
 <a href="#state_erroranomalyscore_csharp" style="color: inherit; text-decoration: inherit;">Error<wbr>Anomaly<wbr>Score</a>
@@ -1756,8 +1572,7 @@ The following state arguments are supported:
         <span class="property-type">int</span>
     </dt>
     <dd>{{% md %}}Score value to add for error anomalies.
-{{% /md %}}</dd>
-    <dt class="property-optional"
+{{% /md %}}</dd><dt class="property-optional"
             title="Optional">
         <span id="state_highriskcountrycodes_csharp">
 <a href="#state_highriskcountrycodes_csharp" style="color: inherit; text-decoration: inherit;">High<wbr>Risk<wbr>Country<wbr>Codes</a>
@@ -1766,8 +1581,7 @@ The following state arguments are supported:
         <span class="property-type">string</span>
     </dt>
     <dd>{{% md %}}A space-separated list of country codes in ISO 3166-1 (two-letter) format.
-{{% /md %}}</dd>
-    <dt class="property-optional"
+{{% /md %}}</dd><dt class="property-optional"
             title="Optional">
         <span id="state_httpviolationscorethreshold_csharp">
 <a href="#state_httpviolationscorethreshold_csharp" style="color: inherit; text-decoration: inherit;">Http<wbr>Violation<wbr>Score<wbr>Threshold</a>
@@ -1776,8 +1590,7 @@ The following state arguments are supported:
         <span class="property-type">int</span>
     </dt>
     <dd>{{% md %}}HTTP violation threshold.
-{{% /md %}}</dd>
-    <dt class="property-optional"
+{{% /md %}}</dd><dt class="property-optional"
             title="Optional">
         <span id="state_inboundanomalyscorethreshold_csharp">
 <a href="#state_inboundanomalyscorethreshold_csharp" style="color: inherit; text-decoration: inherit;">Inbound<wbr>Anomaly<wbr>Score<wbr>Threshold</a>
@@ -1786,8 +1599,7 @@ The following state arguments are supported:
         <span class="property-type">int</span>
     </dt>
     <dd>{{% md %}}Inbound anomaly threshold.
-{{% /md %}}</dd>
-    <dt class="property-optional"
+{{% /md %}}</dd><dt class="property-optional"
             title="Optional">
         <span id="state_lfiscorethreshold_csharp">
 <a href="#state_lfiscorethreshold_csharp" style="color: inherit; text-decoration: inherit;">Lfi<wbr>Score<wbr>Threshold</a>
@@ -1796,8 +1608,7 @@ The following state arguments are supported:
         <span class="property-type">int</span>
     </dt>
     <dd>{{% md %}}Local file inclusion attack threshold.
-{{% /md %}}</dd>
-    <dt class="property-optional"
+{{% /md %}}</dd><dt class="property-optional"
             title="Optional">
         <span id="state_maxfilesize_csharp">
 <a href="#state_maxfilesize_csharp" style="color: inherit; text-decoration: inherit;">Max<wbr>File<wbr>Size</a>
@@ -1806,8 +1617,7 @@ The following state arguments are supported:
         <span class="property-type">int</span>
     </dt>
     <dd>{{% md %}}The maximum allowed file size, in bytes.
-{{% /md %}}</dd>
-    <dt class="property-optional"
+{{% /md %}}</dd><dt class="property-optional"
             title="Optional">
         <span id="state_maxnumargs_csharp">
 <a href="#state_maxnumargs_csharp" style="color: inherit; text-decoration: inherit;">Max<wbr>Num<wbr>Args</a>
@@ -1816,8 +1626,7 @@ The following state arguments are supported:
         <span class="property-type">int</span>
     </dt>
     <dd>{{% md %}}The maximum number of arguments allowed.
-{{% /md %}}</dd>
-    <dt class="property-optional"
+{{% /md %}}</dd><dt class="property-optional"
             title="Optional">
         <span id="state_noticeanomalyscore_csharp">
 <a href="#state_noticeanomalyscore_csharp" style="color: inherit; text-decoration: inherit;">Notice<wbr>Anomaly<wbr>Score</a>
@@ -1826,8 +1635,7 @@ The following state arguments are supported:
         <span class="property-type">int</span>
     </dt>
     <dd>{{% md %}}Score value to add for notice anomalies.
-{{% /md %}}</dd>
-    <dt class="property-optional"
+{{% /md %}}</dd><dt class="property-optional"
             title="Optional">
         <span id="state_paranoialevel_csharp">
 <a href="#state_paranoialevel_csharp" style="color: inherit; text-decoration: inherit;">Paranoia<wbr>Level</a>
@@ -1836,8 +1644,7 @@ The following state arguments are supported:
         <span class="property-type">int</span>
     </dt>
     <dd>{{% md %}}The configured paranoia level.
-{{% /md %}}</dd>
-    <dt class="property-optional"
+{{% /md %}}</dd><dt class="property-optional"
             title="Optional">
         <span id="state_phpinjectionscorethreshold_csharp">
 <a href="#state_phpinjectionscorethreshold_csharp" style="color: inherit; text-decoration: inherit;">Php<wbr>Injection<wbr>Score<wbr>Threshold</a>
@@ -1846,8 +1653,7 @@ The following state arguments are supported:
         <span class="property-type">int</span>
     </dt>
     <dd>{{% md %}}PHP injection threshold.
-{{% /md %}}</dd>
-    <dt class="property-optional"
+{{% /md %}}</dd><dt class="property-optional"
             title="Optional">
         <span id="state_rcescorethreshold_csharp">
 <a href="#state_rcescorethreshold_csharp" style="color: inherit; text-decoration: inherit;">Rce<wbr>Score<wbr>Threshold</a>
@@ -1856,8 +1662,7 @@ The following state arguments are supported:
         <span class="property-type">int</span>
     </dt>
     <dd>{{% md %}}Remote code execution threshold.
-{{% /md %}}</dd>
-    <dt class="property-optional"
+{{% /md %}}</dd><dt class="property-optional"
             title="Optional">
         <span id="state_restrictedextensions_csharp">
 <a href="#state_restrictedextensions_csharp" style="color: inherit; text-decoration: inherit;">Restricted<wbr>Extensions</a>
@@ -1866,8 +1671,7 @@ The following state arguments are supported:
         <span class="property-type">string</span>
     </dt>
     <dd>{{% md %}}A space-separated list of allowed file extensions.
-{{% /md %}}</dd>
-    <dt class="property-optional"
+{{% /md %}}</dd><dt class="property-optional"
             title="Optional">
         <span id="state_restrictedheaders_csharp">
 <a href="#state_restrictedheaders_csharp" style="color: inherit; text-decoration: inherit;">Restricted<wbr>Headers</a>
@@ -1876,8 +1680,7 @@ The following state arguments are supported:
         <span class="property-type">string</span>
     </dt>
     <dd>{{% md %}}A space-separated list of allowed header names.
-{{% /md %}}</dd>
-    <dt class="property-optional"
+{{% /md %}}</dd><dt class="property-optional"
             title="Optional">
         <span id="state_rfiscorethreshold_csharp">
 <a href="#state_rfiscorethreshold_csharp" style="color: inherit; text-decoration: inherit;">Rfi<wbr>Score<wbr>Threshold</a>
@@ -1886,8 +1689,7 @@ The following state arguments are supported:
         <span class="property-type">int</span>
     </dt>
     <dd>{{% md %}}Remote file inclusion attack threshold.
-{{% /md %}}</dd>
-    <dt class="property-optional"
+{{% /md %}}</dd><dt class="property-optional"
             title="Optional">
         <span id="state_ruleexclusions_csharp">
 <a href="#state_ruleexclusions_csharp" style="color: inherit; text-decoration: inherit;">Rule<wbr>Exclusions</a>
@@ -1896,8 +1698,7 @@ The following state arguments are supported:
         <span class="property-type"><a href="#servicewafconfigurationruleexclusion">List&lt;Service<wbr>Waf<wbr>Configuration<wbr>Rule<wbr>Exclusion<wbr>Args&gt;</a></span>
     </dt>
     <dd>{{% md %}}The Web Application Firewall's rule exclusions. Defined below
-{{% /md %}}</dd>
-    <dt class="property-optional"
+{{% /md %}}</dd><dt class="property-optional"
             title="Optional">
         <span id="state_rules_csharp">
 <a href="#state_rules_csharp" style="color: inherit; text-decoration: inherit;">Rules</a>
@@ -1906,8 +1707,7 @@ The following state arguments are supported:
         <span class="property-type"><a href="#servicewafconfigurationrule">List&lt;Service<wbr>Waf<wbr>Configuration<wbr>Rule<wbr>Args&gt;</a></span>
     </dt>
     <dd>{{% md %}}The Web Application Firewall's active rules. Defined below
-{{% /md %}}</dd>
-    <dt class="property-optional"
+{{% /md %}}</dd><dt class="property-optional"
             title="Optional">
         <span id="state_sessionfixationscorethreshold_csharp">
 <a href="#state_sessionfixationscorethreshold_csharp" style="color: inherit; text-decoration: inherit;">Session<wbr>Fixation<wbr>Score<wbr>Threshold</a>
@@ -1916,8 +1716,7 @@ The following state arguments are supported:
         <span class="property-type">int</span>
     </dt>
     <dd>{{% md %}}Session fixation attack threshold.
-{{% /md %}}</dd>
-    <dt class="property-optional"
+{{% /md %}}</dd><dt class="property-optional"
             title="Optional">
         <span id="state_sqlinjectionscorethreshold_csharp">
 <a href="#state_sqlinjectionscorethreshold_csharp" style="color: inherit; text-decoration: inherit;">Sql<wbr>Injection<wbr>Score<wbr>Threshold</a>
@@ -1926,8 +1725,7 @@ The following state arguments are supported:
         <span class="property-type">int</span>
     </dt>
     <dd>{{% md %}}SQL injection attack threshold.
-{{% /md %}}</dd>
-    <dt class="property-optional"
+{{% /md %}}</dd><dt class="property-optional"
             title="Optional">
         <span id="state_totalarglength_csharp">
 <a href="#state_totalarglength_csharp" style="color: inherit; text-decoration: inherit;">Total<wbr>Arg<wbr>Length</a>
@@ -1936,8 +1734,7 @@ The following state arguments are supported:
         <span class="property-type">int</span>
     </dt>
     <dd>{{% md %}}The maximum size of argument names and values.
-{{% /md %}}</dd>
-    <dt class="property-optional"
+{{% /md %}}</dd><dt class="property-optional"
             title="Optional">
         <span id="state_wafid_csharp">
 <a href="#state_wafid_csharp" style="color: inherit; text-decoration: inherit;">Waf<wbr>Id</a>
@@ -1946,8 +1743,7 @@ The following state arguments are supported:
         <span class="property-type">string</span>
     </dt>
     <dd>{{% md %}}The ID of the Web Application Firewall that the configuration belongs to.
-{{% /md %}}</dd>
-    <dt class="property-optional"
+{{% /md %}}</dd><dt class="property-optional"
             title="Optional">
         <span id="state_warninganomalyscore_csharp">
 <a href="#state_warninganomalyscore_csharp" style="color: inherit; text-decoration: inherit;">Warning<wbr>Anomaly<wbr>Score</a>
@@ -1956,8 +1752,7 @@ The following state arguments are supported:
         <span class="property-type">int</span>
     </dt>
     <dd>{{% md %}}Score value to add for warning anomalies.
-{{% /md %}}</dd>
-    <dt class="property-optional"
+{{% /md %}}</dd><dt class="property-optional"
             title="Optional">
         <span id="state_xssscorethreshold_csharp">
 <a href="#state_xssscorethreshold_csharp" style="color: inherit; text-decoration: inherit;">Xss<wbr>Score<wbr>Threshold</a>
@@ -1966,14 +1761,11 @@ The following state arguments are supported:
         <span class="property-type">int</span>
     </dt>
     <dd>{{% md %}}XSS attack threshold.
-{{% /md %}}</dd>
-</dl>
+{{% /md %}}</dd></dl>
 {{% /choosable %}}
 
 {{% choosable language go %}}
-<dl class="resources-properties">
-
-    <dt class="property-optional"
+<dl class="resources-properties"><dt class="property-optional"
             title="Optional">
         <span id="state_allowedhttpversions_go">
 <a href="#state_allowedhttpversions_go" style="color: inherit; text-decoration: inherit;">Allowed<wbr>Http<wbr>Versions</a>
@@ -1982,8 +1774,7 @@ The following state arguments are supported:
         <span class="property-type">string</span>
     </dt>
     <dd>{{% md %}}Allowed HTTP versions.
-{{% /md %}}</dd>
-    <dt class="property-optional"
+{{% /md %}}</dd><dt class="property-optional"
             title="Optional">
         <span id="state_allowedmethods_go">
 <a href="#state_allowedmethods_go" style="color: inherit; text-decoration: inherit;">Allowed<wbr>Methods</a>
@@ -1992,8 +1783,7 @@ The following state arguments are supported:
         <span class="property-type">string</span>
     </dt>
     <dd>{{% md %}}A space-separated list of HTTP method names.
-{{% /md %}}</dd>
-    <dt class="property-optional"
+{{% /md %}}</dd><dt class="property-optional"
             title="Optional">
         <span id="state_allowedrequestcontenttype_go">
 <a href="#state_allowedrequestcontenttype_go" style="color: inherit; text-decoration: inherit;">Allowed<wbr>Request<wbr>Content<wbr>Type</a>
@@ -2002,8 +1792,7 @@ The following state arguments are supported:
         <span class="property-type">string</span>
     </dt>
     <dd>{{% md %}}Allowed request content types.
-{{% /md %}}</dd>
-    <dt class="property-optional"
+{{% /md %}}</dd><dt class="property-optional"
             title="Optional">
         <span id="state_allowedrequestcontenttypecharset_go">
 <a href="#state_allowedrequestcontenttypecharset_go" style="color: inherit; text-decoration: inherit;">Allowed<wbr>Request<wbr>Content<wbr>Type<wbr>Charset</a>
@@ -2012,8 +1801,7 @@ The following state arguments are supported:
         <span class="property-type">string</span>
     </dt>
     <dd>{{% md %}}Allowed request content type charset.
-{{% /md %}}</dd>
-    <dt class="property-optional"
+{{% /md %}}</dd><dt class="property-optional"
             title="Optional">
         <span id="state_arglength_go">
 <a href="#state_arglength_go" style="color: inherit; text-decoration: inherit;">Arg<wbr>Length</a>
@@ -2022,8 +1810,7 @@ The following state arguments are supported:
         <span class="property-type">int</span>
     </dt>
     <dd>{{% md %}}The maximum number of arguments allowed.
-{{% /md %}}</dd>
-    <dt class="property-optional"
+{{% /md %}}</dd><dt class="property-optional"
             title="Optional">
         <span id="state_argnamelength_go">
 <a href="#state_argnamelength_go" style="color: inherit; text-decoration: inherit;">Arg<wbr>Name<wbr>Length</a>
@@ -2032,8 +1819,7 @@ The following state arguments are supported:
         <span class="property-type">int</span>
     </dt>
     <dd>{{% md %}}The maximum allowed argument name length.
-{{% /md %}}</dd>
-    <dt class="property-optional"
+{{% /md %}}</dd><dt class="property-optional"
             title="Optional">
         <span id="state_combinedfilesizes_go">
 <a href="#state_combinedfilesizes_go" style="color: inherit; text-decoration: inherit;">Combined<wbr>File<wbr>Sizes</a>
@@ -2042,8 +1828,7 @@ The following state arguments are supported:
         <span class="property-type">int</span>
     </dt>
     <dd>{{% md %}}The maximum allowed size of all files.
-{{% /md %}}</dd>
-    <dt class="property-optional"
+{{% /md %}}</dd><dt class="property-optional"
             title="Optional">
         <span id="state_criticalanomalyscore_go">
 <a href="#state_criticalanomalyscore_go" style="color: inherit; text-decoration: inherit;">Critical<wbr>Anomaly<wbr>Score</a>
@@ -2052,8 +1837,7 @@ The following state arguments are supported:
         <span class="property-type">int</span>
     </dt>
     <dd>{{% md %}}Score value to add for critical anomalies.
-{{% /md %}}</dd>
-    <dt class="property-optional"
+{{% /md %}}</dd><dt class="property-optional"
             title="Optional">
         <span id="state_crsvalidateutf8encoding_go">
 <a href="#state_crsvalidateutf8encoding_go" style="color: inherit; text-decoration: inherit;">Crs<wbr>Validate<wbr>Utf8Encoding</a>
@@ -2062,8 +1846,7 @@ The following state arguments are supported:
         <span class="property-type">bool</span>
     </dt>
     <dd>{{% md %}}CRS validate UTF8 encoding.
-{{% /md %}}</dd>
-    <dt class="property-optional"
+{{% /md %}}</dd><dt class="property-optional"
             title="Optional">
         <span id="state_erroranomalyscore_go">
 <a href="#state_erroranomalyscore_go" style="color: inherit; text-decoration: inherit;">Error<wbr>Anomaly<wbr>Score</a>
@@ -2072,8 +1855,7 @@ The following state arguments are supported:
         <span class="property-type">int</span>
     </dt>
     <dd>{{% md %}}Score value to add for error anomalies.
-{{% /md %}}</dd>
-    <dt class="property-optional"
+{{% /md %}}</dd><dt class="property-optional"
             title="Optional">
         <span id="state_highriskcountrycodes_go">
 <a href="#state_highriskcountrycodes_go" style="color: inherit; text-decoration: inherit;">High<wbr>Risk<wbr>Country<wbr>Codes</a>
@@ -2082,8 +1864,7 @@ The following state arguments are supported:
         <span class="property-type">string</span>
     </dt>
     <dd>{{% md %}}A space-separated list of country codes in ISO 3166-1 (two-letter) format.
-{{% /md %}}</dd>
-    <dt class="property-optional"
+{{% /md %}}</dd><dt class="property-optional"
             title="Optional">
         <span id="state_httpviolationscorethreshold_go">
 <a href="#state_httpviolationscorethreshold_go" style="color: inherit; text-decoration: inherit;">Http<wbr>Violation<wbr>Score<wbr>Threshold</a>
@@ -2092,8 +1873,7 @@ The following state arguments are supported:
         <span class="property-type">int</span>
     </dt>
     <dd>{{% md %}}HTTP violation threshold.
-{{% /md %}}</dd>
-    <dt class="property-optional"
+{{% /md %}}</dd><dt class="property-optional"
             title="Optional">
         <span id="state_inboundanomalyscorethreshold_go">
 <a href="#state_inboundanomalyscorethreshold_go" style="color: inherit; text-decoration: inherit;">Inbound<wbr>Anomaly<wbr>Score<wbr>Threshold</a>
@@ -2102,8 +1882,7 @@ The following state arguments are supported:
         <span class="property-type">int</span>
     </dt>
     <dd>{{% md %}}Inbound anomaly threshold.
-{{% /md %}}</dd>
-    <dt class="property-optional"
+{{% /md %}}</dd><dt class="property-optional"
             title="Optional">
         <span id="state_lfiscorethreshold_go">
 <a href="#state_lfiscorethreshold_go" style="color: inherit; text-decoration: inherit;">Lfi<wbr>Score<wbr>Threshold</a>
@@ -2112,8 +1891,7 @@ The following state arguments are supported:
         <span class="property-type">int</span>
     </dt>
     <dd>{{% md %}}Local file inclusion attack threshold.
-{{% /md %}}</dd>
-    <dt class="property-optional"
+{{% /md %}}</dd><dt class="property-optional"
             title="Optional">
         <span id="state_maxfilesize_go">
 <a href="#state_maxfilesize_go" style="color: inherit; text-decoration: inherit;">Max<wbr>File<wbr>Size</a>
@@ -2122,8 +1900,7 @@ The following state arguments are supported:
         <span class="property-type">int</span>
     </dt>
     <dd>{{% md %}}The maximum allowed file size, in bytes.
-{{% /md %}}</dd>
-    <dt class="property-optional"
+{{% /md %}}</dd><dt class="property-optional"
             title="Optional">
         <span id="state_maxnumargs_go">
 <a href="#state_maxnumargs_go" style="color: inherit; text-decoration: inherit;">Max<wbr>Num<wbr>Args</a>
@@ -2132,8 +1909,7 @@ The following state arguments are supported:
         <span class="property-type">int</span>
     </dt>
     <dd>{{% md %}}The maximum number of arguments allowed.
-{{% /md %}}</dd>
-    <dt class="property-optional"
+{{% /md %}}</dd><dt class="property-optional"
             title="Optional">
         <span id="state_noticeanomalyscore_go">
 <a href="#state_noticeanomalyscore_go" style="color: inherit; text-decoration: inherit;">Notice<wbr>Anomaly<wbr>Score</a>
@@ -2142,8 +1918,7 @@ The following state arguments are supported:
         <span class="property-type">int</span>
     </dt>
     <dd>{{% md %}}Score value to add for notice anomalies.
-{{% /md %}}</dd>
-    <dt class="property-optional"
+{{% /md %}}</dd><dt class="property-optional"
             title="Optional">
         <span id="state_paranoialevel_go">
 <a href="#state_paranoialevel_go" style="color: inherit; text-decoration: inherit;">Paranoia<wbr>Level</a>
@@ -2152,8 +1927,7 @@ The following state arguments are supported:
         <span class="property-type">int</span>
     </dt>
     <dd>{{% md %}}The configured paranoia level.
-{{% /md %}}</dd>
-    <dt class="property-optional"
+{{% /md %}}</dd><dt class="property-optional"
             title="Optional">
         <span id="state_phpinjectionscorethreshold_go">
 <a href="#state_phpinjectionscorethreshold_go" style="color: inherit; text-decoration: inherit;">Php<wbr>Injection<wbr>Score<wbr>Threshold</a>
@@ -2162,8 +1936,7 @@ The following state arguments are supported:
         <span class="property-type">int</span>
     </dt>
     <dd>{{% md %}}PHP injection threshold.
-{{% /md %}}</dd>
-    <dt class="property-optional"
+{{% /md %}}</dd><dt class="property-optional"
             title="Optional">
         <span id="state_rcescorethreshold_go">
 <a href="#state_rcescorethreshold_go" style="color: inherit; text-decoration: inherit;">Rce<wbr>Score<wbr>Threshold</a>
@@ -2172,8 +1945,7 @@ The following state arguments are supported:
         <span class="property-type">int</span>
     </dt>
     <dd>{{% md %}}Remote code execution threshold.
-{{% /md %}}</dd>
-    <dt class="property-optional"
+{{% /md %}}</dd><dt class="property-optional"
             title="Optional">
         <span id="state_restrictedextensions_go">
 <a href="#state_restrictedextensions_go" style="color: inherit; text-decoration: inherit;">Restricted<wbr>Extensions</a>
@@ -2182,8 +1954,7 @@ The following state arguments are supported:
         <span class="property-type">string</span>
     </dt>
     <dd>{{% md %}}A space-separated list of allowed file extensions.
-{{% /md %}}</dd>
-    <dt class="property-optional"
+{{% /md %}}</dd><dt class="property-optional"
             title="Optional">
         <span id="state_restrictedheaders_go">
 <a href="#state_restrictedheaders_go" style="color: inherit; text-decoration: inherit;">Restricted<wbr>Headers</a>
@@ -2192,8 +1963,7 @@ The following state arguments are supported:
         <span class="property-type">string</span>
     </dt>
     <dd>{{% md %}}A space-separated list of allowed header names.
-{{% /md %}}</dd>
-    <dt class="property-optional"
+{{% /md %}}</dd><dt class="property-optional"
             title="Optional">
         <span id="state_rfiscorethreshold_go">
 <a href="#state_rfiscorethreshold_go" style="color: inherit; text-decoration: inherit;">Rfi<wbr>Score<wbr>Threshold</a>
@@ -2202,8 +1972,7 @@ The following state arguments are supported:
         <span class="property-type">int</span>
     </dt>
     <dd>{{% md %}}Remote file inclusion attack threshold.
-{{% /md %}}</dd>
-    <dt class="property-optional"
+{{% /md %}}</dd><dt class="property-optional"
             title="Optional">
         <span id="state_ruleexclusions_go">
 <a href="#state_ruleexclusions_go" style="color: inherit; text-decoration: inherit;">Rule<wbr>Exclusions</a>
@@ -2212,8 +1981,7 @@ The following state arguments are supported:
         <span class="property-type"><a href="#servicewafconfigurationruleexclusion">[]Service<wbr>Waf<wbr>Configuration<wbr>Rule<wbr>Exclusion</a></span>
     </dt>
     <dd>{{% md %}}The Web Application Firewall's rule exclusions. Defined below
-{{% /md %}}</dd>
-    <dt class="property-optional"
+{{% /md %}}</dd><dt class="property-optional"
             title="Optional">
         <span id="state_rules_go">
 <a href="#state_rules_go" style="color: inherit; text-decoration: inherit;">Rules</a>
@@ -2222,8 +1990,7 @@ The following state arguments are supported:
         <span class="property-type"><a href="#servicewafconfigurationrule">[]Service<wbr>Waf<wbr>Configuration<wbr>Rule</a></span>
     </dt>
     <dd>{{% md %}}The Web Application Firewall's active rules. Defined below
-{{% /md %}}</dd>
-    <dt class="property-optional"
+{{% /md %}}</dd><dt class="property-optional"
             title="Optional">
         <span id="state_sessionfixationscorethreshold_go">
 <a href="#state_sessionfixationscorethreshold_go" style="color: inherit; text-decoration: inherit;">Session<wbr>Fixation<wbr>Score<wbr>Threshold</a>
@@ -2232,8 +1999,7 @@ The following state arguments are supported:
         <span class="property-type">int</span>
     </dt>
     <dd>{{% md %}}Session fixation attack threshold.
-{{% /md %}}</dd>
-    <dt class="property-optional"
+{{% /md %}}</dd><dt class="property-optional"
             title="Optional">
         <span id="state_sqlinjectionscorethreshold_go">
 <a href="#state_sqlinjectionscorethreshold_go" style="color: inherit; text-decoration: inherit;">Sql<wbr>Injection<wbr>Score<wbr>Threshold</a>
@@ -2242,8 +2008,7 @@ The following state arguments are supported:
         <span class="property-type">int</span>
     </dt>
     <dd>{{% md %}}SQL injection attack threshold.
-{{% /md %}}</dd>
-    <dt class="property-optional"
+{{% /md %}}</dd><dt class="property-optional"
             title="Optional">
         <span id="state_totalarglength_go">
 <a href="#state_totalarglength_go" style="color: inherit; text-decoration: inherit;">Total<wbr>Arg<wbr>Length</a>
@@ -2252,8 +2017,7 @@ The following state arguments are supported:
         <span class="property-type">int</span>
     </dt>
     <dd>{{% md %}}The maximum size of argument names and values.
-{{% /md %}}</dd>
-    <dt class="property-optional"
+{{% /md %}}</dd><dt class="property-optional"
             title="Optional">
         <span id="state_wafid_go">
 <a href="#state_wafid_go" style="color: inherit; text-decoration: inherit;">Waf<wbr>Id</a>
@@ -2262,8 +2026,7 @@ The following state arguments are supported:
         <span class="property-type">string</span>
     </dt>
     <dd>{{% md %}}The ID of the Web Application Firewall that the configuration belongs to.
-{{% /md %}}</dd>
-    <dt class="property-optional"
+{{% /md %}}</dd><dt class="property-optional"
             title="Optional">
         <span id="state_warninganomalyscore_go">
 <a href="#state_warninganomalyscore_go" style="color: inherit; text-decoration: inherit;">Warning<wbr>Anomaly<wbr>Score</a>
@@ -2272,8 +2035,7 @@ The following state arguments are supported:
         <span class="property-type">int</span>
     </dt>
     <dd>{{% md %}}Score value to add for warning anomalies.
-{{% /md %}}</dd>
-    <dt class="property-optional"
+{{% /md %}}</dd><dt class="property-optional"
             title="Optional">
         <span id="state_xssscorethreshold_go">
 <a href="#state_xssscorethreshold_go" style="color: inherit; text-decoration: inherit;">Xss<wbr>Score<wbr>Threshold</a>
@@ -2282,14 +2044,11 @@ The following state arguments are supported:
         <span class="property-type">int</span>
     </dt>
     <dd>{{% md %}}XSS attack threshold.
-{{% /md %}}</dd>
-</dl>
+{{% /md %}}</dd></dl>
 {{% /choosable %}}
 
 {{% choosable language nodejs %}}
-<dl class="resources-properties">
-
-    <dt class="property-optional"
+<dl class="resources-properties"><dt class="property-optional"
             title="Optional">
         <span id="state_allowedhttpversions_nodejs">
 <a href="#state_allowedhttpversions_nodejs" style="color: inherit; text-decoration: inherit;">allowed<wbr>Http<wbr>Versions</a>
@@ -2298,8 +2057,7 @@ The following state arguments are supported:
         <span class="property-type">string</span>
     </dt>
     <dd>{{% md %}}Allowed HTTP versions.
-{{% /md %}}</dd>
-    <dt class="property-optional"
+{{% /md %}}</dd><dt class="property-optional"
             title="Optional">
         <span id="state_allowedmethods_nodejs">
 <a href="#state_allowedmethods_nodejs" style="color: inherit; text-decoration: inherit;">allowed<wbr>Methods</a>
@@ -2308,8 +2066,7 @@ The following state arguments are supported:
         <span class="property-type">string</span>
     </dt>
     <dd>{{% md %}}A space-separated list of HTTP method names.
-{{% /md %}}</dd>
-    <dt class="property-optional"
+{{% /md %}}</dd><dt class="property-optional"
             title="Optional">
         <span id="state_allowedrequestcontenttype_nodejs">
 <a href="#state_allowedrequestcontenttype_nodejs" style="color: inherit; text-decoration: inherit;">allowed<wbr>Request<wbr>Content<wbr>Type</a>
@@ -2318,8 +2075,7 @@ The following state arguments are supported:
         <span class="property-type">string</span>
     </dt>
     <dd>{{% md %}}Allowed request content types.
-{{% /md %}}</dd>
-    <dt class="property-optional"
+{{% /md %}}</dd><dt class="property-optional"
             title="Optional">
         <span id="state_allowedrequestcontenttypecharset_nodejs">
 <a href="#state_allowedrequestcontenttypecharset_nodejs" style="color: inherit; text-decoration: inherit;">allowed<wbr>Request<wbr>Content<wbr>Type<wbr>Charset</a>
@@ -2328,8 +2084,7 @@ The following state arguments are supported:
         <span class="property-type">string</span>
     </dt>
     <dd>{{% md %}}Allowed request content type charset.
-{{% /md %}}</dd>
-    <dt class="property-optional"
+{{% /md %}}</dd><dt class="property-optional"
             title="Optional">
         <span id="state_arglength_nodejs">
 <a href="#state_arglength_nodejs" style="color: inherit; text-decoration: inherit;">arg<wbr>Length</a>
@@ -2338,8 +2093,7 @@ The following state arguments are supported:
         <span class="property-type">number</span>
     </dt>
     <dd>{{% md %}}The maximum number of arguments allowed.
-{{% /md %}}</dd>
-    <dt class="property-optional"
+{{% /md %}}</dd><dt class="property-optional"
             title="Optional">
         <span id="state_argnamelength_nodejs">
 <a href="#state_argnamelength_nodejs" style="color: inherit; text-decoration: inherit;">arg<wbr>Name<wbr>Length</a>
@@ -2348,8 +2102,7 @@ The following state arguments are supported:
         <span class="property-type">number</span>
     </dt>
     <dd>{{% md %}}The maximum allowed argument name length.
-{{% /md %}}</dd>
-    <dt class="property-optional"
+{{% /md %}}</dd><dt class="property-optional"
             title="Optional">
         <span id="state_combinedfilesizes_nodejs">
 <a href="#state_combinedfilesizes_nodejs" style="color: inherit; text-decoration: inherit;">combined<wbr>File<wbr>Sizes</a>
@@ -2358,8 +2111,7 @@ The following state arguments are supported:
         <span class="property-type">number</span>
     </dt>
     <dd>{{% md %}}The maximum allowed size of all files.
-{{% /md %}}</dd>
-    <dt class="property-optional"
+{{% /md %}}</dd><dt class="property-optional"
             title="Optional">
         <span id="state_criticalanomalyscore_nodejs">
 <a href="#state_criticalanomalyscore_nodejs" style="color: inherit; text-decoration: inherit;">critical<wbr>Anomaly<wbr>Score</a>
@@ -2368,8 +2120,7 @@ The following state arguments are supported:
         <span class="property-type">number</span>
     </dt>
     <dd>{{% md %}}Score value to add for critical anomalies.
-{{% /md %}}</dd>
-    <dt class="property-optional"
+{{% /md %}}</dd><dt class="property-optional"
             title="Optional">
         <span id="state_crsvalidateutf8encoding_nodejs">
 <a href="#state_crsvalidateutf8encoding_nodejs" style="color: inherit; text-decoration: inherit;">crs<wbr>Validate<wbr>Utf8Encoding</a>
@@ -2378,8 +2129,7 @@ The following state arguments are supported:
         <span class="property-type">boolean</span>
     </dt>
     <dd>{{% md %}}CRS validate UTF8 encoding.
-{{% /md %}}</dd>
-    <dt class="property-optional"
+{{% /md %}}</dd><dt class="property-optional"
             title="Optional">
         <span id="state_erroranomalyscore_nodejs">
 <a href="#state_erroranomalyscore_nodejs" style="color: inherit; text-decoration: inherit;">error<wbr>Anomaly<wbr>Score</a>
@@ -2388,8 +2138,7 @@ The following state arguments are supported:
         <span class="property-type">number</span>
     </dt>
     <dd>{{% md %}}Score value to add for error anomalies.
-{{% /md %}}</dd>
-    <dt class="property-optional"
+{{% /md %}}</dd><dt class="property-optional"
             title="Optional">
         <span id="state_highriskcountrycodes_nodejs">
 <a href="#state_highriskcountrycodes_nodejs" style="color: inherit; text-decoration: inherit;">high<wbr>Risk<wbr>Country<wbr>Codes</a>
@@ -2398,8 +2147,7 @@ The following state arguments are supported:
         <span class="property-type">string</span>
     </dt>
     <dd>{{% md %}}A space-separated list of country codes in ISO 3166-1 (two-letter) format.
-{{% /md %}}</dd>
-    <dt class="property-optional"
+{{% /md %}}</dd><dt class="property-optional"
             title="Optional">
         <span id="state_httpviolationscorethreshold_nodejs">
 <a href="#state_httpviolationscorethreshold_nodejs" style="color: inherit; text-decoration: inherit;">http<wbr>Violation<wbr>Score<wbr>Threshold</a>
@@ -2408,8 +2156,7 @@ The following state arguments are supported:
         <span class="property-type">number</span>
     </dt>
     <dd>{{% md %}}HTTP violation threshold.
-{{% /md %}}</dd>
-    <dt class="property-optional"
+{{% /md %}}</dd><dt class="property-optional"
             title="Optional">
         <span id="state_inboundanomalyscorethreshold_nodejs">
 <a href="#state_inboundanomalyscorethreshold_nodejs" style="color: inherit; text-decoration: inherit;">inbound<wbr>Anomaly<wbr>Score<wbr>Threshold</a>
@@ -2418,8 +2165,7 @@ The following state arguments are supported:
         <span class="property-type">number</span>
     </dt>
     <dd>{{% md %}}Inbound anomaly threshold.
-{{% /md %}}</dd>
-    <dt class="property-optional"
+{{% /md %}}</dd><dt class="property-optional"
             title="Optional">
         <span id="state_lfiscorethreshold_nodejs">
 <a href="#state_lfiscorethreshold_nodejs" style="color: inherit; text-decoration: inherit;">lfi<wbr>Score<wbr>Threshold</a>
@@ -2428,8 +2174,7 @@ The following state arguments are supported:
         <span class="property-type">number</span>
     </dt>
     <dd>{{% md %}}Local file inclusion attack threshold.
-{{% /md %}}</dd>
-    <dt class="property-optional"
+{{% /md %}}</dd><dt class="property-optional"
             title="Optional">
         <span id="state_maxfilesize_nodejs">
 <a href="#state_maxfilesize_nodejs" style="color: inherit; text-decoration: inherit;">max<wbr>File<wbr>Size</a>
@@ -2438,8 +2183,7 @@ The following state arguments are supported:
         <span class="property-type">number</span>
     </dt>
     <dd>{{% md %}}The maximum allowed file size, in bytes.
-{{% /md %}}</dd>
-    <dt class="property-optional"
+{{% /md %}}</dd><dt class="property-optional"
             title="Optional">
         <span id="state_maxnumargs_nodejs">
 <a href="#state_maxnumargs_nodejs" style="color: inherit; text-decoration: inherit;">max<wbr>Num<wbr>Args</a>
@@ -2448,8 +2192,7 @@ The following state arguments are supported:
         <span class="property-type">number</span>
     </dt>
     <dd>{{% md %}}The maximum number of arguments allowed.
-{{% /md %}}</dd>
-    <dt class="property-optional"
+{{% /md %}}</dd><dt class="property-optional"
             title="Optional">
         <span id="state_noticeanomalyscore_nodejs">
 <a href="#state_noticeanomalyscore_nodejs" style="color: inherit; text-decoration: inherit;">notice<wbr>Anomaly<wbr>Score</a>
@@ -2458,8 +2201,7 @@ The following state arguments are supported:
         <span class="property-type">number</span>
     </dt>
     <dd>{{% md %}}Score value to add for notice anomalies.
-{{% /md %}}</dd>
-    <dt class="property-optional"
+{{% /md %}}</dd><dt class="property-optional"
             title="Optional">
         <span id="state_paranoialevel_nodejs">
 <a href="#state_paranoialevel_nodejs" style="color: inherit; text-decoration: inherit;">paranoia<wbr>Level</a>
@@ -2468,8 +2210,7 @@ The following state arguments are supported:
         <span class="property-type">number</span>
     </dt>
     <dd>{{% md %}}The configured paranoia level.
-{{% /md %}}</dd>
-    <dt class="property-optional"
+{{% /md %}}</dd><dt class="property-optional"
             title="Optional">
         <span id="state_phpinjectionscorethreshold_nodejs">
 <a href="#state_phpinjectionscorethreshold_nodejs" style="color: inherit; text-decoration: inherit;">php<wbr>Injection<wbr>Score<wbr>Threshold</a>
@@ -2478,8 +2219,7 @@ The following state arguments are supported:
         <span class="property-type">number</span>
     </dt>
     <dd>{{% md %}}PHP injection threshold.
-{{% /md %}}</dd>
-    <dt class="property-optional"
+{{% /md %}}</dd><dt class="property-optional"
             title="Optional">
         <span id="state_rcescorethreshold_nodejs">
 <a href="#state_rcescorethreshold_nodejs" style="color: inherit; text-decoration: inherit;">rce<wbr>Score<wbr>Threshold</a>
@@ -2488,8 +2228,7 @@ The following state arguments are supported:
         <span class="property-type">number</span>
     </dt>
     <dd>{{% md %}}Remote code execution threshold.
-{{% /md %}}</dd>
-    <dt class="property-optional"
+{{% /md %}}</dd><dt class="property-optional"
             title="Optional">
         <span id="state_restrictedextensions_nodejs">
 <a href="#state_restrictedextensions_nodejs" style="color: inherit; text-decoration: inherit;">restricted<wbr>Extensions</a>
@@ -2498,8 +2237,7 @@ The following state arguments are supported:
         <span class="property-type">string</span>
     </dt>
     <dd>{{% md %}}A space-separated list of allowed file extensions.
-{{% /md %}}</dd>
-    <dt class="property-optional"
+{{% /md %}}</dd><dt class="property-optional"
             title="Optional">
         <span id="state_restrictedheaders_nodejs">
 <a href="#state_restrictedheaders_nodejs" style="color: inherit; text-decoration: inherit;">restricted<wbr>Headers</a>
@@ -2508,8 +2246,7 @@ The following state arguments are supported:
         <span class="property-type">string</span>
     </dt>
     <dd>{{% md %}}A space-separated list of allowed header names.
-{{% /md %}}</dd>
-    <dt class="property-optional"
+{{% /md %}}</dd><dt class="property-optional"
             title="Optional">
         <span id="state_rfiscorethreshold_nodejs">
 <a href="#state_rfiscorethreshold_nodejs" style="color: inherit; text-decoration: inherit;">rfi<wbr>Score<wbr>Threshold</a>
@@ -2518,8 +2255,7 @@ The following state arguments are supported:
         <span class="property-type">number</span>
     </dt>
     <dd>{{% md %}}Remote file inclusion attack threshold.
-{{% /md %}}</dd>
-    <dt class="property-optional"
+{{% /md %}}</dd><dt class="property-optional"
             title="Optional">
         <span id="state_ruleexclusions_nodejs">
 <a href="#state_ruleexclusions_nodejs" style="color: inherit; text-decoration: inherit;">rule<wbr>Exclusions</a>
@@ -2528,8 +2264,7 @@ The following state arguments are supported:
         <span class="property-type"><a href="#servicewafconfigurationruleexclusion">Service<wbr>Waf<wbr>Configuration<wbr>Rule<wbr>Exclusion[]</a></span>
     </dt>
     <dd>{{% md %}}The Web Application Firewall's rule exclusions. Defined below
-{{% /md %}}</dd>
-    <dt class="property-optional"
+{{% /md %}}</dd><dt class="property-optional"
             title="Optional">
         <span id="state_rules_nodejs">
 <a href="#state_rules_nodejs" style="color: inherit; text-decoration: inherit;">rules</a>
@@ -2538,8 +2273,7 @@ The following state arguments are supported:
         <span class="property-type"><a href="#servicewafconfigurationrule">Service<wbr>Waf<wbr>Configuration<wbr>Rule[]</a></span>
     </dt>
     <dd>{{% md %}}The Web Application Firewall's active rules. Defined below
-{{% /md %}}</dd>
-    <dt class="property-optional"
+{{% /md %}}</dd><dt class="property-optional"
             title="Optional">
         <span id="state_sessionfixationscorethreshold_nodejs">
 <a href="#state_sessionfixationscorethreshold_nodejs" style="color: inherit; text-decoration: inherit;">session<wbr>Fixation<wbr>Score<wbr>Threshold</a>
@@ -2548,8 +2282,7 @@ The following state arguments are supported:
         <span class="property-type">number</span>
     </dt>
     <dd>{{% md %}}Session fixation attack threshold.
-{{% /md %}}</dd>
-    <dt class="property-optional"
+{{% /md %}}</dd><dt class="property-optional"
             title="Optional">
         <span id="state_sqlinjectionscorethreshold_nodejs">
 <a href="#state_sqlinjectionscorethreshold_nodejs" style="color: inherit; text-decoration: inherit;">sql<wbr>Injection<wbr>Score<wbr>Threshold</a>
@@ -2558,8 +2291,7 @@ The following state arguments are supported:
         <span class="property-type">number</span>
     </dt>
     <dd>{{% md %}}SQL injection attack threshold.
-{{% /md %}}</dd>
-    <dt class="property-optional"
+{{% /md %}}</dd><dt class="property-optional"
             title="Optional">
         <span id="state_totalarglength_nodejs">
 <a href="#state_totalarglength_nodejs" style="color: inherit; text-decoration: inherit;">total<wbr>Arg<wbr>Length</a>
@@ -2568,8 +2300,7 @@ The following state arguments are supported:
         <span class="property-type">number</span>
     </dt>
     <dd>{{% md %}}The maximum size of argument names and values.
-{{% /md %}}</dd>
-    <dt class="property-optional"
+{{% /md %}}</dd><dt class="property-optional"
             title="Optional">
         <span id="state_wafid_nodejs">
 <a href="#state_wafid_nodejs" style="color: inherit; text-decoration: inherit;">waf<wbr>Id</a>
@@ -2578,8 +2309,7 @@ The following state arguments are supported:
         <span class="property-type">string</span>
     </dt>
     <dd>{{% md %}}The ID of the Web Application Firewall that the configuration belongs to.
-{{% /md %}}</dd>
-    <dt class="property-optional"
+{{% /md %}}</dd><dt class="property-optional"
             title="Optional">
         <span id="state_warninganomalyscore_nodejs">
 <a href="#state_warninganomalyscore_nodejs" style="color: inherit; text-decoration: inherit;">warning<wbr>Anomaly<wbr>Score</a>
@@ -2588,8 +2318,7 @@ The following state arguments are supported:
         <span class="property-type">number</span>
     </dt>
     <dd>{{% md %}}Score value to add for warning anomalies.
-{{% /md %}}</dd>
-    <dt class="property-optional"
+{{% /md %}}</dd><dt class="property-optional"
             title="Optional">
         <span id="state_xssscorethreshold_nodejs">
 <a href="#state_xssscorethreshold_nodejs" style="color: inherit; text-decoration: inherit;">xss<wbr>Score<wbr>Threshold</a>
@@ -2598,14 +2327,11 @@ The following state arguments are supported:
         <span class="property-type">number</span>
     </dt>
     <dd>{{% md %}}XSS attack threshold.
-{{% /md %}}</dd>
-</dl>
+{{% /md %}}</dd></dl>
 {{% /choosable %}}
 
 {{% choosable language python %}}
-<dl class="resources-properties">
-
-    <dt class="property-optional"
+<dl class="resources-properties"><dt class="property-optional"
             title="Optional">
         <span id="state_allowed_http_versions_python">
 <a href="#state_allowed_http_versions_python" style="color: inherit; text-decoration: inherit;">allowed_<wbr>http_<wbr>versions</a>
@@ -2614,8 +2340,7 @@ The following state arguments are supported:
         <span class="property-type">str</span>
     </dt>
     <dd>{{% md %}}Allowed HTTP versions.
-{{% /md %}}</dd>
-    <dt class="property-optional"
+{{% /md %}}</dd><dt class="property-optional"
             title="Optional">
         <span id="state_allowed_methods_python">
 <a href="#state_allowed_methods_python" style="color: inherit; text-decoration: inherit;">allowed_<wbr>methods</a>
@@ -2624,8 +2349,7 @@ The following state arguments are supported:
         <span class="property-type">str</span>
     </dt>
     <dd>{{% md %}}A space-separated list of HTTP method names.
-{{% /md %}}</dd>
-    <dt class="property-optional"
+{{% /md %}}</dd><dt class="property-optional"
             title="Optional">
         <span id="state_allowed_request_content_type_python">
 <a href="#state_allowed_request_content_type_python" style="color: inherit; text-decoration: inherit;">allowed_<wbr>request_<wbr>content_<wbr>type</a>
@@ -2634,8 +2358,7 @@ The following state arguments are supported:
         <span class="property-type">str</span>
     </dt>
     <dd>{{% md %}}Allowed request content types.
-{{% /md %}}</dd>
-    <dt class="property-optional"
+{{% /md %}}</dd><dt class="property-optional"
             title="Optional">
         <span id="state_allowed_request_content_type_charset_python">
 <a href="#state_allowed_request_content_type_charset_python" style="color: inherit; text-decoration: inherit;">allowed_<wbr>request_<wbr>content_<wbr>type_<wbr>charset</a>
@@ -2644,8 +2367,7 @@ The following state arguments are supported:
         <span class="property-type">str</span>
     </dt>
     <dd>{{% md %}}Allowed request content type charset.
-{{% /md %}}</dd>
-    <dt class="property-optional"
+{{% /md %}}</dd><dt class="property-optional"
             title="Optional">
         <span id="state_arg_length_python">
 <a href="#state_arg_length_python" style="color: inherit; text-decoration: inherit;">arg_<wbr>length</a>
@@ -2654,8 +2376,7 @@ The following state arguments are supported:
         <span class="property-type">int</span>
     </dt>
     <dd>{{% md %}}The maximum number of arguments allowed.
-{{% /md %}}</dd>
-    <dt class="property-optional"
+{{% /md %}}</dd><dt class="property-optional"
             title="Optional">
         <span id="state_arg_name_length_python">
 <a href="#state_arg_name_length_python" style="color: inherit; text-decoration: inherit;">arg_<wbr>name_<wbr>length</a>
@@ -2664,8 +2385,7 @@ The following state arguments are supported:
         <span class="property-type">int</span>
     </dt>
     <dd>{{% md %}}The maximum allowed argument name length.
-{{% /md %}}</dd>
-    <dt class="property-optional"
+{{% /md %}}</dd><dt class="property-optional"
             title="Optional">
         <span id="state_combined_file_sizes_python">
 <a href="#state_combined_file_sizes_python" style="color: inherit; text-decoration: inherit;">combined_<wbr>file_<wbr>sizes</a>
@@ -2674,8 +2394,7 @@ The following state arguments are supported:
         <span class="property-type">int</span>
     </dt>
     <dd>{{% md %}}The maximum allowed size of all files.
-{{% /md %}}</dd>
-    <dt class="property-optional"
+{{% /md %}}</dd><dt class="property-optional"
             title="Optional">
         <span id="state_critical_anomaly_score_python">
 <a href="#state_critical_anomaly_score_python" style="color: inherit; text-decoration: inherit;">critical_<wbr>anomaly_<wbr>score</a>
@@ -2684,8 +2403,7 @@ The following state arguments are supported:
         <span class="property-type">int</span>
     </dt>
     <dd>{{% md %}}Score value to add for critical anomalies.
-{{% /md %}}</dd>
-    <dt class="property-optional"
+{{% /md %}}</dd><dt class="property-optional"
             title="Optional">
         <span id="state_crs_validate_utf8_encoding_python">
 <a href="#state_crs_validate_utf8_encoding_python" style="color: inherit; text-decoration: inherit;">crs_<wbr>validate_<wbr>utf8_<wbr>encoding</a>
@@ -2694,8 +2412,7 @@ The following state arguments are supported:
         <span class="property-type">bool</span>
     </dt>
     <dd>{{% md %}}CRS validate UTF8 encoding.
-{{% /md %}}</dd>
-    <dt class="property-optional"
+{{% /md %}}</dd><dt class="property-optional"
             title="Optional">
         <span id="state_error_anomaly_score_python">
 <a href="#state_error_anomaly_score_python" style="color: inherit; text-decoration: inherit;">error_<wbr>anomaly_<wbr>score</a>
@@ -2704,8 +2421,7 @@ The following state arguments are supported:
         <span class="property-type">int</span>
     </dt>
     <dd>{{% md %}}Score value to add for error anomalies.
-{{% /md %}}</dd>
-    <dt class="property-optional"
+{{% /md %}}</dd><dt class="property-optional"
             title="Optional">
         <span id="state_high_risk_country_codes_python">
 <a href="#state_high_risk_country_codes_python" style="color: inherit; text-decoration: inherit;">high_<wbr>risk_<wbr>country_<wbr>codes</a>
@@ -2714,8 +2430,7 @@ The following state arguments are supported:
         <span class="property-type">str</span>
     </dt>
     <dd>{{% md %}}A space-separated list of country codes in ISO 3166-1 (two-letter) format.
-{{% /md %}}</dd>
-    <dt class="property-optional"
+{{% /md %}}</dd><dt class="property-optional"
             title="Optional">
         <span id="state_http_violation_score_threshold_python">
 <a href="#state_http_violation_score_threshold_python" style="color: inherit; text-decoration: inherit;">http_<wbr>violation_<wbr>score_<wbr>threshold</a>
@@ -2724,8 +2439,7 @@ The following state arguments are supported:
         <span class="property-type">int</span>
     </dt>
     <dd>{{% md %}}HTTP violation threshold.
-{{% /md %}}</dd>
-    <dt class="property-optional"
+{{% /md %}}</dd><dt class="property-optional"
             title="Optional">
         <span id="state_inbound_anomaly_score_threshold_python">
 <a href="#state_inbound_anomaly_score_threshold_python" style="color: inherit; text-decoration: inherit;">inbound_<wbr>anomaly_<wbr>score_<wbr>threshold</a>
@@ -2734,8 +2448,7 @@ The following state arguments are supported:
         <span class="property-type">int</span>
     </dt>
     <dd>{{% md %}}Inbound anomaly threshold.
-{{% /md %}}</dd>
-    <dt class="property-optional"
+{{% /md %}}</dd><dt class="property-optional"
             title="Optional">
         <span id="state_lfi_score_threshold_python">
 <a href="#state_lfi_score_threshold_python" style="color: inherit; text-decoration: inherit;">lfi_<wbr>score_<wbr>threshold</a>
@@ -2744,8 +2457,7 @@ The following state arguments are supported:
         <span class="property-type">int</span>
     </dt>
     <dd>{{% md %}}Local file inclusion attack threshold.
-{{% /md %}}</dd>
-    <dt class="property-optional"
+{{% /md %}}</dd><dt class="property-optional"
             title="Optional">
         <span id="state_max_file_size_python">
 <a href="#state_max_file_size_python" style="color: inherit; text-decoration: inherit;">max_<wbr>file_<wbr>size</a>
@@ -2754,8 +2466,7 @@ The following state arguments are supported:
         <span class="property-type">int</span>
     </dt>
     <dd>{{% md %}}The maximum allowed file size, in bytes.
-{{% /md %}}</dd>
-    <dt class="property-optional"
+{{% /md %}}</dd><dt class="property-optional"
             title="Optional">
         <span id="state_max_num_args_python">
 <a href="#state_max_num_args_python" style="color: inherit; text-decoration: inherit;">max_<wbr>num_<wbr>args</a>
@@ -2764,8 +2475,7 @@ The following state arguments are supported:
         <span class="property-type">int</span>
     </dt>
     <dd>{{% md %}}The maximum number of arguments allowed.
-{{% /md %}}</dd>
-    <dt class="property-optional"
+{{% /md %}}</dd><dt class="property-optional"
             title="Optional">
         <span id="state_notice_anomaly_score_python">
 <a href="#state_notice_anomaly_score_python" style="color: inherit; text-decoration: inherit;">notice_<wbr>anomaly_<wbr>score</a>
@@ -2774,8 +2484,7 @@ The following state arguments are supported:
         <span class="property-type">int</span>
     </dt>
     <dd>{{% md %}}Score value to add for notice anomalies.
-{{% /md %}}</dd>
-    <dt class="property-optional"
+{{% /md %}}</dd><dt class="property-optional"
             title="Optional">
         <span id="state_paranoia_level_python">
 <a href="#state_paranoia_level_python" style="color: inherit; text-decoration: inherit;">paranoia_<wbr>level</a>
@@ -2784,8 +2493,7 @@ The following state arguments are supported:
         <span class="property-type">int</span>
     </dt>
     <dd>{{% md %}}The configured paranoia level.
-{{% /md %}}</dd>
-    <dt class="property-optional"
+{{% /md %}}</dd><dt class="property-optional"
             title="Optional">
         <span id="state_php_injection_score_threshold_python">
 <a href="#state_php_injection_score_threshold_python" style="color: inherit; text-decoration: inherit;">php_<wbr>injection_<wbr>score_<wbr>threshold</a>
@@ -2794,8 +2502,7 @@ The following state arguments are supported:
         <span class="property-type">int</span>
     </dt>
     <dd>{{% md %}}PHP injection threshold.
-{{% /md %}}</dd>
-    <dt class="property-optional"
+{{% /md %}}</dd><dt class="property-optional"
             title="Optional">
         <span id="state_rce_score_threshold_python">
 <a href="#state_rce_score_threshold_python" style="color: inherit; text-decoration: inherit;">rce_<wbr>score_<wbr>threshold</a>
@@ -2804,8 +2511,7 @@ The following state arguments are supported:
         <span class="property-type">int</span>
     </dt>
     <dd>{{% md %}}Remote code execution threshold.
-{{% /md %}}</dd>
-    <dt class="property-optional"
+{{% /md %}}</dd><dt class="property-optional"
             title="Optional">
         <span id="state_restricted_extensions_python">
 <a href="#state_restricted_extensions_python" style="color: inherit; text-decoration: inherit;">restricted_<wbr>extensions</a>
@@ -2814,8 +2520,7 @@ The following state arguments are supported:
         <span class="property-type">str</span>
     </dt>
     <dd>{{% md %}}A space-separated list of allowed file extensions.
-{{% /md %}}</dd>
-    <dt class="property-optional"
+{{% /md %}}</dd><dt class="property-optional"
             title="Optional">
         <span id="state_restricted_headers_python">
 <a href="#state_restricted_headers_python" style="color: inherit; text-decoration: inherit;">restricted_<wbr>headers</a>
@@ -2824,8 +2529,7 @@ The following state arguments are supported:
         <span class="property-type">str</span>
     </dt>
     <dd>{{% md %}}A space-separated list of allowed header names.
-{{% /md %}}</dd>
-    <dt class="property-optional"
+{{% /md %}}</dd><dt class="property-optional"
             title="Optional">
         <span id="state_rfi_score_threshold_python">
 <a href="#state_rfi_score_threshold_python" style="color: inherit; text-decoration: inherit;">rfi_<wbr>score_<wbr>threshold</a>
@@ -2834,8 +2538,7 @@ The following state arguments are supported:
         <span class="property-type">int</span>
     </dt>
     <dd>{{% md %}}Remote file inclusion attack threshold.
-{{% /md %}}</dd>
-    <dt class="property-optional"
+{{% /md %}}</dd><dt class="property-optional"
             title="Optional">
         <span id="state_rule_exclusions_python">
 <a href="#state_rule_exclusions_python" style="color: inherit; text-decoration: inherit;">rule_<wbr>exclusions</a>
@@ -2844,8 +2547,7 @@ The following state arguments are supported:
         <span class="property-type"><a href="#servicewafconfigurationruleexclusion">Sequence[Service<wbr>Waf<wbr>Configuration<wbr>Rule<wbr>Exclusion<wbr>Args]</a></span>
     </dt>
     <dd>{{% md %}}The Web Application Firewall's rule exclusions. Defined below
-{{% /md %}}</dd>
-    <dt class="property-optional"
+{{% /md %}}</dd><dt class="property-optional"
             title="Optional">
         <span id="state_rules_python">
 <a href="#state_rules_python" style="color: inherit; text-decoration: inherit;">rules</a>
@@ -2854,8 +2556,7 @@ The following state arguments are supported:
         <span class="property-type"><a href="#servicewafconfigurationrule">Sequence[Service<wbr>Waf<wbr>Configuration<wbr>Rule<wbr>Args]</a></span>
     </dt>
     <dd>{{% md %}}The Web Application Firewall's active rules. Defined below
-{{% /md %}}</dd>
-    <dt class="property-optional"
+{{% /md %}}</dd><dt class="property-optional"
             title="Optional">
         <span id="state_session_fixation_score_threshold_python">
 <a href="#state_session_fixation_score_threshold_python" style="color: inherit; text-decoration: inherit;">session_<wbr>fixation_<wbr>score_<wbr>threshold</a>
@@ -2864,8 +2565,7 @@ The following state arguments are supported:
         <span class="property-type">int</span>
     </dt>
     <dd>{{% md %}}Session fixation attack threshold.
-{{% /md %}}</dd>
-    <dt class="property-optional"
+{{% /md %}}</dd><dt class="property-optional"
             title="Optional">
         <span id="state_sql_injection_score_threshold_python">
 <a href="#state_sql_injection_score_threshold_python" style="color: inherit; text-decoration: inherit;">sql_<wbr>injection_<wbr>score_<wbr>threshold</a>
@@ -2874,8 +2574,7 @@ The following state arguments are supported:
         <span class="property-type">int</span>
     </dt>
     <dd>{{% md %}}SQL injection attack threshold.
-{{% /md %}}</dd>
-    <dt class="property-optional"
+{{% /md %}}</dd><dt class="property-optional"
             title="Optional">
         <span id="state_total_arg_length_python">
 <a href="#state_total_arg_length_python" style="color: inherit; text-decoration: inherit;">total_<wbr>arg_<wbr>length</a>
@@ -2884,8 +2583,7 @@ The following state arguments are supported:
         <span class="property-type">int</span>
     </dt>
     <dd>{{% md %}}The maximum size of argument names and values.
-{{% /md %}}</dd>
-    <dt class="property-optional"
+{{% /md %}}</dd><dt class="property-optional"
             title="Optional">
         <span id="state_waf_id_python">
 <a href="#state_waf_id_python" style="color: inherit; text-decoration: inherit;">waf_<wbr>id</a>
@@ -2894,8 +2592,7 @@ The following state arguments are supported:
         <span class="property-type">str</span>
     </dt>
     <dd>{{% md %}}The ID of the Web Application Firewall that the configuration belongs to.
-{{% /md %}}</dd>
-    <dt class="property-optional"
+{{% /md %}}</dd><dt class="property-optional"
             title="Optional">
         <span id="state_warning_anomaly_score_python">
 <a href="#state_warning_anomaly_score_python" style="color: inherit; text-decoration: inherit;">warning_<wbr>anomaly_<wbr>score</a>
@@ -2904,8 +2601,7 @@ The following state arguments are supported:
         <span class="property-type">int</span>
     </dt>
     <dd>{{% md %}}Score value to add for warning anomalies.
-{{% /md %}}</dd>
-    <dt class="property-optional"
+{{% /md %}}</dd><dt class="property-optional"
             title="Optional">
         <span id="state_xss_score_threshold_python">
 <a href="#state_xss_score_threshold_python" style="color: inherit; text-decoration: inherit;">xss_<wbr>score_<wbr>threshold</a>
@@ -2914,8 +2610,7 @@ The following state arguments are supported:
         <span class="property-type">int</span>
     </dt>
     <dd>{{% md %}}XSS attack threshold.
-{{% /md %}}</dd>
-</dl>
+{{% /md %}}</dd></dl>
 {{% /choosable %}}
 
 
@@ -2930,9 +2625,7 @@ The following state arguments are supported:
 <h4 id="servicewafconfigurationrule">Service<wbr>Waf<wbr>Configuration<wbr>Rule</h4>
 
 {{% choosable language csharp %}}
-<dl class="resources-properties">
-
-    <dt class="property-required"
+<dl class="resources-properties"><dt class="property-required"
             title="Required">
         <span id="modsecruleid_csharp">
 <a href="#modsecruleid_csharp" style="color: inherit; text-decoration: inherit;">Modsec<wbr>Rule<wbr>Id</a>
@@ -2941,8 +2634,7 @@ The following state arguments are supported:
         <span class="property-type">int</span>
     </dt>
     <dd>{{% md %}}The Web Application Firewall rule's modsecurity ID.
-{{% /md %}}</dd>
-    <dt class="property-required"
+{{% /md %}}</dd><dt class="property-required"
             title="Required">
         <span id="status_csharp">
 <a href="#status_csharp" style="color: inherit; text-decoration: inherit;">Status</a>
@@ -2951,8 +2643,7 @@ The following state arguments are supported:
         <span class="property-type">string</span>
     </dt>
     <dd>{{% md %}}The Web Application Firewall rule's status. Allowed values are (`log`, `block` and `score`).
-{{% /md %}}</dd>
-    <dt class="property-optional"
+{{% /md %}}</dd><dt class="property-optional"
             title="Optional">
         <span id="revision_csharp">
 <a href="#revision_csharp" style="color: inherit; text-decoration: inherit;">Revision</a>
@@ -2961,14 +2652,11 @@ The following state arguments are supported:
         <span class="property-type">int</span>
     </dt>
     <dd>{{% md %}}The Web Application Firewall rule's revision. The latest revision will be used if this is not provided.
-{{% /md %}}</dd>
-</dl>
+{{% /md %}}</dd></dl>
 {{% /choosable %}}
 
 {{% choosable language go %}}
-<dl class="resources-properties">
-
-    <dt class="property-required"
+<dl class="resources-properties"><dt class="property-required"
             title="Required">
         <span id="modsecruleid_go">
 <a href="#modsecruleid_go" style="color: inherit; text-decoration: inherit;">Modsec<wbr>Rule<wbr>Id</a>
@@ -2977,8 +2665,7 @@ The following state arguments are supported:
         <span class="property-type">int</span>
     </dt>
     <dd>{{% md %}}The Web Application Firewall rule's modsecurity ID.
-{{% /md %}}</dd>
-    <dt class="property-required"
+{{% /md %}}</dd><dt class="property-required"
             title="Required">
         <span id="status_go">
 <a href="#status_go" style="color: inherit; text-decoration: inherit;">Status</a>
@@ -2987,8 +2674,7 @@ The following state arguments are supported:
         <span class="property-type">string</span>
     </dt>
     <dd>{{% md %}}The Web Application Firewall rule's status. Allowed values are (`log`, `block` and `score`).
-{{% /md %}}</dd>
-    <dt class="property-optional"
+{{% /md %}}</dd><dt class="property-optional"
             title="Optional">
         <span id="revision_go">
 <a href="#revision_go" style="color: inherit; text-decoration: inherit;">Revision</a>
@@ -2997,14 +2683,11 @@ The following state arguments are supported:
         <span class="property-type">int</span>
     </dt>
     <dd>{{% md %}}The Web Application Firewall rule's revision. The latest revision will be used if this is not provided.
-{{% /md %}}</dd>
-</dl>
+{{% /md %}}</dd></dl>
 {{% /choosable %}}
 
 {{% choosable language nodejs %}}
-<dl class="resources-properties">
-
-    <dt class="property-required"
+<dl class="resources-properties"><dt class="property-required"
             title="Required">
         <span id="modsecruleid_nodejs">
 <a href="#modsecruleid_nodejs" style="color: inherit; text-decoration: inherit;">modsec<wbr>Rule<wbr>Id</a>
@@ -3013,8 +2696,7 @@ The following state arguments are supported:
         <span class="property-type">number</span>
     </dt>
     <dd>{{% md %}}The Web Application Firewall rule's modsecurity ID.
-{{% /md %}}</dd>
-    <dt class="property-required"
+{{% /md %}}</dd><dt class="property-required"
             title="Required">
         <span id="status_nodejs">
 <a href="#status_nodejs" style="color: inherit; text-decoration: inherit;">status</a>
@@ -3023,8 +2705,7 @@ The following state arguments are supported:
         <span class="property-type">string</span>
     </dt>
     <dd>{{% md %}}The Web Application Firewall rule's status. Allowed values are (`log`, `block` and `score`).
-{{% /md %}}</dd>
-    <dt class="property-optional"
+{{% /md %}}</dd><dt class="property-optional"
             title="Optional">
         <span id="revision_nodejs">
 <a href="#revision_nodejs" style="color: inherit; text-decoration: inherit;">revision</a>
@@ -3033,14 +2714,11 @@ The following state arguments are supported:
         <span class="property-type">number</span>
     </dt>
     <dd>{{% md %}}The Web Application Firewall rule's revision. The latest revision will be used if this is not provided.
-{{% /md %}}</dd>
-</dl>
+{{% /md %}}</dd></dl>
 {{% /choosable %}}
 
 {{% choosable language python %}}
-<dl class="resources-properties">
-
-    <dt class="property-required"
+<dl class="resources-properties"><dt class="property-required"
             title="Required">
         <span id="modsec_rule_id_python">
 <a href="#modsec_rule_id_python" style="color: inherit; text-decoration: inherit;">modsec_<wbr>rule_<wbr>id</a>
@@ -3049,8 +2727,7 @@ The following state arguments are supported:
         <span class="property-type">int</span>
     </dt>
     <dd>{{% md %}}The Web Application Firewall rule's modsecurity ID.
-{{% /md %}}</dd>
-    <dt class="property-required"
+{{% /md %}}</dd><dt class="property-required"
             title="Required">
         <span id="status_python">
 <a href="#status_python" style="color: inherit; text-decoration: inherit;">status</a>
@@ -3059,8 +2736,7 @@ The following state arguments are supported:
         <span class="property-type">str</span>
     </dt>
     <dd>{{% md %}}The Web Application Firewall rule's status. Allowed values are (`log`, `block` and `score`).
-{{% /md %}}</dd>
-    <dt class="property-optional"
+{{% /md %}}</dd><dt class="property-optional"
             title="Optional">
         <span id="revision_python">
 <a href="#revision_python" style="color: inherit; text-decoration: inherit;">revision</a>
@@ -3069,16 +2745,13 @@ The following state arguments are supported:
         <span class="property-type">int</span>
     </dt>
     <dd>{{% md %}}The Web Application Firewall rule's revision. The latest revision will be used if this is not provided.
-{{% /md %}}</dd>
-</dl>
+{{% /md %}}</dd></dl>
 {{% /choosable %}}
 
 <h4 id="servicewafconfigurationruleexclusion">Service<wbr>Waf<wbr>Configuration<wbr>Rule<wbr>Exclusion</h4>
 
 {{% choosable language csharp %}}
-<dl class="resources-properties">
-
-    <dt class="property-required"
+<dl class="resources-properties"><dt class="property-required"
             title="Required">
         <span id="condition_csharp">
 <a href="#condition_csharp" style="color: inherit; text-decoration: inherit;">Condition</a>
@@ -3087,8 +2760,7 @@ The following state arguments are supported:
         <span class="property-type">string</span>
     </dt>
     <dd>{{% md %}}A conditional expression in VCL used to determine if the condition is met.
-{{% /md %}}</dd>
-    <dt class="property-required"
+{{% /md %}}</dd><dt class="property-required"
             title="Required">
         <span id="exclusiontype_csharp">
 <a href="#exclusiontype_csharp" style="color: inherit; text-decoration: inherit;">Exclusion<wbr>Type</a>
@@ -3097,8 +2769,7 @@ The following state arguments are supported:
         <span class="property-type">string</span>
     </dt>
     <dd>{{% md %}}The type of rule exclusion. Values are `rule` to exclude the specified rule(s), or `waf` to disable the Web Application Firewall.
-{{% /md %}}</dd>
-    <dt class="property-required"
+{{% /md %}}</dd><dt class="property-required"
             title="Required">
         <span id="name_csharp">
 <a href="#name_csharp" style="color: inherit; text-decoration: inherit;">Name</a>
@@ -3107,8 +2778,7 @@ The following state arguments are supported:
         <span class="property-type">string</span>
     </dt>
     <dd>{{% md %}}The name of rule exclusion.
-{{% /md %}}</dd>
-    <dt class="property-optional"
+{{% /md %}}</dd><dt class="property-optional"
             title="Optional">
         <span id="modsecruleids_csharp">
 <a href="#modsecruleids_csharp" style="color: inherit; text-decoration: inherit;">Modsec<wbr>Rule<wbr>Ids</a>
@@ -3117,8 +2787,7 @@ The following state arguments are supported:
         <span class="property-type">List&lt;int&gt;</span>
     </dt>
     <dd>{{% md %}}Set of modsecurity IDs to be excluded. No rules should be provided when `exclusion_type` is `waf`. The rules need to be configured on the Web Application Firewall to be excluded.
-{{% /md %}}</dd>
-    <dt class="property-optional"
+{{% /md %}}</dd><dt class="property-optional"
             title="Optional">
         <span id="number_csharp">
 <a href="#number_csharp" style="color: inherit; text-decoration: inherit;">Number</a>
@@ -3127,14 +2796,11 @@ The following state arguments are supported:
         <span class="property-type">int</span>
     </dt>
     <dd>{{% md %}}The numeric ID assigned to the WAF Rule Exclusion.
-{{% /md %}}</dd>
-</dl>
+{{% /md %}}</dd></dl>
 {{% /choosable %}}
 
 {{% choosable language go %}}
-<dl class="resources-properties">
-
-    <dt class="property-required"
+<dl class="resources-properties"><dt class="property-required"
             title="Required">
         <span id="condition_go">
 <a href="#condition_go" style="color: inherit; text-decoration: inherit;">Condition</a>
@@ -3143,8 +2809,7 @@ The following state arguments are supported:
         <span class="property-type">string</span>
     </dt>
     <dd>{{% md %}}A conditional expression in VCL used to determine if the condition is met.
-{{% /md %}}</dd>
-    <dt class="property-required"
+{{% /md %}}</dd><dt class="property-required"
             title="Required">
         <span id="exclusiontype_go">
 <a href="#exclusiontype_go" style="color: inherit; text-decoration: inherit;">Exclusion<wbr>Type</a>
@@ -3153,8 +2818,7 @@ The following state arguments are supported:
         <span class="property-type">string</span>
     </dt>
     <dd>{{% md %}}The type of rule exclusion. Values are `rule` to exclude the specified rule(s), or `waf` to disable the Web Application Firewall.
-{{% /md %}}</dd>
-    <dt class="property-required"
+{{% /md %}}</dd><dt class="property-required"
             title="Required">
         <span id="name_go">
 <a href="#name_go" style="color: inherit; text-decoration: inherit;">Name</a>
@@ -3163,8 +2827,7 @@ The following state arguments are supported:
         <span class="property-type">string</span>
     </dt>
     <dd>{{% md %}}The name of rule exclusion.
-{{% /md %}}</dd>
-    <dt class="property-optional"
+{{% /md %}}</dd><dt class="property-optional"
             title="Optional">
         <span id="modsecruleids_go">
 <a href="#modsecruleids_go" style="color: inherit; text-decoration: inherit;">Modsec<wbr>Rule<wbr>Ids</a>
@@ -3173,8 +2836,7 @@ The following state arguments are supported:
         <span class="property-type">[]int</span>
     </dt>
     <dd>{{% md %}}Set of modsecurity IDs to be excluded. No rules should be provided when `exclusion_type` is `waf`. The rules need to be configured on the Web Application Firewall to be excluded.
-{{% /md %}}</dd>
-    <dt class="property-optional"
+{{% /md %}}</dd><dt class="property-optional"
             title="Optional">
         <span id="number_go">
 <a href="#number_go" style="color: inherit; text-decoration: inherit;">Number</a>
@@ -3183,14 +2845,11 @@ The following state arguments are supported:
         <span class="property-type">int</span>
     </dt>
     <dd>{{% md %}}The numeric ID assigned to the WAF Rule Exclusion.
-{{% /md %}}</dd>
-</dl>
+{{% /md %}}</dd></dl>
 {{% /choosable %}}
 
 {{% choosable language nodejs %}}
-<dl class="resources-properties">
-
-    <dt class="property-required"
+<dl class="resources-properties"><dt class="property-required"
             title="Required">
         <span id="condition_nodejs">
 <a href="#condition_nodejs" style="color: inherit; text-decoration: inherit;">condition</a>
@@ -3199,8 +2858,7 @@ The following state arguments are supported:
         <span class="property-type">string</span>
     </dt>
     <dd>{{% md %}}A conditional expression in VCL used to determine if the condition is met.
-{{% /md %}}</dd>
-    <dt class="property-required"
+{{% /md %}}</dd><dt class="property-required"
             title="Required">
         <span id="exclusiontype_nodejs">
 <a href="#exclusiontype_nodejs" style="color: inherit; text-decoration: inherit;">exclusion<wbr>Type</a>
@@ -3209,8 +2867,7 @@ The following state arguments are supported:
         <span class="property-type">string</span>
     </dt>
     <dd>{{% md %}}The type of rule exclusion. Values are `rule` to exclude the specified rule(s), or `waf` to disable the Web Application Firewall.
-{{% /md %}}</dd>
-    <dt class="property-required"
+{{% /md %}}</dd><dt class="property-required"
             title="Required">
         <span id="name_nodejs">
 <a href="#name_nodejs" style="color: inherit; text-decoration: inherit;">name</a>
@@ -3219,8 +2876,7 @@ The following state arguments are supported:
         <span class="property-type">string</span>
     </dt>
     <dd>{{% md %}}The name of rule exclusion.
-{{% /md %}}</dd>
-    <dt class="property-optional"
+{{% /md %}}</dd><dt class="property-optional"
             title="Optional">
         <span id="modsecruleids_nodejs">
 <a href="#modsecruleids_nodejs" style="color: inherit; text-decoration: inherit;">modsec<wbr>Rule<wbr>Ids</a>
@@ -3229,8 +2885,7 @@ The following state arguments are supported:
         <span class="property-type">number[]</span>
     </dt>
     <dd>{{% md %}}Set of modsecurity IDs to be excluded. No rules should be provided when `exclusion_type` is `waf`. The rules need to be configured on the Web Application Firewall to be excluded.
-{{% /md %}}</dd>
-    <dt class="property-optional"
+{{% /md %}}</dd><dt class="property-optional"
             title="Optional">
         <span id="number_nodejs">
 <a href="#number_nodejs" style="color: inherit; text-decoration: inherit;">number</a>
@@ -3239,14 +2894,11 @@ The following state arguments are supported:
         <span class="property-type">number</span>
     </dt>
     <dd>{{% md %}}The numeric ID assigned to the WAF Rule Exclusion.
-{{% /md %}}</dd>
-</dl>
+{{% /md %}}</dd></dl>
 {{% /choosable %}}
 
 {{% choosable language python %}}
-<dl class="resources-properties">
-
-    <dt class="property-required"
+<dl class="resources-properties"><dt class="property-required"
             title="Required">
         <span id="condition_python">
 <a href="#condition_python" style="color: inherit; text-decoration: inherit;">condition</a>
@@ -3255,8 +2907,7 @@ The following state arguments are supported:
         <span class="property-type">str</span>
     </dt>
     <dd>{{% md %}}A conditional expression in VCL used to determine if the condition is met.
-{{% /md %}}</dd>
-    <dt class="property-required"
+{{% /md %}}</dd><dt class="property-required"
             title="Required">
         <span id="exclusion_type_python">
 <a href="#exclusion_type_python" style="color: inherit; text-decoration: inherit;">exclusion_<wbr>type</a>
@@ -3265,8 +2916,7 @@ The following state arguments are supported:
         <span class="property-type">str</span>
     </dt>
     <dd>{{% md %}}The type of rule exclusion. Values are `rule` to exclude the specified rule(s), or `waf` to disable the Web Application Firewall.
-{{% /md %}}</dd>
-    <dt class="property-required"
+{{% /md %}}</dd><dt class="property-required"
             title="Required">
         <span id="name_python">
 <a href="#name_python" style="color: inherit; text-decoration: inherit;">name</a>
@@ -3275,8 +2925,7 @@ The following state arguments are supported:
         <span class="property-type">str</span>
     </dt>
     <dd>{{% md %}}The name of rule exclusion.
-{{% /md %}}</dd>
-    <dt class="property-optional"
+{{% /md %}}</dd><dt class="property-optional"
             title="Optional">
         <span id="modsec_rule_ids_python">
 <a href="#modsec_rule_ids_python" style="color: inherit; text-decoration: inherit;">modsec_<wbr>rule_<wbr>ids</a>
@@ -3285,8 +2934,7 @@ The following state arguments are supported:
         <span class="property-type">Sequence[int]</span>
     </dt>
     <dd>{{% md %}}Set of modsecurity IDs to be excluded. No rules should be provided when `exclusion_type` is `waf`. The rules need to be configured on the Web Application Firewall to be excluded.
-{{% /md %}}</dd>
-    <dt class="property-optional"
+{{% /md %}}</dd><dt class="property-optional"
             title="Optional">
         <span id="number_python">
 <a href="#number_python" style="color: inherit; text-decoration: inherit;">number</a>
@@ -3295,8 +2943,7 @@ The following state arguments are supported:
         <span class="property-type">int</span>
     </dt>
     <dd>{{% md %}}The numeric ID assigned to the WAF Rule Exclusion.
-{{% /md %}}</dd>
-</dl>
+{{% /md %}}</dd></dl>
 {{% /choosable %}}
 
 
@@ -3307,6 +2954,6 @@ The following state arguments are supported:
 	<dt>License</dt>
 	<dd>Apache-2.0</dd>
 	<dt>Notes</dt>
-	<dd>This Pulumi package is based on the [`fastly` Terraform Provider](https://github.com/fastly/terraform-provider-fastly).</dd>
+	<dd>{{% md %}}This Pulumi package is based on the [`fastly` Terraform Provider](https://github.com/fastly/terraform-provider-fastly).{{% /md %}}</dd>
 </dl>
 

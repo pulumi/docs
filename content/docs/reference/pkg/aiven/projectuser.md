@@ -16,11 +16,17 @@ The Project User resource allows the creation and management of Aiven Project Us
 
 
 {{% examples %}}
+
 ## Example Usage
 
 {{< chooser language "typescript,python,go,csharp" / >}}
 
-{{% example csharp %}}
+
+
+
+
+{{< example csharp >}}
+
 ```csharp
 using Pulumi;
 using Aiven = Pulumi.Aiven;
@@ -40,9 +46,12 @@ class MyStack : Stack
 }
 ```
 
-{{% /example %}}
 
-{{% example go %}}
+{{< /example >}}
+
+
+{{< example go >}}
+
 ```go
 package main
 
@@ -66,9 +75,12 @@ func main() {
 }
 ```
 
-{{% /example %}}
 
-{{% example python %}}
+{{< /example >}}
+
+
+{{< example python >}}
+
 ```python
 import pulumi
 import pulumi_aiven as aiven
@@ -79,9 +91,12 @@ mytestuser = aiven.ProjectUser("mytestuser",
     project=aiven_project["myproject"]["project"])
 ```
 
-{{% /example %}}
 
-{{% example typescript %}}
+{{< /example >}}
+
+
+{{< example typescript >}}
+
 
 ```typescript
 import * as pulumi from "@pulumi/pulumi";
@@ -94,9 +109,16 @@ const mytestuser = new aiven.ProjectUser("mytestuser", {
 });
 ```
 
-{{% /example %}}
+
+{{< /example >}}
+
+
+
+
 
 {{% /examples %}}
+
+
 
 
 ## Create a ProjectUser Resource {#create}
@@ -121,9 +143,7 @@ const mytestuser = new aiven.ProjectUser("mytestuser", {
 
 {{% choosable language nodejs %}}
 
-<dl class="resources-properties">
-  
-    <dt
+<dl class="resources-properties"><dt
         class="property-required" title="Required">
         <span>name</span>
         <span class="property-indicator"></span>
@@ -131,9 +151,7 @@ const mytestuser = new aiven.ProjectUser("mytestuser", {
     </dt>
     <dd>
       The unique name of the resource.
-    </dd>
-  
-    <dt
+    </dd><dt
         class="property-required" title="Required">
         <span>args</span>
         <span class="property-indicator"></span>
@@ -141,9 +159,7 @@ const mytestuser = new aiven.ProjectUser("mytestuser", {
     </dt>
     <dd>
       The arguments to resource properties.
-    </dd>
-  
-    <dt
+    </dd><dt
         class="property-optional" title="Optional">
         <span>opts</span>
         <span class="property-indicator"></span>
@@ -151,10 +167,7 @@ const mytestuser = new aiven.ProjectUser("mytestuser", {
     </dt>
     <dd>
       Bag of options to control resource&#39;s behavior.
-    </dd>
-  
-
-</dl>
+    </dd></dl>
 
 {{% /choosable %}}
 
@@ -180,9 +193,7 @@ const mytestuser = new aiven.ProjectUser("mytestuser", {
 
 {{% choosable language go %}}
 
-<dl class="resources-properties">
-  
-    <dt
+<dl class="resources-properties"><dt
         class="property-optional" title="Optional">
         <span>ctx</span>
         <span class="property-indicator"></span>
@@ -190,9 +201,7 @@ const mytestuser = new aiven.ProjectUser("mytestuser", {
     </dt>
     <dd>
       Context object for the current deployment.
-    </dd>
-  
-    <dt
+    </dd><dt
         class="property-required" title="Required">
         <span>name</span>
         <span class="property-indicator"></span>
@@ -200,9 +209,7 @@ const mytestuser = new aiven.ProjectUser("mytestuser", {
     </dt>
     <dd>
       The unique name of the resource.
-    </dd>
-  
-    <dt
+    </dd><dt
         class="property-required" title="Required">
         <span>args</span>
         <span class="property-indicator"></span>
@@ -210,9 +217,7 @@ const mytestuser = new aiven.ProjectUser("mytestuser", {
     </dt>
     <dd>
       The arguments to resource properties.
-    </dd>
-  
-    <dt
+    </dd><dt
         class="property-optional" title="Optional">
         <span>opts</span>
         <span class="property-indicator"></span>
@@ -220,18 +225,13 @@ const mytestuser = new aiven.ProjectUser("mytestuser", {
     </dt>
     <dd>
       Bag of options to control resource&#39;s behavior.
-    </dd>
-  
-
-</dl>
+    </dd></dl>
 
 {{% /choosable %}}
 
 {{% choosable language csharp %}}
 
-<dl class="resources-properties">
-  
-    <dt
+<dl class="resources-properties"><dt
         class="property-required" title="Required">
         <span>name</span>
         <span class="property-indicator"></span>
@@ -239,9 +239,7 @@ const mytestuser = new aiven.ProjectUser("mytestuser", {
     </dt>
     <dd>
       The unique name of the resource.
-    </dd>
-  
-    <dt
+    </dd><dt
         class="property-required" title="Required">
         <span>args</span>
         <span class="property-indicator"></span>
@@ -249,9 +247,7 @@ const mytestuser = new aiven.ProjectUser("mytestuser", {
     </dt>
     <dd>
       The arguments to resource properties.
-    </dd>
-  
-    <dt
+    </dd><dt
         class="property-optional" title="Optional">
         <span>opts</span>
         <span class="property-indicator"></span>
@@ -259,10 +255,7 @@ const mytestuser = new aiven.ProjectUser("mytestuser", {
     </dt>
     <dd>
       Bag of options to control resource&#39;s behavior.
-    </dd>
-  
-
-</dl>
+    </dd></dl>
 
 {{% /choosable %}}
 
@@ -277,9 +270,7 @@ The ProjectUser resource accepts the following [input]({{< relref "/docs/intro/c
 
 
 {{% choosable language csharp %}}
-<dl class="resources-properties">
-
-    <dt class="property-required"
+<dl class="resources-properties"><dt class="property-required"
             title="Required">
         <span id="email_csharp">
 <a href="#email_csharp" style="color: inherit; text-decoration: inherit;">Email</a>
@@ -288,8 +279,7 @@ The ProjectUser resource accepts the following [input]({{< relref "/docs/intro/c
         <span class="property-type">string</span>
     </dt>
     <dd>{{% md %}}identifies the email address of the user.
-{{% /md %}}</dd>
-    <dt class="property-required"
+{{% /md %}}</dd><dt class="property-required"
             title="Required">
         <span id="membertype_csharp">
 <a href="#membertype_csharp" style="color: inherit; text-decoration: inherit;">Member<wbr>Type</a>
@@ -298,8 +288,7 @@ The ProjectUser resource accepts the following [input]({{< relref "/docs/intro/c
         <span class="property-type">string</span>
     </dt>
     <dd>{{% md %}}defines the access level the user has to the project.
-{{% /md %}}</dd>
-    <dt class="property-required"
+{{% /md %}}</dd><dt class="property-required"
             title="Required">
         <span id="project_csharp">
 <a href="#project_csharp" style="color: inherit; text-decoration: inherit;">Project</a>
@@ -308,14 +297,11 @@ The ProjectUser resource accepts the following [input]({{< relref "/docs/intro/c
         <span class="property-type">string</span>
     </dt>
     <dd>{{% md %}}defines the project the user is a member of.
-{{% /md %}}</dd>
-</dl>
+{{% /md %}}</dd></dl>
 {{% /choosable %}}
 
 {{% choosable language go %}}
-<dl class="resources-properties">
-
-    <dt class="property-required"
+<dl class="resources-properties"><dt class="property-required"
             title="Required">
         <span id="email_go">
 <a href="#email_go" style="color: inherit; text-decoration: inherit;">Email</a>
@@ -324,8 +310,7 @@ The ProjectUser resource accepts the following [input]({{< relref "/docs/intro/c
         <span class="property-type">string</span>
     </dt>
     <dd>{{% md %}}identifies the email address of the user.
-{{% /md %}}</dd>
-    <dt class="property-required"
+{{% /md %}}</dd><dt class="property-required"
             title="Required">
         <span id="membertype_go">
 <a href="#membertype_go" style="color: inherit; text-decoration: inherit;">Member<wbr>Type</a>
@@ -334,8 +319,7 @@ The ProjectUser resource accepts the following [input]({{< relref "/docs/intro/c
         <span class="property-type">string</span>
     </dt>
     <dd>{{% md %}}defines the access level the user has to the project.
-{{% /md %}}</dd>
-    <dt class="property-required"
+{{% /md %}}</dd><dt class="property-required"
             title="Required">
         <span id="project_go">
 <a href="#project_go" style="color: inherit; text-decoration: inherit;">Project</a>
@@ -344,14 +328,11 @@ The ProjectUser resource accepts the following [input]({{< relref "/docs/intro/c
         <span class="property-type">string</span>
     </dt>
     <dd>{{% md %}}defines the project the user is a member of.
-{{% /md %}}</dd>
-</dl>
+{{% /md %}}</dd></dl>
 {{% /choosable %}}
 
 {{% choosable language nodejs %}}
-<dl class="resources-properties">
-
-    <dt class="property-required"
+<dl class="resources-properties"><dt class="property-required"
             title="Required">
         <span id="email_nodejs">
 <a href="#email_nodejs" style="color: inherit; text-decoration: inherit;">email</a>
@@ -360,8 +341,7 @@ The ProjectUser resource accepts the following [input]({{< relref "/docs/intro/c
         <span class="property-type">string</span>
     </dt>
     <dd>{{% md %}}identifies the email address of the user.
-{{% /md %}}</dd>
-    <dt class="property-required"
+{{% /md %}}</dd><dt class="property-required"
             title="Required">
         <span id="membertype_nodejs">
 <a href="#membertype_nodejs" style="color: inherit; text-decoration: inherit;">member<wbr>Type</a>
@@ -370,8 +350,7 @@ The ProjectUser resource accepts the following [input]({{< relref "/docs/intro/c
         <span class="property-type">string</span>
     </dt>
     <dd>{{% md %}}defines the access level the user has to the project.
-{{% /md %}}</dd>
-    <dt class="property-required"
+{{% /md %}}</dd><dt class="property-required"
             title="Required">
         <span id="project_nodejs">
 <a href="#project_nodejs" style="color: inherit; text-decoration: inherit;">project</a>
@@ -380,14 +359,11 @@ The ProjectUser resource accepts the following [input]({{< relref "/docs/intro/c
         <span class="property-type">string</span>
     </dt>
     <dd>{{% md %}}defines the project the user is a member of.
-{{% /md %}}</dd>
-</dl>
+{{% /md %}}</dd></dl>
 {{% /choosable %}}
 
 {{% choosable language python %}}
-<dl class="resources-properties">
-
-    <dt class="property-required"
+<dl class="resources-properties"><dt class="property-required"
             title="Required">
         <span id="email_python">
 <a href="#email_python" style="color: inherit; text-decoration: inherit;">email</a>
@@ -396,8 +372,7 @@ The ProjectUser resource accepts the following [input]({{< relref "/docs/intro/c
         <span class="property-type">str</span>
     </dt>
     <dd>{{% md %}}identifies the email address of the user.
-{{% /md %}}</dd>
-    <dt class="property-required"
+{{% /md %}}</dd><dt class="property-required"
             title="Required">
         <span id="member_type_python">
 <a href="#member_type_python" style="color: inherit; text-decoration: inherit;">member_<wbr>type</a>
@@ -406,8 +381,7 @@ The ProjectUser resource accepts the following [input]({{< relref "/docs/intro/c
         <span class="property-type">str</span>
     </dt>
     <dd>{{% md %}}defines the access level the user has to the project.
-{{% /md %}}</dd>
-    <dt class="property-required"
+{{% /md %}}</dd><dt class="property-required"
             title="Required">
         <span id="project_python">
 <a href="#project_python" style="color: inherit; text-decoration: inherit;">project</a>
@@ -416,8 +390,7 @@ The ProjectUser resource accepts the following [input]({{< relref "/docs/intro/c
         <span class="property-type">str</span>
     </dt>
     <dd>{{% md %}}defines the project the user is a member of.
-{{% /md %}}</dd>
-</dl>
+{{% /md %}}</dd></dl>
 {{% /choosable %}}
 
 
@@ -428,9 +401,7 @@ All [input](#inputs) properties are implicitly available as output properties. A
 
 
 {{% choosable language csharp %}}
-<dl class="resources-properties">
-
-    <dt class="property-"
+<dl class="resources-properties"><dt class="property-"
             title="">
         <span id="accepted_csharp">
 <a href="#accepted_csharp" style="color: inherit; text-decoration: inherit;">Accepted</a>
@@ -442,8 +413,7 @@ All [input](#inputs) properties are implicitly available as output properties. A
 the project; adding user to a project sends an invitation to the target user and the
 actual membership is only created once the user accepts the invitation. This property
 cannot be set, only read.
-{{% /md %}}</dd>
-    <dt class="property-"
+{{% /md %}}</dd><dt class="property-"
             title="">
         <span id="id_csharp">
 <a href="#id_csharp" style="color: inherit; text-decoration: inherit;">Id</a>
@@ -451,14 +421,11 @@ cannot be set, only read.
         <span class="property-indicator"></span>
         <span class="property-type">string</span>
     </dt>
-    <dd>{{% md %}}The provider-assigned unique ID for this managed resource.{{% /md %}}</dd>
-</dl>
+    <dd>{{% md %}}The provider-assigned unique ID for this managed resource.{{% /md %}}</dd></dl>
 {{% /choosable %}}
 
 {{% choosable language go %}}
-<dl class="resources-properties">
-
-    <dt class="property-"
+<dl class="resources-properties"><dt class="property-"
             title="">
         <span id="accepted_go">
 <a href="#accepted_go" style="color: inherit; text-decoration: inherit;">Accepted</a>
@@ -470,8 +437,7 @@ cannot be set, only read.
 the project; adding user to a project sends an invitation to the target user and the
 actual membership is only created once the user accepts the invitation. This property
 cannot be set, only read.
-{{% /md %}}</dd>
-    <dt class="property-"
+{{% /md %}}</dd><dt class="property-"
             title="">
         <span id="id_go">
 <a href="#id_go" style="color: inherit; text-decoration: inherit;">Id</a>
@@ -479,14 +445,11 @@ cannot be set, only read.
         <span class="property-indicator"></span>
         <span class="property-type">string</span>
     </dt>
-    <dd>{{% md %}}The provider-assigned unique ID for this managed resource.{{% /md %}}</dd>
-</dl>
+    <dd>{{% md %}}The provider-assigned unique ID for this managed resource.{{% /md %}}</dd></dl>
 {{% /choosable %}}
 
 {{% choosable language nodejs %}}
-<dl class="resources-properties">
-
-    <dt class="property-"
+<dl class="resources-properties"><dt class="property-"
             title="">
         <span id="accepted_nodejs">
 <a href="#accepted_nodejs" style="color: inherit; text-decoration: inherit;">accepted</a>
@@ -498,8 +461,7 @@ cannot be set, only read.
 the project; adding user to a project sends an invitation to the target user and the
 actual membership is only created once the user accepts the invitation. This property
 cannot be set, only read.
-{{% /md %}}</dd>
-    <dt class="property-"
+{{% /md %}}</dd><dt class="property-"
             title="">
         <span id="id_nodejs">
 <a href="#id_nodejs" style="color: inherit; text-decoration: inherit;">id</a>
@@ -507,14 +469,11 @@ cannot be set, only read.
         <span class="property-indicator"></span>
         <span class="property-type">string</span>
     </dt>
-    <dd>{{% md %}}The provider-assigned unique ID for this managed resource.{{% /md %}}</dd>
-</dl>
+    <dd>{{% md %}}The provider-assigned unique ID for this managed resource.{{% /md %}}</dd></dl>
 {{% /choosable %}}
 
 {{% choosable language python %}}
-<dl class="resources-properties">
-
-    <dt class="property-"
+<dl class="resources-properties"><dt class="property-"
             title="">
         <span id="accepted_python">
 <a href="#accepted_python" style="color: inherit; text-decoration: inherit;">accepted</a>
@@ -526,8 +485,7 @@ cannot be set, only read.
 the project; adding user to a project sends an invitation to the target user and the
 actual membership is only created once the user accepts the invitation. This property
 cannot be set, only read.
-{{% /md %}}</dd>
-    <dt class="property-"
+{{% /md %}}</dd><dt class="property-"
             title="">
         <span id="id_python">
 <a href="#id_python" style="color: inherit; text-decoration: inherit;">id</a>
@@ -535,8 +493,7 @@ cannot be set, only read.
         <span class="property-indicator"></span>
         <span class="property-type">str</span>
     </dt>
-    <dd>{{% md %}}The provider-assigned unique ID for this managed resource.{{% /md %}}</dd>
-</dl>
+    <dd>{{% md %}}The provider-assigned unique ID for this managed resource.{{% /md %}}</dd></dl>
 {{% /choosable %}}
 
 
@@ -663,9 +620,7 @@ The following state arguments are supported:
 
 
 {{% choosable language csharp %}}
-<dl class="resources-properties">
-
-    <dt class="property-optional"
+<dl class="resources-properties"><dt class="property-optional"
             title="Optional">
         <span id="state_accepted_csharp">
 <a href="#state_accepted_csharp" style="color: inherit; text-decoration: inherit;">Accepted</a>
@@ -677,8 +632,7 @@ The following state arguments are supported:
 the project; adding user to a project sends an invitation to the target user and the
 actual membership is only created once the user accepts the invitation. This property
 cannot be set, only read.
-{{% /md %}}</dd>
-    <dt class="property-optional"
+{{% /md %}}</dd><dt class="property-optional"
             title="Optional">
         <span id="state_email_csharp">
 <a href="#state_email_csharp" style="color: inherit; text-decoration: inherit;">Email</a>
@@ -687,8 +641,7 @@ cannot be set, only read.
         <span class="property-type">string</span>
     </dt>
     <dd>{{% md %}}identifies the email address of the user.
-{{% /md %}}</dd>
-    <dt class="property-optional"
+{{% /md %}}</dd><dt class="property-optional"
             title="Optional">
         <span id="state_membertype_csharp">
 <a href="#state_membertype_csharp" style="color: inherit; text-decoration: inherit;">Member<wbr>Type</a>
@@ -697,8 +650,7 @@ cannot be set, only read.
         <span class="property-type">string</span>
     </dt>
     <dd>{{% md %}}defines the access level the user has to the project.
-{{% /md %}}</dd>
-    <dt class="property-optional"
+{{% /md %}}</dd><dt class="property-optional"
             title="Optional">
         <span id="state_project_csharp">
 <a href="#state_project_csharp" style="color: inherit; text-decoration: inherit;">Project</a>
@@ -707,14 +659,11 @@ cannot be set, only read.
         <span class="property-type">string</span>
     </dt>
     <dd>{{% md %}}defines the project the user is a member of.
-{{% /md %}}</dd>
-</dl>
+{{% /md %}}</dd></dl>
 {{% /choosable %}}
 
 {{% choosable language go %}}
-<dl class="resources-properties">
-
-    <dt class="property-optional"
+<dl class="resources-properties"><dt class="property-optional"
             title="Optional">
         <span id="state_accepted_go">
 <a href="#state_accepted_go" style="color: inherit; text-decoration: inherit;">Accepted</a>
@@ -726,8 +675,7 @@ cannot be set, only read.
 the project; adding user to a project sends an invitation to the target user and the
 actual membership is only created once the user accepts the invitation. This property
 cannot be set, only read.
-{{% /md %}}</dd>
-    <dt class="property-optional"
+{{% /md %}}</dd><dt class="property-optional"
             title="Optional">
         <span id="state_email_go">
 <a href="#state_email_go" style="color: inherit; text-decoration: inherit;">Email</a>
@@ -736,8 +684,7 @@ cannot be set, only read.
         <span class="property-type">string</span>
     </dt>
     <dd>{{% md %}}identifies the email address of the user.
-{{% /md %}}</dd>
-    <dt class="property-optional"
+{{% /md %}}</dd><dt class="property-optional"
             title="Optional">
         <span id="state_membertype_go">
 <a href="#state_membertype_go" style="color: inherit; text-decoration: inherit;">Member<wbr>Type</a>
@@ -746,8 +693,7 @@ cannot be set, only read.
         <span class="property-type">string</span>
     </dt>
     <dd>{{% md %}}defines the access level the user has to the project.
-{{% /md %}}</dd>
-    <dt class="property-optional"
+{{% /md %}}</dd><dt class="property-optional"
             title="Optional">
         <span id="state_project_go">
 <a href="#state_project_go" style="color: inherit; text-decoration: inherit;">Project</a>
@@ -756,14 +702,11 @@ cannot be set, only read.
         <span class="property-type">string</span>
     </dt>
     <dd>{{% md %}}defines the project the user is a member of.
-{{% /md %}}</dd>
-</dl>
+{{% /md %}}</dd></dl>
 {{% /choosable %}}
 
 {{% choosable language nodejs %}}
-<dl class="resources-properties">
-
-    <dt class="property-optional"
+<dl class="resources-properties"><dt class="property-optional"
             title="Optional">
         <span id="state_accepted_nodejs">
 <a href="#state_accepted_nodejs" style="color: inherit; text-decoration: inherit;">accepted</a>
@@ -775,8 +718,7 @@ cannot be set, only read.
 the project; adding user to a project sends an invitation to the target user and the
 actual membership is only created once the user accepts the invitation. This property
 cannot be set, only read.
-{{% /md %}}</dd>
-    <dt class="property-optional"
+{{% /md %}}</dd><dt class="property-optional"
             title="Optional">
         <span id="state_email_nodejs">
 <a href="#state_email_nodejs" style="color: inherit; text-decoration: inherit;">email</a>
@@ -785,8 +727,7 @@ cannot be set, only read.
         <span class="property-type">string</span>
     </dt>
     <dd>{{% md %}}identifies the email address of the user.
-{{% /md %}}</dd>
-    <dt class="property-optional"
+{{% /md %}}</dd><dt class="property-optional"
             title="Optional">
         <span id="state_membertype_nodejs">
 <a href="#state_membertype_nodejs" style="color: inherit; text-decoration: inherit;">member<wbr>Type</a>
@@ -795,8 +736,7 @@ cannot be set, only read.
         <span class="property-type">string</span>
     </dt>
     <dd>{{% md %}}defines the access level the user has to the project.
-{{% /md %}}</dd>
-    <dt class="property-optional"
+{{% /md %}}</dd><dt class="property-optional"
             title="Optional">
         <span id="state_project_nodejs">
 <a href="#state_project_nodejs" style="color: inherit; text-decoration: inherit;">project</a>
@@ -805,14 +745,11 @@ cannot be set, only read.
         <span class="property-type">string</span>
     </dt>
     <dd>{{% md %}}defines the project the user is a member of.
-{{% /md %}}</dd>
-</dl>
+{{% /md %}}</dd></dl>
 {{% /choosable %}}
 
 {{% choosable language python %}}
-<dl class="resources-properties">
-
-    <dt class="property-optional"
+<dl class="resources-properties"><dt class="property-optional"
             title="Optional">
         <span id="state_accepted_python">
 <a href="#state_accepted_python" style="color: inherit; text-decoration: inherit;">accepted</a>
@@ -824,8 +761,7 @@ cannot be set, only read.
 the project; adding user to a project sends an invitation to the target user and the
 actual membership is only created once the user accepts the invitation. This property
 cannot be set, only read.
-{{% /md %}}</dd>
-    <dt class="property-optional"
+{{% /md %}}</dd><dt class="property-optional"
             title="Optional">
         <span id="state_email_python">
 <a href="#state_email_python" style="color: inherit; text-decoration: inherit;">email</a>
@@ -834,8 +770,7 @@ cannot be set, only read.
         <span class="property-type">str</span>
     </dt>
     <dd>{{% md %}}identifies the email address of the user.
-{{% /md %}}</dd>
-    <dt class="property-optional"
+{{% /md %}}</dd><dt class="property-optional"
             title="Optional">
         <span id="state_member_type_python">
 <a href="#state_member_type_python" style="color: inherit; text-decoration: inherit;">member_<wbr>type</a>
@@ -844,8 +779,7 @@ cannot be set, only read.
         <span class="property-type">str</span>
     </dt>
     <dd>{{% md %}}defines the access level the user has to the project.
-{{% /md %}}</dd>
-    <dt class="property-optional"
+{{% /md %}}</dd><dt class="property-optional"
             title="Optional">
         <span id="state_project_python">
 <a href="#state_project_python" style="color: inherit; text-decoration: inherit;">project</a>
@@ -854,8 +788,7 @@ cannot be set, only read.
         <span class="property-type">str</span>
     </dt>
     <dd>{{% md %}}defines the project the user is a member of.
-{{% /md %}}</dd>
-</dl>
+{{% /md %}}</dd></dl>
 {{% /choosable %}}
 
 
@@ -871,6 +804,6 @@ cannot be set, only read.
 	<dt>License</dt>
 	<dd>Apache-2.0</dd>
 	<dt>Notes</dt>
-	<dd>This Pulumi package is based on the [`aiven` Terraform Provider](https://github.com/aiven/terraform-provider-aiven).</dd>
+	<dd>{{% md %}}This Pulumi package is based on the [`aiven` Terraform Provider](https://github.com/aiven/terraform-provider-aiven).{{% /md %}}</dd>
 </dl>
 

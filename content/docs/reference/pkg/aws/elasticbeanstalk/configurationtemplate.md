@@ -24,11 +24,17 @@ The `setting` field supports the following format:
 
 
 {{% examples %}}
+
 ## Example Usage
 
 {{< chooser language "typescript,python,go,csharp" / >}}
 
-{{% example csharp %}}
+
+
+
+
+{{< example csharp >}}
+
 ```csharp
 using Pulumi;
 using Aws = Pulumi.Aws;
@@ -51,9 +57,12 @@ class MyStack : Stack
 }
 ```
 
-{{% /example %}}
 
-{{% example go %}}
+{{< /example >}}
+
+
+{{< example go >}}
+
 ```go
 package main
 
@@ -82,9 +91,12 @@ func main() {
 }
 ```
 
-{{% /example %}}
 
-{{% example python %}}
+{{< /example >}}
+
+
+{{< example python >}}
+
 ```python
 import pulumi
 import pulumi_aws as aws
@@ -95,9 +107,12 @@ tf_template = aws.elasticbeanstalk.ConfigurationTemplate("tfTemplate",
     solution_stack_name="64bit Amazon Linux 2015.09 v2.0.8 running Go 1.4")
 ```
 
-{{% /example %}}
 
-{{% example typescript %}}
+{{< /example >}}
+
+
+{{< example typescript >}}
+
 
 ```typescript
 import * as pulumi from "@pulumi/pulumi";
@@ -110,9 +125,16 @@ const tfTemplate = new aws.elasticbeanstalk.ConfigurationTemplate("tfTemplate", 
 });
 ```
 
-{{% /example %}}
+
+{{< /example >}}
+
+
+
+
 
 {{% /examples %}}
+
+
 
 
 ## Create a ConfigurationTemplate Resource {#create}
@@ -137,9 +159,7 @@ const tfTemplate = new aws.elasticbeanstalk.ConfigurationTemplate("tfTemplate", 
 
 {{% choosable language nodejs %}}
 
-<dl class="resources-properties">
-  
-    <dt
+<dl class="resources-properties"><dt
         class="property-required" title="Required">
         <span>name</span>
         <span class="property-indicator"></span>
@@ -147,9 +167,7 @@ const tfTemplate = new aws.elasticbeanstalk.ConfigurationTemplate("tfTemplate", 
     </dt>
     <dd>
       The unique name of the resource.
-    </dd>
-  
-    <dt
+    </dd><dt
         class="property-required" title="Required">
         <span>args</span>
         <span class="property-indicator"></span>
@@ -157,9 +175,7 @@ const tfTemplate = new aws.elasticbeanstalk.ConfigurationTemplate("tfTemplate", 
     </dt>
     <dd>
       The arguments to resource properties.
-    </dd>
-  
-    <dt
+    </dd><dt
         class="property-optional" title="Optional">
         <span>opts</span>
         <span class="property-indicator"></span>
@@ -167,10 +183,7 @@ const tfTemplate = new aws.elasticbeanstalk.ConfigurationTemplate("tfTemplate", 
     </dt>
     <dd>
       Bag of options to control resource&#39;s behavior.
-    </dd>
-  
-
-</dl>
+    </dd></dl>
 
 {{% /choosable %}}
 
@@ -196,9 +209,7 @@ const tfTemplate = new aws.elasticbeanstalk.ConfigurationTemplate("tfTemplate", 
 
 {{% choosable language go %}}
 
-<dl class="resources-properties">
-  
-    <dt
+<dl class="resources-properties"><dt
         class="property-optional" title="Optional">
         <span>ctx</span>
         <span class="property-indicator"></span>
@@ -206,9 +217,7 @@ const tfTemplate = new aws.elasticbeanstalk.ConfigurationTemplate("tfTemplate", 
     </dt>
     <dd>
       Context object for the current deployment.
-    </dd>
-  
-    <dt
+    </dd><dt
         class="property-required" title="Required">
         <span>name</span>
         <span class="property-indicator"></span>
@@ -216,9 +225,7 @@ const tfTemplate = new aws.elasticbeanstalk.ConfigurationTemplate("tfTemplate", 
     </dt>
     <dd>
       The unique name of the resource.
-    </dd>
-  
-    <dt
+    </dd><dt
         class="property-required" title="Required">
         <span>args</span>
         <span class="property-indicator"></span>
@@ -226,9 +233,7 @@ const tfTemplate = new aws.elasticbeanstalk.ConfigurationTemplate("tfTemplate", 
     </dt>
     <dd>
       The arguments to resource properties.
-    </dd>
-  
-    <dt
+    </dd><dt
         class="property-optional" title="Optional">
         <span>opts</span>
         <span class="property-indicator"></span>
@@ -236,18 +241,13 @@ const tfTemplate = new aws.elasticbeanstalk.ConfigurationTemplate("tfTemplate", 
     </dt>
     <dd>
       Bag of options to control resource&#39;s behavior.
-    </dd>
-  
-
-</dl>
+    </dd></dl>
 
 {{% /choosable %}}
 
 {{% choosable language csharp %}}
 
-<dl class="resources-properties">
-  
-    <dt
+<dl class="resources-properties"><dt
         class="property-required" title="Required">
         <span>name</span>
         <span class="property-indicator"></span>
@@ -255,9 +255,7 @@ const tfTemplate = new aws.elasticbeanstalk.ConfigurationTemplate("tfTemplate", 
     </dt>
     <dd>
       The unique name of the resource.
-    </dd>
-  
-    <dt
+    </dd><dt
         class="property-required" title="Required">
         <span>args</span>
         <span class="property-indicator"></span>
@@ -265,9 +263,7 @@ const tfTemplate = new aws.elasticbeanstalk.ConfigurationTemplate("tfTemplate", 
     </dt>
     <dd>
       The arguments to resource properties.
-    </dd>
-  
-    <dt
+    </dd><dt
         class="property-optional" title="Optional">
         <span>opts</span>
         <span class="property-indicator"></span>
@@ -275,10 +271,7 @@ const tfTemplate = new aws.elasticbeanstalk.ConfigurationTemplate("tfTemplate", 
     </dt>
     <dd>
       Bag of options to control resource&#39;s behavior.
-    </dd>
-  
-
-</dl>
+    </dd></dl>
 
 {{% /choosable %}}
 
@@ -293,9 +286,7 @@ The ConfigurationTemplate resource accepts the following [input]({{< relref "/do
 
 
 {{% choosable language csharp %}}
-<dl class="resources-properties">
-
-    <dt class="property-required"
+<dl class="resources-properties"><dt class="property-required"
             title="Required">
         <span id="application_csharp">
 <a href="#application_csharp" style="color: inherit; text-decoration: inherit;">Application</a>
@@ -304,8 +295,7 @@ The ConfigurationTemplate resource accepts the following [input]({{< relref "/do
         <span class="property-type">string</span>
     </dt>
     <dd>{{% md %}}name of the application to associate with this configuration template
-{{% /md %}}</dd>
-    <dt class="property-optional"
+{{% /md %}}</dd><dt class="property-optional"
             title="Optional">
         <span id="description_csharp">
 <a href="#description_csharp" style="color: inherit; text-decoration: inherit;">Description</a>
@@ -314,8 +304,7 @@ The ConfigurationTemplate resource accepts the following [input]({{< relref "/do
         <span class="property-type">string</span>
     </dt>
     <dd>{{% md %}}Short description of the Template
-{{% /md %}}</dd>
-    <dt class="property-optional"
+{{% /md %}}</dd><dt class="property-optional"
             title="Optional">
         <span id="environmentid_csharp">
 <a href="#environmentid_csharp" style="color: inherit; text-decoration: inherit;">Environment<wbr>Id</a>
@@ -324,8 +313,7 @@ The ConfigurationTemplate resource accepts the following [input]({{< relref "/do
         <span class="property-type">string</span>
     </dt>
     <dd>{{% md %}}The ID of the environment used with this configuration template
-{{% /md %}}</dd>
-    <dt class="property-optional"
+{{% /md %}}</dd><dt class="property-optional"
             title="Optional">
         <span id="name_csharp">
 <a href="#name_csharp" style="color: inherit; text-decoration: inherit;">Name</a>
@@ -334,8 +322,7 @@ The ConfigurationTemplate resource accepts the following [input]({{< relref "/do
         <span class="property-type">string</span>
     </dt>
     <dd>{{% md %}}A unique name for this Template.
-{{% /md %}}</dd>
-    <dt class="property-optional"
+{{% /md %}}</dd><dt class="property-optional"
             title="Optional">
         <span id="settings_csharp">
 <a href="#settings_csharp" style="color: inherit; text-decoration: inherit;">Settings</a>
@@ -346,8 +333,7 @@ The ConfigurationTemplate resource accepts the following [input]({{< relref "/do
     <dd>{{% md %}}Option settings to configure the new Environment. These
 override specific values that are set as defaults. The format is detailed
 below in Option Settings
-{{% /md %}}</dd>
-    <dt class="property-optional"
+{{% /md %}}</dd><dt class="property-optional"
             title="Optional">
         <span id="solutionstackname_csharp">
 <a href="#solutionstackname_csharp" style="color: inherit; text-decoration: inherit;">Solution<wbr>Stack<wbr>Name</a>
@@ -357,14 +343,11 @@ below in Option Settings
     </dt>
     <dd>{{% md %}}A solution stack to base your Template
 off of. Example stacks can be found in the [Amazon API documentation](https://docs.aws.amazon.com/elasticbeanstalk/latest/dg/concepts.platforms.html)
-{{% /md %}}</dd>
-</dl>
+{{% /md %}}</dd></dl>
 {{% /choosable %}}
 
 {{% choosable language go %}}
-<dl class="resources-properties">
-
-    <dt class="property-required"
+<dl class="resources-properties"><dt class="property-required"
             title="Required">
         <span id="application_go">
 <a href="#application_go" style="color: inherit; text-decoration: inherit;">Application</a>
@@ -373,8 +356,7 @@ off of. Example stacks can be found in the [Amazon API documentation](https://do
         <span class="property-type">string</span>
     </dt>
     <dd>{{% md %}}name of the application to associate with this configuration template
-{{% /md %}}</dd>
-    <dt class="property-optional"
+{{% /md %}}</dd><dt class="property-optional"
             title="Optional">
         <span id="description_go">
 <a href="#description_go" style="color: inherit; text-decoration: inherit;">Description</a>
@@ -383,8 +365,7 @@ off of. Example stacks can be found in the [Amazon API documentation](https://do
         <span class="property-type">string</span>
     </dt>
     <dd>{{% md %}}Short description of the Template
-{{% /md %}}</dd>
-    <dt class="property-optional"
+{{% /md %}}</dd><dt class="property-optional"
             title="Optional">
         <span id="environmentid_go">
 <a href="#environmentid_go" style="color: inherit; text-decoration: inherit;">Environment<wbr>Id</a>
@@ -393,8 +374,7 @@ off of. Example stacks can be found in the [Amazon API documentation](https://do
         <span class="property-type">string</span>
     </dt>
     <dd>{{% md %}}The ID of the environment used with this configuration template
-{{% /md %}}</dd>
-    <dt class="property-optional"
+{{% /md %}}</dd><dt class="property-optional"
             title="Optional">
         <span id="name_go">
 <a href="#name_go" style="color: inherit; text-decoration: inherit;">Name</a>
@@ -403,8 +383,7 @@ off of. Example stacks can be found in the [Amazon API documentation](https://do
         <span class="property-type">string</span>
     </dt>
     <dd>{{% md %}}A unique name for this Template.
-{{% /md %}}</dd>
-    <dt class="property-optional"
+{{% /md %}}</dd><dt class="property-optional"
             title="Optional">
         <span id="settings_go">
 <a href="#settings_go" style="color: inherit; text-decoration: inherit;">Settings</a>
@@ -415,8 +394,7 @@ off of. Example stacks can be found in the [Amazon API documentation](https://do
     <dd>{{% md %}}Option settings to configure the new Environment. These
 override specific values that are set as defaults. The format is detailed
 below in Option Settings
-{{% /md %}}</dd>
-    <dt class="property-optional"
+{{% /md %}}</dd><dt class="property-optional"
             title="Optional">
         <span id="solutionstackname_go">
 <a href="#solutionstackname_go" style="color: inherit; text-decoration: inherit;">Solution<wbr>Stack<wbr>Name</a>
@@ -426,14 +404,11 @@ below in Option Settings
     </dt>
     <dd>{{% md %}}A solution stack to base your Template
 off of. Example stacks can be found in the [Amazon API documentation](https://docs.aws.amazon.com/elasticbeanstalk/latest/dg/concepts.platforms.html)
-{{% /md %}}</dd>
-</dl>
+{{% /md %}}</dd></dl>
 {{% /choosable %}}
 
 {{% choosable language nodejs %}}
-<dl class="resources-properties">
-
-    <dt class="property-required"
+<dl class="resources-properties"><dt class="property-required"
             title="Required">
         <span id="application_nodejs">
 <a href="#application_nodejs" style="color: inherit; text-decoration: inherit;">application</a>
@@ -442,8 +417,7 @@ off of. Example stacks can be found in the [Amazon API documentation](https://do
         <span class="property-type">string</span>
     </dt>
     <dd>{{% md %}}name of the application to associate with this configuration template
-{{% /md %}}</dd>
-    <dt class="property-optional"
+{{% /md %}}</dd><dt class="property-optional"
             title="Optional">
         <span id="description_nodejs">
 <a href="#description_nodejs" style="color: inherit; text-decoration: inherit;">description</a>
@@ -452,8 +426,7 @@ off of. Example stacks can be found in the [Amazon API documentation](https://do
         <span class="property-type">string</span>
     </dt>
     <dd>{{% md %}}Short description of the Template
-{{% /md %}}</dd>
-    <dt class="property-optional"
+{{% /md %}}</dd><dt class="property-optional"
             title="Optional">
         <span id="environmentid_nodejs">
 <a href="#environmentid_nodejs" style="color: inherit; text-decoration: inherit;">environment<wbr>Id</a>
@@ -462,8 +435,7 @@ off of. Example stacks can be found in the [Amazon API documentation](https://do
         <span class="property-type">string</span>
     </dt>
     <dd>{{% md %}}The ID of the environment used with this configuration template
-{{% /md %}}</dd>
-    <dt class="property-optional"
+{{% /md %}}</dd><dt class="property-optional"
             title="Optional">
         <span id="name_nodejs">
 <a href="#name_nodejs" style="color: inherit; text-decoration: inherit;">name</a>
@@ -472,8 +444,7 @@ off of. Example stacks can be found in the [Amazon API documentation](https://do
         <span class="property-type">string</span>
     </dt>
     <dd>{{% md %}}A unique name for this Template.
-{{% /md %}}</dd>
-    <dt class="property-optional"
+{{% /md %}}</dd><dt class="property-optional"
             title="Optional">
         <span id="settings_nodejs">
 <a href="#settings_nodejs" style="color: inherit; text-decoration: inherit;">settings</a>
@@ -484,8 +455,7 @@ off of. Example stacks can be found in the [Amazon API documentation](https://do
     <dd>{{% md %}}Option settings to configure the new Environment. These
 override specific values that are set as defaults. The format is detailed
 below in Option Settings
-{{% /md %}}</dd>
-    <dt class="property-optional"
+{{% /md %}}</dd><dt class="property-optional"
             title="Optional">
         <span id="solutionstackname_nodejs">
 <a href="#solutionstackname_nodejs" style="color: inherit; text-decoration: inherit;">solution<wbr>Stack<wbr>Name</a>
@@ -495,14 +465,11 @@ below in Option Settings
     </dt>
     <dd>{{% md %}}A solution stack to base your Template
 off of. Example stacks can be found in the [Amazon API documentation](https://docs.aws.amazon.com/elasticbeanstalk/latest/dg/concepts.platforms.html)
-{{% /md %}}</dd>
-</dl>
+{{% /md %}}</dd></dl>
 {{% /choosable %}}
 
 {{% choosable language python %}}
-<dl class="resources-properties">
-
-    <dt class="property-required"
+<dl class="resources-properties"><dt class="property-required"
             title="Required">
         <span id="application_python">
 <a href="#application_python" style="color: inherit; text-decoration: inherit;">application</a>
@@ -511,8 +478,7 @@ off of. Example stacks can be found in the [Amazon API documentation](https://do
         <span class="property-type">str</span>
     </dt>
     <dd>{{% md %}}name of the application to associate with this configuration template
-{{% /md %}}</dd>
-    <dt class="property-optional"
+{{% /md %}}</dd><dt class="property-optional"
             title="Optional">
         <span id="description_python">
 <a href="#description_python" style="color: inherit; text-decoration: inherit;">description</a>
@@ -521,8 +487,7 @@ off of. Example stacks can be found in the [Amazon API documentation](https://do
         <span class="property-type">str</span>
     </dt>
     <dd>{{% md %}}Short description of the Template
-{{% /md %}}</dd>
-    <dt class="property-optional"
+{{% /md %}}</dd><dt class="property-optional"
             title="Optional">
         <span id="environment_id_python">
 <a href="#environment_id_python" style="color: inherit; text-decoration: inherit;">environment_<wbr>id</a>
@@ -531,8 +496,7 @@ off of. Example stacks can be found in the [Amazon API documentation](https://do
         <span class="property-type">str</span>
     </dt>
     <dd>{{% md %}}The ID of the environment used with this configuration template
-{{% /md %}}</dd>
-    <dt class="property-optional"
+{{% /md %}}</dd><dt class="property-optional"
             title="Optional">
         <span id="name_python">
 <a href="#name_python" style="color: inherit; text-decoration: inherit;">name</a>
@@ -541,8 +505,7 @@ off of. Example stacks can be found in the [Amazon API documentation](https://do
         <span class="property-type">str</span>
     </dt>
     <dd>{{% md %}}A unique name for this Template.
-{{% /md %}}</dd>
-    <dt class="property-optional"
+{{% /md %}}</dd><dt class="property-optional"
             title="Optional">
         <span id="settings_python">
 <a href="#settings_python" style="color: inherit; text-decoration: inherit;">settings</a>
@@ -553,8 +516,7 @@ off of. Example stacks can be found in the [Amazon API documentation](https://do
     <dd>{{% md %}}Option settings to configure the new Environment. These
 override specific values that are set as defaults. The format is detailed
 below in Option Settings
-{{% /md %}}</dd>
-    <dt class="property-optional"
+{{% /md %}}</dd><dt class="property-optional"
             title="Optional">
         <span id="solution_stack_name_python">
 <a href="#solution_stack_name_python" style="color: inherit; text-decoration: inherit;">solution_<wbr>stack_<wbr>name</a>
@@ -564,8 +526,7 @@ below in Option Settings
     </dt>
     <dd>{{% md %}}A solution stack to base your Template
 off of. Example stacks can be found in the [Amazon API documentation](https://docs.aws.amazon.com/elasticbeanstalk/latest/dg/concepts.platforms.html)
-{{% /md %}}</dd>
-</dl>
+{{% /md %}}</dd></dl>
 {{% /choosable %}}
 
 
@@ -576,9 +537,7 @@ All [input](#inputs) properties are implicitly available as output properties. A
 
 
 {{% choosable language csharp %}}
-<dl class="resources-properties">
-
-    <dt class="property-"
+<dl class="resources-properties"><dt class="property-"
             title="">
         <span id="id_csharp">
 <a href="#id_csharp" style="color: inherit; text-decoration: inherit;">Id</a>
@@ -586,14 +545,11 @@ All [input](#inputs) properties are implicitly available as output properties. A
         <span class="property-indicator"></span>
         <span class="property-type">string</span>
     </dt>
-    <dd>{{% md %}}The provider-assigned unique ID for this managed resource.{{% /md %}}</dd>
-</dl>
+    <dd>{{% md %}}The provider-assigned unique ID for this managed resource.{{% /md %}}</dd></dl>
 {{% /choosable %}}
 
 {{% choosable language go %}}
-<dl class="resources-properties">
-
-    <dt class="property-"
+<dl class="resources-properties"><dt class="property-"
             title="">
         <span id="id_go">
 <a href="#id_go" style="color: inherit; text-decoration: inherit;">Id</a>
@@ -601,14 +557,11 @@ All [input](#inputs) properties are implicitly available as output properties. A
         <span class="property-indicator"></span>
         <span class="property-type">string</span>
     </dt>
-    <dd>{{% md %}}The provider-assigned unique ID for this managed resource.{{% /md %}}</dd>
-</dl>
+    <dd>{{% md %}}The provider-assigned unique ID for this managed resource.{{% /md %}}</dd></dl>
 {{% /choosable %}}
 
 {{% choosable language nodejs %}}
-<dl class="resources-properties">
-
-    <dt class="property-"
+<dl class="resources-properties"><dt class="property-"
             title="">
         <span id="id_nodejs">
 <a href="#id_nodejs" style="color: inherit; text-decoration: inherit;">id</a>
@@ -616,14 +569,11 @@ All [input](#inputs) properties are implicitly available as output properties. A
         <span class="property-indicator"></span>
         <span class="property-type">string</span>
     </dt>
-    <dd>{{% md %}}The provider-assigned unique ID for this managed resource.{{% /md %}}</dd>
-</dl>
+    <dd>{{% md %}}The provider-assigned unique ID for this managed resource.{{% /md %}}</dd></dl>
 {{% /choosable %}}
 
 {{% choosable language python %}}
-<dl class="resources-properties">
-
-    <dt class="property-"
+<dl class="resources-properties"><dt class="property-"
             title="">
         <span id="id_python">
 <a href="#id_python" style="color: inherit; text-decoration: inherit;">id</a>
@@ -631,8 +581,7 @@ All [input](#inputs) properties are implicitly available as output properties. A
         <span class="property-indicator"></span>
         <span class="property-type">str</span>
     </dt>
-    <dd>{{% md %}}The provider-assigned unique ID for this managed resource.{{% /md %}}</dd>
-</dl>
+    <dd>{{% md %}}The provider-assigned unique ID for this managed resource.{{% /md %}}</dd></dl>
 {{% /choosable %}}
 
 
@@ -759,9 +708,7 @@ The following state arguments are supported:
 
 
 {{% choosable language csharp %}}
-<dl class="resources-properties">
-
-    <dt class="property-optional"
+<dl class="resources-properties"><dt class="property-optional"
             title="Optional">
         <span id="state_application_csharp">
 <a href="#state_application_csharp" style="color: inherit; text-decoration: inherit;">Application</a>
@@ -770,8 +717,7 @@ The following state arguments are supported:
         <span class="property-type">string</span>
     </dt>
     <dd>{{% md %}}name of the application to associate with this configuration template
-{{% /md %}}</dd>
-    <dt class="property-optional"
+{{% /md %}}</dd><dt class="property-optional"
             title="Optional">
         <span id="state_description_csharp">
 <a href="#state_description_csharp" style="color: inherit; text-decoration: inherit;">Description</a>
@@ -780,8 +726,7 @@ The following state arguments are supported:
         <span class="property-type">string</span>
     </dt>
     <dd>{{% md %}}Short description of the Template
-{{% /md %}}</dd>
-    <dt class="property-optional"
+{{% /md %}}</dd><dt class="property-optional"
             title="Optional">
         <span id="state_environmentid_csharp">
 <a href="#state_environmentid_csharp" style="color: inherit; text-decoration: inherit;">Environment<wbr>Id</a>
@@ -790,8 +735,7 @@ The following state arguments are supported:
         <span class="property-type">string</span>
     </dt>
     <dd>{{% md %}}The ID of the environment used with this configuration template
-{{% /md %}}</dd>
-    <dt class="property-optional"
+{{% /md %}}</dd><dt class="property-optional"
             title="Optional">
         <span id="state_name_csharp">
 <a href="#state_name_csharp" style="color: inherit; text-decoration: inherit;">Name</a>
@@ -800,8 +744,7 @@ The following state arguments are supported:
         <span class="property-type">string</span>
     </dt>
     <dd>{{% md %}}A unique name for this Template.
-{{% /md %}}</dd>
-    <dt class="property-optional"
+{{% /md %}}</dd><dt class="property-optional"
             title="Optional">
         <span id="state_settings_csharp">
 <a href="#state_settings_csharp" style="color: inherit; text-decoration: inherit;">Settings</a>
@@ -812,8 +755,7 @@ The following state arguments are supported:
     <dd>{{% md %}}Option settings to configure the new Environment. These
 override specific values that are set as defaults. The format is detailed
 below in Option Settings
-{{% /md %}}</dd>
-    <dt class="property-optional"
+{{% /md %}}</dd><dt class="property-optional"
             title="Optional">
         <span id="state_solutionstackname_csharp">
 <a href="#state_solutionstackname_csharp" style="color: inherit; text-decoration: inherit;">Solution<wbr>Stack<wbr>Name</a>
@@ -823,14 +765,11 @@ below in Option Settings
     </dt>
     <dd>{{% md %}}A solution stack to base your Template
 off of. Example stacks can be found in the [Amazon API documentation](https://docs.aws.amazon.com/elasticbeanstalk/latest/dg/concepts.platforms.html)
-{{% /md %}}</dd>
-</dl>
+{{% /md %}}</dd></dl>
 {{% /choosable %}}
 
 {{% choosable language go %}}
-<dl class="resources-properties">
-
-    <dt class="property-optional"
+<dl class="resources-properties"><dt class="property-optional"
             title="Optional">
         <span id="state_application_go">
 <a href="#state_application_go" style="color: inherit; text-decoration: inherit;">Application</a>
@@ -839,8 +778,7 @@ off of. Example stacks can be found in the [Amazon API documentation](https://do
         <span class="property-type">string</span>
     </dt>
     <dd>{{% md %}}name of the application to associate with this configuration template
-{{% /md %}}</dd>
-    <dt class="property-optional"
+{{% /md %}}</dd><dt class="property-optional"
             title="Optional">
         <span id="state_description_go">
 <a href="#state_description_go" style="color: inherit; text-decoration: inherit;">Description</a>
@@ -849,8 +787,7 @@ off of. Example stacks can be found in the [Amazon API documentation](https://do
         <span class="property-type">string</span>
     </dt>
     <dd>{{% md %}}Short description of the Template
-{{% /md %}}</dd>
-    <dt class="property-optional"
+{{% /md %}}</dd><dt class="property-optional"
             title="Optional">
         <span id="state_environmentid_go">
 <a href="#state_environmentid_go" style="color: inherit; text-decoration: inherit;">Environment<wbr>Id</a>
@@ -859,8 +796,7 @@ off of. Example stacks can be found in the [Amazon API documentation](https://do
         <span class="property-type">string</span>
     </dt>
     <dd>{{% md %}}The ID of the environment used with this configuration template
-{{% /md %}}</dd>
-    <dt class="property-optional"
+{{% /md %}}</dd><dt class="property-optional"
             title="Optional">
         <span id="state_name_go">
 <a href="#state_name_go" style="color: inherit; text-decoration: inherit;">Name</a>
@@ -869,8 +805,7 @@ off of. Example stacks can be found in the [Amazon API documentation](https://do
         <span class="property-type">string</span>
     </dt>
     <dd>{{% md %}}A unique name for this Template.
-{{% /md %}}</dd>
-    <dt class="property-optional"
+{{% /md %}}</dd><dt class="property-optional"
             title="Optional">
         <span id="state_settings_go">
 <a href="#state_settings_go" style="color: inherit; text-decoration: inherit;">Settings</a>
@@ -881,8 +816,7 @@ off of. Example stacks can be found in the [Amazon API documentation](https://do
     <dd>{{% md %}}Option settings to configure the new Environment. These
 override specific values that are set as defaults. The format is detailed
 below in Option Settings
-{{% /md %}}</dd>
-    <dt class="property-optional"
+{{% /md %}}</dd><dt class="property-optional"
             title="Optional">
         <span id="state_solutionstackname_go">
 <a href="#state_solutionstackname_go" style="color: inherit; text-decoration: inherit;">Solution<wbr>Stack<wbr>Name</a>
@@ -892,14 +826,11 @@ below in Option Settings
     </dt>
     <dd>{{% md %}}A solution stack to base your Template
 off of. Example stacks can be found in the [Amazon API documentation](https://docs.aws.amazon.com/elasticbeanstalk/latest/dg/concepts.platforms.html)
-{{% /md %}}</dd>
-</dl>
+{{% /md %}}</dd></dl>
 {{% /choosable %}}
 
 {{% choosable language nodejs %}}
-<dl class="resources-properties">
-
-    <dt class="property-optional"
+<dl class="resources-properties"><dt class="property-optional"
             title="Optional">
         <span id="state_application_nodejs">
 <a href="#state_application_nodejs" style="color: inherit; text-decoration: inherit;">application</a>
@@ -908,8 +839,7 @@ off of. Example stacks can be found in the [Amazon API documentation](https://do
         <span class="property-type">string</span>
     </dt>
     <dd>{{% md %}}name of the application to associate with this configuration template
-{{% /md %}}</dd>
-    <dt class="property-optional"
+{{% /md %}}</dd><dt class="property-optional"
             title="Optional">
         <span id="state_description_nodejs">
 <a href="#state_description_nodejs" style="color: inherit; text-decoration: inherit;">description</a>
@@ -918,8 +848,7 @@ off of. Example stacks can be found in the [Amazon API documentation](https://do
         <span class="property-type">string</span>
     </dt>
     <dd>{{% md %}}Short description of the Template
-{{% /md %}}</dd>
-    <dt class="property-optional"
+{{% /md %}}</dd><dt class="property-optional"
             title="Optional">
         <span id="state_environmentid_nodejs">
 <a href="#state_environmentid_nodejs" style="color: inherit; text-decoration: inherit;">environment<wbr>Id</a>
@@ -928,8 +857,7 @@ off of. Example stacks can be found in the [Amazon API documentation](https://do
         <span class="property-type">string</span>
     </dt>
     <dd>{{% md %}}The ID of the environment used with this configuration template
-{{% /md %}}</dd>
-    <dt class="property-optional"
+{{% /md %}}</dd><dt class="property-optional"
             title="Optional">
         <span id="state_name_nodejs">
 <a href="#state_name_nodejs" style="color: inherit; text-decoration: inherit;">name</a>
@@ -938,8 +866,7 @@ off of. Example stacks can be found in the [Amazon API documentation](https://do
         <span class="property-type">string</span>
     </dt>
     <dd>{{% md %}}A unique name for this Template.
-{{% /md %}}</dd>
-    <dt class="property-optional"
+{{% /md %}}</dd><dt class="property-optional"
             title="Optional">
         <span id="state_settings_nodejs">
 <a href="#state_settings_nodejs" style="color: inherit; text-decoration: inherit;">settings</a>
@@ -950,8 +877,7 @@ off of. Example stacks can be found in the [Amazon API documentation](https://do
     <dd>{{% md %}}Option settings to configure the new Environment. These
 override specific values that are set as defaults. The format is detailed
 below in Option Settings
-{{% /md %}}</dd>
-    <dt class="property-optional"
+{{% /md %}}</dd><dt class="property-optional"
             title="Optional">
         <span id="state_solutionstackname_nodejs">
 <a href="#state_solutionstackname_nodejs" style="color: inherit; text-decoration: inherit;">solution<wbr>Stack<wbr>Name</a>
@@ -961,14 +887,11 @@ below in Option Settings
     </dt>
     <dd>{{% md %}}A solution stack to base your Template
 off of. Example stacks can be found in the [Amazon API documentation](https://docs.aws.amazon.com/elasticbeanstalk/latest/dg/concepts.platforms.html)
-{{% /md %}}</dd>
-</dl>
+{{% /md %}}</dd></dl>
 {{% /choosable %}}
 
 {{% choosable language python %}}
-<dl class="resources-properties">
-
-    <dt class="property-optional"
+<dl class="resources-properties"><dt class="property-optional"
             title="Optional">
         <span id="state_application_python">
 <a href="#state_application_python" style="color: inherit; text-decoration: inherit;">application</a>
@@ -977,8 +900,7 @@ off of. Example stacks can be found in the [Amazon API documentation](https://do
         <span class="property-type">str</span>
     </dt>
     <dd>{{% md %}}name of the application to associate with this configuration template
-{{% /md %}}</dd>
-    <dt class="property-optional"
+{{% /md %}}</dd><dt class="property-optional"
             title="Optional">
         <span id="state_description_python">
 <a href="#state_description_python" style="color: inherit; text-decoration: inherit;">description</a>
@@ -987,8 +909,7 @@ off of. Example stacks can be found in the [Amazon API documentation](https://do
         <span class="property-type">str</span>
     </dt>
     <dd>{{% md %}}Short description of the Template
-{{% /md %}}</dd>
-    <dt class="property-optional"
+{{% /md %}}</dd><dt class="property-optional"
             title="Optional">
         <span id="state_environment_id_python">
 <a href="#state_environment_id_python" style="color: inherit; text-decoration: inherit;">environment_<wbr>id</a>
@@ -997,8 +918,7 @@ off of. Example stacks can be found in the [Amazon API documentation](https://do
         <span class="property-type">str</span>
     </dt>
     <dd>{{% md %}}The ID of the environment used with this configuration template
-{{% /md %}}</dd>
-    <dt class="property-optional"
+{{% /md %}}</dd><dt class="property-optional"
             title="Optional">
         <span id="state_name_python">
 <a href="#state_name_python" style="color: inherit; text-decoration: inherit;">name</a>
@@ -1007,8 +927,7 @@ off of. Example stacks can be found in the [Amazon API documentation](https://do
         <span class="property-type">str</span>
     </dt>
     <dd>{{% md %}}A unique name for this Template.
-{{% /md %}}</dd>
-    <dt class="property-optional"
+{{% /md %}}</dd><dt class="property-optional"
             title="Optional">
         <span id="state_settings_python">
 <a href="#state_settings_python" style="color: inherit; text-decoration: inherit;">settings</a>
@@ -1019,8 +938,7 @@ off of. Example stacks can be found in the [Amazon API documentation](https://do
     <dd>{{% md %}}Option settings to configure the new Environment. These
 override specific values that are set as defaults. The format is detailed
 below in Option Settings
-{{% /md %}}</dd>
-    <dt class="property-optional"
+{{% /md %}}</dd><dt class="property-optional"
             title="Optional">
         <span id="state_solution_stack_name_python">
 <a href="#state_solution_stack_name_python" style="color: inherit; text-decoration: inherit;">solution_<wbr>stack_<wbr>name</a>
@@ -1030,8 +948,7 @@ below in Option Settings
     </dt>
     <dd>{{% md %}}A solution stack to base your Template
 off of. Example stacks can be found in the [Amazon API documentation](https://docs.aws.amazon.com/elasticbeanstalk/latest/dg/concepts.platforms.html)
-{{% /md %}}</dd>
-</dl>
+{{% /md %}}</dd></dl>
 {{% /choosable %}}
 
 
@@ -1046,9 +963,7 @@ off of. Example stacks can be found in the [Amazon API documentation](https://do
 <h4 id="configurationtemplatesetting">Configuration<wbr>Template<wbr>Setting</h4>
 
 {{% choosable language csharp %}}
-<dl class="resources-properties">
-
-    <dt class="property-required"
+<dl class="resources-properties"><dt class="property-required"
             title="Required">
         <span id="name_csharp">
 <a href="#name_csharp" style="color: inherit; text-decoration: inherit;">Name</a>
@@ -1057,8 +972,7 @@ off of. Example stacks can be found in the [Amazon API documentation](https://do
         <span class="property-type">string</span>
     </dt>
     <dd>{{% md %}}A unique name for this Template.
-{{% /md %}}</dd>
-    <dt class="property-required"
+{{% /md %}}</dd><dt class="property-required"
             title="Required">
         <span id="namespace_csharp">
 <a href="#namespace_csharp" style="color: inherit; text-decoration: inherit;">Namespace</a>
@@ -1066,8 +980,7 @@ off of. Example stacks can be found in the [Amazon API documentation](https://do
         <span class="property-indicator"></span>
         <span class="property-type">string</span>
     </dt>
-    <dd>{{% md %}}{{% /md %}}</dd>
-    <dt class="property-required"
+    <dd>{{% md %}}{{% /md %}}</dd><dt class="property-required"
             title="Required">
         <span id="value_csharp">
 <a href="#value_csharp" style="color: inherit; text-decoration: inherit;">Value</a>
@@ -1075,8 +988,7 @@ off of. Example stacks can be found in the [Amazon API documentation](https://do
         <span class="property-indicator"></span>
         <span class="property-type">string</span>
     </dt>
-    <dd>{{% md %}}{{% /md %}}</dd>
-    <dt class="property-optional"
+    <dd>{{% md %}}{{% /md %}}</dd><dt class="property-optional"
             title="Optional">
         <span id="resource_csharp">
 <a href="#resource_csharp" style="color: inherit; text-decoration: inherit;">Resource</a>
@@ -1084,14 +996,11 @@ off of. Example stacks can be found in the [Amazon API documentation](https://do
         <span class="property-indicator"></span>
         <span class="property-type">string</span>
     </dt>
-    <dd>{{% md %}}{{% /md %}}</dd>
-</dl>
+    <dd>{{% md %}}{{% /md %}}</dd></dl>
 {{% /choosable %}}
 
 {{% choosable language go %}}
-<dl class="resources-properties">
-
-    <dt class="property-required"
+<dl class="resources-properties"><dt class="property-required"
             title="Required">
         <span id="name_go">
 <a href="#name_go" style="color: inherit; text-decoration: inherit;">Name</a>
@@ -1100,8 +1009,7 @@ off of. Example stacks can be found in the [Amazon API documentation](https://do
         <span class="property-type">string</span>
     </dt>
     <dd>{{% md %}}A unique name for this Template.
-{{% /md %}}</dd>
-    <dt class="property-required"
+{{% /md %}}</dd><dt class="property-required"
             title="Required">
         <span id="namespace_go">
 <a href="#namespace_go" style="color: inherit; text-decoration: inherit;">Namespace</a>
@@ -1109,8 +1017,7 @@ off of. Example stacks can be found in the [Amazon API documentation](https://do
         <span class="property-indicator"></span>
         <span class="property-type">string</span>
     </dt>
-    <dd>{{% md %}}{{% /md %}}</dd>
-    <dt class="property-required"
+    <dd>{{% md %}}{{% /md %}}</dd><dt class="property-required"
             title="Required">
         <span id="value_go">
 <a href="#value_go" style="color: inherit; text-decoration: inherit;">Value</a>
@@ -1118,8 +1025,7 @@ off of. Example stacks can be found in the [Amazon API documentation](https://do
         <span class="property-indicator"></span>
         <span class="property-type">string</span>
     </dt>
-    <dd>{{% md %}}{{% /md %}}</dd>
-    <dt class="property-optional"
+    <dd>{{% md %}}{{% /md %}}</dd><dt class="property-optional"
             title="Optional">
         <span id="resource_go">
 <a href="#resource_go" style="color: inherit; text-decoration: inherit;">Resource</a>
@@ -1127,14 +1033,11 @@ off of. Example stacks can be found in the [Amazon API documentation](https://do
         <span class="property-indicator"></span>
         <span class="property-type">string</span>
     </dt>
-    <dd>{{% md %}}{{% /md %}}</dd>
-</dl>
+    <dd>{{% md %}}{{% /md %}}</dd></dl>
 {{% /choosable %}}
 
 {{% choosable language nodejs %}}
-<dl class="resources-properties">
-
-    <dt class="property-required"
+<dl class="resources-properties"><dt class="property-required"
             title="Required">
         <span id="name_nodejs">
 <a href="#name_nodejs" style="color: inherit; text-decoration: inherit;">name</a>
@@ -1143,8 +1046,7 @@ off of. Example stacks can be found in the [Amazon API documentation](https://do
         <span class="property-type">string</span>
     </dt>
     <dd>{{% md %}}A unique name for this Template.
-{{% /md %}}</dd>
-    <dt class="property-required"
+{{% /md %}}</dd><dt class="property-required"
             title="Required">
         <span id="namespace_nodejs">
 <a href="#namespace_nodejs" style="color: inherit; text-decoration: inherit;">namespace</a>
@@ -1152,8 +1054,7 @@ off of. Example stacks can be found in the [Amazon API documentation](https://do
         <span class="property-indicator"></span>
         <span class="property-type">string</span>
     </dt>
-    <dd>{{% md %}}{{% /md %}}</dd>
-    <dt class="property-required"
+    <dd>{{% md %}}{{% /md %}}</dd><dt class="property-required"
             title="Required">
         <span id="value_nodejs">
 <a href="#value_nodejs" style="color: inherit; text-decoration: inherit;">value</a>
@@ -1161,8 +1062,7 @@ off of. Example stacks can be found in the [Amazon API documentation](https://do
         <span class="property-indicator"></span>
         <span class="property-type">string</span>
     </dt>
-    <dd>{{% md %}}{{% /md %}}</dd>
-    <dt class="property-optional"
+    <dd>{{% md %}}{{% /md %}}</dd><dt class="property-optional"
             title="Optional">
         <span id="resource_nodejs">
 <a href="#resource_nodejs" style="color: inherit; text-decoration: inherit;">resource</a>
@@ -1170,14 +1070,11 @@ off of. Example stacks can be found in the [Amazon API documentation](https://do
         <span class="property-indicator"></span>
         <span class="property-type">string</span>
     </dt>
-    <dd>{{% md %}}{{% /md %}}</dd>
-</dl>
+    <dd>{{% md %}}{{% /md %}}</dd></dl>
 {{% /choosable %}}
 
 {{% choosable language python %}}
-<dl class="resources-properties">
-
-    <dt class="property-required"
+<dl class="resources-properties"><dt class="property-required"
             title="Required">
         <span id="name_python">
 <a href="#name_python" style="color: inherit; text-decoration: inherit;">name</a>
@@ -1186,8 +1083,7 @@ off of. Example stacks can be found in the [Amazon API documentation](https://do
         <span class="property-type">str</span>
     </dt>
     <dd>{{% md %}}A unique name for this Template.
-{{% /md %}}</dd>
-    <dt class="property-required"
+{{% /md %}}</dd><dt class="property-required"
             title="Required">
         <span id="namespace_python">
 <a href="#namespace_python" style="color: inherit; text-decoration: inherit;">namespace</a>
@@ -1195,8 +1091,7 @@ off of. Example stacks can be found in the [Amazon API documentation](https://do
         <span class="property-indicator"></span>
         <span class="property-type">str</span>
     </dt>
-    <dd>{{% md %}}{{% /md %}}</dd>
-    <dt class="property-required"
+    <dd>{{% md %}}{{% /md %}}</dd><dt class="property-required"
             title="Required">
         <span id="value_python">
 <a href="#value_python" style="color: inherit; text-decoration: inherit;">value</a>
@@ -1204,8 +1099,7 @@ off of. Example stacks can be found in the [Amazon API documentation](https://do
         <span class="property-indicator"></span>
         <span class="property-type">str</span>
     </dt>
-    <dd>{{% md %}}{{% /md %}}</dd>
-    <dt class="property-optional"
+    <dd>{{% md %}}{{% /md %}}</dd><dt class="property-optional"
             title="Optional">
         <span id="resource_python">
 <a href="#resource_python" style="color: inherit; text-decoration: inherit;">resource</a>
@@ -1213,8 +1107,7 @@ off of. Example stacks can be found in the [Amazon API documentation](https://do
         <span class="property-indicator"></span>
         <span class="property-type">str</span>
     </dt>
-    <dd>{{% md %}}{{% /md %}}</dd>
-</dl>
+    <dd>{{% md %}}{{% /md %}}</dd></dl>
 {{% /choosable %}}
 
 
@@ -1225,6 +1118,6 @@ off of. Example stacks can be found in the [Amazon API documentation](https://do
 	<dt>License</dt>
 	<dd>Apache-2.0</dd>
 	<dt>Notes</dt>
-	<dd>This Pulumi package is based on the [`aws` Terraform Provider](https://github.com/terraform-providers/terraform-provider-aws).</dd>
+	<dd>{{% md %}}This Pulumi package is based on the [`aws` Terraform Provider](https://github.com/terraform-providers/terraform-provider-aws).{{% /md %}}</dd>
 </dl>
 

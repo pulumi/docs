@@ -14,11 +14,17 @@ Description of queue Resource.
 API Version: 2017-04-01.
 
 {{% examples %}}
+
 ## Example Usage
 
 {{< chooser language "typescript,python,go,csharp" / >}}
+
+
 ### QueueCreate
-{{% example csharp %}}
+
+
+{{< example csharp >}}
+
 ```csharp
 using Pulumi;
 using AzureNative = Pulumi.AzureNative;
@@ -40,9 +46,12 @@ class MyStack : Stack
 
 ```
 
-{{% /example %}}
 
-{{% example go %}}
+{{< /example >}}
+
+
+{{< example go >}}
+
 
 ```go
 package main
@@ -69,9 +78,12 @@ func main() {
 
 ```
 
-{{% /example %}}
 
-{{% example python %}}
+{{< /example >}}
+
+
+{{< example python >}}
+
 
 ```python
 import pulumi
@@ -85,9 +97,12 @@ queue = azure_native.servicebus.Queue("queue",
 
 ```
 
-{{% /example %}}
 
-{{% example typescript %}}
+{{< /example >}}
+
+
+{{< example typescript >}}
+
 
 ```typescript
 import * as pulumi from "@pulumi/pulumi";
@@ -102,9 +117,16 @@ const queue = new azure_native.servicebus.Queue("queue", {
 
 ```
 
-{{% /example %}}
+
+{{< /example >}}
+
+
+
+
 
 {{% /examples %}}
+
+
 
 
 ## Create a Queue Resource {#create}
@@ -129,9 +151,7 @@ const queue = new azure_native.servicebus.Queue("queue", {
 
 {{% choosable language nodejs %}}
 
-<dl class="resources-properties">
-  
-    <dt
+<dl class="resources-properties"><dt
         class="property-required" title="Required">
         <span>name</span>
         <span class="property-indicator"></span>
@@ -139,9 +159,7 @@ const queue = new azure_native.servicebus.Queue("queue", {
     </dt>
     <dd>
       The unique name of the resource.
-    </dd>
-  
-    <dt
+    </dd><dt
         class="property-required" title="Required">
         <span>args</span>
         <span class="property-indicator"></span>
@@ -149,9 +167,7 @@ const queue = new azure_native.servicebus.Queue("queue", {
     </dt>
     <dd>
       The arguments to resource properties.
-    </dd>
-  
-    <dt
+    </dd><dt
         class="property-optional" title="Optional">
         <span>opts</span>
         <span class="property-indicator"></span>
@@ -159,10 +175,7 @@ const queue = new azure_native.servicebus.Queue("queue", {
     </dt>
     <dd>
       Bag of options to control resource&#39;s behavior.
-    </dd>
-  
-
-</dl>
+    </dd></dl>
 
 {{% /choosable %}}
 
@@ -188,9 +201,7 @@ const queue = new azure_native.servicebus.Queue("queue", {
 
 {{% choosable language go %}}
 
-<dl class="resources-properties">
-  
-    <dt
+<dl class="resources-properties"><dt
         class="property-optional" title="Optional">
         <span>ctx</span>
         <span class="property-indicator"></span>
@@ -198,9 +209,7 @@ const queue = new azure_native.servicebus.Queue("queue", {
     </dt>
     <dd>
       Context object for the current deployment.
-    </dd>
-  
-    <dt
+    </dd><dt
         class="property-required" title="Required">
         <span>name</span>
         <span class="property-indicator"></span>
@@ -208,9 +217,7 @@ const queue = new azure_native.servicebus.Queue("queue", {
     </dt>
     <dd>
       The unique name of the resource.
-    </dd>
-  
-    <dt
+    </dd><dt
         class="property-required" title="Required">
         <span>args</span>
         <span class="property-indicator"></span>
@@ -218,9 +225,7 @@ const queue = new azure_native.servicebus.Queue("queue", {
     </dt>
     <dd>
       The arguments to resource properties.
-    </dd>
-  
-    <dt
+    </dd><dt
         class="property-optional" title="Optional">
         <span>opts</span>
         <span class="property-indicator"></span>
@@ -228,18 +233,13 @@ const queue = new azure_native.servicebus.Queue("queue", {
     </dt>
     <dd>
       Bag of options to control resource&#39;s behavior.
-    </dd>
-  
-
-</dl>
+    </dd></dl>
 
 {{% /choosable %}}
 
 {{% choosable language csharp %}}
 
-<dl class="resources-properties">
-  
-    <dt
+<dl class="resources-properties"><dt
         class="property-required" title="Required">
         <span>name</span>
         <span class="property-indicator"></span>
@@ -247,9 +247,7 @@ const queue = new azure_native.servicebus.Queue("queue", {
     </dt>
     <dd>
       The unique name of the resource.
-    </dd>
-  
-    <dt
+    </dd><dt
         class="property-required" title="Required">
         <span>args</span>
         <span class="property-indicator"></span>
@@ -257,9 +255,7 @@ const queue = new azure_native.servicebus.Queue("queue", {
     </dt>
     <dd>
       The arguments to resource properties.
-    </dd>
-  
-    <dt
+    </dd><dt
         class="property-optional" title="Optional">
         <span>opts</span>
         <span class="property-indicator"></span>
@@ -267,10 +263,7 @@ const queue = new azure_native.servicebus.Queue("queue", {
     </dt>
     <dd>
       Bag of options to control resource&#39;s behavior.
-    </dd>
-  
-
-</dl>
+    </dd></dl>
 
 {{% /choosable %}}
 
@@ -285,9 +278,7 @@ The Queue resource accepts the following [input]({{< relref "/docs/intro/concept
 
 
 {{% choosable language csharp %}}
-<dl class="resources-properties">
-
-    <dt class="property-required"
+<dl class="resources-properties"><dt class="property-required"
             title="Required">
         <span id="namespacename_csharp">
 <a href="#namespacename_csharp" style="color: inherit; text-decoration: inherit;">Namespace<wbr>Name</a>
@@ -295,8 +286,7 @@ The Queue resource accepts the following [input]({{< relref "/docs/intro/concept
         <span class="property-indicator"></span>
         <span class="property-type">string</span>
     </dt>
-    <dd>{{% md %}}The namespace name{{% /md %}}</dd>
-    <dt class="property-required"
+    <dd>{{% md %}}The namespace name{{% /md %}}</dd><dt class="property-required"
             title="Required">
         <span id="resourcegroupname_csharp">
 <a href="#resourcegroupname_csharp" style="color: inherit; text-decoration: inherit;">Resource<wbr>Group<wbr>Name</a>
@@ -304,8 +294,7 @@ The Queue resource accepts the following [input]({{< relref "/docs/intro/concept
         <span class="property-indicator"></span>
         <span class="property-type">string</span>
     </dt>
-    <dd>{{% md %}}Name of the Resource group within the Azure subscription.{{% /md %}}</dd>
-    <dt class="property-optional"
+    <dd>{{% md %}}Name of the Resource group within the Azure subscription.{{% /md %}}</dd><dt class="property-optional"
             title="Optional">
         <span id="autodeleteonidle_csharp">
 <a href="#autodeleteonidle_csharp" style="color: inherit; text-decoration: inherit;">Auto<wbr>Delete<wbr>On<wbr>Idle</a>
@@ -313,8 +302,7 @@ The Queue resource accepts the following [input]({{< relref "/docs/intro/concept
         <span class="property-indicator"></span>
         <span class="property-type">string</span>
     </dt>
-    <dd>{{% md %}}ISO 8061 timeSpan idle interval after which the queue is automatically deleted. The minimum duration is 5 minutes.{{% /md %}}</dd>
-    <dt class="property-optional"
+    <dd>{{% md %}}ISO 8061 timeSpan idle interval after which the queue is automatically deleted. The minimum duration is 5 minutes.{{% /md %}}</dd><dt class="property-optional"
             title="Optional">
         <span id="deadletteringonmessageexpiration_csharp">
 <a href="#deadletteringonmessageexpiration_csharp" style="color: inherit; text-decoration: inherit;">Dead<wbr>Lettering<wbr>On<wbr>Message<wbr>Expiration</a>
@@ -322,8 +310,7 @@ The Queue resource accepts the following [input]({{< relref "/docs/intro/concept
         <span class="property-indicator"></span>
         <span class="property-type">bool</span>
     </dt>
-    <dd>{{% md %}}A value that indicates whether this queue has dead letter support when a message expires.{{% /md %}}</dd>
-    <dt class="property-optional"
+    <dd>{{% md %}}A value that indicates whether this queue has dead letter support when a message expires.{{% /md %}}</dd><dt class="property-optional"
             title="Optional">
         <span id="defaultmessagetimetolive_csharp">
 <a href="#defaultmessagetimetolive_csharp" style="color: inherit; text-decoration: inherit;">Default<wbr>Message<wbr>Time<wbr>To<wbr>Live</a>
@@ -331,8 +318,7 @@ The Queue resource accepts the following [input]({{< relref "/docs/intro/concept
         <span class="property-indicator"></span>
         <span class="property-type">string</span>
     </dt>
-    <dd>{{% md %}}ISO 8601 default message timespan to live value. This is the duration after which the message expires, starting from when the message is sent to Service Bus. This is the default value used when TimeToLive is not set on a message itself.{{% /md %}}</dd>
-    <dt class="property-optional"
+    <dd>{{% md %}}ISO 8601 default message timespan to live value. This is the duration after which the message expires, starting from when the message is sent to Service Bus. This is the default value used when TimeToLive is not set on a message itself.{{% /md %}}</dd><dt class="property-optional"
             title="Optional">
         <span id="duplicatedetectionhistorytimewindow_csharp">
 <a href="#duplicatedetectionhistorytimewindow_csharp" style="color: inherit; text-decoration: inherit;">Duplicate<wbr>Detection<wbr>History<wbr>Time<wbr>Window</a>
@@ -340,8 +326,7 @@ The Queue resource accepts the following [input]({{< relref "/docs/intro/concept
         <span class="property-indicator"></span>
         <span class="property-type">string</span>
     </dt>
-    <dd>{{% md %}}ISO 8601 timeSpan structure that defines the duration of the duplicate detection history. The default value is 10 minutes.{{% /md %}}</dd>
-    <dt class="property-optional"
+    <dd>{{% md %}}ISO 8601 timeSpan structure that defines the duration of the duplicate detection history. The default value is 10 minutes.{{% /md %}}</dd><dt class="property-optional"
             title="Optional">
         <span id="enablebatchedoperations_csharp">
 <a href="#enablebatchedoperations_csharp" style="color: inherit; text-decoration: inherit;">Enable<wbr>Batched<wbr>Operations</a>
@@ -349,8 +334,7 @@ The Queue resource accepts the following [input]({{< relref "/docs/intro/concept
         <span class="property-indicator"></span>
         <span class="property-type">bool</span>
     </dt>
-    <dd>{{% md %}}Value that indicates whether server-side batched operations are enabled.{{% /md %}}</dd>
-    <dt class="property-optional"
+    <dd>{{% md %}}Value that indicates whether server-side batched operations are enabled.{{% /md %}}</dd><dt class="property-optional"
             title="Optional">
         <span id="enableexpress_csharp">
 <a href="#enableexpress_csharp" style="color: inherit; text-decoration: inherit;">Enable<wbr>Express</a>
@@ -358,8 +342,7 @@ The Queue resource accepts the following [input]({{< relref "/docs/intro/concept
         <span class="property-indicator"></span>
         <span class="property-type">bool</span>
     </dt>
-    <dd>{{% md %}}A value that indicates whether Express Entities are enabled. An express queue holds a message in memory temporarily before writing it to persistent storage.{{% /md %}}</dd>
-    <dt class="property-optional"
+    <dd>{{% md %}}A value that indicates whether Express Entities are enabled. An express queue holds a message in memory temporarily before writing it to persistent storage.{{% /md %}}</dd><dt class="property-optional"
             title="Optional">
         <span id="enablepartitioning_csharp">
 <a href="#enablepartitioning_csharp" style="color: inherit; text-decoration: inherit;">Enable<wbr>Partitioning</a>
@@ -367,8 +350,7 @@ The Queue resource accepts the following [input]({{< relref "/docs/intro/concept
         <span class="property-indicator"></span>
         <span class="property-type">bool</span>
     </dt>
-    <dd>{{% md %}}A value that indicates whether the queue is to be partitioned across multiple message brokers.{{% /md %}}</dd>
-    <dt class="property-optional"
+    <dd>{{% md %}}A value that indicates whether the queue is to be partitioned across multiple message brokers.{{% /md %}}</dd><dt class="property-optional"
             title="Optional">
         <span id="forwarddeadletteredmessagesto_csharp">
 <a href="#forwarddeadletteredmessagesto_csharp" style="color: inherit; text-decoration: inherit;">Forward<wbr>Dead<wbr>Lettered<wbr>Messages<wbr>To</a>
@@ -376,8 +358,7 @@ The Queue resource accepts the following [input]({{< relref "/docs/intro/concept
         <span class="property-indicator"></span>
         <span class="property-type">string</span>
     </dt>
-    <dd>{{% md %}}Queue/Topic name to forward the Dead Letter message{{% /md %}}</dd>
-    <dt class="property-optional"
+    <dd>{{% md %}}Queue/Topic name to forward the Dead Letter message{{% /md %}}</dd><dt class="property-optional"
             title="Optional">
         <span id="forwardto_csharp">
 <a href="#forwardto_csharp" style="color: inherit; text-decoration: inherit;">Forward<wbr>To</a>
@@ -385,8 +366,7 @@ The Queue resource accepts the following [input]({{< relref "/docs/intro/concept
         <span class="property-indicator"></span>
         <span class="property-type">string</span>
     </dt>
-    <dd>{{% md %}}Queue/Topic name to forward the messages{{% /md %}}</dd>
-    <dt class="property-optional"
+    <dd>{{% md %}}Queue/Topic name to forward the messages{{% /md %}}</dd><dt class="property-optional"
             title="Optional">
         <span id="lockduration_csharp">
 <a href="#lockduration_csharp" style="color: inherit; text-decoration: inherit;">Lock<wbr>Duration</a>
@@ -394,8 +374,7 @@ The Queue resource accepts the following [input]({{< relref "/docs/intro/concept
         <span class="property-indicator"></span>
         <span class="property-type">string</span>
     </dt>
-    <dd>{{% md %}}ISO 8601 timespan duration of a peek-lock; that is, the amount of time that the message is locked for other receivers. The maximum value for LockDuration is 5 minutes; the default value is 1 minute.{{% /md %}}</dd>
-    <dt class="property-optional"
+    <dd>{{% md %}}ISO 8601 timespan duration of a peek-lock; that is, the amount of time that the message is locked for other receivers. The maximum value for LockDuration is 5 minutes; the default value is 1 minute.{{% /md %}}</dd><dt class="property-optional"
             title="Optional">
         <span id="maxdeliverycount_csharp">
 <a href="#maxdeliverycount_csharp" style="color: inherit; text-decoration: inherit;">Max<wbr>Delivery<wbr>Count</a>
@@ -403,8 +382,7 @@ The Queue resource accepts the following [input]({{< relref "/docs/intro/concept
         <span class="property-indicator"></span>
         <span class="property-type">int</span>
     </dt>
-    <dd>{{% md %}}The maximum delivery count. A message is automatically deadlettered after this number of deliveries. default value is 10.{{% /md %}}</dd>
-    <dt class="property-optional"
+    <dd>{{% md %}}The maximum delivery count. A message is automatically deadlettered after this number of deliveries. default value is 10.{{% /md %}}</dd><dt class="property-optional"
             title="Optional">
         <span id="maxsizeinmegabytes_csharp">
 <a href="#maxsizeinmegabytes_csharp" style="color: inherit; text-decoration: inherit;">Max<wbr>Size<wbr>In<wbr>Megabytes</a>
@@ -412,8 +390,7 @@ The Queue resource accepts the following [input]({{< relref "/docs/intro/concept
         <span class="property-indicator"></span>
         <span class="property-type">int</span>
     </dt>
-    <dd>{{% md %}}The maximum size of the queue in megabytes, which is the size of memory allocated for the queue. Default is 1024.{{% /md %}}</dd>
-    <dt class="property-optional"
+    <dd>{{% md %}}The maximum size of the queue in megabytes, which is the size of memory allocated for the queue. Default is 1024.{{% /md %}}</dd><dt class="property-optional"
             title="Optional">
         <span id="queuename_csharp">
 <a href="#queuename_csharp" style="color: inherit; text-decoration: inherit;">Queue<wbr>Name</a>
@@ -421,8 +398,7 @@ The Queue resource accepts the following [input]({{< relref "/docs/intro/concept
         <span class="property-indicator"></span>
         <span class="property-type">string</span>
     </dt>
-    <dd>{{% md %}}The queue name.{{% /md %}}</dd>
-    <dt class="property-optional"
+    <dd>{{% md %}}The queue name.{{% /md %}}</dd><dt class="property-optional"
             title="Optional">
         <span id="requiresduplicatedetection_csharp">
 <a href="#requiresduplicatedetection_csharp" style="color: inherit; text-decoration: inherit;">Requires<wbr>Duplicate<wbr>Detection</a>
@@ -430,8 +406,7 @@ The Queue resource accepts the following [input]({{< relref "/docs/intro/concept
         <span class="property-indicator"></span>
         <span class="property-type">bool</span>
     </dt>
-    <dd>{{% md %}}A value indicating if this queue requires duplicate detection.{{% /md %}}</dd>
-    <dt class="property-optional"
+    <dd>{{% md %}}A value indicating if this queue requires duplicate detection.{{% /md %}}</dd><dt class="property-optional"
             title="Optional">
         <span id="requiressession_csharp">
 <a href="#requiressession_csharp" style="color: inherit; text-decoration: inherit;">Requires<wbr>Session</a>
@@ -439,8 +414,7 @@ The Queue resource accepts the following [input]({{< relref "/docs/intro/concept
         <span class="property-indicator"></span>
         <span class="property-type">bool</span>
     </dt>
-    <dd>{{% md %}}A value that indicates whether the queue supports the concept of sessions.{{% /md %}}</dd>
-    <dt class="property-optional"
+    <dd>{{% md %}}A value that indicates whether the queue supports the concept of sessions.{{% /md %}}</dd><dt class="property-optional"
             title="Optional">
         <span id="status_csharp">
 <a href="#status_csharp" style="color: inherit; text-decoration: inherit;">Status</a>
@@ -448,14 +422,11 @@ The Queue resource accepts the following [input]({{< relref "/docs/intro/concept
         <span class="property-indicator"></span>
         <span class="property-type"><a href="#entitystatus">Pulumi.<wbr>Azure<wbr>Native.<wbr>Service<wbr>Bus.<wbr>Entity<wbr>Status</a></span>
     </dt>
-    <dd>{{% md %}}Enumerates the possible values for the status of a messaging entity.{{% /md %}}</dd>
-</dl>
+    <dd>{{% md %}}Enumerates the possible values for the status of a messaging entity.{{% /md %}}</dd></dl>
 {{% /choosable %}}
 
 {{% choosable language go %}}
-<dl class="resources-properties">
-
-    <dt class="property-required"
+<dl class="resources-properties"><dt class="property-required"
             title="Required">
         <span id="namespacename_go">
 <a href="#namespacename_go" style="color: inherit; text-decoration: inherit;">Namespace<wbr>Name</a>
@@ -463,8 +434,7 @@ The Queue resource accepts the following [input]({{< relref "/docs/intro/concept
         <span class="property-indicator"></span>
         <span class="property-type">string</span>
     </dt>
-    <dd>{{% md %}}The namespace name{{% /md %}}</dd>
-    <dt class="property-required"
+    <dd>{{% md %}}The namespace name{{% /md %}}</dd><dt class="property-required"
             title="Required">
         <span id="resourcegroupname_go">
 <a href="#resourcegroupname_go" style="color: inherit; text-decoration: inherit;">Resource<wbr>Group<wbr>Name</a>
@@ -472,8 +442,7 @@ The Queue resource accepts the following [input]({{< relref "/docs/intro/concept
         <span class="property-indicator"></span>
         <span class="property-type">string</span>
     </dt>
-    <dd>{{% md %}}Name of the Resource group within the Azure subscription.{{% /md %}}</dd>
-    <dt class="property-optional"
+    <dd>{{% md %}}Name of the Resource group within the Azure subscription.{{% /md %}}</dd><dt class="property-optional"
             title="Optional">
         <span id="autodeleteonidle_go">
 <a href="#autodeleteonidle_go" style="color: inherit; text-decoration: inherit;">Auto<wbr>Delete<wbr>On<wbr>Idle</a>
@@ -481,8 +450,7 @@ The Queue resource accepts the following [input]({{< relref "/docs/intro/concept
         <span class="property-indicator"></span>
         <span class="property-type">string</span>
     </dt>
-    <dd>{{% md %}}ISO 8061 timeSpan idle interval after which the queue is automatically deleted. The minimum duration is 5 minutes.{{% /md %}}</dd>
-    <dt class="property-optional"
+    <dd>{{% md %}}ISO 8061 timeSpan idle interval after which the queue is automatically deleted. The minimum duration is 5 minutes.{{% /md %}}</dd><dt class="property-optional"
             title="Optional">
         <span id="deadletteringonmessageexpiration_go">
 <a href="#deadletteringonmessageexpiration_go" style="color: inherit; text-decoration: inherit;">Dead<wbr>Lettering<wbr>On<wbr>Message<wbr>Expiration</a>
@@ -490,8 +458,7 @@ The Queue resource accepts the following [input]({{< relref "/docs/intro/concept
         <span class="property-indicator"></span>
         <span class="property-type">bool</span>
     </dt>
-    <dd>{{% md %}}A value that indicates whether this queue has dead letter support when a message expires.{{% /md %}}</dd>
-    <dt class="property-optional"
+    <dd>{{% md %}}A value that indicates whether this queue has dead letter support when a message expires.{{% /md %}}</dd><dt class="property-optional"
             title="Optional">
         <span id="defaultmessagetimetolive_go">
 <a href="#defaultmessagetimetolive_go" style="color: inherit; text-decoration: inherit;">Default<wbr>Message<wbr>Time<wbr>To<wbr>Live</a>
@@ -499,8 +466,7 @@ The Queue resource accepts the following [input]({{< relref "/docs/intro/concept
         <span class="property-indicator"></span>
         <span class="property-type">string</span>
     </dt>
-    <dd>{{% md %}}ISO 8601 default message timespan to live value. This is the duration after which the message expires, starting from when the message is sent to Service Bus. This is the default value used when TimeToLive is not set on a message itself.{{% /md %}}</dd>
-    <dt class="property-optional"
+    <dd>{{% md %}}ISO 8601 default message timespan to live value. This is the duration after which the message expires, starting from when the message is sent to Service Bus. This is the default value used when TimeToLive is not set on a message itself.{{% /md %}}</dd><dt class="property-optional"
             title="Optional">
         <span id="duplicatedetectionhistorytimewindow_go">
 <a href="#duplicatedetectionhistorytimewindow_go" style="color: inherit; text-decoration: inherit;">Duplicate<wbr>Detection<wbr>History<wbr>Time<wbr>Window</a>
@@ -508,8 +474,7 @@ The Queue resource accepts the following [input]({{< relref "/docs/intro/concept
         <span class="property-indicator"></span>
         <span class="property-type">string</span>
     </dt>
-    <dd>{{% md %}}ISO 8601 timeSpan structure that defines the duration of the duplicate detection history. The default value is 10 minutes.{{% /md %}}</dd>
-    <dt class="property-optional"
+    <dd>{{% md %}}ISO 8601 timeSpan structure that defines the duration of the duplicate detection history. The default value is 10 minutes.{{% /md %}}</dd><dt class="property-optional"
             title="Optional">
         <span id="enablebatchedoperations_go">
 <a href="#enablebatchedoperations_go" style="color: inherit; text-decoration: inherit;">Enable<wbr>Batched<wbr>Operations</a>
@@ -517,8 +482,7 @@ The Queue resource accepts the following [input]({{< relref "/docs/intro/concept
         <span class="property-indicator"></span>
         <span class="property-type">bool</span>
     </dt>
-    <dd>{{% md %}}Value that indicates whether server-side batched operations are enabled.{{% /md %}}</dd>
-    <dt class="property-optional"
+    <dd>{{% md %}}Value that indicates whether server-side batched operations are enabled.{{% /md %}}</dd><dt class="property-optional"
             title="Optional">
         <span id="enableexpress_go">
 <a href="#enableexpress_go" style="color: inherit; text-decoration: inherit;">Enable<wbr>Express</a>
@@ -526,8 +490,7 @@ The Queue resource accepts the following [input]({{< relref "/docs/intro/concept
         <span class="property-indicator"></span>
         <span class="property-type">bool</span>
     </dt>
-    <dd>{{% md %}}A value that indicates whether Express Entities are enabled. An express queue holds a message in memory temporarily before writing it to persistent storage.{{% /md %}}</dd>
-    <dt class="property-optional"
+    <dd>{{% md %}}A value that indicates whether Express Entities are enabled. An express queue holds a message in memory temporarily before writing it to persistent storage.{{% /md %}}</dd><dt class="property-optional"
             title="Optional">
         <span id="enablepartitioning_go">
 <a href="#enablepartitioning_go" style="color: inherit; text-decoration: inherit;">Enable<wbr>Partitioning</a>
@@ -535,8 +498,7 @@ The Queue resource accepts the following [input]({{< relref "/docs/intro/concept
         <span class="property-indicator"></span>
         <span class="property-type">bool</span>
     </dt>
-    <dd>{{% md %}}A value that indicates whether the queue is to be partitioned across multiple message brokers.{{% /md %}}</dd>
-    <dt class="property-optional"
+    <dd>{{% md %}}A value that indicates whether the queue is to be partitioned across multiple message brokers.{{% /md %}}</dd><dt class="property-optional"
             title="Optional">
         <span id="forwarddeadletteredmessagesto_go">
 <a href="#forwarddeadletteredmessagesto_go" style="color: inherit; text-decoration: inherit;">Forward<wbr>Dead<wbr>Lettered<wbr>Messages<wbr>To</a>
@@ -544,8 +506,7 @@ The Queue resource accepts the following [input]({{< relref "/docs/intro/concept
         <span class="property-indicator"></span>
         <span class="property-type">string</span>
     </dt>
-    <dd>{{% md %}}Queue/Topic name to forward the Dead Letter message{{% /md %}}</dd>
-    <dt class="property-optional"
+    <dd>{{% md %}}Queue/Topic name to forward the Dead Letter message{{% /md %}}</dd><dt class="property-optional"
             title="Optional">
         <span id="forwardto_go">
 <a href="#forwardto_go" style="color: inherit; text-decoration: inherit;">Forward<wbr>To</a>
@@ -553,8 +514,7 @@ The Queue resource accepts the following [input]({{< relref "/docs/intro/concept
         <span class="property-indicator"></span>
         <span class="property-type">string</span>
     </dt>
-    <dd>{{% md %}}Queue/Topic name to forward the messages{{% /md %}}</dd>
-    <dt class="property-optional"
+    <dd>{{% md %}}Queue/Topic name to forward the messages{{% /md %}}</dd><dt class="property-optional"
             title="Optional">
         <span id="lockduration_go">
 <a href="#lockduration_go" style="color: inherit; text-decoration: inherit;">Lock<wbr>Duration</a>
@@ -562,8 +522,7 @@ The Queue resource accepts the following [input]({{< relref "/docs/intro/concept
         <span class="property-indicator"></span>
         <span class="property-type">string</span>
     </dt>
-    <dd>{{% md %}}ISO 8601 timespan duration of a peek-lock; that is, the amount of time that the message is locked for other receivers. The maximum value for LockDuration is 5 minutes; the default value is 1 minute.{{% /md %}}</dd>
-    <dt class="property-optional"
+    <dd>{{% md %}}ISO 8601 timespan duration of a peek-lock; that is, the amount of time that the message is locked for other receivers. The maximum value for LockDuration is 5 minutes; the default value is 1 minute.{{% /md %}}</dd><dt class="property-optional"
             title="Optional">
         <span id="maxdeliverycount_go">
 <a href="#maxdeliverycount_go" style="color: inherit; text-decoration: inherit;">Max<wbr>Delivery<wbr>Count</a>
@@ -571,8 +530,7 @@ The Queue resource accepts the following [input]({{< relref "/docs/intro/concept
         <span class="property-indicator"></span>
         <span class="property-type">int</span>
     </dt>
-    <dd>{{% md %}}The maximum delivery count. A message is automatically deadlettered after this number of deliveries. default value is 10.{{% /md %}}</dd>
-    <dt class="property-optional"
+    <dd>{{% md %}}The maximum delivery count. A message is automatically deadlettered after this number of deliveries. default value is 10.{{% /md %}}</dd><dt class="property-optional"
             title="Optional">
         <span id="maxsizeinmegabytes_go">
 <a href="#maxsizeinmegabytes_go" style="color: inherit; text-decoration: inherit;">Max<wbr>Size<wbr>In<wbr>Megabytes</a>
@@ -580,8 +538,7 @@ The Queue resource accepts the following [input]({{< relref "/docs/intro/concept
         <span class="property-indicator"></span>
         <span class="property-type">int</span>
     </dt>
-    <dd>{{% md %}}The maximum size of the queue in megabytes, which is the size of memory allocated for the queue. Default is 1024.{{% /md %}}</dd>
-    <dt class="property-optional"
+    <dd>{{% md %}}The maximum size of the queue in megabytes, which is the size of memory allocated for the queue. Default is 1024.{{% /md %}}</dd><dt class="property-optional"
             title="Optional">
         <span id="queuename_go">
 <a href="#queuename_go" style="color: inherit; text-decoration: inherit;">Queue<wbr>Name</a>
@@ -589,8 +546,7 @@ The Queue resource accepts the following [input]({{< relref "/docs/intro/concept
         <span class="property-indicator"></span>
         <span class="property-type">string</span>
     </dt>
-    <dd>{{% md %}}The queue name.{{% /md %}}</dd>
-    <dt class="property-optional"
+    <dd>{{% md %}}The queue name.{{% /md %}}</dd><dt class="property-optional"
             title="Optional">
         <span id="requiresduplicatedetection_go">
 <a href="#requiresduplicatedetection_go" style="color: inherit; text-decoration: inherit;">Requires<wbr>Duplicate<wbr>Detection</a>
@@ -598,8 +554,7 @@ The Queue resource accepts the following [input]({{< relref "/docs/intro/concept
         <span class="property-indicator"></span>
         <span class="property-type">bool</span>
     </dt>
-    <dd>{{% md %}}A value indicating if this queue requires duplicate detection.{{% /md %}}</dd>
-    <dt class="property-optional"
+    <dd>{{% md %}}A value indicating if this queue requires duplicate detection.{{% /md %}}</dd><dt class="property-optional"
             title="Optional">
         <span id="requiressession_go">
 <a href="#requiressession_go" style="color: inherit; text-decoration: inherit;">Requires<wbr>Session</a>
@@ -607,8 +562,7 @@ The Queue resource accepts the following [input]({{< relref "/docs/intro/concept
         <span class="property-indicator"></span>
         <span class="property-type">bool</span>
     </dt>
-    <dd>{{% md %}}A value that indicates whether the queue supports the concept of sessions.{{% /md %}}</dd>
-    <dt class="property-optional"
+    <dd>{{% md %}}A value that indicates whether the queue supports the concept of sessions.{{% /md %}}</dd><dt class="property-optional"
             title="Optional">
         <span id="status_go">
 <a href="#status_go" style="color: inherit; text-decoration: inherit;">Status</a>
@@ -616,14 +570,11 @@ The Queue resource accepts the following [input]({{< relref "/docs/intro/concept
         <span class="property-indicator"></span>
         <span class="property-type"><a href="#entitystatus">Entity<wbr>Status</a></span>
     </dt>
-    <dd>{{% md %}}Enumerates the possible values for the status of a messaging entity.{{% /md %}}</dd>
-</dl>
+    <dd>{{% md %}}Enumerates the possible values for the status of a messaging entity.{{% /md %}}</dd></dl>
 {{% /choosable %}}
 
 {{% choosable language nodejs %}}
-<dl class="resources-properties">
-
-    <dt class="property-required"
+<dl class="resources-properties"><dt class="property-required"
             title="Required">
         <span id="namespacename_nodejs">
 <a href="#namespacename_nodejs" style="color: inherit; text-decoration: inherit;">namespace<wbr>Name</a>
@@ -631,8 +582,7 @@ The Queue resource accepts the following [input]({{< relref "/docs/intro/concept
         <span class="property-indicator"></span>
         <span class="property-type">string</span>
     </dt>
-    <dd>{{% md %}}The namespace name{{% /md %}}</dd>
-    <dt class="property-required"
+    <dd>{{% md %}}The namespace name{{% /md %}}</dd><dt class="property-required"
             title="Required">
         <span id="resourcegroupname_nodejs">
 <a href="#resourcegroupname_nodejs" style="color: inherit; text-decoration: inherit;">resource<wbr>Group<wbr>Name</a>
@@ -640,8 +590,7 @@ The Queue resource accepts the following [input]({{< relref "/docs/intro/concept
         <span class="property-indicator"></span>
         <span class="property-type">string</span>
     </dt>
-    <dd>{{% md %}}Name of the Resource group within the Azure subscription.{{% /md %}}</dd>
-    <dt class="property-optional"
+    <dd>{{% md %}}Name of the Resource group within the Azure subscription.{{% /md %}}</dd><dt class="property-optional"
             title="Optional">
         <span id="autodeleteonidle_nodejs">
 <a href="#autodeleteonidle_nodejs" style="color: inherit; text-decoration: inherit;">auto<wbr>Delete<wbr>On<wbr>Idle</a>
@@ -649,8 +598,7 @@ The Queue resource accepts the following [input]({{< relref "/docs/intro/concept
         <span class="property-indicator"></span>
         <span class="property-type">string</span>
     </dt>
-    <dd>{{% md %}}ISO 8061 timeSpan idle interval after which the queue is automatically deleted. The minimum duration is 5 minutes.{{% /md %}}</dd>
-    <dt class="property-optional"
+    <dd>{{% md %}}ISO 8061 timeSpan idle interval after which the queue is automatically deleted. The minimum duration is 5 minutes.{{% /md %}}</dd><dt class="property-optional"
             title="Optional">
         <span id="deadletteringonmessageexpiration_nodejs">
 <a href="#deadletteringonmessageexpiration_nodejs" style="color: inherit; text-decoration: inherit;">dead<wbr>Lettering<wbr>On<wbr>Message<wbr>Expiration</a>
@@ -658,8 +606,7 @@ The Queue resource accepts the following [input]({{< relref "/docs/intro/concept
         <span class="property-indicator"></span>
         <span class="property-type">boolean</span>
     </dt>
-    <dd>{{% md %}}A value that indicates whether this queue has dead letter support when a message expires.{{% /md %}}</dd>
-    <dt class="property-optional"
+    <dd>{{% md %}}A value that indicates whether this queue has dead letter support when a message expires.{{% /md %}}</dd><dt class="property-optional"
             title="Optional">
         <span id="defaultmessagetimetolive_nodejs">
 <a href="#defaultmessagetimetolive_nodejs" style="color: inherit; text-decoration: inherit;">default<wbr>Message<wbr>Time<wbr>To<wbr>Live</a>
@@ -667,8 +614,7 @@ The Queue resource accepts the following [input]({{< relref "/docs/intro/concept
         <span class="property-indicator"></span>
         <span class="property-type">string</span>
     </dt>
-    <dd>{{% md %}}ISO 8601 default message timespan to live value. This is the duration after which the message expires, starting from when the message is sent to Service Bus. This is the default value used when TimeToLive is not set on a message itself.{{% /md %}}</dd>
-    <dt class="property-optional"
+    <dd>{{% md %}}ISO 8601 default message timespan to live value. This is the duration after which the message expires, starting from when the message is sent to Service Bus. This is the default value used when TimeToLive is not set on a message itself.{{% /md %}}</dd><dt class="property-optional"
             title="Optional">
         <span id="duplicatedetectionhistorytimewindow_nodejs">
 <a href="#duplicatedetectionhistorytimewindow_nodejs" style="color: inherit; text-decoration: inherit;">duplicate<wbr>Detection<wbr>History<wbr>Time<wbr>Window</a>
@@ -676,8 +622,7 @@ The Queue resource accepts the following [input]({{< relref "/docs/intro/concept
         <span class="property-indicator"></span>
         <span class="property-type">string</span>
     </dt>
-    <dd>{{% md %}}ISO 8601 timeSpan structure that defines the duration of the duplicate detection history. The default value is 10 minutes.{{% /md %}}</dd>
-    <dt class="property-optional"
+    <dd>{{% md %}}ISO 8601 timeSpan structure that defines the duration of the duplicate detection history. The default value is 10 minutes.{{% /md %}}</dd><dt class="property-optional"
             title="Optional">
         <span id="enablebatchedoperations_nodejs">
 <a href="#enablebatchedoperations_nodejs" style="color: inherit; text-decoration: inherit;">enable<wbr>Batched<wbr>Operations</a>
@@ -685,8 +630,7 @@ The Queue resource accepts the following [input]({{< relref "/docs/intro/concept
         <span class="property-indicator"></span>
         <span class="property-type">boolean</span>
     </dt>
-    <dd>{{% md %}}Value that indicates whether server-side batched operations are enabled.{{% /md %}}</dd>
-    <dt class="property-optional"
+    <dd>{{% md %}}Value that indicates whether server-side batched operations are enabled.{{% /md %}}</dd><dt class="property-optional"
             title="Optional">
         <span id="enableexpress_nodejs">
 <a href="#enableexpress_nodejs" style="color: inherit; text-decoration: inherit;">enable<wbr>Express</a>
@@ -694,8 +638,7 @@ The Queue resource accepts the following [input]({{< relref "/docs/intro/concept
         <span class="property-indicator"></span>
         <span class="property-type">boolean</span>
     </dt>
-    <dd>{{% md %}}A value that indicates whether Express Entities are enabled. An express queue holds a message in memory temporarily before writing it to persistent storage.{{% /md %}}</dd>
-    <dt class="property-optional"
+    <dd>{{% md %}}A value that indicates whether Express Entities are enabled. An express queue holds a message in memory temporarily before writing it to persistent storage.{{% /md %}}</dd><dt class="property-optional"
             title="Optional">
         <span id="enablepartitioning_nodejs">
 <a href="#enablepartitioning_nodejs" style="color: inherit; text-decoration: inherit;">enable<wbr>Partitioning</a>
@@ -703,8 +646,7 @@ The Queue resource accepts the following [input]({{< relref "/docs/intro/concept
         <span class="property-indicator"></span>
         <span class="property-type">boolean</span>
     </dt>
-    <dd>{{% md %}}A value that indicates whether the queue is to be partitioned across multiple message brokers.{{% /md %}}</dd>
-    <dt class="property-optional"
+    <dd>{{% md %}}A value that indicates whether the queue is to be partitioned across multiple message brokers.{{% /md %}}</dd><dt class="property-optional"
             title="Optional">
         <span id="forwarddeadletteredmessagesto_nodejs">
 <a href="#forwarddeadletteredmessagesto_nodejs" style="color: inherit; text-decoration: inherit;">forward<wbr>Dead<wbr>Lettered<wbr>Messages<wbr>To</a>
@@ -712,8 +654,7 @@ The Queue resource accepts the following [input]({{< relref "/docs/intro/concept
         <span class="property-indicator"></span>
         <span class="property-type">string</span>
     </dt>
-    <dd>{{% md %}}Queue/Topic name to forward the Dead Letter message{{% /md %}}</dd>
-    <dt class="property-optional"
+    <dd>{{% md %}}Queue/Topic name to forward the Dead Letter message{{% /md %}}</dd><dt class="property-optional"
             title="Optional">
         <span id="forwardto_nodejs">
 <a href="#forwardto_nodejs" style="color: inherit; text-decoration: inherit;">forward<wbr>To</a>
@@ -721,8 +662,7 @@ The Queue resource accepts the following [input]({{< relref "/docs/intro/concept
         <span class="property-indicator"></span>
         <span class="property-type">string</span>
     </dt>
-    <dd>{{% md %}}Queue/Topic name to forward the messages{{% /md %}}</dd>
-    <dt class="property-optional"
+    <dd>{{% md %}}Queue/Topic name to forward the messages{{% /md %}}</dd><dt class="property-optional"
             title="Optional">
         <span id="lockduration_nodejs">
 <a href="#lockduration_nodejs" style="color: inherit; text-decoration: inherit;">lock<wbr>Duration</a>
@@ -730,8 +670,7 @@ The Queue resource accepts the following [input]({{< relref "/docs/intro/concept
         <span class="property-indicator"></span>
         <span class="property-type">string</span>
     </dt>
-    <dd>{{% md %}}ISO 8601 timespan duration of a peek-lock; that is, the amount of time that the message is locked for other receivers. The maximum value for LockDuration is 5 minutes; the default value is 1 minute.{{% /md %}}</dd>
-    <dt class="property-optional"
+    <dd>{{% md %}}ISO 8601 timespan duration of a peek-lock; that is, the amount of time that the message is locked for other receivers. The maximum value for LockDuration is 5 minutes; the default value is 1 minute.{{% /md %}}</dd><dt class="property-optional"
             title="Optional">
         <span id="maxdeliverycount_nodejs">
 <a href="#maxdeliverycount_nodejs" style="color: inherit; text-decoration: inherit;">max<wbr>Delivery<wbr>Count</a>
@@ -739,8 +678,7 @@ The Queue resource accepts the following [input]({{< relref "/docs/intro/concept
         <span class="property-indicator"></span>
         <span class="property-type">number</span>
     </dt>
-    <dd>{{% md %}}The maximum delivery count. A message is automatically deadlettered after this number of deliveries. default value is 10.{{% /md %}}</dd>
-    <dt class="property-optional"
+    <dd>{{% md %}}The maximum delivery count. A message is automatically deadlettered after this number of deliveries. default value is 10.{{% /md %}}</dd><dt class="property-optional"
             title="Optional">
         <span id="maxsizeinmegabytes_nodejs">
 <a href="#maxsizeinmegabytes_nodejs" style="color: inherit; text-decoration: inherit;">max<wbr>Size<wbr>In<wbr>Megabytes</a>
@@ -748,8 +686,7 @@ The Queue resource accepts the following [input]({{< relref "/docs/intro/concept
         <span class="property-indicator"></span>
         <span class="property-type">number</span>
     </dt>
-    <dd>{{% md %}}The maximum size of the queue in megabytes, which is the size of memory allocated for the queue. Default is 1024.{{% /md %}}</dd>
-    <dt class="property-optional"
+    <dd>{{% md %}}The maximum size of the queue in megabytes, which is the size of memory allocated for the queue. Default is 1024.{{% /md %}}</dd><dt class="property-optional"
             title="Optional">
         <span id="queuename_nodejs">
 <a href="#queuename_nodejs" style="color: inherit; text-decoration: inherit;">queue<wbr>Name</a>
@@ -757,8 +694,7 @@ The Queue resource accepts the following [input]({{< relref "/docs/intro/concept
         <span class="property-indicator"></span>
         <span class="property-type">string</span>
     </dt>
-    <dd>{{% md %}}The queue name.{{% /md %}}</dd>
-    <dt class="property-optional"
+    <dd>{{% md %}}The queue name.{{% /md %}}</dd><dt class="property-optional"
             title="Optional">
         <span id="requiresduplicatedetection_nodejs">
 <a href="#requiresduplicatedetection_nodejs" style="color: inherit; text-decoration: inherit;">requires<wbr>Duplicate<wbr>Detection</a>
@@ -766,8 +702,7 @@ The Queue resource accepts the following [input]({{< relref "/docs/intro/concept
         <span class="property-indicator"></span>
         <span class="property-type">boolean</span>
     </dt>
-    <dd>{{% md %}}A value indicating if this queue requires duplicate detection.{{% /md %}}</dd>
-    <dt class="property-optional"
+    <dd>{{% md %}}A value indicating if this queue requires duplicate detection.{{% /md %}}</dd><dt class="property-optional"
             title="Optional">
         <span id="requiressession_nodejs">
 <a href="#requiressession_nodejs" style="color: inherit; text-decoration: inherit;">requires<wbr>Session</a>
@@ -775,8 +710,7 @@ The Queue resource accepts the following [input]({{< relref "/docs/intro/concept
         <span class="property-indicator"></span>
         <span class="property-type">boolean</span>
     </dt>
-    <dd>{{% md %}}A value that indicates whether the queue supports the concept of sessions.{{% /md %}}</dd>
-    <dt class="property-optional"
+    <dd>{{% md %}}A value that indicates whether the queue supports the concept of sessions.{{% /md %}}</dd><dt class="property-optional"
             title="Optional">
         <span id="status_nodejs">
 <a href="#status_nodejs" style="color: inherit; text-decoration: inherit;">status</a>
@@ -784,14 +718,11 @@ The Queue resource accepts the following [input]({{< relref "/docs/intro/concept
         <span class="property-indicator"></span>
         <span class="property-type"><a href="#entitystatus">Entity<wbr>Status</a></span>
     </dt>
-    <dd>{{% md %}}Enumerates the possible values for the status of a messaging entity.{{% /md %}}</dd>
-</dl>
+    <dd>{{% md %}}Enumerates the possible values for the status of a messaging entity.{{% /md %}}</dd></dl>
 {{% /choosable %}}
 
 {{% choosable language python %}}
-<dl class="resources-properties">
-
-    <dt class="property-required"
+<dl class="resources-properties"><dt class="property-required"
             title="Required">
         <span id="namespace_name_python">
 <a href="#namespace_name_python" style="color: inherit; text-decoration: inherit;">namespace_<wbr>name</a>
@@ -799,8 +730,7 @@ The Queue resource accepts the following [input]({{< relref "/docs/intro/concept
         <span class="property-indicator"></span>
         <span class="property-type">str</span>
     </dt>
-    <dd>{{% md %}}The namespace name{{% /md %}}</dd>
-    <dt class="property-required"
+    <dd>{{% md %}}The namespace name{{% /md %}}</dd><dt class="property-required"
             title="Required">
         <span id="resource_group_name_python">
 <a href="#resource_group_name_python" style="color: inherit; text-decoration: inherit;">resource_<wbr>group_<wbr>name</a>
@@ -808,8 +738,7 @@ The Queue resource accepts the following [input]({{< relref "/docs/intro/concept
         <span class="property-indicator"></span>
         <span class="property-type">str</span>
     </dt>
-    <dd>{{% md %}}Name of the Resource group within the Azure subscription.{{% /md %}}</dd>
-    <dt class="property-optional"
+    <dd>{{% md %}}Name of the Resource group within the Azure subscription.{{% /md %}}</dd><dt class="property-optional"
             title="Optional">
         <span id="auto_delete_on_idle_python">
 <a href="#auto_delete_on_idle_python" style="color: inherit; text-decoration: inherit;">auto_<wbr>delete_<wbr>on_<wbr>idle</a>
@@ -817,8 +746,7 @@ The Queue resource accepts the following [input]({{< relref "/docs/intro/concept
         <span class="property-indicator"></span>
         <span class="property-type">str</span>
     </dt>
-    <dd>{{% md %}}ISO 8061 timeSpan idle interval after which the queue is automatically deleted. The minimum duration is 5 minutes.{{% /md %}}</dd>
-    <dt class="property-optional"
+    <dd>{{% md %}}ISO 8061 timeSpan idle interval after which the queue is automatically deleted. The minimum duration is 5 minutes.{{% /md %}}</dd><dt class="property-optional"
             title="Optional">
         <span id="dead_lettering_on_message_expiration_python">
 <a href="#dead_lettering_on_message_expiration_python" style="color: inherit; text-decoration: inherit;">dead_<wbr>lettering_<wbr>on_<wbr>message_<wbr>expiration</a>
@@ -826,8 +754,7 @@ The Queue resource accepts the following [input]({{< relref "/docs/intro/concept
         <span class="property-indicator"></span>
         <span class="property-type">bool</span>
     </dt>
-    <dd>{{% md %}}A value that indicates whether this queue has dead letter support when a message expires.{{% /md %}}</dd>
-    <dt class="property-optional"
+    <dd>{{% md %}}A value that indicates whether this queue has dead letter support when a message expires.{{% /md %}}</dd><dt class="property-optional"
             title="Optional">
         <span id="default_message_time_to_live_python">
 <a href="#default_message_time_to_live_python" style="color: inherit; text-decoration: inherit;">default_<wbr>message_<wbr>time_<wbr>to_<wbr>live</a>
@@ -835,8 +762,7 @@ The Queue resource accepts the following [input]({{< relref "/docs/intro/concept
         <span class="property-indicator"></span>
         <span class="property-type">str</span>
     </dt>
-    <dd>{{% md %}}ISO 8601 default message timespan to live value. This is the duration after which the message expires, starting from when the message is sent to Service Bus. This is the default value used when TimeToLive is not set on a message itself.{{% /md %}}</dd>
-    <dt class="property-optional"
+    <dd>{{% md %}}ISO 8601 default message timespan to live value. This is the duration after which the message expires, starting from when the message is sent to Service Bus. This is the default value used when TimeToLive is not set on a message itself.{{% /md %}}</dd><dt class="property-optional"
             title="Optional">
         <span id="duplicate_detection_history_time_window_python">
 <a href="#duplicate_detection_history_time_window_python" style="color: inherit; text-decoration: inherit;">duplicate_<wbr>detection_<wbr>history_<wbr>time_<wbr>window</a>
@@ -844,8 +770,7 @@ The Queue resource accepts the following [input]({{< relref "/docs/intro/concept
         <span class="property-indicator"></span>
         <span class="property-type">str</span>
     </dt>
-    <dd>{{% md %}}ISO 8601 timeSpan structure that defines the duration of the duplicate detection history. The default value is 10 minutes.{{% /md %}}</dd>
-    <dt class="property-optional"
+    <dd>{{% md %}}ISO 8601 timeSpan structure that defines the duration of the duplicate detection history. The default value is 10 minutes.{{% /md %}}</dd><dt class="property-optional"
             title="Optional">
         <span id="enable_batched_operations_python">
 <a href="#enable_batched_operations_python" style="color: inherit; text-decoration: inherit;">enable_<wbr>batched_<wbr>operations</a>
@@ -853,8 +778,7 @@ The Queue resource accepts the following [input]({{< relref "/docs/intro/concept
         <span class="property-indicator"></span>
         <span class="property-type">bool</span>
     </dt>
-    <dd>{{% md %}}Value that indicates whether server-side batched operations are enabled.{{% /md %}}</dd>
-    <dt class="property-optional"
+    <dd>{{% md %}}Value that indicates whether server-side batched operations are enabled.{{% /md %}}</dd><dt class="property-optional"
             title="Optional">
         <span id="enable_express_python">
 <a href="#enable_express_python" style="color: inherit; text-decoration: inherit;">enable_<wbr>express</a>
@@ -862,8 +786,7 @@ The Queue resource accepts the following [input]({{< relref "/docs/intro/concept
         <span class="property-indicator"></span>
         <span class="property-type">bool</span>
     </dt>
-    <dd>{{% md %}}A value that indicates whether Express Entities are enabled. An express queue holds a message in memory temporarily before writing it to persistent storage.{{% /md %}}</dd>
-    <dt class="property-optional"
+    <dd>{{% md %}}A value that indicates whether Express Entities are enabled. An express queue holds a message in memory temporarily before writing it to persistent storage.{{% /md %}}</dd><dt class="property-optional"
             title="Optional">
         <span id="enable_partitioning_python">
 <a href="#enable_partitioning_python" style="color: inherit; text-decoration: inherit;">enable_<wbr>partitioning</a>
@@ -871,8 +794,7 @@ The Queue resource accepts the following [input]({{< relref "/docs/intro/concept
         <span class="property-indicator"></span>
         <span class="property-type">bool</span>
     </dt>
-    <dd>{{% md %}}A value that indicates whether the queue is to be partitioned across multiple message brokers.{{% /md %}}</dd>
-    <dt class="property-optional"
+    <dd>{{% md %}}A value that indicates whether the queue is to be partitioned across multiple message brokers.{{% /md %}}</dd><dt class="property-optional"
             title="Optional">
         <span id="forward_dead_lettered_messages_to_python">
 <a href="#forward_dead_lettered_messages_to_python" style="color: inherit; text-decoration: inherit;">forward_<wbr>dead_<wbr>lettered_<wbr>messages_<wbr>to</a>
@@ -880,8 +802,7 @@ The Queue resource accepts the following [input]({{< relref "/docs/intro/concept
         <span class="property-indicator"></span>
         <span class="property-type">str</span>
     </dt>
-    <dd>{{% md %}}Queue/Topic name to forward the Dead Letter message{{% /md %}}</dd>
-    <dt class="property-optional"
+    <dd>{{% md %}}Queue/Topic name to forward the Dead Letter message{{% /md %}}</dd><dt class="property-optional"
             title="Optional">
         <span id="forward_to_python">
 <a href="#forward_to_python" style="color: inherit; text-decoration: inherit;">forward_<wbr>to</a>
@@ -889,8 +810,7 @@ The Queue resource accepts the following [input]({{< relref "/docs/intro/concept
         <span class="property-indicator"></span>
         <span class="property-type">str</span>
     </dt>
-    <dd>{{% md %}}Queue/Topic name to forward the messages{{% /md %}}</dd>
-    <dt class="property-optional"
+    <dd>{{% md %}}Queue/Topic name to forward the messages{{% /md %}}</dd><dt class="property-optional"
             title="Optional">
         <span id="lock_duration_python">
 <a href="#lock_duration_python" style="color: inherit; text-decoration: inherit;">lock_<wbr>duration</a>
@@ -898,8 +818,7 @@ The Queue resource accepts the following [input]({{< relref "/docs/intro/concept
         <span class="property-indicator"></span>
         <span class="property-type">str</span>
     </dt>
-    <dd>{{% md %}}ISO 8601 timespan duration of a peek-lock; that is, the amount of time that the message is locked for other receivers. The maximum value for LockDuration is 5 minutes; the default value is 1 minute.{{% /md %}}</dd>
-    <dt class="property-optional"
+    <dd>{{% md %}}ISO 8601 timespan duration of a peek-lock; that is, the amount of time that the message is locked for other receivers. The maximum value for LockDuration is 5 minutes; the default value is 1 minute.{{% /md %}}</dd><dt class="property-optional"
             title="Optional">
         <span id="max_delivery_count_python">
 <a href="#max_delivery_count_python" style="color: inherit; text-decoration: inherit;">max_<wbr>delivery_<wbr>count</a>
@@ -907,8 +826,7 @@ The Queue resource accepts the following [input]({{< relref "/docs/intro/concept
         <span class="property-indicator"></span>
         <span class="property-type">int</span>
     </dt>
-    <dd>{{% md %}}The maximum delivery count. A message is automatically deadlettered after this number of deliveries. default value is 10.{{% /md %}}</dd>
-    <dt class="property-optional"
+    <dd>{{% md %}}The maximum delivery count. A message is automatically deadlettered after this number of deliveries. default value is 10.{{% /md %}}</dd><dt class="property-optional"
             title="Optional">
         <span id="max_size_in_megabytes_python">
 <a href="#max_size_in_megabytes_python" style="color: inherit; text-decoration: inherit;">max_<wbr>size_<wbr>in_<wbr>megabytes</a>
@@ -916,8 +834,7 @@ The Queue resource accepts the following [input]({{< relref "/docs/intro/concept
         <span class="property-indicator"></span>
         <span class="property-type">int</span>
     </dt>
-    <dd>{{% md %}}The maximum size of the queue in megabytes, which is the size of memory allocated for the queue. Default is 1024.{{% /md %}}</dd>
-    <dt class="property-optional"
+    <dd>{{% md %}}The maximum size of the queue in megabytes, which is the size of memory allocated for the queue. Default is 1024.{{% /md %}}</dd><dt class="property-optional"
             title="Optional">
         <span id="queue_name_python">
 <a href="#queue_name_python" style="color: inherit; text-decoration: inherit;">queue_<wbr>name</a>
@@ -925,8 +842,7 @@ The Queue resource accepts the following [input]({{< relref "/docs/intro/concept
         <span class="property-indicator"></span>
         <span class="property-type">str</span>
     </dt>
-    <dd>{{% md %}}The queue name.{{% /md %}}</dd>
-    <dt class="property-optional"
+    <dd>{{% md %}}The queue name.{{% /md %}}</dd><dt class="property-optional"
             title="Optional">
         <span id="requires_duplicate_detection_python">
 <a href="#requires_duplicate_detection_python" style="color: inherit; text-decoration: inherit;">requires_<wbr>duplicate_<wbr>detection</a>
@@ -934,8 +850,7 @@ The Queue resource accepts the following [input]({{< relref "/docs/intro/concept
         <span class="property-indicator"></span>
         <span class="property-type">bool</span>
     </dt>
-    <dd>{{% md %}}A value indicating if this queue requires duplicate detection.{{% /md %}}</dd>
-    <dt class="property-optional"
+    <dd>{{% md %}}A value indicating if this queue requires duplicate detection.{{% /md %}}</dd><dt class="property-optional"
             title="Optional">
         <span id="requires_session_python">
 <a href="#requires_session_python" style="color: inherit; text-decoration: inherit;">requires_<wbr>session</a>
@@ -943,8 +858,7 @@ The Queue resource accepts the following [input]({{< relref "/docs/intro/concept
         <span class="property-indicator"></span>
         <span class="property-type">bool</span>
     </dt>
-    <dd>{{% md %}}A value that indicates whether the queue supports the concept of sessions.{{% /md %}}</dd>
-    <dt class="property-optional"
+    <dd>{{% md %}}A value that indicates whether the queue supports the concept of sessions.{{% /md %}}</dd><dt class="property-optional"
             title="Optional">
         <span id="status_python">
 <a href="#status_python" style="color: inherit; text-decoration: inherit;">status</a>
@@ -952,8 +866,7 @@ The Queue resource accepts the following [input]({{< relref "/docs/intro/concept
         <span class="property-indicator"></span>
         <span class="property-type"><a href="#entitystatus">Entity<wbr>Status</a></span>
     </dt>
-    <dd>{{% md %}}Enumerates the possible values for the status of a messaging entity.{{% /md %}}</dd>
-</dl>
+    <dd>{{% md %}}Enumerates the possible values for the status of a messaging entity.{{% /md %}}</dd></dl>
 {{% /choosable %}}
 
 
@@ -964,9 +877,7 @@ All [input](#inputs) properties are implicitly available as output properties. A
 
 
 {{% choosable language csharp %}}
-<dl class="resources-properties">
-
-    <dt class="property-"
+<dl class="resources-properties"><dt class="property-"
             title="">
         <span id="accessedat_csharp">
 <a href="#accessedat_csharp" style="color: inherit; text-decoration: inherit;">Accessed<wbr>At</a>
@@ -974,8 +885,7 @@ All [input](#inputs) properties are implicitly available as output properties. A
         <span class="property-indicator"></span>
         <span class="property-type">string</span>
     </dt>
-    <dd>{{% md %}}Last time a message was sent, or the last time there was a receive request to this queue.{{% /md %}}</dd>
-    <dt class="property-"
+    <dd>{{% md %}}Last time a message was sent, or the last time there was a receive request to this queue.{{% /md %}}</dd><dt class="property-"
             title="">
         <span id="countdetails_csharp">
 <a href="#countdetails_csharp" style="color: inherit; text-decoration: inherit;">Count<wbr>Details</a>
@@ -983,8 +893,7 @@ All [input](#inputs) properties are implicitly available as output properties. A
         <span class="property-indicator"></span>
         <span class="property-type"><a href="#messagecountdetailsresponse">Pulumi.<wbr>Azure<wbr>Native.<wbr>Service<wbr>Bus.<wbr>Outputs.<wbr>Message<wbr>Count<wbr>Details<wbr>Response</a></span>
     </dt>
-    <dd>{{% md %}}Message Count Details.{{% /md %}}</dd>
-    <dt class="property-"
+    <dd>{{% md %}}Message Count Details.{{% /md %}}</dd><dt class="property-"
             title="">
         <span id="createdat_csharp">
 <a href="#createdat_csharp" style="color: inherit; text-decoration: inherit;">Created<wbr>At</a>
@@ -992,8 +901,7 @@ All [input](#inputs) properties are implicitly available as output properties. A
         <span class="property-indicator"></span>
         <span class="property-type">string</span>
     </dt>
-    <dd>{{% md %}}The exact time the message was created.{{% /md %}}</dd>
-    <dt class="property-"
+    <dd>{{% md %}}The exact time the message was created.{{% /md %}}</dd><dt class="property-"
             title="">
         <span id="id_csharp">
 <a href="#id_csharp" style="color: inherit; text-decoration: inherit;">Id</a>
@@ -1001,8 +909,7 @@ All [input](#inputs) properties are implicitly available as output properties. A
         <span class="property-indicator"></span>
         <span class="property-type">string</span>
     </dt>
-    <dd>{{% md %}}The provider-assigned unique ID for this managed resource.{{% /md %}}</dd>
-    <dt class="property-"
+    <dd>{{% md %}}The provider-assigned unique ID for this managed resource.{{% /md %}}</dd><dt class="property-"
             title="">
         <span id="messagecount_csharp">
 <a href="#messagecount_csharp" style="color: inherit; text-decoration: inherit;">Message<wbr>Count</a>
@@ -1010,8 +917,7 @@ All [input](#inputs) properties are implicitly available as output properties. A
         <span class="property-indicator"></span>
         <span class="property-type">double</span>
     </dt>
-    <dd>{{% md %}}The number of messages in the queue.{{% /md %}}</dd>
-    <dt class="property-"
+    <dd>{{% md %}}The number of messages in the queue.{{% /md %}}</dd><dt class="property-"
             title="">
         <span id="name_csharp">
 <a href="#name_csharp" style="color: inherit; text-decoration: inherit;">Name</a>
@@ -1019,8 +925,7 @@ All [input](#inputs) properties are implicitly available as output properties. A
         <span class="property-indicator"></span>
         <span class="property-type">string</span>
     </dt>
-    <dd>{{% md %}}Resource name{{% /md %}}</dd>
-    <dt class="property-"
+    <dd>{{% md %}}Resource name{{% /md %}}</dd><dt class="property-"
             title="">
         <span id="sizeinbytes_csharp">
 <a href="#sizeinbytes_csharp" style="color: inherit; text-decoration: inherit;">Size<wbr>In<wbr>Bytes</a>
@@ -1028,8 +933,7 @@ All [input](#inputs) properties are implicitly available as output properties. A
         <span class="property-indicator"></span>
         <span class="property-type">double</span>
     </dt>
-    <dd>{{% md %}}The size of the queue, in bytes.{{% /md %}}</dd>
-    <dt class="property-"
+    <dd>{{% md %}}The size of the queue, in bytes.{{% /md %}}</dd><dt class="property-"
             title="">
         <span id="type_csharp">
 <a href="#type_csharp" style="color: inherit; text-decoration: inherit;">Type</a>
@@ -1037,8 +941,7 @@ All [input](#inputs) properties are implicitly available as output properties. A
         <span class="property-indicator"></span>
         <span class="property-type">string</span>
     </dt>
-    <dd>{{% md %}}Resource type{{% /md %}}</dd>
-    <dt class="property-"
+    <dd>{{% md %}}Resource type{{% /md %}}</dd><dt class="property-"
             title="">
         <span id="updatedat_csharp">
 <a href="#updatedat_csharp" style="color: inherit; text-decoration: inherit;">Updated<wbr>At</a>
@@ -1046,14 +949,11 @@ All [input](#inputs) properties are implicitly available as output properties. A
         <span class="property-indicator"></span>
         <span class="property-type">string</span>
     </dt>
-    <dd>{{% md %}}The exact time the message was updated.{{% /md %}}</dd>
-</dl>
+    <dd>{{% md %}}The exact time the message was updated.{{% /md %}}</dd></dl>
 {{% /choosable %}}
 
 {{% choosable language go %}}
-<dl class="resources-properties">
-
-    <dt class="property-"
+<dl class="resources-properties"><dt class="property-"
             title="">
         <span id="accessedat_go">
 <a href="#accessedat_go" style="color: inherit; text-decoration: inherit;">Accessed<wbr>At</a>
@@ -1061,8 +961,7 @@ All [input](#inputs) properties are implicitly available as output properties. A
         <span class="property-indicator"></span>
         <span class="property-type">string</span>
     </dt>
-    <dd>{{% md %}}Last time a message was sent, or the last time there was a receive request to this queue.{{% /md %}}</dd>
-    <dt class="property-"
+    <dd>{{% md %}}Last time a message was sent, or the last time there was a receive request to this queue.{{% /md %}}</dd><dt class="property-"
             title="">
         <span id="countdetails_go">
 <a href="#countdetails_go" style="color: inherit; text-decoration: inherit;">Count<wbr>Details</a>
@@ -1070,8 +969,7 @@ All [input](#inputs) properties are implicitly available as output properties. A
         <span class="property-indicator"></span>
         <span class="property-type"><a href="#messagecountdetailsresponse">Message<wbr>Count<wbr>Details<wbr>Response</a></span>
     </dt>
-    <dd>{{% md %}}Message Count Details.{{% /md %}}</dd>
-    <dt class="property-"
+    <dd>{{% md %}}Message Count Details.{{% /md %}}</dd><dt class="property-"
             title="">
         <span id="createdat_go">
 <a href="#createdat_go" style="color: inherit; text-decoration: inherit;">Created<wbr>At</a>
@@ -1079,8 +977,7 @@ All [input](#inputs) properties are implicitly available as output properties. A
         <span class="property-indicator"></span>
         <span class="property-type">string</span>
     </dt>
-    <dd>{{% md %}}The exact time the message was created.{{% /md %}}</dd>
-    <dt class="property-"
+    <dd>{{% md %}}The exact time the message was created.{{% /md %}}</dd><dt class="property-"
             title="">
         <span id="id_go">
 <a href="#id_go" style="color: inherit; text-decoration: inherit;">Id</a>
@@ -1088,8 +985,7 @@ All [input](#inputs) properties are implicitly available as output properties. A
         <span class="property-indicator"></span>
         <span class="property-type">string</span>
     </dt>
-    <dd>{{% md %}}The provider-assigned unique ID for this managed resource.{{% /md %}}</dd>
-    <dt class="property-"
+    <dd>{{% md %}}The provider-assigned unique ID for this managed resource.{{% /md %}}</dd><dt class="property-"
             title="">
         <span id="messagecount_go">
 <a href="#messagecount_go" style="color: inherit; text-decoration: inherit;">Message<wbr>Count</a>
@@ -1097,8 +993,7 @@ All [input](#inputs) properties are implicitly available as output properties. A
         <span class="property-indicator"></span>
         <span class="property-type">float64</span>
     </dt>
-    <dd>{{% md %}}The number of messages in the queue.{{% /md %}}</dd>
-    <dt class="property-"
+    <dd>{{% md %}}The number of messages in the queue.{{% /md %}}</dd><dt class="property-"
             title="">
         <span id="name_go">
 <a href="#name_go" style="color: inherit; text-decoration: inherit;">Name</a>
@@ -1106,8 +1001,7 @@ All [input](#inputs) properties are implicitly available as output properties. A
         <span class="property-indicator"></span>
         <span class="property-type">string</span>
     </dt>
-    <dd>{{% md %}}Resource name{{% /md %}}</dd>
-    <dt class="property-"
+    <dd>{{% md %}}Resource name{{% /md %}}</dd><dt class="property-"
             title="">
         <span id="sizeinbytes_go">
 <a href="#sizeinbytes_go" style="color: inherit; text-decoration: inherit;">Size<wbr>In<wbr>Bytes</a>
@@ -1115,8 +1009,7 @@ All [input](#inputs) properties are implicitly available as output properties. A
         <span class="property-indicator"></span>
         <span class="property-type">float64</span>
     </dt>
-    <dd>{{% md %}}The size of the queue, in bytes.{{% /md %}}</dd>
-    <dt class="property-"
+    <dd>{{% md %}}The size of the queue, in bytes.{{% /md %}}</dd><dt class="property-"
             title="">
         <span id="type_go">
 <a href="#type_go" style="color: inherit; text-decoration: inherit;">Type</a>
@@ -1124,8 +1017,7 @@ All [input](#inputs) properties are implicitly available as output properties. A
         <span class="property-indicator"></span>
         <span class="property-type">string</span>
     </dt>
-    <dd>{{% md %}}Resource type{{% /md %}}</dd>
-    <dt class="property-"
+    <dd>{{% md %}}Resource type{{% /md %}}</dd><dt class="property-"
             title="">
         <span id="updatedat_go">
 <a href="#updatedat_go" style="color: inherit; text-decoration: inherit;">Updated<wbr>At</a>
@@ -1133,14 +1025,11 @@ All [input](#inputs) properties are implicitly available as output properties. A
         <span class="property-indicator"></span>
         <span class="property-type">string</span>
     </dt>
-    <dd>{{% md %}}The exact time the message was updated.{{% /md %}}</dd>
-</dl>
+    <dd>{{% md %}}The exact time the message was updated.{{% /md %}}</dd></dl>
 {{% /choosable %}}
 
 {{% choosable language nodejs %}}
-<dl class="resources-properties">
-
-    <dt class="property-"
+<dl class="resources-properties"><dt class="property-"
             title="">
         <span id="accessedat_nodejs">
 <a href="#accessedat_nodejs" style="color: inherit; text-decoration: inherit;">accessed<wbr>At</a>
@@ -1148,8 +1037,7 @@ All [input](#inputs) properties are implicitly available as output properties. A
         <span class="property-indicator"></span>
         <span class="property-type">string</span>
     </dt>
-    <dd>{{% md %}}Last time a message was sent, or the last time there was a receive request to this queue.{{% /md %}}</dd>
-    <dt class="property-"
+    <dd>{{% md %}}Last time a message was sent, or the last time there was a receive request to this queue.{{% /md %}}</dd><dt class="property-"
             title="">
         <span id="countdetails_nodejs">
 <a href="#countdetails_nodejs" style="color: inherit; text-decoration: inherit;">count<wbr>Details</a>
@@ -1157,8 +1045,7 @@ All [input](#inputs) properties are implicitly available as output properties. A
         <span class="property-indicator"></span>
         <span class="property-type"><a href="#messagecountdetailsresponse">Message<wbr>Count<wbr>Details<wbr>Response</a></span>
     </dt>
-    <dd>{{% md %}}Message Count Details.{{% /md %}}</dd>
-    <dt class="property-"
+    <dd>{{% md %}}Message Count Details.{{% /md %}}</dd><dt class="property-"
             title="">
         <span id="createdat_nodejs">
 <a href="#createdat_nodejs" style="color: inherit; text-decoration: inherit;">created<wbr>At</a>
@@ -1166,8 +1053,7 @@ All [input](#inputs) properties are implicitly available as output properties. A
         <span class="property-indicator"></span>
         <span class="property-type">string</span>
     </dt>
-    <dd>{{% md %}}The exact time the message was created.{{% /md %}}</dd>
-    <dt class="property-"
+    <dd>{{% md %}}The exact time the message was created.{{% /md %}}</dd><dt class="property-"
             title="">
         <span id="id_nodejs">
 <a href="#id_nodejs" style="color: inherit; text-decoration: inherit;">id</a>
@@ -1175,8 +1061,7 @@ All [input](#inputs) properties are implicitly available as output properties. A
         <span class="property-indicator"></span>
         <span class="property-type">string</span>
     </dt>
-    <dd>{{% md %}}The provider-assigned unique ID for this managed resource.{{% /md %}}</dd>
-    <dt class="property-"
+    <dd>{{% md %}}The provider-assigned unique ID for this managed resource.{{% /md %}}</dd><dt class="property-"
             title="">
         <span id="messagecount_nodejs">
 <a href="#messagecount_nodejs" style="color: inherit; text-decoration: inherit;">message<wbr>Count</a>
@@ -1184,8 +1069,7 @@ All [input](#inputs) properties are implicitly available as output properties. A
         <span class="property-indicator"></span>
         <span class="property-type">number</span>
     </dt>
-    <dd>{{% md %}}The number of messages in the queue.{{% /md %}}</dd>
-    <dt class="property-"
+    <dd>{{% md %}}The number of messages in the queue.{{% /md %}}</dd><dt class="property-"
             title="">
         <span id="name_nodejs">
 <a href="#name_nodejs" style="color: inherit; text-decoration: inherit;">name</a>
@@ -1193,8 +1077,7 @@ All [input](#inputs) properties are implicitly available as output properties. A
         <span class="property-indicator"></span>
         <span class="property-type">string</span>
     </dt>
-    <dd>{{% md %}}Resource name{{% /md %}}</dd>
-    <dt class="property-"
+    <dd>{{% md %}}Resource name{{% /md %}}</dd><dt class="property-"
             title="">
         <span id="sizeinbytes_nodejs">
 <a href="#sizeinbytes_nodejs" style="color: inherit; text-decoration: inherit;">size<wbr>In<wbr>Bytes</a>
@@ -1202,8 +1085,7 @@ All [input](#inputs) properties are implicitly available as output properties. A
         <span class="property-indicator"></span>
         <span class="property-type">number</span>
     </dt>
-    <dd>{{% md %}}The size of the queue, in bytes.{{% /md %}}</dd>
-    <dt class="property-"
+    <dd>{{% md %}}The size of the queue, in bytes.{{% /md %}}</dd><dt class="property-"
             title="">
         <span id="type_nodejs">
 <a href="#type_nodejs" style="color: inherit; text-decoration: inherit;">type</a>
@@ -1211,8 +1093,7 @@ All [input](#inputs) properties are implicitly available as output properties. A
         <span class="property-indicator"></span>
         <span class="property-type">string</span>
     </dt>
-    <dd>{{% md %}}Resource type{{% /md %}}</dd>
-    <dt class="property-"
+    <dd>{{% md %}}Resource type{{% /md %}}</dd><dt class="property-"
             title="">
         <span id="updatedat_nodejs">
 <a href="#updatedat_nodejs" style="color: inherit; text-decoration: inherit;">updated<wbr>At</a>
@@ -1220,14 +1101,11 @@ All [input](#inputs) properties are implicitly available as output properties. A
         <span class="property-indicator"></span>
         <span class="property-type">string</span>
     </dt>
-    <dd>{{% md %}}The exact time the message was updated.{{% /md %}}</dd>
-</dl>
+    <dd>{{% md %}}The exact time the message was updated.{{% /md %}}</dd></dl>
 {{% /choosable %}}
 
 {{% choosable language python %}}
-<dl class="resources-properties">
-
-    <dt class="property-"
+<dl class="resources-properties"><dt class="property-"
             title="">
         <span id="accessed_at_python">
 <a href="#accessed_at_python" style="color: inherit; text-decoration: inherit;">accessed_<wbr>at</a>
@@ -1235,8 +1113,7 @@ All [input](#inputs) properties are implicitly available as output properties. A
         <span class="property-indicator"></span>
         <span class="property-type">str</span>
     </dt>
-    <dd>{{% md %}}Last time a message was sent, or the last time there was a receive request to this queue.{{% /md %}}</dd>
-    <dt class="property-"
+    <dd>{{% md %}}Last time a message was sent, or the last time there was a receive request to this queue.{{% /md %}}</dd><dt class="property-"
             title="">
         <span id="count_details_python">
 <a href="#count_details_python" style="color: inherit; text-decoration: inherit;">count_<wbr>details</a>
@@ -1244,8 +1121,7 @@ All [input](#inputs) properties are implicitly available as output properties. A
         <span class="property-indicator"></span>
         <span class="property-type"><a href="#messagecountdetailsresponse">Message<wbr>Count<wbr>Details<wbr>Response</a></span>
     </dt>
-    <dd>{{% md %}}Message Count Details.{{% /md %}}</dd>
-    <dt class="property-"
+    <dd>{{% md %}}Message Count Details.{{% /md %}}</dd><dt class="property-"
             title="">
         <span id="created_at_python">
 <a href="#created_at_python" style="color: inherit; text-decoration: inherit;">created_<wbr>at</a>
@@ -1253,8 +1129,7 @@ All [input](#inputs) properties are implicitly available as output properties. A
         <span class="property-indicator"></span>
         <span class="property-type">str</span>
     </dt>
-    <dd>{{% md %}}The exact time the message was created.{{% /md %}}</dd>
-    <dt class="property-"
+    <dd>{{% md %}}The exact time the message was created.{{% /md %}}</dd><dt class="property-"
             title="">
         <span id="id_python">
 <a href="#id_python" style="color: inherit; text-decoration: inherit;">id</a>
@@ -1262,8 +1137,7 @@ All [input](#inputs) properties are implicitly available as output properties. A
         <span class="property-indicator"></span>
         <span class="property-type">str</span>
     </dt>
-    <dd>{{% md %}}The provider-assigned unique ID for this managed resource.{{% /md %}}</dd>
-    <dt class="property-"
+    <dd>{{% md %}}The provider-assigned unique ID for this managed resource.{{% /md %}}</dd><dt class="property-"
             title="">
         <span id="message_count_python">
 <a href="#message_count_python" style="color: inherit; text-decoration: inherit;">message_<wbr>count</a>
@@ -1271,8 +1145,7 @@ All [input](#inputs) properties are implicitly available as output properties. A
         <span class="property-indicator"></span>
         <span class="property-type">float</span>
     </dt>
-    <dd>{{% md %}}The number of messages in the queue.{{% /md %}}</dd>
-    <dt class="property-"
+    <dd>{{% md %}}The number of messages in the queue.{{% /md %}}</dd><dt class="property-"
             title="">
         <span id="name_python">
 <a href="#name_python" style="color: inherit; text-decoration: inherit;">name</a>
@@ -1280,8 +1153,7 @@ All [input](#inputs) properties are implicitly available as output properties. A
         <span class="property-indicator"></span>
         <span class="property-type">str</span>
     </dt>
-    <dd>{{% md %}}Resource name{{% /md %}}</dd>
-    <dt class="property-"
+    <dd>{{% md %}}Resource name{{% /md %}}</dd><dt class="property-"
             title="">
         <span id="size_in_bytes_python">
 <a href="#size_in_bytes_python" style="color: inherit; text-decoration: inherit;">size_<wbr>in_<wbr>bytes</a>
@@ -1289,8 +1161,7 @@ All [input](#inputs) properties are implicitly available as output properties. A
         <span class="property-indicator"></span>
         <span class="property-type">float</span>
     </dt>
-    <dd>{{% md %}}The size of the queue, in bytes.{{% /md %}}</dd>
-    <dt class="property-"
+    <dd>{{% md %}}The size of the queue, in bytes.{{% /md %}}</dd><dt class="property-"
             title="">
         <span id="type_python">
 <a href="#type_python" style="color: inherit; text-decoration: inherit;">type</a>
@@ -1298,8 +1169,7 @@ All [input](#inputs) properties are implicitly available as output properties. A
         <span class="property-indicator"></span>
         <span class="property-type">str</span>
     </dt>
-    <dd>{{% md %}}Resource type{{% /md %}}</dd>
-    <dt class="property-"
+    <dd>{{% md %}}Resource type{{% /md %}}</dd><dt class="property-"
             title="">
         <span id="updated_at_python">
 <a href="#updated_at_python" style="color: inherit; text-decoration: inherit;">updated_<wbr>at</a>
@@ -1307,8 +1177,7 @@ All [input](#inputs) properties are implicitly available as output properties. A
         <span class="property-indicator"></span>
         <span class="property-type">str</span>
     </dt>
-    <dd>{{% md %}}The exact time the message was updated.{{% /md %}}</dd>
-</dl>
+    <dd>{{% md %}}The exact time the message was updated.{{% /md %}}</dd></dl>
 {{% /choosable %}}
 
 
@@ -1324,103 +1193,61 @@ All [input](#inputs) properties are implicitly available as output properties. A
 <h4 id="entitystatus">Entity<wbr>Status</h4>
 
 {{% choosable language csharp %}}
-<dl class="tabular">
-    <dt>Active</dt>
-    <dd>Active</dd>
-    <dt>Disabled</dt>
-    <dd>Disabled</dd>
-    <dt>Restoring</dt>
-    <dd>Restoring</dd>
-    <dt>Send<wbr>Disabled</dt>
-    <dd>SendDisabled</dd>
-    <dt>Receive<wbr>Disabled</dt>
-    <dd>ReceiveDisabled</dd>
-    <dt>Creating</dt>
-    <dd>Creating</dd>
-    <dt>Deleting</dt>
-    <dd>Deleting</dd>
-    <dt>Renaming</dt>
-    <dd>Renaming</dd>
-    <dt>Unknown</dt>
-    <dd>Unknown</dd>
-</dl>
+<dl class="tabular"><dt>Active</dt>
+    <dd>Active</dd><dt>Disabled</dt>
+    <dd>Disabled</dd><dt>Restoring</dt>
+    <dd>Restoring</dd><dt>Send<wbr>Disabled</dt>
+    <dd>SendDisabled</dd><dt>Receive<wbr>Disabled</dt>
+    <dd>ReceiveDisabled</dd><dt>Creating</dt>
+    <dd>Creating</dd><dt>Deleting</dt>
+    <dd>Deleting</dd><dt>Renaming</dt>
+    <dd>Renaming</dd><dt>Unknown</dt>
+    <dd>Unknown</dd></dl>
 {{% /choosable %}}
 
 {{% choosable language go %}}
-<dl class="tabular">
-    <dt>Entity<wbr>Status<wbr>Active</dt>
-    <dd>Active</dd>
-    <dt>Entity<wbr>Status<wbr>Disabled</dt>
-    <dd>Disabled</dd>
-    <dt>Entity<wbr>Status<wbr>Restoring</dt>
-    <dd>Restoring</dd>
-    <dt>Entity<wbr>Status<wbr>Send<wbr>Disabled</dt>
-    <dd>SendDisabled</dd>
-    <dt>Entity<wbr>Status<wbr>Receive<wbr>Disabled</dt>
-    <dd>ReceiveDisabled</dd>
-    <dt>Entity<wbr>Status<wbr>Creating</dt>
-    <dd>Creating</dd>
-    <dt>Entity<wbr>Status<wbr>Deleting</dt>
-    <dd>Deleting</dd>
-    <dt>Entity<wbr>Status<wbr>Renaming</dt>
-    <dd>Renaming</dd>
-    <dt>Entity<wbr>Status<wbr>Unknown</dt>
-    <dd>Unknown</dd>
-</dl>
+<dl class="tabular"><dt>Entity<wbr>Status<wbr>Active</dt>
+    <dd>Active</dd><dt>Entity<wbr>Status<wbr>Disabled</dt>
+    <dd>Disabled</dd><dt>Entity<wbr>Status<wbr>Restoring</dt>
+    <dd>Restoring</dd><dt>Entity<wbr>Status<wbr>Send<wbr>Disabled</dt>
+    <dd>SendDisabled</dd><dt>Entity<wbr>Status<wbr>Receive<wbr>Disabled</dt>
+    <dd>ReceiveDisabled</dd><dt>Entity<wbr>Status<wbr>Creating</dt>
+    <dd>Creating</dd><dt>Entity<wbr>Status<wbr>Deleting</dt>
+    <dd>Deleting</dd><dt>Entity<wbr>Status<wbr>Renaming</dt>
+    <dd>Renaming</dd><dt>Entity<wbr>Status<wbr>Unknown</dt>
+    <dd>Unknown</dd></dl>
 {{% /choosable %}}
 
 {{% choosable language nodejs %}}
-<dl class="tabular">
-    <dt>Active</dt>
-    <dd>Active</dd>
-    <dt>Disabled</dt>
-    <dd>Disabled</dd>
-    <dt>Restoring</dt>
-    <dd>Restoring</dd>
-    <dt>Send<wbr>Disabled</dt>
-    <dd>SendDisabled</dd>
-    <dt>Receive<wbr>Disabled</dt>
-    <dd>ReceiveDisabled</dd>
-    <dt>Creating</dt>
-    <dd>Creating</dd>
-    <dt>Deleting</dt>
-    <dd>Deleting</dd>
-    <dt>Renaming</dt>
-    <dd>Renaming</dd>
-    <dt>Unknown</dt>
-    <dd>Unknown</dd>
-</dl>
+<dl class="tabular"><dt>Active</dt>
+    <dd>Active</dd><dt>Disabled</dt>
+    <dd>Disabled</dd><dt>Restoring</dt>
+    <dd>Restoring</dd><dt>Send<wbr>Disabled</dt>
+    <dd>SendDisabled</dd><dt>Receive<wbr>Disabled</dt>
+    <dd>ReceiveDisabled</dd><dt>Creating</dt>
+    <dd>Creating</dd><dt>Deleting</dt>
+    <dd>Deleting</dd><dt>Renaming</dt>
+    <dd>Renaming</dd><dt>Unknown</dt>
+    <dd>Unknown</dd></dl>
 {{% /choosable %}}
 
 {{% choosable language python %}}
-<dl class="tabular">
-    <dt>ACTIVE</dt>
-    <dd>Active</dd>
-    <dt>DISABLED</dt>
-    <dd>Disabled</dd>
-    <dt>RESTORING</dt>
-    <dd>Restoring</dd>
-    <dt>SEND_DISABLED</dt>
-    <dd>SendDisabled</dd>
-    <dt>RECEIVE_DISABLED</dt>
-    <dd>ReceiveDisabled</dd>
-    <dt>CREATING</dt>
-    <dd>Creating</dd>
-    <dt>DELETING</dt>
-    <dd>Deleting</dd>
-    <dt>RENAMING</dt>
-    <dd>Renaming</dd>
-    <dt>UNKNOWN</dt>
-    <dd>Unknown</dd>
-</dl>
+<dl class="tabular"><dt>ACTIVE</dt>
+    <dd>Active</dd><dt>DISABLED</dt>
+    <dd>Disabled</dd><dt>RESTORING</dt>
+    <dd>Restoring</dd><dt>SEND_DISABLED</dt>
+    <dd>SendDisabled</dd><dt>RECEIVE_DISABLED</dt>
+    <dd>ReceiveDisabled</dd><dt>CREATING</dt>
+    <dd>Creating</dd><dt>DELETING</dt>
+    <dd>Deleting</dd><dt>RENAMING</dt>
+    <dd>Renaming</dd><dt>UNKNOWN</dt>
+    <dd>Unknown</dd></dl>
 {{% /choosable %}}
 
 <h4 id="messagecountdetailsresponse">Message<wbr>Count<wbr>Details<wbr>Response</h4>
 
 {{% choosable language csharp %}}
-<dl class="resources-properties">
-
-    <dt class="property-required"
+<dl class="resources-properties"><dt class="property-required"
             title="Required">
         <span id="activemessagecount_csharp">
 <a href="#activemessagecount_csharp" style="color: inherit; text-decoration: inherit;">Active<wbr>Message<wbr>Count</a>
@@ -1428,8 +1255,7 @@ All [input](#inputs) properties are implicitly available as output properties. A
         <span class="property-indicator"></span>
         <span class="property-type">double</span>
     </dt>
-    <dd>{{% md %}}Number of active messages in the queue, topic, or subscription.{{% /md %}}</dd>
-    <dt class="property-required"
+    <dd>{{% md %}}Number of active messages in the queue, topic, or subscription.{{% /md %}}</dd><dt class="property-required"
             title="Required">
         <span id="deadlettermessagecount_csharp">
 <a href="#deadlettermessagecount_csharp" style="color: inherit; text-decoration: inherit;">Dead<wbr>Letter<wbr>Message<wbr>Count</a>
@@ -1437,8 +1263,7 @@ All [input](#inputs) properties are implicitly available as output properties. A
         <span class="property-indicator"></span>
         <span class="property-type">double</span>
     </dt>
-    <dd>{{% md %}}Number of messages that are dead lettered.{{% /md %}}</dd>
-    <dt class="property-required"
+    <dd>{{% md %}}Number of messages that are dead lettered.{{% /md %}}</dd><dt class="property-required"
             title="Required">
         <span id="scheduledmessagecount_csharp">
 <a href="#scheduledmessagecount_csharp" style="color: inherit; text-decoration: inherit;">Scheduled<wbr>Message<wbr>Count</a>
@@ -1446,8 +1271,7 @@ All [input](#inputs) properties are implicitly available as output properties. A
         <span class="property-indicator"></span>
         <span class="property-type">double</span>
     </dt>
-    <dd>{{% md %}}Number of scheduled messages.{{% /md %}}</dd>
-    <dt class="property-required"
+    <dd>{{% md %}}Number of scheduled messages.{{% /md %}}</dd><dt class="property-required"
             title="Required">
         <span id="transferdeadlettermessagecount_csharp">
 <a href="#transferdeadlettermessagecount_csharp" style="color: inherit; text-decoration: inherit;">Transfer<wbr>Dead<wbr>Letter<wbr>Message<wbr>Count</a>
@@ -1455,8 +1279,7 @@ All [input](#inputs) properties are implicitly available as output properties. A
         <span class="property-indicator"></span>
         <span class="property-type">double</span>
     </dt>
-    <dd>{{% md %}}Number of messages transferred into dead letters.{{% /md %}}</dd>
-    <dt class="property-required"
+    <dd>{{% md %}}Number of messages transferred into dead letters.{{% /md %}}</dd><dt class="property-required"
             title="Required">
         <span id="transfermessagecount_csharp">
 <a href="#transfermessagecount_csharp" style="color: inherit; text-decoration: inherit;">Transfer<wbr>Message<wbr>Count</a>
@@ -1464,14 +1287,11 @@ All [input](#inputs) properties are implicitly available as output properties. A
         <span class="property-indicator"></span>
         <span class="property-type">double</span>
     </dt>
-    <dd>{{% md %}}Number of messages transferred to another queue, topic, or subscription.{{% /md %}}</dd>
-</dl>
+    <dd>{{% md %}}Number of messages transferred to another queue, topic, or subscription.{{% /md %}}</dd></dl>
 {{% /choosable %}}
 
 {{% choosable language go %}}
-<dl class="resources-properties">
-
-    <dt class="property-required"
+<dl class="resources-properties"><dt class="property-required"
             title="Required">
         <span id="activemessagecount_go">
 <a href="#activemessagecount_go" style="color: inherit; text-decoration: inherit;">Active<wbr>Message<wbr>Count</a>
@@ -1479,8 +1299,7 @@ All [input](#inputs) properties are implicitly available as output properties. A
         <span class="property-indicator"></span>
         <span class="property-type">float64</span>
     </dt>
-    <dd>{{% md %}}Number of active messages in the queue, topic, or subscription.{{% /md %}}</dd>
-    <dt class="property-required"
+    <dd>{{% md %}}Number of active messages in the queue, topic, or subscription.{{% /md %}}</dd><dt class="property-required"
             title="Required">
         <span id="deadlettermessagecount_go">
 <a href="#deadlettermessagecount_go" style="color: inherit; text-decoration: inherit;">Dead<wbr>Letter<wbr>Message<wbr>Count</a>
@@ -1488,8 +1307,7 @@ All [input](#inputs) properties are implicitly available as output properties. A
         <span class="property-indicator"></span>
         <span class="property-type">float64</span>
     </dt>
-    <dd>{{% md %}}Number of messages that are dead lettered.{{% /md %}}</dd>
-    <dt class="property-required"
+    <dd>{{% md %}}Number of messages that are dead lettered.{{% /md %}}</dd><dt class="property-required"
             title="Required">
         <span id="scheduledmessagecount_go">
 <a href="#scheduledmessagecount_go" style="color: inherit; text-decoration: inherit;">Scheduled<wbr>Message<wbr>Count</a>
@@ -1497,8 +1315,7 @@ All [input](#inputs) properties are implicitly available as output properties. A
         <span class="property-indicator"></span>
         <span class="property-type">float64</span>
     </dt>
-    <dd>{{% md %}}Number of scheduled messages.{{% /md %}}</dd>
-    <dt class="property-required"
+    <dd>{{% md %}}Number of scheduled messages.{{% /md %}}</dd><dt class="property-required"
             title="Required">
         <span id="transferdeadlettermessagecount_go">
 <a href="#transferdeadlettermessagecount_go" style="color: inherit; text-decoration: inherit;">Transfer<wbr>Dead<wbr>Letter<wbr>Message<wbr>Count</a>
@@ -1506,8 +1323,7 @@ All [input](#inputs) properties are implicitly available as output properties. A
         <span class="property-indicator"></span>
         <span class="property-type">float64</span>
     </dt>
-    <dd>{{% md %}}Number of messages transferred into dead letters.{{% /md %}}</dd>
-    <dt class="property-required"
+    <dd>{{% md %}}Number of messages transferred into dead letters.{{% /md %}}</dd><dt class="property-required"
             title="Required">
         <span id="transfermessagecount_go">
 <a href="#transfermessagecount_go" style="color: inherit; text-decoration: inherit;">Transfer<wbr>Message<wbr>Count</a>
@@ -1515,14 +1331,11 @@ All [input](#inputs) properties are implicitly available as output properties. A
         <span class="property-indicator"></span>
         <span class="property-type">float64</span>
     </dt>
-    <dd>{{% md %}}Number of messages transferred to another queue, topic, or subscription.{{% /md %}}</dd>
-</dl>
+    <dd>{{% md %}}Number of messages transferred to another queue, topic, or subscription.{{% /md %}}</dd></dl>
 {{% /choosable %}}
 
 {{% choosable language nodejs %}}
-<dl class="resources-properties">
-
-    <dt class="property-required"
+<dl class="resources-properties"><dt class="property-required"
             title="Required">
         <span id="activemessagecount_nodejs">
 <a href="#activemessagecount_nodejs" style="color: inherit; text-decoration: inherit;">active<wbr>Message<wbr>Count</a>
@@ -1530,8 +1343,7 @@ All [input](#inputs) properties are implicitly available as output properties. A
         <span class="property-indicator"></span>
         <span class="property-type">number</span>
     </dt>
-    <dd>{{% md %}}Number of active messages in the queue, topic, or subscription.{{% /md %}}</dd>
-    <dt class="property-required"
+    <dd>{{% md %}}Number of active messages in the queue, topic, or subscription.{{% /md %}}</dd><dt class="property-required"
             title="Required">
         <span id="deadlettermessagecount_nodejs">
 <a href="#deadlettermessagecount_nodejs" style="color: inherit; text-decoration: inherit;">dead<wbr>Letter<wbr>Message<wbr>Count</a>
@@ -1539,8 +1351,7 @@ All [input](#inputs) properties are implicitly available as output properties. A
         <span class="property-indicator"></span>
         <span class="property-type">number</span>
     </dt>
-    <dd>{{% md %}}Number of messages that are dead lettered.{{% /md %}}</dd>
-    <dt class="property-required"
+    <dd>{{% md %}}Number of messages that are dead lettered.{{% /md %}}</dd><dt class="property-required"
             title="Required">
         <span id="scheduledmessagecount_nodejs">
 <a href="#scheduledmessagecount_nodejs" style="color: inherit; text-decoration: inherit;">scheduled<wbr>Message<wbr>Count</a>
@@ -1548,8 +1359,7 @@ All [input](#inputs) properties are implicitly available as output properties. A
         <span class="property-indicator"></span>
         <span class="property-type">number</span>
     </dt>
-    <dd>{{% md %}}Number of scheduled messages.{{% /md %}}</dd>
-    <dt class="property-required"
+    <dd>{{% md %}}Number of scheduled messages.{{% /md %}}</dd><dt class="property-required"
             title="Required">
         <span id="transferdeadlettermessagecount_nodejs">
 <a href="#transferdeadlettermessagecount_nodejs" style="color: inherit; text-decoration: inherit;">transfer<wbr>Dead<wbr>Letter<wbr>Message<wbr>Count</a>
@@ -1557,8 +1367,7 @@ All [input](#inputs) properties are implicitly available as output properties. A
         <span class="property-indicator"></span>
         <span class="property-type">number</span>
     </dt>
-    <dd>{{% md %}}Number of messages transferred into dead letters.{{% /md %}}</dd>
-    <dt class="property-required"
+    <dd>{{% md %}}Number of messages transferred into dead letters.{{% /md %}}</dd><dt class="property-required"
             title="Required">
         <span id="transfermessagecount_nodejs">
 <a href="#transfermessagecount_nodejs" style="color: inherit; text-decoration: inherit;">transfer<wbr>Message<wbr>Count</a>
@@ -1566,14 +1375,11 @@ All [input](#inputs) properties are implicitly available as output properties. A
         <span class="property-indicator"></span>
         <span class="property-type">number</span>
     </dt>
-    <dd>{{% md %}}Number of messages transferred to another queue, topic, or subscription.{{% /md %}}</dd>
-</dl>
+    <dd>{{% md %}}Number of messages transferred to another queue, topic, or subscription.{{% /md %}}</dd></dl>
 {{% /choosable %}}
 
 {{% choosable language python %}}
-<dl class="resources-properties">
-
-    <dt class="property-required"
+<dl class="resources-properties"><dt class="property-required"
             title="Required">
         <span id="active_message_count_python">
 <a href="#active_message_count_python" style="color: inherit; text-decoration: inherit;">active_<wbr>message_<wbr>count</a>
@@ -1581,8 +1387,7 @@ All [input](#inputs) properties are implicitly available as output properties. A
         <span class="property-indicator"></span>
         <span class="property-type">float</span>
     </dt>
-    <dd>{{% md %}}Number of active messages in the queue, topic, or subscription.{{% /md %}}</dd>
-    <dt class="property-required"
+    <dd>{{% md %}}Number of active messages in the queue, topic, or subscription.{{% /md %}}</dd><dt class="property-required"
             title="Required">
         <span id="dead_letter_message_count_python">
 <a href="#dead_letter_message_count_python" style="color: inherit; text-decoration: inherit;">dead_<wbr>letter_<wbr>message_<wbr>count</a>
@@ -1590,8 +1395,7 @@ All [input](#inputs) properties are implicitly available as output properties. A
         <span class="property-indicator"></span>
         <span class="property-type">float</span>
     </dt>
-    <dd>{{% md %}}Number of messages that are dead lettered.{{% /md %}}</dd>
-    <dt class="property-required"
+    <dd>{{% md %}}Number of messages that are dead lettered.{{% /md %}}</dd><dt class="property-required"
             title="Required">
         <span id="scheduled_message_count_python">
 <a href="#scheduled_message_count_python" style="color: inherit; text-decoration: inherit;">scheduled_<wbr>message_<wbr>count</a>
@@ -1599,8 +1403,7 @@ All [input](#inputs) properties are implicitly available as output properties. A
         <span class="property-indicator"></span>
         <span class="property-type">float</span>
     </dt>
-    <dd>{{% md %}}Number of scheduled messages.{{% /md %}}</dd>
-    <dt class="property-required"
+    <dd>{{% md %}}Number of scheduled messages.{{% /md %}}</dd><dt class="property-required"
             title="Required">
         <span id="transfer_dead_letter_message_count_python">
 <a href="#transfer_dead_letter_message_count_python" style="color: inherit; text-decoration: inherit;">transfer_<wbr>dead_<wbr>letter_<wbr>message_<wbr>count</a>
@@ -1608,8 +1411,7 @@ All [input](#inputs) properties are implicitly available as output properties. A
         <span class="property-indicator"></span>
         <span class="property-type">float</span>
     </dt>
-    <dd>{{% md %}}Number of messages transferred into dead letters.{{% /md %}}</dd>
-    <dt class="property-required"
+    <dd>{{% md %}}Number of messages transferred into dead letters.{{% /md %}}</dd><dt class="property-required"
             title="Required">
         <span id="transfer_message_count_python">
 <a href="#transfer_message_count_python" style="color: inherit; text-decoration: inherit;">transfer_<wbr>message_<wbr>count</a>
@@ -1617,8 +1419,7 @@ All [input](#inputs) properties are implicitly available as output properties. A
         <span class="property-indicator"></span>
         <span class="property-type">float</span>
     </dt>
-    <dd>{{% md %}}Number of messages transferred to another queue, topic, or subscription.{{% /md %}}</dd>
-</dl>
+    <dd>{{% md %}}Number of messages transferred to another queue, topic, or subscription.{{% /md %}}</dd></dl>
 {{% /choosable %}}
 ## Import
 

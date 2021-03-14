@@ -15,11 +15,17 @@ documentation](https://www.vaultproject.io/docs/auth/jwt.html) for more
 information.
 
 {{% examples %}}
+
 ## Example Usage
 
 {{< chooser language "typescript,python,go,csharp" / >}}
 
-{{% example csharp %}}
+
+
+
+
+{{< example csharp >}}
+
 ```csharp
 using Pulumi;
 using Vault = Pulumi.Vault;
@@ -54,9 +60,12 @@ class MyStack : Stack
 }
 ```
 
-{{% /example %}}
 
-{{% example go %}}
+{{< /example >}}
+
+
+{{< example go >}}
+
 ```go
 package main
 
@@ -95,9 +104,12 @@ func main() {
 }
 ```
 
-{{% /example %}}
 
-{{% example python %}}
+{{< /example >}}
+
+
+{{< example python >}}
+
 ```python
 import pulumi
 import pulumi_vault as vault
@@ -116,9 +128,12 @@ example = vault.jwt.AuthBackendRole("example",
     role_type="jwt")
 ```
 
-{{% /example %}}
 
-{{% example typescript %}}
+{{< /example >}}
+
+
+{{< example typescript >}}
+
 
 ```typescript
 import * as pulumi from "@pulumi/pulumi";
@@ -139,9 +154,16 @@ const example = new vault.jwt.AuthBackendRole("example", {
 });
 ```
 
-{{% /example %}}
+
+{{< /example >}}
+
+
+
+
 
 {{% /examples %}}
+
+
 
 
 ## Create a AuthBackendRole Resource {#create}
@@ -166,9 +188,7 @@ const example = new vault.jwt.AuthBackendRole("example", {
 
 {{% choosable language nodejs %}}
 
-<dl class="resources-properties">
-  
-    <dt
+<dl class="resources-properties"><dt
         class="property-required" title="Required">
         <span>name</span>
         <span class="property-indicator"></span>
@@ -176,9 +196,7 @@ const example = new vault.jwt.AuthBackendRole("example", {
     </dt>
     <dd>
       The unique name of the resource.
-    </dd>
-  
-    <dt
+    </dd><dt
         class="property-required" title="Required">
         <span>args</span>
         <span class="property-indicator"></span>
@@ -186,9 +204,7 @@ const example = new vault.jwt.AuthBackendRole("example", {
     </dt>
     <dd>
       The arguments to resource properties.
-    </dd>
-  
-    <dt
+    </dd><dt
         class="property-optional" title="Optional">
         <span>opts</span>
         <span class="property-indicator"></span>
@@ -196,10 +212,7 @@ const example = new vault.jwt.AuthBackendRole("example", {
     </dt>
     <dd>
       Bag of options to control resource&#39;s behavior.
-    </dd>
-  
-
-</dl>
+    </dd></dl>
 
 {{% /choosable %}}
 
@@ -225,9 +238,7 @@ const example = new vault.jwt.AuthBackendRole("example", {
 
 {{% choosable language go %}}
 
-<dl class="resources-properties">
-  
-    <dt
+<dl class="resources-properties"><dt
         class="property-optional" title="Optional">
         <span>ctx</span>
         <span class="property-indicator"></span>
@@ -235,9 +246,7 @@ const example = new vault.jwt.AuthBackendRole("example", {
     </dt>
     <dd>
       Context object for the current deployment.
-    </dd>
-  
-    <dt
+    </dd><dt
         class="property-required" title="Required">
         <span>name</span>
         <span class="property-indicator"></span>
@@ -245,9 +254,7 @@ const example = new vault.jwt.AuthBackendRole("example", {
     </dt>
     <dd>
       The unique name of the resource.
-    </dd>
-  
-    <dt
+    </dd><dt
         class="property-required" title="Required">
         <span>args</span>
         <span class="property-indicator"></span>
@@ -255,9 +262,7 @@ const example = new vault.jwt.AuthBackendRole("example", {
     </dt>
     <dd>
       The arguments to resource properties.
-    </dd>
-  
-    <dt
+    </dd><dt
         class="property-optional" title="Optional">
         <span>opts</span>
         <span class="property-indicator"></span>
@@ -265,18 +270,13 @@ const example = new vault.jwt.AuthBackendRole("example", {
     </dt>
     <dd>
       Bag of options to control resource&#39;s behavior.
-    </dd>
-  
-
-</dl>
+    </dd></dl>
 
 {{% /choosable %}}
 
 {{% choosable language csharp %}}
 
-<dl class="resources-properties">
-  
-    <dt
+<dl class="resources-properties"><dt
         class="property-required" title="Required">
         <span>name</span>
         <span class="property-indicator"></span>
@@ -284,9 +284,7 @@ const example = new vault.jwt.AuthBackendRole("example", {
     </dt>
     <dd>
       The unique name of the resource.
-    </dd>
-  
-    <dt
+    </dd><dt
         class="property-required" title="Required">
         <span>args</span>
         <span class="property-indicator"></span>
@@ -294,9 +292,7 @@ const example = new vault.jwt.AuthBackendRole("example", {
     </dt>
     <dd>
       The arguments to resource properties.
-    </dd>
-  
-    <dt
+    </dd><dt
         class="property-optional" title="Optional">
         <span>opts</span>
         <span class="property-indicator"></span>
@@ -304,10 +300,7 @@ const example = new vault.jwt.AuthBackendRole("example", {
     </dt>
     <dd>
       Bag of options to control resource&#39;s behavior.
-    </dd>
-  
-
-</dl>
+    </dd></dl>
 
 {{% /choosable %}}
 
@@ -322,9 +315,7 @@ The AuthBackendRole resource accepts the following [input]({{< relref "/docs/int
 
 
 {{% choosable language csharp %}}
-<dl class="resources-properties">
-
-    <dt class="property-required"
+<dl class="resources-properties"><dt class="property-required"
             title="Required">
         <span id="rolename_csharp">
 <a href="#rolename_csharp" style="color: inherit; text-decoration: inherit;">Role<wbr>Name</a>
@@ -333,8 +324,7 @@ The AuthBackendRole resource accepts the following [input]({{< relref "/docs/int
         <span class="property-type">string</span>
     </dt>
     <dd>{{% md %}}The name of the role.
-{{% /md %}}</dd>
-    <dt class="property-required"
+{{% /md %}}</dd><dt class="property-required"
             title="Required">
         <span id="userclaim_csharp">
 <a href="#userclaim_csharp" style="color: inherit; text-decoration: inherit;">User<wbr>Claim</a>
@@ -345,8 +335,7 @@ The AuthBackendRole resource accepts the following [input]({{< relref "/docs/int
     <dd>{{% md %}}The claim to use to uniquely identify
 the user; this will be used as the name for the Identity entity alias created
 due to a successful login.
-{{% /md %}}</dd>
-    <dt class="property-optional"
+{{% /md %}}</dd><dt class="property-optional"
             title="Optional">
         <span id="allowedredirecturis_csharp">
 <a href="#allowedredirecturis_csharp" style="color: inherit; text-decoration: inherit;">Allowed<wbr>Redirect<wbr>Uris</a>
@@ -356,8 +345,7 @@ due to a successful login.
     </dt>
     <dd>{{% md %}}The list of allowed values for redirect_uri during OIDC logins.
 Required for OIDC roles
-{{% /md %}}</dd>
-    <dt class="property-optional"
+{{% /md %}}</dd><dt class="property-optional"
             title="Optional">
         <span id="backend_csharp">
 <a href="#backend_csharp" style="color: inherit; text-decoration: inherit;">Backend</a>
@@ -367,8 +355,7 @@ Required for OIDC roles
     </dt>
     <dd>{{% md %}}The unique name of the auth backend to configure.
 Defaults to `jwt`.
-{{% /md %}}</dd>
-    <dt class="property-optional"
+{{% /md %}}</dd><dt class="property-optional"
             title="Optional">
         <span id="boundaudiences_csharp">
 <a href="#boundaudiences_csharp" style="color: inherit; text-decoration: inherit;">Bound<wbr>Audiences</a>
@@ -378,8 +365,7 @@ Defaults to `jwt`.
     </dt>
     <dd>{{% md %}}(Required for roles of type `jwt`, optional for roles of
 type `oidc`) List of `aud` claims to match against. Any match is sufficient.
-{{% /md %}}</dd>
-    <dt class="property-optional property-deprecated"
+{{% /md %}}</dd><dt class="property-optional property-deprecated"
             title="Optional, Deprecated">
         <span id="boundcidrs_csharp">
 <a href="#boundcidrs_csharp" style="color: inherit; text-decoration: inherit;">Bound<wbr>Cidrs</a>
@@ -389,8 +375,7 @@ type `oidc`) List of `aud` claims to match against. Any match is sufficient.
     </dt>
     <dd>{{% md %}}If set, a list of
 CIDRs valid as the source address for login requests. This value is also encoded into any resulting token.
-{{% /md %}}<p class="property-message">Deprecated: {{% md %}}use `token_bound_cidrs` instead if you are running Vault &gt;= 1.2{{% /md %}}</p></dd>
-    <dt class="property-optional"
+{{% /md %}}<p class="property-message">Deprecated: {{% md %}}use `token_bound_cidrs` instead if you are running Vault &gt;= 1.2{{% /md %}}</p></dd><dt class="property-optional"
             title="Optional">
         <span id="boundclaims_csharp">
 <a href="#boundclaims_csharp" style="color: inherit; text-decoration: inherit;">Bound<wbr>Claims</a>
@@ -400,8 +385,7 @@ CIDRs valid as the source address for login requests. This value is also encoded
     </dt>
     <dd>{{% md %}}If set, a map of claims/values to match against.
 The expected value may be a single string or a list of strings.
-{{% /md %}}</dd>
-    <dt class="property-optional"
+{{% /md %}}</dd><dt class="property-optional"
             title="Optional">
         <span id="boundclaimstype_csharp">
 <a href="#boundclaimstype_csharp" style="color: inherit; text-decoration: inherit;">Bound<wbr>Claims<wbr>Type</a>
@@ -412,8 +396,7 @@ The expected value may be a single string or a list of strings.
     <dd>{{% md %}}How to interpret values in the claims/values
 map (`bound_claims`): can be either `string` (exact match) or `glob` (wildcard
 match). Requires Vault 1.4.0 or above.
-{{% /md %}}</dd>
-    <dt class="property-optional"
+{{% /md %}}</dd><dt class="property-optional"
             title="Optional">
         <span id="boundsubject_csharp">
 <a href="#boundsubject_csharp" style="color: inherit; text-decoration: inherit;">Bound<wbr>Subject</a>
@@ -423,8 +406,7 @@ match). Requires Vault 1.4.0 or above.
     </dt>
     <dd>{{% md %}}If set, requires that the `sub` claim matches
 this value.
-{{% /md %}}</dd>
-    <dt class="property-optional"
+{{% /md %}}</dd><dt class="property-optional"
             title="Optional">
         <span id="claimmappings_csharp">
 <a href="#claimmappings_csharp" style="color: inherit; text-decoration: inherit;">Claim<wbr>Mappings</a>
@@ -434,8 +416,7 @@ this value.
     </dt>
     <dd>{{% md %}}If set, a map of claims (keys) to be copied
 to specified metadata fields (values).
-{{% /md %}}</dd>
-    <dt class="property-optional"
+{{% /md %}}</dd><dt class="property-optional"
             title="Optional">
         <span id="clockskewleeway_csharp">
 <a href="#clockskewleeway_csharp" style="color: inherit; text-decoration: inherit;">Clock<wbr>Skew<wbr>Leeway</a>
@@ -446,8 +427,7 @@ to specified metadata fields (values).
     <dd>{{% md %}}The amount of leeway to add to all claims to account for clock skew, in
 seconds. Defaults to `60` seconds if set to `0` and can be disabled if set to `-1`.
 Only applicable with "jwt" roles.
-{{% /md %}}</dd>
-    <dt class="property-optional"
+{{% /md %}}</dd><dt class="property-optional"
             title="Optional">
         <span id="expirationleeway_csharp">
 <a href="#expirationleeway_csharp" style="color: inherit; text-decoration: inherit;">Expiration<wbr>Leeway</a>
@@ -458,8 +438,7 @@ Only applicable with "jwt" roles.
     <dd>{{% md %}}The amount of leeway to add to expiration (`exp`) claims to account for
 clock skew, in seconds. Defaults to `60` seconds if set to `0` and can be disabled if set to `-1`.
 Only applicable with "jwt" roles.
-{{% /md %}}</dd>
-    <dt class="property-optional"
+{{% /md %}}</dd><dt class="property-optional"
             title="Optional">
         <span id="groupsclaim_csharp">
 <a href="#groupsclaim_csharp" style="color: inherit; text-decoration: inherit;">Groups<wbr>Claim</a>
@@ -471,8 +450,7 @@ Only applicable with "jwt" roles.
 the set of groups to which the user belongs; this will be used as the names
 for the Identity group aliases created due to a successful login. The claim
 value must be a list of strings.
-{{% /md %}}</dd>
-    <dt class="property-optional property-deprecated"
+{{% /md %}}</dd><dt class="property-optional property-deprecated"
             title="Optional, Deprecated">
         <span id="groupsclaimdelimiterpattern_csharp">
 <a href="#groupsclaimdelimiterpattern_csharp" style="color: inherit; text-decoration: inherit;">Groups<wbr>Claim<wbr>Delimiter<wbr>Pattern</a>
@@ -489,8 +467,7 @@ For instance, a groups_claim of meta/user.name/groups with this field
 set to // will expect nested structures named meta, user.name, and groups.
 If this field was set to /./ the groups information would expect to be
 via nested structures of meta, user, name, and groups.
-{{% /md %}}<p class="property-message">Deprecated: {{% md %}}`groups_claim_delimiter_pattern` has been removed since Vault 1.1. If the groups claim is not at the top level, it can now be specified as a JSONPointer.{{% /md %}}</p></dd>
-    <dt class="property-optional property-deprecated"
+{{% /md %}}<p class="property-message">Deprecated: {{% md %}}`groups_claim_delimiter_pattern` has been removed since Vault 1.1. If the groups claim is not at the top level, it can now be specified as a JSONPointer.{{% /md %}}</p></dd><dt class="property-optional property-deprecated"
             title="Optional, Deprecated">
         <span id="maxttl_csharp">
 <a href="#maxttl_csharp" style="color: inherit; text-decoration: inherit;">Max<wbr>Ttl</a>
@@ -500,8 +477,7 @@ via nested structures of meta, user, name, and groups.
     </dt>
     <dd>{{% md %}}The maximum allowed lifetime of tokens
 issued using this role, provided as a number of seconds.
-{{% /md %}}<p class="property-message">Deprecated: {{% md %}}use `token_max_ttl` instead if you are running Vault &gt;= 1.2{{% /md %}}</p></dd>
-    <dt class="property-optional"
+{{% /md %}}<p class="property-message">Deprecated: {{% md %}}use `token_max_ttl` instead if you are running Vault &gt;= 1.2{{% /md %}}</p></dd><dt class="property-optional"
             title="Optional">
         <span id="notbeforeleeway_csharp">
 <a href="#notbeforeleeway_csharp" style="color: inherit; text-decoration: inherit;">Not<wbr>Before<wbr>Leeway</a>
@@ -512,8 +488,7 @@ issued using this role, provided as a number of seconds.
     <dd>{{% md %}}The amount of leeway to add to not before (`nbf`) claims to account for
 clock skew, in seconds. Defaults to `60` seconds if set to `0` and can be disabled if set to `-1`.
 Only applicable with "jwt" roles.
-{{% /md %}}</dd>
-    <dt class="property-optional property-deprecated"
+{{% /md %}}</dd><dt class="property-optional property-deprecated"
             title="Optional, Deprecated">
         <span id="numuses_csharp">
 <a href="#numuses_csharp" style="color: inherit; text-decoration: inherit;">Num<wbr>Uses</a>
@@ -523,8 +498,7 @@ Only applicable with "jwt" roles.
     </dt>
     <dd>{{% md %}}If set, puts a use-count
 limitation on the issued token.
-{{% /md %}}<p class="property-message">Deprecated: {{% md %}}use `token_num_uses` instead if you are running Vault &gt;= 1.2{{% /md %}}</p></dd>
-    <dt class="property-optional"
+{{% /md %}}<p class="property-message">Deprecated: {{% md %}}use `token_num_uses` instead if you are running Vault &gt;= 1.2{{% /md %}}</p></dd><dt class="property-optional"
             title="Optional">
         <span id="oidcscopes_csharp">
 <a href="#oidcscopes_csharp" style="color: inherit; text-decoration: inherit;">Oidc<wbr>Scopes</a>
@@ -534,8 +508,7 @@ limitation on the issued token.
     </dt>
     <dd>{{% md %}}If set, a list of OIDC scopes to be used with an OIDC role.
 The standard scope "openid" is automatically included and need not be specified.
-{{% /md %}}</dd>
-    <dt class="property-optional property-deprecated"
+{{% /md %}}</dd><dt class="property-optional property-deprecated"
             title="Optional, Deprecated">
         <span id="period_csharp">
 <a href="#period_csharp" style="color: inherit; text-decoration: inherit;">Period</a>
@@ -547,8 +520,7 @@ The standard scope "openid" is automatically included and need not be specified.
 token generated using this role should never expire. The token should be renewed within the
 duration specified by this value. At each renewal, the token's TTL will be set to the
 value of this field. Specified in seconds.
-{{% /md %}}<p class="property-message">Deprecated: {{% md %}}use `token_period` instead if you are running Vault &gt;= 1.2{{% /md %}}</p></dd>
-    <dt class="property-optional property-deprecated"
+{{% /md %}}<p class="property-message">Deprecated: {{% md %}}use `token_period` instead if you are running Vault &gt;= 1.2{{% /md %}}</p></dd><dt class="property-optional property-deprecated"
             title="Optional, Deprecated">
         <span id="policies_csharp">
 <a href="#policies_csharp" style="color: inherit; text-decoration: inherit;">Policies</a>
@@ -558,8 +530,7 @@ value of this field. Specified in seconds.
     </dt>
     <dd>{{% md %}}An array of strings
 specifying the policies to be set on tokens issued using this role.
-{{% /md %}}<p class="property-message">Deprecated: {{% md %}}use `token_policies` instead if you are running Vault &gt;= 1.2{{% /md %}}</p></dd>
-    <dt class="property-optional"
+{{% /md %}}<p class="property-message">Deprecated: {{% md %}}use `token_policies` instead if you are running Vault &gt;= 1.2{{% /md %}}</p></dd><dt class="property-optional"
             title="Optional">
         <span id="roletype_csharp">
 <a href="#roletype_csharp" style="color: inherit; text-decoration: inherit;">Role<wbr>Type</a>
@@ -568,8 +539,7 @@ specifying the policies to be set on tokens issued using this role.
         <span class="property-type">string</span>
     </dt>
     <dd>{{% md %}}Type of role, either "oidc" (default) or "jwt".
-{{% /md %}}</dd>
-    <dt class="property-optional"
+{{% /md %}}</dd><dt class="property-optional"
             title="Optional">
         <span id="tokenboundcidrs_csharp">
 <a href="#tokenboundcidrs_csharp" style="color: inherit; text-decoration: inherit;">Token<wbr>Bound<wbr>Cidrs</a>
@@ -580,8 +550,7 @@ specifying the policies to be set on tokens issued using this role.
     <dd>{{% md %}}List of CIDR blocks; if set, specifies blocks of IP
 addresses which can authenticate successfully, and ties the resulting token to these blocks
 as well.
-{{% /md %}}</dd>
-    <dt class="property-optional"
+{{% /md %}}</dd><dt class="property-optional"
             title="Optional">
         <span id="tokenexplicitmaxttl_csharp">
 <a href="#tokenexplicitmaxttl_csharp" style="color: inherit; text-decoration: inherit;">Token<wbr>Explicit<wbr>Max<wbr>Ttl</a>
@@ -593,8 +562,7 @@ as well.
 [explicit max TTL](https://www.vaultproject.io/docs/concepts/tokens.html#token-time-to-live-periodic-tokens-and-explicit-max-ttls)
 onto the token in number of seconds. This is a hard cap even if `token_ttl` and
 `token_max_ttl` would otherwise allow a renewal.
-{{% /md %}}</dd>
-    <dt class="property-optional"
+{{% /md %}}</dd><dt class="property-optional"
             title="Optional">
         <span id="tokenmaxttl_csharp">
 <a href="#tokenmaxttl_csharp" style="color: inherit; text-decoration: inherit;">Token<wbr>Max<wbr>Ttl</a>
@@ -604,8 +572,7 @@ onto the token in number of seconds. This is a hard cap even if `token_ttl` and
     </dt>
     <dd>{{% md %}}The maximum lifetime for generated tokens in number of seconds.
 Its current value will be referenced at renewal time.
-{{% /md %}}</dd>
-    <dt class="property-optional"
+{{% /md %}}</dd><dt class="property-optional"
             title="Optional">
         <span id="tokennodefaultpolicy_csharp">
 <a href="#tokennodefaultpolicy_csharp" style="color: inherit; text-decoration: inherit;">Token<wbr>No<wbr>Default<wbr>Policy</a>
@@ -615,8 +582,7 @@ Its current value will be referenced at renewal time.
     </dt>
     <dd>{{% md %}}If set, the default policy will not be set on
 generated tokens; otherwise it will be added to the policies set in token_policies.
-{{% /md %}}</dd>
-    <dt class="property-optional"
+{{% /md %}}</dd><dt class="property-optional"
             title="Optional">
         <span id="tokennumuses_csharp">
 <a href="#tokennumuses_csharp" style="color: inherit; text-decoration: inherit;">Token<wbr>Num<wbr>Uses</a>
@@ -627,8 +593,7 @@ generated tokens; otherwise it will be added to the policies set in token_polici
     <dd>{{% md %}}The
 [period](https://www.vaultproject.io/docs/concepts/tokens.html#token-time-to-live-periodic-tokens-and-explicit-max-ttls),
 if any, in number of seconds to set on the token.
-{{% /md %}}</dd>
-    <dt class="property-optional"
+{{% /md %}}</dd><dt class="property-optional"
             title="Optional">
         <span id="tokenperiod_csharp">
 <a href="#tokenperiod_csharp" style="color: inherit; text-decoration: inherit;">Token<wbr>Period</a>
@@ -640,8 +605,7 @@ if any, in number of seconds to set on the token.
 token generated using this role should never expire. The token should be renewed within the
 duration specified by this value. At each renewal, the token's TTL will be set to the
 value of this field. Specified in seconds.
-{{% /md %}}</dd>
-    <dt class="property-optional"
+{{% /md %}}</dd><dt class="property-optional"
             title="Optional">
         <span id="tokenpolicies_csharp">
 <a href="#tokenpolicies_csharp" style="color: inherit; text-decoration: inherit;">Token<wbr>Policies</a>
@@ -651,8 +615,7 @@ value of this field. Specified in seconds.
     </dt>
     <dd>{{% md %}}List of policies to encode onto generated tokens. Depending
 on the auth method, this list may be supplemented by user/group/other values.
-{{% /md %}}</dd>
-    <dt class="property-optional"
+{{% /md %}}</dd><dt class="property-optional"
             title="Optional">
         <span id="tokenttl_csharp">
 <a href="#tokenttl_csharp" style="color: inherit; text-decoration: inherit;">Token<wbr>Ttl</a>
@@ -662,8 +625,7 @@ on the auth method, this list may be supplemented by user/group/other values.
     </dt>
     <dd>{{% md %}}The incremental lifetime for generated tokens in number of seconds.
 Its current value will be referenced at renewal time.
-{{% /md %}}</dd>
-    <dt class="property-optional"
+{{% /md %}}</dd><dt class="property-optional"
             title="Optional">
         <span id="tokentype_csharp">
 <a href="#tokentype_csharp" style="color: inherit; text-decoration: inherit;">Token<wbr>Type</a>
@@ -676,8 +638,7 @@ Its current value will be referenced at renewal time.
 `service` tokens). For token store roles, there are two additional possibilities:
 `default-service` and `default-batch` which specify the type to return unless the client
 requests a different type at generation time.
-{{% /md %}}</dd>
-    <dt class="property-optional property-deprecated"
+{{% /md %}}</dd><dt class="property-optional property-deprecated"
             title="Optional, Deprecated">
         <span id="ttl_csharp">
 <a href="#ttl_csharp" style="color: inherit; text-decoration: inherit;">Ttl</a>
@@ -687,8 +648,7 @@ requests a different type at generation time.
     </dt>
     <dd>{{% md %}}The TTL period of tokens issued
 using this role, provided as a number of seconds.
-{{% /md %}}<p class="property-message">Deprecated: {{% md %}}use `token_ttl` instead if you are running Vault &gt;= 1.2{{% /md %}}</p></dd>
-    <dt class="property-optional"
+{{% /md %}}<p class="property-message">Deprecated: {{% md %}}use `token_ttl` instead if you are running Vault &gt;= 1.2{{% /md %}}</p></dd><dt class="property-optional"
             title="Optional">
         <span id="verboseoidclogging_csharp">
 <a href="#verboseoidclogging_csharp" style="color: inherit; text-decoration: inherit;">Verbose<wbr>Oidc<wbr>Logging</a>
@@ -699,14 +659,11 @@ using this role, provided as a number of seconds.
     <dd>{{% md %}}Log received OIDC tokens and claims when debug-level
 logging is active. Not recommended in production since sensitive information may be present
 in OIDC responses.
-{{% /md %}}</dd>
-</dl>
+{{% /md %}}</dd></dl>
 {{% /choosable %}}
 
 {{% choosable language go %}}
-<dl class="resources-properties">
-
-    <dt class="property-required"
+<dl class="resources-properties"><dt class="property-required"
             title="Required">
         <span id="rolename_go">
 <a href="#rolename_go" style="color: inherit; text-decoration: inherit;">Role<wbr>Name</a>
@@ -715,8 +672,7 @@ in OIDC responses.
         <span class="property-type">string</span>
     </dt>
     <dd>{{% md %}}The name of the role.
-{{% /md %}}</dd>
-    <dt class="property-required"
+{{% /md %}}</dd><dt class="property-required"
             title="Required">
         <span id="userclaim_go">
 <a href="#userclaim_go" style="color: inherit; text-decoration: inherit;">User<wbr>Claim</a>
@@ -727,8 +683,7 @@ in OIDC responses.
     <dd>{{% md %}}The claim to use to uniquely identify
 the user; this will be used as the name for the Identity entity alias created
 due to a successful login.
-{{% /md %}}</dd>
-    <dt class="property-optional"
+{{% /md %}}</dd><dt class="property-optional"
             title="Optional">
         <span id="allowedredirecturis_go">
 <a href="#allowedredirecturis_go" style="color: inherit; text-decoration: inherit;">Allowed<wbr>Redirect<wbr>Uris</a>
@@ -738,8 +693,7 @@ due to a successful login.
     </dt>
     <dd>{{% md %}}The list of allowed values for redirect_uri during OIDC logins.
 Required for OIDC roles
-{{% /md %}}</dd>
-    <dt class="property-optional"
+{{% /md %}}</dd><dt class="property-optional"
             title="Optional">
         <span id="backend_go">
 <a href="#backend_go" style="color: inherit; text-decoration: inherit;">Backend</a>
@@ -749,8 +703,7 @@ Required for OIDC roles
     </dt>
     <dd>{{% md %}}The unique name of the auth backend to configure.
 Defaults to `jwt`.
-{{% /md %}}</dd>
-    <dt class="property-optional"
+{{% /md %}}</dd><dt class="property-optional"
             title="Optional">
         <span id="boundaudiences_go">
 <a href="#boundaudiences_go" style="color: inherit; text-decoration: inherit;">Bound<wbr>Audiences</a>
@@ -760,8 +713,7 @@ Defaults to `jwt`.
     </dt>
     <dd>{{% md %}}(Required for roles of type `jwt`, optional for roles of
 type `oidc`) List of `aud` claims to match against. Any match is sufficient.
-{{% /md %}}</dd>
-    <dt class="property-optional property-deprecated"
+{{% /md %}}</dd><dt class="property-optional property-deprecated"
             title="Optional, Deprecated">
         <span id="boundcidrs_go">
 <a href="#boundcidrs_go" style="color: inherit; text-decoration: inherit;">Bound<wbr>Cidrs</a>
@@ -771,8 +723,7 @@ type `oidc`) List of `aud` claims to match against. Any match is sufficient.
     </dt>
     <dd>{{% md %}}If set, a list of
 CIDRs valid as the source address for login requests. This value is also encoded into any resulting token.
-{{% /md %}}<p class="property-message">Deprecated: {{% md %}}use `token_bound_cidrs` instead if you are running Vault &gt;= 1.2{{% /md %}}</p></dd>
-    <dt class="property-optional"
+{{% /md %}}<p class="property-message">Deprecated: {{% md %}}use `token_bound_cidrs` instead if you are running Vault &gt;= 1.2{{% /md %}}</p></dd><dt class="property-optional"
             title="Optional">
         <span id="boundclaims_go">
 <a href="#boundclaims_go" style="color: inherit; text-decoration: inherit;">Bound<wbr>Claims</a>
@@ -782,8 +733,7 @@ CIDRs valid as the source address for login requests. This value is also encoded
     </dt>
     <dd>{{% md %}}If set, a map of claims/values to match against.
 The expected value may be a single string or a list of strings.
-{{% /md %}}</dd>
-    <dt class="property-optional"
+{{% /md %}}</dd><dt class="property-optional"
             title="Optional">
         <span id="boundclaimstype_go">
 <a href="#boundclaimstype_go" style="color: inherit; text-decoration: inherit;">Bound<wbr>Claims<wbr>Type</a>
@@ -794,8 +744,7 @@ The expected value may be a single string or a list of strings.
     <dd>{{% md %}}How to interpret values in the claims/values
 map (`bound_claims`): can be either `string` (exact match) or `glob` (wildcard
 match). Requires Vault 1.4.0 or above.
-{{% /md %}}</dd>
-    <dt class="property-optional"
+{{% /md %}}</dd><dt class="property-optional"
             title="Optional">
         <span id="boundsubject_go">
 <a href="#boundsubject_go" style="color: inherit; text-decoration: inherit;">Bound<wbr>Subject</a>
@@ -805,8 +754,7 @@ match). Requires Vault 1.4.0 or above.
     </dt>
     <dd>{{% md %}}If set, requires that the `sub` claim matches
 this value.
-{{% /md %}}</dd>
-    <dt class="property-optional"
+{{% /md %}}</dd><dt class="property-optional"
             title="Optional">
         <span id="claimmappings_go">
 <a href="#claimmappings_go" style="color: inherit; text-decoration: inherit;">Claim<wbr>Mappings</a>
@@ -816,8 +764,7 @@ this value.
     </dt>
     <dd>{{% md %}}If set, a map of claims (keys) to be copied
 to specified metadata fields (values).
-{{% /md %}}</dd>
-    <dt class="property-optional"
+{{% /md %}}</dd><dt class="property-optional"
             title="Optional">
         <span id="clockskewleeway_go">
 <a href="#clockskewleeway_go" style="color: inherit; text-decoration: inherit;">Clock<wbr>Skew<wbr>Leeway</a>
@@ -828,8 +775,7 @@ to specified metadata fields (values).
     <dd>{{% md %}}The amount of leeway to add to all claims to account for clock skew, in
 seconds. Defaults to `60` seconds if set to `0` and can be disabled if set to `-1`.
 Only applicable with "jwt" roles.
-{{% /md %}}</dd>
-    <dt class="property-optional"
+{{% /md %}}</dd><dt class="property-optional"
             title="Optional">
         <span id="expirationleeway_go">
 <a href="#expirationleeway_go" style="color: inherit; text-decoration: inherit;">Expiration<wbr>Leeway</a>
@@ -840,8 +786,7 @@ Only applicable with "jwt" roles.
     <dd>{{% md %}}The amount of leeway to add to expiration (`exp`) claims to account for
 clock skew, in seconds. Defaults to `60` seconds if set to `0` and can be disabled if set to `-1`.
 Only applicable with "jwt" roles.
-{{% /md %}}</dd>
-    <dt class="property-optional"
+{{% /md %}}</dd><dt class="property-optional"
             title="Optional">
         <span id="groupsclaim_go">
 <a href="#groupsclaim_go" style="color: inherit; text-decoration: inherit;">Groups<wbr>Claim</a>
@@ -853,8 +798,7 @@ Only applicable with "jwt" roles.
 the set of groups to which the user belongs; this will be used as the names
 for the Identity group aliases created due to a successful login. The claim
 value must be a list of strings.
-{{% /md %}}</dd>
-    <dt class="property-optional property-deprecated"
+{{% /md %}}</dd><dt class="property-optional property-deprecated"
             title="Optional, Deprecated">
         <span id="groupsclaimdelimiterpattern_go">
 <a href="#groupsclaimdelimiterpattern_go" style="color: inherit; text-decoration: inherit;">Groups<wbr>Claim<wbr>Delimiter<wbr>Pattern</a>
@@ -871,8 +815,7 @@ For instance, a groups_claim of meta/user.name/groups with this field
 set to // will expect nested structures named meta, user.name, and groups.
 If this field was set to /./ the groups information would expect to be
 via nested structures of meta, user, name, and groups.
-{{% /md %}}<p class="property-message">Deprecated: {{% md %}}`groups_claim_delimiter_pattern` has been removed since Vault 1.1. If the groups claim is not at the top level, it can now be specified as a JSONPointer.{{% /md %}}</p></dd>
-    <dt class="property-optional property-deprecated"
+{{% /md %}}<p class="property-message">Deprecated: {{% md %}}`groups_claim_delimiter_pattern` has been removed since Vault 1.1. If the groups claim is not at the top level, it can now be specified as a JSONPointer.{{% /md %}}</p></dd><dt class="property-optional property-deprecated"
             title="Optional, Deprecated">
         <span id="maxttl_go">
 <a href="#maxttl_go" style="color: inherit; text-decoration: inherit;">Max<wbr>Ttl</a>
@@ -882,8 +825,7 @@ via nested structures of meta, user, name, and groups.
     </dt>
     <dd>{{% md %}}The maximum allowed lifetime of tokens
 issued using this role, provided as a number of seconds.
-{{% /md %}}<p class="property-message">Deprecated: {{% md %}}use `token_max_ttl` instead if you are running Vault &gt;= 1.2{{% /md %}}</p></dd>
-    <dt class="property-optional"
+{{% /md %}}<p class="property-message">Deprecated: {{% md %}}use `token_max_ttl` instead if you are running Vault &gt;= 1.2{{% /md %}}</p></dd><dt class="property-optional"
             title="Optional">
         <span id="notbeforeleeway_go">
 <a href="#notbeforeleeway_go" style="color: inherit; text-decoration: inherit;">Not<wbr>Before<wbr>Leeway</a>
@@ -894,8 +836,7 @@ issued using this role, provided as a number of seconds.
     <dd>{{% md %}}The amount of leeway to add to not before (`nbf`) claims to account for
 clock skew, in seconds. Defaults to `60` seconds if set to `0` and can be disabled if set to `-1`.
 Only applicable with "jwt" roles.
-{{% /md %}}</dd>
-    <dt class="property-optional property-deprecated"
+{{% /md %}}</dd><dt class="property-optional property-deprecated"
             title="Optional, Deprecated">
         <span id="numuses_go">
 <a href="#numuses_go" style="color: inherit; text-decoration: inherit;">Num<wbr>Uses</a>
@@ -905,8 +846,7 @@ Only applicable with "jwt" roles.
     </dt>
     <dd>{{% md %}}If set, puts a use-count
 limitation on the issued token.
-{{% /md %}}<p class="property-message">Deprecated: {{% md %}}use `token_num_uses` instead if you are running Vault &gt;= 1.2{{% /md %}}</p></dd>
-    <dt class="property-optional"
+{{% /md %}}<p class="property-message">Deprecated: {{% md %}}use `token_num_uses` instead if you are running Vault &gt;= 1.2{{% /md %}}</p></dd><dt class="property-optional"
             title="Optional">
         <span id="oidcscopes_go">
 <a href="#oidcscopes_go" style="color: inherit; text-decoration: inherit;">Oidc<wbr>Scopes</a>
@@ -916,8 +856,7 @@ limitation on the issued token.
     </dt>
     <dd>{{% md %}}If set, a list of OIDC scopes to be used with an OIDC role.
 The standard scope "openid" is automatically included and need not be specified.
-{{% /md %}}</dd>
-    <dt class="property-optional property-deprecated"
+{{% /md %}}</dd><dt class="property-optional property-deprecated"
             title="Optional, Deprecated">
         <span id="period_go">
 <a href="#period_go" style="color: inherit; text-decoration: inherit;">Period</a>
@@ -929,8 +868,7 @@ The standard scope "openid" is automatically included and need not be specified.
 token generated using this role should never expire. The token should be renewed within the
 duration specified by this value. At each renewal, the token's TTL will be set to the
 value of this field. Specified in seconds.
-{{% /md %}}<p class="property-message">Deprecated: {{% md %}}use `token_period` instead if you are running Vault &gt;= 1.2{{% /md %}}</p></dd>
-    <dt class="property-optional property-deprecated"
+{{% /md %}}<p class="property-message">Deprecated: {{% md %}}use `token_period` instead if you are running Vault &gt;= 1.2{{% /md %}}</p></dd><dt class="property-optional property-deprecated"
             title="Optional, Deprecated">
         <span id="policies_go">
 <a href="#policies_go" style="color: inherit; text-decoration: inherit;">Policies</a>
@@ -940,8 +878,7 @@ value of this field. Specified in seconds.
     </dt>
     <dd>{{% md %}}An array of strings
 specifying the policies to be set on tokens issued using this role.
-{{% /md %}}<p class="property-message">Deprecated: {{% md %}}use `token_policies` instead if you are running Vault &gt;= 1.2{{% /md %}}</p></dd>
-    <dt class="property-optional"
+{{% /md %}}<p class="property-message">Deprecated: {{% md %}}use `token_policies` instead if you are running Vault &gt;= 1.2{{% /md %}}</p></dd><dt class="property-optional"
             title="Optional">
         <span id="roletype_go">
 <a href="#roletype_go" style="color: inherit; text-decoration: inherit;">Role<wbr>Type</a>
@@ -950,8 +887,7 @@ specifying the policies to be set on tokens issued using this role.
         <span class="property-type">string</span>
     </dt>
     <dd>{{% md %}}Type of role, either "oidc" (default) or "jwt".
-{{% /md %}}</dd>
-    <dt class="property-optional"
+{{% /md %}}</dd><dt class="property-optional"
             title="Optional">
         <span id="tokenboundcidrs_go">
 <a href="#tokenboundcidrs_go" style="color: inherit; text-decoration: inherit;">Token<wbr>Bound<wbr>Cidrs</a>
@@ -962,8 +898,7 @@ specifying the policies to be set on tokens issued using this role.
     <dd>{{% md %}}List of CIDR blocks; if set, specifies blocks of IP
 addresses which can authenticate successfully, and ties the resulting token to these blocks
 as well.
-{{% /md %}}</dd>
-    <dt class="property-optional"
+{{% /md %}}</dd><dt class="property-optional"
             title="Optional">
         <span id="tokenexplicitmaxttl_go">
 <a href="#tokenexplicitmaxttl_go" style="color: inherit; text-decoration: inherit;">Token<wbr>Explicit<wbr>Max<wbr>Ttl</a>
@@ -975,8 +910,7 @@ as well.
 [explicit max TTL](https://www.vaultproject.io/docs/concepts/tokens.html#token-time-to-live-periodic-tokens-and-explicit-max-ttls)
 onto the token in number of seconds. This is a hard cap even if `token_ttl` and
 `token_max_ttl` would otherwise allow a renewal.
-{{% /md %}}</dd>
-    <dt class="property-optional"
+{{% /md %}}</dd><dt class="property-optional"
             title="Optional">
         <span id="tokenmaxttl_go">
 <a href="#tokenmaxttl_go" style="color: inherit; text-decoration: inherit;">Token<wbr>Max<wbr>Ttl</a>
@@ -986,8 +920,7 @@ onto the token in number of seconds. This is a hard cap even if `token_ttl` and
     </dt>
     <dd>{{% md %}}The maximum lifetime for generated tokens in number of seconds.
 Its current value will be referenced at renewal time.
-{{% /md %}}</dd>
-    <dt class="property-optional"
+{{% /md %}}</dd><dt class="property-optional"
             title="Optional">
         <span id="tokennodefaultpolicy_go">
 <a href="#tokennodefaultpolicy_go" style="color: inherit; text-decoration: inherit;">Token<wbr>No<wbr>Default<wbr>Policy</a>
@@ -997,8 +930,7 @@ Its current value will be referenced at renewal time.
     </dt>
     <dd>{{% md %}}If set, the default policy will not be set on
 generated tokens; otherwise it will be added to the policies set in token_policies.
-{{% /md %}}</dd>
-    <dt class="property-optional"
+{{% /md %}}</dd><dt class="property-optional"
             title="Optional">
         <span id="tokennumuses_go">
 <a href="#tokennumuses_go" style="color: inherit; text-decoration: inherit;">Token<wbr>Num<wbr>Uses</a>
@@ -1009,8 +941,7 @@ generated tokens; otherwise it will be added to the policies set in token_polici
     <dd>{{% md %}}The
 [period](https://www.vaultproject.io/docs/concepts/tokens.html#token-time-to-live-periodic-tokens-and-explicit-max-ttls),
 if any, in number of seconds to set on the token.
-{{% /md %}}</dd>
-    <dt class="property-optional"
+{{% /md %}}</dd><dt class="property-optional"
             title="Optional">
         <span id="tokenperiod_go">
 <a href="#tokenperiod_go" style="color: inherit; text-decoration: inherit;">Token<wbr>Period</a>
@@ -1022,8 +953,7 @@ if any, in number of seconds to set on the token.
 token generated using this role should never expire. The token should be renewed within the
 duration specified by this value. At each renewal, the token's TTL will be set to the
 value of this field. Specified in seconds.
-{{% /md %}}</dd>
-    <dt class="property-optional"
+{{% /md %}}</dd><dt class="property-optional"
             title="Optional">
         <span id="tokenpolicies_go">
 <a href="#tokenpolicies_go" style="color: inherit; text-decoration: inherit;">Token<wbr>Policies</a>
@@ -1033,8 +963,7 @@ value of this field. Specified in seconds.
     </dt>
     <dd>{{% md %}}List of policies to encode onto generated tokens. Depending
 on the auth method, this list may be supplemented by user/group/other values.
-{{% /md %}}</dd>
-    <dt class="property-optional"
+{{% /md %}}</dd><dt class="property-optional"
             title="Optional">
         <span id="tokenttl_go">
 <a href="#tokenttl_go" style="color: inherit; text-decoration: inherit;">Token<wbr>Ttl</a>
@@ -1044,8 +973,7 @@ on the auth method, this list may be supplemented by user/group/other values.
     </dt>
     <dd>{{% md %}}The incremental lifetime for generated tokens in number of seconds.
 Its current value will be referenced at renewal time.
-{{% /md %}}</dd>
-    <dt class="property-optional"
+{{% /md %}}</dd><dt class="property-optional"
             title="Optional">
         <span id="tokentype_go">
 <a href="#tokentype_go" style="color: inherit; text-decoration: inherit;">Token<wbr>Type</a>
@@ -1058,8 +986,7 @@ Its current value will be referenced at renewal time.
 `service` tokens). For token store roles, there are two additional possibilities:
 `default-service` and `default-batch` which specify the type to return unless the client
 requests a different type at generation time.
-{{% /md %}}</dd>
-    <dt class="property-optional property-deprecated"
+{{% /md %}}</dd><dt class="property-optional property-deprecated"
             title="Optional, Deprecated">
         <span id="ttl_go">
 <a href="#ttl_go" style="color: inherit; text-decoration: inherit;">Ttl</a>
@@ -1069,8 +996,7 @@ requests a different type at generation time.
     </dt>
     <dd>{{% md %}}The TTL period of tokens issued
 using this role, provided as a number of seconds.
-{{% /md %}}<p class="property-message">Deprecated: {{% md %}}use `token_ttl` instead if you are running Vault &gt;= 1.2{{% /md %}}</p></dd>
-    <dt class="property-optional"
+{{% /md %}}<p class="property-message">Deprecated: {{% md %}}use `token_ttl` instead if you are running Vault &gt;= 1.2{{% /md %}}</p></dd><dt class="property-optional"
             title="Optional">
         <span id="verboseoidclogging_go">
 <a href="#verboseoidclogging_go" style="color: inherit; text-decoration: inherit;">Verbose<wbr>Oidc<wbr>Logging</a>
@@ -1081,14 +1007,11 @@ using this role, provided as a number of seconds.
     <dd>{{% md %}}Log received OIDC tokens and claims when debug-level
 logging is active. Not recommended in production since sensitive information may be present
 in OIDC responses.
-{{% /md %}}</dd>
-</dl>
+{{% /md %}}</dd></dl>
 {{% /choosable %}}
 
 {{% choosable language nodejs %}}
-<dl class="resources-properties">
-
-    <dt class="property-required"
+<dl class="resources-properties"><dt class="property-required"
             title="Required">
         <span id="rolename_nodejs">
 <a href="#rolename_nodejs" style="color: inherit; text-decoration: inherit;">role<wbr>Name</a>
@@ -1097,8 +1020,7 @@ in OIDC responses.
         <span class="property-type">string</span>
     </dt>
     <dd>{{% md %}}The name of the role.
-{{% /md %}}</dd>
-    <dt class="property-required"
+{{% /md %}}</dd><dt class="property-required"
             title="Required">
         <span id="userclaim_nodejs">
 <a href="#userclaim_nodejs" style="color: inherit; text-decoration: inherit;">user<wbr>Claim</a>
@@ -1109,8 +1031,7 @@ in OIDC responses.
     <dd>{{% md %}}The claim to use to uniquely identify
 the user; this will be used as the name for the Identity entity alias created
 due to a successful login.
-{{% /md %}}</dd>
-    <dt class="property-optional"
+{{% /md %}}</dd><dt class="property-optional"
             title="Optional">
         <span id="allowedredirecturis_nodejs">
 <a href="#allowedredirecturis_nodejs" style="color: inherit; text-decoration: inherit;">allowed<wbr>Redirect<wbr>Uris</a>
@@ -1120,8 +1041,7 @@ due to a successful login.
     </dt>
     <dd>{{% md %}}The list of allowed values for redirect_uri during OIDC logins.
 Required for OIDC roles
-{{% /md %}}</dd>
-    <dt class="property-optional"
+{{% /md %}}</dd><dt class="property-optional"
             title="Optional">
         <span id="backend_nodejs">
 <a href="#backend_nodejs" style="color: inherit; text-decoration: inherit;">backend</a>
@@ -1131,8 +1051,7 @@ Required for OIDC roles
     </dt>
     <dd>{{% md %}}The unique name of the auth backend to configure.
 Defaults to `jwt`.
-{{% /md %}}</dd>
-    <dt class="property-optional"
+{{% /md %}}</dd><dt class="property-optional"
             title="Optional">
         <span id="boundaudiences_nodejs">
 <a href="#boundaudiences_nodejs" style="color: inherit; text-decoration: inherit;">bound<wbr>Audiences</a>
@@ -1142,8 +1061,7 @@ Defaults to `jwt`.
     </dt>
     <dd>{{% md %}}(Required for roles of type `jwt`, optional for roles of
 type `oidc`) List of `aud` claims to match against. Any match is sufficient.
-{{% /md %}}</dd>
-    <dt class="property-optional property-deprecated"
+{{% /md %}}</dd><dt class="property-optional property-deprecated"
             title="Optional, Deprecated">
         <span id="boundcidrs_nodejs">
 <a href="#boundcidrs_nodejs" style="color: inherit; text-decoration: inherit;">bound<wbr>Cidrs</a>
@@ -1153,8 +1071,7 @@ type `oidc`) List of `aud` claims to match against. Any match is sufficient.
     </dt>
     <dd>{{% md %}}If set, a list of
 CIDRs valid as the source address for login requests. This value is also encoded into any resulting token.
-{{% /md %}}<p class="property-message">Deprecated: {{% md %}}use `token_bound_cidrs` instead if you are running Vault &gt;= 1.2{{% /md %}}</p></dd>
-    <dt class="property-optional"
+{{% /md %}}<p class="property-message">Deprecated: {{% md %}}use `token_bound_cidrs` instead if you are running Vault &gt;= 1.2{{% /md %}}</p></dd><dt class="property-optional"
             title="Optional">
         <span id="boundclaims_nodejs">
 <a href="#boundclaims_nodejs" style="color: inherit; text-decoration: inherit;">bound<wbr>Claims</a>
@@ -1164,8 +1081,7 @@ CIDRs valid as the source address for login requests. This value is also encoded
     </dt>
     <dd>{{% md %}}If set, a map of claims/values to match against.
 The expected value may be a single string or a list of strings.
-{{% /md %}}</dd>
-    <dt class="property-optional"
+{{% /md %}}</dd><dt class="property-optional"
             title="Optional">
         <span id="boundclaimstype_nodejs">
 <a href="#boundclaimstype_nodejs" style="color: inherit; text-decoration: inherit;">bound<wbr>Claims<wbr>Type</a>
@@ -1176,8 +1092,7 @@ The expected value may be a single string or a list of strings.
     <dd>{{% md %}}How to interpret values in the claims/values
 map (`bound_claims`): can be either `string` (exact match) or `glob` (wildcard
 match). Requires Vault 1.4.0 or above.
-{{% /md %}}</dd>
-    <dt class="property-optional"
+{{% /md %}}</dd><dt class="property-optional"
             title="Optional">
         <span id="boundsubject_nodejs">
 <a href="#boundsubject_nodejs" style="color: inherit; text-decoration: inherit;">bound<wbr>Subject</a>
@@ -1187,8 +1102,7 @@ match). Requires Vault 1.4.0 or above.
     </dt>
     <dd>{{% md %}}If set, requires that the `sub` claim matches
 this value.
-{{% /md %}}</dd>
-    <dt class="property-optional"
+{{% /md %}}</dd><dt class="property-optional"
             title="Optional">
         <span id="claimmappings_nodejs">
 <a href="#claimmappings_nodejs" style="color: inherit; text-decoration: inherit;">claim<wbr>Mappings</a>
@@ -1198,8 +1112,7 @@ this value.
     </dt>
     <dd>{{% md %}}If set, a map of claims (keys) to be copied
 to specified metadata fields (values).
-{{% /md %}}</dd>
-    <dt class="property-optional"
+{{% /md %}}</dd><dt class="property-optional"
             title="Optional">
         <span id="clockskewleeway_nodejs">
 <a href="#clockskewleeway_nodejs" style="color: inherit; text-decoration: inherit;">clock<wbr>Skew<wbr>Leeway</a>
@@ -1210,8 +1123,7 @@ to specified metadata fields (values).
     <dd>{{% md %}}The amount of leeway to add to all claims to account for clock skew, in
 seconds. Defaults to `60` seconds if set to `0` and can be disabled if set to `-1`.
 Only applicable with "jwt" roles.
-{{% /md %}}</dd>
-    <dt class="property-optional"
+{{% /md %}}</dd><dt class="property-optional"
             title="Optional">
         <span id="expirationleeway_nodejs">
 <a href="#expirationleeway_nodejs" style="color: inherit; text-decoration: inherit;">expiration<wbr>Leeway</a>
@@ -1222,8 +1134,7 @@ Only applicable with "jwt" roles.
     <dd>{{% md %}}The amount of leeway to add to expiration (`exp`) claims to account for
 clock skew, in seconds. Defaults to `60` seconds if set to `0` and can be disabled if set to `-1`.
 Only applicable with "jwt" roles.
-{{% /md %}}</dd>
-    <dt class="property-optional"
+{{% /md %}}</dd><dt class="property-optional"
             title="Optional">
         <span id="groupsclaim_nodejs">
 <a href="#groupsclaim_nodejs" style="color: inherit; text-decoration: inherit;">groups<wbr>Claim</a>
@@ -1235,8 +1146,7 @@ Only applicable with "jwt" roles.
 the set of groups to which the user belongs; this will be used as the names
 for the Identity group aliases created due to a successful login. The claim
 value must be a list of strings.
-{{% /md %}}</dd>
-    <dt class="property-optional property-deprecated"
+{{% /md %}}</dd><dt class="property-optional property-deprecated"
             title="Optional, Deprecated">
         <span id="groupsclaimdelimiterpattern_nodejs">
 <a href="#groupsclaimdelimiterpattern_nodejs" style="color: inherit; text-decoration: inherit;">groups<wbr>Claim<wbr>Delimiter<wbr>Pattern</a>
@@ -1253,8 +1163,7 @@ For instance, a groups_claim of meta/user.name/groups with this field
 set to // will expect nested structures named meta, user.name, and groups.
 If this field was set to /./ the groups information would expect to be
 via nested structures of meta, user, name, and groups.
-{{% /md %}}<p class="property-message">Deprecated: {{% md %}}`groups_claim_delimiter_pattern` has been removed since Vault 1.1. If the groups claim is not at the top level, it can now be specified as a JSONPointer.{{% /md %}}</p></dd>
-    <dt class="property-optional property-deprecated"
+{{% /md %}}<p class="property-message">Deprecated: {{% md %}}`groups_claim_delimiter_pattern` has been removed since Vault 1.1. If the groups claim is not at the top level, it can now be specified as a JSONPointer.{{% /md %}}</p></dd><dt class="property-optional property-deprecated"
             title="Optional, Deprecated">
         <span id="maxttl_nodejs">
 <a href="#maxttl_nodejs" style="color: inherit; text-decoration: inherit;">max<wbr>Ttl</a>
@@ -1264,8 +1173,7 @@ via nested structures of meta, user, name, and groups.
     </dt>
     <dd>{{% md %}}The maximum allowed lifetime of tokens
 issued using this role, provided as a number of seconds.
-{{% /md %}}<p class="property-message">Deprecated: {{% md %}}use `token_max_ttl` instead if you are running Vault &gt;= 1.2{{% /md %}}</p></dd>
-    <dt class="property-optional"
+{{% /md %}}<p class="property-message">Deprecated: {{% md %}}use `token_max_ttl` instead if you are running Vault &gt;= 1.2{{% /md %}}</p></dd><dt class="property-optional"
             title="Optional">
         <span id="notbeforeleeway_nodejs">
 <a href="#notbeforeleeway_nodejs" style="color: inherit; text-decoration: inherit;">not<wbr>Before<wbr>Leeway</a>
@@ -1276,8 +1184,7 @@ issued using this role, provided as a number of seconds.
     <dd>{{% md %}}The amount of leeway to add to not before (`nbf`) claims to account for
 clock skew, in seconds. Defaults to `60` seconds if set to `0` and can be disabled if set to `-1`.
 Only applicable with "jwt" roles.
-{{% /md %}}</dd>
-    <dt class="property-optional property-deprecated"
+{{% /md %}}</dd><dt class="property-optional property-deprecated"
             title="Optional, Deprecated">
         <span id="numuses_nodejs">
 <a href="#numuses_nodejs" style="color: inherit; text-decoration: inherit;">num<wbr>Uses</a>
@@ -1287,8 +1194,7 @@ Only applicable with "jwt" roles.
     </dt>
     <dd>{{% md %}}If set, puts a use-count
 limitation on the issued token.
-{{% /md %}}<p class="property-message">Deprecated: {{% md %}}use `token_num_uses` instead if you are running Vault &gt;= 1.2{{% /md %}}</p></dd>
-    <dt class="property-optional"
+{{% /md %}}<p class="property-message">Deprecated: {{% md %}}use `token_num_uses` instead if you are running Vault &gt;= 1.2{{% /md %}}</p></dd><dt class="property-optional"
             title="Optional">
         <span id="oidcscopes_nodejs">
 <a href="#oidcscopes_nodejs" style="color: inherit; text-decoration: inherit;">oidc<wbr>Scopes</a>
@@ -1298,8 +1204,7 @@ limitation on the issued token.
     </dt>
     <dd>{{% md %}}If set, a list of OIDC scopes to be used with an OIDC role.
 The standard scope "openid" is automatically included and need not be specified.
-{{% /md %}}</dd>
-    <dt class="property-optional property-deprecated"
+{{% /md %}}</dd><dt class="property-optional property-deprecated"
             title="Optional, Deprecated">
         <span id="period_nodejs">
 <a href="#period_nodejs" style="color: inherit; text-decoration: inherit;">period</a>
@@ -1311,8 +1216,7 @@ The standard scope "openid" is automatically included and need not be specified.
 token generated using this role should never expire. The token should be renewed within the
 duration specified by this value. At each renewal, the token's TTL will be set to the
 value of this field. Specified in seconds.
-{{% /md %}}<p class="property-message">Deprecated: {{% md %}}use `token_period` instead if you are running Vault &gt;= 1.2{{% /md %}}</p></dd>
-    <dt class="property-optional property-deprecated"
+{{% /md %}}<p class="property-message">Deprecated: {{% md %}}use `token_period` instead if you are running Vault &gt;= 1.2{{% /md %}}</p></dd><dt class="property-optional property-deprecated"
             title="Optional, Deprecated">
         <span id="policies_nodejs">
 <a href="#policies_nodejs" style="color: inherit; text-decoration: inherit;">policies</a>
@@ -1322,8 +1226,7 @@ value of this field. Specified in seconds.
     </dt>
     <dd>{{% md %}}An array of strings
 specifying the policies to be set on tokens issued using this role.
-{{% /md %}}<p class="property-message">Deprecated: {{% md %}}use `token_policies` instead if you are running Vault &gt;= 1.2{{% /md %}}</p></dd>
-    <dt class="property-optional"
+{{% /md %}}<p class="property-message">Deprecated: {{% md %}}use `token_policies` instead if you are running Vault &gt;= 1.2{{% /md %}}</p></dd><dt class="property-optional"
             title="Optional">
         <span id="roletype_nodejs">
 <a href="#roletype_nodejs" style="color: inherit; text-decoration: inherit;">role<wbr>Type</a>
@@ -1332,8 +1235,7 @@ specifying the policies to be set on tokens issued using this role.
         <span class="property-type">string</span>
     </dt>
     <dd>{{% md %}}Type of role, either "oidc" (default) or "jwt".
-{{% /md %}}</dd>
-    <dt class="property-optional"
+{{% /md %}}</dd><dt class="property-optional"
             title="Optional">
         <span id="tokenboundcidrs_nodejs">
 <a href="#tokenboundcidrs_nodejs" style="color: inherit; text-decoration: inherit;">token<wbr>Bound<wbr>Cidrs</a>
@@ -1344,8 +1246,7 @@ specifying the policies to be set on tokens issued using this role.
     <dd>{{% md %}}List of CIDR blocks; if set, specifies blocks of IP
 addresses which can authenticate successfully, and ties the resulting token to these blocks
 as well.
-{{% /md %}}</dd>
-    <dt class="property-optional"
+{{% /md %}}</dd><dt class="property-optional"
             title="Optional">
         <span id="tokenexplicitmaxttl_nodejs">
 <a href="#tokenexplicitmaxttl_nodejs" style="color: inherit; text-decoration: inherit;">token<wbr>Explicit<wbr>Max<wbr>Ttl</a>
@@ -1357,8 +1258,7 @@ as well.
 [explicit max TTL](https://www.vaultproject.io/docs/concepts/tokens.html#token-time-to-live-periodic-tokens-and-explicit-max-ttls)
 onto the token in number of seconds. This is a hard cap even if `token_ttl` and
 `token_max_ttl` would otherwise allow a renewal.
-{{% /md %}}</dd>
-    <dt class="property-optional"
+{{% /md %}}</dd><dt class="property-optional"
             title="Optional">
         <span id="tokenmaxttl_nodejs">
 <a href="#tokenmaxttl_nodejs" style="color: inherit; text-decoration: inherit;">token<wbr>Max<wbr>Ttl</a>
@@ -1368,8 +1268,7 @@ onto the token in number of seconds. This is a hard cap even if `token_ttl` and
     </dt>
     <dd>{{% md %}}The maximum lifetime for generated tokens in number of seconds.
 Its current value will be referenced at renewal time.
-{{% /md %}}</dd>
-    <dt class="property-optional"
+{{% /md %}}</dd><dt class="property-optional"
             title="Optional">
         <span id="tokennodefaultpolicy_nodejs">
 <a href="#tokennodefaultpolicy_nodejs" style="color: inherit; text-decoration: inherit;">token<wbr>No<wbr>Default<wbr>Policy</a>
@@ -1379,8 +1278,7 @@ Its current value will be referenced at renewal time.
     </dt>
     <dd>{{% md %}}If set, the default policy will not be set on
 generated tokens; otherwise it will be added to the policies set in token_policies.
-{{% /md %}}</dd>
-    <dt class="property-optional"
+{{% /md %}}</dd><dt class="property-optional"
             title="Optional">
         <span id="tokennumuses_nodejs">
 <a href="#tokennumuses_nodejs" style="color: inherit; text-decoration: inherit;">token<wbr>Num<wbr>Uses</a>
@@ -1391,8 +1289,7 @@ generated tokens; otherwise it will be added to the policies set in token_polici
     <dd>{{% md %}}The
 [period](https://www.vaultproject.io/docs/concepts/tokens.html#token-time-to-live-periodic-tokens-and-explicit-max-ttls),
 if any, in number of seconds to set on the token.
-{{% /md %}}</dd>
-    <dt class="property-optional"
+{{% /md %}}</dd><dt class="property-optional"
             title="Optional">
         <span id="tokenperiod_nodejs">
 <a href="#tokenperiod_nodejs" style="color: inherit; text-decoration: inherit;">token<wbr>Period</a>
@@ -1404,8 +1301,7 @@ if any, in number of seconds to set on the token.
 token generated using this role should never expire. The token should be renewed within the
 duration specified by this value. At each renewal, the token's TTL will be set to the
 value of this field. Specified in seconds.
-{{% /md %}}</dd>
-    <dt class="property-optional"
+{{% /md %}}</dd><dt class="property-optional"
             title="Optional">
         <span id="tokenpolicies_nodejs">
 <a href="#tokenpolicies_nodejs" style="color: inherit; text-decoration: inherit;">token<wbr>Policies</a>
@@ -1415,8 +1311,7 @@ value of this field. Specified in seconds.
     </dt>
     <dd>{{% md %}}List of policies to encode onto generated tokens. Depending
 on the auth method, this list may be supplemented by user/group/other values.
-{{% /md %}}</dd>
-    <dt class="property-optional"
+{{% /md %}}</dd><dt class="property-optional"
             title="Optional">
         <span id="tokenttl_nodejs">
 <a href="#tokenttl_nodejs" style="color: inherit; text-decoration: inherit;">token<wbr>Ttl</a>
@@ -1426,8 +1321,7 @@ on the auth method, this list may be supplemented by user/group/other values.
     </dt>
     <dd>{{% md %}}The incremental lifetime for generated tokens in number of seconds.
 Its current value will be referenced at renewal time.
-{{% /md %}}</dd>
-    <dt class="property-optional"
+{{% /md %}}</dd><dt class="property-optional"
             title="Optional">
         <span id="tokentype_nodejs">
 <a href="#tokentype_nodejs" style="color: inherit; text-decoration: inherit;">token<wbr>Type</a>
@@ -1440,8 +1334,7 @@ Its current value will be referenced at renewal time.
 `service` tokens). For token store roles, there are two additional possibilities:
 `default-service` and `default-batch` which specify the type to return unless the client
 requests a different type at generation time.
-{{% /md %}}</dd>
-    <dt class="property-optional property-deprecated"
+{{% /md %}}</dd><dt class="property-optional property-deprecated"
             title="Optional, Deprecated">
         <span id="ttl_nodejs">
 <a href="#ttl_nodejs" style="color: inherit; text-decoration: inherit;">ttl</a>
@@ -1451,8 +1344,7 @@ requests a different type at generation time.
     </dt>
     <dd>{{% md %}}The TTL period of tokens issued
 using this role, provided as a number of seconds.
-{{% /md %}}<p class="property-message">Deprecated: {{% md %}}use `token_ttl` instead if you are running Vault &gt;= 1.2{{% /md %}}</p></dd>
-    <dt class="property-optional"
+{{% /md %}}<p class="property-message">Deprecated: {{% md %}}use `token_ttl` instead if you are running Vault &gt;= 1.2{{% /md %}}</p></dd><dt class="property-optional"
             title="Optional">
         <span id="verboseoidclogging_nodejs">
 <a href="#verboseoidclogging_nodejs" style="color: inherit; text-decoration: inherit;">verbose<wbr>Oidc<wbr>Logging</a>
@@ -1463,14 +1355,11 @@ using this role, provided as a number of seconds.
     <dd>{{% md %}}Log received OIDC tokens and claims when debug-level
 logging is active. Not recommended in production since sensitive information may be present
 in OIDC responses.
-{{% /md %}}</dd>
-</dl>
+{{% /md %}}</dd></dl>
 {{% /choosable %}}
 
 {{% choosable language python %}}
-<dl class="resources-properties">
-
-    <dt class="property-required"
+<dl class="resources-properties"><dt class="property-required"
             title="Required">
         <span id="role_name_python">
 <a href="#role_name_python" style="color: inherit; text-decoration: inherit;">role_<wbr>name</a>
@@ -1479,8 +1368,7 @@ in OIDC responses.
         <span class="property-type">str</span>
     </dt>
     <dd>{{% md %}}The name of the role.
-{{% /md %}}</dd>
-    <dt class="property-required"
+{{% /md %}}</dd><dt class="property-required"
             title="Required">
         <span id="user_claim_python">
 <a href="#user_claim_python" style="color: inherit; text-decoration: inherit;">user_<wbr>claim</a>
@@ -1491,8 +1379,7 @@ in OIDC responses.
     <dd>{{% md %}}The claim to use to uniquely identify
 the user; this will be used as the name for the Identity entity alias created
 due to a successful login.
-{{% /md %}}</dd>
-    <dt class="property-optional"
+{{% /md %}}</dd><dt class="property-optional"
             title="Optional">
         <span id="allowed_redirect_uris_python">
 <a href="#allowed_redirect_uris_python" style="color: inherit; text-decoration: inherit;">allowed_<wbr>redirect_<wbr>uris</a>
@@ -1502,8 +1389,7 @@ due to a successful login.
     </dt>
     <dd>{{% md %}}The list of allowed values for redirect_uri during OIDC logins.
 Required for OIDC roles
-{{% /md %}}</dd>
-    <dt class="property-optional"
+{{% /md %}}</dd><dt class="property-optional"
             title="Optional">
         <span id="backend_python">
 <a href="#backend_python" style="color: inherit; text-decoration: inherit;">backend</a>
@@ -1513,8 +1399,7 @@ Required for OIDC roles
     </dt>
     <dd>{{% md %}}The unique name of the auth backend to configure.
 Defaults to `jwt`.
-{{% /md %}}</dd>
-    <dt class="property-optional"
+{{% /md %}}</dd><dt class="property-optional"
             title="Optional">
         <span id="bound_audiences_python">
 <a href="#bound_audiences_python" style="color: inherit; text-decoration: inherit;">bound_<wbr>audiences</a>
@@ -1524,8 +1409,7 @@ Defaults to `jwt`.
     </dt>
     <dd>{{% md %}}(Required for roles of type `jwt`, optional for roles of
 type `oidc`) List of `aud` claims to match against. Any match is sufficient.
-{{% /md %}}</dd>
-    <dt class="property-optional property-deprecated"
+{{% /md %}}</dd><dt class="property-optional property-deprecated"
             title="Optional, Deprecated">
         <span id="bound_cidrs_python">
 <a href="#bound_cidrs_python" style="color: inherit; text-decoration: inherit;">bound_<wbr>cidrs</a>
@@ -1535,8 +1419,7 @@ type `oidc`) List of `aud` claims to match against. Any match is sufficient.
     </dt>
     <dd>{{% md %}}If set, a list of
 CIDRs valid as the source address for login requests. This value is also encoded into any resulting token.
-{{% /md %}}<p class="property-message">Deprecated: {{% md %}}use `token_bound_cidrs` instead if you are running Vault &gt;= 1.2{{% /md %}}</p></dd>
-    <dt class="property-optional"
+{{% /md %}}<p class="property-message">Deprecated: {{% md %}}use `token_bound_cidrs` instead if you are running Vault &gt;= 1.2{{% /md %}}</p></dd><dt class="property-optional"
             title="Optional">
         <span id="bound_claims_python">
 <a href="#bound_claims_python" style="color: inherit; text-decoration: inherit;">bound_<wbr>claims</a>
@@ -1546,8 +1429,7 @@ CIDRs valid as the source address for login requests. This value is also encoded
     </dt>
     <dd>{{% md %}}If set, a map of claims/values to match against.
 The expected value may be a single string or a list of strings.
-{{% /md %}}</dd>
-    <dt class="property-optional"
+{{% /md %}}</dd><dt class="property-optional"
             title="Optional">
         <span id="bound_claims_type_python">
 <a href="#bound_claims_type_python" style="color: inherit; text-decoration: inherit;">bound_<wbr>claims_<wbr>type</a>
@@ -1558,8 +1440,7 @@ The expected value may be a single string or a list of strings.
     <dd>{{% md %}}How to interpret values in the claims/values
 map (`bound_claims`): can be either `string` (exact match) or `glob` (wildcard
 match). Requires Vault 1.4.0 or above.
-{{% /md %}}</dd>
-    <dt class="property-optional"
+{{% /md %}}</dd><dt class="property-optional"
             title="Optional">
         <span id="bound_subject_python">
 <a href="#bound_subject_python" style="color: inherit; text-decoration: inherit;">bound_<wbr>subject</a>
@@ -1569,8 +1450,7 @@ match). Requires Vault 1.4.0 or above.
     </dt>
     <dd>{{% md %}}If set, requires that the `sub` claim matches
 this value.
-{{% /md %}}</dd>
-    <dt class="property-optional"
+{{% /md %}}</dd><dt class="property-optional"
             title="Optional">
         <span id="claim_mappings_python">
 <a href="#claim_mappings_python" style="color: inherit; text-decoration: inherit;">claim_<wbr>mappings</a>
@@ -1580,8 +1460,7 @@ this value.
     </dt>
     <dd>{{% md %}}If set, a map of claims (keys) to be copied
 to specified metadata fields (values).
-{{% /md %}}</dd>
-    <dt class="property-optional"
+{{% /md %}}</dd><dt class="property-optional"
             title="Optional">
         <span id="clock_skew_leeway_python">
 <a href="#clock_skew_leeway_python" style="color: inherit; text-decoration: inherit;">clock_<wbr>skew_<wbr>leeway</a>
@@ -1592,8 +1471,7 @@ to specified metadata fields (values).
     <dd>{{% md %}}The amount of leeway to add to all claims to account for clock skew, in
 seconds. Defaults to `60` seconds if set to `0` and can be disabled if set to `-1`.
 Only applicable with "jwt" roles.
-{{% /md %}}</dd>
-    <dt class="property-optional"
+{{% /md %}}</dd><dt class="property-optional"
             title="Optional">
         <span id="expiration_leeway_python">
 <a href="#expiration_leeway_python" style="color: inherit; text-decoration: inherit;">expiration_<wbr>leeway</a>
@@ -1604,8 +1482,7 @@ Only applicable with "jwt" roles.
     <dd>{{% md %}}The amount of leeway to add to expiration (`exp`) claims to account for
 clock skew, in seconds. Defaults to `60` seconds if set to `0` and can be disabled if set to `-1`.
 Only applicable with "jwt" roles.
-{{% /md %}}</dd>
-    <dt class="property-optional"
+{{% /md %}}</dd><dt class="property-optional"
             title="Optional">
         <span id="groups_claim_python">
 <a href="#groups_claim_python" style="color: inherit; text-decoration: inherit;">groups_<wbr>claim</a>
@@ -1617,8 +1494,7 @@ Only applicable with "jwt" roles.
 the set of groups to which the user belongs; this will be used as the names
 for the Identity group aliases created due to a successful login. The claim
 value must be a list of strings.
-{{% /md %}}</dd>
-    <dt class="property-optional property-deprecated"
+{{% /md %}}</dd><dt class="property-optional property-deprecated"
             title="Optional, Deprecated">
         <span id="groups_claim_delimiter_pattern_python">
 <a href="#groups_claim_delimiter_pattern_python" style="color: inherit; text-decoration: inherit;">groups_<wbr>claim_<wbr>delimiter_<wbr>pattern</a>
@@ -1635,8 +1511,7 @@ For instance, a groups_claim of meta/user.name/groups with this field
 set to // will expect nested structures named meta, user.name, and groups.
 If this field was set to /./ the groups information would expect to be
 via nested structures of meta, user, name, and groups.
-{{% /md %}}<p class="property-message">Deprecated: {{% md %}}`groups_claim_delimiter_pattern` has been removed since Vault 1.1. If the groups claim is not at the top level, it can now be specified as a JSONPointer.{{% /md %}}</p></dd>
-    <dt class="property-optional property-deprecated"
+{{% /md %}}<p class="property-message">Deprecated: {{% md %}}`groups_claim_delimiter_pattern` has been removed since Vault 1.1. If the groups claim is not at the top level, it can now be specified as a JSONPointer.{{% /md %}}</p></dd><dt class="property-optional property-deprecated"
             title="Optional, Deprecated">
         <span id="max_ttl_python">
 <a href="#max_ttl_python" style="color: inherit; text-decoration: inherit;">max_<wbr>ttl</a>
@@ -1646,8 +1521,7 @@ via nested structures of meta, user, name, and groups.
     </dt>
     <dd>{{% md %}}The maximum allowed lifetime of tokens
 issued using this role, provided as a number of seconds.
-{{% /md %}}<p class="property-message">Deprecated: {{% md %}}use `token_max_ttl` instead if you are running Vault &gt;= 1.2{{% /md %}}</p></dd>
-    <dt class="property-optional"
+{{% /md %}}<p class="property-message">Deprecated: {{% md %}}use `token_max_ttl` instead if you are running Vault &gt;= 1.2{{% /md %}}</p></dd><dt class="property-optional"
             title="Optional">
         <span id="not_before_leeway_python">
 <a href="#not_before_leeway_python" style="color: inherit; text-decoration: inherit;">not_<wbr>before_<wbr>leeway</a>
@@ -1658,8 +1532,7 @@ issued using this role, provided as a number of seconds.
     <dd>{{% md %}}The amount of leeway to add to not before (`nbf`) claims to account for
 clock skew, in seconds. Defaults to `60` seconds if set to `0` and can be disabled if set to `-1`.
 Only applicable with "jwt" roles.
-{{% /md %}}</dd>
-    <dt class="property-optional property-deprecated"
+{{% /md %}}</dd><dt class="property-optional property-deprecated"
             title="Optional, Deprecated">
         <span id="num_uses_python">
 <a href="#num_uses_python" style="color: inherit; text-decoration: inherit;">num_<wbr>uses</a>
@@ -1669,8 +1542,7 @@ Only applicable with "jwt" roles.
     </dt>
     <dd>{{% md %}}If set, puts a use-count
 limitation on the issued token.
-{{% /md %}}<p class="property-message">Deprecated: {{% md %}}use `token_num_uses` instead if you are running Vault &gt;= 1.2{{% /md %}}</p></dd>
-    <dt class="property-optional"
+{{% /md %}}<p class="property-message">Deprecated: {{% md %}}use `token_num_uses` instead if you are running Vault &gt;= 1.2{{% /md %}}</p></dd><dt class="property-optional"
             title="Optional">
         <span id="oidc_scopes_python">
 <a href="#oidc_scopes_python" style="color: inherit; text-decoration: inherit;">oidc_<wbr>scopes</a>
@@ -1680,8 +1552,7 @@ limitation on the issued token.
     </dt>
     <dd>{{% md %}}If set, a list of OIDC scopes to be used with an OIDC role.
 The standard scope "openid" is automatically included and need not be specified.
-{{% /md %}}</dd>
-    <dt class="property-optional property-deprecated"
+{{% /md %}}</dd><dt class="property-optional property-deprecated"
             title="Optional, Deprecated">
         <span id="period_python">
 <a href="#period_python" style="color: inherit; text-decoration: inherit;">period</a>
@@ -1693,8 +1564,7 @@ The standard scope "openid" is automatically included and need not be specified.
 token generated using this role should never expire. The token should be renewed within the
 duration specified by this value. At each renewal, the token's TTL will be set to the
 value of this field. Specified in seconds.
-{{% /md %}}<p class="property-message">Deprecated: {{% md %}}use `token_period` instead if you are running Vault &gt;= 1.2{{% /md %}}</p></dd>
-    <dt class="property-optional property-deprecated"
+{{% /md %}}<p class="property-message">Deprecated: {{% md %}}use `token_period` instead if you are running Vault &gt;= 1.2{{% /md %}}</p></dd><dt class="property-optional property-deprecated"
             title="Optional, Deprecated">
         <span id="policies_python">
 <a href="#policies_python" style="color: inherit; text-decoration: inherit;">policies</a>
@@ -1704,8 +1574,7 @@ value of this field. Specified in seconds.
     </dt>
     <dd>{{% md %}}An array of strings
 specifying the policies to be set on tokens issued using this role.
-{{% /md %}}<p class="property-message">Deprecated: {{% md %}}use `token_policies` instead if you are running Vault &gt;= 1.2{{% /md %}}</p></dd>
-    <dt class="property-optional"
+{{% /md %}}<p class="property-message">Deprecated: {{% md %}}use `token_policies` instead if you are running Vault &gt;= 1.2{{% /md %}}</p></dd><dt class="property-optional"
             title="Optional">
         <span id="role_type_python">
 <a href="#role_type_python" style="color: inherit; text-decoration: inherit;">role_<wbr>type</a>
@@ -1714,8 +1583,7 @@ specifying the policies to be set on tokens issued using this role.
         <span class="property-type">str</span>
     </dt>
     <dd>{{% md %}}Type of role, either "oidc" (default) or "jwt".
-{{% /md %}}</dd>
-    <dt class="property-optional"
+{{% /md %}}</dd><dt class="property-optional"
             title="Optional">
         <span id="token_bound_cidrs_python">
 <a href="#token_bound_cidrs_python" style="color: inherit; text-decoration: inherit;">token_<wbr>bound_<wbr>cidrs</a>
@@ -1726,8 +1594,7 @@ specifying the policies to be set on tokens issued using this role.
     <dd>{{% md %}}List of CIDR blocks; if set, specifies blocks of IP
 addresses which can authenticate successfully, and ties the resulting token to these blocks
 as well.
-{{% /md %}}</dd>
-    <dt class="property-optional"
+{{% /md %}}</dd><dt class="property-optional"
             title="Optional">
         <span id="token_explicit_max_ttl_python">
 <a href="#token_explicit_max_ttl_python" style="color: inherit; text-decoration: inherit;">token_<wbr>explicit_<wbr>max_<wbr>ttl</a>
@@ -1739,8 +1606,7 @@ as well.
 [explicit max TTL](https://www.vaultproject.io/docs/concepts/tokens.html#token-time-to-live-periodic-tokens-and-explicit-max-ttls)
 onto the token in number of seconds. This is a hard cap even if `token_ttl` and
 `token_max_ttl` would otherwise allow a renewal.
-{{% /md %}}</dd>
-    <dt class="property-optional"
+{{% /md %}}</dd><dt class="property-optional"
             title="Optional">
         <span id="token_max_ttl_python">
 <a href="#token_max_ttl_python" style="color: inherit; text-decoration: inherit;">token_<wbr>max_<wbr>ttl</a>
@@ -1750,8 +1616,7 @@ onto the token in number of seconds. This is a hard cap even if `token_ttl` and
     </dt>
     <dd>{{% md %}}The maximum lifetime for generated tokens in number of seconds.
 Its current value will be referenced at renewal time.
-{{% /md %}}</dd>
-    <dt class="property-optional"
+{{% /md %}}</dd><dt class="property-optional"
             title="Optional">
         <span id="token_no_default_policy_python">
 <a href="#token_no_default_policy_python" style="color: inherit; text-decoration: inherit;">token_<wbr>no_<wbr>default_<wbr>policy</a>
@@ -1761,8 +1626,7 @@ Its current value will be referenced at renewal time.
     </dt>
     <dd>{{% md %}}If set, the default policy will not be set on
 generated tokens; otherwise it will be added to the policies set in token_policies.
-{{% /md %}}</dd>
-    <dt class="property-optional"
+{{% /md %}}</dd><dt class="property-optional"
             title="Optional">
         <span id="token_num_uses_python">
 <a href="#token_num_uses_python" style="color: inherit; text-decoration: inherit;">token_<wbr>num_<wbr>uses</a>
@@ -1773,8 +1637,7 @@ generated tokens; otherwise it will be added to the policies set in token_polici
     <dd>{{% md %}}The
 [period](https://www.vaultproject.io/docs/concepts/tokens.html#token-time-to-live-periodic-tokens-and-explicit-max-ttls),
 if any, in number of seconds to set on the token.
-{{% /md %}}</dd>
-    <dt class="property-optional"
+{{% /md %}}</dd><dt class="property-optional"
             title="Optional">
         <span id="token_period_python">
 <a href="#token_period_python" style="color: inherit; text-decoration: inherit;">token_<wbr>period</a>
@@ -1786,8 +1649,7 @@ if any, in number of seconds to set on the token.
 token generated using this role should never expire. The token should be renewed within the
 duration specified by this value. At each renewal, the token's TTL will be set to the
 value of this field. Specified in seconds.
-{{% /md %}}</dd>
-    <dt class="property-optional"
+{{% /md %}}</dd><dt class="property-optional"
             title="Optional">
         <span id="token_policies_python">
 <a href="#token_policies_python" style="color: inherit; text-decoration: inherit;">token_<wbr>policies</a>
@@ -1797,8 +1659,7 @@ value of this field. Specified in seconds.
     </dt>
     <dd>{{% md %}}List of policies to encode onto generated tokens. Depending
 on the auth method, this list may be supplemented by user/group/other values.
-{{% /md %}}</dd>
-    <dt class="property-optional"
+{{% /md %}}</dd><dt class="property-optional"
             title="Optional">
         <span id="token_ttl_python">
 <a href="#token_ttl_python" style="color: inherit; text-decoration: inherit;">token_<wbr>ttl</a>
@@ -1808,8 +1669,7 @@ on the auth method, this list may be supplemented by user/group/other values.
     </dt>
     <dd>{{% md %}}The incremental lifetime for generated tokens in number of seconds.
 Its current value will be referenced at renewal time.
-{{% /md %}}</dd>
-    <dt class="property-optional"
+{{% /md %}}</dd><dt class="property-optional"
             title="Optional">
         <span id="token_type_python">
 <a href="#token_type_python" style="color: inherit; text-decoration: inherit;">token_<wbr>type</a>
@@ -1822,8 +1682,7 @@ Its current value will be referenced at renewal time.
 `service` tokens). For token store roles, there are two additional possibilities:
 `default-service` and `default-batch` which specify the type to return unless the client
 requests a different type at generation time.
-{{% /md %}}</dd>
-    <dt class="property-optional property-deprecated"
+{{% /md %}}</dd><dt class="property-optional property-deprecated"
             title="Optional, Deprecated">
         <span id="ttl_python">
 <a href="#ttl_python" style="color: inherit; text-decoration: inherit;">ttl</a>
@@ -1833,8 +1692,7 @@ requests a different type at generation time.
     </dt>
     <dd>{{% md %}}The TTL period of tokens issued
 using this role, provided as a number of seconds.
-{{% /md %}}<p class="property-message">Deprecated: {{% md %}}use `token_ttl` instead if you are running Vault &gt;= 1.2{{% /md %}}</p></dd>
-    <dt class="property-optional"
+{{% /md %}}<p class="property-message">Deprecated: {{% md %}}use `token_ttl` instead if you are running Vault &gt;= 1.2{{% /md %}}</p></dd><dt class="property-optional"
             title="Optional">
         <span id="verbose_oidc_logging_python">
 <a href="#verbose_oidc_logging_python" style="color: inherit; text-decoration: inherit;">verbose_<wbr>oidc_<wbr>logging</a>
@@ -1845,8 +1703,7 @@ using this role, provided as a number of seconds.
     <dd>{{% md %}}Log received OIDC tokens and claims when debug-level
 logging is active. Not recommended in production since sensitive information may be present
 in OIDC responses.
-{{% /md %}}</dd>
-</dl>
+{{% /md %}}</dd></dl>
 {{% /choosable %}}
 
 
@@ -1857,9 +1714,7 @@ All [input](#inputs) properties are implicitly available as output properties. A
 
 
 {{% choosable language csharp %}}
-<dl class="resources-properties">
-
-    <dt class="property-"
+<dl class="resources-properties"><dt class="property-"
             title="">
         <span id="id_csharp">
 <a href="#id_csharp" style="color: inherit; text-decoration: inherit;">Id</a>
@@ -1867,14 +1722,11 @@ All [input](#inputs) properties are implicitly available as output properties. A
         <span class="property-indicator"></span>
         <span class="property-type">string</span>
     </dt>
-    <dd>{{% md %}}The provider-assigned unique ID for this managed resource.{{% /md %}}</dd>
-</dl>
+    <dd>{{% md %}}The provider-assigned unique ID for this managed resource.{{% /md %}}</dd></dl>
 {{% /choosable %}}
 
 {{% choosable language go %}}
-<dl class="resources-properties">
-
-    <dt class="property-"
+<dl class="resources-properties"><dt class="property-"
             title="">
         <span id="id_go">
 <a href="#id_go" style="color: inherit; text-decoration: inherit;">Id</a>
@@ -1882,14 +1734,11 @@ All [input](#inputs) properties are implicitly available as output properties. A
         <span class="property-indicator"></span>
         <span class="property-type">string</span>
     </dt>
-    <dd>{{% md %}}The provider-assigned unique ID for this managed resource.{{% /md %}}</dd>
-</dl>
+    <dd>{{% md %}}The provider-assigned unique ID for this managed resource.{{% /md %}}</dd></dl>
 {{% /choosable %}}
 
 {{% choosable language nodejs %}}
-<dl class="resources-properties">
-
-    <dt class="property-"
+<dl class="resources-properties"><dt class="property-"
             title="">
         <span id="id_nodejs">
 <a href="#id_nodejs" style="color: inherit; text-decoration: inherit;">id</a>
@@ -1897,14 +1746,11 @@ All [input](#inputs) properties are implicitly available as output properties. A
         <span class="property-indicator"></span>
         <span class="property-type">string</span>
     </dt>
-    <dd>{{% md %}}The provider-assigned unique ID for this managed resource.{{% /md %}}</dd>
-</dl>
+    <dd>{{% md %}}The provider-assigned unique ID for this managed resource.{{% /md %}}</dd></dl>
 {{% /choosable %}}
 
 {{% choosable language python %}}
-<dl class="resources-properties">
-
-    <dt class="property-"
+<dl class="resources-properties"><dt class="property-"
             title="">
         <span id="id_python">
 <a href="#id_python" style="color: inherit; text-decoration: inherit;">id</a>
@@ -1912,8 +1758,7 @@ All [input](#inputs) properties are implicitly available as output properties. A
         <span class="property-indicator"></span>
         <span class="property-type">str</span>
     </dt>
-    <dd>{{% md %}}The provider-assigned unique ID for this managed resource.{{% /md %}}</dd>
-</dl>
+    <dd>{{% md %}}The provider-assigned unique ID for this managed resource.{{% /md %}}</dd></dl>
 {{% /choosable %}}
 
 
@@ -2040,9 +1885,7 @@ The following state arguments are supported:
 
 
 {{% choosable language csharp %}}
-<dl class="resources-properties">
-
-    <dt class="property-optional"
+<dl class="resources-properties"><dt class="property-optional"
             title="Optional">
         <span id="state_allowedredirecturis_csharp">
 <a href="#state_allowedredirecturis_csharp" style="color: inherit; text-decoration: inherit;">Allowed<wbr>Redirect<wbr>Uris</a>
@@ -2052,8 +1895,7 @@ The following state arguments are supported:
     </dt>
     <dd>{{% md %}}The list of allowed values for redirect_uri during OIDC logins.
 Required for OIDC roles
-{{% /md %}}</dd>
-    <dt class="property-optional"
+{{% /md %}}</dd><dt class="property-optional"
             title="Optional">
         <span id="state_backend_csharp">
 <a href="#state_backend_csharp" style="color: inherit; text-decoration: inherit;">Backend</a>
@@ -2063,8 +1905,7 @@ Required for OIDC roles
     </dt>
     <dd>{{% md %}}The unique name of the auth backend to configure.
 Defaults to `jwt`.
-{{% /md %}}</dd>
-    <dt class="property-optional"
+{{% /md %}}</dd><dt class="property-optional"
             title="Optional">
         <span id="state_boundaudiences_csharp">
 <a href="#state_boundaudiences_csharp" style="color: inherit; text-decoration: inherit;">Bound<wbr>Audiences</a>
@@ -2074,8 +1915,7 @@ Defaults to `jwt`.
     </dt>
     <dd>{{% md %}}(Required for roles of type `jwt`, optional for roles of
 type `oidc`) List of `aud` claims to match against. Any match is sufficient.
-{{% /md %}}</dd>
-    <dt class="property-optional property-deprecated"
+{{% /md %}}</dd><dt class="property-optional property-deprecated"
             title="Optional, Deprecated">
         <span id="state_boundcidrs_csharp">
 <a href="#state_boundcidrs_csharp" style="color: inherit; text-decoration: inherit;">Bound<wbr>Cidrs</a>
@@ -2085,8 +1925,7 @@ type `oidc`) List of `aud` claims to match against. Any match is sufficient.
     </dt>
     <dd>{{% md %}}If set, a list of
 CIDRs valid as the source address for login requests. This value is also encoded into any resulting token.
-{{% /md %}}<p class="property-message">Deprecated: {{% md %}}use `token_bound_cidrs` instead if you are running Vault &gt;= 1.2{{% /md %}}</p></dd>
-    <dt class="property-optional"
+{{% /md %}}<p class="property-message">Deprecated: {{% md %}}use `token_bound_cidrs` instead if you are running Vault &gt;= 1.2{{% /md %}}</p></dd><dt class="property-optional"
             title="Optional">
         <span id="state_boundclaims_csharp">
 <a href="#state_boundclaims_csharp" style="color: inherit; text-decoration: inherit;">Bound<wbr>Claims</a>
@@ -2096,8 +1935,7 @@ CIDRs valid as the source address for login requests. This value is also encoded
     </dt>
     <dd>{{% md %}}If set, a map of claims/values to match against.
 The expected value may be a single string or a list of strings.
-{{% /md %}}</dd>
-    <dt class="property-optional"
+{{% /md %}}</dd><dt class="property-optional"
             title="Optional">
         <span id="state_boundclaimstype_csharp">
 <a href="#state_boundclaimstype_csharp" style="color: inherit; text-decoration: inherit;">Bound<wbr>Claims<wbr>Type</a>
@@ -2108,8 +1946,7 @@ The expected value may be a single string or a list of strings.
     <dd>{{% md %}}How to interpret values in the claims/values
 map (`bound_claims`): can be either `string` (exact match) or `glob` (wildcard
 match). Requires Vault 1.4.0 or above.
-{{% /md %}}</dd>
-    <dt class="property-optional"
+{{% /md %}}</dd><dt class="property-optional"
             title="Optional">
         <span id="state_boundsubject_csharp">
 <a href="#state_boundsubject_csharp" style="color: inherit; text-decoration: inherit;">Bound<wbr>Subject</a>
@@ -2119,8 +1956,7 @@ match). Requires Vault 1.4.0 or above.
     </dt>
     <dd>{{% md %}}If set, requires that the `sub` claim matches
 this value.
-{{% /md %}}</dd>
-    <dt class="property-optional"
+{{% /md %}}</dd><dt class="property-optional"
             title="Optional">
         <span id="state_claimmappings_csharp">
 <a href="#state_claimmappings_csharp" style="color: inherit; text-decoration: inherit;">Claim<wbr>Mappings</a>
@@ -2130,8 +1966,7 @@ this value.
     </dt>
     <dd>{{% md %}}If set, a map of claims (keys) to be copied
 to specified metadata fields (values).
-{{% /md %}}</dd>
-    <dt class="property-optional"
+{{% /md %}}</dd><dt class="property-optional"
             title="Optional">
         <span id="state_clockskewleeway_csharp">
 <a href="#state_clockskewleeway_csharp" style="color: inherit; text-decoration: inherit;">Clock<wbr>Skew<wbr>Leeway</a>
@@ -2142,8 +1977,7 @@ to specified metadata fields (values).
     <dd>{{% md %}}The amount of leeway to add to all claims to account for clock skew, in
 seconds. Defaults to `60` seconds if set to `0` and can be disabled if set to `-1`.
 Only applicable with "jwt" roles.
-{{% /md %}}</dd>
-    <dt class="property-optional"
+{{% /md %}}</dd><dt class="property-optional"
             title="Optional">
         <span id="state_expirationleeway_csharp">
 <a href="#state_expirationleeway_csharp" style="color: inherit; text-decoration: inherit;">Expiration<wbr>Leeway</a>
@@ -2154,8 +1988,7 @@ Only applicable with "jwt" roles.
     <dd>{{% md %}}The amount of leeway to add to expiration (`exp`) claims to account for
 clock skew, in seconds. Defaults to `60` seconds if set to `0` and can be disabled if set to `-1`.
 Only applicable with "jwt" roles.
-{{% /md %}}</dd>
-    <dt class="property-optional"
+{{% /md %}}</dd><dt class="property-optional"
             title="Optional">
         <span id="state_groupsclaim_csharp">
 <a href="#state_groupsclaim_csharp" style="color: inherit; text-decoration: inherit;">Groups<wbr>Claim</a>
@@ -2167,8 +2000,7 @@ Only applicable with "jwt" roles.
 the set of groups to which the user belongs; this will be used as the names
 for the Identity group aliases created due to a successful login. The claim
 value must be a list of strings.
-{{% /md %}}</dd>
-    <dt class="property-optional property-deprecated"
+{{% /md %}}</dd><dt class="property-optional property-deprecated"
             title="Optional, Deprecated">
         <span id="state_groupsclaimdelimiterpattern_csharp">
 <a href="#state_groupsclaimdelimiterpattern_csharp" style="color: inherit; text-decoration: inherit;">Groups<wbr>Claim<wbr>Delimiter<wbr>Pattern</a>
@@ -2185,8 +2017,7 @@ For instance, a groups_claim of meta/user.name/groups with this field
 set to // will expect nested structures named meta, user.name, and groups.
 If this field was set to /./ the groups information would expect to be
 via nested structures of meta, user, name, and groups.
-{{% /md %}}<p class="property-message">Deprecated: {{% md %}}`groups_claim_delimiter_pattern` has been removed since Vault 1.1. If the groups claim is not at the top level, it can now be specified as a JSONPointer.{{% /md %}}</p></dd>
-    <dt class="property-optional property-deprecated"
+{{% /md %}}<p class="property-message">Deprecated: {{% md %}}`groups_claim_delimiter_pattern` has been removed since Vault 1.1. If the groups claim is not at the top level, it can now be specified as a JSONPointer.{{% /md %}}</p></dd><dt class="property-optional property-deprecated"
             title="Optional, Deprecated">
         <span id="state_maxttl_csharp">
 <a href="#state_maxttl_csharp" style="color: inherit; text-decoration: inherit;">Max<wbr>Ttl</a>
@@ -2196,8 +2027,7 @@ via nested structures of meta, user, name, and groups.
     </dt>
     <dd>{{% md %}}The maximum allowed lifetime of tokens
 issued using this role, provided as a number of seconds.
-{{% /md %}}<p class="property-message">Deprecated: {{% md %}}use `token_max_ttl` instead if you are running Vault &gt;= 1.2{{% /md %}}</p></dd>
-    <dt class="property-optional"
+{{% /md %}}<p class="property-message">Deprecated: {{% md %}}use `token_max_ttl` instead if you are running Vault &gt;= 1.2{{% /md %}}</p></dd><dt class="property-optional"
             title="Optional">
         <span id="state_notbeforeleeway_csharp">
 <a href="#state_notbeforeleeway_csharp" style="color: inherit; text-decoration: inherit;">Not<wbr>Before<wbr>Leeway</a>
@@ -2208,8 +2038,7 @@ issued using this role, provided as a number of seconds.
     <dd>{{% md %}}The amount of leeway to add to not before (`nbf`) claims to account for
 clock skew, in seconds. Defaults to `60` seconds if set to `0` and can be disabled if set to `-1`.
 Only applicable with "jwt" roles.
-{{% /md %}}</dd>
-    <dt class="property-optional property-deprecated"
+{{% /md %}}</dd><dt class="property-optional property-deprecated"
             title="Optional, Deprecated">
         <span id="state_numuses_csharp">
 <a href="#state_numuses_csharp" style="color: inherit; text-decoration: inherit;">Num<wbr>Uses</a>
@@ -2219,8 +2048,7 @@ Only applicable with "jwt" roles.
     </dt>
     <dd>{{% md %}}If set, puts a use-count
 limitation on the issued token.
-{{% /md %}}<p class="property-message">Deprecated: {{% md %}}use `token_num_uses` instead if you are running Vault &gt;= 1.2{{% /md %}}</p></dd>
-    <dt class="property-optional"
+{{% /md %}}<p class="property-message">Deprecated: {{% md %}}use `token_num_uses` instead if you are running Vault &gt;= 1.2{{% /md %}}</p></dd><dt class="property-optional"
             title="Optional">
         <span id="state_oidcscopes_csharp">
 <a href="#state_oidcscopes_csharp" style="color: inherit; text-decoration: inherit;">Oidc<wbr>Scopes</a>
@@ -2230,8 +2058,7 @@ limitation on the issued token.
     </dt>
     <dd>{{% md %}}If set, a list of OIDC scopes to be used with an OIDC role.
 The standard scope "openid" is automatically included and need not be specified.
-{{% /md %}}</dd>
-    <dt class="property-optional property-deprecated"
+{{% /md %}}</dd><dt class="property-optional property-deprecated"
             title="Optional, Deprecated">
         <span id="state_period_csharp">
 <a href="#state_period_csharp" style="color: inherit; text-decoration: inherit;">Period</a>
@@ -2243,8 +2070,7 @@ The standard scope "openid" is automatically included and need not be specified.
 token generated using this role should never expire. The token should be renewed within the
 duration specified by this value. At each renewal, the token's TTL will be set to the
 value of this field. Specified in seconds.
-{{% /md %}}<p class="property-message">Deprecated: {{% md %}}use `token_period` instead if you are running Vault &gt;= 1.2{{% /md %}}</p></dd>
-    <dt class="property-optional property-deprecated"
+{{% /md %}}<p class="property-message">Deprecated: {{% md %}}use `token_period` instead if you are running Vault &gt;= 1.2{{% /md %}}</p></dd><dt class="property-optional property-deprecated"
             title="Optional, Deprecated">
         <span id="state_policies_csharp">
 <a href="#state_policies_csharp" style="color: inherit; text-decoration: inherit;">Policies</a>
@@ -2254,8 +2080,7 @@ value of this field. Specified in seconds.
     </dt>
     <dd>{{% md %}}An array of strings
 specifying the policies to be set on tokens issued using this role.
-{{% /md %}}<p class="property-message">Deprecated: {{% md %}}use `token_policies` instead if you are running Vault &gt;= 1.2{{% /md %}}</p></dd>
-    <dt class="property-optional"
+{{% /md %}}<p class="property-message">Deprecated: {{% md %}}use `token_policies` instead if you are running Vault &gt;= 1.2{{% /md %}}</p></dd><dt class="property-optional"
             title="Optional">
         <span id="state_rolename_csharp">
 <a href="#state_rolename_csharp" style="color: inherit; text-decoration: inherit;">Role<wbr>Name</a>
@@ -2264,8 +2089,7 @@ specifying the policies to be set on tokens issued using this role.
         <span class="property-type">string</span>
     </dt>
     <dd>{{% md %}}The name of the role.
-{{% /md %}}</dd>
-    <dt class="property-optional"
+{{% /md %}}</dd><dt class="property-optional"
             title="Optional">
         <span id="state_roletype_csharp">
 <a href="#state_roletype_csharp" style="color: inherit; text-decoration: inherit;">Role<wbr>Type</a>
@@ -2274,8 +2098,7 @@ specifying the policies to be set on tokens issued using this role.
         <span class="property-type">string</span>
     </dt>
     <dd>{{% md %}}Type of role, either "oidc" (default) or "jwt".
-{{% /md %}}</dd>
-    <dt class="property-optional"
+{{% /md %}}</dd><dt class="property-optional"
             title="Optional">
         <span id="state_tokenboundcidrs_csharp">
 <a href="#state_tokenboundcidrs_csharp" style="color: inherit; text-decoration: inherit;">Token<wbr>Bound<wbr>Cidrs</a>
@@ -2286,8 +2109,7 @@ specifying the policies to be set on tokens issued using this role.
     <dd>{{% md %}}List of CIDR blocks; if set, specifies blocks of IP
 addresses which can authenticate successfully, and ties the resulting token to these blocks
 as well.
-{{% /md %}}</dd>
-    <dt class="property-optional"
+{{% /md %}}</dd><dt class="property-optional"
             title="Optional">
         <span id="state_tokenexplicitmaxttl_csharp">
 <a href="#state_tokenexplicitmaxttl_csharp" style="color: inherit; text-decoration: inherit;">Token<wbr>Explicit<wbr>Max<wbr>Ttl</a>
@@ -2299,8 +2121,7 @@ as well.
 [explicit max TTL](https://www.vaultproject.io/docs/concepts/tokens.html#token-time-to-live-periodic-tokens-and-explicit-max-ttls)
 onto the token in number of seconds. This is a hard cap even if `token_ttl` and
 `token_max_ttl` would otherwise allow a renewal.
-{{% /md %}}</dd>
-    <dt class="property-optional"
+{{% /md %}}</dd><dt class="property-optional"
             title="Optional">
         <span id="state_tokenmaxttl_csharp">
 <a href="#state_tokenmaxttl_csharp" style="color: inherit; text-decoration: inherit;">Token<wbr>Max<wbr>Ttl</a>
@@ -2310,8 +2131,7 @@ onto the token in number of seconds. This is a hard cap even if `token_ttl` and
     </dt>
     <dd>{{% md %}}The maximum lifetime for generated tokens in number of seconds.
 Its current value will be referenced at renewal time.
-{{% /md %}}</dd>
-    <dt class="property-optional"
+{{% /md %}}</dd><dt class="property-optional"
             title="Optional">
         <span id="state_tokennodefaultpolicy_csharp">
 <a href="#state_tokennodefaultpolicy_csharp" style="color: inherit; text-decoration: inherit;">Token<wbr>No<wbr>Default<wbr>Policy</a>
@@ -2321,8 +2141,7 @@ Its current value will be referenced at renewal time.
     </dt>
     <dd>{{% md %}}If set, the default policy will not be set on
 generated tokens; otherwise it will be added to the policies set in token_policies.
-{{% /md %}}</dd>
-    <dt class="property-optional"
+{{% /md %}}</dd><dt class="property-optional"
             title="Optional">
         <span id="state_tokennumuses_csharp">
 <a href="#state_tokennumuses_csharp" style="color: inherit; text-decoration: inherit;">Token<wbr>Num<wbr>Uses</a>
@@ -2333,8 +2152,7 @@ generated tokens; otherwise it will be added to the policies set in token_polici
     <dd>{{% md %}}The
 [period](https://www.vaultproject.io/docs/concepts/tokens.html#token-time-to-live-periodic-tokens-and-explicit-max-ttls),
 if any, in number of seconds to set on the token.
-{{% /md %}}</dd>
-    <dt class="property-optional"
+{{% /md %}}</dd><dt class="property-optional"
             title="Optional">
         <span id="state_tokenperiod_csharp">
 <a href="#state_tokenperiod_csharp" style="color: inherit; text-decoration: inherit;">Token<wbr>Period</a>
@@ -2346,8 +2164,7 @@ if any, in number of seconds to set on the token.
 token generated using this role should never expire. The token should be renewed within the
 duration specified by this value. At each renewal, the token's TTL will be set to the
 value of this field. Specified in seconds.
-{{% /md %}}</dd>
-    <dt class="property-optional"
+{{% /md %}}</dd><dt class="property-optional"
             title="Optional">
         <span id="state_tokenpolicies_csharp">
 <a href="#state_tokenpolicies_csharp" style="color: inherit; text-decoration: inherit;">Token<wbr>Policies</a>
@@ -2357,8 +2174,7 @@ value of this field. Specified in seconds.
     </dt>
     <dd>{{% md %}}List of policies to encode onto generated tokens. Depending
 on the auth method, this list may be supplemented by user/group/other values.
-{{% /md %}}</dd>
-    <dt class="property-optional"
+{{% /md %}}</dd><dt class="property-optional"
             title="Optional">
         <span id="state_tokenttl_csharp">
 <a href="#state_tokenttl_csharp" style="color: inherit; text-decoration: inherit;">Token<wbr>Ttl</a>
@@ -2368,8 +2184,7 @@ on the auth method, this list may be supplemented by user/group/other values.
     </dt>
     <dd>{{% md %}}The incremental lifetime for generated tokens in number of seconds.
 Its current value will be referenced at renewal time.
-{{% /md %}}</dd>
-    <dt class="property-optional"
+{{% /md %}}</dd><dt class="property-optional"
             title="Optional">
         <span id="state_tokentype_csharp">
 <a href="#state_tokentype_csharp" style="color: inherit; text-decoration: inherit;">Token<wbr>Type</a>
@@ -2382,8 +2197,7 @@ Its current value will be referenced at renewal time.
 `service` tokens). For token store roles, there are two additional possibilities:
 `default-service` and `default-batch` which specify the type to return unless the client
 requests a different type at generation time.
-{{% /md %}}</dd>
-    <dt class="property-optional property-deprecated"
+{{% /md %}}</dd><dt class="property-optional property-deprecated"
             title="Optional, Deprecated">
         <span id="state_ttl_csharp">
 <a href="#state_ttl_csharp" style="color: inherit; text-decoration: inherit;">Ttl</a>
@@ -2393,8 +2207,7 @@ requests a different type at generation time.
     </dt>
     <dd>{{% md %}}The TTL period of tokens issued
 using this role, provided as a number of seconds.
-{{% /md %}}<p class="property-message">Deprecated: {{% md %}}use `token_ttl` instead if you are running Vault &gt;= 1.2{{% /md %}}</p></dd>
-    <dt class="property-optional"
+{{% /md %}}<p class="property-message">Deprecated: {{% md %}}use `token_ttl` instead if you are running Vault &gt;= 1.2{{% /md %}}</p></dd><dt class="property-optional"
             title="Optional">
         <span id="state_userclaim_csharp">
 <a href="#state_userclaim_csharp" style="color: inherit; text-decoration: inherit;">User<wbr>Claim</a>
@@ -2405,8 +2218,7 @@ using this role, provided as a number of seconds.
     <dd>{{% md %}}The claim to use to uniquely identify
 the user; this will be used as the name for the Identity entity alias created
 due to a successful login.
-{{% /md %}}</dd>
-    <dt class="property-optional"
+{{% /md %}}</dd><dt class="property-optional"
             title="Optional">
         <span id="state_verboseoidclogging_csharp">
 <a href="#state_verboseoidclogging_csharp" style="color: inherit; text-decoration: inherit;">Verbose<wbr>Oidc<wbr>Logging</a>
@@ -2417,14 +2229,11 @@ due to a successful login.
     <dd>{{% md %}}Log received OIDC tokens and claims when debug-level
 logging is active. Not recommended in production since sensitive information may be present
 in OIDC responses.
-{{% /md %}}</dd>
-</dl>
+{{% /md %}}</dd></dl>
 {{% /choosable %}}
 
 {{% choosable language go %}}
-<dl class="resources-properties">
-
-    <dt class="property-optional"
+<dl class="resources-properties"><dt class="property-optional"
             title="Optional">
         <span id="state_allowedredirecturis_go">
 <a href="#state_allowedredirecturis_go" style="color: inherit; text-decoration: inherit;">Allowed<wbr>Redirect<wbr>Uris</a>
@@ -2434,8 +2243,7 @@ in OIDC responses.
     </dt>
     <dd>{{% md %}}The list of allowed values for redirect_uri during OIDC logins.
 Required for OIDC roles
-{{% /md %}}</dd>
-    <dt class="property-optional"
+{{% /md %}}</dd><dt class="property-optional"
             title="Optional">
         <span id="state_backend_go">
 <a href="#state_backend_go" style="color: inherit; text-decoration: inherit;">Backend</a>
@@ -2445,8 +2253,7 @@ Required for OIDC roles
     </dt>
     <dd>{{% md %}}The unique name of the auth backend to configure.
 Defaults to `jwt`.
-{{% /md %}}</dd>
-    <dt class="property-optional"
+{{% /md %}}</dd><dt class="property-optional"
             title="Optional">
         <span id="state_boundaudiences_go">
 <a href="#state_boundaudiences_go" style="color: inherit; text-decoration: inherit;">Bound<wbr>Audiences</a>
@@ -2456,8 +2263,7 @@ Defaults to `jwt`.
     </dt>
     <dd>{{% md %}}(Required for roles of type `jwt`, optional for roles of
 type `oidc`) List of `aud` claims to match against. Any match is sufficient.
-{{% /md %}}</dd>
-    <dt class="property-optional property-deprecated"
+{{% /md %}}</dd><dt class="property-optional property-deprecated"
             title="Optional, Deprecated">
         <span id="state_boundcidrs_go">
 <a href="#state_boundcidrs_go" style="color: inherit; text-decoration: inherit;">Bound<wbr>Cidrs</a>
@@ -2467,8 +2273,7 @@ type `oidc`) List of `aud` claims to match against. Any match is sufficient.
     </dt>
     <dd>{{% md %}}If set, a list of
 CIDRs valid as the source address for login requests. This value is also encoded into any resulting token.
-{{% /md %}}<p class="property-message">Deprecated: {{% md %}}use `token_bound_cidrs` instead if you are running Vault &gt;= 1.2{{% /md %}}</p></dd>
-    <dt class="property-optional"
+{{% /md %}}<p class="property-message">Deprecated: {{% md %}}use `token_bound_cidrs` instead if you are running Vault &gt;= 1.2{{% /md %}}</p></dd><dt class="property-optional"
             title="Optional">
         <span id="state_boundclaims_go">
 <a href="#state_boundclaims_go" style="color: inherit; text-decoration: inherit;">Bound<wbr>Claims</a>
@@ -2478,8 +2283,7 @@ CIDRs valid as the source address for login requests. This value is also encoded
     </dt>
     <dd>{{% md %}}If set, a map of claims/values to match against.
 The expected value may be a single string or a list of strings.
-{{% /md %}}</dd>
-    <dt class="property-optional"
+{{% /md %}}</dd><dt class="property-optional"
             title="Optional">
         <span id="state_boundclaimstype_go">
 <a href="#state_boundclaimstype_go" style="color: inherit; text-decoration: inherit;">Bound<wbr>Claims<wbr>Type</a>
@@ -2490,8 +2294,7 @@ The expected value may be a single string or a list of strings.
     <dd>{{% md %}}How to interpret values in the claims/values
 map (`bound_claims`): can be either `string` (exact match) or `glob` (wildcard
 match). Requires Vault 1.4.0 or above.
-{{% /md %}}</dd>
-    <dt class="property-optional"
+{{% /md %}}</dd><dt class="property-optional"
             title="Optional">
         <span id="state_boundsubject_go">
 <a href="#state_boundsubject_go" style="color: inherit; text-decoration: inherit;">Bound<wbr>Subject</a>
@@ -2501,8 +2304,7 @@ match). Requires Vault 1.4.0 or above.
     </dt>
     <dd>{{% md %}}If set, requires that the `sub` claim matches
 this value.
-{{% /md %}}</dd>
-    <dt class="property-optional"
+{{% /md %}}</dd><dt class="property-optional"
             title="Optional">
         <span id="state_claimmappings_go">
 <a href="#state_claimmappings_go" style="color: inherit; text-decoration: inherit;">Claim<wbr>Mappings</a>
@@ -2512,8 +2314,7 @@ this value.
     </dt>
     <dd>{{% md %}}If set, a map of claims (keys) to be copied
 to specified metadata fields (values).
-{{% /md %}}</dd>
-    <dt class="property-optional"
+{{% /md %}}</dd><dt class="property-optional"
             title="Optional">
         <span id="state_clockskewleeway_go">
 <a href="#state_clockskewleeway_go" style="color: inherit; text-decoration: inherit;">Clock<wbr>Skew<wbr>Leeway</a>
@@ -2524,8 +2325,7 @@ to specified metadata fields (values).
     <dd>{{% md %}}The amount of leeway to add to all claims to account for clock skew, in
 seconds. Defaults to `60` seconds if set to `0` and can be disabled if set to `-1`.
 Only applicable with "jwt" roles.
-{{% /md %}}</dd>
-    <dt class="property-optional"
+{{% /md %}}</dd><dt class="property-optional"
             title="Optional">
         <span id="state_expirationleeway_go">
 <a href="#state_expirationleeway_go" style="color: inherit; text-decoration: inherit;">Expiration<wbr>Leeway</a>
@@ -2536,8 +2336,7 @@ Only applicable with "jwt" roles.
     <dd>{{% md %}}The amount of leeway to add to expiration (`exp`) claims to account for
 clock skew, in seconds. Defaults to `60` seconds if set to `0` and can be disabled if set to `-1`.
 Only applicable with "jwt" roles.
-{{% /md %}}</dd>
-    <dt class="property-optional"
+{{% /md %}}</dd><dt class="property-optional"
             title="Optional">
         <span id="state_groupsclaim_go">
 <a href="#state_groupsclaim_go" style="color: inherit; text-decoration: inherit;">Groups<wbr>Claim</a>
@@ -2549,8 +2348,7 @@ Only applicable with "jwt" roles.
 the set of groups to which the user belongs; this will be used as the names
 for the Identity group aliases created due to a successful login. The claim
 value must be a list of strings.
-{{% /md %}}</dd>
-    <dt class="property-optional property-deprecated"
+{{% /md %}}</dd><dt class="property-optional property-deprecated"
             title="Optional, Deprecated">
         <span id="state_groupsclaimdelimiterpattern_go">
 <a href="#state_groupsclaimdelimiterpattern_go" style="color: inherit; text-decoration: inherit;">Groups<wbr>Claim<wbr>Delimiter<wbr>Pattern</a>
@@ -2567,8 +2365,7 @@ For instance, a groups_claim of meta/user.name/groups with this field
 set to // will expect nested structures named meta, user.name, and groups.
 If this field was set to /./ the groups information would expect to be
 via nested structures of meta, user, name, and groups.
-{{% /md %}}<p class="property-message">Deprecated: {{% md %}}`groups_claim_delimiter_pattern` has been removed since Vault 1.1. If the groups claim is not at the top level, it can now be specified as a JSONPointer.{{% /md %}}</p></dd>
-    <dt class="property-optional property-deprecated"
+{{% /md %}}<p class="property-message">Deprecated: {{% md %}}`groups_claim_delimiter_pattern` has been removed since Vault 1.1. If the groups claim is not at the top level, it can now be specified as a JSONPointer.{{% /md %}}</p></dd><dt class="property-optional property-deprecated"
             title="Optional, Deprecated">
         <span id="state_maxttl_go">
 <a href="#state_maxttl_go" style="color: inherit; text-decoration: inherit;">Max<wbr>Ttl</a>
@@ -2578,8 +2375,7 @@ via nested structures of meta, user, name, and groups.
     </dt>
     <dd>{{% md %}}The maximum allowed lifetime of tokens
 issued using this role, provided as a number of seconds.
-{{% /md %}}<p class="property-message">Deprecated: {{% md %}}use `token_max_ttl` instead if you are running Vault &gt;= 1.2{{% /md %}}</p></dd>
-    <dt class="property-optional"
+{{% /md %}}<p class="property-message">Deprecated: {{% md %}}use `token_max_ttl` instead if you are running Vault &gt;= 1.2{{% /md %}}</p></dd><dt class="property-optional"
             title="Optional">
         <span id="state_notbeforeleeway_go">
 <a href="#state_notbeforeleeway_go" style="color: inherit; text-decoration: inherit;">Not<wbr>Before<wbr>Leeway</a>
@@ -2590,8 +2386,7 @@ issued using this role, provided as a number of seconds.
     <dd>{{% md %}}The amount of leeway to add to not before (`nbf`) claims to account for
 clock skew, in seconds. Defaults to `60` seconds if set to `0` and can be disabled if set to `-1`.
 Only applicable with "jwt" roles.
-{{% /md %}}</dd>
-    <dt class="property-optional property-deprecated"
+{{% /md %}}</dd><dt class="property-optional property-deprecated"
             title="Optional, Deprecated">
         <span id="state_numuses_go">
 <a href="#state_numuses_go" style="color: inherit; text-decoration: inherit;">Num<wbr>Uses</a>
@@ -2601,8 +2396,7 @@ Only applicable with "jwt" roles.
     </dt>
     <dd>{{% md %}}If set, puts a use-count
 limitation on the issued token.
-{{% /md %}}<p class="property-message">Deprecated: {{% md %}}use `token_num_uses` instead if you are running Vault &gt;= 1.2{{% /md %}}</p></dd>
-    <dt class="property-optional"
+{{% /md %}}<p class="property-message">Deprecated: {{% md %}}use `token_num_uses` instead if you are running Vault &gt;= 1.2{{% /md %}}</p></dd><dt class="property-optional"
             title="Optional">
         <span id="state_oidcscopes_go">
 <a href="#state_oidcscopes_go" style="color: inherit; text-decoration: inherit;">Oidc<wbr>Scopes</a>
@@ -2612,8 +2406,7 @@ limitation on the issued token.
     </dt>
     <dd>{{% md %}}If set, a list of OIDC scopes to be used with an OIDC role.
 The standard scope "openid" is automatically included and need not be specified.
-{{% /md %}}</dd>
-    <dt class="property-optional property-deprecated"
+{{% /md %}}</dd><dt class="property-optional property-deprecated"
             title="Optional, Deprecated">
         <span id="state_period_go">
 <a href="#state_period_go" style="color: inherit; text-decoration: inherit;">Period</a>
@@ -2625,8 +2418,7 @@ The standard scope "openid" is automatically included and need not be specified.
 token generated using this role should never expire. The token should be renewed within the
 duration specified by this value. At each renewal, the token's TTL will be set to the
 value of this field. Specified in seconds.
-{{% /md %}}<p class="property-message">Deprecated: {{% md %}}use `token_period` instead if you are running Vault &gt;= 1.2{{% /md %}}</p></dd>
-    <dt class="property-optional property-deprecated"
+{{% /md %}}<p class="property-message">Deprecated: {{% md %}}use `token_period` instead if you are running Vault &gt;= 1.2{{% /md %}}</p></dd><dt class="property-optional property-deprecated"
             title="Optional, Deprecated">
         <span id="state_policies_go">
 <a href="#state_policies_go" style="color: inherit; text-decoration: inherit;">Policies</a>
@@ -2636,8 +2428,7 @@ value of this field. Specified in seconds.
     </dt>
     <dd>{{% md %}}An array of strings
 specifying the policies to be set on tokens issued using this role.
-{{% /md %}}<p class="property-message">Deprecated: {{% md %}}use `token_policies` instead if you are running Vault &gt;= 1.2{{% /md %}}</p></dd>
-    <dt class="property-optional"
+{{% /md %}}<p class="property-message">Deprecated: {{% md %}}use `token_policies` instead if you are running Vault &gt;= 1.2{{% /md %}}</p></dd><dt class="property-optional"
             title="Optional">
         <span id="state_rolename_go">
 <a href="#state_rolename_go" style="color: inherit; text-decoration: inherit;">Role<wbr>Name</a>
@@ -2646,8 +2437,7 @@ specifying the policies to be set on tokens issued using this role.
         <span class="property-type">string</span>
     </dt>
     <dd>{{% md %}}The name of the role.
-{{% /md %}}</dd>
-    <dt class="property-optional"
+{{% /md %}}</dd><dt class="property-optional"
             title="Optional">
         <span id="state_roletype_go">
 <a href="#state_roletype_go" style="color: inherit; text-decoration: inherit;">Role<wbr>Type</a>
@@ -2656,8 +2446,7 @@ specifying the policies to be set on tokens issued using this role.
         <span class="property-type">string</span>
     </dt>
     <dd>{{% md %}}Type of role, either "oidc" (default) or "jwt".
-{{% /md %}}</dd>
-    <dt class="property-optional"
+{{% /md %}}</dd><dt class="property-optional"
             title="Optional">
         <span id="state_tokenboundcidrs_go">
 <a href="#state_tokenboundcidrs_go" style="color: inherit; text-decoration: inherit;">Token<wbr>Bound<wbr>Cidrs</a>
@@ -2668,8 +2457,7 @@ specifying the policies to be set on tokens issued using this role.
     <dd>{{% md %}}List of CIDR blocks; if set, specifies blocks of IP
 addresses which can authenticate successfully, and ties the resulting token to these blocks
 as well.
-{{% /md %}}</dd>
-    <dt class="property-optional"
+{{% /md %}}</dd><dt class="property-optional"
             title="Optional">
         <span id="state_tokenexplicitmaxttl_go">
 <a href="#state_tokenexplicitmaxttl_go" style="color: inherit; text-decoration: inherit;">Token<wbr>Explicit<wbr>Max<wbr>Ttl</a>
@@ -2681,8 +2469,7 @@ as well.
 [explicit max TTL](https://www.vaultproject.io/docs/concepts/tokens.html#token-time-to-live-periodic-tokens-and-explicit-max-ttls)
 onto the token in number of seconds. This is a hard cap even if `token_ttl` and
 `token_max_ttl` would otherwise allow a renewal.
-{{% /md %}}</dd>
-    <dt class="property-optional"
+{{% /md %}}</dd><dt class="property-optional"
             title="Optional">
         <span id="state_tokenmaxttl_go">
 <a href="#state_tokenmaxttl_go" style="color: inherit; text-decoration: inherit;">Token<wbr>Max<wbr>Ttl</a>
@@ -2692,8 +2479,7 @@ onto the token in number of seconds. This is a hard cap even if `token_ttl` and
     </dt>
     <dd>{{% md %}}The maximum lifetime for generated tokens in number of seconds.
 Its current value will be referenced at renewal time.
-{{% /md %}}</dd>
-    <dt class="property-optional"
+{{% /md %}}</dd><dt class="property-optional"
             title="Optional">
         <span id="state_tokennodefaultpolicy_go">
 <a href="#state_tokennodefaultpolicy_go" style="color: inherit; text-decoration: inherit;">Token<wbr>No<wbr>Default<wbr>Policy</a>
@@ -2703,8 +2489,7 @@ Its current value will be referenced at renewal time.
     </dt>
     <dd>{{% md %}}If set, the default policy will not be set on
 generated tokens; otherwise it will be added to the policies set in token_policies.
-{{% /md %}}</dd>
-    <dt class="property-optional"
+{{% /md %}}</dd><dt class="property-optional"
             title="Optional">
         <span id="state_tokennumuses_go">
 <a href="#state_tokennumuses_go" style="color: inherit; text-decoration: inherit;">Token<wbr>Num<wbr>Uses</a>
@@ -2715,8 +2500,7 @@ generated tokens; otherwise it will be added to the policies set in token_polici
     <dd>{{% md %}}The
 [period](https://www.vaultproject.io/docs/concepts/tokens.html#token-time-to-live-periodic-tokens-and-explicit-max-ttls),
 if any, in number of seconds to set on the token.
-{{% /md %}}</dd>
-    <dt class="property-optional"
+{{% /md %}}</dd><dt class="property-optional"
             title="Optional">
         <span id="state_tokenperiod_go">
 <a href="#state_tokenperiod_go" style="color: inherit; text-decoration: inherit;">Token<wbr>Period</a>
@@ -2728,8 +2512,7 @@ if any, in number of seconds to set on the token.
 token generated using this role should never expire. The token should be renewed within the
 duration specified by this value. At each renewal, the token's TTL will be set to the
 value of this field. Specified in seconds.
-{{% /md %}}</dd>
-    <dt class="property-optional"
+{{% /md %}}</dd><dt class="property-optional"
             title="Optional">
         <span id="state_tokenpolicies_go">
 <a href="#state_tokenpolicies_go" style="color: inherit; text-decoration: inherit;">Token<wbr>Policies</a>
@@ -2739,8 +2522,7 @@ value of this field. Specified in seconds.
     </dt>
     <dd>{{% md %}}List of policies to encode onto generated tokens. Depending
 on the auth method, this list may be supplemented by user/group/other values.
-{{% /md %}}</dd>
-    <dt class="property-optional"
+{{% /md %}}</dd><dt class="property-optional"
             title="Optional">
         <span id="state_tokenttl_go">
 <a href="#state_tokenttl_go" style="color: inherit; text-decoration: inherit;">Token<wbr>Ttl</a>
@@ -2750,8 +2532,7 @@ on the auth method, this list may be supplemented by user/group/other values.
     </dt>
     <dd>{{% md %}}The incremental lifetime for generated tokens in number of seconds.
 Its current value will be referenced at renewal time.
-{{% /md %}}</dd>
-    <dt class="property-optional"
+{{% /md %}}</dd><dt class="property-optional"
             title="Optional">
         <span id="state_tokentype_go">
 <a href="#state_tokentype_go" style="color: inherit; text-decoration: inherit;">Token<wbr>Type</a>
@@ -2764,8 +2545,7 @@ Its current value will be referenced at renewal time.
 `service` tokens). For token store roles, there are two additional possibilities:
 `default-service` and `default-batch` which specify the type to return unless the client
 requests a different type at generation time.
-{{% /md %}}</dd>
-    <dt class="property-optional property-deprecated"
+{{% /md %}}</dd><dt class="property-optional property-deprecated"
             title="Optional, Deprecated">
         <span id="state_ttl_go">
 <a href="#state_ttl_go" style="color: inherit; text-decoration: inherit;">Ttl</a>
@@ -2775,8 +2555,7 @@ requests a different type at generation time.
     </dt>
     <dd>{{% md %}}The TTL period of tokens issued
 using this role, provided as a number of seconds.
-{{% /md %}}<p class="property-message">Deprecated: {{% md %}}use `token_ttl` instead if you are running Vault &gt;= 1.2{{% /md %}}</p></dd>
-    <dt class="property-optional"
+{{% /md %}}<p class="property-message">Deprecated: {{% md %}}use `token_ttl` instead if you are running Vault &gt;= 1.2{{% /md %}}</p></dd><dt class="property-optional"
             title="Optional">
         <span id="state_userclaim_go">
 <a href="#state_userclaim_go" style="color: inherit; text-decoration: inherit;">User<wbr>Claim</a>
@@ -2787,8 +2566,7 @@ using this role, provided as a number of seconds.
     <dd>{{% md %}}The claim to use to uniquely identify
 the user; this will be used as the name for the Identity entity alias created
 due to a successful login.
-{{% /md %}}</dd>
-    <dt class="property-optional"
+{{% /md %}}</dd><dt class="property-optional"
             title="Optional">
         <span id="state_verboseoidclogging_go">
 <a href="#state_verboseoidclogging_go" style="color: inherit; text-decoration: inherit;">Verbose<wbr>Oidc<wbr>Logging</a>
@@ -2799,14 +2577,11 @@ due to a successful login.
     <dd>{{% md %}}Log received OIDC tokens and claims when debug-level
 logging is active. Not recommended in production since sensitive information may be present
 in OIDC responses.
-{{% /md %}}</dd>
-</dl>
+{{% /md %}}</dd></dl>
 {{% /choosable %}}
 
 {{% choosable language nodejs %}}
-<dl class="resources-properties">
-
-    <dt class="property-optional"
+<dl class="resources-properties"><dt class="property-optional"
             title="Optional">
         <span id="state_allowedredirecturis_nodejs">
 <a href="#state_allowedredirecturis_nodejs" style="color: inherit; text-decoration: inherit;">allowed<wbr>Redirect<wbr>Uris</a>
@@ -2816,8 +2591,7 @@ in OIDC responses.
     </dt>
     <dd>{{% md %}}The list of allowed values for redirect_uri during OIDC logins.
 Required for OIDC roles
-{{% /md %}}</dd>
-    <dt class="property-optional"
+{{% /md %}}</dd><dt class="property-optional"
             title="Optional">
         <span id="state_backend_nodejs">
 <a href="#state_backend_nodejs" style="color: inherit; text-decoration: inherit;">backend</a>
@@ -2827,8 +2601,7 @@ Required for OIDC roles
     </dt>
     <dd>{{% md %}}The unique name of the auth backend to configure.
 Defaults to `jwt`.
-{{% /md %}}</dd>
-    <dt class="property-optional"
+{{% /md %}}</dd><dt class="property-optional"
             title="Optional">
         <span id="state_boundaudiences_nodejs">
 <a href="#state_boundaudiences_nodejs" style="color: inherit; text-decoration: inherit;">bound<wbr>Audiences</a>
@@ -2838,8 +2611,7 @@ Defaults to `jwt`.
     </dt>
     <dd>{{% md %}}(Required for roles of type `jwt`, optional for roles of
 type `oidc`) List of `aud` claims to match against. Any match is sufficient.
-{{% /md %}}</dd>
-    <dt class="property-optional property-deprecated"
+{{% /md %}}</dd><dt class="property-optional property-deprecated"
             title="Optional, Deprecated">
         <span id="state_boundcidrs_nodejs">
 <a href="#state_boundcidrs_nodejs" style="color: inherit; text-decoration: inherit;">bound<wbr>Cidrs</a>
@@ -2849,8 +2621,7 @@ type `oidc`) List of `aud` claims to match against. Any match is sufficient.
     </dt>
     <dd>{{% md %}}If set, a list of
 CIDRs valid as the source address for login requests. This value is also encoded into any resulting token.
-{{% /md %}}<p class="property-message">Deprecated: {{% md %}}use `token_bound_cidrs` instead if you are running Vault &gt;= 1.2{{% /md %}}</p></dd>
-    <dt class="property-optional"
+{{% /md %}}<p class="property-message">Deprecated: {{% md %}}use `token_bound_cidrs` instead if you are running Vault &gt;= 1.2{{% /md %}}</p></dd><dt class="property-optional"
             title="Optional">
         <span id="state_boundclaims_nodejs">
 <a href="#state_boundclaims_nodejs" style="color: inherit; text-decoration: inherit;">bound<wbr>Claims</a>
@@ -2860,8 +2631,7 @@ CIDRs valid as the source address for login requests. This value is also encoded
     </dt>
     <dd>{{% md %}}If set, a map of claims/values to match against.
 The expected value may be a single string or a list of strings.
-{{% /md %}}</dd>
-    <dt class="property-optional"
+{{% /md %}}</dd><dt class="property-optional"
             title="Optional">
         <span id="state_boundclaimstype_nodejs">
 <a href="#state_boundclaimstype_nodejs" style="color: inherit; text-decoration: inherit;">bound<wbr>Claims<wbr>Type</a>
@@ -2872,8 +2642,7 @@ The expected value may be a single string or a list of strings.
     <dd>{{% md %}}How to interpret values in the claims/values
 map (`bound_claims`): can be either `string` (exact match) or `glob` (wildcard
 match). Requires Vault 1.4.0 or above.
-{{% /md %}}</dd>
-    <dt class="property-optional"
+{{% /md %}}</dd><dt class="property-optional"
             title="Optional">
         <span id="state_boundsubject_nodejs">
 <a href="#state_boundsubject_nodejs" style="color: inherit; text-decoration: inherit;">bound<wbr>Subject</a>
@@ -2883,8 +2652,7 @@ match). Requires Vault 1.4.0 or above.
     </dt>
     <dd>{{% md %}}If set, requires that the `sub` claim matches
 this value.
-{{% /md %}}</dd>
-    <dt class="property-optional"
+{{% /md %}}</dd><dt class="property-optional"
             title="Optional">
         <span id="state_claimmappings_nodejs">
 <a href="#state_claimmappings_nodejs" style="color: inherit; text-decoration: inherit;">claim<wbr>Mappings</a>
@@ -2894,8 +2662,7 @@ this value.
     </dt>
     <dd>{{% md %}}If set, a map of claims (keys) to be copied
 to specified metadata fields (values).
-{{% /md %}}</dd>
-    <dt class="property-optional"
+{{% /md %}}</dd><dt class="property-optional"
             title="Optional">
         <span id="state_clockskewleeway_nodejs">
 <a href="#state_clockskewleeway_nodejs" style="color: inherit; text-decoration: inherit;">clock<wbr>Skew<wbr>Leeway</a>
@@ -2906,8 +2673,7 @@ to specified metadata fields (values).
     <dd>{{% md %}}The amount of leeway to add to all claims to account for clock skew, in
 seconds. Defaults to `60` seconds if set to `0` and can be disabled if set to `-1`.
 Only applicable with "jwt" roles.
-{{% /md %}}</dd>
-    <dt class="property-optional"
+{{% /md %}}</dd><dt class="property-optional"
             title="Optional">
         <span id="state_expirationleeway_nodejs">
 <a href="#state_expirationleeway_nodejs" style="color: inherit; text-decoration: inherit;">expiration<wbr>Leeway</a>
@@ -2918,8 +2684,7 @@ Only applicable with "jwt" roles.
     <dd>{{% md %}}The amount of leeway to add to expiration (`exp`) claims to account for
 clock skew, in seconds. Defaults to `60` seconds if set to `0` and can be disabled if set to `-1`.
 Only applicable with "jwt" roles.
-{{% /md %}}</dd>
-    <dt class="property-optional"
+{{% /md %}}</dd><dt class="property-optional"
             title="Optional">
         <span id="state_groupsclaim_nodejs">
 <a href="#state_groupsclaim_nodejs" style="color: inherit; text-decoration: inherit;">groups<wbr>Claim</a>
@@ -2931,8 +2696,7 @@ Only applicable with "jwt" roles.
 the set of groups to which the user belongs; this will be used as the names
 for the Identity group aliases created due to a successful login. The claim
 value must be a list of strings.
-{{% /md %}}</dd>
-    <dt class="property-optional property-deprecated"
+{{% /md %}}</dd><dt class="property-optional property-deprecated"
             title="Optional, Deprecated">
         <span id="state_groupsclaimdelimiterpattern_nodejs">
 <a href="#state_groupsclaimdelimiterpattern_nodejs" style="color: inherit; text-decoration: inherit;">groups<wbr>Claim<wbr>Delimiter<wbr>Pattern</a>
@@ -2949,8 +2713,7 @@ For instance, a groups_claim of meta/user.name/groups with this field
 set to // will expect nested structures named meta, user.name, and groups.
 If this field was set to /./ the groups information would expect to be
 via nested structures of meta, user, name, and groups.
-{{% /md %}}<p class="property-message">Deprecated: {{% md %}}`groups_claim_delimiter_pattern` has been removed since Vault 1.1. If the groups claim is not at the top level, it can now be specified as a JSONPointer.{{% /md %}}</p></dd>
-    <dt class="property-optional property-deprecated"
+{{% /md %}}<p class="property-message">Deprecated: {{% md %}}`groups_claim_delimiter_pattern` has been removed since Vault 1.1. If the groups claim is not at the top level, it can now be specified as a JSONPointer.{{% /md %}}</p></dd><dt class="property-optional property-deprecated"
             title="Optional, Deprecated">
         <span id="state_maxttl_nodejs">
 <a href="#state_maxttl_nodejs" style="color: inherit; text-decoration: inherit;">max<wbr>Ttl</a>
@@ -2960,8 +2723,7 @@ via nested structures of meta, user, name, and groups.
     </dt>
     <dd>{{% md %}}The maximum allowed lifetime of tokens
 issued using this role, provided as a number of seconds.
-{{% /md %}}<p class="property-message">Deprecated: {{% md %}}use `token_max_ttl` instead if you are running Vault &gt;= 1.2{{% /md %}}</p></dd>
-    <dt class="property-optional"
+{{% /md %}}<p class="property-message">Deprecated: {{% md %}}use `token_max_ttl` instead if you are running Vault &gt;= 1.2{{% /md %}}</p></dd><dt class="property-optional"
             title="Optional">
         <span id="state_notbeforeleeway_nodejs">
 <a href="#state_notbeforeleeway_nodejs" style="color: inherit; text-decoration: inherit;">not<wbr>Before<wbr>Leeway</a>
@@ -2972,8 +2734,7 @@ issued using this role, provided as a number of seconds.
     <dd>{{% md %}}The amount of leeway to add to not before (`nbf`) claims to account for
 clock skew, in seconds. Defaults to `60` seconds if set to `0` and can be disabled if set to `-1`.
 Only applicable with "jwt" roles.
-{{% /md %}}</dd>
-    <dt class="property-optional property-deprecated"
+{{% /md %}}</dd><dt class="property-optional property-deprecated"
             title="Optional, Deprecated">
         <span id="state_numuses_nodejs">
 <a href="#state_numuses_nodejs" style="color: inherit; text-decoration: inherit;">num<wbr>Uses</a>
@@ -2983,8 +2744,7 @@ Only applicable with "jwt" roles.
     </dt>
     <dd>{{% md %}}If set, puts a use-count
 limitation on the issued token.
-{{% /md %}}<p class="property-message">Deprecated: {{% md %}}use `token_num_uses` instead if you are running Vault &gt;= 1.2{{% /md %}}</p></dd>
-    <dt class="property-optional"
+{{% /md %}}<p class="property-message">Deprecated: {{% md %}}use `token_num_uses` instead if you are running Vault &gt;= 1.2{{% /md %}}</p></dd><dt class="property-optional"
             title="Optional">
         <span id="state_oidcscopes_nodejs">
 <a href="#state_oidcscopes_nodejs" style="color: inherit; text-decoration: inherit;">oidc<wbr>Scopes</a>
@@ -2994,8 +2754,7 @@ limitation on the issued token.
     </dt>
     <dd>{{% md %}}If set, a list of OIDC scopes to be used with an OIDC role.
 The standard scope "openid" is automatically included and need not be specified.
-{{% /md %}}</dd>
-    <dt class="property-optional property-deprecated"
+{{% /md %}}</dd><dt class="property-optional property-deprecated"
             title="Optional, Deprecated">
         <span id="state_period_nodejs">
 <a href="#state_period_nodejs" style="color: inherit; text-decoration: inherit;">period</a>
@@ -3007,8 +2766,7 @@ The standard scope "openid" is automatically included and need not be specified.
 token generated using this role should never expire. The token should be renewed within the
 duration specified by this value. At each renewal, the token's TTL will be set to the
 value of this field. Specified in seconds.
-{{% /md %}}<p class="property-message">Deprecated: {{% md %}}use `token_period` instead if you are running Vault &gt;= 1.2{{% /md %}}</p></dd>
-    <dt class="property-optional property-deprecated"
+{{% /md %}}<p class="property-message">Deprecated: {{% md %}}use `token_period` instead if you are running Vault &gt;= 1.2{{% /md %}}</p></dd><dt class="property-optional property-deprecated"
             title="Optional, Deprecated">
         <span id="state_policies_nodejs">
 <a href="#state_policies_nodejs" style="color: inherit; text-decoration: inherit;">policies</a>
@@ -3018,8 +2776,7 @@ value of this field. Specified in seconds.
     </dt>
     <dd>{{% md %}}An array of strings
 specifying the policies to be set on tokens issued using this role.
-{{% /md %}}<p class="property-message">Deprecated: {{% md %}}use `token_policies` instead if you are running Vault &gt;= 1.2{{% /md %}}</p></dd>
-    <dt class="property-optional"
+{{% /md %}}<p class="property-message">Deprecated: {{% md %}}use `token_policies` instead if you are running Vault &gt;= 1.2{{% /md %}}</p></dd><dt class="property-optional"
             title="Optional">
         <span id="state_rolename_nodejs">
 <a href="#state_rolename_nodejs" style="color: inherit; text-decoration: inherit;">role<wbr>Name</a>
@@ -3028,8 +2785,7 @@ specifying the policies to be set on tokens issued using this role.
         <span class="property-type">string</span>
     </dt>
     <dd>{{% md %}}The name of the role.
-{{% /md %}}</dd>
-    <dt class="property-optional"
+{{% /md %}}</dd><dt class="property-optional"
             title="Optional">
         <span id="state_roletype_nodejs">
 <a href="#state_roletype_nodejs" style="color: inherit; text-decoration: inherit;">role<wbr>Type</a>
@@ -3038,8 +2794,7 @@ specifying the policies to be set on tokens issued using this role.
         <span class="property-type">string</span>
     </dt>
     <dd>{{% md %}}Type of role, either "oidc" (default) or "jwt".
-{{% /md %}}</dd>
-    <dt class="property-optional"
+{{% /md %}}</dd><dt class="property-optional"
             title="Optional">
         <span id="state_tokenboundcidrs_nodejs">
 <a href="#state_tokenboundcidrs_nodejs" style="color: inherit; text-decoration: inherit;">token<wbr>Bound<wbr>Cidrs</a>
@@ -3050,8 +2805,7 @@ specifying the policies to be set on tokens issued using this role.
     <dd>{{% md %}}List of CIDR blocks; if set, specifies blocks of IP
 addresses which can authenticate successfully, and ties the resulting token to these blocks
 as well.
-{{% /md %}}</dd>
-    <dt class="property-optional"
+{{% /md %}}</dd><dt class="property-optional"
             title="Optional">
         <span id="state_tokenexplicitmaxttl_nodejs">
 <a href="#state_tokenexplicitmaxttl_nodejs" style="color: inherit; text-decoration: inherit;">token<wbr>Explicit<wbr>Max<wbr>Ttl</a>
@@ -3063,8 +2817,7 @@ as well.
 [explicit max TTL](https://www.vaultproject.io/docs/concepts/tokens.html#token-time-to-live-periodic-tokens-and-explicit-max-ttls)
 onto the token in number of seconds. This is a hard cap even if `token_ttl` and
 `token_max_ttl` would otherwise allow a renewal.
-{{% /md %}}</dd>
-    <dt class="property-optional"
+{{% /md %}}</dd><dt class="property-optional"
             title="Optional">
         <span id="state_tokenmaxttl_nodejs">
 <a href="#state_tokenmaxttl_nodejs" style="color: inherit; text-decoration: inherit;">token<wbr>Max<wbr>Ttl</a>
@@ -3074,8 +2827,7 @@ onto the token in number of seconds. This is a hard cap even if `token_ttl` and
     </dt>
     <dd>{{% md %}}The maximum lifetime for generated tokens in number of seconds.
 Its current value will be referenced at renewal time.
-{{% /md %}}</dd>
-    <dt class="property-optional"
+{{% /md %}}</dd><dt class="property-optional"
             title="Optional">
         <span id="state_tokennodefaultpolicy_nodejs">
 <a href="#state_tokennodefaultpolicy_nodejs" style="color: inherit; text-decoration: inherit;">token<wbr>No<wbr>Default<wbr>Policy</a>
@@ -3085,8 +2837,7 @@ Its current value will be referenced at renewal time.
     </dt>
     <dd>{{% md %}}If set, the default policy will not be set on
 generated tokens; otherwise it will be added to the policies set in token_policies.
-{{% /md %}}</dd>
-    <dt class="property-optional"
+{{% /md %}}</dd><dt class="property-optional"
             title="Optional">
         <span id="state_tokennumuses_nodejs">
 <a href="#state_tokennumuses_nodejs" style="color: inherit; text-decoration: inherit;">token<wbr>Num<wbr>Uses</a>
@@ -3097,8 +2848,7 @@ generated tokens; otherwise it will be added to the policies set in token_polici
     <dd>{{% md %}}The
 [period](https://www.vaultproject.io/docs/concepts/tokens.html#token-time-to-live-periodic-tokens-and-explicit-max-ttls),
 if any, in number of seconds to set on the token.
-{{% /md %}}</dd>
-    <dt class="property-optional"
+{{% /md %}}</dd><dt class="property-optional"
             title="Optional">
         <span id="state_tokenperiod_nodejs">
 <a href="#state_tokenperiod_nodejs" style="color: inherit; text-decoration: inherit;">token<wbr>Period</a>
@@ -3110,8 +2860,7 @@ if any, in number of seconds to set on the token.
 token generated using this role should never expire. The token should be renewed within the
 duration specified by this value. At each renewal, the token's TTL will be set to the
 value of this field. Specified in seconds.
-{{% /md %}}</dd>
-    <dt class="property-optional"
+{{% /md %}}</dd><dt class="property-optional"
             title="Optional">
         <span id="state_tokenpolicies_nodejs">
 <a href="#state_tokenpolicies_nodejs" style="color: inherit; text-decoration: inherit;">token<wbr>Policies</a>
@@ -3121,8 +2870,7 @@ value of this field. Specified in seconds.
     </dt>
     <dd>{{% md %}}List of policies to encode onto generated tokens. Depending
 on the auth method, this list may be supplemented by user/group/other values.
-{{% /md %}}</dd>
-    <dt class="property-optional"
+{{% /md %}}</dd><dt class="property-optional"
             title="Optional">
         <span id="state_tokenttl_nodejs">
 <a href="#state_tokenttl_nodejs" style="color: inherit; text-decoration: inherit;">token<wbr>Ttl</a>
@@ -3132,8 +2880,7 @@ on the auth method, this list may be supplemented by user/group/other values.
     </dt>
     <dd>{{% md %}}The incremental lifetime for generated tokens in number of seconds.
 Its current value will be referenced at renewal time.
-{{% /md %}}</dd>
-    <dt class="property-optional"
+{{% /md %}}</dd><dt class="property-optional"
             title="Optional">
         <span id="state_tokentype_nodejs">
 <a href="#state_tokentype_nodejs" style="color: inherit; text-decoration: inherit;">token<wbr>Type</a>
@@ -3146,8 +2893,7 @@ Its current value will be referenced at renewal time.
 `service` tokens). For token store roles, there are two additional possibilities:
 `default-service` and `default-batch` which specify the type to return unless the client
 requests a different type at generation time.
-{{% /md %}}</dd>
-    <dt class="property-optional property-deprecated"
+{{% /md %}}</dd><dt class="property-optional property-deprecated"
             title="Optional, Deprecated">
         <span id="state_ttl_nodejs">
 <a href="#state_ttl_nodejs" style="color: inherit; text-decoration: inherit;">ttl</a>
@@ -3157,8 +2903,7 @@ requests a different type at generation time.
     </dt>
     <dd>{{% md %}}The TTL period of tokens issued
 using this role, provided as a number of seconds.
-{{% /md %}}<p class="property-message">Deprecated: {{% md %}}use `token_ttl` instead if you are running Vault &gt;= 1.2{{% /md %}}</p></dd>
-    <dt class="property-optional"
+{{% /md %}}<p class="property-message">Deprecated: {{% md %}}use `token_ttl` instead if you are running Vault &gt;= 1.2{{% /md %}}</p></dd><dt class="property-optional"
             title="Optional">
         <span id="state_userclaim_nodejs">
 <a href="#state_userclaim_nodejs" style="color: inherit; text-decoration: inherit;">user<wbr>Claim</a>
@@ -3169,8 +2914,7 @@ using this role, provided as a number of seconds.
     <dd>{{% md %}}The claim to use to uniquely identify
 the user; this will be used as the name for the Identity entity alias created
 due to a successful login.
-{{% /md %}}</dd>
-    <dt class="property-optional"
+{{% /md %}}</dd><dt class="property-optional"
             title="Optional">
         <span id="state_verboseoidclogging_nodejs">
 <a href="#state_verboseoidclogging_nodejs" style="color: inherit; text-decoration: inherit;">verbose<wbr>Oidc<wbr>Logging</a>
@@ -3181,14 +2925,11 @@ due to a successful login.
     <dd>{{% md %}}Log received OIDC tokens and claims when debug-level
 logging is active. Not recommended in production since sensitive information may be present
 in OIDC responses.
-{{% /md %}}</dd>
-</dl>
+{{% /md %}}</dd></dl>
 {{% /choosable %}}
 
 {{% choosable language python %}}
-<dl class="resources-properties">
-
-    <dt class="property-optional"
+<dl class="resources-properties"><dt class="property-optional"
             title="Optional">
         <span id="state_allowed_redirect_uris_python">
 <a href="#state_allowed_redirect_uris_python" style="color: inherit; text-decoration: inherit;">allowed_<wbr>redirect_<wbr>uris</a>
@@ -3198,8 +2939,7 @@ in OIDC responses.
     </dt>
     <dd>{{% md %}}The list of allowed values for redirect_uri during OIDC logins.
 Required for OIDC roles
-{{% /md %}}</dd>
-    <dt class="property-optional"
+{{% /md %}}</dd><dt class="property-optional"
             title="Optional">
         <span id="state_backend_python">
 <a href="#state_backend_python" style="color: inherit; text-decoration: inherit;">backend</a>
@@ -3209,8 +2949,7 @@ Required for OIDC roles
     </dt>
     <dd>{{% md %}}The unique name of the auth backend to configure.
 Defaults to `jwt`.
-{{% /md %}}</dd>
-    <dt class="property-optional"
+{{% /md %}}</dd><dt class="property-optional"
             title="Optional">
         <span id="state_bound_audiences_python">
 <a href="#state_bound_audiences_python" style="color: inherit; text-decoration: inherit;">bound_<wbr>audiences</a>
@@ -3220,8 +2959,7 @@ Defaults to `jwt`.
     </dt>
     <dd>{{% md %}}(Required for roles of type `jwt`, optional for roles of
 type `oidc`) List of `aud` claims to match against. Any match is sufficient.
-{{% /md %}}</dd>
-    <dt class="property-optional property-deprecated"
+{{% /md %}}</dd><dt class="property-optional property-deprecated"
             title="Optional, Deprecated">
         <span id="state_bound_cidrs_python">
 <a href="#state_bound_cidrs_python" style="color: inherit; text-decoration: inherit;">bound_<wbr>cidrs</a>
@@ -3231,8 +2969,7 @@ type `oidc`) List of `aud` claims to match against. Any match is sufficient.
     </dt>
     <dd>{{% md %}}If set, a list of
 CIDRs valid as the source address for login requests. This value is also encoded into any resulting token.
-{{% /md %}}<p class="property-message">Deprecated: {{% md %}}use `token_bound_cidrs` instead if you are running Vault &gt;= 1.2{{% /md %}}</p></dd>
-    <dt class="property-optional"
+{{% /md %}}<p class="property-message">Deprecated: {{% md %}}use `token_bound_cidrs` instead if you are running Vault &gt;= 1.2{{% /md %}}</p></dd><dt class="property-optional"
             title="Optional">
         <span id="state_bound_claims_python">
 <a href="#state_bound_claims_python" style="color: inherit; text-decoration: inherit;">bound_<wbr>claims</a>
@@ -3242,8 +2979,7 @@ CIDRs valid as the source address for login requests. This value is also encoded
     </dt>
     <dd>{{% md %}}If set, a map of claims/values to match against.
 The expected value may be a single string or a list of strings.
-{{% /md %}}</dd>
-    <dt class="property-optional"
+{{% /md %}}</dd><dt class="property-optional"
             title="Optional">
         <span id="state_bound_claims_type_python">
 <a href="#state_bound_claims_type_python" style="color: inherit; text-decoration: inherit;">bound_<wbr>claims_<wbr>type</a>
@@ -3254,8 +2990,7 @@ The expected value may be a single string or a list of strings.
     <dd>{{% md %}}How to interpret values in the claims/values
 map (`bound_claims`): can be either `string` (exact match) or `glob` (wildcard
 match). Requires Vault 1.4.0 or above.
-{{% /md %}}</dd>
-    <dt class="property-optional"
+{{% /md %}}</dd><dt class="property-optional"
             title="Optional">
         <span id="state_bound_subject_python">
 <a href="#state_bound_subject_python" style="color: inherit; text-decoration: inherit;">bound_<wbr>subject</a>
@@ -3265,8 +3000,7 @@ match). Requires Vault 1.4.0 or above.
     </dt>
     <dd>{{% md %}}If set, requires that the `sub` claim matches
 this value.
-{{% /md %}}</dd>
-    <dt class="property-optional"
+{{% /md %}}</dd><dt class="property-optional"
             title="Optional">
         <span id="state_claim_mappings_python">
 <a href="#state_claim_mappings_python" style="color: inherit; text-decoration: inherit;">claim_<wbr>mappings</a>
@@ -3276,8 +3010,7 @@ this value.
     </dt>
     <dd>{{% md %}}If set, a map of claims (keys) to be copied
 to specified metadata fields (values).
-{{% /md %}}</dd>
-    <dt class="property-optional"
+{{% /md %}}</dd><dt class="property-optional"
             title="Optional">
         <span id="state_clock_skew_leeway_python">
 <a href="#state_clock_skew_leeway_python" style="color: inherit; text-decoration: inherit;">clock_<wbr>skew_<wbr>leeway</a>
@@ -3288,8 +3021,7 @@ to specified metadata fields (values).
     <dd>{{% md %}}The amount of leeway to add to all claims to account for clock skew, in
 seconds. Defaults to `60` seconds if set to `0` and can be disabled if set to `-1`.
 Only applicable with "jwt" roles.
-{{% /md %}}</dd>
-    <dt class="property-optional"
+{{% /md %}}</dd><dt class="property-optional"
             title="Optional">
         <span id="state_expiration_leeway_python">
 <a href="#state_expiration_leeway_python" style="color: inherit; text-decoration: inherit;">expiration_<wbr>leeway</a>
@@ -3300,8 +3032,7 @@ Only applicable with "jwt" roles.
     <dd>{{% md %}}The amount of leeway to add to expiration (`exp`) claims to account for
 clock skew, in seconds. Defaults to `60` seconds if set to `0` and can be disabled if set to `-1`.
 Only applicable with "jwt" roles.
-{{% /md %}}</dd>
-    <dt class="property-optional"
+{{% /md %}}</dd><dt class="property-optional"
             title="Optional">
         <span id="state_groups_claim_python">
 <a href="#state_groups_claim_python" style="color: inherit; text-decoration: inherit;">groups_<wbr>claim</a>
@@ -3313,8 +3044,7 @@ Only applicable with "jwt" roles.
 the set of groups to which the user belongs; this will be used as the names
 for the Identity group aliases created due to a successful login. The claim
 value must be a list of strings.
-{{% /md %}}</dd>
-    <dt class="property-optional property-deprecated"
+{{% /md %}}</dd><dt class="property-optional property-deprecated"
             title="Optional, Deprecated">
         <span id="state_groups_claim_delimiter_pattern_python">
 <a href="#state_groups_claim_delimiter_pattern_python" style="color: inherit; text-decoration: inherit;">groups_<wbr>claim_<wbr>delimiter_<wbr>pattern</a>
@@ -3331,8 +3061,7 @@ For instance, a groups_claim of meta/user.name/groups with this field
 set to // will expect nested structures named meta, user.name, and groups.
 If this field was set to /./ the groups information would expect to be
 via nested structures of meta, user, name, and groups.
-{{% /md %}}<p class="property-message">Deprecated: {{% md %}}`groups_claim_delimiter_pattern` has been removed since Vault 1.1. If the groups claim is not at the top level, it can now be specified as a JSONPointer.{{% /md %}}</p></dd>
-    <dt class="property-optional property-deprecated"
+{{% /md %}}<p class="property-message">Deprecated: {{% md %}}`groups_claim_delimiter_pattern` has been removed since Vault 1.1. If the groups claim is not at the top level, it can now be specified as a JSONPointer.{{% /md %}}</p></dd><dt class="property-optional property-deprecated"
             title="Optional, Deprecated">
         <span id="state_max_ttl_python">
 <a href="#state_max_ttl_python" style="color: inherit; text-decoration: inherit;">max_<wbr>ttl</a>
@@ -3342,8 +3071,7 @@ via nested structures of meta, user, name, and groups.
     </dt>
     <dd>{{% md %}}The maximum allowed lifetime of tokens
 issued using this role, provided as a number of seconds.
-{{% /md %}}<p class="property-message">Deprecated: {{% md %}}use `token_max_ttl` instead if you are running Vault &gt;= 1.2{{% /md %}}</p></dd>
-    <dt class="property-optional"
+{{% /md %}}<p class="property-message">Deprecated: {{% md %}}use `token_max_ttl` instead if you are running Vault &gt;= 1.2{{% /md %}}</p></dd><dt class="property-optional"
             title="Optional">
         <span id="state_not_before_leeway_python">
 <a href="#state_not_before_leeway_python" style="color: inherit; text-decoration: inherit;">not_<wbr>before_<wbr>leeway</a>
@@ -3354,8 +3082,7 @@ issued using this role, provided as a number of seconds.
     <dd>{{% md %}}The amount of leeway to add to not before (`nbf`) claims to account for
 clock skew, in seconds. Defaults to `60` seconds if set to `0` and can be disabled if set to `-1`.
 Only applicable with "jwt" roles.
-{{% /md %}}</dd>
-    <dt class="property-optional property-deprecated"
+{{% /md %}}</dd><dt class="property-optional property-deprecated"
             title="Optional, Deprecated">
         <span id="state_num_uses_python">
 <a href="#state_num_uses_python" style="color: inherit; text-decoration: inherit;">num_<wbr>uses</a>
@@ -3365,8 +3092,7 @@ Only applicable with "jwt" roles.
     </dt>
     <dd>{{% md %}}If set, puts a use-count
 limitation on the issued token.
-{{% /md %}}<p class="property-message">Deprecated: {{% md %}}use `token_num_uses` instead if you are running Vault &gt;= 1.2{{% /md %}}</p></dd>
-    <dt class="property-optional"
+{{% /md %}}<p class="property-message">Deprecated: {{% md %}}use `token_num_uses` instead if you are running Vault &gt;= 1.2{{% /md %}}</p></dd><dt class="property-optional"
             title="Optional">
         <span id="state_oidc_scopes_python">
 <a href="#state_oidc_scopes_python" style="color: inherit; text-decoration: inherit;">oidc_<wbr>scopes</a>
@@ -3376,8 +3102,7 @@ limitation on the issued token.
     </dt>
     <dd>{{% md %}}If set, a list of OIDC scopes to be used with an OIDC role.
 The standard scope "openid" is automatically included and need not be specified.
-{{% /md %}}</dd>
-    <dt class="property-optional property-deprecated"
+{{% /md %}}</dd><dt class="property-optional property-deprecated"
             title="Optional, Deprecated">
         <span id="state_period_python">
 <a href="#state_period_python" style="color: inherit; text-decoration: inherit;">period</a>
@@ -3389,8 +3114,7 @@ The standard scope "openid" is automatically included and need not be specified.
 token generated using this role should never expire. The token should be renewed within the
 duration specified by this value. At each renewal, the token's TTL will be set to the
 value of this field. Specified in seconds.
-{{% /md %}}<p class="property-message">Deprecated: {{% md %}}use `token_period` instead if you are running Vault &gt;= 1.2{{% /md %}}</p></dd>
-    <dt class="property-optional property-deprecated"
+{{% /md %}}<p class="property-message">Deprecated: {{% md %}}use `token_period` instead if you are running Vault &gt;= 1.2{{% /md %}}</p></dd><dt class="property-optional property-deprecated"
             title="Optional, Deprecated">
         <span id="state_policies_python">
 <a href="#state_policies_python" style="color: inherit; text-decoration: inherit;">policies</a>
@@ -3400,8 +3124,7 @@ value of this field. Specified in seconds.
     </dt>
     <dd>{{% md %}}An array of strings
 specifying the policies to be set on tokens issued using this role.
-{{% /md %}}<p class="property-message">Deprecated: {{% md %}}use `token_policies` instead if you are running Vault &gt;= 1.2{{% /md %}}</p></dd>
-    <dt class="property-optional"
+{{% /md %}}<p class="property-message">Deprecated: {{% md %}}use `token_policies` instead if you are running Vault &gt;= 1.2{{% /md %}}</p></dd><dt class="property-optional"
             title="Optional">
         <span id="state_role_name_python">
 <a href="#state_role_name_python" style="color: inherit; text-decoration: inherit;">role_<wbr>name</a>
@@ -3410,8 +3133,7 @@ specifying the policies to be set on tokens issued using this role.
         <span class="property-type">str</span>
     </dt>
     <dd>{{% md %}}The name of the role.
-{{% /md %}}</dd>
-    <dt class="property-optional"
+{{% /md %}}</dd><dt class="property-optional"
             title="Optional">
         <span id="state_role_type_python">
 <a href="#state_role_type_python" style="color: inherit; text-decoration: inherit;">role_<wbr>type</a>
@@ -3420,8 +3142,7 @@ specifying the policies to be set on tokens issued using this role.
         <span class="property-type">str</span>
     </dt>
     <dd>{{% md %}}Type of role, either "oidc" (default) or "jwt".
-{{% /md %}}</dd>
-    <dt class="property-optional"
+{{% /md %}}</dd><dt class="property-optional"
             title="Optional">
         <span id="state_token_bound_cidrs_python">
 <a href="#state_token_bound_cidrs_python" style="color: inherit; text-decoration: inherit;">token_<wbr>bound_<wbr>cidrs</a>
@@ -3432,8 +3153,7 @@ specifying the policies to be set on tokens issued using this role.
     <dd>{{% md %}}List of CIDR blocks; if set, specifies blocks of IP
 addresses which can authenticate successfully, and ties the resulting token to these blocks
 as well.
-{{% /md %}}</dd>
-    <dt class="property-optional"
+{{% /md %}}</dd><dt class="property-optional"
             title="Optional">
         <span id="state_token_explicit_max_ttl_python">
 <a href="#state_token_explicit_max_ttl_python" style="color: inherit; text-decoration: inherit;">token_<wbr>explicit_<wbr>max_<wbr>ttl</a>
@@ -3445,8 +3165,7 @@ as well.
 [explicit max TTL](https://www.vaultproject.io/docs/concepts/tokens.html#token-time-to-live-periodic-tokens-and-explicit-max-ttls)
 onto the token in number of seconds. This is a hard cap even if `token_ttl` and
 `token_max_ttl` would otherwise allow a renewal.
-{{% /md %}}</dd>
-    <dt class="property-optional"
+{{% /md %}}</dd><dt class="property-optional"
             title="Optional">
         <span id="state_token_max_ttl_python">
 <a href="#state_token_max_ttl_python" style="color: inherit; text-decoration: inherit;">token_<wbr>max_<wbr>ttl</a>
@@ -3456,8 +3175,7 @@ onto the token in number of seconds. This is a hard cap even if `token_ttl` and
     </dt>
     <dd>{{% md %}}The maximum lifetime for generated tokens in number of seconds.
 Its current value will be referenced at renewal time.
-{{% /md %}}</dd>
-    <dt class="property-optional"
+{{% /md %}}</dd><dt class="property-optional"
             title="Optional">
         <span id="state_token_no_default_policy_python">
 <a href="#state_token_no_default_policy_python" style="color: inherit; text-decoration: inherit;">token_<wbr>no_<wbr>default_<wbr>policy</a>
@@ -3467,8 +3185,7 @@ Its current value will be referenced at renewal time.
     </dt>
     <dd>{{% md %}}If set, the default policy will not be set on
 generated tokens; otherwise it will be added to the policies set in token_policies.
-{{% /md %}}</dd>
-    <dt class="property-optional"
+{{% /md %}}</dd><dt class="property-optional"
             title="Optional">
         <span id="state_token_num_uses_python">
 <a href="#state_token_num_uses_python" style="color: inherit; text-decoration: inherit;">token_<wbr>num_<wbr>uses</a>
@@ -3479,8 +3196,7 @@ generated tokens; otherwise it will be added to the policies set in token_polici
     <dd>{{% md %}}The
 [period](https://www.vaultproject.io/docs/concepts/tokens.html#token-time-to-live-periodic-tokens-and-explicit-max-ttls),
 if any, in number of seconds to set on the token.
-{{% /md %}}</dd>
-    <dt class="property-optional"
+{{% /md %}}</dd><dt class="property-optional"
             title="Optional">
         <span id="state_token_period_python">
 <a href="#state_token_period_python" style="color: inherit; text-decoration: inherit;">token_<wbr>period</a>
@@ -3492,8 +3208,7 @@ if any, in number of seconds to set on the token.
 token generated using this role should never expire. The token should be renewed within the
 duration specified by this value. At each renewal, the token's TTL will be set to the
 value of this field. Specified in seconds.
-{{% /md %}}</dd>
-    <dt class="property-optional"
+{{% /md %}}</dd><dt class="property-optional"
             title="Optional">
         <span id="state_token_policies_python">
 <a href="#state_token_policies_python" style="color: inherit; text-decoration: inherit;">token_<wbr>policies</a>
@@ -3503,8 +3218,7 @@ value of this field. Specified in seconds.
     </dt>
     <dd>{{% md %}}List of policies to encode onto generated tokens. Depending
 on the auth method, this list may be supplemented by user/group/other values.
-{{% /md %}}</dd>
-    <dt class="property-optional"
+{{% /md %}}</dd><dt class="property-optional"
             title="Optional">
         <span id="state_token_ttl_python">
 <a href="#state_token_ttl_python" style="color: inherit; text-decoration: inherit;">token_<wbr>ttl</a>
@@ -3514,8 +3228,7 @@ on the auth method, this list may be supplemented by user/group/other values.
     </dt>
     <dd>{{% md %}}The incremental lifetime for generated tokens in number of seconds.
 Its current value will be referenced at renewal time.
-{{% /md %}}</dd>
-    <dt class="property-optional"
+{{% /md %}}</dd><dt class="property-optional"
             title="Optional">
         <span id="state_token_type_python">
 <a href="#state_token_type_python" style="color: inherit; text-decoration: inherit;">token_<wbr>type</a>
@@ -3528,8 +3241,7 @@ Its current value will be referenced at renewal time.
 `service` tokens). For token store roles, there are two additional possibilities:
 `default-service` and `default-batch` which specify the type to return unless the client
 requests a different type at generation time.
-{{% /md %}}</dd>
-    <dt class="property-optional property-deprecated"
+{{% /md %}}</dd><dt class="property-optional property-deprecated"
             title="Optional, Deprecated">
         <span id="state_ttl_python">
 <a href="#state_ttl_python" style="color: inherit; text-decoration: inherit;">ttl</a>
@@ -3539,8 +3251,7 @@ requests a different type at generation time.
     </dt>
     <dd>{{% md %}}The TTL period of tokens issued
 using this role, provided as a number of seconds.
-{{% /md %}}<p class="property-message">Deprecated: {{% md %}}use `token_ttl` instead if you are running Vault &gt;= 1.2{{% /md %}}</p></dd>
-    <dt class="property-optional"
+{{% /md %}}<p class="property-message">Deprecated: {{% md %}}use `token_ttl` instead if you are running Vault &gt;= 1.2{{% /md %}}</p></dd><dt class="property-optional"
             title="Optional">
         <span id="state_user_claim_python">
 <a href="#state_user_claim_python" style="color: inherit; text-decoration: inherit;">user_<wbr>claim</a>
@@ -3551,8 +3262,7 @@ using this role, provided as a number of seconds.
     <dd>{{% md %}}The claim to use to uniquely identify
 the user; this will be used as the name for the Identity entity alias created
 due to a successful login.
-{{% /md %}}</dd>
-    <dt class="property-optional"
+{{% /md %}}</dd><dt class="property-optional"
             title="Optional">
         <span id="state_verbose_oidc_logging_python">
 <a href="#state_verbose_oidc_logging_python" style="color: inherit; text-decoration: inherit;">verbose_<wbr>oidc_<wbr>logging</a>
@@ -3563,8 +3273,7 @@ due to a successful login.
     <dd>{{% md %}}Log received OIDC tokens and claims when debug-level
 logging is active. Not recommended in production since sensitive information may be present
 in OIDC responses.
-{{% /md %}}</dd>
-</dl>
+{{% /md %}}</dd></dl>
 {{% /choosable %}}
 
 
@@ -3590,6 +3299,6 @@ JWT authentication backend roles can be imported using the `path`, e.g.
 	<dt>License</dt>
 	<dd>Apache-2.0</dd>
 	<dt>Notes</dt>
-	<dd>This Pulumi package is based on the [`vault` Terraform Provider](https://github.com/hashicorp/terraform-provider-vault).</dd>
+	<dd>{{% md %}}This Pulumi package is based on the [`vault` Terraform Provider](https://github.com/hashicorp/terraform-provider-vault).{{% /md %}}</dd>
 </dl>
 

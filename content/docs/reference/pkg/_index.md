@@ -152,6 +152,7 @@ SDK reference documentation, organized by language.
 {{% /choosable %}}
 
 {{% choosable language "javascript,typescript" %}}
+
 ### Cloud-Agnostic Packages
 
 <dl class="tabular">
@@ -162,4 +163,5 @@ SDK reference documentation, organized by language.
         <p>A highly productive, cloud-agnostic package for container and serverless programming.</p>
     </dd>
 </dl>
+
 {{% /choosable %}}

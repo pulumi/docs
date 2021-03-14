@@ -39,9 +39,7 @@ It is not possible to import this resource.
 
 {{% choosable language nodejs %}}
 
-<dl class="resources-properties">
-  
-    <dt
+<dl class="resources-properties"><dt
         class="property-required" title="Required">
         <span>name</span>
         <span class="property-indicator"></span>
@@ -49,9 +47,7 @@ It is not possible to import this resource.
     </dt>
     <dd>
       The unique name of the resource.
-    </dd>
-  
-    <dt
+    </dd><dt
         class="property-required" title="Required">
         <span>args</span>
         <span class="property-indicator"></span>
@@ -59,9 +55,7 @@ It is not possible to import this resource.
     </dt>
     <dd>
       The arguments to resource properties.
-    </dd>
-  
-    <dt
+    </dd><dt
         class="property-optional" title="Optional">
         <span>opts</span>
         <span class="property-indicator"></span>
@@ -69,10 +63,7 @@ It is not possible to import this resource.
     </dt>
     <dd>
       Bag of options to control resource&#39;s behavior.
-    </dd>
-  
-
-</dl>
+    </dd></dl>
 
 {{% /choosable %}}
 
@@ -98,9 +89,7 @@ It is not possible to import this resource.
 
 {{% choosable language go %}}
 
-<dl class="resources-properties">
-  
-    <dt
+<dl class="resources-properties"><dt
         class="property-optional" title="Optional">
         <span>ctx</span>
         <span class="property-indicator"></span>
@@ -108,9 +97,7 @@ It is not possible to import this resource.
     </dt>
     <dd>
       Context object for the current deployment.
-    </dd>
-  
-    <dt
+    </dd><dt
         class="property-required" title="Required">
         <span>name</span>
         <span class="property-indicator"></span>
@@ -118,9 +105,7 @@ It is not possible to import this resource.
     </dt>
     <dd>
       The unique name of the resource.
-    </dd>
-  
-    <dt
+    </dd><dt
         class="property-required" title="Required">
         <span>args</span>
         <span class="property-indicator"></span>
@@ -128,9 +113,7 @@ It is not possible to import this resource.
     </dt>
     <dd>
       The arguments to resource properties.
-    </dd>
-  
-    <dt
+    </dd><dt
         class="property-optional" title="Optional">
         <span>opts</span>
         <span class="property-indicator"></span>
@@ -138,18 +121,13 @@ It is not possible to import this resource.
     </dt>
     <dd>
       Bag of options to control resource&#39;s behavior.
-    </dd>
-  
-
-</dl>
+    </dd></dl>
 
 {{% /choosable %}}
 
 {{% choosable language csharp %}}
 
-<dl class="resources-properties">
-  
-    <dt
+<dl class="resources-properties"><dt
         class="property-required" title="Required">
         <span>name</span>
         <span class="property-indicator"></span>
@@ -157,9 +135,7 @@ It is not possible to import this resource.
     </dt>
     <dd>
       The unique name of the resource.
-    </dd>
-  
-    <dt
+    </dd><dt
         class="property-required" title="Required">
         <span>args</span>
         <span class="property-indicator"></span>
@@ -167,9 +143,7 @@ It is not possible to import this resource.
     </dt>
     <dd>
       The arguments to resource properties.
-    </dd>
-  
-    <dt
+    </dd><dt
         class="property-optional" title="Optional">
         <span>opts</span>
         <span class="property-indicator"></span>
@@ -177,10 +151,7 @@ It is not possible to import this resource.
     </dt>
     <dd>
       Bag of options to control resource&#39;s behavior.
-    </dd>
-  
-
-</dl>
+    </dd></dl>
 
 {{% /choosable %}}
 
@@ -195,9 +166,7 @@ The VolumeAttachV2 resource accepts the following [input]({{< relref "/docs/intr
 
 
 {{% choosable language csharp %}}
-<dl class="resources-properties">
-
-    <dt class="property-required"
+<dl class="resources-properties"><dt class="property-required"
             title="Required">
         <span id="hostname_csharp">
 <a href="#hostname_csharp" style="color: inherit; text-decoration: inherit;">Host<wbr>Name</a>
@@ -206,8 +175,7 @@ The VolumeAttachV2 resource accepts the following [input]({{< relref "/docs/intr
         <span class="property-type">string</span>
     </dt>
     <dd>{{% md %}}The host to attach the volume to.
-{{% /md %}}</dd>
-    <dt class="property-required"
+{{% /md %}}</dd><dt class="property-required"
             title="Required">
         <span id="volumeid_csharp">
 <a href="#volumeid_csharp" style="color: inherit; text-decoration: inherit;">Volume<wbr>Id</a>
@@ -216,8 +184,7 @@ The VolumeAttachV2 resource accepts the following [input]({{< relref "/docs/intr
         <span class="property-type">string</span>
     </dt>
     <dd>{{% md %}}The ID of the Volume to attach to an Instance.
-{{% /md %}}</dd>
-    <dt class="property-optional"
+{{% /md %}}</dd><dt class="property-optional"
             title="Optional">
         <span id="attachmode_csharp">
 <a href="#attachmode_csharp" style="color: inherit; text-decoration: inherit;">Attach<wbr>Mode</a>
@@ -228,8 +195,7 @@ The VolumeAttachV2 resource accepts the following [input]({{< relref "/docs/intr
     <dd>{{% md %}}Specify whether to attach the volume as Read-Only
 (`ro`) or Read-Write (`rw`). Only values of `ro` and `rw` are accepted.
 If left unspecified, the Block Storage API will apply a default of `rw`.
-{{% /md %}}</dd>
-    <dt class="property-optional"
+{{% /md %}}</dd><dt class="property-optional"
             title="Optional">
         <span id="device_csharp">
 <a href="#device_csharp" style="color: inherit; text-decoration: inherit;">Device</a>
@@ -240,8 +206,7 @@ If left unspecified, the Block Storage API will apply a default of `rw`.
     <dd>{{% md %}}The device to tell the Block Storage service this
 volume will be attached as. This is purely for informational purposes.
 You can specify `auto` or a device such as `/dev/vdc`.
-{{% /md %}}</dd>
-    <dt class="property-optional"
+{{% /md %}}</dd><dt class="property-optional"
             title="Optional">
         <span id="initiator_csharp">
 <a href="#initiator_csharp" style="color: inherit; text-decoration: inherit;">Initiator</a>
@@ -250,8 +215,7 @@ You can specify `auto` or a device such as `/dev/vdc`.
         <span class="property-type">string</span>
     </dt>
     <dd>{{% md %}}The iSCSI initiator string to make the connection.
-{{% /md %}}</dd>
-    <dt class="property-optional"
+{{% /md %}}</dd><dt class="property-optional"
             title="Optional">
         <span id="ipaddress_csharp">
 <a href="#ipaddress_csharp" style="color: inherit; text-decoration: inherit;">Ip<wbr>Address</a>
@@ -260,8 +224,7 @@ You can specify `auto` or a device such as `/dev/vdc`.
         <span class="property-type">string</span>
     </dt>
     <dd>{{% md %}}The IP address of the `host_name` above.
-{{% /md %}}</dd>
-    <dt class="property-optional"
+{{% /md %}}</dd><dt class="property-optional"
             title="Optional">
         <span id="multipath_csharp">
 <a href="#multipath_csharp" style="color: inherit; text-decoration: inherit;">Multipath</a>
@@ -270,8 +233,7 @@ You can specify `auto` or a device such as `/dev/vdc`.
         <span class="property-type">bool</span>
     </dt>
     <dd>{{% md %}}Whether to connect to this volume via multipath.
-{{% /md %}}</dd>
-    <dt class="property-optional"
+{{% /md %}}</dd><dt class="property-optional"
             title="Optional">
         <span id="ostype_csharp">
 <a href="#ostype_csharp" style="color: inherit; text-decoration: inherit;">Os<wbr>Type</a>
@@ -280,8 +242,7 @@ You can specify `auto` or a device such as `/dev/vdc`.
         <span class="property-type">string</span>
     </dt>
     <dd>{{% md %}}The iSCSI initiator OS type.
-{{% /md %}}</dd>
-    <dt class="property-optional"
+{{% /md %}}</dd><dt class="property-optional"
             title="Optional">
         <span id="platform_csharp">
 <a href="#platform_csharp" style="color: inherit; text-decoration: inherit;">Platform</a>
@@ -290,8 +251,7 @@ You can specify `auto` or a device such as `/dev/vdc`.
         <span class="property-type">string</span>
     </dt>
     <dd>{{% md %}}The iSCSI initiator platform.
-{{% /md %}}</dd>
-    <dt class="property-optional"
+{{% /md %}}</dd><dt class="property-optional"
             title="Optional">
         <span id="region_csharp">
 <a href="#region_csharp" style="color: inherit; text-decoration: inherit;">Region</a>
@@ -303,8 +263,7 @@ You can specify `auto` or a device such as `/dev/vdc`.
 client. A Block Storage client is needed to create a volume attachment.
 If omitted, the `region` argument of the provider is used. Changing this
 creates a new volume attachment.
-{{% /md %}}</dd>
-    <dt class="property-optional"
+{{% /md %}}</dd><dt class="property-optional"
             title="Optional">
         <span id="wwnn_csharp">
 <a href="#wwnn_csharp" style="color: inherit; text-decoration: inherit;">Wwnn</a>
@@ -313,8 +272,7 @@ creates a new volume attachment.
         <span class="property-type">string</span>
     </dt>
     <dd>{{% md %}}A wwnn name. Used for Fibre Channel connections.
-{{% /md %}}</dd>
-    <dt class="property-optional"
+{{% /md %}}</dd><dt class="property-optional"
             title="Optional">
         <span id="wwpns_csharp">
 <a href="#wwpns_csharp" style="color: inherit; text-decoration: inherit;">Wwpns</a>
@@ -324,14 +282,11 @@ creates a new volume attachment.
     </dt>
     <dd>{{% md %}}An array of wwpn strings. Used for Fibre Channel
 connections.
-{{% /md %}}</dd>
-</dl>
+{{% /md %}}</dd></dl>
 {{% /choosable %}}
 
 {{% choosable language go %}}
-<dl class="resources-properties">
-
-    <dt class="property-required"
+<dl class="resources-properties"><dt class="property-required"
             title="Required">
         <span id="hostname_go">
 <a href="#hostname_go" style="color: inherit; text-decoration: inherit;">Host<wbr>Name</a>
@@ -340,8 +295,7 @@ connections.
         <span class="property-type">string</span>
     </dt>
     <dd>{{% md %}}The host to attach the volume to.
-{{% /md %}}</dd>
-    <dt class="property-required"
+{{% /md %}}</dd><dt class="property-required"
             title="Required">
         <span id="volumeid_go">
 <a href="#volumeid_go" style="color: inherit; text-decoration: inherit;">Volume<wbr>Id</a>
@@ -350,8 +304,7 @@ connections.
         <span class="property-type">string</span>
     </dt>
     <dd>{{% md %}}The ID of the Volume to attach to an Instance.
-{{% /md %}}</dd>
-    <dt class="property-optional"
+{{% /md %}}</dd><dt class="property-optional"
             title="Optional">
         <span id="attachmode_go">
 <a href="#attachmode_go" style="color: inherit; text-decoration: inherit;">Attach<wbr>Mode</a>
@@ -362,8 +315,7 @@ connections.
     <dd>{{% md %}}Specify whether to attach the volume as Read-Only
 (`ro`) or Read-Write (`rw`). Only values of `ro` and `rw` are accepted.
 If left unspecified, the Block Storage API will apply a default of `rw`.
-{{% /md %}}</dd>
-    <dt class="property-optional"
+{{% /md %}}</dd><dt class="property-optional"
             title="Optional">
         <span id="device_go">
 <a href="#device_go" style="color: inherit; text-decoration: inherit;">Device</a>
@@ -374,8 +326,7 @@ If left unspecified, the Block Storage API will apply a default of `rw`.
     <dd>{{% md %}}The device to tell the Block Storage service this
 volume will be attached as. This is purely for informational purposes.
 You can specify `auto` or a device such as `/dev/vdc`.
-{{% /md %}}</dd>
-    <dt class="property-optional"
+{{% /md %}}</dd><dt class="property-optional"
             title="Optional">
         <span id="initiator_go">
 <a href="#initiator_go" style="color: inherit; text-decoration: inherit;">Initiator</a>
@@ -384,8 +335,7 @@ You can specify `auto` or a device such as `/dev/vdc`.
         <span class="property-type">string</span>
     </dt>
     <dd>{{% md %}}The iSCSI initiator string to make the connection.
-{{% /md %}}</dd>
-    <dt class="property-optional"
+{{% /md %}}</dd><dt class="property-optional"
             title="Optional">
         <span id="ipaddress_go">
 <a href="#ipaddress_go" style="color: inherit; text-decoration: inherit;">Ip<wbr>Address</a>
@@ -394,8 +344,7 @@ You can specify `auto` or a device such as `/dev/vdc`.
         <span class="property-type">string</span>
     </dt>
     <dd>{{% md %}}The IP address of the `host_name` above.
-{{% /md %}}</dd>
-    <dt class="property-optional"
+{{% /md %}}</dd><dt class="property-optional"
             title="Optional">
         <span id="multipath_go">
 <a href="#multipath_go" style="color: inherit; text-decoration: inherit;">Multipath</a>
@@ -404,8 +353,7 @@ You can specify `auto` or a device such as `/dev/vdc`.
         <span class="property-type">bool</span>
     </dt>
     <dd>{{% md %}}Whether to connect to this volume via multipath.
-{{% /md %}}</dd>
-    <dt class="property-optional"
+{{% /md %}}</dd><dt class="property-optional"
             title="Optional">
         <span id="ostype_go">
 <a href="#ostype_go" style="color: inherit; text-decoration: inherit;">Os<wbr>Type</a>
@@ -414,8 +362,7 @@ You can specify `auto` or a device such as `/dev/vdc`.
         <span class="property-type">string</span>
     </dt>
     <dd>{{% md %}}The iSCSI initiator OS type.
-{{% /md %}}</dd>
-    <dt class="property-optional"
+{{% /md %}}</dd><dt class="property-optional"
             title="Optional">
         <span id="platform_go">
 <a href="#platform_go" style="color: inherit; text-decoration: inherit;">Platform</a>
@@ -424,8 +371,7 @@ You can specify `auto` or a device such as `/dev/vdc`.
         <span class="property-type">string</span>
     </dt>
     <dd>{{% md %}}The iSCSI initiator platform.
-{{% /md %}}</dd>
-    <dt class="property-optional"
+{{% /md %}}</dd><dt class="property-optional"
             title="Optional">
         <span id="region_go">
 <a href="#region_go" style="color: inherit; text-decoration: inherit;">Region</a>
@@ -437,8 +383,7 @@ You can specify `auto` or a device such as `/dev/vdc`.
 client. A Block Storage client is needed to create a volume attachment.
 If omitted, the `region` argument of the provider is used. Changing this
 creates a new volume attachment.
-{{% /md %}}</dd>
-    <dt class="property-optional"
+{{% /md %}}</dd><dt class="property-optional"
             title="Optional">
         <span id="wwnn_go">
 <a href="#wwnn_go" style="color: inherit; text-decoration: inherit;">Wwnn</a>
@@ -447,8 +392,7 @@ creates a new volume attachment.
         <span class="property-type">string</span>
     </dt>
     <dd>{{% md %}}A wwnn name. Used for Fibre Channel connections.
-{{% /md %}}</dd>
-    <dt class="property-optional"
+{{% /md %}}</dd><dt class="property-optional"
             title="Optional">
         <span id="wwpns_go">
 <a href="#wwpns_go" style="color: inherit; text-decoration: inherit;">Wwpns</a>
@@ -458,14 +402,11 @@ creates a new volume attachment.
     </dt>
     <dd>{{% md %}}An array of wwpn strings. Used for Fibre Channel
 connections.
-{{% /md %}}</dd>
-</dl>
+{{% /md %}}</dd></dl>
 {{% /choosable %}}
 
 {{% choosable language nodejs %}}
-<dl class="resources-properties">
-
-    <dt class="property-required"
+<dl class="resources-properties"><dt class="property-required"
             title="Required">
         <span id="hostname_nodejs">
 <a href="#hostname_nodejs" style="color: inherit; text-decoration: inherit;">host<wbr>Name</a>
@@ -474,8 +415,7 @@ connections.
         <span class="property-type">string</span>
     </dt>
     <dd>{{% md %}}The host to attach the volume to.
-{{% /md %}}</dd>
-    <dt class="property-required"
+{{% /md %}}</dd><dt class="property-required"
             title="Required">
         <span id="volumeid_nodejs">
 <a href="#volumeid_nodejs" style="color: inherit; text-decoration: inherit;">volume<wbr>Id</a>
@@ -484,8 +424,7 @@ connections.
         <span class="property-type">string</span>
     </dt>
     <dd>{{% md %}}The ID of the Volume to attach to an Instance.
-{{% /md %}}</dd>
-    <dt class="property-optional"
+{{% /md %}}</dd><dt class="property-optional"
             title="Optional">
         <span id="attachmode_nodejs">
 <a href="#attachmode_nodejs" style="color: inherit; text-decoration: inherit;">attach<wbr>Mode</a>
@@ -496,8 +435,7 @@ connections.
     <dd>{{% md %}}Specify whether to attach the volume as Read-Only
 (`ro`) or Read-Write (`rw`). Only values of `ro` and `rw` are accepted.
 If left unspecified, the Block Storage API will apply a default of `rw`.
-{{% /md %}}</dd>
-    <dt class="property-optional"
+{{% /md %}}</dd><dt class="property-optional"
             title="Optional">
         <span id="device_nodejs">
 <a href="#device_nodejs" style="color: inherit; text-decoration: inherit;">device</a>
@@ -508,8 +446,7 @@ If left unspecified, the Block Storage API will apply a default of `rw`.
     <dd>{{% md %}}The device to tell the Block Storage service this
 volume will be attached as. This is purely for informational purposes.
 You can specify `auto` or a device such as `/dev/vdc`.
-{{% /md %}}</dd>
-    <dt class="property-optional"
+{{% /md %}}</dd><dt class="property-optional"
             title="Optional">
         <span id="initiator_nodejs">
 <a href="#initiator_nodejs" style="color: inherit; text-decoration: inherit;">initiator</a>
@@ -518,8 +455,7 @@ You can specify `auto` or a device such as `/dev/vdc`.
         <span class="property-type">string</span>
     </dt>
     <dd>{{% md %}}The iSCSI initiator string to make the connection.
-{{% /md %}}</dd>
-    <dt class="property-optional"
+{{% /md %}}</dd><dt class="property-optional"
             title="Optional">
         <span id="ipaddress_nodejs">
 <a href="#ipaddress_nodejs" style="color: inherit; text-decoration: inherit;">ip<wbr>Address</a>
@@ -528,8 +464,7 @@ You can specify `auto` or a device such as `/dev/vdc`.
         <span class="property-type">string</span>
     </dt>
     <dd>{{% md %}}The IP address of the `host_name` above.
-{{% /md %}}</dd>
-    <dt class="property-optional"
+{{% /md %}}</dd><dt class="property-optional"
             title="Optional">
         <span id="multipath_nodejs">
 <a href="#multipath_nodejs" style="color: inherit; text-decoration: inherit;">multipath</a>
@@ -538,8 +473,7 @@ You can specify `auto` or a device such as `/dev/vdc`.
         <span class="property-type">boolean</span>
     </dt>
     <dd>{{% md %}}Whether to connect to this volume via multipath.
-{{% /md %}}</dd>
-    <dt class="property-optional"
+{{% /md %}}</dd><dt class="property-optional"
             title="Optional">
         <span id="ostype_nodejs">
 <a href="#ostype_nodejs" style="color: inherit; text-decoration: inherit;">os<wbr>Type</a>
@@ -548,8 +482,7 @@ You can specify `auto` or a device such as `/dev/vdc`.
         <span class="property-type">string</span>
     </dt>
     <dd>{{% md %}}The iSCSI initiator OS type.
-{{% /md %}}</dd>
-    <dt class="property-optional"
+{{% /md %}}</dd><dt class="property-optional"
             title="Optional">
         <span id="platform_nodejs">
 <a href="#platform_nodejs" style="color: inherit; text-decoration: inherit;">platform</a>
@@ -558,8 +491,7 @@ You can specify `auto` or a device such as `/dev/vdc`.
         <span class="property-type">string</span>
     </dt>
     <dd>{{% md %}}The iSCSI initiator platform.
-{{% /md %}}</dd>
-    <dt class="property-optional"
+{{% /md %}}</dd><dt class="property-optional"
             title="Optional">
         <span id="region_nodejs">
 <a href="#region_nodejs" style="color: inherit; text-decoration: inherit;">region</a>
@@ -571,8 +503,7 @@ You can specify `auto` or a device such as `/dev/vdc`.
 client. A Block Storage client is needed to create a volume attachment.
 If omitted, the `region` argument of the provider is used. Changing this
 creates a new volume attachment.
-{{% /md %}}</dd>
-    <dt class="property-optional"
+{{% /md %}}</dd><dt class="property-optional"
             title="Optional">
         <span id="wwnn_nodejs">
 <a href="#wwnn_nodejs" style="color: inherit; text-decoration: inherit;">wwnn</a>
@@ -581,8 +512,7 @@ creates a new volume attachment.
         <span class="property-type">string</span>
     </dt>
     <dd>{{% md %}}A wwnn name. Used for Fibre Channel connections.
-{{% /md %}}</dd>
-    <dt class="property-optional"
+{{% /md %}}</dd><dt class="property-optional"
             title="Optional">
         <span id="wwpns_nodejs">
 <a href="#wwpns_nodejs" style="color: inherit; text-decoration: inherit;">wwpns</a>
@@ -592,14 +522,11 @@ creates a new volume attachment.
     </dt>
     <dd>{{% md %}}An array of wwpn strings. Used for Fibre Channel
 connections.
-{{% /md %}}</dd>
-</dl>
+{{% /md %}}</dd></dl>
 {{% /choosable %}}
 
 {{% choosable language python %}}
-<dl class="resources-properties">
-
-    <dt class="property-required"
+<dl class="resources-properties"><dt class="property-required"
             title="Required">
         <span id="host_name_python">
 <a href="#host_name_python" style="color: inherit; text-decoration: inherit;">host_<wbr>name</a>
@@ -608,8 +535,7 @@ connections.
         <span class="property-type">str</span>
     </dt>
     <dd>{{% md %}}The host to attach the volume to.
-{{% /md %}}</dd>
-    <dt class="property-required"
+{{% /md %}}</dd><dt class="property-required"
             title="Required">
         <span id="volume_id_python">
 <a href="#volume_id_python" style="color: inherit; text-decoration: inherit;">volume_<wbr>id</a>
@@ -618,8 +544,7 @@ connections.
         <span class="property-type">str</span>
     </dt>
     <dd>{{% md %}}The ID of the Volume to attach to an Instance.
-{{% /md %}}</dd>
-    <dt class="property-optional"
+{{% /md %}}</dd><dt class="property-optional"
             title="Optional">
         <span id="attach_mode_python">
 <a href="#attach_mode_python" style="color: inherit; text-decoration: inherit;">attach_<wbr>mode</a>
@@ -630,8 +555,7 @@ connections.
     <dd>{{% md %}}Specify whether to attach the volume as Read-Only
 (`ro`) or Read-Write (`rw`). Only values of `ro` and `rw` are accepted.
 If left unspecified, the Block Storage API will apply a default of `rw`.
-{{% /md %}}</dd>
-    <dt class="property-optional"
+{{% /md %}}</dd><dt class="property-optional"
             title="Optional">
         <span id="device_python">
 <a href="#device_python" style="color: inherit; text-decoration: inherit;">device</a>
@@ -642,8 +566,7 @@ If left unspecified, the Block Storage API will apply a default of `rw`.
     <dd>{{% md %}}The device to tell the Block Storage service this
 volume will be attached as. This is purely for informational purposes.
 You can specify `auto` or a device such as `/dev/vdc`.
-{{% /md %}}</dd>
-    <dt class="property-optional"
+{{% /md %}}</dd><dt class="property-optional"
             title="Optional">
         <span id="initiator_python">
 <a href="#initiator_python" style="color: inherit; text-decoration: inherit;">initiator</a>
@@ -652,8 +575,7 @@ You can specify `auto` or a device such as `/dev/vdc`.
         <span class="property-type">str</span>
     </dt>
     <dd>{{% md %}}The iSCSI initiator string to make the connection.
-{{% /md %}}</dd>
-    <dt class="property-optional"
+{{% /md %}}</dd><dt class="property-optional"
             title="Optional">
         <span id="ip_address_python">
 <a href="#ip_address_python" style="color: inherit; text-decoration: inherit;">ip_<wbr>address</a>
@@ -662,8 +584,7 @@ You can specify `auto` or a device such as `/dev/vdc`.
         <span class="property-type">str</span>
     </dt>
     <dd>{{% md %}}The IP address of the `host_name` above.
-{{% /md %}}</dd>
-    <dt class="property-optional"
+{{% /md %}}</dd><dt class="property-optional"
             title="Optional">
         <span id="multipath_python">
 <a href="#multipath_python" style="color: inherit; text-decoration: inherit;">multipath</a>
@@ -672,8 +593,7 @@ You can specify `auto` or a device such as `/dev/vdc`.
         <span class="property-type">bool</span>
     </dt>
     <dd>{{% md %}}Whether to connect to this volume via multipath.
-{{% /md %}}</dd>
-    <dt class="property-optional"
+{{% /md %}}</dd><dt class="property-optional"
             title="Optional">
         <span id="os_type_python">
 <a href="#os_type_python" style="color: inherit; text-decoration: inherit;">os_<wbr>type</a>
@@ -682,8 +602,7 @@ You can specify `auto` or a device such as `/dev/vdc`.
         <span class="property-type">str</span>
     </dt>
     <dd>{{% md %}}The iSCSI initiator OS type.
-{{% /md %}}</dd>
-    <dt class="property-optional"
+{{% /md %}}</dd><dt class="property-optional"
             title="Optional">
         <span id="platform_python">
 <a href="#platform_python" style="color: inherit; text-decoration: inherit;">platform</a>
@@ -692,8 +611,7 @@ You can specify `auto` or a device such as `/dev/vdc`.
         <span class="property-type">str</span>
     </dt>
     <dd>{{% md %}}The iSCSI initiator platform.
-{{% /md %}}</dd>
-    <dt class="property-optional"
+{{% /md %}}</dd><dt class="property-optional"
             title="Optional">
         <span id="region_python">
 <a href="#region_python" style="color: inherit; text-decoration: inherit;">region</a>
@@ -705,8 +623,7 @@ You can specify `auto` or a device such as `/dev/vdc`.
 client. A Block Storage client is needed to create a volume attachment.
 If omitted, the `region` argument of the provider is used. Changing this
 creates a new volume attachment.
-{{% /md %}}</dd>
-    <dt class="property-optional"
+{{% /md %}}</dd><dt class="property-optional"
             title="Optional">
         <span id="wwnn_python">
 <a href="#wwnn_python" style="color: inherit; text-decoration: inherit;">wwnn</a>
@@ -715,8 +632,7 @@ creates a new volume attachment.
         <span class="property-type">str</span>
     </dt>
     <dd>{{% md %}}A wwnn name. Used for Fibre Channel connections.
-{{% /md %}}</dd>
-    <dt class="property-optional"
+{{% /md %}}</dd><dt class="property-optional"
             title="Optional">
         <span id="wwpns_python">
 <a href="#wwpns_python" style="color: inherit; text-decoration: inherit;">wwpns</a>
@@ -726,8 +642,7 @@ creates a new volume attachment.
     </dt>
     <dd>{{% md %}}An array of wwpn strings. Used for Fibre Channel
 connections.
-{{% /md %}}</dd>
-</dl>
+{{% /md %}}</dd></dl>
 {{% /choosable %}}
 
 
@@ -738,9 +653,7 @@ All [input](#inputs) properties are implicitly available as output properties. A
 
 
 {{% choosable language csharp %}}
-<dl class="resources-properties">
-
-    <dt class="property-"
+<dl class="resources-properties"><dt class="property-"
             title="">
         <span id="data_csharp">
 <a href="#data_csharp" style="color: inherit; text-decoration: inherit;">Data</a>
@@ -751,8 +664,7 @@ All [input](#inputs) properties are implicitly available as output properties. A
     <dd>{{% md %}}This is a map of key/value pairs that contain the connection
 information. You will want to pass this information to a provisioner
 script to finalize the connection. See below for more information.
-{{% /md %}}</dd>
-    <dt class="property-"
+{{% /md %}}</dd><dt class="property-"
             title="">
         <span id="drivervolumetype_csharp">
 <a href="#drivervolumetype_csharp" style="color: inherit; text-decoration: inherit;">Driver<wbr>Volume<wbr>Type</a>
@@ -761,8 +673,7 @@ script to finalize the connection. See below for more information.
         <span class="property-type">string</span>
     </dt>
     <dd>{{% md %}}The storage driver that the volume is based on.
-{{% /md %}}</dd>
-    <dt class="property-"
+{{% /md %}}</dd><dt class="property-"
             title="">
         <span id="id_csharp">
 <a href="#id_csharp" style="color: inherit; text-decoration: inherit;">Id</a>
@@ -770,8 +681,7 @@ script to finalize the connection. See below for more information.
         <span class="property-indicator"></span>
         <span class="property-type">string</span>
     </dt>
-    <dd>{{% md %}}The provider-assigned unique ID for this managed resource.{{% /md %}}</dd>
-    <dt class="property-"
+    <dd>{{% md %}}The provider-assigned unique ID for this managed resource.{{% /md %}}</dd><dt class="property-"
             title="">
         <span id="mountpointbase_csharp">
 <a href="#mountpointbase_csharp" style="color: inherit; text-decoration: inherit;">Mount<wbr>Point<wbr>Base</a>
@@ -780,14 +690,11 @@ script to finalize the connection. See below for more information.
         <span class="property-type">string</span>
     </dt>
     <dd>{{% md %}}A mount point base name for shared storage.
-{{% /md %}}</dd>
-</dl>
+{{% /md %}}</dd></dl>
 {{% /choosable %}}
 
 {{% choosable language go %}}
-<dl class="resources-properties">
-
-    <dt class="property-"
+<dl class="resources-properties"><dt class="property-"
             title="">
         <span id="data_go">
 <a href="#data_go" style="color: inherit; text-decoration: inherit;">Data</a>
@@ -798,8 +705,7 @@ script to finalize the connection. See below for more information.
     <dd>{{% md %}}This is a map of key/value pairs that contain the connection
 information. You will want to pass this information to a provisioner
 script to finalize the connection. See below for more information.
-{{% /md %}}</dd>
-    <dt class="property-"
+{{% /md %}}</dd><dt class="property-"
             title="">
         <span id="drivervolumetype_go">
 <a href="#drivervolumetype_go" style="color: inherit; text-decoration: inherit;">Driver<wbr>Volume<wbr>Type</a>
@@ -808,8 +714,7 @@ script to finalize the connection. See below for more information.
         <span class="property-type">string</span>
     </dt>
     <dd>{{% md %}}The storage driver that the volume is based on.
-{{% /md %}}</dd>
-    <dt class="property-"
+{{% /md %}}</dd><dt class="property-"
             title="">
         <span id="id_go">
 <a href="#id_go" style="color: inherit; text-decoration: inherit;">Id</a>
@@ -817,8 +722,7 @@ script to finalize the connection. See below for more information.
         <span class="property-indicator"></span>
         <span class="property-type">string</span>
     </dt>
-    <dd>{{% md %}}The provider-assigned unique ID for this managed resource.{{% /md %}}</dd>
-    <dt class="property-"
+    <dd>{{% md %}}The provider-assigned unique ID for this managed resource.{{% /md %}}</dd><dt class="property-"
             title="">
         <span id="mountpointbase_go">
 <a href="#mountpointbase_go" style="color: inherit; text-decoration: inherit;">Mount<wbr>Point<wbr>Base</a>
@@ -827,14 +731,11 @@ script to finalize the connection. See below for more information.
         <span class="property-type">string</span>
     </dt>
     <dd>{{% md %}}A mount point base name for shared storage.
-{{% /md %}}</dd>
-</dl>
+{{% /md %}}</dd></dl>
 {{% /choosable %}}
 
 {{% choosable language nodejs %}}
-<dl class="resources-properties">
-
-    <dt class="property-"
+<dl class="resources-properties"><dt class="property-"
             title="">
         <span id="data_nodejs">
 <a href="#data_nodejs" style="color: inherit; text-decoration: inherit;">data</a>
@@ -845,8 +746,7 @@ script to finalize the connection. See below for more information.
     <dd>{{% md %}}This is a map of key/value pairs that contain the connection
 information. You will want to pass this information to a provisioner
 script to finalize the connection. See below for more information.
-{{% /md %}}</dd>
-    <dt class="property-"
+{{% /md %}}</dd><dt class="property-"
             title="">
         <span id="drivervolumetype_nodejs">
 <a href="#drivervolumetype_nodejs" style="color: inherit; text-decoration: inherit;">driver<wbr>Volume<wbr>Type</a>
@@ -855,8 +755,7 @@ script to finalize the connection. See below for more information.
         <span class="property-type">string</span>
     </dt>
     <dd>{{% md %}}The storage driver that the volume is based on.
-{{% /md %}}</dd>
-    <dt class="property-"
+{{% /md %}}</dd><dt class="property-"
             title="">
         <span id="id_nodejs">
 <a href="#id_nodejs" style="color: inherit; text-decoration: inherit;">id</a>
@@ -864,8 +763,7 @@ script to finalize the connection. See below for more information.
         <span class="property-indicator"></span>
         <span class="property-type">string</span>
     </dt>
-    <dd>{{% md %}}The provider-assigned unique ID for this managed resource.{{% /md %}}</dd>
-    <dt class="property-"
+    <dd>{{% md %}}The provider-assigned unique ID for this managed resource.{{% /md %}}</dd><dt class="property-"
             title="">
         <span id="mountpointbase_nodejs">
 <a href="#mountpointbase_nodejs" style="color: inherit; text-decoration: inherit;">mount<wbr>Point<wbr>Base</a>
@@ -874,14 +772,11 @@ script to finalize the connection. See below for more information.
         <span class="property-type">string</span>
     </dt>
     <dd>{{% md %}}A mount point base name for shared storage.
-{{% /md %}}</dd>
-</dl>
+{{% /md %}}</dd></dl>
 {{% /choosable %}}
 
 {{% choosable language python %}}
-<dl class="resources-properties">
-
-    <dt class="property-"
+<dl class="resources-properties"><dt class="property-"
             title="">
         <span id="data_python">
 <a href="#data_python" style="color: inherit; text-decoration: inherit;">data</a>
@@ -892,8 +787,7 @@ script to finalize the connection. See below for more information.
     <dd>{{% md %}}This is a map of key/value pairs that contain the connection
 information. You will want to pass this information to a provisioner
 script to finalize the connection. See below for more information.
-{{% /md %}}</dd>
-    <dt class="property-"
+{{% /md %}}</dd><dt class="property-"
             title="">
         <span id="driver_volume_type_python">
 <a href="#driver_volume_type_python" style="color: inherit; text-decoration: inherit;">driver_<wbr>volume_<wbr>type</a>
@@ -902,8 +796,7 @@ script to finalize the connection. See below for more information.
         <span class="property-type">str</span>
     </dt>
     <dd>{{% md %}}The storage driver that the volume is based on.
-{{% /md %}}</dd>
-    <dt class="property-"
+{{% /md %}}</dd><dt class="property-"
             title="">
         <span id="id_python">
 <a href="#id_python" style="color: inherit; text-decoration: inherit;">id</a>
@@ -911,8 +804,7 @@ script to finalize the connection. See below for more information.
         <span class="property-indicator"></span>
         <span class="property-type">str</span>
     </dt>
-    <dd>{{% md %}}The provider-assigned unique ID for this managed resource.{{% /md %}}</dd>
-    <dt class="property-"
+    <dd>{{% md %}}The provider-assigned unique ID for this managed resource.{{% /md %}}</dd><dt class="property-"
             title="">
         <span id="mount_point_base_python">
 <a href="#mount_point_base_python" style="color: inherit; text-decoration: inherit;">mount_<wbr>point_<wbr>base</a>
@@ -921,8 +813,7 @@ script to finalize the connection. See below for more information.
         <span class="property-type">str</span>
     </dt>
     <dd>{{% md %}}A mount point base name for shared storage.
-{{% /md %}}</dd>
-</dl>
+{{% /md %}}</dd></dl>
 {{% /choosable %}}
 
 
@@ -1049,9 +940,7 @@ The following state arguments are supported:
 
 
 {{% choosable language csharp %}}
-<dl class="resources-properties">
-
-    <dt class="property-optional"
+<dl class="resources-properties"><dt class="property-optional"
             title="Optional">
         <span id="state_attachmode_csharp">
 <a href="#state_attachmode_csharp" style="color: inherit; text-decoration: inherit;">Attach<wbr>Mode</a>
@@ -1062,8 +951,7 @@ The following state arguments are supported:
     <dd>{{% md %}}Specify whether to attach the volume as Read-Only
 (`ro`) or Read-Write (`rw`). Only values of `ro` and `rw` are accepted.
 If left unspecified, the Block Storage API will apply a default of `rw`.
-{{% /md %}}</dd>
-    <dt class="property-optional"
+{{% /md %}}</dd><dt class="property-optional"
             title="Optional">
         <span id="state_data_csharp">
 <a href="#state_data_csharp" style="color: inherit; text-decoration: inherit;">Data</a>
@@ -1074,8 +962,7 @@ If left unspecified, the Block Storage API will apply a default of `rw`.
     <dd>{{% md %}}This is a map of key/value pairs that contain the connection
 information. You will want to pass this information to a provisioner
 script to finalize the connection. See below for more information.
-{{% /md %}}</dd>
-    <dt class="property-optional"
+{{% /md %}}</dd><dt class="property-optional"
             title="Optional">
         <span id="state_device_csharp">
 <a href="#state_device_csharp" style="color: inherit; text-decoration: inherit;">Device</a>
@@ -1086,8 +973,7 @@ script to finalize the connection. See below for more information.
     <dd>{{% md %}}The device to tell the Block Storage service this
 volume will be attached as. This is purely for informational purposes.
 You can specify `auto` or a device such as `/dev/vdc`.
-{{% /md %}}</dd>
-    <dt class="property-optional"
+{{% /md %}}</dd><dt class="property-optional"
             title="Optional">
         <span id="state_drivervolumetype_csharp">
 <a href="#state_drivervolumetype_csharp" style="color: inherit; text-decoration: inherit;">Driver<wbr>Volume<wbr>Type</a>
@@ -1096,8 +982,7 @@ You can specify `auto` or a device such as `/dev/vdc`.
         <span class="property-type">string</span>
     </dt>
     <dd>{{% md %}}The storage driver that the volume is based on.
-{{% /md %}}</dd>
-    <dt class="property-optional"
+{{% /md %}}</dd><dt class="property-optional"
             title="Optional">
         <span id="state_hostname_csharp">
 <a href="#state_hostname_csharp" style="color: inherit; text-decoration: inherit;">Host<wbr>Name</a>
@@ -1106,8 +991,7 @@ You can specify `auto` or a device such as `/dev/vdc`.
         <span class="property-type">string</span>
     </dt>
     <dd>{{% md %}}The host to attach the volume to.
-{{% /md %}}</dd>
-    <dt class="property-optional"
+{{% /md %}}</dd><dt class="property-optional"
             title="Optional">
         <span id="state_initiator_csharp">
 <a href="#state_initiator_csharp" style="color: inherit; text-decoration: inherit;">Initiator</a>
@@ -1116,8 +1000,7 @@ You can specify `auto` or a device such as `/dev/vdc`.
         <span class="property-type">string</span>
     </dt>
     <dd>{{% md %}}The iSCSI initiator string to make the connection.
-{{% /md %}}</dd>
-    <dt class="property-optional"
+{{% /md %}}</dd><dt class="property-optional"
             title="Optional">
         <span id="state_ipaddress_csharp">
 <a href="#state_ipaddress_csharp" style="color: inherit; text-decoration: inherit;">Ip<wbr>Address</a>
@@ -1126,8 +1009,7 @@ You can specify `auto` or a device such as `/dev/vdc`.
         <span class="property-type">string</span>
     </dt>
     <dd>{{% md %}}The IP address of the `host_name` above.
-{{% /md %}}</dd>
-    <dt class="property-optional"
+{{% /md %}}</dd><dt class="property-optional"
             title="Optional">
         <span id="state_mountpointbase_csharp">
 <a href="#state_mountpointbase_csharp" style="color: inherit; text-decoration: inherit;">Mount<wbr>Point<wbr>Base</a>
@@ -1136,8 +1018,7 @@ You can specify `auto` or a device such as `/dev/vdc`.
         <span class="property-type">string</span>
     </dt>
     <dd>{{% md %}}A mount point base name for shared storage.
-{{% /md %}}</dd>
-    <dt class="property-optional"
+{{% /md %}}</dd><dt class="property-optional"
             title="Optional">
         <span id="state_multipath_csharp">
 <a href="#state_multipath_csharp" style="color: inherit; text-decoration: inherit;">Multipath</a>
@@ -1146,8 +1027,7 @@ You can specify `auto` or a device such as `/dev/vdc`.
         <span class="property-type">bool</span>
     </dt>
     <dd>{{% md %}}Whether to connect to this volume via multipath.
-{{% /md %}}</dd>
-    <dt class="property-optional"
+{{% /md %}}</dd><dt class="property-optional"
             title="Optional">
         <span id="state_ostype_csharp">
 <a href="#state_ostype_csharp" style="color: inherit; text-decoration: inherit;">Os<wbr>Type</a>
@@ -1156,8 +1036,7 @@ You can specify `auto` or a device such as `/dev/vdc`.
         <span class="property-type">string</span>
     </dt>
     <dd>{{% md %}}The iSCSI initiator OS type.
-{{% /md %}}</dd>
-    <dt class="property-optional"
+{{% /md %}}</dd><dt class="property-optional"
             title="Optional">
         <span id="state_platform_csharp">
 <a href="#state_platform_csharp" style="color: inherit; text-decoration: inherit;">Platform</a>
@@ -1166,8 +1045,7 @@ You can specify `auto` or a device such as `/dev/vdc`.
         <span class="property-type">string</span>
     </dt>
     <dd>{{% md %}}The iSCSI initiator platform.
-{{% /md %}}</dd>
-    <dt class="property-optional"
+{{% /md %}}</dd><dt class="property-optional"
             title="Optional">
         <span id="state_region_csharp">
 <a href="#state_region_csharp" style="color: inherit; text-decoration: inherit;">Region</a>
@@ -1179,8 +1057,7 @@ You can specify `auto` or a device such as `/dev/vdc`.
 client. A Block Storage client is needed to create a volume attachment.
 If omitted, the `region` argument of the provider is used. Changing this
 creates a new volume attachment.
-{{% /md %}}</dd>
-    <dt class="property-optional"
+{{% /md %}}</dd><dt class="property-optional"
             title="Optional">
         <span id="state_volumeid_csharp">
 <a href="#state_volumeid_csharp" style="color: inherit; text-decoration: inherit;">Volume<wbr>Id</a>
@@ -1189,8 +1066,7 @@ creates a new volume attachment.
         <span class="property-type">string</span>
     </dt>
     <dd>{{% md %}}The ID of the Volume to attach to an Instance.
-{{% /md %}}</dd>
-    <dt class="property-optional"
+{{% /md %}}</dd><dt class="property-optional"
             title="Optional">
         <span id="state_wwnn_csharp">
 <a href="#state_wwnn_csharp" style="color: inherit; text-decoration: inherit;">Wwnn</a>
@@ -1199,8 +1075,7 @@ creates a new volume attachment.
         <span class="property-type">string</span>
     </dt>
     <dd>{{% md %}}A wwnn name. Used for Fibre Channel connections.
-{{% /md %}}</dd>
-    <dt class="property-optional"
+{{% /md %}}</dd><dt class="property-optional"
             title="Optional">
         <span id="state_wwpns_csharp">
 <a href="#state_wwpns_csharp" style="color: inherit; text-decoration: inherit;">Wwpns</a>
@@ -1210,14 +1085,11 @@ creates a new volume attachment.
     </dt>
     <dd>{{% md %}}An array of wwpn strings. Used for Fibre Channel
 connections.
-{{% /md %}}</dd>
-</dl>
+{{% /md %}}</dd></dl>
 {{% /choosable %}}
 
 {{% choosable language go %}}
-<dl class="resources-properties">
-
-    <dt class="property-optional"
+<dl class="resources-properties"><dt class="property-optional"
             title="Optional">
         <span id="state_attachmode_go">
 <a href="#state_attachmode_go" style="color: inherit; text-decoration: inherit;">Attach<wbr>Mode</a>
@@ -1228,8 +1100,7 @@ connections.
     <dd>{{% md %}}Specify whether to attach the volume as Read-Only
 (`ro`) or Read-Write (`rw`). Only values of `ro` and `rw` are accepted.
 If left unspecified, the Block Storage API will apply a default of `rw`.
-{{% /md %}}</dd>
-    <dt class="property-optional"
+{{% /md %}}</dd><dt class="property-optional"
             title="Optional">
         <span id="state_data_go">
 <a href="#state_data_go" style="color: inherit; text-decoration: inherit;">Data</a>
@@ -1240,8 +1111,7 @@ If left unspecified, the Block Storage API will apply a default of `rw`.
     <dd>{{% md %}}This is a map of key/value pairs that contain the connection
 information. You will want to pass this information to a provisioner
 script to finalize the connection. See below for more information.
-{{% /md %}}</dd>
-    <dt class="property-optional"
+{{% /md %}}</dd><dt class="property-optional"
             title="Optional">
         <span id="state_device_go">
 <a href="#state_device_go" style="color: inherit; text-decoration: inherit;">Device</a>
@@ -1252,8 +1122,7 @@ script to finalize the connection. See below for more information.
     <dd>{{% md %}}The device to tell the Block Storage service this
 volume will be attached as. This is purely for informational purposes.
 You can specify `auto` or a device such as `/dev/vdc`.
-{{% /md %}}</dd>
-    <dt class="property-optional"
+{{% /md %}}</dd><dt class="property-optional"
             title="Optional">
         <span id="state_drivervolumetype_go">
 <a href="#state_drivervolumetype_go" style="color: inherit; text-decoration: inherit;">Driver<wbr>Volume<wbr>Type</a>
@@ -1262,8 +1131,7 @@ You can specify `auto` or a device such as `/dev/vdc`.
         <span class="property-type">string</span>
     </dt>
     <dd>{{% md %}}The storage driver that the volume is based on.
-{{% /md %}}</dd>
-    <dt class="property-optional"
+{{% /md %}}</dd><dt class="property-optional"
             title="Optional">
         <span id="state_hostname_go">
 <a href="#state_hostname_go" style="color: inherit; text-decoration: inherit;">Host<wbr>Name</a>
@@ -1272,8 +1140,7 @@ You can specify `auto` or a device such as `/dev/vdc`.
         <span class="property-type">string</span>
     </dt>
     <dd>{{% md %}}The host to attach the volume to.
-{{% /md %}}</dd>
-    <dt class="property-optional"
+{{% /md %}}</dd><dt class="property-optional"
             title="Optional">
         <span id="state_initiator_go">
 <a href="#state_initiator_go" style="color: inherit; text-decoration: inherit;">Initiator</a>
@@ -1282,8 +1149,7 @@ You can specify `auto` or a device such as `/dev/vdc`.
         <span class="property-type">string</span>
     </dt>
     <dd>{{% md %}}The iSCSI initiator string to make the connection.
-{{% /md %}}</dd>
-    <dt class="property-optional"
+{{% /md %}}</dd><dt class="property-optional"
             title="Optional">
         <span id="state_ipaddress_go">
 <a href="#state_ipaddress_go" style="color: inherit; text-decoration: inherit;">Ip<wbr>Address</a>
@@ -1292,8 +1158,7 @@ You can specify `auto` or a device such as `/dev/vdc`.
         <span class="property-type">string</span>
     </dt>
     <dd>{{% md %}}The IP address of the `host_name` above.
-{{% /md %}}</dd>
-    <dt class="property-optional"
+{{% /md %}}</dd><dt class="property-optional"
             title="Optional">
         <span id="state_mountpointbase_go">
 <a href="#state_mountpointbase_go" style="color: inherit; text-decoration: inherit;">Mount<wbr>Point<wbr>Base</a>
@@ -1302,8 +1167,7 @@ You can specify `auto` or a device such as `/dev/vdc`.
         <span class="property-type">string</span>
     </dt>
     <dd>{{% md %}}A mount point base name for shared storage.
-{{% /md %}}</dd>
-    <dt class="property-optional"
+{{% /md %}}</dd><dt class="property-optional"
             title="Optional">
         <span id="state_multipath_go">
 <a href="#state_multipath_go" style="color: inherit; text-decoration: inherit;">Multipath</a>
@@ -1312,8 +1176,7 @@ You can specify `auto` or a device such as `/dev/vdc`.
         <span class="property-type">bool</span>
     </dt>
     <dd>{{% md %}}Whether to connect to this volume via multipath.
-{{% /md %}}</dd>
-    <dt class="property-optional"
+{{% /md %}}</dd><dt class="property-optional"
             title="Optional">
         <span id="state_ostype_go">
 <a href="#state_ostype_go" style="color: inherit; text-decoration: inherit;">Os<wbr>Type</a>
@@ -1322,8 +1185,7 @@ You can specify `auto` or a device such as `/dev/vdc`.
         <span class="property-type">string</span>
     </dt>
     <dd>{{% md %}}The iSCSI initiator OS type.
-{{% /md %}}</dd>
-    <dt class="property-optional"
+{{% /md %}}</dd><dt class="property-optional"
             title="Optional">
         <span id="state_platform_go">
 <a href="#state_platform_go" style="color: inherit; text-decoration: inherit;">Platform</a>
@@ -1332,8 +1194,7 @@ You can specify `auto` or a device such as `/dev/vdc`.
         <span class="property-type">string</span>
     </dt>
     <dd>{{% md %}}The iSCSI initiator platform.
-{{% /md %}}</dd>
-    <dt class="property-optional"
+{{% /md %}}</dd><dt class="property-optional"
             title="Optional">
         <span id="state_region_go">
 <a href="#state_region_go" style="color: inherit; text-decoration: inherit;">Region</a>
@@ -1345,8 +1206,7 @@ You can specify `auto` or a device such as `/dev/vdc`.
 client. A Block Storage client is needed to create a volume attachment.
 If omitted, the `region` argument of the provider is used. Changing this
 creates a new volume attachment.
-{{% /md %}}</dd>
-    <dt class="property-optional"
+{{% /md %}}</dd><dt class="property-optional"
             title="Optional">
         <span id="state_volumeid_go">
 <a href="#state_volumeid_go" style="color: inherit; text-decoration: inherit;">Volume<wbr>Id</a>
@@ -1355,8 +1215,7 @@ creates a new volume attachment.
         <span class="property-type">string</span>
     </dt>
     <dd>{{% md %}}The ID of the Volume to attach to an Instance.
-{{% /md %}}</dd>
-    <dt class="property-optional"
+{{% /md %}}</dd><dt class="property-optional"
             title="Optional">
         <span id="state_wwnn_go">
 <a href="#state_wwnn_go" style="color: inherit; text-decoration: inherit;">Wwnn</a>
@@ -1365,8 +1224,7 @@ creates a new volume attachment.
         <span class="property-type">string</span>
     </dt>
     <dd>{{% md %}}A wwnn name. Used for Fibre Channel connections.
-{{% /md %}}</dd>
-    <dt class="property-optional"
+{{% /md %}}</dd><dt class="property-optional"
             title="Optional">
         <span id="state_wwpns_go">
 <a href="#state_wwpns_go" style="color: inherit; text-decoration: inherit;">Wwpns</a>
@@ -1376,14 +1234,11 @@ creates a new volume attachment.
     </dt>
     <dd>{{% md %}}An array of wwpn strings. Used for Fibre Channel
 connections.
-{{% /md %}}</dd>
-</dl>
+{{% /md %}}</dd></dl>
 {{% /choosable %}}
 
 {{% choosable language nodejs %}}
-<dl class="resources-properties">
-
-    <dt class="property-optional"
+<dl class="resources-properties"><dt class="property-optional"
             title="Optional">
         <span id="state_attachmode_nodejs">
 <a href="#state_attachmode_nodejs" style="color: inherit; text-decoration: inherit;">attach<wbr>Mode</a>
@@ -1394,8 +1249,7 @@ connections.
     <dd>{{% md %}}Specify whether to attach the volume as Read-Only
 (`ro`) or Read-Write (`rw`). Only values of `ro` and `rw` are accepted.
 If left unspecified, the Block Storage API will apply a default of `rw`.
-{{% /md %}}</dd>
-    <dt class="property-optional"
+{{% /md %}}</dd><dt class="property-optional"
             title="Optional">
         <span id="state_data_nodejs">
 <a href="#state_data_nodejs" style="color: inherit; text-decoration: inherit;">data</a>
@@ -1406,8 +1260,7 @@ If left unspecified, the Block Storage API will apply a default of `rw`.
     <dd>{{% md %}}This is a map of key/value pairs that contain the connection
 information. You will want to pass this information to a provisioner
 script to finalize the connection. See below for more information.
-{{% /md %}}</dd>
-    <dt class="property-optional"
+{{% /md %}}</dd><dt class="property-optional"
             title="Optional">
         <span id="state_device_nodejs">
 <a href="#state_device_nodejs" style="color: inherit; text-decoration: inherit;">device</a>
@@ -1418,8 +1271,7 @@ script to finalize the connection. See below for more information.
     <dd>{{% md %}}The device to tell the Block Storage service this
 volume will be attached as. This is purely for informational purposes.
 You can specify `auto` or a device such as `/dev/vdc`.
-{{% /md %}}</dd>
-    <dt class="property-optional"
+{{% /md %}}</dd><dt class="property-optional"
             title="Optional">
         <span id="state_drivervolumetype_nodejs">
 <a href="#state_drivervolumetype_nodejs" style="color: inherit; text-decoration: inherit;">driver<wbr>Volume<wbr>Type</a>
@@ -1428,8 +1280,7 @@ You can specify `auto` or a device such as `/dev/vdc`.
         <span class="property-type">string</span>
     </dt>
     <dd>{{% md %}}The storage driver that the volume is based on.
-{{% /md %}}</dd>
-    <dt class="property-optional"
+{{% /md %}}</dd><dt class="property-optional"
             title="Optional">
         <span id="state_hostname_nodejs">
 <a href="#state_hostname_nodejs" style="color: inherit; text-decoration: inherit;">host<wbr>Name</a>
@@ -1438,8 +1289,7 @@ You can specify `auto` or a device such as `/dev/vdc`.
         <span class="property-type">string</span>
     </dt>
     <dd>{{% md %}}The host to attach the volume to.
-{{% /md %}}</dd>
-    <dt class="property-optional"
+{{% /md %}}</dd><dt class="property-optional"
             title="Optional">
         <span id="state_initiator_nodejs">
 <a href="#state_initiator_nodejs" style="color: inherit; text-decoration: inherit;">initiator</a>
@@ -1448,8 +1298,7 @@ You can specify `auto` or a device such as `/dev/vdc`.
         <span class="property-type">string</span>
     </dt>
     <dd>{{% md %}}The iSCSI initiator string to make the connection.
-{{% /md %}}</dd>
-    <dt class="property-optional"
+{{% /md %}}</dd><dt class="property-optional"
             title="Optional">
         <span id="state_ipaddress_nodejs">
 <a href="#state_ipaddress_nodejs" style="color: inherit; text-decoration: inherit;">ip<wbr>Address</a>
@@ -1458,8 +1307,7 @@ You can specify `auto` or a device such as `/dev/vdc`.
         <span class="property-type">string</span>
     </dt>
     <dd>{{% md %}}The IP address of the `host_name` above.
-{{% /md %}}</dd>
-    <dt class="property-optional"
+{{% /md %}}</dd><dt class="property-optional"
             title="Optional">
         <span id="state_mountpointbase_nodejs">
 <a href="#state_mountpointbase_nodejs" style="color: inherit; text-decoration: inherit;">mount<wbr>Point<wbr>Base</a>
@@ -1468,8 +1316,7 @@ You can specify `auto` or a device such as `/dev/vdc`.
         <span class="property-type">string</span>
     </dt>
     <dd>{{% md %}}A mount point base name for shared storage.
-{{% /md %}}</dd>
-    <dt class="property-optional"
+{{% /md %}}</dd><dt class="property-optional"
             title="Optional">
         <span id="state_multipath_nodejs">
 <a href="#state_multipath_nodejs" style="color: inherit; text-decoration: inherit;">multipath</a>
@@ -1478,8 +1325,7 @@ You can specify `auto` or a device such as `/dev/vdc`.
         <span class="property-type">boolean</span>
     </dt>
     <dd>{{% md %}}Whether to connect to this volume via multipath.
-{{% /md %}}</dd>
-    <dt class="property-optional"
+{{% /md %}}</dd><dt class="property-optional"
             title="Optional">
         <span id="state_ostype_nodejs">
 <a href="#state_ostype_nodejs" style="color: inherit; text-decoration: inherit;">os<wbr>Type</a>
@@ -1488,8 +1334,7 @@ You can specify `auto` or a device such as `/dev/vdc`.
         <span class="property-type">string</span>
     </dt>
     <dd>{{% md %}}The iSCSI initiator OS type.
-{{% /md %}}</dd>
-    <dt class="property-optional"
+{{% /md %}}</dd><dt class="property-optional"
             title="Optional">
         <span id="state_platform_nodejs">
 <a href="#state_platform_nodejs" style="color: inherit; text-decoration: inherit;">platform</a>
@@ -1498,8 +1343,7 @@ You can specify `auto` or a device such as `/dev/vdc`.
         <span class="property-type">string</span>
     </dt>
     <dd>{{% md %}}The iSCSI initiator platform.
-{{% /md %}}</dd>
-    <dt class="property-optional"
+{{% /md %}}</dd><dt class="property-optional"
             title="Optional">
         <span id="state_region_nodejs">
 <a href="#state_region_nodejs" style="color: inherit; text-decoration: inherit;">region</a>
@@ -1511,8 +1355,7 @@ You can specify `auto` or a device such as `/dev/vdc`.
 client. A Block Storage client is needed to create a volume attachment.
 If omitted, the `region` argument of the provider is used. Changing this
 creates a new volume attachment.
-{{% /md %}}</dd>
-    <dt class="property-optional"
+{{% /md %}}</dd><dt class="property-optional"
             title="Optional">
         <span id="state_volumeid_nodejs">
 <a href="#state_volumeid_nodejs" style="color: inherit; text-decoration: inherit;">volume<wbr>Id</a>
@@ -1521,8 +1364,7 @@ creates a new volume attachment.
         <span class="property-type">string</span>
     </dt>
     <dd>{{% md %}}The ID of the Volume to attach to an Instance.
-{{% /md %}}</dd>
-    <dt class="property-optional"
+{{% /md %}}</dd><dt class="property-optional"
             title="Optional">
         <span id="state_wwnn_nodejs">
 <a href="#state_wwnn_nodejs" style="color: inherit; text-decoration: inherit;">wwnn</a>
@@ -1531,8 +1373,7 @@ creates a new volume attachment.
         <span class="property-type">string</span>
     </dt>
     <dd>{{% md %}}A wwnn name. Used for Fibre Channel connections.
-{{% /md %}}</dd>
-    <dt class="property-optional"
+{{% /md %}}</dd><dt class="property-optional"
             title="Optional">
         <span id="state_wwpns_nodejs">
 <a href="#state_wwpns_nodejs" style="color: inherit; text-decoration: inherit;">wwpns</a>
@@ -1542,14 +1383,11 @@ creates a new volume attachment.
     </dt>
     <dd>{{% md %}}An array of wwpn strings. Used for Fibre Channel
 connections.
-{{% /md %}}</dd>
-</dl>
+{{% /md %}}</dd></dl>
 {{% /choosable %}}
 
 {{% choosable language python %}}
-<dl class="resources-properties">
-
-    <dt class="property-optional"
+<dl class="resources-properties"><dt class="property-optional"
             title="Optional">
         <span id="state_attach_mode_python">
 <a href="#state_attach_mode_python" style="color: inherit; text-decoration: inherit;">attach_<wbr>mode</a>
@@ -1560,8 +1398,7 @@ connections.
     <dd>{{% md %}}Specify whether to attach the volume as Read-Only
 (`ro`) or Read-Write (`rw`). Only values of `ro` and `rw` are accepted.
 If left unspecified, the Block Storage API will apply a default of `rw`.
-{{% /md %}}</dd>
-    <dt class="property-optional"
+{{% /md %}}</dd><dt class="property-optional"
             title="Optional">
         <span id="state_data_python">
 <a href="#state_data_python" style="color: inherit; text-decoration: inherit;">data</a>
@@ -1572,8 +1409,7 @@ If left unspecified, the Block Storage API will apply a default of `rw`.
     <dd>{{% md %}}This is a map of key/value pairs that contain the connection
 information. You will want to pass this information to a provisioner
 script to finalize the connection. See below for more information.
-{{% /md %}}</dd>
-    <dt class="property-optional"
+{{% /md %}}</dd><dt class="property-optional"
             title="Optional">
         <span id="state_device_python">
 <a href="#state_device_python" style="color: inherit; text-decoration: inherit;">device</a>
@@ -1584,8 +1420,7 @@ script to finalize the connection. See below for more information.
     <dd>{{% md %}}The device to tell the Block Storage service this
 volume will be attached as. This is purely for informational purposes.
 You can specify `auto` or a device such as `/dev/vdc`.
-{{% /md %}}</dd>
-    <dt class="property-optional"
+{{% /md %}}</dd><dt class="property-optional"
             title="Optional">
         <span id="state_driver_volume_type_python">
 <a href="#state_driver_volume_type_python" style="color: inherit; text-decoration: inherit;">driver_<wbr>volume_<wbr>type</a>
@@ -1594,8 +1429,7 @@ You can specify `auto` or a device such as `/dev/vdc`.
         <span class="property-type">str</span>
     </dt>
     <dd>{{% md %}}The storage driver that the volume is based on.
-{{% /md %}}</dd>
-    <dt class="property-optional"
+{{% /md %}}</dd><dt class="property-optional"
             title="Optional">
         <span id="state_host_name_python">
 <a href="#state_host_name_python" style="color: inherit; text-decoration: inherit;">host_<wbr>name</a>
@@ -1604,8 +1438,7 @@ You can specify `auto` or a device such as `/dev/vdc`.
         <span class="property-type">str</span>
     </dt>
     <dd>{{% md %}}The host to attach the volume to.
-{{% /md %}}</dd>
-    <dt class="property-optional"
+{{% /md %}}</dd><dt class="property-optional"
             title="Optional">
         <span id="state_initiator_python">
 <a href="#state_initiator_python" style="color: inherit; text-decoration: inherit;">initiator</a>
@@ -1614,8 +1447,7 @@ You can specify `auto` or a device such as `/dev/vdc`.
         <span class="property-type">str</span>
     </dt>
     <dd>{{% md %}}The iSCSI initiator string to make the connection.
-{{% /md %}}</dd>
-    <dt class="property-optional"
+{{% /md %}}</dd><dt class="property-optional"
             title="Optional">
         <span id="state_ip_address_python">
 <a href="#state_ip_address_python" style="color: inherit; text-decoration: inherit;">ip_<wbr>address</a>
@@ -1624,8 +1456,7 @@ You can specify `auto` or a device such as `/dev/vdc`.
         <span class="property-type">str</span>
     </dt>
     <dd>{{% md %}}The IP address of the `host_name` above.
-{{% /md %}}</dd>
-    <dt class="property-optional"
+{{% /md %}}</dd><dt class="property-optional"
             title="Optional">
         <span id="state_mount_point_base_python">
 <a href="#state_mount_point_base_python" style="color: inherit; text-decoration: inherit;">mount_<wbr>point_<wbr>base</a>
@@ -1634,8 +1465,7 @@ You can specify `auto` or a device such as `/dev/vdc`.
         <span class="property-type">str</span>
     </dt>
     <dd>{{% md %}}A mount point base name for shared storage.
-{{% /md %}}</dd>
-    <dt class="property-optional"
+{{% /md %}}</dd><dt class="property-optional"
             title="Optional">
         <span id="state_multipath_python">
 <a href="#state_multipath_python" style="color: inherit; text-decoration: inherit;">multipath</a>
@@ -1644,8 +1474,7 @@ You can specify `auto` or a device such as `/dev/vdc`.
         <span class="property-type">bool</span>
     </dt>
     <dd>{{% md %}}Whether to connect to this volume via multipath.
-{{% /md %}}</dd>
-    <dt class="property-optional"
+{{% /md %}}</dd><dt class="property-optional"
             title="Optional">
         <span id="state_os_type_python">
 <a href="#state_os_type_python" style="color: inherit; text-decoration: inherit;">os_<wbr>type</a>
@@ -1654,8 +1483,7 @@ You can specify `auto` or a device such as `/dev/vdc`.
         <span class="property-type">str</span>
     </dt>
     <dd>{{% md %}}The iSCSI initiator OS type.
-{{% /md %}}</dd>
-    <dt class="property-optional"
+{{% /md %}}</dd><dt class="property-optional"
             title="Optional">
         <span id="state_platform_python">
 <a href="#state_platform_python" style="color: inherit; text-decoration: inherit;">platform</a>
@@ -1664,8 +1492,7 @@ You can specify `auto` or a device such as `/dev/vdc`.
         <span class="property-type">str</span>
     </dt>
     <dd>{{% md %}}The iSCSI initiator platform.
-{{% /md %}}</dd>
-    <dt class="property-optional"
+{{% /md %}}</dd><dt class="property-optional"
             title="Optional">
         <span id="state_region_python">
 <a href="#state_region_python" style="color: inherit; text-decoration: inherit;">region</a>
@@ -1677,8 +1504,7 @@ You can specify `auto` or a device such as `/dev/vdc`.
 client. A Block Storage client is needed to create a volume attachment.
 If omitted, the `region` argument of the provider is used. Changing this
 creates a new volume attachment.
-{{% /md %}}</dd>
-    <dt class="property-optional"
+{{% /md %}}</dd><dt class="property-optional"
             title="Optional">
         <span id="state_volume_id_python">
 <a href="#state_volume_id_python" style="color: inherit; text-decoration: inherit;">volume_<wbr>id</a>
@@ -1687,8 +1513,7 @@ creates a new volume attachment.
         <span class="property-type">str</span>
     </dt>
     <dd>{{% md %}}The ID of the Volume to attach to an Instance.
-{{% /md %}}</dd>
-    <dt class="property-optional"
+{{% /md %}}</dd><dt class="property-optional"
             title="Optional">
         <span id="state_wwnn_python">
 <a href="#state_wwnn_python" style="color: inherit; text-decoration: inherit;">wwnn</a>
@@ -1697,8 +1522,7 @@ creates a new volume attachment.
         <span class="property-type">str</span>
     </dt>
     <dd>{{% md %}}A wwnn name. Used for Fibre Channel connections.
-{{% /md %}}</dd>
-    <dt class="property-optional"
+{{% /md %}}</dd><dt class="property-optional"
             title="Optional">
         <span id="state_wwpns_python">
 <a href="#state_wwpns_python" style="color: inherit; text-decoration: inherit;">wwpns</a>
@@ -1708,8 +1532,7 @@ creates a new volume attachment.
     </dt>
     <dd>{{% md %}}An array of wwpn strings. Used for Fibre Channel
 connections.
-{{% /md %}}</dd>
-</dl>
+{{% /md %}}</dd></dl>
 {{% /choosable %}}
 
 
@@ -1725,6 +1548,6 @@ connections.
 	<dt>License</dt>
 	<dd>Apache-2.0</dd>
 	<dt>Notes</dt>
-	<dd>This Pulumi package is based on the [`openstack` Terraform Provider](https://github.com/terraform-provider-openstack/terraform-provider-openstack).</dd>
+	<dd>{{% md %}}This Pulumi package is based on the [`openstack` Terraform Provider](https://github.com/terraform-provider-openstack/terraform-provider-openstack).{{% /md %}}</dd>
 </dl>
 

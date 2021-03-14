@@ -43,9 +43,7 @@ EC2 Credentials can be imported using the `access`, e.g.
 
 {{% choosable language nodejs %}}
 
-<dl class="resources-properties">
-  
-    <dt
+<dl class="resources-properties"><dt
         class="property-required" title="Required">
         <span>name</span>
         <span class="property-indicator"></span>
@@ -53,9 +51,7 @@ EC2 Credentials can be imported using the `access`, e.g.
     </dt>
     <dd>
       The unique name of the resource.
-    </dd>
-  
-    <dt
+    </dd><dt
         class="property-optional" title="Optional">
         <span>args</span>
         <span class="property-indicator"></span>
@@ -63,9 +59,7 @@ EC2 Credentials can be imported using the `access`, e.g.
     </dt>
     <dd>
       The arguments to resource properties.
-    </dd>
-  
-    <dt
+    </dd><dt
         class="property-optional" title="Optional">
         <span>opts</span>
         <span class="property-indicator"></span>
@@ -73,10 +67,7 @@ EC2 Credentials can be imported using the `access`, e.g.
     </dt>
     <dd>
       Bag of options to control resource&#39;s behavior.
-    </dd>
-  
-
-</dl>
+    </dd></dl>
 
 {{% /choosable %}}
 
@@ -102,9 +93,7 @@ EC2 Credentials can be imported using the `access`, e.g.
 
 {{% choosable language go %}}
 
-<dl class="resources-properties">
-  
-    <dt
+<dl class="resources-properties"><dt
         class="property-optional" title="Optional">
         <span>ctx</span>
         <span class="property-indicator"></span>
@@ -112,9 +101,7 @@ EC2 Credentials can be imported using the `access`, e.g.
     </dt>
     <dd>
       Context object for the current deployment.
-    </dd>
-  
-    <dt
+    </dd><dt
         class="property-required" title="Required">
         <span>name</span>
         <span class="property-indicator"></span>
@@ -122,9 +109,7 @@ EC2 Credentials can be imported using the `access`, e.g.
     </dt>
     <dd>
       The unique name of the resource.
-    </dd>
-  
-    <dt
+    </dd><dt
         class="property-optional" title="Optional">
         <span>args</span>
         <span class="property-indicator"></span>
@@ -132,9 +117,7 @@ EC2 Credentials can be imported using the `access`, e.g.
     </dt>
     <dd>
       The arguments to resource properties.
-    </dd>
-  
-    <dt
+    </dd><dt
         class="property-optional" title="Optional">
         <span>opts</span>
         <span class="property-indicator"></span>
@@ -142,18 +125,13 @@ EC2 Credentials can be imported using the `access`, e.g.
     </dt>
     <dd>
       Bag of options to control resource&#39;s behavior.
-    </dd>
-  
-
-</dl>
+    </dd></dl>
 
 {{% /choosable %}}
 
 {{% choosable language csharp %}}
 
-<dl class="resources-properties">
-  
-    <dt
+<dl class="resources-properties"><dt
         class="property-required" title="Required">
         <span>name</span>
         <span class="property-indicator"></span>
@@ -161,9 +139,7 @@ EC2 Credentials can be imported using the `access`, e.g.
     </dt>
     <dd>
       The unique name of the resource.
-    </dd>
-  
-    <dt
+    </dd><dt
         class="property-optional" title="Optional">
         <span>args</span>
         <span class="property-indicator"></span>
@@ -171,9 +147,7 @@ EC2 Credentials can be imported using the `access`, e.g.
     </dt>
     <dd>
       The arguments to resource properties.
-    </dd>
-  
-    <dt
+    </dd><dt
         class="property-optional" title="Optional">
         <span>opts</span>
         <span class="property-indicator"></span>
@@ -181,10 +155,7 @@ EC2 Credentials can be imported using the `access`, e.g.
     </dt>
     <dd>
       Bag of options to control resource&#39;s behavior.
-    </dd>
-  
-
-</dl>
+    </dd></dl>
 
 {{% /choosable %}}
 
@@ -199,9 +170,7 @@ The Ec2CredentialV3 resource accepts the following [input]({{< relref "/docs/int
 
 
 {{% choosable language csharp %}}
-<dl class="resources-properties">
-
-    <dt class="property-optional"
+<dl class="resources-properties"><dt class="property-optional"
             title="Optional">
         <span id="projectid_csharp">
 <a href="#projectid_csharp" style="color: inherit; text-decoration: inherit;">Project<wbr>Id</a>
@@ -212,8 +181,7 @@ The Ec2CredentialV3 resource accepts the following [input]({{< relref "/docs/int
     <dd>{{% md %}}The ID of the project the EC2 credential is created
 for and that authentication requests using this EC2 credential will
 be scoped to.
-{{% /md %}}</dd>
-    <dt class="property-optional"
+{{% /md %}}</dd><dt class="property-optional"
             title="Optional">
         <span id="region_csharp">
 <a href="#region_csharp" style="color: inherit; text-decoration: inherit;">Region</a>
@@ -224,8 +192,7 @@ be scoped to.
     <dd>{{% md %}}The region in which to obtain the V3 Keystone client.
 If omitted, the `region` argument of the provider is used. Changing this
 creates a new EC2 credential.
-{{% /md %}}</dd>
-    <dt class="property-optional"
+{{% /md %}}</dd><dt class="property-optional"
             title="Optional">
         <span id="userid_csharp">
 <a href="#userid_csharp" style="color: inherit; text-decoration: inherit;">User<wbr>Id</a>
@@ -234,14 +201,11 @@ creates a new EC2 credential.
         <span class="property-type">string</span>
     </dt>
     <dd>{{% md %}}The ID of the user the EC2 credential is created for.
-{{% /md %}}</dd>
-</dl>
+{{% /md %}}</dd></dl>
 {{% /choosable %}}
 
 {{% choosable language go %}}
-<dl class="resources-properties">
-
-    <dt class="property-optional"
+<dl class="resources-properties"><dt class="property-optional"
             title="Optional">
         <span id="projectid_go">
 <a href="#projectid_go" style="color: inherit; text-decoration: inherit;">Project<wbr>Id</a>
@@ -252,8 +216,7 @@ creates a new EC2 credential.
     <dd>{{% md %}}The ID of the project the EC2 credential is created
 for and that authentication requests using this EC2 credential will
 be scoped to.
-{{% /md %}}</dd>
-    <dt class="property-optional"
+{{% /md %}}</dd><dt class="property-optional"
             title="Optional">
         <span id="region_go">
 <a href="#region_go" style="color: inherit; text-decoration: inherit;">Region</a>
@@ -264,8 +227,7 @@ be scoped to.
     <dd>{{% md %}}The region in which to obtain the V3 Keystone client.
 If omitted, the `region` argument of the provider is used. Changing this
 creates a new EC2 credential.
-{{% /md %}}</dd>
-    <dt class="property-optional"
+{{% /md %}}</dd><dt class="property-optional"
             title="Optional">
         <span id="userid_go">
 <a href="#userid_go" style="color: inherit; text-decoration: inherit;">User<wbr>Id</a>
@@ -274,14 +236,11 @@ creates a new EC2 credential.
         <span class="property-type">string</span>
     </dt>
     <dd>{{% md %}}The ID of the user the EC2 credential is created for.
-{{% /md %}}</dd>
-</dl>
+{{% /md %}}</dd></dl>
 {{% /choosable %}}
 
 {{% choosable language nodejs %}}
-<dl class="resources-properties">
-
-    <dt class="property-optional"
+<dl class="resources-properties"><dt class="property-optional"
             title="Optional">
         <span id="projectid_nodejs">
 <a href="#projectid_nodejs" style="color: inherit; text-decoration: inherit;">project<wbr>Id</a>
@@ -292,8 +251,7 @@ creates a new EC2 credential.
     <dd>{{% md %}}The ID of the project the EC2 credential is created
 for and that authentication requests using this EC2 credential will
 be scoped to.
-{{% /md %}}</dd>
-    <dt class="property-optional"
+{{% /md %}}</dd><dt class="property-optional"
             title="Optional">
         <span id="region_nodejs">
 <a href="#region_nodejs" style="color: inherit; text-decoration: inherit;">region</a>
@@ -304,8 +262,7 @@ be scoped to.
     <dd>{{% md %}}The region in which to obtain the V3 Keystone client.
 If omitted, the `region` argument of the provider is used. Changing this
 creates a new EC2 credential.
-{{% /md %}}</dd>
-    <dt class="property-optional"
+{{% /md %}}</dd><dt class="property-optional"
             title="Optional">
         <span id="userid_nodejs">
 <a href="#userid_nodejs" style="color: inherit; text-decoration: inherit;">user<wbr>Id</a>
@@ -314,14 +271,11 @@ creates a new EC2 credential.
         <span class="property-type">string</span>
     </dt>
     <dd>{{% md %}}The ID of the user the EC2 credential is created for.
-{{% /md %}}</dd>
-</dl>
+{{% /md %}}</dd></dl>
 {{% /choosable %}}
 
 {{% choosable language python %}}
-<dl class="resources-properties">
-
-    <dt class="property-optional"
+<dl class="resources-properties"><dt class="property-optional"
             title="Optional">
         <span id="project_id_python">
 <a href="#project_id_python" style="color: inherit; text-decoration: inherit;">project_<wbr>id</a>
@@ -332,8 +286,7 @@ creates a new EC2 credential.
     <dd>{{% md %}}The ID of the project the EC2 credential is created
 for and that authentication requests using this EC2 credential will
 be scoped to.
-{{% /md %}}</dd>
-    <dt class="property-optional"
+{{% /md %}}</dd><dt class="property-optional"
             title="Optional">
         <span id="region_python">
 <a href="#region_python" style="color: inherit; text-decoration: inherit;">region</a>
@@ -344,8 +297,7 @@ be scoped to.
     <dd>{{% md %}}The region in which to obtain the V3 Keystone client.
 If omitted, the `region` argument of the provider is used. Changing this
 creates a new EC2 credential.
-{{% /md %}}</dd>
-    <dt class="property-optional"
+{{% /md %}}</dd><dt class="property-optional"
             title="Optional">
         <span id="user_id_python">
 <a href="#user_id_python" style="color: inherit; text-decoration: inherit;">user_<wbr>id</a>
@@ -354,8 +306,7 @@ creates a new EC2 credential.
         <span class="property-type">str</span>
     </dt>
     <dd>{{% md %}}The ID of the user the EC2 credential is created for.
-{{% /md %}}</dd>
-</dl>
+{{% /md %}}</dd></dl>
 {{% /choosable %}}
 
 
@@ -366,9 +317,7 @@ All [input](#inputs) properties are implicitly available as output properties. A
 
 
 {{% choosable language csharp %}}
-<dl class="resources-properties">
-
-    <dt class="property-"
+<dl class="resources-properties"><dt class="property-"
             title="">
         <span id="access_csharp">
 <a href="#access_csharp" style="color: inherit; text-decoration: inherit;">Access</a>
@@ -377,8 +326,7 @@ All [input](#inputs) properties are implicitly available as output properties. A
         <span class="property-type">string</span>
     </dt>
     <dd>{{% md %}}contains an EC2 credential access UUID
-{{% /md %}}</dd>
-    <dt class="property-"
+{{% /md %}}</dd><dt class="property-"
             title="">
         <span id="id_csharp">
 <a href="#id_csharp" style="color: inherit; text-decoration: inherit;">Id</a>
@@ -386,8 +334,7 @@ All [input](#inputs) properties are implicitly available as output properties. A
         <span class="property-indicator"></span>
         <span class="property-type">string</span>
     </dt>
-    <dd>{{% md %}}The provider-assigned unique ID for this managed resource.{{% /md %}}</dd>
-    <dt class="property-"
+    <dd>{{% md %}}The provider-assigned unique ID for this managed resource.{{% /md %}}</dd><dt class="property-"
             title="">
         <span id="secret_csharp">
 <a href="#secret_csharp" style="color: inherit; text-decoration: inherit;">Secret</a>
@@ -396,8 +343,7 @@ All [input](#inputs) properties are implicitly available as output properties. A
         <span class="property-type">string</span>
     </dt>
     <dd>{{% md %}}contains an EC2 credential secret UUID
-{{% /md %}}</dd>
-    <dt class="property-"
+{{% /md %}}</dd><dt class="property-"
             title="">
         <span id="trustid_csharp">
 <a href="#trustid_csharp" style="color: inherit; text-decoration: inherit;">Trust<wbr>Id</a>
@@ -406,14 +352,11 @@ All [input](#inputs) properties are implicitly available as output properties. A
         <span class="property-type">string</span>
     </dt>
     <dd>{{% md %}}contains an EC2 credential trust ID scope
-{{% /md %}}</dd>
-</dl>
+{{% /md %}}</dd></dl>
 {{% /choosable %}}
 
 {{% choosable language go %}}
-<dl class="resources-properties">
-
-    <dt class="property-"
+<dl class="resources-properties"><dt class="property-"
             title="">
         <span id="access_go">
 <a href="#access_go" style="color: inherit; text-decoration: inherit;">Access</a>
@@ -422,8 +365,7 @@ All [input](#inputs) properties are implicitly available as output properties. A
         <span class="property-type">string</span>
     </dt>
     <dd>{{% md %}}contains an EC2 credential access UUID
-{{% /md %}}</dd>
-    <dt class="property-"
+{{% /md %}}</dd><dt class="property-"
             title="">
         <span id="id_go">
 <a href="#id_go" style="color: inherit; text-decoration: inherit;">Id</a>
@@ -431,8 +373,7 @@ All [input](#inputs) properties are implicitly available as output properties. A
         <span class="property-indicator"></span>
         <span class="property-type">string</span>
     </dt>
-    <dd>{{% md %}}The provider-assigned unique ID for this managed resource.{{% /md %}}</dd>
-    <dt class="property-"
+    <dd>{{% md %}}The provider-assigned unique ID for this managed resource.{{% /md %}}</dd><dt class="property-"
             title="">
         <span id="secret_go">
 <a href="#secret_go" style="color: inherit; text-decoration: inherit;">Secret</a>
@@ -441,8 +382,7 @@ All [input](#inputs) properties are implicitly available as output properties. A
         <span class="property-type">string</span>
     </dt>
     <dd>{{% md %}}contains an EC2 credential secret UUID
-{{% /md %}}</dd>
-    <dt class="property-"
+{{% /md %}}</dd><dt class="property-"
             title="">
         <span id="trustid_go">
 <a href="#trustid_go" style="color: inherit; text-decoration: inherit;">Trust<wbr>Id</a>
@@ -451,14 +391,11 @@ All [input](#inputs) properties are implicitly available as output properties. A
         <span class="property-type">string</span>
     </dt>
     <dd>{{% md %}}contains an EC2 credential trust ID scope
-{{% /md %}}</dd>
-</dl>
+{{% /md %}}</dd></dl>
 {{% /choosable %}}
 
 {{% choosable language nodejs %}}
-<dl class="resources-properties">
-
-    <dt class="property-"
+<dl class="resources-properties"><dt class="property-"
             title="">
         <span id="access_nodejs">
 <a href="#access_nodejs" style="color: inherit; text-decoration: inherit;">access</a>
@@ -467,8 +404,7 @@ All [input](#inputs) properties are implicitly available as output properties. A
         <span class="property-type">string</span>
     </dt>
     <dd>{{% md %}}contains an EC2 credential access UUID
-{{% /md %}}</dd>
-    <dt class="property-"
+{{% /md %}}</dd><dt class="property-"
             title="">
         <span id="id_nodejs">
 <a href="#id_nodejs" style="color: inherit; text-decoration: inherit;">id</a>
@@ -476,8 +412,7 @@ All [input](#inputs) properties are implicitly available as output properties. A
         <span class="property-indicator"></span>
         <span class="property-type">string</span>
     </dt>
-    <dd>{{% md %}}The provider-assigned unique ID for this managed resource.{{% /md %}}</dd>
-    <dt class="property-"
+    <dd>{{% md %}}The provider-assigned unique ID for this managed resource.{{% /md %}}</dd><dt class="property-"
             title="">
         <span id="secret_nodejs">
 <a href="#secret_nodejs" style="color: inherit; text-decoration: inherit;">secret</a>
@@ -486,8 +421,7 @@ All [input](#inputs) properties are implicitly available as output properties. A
         <span class="property-type">string</span>
     </dt>
     <dd>{{% md %}}contains an EC2 credential secret UUID
-{{% /md %}}</dd>
-    <dt class="property-"
+{{% /md %}}</dd><dt class="property-"
             title="">
         <span id="trustid_nodejs">
 <a href="#trustid_nodejs" style="color: inherit; text-decoration: inherit;">trust<wbr>Id</a>
@@ -496,14 +430,11 @@ All [input](#inputs) properties are implicitly available as output properties. A
         <span class="property-type">string</span>
     </dt>
     <dd>{{% md %}}contains an EC2 credential trust ID scope
-{{% /md %}}</dd>
-</dl>
+{{% /md %}}</dd></dl>
 {{% /choosable %}}
 
 {{% choosable language python %}}
-<dl class="resources-properties">
-
-    <dt class="property-"
+<dl class="resources-properties"><dt class="property-"
             title="">
         <span id="access_python">
 <a href="#access_python" style="color: inherit; text-decoration: inherit;">access</a>
@@ -512,8 +443,7 @@ All [input](#inputs) properties are implicitly available as output properties. A
         <span class="property-type">str</span>
     </dt>
     <dd>{{% md %}}contains an EC2 credential access UUID
-{{% /md %}}</dd>
-    <dt class="property-"
+{{% /md %}}</dd><dt class="property-"
             title="">
         <span id="id_python">
 <a href="#id_python" style="color: inherit; text-decoration: inherit;">id</a>
@@ -521,8 +451,7 @@ All [input](#inputs) properties are implicitly available as output properties. A
         <span class="property-indicator"></span>
         <span class="property-type">str</span>
     </dt>
-    <dd>{{% md %}}The provider-assigned unique ID for this managed resource.{{% /md %}}</dd>
-    <dt class="property-"
+    <dd>{{% md %}}The provider-assigned unique ID for this managed resource.{{% /md %}}</dd><dt class="property-"
             title="">
         <span id="secret_python">
 <a href="#secret_python" style="color: inherit; text-decoration: inherit;">secret</a>
@@ -531,8 +460,7 @@ All [input](#inputs) properties are implicitly available as output properties. A
         <span class="property-type">str</span>
     </dt>
     <dd>{{% md %}}contains an EC2 credential secret UUID
-{{% /md %}}</dd>
-    <dt class="property-"
+{{% /md %}}</dd><dt class="property-"
             title="">
         <span id="trust_id_python">
 <a href="#trust_id_python" style="color: inherit; text-decoration: inherit;">trust_<wbr>id</a>
@@ -541,8 +469,7 @@ All [input](#inputs) properties are implicitly available as output properties. A
         <span class="property-type">str</span>
     </dt>
     <dd>{{% md %}}contains an EC2 credential trust ID scope
-{{% /md %}}</dd>
-</dl>
+{{% /md %}}</dd></dl>
 {{% /choosable %}}
 
 
@@ -669,9 +596,7 @@ The following state arguments are supported:
 
 
 {{% choosable language csharp %}}
-<dl class="resources-properties">
-
-    <dt class="property-optional"
+<dl class="resources-properties"><dt class="property-optional"
             title="Optional">
         <span id="state_access_csharp">
 <a href="#state_access_csharp" style="color: inherit; text-decoration: inherit;">Access</a>
@@ -680,8 +605,7 @@ The following state arguments are supported:
         <span class="property-type">string</span>
     </dt>
     <dd>{{% md %}}contains an EC2 credential access UUID
-{{% /md %}}</dd>
-    <dt class="property-optional"
+{{% /md %}}</dd><dt class="property-optional"
             title="Optional">
         <span id="state_projectid_csharp">
 <a href="#state_projectid_csharp" style="color: inherit; text-decoration: inherit;">Project<wbr>Id</a>
@@ -692,8 +616,7 @@ The following state arguments are supported:
     <dd>{{% md %}}The ID of the project the EC2 credential is created
 for and that authentication requests using this EC2 credential will
 be scoped to.
-{{% /md %}}</dd>
-    <dt class="property-optional"
+{{% /md %}}</dd><dt class="property-optional"
             title="Optional">
         <span id="state_region_csharp">
 <a href="#state_region_csharp" style="color: inherit; text-decoration: inherit;">Region</a>
@@ -704,8 +627,7 @@ be scoped to.
     <dd>{{% md %}}The region in which to obtain the V3 Keystone client.
 If omitted, the `region` argument of the provider is used. Changing this
 creates a new EC2 credential.
-{{% /md %}}</dd>
-    <dt class="property-optional"
+{{% /md %}}</dd><dt class="property-optional"
             title="Optional">
         <span id="state_secret_csharp">
 <a href="#state_secret_csharp" style="color: inherit; text-decoration: inherit;">Secret</a>
@@ -714,8 +636,7 @@ creates a new EC2 credential.
         <span class="property-type">string</span>
     </dt>
     <dd>{{% md %}}contains an EC2 credential secret UUID
-{{% /md %}}</dd>
-    <dt class="property-optional"
+{{% /md %}}</dd><dt class="property-optional"
             title="Optional">
         <span id="state_trustid_csharp">
 <a href="#state_trustid_csharp" style="color: inherit; text-decoration: inherit;">Trust<wbr>Id</a>
@@ -724,8 +645,7 @@ creates a new EC2 credential.
         <span class="property-type">string</span>
     </dt>
     <dd>{{% md %}}contains an EC2 credential trust ID scope
-{{% /md %}}</dd>
-    <dt class="property-optional"
+{{% /md %}}</dd><dt class="property-optional"
             title="Optional">
         <span id="state_userid_csharp">
 <a href="#state_userid_csharp" style="color: inherit; text-decoration: inherit;">User<wbr>Id</a>
@@ -734,14 +654,11 @@ creates a new EC2 credential.
         <span class="property-type">string</span>
     </dt>
     <dd>{{% md %}}The ID of the user the EC2 credential is created for.
-{{% /md %}}</dd>
-</dl>
+{{% /md %}}</dd></dl>
 {{% /choosable %}}
 
 {{% choosable language go %}}
-<dl class="resources-properties">
-
-    <dt class="property-optional"
+<dl class="resources-properties"><dt class="property-optional"
             title="Optional">
         <span id="state_access_go">
 <a href="#state_access_go" style="color: inherit; text-decoration: inherit;">Access</a>
@@ -750,8 +667,7 @@ creates a new EC2 credential.
         <span class="property-type">string</span>
     </dt>
     <dd>{{% md %}}contains an EC2 credential access UUID
-{{% /md %}}</dd>
-    <dt class="property-optional"
+{{% /md %}}</dd><dt class="property-optional"
             title="Optional">
         <span id="state_projectid_go">
 <a href="#state_projectid_go" style="color: inherit; text-decoration: inherit;">Project<wbr>Id</a>
@@ -762,8 +678,7 @@ creates a new EC2 credential.
     <dd>{{% md %}}The ID of the project the EC2 credential is created
 for and that authentication requests using this EC2 credential will
 be scoped to.
-{{% /md %}}</dd>
-    <dt class="property-optional"
+{{% /md %}}</dd><dt class="property-optional"
             title="Optional">
         <span id="state_region_go">
 <a href="#state_region_go" style="color: inherit; text-decoration: inherit;">Region</a>
@@ -774,8 +689,7 @@ be scoped to.
     <dd>{{% md %}}The region in which to obtain the V3 Keystone client.
 If omitted, the `region` argument of the provider is used. Changing this
 creates a new EC2 credential.
-{{% /md %}}</dd>
-    <dt class="property-optional"
+{{% /md %}}</dd><dt class="property-optional"
             title="Optional">
         <span id="state_secret_go">
 <a href="#state_secret_go" style="color: inherit; text-decoration: inherit;">Secret</a>
@@ -784,8 +698,7 @@ creates a new EC2 credential.
         <span class="property-type">string</span>
     </dt>
     <dd>{{% md %}}contains an EC2 credential secret UUID
-{{% /md %}}</dd>
-    <dt class="property-optional"
+{{% /md %}}</dd><dt class="property-optional"
             title="Optional">
         <span id="state_trustid_go">
 <a href="#state_trustid_go" style="color: inherit; text-decoration: inherit;">Trust<wbr>Id</a>
@@ -794,8 +707,7 @@ creates a new EC2 credential.
         <span class="property-type">string</span>
     </dt>
     <dd>{{% md %}}contains an EC2 credential trust ID scope
-{{% /md %}}</dd>
-    <dt class="property-optional"
+{{% /md %}}</dd><dt class="property-optional"
             title="Optional">
         <span id="state_userid_go">
 <a href="#state_userid_go" style="color: inherit; text-decoration: inherit;">User<wbr>Id</a>
@@ -804,14 +716,11 @@ creates a new EC2 credential.
         <span class="property-type">string</span>
     </dt>
     <dd>{{% md %}}The ID of the user the EC2 credential is created for.
-{{% /md %}}</dd>
-</dl>
+{{% /md %}}</dd></dl>
 {{% /choosable %}}
 
 {{% choosable language nodejs %}}
-<dl class="resources-properties">
-
-    <dt class="property-optional"
+<dl class="resources-properties"><dt class="property-optional"
             title="Optional">
         <span id="state_access_nodejs">
 <a href="#state_access_nodejs" style="color: inherit; text-decoration: inherit;">access</a>
@@ -820,8 +729,7 @@ creates a new EC2 credential.
         <span class="property-type">string</span>
     </dt>
     <dd>{{% md %}}contains an EC2 credential access UUID
-{{% /md %}}</dd>
-    <dt class="property-optional"
+{{% /md %}}</dd><dt class="property-optional"
             title="Optional">
         <span id="state_projectid_nodejs">
 <a href="#state_projectid_nodejs" style="color: inherit; text-decoration: inherit;">project<wbr>Id</a>
@@ -832,8 +740,7 @@ creates a new EC2 credential.
     <dd>{{% md %}}The ID of the project the EC2 credential is created
 for and that authentication requests using this EC2 credential will
 be scoped to.
-{{% /md %}}</dd>
-    <dt class="property-optional"
+{{% /md %}}</dd><dt class="property-optional"
             title="Optional">
         <span id="state_region_nodejs">
 <a href="#state_region_nodejs" style="color: inherit; text-decoration: inherit;">region</a>
@@ -844,8 +751,7 @@ be scoped to.
     <dd>{{% md %}}The region in which to obtain the V3 Keystone client.
 If omitted, the `region` argument of the provider is used. Changing this
 creates a new EC2 credential.
-{{% /md %}}</dd>
-    <dt class="property-optional"
+{{% /md %}}</dd><dt class="property-optional"
             title="Optional">
         <span id="state_secret_nodejs">
 <a href="#state_secret_nodejs" style="color: inherit; text-decoration: inherit;">secret</a>
@@ -854,8 +760,7 @@ creates a new EC2 credential.
         <span class="property-type">string</span>
     </dt>
     <dd>{{% md %}}contains an EC2 credential secret UUID
-{{% /md %}}</dd>
-    <dt class="property-optional"
+{{% /md %}}</dd><dt class="property-optional"
             title="Optional">
         <span id="state_trustid_nodejs">
 <a href="#state_trustid_nodejs" style="color: inherit; text-decoration: inherit;">trust<wbr>Id</a>
@@ -864,8 +769,7 @@ creates a new EC2 credential.
         <span class="property-type">string</span>
     </dt>
     <dd>{{% md %}}contains an EC2 credential trust ID scope
-{{% /md %}}</dd>
-    <dt class="property-optional"
+{{% /md %}}</dd><dt class="property-optional"
             title="Optional">
         <span id="state_userid_nodejs">
 <a href="#state_userid_nodejs" style="color: inherit; text-decoration: inherit;">user<wbr>Id</a>
@@ -874,14 +778,11 @@ creates a new EC2 credential.
         <span class="property-type">string</span>
     </dt>
     <dd>{{% md %}}The ID of the user the EC2 credential is created for.
-{{% /md %}}</dd>
-</dl>
+{{% /md %}}</dd></dl>
 {{% /choosable %}}
 
 {{% choosable language python %}}
-<dl class="resources-properties">
-
-    <dt class="property-optional"
+<dl class="resources-properties"><dt class="property-optional"
             title="Optional">
         <span id="state_access_python">
 <a href="#state_access_python" style="color: inherit; text-decoration: inherit;">access</a>
@@ -890,8 +791,7 @@ creates a new EC2 credential.
         <span class="property-type">str</span>
     </dt>
     <dd>{{% md %}}contains an EC2 credential access UUID
-{{% /md %}}</dd>
-    <dt class="property-optional"
+{{% /md %}}</dd><dt class="property-optional"
             title="Optional">
         <span id="state_project_id_python">
 <a href="#state_project_id_python" style="color: inherit; text-decoration: inherit;">project_<wbr>id</a>
@@ -902,8 +802,7 @@ creates a new EC2 credential.
     <dd>{{% md %}}The ID of the project the EC2 credential is created
 for and that authentication requests using this EC2 credential will
 be scoped to.
-{{% /md %}}</dd>
-    <dt class="property-optional"
+{{% /md %}}</dd><dt class="property-optional"
             title="Optional">
         <span id="state_region_python">
 <a href="#state_region_python" style="color: inherit; text-decoration: inherit;">region</a>
@@ -914,8 +813,7 @@ be scoped to.
     <dd>{{% md %}}The region in which to obtain the V3 Keystone client.
 If omitted, the `region` argument of the provider is used. Changing this
 creates a new EC2 credential.
-{{% /md %}}</dd>
-    <dt class="property-optional"
+{{% /md %}}</dd><dt class="property-optional"
             title="Optional">
         <span id="state_secret_python">
 <a href="#state_secret_python" style="color: inherit; text-decoration: inherit;">secret</a>
@@ -924,8 +822,7 @@ creates a new EC2 credential.
         <span class="property-type">str</span>
     </dt>
     <dd>{{% md %}}contains an EC2 credential secret UUID
-{{% /md %}}</dd>
-    <dt class="property-optional"
+{{% /md %}}</dd><dt class="property-optional"
             title="Optional">
         <span id="state_trust_id_python">
 <a href="#state_trust_id_python" style="color: inherit; text-decoration: inherit;">trust_<wbr>id</a>
@@ -934,8 +831,7 @@ creates a new EC2 credential.
         <span class="property-type">str</span>
     </dt>
     <dd>{{% md %}}contains an EC2 credential trust ID scope
-{{% /md %}}</dd>
-    <dt class="property-optional"
+{{% /md %}}</dd><dt class="property-optional"
             title="Optional">
         <span id="state_user_id_python">
 <a href="#state_user_id_python" style="color: inherit; text-decoration: inherit;">user_<wbr>id</a>
@@ -944,8 +840,7 @@ creates a new EC2 credential.
         <span class="property-type">str</span>
     </dt>
     <dd>{{% md %}}The ID of the user the EC2 credential is created for.
-{{% /md %}}</dd>
-</dl>
+{{% /md %}}</dd></dl>
 {{% /choosable %}}
 
 
@@ -961,6 +856,6 @@ creates a new EC2 credential.
 	<dt>License</dt>
 	<dd>Apache-2.0</dd>
 	<dt>Notes</dt>
-	<dd>This Pulumi package is based on the [`openstack` Terraform Provider](https://github.com/terraform-provider-openstack/terraform-provider-openstack).</dd>
+	<dd>{{% md %}}This Pulumi package is based on the [`openstack` Terraform Provider](https://github.com/terraform-provider-openstack/terraform-provider-openstack).{{% /md %}}</dd>
 </dl>
 

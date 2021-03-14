@@ -17,11 +17,17 @@ and
 
 
 {{% examples %}}
+
 ## Example Usage
 
 {{< chooser language "typescript,python,go,csharp" / >}}
 
-{{% example csharp %}}
+
+
+
+
+{{< example csharp >}}
+
 ```csharp
 using Pulumi;
 using Gcp = Pulumi.Gcp;
@@ -40,9 +46,12 @@ class MyStack : Stack
 }
 ```
 
-{{% /example %}}
 
-{{% example go %}}
+{{< /example >}}
+
+
+{{< example go >}}
+
 ```go
 package main
 
@@ -67,9 +76,12 @@ func main() {
 }
 ```
 
-{{% /example %}}
 
-{{% example python %}}
+{{< /example >}}
+
+
+{{< example python >}}
+
 ```python
 import pulumi
 import pulumi_gcp as gcp
@@ -78,9 +90,12 @@ picture = gcp.storage.get_bucket_object(bucket="image-store",
     name="folder/butterfly01.jpg")
 ```
 
-{{% /example %}}
 
-{{% example typescript %}}
+{{< /example >}}
+
+
+{{< example typescript >}}
+
 
 ```typescript
 import * as pulumi from "@pulumi/pulumi";
@@ -92,9 +107,16 @@ const picture = pulumi.output(gcp.storage.getBucketObject({
 }, { async: true }));
 ```
 
-{{% /example %}}
+
+{{< /example >}}
+
+
+
+
 
 {{% /examples %}}
+
+
 
 
 ## Using getBucketObject {#using}
@@ -132,9 +154,7 @@ The following arguments are supported:
 
 
 {{% choosable language csharp %}}
-<dl class="resources-properties">
-
-    <dt class="property-optional"
+<dl class="resources-properties"><dt class="property-optional"
             title="Optional">
         <span id="bucket_csharp">
 <a href="#bucket_csharp" style="color: inherit; text-decoration: inherit;">Bucket</a>
@@ -143,8 +163,7 @@ The following arguments are supported:
         <span class="property-type">string</span>
     </dt>
     <dd>{{% md %}}The name of the containing bucket.
-{{% /md %}}</dd>
-    <dt class="property-optional"
+{{% /md %}}</dd><dt class="property-optional"
             title="Optional">
         <span id="name_csharp">
 <a href="#name_csharp" style="color: inherit; text-decoration: inherit;">Name</a>
@@ -153,14 +172,11 @@ The following arguments are supported:
         <span class="property-type">string</span>
     </dt>
     <dd>{{% md %}}The name of the object.
-{{% /md %}}</dd>
-</dl>
+{{% /md %}}</dd></dl>
 {{% /choosable %}}
 
 {{% choosable language go %}}
-<dl class="resources-properties">
-
-    <dt class="property-optional"
+<dl class="resources-properties"><dt class="property-optional"
             title="Optional">
         <span id="bucket_go">
 <a href="#bucket_go" style="color: inherit; text-decoration: inherit;">Bucket</a>
@@ -169,8 +185,7 @@ The following arguments are supported:
         <span class="property-type">string</span>
     </dt>
     <dd>{{% md %}}The name of the containing bucket.
-{{% /md %}}</dd>
-    <dt class="property-optional"
+{{% /md %}}</dd><dt class="property-optional"
             title="Optional">
         <span id="name_go">
 <a href="#name_go" style="color: inherit; text-decoration: inherit;">Name</a>
@@ -179,14 +194,11 @@ The following arguments are supported:
         <span class="property-type">string</span>
     </dt>
     <dd>{{% md %}}The name of the object.
-{{% /md %}}</dd>
-</dl>
+{{% /md %}}</dd></dl>
 {{% /choosable %}}
 
 {{% choosable language nodejs %}}
-<dl class="resources-properties">
-
-    <dt class="property-optional"
+<dl class="resources-properties"><dt class="property-optional"
             title="Optional">
         <span id="bucket_nodejs">
 <a href="#bucket_nodejs" style="color: inherit; text-decoration: inherit;">bucket</a>
@@ -195,8 +207,7 @@ The following arguments are supported:
         <span class="property-type">string</span>
     </dt>
     <dd>{{% md %}}The name of the containing bucket.
-{{% /md %}}</dd>
-    <dt class="property-optional"
+{{% /md %}}</dd><dt class="property-optional"
             title="Optional">
         <span id="name_nodejs">
 <a href="#name_nodejs" style="color: inherit; text-decoration: inherit;">name</a>
@@ -205,14 +216,11 @@ The following arguments are supported:
         <span class="property-type">string</span>
     </dt>
     <dd>{{% md %}}The name of the object.
-{{% /md %}}</dd>
-</dl>
+{{% /md %}}</dd></dl>
 {{% /choosable %}}
 
 {{% choosable language python %}}
-<dl class="resources-properties">
-
-    <dt class="property-optional"
+<dl class="resources-properties"><dt class="property-optional"
             title="Optional">
         <span id="bucket_python">
 <a href="#bucket_python" style="color: inherit; text-decoration: inherit;">bucket</a>
@@ -221,8 +229,7 @@ The following arguments are supported:
         <span class="property-type">str</span>
     </dt>
     <dd>{{% md %}}The name of the containing bucket.
-{{% /md %}}</dd>
-    <dt class="property-optional"
+{{% /md %}}</dd><dt class="property-optional"
             title="Optional">
         <span id="name_python">
 <a href="#name_python" style="color: inherit; text-decoration: inherit;">name</a>
@@ -231,8 +238,7 @@ The following arguments are supported:
         <span class="property-type">str</span>
     </dt>
     <dd>{{% md %}}The name of the object.
-{{% /md %}}</dd>
-</dl>
+{{% /md %}}</dd></dl>
 {{% /choosable %}}
 
 
@@ -245,9 +251,7 @@ The following output properties are available:
 
 
 {{% choosable language csharp %}}
-<dl class="resources-properties">
-
-    <dt class="property-"
+<dl class="resources-properties"><dt class="property-"
             title="">
         <span id="cachecontrol_csharp">
 <a href="#cachecontrol_csharp" style="color: inherit; text-decoration: inherit;">Cache<wbr>Control</a>
@@ -257,8 +261,7 @@ The following output properties are available:
     </dt>
     <dd>{{% md %}}(Computed) [Cache-Control](https://tools.ietf.org/html/rfc7234#section-5.2)
 directive to specify caching behavior of object data. If omitted and object is accessible to all anonymous users, the default will be public, max-age=3600
-{{% /md %}}</dd>
-    <dt class="property-"
+{{% /md %}}</dd><dt class="property-"
             title="">
         <span id="content_csharp">
 <a href="#content_csharp" style="color: inherit; text-decoration: inherit;">Content</a>
@@ -266,8 +269,7 @@ directive to specify caching behavior of object data. If omitted and object is a
         <span class="property-indicator"></span>
         <span class="property-type">string</span>
     </dt>
-    <dd>{{% md %}}{{% /md %}}</dd>
-    <dt class="property-"
+    <dd>{{% md %}}{{% /md %}}</dd><dt class="property-"
             title="">
         <span id="contentdisposition_csharp">
 <a href="#contentdisposition_csharp" style="color: inherit; text-decoration: inherit;">Content<wbr>Disposition</a>
@@ -276,8 +278,7 @@ directive to specify caching behavior of object data. If omitted and object is a
         <span class="property-type">string</span>
     </dt>
     <dd>{{% md %}}(Computed) [Content-Disposition](https://tools.ietf.org/html/rfc6266) of the object data.
-{{% /md %}}</dd>
-    <dt class="property-"
+{{% /md %}}</dd><dt class="property-"
             title="">
         <span id="contentencoding_csharp">
 <a href="#contentencoding_csharp" style="color: inherit; text-decoration: inherit;">Content<wbr>Encoding</a>
@@ -286,8 +287,7 @@ directive to specify caching behavior of object data. If omitted and object is a
         <span class="property-type">string</span>
     </dt>
     <dd>{{% md %}}(Computed) [Content-Encoding](https://tools.ietf.org/html/rfc7231#section-3.1.2.2) of the object data.
-{{% /md %}}</dd>
-    <dt class="property-"
+{{% /md %}}</dd><dt class="property-"
             title="">
         <span id="contentlanguage_csharp">
 <a href="#contentlanguage_csharp" style="color: inherit; text-decoration: inherit;">Content<wbr>Language</a>
@@ -296,8 +296,7 @@ directive to specify caching behavior of object data. If omitted and object is a
         <span class="property-type">string</span>
     </dt>
     <dd>{{% md %}}(Computed) [Content-Language](https://tools.ietf.org/html/rfc7231#section-3.1.3.2) of the object data.
-{{% /md %}}</dd>
-    <dt class="property-"
+{{% /md %}}</dd><dt class="property-"
             title="">
         <span id="contenttype_csharp">
 <a href="#contenttype_csharp" style="color: inherit; text-decoration: inherit;">Content<wbr>Type</a>
@@ -306,8 +305,7 @@ directive to specify caching behavior of object data. If omitted and object is a
         <span class="property-type">string</span>
     </dt>
     <dd>{{% md %}}(Computed) [Content-Type](https://tools.ietf.org/html/rfc7231#section-3.1.1.5) of the object data. Defaults to "application/octet-stream" or "text/plain; charset=utf-8".
-{{% /md %}}</dd>
-    <dt class="property-"
+{{% /md %}}</dd><dt class="property-"
             title="">
         <span id="crc32c_csharp">
 <a href="#crc32c_csharp" style="color: inherit; text-decoration: inherit;">Crc32c</a>
@@ -316,8 +314,7 @@ directive to specify caching behavior of object data. If omitted and object is a
         <span class="property-type">string</span>
     </dt>
     <dd>{{% md %}}(Computed) Base 64 CRC32 hash of the uploaded data.
-{{% /md %}}</dd>
-    <dt class="property-"
+{{% /md %}}</dd><dt class="property-"
             title="">
         <span id="detectmd5hash_csharp">
 <a href="#detectmd5hash_csharp" style="color: inherit; text-decoration: inherit;">Detect<wbr>Md5hash</a>
@@ -325,8 +322,7 @@ directive to specify caching behavior of object data. If omitted and object is a
         <span class="property-indicator"></span>
         <span class="property-type">string</span>
     </dt>
-    <dd>{{% md %}}{{% /md %}}</dd>
-    <dt class="property-"
+    <dd>{{% md %}}{{% /md %}}</dd><dt class="property-"
             title="">
         <span id="id_csharp">
 <a href="#id_csharp" style="color: inherit; text-decoration: inherit;">Id</a>
@@ -335,8 +331,7 @@ directive to specify caching behavior of object data. If omitted and object is a
         <span class="property-type">string</span>
     </dt>
     <dd>{{% md %}}The provider-assigned unique ID for this managed resource.
-{{% /md %}}</dd>
-    <dt class="property-"
+{{% /md %}}</dd><dt class="property-"
             title="">
         <span id="md5hash_csharp">
 <a href="#md5hash_csharp" style="color: inherit; text-decoration: inherit;">Md5hash</a>
@@ -345,8 +340,7 @@ directive to specify caching behavior of object data. If omitted and object is a
         <span class="property-type">string</span>
     </dt>
     <dd>{{% md %}}(Computed) Base 64 MD5 hash of the uploaded data.
-{{% /md %}}</dd>
-    <dt class="property-"
+{{% /md %}}</dd><dt class="property-"
             title="">
         <span id="medialink_csharp">
 <a href="#medialink_csharp" style="color: inherit; text-decoration: inherit;">Media<wbr>Link</a>
@@ -355,8 +349,7 @@ directive to specify caching behavior of object data. If omitted and object is a
         <span class="property-type">string</span>
     </dt>
     <dd>{{% md %}}(Computed) A url reference to download this object.
-{{% /md %}}</dd>
-    <dt class="property-"
+{{% /md %}}</dd><dt class="property-"
             title="">
         <span id="metadata_csharp">
 <a href="#metadata_csharp" style="color: inherit; text-decoration: inherit;">Metadata</a>
@@ -364,8 +357,7 @@ directive to specify caching behavior of object data. If omitted and object is a
         <span class="property-indicator"></span>
         <span class="property-type">Dictionary&lt;string, string&gt;</span>
     </dt>
-    <dd>{{% md %}}{{% /md %}}</dd>
-    <dt class="property-"
+    <dd>{{% md %}}{{% /md %}}</dd><dt class="property-"
             title="">
         <span id="outputname_csharp">
 <a href="#outputname_csharp" style="color: inherit; text-decoration: inherit;">Output<wbr>Name</a>
@@ -373,8 +365,7 @@ directive to specify caching behavior of object data. If omitted and object is a
         <span class="property-indicator"></span>
         <span class="property-type">string</span>
     </dt>
-    <dd>{{% md %}}{{% /md %}}</dd>
-    <dt class="property-"
+    <dd>{{% md %}}{{% /md %}}</dd><dt class="property-"
             title="">
         <span id="selflink_csharp">
 <a href="#selflink_csharp" style="color: inherit; text-decoration: inherit;">Self<wbr>Link</a>
@@ -383,8 +374,7 @@ directive to specify caching behavior of object data. If omitted and object is a
         <span class="property-type">string</span>
     </dt>
     <dd>{{% md %}}(Computed) A url reference to this object.
-{{% /md %}}</dd>
-    <dt class="property-"
+{{% /md %}}</dd><dt class="property-"
             title="">
         <span id="source_csharp">
 <a href="#source_csharp" style="color: inherit; text-decoration: inherit;">Source</a>
@@ -392,8 +382,7 @@ directive to specify caching behavior of object data. If omitted and object is a
         <span class="property-indicator"></span>
         <span class="property-type">string</span>
     </dt>
-    <dd>{{% md %}}{{% /md %}}</dd>
-    <dt class="property-"
+    <dd>{{% md %}}{{% /md %}}</dd><dt class="property-"
             title="">
         <span id="storageclass_csharp">
 <a href="#storageclass_csharp" style="color: inherit; text-decoration: inherit;">Storage<wbr>Class</a>
@@ -404,8 +393,7 @@ directive to specify caching behavior of object data. If omitted and object is a
     <dd>{{% md %}}(Computed) The [StorageClass](https://cloud.google.com/storage/docs/storage-classes) of the new bucket object.
 Supported values include: `MULTI_REGIONAL`, `REGIONAL`, `NEARLINE`, `COLDLINE`, `ARCHIVE`. If not provided, this defaults to the bucket's default
 storage class or to a [standard](https://cloud.google.com/storage/docs/storage-classes#standard) class.
-{{% /md %}}</dd>
-    <dt class="property-"
+{{% /md %}}</dd><dt class="property-"
             title="">
         <span id="bucket_csharp">
 <a href="#bucket_csharp" style="color: inherit; text-decoration: inherit;">Bucket</a>
@@ -413,8 +401,7 @@ storage class or to a [standard](https://cloud.google.com/storage/docs/storage-c
         <span class="property-indicator"></span>
         <span class="property-type">string</span>
     </dt>
-    <dd>{{% md %}}{{% /md %}}</dd>
-    <dt class="property-"
+    <dd>{{% md %}}{{% /md %}}</dd><dt class="property-"
             title="">
         <span id="name_csharp">
 <a href="#name_csharp" style="color: inherit; text-decoration: inherit;">Name</a>
@@ -422,14 +409,11 @@ storage class or to a [standard](https://cloud.google.com/storage/docs/storage-c
         <span class="property-indicator"></span>
         <span class="property-type">string</span>
     </dt>
-    <dd>{{% md %}}{{% /md %}}</dd>
-</dl>
+    <dd>{{% md %}}{{% /md %}}</dd></dl>
 {{% /choosable %}}
 
 {{% choosable language go %}}
-<dl class="resources-properties">
-
-    <dt class="property-"
+<dl class="resources-properties"><dt class="property-"
             title="">
         <span id="cachecontrol_go">
 <a href="#cachecontrol_go" style="color: inherit; text-decoration: inherit;">Cache<wbr>Control</a>
@@ -439,8 +423,7 @@ storage class or to a [standard](https://cloud.google.com/storage/docs/storage-c
     </dt>
     <dd>{{% md %}}(Computed) [Cache-Control](https://tools.ietf.org/html/rfc7234#section-5.2)
 directive to specify caching behavior of object data. If omitted and object is accessible to all anonymous users, the default will be public, max-age=3600
-{{% /md %}}</dd>
-    <dt class="property-"
+{{% /md %}}</dd><dt class="property-"
             title="">
         <span id="content_go">
 <a href="#content_go" style="color: inherit; text-decoration: inherit;">Content</a>
@@ -448,8 +431,7 @@ directive to specify caching behavior of object data. If omitted and object is a
         <span class="property-indicator"></span>
         <span class="property-type">string</span>
     </dt>
-    <dd>{{% md %}}{{% /md %}}</dd>
-    <dt class="property-"
+    <dd>{{% md %}}{{% /md %}}</dd><dt class="property-"
             title="">
         <span id="contentdisposition_go">
 <a href="#contentdisposition_go" style="color: inherit; text-decoration: inherit;">Content<wbr>Disposition</a>
@@ -458,8 +440,7 @@ directive to specify caching behavior of object data. If omitted and object is a
         <span class="property-type">string</span>
     </dt>
     <dd>{{% md %}}(Computed) [Content-Disposition](https://tools.ietf.org/html/rfc6266) of the object data.
-{{% /md %}}</dd>
-    <dt class="property-"
+{{% /md %}}</dd><dt class="property-"
             title="">
         <span id="contentencoding_go">
 <a href="#contentencoding_go" style="color: inherit; text-decoration: inherit;">Content<wbr>Encoding</a>
@@ -468,8 +449,7 @@ directive to specify caching behavior of object data. If omitted and object is a
         <span class="property-type">string</span>
     </dt>
     <dd>{{% md %}}(Computed) [Content-Encoding](https://tools.ietf.org/html/rfc7231#section-3.1.2.2) of the object data.
-{{% /md %}}</dd>
-    <dt class="property-"
+{{% /md %}}</dd><dt class="property-"
             title="">
         <span id="contentlanguage_go">
 <a href="#contentlanguage_go" style="color: inherit; text-decoration: inherit;">Content<wbr>Language</a>
@@ -478,8 +458,7 @@ directive to specify caching behavior of object data. If omitted and object is a
         <span class="property-type">string</span>
     </dt>
     <dd>{{% md %}}(Computed) [Content-Language](https://tools.ietf.org/html/rfc7231#section-3.1.3.2) of the object data.
-{{% /md %}}</dd>
-    <dt class="property-"
+{{% /md %}}</dd><dt class="property-"
             title="">
         <span id="contenttype_go">
 <a href="#contenttype_go" style="color: inherit; text-decoration: inherit;">Content<wbr>Type</a>
@@ -488,8 +467,7 @@ directive to specify caching behavior of object data. If omitted and object is a
         <span class="property-type">string</span>
     </dt>
     <dd>{{% md %}}(Computed) [Content-Type](https://tools.ietf.org/html/rfc7231#section-3.1.1.5) of the object data. Defaults to "application/octet-stream" or "text/plain; charset=utf-8".
-{{% /md %}}</dd>
-    <dt class="property-"
+{{% /md %}}</dd><dt class="property-"
             title="">
         <span id="crc32c_go">
 <a href="#crc32c_go" style="color: inherit; text-decoration: inherit;">Crc32c</a>
@@ -498,8 +476,7 @@ directive to specify caching behavior of object data. If omitted and object is a
         <span class="property-type">string</span>
     </dt>
     <dd>{{% md %}}(Computed) Base 64 CRC32 hash of the uploaded data.
-{{% /md %}}</dd>
-    <dt class="property-"
+{{% /md %}}</dd><dt class="property-"
             title="">
         <span id="detectmd5hash_go">
 <a href="#detectmd5hash_go" style="color: inherit; text-decoration: inherit;">Detect<wbr>Md5hash</a>
@@ -507,8 +484,7 @@ directive to specify caching behavior of object data. If omitted and object is a
         <span class="property-indicator"></span>
         <span class="property-type">string</span>
     </dt>
-    <dd>{{% md %}}{{% /md %}}</dd>
-    <dt class="property-"
+    <dd>{{% md %}}{{% /md %}}</dd><dt class="property-"
             title="">
         <span id="id_go">
 <a href="#id_go" style="color: inherit; text-decoration: inherit;">Id</a>
@@ -517,8 +493,7 @@ directive to specify caching behavior of object data. If omitted and object is a
         <span class="property-type">string</span>
     </dt>
     <dd>{{% md %}}The provider-assigned unique ID for this managed resource.
-{{% /md %}}</dd>
-    <dt class="property-"
+{{% /md %}}</dd><dt class="property-"
             title="">
         <span id="md5hash_go">
 <a href="#md5hash_go" style="color: inherit; text-decoration: inherit;">Md5hash</a>
@@ -527,8 +502,7 @@ directive to specify caching behavior of object data. If omitted and object is a
         <span class="property-type">string</span>
     </dt>
     <dd>{{% md %}}(Computed) Base 64 MD5 hash of the uploaded data.
-{{% /md %}}</dd>
-    <dt class="property-"
+{{% /md %}}</dd><dt class="property-"
             title="">
         <span id="medialink_go">
 <a href="#medialink_go" style="color: inherit; text-decoration: inherit;">Media<wbr>Link</a>
@@ -537,8 +511,7 @@ directive to specify caching behavior of object data. If omitted and object is a
         <span class="property-type">string</span>
     </dt>
     <dd>{{% md %}}(Computed) A url reference to download this object.
-{{% /md %}}</dd>
-    <dt class="property-"
+{{% /md %}}</dd><dt class="property-"
             title="">
         <span id="metadata_go">
 <a href="#metadata_go" style="color: inherit; text-decoration: inherit;">Metadata</a>
@@ -546,8 +519,7 @@ directive to specify caching behavior of object data. If omitted and object is a
         <span class="property-indicator"></span>
         <span class="property-type">map[string]string</span>
     </dt>
-    <dd>{{% md %}}{{% /md %}}</dd>
-    <dt class="property-"
+    <dd>{{% md %}}{{% /md %}}</dd><dt class="property-"
             title="">
         <span id="outputname_go">
 <a href="#outputname_go" style="color: inherit; text-decoration: inherit;">Output<wbr>Name</a>
@@ -555,8 +527,7 @@ directive to specify caching behavior of object data. If omitted and object is a
         <span class="property-indicator"></span>
         <span class="property-type">string</span>
     </dt>
-    <dd>{{% md %}}{{% /md %}}</dd>
-    <dt class="property-"
+    <dd>{{% md %}}{{% /md %}}</dd><dt class="property-"
             title="">
         <span id="selflink_go">
 <a href="#selflink_go" style="color: inherit; text-decoration: inherit;">Self<wbr>Link</a>
@@ -565,8 +536,7 @@ directive to specify caching behavior of object data. If omitted and object is a
         <span class="property-type">string</span>
     </dt>
     <dd>{{% md %}}(Computed) A url reference to this object.
-{{% /md %}}</dd>
-    <dt class="property-"
+{{% /md %}}</dd><dt class="property-"
             title="">
         <span id="source_go">
 <a href="#source_go" style="color: inherit; text-decoration: inherit;">Source</a>
@@ -574,8 +544,7 @@ directive to specify caching behavior of object data. If omitted and object is a
         <span class="property-indicator"></span>
         <span class="property-type">string</span>
     </dt>
-    <dd>{{% md %}}{{% /md %}}</dd>
-    <dt class="property-"
+    <dd>{{% md %}}{{% /md %}}</dd><dt class="property-"
             title="">
         <span id="storageclass_go">
 <a href="#storageclass_go" style="color: inherit; text-decoration: inherit;">Storage<wbr>Class</a>
@@ -586,8 +555,7 @@ directive to specify caching behavior of object data. If omitted and object is a
     <dd>{{% md %}}(Computed) The [StorageClass](https://cloud.google.com/storage/docs/storage-classes) of the new bucket object.
 Supported values include: `MULTI_REGIONAL`, `REGIONAL`, `NEARLINE`, `COLDLINE`, `ARCHIVE`. If not provided, this defaults to the bucket's default
 storage class or to a [standard](https://cloud.google.com/storage/docs/storage-classes#standard) class.
-{{% /md %}}</dd>
-    <dt class="property-"
+{{% /md %}}</dd><dt class="property-"
             title="">
         <span id="bucket_go">
 <a href="#bucket_go" style="color: inherit; text-decoration: inherit;">Bucket</a>
@@ -595,8 +563,7 @@ storage class or to a [standard](https://cloud.google.com/storage/docs/storage-c
         <span class="property-indicator"></span>
         <span class="property-type">string</span>
     </dt>
-    <dd>{{% md %}}{{% /md %}}</dd>
-    <dt class="property-"
+    <dd>{{% md %}}{{% /md %}}</dd><dt class="property-"
             title="">
         <span id="name_go">
 <a href="#name_go" style="color: inherit; text-decoration: inherit;">Name</a>
@@ -604,14 +571,11 @@ storage class or to a [standard](https://cloud.google.com/storage/docs/storage-c
         <span class="property-indicator"></span>
         <span class="property-type">string</span>
     </dt>
-    <dd>{{% md %}}{{% /md %}}</dd>
-</dl>
+    <dd>{{% md %}}{{% /md %}}</dd></dl>
 {{% /choosable %}}
 
 {{% choosable language nodejs %}}
-<dl class="resources-properties">
-
-    <dt class="property-"
+<dl class="resources-properties"><dt class="property-"
             title="">
         <span id="cachecontrol_nodejs">
 <a href="#cachecontrol_nodejs" style="color: inherit; text-decoration: inherit;">cache<wbr>Control</a>
@@ -621,8 +585,7 @@ storage class or to a [standard](https://cloud.google.com/storage/docs/storage-c
     </dt>
     <dd>{{% md %}}(Computed) [Cache-Control](https://tools.ietf.org/html/rfc7234#section-5.2)
 directive to specify caching behavior of object data. If omitted and object is accessible to all anonymous users, the default will be public, max-age=3600
-{{% /md %}}</dd>
-    <dt class="property-"
+{{% /md %}}</dd><dt class="property-"
             title="">
         <span id="content_nodejs">
 <a href="#content_nodejs" style="color: inherit; text-decoration: inherit;">content</a>
@@ -630,8 +593,7 @@ directive to specify caching behavior of object data. If omitted and object is a
         <span class="property-indicator"></span>
         <span class="property-type">string</span>
     </dt>
-    <dd>{{% md %}}{{% /md %}}</dd>
-    <dt class="property-"
+    <dd>{{% md %}}{{% /md %}}</dd><dt class="property-"
             title="">
         <span id="contentdisposition_nodejs">
 <a href="#contentdisposition_nodejs" style="color: inherit; text-decoration: inherit;">content<wbr>Disposition</a>
@@ -640,8 +602,7 @@ directive to specify caching behavior of object data. If omitted and object is a
         <span class="property-type">string</span>
     </dt>
     <dd>{{% md %}}(Computed) [Content-Disposition](https://tools.ietf.org/html/rfc6266) of the object data.
-{{% /md %}}</dd>
-    <dt class="property-"
+{{% /md %}}</dd><dt class="property-"
             title="">
         <span id="contentencoding_nodejs">
 <a href="#contentencoding_nodejs" style="color: inherit; text-decoration: inherit;">content<wbr>Encoding</a>
@@ -650,8 +611,7 @@ directive to specify caching behavior of object data. If omitted and object is a
         <span class="property-type">string</span>
     </dt>
     <dd>{{% md %}}(Computed) [Content-Encoding](https://tools.ietf.org/html/rfc7231#section-3.1.2.2) of the object data.
-{{% /md %}}</dd>
-    <dt class="property-"
+{{% /md %}}</dd><dt class="property-"
             title="">
         <span id="contentlanguage_nodejs">
 <a href="#contentlanguage_nodejs" style="color: inherit; text-decoration: inherit;">content<wbr>Language</a>
@@ -660,8 +620,7 @@ directive to specify caching behavior of object data. If omitted and object is a
         <span class="property-type">string</span>
     </dt>
     <dd>{{% md %}}(Computed) [Content-Language](https://tools.ietf.org/html/rfc7231#section-3.1.3.2) of the object data.
-{{% /md %}}</dd>
-    <dt class="property-"
+{{% /md %}}</dd><dt class="property-"
             title="">
         <span id="contenttype_nodejs">
 <a href="#contenttype_nodejs" style="color: inherit; text-decoration: inherit;">content<wbr>Type</a>
@@ -670,8 +629,7 @@ directive to specify caching behavior of object data. If omitted and object is a
         <span class="property-type">string</span>
     </dt>
     <dd>{{% md %}}(Computed) [Content-Type](https://tools.ietf.org/html/rfc7231#section-3.1.1.5) of the object data. Defaults to "application/octet-stream" or "text/plain; charset=utf-8".
-{{% /md %}}</dd>
-    <dt class="property-"
+{{% /md %}}</dd><dt class="property-"
             title="">
         <span id="crc32c_nodejs">
 <a href="#crc32c_nodejs" style="color: inherit; text-decoration: inherit;">crc32c</a>
@@ -680,8 +638,7 @@ directive to specify caching behavior of object data. If omitted and object is a
         <span class="property-type">string</span>
     </dt>
     <dd>{{% md %}}(Computed) Base 64 CRC32 hash of the uploaded data.
-{{% /md %}}</dd>
-    <dt class="property-"
+{{% /md %}}</dd><dt class="property-"
             title="">
         <span id="detectmd5hash_nodejs">
 <a href="#detectmd5hash_nodejs" style="color: inherit; text-decoration: inherit;">detect<wbr>Md5hash</a>
@@ -689,8 +646,7 @@ directive to specify caching behavior of object data. If omitted and object is a
         <span class="property-indicator"></span>
         <span class="property-type">string</span>
     </dt>
-    <dd>{{% md %}}{{% /md %}}</dd>
-    <dt class="property-"
+    <dd>{{% md %}}{{% /md %}}</dd><dt class="property-"
             title="">
         <span id="id_nodejs">
 <a href="#id_nodejs" style="color: inherit; text-decoration: inherit;">id</a>
@@ -699,8 +655,7 @@ directive to specify caching behavior of object data. If omitted and object is a
         <span class="property-type">string</span>
     </dt>
     <dd>{{% md %}}The provider-assigned unique ID for this managed resource.
-{{% /md %}}</dd>
-    <dt class="property-"
+{{% /md %}}</dd><dt class="property-"
             title="">
         <span id="md5hash_nodejs">
 <a href="#md5hash_nodejs" style="color: inherit; text-decoration: inherit;">md5hash</a>
@@ -709,8 +664,7 @@ directive to specify caching behavior of object data. If omitted and object is a
         <span class="property-type">string</span>
     </dt>
     <dd>{{% md %}}(Computed) Base 64 MD5 hash of the uploaded data.
-{{% /md %}}</dd>
-    <dt class="property-"
+{{% /md %}}</dd><dt class="property-"
             title="">
         <span id="medialink_nodejs">
 <a href="#medialink_nodejs" style="color: inherit; text-decoration: inherit;">media<wbr>Link</a>
@@ -719,8 +673,7 @@ directive to specify caching behavior of object data. If omitted and object is a
         <span class="property-type">string</span>
     </dt>
     <dd>{{% md %}}(Computed) A url reference to download this object.
-{{% /md %}}</dd>
-    <dt class="property-"
+{{% /md %}}</dd><dt class="property-"
             title="">
         <span id="metadata_nodejs">
 <a href="#metadata_nodejs" style="color: inherit; text-decoration: inherit;">metadata</a>
@@ -728,8 +681,7 @@ directive to specify caching behavior of object data. If omitted and object is a
         <span class="property-indicator"></span>
         <span class="property-type">{[key: string]: string}</span>
     </dt>
-    <dd>{{% md %}}{{% /md %}}</dd>
-    <dt class="property-"
+    <dd>{{% md %}}{{% /md %}}</dd><dt class="property-"
             title="">
         <span id="outputname_nodejs">
 <a href="#outputname_nodejs" style="color: inherit; text-decoration: inherit;">output<wbr>Name</a>
@@ -737,8 +689,7 @@ directive to specify caching behavior of object data. If omitted and object is a
         <span class="property-indicator"></span>
         <span class="property-type">string</span>
     </dt>
-    <dd>{{% md %}}{{% /md %}}</dd>
-    <dt class="property-"
+    <dd>{{% md %}}{{% /md %}}</dd><dt class="property-"
             title="">
         <span id="selflink_nodejs">
 <a href="#selflink_nodejs" style="color: inherit; text-decoration: inherit;">self<wbr>Link</a>
@@ -747,8 +698,7 @@ directive to specify caching behavior of object data. If omitted and object is a
         <span class="property-type">string</span>
     </dt>
     <dd>{{% md %}}(Computed) A url reference to this object.
-{{% /md %}}</dd>
-    <dt class="property-"
+{{% /md %}}</dd><dt class="property-"
             title="">
         <span id="source_nodejs">
 <a href="#source_nodejs" style="color: inherit; text-decoration: inherit;">source</a>
@@ -756,8 +706,7 @@ directive to specify caching behavior of object data. If omitted and object is a
         <span class="property-indicator"></span>
         <span class="property-type">string</span>
     </dt>
-    <dd>{{% md %}}{{% /md %}}</dd>
-    <dt class="property-"
+    <dd>{{% md %}}{{% /md %}}</dd><dt class="property-"
             title="">
         <span id="storageclass_nodejs">
 <a href="#storageclass_nodejs" style="color: inherit; text-decoration: inherit;">storage<wbr>Class</a>
@@ -768,8 +717,7 @@ directive to specify caching behavior of object data. If omitted and object is a
     <dd>{{% md %}}(Computed) The [StorageClass](https://cloud.google.com/storage/docs/storage-classes) of the new bucket object.
 Supported values include: `MULTI_REGIONAL`, `REGIONAL`, `NEARLINE`, `COLDLINE`, `ARCHIVE`. If not provided, this defaults to the bucket's default
 storage class or to a [standard](https://cloud.google.com/storage/docs/storage-classes#standard) class.
-{{% /md %}}</dd>
-    <dt class="property-"
+{{% /md %}}</dd><dt class="property-"
             title="">
         <span id="bucket_nodejs">
 <a href="#bucket_nodejs" style="color: inherit; text-decoration: inherit;">bucket</a>
@@ -777,8 +725,7 @@ storage class or to a [standard](https://cloud.google.com/storage/docs/storage-c
         <span class="property-indicator"></span>
         <span class="property-type">string</span>
     </dt>
-    <dd>{{% md %}}{{% /md %}}</dd>
-    <dt class="property-"
+    <dd>{{% md %}}{{% /md %}}</dd><dt class="property-"
             title="">
         <span id="name_nodejs">
 <a href="#name_nodejs" style="color: inherit; text-decoration: inherit;">name</a>
@@ -786,14 +733,11 @@ storage class or to a [standard](https://cloud.google.com/storage/docs/storage-c
         <span class="property-indicator"></span>
         <span class="property-type">string</span>
     </dt>
-    <dd>{{% md %}}{{% /md %}}</dd>
-</dl>
+    <dd>{{% md %}}{{% /md %}}</dd></dl>
 {{% /choosable %}}
 
 {{% choosable language python %}}
-<dl class="resources-properties">
-
-    <dt class="property-"
+<dl class="resources-properties"><dt class="property-"
             title="">
         <span id="cache_control_python">
 <a href="#cache_control_python" style="color: inherit; text-decoration: inherit;">cache_<wbr>control</a>
@@ -803,8 +747,7 @@ storage class or to a [standard](https://cloud.google.com/storage/docs/storage-c
     </dt>
     <dd>{{% md %}}(Computed) [Cache-Control](https://tools.ietf.org/html/rfc7234#section-5.2)
 directive to specify caching behavior of object data. If omitted and object is accessible to all anonymous users, the default will be public, max-age=3600
-{{% /md %}}</dd>
-    <dt class="property-"
+{{% /md %}}</dd><dt class="property-"
             title="">
         <span id="content_python">
 <a href="#content_python" style="color: inherit; text-decoration: inherit;">content</a>
@@ -812,8 +755,7 @@ directive to specify caching behavior of object data. If omitted and object is a
         <span class="property-indicator"></span>
         <span class="property-type">str</span>
     </dt>
-    <dd>{{% md %}}{{% /md %}}</dd>
-    <dt class="property-"
+    <dd>{{% md %}}{{% /md %}}</dd><dt class="property-"
             title="">
         <span id="content_disposition_python">
 <a href="#content_disposition_python" style="color: inherit; text-decoration: inherit;">content_<wbr>disposition</a>
@@ -822,8 +764,7 @@ directive to specify caching behavior of object data. If omitted and object is a
         <span class="property-type">str</span>
     </dt>
     <dd>{{% md %}}(Computed) [Content-Disposition](https://tools.ietf.org/html/rfc6266) of the object data.
-{{% /md %}}</dd>
-    <dt class="property-"
+{{% /md %}}</dd><dt class="property-"
             title="">
         <span id="content_encoding_python">
 <a href="#content_encoding_python" style="color: inherit; text-decoration: inherit;">content_<wbr>encoding</a>
@@ -832,8 +773,7 @@ directive to specify caching behavior of object data. If omitted and object is a
         <span class="property-type">str</span>
     </dt>
     <dd>{{% md %}}(Computed) [Content-Encoding](https://tools.ietf.org/html/rfc7231#section-3.1.2.2) of the object data.
-{{% /md %}}</dd>
-    <dt class="property-"
+{{% /md %}}</dd><dt class="property-"
             title="">
         <span id="content_language_python">
 <a href="#content_language_python" style="color: inherit; text-decoration: inherit;">content_<wbr>language</a>
@@ -842,8 +782,7 @@ directive to specify caching behavior of object data. If omitted and object is a
         <span class="property-type">str</span>
     </dt>
     <dd>{{% md %}}(Computed) [Content-Language](https://tools.ietf.org/html/rfc7231#section-3.1.3.2) of the object data.
-{{% /md %}}</dd>
-    <dt class="property-"
+{{% /md %}}</dd><dt class="property-"
             title="">
         <span id="content_type_python">
 <a href="#content_type_python" style="color: inherit; text-decoration: inherit;">content_<wbr>type</a>
@@ -852,8 +791,7 @@ directive to specify caching behavior of object data. If omitted and object is a
         <span class="property-type">str</span>
     </dt>
     <dd>{{% md %}}(Computed) [Content-Type](https://tools.ietf.org/html/rfc7231#section-3.1.1.5) of the object data. Defaults to "application/octet-stream" or "text/plain; charset=utf-8".
-{{% /md %}}</dd>
-    <dt class="property-"
+{{% /md %}}</dd><dt class="property-"
             title="">
         <span id="crc32c_python">
 <a href="#crc32c_python" style="color: inherit; text-decoration: inherit;">crc32c</a>
@@ -862,8 +800,7 @@ directive to specify caching behavior of object data. If omitted and object is a
         <span class="property-type">str</span>
     </dt>
     <dd>{{% md %}}(Computed) Base 64 CRC32 hash of the uploaded data.
-{{% /md %}}</dd>
-    <dt class="property-"
+{{% /md %}}</dd><dt class="property-"
             title="">
         <span id="detect_md5hash_python">
 <a href="#detect_md5hash_python" style="color: inherit; text-decoration: inherit;">detect_<wbr>md5hash</a>
@@ -871,8 +808,7 @@ directive to specify caching behavior of object data. If omitted and object is a
         <span class="property-indicator"></span>
         <span class="property-type">str</span>
     </dt>
-    <dd>{{% md %}}{{% /md %}}</dd>
-    <dt class="property-"
+    <dd>{{% md %}}{{% /md %}}</dd><dt class="property-"
             title="">
         <span id="id_python">
 <a href="#id_python" style="color: inherit; text-decoration: inherit;">id</a>
@@ -881,8 +817,7 @@ directive to specify caching behavior of object data. If omitted and object is a
         <span class="property-type">str</span>
     </dt>
     <dd>{{% md %}}The provider-assigned unique ID for this managed resource.
-{{% /md %}}</dd>
-    <dt class="property-"
+{{% /md %}}</dd><dt class="property-"
             title="">
         <span id="md5hash_python">
 <a href="#md5hash_python" style="color: inherit; text-decoration: inherit;">md5hash</a>
@@ -891,8 +826,7 @@ directive to specify caching behavior of object data. If omitted and object is a
         <span class="property-type">str</span>
     </dt>
     <dd>{{% md %}}(Computed) Base 64 MD5 hash of the uploaded data.
-{{% /md %}}</dd>
-    <dt class="property-"
+{{% /md %}}</dd><dt class="property-"
             title="">
         <span id="media_link_python">
 <a href="#media_link_python" style="color: inherit; text-decoration: inherit;">media_<wbr>link</a>
@@ -901,8 +835,7 @@ directive to specify caching behavior of object data. If omitted and object is a
         <span class="property-type">str</span>
     </dt>
     <dd>{{% md %}}(Computed) A url reference to download this object.
-{{% /md %}}</dd>
-    <dt class="property-"
+{{% /md %}}</dd><dt class="property-"
             title="">
         <span id="metadata_python">
 <a href="#metadata_python" style="color: inherit; text-decoration: inherit;">metadata</a>
@@ -910,8 +843,7 @@ directive to specify caching behavior of object data. If omitted and object is a
         <span class="property-indicator"></span>
         <span class="property-type">Mapping[str, str]</span>
     </dt>
-    <dd>{{% md %}}{{% /md %}}</dd>
-    <dt class="property-"
+    <dd>{{% md %}}{{% /md %}}</dd><dt class="property-"
             title="">
         <span id="output_name_python">
 <a href="#output_name_python" style="color: inherit; text-decoration: inherit;">output_<wbr>name</a>
@@ -919,8 +851,7 @@ directive to specify caching behavior of object data. If omitted and object is a
         <span class="property-indicator"></span>
         <span class="property-type">str</span>
     </dt>
-    <dd>{{% md %}}{{% /md %}}</dd>
-    <dt class="property-"
+    <dd>{{% md %}}{{% /md %}}</dd><dt class="property-"
             title="">
         <span id="self_link_python">
 <a href="#self_link_python" style="color: inherit; text-decoration: inherit;">self_<wbr>link</a>
@@ -929,8 +860,7 @@ directive to specify caching behavior of object data. If omitted and object is a
         <span class="property-type">str</span>
     </dt>
     <dd>{{% md %}}(Computed) A url reference to this object.
-{{% /md %}}</dd>
-    <dt class="property-"
+{{% /md %}}</dd><dt class="property-"
             title="">
         <span id="source_python">
 <a href="#source_python" style="color: inherit; text-decoration: inherit;">source</a>
@@ -938,8 +868,7 @@ directive to specify caching behavior of object data. If omitted and object is a
         <span class="property-indicator"></span>
         <span class="property-type">str</span>
     </dt>
-    <dd>{{% md %}}{{% /md %}}</dd>
-    <dt class="property-"
+    <dd>{{% md %}}{{% /md %}}</dd><dt class="property-"
             title="">
         <span id="storage_class_python">
 <a href="#storage_class_python" style="color: inherit; text-decoration: inherit;">storage_<wbr>class</a>
@@ -950,8 +879,7 @@ directive to specify caching behavior of object data. If omitted and object is a
     <dd>{{% md %}}(Computed) The [StorageClass](https://cloud.google.com/storage/docs/storage-classes) of the new bucket object.
 Supported values include: `MULTI_REGIONAL`, `REGIONAL`, `NEARLINE`, `COLDLINE`, `ARCHIVE`. If not provided, this defaults to the bucket's default
 storage class or to a [standard](https://cloud.google.com/storage/docs/storage-classes#standard) class.
-{{% /md %}}</dd>
-    <dt class="property-"
+{{% /md %}}</dd><dt class="property-"
             title="">
         <span id="bucket_python">
 <a href="#bucket_python" style="color: inherit; text-decoration: inherit;">bucket</a>
@@ -959,8 +887,7 @@ storage class or to a [standard](https://cloud.google.com/storage/docs/storage-c
         <span class="property-indicator"></span>
         <span class="property-type">str</span>
     </dt>
-    <dd>{{% md %}}{{% /md %}}</dd>
-    <dt class="property-"
+    <dd>{{% md %}}{{% /md %}}</dd><dt class="property-"
             title="">
         <span id="name_python">
 <a href="#name_python" style="color: inherit; text-decoration: inherit;">name</a>
@@ -968,8 +895,7 @@ storage class or to a [standard](https://cloud.google.com/storage/docs/storage-c
         <span class="property-indicator"></span>
         <span class="property-type">str</span>
     </dt>
-    <dd>{{% md %}}{{% /md %}}</dd>
-</dl>
+    <dd>{{% md %}}{{% /md %}}</dd></dl>
 {{% /choosable %}}
 
 
@@ -983,6 +909,6 @@ storage class or to a [standard](https://cloud.google.com/storage/docs/storage-c
 	<dt>License</dt>
 	<dd>Apache-2.0</dd>
 	<dt>Notes</dt>
-	<dd>This Pulumi package is based on the [`google-beta` Terraform Provider](https://github.com/hashicorp/terraform-provider-google-beta).</dd>
+	<dd>{{% md %}}This Pulumi package is based on the [`google-beta` Terraform Provider](https://github.com/hashicorp/terraform-provider-google-beta).{{% /md %}}</dd>
 </dl>
 

@@ -45,9 +45,7 @@ $ pulumi import azure-native:devtestlab:Disk myresource1 /subscriptions/{subscri
 
 {{% choosable language nodejs %}}
 
-<dl class="resources-properties">
-  
-    <dt
+<dl class="resources-properties"><dt
         class="property-required" title="Required">
         <span>name</span>
         <span class="property-indicator"></span>
@@ -55,9 +53,7 @@ $ pulumi import azure-native:devtestlab:Disk myresource1 /subscriptions/{subscri
     </dt>
     <dd>
       The unique name of the resource.
-    </dd>
-  
-    <dt
+    </dd><dt
         class="property-required" title="Required">
         <span>args</span>
         <span class="property-indicator"></span>
@@ -65,9 +61,7 @@ $ pulumi import azure-native:devtestlab:Disk myresource1 /subscriptions/{subscri
     </dt>
     <dd>
       The arguments to resource properties.
-    </dd>
-  
-    <dt
+    </dd><dt
         class="property-optional" title="Optional">
         <span>opts</span>
         <span class="property-indicator"></span>
@@ -75,10 +69,7 @@ $ pulumi import azure-native:devtestlab:Disk myresource1 /subscriptions/{subscri
     </dt>
     <dd>
       Bag of options to control resource&#39;s behavior.
-    </dd>
-  
-
-</dl>
+    </dd></dl>
 
 {{% /choosable %}}
 
@@ -104,9 +95,7 @@ $ pulumi import azure-native:devtestlab:Disk myresource1 /subscriptions/{subscri
 
 {{% choosable language go %}}
 
-<dl class="resources-properties">
-  
-    <dt
+<dl class="resources-properties"><dt
         class="property-optional" title="Optional">
         <span>ctx</span>
         <span class="property-indicator"></span>
@@ -114,9 +103,7 @@ $ pulumi import azure-native:devtestlab:Disk myresource1 /subscriptions/{subscri
     </dt>
     <dd>
       Context object for the current deployment.
-    </dd>
-  
-    <dt
+    </dd><dt
         class="property-required" title="Required">
         <span>name</span>
         <span class="property-indicator"></span>
@@ -124,9 +111,7 @@ $ pulumi import azure-native:devtestlab:Disk myresource1 /subscriptions/{subscri
     </dt>
     <dd>
       The unique name of the resource.
-    </dd>
-  
-    <dt
+    </dd><dt
         class="property-required" title="Required">
         <span>args</span>
         <span class="property-indicator"></span>
@@ -134,9 +119,7 @@ $ pulumi import azure-native:devtestlab:Disk myresource1 /subscriptions/{subscri
     </dt>
     <dd>
       The arguments to resource properties.
-    </dd>
-  
-    <dt
+    </dd><dt
         class="property-optional" title="Optional">
         <span>opts</span>
         <span class="property-indicator"></span>
@@ -144,18 +127,13 @@ $ pulumi import azure-native:devtestlab:Disk myresource1 /subscriptions/{subscri
     </dt>
     <dd>
       Bag of options to control resource&#39;s behavior.
-    </dd>
-  
-
-</dl>
+    </dd></dl>
 
 {{% /choosable %}}
 
 {{% choosable language csharp %}}
 
-<dl class="resources-properties">
-  
-    <dt
+<dl class="resources-properties"><dt
         class="property-required" title="Required">
         <span>name</span>
         <span class="property-indicator"></span>
@@ -163,9 +141,7 @@ $ pulumi import azure-native:devtestlab:Disk myresource1 /subscriptions/{subscri
     </dt>
     <dd>
       The unique name of the resource.
-    </dd>
-  
-    <dt
+    </dd><dt
         class="property-required" title="Required">
         <span>args</span>
         <span class="property-indicator"></span>
@@ -173,9 +149,7 @@ $ pulumi import azure-native:devtestlab:Disk myresource1 /subscriptions/{subscri
     </dt>
     <dd>
       The arguments to resource properties.
-    </dd>
-  
-    <dt
+    </dd><dt
         class="property-optional" title="Optional">
         <span>opts</span>
         <span class="property-indicator"></span>
@@ -183,10 +157,7 @@ $ pulumi import azure-native:devtestlab:Disk myresource1 /subscriptions/{subscri
     </dt>
     <dd>
       Bag of options to control resource&#39;s behavior.
-    </dd>
-  
-
-</dl>
+    </dd></dl>
 
 {{% /choosable %}}
 
@@ -201,9 +172,7 @@ The Disk resource accepts the following [input]({{< relref "/docs/intro/concepts
 
 
 {{% choosable language csharp %}}
-<dl class="resources-properties">
-
-    <dt class="property-required"
+<dl class="resources-properties"><dt class="property-required"
             title="Required">
         <span id="labname_csharp">
 <a href="#labname_csharp" style="color: inherit; text-decoration: inherit;">Lab<wbr>Name</a>
@@ -211,8 +180,7 @@ The Disk resource accepts the following [input]({{< relref "/docs/intro/concepts
         <span class="property-indicator"></span>
         <span class="property-type">string</span>
     </dt>
-    <dd>{{% md %}}The name of the lab.{{% /md %}}</dd>
-    <dt class="property-required"
+    <dd>{{% md %}}The name of the lab.{{% /md %}}</dd><dt class="property-required"
             title="Required">
         <span id="resourcegroupname_csharp">
 <a href="#resourcegroupname_csharp" style="color: inherit; text-decoration: inherit;">Resource<wbr>Group<wbr>Name</a>
@@ -220,8 +188,7 @@ The Disk resource accepts the following [input]({{< relref "/docs/intro/concepts
         <span class="property-indicator"></span>
         <span class="property-type">string</span>
     </dt>
-    <dd>{{% md %}}The name of the resource group.{{% /md %}}</dd>
-    <dt class="property-required"
+    <dd>{{% md %}}The name of the resource group.{{% /md %}}</dd><dt class="property-required"
             title="Required">
         <span id="username_csharp">
 <a href="#username_csharp" style="color: inherit; text-decoration: inherit;">User<wbr>Name</a>
@@ -229,8 +196,7 @@ The Disk resource accepts the following [input]({{< relref "/docs/intro/concepts
         <span class="property-indicator"></span>
         <span class="property-type">string</span>
     </dt>
-    <dd>{{% md %}}The name of the user profile.{{% /md %}}</dd>
-    <dt class="property-optional"
+    <dd>{{% md %}}The name of the user profile.{{% /md %}}</dd><dt class="property-optional"
             title="Optional">
         <span id="diskblobname_csharp">
 <a href="#diskblobname_csharp" style="color: inherit; text-decoration: inherit;">Disk<wbr>Blob<wbr>Name</a>
@@ -238,8 +204,7 @@ The Disk resource accepts the following [input]({{< relref "/docs/intro/concepts
         <span class="property-indicator"></span>
         <span class="property-type">string</span>
     </dt>
-    <dd>{{% md %}}When backed by a blob, the name of the VHD blob without extension.{{% /md %}}</dd>
-    <dt class="property-optional"
+    <dd>{{% md %}}When backed by a blob, the name of the VHD blob without extension.{{% /md %}}</dd><dt class="property-optional"
             title="Optional">
         <span id="disksizegib_csharp">
 <a href="#disksizegib_csharp" style="color: inherit; text-decoration: inherit;">Disk<wbr>Size<wbr>Gi<wbr>B</a>
@@ -247,8 +212,7 @@ The Disk resource accepts the following [input]({{< relref "/docs/intro/concepts
         <span class="property-indicator"></span>
         <span class="property-type">int</span>
     </dt>
-    <dd>{{% md %}}The size of the disk in GibiBytes.{{% /md %}}</dd>
-    <dt class="property-optional"
+    <dd>{{% md %}}The size of the disk in GibiBytes.{{% /md %}}</dd><dt class="property-optional"
             title="Optional">
         <span id="disktype_csharp">
 <a href="#disktype_csharp" style="color: inherit; text-decoration: inherit;">Disk<wbr>Type</a>
@@ -256,8 +220,7 @@ The Disk resource accepts the following [input]({{< relref "/docs/intro/concepts
         <span class="property-indicator"></span>
         <span class="property-type">string | <a href="#storagetype">Pulumi.<wbr>Azure<wbr>Native.<wbr>Dev<wbr>Test<wbr>Lab.<wbr>Storage<wbr>Type</a></span>
     </dt>
-    <dd>{{% md %}}The storage type for the disk (i.e. Standard, Premium).{{% /md %}}</dd>
-    <dt class="property-optional"
+    <dd>{{% md %}}The storage type for the disk (i.e. Standard, Premium).{{% /md %}}</dd><dt class="property-optional"
             title="Optional">
         <span id="diskuri_csharp">
 <a href="#diskuri_csharp" style="color: inherit; text-decoration: inherit;">Disk<wbr>Uri</a>
@@ -265,8 +228,7 @@ The Disk resource accepts the following [input]({{< relref "/docs/intro/concepts
         <span class="property-indicator"></span>
         <span class="property-type">string</span>
     </dt>
-    <dd>{{% md %}}When backed by a blob, the URI of underlying blob.{{% /md %}}</dd>
-    <dt class="property-optional"
+    <dd>{{% md %}}When backed by a blob, the URI of underlying blob.{{% /md %}}</dd><dt class="property-optional"
             title="Optional">
         <span id="hostcaching_csharp">
 <a href="#hostcaching_csharp" style="color: inherit; text-decoration: inherit;">Host<wbr>Caching</a>
@@ -274,8 +236,7 @@ The Disk resource accepts the following [input]({{< relref "/docs/intro/concepts
         <span class="property-indicator"></span>
         <span class="property-type">string</span>
     </dt>
-    <dd>{{% md %}}The host caching policy of the disk (i.e. None, ReadOnly, ReadWrite).{{% /md %}}</dd>
-    <dt class="property-optional"
+    <dd>{{% md %}}The host caching policy of the disk (i.e. None, ReadOnly, ReadWrite).{{% /md %}}</dd><dt class="property-optional"
             title="Optional">
         <span id="leasedbylabvmid_csharp">
 <a href="#leasedbylabvmid_csharp" style="color: inherit; text-decoration: inherit;">Leased<wbr>By<wbr>Lab<wbr>Vm<wbr>Id</a>
@@ -283,8 +244,7 @@ The Disk resource accepts the following [input]({{< relref "/docs/intro/concepts
         <span class="property-indicator"></span>
         <span class="property-type">string</span>
     </dt>
-    <dd>{{% md %}}The resource ID of the VM to which this disk is leased.{{% /md %}}</dd>
-    <dt class="property-optional"
+    <dd>{{% md %}}The resource ID of the VM to which this disk is leased.{{% /md %}}</dd><dt class="property-optional"
             title="Optional">
         <span id="location_csharp">
 <a href="#location_csharp" style="color: inherit; text-decoration: inherit;">Location</a>
@@ -292,8 +252,7 @@ The Disk resource accepts the following [input]({{< relref "/docs/intro/concepts
         <span class="property-indicator"></span>
         <span class="property-type">string</span>
     </dt>
-    <dd>{{% md %}}The location of the resource.{{% /md %}}</dd>
-    <dt class="property-optional"
+    <dd>{{% md %}}The location of the resource.{{% /md %}}</dd><dt class="property-optional"
             title="Optional">
         <span id="manageddiskid_csharp">
 <a href="#manageddiskid_csharp" style="color: inherit; text-decoration: inherit;">Managed<wbr>Disk<wbr>Id</a>
@@ -301,8 +260,7 @@ The Disk resource accepts the following [input]({{< relref "/docs/intro/concepts
         <span class="property-indicator"></span>
         <span class="property-type">string</span>
     </dt>
-    <dd>{{% md %}}When backed by managed disk, this is the ID of the compute disk resource.{{% /md %}}</dd>
-    <dt class="property-optional"
+    <dd>{{% md %}}When backed by managed disk, this is the ID of the compute disk resource.{{% /md %}}</dd><dt class="property-optional"
             title="Optional">
         <span id="name_csharp">
 <a href="#name_csharp" style="color: inherit; text-decoration: inherit;">Name</a>
@@ -310,8 +268,7 @@ The Disk resource accepts the following [input]({{< relref "/docs/intro/concepts
         <span class="property-indicator"></span>
         <span class="property-type">string</span>
     </dt>
-    <dd>{{% md %}}The name of the disk.{{% /md %}}</dd>
-    <dt class="property-optional"
+    <dd>{{% md %}}The name of the disk.{{% /md %}}</dd><dt class="property-optional"
             title="Optional">
         <span id="tags_csharp">
 <a href="#tags_csharp" style="color: inherit; text-decoration: inherit;">Tags</a>
@@ -319,14 +276,11 @@ The Disk resource accepts the following [input]({{< relref "/docs/intro/concepts
         <span class="property-indicator"></span>
         <span class="property-type">Dictionary&lt;string, string&gt;</span>
     </dt>
-    <dd>{{% md %}}The tags of the resource.{{% /md %}}</dd>
-</dl>
+    <dd>{{% md %}}The tags of the resource.{{% /md %}}</dd></dl>
 {{% /choosable %}}
 
 {{% choosable language go %}}
-<dl class="resources-properties">
-
-    <dt class="property-required"
+<dl class="resources-properties"><dt class="property-required"
             title="Required">
         <span id="labname_go">
 <a href="#labname_go" style="color: inherit; text-decoration: inherit;">Lab<wbr>Name</a>
@@ -334,8 +288,7 @@ The Disk resource accepts the following [input]({{< relref "/docs/intro/concepts
         <span class="property-indicator"></span>
         <span class="property-type">string</span>
     </dt>
-    <dd>{{% md %}}The name of the lab.{{% /md %}}</dd>
-    <dt class="property-required"
+    <dd>{{% md %}}The name of the lab.{{% /md %}}</dd><dt class="property-required"
             title="Required">
         <span id="resourcegroupname_go">
 <a href="#resourcegroupname_go" style="color: inherit; text-decoration: inherit;">Resource<wbr>Group<wbr>Name</a>
@@ -343,8 +296,7 @@ The Disk resource accepts the following [input]({{< relref "/docs/intro/concepts
         <span class="property-indicator"></span>
         <span class="property-type">string</span>
     </dt>
-    <dd>{{% md %}}The name of the resource group.{{% /md %}}</dd>
-    <dt class="property-required"
+    <dd>{{% md %}}The name of the resource group.{{% /md %}}</dd><dt class="property-required"
             title="Required">
         <span id="username_go">
 <a href="#username_go" style="color: inherit; text-decoration: inherit;">User<wbr>Name</a>
@@ -352,8 +304,7 @@ The Disk resource accepts the following [input]({{< relref "/docs/intro/concepts
         <span class="property-indicator"></span>
         <span class="property-type">string</span>
     </dt>
-    <dd>{{% md %}}The name of the user profile.{{% /md %}}</dd>
-    <dt class="property-optional"
+    <dd>{{% md %}}The name of the user profile.{{% /md %}}</dd><dt class="property-optional"
             title="Optional">
         <span id="diskblobname_go">
 <a href="#diskblobname_go" style="color: inherit; text-decoration: inherit;">Disk<wbr>Blob<wbr>Name</a>
@@ -361,8 +312,7 @@ The Disk resource accepts the following [input]({{< relref "/docs/intro/concepts
         <span class="property-indicator"></span>
         <span class="property-type">string</span>
     </dt>
-    <dd>{{% md %}}When backed by a blob, the name of the VHD blob without extension.{{% /md %}}</dd>
-    <dt class="property-optional"
+    <dd>{{% md %}}When backed by a blob, the name of the VHD blob without extension.{{% /md %}}</dd><dt class="property-optional"
             title="Optional">
         <span id="disksizegib_go">
 <a href="#disksizegib_go" style="color: inherit; text-decoration: inherit;">Disk<wbr>Size<wbr>Gi<wbr>B</a>
@@ -370,8 +320,7 @@ The Disk resource accepts the following [input]({{< relref "/docs/intro/concepts
         <span class="property-indicator"></span>
         <span class="property-type">int</span>
     </dt>
-    <dd>{{% md %}}The size of the disk in GibiBytes.{{% /md %}}</dd>
-    <dt class="property-optional"
+    <dd>{{% md %}}The size of the disk in GibiBytes.{{% /md %}}</dd><dt class="property-optional"
             title="Optional">
         <span id="disktype_go">
 <a href="#disktype_go" style="color: inherit; text-decoration: inherit;">Disk<wbr>Type</a>
@@ -379,8 +328,7 @@ The Disk resource accepts the following [input]({{< relref "/docs/intro/concepts
         <span class="property-indicator"></span>
         <span class="property-type">string | <a href="#storagetype">Storage<wbr>Type</a></span>
     </dt>
-    <dd>{{% md %}}The storage type for the disk (i.e. Standard, Premium).{{% /md %}}</dd>
-    <dt class="property-optional"
+    <dd>{{% md %}}The storage type for the disk (i.e. Standard, Premium).{{% /md %}}</dd><dt class="property-optional"
             title="Optional">
         <span id="diskuri_go">
 <a href="#diskuri_go" style="color: inherit; text-decoration: inherit;">Disk<wbr>Uri</a>
@@ -388,8 +336,7 @@ The Disk resource accepts the following [input]({{< relref "/docs/intro/concepts
         <span class="property-indicator"></span>
         <span class="property-type">string</span>
     </dt>
-    <dd>{{% md %}}When backed by a blob, the URI of underlying blob.{{% /md %}}</dd>
-    <dt class="property-optional"
+    <dd>{{% md %}}When backed by a blob, the URI of underlying blob.{{% /md %}}</dd><dt class="property-optional"
             title="Optional">
         <span id="hostcaching_go">
 <a href="#hostcaching_go" style="color: inherit; text-decoration: inherit;">Host<wbr>Caching</a>
@@ -397,8 +344,7 @@ The Disk resource accepts the following [input]({{< relref "/docs/intro/concepts
         <span class="property-indicator"></span>
         <span class="property-type">string</span>
     </dt>
-    <dd>{{% md %}}The host caching policy of the disk (i.e. None, ReadOnly, ReadWrite).{{% /md %}}</dd>
-    <dt class="property-optional"
+    <dd>{{% md %}}The host caching policy of the disk (i.e. None, ReadOnly, ReadWrite).{{% /md %}}</dd><dt class="property-optional"
             title="Optional">
         <span id="leasedbylabvmid_go">
 <a href="#leasedbylabvmid_go" style="color: inherit; text-decoration: inherit;">Leased<wbr>By<wbr>Lab<wbr>Vm<wbr>Id</a>
@@ -406,8 +352,7 @@ The Disk resource accepts the following [input]({{< relref "/docs/intro/concepts
         <span class="property-indicator"></span>
         <span class="property-type">string</span>
     </dt>
-    <dd>{{% md %}}The resource ID of the VM to which this disk is leased.{{% /md %}}</dd>
-    <dt class="property-optional"
+    <dd>{{% md %}}The resource ID of the VM to which this disk is leased.{{% /md %}}</dd><dt class="property-optional"
             title="Optional">
         <span id="location_go">
 <a href="#location_go" style="color: inherit; text-decoration: inherit;">Location</a>
@@ -415,8 +360,7 @@ The Disk resource accepts the following [input]({{< relref "/docs/intro/concepts
         <span class="property-indicator"></span>
         <span class="property-type">string</span>
     </dt>
-    <dd>{{% md %}}The location of the resource.{{% /md %}}</dd>
-    <dt class="property-optional"
+    <dd>{{% md %}}The location of the resource.{{% /md %}}</dd><dt class="property-optional"
             title="Optional">
         <span id="manageddiskid_go">
 <a href="#manageddiskid_go" style="color: inherit; text-decoration: inherit;">Managed<wbr>Disk<wbr>Id</a>
@@ -424,8 +368,7 @@ The Disk resource accepts the following [input]({{< relref "/docs/intro/concepts
         <span class="property-indicator"></span>
         <span class="property-type">string</span>
     </dt>
-    <dd>{{% md %}}When backed by managed disk, this is the ID of the compute disk resource.{{% /md %}}</dd>
-    <dt class="property-optional"
+    <dd>{{% md %}}When backed by managed disk, this is the ID of the compute disk resource.{{% /md %}}</dd><dt class="property-optional"
             title="Optional">
         <span id="name_go">
 <a href="#name_go" style="color: inherit; text-decoration: inherit;">Name</a>
@@ -433,8 +376,7 @@ The Disk resource accepts the following [input]({{< relref "/docs/intro/concepts
         <span class="property-indicator"></span>
         <span class="property-type">string</span>
     </dt>
-    <dd>{{% md %}}The name of the disk.{{% /md %}}</dd>
-    <dt class="property-optional"
+    <dd>{{% md %}}The name of the disk.{{% /md %}}</dd><dt class="property-optional"
             title="Optional">
         <span id="tags_go">
 <a href="#tags_go" style="color: inherit; text-decoration: inherit;">Tags</a>
@@ -442,14 +384,11 @@ The Disk resource accepts the following [input]({{< relref "/docs/intro/concepts
         <span class="property-indicator"></span>
         <span class="property-type">map[string]string</span>
     </dt>
-    <dd>{{% md %}}The tags of the resource.{{% /md %}}</dd>
-</dl>
+    <dd>{{% md %}}The tags of the resource.{{% /md %}}</dd></dl>
 {{% /choosable %}}
 
 {{% choosable language nodejs %}}
-<dl class="resources-properties">
-
-    <dt class="property-required"
+<dl class="resources-properties"><dt class="property-required"
             title="Required">
         <span id="labname_nodejs">
 <a href="#labname_nodejs" style="color: inherit; text-decoration: inherit;">lab<wbr>Name</a>
@@ -457,8 +396,7 @@ The Disk resource accepts the following [input]({{< relref "/docs/intro/concepts
         <span class="property-indicator"></span>
         <span class="property-type">string</span>
     </dt>
-    <dd>{{% md %}}The name of the lab.{{% /md %}}</dd>
-    <dt class="property-required"
+    <dd>{{% md %}}The name of the lab.{{% /md %}}</dd><dt class="property-required"
             title="Required">
         <span id="resourcegroupname_nodejs">
 <a href="#resourcegroupname_nodejs" style="color: inherit; text-decoration: inherit;">resource<wbr>Group<wbr>Name</a>
@@ -466,8 +404,7 @@ The Disk resource accepts the following [input]({{< relref "/docs/intro/concepts
         <span class="property-indicator"></span>
         <span class="property-type">string</span>
     </dt>
-    <dd>{{% md %}}The name of the resource group.{{% /md %}}</dd>
-    <dt class="property-required"
+    <dd>{{% md %}}The name of the resource group.{{% /md %}}</dd><dt class="property-required"
             title="Required">
         <span id="username_nodejs">
 <a href="#username_nodejs" style="color: inherit; text-decoration: inherit;">user<wbr>Name</a>
@@ -475,8 +412,7 @@ The Disk resource accepts the following [input]({{< relref "/docs/intro/concepts
         <span class="property-indicator"></span>
         <span class="property-type">string</span>
     </dt>
-    <dd>{{% md %}}The name of the user profile.{{% /md %}}</dd>
-    <dt class="property-optional"
+    <dd>{{% md %}}The name of the user profile.{{% /md %}}</dd><dt class="property-optional"
             title="Optional">
         <span id="diskblobname_nodejs">
 <a href="#diskblobname_nodejs" style="color: inherit; text-decoration: inherit;">disk<wbr>Blob<wbr>Name</a>
@@ -484,8 +420,7 @@ The Disk resource accepts the following [input]({{< relref "/docs/intro/concepts
         <span class="property-indicator"></span>
         <span class="property-type">string</span>
     </dt>
-    <dd>{{% md %}}When backed by a blob, the name of the VHD blob without extension.{{% /md %}}</dd>
-    <dt class="property-optional"
+    <dd>{{% md %}}When backed by a blob, the name of the VHD blob without extension.{{% /md %}}</dd><dt class="property-optional"
             title="Optional">
         <span id="disksizegib_nodejs">
 <a href="#disksizegib_nodejs" style="color: inherit; text-decoration: inherit;">disk<wbr>Size<wbr>Gi<wbr>B</a>
@@ -493,8 +428,7 @@ The Disk resource accepts the following [input]({{< relref "/docs/intro/concepts
         <span class="property-indicator"></span>
         <span class="property-type">number</span>
     </dt>
-    <dd>{{% md %}}The size of the disk in GibiBytes.{{% /md %}}</dd>
-    <dt class="property-optional"
+    <dd>{{% md %}}The size of the disk in GibiBytes.{{% /md %}}</dd><dt class="property-optional"
             title="Optional">
         <span id="disktype_nodejs">
 <a href="#disktype_nodejs" style="color: inherit; text-decoration: inherit;">disk<wbr>Type</a>
@@ -502,8 +436,7 @@ The Disk resource accepts the following [input]({{< relref "/docs/intro/concepts
         <span class="property-indicator"></span>
         <span class="property-type">string | <a href="#storagetype">Storage<wbr>Type</a></span>
     </dt>
-    <dd>{{% md %}}The storage type for the disk (i.e. Standard, Premium).{{% /md %}}</dd>
-    <dt class="property-optional"
+    <dd>{{% md %}}The storage type for the disk (i.e. Standard, Premium).{{% /md %}}</dd><dt class="property-optional"
             title="Optional">
         <span id="diskuri_nodejs">
 <a href="#diskuri_nodejs" style="color: inherit; text-decoration: inherit;">disk<wbr>Uri</a>
@@ -511,8 +444,7 @@ The Disk resource accepts the following [input]({{< relref "/docs/intro/concepts
         <span class="property-indicator"></span>
         <span class="property-type">string</span>
     </dt>
-    <dd>{{% md %}}When backed by a blob, the URI of underlying blob.{{% /md %}}</dd>
-    <dt class="property-optional"
+    <dd>{{% md %}}When backed by a blob, the URI of underlying blob.{{% /md %}}</dd><dt class="property-optional"
             title="Optional">
         <span id="hostcaching_nodejs">
 <a href="#hostcaching_nodejs" style="color: inherit; text-decoration: inherit;">host<wbr>Caching</a>
@@ -520,8 +452,7 @@ The Disk resource accepts the following [input]({{< relref "/docs/intro/concepts
         <span class="property-indicator"></span>
         <span class="property-type">string</span>
     </dt>
-    <dd>{{% md %}}The host caching policy of the disk (i.e. None, ReadOnly, ReadWrite).{{% /md %}}</dd>
-    <dt class="property-optional"
+    <dd>{{% md %}}The host caching policy of the disk (i.e. None, ReadOnly, ReadWrite).{{% /md %}}</dd><dt class="property-optional"
             title="Optional">
         <span id="leasedbylabvmid_nodejs">
 <a href="#leasedbylabvmid_nodejs" style="color: inherit; text-decoration: inherit;">leased<wbr>By<wbr>Lab<wbr>Vm<wbr>Id</a>
@@ -529,8 +460,7 @@ The Disk resource accepts the following [input]({{< relref "/docs/intro/concepts
         <span class="property-indicator"></span>
         <span class="property-type">string</span>
     </dt>
-    <dd>{{% md %}}The resource ID of the VM to which this disk is leased.{{% /md %}}</dd>
-    <dt class="property-optional"
+    <dd>{{% md %}}The resource ID of the VM to which this disk is leased.{{% /md %}}</dd><dt class="property-optional"
             title="Optional">
         <span id="location_nodejs">
 <a href="#location_nodejs" style="color: inherit; text-decoration: inherit;">location</a>
@@ -538,8 +468,7 @@ The Disk resource accepts the following [input]({{< relref "/docs/intro/concepts
         <span class="property-indicator"></span>
         <span class="property-type">string</span>
     </dt>
-    <dd>{{% md %}}The location of the resource.{{% /md %}}</dd>
-    <dt class="property-optional"
+    <dd>{{% md %}}The location of the resource.{{% /md %}}</dd><dt class="property-optional"
             title="Optional">
         <span id="manageddiskid_nodejs">
 <a href="#manageddiskid_nodejs" style="color: inherit; text-decoration: inherit;">managed<wbr>Disk<wbr>Id</a>
@@ -547,8 +476,7 @@ The Disk resource accepts the following [input]({{< relref "/docs/intro/concepts
         <span class="property-indicator"></span>
         <span class="property-type">string</span>
     </dt>
-    <dd>{{% md %}}When backed by managed disk, this is the ID of the compute disk resource.{{% /md %}}</dd>
-    <dt class="property-optional"
+    <dd>{{% md %}}When backed by managed disk, this is the ID of the compute disk resource.{{% /md %}}</dd><dt class="property-optional"
             title="Optional">
         <span id="name_nodejs">
 <a href="#name_nodejs" style="color: inherit; text-decoration: inherit;">name</a>
@@ -556,8 +484,7 @@ The Disk resource accepts the following [input]({{< relref "/docs/intro/concepts
         <span class="property-indicator"></span>
         <span class="property-type">string</span>
     </dt>
-    <dd>{{% md %}}The name of the disk.{{% /md %}}</dd>
-    <dt class="property-optional"
+    <dd>{{% md %}}The name of the disk.{{% /md %}}</dd><dt class="property-optional"
             title="Optional">
         <span id="tags_nodejs">
 <a href="#tags_nodejs" style="color: inherit; text-decoration: inherit;">tags</a>
@@ -565,14 +492,11 @@ The Disk resource accepts the following [input]({{< relref "/docs/intro/concepts
         <span class="property-indicator"></span>
         <span class="property-type">{[key: string]: string}</span>
     </dt>
-    <dd>{{% md %}}The tags of the resource.{{% /md %}}</dd>
-</dl>
+    <dd>{{% md %}}The tags of the resource.{{% /md %}}</dd></dl>
 {{% /choosable %}}
 
 {{% choosable language python %}}
-<dl class="resources-properties">
-
-    <dt class="property-required"
+<dl class="resources-properties"><dt class="property-required"
             title="Required">
         <span id="lab_name_python">
 <a href="#lab_name_python" style="color: inherit; text-decoration: inherit;">lab_<wbr>name</a>
@@ -580,8 +504,7 @@ The Disk resource accepts the following [input]({{< relref "/docs/intro/concepts
         <span class="property-indicator"></span>
         <span class="property-type">str</span>
     </dt>
-    <dd>{{% md %}}The name of the lab.{{% /md %}}</dd>
-    <dt class="property-required"
+    <dd>{{% md %}}The name of the lab.{{% /md %}}</dd><dt class="property-required"
             title="Required">
         <span id="resource_group_name_python">
 <a href="#resource_group_name_python" style="color: inherit; text-decoration: inherit;">resource_<wbr>group_<wbr>name</a>
@@ -589,8 +512,7 @@ The Disk resource accepts the following [input]({{< relref "/docs/intro/concepts
         <span class="property-indicator"></span>
         <span class="property-type">str</span>
     </dt>
-    <dd>{{% md %}}The name of the resource group.{{% /md %}}</dd>
-    <dt class="property-required"
+    <dd>{{% md %}}The name of the resource group.{{% /md %}}</dd><dt class="property-required"
             title="Required">
         <span id="user_name_python">
 <a href="#user_name_python" style="color: inherit; text-decoration: inherit;">user_<wbr>name</a>
@@ -598,8 +520,7 @@ The Disk resource accepts the following [input]({{< relref "/docs/intro/concepts
         <span class="property-indicator"></span>
         <span class="property-type">str</span>
     </dt>
-    <dd>{{% md %}}The name of the user profile.{{% /md %}}</dd>
-    <dt class="property-optional"
+    <dd>{{% md %}}The name of the user profile.{{% /md %}}</dd><dt class="property-optional"
             title="Optional">
         <span id="disk_blob_name_python">
 <a href="#disk_blob_name_python" style="color: inherit; text-decoration: inherit;">disk_<wbr>blob_<wbr>name</a>
@@ -607,8 +528,7 @@ The Disk resource accepts the following [input]({{< relref "/docs/intro/concepts
         <span class="property-indicator"></span>
         <span class="property-type">str</span>
     </dt>
-    <dd>{{% md %}}When backed by a blob, the name of the VHD blob without extension.{{% /md %}}</dd>
-    <dt class="property-optional"
+    <dd>{{% md %}}When backed by a blob, the name of the VHD blob without extension.{{% /md %}}</dd><dt class="property-optional"
             title="Optional">
         <span id="disk_size_gi_b_python">
 <a href="#disk_size_gi_b_python" style="color: inherit; text-decoration: inherit;">disk_<wbr>size_<wbr>gi_<wbr>b</a>
@@ -616,8 +536,7 @@ The Disk resource accepts the following [input]({{< relref "/docs/intro/concepts
         <span class="property-indicator"></span>
         <span class="property-type">int</span>
     </dt>
-    <dd>{{% md %}}The size of the disk in GibiBytes.{{% /md %}}</dd>
-    <dt class="property-optional"
+    <dd>{{% md %}}The size of the disk in GibiBytes.{{% /md %}}</dd><dt class="property-optional"
             title="Optional">
         <span id="disk_type_python">
 <a href="#disk_type_python" style="color: inherit; text-decoration: inherit;">disk_<wbr>type</a>
@@ -625,8 +544,7 @@ The Disk resource accepts the following [input]({{< relref "/docs/intro/concepts
         <span class="property-indicator"></span>
         <span class="property-type">str | <a href="#storagetype">Storage<wbr>Type</a></span>
     </dt>
-    <dd>{{% md %}}The storage type for the disk (i.e. Standard, Premium).{{% /md %}}</dd>
-    <dt class="property-optional"
+    <dd>{{% md %}}The storage type for the disk (i.e. Standard, Premium).{{% /md %}}</dd><dt class="property-optional"
             title="Optional">
         <span id="disk_uri_python">
 <a href="#disk_uri_python" style="color: inherit; text-decoration: inherit;">disk_<wbr>uri</a>
@@ -634,8 +552,7 @@ The Disk resource accepts the following [input]({{< relref "/docs/intro/concepts
         <span class="property-indicator"></span>
         <span class="property-type">str</span>
     </dt>
-    <dd>{{% md %}}When backed by a blob, the URI of underlying blob.{{% /md %}}</dd>
-    <dt class="property-optional"
+    <dd>{{% md %}}When backed by a blob, the URI of underlying blob.{{% /md %}}</dd><dt class="property-optional"
             title="Optional">
         <span id="host_caching_python">
 <a href="#host_caching_python" style="color: inherit; text-decoration: inherit;">host_<wbr>caching</a>
@@ -643,8 +560,7 @@ The Disk resource accepts the following [input]({{< relref "/docs/intro/concepts
         <span class="property-indicator"></span>
         <span class="property-type">str</span>
     </dt>
-    <dd>{{% md %}}The host caching policy of the disk (i.e. None, ReadOnly, ReadWrite).{{% /md %}}</dd>
-    <dt class="property-optional"
+    <dd>{{% md %}}The host caching policy of the disk (i.e. None, ReadOnly, ReadWrite).{{% /md %}}</dd><dt class="property-optional"
             title="Optional">
         <span id="leased_by_lab_vm_id_python">
 <a href="#leased_by_lab_vm_id_python" style="color: inherit; text-decoration: inherit;">leased_<wbr>by_<wbr>lab_<wbr>vm_<wbr>id</a>
@@ -652,8 +568,7 @@ The Disk resource accepts the following [input]({{< relref "/docs/intro/concepts
         <span class="property-indicator"></span>
         <span class="property-type">str</span>
     </dt>
-    <dd>{{% md %}}The resource ID of the VM to which this disk is leased.{{% /md %}}</dd>
-    <dt class="property-optional"
+    <dd>{{% md %}}The resource ID of the VM to which this disk is leased.{{% /md %}}</dd><dt class="property-optional"
             title="Optional">
         <span id="location_python">
 <a href="#location_python" style="color: inherit; text-decoration: inherit;">location</a>
@@ -661,8 +576,7 @@ The Disk resource accepts the following [input]({{< relref "/docs/intro/concepts
         <span class="property-indicator"></span>
         <span class="property-type">str</span>
     </dt>
-    <dd>{{% md %}}The location of the resource.{{% /md %}}</dd>
-    <dt class="property-optional"
+    <dd>{{% md %}}The location of the resource.{{% /md %}}</dd><dt class="property-optional"
             title="Optional">
         <span id="managed_disk_id_python">
 <a href="#managed_disk_id_python" style="color: inherit; text-decoration: inherit;">managed_<wbr>disk_<wbr>id</a>
@@ -670,8 +584,7 @@ The Disk resource accepts the following [input]({{< relref "/docs/intro/concepts
         <span class="property-indicator"></span>
         <span class="property-type">str</span>
     </dt>
-    <dd>{{% md %}}When backed by managed disk, this is the ID of the compute disk resource.{{% /md %}}</dd>
-    <dt class="property-optional"
+    <dd>{{% md %}}When backed by managed disk, this is the ID of the compute disk resource.{{% /md %}}</dd><dt class="property-optional"
             title="Optional">
         <span id="name_python">
 <a href="#name_python" style="color: inherit; text-decoration: inherit;">name</a>
@@ -679,8 +592,7 @@ The Disk resource accepts the following [input]({{< relref "/docs/intro/concepts
         <span class="property-indicator"></span>
         <span class="property-type">str</span>
     </dt>
-    <dd>{{% md %}}The name of the disk.{{% /md %}}</dd>
-    <dt class="property-optional"
+    <dd>{{% md %}}The name of the disk.{{% /md %}}</dd><dt class="property-optional"
             title="Optional">
         <span id="tags_python">
 <a href="#tags_python" style="color: inherit; text-decoration: inherit;">tags</a>
@@ -688,8 +600,7 @@ The Disk resource accepts the following [input]({{< relref "/docs/intro/concepts
         <span class="property-indicator"></span>
         <span class="property-type">Mapping[str, str]</span>
     </dt>
-    <dd>{{% md %}}The tags of the resource.{{% /md %}}</dd>
-</dl>
+    <dd>{{% md %}}The tags of the resource.{{% /md %}}</dd></dl>
 {{% /choosable %}}
 
 
@@ -700,9 +611,7 @@ All [input](#inputs) properties are implicitly available as output properties. A
 
 
 {{% choosable language csharp %}}
-<dl class="resources-properties">
-
-    <dt class="property-"
+<dl class="resources-properties"><dt class="property-"
             title="">
         <span id="createddate_csharp">
 <a href="#createddate_csharp" style="color: inherit; text-decoration: inherit;">Created<wbr>Date</a>
@@ -710,8 +619,7 @@ All [input](#inputs) properties are implicitly available as output properties. A
         <span class="property-indicator"></span>
         <span class="property-type">string</span>
     </dt>
-    <dd>{{% md %}}The creation date of the disk.{{% /md %}}</dd>
-    <dt class="property-"
+    <dd>{{% md %}}The creation date of the disk.{{% /md %}}</dd><dt class="property-"
             title="">
         <span id="id_csharp">
 <a href="#id_csharp" style="color: inherit; text-decoration: inherit;">Id</a>
@@ -719,8 +627,7 @@ All [input](#inputs) properties are implicitly available as output properties. A
         <span class="property-indicator"></span>
         <span class="property-type">string</span>
     </dt>
-    <dd>{{% md %}}The provider-assigned unique ID for this managed resource.{{% /md %}}</dd>
-    <dt class="property-"
+    <dd>{{% md %}}The provider-assigned unique ID for this managed resource.{{% /md %}}</dd><dt class="property-"
             title="">
         <span id="provisioningstate_csharp">
 <a href="#provisioningstate_csharp" style="color: inherit; text-decoration: inherit;">Provisioning<wbr>State</a>
@@ -728,8 +635,7 @@ All [input](#inputs) properties are implicitly available as output properties. A
         <span class="property-indicator"></span>
         <span class="property-type">string</span>
     </dt>
-    <dd>{{% md %}}The provisioning status of the resource.{{% /md %}}</dd>
-    <dt class="property-"
+    <dd>{{% md %}}The provisioning status of the resource.{{% /md %}}</dd><dt class="property-"
             title="">
         <span id="type_csharp">
 <a href="#type_csharp" style="color: inherit; text-decoration: inherit;">Type</a>
@@ -737,8 +643,7 @@ All [input](#inputs) properties are implicitly available as output properties. A
         <span class="property-indicator"></span>
         <span class="property-type">string</span>
     </dt>
-    <dd>{{% md %}}The type of the resource.{{% /md %}}</dd>
-    <dt class="property-"
+    <dd>{{% md %}}The type of the resource.{{% /md %}}</dd><dt class="property-"
             title="">
         <span id="uniqueidentifier_csharp">
 <a href="#uniqueidentifier_csharp" style="color: inherit; text-decoration: inherit;">Unique<wbr>Identifier</a>
@@ -746,14 +651,11 @@ All [input](#inputs) properties are implicitly available as output properties. A
         <span class="property-indicator"></span>
         <span class="property-type">string</span>
     </dt>
-    <dd>{{% md %}}The unique immutable identifier of a resource (Guid).{{% /md %}}</dd>
-</dl>
+    <dd>{{% md %}}The unique immutable identifier of a resource (Guid).{{% /md %}}</dd></dl>
 {{% /choosable %}}
 
 {{% choosable language go %}}
-<dl class="resources-properties">
-
-    <dt class="property-"
+<dl class="resources-properties"><dt class="property-"
             title="">
         <span id="createddate_go">
 <a href="#createddate_go" style="color: inherit; text-decoration: inherit;">Created<wbr>Date</a>
@@ -761,8 +663,7 @@ All [input](#inputs) properties are implicitly available as output properties. A
         <span class="property-indicator"></span>
         <span class="property-type">string</span>
     </dt>
-    <dd>{{% md %}}The creation date of the disk.{{% /md %}}</dd>
-    <dt class="property-"
+    <dd>{{% md %}}The creation date of the disk.{{% /md %}}</dd><dt class="property-"
             title="">
         <span id="id_go">
 <a href="#id_go" style="color: inherit; text-decoration: inherit;">Id</a>
@@ -770,8 +671,7 @@ All [input](#inputs) properties are implicitly available as output properties. A
         <span class="property-indicator"></span>
         <span class="property-type">string</span>
     </dt>
-    <dd>{{% md %}}The provider-assigned unique ID for this managed resource.{{% /md %}}</dd>
-    <dt class="property-"
+    <dd>{{% md %}}The provider-assigned unique ID for this managed resource.{{% /md %}}</dd><dt class="property-"
             title="">
         <span id="provisioningstate_go">
 <a href="#provisioningstate_go" style="color: inherit; text-decoration: inherit;">Provisioning<wbr>State</a>
@@ -779,8 +679,7 @@ All [input](#inputs) properties are implicitly available as output properties. A
         <span class="property-indicator"></span>
         <span class="property-type">string</span>
     </dt>
-    <dd>{{% md %}}The provisioning status of the resource.{{% /md %}}</dd>
-    <dt class="property-"
+    <dd>{{% md %}}The provisioning status of the resource.{{% /md %}}</dd><dt class="property-"
             title="">
         <span id="type_go">
 <a href="#type_go" style="color: inherit; text-decoration: inherit;">Type</a>
@@ -788,8 +687,7 @@ All [input](#inputs) properties are implicitly available as output properties. A
         <span class="property-indicator"></span>
         <span class="property-type">string</span>
     </dt>
-    <dd>{{% md %}}The type of the resource.{{% /md %}}</dd>
-    <dt class="property-"
+    <dd>{{% md %}}The type of the resource.{{% /md %}}</dd><dt class="property-"
             title="">
         <span id="uniqueidentifier_go">
 <a href="#uniqueidentifier_go" style="color: inherit; text-decoration: inherit;">Unique<wbr>Identifier</a>
@@ -797,14 +695,11 @@ All [input](#inputs) properties are implicitly available as output properties. A
         <span class="property-indicator"></span>
         <span class="property-type">string</span>
     </dt>
-    <dd>{{% md %}}The unique immutable identifier of a resource (Guid).{{% /md %}}</dd>
-</dl>
+    <dd>{{% md %}}The unique immutable identifier of a resource (Guid).{{% /md %}}</dd></dl>
 {{% /choosable %}}
 
 {{% choosable language nodejs %}}
-<dl class="resources-properties">
-
-    <dt class="property-"
+<dl class="resources-properties"><dt class="property-"
             title="">
         <span id="createddate_nodejs">
 <a href="#createddate_nodejs" style="color: inherit; text-decoration: inherit;">created<wbr>Date</a>
@@ -812,8 +707,7 @@ All [input](#inputs) properties are implicitly available as output properties. A
         <span class="property-indicator"></span>
         <span class="property-type">string</span>
     </dt>
-    <dd>{{% md %}}The creation date of the disk.{{% /md %}}</dd>
-    <dt class="property-"
+    <dd>{{% md %}}The creation date of the disk.{{% /md %}}</dd><dt class="property-"
             title="">
         <span id="id_nodejs">
 <a href="#id_nodejs" style="color: inherit; text-decoration: inherit;">id</a>
@@ -821,8 +715,7 @@ All [input](#inputs) properties are implicitly available as output properties. A
         <span class="property-indicator"></span>
         <span class="property-type">string</span>
     </dt>
-    <dd>{{% md %}}The provider-assigned unique ID for this managed resource.{{% /md %}}</dd>
-    <dt class="property-"
+    <dd>{{% md %}}The provider-assigned unique ID for this managed resource.{{% /md %}}</dd><dt class="property-"
             title="">
         <span id="provisioningstate_nodejs">
 <a href="#provisioningstate_nodejs" style="color: inherit; text-decoration: inherit;">provisioning<wbr>State</a>
@@ -830,8 +723,7 @@ All [input](#inputs) properties are implicitly available as output properties. A
         <span class="property-indicator"></span>
         <span class="property-type">string</span>
     </dt>
-    <dd>{{% md %}}The provisioning status of the resource.{{% /md %}}</dd>
-    <dt class="property-"
+    <dd>{{% md %}}The provisioning status of the resource.{{% /md %}}</dd><dt class="property-"
             title="">
         <span id="type_nodejs">
 <a href="#type_nodejs" style="color: inherit; text-decoration: inherit;">type</a>
@@ -839,8 +731,7 @@ All [input](#inputs) properties are implicitly available as output properties. A
         <span class="property-indicator"></span>
         <span class="property-type">string</span>
     </dt>
-    <dd>{{% md %}}The type of the resource.{{% /md %}}</dd>
-    <dt class="property-"
+    <dd>{{% md %}}The type of the resource.{{% /md %}}</dd><dt class="property-"
             title="">
         <span id="uniqueidentifier_nodejs">
 <a href="#uniqueidentifier_nodejs" style="color: inherit; text-decoration: inherit;">unique<wbr>Identifier</a>
@@ -848,14 +739,11 @@ All [input](#inputs) properties are implicitly available as output properties. A
         <span class="property-indicator"></span>
         <span class="property-type">string</span>
     </dt>
-    <dd>{{% md %}}The unique immutable identifier of a resource (Guid).{{% /md %}}</dd>
-</dl>
+    <dd>{{% md %}}The unique immutable identifier of a resource (Guid).{{% /md %}}</dd></dl>
 {{% /choosable %}}
 
 {{% choosable language python %}}
-<dl class="resources-properties">
-
-    <dt class="property-"
+<dl class="resources-properties"><dt class="property-"
             title="">
         <span id="created_date_python">
 <a href="#created_date_python" style="color: inherit; text-decoration: inherit;">created_<wbr>date</a>
@@ -863,8 +751,7 @@ All [input](#inputs) properties are implicitly available as output properties. A
         <span class="property-indicator"></span>
         <span class="property-type">str</span>
     </dt>
-    <dd>{{% md %}}The creation date of the disk.{{% /md %}}</dd>
-    <dt class="property-"
+    <dd>{{% md %}}The creation date of the disk.{{% /md %}}</dd><dt class="property-"
             title="">
         <span id="id_python">
 <a href="#id_python" style="color: inherit; text-decoration: inherit;">id</a>
@@ -872,8 +759,7 @@ All [input](#inputs) properties are implicitly available as output properties. A
         <span class="property-indicator"></span>
         <span class="property-type">str</span>
     </dt>
-    <dd>{{% md %}}The provider-assigned unique ID for this managed resource.{{% /md %}}</dd>
-    <dt class="property-"
+    <dd>{{% md %}}The provider-assigned unique ID for this managed resource.{{% /md %}}</dd><dt class="property-"
             title="">
         <span id="provisioning_state_python">
 <a href="#provisioning_state_python" style="color: inherit; text-decoration: inherit;">provisioning_<wbr>state</a>
@@ -881,8 +767,7 @@ All [input](#inputs) properties are implicitly available as output properties. A
         <span class="property-indicator"></span>
         <span class="property-type">str</span>
     </dt>
-    <dd>{{% md %}}The provisioning status of the resource.{{% /md %}}</dd>
-    <dt class="property-"
+    <dd>{{% md %}}The provisioning status of the resource.{{% /md %}}</dd><dt class="property-"
             title="">
         <span id="type_python">
 <a href="#type_python" style="color: inherit; text-decoration: inherit;">type</a>
@@ -890,8 +775,7 @@ All [input](#inputs) properties are implicitly available as output properties. A
         <span class="property-indicator"></span>
         <span class="property-type">str</span>
     </dt>
-    <dd>{{% md %}}The type of the resource.{{% /md %}}</dd>
-    <dt class="property-"
+    <dd>{{% md %}}The type of the resource.{{% /md %}}</dd><dt class="property-"
             title="">
         <span id="unique_identifier_python">
 <a href="#unique_identifier_python" style="color: inherit; text-decoration: inherit;">unique_<wbr>identifier</a>
@@ -899,8 +783,7 @@ All [input](#inputs) properties are implicitly available as output properties. A
         <span class="property-indicator"></span>
         <span class="property-type">str</span>
     </dt>
-    <dd>{{% md %}}The unique immutable identifier of a resource (Guid).{{% /md %}}</dd>
-</dl>
+    <dd>{{% md %}}The unique immutable identifier of a resource (Guid).{{% /md %}}</dd></dl>
 {{% /choosable %}}
 
 
@@ -916,47 +799,31 @@ All [input](#inputs) properties are implicitly available as output properties. A
 <h4 id="storagetype">Storage<wbr>Type</h4>
 
 {{% choosable language csharp %}}
-<dl class="tabular">
-    <dt>Standard</dt>
-    <dd>Standard</dd>
-    <dt>Premium</dt>
-    <dd>Premium</dd>
-    <dt>Standard<wbr>SSD</dt>
-    <dd>StandardSSD</dd>
-</dl>
+<dl class="tabular"><dt>Standard</dt>
+    <dd>Standard</dd><dt>Premium</dt>
+    <dd>Premium</dd><dt>Standard<wbr>SSD</dt>
+    <dd>StandardSSD</dd></dl>
 {{% /choosable %}}
 
 {{% choosable language go %}}
-<dl class="tabular">
-    <dt>Storage<wbr>Type<wbr>Standard</dt>
-    <dd>Standard</dd>
-    <dt>Storage<wbr>Type<wbr>Premium</dt>
-    <dd>Premium</dd>
-    <dt>Storage<wbr>Type<wbr>Standard<wbr>SSD</dt>
-    <dd>StandardSSD</dd>
-</dl>
+<dl class="tabular"><dt>Storage<wbr>Type<wbr>Standard</dt>
+    <dd>Standard</dd><dt>Storage<wbr>Type<wbr>Premium</dt>
+    <dd>Premium</dd><dt>Storage<wbr>Type<wbr>Standard<wbr>SSD</dt>
+    <dd>StandardSSD</dd></dl>
 {{% /choosable %}}
 
 {{% choosable language nodejs %}}
-<dl class="tabular">
-    <dt>Standard</dt>
-    <dd>Standard</dd>
-    <dt>Premium</dt>
-    <dd>Premium</dd>
-    <dt>Standard<wbr>SSD</dt>
-    <dd>StandardSSD</dd>
-</dl>
+<dl class="tabular"><dt>Standard</dt>
+    <dd>Standard</dd><dt>Premium</dt>
+    <dd>Premium</dd><dt>Standard<wbr>SSD</dt>
+    <dd>StandardSSD</dd></dl>
 {{% /choosable %}}
 
 {{% choosable language python %}}
-<dl class="tabular">
-    <dt>STANDARD</dt>
-    <dd>Standard</dd>
-    <dt>PREMIUM</dt>
-    <dd>Premium</dd>
-    <dt>STANDARD_SSD</dt>
-    <dd>StandardSSD</dd>
-</dl>
+<dl class="tabular"><dt>STANDARD</dt>
+    <dd>Standard</dd><dt>PREMIUM</dt>
+    <dd>Premium</dd><dt>STANDARD_SSD</dt>
+    <dd>StandardSSD</dd></dl>
 {{% /choosable %}}
 
 

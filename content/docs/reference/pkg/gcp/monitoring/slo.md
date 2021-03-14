@@ -26,11 +26,17 @@ To get more information about Slo, see:
     * [Monitoring API Documentation](https://cloud.google.com/monitoring/api/v3/)
 
 {{% examples %}}
+
 ## Example Usage
 
 {{< chooser language "typescript,python,go,csharp" / >}}
+
+
 ### Monitoring Slo Appengine
-{{% example csharp %}}
+
+
+{{< example csharp >}}
+
 ```csharp
 using Pulumi;
 using Gcp = Pulumi.Gcp;
@@ -63,9 +69,12 @@ class MyStack : Stack
 }
 ```
 
-{{% /example %}}
 
-{{% example go %}}
+{{< /example >}}
+
+
+{{< example go >}}
+
 ```go
 package main
 
@@ -102,9 +111,12 @@ func main() {
 }
 ```
 
-{{% /example %}}
 
-{{% example python %}}
+{{< /example >}}
+
+
+{{< example python >}}
+
 ```python
 import pulumi
 import pulumi_gcp as gcp
@@ -123,9 +135,12 @@ appeng_slo = gcp.monitoring.Slo("appengSlo",
     ))
 ```
 
-{{% /example %}}
 
-{{% example typescript %}}
+{{< /example >}}
+
+
+{{< example typescript >}}
+
 
 ```typescript
 import * as pulumi from "@pulumi/pulumi";
@@ -148,10 +163,17 @@ const appengSlo = new gcp.monitoring.Slo("appengSlo", {
 });
 ```
 
-{{% /example %}}
+
+{{< /example >}}
+
+
+
 
 ### Monitoring Slo Request Based
-{{% example csharp %}}
+
+
+{{< example csharp >}}
+
 ```csharp
 using Pulumi;
 using Gcp = Pulumi.Gcp;
@@ -189,9 +211,12 @@ class MyStack : Stack
 }
 ```
 
-{{% /example %}}
 
-{{% example go %}}
+{{< /example >}}
+
+
+{{< example go >}}
+
 ```go
 package main
 
@@ -232,9 +257,12 @@ func main() {
 }
 ```
 
-{{% /example %}}
 
-{{% example python %}}
+{{< /example >}}
+
+
+{{< example python >}}
+
 ```python
 import pulumi
 import pulumi_gcp as gcp
@@ -258,9 +286,12 @@ request_based_slo = gcp.monitoring.Slo("requestBasedSlo",
     ))
 ```
 
-{{% /example %}}
 
-{{% example typescript %}}
+{{< /example >}}
+
+
+{{< example typescript >}}
+
 
 ```typescript
 import * as pulumi from "@pulumi/pulumi";
@@ -287,9 +318,16 @@ const requestBasedSlo = new gcp.monitoring.Slo("requestBasedSlo", {
 });
 ```
 
-{{% /example %}}
+
+{{< /example >}}
+
+
+
+
 
 {{% /examples %}}
+
+
 
 
 ## Create a Slo Resource {#create}
@@ -314,9 +352,7 @@ const requestBasedSlo = new gcp.monitoring.Slo("requestBasedSlo", {
 
 {{% choosable language nodejs %}}
 
-<dl class="resources-properties">
-  
-    <dt
+<dl class="resources-properties"><dt
         class="property-required" title="Required">
         <span>name</span>
         <span class="property-indicator"></span>
@@ -324,9 +360,7 @@ const requestBasedSlo = new gcp.monitoring.Slo("requestBasedSlo", {
     </dt>
     <dd>
       The unique name of the resource.
-    </dd>
-  
-    <dt
+    </dd><dt
         class="property-required" title="Required">
         <span>args</span>
         <span class="property-indicator"></span>
@@ -334,9 +368,7 @@ const requestBasedSlo = new gcp.monitoring.Slo("requestBasedSlo", {
     </dt>
     <dd>
       The arguments to resource properties.
-    </dd>
-  
-    <dt
+    </dd><dt
         class="property-optional" title="Optional">
         <span>opts</span>
         <span class="property-indicator"></span>
@@ -344,10 +376,7 @@ const requestBasedSlo = new gcp.monitoring.Slo("requestBasedSlo", {
     </dt>
     <dd>
       Bag of options to control resource&#39;s behavior.
-    </dd>
-  
-
-</dl>
+    </dd></dl>
 
 {{% /choosable %}}
 
@@ -373,9 +402,7 @@ const requestBasedSlo = new gcp.monitoring.Slo("requestBasedSlo", {
 
 {{% choosable language go %}}
 
-<dl class="resources-properties">
-  
-    <dt
+<dl class="resources-properties"><dt
         class="property-optional" title="Optional">
         <span>ctx</span>
         <span class="property-indicator"></span>
@@ -383,9 +410,7 @@ const requestBasedSlo = new gcp.monitoring.Slo("requestBasedSlo", {
     </dt>
     <dd>
       Context object for the current deployment.
-    </dd>
-  
-    <dt
+    </dd><dt
         class="property-required" title="Required">
         <span>name</span>
         <span class="property-indicator"></span>
@@ -393,9 +418,7 @@ const requestBasedSlo = new gcp.monitoring.Slo("requestBasedSlo", {
     </dt>
     <dd>
       The unique name of the resource.
-    </dd>
-  
-    <dt
+    </dd><dt
         class="property-required" title="Required">
         <span>args</span>
         <span class="property-indicator"></span>
@@ -403,9 +426,7 @@ const requestBasedSlo = new gcp.monitoring.Slo("requestBasedSlo", {
     </dt>
     <dd>
       The arguments to resource properties.
-    </dd>
-  
-    <dt
+    </dd><dt
         class="property-optional" title="Optional">
         <span>opts</span>
         <span class="property-indicator"></span>
@@ -413,18 +434,13 @@ const requestBasedSlo = new gcp.monitoring.Slo("requestBasedSlo", {
     </dt>
     <dd>
       Bag of options to control resource&#39;s behavior.
-    </dd>
-  
-
-</dl>
+    </dd></dl>
 
 {{% /choosable %}}
 
 {{% choosable language csharp %}}
 
-<dl class="resources-properties">
-  
-    <dt
+<dl class="resources-properties"><dt
         class="property-required" title="Required">
         <span>name</span>
         <span class="property-indicator"></span>
@@ -432,9 +448,7 @@ const requestBasedSlo = new gcp.monitoring.Slo("requestBasedSlo", {
     </dt>
     <dd>
       The unique name of the resource.
-    </dd>
-  
-    <dt
+    </dd><dt
         class="property-required" title="Required">
         <span>args</span>
         <span class="property-indicator"></span>
@@ -442,9 +456,7 @@ const requestBasedSlo = new gcp.monitoring.Slo("requestBasedSlo", {
     </dt>
     <dd>
       The arguments to resource properties.
-    </dd>
-  
-    <dt
+    </dd><dt
         class="property-optional" title="Optional">
         <span>opts</span>
         <span class="property-indicator"></span>
@@ -452,10 +464,7 @@ const requestBasedSlo = new gcp.monitoring.Slo("requestBasedSlo", {
     </dt>
     <dd>
       Bag of options to control resource&#39;s behavior.
-    </dd>
-  
-
-</dl>
+    </dd></dl>
 
 {{% /choosable %}}
 
@@ -470,9 +479,7 @@ The Slo resource accepts the following [input]({{< relref "/docs/intro/concepts/
 
 
 {{% choosable language csharp %}}
-<dl class="resources-properties">
-
-    <dt class="property-required"
+<dl class="resources-properties"><dt class="property-required"
             title="Required">
         <span id="goal_csharp">
 <a href="#goal_csharp" style="color: inherit; text-decoration: inherit;">Goal</a>
@@ -482,8 +489,7 @@ The Slo resource accepts the following [input]({{< relref "/docs/intro/concepts/
     </dt>
     <dd>{{% md %}}The fraction of service that must be good in order for this objective
 to be met. 0 < goal <= 0.999
-{{% /md %}}</dd>
-    <dt class="property-required"
+{{% /md %}}</dd><dt class="property-required"
             title="Required">
         <span id="service_csharp">
 <a href="#service_csharp" style="color: inherit; text-decoration: inherit;">Service</a>
@@ -492,8 +498,7 @@ to be met. 0 < goal <= 0.999
         <span class="property-type">string</span>
     </dt>
     <dd>{{% md %}}ID of the service to which this SLO belongs.
-{{% /md %}}</dd>
-    <dt class="property-optional"
+{{% /md %}}</dd><dt class="property-optional"
             title="Optional">
         <span id="basicsli_csharp">
 <a href="#basicsli_csharp" style="color: inherit; text-decoration: inherit;">Basic<wbr>Sli</a>
@@ -508,8 +513,7 @@ performance with respect to a single aspect of service quality.
 Exactly one of the following must be set:
 `basic_sli`, `request_based_sli`, `windows_based_sli`
 Structure is documented below.
-{{% /md %}}</dd>
-    <dt class="property-optional"
+{{% /md %}}</dd><dt class="property-optional"
             title="Optional">
         <span id="calendarperiod_csharp">
 <a href="#calendarperiod_csharp" style="color: inherit; text-decoration: inherit;">Calendar<wbr>Period</a>
@@ -520,8 +524,7 @@ Structure is documented below.
     <dd>{{% md %}}A calendar period, semantically "since the start of the current
 <calendarPeriod>".
 Possible values are `DAY`, `WEEK`, `FORTNIGHT`, and `MONTH`.
-{{% /md %}}</dd>
-    <dt class="property-optional"
+{{% /md %}}</dd><dt class="property-optional"
             title="Optional">
         <span id="displayname_csharp">
 <a href="#displayname_csharp" style="color: inherit; text-decoration: inherit;">Display<wbr>Name</a>
@@ -530,8 +533,7 @@ Possible values are `DAY`, `WEEK`, `FORTNIGHT`, and `MONTH`.
         <span class="property-type">string</span>
     </dt>
     <dd>{{% md %}}Name used for UI elements listing this SLO.
-{{% /md %}}</dd>
-    <dt class="property-optional"
+{{% /md %}}</dd><dt class="property-optional"
             title="Optional">
         <span id="project_csharp">
 <a href="#project_csharp" style="color: inherit; text-decoration: inherit;">Project</a>
@@ -541,8 +543,7 @@ Possible values are `DAY`, `WEEK`, `FORTNIGHT`, and `MONTH`.
     </dt>
     <dd>{{% md %}}The ID of the project in which the resource belongs.
 If it is not provided, the provider project is used.
-{{% /md %}}</dd>
-    <dt class="property-optional"
+{{% /md %}}</dd><dt class="property-optional"
             title="Optional">
         <span id="requestbasedsli_csharp">
 <a href="#requestbasedsli_csharp" style="color: inherit; text-decoration: inherit;">Request<wbr>Based<wbr>Sli</a>
@@ -558,8 +559,7 @@ performance with respect to a single aspect of service quality.
 Exactly one of the following must be set:
 `basic_sli`, `request_based_sli`, `windows_based_sli`
 Structure is documented below.
-{{% /md %}}</dd>
-    <dt class="property-optional"
+{{% /md %}}</dd><dt class="property-optional"
             title="Optional">
         <span id="rollingperioddays_csharp">
 <a href="#rollingperioddays_csharp" style="color: inherit; text-decoration: inherit;">Rolling<wbr>Period<wbr>Days</a>
@@ -569,8 +569,7 @@ Structure is documented below.
     </dt>
     <dd>{{% md %}}A rolling time period, semantically "in the past X days".
 Must be between 1 to 30 days, inclusive.
-{{% /md %}}</dd>
-    <dt class="property-optional"
+{{% /md %}}</dd><dt class="property-optional"
             title="Optional">
         <span id="sloid_csharp">
 <a href="#sloid_csharp" style="color: inherit; text-decoration: inherit;">Slo<wbr>Id</a>
@@ -579,8 +578,7 @@ Must be between 1 to 30 days, inclusive.
         <span class="property-type">string</span>
     </dt>
     <dd>{{% md %}}The id to use for this ServiceLevelObjective. If omitted, an id will be generated instead.
-{{% /md %}}</dd>
-    <dt class="property-optional"
+{{% /md %}}</dd><dt class="property-optional"
             title="Optional">
         <span id="windowsbasedsli_csharp">
 <a href="#windowsbasedsli_csharp" style="color: inherit; text-decoration: inherit;">Windows<wbr>Based<wbr>Sli</a>
@@ -597,14 +595,11 @@ aspect of service quality.
 Exactly one of the following must be set:
 `basic_sli`, `request_based_sli`, `windows_based_sli`
 Structure is documented below.
-{{% /md %}}</dd>
-</dl>
+{{% /md %}}</dd></dl>
 {{% /choosable %}}
 
 {{% choosable language go %}}
-<dl class="resources-properties">
-
-    <dt class="property-required"
+<dl class="resources-properties"><dt class="property-required"
             title="Required">
         <span id="goal_go">
 <a href="#goal_go" style="color: inherit; text-decoration: inherit;">Goal</a>
@@ -614,8 +609,7 @@ Structure is documented below.
     </dt>
     <dd>{{% md %}}The fraction of service that must be good in order for this objective
 to be met. 0 < goal <= 0.999
-{{% /md %}}</dd>
-    <dt class="property-required"
+{{% /md %}}</dd><dt class="property-required"
             title="Required">
         <span id="service_go">
 <a href="#service_go" style="color: inherit; text-decoration: inherit;">Service</a>
@@ -624,8 +618,7 @@ to be met. 0 < goal <= 0.999
         <span class="property-type">string</span>
     </dt>
     <dd>{{% md %}}ID of the service to which this SLO belongs.
-{{% /md %}}</dd>
-    <dt class="property-optional"
+{{% /md %}}</dd><dt class="property-optional"
             title="Optional">
         <span id="basicsli_go">
 <a href="#basicsli_go" style="color: inherit; text-decoration: inherit;">Basic<wbr>Sli</a>
@@ -640,8 +633,7 @@ performance with respect to a single aspect of service quality.
 Exactly one of the following must be set:
 `basic_sli`, `request_based_sli`, `windows_based_sli`
 Structure is documented below.
-{{% /md %}}</dd>
-    <dt class="property-optional"
+{{% /md %}}</dd><dt class="property-optional"
             title="Optional">
         <span id="calendarperiod_go">
 <a href="#calendarperiod_go" style="color: inherit; text-decoration: inherit;">Calendar<wbr>Period</a>
@@ -652,8 +644,7 @@ Structure is documented below.
     <dd>{{% md %}}A calendar period, semantically "since the start of the current
 <calendarPeriod>".
 Possible values are `DAY`, `WEEK`, `FORTNIGHT`, and `MONTH`.
-{{% /md %}}</dd>
-    <dt class="property-optional"
+{{% /md %}}</dd><dt class="property-optional"
             title="Optional">
         <span id="displayname_go">
 <a href="#displayname_go" style="color: inherit; text-decoration: inherit;">Display<wbr>Name</a>
@@ -662,8 +653,7 @@ Possible values are `DAY`, `WEEK`, `FORTNIGHT`, and `MONTH`.
         <span class="property-type">string</span>
     </dt>
     <dd>{{% md %}}Name used for UI elements listing this SLO.
-{{% /md %}}</dd>
-    <dt class="property-optional"
+{{% /md %}}</dd><dt class="property-optional"
             title="Optional">
         <span id="project_go">
 <a href="#project_go" style="color: inherit; text-decoration: inherit;">Project</a>
@@ -673,8 +663,7 @@ Possible values are `DAY`, `WEEK`, `FORTNIGHT`, and `MONTH`.
     </dt>
     <dd>{{% md %}}The ID of the project in which the resource belongs.
 If it is not provided, the provider project is used.
-{{% /md %}}</dd>
-    <dt class="property-optional"
+{{% /md %}}</dd><dt class="property-optional"
             title="Optional">
         <span id="requestbasedsli_go">
 <a href="#requestbasedsli_go" style="color: inherit; text-decoration: inherit;">Request<wbr>Based<wbr>Sli</a>
@@ -690,8 +679,7 @@ performance with respect to a single aspect of service quality.
 Exactly one of the following must be set:
 `basic_sli`, `request_based_sli`, `windows_based_sli`
 Structure is documented below.
-{{% /md %}}</dd>
-    <dt class="property-optional"
+{{% /md %}}</dd><dt class="property-optional"
             title="Optional">
         <span id="rollingperioddays_go">
 <a href="#rollingperioddays_go" style="color: inherit; text-decoration: inherit;">Rolling<wbr>Period<wbr>Days</a>
@@ -701,8 +689,7 @@ Structure is documented below.
     </dt>
     <dd>{{% md %}}A rolling time period, semantically "in the past X days".
 Must be between 1 to 30 days, inclusive.
-{{% /md %}}</dd>
-    <dt class="property-optional"
+{{% /md %}}</dd><dt class="property-optional"
             title="Optional">
         <span id="sloid_go">
 <a href="#sloid_go" style="color: inherit; text-decoration: inherit;">Slo<wbr>Id</a>
@@ -711,8 +698,7 @@ Must be between 1 to 30 days, inclusive.
         <span class="property-type">string</span>
     </dt>
     <dd>{{% md %}}The id to use for this ServiceLevelObjective. If omitted, an id will be generated instead.
-{{% /md %}}</dd>
-    <dt class="property-optional"
+{{% /md %}}</dd><dt class="property-optional"
             title="Optional">
         <span id="windowsbasedsli_go">
 <a href="#windowsbasedsli_go" style="color: inherit; text-decoration: inherit;">Windows<wbr>Based<wbr>Sli</a>
@@ -729,14 +715,11 @@ aspect of service quality.
 Exactly one of the following must be set:
 `basic_sli`, `request_based_sli`, `windows_based_sli`
 Structure is documented below.
-{{% /md %}}</dd>
-</dl>
+{{% /md %}}</dd></dl>
 {{% /choosable %}}
 
 {{% choosable language nodejs %}}
-<dl class="resources-properties">
-
-    <dt class="property-required"
+<dl class="resources-properties"><dt class="property-required"
             title="Required">
         <span id="goal_nodejs">
 <a href="#goal_nodejs" style="color: inherit; text-decoration: inherit;">goal</a>
@@ -746,8 +729,7 @@ Structure is documented below.
     </dt>
     <dd>{{% md %}}The fraction of service that must be good in order for this objective
 to be met. 0 < goal <= 0.999
-{{% /md %}}</dd>
-    <dt class="property-required"
+{{% /md %}}</dd><dt class="property-required"
             title="Required">
         <span id="service_nodejs">
 <a href="#service_nodejs" style="color: inherit; text-decoration: inherit;">service</a>
@@ -756,8 +738,7 @@ to be met. 0 < goal <= 0.999
         <span class="property-type">string</span>
     </dt>
     <dd>{{% md %}}ID of the service to which this SLO belongs.
-{{% /md %}}</dd>
-    <dt class="property-optional"
+{{% /md %}}</dd><dt class="property-optional"
             title="Optional">
         <span id="basicsli_nodejs">
 <a href="#basicsli_nodejs" style="color: inherit; text-decoration: inherit;">basic<wbr>Sli</a>
@@ -772,8 +753,7 @@ performance with respect to a single aspect of service quality.
 Exactly one of the following must be set:
 `basic_sli`, `request_based_sli`, `windows_based_sli`
 Structure is documented below.
-{{% /md %}}</dd>
-    <dt class="property-optional"
+{{% /md %}}</dd><dt class="property-optional"
             title="Optional">
         <span id="calendarperiod_nodejs">
 <a href="#calendarperiod_nodejs" style="color: inherit; text-decoration: inherit;">calendar<wbr>Period</a>
@@ -784,8 +764,7 @@ Structure is documented below.
     <dd>{{% md %}}A calendar period, semantically "since the start of the current
 <calendarPeriod>".
 Possible values are `DAY`, `WEEK`, `FORTNIGHT`, and `MONTH`.
-{{% /md %}}</dd>
-    <dt class="property-optional"
+{{% /md %}}</dd><dt class="property-optional"
             title="Optional">
         <span id="displayname_nodejs">
 <a href="#displayname_nodejs" style="color: inherit; text-decoration: inherit;">display<wbr>Name</a>
@@ -794,8 +773,7 @@ Possible values are `DAY`, `WEEK`, `FORTNIGHT`, and `MONTH`.
         <span class="property-type">string</span>
     </dt>
     <dd>{{% md %}}Name used for UI elements listing this SLO.
-{{% /md %}}</dd>
-    <dt class="property-optional"
+{{% /md %}}</dd><dt class="property-optional"
             title="Optional">
         <span id="project_nodejs">
 <a href="#project_nodejs" style="color: inherit; text-decoration: inherit;">project</a>
@@ -805,8 +783,7 @@ Possible values are `DAY`, `WEEK`, `FORTNIGHT`, and `MONTH`.
     </dt>
     <dd>{{% md %}}The ID of the project in which the resource belongs.
 If it is not provided, the provider project is used.
-{{% /md %}}</dd>
-    <dt class="property-optional"
+{{% /md %}}</dd><dt class="property-optional"
             title="Optional">
         <span id="requestbasedsli_nodejs">
 <a href="#requestbasedsli_nodejs" style="color: inherit; text-decoration: inherit;">request<wbr>Based<wbr>Sli</a>
@@ -822,8 +799,7 @@ performance with respect to a single aspect of service quality.
 Exactly one of the following must be set:
 `basic_sli`, `request_based_sli`, `windows_based_sli`
 Structure is documented below.
-{{% /md %}}</dd>
-    <dt class="property-optional"
+{{% /md %}}</dd><dt class="property-optional"
             title="Optional">
         <span id="rollingperioddays_nodejs">
 <a href="#rollingperioddays_nodejs" style="color: inherit; text-decoration: inherit;">rolling<wbr>Period<wbr>Days</a>
@@ -833,8 +809,7 @@ Structure is documented below.
     </dt>
     <dd>{{% md %}}A rolling time period, semantically "in the past X days".
 Must be between 1 to 30 days, inclusive.
-{{% /md %}}</dd>
-    <dt class="property-optional"
+{{% /md %}}</dd><dt class="property-optional"
             title="Optional">
         <span id="sloid_nodejs">
 <a href="#sloid_nodejs" style="color: inherit; text-decoration: inherit;">slo<wbr>Id</a>
@@ -843,8 +818,7 @@ Must be between 1 to 30 days, inclusive.
         <span class="property-type">string</span>
     </dt>
     <dd>{{% md %}}The id to use for this ServiceLevelObjective. If omitted, an id will be generated instead.
-{{% /md %}}</dd>
-    <dt class="property-optional"
+{{% /md %}}</dd><dt class="property-optional"
             title="Optional">
         <span id="windowsbasedsli_nodejs">
 <a href="#windowsbasedsli_nodejs" style="color: inherit; text-decoration: inherit;">windows<wbr>Based<wbr>Sli</a>
@@ -861,14 +835,11 @@ aspect of service quality.
 Exactly one of the following must be set:
 `basic_sli`, `request_based_sli`, `windows_based_sli`
 Structure is documented below.
-{{% /md %}}</dd>
-</dl>
+{{% /md %}}</dd></dl>
 {{% /choosable %}}
 
 {{% choosable language python %}}
-<dl class="resources-properties">
-
-    <dt class="property-required"
+<dl class="resources-properties"><dt class="property-required"
             title="Required">
         <span id="goal_python">
 <a href="#goal_python" style="color: inherit; text-decoration: inherit;">goal</a>
@@ -878,8 +849,7 @@ Structure is documented below.
     </dt>
     <dd>{{% md %}}The fraction of service that must be good in order for this objective
 to be met. 0 < goal <= 0.999
-{{% /md %}}</dd>
-    <dt class="property-required"
+{{% /md %}}</dd><dt class="property-required"
             title="Required">
         <span id="service_python">
 <a href="#service_python" style="color: inherit; text-decoration: inherit;">service</a>
@@ -888,8 +858,7 @@ to be met. 0 < goal <= 0.999
         <span class="property-type">str</span>
     </dt>
     <dd>{{% md %}}ID of the service to which this SLO belongs.
-{{% /md %}}</dd>
-    <dt class="property-optional"
+{{% /md %}}</dd><dt class="property-optional"
             title="Optional">
         <span id="basic_sli_python">
 <a href="#basic_sli_python" style="color: inherit; text-decoration: inherit;">basic_<wbr>sli</a>
@@ -904,8 +873,7 @@ performance with respect to a single aspect of service quality.
 Exactly one of the following must be set:
 `basic_sli`, `request_based_sli`, `windows_based_sli`
 Structure is documented below.
-{{% /md %}}</dd>
-    <dt class="property-optional"
+{{% /md %}}</dd><dt class="property-optional"
             title="Optional">
         <span id="calendar_period_python">
 <a href="#calendar_period_python" style="color: inherit; text-decoration: inherit;">calendar_<wbr>period</a>
@@ -916,8 +884,7 @@ Structure is documented below.
     <dd>{{% md %}}A calendar period, semantically "since the start of the current
 <calendarPeriod>".
 Possible values are `DAY`, `WEEK`, `FORTNIGHT`, and `MONTH`.
-{{% /md %}}</dd>
-    <dt class="property-optional"
+{{% /md %}}</dd><dt class="property-optional"
             title="Optional">
         <span id="display_name_python">
 <a href="#display_name_python" style="color: inherit; text-decoration: inherit;">display_<wbr>name</a>
@@ -926,8 +893,7 @@ Possible values are `DAY`, `WEEK`, `FORTNIGHT`, and `MONTH`.
         <span class="property-type">str</span>
     </dt>
     <dd>{{% md %}}Name used for UI elements listing this SLO.
-{{% /md %}}</dd>
-    <dt class="property-optional"
+{{% /md %}}</dd><dt class="property-optional"
             title="Optional">
         <span id="project_python">
 <a href="#project_python" style="color: inherit; text-decoration: inherit;">project</a>
@@ -937,8 +903,7 @@ Possible values are `DAY`, `WEEK`, `FORTNIGHT`, and `MONTH`.
     </dt>
     <dd>{{% md %}}The ID of the project in which the resource belongs.
 If it is not provided, the provider project is used.
-{{% /md %}}</dd>
-    <dt class="property-optional"
+{{% /md %}}</dd><dt class="property-optional"
             title="Optional">
         <span id="request_based_sli_python">
 <a href="#request_based_sli_python" style="color: inherit; text-decoration: inherit;">request_<wbr>based_<wbr>sli</a>
@@ -954,8 +919,7 @@ performance with respect to a single aspect of service quality.
 Exactly one of the following must be set:
 `basic_sli`, `request_based_sli`, `windows_based_sli`
 Structure is documented below.
-{{% /md %}}</dd>
-    <dt class="property-optional"
+{{% /md %}}</dd><dt class="property-optional"
             title="Optional">
         <span id="rolling_period_days_python">
 <a href="#rolling_period_days_python" style="color: inherit; text-decoration: inherit;">rolling_<wbr>period_<wbr>days</a>
@@ -965,8 +929,7 @@ Structure is documented below.
     </dt>
     <dd>{{% md %}}A rolling time period, semantically "in the past X days".
 Must be between 1 to 30 days, inclusive.
-{{% /md %}}</dd>
-    <dt class="property-optional"
+{{% /md %}}</dd><dt class="property-optional"
             title="Optional">
         <span id="slo_id_python">
 <a href="#slo_id_python" style="color: inherit; text-decoration: inherit;">slo_<wbr>id</a>
@@ -975,8 +938,7 @@ Must be between 1 to 30 days, inclusive.
         <span class="property-type">str</span>
     </dt>
     <dd>{{% md %}}The id to use for this ServiceLevelObjective. If omitted, an id will be generated instead.
-{{% /md %}}</dd>
-    <dt class="property-optional"
+{{% /md %}}</dd><dt class="property-optional"
             title="Optional">
         <span id="windows_based_sli_python">
 <a href="#windows_based_sli_python" style="color: inherit; text-decoration: inherit;">windows_<wbr>based_<wbr>sli</a>
@@ -993,8 +955,7 @@ aspect of service quality.
 Exactly one of the following must be set:
 `basic_sli`, `request_based_sli`, `windows_based_sli`
 Structure is documented below.
-{{% /md %}}</dd>
-</dl>
+{{% /md %}}</dd></dl>
 {{% /choosable %}}
 
 
@@ -1005,9 +966,7 @@ All [input](#inputs) properties are implicitly available as output properties. A
 
 
 {{% choosable language csharp %}}
-<dl class="resources-properties">
-
-    <dt class="property-"
+<dl class="resources-properties"><dt class="property-"
             title="">
         <span id="id_csharp">
 <a href="#id_csharp" style="color: inherit; text-decoration: inherit;">Id</a>
@@ -1015,8 +974,7 @@ All [input](#inputs) properties are implicitly available as output properties. A
         <span class="property-indicator"></span>
         <span class="property-type">string</span>
     </dt>
-    <dd>{{% md %}}The provider-assigned unique ID for this managed resource.{{% /md %}}</dd>
-    <dt class="property-"
+    <dd>{{% md %}}The provider-assigned unique ID for this managed resource.{{% /md %}}</dd><dt class="property-"
             title="">
         <span id="name_csharp">
 <a href="#name_csharp" style="color: inherit; text-decoration: inherit;">Name</a>
@@ -1026,14 +984,11 @@ All [input](#inputs) properties are implicitly available as output properties. A
     </dt>
     <dd>{{% md %}}The full resource name for this service. The syntax is:
 projects/[PROJECT_ID_OR_NUMBER]/services/[SERVICE_ID]/serviceLevelObjectives/[SLO_NAME]
-{{% /md %}}</dd>
-</dl>
+{{% /md %}}</dd></dl>
 {{% /choosable %}}
 
 {{% choosable language go %}}
-<dl class="resources-properties">
-
-    <dt class="property-"
+<dl class="resources-properties"><dt class="property-"
             title="">
         <span id="id_go">
 <a href="#id_go" style="color: inherit; text-decoration: inherit;">Id</a>
@@ -1041,8 +996,7 @@ projects/[PROJECT_ID_OR_NUMBER]/services/[SERVICE_ID]/serviceLevelObjectives/[SL
         <span class="property-indicator"></span>
         <span class="property-type">string</span>
     </dt>
-    <dd>{{% md %}}The provider-assigned unique ID for this managed resource.{{% /md %}}</dd>
-    <dt class="property-"
+    <dd>{{% md %}}The provider-assigned unique ID for this managed resource.{{% /md %}}</dd><dt class="property-"
             title="">
         <span id="name_go">
 <a href="#name_go" style="color: inherit; text-decoration: inherit;">Name</a>
@@ -1052,14 +1006,11 @@ projects/[PROJECT_ID_OR_NUMBER]/services/[SERVICE_ID]/serviceLevelObjectives/[SL
     </dt>
     <dd>{{% md %}}The full resource name for this service. The syntax is:
 projects/[PROJECT_ID_OR_NUMBER]/services/[SERVICE_ID]/serviceLevelObjectives/[SLO_NAME]
-{{% /md %}}</dd>
-</dl>
+{{% /md %}}</dd></dl>
 {{% /choosable %}}
 
 {{% choosable language nodejs %}}
-<dl class="resources-properties">
-
-    <dt class="property-"
+<dl class="resources-properties"><dt class="property-"
             title="">
         <span id="id_nodejs">
 <a href="#id_nodejs" style="color: inherit; text-decoration: inherit;">id</a>
@@ -1067,8 +1018,7 @@ projects/[PROJECT_ID_OR_NUMBER]/services/[SERVICE_ID]/serviceLevelObjectives/[SL
         <span class="property-indicator"></span>
         <span class="property-type">string</span>
     </dt>
-    <dd>{{% md %}}The provider-assigned unique ID for this managed resource.{{% /md %}}</dd>
-    <dt class="property-"
+    <dd>{{% md %}}The provider-assigned unique ID for this managed resource.{{% /md %}}</dd><dt class="property-"
             title="">
         <span id="name_nodejs">
 <a href="#name_nodejs" style="color: inherit; text-decoration: inherit;">name</a>
@@ -1078,14 +1028,11 @@ projects/[PROJECT_ID_OR_NUMBER]/services/[SERVICE_ID]/serviceLevelObjectives/[SL
     </dt>
     <dd>{{% md %}}The full resource name for this service. The syntax is:
 projects/[PROJECT_ID_OR_NUMBER]/services/[SERVICE_ID]/serviceLevelObjectives/[SLO_NAME]
-{{% /md %}}</dd>
-</dl>
+{{% /md %}}</dd></dl>
 {{% /choosable %}}
 
 {{% choosable language python %}}
-<dl class="resources-properties">
-
-    <dt class="property-"
+<dl class="resources-properties"><dt class="property-"
             title="">
         <span id="id_python">
 <a href="#id_python" style="color: inherit; text-decoration: inherit;">id</a>
@@ -1093,8 +1040,7 @@ projects/[PROJECT_ID_OR_NUMBER]/services/[SERVICE_ID]/serviceLevelObjectives/[SL
         <span class="property-indicator"></span>
         <span class="property-type">str</span>
     </dt>
-    <dd>{{% md %}}The provider-assigned unique ID for this managed resource.{{% /md %}}</dd>
-    <dt class="property-"
+    <dd>{{% md %}}The provider-assigned unique ID for this managed resource.{{% /md %}}</dd><dt class="property-"
             title="">
         <span id="name_python">
 <a href="#name_python" style="color: inherit; text-decoration: inherit;">name</a>
@@ -1104,8 +1050,7 @@ projects/[PROJECT_ID_OR_NUMBER]/services/[SERVICE_ID]/serviceLevelObjectives/[SL
     </dt>
     <dd>{{% md %}}The full resource name for this service. The syntax is:
 projects/[PROJECT_ID_OR_NUMBER]/services/[SERVICE_ID]/serviceLevelObjectives/[SLO_NAME]
-{{% /md %}}</dd>
-</dl>
+{{% /md %}}</dd></dl>
 {{% /choosable %}}
 
 
@@ -1232,9 +1177,7 @@ The following state arguments are supported:
 
 
 {{% choosable language csharp %}}
-<dl class="resources-properties">
-
-    <dt class="property-optional"
+<dl class="resources-properties"><dt class="property-optional"
             title="Optional">
         <span id="state_basicsli_csharp">
 <a href="#state_basicsli_csharp" style="color: inherit; text-decoration: inherit;">Basic<wbr>Sli</a>
@@ -1249,8 +1192,7 @@ performance with respect to a single aspect of service quality.
 Exactly one of the following must be set:
 `basic_sli`, `request_based_sli`, `windows_based_sli`
 Structure is documented below.
-{{% /md %}}</dd>
-    <dt class="property-optional"
+{{% /md %}}</dd><dt class="property-optional"
             title="Optional">
         <span id="state_calendarperiod_csharp">
 <a href="#state_calendarperiod_csharp" style="color: inherit; text-decoration: inherit;">Calendar<wbr>Period</a>
@@ -1261,8 +1203,7 @@ Structure is documented below.
     <dd>{{% md %}}A calendar period, semantically "since the start of the current
 <calendarPeriod>".
 Possible values are `DAY`, `WEEK`, `FORTNIGHT`, and `MONTH`.
-{{% /md %}}</dd>
-    <dt class="property-optional"
+{{% /md %}}</dd><dt class="property-optional"
             title="Optional">
         <span id="state_displayname_csharp">
 <a href="#state_displayname_csharp" style="color: inherit; text-decoration: inherit;">Display<wbr>Name</a>
@@ -1271,8 +1212,7 @@ Possible values are `DAY`, `WEEK`, `FORTNIGHT`, and `MONTH`.
         <span class="property-type">string</span>
     </dt>
     <dd>{{% md %}}Name used for UI elements listing this SLO.
-{{% /md %}}</dd>
-    <dt class="property-optional"
+{{% /md %}}</dd><dt class="property-optional"
             title="Optional">
         <span id="state_goal_csharp">
 <a href="#state_goal_csharp" style="color: inherit; text-decoration: inherit;">Goal</a>
@@ -1282,8 +1222,7 @@ Possible values are `DAY`, `WEEK`, `FORTNIGHT`, and `MONTH`.
     </dt>
     <dd>{{% md %}}The fraction of service that must be good in order for this objective
 to be met. 0 < goal <= 0.999
-{{% /md %}}</dd>
-    <dt class="property-optional"
+{{% /md %}}</dd><dt class="property-optional"
             title="Optional">
         <span id="state_name_csharp">
 <a href="#state_name_csharp" style="color: inherit; text-decoration: inherit;">Name</a>
@@ -1293,8 +1232,7 @@ to be met. 0 < goal <= 0.999
     </dt>
     <dd>{{% md %}}The full resource name for this service. The syntax is:
 projects/[PROJECT_ID_OR_NUMBER]/services/[SERVICE_ID]/serviceLevelObjectives/[SLO_NAME]
-{{% /md %}}</dd>
-    <dt class="property-optional"
+{{% /md %}}</dd><dt class="property-optional"
             title="Optional">
         <span id="state_project_csharp">
 <a href="#state_project_csharp" style="color: inherit; text-decoration: inherit;">Project</a>
@@ -1304,8 +1242,7 @@ projects/[PROJECT_ID_OR_NUMBER]/services/[SERVICE_ID]/serviceLevelObjectives/[SL
     </dt>
     <dd>{{% md %}}The ID of the project in which the resource belongs.
 If it is not provided, the provider project is used.
-{{% /md %}}</dd>
-    <dt class="property-optional"
+{{% /md %}}</dd><dt class="property-optional"
             title="Optional">
         <span id="state_requestbasedsli_csharp">
 <a href="#state_requestbasedsli_csharp" style="color: inherit; text-decoration: inherit;">Request<wbr>Based<wbr>Sli</a>
@@ -1321,8 +1258,7 @@ performance with respect to a single aspect of service quality.
 Exactly one of the following must be set:
 `basic_sli`, `request_based_sli`, `windows_based_sli`
 Structure is documented below.
-{{% /md %}}</dd>
-    <dt class="property-optional"
+{{% /md %}}</dd><dt class="property-optional"
             title="Optional">
         <span id="state_rollingperioddays_csharp">
 <a href="#state_rollingperioddays_csharp" style="color: inherit; text-decoration: inherit;">Rolling<wbr>Period<wbr>Days</a>
@@ -1332,8 +1268,7 @@ Structure is documented below.
     </dt>
     <dd>{{% md %}}A rolling time period, semantically "in the past X days".
 Must be between 1 to 30 days, inclusive.
-{{% /md %}}</dd>
-    <dt class="property-optional"
+{{% /md %}}</dd><dt class="property-optional"
             title="Optional">
         <span id="state_service_csharp">
 <a href="#state_service_csharp" style="color: inherit; text-decoration: inherit;">Service</a>
@@ -1342,8 +1277,7 @@ Must be between 1 to 30 days, inclusive.
         <span class="property-type">string</span>
     </dt>
     <dd>{{% md %}}ID of the service to which this SLO belongs.
-{{% /md %}}</dd>
-    <dt class="property-optional"
+{{% /md %}}</dd><dt class="property-optional"
             title="Optional">
         <span id="state_sloid_csharp">
 <a href="#state_sloid_csharp" style="color: inherit; text-decoration: inherit;">Slo<wbr>Id</a>
@@ -1352,8 +1286,7 @@ Must be between 1 to 30 days, inclusive.
         <span class="property-type">string</span>
     </dt>
     <dd>{{% md %}}The id to use for this ServiceLevelObjective. If omitted, an id will be generated instead.
-{{% /md %}}</dd>
-    <dt class="property-optional"
+{{% /md %}}</dd><dt class="property-optional"
             title="Optional">
         <span id="state_windowsbasedsli_csharp">
 <a href="#state_windowsbasedsli_csharp" style="color: inherit; text-decoration: inherit;">Windows<wbr>Based<wbr>Sli</a>
@@ -1370,14 +1303,11 @@ aspect of service quality.
 Exactly one of the following must be set:
 `basic_sli`, `request_based_sli`, `windows_based_sli`
 Structure is documented below.
-{{% /md %}}</dd>
-</dl>
+{{% /md %}}</dd></dl>
 {{% /choosable %}}
 
 {{% choosable language go %}}
-<dl class="resources-properties">
-
-    <dt class="property-optional"
+<dl class="resources-properties"><dt class="property-optional"
             title="Optional">
         <span id="state_basicsli_go">
 <a href="#state_basicsli_go" style="color: inherit; text-decoration: inherit;">Basic<wbr>Sli</a>
@@ -1392,8 +1322,7 @@ performance with respect to a single aspect of service quality.
 Exactly one of the following must be set:
 `basic_sli`, `request_based_sli`, `windows_based_sli`
 Structure is documented below.
-{{% /md %}}</dd>
-    <dt class="property-optional"
+{{% /md %}}</dd><dt class="property-optional"
             title="Optional">
         <span id="state_calendarperiod_go">
 <a href="#state_calendarperiod_go" style="color: inherit; text-decoration: inherit;">Calendar<wbr>Period</a>
@@ -1404,8 +1333,7 @@ Structure is documented below.
     <dd>{{% md %}}A calendar period, semantically "since the start of the current
 <calendarPeriod>".
 Possible values are `DAY`, `WEEK`, `FORTNIGHT`, and `MONTH`.
-{{% /md %}}</dd>
-    <dt class="property-optional"
+{{% /md %}}</dd><dt class="property-optional"
             title="Optional">
         <span id="state_displayname_go">
 <a href="#state_displayname_go" style="color: inherit; text-decoration: inherit;">Display<wbr>Name</a>
@@ -1414,8 +1342,7 @@ Possible values are `DAY`, `WEEK`, `FORTNIGHT`, and `MONTH`.
         <span class="property-type">string</span>
     </dt>
     <dd>{{% md %}}Name used for UI elements listing this SLO.
-{{% /md %}}</dd>
-    <dt class="property-optional"
+{{% /md %}}</dd><dt class="property-optional"
             title="Optional">
         <span id="state_goal_go">
 <a href="#state_goal_go" style="color: inherit; text-decoration: inherit;">Goal</a>
@@ -1425,8 +1352,7 @@ Possible values are `DAY`, `WEEK`, `FORTNIGHT`, and `MONTH`.
     </dt>
     <dd>{{% md %}}The fraction of service that must be good in order for this objective
 to be met. 0 < goal <= 0.999
-{{% /md %}}</dd>
-    <dt class="property-optional"
+{{% /md %}}</dd><dt class="property-optional"
             title="Optional">
         <span id="state_name_go">
 <a href="#state_name_go" style="color: inherit; text-decoration: inherit;">Name</a>
@@ -1436,8 +1362,7 @@ to be met. 0 < goal <= 0.999
     </dt>
     <dd>{{% md %}}The full resource name for this service. The syntax is:
 projects/[PROJECT_ID_OR_NUMBER]/services/[SERVICE_ID]/serviceLevelObjectives/[SLO_NAME]
-{{% /md %}}</dd>
-    <dt class="property-optional"
+{{% /md %}}</dd><dt class="property-optional"
             title="Optional">
         <span id="state_project_go">
 <a href="#state_project_go" style="color: inherit; text-decoration: inherit;">Project</a>
@@ -1447,8 +1372,7 @@ projects/[PROJECT_ID_OR_NUMBER]/services/[SERVICE_ID]/serviceLevelObjectives/[SL
     </dt>
     <dd>{{% md %}}The ID of the project in which the resource belongs.
 If it is not provided, the provider project is used.
-{{% /md %}}</dd>
-    <dt class="property-optional"
+{{% /md %}}</dd><dt class="property-optional"
             title="Optional">
         <span id="state_requestbasedsli_go">
 <a href="#state_requestbasedsli_go" style="color: inherit; text-decoration: inherit;">Request<wbr>Based<wbr>Sli</a>
@@ -1464,8 +1388,7 @@ performance with respect to a single aspect of service quality.
 Exactly one of the following must be set:
 `basic_sli`, `request_based_sli`, `windows_based_sli`
 Structure is documented below.
-{{% /md %}}</dd>
-    <dt class="property-optional"
+{{% /md %}}</dd><dt class="property-optional"
             title="Optional">
         <span id="state_rollingperioddays_go">
 <a href="#state_rollingperioddays_go" style="color: inherit; text-decoration: inherit;">Rolling<wbr>Period<wbr>Days</a>
@@ -1475,8 +1398,7 @@ Structure is documented below.
     </dt>
     <dd>{{% md %}}A rolling time period, semantically "in the past X days".
 Must be between 1 to 30 days, inclusive.
-{{% /md %}}</dd>
-    <dt class="property-optional"
+{{% /md %}}</dd><dt class="property-optional"
             title="Optional">
         <span id="state_service_go">
 <a href="#state_service_go" style="color: inherit; text-decoration: inherit;">Service</a>
@@ -1485,8 +1407,7 @@ Must be between 1 to 30 days, inclusive.
         <span class="property-type">string</span>
     </dt>
     <dd>{{% md %}}ID of the service to which this SLO belongs.
-{{% /md %}}</dd>
-    <dt class="property-optional"
+{{% /md %}}</dd><dt class="property-optional"
             title="Optional">
         <span id="state_sloid_go">
 <a href="#state_sloid_go" style="color: inherit; text-decoration: inherit;">Slo<wbr>Id</a>
@@ -1495,8 +1416,7 @@ Must be between 1 to 30 days, inclusive.
         <span class="property-type">string</span>
     </dt>
     <dd>{{% md %}}The id to use for this ServiceLevelObjective. If omitted, an id will be generated instead.
-{{% /md %}}</dd>
-    <dt class="property-optional"
+{{% /md %}}</dd><dt class="property-optional"
             title="Optional">
         <span id="state_windowsbasedsli_go">
 <a href="#state_windowsbasedsli_go" style="color: inherit; text-decoration: inherit;">Windows<wbr>Based<wbr>Sli</a>
@@ -1513,14 +1433,11 @@ aspect of service quality.
 Exactly one of the following must be set:
 `basic_sli`, `request_based_sli`, `windows_based_sli`
 Structure is documented below.
-{{% /md %}}</dd>
-</dl>
+{{% /md %}}</dd></dl>
 {{% /choosable %}}
 
 {{% choosable language nodejs %}}
-<dl class="resources-properties">
-
-    <dt class="property-optional"
+<dl class="resources-properties"><dt class="property-optional"
             title="Optional">
         <span id="state_basicsli_nodejs">
 <a href="#state_basicsli_nodejs" style="color: inherit; text-decoration: inherit;">basic<wbr>Sli</a>
@@ -1535,8 +1452,7 @@ performance with respect to a single aspect of service quality.
 Exactly one of the following must be set:
 `basic_sli`, `request_based_sli`, `windows_based_sli`
 Structure is documented below.
-{{% /md %}}</dd>
-    <dt class="property-optional"
+{{% /md %}}</dd><dt class="property-optional"
             title="Optional">
         <span id="state_calendarperiod_nodejs">
 <a href="#state_calendarperiod_nodejs" style="color: inherit; text-decoration: inherit;">calendar<wbr>Period</a>
@@ -1547,8 +1463,7 @@ Structure is documented below.
     <dd>{{% md %}}A calendar period, semantically "since the start of the current
 <calendarPeriod>".
 Possible values are `DAY`, `WEEK`, `FORTNIGHT`, and `MONTH`.
-{{% /md %}}</dd>
-    <dt class="property-optional"
+{{% /md %}}</dd><dt class="property-optional"
             title="Optional">
         <span id="state_displayname_nodejs">
 <a href="#state_displayname_nodejs" style="color: inherit; text-decoration: inherit;">display<wbr>Name</a>
@@ -1557,8 +1472,7 @@ Possible values are `DAY`, `WEEK`, `FORTNIGHT`, and `MONTH`.
         <span class="property-type">string</span>
     </dt>
     <dd>{{% md %}}Name used for UI elements listing this SLO.
-{{% /md %}}</dd>
-    <dt class="property-optional"
+{{% /md %}}</dd><dt class="property-optional"
             title="Optional">
         <span id="state_goal_nodejs">
 <a href="#state_goal_nodejs" style="color: inherit; text-decoration: inherit;">goal</a>
@@ -1568,8 +1482,7 @@ Possible values are `DAY`, `WEEK`, `FORTNIGHT`, and `MONTH`.
     </dt>
     <dd>{{% md %}}The fraction of service that must be good in order for this objective
 to be met. 0 < goal <= 0.999
-{{% /md %}}</dd>
-    <dt class="property-optional"
+{{% /md %}}</dd><dt class="property-optional"
             title="Optional">
         <span id="state_name_nodejs">
 <a href="#state_name_nodejs" style="color: inherit; text-decoration: inherit;">name</a>
@@ -1579,8 +1492,7 @@ to be met. 0 < goal <= 0.999
     </dt>
     <dd>{{% md %}}The full resource name for this service. The syntax is:
 projects/[PROJECT_ID_OR_NUMBER]/services/[SERVICE_ID]/serviceLevelObjectives/[SLO_NAME]
-{{% /md %}}</dd>
-    <dt class="property-optional"
+{{% /md %}}</dd><dt class="property-optional"
             title="Optional">
         <span id="state_project_nodejs">
 <a href="#state_project_nodejs" style="color: inherit; text-decoration: inherit;">project</a>
@@ -1590,8 +1502,7 @@ projects/[PROJECT_ID_OR_NUMBER]/services/[SERVICE_ID]/serviceLevelObjectives/[SL
     </dt>
     <dd>{{% md %}}The ID of the project in which the resource belongs.
 If it is not provided, the provider project is used.
-{{% /md %}}</dd>
-    <dt class="property-optional"
+{{% /md %}}</dd><dt class="property-optional"
             title="Optional">
         <span id="state_requestbasedsli_nodejs">
 <a href="#state_requestbasedsli_nodejs" style="color: inherit; text-decoration: inherit;">request<wbr>Based<wbr>Sli</a>
@@ -1607,8 +1518,7 @@ performance with respect to a single aspect of service quality.
 Exactly one of the following must be set:
 `basic_sli`, `request_based_sli`, `windows_based_sli`
 Structure is documented below.
-{{% /md %}}</dd>
-    <dt class="property-optional"
+{{% /md %}}</dd><dt class="property-optional"
             title="Optional">
         <span id="state_rollingperioddays_nodejs">
 <a href="#state_rollingperioddays_nodejs" style="color: inherit; text-decoration: inherit;">rolling<wbr>Period<wbr>Days</a>
@@ -1618,8 +1528,7 @@ Structure is documented below.
     </dt>
     <dd>{{% md %}}A rolling time period, semantically "in the past X days".
 Must be between 1 to 30 days, inclusive.
-{{% /md %}}</dd>
-    <dt class="property-optional"
+{{% /md %}}</dd><dt class="property-optional"
             title="Optional">
         <span id="state_service_nodejs">
 <a href="#state_service_nodejs" style="color: inherit; text-decoration: inherit;">service</a>
@@ -1628,8 +1537,7 @@ Must be between 1 to 30 days, inclusive.
         <span class="property-type">string</span>
     </dt>
     <dd>{{% md %}}ID of the service to which this SLO belongs.
-{{% /md %}}</dd>
-    <dt class="property-optional"
+{{% /md %}}</dd><dt class="property-optional"
             title="Optional">
         <span id="state_sloid_nodejs">
 <a href="#state_sloid_nodejs" style="color: inherit; text-decoration: inherit;">slo<wbr>Id</a>
@@ -1638,8 +1546,7 @@ Must be between 1 to 30 days, inclusive.
         <span class="property-type">string</span>
     </dt>
     <dd>{{% md %}}The id to use for this ServiceLevelObjective. If omitted, an id will be generated instead.
-{{% /md %}}</dd>
-    <dt class="property-optional"
+{{% /md %}}</dd><dt class="property-optional"
             title="Optional">
         <span id="state_windowsbasedsli_nodejs">
 <a href="#state_windowsbasedsli_nodejs" style="color: inherit; text-decoration: inherit;">windows<wbr>Based<wbr>Sli</a>
@@ -1656,14 +1563,11 @@ aspect of service quality.
 Exactly one of the following must be set:
 `basic_sli`, `request_based_sli`, `windows_based_sli`
 Structure is documented below.
-{{% /md %}}</dd>
-</dl>
+{{% /md %}}</dd></dl>
 {{% /choosable %}}
 
 {{% choosable language python %}}
-<dl class="resources-properties">
-
-    <dt class="property-optional"
+<dl class="resources-properties"><dt class="property-optional"
             title="Optional">
         <span id="state_basic_sli_python">
 <a href="#state_basic_sli_python" style="color: inherit; text-decoration: inherit;">basic_<wbr>sli</a>
@@ -1678,8 +1582,7 @@ performance with respect to a single aspect of service quality.
 Exactly one of the following must be set:
 `basic_sli`, `request_based_sli`, `windows_based_sli`
 Structure is documented below.
-{{% /md %}}</dd>
-    <dt class="property-optional"
+{{% /md %}}</dd><dt class="property-optional"
             title="Optional">
         <span id="state_calendar_period_python">
 <a href="#state_calendar_period_python" style="color: inherit; text-decoration: inherit;">calendar_<wbr>period</a>
@@ -1690,8 +1593,7 @@ Structure is documented below.
     <dd>{{% md %}}A calendar period, semantically "since the start of the current
 <calendarPeriod>".
 Possible values are `DAY`, `WEEK`, `FORTNIGHT`, and `MONTH`.
-{{% /md %}}</dd>
-    <dt class="property-optional"
+{{% /md %}}</dd><dt class="property-optional"
             title="Optional">
         <span id="state_display_name_python">
 <a href="#state_display_name_python" style="color: inherit; text-decoration: inherit;">display_<wbr>name</a>
@@ -1700,8 +1602,7 @@ Possible values are `DAY`, `WEEK`, `FORTNIGHT`, and `MONTH`.
         <span class="property-type">str</span>
     </dt>
     <dd>{{% md %}}Name used for UI elements listing this SLO.
-{{% /md %}}</dd>
-    <dt class="property-optional"
+{{% /md %}}</dd><dt class="property-optional"
             title="Optional">
         <span id="state_goal_python">
 <a href="#state_goal_python" style="color: inherit; text-decoration: inherit;">goal</a>
@@ -1711,8 +1612,7 @@ Possible values are `DAY`, `WEEK`, `FORTNIGHT`, and `MONTH`.
     </dt>
     <dd>{{% md %}}The fraction of service that must be good in order for this objective
 to be met. 0 < goal <= 0.999
-{{% /md %}}</dd>
-    <dt class="property-optional"
+{{% /md %}}</dd><dt class="property-optional"
             title="Optional">
         <span id="state_name_python">
 <a href="#state_name_python" style="color: inherit; text-decoration: inherit;">name</a>
@@ -1722,8 +1622,7 @@ to be met. 0 < goal <= 0.999
     </dt>
     <dd>{{% md %}}The full resource name for this service. The syntax is:
 projects/[PROJECT_ID_OR_NUMBER]/services/[SERVICE_ID]/serviceLevelObjectives/[SLO_NAME]
-{{% /md %}}</dd>
-    <dt class="property-optional"
+{{% /md %}}</dd><dt class="property-optional"
             title="Optional">
         <span id="state_project_python">
 <a href="#state_project_python" style="color: inherit; text-decoration: inherit;">project</a>
@@ -1733,8 +1632,7 @@ projects/[PROJECT_ID_OR_NUMBER]/services/[SERVICE_ID]/serviceLevelObjectives/[SL
     </dt>
     <dd>{{% md %}}The ID of the project in which the resource belongs.
 If it is not provided, the provider project is used.
-{{% /md %}}</dd>
-    <dt class="property-optional"
+{{% /md %}}</dd><dt class="property-optional"
             title="Optional">
         <span id="state_request_based_sli_python">
 <a href="#state_request_based_sli_python" style="color: inherit; text-decoration: inherit;">request_<wbr>based_<wbr>sli</a>
@@ -1750,8 +1648,7 @@ performance with respect to a single aspect of service quality.
 Exactly one of the following must be set:
 `basic_sli`, `request_based_sli`, `windows_based_sli`
 Structure is documented below.
-{{% /md %}}</dd>
-    <dt class="property-optional"
+{{% /md %}}</dd><dt class="property-optional"
             title="Optional">
         <span id="state_rolling_period_days_python">
 <a href="#state_rolling_period_days_python" style="color: inherit; text-decoration: inherit;">rolling_<wbr>period_<wbr>days</a>
@@ -1761,8 +1658,7 @@ Structure is documented below.
     </dt>
     <dd>{{% md %}}A rolling time period, semantically "in the past X days".
 Must be between 1 to 30 days, inclusive.
-{{% /md %}}</dd>
-    <dt class="property-optional"
+{{% /md %}}</dd><dt class="property-optional"
             title="Optional">
         <span id="state_service_python">
 <a href="#state_service_python" style="color: inherit; text-decoration: inherit;">service</a>
@@ -1771,8 +1667,7 @@ Must be between 1 to 30 days, inclusive.
         <span class="property-type">str</span>
     </dt>
     <dd>{{% md %}}ID of the service to which this SLO belongs.
-{{% /md %}}</dd>
-    <dt class="property-optional"
+{{% /md %}}</dd><dt class="property-optional"
             title="Optional">
         <span id="state_slo_id_python">
 <a href="#state_slo_id_python" style="color: inherit; text-decoration: inherit;">slo_<wbr>id</a>
@@ -1781,8 +1676,7 @@ Must be between 1 to 30 days, inclusive.
         <span class="property-type">str</span>
     </dt>
     <dd>{{% md %}}The id to use for this ServiceLevelObjective. If omitted, an id will be generated instead.
-{{% /md %}}</dd>
-    <dt class="property-optional"
+{{% /md %}}</dd><dt class="property-optional"
             title="Optional">
         <span id="state_windows_based_sli_python">
 <a href="#state_windows_based_sli_python" style="color: inherit; text-decoration: inherit;">windows_<wbr>based_<wbr>sli</a>
@@ -1799,8 +1693,7 @@ aspect of service quality.
 Exactly one of the following must be set:
 `basic_sli`, `request_based_sli`, `windows_based_sli`
 Structure is documented below.
-{{% /md %}}</dd>
-</dl>
+{{% /md %}}</dd></dl>
 {{% /choosable %}}
 
 
@@ -1815,9 +1708,7 @@ Structure is documented below.
 <h4 id="slobasicsli">Slo<wbr>Basic<wbr>Sli</h4>
 
 {{% choosable language csharp %}}
-<dl class="resources-properties">
-
-    <dt class="property-optional"
+<dl class="resources-properties"><dt class="property-optional"
             title="Optional">
         <span id="availability_csharp">
 <a href="#availability_csharp" style="color: inherit; text-decoration: inherit;">Availability</a>
@@ -1827,8 +1718,7 @@ Structure is documented below.
     </dt>
     <dd>{{% md %}}Availability based SLI, dervied from count of requests made to this service that return successfully.
 Structure is documented below.
-{{% /md %}}</dd>
-    <dt class="property-optional"
+{{% /md %}}</dd><dt class="property-optional"
             title="Optional">
         <span id="latency_csharp">
 <a href="#latency_csharp" style="color: inherit; text-decoration: inherit;">Latency</a>
@@ -1838,8 +1728,7 @@ Structure is documented below.
     </dt>
     <dd>{{% md %}}Parameters for a latency threshold SLI.
 Structure is documented below.
-{{% /md %}}</dd>
-    <dt class="property-optional"
+{{% /md %}}</dd><dt class="property-optional"
             title="Optional">
         <span id="locations_csharp">
 <a href="#locations_csharp" style="color: inherit; text-decoration: inherit;">Locations</a>
@@ -1853,8 +1742,7 @@ performance for this SLI. If omitted, this SLI applies to all
 locations in which the Service has activity. For service types
 that don't support breaking down by location, setting this
 field will result in an error.
-{{% /md %}}</dd>
-    <dt class="property-optional"
+{{% /md %}}</dd><dt class="property-optional"
             title="Optional">
         <span id="methods_csharp">
 <a href="#methods_csharp" style="color: inherit; text-decoration: inherit;">Methods</a>
@@ -1868,8 +1756,7 @@ performance for this SLI. If omitted, this SLI applies to all
 the Service's methods. For service types that don't support
 breaking down by method, setting this field will result in an
 error.
-{{% /md %}}</dd>
-    <dt class="property-optional"
+{{% /md %}}</dd><dt class="property-optional"
             title="Optional">
         <span id="versions_csharp">
 <a href="#versions_csharp" style="color: inherit; text-decoration: inherit;">Versions</a>
@@ -1883,14 +1770,11 @@ calculate performance for this SLI. If omitted,
 this SLI applies to all API versions. For service types
 that don't support breaking down by version, setting this
 field will result in an error.
-{{% /md %}}</dd>
-</dl>
+{{% /md %}}</dd></dl>
 {{% /choosable %}}
 
 {{% choosable language go %}}
-<dl class="resources-properties">
-
-    <dt class="property-optional"
+<dl class="resources-properties"><dt class="property-optional"
             title="Optional">
         <span id="availability_go">
 <a href="#availability_go" style="color: inherit; text-decoration: inherit;">Availability</a>
@@ -1900,8 +1784,7 @@ field will result in an error.
     </dt>
     <dd>{{% md %}}Availability based SLI, dervied from count of requests made to this service that return successfully.
 Structure is documented below.
-{{% /md %}}</dd>
-    <dt class="property-optional"
+{{% /md %}}</dd><dt class="property-optional"
             title="Optional">
         <span id="latency_go">
 <a href="#latency_go" style="color: inherit; text-decoration: inherit;">Latency</a>
@@ -1911,8 +1794,7 @@ Structure is documented below.
     </dt>
     <dd>{{% md %}}Parameters for a latency threshold SLI.
 Structure is documented below.
-{{% /md %}}</dd>
-    <dt class="property-optional"
+{{% /md %}}</dd><dt class="property-optional"
             title="Optional">
         <span id="locations_go">
 <a href="#locations_go" style="color: inherit; text-decoration: inherit;">Locations</a>
@@ -1926,8 +1808,7 @@ performance for this SLI. If omitted, this SLI applies to all
 locations in which the Service has activity. For service types
 that don't support breaking down by location, setting this
 field will result in an error.
-{{% /md %}}</dd>
-    <dt class="property-optional"
+{{% /md %}}</dd><dt class="property-optional"
             title="Optional">
         <span id="methods_go">
 <a href="#methods_go" style="color: inherit; text-decoration: inherit;">Methods</a>
@@ -1941,8 +1822,7 @@ performance for this SLI. If omitted, this SLI applies to all
 the Service's methods. For service types that don't support
 breaking down by method, setting this field will result in an
 error.
-{{% /md %}}</dd>
-    <dt class="property-optional"
+{{% /md %}}</dd><dt class="property-optional"
             title="Optional">
         <span id="versions_go">
 <a href="#versions_go" style="color: inherit; text-decoration: inherit;">Versions</a>
@@ -1956,14 +1836,11 @@ calculate performance for this SLI. If omitted,
 this SLI applies to all API versions. For service types
 that don't support breaking down by version, setting this
 field will result in an error.
-{{% /md %}}</dd>
-</dl>
+{{% /md %}}</dd></dl>
 {{% /choosable %}}
 
 {{% choosable language nodejs %}}
-<dl class="resources-properties">
-
-    <dt class="property-optional"
+<dl class="resources-properties"><dt class="property-optional"
             title="Optional">
         <span id="availability_nodejs">
 <a href="#availability_nodejs" style="color: inherit; text-decoration: inherit;">availability</a>
@@ -1973,8 +1850,7 @@ field will result in an error.
     </dt>
     <dd>{{% md %}}Availability based SLI, dervied from count of requests made to this service that return successfully.
 Structure is documented below.
-{{% /md %}}</dd>
-    <dt class="property-optional"
+{{% /md %}}</dd><dt class="property-optional"
             title="Optional">
         <span id="latency_nodejs">
 <a href="#latency_nodejs" style="color: inherit; text-decoration: inherit;">latency</a>
@@ -1984,8 +1860,7 @@ Structure is documented below.
     </dt>
     <dd>{{% md %}}Parameters for a latency threshold SLI.
 Structure is documented below.
-{{% /md %}}</dd>
-    <dt class="property-optional"
+{{% /md %}}</dd><dt class="property-optional"
             title="Optional">
         <span id="locations_nodejs">
 <a href="#locations_nodejs" style="color: inherit; text-decoration: inherit;">locations</a>
@@ -1999,8 +1874,7 @@ performance for this SLI. If omitted, this SLI applies to all
 locations in which the Service has activity. For service types
 that don't support breaking down by location, setting this
 field will result in an error.
-{{% /md %}}</dd>
-    <dt class="property-optional"
+{{% /md %}}</dd><dt class="property-optional"
             title="Optional">
         <span id="methods_nodejs">
 <a href="#methods_nodejs" style="color: inherit; text-decoration: inherit;">methods</a>
@@ -2014,8 +1888,7 @@ performance for this SLI. If omitted, this SLI applies to all
 the Service's methods. For service types that don't support
 breaking down by method, setting this field will result in an
 error.
-{{% /md %}}</dd>
-    <dt class="property-optional"
+{{% /md %}}</dd><dt class="property-optional"
             title="Optional">
         <span id="versions_nodejs">
 <a href="#versions_nodejs" style="color: inherit; text-decoration: inherit;">versions</a>
@@ -2029,14 +1902,11 @@ calculate performance for this SLI. If omitted,
 this SLI applies to all API versions. For service types
 that don't support breaking down by version, setting this
 field will result in an error.
-{{% /md %}}</dd>
-</dl>
+{{% /md %}}</dd></dl>
 {{% /choosable %}}
 
 {{% choosable language python %}}
-<dl class="resources-properties">
-
-    <dt class="property-optional"
+<dl class="resources-properties"><dt class="property-optional"
             title="Optional">
         <span id="availability_python">
 <a href="#availability_python" style="color: inherit; text-decoration: inherit;">availability</a>
@@ -2046,8 +1916,7 @@ field will result in an error.
     </dt>
     <dd>{{% md %}}Availability based SLI, dervied from count of requests made to this service that return successfully.
 Structure is documented below.
-{{% /md %}}</dd>
-    <dt class="property-optional"
+{{% /md %}}</dd><dt class="property-optional"
             title="Optional">
         <span id="latency_python">
 <a href="#latency_python" style="color: inherit; text-decoration: inherit;">latency</a>
@@ -2057,8 +1926,7 @@ Structure is documented below.
     </dt>
     <dd>{{% md %}}Parameters for a latency threshold SLI.
 Structure is documented below.
-{{% /md %}}</dd>
-    <dt class="property-optional"
+{{% /md %}}</dd><dt class="property-optional"
             title="Optional">
         <span id="locations_python">
 <a href="#locations_python" style="color: inherit; text-decoration: inherit;">locations</a>
@@ -2072,8 +1940,7 @@ performance for this SLI. If omitted, this SLI applies to all
 locations in which the Service has activity. For service types
 that don't support breaking down by location, setting this
 field will result in an error.
-{{% /md %}}</dd>
-    <dt class="property-optional"
+{{% /md %}}</dd><dt class="property-optional"
             title="Optional">
         <span id="methods_python">
 <a href="#methods_python" style="color: inherit; text-decoration: inherit;">methods</a>
@@ -2087,8 +1954,7 @@ performance for this SLI. If omitted, this SLI applies to all
 the Service's methods. For service types that don't support
 breaking down by method, setting this field will result in an
 error.
-{{% /md %}}</dd>
-    <dt class="property-optional"
+{{% /md %}}</dd><dt class="property-optional"
             title="Optional">
         <span id="versions_python">
 <a href="#versions_python" style="color: inherit; text-decoration: inherit;">versions</a>
@@ -2102,16 +1968,13 @@ calculate performance for this SLI. If omitted,
 this SLI applies to all API versions. For service types
 that don't support breaking down by version, setting this
 field will result in an error.
-{{% /md %}}</dd>
-</dl>
+{{% /md %}}</dd></dl>
 {{% /choosable %}}
 
 <h4 id="slobasicsliavailability">Slo<wbr>Basic<wbr>Sli<wbr>Availability</h4>
 
 {{% choosable language csharp %}}
-<dl class="resources-properties">
-
-    <dt class="property-optional"
+<dl class="resources-properties"><dt class="property-optional"
             title="Optional">
         <span id="enabled_csharp">
 <a href="#enabled_csharp" style="color: inherit; text-decoration: inherit;">Enabled</a>
@@ -2120,14 +1983,11 @@ field will result in an error.
         <span class="property-type">bool</span>
     </dt>
     <dd>{{% md %}}Whether an availability SLI is enabled or not. Must be set to `true. Defaults to `true`.
-{{% /md %}}</dd>
-</dl>
+{{% /md %}}</dd></dl>
 {{% /choosable %}}
 
 {{% choosable language go %}}
-<dl class="resources-properties">
-
-    <dt class="property-optional"
+<dl class="resources-properties"><dt class="property-optional"
             title="Optional">
         <span id="enabled_go">
 <a href="#enabled_go" style="color: inherit; text-decoration: inherit;">Enabled</a>
@@ -2136,14 +1996,11 @@ field will result in an error.
         <span class="property-type">bool</span>
     </dt>
     <dd>{{% md %}}Whether an availability SLI is enabled or not. Must be set to `true. Defaults to `true`.
-{{% /md %}}</dd>
-</dl>
+{{% /md %}}</dd></dl>
 {{% /choosable %}}
 
 {{% choosable language nodejs %}}
-<dl class="resources-properties">
-
-    <dt class="property-optional"
+<dl class="resources-properties"><dt class="property-optional"
             title="Optional">
         <span id="enabled_nodejs">
 <a href="#enabled_nodejs" style="color: inherit; text-decoration: inherit;">enabled</a>
@@ -2152,14 +2009,11 @@ field will result in an error.
         <span class="property-type">boolean</span>
     </dt>
     <dd>{{% md %}}Whether an availability SLI is enabled or not. Must be set to `true. Defaults to `true`.
-{{% /md %}}</dd>
-</dl>
+{{% /md %}}</dd></dl>
 {{% /choosable %}}
 
 {{% choosable language python %}}
-<dl class="resources-properties">
-
-    <dt class="property-optional"
+<dl class="resources-properties"><dt class="property-optional"
             title="Optional">
         <span id="enabled_python">
 <a href="#enabled_python" style="color: inherit; text-decoration: inherit;">enabled</a>
@@ -2168,16 +2022,13 @@ field will result in an error.
         <span class="property-type">bool</span>
     </dt>
     <dd>{{% md %}}Whether an availability SLI is enabled or not. Must be set to `true. Defaults to `true`.
-{{% /md %}}</dd>
-</dl>
+{{% /md %}}</dd></dl>
 {{% /choosable %}}
 
 <h4 id="slobasicslilatency">Slo<wbr>Basic<wbr>Sli<wbr>Latency</h4>
 
 {{% choosable language csharp %}}
-<dl class="resources-properties">
-
-    <dt class="property-required"
+<dl class="resources-properties"><dt class="property-required"
             title="Required">
         <span id="threshold_csharp">
 <a href="#threshold_csharp" style="color: inherit; text-decoration: inherit;">Threshold</a>
@@ -2188,14 +2039,11 @@ field will result in an error.
     <dd>{{% md %}}A duration string, e.g. 10s.
 Good service is defined to be the count of requests made to
 this service that return in no more than threshold.
-{{% /md %}}</dd>
-</dl>
+{{% /md %}}</dd></dl>
 {{% /choosable %}}
 
 {{% choosable language go %}}
-<dl class="resources-properties">
-
-    <dt class="property-required"
+<dl class="resources-properties"><dt class="property-required"
             title="Required">
         <span id="threshold_go">
 <a href="#threshold_go" style="color: inherit; text-decoration: inherit;">Threshold</a>
@@ -2206,14 +2054,11 @@ this service that return in no more than threshold.
     <dd>{{% md %}}A duration string, e.g. 10s.
 Good service is defined to be the count of requests made to
 this service that return in no more than threshold.
-{{% /md %}}</dd>
-</dl>
+{{% /md %}}</dd></dl>
 {{% /choosable %}}
 
 {{% choosable language nodejs %}}
-<dl class="resources-properties">
-
-    <dt class="property-required"
+<dl class="resources-properties"><dt class="property-required"
             title="Required">
         <span id="threshold_nodejs">
 <a href="#threshold_nodejs" style="color: inherit; text-decoration: inherit;">threshold</a>
@@ -2224,14 +2069,11 @@ this service that return in no more than threshold.
     <dd>{{% md %}}A duration string, e.g. 10s.
 Good service is defined to be the count of requests made to
 this service that return in no more than threshold.
-{{% /md %}}</dd>
-</dl>
+{{% /md %}}</dd></dl>
 {{% /choosable %}}
 
 {{% choosable language python %}}
-<dl class="resources-properties">
-
-    <dt class="property-required"
+<dl class="resources-properties"><dt class="property-required"
             title="Required">
         <span id="threshold_python">
 <a href="#threshold_python" style="color: inherit; text-decoration: inherit;">threshold</a>
@@ -2242,16 +2084,13 @@ this service that return in no more than threshold.
     <dd>{{% md %}}A duration string, e.g. 10s.
 Good service is defined to be the count of requests made to
 this service that return in no more than threshold.
-{{% /md %}}</dd>
-</dl>
+{{% /md %}}</dd></dl>
 {{% /choosable %}}
 
 <h4 id="slorequestbasedsli">Slo<wbr>Request<wbr>Based<wbr>Sli</h4>
 
 {{% choosable language csharp %}}
-<dl class="resources-properties">
-
-    <dt class="property-optional"
+<dl class="resources-properties"><dt class="property-optional"
             title="Optional">
         <span id="distributioncut_csharp">
 <a href="#distributioncut_csharp" style="color: inherit; text-decoration: inherit;">Distribution<wbr>Cut</a>
@@ -2265,8 +2104,7 @@ total count of all values aggregated in the Distribution.
 Defines a distribution TimeSeries filter and thresholds used for
 measuring good service and total service.
 Structure is documented below.
-{{% /md %}}</dd>
-    <dt class="property-optional"
+{{% /md %}}</dd><dt class="property-optional"
             title="Optional">
         <span id="goodtotalratio_csharp">
 <a href="#goodtotalratio_csharp" style="color: inherit; text-decoration: inherit;">Good<wbr>Total<wbr>Ratio</a>
@@ -2280,14 +2118,11 @@ Must specify exactly two of good, bad, and total service filters.
 The relationship good_service + bad_service = total_service
 will be assumed.
 Structure is documented below.
-{{% /md %}}</dd>
-</dl>
+{{% /md %}}</dd></dl>
 {{% /choosable %}}
 
 {{% choosable language go %}}
-<dl class="resources-properties">
-
-    <dt class="property-optional"
+<dl class="resources-properties"><dt class="property-optional"
             title="Optional">
         <span id="distributioncut_go">
 <a href="#distributioncut_go" style="color: inherit; text-decoration: inherit;">Distribution<wbr>Cut</a>
@@ -2301,8 +2136,7 @@ total count of all values aggregated in the Distribution.
 Defines a distribution TimeSeries filter and thresholds used for
 measuring good service and total service.
 Structure is documented below.
-{{% /md %}}</dd>
-    <dt class="property-optional"
+{{% /md %}}</dd><dt class="property-optional"
             title="Optional">
         <span id="goodtotalratio_go">
 <a href="#goodtotalratio_go" style="color: inherit; text-decoration: inherit;">Good<wbr>Total<wbr>Ratio</a>
@@ -2316,14 +2150,11 @@ Must specify exactly two of good, bad, and total service filters.
 The relationship good_service + bad_service = total_service
 will be assumed.
 Structure is documented below.
-{{% /md %}}</dd>
-</dl>
+{{% /md %}}</dd></dl>
 {{% /choosable %}}
 
 {{% choosable language nodejs %}}
-<dl class="resources-properties">
-
-    <dt class="property-optional"
+<dl class="resources-properties"><dt class="property-optional"
             title="Optional">
         <span id="distributioncut_nodejs">
 <a href="#distributioncut_nodejs" style="color: inherit; text-decoration: inherit;">distribution<wbr>Cut</a>
@@ -2337,8 +2168,7 @@ total count of all values aggregated in the Distribution.
 Defines a distribution TimeSeries filter and thresholds used for
 measuring good service and total service.
 Structure is documented below.
-{{% /md %}}</dd>
-    <dt class="property-optional"
+{{% /md %}}</dd><dt class="property-optional"
             title="Optional">
         <span id="goodtotalratio_nodejs">
 <a href="#goodtotalratio_nodejs" style="color: inherit; text-decoration: inherit;">good<wbr>Total<wbr>Ratio</a>
@@ -2352,14 +2182,11 @@ Must specify exactly two of good, bad, and total service filters.
 The relationship good_service + bad_service = total_service
 will be assumed.
 Structure is documented below.
-{{% /md %}}</dd>
-</dl>
+{{% /md %}}</dd></dl>
 {{% /choosable %}}
 
 {{% choosable language python %}}
-<dl class="resources-properties">
-
-    <dt class="property-optional"
+<dl class="resources-properties"><dt class="property-optional"
             title="Optional">
         <span id="distribution_cut_python">
 <a href="#distribution_cut_python" style="color: inherit; text-decoration: inherit;">distribution_<wbr>cut</a>
@@ -2373,8 +2200,7 @@ total count of all values aggregated in the Distribution.
 Defines a distribution TimeSeries filter and thresholds used for
 measuring good service and total service.
 Structure is documented below.
-{{% /md %}}</dd>
-    <dt class="property-optional"
+{{% /md %}}</dd><dt class="property-optional"
             title="Optional">
         <span id="good_total_ratio_python">
 <a href="#good_total_ratio_python" style="color: inherit; text-decoration: inherit;">good_<wbr>total_<wbr>ratio</a>
@@ -2388,16 +2214,13 @@ Must specify exactly two of good, bad, and total service filters.
 The relationship good_service + bad_service = total_service
 will be assumed.
 Structure is documented below.
-{{% /md %}}</dd>
-</dl>
+{{% /md %}}</dd></dl>
 {{% /choosable %}}
 
 <h4 id="slorequestbasedslidistributioncut">Slo<wbr>Request<wbr>Based<wbr>Sli<wbr>Distribution<wbr>Cut</h4>
 
 {{% choosable language csharp %}}
-<dl class="resources-properties">
-
-    <dt class="property-required"
+<dl class="resources-properties"><dt class="property-required"
             title="Required">
         <span id="distributionfilter_csharp">
 <a href="#distributionfilter_csharp" style="color: inherit; text-decoration: inherit;">Distribution<wbr>Filter</a>
@@ -2409,8 +2232,7 @@ Structure is documented below.
 aggregating values to quantify the good service provided.
 Must have ValueType = DISTRIBUTION and
 MetricKind = DELTA or MetricKind = CUMULATIVE.
-{{% /md %}}</dd>
-    <dt class="property-required"
+{{% /md %}}</dd><dt class="property-required"
             title="Required">
         <span id="range_csharp">
 <a href="#range_csharp" style="color: inherit; text-decoration: inherit;">Range</a>
@@ -2425,14 +2247,11 @@ exclusive of max. Open ranges can be defined by setting
 just one of min or max. Summed value `X` should satisfy
 `range.min <= X < range.max` for a good window.
 Structure is documented below.
-{{% /md %}}</dd>
-</dl>
+{{% /md %}}</dd></dl>
 {{% /choosable %}}
 
 {{% choosable language go %}}
-<dl class="resources-properties">
-
-    <dt class="property-required"
+<dl class="resources-properties"><dt class="property-required"
             title="Required">
         <span id="distributionfilter_go">
 <a href="#distributionfilter_go" style="color: inherit; text-decoration: inherit;">Distribution<wbr>Filter</a>
@@ -2444,8 +2263,7 @@ Structure is documented below.
 aggregating values to quantify the good service provided.
 Must have ValueType = DISTRIBUTION and
 MetricKind = DELTA or MetricKind = CUMULATIVE.
-{{% /md %}}</dd>
-    <dt class="property-required"
+{{% /md %}}</dd><dt class="property-required"
             title="Required">
         <span id="range_go">
 <a href="#range_go" style="color: inherit; text-decoration: inherit;">Range</a>
@@ -2460,14 +2278,11 @@ exclusive of max. Open ranges can be defined by setting
 just one of min or max. Summed value `X` should satisfy
 `range.min <= X < range.max` for a good window.
 Structure is documented below.
-{{% /md %}}</dd>
-</dl>
+{{% /md %}}</dd></dl>
 {{% /choosable %}}
 
 {{% choosable language nodejs %}}
-<dl class="resources-properties">
-
-    <dt class="property-required"
+<dl class="resources-properties"><dt class="property-required"
             title="Required">
         <span id="distributionfilter_nodejs">
 <a href="#distributionfilter_nodejs" style="color: inherit; text-decoration: inherit;">distribution<wbr>Filter</a>
@@ -2479,8 +2294,7 @@ Structure is documented below.
 aggregating values to quantify the good service provided.
 Must have ValueType = DISTRIBUTION and
 MetricKind = DELTA or MetricKind = CUMULATIVE.
-{{% /md %}}</dd>
-    <dt class="property-required"
+{{% /md %}}</dd><dt class="property-required"
             title="Required">
         <span id="range_nodejs">
 <a href="#range_nodejs" style="color: inherit; text-decoration: inherit;">range</a>
@@ -2495,14 +2309,11 @@ exclusive of max. Open ranges can be defined by setting
 just one of min or max. Summed value `X` should satisfy
 `range.min <= X < range.max` for a good window.
 Structure is documented below.
-{{% /md %}}</dd>
-</dl>
+{{% /md %}}</dd></dl>
 {{% /choosable %}}
 
 {{% choosable language python %}}
-<dl class="resources-properties">
-
-    <dt class="property-required"
+<dl class="resources-properties"><dt class="property-required"
             title="Required">
         <span id="distribution_filter_python">
 <a href="#distribution_filter_python" style="color: inherit; text-decoration: inherit;">distribution_<wbr>filter</a>
@@ -2514,8 +2325,7 @@ Structure is documented below.
 aggregating values to quantify the good service provided.
 Must have ValueType = DISTRIBUTION and
 MetricKind = DELTA or MetricKind = CUMULATIVE.
-{{% /md %}}</dd>
-    <dt class="property-required"
+{{% /md %}}</dd><dt class="property-required"
             title="Required">
         <span id="range_python">
 <a href="#range_python" style="color: inherit; text-decoration: inherit;">range</a>
@@ -2530,16 +2340,13 @@ exclusive of max. Open ranges can be defined by setting
 just one of min or max. Summed value `X` should satisfy
 `range.min <= X < range.max` for a good window.
 Structure is documented below.
-{{% /md %}}</dd>
-</dl>
+{{% /md %}}</dd></dl>
 {{% /choosable %}}
 
 <h4 id="slorequestbasedslidistributioncutrange">Slo<wbr>Request<wbr>Based<wbr>Sli<wbr>Distribution<wbr>Cut<wbr>Range</h4>
 
 {{% choosable language csharp %}}
-<dl class="resources-properties">
-
-    <dt class="property-optional"
+<dl class="resources-properties"><dt class="property-optional"
             title="Optional">
         <span id="max_csharp">
 <a href="#max_csharp" style="color: inherit; text-decoration: inherit;">Max</a>
@@ -2550,8 +2357,7 @@ Structure is documented below.
     <dd>{{% md %}}max value for the range (inclusive). If not given,
 will be set to "infinity", defining an open range
 ">= range.min"
-{{% /md %}}</dd>
-    <dt class="property-optional"
+{{% /md %}}</dd><dt class="property-optional"
             title="Optional">
         <span id="min_csharp">
 <a href="#min_csharp" style="color: inherit; text-decoration: inherit;">Min</a>
@@ -2562,14 +2368,11 @@ will be set to "infinity", defining an open range
     <dd>{{% md %}}Min value for the range (inclusive). If not given,
 will be set to "-infinity", defining an open range
 "< range.max"
-{{% /md %}}</dd>
-</dl>
+{{% /md %}}</dd></dl>
 {{% /choosable %}}
 
 {{% choosable language go %}}
-<dl class="resources-properties">
-
-    <dt class="property-optional"
+<dl class="resources-properties"><dt class="property-optional"
             title="Optional">
         <span id="max_go">
 <a href="#max_go" style="color: inherit; text-decoration: inherit;">Max</a>
@@ -2580,8 +2383,7 @@ will be set to "-infinity", defining an open range
     <dd>{{% md %}}max value for the range (inclusive). If not given,
 will be set to "infinity", defining an open range
 ">= range.min"
-{{% /md %}}</dd>
-    <dt class="property-optional"
+{{% /md %}}</dd><dt class="property-optional"
             title="Optional">
         <span id="min_go">
 <a href="#min_go" style="color: inherit; text-decoration: inherit;">Min</a>
@@ -2592,14 +2394,11 @@ will be set to "infinity", defining an open range
     <dd>{{% md %}}Min value for the range (inclusive). If not given,
 will be set to "-infinity", defining an open range
 "< range.max"
-{{% /md %}}</dd>
-</dl>
+{{% /md %}}</dd></dl>
 {{% /choosable %}}
 
 {{% choosable language nodejs %}}
-<dl class="resources-properties">
-
-    <dt class="property-optional"
+<dl class="resources-properties"><dt class="property-optional"
             title="Optional">
         <span id="max_nodejs">
 <a href="#max_nodejs" style="color: inherit; text-decoration: inherit;">max</a>
@@ -2610,8 +2409,7 @@ will be set to "-infinity", defining an open range
     <dd>{{% md %}}max value for the range (inclusive). If not given,
 will be set to "infinity", defining an open range
 ">= range.min"
-{{% /md %}}</dd>
-    <dt class="property-optional"
+{{% /md %}}</dd><dt class="property-optional"
             title="Optional">
         <span id="min_nodejs">
 <a href="#min_nodejs" style="color: inherit; text-decoration: inherit;">min</a>
@@ -2622,14 +2420,11 @@ will be set to "infinity", defining an open range
     <dd>{{% md %}}Min value for the range (inclusive). If not given,
 will be set to "-infinity", defining an open range
 "< range.max"
-{{% /md %}}</dd>
-</dl>
+{{% /md %}}</dd></dl>
 {{% /choosable %}}
 
 {{% choosable language python %}}
-<dl class="resources-properties">
-
-    <dt class="property-optional"
+<dl class="resources-properties"><dt class="property-optional"
             title="Optional">
         <span id="max_python">
 <a href="#max_python" style="color: inherit; text-decoration: inherit;">max</a>
@@ -2640,8 +2435,7 @@ will be set to "-infinity", defining an open range
     <dd>{{% md %}}max value for the range (inclusive). If not given,
 will be set to "infinity", defining an open range
 ">= range.min"
-{{% /md %}}</dd>
-    <dt class="property-optional"
+{{% /md %}}</dd><dt class="property-optional"
             title="Optional">
         <span id="min_python">
 <a href="#min_python" style="color: inherit; text-decoration: inherit;">min</a>
@@ -2652,16 +2446,13 @@ will be set to "infinity", defining an open range
     <dd>{{% md %}}Min value for the range (inclusive). If not given,
 will be set to "-infinity", defining an open range
 "< range.max"
-{{% /md %}}</dd>
-</dl>
+{{% /md %}}</dd></dl>
 {{% /choosable %}}
 
 <h4 id="slorequestbasedsligoodtotalratio">Slo<wbr>Request<wbr>Based<wbr>Sli<wbr>Good<wbr>Total<wbr>Ratio</h4>
 
 {{% choosable language csharp %}}
-<dl class="resources-properties">
-
-    <dt class="property-optional"
+<dl class="resources-properties"><dt class="property-optional"
             title="Optional">
         <span id="badservicefilter_csharp">
 <a href="#badservicefilter_csharp" style="color: inherit; text-decoration: inherit;">Bad<wbr>Service<wbr>Filter</a>
@@ -2677,8 +2468,7 @@ good, bad, or total service filter must be defined (where
 good + bad = total is assumed)
 Must have ValueType = DOUBLE or ValueType = INT64 and
 must have MetricKind = DELTA or MetricKind = CUMULATIVE.
-{{% /md %}}</dd>
-    <dt class="property-optional"
+{{% /md %}}</dd><dt class="property-optional"
             title="Optional">
         <span id="goodservicefilter_csharp">
 <a href="#goodservicefilter_csharp" style="color: inherit; text-decoration: inherit;">Good<wbr>Service<wbr>Filter</a>
@@ -2692,8 +2482,7 @@ good, bad, or total service filter must be defined (where
 good + bad = total is assumed)
 Must have ValueType = DOUBLE or ValueType = INT64 and
 must have MetricKind = DELTA or MetricKind = CUMULATIVE.
-{{% /md %}}</dd>
-    <dt class="property-optional"
+{{% /md %}}</dd><dt class="property-optional"
             title="Optional">
         <span id="totalservicefilter_csharp">
 <a href="#totalservicefilter_csharp" style="color: inherit; text-decoration: inherit;">Total<wbr>Service<wbr>Filter</a>
@@ -2707,14 +2496,11 @@ good, bad, or total service filter must be defined (where
 good + bad = total is assumed)
 Must have ValueType = DOUBLE or ValueType = INT64 and
 must have MetricKind = DELTA or MetricKind = CUMULATIVE.
-{{% /md %}}</dd>
-</dl>
+{{% /md %}}</dd></dl>
 {{% /choosable %}}
 
 {{% choosable language go %}}
-<dl class="resources-properties">
-
-    <dt class="property-optional"
+<dl class="resources-properties"><dt class="property-optional"
             title="Optional">
         <span id="badservicefilter_go">
 <a href="#badservicefilter_go" style="color: inherit; text-decoration: inherit;">Bad<wbr>Service<wbr>Filter</a>
@@ -2730,8 +2516,7 @@ good, bad, or total service filter must be defined (where
 good + bad = total is assumed)
 Must have ValueType = DOUBLE or ValueType = INT64 and
 must have MetricKind = DELTA or MetricKind = CUMULATIVE.
-{{% /md %}}</dd>
-    <dt class="property-optional"
+{{% /md %}}</dd><dt class="property-optional"
             title="Optional">
         <span id="goodservicefilter_go">
 <a href="#goodservicefilter_go" style="color: inherit; text-decoration: inherit;">Good<wbr>Service<wbr>Filter</a>
@@ -2745,8 +2530,7 @@ good, bad, or total service filter must be defined (where
 good + bad = total is assumed)
 Must have ValueType = DOUBLE or ValueType = INT64 and
 must have MetricKind = DELTA or MetricKind = CUMULATIVE.
-{{% /md %}}</dd>
-    <dt class="property-optional"
+{{% /md %}}</dd><dt class="property-optional"
             title="Optional">
         <span id="totalservicefilter_go">
 <a href="#totalservicefilter_go" style="color: inherit; text-decoration: inherit;">Total<wbr>Service<wbr>Filter</a>
@@ -2760,14 +2544,11 @@ good, bad, or total service filter must be defined (where
 good + bad = total is assumed)
 Must have ValueType = DOUBLE or ValueType = INT64 and
 must have MetricKind = DELTA or MetricKind = CUMULATIVE.
-{{% /md %}}</dd>
-</dl>
+{{% /md %}}</dd></dl>
 {{% /choosable %}}
 
 {{% choosable language nodejs %}}
-<dl class="resources-properties">
-
-    <dt class="property-optional"
+<dl class="resources-properties"><dt class="property-optional"
             title="Optional">
         <span id="badservicefilter_nodejs">
 <a href="#badservicefilter_nodejs" style="color: inherit; text-decoration: inherit;">bad<wbr>Service<wbr>Filter</a>
@@ -2783,8 +2564,7 @@ good, bad, or total service filter must be defined (where
 good + bad = total is assumed)
 Must have ValueType = DOUBLE or ValueType = INT64 and
 must have MetricKind = DELTA or MetricKind = CUMULATIVE.
-{{% /md %}}</dd>
-    <dt class="property-optional"
+{{% /md %}}</dd><dt class="property-optional"
             title="Optional">
         <span id="goodservicefilter_nodejs">
 <a href="#goodservicefilter_nodejs" style="color: inherit; text-decoration: inherit;">good<wbr>Service<wbr>Filter</a>
@@ -2798,8 +2578,7 @@ good, bad, or total service filter must be defined (where
 good + bad = total is assumed)
 Must have ValueType = DOUBLE or ValueType = INT64 and
 must have MetricKind = DELTA or MetricKind = CUMULATIVE.
-{{% /md %}}</dd>
-    <dt class="property-optional"
+{{% /md %}}</dd><dt class="property-optional"
             title="Optional">
         <span id="totalservicefilter_nodejs">
 <a href="#totalservicefilter_nodejs" style="color: inherit; text-decoration: inherit;">total<wbr>Service<wbr>Filter</a>
@@ -2813,14 +2592,11 @@ good, bad, or total service filter must be defined (where
 good + bad = total is assumed)
 Must have ValueType = DOUBLE or ValueType = INT64 and
 must have MetricKind = DELTA or MetricKind = CUMULATIVE.
-{{% /md %}}</dd>
-</dl>
+{{% /md %}}</dd></dl>
 {{% /choosable %}}
 
 {{% choosable language python %}}
-<dl class="resources-properties">
-
-    <dt class="property-optional"
+<dl class="resources-properties"><dt class="property-optional"
             title="Optional">
         <span id="bad_service_filter_python">
 <a href="#bad_service_filter_python" style="color: inherit; text-decoration: inherit;">bad_<wbr>service_<wbr>filter</a>
@@ -2836,8 +2612,7 @@ good, bad, or total service filter must be defined (where
 good + bad = total is assumed)
 Must have ValueType = DOUBLE or ValueType = INT64 and
 must have MetricKind = DELTA or MetricKind = CUMULATIVE.
-{{% /md %}}</dd>
-    <dt class="property-optional"
+{{% /md %}}</dd><dt class="property-optional"
             title="Optional">
         <span id="good_service_filter_python">
 <a href="#good_service_filter_python" style="color: inherit; text-decoration: inherit;">good_<wbr>service_<wbr>filter</a>
@@ -2851,8 +2626,7 @@ good, bad, or total service filter must be defined (where
 good + bad = total is assumed)
 Must have ValueType = DOUBLE or ValueType = INT64 and
 must have MetricKind = DELTA or MetricKind = CUMULATIVE.
-{{% /md %}}</dd>
-    <dt class="property-optional"
+{{% /md %}}</dd><dt class="property-optional"
             title="Optional">
         <span id="total_service_filter_python">
 <a href="#total_service_filter_python" style="color: inherit; text-decoration: inherit;">total_<wbr>service_<wbr>filter</a>
@@ -2866,16 +2640,13 @@ good, bad, or total service filter must be defined (where
 good + bad = total is assumed)
 Must have ValueType = DOUBLE or ValueType = INT64 and
 must have MetricKind = DELTA or MetricKind = CUMULATIVE.
-{{% /md %}}</dd>
-</dl>
+{{% /md %}}</dd></dl>
 {{% /choosable %}}
 
 <h4 id="slowindowsbasedsli">Slo<wbr>Windows<wbr>Based<wbr>Sli</h4>
 
 {{% choosable language csharp %}}
-<dl class="resources-properties">
-
-    <dt class="property-optional"
+<dl class="resources-properties"><dt class="property-optional"
             title="Optional">
         <span id="goodbadmetricfilter_csharp">
 <a href="#goodbadmetricfilter_csharp" style="color: inherit; text-decoration: inherit;">Good<wbr>Bad<wbr>Metric<wbr>Filter</a>
@@ -2888,8 +2659,7 @@ with ValueType = BOOL. The window is good if any true values
 appear in the window. One of `good_bad_metric_filter`,
 `good_total_ratio_threshold`, `metric_mean_in_range`,
 `metric_sum_in_range` must be set for `windows_based_sli`.
-{{% /md %}}</dd>
-    <dt class="property-optional"
+{{% /md %}}</dd><dt class="property-optional"
             title="Optional">
         <span id="goodtotalratiothreshold_csharp">
 <a href="#goodtotalratiothreshold_csharp" style="color: inherit; text-decoration: inherit;">Good<wbr>Total<wbr>Ratio<wbr>Threshold</a>
@@ -2902,8 +2672,7 @@ high enough. One of `good_bad_metric_filter`,
 `good_total_ratio_threshold`, `metric_mean_in_range`,
 `metric_sum_in_range` must be set for `windows_based_sli`.
 Structure is documented below.
-{{% /md %}}</dd>
-    <dt class="property-optional"
+{{% /md %}}</dd><dt class="property-optional"
             title="Optional">
         <span id="metricmeaninrange_csharp">
 <a href="#metricmeaninrange_csharp" style="color: inherit; text-decoration: inherit;">Metric<wbr>Mean<wbr>In<wbr>Range</a>
@@ -2919,8 +2688,7 @@ One of `good_bad_metric_filter`,
 Average value X of `time_series` should satisfy
 `range.min <= X < range.max` for a good window.
 Structure is documented below.
-{{% /md %}}</dd>
-    <dt class="property-optional"
+{{% /md %}}</dd><dt class="property-optional"
             title="Optional">
         <span id="metricsuminrange_csharp">
 <a href="#metricsuminrange_csharp" style="color: inherit; text-decoration: inherit;">Metric<wbr>Sum<wbr>In<wbr>Range</a>
@@ -2936,8 +2704,7 @@ One of `good_bad_metric_filter`,
 `good_total_ratio_threshold`, `metric_mean_in_range`,
 `metric_sum_in_range` must be set for `windows_based_sli`.
 Structure is documented below.
-{{% /md %}}</dd>
-    <dt class="property-optional"
+{{% /md %}}</dd><dt class="property-optional"
             title="Optional">
         <span id="windowperiod_csharp">
 <a href="#windowperiod_csharp" style="color: inherit; text-decoration: inherit;">Window<wbr>Period</a>
@@ -2948,14 +2715,11 @@ Structure is documented below.
     <dd>{{% md %}}Duration over which window quality is evaluated, given as a
 duration string "{X}s" representing X seconds. Must be an
 integer fraction of a day and at least 60s.
-{{% /md %}}</dd>
-</dl>
+{{% /md %}}</dd></dl>
 {{% /choosable %}}
 
 {{% choosable language go %}}
-<dl class="resources-properties">
-
-    <dt class="property-optional"
+<dl class="resources-properties"><dt class="property-optional"
             title="Optional">
         <span id="goodbadmetricfilter_go">
 <a href="#goodbadmetricfilter_go" style="color: inherit; text-decoration: inherit;">Good<wbr>Bad<wbr>Metric<wbr>Filter</a>
@@ -2968,8 +2732,7 @@ with ValueType = BOOL. The window is good if any true values
 appear in the window. One of `good_bad_metric_filter`,
 `good_total_ratio_threshold`, `metric_mean_in_range`,
 `metric_sum_in_range` must be set for `windows_based_sli`.
-{{% /md %}}</dd>
-    <dt class="property-optional"
+{{% /md %}}</dd><dt class="property-optional"
             title="Optional">
         <span id="goodtotalratiothreshold_go">
 <a href="#goodtotalratiothreshold_go" style="color: inherit; text-decoration: inherit;">Good<wbr>Total<wbr>Ratio<wbr>Threshold</a>
@@ -2982,8 +2745,7 @@ high enough. One of `good_bad_metric_filter`,
 `good_total_ratio_threshold`, `metric_mean_in_range`,
 `metric_sum_in_range` must be set for `windows_based_sli`.
 Structure is documented below.
-{{% /md %}}</dd>
-    <dt class="property-optional"
+{{% /md %}}</dd><dt class="property-optional"
             title="Optional">
         <span id="metricmeaninrange_go">
 <a href="#metricmeaninrange_go" style="color: inherit; text-decoration: inherit;">Metric<wbr>Mean<wbr>In<wbr>Range</a>
@@ -2999,8 +2761,7 @@ One of `good_bad_metric_filter`,
 Average value X of `time_series` should satisfy
 `range.min <= X < range.max` for a good window.
 Structure is documented below.
-{{% /md %}}</dd>
-    <dt class="property-optional"
+{{% /md %}}</dd><dt class="property-optional"
             title="Optional">
         <span id="metricsuminrange_go">
 <a href="#metricsuminrange_go" style="color: inherit; text-decoration: inherit;">Metric<wbr>Sum<wbr>In<wbr>Range</a>
@@ -3016,8 +2777,7 @@ One of `good_bad_metric_filter`,
 `good_total_ratio_threshold`, `metric_mean_in_range`,
 `metric_sum_in_range` must be set for `windows_based_sli`.
 Structure is documented below.
-{{% /md %}}</dd>
-    <dt class="property-optional"
+{{% /md %}}</dd><dt class="property-optional"
             title="Optional">
         <span id="windowperiod_go">
 <a href="#windowperiod_go" style="color: inherit; text-decoration: inherit;">Window<wbr>Period</a>
@@ -3028,14 +2788,11 @@ Structure is documented below.
     <dd>{{% md %}}Duration over which window quality is evaluated, given as a
 duration string "{X}s" representing X seconds. Must be an
 integer fraction of a day and at least 60s.
-{{% /md %}}</dd>
-</dl>
+{{% /md %}}</dd></dl>
 {{% /choosable %}}
 
 {{% choosable language nodejs %}}
-<dl class="resources-properties">
-
-    <dt class="property-optional"
+<dl class="resources-properties"><dt class="property-optional"
             title="Optional">
         <span id="goodbadmetricfilter_nodejs">
 <a href="#goodbadmetricfilter_nodejs" style="color: inherit; text-decoration: inherit;">good<wbr>Bad<wbr>Metric<wbr>Filter</a>
@@ -3048,8 +2805,7 @@ with ValueType = BOOL. The window is good if any true values
 appear in the window. One of `good_bad_metric_filter`,
 `good_total_ratio_threshold`, `metric_mean_in_range`,
 `metric_sum_in_range` must be set for `windows_based_sli`.
-{{% /md %}}</dd>
-    <dt class="property-optional"
+{{% /md %}}</dd><dt class="property-optional"
             title="Optional">
         <span id="goodtotalratiothreshold_nodejs">
 <a href="#goodtotalratiothreshold_nodejs" style="color: inherit; text-decoration: inherit;">good<wbr>Total<wbr>Ratio<wbr>Threshold</a>
@@ -3062,8 +2818,7 @@ high enough. One of `good_bad_metric_filter`,
 `good_total_ratio_threshold`, `metric_mean_in_range`,
 `metric_sum_in_range` must be set for `windows_based_sli`.
 Structure is documented below.
-{{% /md %}}</dd>
-    <dt class="property-optional"
+{{% /md %}}</dd><dt class="property-optional"
             title="Optional">
         <span id="metricmeaninrange_nodejs">
 <a href="#metricmeaninrange_nodejs" style="color: inherit; text-decoration: inherit;">metric<wbr>Mean<wbr>In<wbr>Range</a>
@@ -3079,8 +2834,7 @@ One of `good_bad_metric_filter`,
 Average value X of `time_series` should satisfy
 `range.min <= X < range.max` for a good window.
 Structure is documented below.
-{{% /md %}}</dd>
-    <dt class="property-optional"
+{{% /md %}}</dd><dt class="property-optional"
             title="Optional">
         <span id="metricsuminrange_nodejs">
 <a href="#metricsuminrange_nodejs" style="color: inherit; text-decoration: inherit;">metric<wbr>Sum<wbr>In<wbr>Range</a>
@@ -3096,8 +2850,7 @@ One of `good_bad_metric_filter`,
 `good_total_ratio_threshold`, `metric_mean_in_range`,
 `metric_sum_in_range` must be set for `windows_based_sli`.
 Structure is documented below.
-{{% /md %}}</dd>
-    <dt class="property-optional"
+{{% /md %}}</dd><dt class="property-optional"
             title="Optional">
         <span id="windowperiod_nodejs">
 <a href="#windowperiod_nodejs" style="color: inherit; text-decoration: inherit;">window<wbr>Period</a>
@@ -3108,14 +2861,11 @@ Structure is documented below.
     <dd>{{% md %}}Duration over which window quality is evaluated, given as a
 duration string "{X}s" representing X seconds. Must be an
 integer fraction of a day and at least 60s.
-{{% /md %}}</dd>
-</dl>
+{{% /md %}}</dd></dl>
 {{% /choosable %}}
 
 {{% choosable language python %}}
-<dl class="resources-properties">
-
-    <dt class="property-optional"
+<dl class="resources-properties"><dt class="property-optional"
             title="Optional">
         <span id="good_bad_metric_filter_python">
 <a href="#good_bad_metric_filter_python" style="color: inherit; text-decoration: inherit;">good_<wbr>bad_<wbr>metric_<wbr>filter</a>
@@ -3128,8 +2878,7 @@ with ValueType = BOOL. The window is good if any true values
 appear in the window. One of `good_bad_metric_filter`,
 `good_total_ratio_threshold`, `metric_mean_in_range`,
 `metric_sum_in_range` must be set for `windows_based_sli`.
-{{% /md %}}</dd>
-    <dt class="property-optional"
+{{% /md %}}</dd><dt class="property-optional"
             title="Optional">
         <span id="good_total_ratio_threshold_python">
 <a href="#good_total_ratio_threshold_python" style="color: inherit; text-decoration: inherit;">good_<wbr>total_<wbr>ratio_<wbr>threshold</a>
@@ -3142,8 +2891,7 @@ high enough. One of `good_bad_metric_filter`,
 `good_total_ratio_threshold`, `metric_mean_in_range`,
 `metric_sum_in_range` must be set for `windows_based_sli`.
 Structure is documented below.
-{{% /md %}}</dd>
-    <dt class="property-optional"
+{{% /md %}}</dd><dt class="property-optional"
             title="Optional">
         <span id="metric_mean_in_range_python">
 <a href="#metric_mean_in_range_python" style="color: inherit; text-decoration: inherit;">metric_<wbr>mean_<wbr>in_<wbr>range</a>
@@ -3159,8 +2907,7 @@ One of `good_bad_metric_filter`,
 Average value X of `time_series` should satisfy
 `range.min <= X < range.max` for a good window.
 Structure is documented below.
-{{% /md %}}</dd>
-    <dt class="property-optional"
+{{% /md %}}</dd><dt class="property-optional"
             title="Optional">
         <span id="metric_sum_in_range_python">
 <a href="#metric_sum_in_range_python" style="color: inherit; text-decoration: inherit;">metric_<wbr>sum_<wbr>in_<wbr>range</a>
@@ -3176,8 +2923,7 @@ One of `good_bad_metric_filter`,
 `good_total_ratio_threshold`, `metric_mean_in_range`,
 `metric_sum_in_range` must be set for `windows_based_sli`.
 Structure is documented below.
-{{% /md %}}</dd>
-    <dt class="property-optional"
+{{% /md %}}</dd><dt class="property-optional"
             title="Optional">
         <span id="window_period_python">
 <a href="#window_period_python" style="color: inherit; text-decoration: inherit;">window_<wbr>period</a>
@@ -3188,16 +2934,13 @@ Structure is documented below.
     <dd>{{% md %}}Duration over which window quality is evaluated, given as a
 duration string "{X}s" representing X seconds. Must be an
 integer fraction of a day and at least 60s.
-{{% /md %}}</dd>
-</dl>
+{{% /md %}}</dd></dl>
 {{% /choosable %}}
 
 <h4 id="slowindowsbasedsligoodtotalratiothreshold">Slo<wbr>Windows<wbr>Based<wbr>Sli<wbr>Good<wbr>Total<wbr>Ratio<wbr>Threshold</h4>
 
 {{% choosable language csharp %}}
-<dl class="resources-properties">
-
-    <dt class="property-optional"
+<dl class="resources-properties"><dt class="property-optional"
             title="Optional">
         <span id="basicsliperformance_csharp">
 <a href="#basicsliperformance_csharp" style="color: inherit; text-decoration: inherit;">Basic<wbr>Sli<wbr>Performance</a>
@@ -3207,8 +2950,7 @@ integer fraction of a day and at least 60s.
     </dt>
     <dd>{{% md %}}Basic SLI to evaluate to judge window quality.
 Structure is documented below.
-{{% /md %}}</dd>
-    <dt class="property-optional"
+{{% /md %}}</dd><dt class="property-optional"
             title="Optional">
         <span id="performance_csharp">
 <a href="#performance_csharp" style="color: inherit; text-decoration: inherit;">Performance</a>
@@ -3218,8 +2960,7 @@ Structure is documented below.
     </dt>
     <dd>{{% md %}}Request-based SLI to evaluate to judge window quality.
 Structure is documented below.
-{{% /md %}}</dd>
-    <dt class="property-optional"
+{{% /md %}}</dd><dt class="property-optional"
             title="Optional">
         <span id="threshold_csharp">
 <a href="#threshold_csharp" style="color: inherit; text-decoration: inherit;">Threshold</a>
@@ -3230,14 +2971,11 @@ Structure is documented below.
     <dd>{{% md %}}A duration string, e.g. 10s.
 Good service is defined to be the count of requests made to
 this service that return in no more than threshold.
-{{% /md %}}</dd>
-</dl>
+{{% /md %}}</dd></dl>
 {{% /choosable %}}
 
 {{% choosable language go %}}
-<dl class="resources-properties">
-
-    <dt class="property-optional"
+<dl class="resources-properties"><dt class="property-optional"
             title="Optional">
         <span id="basicsliperformance_go">
 <a href="#basicsliperformance_go" style="color: inherit; text-decoration: inherit;">Basic<wbr>Sli<wbr>Performance</a>
@@ -3247,8 +2985,7 @@ this service that return in no more than threshold.
     </dt>
     <dd>{{% md %}}Basic SLI to evaluate to judge window quality.
 Structure is documented below.
-{{% /md %}}</dd>
-    <dt class="property-optional"
+{{% /md %}}</dd><dt class="property-optional"
             title="Optional">
         <span id="performance_go">
 <a href="#performance_go" style="color: inherit; text-decoration: inherit;">Performance</a>
@@ -3258,8 +2995,7 @@ Structure is documented below.
     </dt>
     <dd>{{% md %}}Request-based SLI to evaluate to judge window quality.
 Structure is documented below.
-{{% /md %}}</dd>
-    <dt class="property-optional"
+{{% /md %}}</dd><dt class="property-optional"
             title="Optional">
         <span id="threshold_go">
 <a href="#threshold_go" style="color: inherit; text-decoration: inherit;">Threshold</a>
@@ -3270,14 +3006,11 @@ Structure is documented below.
     <dd>{{% md %}}A duration string, e.g. 10s.
 Good service is defined to be the count of requests made to
 this service that return in no more than threshold.
-{{% /md %}}</dd>
-</dl>
+{{% /md %}}</dd></dl>
 {{% /choosable %}}
 
 {{% choosable language nodejs %}}
-<dl class="resources-properties">
-
-    <dt class="property-optional"
+<dl class="resources-properties"><dt class="property-optional"
             title="Optional">
         <span id="basicsliperformance_nodejs">
 <a href="#basicsliperformance_nodejs" style="color: inherit; text-decoration: inherit;">basic<wbr>Sli<wbr>Performance</a>
@@ -3287,8 +3020,7 @@ this service that return in no more than threshold.
     </dt>
     <dd>{{% md %}}Basic SLI to evaluate to judge window quality.
 Structure is documented below.
-{{% /md %}}</dd>
-    <dt class="property-optional"
+{{% /md %}}</dd><dt class="property-optional"
             title="Optional">
         <span id="performance_nodejs">
 <a href="#performance_nodejs" style="color: inherit; text-decoration: inherit;">performance</a>
@@ -3298,8 +3030,7 @@ Structure is documented below.
     </dt>
     <dd>{{% md %}}Request-based SLI to evaluate to judge window quality.
 Structure is documented below.
-{{% /md %}}</dd>
-    <dt class="property-optional"
+{{% /md %}}</dd><dt class="property-optional"
             title="Optional">
         <span id="threshold_nodejs">
 <a href="#threshold_nodejs" style="color: inherit; text-decoration: inherit;">threshold</a>
@@ -3310,14 +3041,11 @@ Structure is documented below.
     <dd>{{% md %}}A duration string, e.g. 10s.
 Good service is defined to be the count of requests made to
 this service that return in no more than threshold.
-{{% /md %}}</dd>
-</dl>
+{{% /md %}}</dd></dl>
 {{% /choosable %}}
 
 {{% choosable language python %}}
-<dl class="resources-properties">
-
-    <dt class="property-optional"
+<dl class="resources-properties"><dt class="property-optional"
             title="Optional">
         <span id="basic_sli_performance_python">
 <a href="#basic_sli_performance_python" style="color: inherit; text-decoration: inherit;">basic_<wbr>sli_<wbr>performance</a>
@@ -3327,8 +3055,7 @@ this service that return in no more than threshold.
     </dt>
     <dd>{{% md %}}Basic SLI to evaluate to judge window quality.
 Structure is documented below.
-{{% /md %}}</dd>
-    <dt class="property-optional"
+{{% /md %}}</dd><dt class="property-optional"
             title="Optional">
         <span id="performance_python">
 <a href="#performance_python" style="color: inherit; text-decoration: inherit;">performance</a>
@@ -3338,8 +3065,7 @@ Structure is documented below.
     </dt>
     <dd>{{% md %}}Request-based SLI to evaluate to judge window quality.
 Structure is documented below.
-{{% /md %}}</dd>
-    <dt class="property-optional"
+{{% /md %}}</dd><dt class="property-optional"
             title="Optional">
         <span id="threshold_python">
 <a href="#threshold_python" style="color: inherit; text-decoration: inherit;">threshold</a>
@@ -3350,16 +3076,13 @@ Structure is documented below.
     <dd>{{% md %}}A duration string, e.g. 10s.
 Good service is defined to be the count of requests made to
 this service that return in no more than threshold.
-{{% /md %}}</dd>
-</dl>
+{{% /md %}}</dd></dl>
 {{% /choosable %}}
 
 <h4 id="slowindowsbasedsligoodtotalratiothresholdbasicsliperformance">Slo<wbr>Windows<wbr>Based<wbr>Sli<wbr>Good<wbr>Total<wbr>Ratio<wbr>Threshold<wbr>Basic<wbr>Sli<wbr>Performance</h4>
 
 {{% choosable language csharp %}}
-<dl class="resources-properties">
-
-    <dt class="property-required"
+<dl class="resources-properties"><dt class="property-required"
             title="Required">
         <span id="latency_csharp">
 <a href="#latency_csharp" style="color: inherit; text-decoration: inherit;">Latency</a>
@@ -3369,8 +3092,7 @@ this service that return in no more than threshold.
     </dt>
     <dd>{{% md %}}Parameters for a latency threshold SLI.
 Structure is documented below.
-{{% /md %}}</dd>
-    <dt class="property-optional"
+{{% /md %}}</dd><dt class="property-optional"
             title="Optional">
         <span id="locations_csharp">
 <a href="#locations_csharp" style="color: inherit; text-decoration: inherit;">Locations</a>
@@ -3384,8 +3106,7 @@ performance for this SLI. If omitted, this SLI applies to all
 locations in which the Service has activity. For service types
 that don't support breaking down by location, setting this
 field will result in an error.
-{{% /md %}}</dd>
-    <dt class="property-optional"
+{{% /md %}}</dd><dt class="property-optional"
             title="Optional">
         <span id="methods_csharp">
 <a href="#methods_csharp" style="color: inherit; text-decoration: inherit;">Methods</a>
@@ -3399,8 +3120,7 @@ performance for this SLI. If omitted, this SLI applies to all
 the Service's methods. For service types that don't support
 breaking down by method, setting this field will result in an
 error.
-{{% /md %}}</dd>
-    <dt class="property-optional"
+{{% /md %}}</dd><dt class="property-optional"
             title="Optional">
         <span id="versions_csharp">
 <a href="#versions_csharp" style="color: inherit; text-decoration: inherit;">Versions</a>
@@ -3414,14 +3134,11 @@ calculate performance for this SLI. If omitted,
 this SLI applies to all API versions. For service types
 that don't support breaking down by version, setting this
 field will result in an error.
-{{% /md %}}</dd>
-</dl>
+{{% /md %}}</dd></dl>
 {{% /choosable %}}
 
 {{% choosable language go %}}
-<dl class="resources-properties">
-
-    <dt class="property-required"
+<dl class="resources-properties"><dt class="property-required"
             title="Required">
         <span id="latency_go">
 <a href="#latency_go" style="color: inherit; text-decoration: inherit;">Latency</a>
@@ -3431,8 +3148,7 @@ field will result in an error.
     </dt>
     <dd>{{% md %}}Parameters for a latency threshold SLI.
 Structure is documented below.
-{{% /md %}}</dd>
-    <dt class="property-optional"
+{{% /md %}}</dd><dt class="property-optional"
             title="Optional">
         <span id="locations_go">
 <a href="#locations_go" style="color: inherit; text-decoration: inherit;">Locations</a>
@@ -3446,8 +3162,7 @@ performance for this SLI. If omitted, this SLI applies to all
 locations in which the Service has activity. For service types
 that don't support breaking down by location, setting this
 field will result in an error.
-{{% /md %}}</dd>
-    <dt class="property-optional"
+{{% /md %}}</dd><dt class="property-optional"
             title="Optional">
         <span id="methods_go">
 <a href="#methods_go" style="color: inherit; text-decoration: inherit;">Methods</a>
@@ -3461,8 +3176,7 @@ performance for this SLI. If omitted, this SLI applies to all
 the Service's methods. For service types that don't support
 breaking down by method, setting this field will result in an
 error.
-{{% /md %}}</dd>
-    <dt class="property-optional"
+{{% /md %}}</dd><dt class="property-optional"
             title="Optional">
         <span id="versions_go">
 <a href="#versions_go" style="color: inherit; text-decoration: inherit;">Versions</a>
@@ -3476,14 +3190,11 @@ calculate performance for this SLI. If omitted,
 this SLI applies to all API versions. For service types
 that don't support breaking down by version, setting this
 field will result in an error.
-{{% /md %}}</dd>
-</dl>
+{{% /md %}}</dd></dl>
 {{% /choosable %}}
 
 {{% choosable language nodejs %}}
-<dl class="resources-properties">
-
-    <dt class="property-required"
+<dl class="resources-properties"><dt class="property-required"
             title="Required">
         <span id="latency_nodejs">
 <a href="#latency_nodejs" style="color: inherit; text-decoration: inherit;">latency</a>
@@ -3493,8 +3204,7 @@ field will result in an error.
     </dt>
     <dd>{{% md %}}Parameters for a latency threshold SLI.
 Structure is documented below.
-{{% /md %}}</dd>
-    <dt class="property-optional"
+{{% /md %}}</dd><dt class="property-optional"
             title="Optional">
         <span id="locations_nodejs">
 <a href="#locations_nodejs" style="color: inherit; text-decoration: inherit;">locations</a>
@@ -3508,8 +3218,7 @@ performance for this SLI. If omitted, this SLI applies to all
 locations in which the Service has activity. For service types
 that don't support breaking down by location, setting this
 field will result in an error.
-{{% /md %}}</dd>
-    <dt class="property-optional"
+{{% /md %}}</dd><dt class="property-optional"
             title="Optional">
         <span id="methods_nodejs">
 <a href="#methods_nodejs" style="color: inherit; text-decoration: inherit;">methods</a>
@@ -3523,8 +3232,7 @@ performance for this SLI. If omitted, this SLI applies to all
 the Service's methods. For service types that don't support
 breaking down by method, setting this field will result in an
 error.
-{{% /md %}}</dd>
-    <dt class="property-optional"
+{{% /md %}}</dd><dt class="property-optional"
             title="Optional">
         <span id="versions_nodejs">
 <a href="#versions_nodejs" style="color: inherit; text-decoration: inherit;">versions</a>
@@ -3538,14 +3246,11 @@ calculate performance for this SLI. If omitted,
 this SLI applies to all API versions. For service types
 that don't support breaking down by version, setting this
 field will result in an error.
-{{% /md %}}</dd>
-</dl>
+{{% /md %}}</dd></dl>
 {{% /choosable %}}
 
 {{% choosable language python %}}
-<dl class="resources-properties">
-
-    <dt class="property-required"
+<dl class="resources-properties"><dt class="property-required"
             title="Required">
         <span id="latency_python">
 <a href="#latency_python" style="color: inherit; text-decoration: inherit;">latency</a>
@@ -3555,8 +3260,7 @@ field will result in an error.
     </dt>
     <dd>{{% md %}}Parameters for a latency threshold SLI.
 Structure is documented below.
-{{% /md %}}</dd>
-    <dt class="property-optional"
+{{% /md %}}</dd><dt class="property-optional"
             title="Optional">
         <span id="locations_python">
 <a href="#locations_python" style="color: inherit; text-decoration: inherit;">locations</a>
@@ -3570,8 +3274,7 @@ performance for this SLI. If omitted, this SLI applies to all
 locations in which the Service has activity. For service types
 that don't support breaking down by location, setting this
 field will result in an error.
-{{% /md %}}</dd>
-    <dt class="property-optional"
+{{% /md %}}</dd><dt class="property-optional"
             title="Optional">
         <span id="methods_python">
 <a href="#methods_python" style="color: inherit; text-decoration: inherit;">methods</a>
@@ -3585,8 +3288,7 @@ performance for this SLI. If omitted, this SLI applies to all
 the Service's methods. For service types that don't support
 breaking down by method, setting this field will result in an
 error.
-{{% /md %}}</dd>
-    <dt class="property-optional"
+{{% /md %}}</dd><dt class="property-optional"
             title="Optional">
         <span id="versions_python">
 <a href="#versions_python" style="color: inherit; text-decoration: inherit;">versions</a>
@@ -3600,16 +3302,13 @@ calculate performance for this SLI. If omitted,
 this SLI applies to all API versions. For service types
 that don't support breaking down by version, setting this
 field will result in an error.
-{{% /md %}}</dd>
-</dl>
+{{% /md %}}</dd></dl>
 {{% /choosable %}}
 
 <h4 id="slowindowsbasedsligoodtotalratiothresholdbasicsliperformancelatency">Slo<wbr>Windows<wbr>Based<wbr>Sli<wbr>Good<wbr>Total<wbr>Ratio<wbr>Threshold<wbr>Basic<wbr>Sli<wbr>Performance<wbr>Latency</h4>
 
 {{% choosable language csharp %}}
-<dl class="resources-properties">
-
-    <dt class="property-required"
+<dl class="resources-properties"><dt class="property-required"
             title="Required">
         <span id="threshold_csharp">
 <a href="#threshold_csharp" style="color: inherit; text-decoration: inherit;">Threshold</a>
@@ -3620,14 +3319,11 @@ field will result in an error.
     <dd>{{% md %}}A duration string, e.g. 10s.
 Good service is defined to be the count of requests made to
 this service that return in no more than threshold.
-{{% /md %}}</dd>
-</dl>
+{{% /md %}}</dd></dl>
 {{% /choosable %}}
 
 {{% choosable language go %}}
-<dl class="resources-properties">
-
-    <dt class="property-required"
+<dl class="resources-properties"><dt class="property-required"
             title="Required">
         <span id="threshold_go">
 <a href="#threshold_go" style="color: inherit; text-decoration: inherit;">Threshold</a>
@@ -3638,14 +3334,11 @@ this service that return in no more than threshold.
     <dd>{{% md %}}A duration string, e.g. 10s.
 Good service is defined to be the count of requests made to
 this service that return in no more than threshold.
-{{% /md %}}</dd>
-</dl>
+{{% /md %}}</dd></dl>
 {{% /choosable %}}
 
 {{% choosable language nodejs %}}
-<dl class="resources-properties">
-
-    <dt class="property-required"
+<dl class="resources-properties"><dt class="property-required"
             title="Required">
         <span id="threshold_nodejs">
 <a href="#threshold_nodejs" style="color: inherit; text-decoration: inherit;">threshold</a>
@@ -3656,14 +3349,11 @@ this service that return in no more than threshold.
     <dd>{{% md %}}A duration string, e.g. 10s.
 Good service is defined to be the count of requests made to
 this service that return in no more than threshold.
-{{% /md %}}</dd>
-</dl>
+{{% /md %}}</dd></dl>
 {{% /choosable %}}
 
 {{% choosable language python %}}
-<dl class="resources-properties">
-
-    <dt class="property-required"
+<dl class="resources-properties"><dt class="property-required"
             title="Required">
         <span id="threshold_python">
 <a href="#threshold_python" style="color: inherit; text-decoration: inherit;">threshold</a>
@@ -3674,16 +3364,13 @@ this service that return in no more than threshold.
     <dd>{{% md %}}A duration string, e.g. 10s.
 Good service is defined to be the count of requests made to
 this service that return in no more than threshold.
-{{% /md %}}</dd>
-</dl>
+{{% /md %}}</dd></dl>
 {{% /choosable %}}
 
 <h4 id="slowindowsbasedsligoodtotalratiothresholdperformance">Slo<wbr>Windows<wbr>Based<wbr>Sli<wbr>Good<wbr>Total<wbr>Ratio<wbr>Threshold<wbr>Performance</h4>
 
 {{% choosable language csharp %}}
-<dl class="resources-properties">
-
-    <dt class="property-optional"
+<dl class="resources-properties"><dt class="property-optional"
             title="Optional">
         <span id="distributioncut_csharp">
 <a href="#distributioncut_csharp" style="color: inherit; text-decoration: inherit;">Distribution<wbr>Cut</a>
@@ -3697,8 +3384,7 @@ total count of all values aggregated in the Distribution.
 Defines a distribution TimeSeries filter and thresholds used for
 measuring good service and total service.
 Structure is documented below.
-{{% /md %}}</dd>
-    <dt class="property-optional"
+{{% /md %}}</dd><dt class="property-optional"
             title="Optional">
         <span id="goodtotalratio_csharp">
 <a href="#goodtotalratio_csharp" style="color: inherit; text-decoration: inherit;">Good<wbr>Total<wbr>Ratio</a>
@@ -3712,14 +3398,11 @@ Must specify exactly two of good, bad, and total service filters.
 The relationship good_service + bad_service = total_service
 will be assumed.
 Structure is documented below.
-{{% /md %}}</dd>
-</dl>
+{{% /md %}}</dd></dl>
 {{% /choosable %}}
 
 {{% choosable language go %}}
-<dl class="resources-properties">
-
-    <dt class="property-optional"
+<dl class="resources-properties"><dt class="property-optional"
             title="Optional">
         <span id="distributioncut_go">
 <a href="#distributioncut_go" style="color: inherit; text-decoration: inherit;">Distribution<wbr>Cut</a>
@@ -3733,8 +3416,7 @@ total count of all values aggregated in the Distribution.
 Defines a distribution TimeSeries filter and thresholds used for
 measuring good service and total service.
 Structure is documented below.
-{{% /md %}}</dd>
-    <dt class="property-optional"
+{{% /md %}}</dd><dt class="property-optional"
             title="Optional">
         <span id="goodtotalratio_go">
 <a href="#goodtotalratio_go" style="color: inherit; text-decoration: inherit;">Good<wbr>Total<wbr>Ratio</a>
@@ -3748,14 +3430,11 @@ Must specify exactly two of good, bad, and total service filters.
 The relationship good_service + bad_service = total_service
 will be assumed.
 Structure is documented below.
-{{% /md %}}</dd>
-</dl>
+{{% /md %}}</dd></dl>
 {{% /choosable %}}
 
 {{% choosable language nodejs %}}
-<dl class="resources-properties">
-
-    <dt class="property-optional"
+<dl class="resources-properties"><dt class="property-optional"
             title="Optional">
         <span id="distributioncut_nodejs">
 <a href="#distributioncut_nodejs" style="color: inherit; text-decoration: inherit;">distribution<wbr>Cut</a>
@@ -3769,8 +3448,7 @@ total count of all values aggregated in the Distribution.
 Defines a distribution TimeSeries filter and thresholds used for
 measuring good service and total service.
 Structure is documented below.
-{{% /md %}}</dd>
-    <dt class="property-optional"
+{{% /md %}}</dd><dt class="property-optional"
             title="Optional">
         <span id="goodtotalratio_nodejs">
 <a href="#goodtotalratio_nodejs" style="color: inherit; text-decoration: inherit;">good<wbr>Total<wbr>Ratio</a>
@@ -3784,14 +3462,11 @@ Must specify exactly two of good, bad, and total service filters.
 The relationship good_service + bad_service = total_service
 will be assumed.
 Structure is documented below.
-{{% /md %}}</dd>
-</dl>
+{{% /md %}}</dd></dl>
 {{% /choosable %}}
 
 {{% choosable language python %}}
-<dl class="resources-properties">
-
-    <dt class="property-optional"
+<dl class="resources-properties"><dt class="property-optional"
             title="Optional">
         <span id="distribution_cut_python">
 <a href="#distribution_cut_python" style="color: inherit; text-decoration: inherit;">distribution_<wbr>cut</a>
@@ -3805,8 +3480,7 @@ total count of all values aggregated in the Distribution.
 Defines a distribution TimeSeries filter and thresholds used for
 measuring good service and total service.
 Structure is documented below.
-{{% /md %}}</dd>
-    <dt class="property-optional"
+{{% /md %}}</dd><dt class="property-optional"
             title="Optional">
         <span id="good_total_ratio_python">
 <a href="#good_total_ratio_python" style="color: inherit; text-decoration: inherit;">good_<wbr>total_<wbr>ratio</a>
@@ -3820,16 +3494,13 @@ Must specify exactly two of good, bad, and total service filters.
 The relationship good_service + bad_service = total_service
 will be assumed.
 Structure is documented below.
-{{% /md %}}</dd>
-</dl>
+{{% /md %}}</dd></dl>
 {{% /choosable %}}
 
 <h4 id="slowindowsbasedsligoodtotalratiothresholdperformancedistributioncut">Slo<wbr>Windows<wbr>Based<wbr>Sli<wbr>Good<wbr>Total<wbr>Ratio<wbr>Threshold<wbr>Performance<wbr>Distribution<wbr>Cut</h4>
 
 {{% choosable language csharp %}}
-<dl class="resources-properties">
-
-    <dt class="property-required"
+<dl class="resources-properties"><dt class="property-required"
             title="Required">
         <span id="distributionfilter_csharp">
 <a href="#distributionfilter_csharp" style="color: inherit; text-decoration: inherit;">Distribution<wbr>Filter</a>
@@ -3841,8 +3512,7 @@ Structure is documented below.
 aggregating values to quantify the good service provided.
 Must have ValueType = DISTRIBUTION and
 MetricKind = DELTA or MetricKind = CUMULATIVE.
-{{% /md %}}</dd>
-    <dt class="property-required"
+{{% /md %}}</dd><dt class="property-required"
             title="Required">
         <span id="range_csharp">
 <a href="#range_csharp" style="color: inherit; text-decoration: inherit;">Range</a>
@@ -3857,14 +3527,11 @@ exclusive of max. Open ranges can be defined by setting
 just one of min or max. Summed value `X` should satisfy
 `range.min <= X < range.max` for a good window.
 Structure is documented below.
-{{% /md %}}</dd>
-</dl>
+{{% /md %}}</dd></dl>
 {{% /choosable %}}
 
 {{% choosable language go %}}
-<dl class="resources-properties">
-
-    <dt class="property-required"
+<dl class="resources-properties"><dt class="property-required"
             title="Required">
         <span id="distributionfilter_go">
 <a href="#distributionfilter_go" style="color: inherit; text-decoration: inherit;">Distribution<wbr>Filter</a>
@@ -3876,8 +3543,7 @@ Structure is documented below.
 aggregating values to quantify the good service provided.
 Must have ValueType = DISTRIBUTION and
 MetricKind = DELTA or MetricKind = CUMULATIVE.
-{{% /md %}}</dd>
-    <dt class="property-required"
+{{% /md %}}</dd><dt class="property-required"
             title="Required">
         <span id="range_go">
 <a href="#range_go" style="color: inherit; text-decoration: inherit;">Range</a>
@@ -3892,14 +3558,11 @@ exclusive of max. Open ranges can be defined by setting
 just one of min or max. Summed value `X` should satisfy
 `range.min <= X < range.max` for a good window.
 Structure is documented below.
-{{% /md %}}</dd>
-</dl>
+{{% /md %}}</dd></dl>
 {{% /choosable %}}
 
 {{% choosable language nodejs %}}
-<dl class="resources-properties">
-
-    <dt class="property-required"
+<dl class="resources-properties"><dt class="property-required"
             title="Required">
         <span id="distributionfilter_nodejs">
 <a href="#distributionfilter_nodejs" style="color: inherit; text-decoration: inherit;">distribution<wbr>Filter</a>
@@ -3911,8 +3574,7 @@ Structure is documented below.
 aggregating values to quantify the good service provided.
 Must have ValueType = DISTRIBUTION and
 MetricKind = DELTA or MetricKind = CUMULATIVE.
-{{% /md %}}</dd>
-    <dt class="property-required"
+{{% /md %}}</dd><dt class="property-required"
             title="Required">
         <span id="range_nodejs">
 <a href="#range_nodejs" style="color: inherit; text-decoration: inherit;">range</a>
@@ -3927,14 +3589,11 @@ exclusive of max. Open ranges can be defined by setting
 just one of min or max. Summed value `X` should satisfy
 `range.min <= X < range.max` for a good window.
 Structure is documented below.
-{{% /md %}}</dd>
-</dl>
+{{% /md %}}</dd></dl>
 {{% /choosable %}}
 
 {{% choosable language python %}}
-<dl class="resources-properties">
-
-    <dt class="property-required"
+<dl class="resources-properties"><dt class="property-required"
             title="Required">
         <span id="distribution_filter_python">
 <a href="#distribution_filter_python" style="color: inherit; text-decoration: inherit;">distribution_<wbr>filter</a>
@@ -3946,8 +3605,7 @@ Structure is documented below.
 aggregating values to quantify the good service provided.
 Must have ValueType = DISTRIBUTION and
 MetricKind = DELTA or MetricKind = CUMULATIVE.
-{{% /md %}}</dd>
-    <dt class="property-required"
+{{% /md %}}</dd><dt class="property-required"
             title="Required">
         <span id="range_python">
 <a href="#range_python" style="color: inherit; text-decoration: inherit;">range</a>
@@ -3962,16 +3620,13 @@ exclusive of max. Open ranges can be defined by setting
 just one of min or max. Summed value `X` should satisfy
 `range.min <= X < range.max` for a good window.
 Structure is documented below.
-{{% /md %}}</dd>
-</dl>
+{{% /md %}}</dd></dl>
 {{% /choosable %}}
 
 <h4 id="slowindowsbasedsligoodtotalratiothresholdperformancedistributioncutrange">Slo<wbr>Windows<wbr>Based<wbr>Sli<wbr>Good<wbr>Total<wbr>Ratio<wbr>Threshold<wbr>Performance<wbr>Distribution<wbr>Cut<wbr>Range</h4>
 
 {{% choosable language csharp %}}
-<dl class="resources-properties">
-
-    <dt class="property-optional"
+<dl class="resources-properties"><dt class="property-optional"
             title="Optional">
         <span id="max_csharp">
 <a href="#max_csharp" style="color: inherit; text-decoration: inherit;">Max</a>
@@ -3982,8 +3637,7 @@ Structure is documented below.
     <dd>{{% md %}}max value for the range (inclusive). If not given,
 will be set to "infinity", defining an open range
 ">= range.min"
-{{% /md %}}</dd>
-    <dt class="property-optional"
+{{% /md %}}</dd><dt class="property-optional"
             title="Optional">
         <span id="min_csharp">
 <a href="#min_csharp" style="color: inherit; text-decoration: inherit;">Min</a>
@@ -3994,14 +3648,11 @@ will be set to "infinity", defining an open range
     <dd>{{% md %}}Min value for the range (inclusive). If not given,
 will be set to "-infinity", defining an open range
 "< range.max"
-{{% /md %}}</dd>
-</dl>
+{{% /md %}}</dd></dl>
 {{% /choosable %}}
 
 {{% choosable language go %}}
-<dl class="resources-properties">
-
-    <dt class="property-optional"
+<dl class="resources-properties"><dt class="property-optional"
             title="Optional">
         <span id="max_go">
 <a href="#max_go" style="color: inherit; text-decoration: inherit;">Max</a>
@@ -4012,8 +3663,7 @@ will be set to "-infinity", defining an open range
     <dd>{{% md %}}max value for the range (inclusive). If not given,
 will be set to "infinity", defining an open range
 ">= range.min"
-{{% /md %}}</dd>
-    <dt class="property-optional"
+{{% /md %}}</dd><dt class="property-optional"
             title="Optional">
         <span id="min_go">
 <a href="#min_go" style="color: inherit; text-decoration: inherit;">Min</a>
@@ -4024,14 +3674,11 @@ will be set to "infinity", defining an open range
     <dd>{{% md %}}Min value for the range (inclusive). If not given,
 will be set to "-infinity", defining an open range
 "< range.max"
-{{% /md %}}</dd>
-</dl>
+{{% /md %}}</dd></dl>
 {{% /choosable %}}
 
 {{% choosable language nodejs %}}
-<dl class="resources-properties">
-
-    <dt class="property-optional"
+<dl class="resources-properties"><dt class="property-optional"
             title="Optional">
         <span id="max_nodejs">
 <a href="#max_nodejs" style="color: inherit; text-decoration: inherit;">max</a>
@@ -4042,8 +3689,7 @@ will be set to "-infinity", defining an open range
     <dd>{{% md %}}max value for the range (inclusive). If not given,
 will be set to "infinity", defining an open range
 ">= range.min"
-{{% /md %}}</dd>
-    <dt class="property-optional"
+{{% /md %}}</dd><dt class="property-optional"
             title="Optional">
         <span id="min_nodejs">
 <a href="#min_nodejs" style="color: inherit; text-decoration: inherit;">min</a>
@@ -4054,14 +3700,11 @@ will be set to "infinity", defining an open range
     <dd>{{% md %}}Min value for the range (inclusive). If not given,
 will be set to "-infinity", defining an open range
 "< range.max"
-{{% /md %}}</dd>
-</dl>
+{{% /md %}}</dd></dl>
 {{% /choosable %}}
 
 {{% choosable language python %}}
-<dl class="resources-properties">
-
-    <dt class="property-optional"
+<dl class="resources-properties"><dt class="property-optional"
             title="Optional">
         <span id="max_python">
 <a href="#max_python" style="color: inherit; text-decoration: inherit;">max</a>
@@ -4072,8 +3715,7 @@ will be set to "-infinity", defining an open range
     <dd>{{% md %}}max value for the range (inclusive). If not given,
 will be set to "infinity", defining an open range
 ">= range.min"
-{{% /md %}}</dd>
-    <dt class="property-optional"
+{{% /md %}}</dd><dt class="property-optional"
             title="Optional">
         <span id="min_python">
 <a href="#min_python" style="color: inherit; text-decoration: inherit;">min</a>
@@ -4084,16 +3726,13 @@ will be set to "infinity", defining an open range
     <dd>{{% md %}}Min value for the range (inclusive). If not given,
 will be set to "-infinity", defining an open range
 "< range.max"
-{{% /md %}}</dd>
-</dl>
+{{% /md %}}</dd></dl>
 {{% /choosable %}}
 
 <h4 id="slowindowsbasedsligoodtotalratiothresholdperformancegoodtotalratio">Slo<wbr>Windows<wbr>Based<wbr>Sli<wbr>Good<wbr>Total<wbr>Ratio<wbr>Threshold<wbr>Performance<wbr>Good<wbr>Total<wbr>Ratio</h4>
 
 {{% choosable language csharp %}}
-<dl class="resources-properties">
-
-    <dt class="property-optional"
+<dl class="resources-properties"><dt class="property-optional"
             title="Optional">
         <span id="badservicefilter_csharp">
 <a href="#badservicefilter_csharp" style="color: inherit; text-decoration: inherit;">Bad<wbr>Service<wbr>Filter</a>
@@ -4109,8 +3748,7 @@ good, bad, or total service filter must be defined (where
 good + bad = total is assumed)
 Must have ValueType = DOUBLE or ValueType = INT64 and
 must have MetricKind = DELTA or MetricKind = CUMULATIVE.
-{{% /md %}}</dd>
-    <dt class="property-optional"
+{{% /md %}}</dd><dt class="property-optional"
             title="Optional">
         <span id="goodservicefilter_csharp">
 <a href="#goodservicefilter_csharp" style="color: inherit; text-decoration: inherit;">Good<wbr>Service<wbr>Filter</a>
@@ -4124,8 +3762,7 @@ good, bad, or total service filter must be defined (where
 good + bad = total is assumed)
 Must have ValueType = DOUBLE or ValueType = INT64 and
 must have MetricKind = DELTA or MetricKind = CUMULATIVE.
-{{% /md %}}</dd>
-    <dt class="property-optional"
+{{% /md %}}</dd><dt class="property-optional"
             title="Optional">
         <span id="totalservicefilter_csharp">
 <a href="#totalservicefilter_csharp" style="color: inherit; text-decoration: inherit;">Total<wbr>Service<wbr>Filter</a>
@@ -4139,14 +3776,11 @@ good, bad, or total service filter must be defined (where
 good + bad = total is assumed)
 Must have ValueType = DOUBLE or ValueType = INT64 and
 must have MetricKind = DELTA or MetricKind = CUMULATIVE.
-{{% /md %}}</dd>
-</dl>
+{{% /md %}}</dd></dl>
 {{% /choosable %}}
 
 {{% choosable language go %}}
-<dl class="resources-properties">
-
-    <dt class="property-optional"
+<dl class="resources-properties"><dt class="property-optional"
             title="Optional">
         <span id="badservicefilter_go">
 <a href="#badservicefilter_go" style="color: inherit; text-decoration: inherit;">Bad<wbr>Service<wbr>Filter</a>
@@ -4162,8 +3796,7 @@ good, bad, or total service filter must be defined (where
 good + bad = total is assumed)
 Must have ValueType = DOUBLE or ValueType = INT64 and
 must have MetricKind = DELTA or MetricKind = CUMULATIVE.
-{{% /md %}}</dd>
-    <dt class="property-optional"
+{{% /md %}}</dd><dt class="property-optional"
             title="Optional">
         <span id="goodservicefilter_go">
 <a href="#goodservicefilter_go" style="color: inherit; text-decoration: inherit;">Good<wbr>Service<wbr>Filter</a>
@@ -4177,8 +3810,7 @@ good, bad, or total service filter must be defined (where
 good + bad = total is assumed)
 Must have ValueType = DOUBLE or ValueType = INT64 and
 must have MetricKind = DELTA or MetricKind = CUMULATIVE.
-{{% /md %}}</dd>
-    <dt class="property-optional"
+{{% /md %}}</dd><dt class="property-optional"
             title="Optional">
         <span id="totalservicefilter_go">
 <a href="#totalservicefilter_go" style="color: inherit; text-decoration: inherit;">Total<wbr>Service<wbr>Filter</a>
@@ -4192,14 +3824,11 @@ good, bad, or total service filter must be defined (where
 good + bad = total is assumed)
 Must have ValueType = DOUBLE or ValueType = INT64 and
 must have MetricKind = DELTA or MetricKind = CUMULATIVE.
-{{% /md %}}</dd>
-</dl>
+{{% /md %}}</dd></dl>
 {{% /choosable %}}
 
 {{% choosable language nodejs %}}
-<dl class="resources-properties">
-
-    <dt class="property-optional"
+<dl class="resources-properties"><dt class="property-optional"
             title="Optional">
         <span id="badservicefilter_nodejs">
 <a href="#badservicefilter_nodejs" style="color: inherit; text-decoration: inherit;">bad<wbr>Service<wbr>Filter</a>
@@ -4215,8 +3844,7 @@ good, bad, or total service filter must be defined (where
 good + bad = total is assumed)
 Must have ValueType = DOUBLE or ValueType = INT64 and
 must have MetricKind = DELTA or MetricKind = CUMULATIVE.
-{{% /md %}}</dd>
-    <dt class="property-optional"
+{{% /md %}}</dd><dt class="property-optional"
             title="Optional">
         <span id="goodservicefilter_nodejs">
 <a href="#goodservicefilter_nodejs" style="color: inherit; text-decoration: inherit;">good<wbr>Service<wbr>Filter</a>
@@ -4230,8 +3858,7 @@ good, bad, or total service filter must be defined (where
 good + bad = total is assumed)
 Must have ValueType = DOUBLE or ValueType = INT64 and
 must have MetricKind = DELTA or MetricKind = CUMULATIVE.
-{{% /md %}}</dd>
-    <dt class="property-optional"
+{{% /md %}}</dd><dt class="property-optional"
             title="Optional">
         <span id="totalservicefilter_nodejs">
 <a href="#totalservicefilter_nodejs" style="color: inherit; text-decoration: inherit;">total<wbr>Service<wbr>Filter</a>
@@ -4245,14 +3872,11 @@ good, bad, or total service filter must be defined (where
 good + bad = total is assumed)
 Must have ValueType = DOUBLE or ValueType = INT64 and
 must have MetricKind = DELTA or MetricKind = CUMULATIVE.
-{{% /md %}}</dd>
-</dl>
+{{% /md %}}</dd></dl>
 {{% /choosable %}}
 
 {{% choosable language python %}}
-<dl class="resources-properties">
-
-    <dt class="property-optional"
+<dl class="resources-properties"><dt class="property-optional"
             title="Optional">
         <span id="bad_service_filter_python">
 <a href="#bad_service_filter_python" style="color: inherit; text-decoration: inherit;">bad_<wbr>service_<wbr>filter</a>
@@ -4268,8 +3892,7 @@ good, bad, or total service filter must be defined (where
 good + bad = total is assumed)
 Must have ValueType = DOUBLE or ValueType = INT64 and
 must have MetricKind = DELTA or MetricKind = CUMULATIVE.
-{{% /md %}}</dd>
-    <dt class="property-optional"
+{{% /md %}}</dd><dt class="property-optional"
             title="Optional">
         <span id="good_service_filter_python">
 <a href="#good_service_filter_python" style="color: inherit; text-decoration: inherit;">good_<wbr>service_<wbr>filter</a>
@@ -4283,8 +3906,7 @@ good, bad, or total service filter must be defined (where
 good + bad = total is assumed)
 Must have ValueType = DOUBLE or ValueType = INT64 and
 must have MetricKind = DELTA or MetricKind = CUMULATIVE.
-{{% /md %}}</dd>
-    <dt class="property-optional"
+{{% /md %}}</dd><dt class="property-optional"
             title="Optional">
         <span id="total_service_filter_python">
 <a href="#total_service_filter_python" style="color: inherit; text-decoration: inherit;">total_<wbr>service_<wbr>filter</a>
@@ -4298,16 +3920,13 @@ good, bad, or total service filter must be defined (where
 good + bad = total is assumed)
 Must have ValueType = DOUBLE or ValueType = INT64 and
 must have MetricKind = DELTA or MetricKind = CUMULATIVE.
-{{% /md %}}</dd>
-</dl>
+{{% /md %}}</dd></dl>
 {{% /choosable %}}
 
 <h4 id="slowindowsbasedslimetricmeaninrange">Slo<wbr>Windows<wbr>Based<wbr>Sli<wbr>Metric<wbr>Mean<wbr>In<wbr>Range</h4>
 
 {{% choosable language csharp %}}
-<dl class="resources-properties">
-
-    <dt class="property-required"
+<dl class="resources-properties"><dt class="property-required"
             title="Required">
         <span id="range_csharp">
 <a href="#range_csharp" style="color: inherit; text-decoration: inherit;">Range</a>
@@ -4322,8 +3941,7 @@ exclusive of max. Open ranges can be defined by setting
 just one of min or max. Summed value `X` should satisfy
 `range.min <= X < range.max` for a good window.
 Structure is documented below.
-{{% /md %}}</dd>
-    <dt class="property-required"
+{{% /md %}}</dd><dt class="property-required"
             title="Required">
         <span id="timeseries_csharp">
 <a href="#timeseries_csharp" style="color: inherit; text-decoration: inherit;">Time<wbr>Series</a>
@@ -4338,14 +3956,11 @@ ValueType = INT64 or ValueType = DOUBLE and
 MetricKind = GAUGE.
 Summed value `X` should satisfy
 `range.min <= X < range.max` for a good window.
-{{% /md %}}</dd>
-</dl>
+{{% /md %}}</dd></dl>
 {{% /choosable %}}
 
 {{% choosable language go %}}
-<dl class="resources-properties">
-
-    <dt class="property-required"
+<dl class="resources-properties"><dt class="property-required"
             title="Required">
         <span id="range_go">
 <a href="#range_go" style="color: inherit; text-decoration: inherit;">Range</a>
@@ -4360,8 +3975,7 @@ exclusive of max. Open ranges can be defined by setting
 just one of min or max. Summed value `X` should satisfy
 `range.min <= X < range.max` for a good window.
 Structure is documented below.
-{{% /md %}}</dd>
-    <dt class="property-required"
+{{% /md %}}</dd><dt class="property-required"
             title="Required">
         <span id="timeseries_go">
 <a href="#timeseries_go" style="color: inherit; text-decoration: inherit;">Time<wbr>Series</a>
@@ -4376,14 +3990,11 @@ ValueType = INT64 or ValueType = DOUBLE and
 MetricKind = GAUGE.
 Summed value `X` should satisfy
 `range.min <= X < range.max` for a good window.
-{{% /md %}}</dd>
-</dl>
+{{% /md %}}</dd></dl>
 {{% /choosable %}}
 
 {{% choosable language nodejs %}}
-<dl class="resources-properties">
-
-    <dt class="property-required"
+<dl class="resources-properties"><dt class="property-required"
             title="Required">
         <span id="range_nodejs">
 <a href="#range_nodejs" style="color: inherit; text-decoration: inherit;">range</a>
@@ -4398,8 +4009,7 @@ exclusive of max. Open ranges can be defined by setting
 just one of min or max. Summed value `X` should satisfy
 `range.min <= X < range.max` for a good window.
 Structure is documented below.
-{{% /md %}}</dd>
-    <dt class="property-required"
+{{% /md %}}</dd><dt class="property-required"
             title="Required">
         <span id="timeseries_nodejs">
 <a href="#timeseries_nodejs" style="color: inherit; text-decoration: inherit;">time<wbr>Series</a>
@@ -4414,14 +4024,11 @@ ValueType = INT64 or ValueType = DOUBLE and
 MetricKind = GAUGE.
 Summed value `X` should satisfy
 `range.min <= X < range.max` for a good window.
-{{% /md %}}</dd>
-</dl>
+{{% /md %}}</dd></dl>
 {{% /choosable %}}
 
 {{% choosable language python %}}
-<dl class="resources-properties">
-
-    <dt class="property-required"
+<dl class="resources-properties"><dt class="property-required"
             title="Required">
         <span id="range_python">
 <a href="#range_python" style="color: inherit; text-decoration: inherit;">range</a>
@@ -4436,8 +4043,7 @@ exclusive of max. Open ranges can be defined by setting
 just one of min or max. Summed value `X` should satisfy
 `range.min <= X < range.max` for a good window.
 Structure is documented below.
-{{% /md %}}</dd>
-    <dt class="property-required"
+{{% /md %}}</dd><dt class="property-required"
             title="Required">
         <span id="time_series_python">
 <a href="#time_series_python" style="color: inherit; text-decoration: inherit;">time_<wbr>series</a>
@@ -4452,16 +4058,13 @@ ValueType = INT64 or ValueType = DOUBLE and
 MetricKind = GAUGE.
 Summed value `X` should satisfy
 `range.min <= X < range.max` for a good window.
-{{% /md %}}</dd>
-</dl>
+{{% /md %}}</dd></dl>
 {{% /choosable %}}
 
 <h4 id="slowindowsbasedslimetricmeaninrangerange">Slo<wbr>Windows<wbr>Based<wbr>Sli<wbr>Metric<wbr>Mean<wbr>In<wbr>Range<wbr>Range</h4>
 
 {{% choosable language csharp %}}
-<dl class="resources-properties">
-
-    <dt class="property-optional"
+<dl class="resources-properties"><dt class="property-optional"
             title="Optional">
         <span id="max_csharp">
 <a href="#max_csharp" style="color: inherit; text-decoration: inherit;">Max</a>
@@ -4472,8 +4075,7 @@ Summed value `X` should satisfy
     <dd>{{% md %}}max value for the range (inclusive). If not given,
 will be set to "infinity", defining an open range
 ">= range.min"
-{{% /md %}}</dd>
-    <dt class="property-optional"
+{{% /md %}}</dd><dt class="property-optional"
             title="Optional">
         <span id="min_csharp">
 <a href="#min_csharp" style="color: inherit; text-decoration: inherit;">Min</a>
@@ -4484,14 +4086,11 @@ will be set to "infinity", defining an open range
     <dd>{{% md %}}Min value for the range (inclusive). If not given,
 will be set to "-infinity", defining an open range
 "< range.max"
-{{% /md %}}</dd>
-</dl>
+{{% /md %}}</dd></dl>
 {{% /choosable %}}
 
 {{% choosable language go %}}
-<dl class="resources-properties">
-
-    <dt class="property-optional"
+<dl class="resources-properties"><dt class="property-optional"
             title="Optional">
         <span id="max_go">
 <a href="#max_go" style="color: inherit; text-decoration: inherit;">Max</a>
@@ -4502,8 +4101,7 @@ will be set to "-infinity", defining an open range
     <dd>{{% md %}}max value for the range (inclusive). If not given,
 will be set to "infinity", defining an open range
 ">= range.min"
-{{% /md %}}</dd>
-    <dt class="property-optional"
+{{% /md %}}</dd><dt class="property-optional"
             title="Optional">
         <span id="min_go">
 <a href="#min_go" style="color: inherit; text-decoration: inherit;">Min</a>
@@ -4514,14 +4112,11 @@ will be set to "infinity", defining an open range
     <dd>{{% md %}}Min value for the range (inclusive). If not given,
 will be set to "-infinity", defining an open range
 "< range.max"
-{{% /md %}}</dd>
-</dl>
+{{% /md %}}</dd></dl>
 {{% /choosable %}}
 
 {{% choosable language nodejs %}}
-<dl class="resources-properties">
-
-    <dt class="property-optional"
+<dl class="resources-properties"><dt class="property-optional"
             title="Optional">
         <span id="max_nodejs">
 <a href="#max_nodejs" style="color: inherit; text-decoration: inherit;">max</a>
@@ -4532,8 +4127,7 @@ will be set to "-infinity", defining an open range
     <dd>{{% md %}}max value for the range (inclusive). If not given,
 will be set to "infinity", defining an open range
 ">= range.min"
-{{% /md %}}</dd>
-    <dt class="property-optional"
+{{% /md %}}</dd><dt class="property-optional"
             title="Optional">
         <span id="min_nodejs">
 <a href="#min_nodejs" style="color: inherit; text-decoration: inherit;">min</a>
@@ -4544,14 +4138,11 @@ will be set to "infinity", defining an open range
     <dd>{{% md %}}Min value for the range (inclusive). If not given,
 will be set to "-infinity", defining an open range
 "< range.max"
-{{% /md %}}</dd>
-</dl>
+{{% /md %}}</dd></dl>
 {{% /choosable %}}
 
 {{% choosable language python %}}
-<dl class="resources-properties">
-
-    <dt class="property-optional"
+<dl class="resources-properties"><dt class="property-optional"
             title="Optional">
         <span id="max_python">
 <a href="#max_python" style="color: inherit; text-decoration: inherit;">max</a>
@@ -4562,8 +4153,7 @@ will be set to "-infinity", defining an open range
     <dd>{{% md %}}max value for the range (inclusive). If not given,
 will be set to "infinity", defining an open range
 ">= range.min"
-{{% /md %}}</dd>
-    <dt class="property-optional"
+{{% /md %}}</dd><dt class="property-optional"
             title="Optional">
         <span id="min_python">
 <a href="#min_python" style="color: inherit; text-decoration: inherit;">min</a>
@@ -4574,16 +4164,13 @@ will be set to "infinity", defining an open range
     <dd>{{% md %}}Min value for the range (inclusive). If not given,
 will be set to "-infinity", defining an open range
 "< range.max"
-{{% /md %}}</dd>
-</dl>
+{{% /md %}}</dd></dl>
 {{% /choosable %}}
 
 <h4 id="slowindowsbasedslimetricsuminrange">Slo<wbr>Windows<wbr>Based<wbr>Sli<wbr>Metric<wbr>Sum<wbr>In<wbr>Range</h4>
 
 {{% choosable language csharp %}}
-<dl class="resources-properties">
-
-    <dt class="property-required"
+<dl class="resources-properties"><dt class="property-required"
             title="Required">
         <span id="range_csharp">
 <a href="#range_csharp" style="color: inherit; text-decoration: inherit;">Range</a>
@@ -4598,8 +4185,7 @@ exclusive of max. Open ranges can be defined by setting
 just one of min or max. Summed value `X` should satisfy
 `range.min <= X < range.max` for a good window.
 Structure is documented below.
-{{% /md %}}</dd>
-    <dt class="property-required"
+{{% /md %}}</dd><dt class="property-required"
             title="Required">
         <span id="timeseries_csharp">
 <a href="#timeseries_csharp" style="color: inherit; text-decoration: inherit;">Time<wbr>Series</a>
@@ -4614,14 +4200,11 @@ ValueType = INT64 or ValueType = DOUBLE and
 MetricKind = GAUGE.
 Summed value `X` should satisfy
 `range.min <= X < range.max` for a good window.
-{{% /md %}}</dd>
-</dl>
+{{% /md %}}</dd></dl>
 {{% /choosable %}}
 
 {{% choosable language go %}}
-<dl class="resources-properties">
-
-    <dt class="property-required"
+<dl class="resources-properties"><dt class="property-required"
             title="Required">
         <span id="range_go">
 <a href="#range_go" style="color: inherit; text-decoration: inherit;">Range</a>
@@ -4636,8 +4219,7 @@ exclusive of max. Open ranges can be defined by setting
 just one of min or max. Summed value `X` should satisfy
 `range.min <= X < range.max` for a good window.
 Structure is documented below.
-{{% /md %}}</dd>
-    <dt class="property-required"
+{{% /md %}}</dd><dt class="property-required"
             title="Required">
         <span id="timeseries_go">
 <a href="#timeseries_go" style="color: inherit; text-decoration: inherit;">Time<wbr>Series</a>
@@ -4652,14 +4234,11 @@ ValueType = INT64 or ValueType = DOUBLE and
 MetricKind = GAUGE.
 Summed value `X` should satisfy
 `range.min <= X < range.max` for a good window.
-{{% /md %}}</dd>
-</dl>
+{{% /md %}}</dd></dl>
 {{% /choosable %}}
 
 {{% choosable language nodejs %}}
-<dl class="resources-properties">
-
-    <dt class="property-required"
+<dl class="resources-properties"><dt class="property-required"
             title="Required">
         <span id="range_nodejs">
 <a href="#range_nodejs" style="color: inherit; text-decoration: inherit;">range</a>
@@ -4674,8 +4253,7 @@ exclusive of max. Open ranges can be defined by setting
 just one of min or max. Summed value `X` should satisfy
 `range.min <= X < range.max` for a good window.
 Structure is documented below.
-{{% /md %}}</dd>
-    <dt class="property-required"
+{{% /md %}}</dd><dt class="property-required"
             title="Required">
         <span id="timeseries_nodejs">
 <a href="#timeseries_nodejs" style="color: inherit; text-decoration: inherit;">time<wbr>Series</a>
@@ -4690,14 +4268,11 @@ ValueType = INT64 or ValueType = DOUBLE and
 MetricKind = GAUGE.
 Summed value `X` should satisfy
 `range.min <= X < range.max` for a good window.
-{{% /md %}}</dd>
-</dl>
+{{% /md %}}</dd></dl>
 {{% /choosable %}}
 
 {{% choosable language python %}}
-<dl class="resources-properties">
-
-    <dt class="property-required"
+<dl class="resources-properties"><dt class="property-required"
             title="Required">
         <span id="range_python">
 <a href="#range_python" style="color: inherit; text-decoration: inherit;">range</a>
@@ -4712,8 +4287,7 @@ exclusive of max. Open ranges can be defined by setting
 just one of min or max. Summed value `X` should satisfy
 `range.min <= X < range.max` for a good window.
 Structure is documented below.
-{{% /md %}}</dd>
-    <dt class="property-required"
+{{% /md %}}</dd><dt class="property-required"
             title="Required">
         <span id="time_series_python">
 <a href="#time_series_python" style="color: inherit; text-decoration: inherit;">time_<wbr>series</a>
@@ -4728,16 +4302,13 @@ ValueType = INT64 or ValueType = DOUBLE and
 MetricKind = GAUGE.
 Summed value `X` should satisfy
 `range.min <= X < range.max` for a good window.
-{{% /md %}}</dd>
-</dl>
+{{% /md %}}</dd></dl>
 {{% /choosable %}}
 
 <h4 id="slowindowsbasedslimetricsuminrangerange">Slo<wbr>Windows<wbr>Based<wbr>Sli<wbr>Metric<wbr>Sum<wbr>In<wbr>Range<wbr>Range</h4>
 
 {{% choosable language csharp %}}
-<dl class="resources-properties">
-
-    <dt class="property-optional"
+<dl class="resources-properties"><dt class="property-optional"
             title="Optional">
         <span id="max_csharp">
 <a href="#max_csharp" style="color: inherit; text-decoration: inherit;">Max</a>
@@ -4748,8 +4319,7 @@ Summed value `X` should satisfy
     <dd>{{% md %}}max value for the range (inclusive). If not given,
 will be set to "infinity", defining an open range
 ">= range.min"
-{{% /md %}}</dd>
-    <dt class="property-optional"
+{{% /md %}}</dd><dt class="property-optional"
             title="Optional">
         <span id="min_csharp">
 <a href="#min_csharp" style="color: inherit; text-decoration: inherit;">Min</a>
@@ -4760,14 +4330,11 @@ will be set to "infinity", defining an open range
     <dd>{{% md %}}Min value for the range (inclusive). If not given,
 will be set to "-infinity", defining an open range
 "< range.max"
-{{% /md %}}</dd>
-</dl>
+{{% /md %}}</dd></dl>
 {{% /choosable %}}
 
 {{% choosable language go %}}
-<dl class="resources-properties">
-
-    <dt class="property-optional"
+<dl class="resources-properties"><dt class="property-optional"
             title="Optional">
         <span id="max_go">
 <a href="#max_go" style="color: inherit; text-decoration: inherit;">Max</a>
@@ -4778,8 +4345,7 @@ will be set to "-infinity", defining an open range
     <dd>{{% md %}}max value for the range (inclusive). If not given,
 will be set to "infinity", defining an open range
 ">= range.min"
-{{% /md %}}</dd>
-    <dt class="property-optional"
+{{% /md %}}</dd><dt class="property-optional"
             title="Optional">
         <span id="min_go">
 <a href="#min_go" style="color: inherit; text-decoration: inherit;">Min</a>
@@ -4790,14 +4356,11 @@ will be set to "infinity", defining an open range
     <dd>{{% md %}}Min value for the range (inclusive). If not given,
 will be set to "-infinity", defining an open range
 "< range.max"
-{{% /md %}}</dd>
-</dl>
+{{% /md %}}</dd></dl>
 {{% /choosable %}}
 
 {{% choosable language nodejs %}}
-<dl class="resources-properties">
-
-    <dt class="property-optional"
+<dl class="resources-properties"><dt class="property-optional"
             title="Optional">
         <span id="max_nodejs">
 <a href="#max_nodejs" style="color: inherit; text-decoration: inherit;">max</a>
@@ -4808,8 +4371,7 @@ will be set to "-infinity", defining an open range
     <dd>{{% md %}}max value for the range (inclusive). If not given,
 will be set to "infinity", defining an open range
 ">= range.min"
-{{% /md %}}</dd>
-    <dt class="property-optional"
+{{% /md %}}</dd><dt class="property-optional"
             title="Optional">
         <span id="min_nodejs">
 <a href="#min_nodejs" style="color: inherit; text-decoration: inherit;">min</a>
@@ -4820,14 +4382,11 @@ will be set to "infinity", defining an open range
     <dd>{{% md %}}Min value for the range (inclusive). If not given,
 will be set to "-infinity", defining an open range
 "< range.max"
-{{% /md %}}</dd>
-</dl>
+{{% /md %}}</dd></dl>
 {{% /choosable %}}
 
 {{% choosable language python %}}
-<dl class="resources-properties">
-
-    <dt class="property-optional"
+<dl class="resources-properties"><dt class="property-optional"
             title="Optional">
         <span id="max_python">
 <a href="#max_python" style="color: inherit; text-decoration: inherit;">max</a>
@@ -4838,8 +4397,7 @@ will be set to "-infinity", defining an open range
     <dd>{{% md %}}max value for the range (inclusive). If not given,
 will be set to "infinity", defining an open range
 ">= range.min"
-{{% /md %}}</dd>
-    <dt class="property-optional"
+{{% /md %}}</dd><dt class="property-optional"
             title="Optional">
         <span id="min_python">
 <a href="#min_python" style="color: inherit; text-decoration: inherit;">min</a>
@@ -4850,8 +4408,7 @@ will be set to "infinity", defining an open range
     <dd>{{% md %}}Min value for the range (inclusive). If not given,
 will be set to "-infinity", defining an open range
 "< range.max"
-{{% /md %}}</dd>
-</dl>
+{{% /md %}}</dd></dl>
 {{% /choosable %}}
 ## Import
 
@@ -4872,6 +4429,6 @@ Slo can be imported using any of these accepted formats
 	<dt>License</dt>
 	<dd>Apache-2.0</dd>
 	<dt>Notes</dt>
-	<dd>This Pulumi package is based on the [`google-beta` Terraform Provider](https://github.com/hashicorp/terraform-provider-google-beta).</dd>
+	<dd>{{% md %}}This Pulumi package is based on the [`google-beta` Terraform Provider](https://github.com/hashicorp/terraform-provider-google-beta).{{% /md %}}</dd>
 </dl>
 

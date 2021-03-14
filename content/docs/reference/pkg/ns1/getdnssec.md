@@ -14,11 +14,17 @@ Provides DNSSEC details about a NS1 Zone.
 
 
 {{% examples %}}
+
 ## Example Usage
 
 {{< chooser language "typescript,python,go,csharp" / >}}
 
-{{% example csharp %}}
+
+
+
+
+{{< example csharp >}}
+
 ```csharp
 using Pulumi;
 using Ns1 = Pulumi.Ns1;
@@ -42,9 +48,12 @@ class MyStack : Stack
 }
 ```
 
-{{% /example %}}
 
-{{% example go %}}
+{{< /example >}}
+
+
+{{< example go >}}
+
 ```go
 package main
 
@@ -67,9 +76,12 @@ func main() {
 }
 ```
 
-{{% /example %}}
 
-{{% example python %}}
+{{< /example >}}
+
+
+{{< example python >}}
+
 ```python
 import pulumi
 import pulumi_ns1 as ns1
@@ -81,9 +93,12 @@ example_zone = ns1.Zone("exampleZone",
 example_dns_sec = example_zone.zone.apply(lambda zone: ns1.get_dns_sec(zone=zone))
 ```
 
-{{% /example %}}
 
-{{% example typescript %}}
+{{< /example >}}
+
+
+{{< example typescript >}}
+
 
 ```typescript
 import * as pulumi from "@pulumi/pulumi";
@@ -99,9 +114,16 @@ const exampleDNSSec = exampleZone.zone.apply(zone => ns1.getDNSSec({
 }, { async: true }));
 ```
 
-{{% /example %}}
+
+{{< /example >}}
+
+
+
+
 
 {{% /examples %}}
+
+
 
 
 ## Using getDNSSec {#using}
@@ -139,9 +161,7 @@ The following arguments are supported:
 
 
 {{% choosable language csharp %}}
-<dl class="resources-properties">
-
-    <dt class="property-required"
+<dl class="resources-properties"><dt class="property-required"
             title="Required">
         <span id="zone_csharp">
 <a href="#zone_csharp" style="color: inherit; text-decoration: inherit;">Zone</a>
@@ -150,14 +170,11 @@ The following arguments are supported:
         <span class="property-type">string</span>
     </dt>
     <dd>{{% md %}}The name of the zone to get DNSSEC details for.
-{{% /md %}}</dd>
-</dl>
+{{% /md %}}</dd></dl>
 {{% /choosable %}}
 
 {{% choosable language go %}}
-<dl class="resources-properties">
-
-    <dt class="property-required"
+<dl class="resources-properties"><dt class="property-required"
             title="Required">
         <span id="zone_go">
 <a href="#zone_go" style="color: inherit; text-decoration: inherit;">Zone</a>
@@ -166,14 +183,11 @@ The following arguments are supported:
         <span class="property-type">string</span>
     </dt>
     <dd>{{% md %}}The name of the zone to get DNSSEC details for.
-{{% /md %}}</dd>
-</dl>
+{{% /md %}}</dd></dl>
 {{% /choosable %}}
 
 {{% choosable language nodejs %}}
-<dl class="resources-properties">
-
-    <dt class="property-required"
+<dl class="resources-properties"><dt class="property-required"
             title="Required">
         <span id="zone_nodejs">
 <a href="#zone_nodejs" style="color: inherit; text-decoration: inherit;">zone</a>
@@ -182,14 +196,11 @@ The following arguments are supported:
         <span class="property-type">string</span>
     </dt>
     <dd>{{% md %}}The name of the zone to get DNSSEC details for.
-{{% /md %}}</dd>
-</dl>
+{{% /md %}}</dd></dl>
 {{% /choosable %}}
 
 {{% choosable language python %}}
-<dl class="resources-properties">
-
-    <dt class="property-required"
+<dl class="resources-properties"><dt class="property-required"
             title="Required">
         <span id="zone_python">
 <a href="#zone_python" style="color: inherit; text-decoration: inherit;">zone</a>
@@ -198,8 +209,7 @@ The following arguments are supported:
         <span class="property-type">str</span>
     </dt>
     <dd>{{% md %}}The name of the zone to get DNSSEC details for.
-{{% /md %}}</dd>
-</dl>
+{{% /md %}}</dd></dl>
 {{% /choosable %}}
 
 
@@ -212,9 +222,7 @@ The following output properties are available:
 
 
 {{% choosable language csharp %}}
-<dl class="resources-properties">
-
-    <dt class="property-"
+<dl class="resources-properties"><dt class="property-"
             title="">
         <span id="delegation_csharp">
 <a href="#delegation_csharp" style="color: inherit; text-decoration: inherit;">Delegation</a>
@@ -224,8 +232,7 @@ The following output properties are available:
     </dt>
     <dd>{{% md %}}(Computed) - Delegation field is documented
 below.
-{{% /md %}}</dd>
-    <dt class="property-"
+{{% /md %}}</dd><dt class="property-"
             title="">
         <span id="id_csharp">
 <a href="#id_csharp" style="color: inherit; text-decoration: inherit;">Id</a>
@@ -234,8 +241,7 @@ below.
         <span class="property-type">string</span>
     </dt>
     <dd>{{% md %}}The provider-assigned unique ID for this managed resource.
-{{% /md %}}</dd>
-    <dt class="property-"
+{{% /md %}}</dd><dt class="property-"
             title="">
         <span id="keys_csharp">
 <a href="#keys_csharp" style="color: inherit; text-decoration: inherit;">Keys</a>
@@ -244,8 +250,7 @@ below.
         <span class="property-type"><a href="#getdnsseckeys">Get<wbr>DNSSec<wbr>Keys</a></span>
     </dt>
     <dd>{{% md %}}(Computed) - Keys field is documented below.
-{{% /md %}}</dd>
-    <dt class="property-"
+{{% /md %}}</dd><dt class="property-"
             title="">
         <span id="zone_csharp">
 <a href="#zone_csharp" style="color: inherit; text-decoration: inherit;">Zone</a>
@@ -253,14 +258,11 @@ below.
         <span class="property-indicator"></span>
         <span class="property-type">string</span>
     </dt>
-    <dd>{{% md %}}{{% /md %}}</dd>
-</dl>
+    <dd>{{% md %}}{{% /md %}}</dd></dl>
 {{% /choosable %}}
 
 {{% choosable language go %}}
-<dl class="resources-properties">
-
-    <dt class="property-"
+<dl class="resources-properties"><dt class="property-"
             title="">
         <span id="delegation_go">
 <a href="#delegation_go" style="color: inherit; text-decoration: inherit;">Delegation</a>
@@ -270,8 +272,7 @@ below.
     </dt>
     <dd>{{% md %}}(Computed) - Delegation field is documented
 below.
-{{% /md %}}</dd>
-    <dt class="property-"
+{{% /md %}}</dd><dt class="property-"
             title="">
         <span id="id_go">
 <a href="#id_go" style="color: inherit; text-decoration: inherit;">Id</a>
@@ -280,8 +281,7 @@ below.
         <span class="property-type">string</span>
     </dt>
     <dd>{{% md %}}The provider-assigned unique ID for this managed resource.
-{{% /md %}}</dd>
-    <dt class="property-"
+{{% /md %}}</dd><dt class="property-"
             title="">
         <span id="keys_go">
 <a href="#keys_go" style="color: inherit; text-decoration: inherit;">Keys</a>
@@ -290,8 +290,7 @@ below.
         <span class="property-type"><a href="#getdnsseckeys">Get<wbr>DNSSec<wbr>Keys</a></span>
     </dt>
     <dd>{{% md %}}(Computed) - Keys field is documented below.
-{{% /md %}}</dd>
-    <dt class="property-"
+{{% /md %}}</dd><dt class="property-"
             title="">
         <span id="zone_go">
 <a href="#zone_go" style="color: inherit; text-decoration: inherit;">Zone</a>
@@ -299,14 +298,11 @@ below.
         <span class="property-indicator"></span>
         <span class="property-type">string</span>
     </dt>
-    <dd>{{% md %}}{{% /md %}}</dd>
-</dl>
+    <dd>{{% md %}}{{% /md %}}</dd></dl>
 {{% /choosable %}}
 
 {{% choosable language nodejs %}}
-<dl class="resources-properties">
-
-    <dt class="property-"
+<dl class="resources-properties"><dt class="property-"
             title="">
         <span id="delegation_nodejs">
 <a href="#delegation_nodejs" style="color: inherit; text-decoration: inherit;">delegation</a>
@@ -316,8 +312,7 @@ below.
     </dt>
     <dd>{{% md %}}(Computed) - Delegation field is documented
 below.
-{{% /md %}}</dd>
-    <dt class="property-"
+{{% /md %}}</dd><dt class="property-"
             title="">
         <span id="id_nodejs">
 <a href="#id_nodejs" style="color: inherit; text-decoration: inherit;">id</a>
@@ -326,8 +321,7 @@ below.
         <span class="property-type">string</span>
     </dt>
     <dd>{{% md %}}The provider-assigned unique ID for this managed resource.
-{{% /md %}}</dd>
-    <dt class="property-"
+{{% /md %}}</dd><dt class="property-"
             title="">
         <span id="keys_nodejs">
 <a href="#keys_nodejs" style="color: inherit; text-decoration: inherit;">keys</a>
@@ -336,8 +330,7 @@ below.
         <span class="property-type"><a href="#getdnsseckeys">Get<wbr>DNSSec<wbr>Keys</a></span>
     </dt>
     <dd>{{% md %}}(Computed) - Keys field is documented below.
-{{% /md %}}</dd>
-    <dt class="property-"
+{{% /md %}}</dd><dt class="property-"
             title="">
         <span id="zone_nodejs">
 <a href="#zone_nodejs" style="color: inherit; text-decoration: inherit;">zone</a>
@@ -345,14 +338,11 @@ below.
         <span class="property-indicator"></span>
         <span class="property-type">string</span>
     </dt>
-    <dd>{{% md %}}{{% /md %}}</dd>
-</dl>
+    <dd>{{% md %}}{{% /md %}}</dd></dl>
 {{% /choosable %}}
 
 {{% choosable language python %}}
-<dl class="resources-properties">
-
-    <dt class="property-"
+<dl class="resources-properties"><dt class="property-"
             title="">
         <span id="delegation_python">
 <a href="#delegation_python" style="color: inherit; text-decoration: inherit;">delegation</a>
@@ -362,8 +352,7 @@ below.
     </dt>
     <dd>{{% md %}}(Computed) - Delegation field is documented
 below.
-{{% /md %}}</dd>
-    <dt class="property-"
+{{% /md %}}</dd><dt class="property-"
             title="">
         <span id="id_python">
 <a href="#id_python" style="color: inherit; text-decoration: inherit;">id</a>
@@ -372,8 +361,7 @@ below.
         <span class="property-type">str</span>
     </dt>
     <dd>{{% md %}}The provider-assigned unique ID for this managed resource.
-{{% /md %}}</dd>
-    <dt class="property-"
+{{% /md %}}</dd><dt class="property-"
             title="">
         <span id="keys_python">
 <a href="#keys_python" style="color: inherit; text-decoration: inherit;">keys</a>
@@ -382,8 +370,7 @@ below.
         <span class="property-type"><a href="#getdnsseckeys">Get<wbr>DNSSec<wbr>Keys</a></span>
     </dt>
     <dd>{{% md %}}(Computed) - Keys field is documented below.
-{{% /md %}}</dd>
-    <dt class="property-"
+{{% /md %}}</dd><dt class="property-"
             title="">
         <span id="zone_python">
 <a href="#zone_python" style="color: inherit; text-decoration: inherit;">zone</a>
@@ -391,8 +378,7 @@ below.
         <span class="property-indicator"></span>
         <span class="property-type">str</span>
     </dt>
-    <dd>{{% md %}}{{% /md %}}</dd>
-</dl>
+    <dd>{{% md %}}{{% /md %}}</dd></dl>
 {{% /choosable %}}
 
 
@@ -406,9 +392,7 @@ below.
 
 
 {{% choosable language csharp %}}
-<dl class="resources-properties">
-
-    <dt class="property-required"
+<dl class="resources-properties"><dt class="property-required"
             title="Required">
         <span id="dnskeys_csharp">
 <a href="#dnskeys_csharp" style="color: inherit; text-decoration: inherit;">Dnskeys</a>
@@ -417,8 +401,7 @@ below.
         <span class="property-type"><a href="#getdnssecdelegationdnskey">List&lt;Get<wbr>DNSSec<wbr>Delegation<wbr>Dnskey<wbr>Args&gt;</a></span>
     </dt>
     <dd>{{% md %}}(Computed) List of Keys. Key is documented below.
-{{% /md %}}</dd>
-    <dt class="property-required"
+{{% /md %}}</dd><dt class="property-required"
             title="Required">
         <span id="ds_csharp">
 <a href="#ds_csharp" style="color: inherit; text-decoration: inherit;">Ds</a>
@@ -427,8 +410,7 @@ below.
         <span class="property-type"><a href="#getdnssecdelegationd">List&lt;Get<wbr>DNSSec<wbr>Delegation<wbr>DArgs&gt;</a></span>
     </dt>
     <dd>{{% md %}}(Computed) List of Keys. Key is documented below.
-{{% /md %}}</dd>
-    <dt class="property-required"
+{{% /md %}}</dd><dt class="property-required"
             title="Required">
         <span id="ttl_csharp">
 <a href="#ttl_csharp" style="color: inherit; text-decoration: inherit;">Ttl</a>
@@ -437,14 +419,11 @@ below.
         <span class="property-type">int</span>
     </dt>
     <dd>{{% md %}}(Computed) TTL for the Keys (int).
-{{% /md %}}</dd>
-</dl>
+{{% /md %}}</dd></dl>
 {{% /choosable %}}
 
 {{% choosable language go %}}
-<dl class="resources-properties">
-
-    <dt class="property-required"
+<dl class="resources-properties"><dt class="property-required"
             title="Required">
         <span id="dnskeys_go">
 <a href="#dnskeys_go" style="color: inherit; text-decoration: inherit;">Dnskeys</a>
@@ -453,8 +432,7 @@ below.
         <span class="property-type"><a href="#getdnssecdelegationdnskey">[]Get<wbr>DNSSec<wbr>Delegation<wbr>Dnskey</a></span>
     </dt>
     <dd>{{% md %}}(Computed) List of Keys. Key is documented below.
-{{% /md %}}</dd>
-    <dt class="property-required"
+{{% /md %}}</dd><dt class="property-required"
             title="Required">
         <span id="ds_go">
 <a href="#ds_go" style="color: inherit; text-decoration: inherit;">Ds</a>
@@ -463,8 +441,7 @@ below.
         <span class="property-type"><a href="#getdnssecdelegationd">[]Get<wbr>DNSSec<wbr>Delegation<wbr>D</a></span>
     </dt>
     <dd>{{% md %}}(Computed) List of Keys. Key is documented below.
-{{% /md %}}</dd>
-    <dt class="property-required"
+{{% /md %}}</dd><dt class="property-required"
             title="Required">
         <span id="ttl_go">
 <a href="#ttl_go" style="color: inherit; text-decoration: inherit;">Ttl</a>
@@ -473,14 +450,11 @@ below.
         <span class="property-type">int</span>
     </dt>
     <dd>{{% md %}}(Computed) TTL for the Keys (int).
-{{% /md %}}</dd>
-</dl>
+{{% /md %}}</dd></dl>
 {{% /choosable %}}
 
 {{% choosable language nodejs %}}
-<dl class="resources-properties">
-
-    <dt class="property-required"
+<dl class="resources-properties"><dt class="property-required"
             title="Required">
         <span id="dnskeys_nodejs">
 <a href="#dnskeys_nodejs" style="color: inherit; text-decoration: inherit;">dnskeys</a>
@@ -489,8 +463,7 @@ below.
         <span class="property-type"><a href="#getdnssecdelegationdnskey">Get<wbr>DNSSec<wbr>Delegation<wbr>Dnskey[]</a></span>
     </dt>
     <dd>{{% md %}}(Computed) List of Keys. Key is documented below.
-{{% /md %}}</dd>
-    <dt class="property-required"
+{{% /md %}}</dd><dt class="property-required"
             title="Required">
         <span id="ds_nodejs">
 <a href="#ds_nodejs" style="color: inherit; text-decoration: inherit;">ds</a>
@@ -499,8 +472,7 @@ below.
         <span class="property-type"><a href="#getdnssecdelegationd">Get<wbr>DNSSec<wbr>Delegation<wbr>D[]</a></span>
     </dt>
     <dd>{{% md %}}(Computed) List of Keys. Key is documented below.
-{{% /md %}}</dd>
-    <dt class="property-required"
+{{% /md %}}</dd><dt class="property-required"
             title="Required">
         <span id="ttl_nodejs">
 <a href="#ttl_nodejs" style="color: inherit; text-decoration: inherit;">ttl</a>
@@ -509,14 +481,11 @@ below.
         <span class="property-type">number</span>
     </dt>
     <dd>{{% md %}}(Computed) TTL for the Keys (int).
-{{% /md %}}</dd>
-</dl>
+{{% /md %}}</dd></dl>
 {{% /choosable %}}
 
 {{% choosable language python %}}
-<dl class="resources-properties">
-
-    <dt class="property-required"
+<dl class="resources-properties"><dt class="property-required"
             title="Required">
         <span id="dnskeys_python">
 <a href="#dnskeys_python" style="color: inherit; text-decoration: inherit;">dnskeys</a>
@@ -525,8 +494,7 @@ below.
         <span class="property-type"><a href="#getdnssecdelegationdnskey">Sequence[Get<wbr>DNSSec<wbr>Delegation<wbr>Dnskey<wbr>Args]</a></span>
     </dt>
     <dd>{{% md %}}(Computed) List of Keys. Key is documented below.
-{{% /md %}}</dd>
-    <dt class="property-required"
+{{% /md %}}</dd><dt class="property-required"
             title="Required">
         <span id="ds_python">
 <a href="#ds_python" style="color: inherit; text-decoration: inherit;">ds</a>
@@ -535,8 +503,7 @@ below.
         <span class="property-type"><a href="#getdnssecdelegationd">Sequence[Get<wbr>DNSSec<wbr>Delegation<wbr>DArgs]</a></span>
     </dt>
     <dd>{{% md %}}(Computed) List of Keys. Key is documented below.
-{{% /md %}}</dd>
-    <dt class="property-required"
+{{% /md %}}</dd><dt class="property-required"
             title="Required">
         <span id="ttl_python">
 <a href="#ttl_python" style="color: inherit; text-decoration: inherit;">ttl</a>
@@ -545,8 +512,7 @@ below.
         <span class="property-type">int</span>
     </dt>
     <dd>{{% md %}}(Computed) TTL for the Keys (int).
-{{% /md %}}</dd>
-</dl>
+{{% /md %}}</dd></dl>
 {{% /choosable %}}
 
 <h4 id="getdnssecdelegationd">Get<wbr>DNSSec<wbr>Delegation<wbr>D</h4>
@@ -554,9 +520,7 @@ below.
 
 
 {{% choosable language csharp %}}
-<dl class="resources-properties">
-
-    <dt class="property-required"
+<dl class="resources-properties"><dt class="property-required"
             title="Required">
         <span id="algorithm_csharp">
 <a href="#algorithm_csharp" style="color: inherit; text-decoration: inherit;">Algorithm</a>
@@ -565,8 +529,7 @@ below.
         <span class="property-type">string</span>
     </dt>
     <dd>{{% md %}}(Computed) Algorithm of the key.
-{{% /md %}}</dd>
-    <dt class="property-required"
+{{% /md %}}</dd><dt class="property-required"
             title="Required">
         <span id="flags_csharp">
 <a href="#flags_csharp" style="color: inherit; text-decoration: inherit;">Flags</a>
@@ -575,8 +538,7 @@ below.
         <span class="property-type">string</span>
     </dt>
     <dd>{{% md %}}(Computed) Flags for the key.
-{{% /md %}}</dd>
-    <dt class="property-required"
+{{% /md %}}</dd><dt class="property-required"
             title="Required">
         <span id="protocol_csharp">
 <a href="#protocol_csharp" style="color: inherit; text-decoration: inherit;">Protocol</a>
@@ -585,8 +547,7 @@ below.
         <span class="property-type">string</span>
     </dt>
     <dd>{{% md %}}(Computed) Protocol of the key.
-{{% /md %}}</dd>
-    <dt class="property-required"
+{{% /md %}}</dd><dt class="property-required"
             title="Required">
         <span id="publickey_csharp">
 <a href="#publickey_csharp" style="color: inherit; text-decoration: inherit;">Public<wbr>Key</a>
@@ -595,14 +556,11 @@ below.
         <span class="property-type">string</span>
     </dt>
     <dd>{{% md %}}(Computed) Public key for the key.
-{{% /md %}}</dd>
-</dl>
+{{% /md %}}</dd></dl>
 {{% /choosable %}}
 
 {{% choosable language go %}}
-<dl class="resources-properties">
-
-    <dt class="property-required"
+<dl class="resources-properties"><dt class="property-required"
             title="Required">
         <span id="algorithm_go">
 <a href="#algorithm_go" style="color: inherit; text-decoration: inherit;">Algorithm</a>
@@ -611,8 +569,7 @@ below.
         <span class="property-type">string</span>
     </dt>
     <dd>{{% md %}}(Computed) Algorithm of the key.
-{{% /md %}}</dd>
-    <dt class="property-required"
+{{% /md %}}</dd><dt class="property-required"
             title="Required">
         <span id="flags_go">
 <a href="#flags_go" style="color: inherit; text-decoration: inherit;">Flags</a>
@@ -621,8 +578,7 @@ below.
         <span class="property-type">string</span>
     </dt>
     <dd>{{% md %}}(Computed) Flags for the key.
-{{% /md %}}</dd>
-    <dt class="property-required"
+{{% /md %}}</dd><dt class="property-required"
             title="Required">
         <span id="protocol_go">
 <a href="#protocol_go" style="color: inherit; text-decoration: inherit;">Protocol</a>
@@ -631,8 +587,7 @@ below.
         <span class="property-type">string</span>
     </dt>
     <dd>{{% md %}}(Computed) Protocol of the key.
-{{% /md %}}</dd>
-    <dt class="property-required"
+{{% /md %}}</dd><dt class="property-required"
             title="Required">
         <span id="publickey_go">
 <a href="#publickey_go" style="color: inherit; text-decoration: inherit;">Public<wbr>Key</a>
@@ -641,14 +596,11 @@ below.
         <span class="property-type">string</span>
     </dt>
     <dd>{{% md %}}(Computed) Public key for the key.
-{{% /md %}}</dd>
-</dl>
+{{% /md %}}</dd></dl>
 {{% /choosable %}}
 
 {{% choosable language nodejs %}}
-<dl class="resources-properties">
-
-    <dt class="property-required"
+<dl class="resources-properties"><dt class="property-required"
             title="Required">
         <span id="algorithm_nodejs">
 <a href="#algorithm_nodejs" style="color: inherit; text-decoration: inherit;">algorithm</a>
@@ -657,8 +609,7 @@ below.
         <span class="property-type">string</span>
     </dt>
     <dd>{{% md %}}(Computed) Algorithm of the key.
-{{% /md %}}</dd>
-    <dt class="property-required"
+{{% /md %}}</dd><dt class="property-required"
             title="Required">
         <span id="flags_nodejs">
 <a href="#flags_nodejs" style="color: inherit; text-decoration: inherit;">flags</a>
@@ -667,8 +618,7 @@ below.
         <span class="property-type">string</span>
     </dt>
     <dd>{{% md %}}(Computed) Flags for the key.
-{{% /md %}}</dd>
-    <dt class="property-required"
+{{% /md %}}</dd><dt class="property-required"
             title="Required">
         <span id="protocol_nodejs">
 <a href="#protocol_nodejs" style="color: inherit; text-decoration: inherit;">protocol</a>
@@ -677,8 +627,7 @@ below.
         <span class="property-type">string</span>
     </dt>
     <dd>{{% md %}}(Computed) Protocol of the key.
-{{% /md %}}</dd>
-    <dt class="property-required"
+{{% /md %}}</dd><dt class="property-required"
             title="Required">
         <span id="publickey_nodejs">
 <a href="#publickey_nodejs" style="color: inherit; text-decoration: inherit;">public<wbr>Key</a>
@@ -687,14 +636,11 @@ below.
         <span class="property-type">string</span>
     </dt>
     <dd>{{% md %}}(Computed) Public key for the key.
-{{% /md %}}</dd>
-</dl>
+{{% /md %}}</dd></dl>
 {{% /choosable %}}
 
 {{% choosable language python %}}
-<dl class="resources-properties">
-
-    <dt class="property-required"
+<dl class="resources-properties"><dt class="property-required"
             title="Required">
         <span id="algorithm_python">
 <a href="#algorithm_python" style="color: inherit; text-decoration: inherit;">algorithm</a>
@@ -703,8 +649,7 @@ below.
         <span class="property-type">str</span>
     </dt>
     <dd>{{% md %}}(Computed) Algorithm of the key.
-{{% /md %}}</dd>
-    <dt class="property-required"
+{{% /md %}}</dd><dt class="property-required"
             title="Required">
         <span id="flags_python">
 <a href="#flags_python" style="color: inherit; text-decoration: inherit;">flags</a>
@@ -713,8 +658,7 @@ below.
         <span class="property-type">str</span>
     </dt>
     <dd>{{% md %}}(Computed) Flags for the key.
-{{% /md %}}</dd>
-    <dt class="property-required"
+{{% /md %}}</dd><dt class="property-required"
             title="Required">
         <span id="protocol_python">
 <a href="#protocol_python" style="color: inherit; text-decoration: inherit;">protocol</a>
@@ -723,8 +667,7 @@ below.
         <span class="property-type">str</span>
     </dt>
     <dd>{{% md %}}(Computed) Protocol of the key.
-{{% /md %}}</dd>
-    <dt class="property-required"
+{{% /md %}}</dd><dt class="property-required"
             title="Required">
         <span id="public_key_python">
 <a href="#public_key_python" style="color: inherit; text-decoration: inherit;">public_<wbr>key</a>
@@ -733,8 +676,7 @@ below.
         <span class="property-type">str</span>
     </dt>
     <dd>{{% md %}}(Computed) Public key for the key.
-{{% /md %}}</dd>
-</dl>
+{{% /md %}}</dd></dl>
 {{% /choosable %}}
 
 <h4 id="getdnssecdelegationdnskey">Get<wbr>DNSSec<wbr>Delegation<wbr>Dnskey</h4>
@@ -742,9 +684,7 @@ below.
 
 
 {{% choosable language csharp %}}
-<dl class="resources-properties">
-
-    <dt class="property-required"
+<dl class="resources-properties"><dt class="property-required"
             title="Required">
         <span id="algorithm_csharp">
 <a href="#algorithm_csharp" style="color: inherit; text-decoration: inherit;">Algorithm</a>
@@ -753,8 +693,7 @@ below.
         <span class="property-type">string</span>
     </dt>
     <dd>{{% md %}}(Computed) Algorithm of the key.
-{{% /md %}}</dd>
-    <dt class="property-required"
+{{% /md %}}</dd><dt class="property-required"
             title="Required">
         <span id="flags_csharp">
 <a href="#flags_csharp" style="color: inherit; text-decoration: inherit;">Flags</a>
@@ -763,8 +702,7 @@ below.
         <span class="property-type">string</span>
     </dt>
     <dd>{{% md %}}(Computed) Flags for the key.
-{{% /md %}}</dd>
-    <dt class="property-required"
+{{% /md %}}</dd><dt class="property-required"
             title="Required">
         <span id="protocol_csharp">
 <a href="#protocol_csharp" style="color: inherit; text-decoration: inherit;">Protocol</a>
@@ -773,8 +711,7 @@ below.
         <span class="property-type">string</span>
     </dt>
     <dd>{{% md %}}(Computed) Protocol of the key.
-{{% /md %}}</dd>
-    <dt class="property-required"
+{{% /md %}}</dd><dt class="property-required"
             title="Required">
         <span id="publickey_csharp">
 <a href="#publickey_csharp" style="color: inherit; text-decoration: inherit;">Public<wbr>Key</a>
@@ -783,14 +720,11 @@ below.
         <span class="property-type">string</span>
     </dt>
     <dd>{{% md %}}(Computed) Public key for the key.
-{{% /md %}}</dd>
-</dl>
+{{% /md %}}</dd></dl>
 {{% /choosable %}}
 
 {{% choosable language go %}}
-<dl class="resources-properties">
-
-    <dt class="property-required"
+<dl class="resources-properties"><dt class="property-required"
             title="Required">
         <span id="algorithm_go">
 <a href="#algorithm_go" style="color: inherit; text-decoration: inherit;">Algorithm</a>
@@ -799,8 +733,7 @@ below.
         <span class="property-type">string</span>
     </dt>
     <dd>{{% md %}}(Computed) Algorithm of the key.
-{{% /md %}}</dd>
-    <dt class="property-required"
+{{% /md %}}</dd><dt class="property-required"
             title="Required">
         <span id="flags_go">
 <a href="#flags_go" style="color: inherit; text-decoration: inherit;">Flags</a>
@@ -809,8 +742,7 @@ below.
         <span class="property-type">string</span>
     </dt>
     <dd>{{% md %}}(Computed) Flags for the key.
-{{% /md %}}</dd>
-    <dt class="property-required"
+{{% /md %}}</dd><dt class="property-required"
             title="Required">
         <span id="protocol_go">
 <a href="#protocol_go" style="color: inherit; text-decoration: inherit;">Protocol</a>
@@ -819,8 +751,7 @@ below.
         <span class="property-type">string</span>
     </dt>
     <dd>{{% md %}}(Computed) Protocol of the key.
-{{% /md %}}</dd>
-    <dt class="property-required"
+{{% /md %}}</dd><dt class="property-required"
             title="Required">
         <span id="publickey_go">
 <a href="#publickey_go" style="color: inherit; text-decoration: inherit;">Public<wbr>Key</a>
@@ -829,14 +760,11 @@ below.
         <span class="property-type">string</span>
     </dt>
     <dd>{{% md %}}(Computed) Public key for the key.
-{{% /md %}}</dd>
-</dl>
+{{% /md %}}</dd></dl>
 {{% /choosable %}}
 
 {{% choosable language nodejs %}}
-<dl class="resources-properties">
-
-    <dt class="property-required"
+<dl class="resources-properties"><dt class="property-required"
             title="Required">
         <span id="algorithm_nodejs">
 <a href="#algorithm_nodejs" style="color: inherit; text-decoration: inherit;">algorithm</a>
@@ -845,8 +773,7 @@ below.
         <span class="property-type">string</span>
     </dt>
     <dd>{{% md %}}(Computed) Algorithm of the key.
-{{% /md %}}</dd>
-    <dt class="property-required"
+{{% /md %}}</dd><dt class="property-required"
             title="Required">
         <span id="flags_nodejs">
 <a href="#flags_nodejs" style="color: inherit; text-decoration: inherit;">flags</a>
@@ -855,8 +782,7 @@ below.
         <span class="property-type">string</span>
     </dt>
     <dd>{{% md %}}(Computed) Flags for the key.
-{{% /md %}}</dd>
-    <dt class="property-required"
+{{% /md %}}</dd><dt class="property-required"
             title="Required">
         <span id="protocol_nodejs">
 <a href="#protocol_nodejs" style="color: inherit; text-decoration: inherit;">protocol</a>
@@ -865,8 +791,7 @@ below.
         <span class="property-type">string</span>
     </dt>
     <dd>{{% md %}}(Computed) Protocol of the key.
-{{% /md %}}</dd>
-    <dt class="property-required"
+{{% /md %}}</dd><dt class="property-required"
             title="Required">
         <span id="publickey_nodejs">
 <a href="#publickey_nodejs" style="color: inherit; text-decoration: inherit;">public<wbr>Key</a>
@@ -875,14 +800,11 @@ below.
         <span class="property-type">string</span>
     </dt>
     <dd>{{% md %}}(Computed) Public key for the key.
-{{% /md %}}</dd>
-</dl>
+{{% /md %}}</dd></dl>
 {{% /choosable %}}
 
 {{% choosable language python %}}
-<dl class="resources-properties">
-
-    <dt class="property-required"
+<dl class="resources-properties"><dt class="property-required"
             title="Required">
         <span id="algorithm_python">
 <a href="#algorithm_python" style="color: inherit; text-decoration: inherit;">algorithm</a>
@@ -891,8 +813,7 @@ below.
         <span class="property-type">str</span>
     </dt>
     <dd>{{% md %}}(Computed) Algorithm of the key.
-{{% /md %}}</dd>
-    <dt class="property-required"
+{{% /md %}}</dd><dt class="property-required"
             title="Required">
         <span id="flags_python">
 <a href="#flags_python" style="color: inherit; text-decoration: inherit;">flags</a>
@@ -901,8 +822,7 @@ below.
         <span class="property-type">str</span>
     </dt>
     <dd>{{% md %}}(Computed) Flags for the key.
-{{% /md %}}</dd>
-    <dt class="property-required"
+{{% /md %}}</dd><dt class="property-required"
             title="Required">
         <span id="protocol_python">
 <a href="#protocol_python" style="color: inherit; text-decoration: inherit;">protocol</a>
@@ -911,8 +831,7 @@ below.
         <span class="property-type">str</span>
     </dt>
     <dd>{{% md %}}(Computed) Protocol of the key.
-{{% /md %}}</dd>
-    <dt class="property-required"
+{{% /md %}}</dd><dt class="property-required"
             title="Required">
         <span id="public_key_python">
 <a href="#public_key_python" style="color: inherit; text-decoration: inherit;">public_<wbr>key</a>
@@ -921,8 +840,7 @@ below.
         <span class="property-type">str</span>
     </dt>
     <dd>{{% md %}}(Computed) Public key for the key.
-{{% /md %}}</dd>
-</dl>
+{{% /md %}}</dd></dl>
 {{% /choosable %}}
 
 <h4 id="getdnsseckeys">Get<wbr>DNSSec<wbr>Keys</h4>
@@ -930,9 +848,7 @@ below.
 
 
 {{% choosable language csharp %}}
-<dl class="resources-properties">
-
-    <dt class="property-required"
+<dl class="resources-properties"><dt class="property-required"
             title="Required">
         <span id="dnskeys_csharp">
 <a href="#dnskeys_csharp" style="color: inherit; text-decoration: inherit;">Dnskeys</a>
@@ -941,8 +857,7 @@ below.
         <span class="property-type"><a href="#getdnsseckeysdnskey">List&lt;Get<wbr>DNSSec<wbr>Keys<wbr>Dnskey<wbr>Args&gt;</a></span>
     </dt>
     <dd>{{% md %}}(Computed) List of Keys. Key is documented below.
-{{% /md %}}</dd>
-    <dt class="property-required"
+{{% /md %}}</dd><dt class="property-required"
             title="Required">
         <span id="ttl_csharp">
 <a href="#ttl_csharp" style="color: inherit; text-decoration: inherit;">Ttl</a>
@@ -951,14 +866,11 @@ below.
         <span class="property-type">int</span>
     </dt>
     <dd>{{% md %}}(Computed) TTL for the Keys (int).
-{{% /md %}}</dd>
-</dl>
+{{% /md %}}</dd></dl>
 {{% /choosable %}}
 
 {{% choosable language go %}}
-<dl class="resources-properties">
-
-    <dt class="property-required"
+<dl class="resources-properties"><dt class="property-required"
             title="Required">
         <span id="dnskeys_go">
 <a href="#dnskeys_go" style="color: inherit; text-decoration: inherit;">Dnskeys</a>
@@ -967,8 +879,7 @@ below.
         <span class="property-type"><a href="#getdnsseckeysdnskey">[]Get<wbr>DNSSec<wbr>Keys<wbr>Dnskey</a></span>
     </dt>
     <dd>{{% md %}}(Computed) List of Keys. Key is documented below.
-{{% /md %}}</dd>
-    <dt class="property-required"
+{{% /md %}}</dd><dt class="property-required"
             title="Required">
         <span id="ttl_go">
 <a href="#ttl_go" style="color: inherit; text-decoration: inherit;">Ttl</a>
@@ -977,14 +888,11 @@ below.
         <span class="property-type">int</span>
     </dt>
     <dd>{{% md %}}(Computed) TTL for the Keys (int).
-{{% /md %}}</dd>
-</dl>
+{{% /md %}}</dd></dl>
 {{% /choosable %}}
 
 {{% choosable language nodejs %}}
-<dl class="resources-properties">
-
-    <dt class="property-required"
+<dl class="resources-properties"><dt class="property-required"
             title="Required">
         <span id="dnskeys_nodejs">
 <a href="#dnskeys_nodejs" style="color: inherit; text-decoration: inherit;">dnskeys</a>
@@ -993,8 +901,7 @@ below.
         <span class="property-type"><a href="#getdnsseckeysdnskey">Get<wbr>DNSSec<wbr>Keys<wbr>Dnskey[]</a></span>
     </dt>
     <dd>{{% md %}}(Computed) List of Keys. Key is documented below.
-{{% /md %}}</dd>
-    <dt class="property-required"
+{{% /md %}}</dd><dt class="property-required"
             title="Required">
         <span id="ttl_nodejs">
 <a href="#ttl_nodejs" style="color: inherit; text-decoration: inherit;">ttl</a>
@@ -1003,14 +910,11 @@ below.
         <span class="property-type">number</span>
     </dt>
     <dd>{{% md %}}(Computed) TTL for the Keys (int).
-{{% /md %}}</dd>
-</dl>
+{{% /md %}}</dd></dl>
 {{% /choosable %}}
 
 {{% choosable language python %}}
-<dl class="resources-properties">
-
-    <dt class="property-required"
+<dl class="resources-properties"><dt class="property-required"
             title="Required">
         <span id="dnskeys_python">
 <a href="#dnskeys_python" style="color: inherit; text-decoration: inherit;">dnskeys</a>
@@ -1019,8 +923,7 @@ below.
         <span class="property-type"><a href="#getdnsseckeysdnskey">Sequence[Get<wbr>DNSSec<wbr>Keys<wbr>Dnskey<wbr>Args]</a></span>
     </dt>
     <dd>{{% md %}}(Computed) List of Keys. Key is documented below.
-{{% /md %}}</dd>
-    <dt class="property-required"
+{{% /md %}}</dd><dt class="property-required"
             title="Required">
         <span id="ttl_python">
 <a href="#ttl_python" style="color: inherit; text-decoration: inherit;">ttl</a>
@@ -1029,8 +932,7 @@ below.
         <span class="property-type">int</span>
     </dt>
     <dd>{{% md %}}(Computed) TTL for the Keys (int).
-{{% /md %}}</dd>
-</dl>
+{{% /md %}}</dd></dl>
 {{% /choosable %}}
 
 <h4 id="getdnsseckeysdnskey">Get<wbr>DNSSec<wbr>Keys<wbr>Dnskey</h4>
@@ -1038,9 +940,7 @@ below.
 
 
 {{% choosable language csharp %}}
-<dl class="resources-properties">
-
-    <dt class="property-required"
+<dl class="resources-properties"><dt class="property-required"
             title="Required">
         <span id="algorithm_csharp">
 <a href="#algorithm_csharp" style="color: inherit; text-decoration: inherit;">Algorithm</a>
@@ -1049,8 +949,7 @@ below.
         <span class="property-type">string</span>
     </dt>
     <dd>{{% md %}}(Computed) Algorithm of the key.
-{{% /md %}}</dd>
-    <dt class="property-required"
+{{% /md %}}</dd><dt class="property-required"
             title="Required">
         <span id="flags_csharp">
 <a href="#flags_csharp" style="color: inherit; text-decoration: inherit;">Flags</a>
@@ -1059,8 +958,7 @@ below.
         <span class="property-type">string</span>
     </dt>
     <dd>{{% md %}}(Computed) Flags for the key.
-{{% /md %}}</dd>
-    <dt class="property-required"
+{{% /md %}}</dd><dt class="property-required"
             title="Required">
         <span id="protocol_csharp">
 <a href="#protocol_csharp" style="color: inherit; text-decoration: inherit;">Protocol</a>
@@ -1069,8 +967,7 @@ below.
         <span class="property-type">string</span>
     </dt>
     <dd>{{% md %}}(Computed) Protocol of the key.
-{{% /md %}}</dd>
-    <dt class="property-required"
+{{% /md %}}</dd><dt class="property-required"
             title="Required">
         <span id="publickey_csharp">
 <a href="#publickey_csharp" style="color: inherit; text-decoration: inherit;">Public<wbr>Key</a>
@@ -1079,14 +976,11 @@ below.
         <span class="property-type">string</span>
     </dt>
     <dd>{{% md %}}(Computed) Public key for the key.
-{{% /md %}}</dd>
-</dl>
+{{% /md %}}</dd></dl>
 {{% /choosable %}}
 
 {{% choosable language go %}}
-<dl class="resources-properties">
-
-    <dt class="property-required"
+<dl class="resources-properties"><dt class="property-required"
             title="Required">
         <span id="algorithm_go">
 <a href="#algorithm_go" style="color: inherit; text-decoration: inherit;">Algorithm</a>
@@ -1095,8 +989,7 @@ below.
         <span class="property-type">string</span>
     </dt>
     <dd>{{% md %}}(Computed) Algorithm of the key.
-{{% /md %}}</dd>
-    <dt class="property-required"
+{{% /md %}}</dd><dt class="property-required"
             title="Required">
         <span id="flags_go">
 <a href="#flags_go" style="color: inherit; text-decoration: inherit;">Flags</a>
@@ -1105,8 +998,7 @@ below.
         <span class="property-type">string</span>
     </dt>
     <dd>{{% md %}}(Computed) Flags for the key.
-{{% /md %}}</dd>
-    <dt class="property-required"
+{{% /md %}}</dd><dt class="property-required"
             title="Required">
         <span id="protocol_go">
 <a href="#protocol_go" style="color: inherit; text-decoration: inherit;">Protocol</a>
@@ -1115,8 +1007,7 @@ below.
         <span class="property-type">string</span>
     </dt>
     <dd>{{% md %}}(Computed) Protocol of the key.
-{{% /md %}}</dd>
-    <dt class="property-required"
+{{% /md %}}</dd><dt class="property-required"
             title="Required">
         <span id="publickey_go">
 <a href="#publickey_go" style="color: inherit; text-decoration: inherit;">Public<wbr>Key</a>
@@ -1125,14 +1016,11 @@ below.
         <span class="property-type">string</span>
     </dt>
     <dd>{{% md %}}(Computed) Public key for the key.
-{{% /md %}}</dd>
-</dl>
+{{% /md %}}</dd></dl>
 {{% /choosable %}}
 
 {{% choosable language nodejs %}}
-<dl class="resources-properties">
-
-    <dt class="property-required"
+<dl class="resources-properties"><dt class="property-required"
             title="Required">
         <span id="algorithm_nodejs">
 <a href="#algorithm_nodejs" style="color: inherit; text-decoration: inherit;">algorithm</a>
@@ -1141,8 +1029,7 @@ below.
         <span class="property-type">string</span>
     </dt>
     <dd>{{% md %}}(Computed) Algorithm of the key.
-{{% /md %}}</dd>
-    <dt class="property-required"
+{{% /md %}}</dd><dt class="property-required"
             title="Required">
         <span id="flags_nodejs">
 <a href="#flags_nodejs" style="color: inherit; text-decoration: inherit;">flags</a>
@@ -1151,8 +1038,7 @@ below.
         <span class="property-type">string</span>
     </dt>
     <dd>{{% md %}}(Computed) Flags for the key.
-{{% /md %}}</dd>
-    <dt class="property-required"
+{{% /md %}}</dd><dt class="property-required"
             title="Required">
         <span id="protocol_nodejs">
 <a href="#protocol_nodejs" style="color: inherit; text-decoration: inherit;">protocol</a>
@@ -1161,8 +1047,7 @@ below.
         <span class="property-type">string</span>
     </dt>
     <dd>{{% md %}}(Computed) Protocol of the key.
-{{% /md %}}</dd>
-    <dt class="property-required"
+{{% /md %}}</dd><dt class="property-required"
             title="Required">
         <span id="publickey_nodejs">
 <a href="#publickey_nodejs" style="color: inherit; text-decoration: inherit;">public<wbr>Key</a>
@@ -1171,14 +1056,11 @@ below.
         <span class="property-type">string</span>
     </dt>
     <dd>{{% md %}}(Computed) Public key for the key.
-{{% /md %}}</dd>
-</dl>
+{{% /md %}}</dd></dl>
 {{% /choosable %}}
 
 {{% choosable language python %}}
-<dl class="resources-properties">
-
-    <dt class="property-required"
+<dl class="resources-properties"><dt class="property-required"
             title="Required">
         <span id="algorithm_python">
 <a href="#algorithm_python" style="color: inherit; text-decoration: inherit;">algorithm</a>
@@ -1187,8 +1069,7 @@ below.
         <span class="property-type">str</span>
     </dt>
     <dd>{{% md %}}(Computed) Algorithm of the key.
-{{% /md %}}</dd>
-    <dt class="property-required"
+{{% /md %}}</dd><dt class="property-required"
             title="Required">
         <span id="flags_python">
 <a href="#flags_python" style="color: inherit; text-decoration: inherit;">flags</a>
@@ -1197,8 +1078,7 @@ below.
         <span class="property-type">str</span>
     </dt>
     <dd>{{% md %}}(Computed) Flags for the key.
-{{% /md %}}</dd>
-    <dt class="property-required"
+{{% /md %}}</dd><dt class="property-required"
             title="Required">
         <span id="protocol_python">
 <a href="#protocol_python" style="color: inherit; text-decoration: inherit;">protocol</a>
@@ -1207,8 +1087,7 @@ below.
         <span class="property-type">str</span>
     </dt>
     <dd>{{% md %}}(Computed) Protocol of the key.
-{{% /md %}}</dd>
-    <dt class="property-required"
+{{% /md %}}</dd><dt class="property-required"
             title="Required">
         <span id="public_key_python">
 <a href="#public_key_python" style="color: inherit; text-decoration: inherit;">public_<wbr>key</a>
@@ -1217,8 +1096,7 @@ below.
         <span class="property-type">str</span>
     </dt>
     <dd>{{% md %}}(Computed) Public key for the key.
-{{% /md %}}</dd>
-</dl>
+{{% /md %}}</dd></dl>
 {{% /choosable %}}
 
 
@@ -1232,6 +1110,6 @@ below.
 	<dt>License</dt>
 	<dd>Apache-2.0</dd>
 	<dt>Notes</dt>
-	<dd>This Pulumi package is based on the [`ns1` Terraform Provider](https://github.com/ns1-terraform/terraform-provider-ns1).</dd>
+	<dd>{{% md %}}This Pulumi package is based on the [`ns1` Terraform Provider](https://github.com/ns1-terraform/terraform-provider-ns1).{{% /md %}}</dd>
 </dl>
 

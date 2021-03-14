@@ -14,11 +14,17 @@ Image template is an ARM resource managed by Microsoft.VirtualMachineImages prov
 API Version: 2020-02-14.
 
 {{% examples %}}
+
 ## Example Usage
 
 {{< chooser language "typescript,python,go,csharp" / >}}
+
+
 ### Create an Image Template for Linux.
-{{% example csharp %}}
+
+
+{{< example csharp >}}
+
 ```csharp
 using Pulumi;
 using AzureNative = Pulumi.AzureNative;
@@ -89,13 +95,19 @@ class MyStack : Stack
 
 ```
 
-{{% /example %}}
 
-{{% example go %}}
+{{< /example >}}
+
+
+{{< example go >}}
+
 Coming soon!
-{{% /example %}}
 
-{{% example python %}}
+{{< /example >}}
+
+
+{{< example python >}}
+
 
 ```python
 import pulumi
@@ -143,9 +155,12 @@ virtual_machine_image_template = azure_native.virtualmachineimages.VirtualMachin
 
 ```
 
-{{% /example %}}
 
-{{% example typescript %}}
+{{< /example >}}
+
+
+{{< example typescript >}}
+
 
 ```typescript
 import * as pulumi from "@pulumi/pulumi";
@@ -194,10 +209,17 @@ const virtualMachineImageTemplate = new azure_native.virtualmachineimages.Virtua
 
 ```
 
-{{% /example %}}
+
+{{< /example >}}
+
+
+
 
 ### Create an Image Template for Windows.
-{{% example csharp %}}
+
+
+{{< example csharp >}}
+
 ```csharp
 using Pulumi;
 using AzureNative = Pulumi.AzureNative;
@@ -353,13 +375,19 @@ class MyStack : Stack
 
 ```
 
-{{% /example %}}
 
-{{% example go %}}
+{{< /example >}}
+
+
+{{< example go >}}
+
 Coming soon!
-{{% /example %}}
 
-{{% example python %}}
+{{< /example >}}
+
+
+{{< example python >}}
+
 
 ```python
 import pulumi
@@ -478,9 +506,12 @@ virtual_machine_image_template = azure_native.virtualmachineimages.VirtualMachin
 
 ```
 
-{{% /example %}}
 
-{{% example typescript %}}
+{{< /example >}}
+
+
+{{< example typescript >}}
+
 
 ```typescript
 import * as pulumi from "@pulumi/pulumi";
@@ -600,9 +631,16 @@ const virtualMachineImageTemplate = new azure_native.virtualmachineimages.Virtua
 
 ```
 
-{{% /example %}}
+
+{{< /example >}}
+
+
+
+
 
 {{% /examples %}}
+
+
 
 
 ## Create a VirtualMachineImageTemplate Resource {#create}
@@ -627,9 +665,7 @@ const virtualMachineImageTemplate = new azure_native.virtualmachineimages.Virtua
 
 {{% choosable language nodejs %}}
 
-<dl class="resources-properties">
-  
-    <dt
+<dl class="resources-properties"><dt
         class="property-required" title="Required">
         <span>name</span>
         <span class="property-indicator"></span>
@@ -637,9 +673,7 @@ const virtualMachineImageTemplate = new azure_native.virtualmachineimages.Virtua
     </dt>
     <dd>
       The unique name of the resource.
-    </dd>
-  
-    <dt
+    </dd><dt
         class="property-required" title="Required">
         <span>args</span>
         <span class="property-indicator"></span>
@@ -647,9 +681,7 @@ const virtualMachineImageTemplate = new azure_native.virtualmachineimages.Virtua
     </dt>
     <dd>
       The arguments to resource properties.
-    </dd>
-  
-    <dt
+    </dd><dt
         class="property-optional" title="Optional">
         <span>opts</span>
         <span class="property-indicator"></span>
@@ -657,10 +689,7 @@ const virtualMachineImageTemplate = new azure_native.virtualmachineimages.Virtua
     </dt>
     <dd>
       Bag of options to control resource&#39;s behavior.
-    </dd>
-  
-
-</dl>
+    </dd></dl>
 
 {{% /choosable %}}
 
@@ -686,9 +715,7 @@ const virtualMachineImageTemplate = new azure_native.virtualmachineimages.Virtua
 
 {{% choosable language go %}}
 
-<dl class="resources-properties">
-  
-    <dt
+<dl class="resources-properties"><dt
         class="property-optional" title="Optional">
         <span>ctx</span>
         <span class="property-indicator"></span>
@@ -696,9 +723,7 @@ const virtualMachineImageTemplate = new azure_native.virtualmachineimages.Virtua
     </dt>
     <dd>
       Context object for the current deployment.
-    </dd>
-  
-    <dt
+    </dd><dt
         class="property-required" title="Required">
         <span>name</span>
         <span class="property-indicator"></span>
@@ -706,9 +731,7 @@ const virtualMachineImageTemplate = new azure_native.virtualmachineimages.Virtua
     </dt>
     <dd>
       The unique name of the resource.
-    </dd>
-  
-    <dt
+    </dd><dt
         class="property-required" title="Required">
         <span>args</span>
         <span class="property-indicator"></span>
@@ -716,9 +739,7 @@ const virtualMachineImageTemplate = new azure_native.virtualmachineimages.Virtua
     </dt>
     <dd>
       The arguments to resource properties.
-    </dd>
-  
-    <dt
+    </dd><dt
         class="property-optional" title="Optional">
         <span>opts</span>
         <span class="property-indicator"></span>
@@ -726,18 +747,13 @@ const virtualMachineImageTemplate = new azure_native.virtualmachineimages.Virtua
     </dt>
     <dd>
       Bag of options to control resource&#39;s behavior.
-    </dd>
-  
-
-</dl>
+    </dd></dl>
 
 {{% /choosable %}}
 
 {{% choosable language csharp %}}
 
-<dl class="resources-properties">
-  
-    <dt
+<dl class="resources-properties"><dt
         class="property-required" title="Required">
         <span>name</span>
         <span class="property-indicator"></span>
@@ -745,9 +761,7 @@ const virtualMachineImageTemplate = new azure_native.virtualmachineimages.Virtua
     </dt>
     <dd>
       The unique name of the resource.
-    </dd>
-  
-    <dt
+    </dd><dt
         class="property-required" title="Required">
         <span>args</span>
         <span class="property-indicator"></span>
@@ -755,9 +769,7 @@ const virtualMachineImageTemplate = new azure_native.virtualmachineimages.Virtua
     </dt>
     <dd>
       The arguments to resource properties.
-    </dd>
-  
-    <dt
+    </dd><dt
         class="property-optional" title="Optional">
         <span>opts</span>
         <span class="property-indicator"></span>
@@ -765,10 +777,7 @@ const virtualMachineImageTemplate = new azure_native.virtualmachineimages.Virtua
     </dt>
     <dd>
       Bag of options to control resource&#39;s behavior.
-    </dd>
-  
-
-</dl>
+    </dd></dl>
 
 {{% /choosable %}}
 
@@ -783,9 +792,7 @@ The VirtualMachineImageTemplate resource accepts the following [input]({{< relre
 
 
 {{% choosable language csharp %}}
-<dl class="resources-properties">
-
-    <dt class="property-required"
+<dl class="resources-properties"><dt class="property-required"
             title="Required">
         <span id="distribute_csharp">
 <a href="#distribute_csharp" style="color: inherit; text-decoration: inherit;">Distribute</a>
@@ -793,8 +800,7 @@ The VirtualMachineImageTemplate resource accepts the following [input]({{< relre
         <span class="property-indicator"></span>
         <span class="property-type">List&lt;object&gt;</span>
     </dt>
-    <dd>{{% md %}}The distribution targets where the image output needs to go to.{{% /md %}}</dd>
-    <dt class="property-required"
+    <dd>{{% md %}}The distribution targets where the image output needs to go to.{{% /md %}}</dd><dt class="property-required"
             title="Required">
         <span id="identity_csharp">
 <a href="#identity_csharp" style="color: inherit; text-decoration: inherit;">Identity</a>
@@ -802,8 +808,7 @@ The VirtualMachineImageTemplate resource accepts the following [input]({{< relre
         <span class="property-indicator"></span>
         <span class="property-type"><a href="#imagetemplateidentity">Pulumi.<wbr>Azure<wbr>Native.<wbr>Virtual<wbr>Machine<wbr>Images.<wbr>Inputs.<wbr>Image<wbr>Template<wbr>Identity<wbr>Args</a></span>
     </dt>
-    <dd>{{% md %}}The identity of the image template, if configured.{{% /md %}}</dd>
-    <dt class="property-required"
+    <dd>{{% md %}}The identity of the image template, if configured.{{% /md %}}</dd><dt class="property-required"
             title="Required">
         <span id="resourcegroupname_csharp">
 <a href="#resourcegroupname_csharp" style="color: inherit; text-decoration: inherit;">Resource<wbr>Group<wbr>Name</a>
@@ -811,8 +816,7 @@ The VirtualMachineImageTemplate resource accepts the following [input]({{< relre
         <span class="property-indicator"></span>
         <span class="property-type">string</span>
     </dt>
-    <dd>{{% md %}}The name of the resource group.{{% /md %}}</dd>
-    <dt class="property-required"
+    <dd>{{% md %}}The name of the resource group.{{% /md %}}</dd><dt class="property-required"
             title="Required">
         <span id="source_csharp">
 <a href="#source_csharp" style="color: inherit; text-decoration: inherit;">Source</a>
@@ -820,8 +824,7 @@ The VirtualMachineImageTemplate resource accepts the following [input]({{< relre
         <span class="property-indicator"></span>
         <span class="property-type"><a href="#imagetemplatemanagedimagesource">Pulumi.<wbr>Azure<wbr>Native.<wbr>Virtual<wbr>Machine<wbr>Images.<wbr>Inputs.<wbr>Image<wbr>Template<wbr>Managed<wbr>Image<wbr>Source<wbr>Args</a> | <a href="#imagetemplateplatformimagesource">Pulumi.<wbr>Azure<wbr>Native.<wbr>Virtual<wbr>Machine<wbr>Images.<wbr>Inputs.<wbr>Image<wbr>Template<wbr>Platform<wbr>Image<wbr>Source<wbr>Args</a> | <a href="#imagetemplatesharedimageversionsource">Pulumi.<wbr>Azure<wbr>Native.<wbr>Virtual<wbr>Machine<wbr>Images.<wbr>Inputs.<wbr>Image<wbr>Template<wbr>Shared<wbr>Image<wbr>Version<wbr>Source<wbr>Args</a></span>
     </dt>
-    <dd>{{% md %}}Specifies the properties used to describe the source image.{{% /md %}}</dd>
-    <dt class="property-optional"
+    <dd>{{% md %}}Specifies the properties used to describe the source image.{{% /md %}}</dd><dt class="property-optional"
             title="Optional">
         <span id="buildtimeoutinminutes_csharp">
 <a href="#buildtimeoutinminutes_csharp" style="color: inherit; text-decoration: inherit;">Build<wbr>Timeout<wbr>In<wbr>Minutes</a>
@@ -829,8 +832,7 @@ The VirtualMachineImageTemplate resource accepts the following [input]({{< relre
         <span class="property-indicator"></span>
         <span class="property-type">int</span>
     </dt>
-    <dd>{{% md %}}Maximum duration to wait while building the image template. Omit or specify 0 to use the default (4 hours).{{% /md %}}</dd>
-    <dt class="property-optional"
+    <dd>{{% md %}}Maximum duration to wait while building the image template. Omit or specify 0 to use the default (4 hours).{{% /md %}}</dd><dt class="property-optional"
             title="Optional">
         <span id="customize_csharp">
 <a href="#customize_csharp" style="color: inherit; text-decoration: inherit;">Customize</a>
@@ -838,8 +840,7 @@ The VirtualMachineImageTemplate resource accepts the following [input]({{< relre
         <span class="property-indicator"></span>
         <span class="property-type">List&lt;object&gt;</span>
     </dt>
-    <dd>{{% md %}}Specifies the properties used to describe the customization steps of the image, like Image source etc{{% /md %}}</dd>
-    <dt class="property-optional"
+    <dd>{{% md %}}Specifies the properties used to describe the customization steps of the image, like Image source etc{{% /md %}}</dd><dt class="property-optional"
             title="Optional">
         <span id="imagetemplatename_csharp">
 <a href="#imagetemplatename_csharp" style="color: inherit; text-decoration: inherit;">Image<wbr>Template<wbr>Name</a>
@@ -847,8 +848,7 @@ The VirtualMachineImageTemplate resource accepts the following [input]({{< relre
         <span class="property-indicator"></span>
         <span class="property-type">string</span>
     </dt>
-    <dd>{{% md %}}The name of the image Template{{% /md %}}</dd>
-    <dt class="property-optional"
+    <dd>{{% md %}}The name of the image Template{{% /md %}}</dd><dt class="property-optional"
             title="Optional">
         <span id="location_csharp">
 <a href="#location_csharp" style="color: inherit; text-decoration: inherit;">Location</a>
@@ -856,8 +856,7 @@ The VirtualMachineImageTemplate resource accepts the following [input]({{< relre
         <span class="property-indicator"></span>
         <span class="property-type">string</span>
     </dt>
-    <dd>{{% md %}}Resource location{{% /md %}}</dd>
-    <dt class="property-optional"
+    <dd>{{% md %}}Resource location{{% /md %}}</dd><dt class="property-optional"
             title="Optional">
         <span id="tags_csharp">
 <a href="#tags_csharp" style="color: inherit; text-decoration: inherit;">Tags</a>
@@ -865,8 +864,7 @@ The VirtualMachineImageTemplate resource accepts the following [input]({{< relre
         <span class="property-indicator"></span>
         <span class="property-type">Dictionary&lt;string, string&gt;</span>
     </dt>
-    <dd>{{% md %}}Resource tags{{% /md %}}</dd>
-    <dt class="property-optional"
+    <dd>{{% md %}}Resource tags{{% /md %}}</dd><dt class="property-optional"
             title="Optional">
         <span id="vmprofile_csharp">
 <a href="#vmprofile_csharp" style="color: inherit; text-decoration: inherit;">Vm<wbr>Profile</a>
@@ -874,14 +872,11 @@ The VirtualMachineImageTemplate resource accepts the following [input]({{< relre
         <span class="property-indicator"></span>
         <span class="property-type"><a href="#imagetemplatevmprofile">Pulumi.<wbr>Azure<wbr>Native.<wbr>Virtual<wbr>Machine<wbr>Images.<wbr>Inputs.<wbr>Image<wbr>Template<wbr>Vm<wbr>Profile<wbr>Args</a></span>
     </dt>
-    <dd>{{% md %}}Describes how virtual machine is set up to build images{{% /md %}}</dd>
-</dl>
+    <dd>{{% md %}}Describes how virtual machine is set up to build images{{% /md %}}</dd></dl>
 {{% /choosable %}}
 
 {{% choosable language go %}}
-<dl class="resources-properties">
-
-    <dt class="property-required"
+<dl class="resources-properties"><dt class="property-required"
             title="Required">
         <span id="distribute_go">
 <a href="#distribute_go" style="color: inherit; text-decoration: inherit;">Distribute</a>
@@ -889,8 +884,7 @@ The VirtualMachineImageTemplate resource accepts the following [input]({{< relre
         <span class="property-indicator"></span>
         <span class="property-type">[]interface{}</span>
     </dt>
-    <dd>{{% md %}}The distribution targets where the image output needs to go to.{{% /md %}}</dd>
-    <dt class="property-required"
+    <dd>{{% md %}}The distribution targets where the image output needs to go to.{{% /md %}}</dd><dt class="property-required"
             title="Required">
         <span id="identity_go">
 <a href="#identity_go" style="color: inherit; text-decoration: inherit;">Identity</a>
@@ -898,8 +892,7 @@ The VirtualMachineImageTemplate resource accepts the following [input]({{< relre
         <span class="property-indicator"></span>
         <span class="property-type"><a href="#imagetemplateidentity">Image<wbr>Template<wbr>Identity</a></span>
     </dt>
-    <dd>{{% md %}}The identity of the image template, if configured.{{% /md %}}</dd>
-    <dt class="property-required"
+    <dd>{{% md %}}The identity of the image template, if configured.{{% /md %}}</dd><dt class="property-required"
             title="Required">
         <span id="resourcegroupname_go">
 <a href="#resourcegroupname_go" style="color: inherit; text-decoration: inherit;">Resource<wbr>Group<wbr>Name</a>
@@ -907,8 +900,7 @@ The VirtualMachineImageTemplate resource accepts the following [input]({{< relre
         <span class="property-indicator"></span>
         <span class="property-type">string</span>
     </dt>
-    <dd>{{% md %}}The name of the resource group.{{% /md %}}</dd>
-    <dt class="property-required"
+    <dd>{{% md %}}The name of the resource group.{{% /md %}}</dd><dt class="property-required"
             title="Required">
         <span id="source_go">
 <a href="#source_go" style="color: inherit; text-decoration: inherit;">Source</a>
@@ -916,8 +908,7 @@ The VirtualMachineImageTemplate resource accepts the following [input]({{< relre
         <span class="property-indicator"></span>
         <span class="property-type"><a href="#imagetemplatemanagedimagesource">Image<wbr>Template<wbr>Managed<wbr>Image<wbr>Source</a> | <a href="#imagetemplateplatformimagesource">Image<wbr>Template<wbr>Platform<wbr>Image<wbr>Source</a> | <a href="#imagetemplatesharedimageversionsource">Image<wbr>Template<wbr>Shared<wbr>Image<wbr>Version<wbr>Source</a></span>
     </dt>
-    <dd>{{% md %}}Specifies the properties used to describe the source image.{{% /md %}}</dd>
-    <dt class="property-optional"
+    <dd>{{% md %}}Specifies the properties used to describe the source image.{{% /md %}}</dd><dt class="property-optional"
             title="Optional">
         <span id="buildtimeoutinminutes_go">
 <a href="#buildtimeoutinminutes_go" style="color: inherit; text-decoration: inherit;">Build<wbr>Timeout<wbr>In<wbr>Minutes</a>
@@ -925,8 +916,7 @@ The VirtualMachineImageTemplate resource accepts the following [input]({{< relre
         <span class="property-indicator"></span>
         <span class="property-type">int</span>
     </dt>
-    <dd>{{% md %}}Maximum duration to wait while building the image template. Omit or specify 0 to use the default (4 hours).{{% /md %}}</dd>
-    <dt class="property-optional"
+    <dd>{{% md %}}Maximum duration to wait while building the image template. Omit or specify 0 to use the default (4 hours).{{% /md %}}</dd><dt class="property-optional"
             title="Optional">
         <span id="customize_go">
 <a href="#customize_go" style="color: inherit; text-decoration: inherit;">Customize</a>
@@ -934,8 +924,7 @@ The VirtualMachineImageTemplate resource accepts the following [input]({{< relre
         <span class="property-indicator"></span>
         <span class="property-type">[]interface{}</span>
     </dt>
-    <dd>{{% md %}}Specifies the properties used to describe the customization steps of the image, like Image source etc{{% /md %}}</dd>
-    <dt class="property-optional"
+    <dd>{{% md %}}Specifies the properties used to describe the customization steps of the image, like Image source etc{{% /md %}}</dd><dt class="property-optional"
             title="Optional">
         <span id="imagetemplatename_go">
 <a href="#imagetemplatename_go" style="color: inherit; text-decoration: inherit;">Image<wbr>Template<wbr>Name</a>
@@ -943,8 +932,7 @@ The VirtualMachineImageTemplate resource accepts the following [input]({{< relre
         <span class="property-indicator"></span>
         <span class="property-type">string</span>
     </dt>
-    <dd>{{% md %}}The name of the image Template{{% /md %}}</dd>
-    <dt class="property-optional"
+    <dd>{{% md %}}The name of the image Template{{% /md %}}</dd><dt class="property-optional"
             title="Optional">
         <span id="location_go">
 <a href="#location_go" style="color: inherit; text-decoration: inherit;">Location</a>
@@ -952,8 +940,7 @@ The VirtualMachineImageTemplate resource accepts the following [input]({{< relre
         <span class="property-indicator"></span>
         <span class="property-type">string</span>
     </dt>
-    <dd>{{% md %}}Resource location{{% /md %}}</dd>
-    <dt class="property-optional"
+    <dd>{{% md %}}Resource location{{% /md %}}</dd><dt class="property-optional"
             title="Optional">
         <span id="tags_go">
 <a href="#tags_go" style="color: inherit; text-decoration: inherit;">Tags</a>
@@ -961,8 +948,7 @@ The VirtualMachineImageTemplate resource accepts the following [input]({{< relre
         <span class="property-indicator"></span>
         <span class="property-type">map[string]string</span>
     </dt>
-    <dd>{{% md %}}Resource tags{{% /md %}}</dd>
-    <dt class="property-optional"
+    <dd>{{% md %}}Resource tags{{% /md %}}</dd><dt class="property-optional"
             title="Optional">
         <span id="vmprofile_go">
 <a href="#vmprofile_go" style="color: inherit; text-decoration: inherit;">Vm<wbr>Profile</a>
@@ -970,14 +956,11 @@ The VirtualMachineImageTemplate resource accepts the following [input]({{< relre
         <span class="property-indicator"></span>
         <span class="property-type"><a href="#imagetemplatevmprofile">Image<wbr>Template<wbr>Vm<wbr>Profile</a></span>
     </dt>
-    <dd>{{% md %}}Describes how virtual machine is set up to build images{{% /md %}}</dd>
-</dl>
+    <dd>{{% md %}}Describes how virtual machine is set up to build images{{% /md %}}</dd></dl>
 {{% /choosable %}}
 
 {{% choosable language nodejs %}}
-<dl class="resources-properties">
-
-    <dt class="property-required"
+<dl class="resources-properties"><dt class="property-required"
             title="Required">
         <span id="distribute_nodejs">
 <a href="#distribute_nodejs" style="color: inherit; text-decoration: inherit;">distribute</a>
@@ -985,8 +968,7 @@ The VirtualMachineImageTemplate resource accepts the following [input]({{< relre
         <span class="property-indicator"></span>
         <span class="property-type">Image<wbr>Template<wbr>Managed<wbr>Image<wbr>Distributor | Image<wbr>Template<wbr>Shared<wbr>Image<wbr>Distributor | Image<wbr>Template<wbr>Vhd<wbr>Distributor[]</span>
     </dt>
-    <dd>{{% md %}}The distribution targets where the image output needs to go to.{{% /md %}}</dd>
-    <dt class="property-required"
+    <dd>{{% md %}}The distribution targets where the image output needs to go to.{{% /md %}}</dd><dt class="property-required"
             title="Required">
         <span id="identity_nodejs">
 <a href="#identity_nodejs" style="color: inherit; text-decoration: inherit;">identity</a>
@@ -994,8 +976,7 @@ The VirtualMachineImageTemplate resource accepts the following [input]({{< relre
         <span class="property-indicator"></span>
         <span class="property-type"><a href="#imagetemplateidentity">Image<wbr>Template<wbr>Identity</a></span>
     </dt>
-    <dd>{{% md %}}The identity of the image template, if configured.{{% /md %}}</dd>
-    <dt class="property-required"
+    <dd>{{% md %}}The identity of the image template, if configured.{{% /md %}}</dd><dt class="property-required"
             title="Required">
         <span id="resourcegroupname_nodejs">
 <a href="#resourcegroupname_nodejs" style="color: inherit; text-decoration: inherit;">resource<wbr>Group<wbr>Name</a>
@@ -1003,8 +984,7 @@ The VirtualMachineImageTemplate resource accepts the following [input]({{< relre
         <span class="property-indicator"></span>
         <span class="property-type">string</span>
     </dt>
-    <dd>{{% md %}}The name of the resource group.{{% /md %}}</dd>
-    <dt class="property-required"
+    <dd>{{% md %}}The name of the resource group.{{% /md %}}</dd><dt class="property-required"
             title="Required">
         <span id="source_nodejs">
 <a href="#source_nodejs" style="color: inherit; text-decoration: inherit;">source</a>
@@ -1012,8 +992,7 @@ The VirtualMachineImageTemplate resource accepts the following [input]({{< relre
         <span class="property-indicator"></span>
         <span class="property-type"><a href="#imagetemplatemanagedimagesource">Image<wbr>Template<wbr>Managed<wbr>Image<wbr>Source</a> | <a href="#imagetemplateplatformimagesource">Image<wbr>Template<wbr>Platform<wbr>Image<wbr>Source</a> | <a href="#imagetemplatesharedimageversionsource">Image<wbr>Template<wbr>Shared<wbr>Image<wbr>Version<wbr>Source</a></span>
     </dt>
-    <dd>{{% md %}}Specifies the properties used to describe the source image.{{% /md %}}</dd>
-    <dt class="property-optional"
+    <dd>{{% md %}}Specifies the properties used to describe the source image.{{% /md %}}</dd><dt class="property-optional"
             title="Optional">
         <span id="buildtimeoutinminutes_nodejs">
 <a href="#buildtimeoutinminutes_nodejs" style="color: inherit; text-decoration: inherit;">build<wbr>Timeout<wbr>In<wbr>Minutes</a>
@@ -1021,8 +1000,7 @@ The VirtualMachineImageTemplate resource accepts the following [input]({{< relre
         <span class="property-indicator"></span>
         <span class="property-type">number</span>
     </dt>
-    <dd>{{% md %}}Maximum duration to wait while building the image template. Omit or specify 0 to use the default (4 hours).{{% /md %}}</dd>
-    <dt class="property-optional"
+    <dd>{{% md %}}Maximum duration to wait while building the image template. Omit or specify 0 to use the default (4 hours).{{% /md %}}</dd><dt class="property-optional"
             title="Optional">
         <span id="customize_nodejs">
 <a href="#customize_nodejs" style="color: inherit; text-decoration: inherit;">customize</a>
@@ -1030,8 +1008,7 @@ The VirtualMachineImageTemplate resource accepts the following [input]({{< relre
         <span class="property-indicator"></span>
         <span class="property-type">Image<wbr>Template<wbr>File<wbr>Customizer | Image<wbr>Template<wbr>Power<wbr>Shell<wbr>Customizer | Image<wbr>Template<wbr>Restart<wbr>Customizer | Image<wbr>Template<wbr>Shell<wbr>Customizer | Image<wbr>Template<wbr>Windows<wbr>Update<wbr>Customizer[]</span>
     </dt>
-    <dd>{{% md %}}Specifies the properties used to describe the customization steps of the image, like Image source etc{{% /md %}}</dd>
-    <dt class="property-optional"
+    <dd>{{% md %}}Specifies the properties used to describe the customization steps of the image, like Image source etc{{% /md %}}</dd><dt class="property-optional"
             title="Optional">
         <span id="imagetemplatename_nodejs">
 <a href="#imagetemplatename_nodejs" style="color: inherit; text-decoration: inherit;">image<wbr>Template<wbr>Name</a>
@@ -1039,8 +1016,7 @@ The VirtualMachineImageTemplate resource accepts the following [input]({{< relre
         <span class="property-indicator"></span>
         <span class="property-type">string</span>
     </dt>
-    <dd>{{% md %}}The name of the image Template{{% /md %}}</dd>
-    <dt class="property-optional"
+    <dd>{{% md %}}The name of the image Template{{% /md %}}</dd><dt class="property-optional"
             title="Optional">
         <span id="location_nodejs">
 <a href="#location_nodejs" style="color: inherit; text-decoration: inherit;">location</a>
@@ -1048,8 +1024,7 @@ The VirtualMachineImageTemplate resource accepts the following [input]({{< relre
         <span class="property-indicator"></span>
         <span class="property-type">string</span>
     </dt>
-    <dd>{{% md %}}Resource location{{% /md %}}</dd>
-    <dt class="property-optional"
+    <dd>{{% md %}}Resource location{{% /md %}}</dd><dt class="property-optional"
             title="Optional">
         <span id="tags_nodejs">
 <a href="#tags_nodejs" style="color: inherit; text-decoration: inherit;">tags</a>
@@ -1057,8 +1032,7 @@ The VirtualMachineImageTemplate resource accepts the following [input]({{< relre
         <span class="property-indicator"></span>
         <span class="property-type">{[key: string]: string}</span>
     </dt>
-    <dd>{{% md %}}Resource tags{{% /md %}}</dd>
-    <dt class="property-optional"
+    <dd>{{% md %}}Resource tags{{% /md %}}</dd><dt class="property-optional"
             title="Optional">
         <span id="vmprofile_nodejs">
 <a href="#vmprofile_nodejs" style="color: inherit; text-decoration: inherit;">vm<wbr>Profile</a>
@@ -1066,14 +1040,11 @@ The VirtualMachineImageTemplate resource accepts the following [input]({{< relre
         <span class="property-indicator"></span>
         <span class="property-type"><a href="#imagetemplatevmprofile">Image<wbr>Template<wbr>Vm<wbr>Profile</a></span>
     </dt>
-    <dd>{{% md %}}Describes how virtual machine is set up to build images{{% /md %}}</dd>
-</dl>
+    <dd>{{% md %}}Describes how virtual machine is set up to build images{{% /md %}}</dd></dl>
 {{% /choosable %}}
 
 {{% choosable language python %}}
-<dl class="resources-properties">
-
-    <dt class="property-required"
+<dl class="resources-properties"><dt class="property-required"
             title="Required">
         <span id="distribute_python">
 <a href="#distribute_python" style="color: inherit; text-decoration: inherit;">distribute</a>
@@ -1081,8 +1052,7 @@ The VirtualMachineImageTemplate resource accepts the following [input]({{< relre
         <span class="property-indicator"></span>
         <span class="property-type">Sequence[Union[Image<wbr>Template<wbr>Managed<wbr>Image<wbr>Distributor<wbr>Args, Image<wbr>Template<wbr>Shared<wbr>Image<wbr>Distributor<wbr>Args, Image<wbr>Template<wbr>Vhd<wbr>Distributor<wbr>Args]]</span>
     </dt>
-    <dd>{{% md %}}The distribution targets where the image output needs to go to.{{% /md %}}</dd>
-    <dt class="property-required"
+    <dd>{{% md %}}The distribution targets where the image output needs to go to.{{% /md %}}</dd><dt class="property-required"
             title="Required">
         <span id="identity_python">
 <a href="#identity_python" style="color: inherit; text-decoration: inherit;">identity</a>
@@ -1090,8 +1060,7 @@ The VirtualMachineImageTemplate resource accepts the following [input]({{< relre
         <span class="property-indicator"></span>
         <span class="property-type"><a href="#imagetemplateidentity">Image<wbr>Template<wbr>Identity<wbr>Args</a></span>
     </dt>
-    <dd>{{% md %}}The identity of the image template, if configured.{{% /md %}}</dd>
-    <dt class="property-required"
+    <dd>{{% md %}}The identity of the image template, if configured.{{% /md %}}</dd><dt class="property-required"
             title="Required">
         <span id="resource_group_name_python">
 <a href="#resource_group_name_python" style="color: inherit; text-decoration: inherit;">resource_<wbr>group_<wbr>name</a>
@@ -1099,8 +1068,7 @@ The VirtualMachineImageTemplate resource accepts the following [input]({{< relre
         <span class="property-indicator"></span>
         <span class="property-type">str</span>
     </dt>
-    <dd>{{% md %}}The name of the resource group.{{% /md %}}</dd>
-    <dt class="property-required"
+    <dd>{{% md %}}The name of the resource group.{{% /md %}}</dd><dt class="property-required"
             title="Required">
         <span id="source_python">
 <a href="#source_python" style="color: inherit; text-decoration: inherit;">source</a>
@@ -1108,8 +1076,7 @@ The VirtualMachineImageTemplate resource accepts the following [input]({{< relre
         <span class="property-indicator"></span>
         <span class="property-type"><a href="#imagetemplatemanagedimagesource">Image<wbr>Template<wbr>Managed<wbr>Image<wbr>Source<wbr>Args</a> | <a href="#imagetemplateplatformimagesource">Image<wbr>Template<wbr>Platform<wbr>Image<wbr>Source<wbr>Args</a> | <a href="#imagetemplatesharedimageversionsource">Image<wbr>Template<wbr>Shared<wbr>Image<wbr>Version<wbr>Source<wbr>Args</a></span>
     </dt>
-    <dd>{{% md %}}Specifies the properties used to describe the source image.{{% /md %}}</dd>
-    <dt class="property-optional"
+    <dd>{{% md %}}Specifies the properties used to describe the source image.{{% /md %}}</dd><dt class="property-optional"
             title="Optional">
         <span id="build_timeout_in_minutes_python">
 <a href="#build_timeout_in_minutes_python" style="color: inherit; text-decoration: inherit;">build_<wbr>timeout_<wbr>in_<wbr>minutes</a>
@@ -1117,8 +1084,7 @@ The VirtualMachineImageTemplate resource accepts the following [input]({{< relre
         <span class="property-indicator"></span>
         <span class="property-type">int</span>
     </dt>
-    <dd>{{% md %}}Maximum duration to wait while building the image template. Omit or specify 0 to use the default (4 hours).{{% /md %}}</dd>
-    <dt class="property-optional"
+    <dd>{{% md %}}Maximum duration to wait while building the image template. Omit or specify 0 to use the default (4 hours).{{% /md %}}</dd><dt class="property-optional"
             title="Optional">
         <span id="customize_python">
 <a href="#customize_python" style="color: inherit; text-decoration: inherit;">customize</a>
@@ -1126,8 +1092,7 @@ The VirtualMachineImageTemplate resource accepts the following [input]({{< relre
         <span class="property-indicator"></span>
         <span class="property-type">Sequence[Union[Image<wbr>Template<wbr>File<wbr>Customizer<wbr>Args, Image<wbr>Template<wbr>Power<wbr>Shell<wbr>Customizer<wbr>Args, Image<wbr>Template<wbr>Restart<wbr>Customizer<wbr>Args, Image<wbr>Template<wbr>Shell<wbr>Customizer<wbr>Args, Image<wbr>Template<wbr>Windows<wbr>Update<wbr>Customizer<wbr>Args]]</span>
     </dt>
-    <dd>{{% md %}}Specifies the properties used to describe the customization steps of the image, like Image source etc{{% /md %}}</dd>
-    <dt class="property-optional"
+    <dd>{{% md %}}Specifies the properties used to describe the customization steps of the image, like Image source etc{{% /md %}}</dd><dt class="property-optional"
             title="Optional">
         <span id="image_template_name_python">
 <a href="#image_template_name_python" style="color: inherit; text-decoration: inherit;">image_<wbr>template_<wbr>name</a>
@@ -1135,8 +1100,7 @@ The VirtualMachineImageTemplate resource accepts the following [input]({{< relre
         <span class="property-indicator"></span>
         <span class="property-type">str</span>
     </dt>
-    <dd>{{% md %}}The name of the image Template{{% /md %}}</dd>
-    <dt class="property-optional"
+    <dd>{{% md %}}The name of the image Template{{% /md %}}</dd><dt class="property-optional"
             title="Optional">
         <span id="location_python">
 <a href="#location_python" style="color: inherit; text-decoration: inherit;">location</a>
@@ -1144,8 +1108,7 @@ The VirtualMachineImageTemplate resource accepts the following [input]({{< relre
         <span class="property-indicator"></span>
         <span class="property-type">str</span>
     </dt>
-    <dd>{{% md %}}Resource location{{% /md %}}</dd>
-    <dt class="property-optional"
+    <dd>{{% md %}}Resource location{{% /md %}}</dd><dt class="property-optional"
             title="Optional">
         <span id="tags_python">
 <a href="#tags_python" style="color: inherit; text-decoration: inherit;">tags</a>
@@ -1153,8 +1116,7 @@ The VirtualMachineImageTemplate resource accepts the following [input]({{< relre
         <span class="property-indicator"></span>
         <span class="property-type">Mapping[str, str]</span>
     </dt>
-    <dd>{{% md %}}Resource tags{{% /md %}}</dd>
-    <dt class="property-optional"
+    <dd>{{% md %}}Resource tags{{% /md %}}</dd><dt class="property-optional"
             title="Optional">
         <span id="vm_profile_python">
 <a href="#vm_profile_python" style="color: inherit; text-decoration: inherit;">vm_<wbr>profile</a>
@@ -1162,8 +1124,7 @@ The VirtualMachineImageTemplate resource accepts the following [input]({{< relre
         <span class="property-indicator"></span>
         <span class="property-type"><a href="#imagetemplatevmprofile">Image<wbr>Template<wbr>Vm<wbr>Profile<wbr>Args</a></span>
     </dt>
-    <dd>{{% md %}}Describes how virtual machine is set up to build images{{% /md %}}</dd>
-</dl>
+    <dd>{{% md %}}Describes how virtual machine is set up to build images{{% /md %}}</dd></dl>
 {{% /choosable %}}
 
 
@@ -1174,9 +1135,7 @@ All [input](#inputs) properties are implicitly available as output properties. A
 
 
 {{% choosable language csharp %}}
-<dl class="resources-properties">
-
-    <dt class="property-"
+<dl class="resources-properties"><dt class="property-"
             title="">
         <span id="id_csharp">
 <a href="#id_csharp" style="color: inherit; text-decoration: inherit;">Id</a>
@@ -1184,8 +1143,7 @@ All [input](#inputs) properties are implicitly available as output properties. A
         <span class="property-indicator"></span>
         <span class="property-type">string</span>
     </dt>
-    <dd>{{% md %}}The provider-assigned unique ID for this managed resource.{{% /md %}}</dd>
-    <dt class="property-"
+    <dd>{{% md %}}The provider-assigned unique ID for this managed resource.{{% /md %}}</dd><dt class="property-"
             title="">
         <span id="lastrunstatus_csharp">
 <a href="#lastrunstatus_csharp" style="color: inherit; text-decoration: inherit;">Last<wbr>Run<wbr>Status</a>
@@ -1193,8 +1151,7 @@ All [input](#inputs) properties are implicitly available as output properties. A
         <span class="property-indicator"></span>
         <span class="property-type"><a href="#imagetemplatelastrunstatusresponse">Pulumi.<wbr>Azure<wbr>Native.<wbr>Virtual<wbr>Machine<wbr>Images.<wbr>Outputs.<wbr>Image<wbr>Template<wbr>Last<wbr>Run<wbr>Status<wbr>Response</a></span>
     </dt>
-    <dd>{{% md %}}State of 'run' that is currently executing or was last executed.{{% /md %}}</dd>
-    <dt class="property-"
+    <dd>{{% md %}}State of 'run' that is currently executing or was last executed.{{% /md %}}</dd><dt class="property-"
             title="">
         <span id="name_csharp">
 <a href="#name_csharp" style="color: inherit; text-decoration: inherit;">Name</a>
@@ -1202,8 +1159,7 @@ All [input](#inputs) properties are implicitly available as output properties. A
         <span class="property-indicator"></span>
         <span class="property-type">string</span>
     </dt>
-    <dd>{{% md %}}Resource name{{% /md %}}</dd>
-    <dt class="property-"
+    <dd>{{% md %}}Resource name{{% /md %}}</dd><dt class="property-"
             title="">
         <span id="provisioningerror_csharp">
 <a href="#provisioningerror_csharp" style="color: inherit; text-decoration: inherit;">Provisioning<wbr>Error</a>
@@ -1211,8 +1167,7 @@ All [input](#inputs) properties are implicitly available as output properties. A
         <span class="property-indicator"></span>
         <span class="property-type"><a href="#provisioningerrorresponse">Pulumi.<wbr>Azure<wbr>Native.<wbr>Virtual<wbr>Machine<wbr>Images.<wbr>Outputs.<wbr>Provisioning<wbr>Error<wbr>Response</a></span>
     </dt>
-    <dd>{{% md %}}Provisioning error, if any{{% /md %}}</dd>
-    <dt class="property-"
+    <dd>{{% md %}}Provisioning error, if any{{% /md %}}</dd><dt class="property-"
             title="">
         <span id="provisioningstate_csharp">
 <a href="#provisioningstate_csharp" style="color: inherit; text-decoration: inherit;">Provisioning<wbr>State</a>
@@ -1220,8 +1175,7 @@ All [input](#inputs) properties are implicitly available as output properties. A
         <span class="property-indicator"></span>
         <span class="property-type">string</span>
     </dt>
-    <dd>{{% md %}}Provisioning state of the resource{{% /md %}}</dd>
-    <dt class="property-"
+    <dd>{{% md %}}Provisioning state of the resource{{% /md %}}</dd><dt class="property-"
             title="">
         <span id="type_csharp">
 <a href="#type_csharp" style="color: inherit; text-decoration: inherit;">Type</a>
@@ -1229,14 +1183,11 @@ All [input](#inputs) properties are implicitly available as output properties. A
         <span class="property-indicator"></span>
         <span class="property-type">string</span>
     </dt>
-    <dd>{{% md %}}Resource type{{% /md %}}</dd>
-</dl>
+    <dd>{{% md %}}Resource type{{% /md %}}</dd></dl>
 {{% /choosable %}}
 
 {{% choosable language go %}}
-<dl class="resources-properties">
-
-    <dt class="property-"
+<dl class="resources-properties"><dt class="property-"
             title="">
         <span id="id_go">
 <a href="#id_go" style="color: inherit; text-decoration: inherit;">Id</a>
@@ -1244,8 +1195,7 @@ All [input](#inputs) properties are implicitly available as output properties. A
         <span class="property-indicator"></span>
         <span class="property-type">string</span>
     </dt>
-    <dd>{{% md %}}The provider-assigned unique ID for this managed resource.{{% /md %}}</dd>
-    <dt class="property-"
+    <dd>{{% md %}}The provider-assigned unique ID for this managed resource.{{% /md %}}</dd><dt class="property-"
             title="">
         <span id="lastrunstatus_go">
 <a href="#lastrunstatus_go" style="color: inherit; text-decoration: inherit;">Last<wbr>Run<wbr>Status</a>
@@ -1253,8 +1203,7 @@ All [input](#inputs) properties are implicitly available as output properties. A
         <span class="property-indicator"></span>
         <span class="property-type"><a href="#imagetemplatelastrunstatusresponse">Image<wbr>Template<wbr>Last<wbr>Run<wbr>Status<wbr>Response</a></span>
     </dt>
-    <dd>{{% md %}}State of 'run' that is currently executing or was last executed.{{% /md %}}</dd>
-    <dt class="property-"
+    <dd>{{% md %}}State of 'run' that is currently executing or was last executed.{{% /md %}}</dd><dt class="property-"
             title="">
         <span id="name_go">
 <a href="#name_go" style="color: inherit; text-decoration: inherit;">Name</a>
@@ -1262,8 +1211,7 @@ All [input](#inputs) properties are implicitly available as output properties. A
         <span class="property-indicator"></span>
         <span class="property-type">string</span>
     </dt>
-    <dd>{{% md %}}Resource name{{% /md %}}</dd>
-    <dt class="property-"
+    <dd>{{% md %}}Resource name{{% /md %}}</dd><dt class="property-"
             title="">
         <span id="provisioningerror_go">
 <a href="#provisioningerror_go" style="color: inherit; text-decoration: inherit;">Provisioning<wbr>Error</a>
@@ -1271,8 +1219,7 @@ All [input](#inputs) properties are implicitly available as output properties. A
         <span class="property-indicator"></span>
         <span class="property-type"><a href="#provisioningerrorresponse">Provisioning<wbr>Error<wbr>Response</a></span>
     </dt>
-    <dd>{{% md %}}Provisioning error, if any{{% /md %}}</dd>
-    <dt class="property-"
+    <dd>{{% md %}}Provisioning error, if any{{% /md %}}</dd><dt class="property-"
             title="">
         <span id="provisioningstate_go">
 <a href="#provisioningstate_go" style="color: inherit; text-decoration: inherit;">Provisioning<wbr>State</a>
@@ -1280,8 +1227,7 @@ All [input](#inputs) properties are implicitly available as output properties. A
         <span class="property-indicator"></span>
         <span class="property-type">string</span>
     </dt>
-    <dd>{{% md %}}Provisioning state of the resource{{% /md %}}</dd>
-    <dt class="property-"
+    <dd>{{% md %}}Provisioning state of the resource{{% /md %}}</dd><dt class="property-"
             title="">
         <span id="type_go">
 <a href="#type_go" style="color: inherit; text-decoration: inherit;">Type</a>
@@ -1289,14 +1235,11 @@ All [input](#inputs) properties are implicitly available as output properties. A
         <span class="property-indicator"></span>
         <span class="property-type">string</span>
     </dt>
-    <dd>{{% md %}}Resource type{{% /md %}}</dd>
-</dl>
+    <dd>{{% md %}}Resource type{{% /md %}}</dd></dl>
 {{% /choosable %}}
 
 {{% choosable language nodejs %}}
-<dl class="resources-properties">
-
-    <dt class="property-"
+<dl class="resources-properties"><dt class="property-"
             title="">
         <span id="id_nodejs">
 <a href="#id_nodejs" style="color: inherit; text-decoration: inherit;">id</a>
@@ -1304,8 +1247,7 @@ All [input](#inputs) properties are implicitly available as output properties. A
         <span class="property-indicator"></span>
         <span class="property-type">string</span>
     </dt>
-    <dd>{{% md %}}The provider-assigned unique ID for this managed resource.{{% /md %}}</dd>
-    <dt class="property-"
+    <dd>{{% md %}}The provider-assigned unique ID for this managed resource.{{% /md %}}</dd><dt class="property-"
             title="">
         <span id="lastrunstatus_nodejs">
 <a href="#lastrunstatus_nodejs" style="color: inherit; text-decoration: inherit;">last<wbr>Run<wbr>Status</a>
@@ -1313,8 +1255,7 @@ All [input](#inputs) properties are implicitly available as output properties. A
         <span class="property-indicator"></span>
         <span class="property-type"><a href="#imagetemplatelastrunstatusresponse">Image<wbr>Template<wbr>Last<wbr>Run<wbr>Status<wbr>Response</a></span>
     </dt>
-    <dd>{{% md %}}State of 'run' that is currently executing or was last executed.{{% /md %}}</dd>
-    <dt class="property-"
+    <dd>{{% md %}}State of 'run' that is currently executing or was last executed.{{% /md %}}</dd><dt class="property-"
             title="">
         <span id="name_nodejs">
 <a href="#name_nodejs" style="color: inherit; text-decoration: inherit;">name</a>
@@ -1322,8 +1263,7 @@ All [input](#inputs) properties are implicitly available as output properties. A
         <span class="property-indicator"></span>
         <span class="property-type">string</span>
     </dt>
-    <dd>{{% md %}}Resource name{{% /md %}}</dd>
-    <dt class="property-"
+    <dd>{{% md %}}Resource name{{% /md %}}</dd><dt class="property-"
             title="">
         <span id="provisioningerror_nodejs">
 <a href="#provisioningerror_nodejs" style="color: inherit; text-decoration: inherit;">provisioning<wbr>Error</a>
@@ -1331,8 +1271,7 @@ All [input](#inputs) properties are implicitly available as output properties. A
         <span class="property-indicator"></span>
         <span class="property-type"><a href="#provisioningerrorresponse">Provisioning<wbr>Error<wbr>Response</a></span>
     </dt>
-    <dd>{{% md %}}Provisioning error, if any{{% /md %}}</dd>
-    <dt class="property-"
+    <dd>{{% md %}}Provisioning error, if any{{% /md %}}</dd><dt class="property-"
             title="">
         <span id="provisioningstate_nodejs">
 <a href="#provisioningstate_nodejs" style="color: inherit; text-decoration: inherit;">provisioning<wbr>State</a>
@@ -1340,8 +1279,7 @@ All [input](#inputs) properties are implicitly available as output properties. A
         <span class="property-indicator"></span>
         <span class="property-type">string</span>
     </dt>
-    <dd>{{% md %}}Provisioning state of the resource{{% /md %}}</dd>
-    <dt class="property-"
+    <dd>{{% md %}}Provisioning state of the resource{{% /md %}}</dd><dt class="property-"
             title="">
         <span id="type_nodejs">
 <a href="#type_nodejs" style="color: inherit; text-decoration: inherit;">type</a>
@@ -1349,14 +1287,11 @@ All [input](#inputs) properties are implicitly available as output properties. A
         <span class="property-indicator"></span>
         <span class="property-type">string</span>
     </dt>
-    <dd>{{% md %}}Resource type{{% /md %}}</dd>
-</dl>
+    <dd>{{% md %}}Resource type{{% /md %}}</dd></dl>
 {{% /choosable %}}
 
 {{% choosable language python %}}
-<dl class="resources-properties">
-
-    <dt class="property-"
+<dl class="resources-properties"><dt class="property-"
             title="">
         <span id="id_python">
 <a href="#id_python" style="color: inherit; text-decoration: inherit;">id</a>
@@ -1364,8 +1299,7 @@ All [input](#inputs) properties are implicitly available as output properties. A
         <span class="property-indicator"></span>
         <span class="property-type">str</span>
     </dt>
-    <dd>{{% md %}}The provider-assigned unique ID for this managed resource.{{% /md %}}</dd>
-    <dt class="property-"
+    <dd>{{% md %}}The provider-assigned unique ID for this managed resource.{{% /md %}}</dd><dt class="property-"
             title="">
         <span id="last_run_status_python">
 <a href="#last_run_status_python" style="color: inherit; text-decoration: inherit;">last_<wbr>run_<wbr>status</a>
@@ -1373,8 +1307,7 @@ All [input](#inputs) properties are implicitly available as output properties. A
         <span class="property-indicator"></span>
         <span class="property-type"><a href="#imagetemplatelastrunstatusresponse">Image<wbr>Template<wbr>Last<wbr>Run<wbr>Status<wbr>Response</a></span>
     </dt>
-    <dd>{{% md %}}State of 'run' that is currently executing or was last executed.{{% /md %}}</dd>
-    <dt class="property-"
+    <dd>{{% md %}}State of 'run' that is currently executing or was last executed.{{% /md %}}</dd><dt class="property-"
             title="">
         <span id="name_python">
 <a href="#name_python" style="color: inherit; text-decoration: inherit;">name</a>
@@ -1382,8 +1315,7 @@ All [input](#inputs) properties are implicitly available as output properties. A
         <span class="property-indicator"></span>
         <span class="property-type">str</span>
     </dt>
-    <dd>{{% md %}}Resource name{{% /md %}}</dd>
-    <dt class="property-"
+    <dd>{{% md %}}Resource name{{% /md %}}</dd><dt class="property-"
             title="">
         <span id="provisioning_error_python">
 <a href="#provisioning_error_python" style="color: inherit; text-decoration: inherit;">provisioning_<wbr>error</a>
@@ -1391,8 +1323,7 @@ All [input](#inputs) properties are implicitly available as output properties. A
         <span class="property-indicator"></span>
         <span class="property-type"><a href="#provisioningerrorresponse">Provisioning<wbr>Error<wbr>Response</a></span>
     </dt>
-    <dd>{{% md %}}Provisioning error, if any{{% /md %}}</dd>
-    <dt class="property-"
+    <dd>{{% md %}}Provisioning error, if any{{% /md %}}</dd><dt class="property-"
             title="">
         <span id="provisioning_state_python">
 <a href="#provisioning_state_python" style="color: inherit; text-decoration: inherit;">provisioning_<wbr>state</a>
@@ -1400,8 +1331,7 @@ All [input](#inputs) properties are implicitly available as output properties. A
         <span class="property-indicator"></span>
         <span class="property-type">str</span>
     </dt>
-    <dd>{{% md %}}Provisioning state of the resource{{% /md %}}</dd>
-    <dt class="property-"
+    <dd>{{% md %}}Provisioning state of the resource{{% /md %}}</dd><dt class="property-"
             title="">
         <span id="type_python">
 <a href="#type_python" style="color: inherit; text-decoration: inherit;">type</a>
@@ -1409,8 +1339,7 @@ All [input](#inputs) properties are implicitly available as output properties. A
         <span class="property-indicator"></span>
         <span class="property-type">str</span>
     </dt>
-    <dd>{{% md %}}Resource type{{% /md %}}</dd>
-</dl>
+    <dd>{{% md %}}Resource type{{% /md %}}</dd></dl>
 {{% /choosable %}}
 
 
@@ -1426,9 +1355,7 @@ All [input](#inputs) properties are implicitly available as output properties. A
 <h4 id="imagetemplatefilecustomizer">Image<wbr>Template<wbr>File<wbr>Customizer</h4>
 
 {{% choosable language csharp %}}
-<dl class="resources-properties">
-
-    <dt class="property-optional"
+<dl class="resources-properties"><dt class="property-optional"
             title="Optional">
         <span id="destination_csharp">
 <a href="#destination_csharp" style="color: inherit; text-decoration: inherit;">Destination</a>
@@ -1436,8 +1363,7 @@ All [input](#inputs) properties are implicitly available as output properties. A
         <span class="property-indicator"></span>
         <span class="property-type">string</span>
     </dt>
-    <dd>{{% md %}}The absolute path to a file (with nested directory structures already created) where the file (from sourceUri) will be uploaded to in the VM{{% /md %}}</dd>
-    <dt class="property-optional"
+    <dd>{{% md %}}The absolute path to a file (with nested directory structures already created) where the file (from sourceUri) will be uploaded to in the VM{{% /md %}}</dd><dt class="property-optional"
             title="Optional">
         <span id="name_csharp">
 <a href="#name_csharp" style="color: inherit; text-decoration: inherit;">Name</a>
@@ -1445,8 +1371,7 @@ All [input](#inputs) properties are implicitly available as output properties. A
         <span class="property-indicator"></span>
         <span class="property-type">string</span>
     </dt>
-    <dd>{{% md %}}Friendly Name to provide context on what this customization step does{{% /md %}}</dd>
-    <dt class="property-optional"
+    <dd>{{% md %}}Friendly Name to provide context on what this customization step does{{% /md %}}</dd><dt class="property-optional"
             title="Optional">
         <span id="sha256checksum_csharp">
 <a href="#sha256checksum_csharp" style="color: inherit; text-decoration: inherit;">Sha256Checksum</a>
@@ -1454,8 +1379,7 @@ All [input](#inputs) properties are implicitly available as output properties. A
         <span class="property-indicator"></span>
         <span class="property-type">string</span>
     </dt>
-    <dd>{{% md %}}SHA256 checksum of the file provided in the sourceUri field above{{% /md %}}</dd>
-    <dt class="property-optional"
+    <dd>{{% md %}}SHA256 checksum of the file provided in the sourceUri field above{{% /md %}}</dd><dt class="property-optional"
             title="Optional">
         <span id="sourceuri_csharp">
 <a href="#sourceuri_csharp" style="color: inherit; text-decoration: inherit;">Source<wbr>Uri</a>
@@ -1463,14 +1387,11 @@ All [input](#inputs) properties are implicitly available as output properties. A
         <span class="property-indicator"></span>
         <span class="property-type">string</span>
     </dt>
-    <dd>{{% md %}}The URI of the file to be uploaded for customizing the VM. It can be a github link, SAS URI for Azure Storage, etc{{% /md %}}</dd>
-</dl>
+    <dd>{{% md %}}The URI of the file to be uploaded for customizing the VM. It can be a github link, SAS URI for Azure Storage, etc{{% /md %}}</dd></dl>
 {{% /choosable %}}
 
 {{% choosable language go %}}
-<dl class="resources-properties">
-
-    <dt class="property-optional"
+<dl class="resources-properties"><dt class="property-optional"
             title="Optional">
         <span id="destination_go">
 <a href="#destination_go" style="color: inherit; text-decoration: inherit;">Destination</a>
@@ -1478,8 +1399,7 @@ All [input](#inputs) properties are implicitly available as output properties. A
         <span class="property-indicator"></span>
         <span class="property-type">string</span>
     </dt>
-    <dd>{{% md %}}The absolute path to a file (with nested directory structures already created) where the file (from sourceUri) will be uploaded to in the VM{{% /md %}}</dd>
-    <dt class="property-optional"
+    <dd>{{% md %}}The absolute path to a file (with nested directory structures already created) where the file (from sourceUri) will be uploaded to in the VM{{% /md %}}</dd><dt class="property-optional"
             title="Optional">
         <span id="name_go">
 <a href="#name_go" style="color: inherit; text-decoration: inherit;">Name</a>
@@ -1487,8 +1407,7 @@ All [input](#inputs) properties are implicitly available as output properties. A
         <span class="property-indicator"></span>
         <span class="property-type">string</span>
     </dt>
-    <dd>{{% md %}}Friendly Name to provide context on what this customization step does{{% /md %}}</dd>
-    <dt class="property-optional"
+    <dd>{{% md %}}Friendly Name to provide context on what this customization step does{{% /md %}}</dd><dt class="property-optional"
             title="Optional">
         <span id="sha256checksum_go">
 <a href="#sha256checksum_go" style="color: inherit; text-decoration: inherit;">Sha256Checksum</a>
@@ -1496,8 +1415,7 @@ All [input](#inputs) properties are implicitly available as output properties. A
         <span class="property-indicator"></span>
         <span class="property-type">string</span>
     </dt>
-    <dd>{{% md %}}SHA256 checksum of the file provided in the sourceUri field above{{% /md %}}</dd>
-    <dt class="property-optional"
+    <dd>{{% md %}}SHA256 checksum of the file provided in the sourceUri field above{{% /md %}}</dd><dt class="property-optional"
             title="Optional">
         <span id="sourceuri_go">
 <a href="#sourceuri_go" style="color: inherit; text-decoration: inherit;">Source<wbr>Uri</a>
@@ -1505,14 +1423,11 @@ All [input](#inputs) properties are implicitly available as output properties. A
         <span class="property-indicator"></span>
         <span class="property-type">string</span>
     </dt>
-    <dd>{{% md %}}The URI of the file to be uploaded for customizing the VM. It can be a github link, SAS URI for Azure Storage, etc{{% /md %}}</dd>
-</dl>
+    <dd>{{% md %}}The URI of the file to be uploaded for customizing the VM. It can be a github link, SAS URI for Azure Storage, etc{{% /md %}}</dd></dl>
 {{% /choosable %}}
 
 {{% choosable language nodejs %}}
-<dl class="resources-properties">
-
-    <dt class="property-optional"
+<dl class="resources-properties"><dt class="property-optional"
             title="Optional">
         <span id="destination_nodejs">
 <a href="#destination_nodejs" style="color: inherit; text-decoration: inherit;">destination</a>
@@ -1520,8 +1435,7 @@ All [input](#inputs) properties are implicitly available as output properties. A
         <span class="property-indicator"></span>
         <span class="property-type">string</span>
     </dt>
-    <dd>{{% md %}}The absolute path to a file (with nested directory structures already created) where the file (from sourceUri) will be uploaded to in the VM{{% /md %}}</dd>
-    <dt class="property-optional"
+    <dd>{{% md %}}The absolute path to a file (with nested directory structures already created) where the file (from sourceUri) will be uploaded to in the VM{{% /md %}}</dd><dt class="property-optional"
             title="Optional">
         <span id="name_nodejs">
 <a href="#name_nodejs" style="color: inherit; text-decoration: inherit;">name</a>
@@ -1529,8 +1443,7 @@ All [input](#inputs) properties are implicitly available as output properties. A
         <span class="property-indicator"></span>
         <span class="property-type">string</span>
     </dt>
-    <dd>{{% md %}}Friendly Name to provide context on what this customization step does{{% /md %}}</dd>
-    <dt class="property-optional"
+    <dd>{{% md %}}Friendly Name to provide context on what this customization step does{{% /md %}}</dd><dt class="property-optional"
             title="Optional">
         <span id="sha256checksum_nodejs">
 <a href="#sha256checksum_nodejs" style="color: inherit; text-decoration: inherit;">sha256Checksum</a>
@@ -1538,8 +1451,7 @@ All [input](#inputs) properties are implicitly available as output properties. A
         <span class="property-indicator"></span>
         <span class="property-type">string</span>
     </dt>
-    <dd>{{% md %}}SHA256 checksum of the file provided in the sourceUri field above{{% /md %}}</dd>
-    <dt class="property-optional"
+    <dd>{{% md %}}SHA256 checksum of the file provided in the sourceUri field above{{% /md %}}</dd><dt class="property-optional"
             title="Optional">
         <span id="sourceuri_nodejs">
 <a href="#sourceuri_nodejs" style="color: inherit; text-decoration: inherit;">source<wbr>Uri</a>
@@ -1547,14 +1459,11 @@ All [input](#inputs) properties are implicitly available as output properties. A
         <span class="property-indicator"></span>
         <span class="property-type">string</span>
     </dt>
-    <dd>{{% md %}}The URI of the file to be uploaded for customizing the VM. It can be a github link, SAS URI for Azure Storage, etc{{% /md %}}</dd>
-</dl>
+    <dd>{{% md %}}The URI of the file to be uploaded for customizing the VM. It can be a github link, SAS URI for Azure Storage, etc{{% /md %}}</dd></dl>
 {{% /choosable %}}
 
 {{% choosable language python %}}
-<dl class="resources-properties">
-
-    <dt class="property-optional"
+<dl class="resources-properties"><dt class="property-optional"
             title="Optional">
         <span id="destination_python">
 <a href="#destination_python" style="color: inherit; text-decoration: inherit;">destination</a>
@@ -1562,8 +1471,7 @@ All [input](#inputs) properties are implicitly available as output properties. A
         <span class="property-indicator"></span>
         <span class="property-type">str</span>
     </dt>
-    <dd>{{% md %}}The absolute path to a file (with nested directory structures already created) where the file (from sourceUri) will be uploaded to in the VM{{% /md %}}</dd>
-    <dt class="property-optional"
+    <dd>{{% md %}}The absolute path to a file (with nested directory structures already created) where the file (from sourceUri) will be uploaded to in the VM{{% /md %}}</dd><dt class="property-optional"
             title="Optional">
         <span id="name_python">
 <a href="#name_python" style="color: inherit; text-decoration: inherit;">name</a>
@@ -1571,8 +1479,7 @@ All [input](#inputs) properties are implicitly available as output properties. A
         <span class="property-indicator"></span>
         <span class="property-type">str</span>
     </dt>
-    <dd>{{% md %}}Friendly Name to provide context on what this customization step does{{% /md %}}</dd>
-    <dt class="property-optional"
+    <dd>{{% md %}}Friendly Name to provide context on what this customization step does{{% /md %}}</dd><dt class="property-optional"
             title="Optional">
         <span id="sha256_checksum_python">
 <a href="#sha256_checksum_python" style="color: inherit; text-decoration: inherit;">sha256_<wbr>checksum</a>
@@ -1580,8 +1487,7 @@ All [input](#inputs) properties are implicitly available as output properties. A
         <span class="property-indicator"></span>
         <span class="property-type">str</span>
     </dt>
-    <dd>{{% md %}}SHA256 checksum of the file provided in the sourceUri field above{{% /md %}}</dd>
-    <dt class="property-optional"
+    <dd>{{% md %}}SHA256 checksum of the file provided in the sourceUri field above{{% /md %}}</dd><dt class="property-optional"
             title="Optional">
         <span id="source_uri_python">
 <a href="#source_uri_python" style="color: inherit; text-decoration: inherit;">source_<wbr>uri</a>
@@ -1589,16 +1495,13 @@ All [input](#inputs) properties are implicitly available as output properties. A
         <span class="property-indicator"></span>
         <span class="property-type">str</span>
     </dt>
-    <dd>{{% md %}}The URI of the file to be uploaded for customizing the VM. It can be a github link, SAS URI for Azure Storage, etc{{% /md %}}</dd>
-</dl>
+    <dd>{{% md %}}The URI of the file to be uploaded for customizing the VM. It can be a github link, SAS URI for Azure Storage, etc{{% /md %}}</dd></dl>
 {{% /choosable %}}
 
 <h4 id="imagetemplatefilecustomizerresponse">Image<wbr>Template<wbr>File<wbr>Customizer<wbr>Response</h4>
 
 {{% choosable language csharp %}}
-<dl class="resources-properties">
-
-    <dt class="property-optional"
+<dl class="resources-properties"><dt class="property-optional"
             title="Optional">
         <span id="destination_csharp">
 <a href="#destination_csharp" style="color: inherit; text-decoration: inherit;">Destination</a>
@@ -1606,8 +1509,7 @@ All [input](#inputs) properties are implicitly available as output properties. A
         <span class="property-indicator"></span>
         <span class="property-type">string</span>
     </dt>
-    <dd>{{% md %}}The absolute path to a file (with nested directory structures already created) where the file (from sourceUri) will be uploaded to in the VM{{% /md %}}</dd>
-    <dt class="property-optional"
+    <dd>{{% md %}}The absolute path to a file (with nested directory structures already created) where the file (from sourceUri) will be uploaded to in the VM{{% /md %}}</dd><dt class="property-optional"
             title="Optional">
         <span id="name_csharp">
 <a href="#name_csharp" style="color: inherit; text-decoration: inherit;">Name</a>
@@ -1615,8 +1517,7 @@ All [input](#inputs) properties are implicitly available as output properties. A
         <span class="property-indicator"></span>
         <span class="property-type">string</span>
     </dt>
-    <dd>{{% md %}}Friendly Name to provide context on what this customization step does{{% /md %}}</dd>
-    <dt class="property-optional"
+    <dd>{{% md %}}Friendly Name to provide context on what this customization step does{{% /md %}}</dd><dt class="property-optional"
             title="Optional">
         <span id="sha256checksum_csharp">
 <a href="#sha256checksum_csharp" style="color: inherit; text-decoration: inherit;">Sha256Checksum</a>
@@ -1624,8 +1525,7 @@ All [input](#inputs) properties are implicitly available as output properties. A
         <span class="property-indicator"></span>
         <span class="property-type">string</span>
     </dt>
-    <dd>{{% md %}}SHA256 checksum of the file provided in the sourceUri field above{{% /md %}}</dd>
-    <dt class="property-optional"
+    <dd>{{% md %}}SHA256 checksum of the file provided in the sourceUri field above{{% /md %}}</dd><dt class="property-optional"
             title="Optional">
         <span id="sourceuri_csharp">
 <a href="#sourceuri_csharp" style="color: inherit; text-decoration: inherit;">Source<wbr>Uri</a>
@@ -1633,14 +1533,11 @@ All [input](#inputs) properties are implicitly available as output properties. A
         <span class="property-indicator"></span>
         <span class="property-type">string</span>
     </dt>
-    <dd>{{% md %}}The URI of the file to be uploaded for customizing the VM. It can be a github link, SAS URI for Azure Storage, etc{{% /md %}}</dd>
-</dl>
+    <dd>{{% md %}}The URI of the file to be uploaded for customizing the VM. It can be a github link, SAS URI for Azure Storage, etc{{% /md %}}</dd></dl>
 {{% /choosable %}}
 
 {{% choosable language go %}}
-<dl class="resources-properties">
-
-    <dt class="property-optional"
+<dl class="resources-properties"><dt class="property-optional"
             title="Optional">
         <span id="destination_go">
 <a href="#destination_go" style="color: inherit; text-decoration: inherit;">Destination</a>
@@ -1648,8 +1545,7 @@ All [input](#inputs) properties are implicitly available as output properties. A
         <span class="property-indicator"></span>
         <span class="property-type">string</span>
     </dt>
-    <dd>{{% md %}}The absolute path to a file (with nested directory structures already created) where the file (from sourceUri) will be uploaded to in the VM{{% /md %}}</dd>
-    <dt class="property-optional"
+    <dd>{{% md %}}The absolute path to a file (with nested directory structures already created) where the file (from sourceUri) will be uploaded to in the VM{{% /md %}}</dd><dt class="property-optional"
             title="Optional">
         <span id="name_go">
 <a href="#name_go" style="color: inherit; text-decoration: inherit;">Name</a>
@@ -1657,8 +1553,7 @@ All [input](#inputs) properties are implicitly available as output properties. A
         <span class="property-indicator"></span>
         <span class="property-type">string</span>
     </dt>
-    <dd>{{% md %}}Friendly Name to provide context on what this customization step does{{% /md %}}</dd>
-    <dt class="property-optional"
+    <dd>{{% md %}}Friendly Name to provide context on what this customization step does{{% /md %}}</dd><dt class="property-optional"
             title="Optional">
         <span id="sha256checksum_go">
 <a href="#sha256checksum_go" style="color: inherit; text-decoration: inherit;">Sha256Checksum</a>
@@ -1666,8 +1561,7 @@ All [input](#inputs) properties are implicitly available as output properties. A
         <span class="property-indicator"></span>
         <span class="property-type">string</span>
     </dt>
-    <dd>{{% md %}}SHA256 checksum of the file provided in the sourceUri field above{{% /md %}}</dd>
-    <dt class="property-optional"
+    <dd>{{% md %}}SHA256 checksum of the file provided in the sourceUri field above{{% /md %}}</dd><dt class="property-optional"
             title="Optional">
         <span id="sourceuri_go">
 <a href="#sourceuri_go" style="color: inherit; text-decoration: inherit;">Source<wbr>Uri</a>
@@ -1675,14 +1569,11 @@ All [input](#inputs) properties are implicitly available as output properties. A
         <span class="property-indicator"></span>
         <span class="property-type">string</span>
     </dt>
-    <dd>{{% md %}}The URI of the file to be uploaded for customizing the VM. It can be a github link, SAS URI for Azure Storage, etc{{% /md %}}</dd>
-</dl>
+    <dd>{{% md %}}The URI of the file to be uploaded for customizing the VM. It can be a github link, SAS URI for Azure Storage, etc{{% /md %}}</dd></dl>
 {{% /choosable %}}
 
 {{% choosable language nodejs %}}
-<dl class="resources-properties">
-
-    <dt class="property-optional"
+<dl class="resources-properties"><dt class="property-optional"
             title="Optional">
         <span id="destination_nodejs">
 <a href="#destination_nodejs" style="color: inherit; text-decoration: inherit;">destination</a>
@@ -1690,8 +1581,7 @@ All [input](#inputs) properties are implicitly available as output properties. A
         <span class="property-indicator"></span>
         <span class="property-type">string</span>
     </dt>
-    <dd>{{% md %}}The absolute path to a file (with nested directory structures already created) where the file (from sourceUri) will be uploaded to in the VM{{% /md %}}</dd>
-    <dt class="property-optional"
+    <dd>{{% md %}}The absolute path to a file (with nested directory structures already created) where the file (from sourceUri) will be uploaded to in the VM{{% /md %}}</dd><dt class="property-optional"
             title="Optional">
         <span id="name_nodejs">
 <a href="#name_nodejs" style="color: inherit; text-decoration: inherit;">name</a>
@@ -1699,8 +1589,7 @@ All [input](#inputs) properties are implicitly available as output properties. A
         <span class="property-indicator"></span>
         <span class="property-type">string</span>
     </dt>
-    <dd>{{% md %}}Friendly Name to provide context on what this customization step does{{% /md %}}</dd>
-    <dt class="property-optional"
+    <dd>{{% md %}}Friendly Name to provide context on what this customization step does{{% /md %}}</dd><dt class="property-optional"
             title="Optional">
         <span id="sha256checksum_nodejs">
 <a href="#sha256checksum_nodejs" style="color: inherit; text-decoration: inherit;">sha256Checksum</a>
@@ -1708,8 +1597,7 @@ All [input](#inputs) properties are implicitly available as output properties. A
         <span class="property-indicator"></span>
         <span class="property-type">string</span>
     </dt>
-    <dd>{{% md %}}SHA256 checksum of the file provided in the sourceUri field above{{% /md %}}</dd>
-    <dt class="property-optional"
+    <dd>{{% md %}}SHA256 checksum of the file provided in the sourceUri field above{{% /md %}}</dd><dt class="property-optional"
             title="Optional">
         <span id="sourceuri_nodejs">
 <a href="#sourceuri_nodejs" style="color: inherit; text-decoration: inherit;">source<wbr>Uri</a>
@@ -1717,14 +1605,11 @@ All [input](#inputs) properties are implicitly available as output properties. A
         <span class="property-indicator"></span>
         <span class="property-type">string</span>
     </dt>
-    <dd>{{% md %}}The URI of the file to be uploaded for customizing the VM. It can be a github link, SAS URI for Azure Storage, etc{{% /md %}}</dd>
-</dl>
+    <dd>{{% md %}}The URI of the file to be uploaded for customizing the VM. It can be a github link, SAS URI for Azure Storage, etc{{% /md %}}</dd></dl>
 {{% /choosable %}}
 
 {{% choosable language python %}}
-<dl class="resources-properties">
-
-    <dt class="property-optional"
+<dl class="resources-properties"><dt class="property-optional"
             title="Optional">
         <span id="destination_python">
 <a href="#destination_python" style="color: inherit; text-decoration: inherit;">destination</a>
@@ -1732,8 +1617,7 @@ All [input](#inputs) properties are implicitly available as output properties. A
         <span class="property-indicator"></span>
         <span class="property-type">str</span>
     </dt>
-    <dd>{{% md %}}The absolute path to a file (with nested directory structures already created) where the file (from sourceUri) will be uploaded to in the VM{{% /md %}}</dd>
-    <dt class="property-optional"
+    <dd>{{% md %}}The absolute path to a file (with nested directory structures already created) where the file (from sourceUri) will be uploaded to in the VM{{% /md %}}</dd><dt class="property-optional"
             title="Optional">
         <span id="name_python">
 <a href="#name_python" style="color: inherit; text-decoration: inherit;">name</a>
@@ -1741,8 +1625,7 @@ All [input](#inputs) properties are implicitly available as output properties. A
         <span class="property-indicator"></span>
         <span class="property-type">str</span>
     </dt>
-    <dd>{{% md %}}Friendly Name to provide context on what this customization step does{{% /md %}}</dd>
-    <dt class="property-optional"
+    <dd>{{% md %}}Friendly Name to provide context on what this customization step does{{% /md %}}</dd><dt class="property-optional"
             title="Optional">
         <span id="sha256_checksum_python">
 <a href="#sha256_checksum_python" style="color: inherit; text-decoration: inherit;">sha256_<wbr>checksum</a>
@@ -1750,8 +1633,7 @@ All [input](#inputs) properties are implicitly available as output properties. A
         <span class="property-indicator"></span>
         <span class="property-type">str</span>
     </dt>
-    <dd>{{% md %}}SHA256 checksum of the file provided in the sourceUri field above{{% /md %}}</dd>
-    <dt class="property-optional"
+    <dd>{{% md %}}SHA256 checksum of the file provided in the sourceUri field above{{% /md %}}</dd><dt class="property-optional"
             title="Optional">
         <span id="source_uri_python">
 <a href="#source_uri_python" style="color: inherit; text-decoration: inherit;">source_<wbr>uri</a>
@@ -1759,16 +1641,13 @@ All [input](#inputs) properties are implicitly available as output properties. A
         <span class="property-indicator"></span>
         <span class="property-type">str</span>
     </dt>
-    <dd>{{% md %}}The URI of the file to be uploaded for customizing the VM. It can be a github link, SAS URI for Azure Storage, etc{{% /md %}}</dd>
-</dl>
+    <dd>{{% md %}}The URI of the file to be uploaded for customizing the VM. It can be a github link, SAS URI for Azure Storage, etc{{% /md %}}</dd></dl>
 {{% /choosable %}}
 
 <h4 id="imagetemplateidentity">Image<wbr>Template<wbr>Identity</h4>
 
 {{% choosable language csharp %}}
-<dl class="resources-properties">
-
-    <dt class="property-optional"
+<dl class="resources-properties"><dt class="property-optional"
             title="Optional">
         <span id="type_csharp">
 <a href="#type_csharp" style="color: inherit; text-decoration: inherit;">Type</a>
@@ -1776,8 +1655,7 @@ All [input](#inputs) properties are implicitly available as output properties. A
         <span class="property-indicator"></span>
         <span class="property-type"><a href="#resourceidentitytype">Pulumi.<wbr>Azure<wbr>Native.<wbr>Virtual<wbr>Machine<wbr>Images.<wbr>Resource<wbr>Identity<wbr>Type</a></span>
     </dt>
-    <dd>{{% md %}}The type of identity used for the image template. The type 'None' will remove any identities from the image template.{{% /md %}}</dd>
-    <dt class="property-optional"
+    <dd>{{% md %}}The type of identity used for the image template. The type 'None' will remove any identities from the image template.{{% /md %}}</dd><dt class="property-optional"
             title="Optional">
         <span id="userassignedidentities_csharp">
 <a href="#userassignedidentities_csharp" style="color: inherit; text-decoration: inherit;">User<wbr>Assigned<wbr>Identities</a>
@@ -1785,14 +1663,11 @@ All [input](#inputs) properties are implicitly available as output properties. A
         <span class="property-indicator"></span>
         <span class="property-type">Dictionary&lt;string, object&gt;</span>
     </dt>
-    <dd>{{% md %}}The list of user identities associated with the image template. The user identity dictionary key references will be ARM resource ids in the form: '/subscriptions/{subscriptionId}/resourceGroups/{resourceGroupName}/providers/Microsoft.ManagedIdentity/userAssignedIdentities/{identityName}'.{{% /md %}}</dd>
-</dl>
+    <dd>{{% md %}}The list of user identities associated with the image template. The user identity dictionary key references will be ARM resource ids in the form: '/subscriptions/{subscriptionId}/resourceGroups/{resourceGroupName}/providers/Microsoft.ManagedIdentity/userAssignedIdentities/{identityName}'.{{% /md %}}</dd></dl>
 {{% /choosable %}}
 
 {{% choosable language go %}}
-<dl class="resources-properties">
-
-    <dt class="property-optional"
+<dl class="resources-properties"><dt class="property-optional"
             title="Optional">
         <span id="type_go">
 <a href="#type_go" style="color: inherit; text-decoration: inherit;">Type</a>
@@ -1800,8 +1675,7 @@ All [input](#inputs) properties are implicitly available as output properties. A
         <span class="property-indicator"></span>
         <span class="property-type"><a href="#resourceidentitytype">Resource<wbr>Identity<wbr>Type</a></span>
     </dt>
-    <dd>{{% md %}}The type of identity used for the image template. The type 'None' will remove any identities from the image template.{{% /md %}}</dd>
-    <dt class="property-optional"
+    <dd>{{% md %}}The type of identity used for the image template. The type 'None' will remove any identities from the image template.{{% /md %}}</dd><dt class="property-optional"
             title="Optional">
         <span id="userassignedidentities_go">
 <a href="#userassignedidentities_go" style="color: inherit; text-decoration: inherit;">User<wbr>Assigned<wbr>Identities</a>
@@ -1809,14 +1683,11 @@ All [input](#inputs) properties are implicitly available as output properties. A
         <span class="property-indicator"></span>
         <span class="property-type">map[string]interface{}</span>
     </dt>
-    <dd>{{% md %}}The list of user identities associated with the image template. The user identity dictionary key references will be ARM resource ids in the form: '/subscriptions/{subscriptionId}/resourceGroups/{resourceGroupName}/providers/Microsoft.ManagedIdentity/userAssignedIdentities/{identityName}'.{{% /md %}}</dd>
-</dl>
+    <dd>{{% md %}}The list of user identities associated with the image template. The user identity dictionary key references will be ARM resource ids in the form: '/subscriptions/{subscriptionId}/resourceGroups/{resourceGroupName}/providers/Microsoft.ManagedIdentity/userAssignedIdentities/{identityName}'.{{% /md %}}</dd></dl>
 {{% /choosable %}}
 
 {{% choosable language nodejs %}}
-<dl class="resources-properties">
-
-    <dt class="property-optional"
+<dl class="resources-properties"><dt class="property-optional"
             title="Optional">
         <span id="type_nodejs">
 <a href="#type_nodejs" style="color: inherit; text-decoration: inherit;">type</a>
@@ -1824,8 +1695,7 @@ All [input](#inputs) properties are implicitly available as output properties. A
         <span class="property-indicator"></span>
         <span class="property-type"><a href="#resourceidentitytype">Resource<wbr>Identity<wbr>Type</a></span>
     </dt>
-    <dd>{{% md %}}The type of identity used for the image template. The type 'None' will remove any identities from the image template.{{% /md %}}</dd>
-    <dt class="property-optional"
+    <dd>{{% md %}}The type of identity used for the image template. The type 'None' will remove any identities from the image template.{{% /md %}}</dd><dt class="property-optional"
             title="Optional">
         <span id="userassignedidentities_nodejs">
 <a href="#userassignedidentities_nodejs" style="color: inherit; text-decoration: inherit;">user<wbr>Assigned<wbr>Identities</a>
@@ -1833,14 +1703,11 @@ All [input](#inputs) properties are implicitly available as output properties. A
         <span class="property-indicator"></span>
         <span class="property-type">{[key: string]: any}</span>
     </dt>
-    <dd>{{% md %}}The list of user identities associated with the image template. The user identity dictionary key references will be ARM resource ids in the form: '/subscriptions/{subscriptionId}/resourceGroups/{resourceGroupName}/providers/Microsoft.ManagedIdentity/userAssignedIdentities/{identityName}'.{{% /md %}}</dd>
-</dl>
+    <dd>{{% md %}}The list of user identities associated with the image template. The user identity dictionary key references will be ARM resource ids in the form: '/subscriptions/{subscriptionId}/resourceGroups/{resourceGroupName}/providers/Microsoft.ManagedIdentity/userAssignedIdentities/{identityName}'.{{% /md %}}</dd></dl>
 {{% /choosable %}}
 
 {{% choosable language python %}}
-<dl class="resources-properties">
-
-    <dt class="property-optional"
+<dl class="resources-properties"><dt class="property-optional"
             title="Optional">
         <span id="type_python">
 <a href="#type_python" style="color: inherit; text-decoration: inherit;">type</a>
@@ -1848,8 +1715,7 @@ All [input](#inputs) properties are implicitly available as output properties. A
         <span class="property-indicator"></span>
         <span class="property-type"><a href="#resourceidentitytype">Resource<wbr>Identity<wbr>Type</a></span>
     </dt>
-    <dd>{{% md %}}The type of identity used for the image template. The type 'None' will remove any identities from the image template.{{% /md %}}</dd>
-    <dt class="property-optional"
+    <dd>{{% md %}}The type of identity used for the image template. The type 'None' will remove any identities from the image template.{{% /md %}}</dd><dt class="property-optional"
             title="Optional">
         <span id="user_assigned_identities_python">
 <a href="#user_assigned_identities_python" style="color: inherit; text-decoration: inherit;">user_<wbr>assigned_<wbr>identities</a>
@@ -1857,16 +1723,13 @@ All [input](#inputs) properties are implicitly available as output properties. A
         <span class="property-indicator"></span>
         <span class="property-type">Mapping[str, Any]</span>
     </dt>
-    <dd>{{% md %}}The list of user identities associated with the image template. The user identity dictionary key references will be ARM resource ids in the form: '/subscriptions/{subscriptionId}/resourceGroups/{resourceGroupName}/providers/Microsoft.ManagedIdentity/userAssignedIdentities/{identityName}'.{{% /md %}}</dd>
-</dl>
+    <dd>{{% md %}}The list of user identities associated with the image template. The user identity dictionary key references will be ARM resource ids in the form: '/subscriptions/{subscriptionId}/resourceGroups/{resourceGroupName}/providers/Microsoft.ManagedIdentity/userAssignedIdentities/{identityName}'.{{% /md %}}</dd></dl>
 {{% /choosable %}}
 
 <h4 id="imagetemplateidentityresponse">Image<wbr>Template<wbr>Identity<wbr>Response</h4>
 
 {{% choosable language csharp %}}
-<dl class="resources-properties">
-
-    <dt class="property-optional"
+<dl class="resources-properties"><dt class="property-optional"
             title="Optional">
         <span id="type_csharp">
 <a href="#type_csharp" style="color: inherit; text-decoration: inherit;">Type</a>
@@ -1874,8 +1737,7 @@ All [input](#inputs) properties are implicitly available as output properties. A
         <span class="property-indicator"></span>
         <span class="property-type">string</span>
     </dt>
-    <dd>{{% md %}}The type of identity used for the image template. The type 'None' will remove any identities from the image template.{{% /md %}}</dd>
-    <dt class="property-optional"
+    <dd>{{% md %}}The type of identity used for the image template. The type 'None' will remove any identities from the image template.{{% /md %}}</dd><dt class="property-optional"
             title="Optional">
         <span id="userassignedidentities_csharp">
 <a href="#userassignedidentities_csharp" style="color: inherit; text-decoration: inherit;">User<wbr>Assigned<wbr>Identities</a>
@@ -1883,14 +1745,11 @@ All [input](#inputs) properties are implicitly available as output properties. A
         <span class="property-indicator"></span>
         <span class="property-type">Dictionary&lt;string, Pulumi.<wbr>Azure<wbr>Native.<wbr>Virtual<wbr>Machine<wbr>Images.<wbr>Inputs.<wbr>Image<wbr>Template<wbr>Identity<wbr>Response<wbr>User<wbr>Assigned<wbr>Identities<wbr>Args&gt;</span>
     </dt>
-    <dd>{{% md %}}The list of user identities associated with the image template. The user identity dictionary key references will be ARM resource ids in the form: '/subscriptions/{subscriptionId}/resourceGroups/{resourceGroupName}/providers/Microsoft.ManagedIdentity/userAssignedIdentities/{identityName}'.{{% /md %}}</dd>
-</dl>
+    <dd>{{% md %}}The list of user identities associated with the image template. The user identity dictionary key references will be ARM resource ids in the form: '/subscriptions/{subscriptionId}/resourceGroups/{resourceGroupName}/providers/Microsoft.ManagedIdentity/userAssignedIdentities/{identityName}'.{{% /md %}}</dd></dl>
 {{% /choosable %}}
 
 {{% choosable language go %}}
-<dl class="resources-properties">
-
-    <dt class="property-optional"
+<dl class="resources-properties"><dt class="property-optional"
             title="Optional">
         <span id="type_go">
 <a href="#type_go" style="color: inherit; text-decoration: inherit;">Type</a>
@@ -1898,8 +1757,7 @@ All [input](#inputs) properties are implicitly available as output properties. A
         <span class="property-indicator"></span>
         <span class="property-type">string</span>
     </dt>
-    <dd>{{% md %}}The type of identity used for the image template. The type 'None' will remove any identities from the image template.{{% /md %}}</dd>
-    <dt class="property-optional"
+    <dd>{{% md %}}The type of identity used for the image template. The type 'None' will remove any identities from the image template.{{% /md %}}</dd><dt class="property-optional"
             title="Optional">
         <span id="userassignedidentities_go">
 <a href="#userassignedidentities_go" style="color: inherit; text-decoration: inherit;">User<wbr>Assigned<wbr>Identities</a>
@@ -1907,14 +1765,11 @@ All [input](#inputs) properties are implicitly available as output properties. A
         <span class="property-indicator"></span>
         <span class="property-type">map[string]Image<wbr>Template<wbr>Identity<wbr>Response<wbr>User<wbr>Assigned<wbr>Identities</span>
     </dt>
-    <dd>{{% md %}}The list of user identities associated with the image template. The user identity dictionary key references will be ARM resource ids in the form: '/subscriptions/{subscriptionId}/resourceGroups/{resourceGroupName}/providers/Microsoft.ManagedIdentity/userAssignedIdentities/{identityName}'.{{% /md %}}</dd>
-</dl>
+    <dd>{{% md %}}The list of user identities associated with the image template. The user identity dictionary key references will be ARM resource ids in the form: '/subscriptions/{subscriptionId}/resourceGroups/{resourceGroupName}/providers/Microsoft.ManagedIdentity/userAssignedIdentities/{identityName}'.{{% /md %}}</dd></dl>
 {{% /choosable %}}
 
 {{% choosable language nodejs %}}
-<dl class="resources-properties">
-
-    <dt class="property-optional"
+<dl class="resources-properties"><dt class="property-optional"
             title="Optional">
         <span id="type_nodejs">
 <a href="#type_nodejs" style="color: inherit; text-decoration: inherit;">type</a>
@@ -1922,8 +1777,7 @@ All [input](#inputs) properties are implicitly available as output properties. A
         <span class="property-indicator"></span>
         <span class="property-type">string</span>
     </dt>
-    <dd>{{% md %}}The type of identity used for the image template. The type 'None' will remove any identities from the image template.{{% /md %}}</dd>
-    <dt class="property-optional"
+    <dd>{{% md %}}The type of identity used for the image template. The type 'None' will remove any identities from the image template.{{% /md %}}</dd><dt class="property-optional"
             title="Optional">
         <span id="userassignedidentities_nodejs">
 <a href="#userassignedidentities_nodejs" style="color: inherit; text-decoration: inherit;">user<wbr>Assigned<wbr>Identities</a>
@@ -1931,14 +1785,11 @@ All [input](#inputs) properties are implicitly available as output properties. A
         <span class="property-indicator"></span>
         <span class="property-type">{[key: string]: Image<wbr>Template<wbr>Identity<wbr>Response<wbr>User<wbr>Assigned<wbr>Identities}</span>
     </dt>
-    <dd>{{% md %}}The list of user identities associated with the image template. The user identity dictionary key references will be ARM resource ids in the form: '/subscriptions/{subscriptionId}/resourceGroups/{resourceGroupName}/providers/Microsoft.ManagedIdentity/userAssignedIdentities/{identityName}'.{{% /md %}}</dd>
-</dl>
+    <dd>{{% md %}}The list of user identities associated with the image template. The user identity dictionary key references will be ARM resource ids in the form: '/subscriptions/{subscriptionId}/resourceGroups/{resourceGroupName}/providers/Microsoft.ManagedIdentity/userAssignedIdentities/{identityName}'.{{% /md %}}</dd></dl>
 {{% /choosable %}}
 
 {{% choosable language python %}}
-<dl class="resources-properties">
-
-    <dt class="property-optional"
+<dl class="resources-properties"><dt class="property-optional"
             title="Optional">
         <span id="type_python">
 <a href="#type_python" style="color: inherit; text-decoration: inherit;">type</a>
@@ -1946,8 +1797,7 @@ All [input](#inputs) properties are implicitly available as output properties. A
         <span class="property-indicator"></span>
         <span class="property-type">str</span>
     </dt>
-    <dd>{{% md %}}The type of identity used for the image template. The type 'None' will remove any identities from the image template.{{% /md %}}</dd>
-    <dt class="property-optional"
+    <dd>{{% md %}}The type of identity used for the image template. The type 'None' will remove any identities from the image template.{{% /md %}}</dd><dt class="property-optional"
             title="Optional">
         <span id="user_assigned_identities_python">
 <a href="#user_assigned_identities_python" style="color: inherit; text-decoration: inherit;">user_<wbr>assigned_<wbr>identities</a>
@@ -1955,16 +1805,13 @@ All [input](#inputs) properties are implicitly available as output properties. A
         <span class="property-indicator"></span>
         <span class="property-type">Mapping[str, Image<wbr>Template<wbr>Identity<wbr>Response<wbr>User<wbr>Assigned<wbr>Identities<wbr>Args]</span>
     </dt>
-    <dd>{{% md %}}The list of user identities associated with the image template. The user identity dictionary key references will be ARM resource ids in the form: '/subscriptions/{subscriptionId}/resourceGroups/{resourceGroupName}/providers/Microsoft.ManagedIdentity/userAssignedIdentities/{identityName}'.{{% /md %}}</dd>
-</dl>
+    <dd>{{% md %}}The list of user identities associated with the image template. The user identity dictionary key references will be ARM resource ids in the form: '/subscriptions/{subscriptionId}/resourceGroups/{resourceGroupName}/providers/Microsoft.ManagedIdentity/userAssignedIdentities/{identityName}'.{{% /md %}}</dd></dl>
 {{% /choosable %}}
 
 <h4 id="imagetemplateidentityresponseuserassignedidentities">Image<wbr>Template<wbr>Identity<wbr>Response<wbr>User<wbr>Assigned<wbr>Identities</h4>
 
 {{% choosable language csharp %}}
-<dl class="resources-properties">
-
-    <dt class="property-required"
+<dl class="resources-properties"><dt class="property-required"
             title="Required">
         <span id="clientid_csharp">
 <a href="#clientid_csharp" style="color: inherit; text-decoration: inherit;">Client<wbr>Id</a>
@@ -1972,8 +1819,7 @@ All [input](#inputs) properties are implicitly available as output properties. A
         <span class="property-indicator"></span>
         <span class="property-type">string</span>
     </dt>
-    <dd>{{% md %}}The client id of user assigned identity.{{% /md %}}</dd>
-    <dt class="property-required"
+    <dd>{{% md %}}The client id of user assigned identity.{{% /md %}}</dd><dt class="property-required"
             title="Required">
         <span id="principalid_csharp">
 <a href="#principalid_csharp" style="color: inherit; text-decoration: inherit;">Principal<wbr>Id</a>
@@ -1981,14 +1827,11 @@ All [input](#inputs) properties are implicitly available as output properties. A
         <span class="property-indicator"></span>
         <span class="property-type">string</span>
     </dt>
-    <dd>{{% md %}}The principal id of user assigned identity.{{% /md %}}</dd>
-</dl>
+    <dd>{{% md %}}The principal id of user assigned identity.{{% /md %}}</dd></dl>
 {{% /choosable %}}
 
 {{% choosable language go %}}
-<dl class="resources-properties">
-
-    <dt class="property-required"
+<dl class="resources-properties"><dt class="property-required"
             title="Required">
         <span id="clientid_go">
 <a href="#clientid_go" style="color: inherit; text-decoration: inherit;">Client<wbr>Id</a>
@@ -1996,8 +1839,7 @@ All [input](#inputs) properties are implicitly available as output properties. A
         <span class="property-indicator"></span>
         <span class="property-type">string</span>
     </dt>
-    <dd>{{% md %}}The client id of user assigned identity.{{% /md %}}</dd>
-    <dt class="property-required"
+    <dd>{{% md %}}The client id of user assigned identity.{{% /md %}}</dd><dt class="property-required"
             title="Required">
         <span id="principalid_go">
 <a href="#principalid_go" style="color: inherit; text-decoration: inherit;">Principal<wbr>Id</a>
@@ -2005,14 +1847,11 @@ All [input](#inputs) properties are implicitly available as output properties. A
         <span class="property-indicator"></span>
         <span class="property-type">string</span>
     </dt>
-    <dd>{{% md %}}The principal id of user assigned identity.{{% /md %}}</dd>
-</dl>
+    <dd>{{% md %}}The principal id of user assigned identity.{{% /md %}}</dd></dl>
 {{% /choosable %}}
 
 {{% choosable language nodejs %}}
-<dl class="resources-properties">
-
-    <dt class="property-required"
+<dl class="resources-properties"><dt class="property-required"
             title="Required">
         <span id="clientid_nodejs">
 <a href="#clientid_nodejs" style="color: inherit; text-decoration: inherit;">client<wbr>Id</a>
@@ -2020,8 +1859,7 @@ All [input](#inputs) properties are implicitly available as output properties. A
         <span class="property-indicator"></span>
         <span class="property-type">string</span>
     </dt>
-    <dd>{{% md %}}The client id of user assigned identity.{{% /md %}}</dd>
-    <dt class="property-required"
+    <dd>{{% md %}}The client id of user assigned identity.{{% /md %}}</dd><dt class="property-required"
             title="Required">
         <span id="principalid_nodejs">
 <a href="#principalid_nodejs" style="color: inherit; text-decoration: inherit;">principal<wbr>Id</a>
@@ -2029,14 +1867,11 @@ All [input](#inputs) properties are implicitly available as output properties. A
         <span class="property-indicator"></span>
         <span class="property-type">string</span>
     </dt>
-    <dd>{{% md %}}The principal id of user assigned identity.{{% /md %}}</dd>
-</dl>
+    <dd>{{% md %}}The principal id of user assigned identity.{{% /md %}}</dd></dl>
 {{% /choosable %}}
 
 {{% choosable language python %}}
-<dl class="resources-properties">
-
-    <dt class="property-required"
+<dl class="resources-properties"><dt class="property-required"
             title="Required">
         <span id="client_id_python">
 <a href="#client_id_python" style="color: inherit; text-decoration: inherit;">client_<wbr>id</a>
@@ -2044,8 +1879,7 @@ All [input](#inputs) properties are implicitly available as output properties. A
         <span class="property-indicator"></span>
         <span class="property-type">str</span>
     </dt>
-    <dd>{{% md %}}The client id of user assigned identity.{{% /md %}}</dd>
-    <dt class="property-required"
+    <dd>{{% md %}}The client id of user assigned identity.{{% /md %}}</dd><dt class="property-required"
             title="Required">
         <span id="principal_id_python">
 <a href="#principal_id_python" style="color: inherit; text-decoration: inherit;">principal_<wbr>id</a>
@@ -2053,16 +1887,13 @@ All [input](#inputs) properties are implicitly available as output properties. A
         <span class="property-indicator"></span>
         <span class="property-type">str</span>
     </dt>
-    <dd>{{% md %}}The principal id of user assigned identity.{{% /md %}}</dd>
-</dl>
+    <dd>{{% md %}}The principal id of user assigned identity.{{% /md %}}</dd></dl>
 {{% /choosable %}}
 
 <h4 id="imagetemplatelastrunstatusresponse">Image<wbr>Template<wbr>Last<wbr>Run<wbr>Status<wbr>Response</h4>
 
 {{% choosable language csharp %}}
-<dl class="resources-properties">
-
-    <dt class="property-optional"
+<dl class="resources-properties"><dt class="property-optional"
             title="Optional">
         <span id="endtime_csharp">
 <a href="#endtime_csharp" style="color: inherit; text-decoration: inherit;">End<wbr>Time</a>
@@ -2070,8 +1901,7 @@ All [input](#inputs) properties are implicitly available as output properties. A
         <span class="property-indicator"></span>
         <span class="property-type">string</span>
     </dt>
-    <dd>{{% md %}}End time of the last run (UTC){{% /md %}}</dd>
-    <dt class="property-optional"
+    <dd>{{% md %}}End time of the last run (UTC){{% /md %}}</dd><dt class="property-optional"
             title="Optional">
         <span id="message_csharp">
 <a href="#message_csharp" style="color: inherit; text-decoration: inherit;">Message</a>
@@ -2079,8 +1909,7 @@ All [input](#inputs) properties are implicitly available as output properties. A
         <span class="property-indicator"></span>
         <span class="property-type">string</span>
     </dt>
-    <dd>{{% md %}}Verbose information about the last run state{{% /md %}}</dd>
-    <dt class="property-optional"
+    <dd>{{% md %}}Verbose information about the last run state{{% /md %}}</dd><dt class="property-optional"
             title="Optional">
         <span id="runstate_csharp">
 <a href="#runstate_csharp" style="color: inherit; text-decoration: inherit;">Run<wbr>State</a>
@@ -2088,8 +1917,7 @@ All [input](#inputs) properties are implicitly available as output properties. A
         <span class="property-indicator"></span>
         <span class="property-type">string</span>
     </dt>
-    <dd>{{% md %}}State of the last run{{% /md %}}</dd>
-    <dt class="property-optional"
+    <dd>{{% md %}}State of the last run{{% /md %}}</dd><dt class="property-optional"
             title="Optional">
         <span id="runsubstate_csharp">
 <a href="#runsubstate_csharp" style="color: inherit; text-decoration: inherit;">Run<wbr>Sub<wbr>State</a>
@@ -2097,8 +1925,7 @@ All [input](#inputs) properties are implicitly available as output properties. A
         <span class="property-indicator"></span>
         <span class="property-type">string</span>
     </dt>
-    <dd>{{% md %}}Sub-state of the last run{{% /md %}}</dd>
-    <dt class="property-optional"
+    <dd>{{% md %}}Sub-state of the last run{{% /md %}}</dd><dt class="property-optional"
             title="Optional">
         <span id="starttime_csharp">
 <a href="#starttime_csharp" style="color: inherit; text-decoration: inherit;">Start<wbr>Time</a>
@@ -2106,14 +1933,11 @@ All [input](#inputs) properties are implicitly available as output properties. A
         <span class="property-indicator"></span>
         <span class="property-type">string</span>
     </dt>
-    <dd>{{% md %}}Start time of the last run (UTC){{% /md %}}</dd>
-</dl>
+    <dd>{{% md %}}Start time of the last run (UTC){{% /md %}}</dd></dl>
 {{% /choosable %}}
 
 {{% choosable language go %}}
-<dl class="resources-properties">
-
-    <dt class="property-optional"
+<dl class="resources-properties"><dt class="property-optional"
             title="Optional">
         <span id="endtime_go">
 <a href="#endtime_go" style="color: inherit; text-decoration: inherit;">End<wbr>Time</a>
@@ -2121,8 +1945,7 @@ All [input](#inputs) properties are implicitly available as output properties. A
         <span class="property-indicator"></span>
         <span class="property-type">string</span>
     </dt>
-    <dd>{{% md %}}End time of the last run (UTC){{% /md %}}</dd>
-    <dt class="property-optional"
+    <dd>{{% md %}}End time of the last run (UTC){{% /md %}}</dd><dt class="property-optional"
             title="Optional">
         <span id="message_go">
 <a href="#message_go" style="color: inherit; text-decoration: inherit;">Message</a>
@@ -2130,8 +1953,7 @@ All [input](#inputs) properties are implicitly available as output properties. A
         <span class="property-indicator"></span>
         <span class="property-type">string</span>
     </dt>
-    <dd>{{% md %}}Verbose information about the last run state{{% /md %}}</dd>
-    <dt class="property-optional"
+    <dd>{{% md %}}Verbose information about the last run state{{% /md %}}</dd><dt class="property-optional"
             title="Optional">
         <span id="runstate_go">
 <a href="#runstate_go" style="color: inherit; text-decoration: inherit;">Run<wbr>State</a>
@@ -2139,8 +1961,7 @@ All [input](#inputs) properties are implicitly available as output properties. A
         <span class="property-indicator"></span>
         <span class="property-type">string</span>
     </dt>
-    <dd>{{% md %}}State of the last run{{% /md %}}</dd>
-    <dt class="property-optional"
+    <dd>{{% md %}}State of the last run{{% /md %}}</dd><dt class="property-optional"
             title="Optional">
         <span id="runsubstate_go">
 <a href="#runsubstate_go" style="color: inherit; text-decoration: inherit;">Run<wbr>Sub<wbr>State</a>
@@ -2148,8 +1969,7 @@ All [input](#inputs) properties are implicitly available as output properties. A
         <span class="property-indicator"></span>
         <span class="property-type">string</span>
     </dt>
-    <dd>{{% md %}}Sub-state of the last run{{% /md %}}</dd>
-    <dt class="property-optional"
+    <dd>{{% md %}}Sub-state of the last run{{% /md %}}</dd><dt class="property-optional"
             title="Optional">
         <span id="starttime_go">
 <a href="#starttime_go" style="color: inherit; text-decoration: inherit;">Start<wbr>Time</a>
@@ -2157,14 +1977,11 @@ All [input](#inputs) properties are implicitly available as output properties. A
         <span class="property-indicator"></span>
         <span class="property-type">string</span>
     </dt>
-    <dd>{{% md %}}Start time of the last run (UTC){{% /md %}}</dd>
-</dl>
+    <dd>{{% md %}}Start time of the last run (UTC){{% /md %}}</dd></dl>
 {{% /choosable %}}
 
 {{% choosable language nodejs %}}
-<dl class="resources-properties">
-
-    <dt class="property-optional"
+<dl class="resources-properties"><dt class="property-optional"
             title="Optional">
         <span id="endtime_nodejs">
 <a href="#endtime_nodejs" style="color: inherit; text-decoration: inherit;">end<wbr>Time</a>
@@ -2172,8 +1989,7 @@ All [input](#inputs) properties are implicitly available as output properties. A
         <span class="property-indicator"></span>
         <span class="property-type">string</span>
     </dt>
-    <dd>{{% md %}}End time of the last run (UTC){{% /md %}}</dd>
-    <dt class="property-optional"
+    <dd>{{% md %}}End time of the last run (UTC){{% /md %}}</dd><dt class="property-optional"
             title="Optional">
         <span id="message_nodejs">
 <a href="#message_nodejs" style="color: inherit; text-decoration: inherit;">message</a>
@@ -2181,8 +1997,7 @@ All [input](#inputs) properties are implicitly available as output properties. A
         <span class="property-indicator"></span>
         <span class="property-type">string</span>
     </dt>
-    <dd>{{% md %}}Verbose information about the last run state{{% /md %}}</dd>
-    <dt class="property-optional"
+    <dd>{{% md %}}Verbose information about the last run state{{% /md %}}</dd><dt class="property-optional"
             title="Optional">
         <span id="runstate_nodejs">
 <a href="#runstate_nodejs" style="color: inherit; text-decoration: inherit;">run<wbr>State</a>
@@ -2190,8 +2005,7 @@ All [input](#inputs) properties are implicitly available as output properties. A
         <span class="property-indicator"></span>
         <span class="property-type">string</span>
     </dt>
-    <dd>{{% md %}}State of the last run{{% /md %}}</dd>
-    <dt class="property-optional"
+    <dd>{{% md %}}State of the last run{{% /md %}}</dd><dt class="property-optional"
             title="Optional">
         <span id="runsubstate_nodejs">
 <a href="#runsubstate_nodejs" style="color: inherit; text-decoration: inherit;">run<wbr>Sub<wbr>State</a>
@@ -2199,8 +2013,7 @@ All [input](#inputs) properties are implicitly available as output properties. A
         <span class="property-indicator"></span>
         <span class="property-type">string</span>
     </dt>
-    <dd>{{% md %}}Sub-state of the last run{{% /md %}}</dd>
-    <dt class="property-optional"
+    <dd>{{% md %}}Sub-state of the last run{{% /md %}}</dd><dt class="property-optional"
             title="Optional">
         <span id="starttime_nodejs">
 <a href="#starttime_nodejs" style="color: inherit; text-decoration: inherit;">start<wbr>Time</a>
@@ -2208,14 +2021,11 @@ All [input](#inputs) properties are implicitly available as output properties. A
         <span class="property-indicator"></span>
         <span class="property-type">string</span>
     </dt>
-    <dd>{{% md %}}Start time of the last run (UTC){{% /md %}}</dd>
-</dl>
+    <dd>{{% md %}}Start time of the last run (UTC){{% /md %}}</dd></dl>
 {{% /choosable %}}
 
 {{% choosable language python %}}
-<dl class="resources-properties">
-
-    <dt class="property-optional"
+<dl class="resources-properties"><dt class="property-optional"
             title="Optional">
         <span id="end_time_python">
 <a href="#end_time_python" style="color: inherit; text-decoration: inherit;">end_<wbr>time</a>
@@ -2223,8 +2033,7 @@ All [input](#inputs) properties are implicitly available as output properties. A
         <span class="property-indicator"></span>
         <span class="property-type">str</span>
     </dt>
-    <dd>{{% md %}}End time of the last run (UTC){{% /md %}}</dd>
-    <dt class="property-optional"
+    <dd>{{% md %}}End time of the last run (UTC){{% /md %}}</dd><dt class="property-optional"
             title="Optional">
         <span id="message_python">
 <a href="#message_python" style="color: inherit; text-decoration: inherit;">message</a>
@@ -2232,8 +2041,7 @@ All [input](#inputs) properties are implicitly available as output properties. A
         <span class="property-indicator"></span>
         <span class="property-type">str</span>
     </dt>
-    <dd>{{% md %}}Verbose information about the last run state{{% /md %}}</dd>
-    <dt class="property-optional"
+    <dd>{{% md %}}Verbose information about the last run state{{% /md %}}</dd><dt class="property-optional"
             title="Optional">
         <span id="run_state_python">
 <a href="#run_state_python" style="color: inherit; text-decoration: inherit;">run_<wbr>state</a>
@@ -2241,8 +2049,7 @@ All [input](#inputs) properties are implicitly available as output properties. A
         <span class="property-indicator"></span>
         <span class="property-type">str</span>
     </dt>
-    <dd>{{% md %}}State of the last run{{% /md %}}</dd>
-    <dt class="property-optional"
+    <dd>{{% md %}}State of the last run{{% /md %}}</dd><dt class="property-optional"
             title="Optional">
         <span id="run_sub_state_python">
 <a href="#run_sub_state_python" style="color: inherit; text-decoration: inherit;">run_<wbr>sub_<wbr>state</a>
@@ -2250,8 +2057,7 @@ All [input](#inputs) properties are implicitly available as output properties. A
         <span class="property-indicator"></span>
         <span class="property-type">str</span>
     </dt>
-    <dd>{{% md %}}Sub-state of the last run{{% /md %}}</dd>
-    <dt class="property-optional"
+    <dd>{{% md %}}Sub-state of the last run{{% /md %}}</dd><dt class="property-optional"
             title="Optional">
         <span id="start_time_python">
 <a href="#start_time_python" style="color: inherit; text-decoration: inherit;">start_<wbr>time</a>
@@ -2259,16 +2065,13 @@ All [input](#inputs) properties are implicitly available as output properties. A
         <span class="property-indicator"></span>
         <span class="property-type">str</span>
     </dt>
-    <dd>{{% md %}}Start time of the last run (UTC){{% /md %}}</dd>
-</dl>
+    <dd>{{% md %}}Start time of the last run (UTC){{% /md %}}</dd></dl>
 {{% /choosable %}}
 
 <h4 id="imagetemplatemanagedimagedistributor">Image<wbr>Template<wbr>Managed<wbr>Image<wbr>Distributor</h4>
 
 {{% choosable language csharp %}}
-<dl class="resources-properties">
-
-    <dt class="property-required"
+<dl class="resources-properties"><dt class="property-required"
             title="Required">
         <span id="imageid_csharp">
 <a href="#imageid_csharp" style="color: inherit; text-decoration: inherit;">Image<wbr>Id</a>
@@ -2276,8 +2079,7 @@ All [input](#inputs) properties are implicitly available as output properties. A
         <span class="property-indicator"></span>
         <span class="property-type">string</span>
     </dt>
-    <dd>{{% md %}}Resource Id of the Managed Disk Image{{% /md %}}</dd>
-    <dt class="property-required"
+    <dd>{{% md %}}Resource Id of the Managed Disk Image{{% /md %}}</dd><dt class="property-required"
             title="Required">
         <span id="location_csharp">
 <a href="#location_csharp" style="color: inherit; text-decoration: inherit;">Location</a>
@@ -2285,8 +2087,7 @@ All [input](#inputs) properties are implicitly available as output properties. A
         <span class="property-indicator"></span>
         <span class="property-type">string</span>
     </dt>
-    <dd>{{% md %}}Azure location for the image, should match if image already exists{{% /md %}}</dd>
-    <dt class="property-required"
+    <dd>{{% md %}}Azure location for the image, should match if image already exists{{% /md %}}</dd><dt class="property-required"
             title="Required">
         <span id="runoutputname_csharp">
 <a href="#runoutputname_csharp" style="color: inherit; text-decoration: inherit;">Run<wbr>Output<wbr>Name</a>
@@ -2294,8 +2095,7 @@ All [input](#inputs) properties are implicitly available as output properties. A
         <span class="property-indicator"></span>
         <span class="property-type">string</span>
     </dt>
-    <dd>{{% md %}}The name to be used for the associated RunOutput.{{% /md %}}</dd>
-    <dt class="property-optional"
+    <dd>{{% md %}}The name to be used for the associated RunOutput.{{% /md %}}</dd><dt class="property-optional"
             title="Optional">
         <span id="artifacttags_csharp">
 <a href="#artifacttags_csharp" style="color: inherit; text-decoration: inherit;">Artifact<wbr>Tags</a>
@@ -2303,14 +2103,11 @@ All [input](#inputs) properties are implicitly available as output properties. A
         <span class="property-indicator"></span>
         <span class="property-type">Dictionary&lt;string, string&gt;</span>
     </dt>
-    <dd>{{% md %}}Tags that will be applied to the artifact once it has been created/updated by the distributor.{{% /md %}}</dd>
-</dl>
+    <dd>{{% md %}}Tags that will be applied to the artifact once it has been created/updated by the distributor.{{% /md %}}</dd></dl>
 {{% /choosable %}}
 
 {{% choosable language go %}}
-<dl class="resources-properties">
-
-    <dt class="property-required"
+<dl class="resources-properties"><dt class="property-required"
             title="Required">
         <span id="imageid_go">
 <a href="#imageid_go" style="color: inherit; text-decoration: inherit;">Image<wbr>Id</a>
@@ -2318,8 +2115,7 @@ All [input](#inputs) properties are implicitly available as output properties. A
         <span class="property-indicator"></span>
         <span class="property-type">string</span>
     </dt>
-    <dd>{{% md %}}Resource Id of the Managed Disk Image{{% /md %}}</dd>
-    <dt class="property-required"
+    <dd>{{% md %}}Resource Id of the Managed Disk Image{{% /md %}}</dd><dt class="property-required"
             title="Required">
         <span id="location_go">
 <a href="#location_go" style="color: inherit; text-decoration: inherit;">Location</a>
@@ -2327,8 +2123,7 @@ All [input](#inputs) properties are implicitly available as output properties. A
         <span class="property-indicator"></span>
         <span class="property-type">string</span>
     </dt>
-    <dd>{{% md %}}Azure location for the image, should match if image already exists{{% /md %}}</dd>
-    <dt class="property-required"
+    <dd>{{% md %}}Azure location for the image, should match if image already exists{{% /md %}}</dd><dt class="property-required"
             title="Required">
         <span id="runoutputname_go">
 <a href="#runoutputname_go" style="color: inherit; text-decoration: inherit;">Run<wbr>Output<wbr>Name</a>
@@ -2336,8 +2131,7 @@ All [input](#inputs) properties are implicitly available as output properties. A
         <span class="property-indicator"></span>
         <span class="property-type">string</span>
     </dt>
-    <dd>{{% md %}}The name to be used for the associated RunOutput.{{% /md %}}</dd>
-    <dt class="property-optional"
+    <dd>{{% md %}}The name to be used for the associated RunOutput.{{% /md %}}</dd><dt class="property-optional"
             title="Optional">
         <span id="artifacttags_go">
 <a href="#artifacttags_go" style="color: inherit; text-decoration: inherit;">Artifact<wbr>Tags</a>
@@ -2345,14 +2139,11 @@ All [input](#inputs) properties are implicitly available as output properties. A
         <span class="property-indicator"></span>
         <span class="property-type">map[string]string</span>
     </dt>
-    <dd>{{% md %}}Tags that will be applied to the artifact once it has been created/updated by the distributor.{{% /md %}}</dd>
-</dl>
+    <dd>{{% md %}}Tags that will be applied to the artifact once it has been created/updated by the distributor.{{% /md %}}</dd></dl>
 {{% /choosable %}}
 
 {{% choosable language nodejs %}}
-<dl class="resources-properties">
-
-    <dt class="property-required"
+<dl class="resources-properties"><dt class="property-required"
             title="Required">
         <span id="imageid_nodejs">
 <a href="#imageid_nodejs" style="color: inherit; text-decoration: inherit;">image<wbr>Id</a>
@@ -2360,8 +2151,7 @@ All [input](#inputs) properties are implicitly available as output properties. A
         <span class="property-indicator"></span>
         <span class="property-type">string</span>
     </dt>
-    <dd>{{% md %}}Resource Id of the Managed Disk Image{{% /md %}}</dd>
-    <dt class="property-required"
+    <dd>{{% md %}}Resource Id of the Managed Disk Image{{% /md %}}</dd><dt class="property-required"
             title="Required">
         <span id="location_nodejs">
 <a href="#location_nodejs" style="color: inherit; text-decoration: inherit;">location</a>
@@ -2369,8 +2159,7 @@ All [input](#inputs) properties are implicitly available as output properties. A
         <span class="property-indicator"></span>
         <span class="property-type">string</span>
     </dt>
-    <dd>{{% md %}}Azure location for the image, should match if image already exists{{% /md %}}</dd>
-    <dt class="property-required"
+    <dd>{{% md %}}Azure location for the image, should match if image already exists{{% /md %}}</dd><dt class="property-required"
             title="Required">
         <span id="runoutputname_nodejs">
 <a href="#runoutputname_nodejs" style="color: inherit; text-decoration: inherit;">run<wbr>Output<wbr>Name</a>
@@ -2378,8 +2167,7 @@ All [input](#inputs) properties are implicitly available as output properties. A
         <span class="property-indicator"></span>
         <span class="property-type">string</span>
     </dt>
-    <dd>{{% md %}}The name to be used for the associated RunOutput.{{% /md %}}</dd>
-    <dt class="property-optional"
+    <dd>{{% md %}}The name to be used for the associated RunOutput.{{% /md %}}</dd><dt class="property-optional"
             title="Optional">
         <span id="artifacttags_nodejs">
 <a href="#artifacttags_nodejs" style="color: inherit; text-decoration: inherit;">artifact<wbr>Tags</a>
@@ -2387,14 +2175,11 @@ All [input](#inputs) properties are implicitly available as output properties. A
         <span class="property-indicator"></span>
         <span class="property-type">{[key: string]: string}</span>
     </dt>
-    <dd>{{% md %}}Tags that will be applied to the artifact once it has been created/updated by the distributor.{{% /md %}}</dd>
-</dl>
+    <dd>{{% md %}}Tags that will be applied to the artifact once it has been created/updated by the distributor.{{% /md %}}</dd></dl>
 {{% /choosable %}}
 
 {{% choosable language python %}}
-<dl class="resources-properties">
-
-    <dt class="property-required"
+<dl class="resources-properties"><dt class="property-required"
             title="Required">
         <span id="image_id_python">
 <a href="#image_id_python" style="color: inherit; text-decoration: inherit;">image_<wbr>id</a>
@@ -2402,8 +2187,7 @@ All [input](#inputs) properties are implicitly available as output properties. A
         <span class="property-indicator"></span>
         <span class="property-type">str</span>
     </dt>
-    <dd>{{% md %}}Resource Id of the Managed Disk Image{{% /md %}}</dd>
-    <dt class="property-required"
+    <dd>{{% md %}}Resource Id of the Managed Disk Image{{% /md %}}</dd><dt class="property-required"
             title="Required">
         <span id="location_python">
 <a href="#location_python" style="color: inherit; text-decoration: inherit;">location</a>
@@ -2411,8 +2195,7 @@ All [input](#inputs) properties are implicitly available as output properties. A
         <span class="property-indicator"></span>
         <span class="property-type">str</span>
     </dt>
-    <dd>{{% md %}}Azure location for the image, should match if image already exists{{% /md %}}</dd>
-    <dt class="property-required"
+    <dd>{{% md %}}Azure location for the image, should match if image already exists{{% /md %}}</dd><dt class="property-required"
             title="Required">
         <span id="run_output_name_python">
 <a href="#run_output_name_python" style="color: inherit; text-decoration: inherit;">run_<wbr>output_<wbr>name</a>
@@ -2420,8 +2203,7 @@ All [input](#inputs) properties are implicitly available as output properties. A
         <span class="property-indicator"></span>
         <span class="property-type">str</span>
     </dt>
-    <dd>{{% md %}}The name to be used for the associated RunOutput.{{% /md %}}</dd>
-    <dt class="property-optional"
+    <dd>{{% md %}}The name to be used for the associated RunOutput.{{% /md %}}</dd><dt class="property-optional"
             title="Optional">
         <span id="artifact_tags_python">
 <a href="#artifact_tags_python" style="color: inherit; text-decoration: inherit;">artifact_<wbr>tags</a>
@@ -2429,16 +2211,13 @@ All [input](#inputs) properties are implicitly available as output properties. A
         <span class="property-indicator"></span>
         <span class="property-type">Mapping[str, str]</span>
     </dt>
-    <dd>{{% md %}}Tags that will be applied to the artifact once it has been created/updated by the distributor.{{% /md %}}</dd>
-</dl>
+    <dd>{{% md %}}Tags that will be applied to the artifact once it has been created/updated by the distributor.{{% /md %}}</dd></dl>
 {{% /choosable %}}
 
 <h4 id="imagetemplatemanagedimagedistributorresponse">Image<wbr>Template<wbr>Managed<wbr>Image<wbr>Distributor<wbr>Response</h4>
 
 {{% choosable language csharp %}}
-<dl class="resources-properties">
-
-    <dt class="property-required"
+<dl class="resources-properties"><dt class="property-required"
             title="Required">
         <span id="imageid_csharp">
 <a href="#imageid_csharp" style="color: inherit; text-decoration: inherit;">Image<wbr>Id</a>
@@ -2446,8 +2225,7 @@ All [input](#inputs) properties are implicitly available as output properties. A
         <span class="property-indicator"></span>
         <span class="property-type">string</span>
     </dt>
-    <dd>{{% md %}}Resource Id of the Managed Disk Image{{% /md %}}</dd>
-    <dt class="property-required"
+    <dd>{{% md %}}Resource Id of the Managed Disk Image{{% /md %}}</dd><dt class="property-required"
             title="Required">
         <span id="location_csharp">
 <a href="#location_csharp" style="color: inherit; text-decoration: inherit;">Location</a>
@@ -2455,8 +2233,7 @@ All [input](#inputs) properties are implicitly available as output properties. A
         <span class="property-indicator"></span>
         <span class="property-type">string</span>
     </dt>
-    <dd>{{% md %}}Azure location for the image, should match if image already exists{{% /md %}}</dd>
-    <dt class="property-required"
+    <dd>{{% md %}}Azure location for the image, should match if image already exists{{% /md %}}</dd><dt class="property-required"
             title="Required">
         <span id="runoutputname_csharp">
 <a href="#runoutputname_csharp" style="color: inherit; text-decoration: inherit;">Run<wbr>Output<wbr>Name</a>
@@ -2464,8 +2241,7 @@ All [input](#inputs) properties are implicitly available as output properties. A
         <span class="property-indicator"></span>
         <span class="property-type">string</span>
     </dt>
-    <dd>{{% md %}}The name to be used for the associated RunOutput.{{% /md %}}</dd>
-    <dt class="property-optional"
+    <dd>{{% md %}}The name to be used for the associated RunOutput.{{% /md %}}</dd><dt class="property-optional"
             title="Optional">
         <span id="artifacttags_csharp">
 <a href="#artifacttags_csharp" style="color: inherit; text-decoration: inherit;">Artifact<wbr>Tags</a>
@@ -2473,14 +2249,11 @@ All [input](#inputs) properties are implicitly available as output properties. A
         <span class="property-indicator"></span>
         <span class="property-type">Dictionary&lt;string, string&gt;</span>
     </dt>
-    <dd>{{% md %}}Tags that will be applied to the artifact once it has been created/updated by the distributor.{{% /md %}}</dd>
-</dl>
+    <dd>{{% md %}}Tags that will be applied to the artifact once it has been created/updated by the distributor.{{% /md %}}</dd></dl>
 {{% /choosable %}}
 
 {{% choosable language go %}}
-<dl class="resources-properties">
-
-    <dt class="property-required"
+<dl class="resources-properties"><dt class="property-required"
             title="Required">
         <span id="imageid_go">
 <a href="#imageid_go" style="color: inherit; text-decoration: inherit;">Image<wbr>Id</a>
@@ -2488,8 +2261,7 @@ All [input](#inputs) properties are implicitly available as output properties. A
         <span class="property-indicator"></span>
         <span class="property-type">string</span>
     </dt>
-    <dd>{{% md %}}Resource Id of the Managed Disk Image{{% /md %}}</dd>
-    <dt class="property-required"
+    <dd>{{% md %}}Resource Id of the Managed Disk Image{{% /md %}}</dd><dt class="property-required"
             title="Required">
         <span id="location_go">
 <a href="#location_go" style="color: inherit; text-decoration: inherit;">Location</a>
@@ -2497,8 +2269,7 @@ All [input](#inputs) properties are implicitly available as output properties. A
         <span class="property-indicator"></span>
         <span class="property-type">string</span>
     </dt>
-    <dd>{{% md %}}Azure location for the image, should match if image already exists{{% /md %}}</dd>
-    <dt class="property-required"
+    <dd>{{% md %}}Azure location for the image, should match if image already exists{{% /md %}}</dd><dt class="property-required"
             title="Required">
         <span id="runoutputname_go">
 <a href="#runoutputname_go" style="color: inherit; text-decoration: inherit;">Run<wbr>Output<wbr>Name</a>
@@ -2506,8 +2277,7 @@ All [input](#inputs) properties are implicitly available as output properties. A
         <span class="property-indicator"></span>
         <span class="property-type">string</span>
     </dt>
-    <dd>{{% md %}}The name to be used for the associated RunOutput.{{% /md %}}</dd>
-    <dt class="property-optional"
+    <dd>{{% md %}}The name to be used for the associated RunOutput.{{% /md %}}</dd><dt class="property-optional"
             title="Optional">
         <span id="artifacttags_go">
 <a href="#artifacttags_go" style="color: inherit; text-decoration: inherit;">Artifact<wbr>Tags</a>
@@ -2515,14 +2285,11 @@ All [input](#inputs) properties are implicitly available as output properties. A
         <span class="property-indicator"></span>
         <span class="property-type">map[string]string</span>
     </dt>
-    <dd>{{% md %}}Tags that will be applied to the artifact once it has been created/updated by the distributor.{{% /md %}}</dd>
-</dl>
+    <dd>{{% md %}}Tags that will be applied to the artifact once it has been created/updated by the distributor.{{% /md %}}</dd></dl>
 {{% /choosable %}}
 
 {{% choosable language nodejs %}}
-<dl class="resources-properties">
-
-    <dt class="property-required"
+<dl class="resources-properties"><dt class="property-required"
             title="Required">
         <span id="imageid_nodejs">
 <a href="#imageid_nodejs" style="color: inherit; text-decoration: inherit;">image<wbr>Id</a>
@@ -2530,8 +2297,7 @@ All [input](#inputs) properties are implicitly available as output properties. A
         <span class="property-indicator"></span>
         <span class="property-type">string</span>
     </dt>
-    <dd>{{% md %}}Resource Id of the Managed Disk Image{{% /md %}}</dd>
-    <dt class="property-required"
+    <dd>{{% md %}}Resource Id of the Managed Disk Image{{% /md %}}</dd><dt class="property-required"
             title="Required">
         <span id="location_nodejs">
 <a href="#location_nodejs" style="color: inherit; text-decoration: inherit;">location</a>
@@ -2539,8 +2305,7 @@ All [input](#inputs) properties are implicitly available as output properties. A
         <span class="property-indicator"></span>
         <span class="property-type">string</span>
     </dt>
-    <dd>{{% md %}}Azure location for the image, should match if image already exists{{% /md %}}</dd>
-    <dt class="property-required"
+    <dd>{{% md %}}Azure location for the image, should match if image already exists{{% /md %}}</dd><dt class="property-required"
             title="Required">
         <span id="runoutputname_nodejs">
 <a href="#runoutputname_nodejs" style="color: inherit; text-decoration: inherit;">run<wbr>Output<wbr>Name</a>
@@ -2548,8 +2313,7 @@ All [input](#inputs) properties are implicitly available as output properties. A
         <span class="property-indicator"></span>
         <span class="property-type">string</span>
     </dt>
-    <dd>{{% md %}}The name to be used for the associated RunOutput.{{% /md %}}</dd>
-    <dt class="property-optional"
+    <dd>{{% md %}}The name to be used for the associated RunOutput.{{% /md %}}</dd><dt class="property-optional"
             title="Optional">
         <span id="artifacttags_nodejs">
 <a href="#artifacttags_nodejs" style="color: inherit; text-decoration: inherit;">artifact<wbr>Tags</a>
@@ -2557,14 +2321,11 @@ All [input](#inputs) properties are implicitly available as output properties. A
         <span class="property-indicator"></span>
         <span class="property-type">{[key: string]: string}</span>
     </dt>
-    <dd>{{% md %}}Tags that will be applied to the artifact once it has been created/updated by the distributor.{{% /md %}}</dd>
-</dl>
+    <dd>{{% md %}}Tags that will be applied to the artifact once it has been created/updated by the distributor.{{% /md %}}</dd></dl>
 {{% /choosable %}}
 
 {{% choosable language python %}}
-<dl class="resources-properties">
-
-    <dt class="property-required"
+<dl class="resources-properties"><dt class="property-required"
             title="Required">
         <span id="image_id_python">
 <a href="#image_id_python" style="color: inherit; text-decoration: inherit;">image_<wbr>id</a>
@@ -2572,8 +2333,7 @@ All [input](#inputs) properties are implicitly available as output properties. A
         <span class="property-indicator"></span>
         <span class="property-type">str</span>
     </dt>
-    <dd>{{% md %}}Resource Id of the Managed Disk Image{{% /md %}}</dd>
-    <dt class="property-required"
+    <dd>{{% md %}}Resource Id of the Managed Disk Image{{% /md %}}</dd><dt class="property-required"
             title="Required">
         <span id="location_python">
 <a href="#location_python" style="color: inherit; text-decoration: inherit;">location</a>
@@ -2581,8 +2341,7 @@ All [input](#inputs) properties are implicitly available as output properties. A
         <span class="property-indicator"></span>
         <span class="property-type">str</span>
     </dt>
-    <dd>{{% md %}}Azure location for the image, should match if image already exists{{% /md %}}</dd>
-    <dt class="property-required"
+    <dd>{{% md %}}Azure location for the image, should match if image already exists{{% /md %}}</dd><dt class="property-required"
             title="Required">
         <span id="run_output_name_python">
 <a href="#run_output_name_python" style="color: inherit; text-decoration: inherit;">run_<wbr>output_<wbr>name</a>
@@ -2590,8 +2349,7 @@ All [input](#inputs) properties are implicitly available as output properties. A
         <span class="property-indicator"></span>
         <span class="property-type">str</span>
     </dt>
-    <dd>{{% md %}}The name to be used for the associated RunOutput.{{% /md %}}</dd>
-    <dt class="property-optional"
+    <dd>{{% md %}}The name to be used for the associated RunOutput.{{% /md %}}</dd><dt class="property-optional"
             title="Optional">
         <span id="artifact_tags_python">
 <a href="#artifact_tags_python" style="color: inherit; text-decoration: inherit;">artifact_<wbr>tags</a>
@@ -2599,16 +2357,13 @@ All [input](#inputs) properties are implicitly available as output properties. A
         <span class="property-indicator"></span>
         <span class="property-type">Mapping[str, str]</span>
     </dt>
-    <dd>{{% md %}}Tags that will be applied to the artifact once it has been created/updated by the distributor.{{% /md %}}</dd>
-</dl>
+    <dd>{{% md %}}Tags that will be applied to the artifact once it has been created/updated by the distributor.{{% /md %}}</dd></dl>
 {{% /choosable %}}
 
 <h4 id="imagetemplatemanagedimagesource">Image<wbr>Template<wbr>Managed<wbr>Image<wbr>Source</h4>
 
 {{% choosable language csharp %}}
-<dl class="resources-properties">
-
-    <dt class="property-required"
+<dl class="resources-properties"><dt class="property-required"
             title="Required">
         <span id="imageid_csharp">
 <a href="#imageid_csharp" style="color: inherit; text-decoration: inherit;">Image<wbr>Id</a>
@@ -2616,14 +2371,11 @@ All [input](#inputs) properties are implicitly available as output properties. A
         <span class="property-indicator"></span>
         <span class="property-type">string</span>
     </dt>
-    <dd>{{% md %}}ARM resource id of the managed image in customer subscription{{% /md %}}</dd>
-</dl>
+    <dd>{{% md %}}ARM resource id of the managed image in customer subscription{{% /md %}}</dd></dl>
 {{% /choosable %}}
 
 {{% choosable language go %}}
-<dl class="resources-properties">
-
-    <dt class="property-required"
+<dl class="resources-properties"><dt class="property-required"
             title="Required">
         <span id="imageid_go">
 <a href="#imageid_go" style="color: inherit; text-decoration: inherit;">Image<wbr>Id</a>
@@ -2631,14 +2383,11 @@ All [input](#inputs) properties are implicitly available as output properties. A
         <span class="property-indicator"></span>
         <span class="property-type">string</span>
     </dt>
-    <dd>{{% md %}}ARM resource id of the managed image in customer subscription{{% /md %}}</dd>
-</dl>
+    <dd>{{% md %}}ARM resource id of the managed image in customer subscription{{% /md %}}</dd></dl>
 {{% /choosable %}}
 
 {{% choosable language nodejs %}}
-<dl class="resources-properties">
-
-    <dt class="property-required"
+<dl class="resources-properties"><dt class="property-required"
             title="Required">
         <span id="imageid_nodejs">
 <a href="#imageid_nodejs" style="color: inherit; text-decoration: inherit;">image<wbr>Id</a>
@@ -2646,14 +2395,11 @@ All [input](#inputs) properties are implicitly available as output properties. A
         <span class="property-indicator"></span>
         <span class="property-type">string</span>
     </dt>
-    <dd>{{% md %}}ARM resource id of the managed image in customer subscription{{% /md %}}</dd>
-</dl>
+    <dd>{{% md %}}ARM resource id of the managed image in customer subscription{{% /md %}}</dd></dl>
 {{% /choosable %}}
 
 {{% choosable language python %}}
-<dl class="resources-properties">
-
-    <dt class="property-required"
+<dl class="resources-properties"><dt class="property-required"
             title="Required">
         <span id="image_id_python">
 <a href="#image_id_python" style="color: inherit; text-decoration: inherit;">image_<wbr>id</a>
@@ -2661,16 +2407,13 @@ All [input](#inputs) properties are implicitly available as output properties. A
         <span class="property-indicator"></span>
         <span class="property-type">str</span>
     </dt>
-    <dd>{{% md %}}ARM resource id of the managed image in customer subscription{{% /md %}}</dd>
-</dl>
+    <dd>{{% md %}}ARM resource id of the managed image in customer subscription{{% /md %}}</dd></dl>
 {{% /choosable %}}
 
 <h4 id="imagetemplatemanagedimagesourceresponse">Image<wbr>Template<wbr>Managed<wbr>Image<wbr>Source<wbr>Response</h4>
 
 {{% choosable language csharp %}}
-<dl class="resources-properties">
-
-    <dt class="property-required"
+<dl class="resources-properties"><dt class="property-required"
             title="Required">
         <span id="imageid_csharp">
 <a href="#imageid_csharp" style="color: inherit; text-decoration: inherit;">Image<wbr>Id</a>
@@ -2678,14 +2421,11 @@ All [input](#inputs) properties are implicitly available as output properties. A
         <span class="property-indicator"></span>
         <span class="property-type">string</span>
     </dt>
-    <dd>{{% md %}}ARM resource id of the managed image in customer subscription{{% /md %}}</dd>
-</dl>
+    <dd>{{% md %}}ARM resource id of the managed image in customer subscription{{% /md %}}</dd></dl>
 {{% /choosable %}}
 
 {{% choosable language go %}}
-<dl class="resources-properties">
-
-    <dt class="property-required"
+<dl class="resources-properties"><dt class="property-required"
             title="Required">
         <span id="imageid_go">
 <a href="#imageid_go" style="color: inherit; text-decoration: inherit;">Image<wbr>Id</a>
@@ -2693,14 +2433,11 @@ All [input](#inputs) properties are implicitly available as output properties. A
         <span class="property-indicator"></span>
         <span class="property-type">string</span>
     </dt>
-    <dd>{{% md %}}ARM resource id of the managed image in customer subscription{{% /md %}}</dd>
-</dl>
+    <dd>{{% md %}}ARM resource id of the managed image in customer subscription{{% /md %}}</dd></dl>
 {{% /choosable %}}
 
 {{% choosable language nodejs %}}
-<dl class="resources-properties">
-
-    <dt class="property-required"
+<dl class="resources-properties"><dt class="property-required"
             title="Required">
         <span id="imageid_nodejs">
 <a href="#imageid_nodejs" style="color: inherit; text-decoration: inherit;">image<wbr>Id</a>
@@ -2708,14 +2445,11 @@ All [input](#inputs) properties are implicitly available as output properties. A
         <span class="property-indicator"></span>
         <span class="property-type">string</span>
     </dt>
-    <dd>{{% md %}}ARM resource id of the managed image in customer subscription{{% /md %}}</dd>
-</dl>
+    <dd>{{% md %}}ARM resource id of the managed image in customer subscription{{% /md %}}</dd></dl>
 {{% /choosable %}}
 
 {{% choosable language python %}}
-<dl class="resources-properties">
-
-    <dt class="property-required"
+<dl class="resources-properties"><dt class="property-required"
             title="Required">
         <span id="image_id_python">
 <a href="#image_id_python" style="color: inherit; text-decoration: inherit;">image_<wbr>id</a>
@@ -2723,16 +2457,13 @@ All [input](#inputs) properties are implicitly available as output properties. A
         <span class="property-indicator"></span>
         <span class="property-type">str</span>
     </dt>
-    <dd>{{% md %}}ARM resource id of the managed image in customer subscription{{% /md %}}</dd>
-</dl>
+    <dd>{{% md %}}ARM resource id of the managed image in customer subscription{{% /md %}}</dd></dl>
 {{% /choosable %}}
 
 <h4 id="imagetemplateplatformimagesource">Image<wbr>Template<wbr>Platform<wbr>Image<wbr>Source</h4>
 
 {{% choosable language csharp %}}
-<dl class="resources-properties">
-
-    <dt class="property-optional"
+<dl class="resources-properties"><dt class="property-optional"
             title="Optional">
         <span id="offer_csharp">
 <a href="#offer_csharp" style="color: inherit; text-decoration: inherit;">Offer</a>
@@ -2740,8 +2471,7 @@ All [input](#inputs) properties are implicitly available as output properties. A
         <span class="property-indicator"></span>
         <span class="property-type">string</span>
     </dt>
-    <dd>{{% md %}}Image offer from the [Azure Gallery Images](https://docs.microsoft.com/en-us/rest/api/compute/virtualmachineimages).{{% /md %}}</dd>
-    <dt class="property-optional"
+    <dd>{{% md %}}Image offer from the [Azure Gallery Images](https://docs.microsoft.com/en-us/rest/api/compute/virtualmachineimages).{{% /md %}}</dd><dt class="property-optional"
             title="Optional">
         <span id="planinfo_csharp">
 <a href="#planinfo_csharp" style="color: inherit; text-decoration: inherit;">Plan<wbr>Info</a>
@@ -2749,8 +2479,7 @@ All [input](#inputs) properties are implicitly available as output properties. A
         <span class="property-indicator"></span>
         <span class="property-type"><a href="#platformimagepurchaseplan">Pulumi.<wbr>Azure<wbr>Native.<wbr>Virtual<wbr>Machine<wbr>Images.<wbr>Inputs.<wbr>Platform<wbr>Image<wbr>Purchase<wbr>Plan<wbr>Args</a></span>
     </dt>
-    <dd>{{% md %}}Optional configuration of purchase plan for platform image.{{% /md %}}</dd>
-    <dt class="property-optional"
+    <dd>{{% md %}}Optional configuration of purchase plan for platform image.{{% /md %}}</dd><dt class="property-optional"
             title="Optional">
         <span id="publisher_csharp">
 <a href="#publisher_csharp" style="color: inherit; text-decoration: inherit;">Publisher</a>
@@ -2758,8 +2487,7 @@ All [input](#inputs) properties are implicitly available as output properties. A
         <span class="property-indicator"></span>
         <span class="property-type">string</span>
     </dt>
-    <dd>{{% md %}}Image Publisher in [Azure Gallery Images](https://docs.microsoft.com/en-us/rest/api/compute/virtualmachineimages).{{% /md %}}</dd>
-    <dt class="property-optional"
+    <dd>{{% md %}}Image Publisher in [Azure Gallery Images](https://docs.microsoft.com/en-us/rest/api/compute/virtualmachineimages).{{% /md %}}</dd><dt class="property-optional"
             title="Optional">
         <span id="sku_csharp">
 <a href="#sku_csharp" style="color: inherit; text-decoration: inherit;">Sku</a>
@@ -2767,8 +2495,7 @@ All [input](#inputs) properties are implicitly available as output properties. A
         <span class="property-indicator"></span>
         <span class="property-type">string</span>
     </dt>
-    <dd>{{% md %}}Image sku from the [Azure Gallery Images](https://docs.microsoft.com/en-us/rest/api/compute/virtualmachineimages).{{% /md %}}</dd>
-    <dt class="property-optional"
+    <dd>{{% md %}}Image sku from the [Azure Gallery Images](https://docs.microsoft.com/en-us/rest/api/compute/virtualmachineimages).{{% /md %}}</dd><dt class="property-optional"
             title="Optional">
         <span id="version_csharp">
 <a href="#version_csharp" style="color: inherit; text-decoration: inherit;">Version</a>
@@ -2776,14 +2503,11 @@ All [input](#inputs) properties are implicitly available as output properties. A
         <span class="property-indicator"></span>
         <span class="property-type">string</span>
     </dt>
-    <dd>{{% md %}}Image version from the [Azure Gallery Images](https://docs.microsoft.com/en-us/rest/api/compute/virtualmachineimages). If 'latest' is specified here, the version is evaluated when the image build takes place, not when the template is submitted. Specifying 'latest' could cause ROUNDTRIP_INCONSISTENT_PROPERTY issue which will be fixed.{{% /md %}}</dd>
-</dl>
+    <dd>{{% md %}}Image version from the [Azure Gallery Images](https://docs.microsoft.com/en-us/rest/api/compute/virtualmachineimages). If 'latest' is specified here, the version is evaluated when the image build takes place, not when the template is submitted. Specifying 'latest' could cause ROUNDTRIP_INCONSISTENT_PROPERTY issue which will be fixed.{{% /md %}}</dd></dl>
 {{% /choosable %}}
 
 {{% choosable language go %}}
-<dl class="resources-properties">
-
-    <dt class="property-optional"
+<dl class="resources-properties"><dt class="property-optional"
             title="Optional">
         <span id="offer_go">
 <a href="#offer_go" style="color: inherit; text-decoration: inherit;">Offer</a>
@@ -2791,8 +2515,7 @@ All [input](#inputs) properties are implicitly available as output properties. A
         <span class="property-indicator"></span>
         <span class="property-type">string</span>
     </dt>
-    <dd>{{% md %}}Image offer from the [Azure Gallery Images](https://docs.microsoft.com/en-us/rest/api/compute/virtualmachineimages).{{% /md %}}</dd>
-    <dt class="property-optional"
+    <dd>{{% md %}}Image offer from the [Azure Gallery Images](https://docs.microsoft.com/en-us/rest/api/compute/virtualmachineimages).{{% /md %}}</dd><dt class="property-optional"
             title="Optional">
         <span id="planinfo_go">
 <a href="#planinfo_go" style="color: inherit; text-decoration: inherit;">Plan<wbr>Info</a>
@@ -2800,8 +2523,7 @@ All [input](#inputs) properties are implicitly available as output properties. A
         <span class="property-indicator"></span>
         <span class="property-type"><a href="#platformimagepurchaseplan">Platform<wbr>Image<wbr>Purchase<wbr>Plan</a></span>
     </dt>
-    <dd>{{% md %}}Optional configuration of purchase plan for platform image.{{% /md %}}</dd>
-    <dt class="property-optional"
+    <dd>{{% md %}}Optional configuration of purchase plan for platform image.{{% /md %}}</dd><dt class="property-optional"
             title="Optional">
         <span id="publisher_go">
 <a href="#publisher_go" style="color: inherit; text-decoration: inherit;">Publisher</a>
@@ -2809,8 +2531,7 @@ All [input](#inputs) properties are implicitly available as output properties. A
         <span class="property-indicator"></span>
         <span class="property-type">string</span>
     </dt>
-    <dd>{{% md %}}Image Publisher in [Azure Gallery Images](https://docs.microsoft.com/en-us/rest/api/compute/virtualmachineimages).{{% /md %}}</dd>
-    <dt class="property-optional"
+    <dd>{{% md %}}Image Publisher in [Azure Gallery Images](https://docs.microsoft.com/en-us/rest/api/compute/virtualmachineimages).{{% /md %}}</dd><dt class="property-optional"
             title="Optional">
         <span id="sku_go">
 <a href="#sku_go" style="color: inherit; text-decoration: inherit;">Sku</a>
@@ -2818,8 +2539,7 @@ All [input](#inputs) properties are implicitly available as output properties. A
         <span class="property-indicator"></span>
         <span class="property-type">string</span>
     </dt>
-    <dd>{{% md %}}Image sku from the [Azure Gallery Images](https://docs.microsoft.com/en-us/rest/api/compute/virtualmachineimages).{{% /md %}}</dd>
-    <dt class="property-optional"
+    <dd>{{% md %}}Image sku from the [Azure Gallery Images](https://docs.microsoft.com/en-us/rest/api/compute/virtualmachineimages).{{% /md %}}</dd><dt class="property-optional"
             title="Optional">
         <span id="version_go">
 <a href="#version_go" style="color: inherit; text-decoration: inherit;">Version</a>
@@ -2827,14 +2547,11 @@ All [input](#inputs) properties are implicitly available as output properties. A
         <span class="property-indicator"></span>
         <span class="property-type">string</span>
     </dt>
-    <dd>{{% md %}}Image version from the [Azure Gallery Images](https://docs.microsoft.com/en-us/rest/api/compute/virtualmachineimages). If 'latest' is specified here, the version is evaluated when the image build takes place, not when the template is submitted. Specifying 'latest' could cause ROUNDTRIP_INCONSISTENT_PROPERTY issue which will be fixed.{{% /md %}}</dd>
-</dl>
+    <dd>{{% md %}}Image version from the [Azure Gallery Images](https://docs.microsoft.com/en-us/rest/api/compute/virtualmachineimages). If 'latest' is specified here, the version is evaluated when the image build takes place, not when the template is submitted. Specifying 'latest' could cause ROUNDTRIP_INCONSISTENT_PROPERTY issue which will be fixed.{{% /md %}}</dd></dl>
 {{% /choosable %}}
 
 {{% choosable language nodejs %}}
-<dl class="resources-properties">
-
-    <dt class="property-optional"
+<dl class="resources-properties"><dt class="property-optional"
             title="Optional">
         <span id="offer_nodejs">
 <a href="#offer_nodejs" style="color: inherit; text-decoration: inherit;">offer</a>
@@ -2842,8 +2559,7 @@ All [input](#inputs) properties are implicitly available as output properties. A
         <span class="property-indicator"></span>
         <span class="property-type">string</span>
     </dt>
-    <dd>{{% md %}}Image offer from the [Azure Gallery Images](https://docs.microsoft.com/en-us/rest/api/compute/virtualmachineimages).{{% /md %}}</dd>
-    <dt class="property-optional"
+    <dd>{{% md %}}Image offer from the [Azure Gallery Images](https://docs.microsoft.com/en-us/rest/api/compute/virtualmachineimages).{{% /md %}}</dd><dt class="property-optional"
             title="Optional">
         <span id="planinfo_nodejs">
 <a href="#planinfo_nodejs" style="color: inherit; text-decoration: inherit;">plan<wbr>Info</a>
@@ -2851,8 +2567,7 @@ All [input](#inputs) properties are implicitly available as output properties. A
         <span class="property-indicator"></span>
         <span class="property-type"><a href="#platformimagepurchaseplan">Platform<wbr>Image<wbr>Purchase<wbr>Plan</a></span>
     </dt>
-    <dd>{{% md %}}Optional configuration of purchase plan for platform image.{{% /md %}}</dd>
-    <dt class="property-optional"
+    <dd>{{% md %}}Optional configuration of purchase plan for platform image.{{% /md %}}</dd><dt class="property-optional"
             title="Optional">
         <span id="publisher_nodejs">
 <a href="#publisher_nodejs" style="color: inherit; text-decoration: inherit;">publisher</a>
@@ -2860,8 +2575,7 @@ All [input](#inputs) properties are implicitly available as output properties. A
         <span class="property-indicator"></span>
         <span class="property-type">string</span>
     </dt>
-    <dd>{{% md %}}Image Publisher in [Azure Gallery Images](https://docs.microsoft.com/en-us/rest/api/compute/virtualmachineimages).{{% /md %}}</dd>
-    <dt class="property-optional"
+    <dd>{{% md %}}Image Publisher in [Azure Gallery Images](https://docs.microsoft.com/en-us/rest/api/compute/virtualmachineimages).{{% /md %}}</dd><dt class="property-optional"
             title="Optional">
         <span id="sku_nodejs">
 <a href="#sku_nodejs" style="color: inherit; text-decoration: inherit;">sku</a>
@@ -2869,8 +2583,7 @@ All [input](#inputs) properties are implicitly available as output properties. A
         <span class="property-indicator"></span>
         <span class="property-type">string</span>
     </dt>
-    <dd>{{% md %}}Image sku from the [Azure Gallery Images](https://docs.microsoft.com/en-us/rest/api/compute/virtualmachineimages).{{% /md %}}</dd>
-    <dt class="property-optional"
+    <dd>{{% md %}}Image sku from the [Azure Gallery Images](https://docs.microsoft.com/en-us/rest/api/compute/virtualmachineimages).{{% /md %}}</dd><dt class="property-optional"
             title="Optional">
         <span id="version_nodejs">
 <a href="#version_nodejs" style="color: inherit; text-decoration: inherit;">version</a>
@@ -2878,14 +2591,11 @@ All [input](#inputs) properties are implicitly available as output properties. A
         <span class="property-indicator"></span>
         <span class="property-type">string</span>
     </dt>
-    <dd>{{% md %}}Image version from the [Azure Gallery Images](https://docs.microsoft.com/en-us/rest/api/compute/virtualmachineimages). If 'latest' is specified here, the version is evaluated when the image build takes place, not when the template is submitted. Specifying 'latest' could cause ROUNDTRIP_INCONSISTENT_PROPERTY issue which will be fixed.{{% /md %}}</dd>
-</dl>
+    <dd>{{% md %}}Image version from the [Azure Gallery Images](https://docs.microsoft.com/en-us/rest/api/compute/virtualmachineimages). If 'latest' is specified here, the version is evaluated when the image build takes place, not when the template is submitted. Specifying 'latest' could cause ROUNDTRIP_INCONSISTENT_PROPERTY issue which will be fixed.{{% /md %}}</dd></dl>
 {{% /choosable %}}
 
 {{% choosable language python %}}
-<dl class="resources-properties">
-
-    <dt class="property-optional"
+<dl class="resources-properties"><dt class="property-optional"
             title="Optional">
         <span id="offer_python">
 <a href="#offer_python" style="color: inherit; text-decoration: inherit;">offer</a>
@@ -2893,8 +2603,7 @@ All [input](#inputs) properties are implicitly available as output properties. A
         <span class="property-indicator"></span>
         <span class="property-type">str</span>
     </dt>
-    <dd>{{% md %}}Image offer from the [Azure Gallery Images](https://docs.microsoft.com/en-us/rest/api/compute/virtualmachineimages).{{% /md %}}</dd>
-    <dt class="property-optional"
+    <dd>{{% md %}}Image offer from the [Azure Gallery Images](https://docs.microsoft.com/en-us/rest/api/compute/virtualmachineimages).{{% /md %}}</dd><dt class="property-optional"
             title="Optional">
         <span id="plan_info_python">
 <a href="#plan_info_python" style="color: inherit; text-decoration: inherit;">plan_<wbr>info</a>
@@ -2902,8 +2611,7 @@ All [input](#inputs) properties are implicitly available as output properties. A
         <span class="property-indicator"></span>
         <span class="property-type"><a href="#platformimagepurchaseplan">Platform<wbr>Image<wbr>Purchase<wbr>Plan<wbr>Args</a></span>
     </dt>
-    <dd>{{% md %}}Optional configuration of purchase plan for platform image.{{% /md %}}</dd>
-    <dt class="property-optional"
+    <dd>{{% md %}}Optional configuration of purchase plan for platform image.{{% /md %}}</dd><dt class="property-optional"
             title="Optional">
         <span id="publisher_python">
 <a href="#publisher_python" style="color: inherit; text-decoration: inherit;">publisher</a>
@@ -2911,8 +2619,7 @@ All [input](#inputs) properties are implicitly available as output properties. A
         <span class="property-indicator"></span>
         <span class="property-type">str</span>
     </dt>
-    <dd>{{% md %}}Image Publisher in [Azure Gallery Images](https://docs.microsoft.com/en-us/rest/api/compute/virtualmachineimages).{{% /md %}}</dd>
-    <dt class="property-optional"
+    <dd>{{% md %}}Image Publisher in [Azure Gallery Images](https://docs.microsoft.com/en-us/rest/api/compute/virtualmachineimages).{{% /md %}}</dd><dt class="property-optional"
             title="Optional">
         <span id="sku_python">
 <a href="#sku_python" style="color: inherit; text-decoration: inherit;">sku</a>
@@ -2920,8 +2627,7 @@ All [input](#inputs) properties are implicitly available as output properties. A
         <span class="property-indicator"></span>
         <span class="property-type">str</span>
     </dt>
-    <dd>{{% md %}}Image sku from the [Azure Gallery Images](https://docs.microsoft.com/en-us/rest/api/compute/virtualmachineimages).{{% /md %}}</dd>
-    <dt class="property-optional"
+    <dd>{{% md %}}Image sku from the [Azure Gallery Images](https://docs.microsoft.com/en-us/rest/api/compute/virtualmachineimages).{{% /md %}}</dd><dt class="property-optional"
             title="Optional">
         <span id="version_python">
 <a href="#version_python" style="color: inherit; text-decoration: inherit;">version</a>
@@ -2929,16 +2635,13 @@ All [input](#inputs) properties are implicitly available as output properties. A
         <span class="property-indicator"></span>
         <span class="property-type">str</span>
     </dt>
-    <dd>{{% md %}}Image version from the [Azure Gallery Images](https://docs.microsoft.com/en-us/rest/api/compute/virtualmachineimages). If 'latest' is specified here, the version is evaluated when the image build takes place, not when the template is submitted. Specifying 'latest' could cause ROUNDTRIP_INCONSISTENT_PROPERTY issue which will be fixed.{{% /md %}}</dd>
-</dl>
+    <dd>{{% md %}}Image version from the [Azure Gallery Images](https://docs.microsoft.com/en-us/rest/api/compute/virtualmachineimages). If 'latest' is specified here, the version is evaluated when the image build takes place, not when the template is submitted. Specifying 'latest' could cause ROUNDTRIP_INCONSISTENT_PROPERTY issue which will be fixed.{{% /md %}}</dd></dl>
 {{% /choosable %}}
 
 <h4 id="imagetemplateplatformimagesourceresponse">Image<wbr>Template<wbr>Platform<wbr>Image<wbr>Source<wbr>Response</h4>
 
 {{% choosable language csharp %}}
-<dl class="resources-properties">
-
-    <dt class="property-optional"
+<dl class="resources-properties"><dt class="property-optional"
             title="Optional">
         <span id="offer_csharp">
 <a href="#offer_csharp" style="color: inherit; text-decoration: inherit;">Offer</a>
@@ -2946,8 +2649,7 @@ All [input](#inputs) properties are implicitly available as output properties. A
         <span class="property-indicator"></span>
         <span class="property-type">string</span>
     </dt>
-    <dd>{{% md %}}Image offer from the [Azure Gallery Images](https://docs.microsoft.com/en-us/rest/api/compute/virtualmachineimages).{{% /md %}}</dd>
-    <dt class="property-optional"
+    <dd>{{% md %}}Image offer from the [Azure Gallery Images](https://docs.microsoft.com/en-us/rest/api/compute/virtualmachineimages).{{% /md %}}</dd><dt class="property-optional"
             title="Optional">
         <span id="planinfo_csharp">
 <a href="#planinfo_csharp" style="color: inherit; text-decoration: inherit;">Plan<wbr>Info</a>
@@ -2955,8 +2657,7 @@ All [input](#inputs) properties are implicitly available as output properties. A
         <span class="property-indicator"></span>
         <span class="property-type"><a href="#platformimagepurchaseplanresponse">Pulumi.<wbr>Azure<wbr>Native.<wbr>Virtual<wbr>Machine<wbr>Images.<wbr>Inputs.<wbr>Platform<wbr>Image<wbr>Purchase<wbr>Plan<wbr>Response<wbr>Args</a></span>
     </dt>
-    <dd>{{% md %}}Optional configuration of purchase plan for platform image.{{% /md %}}</dd>
-    <dt class="property-optional"
+    <dd>{{% md %}}Optional configuration of purchase plan for platform image.{{% /md %}}</dd><dt class="property-optional"
             title="Optional">
         <span id="publisher_csharp">
 <a href="#publisher_csharp" style="color: inherit; text-decoration: inherit;">Publisher</a>
@@ -2964,8 +2665,7 @@ All [input](#inputs) properties are implicitly available as output properties. A
         <span class="property-indicator"></span>
         <span class="property-type">string</span>
     </dt>
-    <dd>{{% md %}}Image Publisher in [Azure Gallery Images](https://docs.microsoft.com/en-us/rest/api/compute/virtualmachineimages).{{% /md %}}</dd>
-    <dt class="property-optional"
+    <dd>{{% md %}}Image Publisher in [Azure Gallery Images](https://docs.microsoft.com/en-us/rest/api/compute/virtualmachineimages).{{% /md %}}</dd><dt class="property-optional"
             title="Optional">
         <span id="sku_csharp">
 <a href="#sku_csharp" style="color: inherit; text-decoration: inherit;">Sku</a>
@@ -2973,8 +2673,7 @@ All [input](#inputs) properties are implicitly available as output properties. A
         <span class="property-indicator"></span>
         <span class="property-type">string</span>
     </dt>
-    <dd>{{% md %}}Image sku from the [Azure Gallery Images](https://docs.microsoft.com/en-us/rest/api/compute/virtualmachineimages).{{% /md %}}</dd>
-    <dt class="property-optional"
+    <dd>{{% md %}}Image sku from the [Azure Gallery Images](https://docs.microsoft.com/en-us/rest/api/compute/virtualmachineimages).{{% /md %}}</dd><dt class="property-optional"
             title="Optional">
         <span id="version_csharp">
 <a href="#version_csharp" style="color: inherit; text-decoration: inherit;">Version</a>
@@ -2982,14 +2681,11 @@ All [input](#inputs) properties are implicitly available as output properties. A
         <span class="property-indicator"></span>
         <span class="property-type">string</span>
     </dt>
-    <dd>{{% md %}}Image version from the [Azure Gallery Images](https://docs.microsoft.com/en-us/rest/api/compute/virtualmachineimages). If 'latest' is specified here, the version is evaluated when the image build takes place, not when the template is submitted. Specifying 'latest' could cause ROUNDTRIP_INCONSISTENT_PROPERTY issue which will be fixed.{{% /md %}}</dd>
-</dl>
+    <dd>{{% md %}}Image version from the [Azure Gallery Images](https://docs.microsoft.com/en-us/rest/api/compute/virtualmachineimages). If 'latest' is specified here, the version is evaluated when the image build takes place, not when the template is submitted. Specifying 'latest' could cause ROUNDTRIP_INCONSISTENT_PROPERTY issue which will be fixed.{{% /md %}}</dd></dl>
 {{% /choosable %}}
 
 {{% choosable language go %}}
-<dl class="resources-properties">
-
-    <dt class="property-optional"
+<dl class="resources-properties"><dt class="property-optional"
             title="Optional">
         <span id="offer_go">
 <a href="#offer_go" style="color: inherit; text-decoration: inherit;">Offer</a>
@@ -2997,8 +2693,7 @@ All [input](#inputs) properties are implicitly available as output properties. A
         <span class="property-indicator"></span>
         <span class="property-type">string</span>
     </dt>
-    <dd>{{% md %}}Image offer from the [Azure Gallery Images](https://docs.microsoft.com/en-us/rest/api/compute/virtualmachineimages).{{% /md %}}</dd>
-    <dt class="property-optional"
+    <dd>{{% md %}}Image offer from the [Azure Gallery Images](https://docs.microsoft.com/en-us/rest/api/compute/virtualmachineimages).{{% /md %}}</dd><dt class="property-optional"
             title="Optional">
         <span id="planinfo_go">
 <a href="#planinfo_go" style="color: inherit; text-decoration: inherit;">Plan<wbr>Info</a>
@@ -3006,8 +2701,7 @@ All [input](#inputs) properties are implicitly available as output properties. A
         <span class="property-indicator"></span>
         <span class="property-type"><a href="#platformimagepurchaseplanresponse">Platform<wbr>Image<wbr>Purchase<wbr>Plan<wbr>Response</a></span>
     </dt>
-    <dd>{{% md %}}Optional configuration of purchase plan for platform image.{{% /md %}}</dd>
-    <dt class="property-optional"
+    <dd>{{% md %}}Optional configuration of purchase plan for platform image.{{% /md %}}</dd><dt class="property-optional"
             title="Optional">
         <span id="publisher_go">
 <a href="#publisher_go" style="color: inherit; text-decoration: inherit;">Publisher</a>
@@ -3015,8 +2709,7 @@ All [input](#inputs) properties are implicitly available as output properties. A
         <span class="property-indicator"></span>
         <span class="property-type">string</span>
     </dt>
-    <dd>{{% md %}}Image Publisher in [Azure Gallery Images](https://docs.microsoft.com/en-us/rest/api/compute/virtualmachineimages).{{% /md %}}</dd>
-    <dt class="property-optional"
+    <dd>{{% md %}}Image Publisher in [Azure Gallery Images](https://docs.microsoft.com/en-us/rest/api/compute/virtualmachineimages).{{% /md %}}</dd><dt class="property-optional"
             title="Optional">
         <span id="sku_go">
 <a href="#sku_go" style="color: inherit; text-decoration: inherit;">Sku</a>
@@ -3024,8 +2717,7 @@ All [input](#inputs) properties are implicitly available as output properties. A
         <span class="property-indicator"></span>
         <span class="property-type">string</span>
     </dt>
-    <dd>{{% md %}}Image sku from the [Azure Gallery Images](https://docs.microsoft.com/en-us/rest/api/compute/virtualmachineimages).{{% /md %}}</dd>
-    <dt class="property-optional"
+    <dd>{{% md %}}Image sku from the [Azure Gallery Images](https://docs.microsoft.com/en-us/rest/api/compute/virtualmachineimages).{{% /md %}}</dd><dt class="property-optional"
             title="Optional">
         <span id="version_go">
 <a href="#version_go" style="color: inherit; text-decoration: inherit;">Version</a>
@@ -3033,14 +2725,11 @@ All [input](#inputs) properties are implicitly available as output properties. A
         <span class="property-indicator"></span>
         <span class="property-type">string</span>
     </dt>
-    <dd>{{% md %}}Image version from the [Azure Gallery Images](https://docs.microsoft.com/en-us/rest/api/compute/virtualmachineimages). If 'latest' is specified here, the version is evaluated when the image build takes place, not when the template is submitted. Specifying 'latest' could cause ROUNDTRIP_INCONSISTENT_PROPERTY issue which will be fixed.{{% /md %}}</dd>
-</dl>
+    <dd>{{% md %}}Image version from the [Azure Gallery Images](https://docs.microsoft.com/en-us/rest/api/compute/virtualmachineimages). If 'latest' is specified here, the version is evaluated when the image build takes place, not when the template is submitted. Specifying 'latest' could cause ROUNDTRIP_INCONSISTENT_PROPERTY issue which will be fixed.{{% /md %}}</dd></dl>
 {{% /choosable %}}
 
 {{% choosable language nodejs %}}
-<dl class="resources-properties">
-
-    <dt class="property-optional"
+<dl class="resources-properties"><dt class="property-optional"
             title="Optional">
         <span id="offer_nodejs">
 <a href="#offer_nodejs" style="color: inherit; text-decoration: inherit;">offer</a>
@@ -3048,8 +2737,7 @@ All [input](#inputs) properties are implicitly available as output properties. A
         <span class="property-indicator"></span>
         <span class="property-type">string</span>
     </dt>
-    <dd>{{% md %}}Image offer from the [Azure Gallery Images](https://docs.microsoft.com/en-us/rest/api/compute/virtualmachineimages).{{% /md %}}</dd>
-    <dt class="property-optional"
+    <dd>{{% md %}}Image offer from the [Azure Gallery Images](https://docs.microsoft.com/en-us/rest/api/compute/virtualmachineimages).{{% /md %}}</dd><dt class="property-optional"
             title="Optional">
         <span id="planinfo_nodejs">
 <a href="#planinfo_nodejs" style="color: inherit; text-decoration: inherit;">plan<wbr>Info</a>
@@ -3057,8 +2745,7 @@ All [input](#inputs) properties are implicitly available as output properties. A
         <span class="property-indicator"></span>
         <span class="property-type"><a href="#platformimagepurchaseplanresponse">Platform<wbr>Image<wbr>Purchase<wbr>Plan<wbr>Response</a></span>
     </dt>
-    <dd>{{% md %}}Optional configuration of purchase plan for platform image.{{% /md %}}</dd>
-    <dt class="property-optional"
+    <dd>{{% md %}}Optional configuration of purchase plan for platform image.{{% /md %}}</dd><dt class="property-optional"
             title="Optional">
         <span id="publisher_nodejs">
 <a href="#publisher_nodejs" style="color: inherit; text-decoration: inherit;">publisher</a>
@@ -3066,8 +2753,7 @@ All [input](#inputs) properties are implicitly available as output properties. A
         <span class="property-indicator"></span>
         <span class="property-type">string</span>
     </dt>
-    <dd>{{% md %}}Image Publisher in [Azure Gallery Images](https://docs.microsoft.com/en-us/rest/api/compute/virtualmachineimages).{{% /md %}}</dd>
-    <dt class="property-optional"
+    <dd>{{% md %}}Image Publisher in [Azure Gallery Images](https://docs.microsoft.com/en-us/rest/api/compute/virtualmachineimages).{{% /md %}}</dd><dt class="property-optional"
             title="Optional">
         <span id="sku_nodejs">
 <a href="#sku_nodejs" style="color: inherit; text-decoration: inherit;">sku</a>
@@ -3075,8 +2761,7 @@ All [input](#inputs) properties are implicitly available as output properties. A
         <span class="property-indicator"></span>
         <span class="property-type">string</span>
     </dt>
-    <dd>{{% md %}}Image sku from the [Azure Gallery Images](https://docs.microsoft.com/en-us/rest/api/compute/virtualmachineimages).{{% /md %}}</dd>
-    <dt class="property-optional"
+    <dd>{{% md %}}Image sku from the [Azure Gallery Images](https://docs.microsoft.com/en-us/rest/api/compute/virtualmachineimages).{{% /md %}}</dd><dt class="property-optional"
             title="Optional">
         <span id="version_nodejs">
 <a href="#version_nodejs" style="color: inherit; text-decoration: inherit;">version</a>
@@ -3084,14 +2769,11 @@ All [input](#inputs) properties are implicitly available as output properties. A
         <span class="property-indicator"></span>
         <span class="property-type">string</span>
     </dt>
-    <dd>{{% md %}}Image version from the [Azure Gallery Images](https://docs.microsoft.com/en-us/rest/api/compute/virtualmachineimages). If 'latest' is specified here, the version is evaluated when the image build takes place, not when the template is submitted. Specifying 'latest' could cause ROUNDTRIP_INCONSISTENT_PROPERTY issue which will be fixed.{{% /md %}}</dd>
-</dl>
+    <dd>{{% md %}}Image version from the [Azure Gallery Images](https://docs.microsoft.com/en-us/rest/api/compute/virtualmachineimages). If 'latest' is specified here, the version is evaluated when the image build takes place, not when the template is submitted. Specifying 'latest' could cause ROUNDTRIP_INCONSISTENT_PROPERTY issue which will be fixed.{{% /md %}}</dd></dl>
 {{% /choosable %}}
 
 {{% choosable language python %}}
-<dl class="resources-properties">
-
-    <dt class="property-optional"
+<dl class="resources-properties"><dt class="property-optional"
             title="Optional">
         <span id="offer_python">
 <a href="#offer_python" style="color: inherit; text-decoration: inherit;">offer</a>
@@ -3099,8 +2781,7 @@ All [input](#inputs) properties are implicitly available as output properties. A
         <span class="property-indicator"></span>
         <span class="property-type">str</span>
     </dt>
-    <dd>{{% md %}}Image offer from the [Azure Gallery Images](https://docs.microsoft.com/en-us/rest/api/compute/virtualmachineimages).{{% /md %}}</dd>
-    <dt class="property-optional"
+    <dd>{{% md %}}Image offer from the [Azure Gallery Images](https://docs.microsoft.com/en-us/rest/api/compute/virtualmachineimages).{{% /md %}}</dd><dt class="property-optional"
             title="Optional">
         <span id="plan_info_python">
 <a href="#plan_info_python" style="color: inherit; text-decoration: inherit;">plan_<wbr>info</a>
@@ -3108,8 +2789,7 @@ All [input](#inputs) properties are implicitly available as output properties. A
         <span class="property-indicator"></span>
         <span class="property-type"><a href="#platformimagepurchaseplanresponse">Platform<wbr>Image<wbr>Purchase<wbr>Plan<wbr>Response<wbr>Args</a></span>
     </dt>
-    <dd>{{% md %}}Optional configuration of purchase plan for platform image.{{% /md %}}</dd>
-    <dt class="property-optional"
+    <dd>{{% md %}}Optional configuration of purchase plan for platform image.{{% /md %}}</dd><dt class="property-optional"
             title="Optional">
         <span id="publisher_python">
 <a href="#publisher_python" style="color: inherit; text-decoration: inherit;">publisher</a>
@@ -3117,8 +2797,7 @@ All [input](#inputs) properties are implicitly available as output properties. A
         <span class="property-indicator"></span>
         <span class="property-type">str</span>
     </dt>
-    <dd>{{% md %}}Image Publisher in [Azure Gallery Images](https://docs.microsoft.com/en-us/rest/api/compute/virtualmachineimages).{{% /md %}}</dd>
-    <dt class="property-optional"
+    <dd>{{% md %}}Image Publisher in [Azure Gallery Images](https://docs.microsoft.com/en-us/rest/api/compute/virtualmachineimages).{{% /md %}}</dd><dt class="property-optional"
             title="Optional">
         <span id="sku_python">
 <a href="#sku_python" style="color: inherit; text-decoration: inherit;">sku</a>
@@ -3126,8 +2805,7 @@ All [input](#inputs) properties are implicitly available as output properties. A
         <span class="property-indicator"></span>
         <span class="property-type">str</span>
     </dt>
-    <dd>{{% md %}}Image sku from the [Azure Gallery Images](https://docs.microsoft.com/en-us/rest/api/compute/virtualmachineimages).{{% /md %}}</dd>
-    <dt class="property-optional"
+    <dd>{{% md %}}Image sku from the [Azure Gallery Images](https://docs.microsoft.com/en-us/rest/api/compute/virtualmachineimages).{{% /md %}}</dd><dt class="property-optional"
             title="Optional">
         <span id="version_python">
 <a href="#version_python" style="color: inherit; text-decoration: inherit;">version</a>
@@ -3135,16 +2813,13 @@ All [input](#inputs) properties are implicitly available as output properties. A
         <span class="property-indicator"></span>
         <span class="property-type">str</span>
     </dt>
-    <dd>{{% md %}}Image version from the [Azure Gallery Images](https://docs.microsoft.com/en-us/rest/api/compute/virtualmachineimages). If 'latest' is specified here, the version is evaluated when the image build takes place, not when the template is submitted. Specifying 'latest' could cause ROUNDTRIP_INCONSISTENT_PROPERTY issue which will be fixed.{{% /md %}}</dd>
-</dl>
+    <dd>{{% md %}}Image version from the [Azure Gallery Images](https://docs.microsoft.com/en-us/rest/api/compute/virtualmachineimages). If 'latest' is specified here, the version is evaluated when the image build takes place, not when the template is submitted. Specifying 'latest' could cause ROUNDTRIP_INCONSISTENT_PROPERTY issue which will be fixed.{{% /md %}}</dd></dl>
 {{% /choosable %}}
 
 <h4 id="imagetemplatepowershellcustomizer">Image<wbr>Template<wbr>Power<wbr>Shell<wbr>Customizer</h4>
 
 {{% choosable language csharp %}}
-<dl class="resources-properties">
-
-    <dt class="property-optional"
+<dl class="resources-properties"><dt class="property-optional"
             title="Optional">
         <span id="inline_csharp">
 <a href="#inline_csharp" style="color: inherit; text-decoration: inherit;">Inline</a>
@@ -3152,8 +2827,7 @@ All [input](#inputs) properties are implicitly available as output properties. A
         <span class="property-indicator"></span>
         <span class="property-type">List&lt;string&gt;</span>
     </dt>
-    <dd>{{% md %}}Array of PowerShell commands to execute{{% /md %}}</dd>
-    <dt class="property-optional"
+    <dd>{{% md %}}Array of PowerShell commands to execute{{% /md %}}</dd><dt class="property-optional"
             title="Optional">
         <span id="name_csharp">
 <a href="#name_csharp" style="color: inherit; text-decoration: inherit;">Name</a>
@@ -3161,8 +2835,7 @@ All [input](#inputs) properties are implicitly available as output properties. A
         <span class="property-indicator"></span>
         <span class="property-type">string</span>
     </dt>
-    <dd>{{% md %}}Friendly Name to provide context on what this customization step does{{% /md %}}</dd>
-    <dt class="property-optional"
+    <dd>{{% md %}}Friendly Name to provide context on what this customization step does{{% /md %}}</dd><dt class="property-optional"
             title="Optional">
         <span id="runassystem_csharp">
 <a href="#runassystem_csharp" style="color: inherit; text-decoration: inherit;">Run<wbr>As<wbr>System</a>
@@ -3170,8 +2843,7 @@ All [input](#inputs) properties are implicitly available as output properties. A
         <span class="property-indicator"></span>
         <span class="property-type">bool</span>
     </dt>
-    <dd>{{% md %}}If specified, the PowerShell script will be run with elevated privileges using the Local System user. Can only be true when the runElevated field above is set to true.{{% /md %}}</dd>
-    <dt class="property-optional"
+    <dd>{{% md %}}If specified, the PowerShell script will be run with elevated privileges using the Local System user. Can only be true when the runElevated field above is set to true.{{% /md %}}</dd><dt class="property-optional"
             title="Optional">
         <span id="runelevated_csharp">
 <a href="#runelevated_csharp" style="color: inherit; text-decoration: inherit;">Run<wbr>Elevated</a>
@@ -3179,8 +2851,7 @@ All [input](#inputs) properties are implicitly available as output properties. A
         <span class="property-indicator"></span>
         <span class="property-type">bool</span>
     </dt>
-    <dd>{{% md %}}If specified, the PowerShell script will be run with elevated privileges{{% /md %}}</dd>
-    <dt class="property-optional"
+    <dd>{{% md %}}If specified, the PowerShell script will be run with elevated privileges{{% /md %}}</dd><dt class="property-optional"
             title="Optional">
         <span id="scripturi_csharp">
 <a href="#scripturi_csharp" style="color: inherit; text-decoration: inherit;">Script<wbr>Uri</a>
@@ -3188,8 +2859,7 @@ All [input](#inputs) properties are implicitly available as output properties. A
         <span class="property-indicator"></span>
         <span class="property-type">string</span>
     </dt>
-    <dd>{{% md %}}URI of the PowerShell script to be run for customizing. It can be a github link, SAS URI for Azure Storage, etc{{% /md %}}</dd>
-    <dt class="property-optional"
+    <dd>{{% md %}}URI of the PowerShell script to be run for customizing. It can be a github link, SAS URI for Azure Storage, etc{{% /md %}}</dd><dt class="property-optional"
             title="Optional">
         <span id="sha256checksum_csharp">
 <a href="#sha256checksum_csharp" style="color: inherit; text-decoration: inherit;">Sha256Checksum</a>
@@ -3197,8 +2867,7 @@ All [input](#inputs) properties are implicitly available as output properties. A
         <span class="property-indicator"></span>
         <span class="property-type">string</span>
     </dt>
-    <dd>{{% md %}}SHA256 checksum of the power shell script provided in the scriptUri field above{{% /md %}}</dd>
-    <dt class="property-optional"
+    <dd>{{% md %}}SHA256 checksum of the power shell script provided in the scriptUri field above{{% /md %}}</dd><dt class="property-optional"
             title="Optional">
         <span id="validexitcodes_csharp">
 <a href="#validexitcodes_csharp" style="color: inherit; text-decoration: inherit;">Valid<wbr>Exit<wbr>Codes</a>
@@ -3206,14 +2875,11 @@ All [input](#inputs) properties are implicitly available as output properties. A
         <span class="property-indicator"></span>
         <span class="property-type">List&lt;int&gt;</span>
     </dt>
-    <dd>{{% md %}}Valid exit codes for the PowerShell script. [Default: 0]{{% /md %}}</dd>
-</dl>
+    <dd>{{% md %}}Valid exit codes for the PowerShell script. [Default: 0]{{% /md %}}</dd></dl>
 {{% /choosable %}}
 
 {{% choosable language go %}}
-<dl class="resources-properties">
-
-    <dt class="property-optional"
+<dl class="resources-properties"><dt class="property-optional"
             title="Optional">
         <span id="inline_go">
 <a href="#inline_go" style="color: inherit; text-decoration: inherit;">Inline</a>
@@ -3221,8 +2887,7 @@ All [input](#inputs) properties are implicitly available as output properties. A
         <span class="property-indicator"></span>
         <span class="property-type">[]string</span>
     </dt>
-    <dd>{{% md %}}Array of PowerShell commands to execute{{% /md %}}</dd>
-    <dt class="property-optional"
+    <dd>{{% md %}}Array of PowerShell commands to execute{{% /md %}}</dd><dt class="property-optional"
             title="Optional">
         <span id="name_go">
 <a href="#name_go" style="color: inherit; text-decoration: inherit;">Name</a>
@@ -3230,8 +2895,7 @@ All [input](#inputs) properties are implicitly available as output properties. A
         <span class="property-indicator"></span>
         <span class="property-type">string</span>
     </dt>
-    <dd>{{% md %}}Friendly Name to provide context on what this customization step does{{% /md %}}</dd>
-    <dt class="property-optional"
+    <dd>{{% md %}}Friendly Name to provide context on what this customization step does{{% /md %}}</dd><dt class="property-optional"
             title="Optional">
         <span id="runassystem_go">
 <a href="#runassystem_go" style="color: inherit; text-decoration: inherit;">Run<wbr>As<wbr>System</a>
@@ -3239,8 +2903,7 @@ All [input](#inputs) properties are implicitly available as output properties. A
         <span class="property-indicator"></span>
         <span class="property-type">bool</span>
     </dt>
-    <dd>{{% md %}}If specified, the PowerShell script will be run with elevated privileges using the Local System user. Can only be true when the runElevated field above is set to true.{{% /md %}}</dd>
-    <dt class="property-optional"
+    <dd>{{% md %}}If specified, the PowerShell script will be run with elevated privileges using the Local System user. Can only be true when the runElevated field above is set to true.{{% /md %}}</dd><dt class="property-optional"
             title="Optional">
         <span id="runelevated_go">
 <a href="#runelevated_go" style="color: inherit; text-decoration: inherit;">Run<wbr>Elevated</a>
@@ -3248,8 +2911,7 @@ All [input](#inputs) properties are implicitly available as output properties. A
         <span class="property-indicator"></span>
         <span class="property-type">bool</span>
     </dt>
-    <dd>{{% md %}}If specified, the PowerShell script will be run with elevated privileges{{% /md %}}</dd>
-    <dt class="property-optional"
+    <dd>{{% md %}}If specified, the PowerShell script will be run with elevated privileges{{% /md %}}</dd><dt class="property-optional"
             title="Optional">
         <span id="scripturi_go">
 <a href="#scripturi_go" style="color: inherit; text-decoration: inherit;">Script<wbr>Uri</a>
@@ -3257,8 +2919,7 @@ All [input](#inputs) properties are implicitly available as output properties. A
         <span class="property-indicator"></span>
         <span class="property-type">string</span>
     </dt>
-    <dd>{{% md %}}URI of the PowerShell script to be run for customizing. It can be a github link, SAS URI for Azure Storage, etc{{% /md %}}</dd>
-    <dt class="property-optional"
+    <dd>{{% md %}}URI of the PowerShell script to be run for customizing. It can be a github link, SAS URI for Azure Storage, etc{{% /md %}}</dd><dt class="property-optional"
             title="Optional">
         <span id="sha256checksum_go">
 <a href="#sha256checksum_go" style="color: inherit; text-decoration: inherit;">Sha256Checksum</a>
@@ -3266,8 +2927,7 @@ All [input](#inputs) properties are implicitly available as output properties. A
         <span class="property-indicator"></span>
         <span class="property-type">string</span>
     </dt>
-    <dd>{{% md %}}SHA256 checksum of the power shell script provided in the scriptUri field above{{% /md %}}</dd>
-    <dt class="property-optional"
+    <dd>{{% md %}}SHA256 checksum of the power shell script provided in the scriptUri field above{{% /md %}}</dd><dt class="property-optional"
             title="Optional">
         <span id="validexitcodes_go">
 <a href="#validexitcodes_go" style="color: inherit; text-decoration: inherit;">Valid<wbr>Exit<wbr>Codes</a>
@@ -3275,14 +2935,11 @@ All [input](#inputs) properties are implicitly available as output properties. A
         <span class="property-indicator"></span>
         <span class="property-type">[]int</span>
     </dt>
-    <dd>{{% md %}}Valid exit codes for the PowerShell script. [Default: 0]{{% /md %}}</dd>
-</dl>
+    <dd>{{% md %}}Valid exit codes for the PowerShell script. [Default: 0]{{% /md %}}</dd></dl>
 {{% /choosable %}}
 
 {{% choosable language nodejs %}}
-<dl class="resources-properties">
-
-    <dt class="property-optional"
+<dl class="resources-properties"><dt class="property-optional"
             title="Optional">
         <span id="inline_nodejs">
 <a href="#inline_nodejs" style="color: inherit; text-decoration: inherit;">inline</a>
@@ -3290,8 +2947,7 @@ All [input](#inputs) properties are implicitly available as output properties. A
         <span class="property-indicator"></span>
         <span class="property-type">string[]</span>
     </dt>
-    <dd>{{% md %}}Array of PowerShell commands to execute{{% /md %}}</dd>
-    <dt class="property-optional"
+    <dd>{{% md %}}Array of PowerShell commands to execute{{% /md %}}</dd><dt class="property-optional"
             title="Optional">
         <span id="name_nodejs">
 <a href="#name_nodejs" style="color: inherit; text-decoration: inherit;">name</a>
@@ -3299,8 +2955,7 @@ All [input](#inputs) properties are implicitly available as output properties. A
         <span class="property-indicator"></span>
         <span class="property-type">string</span>
     </dt>
-    <dd>{{% md %}}Friendly Name to provide context on what this customization step does{{% /md %}}</dd>
-    <dt class="property-optional"
+    <dd>{{% md %}}Friendly Name to provide context on what this customization step does{{% /md %}}</dd><dt class="property-optional"
             title="Optional">
         <span id="runassystem_nodejs">
 <a href="#runassystem_nodejs" style="color: inherit; text-decoration: inherit;">run<wbr>As<wbr>System</a>
@@ -3308,8 +2963,7 @@ All [input](#inputs) properties are implicitly available as output properties. A
         <span class="property-indicator"></span>
         <span class="property-type">boolean</span>
     </dt>
-    <dd>{{% md %}}If specified, the PowerShell script will be run with elevated privileges using the Local System user. Can only be true when the runElevated field above is set to true.{{% /md %}}</dd>
-    <dt class="property-optional"
+    <dd>{{% md %}}If specified, the PowerShell script will be run with elevated privileges using the Local System user. Can only be true when the runElevated field above is set to true.{{% /md %}}</dd><dt class="property-optional"
             title="Optional">
         <span id="runelevated_nodejs">
 <a href="#runelevated_nodejs" style="color: inherit; text-decoration: inherit;">run<wbr>Elevated</a>
@@ -3317,8 +2971,7 @@ All [input](#inputs) properties are implicitly available as output properties. A
         <span class="property-indicator"></span>
         <span class="property-type">boolean</span>
     </dt>
-    <dd>{{% md %}}If specified, the PowerShell script will be run with elevated privileges{{% /md %}}</dd>
-    <dt class="property-optional"
+    <dd>{{% md %}}If specified, the PowerShell script will be run with elevated privileges{{% /md %}}</dd><dt class="property-optional"
             title="Optional">
         <span id="scripturi_nodejs">
 <a href="#scripturi_nodejs" style="color: inherit; text-decoration: inherit;">script<wbr>Uri</a>
@@ -3326,8 +2979,7 @@ All [input](#inputs) properties are implicitly available as output properties. A
         <span class="property-indicator"></span>
         <span class="property-type">string</span>
     </dt>
-    <dd>{{% md %}}URI of the PowerShell script to be run for customizing. It can be a github link, SAS URI for Azure Storage, etc{{% /md %}}</dd>
-    <dt class="property-optional"
+    <dd>{{% md %}}URI of the PowerShell script to be run for customizing. It can be a github link, SAS URI for Azure Storage, etc{{% /md %}}</dd><dt class="property-optional"
             title="Optional">
         <span id="sha256checksum_nodejs">
 <a href="#sha256checksum_nodejs" style="color: inherit; text-decoration: inherit;">sha256Checksum</a>
@@ -3335,8 +2987,7 @@ All [input](#inputs) properties are implicitly available as output properties. A
         <span class="property-indicator"></span>
         <span class="property-type">string</span>
     </dt>
-    <dd>{{% md %}}SHA256 checksum of the power shell script provided in the scriptUri field above{{% /md %}}</dd>
-    <dt class="property-optional"
+    <dd>{{% md %}}SHA256 checksum of the power shell script provided in the scriptUri field above{{% /md %}}</dd><dt class="property-optional"
             title="Optional">
         <span id="validexitcodes_nodejs">
 <a href="#validexitcodes_nodejs" style="color: inherit; text-decoration: inherit;">valid<wbr>Exit<wbr>Codes</a>
@@ -3344,14 +2995,11 @@ All [input](#inputs) properties are implicitly available as output properties. A
         <span class="property-indicator"></span>
         <span class="property-type">number[]</span>
     </dt>
-    <dd>{{% md %}}Valid exit codes for the PowerShell script. [Default: 0]{{% /md %}}</dd>
-</dl>
+    <dd>{{% md %}}Valid exit codes for the PowerShell script. [Default: 0]{{% /md %}}</dd></dl>
 {{% /choosable %}}
 
 {{% choosable language python %}}
-<dl class="resources-properties">
-
-    <dt class="property-optional"
+<dl class="resources-properties"><dt class="property-optional"
             title="Optional">
         <span id="inline_python">
 <a href="#inline_python" style="color: inherit; text-decoration: inherit;">inline</a>
@@ -3359,8 +3007,7 @@ All [input](#inputs) properties are implicitly available as output properties. A
         <span class="property-indicator"></span>
         <span class="property-type">Sequence[str]</span>
     </dt>
-    <dd>{{% md %}}Array of PowerShell commands to execute{{% /md %}}</dd>
-    <dt class="property-optional"
+    <dd>{{% md %}}Array of PowerShell commands to execute{{% /md %}}</dd><dt class="property-optional"
             title="Optional">
         <span id="name_python">
 <a href="#name_python" style="color: inherit; text-decoration: inherit;">name</a>
@@ -3368,8 +3015,7 @@ All [input](#inputs) properties are implicitly available as output properties. A
         <span class="property-indicator"></span>
         <span class="property-type">str</span>
     </dt>
-    <dd>{{% md %}}Friendly Name to provide context on what this customization step does{{% /md %}}</dd>
-    <dt class="property-optional"
+    <dd>{{% md %}}Friendly Name to provide context on what this customization step does{{% /md %}}</dd><dt class="property-optional"
             title="Optional">
         <span id="run_as_system_python">
 <a href="#run_as_system_python" style="color: inherit; text-decoration: inherit;">run_<wbr>as_<wbr>system</a>
@@ -3377,8 +3023,7 @@ All [input](#inputs) properties are implicitly available as output properties. A
         <span class="property-indicator"></span>
         <span class="property-type">bool</span>
     </dt>
-    <dd>{{% md %}}If specified, the PowerShell script will be run with elevated privileges using the Local System user. Can only be true when the runElevated field above is set to true.{{% /md %}}</dd>
-    <dt class="property-optional"
+    <dd>{{% md %}}If specified, the PowerShell script will be run with elevated privileges using the Local System user. Can only be true when the runElevated field above is set to true.{{% /md %}}</dd><dt class="property-optional"
             title="Optional">
         <span id="run_elevated_python">
 <a href="#run_elevated_python" style="color: inherit; text-decoration: inherit;">run_<wbr>elevated</a>
@@ -3386,8 +3031,7 @@ All [input](#inputs) properties are implicitly available as output properties. A
         <span class="property-indicator"></span>
         <span class="property-type">bool</span>
     </dt>
-    <dd>{{% md %}}If specified, the PowerShell script will be run with elevated privileges{{% /md %}}</dd>
-    <dt class="property-optional"
+    <dd>{{% md %}}If specified, the PowerShell script will be run with elevated privileges{{% /md %}}</dd><dt class="property-optional"
             title="Optional">
         <span id="script_uri_python">
 <a href="#script_uri_python" style="color: inherit; text-decoration: inherit;">script_<wbr>uri</a>
@@ -3395,8 +3039,7 @@ All [input](#inputs) properties are implicitly available as output properties. A
         <span class="property-indicator"></span>
         <span class="property-type">str</span>
     </dt>
-    <dd>{{% md %}}URI of the PowerShell script to be run for customizing. It can be a github link, SAS URI for Azure Storage, etc{{% /md %}}</dd>
-    <dt class="property-optional"
+    <dd>{{% md %}}URI of the PowerShell script to be run for customizing. It can be a github link, SAS URI for Azure Storage, etc{{% /md %}}</dd><dt class="property-optional"
             title="Optional">
         <span id="sha256_checksum_python">
 <a href="#sha256_checksum_python" style="color: inherit; text-decoration: inherit;">sha256_<wbr>checksum</a>
@@ -3404,8 +3047,7 @@ All [input](#inputs) properties are implicitly available as output properties. A
         <span class="property-indicator"></span>
         <span class="property-type">str</span>
     </dt>
-    <dd>{{% md %}}SHA256 checksum of the power shell script provided in the scriptUri field above{{% /md %}}</dd>
-    <dt class="property-optional"
+    <dd>{{% md %}}SHA256 checksum of the power shell script provided in the scriptUri field above{{% /md %}}</dd><dt class="property-optional"
             title="Optional">
         <span id="valid_exit_codes_python">
 <a href="#valid_exit_codes_python" style="color: inherit; text-decoration: inherit;">valid_<wbr>exit_<wbr>codes</a>
@@ -3413,16 +3055,13 @@ All [input](#inputs) properties are implicitly available as output properties. A
         <span class="property-indicator"></span>
         <span class="property-type">Sequence[int]</span>
     </dt>
-    <dd>{{% md %}}Valid exit codes for the PowerShell script. [Default: 0]{{% /md %}}</dd>
-</dl>
+    <dd>{{% md %}}Valid exit codes for the PowerShell script. [Default: 0]{{% /md %}}</dd></dl>
 {{% /choosable %}}
 
 <h4 id="imagetemplatepowershellcustomizerresponse">Image<wbr>Template<wbr>Power<wbr>Shell<wbr>Customizer<wbr>Response</h4>
 
 {{% choosable language csharp %}}
-<dl class="resources-properties">
-
-    <dt class="property-optional"
+<dl class="resources-properties"><dt class="property-optional"
             title="Optional">
         <span id="inline_csharp">
 <a href="#inline_csharp" style="color: inherit; text-decoration: inherit;">Inline</a>
@@ -3430,8 +3069,7 @@ All [input](#inputs) properties are implicitly available as output properties. A
         <span class="property-indicator"></span>
         <span class="property-type">List&lt;string&gt;</span>
     </dt>
-    <dd>{{% md %}}Array of PowerShell commands to execute{{% /md %}}</dd>
-    <dt class="property-optional"
+    <dd>{{% md %}}Array of PowerShell commands to execute{{% /md %}}</dd><dt class="property-optional"
             title="Optional">
         <span id="name_csharp">
 <a href="#name_csharp" style="color: inherit; text-decoration: inherit;">Name</a>
@@ -3439,8 +3077,7 @@ All [input](#inputs) properties are implicitly available as output properties. A
         <span class="property-indicator"></span>
         <span class="property-type">string</span>
     </dt>
-    <dd>{{% md %}}Friendly Name to provide context on what this customization step does{{% /md %}}</dd>
-    <dt class="property-optional"
+    <dd>{{% md %}}Friendly Name to provide context on what this customization step does{{% /md %}}</dd><dt class="property-optional"
             title="Optional">
         <span id="runassystem_csharp">
 <a href="#runassystem_csharp" style="color: inherit; text-decoration: inherit;">Run<wbr>As<wbr>System</a>
@@ -3448,8 +3085,7 @@ All [input](#inputs) properties are implicitly available as output properties. A
         <span class="property-indicator"></span>
         <span class="property-type">bool</span>
     </dt>
-    <dd>{{% md %}}If specified, the PowerShell script will be run with elevated privileges using the Local System user. Can only be true when the runElevated field above is set to true.{{% /md %}}</dd>
-    <dt class="property-optional"
+    <dd>{{% md %}}If specified, the PowerShell script will be run with elevated privileges using the Local System user. Can only be true when the runElevated field above is set to true.{{% /md %}}</dd><dt class="property-optional"
             title="Optional">
         <span id="runelevated_csharp">
 <a href="#runelevated_csharp" style="color: inherit; text-decoration: inherit;">Run<wbr>Elevated</a>
@@ -3457,8 +3093,7 @@ All [input](#inputs) properties are implicitly available as output properties. A
         <span class="property-indicator"></span>
         <span class="property-type">bool</span>
     </dt>
-    <dd>{{% md %}}If specified, the PowerShell script will be run with elevated privileges{{% /md %}}</dd>
-    <dt class="property-optional"
+    <dd>{{% md %}}If specified, the PowerShell script will be run with elevated privileges{{% /md %}}</dd><dt class="property-optional"
             title="Optional">
         <span id="scripturi_csharp">
 <a href="#scripturi_csharp" style="color: inherit; text-decoration: inherit;">Script<wbr>Uri</a>
@@ -3466,8 +3101,7 @@ All [input](#inputs) properties are implicitly available as output properties. A
         <span class="property-indicator"></span>
         <span class="property-type">string</span>
     </dt>
-    <dd>{{% md %}}URI of the PowerShell script to be run for customizing. It can be a github link, SAS URI for Azure Storage, etc{{% /md %}}</dd>
-    <dt class="property-optional"
+    <dd>{{% md %}}URI of the PowerShell script to be run for customizing. It can be a github link, SAS URI for Azure Storage, etc{{% /md %}}</dd><dt class="property-optional"
             title="Optional">
         <span id="sha256checksum_csharp">
 <a href="#sha256checksum_csharp" style="color: inherit; text-decoration: inherit;">Sha256Checksum</a>
@@ -3475,8 +3109,7 @@ All [input](#inputs) properties are implicitly available as output properties. A
         <span class="property-indicator"></span>
         <span class="property-type">string</span>
     </dt>
-    <dd>{{% md %}}SHA256 checksum of the power shell script provided in the scriptUri field above{{% /md %}}</dd>
-    <dt class="property-optional"
+    <dd>{{% md %}}SHA256 checksum of the power shell script provided in the scriptUri field above{{% /md %}}</dd><dt class="property-optional"
             title="Optional">
         <span id="validexitcodes_csharp">
 <a href="#validexitcodes_csharp" style="color: inherit; text-decoration: inherit;">Valid<wbr>Exit<wbr>Codes</a>
@@ -3484,14 +3117,11 @@ All [input](#inputs) properties are implicitly available as output properties. A
         <span class="property-indicator"></span>
         <span class="property-type">List&lt;int&gt;</span>
     </dt>
-    <dd>{{% md %}}Valid exit codes for the PowerShell script. [Default: 0]{{% /md %}}</dd>
-</dl>
+    <dd>{{% md %}}Valid exit codes for the PowerShell script. [Default: 0]{{% /md %}}</dd></dl>
 {{% /choosable %}}
 
 {{% choosable language go %}}
-<dl class="resources-properties">
-
-    <dt class="property-optional"
+<dl class="resources-properties"><dt class="property-optional"
             title="Optional">
         <span id="inline_go">
 <a href="#inline_go" style="color: inherit; text-decoration: inherit;">Inline</a>
@@ -3499,8 +3129,7 @@ All [input](#inputs) properties are implicitly available as output properties. A
         <span class="property-indicator"></span>
         <span class="property-type">[]string</span>
     </dt>
-    <dd>{{% md %}}Array of PowerShell commands to execute{{% /md %}}</dd>
-    <dt class="property-optional"
+    <dd>{{% md %}}Array of PowerShell commands to execute{{% /md %}}</dd><dt class="property-optional"
             title="Optional">
         <span id="name_go">
 <a href="#name_go" style="color: inherit; text-decoration: inherit;">Name</a>
@@ -3508,8 +3137,7 @@ All [input](#inputs) properties are implicitly available as output properties. A
         <span class="property-indicator"></span>
         <span class="property-type">string</span>
     </dt>
-    <dd>{{% md %}}Friendly Name to provide context on what this customization step does{{% /md %}}</dd>
-    <dt class="property-optional"
+    <dd>{{% md %}}Friendly Name to provide context on what this customization step does{{% /md %}}</dd><dt class="property-optional"
             title="Optional">
         <span id="runassystem_go">
 <a href="#runassystem_go" style="color: inherit; text-decoration: inherit;">Run<wbr>As<wbr>System</a>
@@ -3517,8 +3145,7 @@ All [input](#inputs) properties are implicitly available as output properties. A
         <span class="property-indicator"></span>
         <span class="property-type">bool</span>
     </dt>
-    <dd>{{% md %}}If specified, the PowerShell script will be run with elevated privileges using the Local System user. Can only be true when the runElevated field above is set to true.{{% /md %}}</dd>
-    <dt class="property-optional"
+    <dd>{{% md %}}If specified, the PowerShell script will be run with elevated privileges using the Local System user. Can only be true when the runElevated field above is set to true.{{% /md %}}</dd><dt class="property-optional"
             title="Optional">
         <span id="runelevated_go">
 <a href="#runelevated_go" style="color: inherit; text-decoration: inherit;">Run<wbr>Elevated</a>
@@ -3526,8 +3153,7 @@ All [input](#inputs) properties are implicitly available as output properties. A
         <span class="property-indicator"></span>
         <span class="property-type">bool</span>
     </dt>
-    <dd>{{% md %}}If specified, the PowerShell script will be run with elevated privileges{{% /md %}}</dd>
-    <dt class="property-optional"
+    <dd>{{% md %}}If specified, the PowerShell script will be run with elevated privileges{{% /md %}}</dd><dt class="property-optional"
             title="Optional">
         <span id="scripturi_go">
 <a href="#scripturi_go" style="color: inherit; text-decoration: inherit;">Script<wbr>Uri</a>
@@ -3535,8 +3161,7 @@ All [input](#inputs) properties are implicitly available as output properties. A
         <span class="property-indicator"></span>
         <span class="property-type">string</span>
     </dt>
-    <dd>{{% md %}}URI of the PowerShell script to be run for customizing. It can be a github link, SAS URI for Azure Storage, etc{{% /md %}}</dd>
-    <dt class="property-optional"
+    <dd>{{% md %}}URI of the PowerShell script to be run for customizing. It can be a github link, SAS URI for Azure Storage, etc{{% /md %}}</dd><dt class="property-optional"
             title="Optional">
         <span id="sha256checksum_go">
 <a href="#sha256checksum_go" style="color: inherit; text-decoration: inherit;">Sha256Checksum</a>
@@ -3544,8 +3169,7 @@ All [input](#inputs) properties are implicitly available as output properties. A
         <span class="property-indicator"></span>
         <span class="property-type">string</span>
     </dt>
-    <dd>{{% md %}}SHA256 checksum of the power shell script provided in the scriptUri field above{{% /md %}}</dd>
-    <dt class="property-optional"
+    <dd>{{% md %}}SHA256 checksum of the power shell script provided in the scriptUri field above{{% /md %}}</dd><dt class="property-optional"
             title="Optional">
         <span id="validexitcodes_go">
 <a href="#validexitcodes_go" style="color: inherit; text-decoration: inherit;">Valid<wbr>Exit<wbr>Codes</a>
@@ -3553,14 +3177,11 @@ All [input](#inputs) properties are implicitly available as output properties. A
         <span class="property-indicator"></span>
         <span class="property-type">[]int</span>
     </dt>
-    <dd>{{% md %}}Valid exit codes for the PowerShell script. [Default: 0]{{% /md %}}</dd>
-</dl>
+    <dd>{{% md %}}Valid exit codes for the PowerShell script. [Default: 0]{{% /md %}}</dd></dl>
 {{% /choosable %}}
 
 {{% choosable language nodejs %}}
-<dl class="resources-properties">
-
-    <dt class="property-optional"
+<dl class="resources-properties"><dt class="property-optional"
             title="Optional">
         <span id="inline_nodejs">
 <a href="#inline_nodejs" style="color: inherit; text-decoration: inherit;">inline</a>
@@ -3568,8 +3189,7 @@ All [input](#inputs) properties are implicitly available as output properties. A
         <span class="property-indicator"></span>
         <span class="property-type">string[]</span>
     </dt>
-    <dd>{{% md %}}Array of PowerShell commands to execute{{% /md %}}</dd>
-    <dt class="property-optional"
+    <dd>{{% md %}}Array of PowerShell commands to execute{{% /md %}}</dd><dt class="property-optional"
             title="Optional">
         <span id="name_nodejs">
 <a href="#name_nodejs" style="color: inherit; text-decoration: inherit;">name</a>
@@ -3577,8 +3197,7 @@ All [input](#inputs) properties are implicitly available as output properties. A
         <span class="property-indicator"></span>
         <span class="property-type">string</span>
     </dt>
-    <dd>{{% md %}}Friendly Name to provide context on what this customization step does{{% /md %}}</dd>
-    <dt class="property-optional"
+    <dd>{{% md %}}Friendly Name to provide context on what this customization step does{{% /md %}}</dd><dt class="property-optional"
             title="Optional">
         <span id="runassystem_nodejs">
 <a href="#runassystem_nodejs" style="color: inherit; text-decoration: inherit;">run<wbr>As<wbr>System</a>
@@ -3586,8 +3205,7 @@ All [input](#inputs) properties are implicitly available as output properties. A
         <span class="property-indicator"></span>
         <span class="property-type">boolean</span>
     </dt>
-    <dd>{{% md %}}If specified, the PowerShell script will be run with elevated privileges using the Local System user. Can only be true when the runElevated field above is set to true.{{% /md %}}</dd>
-    <dt class="property-optional"
+    <dd>{{% md %}}If specified, the PowerShell script will be run with elevated privileges using the Local System user. Can only be true when the runElevated field above is set to true.{{% /md %}}</dd><dt class="property-optional"
             title="Optional">
         <span id="runelevated_nodejs">
 <a href="#runelevated_nodejs" style="color: inherit; text-decoration: inherit;">run<wbr>Elevated</a>
@@ -3595,8 +3213,7 @@ All [input](#inputs) properties are implicitly available as output properties. A
         <span class="property-indicator"></span>
         <span class="property-type">boolean</span>
     </dt>
-    <dd>{{% md %}}If specified, the PowerShell script will be run with elevated privileges{{% /md %}}</dd>
-    <dt class="property-optional"
+    <dd>{{% md %}}If specified, the PowerShell script will be run with elevated privileges{{% /md %}}</dd><dt class="property-optional"
             title="Optional">
         <span id="scripturi_nodejs">
 <a href="#scripturi_nodejs" style="color: inherit; text-decoration: inherit;">script<wbr>Uri</a>
@@ -3604,8 +3221,7 @@ All [input](#inputs) properties are implicitly available as output properties. A
         <span class="property-indicator"></span>
         <span class="property-type">string</span>
     </dt>
-    <dd>{{% md %}}URI of the PowerShell script to be run for customizing. It can be a github link, SAS URI for Azure Storage, etc{{% /md %}}</dd>
-    <dt class="property-optional"
+    <dd>{{% md %}}URI of the PowerShell script to be run for customizing. It can be a github link, SAS URI for Azure Storage, etc{{% /md %}}</dd><dt class="property-optional"
             title="Optional">
         <span id="sha256checksum_nodejs">
 <a href="#sha256checksum_nodejs" style="color: inherit; text-decoration: inherit;">sha256Checksum</a>
@@ -3613,8 +3229,7 @@ All [input](#inputs) properties are implicitly available as output properties. A
         <span class="property-indicator"></span>
         <span class="property-type">string</span>
     </dt>
-    <dd>{{% md %}}SHA256 checksum of the power shell script provided in the scriptUri field above{{% /md %}}</dd>
-    <dt class="property-optional"
+    <dd>{{% md %}}SHA256 checksum of the power shell script provided in the scriptUri field above{{% /md %}}</dd><dt class="property-optional"
             title="Optional">
         <span id="validexitcodes_nodejs">
 <a href="#validexitcodes_nodejs" style="color: inherit; text-decoration: inherit;">valid<wbr>Exit<wbr>Codes</a>
@@ -3622,14 +3237,11 @@ All [input](#inputs) properties are implicitly available as output properties. A
         <span class="property-indicator"></span>
         <span class="property-type">number[]</span>
     </dt>
-    <dd>{{% md %}}Valid exit codes for the PowerShell script. [Default: 0]{{% /md %}}</dd>
-</dl>
+    <dd>{{% md %}}Valid exit codes for the PowerShell script. [Default: 0]{{% /md %}}</dd></dl>
 {{% /choosable %}}
 
 {{% choosable language python %}}
-<dl class="resources-properties">
-
-    <dt class="property-optional"
+<dl class="resources-properties"><dt class="property-optional"
             title="Optional">
         <span id="inline_python">
 <a href="#inline_python" style="color: inherit; text-decoration: inherit;">inline</a>
@@ -3637,8 +3249,7 @@ All [input](#inputs) properties are implicitly available as output properties. A
         <span class="property-indicator"></span>
         <span class="property-type">Sequence[str]</span>
     </dt>
-    <dd>{{% md %}}Array of PowerShell commands to execute{{% /md %}}</dd>
-    <dt class="property-optional"
+    <dd>{{% md %}}Array of PowerShell commands to execute{{% /md %}}</dd><dt class="property-optional"
             title="Optional">
         <span id="name_python">
 <a href="#name_python" style="color: inherit; text-decoration: inherit;">name</a>
@@ -3646,8 +3257,7 @@ All [input](#inputs) properties are implicitly available as output properties. A
         <span class="property-indicator"></span>
         <span class="property-type">str</span>
     </dt>
-    <dd>{{% md %}}Friendly Name to provide context on what this customization step does{{% /md %}}</dd>
-    <dt class="property-optional"
+    <dd>{{% md %}}Friendly Name to provide context on what this customization step does{{% /md %}}</dd><dt class="property-optional"
             title="Optional">
         <span id="run_as_system_python">
 <a href="#run_as_system_python" style="color: inherit; text-decoration: inherit;">run_<wbr>as_<wbr>system</a>
@@ -3655,8 +3265,7 @@ All [input](#inputs) properties are implicitly available as output properties. A
         <span class="property-indicator"></span>
         <span class="property-type">bool</span>
     </dt>
-    <dd>{{% md %}}If specified, the PowerShell script will be run with elevated privileges using the Local System user. Can only be true when the runElevated field above is set to true.{{% /md %}}</dd>
-    <dt class="property-optional"
+    <dd>{{% md %}}If specified, the PowerShell script will be run with elevated privileges using the Local System user. Can only be true when the runElevated field above is set to true.{{% /md %}}</dd><dt class="property-optional"
             title="Optional">
         <span id="run_elevated_python">
 <a href="#run_elevated_python" style="color: inherit; text-decoration: inherit;">run_<wbr>elevated</a>
@@ -3664,8 +3273,7 @@ All [input](#inputs) properties are implicitly available as output properties. A
         <span class="property-indicator"></span>
         <span class="property-type">bool</span>
     </dt>
-    <dd>{{% md %}}If specified, the PowerShell script will be run with elevated privileges{{% /md %}}</dd>
-    <dt class="property-optional"
+    <dd>{{% md %}}If specified, the PowerShell script will be run with elevated privileges{{% /md %}}</dd><dt class="property-optional"
             title="Optional">
         <span id="script_uri_python">
 <a href="#script_uri_python" style="color: inherit; text-decoration: inherit;">script_<wbr>uri</a>
@@ -3673,8 +3281,7 @@ All [input](#inputs) properties are implicitly available as output properties. A
         <span class="property-indicator"></span>
         <span class="property-type">str</span>
     </dt>
-    <dd>{{% md %}}URI of the PowerShell script to be run for customizing. It can be a github link, SAS URI for Azure Storage, etc{{% /md %}}</dd>
-    <dt class="property-optional"
+    <dd>{{% md %}}URI of the PowerShell script to be run for customizing. It can be a github link, SAS URI for Azure Storage, etc{{% /md %}}</dd><dt class="property-optional"
             title="Optional">
         <span id="sha256_checksum_python">
 <a href="#sha256_checksum_python" style="color: inherit; text-decoration: inherit;">sha256_<wbr>checksum</a>
@@ -3682,8 +3289,7 @@ All [input](#inputs) properties are implicitly available as output properties. A
         <span class="property-indicator"></span>
         <span class="property-type">str</span>
     </dt>
-    <dd>{{% md %}}SHA256 checksum of the power shell script provided in the scriptUri field above{{% /md %}}</dd>
-    <dt class="property-optional"
+    <dd>{{% md %}}SHA256 checksum of the power shell script provided in the scriptUri field above{{% /md %}}</dd><dt class="property-optional"
             title="Optional">
         <span id="valid_exit_codes_python">
 <a href="#valid_exit_codes_python" style="color: inherit; text-decoration: inherit;">valid_<wbr>exit_<wbr>codes</a>
@@ -3691,16 +3297,13 @@ All [input](#inputs) properties are implicitly available as output properties. A
         <span class="property-indicator"></span>
         <span class="property-type">Sequence[int]</span>
     </dt>
-    <dd>{{% md %}}Valid exit codes for the PowerShell script. [Default: 0]{{% /md %}}</dd>
-</dl>
+    <dd>{{% md %}}Valid exit codes for the PowerShell script. [Default: 0]{{% /md %}}</dd></dl>
 {{% /choosable %}}
 
 <h4 id="imagetemplaterestartcustomizer">Image<wbr>Template<wbr>Restart<wbr>Customizer</h4>
 
 {{% choosable language csharp %}}
-<dl class="resources-properties">
-
-    <dt class="property-optional"
+<dl class="resources-properties"><dt class="property-optional"
             title="Optional">
         <span id="name_csharp">
 <a href="#name_csharp" style="color: inherit; text-decoration: inherit;">Name</a>
@@ -3708,8 +3311,7 @@ All [input](#inputs) properties are implicitly available as output properties. A
         <span class="property-indicator"></span>
         <span class="property-type">string</span>
     </dt>
-    <dd>{{% md %}}Friendly Name to provide context on what this customization step does{{% /md %}}</dd>
-    <dt class="property-optional"
+    <dd>{{% md %}}Friendly Name to provide context on what this customization step does{{% /md %}}</dd><dt class="property-optional"
             title="Optional">
         <span id="restartcheckcommand_csharp">
 <a href="#restartcheckcommand_csharp" style="color: inherit; text-decoration: inherit;">Restart<wbr>Check<wbr>Command</a>
@@ -3717,8 +3319,7 @@ All [input](#inputs) properties are implicitly available as output properties. A
         <span class="property-indicator"></span>
         <span class="property-type">string</span>
     </dt>
-    <dd>{{% md %}}Command to check if restart succeeded [Default: '']{{% /md %}}</dd>
-    <dt class="property-optional"
+    <dd>{{% md %}}Command to check if restart succeeded [Default: '']{{% /md %}}</dd><dt class="property-optional"
             title="Optional">
         <span id="restartcommand_csharp">
 <a href="#restartcommand_csharp" style="color: inherit; text-decoration: inherit;">Restart<wbr>Command</a>
@@ -3726,8 +3327,7 @@ All [input](#inputs) properties are implicitly available as output properties. A
         <span class="property-indicator"></span>
         <span class="property-type">string</span>
     </dt>
-    <dd>{{% md %}}Command to execute the restart [Default: 'shutdown /r /f /t 0 /c "packer restart"']{{% /md %}}</dd>
-    <dt class="property-optional"
+    <dd>{{% md %}}Command to execute the restart [Default: 'shutdown /r /f /t 0 /c "packer restart"']{{% /md %}}</dd><dt class="property-optional"
             title="Optional">
         <span id="restarttimeout_csharp">
 <a href="#restarttimeout_csharp" style="color: inherit; text-decoration: inherit;">Restart<wbr>Timeout</a>
@@ -3735,14 +3335,11 @@ All [input](#inputs) properties are implicitly available as output properties. A
         <span class="property-indicator"></span>
         <span class="property-type">string</span>
     </dt>
-    <dd>{{% md %}}Restart timeout specified as a string of magnitude and unit, e.g. '5m' (5 minutes) or '2h' (2 hours) [Default: '5m']{{% /md %}}</dd>
-</dl>
+    <dd>{{% md %}}Restart timeout specified as a string of magnitude and unit, e.g. '5m' (5 minutes) or '2h' (2 hours) [Default: '5m']{{% /md %}}</dd></dl>
 {{% /choosable %}}
 
 {{% choosable language go %}}
-<dl class="resources-properties">
-
-    <dt class="property-optional"
+<dl class="resources-properties"><dt class="property-optional"
             title="Optional">
         <span id="name_go">
 <a href="#name_go" style="color: inherit; text-decoration: inherit;">Name</a>
@@ -3750,8 +3347,7 @@ All [input](#inputs) properties are implicitly available as output properties. A
         <span class="property-indicator"></span>
         <span class="property-type">string</span>
     </dt>
-    <dd>{{% md %}}Friendly Name to provide context on what this customization step does{{% /md %}}</dd>
-    <dt class="property-optional"
+    <dd>{{% md %}}Friendly Name to provide context on what this customization step does{{% /md %}}</dd><dt class="property-optional"
             title="Optional">
         <span id="restartcheckcommand_go">
 <a href="#restartcheckcommand_go" style="color: inherit; text-decoration: inherit;">Restart<wbr>Check<wbr>Command</a>
@@ -3759,8 +3355,7 @@ All [input](#inputs) properties are implicitly available as output properties. A
         <span class="property-indicator"></span>
         <span class="property-type">string</span>
     </dt>
-    <dd>{{% md %}}Command to check if restart succeeded [Default: '']{{% /md %}}</dd>
-    <dt class="property-optional"
+    <dd>{{% md %}}Command to check if restart succeeded [Default: '']{{% /md %}}</dd><dt class="property-optional"
             title="Optional">
         <span id="restartcommand_go">
 <a href="#restartcommand_go" style="color: inherit; text-decoration: inherit;">Restart<wbr>Command</a>
@@ -3768,8 +3363,7 @@ All [input](#inputs) properties are implicitly available as output properties. A
         <span class="property-indicator"></span>
         <span class="property-type">string</span>
     </dt>
-    <dd>{{% md %}}Command to execute the restart [Default: 'shutdown /r /f /t 0 /c "packer restart"']{{% /md %}}</dd>
-    <dt class="property-optional"
+    <dd>{{% md %}}Command to execute the restart [Default: 'shutdown /r /f /t 0 /c "packer restart"']{{% /md %}}</dd><dt class="property-optional"
             title="Optional">
         <span id="restarttimeout_go">
 <a href="#restarttimeout_go" style="color: inherit; text-decoration: inherit;">Restart<wbr>Timeout</a>
@@ -3777,14 +3371,11 @@ All [input](#inputs) properties are implicitly available as output properties. A
         <span class="property-indicator"></span>
         <span class="property-type">string</span>
     </dt>
-    <dd>{{% md %}}Restart timeout specified as a string of magnitude and unit, e.g. '5m' (5 minutes) or '2h' (2 hours) [Default: '5m']{{% /md %}}</dd>
-</dl>
+    <dd>{{% md %}}Restart timeout specified as a string of magnitude and unit, e.g. '5m' (5 minutes) or '2h' (2 hours) [Default: '5m']{{% /md %}}</dd></dl>
 {{% /choosable %}}
 
 {{% choosable language nodejs %}}
-<dl class="resources-properties">
-
-    <dt class="property-optional"
+<dl class="resources-properties"><dt class="property-optional"
             title="Optional">
         <span id="name_nodejs">
 <a href="#name_nodejs" style="color: inherit; text-decoration: inherit;">name</a>
@@ -3792,8 +3383,7 @@ All [input](#inputs) properties are implicitly available as output properties. A
         <span class="property-indicator"></span>
         <span class="property-type">string</span>
     </dt>
-    <dd>{{% md %}}Friendly Name to provide context on what this customization step does{{% /md %}}</dd>
-    <dt class="property-optional"
+    <dd>{{% md %}}Friendly Name to provide context on what this customization step does{{% /md %}}</dd><dt class="property-optional"
             title="Optional">
         <span id="restartcheckcommand_nodejs">
 <a href="#restartcheckcommand_nodejs" style="color: inherit; text-decoration: inherit;">restart<wbr>Check<wbr>Command</a>
@@ -3801,8 +3391,7 @@ All [input](#inputs) properties are implicitly available as output properties. A
         <span class="property-indicator"></span>
         <span class="property-type">string</span>
     </dt>
-    <dd>{{% md %}}Command to check if restart succeeded [Default: '']{{% /md %}}</dd>
-    <dt class="property-optional"
+    <dd>{{% md %}}Command to check if restart succeeded [Default: '']{{% /md %}}</dd><dt class="property-optional"
             title="Optional">
         <span id="restartcommand_nodejs">
 <a href="#restartcommand_nodejs" style="color: inherit; text-decoration: inherit;">restart<wbr>Command</a>
@@ -3810,8 +3399,7 @@ All [input](#inputs) properties are implicitly available as output properties. A
         <span class="property-indicator"></span>
         <span class="property-type">string</span>
     </dt>
-    <dd>{{% md %}}Command to execute the restart [Default: 'shutdown /r /f /t 0 /c "packer restart"']{{% /md %}}</dd>
-    <dt class="property-optional"
+    <dd>{{% md %}}Command to execute the restart [Default: 'shutdown /r /f /t 0 /c "packer restart"']{{% /md %}}</dd><dt class="property-optional"
             title="Optional">
         <span id="restarttimeout_nodejs">
 <a href="#restarttimeout_nodejs" style="color: inherit; text-decoration: inherit;">restart<wbr>Timeout</a>
@@ -3819,14 +3407,11 @@ All [input](#inputs) properties are implicitly available as output properties. A
         <span class="property-indicator"></span>
         <span class="property-type">string</span>
     </dt>
-    <dd>{{% md %}}Restart timeout specified as a string of magnitude and unit, e.g. '5m' (5 minutes) or '2h' (2 hours) [Default: '5m']{{% /md %}}</dd>
-</dl>
+    <dd>{{% md %}}Restart timeout specified as a string of magnitude and unit, e.g. '5m' (5 minutes) or '2h' (2 hours) [Default: '5m']{{% /md %}}</dd></dl>
 {{% /choosable %}}
 
 {{% choosable language python %}}
-<dl class="resources-properties">
-
-    <dt class="property-optional"
+<dl class="resources-properties"><dt class="property-optional"
             title="Optional">
         <span id="name_python">
 <a href="#name_python" style="color: inherit; text-decoration: inherit;">name</a>
@@ -3834,8 +3419,7 @@ All [input](#inputs) properties are implicitly available as output properties. A
         <span class="property-indicator"></span>
         <span class="property-type">str</span>
     </dt>
-    <dd>{{% md %}}Friendly Name to provide context on what this customization step does{{% /md %}}</dd>
-    <dt class="property-optional"
+    <dd>{{% md %}}Friendly Name to provide context on what this customization step does{{% /md %}}</dd><dt class="property-optional"
             title="Optional">
         <span id="restart_check_command_python">
 <a href="#restart_check_command_python" style="color: inherit; text-decoration: inherit;">restart_<wbr>check_<wbr>command</a>
@@ -3843,8 +3427,7 @@ All [input](#inputs) properties are implicitly available as output properties. A
         <span class="property-indicator"></span>
         <span class="property-type">str</span>
     </dt>
-    <dd>{{% md %}}Command to check if restart succeeded [Default: '']{{% /md %}}</dd>
-    <dt class="property-optional"
+    <dd>{{% md %}}Command to check if restart succeeded [Default: '']{{% /md %}}</dd><dt class="property-optional"
             title="Optional">
         <span id="restart_command_python">
 <a href="#restart_command_python" style="color: inherit; text-decoration: inherit;">restart_<wbr>command</a>
@@ -3852,8 +3435,7 @@ All [input](#inputs) properties are implicitly available as output properties. A
         <span class="property-indicator"></span>
         <span class="property-type">str</span>
     </dt>
-    <dd>{{% md %}}Command to execute the restart [Default: 'shutdown /r /f /t 0 /c "packer restart"']{{% /md %}}</dd>
-    <dt class="property-optional"
+    <dd>{{% md %}}Command to execute the restart [Default: 'shutdown /r /f /t 0 /c "packer restart"']{{% /md %}}</dd><dt class="property-optional"
             title="Optional">
         <span id="restart_timeout_python">
 <a href="#restart_timeout_python" style="color: inherit; text-decoration: inherit;">restart_<wbr>timeout</a>
@@ -3861,16 +3443,13 @@ All [input](#inputs) properties are implicitly available as output properties. A
         <span class="property-indicator"></span>
         <span class="property-type">str</span>
     </dt>
-    <dd>{{% md %}}Restart timeout specified as a string of magnitude and unit, e.g. '5m' (5 minutes) or '2h' (2 hours) [Default: '5m']{{% /md %}}</dd>
-</dl>
+    <dd>{{% md %}}Restart timeout specified as a string of magnitude and unit, e.g. '5m' (5 minutes) or '2h' (2 hours) [Default: '5m']{{% /md %}}</dd></dl>
 {{% /choosable %}}
 
 <h4 id="imagetemplaterestartcustomizerresponse">Image<wbr>Template<wbr>Restart<wbr>Customizer<wbr>Response</h4>
 
 {{% choosable language csharp %}}
-<dl class="resources-properties">
-
-    <dt class="property-optional"
+<dl class="resources-properties"><dt class="property-optional"
             title="Optional">
         <span id="name_csharp">
 <a href="#name_csharp" style="color: inherit; text-decoration: inherit;">Name</a>
@@ -3878,8 +3457,7 @@ All [input](#inputs) properties are implicitly available as output properties. A
         <span class="property-indicator"></span>
         <span class="property-type">string</span>
     </dt>
-    <dd>{{% md %}}Friendly Name to provide context on what this customization step does{{% /md %}}</dd>
-    <dt class="property-optional"
+    <dd>{{% md %}}Friendly Name to provide context on what this customization step does{{% /md %}}</dd><dt class="property-optional"
             title="Optional">
         <span id="restartcheckcommand_csharp">
 <a href="#restartcheckcommand_csharp" style="color: inherit; text-decoration: inherit;">Restart<wbr>Check<wbr>Command</a>
@@ -3887,8 +3465,7 @@ All [input](#inputs) properties are implicitly available as output properties. A
         <span class="property-indicator"></span>
         <span class="property-type">string</span>
     </dt>
-    <dd>{{% md %}}Command to check if restart succeeded [Default: '']{{% /md %}}</dd>
-    <dt class="property-optional"
+    <dd>{{% md %}}Command to check if restart succeeded [Default: '']{{% /md %}}</dd><dt class="property-optional"
             title="Optional">
         <span id="restartcommand_csharp">
 <a href="#restartcommand_csharp" style="color: inherit; text-decoration: inherit;">Restart<wbr>Command</a>
@@ -3896,8 +3473,7 @@ All [input](#inputs) properties are implicitly available as output properties. A
         <span class="property-indicator"></span>
         <span class="property-type">string</span>
     </dt>
-    <dd>{{% md %}}Command to execute the restart [Default: 'shutdown /r /f /t 0 /c "packer restart"']{{% /md %}}</dd>
-    <dt class="property-optional"
+    <dd>{{% md %}}Command to execute the restart [Default: 'shutdown /r /f /t 0 /c "packer restart"']{{% /md %}}</dd><dt class="property-optional"
             title="Optional">
         <span id="restarttimeout_csharp">
 <a href="#restarttimeout_csharp" style="color: inherit; text-decoration: inherit;">Restart<wbr>Timeout</a>
@@ -3905,14 +3481,11 @@ All [input](#inputs) properties are implicitly available as output properties. A
         <span class="property-indicator"></span>
         <span class="property-type">string</span>
     </dt>
-    <dd>{{% md %}}Restart timeout specified as a string of magnitude and unit, e.g. '5m' (5 minutes) or '2h' (2 hours) [Default: '5m']{{% /md %}}</dd>
-</dl>
+    <dd>{{% md %}}Restart timeout specified as a string of magnitude and unit, e.g. '5m' (5 minutes) or '2h' (2 hours) [Default: '5m']{{% /md %}}</dd></dl>
 {{% /choosable %}}
 
 {{% choosable language go %}}
-<dl class="resources-properties">
-
-    <dt class="property-optional"
+<dl class="resources-properties"><dt class="property-optional"
             title="Optional">
         <span id="name_go">
 <a href="#name_go" style="color: inherit; text-decoration: inherit;">Name</a>
@@ -3920,8 +3493,7 @@ All [input](#inputs) properties are implicitly available as output properties. A
         <span class="property-indicator"></span>
         <span class="property-type">string</span>
     </dt>
-    <dd>{{% md %}}Friendly Name to provide context on what this customization step does{{% /md %}}</dd>
-    <dt class="property-optional"
+    <dd>{{% md %}}Friendly Name to provide context on what this customization step does{{% /md %}}</dd><dt class="property-optional"
             title="Optional">
         <span id="restartcheckcommand_go">
 <a href="#restartcheckcommand_go" style="color: inherit; text-decoration: inherit;">Restart<wbr>Check<wbr>Command</a>
@@ -3929,8 +3501,7 @@ All [input](#inputs) properties are implicitly available as output properties. A
         <span class="property-indicator"></span>
         <span class="property-type">string</span>
     </dt>
-    <dd>{{% md %}}Command to check if restart succeeded [Default: '']{{% /md %}}</dd>
-    <dt class="property-optional"
+    <dd>{{% md %}}Command to check if restart succeeded [Default: '']{{% /md %}}</dd><dt class="property-optional"
             title="Optional">
         <span id="restartcommand_go">
 <a href="#restartcommand_go" style="color: inherit; text-decoration: inherit;">Restart<wbr>Command</a>
@@ -3938,8 +3509,7 @@ All [input](#inputs) properties are implicitly available as output properties. A
         <span class="property-indicator"></span>
         <span class="property-type">string</span>
     </dt>
-    <dd>{{% md %}}Command to execute the restart [Default: 'shutdown /r /f /t 0 /c "packer restart"']{{% /md %}}</dd>
-    <dt class="property-optional"
+    <dd>{{% md %}}Command to execute the restart [Default: 'shutdown /r /f /t 0 /c "packer restart"']{{% /md %}}</dd><dt class="property-optional"
             title="Optional">
         <span id="restarttimeout_go">
 <a href="#restarttimeout_go" style="color: inherit; text-decoration: inherit;">Restart<wbr>Timeout</a>
@@ -3947,14 +3517,11 @@ All [input](#inputs) properties are implicitly available as output properties. A
         <span class="property-indicator"></span>
         <span class="property-type">string</span>
     </dt>
-    <dd>{{% md %}}Restart timeout specified as a string of magnitude and unit, e.g. '5m' (5 minutes) or '2h' (2 hours) [Default: '5m']{{% /md %}}</dd>
-</dl>
+    <dd>{{% md %}}Restart timeout specified as a string of magnitude and unit, e.g. '5m' (5 minutes) or '2h' (2 hours) [Default: '5m']{{% /md %}}</dd></dl>
 {{% /choosable %}}
 
 {{% choosable language nodejs %}}
-<dl class="resources-properties">
-
-    <dt class="property-optional"
+<dl class="resources-properties"><dt class="property-optional"
             title="Optional">
         <span id="name_nodejs">
 <a href="#name_nodejs" style="color: inherit; text-decoration: inherit;">name</a>
@@ -3962,8 +3529,7 @@ All [input](#inputs) properties are implicitly available as output properties. A
         <span class="property-indicator"></span>
         <span class="property-type">string</span>
     </dt>
-    <dd>{{% md %}}Friendly Name to provide context on what this customization step does{{% /md %}}</dd>
-    <dt class="property-optional"
+    <dd>{{% md %}}Friendly Name to provide context on what this customization step does{{% /md %}}</dd><dt class="property-optional"
             title="Optional">
         <span id="restartcheckcommand_nodejs">
 <a href="#restartcheckcommand_nodejs" style="color: inherit; text-decoration: inherit;">restart<wbr>Check<wbr>Command</a>
@@ -3971,8 +3537,7 @@ All [input](#inputs) properties are implicitly available as output properties. A
         <span class="property-indicator"></span>
         <span class="property-type">string</span>
     </dt>
-    <dd>{{% md %}}Command to check if restart succeeded [Default: '']{{% /md %}}</dd>
-    <dt class="property-optional"
+    <dd>{{% md %}}Command to check if restart succeeded [Default: '']{{% /md %}}</dd><dt class="property-optional"
             title="Optional">
         <span id="restartcommand_nodejs">
 <a href="#restartcommand_nodejs" style="color: inherit; text-decoration: inherit;">restart<wbr>Command</a>
@@ -3980,8 +3545,7 @@ All [input](#inputs) properties are implicitly available as output properties. A
         <span class="property-indicator"></span>
         <span class="property-type">string</span>
     </dt>
-    <dd>{{% md %}}Command to execute the restart [Default: 'shutdown /r /f /t 0 /c "packer restart"']{{% /md %}}</dd>
-    <dt class="property-optional"
+    <dd>{{% md %}}Command to execute the restart [Default: 'shutdown /r /f /t 0 /c "packer restart"']{{% /md %}}</dd><dt class="property-optional"
             title="Optional">
         <span id="restarttimeout_nodejs">
 <a href="#restarttimeout_nodejs" style="color: inherit; text-decoration: inherit;">restart<wbr>Timeout</a>
@@ -3989,14 +3553,11 @@ All [input](#inputs) properties are implicitly available as output properties. A
         <span class="property-indicator"></span>
         <span class="property-type">string</span>
     </dt>
-    <dd>{{% md %}}Restart timeout specified as a string of magnitude and unit, e.g. '5m' (5 minutes) or '2h' (2 hours) [Default: '5m']{{% /md %}}</dd>
-</dl>
+    <dd>{{% md %}}Restart timeout specified as a string of magnitude and unit, e.g. '5m' (5 minutes) or '2h' (2 hours) [Default: '5m']{{% /md %}}</dd></dl>
 {{% /choosable %}}
 
 {{% choosable language python %}}
-<dl class="resources-properties">
-
-    <dt class="property-optional"
+<dl class="resources-properties"><dt class="property-optional"
             title="Optional">
         <span id="name_python">
 <a href="#name_python" style="color: inherit; text-decoration: inherit;">name</a>
@@ -4004,8 +3565,7 @@ All [input](#inputs) properties are implicitly available as output properties. A
         <span class="property-indicator"></span>
         <span class="property-type">str</span>
     </dt>
-    <dd>{{% md %}}Friendly Name to provide context on what this customization step does{{% /md %}}</dd>
-    <dt class="property-optional"
+    <dd>{{% md %}}Friendly Name to provide context on what this customization step does{{% /md %}}</dd><dt class="property-optional"
             title="Optional">
         <span id="restart_check_command_python">
 <a href="#restart_check_command_python" style="color: inherit; text-decoration: inherit;">restart_<wbr>check_<wbr>command</a>
@@ -4013,8 +3573,7 @@ All [input](#inputs) properties are implicitly available as output properties. A
         <span class="property-indicator"></span>
         <span class="property-type">str</span>
     </dt>
-    <dd>{{% md %}}Command to check if restart succeeded [Default: '']{{% /md %}}</dd>
-    <dt class="property-optional"
+    <dd>{{% md %}}Command to check if restart succeeded [Default: '']{{% /md %}}</dd><dt class="property-optional"
             title="Optional">
         <span id="restart_command_python">
 <a href="#restart_command_python" style="color: inherit; text-decoration: inherit;">restart_<wbr>command</a>
@@ -4022,8 +3581,7 @@ All [input](#inputs) properties are implicitly available as output properties. A
         <span class="property-indicator"></span>
         <span class="property-type">str</span>
     </dt>
-    <dd>{{% md %}}Command to execute the restart [Default: 'shutdown /r /f /t 0 /c "packer restart"']{{% /md %}}</dd>
-    <dt class="property-optional"
+    <dd>{{% md %}}Command to execute the restart [Default: 'shutdown /r /f /t 0 /c "packer restart"']{{% /md %}}</dd><dt class="property-optional"
             title="Optional">
         <span id="restart_timeout_python">
 <a href="#restart_timeout_python" style="color: inherit; text-decoration: inherit;">restart_<wbr>timeout</a>
@@ -4031,16 +3589,13 @@ All [input](#inputs) properties are implicitly available as output properties. A
         <span class="property-indicator"></span>
         <span class="property-type">str</span>
     </dt>
-    <dd>{{% md %}}Restart timeout specified as a string of magnitude and unit, e.g. '5m' (5 minutes) or '2h' (2 hours) [Default: '5m']{{% /md %}}</dd>
-</dl>
+    <dd>{{% md %}}Restart timeout specified as a string of magnitude and unit, e.g. '5m' (5 minutes) or '2h' (2 hours) [Default: '5m']{{% /md %}}</dd></dl>
 {{% /choosable %}}
 
 <h4 id="imagetemplatesharedimagedistributor">Image<wbr>Template<wbr>Shared<wbr>Image<wbr>Distributor</h4>
 
 {{% choosable language csharp %}}
-<dl class="resources-properties">
-
-    <dt class="property-required"
+<dl class="resources-properties"><dt class="property-required"
             title="Required">
         <span id="galleryimageid_csharp">
 <a href="#galleryimageid_csharp" style="color: inherit; text-decoration: inherit;">Gallery<wbr>Image<wbr>Id</a>
@@ -4048,8 +3603,7 @@ All [input](#inputs) properties are implicitly available as output properties. A
         <span class="property-indicator"></span>
         <span class="property-type">string</span>
     </dt>
-    <dd>{{% md %}}Resource Id of the Shared Image Gallery image{{% /md %}}</dd>
-    <dt class="property-required"
+    <dd>{{% md %}}Resource Id of the Shared Image Gallery image{{% /md %}}</dd><dt class="property-required"
             title="Required">
         <span id="replicationregions_csharp">
 <a href="#replicationregions_csharp" style="color: inherit; text-decoration: inherit;">Replication<wbr>Regions</a>
@@ -4057,8 +3611,7 @@ All [input](#inputs) properties are implicitly available as output properties. A
         <span class="property-indicator"></span>
         <span class="property-type">List&lt;string&gt;</span>
     </dt>
-    <dd>{{% md %}}A list of regions that the image will be replicated to{{% /md %}}</dd>
-    <dt class="property-required"
+    <dd>{{% md %}}A list of regions that the image will be replicated to{{% /md %}}</dd><dt class="property-required"
             title="Required">
         <span id="runoutputname_csharp">
 <a href="#runoutputname_csharp" style="color: inherit; text-decoration: inherit;">Run<wbr>Output<wbr>Name</a>
@@ -4066,8 +3619,7 @@ All [input](#inputs) properties are implicitly available as output properties. A
         <span class="property-indicator"></span>
         <span class="property-type">string</span>
     </dt>
-    <dd>{{% md %}}The name to be used for the associated RunOutput.{{% /md %}}</dd>
-    <dt class="property-optional"
+    <dd>{{% md %}}The name to be used for the associated RunOutput.{{% /md %}}</dd><dt class="property-optional"
             title="Optional">
         <span id="artifacttags_csharp">
 <a href="#artifacttags_csharp" style="color: inherit; text-decoration: inherit;">Artifact<wbr>Tags</a>
@@ -4075,8 +3627,7 @@ All [input](#inputs) properties are implicitly available as output properties. A
         <span class="property-indicator"></span>
         <span class="property-type">Dictionary&lt;string, string&gt;</span>
     </dt>
-    <dd>{{% md %}}Tags that will be applied to the artifact once it has been created/updated by the distributor.{{% /md %}}</dd>
-    <dt class="property-optional"
+    <dd>{{% md %}}Tags that will be applied to the artifact once it has been created/updated by the distributor.{{% /md %}}</dd><dt class="property-optional"
             title="Optional">
         <span id="excludefromlatest_csharp">
 <a href="#excludefromlatest_csharp" style="color: inherit; text-decoration: inherit;">Exclude<wbr>From<wbr>Latest</a>
@@ -4084,8 +3635,7 @@ All [input](#inputs) properties are implicitly available as output properties. A
         <span class="property-indicator"></span>
         <span class="property-type">bool</span>
     </dt>
-    <dd>{{% md %}}Flag that indicates whether created image version should be excluded from latest. Omit to use the default (false).{{% /md %}}</dd>
-    <dt class="property-optional"
+    <dd>{{% md %}}Flag that indicates whether created image version should be excluded from latest. Omit to use the default (false).{{% /md %}}</dd><dt class="property-optional"
             title="Optional">
         <span id="storageaccounttype_csharp">
 <a href="#storageaccounttype_csharp" style="color: inherit; text-decoration: inherit;">Storage<wbr>Account<wbr>Type</a>
@@ -4093,14 +3643,11 @@ All [input](#inputs) properties are implicitly available as output properties. A
         <span class="property-indicator"></span>
         <span class="property-type">string | <a href="#sharedimagestorageaccounttype">Pulumi.<wbr>Azure<wbr>Native.<wbr>Virtual<wbr>Machine<wbr>Images.<wbr>Shared<wbr>Image<wbr>Storage<wbr>Account<wbr>Type</a></span>
     </dt>
-    <dd>{{% md %}}Storage account type to be used to store the shared image. Omit to use the default (Standard_LRS).{{% /md %}}</dd>
-</dl>
+    <dd>{{% md %}}Storage account type to be used to store the shared image. Omit to use the default (Standard_LRS).{{% /md %}}</dd></dl>
 {{% /choosable %}}
 
 {{% choosable language go %}}
-<dl class="resources-properties">
-
-    <dt class="property-required"
+<dl class="resources-properties"><dt class="property-required"
             title="Required">
         <span id="galleryimageid_go">
 <a href="#galleryimageid_go" style="color: inherit; text-decoration: inherit;">Gallery<wbr>Image<wbr>Id</a>
@@ -4108,8 +3655,7 @@ All [input](#inputs) properties are implicitly available as output properties. A
         <span class="property-indicator"></span>
         <span class="property-type">string</span>
     </dt>
-    <dd>{{% md %}}Resource Id of the Shared Image Gallery image{{% /md %}}</dd>
-    <dt class="property-required"
+    <dd>{{% md %}}Resource Id of the Shared Image Gallery image{{% /md %}}</dd><dt class="property-required"
             title="Required">
         <span id="replicationregions_go">
 <a href="#replicationregions_go" style="color: inherit; text-decoration: inherit;">Replication<wbr>Regions</a>
@@ -4117,8 +3663,7 @@ All [input](#inputs) properties are implicitly available as output properties. A
         <span class="property-indicator"></span>
         <span class="property-type">[]string</span>
     </dt>
-    <dd>{{% md %}}A list of regions that the image will be replicated to{{% /md %}}</dd>
-    <dt class="property-required"
+    <dd>{{% md %}}A list of regions that the image will be replicated to{{% /md %}}</dd><dt class="property-required"
             title="Required">
         <span id="runoutputname_go">
 <a href="#runoutputname_go" style="color: inherit; text-decoration: inherit;">Run<wbr>Output<wbr>Name</a>
@@ -4126,8 +3671,7 @@ All [input](#inputs) properties are implicitly available as output properties. A
         <span class="property-indicator"></span>
         <span class="property-type">string</span>
     </dt>
-    <dd>{{% md %}}The name to be used for the associated RunOutput.{{% /md %}}</dd>
-    <dt class="property-optional"
+    <dd>{{% md %}}The name to be used for the associated RunOutput.{{% /md %}}</dd><dt class="property-optional"
             title="Optional">
         <span id="artifacttags_go">
 <a href="#artifacttags_go" style="color: inherit; text-decoration: inherit;">Artifact<wbr>Tags</a>
@@ -4135,8 +3679,7 @@ All [input](#inputs) properties are implicitly available as output properties. A
         <span class="property-indicator"></span>
         <span class="property-type">map[string]string</span>
     </dt>
-    <dd>{{% md %}}Tags that will be applied to the artifact once it has been created/updated by the distributor.{{% /md %}}</dd>
-    <dt class="property-optional"
+    <dd>{{% md %}}Tags that will be applied to the artifact once it has been created/updated by the distributor.{{% /md %}}</dd><dt class="property-optional"
             title="Optional">
         <span id="excludefromlatest_go">
 <a href="#excludefromlatest_go" style="color: inherit; text-decoration: inherit;">Exclude<wbr>From<wbr>Latest</a>
@@ -4144,8 +3687,7 @@ All [input](#inputs) properties are implicitly available as output properties. A
         <span class="property-indicator"></span>
         <span class="property-type">bool</span>
     </dt>
-    <dd>{{% md %}}Flag that indicates whether created image version should be excluded from latest. Omit to use the default (false).{{% /md %}}</dd>
-    <dt class="property-optional"
+    <dd>{{% md %}}Flag that indicates whether created image version should be excluded from latest. Omit to use the default (false).{{% /md %}}</dd><dt class="property-optional"
             title="Optional">
         <span id="storageaccounttype_go">
 <a href="#storageaccounttype_go" style="color: inherit; text-decoration: inherit;">Storage<wbr>Account<wbr>Type</a>
@@ -4153,14 +3695,11 @@ All [input](#inputs) properties are implicitly available as output properties. A
         <span class="property-indicator"></span>
         <span class="property-type">string | <a href="#sharedimagestorageaccounttype">Shared<wbr>Image<wbr>Storage<wbr>Account<wbr>Type</a></span>
     </dt>
-    <dd>{{% md %}}Storage account type to be used to store the shared image. Omit to use the default (Standard_LRS).{{% /md %}}</dd>
-</dl>
+    <dd>{{% md %}}Storage account type to be used to store the shared image. Omit to use the default (Standard_LRS).{{% /md %}}</dd></dl>
 {{% /choosable %}}
 
 {{% choosable language nodejs %}}
-<dl class="resources-properties">
-
-    <dt class="property-required"
+<dl class="resources-properties"><dt class="property-required"
             title="Required">
         <span id="galleryimageid_nodejs">
 <a href="#galleryimageid_nodejs" style="color: inherit; text-decoration: inherit;">gallery<wbr>Image<wbr>Id</a>
@@ -4168,8 +3707,7 @@ All [input](#inputs) properties are implicitly available as output properties. A
         <span class="property-indicator"></span>
         <span class="property-type">string</span>
     </dt>
-    <dd>{{% md %}}Resource Id of the Shared Image Gallery image{{% /md %}}</dd>
-    <dt class="property-required"
+    <dd>{{% md %}}Resource Id of the Shared Image Gallery image{{% /md %}}</dd><dt class="property-required"
             title="Required">
         <span id="replicationregions_nodejs">
 <a href="#replicationregions_nodejs" style="color: inherit; text-decoration: inherit;">replication<wbr>Regions</a>
@@ -4177,8 +3715,7 @@ All [input](#inputs) properties are implicitly available as output properties. A
         <span class="property-indicator"></span>
         <span class="property-type">string[]</span>
     </dt>
-    <dd>{{% md %}}A list of regions that the image will be replicated to{{% /md %}}</dd>
-    <dt class="property-required"
+    <dd>{{% md %}}A list of regions that the image will be replicated to{{% /md %}}</dd><dt class="property-required"
             title="Required">
         <span id="runoutputname_nodejs">
 <a href="#runoutputname_nodejs" style="color: inherit; text-decoration: inherit;">run<wbr>Output<wbr>Name</a>
@@ -4186,8 +3723,7 @@ All [input](#inputs) properties are implicitly available as output properties. A
         <span class="property-indicator"></span>
         <span class="property-type">string</span>
     </dt>
-    <dd>{{% md %}}The name to be used for the associated RunOutput.{{% /md %}}</dd>
-    <dt class="property-optional"
+    <dd>{{% md %}}The name to be used for the associated RunOutput.{{% /md %}}</dd><dt class="property-optional"
             title="Optional">
         <span id="artifacttags_nodejs">
 <a href="#artifacttags_nodejs" style="color: inherit; text-decoration: inherit;">artifact<wbr>Tags</a>
@@ -4195,8 +3731,7 @@ All [input](#inputs) properties are implicitly available as output properties. A
         <span class="property-indicator"></span>
         <span class="property-type">{[key: string]: string}</span>
     </dt>
-    <dd>{{% md %}}Tags that will be applied to the artifact once it has been created/updated by the distributor.{{% /md %}}</dd>
-    <dt class="property-optional"
+    <dd>{{% md %}}Tags that will be applied to the artifact once it has been created/updated by the distributor.{{% /md %}}</dd><dt class="property-optional"
             title="Optional">
         <span id="excludefromlatest_nodejs">
 <a href="#excludefromlatest_nodejs" style="color: inherit; text-decoration: inherit;">exclude<wbr>From<wbr>Latest</a>
@@ -4204,8 +3739,7 @@ All [input](#inputs) properties are implicitly available as output properties. A
         <span class="property-indicator"></span>
         <span class="property-type">boolean</span>
     </dt>
-    <dd>{{% md %}}Flag that indicates whether created image version should be excluded from latest. Omit to use the default (false).{{% /md %}}</dd>
-    <dt class="property-optional"
+    <dd>{{% md %}}Flag that indicates whether created image version should be excluded from latest. Omit to use the default (false).{{% /md %}}</dd><dt class="property-optional"
             title="Optional">
         <span id="storageaccounttype_nodejs">
 <a href="#storageaccounttype_nodejs" style="color: inherit; text-decoration: inherit;">storage<wbr>Account<wbr>Type</a>
@@ -4213,14 +3747,11 @@ All [input](#inputs) properties are implicitly available as output properties. A
         <span class="property-indicator"></span>
         <span class="property-type">string | <a href="#sharedimagestorageaccounttype">Shared<wbr>Image<wbr>Storage<wbr>Account<wbr>Type</a></span>
     </dt>
-    <dd>{{% md %}}Storage account type to be used to store the shared image. Omit to use the default (Standard_LRS).{{% /md %}}</dd>
-</dl>
+    <dd>{{% md %}}Storage account type to be used to store the shared image. Omit to use the default (Standard_LRS).{{% /md %}}</dd></dl>
 {{% /choosable %}}
 
 {{% choosable language python %}}
-<dl class="resources-properties">
-
-    <dt class="property-required"
+<dl class="resources-properties"><dt class="property-required"
             title="Required">
         <span id="gallery_image_id_python">
 <a href="#gallery_image_id_python" style="color: inherit; text-decoration: inherit;">gallery_<wbr>image_<wbr>id</a>
@@ -4228,8 +3759,7 @@ All [input](#inputs) properties are implicitly available as output properties. A
         <span class="property-indicator"></span>
         <span class="property-type">str</span>
     </dt>
-    <dd>{{% md %}}Resource Id of the Shared Image Gallery image{{% /md %}}</dd>
-    <dt class="property-required"
+    <dd>{{% md %}}Resource Id of the Shared Image Gallery image{{% /md %}}</dd><dt class="property-required"
             title="Required">
         <span id="replication_regions_python">
 <a href="#replication_regions_python" style="color: inherit; text-decoration: inherit;">replication_<wbr>regions</a>
@@ -4237,8 +3767,7 @@ All [input](#inputs) properties are implicitly available as output properties. A
         <span class="property-indicator"></span>
         <span class="property-type">Sequence[str]</span>
     </dt>
-    <dd>{{% md %}}A list of regions that the image will be replicated to{{% /md %}}</dd>
-    <dt class="property-required"
+    <dd>{{% md %}}A list of regions that the image will be replicated to{{% /md %}}</dd><dt class="property-required"
             title="Required">
         <span id="run_output_name_python">
 <a href="#run_output_name_python" style="color: inherit; text-decoration: inherit;">run_<wbr>output_<wbr>name</a>
@@ -4246,8 +3775,7 @@ All [input](#inputs) properties are implicitly available as output properties. A
         <span class="property-indicator"></span>
         <span class="property-type">str</span>
     </dt>
-    <dd>{{% md %}}The name to be used for the associated RunOutput.{{% /md %}}</dd>
-    <dt class="property-optional"
+    <dd>{{% md %}}The name to be used for the associated RunOutput.{{% /md %}}</dd><dt class="property-optional"
             title="Optional">
         <span id="artifact_tags_python">
 <a href="#artifact_tags_python" style="color: inherit; text-decoration: inherit;">artifact_<wbr>tags</a>
@@ -4255,8 +3783,7 @@ All [input](#inputs) properties are implicitly available as output properties. A
         <span class="property-indicator"></span>
         <span class="property-type">Mapping[str, str]</span>
     </dt>
-    <dd>{{% md %}}Tags that will be applied to the artifact once it has been created/updated by the distributor.{{% /md %}}</dd>
-    <dt class="property-optional"
+    <dd>{{% md %}}Tags that will be applied to the artifact once it has been created/updated by the distributor.{{% /md %}}</dd><dt class="property-optional"
             title="Optional">
         <span id="exclude_from_latest_python">
 <a href="#exclude_from_latest_python" style="color: inherit; text-decoration: inherit;">exclude_<wbr>from_<wbr>latest</a>
@@ -4264,8 +3791,7 @@ All [input](#inputs) properties are implicitly available as output properties. A
         <span class="property-indicator"></span>
         <span class="property-type">bool</span>
     </dt>
-    <dd>{{% md %}}Flag that indicates whether created image version should be excluded from latest. Omit to use the default (false).{{% /md %}}</dd>
-    <dt class="property-optional"
+    <dd>{{% md %}}Flag that indicates whether created image version should be excluded from latest. Omit to use the default (false).{{% /md %}}</dd><dt class="property-optional"
             title="Optional">
         <span id="storage_account_type_python">
 <a href="#storage_account_type_python" style="color: inherit; text-decoration: inherit;">storage_<wbr>account_<wbr>type</a>
@@ -4273,16 +3799,13 @@ All [input](#inputs) properties are implicitly available as output properties. A
         <span class="property-indicator"></span>
         <span class="property-type">str | <a href="#sharedimagestorageaccounttype">Shared<wbr>Image<wbr>Storage<wbr>Account<wbr>Type</a></span>
     </dt>
-    <dd>{{% md %}}Storage account type to be used to store the shared image. Omit to use the default (Standard_LRS).{{% /md %}}</dd>
-</dl>
+    <dd>{{% md %}}Storage account type to be used to store the shared image. Omit to use the default (Standard_LRS).{{% /md %}}</dd></dl>
 {{% /choosable %}}
 
 <h4 id="imagetemplatesharedimagedistributorresponse">Image<wbr>Template<wbr>Shared<wbr>Image<wbr>Distributor<wbr>Response</h4>
 
 {{% choosable language csharp %}}
-<dl class="resources-properties">
-
-    <dt class="property-required"
+<dl class="resources-properties"><dt class="property-required"
             title="Required">
         <span id="galleryimageid_csharp">
 <a href="#galleryimageid_csharp" style="color: inherit; text-decoration: inherit;">Gallery<wbr>Image<wbr>Id</a>
@@ -4290,8 +3813,7 @@ All [input](#inputs) properties are implicitly available as output properties. A
         <span class="property-indicator"></span>
         <span class="property-type">string</span>
     </dt>
-    <dd>{{% md %}}Resource Id of the Shared Image Gallery image{{% /md %}}</dd>
-    <dt class="property-required"
+    <dd>{{% md %}}Resource Id of the Shared Image Gallery image{{% /md %}}</dd><dt class="property-required"
             title="Required">
         <span id="replicationregions_csharp">
 <a href="#replicationregions_csharp" style="color: inherit; text-decoration: inherit;">Replication<wbr>Regions</a>
@@ -4299,8 +3821,7 @@ All [input](#inputs) properties are implicitly available as output properties. A
         <span class="property-indicator"></span>
         <span class="property-type">List&lt;string&gt;</span>
     </dt>
-    <dd>{{% md %}}A list of regions that the image will be replicated to{{% /md %}}</dd>
-    <dt class="property-required"
+    <dd>{{% md %}}A list of regions that the image will be replicated to{{% /md %}}</dd><dt class="property-required"
             title="Required">
         <span id="runoutputname_csharp">
 <a href="#runoutputname_csharp" style="color: inherit; text-decoration: inherit;">Run<wbr>Output<wbr>Name</a>
@@ -4308,8 +3829,7 @@ All [input](#inputs) properties are implicitly available as output properties. A
         <span class="property-indicator"></span>
         <span class="property-type">string</span>
     </dt>
-    <dd>{{% md %}}The name to be used for the associated RunOutput.{{% /md %}}</dd>
-    <dt class="property-optional"
+    <dd>{{% md %}}The name to be used for the associated RunOutput.{{% /md %}}</dd><dt class="property-optional"
             title="Optional">
         <span id="artifacttags_csharp">
 <a href="#artifacttags_csharp" style="color: inherit; text-decoration: inherit;">Artifact<wbr>Tags</a>
@@ -4317,8 +3837,7 @@ All [input](#inputs) properties are implicitly available as output properties. A
         <span class="property-indicator"></span>
         <span class="property-type">Dictionary&lt;string, string&gt;</span>
     </dt>
-    <dd>{{% md %}}Tags that will be applied to the artifact once it has been created/updated by the distributor.{{% /md %}}</dd>
-    <dt class="property-optional"
+    <dd>{{% md %}}Tags that will be applied to the artifact once it has been created/updated by the distributor.{{% /md %}}</dd><dt class="property-optional"
             title="Optional">
         <span id="excludefromlatest_csharp">
 <a href="#excludefromlatest_csharp" style="color: inherit; text-decoration: inherit;">Exclude<wbr>From<wbr>Latest</a>
@@ -4326,8 +3845,7 @@ All [input](#inputs) properties are implicitly available as output properties. A
         <span class="property-indicator"></span>
         <span class="property-type">bool</span>
     </dt>
-    <dd>{{% md %}}Flag that indicates whether created image version should be excluded from latest. Omit to use the default (false).{{% /md %}}</dd>
-    <dt class="property-optional"
+    <dd>{{% md %}}Flag that indicates whether created image version should be excluded from latest. Omit to use the default (false).{{% /md %}}</dd><dt class="property-optional"
             title="Optional">
         <span id="storageaccounttype_csharp">
 <a href="#storageaccounttype_csharp" style="color: inherit; text-decoration: inherit;">Storage<wbr>Account<wbr>Type</a>
@@ -4335,14 +3853,11 @@ All [input](#inputs) properties are implicitly available as output properties. A
         <span class="property-indicator"></span>
         <span class="property-type">string</span>
     </dt>
-    <dd>{{% md %}}Storage account type to be used to store the shared image. Omit to use the default (Standard_LRS).{{% /md %}}</dd>
-</dl>
+    <dd>{{% md %}}Storage account type to be used to store the shared image. Omit to use the default (Standard_LRS).{{% /md %}}</dd></dl>
 {{% /choosable %}}
 
 {{% choosable language go %}}
-<dl class="resources-properties">
-
-    <dt class="property-required"
+<dl class="resources-properties"><dt class="property-required"
             title="Required">
         <span id="galleryimageid_go">
 <a href="#galleryimageid_go" style="color: inherit; text-decoration: inherit;">Gallery<wbr>Image<wbr>Id</a>
@@ -4350,8 +3865,7 @@ All [input](#inputs) properties are implicitly available as output properties. A
         <span class="property-indicator"></span>
         <span class="property-type">string</span>
     </dt>
-    <dd>{{% md %}}Resource Id of the Shared Image Gallery image{{% /md %}}</dd>
-    <dt class="property-required"
+    <dd>{{% md %}}Resource Id of the Shared Image Gallery image{{% /md %}}</dd><dt class="property-required"
             title="Required">
         <span id="replicationregions_go">
 <a href="#replicationregions_go" style="color: inherit; text-decoration: inherit;">Replication<wbr>Regions</a>
@@ -4359,8 +3873,7 @@ All [input](#inputs) properties are implicitly available as output properties. A
         <span class="property-indicator"></span>
         <span class="property-type">[]string</span>
     </dt>
-    <dd>{{% md %}}A list of regions that the image will be replicated to{{% /md %}}</dd>
-    <dt class="property-required"
+    <dd>{{% md %}}A list of regions that the image will be replicated to{{% /md %}}</dd><dt class="property-required"
             title="Required">
         <span id="runoutputname_go">
 <a href="#runoutputname_go" style="color: inherit; text-decoration: inherit;">Run<wbr>Output<wbr>Name</a>
@@ -4368,8 +3881,7 @@ All [input](#inputs) properties are implicitly available as output properties. A
         <span class="property-indicator"></span>
         <span class="property-type">string</span>
     </dt>
-    <dd>{{% md %}}The name to be used for the associated RunOutput.{{% /md %}}</dd>
-    <dt class="property-optional"
+    <dd>{{% md %}}The name to be used for the associated RunOutput.{{% /md %}}</dd><dt class="property-optional"
             title="Optional">
         <span id="artifacttags_go">
 <a href="#artifacttags_go" style="color: inherit; text-decoration: inherit;">Artifact<wbr>Tags</a>
@@ -4377,8 +3889,7 @@ All [input](#inputs) properties are implicitly available as output properties. A
         <span class="property-indicator"></span>
         <span class="property-type">map[string]string</span>
     </dt>
-    <dd>{{% md %}}Tags that will be applied to the artifact once it has been created/updated by the distributor.{{% /md %}}</dd>
-    <dt class="property-optional"
+    <dd>{{% md %}}Tags that will be applied to the artifact once it has been created/updated by the distributor.{{% /md %}}</dd><dt class="property-optional"
             title="Optional">
         <span id="excludefromlatest_go">
 <a href="#excludefromlatest_go" style="color: inherit; text-decoration: inherit;">Exclude<wbr>From<wbr>Latest</a>
@@ -4386,8 +3897,7 @@ All [input](#inputs) properties are implicitly available as output properties. A
         <span class="property-indicator"></span>
         <span class="property-type">bool</span>
     </dt>
-    <dd>{{% md %}}Flag that indicates whether created image version should be excluded from latest. Omit to use the default (false).{{% /md %}}</dd>
-    <dt class="property-optional"
+    <dd>{{% md %}}Flag that indicates whether created image version should be excluded from latest. Omit to use the default (false).{{% /md %}}</dd><dt class="property-optional"
             title="Optional">
         <span id="storageaccounttype_go">
 <a href="#storageaccounttype_go" style="color: inherit; text-decoration: inherit;">Storage<wbr>Account<wbr>Type</a>
@@ -4395,14 +3905,11 @@ All [input](#inputs) properties are implicitly available as output properties. A
         <span class="property-indicator"></span>
         <span class="property-type">string</span>
     </dt>
-    <dd>{{% md %}}Storage account type to be used to store the shared image. Omit to use the default (Standard_LRS).{{% /md %}}</dd>
-</dl>
+    <dd>{{% md %}}Storage account type to be used to store the shared image. Omit to use the default (Standard_LRS).{{% /md %}}</dd></dl>
 {{% /choosable %}}
 
 {{% choosable language nodejs %}}
-<dl class="resources-properties">
-
-    <dt class="property-required"
+<dl class="resources-properties"><dt class="property-required"
             title="Required">
         <span id="galleryimageid_nodejs">
 <a href="#galleryimageid_nodejs" style="color: inherit; text-decoration: inherit;">gallery<wbr>Image<wbr>Id</a>
@@ -4410,8 +3917,7 @@ All [input](#inputs) properties are implicitly available as output properties. A
         <span class="property-indicator"></span>
         <span class="property-type">string</span>
     </dt>
-    <dd>{{% md %}}Resource Id of the Shared Image Gallery image{{% /md %}}</dd>
-    <dt class="property-required"
+    <dd>{{% md %}}Resource Id of the Shared Image Gallery image{{% /md %}}</dd><dt class="property-required"
             title="Required">
         <span id="replicationregions_nodejs">
 <a href="#replicationregions_nodejs" style="color: inherit; text-decoration: inherit;">replication<wbr>Regions</a>
@@ -4419,8 +3925,7 @@ All [input](#inputs) properties are implicitly available as output properties. A
         <span class="property-indicator"></span>
         <span class="property-type">string[]</span>
     </dt>
-    <dd>{{% md %}}A list of regions that the image will be replicated to{{% /md %}}</dd>
-    <dt class="property-required"
+    <dd>{{% md %}}A list of regions that the image will be replicated to{{% /md %}}</dd><dt class="property-required"
             title="Required">
         <span id="runoutputname_nodejs">
 <a href="#runoutputname_nodejs" style="color: inherit; text-decoration: inherit;">run<wbr>Output<wbr>Name</a>
@@ -4428,8 +3933,7 @@ All [input](#inputs) properties are implicitly available as output properties. A
         <span class="property-indicator"></span>
         <span class="property-type">string</span>
     </dt>
-    <dd>{{% md %}}The name to be used for the associated RunOutput.{{% /md %}}</dd>
-    <dt class="property-optional"
+    <dd>{{% md %}}The name to be used for the associated RunOutput.{{% /md %}}</dd><dt class="property-optional"
             title="Optional">
         <span id="artifacttags_nodejs">
 <a href="#artifacttags_nodejs" style="color: inherit; text-decoration: inherit;">artifact<wbr>Tags</a>
@@ -4437,8 +3941,7 @@ All [input](#inputs) properties are implicitly available as output properties. A
         <span class="property-indicator"></span>
         <span class="property-type">{[key: string]: string}</span>
     </dt>
-    <dd>{{% md %}}Tags that will be applied to the artifact once it has been created/updated by the distributor.{{% /md %}}</dd>
-    <dt class="property-optional"
+    <dd>{{% md %}}Tags that will be applied to the artifact once it has been created/updated by the distributor.{{% /md %}}</dd><dt class="property-optional"
             title="Optional">
         <span id="excludefromlatest_nodejs">
 <a href="#excludefromlatest_nodejs" style="color: inherit; text-decoration: inherit;">exclude<wbr>From<wbr>Latest</a>
@@ -4446,8 +3949,7 @@ All [input](#inputs) properties are implicitly available as output properties. A
         <span class="property-indicator"></span>
         <span class="property-type">boolean</span>
     </dt>
-    <dd>{{% md %}}Flag that indicates whether created image version should be excluded from latest. Omit to use the default (false).{{% /md %}}</dd>
-    <dt class="property-optional"
+    <dd>{{% md %}}Flag that indicates whether created image version should be excluded from latest. Omit to use the default (false).{{% /md %}}</dd><dt class="property-optional"
             title="Optional">
         <span id="storageaccounttype_nodejs">
 <a href="#storageaccounttype_nodejs" style="color: inherit; text-decoration: inherit;">storage<wbr>Account<wbr>Type</a>
@@ -4455,14 +3957,11 @@ All [input](#inputs) properties are implicitly available as output properties. A
         <span class="property-indicator"></span>
         <span class="property-type">string</span>
     </dt>
-    <dd>{{% md %}}Storage account type to be used to store the shared image. Omit to use the default (Standard_LRS).{{% /md %}}</dd>
-</dl>
+    <dd>{{% md %}}Storage account type to be used to store the shared image. Omit to use the default (Standard_LRS).{{% /md %}}</dd></dl>
 {{% /choosable %}}
 
 {{% choosable language python %}}
-<dl class="resources-properties">
-
-    <dt class="property-required"
+<dl class="resources-properties"><dt class="property-required"
             title="Required">
         <span id="gallery_image_id_python">
 <a href="#gallery_image_id_python" style="color: inherit; text-decoration: inherit;">gallery_<wbr>image_<wbr>id</a>
@@ -4470,8 +3969,7 @@ All [input](#inputs) properties are implicitly available as output properties. A
         <span class="property-indicator"></span>
         <span class="property-type">str</span>
     </dt>
-    <dd>{{% md %}}Resource Id of the Shared Image Gallery image{{% /md %}}</dd>
-    <dt class="property-required"
+    <dd>{{% md %}}Resource Id of the Shared Image Gallery image{{% /md %}}</dd><dt class="property-required"
             title="Required">
         <span id="replication_regions_python">
 <a href="#replication_regions_python" style="color: inherit; text-decoration: inherit;">replication_<wbr>regions</a>
@@ -4479,8 +3977,7 @@ All [input](#inputs) properties are implicitly available as output properties. A
         <span class="property-indicator"></span>
         <span class="property-type">Sequence[str]</span>
     </dt>
-    <dd>{{% md %}}A list of regions that the image will be replicated to{{% /md %}}</dd>
-    <dt class="property-required"
+    <dd>{{% md %}}A list of regions that the image will be replicated to{{% /md %}}</dd><dt class="property-required"
             title="Required">
         <span id="run_output_name_python">
 <a href="#run_output_name_python" style="color: inherit; text-decoration: inherit;">run_<wbr>output_<wbr>name</a>
@@ -4488,8 +3985,7 @@ All [input](#inputs) properties are implicitly available as output properties. A
         <span class="property-indicator"></span>
         <span class="property-type">str</span>
     </dt>
-    <dd>{{% md %}}The name to be used for the associated RunOutput.{{% /md %}}</dd>
-    <dt class="property-optional"
+    <dd>{{% md %}}The name to be used for the associated RunOutput.{{% /md %}}</dd><dt class="property-optional"
             title="Optional">
         <span id="artifact_tags_python">
 <a href="#artifact_tags_python" style="color: inherit; text-decoration: inherit;">artifact_<wbr>tags</a>
@@ -4497,8 +3993,7 @@ All [input](#inputs) properties are implicitly available as output properties. A
         <span class="property-indicator"></span>
         <span class="property-type">Mapping[str, str]</span>
     </dt>
-    <dd>{{% md %}}Tags that will be applied to the artifact once it has been created/updated by the distributor.{{% /md %}}</dd>
-    <dt class="property-optional"
+    <dd>{{% md %}}Tags that will be applied to the artifact once it has been created/updated by the distributor.{{% /md %}}</dd><dt class="property-optional"
             title="Optional">
         <span id="exclude_from_latest_python">
 <a href="#exclude_from_latest_python" style="color: inherit; text-decoration: inherit;">exclude_<wbr>from_<wbr>latest</a>
@@ -4506,8 +4001,7 @@ All [input](#inputs) properties are implicitly available as output properties. A
         <span class="property-indicator"></span>
         <span class="property-type">bool</span>
     </dt>
-    <dd>{{% md %}}Flag that indicates whether created image version should be excluded from latest. Omit to use the default (false).{{% /md %}}</dd>
-    <dt class="property-optional"
+    <dd>{{% md %}}Flag that indicates whether created image version should be excluded from latest. Omit to use the default (false).{{% /md %}}</dd><dt class="property-optional"
             title="Optional">
         <span id="storage_account_type_python">
 <a href="#storage_account_type_python" style="color: inherit; text-decoration: inherit;">storage_<wbr>account_<wbr>type</a>
@@ -4515,16 +4009,13 @@ All [input](#inputs) properties are implicitly available as output properties. A
         <span class="property-indicator"></span>
         <span class="property-type">str</span>
     </dt>
-    <dd>{{% md %}}Storage account type to be used to store the shared image. Omit to use the default (Standard_LRS).{{% /md %}}</dd>
-</dl>
+    <dd>{{% md %}}Storage account type to be used to store the shared image. Omit to use the default (Standard_LRS).{{% /md %}}</dd></dl>
 {{% /choosable %}}
 
 <h4 id="imagetemplatesharedimageversionsource">Image<wbr>Template<wbr>Shared<wbr>Image<wbr>Version<wbr>Source</h4>
 
 {{% choosable language csharp %}}
-<dl class="resources-properties">
-
-    <dt class="property-required"
+<dl class="resources-properties"><dt class="property-required"
             title="Required">
         <span id="imageversionid_csharp">
 <a href="#imageversionid_csharp" style="color: inherit; text-decoration: inherit;">Image<wbr>Version<wbr>Id</a>
@@ -4532,14 +4023,11 @@ All [input](#inputs) properties are implicitly available as output properties. A
         <span class="property-indicator"></span>
         <span class="property-type">string</span>
     </dt>
-    <dd>{{% md %}}ARM resource id of the image version in the shared image gallery{{% /md %}}</dd>
-</dl>
+    <dd>{{% md %}}ARM resource id of the image version in the shared image gallery{{% /md %}}</dd></dl>
 {{% /choosable %}}
 
 {{% choosable language go %}}
-<dl class="resources-properties">
-
-    <dt class="property-required"
+<dl class="resources-properties"><dt class="property-required"
             title="Required">
         <span id="imageversionid_go">
 <a href="#imageversionid_go" style="color: inherit; text-decoration: inherit;">Image<wbr>Version<wbr>Id</a>
@@ -4547,14 +4035,11 @@ All [input](#inputs) properties are implicitly available as output properties. A
         <span class="property-indicator"></span>
         <span class="property-type">string</span>
     </dt>
-    <dd>{{% md %}}ARM resource id of the image version in the shared image gallery{{% /md %}}</dd>
-</dl>
+    <dd>{{% md %}}ARM resource id of the image version in the shared image gallery{{% /md %}}</dd></dl>
 {{% /choosable %}}
 
 {{% choosable language nodejs %}}
-<dl class="resources-properties">
-
-    <dt class="property-required"
+<dl class="resources-properties"><dt class="property-required"
             title="Required">
         <span id="imageversionid_nodejs">
 <a href="#imageversionid_nodejs" style="color: inherit; text-decoration: inherit;">image<wbr>Version<wbr>Id</a>
@@ -4562,14 +4047,11 @@ All [input](#inputs) properties are implicitly available as output properties. A
         <span class="property-indicator"></span>
         <span class="property-type">string</span>
     </dt>
-    <dd>{{% md %}}ARM resource id of the image version in the shared image gallery{{% /md %}}</dd>
-</dl>
+    <dd>{{% md %}}ARM resource id of the image version in the shared image gallery{{% /md %}}</dd></dl>
 {{% /choosable %}}
 
 {{% choosable language python %}}
-<dl class="resources-properties">
-
-    <dt class="property-required"
+<dl class="resources-properties"><dt class="property-required"
             title="Required">
         <span id="image_version_id_python">
 <a href="#image_version_id_python" style="color: inherit; text-decoration: inherit;">image_<wbr>version_<wbr>id</a>
@@ -4577,16 +4059,13 @@ All [input](#inputs) properties are implicitly available as output properties. A
         <span class="property-indicator"></span>
         <span class="property-type">str</span>
     </dt>
-    <dd>{{% md %}}ARM resource id of the image version in the shared image gallery{{% /md %}}</dd>
-</dl>
+    <dd>{{% md %}}ARM resource id of the image version in the shared image gallery{{% /md %}}</dd></dl>
 {{% /choosable %}}
 
 <h4 id="imagetemplatesharedimageversionsourceresponse">Image<wbr>Template<wbr>Shared<wbr>Image<wbr>Version<wbr>Source<wbr>Response</h4>
 
 {{% choosable language csharp %}}
-<dl class="resources-properties">
-
-    <dt class="property-required"
+<dl class="resources-properties"><dt class="property-required"
             title="Required">
         <span id="imageversionid_csharp">
 <a href="#imageversionid_csharp" style="color: inherit; text-decoration: inherit;">Image<wbr>Version<wbr>Id</a>
@@ -4594,14 +4073,11 @@ All [input](#inputs) properties are implicitly available as output properties. A
         <span class="property-indicator"></span>
         <span class="property-type">string</span>
     </dt>
-    <dd>{{% md %}}ARM resource id of the image version in the shared image gallery{{% /md %}}</dd>
-</dl>
+    <dd>{{% md %}}ARM resource id of the image version in the shared image gallery{{% /md %}}</dd></dl>
 {{% /choosable %}}
 
 {{% choosable language go %}}
-<dl class="resources-properties">
-
-    <dt class="property-required"
+<dl class="resources-properties"><dt class="property-required"
             title="Required">
         <span id="imageversionid_go">
 <a href="#imageversionid_go" style="color: inherit; text-decoration: inherit;">Image<wbr>Version<wbr>Id</a>
@@ -4609,14 +4085,11 @@ All [input](#inputs) properties are implicitly available as output properties. A
         <span class="property-indicator"></span>
         <span class="property-type">string</span>
     </dt>
-    <dd>{{% md %}}ARM resource id of the image version in the shared image gallery{{% /md %}}</dd>
-</dl>
+    <dd>{{% md %}}ARM resource id of the image version in the shared image gallery{{% /md %}}</dd></dl>
 {{% /choosable %}}
 
 {{% choosable language nodejs %}}
-<dl class="resources-properties">
-
-    <dt class="property-required"
+<dl class="resources-properties"><dt class="property-required"
             title="Required">
         <span id="imageversionid_nodejs">
 <a href="#imageversionid_nodejs" style="color: inherit; text-decoration: inherit;">image<wbr>Version<wbr>Id</a>
@@ -4624,14 +4097,11 @@ All [input](#inputs) properties are implicitly available as output properties. A
         <span class="property-indicator"></span>
         <span class="property-type">string</span>
     </dt>
-    <dd>{{% md %}}ARM resource id of the image version in the shared image gallery{{% /md %}}</dd>
-</dl>
+    <dd>{{% md %}}ARM resource id of the image version in the shared image gallery{{% /md %}}</dd></dl>
 {{% /choosable %}}
 
 {{% choosable language python %}}
-<dl class="resources-properties">
-
-    <dt class="property-required"
+<dl class="resources-properties"><dt class="property-required"
             title="Required">
         <span id="image_version_id_python">
 <a href="#image_version_id_python" style="color: inherit; text-decoration: inherit;">image_<wbr>version_<wbr>id</a>
@@ -4639,16 +4109,13 @@ All [input](#inputs) properties are implicitly available as output properties. A
         <span class="property-indicator"></span>
         <span class="property-type">str</span>
     </dt>
-    <dd>{{% md %}}ARM resource id of the image version in the shared image gallery{{% /md %}}</dd>
-</dl>
+    <dd>{{% md %}}ARM resource id of the image version in the shared image gallery{{% /md %}}</dd></dl>
 {{% /choosable %}}
 
 <h4 id="imagetemplateshellcustomizer">Image<wbr>Template<wbr>Shell<wbr>Customizer</h4>
 
 {{% choosable language csharp %}}
-<dl class="resources-properties">
-
-    <dt class="property-optional"
+<dl class="resources-properties"><dt class="property-optional"
             title="Optional">
         <span id="inline_csharp">
 <a href="#inline_csharp" style="color: inherit; text-decoration: inherit;">Inline</a>
@@ -4656,8 +4123,7 @@ All [input](#inputs) properties are implicitly available as output properties. A
         <span class="property-indicator"></span>
         <span class="property-type">List&lt;string&gt;</span>
     </dt>
-    <dd>{{% md %}}Array of shell commands to execute{{% /md %}}</dd>
-    <dt class="property-optional"
+    <dd>{{% md %}}Array of shell commands to execute{{% /md %}}</dd><dt class="property-optional"
             title="Optional">
         <span id="name_csharp">
 <a href="#name_csharp" style="color: inherit; text-decoration: inherit;">Name</a>
@@ -4665,8 +4131,7 @@ All [input](#inputs) properties are implicitly available as output properties. A
         <span class="property-indicator"></span>
         <span class="property-type">string</span>
     </dt>
-    <dd>{{% md %}}Friendly Name to provide context on what this customization step does{{% /md %}}</dd>
-    <dt class="property-optional"
+    <dd>{{% md %}}Friendly Name to provide context on what this customization step does{{% /md %}}</dd><dt class="property-optional"
             title="Optional">
         <span id="scripturi_csharp">
 <a href="#scripturi_csharp" style="color: inherit; text-decoration: inherit;">Script<wbr>Uri</a>
@@ -4674,8 +4139,7 @@ All [input](#inputs) properties are implicitly available as output properties. A
         <span class="property-indicator"></span>
         <span class="property-type">string</span>
     </dt>
-    <dd>{{% md %}}URI of the shell script to be run for customizing. It can be a github link, SAS URI for Azure Storage, etc{{% /md %}}</dd>
-    <dt class="property-optional"
+    <dd>{{% md %}}URI of the shell script to be run for customizing. It can be a github link, SAS URI for Azure Storage, etc{{% /md %}}</dd><dt class="property-optional"
             title="Optional">
         <span id="sha256checksum_csharp">
 <a href="#sha256checksum_csharp" style="color: inherit; text-decoration: inherit;">Sha256Checksum</a>
@@ -4683,14 +4147,11 @@ All [input](#inputs) properties are implicitly available as output properties. A
         <span class="property-indicator"></span>
         <span class="property-type">string</span>
     </dt>
-    <dd>{{% md %}}SHA256 checksum of the shell script provided in the scriptUri field{{% /md %}}</dd>
-</dl>
+    <dd>{{% md %}}SHA256 checksum of the shell script provided in the scriptUri field{{% /md %}}</dd></dl>
 {{% /choosable %}}
 
 {{% choosable language go %}}
-<dl class="resources-properties">
-
-    <dt class="property-optional"
+<dl class="resources-properties"><dt class="property-optional"
             title="Optional">
         <span id="inline_go">
 <a href="#inline_go" style="color: inherit; text-decoration: inherit;">Inline</a>
@@ -4698,8 +4159,7 @@ All [input](#inputs) properties are implicitly available as output properties. A
         <span class="property-indicator"></span>
         <span class="property-type">[]string</span>
     </dt>
-    <dd>{{% md %}}Array of shell commands to execute{{% /md %}}</dd>
-    <dt class="property-optional"
+    <dd>{{% md %}}Array of shell commands to execute{{% /md %}}</dd><dt class="property-optional"
             title="Optional">
         <span id="name_go">
 <a href="#name_go" style="color: inherit; text-decoration: inherit;">Name</a>
@@ -4707,8 +4167,7 @@ All [input](#inputs) properties are implicitly available as output properties. A
         <span class="property-indicator"></span>
         <span class="property-type">string</span>
     </dt>
-    <dd>{{% md %}}Friendly Name to provide context on what this customization step does{{% /md %}}</dd>
-    <dt class="property-optional"
+    <dd>{{% md %}}Friendly Name to provide context on what this customization step does{{% /md %}}</dd><dt class="property-optional"
             title="Optional">
         <span id="scripturi_go">
 <a href="#scripturi_go" style="color: inherit; text-decoration: inherit;">Script<wbr>Uri</a>
@@ -4716,8 +4175,7 @@ All [input](#inputs) properties are implicitly available as output properties. A
         <span class="property-indicator"></span>
         <span class="property-type">string</span>
     </dt>
-    <dd>{{% md %}}URI of the shell script to be run for customizing. It can be a github link, SAS URI for Azure Storage, etc{{% /md %}}</dd>
-    <dt class="property-optional"
+    <dd>{{% md %}}URI of the shell script to be run for customizing. It can be a github link, SAS URI for Azure Storage, etc{{% /md %}}</dd><dt class="property-optional"
             title="Optional">
         <span id="sha256checksum_go">
 <a href="#sha256checksum_go" style="color: inherit; text-decoration: inherit;">Sha256Checksum</a>
@@ -4725,14 +4183,11 @@ All [input](#inputs) properties are implicitly available as output properties. A
         <span class="property-indicator"></span>
         <span class="property-type">string</span>
     </dt>
-    <dd>{{% md %}}SHA256 checksum of the shell script provided in the scriptUri field{{% /md %}}</dd>
-</dl>
+    <dd>{{% md %}}SHA256 checksum of the shell script provided in the scriptUri field{{% /md %}}</dd></dl>
 {{% /choosable %}}
 
 {{% choosable language nodejs %}}
-<dl class="resources-properties">
-
-    <dt class="property-optional"
+<dl class="resources-properties"><dt class="property-optional"
             title="Optional">
         <span id="inline_nodejs">
 <a href="#inline_nodejs" style="color: inherit; text-decoration: inherit;">inline</a>
@@ -4740,8 +4195,7 @@ All [input](#inputs) properties are implicitly available as output properties. A
         <span class="property-indicator"></span>
         <span class="property-type">string[]</span>
     </dt>
-    <dd>{{% md %}}Array of shell commands to execute{{% /md %}}</dd>
-    <dt class="property-optional"
+    <dd>{{% md %}}Array of shell commands to execute{{% /md %}}</dd><dt class="property-optional"
             title="Optional">
         <span id="name_nodejs">
 <a href="#name_nodejs" style="color: inherit; text-decoration: inherit;">name</a>
@@ -4749,8 +4203,7 @@ All [input](#inputs) properties are implicitly available as output properties. A
         <span class="property-indicator"></span>
         <span class="property-type">string</span>
     </dt>
-    <dd>{{% md %}}Friendly Name to provide context on what this customization step does{{% /md %}}</dd>
-    <dt class="property-optional"
+    <dd>{{% md %}}Friendly Name to provide context on what this customization step does{{% /md %}}</dd><dt class="property-optional"
             title="Optional">
         <span id="scripturi_nodejs">
 <a href="#scripturi_nodejs" style="color: inherit; text-decoration: inherit;">script<wbr>Uri</a>
@@ -4758,8 +4211,7 @@ All [input](#inputs) properties are implicitly available as output properties. A
         <span class="property-indicator"></span>
         <span class="property-type">string</span>
     </dt>
-    <dd>{{% md %}}URI of the shell script to be run for customizing. It can be a github link, SAS URI for Azure Storage, etc{{% /md %}}</dd>
-    <dt class="property-optional"
+    <dd>{{% md %}}URI of the shell script to be run for customizing. It can be a github link, SAS URI for Azure Storage, etc{{% /md %}}</dd><dt class="property-optional"
             title="Optional">
         <span id="sha256checksum_nodejs">
 <a href="#sha256checksum_nodejs" style="color: inherit; text-decoration: inherit;">sha256Checksum</a>
@@ -4767,14 +4219,11 @@ All [input](#inputs) properties are implicitly available as output properties. A
         <span class="property-indicator"></span>
         <span class="property-type">string</span>
     </dt>
-    <dd>{{% md %}}SHA256 checksum of the shell script provided in the scriptUri field{{% /md %}}</dd>
-</dl>
+    <dd>{{% md %}}SHA256 checksum of the shell script provided in the scriptUri field{{% /md %}}</dd></dl>
 {{% /choosable %}}
 
 {{% choosable language python %}}
-<dl class="resources-properties">
-
-    <dt class="property-optional"
+<dl class="resources-properties"><dt class="property-optional"
             title="Optional">
         <span id="inline_python">
 <a href="#inline_python" style="color: inherit; text-decoration: inherit;">inline</a>
@@ -4782,8 +4231,7 @@ All [input](#inputs) properties are implicitly available as output properties. A
         <span class="property-indicator"></span>
         <span class="property-type">Sequence[str]</span>
     </dt>
-    <dd>{{% md %}}Array of shell commands to execute{{% /md %}}</dd>
-    <dt class="property-optional"
+    <dd>{{% md %}}Array of shell commands to execute{{% /md %}}</dd><dt class="property-optional"
             title="Optional">
         <span id="name_python">
 <a href="#name_python" style="color: inherit; text-decoration: inherit;">name</a>
@@ -4791,8 +4239,7 @@ All [input](#inputs) properties are implicitly available as output properties. A
         <span class="property-indicator"></span>
         <span class="property-type">str</span>
     </dt>
-    <dd>{{% md %}}Friendly Name to provide context on what this customization step does{{% /md %}}</dd>
-    <dt class="property-optional"
+    <dd>{{% md %}}Friendly Name to provide context on what this customization step does{{% /md %}}</dd><dt class="property-optional"
             title="Optional">
         <span id="script_uri_python">
 <a href="#script_uri_python" style="color: inherit; text-decoration: inherit;">script_<wbr>uri</a>
@@ -4800,8 +4247,7 @@ All [input](#inputs) properties are implicitly available as output properties. A
         <span class="property-indicator"></span>
         <span class="property-type">str</span>
     </dt>
-    <dd>{{% md %}}URI of the shell script to be run for customizing. It can be a github link, SAS URI for Azure Storage, etc{{% /md %}}</dd>
-    <dt class="property-optional"
+    <dd>{{% md %}}URI of the shell script to be run for customizing. It can be a github link, SAS URI for Azure Storage, etc{{% /md %}}</dd><dt class="property-optional"
             title="Optional">
         <span id="sha256_checksum_python">
 <a href="#sha256_checksum_python" style="color: inherit; text-decoration: inherit;">sha256_<wbr>checksum</a>
@@ -4809,16 +4255,13 @@ All [input](#inputs) properties are implicitly available as output properties. A
         <span class="property-indicator"></span>
         <span class="property-type">str</span>
     </dt>
-    <dd>{{% md %}}SHA256 checksum of the shell script provided in the scriptUri field{{% /md %}}</dd>
-</dl>
+    <dd>{{% md %}}SHA256 checksum of the shell script provided in the scriptUri field{{% /md %}}</dd></dl>
 {{% /choosable %}}
 
 <h4 id="imagetemplateshellcustomizerresponse">Image<wbr>Template<wbr>Shell<wbr>Customizer<wbr>Response</h4>
 
 {{% choosable language csharp %}}
-<dl class="resources-properties">
-
-    <dt class="property-optional"
+<dl class="resources-properties"><dt class="property-optional"
             title="Optional">
         <span id="inline_csharp">
 <a href="#inline_csharp" style="color: inherit; text-decoration: inherit;">Inline</a>
@@ -4826,8 +4269,7 @@ All [input](#inputs) properties are implicitly available as output properties. A
         <span class="property-indicator"></span>
         <span class="property-type">List&lt;string&gt;</span>
     </dt>
-    <dd>{{% md %}}Array of shell commands to execute{{% /md %}}</dd>
-    <dt class="property-optional"
+    <dd>{{% md %}}Array of shell commands to execute{{% /md %}}</dd><dt class="property-optional"
             title="Optional">
         <span id="name_csharp">
 <a href="#name_csharp" style="color: inherit; text-decoration: inherit;">Name</a>
@@ -4835,8 +4277,7 @@ All [input](#inputs) properties are implicitly available as output properties. A
         <span class="property-indicator"></span>
         <span class="property-type">string</span>
     </dt>
-    <dd>{{% md %}}Friendly Name to provide context on what this customization step does{{% /md %}}</dd>
-    <dt class="property-optional"
+    <dd>{{% md %}}Friendly Name to provide context on what this customization step does{{% /md %}}</dd><dt class="property-optional"
             title="Optional">
         <span id="scripturi_csharp">
 <a href="#scripturi_csharp" style="color: inherit; text-decoration: inherit;">Script<wbr>Uri</a>
@@ -4844,8 +4285,7 @@ All [input](#inputs) properties are implicitly available as output properties. A
         <span class="property-indicator"></span>
         <span class="property-type">string</span>
     </dt>
-    <dd>{{% md %}}URI of the shell script to be run for customizing. It can be a github link, SAS URI for Azure Storage, etc{{% /md %}}</dd>
-    <dt class="property-optional"
+    <dd>{{% md %}}URI of the shell script to be run for customizing. It can be a github link, SAS URI for Azure Storage, etc{{% /md %}}</dd><dt class="property-optional"
             title="Optional">
         <span id="sha256checksum_csharp">
 <a href="#sha256checksum_csharp" style="color: inherit; text-decoration: inherit;">Sha256Checksum</a>
@@ -4853,14 +4293,11 @@ All [input](#inputs) properties are implicitly available as output properties. A
         <span class="property-indicator"></span>
         <span class="property-type">string</span>
     </dt>
-    <dd>{{% md %}}SHA256 checksum of the shell script provided in the scriptUri field{{% /md %}}</dd>
-</dl>
+    <dd>{{% md %}}SHA256 checksum of the shell script provided in the scriptUri field{{% /md %}}</dd></dl>
 {{% /choosable %}}
 
 {{% choosable language go %}}
-<dl class="resources-properties">
-
-    <dt class="property-optional"
+<dl class="resources-properties"><dt class="property-optional"
             title="Optional">
         <span id="inline_go">
 <a href="#inline_go" style="color: inherit; text-decoration: inherit;">Inline</a>
@@ -4868,8 +4305,7 @@ All [input](#inputs) properties are implicitly available as output properties. A
         <span class="property-indicator"></span>
         <span class="property-type">[]string</span>
     </dt>
-    <dd>{{% md %}}Array of shell commands to execute{{% /md %}}</dd>
-    <dt class="property-optional"
+    <dd>{{% md %}}Array of shell commands to execute{{% /md %}}</dd><dt class="property-optional"
             title="Optional">
         <span id="name_go">
 <a href="#name_go" style="color: inherit; text-decoration: inherit;">Name</a>
@@ -4877,8 +4313,7 @@ All [input](#inputs) properties are implicitly available as output properties. A
         <span class="property-indicator"></span>
         <span class="property-type">string</span>
     </dt>
-    <dd>{{% md %}}Friendly Name to provide context on what this customization step does{{% /md %}}</dd>
-    <dt class="property-optional"
+    <dd>{{% md %}}Friendly Name to provide context on what this customization step does{{% /md %}}</dd><dt class="property-optional"
             title="Optional">
         <span id="scripturi_go">
 <a href="#scripturi_go" style="color: inherit; text-decoration: inherit;">Script<wbr>Uri</a>
@@ -4886,8 +4321,7 @@ All [input](#inputs) properties are implicitly available as output properties. A
         <span class="property-indicator"></span>
         <span class="property-type">string</span>
     </dt>
-    <dd>{{% md %}}URI of the shell script to be run for customizing. It can be a github link, SAS URI for Azure Storage, etc{{% /md %}}</dd>
-    <dt class="property-optional"
+    <dd>{{% md %}}URI of the shell script to be run for customizing. It can be a github link, SAS URI for Azure Storage, etc{{% /md %}}</dd><dt class="property-optional"
             title="Optional">
         <span id="sha256checksum_go">
 <a href="#sha256checksum_go" style="color: inherit; text-decoration: inherit;">Sha256Checksum</a>
@@ -4895,14 +4329,11 @@ All [input](#inputs) properties are implicitly available as output properties. A
         <span class="property-indicator"></span>
         <span class="property-type">string</span>
     </dt>
-    <dd>{{% md %}}SHA256 checksum of the shell script provided in the scriptUri field{{% /md %}}</dd>
-</dl>
+    <dd>{{% md %}}SHA256 checksum of the shell script provided in the scriptUri field{{% /md %}}</dd></dl>
 {{% /choosable %}}
 
 {{% choosable language nodejs %}}
-<dl class="resources-properties">
-
-    <dt class="property-optional"
+<dl class="resources-properties"><dt class="property-optional"
             title="Optional">
         <span id="inline_nodejs">
 <a href="#inline_nodejs" style="color: inherit; text-decoration: inherit;">inline</a>
@@ -4910,8 +4341,7 @@ All [input](#inputs) properties are implicitly available as output properties. A
         <span class="property-indicator"></span>
         <span class="property-type">string[]</span>
     </dt>
-    <dd>{{% md %}}Array of shell commands to execute{{% /md %}}</dd>
-    <dt class="property-optional"
+    <dd>{{% md %}}Array of shell commands to execute{{% /md %}}</dd><dt class="property-optional"
             title="Optional">
         <span id="name_nodejs">
 <a href="#name_nodejs" style="color: inherit; text-decoration: inherit;">name</a>
@@ -4919,8 +4349,7 @@ All [input](#inputs) properties are implicitly available as output properties. A
         <span class="property-indicator"></span>
         <span class="property-type">string</span>
     </dt>
-    <dd>{{% md %}}Friendly Name to provide context on what this customization step does{{% /md %}}</dd>
-    <dt class="property-optional"
+    <dd>{{% md %}}Friendly Name to provide context on what this customization step does{{% /md %}}</dd><dt class="property-optional"
             title="Optional">
         <span id="scripturi_nodejs">
 <a href="#scripturi_nodejs" style="color: inherit; text-decoration: inherit;">script<wbr>Uri</a>
@@ -4928,8 +4357,7 @@ All [input](#inputs) properties are implicitly available as output properties. A
         <span class="property-indicator"></span>
         <span class="property-type">string</span>
     </dt>
-    <dd>{{% md %}}URI of the shell script to be run for customizing. It can be a github link, SAS URI for Azure Storage, etc{{% /md %}}</dd>
-    <dt class="property-optional"
+    <dd>{{% md %}}URI of the shell script to be run for customizing. It can be a github link, SAS URI for Azure Storage, etc{{% /md %}}</dd><dt class="property-optional"
             title="Optional">
         <span id="sha256checksum_nodejs">
 <a href="#sha256checksum_nodejs" style="color: inherit; text-decoration: inherit;">sha256Checksum</a>
@@ -4937,14 +4365,11 @@ All [input](#inputs) properties are implicitly available as output properties. A
         <span class="property-indicator"></span>
         <span class="property-type">string</span>
     </dt>
-    <dd>{{% md %}}SHA256 checksum of the shell script provided in the scriptUri field{{% /md %}}</dd>
-</dl>
+    <dd>{{% md %}}SHA256 checksum of the shell script provided in the scriptUri field{{% /md %}}</dd></dl>
 {{% /choosable %}}
 
 {{% choosable language python %}}
-<dl class="resources-properties">
-
-    <dt class="property-optional"
+<dl class="resources-properties"><dt class="property-optional"
             title="Optional">
         <span id="inline_python">
 <a href="#inline_python" style="color: inherit; text-decoration: inherit;">inline</a>
@@ -4952,8 +4377,7 @@ All [input](#inputs) properties are implicitly available as output properties. A
         <span class="property-indicator"></span>
         <span class="property-type">Sequence[str]</span>
     </dt>
-    <dd>{{% md %}}Array of shell commands to execute{{% /md %}}</dd>
-    <dt class="property-optional"
+    <dd>{{% md %}}Array of shell commands to execute{{% /md %}}</dd><dt class="property-optional"
             title="Optional">
         <span id="name_python">
 <a href="#name_python" style="color: inherit; text-decoration: inherit;">name</a>
@@ -4961,8 +4385,7 @@ All [input](#inputs) properties are implicitly available as output properties. A
         <span class="property-indicator"></span>
         <span class="property-type">str</span>
     </dt>
-    <dd>{{% md %}}Friendly Name to provide context on what this customization step does{{% /md %}}</dd>
-    <dt class="property-optional"
+    <dd>{{% md %}}Friendly Name to provide context on what this customization step does{{% /md %}}</dd><dt class="property-optional"
             title="Optional">
         <span id="script_uri_python">
 <a href="#script_uri_python" style="color: inherit; text-decoration: inherit;">script_<wbr>uri</a>
@@ -4970,8 +4393,7 @@ All [input](#inputs) properties are implicitly available as output properties. A
         <span class="property-indicator"></span>
         <span class="property-type">str</span>
     </dt>
-    <dd>{{% md %}}URI of the shell script to be run for customizing. It can be a github link, SAS URI for Azure Storage, etc{{% /md %}}</dd>
-    <dt class="property-optional"
+    <dd>{{% md %}}URI of the shell script to be run for customizing. It can be a github link, SAS URI for Azure Storage, etc{{% /md %}}</dd><dt class="property-optional"
             title="Optional">
         <span id="sha256_checksum_python">
 <a href="#sha256_checksum_python" style="color: inherit; text-decoration: inherit;">sha256_<wbr>checksum</a>
@@ -4979,16 +4401,13 @@ All [input](#inputs) properties are implicitly available as output properties. A
         <span class="property-indicator"></span>
         <span class="property-type">str</span>
     </dt>
-    <dd>{{% md %}}SHA256 checksum of the shell script provided in the scriptUri field{{% /md %}}</dd>
-</dl>
+    <dd>{{% md %}}SHA256 checksum of the shell script provided in the scriptUri field{{% /md %}}</dd></dl>
 {{% /choosable %}}
 
 <h4 id="imagetemplatevhddistributor">Image<wbr>Template<wbr>Vhd<wbr>Distributor</h4>
 
 {{% choosable language csharp %}}
-<dl class="resources-properties">
-
-    <dt class="property-required"
+<dl class="resources-properties"><dt class="property-required"
             title="Required">
         <span id="runoutputname_csharp">
 <a href="#runoutputname_csharp" style="color: inherit; text-decoration: inherit;">Run<wbr>Output<wbr>Name</a>
@@ -4996,8 +4415,7 @@ All [input](#inputs) properties are implicitly available as output properties. A
         <span class="property-indicator"></span>
         <span class="property-type">string</span>
     </dt>
-    <dd>{{% md %}}The name to be used for the associated RunOutput.{{% /md %}}</dd>
-    <dt class="property-optional"
+    <dd>{{% md %}}The name to be used for the associated RunOutput.{{% /md %}}</dd><dt class="property-optional"
             title="Optional">
         <span id="artifacttags_csharp">
 <a href="#artifacttags_csharp" style="color: inherit; text-decoration: inherit;">Artifact<wbr>Tags</a>
@@ -5005,14 +4423,11 @@ All [input](#inputs) properties are implicitly available as output properties. A
         <span class="property-indicator"></span>
         <span class="property-type">Dictionary&lt;string, string&gt;</span>
     </dt>
-    <dd>{{% md %}}Tags that will be applied to the artifact once it has been created/updated by the distributor.{{% /md %}}</dd>
-</dl>
+    <dd>{{% md %}}Tags that will be applied to the artifact once it has been created/updated by the distributor.{{% /md %}}</dd></dl>
 {{% /choosable %}}
 
 {{% choosable language go %}}
-<dl class="resources-properties">
-
-    <dt class="property-required"
+<dl class="resources-properties"><dt class="property-required"
             title="Required">
         <span id="runoutputname_go">
 <a href="#runoutputname_go" style="color: inherit; text-decoration: inherit;">Run<wbr>Output<wbr>Name</a>
@@ -5020,8 +4435,7 @@ All [input](#inputs) properties are implicitly available as output properties. A
         <span class="property-indicator"></span>
         <span class="property-type">string</span>
     </dt>
-    <dd>{{% md %}}The name to be used for the associated RunOutput.{{% /md %}}</dd>
-    <dt class="property-optional"
+    <dd>{{% md %}}The name to be used for the associated RunOutput.{{% /md %}}</dd><dt class="property-optional"
             title="Optional">
         <span id="artifacttags_go">
 <a href="#artifacttags_go" style="color: inherit; text-decoration: inherit;">Artifact<wbr>Tags</a>
@@ -5029,14 +4443,11 @@ All [input](#inputs) properties are implicitly available as output properties. A
         <span class="property-indicator"></span>
         <span class="property-type">map[string]string</span>
     </dt>
-    <dd>{{% md %}}Tags that will be applied to the artifact once it has been created/updated by the distributor.{{% /md %}}</dd>
-</dl>
+    <dd>{{% md %}}Tags that will be applied to the artifact once it has been created/updated by the distributor.{{% /md %}}</dd></dl>
 {{% /choosable %}}
 
 {{% choosable language nodejs %}}
-<dl class="resources-properties">
-
-    <dt class="property-required"
+<dl class="resources-properties"><dt class="property-required"
             title="Required">
         <span id="runoutputname_nodejs">
 <a href="#runoutputname_nodejs" style="color: inherit; text-decoration: inherit;">run<wbr>Output<wbr>Name</a>
@@ -5044,8 +4455,7 @@ All [input](#inputs) properties are implicitly available as output properties. A
         <span class="property-indicator"></span>
         <span class="property-type">string</span>
     </dt>
-    <dd>{{% md %}}The name to be used for the associated RunOutput.{{% /md %}}</dd>
-    <dt class="property-optional"
+    <dd>{{% md %}}The name to be used for the associated RunOutput.{{% /md %}}</dd><dt class="property-optional"
             title="Optional">
         <span id="artifacttags_nodejs">
 <a href="#artifacttags_nodejs" style="color: inherit; text-decoration: inherit;">artifact<wbr>Tags</a>
@@ -5053,14 +4463,11 @@ All [input](#inputs) properties are implicitly available as output properties. A
         <span class="property-indicator"></span>
         <span class="property-type">{[key: string]: string}</span>
     </dt>
-    <dd>{{% md %}}Tags that will be applied to the artifact once it has been created/updated by the distributor.{{% /md %}}</dd>
-</dl>
+    <dd>{{% md %}}Tags that will be applied to the artifact once it has been created/updated by the distributor.{{% /md %}}</dd></dl>
 {{% /choosable %}}
 
 {{% choosable language python %}}
-<dl class="resources-properties">
-
-    <dt class="property-required"
+<dl class="resources-properties"><dt class="property-required"
             title="Required">
         <span id="run_output_name_python">
 <a href="#run_output_name_python" style="color: inherit; text-decoration: inherit;">run_<wbr>output_<wbr>name</a>
@@ -5068,8 +4475,7 @@ All [input](#inputs) properties are implicitly available as output properties. A
         <span class="property-indicator"></span>
         <span class="property-type">str</span>
     </dt>
-    <dd>{{% md %}}The name to be used for the associated RunOutput.{{% /md %}}</dd>
-    <dt class="property-optional"
+    <dd>{{% md %}}The name to be used for the associated RunOutput.{{% /md %}}</dd><dt class="property-optional"
             title="Optional">
         <span id="artifact_tags_python">
 <a href="#artifact_tags_python" style="color: inherit; text-decoration: inherit;">artifact_<wbr>tags</a>
@@ -5077,16 +4483,13 @@ All [input](#inputs) properties are implicitly available as output properties. A
         <span class="property-indicator"></span>
         <span class="property-type">Mapping[str, str]</span>
     </dt>
-    <dd>{{% md %}}Tags that will be applied to the artifact once it has been created/updated by the distributor.{{% /md %}}</dd>
-</dl>
+    <dd>{{% md %}}Tags that will be applied to the artifact once it has been created/updated by the distributor.{{% /md %}}</dd></dl>
 {{% /choosable %}}
 
 <h4 id="imagetemplatevhddistributorresponse">Image<wbr>Template<wbr>Vhd<wbr>Distributor<wbr>Response</h4>
 
 {{% choosable language csharp %}}
-<dl class="resources-properties">
-
-    <dt class="property-required"
+<dl class="resources-properties"><dt class="property-required"
             title="Required">
         <span id="runoutputname_csharp">
 <a href="#runoutputname_csharp" style="color: inherit; text-decoration: inherit;">Run<wbr>Output<wbr>Name</a>
@@ -5094,8 +4497,7 @@ All [input](#inputs) properties are implicitly available as output properties. A
         <span class="property-indicator"></span>
         <span class="property-type">string</span>
     </dt>
-    <dd>{{% md %}}The name to be used for the associated RunOutput.{{% /md %}}</dd>
-    <dt class="property-optional"
+    <dd>{{% md %}}The name to be used for the associated RunOutput.{{% /md %}}</dd><dt class="property-optional"
             title="Optional">
         <span id="artifacttags_csharp">
 <a href="#artifacttags_csharp" style="color: inherit; text-decoration: inherit;">Artifact<wbr>Tags</a>
@@ -5103,14 +4505,11 @@ All [input](#inputs) properties are implicitly available as output properties. A
         <span class="property-indicator"></span>
         <span class="property-type">Dictionary&lt;string, string&gt;</span>
     </dt>
-    <dd>{{% md %}}Tags that will be applied to the artifact once it has been created/updated by the distributor.{{% /md %}}</dd>
-</dl>
+    <dd>{{% md %}}Tags that will be applied to the artifact once it has been created/updated by the distributor.{{% /md %}}</dd></dl>
 {{% /choosable %}}
 
 {{% choosable language go %}}
-<dl class="resources-properties">
-
-    <dt class="property-required"
+<dl class="resources-properties"><dt class="property-required"
             title="Required">
         <span id="runoutputname_go">
 <a href="#runoutputname_go" style="color: inherit; text-decoration: inherit;">Run<wbr>Output<wbr>Name</a>
@@ -5118,8 +4517,7 @@ All [input](#inputs) properties are implicitly available as output properties. A
         <span class="property-indicator"></span>
         <span class="property-type">string</span>
     </dt>
-    <dd>{{% md %}}The name to be used for the associated RunOutput.{{% /md %}}</dd>
-    <dt class="property-optional"
+    <dd>{{% md %}}The name to be used for the associated RunOutput.{{% /md %}}</dd><dt class="property-optional"
             title="Optional">
         <span id="artifacttags_go">
 <a href="#artifacttags_go" style="color: inherit; text-decoration: inherit;">Artifact<wbr>Tags</a>
@@ -5127,14 +4525,11 @@ All [input](#inputs) properties are implicitly available as output properties. A
         <span class="property-indicator"></span>
         <span class="property-type">map[string]string</span>
     </dt>
-    <dd>{{% md %}}Tags that will be applied to the artifact once it has been created/updated by the distributor.{{% /md %}}</dd>
-</dl>
+    <dd>{{% md %}}Tags that will be applied to the artifact once it has been created/updated by the distributor.{{% /md %}}</dd></dl>
 {{% /choosable %}}
 
 {{% choosable language nodejs %}}
-<dl class="resources-properties">
-
-    <dt class="property-required"
+<dl class="resources-properties"><dt class="property-required"
             title="Required">
         <span id="runoutputname_nodejs">
 <a href="#runoutputname_nodejs" style="color: inherit; text-decoration: inherit;">run<wbr>Output<wbr>Name</a>
@@ -5142,8 +4537,7 @@ All [input](#inputs) properties are implicitly available as output properties. A
         <span class="property-indicator"></span>
         <span class="property-type">string</span>
     </dt>
-    <dd>{{% md %}}The name to be used for the associated RunOutput.{{% /md %}}</dd>
-    <dt class="property-optional"
+    <dd>{{% md %}}The name to be used for the associated RunOutput.{{% /md %}}</dd><dt class="property-optional"
             title="Optional">
         <span id="artifacttags_nodejs">
 <a href="#artifacttags_nodejs" style="color: inherit; text-decoration: inherit;">artifact<wbr>Tags</a>
@@ -5151,14 +4545,11 @@ All [input](#inputs) properties are implicitly available as output properties. A
         <span class="property-indicator"></span>
         <span class="property-type">{[key: string]: string}</span>
     </dt>
-    <dd>{{% md %}}Tags that will be applied to the artifact once it has been created/updated by the distributor.{{% /md %}}</dd>
-</dl>
+    <dd>{{% md %}}Tags that will be applied to the artifact once it has been created/updated by the distributor.{{% /md %}}</dd></dl>
 {{% /choosable %}}
 
 {{% choosable language python %}}
-<dl class="resources-properties">
-
-    <dt class="property-required"
+<dl class="resources-properties"><dt class="property-required"
             title="Required">
         <span id="run_output_name_python">
 <a href="#run_output_name_python" style="color: inherit; text-decoration: inherit;">run_<wbr>output_<wbr>name</a>
@@ -5166,8 +4557,7 @@ All [input](#inputs) properties are implicitly available as output properties. A
         <span class="property-indicator"></span>
         <span class="property-type">str</span>
     </dt>
-    <dd>{{% md %}}The name to be used for the associated RunOutput.{{% /md %}}</dd>
-    <dt class="property-optional"
+    <dd>{{% md %}}The name to be used for the associated RunOutput.{{% /md %}}</dd><dt class="property-optional"
             title="Optional">
         <span id="artifact_tags_python">
 <a href="#artifact_tags_python" style="color: inherit; text-decoration: inherit;">artifact_<wbr>tags</a>
@@ -5175,16 +4565,13 @@ All [input](#inputs) properties are implicitly available as output properties. A
         <span class="property-indicator"></span>
         <span class="property-type">Mapping[str, str]</span>
     </dt>
-    <dd>{{% md %}}Tags that will be applied to the artifact once it has been created/updated by the distributor.{{% /md %}}</dd>
-</dl>
+    <dd>{{% md %}}Tags that will be applied to the artifact once it has been created/updated by the distributor.{{% /md %}}</dd></dl>
 {{% /choosable %}}
 
 <h4 id="imagetemplatevmprofile">Image<wbr>Template<wbr>Vm<wbr>Profile</h4>
 
 {{% choosable language csharp %}}
-<dl class="resources-properties">
-
-    <dt class="property-optional"
+<dl class="resources-properties"><dt class="property-optional"
             title="Optional">
         <span id="osdisksizegb_csharp">
 <a href="#osdisksizegb_csharp" style="color: inherit; text-decoration: inherit;">Os<wbr>Disk<wbr>Size<wbr>GB</a>
@@ -5192,8 +4579,7 @@ All [input](#inputs) properties are implicitly available as output properties. A
         <span class="property-indicator"></span>
         <span class="property-type">int</span>
     </dt>
-    <dd>{{% md %}}Size of the OS disk in GB. Omit or specify 0 to use Azure's default OS disk size.{{% /md %}}</dd>
-    <dt class="property-optional"
+    <dd>{{% md %}}Size of the OS disk in GB. Omit or specify 0 to use Azure's default OS disk size.{{% /md %}}</dd><dt class="property-optional"
             title="Optional">
         <span id="vmsize_csharp">
 <a href="#vmsize_csharp" style="color: inherit; text-decoration: inherit;">Vm<wbr>Size</a>
@@ -5201,8 +4587,7 @@ All [input](#inputs) properties are implicitly available as output properties. A
         <span class="property-indicator"></span>
         <span class="property-type">string</span>
     </dt>
-    <dd>{{% md %}}Size of the virtual machine used to build, customize and capture images. Omit or specify empty string to use the default (Standard_D1_v2).{{% /md %}}</dd>
-    <dt class="property-optional"
+    <dd>{{% md %}}Size of the virtual machine used to build, customize and capture images. Omit or specify empty string to use the default (Standard_D1_v2).{{% /md %}}</dd><dt class="property-optional"
             title="Optional">
         <span id="vnetconfig_csharp">
 <a href="#vnetconfig_csharp" style="color: inherit; text-decoration: inherit;">Vnet<wbr>Config</a>
@@ -5210,14 +4595,11 @@ All [input](#inputs) properties are implicitly available as output properties. A
         <span class="property-indicator"></span>
         <span class="property-type"><a href="#virtualnetworkconfig">Pulumi.<wbr>Azure<wbr>Native.<wbr>Virtual<wbr>Machine<wbr>Images.<wbr>Inputs.<wbr>Virtual<wbr>Network<wbr>Config<wbr>Args</a></span>
     </dt>
-    <dd>{{% md %}}Optional configuration of the virtual network to use to deploy the build virtual machine in. Omit if no specific virtual network needs to be used.{{% /md %}}</dd>
-</dl>
+    <dd>{{% md %}}Optional configuration of the virtual network to use to deploy the build virtual machine in. Omit if no specific virtual network needs to be used.{{% /md %}}</dd></dl>
 {{% /choosable %}}
 
 {{% choosable language go %}}
-<dl class="resources-properties">
-
-    <dt class="property-optional"
+<dl class="resources-properties"><dt class="property-optional"
             title="Optional">
         <span id="osdisksizegb_go">
 <a href="#osdisksizegb_go" style="color: inherit; text-decoration: inherit;">Os<wbr>Disk<wbr>Size<wbr>GB</a>
@@ -5225,8 +4607,7 @@ All [input](#inputs) properties are implicitly available as output properties. A
         <span class="property-indicator"></span>
         <span class="property-type">int</span>
     </dt>
-    <dd>{{% md %}}Size of the OS disk in GB. Omit or specify 0 to use Azure's default OS disk size.{{% /md %}}</dd>
-    <dt class="property-optional"
+    <dd>{{% md %}}Size of the OS disk in GB. Omit or specify 0 to use Azure's default OS disk size.{{% /md %}}</dd><dt class="property-optional"
             title="Optional">
         <span id="vmsize_go">
 <a href="#vmsize_go" style="color: inherit; text-decoration: inherit;">Vm<wbr>Size</a>
@@ -5234,8 +4615,7 @@ All [input](#inputs) properties are implicitly available as output properties. A
         <span class="property-indicator"></span>
         <span class="property-type">string</span>
     </dt>
-    <dd>{{% md %}}Size of the virtual machine used to build, customize and capture images. Omit or specify empty string to use the default (Standard_D1_v2).{{% /md %}}</dd>
-    <dt class="property-optional"
+    <dd>{{% md %}}Size of the virtual machine used to build, customize and capture images. Omit or specify empty string to use the default (Standard_D1_v2).{{% /md %}}</dd><dt class="property-optional"
             title="Optional">
         <span id="vnetconfig_go">
 <a href="#vnetconfig_go" style="color: inherit; text-decoration: inherit;">Vnet<wbr>Config</a>
@@ -5243,14 +4623,11 @@ All [input](#inputs) properties are implicitly available as output properties. A
         <span class="property-indicator"></span>
         <span class="property-type"><a href="#virtualnetworkconfig">Virtual<wbr>Network<wbr>Config</a></span>
     </dt>
-    <dd>{{% md %}}Optional configuration of the virtual network to use to deploy the build virtual machine in. Omit if no specific virtual network needs to be used.{{% /md %}}</dd>
-</dl>
+    <dd>{{% md %}}Optional configuration of the virtual network to use to deploy the build virtual machine in. Omit if no specific virtual network needs to be used.{{% /md %}}</dd></dl>
 {{% /choosable %}}
 
 {{% choosable language nodejs %}}
-<dl class="resources-properties">
-
-    <dt class="property-optional"
+<dl class="resources-properties"><dt class="property-optional"
             title="Optional">
         <span id="osdisksizegb_nodejs">
 <a href="#osdisksizegb_nodejs" style="color: inherit; text-decoration: inherit;">os<wbr>Disk<wbr>Size<wbr>GB</a>
@@ -5258,8 +4635,7 @@ All [input](#inputs) properties are implicitly available as output properties. A
         <span class="property-indicator"></span>
         <span class="property-type">number</span>
     </dt>
-    <dd>{{% md %}}Size of the OS disk in GB. Omit or specify 0 to use Azure's default OS disk size.{{% /md %}}</dd>
-    <dt class="property-optional"
+    <dd>{{% md %}}Size of the OS disk in GB. Omit or specify 0 to use Azure's default OS disk size.{{% /md %}}</dd><dt class="property-optional"
             title="Optional">
         <span id="vmsize_nodejs">
 <a href="#vmsize_nodejs" style="color: inherit; text-decoration: inherit;">vm<wbr>Size</a>
@@ -5267,8 +4643,7 @@ All [input](#inputs) properties are implicitly available as output properties. A
         <span class="property-indicator"></span>
         <span class="property-type">string</span>
     </dt>
-    <dd>{{% md %}}Size of the virtual machine used to build, customize and capture images. Omit or specify empty string to use the default (Standard_D1_v2).{{% /md %}}</dd>
-    <dt class="property-optional"
+    <dd>{{% md %}}Size of the virtual machine used to build, customize and capture images. Omit or specify empty string to use the default (Standard_D1_v2).{{% /md %}}</dd><dt class="property-optional"
             title="Optional">
         <span id="vnetconfig_nodejs">
 <a href="#vnetconfig_nodejs" style="color: inherit; text-decoration: inherit;">vnet<wbr>Config</a>
@@ -5276,14 +4651,11 @@ All [input](#inputs) properties are implicitly available as output properties. A
         <span class="property-indicator"></span>
         <span class="property-type"><a href="#virtualnetworkconfig">Virtual<wbr>Network<wbr>Config</a></span>
     </dt>
-    <dd>{{% md %}}Optional configuration of the virtual network to use to deploy the build virtual machine in. Omit if no specific virtual network needs to be used.{{% /md %}}</dd>
-</dl>
+    <dd>{{% md %}}Optional configuration of the virtual network to use to deploy the build virtual machine in. Omit if no specific virtual network needs to be used.{{% /md %}}</dd></dl>
 {{% /choosable %}}
 
 {{% choosable language python %}}
-<dl class="resources-properties">
-
-    <dt class="property-optional"
+<dl class="resources-properties"><dt class="property-optional"
             title="Optional">
         <span id="os_disk_size_gb_python">
 <a href="#os_disk_size_gb_python" style="color: inherit; text-decoration: inherit;">os_<wbr>disk_<wbr>size_<wbr>gb</a>
@@ -5291,8 +4663,7 @@ All [input](#inputs) properties are implicitly available as output properties. A
         <span class="property-indicator"></span>
         <span class="property-type">int</span>
     </dt>
-    <dd>{{% md %}}Size of the OS disk in GB. Omit or specify 0 to use Azure's default OS disk size.{{% /md %}}</dd>
-    <dt class="property-optional"
+    <dd>{{% md %}}Size of the OS disk in GB. Omit or specify 0 to use Azure's default OS disk size.{{% /md %}}</dd><dt class="property-optional"
             title="Optional">
         <span id="vm_size_python">
 <a href="#vm_size_python" style="color: inherit; text-decoration: inherit;">vm_<wbr>size</a>
@@ -5300,8 +4671,7 @@ All [input](#inputs) properties are implicitly available as output properties. A
         <span class="property-indicator"></span>
         <span class="property-type">str</span>
     </dt>
-    <dd>{{% md %}}Size of the virtual machine used to build, customize and capture images. Omit or specify empty string to use the default (Standard_D1_v2).{{% /md %}}</dd>
-    <dt class="property-optional"
+    <dd>{{% md %}}Size of the virtual machine used to build, customize and capture images. Omit or specify empty string to use the default (Standard_D1_v2).{{% /md %}}</dd><dt class="property-optional"
             title="Optional">
         <span id="vnet_config_python">
 <a href="#vnet_config_python" style="color: inherit; text-decoration: inherit;">vnet_<wbr>config</a>
@@ -5309,16 +4679,13 @@ All [input](#inputs) properties are implicitly available as output properties. A
         <span class="property-indicator"></span>
         <span class="property-type"><a href="#virtualnetworkconfig">Virtual<wbr>Network<wbr>Config<wbr>Args</a></span>
     </dt>
-    <dd>{{% md %}}Optional configuration of the virtual network to use to deploy the build virtual machine in. Omit if no specific virtual network needs to be used.{{% /md %}}</dd>
-</dl>
+    <dd>{{% md %}}Optional configuration of the virtual network to use to deploy the build virtual machine in. Omit if no specific virtual network needs to be used.{{% /md %}}</dd></dl>
 {{% /choosable %}}
 
 <h4 id="imagetemplatevmprofileresponse">Image<wbr>Template<wbr>Vm<wbr>Profile<wbr>Response</h4>
 
 {{% choosable language csharp %}}
-<dl class="resources-properties">
-
-    <dt class="property-optional"
+<dl class="resources-properties"><dt class="property-optional"
             title="Optional">
         <span id="osdisksizegb_csharp">
 <a href="#osdisksizegb_csharp" style="color: inherit; text-decoration: inherit;">Os<wbr>Disk<wbr>Size<wbr>GB</a>
@@ -5326,8 +4693,7 @@ All [input](#inputs) properties are implicitly available as output properties. A
         <span class="property-indicator"></span>
         <span class="property-type">int</span>
     </dt>
-    <dd>{{% md %}}Size of the OS disk in GB. Omit or specify 0 to use Azure's default OS disk size.{{% /md %}}</dd>
-    <dt class="property-optional"
+    <dd>{{% md %}}Size of the OS disk in GB. Omit or specify 0 to use Azure's default OS disk size.{{% /md %}}</dd><dt class="property-optional"
             title="Optional">
         <span id="vmsize_csharp">
 <a href="#vmsize_csharp" style="color: inherit; text-decoration: inherit;">Vm<wbr>Size</a>
@@ -5335,8 +4701,7 @@ All [input](#inputs) properties are implicitly available as output properties. A
         <span class="property-indicator"></span>
         <span class="property-type">string</span>
     </dt>
-    <dd>{{% md %}}Size of the virtual machine used to build, customize and capture images. Omit or specify empty string to use the default (Standard_D1_v2).{{% /md %}}</dd>
-    <dt class="property-optional"
+    <dd>{{% md %}}Size of the virtual machine used to build, customize and capture images. Omit or specify empty string to use the default (Standard_D1_v2).{{% /md %}}</dd><dt class="property-optional"
             title="Optional">
         <span id="vnetconfig_csharp">
 <a href="#vnetconfig_csharp" style="color: inherit; text-decoration: inherit;">Vnet<wbr>Config</a>
@@ -5344,14 +4709,11 @@ All [input](#inputs) properties are implicitly available as output properties. A
         <span class="property-indicator"></span>
         <span class="property-type"><a href="#virtualnetworkconfigresponse">Pulumi.<wbr>Azure<wbr>Native.<wbr>Virtual<wbr>Machine<wbr>Images.<wbr>Inputs.<wbr>Virtual<wbr>Network<wbr>Config<wbr>Response<wbr>Args</a></span>
     </dt>
-    <dd>{{% md %}}Optional configuration of the virtual network to use to deploy the build virtual machine in. Omit if no specific virtual network needs to be used.{{% /md %}}</dd>
-</dl>
+    <dd>{{% md %}}Optional configuration of the virtual network to use to deploy the build virtual machine in. Omit if no specific virtual network needs to be used.{{% /md %}}</dd></dl>
 {{% /choosable %}}
 
 {{% choosable language go %}}
-<dl class="resources-properties">
-
-    <dt class="property-optional"
+<dl class="resources-properties"><dt class="property-optional"
             title="Optional">
         <span id="osdisksizegb_go">
 <a href="#osdisksizegb_go" style="color: inherit; text-decoration: inherit;">Os<wbr>Disk<wbr>Size<wbr>GB</a>
@@ -5359,8 +4721,7 @@ All [input](#inputs) properties are implicitly available as output properties. A
         <span class="property-indicator"></span>
         <span class="property-type">int</span>
     </dt>
-    <dd>{{% md %}}Size of the OS disk in GB. Omit or specify 0 to use Azure's default OS disk size.{{% /md %}}</dd>
-    <dt class="property-optional"
+    <dd>{{% md %}}Size of the OS disk in GB. Omit or specify 0 to use Azure's default OS disk size.{{% /md %}}</dd><dt class="property-optional"
             title="Optional">
         <span id="vmsize_go">
 <a href="#vmsize_go" style="color: inherit; text-decoration: inherit;">Vm<wbr>Size</a>
@@ -5368,8 +4729,7 @@ All [input](#inputs) properties are implicitly available as output properties. A
         <span class="property-indicator"></span>
         <span class="property-type">string</span>
     </dt>
-    <dd>{{% md %}}Size of the virtual machine used to build, customize and capture images. Omit or specify empty string to use the default (Standard_D1_v2).{{% /md %}}</dd>
-    <dt class="property-optional"
+    <dd>{{% md %}}Size of the virtual machine used to build, customize and capture images. Omit or specify empty string to use the default (Standard_D1_v2).{{% /md %}}</dd><dt class="property-optional"
             title="Optional">
         <span id="vnetconfig_go">
 <a href="#vnetconfig_go" style="color: inherit; text-decoration: inherit;">Vnet<wbr>Config</a>
@@ -5377,14 +4737,11 @@ All [input](#inputs) properties are implicitly available as output properties. A
         <span class="property-indicator"></span>
         <span class="property-type"><a href="#virtualnetworkconfigresponse">Virtual<wbr>Network<wbr>Config<wbr>Response</a></span>
     </dt>
-    <dd>{{% md %}}Optional configuration of the virtual network to use to deploy the build virtual machine in. Omit if no specific virtual network needs to be used.{{% /md %}}</dd>
-</dl>
+    <dd>{{% md %}}Optional configuration of the virtual network to use to deploy the build virtual machine in. Omit if no specific virtual network needs to be used.{{% /md %}}</dd></dl>
 {{% /choosable %}}
 
 {{% choosable language nodejs %}}
-<dl class="resources-properties">
-
-    <dt class="property-optional"
+<dl class="resources-properties"><dt class="property-optional"
             title="Optional">
         <span id="osdisksizegb_nodejs">
 <a href="#osdisksizegb_nodejs" style="color: inherit; text-decoration: inherit;">os<wbr>Disk<wbr>Size<wbr>GB</a>
@@ -5392,8 +4749,7 @@ All [input](#inputs) properties are implicitly available as output properties. A
         <span class="property-indicator"></span>
         <span class="property-type">number</span>
     </dt>
-    <dd>{{% md %}}Size of the OS disk in GB. Omit or specify 0 to use Azure's default OS disk size.{{% /md %}}</dd>
-    <dt class="property-optional"
+    <dd>{{% md %}}Size of the OS disk in GB. Omit or specify 0 to use Azure's default OS disk size.{{% /md %}}</dd><dt class="property-optional"
             title="Optional">
         <span id="vmsize_nodejs">
 <a href="#vmsize_nodejs" style="color: inherit; text-decoration: inherit;">vm<wbr>Size</a>
@@ -5401,8 +4757,7 @@ All [input](#inputs) properties are implicitly available as output properties. A
         <span class="property-indicator"></span>
         <span class="property-type">string</span>
     </dt>
-    <dd>{{% md %}}Size of the virtual machine used to build, customize and capture images. Omit or specify empty string to use the default (Standard_D1_v2).{{% /md %}}</dd>
-    <dt class="property-optional"
+    <dd>{{% md %}}Size of the virtual machine used to build, customize and capture images. Omit or specify empty string to use the default (Standard_D1_v2).{{% /md %}}</dd><dt class="property-optional"
             title="Optional">
         <span id="vnetconfig_nodejs">
 <a href="#vnetconfig_nodejs" style="color: inherit; text-decoration: inherit;">vnet<wbr>Config</a>
@@ -5410,14 +4765,11 @@ All [input](#inputs) properties are implicitly available as output properties. A
         <span class="property-indicator"></span>
         <span class="property-type"><a href="#virtualnetworkconfigresponse">Virtual<wbr>Network<wbr>Config<wbr>Response</a></span>
     </dt>
-    <dd>{{% md %}}Optional configuration of the virtual network to use to deploy the build virtual machine in. Omit if no specific virtual network needs to be used.{{% /md %}}</dd>
-</dl>
+    <dd>{{% md %}}Optional configuration of the virtual network to use to deploy the build virtual machine in. Omit if no specific virtual network needs to be used.{{% /md %}}</dd></dl>
 {{% /choosable %}}
 
 {{% choosable language python %}}
-<dl class="resources-properties">
-
-    <dt class="property-optional"
+<dl class="resources-properties"><dt class="property-optional"
             title="Optional">
         <span id="os_disk_size_gb_python">
 <a href="#os_disk_size_gb_python" style="color: inherit; text-decoration: inherit;">os_<wbr>disk_<wbr>size_<wbr>gb</a>
@@ -5425,8 +4777,7 @@ All [input](#inputs) properties are implicitly available as output properties. A
         <span class="property-indicator"></span>
         <span class="property-type">int</span>
     </dt>
-    <dd>{{% md %}}Size of the OS disk in GB. Omit or specify 0 to use Azure's default OS disk size.{{% /md %}}</dd>
-    <dt class="property-optional"
+    <dd>{{% md %}}Size of the OS disk in GB. Omit or specify 0 to use Azure's default OS disk size.{{% /md %}}</dd><dt class="property-optional"
             title="Optional">
         <span id="vm_size_python">
 <a href="#vm_size_python" style="color: inherit; text-decoration: inherit;">vm_<wbr>size</a>
@@ -5434,8 +4785,7 @@ All [input](#inputs) properties are implicitly available as output properties. A
         <span class="property-indicator"></span>
         <span class="property-type">str</span>
     </dt>
-    <dd>{{% md %}}Size of the virtual machine used to build, customize and capture images. Omit or specify empty string to use the default (Standard_D1_v2).{{% /md %}}</dd>
-    <dt class="property-optional"
+    <dd>{{% md %}}Size of the virtual machine used to build, customize and capture images. Omit or specify empty string to use the default (Standard_D1_v2).{{% /md %}}</dd><dt class="property-optional"
             title="Optional">
         <span id="vnet_config_python">
 <a href="#vnet_config_python" style="color: inherit; text-decoration: inherit;">vnet_<wbr>config</a>
@@ -5443,16 +4793,13 @@ All [input](#inputs) properties are implicitly available as output properties. A
         <span class="property-indicator"></span>
         <span class="property-type"><a href="#virtualnetworkconfigresponse">Virtual<wbr>Network<wbr>Config<wbr>Response<wbr>Args</a></span>
     </dt>
-    <dd>{{% md %}}Optional configuration of the virtual network to use to deploy the build virtual machine in. Omit if no specific virtual network needs to be used.{{% /md %}}</dd>
-</dl>
+    <dd>{{% md %}}Optional configuration of the virtual network to use to deploy the build virtual machine in. Omit if no specific virtual network needs to be used.{{% /md %}}</dd></dl>
 {{% /choosable %}}
 
 <h4 id="imagetemplatewindowsupdatecustomizer">Image<wbr>Template<wbr>Windows<wbr>Update<wbr>Customizer</h4>
 
 {{% choosable language csharp %}}
-<dl class="resources-properties">
-
-    <dt class="property-optional"
+<dl class="resources-properties"><dt class="property-optional"
             title="Optional">
         <span id="filters_csharp">
 <a href="#filters_csharp" style="color: inherit; text-decoration: inherit;">Filters</a>
@@ -5460,8 +4807,7 @@ All [input](#inputs) properties are implicitly available as output properties. A
         <span class="property-indicator"></span>
         <span class="property-type">List&lt;string&gt;</span>
     </dt>
-    <dd>{{% md %}}Array of filters to select updates to apply. Omit or specify empty array to use the default (no filter). Refer to above link for examples and detailed description of this field.{{% /md %}}</dd>
-    <dt class="property-optional"
+    <dd>{{% md %}}Array of filters to select updates to apply. Omit or specify empty array to use the default (no filter). Refer to above link for examples and detailed description of this field.{{% /md %}}</dd><dt class="property-optional"
             title="Optional">
         <span id="name_csharp">
 <a href="#name_csharp" style="color: inherit; text-decoration: inherit;">Name</a>
@@ -5469,8 +4815,7 @@ All [input](#inputs) properties are implicitly available as output properties. A
         <span class="property-indicator"></span>
         <span class="property-type">string</span>
     </dt>
-    <dd>{{% md %}}Friendly Name to provide context on what this customization step does{{% /md %}}</dd>
-    <dt class="property-optional"
+    <dd>{{% md %}}Friendly Name to provide context on what this customization step does{{% /md %}}</dd><dt class="property-optional"
             title="Optional">
         <span id="searchcriteria_csharp">
 <a href="#searchcriteria_csharp" style="color: inherit; text-decoration: inherit;">Search<wbr>Criteria</a>
@@ -5478,8 +4823,7 @@ All [input](#inputs) properties are implicitly available as output properties. A
         <span class="property-indicator"></span>
         <span class="property-type">string</span>
     </dt>
-    <dd>{{% md %}}Criteria to search updates. Omit or specify empty string to use the default (search all). Refer to above link for examples and detailed description of this field.{{% /md %}}</dd>
-    <dt class="property-optional"
+    <dd>{{% md %}}Criteria to search updates. Omit or specify empty string to use the default (search all). Refer to above link for examples and detailed description of this field.{{% /md %}}</dd><dt class="property-optional"
             title="Optional">
         <span id="updatelimit_csharp">
 <a href="#updatelimit_csharp" style="color: inherit; text-decoration: inherit;">Update<wbr>Limit</a>
@@ -5487,14 +4831,11 @@ All [input](#inputs) properties are implicitly available as output properties. A
         <span class="property-indicator"></span>
         <span class="property-type">int</span>
     </dt>
-    <dd>{{% md %}}Maximum number of updates to apply at a time. Omit or specify 0 to use the default (1000){{% /md %}}</dd>
-</dl>
+    <dd>{{% md %}}Maximum number of updates to apply at a time. Omit or specify 0 to use the default (1000){{% /md %}}</dd></dl>
 {{% /choosable %}}
 
 {{% choosable language go %}}
-<dl class="resources-properties">
-
-    <dt class="property-optional"
+<dl class="resources-properties"><dt class="property-optional"
             title="Optional">
         <span id="filters_go">
 <a href="#filters_go" style="color: inherit; text-decoration: inherit;">Filters</a>
@@ -5502,8 +4843,7 @@ All [input](#inputs) properties are implicitly available as output properties. A
         <span class="property-indicator"></span>
         <span class="property-type">[]string</span>
     </dt>
-    <dd>{{% md %}}Array of filters to select updates to apply. Omit or specify empty array to use the default (no filter). Refer to above link for examples and detailed description of this field.{{% /md %}}</dd>
-    <dt class="property-optional"
+    <dd>{{% md %}}Array of filters to select updates to apply. Omit or specify empty array to use the default (no filter). Refer to above link for examples and detailed description of this field.{{% /md %}}</dd><dt class="property-optional"
             title="Optional">
         <span id="name_go">
 <a href="#name_go" style="color: inherit; text-decoration: inherit;">Name</a>
@@ -5511,8 +4851,7 @@ All [input](#inputs) properties are implicitly available as output properties. A
         <span class="property-indicator"></span>
         <span class="property-type">string</span>
     </dt>
-    <dd>{{% md %}}Friendly Name to provide context on what this customization step does{{% /md %}}</dd>
-    <dt class="property-optional"
+    <dd>{{% md %}}Friendly Name to provide context on what this customization step does{{% /md %}}</dd><dt class="property-optional"
             title="Optional">
         <span id="searchcriteria_go">
 <a href="#searchcriteria_go" style="color: inherit; text-decoration: inherit;">Search<wbr>Criteria</a>
@@ -5520,8 +4859,7 @@ All [input](#inputs) properties are implicitly available as output properties. A
         <span class="property-indicator"></span>
         <span class="property-type">string</span>
     </dt>
-    <dd>{{% md %}}Criteria to search updates. Omit or specify empty string to use the default (search all). Refer to above link for examples and detailed description of this field.{{% /md %}}</dd>
-    <dt class="property-optional"
+    <dd>{{% md %}}Criteria to search updates. Omit or specify empty string to use the default (search all). Refer to above link for examples and detailed description of this field.{{% /md %}}</dd><dt class="property-optional"
             title="Optional">
         <span id="updatelimit_go">
 <a href="#updatelimit_go" style="color: inherit; text-decoration: inherit;">Update<wbr>Limit</a>
@@ -5529,14 +4867,11 @@ All [input](#inputs) properties are implicitly available as output properties. A
         <span class="property-indicator"></span>
         <span class="property-type">int</span>
     </dt>
-    <dd>{{% md %}}Maximum number of updates to apply at a time. Omit or specify 0 to use the default (1000){{% /md %}}</dd>
-</dl>
+    <dd>{{% md %}}Maximum number of updates to apply at a time. Omit or specify 0 to use the default (1000){{% /md %}}</dd></dl>
 {{% /choosable %}}
 
 {{% choosable language nodejs %}}
-<dl class="resources-properties">
-
-    <dt class="property-optional"
+<dl class="resources-properties"><dt class="property-optional"
             title="Optional">
         <span id="filters_nodejs">
 <a href="#filters_nodejs" style="color: inherit; text-decoration: inherit;">filters</a>
@@ -5544,8 +4879,7 @@ All [input](#inputs) properties are implicitly available as output properties. A
         <span class="property-indicator"></span>
         <span class="property-type">string[]</span>
     </dt>
-    <dd>{{% md %}}Array of filters to select updates to apply. Omit or specify empty array to use the default (no filter). Refer to above link for examples and detailed description of this field.{{% /md %}}</dd>
-    <dt class="property-optional"
+    <dd>{{% md %}}Array of filters to select updates to apply. Omit or specify empty array to use the default (no filter). Refer to above link for examples and detailed description of this field.{{% /md %}}</dd><dt class="property-optional"
             title="Optional">
         <span id="name_nodejs">
 <a href="#name_nodejs" style="color: inherit; text-decoration: inherit;">name</a>
@@ -5553,8 +4887,7 @@ All [input](#inputs) properties are implicitly available as output properties. A
         <span class="property-indicator"></span>
         <span class="property-type">string</span>
     </dt>
-    <dd>{{% md %}}Friendly Name to provide context on what this customization step does{{% /md %}}</dd>
-    <dt class="property-optional"
+    <dd>{{% md %}}Friendly Name to provide context on what this customization step does{{% /md %}}</dd><dt class="property-optional"
             title="Optional">
         <span id="searchcriteria_nodejs">
 <a href="#searchcriteria_nodejs" style="color: inherit; text-decoration: inherit;">search<wbr>Criteria</a>
@@ -5562,8 +4895,7 @@ All [input](#inputs) properties are implicitly available as output properties. A
         <span class="property-indicator"></span>
         <span class="property-type">string</span>
     </dt>
-    <dd>{{% md %}}Criteria to search updates. Omit or specify empty string to use the default (search all). Refer to above link for examples and detailed description of this field.{{% /md %}}</dd>
-    <dt class="property-optional"
+    <dd>{{% md %}}Criteria to search updates. Omit or specify empty string to use the default (search all). Refer to above link for examples and detailed description of this field.{{% /md %}}</dd><dt class="property-optional"
             title="Optional">
         <span id="updatelimit_nodejs">
 <a href="#updatelimit_nodejs" style="color: inherit; text-decoration: inherit;">update<wbr>Limit</a>
@@ -5571,14 +4903,11 @@ All [input](#inputs) properties are implicitly available as output properties. A
         <span class="property-indicator"></span>
         <span class="property-type">number</span>
     </dt>
-    <dd>{{% md %}}Maximum number of updates to apply at a time. Omit or specify 0 to use the default (1000){{% /md %}}</dd>
-</dl>
+    <dd>{{% md %}}Maximum number of updates to apply at a time. Omit or specify 0 to use the default (1000){{% /md %}}</dd></dl>
 {{% /choosable %}}
 
 {{% choosable language python %}}
-<dl class="resources-properties">
-
-    <dt class="property-optional"
+<dl class="resources-properties"><dt class="property-optional"
             title="Optional">
         <span id="filters_python">
 <a href="#filters_python" style="color: inherit; text-decoration: inherit;">filters</a>
@@ -5586,8 +4915,7 @@ All [input](#inputs) properties are implicitly available as output properties. A
         <span class="property-indicator"></span>
         <span class="property-type">Sequence[str]</span>
     </dt>
-    <dd>{{% md %}}Array of filters to select updates to apply. Omit or specify empty array to use the default (no filter). Refer to above link for examples and detailed description of this field.{{% /md %}}</dd>
-    <dt class="property-optional"
+    <dd>{{% md %}}Array of filters to select updates to apply. Omit or specify empty array to use the default (no filter). Refer to above link for examples and detailed description of this field.{{% /md %}}</dd><dt class="property-optional"
             title="Optional">
         <span id="name_python">
 <a href="#name_python" style="color: inherit; text-decoration: inherit;">name</a>
@@ -5595,8 +4923,7 @@ All [input](#inputs) properties are implicitly available as output properties. A
         <span class="property-indicator"></span>
         <span class="property-type">str</span>
     </dt>
-    <dd>{{% md %}}Friendly Name to provide context on what this customization step does{{% /md %}}</dd>
-    <dt class="property-optional"
+    <dd>{{% md %}}Friendly Name to provide context on what this customization step does{{% /md %}}</dd><dt class="property-optional"
             title="Optional">
         <span id="search_criteria_python">
 <a href="#search_criteria_python" style="color: inherit; text-decoration: inherit;">search_<wbr>criteria</a>
@@ -5604,8 +4931,7 @@ All [input](#inputs) properties are implicitly available as output properties. A
         <span class="property-indicator"></span>
         <span class="property-type">str</span>
     </dt>
-    <dd>{{% md %}}Criteria to search updates. Omit or specify empty string to use the default (search all). Refer to above link for examples and detailed description of this field.{{% /md %}}</dd>
-    <dt class="property-optional"
+    <dd>{{% md %}}Criteria to search updates. Omit or specify empty string to use the default (search all). Refer to above link for examples and detailed description of this field.{{% /md %}}</dd><dt class="property-optional"
             title="Optional">
         <span id="update_limit_python">
 <a href="#update_limit_python" style="color: inherit; text-decoration: inherit;">update_<wbr>limit</a>
@@ -5613,16 +4939,13 @@ All [input](#inputs) properties are implicitly available as output properties. A
         <span class="property-indicator"></span>
         <span class="property-type">int</span>
     </dt>
-    <dd>{{% md %}}Maximum number of updates to apply at a time. Omit or specify 0 to use the default (1000){{% /md %}}</dd>
-</dl>
+    <dd>{{% md %}}Maximum number of updates to apply at a time. Omit or specify 0 to use the default (1000){{% /md %}}</dd></dl>
 {{% /choosable %}}
 
 <h4 id="imagetemplatewindowsupdatecustomizerresponse">Image<wbr>Template<wbr>Windows<wbr>Update<wbr>Customizer<wbr>Response</h4>
 
 {{% choosable language csharp %}}
-<dl class="resources-properties">
-
-    <dt class="property-optional"
+<dl class="resources-properties"><dt class="property-optional"
             title="Optional">
         <span id="filters_csharp">
 <a href="#filters_csharp" style="color: inherit; text-decoration: inherit;">Filters</a>
@@ -5630,8 +4953,7 @@ All [input](#inputs) properties are implicitly available as output properties. A
         <span class="property-indicator"></span>
         <span class="property-type">List&lt;string&gt;</span>
     </dt>
-    <dd>{{% md %}}Array of filters to select updates to apply. Omit or specify empty array to use the default (no filter). Refer to above link for examples and detailed description of this field.{{% /md %}}</dd>
-    <dt class="property-optional"
+    <dd>{{% md %}}Array of filters to select updates to apply. Omit or specify empty array to use the default (no filter). Refer to above link for examples and detailed description of this field.{{% /md %}}</dd><dt class="property-optional"
             title="Optional">
         <span id="name_csharp">
 <a href="#name_csharp" style="color: inherit; text-decoration: inherit;">Name</a>
@@ -5639,8 +4961,7 @@ All [input](#inputs) properties are implicitly available as output properties. A
         <span class="property-indicator"></span>
         <span class="property-type">string</span>
     </dt>
-    <dd>{{% md %}}Friendly Name to provide context on what this customization step does{{% /md %}}</dd>
-    <dt class="property-optional"
+    <dd>{{% md %}}Friendly Name to provide context on what this customization step does{{% /md %}}</dd><dt class="property-optional"
             title="Optional">
         <span id="searchcriteria_csharp">
 <a href="#searchcriteria_csharp" style="color: inherit; text-decoration: inherit;">Search<wbr>Criteria</a>
@@ -5648,8 +4969,7 @@ All [input](#inputs) properties are implicitly available as output properties. A
         <span class="property-indicator"></span>
         <span class="property-type">string</span>
     </dt>
-    <dd>{{% md %}}Criteria to search updates. Omit or specify empty string to use the default (search all). Refer to above link for examples and detailed description of this field.{{% /md %}}</dd>
-    <dt class="property-optional"
+    <dd>{{% md %}}Criteria to search updates. Omit or specify empty string to use the default (search all). Refer to above link for examples and detailed description of this field.{{% /md %}}</dd><dt class="property-optional"
             title="Optional">
         <span id="updatelimit_csharp">
 <a href="#updatelimit_csharp" style="color: inherit; text-decoration: inherit;">Update<wbr>Limit</a>
@@ -5657,14 +4977,11 @@ All [input](#inputs) properties are implicitly available as output properties. A
         <span class="property-indicator"></span>
         <span class="property-type">int</span>
     </dt>
-    <dd>{{% md %}}Maximum number of updates to apply at a time. Omit or specify 0 to use the default (1000){{% /md %}}</dd>
-</dl>
+    <dd>{{% md %}}Maximum number of updates to apply at a time. Omit or specify 0 to use the default (1000){{% /md %}}</dd></dl>
 {{% /choosable %}}
 
 {{% choosable language go %}}
-<dl class="resources-properties">
-
-    <dt class="property-optional"
+<dl class="resources-properties"><dt class="property-optional"
             title="Optional">
         <span id="filters_go">
 <a href="#filters_go" style="color: inherit; text-decoration: inherit;">Filters</a>
@@ -5672,8 +4989,7 @@ All [input](#inputs) properties are implicitly available as output properties. A
         <span class="property-indicator"></span>
         <span class="property-type">[]string</span>
     </dt>
-    <dd>{{% md %}}Array of filters to select updates to apply. Omit or specify empty array to use the default (no filter). Refer to above link for examples and detailed description of this field.{{% /md %}}</dd>
-    <dt class="property-optional"
+    <dd>{{% md %}}Array of filters to select updates to apply. Omit or specify empty array to use the default (no filter). Refer to above link for examples and detailed description of this field.{{% /md %}}</dd><dt class="property-optional"
             title="Optional">
         <span id="name_go">
 <a href="#name_go" style="color: inherit; text-decoration: inherit;">Name</a>
@@ -5681,8 +4997,7 @@ All [input](#inputs) properties are implicitly available as output properties. A
         <span class="property-indicator"></span>
         <span class="property-type">string</span>
     </dt>
-    <dd>{{% md %}}Friendly Name to provide context on what this customization step does{{% /md %}}</dd>
-    <dt class="property-optional"
+    <dd>{{% md %}}Friendly Name to provide context on what this customization step does{{% /md %}}</dd><dt class="property-optional"
             title="Optional">
         <span id="searchcriteria_go">
 <a href="#searchcriteria_go" style="color: inherit; text-decoration: inherit;">Search<wbr>Criteria</a>
@@ -5690,8 +5005,7 @@ All [input](#inputs) properties are implicitly available as output properties. A
         <span class="property-indicator"></span>
         <span class="property-type">string</span>
     </dt>
-    <dd>{{% md %}}Criteria to search updates. Omit or specify empty string to use the default (search all). Refer to above link for examples and detailed description of this field.{{% /md %}}</dd>
-    <dt class="property-optional"
+    <dd>{{% md %}}Criteria to search updates. Omit or specify empty string to use the default (search all). Refer to above link for examples and detailed description of this field.{{% /md %}}</dd><dt class="property-optional"
             title="Optional">
         <span id="updatelimit_go">
 <a href="#updatelimit_go" style="color: inherit; text-decoration: inherit;">Update<wbr>Limit</a>
@@ -5699,14 +5013,11 @@ All [input](#inputs) properties are implicitly available as output properties. A
         <span class="property-indicator"></span>
         <span class="property-type">int</span>
     </dt>
-    <dd>{{% md %}}Maximum number of updates to apply at a time. Omit or specify 0 to use the default (1000){{% /md %}}</dd>
-</dl>
+    <dd>{{% md %}}Maximum number of updates to apply at a time. Omit or specify 0 to use the default (1000){{% /md %}}</dd></dl>
 {{% /choosable %}}
 
 {{% choosable language nodejs %}}
-<dl class="resources-properties">
-
-    <dt class="property-optional"
+<dl class="resources-properties"><dt class="property-optional"
             title="Optional">
         <span id="filters_nodejs">
 <a href="#filters_nodejs" style="color: inherit; text-decoration: inherit;">filters</a>
@@ -5714,8 +5025,7 @@ All [input](#inputs) properties are implicitly available as output properties. A
         <span class="property-indicator"></span>
         <span class="property-type">string[]</span>
     </dt>
-    <dd>{{% md %}}Array of filters to select updates to apply. Omit or specify empty array to use the default (no filter). Refer to above link for examples and detailed description of this field.{{% /md %}}</dd>
-    <dt class="property-optional"
+    <dd>{{% md %}}Array of filters to select updates to apply. Omit or specify empty array to use the default (no filter). Refer to above link for examples and detailed description of this field.{{% /md %}}</dd><dt class="property-optional"
             title="Optional">
         <span id="name_nodejs">
 <a href="#name_nodejs" style="color: inherit; text-decoration: inherit;">name</a>
@@ -5723,8 +5033,7 @@ All [input](#inputs) properties are implicitly available as output properties. A
         <span class="property-indicator"></span>
         <span class="property-type">string</span>
     </dt>
-    <dd>{{% md %}}Friendly Name to provide context on what this customization step does{{% /md %}}</dd>
-    <dt class="property-optional"
+    <dd>{{% md %}}Friendly Name to provide context on what this customization step does{{% /md %}}</dd><dt class="property-optional"
             title="Optional">
         <span id="searchcriteria_nodejs">
 <a href="#searchcriteria_nodejs" style="color: inherit; text-decoration: inherit;">search<wbr>Criteria</a>
@@ -5732,8 +5041,7 @@ All [input](#inputs) properties are implicitly available as output properties. A
         <span class="property-indicator"></span>
         <span class="property-type">string</span>
     </dt>
-    <dd>{{% md %}}Criteria to search updates. Omit or specify empty string to use the default (search all). Refer to above link for examples and detailed description of this field.{{% /md %}}</dd>
-    <dt class="property-optional"
+    <dd>{{% md %}}Criteria to search updates. Omit or specify empty string to use the default (search all). Refer to above link for examples and detailed description of this field.{{% /md %}}</dd><dt class="property-optional"
             title="Optional">
         <span id="updatelimit_nodejs">
 <a href="#updatelimit_nodejs" style="color: inherit; text-decoration: inherit;">update<wbr>Limit</a>
@@ -5741,14 +5049,11 @@ All [input](#inputs) properties are implicitly available as output properties. A
         <span class="property-indicator"></span>
         <span class="property-type">number</span>
     </dt>
-    <dd>{{% md %}}Maximum number of updates to apply at a time. Omit or specify 0 to use the default (1000){{% /md %}}</dd>
-</dl>
+    <dd>{{% md %}}Maximum number of updates to apply at a time. Omit or specify 0 to use the default (1000){{% /md %}}</dd></dl>
 {{% /choosable %}}
 
 {{% choosable language python %}}
-<dl class="resources-properties">
-
-    <dt class="property-optional"
+<dl class="resources-properties"><dt class="property-optional"
             title="Optional">
         <span id="filters_python">
 <a href="#filters_python" style="color: inherit; text-decoration: inherit;">filters</a>
@@ -5756,8 +5061,7 @@ All [input](#inputs) properties are implicitly available as output properties. A
         <span class="property-indicator"></span>
         <span class="property-type">Sequence[str]</span>
     </dt>
-    <dd>{{% md %}}Array of filters to select updates to apply. Omit or specify empty array to use the default (no filter). Refer to above link for examples and detailed description of this field.{{% /md %}}</dd>
-    <dt class="property-optional"
+    <dd>{{% md %}}Array of filters to select updates to apply. Omit or specify empty array to use the default (no filter). Refer to above link for examples and detailed description of this field.{{% /md %}}</dd><dt class="property-optional"
             title="Optional">
         <span id="name_python">
 <a href="#name_python" style="color: inherit; text-decoration: inherit;">name</a>
@@ -5765,8 +5069,7 @@ All [input](#inputs) properties are implicitly available as output properties. A
         <span class="property-indicator"></span>
         <span class="property-type">str</span>
     </dt>
-    <dd>{{% md %}}Friendly Name to provide context on what this customization step does{{% /md %}}</dd>
-    <dt class="property-optional"
+    <dd>{{% md %}}Friendly Name to provide context on what this customization step does{{% /md %}}</dd><dt class="property-optional"
             title="Optional">
         <span id="search_criteria_python">
 <a href="#search_criteria_python" style="color: inherit; text-decoration: inherit;">search_<wbr>criteria</a>
@@ -5774,8 +5077,7 @@ All [input](#inputs) properties are implicitly available as output properties. A
         <span class="property-indicator"></span>
         <span class="property-type">str</span>
     </dt>
-    <dd>{{% md %}}Criteria to search updates. Omit or specify empty string to use the default (search all). Refer to above link for examples and detailed description of this field.{{% /md %}}</dd>
-    <dt class="property-optional"
+    <dd>{{% md %}}Criteria to search updates. Omit or specify empty string to use the default (search all). Refer to above link for examples and detailed description of this field.{{% /md %}}</dd><dt class="property-optional"
             title="Optional">
         <span id="update_limit_python">
 <a href="#update_limit_python" style="color: inherit; text-decoration: inherit;">update_<wbr>limit</a>
@@ -5783,16 +5085,13 @@ All [input](#inputs) properties are implicitly available as output properties. A
         <span class="property-indicator"></span>
         <span class="property-type">int</span>
     </dt>
-    <dd>{{% md %}}Maximum number of updates to apply at a time. Omit or specify 0 to use the default (1000){{% /md %}}</dd>
-</dl>
+    <dd>{{% md %}}Maximum number of updates to apply at a time. Omit or specify 0 to use the default (1000){{% /md %}}</dd></dl>
 {{% /choosable %}}
 
 <h4 id="platformimagepurchaseplan">Platform<wbr>Image<wbr>Purchase<wbr>Plan</h4>
 
 {{% choosable language csharp %}}
-<dl class="resources-properties">
-
-    <dt class="property-required"
+<dl class="resources-properties"><dt class="property-required"
             title="Required">
         <span id="planname_csharp">
 <a href="#planname_csharp" style="color: inherit; text-decoration: inherit;">Plan<wbr>Name</a>
@@ -5800,8 +5099,7 @@ All [input](#inputs) properties are implicitly available as output properties. A
         <span class="property-indicator"></span>
         <span class="property-type">string</span>
     </dt>
-    <dd>{{% md %}}Name of the purchase plan.{{% /md %}}</dd>
-    <dt class="property-required"
+    <dd>{{% md %}}Name of the purchase plan.{{% /md %}}</dd><dt class="property-required"
             title="Required">
         <span id="planproduct_csharp">
 <a href="#planproduct_csharp" style="color: inherit; text-decoration: inherit;">Plan<wbr>Product</a>
@@ -5809,8 +5107,7 @@ All [input](#inputs) properties are implicitly available as output properties. A
         <span class="property-indicator"></span>
         <span class="property-type">string</span>
     </dt>
-    <dd>{{% md %}}Product of the purchase plan.{{% /md %}}</dd>
-    <dt class="property-required"
+    <dd>{{% md %}}Product of the purchase plan.{{% /md %}}</dd><dt class="property-required"
             title="Required">
         <span id="planpublisher_csharp">
 <a href="#planpublisher_csharp" style="color: inherit; text-decoration: inherit;">Plan<wbr>Publisher</a>
@@ -5818,14 +5115,11 @@ All [input](#inputs) properties are implicitly available as output properties. A
         <span class="property-indicator"></span>
         <span class="property-type">string</span>
     </dt>
-    <dd>{{% md %}}Publisher of the purchase plan.{{% /md %}}</dd>
-</dl>
+    <dd>{{% md %}}Publisher of the purchase plan.{{% /md %}}</dd></dl>
 {{% /choosable %}}
 
 {{% choosable language go %}}
-<dl class="resources-properties">
-
-    <dt class="property-required"
+<dl class="resources-properties"><dt class="property-required"
             title="Required">
         <span id="planname_go">
 <a href="#planname_go" style="color: inherit; text-decoration: inherit;">Plan<wbr>Name</a>
@@ -5833,8 +5127,7 @@ All [input](#inputs) properties are implicitly available as output properties. A
         <span class="property-indicator"></span>
         <span class="property-type">string</span>
     </dt>
-    <dd>{{% md %}}Name of the purchase plan.{{% /md %}}</dd>
-    <dt class="property-required"
+    <dd>{{% md %}}Name of the purchase plan.{{% /md %}}</dd><dt class="property-required"
             title="Required">
         <span id="planproduct_go">
 <a href="#planproduct_go" style="color: inherit; text-decoration: inherit;">Plan<wbr>Product</a>
@@ -5842,8 +5135,7 @@ All [input](#inputs) properties are implicitly available as output properties. A
         <span class="property-indicator"></span>
         <span class="property-type">string</span>
     </dt>
-    <dd>{{% md %}}Product of the purchase plan.{{% /md %}}</dd>
-    <dt class="property-required"
+    <dd>{{% md %}}Product of the purchase plan.{{% /md %}}</dd><dt class="property-required"
             title="Required">
         <span id="planpublisher_go">
 <a href="#planpublisher_go" style="color: inherit; text-decoration: inherit;">Plan<wbr>Publisher</a>
@@ -5851,14 +5143,11 @@ All [input](#inputs) properties are implicitly available as output properties. A
         <span class="property-indicator"></span>
         <span class="property-type">string</span>
     </dt>
-    <dd>{{% md %}}Publisher of the purchase plan.{{% /md %}}</dd>
-</dl>
+    <dd>{{% md %}}Publisher of the purchase plan.{{% /md %}}</dd></dl>
 {{% /choosable %}}
 
 {{% choosable language nodejs %}}
-<dl class="resources-properties">
-
-    <dt class="property-required"
+<dl class="resources-properties"><dt class="property-required"
             title="Required">
         <span id="planname_nodejs">
 <a href="#planname_nodejs" style="color: inherit; text-decoration: inherit;">plan<wbr>Name</a>
@@ -5866,8 +5155,7 @@ All [input](#inputs) properties are implicitly available as output properties. A
         <span class="property-indicator"></span>
         <span class="property-type">string</span>
     </dt>
-    <dd>{{% md %}}Name of the purchase plan.{{% /md %}}</dd>
-    <dt class="property-required"
+    <dd>{{% md %}}Name of the purchase plan.{{% /md %}}</dd><dt class="property-required"
             title="Required">
         <span id="planproduct_nodejs">
 <a href="#planproduct_nodejs" style="color: inherit; text-decoration: inherit;">plan<wbr>Product</a>
@@ -5875,8 +5163,7 @@ All [input](#inputs) properties are implicitly available as output properties. A
         <span class="property-indicator"></span>
         <span class="property-type">string</span>
     </dt>
-    <dd>{{% md %}}Product of the purchase plan.{{% /md %}}</dd>
-    <dt class="property-required"
+    <dd>{{% md %}}Product of the purchase plan.{{% /md %}}</dd><dt class="property-required"
             title="Required">
         <span id="planpublisher_nodejs">
 <a href="#planpublisher_nodejs" style="color: inherit; text-decoration: inherit;">plan<wbr>Publisher</a>
@@ -5884,14 +5171,11 @@ All [input](#inputs) properties are implicitly available as output properties. A
         <span class="property-indicator"></span>
         <span class="property-type">string</span>
     </dt>
-    <dd>{{% md %}}Publisher of the purchase plan.{{% /md %}}</dd>
-</dl>
+    <dd>{{% md %}}Publisher of the purchase plan.{{% /md %}}</dd></dl>
 {{% /choosable %}}
 
 {{% choosable language python %}}
-<dl class="resources-properties">
-
-    <dt class="property-required"
+<dl class="resources-properties"><dt class="property-required"
             title="Required">
         <span id="plan_name_python">
 <a href="#plan_name_python" style="color: inherit; text-decoration: inherit;">plan_<wbr>name</a>
@@ -5899,8 +5183,7 @@ All [input](#inputs) properties are implicitly available as output properties. A
         <span class="property-indicator"></span>
         <span class="property-type">str</span>
     </dt>
-    <dd>{{% md %}}Name of the purchase plan.{{% /md %}}</dd>
-    <dt class="property-required"
+    <dd>{{% md %}}Name of the purchase plan.{{% /md %}}</dd><dt class="property-required"
             title="Required">
         <span id="plan_product_python">
 <a href="#plan_product_python" style="color: inherit; text-decoration: inherit;">plan_<wbr>product</a>
@@ -5908,8 +5191,7 @@ All [input](#inputs) properties are implicitly available as output properties. A
         <span class="property-indicator"></span>
         <span class="property-type">str</span>
     </dt>
-    <dd>{{% md %}}Product of the purchase plan.{{% /md %}}</dd>
-    <dt class="property-required"
+    <dd>{{% md %}}Product of the purchase plan.{{% /md %}}</dd><dt class="property-required"
             title="Required">
         <span id="plan_publisher_python">
 <a href="#plan_publisher_python" style="color: inherit; text-decoration: inherit;">plan_<wbr>publisher</a>
@@ -5917,16 +5199,13 @@ All [input](#inputs) properties are implicitly available as output properties. A
         <span class="property-indicator"></span>
         <span class="property-type">str</span>
     </dt>
-    <dd>{{% md %}}Publisher of the purchase plan.{{% /md %}}</dd>
-</dl>
+    <dd>{{% md %}}Publisher of the purchase plan.{{% /md %}}</dd></dl>
 {{% /choosable %}}
 
 <h4 id="platformimagepurchaseplanresponse">Platform<wbr>Image<wbr>Purchase<wbr>Plan<wbr>Response</h4>
 
 {{% choosable language csharp %}}
-<dl class="resources-properties">
-
-    <dt class="property-required"
+<dl class="resources-properties"><dt class="property-required"
             title="Required">
         <span id="planname_csharp">
 <a href="#planname_csharp" style="color: inherit; text-decoration: inherit;">Plan<wbr>Name</a>
@@ -5934,8 +5213,7 @@ All [input](#inputs) properties are implicitly available as output properties. A
         <span class="property-indicator"></span>
         <span class="property-type">string</span>
     </dt>
-    <dd>{{% md %}}Name of the purchase plan.{{% /md %}}</dd>
-    <dt class="property-required"
+    <dd>{{% md %}}Name of the purchase plan.{{% /md %}}</dd><dt class="property-required"
             title="Required">
         <span id="planproduct_csharp">
 <a href="#planproduct_csharp" style="color: inherit; text-decoration: inherit;">Plan<wbr>Product</a>
@@ -5943,8 +5221,7 @@ All [input](#inputs) properties are implicitly available as output properties. A
         <span class="property-indicator"></span>
         <span class="property-type">string</span>
     </dt>
-    <dd>{{% md %}}Product of the purchase plan.{{% /md %}}</dd>
-    <dt class="property-required"
+    <dd>{{% md %}}Product of the purchase plan.{{% /md %}}</dd><dt class="property-required"
             title="Required">
         <span id="planpublisher_csharp">
 <a href="#planpublisher_csharp" style="color: inherit; text-decoration: inherit;">Plan<wbr>Publisher</a>
@@ -5952,14 +5229,11 @@ All [input](#inputs) properties are implicitly available as output properties. A
         <span class="property-indicator"></span>
         <span class="property-type">string</span>
     </dt>
-    <dd>{{% md %}}Publisher of the purchase plan.{{% /md %}}</dd>
-</dl>
+    <dd>{{% md %}}Publisher of the purchase plan.{{% /md %}}</dd></dl>
 {{% /choosable %}}
 
 {{% choosable language go %}}
-<dl class="resources-properties">
-
-    <dt class="property-required"
+<dl class="resources-properties"><dt class="property-required"
             title="Required">
         <span id="planname_go">
 <a href="#planname_go" style="color: inherit; text-decoration: inherit;">Plan<wbr>Name</a>
@@ -5967,8 +5241,7 @@ All [input](#inputs) properties are implicitly available as output properties. A
         <span class="property-indicator"></span>
         <span class="property-type">string</span>
     </dt>
-    <dd>{{% md %}}Name of the purchase plan.{{% /md %}}</dd>
-    <dt class="property-required"
+    <dd>{{% md %}}Name of the purchase plan.{{% /md %}}</dd><dt class="property-required"
             title="Required">
         <span id="planproduct_go">
 <a href="#planproduct_go" style="color: inherit; text-decoration: inherit;">Plan<wbr>Product</a>
@@ -5976,8 +5249,7 @@ All [input](#inputs) properties are implicitly available as output properties. A
         <span class="property-indicator"></span>
         <span class="property-type">string</span>
     </dt>
-    <dd>{{% md %}}Product of the purchase plan.{{% /md %}}</dd>
-    <dt class="property-required"
+    <dd>{{% md %}}Product of the purchase plan.{{% /md %}}</dd><dt class="property-required"
             title="Required">
         <span id="planpublisher_go">
 <a href="#planpublisher_go" style="color: inherit; text-decoration: inherit;">Plan<wbr>Publisher</a>
@@ -5985,14 +5257,11 @@ All [input](#inputs) properties are implicitly available as output properties. A
         <span class="property-indicator"></span>
         <span class="property-type">string</span>
     </dt>
-    <dd>{{% md %}}Publisher of the purchase plan.{{% /md %}}</dd>
-</dl>
+    <dd>{{% md %}}Publisher of the purchase plan.{{% /md %}}</dd></dl>
 {{% /choosable %}}
 
 {{% choosable language nodejs %}}
-<dl class="resources-properties">
-
-    <dt class="property-required"
+<dl class="resources-properties"><dt class="property-required"
             title="Required">
         <span id="planname_nodejs">
 <a href="#planname_nodejs" style="color: inherit; text-decoration: inherit;">plan<wbr>Name</a>
@@ -6000,8 +5269,7 @@ All [input](#inputs) properties are implicitly available as output properties. A
         <span class="property-indicator"></span>
         <span class="property-type">string</span>
     </dt>
-    <dd>{{% md %}}Name of the purchase plan.{{% /md %}}</dd>
-    <dt class="property-required"
+    <dd>{{% md %}}Name of the purchase plan.{{% /md %}}</dd><dt class="property-required"
             title="Required">
         <span id="planproduct_nodejs">
 <a href="#planproduct_nodejs" style="color: inherit; text-decoration: inherit;">plan<wbr>Product</a>
@@ -6009,8 +5277,7 @@ All [input](#inputs) properties are implicitly available as output properties. A
         <span class="property-indicator"></span>
         <span class="property-type">string</span>
     </dt>
-    <dd>{{% md %}}Product of the purchase plan.{{% /md %}}</dd>
-    <dt class="property-required"
+    <dd>{{% md %}}Product of the purchase plan.{{% /md %}}</dd><dt class="property-required"
             title="Required">
         <span id="planpublisher_nodejs">
 <a href="#planpublisher_nodejs" style="color: inherit; text-decoration: inherit;">plan<wbr>Publisher</a>
@@ -6018,14 +5285,11 @@ All [input](#inputs) properties are implicitly available as output properties. A
         <span class="property-indicator"></span>
         <span class="property-type">string</span>
     </dt>
-    <dd>{{% md %}}Publisher of the purchase plan.{{% /md %}}</dd>
-</dl>
+    <dd>{{% md %}}Publisher of the purchase plan.{{% /md %}}</dd></dl>
 {{% /choosable %}}
 
 {{% choosable language python %}}
-<dl class="resources-properties">
-
-    <dt class="property-required"
+<dl class="resources-properties"><dt class="property-required"
             title="Required">
         <span id="plan_name_python">
 <a href="#plan_name_python" style="color: inherit; text-decoration: inherit;">plan_<wbr>name</a>
@@ -6033,8 +5297,7 @@ All [input](#inputs) properties are implicitly available as output properties. A
         <span class="property-indicator"></span>
         <span class="property-type">str</span>
     </dt>
-    <dd>{{% md %}}Name of the purchase plan.{{% /md %}}</dd>
-    <dt class="property-required"
+    <dd>{{% md %}}Name of the purchase plan.{{% /md %}}</dd><dt class="property-required"
             title="Required">
         <span id="plan_product_python">
 <a href="#plan_product_python" style="color: inherit; text-decoration: inherit;">plan_<wbr>product</a>
@@ -6042,8 +5305,7 @@ All [input](#inputs) properties are implicitly available as output properties. A
         <span class="property-indicator"></span>
         <span class="property-type">str</span>
     </dt>
-    <dd>{{% md %}}Product of the purchase plan.{{% /md %}}</dd>
-    <dt class="property-required"
+    <dd>{{% md %}}Product of the purchase plan.{{% /md %}}</dd><dt class="property-required"
             title="Required">
         <span id="plan_publisher_python">
 <a href="#plan_publisher_python" style="color: inherit; text-decoration: inherit;">plan_<wbr>publisher</a>
@@ -6051,16 +5313,13 @@ All [input](#inputs) properties are implicitly available as output properties. A
         <span class="property-indicator"></span>
         <span class="property-type">str</span>
     </dt>
-    <dd>{{% md %}}Publisher of the purchase plan.{{% /md %}}</dd>
-</dl>
+    <dd>{{% md %}}Publisher of the purchase plan.{{% /md %}}</dd></dl>
 {{% /choosable %}}
 
 <h4 id="provisioningerrorresponse">Provisioning<wbr>Error<wbr>Response</h4>
 
 {{% choosable language csharp %}}
-<dl class="resources-properties">
-
-    <dt class="property-optional"
+<dl class="resources-properties"><dt class="property-optional"
             title="Optional">
         <span id="message_csharp">
 <a href="#message_csharp" style="color: inherit; text-decoration: inherit;">Message</a>
@@ -6068,8 +5327,7 @@ All [input](#inputs) properties are implicitly available as output properties. A
         <span class="property-indicator"></span>
         <span class="property-type">string</span>
     </dt>
-    <dd>{{% md %}}Verbose error message about the provisioning failure{{% /md %}}</dd>
-    <dt class="property-optional"
+    <dd>{{% md %}}Verbose error message about the provisioning failure{{% /md %}}</dd><dt class="property-optional"
             title="Optional">
         <span id="provisioningerrorcode_csharp">
 <a href="#provisioningerrorcode_csharp" style="color: inherit; text-decoration: inherit;">Provisioning<wbr>Error<wbr>Code</a>
@@ -6077,14 +5335,11 @@ All [input](#inputs) properties are implicitly available as output properties. A
         <span class="property-indicator"></span>
         <span class="property-type">string</span>
     </dt>
-    <dd>{{% md %}}Error code of the provisioning failure{{% /md %}}</dd>
-</dl>
+    <dd>{{% md %}}Error code of the provisioning failure{{% /md %}}</dd></dl>
 {{% /choosable %}}
 
 {{% choosable language go %}}
-<dl class="resources-properties">
-
-    <dt class="property-optional"
+<dl class="resources-properties"><dt class="property-optional"
             title="Optional">
         <span id="message_go">
 <a href="#message_go" style="color: inherit; text-decoration: inherit;">Message</a>
@@ -6092,8 +5347,7 @@ All [input](#inputs) properties are implicitly available as output properties. A
         <span class="property-indicator"></span>
         <span class="property-type">string</span>
     </dt>
-    <dd>{{% md %}}Verbose error message about the provisioning failure{{% /md %}}</dd>
-    <dt class="property-optional"
+    <dd>{{% md %}}Verbose error message about the provisioning failure{{% /md %}}</dd><dt class="property-optional"
             title="Optional">
         <span id="provisioningerrorcode_go">
 <a href="#provisioningerrorcode_go" style="color: inherit; text-decoration: inherit;">Provisioning<wbr>Error<wbr>Code</a>
@@ -6101,14 +5355,11 @@ All [input](#inputs) properties are implicitly available as output properties. A
         <span class="property-indicator"></span>
         <span class="property-type">string</span>
     </dt>
-    <dd>{{% md %}}Error code of the provisioning failure{{% /md %}}</dd>
-</dl>
+    <dd>{{% md %}}Error code of the provisioning failure{{% /md %}}</dd></dl>
 {{% /choosable %}}
 
 {{% choosable language nodejs %}}
-<dl class="resources-properties">
-
-    <dt class="property-optional"
+<dl class="resources-properties"><dt class="property-optional"
             title="Optional">
         <span id="message_nodejs">
 <a href="#message_nodejs" style="color: inherit; text-decoration: inherit;">message</a>
@@ -6116,8 +5367,7 @@ All [input](#inputs) properties are implicitly available as output properties. A
         <span class="property-indicator"></span>
         <span class="property-type">string</span>
     </dt>
-    <dd>{{% md %}}Verbose error message about the provisioning failure{{% /md %}}</dd>
-    <dt class="property-optional"
+    <dd>{{% md %}}Verbose error message about the provisioning failure{{% /md %}}</dd><dt class="property-optional"
             title="Optional">
         <span id="provisioningerrorcode_nodejs">
 <a href="#provisioningerrorcode_nodejs" style="color: inherit; text-decoration: inherit;">provisioning<wbr>Error<wbr>Code</a>
@@ -6125,14 +5375,11 @@ All [input](#inputs) properties are implicitly available as output properties. A
         <span class="property-indicator"></span>
         <span class="property-type">string</span>
     </dt>
-    <dd>{{% md %}}Error code of the provisioning failure{{% /md %}}</dd>
-</dl>
+    <dd>{{% md %}}Error code of the provisioning failure{{% /md %}}</dd></dl>
 {{% /choosable %}}
 
 {{% choosable language python %}}
-<dl class="resources-properties">
-
-    <dt class="property-optional"
+<dl class="resources-properties"><dt class="property-optional"
             title="Optional">
         <span id="message_python">
 <a href="#message_python" style="color: inherit; text-decoration: inherit;">message</a>
@@ -6140,8 +5387,7 @@ All [input](#inputs) properties are implicitly available as output properties. A
         <span class="property-indicator"></span>
         <span class="property-type">str</span>
     </dt>
-    <dd>{{% md %}}Verbose error message about the provisioning failure{{% /md %}}</dd>
-    <dt class="property-optional"
+    <dd>{{% md %}}Verbose error message about the provisioning failure{{% /md %}}</dd><dt class="property-optional"
             title="Optional">
         <span id="provisioning_error_code_python">
 <a href="#provisioning_error_code_python" style="color: inherit; text-decoration: inherit;">provisioning_<wbr>error_<wbr>code</a>
@@ -6149,92 +5395,65 @@ All [input](#inputs) properties are implicitly available as output properties. A
         <span class="property-indicator"></span>
         <span class="property-type">str</span>
     </dt>
-    <dd>{{% md %}}Error code of the provisioning failure{{% /md %}}</dd>
-</dl>
+    <dd>{{% md %}}Error code of the provisioning failure{{% /md %}}</dd></dl>
 {{% /choosable %}}
 
 <h4 id="resourceidentitytype">Resource<wbr>Identity<wbr>Type</h4>
 
 {{% choosable language csharp %}}
-<dl class="tabular">
-    <dt>User<wbr>Assigned</dt>
-    <dd>UserAssigned</dd>
-    <dt>None</dt>
-    <dd>None</dd>
-</dl>
+<dl class="tabular"><dt>User<wbr>Assigned</dt>
+    <dd>UserAssigned</dd><dt>None</dt>
+    <dd>None</dd></dl>
 {{% /choosable %}}
 
 {{% choosable language go %}}
-<dl class="tabular">
-    <dt>Resource<wbr>Identity<wbr>Type<wbr>User<wbr>Assigned</dt>
-    <dd>UserAssigned</dd>
-    <dt>Resource<wbr>Identity<wbr>Type<wbr>None</dt>
-    <dd>None</dd>
-</dl>
+<dl class="tabular"><dt>Resource<wbr>Identity<wbr>Type<wbr>User<wbr>Assigned</dt>
+    <dd>UserAssigned</dd><dt>Resource<wbr>Identity<wbr>Type<wbr>None</dt>
+    <dd>None</dd></dl>
 {{% /choosable %}}
 
 {{% choosable language nodejs %}}
-<dl class="tabular">
-    <dt>User<wbr>Assigned</dt>
-    <dd>UserAssigned</dd>
-    <dt>None</dt>
-    <dd>None</dd>
-</dl>
+<dl class="tabular"><dt>User<wbr>Assigned</dt>
+    <dd>UserAssigned</dd><dt>None</dt>
+    <dd>None</dd></dl>
 {{% /choosable %}}
 
 {{% choosable language python %}}
-<dl class="tabular">
-    <dt>USER_ASSIGNED</dt>
-    <dd>UserAssigned</dd>
-    <dt>NONE</dt>
-    <dd>None</dd>
-</dl>
+<dl class="tabular"><dt>USER_ASSIGNED</dt>
+    <dd>UserAssigned</dd><dt>NONE</dt>
+    <dd>None</dd></dl>
 {{% /choosable %}}
 
 <h4 id="sharedimagestorageaccounttype">Shared<wbr>Image<wbr>Storage<wbr>Account<wbr>Type</h4>
 
 {{% choosable language csharp %}}
-<dl class="tabular">
-    <dt>Standard_LRS</dt>
-    <dd>Standard_LRS</dd>
-    <dt>Standard_ZRS</dt>
-    <dd>Standard_ZRS</dd>
-</dl>
+<dl class="tabular"><dt>Standard_LRS</dt>
+    <dd>Standard_LRS</dd><dt>Standard_ZRS</dt>
+    <dd>Standard_ZRS</dd></dl>
 {{% /choosable %}}
 
 {{% choosable language go %}}
-<dl class="tabular">
-    <dt>Shared<wbr>Image<wbr>Storage<wbr>Account<wbr>Type_Standard_LRS</dt>
-    <dd>Standard_LRS</dd>
-    <dt>Shared<wbr>Image<wbr>Storage<wbr>Account<wbr>Type_Standard_ZRS</dt>
-    <dd>Standard_ZRS</dd>
-</dl>
+<dl class="tabular"><dt>Shared<wbr>Image<wbr>Storage<wbr>Account<wbr>Type_Standard_LRS</dt>
+    <dd>Standard_LRS</dd><dt>Shared<wbr>Image<wbr>Storage<wbr>Account<wbr>Type_Standard_ZRS</dt>
+    <dd>Standard_ZRS</dd></dl>
 {{% /choosable %}}
 
 {{% choosable language nodejs %}}
-<dl class="tabular">
-    <dt>Standard_LRS</dt>
-    <dd>Standard_LRS</dd>
-    <dt>Standard_ZRS</dt>
-    <dd>Standard_ZRS</dd>
-</dl>
+<dl class="tabular"><dt>Standard_LRS</dt>
+    <dd>Standard_LRS</dd><dt>Standard_ZRS</dt>
+    <dd>Standard_ZRS</dd></dl>
 {{% /choosable %}}
 
 {{% choosable language python %}}
-<dl class="tabular">
-    <dt>STANDARD_LRS</dt>
-    <dd>Standard_LRS</dd>
-    <dt>STANDARD_ZRS</dt>
-    <dd>Standard_ZRS</dd>
-</dl>
+<dl class="tabular"><dt>STANDARD_LRS</dt>
+    <dd>Standard_LRS</dd><dt>STANDARD_ZRS</dt>
+    <dd>Standard_ZRS</dd></dl>
 {{% /choosable %}}
 
 <h4 id="virtualnetworkconfig">Virtual<wbr>Network<wbr>Config</h4>
 
 {{% choosable language csharp %}}
-<dl class="resources-properties">
-
-    <dt class="property-optional"
+<dl class="resources-properties"><dt class="property-optional"
             title="Optional">
         <span id="subnetid_csharp">
 <a href="#subnetid_csharp" style="color: inherit; text-decoration: inherit;">Subnet<wbr>Id</a>
@@ -6242,14 +5461,11 @@ All [input](#inputs) properties are implicitly available as output properties. A
         <span class="property-indicator"></span>
         <span class="property-type">string</span>
     </dt>
-    <dd>{{% md %}}Resource id of a pre-existing subnet.{{% /md %}}</dd>
-</dl>
+    <dd>{{% md %}}Resource id of a pre-existing subnet.{{% /md %}}</dd></dl>
 {{% /choosable %}}
 
 {{% choosable language go %}}
-<dl class="resources-properties">
-
-    <dt class="property-optional"
+<dl class="resources-properties"><dt class="property-optional"
             title="Optional">
         <span id="subnetid_go">
 <a href="#subnetid_go" style="color: inherit; text-decoration: inherit;">Subnet<wbr>Id</a>
@@ -6257,14 +5473,11 @@ All [input](#inputs) properties are implicitly available as output properties. A
         <span class="property-indicator"></span>
         <span class="property-type">string</span>
     </dt>
-    <dd>{{% md %}}Resource id of a pre-existing subnet.{{% /md %}}</dd>
-</dl>
+    <dd>{{% md %}}Resource id of a pre-existing subnet.{{% /md %}}</dd></dl>
 {{% /choosable %}}
 
 {{% choosable language nodejs %}}
-<dl class="resources-properties">
-
-    <dt class="property-optional"
+<dl class="resources-properties"><dt class="property-optional"
             title="Optional">
         <span id="subnetid_nodejs">
 <a href="#subnetid_nodejs" style="color: inherit; text-decoration: inherit;">subnet<wbr>Id</a>
@@ -6272,14 +5485,11 @@ All [input](#inputs) properties are implicitly available as output properties. A
         <span class="property-indicator"></span>
         <span class="property-type">string</span>
     </dt>
-    <dd>{{% md %}}Resource id of a pre-existing subnet.{{% /md %}}</dd>
-</dl>
+    <dd>{{% md %}}Resource id of a pre-existing subnet.{{% /md %}}</dd></dl>
 {{% /choosable %}}
 
 {{% choosable language python %}}
-<dl class="resources-properties">
-
-    <dt class="property-optional"
+<dl class="resources-properties"><dt class="property-optional"
             title="Optional">
         <span id="subnet_id_python">
 <a href="#subnet_id_python" style="color: inherit; text-decoration: inherit;">subnet_<wbr>id</a>
@@ -6287,16 +5497,13 @@ All [input](#inputs) properties are implicitly available as output properties. A
         <span class="property-indicator"></span>
         <span class="property-type">str</span>
     </dt>
-    <dd>{{% md %}}Resource id of a pre-existing subnet.{{% /md %}}</dd>
-</dl>
+    <dd>{{% md %}}Resource id of a pre-existing subnet.{{% /md %}}</dd></dl>
 {{% /choosable %}}
 
 <h4 id="virtualnetworkconfigresponse">Virtual<wbr>Network<wbr>Config<wbr>Response</h4>
 
 {{% choosable language csharp %}}
-<dl class="resources-properties">
-
-    <dt class="property-optional"
+<dl class="resources-properties"><dt class="property-optional"
             title="Optional">
         <span id="subnetid_csharp">
 <a href="#subnetid_csharp" style="color: inherit; text-decoration: inherit;">Subnet<wbr>Id</a>
@@ -6304,14 +5511,11 @@ All [input](#inputs) properties are implicitly available as output properties. A
         <span class="property-indicator"></span>
         <span class="property-type">string</span>
     </dt>
-    <dd>{{% md %}}Resource id of a pre-existing subnet.{{% /md %}}</dd>
-</dl>
+    <dd>{{% md %}}Resource id of a pre-existing subnet.{{% /md %}}</dd></dl>
 {{% /choosable %}}
 
 {{% choosable language go %}}
-<dl class="resources-properties">
-
-    <dt class="property-optional"
+<dl class="resources-properties"><dt class="property-optional"
             title="Optional">
         <span id="subnetid_go">
 <a href="#subnetid_go" style="color: inherit; text-decoration: inherit;">Subnet<wbr>Id</a>
@@ -6319,14 +5523,11 @@ All [input](#inputs) properties are implicitly available as output properties. A
         <span class="property-indicator"></span>
         <span class="property-type">string</span>
     </dt>
-    <dd>{{% md %}}Resource id of a pre-existing subnet.{{% /md %}}</dd>
-</dl>
+    <dd>{{% md %}}Resource id of a pre-existing subnet.{{% /md %}}</dd></dl>
 {{% /choosable %}}
 
 {{% choosable language nodejs %}}
-<dl class="resources-properties">
-
-    <dt class="property-optional"
+<dl class="resources-properties"><dt class="property-optional"
             title="Optional">
         <span id="subnetid_nodejs">
 <a href="#subnetid_nodejs" style="color: inherit; text-decoration: inherit;">subnet<wbr>Id</a>
@@ -6334,14 +5535,11 @@ All [input](#inputs) properties are implicitly available as output properties. A
         <span class="property-indicator"></span>
         <span class="property-type">string</span>
     </dt>
-    <dd>{{% md %}}Resource id of a pre-existing subnet.{{% /md %}}</dd>
-</dl>
+    <dd>{{% md %}}Resource id of a pre-existing subnet.{{% /md %}}</dd></dl>
 {{% /choosable %}}
 
 {{% choosable language python %}}
-<dl class="resources-properties">
-
-    <dt class="property-optional"
+<dl class="resources-properties"><dt class="property-optional"
             title="Optional">
         <span id="subnet_id_python">
 <a href="#subnet_id_python" style="color: inherit; text-decoration: inherit;">subnet_<wbr>id</a>
@@ -6349,8 +5547,7 @@ All [input](#inputs) properties are implicitly available as output properties. A
         <span class="property-indicator"></span>
         <span class="property-type">str</span>
     </dt>
-    <dd>{{% md %}}Resource id of a pre-existing subnet.{{% /md %}}</dd>
-</dl>
+    <dd>{{% md %}}Resource id of a pre-existing subnet.{{% /md %}}</dd></dl>
 {{% /choosable %}}
 ## Import
 

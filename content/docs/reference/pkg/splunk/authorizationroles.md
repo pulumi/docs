@@ -1,8 +1,8 @@
 
 ---
 title: "AuthorizationRoles"
-title_tag: "Resource AuthorizationRoles | Package Splunk"
-meta_desc: "Explore the AuthorizationRoles resource of the Splunk package, including examples, input properties, output properties, lookup functions, and supporting types. ## # Resource: splunk.AuthorizationRoles"
+title_tag: "splunk.AuthorizationRoles"
+meta_desc: "Documentation for the splunk.AuthorizationRoles resource with examples, input properties, output properties, lookup functions, and supporting types."
 ---
 
 
@@ -16,11 +16,17 @@ Create and update role information.
 
 
 {{% examples %}}
+
 ## Example Usage
 
 {{< chooser language "typescript,python,go,csharp" / >}}
 
-{{% example csharp %}}
+
+
+
+
+{{< example csharp >}}
+
 ```csharp
 using Pulumi;
 using Splunk = Pulumi.Splunk;
@@ -61,9 +67,12 @@ class MyStack : Stack
 }
 ```
 
-{{% /example %}}
 
-{{% example go %}}
+{{< /example >}}
+
+
+{{< example go >}}
+
 ```go
 package main
 
@@ -104,9 +113,12 @@ func main() {
 }
 ```
 
-{{% /example %}}
 
-{{% example python %}}
+{{< /example >}}
+
+
+{{< example python >}}
+
 ```python
 import pulumi
 import pulumi_splunk as splunk
@@ -134,9 +146,12 @@ role01 = splunk.AuthorizationRoles("role01",
     ])
 ```
 
-{{% /example %}}
 
-{{% example typescript %}}
+{{< /example >}}
+
+
+{{< example typescript >}}
+
 
 ```typescript
 import * as pulumi from "@pulumi/pulumi";
@@ -166,9 +181,16 @@ const role01 = new splunk.AuthorizationRoles("role01", {
 });
 ```
 
-{{% /example %}}
+
+{{< /example >}}
+
+
+
+
 
 {{% /examples %}}
+
+
 
 
 ## Create a AuthorizationRoles Resource {#create}
@@ -193,9 +215,7 @@ const role01 = new splunk.AuthorizationRoles("role01", {
 
 {{% choosable language nodejs %}}
 
-<dl class="resources-properties">
-  
-    <dt
+<dl class="resources-properties"><dt
         class="property-required" title="Required">
         <span>name</span>
         <span class="property-indicator"></span>
@@ -203,9 +223,7 @@ const role01 = new splunk.AuthorizationRoles("role01", {
     </dt>
     <dd>
       The unique name of the resource.
-    </dd>
-  
-    <dt
+    </dd><dt
         class="property-optional" title="Optional">
         <span>args</span>
         <span class="property-indicator"></span>
@@ -213,9 +231,7 @@ const role01 = new splunk.AuthorizationRoles("role01", {
     </dt>
     <dd>
       The arguments to resource properties.
-    </dd>
-  
-    <dt
+    </dd><dt
         class="property-optional" title="Optional">
         <span>opts</span>
         <span class="property-indicator"></span>
@@ -223,10 +239,7 @@ const role01 = new splunk.AuthorizationRoles("role01", {
     </dt>
     <dd>
       Bag of options to control resource&#39;s behavior.
-    </dd>
-  
-
-</dl>
+    </dd></dl>
 
 {{% /choosable %}}
 
@@ -252,9 +265,7 @@ const role01 = new splunk.AuthorizationRoles("role01", {
 
 {{% choosable language go %}}
 
-<dl class="resources-properties">
-  
-    <dt
+<dl class="resources-properties"><dt
         class="property-optional" title="Optional">
         <span>ctx</span>
         <span class="property-indicator"></span>
@@ -262,9 +273,7 @@ const role01 = new splunk.AuthorizationRoles("role01", {
     </dt>
     <dd>
       Context object for the current deployment.
-    </dd>
-  
-    <dt
+    </dd><dt
         class="property-required" title="Required">
         <span>name</span>
         <span class="property-indicator"></span>
@@ -272,9 +281,7 @@ const role01 = new splunk.AuthorizationRoles("role01", {
     </dt>
     <dd>
       The unique name of the resource.
-    </dd>
-  
-    <dt
+    </dd><dt
         class="property-optional" title="Optional">
         <span>args</span>
         <span class="property-indicator"></span>
@@ -282,9 +289,7 @@ const role01 = new splunk.AuthorizationRoles("role01", {
     </dt>
     <dd>
       The arguments to resource properties.
-    </dd>
-  
-    <dt
+    </dd><dt
         class="property-optional" title="Optional">
         <span>opts</span>
         <span class="property-indicator"></span>
@@ -292,18 +297,13 @@ const role01 = new splunk.AuthorizationRoles("role01", {
     </dt>
     <dd>
       Bag of options to control resource&#39;s behavior.
-    </dd>
-  
-
-</dl>
+    </dd></dl>
 
 {{% /choosable %}}
 
 {{% choosable language csharp %}}
 
-<dl class="resources-properties">
-  
-    <dt
+<dl class="resources-properties"><dt
         class="property-required" title="Required">
         <span>name</span>
         <span class="property-indicator"></span>
@@ -311,9 +311,7 @@ const role01 = new splunk.AuthorizationRoles("role01", {
     </dt>
     <dd>
       The unique name of the resource.
-    </dd>
-  
-    <dt
+    </dd><dt
         class="property-optional" title="Optional">
         <span>args</span>
         <span class="property-indicator"></span>
@@ -321,9 +319,7 @@ const role01 = new splunk.AuthorizationRoles("role01", {
     </dt>
     <dd>
       The arguments to resource properties.
-    </dd>
-  
-    <dt
+    </dd><dt
         class="property-optional" title="Optional">
         <span>opts</span>
         <span class="property-indicator"></span>
@@ -331,10 +327,7 @@ const role01 = new splunk.AuthorizationRoles("role01", {
     </dt>
     <dd>
       Bag of options to control resource&#39;s behavior.
-    </dd>
-  
-
-</dl>
+    </dd></dl>
 
 {{% /choosable %}}
 
@@ -349,9 +342,7 @@ The AuthorizationRoles resource accepts the following [input]({{< relref "/docs/
 
 
 {{% choosable language csharp %}}
-<dl class="resources-properties">
-
-    <dt class="property-optional"
+<dl class="resources-properties"><dt class="property-optional"
             title="Optional">
         <span id="capabilities_csharp">
 <a href="#capabilities_csharp" style="color: inherit; text-decoration: inherit;">Capabilities</a>
@@ -360,8 +351,7 @@ The AuthorizationRoles resource accepts the following [input]({{< relref "/docs/
         <span class="property-type">List&lt;string&gt;</span>
     </dt>
     <dd>{{% md %}}List of capabilities assigned to role.
-{{% /md %}}</dd>
-    <dt class="property-optional"
+{{% /md %}}</dd><dt class="property-optional"
             title="Optional">
         <span id="cumulativerealtimesearchjobsquota_csharp">
 <a href="#cumulativerealtimesearchjobsquota_csharp" style="color: inherit; text-decoration: inherit;">Cumulative<wbr>Realtime<wbr>Search<wbr>Jobs<wbr>Quota</a>
@@ -370,8 +360,7 @@ The AuthorizationRoles resource accepts the following [input]({{< relref "/docs/
         <span class="property-type">int</span>
     </dt>
     <dd>{{% md %}}Maximum number of concurrently running real-time searches that all members of this role can have.
-{{% /md %}}</dd>
-    <dt class="property-optional"
+{{% /md %}}</dd><dt class="property-optional"
             title="Optional">
         <span id="cumulativesearchjobsquota_csharp">
 <a href="#cumulativesearchjobsquota_csharp" style="color: inherit; text-decoration: inherit;">Cumulative<wbr>Search<wbr>Jobs<wbr>Quota</a>
@@ -380,8 +369,7 @@ The AuthorizationRoles resource accepts the following [input]({{< relref "/docs/
         <span class="property-type">int</span>
     </dt>
     <dd>{{% md %}}Maximum number of concurrently running searches for all role members. Warning message logged when limit is reached.
-{{% /md %}}</dd>
-    <dt class="property-optional"
+{{% /md %}}</dd><dt class="property-optional"
             title="Optional">
         <span id="defaultapp_csharp">
 <a href="#defaultapp_csharp" style="color: inherit; text-decoration: inherit;">Default<wbr>App</a>
@@ -390,8 +378,7 @@ The AuthorizationRoles resource accepts the following [input]({{< relref "/docs/
         <span class="property-type">string</span>
     </dt>
     <dd>{{% md %}}Specify the folder name of the default app to use for this role. A user-specific default app overrides this.
-{{% /md %}}</dd>
-    <dt class="property-optional"
+{{% /md %}}</dd><dt class="property-optional"
             title="Optional">
         <span id="importedroles_csharp">
 <a href="#importedroles_csharp" style="color: inherit; text-decoration: inherit;">Imported<wbr>Roles</a>
@@ -400,8 +387,7 @@ The AuthorizationRoles resource accepts the following [input]({{< relref "/docs/
         <span class="property-type">List&lt;string&gt;</span>
     </dt>
     <dd>{{% md %}}List of imported roles for this role. <br>Importing other roles imports all aspects of that role, such as capabilities and allowed indexes to search. In combining multiple roles, the effective value for each attribute is value with the broadest permissions.
-{{% /md %}}</dd>
-    <dt class="property-optional"
+{{% /md %}}</dd><dt class="property-optional"
             title="Optional">
         <span id="name_csharp">
 <a href="#name_csharp" style="color: inherit; text-decoration: inherit;">Name</a>
@@ -410,8 +396,7 @@ The AuthorizationRoles resource accepts the following [input]({{< relref "/docs/
         <span class="property-type">string</span>
     </dt>
     <dd>{{% md %}}The name of the user role to create.
-{{% /md %}}</dd>
-    <dt class="property-optional"
+{{% /md %}}</dd><dt class="property-optional"
             title="Optional">
         <span id="realtimesearchjobsquota_csharp">
 <a href="#realtimesearchjobsquota_csharp" style="color: inherit; text-decoration: inherit;">Realtime<wbr>Search<wbr>Jobs<wbr>Quota</a>
@@ -420,8 +405,7 @@ The AuthorizationRoles resource accepts the following [input]({{< relref "/docs/
         <span class="property-type">int</span>
     </dt>
     <dd>{{% md %}}Specify the maximum number of concurrent real-time search jobs for this role. This count is independent from the normal search jobs limit.
-{{% /md %}}</dd>
-    <dt class="property-optional"
+{{% /md %}}</dd><dt class="property-optional"
             title="Optional">
         <span id="searchdiskquota_csharp">
 <a href="#searchdiskquota_csharp" style="color: inherit; text-decoration: inherit;">Search<wbr>Disk<wbr>Quota</a>
@@ -430,8 +414,7 @@ The AuthorizationRoles resource accepts the following [input]({{< relref "/docs/
         <span class="property-type">int</span>
     </dt>
     <dd>{{% md %}}Specifies the maximum disk space in MB that can be used by a user's search jobs. For example, a value of 100 limits this role to 100 MB total.
-{{% /md %}}</dd>
-    <dt class="property-optional"
+{{% /md %}}</dd><dt class="property-optional"
             title="Optional">
         <span id="searchfilter_csharp">
 <a href="#searchfilter_csharp" style="color: inherit; text-decoration: inherit;">Search<wbr>Filter</a>
@@ -440,8 +423,7 @@ The AuthorizationRoles resource accepts the following [input]({{< relref "/docs/
         <span class="property-type">string</span>
     </dt>
     <dd>{{% md %}}Specify a search string that restricts the scope of searches run by this role. Search results for this role only show events that also match the search string you specify. In the case that a user has multiple roles with different search filters, they are combined with an OR.
-{{% /md %}}</dd>
-    <dt class="property-optional"
+{{% /md %}}</dd><dt class="property-optional"
             title="Optional">
         <span id="searchindexesalloweds_csharp">
 <a href="#searchindexesalloweds_csharp" style="color: inherit; text-decoration: inherit;">Search<wbr>Indexes<wbr>Alloweds</a>
@@ -450,8 +432,7 @@ The AuthorizationRoles resource accepts the following [input]({{< relref "/docs/
         <span class="property-type">List&lt;string&gt;</span>
     </dt>
     <dd>{{% md %}}List of indexes that this role has permissions to search. These may be wildcarded, but the index name must begin with an underscore to match internal indexes.
-{{% /md %}}</dd>
-    <dt class="property-optional"
+{{% /md %}}</dd><dt class="property-optional"
             title="Optional">
         <span id="searchindexesdefaults_csharp">
 <a href="#searchindexesdefaults_csharp" style="color: inherit; text-decoration: inherit;">Search<wbr>Indexes<wbr>Defaults</a>
@@ -460,8 +441,7 @@ The AuthorizationRoles resource accepts the following [input]({{< relref "/docs/
         <span class="property-type">List&lt;string&gt;</span>
     </dt>
     <dd>{{% md %}}List of indexes to search when no index is specified. These indexes can be wildcarded, with the exception that '*' does not match internal indexes. To match internal indexes, start with '_'. All internal indexes are represented by '_*'. A user with this role can search other indexes using "index= "
-{{% /md %}}</dd>
-    <dt class="property-optional"
+{{% /md %}}</dd><dt class="property-optional"
             title="Optional">
         <span id="searchjobsquota_csharp">
 <a href="#searchjobsquota_csharp" style="color: inherit; text-decoration: inherit;">Search<wbr>Jobs<wbr>Quota</a>
@@ -470,8 +450,7 @@ The AuthorizationRoles resource accepts the following [input]({{< relref "/docs/
         <span class="property-type">int</span>
     </dt>
     <dd>{{% md %}}The maximum number of concurrent searches a user with this role is allowed to run. For users with multiple roles, the maximum quota value among all of the roles applies.
-{{% /md %}}</dd>
-    <dt class="property-optional"
+{{% /md %}}</dd><dt class="property-optional"
             title="Optional">
         <span id="searchtimewin_csharp">
 <a href="#searchtimewin_csharp" style="color: inherit; text-decoration: inherit;">Search<wbr>Time<wbr>Win</a>
@@ -480,14 +459,11 @@ The AuthorizationRoles resource accepts the following [input]({{< relref "/docs/
         <span class="property-type">int</span>
     </dt>
     <dd>{{% md %}}Maximum time span of a search, in seconds. By default, searches are not limited to any specific time window. To override any search time windows from imported roles, set srchTimeWin to '0', as the 'admin' role does.
-{{% /md %}}</dd>
-</dl>
+{{% /md %}}</dd></dl>
 {{% /choosable %}}
 
 {{% choosable language go %}}
-<dl class="resources-properties">
-
-    <dt class="property-optional"
+<dl class="resources-properties"><dt class="property-optional"
             title="Optional">
         <span id="capabilities_go">
 <a href="#capabilities_go" style="color: inherit; text-decoration: inherit;">Capabilities</a>
@@ -496,8 +472,7 @@ The AuthorizationRoles resource accepts the following [input]({{< relref "/docs/
         <span class="property-type">[]string</span>
     </dt>
     <dd>{{% md %}}List of capabilities assigned to role.
-{{% /md %}}</dd>
-    <dt class="property-optional"
+{{% /md %}}</dd><dt class="property-optional"
             title="Optional">
         <span id="cumulativerealtimesearchjobsquota_go">
 <a href="#cumulativerealtimesearchjobsquota_go" style="color: inherit; text-decoration: inherit;">Cumulative<wbr>Realtime<wbr>Search<wbr>Jobs<wbr>Quota</a>
@@ -506,8 +481,7 @@ The AuthorizationRoles resource accepts the following [input]({{< relref "/docs/
         <span class="property-type">int</span>
     </dt>
     <dd>{{% md %}}Maximum number of concurrently running real-time searches that all members of this role can have.
-{{% /md %}}</dd>
-    <dt class="property-optional"
+{{% /md %}}</dd><dt class="property-optional"
             title="Optional">
         <span id="cumulativesearchjobsquota_go">
 <a href="#cumulativesearchjobsquota_go" style="color: inherit; text-decoration: inherit;">Cumulative<wbr>Search<wbr>Jobs<wbr>Quota</a>
@@ -516,8 +490,7 @@ The AuthorizationRoles resource accepts the following [input]({{< relref "/docs/
         <span class="property-type">int</span>
     </dt>
     <dd>{{% md %}}Maximum number of concurrently running searches for all role members. Warning message logged when limit is reached.
-{{% /md %}}</dd>
-    <dt class="property-optional"
+{{% /md %}}</dd><dt class="property-optional"
             title="Optional">
         <span id="defaultapp_go">
 <a href="#defaultapp_go" style="color: inherit; text-decoration: inherit;">Default<wbr>App</a>
@@ -526,8 +499,7 @@ The AuthorizationRoles resource accepts the following [input]({{< relref "/docs/
         <span class="property-type">string</span>
     </dt>
     <dd>{{% md %}}Specify the folder name of the default app to use for this role. A user-specific default app overrides this.
-{{% /md %}}</dd>
-    <dt class="property-optional"
+{{% /md %}}</dd><dt class="property-optional"
             title="Optional">
         <span id="importedroles_go">
 <a href="#importedroles_go" style="color: inherit; text-decoration: inherit;">Imported<wbr>Roles</a>
@@ -536,8 +508,7 @@ The AuthorizationRoles resource accepts the following [input]({{< relref "/docs/
         <span class="property-type">[]string</span>
     </dt>
     <dd>{{% md %}}List of imported roles for this role. <br>Importing other roles imports all aspects of that role, such as capabilities and allowed indexes to search. In combining multiple roles, the effective value for each attribute is value with the broadest permissions.
-{{% /md %}}</dd>
-    <dt class="property-optional"
+{{% /md %}}</dd><dt class="property-optional"
             title="Optional">
         <span id="name_go">
 <a href="#name_go" style="color: inherit; text-decoration: inherit;">Name</a>
@@ -546,8 +517,7 @@ The AuthorizationRoles resource accepts the following [input]({{< relref "/docs/
         <span class="property-type">string</span>
     </dt>
     <dd>{{% md %}}The name of the user role to create.
-{{% /md %}}</dd>
-    <dt class="property-optional"
+{{% /md %}}</dd><dt class="property-optional"
             title="Optional">
         <span id="realtimesearchjobsquota_go">
 <a href="#realtimesearchjobsquota_go" style="color: inherit; text-decoration: inherit;">Realtime<wbr>Search<wbr>Jobs<wbr>Quota</a>
@@ -556,8 +526,7 @@ The AuthorizationRoles resource accepts the following [input]({{< relref "/docs/
         <span class="property-type">int</span>
     </dt>
     <dd>{{% md %}}Specify the maximum number of concurrent real-time search jobs for this role. This count is independent from the normal search jobs limit.
-{{% /md %}}</dd>
-    <dt class="property-optional"
+{{% /md %}}</dd><dt class="property-optional"
             title="Optional">
         <span id="searchdiskquota_go">
 <a href="#searchdiskquota_go" style="color: inherit; text-decoration: inherit;">Search<wbr>Disk<wbr>Quota</a>
@@ -566,8 +535,7 @@ The AuthorizationRoles resource accepts the following [input]({{< relref "/docs/
         <span class="property-type">int</span>
     </dt>
     <dd>{{% md %}}Specifies the maximum disk space in MB that can be used by a user's search jobs. For example, a value of 100 limits this role to 100 MB total.
-{{% /md %}}</dd>
-    <dt class="property-optional"
+{{% /md %}}</dd><dt class="property-optional"
             title="Optional">
         <span id="searchfilter_go">
 <a href="#searchfilter_go" style="color: inherit; text-decoration: inherit;">Search<wbr>Filter</a>
@@ -576,8 +544,7 @@ The AuthorizationRoles resource accepts the following [input]({{< relref "/docs/
         <span class="property-type">string</span>
     </dt>
     <dd>{{% md %}}Specify a search string that restricts the scope of searches run by this role. Search results for this role only show events that also match the search string you specify. In the case that a user has multiple roles with different search filters, they are combined with an OR.
-{{% /md %}}</dd>
-    <dt class="property-optional"
+{{% /md %}}</dd><dt class="property-optional"
             title="Optional">
         <span id="searchindexesalloweds_go">
 <a href="#searchindexesalloweds_go" style="color: inherit; text-decoration: inherit;">Search<wbr>Indexes<wbr>Alloweds</a>
@@ -586,8 +553,7 @@ The AuthorizationRoles resource accepts the following [input]({{< relref "/docs/
         <span class="property-type">[]string</span>
     </dt>
     <dd>{{% md %}}List of indexes that this role has permissions to search. These may be wildcarded, but the index name must begin with an underscore to match internal indexes.
-{{% /md %}}</dd>
-    <dt class="property-optional"
+{{% /md %}}</dd><dt class="property-optional"
             title="Optional">
         <span id="searchindexesdefaults_go">
 <a href="#searchindexesdefaults_go" style="color: inherit; text-decoration: inherit;">Search<wbr>Indexes<wbr>Defaults</a>
@@ -596,8 +562,7 @@ The AuthorizationRoles resource accepts the following [input]({{< relref "/docs/
         <span class="property-type">[]string</span>
     </dt>
     <dd>{{% md %}}List of indexes to search when no index is specified. These indexes can be wildcarded, with the exception that '*' does not match internal indexes. To match internal indexes, start with '_'. All internal indexes are represented by '_*'. A user with this role can search other indexes using "index= "
-{{% /md %}}</dd>
-    <dt class="property-optional"
+{{% /md %}}</dd><dt class="property-optional"
             title="Optional">
         <span id="searchjobsquota_go">
 <a href="#searchjobsquota_go" style="color: inherit; text-decoration: inherit;">Search<wbr>Jobs<wbr>Quota</a>
@@ -606,8 +571,7 @@ The AuthorizationRoles resource accepts the following [input]({{< relref "/docs/
         <span class="property-type">int</span>
     </dt>
     <dd>{{% md %}}The maximum number of concurrent searches a user with this role is allowed to run. For users with multiple roles, the maximum quota value among all of the roles applies.
-{{% /md %}}</dd>
-    <dt class="property-optional"
+{{% /md %}}</dd><dt class="property-optional"
             title="Optional">
         <span id="searchtimewin_go">
 <a href="#searchtimewin_go" style="color: inherit; text-decoration: inherit;">Search<wbr>Time<wbr>Win</a>
@@ -616,14 +580,11 @@ The AuthorizationRoles resource accepts the following [input]({{< relref "/docs/
         <span class="property-type">int</span>
     </dt>
     <dd>{{% md %}}Maximum time span of a search, in seconds. By default, searches are not limited to any specific time window. To override any search time windows from imported roles, set srchTimeWin to '0', as the 'admin' role does.
-{{% /md %}}</dd>
-</dl>
+{{% /md %}}</dd></dl>
 {{% /choosable %}}
 
 {{% choosable language nodejs %}}
-<dl class="resources-properties">
-
-    <dt class="property-optional"
+<dl class="resources-properties"><dt class="property-optional"
             title="Optional">
         <span id="capabilities_nodejs">
 <a href="#capabilities_nodejs" style="color: inherit; text-decoration: inherit;">capabilities</a>
@@ -632,8 +593,7 @@ The AuthorizationRoles resource accepts the following [input]({{< relref "/docs/
         <span class="property-type">string[]</span>
     </dt>
     <dd>{{% md %}}List of capabilities assigned to role.
-{{% /md %}}</dd>
-    <dt class="property-optional"
+{{% /md %}}</dd><dt class="property-optional"
             title="Optional">
         <span id="cumulativerealtimesearchjobsquota_nodejs">
 <a href="#cumulativerealtimesearchjobsquota_nodejs" style="color: inherit; text-decoration: inherit;">cumulative<wbr>Realtime<wbr>Search<wbr>Jobs<wbr>Quota</a>
@@ -642,8 +602,7 @@ The AuthorizationRoles resource accepts the following [input]({{< relref "/docs/
         <span class="property-type">number</span>
     </dt>
     <dd>{{% md %}}Maximum number of concurrently running real-time searches that all members of this role can have.
-{{% /md %}}</dd>
-    <dt class="property-optional"
+{{% /md %}}</dd><dt class="property-optional"
             title="Optional">
         <span id="cumulativesearchjobsquota_nodejs">
 <a href="#cumulativesearchjobsquota_nodejs" style="color: inherit; text-decoration: inherit;">cumulative<wbr>Search<wbr>Jobs<wbr>Quota</a>
@@ -652,8 +611,7 @@ The AuthorizationRoles resource accepts the following [input]({{< relref "/docs/
         <span class="property-type">number</span>
     </dt>
     <dd>{{% md %}}Maximum number of concurrently running searches for all role members. Warning message logged when limit is reached.
-{{% /md %}}</dd>
-    <dt class="property-optional"
+{{% /md %}}</dd><dt class="property-optional"
             title="Optional">
         <span id="defaultapp_nodejs">
 <a href="#defaultapp_nodejs" style="color: inherit; text-decoration: inherit;">default<wbr>App</a>
@@ -662,8 +620,7 @@ The AuthorizationRoles resource accepts the following [input]({{< relref "/docs/
         <span class="property-type">string</span>
     </dt>
     <dd>{{% md %}}Specify the folder name of the default app to use for this role. A user-specific default app overrides this.
-{{% /md %}}</dd>
-    <dt class="property-optional"
+{{% /md %}}</dd><dt class="property-optional"
             title="Optional">
         <span id="importedroles_nodejs">
 <a href="#importedroles_nodejs" style="color: inherit; text-decoration: inherit;">imported<wbr>Roles</a>
@@ -672,8 +629,7 @@ The AuthorizationRoles resource accepts the following [input]({{< relref "/docs/
         <span class="property-type">string[]</span>
     </dt>
     <dd>{{% md %}}List of imported roles for this role. <br>Importing other roles imports all aspects of that role, such as capabilities and allowed indexes to search. In combining multiple roles, the effective value for each attribute is value with the broadest permissions.
-{{% /md %}}</dd>
-    <dt class="property-optional"
+{{% /md %}}</dd><dt class="property-optional"
             title="Optional">
         <span id="name_nodejs">
 <a href="#name_nodejs" style="color: inherit; text-decoration: inherit;">name</a>
@@ -682,8 +638,7 @@ The AuthorizationRoles resource accepts the following [input]({{< relref "/docs/
         <span class="property-type">string</span>
     </dt>
     <dd>{{% md %}}The name of the user role to create.
-{{% /md %}}</dd>
-    <dt class="property-optional"
+{{% /md %}}</dd><dt class="property-optional"
             title="Optional">
         <span id="realtimesearchjobsquota_nodejs">
 <a href="#realtimesearchjobsquota_nodejs" style="color: inherit; text-decoration: inherit;">realtime<wbr>Search<wbr>Jobs<wbr>Quota</a>
@@ -692,8 +647,7 @@ The AuthorizationRoles resource accepts the following [input]({{< relref "/docs/
         <span class="property-type">number</span>
     </dt>
     <dd>{{% md %}}Specify the maximum number of concurrent real-time search jobs for this role. This count is independent from the normal search jobs limit.
-{{% /md %}}</dd>
-    <dt class="property-optional"
+{{% /md %}}</dd><dt class="property-optional"
             title="Optional">
         <span id="searchdiskquota_nodejs">
 <a href="#searchdiskquota_nodejs" style="color: inherit; text-decoration: inherit;">search<wbr>Disk<wbr>Quota</a>
@@ -702,8 +656,7 @@ The AuthorizationRoles resource accepts the following [input]({{< relref "/docs/
         <span class="property-type">number</span>
     </dt>
     <dd>{{% md %}}Specifies the maximum disk space in MB that can be used by a user's search jobs. For example, a value of 100 limits this role to 100 MB total.
-{{% /md %}}</dd>
-    <dt class="property-optional"
+{{% /md %}}</dd><dt class="property-optional"
             title="Optional">
         <span id="searchfilter_nodejs">
 <a href="#searchfilter_nodejs" style="color: inherit; text-decoration: inherit;">search<wbr>Filter</a>
@@ -712,8 +665,7 @@ The AuthorizationRoles resource accepts the following [input]({{< relref "/docs/
         <span class="property-type">string</span>
     </dt>
     <dd>{{% md %}}Specify a search string that restricts the scope of searches run by this role. Search results for this role only show events that also match the search string you specify. In the case that a user has multiple roles with different search filters, they are combined with an OR.
-{{% /md %}}</dd>
-    <dt class="property-optional"
+{{% /md %}}</dd><dt class="property-optional"
             title="Optional">
         <span id="searchindexesalloweds_nodejs">
 <a href="#searchindexesalloweds_nodejs" style="color: inherit; text-decoration: inherit;">search<wbr>Indexes<wbr>Alloweds</a>
@@ -722,8 +674,7 @@ The AuthorizationRoles resource accepts the following [input]({{< relref "/docs/
         <span class="property-type">string[]</span>
     </dt>
     <dd>{{% md %}}List of indexes that this role has permissions to search. These may be wildcarded, but the index name must begin with an underscore to match internal indexes.
-{{% /md %}}</dd>
-    <dt class="property-optional"
+{{% /md %}}</dd><dt class="property-optional"
             title="Optional">
         <span id="searchindexesdefaults_nodejs">
 <a href="#searchindexesdefaults_nodejs" style="color: inherit; text-decoration: inherit;">search<wbr>Indexes<wbr>Defaults</a>
@@ -732,8 +683,7 @@ The AuthorizationRoles resource accepts the following [input]({{< relref "/docs/
         <span class="property-type">string[]</span>
     </dt>
     <dd>{{% md %}}List of indexes to search when no index is specified. These indexes can be wildcarded, with the exception that '*' does not match internal indexes. To match internal indexes, start with '_'. All internal indexes are represented by '_*'. A user with this role can search other indexes using "index= "
-{{% /md %}}</dd>
-    <dt class="property-optional"
+{{% /md %}}</dd><dt class="property-optional"
             title="Optional">
         <span id="searchjobsquota_nodejs">
 <a href="#searchjobsquota_nodejs" style="color: inherit; text-decoration: inherit;">search<wbr>Jobs<wbr>Quota</a>
@@ -742,8 +692,7 @@ The AuthorizationRoles resource accepts the following [input]({{< relref "/docs/
         <span class="property-type">number</span>
     </dt>
     <dd>{{% md %}}The maximum number of concurrent searches a user with this role is allowed to run. For users with multiple roles, the maximum quota value among all of the roles applies.
-{{% /md %}}</dd>
-    <dt class="property-optional"
+{{% /md %}}</dd><dt class="property-optional"
             title="Optional">
         <span id="searchtimewin_nodejs">
 <a href="#searchtimewin_nodejs" style="color: inherit; text-decoration: inherit;">search<wbr>Time<wbr>Win</a>
@@ -752,14 +701,11 @@ The AuthorizationRoles resource accepts the following [input]({{< relref "/docs/
         <span class="property-type">number</span>
     </dt>
     <dd>{{% md %}}Maximum time span of a search, in seconds. By default, searches are not limited to any specific time window. To override any search time windows from imported roles, set srchTimeWin to '0', as the 'admin' role does.
-{{% /md %}}</dd>
-</dl>
+{{% /md %}}</dd></dl>
 {{% /choosable %}}
 
 {{% choosable language python %}}
-<dl class="resources-properties">
-
-    <dt class="property-optional"
+<dl class="resources-properties"><dt class="property-optional"
             title="Optional">
         <span id="capabilities_python">
 <a href="#capabilities_python" style="color: inherit; text-decoration: inherit;">capabilities</a>
@@ -768,8 +714,7 @@ The AuthorizationRoles resource accepts the following [input]({{< relref "/docs/
         <span class="property-type">Sequence[str]</span>
     </dt>
     <dd>{{% md %}}List of capabilities assigned to role.
-{{% /md %}}</dd>
-    <dt class="property-optional"
+{{% /md %}}</dd><dt class="property-optional"
             title="Optional">
         <span id="cumulative_realtime_search_jobs_quota_python">
 <a href="#cumulative_realtime_search_jobs_quota_python" style="color: inherit; text-decoration: inherit;">cumulative_<wbr>realtime_<wbr>search_<wbr>jobs_<wbr>quota</a>
@@ -778,8 +723,7 @@ The AuthorizationRoles resource accepts the following [input]({{< relref "/docs/
         <span class="property-type">int</span>
     </dt>
     <dd>{{% md %}}Maximum number of concurrently running real-time searches that all members of this role can have.
-{{% /md %}}</dd>
-    <dt class="property-optional"
+{{% /md %}}</dd><dt class="property-optional"
             title="Optional">
         <span id="cumulative_search_jobs_quota_python">
 <a href="#cumulative_search_jobs_quota_python" style="color: inherit; text-decoration: inherit;">cumulative_<wbr>search_<wbr>jobs_<wbr>quota</a>
@@ -788,8 +732,7 @@ The AuthorizationRoles resource accepts the following [input]({{< relref "/docs/
         <span class="property-type">int</span>
     </dt>
     <dd>{{% md %}}Maximum number of concurrently running searches for all role members. Warning message logged when limit is reached.
-{{% /md %}}</dd>
-    <dt class="property-optional"
+{{% /md %}}</dd><dt class="property-optional"
             title="Optional">
         <span id="default_app_python">
 <a href="#default_app_python" style="color: inherit; text-decoration: inherit;">default_<wbr>app</a>
@@ -798,8 +741,7 @@ The AuthorizationRoles resource accepts the following [input]({{< relref "/docs/
         <span class="property-type">str</span>
     </dt>
     <dd>{{% md %}}Specify the folder name of the default app to use for this role. A user-specific default app overrides this.
-{{% /md %}}</dd>
-    <dt class="property-optional"
+{{% /md %}}</dd><dt class="property-optional"
             title="Optional">
         <span id="imported_roles_python">
 <a href="#imported_roles_python" style="color: inherit; text-decoration: inherit;">imported_<wbr>roles</a>
@@ -808,8 +750,7 @@ The AuthorizationRoles resource accepts the following [input]({{< relref "/docs/
         <span class="property-type">Sequence[str]</span>
     </dt>
     <dd>{{% md %}}List of imported roles for this role. <br>Importing other roles imports all aspects of that role, such as capabilities and allowed indexes to search. In combining multiple roles, the effective value for each attribute is value with the broadest permissions.
-{{% /md %}}</dd>
-    <dt class="property-optional"
+{{% /md %}}</dd><dt class="property-optional"
             title="Optional">
         <span id="name_python">
 <a href="#name_python" style="color: inherit; text-decoration: inherit;">name</a>
@@ -818,8 +759,7 @@ The AuthorizationRoles resource accepts the following [input]({{< relref "/docs/
         <span class="property-type">str</span>
     </dt>
     <dd>{{% md %}}The name of the user role to create.
-{{% /md %}}</dd>
-    <dt class="property-optional"
+{{% /md %}}</dd><dt class="property-optional"
             title="Optional">
         <span id="realtime_search_jobs_quota_python">
 <a href="#realtime_search_jobs_quota_python" style="color: inherit; text-decoration: inherit;">realtime_<wbr>search_<wbr>jobs_<wbr>quota</a>
@@ -828,8 +768,7 @@ The AuthorizationRoles resource accepts the following [input]({{< relref "/docs/
         <span class="property-type">int</span>
     </dt>
     <dd>{{% md %}}Specify the maximum number of concurrent real-time search jobs for this role. This count is independent from the normal search jobs limit.
-{{% /md %}}</dd>
-    <dt class="property-optional"
+{{% /md %}}</dd><dt class="property-optional"
             title="Optional">
         <span id="search_disk_quota_python">
 <a href="#search_disk_quota_python" style="color: inherit; text-decoration: inherit;">search_<wbr>disk_<wbr>quota</a>
@@ -838,8 +777,7 @@ The AuthorizationRoles resource accepts the following [input]({{< relref "/docs/
         <span class="property-type">int</span>
     </dt>
     <dd>{{% md %}}Specifies the maximum disk space in MB that can be used by a user's search jobs. For example, a value of 100 limits this role to 100 MB total.
-{{% /md %}}</dd>
-    <dt class="property-optional"
+{{% /md %}}</dd><dt class="property-optional"
             title="Optional">
         <span id="search_filter_python">
 <a href="#search_filter_python" style="color: inherit; text-decoration: inherit;">search_<wbr>filter</a>
@@ -848,8 +786,7 @@ The AuthorizationRoles resource accepts the following [input]({{< relref "/docs/
         <span class="property-type">str</span>
     </dt>
     <dd>{{% md %}}Specify a search string that restricts the scope of searches run by this role. Search results for this role only show events that also match the search string you specify. In the case that a user has multiple roles with different search filters, they are combined with an OR.
-{{% /md %}}</dd>
-    <dt class="property-optional"
+{{% /md %}}</dd><dt class="property-optional"
             title="Optional">
         <span id="search_indexes_alloweds_python">
 <a href="#search_indexes_alloweds_python" style="color: inherit; text-decoration: inherit;">search_<wbr>indexes_<wbr>alloweds</a>
@@ -858,8 +795,7 @@ The AuthorizationRoles resource accepts the following [input]({{< relref "/docs/
         <span class="property-type">Sequence[str]</span>
     </dt>
     <dd>{{% md %}}List of indexes that this role has permissions to search. These may be wildcarded, but the index name must begin with an underscore to match internal indexes.
-{{% /md %}}</dd>
-    <dt class="property-optional"
+{{% /md %}}</dd><dt class="property-optional"
             title="Optional">
         <span id="search_indexes_defaults_python">
 <a href="#search_indexes_defaults_python" style="color: inherit; text-decoration: inherit;">search_<wbr>indexes_<wbr>defaults</a>
@@ -868,8 +804,7 @@ The AuthorizationRoles resource accepts the following [input]({{< relref "/docs/
         <span class="property-type">Sequence[str]</span>
     </dt>
     <dd>{{% md %}}List of indexes to search when no index is specified. These indexes can be wildcarded, with the exception that '*' does not match internal indexes. To match internal indexes, start with '_'. All internal indexes are represented by '_*'. A user with this role can search other indexes using "index= "
-{{% /md %}}</dd>
-    <dt class="property-optional"
+{{% /md %}}</dd><dt class="property-optional"
             title="Optional">
         <span id="search_jobs_quota_python">
 <a href="#search_jobs_quota_python" style="color: inherit; text-decoration: inherit;">search_<wbr>jobs_<wbr>quota</a>
@@ -878,8 +813,7 @@ The AuthorizationRoles resource accepts the following [input]({{< relref "/docs/
         <span class="property-type">int</span>
     </dt>
     <dd>{{% md %}}The maximum number of concurrent searches a user with this role is allowed to run. For users with multiple roles, the maximum quota value among all of the roles applies.
-{{% /md %}}</dd>
-    <dt class="property-optional"
+{{% /md %}}</dd><dt class="property-optional"
             title="Optional">
         <span id="search_time_win_python">
 <a href="#search_time_win_python" style="color: inherit; text-decoration: inherit;">search_<wbr>time_<wbr>win</a>
@@ -888,8 +822,7 @@ The AuthorizationRoles resource accepts the following [input]({{< relref "/docs/
         <span class="property-type">int</span>
     </dt>
     <dd>{{% md %}}Maximum time span of a search, in seconds. By default, searches are not limited to any specific time window. To override any search time windows from imported roles, set srchTimeWin to '0', as the 'admin' role does.
-{{% /md %}}</dd>
-</dl>
+{{% /md %}}</dd></dl>
 {{% /choosable %}}
 
 
@@ -900,9 +833,7 @@ All [input](#inputs) properties are implicitly available as output properties. A
 
 
 {{% choosable language csharp %}}
-<dl class="resources-properties">
-
-    <dt class="property-"
+<dl class="resources-properties"><dt class="property-"
             title="">
         <span id="id_csharp">
 <a href="#id_csharp" style="color: inherit; text-decoration: inherit;">Id</a>
@@ -910,14 +841,11 @@ All [input](#inputs) properties are implicitly available as output properties. A
         <span class="property-indicator"></span>
         <span class="property-type">string</span>
     </dt>
-    <dd>{{% md %}}The provider-assigned unique ID for this managed resource.{{% /md %}}</dd>
-</dl>
+    <dd>{{% md %}}The provider-assigned unique ID for this managed resource.{{% /md %}}</dd></dl>
 {{% /choosable %}}
 
 {{% choosable language go %}}
-<dl class="resources-properties">
-
-    <dt class="property-"
+<dl class="resources-properties"><dt class="property-"
             title="">
         <span id="id_go">
 <a href="#id_go" style="color: inherit; text-decoration: inherit;">Id</a>
@@ -925,14 +853,11 @@ All [input](#inputs) properties are implicitly available as output properties. A
         <span class="property-indicator"></span>
         <span class="property-type">string</span>
     </dt>
-    <dd>{{% md %}}The provider-assigned unique ID for this managed resource.{{% /md %}}</dd>
-</dl>
+    <dd>{{% md %}}The provider-assigned unique ID for this managed resource.{{% /md %}}</dd></dl>
 {{% /choosable %}}
 
 {{% choosable language nodejs %}}
-<dl class="resources-properties">
-
-    <dt class="property-"
+<dl class="resources-properties"><dt class="property-"
             title="">
         <span id="id_nodejs">
 <a href="#id_nodejs" style="color: inherit; text-decoration: inherit;">id</a>
@@ -940,14 +865,11 @@ All [input](#inputs) properties are implicitly available as output properties. A
         <span class="property-indicator"></span>
         <span class="property-type">string</span>
     </dt>
-    <dd>{{% md %}}The provider-assigned unique ID for this managed resource.{{% /md %}}</dd>
-</dl>
+    <dd>{{% md %}}The provider-assigned unique ID for this managed resource.{{% /md %}}</dd></dl>
 {{% /choosable %}}
 
 {{% choosable language python %}}
-<dl class="resources-properties">
-
-    <dt class="property-"
+<dl class="resources-properties"><dt class="property-"
             title="">
         <span id="id_python">
 <a href="#id_python" style="color: inherit; text-decoration: inherit;">id</a>
@@ -955,8 +877,7 @@ All [input](#inputs) properties are implicitly available as output properties. A
         <span class="property-indicator"></span>
         <span class="property-type">str</span>
     </dt>
-    <dd>{{% md %}}The provider-assigned unique ID for this managed resource.{{% /md %}}</dd>
-</dl>
+    <dd>{{% md %}}The provider-assigned unique ID for this managed resource.{{% /md %}}</dd></dl>
 {{% /choosable %}}
 
 
@@ -1083,9 +1004,7 @@ The following state arguments are supported:
 
 
 {{% choosable language csharp %}}
-<dl class="resources-properties">
-
-    <dt class="property-optional"
+<dl class="resources-properties"><dt class="property-optional"
             title="Optional">
         <span id="state_capabilities_csharp">
 <a href="#state_capabilities_csharp" style="color: inherit; text-decoration: inherit;">Capabilities</a>
@@ -1094,8 +1013,7 @@ The following state arguments are supported:
         <span class="property-type">List&lt;string&gt;</span>
     </dt>
     <dd>{{% md %}}List of capabilities assigned to role.
-{{% /md %}}</dd>
-    <dt class="property-optional"
+{{% /md %}}</dd><dt class="property-optional"
             title="Optional">
         <span id="state_cumulativerealtimesearchjobsquota_csharp">
 <a href="#state_cumulativerealtimesearchjobsquota_csharp" style="color: inherit; text-decoration: inherit;">Cumulative<wbr>Realtime<wbr>Search<wbr>Jobs<wbr>Quota</a>
@@ -1104,8 +1022,7 @@ The following state arguments are supported:
         <span class="property-type">int</span>
     </dt>
     <dd>{{% md %}}Maximum number of concurrently running real-time searches that all members of this role can have.
-{{% /md %}}</dd>
-    <dt class="property-optional"
+{{% /md %}}</dd><dt class="property-optional"
             title="Optional">
         <span id="state_cumulativesearchjobsquota_csharp">
 <a href="#state_cumulativesearchjobsquota_csharp" style="color: inherit; text-decoration: inherit;">Cumulative<wbr>Search<wbr>Jobs<wbr>Quota</a>
@@ -1114,8 +1031,7 @@ The following state arguments are supported:
         <span class="property-type">int</span>
     </dt>
     <dd>{{% md %}}Maximum number of concurrently running searches for all role members. Warning message logged when limit is reached.
-{{% /md %}}</dd>
-    <dt class="property-optional"
+{{% /md %}}</dd><dt class="property-optional"
             title="Optional">
         <span id="state_defaultapp_csharp">
 <a href="#state_defaultapp_csharp" style="color: inherit; text-decoration: inherit;">Default<wbr>App</a>
@@ -1124,8 +1040,7 @@ The following state arguments are supported:
         <span class="property-type">string</span>
     </dt>
     <dd>{{% md %}}Specify the folder name of the default app to use for this role. A user-specific default app overrides this.
-{{% /md %}}</dd>
-    <dt class="property-optional"
+{{% /md %}}</dd><dt class="property-optional"
             title="Optional">
         <span id="state_importedroles_csharp">
 <a href="#state_importedroles_csharp" style="color: inherit; text-decoration: inherit;">Imported<wbr>Roles</a>
@@ -1134,8 +1049,7 @@ The following state arguments are supported:
         <span class="property-type">List&lt;string&gt;</span>
     </dt>
     <dd>{{% md %}}List of imported roles for this role. <br>Importing other roles imports all aspects of that role, such as capabilities and allowed indexes to search. In combining multiple roles, the effective value for each attribute is value with the broadest permissions.
-{{% /md %}}</dd>
-    <dt class="property-optional"
+{{% /md %}}</dd><dt class="property-optional"
             title="Optional">
         <span id="state_name_csharp">
 <a href="#state_name_csharp" style="color: inherit; text-decoration: inherit;">Name</a>
@@ -1144,8 +1058,7 @@ The following state arguments are supported:
         <span class="property-type">string</span>
     </dt>
     <dd>{{% md %}}The name of the user role to create.
-{{% /md %}}</dd>
-    <dt class="property-optional"
+{{% /md %}}</dd><dt class="property-optional"
             title="Optional">
         <span id="state_realtimesearchjobsquota_csharp">
 <a href="#state_realtimesearchjobsquota_csharp" style="color: inherit; text-decoration: inherit;">Realtime<wbr>Search<wbr>Jobs<wbr>Quota</a>
@@ -1154,8 +1067,7 @@ The following state arguments are supported:
         <span class="property-type">int</span>
     </dt>
     <dd>{{% md %}}Specify the maximum number of concurrent real-time search jobs for this role. This count is independent from the normal search jobs limit.
-{{% /md %}}</dd>
-    <dt class="property-optional"
+{{% /md %}}</dd><dt class="property-optional"
             title="Optional">
         <span id="state_searchdiskquota_csharp">
 <a href="#state_searchdiskquota_csharp" style="color: inherit; text-decoration: inherit;">Search<wbr>Disk<wbr>Quota</a>
@@ -1164,8 +1076,7 @@ The following state arguments are supported:
         <span class="property-type">int</span>
     </dt>
     <dd>{{% md %}}Specifies the maximum disk space in MB that can be used by a user's search jobs. For example, a value of 100 limits this role to 100 MB total.
-{{% /md %}}</dd>
-    <dt class="property-optional"
+{{% /md %}}</dd><dt class="property-optional"
             title="Optional">
         <span id="state_searchfilter_csharp">
 <a href="#state_searchfilter_csharp" style="color: inherit; text-decoration: inherit;">Search<wbr>Filter</a>
@@ -1174,8 +1085,7 @@ The following state arguments are supported:
         <span class="property-type">string</span>
     </dt>
     <dd>{{% md %}}Specify a search string that restricts the scope of searches run by this role. Search results for this role only show events that also match the search string you specify. In the case that a user has multiple roles with different search filters, they are combined with an OR.
-{{% /md %}}</dd>
-    <dt class="property-optional"
+{{% /md %}}</dd><dt class="property-optional"
             title="Optional">
         <span id="state_searchindexesalloweds_csharp">
 <a href="#state_searchindexesalloweds_csharp" style="color: inherit; text-decoration: inherit;">Search<wbr>Indexes<wbr>Alloweds</a>
@@ -1184,8 +1094,7 @@ The following state arguments are supported:
         <span class="property-type">List&lt;string&gt;</span>
     </dt>
     <dd>{{% md %}}List of indexes that this role has permissions to search. These may be wildcarded, but the index name must begin with an underscore to match internal indexes.
-{{% /md %}}</dd>
-    <dt class="property-optional"
+{{% /md %}}</dd><dt class="property-optional"
             title="Optional">
         <span id="state_searchindexesdefaults_csharp">
 <a href="#state_searchindexesdefaults_csharp" style="color: inherit; text-decoration: inherit;">Search<wbr>Indexes<wbr>Defaults</a>
@@ -1194,8 +1103,7 @@ The following state arguments are supported:
         <span class="property-type">List&lt;string&gt;</span>
     </dt>
     <dd>{{% md %}}List of indexes to search when no index is specified. These indexes can be wildcarded, with the exception that '*' does not match internal indexes. To match internal indexes, start with '_'. All internal indexes are represented by '_*'. A user with this role can search other indexes using "index= "
-{{% /md %}}</dd>
-    <dt class="property-optional"
+{{% /md %}}</dd><dt class="property-optional"
             title="Optional">
         <span id="state_searchjobsquota_csharp">
 <a href="#state_searchjobsquota_csharp" style="color: inherit; text-decoration: inherit;">Search<wbr>Jobs<wbr>Quota</a>
@@ -1204,8 +1112,7 @@ The following state arguments are supported:
         <span class="property-type">int</span>
     </dt>
     <dd>{{% md %}}The maximum number of concurrent searches a user with this role is allowed to run. For users with multiple roles, the maximum quota value among all of the roles applies.
-{{% /md %}}</dd>
-    <dt class="property-optional"
+{{% /md %}}</dd><dt class="property-optional"
             title="Optional">
         <span id="state_searchtimewin_csharp">
 <a href="#state_searchtimewin_csharp" style="color: inherit; text-decoration: inherit;">Search<wbr>Time<wbr>Win</a>
@@ -1214,14 +1121,11 @@ The following state arguments are supported:
         <span class="property-type">int</span>
     </dt>
     <dd>{{% md %}}Maximum time span of a search, in seconds. By default, searches are not limited to any specific time window. To override any search time windows from imported roles, set srchTimeWin to '0', as the 'admin' role does.
-{{% /md %}}</dd>
-</dl>
+{{% /md %}}</dd></dl>
 {{% /choosable %}}
 
 {{% choosable language go %}}
-<dl class="resources-properties">
-
-    <dt class="property-optional"
+<dl class="resources-properties"><dt class="property-optional"
             title="Optional">
         <span id="state_capabilities_go">
 <a href="#state_capabilities_go" style="color: inherit; text-decoration: inherit;">Capabilities</a>
@@ -1230,8 +1134,7 @@ The following state arguments are supported:
         <span class="property-type">[]string</span>
     </dt>
     <dd>{{% md %}}List of capabilities assigned to role.
-{{% /md %}}</dd>
-    <dt class="property-optional"
+{{% /md %}}</dd><dt class="property-optional"
             title="Optional">
         <span id="state_cumulativerealtimesearchjobsquota_go">
 <a href="#state_cumulativerealtimesearchjobsquota_go" style="color: inherit; text-decoration: inherit;">Cumulative<wbr>Realtime<wbr>Search<wbr>Jobs<wbr>Quota</a>
@@ -1240,8 +1143,7 @@ The following state arguments are supported:
         <span class="property-type">int</span>
     </dt>
     <dd>{{% md %}}Maximum number of concurrently running real-time searches that all members of this role can have.
-{{% /md %}}</dd>
-    <dt class="property-optional"
+{{% /md %}}</dd><dt class="property-optional"
             title="Optional">
         <span id="state_cumulativesearchjobsquota_go">
 <a href="#state_cumulativesearchjobsquota_go" style="color: inherit; text-decoration: inherit;">Cumulative<wbr>Search<wbr>Jobs<wbr>Quota</a>
@@ -1250,8 +1152,7 @@ The following state arguments are supported:
         <span class="property-type">int</span>
     </dt>
     <dd>{{% md %}}Maximum number of concurrently running searches for all role members. Warning message logged when limit is reached.
-{{% /md %}}</dd>
-    <dt class="property-optional"
+{{% /md %}}</dd><dt class="property-optional"
             title="Optional">
         <span id="state_defaultapp_go">
 <a href="#state_defaultapp_go" style="color: inherit; text-decoration: inherit;">Default<wbr>App</a>
@@ -1260,8 +1161,7 @@ The following state arguments are supported:
         <span class="property-type">string</span>
     </dt>
     <dd>{{% md %}}Specify the folder name of the default app to use for this role. A user-specific default app overrides this.
-{{% /md %}}</dd>
-    <dt class="property-optional"
+{{% /md %}}</dd><dt class="property-optional"
             title="Optional">
         <span id="state_importedroles_go">
 <a href="#state_importedroles_go" style="color: inherit; text-decoration: inherit;">Imported<wbr>Roles</a>
@@ -1270,8 +1170,7 @@ The following state arguments are supported:
         <span class="property-type">[]string</span>
     </dt>
     <dd>{{% md %}}List of imported roles for this role. <br>Importing other roles imports all aspects of that role, such as capabilities and allowed indexes to search. In combining multiple roles, the effective value for each attribute is value with the broadest permissions.
-{{% /md %}}</dd>
-    <dt class="property-optional"
+{{% /md %}}</dd><dt class="property-optional"
             title="Optional">
         <span id="state_name_go">
 <a href="#state_name_go" style="color: inherit; text-decoration: inherit;">Name</a>
@@ -1280,8 +1179,7 @@ The following state arguments are supported:
         <span class="property-type">string</span>
     </dt>
     <dd>{{% md %}}The name of the user role to create.
-{{% /md %}}</dd>
-    <dt class="property-optional"
+{{% /md %}}</dd><dt class="property-optional"
             title="Optional">
         <span id="state_realtimesearchjobsquota_go">
 <a href="#state_realtimesearchjobsquota_go" style="color: inherit; text-decoration: inherit;">Realtime<wbr>Search<wbr>Jobs<wbr>Quota</a>
@@ -1290,8 +1188,7 @@ The following state arguments are supported:
         <span class="property-type">int</span>
     </dt>
     <dd>{{% md %}}Specify the maximum number of concurrent real-time search jobs for this role. This count is independent from the normal search jobs limit.
-{{% /md %}}</dd>
-    <dt class="property-optional"
+{{% /md %}}</dd><dt class="property-optional"
             title="Optional">
         <span id="state_searchdiskquota_go">
 <a href="#state_searchdiskquota_go" style="color: inherit; text-decoration: inherit;">Search<wbr>Disk<wbr>Quota</a>
@@ -1300,8 +1197,7 @@ The following state arguments are supported:
         <span class="property-type">int</span>
     </dt>
     <dd>{{% md %}}Specifies the maximum disk space in MB that can be used by a user's search jobs. For example, a value of 100 limits this role to 100 MB total.
-{{% /md %}}</dd>
-    <dt class="property-optional"
+{{% /md %}}</dd><dt class="property-optional"
             title="Optional">
         <span id="state_searchfilter_go">
 <a href="#state_searchfilter_go" style="color: inherit; text-decoration: inherit;">Search<wbr>Filter</a>
@@ -1310,8 +1206,7 @@ The following state arguments are supported:
         <span class="property-type">string</span>
     </dt>
     <dd>{{% md %}}Specify a search string that restricts the scope of searches run by this role. Search results for this role only show events that also match the search string you specify. In the case that a user has multiple roles with different search filters, they are combined with an OR.
-{{% /md %}}</dd>
-    <dt class="property-optional"
+{{% /md %}}</dd><dt class="property-optional"
             title="Optional">
         <span id="state_searchindexesalloweds_go">
 <a href="#state_searchindexesalloweds_go" style="color: inherit; text-decoration: inherit;">Search<wbr>Indexes<wbr>Alloweds</a>
@@ -1320,8 +1215,7 @@ The following state arguments are supported:
         <span class="property-type">[]string</span>
     </dt>
     <dd>{{% md %}}List of indexes that this role has permissions to search. These may be wildcarded, but the index name must begin with an underscore to match internal indexes.
-{{% /md %}}</dd>
-    <dt class="property-optional"
+{{% /md %}}</dd><dt class="property-optional"
             title="Optional">
         <span id="state_searchindexesdefaults_go">
 <a href="#state_searchindexesdefaults_go" style="color: inherit; text-decoration: inherit;">Search<wbr>Indexes<wbr>Defaults</a>
@@ -1330,8 +1224,7 @@ The following state arguments are supported:
         <span class="property-type">[]string</span>
     </dt>
     <dd>{{% md %}}List of indexes to search when no index is specified. These indexes can be wildcarded, with the exception that '*' does not match internal indexes. To match internal indexes, start with '_'. All internal indexes are represented by '_*'. A user with this role can search other indexes using "index= "
-{{% /md %}}</dd>
-    <dt class="property-optional"
+{{% /md %}}</dd><dt class="property-optional"
             title="Optional">
         <span id="state_searchjobsquota_go">
 <a href="#state_searchjobsquota_go" style="color: inherit; text-decoration: inherit;">Search<wbr>Jobs<wbr>Quota</a>
@@ -1340,8 +1233,7 @@ The following state arguments are supported:
         <span class="property-type">int</span>
     </dt>
     <dd>{{% md %}}The maximum number of concurrent searches a user with this role is allowed to run. For users with multiple roles, the maximum quota value among all of the roles applies.
-{{% /md %}}</dd>
-    <dt class="property-optional"
+{{% /md %}}</dd><dt class="property-optional"
             title="Optional">
         <span id="state_searchtimewin_go">
 <a href="#state_searchtimewin_go" style="color: inherit; text-decoration: inherit;">Search<wbr>Time<wbr>Win</a>
@@ -1350,14 +1242,11 @@ The following state arguments are supported:
         <span class="property-type">int</span>
     </dt>
     <dd>{{% md %}}Maximum time span of a search, in seconds. By default, searches are not limited to any specific time window. To override any search time windows from imported roles, set srchTimeWin to '0', as the 'admin' role does.
-{{% /md %}}</dd>
-</dl>
+{{% /md %}}</dd></dl>
 {{% /choosable %}}
 
 {{% choosable language nodejs %}}
-<dl class="resources-properties">
-
-    <dt class="property-optional"
+<dl class="resources-properties"><dt class="property-optional"
             title="Optional">
         <span id="state_capabilities_nodejs">
 <a href="#state_capabilities_nodejs" style="color: inherit; text-decoration: inherit;">capabilities</a>
@@ -1366,8 +1255,7 @@ The following state arguments are supported:
         <span class="property-type">string[]</span>
     </dt>
     <dd>{{% md %}}List of capabilities assigned to role.
-{{% /md %}}</dd>
-    <dt class="property-optional"
+{{% /md %}}</dd><dt class="property-optional"
             title="Optional">
         <span id="state_cumulativerealtimesearchjobsquota_nodejs">
 <a href="#state_cumulativerealtimesearchjobsquota_nodejs" style="color: inherit; text-decoration: inherit;">cumulative<wbr>Realtime<wbr>Search<wbr>Jobs<wbr>Quota</a>
@@ -1376,8 +1264,7 @@ The following state arguments are supported:
         <span class="property-type">number</span>
     </dt>
     <dd>{{% md %}}Maximum number of concurrently running real-time searches that all members of this role can have.
-{{% /md %}}</dd>
-    <dt class="property-optional"
+{{% /md %}}</dd><dt class="property-optional"
             title="Optional">
         <span id="state_cumulativesearchjobsquota_nodejs">
 <a href="#state_cumulativesearchjobsquota_nodejs" style="color: inherit; text-decoration: inherit;">cumulative<wbr>Search<wbr>Jobs<wbr>Quota</a>
@@ -1386,8 +1273,7 @@ The following state arguments are supported:
         <span class="property-type">number</span>
     </dt>
     <dd>{{% md %}}Maximum number of concurrently running searches for all role members. Warning message logged when limit is reached.
-{{% /md %}}</dd>
-    <dt class="property-optional"
+{{% /md %}}</dd><dt class="property-optional"
             title="Optional">
         <span id="state_defaultapp_nodejs">
 <a href="#state_defaultapp_nodejs" style="color: inherit; text-decoration: inherit;">default<wbr>App</a>
@@ -1396,8 +1282,7 @@ The following state arguments are supported:
         <span class="property-type">string</span>
     </dt>
     <dd>{{% md %}}Specify the folder name of the default app to use for this role. A user-specific default app overrides this.
-{{% /md %}}</dd>
-    <dt class="property-optional"
+{{% /md %}}</dd><dt class="property-optional"
             title="Optional">
         <span id="state_importedroles_nodejs">
 <a href="#state_importedroles_nodejs" style="color: inherit; text-decoration: inherit;">imported<wbr>Roles</a>
@@ -1406,8 +1291,7 @@ The following state arguments are supported:
         <span class="property-type">string[]</span>
     </dt>
     <dd>{{% md %}}List of imported roles for this role. <br>Importing other roles imports all aspects of that role, such as capabilities and allowed indexes to search. In combining multiple roles, the effective value for each attribute is value with the broadest permissions.
-{{% /md %}}</dd>
-    <dt class="property-optional"
+{{% /md %}}</dd><dt class="property-optional"
             title="Optional">
         <span id="state_name_nodejs">
 <a href="#state_name_nodejs" style="color: inherit; text-decoration: inherit;">name</a>
@@ -1416,8 +1300,7 @@ The following state arguments are supported:
         <span class="property-type">string</span>
     </dt>
     <dd>{{% md %}}The name of the user role to create.
-{{% /md %}}</dd>
-    <dt class="property-optional"
+{{% /md %}}</dd><dt class="property-optional"
             title="Optional">
         <span id="state_realtimesearchjobsquota_nodejs">
 <a href="#state_realtimesearchjobsquota_nodejs" style="color: inherit; text-decoration: inherit;">realtime<wbr>Search<wbr>Jobs<wbr>Quota</a>
@@ -1426,8 +1309,7 @@ The following state arguments are supported:
         <span class="property-type">number</span>
     </dt>
     <dd>{{% md %}}Specify the maximum number of concurrent real-time search jobs for this role. This count is independent from the normal search jobs limit.
-{{% /md %}}</dd>
-    <dt class="property-optional"
+{{% /md %}}</dd><dt class="property-optional"
             title="Optional">
         <span id="state_searchdiskquota_nodejs">
 <a href="#state_searchdiskquota_nodejs" style="color: inherit; text-decoration: inherit;">search<wbr>Disk<wbr>Quota</a>
@@ -1436,8 +1318,7 @@ The following state arguments are supported:
         <span class="property-type">number</span>
     </dt>
     <dd>{{% md %}}Specifies the maximum disk space in MB that can be used by a user's search jobs. For example, a value of 100 limits this role to 100 MB total.
-{{% /md %}}</dd>
-    <dt class="property-optional"
+{{% /md %}}</dd><dt class="property-optional"
             title="Optional">
         <span id="state_searchfilter_nodejs">
 <a href="#state_searchfilter_nodejs" style="color: inherit; text-decoration: inherit;">search<wbr>Filter</a>
@@ -1446,8 +1327,7 @@ The following state arguments are supported:
         <span class="property-type">string</span>
     </dt>
     <dd>{{% md %}}Specify a search string that restricts the scope of searches run by this role. Search results for this role only show events that also match the search string you specify. In the case that a user has multiple roles with different search filters, they are combined with an OR.
-{{% /md %}}</dd>
-    <dt class="property-optional"
+{{% /md %}}</dd><dt class="property-optional"
             title="Optional">
         <span id="state_searchindexesalloweds_nodejs">
 <a href="#state_searchindexesalloweds_nodejs" style="color: inherit; text-decoration: inherit;">search<wbr>Indexes<wbr>Alloweds</a>
@@ -1456,8 +1336,7 @@ The following state arguments are supported:
         <span class="property-type">string[]</span>
     </dt>
     <dd>{{% md %}}List of indexes that this role has permissions to search. These may be wildcarded, but the index name must begin with an underscore to match internal indexes.
-{{% /md %}}</dd>
-    <dt class="property-optional"
+{{% /md %}}</dd><dt class="property-optional"
             title="Optional">
         <span id="state_searchindexesdefaults_nodejs">
 <a href="#state_searchindexesdefaults_nodejs" style="color: inherit; text-decoration: inherit;">search<wbr>Indexes<wbr>Defaults</a>
@@ -1466,8 +1345,7 @@ The following state arguments are supported:
         <span class="property-type">string[]</span>
     </dt>
     <dd>{{% md %}}List of indexes to search when no index is specified. These indexes can be wildcarded, with the exception that '*' does not match internal indexes. To match internal indexes, start with '_'. All internal indexes are represented by '_*'. A user with this role can search other indexes using "index= "
-{{% /md %}}</dd>
-    <dt class="property-optional"
+{{% /md %}}</dd><dt class="property-optional"
             title="Optional">
         <span id="state_searchjobsquota_nodejs">
 <a href="#state_searchjobsquota_nodejs" style="color: inherit; text-decoration: inherit;">search<wbr>Jobs<wbr>Quota</a>
@@ -1476,8 +1354,7 @@ The following state arguments are supported:
         <span class="property-type">number</span>
     </dt>
     <dd>{{% md %}}The maximum number of concurrent searches a user with this role is allowed to run. For users with multiple roles, the maximum quota value among all of the roles applies.
-{{% /md %}}</dd>
-    <dt class="property-optional"
+{{% /md %}}</dd><dt class="property-optional"
             title="Optional">
         <span id="state_searchtimewin_nodejs">
 <a href="#state_searchtimewin_nodejs" style="color: inherit; text-decoration: inherit;">search<wbr>Time<wbr>Win</a>
@@ -1486,14 +1363,11 @@ The following state arguments are supported:
         <span class="property-type">number</span>
     </dt>
     <dd>{{% md %}}Maximum time span of a search, in seconds. By default, searches are not limited to any specific time window. To override any search time windows from imported roles, set srchTimeWin to '0', as the 'admin' role does.
-{{% /md %}}</dd>
-</dl>
+{{% /md %}}</dd></dl>
 {{% /choosable %}}
 
 {{% choosable language python %}}
-<dl class="resources-properties">
-
-    <dt class="property-optional"
+<dl class="resources-properties"><dt class="property-optional"
             title="Optional">
         <span id="state_capabilities_python">
 <a href="#state_capabilities_python" style="color: inherit; text-decoration: inherit;">capabilities</a>
@@ -1502,8 +1376,7 @@ The following state arguments are supported:
         <span class="property-type">Sequence[str]</span>
     </dt>
     <dd>{{% md %}}List of capabilities assigned to role.
-{{% /md %}}</dd>
-    <dt class="property-optional"
+{{% /md %}}</dd><dt class="property-optional"
             title="Optional">
         <span id="state_cumulative_realtime_search_jobs_quota_python">
 <a href="#state_cumulative_realtime_search_jobs_quota_python" style="color: inherit; text-decoration: inherit;">cumulative_<wbr>realtime_<wbr>search_<wbr>jobs_<wbr>quota</a>
@@ -1512,8 +1385,7 @@ The following state arguments are supported:
         <span class="property-type">int</span>
     </dt>
     <dd>{{% md %}}Maximum number of concurrently running real-time searches that all members of this role can have.
-{{% /md %}}</dd>
-    <dt class="property-optional"
+{{% /md %}}</dd><dt class="property-optional"
             title="Optional">
         <span id="state_cumulative_search_jobs_quota_python">
 <a href="#state_cumulative_search_jobs_quota_python" style="color: inherit; text-decoration: inherit;">cumulative_<wbr>search_<wbr>jobs_<wbr>quota</a>
@@ -1522,8 +1394,7 @@ The following state arguments are supported:
         <span class="property-type">int</span>
     </dt>
     <dd>{{% md %}}Maximum number of concurrently running searches for all role members. Warning message logged when limit is reached.
-{{% /md %}}</dd>
-    <dt class="property-optional"
+{{% /md %}}</dd><dt class="property-optional"
             title="Optional">
         <span id="state_default_app_python">
 <a href="#state_default_app_python" style="color: inherit; text-decoration: inherit;">default_<wbr>app</a>
@@ -1532,8 +1403,7 @@ The following state arguments are supported:
         <span class="property-type">str</span>
     </dt>
     <dd>{{% md %}}Specify the folder name of the default app to use for this role. A user-specific default app overrides this.
-{{% /md %}}</dd>
-    <dt class="property-optional"
+{{% /md %}}</dd><dt class="property-optional"
             title="Optional">
         <span id="state_imported_roles_python">
 <a href="#state_imported_roles_python" style="color: inherit; text-decoration: inherit;">imported_<wbr>roles</a>
@@ -1542,8 +1412,7 @@ The following state arguments are supported:
         <span class="property-type">Sequence[str]</span>
     </dt>
     <dd>{{% md %}}List of imported roles for this role. <br>Importing other roles imports all aspects of that role, such as capabilities and allowed indexes to search. In combining multiple roles, the effective value for each attribute is value with the broadest permissions.
-{{% /md %}}</dd>
-    <dt class="property-optional"
+{{% /md %}}</dd><dt class="property-optional"
             title="Optional">
         <span id="state_name_python">
 <a href="#state_name_python" style="color: inherit; text-decoration: inherit;">name</a>
@@ -1552,8 +1421,7 @@ The following state arguments are supported:
         <span class="property-type">str</span>
     </dt>
     <dd>{{% md %}}The name of the user role to create.
-{{% /md %}}</dd>
-    <dt class="property-optional"
+{{% /md %}}</dd><dt class="property-optional"
             title="Optional">
         <span id="state_realtime_search_jobs_quota_python">
 <a href="#state_realtime_search_jobs_quota_python" style="color: inherit; text-decoration: inherit;">realtime_<wbr>search_<wbr>jobs_<wbr>quota</a>
@@ -1562,8 +1430,7 @@ The following state arguments are supported:
         <span class="property-type">int</span>
     </dt>
     <dd>{{% md %}}Specify the maximum number of concurrent real-time search jobs for this role. This count is independent from the normal search jobs limit.
-{{% /md %}}</dd>
-    <dt class="property-optional"
+{{% /md %}}</dd><dt class="property-optional"
             title="Optional">
         <span id="state_search_disk_quota_python">
 <a href="#state_search_disk_quota_python" style="color: inherit; text-decoration: inherit;">search_<wbr>disk_<wbr>quota</a>
@@ -1572,8 +1439,7 @@ The following state arguments are supported:
         <span class="property-type">int</span>
     </dt>
     <dd>{{% md %}}Specifies the maximum disk space in MB that can be used by a user's search jobs. For example, a value of 100 limits this role to 100 MB total.
-{{% /md %}}</dd>
-    <dt class="property-optional"
+{{% /md %}}</dd><dt class="property-optional"
             title="Optional">
         <span id="state_search_filter_python">
 <a href="#state_search_filter_python" style="color: inherit; text-decoration: inherit;">search_<wbr>filter</a>
@@ -1582,8 +1448,7 @@ The following state arguments are supported:
         <span class="property-type">str</span>
     </dt>
     <dd>{{% md %}}Specify a search string that restricts the scope of searches run by this role. Search results for this role only show events that also match the search string you specify. In the case that a user has multiple roles with different search filters, they are combined with an OR.
-{{% /md %}}</dd>
-    <dt class="property-optional"
+{{% /md %}}</dd><dt class="property-optional"
             title="Optional">
         <span id="state_search_indexes_alloweds_python">
 <a href="#state_search_indexes_alloweds_python" style="color: inherit; text-decoration: inherit;">search_<wbr>indexes_<wbr>alloweds</a>
@@ -1592,8 +1457,7 @@ The following state arguments are supported:
         <span class="property-type">Sequence[str]</span>
     </dt>
     <dd>{{% md %}}List of indexes that this role has permissions to search. These may be wildcarded, but the index name must begin with an underscore to match internal indexes.
-{{% /md %}}</dd>
-    <dt class="property-optional"
+{{% /md %}}</dd><dt class="property-optional"
             title="Optional">
         <span id="state_search_indexes_defaults_python">
 <a href="#state_search_indexes_defaults_python" style="color: inherit; text-decoration: inherit;">search_<wbr>indexes_<wbr>defaults</a>
@@ -1602,8 +1466,7 @@ The following state arguments are supported:
         <span class="property-type">Sequence[str]</span>
     </dt>
     <dd>{{% md %}}List of indexes to search when no index is specified. These indexes can be wildcarded, with the exception that '*' does not match internal indexes. To match internal indexes, start with '_'. All internal indexes are represented by '_*'. A user with this role can search other indexes using "index= "
-{{% /md %}}</dd>
-    <dt class="property-optional"
+{{% /md %}}</dd><dt class="property-optional"
             title="Optional">
         <span id="state_search_jobs_quota_python">
 <a href="#state_search_jobs_quota_python" style="color: inherit; text-decoration: inherit;">search_<wbr>jobs_<wbr>quota</a>
@@ -1612,8 +1475,7 @@ The following state arguments are supported:
         <span class="property-type">int</span>
     </dt>
     <dd>{{% md %}}The maximum number of concurrent searches a user with this role is allowed to run. For users with multiple roles, the maximum quota value among all of the roles applies.
-{{% /md %}}</dd>
-    <dt class="property-optional"
+{{% /md %}}</dd><dt class="property-optional"
             title="Optional">
         <span id="state_search_time_win_python">
 <a href="#state_search_time_win_python" style="color: inherit; text-decoration: inherit;">search_<wbr>time_<wbr>win</a>
@@ -1622,8 +1484,7 @@ The following state arguments are supported:
         <span class="property-type">int</span>
     </dt>
     <dd>{{% md %}}Maximum time span of a search, in seconds. By default, searches are not limited to any specific time window. To override any search time windows from imported roles, set srchTimeWin to '0', as the 'admin' role does.
-{{% /md %}}</dd>
-</dl>
+{{% /md %}}</dd></dl>
 {{% /choosable %}}
 
 
@@ -1639,6 +1500,6 @@ The following state arguments are supported:
 	<dt>License</dt>
 	<dd>Apache-2.0</dd>
 	<dt>Notes</dt>
-	<dd>This Pulumi package is based on the [`splunk` Terraform Provider](https://github.com/splunk/terraform-provider-splunk).</dd>
+	<dd>{{% md %}}This Pulumi package is based on the [`splunk` Terraform Provider](https://github.com/splunk/terraform-provider-splunk).{{% /md %}}</dd>
 </dl>
 

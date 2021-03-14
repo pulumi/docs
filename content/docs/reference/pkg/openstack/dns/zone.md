@@ -13,11 +13,17 @@ meta_desc: "Documentation for the openstack.dns.Zone resource with examples, inp
 Manages a DNS zone in the OpenStack DNS Service.
 
 {{% examples %}}
+
 ## Example Usage
 
 {{< chooser language "typescript,python,go,csharp" / >}}
+
+
 ### Automatically detect the correct network
-{{% example csharp %}}
+
+
+{{< example csharp >}}
+
 ```csharp
 using Pulumi;
 using OpenStack = Pulumi.OpenStack;
@@ -38,9 +44,12 @@ class MyStack : Stack
 }
 ```
 
-{{% /example %}}
 
-{{% example go %}}
+{{< /example >}}
+
+
+{{< example go >}}
+
 ```go
 package main
 
@@ -65,9 +74,12 @@ func main() {
 }
 ```
 
-{{% /example %}}
 
-{{% example python %}}
+{{< /example >}}
+
+
+{{< example python >}}
+
 ```python
 import pulumi
 import pulumi_openstack as openstack
@@ -79,9 +91,12 @@ example_com = openstack.dns.Zone("example.com",
     type="PRIMARY")
 ```
 
-{{% /example %}}
 
-{{% example typescript %}}
+{{< /example >}}
+
+
+{{< example typescript >}}
+
 
 ```typescript
 import * as pulumi from "@pulumi/pulumi";
@@ -95,9 +110,16 @@ const example_com = new openstack.dns.Zone("example.com", {
 });
 ```
 
-{{% /example %}}
+
+{{< /example >}}
+
+
+
+
 
 {{% /examples %}}
+
+
 
 
 ## Create a Zone Resource {#create}
@@ -122,9 +144,7 @@ const example_com = new openstack.dns.Zone("example.com", {
 
 {{% choosable language nodejs %}}
 
-<dl class="resources-properties">
-  
-    <dt
+<dl class="resources-properties"><dt
         class="property-required" title="Required">
         <span>name</span>
         <span class="property-indicator"></span>
@@ -132,9 +152,7 @@ const example_com = new openstack.dns.Zone("example.com", {
     </dt>
     <dd>
       The unique name of the resource.
-    </dd>
-  
-    <dt
+    </dd><dt
         class="property-optional" title="Optional">
         <span>args</span>
         <span class="property-indicator"></span>
@@ -142,9 +160,7 @@ const example_com = new openstack.dns.Zone("example.com", {
     </dt>
     <dd>
       The arguments to resource properties.
-    </dd>
-  
-    <dt
+    </dd><dt
         class="property-optional" title="Optional">
         <span>opts</span>
         <span class="property-indicator"></span>
@@ -152,10 +168,7 @@ const example_com = new openstack.dns.Zone("example.com", {
     </dt>
     <dd>
       Bag of options to control resource&#39;s behavior.
-    </dd>
-  
-
-</dl>
+    </dd></dl>
 
 {{% /choosable %}}
 
@@ -181,9 +194,7 @@ const example_com = new openstack.dns.Zone("example.com", {
 
 {{% choosable language go %}}
 
-<dl class="resources-properties">
-  
-    <dt
+<dl class="resources-properties"><dt
         class="property-optional" title="Optional">
         <span>ctx</span>
         <span class="property-indicator"></span>
@@ -191,9 +202,7 @@ const example_com = new openstack.dns.Zone("example.com", {
     </dt>
     <dd>
       Context object for the current deployment.
-    </dd>
-  
-    <dt
+    </dd><dt
         class="property-required" title="Required">
         <span>name</span>
         <span class="property-indicator"></span>
@@ -201,9 +210,7 @@ const example_com = new openstack.dns.Zone("example.com", {
     </dt>
     <dd>
       The unique name of the resource.
-    </dd>
-  
-    <dt
+    </dd><dt
         class="property-optional" title="Optional">
         <span>args</span>
         <span class="property-indicator"></span>
@@ -211,9 +218,7 @@ const example_com = new openstack.dns.Zone("example.com", {
     </dt>
     <dd>
       The arguments to resource properties.
-    </dd>
-  
-    <dt
+    </dd><dt
         class="property-optional" title="Optional">
         <span>opts</span>
         <span class="property-indicator"></span>
@@ -221,18 +226,13 @@ const example_com = new openstack.dns.Zone("example.com", {
     </dt>
     <dd>
       Bag of options to control resource&#39;s behavior.
-    </dd>
-  
-
-</dl>
+    </dd></dl>
 
 {{% /choosable %}}
 
 {{% choosable language csharp %}}
 
-<dl class="resources-properties">
-  
-    <dt
+<dl class="resources-properties"><dt
         class="property-required" title="Required">
         <span>name</span>
         <span class="property-indicator"></span>
@@ -240,9 +240,7 @@ const example_com = new openstack.dns.Zone("example.com", {
     </dt>
     <dd>
       The unique name of the resource.
-    </dd>
-  
-    <dt
+    </dd><dt
         class="property-optional" title="Optional">
         <span>args</span>
         <span class="property-indicator"></span>
@@ -250,9 +248,7 @@ const example_com = new openstack.dns.Zone("example.com", {
     </dt>
     <dd>
       The arguments to resource properties.
-    </dd>
-  
-    <dt
+    </dd><dt
         class="property-optional" title="Optional">
         <span>opts</span>
         <span class="property-indicator"></span>
@@ -260,10 +256,7 @@ const example_com = new openstack.dns.Zone("example.com", {
     </dt>
     <dd>
       Bag of options to control resource&#39;s behavior.
-    </dd>
-  
-
-</dl>
+    </dd></dl>
 
 {{% /choosable %}}
 
@@ -278,9 +271,7 @@ The Zone resource accepts the following [input]({{< relref "/docs/intro/concepts
 
 
 {{% choosable language csharp %}}
-<dl class="resources-properties">
-
-    <dt class="property-optional"
+<dl class="resources-properties"><dt class="property-optional"
             title="Optional">
         <span id="attributes_csharp">
 <a href="#attributes_csharp" style="color: inherit; text-decoration: inherit;">Attributes</a>
@@ -290,8 +281,7 @@ The Zone resource accepts the following [input]({{< relref "/docs/intro/concepts
     </dt>
     <dd>{{% md %}}Attributes for the DNS Service scheduler.
 Changing this creates a new zone.
-{{% /md %}}</dd>
-    <dt class="property-optional"
+{{% /md %}}</dd><dt class="property-optional"
             title="Optional">
         <span id="description_csharp">
 <a href="#description_csharp" style="color: inherit; text-decoration: inherit;">Description</a>
@@ -300,8 +290,7 @@ Changing this creates a new zone.
         <span class="property-type">string</span>
     </dt>
     <dd>{{% md %}}A description of the zone.
-{{% /md %}}</dd>
-    <dt class="property-optional"
+{{% /md %}}</dd><dt class="property-optional"
             title="Optional">
         <span id="disablestatuscheck_csharp">
 <a href="#disablestatuscheck_csharp" style="color: inherit; text-decoration: inherit;">Disable<wbr>Status<wbr>Check</a>
@@ -312,8 +301,7 @@ Changing this creates a new zone.
     <dd>{{% md %}}Disable wait for zone to reach ACTIVE
 status. The check is enabled by default. If this argument is true, zone
 will be considered as created/updated if OpenStack request returned success.
-{{% /md %}}</dd>
-    <dt class="property-optional"
+{{% /md %}}</dd><dt class="property-optional"
             title="Optional">
         <span id="email_csharp">
 <a href="#email_csharp" style="color: inherit; text-decoration: inherit;">Email</a>
@@ -322,8 +310,7 @@ will be considered as created/updated if OpenStack request returned success.
         <span class="property-type">string</span>
     </dt>
     <dd>{{% md %}}The email contact for the zone record.
-{{% /md %}}</dd>
-    <dt class="property-optional"
+{{% /md %}}</dd><dt class="property-optional"
             title="Optional">
         <span id="masters_csharp">
 <a href="#masters_csharp" style="color: inherit; text-decoration: inherit;">Masters</a>
@@ -333,8 +320,7 @@ will be considered as created/updated if OpenStack request returned success.
     </dt>
     <dd>{{% md %}}An array of master DNS servers. For when `type` is
 `SECONDARY`.
-{{% /md %}}</dd>
-    <dt class="property-optional"
+{{% /md %}}</dd><dt class="property-optional"
             title="Optional">
         <span id="name_csharp">
 <a href="#name_csharp" style="color: inherit; text-decoration: inherit;">Name</a>
@@ -344,8 +330,7 @@ will be considered as created/updated if OpenStack request returned success.
     </dt>
     <dd>{{% md %}}The name of the zone. Note the `.` at the end of the name.
 Changing this creates a new DNS zone.
-{{% /md %}}</dd>
-    <dt class="property-optional"
+{{% /md %}}</dd><dt class="property-optional"
             title="Optional">
         <span id="projectid_csharp">
 <a href="#projectid_csharp" style="color: inherit; text-decoration: inherit;">Project<wbr>Id</a>
@@ -356,8 +341,7 @@ Changing this creates a new DNS zone.
     <dd>{{% md %}}The ID of the project DNS zone is created
 for, sets `X-Auth-Sudo-Tenant-ID` header (requires an assigned
 user role in target project)
-{{% /md %}}</dd>
-    <dt class="property-optional"
+{{% /md %}}</dd><dt class="property-optional"
             title="Optional">
         <span id="region_csharp">
 <a href="#region_csharp" style="color: inherit; text-decoration: inherit;">Region</a>
@@ -369,8 +353,7 @@ user role in target project)
 Keypairs are associated with accounts, but a Compute client is needed to
 create one. If omitted, the `region` argument of the provider is used.
 Changing this creates a new DNS zone.
-{{% /md %}}</dd>
-    <dt class="property-optional"
+{{% /md %}}</dd><dt class="property-optional"
             title="Optional">
         <span id="ttl_csharp">
 <a href="#ttl_csharp" style="color: inherit; text-decoration: inherit;">Ttl</a>
@@ -379,8 +362,7 @@ Changing this creates a new DNS zone.
         <span class="property-type">int</span>
     </dt>
     <dd>{{% md %}}The time to live (TTL) of the zone.
-{{% /md %}}</dd>
-    <dt class="property-optional"
+{{% /md %}}</dd><dt class="property-optional"
             title="Optional">
         <span id="type_csharp">
 <a href="#type_csharp" style="color: inherit; text-decoration: inherit;">Type</a>
@@ -390,8 +372,7 @@ Changing this creates a new DNS zone.
     </dt>
     <dd>{{% md %}}The type of zone. Can either be `PRIMARY` or `SECONDARY`.
 Changing this creates a new zone.
-{{% /md %}}</dd>
-    <dt class="property-optional"
+{{% /md %}}</dd><dt class="property-optional"
             title="Optional">
         <span id="valuespecs_csharp">
 <a href="#valuespecs_csharp" style="color: inherit; text-decoration: inherit;">Value<wbr>Specs</a>
@@ -401,14 +382,11 @@ Changing this creates a new zone.
     </dt>
     <dd>{{% md %}}Map of additional options. Changing this creates a
 new zone.
-{{% /md %}}</dd>
-</dl>
+{{% /md %}}</dd></dl>
 {{% /choosable %}}
 
 {{% choosable language go %}}
-<dl class="resources-properties">
-
-    <dt class="property-optional"
+<dl class="resources-properties"><dt class="property-optional"
             title="Optional">
         <span id="attributes_go">
 <a href="#attributes_go" style="color: inherit; text-decoration: inherit;">Attributes</a>
@@ -418,8 +396,7 @@ new zone.
     </dt>
     <dd>{{% md %}}Attributes for the DNS Service scheduler.
 Changing this creates a new zone.
-{{% /md %}}</dd>
-    <dt class="property-optional"
+{{% /md %}}</dd><dt class="property-optional"
             title="Optional">
         <span id="description_go">
 <a href="#description_go" style="color: inherit; text-decoration: inherit;">Description</a>
@@ -428,8 +405,7 @@ Changing this creates a new zone.
         <span class="property-type">string</span>
     </dt>
     <dd>{{% md %}}A description of the zone.
-{{% /md %}}</dd>
-    <dt class="property-optional"
+{{% /md %}}</dd><dt class="property-optional"
             title="Optional">
         <span id="disablestatuscheck_go">
 <a href="#disablestatuscheck_go" style="color: inherit; text-decoration: inherit;">Disable<wbr>Status<wbr>Check</a>
@@ -440,8 +416,7 @@ Changing this creates a new zone.
     <dd>{{% md %}}Disable wait for zone to reach ACTIVE
 status. The check is enabled by default. If this argument is true, zone
 will be considered as created/updated if OpenStack request returned success.
-{{% /md %}}</dd>
-    <dt class="property-optional"
+{{% /md %}}</dd><dt class="property-optional"
             title="Optional">
         <span id="email_go">
 <a href="#email_go" style="color: inherit; text-decoration: inherit;">Email</a>
@@ -450,8 +425,7 @@ will be considered as created/updated if OpenStack request returned success.
         <span class="property-type">string</span>
     </dt>
     <dd>{{% md %}}The email contact for the zone record.
-{{% /md %}}</dd>
-    <dt class="property-optional"
+{{% /md %}}</dd><dt class="property-optional"
             title="Optional">
         <span id="masters_go">
 <a href="#masters_go" style="color: inherit; text-decoration: inherit;">Masters</a>
@@ -461,8 +435,7 @@ will be considered as created/updated if OpenStack request returned success.
     </dt>
     <dd>{{% md %}}An array of master DNS servers. For when `type` is
 `SECONDARY`.
-{{% /md %}}</dd>
-    <dt class="property-optional"
+{{% /md %}}</dd><dt class="property-optional"
             title="Optional">
         <span id="name_go">
 <a href="#name_go" style="color: inherit; text-decoration: inherit;">Name</a>
@@ -472,8 +445,7 @@ will be considered as created/updated if OpenStack request returned success.
     </dt>
     <dd>{{% md %}}The name of the zone. Note the `.` at the end of the name.
 Changing this creates a new DNS zone.
-{{% /md %}}</dd>
-    <dt class="property-optional"
+{{% /md %}}</dd><dt class="property-optional"
             title="Optional">
         <span id="projectid_go">
 <a href="#projectid_go" style="color: inherit; text-decoration: inherit;">Project<wbr>Id</a>
@@ -484,8 +456,7 @@ Changing this creates a new DNS zone.
     <dd>{{% md %}}The ID of the project DNS zone is created
 for, sets `X-Auth-Sudo-Tenant-ID` header (requires an assigned
 user role in target project)
-{{% /md %}}</dd>
-    <dt class="property-optional"
+{{% /md %}}</dd><dt class="property-optional"
             title="Optional">
         <span id="region_go">
 <a href="#region_go" style="color: inherit; text-decoration: inherit;">Region</a>
@@ -497,8 +468,7 @@ user role in target project)
 Keypairs are associated with accounts, but a Compute client is needed to
 create one. If omitted, the `region` argument of the provider is used.
 Changing this creates a new DNS zone.
-{{% /md %}}</dd>
-    <dt class="property-optional"
+{{% /md %}}</dd><dt class="property-optional"
             title="Optional">
         <span id="ttl_go">
 <a href="#ttl_go" style="color: inherit; text-decoration: inherit;">Ttl</a>
@@ -507,8 +477,7 @@ Changing this creates a new DNS zone.
         <span class="property-type">int</span>
     </dt>
     <dd>{{% md %}}The time to live (TTL) of the zone.
-{{% /md %}}</dd>
-    <dt class="property-optional"
+{{% /md %}}</dd><dt class="property-optional"
             title="Optional">
         <span id="type_go">
 <a href="#type_go" style="color: inherit; text-decoration: inherit;">Type</a>
@@ -518,8 +487,7 @@ Changing this creates a new DNS zone.
     </dt>
     <dd>{{% md %}}The type of zone. Can either be `PRIMARY` or `SECONDARY`.
 Changing this creates a new zone.
-{{% /md %}}</dd>
-    <dt class="property-optional"
+{{% /md %}}</dd><dt class="property-optional"
             title="Optional">
         <span id="valuespecs_go">
 <a href="#valuespecs_go" style="color: inherit; text-decoration: inherit;">Value<wbr>Specs</a>
@@ -529,14 +497,11 @@ Changing this creates a new zone.
     </dt>
     <dd>{{% md %}}Map of additional options. Changing this creates a
 new zone.
-{{% /md %}}</dd>
-</dl>
+{{% /md %}}</dd></dl>
 {{% /choosable %}}
 
 {{% choosable language nodejs %}}
-<dl class="resources-properties">
-
-    <dt class="property-optional"
+<dl class="resources-properties"><dt class="property-optional"
             title="Optional">
         <span id="attributes_nodejs">
 <a href="#attributes_nodejs" style="color: inherit; text-decoration: inherit;">attributes</a>
@@ -546,8 +511,7 @@ new zone.
     </dt>
     <dd>{{% md %}}Attributes for the DNS Service scheduler.
 Changing this creates a new zone.
-{{% /md %}}</dd>
-    <dt class="property-optional"
+{{% /md %}}</dd><dt class="property-optional"
             title="Optional">
         <span id="description_nodejs">
 <a href="#description_nodejs" style="color: inherit; text-decoration: inherit;">description</a>
@@ -556,8 +520,7 @@ Changing this creates a new zone.
         <span class="property-type">string</span>
     </dt>
     <dd>{{% md %}}A description of the zone.
-{{% /md %}}</dd>
-    <dt class="property-optional"
+{{% /md %}}</dd><dt class="property-optional"
             title="Optional">
         <span id="disablestatuscheck_nodejs">
 <a href="#disablestatuscheck_nodejs" style="color: inherit; text-decoration: inherit;">disable<wbr>Status<wbr>Check</a>
@@ -568,8 +531,7 @@ Changing this creates a new zone.
     <dd>{{% md %}}Disable wait for zone to reach ACTIVE
 status. The check is enabled by default. If this argument is true, zone
 will be considered as created/updated if OpenStack request returned success.
-{{% /md %}}</dd>
-    <dt class="property-optional"
+{{% /md %}}</dd><dt class="property-optional"
             title="Optional">
         <span id="email_nodejs">
 <a href="#email_nodejs" style="color: inherit; text-decoration: inherit;">email</a>
@@ -578,8 +540,7 @@ will be considered as created/updated if OpenStack request returned success.
         <span class="property-type">string</span>
     </dt>
     <dd>{{% md %}}The email contact for the zone record.
-{{% /md %}}</dd>
-    <dt class="property-optional"
+{{% /md %}}</dd><dt class="property-optional"
             title="Optional">
         <span id="masters_nodejs">
 <a href="#masters_nodejs" style="color: inherit; text-decoration: inherit;">masters</a>
@@ -589,8 +550,7 @@ will be considered as created/updated if OpenStack request returned success.
     </dt>
     <dd>{{% md %}}An array of master DNS servers. For when `type` is
 `SECONDARY`.
-{{% /md %}}</dd>
-    <dt class="property-optional"
+{{% /md %}}</dd><dt class="property-optional"
             title="Optional">
         <span id="name_nodejs">
 <a href="#name_nodejs" style="color: inherit; text-decoration: inherit;">name</a>
@@ -600,8 +560,7 @@ will be considered as created/updated if OpenStack request returned success.
     </dt>
     <dd>{{% md %}}The name of the zone. Note the `.` at the end of the name.
 Changing this creates a new DNS zone.
-{{% /md %}}</dd>
-    <dt class="property-optional"
+{{% /md %}}</dd><dt class="property-optional"
             title="Optional">
         <span id="projectid_nodejs">
 <a href="#projectid_nodejs" style="color: inherit; text-decoration: inherit;">project<wbr>Id</a>
@@ -612,8 +571,7 @@ Changing this creates a new DNS zone.
     <dd>{{% md %}}The ID of the project DNS zone is created
 for, sets `X-Auth-Sudo-Tenant-ID` header (requires an assigned
 user role in target project)
-{{% /md %}}</dd>
-    <dt class="property-optional"
+{{% /md %}}</dd><dt class="property-optional"
             title="Optional">
         <span id="region_nodejs">
 <a href="#region_nodejs" style="color: inherit; text-decoration: inherit;">region</a>
@@ -625,8 +583,7 @@ user role in target project)
 Keypairs are associated with accounts, but a Compute client is needed to
 create one. If omitted, the `region` argument of the provider is used.
 Changing this creates a new DNS zone.
-{{% /md %}}</dd>
-    <dt class="property-optional"
+{{% /md %}}</dd><dt class="property-optional"
             title="Optional">
         <span id="ttl_nodejs">
 <a href="#ttl_nodejs" style="color: inherit; text-decoration: inherit;">ttl</a>
@@ -635,8 +592,7 @@ Changing this creates a new DNS zone.
         <span class="property-type">number</span>
     </dt>
     <dd>{{% md %}}The time to live (TTL) of the zone.
-{{% /md %}}</dd>
-    <dt class="property-optional"
+{{% /md %}}</dd><dt class="property-optional"
             title="Optional">
         <span id="type_nodejs">
 <a href="#type_nodejs" style="color: inherit; text-decoration: inherit;">type</a>
@@ -646,8 +602,7 @@ Changing this creates a new DNS zone.
     </dt>
     <dd>{{% md %}}The type of zone. Can either be `PRIMARY` or `SECONDARY`.
 Changing this creates a new zone.
-{{% /md %}}</dd>
-    <dt class="property-optional"
+{{% /md %}}</dd><dt class="property-optional"
             title="Optional">
         <span id="valuespecs_nodejs">
 <a href="#valuespecs_nodejs" style="color: inherit; text-decoration: inherit;">value<wbr>Specs</a>
@@ -657,14 +612,11 @@ Changing this creates a new zone.
     </dt>
     <dd>{{% md %}}Map of additional options. Changing this creates a
 new zone.
-{{% /md %}}</dd>
-</dl>
+{{% /md %}}</dd></dl>
 {{% /choosable %}}
 
 {{% choosable language python %}}
-<dl class="resources-properties">
-
-    <dt class="property-optional"
+<dl class="resources-properties"><dt class="property-optional"
             title="Optional">
         <span id="attributes_python">
 <a href="#attributes_python" style="color: inherit; text-decoration: inherit;">attributes</a>
@@ -674,8 +626,7 @@ new zone.
     </dt>
     <dd>{{% md %}}Attributes for the DNS Service scheduler.
 Changing this creates a new zone.
-{{% /md %}}</dd>
-    <dt class="property-optional"
+{{% /md %}}</dd><dt class="property-optional"
             title="Optional">
         <span id="description_python">
 <a href="#description_python" style="color: inherit; text-decoration: inherit;">description</a>
@@ -684,8 +635,7 @@ Changing this creates a new zone.
         <span class="property-type">str</span>
     </dt>
     <dd>{{% md %}}A description of the zone.
-{{% /md %}}</dd>
-    <dt class="property-optional"
+{{% /md %}}</dd><dt class="property-optional"
             title="Optional">
         <span id="disable_status_check_python">
 <a href="#disable_status_check_python" style="color: inherit; text-decoration: inherit;">disable_<wbr>status_<wbr>check</a>
@@ -696,8 +646,7 @@ Changing this creates a new zone.
     <dd>{{% md %}}Disable wait for zone to reach ACTIVE
 status. The check is enabled by default. If this argument is true, zone
 will be considered as created/updated if OpenStack request returned success.
-{{% /md %}}</dd>
-    <dt class="property-optional"
+{{% /md %}}</dd><dt class="property-optional"
             title="Optional">
         <span id="email_python">
 <a href="#email_python" style="color: inherit; text-decoration: inherit;">email</a>
@@ -706,8 +655,7 @@ will be considered as created/updated if OpenStack request returned success.
         <span class="property-type">str</span>
     </dt>
     <dd>{{% md %}}The email contact for the zone record.
-{{% /md %}}</dd>
-    <dt class="property-optional"
+{{% /md %}}</dd><dt class="property-optional"
             title="Optional">
         <span id="masters_python">
 <a href="#masters_python" style="color: inherit; text-decoration: inherit;">masters</a>
@@ -717,8 +665,7 @@ will be considered as created/updated if OpenStack request returned success.
     </dt>
     <dd>{{% md %}}An array of master DNS servers. For when `type` is
 `SECONDARY`.
-{{% /md %}}</dd>
-    <dt class="property-optional"
+{{% /md %}}</dd><dt class="property-optional"
             title="Optional">
         <span id="name_python">
 <a href="#name_python" style="color: inherit; text-decoration: inherit;">name</a>
@@ -728,8 +675,7 @@ will be considered as created/updated if OpenStack request returned success.
     </dt>
     <dd>{{% md %}}The name of the zone. Note the `.` at the end of the name.
 Changing this creates a new DNS zone.
-{{% /md %}}</dd>
-    <dt class="property-optional"
+{{% /md %}}</dd><dt class="property-optional"
             title="Optional">
         <span id="project_id_python">
 <a href="#project_id_python" style="color: inherit; text-decoration: inherit;">project_<wbr>id</a>
@@ -740,8 +686,7 @@ Changing this creates a new DNS zone.
     <dd>{{% md %}}The ID of the project DNS zone is created
 for, sets `X-Auth-Sudo-Tenant-ID` header (requires an assigned
 user role in target project)
-{{% /md %}}</dd>
-    <dt class="property-optional"
+{{% /md %}}</dd><dt class="property-optional"
             title="Optional">
         <span id="region_python">
 <a href="#region_python" style="color: inherit; text-decoration: inherit;">region</a>
@@ -753,8 +698,7 @@ user role in target project)
 Keypairs are associated with accounts, but a Compute client is needed to
 create one. If omitted, the `region` argument of the provider is used.
 Changing this creates a new DNS zone.
-{{% /md %}}</dd>
-    <dt class="property-optional"
+{{% /md %}}</dd><dt class="property-optional"
             title="Optional">
         <span id="ttl_python">
 <a href="#ttl_python" style="color: inherit; text-decoration: inherit;">ttl</a>
@@ -763,8 +707,7 @@ Changing this creates a new DNS zone.
         <span class="property-type">int</span>
     </dt>
     <dd>{{% md %}}The time to live (TTL) of the zone.
-{{% /md %}}</dd>
-    <dt class="property-optional"
+{{% /md %}}</dd><dt class="property-optional"
             title="Optional">
         <span id="type_python">
 <a href="#type_python" style="color: inherit; text-decoration: inherit;">type</a>
@@ -774,8 +717,7 @@ Changing this creates a new DNS zone.
     </dt>
     <dd>{{% md %}}The type of zone. Can either be `PRIMARY` or `SECONDARY`.
 Changing this creates a new zone.
-{{% /md %}}</dd>
-    <dt class="property-optional"
+{{% /md %}}</dd><dt class="property-optional"
             title="Optional">
         <span id="value_specs_python">
 <a href="#value_specs_python" style="color: inherit; text-decoration: inherit;">value_<wbr>specs</a>
@@ -785,8 +727,7 @@ Changing this creates a new zone.
     </dt>
     <dd>{{% md %}}Map of additional options. Changing this creates a
 new zone.
-{{% /md %}}</dd>
-</dl>
+{{% /md %}}</dd></dl>
 {{% /choosable %}}
 
 
@@ -797,9 +738,7 @@ All [input](#inputs) properties are implicitly available as output properties. A
 
 
 {{% choosable language csharp %}}
-<dl class="resources-properties">
-
-    <dt class="property-"
+<dl class="resources-properties"><dt class="property-"
             title="">
         <span id="id_csharp">
 <a href="#id_csharp" style="color: inherit; text-decoration: inherit;">Id</a>
@@ -807,14 +746,11 @@ All [input](#inputs) properties are implicitly available as output properties. A
         <span class="property-indicator"></span>
         <span class="property-type">string</span>
     </dt>
-    <dd>{{% md %}}The provider-assigned unique ID for this managed resource.{{% /md %}}</dd>
-</dl>
+    <dd>{{% md %}}The provider-assigned unique ID for this managed resource.{{% /md %}}</dd></dl>
 {{% /choosable %}}
 
 {{% choosable language go %}}
-<dl class="resources-properties">
-
-    <dt class="property-"
+<dl class="resources-properties"><dt class="property-"
             title="">
         <span id="id_go">
 <a href="#id_go" style="color: inherit; text-decoration: inherit;">Id</a>
@@ -822,14 +758,11 @@ All [input](#inputs) properties are implicitly available as output properties. A
         <span class="property-indicator"></span>
         <span class="property-type">string</span>
     </dt>
-    <dd>{{% md %}}The provider-assigned unique ID for this managed resource.{{% /md %}}</dd>
-</dl>
+    <dd>{{% md %}}The provider-assigned unique ID for this managed resource.{{% /md %}}</dd></dl>
 {{% /choosable %}}
 
 {{% choosable language nodejs %}}
-<dl class="resources-properties">
-
-    <dt class="property-"
+<dl class="resources-properties"><dt class="property-"
             title="">
         <span id="id_nodejs">
 <a href="#id_nodejs" style="color: inherit; text-decoration: inherit;">id</a>
@@ -837,14 +770,11 @@ All [input](#inputs) properties are implicitly available as output properties. A
         <span class="property-indicator"></span>
         <span class="property-type">string</span>
     </dt>
-    <dd>{{% md %}}The provider-assigned unique ID for this managed resource.{{% /md %}}</dd>
-</dl>
+    <dd>{{% md %}}The provider-assigned unique ID for this managed resource.{{% /md %}}</dd></dl>
 {{% /choosable %}}
 
 {{% choosable language python %}}
-<dl class="resources-properties">
-
-    <dt class="property-"
+<dl class="resources-properties"><dt class="property-"
             title="">
         <span id="id_python">
 <a href="#id_python" style="color: inherit; text-decoration: inherit;">id</a>
@@ -852,8 +782,7 @@ All [input](#inputs) properties are implicitly available as output properties. A
         <span class="property-indicator"></span>
         <span class="property-type">str</span>
     </dt>
-    <dd>{{% md %}}The provider-assigned unique ID for this managed resource.{{% /md %}}</dd>
-</dl>
+    <dd>{{% md %}}The provider-assigned unique ID for this managed resource.{{% /md %}}</dd></dl>
 {{% /choosable %}}
 
 
@@ -980,9 +909,7 @@ The following state arguments are supported:
 
 
 {{% choosable language csharp %}}
-<dl class="resources-properties">
-
-    <dt class="property-optional"
+<dl class="resources-properties"><dt class="property-optional"
             title="Optional">
         <span id="state_attributes_csharp">
 <a href="#state_attributes_csharp" style="color: inherit; text-decoration: inherit;">Attributes</a>
@@ -992,8 +919,7 @@ The following state arguments are supported:
     </dt>
     <dd>{{% md %}}Attributes for the DNS Service scheduler.
 Changing this creates a new zone.
-{{% /md %}}</dd>
-    <dt class="property-optional"
+{{% /md %}}</dd><dt class="property-optional"
             title="Optional">
         <span id="state_description_csharp">
 <a href="#state_description_csharp" style="color: inherit; text-decoration: inherit;">Description</a>
@@ -1002,8 +928,7 @@ Changing this creates a new zone.
         <span class="property-type">string</span>
     </dt>
     <dd>{{% md %}}A description of the zone.
-{{% /md %}}</dd>
-    <dt class="property-optional"
+{{% /md %}}</dd><dt class="property-optional"
             title="Optional">
         <span id="state_disablestatuscheck_csharp">
 <a href="#state_disablestatuscheck_csharp" style="color: inherit; text-decoration: inherit;">Disable<wbr>Status<wbr>Check</a>
@@ -1014,8 +939,7 @@ Changing this creates a new zone.
     <dd>{{% md %}}Disable wait for zone to reach ACTIVE
 status. The check is enabled by default. If this argument is true, zone
 will be considered as created/updated if OpenStack request returned success.
-{{% /md %}}</dd>
-    <dt class="property-optional"
+{{% /md %}}</dd><dt class="property-optional"
             title="Optional">
         <span id="state_email_csharp">
 <a href="#state_email_csharp" style="color: inherit; text-decoration: inherit;">Email</a>
@@ -1024,8 +948,7 @@ will be considered as created/updated if OpenStack request returned success.
         <span class="property-type">string</span>
     </dt>
     <dd>{{% md %}}The email contact for the zone record.
-{{% /md %}}</dd>
-    <dt class="property-optional"
+{{% /md %}}</dd><dt class="property-optional"
             title="Optional">
         <span id="state_masters_csharp">
 <a href="#state_masters_csharp" style="color: inherit; text-decoration: inherit;">Masters</a>
@@ -1035,8 +958,7 @@ will be considered as created/updated if OpenStack request returned success.
     </dt>
     <dd>{{% md %}}An array of master DNS servers. For when `type` is
 `SECONDARY`.
-{{% /md %}}</dd>
-    <dt class="property-optional"
+{{% /md %}}</dd><dt class="property-optional"
             title="Optional">
         <span id="state_name_csharp">
 <a href="#state_name_csharp" style="color: inherit; text-decoration: inherit;">Name</a>
@@ -1046,8 +968,7 @@ will be considered as created/updated if OpenStack request returned success.
     </dt>
     <dd>{{% md %}}The name of the zone. Note the `.` at the end of the name.
 Changing this creates a new DNS zone.
-{{% /md %}}</dd>
-    <dt class="property-optional"
+{{% /md %}}</dd><dt class="property-optional"
             title="Optional">
         <span id="state_projectid_csharp">
 <a href="#state_projectid_csharp" style="color: inherit; text-decoration: inherit;">Project<wbr>Id</a>
@@ -1058,8 +979,7 @@ Changing this creates a new DNS zone.
     <dd>{{% md %}}The ID of the project DNS zone is created
 for, sets `X-Auth-Sudo-Tenant-ID` header (requires an assigned
 user role in target project)
-{{% /md %}}</dd>
-    <dt class="property-optional"
+{{% /md %}}</dd><dt class="property-optional"
             title="Optional">
         <span id="state_region_csharp">
 <a href="#state_region_csharp" style="color: inherit; text-decoration: inherit;">Region</a>
@@ -1071,8 +991,7 @@ user role in target project)
 Keypairs are associated with accounts, but a Compute client is needed to
 create one. If omitted, the `region` argument of the provider is used.
 Changing this creates a new DNS zone.
-{{% /md %}}</dd>
-    <dt class="property-optional"
+{{% /md %}}</dd><dt class="property-optional"
             title="Optional">
         <span id="state_ttl_csharp">
 <a href="#state_ttl_csharp" style="color: inherit; text-decoration: inherit;">Ttl</a>
@@ -1081,8 +1000,7 @@ Changing this creates a new DNS zone.
         <span class="property-type">int</span>
     </dt>
     <dd>{{% md %}}The time to live (TTL) of the zone.
-{{% /md %}}</dd>
-    <dt class="property-optional"
+{{% /md %}}</dd><dt class="property-optional"
             title="Optional">
         <span id="state_type_csharp">
 <a href="#state_type_csharp" style="color: inherit; text-decoration: inherit;">Type</a>
@@ -1092,8 +1010,7 @@ Changing this creates a new DNS zone.
     </dt>
     <dd>{{% md %}}The type of zone. Can either be `PRIMARY` or `SECONDARY`.
 Changing this creates a new zone.
-{{% /md %}}</dd>
-    <dt class="property-optional"
+{{% /md %}}</dd><dt class="property-optional"
             title="Optional">
         <span id="state_valuespecs_csharp">
 <a href="#state_valuespecs_csharp" style="color: inherit; text-decoration: inherit;">Value<wbr>Specs</a>
@@ -1103,14 +1020,11 @@ Changing this creates a new zone.
     </dt>
     <dd>{{% md %}}Map of additional options. Changing this creates a
 new zone.
-{{% /md %}}</dd>
-</dl>
+{{% /md %}}</dd></dl>
 {{% /choosable %}}
 
 {{% choosable language go %}}
-<dl class="resources-properties">
-
-    <dt class="property-optional"
+<dl class="resources-properties"><dt class="property-optional"
             title="Optional">
         <span id="state_attributes_go">
 <a href="#state_attributes_go" style="color: inherit; text-decoration: inherit;">Attributes</a>
@@ -1120,8 +1034,7 @@ new zone.
     </dt>
     <dd>{{% md %}}Attributes for the DNS Service scheduler.
 Changing this creates a new zone.
-{{% /md %}}</dd>
-    <dt class="property-optional"
+{{% /md %}}</dd><dt class="property-optional"
             title="Optional">
         <span id="state_description_go">
 <a href="#state_description_go" style="color: inherit; text-decoration: inherit;">Description</a>
@@ -1130,8 +1043,7 @@ Changing this creates a new zone.
         <span class="property-type">string</span>
     </dt>
     <dd>{{% md %}}A description of the zone.
-{{% /md %}}</dd>
-    <dt class="property-optional"
+{{% /md %}}</dd><dt class="property-optional"
             title="Optional">
         <span id="state_disablestatuscheck_go">
 <a href="#state_disablestatuscheck_go" style="color: inherit; text-decoration: inherit;">Disable<wbr>Status<wbr>Check</a>
@@ -1142,8 +1054,7 @@ Changing this creates a new zone.
     <dd>{{% md %}}Disable wait for zone to reach ACTIVE
 status. The check is enabled by default. If this argument is true, zone
 will be considered as created/updated if OpenStack request returned success.
-{{% /md %}}</dd>
-    <dt class="property-optional"
+{{% /md %}}</dd><dt class="property-optional"
             title="Optional">
         <span id="state_email_go">
 <a href="#state_email_go" style="color: inherit; text-decoration: inherit;">Email</a>
@@ -1152,8 +1063,7 @@ will be considered as created/updated if OpenStack request returned success.
         <span class="property-type">string</span>
     </dt>
     <dd>{{% md %}}The email contact for the zone record.
-{{% /md %}}</dd>
-    <dt class="property-optional"
+{{% /md %}}</dd><dt class="property-optional"
             title="Optional">
         <span id="state_masters_go">
 <a href="#state_masters_go" style="color: inherit; text-decoration: inherit;">Masters</a>
@@ -1163,8 +1073,7 @@ will be considered as created/updated if OpenStack request returned success.
     </dt>
     <dd>{{% md %}}An array of master DNS servers. For when `type` is
 `SECONDARY`.
-{{% /md %}}</dd>
-    <dt class="property-optional"
+{{% /md %}}</dd><dt class="property-optional"
             title="Optional">
         <span id="state_name_go">
 <a href="#state_name_go" style="color: inherit; text-decoration: inherit;">Name</a>
@@ -1174,8 +1083,7 @@ will be considered as created/updated if OpenStack request returned success.
     </dt>
     <dd>{{% md %}}The name of the zone. Note the `.` at the end of the name.
 Changing this creates a new DNS zone.
-{{% /md %}}</dd>
-    <dt class="property-optional"
+{{% /md %}}</dd><dt class="property-optional"
             title="Optional">
         <span id="state_projectid_go">
 <a href="#state_projectid_go" style="color: inherit; text-decoration: inherit;">Project<wbr>Id</a>
@@ -1186,8 +1094,7 @@ Changing this creates a new DNS zone.
     <dd>{{% md %}}The ID of the project DNS zone is created
 for, sets `X-Auth-Sudo-Tenant-ID` header (requires an assigned
 user role in target project)
-{{% /md %}}</dd>
-    <dt class="property-optional"
+{{% /md %}}</dd><dt class="property-optional"
             title="Optional">
         <span id="state_region_go">
 <a href="#state_region_go" style="color: inherit; text-decoration: inherit;">Region</a>
@@ -1199,8 +1106,7 @@ user role in target project)
 Keypairs are associated with accounts, but a Compute client is needed to
 create one. If omitted, the `region` argument of the provider is used.
 Changing this creates a new DNS zone.
-{{% /md %}}</dd>
-    <dt class="property-optional"
+{{% /md %}}</dd><dt class="property-optional"
             title="Optional">
         <span id="state_ttl_go">
 <a href="#state_ttl_go" style="color: inherit; text-decoration: inherit;">Ttl</a>
@@ -1209,8 +1115,7 @@ Changing this creates a new DNS zone.
         <span class="property-type">int</span>
     </dt>
     <dd>{{% md %}}The time to live (TTL) of the zone.
-{{% /md %}}</dd>
-    <dt class="property-optional"
+{{% /md %}}</dd><dt class="property-optional"
             title="Optional">
         <span id="state_type_go">
 <a href="#state_type_go" style="color: inherit; text-decoration: inherit;">Type</a>
@@ -1220,8 +1125,7 @@ Changing this creates a new DNS zone.
     </dt>
     <dd>{{% md %}}The type of zone. Can either be `PRIMARY` or `SECONDARY`.
 Changing this creates a new zone.
-{{% /md %}}</dd>
-    <dt class="property-optional"
+{{% /md %}}</dd><dt class="property-optional"
             title="Optional">
         <span id="state_valuespecs_go">
 <a href="#state_valuespecs_go" style="color: inherit; text-decoration: inherit;">Value<wbr>Specs</a>
@@ -1231,14 +1135,11 @@ Changing this creates a new zone.
     </dt>
     <dd>{{% md %}}Map of additional options. Changing this creates a
 new zone.
-{{% /md %}}</dd>
-</dl>
+{{% /md %}}</dd></dl>
 {{% /choosable %}}
 
 {{% choosable language nodejs %}}
-<dl class="resources-properties">
-
-    <dt class="property-optional"
+<dl class="resources-properties"><dt class="property-optional"
             title="Optional">
         <span id="state_attributes_nodejs">
 <a href="#state_attributes_nodejs" style="color: inherit; text-decoration: inherit;">attributes</a>
@@ -1248,8 +1149,7 @@ new zone.
     </dt>
     <dd>{{% md %}}Attributes for the DNS Service scheduler.
 Changing this creates a new zone.
-{{% /md %}}</dd>
-    <dt class="property-optional"
+{{% /md %}}</dd><dt class="property-optional"
             title="Optional">
         <span id="state_description_nodejs">
 <a href="#state_description_nodejs" style="color: inherit; text-decoration: inherit;">description</a>
@@ -1258,8 +1158,7 @@ Changing this creates a new zone.
         <span class="property-type">string</span>
     </dt>
     <dd>{{% md %}}A description of the zone.
-{{% /md %}}</dd>
-    <dt class="property-optional"
+{{% /md %}}</dd><dt class="property-optional"
             title="Optional">
         <span id="state_disablestatuscheck_nodejs">
 <a href="#state_disablestatuscheck_nodejs" style="color: inherit; text-decoration: inherit;">disable<wbr>Status<wbr>Check</a>
@@ -1270,8 +1169,7 @@ Changing this creates a new zone.
     <dd>{{% md %}}Disable wait for zone to reach ACTIVE
 status. The check is enabled by default. If this argument is true, zone
 will be considered as created/updated if OpenStack request returned success.
-{{% /md %}}</dd>
-    <dt class="property-optional"
+{{% /md %}}</dd><dt class="property-optional"
             title="Optional">
         <span id="state_email_nodejs">
 <a href="#state_email_nodejs" style="color: inherit; text-decoration: inherit;">email</a>
@@ -1280,8 +1178,7 @@ will be considered as created/updated if OpenStack request returned success.
         <span class="property-type">string</span>
     </dt>
     <dd>{{% md %}}The email contact for the zone record.
-{{% /md %}}</dd>
-    <dt class="property-optional"
+{{% /md %}}</dd><dt class="property-optional"
             title="Optional">
         <span id="state_masters_nodejs">
 <a href="#state_masters_nodejs" style="color: inherit; text-decoration: inherit;">masters</a>
@@ -1291,8 +1188,7 @@ will be considered as created/updated if OpenStack request returned success.
     </dt>
     <dd>{{% md %}}An array of master DNS servers. For when `type` is
 `SECONDARY`.
-{{% /md %}}</dd>
-    <dt class="property-optional"
+{{% /md %}}</dd><dt class="property-optional"
             title="Optional">
         <span id="state_name_nodejs">
 <a href="#state_name_nodejs" style="color: inherit; text-decoration: inherit;">name</a>
@@ -1302,8 +1198,7 @@ will be considered as created/updated if OpenStack request returned success.
     </dt>
     <dd>{{% md %}}The name of the zone. Note the `.` at the end of the name.
 Changing this creates a new DNS zone.
-{{% /md %}}</dd>
-    <dt class="property-optional"
+{{% /md %}}</dd><dt class="property-optional"
             title="Optional">
         <span id="state_projectid_nodejs">
 <a href="#state_projectid_nodejs" style="color: inherit; text-decoration: inherit;">project<wbr>Id</a>
@@ -1314,8 +1209,7 @@ Changing this creates a new DNS zone.
     <dd>{{% md %}}The ID of the project DNS zone is created
 for, sets `X-Auth-Sudo-Tenant-ID` header (requires an assigned
 user role in target project)
-{{% /md %}}</dd>
-    <dt class="property-optional"
+{{% /md %}}</dd><dt class="property-optional"
             title="Optional">
         <span id="state_region_nodejs">
 <a href="#state_region_nodejs" style="color: inherit; text-decoration: inherit;">region</a>
@@ -1327,8 +1221,7 @@ user role in target project)
 Keypairs are associated with accounts, but a Compute client is needed to
 create one. If omitted, the `region` argument of the provider is used.
 Changing this creates a new DNS zone.
-{{% /md %}}</dd>
-    <dt class="property-optional"
+{{% /md %}}</dd><dt class="property-optional"
             title="Optional">
         <span id="state_ttl_nodejs">
 <a href="#state_ttl_nodejs" style="color: inherit; text-decoration: inherit;">ttl</a>
@@ -1337,8 +1230,7 @@ Changing this creates a new DNS zone.
         <span class="property-type">number</span>
     </dt>
     <dd>{{% md %}}The time to live (TTL) of the zone.
-{{% /md %}}</dd>
-    <dt class="property-optional"
+{{% /md %}}</dd><dt class="property-optional"
             title="Optional">
         <span id="state_type_nodejs">
 <a href="#state_type_nodejs" style="color: inherit; text-decoration: inherit;">type</a>
@@ -1348,8 +1240,7 @@ Changing this creates a new DNS zone.
     </dt>
     <dd>{{% md %}}The type of zone. Can either be `PRIMARY` or `SECONDARY`.
 Changing this creates a new zone.
-{{% /md %}}</dd>
-    <dt class="property-optional"
+{{% /md %}}</dd><dt class="property-optional"
             title="Optional">
         <span id="state_valuespecs_nodejs">
 <a href="#state_valuespecs_nodejs" style="color: inherit; text-decoration: inherit;">value<wbr>Specs</a>
@@ -1359,14 +1250,11 @@ Changing this creates a new zone.
     </dt>
     <dd>{{% md %}}Map of additional options. Changing this creates a
 new zone.
-{{% /md %}}</dd>
-</dl>
+{{% /md %}}</dd></dl>
 {{% /choosable %}}
 
 {{% choosable language python %}}
-<dl class="resources-properties">
-
-    <dt class="property-optional"
+<dl class="resources-properties"><dt class="property-optional"
             title="Optional">
         <span id="state_attributes_python">
 <a href="#state_attributes_python" style="color: inherit; text-decoration: inherit;">attributes</a>
@@ -1376,8 +1264,7 @@ new zone.
     </dt>
     <dd>{{% md %}}Attributes for the DNS Service scheduler.
 Changing this creates a new zone.
-{{% /md %}}</dd>
-    <dt class="property-optional"
+{{% /md %}}</dd><dt class="property-optional"
             title="Optional">
         <span id="state_description_python">
 <a href="#state_description_python" style="color: inherit; text-decoration: inherit;">description</a>
@@ -1386,8 +1273,7 @@ Changing this creates a new zone.
         <span class="property-type">str</span>
     </dt>
     <dd>{{% md %}}A description of the zone.
-{{% /md %}}</dd>
-    <dt class="property-optional"
+{{% /md %}}</dd><dt class="property-optional"
             title="Optional">
         <span id="state_disable_status_check_python">
 <a href="#state_disable_status_check_python" style="color: inherit; text-decoration: inherit;">disable_<wbr>status_<wbr>check</a>
@@ -1398,8 +1284,7 @@ Changing this creates a new zone.
     <dd>{{% md %}}Disable wait for zone to reach ACTIVE
 status. The check is enabled by default. If this argument is true, zone
 will be considered as created/updated if OpenStack request returned success.
-{{% /md %}}</dd>
-    <dt class="property-optional"
+{{% /md %}}</dd><dt class="property-optional"
             title="Optional">
         <span id="state_email_python">
 <a href="#state_email_python" style="color: inherit; text-decoration: inherit;">email</a>
@@ -1408,8 +1293,7 @@ will be considered as created/updated if OpenStack request returned success.
         <span class="property-type">str</span>
     </dt>
     <dd>{{% md %}}The email contact for the zone record.
-{{% /md %}}</dd>
-    <dt class="property-optional"
+{{% /md %}}</dd><dt class="property-optional"
             title="Optional">
         <span id="state_masters_python">
 <a href="#state_masters_python" style="color: inherit; text-decoration: inherit;">masters</a>
@@ -1419,8 +1303,7 @@ will be considered as created/updated if OpenStack request returned success.
     </dt>
     <dd>{{% md %}}An array of master DNS servers. For when `type` is
 `SECONDARY`.
-{{% /md %}}</dd>
-    <dt class="property-optional"
+{{% /md %}}</dd><dt class="property-optional"
             title="Optional">
         <span id="state_name_python">
 <a href="#state_name_python" style="color: inherit; text-decoration: inherit;">name</a>
@@ -1430,8 +1313,7 @@ will be considered as created/updated if OpenStack request returned success.
     </dt>
     <dd>{{% md %}}The name of the zone. Note the `.` at the end of the name.
 Changing this creates a new DNS zone.
-{{% /md %}}</dd>
-    <dt class="property-optional"
+{{% /md %}}</dd><dt class="property-optional"
             title="Optional">
         <span id="state_project_id_python">
 <a href="#state_project_id_python" style="color: inherit; text-decoration: inherit;">project_<wbr>id</a>
@@ -1442,8 +1324,7 @@ Changing this creates a new DNS zone.
     <dd>{{% md %}}The ID of the project DNS zone is created
 for, sets `X-Auth-Sudo-Tenant-ID` header (requires an assigned
 user role in target project)
-{{% /md %}}</dd>
-    <dt class="property-optional"
+{{% /md %}}</dd><dt class="property-optional"
             title="Optional">
         <span id="state_region_python">
 <a href="#state_region_python" style="color: inherit; text-decoration: inherit;">region</a>
@@ -1455,8 +1336,7 @@ user role in target project)
 Keypairs are associated with accounts, but a Compute client is needed to
 create one. If omitted, the `region` argument of the provider is used.
 Changing this creates a new DNS zone.
-{{% /md %}}</dd>
-    <dt class="property-optional"
+{{% /md %}}</dd><dt class="property-optional"
             title="Optional">
         <span id="state_ttl_python">
 <a href="#state_ttl_python" style="color: inherit; text-decoration: inherit;">ttl</a>
@@ -1465,8 +1345,7 @@ Changing this creates a new DNS zone.
         <span class="property-type">int</span>
     </dt>
     <dd>{{% md %}}The time to live (TTL) of the zone.
-{{% /md %}}</dd>
-    <dt class="property-optional"
+{{% /md %}}</dd><dt class="property-optional"
             title="Optional">
         <span id="state_type_python">
 <a href="#state_type_python" style="color: inherit; text-decoration: inherit;">type</a>
@@ -1476,8 +1355,7 @@ Changing this creates a new DNS zone.
     </dt>
     <dd>{{% md %}}The type of zone. Can either be `PRIMARY` or `SECONDARY`.
 Changing this creates a new zone.
-{{% /md %}}</dd>
-    <dt class="property-optional"
+{{% /md %}}</dd><dt class="property-optional"
             title="Optional">
         <span id="state_value_specs_python">
 <a href="#state_value_specs_python" style="color: inherit; text-decoration: inherit;">value_<wbr>specs</a>
@@ -1487,8 +1365,7 @@ Changing this creates a new zone.
     </dt>
     <dd>{{% md %}}Map of additional options. Changing this creates a
 new zone.
-{{% /md %}}</dd>
-</dl>
+{{% /md %}}</dd></dl>
 {{% /choosable %}}
 
 
@@ -1518,6 +1395,6 @@ This resource can be imported by specifying the zone ID with optional project ID
 	<dt>License</dt>
 	<dd>Apache-2.0</dd>
 	<dt>Notes</dt>
-	<dd>This Pulumi package is based on the [`openstack` Terraform Provider](https://github.com/terraform-provider-openstack/terraform-provider-openstack).</dd>
+	<dd>{{% md %}}This Pulumi package is based on the [`openstack` Terraform Provider](https://github.com/terraform-provider-openstack/terraform-provider-openstack).{{% /md %}}</dd>
 </dl>
 

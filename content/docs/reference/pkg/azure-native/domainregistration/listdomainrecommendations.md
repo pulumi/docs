@@ -51,9 +51,7 @@ The following arguments are supported:
 
 
 {{% choosable language csharp %}}
-<dl class="resources-properties">
-
-    <dt class="property-optional"
+<dl class="resources-properties"><dt class="property-optional"
             title="Optional">
         <span id="keywords_csharp">
 <a href="#keywords_csharp" style="color: inherit; text-decoration: inherit;">Keywords</a>
@@ -61,8 +59,7 @@ The following arguments are supported:
         <span class="property-indicator"></span>
         <span class="property-type">string</span>
     </dt>
-    <dd>{{% md %}}Keywords to be used for generating domain recommendations.{{% /md %}}</dd>
-    <dt class="property-optional"
+    <dd>{{% md %}}Keywords to be used for generating domain recommendations.{{% /md %}}</dd><dt class="property-optional"
             title="Optional">
         <span id="maxdomainrecommendations_csharp">
 <a href="#maxdomainrecommendations_csharp" style="color: inherit; text-decoration: inherit;">Max<wbr>Domain<wbr>Recommendations</a>
@@ -70,14 +67,11 @@ The following arguments are supported:
         <span class="property-indicator"></span>
         <span class="property-type">int</span>
     </dt>
-    <dd>{{% md %}}Maximum number of recommendations.{{% /md %}}</dd>
-</dl>
+    <dd>{{% md %}}Maximum number of recommendations.{{% /md %}}</dd></dl>
 {{% /choosable %}}
 
 {{% choosable language go %}}
-<dl class="resources-properties">
-
-    <dt class="property-optional"
+<dl class="resources-properties"><dt class="property-optional"
             title="Optional">
         <span id="keywords_go">
 <a href="#keywords_go" style="color: inherit; text-decoration: inherit;">Keywords</a>
@@ -85,8 +79,7 @@ The following arguments are supported:
         <span class="property-indicator"></span>
         <span class="property-type">string</span>
     </dt>
-    <dd>{{% md %}}Keywords to be used for generating domain recommendations.{{% /md %}}</dd>
-    <dt class="property-optional"
+    <dd>{{% md %}}Keywords to be used for generating domain recommendations.{{% /md %}}</dd><dt class="property-optional"
             title="Optional">
         <span id="maxdomainrecommendations_go">
 <a href="#maxdomainrecommendations_go" style="color: inherit; text-decoration: inherit;">Max<wbr>Domain<wbr>Recommendations</a>
@@ -94,14 +87,11 @@ The following arguments are supported:
         <span class="property-indicator"></span>
         <span class="property-type">int</span>
     </dt>
-    <dd>{{% md %}}Maximum number of recommendations.{{% /md %}}</dd>
-</dl>
+    <dd>{{% md %}}Maximum number of recommendations.{{% /md %}}</dd></dl>
 {{% /choosable %}}
 
 {{% choosable language nodejs %}}
-<dl class="resources-properties">
-
-    <dt class="property-optional"
+<dl class="resources-properties"><dt class="property-optional"
             title="Optional">
         <span id="keywords_nodejs">
 <a href="#keywords_nodejs" style="color: inherit; text-decoration: inherit;">keywords</a>
@@ -109,8 +99,7 @@ The following arguments are supported:
         <span class="property-indicator"></span>
         <span class="property-type">string</span>
     </dt>
-    <dd>{{% md %}}Keywords to be used for generating domain recommendations.{{% /md %}}</dd>
-    <dt class="property-optional"
+    <dd>{{% md %}}Keywords to be used for generating domain recommendations.{{% /md %}}</dd><dt class="property-optional"
             title="Optional">
         <span id="maxdomainrecommendations_nodejs">
 <a href="#maxdomainrecommendations_nodejs" style="color: inherit; text-decoration: inherit;">max<wbr>Domain<wbr>Recommendations</a>
@@ -118,14 +107,11 @@ The following arguments are supported:
         <span class="property-indicator"></span>
         <span class="property-type">number</span>
     </dt>
-    <dd>{{% md %}}Maximum number of recommendations.{{% /md %}}</dd>
-</dl>
+    <dd>{{% md %}}Maximum number of recommendations.{{% /md %}}</dd></dl>
 {{% /choosable %}}
 
 {{% choosable language python %}}
-<dl class="resources-properties">
-
-    <dt class="property-optional"
+<dl class="resources-properties"><dt class="property-optional"
             title="Optional">
         <span id="keywords_python">
 <a href="#keywords_python" style="color: inherit; text-decoration: inherit;">keywords</a>
@@ -133,8 +119,7 @@ The following arguments are supported:
         <span class="property-indicator"></span>
         <span class="property-type">str</span>
     </dt>
-    <dd>{{% md %}}Keywords to be used for generating domain recommendations.{{% /md %}}</dd>
-    <dt class="property-optional"
+    <dd>{{% md %}}Keywords to be used for generating domain recommendations.{{% /md %}}</dd><dt class="property-optional"
             title="Optional">
         <span id="max_domain_recommendations_python">
 <a href="#max_domain_recommendations_python" style="color: inherit; text-decoration: inherit;">max_<wbr>domain_<wbr>recommendations</a>
@@ -142,8 +127,7 @@ The following arguments are supported:
         <span class="property-indicator"></span>
         <span class="property-type">int</span>
     </dt>
-    <dd>{{% md %}}Maximum number of recommendations.{{% /md %}}</dd>
-</dl>
+    <dd>{{% md %}}Maximum number of recommendations.{{% /md %}}</dd></dl>
 {{% /choosable %}}
 
 
@@ -156,9 +140,7 @@ The following output properties are available:
 
 
 {{% choosable language csharp %}}
-<dl class="resources-properties">
-
-    <dt class="property-"
+<dl class="resources-properties"><dt class="property-"
             title="">
         <span id="nextlink_csharp">
 <a href="#nextlink_csharp" style="color: inherit; text-decoration: inherit;">Next<wbr>Link</a>
@@ -166,8 +148,7 @@ The following output properties are available:
         <span class="property-indicator"></span>
         <span class="property-type">string</span>
     </dt>
-    <dd>{{% md %}}Link to next page of resources.{{% /md %}}</dd>
-    <dt class="property-"
+    <dd>{{% md %}}Link to next page of resources.{{% /md %}}</dd><dt class="property-"
             title="">
         <span id="value_csharp">
 <a href="#value_csharp" style="color: inherit; text-decoration: inherit;">Value</a>
@@ -175,14 +156,11 @@ The following output properties are available:
         <span class="property-indicator"></span>
         <span class="property-type"><a href="#nameidentifierresponse">List&lt;Pulumi.<wbr>Azure<wbr>Native.<wbr>Domain<wbr>Registration.<wbr>Outputs.<wbr>Name<wbr>Identifier<wbr>Response&gt;</a></span>
     </dt>
-    <dd>{{% md %}}Collection of resources.{{% /md %}}</dd>
-</dl>
+    <dd>{{% md %}}Collection of resources.{{% /md %}}</dd></dl>
 {{% /choosable %}}
 
 {{% choosable language go %}}
-<dl class="resources-properties">
-
-    <dt class="property-"
+<dl class="resources-properties"><dt class="property-"
             title="">
         <span id="nextlink_go">
 <a href="#nextlink_go" style="color: inherit; text-decoration: inherit;">Next<wbr>Link</a>
@@ -190,8 +168,7 @@ The following output properties are available:
         <span class="property-indicator"></span>
         <span class="property-type">string</span>
     </dt>
-    <dd>{{% md %}}Link to next page of resources.{{% /md %}}</dd>
-    <dt class="property-"
+    <dd>{{% md %}}Link to next page of resources.{{% /md %}}</dd><dt class="property-"
             title="">
         <span id="value_go">
 <a href="#value_go" style="color: inherit; text-decoration: inherit;">Value</a>
@@ -199,14 +176,11 @@ The following output properties are available:
         <span class="property-indicator"></span>
         <span class="property-type"><a href="#nameidentifierresponse">[]Name<wbr>Identifier<wbr>Response</a></span>
     </dt>
-    <dd>{{% md %}}Collection of resources.{{% /md %}}</dd>
-</dl>
+    <dd>{{% md %}}Collection of resources.{{% /md %}}</dd></dl>
 {{% /choosable %}}
 
 {{% choosable language nodejs %}}
-<dl class="resources-properties">
-
-    <dt class="property-"
+<dl class="resources-properties"><dt class="property-"
             title="">
         <span id="nextlink_nodejs">
 <a href="#nextlink_nodejs" style="color: inherit; text-decoration: inherit;">next<wbr>Link</a>
@@ -214,8 +188,7 @@ The following output properties are available:
         <span class="property-indicator"></span>
         <span class="property-type">string</span>
     </dt>
-    <dd>{{% md %}}Link to next page of resources.{{% /md %}}</dd>
-    <dt class="property-"
+    <dd>{{% md %}}Link to next page of resources.{{% /md %}}</dd><dt class="property-"
             title="">
         <span id="value_nodejs">
 <a href="#value_nodejs" style="color: inherit; text-decoration: inherit;">value</a>
@@ -223,14 +196,11 @@ The following output properties are available:
         <span class="property-indicator"></span>
         <span class="property-type"><a href="#nameidentifierresponse">Name<wbr>Identifier<wbr>Response[]</a></span>
     </dt>
-    <dd>{{% md %}}Collection of resources.{{% /md %}}</dd>
-</dl>
+    <dd>{{% md %}}Collection of resources.{{% /md %}}</dd></dl>
 {{% /choosable %}}
 
 {{% choosable language python %}}
-<dl class="resources-properties">
-
-    <dt class="property-"
+<dl class="resources-properties"><dt class="property-"
             title="">
         <span id="next_link_python">
 <a href="#next_link_python" style="color: inherit; text-decoration: inherit;">next_<wbr>link</a>
@@ -238,8 +208,7 @@ The following output properties are available:
         <span class="property-indicator"></span>
         <span class="property-type">str</span>
     </dt>
-    <dd>{{% md %}}Link to next page of resources.{{% /md %}}</dd>
-    <dt class="property-"
+    <dd>{{% md %}}Link to next page of resources.{{% /md %}}</dd><dt class="property-"
             title="">
         <span id="value_python">
 <a href="#value_python" style="color: inherit; text-decoration: inherit;">value</a>
@@ -247,8 +216,7 @@ The following output properties are available:
         <span class="property-indicator"></span>
         <span class="property-type"><a href="#nameidentifierresponse">Sequence[Name<wbr>Identifier<wbr>Response]</a></span>
     </dt>
-    <dd>{{% md %}}Collection of resources.{{% /md %}}</dd>
-</dl>
+    <dd>{{% md %}}Collection of resources.{{% /md %}}</dd></dl>
 {{% /choosable %}}
 
 
@@ -262,9 +230,7 @@ The following output properties are available:
 
 
 {{% choosable language csharp %}}
-<dl class="resources-properties">
-
-    <dt class="property-optional"
+<dl class="resources-properties"><dt class="property-optional"
             title="Optional">
         <span id="name_csharp">
 <a href="#name_csharp" style="color: inherit; text-decoration: inherit;">Name</a>
@@ -272,14 +238,11 @@ The following output properties are available:
         <span class="property-indicator"></span>
         <span class="property-type">string</span>
     </dt>
-    <dd>{{% md %}}Name of the object.{{% /md %}}</dd>
-</dl>
+    <dd>{{% md %}}Name of the object.{{% /md %}}</dd></dl>
 {{% /choosable %}}
 
 {{% choosable language go %}}
-<dl class="resources-properties">
-
-    <dt class="property-optional"
+<dl class="resources-properties"><dt class="property-optional"
             title="Optional">
         <span id="name_go">
 <a href="#name_go" style="color: inherit; text-decoration: inherit;">Name</a>
@@ -287,14 +250,11 @@ The following output properties are available:
         <span class="property-indicator"></span>
         <span class="property-type">string</span>
     </dt>
-    <dd>{{% md %}}Name of the object.{{% /md %}}</dd>
-</dl>
+    <dd>{{% md %}}Name of the object.{{% /md %}}</dd></dl>
 {{% /choosable %}}
 
 {{% choosable language nodejs %}}
-<dl class="resources-properties">
-
-    <dt class="property-optional"
+<dl class="resources-properties"><dt class="property-optional"
             title="Optional">
         <span id="name_nodejs">
 <a href="#name_nodejs" style="color: inherit; text-decoration: inherit;">name</a>
@@ -302,14 +262,11 @@ The following output properties are available:
         <span class="property-indicator"></span>
         <span class="property-type">string</span>
     </dt>
-    <dd>{{% md %}}Name of the object.{{% /md %}}</dd>
-</dl>
+    <dd>{{% md %}}Name of the object.{{% /md %}}</dd></dl>
 {{% /choosable %}}
 
 {{% choosable language python %}}
-<dl class="resources-properties">
-
-    <dt class="property-optional"
+<dl class="resources-properties"><dt class="property-optional"
             title="Optional">
         <span id="name_python">
 <a href="#name_python" style="color: inherit; text-decoration: inherit;">name</a>
@@ -317,8 +274,7 @@ The following output properties are available:
         <span class="property-indicator"></span>
         <span class="property-type">str</span>
     </dt>
-    <dd>{{% md %}}Name of the object.{{% /md %}}</dd>
-</dl>
+    <dd>{{% md %}}Name of the object.{{% /md %}}</dd></dl>
 {{% /choosable %}}
 
 

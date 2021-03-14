@@ -43,9 +43,7 @@ MongoDB can be imported using the id, e.g.
 
 {{% choosable language nodejs %}}
 
-<dl class="resources-properties">
-  
-    <dt
+<dl class="resources-properties"><dt
         class="property-required" title="Required">
         <span>name</span>
         <span class="property-indicator"></span>
@@ -53,9 +51,7 @@ MongoDB can be imported using the id, e.g.
     </dt>
     <dd>
       The unique name of the resource.
-    </dd>
-  
-    <dt
+    </dd><dt
         class="property-required" title="Required">
         <span>args</span>
         <span class="property-indicator"></span>
@@ -63,9 +59,7 @@ MongoDB can be imported using the id, e.g.
     </dt>
     <dd>
       The arguments to resource properties.
-    </dd>
-  
-    <dt
+    </dd><dt
         class="property-optional" title="Optional">
         <span>opts</span>
         <span class="property-indicator"></span>
@@ -73,10 +67,7 @@ MongoDB can be imported using the id, e.g.
     </dt>
     <dd>
       Bag of options to control resource&#39;s behavior.
-    </dd>
-  
-
-</dl>
+    </dd></dl>
 
 {{% /choosable %}}
 
@@ -102,9 +93,7 @@ MongoDB can be imported using the id, e.g.
 
 {{% choosable language go %}}
 
-<dl class="resources-properties">
-  
-    <dt
+<dl class="resources-properties"><dt
         class="property-optional" title="Optional">
         <span>ctx</span>
         <span class="property-indicator"></span>
@@ -112,9 +101,7 @@ MongoDB can be imported using the id, e.g.
     </dt>
     <dd>
       Context object for the current deployment.
-    </dd>
-  
-    <dt
+    </dd><dt
         class="property-required" title="Required">
         <span>name</span>
         <span class="property-indicator"></span>
@@ -122,9 +109,7 @@ MongoDB can be imported using the id, e.g.
     </dt>
     <dd>
       The unique name of the resource.
-    </dd>
-  
-    <dt
+    </dd><dt
         class="property-required" title="Required">
         <span>args</span>
         <span class="property-indicator"></span>
@@ -132,9 +117,7 @@ MongoDB can be imported using the id, e.g.
     </dt>
     <dd>
       The arguments to resource properties.
-    </dd>
-  
-    <dt
+    </dd><dt
         class="property-optional" title="Optional">
         <span>opts</span>
         <span class="property-indicator"></span>
@@ -142,18 +125,13 @@ MongoDB can be imported using the id, e.g.
     </dt>
     <dd>
       Bag of options to control resource&#39;s behavior.
-    </dd>
-  
-
-</dl>
+    </dd></dl>
 
 {{% /choosable %}}
 
 {{% choosable language csharp %}}
 
-<dl class="resources-properties">
-  
-    <dt
+<dl class="resources-properties"><dt
         class="property-required" title="Required">
         <span>name</span>
         <span class="property-indicator"></span>
@@ -161,9 +139,7 @@ MongoDB can be imported using the id, e.g.
     </dt>
     <dd>
       The unique name of the resource.
-    </dd>
-  
-    <dt
+    </dd><dt
         class="property-required" title="Required">
         <span>args</span>
         <span class="property-indicator"></span>
@@ -171,9 +147,7 @@ MongoDB can be imported using the id, e.g.
     </dt>
     <dd>
       The arguments to resource properties.
-    </dd>
-  
-    <dt
+    </dd><dt
         class="property-optional" title="Optional">
         <span>opts</span>
         <span class="property-indicator"></span>
@@ -181,10 +155,7 @@ MongoDB can be imported using the id, e.g.
     </dt>
     <dd>
       Bag of options to control resource&#39;s behavior.
-    </dd>
-  
-
-</dl>
+    </dd></dl>
 
 {{% /choosable %}}
 
@@ -199,9 +170,7 @@ The ShardingInstance resource accepts the following [input]({{< relref "/docs/in
 
 
 {{% choosable language csharp %}}
-<dl class="resources-properties">
-
-    <dt class="property-required"
+<dl class="resources-properties"><dt class="property-required"
             title="Required">
         <span id="engineversion_csharp">
 <a href="#engineversion_csharp" style="color: inherit; text-decoration: inherit;">Engine<wbr>Version</a>
@@ -210,8 +179,7 @@ The ShardingInstance resource accepts the following [input]({{< relref "/docs/in
         <span class="property-type">string</span>
     </dt>
     <dd>{{% md %}}Database version. Value options can refer to the latest docs [CreateDBInstance](https://www.alibabacloud.com/help/zh/doc-detail/61884.htm) `EngineVersion`.
-{{% /md %}}</dd>
-    <dt class="property-required"
+{{% /md %}}</dd><dt class="property-required"
             title="Required">
         <span id="mongolists_csharp">
 <a href="#mongolists_csharp" style="color: inherit; text-decoration: inherit;">Mongo<wbr>Lists</a>
@@ -220,8 +188,7 @@ The ShardingInstance resource accepts the following [input]({{< relref "/docs/in
         <span class="property-type"><a href="#shardinginstancemongolist">List&lt;Pulumi.<wbr>Ali<wbr>Cloud.<wbr>Mongo<wbr>DB.<wbr>Inputs.<wbr>Sharding<wbr>Instance<wbr>Mongo<wbr>List<wbr>Args&gt;</a></span>
     </dt>
     <dd>{{% md %}}The mongo-node count can be purchased is in range of [2, 32].
-{{% /md %}}</dd>
-    <dt class="property-required"
+{{% /md %}}</dd><dt class="property-required"
             title="Required">
         <span id="shardlists_csharp">
 <a href="#shardlists_csharp" style="color: inherit; text-decoration: inherit;">Shard<wbr>Lists</a>
@@ -230,8 +197,7 @@ The ShardingInstance resource accepts the following [input]({{< relref "/docs/in
         <span class="property-type"><a href="#shardinginstanceshardlist">List&lt;Pulumi.<wbr>Ali<wbr>Cloud.<wbr>Mongo<wbr>DB.<wbr>Inputs.<wbr>Sharding<wbr>Instance<wbr>Shard<wbr>List<wbr>Args&gt;</a></span>
     </dt>
     <dd>{{% md %}}the shard-node count can be purchased is in range of [2, 32].
-{{% /md %}}</dd>
-    <dt class="property-optional"
+{{% /md %}}</dd><dt class="property-optional"
             title="Optional">
         <span id="accountpassword_csharp">
 <a href="#accountpassword_csharp" style="color: inherit; text-decoration: inherit;">Account<wbr>Password</a>
@@ -240,8 +206,7 @@ The ShardingInstance resource accepts the following [input]({{< relref "/docs/in
         <span class="property-type">string</span>
     </dt>
     <dd>{{% md %}}Password of the root account. It is a string of 6 to 32 characters and is composed of letters, numbers, and underlines.
-{{% /md %}}</dd>
-    <dt class="property-optional"
+{{% /md %}}</dd><dt class="property-optional"
             title="Optional">
         <span id="backupperiods_csharp">
 <a href="#backupperiods_csharp" style="color: inherit; text-decoration: inherit;">Backup<wbr>Periods</a>
@@ -250,8 +215,7 @@ The ShardingInstance resource accepts the following [input]({{< relref "/docs/in
         <span class="property-type">List&lt;string&gt;</span>
     </dt>
     <dd>{{% md %}}MongoDB Instance backup period. It is required when `backup_time` was existed. Valid values: [Monday, Tuesday, Wednesday, Thursday, Friday, Saturday, Sunday]. Default to [Monday, Tuesday, Wednesday, Thursday, Friday, Saturday, Sunday]
-{{% /md %}}</dd>
-    <dt class="property-optional"
+{{% /md %}}</dd><dt class="property-optional"
             title="Optional">
         <span id="backuptime_csharp">
 <a href="#backuptime_csharp" style="color: inherit; text-decoration: inherit;">Backup<wbr>Time</a>
@@ -260,8 +224,7 @@ The ShardingInstance resource accepts the following [input]({{< relref "/docs/in
         <span class="property-type">string</span>
     </dt>
     <dd>{{% md %}}MongoDB instance backup time. It is required when `backup_period` was existed. In the format of HH:mmZ- HH:mmZ. Time setting interval is one hour. If not set, the system will return a default, like "23:00Z-24:00Z".
-{{% /md %}}</dd>
-    <dt class="property-optional"
+{{% /md %}}</dd><dt class="property-optional"
             title="Optional">
         <span id="instancechargetype_csharp">
 <a href="#instancechargetype_csharp" style="color: inherit; text-decoration: inherit;">Instance<wbr>Charge<wbr>Type</a>
@@ -270,8 +233,7 @@ The ShardingInstance resource accepts the following [input]({{< relref "/docs/in
         <span class="property-type">string</span>
     </dt>
     <dd>{{% md %}}Valid values are `PrePaid`, `PostPaid`,System default to `PostPaid`.
-{{% /md %}}</dd>
-    <dt class="property-optional"
+{{% /md %}}</dd><dt class="property-optional"
             title="Optional">
         <span id="kmsencryptedpassword_csharp">
 <a href="#kmsencryptedpassword_csharp" style="color: inherit; text-decoration: inherit;">Kms<wbr>Encrypted<wbr>Password</a>
@@ -280,8 +242,7 @@ The ShardingInstance resource accepts the following [input]({{< relref "/docs/in
         <span class="property-type">string</span>
     </dt>
     <dd>{{% md %}}An KMS encrypts password used to a instance. If the `account_password` is filled in, this field will be ignored.
-{{% /md %}}</dd>
-    <dt class="property-optional"
+{{% /md %}}</dd><dt class="property-optional"
             title="Optional">
         <span id="kmsencryptioncontext_csharp">
 <a href="#kmsencryptioncontext_csharp" style="color: inherit; text-decoration: inherit;">Kms<wbr>Encryption<wbr>Context</a>
@@ -290,8 +251,7 @@ The ShardingInstance resource accepts the following [input]({{< relref "/docs/in
         <span class="property-type">Dictionary&lt;string, object&gt;</span>
     </dt>
     <dd>{{% md %}}An KMS encryption context used to decrypt `kms_encrypted_password` before creating or updating instance with `kms_encrypted_password`. See [Encryption Context](https://www.alibabacloud.com/help/doc-detail/42975.htm). It is valid when `kms_encrypted_password` is set.
-{{% /md %}}</dd>
-    <dt class="property-optional"
+{{% /md %}}</dd><dt class="property-optional"
             title="Optional">
         <span id="name_csharp">
 <a href="#name_csharp" style="color: inherit; text-decoration: inherit;">Name</a>
@@ -300,8 +260,7 @@ The ShardingInstance resource accepts the following [input]({{< relref "/docs/in
         <span class="property-type">string</span>
     </dt>
     <dd>{{% md %}}The name of DB instance. It a string of 2 to 256 characters.
-{{% /md %}}</dd>
-    <dt class="property-optional"
+{{% /md %}}</dd><dt class="property-optional"
             title="Optional">
         <span id="period_csharp">
 <a href="#period_csharp" style="color: inherit; text-decoration: inherit;">Period</a>
@@ -310,8 +269,7 @@ The ShardingInstance resource accepts the following [input]({{< relref "/docs/in
         <span class="property-type">int</span>
     </dt>
     <dd>{{% md %}}The duration that you will buy DB instance (in month). It is valid when instance_charge_type is `PrePaid`. Valid values: [1~9], 12, 24, 36. System default to 1.
-{{% /md %}}</dd>
-    <dt class="property-optional"
+{{% /md %}}</dd><dt class="property-optional"
             title="Optional">
         <span id="securitygroupid_csharp">
 <a href="#securitygroupid_csharp" style="color: inherit; text-decoration: inherit;">Security<wbr>Group<wbr>Id</a>
@@ -320,8 +278,7 @@ The ShardingInstance resource accepts the following [input]({{< relref "/docs/in
         <span class="property-type">string</span>
     </dt>
     <dd>{{% md %}}The Security Group ID of ECS.
-{{% /md %}}</dd>
-    <dt class="property-optional"
+{{% /md %}}</dd><dt class="property-optional"
             title="Optional">
         <span id="securityiplists_csharp">
 <a href="#securityiplists_csharp" style="color: inherit; text-decoration: inherit;">Security<wbr>Ip<wbr>Lists</a>
@@ -330,8 +287,7 @@ The ShardingInstance resource accepts the following [input]({{< relref "/docs/in
         <span class="property-type">List&lt;string&gt;</span>
     </dt>
     <dd>{{% md %}}List of IP addresses allowed to access all databases of an instance. The list contains up to 1,000 IP addresses, separated by commas. Supported formats include 0.0.0.0/0, 10.23.12.24 (IP), and 10.23.12.24/24 (Classless Inter-Domain Routing (CIDR) mode. /24 represents the length of the prefix in an IP address. The range of the prefix length is [1,32]). System default to `["127.0.0.1"]`.
-{{% /md %}}</dd>
-    <dt class="property-optional"
+{{% /md %}}</dd><dt class="property-optional"
             title="Optional">
         <span id="storageengine_csharp">
 <a href="#storageengine_csharp" style="color: inherit; text-decoration: inherit;">Storage<wbr>Engine</a>
@@ -340,8 +296,7 @@ The ShardingInstance resource accepts the following [input]({{< relref "/docs/in
         <span class="property-type">string</span>
     </dt>
     <dd>{{% md %}}Storage engine: WiredTiger or RocksDB. System Default value: WiredTiger.
-{{% /md %}}</dd>
-    <dt class="property-optional"
+{{% /md %}}</dd><dt class="property-optional"
             title="Optional">
         <span id="tags_csharp">
 <a href="#tags_csharp" style="color: inherit; text-decoration: inherit;">Tags</a>
@@ -349,8 +304,7 @@ The ShardingInstance resource accepts the following [input]({{< relref "/docs/in
         <span class="property-indicator"></span>
         <span class="property-type">Dictionary&lt;string, object&gt;</span>
     </dt>
-    <dd>{{% md %}}{{% /md %}}</dd>
-    <dt class="property-optional"
+    <dd>{{% md %}}{{% /md %}}</dd><dt class="property-optional"
             title="Optional">
         <span id="tdestatus_csharp">
 <a href="#tdestatus_csharp" style="color: inherit; text-decoration: inherit;">Tde<wbr>Status</a>
@@ -359,8 +313,7 @@ The ShardingInstance resource accepts the following [input]({{< relref "/docs/in
         <span class="property-type">string</span>
     </dt>
     <dd>{{% md %}}The TDE(Transparent Data Encryption) status.
-{{% /md %}}</dd>
-    <dt class="property-optional"
+{{% /md %}}</dd><dt class="property-optional"
             title="Optional">
         <span id="vswitchid_csharp">
 <a href="#vswitchid_csharp" style="color: inherit; text-decoration: inherit;">Vswitch<wbr>Id</a>
@@ -369,8 +322,7 @@ The ShardingInstance resource accepts the following [input]({{< relref "/docs/in
         <span class="property-type">string</span>
     </dt>
     <dd>{{% md %}}The virtual switch ID to launch DB instances in one VPC.
-{{% /md %}}</dd>
-    <dt class="property-optional"
+{{% /md %}}</dd><dt class="property-optional"
             title="Optional">
         <span id="zoneid_csharp">
 <a href="#zoneid_csharp" style="color: inherit; text-decoration: inherit;">Zone<wbr>Id</a>
@@ -380,14 +332,11 @@ The ShardingInstance resource accepts the following [input]({{< relref "/docs/in
     </dt>
     <dd>{{% md %}}The Zone to launch the DB instance. MongoDB sharding instance does not support multiple-zone.
 If it is a multi-zone and `vswitch_id` is specified, the vswitch must in one of them.
-{{% /md %}}</dd>
-</dl>
+{{% /md %}}</dd></dl>
 {{% /choosable %}}
 
 {{% choosable language go %}}
-<dl class="resources-properties">
-
-    <dt class="property-required"
+<dl class="resources-properties"><dt class="property-required"
             title="Required">
         <span id="engineversion_go">
 <a href="#engineversion_go" style="color: inherit; text-decoration: inherit;">Engine<wbr>Version</a>
@@ -396,8 +345,7 @@ If it is a multi-zone and `vswitch_id` is specified, the vswitch must in one of 
         <span class="property-type">string</span>
     </dt>
     <dd>{{% md %}}Database version. Value options can refer to the latest docs [CreateDBInstance](https://www.alibabacloud.com/help/zh/doc-detail/61884.htm) `EngineVersion`.
-{{% /md %}}</dd>
-    <dt class="property-required"
+{{% /md %}}</dd><dt class="property-required"
             title="Required">
         <span id="mongolists_go">
 <a href="#mongolists_go" style="color: inherit; text-decoration: inherit;">Mongo<wbr>Lists</a>
@@ -406,8 +354,7 @@ If it is a multi-zone and `vswitch_id` is specified, the vswitch must in one of 
         <span class="property-type"><a href="#shardinginstancemongolist">[]Sharding<wbr>Instance<wbr>Mongo<wbr>List</a></span>
     </dt>
     <dd>{{% md %}}The mongo-node count can be purchased is in range of [2, 32].
-{{% /md %}}</dd>
-    <dt class="property-required"
+{{% /md %}}</dd><dt class="property-required"
             title="Required">
         <span id="shardlists_go">
 <a href="#shardlists_go" style="color: inherit; text-decoration: inherit;">Shard<wbr>Lists</a>
@@ -416,8 +363,7 @@ If it is a multi-zone and `vswitch_id` is specified, the vswitch must in one of 
         <span class="property-type"><a href="#shardinginstanceshardlist">[]Sharding<wbr>Instance<wbr>Shard<wbr>List</a></span>
     </dt>
     <dd>{{% md %}}the shard-node count can be purchased is in range of [2, 32].
-{{% /md %}}</dd>
-    <dt class="property-optional"
+{{% /md %}}</dd><dt class="property-optional"
             title="Optional">
         <span id="accountpassword_go">
 <a href="#accountpassword_go" style="color: inherit; text-decoration: inherit;">Account<wbr>Password</a>
@@ -426,8 +372,7 @@ If it is a multi-zone and `vswitch_id` is specified, the vswitch must in one of 
         <span class="property-type">string</span>
     </dt>
     <dd>{{% md %}}Password of the root account. It is a string of 6 to 32 characters and is composed of letters, numbers, and underlines.
-{{% /md %}}</dd>
-    <dt class="property-optional"
+{{% /md %}}</dd><dt class="property-optional"
             title="Optional">
         <span id="backupperiods_go">
 <a href="#backupperiods_go" style="color: inherit; text-decoration: inherit;">Backup<wbr>Periods</a>
@@ -436,8 +381,7 @@ If it is a multi-zone and `vswitch_id` is specified, the vswitch must in one of 
         <span class="property-type">[]string</span>
     </dt>
     <dd>{{% md %}}MongoDB Instance backup period. It is required when `backup_time` was existed. Valid values: [Monday, Tuesday, Wednesday, Thursday, Friday, Saturday, Sunday]. Default to [Monday, Tuesday, Wednesday, Thursday, Friday, Saturday, Sunday]
-{{% /md %}}</dd>
-    <dt class="property-optional"
+{{% /md %}}</dd><dt class="property-optional"
             title="Optional">
         <span id="backuptime_go">
 <a href="#backuptime_go" style="color: inherit; text-decoration: inherit;">Backup<wbr>Time</a>
@@ -446,8 +390,7 @@ If it is a multi-zone and `vswitch_id` is specified, the vswitch must in one of 
         <span class="property-type">string</span>
     </dt>
     <dd>{{% md %}}MongoDB instance backup time. It is required when `backup_period` was existed. In the format of HH:mmZ- HH:mmZ. Time setting interval is one hour. If not set, the system will return a default, like "23:00Z-24:00Z".
-{{% /md %}}</dd>
-    <dt class="property-optional"
+{{% /md %}}</dd><dt class="property-optional"
             title="Optional">
         <span id="instancechargetype_go">
 <a href="#instancechargetype_go" style="color: inherit; text-decoration: inherit;">Instance<wbr>Charge<wbr>Type</a>
@@ -456,8 +399,7 @@ If it is a multi-zone and `vswitch_id` is specified, the vswitch must in one of 
         <span class="property-type">string</span>
     </dt>
     <dd>{{% md %}}Valid values are `PrePaid`, `PostPaid`,System default to `PostPaid`.
-{{% /md %}}</dd>
-    <dt class="property-optional"
+{{% /md %}}</dd><dt class="property-optional"
             title="Optional">
         <span id="kmsencryptedpassword_go">
 <a href="#kmsencryptedpassword_go" style="color: inherit; text-decoration: inherit;">Kms<wbr>Encrypted<wbr>Password</a>
@@ -466,8 +408,7 @@ If it is a multi-zone and `vswitch_id` is specified, the vswitch must in one of 
         <span class="property-type">string</span>
     </dt>
     <dd>{{% md %}}An KMS encrypts password used to a instance. If the `account_password` is filled in, this field will be ignored.
-{{% /md %}}</dd>
-    <dt class="property-optional"
+{{% /md %}}</dd><dt class="property-optional"
             title="Optional">
         <span id="kmsencryptioncontext_go">
 <a href="#kmsencryptioncontext_go" style="color: inherit; text-decoration: inherit;">Kms<wbr>Encryption<wbr>Context</a>
@@ -476,8 +417,7 @@ If it is a multi-zone and `vswitch_id` is specified, the vswitch must in one of 
         <span class="property-type">map[string]interface{}</span>
     </dt>
     <dd>{{% md %}}An KMS encryption context used to decrypt `kms_encrypted_password` before creating or updating instance with `kms_encrypted_password`. See [Encryption Context](https://www.alibabacloud.com/help/doc-detail/42975.htm). It is valid when `kms_encrypted_password` is set.
-{{% /md %}}</dd>
-    <dt class="property-optional"
+{{% /md %}}</dd><dt class="property-optional"
             title="Optional">
         <span id="name_go">
 <a href="#name_go" style="color: inherit; text-decoration: inherit;">Name</a>
@@ -486,8 +426,7 @@ If it is a multi-zone and `vswitch_id` is specified, the vswitch must in one of 
         <span class="property-type">string</span>
     </dt>
     <dd>{{% md %}}The name of DB instance. It a string of 2 to 256 characters.
-{{% /md %}}</dd>
-    <dt class="property-optional"
+{{% /md %}}</dd><dt class="property-optional"
             title="Optional">
         <span id="period_go">
 <a href="#period_go" style="color: inherit; text-decoration: inherit;">Period</a>
@@ -496,8 +435,7 @@ If it is a multi-zone and `vswitch_id` is specified, the vswitch must in one of 
         <span class="property-type">int</span>
     </dt>
     <dd>{{% md %}}The duration that you will buy DB instance (in month). It is valid when instance_charge_type is `PrePaid`. Valid values: [1~9], 12, 24, 36. System default to 1.
-{{% /md %}}</dd>
-    <dt class="property-optional"
+{{% /md %}}</dd><dt class="property-optional"
             title="Optional">
         <span id="securitygroupid_go">
 <a href="#securitygroupid_go" style="color: inherit; text-decoration: inherit;">Security<wbr>Group<wbr>Id</a>
@@ -506,8 +444,7 @@ If it is a multi-zone and `vswitch_id` is specified, the vswitch must in one of 
         <span class="property-type">string</span>
     </dt>
     <dd>{{% md %}}The Security Group ID of ECS.
-{{% /md %}}</dd>
-    <dt class="property-optional"
+{{% /md %}}</dd><dt class="property-optional"
             title="Optional">
         <span id="securityiplists_go">
 <a href="#securityiplists_go" style="color: inherit; text-decoration: inherit;">Security<wbr>Ip<wbr>Lists</a>
@@ -516,8 +453,7 @@ If it is a multi-zone and `vswitch_id` is specified, the vswitch must in one of 
         <span class="property-type">[]string</span>
     </dt>
     <dd>{{% md %}}List of IP addresses allowed to access all databases of an instance. The list contains up to 1,000 IP addresses, separated by commas. Supported formats include 0.0.0.0/0, 10.23.12.24 (IP), and 10.23.12.24/24 (Classless Inter-Domain Routing (CIDR) mode. /24 represents the length of the prefix in an IP address. The range of the prefix length is [1,32]). System default to `["127.0.0.1"]`.
-{{% /md %}}</dd>
-    <dt class="property-optional"
+{{% /md %}}</dd><dt class="property-optional"
             title="Optional">
         <span id="storageengine_go">
 <a href="#storageengine_go" style="color: inherit; text-decoration: inherit;">Storage<wbr>Engine</a>
@@ -526,8 +462,7 @@ If it is a multi-zone and `vswitch_id` is specified, the vswitch must in one of 
         <span class="property-type">string</span>
     </dt>
     <dd>{{% md %}}Storage engine: WiredTiger or RocksDB. System Default value: WiredTiger.
-{{% /md %}}</dd>
-    <dt class="property-optional"
+{{% /md %}}</dd><dt class="property-optional"
             title="Optional">
         <span id="tags_go">
 <a href="#tags_go" style="color: inherit; text-decoration: inherit;">Tags</a>
@@ -535,8 +470,7 @@ If it is a multi-zone and `vswitch_id` is specified, the vswitch must in one of 
         <span class="property-indicator"></span>
         <span class="property-type">map[string]interface{}</span>
     </dt>
-    <dd>{{% md %}}{{% /md %}}</dd>
-    <dt class="property-optional"
+    <dd>{{% md %}}{{% /md %}}</dd><dt class="property-optional"
             title="Optional">
         <span id="tdestatus_go">
 <a href="#tdestatus_go" style="color: inherit; text-decoration: inherit;">Tde<wbr>Status</a>
@@ -545,8 +479,7 @@ If it is a multi-zone and `vswitch_id` is specified, the vswitch must in one of 
         <span class="property-type">string</span>
     </dt>
     <dd>{{% md %}}The TDE(Transparent Data Encryption) status.
-{{% /md %}}</dd>
-    <dt class="property-optional"
+{{% /md %}}</dd><dt class="property-optional"
             title="Optional">
         <span id="vswitchid_go">
 <a href="#vswitchid_go" style="color: inherit; text-decoration: inherit;">Vswitch<wbr>Id</a>
@@ -555,8 +488,7 @@ If it is a multi-zone and `vswitch_id` is specified, the vswitch must in one of 
         <span class="property-type">string</span>
     </dt>
     <dd>{{% md %}}The virtual switch ID to launch DB instances in one VPC.
-{{% /md %}}</dd>
-    <dt class="property-optional"
+{{% /md %}}</dd><dt class="property-optional"
             title="Optional">
         <span id="zoneid_go">
 <a href="#zoneid_go" style="color: inherit; text-decoration: inherit;">Zone<wbr>Id</a>
@@ -566,14 +498,11 @@ If it is a multi-zone and `vswitch_id` is specified, the vswitch must in one of 
     </dt>
     <dd>{{% md %}}The Zone to launch the DB instance. MongoDB sharding instance does not support multiple-zone.
 If it is a multi-zone and `vswitch_id` is specified, the vswitch must in one of them.
-{{% /md %}}</dd>
-</dl>
+{{% /md %}}</dd></dl>
 {{% /choosable %}}
 
 {{% choosable language nodejs %}}
-<dl class="resources-properties">
-
-    <dt class="property-required"
+<dl class="resources-properties"><dt class="property-required"
             title="Required">
         <span id="engineversion_nodejs">
 <a href="#engineversion_nodejs" style="color: inherit; text-decoration: inherit;">engine<wbr>Version</a>
@@ -582,8 +511,7 @@ If it is a multi-zone and `vswitch_id` is specified, the vswitch must in one of 
         <span class="property-type">string</span>
     </dt>
     <dd>{{% md %}}Database version. Value options can refer to the latest docs [CreateDBInstance](https://www.alibabacloud.com/help/zh/doc-detail/61884.htm) `EngineVersion`.
-{{% /md %}}</dd>
-    <dt class="property-required"
+{{% /md %}}</dd><dt class="property-required"
             title="Required">
         <span id="mongolists_nodejs">
 <a href="#mongolists_nodejs" style="color: inherit; text-decoration: inherit;">mongo<wbr>Lists</a>
@@ -592,8 +520,7 @@ If it is a multi-zone and `vswitch_id` is specified, the vswitch must in one of 
         <span class="property-type"><a href="#shardinginstancemongolist">Sharding<wbr>Instance<wbr>Mongo<wbr>List[]</a></span>
     </dt>
     <dd>{{% md %}}The mongo-node count can be purchased is in range of [2, 32].
-{{% /md %}}</dd>
-    <dt class="property-required"
+{{% /md %}}</dd><dt class="property-required"
             title="Required">
         <span id="shardlists_nodejs">
 <a href="#shardlists_nodejs" style="color: inherit; text-decoration: inherit;">shard<wbr>Lists</a>
@@ -602,8 +529,7 @@ If it is a multi-zone and `vswitch_id` is specified, the vswitch must in one of 
         <span class="property-type"><a href="#shardinginstanceshardlist">Sharding<wbr>Instance<wbr>Shard<wbr>List[]</a></span>
     </dt>
     <dd>{{% md %}}the shard-node count can be purchased is in range of [2, 32].
-{{% /md %}}</dd>
-    <dt class="property-optional"
+{{% /md %}}</dd><dt class="property-optional"
             title="Optional">
         <span id="accountpassword_nodejs">
 <a href="#accountpassword_nodejs" style="color: inherit; text-decoration: inherit;">account<wbr>Password</a>
@@ -612,8 +538,7 @@ If it is a multi-zone and `vswitch_id` is specified, the vswitch must in one of 
         <span class="property-type">string</span>
     </dt>
     <dd>{{% md %}}Password of the root account. It is a string of 6 to 32 characters and is composed of letters, numbers, and underlines.
-{{% /md %}}</dd>
-    <dt class="property-optional"
+{{% /md %}}</dd><dt class="property-optional"
             title="Optional">
         <span id="backupperiods_nodejs">
 <a href="#backupperiods_nodejs" style="color: inherit; text-decoration: inherit;">backup<wbr>Periods</a>
@@ -622,8 +547,7 @@ If it is a multi-zone and `vswitch_id` is specified, the vswitch must in one of 
         <span class="property-type">string[]</span>
     </dt>
     <dd>{{% md %}}MongoDB Instance backup period. It is required when `backup_time` was existed. Valid values: [Monday, Tuesday, Wednesday, Thursday, Friday, Saturday, Sunday]. Default to [Monday, Tuesday, Wednesday, Thursday, Friday, Saturday, Sunday]
-{{% /md %}}</dd>
-    <dt class="property-optional"
+{{% /md %}}</dd><dt class="property-optional"
             title="Optional">
         <span id="backuptime_nodejs">
 <a href="#backuptime_nodejs" style="color: inherit; text-decoration: inherit;">backup<wbr>Time</a>
@@ -632,8 +556,7 @@ If it is a multi-zone and `vswitch_id` is specified, the vswitch must in one of 
         <span class="property-type">string</span>
     </dt>
     <dd>{{% md %}}MongoDB instance backup time. It is required when `backup_period` was existed. In the format of HH:mmZ- HH:mmZ. Time setting interval is one hour. If not set, the system will return a default, like "23:00Z-24:00Z".
-{{% /md %}}</dd>
-    <dt class="property-optional"
+{{% /md %}}</dd><dt class="property-optional"
             title="Optional">
         <span id="instancechargetype_nodejs">
 <a href="#instancechargetype_nodejs" style="color: inherit; text-decoration: inherit;">instance<wbr>Charge<wbr>Type</a>
@@ -642,8 +565,7 @@ If it is a multi-zone and `vswitch_id` is specified, the vswitch must in one of 
         <span class="property-type">string</span>
     </dt>
     <dd>{{% md %}}Valid values are `PrePaid`, `PostPaid`,System default to `PostPaid`.
-{{% /md %}}</dd>
-    <dt class="property-optional"
+{{% /md %}}</dd><dt class="property-optional"
             title="Optional">
         <span id="kmsencryptedpassword_nodejs">
 <a href="#kmsencryptedpassword_nodejs" style="color: inherit; text-decoration: inherit;">kms<wbr>Encrypted<wbr>Password</a>
@@ -652,8 +574,7 @@ If it is a multi-zone and `vswitch_id` is specified, the vswitch must in one of 
         <span class="property-type">string</span>
     </dt>
     <dd>{{% md %}}An KMS encrypts password used to a instance. If the `account_password` is filled in, this field will be ignored.
-{{% /md %}}</dd>
-    <dt class="property-optional"
+{{% /md %}}</dd><dt class="property-optional"
             title="Optional">
         <span id="kmsencryptioncontext_nodejs">
 <a href="#kmsencryptioncontext_nodejs" style="color: inherit; text-decoration: inherit;">kms<wbr>Encryption<wbr>Context</a>
@@ -662,8 +583,7 @@ If it is a multi-zone and `vswitch_id` is specified, the vswitch must in one of 
         <span class="property-type">{[key: string]: any}</span>
     </dt>
     <dd>{{% md %}}An KMS encryption context used to decrypt `kms_encrypted_password` before creating or updating instance with `kms_encrypted_password`. See [Encryption Context](https://www.alibabacloud.com/help/doc-detail/42975.htm). It is valid when `kms_encrypted_password` is set.
-{{% /md %}}</dd>
-    <dt class="property-optional"
+{{% /md %}}</dd><dt class="property-optional"
             title="Optional">
         <span id="name_nodejs">
 <a href="#name_nodejs" style="color: inherit; text-decoration: inherit;">name</a>
@@ -672,8 +592,7 @@ If it is a multi-zone and `vswitch_id` is specified, the vswitch must in one of 
         <span class="property-type">string</span>
     </dt>
     <dd>{{% md %}}The name of DB instance. It a string of 2 to 256 characters.
-{{% /md %}}</dd>
-    <dt class="property-optional"
+{{% /md %}}</dd><dt class="property-optional"
             title="Optional">
         <span id="period_nodejs">
 <a href="#period_nodejs" style="color: inherit; text-decoration: inherit;">period</a>
@@ -682,8 +601,7 @@ If it is a multi-zone and `vswitch_id` is specified, the vswitch must in one of 
         <span class="property-type">number</span>
     </dt>
     <dd>{{% md %}}The duration that you will buy DB instance (in month). It is valid when instance_charge_type is `PrePaid`. Valid values: [1~9], 12, 24, 36. System default to 1.
-{{% /md %}}</dd>
-    <dt class="property-optional"
+{{% /md %}}</dd><dt class="property-optional"
             title="Optional">
         <span id="securitygroupid_nodejs">
 <a href="#securitygroupid_nodejs" style="color: inherit; text-decoration: inherit;">security<wbr>Group<wbr>Id</a>
@@ -692,8 +610,7 @@ If it is a multi-zone and `vswitch_id` is specified, the vswitch must in one of 
         <span class="property-type">string</span>
     </dt>
     <dd>{{% md %}}The Security Group ID of ECS.
-{{% /md %}}</dd>
-    <dt class="property-optional"
+{{% /md %}}</dd><dt class="property-optional"
             title="Optional">
         <span id="securityiplists_nodejs">
 <a href="#securityiplists_nodejs" style="color: inherit; text-decoration: inherit;">security<wbr>Ip<wbr>Lists</a>
@@ -702,8 +619,7 @@ If it is a multi-zone and `vswitch_id` is specified, the vswitch must in one of 
         <span class="property-type">string[]</span>
     </dt>
     <dd>{{% md %}}List of IP addresses allowed to access all databases of an instance. The list contains up to 1,000 IP addresses, separated by commas. Supported formats include 0.0.0.0/0, 10.23.12.24 (IP), and 10.23.12.24/24 (Classless Inter-Domain Routing (CIDR) mode. /24 represents the length of the prefix in an IP address. The range of the prefix length is [1,32]). System default to `["127.0.0.1"]`.
-{{% /md %}}</dd>
-    <dt class="property-optional"
+{{% /md %}}</dd><dt class="property-optional"
             title="Optional">
         <span id="storageengine_nodejs">
 <a href="#storageengine_nodejs" style="color: inherit; text-decoration: inherit;">storage<wbr>Engine</a>
@@ -712,8 +628,7 @@ If it is a multi-zone and `vswitch_id` is specified, the vswitch must in one of 
         <span class="property-type">string</span>
     </dt>
     <dd>{{% md %}}Storage engine: WiredTiger or RocksDB. System Default value: WiredTiger.
-{{% /md %}}</dd>
-    <dt class="property-optional"
+{{% /md %}}</dd><dt class="property-optional"
             title="Optional">
         <span id="tags_nodejs">
 <a href="#tags_nodejs" style="color: inherit; text-decoration: inherit;">tags</a>
@@ -721,8 +636,7 @@ If it is a multi-zone and `vswitch_id` is specified, the vswitch must in one of 
         <span class="property-indicator"></span>
         <span class="property-type">{[key: string]: any}</span>
     </dt>
-    <dd>{{% md %}}{{% /md %}}</dd>
-    <dt class="property-optional"
+    <dd>{{% md %}}{{% /md %}}</dd><dt class="property-optional"
             title="Optional">
         <span id="tdestatus_nodejs">
 <a href="#tdestatus_nodejs" style="color: inherit; text-decoration: inherit;">tde<wbr>Status</a>
@@ -731,8 +645,7 @@ If it is a multi-zone and `vswitch_id` is specified, the vswitch must in one of 
         <span class="property-type">string</span>
     </dt>
     <dd>{{% md %}}The TDE(Transparent Data Encryption) status.
-{{% /md %}}</dd>
-    <dt class="property-optional"
+{{% /md %}}</dd><dt class="property-optional"
             title="Optional">
         <span id="vswitchid_nodejs">
 <a href="#vswitchid_nodejs" style="color: inherit; text-decoration: inherit;">vswitch<wbr>Id</a>
@@ -741,8 +654,7 @@ If it is a multi-zone and `vswitch_id` is specified, the vswitch must in one of 
         <span class="property-type">string</span>
     </dt>
     <dd>{{% md %}}The virtual switch ID to launch DB instances in one VPC.
-{{% /md %}}</dd>
-    <dt class="property-optional"
+{{% /md %}}</dd><dt class="property-optional"
             title="Optional">
         <span id="zoneid_nodejs">
 <a href="#zoneid_nodejs" style="color: inherit; text-decoration: inherit;">zone<wbr>Id</a>
@@ -752,14 +664,11 @@ If it is a multi-zone and `vswitch_id` is specified, the vswitch must in one of 
     </dt>
     <dd>{{% md %}}The Zone to launch the DB instance. MongoDB sharding instance does not support multiple-zone.
 If it is a multi-zone and `vswitch_id` is specified, the vswitch must in one of them.
-{{% /md %}}</dd>
-</dl>
+{{% /md %}}</dd></dl>
 {{% /choosable %}}
 
 {{% choosable language python %}}
-<dl class="resources-properties">
-
-    <dt class="property-required"
+<dl class="resources-properties"><dt class="property-required"
             title="Required">
         <span id="engine_version_python">
 <a href="#engine_version_python" style="color: inherit; text-decoration: inherit;">engine_<wbr>version</a>
@@ -768,8 +677,7 @@ If it is a multi-zone and `vswitch_id` is specified, the vswitch must in one of 
         <span class="property-type">str</span>
     </dt>
     <dd>{{% md %}}Database version. Value options can refer to the latest docs [CreateDBInstance](https://www.alibabacloud.com/help/zh/doc-detail/61884.htm) `EngineVersion`.
-{{% /md %}}</dd>
-    <dt class="property-required"
+{{% /md %}}</dd><dt class="property-required"
             title="Required">
         <span id="mongo_lists_python">
 <a href="#mongo_lists_python" style="color: inherit; text-decoration: inherit;">mongo_<wbr>lists</a>
@@ -778,8 +686,7 @@ If it is a multi-zone and `vswitch_id` is specified, the vswitch must in one of 
         <span class="property-type"><a href="#shardinginstancemongolist">Sequence[Sharding<wbr>Instance<wbr>Mongo<wbr>List<wbr>Args]</a></span>
     </dt>
     <dd>{{% md %}}The mongo-node count can be purchased is in range of [2, 32].
-{{% /md %}}</dd>
-    <dt class="property-required"
+{{% /md %}}</dd><dt class="property-required"
             title="Required">
         <span id="shard_lists_python">
 <a href="#shard_lists_python" style="color: inherit; text-decoration: inherit;">shard_<wbr>lists</a>
@@ -788,8 +695,7 @@ If it is a multi-zone and `vswitch_id` is specified, the vswitch must in one of 
         <span class="property-type"><a href="#shardinginstanceshardlist">Sequence[Sharding<wbr>Instance<wbr>Shard<wbr>List<wbr>Args]</a></span>
     </dt>
     <dd>{{% md %}}the shard-node count can be purchased is in range of [2, 32].
-{{% /md %}}</dd>
-    <dt class="property-optional"
+{{% /md %}}</dd><dt class="property-optional"
             title="Optional">
         <span id="account_password_python">
 <a href="#account_password_python" style="color: inherit; text-decoration: inherit;">account_<wbr>password</a>
@@ -798,8 +704,7 @@ If it is a multi-zone and `vswitch_id` is specified, the vswitch must in one of 
         <span class="property-type">str</span>
     </dt>
     <dd>{{% md %}}Password of the root account. It is a string of 6 to 32 characters and is composed of letters, numbers, and underlines.
-{{% /md %}}</dd>
-    <dt class="property-optional"
+{{% /md %}}</dd><dt class="property-optional"
             title="Optional">
         <span id="backup_periods_python">
 <a href="#backup_periods_python" style="color: inherit; text-decoration: inherit;">backup_<wbr>periods</a>
@@ -808,8 +713,7 @@ If it is a multi-zone and `vswitch_id` is specified, the vswitch must in one of 
         <span class="property-type">Sequence[str]</span>
     </dt>
     <dd>{{% md %}}MongoDB Instance backup period. It is required when `backup_time` was existed. Valid values: [Monday, Tuesday, Wednesday, Thursday, Friday, Saturday, Sunday]. Default to [Monday, Tuesday, Wednesday, Thursday, Friday, Saturday, Sunday]
-{{% /md %}}</dd>
-    <dt class="property-optional"
+{{% /md %}}</dd><dt class="property-optional"
             title="Optional">
         <span id="backup_time_python">
 <a href="#backup_time_python" style="color: inherit; text-decoration: inherit;">backup_<wbr>time</a>
@@ -818,8 +722,7 @@ If it is a multi-zone and `vswitch_id` is specified, the vswitch must in one of 
         <span class="property-type">str</span>
     </dt>
     <dd>{{% md %}}MongoDB instance backup time. It is required when `backup_period` was existed. In the format of HH:mmZ- HH:mmZ. Time setting interval is one hour. If not set, the system will return a default, like "23:00Z-24:00Z".
-{{% /md %}}</dd>
-    <dt class="property-optional"
+{{% /md %}}</dd><dt class="property-optional"
             title="Optional">
         <span id="instance_charge_type_python">
 <a href="#instance_charge_type_python" style="color: inherit; text-decoration: inherit;">instance_<wbr>charge_<wbr>type</a>
@@ -828,8 +731,7 @@ If it is a multi-zone and `vswitch_id` is specified, the vswitch must in one of 
         <span class="property-type">str</span>
     </dt>
     <dd>{{% md %}}Valid values are `PrePaid`, `PostPaid`,System default to `PostPaid`.
-{{% /md %}}</dd>
-    <dt class="property-optional"
+{{% /md %}}</dd><dt class="property-optional"
             title="Optional">
         <span id="kms_encrypted_password_python">
 <a href="#kms_encrypted_password_python" style="color: inherit; text-decoration: inherit;">kms_<wbr>encrypted_<wbr>password</a>
@@ -838,8 +740,7 @@ If it is a multi-zone and `vswitch_id` is specified, the vswitch must in one of 
         <span class="property-type">str</span>
     </dt>
     <dd>{{% md %}}An KMS encrypts password used to a instance. If the `account_password` is filled in, this field will be ignored.
-{{% /md %}}</dd>
-    <dt class="property-optional"
+{{% /md %}}</dd><dt class="property-optional"
             title="Optional">
         <span id="kms_encryption_context_python">
 <a href="#kms_encryption_context_python" style="color: inherit; text-decoration: inherit;">kms_<wbr>encryption_<wbr>context</a>
@@ -848,8 +749,7 @@ If it is a multi-zone and `vswitch_id` is specified, the vswitch must in one of 
         <span class="property-type">Mapping[str, Any]</span>
     </dt>
     <dd>{{% md %}}An KMS encryption context used to decrypt `kms_encrypted_password` before creating or updating instance with `kms_encrypted_password`. See [Encryption Context](https://www.alibabacloud.com/help/doc-detail/42975.htm). It is valid when `kms_encrypted_password` is set.
-{{% /md %}}</dd>
-    <dt class="property-optional"
+{{% /md %}}</dd><dt class="property-optional"
             title="Optional">
         <span id="name_python">
 <a href="#name_python" style="color: inherit; text-decoration: inherit;">name</a>
@@ -858,8 +758,7 @@ If it is a multi-zone and `vswitch_id` is specified, the vswitch must in one of 
         <span class="property-type">str</span>
     </dt>
     <dd>{{% md %}}The name of DB instance. It a string of 2 to 256 characters.
-{{% /md %}}</dd>
-    <dt class="property-optional"
+{{% /md %}}</dd><dt class="property-optional"
             title="Optional">
         <span id="period_python">
 <a href="#period_python" style="color: inherit; text-decoration: inherit;">period</a>
@@ -868,8 +767,7 @@ If it is a multi-zone and `vswitch_id` is specified, the vswitch must in one of 
         <span class="property-type">int</span>
     </dt>
     <dd>{{% md %}}The duration that you will buy DB instance (in month). It is valid when instance_charge_type is `PrePaid`. Valid values: [1~9], 12, 24, 36. System default to 1.
-{{% /md %}}</dd>
-    <dt class="property-optional"
+{{% /md %}}</dd><dt class="property-optional"
             title="Optional">
         <span id="security_group_id_python">
 <a href="#security_group_id_python" style="color: inherit; text-decoration: inherit;">security_<wbr>group_<wbr>id</a>
@@ -878,8 +776,7 @@ If it is a multi-zone and `vswitch_id` is specified, the vswitch must in one of 
         <span class="property-type">str</span>
     </dt>
     <dd>{{% md %}}The Security Group ID of ECS.
-{{% /md %}}</dd>
-    <dt class="property-optional"
+{{% /md %}}</dd><dt class="property-optional"
             title="Optional">
         <span id="security_ip_lists_python">
 <a href="#security_ip_lists_python" style="color: inherit; text-decoration: inherit;">security_<wbr>ip_<wbr>lists</a>
@@ -888,8 +785,7 @@ If it is a multi-zone and `vswitch_id` is specified, the vswitch must in one of 
         <span class="property-type">Sequence[str]</span>
     </dt>
     <dd>{{% md %}}List of IP addresses allowed to access all databases of an instance. The list contains up to 1,000 IP addresses, separated by commas. Supported formats include 0.0.0.0/0, 10.23.12.24 (IP), and 10.23.12.24/24 (Classless Inter-Domain Routing (CIDR) mode. /24 represents the length of the prefix in an IP address. The range of the prefix length is [1,32]). System default to `["127.0.0.1"]`.
-{{% /md %}}</dd>
-    <dt class="property-optional"
+{{% /md %}}</dd><dt class="property-optional"
             title="Optional">
         <span id="storage_engine_python">
 <a href="#storage_engine_python" style="color: inherit; text-decoration: inherit;">storage_<wbr>engine</a>
@@ -898,8 +794,7 @@ If it is a multi-zone and `vswitch_id` is specified, the vswitch must in one of 
         <span class="property-type">str</span>
     </dt>
     <dd>{{% md %}}Storage engine: WiredTiger or RocksDB. System Default value: WiredTiger.
-{{% /md %}}</dd>
-    <dt class="property-optional"
+{{% /md %}}</dd><dt class="property-optional"
             title="Optional">
         <span id="tags_python">
 <a href="#tags_python" style="color: inherit; text-decoration: inherit;">tags</a>
@@ -907,8 +802,7 @@ If it is a multi-zone and `vswitch_id` is specified, the vswitch must in one of 
         <span class="property-indicator"></span>
         <span class="property-type">Mapping[str, Any]</span>
     </dt>
-    <dd>{{% md %}}{{% /md %}}</dd>
-    <dt class="property-optional"
+    <dd>{{% md %}}{{% /md %}}</dd><dt class="property-optional"
             title="Optional">
         <span id="tde_status_python">
 <a href="#tde_status_python" style="color: inherit; text-decoration: inherit;">tde_<wbr>status</a>
@@ -917,8 +811,7 @@ If it is a multi-zone and `vswitch_id` is specified, the vswitch must in one of 
         <span class="property-type">str</span>
     </dt>
     <dd>{{% md %}}The TDE(Transparent Data Encryption) status.
-{{% /md %}}</dd>
-    <dt class="property-optional"
+{{% /md %}}</dd><dt class="property-optional"
             title="Optional">
         <span id="vswitch_id_python">
 <a href="#vswitch_id_python" style="color: inherit; text-decoration: inherit;">vswitch_<wbr>id</a>
@@ -927,8 +820,7 @@ If it is a multi-zone and `vswitch_id` is specified, the vswitch must in one of 
         <span class="property-type">str</span>
     </dt>
     <dd>{{% md %}}The virtual switch ID to launch DB instances in one VPC.
-{{% /md %}}</dd>
-    <dt class="property-optional"
+{{% /md %}}</dd><dt class="property-optional"
             title="Optional">
         <span id="zone_id_python">
 <a href="#zone_id_python" style="color: inherit; text-decoration: inherit;">zone_<wbr>id</a>
@@ -938,8 +830,7 @@ If it is a multi-zone and `vswitch_id` is specified, the vswitch must in one of 
     </dt>
     <dd>{{% md %}}The Zone to launch the DB instance. MongoDB sharding instance does not support multiple-zone.
 If it is a multi-zone and `vswitch_id` is specified, the vswitch must in one of them.
-{{% /md %}}</dd>
-</dl>
+{{% /md %}}</dd></dl>
 {{% /choosable %}}
 
 
@@ -950,9 +841,7 @@ All [input](#inputs) properties are implicitly available as output properties. A
 
 
 {{% choosable language csharp %}}
-<dl class="resources-properties">
-
-    <dt class="property-"
+<dl class="resources-properties"><dt class="property-"
             title="">
         <span id="id_csharp">
 <a href="#id_csharp" style="color: inherit; text-decoration: inherit;">Id</a>
@@ -960,8 +849,7 @@ All [input](#inputs) properties are implicitly available as output properties. A
         <span class="property-indicator"></span>
         <span class="property-type">string</span>
     </dt>
-    <dd>{{% md %}}The provider-assigned unique ID for this managed resource.{{% /md %}}</dd>
-    <dt class="property-"
+    <dd>{{% md %}}The provider-assigned unique ID for this managed resource.{{% /md %}}</dd><dt class="property-"
             title="">
         <span id="retentionperiod_csharp">
 <a href="#retentionperiod_csharp" style="color: inherit; text-decoration: inherit;">Retention<wbr>Period</a>
@@ -970,14 +858,11 @@ All [input](#inputs) properties are implicitly available as output properties. A
         <span class="property-type">int</span>
     </dt>
     <dd>{{% md %}}Instance log backup retention days. Available in 1.42.0+.
-{{% /md %}}</dd>
-</dl>
+{{% /md %}}</dd></dl>
 {{% /choosable %}}
 
 {{% choosable language go %}}
-<dl class="resources-properties">
-
-    <dt class="property-"
+<dl class="resources-properties"><dt class="property-"
             title="">
         <span id="id_go">
 <a href="#id_go" style="color: inherit; text-decoration: inherit;">Id</a>
@@ -985,8 +870,7 @@ All [input](#inputs) properties are implicitly available as output properties. A
         <span class="property-indicator"></span>
         <span class="property-type">string</span>
     </dt>
-    <dd>{{% md %}}The provider-assigned unique ID for this managed resource.{{% /md %}}</dd>
-    <dt class="property-"
+    <dd>{{% md %}}The provider-assigned unique ID for this managed resource.{{% /md %}}</dd><dt class="property-"
             title="">
         <span id="retentionperiod_go">
 <a href="#retentionperiod_go" style="color: inherit; text-decoration: inherit;">Retention<wbr>Period</a>
@@ -995,14 +879,11 @@ All [input](#inputs) properties are implicitly available as output properties. A
         <span class="property-type">int</span>
     </dt>
     <dd>{{% md %}}Instance log backup retention days. Available in 1.42.0+.
-{{% /md %}}</dd>
-</dl>
+{{% /md %}}</dd></dl>
 {{% /choosable %}}
 
 {{% choosable language nodejs %}}
-<dl class="resources-properties">
-
-    <dt class="property-"
+<dl class="resources-properties"><dt class="property-"
             title="">
         <span id="id_nodejs">
 <a href="#id_nodejs" style="color: inherit; text-decoration: inherit;">id</a>
@@ -1010,8 +891,7 @@ All [input](#inputs) properties are implicitly available as output properties. A
         <span class="property-indicator"></span>
         <span class="property-type">string</span>
     </dt>
-    <dd>{{% md %}}The provider-assigned unique ID for this managed resource.{{% /md %}}</dd>
-    <dt class="property-"
+    <dd>{{% md %}}The provider-assigned unique ID for this managed resource.{{% /md %}}</dd><dt class="property-"
             title="">
         <span id="retentionperiod_nodejs">
 <a href="#retentionperiod_nodejs" style="color: inherit; text-decoration: inherit;">retention<wbr>Period</a>
@@ -1020,14 +900,11 @@ All [input](#inputs) properties are implicitly available as output properties. A
         <span class="property-type">number</span>
     </dt>
     <dd>{{% md %}}Instance log backup retention days. Available in 1.42.0+.
-{{% /md %}}</dd>
-</dl>
+{{% /md %}}</dd></dl>
 {{% /choosable %}}
 
 {{% choosable language python %}}
-<dl class="resources-properties">
-
-    <dt class="property-"
+<dl class="resources-properties"><dt class="property-"
             title="">
         <span id="id_python">
 <a href="#id_python" style="color: inherit; text-decoration: inherit;">id</a>
@@ -1035,8 +912,7 @@ All [input](#inputs) properties are implicitly available as output properties. A
         <span class="property-indicator"></span>
         <span class="property-type">str</span>
     </dt>
-    <dd>{{% md %}}The provider-assigned unique ID for this managed resource.{{% /md %}}</dd>
-    <dt class="property-"
+    <dd>{{% md %}}The provider-assigned unique ID for this managed resource.{{% /md %}}</dd><dt class="property-"
             title="">
         <span id="retention_period_python">
 <a href="#retention_period_python" style="color: inherit; text-decoration: inherit;">retention_<wbr>period</a>
@@ -1045,8 +921,7 @@ All [input](#inputs) properties are implicitly available as output properties. A
         <span class="property-type">int</span>
     </dt>
     <dd>{{% md %}}Instance log backup retention days. Available in 1.42.0+.
-{{% /md %}}</dd>
-</dl>
+{{% /md %}}</dd></dl>
 {{% /choosable %}}
 
 
@@ -1173,9 +1048,7 @@ The following state arguments are supported:
 
 
 {{% choosable language csharp %}}
-<dl class="resources-properties">
-
-    <dt class="property-optional"
+<dl class="resources-properties"><dt class="property-optional"
             title="Optional">
         <span id="state_accountpassword_csharp">
 <a href="#state_accountpassword_csharp" style="color: inherit; text-decoration: inherit;">Account<wbr>Password</a>
@@ -1184,8 +1057,7 @@ The following state arguments are supported:
         <span class="property-type">string</span>
     </dt>
     <dd>{{% md %}}Password of the root account. It is a string of 6 to 32 characters and is composed of letters, numbers, and underlines.
-{{% /md %}}</dd>
-    <dt class="property-optional"
+{{% /md %}}</dd><dt class="property-optional"
             title="Optional">
         <span id="state_backupperiods_csharp">
 <a href="#state_backupperiods_csharp" style="color: inherit; text-decoration: inherit;">Backup<wbr>Periods</a>
@@ -1194,8 +1066,7 @@ The following state arguments are supported:
         <span class="property-type">List&lt;string&gt;</span>
     </dt>
     <dd>{{% md %}}MongoDB Instance backup period. It is required when `backup_time` was existed. Valid values: [Monday, Tuesday, Wednesday, Thursday, Friday, Saturday, Sunday]. Default to [Monday, Tuesday, Wednesday, Thursday, Friday, Saturday, Sunday]
-{{% /md %}}</dd>
-    <dt class="property-optional"
+{{% /md %}}</dd><dt class="property-optional"
             title="Optional">
         <span id="state_backuptime_csharp">
 <a href="#state_backuptime_csharp" style="color: inherit; text-decoration: inherit;">Backup<wbr>Time</a>
@@ -1204,8 +1075,7 @@ The following state arguments are supported:
         <span class="property-type">string</span>
     </dt>
     <dd>{{% md %}}MongoDB instance backup time. It is required when `backup_period` was existed. In the format of HH:mmZ- HH:mmZ. Time setting interval is one hour. If not set, the system will return a default, like "23:00Z-24:00Z".
-{{% /md %}}</dd>
-    <dt class="property-optional"
+{{% /md %}}</dd><dt class="property-optional"
             title="Optional">
         <span id="state_engineversion_csharp">
 <a href="#state_engineversion_csharp" style="color: inherit; text-decoration: inherit;">Engine<wbr>Version</a>
@@ -1214,8 +1084,7 @@ The following state arguments are supported:
         <span class="property-type">string</span>
     </dt>
     <dd>{{% md %}}Database version. Value options can refer to the latest docs [CreateDBInstance](https://www.alibabacloud.com/help/zh/doc-detail/61884.htm) `EngineVersion`.
-{{% /md %}}</dd>
-    <dt class="property-optional"
+{{% /md %}}</dd><dt class="property-optional"
             title="Optional">
         <span id="state_instancechargetype_csharp">
 <a href="#state_instancechargetype_csharp" style="color: inherit; text-decoration: inherit;">Instance<wbr>Charge<wbr>Type</a>
@@ -1224,8 +1093,7 @@ The following state arguments are supported:
         <span class="property-type">string</span>
     </dt>
     <dd>{{% md %}}Valid values are `PrePaid`, `PostPaid`,System default to `PostPaid`.
-{{% /md %}}</dd>
-    <dt class="property-optional"
+{{% /md %}}</dd><dt class="property-optional"
             title="Optional">
         <span id="state_kmsencryptedpassword_csharp">
 <a href="#state_kmsencryptedpassword_csharp" style="color: inherit; text-decoration: inherit;">Kms<wbr>Encrypted<wbr>Password</a>
@@ -1234,8 +1102,7 @@ The following state arguments are supported:
         <span class="property-type">string</span>
     </dt>
     <dd>{{% md %}}An KMS encrypts password used to a instance. If the `account_password` is filled in, this field will be ignored.
-{{% /md %}}</dd>
-    <dt class="property-optional"
+{{% /md %}}</dd><dt class="property-optional"
             title="Optional">
         <span id="state_kmsencryptioncontext_csharp">
 <a href="#state_kmsencryptioncontext_csharp" style="color: inherit; text-decoration: inherit;">Kms<wbr>Encryption<wbr>Context</a>
@@ -1244,8 +1111,7 @@ The following state arguments are supported:
         <span class="property-type">Dictionary&lt;string, object&gt;</span>
     </dt>
     <dd>{{% md %}}An KMS encryption context used to decrypt `kms_encrypted_password` before creating or updating instance with `kms_encrypted_password`. See [Encryption Context](https://www.alibabacloud.com/help/doc-detail/42975.htm). It is valid when `kms_encrypted_password` is set.
-{{% /md %}}</dd>
-    <dt class="property-optional"
+{{% /md %}}</dd><dt class="property-optional"
             title="Optional">
         <span id="state_mongolists_csharp">
 <a href="#state_mongolists_csharp" style="color: inherit; text-decoration: inherit;">Mongo<wbr>Lists</a>
@@ -1254,8 +1120,7 @@ The following state arguments are supported:
         <span class="property-type"><a href="#shardinginstancemongolist">List&lt;Pulumi.<wbr>Ali<wbr>Cloud.<wbr>Mongo<wbr>DB.<wbr>Inputs.<wbr>Sharding<wbr>Instance<wbr>Mongo<wbr>List<wbr>Args&gt;</a></span>
     </dt>
     <dd>{{% md %}}The mongo-node count can be purchased is in range of [2, 32].
-{{% /md %}}</dd>
-    <dt class="property-optional"
+{{% /md %}}</dd><dt class="property-optional"
             title="Optional">
         <span id="state_name_csharp">
 <a href="#state_name_csharp" style="color: inherit; text-decoration: inherit;">Name</a>
@@ -1264,8 +1129,7 @@ The following state arguments are supported:
         <span class="property-type">string</span>
     </dt>
     <dd>{{% md %}}The name of DB instance. It a string of 2 to 256 characters.
-{{% /md %}}</dd>
-    <dt class="property-optional"
+{{% /md %}}</dd><dt class="property-optional"
             title="Optional">
         <span id="state_period_csharp">
 <a href="#state_period_csharp" style="color: inherit; text-decoration: inherit;">Period</a>
@@ -1274,8 +1138,7 @@ The following state arguments are supported:
         <span class="property-type">int</span>
     </dt>
     <dd>{{% md %}}The duration that you will buy DB instance (in month). It is valid when instance_charge_type is `PrePaid`. Valid values: [1~9], 12, 24, 36. System default to 1.
-{{% /md %}}</dd>
-    <dt class="property-optional"
+{{% /md %}}</dd><dt class="property-optional"
             title="Optional">
         <span id="state_retentionperiod_csharp">
 <a href="#state_retentionperiod_csharp" style="color: inherit; text-decoration: inherit;">Retention<wbr>Period</a>
@@ -1284,8 +1147,7 @@ The following state arguments are supported:
         <span class="property-type">int</span>
     </dt>
     <dd>{{% md %}}Instance log backup retention days. Available in 1.42.0+.
-{{% /md %}}</dd>
-    <dt class="property-optional"
+{{% /md %}}</dd><dt class="property-optional"
             title="Optional">
         <span id="state_securitygroupid_csharp">
 <a href="#state_securitygroupid_csharp" style="color: inherit; text-decoration: inherit;">Security<wbr>Group<wbr>Id</a>
@@ -1294,8 +1156,7 @@ The following state arguments are supported:
         <span class="property-type">string</span>
     </dt>
     <dd>{{% md %}}The Security Group ID of ECS.
-{{% /md %}}</dd>
-    <dt class="property-optional"
+{{% /md %}}</dd><dt class="property-optional"
             title="Optional">
         <span id="state_securityiplists_csharp">
 <a href="#state_securityiplists_csharp" style="color: inherit; text-decoration: inherit;">Security<wbr>Ip<wbr>Lists</a>
@@ -1304,8 +1165,7 @@ The following state arguments are supported:
         <span class="property-type">List&lt;string&gt;</span>
     </dt>
     <dd>{{% md %}}List of IP addresses allowed to access all databases of an instance. The list contains up to 1,000 IP addresses, separated by commas. Supported formats include 0.0.0.0/0, 10.23.12.24 (IP), and 10.23.12.24/24 (Classless Inter-Domain Routing (CIDR) mode. /24 represents the length of the prefix in an IP address. The range of the prefix length is [1,32]). System default to `["127.0.0.1"]`.
-{{% /md %}}</dd>
-    <dt class="property-optional"
+{{% /md %}}</dd><dt class="property-optional"
             title="Optional">
         <span id="state_shardlists_csharp">
 <a href="#state_shardlists_csharp" style="color: inherit; text-decoration: inherit;">Shard<wbr>Lists</a>
@@ -1314,8 +1174,7 @@ The following state arguments are supported:
         <span class="property-type"><a href="#shardinginstanceshardlist">List&lt;Pulumi.<wbr>Ali<wbr>Cloud.<wbr>Mongo<wbr>DB.<wbr>Inputs.<wbr>Sharding<wbr>Instance<wbr>Shard<wbr>List<wbr>Args&gt;</a></span>
     </dt>
     <dd>{{% md %}}the shard-node count can be purchased is in range of [2, 32].
-{{% /md %}}</dd>
-    <dt class="property-optional"
+{{% /md %}}</dd><dt class="property-optional"
             title="Optional">
         <span id="state_storageengine_csharp">
 <a href="#state_storageengine_csharp" style="color: inherit; text-decoration: inherit;">Storage<wbr>Engine</a>
@@ -1324,8 +1183,7 @@ The following state arguments are supported:
         <span class="property-type">string</span>
     </dt>
     <dd>{{% md %}}Storage engine: WiredTiger or RocksDB. System Default value: WiredTiger.
-{{% /md %}}</dd>
-    <dt class="property-optional"
+{{% /md %}}</dd><dt class="property-optional"
             title="Optional">
         <span id="state_tags_csharp">
 <a href="#state_tags_csharp" style="color: inherit; text-decoration: inherit;">Tags</a>
@@ -1333,8 +1191,7 @@ The following state arguments are supported:
         <span class="property-indicator"></span>
         <span class="property-type">Dictionary&lt;string, object&gt;</span>
     </dt>
-    <dd>{{% md %}}{{% /md %}}</dd>
-    <dt class="property-optional"
+    <dd>{{% md %}}{{% /md %}}</dd><dt class="property-optional"
             title="Optional">
         <span id="state_tdestatus_csharp">
 <a href="#state_tdestatus_csharp" style="color: inherit; text-decoration: inherit;">Tde<wbr>Status</a>
@@ -1343,8 +1200,7 @@ The following state arguments are supported:
         <span class="property-type">string</span>
     </dt>
     <dd>{{% md %}}The TDE(Transparent Data Encryption) status.
-{{% /md %}}</dd>
-    <dt class="property-optional"
+{{% /md %}}</dd><dt class="property-optional"
             title="Optional">
         <span id="state_vswitchid_csharp">
 <a href="#state_vswitchid_csharp" style="color: inherit; text-decoration: inherit;">Vswitch<wbr>Id</a>
@@ -1353,8 +1209,7 @@ The following state arguments are supported:
         <span class="property-type">string</span>
     </dt>
     <dd>{{% md %}}The virtual switch ID to launch DB instances in one VPC.
-{{% /md %}}</dd>
-    <dt class="property-optional"
+{{% /md %}}</dd><dt class="property-optional"
             title="Optional">
         <span id="state_zoneid_csharp">
 <a href="#state_zoneid_csharp" style="color: inherit; text-decoration: inherit;">Zone<wbr>Id</a>
@@ -1364,14 +1219,11 @@ The following state arguments are supported:
     </dt>
     <dd>{{% md %}}The Zone to launch the DB instance. MongoDB sharding instance does not support multiple-zone.
 If it is a multi-zone and `vswitch_id` is specified, the vswitch must in one of them.
-{{% /md %}}</dd>
-</dl>
+{{% /md %}}</dd></dl>
 {{% /choosable %}}
 
 {{% choosable language go %}}
-<dl class="resources-properties">
-
-    <dt class="property-optional"
+<dl class="resources-properties"><dt class="property-optional"
             title="Optional">
         <span id="state_accountpassword_go">
 <a href="#state_accountpassword_go" style="color: inherit; text-decoration: inherit;">Account<wbr>Password</a>
@@ -1380,8 +1232,7 @@ If it is a multi-zone and `vswitch_id` is specified, the vswitch must in one of 
         <span class="property-type">string</span>
     </dt>
     <dd>{{% md %}}Password of the root account. It is a string of 6 to 32 characters and is composed of letters, numbers, and underlines.
-{{% /md %}}</dd>
-    <dt class="property-optional"
+{{% /md %}}</dd><dt class="property-optional"
             title="Optional">
         <span id="state_backupperiods_go">
 <a href="#state_backupperiods_go" style="color: inherit; text-decoration: inherit;">Backup<wbr>Periods</a>
@@ -1390,8 +1241,7 @@ If it is a multi-zone and `vswitch_id` is specified, the vswitch must in one of 
         <span class="property-type">[]string</span>
     </dt>
     <dd>{{% md %}}MongoDB Instance backup period. It is required when `backup_time` was existed. Valid values: [Monday, Tuesday, Wednesday, Thursday, Friday, Saturday, Sunday]. Default to [Monday, Tuesday, Wednesday, Thursday, Friday, Saturday, Sunday]
-{{% /md %}}</dd>
-    <dt class="property-optional"
+{{% /md %}}</dd><dt class="property-optional"
             title="Optional">
         <span id="state_backuptime_go">
 <a href="#state_backuptime_go" style="color: inherit; text-decoration: inherit;">Backup<wbr>Time</a>
@@ -1400,8 +1250,7 @@ If it is a multi-zone and `vswitch_id` is specified, the vswitch must in one of 
         <span class="property-type">string</span>
     </dt>
     <dd>{{% md %}}MongoDB instance backup time. It is required when `backup_period` was existed. In the format of HH:mmZ- HH:mmZ. Time setting interval is one hour. If not set, the system will return a default, like "23:00Z-24:00Z".
-{{% /md %}}</dd>
-    <dt class="property-optional"
+{{% /md %}}</dd><dt class="property-optional"
             title="Optional">
         <span id="state_engineversion_go">
 <a href="#state_engineversion_go" style="color: inherit; text-decoration: inherit;">Engine<wbr>Version</a>
@@ -1410,8 +1259,7 @@ If it is a multi-zone and `vswitch_id` is specified, the vswitch must in one of 
         <span class="property-type">string</span>
     </dt>
     <dd>{{% md %}}Database version. Value options can refer to the latest docs [CreateDBInstance](https://www.alibabacloud.com/help/zh/doc-detail/61884.htm) `EngineVersion`.
-{{% /md %}}</dd>
-    <dt class="property-optional"
+{{% /md %}}</dd><dt class="property-optional"
             title="Optional">
         <span id="state_instancechargetype_go">
 <a href="#state_instancechargetype_go" style="color: inherit; text-decoration: inherit;">Instance<wbr>Charge<wbr>Type</a>
@@ -1420,8 +1268,7 @@ If it is a multi-zone and `vswitch_id` is specified, the vswitch must in one of 
         <span class="property-type">string</span>
     </dt>
     <dd>{{% md %}}Valid values are `PrePaid`, `PostPaid`,System default to `PostPaid`.
-{{% /md %}}</dd>
-    <dt class="property-optional"
+{{% /md %}}</dd><dt class="property-optional"
             title="Optional">
         <span id="state_kmsencryptedpassword_go">
 <a href="#state_kmsencryptedpassword_go" style="color: inherit; text-decoration: inherit;">Kms<wbr>Encrypted<wbr>Password</a>
@@ -1430,8 +1277,7 @@ If it is a multi-zone and `vswitch_id` is specified, the vswitch must in one of 
         <span class="property-type">string</span>
     </dt>
     <dd>{{% md %}}An KMS encrypts password used to a instance. If the `account_password` is filled in, this field will be ignored.
-{{% /md %}}</dd>
-    <dt class="property-optional"
+{{% /md %}}</dd><dt class="property-optional"
             title="Optional">
         <span id="state_kmsencryptioncontext_go">
 <a href="#state_kmsencryptioncontext_go" style="color: inherit; text-decoration: inherit;">Kms<wbr>Encryption<wbr>Context</a>
@@ -1440,8 +1286,7 @@ If it is a multi-zone and `vswitch_id` is specified, the vswitch must in one of 
         <span class="property-type">map[string]interface{}</span>
     </dt>
     <dd>{{% md %}}An KMS encryption context used to decrypt `kms_encrypted_password` before creating or updating instance with `kms_encrypted_password`. See [Encryption Context](https://www.alibabacloud.com/help/doc-detail/42975.htm). It is valid when `kms_encrypted_password` is set.
-{{% /md %}}</dd>
-    <dt class="property-optional"
+{{% /md %}}</dd><dt class="property-optional"
             title="Optional">
         <span id="state_mongolists_go">
 <a href="#state_mongolists_go" style="color: inherit; text-decoration: inherit;">Mongo<wbr>Lists</a>
@@ -1450,8 +1295,7 @@ If it is a multi-zone and `vswitch_id` is specified, the vswitch must in one of 
         <span class="property-type"><a href="#shardinginstancemongolist">[]Sharding<wbr>Instance<wbr>Mongo<wbr>List</a></span>
     </dt>
     <dd>{{% md %}}The mongo-node count can be purchased is in range of [2, 32].
-{{% /md %}}</dd>
-    <dt class="property-optional"
+{{% /md %}}</dd><dt class="property-optional"
             title="Optional">
         <span id="state_name_go">
 <a href="#state_name_go" style="color: inherit; text-decoration: inherit;">Name</a>
@@ -1460,8 +1304,7 @@ If it is a multi-zone and `vswitch_id` is specified, the vswitch must in one of 
         <span class="property-type">string</span>
     </dt>
     <dd>{{% md %}}The name of DB instance. It a string of 2 to 256 characters.
-{{% /md %}}</dd>
-    <dt class="property-optional"
+{{% /md %}}</dd><dt class="property-optional"
             title="Optional">
         <span id="state_period_go">
 <a href="#state_period_go" style="color: inherit; text-decoration: inherit;">Period</a>
@@ -1470,8 +1313,7 @@ If it is a multi-zone and `vswitch_id` is specified, the vswitch must in one of 
         <span class="property-type">int</span>
     </dt>
     <dd>{{% md %}}The duration that you will buy DB instance (in month). It is valid when instance_charge_type is `PrePaid`. Valid values: [1~9], 12, 24, 36. System default to 1.
-{{% /md %}}</dd>
-    <dt class="property-optional"
+{{% /md %}}</dd><dt class="property-optional"
             title="Optional">
         <span id="state_retentionperiod_go">
 <a href="#state_retentionperiod_go" style="color: inherit; text-decoration: inherit;">Retention<wbr>Period</a>
@@ -1480,8 +1322,7 @@ If it is a multi-zone and `vswitch_id` is specified, the vswitch must in one of 
         <span class="property-type">int</span>
     </dt>
     <dd>{{% md %}}Instance log backup retention days. Available in 1.42.0+.
-{{% /md %}}</dd>
-    <dt class="property-optional"
+{{% /md %}}</dd><dt class="property-optional"
             title="Optional">
         <span id="state_securitygroupid_go">
 <a href="#state_securitygroupid_go" style="color: inherit; text-decoration: inherit;">Security<wbr>Group<wbr>Id</a>
@@ -1490,8 +1331,7 @@ If it is a multi-zone and `vswitch_id` is specified, the vswitch must in one of 
         <span class="property-type">string</span>
     </dt>
     <dd>{{% md %}}The Security Group ID of ECS.
-{{% /md %}}</dd>
-    <dt class="property-optional"
+{{% /md %}}</dd><dt class="property-optional"
             title="Optional">
         <span id="state_securityiplists_go">
 <a href="#state_securityiplists_go" style="color: inherit; text-decoration: inherit;">Security<wbr>Ip<wbr>Lists</a>
@@ -1500,8 +1340,7 @@ If it is a multi-zone and `vswitch_id` is specified, the vswitch must in one of 
         <span class="property-type">[]string</span>
     </dt>
     <dd>{{% md %}}List of IP addresses allowed to access all databases of an instance. The list contains up to 1,000 IP addresses, separated by commas. Supported formats include 0.0.0.0/0, 10.23.12.24 (IP), and 10.23.12.24/24 (Classless Inter-Domain Routing (CIDR) mode. /24 represents the length of the prefix in an IP address. The range of the prefix length is [1,32]). System default to `["127.0.0.1"]`.
-{{% /md %}}</dd>
-    <dt class="property-optional"
+{{% /md %}}</dd><dt class="property-optional"
             title="Optional">
         <span id="state_shardlists_go">
 <a href="#state_shardlists_go" style="color: inherit; text-decoration: inherit;">Shard<wbr>Lists</a>
@@ -1510,8 +1349,7 @@ If it is a multi-zone and `vswitch_id` is specified, the vswitch must in one of 
         <span class="property-type"><a href="#shardinginstanceshardlist">[]Sharding<wbr>Instance<wbr>Shard<wbr>List</a></span>
     </dt>
     <dd>{{% md %}}the shard-node count can be purchased is in range of [2, 32].
-{{% /md %}}</dd>
-    <dt class="property-optional"
+{{% /md %}}</dd><dt class="property-optional"
             title="Optional">
         <span id="state_storageengine_go">
 <a href="#state_storageengine_go" style="color: inherit; text-decoration: inherit;">Storage<wbr>Engine</a>
@@ -1520,8 +1358,7 @@ If it is a multi-zone and `vswitch_id` is specified, the vswitch must in one of 
         <span class="property-type">string</span>
     </dt>
     <dd>{{% md %}}Storage engine: WiredTiger or RocksDB. System Default value: WiredTiger.
-{{% /md %}}</dd>
-    <dt class="property-optional"
+{{% /md %}}</dd><dt class="property-optional"
             title="Optional">
         <span id="state_tags_go">
 <a href="#state_tags_go" style="color: inherit; text-decoration: inherit;">Tags</a>
@@ -1529,8 +1366,7 @@ If it is a multi-zone and `vswitch_id` is specified, the vswitch must in one of 
         <span class="property-indicator"></span>
         <span class="property-type">map[string]interface{}</span>
     </dt>
-    <dd>{{% md %}}{{% /md %}}</dd>
-    <dt class="property-optional"
+    <dd>{{% md %}}{{% /md %}}</dd><dt class="property-optional"
             title="Optional">
         <span id="state_tdestatus_go">
 <a href="#state_tdestatus_go" style="color: inherit; text-decoration: inherit;">Tde<wbr>Status</a>
@@ -1539,8 +1375,7 @@ If it is a multi-zone and `vswitch_id` is specified, the vswitch must in one of 
         <span class="property-type">string</span>
     </dt>
     <dd>{{% md %}}The TDE(Transparent Data Encryption) status.
-{{% /md %}}</dd>
-    <dt class="property-optional"
+{{% /md %}}</dd><dt class="property-optional"
             title="Optional">
         <span id="state_vswitchid_go">
 <a href="#state_vswitchid_go" style="color: inherit; text-decoration: inherit;">Vswitch<wbr>Id</a>
@@ -1549,8 +1384,7 @@ If it is a multi-zone and `vswitch_id` is specified, the vswitch must in one of 
         <span class="property-type">string</span>
     </dt>
     <dd>{{% md %}}The virtual switch ID to launch DB instances in one VPC.
-{{% /md %}}</dd>
-    <dt class="property-optional"
+{{% /md %}}</dd><dt class="property-optional"
             title="Optional">
         <span id="state_zoneid_go">
 <a href="#state_zoneid_go" style="color: inherit; text-decoration: inherit;">Zone<wbr>Id</a>
@@ -1560,14 +1394,11 @@ If it is a multi-zone and `vswitch_id` is specified, the vswitch must in one of 
     </dt>
     <dd>{{% md %}}The Zone to launch the DB instance. MongoDB sharding instance does not support multiple-zone.
 If it is a multi-zone and `vswitch_id` is specified, the vswitch must in one of them.
-{{% /md %}}</dd>
-</dl>
+{{% /md %}}</dd></dl>
 {{% /choosable %}}
 
 {{% choosable language nodejs %}}
-<dl class="resources-properties">
-
-    <dt class="property-optional"
+<dl class="resources-properties"><dt class="property-optional"
             title="Optional">
         <span id="state_accountpassword_nodejs">
 <a href="#state_accountpassword_nodejs" style="color: inherit; text-decoration: inherit;">account<wbr>Password</a>
@@ -1576,8 +1407,7 @@ If it is a multi-zone and `vswitch_id` is specified, the vswitch must in one of 
         <span class="property-type">string</span>
     </dt>
     <dd>{{% md %}}Password of the root account. It is a string of 6 to 32 characters and is composed of letters, numbers, and underlines.
-{{% /md %}}</dd>
-    <dt class="property-optional"
+{{% /md %}}</dd><dt class="property-optional"
             title="Optional">
         <span id="state_backupperiods_nodejs">
 <a href="#state_backupperiods_nodejs" style="color: inherit; text-decoration: inherit;">backup<wbr>Periods</a>
@@ -1586,8 +1416,7 @@ If it is a multi-zone and `vswitch_id` is specified, the vswitch must in one of 
         <span class="property-type">string[]</span>
     </dt>
     <dd>{{% md %}}MongoDB Instance backup period. It is required when `backup_time` was existed. Valid values: [Monday, Tuesday, Wednesday, Thursday, Friday, Saturday, Sunday]. Default to [Monday, Tuesday, Wednesday, Thursday, Friday, Saturday, Sunday]
-{{% /md %}}</dd>
-    <dt class="property-optional"
+{{% /md %}}</dd><dt class="property-optional"
             title="Optional">
         <span id="state_backuptime_nodejs">
 <a href="#state_backuptime_nodejs" style="color: inherit; text-decoration: inherit;">backup<wbr>Time</a>
@@ -1596,8 +1425,7 @@ If it is a multi-zone and `vswitch_id` is specified, the vswitch must in one of 
         <span class="property-type">string</span>
     </dt>
     <dd>{{% md %}}MongoDB instance backup time. It is required when `backup_period` was existed. In the format of HH:mmZ- HH:mmZ. Time setting interval is one hour. If not set, the system will return a default, like "23:00Z-24:00Z".
-{{% /md %}}</dd>
-    <dt class="property-optional"
+{{% /md %}}</dd><dt class="property-optional"
             title="Optional">
         <span id="state_engineversion_nodejs">
 <a href="#state_engineversion_nodejs" style="color: inherit; text-decoration: inherit;">engine<wbr>Version</a>
@@ -1606,8 +1434,7 @@ If it is a multi-zone and `vswitch_id` is specified, the vswitch must in one of 
         <span class="property-type">string</span>
     </dt>
     <dd>{{% md %}}Database version. Value options can refer to the latest docs [CreateDBInstance](https://www.alibabacloud.com/help/zh/doc-detail/61884.htm) `EngineVersion`.
-{{% /md %}}</dd>
-    <dt class="property-optional"
+{{% /md %}}</dd><dt class="property-optional"
             title="Optional">
         <span id="state_instancechargetype_nodejs">
 <a href="#state_instancechargetype_nodejs" style="color: inherit; text-decoration: inherit;">instance<wbr>Charge<wbr>Type</a>
@@ -1616,8 +1443,7 @@ If it is a multi-zone and `vswitch_id` is specified, the vswitch must in one of 
         <span class="property-type">string</span>
     </dt>
     <dd>{{% md %}}Valid values are `PrePaid`, `PostPaid`,System default to `PostPaid`.
-{{% /md %}}</dd>
-    <dt class="property-optional"
+{{% /md %}}</dd><dt class="property-optional"
             title="Optional">
         <span id="state_kmsencryptedpassword_nodejs">
 <a href="#state_kmsencryptedpassword_nodejs" style="color: inherit; text-decoration: inherit;">kms<wbr>Encrypted<wbr>Password</a>
@@ -1626,8 +1452,7 @@ If it is a multi-zone and `vswitch_id` is specified, the vswitch must in one of 
         <span class="property-type">string</span>
     </dt>
     <dd>{{% md %}}An KMS encrypts password used to a instance. If the `account_password` is filled in, this field will be ignored.
-{{% /md %}}</dd>
-    <dt class="property-optional"
+{{% /md %}}</dd><dt class="property-optional"
             title="Optional">
         <span id="state_kmsencryptioncontext_nodejs">
 <a href="#state_kmsencryptioncontext_nodejs" style="color: inherit; text-decoration: inherit;">kms<wbr>Encryption<wbr>Context</a>
@@ -1636,8 +1461,7 @@ If it is a multi-zone and `vswitch_id` is specified, the vswitch must in one of 
         <span class="property-type">{[key: string]: any}</span>
     </dt>
     <dd>{{% md %}}An KMS encryption context used to decrypt `kms_encrypted_password` before creating or updating instance with `kms_encrypted_password`. See [Encryption Context](https://www.alibabacloud.com/help/doc-detail/42975.htm). It is valid when `kms_encrypted_password` is set.
-{{% /md %}}</dd>
-    <dt class="property-optional"
+{{% /md %}}</dd><dt class="property-optional"
             title="Optional">
         <span id="state_mongolists_nodejs">
 <a href="#state_mongolists_nodejs" style="color: inherit; text-decoration: inherit;">mongo<wbr>Lists</a>
@@ -1646,8 +1470,7 @@ If it is a multi-zone and `vswitch_id` is specified, the vswitch must in one of 
         <span class="property-type"><a href="#shardinginstancemongolist">Sharding<wbr>Instance<wbr>Mongo<wbr>List[]</a></span>
     </dt>
     <dd>{{% md %}}The mongo-node count can be purchased is in range of [2, 32].
-{{% /md %}}</dd>
-    <dt class="property-optional"
+{{% /md %}}</dd><dt class="property-optional"
             title="Optional">
         <span id="state_name_nodejs">
 <a href="#state_name_nodejs" style="color: inherit; text-decoration: inherit;">name</a>
@@ -1656,8 +1479,7 @@ If it is a multi-zone and `vswitch_id` is specified, the vswitch must in one of 
         <span class="property-type">string</span>
     </dt>
     <dd>{{% md %}}The name of DB instance. It a string of 2 to 256 characters.
-{{% /md %}}</dd>
-    <dt class="property-optional"
+{{% /md %}}</dd><dt class="property-optional"
             title="Optional">
         <span id="state_period_nodejs">
 <a href="#state_period_nodejs" style="color: inherit; text-decoration: inherit;">period</a>
@@ -1666,8 +1488,7 @@ If it is a multi-zone and `vswitch_id` is specified, the vswitch must in one of 
         <span class="property-type">number</span>
     </dt>
     <dd>{{% md %}}The duration that you will buy DB instance (in month). It is valid when instance_charge_type is `PrePaid`. Valid values: [1~9], 12, 24, 36. System default to 1.
-{{% /md %}}</dd>
-    <dt class="property-optional"
+{{% /md %}}</dd><dt class="property-optional"
             title="Optional">
         <span id="state_retentionperiod_nodejs">
 <a href="#state_retentionperiod_nodejs" style="color: inherit; text-decoration: inherit;">retention<wbr>Period</a>
@@ -1676,8 +1497,7 @@ If it is a multi-zone and `vswitch_id` is specified, the vswitch must in one of 
         <span class="property-type">number</span>
     </dt>
     <dd>{{% md %}}Instance log backup retention days. Available in 1.42.0+.
-{{% /md %}}</dd>
-    <dt class="property-optional"
+{{% /md %}}</dd><dt class="property-optional"
             title="Optional">
         <span id="state_securitygroupid_nodejs">
 <a href="#state_securitygroupid_nodejs" style="color: inherit; text-decoration: inherit;">security<wbr>Group<wbr>Id</a>
@@ -1686,8 +1506,7 @@ If it is a multi-zone and `vswitch_id` is specified, the vswitch must in one of 
         <span class="property-type">string</span>
     </dt>
     <dd>{{% md %}}The Security Group ID of ECS.
-{{% /md %}}</dd>
-    <dt class="property-optional"
+{{% /md %}}</dd><dt class="property-optional"
             title="Optional">
         <span id="state_securityiplists_nodejs">
 <a href="#state_securityiplists_nodejs" style="color: inherit; text-decoration: inherit;">security<wbr>Ip<wbr>Lists</a>
@@ -1696,8 +1515,7 @@ If it is a multi-zone and `vswitch_id` is specified, the vswitch must in one of 
         <span class="property-type">string[]</span>
     </dt>
     <dd>{{% md %}}List of IP addresses allowed to access all databases of an instance. The list contains up to 1,000 IP addresses, separated by commas. Supported formats include 0.0.0.0/0, 10.23.12.24 (IP), and 10.23.12.24/24 (Classless Inter-Domain Routing (CIDR) mode. /24 represents the length of the prefix in an IP address. The range of the prefix length is [1,32]). System default to `["127.0.0.1"]`.
-{{% /md %}}</dd>
-    <dt class="property-optional"
+{{% /md %}}</dd><dt class="property-optional"
             title="Optional">
         <span id="state_shardlists_nodejs">
 <a href="#state_shardlists_nodejs" style="color: inherit; text-decoration: inherit;">shard<wbr>Lists</a>
@@ -1706,8 +1524,7 @@ If it is a multi-zone and `vswitch_id` is specified, the vswitch must in one of 
         <span class="property-type"><a href="#shardinginstanceshardlist">Sharding<wbr>Instance<wbr>Shard<wbr>List[]</a></span>
     </dt>
     <dd>{{% md %}}the shard-node count can be purchased is in range of [2, 32].
-{{% /md %}}</dd>
-    <dt class="property-optional"
+{{% /md %}}</dd><dt class="property-optional"
             title="Optional">
         <span id="state_storageengine_nodejs">
 <a href="#state_storageengine_nodejs" style="color: inherit; text-decoration: inherit;">storage<wbr>Engine</a>
@@ -1716,8 +1533,7 @@ If it is a multi-zone and `vswitch_id` is specified, the vswitch must in one of 
         <span class="property-type">string</span>
     </dt>
     <dd>{{% md %}}Storage engine: WiredTiger or RocksDB. System Default value: WiredTiger.
-{{% /md %}}</dd>
-    <dt class="property-optional"
+{{% /md %}}</dd><dt class="property-optional"
             title="Optional">
         <span id="state_tags_nodejs">
 <a href="#state_tags_nodejs" style="color: inherit; text-decoration: inherit;">tags</a>
@@ -1725,8 +1541,7 @@ If it is a multi-zone and `vswitch_id` is specified, the vswitch must in one of 
         <span class="property-indicator"></span>
         <span class="property-type">{[key: string]: any}</span>
     </dt>
-    <dd>{{% md %}}{{% /md %}}</dd>
-    <dt class="property-optional"
+    <dd>{{% md %}}{{% /md %}}</dd><dt class="property-optional"
             title="Optional">
         <span id="state_tdestatus_nodejs">
 <a href="#state_tdestatus_nodejs" style="color: inherit; text-decoration: inherit;">tde<wbr>Status</a>
@@ -1735,8 +1550,7 @@ If it is a multi-zone and `vswitch_id` is specified, the vswitch must in one of 
         <span class="property-type">string</span>
     </dt>
     <dd>{{% md %}}The TDE(Transparent Data Encryption) status.
-{{% /md %}}</dd>
-    <dt class="property-optional"
+{{% /md %}}</dd><dt class="property-optional"
             title="Optional">
         <span id="state_vswitchid_nodejs">
 <a href="#state_vswitchid_nodejs" style="color: inherit; text-decoration: inherit;">vswitch<wbr>Id</a>
@@ -1745,8 +1559,7 @@ If it is a multi-zone and `vswitch_id` is specified, the vswitch must in one of 
         <span class="property-type">string</span>
     </dt>
     <dd>{{% md %}}The virtual switch ID to launch DB instances in one VPC.
-{{% /md %}}</dd>
-    <dt class="property-optional"
+{{% /md %}}</dd><dt class="property-optional"
             title="Optional">
         <span id="state_zoneid_nodejs">
 <a href="#state_zoneid_nodejs" style="color: inherit; text-decoration: inherit;">zone<wbr>Id</a>
@@ -1756,14 +1569,11 @@ If it is a multi-zone and `vswitch_id` is specified, the vswitch must in one of 
     </dt>
     <dd>{{% md %}}The Zone to launch the DB instance. MongoDB sharding instance does not support multiple-zone.
 If it is a multi-zone and `vswitch_id` is specified, the vswitch must in one of them.
-{{% /md %}}</dd>
-</dl>
+{{% /md %}}</dd></dl>
 {{% /choosable %}}
 
 {{% choosable language python %}}
-<dl class="resources-properties">
-
-    <dt class="property-optional"
+<dl class="resources-properties"><dt class="property-optional"
             title="Optional">
         <span id="state_account_password_python">
 <a href="#state_account_password_python" style="color: inherit; text-decoration: inherit;">account_<wbr>password</a>
@@ -1772,8 +1582,7 @@ If it is a multi-zone and `vswitch_id` is specified, the vswitch must in one of 
         <span class="property-type">str</span>
     </dt>
     <dd>{{% md %}}Password of the root account. It is a string of 6 to 32 characters and is composed of letters, numbers, and underlines.
-{{% /md %}}</dd>
-    <dt class="property-optional"
+{{% /md %}}</dd><dt class="property-optional"
             title="Optional">
         <span id="state_backup_periods_python">
 <a href="#state_backup_periods_python" style="color: inherit; text-decoration: inherit;">backup_<wbr>periods</a>
@@ -1782,8 +1591,7 @@ If it is a multi-zone and `vswitch_id` is specified, the vswitch must in one of 
         <span class="property-type">Sequence[str]</span>
     </dt>
     <dd>{{% md %}}MongoDB Instance backup period. It is required when `backup_time` was existed. Valid values: [Monday, Tuesday, Wednesday, Thursday, Friday, Saturday, Sunday]. Default to [Monday, Tuesday, Wednesday, Thursday, Friday, Saturday, Sunday]
-{{% /md %}}</dd>
-    <dt class="property-optional"
+{{% /md %}}</dd><dt class="property-optional"
             title="Optional">
         <span id="state_backup_time_python">
 <a href="#state_backup_time_python" style="color: inherit; text-decoration: inherit;">backup_<wbr>time</a>
@@ -1792,8 +1600,7 @@ If it is a multi-zone and `vswitch_id` is specified, the vswitch must in one of 
         <span class="property-type">str</span>
     </dt>
     <dd>{{% md %}}MongoDB instance backup time. It is required when `backup_period` was existed. In the format of HH:mmZ- HH:mmZ. Time setting interval is one hour. If not set, the system will return a default, like "23:00Z-24:00Z".
-{{% /md %}}</dd>
-    <dt class="property-optional"
+{{% /md %}}</dd><dt class="property-optional"
             title="Optional">
         <span id="state_engine_version_python">
 <a href="#state_engine_version_python" style="color: inherit; text-decoration: inherit;">engine_<wbr>version</a>
@@ -1802,8 +1609,7 @@ If it is a multi-zone and `vswitch_id` is specified, the vswitch must in one of 
         <span class="property-type">str</span>
     </dt>
     <dd>{{% md %}}Database version. Value options can refer to the latest docs [CreateDBInstance](https://www.alibabacloud.com/help/zh/doc-detail/61884.htm) `EngineVersion`.
-{{% /md %}}</dd>
-    <dt class="property-optional"
+{{% /md %}}</dd><dt class="property-optional"
             title="Optional">
         <span id="state_instance_charge_type_python">
 <a href="#state_instance_charge_type_python" style="color: inherit; text-decoration: inherit;">instance_<wbr>charge_<wbr>type</a>
@@ -1812,8 +1618,7 @@ If it is a multi-zone and `vswitch_id` is specified, the vswitch must in one of 
         <span class="property-type">str</span>
     </dt>
     <dd>{{% md %}}Valid values are `PrePaid`, `PostPaid`,System default to `PostPaid`.
-{{% /md %}}</dd>
-    <dt class="property-optional"
+{{% /md %}}</dd><dt class="property-optional"
             title="Optional">
         <span id="state_kms_encrypted_password_python">
 <a href="#state_kms_encrypted_password_python" style="color: inherit; text-decoration: inherit;">kms_<wbr>encrypted_<wbr>password</a>
@@ -1822,8 +1627,7 @@ If it is a multi-zone and `vswitch_id` is specified, the vswitch must in one of 
         <span class="property-type">str</span>
     </dt>
     <dd>{{% md %}}An KMS encrypts password used to a instance. If the `account_password` is filled in, this field will be ignored.
-{{% /md %}}</dd>
-    <dt class="property-optional"
+{{% /md %}}</dd><dt class="property-optional"
             title="Optional">
         <span id="state_kms_encryption_context_python">
 <a href="#state_kms_encryption_context_python" style="color: inherit; text-decoration: inherit;">kms_<wbr>encryption_<wbr>context</a>
@@ -1832,8 +1636,7 @@ If it is a multi-zone and `vswitch_id` is specified, the vswitch must in one of 
         <span class="property-type">Mapping[str, Any]</span>
     </dt>
     <dd>{{% md %}}An KMS encryption context used to decrypt `kms_encrypted_password` before creating or updating instance with `kms_encrypted_password`. See [Encryption Context](https://www.alibabacloud.com/help/doc-detail/42975.htm). It is valid when `kms_encrypted_password` is set.
-{{% /md %}}</dd>
-    <dt class="property-optional"
+{{% /md %}}</dd><dt class="property-optional"
             title="Optional">
         <span id="state_mongo_lists_python">
 <a href="#state_mongo_lists_python" style="color: inherit; text-decoration: inherit;">mongo_<wbr>lists</a>
@@ -1842,8 +1645,7 @@ If it is a multi-zone and `vswitch_id` is specified, the vswitch must in one of 
         <span class="property-type"><a href="#shardinginstancemongolist">Sequence[Sharding<wbr>Instance<wbr>Mongo<wbr>List<wbr>Args]</a></span>
     </dt>
     <dd>{{% md %}}The mongo-node count can be purchased is in range of [2, 32].
-{{% /md %}}</dd>
-    <dt class="property-optional"
+{{% /md %}}</dd><dt class="property-optional"
             title="Optional">
         <span id="state_name_python">
 <a href="#state_name_python" style="color: inherit; text-decoration: inherit;">name</a>
@@ -1852,8 +1654,7 @@ If it is a multi-zone and `vswitch_id` is specified, the vswitch must in one of 
         <span class="property-type">str</span>
     </dt>
     <dd>{{% md %}}The name of DB instance. It a string of 2 to 256 characters.
-{{% /md %}}</dd>
-    <dt class="property-optional"
+{{% /md %}}</dd><dt class="property-optional"
             title="Optional">
         <span id="state_period_python">
 <a href="#state_period_python" style="color: inherit; text-decoration: inherit;">period</a>
@@ -1862,8 +1663,7 @@ If it is a multi-zone and `vswitch_id` is specified, the vswitch must in one of 
         <span class="property-type">int</span>
     </dt>
     <dd>{{% md %}}The duration that you will buy DB instance (in month). It is valid when instance_charge_type is `PrePaid`. Valid values: [1~9], 12, 24, 36. System default to 1.
-{{% /md %}}</dd>
-    <dt class="property-optional"
+{{% /md %}}</dd><dt class="property-optional"
             title="Optional">
         <span id="state_retention_period_python">
 <a href="#state_retention_period_python" style="color: inherit; text-decoration: inherit;">retention_<wbr>period</a>
@@ -1872,8 +1672,7 @@ If it is a multi-zone and `vswitch_id` is specified, the vswitch must in one of 
         <span class="property-type">int</span>
     </dt>
     <dd>{{% md %}}Instance log backup retention days. Available in 1.42.0+.
-{{% /md %}}</dd>
-    <dt class="property-optional"
+{{% /md %}}</dd><dt class="property-optional"
             title="Optional">
         <span id="state_security_group_id_python">
 <a href="#state_security_group_id_python" style="color: inherit; text-decoration: inherit;">security_<wbr>group_<wbr>id</a>
@@ -1882,8 +1681,7 @@ If it is a multi-zone and `vswitch_id` is specified, the vswitch must in one of 
         <span class="property-type">str</span>
     </dt>
     <dd>{{% md %}}The Security Group ID of ECS.
-{{% /md %}}</dd>
-    <dt class="property-optional"
+{{% /md %}}</dd><dt class="property-optional"
             title="Optional">
         <span id="state_security_ip_lists_python">
 <a href="#state_security_ip_lists_python" style="color: inherit; text-decoration: inherit;">security_<wbr>ip_<wbr>lists</a>
@@ -1892,8 +1690,7 @@ If it is a multi-zone and `vswitch_id` is specified, the vswitch must in one of 
         <span class="property-type">Sequence[str]</span>
     </dt>
     <dd>{{% md %}}List of IP addresses allowed to access all databases of an instance. The list contains up to 1,000 IP addresses, separated by commas. Supported formats include 0.0.0.0/0, 10.23.12.24 (IP), and 10.23.12.24/24 (Classless Inter-Domain Routing (CIDR) mode. /24 represents the length of the prefix in an IP address. The range of the prefix length is [1,32]). System default to `["127.0.0.1"]`.
-{{% /md %}}</dd>
-    <dt class="property-optional"
+{{% /md %}}</dd><dt class="property-optional"
             title="Optional">
         <span id="state_shard_lists_python">
 <a href="#state_shard_lists_python" style="color: inherit; text-decoration: inherit;">shard_<wbr>lists</a>
@@ -1902,8 +1699,7 @@ If it is a multi-zone and `vswitch_id` is specified, the vswitch must in one of 
         <span class="property-type"><a href="#shardinginstanceshardlist">Sequence[Sharding<wbr>Instance<wbr>Shard<wbr>List<wbr>Args]</a></span>
     </dt>
     <dd>{{% md %}}the shard-node count can be purchased is in range of [2, 32].
-{{% /md %}}</dd>
-    <dt class="property-optional"
+{{% /md %}}</dd><dt class="property-optional"
             title="Optional">
         <span id="state_storage_engine_python">
 <a href="#state_storage_engine_python" style="color: inherit; text-decoration: inherit;">storage_<wbr>engine</a>
@@ -1912,8 +1708,7 @@ If it is a multi-zone and `vswitch_id` is specified, the vswitch must in one of 
         <span class="property-type">str</span>
     </dt>
     <dd>{{% md %}}Storage engine: WiredTiger or RocksDB. System Default value: WiredTiger.
-{{% /md %}}</dd>
-    <dt class="property-optional"
+{{% /md %}}</dd><dt class="property-optional"
             title="Optional">
         <span id="state_tags_python">
 <a href="#state_tags_python" style="color: inherit; text-decoration: inherit;">tags</a>
@@ -1921,8 +1716,7 @@ If it is a multi-zone and `vswitch_id` is specified, the vswitch must in one of 
         <span class="property-indicator"></span>
         <span class="property-type">Mapping[str, Any]</span>
     </dt>
-    <dd>{{% md %}}{{% /md %}}</dd>
-    <dt class="property-optional"
+    <dd>{{% md %}}{{% /md %}}</dd><dt class="property-optional"
             title="Optional">
         <span id="state_tde_status_python">
 <a href="#state_tde_status_python" style="color: inherit; text-decoration: inherit;">tde_<wbr>status</a>
@@ -1931,8 +1725,7 @@ If it is a multi-zone and `vswitch_id` is specified, the vswitch must in one of 
         <span class="property-type">str</span>
     </dt>
     <dd>{{% md %}}The TDE(Transparent Data Encryption) status.
-{{% /md %}}</dd>
-    <dt class="property-optional"
+{{% /md %}}</dd><dt class="property-optional"
             title="Optional">
         <span id="state_vswitch_id_python">
 <a href="#state_vswitch_id_python" style="color: inherit; text-decoration: inherit;">vswitch_<wbr>id</a>
@@ -1941,8 +1734,7 @@ If it is a multi-zone and `vswitch_id` is specified, the vswitch must in one of 
         <span class="property-type">str</span>
     </dt>
     <dd>{{% md %}}The virtual switch ID to launch DB instances in one VPC.
-{{% /md %}}</dd>
-    <dt class="property-optional"
+{{% /md %}}</dd><dt class="property-optional"
             title="Optional">
         <span id="state_zone_id_python">
 <a href="#state_zone_id_python" style="color: inherit; text-decoration: inherit;">zone_<wbr>id</a>
@@ -1952,8 +1744,7 @@ If it is a multi-zone and `vswitch_id` is specified, the vswitch must in one of 
     </dt>
     <dd>{{% md %}}The Zone to launch the DB instance. MongoDB sharding instance does not support multiple-zone.
 If it is a multi-zone and `vswitch_id` is specified, the vswitch must in one of them.
-{{% /md %}}</dd>
-</dl>
+{{% /md %}}</dd></dl>
 {{% /choosable %}}
 
 
@@ -1968,9 +1759,7 @@ If it is a multi-zone and `vswitch_id` is specified, the vswitch must in one of 
 <h4 id="shardinginstancemongolist">Sharding<wbr>Instance<wbr>Mongo<wbr>List</h4>
 
 {{% choosable language csharp %}}
-<dl class="resources-properties">
-
-    <dt class="property-required"
+<dl class="resources-properties"><dt class="property-required"
             title="Required">
         <span id="nodeclass_csharp">
 <a href="#nodeclass_csharp" style="color: inherit; text-decoration: inherit;">Node<wbr>Class</a>
@@ -1979,8 +1768,7 @@ If it is a multi-zone and `vswitch_id` is specified, the vswitch must in one of 
         <span class="property-type">string</span>
     </dt>
     <dd>{{% md %}}-(Required) Node specification. see [Instance specifications](https://www.alibabacloud.com/help/doc-detail/57141.htm).
-{{% /md %}}</dd>
-    <dt class="property-optional"
+{{% /md %}}</dd><dt class="property-optional"
             title="Optional">
         <span id="connectstring_csharp">
 <a href="#connectstring_csharp" style="color: inherit; text-decoration: inherit;">Connect<wbr>String</a>
@@ -1989,8 +1777,7 @@ If it is a multi-zone and `vswitch_id` is specified, the vswitch must in one of 
         <span class="property-type">string</span>
     </dt>
     <dd>{{% md %}}Mongo node connection string
-{{% /md %}}</dd>
-    <dt class="property-optional"
+{{% /md %}}</dd><dt class="property-optional"
             title="Optional">
         <span id="nodeid_csharp">
 <a href="#nodeid_csharp" style="color: inherit; text-decoration: inherit;">Node<wbr>Id</a>
@@ -1999,8 +1786,7 @@ If it is a multi-zone and `vswitch_id` is specified, the vswitch must in one of 
         <span class="property-type">string</span>
     </dt>
     <dd>{{% md %}}The ID of the shard-node.
-{{% /md %}}</dd>
-    <dt class="property-optional"
+{{% /md %}}</dd><dt class="property-optional"
             title="Optional">
         <span id="port_csharp">
 <a href="#port_csharp" style="color: inherit; text-decoration: inherit;">Port</a>
@@ -2010,14 +1796,11 @@ If it is a multi-zone and `vswitch_id` is specified, the vswitch must in one of 
     </dt>
     <dd>{{% md %}}Mongo node port
 * `shard_list`
-{{% /md %}}</dd>
-</dl>
+{{% /md %}}</dd></dl>
 {{% /choosable %}}
 
 {{% choosable language go %}}
-<dl class="resources-properties">
-
-    <dt class="property-required"
+<dl class="resources-properties"><dt class="property-required"
             title="Required">
         <span id="nodeclass_go">
 <a href="#nodeclass_go" style="color: inherit; text-decoration: inherit;">Node<wbr>Class</a>
@@ -2026,8 +1809,7 @@ If it is a multi-zone and `vswitch_id` is specified, the vswitch must in one of 
         <span class="property-type">string</span>
     </dt>
     <dd>{{% md %}}-(Required) Node specification. see [Instance specifications](https://www.alibabacloud.com/help/doc-detail/57141.htm).
-{{% /md %}}</dd>
-    <dt class="property-optional"
+{{% /md %}}</dd><dt class="property-optional"
             title="Optional">
         <span id="connectstring_go">
 <a href="#connectstring_go" style="color: inherit; text-decoration: inherit;">Connect<wbr>String</a>
@@ -2036,8 +1818,7 @@ If it is a multi-zone and `vswitch_id` is specified, the vswitch must in one of 
         <span class="property-type">string</span>
     </dt>
     <dd>{{% md %}}Mongo node connection string
-{{% /md %}}</dd>
-    <dt class="property-optional"
+{{% /md %}}</dd><dt class="property-optional"
             title="Optional">
         <span id="nodeid_go">
 <a href="#nodeid_go" style="color: inherit; text-decoration: inherit;">Node<wbr>Id</a>
@@ -2046,8 +1827,7 @@ If it is a multi-zone and `vswitch_id` is specified, the vswitch must in one of 
         <span class="property-type">string</span>
     </dt>
     <dd>{{% md %}}The ID of the shard-node.
-{{% /md %}}</dd>
-    <dt class="property-optional"
+{{% /md %}}</dd><dt class="property-optional"
             title="Optional">
         <span id="port_go">
 <a href="#port_go" style="color: inherit; text-decoration: inherit;">Port</a>
@@ -2057,14 +1837,11 @@ If it is a multi-zone and `vswitch_id` is specified, the vswitch must in one of 
     </dt>
     <dd>{{% md %}}Mongo node port
 * `shard_list`
-{{% /md %}}</dd>
-</dl>
+{{% /md %}}</dd></dl>
 {{% /choosable %}}
 
 {{% choosable language nodejs %}}
-<dl class="resources-properties">
-
-    <dt class="property-required"
+<dl class="resources-properties"><dt class="property-required"
             title="Required">
         <span id="nodeclass_nodejs">
 <a href="#nodeclass_nodejs" style="color: inherit; text-decoration: inherit;">node<wbr>Class</a>
@@ -2073,8 +1850,7 @@ If it is a multi-zone and `vswitch_id` is specified, the vswitch must in one of 
         <span class="property-type">string</span>
     </dt>
     <dd>{{% md %}}-(Required) Node specification. see [Instance specifications](https://www.alibabacloud.com/help/doc-detail/57141.htm).
-{{% /md %}}</dd>
-    <dt class="property-optional"
+{{% /md %}}</dd><dt class="property-optional"
             title="Optional">
         <span id="connectstring_nodejs">
 <a href="#connectstring_nodejs" style="color: inherit; text-decoration: inherit;">connect<wbr>String</a>
@@ -2083,8 +1859,7 @@ If it is a multi-zone and `vswitch_id` is specified, the vswitch must in one of 
         <span class="property-type">string</span>
     </dt>
     <dd>{{% md %}}Mongo node connection string
-{{% /md %}}</dd>
-    <dt class="property-optional"
+{{% /md %}}</dd><dt class="property-optional"
             title="Optional">
         <span id="nodeid_nodejs">
 <a href="#nodeid_nodejs" style="color: inherit; text-decoration: inherit;">node<wbr>Id</a>
@@ -2093,8 +1868,7 @@ If it is a multi-zone and `vswitch_id` is specified, the vswitch must in one of 
         <span class="property-type">string</span>
     </dt>
     <dd>{{% md %}}The ID of the shard-node.
-{{% /md %}}</dd>
-    <dt class="property-optional"
+{{% /md %}}</dd><dt class="property-optional"
             title="Optional">
         <span id="port_nodejs">
 <a href="#port_nodejs" style="color: inherit; text-decoration: inherit;">port</a>
@@ -2104,14 +1878,11 @@ If it is a multi-zone and `vswitch_id` is specified, the vswitch must in one of 
     </dt>
     <dd>{{% md %}}Mongo node port
 * `shard_list`
-{{% /md %}}</dd>
-</dl>
+{{% /md %}}</dd></dl>
 {{% /choosable %}}
 
 {{% choosable language python %}}
-<dl class="resources-properties">
-
-    <dt class="property-required"
+<dl class="resources-properties"><dt class="property-required"
             title="Required">
         <span id="node_class_python">
 <a href="#node_class_python" style="color: inherit; text-decoration: inherit;">node_<wbr>class</a>
@@ -2120,8 +1891,7 @@ If it is a multi-zone and `vswitch_id` is specified, the vswitch must in one of 
         <span class="property-type">str</span>
     </dt>
     <dd>{{% md %}}-(Required) Node specification. see [Instance specifications](https://www.alibabacloud.com/help/doc-detail/57141.htm).
-{{% /md %}}</dd>
-    <dt class="property-optional"
+{{% /md %}}</dd><dt class="property-optional"
             title="Optional">
         <span id="connect_string_python">
 <a href="#connect_string_python" style="color: inherit; text-decoration: inherit;">connect_<wbr>string</a>
@@ -2130,8 +1900,7 @@ If it is a multi-zone and `vswitch_id` is specified, the vswitch must in one of 
         <span class="property-type">str</span>
     </dt>
     <dd>{{% md %}}Mongo node connection string
-{{% /md %}}</dd>
-    <dt class="property-optional"
+{{% /md %}}</dd><dt class="property-optional"
             title="Optional">
         <span id="node_id_python">
 <a href="#node_id_python" style="color: inherit; text-decoration: inherit;">node_<wbr>id</a>
@@ -2140,8 +1909,7 @@ If it is a multi-zone and `vswitch_id` is specified, the vswitch must in one of 
         <span class="property-type">str</span>
     </dt>
     <dd>{{% md %}}The ID of the shard-node.
-{{% /md %}}</dd>
-    <dt class="property-optional"
+{{% /md %}}</dd><dt class="property-optional"
             title="Optional">
         <span id="port_python">
 <a href="#port_python" style="color: inherit; text-decoration: inherit;">port</a>
@@ -2151,16 +1919,13 @@ If it is a multi-zone and `vswitch_id` is specified, the vswitch must in one of 
     </dt>
     <dd>{{% md %}}Mongo node port
 * `shard_list`
-{{% /md %}}</dd>
-</dl>
+{{% /md %}}</dd></dl>
 {{% /choosable %}}
 
 <h4 id="shardinginstanceshardlist">Sharding<wbr>Instance<wbr>Shard<wbr>List</h4>
 
 {{% choosable language csharp %}}
-<dl class="resources-properties">
-
-    <dt class="property-required"
+<dl class="resources-properties"><dt class="property-required"
             title="Required">
         <span id="nodeclass_csharp">
 <a href="#nodeclass_csharp" style="color: inherit; text-decoration: inherit;">Node<wbr>Class</a>
@@ -2169,8 +1934,7 @@ If it is a multi-zone and `vswitch_id` is specified, the vswitch must in one of 
         <span class="property-type">string</span>
     </dt>
     <dd>{{% md %}}-(Required) Node specification. see [Instance specifications](https://www.alibabacloud.com/help/doc-detail/57141.htm).
-{{% /md %}}</dd>
-    <dt class="property-required"
+{{% /md %}}</dd><dt class="property-required"
             title="Required">
         <span id="nodestorage_csharp">
 <a href="#nodestorage_csharp" style="color: inherit; text-decoration: inherit;">Node<wbr>Storage</a>
@@ -2180,8 +1944,7 @@ If it is a multi-zone and `vswitch_id` is specified, the vswitch must in one of 
     </dt>
     <dd>{{% md %}}- Custom storage space; value range: [10, 1,000]
 - 10-GB increments. Unit: GB.
-{{% /md %}}</dd>
-    <dt class="property-optional"
+{{% /md %}}</dd><dt class="property-optional"
             title="Optional">
         <span id="nodeid_csharp">
 <a href="#nodeid_csharp" style="color: inherit; text-decoration: inherit;">Node<wbr>Id</a>
@@ -2190,14 +1953,11 @@ If it is a multi-zone and `vswitch_id` is specified, the vswitch must in one of 
         <span class="property-type">string</span>
     </dt>
     <dd>{{% md %}}The ID of the shard-node.
-{{% /md %}}</dd>
-</dl>
+{{% /md %}}</dd></dl>
 {{% /choosable %}}
 
 {{% choosable language go %}}
-<dl class="resources-properties">
-
-    <dt class="property-required"
+<dl class="resources-properties"><dt class="property-required"
             title="Required">
         <span id="nodeclass_go">
 <a href="#nodeclass_go" style="color: inherit; text-decoration: inherit;">Node<wbr>Class</a>
@@ -2206,8 +1966,7 @@ If it is a multi-zone and `vswitch_id` is specified, the vswitch must in one of 
         <span class="property-type">string</span>
     </dt>
     <dd>{{% md %}}-(Required) Node specification. see [Instance specifications](https://www.alibabacloud.com/help/doc-detail/57141.htm).
-{{% /md %}}</dd>
-    <dt class="property-required"
+{{% /md %}}</dd><dt class="property-required"
             title="Required">
         <span id="nodestorage_go">
 <a href="#nodestorage_go" style="color: inherit; text-decoration: inherit;">Node<wbr>Storage</a>
@@ -2217,8 +1976,7 @@ If it is a multi-zone and `vswitch_id` is specified, the vswitch must in one of 
     </dt>
     <dd>{{% md %}}- Custom storage space; value range: [10, 1,000]
 - 10-GB increments. Unit: GB.
-{{% /md %}}</dd>
-    <dt class="property-optional"
+{{% /md %}}</dd><dt class="property-optional"
             title="Optional">
         <span id="nodeid_go">
 <a href="#nodeid_go" style="color: inherit; text-decoration: inherit;">Node<wbr>Id</a>
@@ -2227,14 +1985,11 @@ If it is a multi-zone and `vswitch_id` is specified, the vswitch must in one of 
         <span class="property-type">string</span>
     </dt>
     <dd>{{% md %}}The ID of the shard-node.
-{{% /md %}}</dd>
-</dl>
+{{% /md %}}</dd></dl>
 {{% /choosable %}}
 
 {{% choosable language nodejs %}}
-<dl class="resources-properties">
-
-    <dt class="property-required"
+<dl class="resources-properties"><dt class="property-required"
             title="Required">
         <span id="nodeclass_nodejs">
 <a href="#nodeclass_nodejs" style="color: inherit; text-decoration: inherit;">node<wbr>Class</a>
@@ -2243,8 +1998,7 @@ If it is a multi-zone and `vswitch_id` is specified, the vswitch must in one of 
         <span class="property-type">string</span>
     </dt>
     <dd>{{% md %}}-(Required) Node specification. see [Instance specifications](https://www.alibabacloud.com/help/doc-detail/57141.htm).
-{{% /md %}}</dd>
-    <dt class="property-required"
+{{% /md %}}</dd><dt class="property-required"
             title="Required">
         <span id="nodestorage_nodejs">
 <a href="#nodestorage_nodejs" style="color: inherit; text-decoration: inherit;">node<wbr>Storage</a>
@@ -2254,8 +2008,7 @@ If it is a multi-zone and `vswitch_id` is specified, the vswitch must in one of 
     </dt>
     <dd>{{% md %}}- Custom storage space; value range: [10, 1,000]
 - 10-GB increments. Unit: GB.
-{{% /md %}}</dd>
-    <dt class="property-optional"
+{{% /md %}}</dd><dt class="property-optional"
             title="Optional">
         <span id="nodeid_nodejs">
 <a href="#nodeid_nodejs" style="color: inherit; text-decoration: inherit;">node<wbr>Id</a>
@@ -2264,14 +2017,11 @@ If it is a multi-zone and `vswitch_id` is specified, the vswitch must in one of 
         <span class="property-type">string</span>
     </dt>
     <dd>{{% md %}}The ID of the shard-node.
-{{% /md %}}</dd>
-</dl>
+{{% /md %}}</dd></dl>
 {{% /choosable %}}
 
 {{% choosable language python %}}
-<dl class="resources-properties">
-
-    <dt class="property-required"
+<dl class="resources-properties"><dt class="property-required"
             title="Required">
         <span id="node_class_python">
 <a href="#node_class_python" style="color: inherit; text-decoration: inherit;">node_<wbr>class</a>
@@ -2280,8 +2030,7 @@ If it is a multi-zone and `vswitch_id` is specified, the vswitch must in one of 
         <span class="property-type">str</span>
     </dt>
     <dd>{{% md %}}-(Required) Node specification. see [Instance specifications](https://www.alibabacloud.com/help/doc-detail/57141.htm).
-{{% /md %}}</dd>
-    <dt class="property-required"
+{{% /md %}}</dd><dt class="property-required"
             title="Required">
         <span id="node_storage_python">
 <a href="#node_storage_python" style="color: inherit; text-decoration: inherit;">node_<wbr>storage</a>
@@ -2291,8 +2040,7 @@ If it is a multi-zone and `vswitch_id` is specified, the vswitch must in one of 
     </dt>
     <dd>{{% md %}}- Custom storage space; value range: [10, 1,000]
 - 10-GB increments. Unit: GB.
-{{% /md %}}</dd>
-    <dt class="property-optional"
+{{% /md %}}</dd><dt class="property-optional"
             title="Optional">
         <span id="node_id_python">
 <a href="#node_id_python" style="color: inherit; text-decoration: inherit;">node_<wbr>id</a>
@@ -2301,8 +2049,7 @@ If it is a multi-zone and `vswitch_id` is specified, the vswitch must in one of 
         <span class="property-type">str</span>
     </dt>
     <dd>{{% md %}}The ID of the shard-node.
-{{% /md %}}</dd>
-</dl>
+{{% /md %}}</dd></dl>
 {{% /choosable %}}
 
 
@@ -2313,6 +2060,6 @@ If it is a multi-zone and `vswitch_id` is specified, the vswitch must in one of 
 	<dt>License</dt>
 	<dd>Apache-2.0</dd>
 	<dt>Notes</dt>
-	<dd>This Pulumi package is based on the [`alicloud` Terraform Provider](https://github.com/aliyun/terraform-provider-alicloud).</dd>
+	<dd>{{% md %}}This Pulumi package is based on the [`alicloud` Terraform Provider](https://github.com/aliyun/terraform-provider-alicloud).{{% /md %}}</dd>
 </dl>
 

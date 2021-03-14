@@ -51,9 +51,7 @@ The following arguments are supported:
 
 
 {{% choosable language csharp %}}
-<dl class="resources-properties">
-
-    <dt class="property-required"
+<dl class="resources-properties"><dt class="property-required"
             title="Required">
         <span id="endtime_csharp">
 <a href="#endtime_csharp" style="color: inherit; text-decoration: inherit;">End<wbr>Time</a>
@@ -61,8 +59,7 @@ The following arguments are supported:
         <span class="property-indicator"></span>
         <span class="property-type">string</span>
     </dt>
-    <dd>{{% md %}}The end timeline date, so the results returned are before this date.{{% /md %}}</dd>
-    <dt class="property-required"
+    <dd>{{% md %}}The end timeline date, so the results returned are before this date.{{% /md %}}</dd><dt class="property-required"
             title="Required">
         <span id="entityid_csharp">
 <a href="#entityid_csharp" style="color: inherit; text-decoration: inherit;">Entity<wbr>Id</a>
@@ -70,8 +67,7 @@ The following arguments are supported:
         <span class="property-indicator"></span>
         <span class="property-type">string</span>
     </dt>
-    <dd>{{% md %}}entity ID{{% /md %}}</dd>
-    <dt class="property-required"
+    <dd>{{% md %}}entity ID{{% /md %}}</dd><dt class="property-required"
             title="Required">
         <span id="operationalinsightsresourceprovider_csharp">
 <a href="#operationalinsightsresourceprovider_csharp" style="color: inherit; text-decoration: inherit;">Operational<wbr>Insights<wbr>Resource<wbr>Provider</a>
@@ -79,8 +75,7 @@ The following arguments are supported:
         <span class="property-indicator"></span>
         <span class="property-type">string</span>
     </dt>
-    <dd>{{% md %}}The namespace of workspaces resource provider- Microsoft.OperationalInsights.{{% /md %}}</dd>
-    <dt class="property-required"
+    <dd>{{% md %}}The namespace of workspaces resource provider- Microsoft.OperationalInsights.{{% /md %}}</dd><dt class="property-required"
             title="Required">
         <span id="resourcegroupname_csharp">
 <a href="#resourcegroupname_csharp" style="color: inherit; text-decoration: inherit;">Resource<wbr>Group<wbr>Name</a>
@@ -88,8 +83,7 @@ The following arguments are supported:
         <span class="property-indicator"></span>
         <span class="property-type">string</span>
     </dt>
-    <dd>{{% md %}}The name of the resource group within the user's subscription. The name is case insensitive.{{% /md %}}</dd>
-    <dt class="property-required"
+    <dd>{{% md %}}The name of the resource group within the user's subscription. The name is case insensitive.{{% /md %}}</dd><dt class="property-required"
             title="Required">
         <span id="starttime_csharp">
 <a href="#starttime_csharp" style="color: inherit; text-decoration: inherit;">Start<wbr>Time</a>
@@ -97,8 +91,7 @@ The following arguments are supported:
         <span class="property-indicator"></span>
         <span class="property-type">string</span>
     </dt>
-    <dd>{{% md %}}The start timeline date, so the results returned are after this date.{{% /md %}}</dd>
-    <dt class="property-required"
+    <dd>{{% md %}}The start timeline date, so the results returned are after this date.{{% /md %}}</dd><dt class="property-required"
             title="Required">
         <span id="workspacename_csharp">
 <a href="#workspacename_csharp" style="color: inherit; text-decoration: inherit;">Workspace<wbr>Name</a>
@@ -106,8 +99,7 @@ The following arguments are supported:
         <span class="property-indicator"></span>
         <span class="property-type">string</span>
     </dt>
-    <dd>{{% md %}}The name of the workspace.{{% /md %}}</dd>
-    <dt class="property-optional"
+    <dd>{{% md %}}The name of the workspace.{{% /md %}}</dd><dt class="property-optional"
             title="Optional">
         <span id="adddefaultextendedtimerange_csharp">
 <a href="#adddefaultextendedtimerange_csharp" style="color: inherit; text-decoration: inherit;">Add<wbr>Default<wbr>Extended<wbr>Time<wbr>Range</a>
@@ -115,8 +107,7 @@ The following arguments are supported:
         <span class="property-indicator"></span>
         <span class="property-type">bool</span>
     </dt>
-    <dd>{{% md %}}Indicates if query time range should be extended with default time range of the query. Default value is false{{% /md %}}</dd>
-    <dt class="property-optional"
+    <dd>{{% md %}}Indicates if query time range should be extended with default time range of the query. Default value is false{{% /md %}}</dd><dt class="property-optional"
             title="Optional">
         <span id="insightqueryids_csharp">
 <a href="#insightqueryids_csharp" style="color: inherit; text-decoration: inherit;">Insight<wbr>Query<wbr>Ids</a>
@@ -124,14 +115,11 @@ The following arguments are supported:
         <span class="property-indicator"></span>
         <span class="property-type">List&lt;string&gt;</span>
     </dt>
-    <dd>{{% md %}}List of Insights Query Id. If empty, default value is all insights of this entity{{% /md %}}</dd>
-</dl>
+    <dd>{{% md %}}List of Insights Query Id. If empty, default value is all insights of this entity{{% /md %}}</dd></dl>
 {{% /choosable %}}
 
 {{% choosable language go %}}
-<dl class="resources-properties">
-
-    <dt class="property-required"
+<dl class="resources-properties"><dt class="property-required"
             title="Required">
         <span id="endtime_go">
 <a href="#endtime_go" style="color: inherit; text-decoration: inherit;">End<wbr>Time</a>
@@ -139,8 +127,7 @@ The following arguments are supported:
         <span class="property-indicator"></span>
         <span class="property-type">string</span>
     </dt>
-    <dd>{{% md %}}The end timeline date, so the results returned are before this date.{{% /md %}}</dd>
-    <dt class="property-required"
+    <dd>{{% md %}}The end timeline date, so the results returned are before this date.{{% /md %}}</dd><dt class="property-required"
             title="Required">
         <span id="entityid_go">
 <a href="#entityid_go" style="color: inherit; text-decoration: inherit;">Entity<wbr>Id</a>
@@ -148,8 +135,7 @@ The following arguments are supported:
         <span class="property-indicator"></span>
         <span class="property-type">string</span>
     </dt>
-    <dd>{{% md %}}entity ID{{% /md %}}</dd>
-    <dt class="property-required"
+    <dd>{{% md %}}entity ID{{% /md %}}</dd><dt class="property-required"
             title="Required">
         <span id="operationalinsightsresourceprovider_go">
 <a href="#operationalinsightsresourceprovider_go" style="color: inherit; text-decoration: inherit;">Operational<wbr>Insights<wbr>Resource<wbr>Provider</a>
@@ -157,8 +143,7 @@ The following arguments are supported:
         <span class="property-indicator"></span>
         <span class="property-type">string</span>
     </dt>
-    <dd>{{% md %}}The namespace of workspaces resource provider- Microsoft.OperationalInsights.{{% /md %}}</dd>
-    <dt class="property-required"
+    <dd>{{% md %}}The namespace of workspaces resource provider- Microsoft.OperationalInsights.{{% /md %}}</dd><dt class="property-required"
             title="Required">
         <span id="resourcegroupname_go">
 <a href="#resourcegroupname_go" style="color: inherit; text-decoration: inherit;">Resource<wbr>Group<wbr>Name</a>
@@ -166,8 +151,7 @@ The following arguments are supported:
         <span class="property-indicator"></span>
         <span class="property-type">string</span>
     </dt>
-    <dd>{{% md %}}The name of the resource group within the user's subscription. The name is case insensitive.{{% /md %}}</dd>
-    <dt class="property-required"
+    <dd>{{% md %}}The name of the resource group within the user's subscription. The name is case insensitive.{{% /md %}}</dd><dt class="property-required"
             title="Required">
         <span id="starttime_go">
 <a href="#starttime_go" style="color: inherit; text-decoration: inherit;">Start<wbr>Time</a>
@@ -175,8 +159,7 @@ The following arguments are supported:
         <span class="property-indicator"></span>
         <span class="property-type">string</span>
     </dt>
-    <dd>{{% md %}}The start timeline date, so the results returned are after this date.{{% /md %}}</dd>
-    <dt class="property-required"
+    <dd>{{% md %}}The start timeline date, so the results returned are after this date.{{% /md %}}</dd><dt class="property-required"
             title="Required">
         <span id="workspacename_go">
 <a href="#workspacename_go" style="color: inherit; text-decoration: inherit;">Workspace<wbr>Name</a>
@@ -184,8 +167,7 @@ The following arguments are supported:
         <span class="property-indicator"></span>
         <span class="property-type">string</span>
     </dt>
-    <dd>{{% md %}}The name of the workspace.{{% /md %}}</dd>
-    <dt class="property-optional"
+    <dd>{{% md %}}The name of the workspace.{{% /md %}}</dd><dt class="property-optional"
             title="Optional">
         <span id="adddefaultextendedtimerange_go">
 <a href="#adddefaultextendedtimerange_go" style="color: inherit; text-decoration: inherit;">Add<wbr>Default<wbr>Extended<wbr>Time<wbr>Range</a>
@@ -193,8 +175,7 @@ The following arguments are supported:
         <span class="property-indicator"></span>
         <span class="property-type">bool</span>
     </dt>
-    <dd>{{% md %}}Indicates if query time range should be extended with default time range of the query. Default value is false{{% /md %}}</dd>
-    <dt class="property-optional"
+    <dd>{{% md %}}Indicates if query time range should be extended with default time range of the query. Default value is false{{% /md %}}</dd><dt class="property-optional"
             title="Optional">
         <span id="insightqueryids_go">
 <a href="#insightqueryids_go" style="color: inherit; text-decoration: inherit;">Insight<wbr>Query<wbr>Ids</a>
@@ -202,14 +183,11 @@ The following arguments are supported:
         <span class="property-indicator"></span>
         <span class="property-type">[]string</span>
     </dt>
-    <dd>{{% md %}}List of Insights Query Id. If empty, default value is all insights of this entity{{% /md %}}</dd>
-</dl>
+    <dd>{{% md %}}List of Insights Query Id. If empty, default value is all insights of this entity{{% /md %}}</dd></dl>
 {{% /choosable %}}
 
 {{% choosable language nodejs %}}
-<dl class="resources-properties">
-
-    <dt class="property-required"
+<dl class="resources-properties"><dt class="property-required"
             title="Required">
         <span id="endtime_nodejs">
 <a href="#endtime_nodejs" style="color: inherit; text-decoration: inherit;">end<wbr>Time</a>
@@ -217,8 +195,7 @@ The following arguments are supported:
         <span class="property-indicator"></span>
         <span class="property-type">string</span>
     </dt>
-    <dd>{{% md %}}The end timeline date, so the results returned are before this date.{{% /md %}}</dd>
-    <dt class="property-required"
+    <dd>{{% md %}}The end timeline date, so the results returned are before this date.{{% /md %}}</dd><dt class="property-required"
             title="Required">
         <span id="entityid_nodejs">
 <a href="#entityid_nodejs" style="color: inherit; text-decoration: inherit;">entity<wbr>Id</a>
@@ -226,8 +203,7 @@ The following arguments are supported:
         <span class="property-indicator"></span>
         <span class="property-type">string</span>
     </dt>
-    <dd>{{% md %}}entity ID{{% /md %}}</dd>
-    <dt class="property-required"
+    <dd>{{% md %}}entity ID{{% /md %}}</dd><dt class="property-required"
             title="Required">
         <span id="operationalinsightsresourceprovider_nodejs">
 <a href="#operationalinsightsresourceprovider_nodejs" style="color: inherit; text-decoration: inherit;">operational<wbr>Insights<wbr>Resource<wbr>Provider</a>
@@ -235,8 +211,7 @@ The following arguments are supported:
         <span class="property-indicator"></span>
         <span class="property-type">string</span>
     </dt>
-    <dd>{{% md %}}The namespace of workspaces resource provider- Microsoft.OperationalInsights.{{% /md %}}</dd>
-    <dt class="property-required"
+    <dd>{{% md %}}The namespace of workspaces resource provider- Microsoft.OperationalInsights.{{% /md %}}</dd><dt class="property-required"
             title="Required">
         <span id="resourcegroupname_nodejs">
 <a href="#resourcegroupname_nodejs" style="color: inherit; text-decoration: inherit;">resource<wbr>Group<wbr>Name</a>
@@ -244,8 +219,7 @@ The following arguments are supported:
         <span class="property-indicator"></span>
         <span class="property-type">string</span>
     </dt>
-    <dd>{{% md %}}The name of the resource group within the user's subscription. The name is case insensitive.{{% /md %}}</dd>
-    <dt class="property-required"
+    <dd>{{% md %}}The name of the resource group within the user's subscription. The name is case insensitive.{{% /md %}}</dd><dt class="property-required"
             title="Required">
         <span id="starttime_nodejs">
 <a href="#starttime_nodejs" style="color: inherit; text-decoration: inherit;">start<wbr>Time</a>
@@ -253,8 +227,7 @@ The following arguments are supported:
         <span class="property-indicator"></span>
         <span class="property-type">string</span>
     </dt>
-    <dd>{{% md %}}The start timeline date, so the results returned are after this date.{{% /md %}}</dd>
-    <dt class="property-required"
+    <dd>{{% md %}}The start timeline date, so the results returned are after this date.{{% /md %}}</dd><dt class="property-required"
             title="Required">
         <span id="workspacename_nodejs">
 <a href="#workspacename_nodejs" style="color: inherit; text-decoration: inherit;">workspace<wbr>Name</a>
@@ -262,8 +235,7 @@ The following arguments are supported:
         <span class="property-indicator"></span>
         <span class="property-type">string</span>
     </dt>
-    <dd>{{% md %}}The name of the workspace.{{% /md %}}</dd>
-    <dt class="property-optional"
+    <dd>{{% md %}}The name of the workspace.{{% /md %}}</dd><dt class="property-optional"
             title="Optional">
         <span id="adddefaultextendedtimerange_nodejs">
 <a href="#adddefaultextendedtimerange_nodejs" style="color: inherit; text-decoration: inherit;">add<wbr>Default<wbr>Extended<wbr>Time<wbr>Range</a>
@@ -271,8 +243,7 @@ The following arguments are supported:
         <span class="property-indicator"></span>
         <span class="property-type">boolean</span>
     </dt>
-    <dd>{{% md %}}Indicates if query time range should be extended with default time range of the query. Default value is false{{% /md %}}</dd>
-    <dt class="property-optional"
+    <dd>{{% md %}}Indicates if query time range should be extended with default time range of the query. Default value is false{{% /md %}}</dd><dt class="property-optional"
             title="Optional">
         <span id="insightqueryids_nodejs">
 <a href="#insightqueryids_nodejs" style="color: inherit; text-decoration: inherit;">insight<wbr>Query<wbr>Ids</a>
@@ -280,14 +251,11 @@ The following arguments are supported:
         <span class="property-indicator"></span>
         <span class="property-type">string[]</span>
     </dt>
-    <dd>{{% md %}}List of Insights Query Id. If empty, default value is all insights of this entity{{% /md %}}</dd>
-</dl>
+    <dd>{{% md %}}List of Insights Query Id. If empty, default value is all insights of this entity{{% /md %}}</dd></dl>
 {{% /choosable %}}
 
 {{% choosable language python %}}
-<dl class="resources-properties">
-
-    <dt class="property-required"
+<dl class="resources-properties"><dt class="property-required"
             title="Required">
         <span id="end_time_python">
 <a href="#end_time_python" style="color: inherit; text-decoration: inherit;">end_<wbr>time</a>
@@ -295,8 +263,7 @@ The following arguments are supported:
         <span class="property-indicator"></span>
         <span class="property-type">str</span>
     </dt>
-    <dd>{{% md %}}The end timeline date, so the results returned are before this date.{{% /md %}}</dd>
-    <dt class="property-required"
+    <dd>{{% md %}}The end timeline date, so the results returned are before this date.{{% /md %}}</dd><dt class="property-required"
             title="Required">
         <span id="entity_id_python">
 <a href="#entity_id_python" style="color: inherit; text-decoration: inherit;">entity_<wbr>id</a>
@@ -304,8 +271,7 @@ The following arguments are supported:
         <span class="property-indicator"></span>
         <span class="property-type">str</span>
     </dt>
-    <dd>{{% md %}}entity ID{{% /md %}}</dd>
-    <dt class="property-required"
+    <dd>{{% md %}}entity ID{{% /md %}}</dd><dt class="property-required"
             title="Required">
         <span id="operational_insights_resource_provider_python">
 <a href="#operational_insights_resource_provider_python" style="color: inherit; text-decoration: inherit;">operational_<wbr>insights_<wbr>resource_<wbr>provider</a>
@@ -313,8 +279,7 @@ The following arguments are supported:
         <span class="property-indicator"></span>
         <span class="property-type">str</span>
     </dt>
-    <dd>{{% md %}}The namespace of workspaces resource provider- Microsoft.OperationalInsights.{{% /md %}}</dd>
-    <dt class="property-required"
+    <dd>{{% md %}}The namespace of workspaces resource provider- Microsoft.OperationalInsights.{{% /md %}}</dd><dt class="property-required"
             title="Required">
         <span id="resource_group_name_python">
 <a href="#resource_group_name_python" style="color: inherit; text-decoration: inherit;">resource_<wbr>group_<wbr>name</a>
@@ -322,8 +287,7 @@ The following arguments are supported:
         <span class="property-indicator"></span>
         <span class="property-type">str</span>
     </dt>
-    <dd>{{% md %}}The name of the resource group within the user's subscription. The name is case insensitive.{{% /md %}}</dd>
-    <dt class="property-required"
+    <dd>{{% md %}}The name of the resource group within the user's subscription. The name is case insensitive.{{% /md %}}</dd><dt class="property-required"
             title="Required">
         <span id="start_time_python">
 <a href="#start_time_python" style="color: inherit; text-decoration: inherit;">start_<wbr>time</a>
@@ -331,8 +295,7 @@ The following arguments are supported:
         <span class="property-indicator"></span>
         <span class="property-type">str</span>
     </dt>
-    <dd>{{% md %}}The start timeline date, so the results returned are after this date.{{% /md %}}</dd>
-    <dt class="property-required"
+    <dd>{{% md %}}The start timeline date, so the results returned are after this date.{{% /md %}}</dd><dt class="property-required"
             title="Required">
         <span id="workspace_name_python">
 <a href="#workspace_name_python" style="color: inherit; text-decoration: inherit;">workspace_<wbr>name</a>
@@ -340,8 +303,7 @@ The following arguments are supported:
         <span class="property-indicator"></span>
         <span class="property-type">str</span>
     </dt>
-    <dd>{{% md %}}The name of the workspace.{{% /md %}}</dd>
-    <dt class="property-optional"
+    <dd>{{% md %}}The name of the workspace.{{% /md %}}</dd><dt class="property-optional"
             title="Optional">
         <span id="add_default_extended_time_range_python">
 <a href="#add_default_extended_time_range_python" style="color: inherit; text-decoration: inherit;">add_<wbr>default_<wbr>extended_<wbr>time_<wbr>range</a>
@@ -349,8 +311,7 @@ The following arguments are supported:
         <span class="property-indicator"></span>
         <span class="property-type">bool</span>
     </dt>
-    <dd>{{% md %}}Indicates if query time range should be extended with default time range of the query. Default value is false{{% /md %}}</dd>
-    <dt class="property-optional"
+    <dd>{{% md %}}Indicates if query time range should be extended with default time range of the query. Default value is false{{% /md %}}</dd><dt class="property-optional"
             title="Optional">
         <span id="insight_query_ids_python">
 <a href="#insight_query_ids_python" style="color: inherit; text-decoration: inherit;">insight_<wbr>query_<wbr>ids</a>
@@ -358,8 +319,7 @@ The following arguments are supported:
         <span class="property-indicator"></span>
         <span class="property-type">Sequence[str]</span>
     </dt>
-    <dd>{{% md %}}List of Insights Query Id. If empty, default value is all insights of this entity{{% /md %}}</dd>
-</dl>
+    <dd>{{% md %}}List of Insights Query Id. If empty, default value is all insights of this entity{{% /md %}}</dd></dl>
 {{% /choosable %}}
 
 
@@ -372,9 +332,7 @@ The following output properties are available:
 
 
 {{% choosable language csharp %}}
-<dl class="resources-properties">
-
-    <dt class="property-"
+<dl class="resources-properties"><dt class="property-"
             title="">
         <span id="metadata_csharp">
 <a href="#metadata_csharp" style="color: inherit; text-decoration: inherit;">Meta<wbr>Data</a>
@@ -382,8 +340,7 @@ The following output properties are available:
         <span class="property-indicator"></span>
         <span class="property-type"><a href="#getinsightsresultsmetadataresponse">Pulumi.<wbr>Azure<wbr>Native.<wbr>Security<wbr>Insights.<wbr>Outputs.<wbr>Get<wbr>Insights<wbr>Results<wbr>Metadata<wbr>Response</a></span>
     </dt>
-    <dd>{{% md %}}The metadata from the get insights operation results.{{% /md %}}</dd>
-    <dt class="property-"
+    <dd>{{% md %}}The metadata from the get insights operation results.{{% /md %}}</dd><dt class="property-"
             title="">
         <span id="value_csharp">
 <a href="#value_csharp" style="color: inherit; text-decoration: inherit;">Value</a>
@@ -391,14 +348,11 @@ The following output properties are available:
         <span class="property-indicator"></span>
         <span class="property-type"><a href="#entityinsightitemresponse">List&lt;Pulumi.<wbr>Azure<wbr>Native.<wbr>Security<wbr>Insights.<wbr>Outputs.<wbr>Entity<wbr>Insight<wbr>Item<wbr>Response&gt;</a></span>
     </dt>
-    <dd>{{% md %}}The insights result values.{{% /md %}}</dd>
-</dl>
+    <dd>{{% md %}}The insights result values.{{% /md %}}</dd></dl>
 {{% /choosable %}}
 
 {{% choosable language go %}}
-<dl class="resources-properties">
-
-    <dt class="property-"
+<dl class="resources-properties"><dt class="property-"
             title="">
         <span id="metadata_go">
 <a href="#metadata_go" style="color: inherit; text-decoration: inherit;">Meta<wbr>Data</a>
@@ -406,8 +360,7 @@ The following output properties are available:
         <span class="property-indicator"></span>
         <span class="property-type"><a href="#getinsightsresultsmetadataresponse">Get<wbr>Insights<wbr>Results<wbr>Metadata<wbr>Response</a></span>
     </dt>
-    <dd>{{% md %}}The metadata from the get insights operation results.{{% /md %}}</dd>
-    <dt class="property-"
+    <dd>{{% md %}}The metadata from the get insights operation results.{{% /md %}}</dd><dt class="property-"
             title="">
         <span id="value_go">
 <a href="#value_go" style="color: inherit; text-decoration: inherit;">Value</a>
@@ -415,14 +368,11 @@ The following output properties are available:
         <span class="property-indicator"></span>
         <span class="property-type"><a href="#entityinsightitemresponse">[]Entity<wbr>Insight<wbr>Item<wbr>Response</a></span>
     </dt>
-    <dd>{{% md %}}The insights result values.{{% /md %}}</dd>
-</dl>
+    <dd>{{% md %}}The insights result values.{{% /md %}}</dd></dl>
 {{% /choosable %}}
 
 {{% choosable language nodejs %}}
-<dl class="resources-properties">
-
-    <dt class="property-"
+<dl class="resources-properties"><dt class="property-"
             title="">
         <span id="metadata_nodejs">
 <a href="#metadata_nodejs" style="color: inherit; text-decoration: inherit;">meta<wbr>Data</a>
@@ -430,8 +380,7 @@ The following output properties are available:
         <span class="property-indicator"></span>
         <span class="property-type"><a href="#getinsightsresultsmetadataresponse">Get<wbr>Insights<wbr>Results<wbr>Metadata<wbr>Response</a></span>
     </dt>
-    <dd>{{% md %}}The metadata from the get insights operation results.{{% /md %}}</dd>
-    <dt class="property-"
+    <dd>{{% md %}}The metadata from the get insights operation results.{{% /md %}}</dd><dt class="property-"
             title="">
         <span id="value_nodejs">
 <a href="#value_nodejs" style="color: inherit; text-decoration: inherit;">value</a>
@@ -439,14 +388,11 @@ The following output properties are available:
         <span class="property-indicator"></span>
         <span class="property-type"><a href="#entityinsightitemresponse">Entity<wbr>Insight<wbr>Item<wbr>Response[]</a></span>
     </dt>
-    <dd>{{% md %}}The insights result values.{{% /md %}}</dd>
-</dl>
+    <dd>{{% md %}}The insights result values.{{% /md %}}</dd></dl>
 {{% /choosable %}}
 
 {{% choosable language python %}}
-<dl class="resources-properties">
-
-    <dt class="property-"
+<dl class="resources-properties"><dt class="property-"
             title="">
         <span id="meta_data_python">
 <a href="#meta_data_python" style="color: inherit; text-decoration: inherit;">meta_<wbr>data</a>
@@ -454,8 +400,7 @@ The following output properties are available:
         <span class="property-indicator"></span>
         <span class="property-type"><a href="#getinsightsresultsmetadataresponse">Get<wbr>Insights<wbr>Results<wbr>Metadata<wbr>Response</a></span>
     </dt>
-    <dd>{{% md %}}The metadata from the get insights operation results.{{% /md %}}</dd>
-    <dt class="property-"
+    <dd>{{% md %}}The metadata from the get insights operation results.{{% /md %}}</dd><dt class="property-"
             title="">
         <span id="value_python">
 <a href="#value_python" style="color: inherit; text-decoration: inherit;">value</a>
@@ -463,8 +408,7 @@ The following output properties are available:
         <span class="property-indicator"></span>
         <span class="property-type"><a href="#entityinsightitemresponse">Sequence[Entity<wbr>Insight<wbr>Item<wbr>Response]</a></span>
     </dt>
-    <dd>{{% md %}}The insights result values.{{% /md %}}</dd>
-</dl>
+    <dd>{{% md %}}The insights result values.{{% /md %}}</dd></dl>
 {{% /choosable %}}
 
 
@@ -478,9 +422,7 @@ The following output properties are available:
 
 
 {{% choosable language csharp %}}
-<dl class="resources-properties">
-
-    <dt class="property-optional"
+<dl class="resources-properties"><dt class="property-optional"
             title="Optional">
         <span id="chartqueryresults_csharp">
 <a href="#chartqueryresults_csharp" style="color: inherit; text-decoration: inherit;">Chart<wbr>Query<wbr>Results</a>
@@ -488,8 +430,7 @@ The following output properties are available:
         <span class="property-indicator"></span>
         <span class="property-type"><a href="#insightstableresultresponse">List&lt;Pulumi.<wbr>Azure<wbr>Native.<wbr>Security<wbr>Insights.<wbr>Inputs.<wbr>Insights<wbr>Table<wbr>Result<wbr>Response<wbr>Args&gt;</a></span>
     </dt>
-    <dd>{{% md %}}Query results for table insights query.{{% /md %}}</dd>
-    <dt class="property-optional"
+    <dd>{{% md %}}Query results for table insights query.{{% /md %}}</dd><dt class="property-optional"
             title="Optional">
         <span id="queryid_csharp">
 <a href="#queryid_csharp" style="color: inherit; text-decoration: inherit;">Query<wbr>Id</a>
@@ -497,8 +438,7 @@ The following output properties are available:
         <span class="property-indicator"></span>
         <span class="property-type">string</span>
     </dt>
-    <dd>{{% md %}}The query id of the insight{{% /md %}}</dd>
-    <dt class="property-optional"
+    <dd>{{% md %}}The query id of the insight{{% /md %}}</dd><dt class="property-optional"
             title="Optional">
         <span id="querytimeinterval_csharp">
 <a href="#querytimeinterval_csharp" style="color: inherit; text-decoration: inherit;">Query<wbr>Time<wbr>Interval</a>
@@ -506,8 +446,7 @@ The following output properties are available:
         <span class="property-indicator"></span>
         <span class="property-type"><a href="#entityinsightitemresponsequerytimeinterval">Pulumi.<wbr>Azure<wbr>Native.<wbr>Security<wbr>Insights.<wbr>Inputs.<wbr>Entity<wbr>Insight<wbr>Item<wbr>Response<wbr>Query<wbr>Time<wbr>Interval<wbr>Args</a></span>
     </dt>
-    <dd>{{% md %}}The Time interval that the query actually executed on.{{% /md %}}</dd>
-    <dt class="property-optional"
+    <dd>{{% md %}}The Time interval that the query actually executed on.{{% /md %}}</dd><dt class="property-optional"
             title="Optional">
         <span id="tablequeryresults_csharp">
 <a href="#tablequeryresults_csharp" style="color: inherit; text-decoration: inherit;">Table<wbr>Query<wbr>Results</a>
@@ -515,14 +454,11 @@ The following output properties are available:
         <span class="property-indicator"></span>
         <span class="property-type"><a href="#insightstableresultresponse">Pulumi.<wbr>Azure<wbr>Native.<wbr>Security<wbr>Insights.<wbr>Inputs.<wbr>Insights<wbr>Table<wbr>Result<wbr>Response<wbr>Args</a></span>
     </dt>
-    <dd>{{% md %}}Query results for table insights query.{{% /md %}}</dd>
-</dl>
+    <dd>{{% md %}}Query results for table insights query.{{% /md %}}</dd></dl>
 {{% /choosable %}}
 
 {{% choosable language go %}}
-<dl class="resources-properties">
-
-    <dt class="property-optional"
+<dl class="resources-properties"><dt class="property-optional"
             title="Optional">
         <span id="chartqueryresults_go">
 <a href="#chartqueryresults_go" style="color: inherit; text-decoration: inherit;">Chart<wbr>Query<wbr>Results</a>
@@ -530,8 +466,7 @@ The following output properties are available:
         <span class="property-indicator"></span>
         <span class="property-type"><a href="#insightstableresultresponse">[]Insights<wbr>Table<wbr>Result<wbr>Response</a></span>
     </dt>
-    <dd>{{% md %}}Query results for table insights query.{{% /md %}}</dd>
-    <dt class="property-optional"
+    <dd>{{% md %}}Query results for table insights query.{{% /md %}}</dd><dt class="property-optional"
             title="Optional">
         <span id="queryid_go">
 <a href="#queryid_go" style="color: inherit; text-decoration: inherit;">Query<wbr>Id</a>
@@ -539,8 +474,7 @@ The following output properties are available:
         <span class="property-indicator"></span>
         <span class="property-type">string</span>
     </dt>
-    <dd>{{% md %}}The query id of the insight{{% /md %}}</dd>
-    <dt class="property-optional"
+    <dd>{{% md %}}The query id of the insight{{% /md %}}</dd><dt class="property-optional"
             title="Optional">
         <span id="querytimeinterval_go">
 <a href="#querytimeinterval_go" style="color: inherit; text-decoration: inherit;">Query<wbr>Time<wbr>Interval</a>
@@ -548,8 +482,7 @@ The following output properties are available:
         <span class="property-indicator"></span>
         <span class="property-type"><a href="#entityinsightitemresponsequerytimeinterval">Entity<wbr>Insight<wbr>Item<wbr>Response<wbr>Query<wbr>Time<wbr>Interval</a></span>
     </dt>
-    <dd>{{% md %}}The Time interval that the query actually executed on.{{% /md %}}</dd>
-    <dt class="property-optional"
+    <dd>{{% md %}}The Time interval that the query actually executed on.{{% /md %}}</dd><dt class="property-optional"
             title="Optional">
         <span id="tablequeryresults_go">
 <a href="#tablequeryresults_go" style="color: inherit; text-decoration: inherit;">Table<wbr>Query<wbr>Results</a>
@@ -557,14 +490,11 @@ The following output properties are available:
         <span class="property-indicator"></span>
         <span class="property-type"><a href="#insightstableresultresponse">Insights<wbr>Table<wbr>Result<wbr>Response</a></span>
     </dt>
-    <dd>{{% md %}}Query results for table insights query.{{% /md %}}</dd>
-</dl>
+    <dd>{{% md %}}Query results for table insights query.{{% /md %}}</dd></dl>
 {{% /choosable %}}
 
 {{% choosable language nodejs %}}
-<dl class="resources-properties">
-
-    <dt class="property-optional"
+<dl class="resources-properties"><dt class="property-optional"
             title="Optional">
         <span id="chartqueryresults_nodejs">
 <a href="#chartqueryresults_nodejs" style="color: inherit; text-decoration: inherit;">chart<wbr>Query<wbr>Results</a>
@@ -572,8 +502,7 @@ The following output properties are available:
         <span class="property-indicator"></span>
         <span class="property-type"><a href="#insightstableresultresponse">Insights<wbr>Table<wbr>Result<wbr>Response[]</a></span>
     </dt>
-    <dd>{{% md %}}Query results for table insights query.{{% /md %}}</dd>
-    <dt class="property-optional"
+    <dd>{{% md %}}Query results for table insights query.{{% /md %}}</dd><dt class="property-optional"
             title="Optional">
         <span id="queryid_nodejs">
 <a href="#queryid_nodejs" style="color: inherit; text-decoration: inherit;">query<wbr>Id</a>
@@ -581,8 +510,7 @@ The following output properties are available:
         <span class="property-indicator"></span>
         <span class="property-type">string</span>
     </dt>
-    <dd>{{% md %}}The query id of the insight{{% /md %}}</dd>
-    <dt class="property-optional"
+    <dd>{{% md %}}The query id of the insight{{% /md %}}</dd><dt class="property-optional"
             title="Optional">
         <span id="querytimeinterval_nodejs">
 <a href="#querytimeinterval_nodejs" style="color: inherit; text-decoration: inherit;">query<wbr>Time<wbr>Interval</a>
@@ -590,8 +518,7 @@ The following output properties are available:
         <span class="property-indicator"></span>
         <span class="property-type"><a href="#entityinsightitemresponsequerytimeinterval">Entity<wbr>Insight<wbr>Item<wbr>Response<wbr>Query<wbr>Time<wbr>Interval</a></span>
     </dt>
-    <dd>{{% md %}}The Time interval that the query actually executed on.{{% /md %}}</dd>
-    <dt class="property-optional"
+    <dd>{{% md %}}The Time interval that the query actually executed on.{{% /md %}}</dd><dt class="property-optional"
             title="Optional">
         <span id="tablequeryresults_nodejs">
 <a href="#tablequeryresults_nodejs" style="color: inherit; text-decoration: inherit;">table<wbr>Query<wbr>Results</a>
@@ -599,14 +526,11 @@ The following output properties are available:
         <span class="property-indicator"></span>
         <span class="property-type"><a href="#insightstableresultresponse">Insights<wbr>Table<wbr>Result<wbr>Response</a></span>
     </dt>
-    <dd>{{% md %}}Query results for table insights query.{{% /md %}}</dd>
-</dl>
+    <dd>{{% md %}}Query results for table insights query.{{% /md %}}</dd></dl>
 {{% /choosable %}}
 
 {{% choosable language python %}}
-<dl class="resources-properties">
-
-    <dt class="property-optional"
+<dl class="resources-properties"><dt class="property-optional"
             title="Optional">
         <span id="chart_query_results_python">
 <a href="#chart_query_results_python" style="color: inherit; text-decoration: inherit;">chart_<wbr>query_<wbr>results</a>
@@ -614,8 +538,7 @@ The following output properties are available:
         <span class="property-indicator"></span>
         <span class="property-type"><a href="#insightstableresultresponse">Sequence[Insights<wbr>Table<wbr>Result<wbr>Response<wbr>Args]</a></span>
     </dt>
-    <dd>{{% md %}}Query results for table insights query.{{% /md %}}</dd>
-    <dt class="property-optional"
+    <dd>{{% md %}}Query results for table insights query.{{% /md %}}</dd><dt class="property-optional"
             title="Optional">
         <span id="query_id_python">
 <a href="#query_id_python" style="color: inherit; text-decoration: inherit;">query_<wbr>id</a>
@@ -623,8 +546,7 @@ The following output properties are available:
         <span class="property-indicator"></span>
         <span class="property-type">str</span>
     </dt>
-    <dd>{{% md %}}The query id of the insight{{% /md %}}</dd>
-    <dt class="property-optional"
+    <dd>{{% md %}}The query id of the insight{{% /md %}}</dd><dt class="property-optional"
             title="Optional">
         <span id="query_time_interval_python">
 <a href="#query_time_interval_python" style="color: inherit; text-decoration: inherit;">query_<wbr>time_<wbr>interval</a>
@@ -632,8 +554,7 @@ The following output properties are available:
         <span class="property-indicator"></span>
         <span class="property-type"><a href="#entityinsightitemresponsequerytimeinterval">Entity<wbr>Insight<wbr>Item<wbr>Response<wbr>Query<wbr>Time<wbr>Interval<wbr>Args</a></span>
     </dt>
-    <dd>{{% md %}}The Time interval that the query actually executed on.{{% /md %}}</dd>
-    <dt class="property-optional"
+    <dd>{{% md %}}The Time interval that the query actually executed on.{{% /md %}}</dd><dt class="property-optional"
             title="Optional">
         <span id="table_query_results_python">
 <a href="#table_query_results_python" style="color: inherit; text-decoration: inherit;">table_<wbr>query_<wbr>results</a>
@@ -641,8 +562,7 @@ The following output properties are available:
         <span class="property-indicator"></span>
         <span class="property-type"><a href="#insightstableresultresponse">Insights<wbr>Table<wbr>Result<wbr>Response<wbr>Args</a></span>
     </dt>
-    <dd>{{% md %}}Query results for table insights query.{{% /md %}}</dd>
-</dl>
+    <dd>{{% md %}}Query results for table insights query.{{% /md %}}</dd></dl>
 {{% /choosable %}}
 
 <h4 id="entityinsightitemresponsequerytimeinterval">Entity<wbr>Insight<wbr>Item<wbr>Response<wbr>Query<wbr>Time<wbr>Interval</h4>
@@ -650,9 +570,7 @@ The following output properties are available:
 
 
 {{% choosable language csharp %}}
-<dl class="resources-properties">
-
-    <dt class="property-optional"
+<dl class="resources-properties"><dt class="property-optional"
             title="Optional">
         <span id="endtime_csharp">
 <a href="#endtime_csharp" style="color: inherit; text-decoration: inherit;">End<wbr>Time</a>
@@ -660,8 +578,7 @@ The following output properties are available:
         <span class="property-indicator"></span>
         <span class="property-type">string</span>
     </dt>
-    <dd>{{% md %}}Insight query end time{{% /md %}}</dd>
-    <dt class="property-optional"
+    <dd>{{% md %}}Insight query end time{{% /md %}}</dd><dt class="property-optional"
             title="Optional">
         <span id="starttime_csharp">
 <a href="#starttime_csharp" style="color: inherit; text-decoration: inherit;">Start<wbr>Time</a>
@@ -669,14 +586,11 @@ The following output properties are available:
         <span class="property-indicator"></span>
         <span class="property-type">string</span>
     </dt>
-    <dd>{{% md %}}Insight query start time{{% /md %}}</dd>
-</dl>
+    <dd>{{% md %}}Insight query start time{{% /md %}}</dd></dl>
 {{% /choosable %}}
 
 {{% choosable language go %}}
-<dl class="resources-properties">
-
-    <dt class="property-optional"
+<dl class="resources-properties"><dt class="property-optional"
             title="Optional">
         <span id="endtime_go">
 <a href="#endtime_go" style="color: inherit; text-decoration: inherit;">End<wbr>Time</a>
@@ -684,8 +598,7 @@ The following output properties are available:
         <span class="property-indicator"></span>
         <span class="property-type">string</span>
     </dt>
-    <dd>{{% md %}}Insight query end time{{% /md %}}</dd>
-    <dt class="property-optional"
+    <dd>{{% md %}}Insight query end time{{% /md %}}</dd><dt class="property-optional"
             title="Optional">
         <span id="starttime_go">
 <a href="#starttime_go" style="color: inherit; text-decoration: inherit;">Start<wbr>Time</a>
@@ -693,14 +606,11 @@ The following output properties are available:
         <span class="property-indicator"></span>
         <span class="property-type">string</span>
     </dt>
-    <dd>{{% md %}}Insight query start time{{% /md %}}</dd>
-</dl>
+    <dd>{{% md %}}Insight query start time{{% /md %}}</dd></dl>
 {{% /choosable %}}
 
 {{% choosable language nodejs %}}
-<dl class="resources-properties">
-
-    <dt class="property-optional"
+<dl class="resources-properties"><dt class="property-optional"
             title="Optional">
         <span id="endtime_nodejs">
 <a href="#endtime_nodejs" style="color: inherit; text-decoration: inherit;">end<wbr>Time</a>
@@ -708,8 +618,7 @@ The following output properties are available:
         <span class="property-indicator"></span>
         <span class="property-type">string</span>
     </dt>
-    <dd>{{% md %}}Insight query end time{{% /md %}}</dd>
-    <dt class="property-optional"
+    <dd>{{% md %}}Insight query end time{{% /md %}}</dd><dt class="property-optional"
             title="Optional">
         <span id="starttime_nodejs">
 <a href="#starttime_nodejs" style="color: inherit; text-decoration: inherit;">start<wbr>Time</a>
@@ -717,14 +626,11 @@ The following output properties are available:
         <span class="property-indicator"></span>
         <span class="property-type">string</span>
     </dt>
-    <dd>{{% md %}}Insight query start time{{% /md %}}</dd>
-</dl>
+    <dd>{{% md %}}Insight query start time{{% /md %}}</dd></dl>
 {{% /choosable %}}
 
 {{% choosable language python %}}
-<dl class="resources-properties">
-
-    <dt class="property-optional"
+<dl class="resources-properties"><dt class="property-optional"
             title="Optional">
         <span id="end_time_python">
 <a href="#end_time_python" style="color: inherit; text-decoration: inherit;">end_<wbr>time</a>
@@ -732,8 +638,7 @@ The following output properties are available:
         <span class="property-indicator"></span>
         <span class="property-type">str</span>
     </dt>
-    <dd>{{% md %}}Insight query end time{{% /md %}}</dd>
-    <dt class="property-optional"
+    <dd>{{% md %}}Insight query end time{{% /md %}}</dd><dt class="property-optional"
             title="Optional">
         <span id="start_time_python">
 <a href="#start_time_python" style="color: inherit; text-decoration: inherit;">start_<wbr>time</a>
@@ -741,8 +646,7 @@ The following output properties are available:
         <span class="property-indicator"></span>
         <span class="property-type">str</span>
     </dt>
-    <dd>{{% md %}}Insight query start time{{% /md %}}</dd>
-</dl>
+    <dd>{{% md %}}Insight query start time{{% /md %}}</dd></dl>
 {{% /choosable %}}
 
 <h4 id="getinsightserrorresponse">Get<wbr>Insights<wbr>Error<wbr>Response</h4>
@@ -750,9 +654,7 @@ The following output properties are available:
 
 
 {{% choosable language csharp %}}
-<dl class="resources-properties">
-
-    <dt class="property-required"
+<dl class="resources-properties"><dt class="property-required"
             title="Required">
         <span id="errormessage_csharp">
 <a href="#errormessage_csharp" style="color: inherit; text-decoration: inherit;">Error<wbr>Message</a>
@@ -760,8 +662,7 @@ The following output properties are available:
         <span class="property-indicator"></span>
         <span class="property-type">string</span>
     </dt>
-    <dd>{{% md %}}the error message{{% /md %}}</dd>
-    <dt class="property-required"
+    <dd>{{% md %}}the error message{{% /md %}}</dd><dt class="property-required"
             title="Required">
         <span id="kind_csharp">
 <a href="#kind_csharp" style="color: inherit; text-decoration: inherit;">Kind</a>
@@ -769,8 +670,7 @@ The following output properties are available:
         <span class="property-indicator"></span>
         <span class="property-type">string</span>
     </dt>
-    <dd>{{% md %}}the query kind{{% /md %}}</dd>
-    <dt class="property-optional"
+    <dd>{{% md %}}the query kind{{% /md %}}</dd><dt class="property-optional"
             title="Optional">
         <span id="queryid_csharp">
 <a href="#queryid_csharp" style="color: inherit; text-decoration: inherit;">Query<wbr>Id</a>
@@ -778,14 +678,11 @@ The following output properties are available:
         <span class="property-indicator"></span>
         <span class="property-type">string</span>
     </dt>
-    <dd>{{% md %}}the query id{{% /md %}}</dd>
-</dl>
+    <dd>{{% md %}}the query id{{% /md %}}</dd></dl>
 {{% /choosable %}}
 
 {{% choosable language go %}}
-<dl class="resources-properties">
-
-    <dt class="property-required"
+<dl class="resources-properties"><dt class="property-required"
             title="Required">
         <span id="errormessage_go">
 <a href="#errormessage_go" style="color: inherit; text-decoration: inherit;">Error<wbr>Message</a>
@@ -793,8 +690,7 @@ The following output properties are available:
         <span class="property-indicator"></span>
         <span class="property-type">string</span>
     </dt>
-    <dd>{{% md %}}the error message{{% /md %}}</dd>
-    <dt class="property-required"
+    <dd>{{% md %}}the error message{{% /md %}}</dd><dt class="property-required"
             title="Required">
         <span id="kind_go">
 <a href="#kind_go" style="color: inherit; text-decoration: inherit;">Kind</a>
@@ -802,8 +698,7 @@ The following output properties are available:
         <span class="property-indicator"></span>
         <span class="property-type">string</span>
     </dt>
-    <dd>{{% md %}}the query kind{{% /md %}}</dd>
-    <dt class="property-optional"
+    <dd>{{% md %}}the query kind{{% /md %}}</dd><dt class="property-optional"
             title="Optional">
         <span id="queryid_go">
 <a href="#queryid_go" style="color: inherit; text-decoration: inherit;">Query<wbr>Id</a>
@@ -811,14 +706,11 @@ The following output properties are available:
         <span class="property-indicator"></span>
         <span class="property-type">string</span>
     </dt>
-    <dd>{{% md %}}the query id{{% /md %}}</dd>
-</dl>
+    <dd>{{% md %}}the query id{{% /md %}}</dd></dl>
 {{% /choosable %}}
 
 {{% choosable language nodejs %}}
-<dl class="resources-properties">
-
-    <dt class="property-required"
+<dl class="resources-properties"><dt class="property-required"
             title="Required">
         <span id="errormessage_nodejs">
 <a href="#errormessage_nodejs" style="color: inherit; text-decoration: inherit;">error<wbr>Message</a>
@@ -826,8 +718,7 @@ The following output properties are available:
         <span class="property-indicator"></span>
         <span class="property-type">string</span>
     </dt>
-    <dd>{{% md %}}the error message{{% /md %}}</dd>
-    <dt class="property-required"
+    <dd>{{% md %}}the error message{{% /md %}}</dd><dt class="property-required"
             title="Required">
         <span id="kind_nodejs">
 <a href="#kind_nodejs" style="color: inherit; text-decoration: inherit;">kind</a>
@@ -835,8 +726,7 @@ The following output properties are available:
         <span class="property-indicator"></span>
         <span class="property-type">string</span>
     </dt>
-    <dd>{{% md %}}the query kind{{% /md %}}</dd>
-    <dt class="property-optional"
+    <dd>{{% md %}}the query kind{{% /md %}}</dd><dt class="property-optional"
             title="Optional">
         <span id="queryid_nodejs">
 <a href="#queryid_nodejs" style="color: inherit; text-decoration: inherit;">query<wbr>Id</a>
@@ -844,14 +734,11 @@ The following output properties are available:
         <span class="property-indicator"></span>
         <span class="property-type">string</span>
     </dt>
-    <dd>{{% md %}}the query id{{% /md %}}</dd>
-</dl>
+    <dd>{{% md %}}the query id{{% /md %}}</dd></dl>
 {{% /choosable %}}
 
 {{% choosable language python %}}
-<dl class="resources-properties">
-
-    <dt class="property-required"
+<dl class="resources-properties"><dt class="property-required"
             title="Required">
         <span id="error_message_python">
 <a href="#error_message_python" style="color: inherit; text-decoration: inherit;">error_<wbr>message</a>
@@ -859,8 +746,7 @@ The following output properties are available:
         <span class="property-indicator"></span>
         <span class="property-type">str</span>
     </dt>
-    <dd>{{% md %}}the error message{{% /md %}}</dd>
-    <dt class="property-required"
+    <dd>{{% md %}}the error message{{% /md %}}</dd><dt class="property-required"
             title="Required">
         <span id="kind_python">
 <a href="#kind_python" style="color: inherit; text-decoration: inherit;">kind</a>
@@ -868,8 +754,7 @@ The following output properties are available:
         <span class="property-indicator"></span>
         <span class="property-type">str</span>
     </dt>
-    <dd>{{% md %}}the query kind{{% /md %}}</dd>
-    <dt class="property-optional"
+    <dd>{{% md %}}the query kind{{% /md %}}</dd><dt class="property-optional"
             title="Optional">
         <span id="query_id_python">
 <a href="#query_id_python" style="color: inherit; text-decoration: inherit;">query_<wbr>id</a>
@@ -877,8 +762,7 @@ The following output properties are available:
         <span class="property-indicator"></span>
         <span class="property-type">str</span>
     </dt>
-    <dd>{{% md %}}the query id{{% /md %}}</dd>
-</dl>
+    <dd>{{% md %}}the query id{{% /md %}}</dd></dl>
 {{% /choosable %}}
 
 <h4 id="getinsightsresultsmetadataresponse">Get<wbr>Insights<wbr>Results<wbr>Metadata<wbr>Response</h4>
@@ -886,9 +770,7 @@ The following output properties are available:
 
 
 {{% choosable language csharp %}}
-<dl class="resources-properties">
-
-    <dt class="property-required"
+<dl class="resources-properties"><dt class="property-required"
             title="Required">
         <span id="totalcount_csharp">
 <a href="#totalcount_csharp" style="color: inherit; text-decoration: inherit;">Total<wbr>Count</a>
@@ -896,8 +778,7 @@ The following output properties are available:
         <span class="property-indicator"></span>
         <span class="property-type">int</span>
     </dt>
-    <dd>{{% md %}}the total items found for the insights request{{% /md %}}</dd>
-    <dt class="property-optional"
+    <dd>{{% md %}}the total items found for the insights request{{% /md %}}</dd><dt class="property-optional"
             title="Optional">
         <span id="errors_csharp">
 <a href="#errors_csharp" style="color: inherit; text-decoration: inherit;">Errors</a>
@@ -905,14 +786,11 @@ The following output properties are available:
         <span class="property-indicator"></span>
         <span class="property-type"><a href="#getinsightserrorresponse">List&lt;Pulumi.<wbr>Azure<wbr>Native.<wbr>Security<wbr>Insights.<wbr>Inputs.<wbr>Get<wbr>Insights<wbr>Error<wbr>Response<wbr>Args&gt;</a></span>
     </dt>
-    <dd>{{% md %}}information about the failed queries{{% /md %}}</dd>
-</dl>
+    <dd>{{% md %}}information about the failed queries{{% /md %}}</dd></dl>
 {{% /choosable %}}
 
 {{% choosable language go %}}
-<dl class="resources-properties">
-
-    <dt class="property-required"
+<dl class="resources-properties"><dt class="property-required"
             title="Required">
         <span id="totalcount_go">
 <a href="#totalcount_go" style="color: inherit; text-decoration: inherit;">Total<wbr>Count</a>
@@ -920,8 +798,7 @@ The following output properties are available:
         <span class="property-indicator"></span>
         <span class="property-type">int</span>
     </dt>
-    <dd>{{% md %}}the total items found for the insights request{{% /md %}}</dd>
-    <dt class="property-optional"
+    <dd>{{% md %}}the total items found for the insights request{{% /md %}}</dd><dt class="property-optional"
             title="Optional">
         <span id="errors_go">
 <a href="#errors_go" style="color: inherit; text-decoration: inherit;">Errors</a>
@@ -929,14 +806,11 @@ The following output properties are available:
         <span class="property-indicator"></span>
         <span class="property-type"><a href="#getinsightserrorresponse">[]Get<wbr>Insights<wbr>Error<wbr>Response</a></span>
     </dt>
-    <dd>{{% md %}}information about the failed queries{{% /md %}}</dd>
-</dl>
+    <dd>{{% md %}}information about the failed queries{{% /md %}}</dd></dl>
 {{% /choosable %}}
 
 {{% choosable language nodejs %}}
-<dl class="resources-properties">
-
-    <dt class="property-required"
+<dl class="resources-properties"><dt class="property-required"
             title="Required">
         <span id="totalcount_nodejs">
 <a href="#totalcount_nodejs" style="color: inherit; text-decoration: inherit;">total<wbr>Count</a>
@@ -944,8 +818,7 @@ The following output properties are available:
         <span class="property-indicator"></span>
         <span class="property-type">number</span>
     </dt>
-    <dd>{{% md %}}the total items found for the insights request{{% /md %}}</dd>
-    <dt class="property-optional"
+    <dd>{{% md %}}the total items found for the insights request{{% /md %}}</dd><dt class="property-optional"
             title="Optional">
         <span id="errors_nodejs">
 <a href="#errors_nodejs" style="color: inherit; text-decoration: inherit;">errors</a>
@@ -953,14 +826,11 @@ The following output properties are available:
         <span class="property-indicator"></span>
         <span class="property-type"><a href="#getinsightserrorresponse">Get<wbr>Insights<wbr>Error<wbr>Response[]</a></span>
     </dt>
-    <dd>{{% md %}}information about the failed queries{{% /md %}}</dd>
-</dl>
+    <dd>{{% md %}}information about the failed queries{{% /md %}}</dd></dl>
 {{% /choosable %}}
 
 {{% choosable language python %}}
-<dl class="resources-properties">
-
-    <dt class="property-required"
+<dl class="resources-properties"><dt class="property-required"
             title="Required">
         <span id="total_count_python">
 <a href="#total_count_python" style="color: inherit; text-decoration: inherit;">total_<wbr>count</a>
@@ -968,8 +838,7 @@ The following output properties are available:
         <span class="property-indicator"></span>
         <span class="property-type">int</span>
     </dt>
-    <dd>{{% md %}}the total items found for the insights request{{% /md %}}</dd>
-    <dt class="property-optional"
+    <dd>{{% md %}}the total items found for the insights request{{% /md %}}</dd><dt class="property-optional"
             title="Optional">
         <span id="errors_python">
 <a href="#errors_python" style="color: inherit; text-decoration: inherit;">errors</a>
@@ -977,8 +846,7 @@ The following output properties are available:
         <span class="property-indicator"></span>
         <span class="property-type"><a href="#getinsightserrorresponse">Sequence[Get<wbr>Insights<wbr>Error<wbr>Response<wbr>Args]</a></span>
     </dt>
-    <dd>{{% md %}}information about the failed queries{{% /md %}}</dd>
-</dl>
+    <dd>{{% md %}}information about the failed queries{{% /md %}}</dd></dl>
 {{% /choosable %}}
 
 <h4 id="insightstableresultresponse">Insights<wbr>Table<wbr>Result<wbr>Response</h4>
@@ -986,9 +854,7 @@ The following output properties are available:
 
 
 {{% choosable language csharp %}}
-<dl class="resources-properties">
-
-    <dt class="property-optional"
+<dl class="resources-properties"><dt class="property-optional"
             title="Optional">
         <span id="columns_csharp">
 <a href="#columns_csharp" style="color: inherit; text-decoration: inherit;">Columns</a>
@@ -996,8 +862,7 @@ The following output properties are available:
         <span class="property-indicator"></span>
         <span class="property-type"><a href="#insightstableresultresponsecolumns">List&lt;Pulumi.<wbr>Azure<wbr>Native.<wbr>Security<wbr>Insights.<wbr>Inputs.<wbr>Insights<wbr>Table<wbr>Result<wbr>Response<wbr>Columns<wbr>Args&gt;</a></span>
     </dt>
-    <dd>{{% md %}}Columns Metadata of the table{{% /md %}}</dd>
-    <dt class="property-optional"
+    <dd>{{% md %}}Columns Metadata of the table{{% /md %}}</dd><dt class="property-optional"
             title="Optional">
         <span id="rows_csharp">
 <a href="#rows_csharp" style="color: inherit; text-decoration: inherit;">Rows</a>
@@ -1005,14 +870,11 @@ The following output properties are available:
         <span class="property-indicator"></span>
         <span class="property-type">List&lt;Immutable<wbr>Array&lt;string&gt;&gt;</span>
     </dt>
-    <dd>{{% md %}}Rows data of the table{{% /md %}}</dd>
-</dl>
+    <dd>{{% md %}}Rows data of the table{{% /md %}}</dd></dl>
 {{% /choosable %}}
 
 {{% choosable language go %}}
-<dl class="resources-properties">
-
-    <dt class="property-optional"
+<dl class="resources-properties"><dt class="property-optional"
             title="Optional">
         <span id="columns_go">
 <a href="#columns_go" style="color: inherit; text-decoration: inherit;">Columns</a>
@@ -1020,8 +882,7 @@ The following output properties are available:
         <span class="property-indicator"></span>
         <span class="property-type"><a href="#insightstableresultresponsecolumns">[]Insights<wbr>Table<wbr>Result<wbr>Response<wbr>Columns</a></span>
     </dt>
-    <dd>{{% md %}}Columns Metadata of the table{{% /md %}}</dd>
-    <dt class="property-optional"
+    <dd>{{% md %}}Columns Metadata of the table{{% /md %}}</dd><dt class="property-optional"
             title="Optional">
         <span id="rows_go">
 <a href="#rows_go" style="color: inherit; text-decoration: inherit;">Rows</a>
@@ -1029,14 +890,11 @@ The following output properties are available:
         <span class="property-indicator"></span>
         <span class="property-type">[][]string</span>
     </dt>
-    <dd>{{% md %}}Rows data of the table{{% /md %}}</dd>
-</dl>
+    <dd>{{% md %}}Rows data of the table{{% /md %}}</dd></dl>
 {{% /choosable %}}
 
 {{% choosable language nodejs %}}
-<dl class="resources-properties">
-
-    <dt class="property-optional"
+<dl class="resources-properties"><dt class="property-optional"
             title="Optional">
         <span id="columns_nodejs">
 <a href="#columns_nodejs" style="color: inherit; text-decoration: inherit;">columns</a>
@@ -1044,8 +902,7 @@ The following output properties are available:
         <span class="property-indicator"></span>
         <span class="property-type"><a href="#insightstableresultresponsecolumns">Insights<wbr>Table<wbr>Result<wbr>Response<wbr>Columns[]</a></span>
     </dt>
-    <dd>{{% md %}}Columns Metadata of the table{{% /md %}}</dd>
-    <dt class="property-optional"
+    <dd>{{% md %}}Columns Metadata of the table{{% /md %}}</dd><dt class="property-optional"
             title="Optional">
         <span id="rows_nodejs">
 <a href="#rows_nodejs" style="color: inherit; text-decoration: inherit;">rows</a>
@@ -1053,14 +910,11 @@ The following output properties are available:
         <span class="property-indicator"></span>
         <span class="property-type">string[][]</span>
     </dt>
-    <dd>{{% md %}}Rows data of the table{{% /md %}}</dd>
-</dl>
+    <dd>{{% md %}}Rows data of the table{{% /md %}}</dd></dl>
 {{% /choosable %}}
 
 {{% choosable language python %}}
-<dl class="resources-properties">
-
-    <dt class="property-optional"
+<dl class="resources-properties"><dt class="property-optional"
             title="Optional">
         <span id="columns_python">
 <a href="#columns_python" style="color: inherit; text-decoration: inherit;">columns</a>
@@ -1068,8 +922,7 @@ The following output properties are available:
         <span class="property-indicator"></span>
         <span class="property-type"><a href="#insightstableresultresponsecolumns">Sequence[Insights<wbr>Table<wbr>Result<wbr>Response<wbr>Columns<wbr>Args]</a></span>
     </dt>
-    <dd>{{% md %}}Columns Metadata of the table{{% /md %}}</dd>
-    <dt class="property-optional"
+    <dd>{{% md %}}Columns Metadata of the table{{% /md %}}</dd><dt class="property-optional"
             title="Optional">
         <span id="rows_python">
 <a href="#rows_python" style="color: inherit; text-decoration: inherit;">rows</a>
@@ -1077,8 +930,7 @@ The following output properties are available:
         <span class="property-indicator"></span>
         <span class="property-type">Sequence[Sequence[str]]</span>
     </dt>
-    <dd>{{% md %}}Rows data of the table{{% /md %}}</dd>
-</dl>
+    <dd>{{% md %}}Rows data of the table{{% /md %}}</dd></dl>
 {{% /choosable %}}
 
 <h4 id="insightstableresultresponsecolumns">Insights<wbr>Table<wbr>Result<wbr>Response<wbr>Columns</h4>
@@ -1086,9 +938,7 @@ The following output properties are available:
 
 
 {{% choosable language csharp %}}
-<dl class="resources-properties">
-
-    <dt class="property-optional"
+<dl class="resources-properties"><dt class="property-optional"
             title="Optional">
         <span id="name_csharp">
 <a href="#name_csharp" style="color: inherit; text-decoration: inherit;">Name</a>
@@ -1096,8 +946,7 @@ The following output properties are available:
         <span class="property-indicator"></span>
         <span class="property-type">string</span>
     </dt>
-    <dd>{{% md %}}the name of the colum{{% /md %}}</dd>
-    <dt class="property-optional"
+    <dd>{{% md %}}the name of the colum{{% /md %}}</dd><dt class="property-optional"
             title="Optional">
         <span id="type_csharp">
 <a href="#type_csharp" style="color: inherit; text-decoration: inherit;">Type</a>
@@ -1105,14 +954,11 @@ The following output properties are available:
         <span class="property-indicator"></span>
         <span class="property-type">string</span>
     </dt>
-    <dd>{{% md %}}the type of the colum{{% /md %}}</dd>
-</dl>
+    <dd>{{% md %}}the type of the colum{{% /md %}}</dd></dl>
 {{% /choosable %}}
 
 {{% choosable language go %}}
-<dl class="resources-properties">
-
-    <dt class="property-optional"
+<dl class="resources-properties"><dt class="property-optional"
             title="Optional">
         <span id="name_go">
 <a href="#name_go" style="color: inherit; text-decoration: inherit;">Name</a>
@@ -1120,8 +966,7 @@ The following output properties are available:
         <span class="property-indicator"></span>
         <span class="property-type">string</span>
     </dt>
-    <dd>{{% md %}}the name of the colum{{% /md %}}</dd>
-    <dt class="property-optional"
+    <dd>{{% md %}}the name of the colum{{% /md %}}</dd><dt class="property-optional"
             title="Optional">
         <span id="type_go">
 <a href="#type_go" style="color: inherit; text-decoration: inherit;">Type</a>
@@ -1129,14 +974,11 @@ The following output properties are available:
         <span class="property-indicator"></span>
         <span class="property-type">string</span>
     </dt>
-    <dd>{{% md %}}the type of the colum{{% /md %}}</dd>
-</dl>
+    <dd>{{% md %}}the type of the colum{{% /md %}}</dd></dl>
 {{% /choosable %}}
 
 {{% choosable language nodejs %}}
-<dl class="resources-properties">
-
-    <dt class="property-optional"
+<dl class="resources-properties"><dt class="property-optional"
             title="Optional">
         <span id="name_nodejs">
 <a href="#name_nodejs" style="color: inherit; text-decoration: inherit;">name</a>
@@ -1144,8 +986,7 @@ The following output properties are available:
         <span class="property-indicator"></span>
         <span class="property-type">string</span>
     </dt>
-    <dd>{{% md %}}the name of the colum{{% /md %}}</dd>
-    <dt class="property-optional"
+    <dd>{{% md %}}the name of the colum{{% /md %}}</dd><dt class="property-optional"
             title="Optional">
         <span id="type_nodejs">
 <a href="#type_nodejs" style="color: inherit; text-decoration: inherit;">type</a>
@@ -1153,14 +994,11 @@ The following output properties are available:
         <span class="property-indicator"></span>
         <span class="property-type">string</span>
     </dt>
-    <dd>{{% md %}}the type of the colum{{% /md %}}</dd>
-</dl>
+    <dd>{{% md %}}the type of the colum{{% /md %}}</dd></dl>
 {{% /choosable %}}
 
 {{% choosable language python %}}
-<dl class="resources-properties">
-
-    <dt class="property-optional"
+<dl class="resources-properties"><dt class="property-optional"
             title="Optional">
         <span id="name_python">
 <a href="#name_python" style="color: inherit; text-decoration: inherit;">name</a>
@@ -1168,8 +1006,7 @@ The following output properties are available:
         <span class="property-indicator"></span>
         <span class="property-type">str</span>
     </dt>
-    <dd>{{% md %}}the name of the colum{{% /md %}}</dd>
-    <dt class="property-optional"
+    <dd>{{% md %}}the name of the colum{{% /md %}}</dd><dt class="property-optional"
             title="Optional">
         <span id="type_python">
 <a href="#type_python" style="color: inherit; text-decoration: inherit;">type</a>
@@ -1177,8 +1014,7 @@ The following output properties are available:
         <span class="property-indicator"></span>
         <span class="property-type">str</span>
     </dt>
-    <dd>{{% md %}}the type of the colum{{% /md %}}</dd>
-</dl>
+    <dd>{{% md %}}the type of the colum{{% /md %}}</dd></dl>
 {{% /choosable %}}
 
 
